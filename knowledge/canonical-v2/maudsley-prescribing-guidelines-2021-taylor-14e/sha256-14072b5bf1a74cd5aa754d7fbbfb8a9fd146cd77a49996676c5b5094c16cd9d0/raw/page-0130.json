@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0130",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 130,
+  "source_page_index": 129,
+  "source_page_display": 130,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    109\nCHAPTER 1\nANTIPSYCHOTIC ADVERSE EFFECTS\nExtrapyramidal symptoms\nEPS:\n■\n■Tend to be dose-related.\n■\n■Appear most likely with high doses of high potency FGAs.\n■\n■Are less common with other antipsychotic medications, particularly clozapine, olan-\nzapine, quetiapine and aripiprazole,1 but once present may be persistent2 Note that \nCUtLASS reported no difference in EPS between FGAs and SGAs3 (although sulpiride \nwas widely used in the FGA group). Vulnerability to EPS may be genetically \ndetermined.4\nNote that similar movement disorder may be seen in never-medicated patients with \nschizophrenia.5–7 In one study of such patients at first-episode, 1% had dystonia, 8% \nparkinsonian symptoms and 11% akathisia.7 Parkinsonian symptoms and other motor \nabnormalities in this context may be associated with cognitive impairment7,8 and poor \nlong-term psychosocial functioning.9 In a study of never-treated patients with estab-\nlished psychotic illness, 9% exhibited spontaneous dyskinesias and 17% Parkinsonian \nsymptoms.10 Patients who experience one type of EPS may be more vulnerable to devel-\noping others.11 Substance misuse increases the risk of dystonia, akathisia and TD.12,13 \nThere is some evidence for an association between alcohol use and akathisia.14,15\n",
+  "raw_text_sha256": "f5fa90a1c70e6fe547de57dbcda24c6e5580f2556f4e290cec05fdcb93ca3e74",
+  "coordinates_sha256": "85c2b08d4827328f786bb421cb40fe9d519ca8cd52bd2a39cfc819103aea289d",
+  "block_sequence_sha256": "2c9f5a8e9ac591f8f6b026e0df93b43da6caca66fe301e1c812218e47f7d891c",
+  "blocks": [
+    {
+      "block_id": "page-0130-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    109\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "5dc4d7c57a5c18283b1f8b84f74a250bd37d46d47acd7143536c5d0b17fd1ce6"
+    },
+    {
+      "block_id": "page-0130-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0130-block-0002",
+      "order": 2,
+      "text": "ANTIPSYCHOTIC ADVERSE EFFECTS\n",
+      "bbox": [
+        54.99909973144531,
+        66.06448364257812,
+        235.3330535888672,
+        79.0994873046875
+      ],
+      "text_sha256": "a2388c09a0f3936c3e3d283544b10e28ef145fe12b2d067853959bdef9fca130"
+    },
+    {
+      "block_id": "page-0130-block-0003",
+      "order": 3,
+      "text": "Extrapyramidal symptoms\n",
+      "bbox": [
+        54.99909973144531,
+        91.06747436523438,
+        190.090087890625,
+        104.10247802734375
+      ],
+      "text_sha256": "8a929cc2e1843680ad4f490fdfae4a05cb4bcf97ae03d004acd950710cdb7d4b"
+    },
+    {
+      "block_id": "page-0130-block-0004",
+      "order": 4,
+      "text": "EPS:\n",
+      "bbox": [
+        47.99909973144531,
+        115.90948486328125,
+        67.4490966796875,
+        127.62948608398438
+      ],
+      "text_sha256": "27a14bf23971aaba599973261ed504760c18a860dc5655efbc74900a28f86293"
+    },
+    {
+      "block_id": "page-0130-block-0005",
+      "order": 5,
+      "text": "■\n■Tend to be dose-related.\n",
+      "bbox": [
+        47.999000549316406,
+        133.90948486328125,
+        160.58909606933594,
+        145.62948608398438
+      ],
+      "text_sha256": "61511a21b7dec138e24f766a86eb71fa9e4180f4597493d8b2910ede32978002"
+    },
+    {
+      "block_id": "page-0130-block-0006",
+      "order": 6,
+      "text": "■\n■Appear most likely with high doses of high potency FGAs.\n",
+      "bbox": [
+        47.999000549316406,
+        145.90948486328125,
+        308.7190856933594,
+        157.62948608398438
+      ],
+      "text_sha256": "406fb7601f16ade1f0f08f55996e7c0adcf2b8c057f367420ece1c0d390f2fbb"
+    },
+    {
+      "block_id": "page-0130-block-0007",
+      "order": 7,
+      "text": "■\n■Are less common with other antipsychotic medications, particularly clozapine, olan-\n",
+      "bbox": [
+        47.999000549316406,
+        157.90948486328125,
+        419.9590148925781,
+        169.62948608398438
+      ],
+      "text_sha256": "13552e0811ad357ee0c53753b19579eb160bfa290933a68429395ff6831ade3b"
+    },
+    {
+      "block_id": "page-0130-block-0008",
+      "order": 8,
+      "text": "zapine, quetiapine and aripiprazole,1 but once present may be persistent2 Note that \nCUtLASS reported no difference in EPS between FGAs and SGAs3 (although sulpiride \nwas widely used in the FGA group). Vulnerability to EPS may be genetically \ndetermined.4\n",
+      "bbox": [
+        56.99620056152344,
+        169.90948486328125,
+        422.8212585449219,
+        217.62948608398438
+      ],
+      "text_sha256": "ab31e57353f610a91347d0ed980221bcc31ebcb6029f78f292ee53fc11c68f25"
+    },
+    {
+      "block_id": "page-0130-block-0009",
+      "order": 9,
+      "text": "Note that similar movement disorder may be seen in never-medicated patients with \nschizophrenia.5–7 In one study of such patients at first-episode, 1% had dystonia, 8% \nparkinsonian symptoms and 11% akathisia.7 Parkinsonian symptoms and other motor \nabnormalities in this context may be associated with cognitive impairment7,8 and poor \nlong-term psychosocial functioning.9 In a study of never-treated patients with estab-\nlished psychotic illness, 9% exhibited spontaneous dyskinesias and 17% Parkinsonian \nsymptoms.10 Patients who experience one type of EPS may be more vulnerable to devel-\noping others.11 Substance misuse increases the risk of dystonia, akathisia and TD.12,13 \nThere is some evidence for an association between alcohol use and akathisia.14,15\n",
+      "bbox": [
+        47.99468994140625,
+        223.909423828125,
+        422.7890319824219,
+        331.6294250488281
+      ],
+      "text_sha256": "e3022bc2cea0825c8e11f1eb4a8406bf5e3b88033adc2d02f0b9b41dc856a4d2"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

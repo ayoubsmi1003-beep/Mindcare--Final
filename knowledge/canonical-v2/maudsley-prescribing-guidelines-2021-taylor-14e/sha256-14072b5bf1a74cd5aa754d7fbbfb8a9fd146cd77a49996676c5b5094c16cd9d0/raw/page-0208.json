@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0208",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 208,
+  "source_page_index": 207,
+  "source_page_display": 208,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    187\nCHAPTER 1\nVenous thromboembolism \nEvidence of an association\nAntipsychotic treatment was first linked to an increased risk of thromboembolism in \n19651 – over a ten-year observation period, 3.1% of 1590 patients developed thrombo-\nembolism, of whom 9 (0.6%) died. However, the use of continuing antipsychotic medi-\ncation is a proxy for severe and enduring mental illness and so observed associations \nwith antipsychotics may reflect inherent pathological processes in the conditions for \nwhich they are prescribed. To some extent, the relative contributions to risk of throm-\nboembolism of antipsychotic treatment and the conditions they treat remain to be \nclearly defined.\nIn a landmark case–control study of nearly 30,000 patients,2 an attempt was made to \ncontrol for age and gender (but not for diagnosed psychiatric conditions). Risk of \nthromboembolism was greatly increased overall in people prescribed antipsychotics \ncompared with controls (odds ratio (OR) 7.1). The increased risk was driven by the \neffect of low-potency phenothiazines (thioridazine, chlorpromazine (OR 24.1)) and \nwas seen chiefly in the first few weeks of treatment. Absolute risk of venous thrombo-\nembolism was very small – it was seen in only 0.14% of patients. A secondary analysis \nsuggested no association with diagnosis (not all prescribing was for schizophrenia).\nA later meta-analysis of seven case-control studies3 confirmed an increased risk of \nthromboembolism with low potency drugs (OR 2.91) and suggested lower but signifi-\ncantly increased risks with all types of antipsychotics. Later, a meta-analysis of 17 stud-\nies4 reported a small increased risk of thromboembolism with antipsychotics as a whole \n(OR 1.54) and with FGAs (OR 1.74) and SGAs (OR 2.07) as individual groups. Risk \nof thromboembolism clearly decreased with age. The authors suggested that the best \nthat could be said was that antipsychotics probably increased the risk by about 50% \nbut that residual confounding could not be discounted (i.e. other factors may have \naccounted for the effect seen).\nSince this time, several more case–control studies have confirmed both the slightly \nincreased risk of thromboembolism and the small risk overall5–7 – one study reported a \nrisk for older people taking antipsychotics as 43 per 10,000 patient-years.7 Other note-\nworthy findings were a substantially increased association with thromboembolism for \nprochlorperazine – a drug not always (or even often) prescribed for psychotic disor-\nders,5 and an increased risk linked to antipsychotic dosage (risk was quadrupled in \nhigh-dose patients).6 An association with prochlorperazine prescribing had previously \nbeen suggested by a UK study.8 These findings add weight to the theory that antipsy-\nchotic medication (and not only the conditions they treat) is responsible for the increased \nhazard of thromboembolism. The highest risk of pathological blood clotting may be in \nthe first 3 months or so of treatment9,10.\nLatest data\nTwo meta-analyses appeared in early 2021. Their findings are presented in the follow-\ning table.\n",
+  "raw_text_sha256": "c5c7775d79849cc1f6a68bb12f12e9bb54dc3acabf3abe1a0fe30ea2af6915cc",
+  "coordinates_sha256": "3f7c21308c8eaadcd152074dd209aa562ab55d819e038e321e29c6f10ea5ad0f",
+  "block_sequence_sha256": "413861f3f8a67c5e2f3c8404a8eee80c4561373169cd55a6d6edfe8b642fdcea",
+  "blocks": [
+    {
+      "block_id": "page-0208-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    187\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "ba3940b20fedf5cca5b7891d05008759ce3be3ec2c5f862fcae7d0504dc53577"
+    },
+    {
+      "block_id": "page-0208-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0208-block-0002",
+      "order": 2,
+      "text": "Venous thromboembolism \n",
+      "bbox": [
+        54.99909973144531,
+        66.06448364257812,
+        194.1490936279297,
+        79.0994873046875
+      ],
+      "text_sha256": "ed0ce21d57d789d7021dd4362c8e7234ea39379ba67445fe5fea9d1cb3ebf154"
+    },
+    {
+      "block_id": "page-0208-block-0003",
+      "order": 3,
+      "text": "Evidence of an association\n",
+      "bbox": [
+        48.00309753417969,
+        90.06649780273438,
+        184.30406188964844,
+        103.10150146484375
+      ],
+      "text_sha256": "848979f824beb9f9c2bb21138a4a16881006c00707fada56c06aef3f6680785c"
+    },
+    {
+      "block_id": "page-0208-block-0004",
+      "order": 4,
+      "text": "Antipsychotic treatment was first linked to an increased risk of thromboembolism in \n19651 – over a ten-year observation period, 3.1% of 1590 patients developed thrombo-\nembolism, of whom 9 (0.6%) died. However, the use of continuing antipsychotic medi-\ncation is a proxy for severe and enduring mental illness and so observed associations \nwith antipsychotics may reflect inherent pathological processes in the conditions for \nwhich they are prescribed. To some extent, the relative contributions to risk of throm-\nboembolism of antipsychotic treatment and the conditions they treat remain to be \nclearly defined.\n",
+      "bbox": [
+        47.99909973144531,
+        108.90948486328125,
+        422.8105163574219,
+        204.62948608398438
+      ],
+      "text_sha256": "ffd9f41841dcedfd5b780abb5b4b9baf786ede90797f77b07e9dfbf242b38146"
+    },
+    {
+      "block_id": "page-0208-block-0005",
+      "order": 5,
+      "text": "In a landmark case–control study of nearly 30,000 patients,2 an attempt was made to \ncontrol for age and gender (but not for diagnosed psychiatric conditions). Risk of \nthromboembolism was greatly increased overall in people prescribed antipsychotics \ncompared with controls (odds ratio (OR) 7.1). The increased risk was driven by the \neffect of low-potency phenothiazines (thioridazine, chlorpromazine (OR 24.1)) and \nwas seen chiefly in the first few weeks of treatment. Absolute risk of venous thrombo-\nembolism was very small – it was seen in only 0.14% of patients. A secondary analysis \nsuggested no association with diagnosis (not all prescribing was for schizophrenia).\n",
+      "bbox": [
+        47.99980163574219,
+        204.909423828125,
+        422.7798767089844,
+        300.6294250488281
+      ],
+      "text_sha256": "160edcf03b37b8d6606c7453936a6abcc3b26088ff50459fa7356eb561022d88"
+    },
+    {
+      "block_id": "page-0208-block-0006",
+      "order": 6,
+      "text": "A later meta-analysis of seven case-control studies3 confirmed an increased risk of \nthromboembolism with low potency drugs (OR 2.91) and suggested lower but signifi-\ncantly increased risks with all types of antipsychotics. Later, a meta-analysis of 17 stud-\nies4 reported a small increased risk of thromboembolism with antipsychotics as a whole \n(OR 1.54) and with FGAs (OR 1.74) and SGAs (OR 2.07) as individual groups. Risk \nof thromboembolism clearly decreased with age. The authors suggested that the best \nthat could be said was that antipsychotics probably increased the risk by about 50% \nbut that residual confounding could not be discounted (i.e. other factors may have \naccounted for the effect seen).\n",
+      "bbox": [
+        48.00029754638672,
+        300.909423828125,
+        422.7931823730469,
+        408.6294250488281
+      ],
+      "text_sha256": "09bf0980e342edfe0fa4d629576eb9e91aeefbf07f79c55d8dbf990bc69edb1a"
+    },
+    {
+      "block_id": "page-0208-block-0007",
+      "order": 7,
+      "text": "Since this time, several more case–control studies have confirmed both the slightly \nincreased risk of thromboembolism and the small risk overall5–7 – one study reported a \nrisk for older people taking antipsychotics as 43 per 10,000 patient-years.7 Other note-\nworthy findings were a substantially increased association with thromboembolism for \nprochlorperazine – a drug not always (or even often) prescribed for psychotic disor-\nders,5 and an increased risk linked to antipsychotic dosage (risk was quadrupled in \nhigh-dose patients).6 An association with prochlorperazine prescribing had previously \nbeen suggested by a UK study.8 These findings add weight to the theory that antipsy-\nchotic medication (and not only the conditions they treat) is responsible for the increased \nhazard of thromboembolism. The highest risk of pathological blood clotting may be in \nthe first 3 months or so of treatment9,10.\n",
+      "bbox": [
+        47.9949951171875,
+        408.909423828125,
+        422.7934875488281,
+        540.6294555664062
+      ],
+      "text_sha256": "dbf571b6567b93c96782825f7c7b512ff6b9be47070b33586b5b426bf231a5ea"
+    },
+    {
+      "block_id": "page-0208-block-0008",
+      "order": 8,
+      "text": "Latest data\n",
+      "bbox": [
+        47.99909973144531,
+        558.064453125,
+        105.46310424804688,
+        571.0994262695312
+      ],
+      "text_sha256": "7ea5fcd5034424b0e973acafb7371df471ea81caca3b1a11b731b30a5c22bf43"
+    },
+    {
+      "block_id": "page-0208-block-0009",
+      "order": 9,
+      "text": "Two meta-analyses appeared in early 2021. Their findings are presented in the follow-\ning table.\n",
+      "bbox": [
+        47.99909973144531,
+        576.909423828125,
+        419.9989929199219,
+        600.6294555664062
+      ],
+      "text_sha256": "b2e95b507cb3f0be582570e4031d6b1766435ade136ea807ae08bdfce1daa62d"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

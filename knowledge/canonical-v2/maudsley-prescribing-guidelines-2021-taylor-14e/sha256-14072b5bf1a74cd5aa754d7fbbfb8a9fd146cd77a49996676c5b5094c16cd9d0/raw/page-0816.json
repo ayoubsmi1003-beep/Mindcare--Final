@@ -1,0 +1,311 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0816",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 816,
+  "source_page_index": 815,
+  "source_page_display": 816,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    795\nCHAPTER 10\nTable 10.6  Management of psychiatric disorders in people with 22q11.2DS.4\nPsychiatric \ndisorder\nTreatments\nADHD\n■\n■Although concerns have been raised about the theoretical risk of psychosis with psycho-\nstimulants in people with 22q11.2DS, standard treatment protocols are advised2\n■\n■Two studies support the efficacy of methylphenidate in children with 22q11.2DS.2 \nTreatment was generally well tolerated. A comprehensive cardiovascular assessment prior \nto and during treatment has been recommended\nDepression and \nanxiety\n■\n■SSRIs: both depression and anxiety appear to respond favourably to SSRIs.2,5 Further \ntreatment is per standard protocols\n■\n■S-adenosyl-l-methionine was studied in one small RCT and no significant benefit in \ndepressive (or ADHD) symptoms was detected2\nObsessive \ncompulsive \ndisorder\n■\n■One study of four people with OCD and 22q11.2DS found a mean rate of improvement \nof 35% in symptom score after treatment with fluoxetine (30–60mg/day). Treatment was \nwell tolerated6\nSchizophrenia\n■\n■Standard treatment protocols are generally recommended.3,7 People with 22q11.2DS \nmay be more susceptible to seizures and EPSEs with antipsychotics.4 There is a signifi-\ncantly elevated risk of obesity in 22q11.2DS so metabolic side effects should be closely \nmonitored.8 Those with cardiac abnormalities have an increased risk of QTc prolonga-\ntion.4 Close ECG monitoring is recommended.4 Antipsychotics with a low effect on the \nQT interval are preferred.4 Low starting doses and slow dose titrations are widely recom-\nmended.4 Case reports have described the successful use of aripiprazole, olanzapine, \nrisperidone and quetiapine5 but treatment-resistance has been demonstrated in many \ncases.5\n■\n■Clozapine: found to be effective in one retrospective study of 20 patients with \n22q11.2DS.2 Compared with matched controls, lower doses were needed (a median of \n250mg/day for those with 22q11.2DS vs. 450mg/day with matched controls). How-\never, half of the 22q11.2DS group experienced at least one serious adverse effect from \nclozapine: primarily seizures, but also myocarditis and neutropenia. Several case reports \nfurther support the efficacy of clozapine at low doses (median of 200mg/day) for people \nwith 22q11.2DS, while highlighting the risk of seizures (generalised or myoclonic) and \nthrombocytopenia.8 Overall, clozapine appears to have demonstrable efficacy at lower \nthan usual doses, but the risk of rare serious adverse events appears to be high.2 Adjunc-\ntive antiseizure medications should be considered.7,8\n■\n■Seizures with other antipsychotics: investigate low calcium and magnesium levels \nin all cases and ensure adequate treatment.7 Consider adjunctive antiseizure medica-\ntions.7\n■\n■Other agents: drugs which act directly against catecholamine excess may also be \neffective. Metyrosine, used as a monotherapy or as an adjunctive agent, was found to \nbe effective 22 of 29 patients recruited to one study.9 Additional positive case reports \nhave been published.10 There is single case study where methyldopa was used success-\nfully.11\n",
+  "raw_text_sha256": "9acd0c682a5e23f636677f3d167a7c4b107e243c47c85b91e28beaf919bf034b",
+  "coordinates_sha256": "02c01c7990a40258a71013266af8b6ef9f3d09b981b6cff5ebab63c055c93a2d",
+  "block_sequence_sha256": "4995926f1d3d4b35895c53dca83cb057a6ecbf07d83d0f2ebf0f49867c4637bd",
+  "blocks": [
+    {
+      "block_id": "page-0816-block-0000",
+      "order": 0,
+      "text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    795\n",
+      "bbox": [
+        47.999698638916016,
+        31.395221710205078,
+        419.96697998046875,
+        41.0272216796875
+      ],
+      "text_sha256": "27ef05630b4c9fc5402d213a25ea4f3c68da339c290ad01022c2b37de10996ca"
+    },
+    {
+      "block_id": "page-0816-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        454.4096984863281,
+        75.763671875,
+        463.88970947265625,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0816-block-0002",
+      "order": 2,
+      "text": "Table 10.6  Management of psychiatric disorders in people with 22q11.2DS.4\n",
+      "bbox": [
+        54.0,
+        70.08790588378906,
+        300.95172119140625,
+        78.97540283203125
+      ],
+      "text_sha256": "c358ef6434f9d2100a24c23490bc50c19359de0f23f626360b266c5cba0b2500"
+    },
+    {
+      "block_id": "page-0816-block-0003",
+      "order": 3,
+      "text": "Psychiatric \ndisorder\nTreatments\n",
+      "bbox": [
+        52.0,
+        88.82289123535156,
+        160.89248657226562,
+        107.7078857421875
+      ],
+      "text_sha256": "42c935d951cf5ab5d8211f7aee0338a05720fd286728bd48ab4ff16e8492185e"
+    },
+    {
+      "block_id": "page-0816-block-0004",
+      "order": 4,
+      "text": "ADHD\n■\n■Although concerns have been raised about the theoretical risk of psychosis with psycho-\n",
+      "bbox": [
+        52.0,
+        116.05537414550781,
+        412.4181823730469,
+        124.94537353515625
+      ],
+      "text_sha256": "3186f956be26e3739bf073f275000f229d517f768772d6d347134d3706028a2f"
+    },
+    {
+      "block_id": "page-0816-block-0005",
+      "order": 5,
+      "text": "stimulants in people with 22q11.2DS, standard treatment protocols are advised2\n",
+      "bbox": [
+        130.70309448242188,
+        126.2353744506836,
+        386.3921203613281,
+        134.94287109375
+      ],
+      "text_sha256": "9dfd93d10e538a91fd4000032066380b76e313323dbeb48f4293a3fad697f5f4"
+    },
+    {
+      "block_id": "page-0816-block-0006",
+      "order": 6,
+      "text": "■\n■Two studies support the efficacy of methylphenidate in children with 22q11.2DS.2 \n",
+      "bbox": [
+        121.7031021118164,
+        136.2378692626953,
+        393.8468933105469,
+        144.94537353515625
+      ],
+      "text_sha256": "6b16bce65be12b75e8df45c904c8fea511ec20dde2802e8add6c0f8cbc7c32c8"
+    },
+    {
+      "block_id": "page-0816-block-0007",
+      "order": 7,
+      "text": "Treatment was generally well tolerated. A comprehensive cardiovascular assessment prior \nto and during treatment has been recommended\n",
+      "bbox": [
+        130.701904296875,
+        146.23536682128906,
+        417.1119689941406,
+        164.94036865234375
+      ],
+      "text_sha256": "d121336f9ff9f15ebd1653c97f44c179a341b0e4077b4225f38c0afff55dd75a"
+    },
+    {
+      "block_id": "page-0816-block-0008",
+      "order": 8,
+      "text": "Depression and \nanxiety\n",
+      "bbox": [
+        51.99690246582031,
+        173.28785705566406,
+        108.53189086914062,
+        192.1728515625
+      ],
+      "text_sha256": "084e628a9aafe4a68b1479928166f9c209c3e623fb148dfe5dd3ac5d0da35cb3"
+    },
+    {
+      "block_id": "page-0816-block-0009",
+      "order": 9,
+      "text": "■\n■SSRIs: both depression and anxiety appear to respond favourably to SSRIs.2,5 Further \n",
+      "bbox": [
+        121.7031021118164,
+        173.2928924560547,
+        401.5663757324219,
+        182.18038940429688
+      ],
+      "text_sha256": "0addd095c4c5fa4ab869ee816520208b5c92c2d1f3bc23047c82b66f790a3984"
+    },
+    {
+      "block_id": "page-0816-block-0010",
+      "order": 10,
+      "text": "treatment is per standard protocols\n",
+      "bbox": [
+        130.70387268066406,
+        183.4703826904297,
+        242.8063507080078,
+        192.17788696289062
+      ],
+      "text_sha256": "c55c6babbe1c79552e1af368ca1a9b153eed5f49b9959e065c71f61145782af2"
+    },
+    {
+      "block_id": "page-0816-block-0011",
+      "order": 11,
+      "text": "■\n■S-adenosyl-l-methionine was studied in one small RCT and no significant benefit in \n",
+      "bbox": [
+        121.7031021118164,
+        193.47288513183594,
+        397.6862487792969,
+        202.18038940429688
+      ],
+      "text_sha256": "ef3580a07a95dfc44cbf373ffe0ede028673a9b2563b67ff02eab7c57b15275a"
+    },
+    {
+      "block_id": "page-0816-block-0012",
+      "order": 12,
+      "text": "depressive (or ADHD) symptoms was detected2\n",
+      "bbox": [
+        130.7010955810547,
+        203.4703826904297,
+        280.10272216796875,
+        212.17788696289062
+      ],
+      "text_sha256": "b1adcf0b9a4892aec1054144d02ce42a7fb0362b7e6c9ce3e759457440644f23"
+    },
+    {
+      "block_id": "page-0816-block-0013",
+      "order": 13,
+      "text": "Obsessive \ncompulsive \ndisorder\n",
+      "bbox": [
+        52.0,
+        220.5279083251953,
+        93.66999053955078,
+        249.410400390625
+      ],
+      "text_sha256": "d5528fc80644269987168279910ef4f43cf09145c1c15fe52d0a295b1c6dcd4d"
+    },
+    {
+      "block_id": "page-0816-block-0014",
+      "order": 14,
+      "text": "■\n■One study of four people with OCD and 22q11.2DS found a mean rate of improvement \n",
+      "bbox": [
+        121.7030029296875,
+        220.70790100097656,
+        413.9781799316406,
+        229.4154052734375
+      ],
+      "text_sha256": "d999e9dbc4b072d4b61210b9a4777a6cf78bf395c16568d7ba4fde4920aeb6ea"
+    },
+    {
+      "block_id": "page-0816-block-0015",
+      "order": 15,
+      "text": "of 35% in symptom score after treatment with fluoxetine (30–60mg/day). Treatment was \nwell tolerated6\n",
+      "bbox": [
+        130.70309448242188,
+        230.7053985595703,
+        417.5556335449219,
+        249.410400390625
+      ],
+      "text_sha256": "c6bd22797eb7d2f2e1df106881786fe7b1b0fb6775e4ad3f087668c2c682c24d"
+    },
+    {
+      "block_id": "page-0816-block-0016",
+      "order": 16,
+      "text": "Schizophrenia\n■\n■Standard treatment protocols are generally recommended.3,7 People with 22q11.2DS \n",
+      "bbox": [
+        52.0,
+        257.76287841796875,
+        403.232177734375,
+        266.650390625
+      ],
+      "text_sha256": "fb19aad3a7b5dc7d8399b3de2073e38c6a28494c71f3339771d5cfe1b96e8acf"
+    },
+    {
+      "block_id": "page-0816-block-0017",
+      "order": 17,
+      "text": "may be more susceptible to seizures and EPSEs with antipsychotics.4 There is a signifi-\ncantly elevated risk of obesity in 22q11.2DS so metabolic side effects should be closely \nmonitored.8 Those with cardiac abnormalities have an increased risk of QTc prolonga-\ntion.4 Close ECG monitoring is recommended.4 Antipsychotics with a low effect on the \nQT interval are preferred.4 Low starting doses and slow dose titrations are widely recom-\nmended.4 Case reports have described the successful use of aripiprazole, olanzapine, \nrisperidone and quetiapine5 but treatment-resistance has been demonstrated in many \ncases.5\n",
+      "bbox": [
+        130.70181274414062,
+        267.9403991699219,
+        412.05859375,
+        346.64788818359375
+      ],
+      "text_sha256": "ddbc9dffe520ab5d3da139b884ec964b8683b338485b5a027e7257aa95e52cdf"
+    },
+    {
+      "block_id": "page-0816-block-0018",
+      "order": 18,
+      "text": "■\n■Clozapine: found to be effective in one retrospective study of 20 patients with \n",
+      "bbox": [
+        121.7030029296875,
+        347.76287841796875,
+        385.3356628417969,
+        356.650390625
+      ],
+      "text_sha256": "b0fd43326bfeb8ade6e0c6920a2b0aebd4e59c09dcd09baa236e7bba929324df"
+    },
+    {
+      "block_id": "page-0816-block-0019",
+      "order": 19,
+      "text": "22q11.2DS.2 Compared with matched controls, lower doses were needed (a median of \n250mg/day for those with 22q11.2DS vs. 450mg/day with matched controls). How-\never, half of the 22q11.2DS group experienced at least one serious adverse effect from \nclozapine: primarily seizures, but also myocarditis and neutropenia. Several case reports \nfurther support the efficacy of clozapine at low doses (median of 200mg/day) for people \nwith 22q11.2DS, while highlighting the risk of seizures (generalised or myoclonic) and \nthrombocytopenia.8 Overall, clozapine appears to have demonstrable efficacy at lower \nthan usual doses, but the risk of rare serious adverse events appears to be high.2 Adjunc-\ntive antiseizure medications should be considered.7,8\n",
+      "bbox": [
+        130.70211791992188,
+        357.9403991699219,
+        415.2091979980469,
+        446.64788818359375
+      ],
+      "text_sha256": "aae8ece5e981933de0033d45227215522c2214e48d11f12c268a0e5733fbb1fd"
+    },
+    {
+      "block_id": "page-0816-block-0020",
+      "order": 20,
+      "text": "■\n■Seizures with other antipsychotics: investigate low calcium and magnesium levels \n",
+      "bbox": [
+        121.7031021118164,
+        447.76287841796875,
+        411.45068359375,
+        456.650390625
+      ],
+      "text_sha256": "498cfd01eea3bd36693141df74b01ca2e105977ae93495d28d3aff928f0ba837"
+    },
+    {
+      "block_id": "page-0816-block-0021",
+      "order": 21,
+      "text": "in all cases and ensure adequate treatment.7 Consider adjunctive antiseizure medica-\ntions.7\n",
+      "bbox": [
+        130.70309448242188,
+        457.9403991699219,
+        408.0982666015625,
+        476.64788818359375
+      ],
+      "text_sha256": "93961cf6aaf2448ef8f1e776f41402cc72d1613436e5425ca36cb0efa95931e4"
+    },
+    {
+      "block_id": "page-0816-block-0022",
+      "order": 22,
+      "text": "■\n■Other agents: drugs which act directly against catecholamine excess may also be \n",
+      "bbox": [
+        121.7031021118164,
+        477.76287841796875,
+        401.3556213378906,
+        486.650390625
+      ],
+      "text_sha256": "613c164256d5956a98cfa7ce633c0ea7e79328a52844085cb7afdaa3263bae2d"
+    },
+    {
+      "block_id": "page-0816-block-0023",
+      "order": 23,
+      "text": "effective. Metyrosine, used as a monotherapy or as an adjunctive agent, was found to \nbe effective 22 of 29 patients recruited to one study.9 Additional positive case reports \nhave been published.10 There is single case study where methyldopa was used success-\nfully.11\n",
+      "bbox": [
+        130.70269775390625,
+        487.9403991699219,
+        414.6155700683594,
+        526.6478881835938
+      ],
+      "text_sha256": "f25b61d61ac779b5dad197969e5909ed3032acdf288dac35f4f5fcf93a226e95"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

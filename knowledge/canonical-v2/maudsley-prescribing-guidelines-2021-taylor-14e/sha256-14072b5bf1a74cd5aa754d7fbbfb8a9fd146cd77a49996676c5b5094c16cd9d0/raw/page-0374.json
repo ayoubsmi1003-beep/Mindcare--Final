@@ -1,0 +1,323 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0374",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 374,
+  "source_page_index": 373,
+  "source_page_display": 374,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    353\nCHAPTER 3\nElectroconvulsive therapy (ECT) and psychotropic drugs\nPsychotropics are often continued during ECT, and some agents (particularly antide-\npressants1,2) enhance its efficacy.\nTable 3.11 summarises the effect of various psychotropics on seizure duration during \nECT. Note that there are few well-controlled studies in this area, and so recommenda-\ntions should be viewed with this in mind.\nBe aware also that choice of anaesthetic agent profoundly affects seizure duration3–8 \nas well as the severity of post-ictal confusion and ECT efficacy.9,10 The use of ketamine \nas an anaesthetic does not ultimately improve outcome with ECT,11,12 but it may pro-\nvide short-term benefits in improving depressive symptoms at the early stages of ECT.13 \nAside from concurrent medication, there are many factors that influence seizure thresh-\nold and duration.14\n(Continued)\nTable 3.11  Effect of psychotropic drugs on seizure duration in ECT\nDrug\nEffect on ECT  \nseizure duration\nComments3,15–18\nBenzodiazepines19\nReduced\nMixed evidence and \nclinical implications \nunclear\nAll may raise seizure threshold and so should be avoided where \npossible. Many are long-acting and may need to be discontinued \nsome days before ECT. Benzodiazepines may also complicate \nanaesthesia and may reduce efficacy of ECT.\nIf sedation is required, consider hydroxyzine. If benzodiazepine use \nis very long term and essential, continue and use higher stimulus, \nbilaterally.\nSSRIs2,20–23\nMinimal effect; \nsmall increase \npossible\nGenerally considered safe to use during ECT. Beware complex \npharmacokinetic interactions with anaesthetic agents. Isolated case \nreports of serotonin syndrome with fluoxetine and paroxetine with \nECT.24,25\nVenlafaxine26\nMinimal effect at \nstandard doses\nLimited data suggest no effect on seizure duration but possibility of \nincreased risk of asystole with doses above 300mg/day.27 Clearly \nepileptogenic in higher doses. ECG advised.\nMirtazapine2,28\nMinimal effect – \nsmall increase\nApparently safe in ECT and, like other antidepressants, may enhance \nECT efficacy. May reduce post ECT nausea and headache.\nDuloxetine29,30\nNot known\nOne case report suggests duloxetine does not complicate ECT. \nAnother links its use to ventricular tachycardia.\nTCAs2,21,31\nPossibly increased\nFew data relevant to ECT but many TCAs lower seizure threshold. \nTCAs are associated with arrhythmia following ECT and should be \navoided in elderly patients and those with cardiac disease. In others, it \nis preferable to continue TCA treatment during ECT. Close monitoring \nis essential. Beware hypotension and risk of prolonged seizures.\nMAOIs32\nMinimal effect\nData relating to ECT very limited but long history of ECT use during \nMAOI therapy.\nMAOIs probably do not affect seizure duration but interactions with \nsympathomimetics occasionally used in anaesthesia are possible and \nmay lead to hypertensive crisis. Transdermal selegiline seems safe.33\nMAOIs may be continued during ECT, but the anaesthetist must be \ninformed. Beware hypotension.\n",
+  "raw_text_sha256": "e4cac8ab763b81392b025778d96a070a5ad5b745af40c4126dac5c24aedb37c8",
+  "coordinates_sha256": "0f713d823f17abfedb62779e12d0aafaf2930c55b329d50db9d50f2a2911a8b8",
+  "block_sequence_sha256": "5ed7650e97bce53f760ff768277bd06b7955cbb94504ac0b273d12009ff1cac3",
+  "blocks": [
+    {
+      "block_id": "page-0374-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    353\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "4b0b73e19c3e8879c60551d0a636e01c148616afe1a43a36d08c0a76630ac79e"
+    },
+    {
+      "block_id": "page-0374-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0374-block-0002",
+      "order": 2,
+      "text": "Electroconvulsive therapy (ECT) and psychotropic drugs\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        341.24200439453125,
+        79.1004638671875
+      ],
+      "text_sha256": "d172df2d6fee09c2e7f734b972a307665da2421cedf01e98592f33fdea0da3c6"
+    },
+    {
+      "block_id": "page-0374-block-0003",
+      "order": 3,
+      "text": "Psychotropics are often continued during ECT, and some agents (particularly antide-\npressants1,2) enhance its efficacy.\n",
+      "bbox": [
+        48.0,
+        84.91046142578125,
+        420.0299987792969,
+        108.63046264648438
+      ],
+      "text_sha256": "6c92ecb29b884996e7410c05297deea46abca82cf36c7ffe6d50ec1c258f0306"
+    },
+    {
+      "block_id": "page-0374-block-0004",
+      "order": 4,
+      "text": "Table 3.11 summarises the effect of various psychotropics on seizure duration during \nECT. Note that there are few well-controlled studies in this area, and so recommenda-\ntions should be viewed with this in mind.\n",
+      "bbox": [
+        48.00309753417969,
+        108.91046142578125,
+        422.80316162109375,
+        144.63046264648438
+      ],
+      "text_sha256": "f6525151d58cca3a7dfd85dfa4e4b57d6776f475d1a06a7d06e5710e55d71449"
+    },
+    {
+      "block_id": "page-0374-block-0005",
+      "order": 5,
+      "text": "Be aware also that choice of anaesthetic agent profoundly affects seizure duration3–8 \nas well as the severity of post-ictal confusion and ECT efficacy.9,10 The use of ketamine \nas an anaesthetic does not ultimately improve outcome with ECT,11,12 but it may pro-\nvide short-term benefits in improving depressive symptoms at the early stages of ECT.13 \nAside from concurrent medication, there are many factors that influence seizure thresh-\nold and duration.14\n",
+      "bbox": [
+        48.000396728515625,
+        144.91046142578125,
+        422.78173828125,
+        216.6304931640625
+      ],
+      "text_sha256": "04a024df4a11cad27381ba7729f7487f2608121f30ad110e408c85ffcb635f65"
+    },
+    {
+      "block_id": "page-0374-block-0006",
+      "order": 6,
+      "text": "(Continued)\n",
+      "bbox": [
+        382.4849853515625,
+        637.2647094726562,
+        420.0000305175781,
+        646.0172119140625
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0374-block-0007",
+      "order": 7,
+      "text": "Table 3.11  Effect of psychotropic drugs on seizure duration in ECT\n",
+      "bbox": [
+        54.0,
+        235.73789978027344,
+        268.22998046875,
+        244.62539672851562
+      ],
+      "text_sha256": "aed59311e52d6d43201d7df06dd43a198a04e3b353383daaca79569ae83b66b2"
+    },
+    {
+      "block_id": "page-0374-block-0008",
+      "order": 8,
+      "text": "Drug\n",
+      "bbox": [
+        48.0,
+        265.9728698730469,
+        65.49749755859375,
+        274.8603820800781
+      ],
+      "text_sha256": "feeef2eabd03bd6219846b6c95a917cef51eff084f3ec2edbb873258f191a35b"
+    },
+    {
+      "block_id": "page-0374-block-0009",
+      "order": 9,
+      "text": "Effect on ECT  \nseizure duration\nComments3,15–18\n",
+      "bbox": [
+        124.11000061035156,
+        255.9753875732422,
+        254.056640625,
+        274.8603820800781
+      ],
+      "text_sha256": "06219f7c3e739f891ae477ef2018d2e0d95d51f202137ce0869a60b27b3e0c1b"
+    },
+    {
+      "block_id": "page-0374-block-0010",
+      "order": 10,
+      "text": "Benzodiazepines19\nReduced\n",
+      "bbox": [
+        48.0,
+        282.7478942871094,
+        151.6201934814453,
+        291.6354064941406
+      ],
+      "text_sha256": "8918fe74999bd6d6bd48a06e067c912805388cbc29dda9ffebbf2c38151149b7"
+    },
+    {
+      "block_id": "page-0374-block-0011",
+      "order": 11,
+      "text": "Mixed evidence and \nclinical implications \nunclear\n",
+      "bbox": [
+        124.11019897460938,
+        296.930419921875,
+        189.95269775390625,
+        325.6329040527344
+      ],
+      "text_sha256": "abc973aec4f9821858c6059268d254495d8c6296cdb54a0b36cc4820040067ca"
+    },
+    {
+      "block_id": "page-0374-block-0012",
+      "order": 12,
+      "text": "All may raise seizure threshold and so should be avoided where \npossible. Many are long-acting and may need to be discontinued \nsome days before ECT. Benzodiazepines may also complicate \nanaesthesia and may reduce efficacy of ECT.\n",
+      "bbox": [
+        201.0001983642578,
+        282.92791748046875,
+        410.0853271484375,
+        321.6278991699219
+      ],
+      "text_sha256": "1e753b88dd93e31abe066aa59452866e6444f944cc31e3c0add50718b77b5783"
+    },
+    {
+      "block_id": "page-0374-block-0013",
+      "order": 13,
+      "text": "If sedation is required, consider hydroxyzine. If benzodiazepine use \nis very long term and essential, continue and use higher stimulus, \nbilaterally.\n",
+      "bbox": [
+        201.0001983642578,
+        328.91790771484375,
+        415.6277770996094,
+        357.6203918457031
+      ],
+      "text_sha256": "c9858b7fb12086a0183e6017f12172b08324a6f353aebbda60a51f2ecfc3bf2b"
+    },
+    {
+      "block_id": "page-0374-block-0014",
+      "order": 14,
+      "text": "SSRIs2,20–23\nMinimal effect; \nsmall increase \npossible\n",
+      "bbox": [
+        48.00019836425781,
+        363.75537109375,
+        174.3826904296875,
+        392.6553955078125
+      ],
+      "text_sha256": "5b6b2cca68dc4056a1cd59bacf5109611ae41ee15caf1b8ed6594a3511a15530"
+    },
+    {
+      "block_id": "page-0374-block-0015",
+      "order": 15,
+      "text": "Generally considered safe to use during ECT. Beware complex \npharmacokinetic interactions with anaesthetic agents. Isolated case \nreports of serotonin syndrome with fluoxetine and paroxetine with \nECT.24,25\n",
+      "bbox": [
+        201.0001983642578,
+        363.9454040527344,
+        412.72503662109375,
+        402.6453857421875
+      ],
+      "text_sha256": "8937bcbcfb3dbd31384d681c40b07b64779f044eee0e87fcea2fc299c2fb8f93"
+    },
+    {
+      "block_id": "page-0374-block-0016",
+      "order": 16,
+      "text": "Venlafaxine26\nMinimal effect at \nstandard doses\n",
+      "bbox": [
+        48.0,
+        408.7978820800781,
+        180.63018798828125,
+        427.6828918457031
+      ],
+      "text_sha256": "8f6d3ceed51522c93bee0ece2863d21a7725b9f704a04cb34292b5492bb81050"
+    },
+    {
+      "block_id": "page-0374-block-0017",
+      "order": 17,
+      "text": "Limited data suggest no effect on seizure duration but possibility of \nincreased risk of asystole with doses above 300mg/day.27 Clearly \nepileptogenic in higher doses. ECG advised.\n",
+      "bbox": [
+        200.997802734375,
+        408.9779052734375,
+        417.240234375,
+        437.6828918457031
+      ],
+      "text_sha256": "ac64ff4b50776fd1ca5803d2d7b0940dbafdc8a03659b4b78d8792ba6d59ad0c"
+    },
+    {
+      "block_id": "page-0374-block-0018",
+      "order": 18,
+      "text": "Mirtazapine2,28\nMinimal effect – \nsmall increase\n",
+      "bbox": [
+        47.997802734375,
+        443.81787109375,
+        178.1326904296875,
+        462.7078857421875
+      ],
+      "text_sha256": "5cf202cb7b3ac8054dc0d15d7a0d90a8317cb666da0ed85731becc7d67252021"
+    },
+    {
+      "block_id": "page-0374-block-0019",
+      "order": 19,
+      "text": "Apparently safe in ECT and, like other antidepressants, may enhance \nECT efficacy. May reduce post ECT nausea and headache.\n",
+      "bbox": [
+        201.0001983642578,
+        444.0028991699219,
+        413.1076965332031,
+        462.7078857421875
+      ],
+      "text_sha256": "22e5af1604308363ba67867a93c6fae9b521deaadb1d6b97cae656fce66127e3"
+    },
+    {
+      "block_id": "page-0374-block-0020",
+      "order": 20,
+      "text": "Duloxetine29,30\nNot known\nOne case report suggests duloxetine does not complicate ECT. \nAnother links its use to ventricular tachycardia.\n",
+      "bbox": [
+        48.00019836425781,
+        468.8428955078125,
+        401.3178405761719,
+        487.73291015625
+      ],
+      "text_sha256": "5df962d0cc7b4d22c61791ee8d0cfbbb3c8f6dfd94e8cb80f536d0abaa0d7e09"
+    },
+    {
+      "block_id": "page-0374-block-0021",
+      "order": 21,
+      "text": "TCAs2,21,31\nPossibly increased\nFew data relevant to ECT but many TCAs lower seizure threshold. \nTCAs are associated with arrhythmia following ECT and should be \navoided in elderly patients and those with cardiac disease. In others, it \nis preferable to continue TCA treatment during ECT. Close monitoring \nis essential. Beware hypotension and risk of prolonged seizures.\n",
+      "bbox": [
+        48.00019836425781,
+        493.8678894042969,
+        422.0999755859375,
+        542.7503662109375
+      ],
+      "text_sha256": "f8fda45d29a80a1f80923d2a24431babe5b43e6c280639d7a9e1386089a84b55"
+    },
+    {
+      "block_id": "page-0374-block-0022",
+      "order": 22,
+      "text": "MAOIs32\nMinimal effect\nData relating to ECT very limited but long history of ECT use during \nMAOI therapy.\n",
+      "bbox": [
+        48.00019836425781,
+        548.8853759765625,
+        417.9828186035156,
+        567.7828979492188
+      ],
+      "text_sha256": "ef67dd1bab966bd1547f48472e27895b4620a08400390e9c2c655f1502293e73"
+    },
+    {
+      "block_id": "page-0374-block-0023",
+      "order": 23,
+      "text": "MAOIs probably do not affect seizure duration but interactions with \nsympathomimetics occasionally used in anaesthesia are possible and \nmay lead to hypertensive crisis. Transdermal selegiline seems safe.33\n",
+      "bbox": [
+        201.0001983642578,
+        575.0728759765625,
+        420.47283935546875,
+        603.775390625
+      ],
+      "text_sha256": "593b0d056eb2d9a3fe6e4f211532be7c83778ee7d5bfac5130bd6167abfc1e99"
+    },
+    {
+      "block_id": "page-0374-block-0024",
+      "order": 24,
+      "text": "MAOIs may be continued during ECT, but the anaesthetist must be \ninformed. Beware hypotension.\n",
+      "bbox": [
+        200.99969482421875,
+        611.077880859375,
+        416.8798828125,
+        629.7828979492188
+      ],
+      "text_sha256": "97a82403b6dddb3e28e3c80f6d8a9cd59f0e55187fd918c98616ad6b2c6b8e62"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

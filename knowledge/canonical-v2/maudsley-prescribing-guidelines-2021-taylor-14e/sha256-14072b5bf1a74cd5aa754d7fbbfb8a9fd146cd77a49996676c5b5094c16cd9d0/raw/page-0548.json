@@ -1,0 +1,1067 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0548",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 548,
+  "source_page_index": 547,
+  "source_page_display": 548,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Table 4.21  Interactions between ‘street drugs’ and psychotropics\nCannabis\nHeroin/methadone6\nCocaine, amfetamine, ecstasy,  \nMDA, 6-APD\nAlcohol\nKetamine7\nGeneral \nconsiderations\n■\n■Usually smoked in \ncigarettes (induces \nCYP1A2)\n■\n■Can be sedative\n■\n■Dose-related tachy-\ncardia\n■\n■THC/CBD inhibit \nCYP3A4 and CYP2C19 \nand CYP2D68,9\n■\n■Can produce sedation/\nrespiratory depression\n■\n■QTc prolongation with metha-\ndone (see section ‘Methadone’)\n■\n■Stimulants (cocaine can be sedative in \nhigher doses)\n■\n■Arrhythmia possible\n■\n■Cerebral/cardiac ischaemia with \ncocaine – may be fatal\n■\n■MDMA (3,4-methylenedioxymetham-\nphetamine) inhibits CYPs 2D6/3A4\n■\n■Hyperthermia/dehydration with \necstasy10\n■\n■Sedative\n■\n■Liver damage \npossible\n■\n■Induces various \nenzymes\n■\n■Sedative readily \ncauses uncon-\nsciousness\n■\n■Onset of effects \nmay be rapid \nif snorted or \ninjected\nOlder \nantipsychotics\n■\n■Antipsychotics reduce the psychotropic effects of almost all drugs of abuse by blocking dopamine receptors (dopamine is the neu-\nrotransmitter responsible for ‘reward’, e.g. haloperidol and MDMA11)\n■\n■Patients prescribed antipsychotics may increase their consumption of illicit substances to compensate\n■\n■Patients who have taken ecstasy may be more prone to EPS\n■\n■Cardiotoxic or very sedative antipsychotics are best avoided, at least initially. Sulpiride is a reasonably safe first choice\n■\n■Methamphetamines increase the risk of EPS with haloperidol12\nSecond-\ngeneration \nantipsychotics\n■\n■Risk of additive seda-\ntion\n■\n■Cannabis smoking in \ntobacco can reduce \nplasma levels of olan-\nzapine and clozapine \nvia induction of \nCYP1A213\n■\n■Clozapine might \nreduce cannabis and \nalcohol consumption14\n■\n■Outcome of THC/CBD \ninhibition of CYP1A2 \nunknown\n■\n■Risk of additive sedation\n■\n■Case report of methadone \nwithdrawal being precipitated \nby risperidone15\n■\n■Isolated report of quetiapine \nincreasing methadone levels, \nespecially in those with slowed \nCYP2D6 hepatic metabolism16\n■\n■Antipsychotics may reduce craving and \ncocaine-induced euphoria17–21\n■\n■Olanzapine may worsen cocaine \ndependency22\n■\n■Clozapine may increase cocaine levels \nbut diminish subjective response23\n■\n■Increased risk \nof hypotension \nwith olan-\nzapine (and \npossibly other \nβ-blockers)\n■\n■Increased seda-\ntion\n(Continued )\n",
+  "raw_text_sha256": "85b80dd613f885931d86c8471fcd4c77f73e24f1851ff0ed82ed8ad834880440",
+  "coordinates_sha256": "645b40d8a33a421e6bb3a905c05fd79ba0d915910af74a54834d9a85607f4ff3",
+  "block_sequence_sha256": "159196d2f5cc6de30e53e18542ec71d797890342ba406f6d81d49c54b5d78a81",
+  "blocks": [
+    {
+      "block_id": "page-0548-block-0000",
+      "order": 0,
+      "text": "Table 4.21  Interactions between ‘street drugs’ and psychotropics\n",
+      "bbox": [
+        53.86240005493164,
+        414.7914733886719,
+        62.749900817871094,
+        624.1539916992188
+      ],
+      "text_sha256": "b41485d4fe1b2ac36e0895b21fef1c268da04f7b0f599d8a356d518c7035ae12"
+    },
+    {
+      "block_id": "page-0548-block-0001",
+      "order": 1,
+      "text": "Cannabis\nHeroin/methadone6\nCocaine, amfetamine, ecstasy,  \n",
+      "bbox": [
+        73.7374038696289,
+        228.4846649169922,
+        92.6249008178711,
+        557.5003662109375
+      ],
+      "text_sha256": "fb053bb20d9aa74c49ee261d0817e50a28b3ecc7ccf94b58ed591aef5e6f020d"
+    },
+    {
+      "block_id": "page-0548-block-0002",
+      "order": 2,
+      "text": "MDA, 6-APD\nAlcohol\nKetamine7\n",
+      "bbox": [
+        83.73490142822266,
+        82.14286804199219,
+        92.62239837646484,
+        337.8271789550781
+      ],
+      "text_sha256": "2f0a3da8c868c5276b633d3259f7bfd88fb0b1e8c2a8f4667172380945917247"
+    },
+    {
+      "block_id": "page-0548-block-0003",
+      "order": 3,
+      "text": "General \n",
+      "bbox": [
+        101.8624038696289,
+        600.5589599609375,
+        110.7499008178711,
+        630.1539916992188
+      ],
+      "text_sha256": "965257a306e6f1277e9f453f6c78cf6c208e961a1d1705522505308443d1b8e1"
+    },
+    {
+      "block_id": "page-0548-block-0004",
+      "order": 4,
+      "text": "considerations\n",
+      "bbox": [
+        111.85990142822266,
+        578.906494140625,
+        120.74739837646484,
+        630.1539916992188
+      ],
+      "text_sha256": "17fb052f6d5060878b841b7b2f749f736386ea565dac873d33285241fe9d9155"
+    },
+    {
+      "block_id": "page-0548-block-0005",
+      "order": 5,
+      "text": "■\n■Usually smoked in \n",
+      "bbox": [
+        102.04240417480469,
+        488.9054260253906,
+        110.7499008178711,
+        557.50048828125
+      ],
+      "text_sha256": "0d4f3e55b84797b9b08d9b30a36ce5928d2d712e4b93afafab531be6bfdd46d9"
+    },
+    {
+      "block_id": "page-0548-block-0006",
+      "order": 6,
+      "text": "cigarettes (induces \n",
+      "bbox": [
+        111.04240417480469,
+        487.3829040527344,
+        119.7499008178711,
+        548.5003662109375
+      ],
+      "text_sha256": "1d4ab95cbbd323fafbe24eadd95e451be10fd9ab12a4d5aed700377a724be987"
+    },
+    {
+      "block_id": "page-0548-block-0007",
+      "order": 7,
+      "text": "CYP1A2)\n",
+      "bbox": [
+        120.04240417480469,
+        519.7378540039062,
+        128.74990844726562,
+        548.5003662109375
+      ],
+      "text_sha256": "d7c83ea79212b8747256b0b741c409e763232c254b64e5132e626e4d53f3ccfa"
+    },
+    {
+      "block_id": "page-0548-block-0008",
+      "order": 8,
+      "text": "■\n■Can be sedative\n",
+      "bbox": [
+        132.04238891601562,
+        497.65789794921875,
+        140.74989318847656,
+        557.50048828125
+      ],
+      "text_sha256": "b8de75ca55cc7a5d59d69d83ca03e1841bfbedee69ce171d36cc20dac6061ef6"
+    },
+    {
+      "block_id": "page-0548-block-0009",
+      "order": 9,
+      "text": "■\n■Dose-related tachy-\n",
+      "bbox": [
+        144.04238891601562,
+        486.55792236328125,
+        152.74989318847656,
+        557.50048828125
+      ],
+      "text_sha256": "aed0b23a3a5716d2b7da28f0e4c35ec46463a4c8f5eec8ba7dc1ab573136021c"
+    },
+    {
+      "block_id": "page-0548-block-0010",
+      "order": 10,
+      "text": "cardia\n",
+      "bbox": [
+        153.04238891601562,
+        529.472900390625,
+        161.74989318847656,
+        548.5003662109375
+      ],
+      "text_sha256": "6255a6b9f7790a5c396e860e6a7a0d7d9c7ed41f5f9a66097f4689dd3ba3e64b"
+    },
+    {
+      "block_id": "page-0548-block-0011",
+      "order": 11,
+      "text": "■\n■THC/CBD inhibit \n",
+      "bbox": [
+        165.04238891601562,
+        494.3128967285156,
+        173.74989318847656,
+        557.50048828125
+      ],
+      "text_sha256": "b7c77e260265c81b116a1aa5a5beee6fc0e9e987057e41af91f99d0bc8a9c5ea"
+    },
+    {
+      "block_id": "page-0548-block-0012",
+      "order": 12,
+      "text": "CYP3A4 and CYP2C19 \n",
+      "bbox": [
+        174.04238891601562,
+        472.6304016113281,
+        182.74989318847656,
+        548.5003662109375
+      ],
+      "text_sha256": "e20361dedfb983e0ec93035f252f7c28744fd818f8b8ba7c17200a492c9d9238"
+    },
+    {
+      "block_id": "page-0548-block-0013",
+      "order": 13,
+      "text": "and CYP2D68,9\n",
+      "bbox": [
+        183.04238891601562,
+        501.5702819824219,
+        191.74989318847656,
+        548.5003662109375
+      ],
+      "text_sha256": "b2a971e0e91d6527c6e57a00a243fa3b51b1b9dbdf757df96f9f9e9f1ce3b8bb"
+    },
+    {
+      "block_id": "page-0548-block-0014",
+      "order": 14,
+      "text": "■\n■Can produce sedation/\n",
+      "bbox": [
+        102.04240417480469,
+        379.4371337890625,
+        110.7499008178711,
+        460.8272705078125
+      ],
+      "text_sha256": "1fc8abd69670c70968a2135d39adde686843f9b32a82e2e44d3f6360b1966929"
+    },
+    {
+      "block_id": "page-0548-block-0015",
+      "order": 15,
+      "text": "respiratory depression\n",
+      "bbox": [
+        111.04240417480469,
+        382.0921325683594,
+        119.7499008178711,
+        451.82720947265625
+      ],
+      "text_sha256": "65dac6de3420d7d0e072552cdf07cef9317898213f748f00a0e0e9e4a72ebb09"
+    },
+    {
+      "block_id": "page-0548-block-0016",
+      "order": 16,
+      "text": "■\n■QTc prolongation with metha-\n",
+      "bbox": [
+        123.04239654541016,
+        355.6996154785156,
+        131.74989318847656,
+        460.8272705078125
+      ],
+      "text_sha256": "34f47cda67a47eae9a22718b9b5c53270090c3f2bdbf59efd89160208744f9fb"
+    },
+    {
+      "block_id": "page-0548-block-0017",
+      "order": 17,
+      "text": "done (see section ‘Methadone’)\n",
+      "bbox": [
+        132.04238891601562,
+        350.95965576171875,
+        140.74989318847656,
+        451.82720947265625
+      ],
+      "text_sha256": "32ea42bcf069df834bf84421803c96c98ad24574dbbadf0b61839f802d9fe106"
+    },
+    {
+      "block_id": "page-0548-block-0018",
+      "order": 18,
+      "text": "■\n■Stimulants (cocaine can be sedative in \n",
+      "bbox": [
+        102.04240417480469,
+        205.90211486816406,
+        110.7499008178711,
+        337.8273010253906
+      ],
+      "text_sha256": "ecc0a3d731f9e484daba357b88e86142c7e48337a005b615d62cdef649c603e0"
+    },
+    {
+      "block_id": "page-0548-block-0019",
+      "order": 19,
+      "text": "higher doses)\n",
+      "bbox": [
+        111.04240417480469,
+        286.3096008300781,
+        119.7499008178711,
+        328.8271789550781
+      ],
+      "text_sha256": "918920cc9b9e076178a7fb61b5214596fe998e7d2dcd996e5b035147340464e9"
+    },
+    {
+      "block_id": "page-0548-block-0020",
+      "order": 20,
+      "text": "■\n■Arrhythmia possible\n",
+      "bbox": [
+        123.04239654541016,
+        265.4895935058594,
+        131.74989318847656,
+        337.8273010253906
+      ],
+      "text_sha256": "f81a1bb0e0542d059526617a1e3bb220711dc6104b576f7de38a73bc68ac6d37"
+    },
+    {
+      "block_id": "page-0548-block-0021",
+      "order": 21,
+      "text": "■\n■Cerebral/cardiac ischaemia with \n",
+      "bbox": [
+        135.04238891601562,
+        225.76966857910156,
+        143.74989318847656,
+        337.8273010253906
+      ],
+      "text_sha256": "7d8cedd9fd7c2f2bed8c907a882cbca8d5bbe38b03104fb7f1d9a119c8855f07"
+    },
+    {
+      "block_id": "page-0548-block-0022",
+      "order": 22,
+      "text": "cocaine – may be fatal\n",
+      "bbox": [
+        144.04238891601562,
+        257.1647033691406,
+        152.74989318847656,
+        328.8271789550781
+      ],
+      "text_sha256": "33aa7592e515dbee7a09e6a625c909f20be1b446dadcacb6702def05b7c07a2c"
+    },
+    {
+      "block_id": "page-0548-block-0023",
+      "order": 23,
+      "text": "■\n■MDMA (3,4-methylenedioxymetham-\n",
+      "bbox": [
+        156.04238891601562,
+        209.2396240234375,
+        164.74989318847656,
+        337.8273010253906
+      ],
+      "text_sha256": "474767efff2c5c97dde4e3c0e5241b03a796b9f671be527bcbdf56e0bb143f1e"
+    },
+    {
+      "block_id": "page-0548-block-0024",
+      "order": 24,
+      "text": "phetamine) inhibits CYPs 2D6/3A4\n",
+      "bbox": [
+        165.04238891601562,
+        218.3745574951172,
+        173.74989318847656,
+        328.8271789550781
+      ],
+      "text_sha256": "2d46620ec2ad75993e39100158a7e6f9d7f7e64861923756e604a59fff8c60d3"
+    },
+    {
+      "block_id": "page-0548-block-0025",
+      "order": 25,
+      "text": "■\n■Hyperthermia/dehydration with \n",
+      "bbox": [
+        177.04238891601562,
+        226.7371063232422,
+        185.74989318847656,
+        337.8273010253906
+      ],
+      "text_sha256": "35df710ca45818d8560f4a107dfc67d9e8e858d899035c223de79c32a156936d"
+    },
+    {
+      "block_id": "page-0548-block-0026",
+      "order": 26,
+      "text": "ecstasy10\n",
+      "bbox": [
+        186.04238891601562,
+        301.47296142578125,
+        194.74989318847656,
+        328.8271789550781
+      ],
+      "text_sha256": "5bc5fb114b2941653b79652e73f6898ae9f29afa35e60cfe920479e6d035fa9b"
+    },
+    {
+      "block_id": "page-0548-block-0027",
+      "order": 27,
+      "text": "■\n■Sedative\n",
+      "bbox": [
+        102.04240417480469,
+        154.41473388671875,
+        110.7499008178711,
+        190.07730102539062
+      ],
+      "text_sha256": "cfe3f59d750f70ea80ee217ccd3f86f50b5f8b6f6108a5a171af75d43e20a0c6"
+    },
+    {
+      "block_id": "page-0548-block-0028",
+      "order": 28,
+      "text": "■\n■Liver damage \n",
+      "bbox": [
+        114.04240417480469,
+        136.49720764160156,
+        122.7499008178711,
+        190.07730102539062
+      ],
+      "text_sha256": "cf1371066549ef15798a2c216b0d0a15093a8006e6023ee6ccc8ef9117cd97e0"
+    },
+    {
+      "block_id": "page-0548-block-0029",
+      "order": 29,
+      "text": "possible\n",
+      "bbox": [
+        123.04241180419922,
+        155.65228271484375,
+        131.74990844726562,
+        181.07717895507812
+      ],
+      "text_sha256": "f25e13c49ec8b3fa718bfa01cddddceac37bd51ecbcfecb6b67d005e14354703"
+    },
+    {
+      "block_id": "page-0548-block-0030",
+      "order": 30,
+      "text": "■\n■Induces various \n",
+      "bbox": [
+        135.04238891601562,
+        130.23475646972656,
+        143.74989318847656,
+        190.07730102539062
+      ],
+      "text_sha256": "f3d74bdd0bc104447ec7a68e876e0f9812c072eef49bf8ef8e4c4173beb39e7d"
+    },
+    {
+      "block_id": "page-0548-block-0031",
+      "order": 31,
+      "text": "enzymes\n",
+      "bbox": [
+        144.04238891601562,
+        153.5821990966797,
+        152.74989318847656,
+        181.07717895507812
+      ],
+      "text_sha256": "124b409de171e3642b1771ad4845f15c7f9248252ca48ed0de59073a2e1a88f7"
+    },
+    {
+      "block_id": "page-0548-block-0032",
+      "order": 32,
+      "text": "■\n■Sedative readily \n",
+      "bbox": [
+        102.04240417480469,
+        57.813865661621094,
+        110.7499008178711,
+        118.3388671875
+      ],
+      "text_sha256": "2f89d53779d1042f19b3ba5e0e7411068c8318cb304f92e2f52eca30a6968184"
+    },
+    {
+      "block_id": "page-0548-block-0033",
+      "order": 33,
+      "text": "causes uncon-\n",
+      "bbox": [
+        111.04240417480469,
+        63.911373138427734,
+        119.7499008178711,
+        109.33880615234375
+      ],
+      "text_sha256": "564131cd530702229ae2b5a4d5d2324a21794ce0a02ba339df363b168eb4511f"
+    },
+    {
+      "block_id": "page-0548-block-0034",
+      "order": 34,
+      "text": "sciousness\n",
+      "bbox": [
+        120.04240417480469,
+        76.4139175415039,
+        128.74990844726562,
+        109.33880615234375
+      ],
+      "text_sha256": "109bc01d3b62a1173079d0b1a2384af876475c79623f4288b8f79523a3e08ee7"
+    },
+    {
+      "block_id": "page-0548-block-0035",
+      "order": 35,
+      "text": "■\n■Onset of effects \n",
+      "bbox": [
+        132.04238891601562,
+        56.561363220214844,
+        140.74989318847656,
+        118.3388671875
+      ],
+      "text_sha256": "84c7768244a08a2e04daa8e14ac199408424aa5e92d27762e0af9a252a706288"
+    },
+    {
+      "block_id": "page-0548-block-0036",
+      "order": 36,
+      "text": "may be rapid \n",
+      "bbox": [
+        141.04238891601562,
+        65.58382415771484,
+        149.74989318847656,
+        109.33880615234375
+      ],
+      "text_sha256": "d1011c39c7f3d646a6b4ec0c07d57057440f6bf79dccac3a12f943c86cc7acf9"
+    },
+    {
+      "block_id": "page-0548-block-0037",
+      "order": 37,
+      "text": "if snorted or \n",
+      "bbox": [
+        150.04238891601562,
+        68.08138275146484,
+        158.74989318847656,
+        109.33880615234375
+      ],
+      "text_sha256": "8fd8c1853ca66c3c202d286fa39ff8ac53d2d55d7370f09aca09df240c8b583c"
+    },
+    {
+      "block_id": "page-0548-block-0038",
+      "order": 38,
+      "text": "injected\n",
+      "bbox": [
+        159.04238891601562,
+        84.34135437011719,
+        167.74989318847656,
+        109.33880615234375
+      ],
+      "text_sha256": "ca14a1137a0cec7f58cd4b6f319917367b61a6a7e1f5efc714e1f54cb16c4b90"
+    },
+    {
+      "block_id": "page-0548-block-0039",
+      "order": 39,
+      "text": "Older \n",
+      "bbox": [
+        203.98989868164062,
+        608.4788208007812,
+        212.8773956298828,
+        630.15380859375
+      ],
+      "text_sha256": "e2f919a97087604af928e5100bfd32945e02c309fa2b503d420495f0b089a143"
+    },
+    {
+      "block_id": "page-0548-block-0040",
+      "order": 40,
+      "text": "antipsychotics\n",
+      "bbox": [
+        213.98739624023438,
+        580.1588134765625,
+        222.87489318847656,
+        630.15380859375
+      ],
+      "text_sha256": "794157ae41a1a29b4db77f6d5ea5daeac3d7130d5e7ba41ba0d6c74bcef3721d"
+    },
+    {
+      "block_id": "page-0548-block-0041",
+      "order": 41,
+      "text": "■\n■Antipsychotics reduce the psychotropic effects of almost all drugs of abuse by blocking dopamine receptors (dopamine is the neu-\n",
+      "bbox": [
+        204.16738891601562,
+        133.562744140625,
+        212.87489318847656,
+        557.50048828125
+      ],
+      "text_sha256": "c273df6220411a5842e11efcdd3f7d008b305a418129a50bf58411869d31fcab"
+    },
+    {
+      "block_id": "page-0548-block-0042",
+      "order": 42,
+      "text": "rotransmitter responsible for ‘reward’, e.g. haloperidol and MDMA11)\n",
+      "bbox": [
+        213.16738891601562,
+        328.7200012207031,
+        221.87489318847656,
+        548.5003662109375
+      ],
+      "text_sha256": "7d1e06a4c1a5d72c933485b226fc0e19cc7c3273aaef137620a591c913310fcc"
+    },
+    {
+      "block_id": "page-0548-block-0043",
+      "order": 43,
+      "text": "■\n■Patients prescribed antipsychotics may increase their consumption of illicit substances to compensate\n",
+      "bbox": [
+        225.16738891601562,
+        227.09527587890625,
+        233.87489318847656,
+        557.50048828125
+      ],
+      "text_sha256": "b28758a25b199818d5ba15d996339133695ee16f7c00e9a3838178d9209294e1"
+    },
+    {
+      "block_id": "page-0548-block-0044",
+      "order": 44,
+      "text": "■\n■Patients who have taken ecstasy may be more prone to EPS\n",
+      "bbox": [
+        237.16738891601562,
+        358.7503967285156,
+        245.87489318847656,
+        557.50048828125
+      ],
+      "text_sha256": "92189d60df15b11e13a00703f474fb4714d3d0c050b4a0deabe1ff2ebafb8c2d"
+    },
+    {
+      "block_id": "page-0548-block-0045",
+      "order": 45,
+      "text": "■\n■Cardiotoxic or very sedative antipsychotics are best avoided, at least initially. Sulpiride is a reasonably safe first choice\n",
+      "bbox": [
+        249.16738891601562,
+        177.0927734375,
+        257.8748779296875,
+        557.50048828125
+      ],
+      "text_sha256": "0ab9224b85d3ec375c73bf8277bc93dc365c135fe134a6a827cf065ebbb9dd99"
+    },
+    {
+      "block_id": "page-0548-block-0046",
+      "order": 46,
+      "text": "■\n■Methamphetamines increase the risk of EPS with haloperidol12\n",
+      "bbox": [
+        261.16741943359375,
+        350.0050354003906,
+        269.8749084472656,
+        557.50048828125
+      ],
+      "text_sha256": "97173254b2e23c0a45d2f75197e7f0471ff7a3741f927f0ae195b3eefb96fe35"
+    },
+    {
+      "block_id": "page-0548-block-0047",
+      "order": 47,
+      "text": "Second-\n",
+      "bbox": [
+        279.1123962402344,
+        601.8190307617188,
+        287.9999084472656,
+        630.1539916992188
+      ],
+      "text_sha256": "c02a400b4c50cf434a72e73e02aa9861f6d26c5c95fda8a383be36dc94b8c167"
+    },
+    {
+      "block_id": "page-0548-block-0048",
+      "order": 48,
+      "text": "generation \n",
+      "bbox": [
+        289.1098937988281,
+        589.3089599609375,
+        297.9974060058594,
+        630.1539916992188
+      ],
+      "text_sha256": "e54bd2fc41202d4e25b0659190d5933f73c98cfc54b60fa07da07655634499c5"
+    },
+    {
+      "block_id": "page-0548-block-0049",
+      "order": 49,
+      "text": "antipsychotics\n",
+      "bbox": [
+        299.1073913574219,
+        580.1589965820312,
+        307.9949035644531,
+        630.1539916992188
+      ],
+      "text_sha256": "794157ae41a1a29b4db77f6d5ea5daeac3d7130d5e7ba41ba0d6c74bcef3721d"
+    },
+    {
+      "block_id": "page-0548-block-0050",
+      "order": 50,
+      "text": "■\n■Risk of additive seda-\n",
+      "bbox": [
+        279.29241943359375,
+        480.992919921875,
+        287.9999084472656,
+        557.50048828125
+      ],
+      "text_sha256": "56a1e0002cc431c9a9d9c32e363c6ef3c8ac629297790d3e04c6dda356cdf4a8"
+    },
+    {
+      "block_id": "page-0548-block-0051",
+      "order": 51,
+      "text": "tion\n",
+      "bbox": [
+        288.29241943359375,
+        535.9979248046875,
+        296.9999084472656,
+        548.5003662109375
+      ],
+      "text_sha256": "b255e01e581eed652bab9e98cddca3e597f91e7062d86e1deffb4c8df6b8fd62"
+    },
+    {
+      "block_id": "page-0548-block-0052",
+      "order": 52,
+      "text": "■\n■Cannabis smoking in \n",
+      "bbox": [
+        300.29241943359375,
+        479.7254333496094,
+        308.9999084472656,
+        557.50048828125
+      ],
+      "text_sha256": "8fb65c255926add0e2b2b3a3d3b449e06b01041f73312f0ab0e02ca913b8c716"
+    },
+    {
+      "block_id": "page-0548-block-0053",
+      "order": 53,
+      "text": "tobacco can reduce \n",
+      "bbox": [
+        309.29241943359375,
+        484.0453796386719,
+        317.9999084472656,
+        548.5003662109375
+      ],
+      "text_sha256": "08aeac86fc44d7ee151c5f48fca5e0fe3c06368b151ec8e249efbf5df853fcc7"
+    },
+    {
+      "block_id": "page-0548-block-0054",
+      "order": 54,
+      "text": "plasma levels of olan-\n",
+      "bbox": [
+        318.29241943359375,
+        479.7479248046875,
+        326.9999084472656,
+        548.5003662109375
+      ],
+      "text_sha256": "91d24bfc905da7f7cf329527f4982cae3d5edbf1c3ea30eca3bd8b5454b33e8e"
+    },
+    {
+      "block_id": "page-0548-block-0055",
+      "order": 55,
+      "text": "zapine and clozapine \n",
+      "bbox": [
+        327.29241943359375,
+        479.3204040527344,
+        335.9999084472656,
+        548.5003662109375
+      ],
+      "text_sha256": "417ec23dccd91f14703c95bfef86b96b338e1ac94c31770a678426aaa627db48"
+    },
+    {
+      "block_id": "page-0548-block-0056",
+      "order": 56,
+      "text": "via induction of \n",
+      "bbox": [
+        336.29241943359375,
+        496.8254089355469,
+        344.9999084472656,
+        548.5003662109375
+      ],
+      "text_sha256": "81840eb3104450ce76a8dd81307be3454e1f5ddc24039c0379d00c79a08b45d0"
+    },
+    {
+      "block_id": "page-0548-block-0057",
+      "order": 57,
+      "text": "CYP1A213\n",
+      "bbox": [
+        345.29241943359375,
+        516.9608764648438,
+        353.9999084472656,
+        548.5003662109375
+      ],
+      "text_sha256": "6d4d8b1dbba990b52055266d22cd16c153b6cf4facf6caaa1f8983b42db4ed62"
+    },
+    {
+      "block_id": "page-0548-block-0058",
+      "order": 58,
+      "text": "■\n■Clozapine might \n",
+      "bbox": [
+        357.29241943359375,
+        493.9079284667969,
+        365.9999084472656,
+        557.50048828125
+      ],
+      "text_sha256": "a78856ea1e8fdf6c00f0065453ecd3a969e2d4465647aa93ff5f7c07d29dfaf4"
+    },
+    {
+      "block_id": "page-0548-block-0059",
+      "order": 59,
+      "text": "reduce cannabis and \n",
+      "bbox": [
+        366.29241943359375,
+        480.7004089355469,
+        374.9999084472656,
+        548.5003662109375
+      ],
+      "text_sha256": "53183e9e2c5a38d3a03fd2308a4fbe8f35d9e1856e255b2d35b6ae33f041b660"
+    },
+    {
+      "block_id": "page-0548-block-0060",
+      "order": 60,
+      "text": "alcohol consumption14\n",
+      "bbox": [
+        375.29241943359375,
+        476.9564514160156,
+        383.9999084472656,
+        548.5003662109375
+      ],
+      "text_sha256": "a92cfe73b836776c230ec5346347a46b77cdbd72470b7d93744174482e91eac1"
+    },
+    {
+      "block_id": "page-0548-block-0061",
+      "order": 61,
+      "text": "■\n■Outcome of THC/CBD \n",
+      "bbox": [
+        387.29241943359375,
+        475.9828796386719,
+        395.9999084472656,
+        557.50048828125
+      ],
+      "text_sha256": "78db80e9216a0e043b86504af36d597cc4b72e2e8e4ceed3847e577b1e86a74d"
+    },
+    {
+      "block_id": "page-0548-block-0062",
+      "order": 62,
+      "text": "inhibition of CYP1A2 \n",
+      "bbox": [
+        396.29241943359375,
+        478.8929138183594,
+        404.9999084472656,
+        548.5003662109375
+      ],
+      "text_sha256": "97a64bc8cc388b7919d79c3a4300fa5724d60eb1177166ee330e870bbfb77edd"
+    },
+    {
+      "block_id": "page-0548-block-0063",
+      "order": 63,
+      "text": "unknown\n",
+      "bbox": [
+        405.29241943359375,
+        518.0654296875,
+        413.9999084472656,
+        548.5003662109375
+      ],
+      "text_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f"
+    },
+    {
+      "block_id": "page-0548-block-0064",
+      "order": 64,
+      "text": "■\n■Risk of additive sedation\n",
+      "bbox": [
+        279.29241943359375,
+        374.31463623046875,
+        287.9999084472656,
+        460.8272705078125
+      ],
+      "text_sha256": "4a99caa730f974a6d70958882a97bd2eca174185000a88a567665dae4d790370"
+    },
+    {
+      "block_id": "page-0548-block-0065",
+      "order": 65,
+      "text": "■\n■Case report of methadone \n",
+      "bbox": [
+        291.29241943359375,
+        365.27716064453125,
+        299.9999084472656,
+        460.8272705078125
+      ],
+      "text_sha256": "f486a42b480f82d0445f6532052c2079fd76e503dea72c72f6be74d9a6fbd196"
+    },
+    {
+      "block_id": "page-0548-block-0066",
+      "order": 66,
+      "text": "withdrawal being precipitated \n",
+      "bbox": [
+        300.29241943359375,
+        354.0346374511719,
+        308.9999084472656,
+        451.82720947265625
+      ],
+      "text_sha256": "1697b52a3c475920fa1b23507be46fed15071e783d6b42d836a5f767fea629e6"
+    },
+    {
+      "block_id": "page-0548-block-0067",
+      "order": 67,
+      "text": "by risperidone15\n",
+      "bbox": [
+        309.29241943359375,
+        401.9580383300781,
+        317.9999084472656,
+        451.82720947265625
+      ],
+      "text_sha256": "cab3482544199afcc2d21255da242f141a7ceef5010a4e5211c2b36e839b684d"
+    },
+    {
+      "block_id": "page-0548-block-0068",
+      "order": 68,
+      "text": "■\n■Isolated report of quetiapine \n",
+      "bbox": [
+        321.29241943359375,
+        359.0296325683594,
+        329.9999084472656,
+        460.8272705078125
+      ],
+      "text_sha256": "3a237267fde8ac8f2f05d2dfc06557455c97537f031c6dbe6689c70572f52613"
+    },
+    {
+      "block_id": "page-0548-block-0069",
+      "order": 69,
+      "text": "increasing methadone levels, \n",
+      "bbox": [
+        330.29241943359375,
+        357.78460693359375,
+        338.9999084472656,
+        451.82720947265625
+      ],
+      "text_sha256": "9580cc63a7fb6e170f6f39a617bb9983f0b4051c86f4c9306ea6ab8d210a6a7a"
+    },
+    {
+      "block_id": "page-0548-block-0070",
+      "order": 70,
+      "text": "especially in those with slowed \n",
+      "bbox": [
+        339.29241943359375,
+        351.3946228027344,
+        347.9999084472656,
+        451.82720947265625
+      ],
+      "text_sha256": "eb4b6ed62f8cf3dc7fdb1b8eef3dc4831db90606a57713ffcdd7b45095baeaf5"
+    },
+    {
+      "block_id": "page-0548-block-0071",
+      "order": 71,
+      "text": "CYP2D6 hepatic metabolism16\n",
+      "bbox": [
+        348.29241943359375,
+        355.7059631347656,
+        356.9999084472656,
+        451.82720947265625
+      ],
+      "text_sha256": "405e2fb7ef73287c36864f6de1e5684309ea4b06d86467200ebca78a9d562d5f"
+    },
+    {
+      "block_id": "page-0548-block-0072",
+      "order": 72,
+      "text": "■\n■Antipsychotics may reduce craving and \n",
+      "bbox": [
+        279.29241943359375,
+        202.70713806152344,
+        287.9999084472656,
+        337.8273010253906
+      ],
+      "text_sha256": "2c0ce9bf9da7c7df3201875715b34dccb488fd1a9cecb07290f04a04d2554b78"
+    },
+    {
+      "block_id": "page-0548-block-0073",
+      "order": 73,
+      "text": "cocaine-induced euphoria17–21\n",
+      "bbox": [
+        288.29241943359375,
+        234.40235900878906,
+        296.9999084472656,
+        328.8271789550781
+      ],
+      "text_sha256": "6d646cf6b8bb8a8d987741686214eabc3af46cada0029b8697026cfa5885bd4a"
+    },
+    {
+      "block_id": "page-0548-block-0074",
+      "order": 74,
+      "text": "■\n■Olanzapine may worsen cocaine \n",
+      "bbox": [
+        300.29241943359375,
+        223.8196258544922,
+        308.9999084472656,
+        337.8273010253906
+      ],
+      "text_sha256": "dd64e2bb0f94fa3f6aac1985ac3e4f555752c5c5cad061dc3c2b39a2832accb4"
+    },
+    {
+      "block_id": "page-0548-block-0075",
+      "order": 75,
+      "text": "dependency22\n",
+      "bbox": [
+        309.29241943359375,
+        285.20526123046875,
+        317.9999084472656,
+        328.8271789550781
+      ],
+      "text_sha256": "43bd93068e0b1bfb8a8d9ec77fcbf8b5dbc1c0b4ca1ba025787ac52d870f218c"
+    },
+    {
+      "block_id": "page-0548-block-0076",
+      "order": 76,
+      "text": "■\n■Clozapine may increase cocaine levels \n",
+      "bbox": [
+        321.29241943359375,
+        206.4646453857422,
+        329.9999084472656,
+        337.8273010253906
+      ],
+      "text_sha256": "8dd02dbb3b378eb1b151a58173113aa44a82ff048d976a94a6e2c02fd6fe29df"
+    },
+    {
+      "block_id": "page-0548-block-0077",
+      "order": 77,
+      "text": "but diminish subjective response23\n",
+      "bbox": [
+        330.29241943359375,
+        220.7512664794922,
+        338.9999084472656,
+        328.8271789550781
+      ],
+      "text_sha256": "57d510829db06138369c61f6afc724bef9c3ddc4cb85607b65ed8bdd81908064"
+    },
+    {
+      "block_id": "page-0548-block-0078",
+      "order": 78,
+      "text": "■\n■Increased risk \n",
+      "bbox": [
+        279.29241943359375,
+        136.2122344970703,
+        287.9999084472656,
+        190.07730102539062
+      ],
+      "text_sha256": "fdd72cf54f15f8372fdd68299e68a0f2dcd0f90475a5e41a8f745f1ece9737ae"
+    },
+    {
+      "block_id": "page-0548-block-0079",
+      "order": 79,
+      "text": "of hypotension \n",
+      "bbox": [
+        288.29241943359375,
+        131.0597686767578,
+        296.9999084472656,
+        181.07717895507812
+      ],
+      "text_sha256": "a2cbb8f7404b73042ee5efe8cb457a10e6399a1aa0776cd986a7efee9914b5ae"
+    },
+    {
+      "block_id": "page-0548-block-0080",
+      "order": 80,
+      "text": "with olan-\n",
+      "bbox": [
+        297.29241943359375,
+        148.572265625,
+        305.9999084472656,
+        181.07717895507812
+      ],
+      "text_sha256": "7b519644be8a1355147a4802f76904907aa1842886b126a28eb11aca0603a2b9"
+    },
+    {
+      "block_id": "page-0548-block-0081",
+      "order": 81,
+      "text": "zapine (and \n",
+      "bbox": [
+        306.29241943359375,
+        141.89723205566406,
+        314.9999084472656,
+        181.07717895507812
+      ],
+      "text_sha256": "698374bd25cafbd014cb2690da33f48b7d8afedaaa7f64c1df77c1469c05bcbc"
+    },
+    {
+      "block_id": "page-0548-block-0082",
+      "order": 82,
+      "text": "possibly other \n",
+      "bbox": [
+        315.29241943359375,
+        134.81727600097656,
+        323.9999084472656,
+        181.07717895507812
+      ],
+      "text_sha256": "8307251b8637d54991e8eec69adeb73b0fed8f68273188a828479035eb921411"
+    },
+    {
+      "block_id": "page-0548-block-0083",
+      "order": 83,
+      "text": "β-blockers)\n",
+      "bbox": [
+        323.27239990234375,
+        146.2697296142578,
+        333.9223937988281,
+        181.07717895507812
+      ],
+      "text_sha256": "68926bdfa137f05fe8e23b48c667e71a72be79d7d52b81d18c987499df9f072b"
+    },
+    {
+      "block_id": "page-0548-block-0084",
+      "order": 84,
+      "text": "■\n■Increased seda-\n",
+      "bbox": [
+        279.29241943359375,
+        60.303890228271484,
+        287.9999084472656,
+        118.3388671875
+      ],
+      "text_sha256": "ae14e0739e7193b8a5c3cb11a0eb37039450497762f81269a0b049d415f93cb3"
+    },
+    {
+      "block_id": "page-0548-block-0085",
+      "order": 85,
+      "text": "tion\n",
+      "bbox": [
+        288.29241943359375,
+        96.83634948730469,
+        296.9999084472656,
+        109.33880615234375
+      ],
+      "text_sha256": "b255e01e581eed652bab9e98cddca3e597f91e7062d86e1deffb4c8df6b8fd62"
+    },
+    {
+      "block_id": "page-0548-block-0086",
+      "order": 86,
+      "text": "(Continued )\n",
+      "bbox": [
+        424.7052917480469,
+        51.238075256347656,
+        434.6247863769531,
+        94.81756591796875
+      ],
+      "text_sha256": "bce697aea57d29db5fb5b1502b4089967f75fcf44428590b90e07d43fc71640b"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

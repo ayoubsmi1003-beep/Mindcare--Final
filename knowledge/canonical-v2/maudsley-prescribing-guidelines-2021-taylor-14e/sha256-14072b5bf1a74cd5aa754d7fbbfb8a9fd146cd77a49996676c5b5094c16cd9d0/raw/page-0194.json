@@ -1,0 +1,107 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0194",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 194,
+  "source_page_index": 193,
+  "source_page_display": 194,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    173\nCHAPTER 1\nresponsible, because prevalence is also high (17 – 70%) in patients who are unmedi-\ncated.16 Men17 complain of reduced desire, inability to achieve an erection and prema-\nture ejaculation, whereas women complain more generally about reduced enjoyment.17,18 \nWomen with psychosis are known to have reduced fertility.19 People with psychosis are \nless able to develop good psychosexual relationships and, for some, treatment with an \nantipsychotic can improve sexual functioning.20 Assessment of sexual functioning can \nclearly be difficult in someone who is psychotic. The Arizona Sexual Experience Scale \n(ASEX) may be useful in this respect.21\nEffects of antipsychotic drugs\nSexual dysfunction has been reported as a side-effect of most antipsychotics, and up to \n45% of people taking older or conventional antipsychotics experience sexual dysfunc-\ntion.22 Individual susceptibility varies and all effects are reversible. Note though that \nphysical illness and drugs other than antipsychotics can cause sexual dysfunction, and \nmany studies do not control for either, making the prevalence of sexual dysfunction \nwith different antipsychotics difficult to compare.23\nAntipsychotics decrease dopaminergic transmission, which in itself can decrease \nlibido but may also increase prolactin levels via negative feedback. Hyperprolactinaemia \nhas been shown to be associated with sexual dysfunction in several studies,24 and it has \nbeen estimated that prolactin elevation explains 40% of the sexual dysfunction that is \nassociated with antipsychotic medication.4 Hyperprolactinaemia can also cause amen-\norrhoea in women and breast enlargement and galactorrhoea in both men and women.25 \nAlthough it has been suggested that the overall propensity of an antipsychotic to cause \nsexual dysfunction is related to propensity to raise prolactin, i.e. risperidone > haloperi-\ndol  >  olanzapine  >  quetiapine  >  aripiprazole,9,23,26 it should be noted that in the \nCUtLASS-1 study, FGAs (primarily sulpiride, but also other FGAs known to be associ-\nated with prolactin elevation) did not fare any worse than SGAs (70% of patients in \nthis arm were prescribed an antipsychotic not associated with prolactin elevation) with \nrespect to worsening sexual dysfunction. In fact, sexual functioning improved in both \narms over the one-year duration of the study.20 Aripiprazole is relatively free of sexual \nside effects when used as monotherapy27 and possibly also in combination with another \nantipsychotic.28,29 Cariprazine is a theoretically appropriate alternative (no switching \nstudies are yet available).30\nAnticholinergic effects can cause disorders of arousal31 (concomitant anticholinergics \nmay contribute to sexual dysfunction32), and drugs that block peripheral α1 receptors \ncause particular problems with erection and ejaculation in men.11 Drugs that are antag-\nonists at both peripheral α1 receptors and cholinergic receptors can cause priapism.33 \nAntipsychotic-induced sedation and weight gain may reduce sexual desire.33 These \nprinciples can be used to predict the sexual side effects of different antipsychotic drugs \n(see Table 1.31). Bear in mind that switching to an antipsychotic that better controls \npsychotic symptoms may itself help with sexual dysfunction.\n",
+  "raw_text_sha256": "13fb1232fafd378457e6e07feb83f4d40bc8b22ded3cbd6e592b8456d35b48c9",
+  "coordinates_sha256": "fc8492ebd4c65b6040a5f16699b64938b51f692f87eda56968d134284281dde3",
+  "block_sequence_sha256": "b06b66817de409e7853e3dac0e7375b4c5bb114e511f255cf1016e8d8bf4847d",
+  "blocks": [
+    {
+      "block_id": "page-0194-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    173\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "e4de0288e28938d6239cbcf549b347623a69f7dc7e1447455feb5a9ef547524d"
+    },
+    {
+      "block_id": "page-0194-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0194-block-0002",
+      "order": 2,
+      "text": "responsible, because prevalence is also high (17 – 70%) in patients who are unmedi-\ncated.16 Men17 complain of reduced desire, inability to achieve an erection and prema-\nture ejaculation, whereas women complain more generally about reduced enjoyment.17,18 \nWomen with psychosis are known to have reduced fertility.19 People with psychosis are \nless able to develop good psychosexual relationships and, for some, treatment with an \nantipsychotic can improve sexual functioning.20 Assessment of sexual functioning can \nclearly be difficult in someone who is psychotic. The Arizona Sexual Experience Scale \n(ASEX) may be useful in this respect.21\n",
+      "bbox": [
+        47.99430847167969,
+        62.54931640625,
+        422.8302307128906,
+        158.26931762695312
+      ],
+      "text_sha256": "9a0920512d9931781be5ce515086e8c43059361c022f73f9fe168e2acb632414"
+    },
+    {
+      "block_id": "page-0194-block-0003",
+      "order": 3,
+      "text": "Effects of antipsychotic drugs\n",
+      "bbox": [
+        47.99909973144531,
+        175.70431518554688,
+        200.580078125,
+        188.73931884765625
+      ],
+      "text_sha256": "c49014b25c6fe0aa43736febf52ab3e6cd49d98c83afed59a4d0a66b2ed0e811"
+    },
+    {
+      "block_id": "page-0194-block-0004",
+      "order": 4,
+      "text": "Sexual dysfunction has been reported as a side-effect of most antipsychotics, and up to \n45% of people taking older or conventional antipsychotics experience sexual dysfunc-\ntion.22 Individual susceptibility varies and all effects are reversible. Note though that \nphysical illness and drugs other than antipsychotics can cause sexual dysfunction, and \nmany studies do not control for either, making the prevalence of sexual dysfunction \nwith different antipsychotics difficult to compare.23\n",
+      "bbox": [
+        47.99909973144531,
+        194.54931640625,
+        422.8219299316406,
+        266.2693176269531
+      ],
+      "text_sha256": "012a63085401effb367cd6409bc38c97061ab19a4653a60599a0e14f1c505e58"
+    },
+    {
+      "block_id": "page-0194-block-0005",
+      "order": 5,
+      "text": "Antipsychotics decrease dopaminergic transmission, which in itself can decrease \nlibido but may also increase prolactin levels via negative feedback. Hyperprolactinaemia \nhas been shown to be associated with sexual dysfunction in several studies,24 and it has \nbeen estimated that prolactin elevation explains 40% of the sexual dysfunction that is \nassociated with antipsychotic medication.4 Hyperprolactinaemia can also cause amen-\norrhoea in women and breast enlargement and galactorrhoea in both men and women.25 \nAlthough it has been suggested that the overall propensity of an antipsychotic to cause \nsexual dysfunction is related to propensity to raise prolactin, i.e. risperidone > haloperi-\ndol  >  olanzapine  >  quetiapine  >  aripiprazole,9,23,26 it should be noted that in the \nCUtLASS-1 study, FGAs (primarily sulpiride, but also other FGAs known to be associ-\nated with prolactin elevation) did not fare any worse than SGAs (70% of patients in \nthis arm were prescribed an antipsychotic not associated with prolactin elevation) with \nrespect to worsening sexual dysfunction. In fact, sexual functioning improved in both \narms over the one-year duration of the study.20 Aripiprazole is relatively free of sexual \nside effects when used as monotherapy27 and possibly also in combination with another \nantipsychotic.28,29 Cariprazine is a theoretically appropriate alternative (no switching \nstudies are yet available).30\n",
+      "bbox": [
+        47.995201110839844,
+        266.54931640625,
+        422.8089904785156,
+        470.2693176269531
+      ],
+      "text_sha256": "f7979d4e89da780ab57bc4884be70126cf8b3566d113f0f5e365bf4594fd76ab"
+    },
+    {
+      "block_id": "page-0194-block-0006",
+      "order": 6,
+      "text": "Anticholinergic effects can cause disorders of arousal31 (concomitant anticholinergics \nmay contribute to sexual dysfunction32), and drugs that block peripheral α1 receptors \ncause particular problems with erection and ejaculation in men.11 Drugs that are antag-\nonists at both peripheral α1 receptors and cholinergic receptors can cause priapism.33 \nAntipsychotic-induced sedation and weight gain may reduce sexual desire.33 These \nprinciples can be used to predict the sexual side effects of different antipsychotic drugs \n(see Table 1.31). Bear in mind that switching to an antipsychotic that better controls \npsychotic symptoms may itself help with sexual dysfunction.\n",
+      "bbox": [
+        47.99800109863281,
+        470.54931640625,
+        422.7908630371094,
+        566.2693481445312
+      ],
+      "text_sha256": "23b570d778d17971fb890fdd6aee7d85096e73164a9ce51799d3152482e1b74d"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

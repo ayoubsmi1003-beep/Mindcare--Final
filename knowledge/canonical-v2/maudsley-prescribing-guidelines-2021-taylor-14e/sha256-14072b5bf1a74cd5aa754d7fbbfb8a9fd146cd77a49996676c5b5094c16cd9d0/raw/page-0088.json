@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0088",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 88,
+  "source_page_index": 87,
+  "source_page_display": 88,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    67\nCHAPTER 1\nAntipsychotic depots/long-acting injections (LAIs)\nLong-acting injectable (LAI) preparations of antipsychotic medication are commonly \nprescribed in clinical practice, especially in the UK,  Australasia and the EU. Observational \nstudies have confirmed that continued treatment is associated with fewer relapses and \nrehospitalisations compared with oral antipsychotic treatment,1–5 although there are \nconfounding factors in such studies, such as indication bias.\nA Cochrane systematic review of randomised trials comparing maintenance treat-\nment with antipsychotic medication and placebo for people with schizophrenia found \nLAI antipsychotic medications (in particular, LAI haloperidol and fluphenazine) were \nmore effective than oral antipsychotic medications.6 However, the authors noted that \nonly head-to-head comparisons of oral and LAI antipsychotic treatment can determine \nwhether the latter are more effective. The findings of such RCTs have generally failed \nto show a clear superiority for LAI antipsychotic medications,7–9 although this may be \npartly related to study design and methodology issues.2 Specifically, double-blind RCTs \nare generally relatively short term, and the study samples will tend to be biased towards \npatients with rather less severe illness, fewer comorbid conditions and better adherence \nto medication.10,11 RCTs conducted in a more naturalistic manner may better show the \nadvantages of depots.12 However, all studies of all types clearly demonstrate that con-\ntinuous treatment with depots does not confer complete protection against relapse.13\nLAI antipsychotic medication is recommended where a patient has expressed a pref-\nerence for such a formulation because of its convenience or where avoidance of covert \nnon-adherence is considered a clinical priority.14,15 While LAI medication does not \nensure adherence, it does assure awareness of adherence, unlike the use of oral medica-\ntion. Thus, failure to adhere, which may be a sign of relapse or a potential cause, will \nbe signalled by delayed attendance for, or refusal of, an injection, allowing the clinical \nteam to intervene promptly. Another possible advantage for LAI antipsychotic medica-\ntion is that its use may help clarify whether an unsatisfactory therapeutic response to \nantipsychotic medication is due to adherence problems or a refractory illness. Many \napparently refractory patients are simply non-adherent to oral medication, sometimes \ncompletely so.16 Furthermore, an LAI antipsychotic regimen provides the opportunity \nfor regular scrutiny of a patient’s mental state and side effects by the health care profes-\nsional administering the injection.17\nThe proportion of patients with schizophrenia prescribed LAI antipsychotic medica-\ntions varies between and across countries suggesting that the use of such medication is \ninfluenced by factors beyond the extent of poor adherence. Greater understanding of \nthese factors might allow us to identify possible barriers to the optimal implementation \nof this treatment.18–20 A US study found that American first-episode patients were largely \nwilling to accept long-acting treatment.21 This suggests that low usage of depots in the \nUSA might be largely a result of reluctance on the part of clinicians, rather than patients.\nAdvice on prescribing LAIs\n■\n■For LAI FGAs, give a test dose\nBecause of its long half-life, any adverse effects that result from the administration of \nan LAI antipsychotic medication are likely to be long-lived. Therefore, such treatment \n",
+  "raw_text_sha256": "5282eb1272d26fdc8948c9a8168b1e25c8a366e0fec0f2763168fedc6815fead",
+  "coordinates_sha256": "b2452ff57acbe61c5197d832e73f2cdd73b0465e06e300e4f3fc3dedd8d58731",
+  "block_sequence_sha256": "1d39d013b0ee181461d557546b345908bc4ae8f1ec8910a88c55aa9019be2bd9",
+  "blocks": [
+    {
+      "block_id": "page-0088-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    67\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "adf0944d37712222ec3998f9b0b22701c5b6d3e636b23f60616b8138c7d06ef1"
+    },
+    {
+      "block_id": "page-0088-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0088-block-0002",
+      "order": 2,
+      "text": "Antipsychotic depots/long-acting injections (LAIs)\n",
+      "bbox": [
+        54.99909973144531,
+        66.06448364257812,
+        311.0351257324219,
+        79.0994873046875
+      ],
+      "text_sha256": "e1bea282f98868c39410e517f74b07a01d0c17c3bd316e15cd6bf9ace825bd4e"
+    },
+    {
+      "block_id": "page-0088-block-0003",
+      "order": 3,
+      "text": "Long-acting injectable (LAI) preparations of antipsychotic medication are commonly \nprescribed in clinical practice, especially in the UK,  Australasia and the EU. Observational \nstudies have confirmed that continued treatment is associated with fewer relapses and \nrehospitalisations compared with oral antipsychotic treatment,1–5 although there are \nconfounding factors in such studies, such as indication bias.\n",
+      "bbox": [
+        47.99909973144531,
+        84.90948486328125,
+        422.7991027832031,
+        144.62948608398438
+      ],
+      "text_sha256": "32208d4fd3fd639a0ed2abcdfff0b7bd3b634654a94768be021c1b8b8d07c124"
+    },
+    {
+      "block_id": "page-0088-block-0004",
+      "order": 4,
+      "text": "A Cochrane systematic review of randomised trials comparing maintenance treat-\nment with antipsychotic medication and placebo for people with schizophrenia found \nLAI antipsychotic medications (in particular, LAI haloperidol and fluphenazine) were \nmore effective than oral antipsychotic medications.6 However, the authors noted that \nonly head-to-head comparisons of oral and LAI antipsychotic treatment can determine \nwhether the latter are more effective. The findings of such RCTs have generally failed \nto show a clear superiority for LAI antipsychotic medications,7–9 although this may be \npartly related to study design and methodology issues.2 Specifically, double-blind RCTs \nare generally relatively short term, and the study samples will tend to be biased towards \npatients with rather less severe illness, fewer comorbid conditions and better adherence \nto medication.10,11 RCTs conducted in a more naturalistic manner may better show the \nadvantages of depots.12 However, all studies of all types clearly demonstrate that con-\ntinuous treatment with depots does not confer complete protection against relapse.13\n",
+      "bbox": [
+        47.99430847167969,
+        144.90948486328125,
+        422.8049011230469,
+        300.6295166015625
+      ],
+      "text_sha256": "b360487ff45d291649bafa013a953ddc4c75d01d82b88b7bbac292fc86c9c72e"
+    },
+    {
+      "block_id": "page-0088-block-0005",
+      "order": 5,
+      "text": "LAI antipsychotic medication is recommended where a patient has expressed a pref-\nerence for such a formulation because of its convenience or where avoidance of covert \nnon-adherence is considered a clinical priority.14,15 While LAI medication does not \nensure adherence, it does assure awareness of adherence, unlike the use of oral medica-\ntion. Thus, failure to adhere, which may be a sign of relapse or a potential cause, will \nbe signalled by delayed attendance for, or refusal of, an injection, allowing the clinical \nteam to intervene promptly. Another possible advantage for LAI antipsychotic medica-\ntion is that its use may help clarify whether an unsatisfactory therapeutic response to \nantipsychotic medication is due to adherence problems or a refractory illness. Many \napparently refractory patients are simply non-adherent to oral medication, sometimes \ncompletely so.16 Furthermore, an LAI antipsychotic regimen provides the opportunity \nfor regular scrutiny of a patient’s mental state and side effects by the health care profes-\nsional administering the injection.17\n",
+      "bbox": [
+        47.99809265136719,
+        300.9095153808594,
+        422.8191223144531,
+        456.6295166015625
+      ],
+      "text_sha256": "5cc116ec0e7569b6ca7e89aac4f79061c7af1a2cde873755fd35a9639fd39edb"
+    },
+    {
+      "block_id": "page-0088-block-0006",
+      "order": 6,
+      "text": "The proportion of patients with schizophrenia prescribed LAI antipsychotic medica-\ntions varies between and across countries suggesting that the use of such medication is \ninfluenced by factors beyond the extent of poor adherence. Greater understanding of \nthese factors might allow us to identify possible barriers to the optimal implementation \nof this treatment.18–20 A US study found that American first-episode patients were largely \nwilling to accept long-acting treatment.21 This suggests that low usage of depots in the \nUSA might be largely a result of reluctance on the part of clinicians, rather than patients.\n",
+      "bbox": [
+        47.997894287109375,
+        456.9095153808594,
+        422.8088684082031,
+        540.6295166015625
+      ],
+      "text_sha256": "ee6725bd5bdd2390c94fc8a87df3f85da84d13b48cf4ff0304ae7c4f04ca607b"
+    },
+    {
+      "block_id": "page-0088-block-0007",
+      "order": 7,
+      "text": "Advice on prescribing LAIs\n",
+      "bbox": [
+        47.99909973144531,
+        558.0645141601562,
+        184.080078125,
+        571.0994873046875
+      ],
+      "text_sha256": "316a4bb4f3034e7c06865908dff2cf0072437ed4b65451e3f0516fa7f0244a0d"
+    },
+    {
+      "block_id": "page-0088-block-0008",
+      "order": 8,
+      "text": "■\n■For LAI FGAs, give a test dose\n",
+      "bbox": [
+        47.99909973144531,
+        576.6694946289062,
+        188.26910400390625,
+        588.6295166015625
+      ],
+      "text_sha256": "19170d3ac38755b13a60bba242f8599a6663627de227e2df201f2fec8ed6441a"
+    },
+    {
+      "block_id": "page-0088-block-0009",
+      "order": 9,
+      "text": "Because of its long half-life, any adverse effects that result from the administration of \nan LAI antipsychotic medication are likely to be long-lived. Therefore, such treatment \n",
+      "bbox": [
+        56.99909973144531,
+        588.9094848632812,
+        422.8190002441406,
+        612.6295166015625
+      ],
+      "text_sha256": "7913e75cc96b5b55a5efd48e0e56490970c0d9e3e8622f8ed0a5b332ceb9e151"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

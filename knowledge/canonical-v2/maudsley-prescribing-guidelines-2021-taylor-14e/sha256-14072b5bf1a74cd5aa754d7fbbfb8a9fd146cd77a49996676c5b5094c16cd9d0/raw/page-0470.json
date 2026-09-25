@@ -1,0 +1,263 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0470",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 470,
+  "source_page_index": 469,
+  "source_page_display": 470,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    449\nCHAPTER 3\nshort-acting drugs given intravenously are extremely likely to cause disinhibition in \npersonality disorder.\nWhat is the mechanism?18,22–24\nVarious theories of the mechanism have been proposed. First, the anxiolytic and amne-\nsic properties of benzodiazepines may lead to a loss of the restraint that governs normal \nsocial behaviour. Second, the sedative and amnesic properties of benzodiazepines may \nlead to a reduced ability to concentrate on the external social cues that guide appropri-\nate behaviour. Lastly, benzodiazepine-mediated increases in GABA neurotransmission \nmay lead to a reduction in the restraining influence of the cortex, resulting in untram-\nmelled excitement, anxiety and hostility.\nFlumazenil is usually used to reverse benzodiazepine sedation and respiratory depres-\nsion, but it is also effective in treating disinhibition reactions.25\nSubjective reports\nPeople who take benzodiazepines rate themselves as being more tolerant and friendly, \nbut respond more to provocation than placebo-treated patients.26 People with impulse \ncontrol problems who take benzodiazepines may self-report feelings of power and \noverwhelming self-esteem.17 Psychology rating scales demonstrate increased suggesti-\nbility, failure to recognise anger in others and reduced ability to recognise social cues. \nThe experience of this author (DT) (having once been given intravenous midazolam for \na pre-surgical procedure) is that the patient may be completely unaware that their \nbehaviour is bizarre or that it is the result of drug-induced disinhibition.\nClinical implications\nBenzodiazepines are frequently used in rapid tranquillisation and the short-term man-\nagement of disturbed behaviour. For the vast majority of treatment episodes, benzodi-\nazepines produce sedation, and reductions in anxiety and aggression. It is important to \nbe aware, nonetheless, of their propensity to cause paradoxical disinhibitory reactions.\nParadoxical disinhibitory/aggressive outbursts in the context of benzodiazepine use:\n■\n■are rare in the general population but more frequent in people with impulse control problems or \nCNS damage and in the very young or very old\n■\n■are most often associated with high doses of high-potency drugs that are administered \nparenterally\n■\n■usually occur in response to (often very mild) provocation, the exact nature of which is not \nalways obvious to others\n■\n■are recognised by others but often not by the sufferer, who often believes that he is friendly and \ntolerant\nSuspected paradoxical reactions should be clearly documented in the clinical notes. In extreme \ncases, flumazenil can be used to reverse the reaction. If the benzodiazepine was prescribed to \ncontrol acute behavioural disturbance, future episodes should be managed with antipsychotic \ndrugs27 or other non-benzodiazepine sedatives.\n",
+  "raw_text_sha256": "7750cc2845b9c511341cb503019be391bf72420ad42c9e63d40fc69491f2b04f",
+  "coordinates_sha256": "5eb1f192bef9218348f2dd122bd6e16c197dd25db42cd6142f8f6a3d4600abda",
+  "block_sequence_sha256": "bcae213e52d0b452e79ad2bbebcf1012488c2c859809406553f67adb9ae15380",
+  "blocks": [
+    {
+      "block_id": "page-0470-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    449\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "b2ee10bc119c6f7dc6dfc93fd27edaefd0193175ce380f8ff3a86160a95ccc87"
+    },
+    {
+      "block_id": "page-0470-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0470-block-0002",
+      "order": 2,
+      "text": "short-acting drugs given intravenously are extremely likely to cause disinhibition in \npersonality disorder.\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.7898864746094,
+        86.27041625976562
+      ],
+      "text_sha256": "3863c340a5a6af68a19d4980360a21b6fd2fc266eb654a786d9f64aa398d78af"
+    },
+    {
+      "block_id": "page-0470-block-0003",
+      "order": 3,
+      "text": "What is the mechanism?18,22–24\n",
+      "bbox": [
+        48.0,
+        101.70541381835938,
+        200.2878875732422,
+        114.74041748046875
+      ],
+      "text_sha256": "0d519853fde82f2a9d95b14a7ceba1bfa02384770e28b9cc724c781fe7f4880b"
+    },
+    {
+      "block_id": "page-0470-block-0004",
+      "order": 4,
+      "text": "Various theories of the mechanism have been proposed. First, the anxiolytic and amne-\nsic properties of benzodiazepines may lead to a loss of the restraint that governs normal \nsocial behaviour. Second, the sedative and amnesic properties of benzodiazepines may \nlead to a reduced ability to concentrate on the external social cues that guide appropri-\nate behaviour. Lastly, benzodiazepine-mediated increases in GABA neurotransmission \nmay lead to a reduction in the restraining influence of the cortex, resulting in untram-\nmelled excitement, anxiety and hostility.\n",
+      "bbox": [
+        48.0,
+        120.5504150390625,
+        422.78009033203125,
+        204.27041625976562
+      ],
+      "text_sha256": "51601278c4e9709c5b57d16dd3a9977424f8ca224b277377525fe2c779c9ed05"
+    },
+    {
+      "block_id": "page-0470-block-0005",
+      "order": 5,
+      "text": "Flumazenil is usually used to reverse benzodiazepine sedation and respiratory depres-\nsion, but it is also effective in treating disinhibition reactions.25\n",
+      "bbox": [
+        48.0,
+        204.5504150390625,
+        420.0000305175781,
+        228.27041625976562
+      ],
+      "text_sha256": "60831f6e0655756cdeb94462a18a299a092c36edf907322cc5106e80b4de9156"
+    },
+    {
+      "block_id": "page-0470-block-0006",
+      "order": 6,
+      "text": "Subjective reports\n",
+      "bbox": [
+        48.0,
+        243.70547485351562,
+        141.32400512695312,
+        256.740478515625
+      ],
+      "text_sha256": "6b83a80c2e3ae490be7b39ed35dd7cb306594f045bd6299026a99c90e3e1ecad"
+    },
+    {
+      "block_id": "page-0470-block-0007",
+      "order": 7,
+      "text": "People who take benzodiazepines rate themselves as being more tolerant and friendly, \nbut respond more to provocation than placebo-treated patients.26 People with impulse \ncontrol problems who take benzodiazepines may self-report feelings of power and \noverwhelming self-esteem.17 Psychology rating scales demonstrate increased suggesti-\nbility, failure to recognise anger in others and reduced ability to recognise social cues. \nThe experience of this author (DT) (having once been given intravenous midazolam for \na pre-surgical procedure) is that the patient may be completely unaware that their \nbehaviour is bizarre or that it is the result of drug-induced disinhibition.\n",
+      "bbox": [
+        47.9998779296875,
+        262.55047607421875,
+        422.8200378417969,
+        358.2704772949219
+      ],
+      "text_sha256": "847744aa7a29b822ff13cd8c831c554b2ac22e5a09e02b4deec9157f25272ea7"
+    },
+    {
+      "block_id": "page-0470-block-0008",
+      "order": 8,
+      "text": "Clinical implications\n",
+      "bbox": [
+        48.0,
+        373.7054748535156,
+        150.06898498535156,
+        386.740478515625
+      ],
+      "text_sha256": "38300ff9846492bd4d4c131d5dee9db6e6ebb4e95684b51db7d5302bd99471a5"
+    },
+    {
+      "block_id": "page-0470-block-0009",
+      "order": 9,
+      "text": "Benzodiazepines are frequently used in rapid tranquillisation and the short-term man-\nagement of disturbed behaviour. For the vast majority of treatment episodes, benzodi-\nazepines produce sedation, and reductions in anxiety and aggression. It is important to \nbe aware, nonetheless, of their propensity to cause paradoxical disinhibitory reactions.\n",
+      "bbox": [
+        48.0,
+        392.55047607421875,
+        422.77020263671875,
+        440.2704772949219
+      ],
+      "text_sha256": "abc662648960129b4d1393b3bcaaeffbce6f02db320c194e2a2227b684b22778"
+    },
+    {
+      "block_id": "page-0470-block-0010",
+      "order": 10,
+      "text": "Paradoxical disinhibitory/aggressive outbursts in the context of benzodiazepine use:\n",
+      "bbox": [
+        55.25,
+        460.4104919433594,
+        356.41363525390625,
+        470.27899169921875
+      ],
+      "text_sha256": "482d90ffc9c92158838c2c8092554f41752c9fb40c73ad2102eef475a76df22e"
+    },
+    {
+      "block_id": "page-0470-block-0011",
+      "order": 11,
+      "text": "■\n■are rare in the general population but more frequent in people with impulse control problems or \n",
+      "bbox": [
+        55.249900817871094,
+        476.4104919433594,
+        414.7066650390625,
+        486.27899169921875
+      ],
+      "text_sha256": "ec1506bf1f6fc9be8796c6ba7abbd2f527e5f8d25cbc66ffd81f0f6046a283cf"
+    },
+    {
+      "block_id": "page-0470-block-0012",
+      "order": 12,
+      "text": "CNS damage and in the very young or very old\n",
+      "bbox": [
+        63.75,
+        486.406494140625,
+        232.8405303955078,
+        496.2749938964844
+      ],
+      "text_sha256": "0b843423adeb938c11223cc42a0c08d0fdba45693817d5b008b33eb3ba2883dc"
+    },
+    {
+      "block_id": "page-0470-block-0013",
+      "order": 13,
+      "text": "■\n■are most often associated with high doses of high-potency drugs that are administered \n",
+      "bbox": [
+        55.249900817871094,
+        499.4104919433594,
+        380.68109130859375,
+        509.27899169921875
+      ],
+      "text_sha256": "d4e5f07e71f8f66fb96ff2f1093de944bd35adcc562dc0782f45dbc756d7d9a3"
+    },
+    {
+      "block_id": "page-0470-block-0014",
+      "order": 14,
+      "text": "parenterally\n",
+      "bbox": [
+        63.75,
+        509.4065246582031,
+        106.08849334716797,
+        519.2750244140625
+      ],
+      "text_sha256": "199cdc2473573e976a16eb7574fb5d5d647ed7761f4f211fc923f1636adacb4a"
+    },
+    {
+      "block_id": "page-0470-block-0015",
+      "order": 15,
+      "text": "■\n■usually occur in response to (often very mild) provocation, the exact nature of which is not \n",
+      "bbox": [
+        55.249900817871094,
+        522.4104614257812,
+        392.470703125,
+        532.2789916992188
+      ],
+      "text_sha256": "0d7b100905722c60373d7d04451e3c7ff83fc84692c16357210e641b5a9459d2"
+    },
+    {
+      "block_id": "page-0470-block-0016",
+      "order": 16,
+      "text": "always obvious to others\n",
+      "bbox": [
+        63.75,
+        532.406494140625,
+        153.0170135498047,
+        542.2750244140625
+      ],
+      "text_sha256": "768dd0bd0c987f8d040f49457e9f880833d6d15721fcda3bbc1c22323820e8ad"
+    },
+    {
+      "block_id": "page-0470-block-0017",
+      "order": 17,
+      "text": "■\n■are recognised by others but often not by the sufferer, who often believes that he is friendly and \n",
+      "bbox": [
+        55.249900817871094,
+        545.4104614257812,
+        414.22222900390625,
+        555.2789916992188
+      ],
+      "text_sha256": "4bbd7fef97d0009a5c63b09fd62b32ba47055766c72d3efb1c079c4e627fbcfd"
+    },
+    {
+      "block_id": "page-0470-block-0018",
+      "order": 18,
+      "text": "tolerant\n",
+      "bbox": [
+        63.75,
+        555.406494140625,
+        92.08049011230469,
+        565.2750244140625
+      ],
+      "text_sha256": "4fd29f7c1193659b271d776378ec51a8c7302bd68bfa635e7729ae9631c8db44"
+    },
+    {
+      "block_id": "page-0470-block-0019",
+      "order": 19,
+      "text": "Suspected paradoxical reactions should be clearly documented in the clinical notes. In extreme \ncases, flumazenil can be used to reverse the reaction. If the benzodiazepine was prescribed to \ncontrol acute behavioural disturbance, future episodes should be managed with antipsychotic \ndrugs27 or other non-benzodiazepine sedatives.\n",
+      "bbox": [
+        55.25,
+        571.4034423828125,
+        398.2760925292969,
+        611.2789916992188
+      ],
+      "text_sha256": "66efe33c084473dda4c0e08140c6876eb9a22275cc708b0100d952c6cf25c6e1"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

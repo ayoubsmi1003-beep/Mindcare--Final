@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0582",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 582,
+  "source_page_index": 581,
+  "source_page_display": 582,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Children and adolescents    561\nCHAPTER 5\nObsessive compulsive disorder (OCD) and body dysmorphic disorder \n(BDD) in children and adolescents\nThe treatment of OCD and BDD in children and adolescents follows the same princi-\nples as in adults (see Chapter 3). BDD is now recognised by both DSM-V and ICD-11 \nas one of the OCD spectrum of disorders. CBT is effective in both conditions and is \nrecommended by NICE as the treatment of first choice1,2 although it may be combined \nwith medication.3 At least 2% of adolescent age group have BDD but it remains con-\nsistently underdiagnosed.4 NICE recommends routine screening questions for BDD in \nhigh risks groups, such as individuals who attempt suicide or self-harm, or those with \nsymptoms of depression, social phobia, alcohol or substance misuse, OCD or an eating \ndisorder; or for those with mild disfigurements or blemishes who are seeking a cosmetic \nor dermatological procedure.5\nDrug treatment\nSertraline6–8 (from age 6 years) and fluvoxamine (from age 8 years) are the selective \nserotonin reuptake inhibitors (SSRIs) licensed in the UK for the treatment of OCD in \nyoung people. Studies spanning 20 years have established the efficacy of SSRIs in the \npaediatric population in placebo-controlled trials. A meta-analysis of 12 RCTs of phar-\nmacotherapy against control in young people showed that medication is consistently \nsignificantly more effective than placebo.9 Sertraline and fluoxetine are equally effec-\ntive, but fluvoxamine may be somewhat less so.9 While an initial meta-analysis sug-\ngested SSRIs have a medium to large effect size in the treatment of OCD in young \npeople,7 the most recent analysis suggests an effect size of around 0.43 (somewhere \nbetween ‘small’ and ‘moderate’).9 Paroxetine is not recommended for use in children \nand young people.\nClomipramine remains a useful drug for some individuals, although its side-effect \nprofile (sedation, dry mouth, constipation, potential for cardiac side-effects) tend to \nlimit its use in this age group. There is on-going debate as to whether clomipramine is \nmore efficacious than SSRIs in treating OCD in young people. SSRIs generally remain \nthe recommended first choice medication for young people with OCD. For BDD, no \ntreatment is licensed in the UK for either adults or children. However, the available \nevidence show significant improvements with SSRIs, both in terms of BDD symptoms \nand the often co-morbid depressive symptoms.10 NICE recommends fluoxetine for \ntreating BDD in children and adolescents.\nAlthough 50% of BDD cases have beliefs of delusional intensity about their appear-\nance, anti-psychotics are not beneficial. Research in adults show that patients with such \nbeliefs are just as likely to respond to SSRI monotherapy as are non-delusional patients.10\nInitiation of treatment with medication\nSSRIs show a similar slow and incremental effect on symptoms from as early as \n1–2  weeks after initiation and placebo-referenced improvements continue for at \nleast 24 weeks. In some cases, positive impact on mood may be noted before changes \nin OCD or BDD symptoms.11 The effects on core OCD or BDD schema may take \n",
+  "raw_text_sha256": "7b7665a9cbe3d36dcac72b324d32adaba3abf356b5c7e4a86025998887c1c880",
+  "coordinates_sha256": "b854d5ebd8942e973cf56a4202375df7adc697b0e32505ea6fe5e1d2c1a08f5c",
+  "block_sequence_sha256": "08e1c21b1183db10cbf04fc34d0965932ad5ced399de97d1e05fe6a4afa79427",
+  "blocks": [
+    {
+      "block_id": "page-0582-block-0000",
+      "order": 0,
+      "text": "Children and adolescents    561\n",
+      "bbox": [
+        288.94488525390625,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "52ab79491ccd556df5a0f74a3c12402350a48085b1328f9b0c26574c714666f4"
+    },
+    {
+      "block_id": "page-0582-block-0001",
+      "order": 1,
+      "text": "CHAPTER 5\n",
+      "bbox": [
+        454.4096984863281,
+        339.3385009765625,
+        463.88970947265625,
+        380.6824951171875
+      ],
+      "text_sha256": "f4b8b4a0fc64e7b3b74e7336306d0959d0384683e387792724f393162639020a"
+    },
+    {
+      "block_id": "page-0582-block-0002",
+      "order": 2,
+      "text": "Obsessive compulsive disorder (OCD) and body dysmorphic disorder \n(BDD) in children and adolescents\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        410.2890930175781,
+        91.1014404296875
+      ],
+      "text_sha256": "57f9dd906cad4ca8875d85728a5d059d6d4a8d2de55b9da18aab3cebf7f0c9db"
+    },
+    {
+      "block_id": "page-0582-block-0003",
+      "order": 3,
+      "text": "The treatment of OCD and BDD in children and adolescents follows the same princi-\nples as in adults (see Chapter 3). BDD is now recognised by both DSM-V and ICD-11 \nas one of the OCD spectrum of disorders. CBT is effective in both conditions and is \nrecommended by NICE as the treatment of first choice1,2 although it may be combined \nwith medication.3 At least 2% of adolescent age group have BDD but it remains con-\nsistently underdiagnosed.4 NICE recommends routine screening questions for BDD in \nhigh risks groups, such as individuals who attempt suicide or self-harm, or those with \nsymptoms of depression, social phobia, alcohol or substance misuse, OCD or an eating \ndisorder; or for those with mild disfigurements or blemishes who are seeking a cosmetic \nor dermatological procedure.5\n",
+      "bbox": [
+        48.0,
+        96.91046142578125,
+        422.8040771484375,
+        216.63046264648438
+      ],
+      "text_sha256": "4800dccf26954a85b939dbe23282e1d63495a0c181f9ea01b62e46ea5b4fda7f"
+    },
+    {
+      "block_id": "page-0582-block-0004",
+      "order": 4,
+      "text": "Drug treatment\n",
+      "bbox": [
+        48.0,
+        234.06549072265625,
+        128.48699951171875,
+        247.10049438476562
+      ],
+      "text_sha256": "a495109cd97877e582908a5489bf01174d45fe4f6922629e34d598a5d114097c"
+    },
+    {
+      "block_id": "page-0582-block-0005",
+      "order": 5,
+      "text": "Sertraline6–8 (from age 6 years) and fluvoxamine (from age 8 years) are the selective \nserotonin reuptake inhibitors (SSRIs) licensed in the UK for the treatment of OCD in \nyoung people. Studies spanning 20 years have established the efficacy of SSRIs in the \npaediatric population in placebo-controlled trials. A meta-analysis of 12 RCTs of phar-\nmacotherapy against control in young people showed that medication is consistently \nsignificantly more effective than placebo.9 Sertraline and fluoxetine are equally effec-\ntive, but fluvoxamine may be somewhat less so.9 While an initial meta-analysis sug-\ngested SSRIs have a medium to large effect size in the treatment of OCD in young \npeople,7 the most recent analysis suggests an effect size of around 0.43 (somewhere \nbetween ‘small’ and ‘moderate’).9 Paroxetine is not recommended for use in children \nand young people.\n",
+      "bbox": [
+        47.99540710449219,
+        252.67050170898438,
+        422.7954406738281,
+        384.6304931640625
+      ],
+      "text_sha256": "76b5dbca3d60ca2cc9622a5f07f656d27dd7cd847c7527994daa4a0f9f015941"
+    },
+    {
+      "block_id": "page-0582-block-0006",
+      "order": 6,
+      "text": "Clomipramine remains a useful drug for some individuals, although its side-effect \nprofile (sedation, dry mouth, constipation, potential for cardiac side-effects) tend to \nlimit its use in this age group. There is on-going debate as to whether clomipramine is \nmore efficacious than SSRIs in treating OCD in young people. SSRIs generally remain \nthe recommended first choice medication for young people with OCD. For BDD, no \ntreatment is licensed in the UK for either adults or children. However, the available \nevidence show significant improvements with SSRIs, both in terms of BDD symptoms \nand the often co-morbid depressive symptoms.10 NICE recommends fluoxetine for \ntreating BDD in children and adolescents.\n",
+      "bbox": [
+        47.99540710449219,
+        384.9104919433594,
+        422.825439453125,
+        492.6304931640625
+      ],
+      "text_sha256": "ee24581c30d3a8a086eba51b0f3831ce81b6f290c01b81d322a3b8700a4dbfdc"
+    },
+    {
+      "block_id": "page-0582-block-0007",
+      "order": 7,
+      "text": "Although 50% of BDD cases have beliefs of delusional intensity about their appear-\nance, anti-psychotics are not beneficial. Research in adults show that patients with such \nbeliefs are just as likely to respond to SSRI monotherapy as are non-delusional patients.10\n",
+      "bbox": [
+        48.003814697265625,
+        492.9104919433594,
+        422.74365234375,
+        528.6304931640625
+      ],
+      "text_sha256": "669b9ad96da14a07436b2d5d1eb546e298cd5bd32dbed9465a66394d7d685b38"
+    },
+    {
+      "block_id": "page-0582-block-0008",
+      "order": 8,
+      "text": "Initiation of treatment with medication\n",
+      "bbox": [
+        47.999900817871094,
+        546.0654907226562,
+        251.3568878173828,
+        559.1004638671875
+      ],
+      "text_sha256": "86896d776f09c363e70feb5a51bb1c835bb8eebfc2a151cb2ef78834a6f23980"
+    },
+    {
+      "block_id": "page-0582-block-0009",
+      "order": 9,
+      "text": "SSRIs show a similar slow and incremental effect on symptoms from as early as \n1–2  weeks after initiation and placebo-referenced improvements continue for at \nleast 24 weeks. In some cases, positive impact on mood may be noted before changes \nin OCD or BDD symptoms.11 The effects on core OCD or BDD schema may take \n",
+      "bbox": [
+        47.999900817871094,
+        564.9104614257812,
+        422.8301086425781,
+        612.6304931640625
+      ],
+      "text_sha256": "0836b5d160bb1fead862f651eea0c915d9ba9fc865a14575fb234e55028a8969"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

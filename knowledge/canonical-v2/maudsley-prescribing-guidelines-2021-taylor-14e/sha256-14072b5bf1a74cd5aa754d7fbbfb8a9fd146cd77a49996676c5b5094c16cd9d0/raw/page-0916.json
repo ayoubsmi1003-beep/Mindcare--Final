@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0916",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 916,
+  "source_page_index": 915,
+  "source_page_display": 916,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Psychotropic drugs in special conditions    895\nCHAPTER 13\n\t32.\t Jabaley CS, et al. Chronic atypical antipsychotic use is associated with reduced need for postoperative nausea and vomiting rescue in the \npostanesthesia care unit: a propensity-matched retrospective observational study. Anesth Analg 2020; 130:141–150.\n\t33.\t Kaye AD, et al. Perioperative implications of common and newer psychotropic medications used in clinical practice. Best Pract Res Clin \nAnaesthesiol 2018; 32:187–202.\n\t34.\t Attri JP, et al. Psychiatric patient and anaesthesia. Indian JAnaesth 2012; 56:8–13.\n\t35.\t Larijani GE, et al. Modafinil improves recovery after general anesthesia. Anesth Analg 2004; 98:976–981.\n\t36.\t Doyle A, et al. Day case general anaesthesia in a patient with narcolepsy. Anaesthesia 2008; 63:880–882.\n\t37.\t Grant MC, et al. The effect of preoperative pregabalin on postoperative nausea and vomiting: a meta-analysis. Anesth Analg 2016; \n123:1100–1107.\n\t38.\t De Baerdemaeker L, et al. Anaesthesia for patients with mood disorders. Curr Opin Anaesthesiol 2005; 18:333–338.\n\t39.\t Faedda GL, et al. Outcome after rapid vs gradual discontinuation of lithium treatment in bipolar disorders. Arch Gen Psychiatry 1993; \n50:448–455.\n\t40.\t Baldessarini RJ, et al. Illness risk following rapid versus gradual discontinuation of antidepressants. Am J Psychiatry 2010; 167:934–941.\n\t41.\t Horowitz MA, et al. Tapering of SSRI treatment to mitigate withdrawal symptoms. Lancet Psychiatry 2019; 6:538–546.\n\t42.\t Yerevanian BI, et al. Antidepressants and suicidal behaviour in unipolar depression. Acta Psychiatr Scand 2004; 110:452–458.\n\t43.\t Copeland LA, et al. Postoperative complications in the seriously mentally ill: a systematic review of the literature. Ann Surg 2008; \n248:31–38.\n\t44.\t Paton C, et al. SSRIs and gastrointestinal bleeding. BMJ 2005; 331:529–530.\n",
+  "raw_text_sha256": "9000e0fbf818dfcdb80921e1f251e42146ba9768a6c6be1b64f7a3b71f069781",
+  "coordinates_sha256": "909dd8c68f6a632094bc81b5840590d1cd547423a7576cb8b3d58ff3da4278ff",
+  "block_sequence_sha256": "ff23dd53f478edb420b3a0e9ebe0770f74508809b5a2482945a4308f6d2347f7",
+  "blocks": [
+    {
+      "block_id": "page-0916-block-0000",
+      "order": 0,
+      "text": "Psychotropic drugs in special conditions    895\n",
+      "bbox": [
+        227.09710693359375,
+        31.395221710205078,
+        420.0010986328125,
+        41.0272216796875
+      ],
+      "text_sha256": "baa845af0a7992e5d85e13b21d97f24bc11af0c06509d74fc7244a920128f711"
+    },
+    {
+      "block_id": "page-0916-block-0001",
+      "order": 1,
+      "text": "CHAPTER 13\n",
+      "bbox": [
+        454.4096984863281,
+        272.95111083984375,
+        463.88970947265625,
+        318.74310302734375
+      ],
+      "text_sha256": "a01ce0756ef6b5d41c48be6624d8bd154fa95cf67cb49768f2593332d3a2ec98"
+    },
+    {
+      "block_id": "page-0916-block-0002",
+      "order": 2,
+      "text": "\t32.\t Jabaley CS, et al. Chronic atypical antipsychotic use is associated with reduced need for postoperative nausea and vomiting rescue in the \n",
+      "bbox": [
+        48.0,
+        63.2703857421875,
+        421.7099304199219,
+        70.30238342285156
+      ],
+      "text_sha256": "6e63ef42d6f72fde59ba0faf219b8304176d21e586183e5286aa0114a3e90c01"
+    },
+    {
+      "block_id": "page-0916-block-0003",
+      "order": 3,
+      "text": "postanesthesia care unit: a propensity-matched retrospective observational study. Anesth Analg 2020; 130:141–150.\n\t33.\t Kaye AD, et al. Perioperative implications of common and newer psychotropic medications used in clinical practice. Best Pract Res Clin \n",
+      "bbox": [
+        48.00600051879883,
+        72.12638854980469,
+        421.70416259765625,
+        88.30238342285156
+      ],
+      "text_sha256": "d9beab8565d33e8ac4ad454f7398286b6c86e9cd92812db88d0f0e17d6e6f8a5"
+    },
+    {
+      "block_id": "page-0916-block-0004",
+      "order": 4,
+      "text": "Anaesthesiol 2018; 32:187–202.\n\t34.\t Attri JP, et al. Psychiatric patient and anaesthesia. Indian JAnaesth 2012; 56:8–13.\n\t35.\t Larijani GE, et al. Modafinil improves recovery after general anesthesia. Anesth Analg 2004; 98:976–981.\n\t36.\t Doyle A, et al. Day case general anaesthesia in a patient with narcolepsy. Anaesthesia 2008; 63:880–882.\n\t37.\t Grant MC, et al. The effect of preoperative pregabalin on postoperative nausea and vomiting: a meta-analysis. Anesth Analg 2016; \n",
+      "bbox": [
+        48.012001037597656,
+        90.12638854980469,
+        421.7339172363281,
+        133.30238342285156
+      ],
+      "text_sha256": "6715639eb2eed197339e9f8cbc996b895763567ef8832377ced1d613e741d83d"
+    },
+    {
+      "block_id": "page-0916-block-0005",
+      "order": 5,
+      "text": "123:1100–1107.\n\t38.\t De Baerdemaeker L, et al. Anaesthesia for patients with mood disorders. Curr Opin Anaesthesiol 2005; 18:333–338.\n\t39.\t Faedda GL, et al. Outcome after rapid vs gradual discontinuation of lithium treatment in bipolar disorders. Arch Gen Psychiatry 1993; \n",
+      "bbox": [
+        48.0359992980957,
+        135.1263885498047,
+        421.71612548828125,
+        160.30238342285156
+      ],
+      "text_sha256": "24f74dbee688d1ab9249aa7fac380917a718ab20a415a24e0fedaddac3b5577b"
+    },
+    {
+      "block_id": "page-0916-block-0006",
+      "order": 6,
+      "text": "50:448–455.\n\t40.\t Baldessarini RJ, et al. Illness risk following rapid versus gradual discontinuation of antidepressants. Am J Psychiatry 2010; 167:934–941.\n\t41.\t Horowitz MA, et al. Tapering of SSRI treatment to mitigate withdrawal symptoms. Lancet Psychiatry 2019; 6:538–546.\n\t42.\t Yerevanian BI, et al. Antidepressants and suicidal behaviour in unipolar depression. Acta Psychiatr Scand 2004; 110:452–458.\n\t43.\t Copeland LA, et al. Postoperative complications in the seriously mentally ill: a systematic review of the literature. Ann Surg 2008; \n",
+      "bbox": [
+        48.04800033569336,
+        162.1263885498047,
+        421.7580871582031,
+        205.30238342285156
+      ],
+      "text_sha256": "f1a2e95902db6f7541131cd93dff4e5411cf32e1d147c347d241148def780b99"
+    },
+    {
+      "block_id": "page-0916-block-0007",
+      "order": 7,
+      "text": "248:31–38.\n\t44.\t Paton C, et al. SSRIs and gastrointestinal bleeding. BMJ 2005; 331:529–530.\n",
+      "bbox": [
+        48.071998596191406,
+        207.1263885498047,
+        257.8079833984375,
+        223.30238342285156
+      ],
+      "text_sha256": "5e7f3a4b3410b672c12a6b3880d705521f145152b8385595db3908c7c99192bf"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

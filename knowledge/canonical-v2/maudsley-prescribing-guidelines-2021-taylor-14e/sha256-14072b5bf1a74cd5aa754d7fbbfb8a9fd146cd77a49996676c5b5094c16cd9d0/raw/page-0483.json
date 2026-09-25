@@ -1,0 +1,215 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0483",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 483,
+  "source_page_index": 482,
+  "source_page_display": 483,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "462    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nGuidance is based on ‘expert opinion’9 and the standard advice is one pair of Pabrinex \nIM high potency daily (containing thiamine 250mg/dose) for 5 days, followed by oral \nthiamine and/or vitamin B compound for as long as needed (where diet is inadequate \nor alcohol consumption is resumed).9 All inpatients should receive this regime as an \nabsolute minimum.\nIntramuscular (IM) thiamine preparations have a lower incidence of anaphylactic \nreactions than intravenous (IV) preparations, at 1 per 5 million pairs of ampoules of \nPabrinex – far lower than many frequently used drugs that carry no special anaphylaxis \nwarning. However, this risk has resulted in fears about using parenteral preparations \nand the inappropriate use of oral thiamine preparations (which do not offer adequate \nprotection). Given the risks associated with Wernicke’s encephalopathy, the benefit-to-\nrisk ratio grossly favours parenteral thiamine.9,16,18 Where parenteral thiamine is used, \nfacilities for treating anaphylaxis should be available.19\nIf Wernicke’s encephalopathy is suspected, the patient should be transferred to a \nmedical unit where IV thiamine can be administered. If untreated, Wernicke’s encepha-\nlopathy progresses to Korsakoff’s syndrome (permanent memory impairment, confabu-\nlation, confusion and personality changes).\nTreatment for patients with suspected/established Wernicke’s encephalopathy  \n(acute medical ward):\nAt least two pairs of Pabrinex IV high potency (i.e. 4 ampoules) 3 times daily for 3–5 days, fol-\nlowed by one pair of ampoules once daily for a further 3–5 days or longer2,9 (until no further \nresponse is seen).\nTreatment of somatic symptoms\nSomatic complaints are common during assisted withdrawal. The following simple \nremedies are recommended in Table 4.6:\nTable 4.6  Treatment of somatic symptoms\nSymptom\nRecommended treatment\nDehydration\nEnsure adequate fluid intake in order to maintain hydration and electrolyte balance. \nDehydration can precipitate life-threatening cardiac arrhythmia\nPain\nParacetamol (acetaminophen)\nNausea and vomiting\nMetoclopramide 10mg or prochlorperazine 5mg 4–6 hourly\nDiarrhoea\nDiphenoxylate and atropine (Lomotil) or loperamide\nSkin itching\nOccurs commonly and not only in individuals with alcoholic liver disease: use oral \nantihistamines\n",
+  "raw_text_sha256": "4375ed92d316e54fb2e1a16cccd7dce4d3b6d183c7c5deebea5075980334e345",
+  "coordinates_sha256": "5ff365a55d3385a9ba7289e9d55057d0b38ccaee5079d25d3e25b6600e762d6f",
+  "block_sequence_sha256": "676fe8d60c1b50c650b3476141ddae52e309a6364b35b867cfc2033c24fca6df",
+  "blocks": [
+    {
+      "block_id": "page-0483-block-0000",
+      "order": 0,
+      "text": "462    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "5659695a28cc7d6507913e31b7931e17d12a57ede335ac7abb6b45f8720bd485"
+    },
+    {
+      "block_id": "page-0483-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0483-block-0002",
+      "order": 2,
+      "text": "Guidance is based on ‘expert opinion’9 and the standard advice is one pair of Pabrinex \nIM high potency daily (containing thiamine 250mg/dose) for 5 days, followed by oral \nthiamine and/or vitamin B compound for as long as needed (where diet is inadequate \nor alcohol consumption is resumed).9 All inpatients should receive this regime as an \nabsolute minimum.\n",
+      "bbox": [
+        61.889801025390625,
+        62.55029296875,
+        436.6920166015625,
+        122.27029418945312
+      ],
+      "text_sha256": "873dca3ec2661e1d7674d23bd6999dbfeb4cc516cccbb36adbe5f6790b0c95bc"
+    },
+    {
+      "block_id": "page-0483-block-0003",
+      "order": 3,
+      "text": "Intramuscular (IM) thiamine preparations have a lower incidence of anaphylactic \nreactions than intravenous (IV) preparations, at 1 per 5 million pairs of ampoules of \nPabrinex – far lower than many frequently used drugs that carry no special anaphylaxis \nwarning. However, this risk has resulted in fears about using parenteral preparations \nand the inappropriate use of oral thiamine preparations (which do not offer adequate \nprotection). Given the risks associated with Wernicke’s encephalopathy, the benefit-to-\nrisk ratio grossly favours parenteral thiamine.9,16,18 Where parenteral thiamine is used, \nfacilities for treating anaphylaxis should be available.19\n",
+      "bbox": [
+        61.88899230957031,
+        122.55029296875,
+        436.69036865234375,
+        218.27029418945312
+      ],
+      "text_sha256": "0e36be0920a826d145fb5771cbbb381dcbde555a73d84b8073b8cc0df367bfd0"
+    },
+    {
+      "block_id": "page-0483-block-0004",
+      "order": 4,
+      "text": "If Wernicke’s encephalopathy is suspected, the patient should be transferred to a \nmedical unit where IV thiamine can be administered. If untreated, Wernicke’s encepha-\nlopathy progresses to Korsakoff’s syndrome (permanent memory impairment, confabu-\nlation, confusion and personality changes).\n",
+      "bbox": [
+        61.88970184326172,
+        218.55029296875,
+        436.6496276855469,
+        266.2702941894531
+      ],
+      "text_sha256": "e622595a8b371fad3345cf061bb416697552eb1313bb2c43e573fb5cbd71bffa"
+    },
+    {
+      "block_id": "page-0483-block-0005",
+      "order": 5,
+      "text": "Treatment for patients with suspected/established Wernicke’s encephalopathy  \n(acute medical ward):\n",
+      "bbox": [
+        68.88999938964844,
+        297.88299560546875,
+        386.61175537109375,
+        319.95751953125
+      ],
+      "text_sha256": "60862ef36a961766c93d87d15c2edd8d625a92d6e51fff28fc7264afbd05bd86"
+    },
+    {
+      "block_id": "page-0483-block-0006",
+      "order": 6,
+      "text": "At least two pairs of Pabrinex IV high potency (i.e. 4 ampoules) 3 times daily for 3–5 days, fol-\nlowed by one pair of ampoules once daily for a further 3–5 days or longer2,9 (until no further \nresponse is seen).\n",
+      "bbox": [
+        68.88999938964844,
+        329.3670349121094,
+        408.47369384765625,
+        359.2764892578125
+      ],
+      "text_sha256": "aa5bece5321e74a84e797cd9d4273c99b4ab883aff0f2a8e4134f52e4694303b"
+    },
+    {
+      "block_id": "page-0483-block-0007",
+      "order": 7,
+      "text": "Treatment of somatic symptoms\n",
+      "bbox": [
+        61.88999938964844,
+        391.4704895019531,
+        212.83998107910156,
+        403.32049560546875
+      ],
+      "text_sha256": "067d3378426fd82b675a0db855f203579b9b25341571ef6b11fb162726425da0"
+    },
+    {
+      "block_id": "page-0483-block-0008",
+      "order": 8,
+      "text": "Somatic complaints are common during assisted withdrawal. The following simple \nremedies are recommended in Table 4.6:\n",
+      "bbox": [
+        61.88999938964844,
+        409.3804931640625,
+        436.6399841308594,
+        433.1004943847656
+      ],
+      "text_sha256": "a8838f56a3f216e0de63cc64c87c95549180fdc530b104676735f309ca8e31e8"
+    },
+    {
+      "block_id": "page-0483-block-0009",
+      "order": 9,
+      "text": "Table 4.6  Treatment of somatic symptoms\n",
+      "bbox": [
+        67.88999938964844,
+        469.8631591796875,
+        203.0774688720703,
+        478.75067138671875
+      ],
+      "text_sha256": "debdbd98984699214742102f7e52152bcbf70162e23a8c00b67d1253100bd0b9"
+    },
+    {
+      "block_id": "page-0483-block-0010",
+      "order": 10,
+      "text": "Symptom\nRecommended treatment\n",
+      "bbox": [
+        65.88999938964844,
+        487.7381591796875,
+        239.3574981689453,
+        496.62567138671875
+      ],
+      "text_sha256": "d72a2a42bcae0da8c579794b0f8a7f7a2ff8ee3e6cdf808b1332b18d276cdea5"
+    },
+    {
+      "block_id": "page-0483-block-0011",
+      "order": 11,
+      "text": "Dehydration\nEnsure adequate fluid intake in order to maintain hydration and electrolyte balance. \nDehydration can precipitate life-threatening cardiac arrhythmia\n",
+      "bbox": [
+        65.88999938964844,
+        503.36065673828125,
+        419.1025390625,
+        522.2456665039062
+      ],
+      "text_sha256": "f681ae6ff53544aac768110356a2eaa9335a2b01a8cae6610121538a33a58386"
+    },
+    {
+      "block_id": "page-0483-block-0012",
+      "order": 12,
+      "text": "Pain\nParacetamol (acetaminophen)\n",
+      "bbox": [
+        65.88999938964844,
+        528.9806518554688,
+        244.89248657226562,
+        537.8681640625
+      ],
+      "text_sha256": "62e27432ee1c992488ae7e587abfe822dcbe7f7c1affea8b9f73593ecffc4e63"
+    },
+    {
+      "block_id": "page-0483-block-0013",
+      "order": 13,
+      "text": "Nausea and vomiting\nMetoclopramide 10mg or prochlorperazine 5mg 4–6 hourly\n",
+      "bbox": [
+        65.88999938964844,
+        544.6031494140625,
+        340.62255859375,
+        553.4906616210938
+      ],
+      "text_sha256": "10e691cf54e311b0a37a63dec6c68d1bd619aa6b9921040f734f236706930fc8"
+    },
+    {
+      "block_id": "page-0483-block-0014",
+      "order": 14,
+      "text": "Diarrhoea\nDiphenoxylate and atropine (Lomotil) or loperamide\n",
+      "bbox": [
+        65.88999938964844,
+        560.2256469726562,
+        314.7775573730469,
+        569.1131591796875
+      ],
+      "text_sha256": "7313215eac652297e42e9b9eb2096bc04d03e5f6cd0e9dde8b9f9c5c8f9514f6"
+    },
+    {
+      "block_id": "page-0483-block-0015",
+      "order": 15,
+      "text": "Skin itching\nOccurs commonly and not only in individuals with alcoholic liver disease: use oral \nantihistamines\n",
+      "bbox": [
+        65.88999938964844,
+        575.84814453125,
+        410.33514404296875,
+        594.733154296875
+      ],
+      "text_sha256": "875cfcd541872d31e2dc40d83d2349dfae5163081ae02a0e55baea1e3e45a382"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

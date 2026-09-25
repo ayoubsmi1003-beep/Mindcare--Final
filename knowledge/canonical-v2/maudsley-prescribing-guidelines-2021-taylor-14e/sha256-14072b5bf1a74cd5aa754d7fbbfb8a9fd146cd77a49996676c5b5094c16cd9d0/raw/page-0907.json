@@ -1,0 +1,239 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0907",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 907,
+  "source_page_index": 906,
+  "source_page_display": 907,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "886    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 13\nDVLA – duty of the driver\nIn the UK, it is the legal responsibility of the licence holder or applicant to notify the \nDVLA of any medical condition which may affect safe driving. A list of relevant medical \nconditions can be found in the DVLA assessing fitness-to-drive guide.53\nDVLA – duty of the prescriber\nMake sure the patient understands that their condition may impair their ability to \ndrive. If the patient is incapable of understanding, notify the DVLA immediately. \nExplain to the patient that they have a legal duty to inform the DVLA.\nNote: The DVLA guidance specifies that patients under S17 of the Mental Health Act \nmust be able to satisfy the standards of fitness for their respective conditions and be free \nfrom any effects of medication which would affect driving adversely, before resuming \ndriving. Very few patients will fulfil these criteria.\nGeneral Medical Council guidelines for prescribers54\n■\n■Patients who disagree with the diagnosis or the effect of the condition on their ability \nto drive should seek a second opinion and refrain from driving until this has been \nobtained.\n■\n■If the patient continues to drive while unfit, you should make every reasonable effect \nto persuade them to stop. This may include telling their next of kin if they agree you \nmay do the driving.\n■\n■If they continue to drive, inform the DVLA. Tell the patient you are going to do this \nand write to the patient to confirm you have done so. Document the advice given \nclearly in the patient’s notes.\nReferences\n\t 1. Annas GJ. Doctors, drugs, and driving – tort liability for patient-caused accidents. N Engl J Med 2008; 395:521–525.\n\t 2. Metzner JL, et al. Impairment in driving and psychiatric illness. J Neuropsychiatry Clin Neurosci 1993; 5:211–220.\n\t 3. Farkas RH, et al. Zolpidem and driving impairment – identifying persons at risk. N Engl J Med 2013; 369:689–691.\n\t 4. Alvarez J, et al. ICADTS Working Group:  Categorization system for medicinal drugs affecting driving performance. 2007; http://www.icadts.\nnl/medicinal.html.\n\t 5. Noyes R, Jr. Motor vehicle accidents related to psychiatric impairment. Psychosomatics 1985; 26:569–580.\n\t 6. The National Archives. Road Traffic Act 1991. 1991; http://www.legislation.gov.uk/ukpga/1991/40/contents.\n\t 7. Driver and Vehicle Licensing Agency. Assessing fitness to drive – a guide for medical professionals. 2016 (last updated 2018); www.gov.uk/\ndvla/fitnesstodrive.\n\t 8. Piersma D, et al. Prediction of fitness to drive in patients with Alzheimer’s dementia. PLoS One 2016; 11:e0149566.\n\t 9. Breen DA, et al. Driving and dementia. BMJ 2007; 334:1365–1369.\n10. Martin AJ, et al. Driving assessment for maintaining mobility and safety in drivers with dementia. Cochrane Database Syst Rev 2013; \n8:CD006222.\n11. Department for Transport. Changes to drug driving law. 2013 (last updated August 2017); https://www.gov.uk/government/collections/\ndrug-driving.\n12. Biecheler MB, et al. SAM survey on “drugs and fatal accidents”: search of substances consumed and comparison between drivers involved \nunder the influence of alcohol or cannabis. Traffic Inj Prev 2008; 9:11–21.\n13. Oyefeso A, et al. Fatal injuries while under the influence of psychoactive drugs: a cross-sectional exploratory study in England. BMC Public \nHealth 2006; 6:148.\n14. Segmiller FM, et al. Driving ability according to German guidelines in stabilized bipolar I and II outpatients receiving lithium or lamotrigine. \nJ Clin Pharmacol 2013; 53:459–462.\n",
+  "raw_text_sha256": "8de4b43612085fa1a23f98883a149ce7a6c876ff91471cfff3635d3a42ba585e",
+  "coordinates_sha256": "832583094d2d0c6045cef93b51dd8404981bf1883a1d244b5d73e8fec67a9a33",
+  "block_sequence_sha256": "e15260bab24fe7e304fad658d455bd69ca0d267090181e99691b74063a412bc6",
+  "blocks": [
+    {
+      "block_id": "page-0907-block-0000",
+      "order": 0,
+      "text": "886    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "9996c059762a9d96dc1279d19e3784d5242071300fd50c03b1cbcdecdb865dfa"
+    },
+    {
+      "block_id": "page-0907-block-0001",
+      "order": 1,
+      "text": "CHAPTER 13\n",
+      "bbox": [
+        18.520000457763672,
+        272.95111083984375,
+        28.0,
+        318.74310302734375
+      ],
+      "text_sha256": "a01ce0756ef6b5d41c48be6624d8bd154fa95cf67cb49768f2593332d3a2ec98"
+    },
+    {
+      "block_id": "page-0907-block-0002",
+      "order": 2,
+      "text": "DVLA – duty of the driver\n",
+      "bbox": [
+        61.889801025390625,
+        61.64218521118164,
+        193.92279052734375,
+        74.67718505859375
+      ],
+      "text_sha256": "158a4740cc1c1e131754c3f7613c18d9a3d82354acf9e88f95f60d47d74e8d1d"
+    },
+    {
+      "block_id": "page-0907-block-0003",
+      "order": 3,
+      "text": "In the UK, it is the legal responsibility of the licence holder or applicant to notify the \nDVLA of any medical condition which may affect safe driving. A list of relevant medical \nconditions can be found in the DVLA assessing fitness-to-drive guide.53\n",
+      "bbox": [
+        61.889801025390625,
+        80.4871826171875,
+        436.72967529296875,
+        116.20718383789062
+      ],
+      "text_sha256": "5894d26d71f051d9656f253c525029f9bf406b5024b3d631ba0a902424162fba"
+    },
+    {
+      "block_id": "page-0907-block-0004",
+      "order": 4,
+      "text": "DVLA – duty of the prescriber\n",
+      "bbox": [
+        61.889801025390625,
+        138.64218139648438,
+        214.4927978515625,
+        151.67718505859375
+      ],
+      "text_sha256": "8038b70667a08fb2ad306a2bf335664603925077b9cb3bc32db0a0ccfdfc817e"
+    },
+    {
+      "block_id": "page-0907-block-0005",
+      "order": 5,
+      "text": "Make sure the patient understands that their condition may impair their ability to \ndrive. If the patient is incapable of understanding, notify the DVLA immediately. \nExplain to the patient that they have a legal duty to inform the DVLA.\n",
+      "bbox": [
+        61.889801025390625,
+        157.4871826171875,
+        436.6997985839844,
+        193.20718383789062
+      ],
+      "text_sha256": "09ea5113437e2acf37adf572ea13461d161295ef1b733dc5a143b065a1c3a68d"
+    },
+    {
+      "block_id": "page-0907-block-0006",
+      "order": 6,
+      "text": "Note: The DVLA guidance specifies that patients under S17 of the Mental Health Act \nmust be able to satisfy the standards of fitness for their respective conditions and be free \nfrom any effects of medication which would affect driving adversely, before resuming \ndriving. Very few patients will fulfil these criteria.\n",
+      "bbox": [
+        61.889801025390625,
+        193.2471923828125,
+        436.66986083984375,
+        241.20718383789062
+      ],
+      "text_sha256": "62e914cf1205897e6f0276c10be87b5a91ecd90bea35222f9cc37c21d7b1c74c"
+    },
+    {
+      "block_id": "page-0907-block-0007",
+      "order": 7,
+      "text": "General Medical Council guidelines for prescribers54\n",
+      "bbox": [
+        61.889801025390625,
+        258.6421813964844,
+        327.3531799316406,
+        271.67718505859375
+      ],
+      "text_sha256": "ee09822b08da6da4ad7b3277eb34c611011aff9315769bbc92662f1f706eb347"
+    },
+    {
+      "block_id": "page-0907-block-0008",
+      "order": 8,
+      "text": "■\n■Patients who disagree with the diagnosis or the effect of the condition on their ability \n",
+      "bbox": [
+        61.88970184326172,
+        277.4871826171875,
+        436.714599609375,
+        289.2071838378906
+      ],
+      "text_sha256": "ebc828e6df46ff936520edd52d5fc50f1421a1341f7325831ec3c3c681ce9e3f"
+    },
+    {
+      "block_id": "page-0907-block-0009",
+      "order": 9,
+      "text": "to drive should seek a second opinion and refrain from driving until this has been \nobtained.\n",
+      "bbox": [
+        70.6948013305664,
+        289.4871826171875,
+        436.6046447753906,
+        313.2071838378906
+      ],
+      "text_sha256": "bd67bb1e15ef6c6d5579baebfb0fbe4d57cc7640f53b9d440b147a337a36ea66"
+    },
+    {
+      "block_id": "page-0907-block-0010",
+      "order": 10,
+      "text": "■\n■If the patient continues to drive while unfit, you should make every reasonable effect \n",
+      "bbox": [
+        61.88970184326172,
+        313.4871826171875,
+        436.70489501953125,
+        325.2071838378906
+      ],
+      "text_sha256": "3d0898c50b83b00b619cfaa81711aac681ecbee1d5ebd67585fb0ba11ccd5d21"
+    },
+    {
+      "block_id": "page-0907-block-0011",
+      "order": 11,
+      "text": "to persuade them to stop. This may include telling their next of kin if they agree you \nmay do the driving.\n",
+      "bbox": [
+        70.6948013305664,
+        325.4871826171875,
+        436.59466552734375,
+        349.2071838378906
+      ],
+      "text_sha256": "4f5409c63608fd901f9c61f613facb31c6d81845107bc8d6f0c36d534d987ad4"
+    },
+    {
+      "block_id": "page-0907-block-0012",
+      "order": 12,
+      "text": "■\n■If they continue to drive, inform the DVLA. Tell the patient you are going to do this \n",
+      "bbox": [
+        61.88970184326172,
+        349.4871826171875,
+        436.624755859375,
+        361.2071838378906
+      ],
+      "text_sha256": "b6e6b0a608f8cb3d18443627e0a73e8dfb47472562bfda7ff46cba58414fc861"
+    },
+    {
+      "block_id": "page-0907-block-0013",
+      "order": 13,
+      "text": "and write to the patient to confirm you have done so. Document the advice given \nclearly in the patient’s notes.\n",
+      "bbox": [
+        70.6948013305664,
+        361.4871826171875,
+        436.7148132324219,
+        385.2071838378906
+      ],
+      "text_sha256": "d6d27e3e9b456f1061215a45ce62dd44d3592616de8f57154a0844dfa385d0d9"
+    },
+    {
+      "block_id": "page-0907-block-0014",
+      "order": 14,
+      "text": "References\n",
+      "bbox": [
+        61.889801025390625,
+        408.6421813964844,
+        117.92379760742188,
+        421.67718505859375
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0907-block-0015",
+      "order": 15,
+      "text": "\t 1. Annas GJ. Doctors, drugs, and driving – tort liability for patient-caused accidents. N Engl J Med 2008; 395:521–525.\n\t 2. Metzner JL, et al. Impairment in driving and psychiatric illness. J Neuropsychiatry Clin Neurosci 1993; 5:211–220.\n\t 3. Farkas RH, et al. Zolpidem and driving impairment – identifying persons at risk. N Engl J Med 2013; 369:689–691.\n\t 4. Alvarez J, et al. ICADTS Working Group:  Categorization system for medicinal drugs affecting driving performance. 2007; http://www.icadts.\n",
+      "bbox": [
+        61.889801025390625,
+        426.6191711425781,
+        433.8658447265625,
+        460.7951965332031
+      ],
+      "text_sha256": "3e4cc088e0ecc3464c8deed905b67fc7ac4802a2bff6bd8b7ed6d60502f4d219"
+    },
+    {
+      "block_id": "page-0907-block-0016",
+      "order": 16,
+      "text": "nl/medicinal.html.\n\t 5. Noyes R, Jr. Motor vehicle accidents related to psychiatric impairment. Psychosomatics 1985; 26:569–580.\n\t 6. The National Archives. Road Traffic Act 1991. 1991; http://www.legislation.gov.uk/ukpga/1991/40/contents.\n\t 7. Driver and Vehicle Licensing Agency. Assessing fitness to drive – a guide for medical professionals. 2016 (last updated 2018); www.gov.uk/\n",
+      "bbox": [
+        61.89580154418945,
+        462.76318359375,
+        433.8717346191406,
+        496.7951965332031
+      ],
+      "text_sha256": "b1f0fa8618c91a5faa4b97ded1955e06ad1ce1267c057cc21210015ee71259d1"
+    },
+    {
+      "block_id": "page-0907-block-0017",
+      "order": 17,
+      "text": "dvla/fitnesstodrive.\n\t 8. Piersma D, et al. Prediction of fitness to drive in patients with Alzheimer’s dementia. PLoS One 2016; 11:e0149566.\n\t 9. Breen DA, et al. Driving and dementia. BMJ 2007; 334:1365–1369.\n10. Martin AJ, et al. Driving assessment for maintaining mobility and safety in drivers with dementia. Cochrane Database Syst Rev 2013; \n8:CD006222.\n11. Department for Transport. Changes to drug driving law. 2013 (last updated August 2017); https://www.gov.uk/government/collections/\ndrug-driving.\n12. Biecheler MB, et al. SAM survey on “drugs and fatal accidents”: search of substances consumed and comparison between drivers involved \nunder the influence of alcohol or cannabis. Traffic Inj Prev 2008; 9:11–21.\n13. Oyefeso A, et al. Fatal injuries while under the influence of psychoactive drugs: a cross-sectional exploratory study in England. BMC Public \nHealth 2006; 6:148.\n14. Segmiller FM, et al. Driving ability according to German guidelines in stabilized bipolar I and II outpatients receiving lithium or lamotrigine. \nJ Clin Pharmacol 2013; 53:459–462.\n",
+      "bbox": [
+        61.901798248291016,
+        498.76318359375,
+        435.5997619628906,
+        613.795166015625
+      ],
+      "text_sha256": "739be9885508ec3e5b8790b20f96ba9e29482f4b03c610d0fc471c1a9aea01a4"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0725",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 725,
+  "source_page_index": 724,
+  "source_page_display": 725,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "704    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 7\nAntidepressants in breastfeeding\nTable 7.3 provides information on individual drugs in breastfeeding based on available \npublished data in mid-2020. Manufacturers’ formal advice on drugs in breastfeeding is \navailable in the Summary of Product Characteristics or European Public Assessment \nReport for individual drugs. Table 7.3 does not include this advice (which is often unin-\nformative), but instead uses primary reference sources.\nIt is usually advisable to continue the antidepressant prescribed during pregnancy. \nSwitching drugs postpartum for the purpose of breastfeeding is usually not sensible. \nTable 7.3 should be used as a guide when initiating treatment postpartum. In each case \nprevious response (and lack of response) to treatment must be considered.\nAntipsychotics in breastfeeding\nTable 7.4 provides information on individual drugs in breastfeeding based on available pub-\nlished data in mid-2020. Manufacturers’ formal advice on drugs in breastfeeding is available \nin the Summary of Product Characteristics or European Public Assessment Report for indi-\nvidual drugs. Table 7.4 does not include this advice (which is often uninformative), but instead \nuses primary reference sources. It is usually advisable to continue the antipsychotic prescribed \nduring pregnancy. Switching drugs postpartum for the purpose of breastfeeding is usually not \nsensible. The exception to this is clozapine – clozapine should continue but breastfeeding \nshould be avoided. Table 7.4 should be used as a guide when initiating treatment postpartum. \nIn each case the previous response (and lack of response) to treatment must be considered.\nMood stabilisers in breastfeeding\nTable 7.5 provides information on individual drugs in breastfeeding based on available \npublished data in mid-2020. Manufacturers’ formal advice on drugs in breastfeeding is \navailable in the Summary of Product Characteristics or European Public Assessment \nReport for individual drugs. Table 7.5 does not include this advice (which is often unin-\nformative), but instead uses primary reference sources. It is usually advisable to con-\ntinue the mood stabiliser prescribed during pregnancy. Switching drugs postpartum for \nthe purpose of breastfeeding is usually not sensible. The exception to this is lithium. \nLithium should be continued but breastfeeding should not be permitted. Table 7.5 \nshould be used as a guide when initiating treatment postpartum.  In each case the previ-\nous response (and lack of response) to treatment must be considered.\nHypnotics in breastfeeding\nTable 7.6 provides information on individual drugs in breastfeeding based on available \npublished data in mid-2020. Manufacturers’ formal advice on drugs in breastfeeding is \navailable in the Summary of Product Characteristics or European Public Assessment \nReport for individual drugs. Table 7.6 does not include this advice (which is often unin-\nformative), but instead uses primary reference sources.\nStimulants in breastfeeding\nTable 7.7 provides information on individual drugs in breastfeeding based on available \npublished data in mid-2020. Manufacturers’ formal advice on drugs in breastfeeding is \navailable in the Summary of Product Characteristics or European Public Assessment \n",
+  "raw_text_sha256": "70925bbfbf15f6343ffceb840f2d702f502313ab906d3106b233d850fa53bbe5",
+  "coordinates_sha256": "9a9be89b4d0f06207aa32b4c8a08b40feb9baa697eb13ce82f6e4cc333bb70ca",
+  "block_sequence_sha256": "622f807f4e7030dd32be99860a195fc028ad4c92e552c6a628becacf57f7fb40",
+  "blocks": [
+    {
+      "block_id": "page-0725-block-0000",
+      "order": 0,
+      "text": "704    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "d0921ab434cb62bfeb96d27cbd591eb7781959a80d488f6d5a8eb75a4c0db214"
+    },
+    {
+      "block_id": "page-0725-block-0001",
+      "order": 1,
+      "text": "CHAPTER 7\n",
+      "bbox": [
+        18.520000457763672,
+        472.7144775390625,
+        28.0,
+        514.0584716796875
+      ],
+      "text_sha256": "6d1a2318236627f2d413db0336034ac4d71cea7172bd0baddf04c66a07292590"
+    },
+    {
+      "block_id": "page-0725-block-0002",
+      "order": 2,
+      "text": "Antidepressants in breastfeeding\n",
+      "bbox": [
+        61.88999938964844,
+        62.31540298461914,
+        233.2369842529297,
+        75.35040283203125
+      ],
+      "text_sha256": "eb4183de99bbcd07f22dc2f949e68ecf98703cb9fb1ee0f9d5004801e7f3cc42"
+    },
+    {
+      "block_id": "page-0725-block-0003",
+      "order": 3,
+      "text": "Table 7.3 provides information on individual drugs in breastfeeding based on available \npublished data in mid-2020. Manufacturers’ formal advice on drugs in breastfeeding is \navailable in the Summary of Product Characteristics or European Public Assessment \nReport for individual drugs. Table 7.3 does not include this advice (which is often unin-\nformative), but instead uses primary reference sources.\n",
+      "bbox": [
+        61.88999938964844,
+        81.160400390625,
+        436.64007568359375,
+        140.88040161132812
+      ],
+      "text_sha256": "3e644250ecba75786e2ea1fbb5e8c867ccc48b7798f9088372000757e6854cb2"
+    },
+    {
+      "block_id": "page-0725-block-0004",
+      "order": 4,
+      "text": "It is usually advisable to continue the antidepressant prescribed during pregnancy. \nSwitching drugs postpartum for the purpose of breastfeeding is usually not sensible. \nTable 7.3 should be used as a guide when initiating treatment postpartum. In each case \nprevious response (and lack of response) to treatment must be considered.\n",
+      "bbox": [
+        61.88999938964844,
+        141.160400390625,
+        436.6900329589844,
+        188.88040161132812
+      ],
+      "text_sha256": "3dc03eeb59ded477aa80f24c7326767ac66bd0e7d619491315e6a477a0736de5"
+    },
+    {
+      "block_id": "page-0725-block-0005",
+      "order": 5,
+      "text": "Antipsychotics in breastfeeding\n",
+      "bbox": [
+        61.88999938964844,
+        204.31539916992188,
+        224.86598205566406,
+        217.35040283203125
+      ],
+      "text_sha256": "1bc2fc932775fb938668ddc4f3de8a61e7e70f23cba38f478ae7a8c1fa08ad1f"
+    },
+    {
+      "block_id": "page-0725-block-0006",
+      "order": 6,
+      "text": "Table 7.4 provides information on individual drugs in breastfeeding based on available pub-\nlished data in mid-2020. Manufacturers’ formal advice on drugs in breastfeeding is available \nin the Summary of Product Characteristics or European Public Assessment Report for indi-\nvidual drugs. Table 7.4 does not include this advice (which is often uninformative), but instead \nuses primary reference sources. It is usually advisable to continue the antipsychotic prescribed \nduring pregnancy. Switching drugs postpartum for the purpose of breastfeeding is usually not \nsensible. The exception to this is clozapine – clozapine should continue but breastfeeding \nshould be avoided. Table 7.4 should be used as a guide when initiating treatment postpartum. \nIn each case the previous response (and lack of response) to treatment must be considered.\n",
+      "bbox": [
+        61.88999938964844,
+        223.160400390625,
+        436.7202453613281,
+        330.8804016113281
+      ],
+      "text_sha256": "5b0e3cbca4f7eeded755865e4a863dd08f00fca763f972fffdac05c078b600f8"
+    },
+    {
+      "block_id": "page-0725-block-0007",
+      "order": 7,
+      "text": "Mood stabilisers in breastfeeding\n",
+      "bbox": [
+        61.88999938964844,
+        346.3153991699219,
+        234.65597534179688,
+        359.35040283203125
+      ],
+      "text_sha256": "d5d9d063fdc53f359ebf9589271ff6e04eff7d6a8d6839d33eb2b7fa03e7de3b"
+    },
+    {
+      "block_id": "page-0725-block-0008",
+      "order": 8,
+      "text": "Table 7.5 provides information on individual drugs in breastfeeding based on available \npublished data in mid-2020. Manufacturers’ formal advice on drugs in breastfeeding is \navailable in the Summary of Product Characteristics or European Public Assessment \nReport for individual drugs. Table 7.5 does not include this advice (which is often unin-\nformative), but instead uses primary reference sources. It is usually advisable to con-\ntinue the mood stabiliser prescribed during pregnancy. Switching drugs postpartum for \nthe purpose of breastfeeding is usually not sensible. The exception to this is lithium. \nLithium should be continued but breastfeeding should not be permitted. Table 7.5 \nshould be used as a guide when initiating treatment postpartum.  In each case the previ-\nous response (and lack of response) to treatment must be considered.\n",
+      "bbox": [
+        61.88999938964844,
+        365.160400390625,
+        436.71002197265625,
+        484.8804016113281
+      ],
+      "text_sha256": "7882619f4980f261a978d3a6041acd8541f9b7b9d8a4f37fd6783d216399cfed"
+    },
+    {
+      "block_id": "page-0725-block-0009",
+      "order": 9,
+      "text": "Hypnotics in breastfeeding\n",
+      "bbox": [
+        61.88999938964844,
+        500.3153991699219,
+        201.0399932861328,
+        513.3504028320312
+      ],
+      "text_sha256": "9dac018bf5f810c97fa2dd7023a6037e67fdf62a5f11260b99680dcf69254ca1"
+    },
+    {
+      "block_id": "page-0725-block-0010",
+      "order": 10,
+      "text": "Table 7.6 provides information on individual drugs in breastfeeding based on available \npublished data in mid-2020. Manufacturers’ formal advice on drugs in breastfeeding is \navailable in the Summary of Product Characteristics or European Public Assessment \nReport for individual drugs. Table 7.6 does not include this advice (which is often unin-\nformative), but instead uses primary reference sources.\n",
+      "bbox": [
+        61.88999938964844,
+        519.160400390625,
+        436.64007568359375,
+        578.8804321289062
+      ],
+      "text_sha256": "8dce5c4f65f8942a6505e92e1c87f57c082b2fa5450d98773ca888ecadbc13d4"
+    },
+    {
+      "block_id": "page-0725-block-0011",
+      "order": 11,
+      "text": "Stimulants in breastfeeding\n",
+      "bbox": [
+        61.88999938964844,
+        594.3154296875,
+        204.7249755859375,
+        607.3504028320312
+      ],
+      "text_sha256": "0d9c940c1b5f06eb939f98ff41bd8935ca949897b0315519b411d01ba031dddc"
+    },
+    {
+      "block_id": "page-0725-block-0012",
+      "order": 12,
+      "text": "Table 7.7 provides information on individual drugs in breastfeeding based on available \npublished data in mid-2020. Manufacturers’ formal advice on drugs in breastfeeding is \navailable in the Summary of Product Characteristics or European Public Assessment \n",
+      "bbox": [
+        61.88999938964844,
+        613.160400390625,
+        436.64007568359375,
+        648.8804321289062
+      ],
+      "text_sha256": "0222a804a974a41a17f07299add73c131a62d5aaa7a3d3a5626e81a4d3d12aa5"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

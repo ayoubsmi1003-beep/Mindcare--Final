@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0277",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 277,
+  "source_page_index": 276,
+  "source_page_display": 277,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "256    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  2\n\t52.\t Cavanagh J, et al. Relapse into mania or depression following lithium discontinuation: a 7-year follow-up. Acta Psychiatr Scand 2004; \n109:91–95.\n\t53.\t Yazici O, et al. Controlled lithium discontinuation in bipolar patients with good response to long-term lithium prophylaxis. J Affect Disord \n2004; 80:269–271.\n\t54.\t Goodwin GM. Recurrence of mania after lithium withdrawal. Implications for the use of lithium in the treatment of bipolar affective disor-\nder. Br J Psychiatry 1994; 164:149–152.\n\t55.\t Baldessarini RJ, et al. Effects of the rate of discontinuing lithium maintenance treatment in bipolar disorders. J Clin Psychiatry 1996; \n57:441–448.\n\t56.\t Biel MG, et al. Continuation versus discontinuation of lithium in recurrent bipolar illness: a naturalistic study. Bipolar Disord 2007; \n9:435–442.\n\t57.\t Sajatovic M, et al. Treatment adherence with lithium and anticonvulsant medications among patients with bipolar disorder. Psychiatr Serv \n2007; 58:855–863.\n\t58.\t Paton C, et al. Lithium in bipolar and other affective disorders: prescribing practice in the UK. J Psychopharmacol 2010; 24:1739–1746.\n\t59.\t Kessing LV, et al. Suicide risk in patients treated with lithium. Arch Gen Psychiatry 2005; 62:860–866.\n\t60.\t Medicines Complete. Stockley’s drug interactions. 2020; https://www.medicinescomplete.com.\n\t61.\t Juurlink DN, et al. Drug-induced lithium toxicity in the elderly: a population-based study. J Am Geriatr Soc 2004; 52:794–798.\n\t62.\t Finley PR. Drug interactions with lithium: an update. Clin Pharmacokinet 2016; 55:925–941.\n\t63.\t Kohler-Forsberg O, et al. Nonsteroidal anti-inflammatory drugs (NSAIDs) and paracetamol do not affect 6-month mood-stabilizing treat-\nment outcome among 482 patients with bipolar disorder. Depress Anxiety 2017; 34:281–290.\n",
+  "raw_text_sha256": "641d72ab247d572ac3bf9f81705e4c534a146a80cd1a095d40bab99b41765445",
+  "coordinates_sha256": "b10f07a049da615dc91a7a6e65aa673dd60d3047e1f105240134ce501a46ecd3",
+  "block_sequence_sha256": "bd98a12f77086bf331f2cded13308798552fcd1b2a25b83af6b073695af52ab0",
+  "blocks": [
+    {
+      "block_id": "page-0277-block-0000",
+      "order": 0,
+      "text": "256    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "81dd203a3108368ded0a17bba77f8a86b8de5b56ddaabe7547c74e7deb56f310"
+    },
+    {
+      "block_id": "page-0277-block-0001",
+      "order": 1,
+      "text": "CHAPTER  2\n",
+      "bbox": [
+        19.520000457763672,
+        145.23529052734375,
+        29.0,
+        188.80328369140625
+      ],
+      "text_sha256": "5befcde2fefe074681a51514b484ad31516d952c51183625b5b7b1fb84f30d2c"
+    },
+    {
+      "block_id": "page-0277-block-0002",
+      "order": 2,
+      "text": "\t52.\t Cavanagh J, et al. Relapse into mania or depression following lithium discontinuation: a 7-year follow-up. Acta Psychiatr Scand 2004; \n",
+      "bbox": [
+        61.88999938964844,
+        63.2703857421875,
+        435.59991455078125,
+        70.30238342285156
+      ],
+      "text_sha256": "87c8c50e8fe31aacb9d02e213b0621e30afc55da182a17c81529a552af1bef74"
+    },
+    {
+      "block_id": "page-0277-block-0003",
+      "order": 3,
+      "text": "109:91–95.\n\t53.\t Yazici O, et al. Controlled lithium discontinuation in bipolar patients with good response to long-term lithium prophylaxis. J Affect Disord \n",
+      "bbox": [
+        61.895999908447266,
+        72.12638854980469,
+        435.5879211425781,
+        88.30238342285156
+      ],
+      "text_sha256": "eb19f55b4da95811ae50aaac10a3f65015d069929846e14003a36b83dbf53bcb"
+    },
+    {
+      "block_id": "page-0277-block-0004",
+      "order": 4,
+      "text": "2004; 80:269–271.\n\t54.\t Goodwin GM. Recurrence of mania after lithium withdrawal. Implications for the use of lithium in the treatment of bipolar affective disor-\n",
+      "bbox": [
+        61.902000427246094,
+        90.12638854980469,
+        433.9079895019531,
+        106.30238342285156
+      ],
+      "text_sha256": "a13db4c830f0cae9549acd2a07ac3b9de071f35da977d8ae4ff7da777c886e7f"
+    },
+    {
+      "block_id": "page-0277-block-0005",
+      "order": 5,
+      "text": "der. Br J Psychiatry 1994; 164:149–152.\n\t55.\t Baldessarini RJ, et al. Effects of the rate of discontinuing lithium maintenance treatment in bipolar disorders. J Clin Psychiatry 1996; \n",
+      "bbox": [
+        61.90800094604492,
+        108.12638854980469,
+        435.54010009765625,
+        124.30238342285156
+      ],
+      "text_sha256": "d2cceb2d4eed8217aee131b1bb405d4b61f9c4f0c135557098302e92300c1fa3"
+    },
+    {
+      "block_id": "page-0277-block-0006",
+      "order": 6,
+      "text": "57:441–448.\n\t56.\t Biel MG, et al. Continuation versus discontinuation of lithium in recurrent bipolar illness: a naturalistic study. Bipolar Disord 2007; \n",
+      "bbox": [
+        61.91400146484375,
+        126.12638854980469,
+        435.58795166015625,
+        142.30238342285156
+      ],
+      "text_sha256": "9b4d3fc482fe80eb43a77fac4307b3b3dead948af23fbf090bd8af114c1892db"
+    },
+    {
+      "block_id": "page-0277-block-0007",
+      "order": 7,
+      "text": "9:435–442.\n\t57.\t Sajatovic M, et al. Treatment adherence with lithium and anticonvulsant medications among patients with bipolar disorder. Psychiatr Serv \n",
+      "bbox": [
+        61.91999816894531,
+        144.1263885498047,
+        435.5521545410156,
+        160.30238342285156
+      ],
+      "text_sha256": "d167b73e8e386748ae2c366476bddbb00062bbf1a682af0b8485ca339fe41be6"
+    },
+    {
+      "block_id": "page-0277-block-0008",
+      "order": 8,
+      "text": "2007; 58:855–863.\n\t58.\t Paton C, et al. Lithium in bipolar and other affective disorders: prescribing practice in the UK. J Psychopharmacol 2010; 24:1739–1746.\n\t59.\t Kessing LV, et al. Suicide risk in patients treated with lithium. Arch Gen Psychiatry 2005; 62:860–866.\n\t60.\t Medicines Complete. Stockley’s drug interactions. 2020; https://www.medicinescomplete.com.\n\t61.\t Juurlink DN, et al. Drug-induced lithium toxicity in the elderly: a population-based study. J Am Geriatr Soc 2004; 52:794–798.\n\t62.\t Finley PR. Drug interactions with lithium: an update. Clin Pharmacokinet 2016; 55:925–941.\n\t63.\t Kohler-Forsberg O, et al. Nonsteroidal anti-inflammatory drugs (NSAIDs) and paracetamol do not affect 6-month mood-stabilizing treat-\n",
+      "bbox": [
+        61.92599868774414,
+        162.1263885498047,
+        433.9919128417969,
+        223.30238342285156
+      ],
+      "text_sha256": "f91526c149d734fdfdf1df22f8744d5347fb7bc077ae96593f174d61d4c07154"
+    },
+    {
+      "block_id": "page-0277-block-0009",
+      "order": 9,
+      "text": "ment outcome among 482 patients with bipolar disorder. Depress Anxiety 2017; 34:281–290.\n",
+      "bbox": [
+        72.96000671386719,
+        225.1263885498047,
+        315.9119567871094,
+        232.30238342285156
+      ],
+      "text_sha256": "b9f86c7452054e6124736880be36f30ef43530fb5de797e52617b8e6220e0f81"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

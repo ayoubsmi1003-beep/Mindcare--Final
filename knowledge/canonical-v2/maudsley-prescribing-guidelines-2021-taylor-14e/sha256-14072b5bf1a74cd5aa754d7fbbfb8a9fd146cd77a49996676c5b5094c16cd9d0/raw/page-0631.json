@@ -1,0 +1,239 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0631",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 631,
+  "source_page_index": 630,
+  "source_page_display": 631,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "610    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  6\npatch (13.3mg) to significantly reduce deterioration in Instrumental Activities of Daily \nLiving (IADL) compared with the 9.5mg/24 hours patch and it was well tolerated.45\nPatients and caregivers should be instructed on important administration details for \nthe rivastigmine patch:9\n■\n■The transdermal patch should not be applied to the skin that is red, irritated or cut.\n■\n■Reapplication to the exact same skin location within 14 days should be avoided to \nminimise the potential risk of skin irritation\n■\n■The previous day’s patch must be removed before applying a new one every day.\n■\n■Only one patch should be worn at a time.\n■\n■The patch should not be cut into pieces.\nThe following cautions exist while using AChE-Is: asthma, chronic obstructive pulmonary \ndisease (COPD), sick sinus syndrome, supraventricular conduction abnormalities, suscepti-\nbility to peptic ulcers, history of seizures and bladder outflow obstruction; and while using \nrivastigmine patch, there is risk of fatal overdose with patch administration errors.46\nMemantine appears to be well tolerated47,48 and the only conditions associated with \nwarnings include severe hepatic impairment and epilepsy/seizures49 (see BNF or equiva-\nlent for required dosage adjustments in renal impairment). Isolated cases of interna-\ntional normalised ratio (INR) increases have been reported when memantine is \nco-administered with warfarin.\nAdverse effects\nCholinesterase inhibitors\nWhen adverse effects occur with AChE-Is, they are largely predictable: excess choliner-\ngic stimulation leads to nausea, vomiting, dizziness, insomnia and diarrhoea.50 Such \neffects are most likely to occur at the start of therapy or when the dose is increased. \nThey are dose related and tend to be transient. Urinary incontinence has also been \nreported.51 There appear to be no important differences between drugs with respect to \nthe type or frequency of adverse events, although clinical trials generally suggest a rela-\ntively lower frequency of adverse events for donepezil. This may simply be a reflection \nof the aggressive titration schedules used in trials of other drugs. GI effects appeared to \nbe more common with oral rivastigmine in clinical trials than with other cholinesterase \ninhibitors, however slower titration, ensuring oral rivastigmine is taken with food or \nusing the patch reduces the risk of GI effects.\nAn analysis of 16 years of Individual Case Safety Reports from VigiBase found that \nthe most common adverse effects reported with AChE-Is were neuropsychiatric symp-\ntoms (31.4%), GI disorders (15.9%) and general disorders and administration site con-\nditions (11.9%). Cardiovascular adverse drug reactions (ADRs) accounted for 11.7%.52\nIn view of their pharmacological action, AChE-Is can be expected to have vagotonic \neffects on heart rate (i.e. bradycardia) (See figure 6.1). The potential for this action may \nbe of particular importance in patients with ‘sick sinus syndrome’ or other supraventricu-\nlar cardiac conduction disturbances, such as sinoatrial or atrioventricular block.7–12\nConcerns over the potential cardiac adverse effects associated with AChE-Is were \nraised following findings from controlled trials of galantamine in mild cognitive \nimpairment (MCI) in which increased mortality was associated with galantamine \n",
+  "raw_text_sha256": "ac4a0e6034eeab4c63f46bec7087e97d42995597133b0f299b22944259d6fdc3",
+  "coordinates_sha256": "5d7301ee8ce6d7bb124ef202c64da3aa61f241f0d47fab4b9418dd92ba2bb18f",
+  "block_sequence_sha256": "07c88d8feea1849ce58a394dc0dae6ef5e6dcf898169673849c283fed9c54b3d",
+  "blocks": [
+    {
+      "block_id": "page-0631-block-0000",
+      "order": 0,
+      "text": "610    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "78ac054b1bac7d808b3594920bae1d1f747ce5a3274ad0d7b78aa05e635fd330"
+    },
+    {
+      "block_id": "page-0631-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        18.520000457763672,
+        405.35260009765625,
+        28.0,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0631-block-0002",
+      "order": 2,
+      "text": "patch (13.3mg) to significantly reduce deterioration in Instrumental Activities of Daily \nLiving (IADL) compared with the 9.5mg/24 hours patch and it was well tolerated.45\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.6299743652344,
+        86.27029418945312
+      ],
+      "text_sha256": "6d39d99bdf9c8812b3ce6810d18a88320067c69d3e42888a4018e2a4830020a8"
+    },
+    {
+      "block_id": "page-0631-block-0003",
+      "order": 3,
+      "text": "Patients and caregivers should be instructed on important administration details for \nthe rivastigmine patch:9\n",
+      "bbox": [
+        61.88999938964844,
+        86.31029510498047,
+        436.699951171875,
+        110.27029418945312
+      ],
+      "text_sha256": "973d20128a5961bce07c415b8f75bb610cfac679a18d6e37c3197e0ec83e3e1f"
+    },
+    {
+      "block_id": "page-0631-block-0004",
+      "order": 4,
+      "text": "■\n■The transdermal patch should not be applied to the skin that is red, irritated or cut.\n",
+      "bbox": [
+        61.88990020751953,
+        116.55029296875,
+        430.59991455078125,
+        128.27029418945312
+      ],
+      "text_sha256": "8604831a9e0b0d8d9adbd962f5b2d2266968f3cfe165e94acf1e09df3f29e84f"
+    },
+    {
+      "block_id": "page-0631-block-0005",
+      "order": 5,
+      "text": "■\n■Reapplication to the exact same skin location within 14 days should be avoided to \n",
+      "bbox": [
+        61.88990020751953,
+        128.55029296875,
+        436.6400146484375,
+        140.27029418945312
+      ],
+      "text_sha256": "851f9d1f3f7aefb881ea5234cea05db0faa60da8cb2382c2f7f81b240076e7f5"
+    },
+    {
+      "block_id": "page-0631-block-0006",
+      "order": 6,
+      "text": "minimise the potential risk of skin irritation\n",
+      "bbox": [
+        70.88999938964844,
+        140.310302734375,
+        259.8099670410156,
+        152.27029418945312
+      ],
+      "text_sha256": "724c444b2d7f9910c337b5e2554c25d303173032abaf9bbf2fd6d1c31b31caea"
+    },
+    {
+      "block_id": "page-0631-block-0007",
+      "order": 7,
+      "text": "■\n■The previous day’s patch must be removed before applying a new one every day.\n",
+      "bbox": [
+        61.88990020751953,
+        152.55029296875,
+        417.0499572753906,
+        164.27029418945312
+      ],
+      "text_sha256": "8db2df37f72ee8565b7bcb0ed49649eaa5632f6313acc3c5304e8688bec11a16"
+    },
+    {
+      "block_id": "page-0631-block-0008",
+      "order": 8,
+      "text": "■\n■Only one patch should be worn at a time.\n",
+      "bbox": [
+        61.88990020751953,
+        164.55029296875,
+        250.92996215820312,
+        176.27029418945312
+      ],
+      "text_sha256": "e07edd0e476dbeca99f3d0e1fc239f9678ab08ea54b8f11b05a39274b5b5afd5"
+    },
+    {
+      "block_id": "page-0631-block-0009",
+      "order": 9,
+      "text": "■\n■The patch should not be cut into pieces.\n",
+      "bbox": [
+        61.88990020751953,
+        176.55029296875,
+        243.1499786376953,
+        188.27029418945312
+      ],
+      "text_sha256": "ab9a69ccaa6f548b0906ed8e8b282d8646fc9a017fedc379d9beffc786609f6c"
+    },
+    {
+      "block_id": "page-0631-block-0010",
+      "order": 10,
+      "text": "The following cautions exist while using AChE-Is: asthma, chronic obstructive pulmonary \ndisease (COPD), sick sinus syndrome, supraventricular conduction abnormalities, suscepti-\nbility to peptic ulcers, history of seizures and bladder outflow obstruction; and while using \nrivastigmine patch, there is risk of fatal overdose with patch administration errors.46\n",
+      "bbox": [
+        61.88999938964844,
+        194.55029296875,
+        436.7098693847656,
+        242.27029418945312
+      ],
+      "text_sha256": "240c4cbf170cfae3a6a4f665ca7960aca204e96bdae1a3106e7b99d470c34776"
+    },
+    {
+      "block_id": "page-0631-block-0011",
+      "order": 11,
+      "text": "Memantine appears to be well tolerated47,48 and the only conditions associated with \nwarnings include severe hepatic impairment and epilepsy/seizures49 (see BNF or equiva-\nlent for required dosage adjustments in renal impairment). Isolated cases of interna-\ntional normalised ratio (INR) increases have been reported when memantine is \nco-administered with warfarin.\n",
+      "bbox": [
+        61.89140319824219,
+        242.310302734375,
+        436.71453857421875,
+        302.2702941894531
+      ],
+      "text_sha256": "f9fbef11cb852ae583cc52475649f19d6bddcd345de655c86e26b3e04de5017a"
+    },
+    {
+      "block_id": "page-0631-block-0012",
+      "order": 12,
+      "text": "Adverse effects\n",
+      "bbox": [
+        61.894500732421875,
+        320.6402893066406,
+        134.50450134277344,
+        332.49029541015625
+      ],
+      "text_sha256": "2829b5953031aa8e8e992beffdca9c91044830ce03b830653e6ea31d5de93cfc"
+    },
+    {
+      "block_id": "page-0631-block-0013",
+      "order": 13,
+      "text": "Cholinesterase inhibitors\n",
+      "bbox": [
+        61.88999938964844,
+        339.1077880859375,
+        172.73602294921875,
+        350.36529541015625
+      ],
+      "text_sha256": "1e599ed430ad731966128c29261bf371ae3d451ffcb082f9ca9cbf0ef7749bca"
+    },
+    {
+      "block_id": "page-0631-block-0014",
+      "order": 14,
+      "text": "When adverse effects occur with AChE-Is, they are largely predictable: excess choliner-\ngic stimulation leads to nausea, vomiting, dizziness, insomnia and diarrhoea.50 Such \neffects are most likely to occur at the start of therapy or when the dose is increased. \nThey are dose related and tend to be transient. Urinary incontinence has also been \nreported.51 There appear to be no important differences between drugs with respect to \nthe type or frequency of adverse events, although clinical trials generally suggest a rela-\ntively lower frequency of adverse events for donepezil. This may simply be a reflection \nof the aggressive titration schedules used in trials of other drugs. GI effects appeared to \nbe more common with oral rivastigmine in clinical trials than with other cholinesterase \ninhibitors, however slower titration, ensuring oral rivastigmine is taken with food or \nusing the patch reduces the risk of GI effects.\n",
+      "bbox": [
+        61.889984130859375,
+        356.55029296875,
+        436.7132873535156,
+        488.2702941894531
+      ],
+      "text_sha256": "943e64468f09d03f47ef2d3265d36917dc8fa4a7dfaeb3526489d671718d4893"
+    },
+    {
+      "block_id": "page-0631-block-0015",
+      "order": 15,
+      "text": "An analysis of 16 years of Individual Case Safety Reports from VigiBase found that \nthe most common adverse effects reported with AChE-Is were neuropsychiatric symp-\ntoms (31.4%), GI disorders (15.9%) and general disorders and administration site con-\nditions (11.9%). Cardiovascular adverse drug reactions (ADRs) accounted for 11.7%.52\n",
+      "bbox": [
+        61.89240264892578,
+        488.55029296875,
+        436.6723327636719,
+        536.2703247070312
+      ],
+      "text_sha256": "7a237449fb3a33b5e407766ef30f7c582c661ab0d58f717725c9cf46b202355b"
+    },
+    {
+      "block_id": "page-0631-block-0016",
+      "order": 16,
+      "text": "In view of their pharmacological action, AChE-Is can be expected to have vagotonic \neffects on heart rate (i.e. bradycardia) (See figure 6.1). The potential for this action may \nbe of particular importance in patients with ‘sick sinus syndrome’ or other supraventricu-\nlar cardiac conduction disturbances, such as sinoatrial or atrioventricular block.7–12\n",
+      "bbox": [
+        61.88999938964844,
+        536.55029296875,
+        436.639892578125,
+        584.2703247070312
+      ],
+      "text_sha256": "4baa7cad937e3b1d7d9ddc98601e43c762d7dd514885750318c0830916684770"
+    },
+    {
+      "block_id": "page-0631-block-0017",
+      "order": 17,
+      "text": "Concerns over the potential cardiac adverse effects associated with AChE-Is were \nraised following findings from controlled trials of galantamine in mild cognitive \nimpairment (MCI) in which increased mortality was associated with galantamine \n",
+      "bbox": [
+        61.88999938964844,
+        584.55029296875,
+        436.710205078125,
+        620.2703247070312
+      ],
+      "text_sha256": "34d4d1d1cecb1036399fc5bff17fef7fdd90fc7374aa2ce36f1dc3279a64d25c"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

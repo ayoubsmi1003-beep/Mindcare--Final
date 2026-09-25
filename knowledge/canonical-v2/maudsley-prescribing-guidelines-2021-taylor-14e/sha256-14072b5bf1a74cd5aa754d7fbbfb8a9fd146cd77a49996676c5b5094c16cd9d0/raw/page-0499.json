@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0499",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 499,
+  "source_page_index": 498,
+  "source_page_display": 499,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "478    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nbuprenorphine withdrawal typically lasts for up to 10 days. Specific opioid withdrawal \nscales are available, e.g. the COWS9 or OOWS10 which can be used to help assess levels \nof dependence and withdrawal.\nPrescribing OST safely\n■\n■Use licensed medications for heroin dependence treatment (methadone and \nbuprenorphine).\n■\n■Ensure that the patient is dependent on opioids.\n■\n■Give a safe initial dose (see further) and titrate cautiously.\n■\n■Use daily supervised consumption for the first few months of treatment or until sta-\nbility is achieved (stability = abstinence from illicit opioids).\n■\n■Minimise take-away doses for first few months of treatment or until stability is \nachieved.\nInduction and stabilisation of OST maintenance medication\nMethadone and buprenorphine are the OST medications recommended by NICE for \nmaintenance substitute prescribing. Both methadone and buprenorphine maintenance \nare effective in treating withdrawal symptoms and decreasing use of illicit opioids.11 \nRecent guidelines and systematic reviews find that there is no evidence to support one \nover the other.1 The pharmacology of methadone and buprenorphine differs. Methadone \nis a full agonist at µ-opioid receptors while buprenorphine is a partial agonist. This dif-\nference in pharmacology affords advantages and disadvantages of each drug tabulated \nin Table 4.9. The decision which to use is an individualised one based on the client’s \npreference; their past experience of either; polysubstance use (especially co-morbid ben-\nzodiazepine or alcohol dependence); risk of diversion (medication not being taken by \nthe person it was prescribed for and being sold/given to others); their long-term plans \n(including a preference for one or other as a detoxification regimen); and, in the case of \nbuprenorphine, their ability to refrain from heroin use for long enough to avoid precipi-\ntated opioid withdrawal symptoms. Retention in treatment appears to be more easily \nachievable with methadone than buprenorphine, at least at low dose.7\nThe patient’s physical health is also a significant factor to consider here; for example, \nthere is some evidence to support that buprenorphine is less likely to cause respiratory \ndepression than methadone for healthy opioid using patients.12 Around a third of \npatients in drug services have spirometry consistent with COPD.13 However, there is no \npublished evidence that buprenorphine is better tolerated in this group.\nIn rare cases, patients may be allergic to methadone or buprenorphine or to some of \nthe constituents within the formulations.\nMethadone\nClinical effectiveness\nMethadone is a long-acting opioid agonist. It has been shown to be an effective mainte-\nnance treatment of heroin dependence by retaining patients in treatment and decreasing \n",
+  "raw_text_sha256": "787188b3baaca700fd4fad220af00d009a812be913f3cebe2140b9a5f5cdf23a",
+  "coordinates_sha256": "6be8eec46814098fe607e7cf9a4c66ef0a89c5cda5c1db583a826c037bb7442f",
+  "block_sequence_sha256": "7d00cc25f4312df35d0c5ba92d0304a25eab42ca0f54509ac219d952bf9cf386",
+  "blocks": [
+    {
+      "block_id": "page-0499-block-0000",
+      "order": 0,
+      "text": "478    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "43a110db1dab82ded328b8a0423495b171d30a1b09dc59e761c52725de1b65d8"
+    },
+    {
+      "block_id": "page-0499-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0499-block-0002",
+      "order": 2,
+      "text": "buprenorphine withdrawal typically lasts for up to 10 days. Specific opioid withdrawal \nscales are available, e.g. the COWS9 or OOWS10 which can be used to help assess levels \nof dependence and withdrawal.\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.69000244140625,
+        98.27029418945312
+      ],
+      "text_sha256": "b51eba24202c71846a12d6b3d87e4f00e7e88463d8d1d2c346b76cf1ee15de48"
+    },
+    {
+      "block_id": "page-0499-block-0003",
+      "order": 3,
+      "text": "Prescribing OST safely\n",
+      "bbox": [
+        61.89118957519531,
+        116.64029693603516,
+        165.81117248535156,
+        128.49029541015625
+      ],
+      "text_sha256": "75199682907ebf5144ee590e25bd90e0cbd8c2183541b6416d82254c937552e7"
+    },
+    {
+      "block_id": "page-0499-block-0004",
+      "order": 4,
+      "text": "■\n■Use licensed medications for heroin dependence treatment (methadone and \n",
+      "bbox": [
+        61.88990020751953,
+        140.55029296875,
+        436.679931640625,
+        152.27029418945312
+      ],
+      "text_sha256": "4829a529f6b36c9d8a10134653b1a7e618999f4a91a75e779d2d526ba1ffe4ec"
+    },
+    {
+      "block_id": "page-0499-block-0005",
+      "order": 5,
+      "text": "buprenorphine).\n",
+      "bbox": [
+        70.88999938964844,
+        152.55029296875,
+        140.91998291015625,
+        164.27029418945312
+      ],
+      "text_sha256": "6f7abf2c891c36d24cca8ba6b544807a78259b5b95c79d995b6f002b6162ccd5"
+    },
+    {
+      "block_id": "page-0499-block-0006",
+      "order": 6,
+      "text": "■\n■Ensure that the patient is dependent on opioids.\n",
+      "bbox": [
+        61.88990020751953,
+        164.55029296875,
+        277.05999755859375,
+        176.27029418945312
+      ],
+      "text_sha256": "91c9088e3b1035bc4baf67f6bb4b778ad0ad50c9845daafbd89d5a90ecf72172"
+    },
+    {
+      "block_id": "page-0499-block-0007",
+      "order": 7,
+      "text": "■\n■Give a safe initial dose (see further) and titrate cautiously.\n",
+      "bbox": [
+        61.88990020751953,
+        176.55029296875,
+        319.4399719238281,
+        188.27029418945312
+      ],
+      "text_sha256": "efe722c4be18e10b4bc0f2c279aa021e689ac5fcc484e115b5db56b1f83f1a6f"
+    },
+    {
+      "block_id": "page-0499-block-0008",
+      "order": 8,
+      "text": "■\n■Use daily supervised consumption for the first few months of treatment or until sta-\n",
+      "bbox": [
+        61.88990020751953,
+        188.55029296875,
+        433.9399719238281,
+        200.27029418945312
+      ],
+      "text_sha256": "22ea893305b7642ba795abaf7a9ffd644d9dcdb2f539acbd493eca737c4794ea"
+    },
+    {
+      "block_id": "page-0499-block-0009",
+      "order": 9,
+      "text": "bility is achieved (stability = abstinence from illicit opioids).\n",
+      "bbox": [
+        70.88999938964844,
+        200.55029296875,
+        328.1599426269531,
+        212.27029418945312
+      ],
+      "text_sha256": "81be0540b1e8e30b1ac4a9e73e0e63906a1b24abcfd62fd7f8d4cceec9bb8974"
+    },
+    {
+      "block_id": "page-0499-block-0010",
+      "order": 10,
+      "text": "■\n■Minimise take-away doses for first few months of treatment or until stability is \n",
+      "bbox": [
+        61.88990020751953,
+        212.55029296875,
+        436.67987060546875,
+        224.27029418945312
+      ],
+      "text_sha256": "2389d99a62e7b86d59ec3c824912884798cb415ba3ffabaaab564b747f7b9d8f"
+    },
+    {
+      "block_id": "page-0499-block-0011",
+      "order": 11,
+      "text": "achieved.\n",
+      "bbox": [
+        70.88999938964844,
+        224.55029296875,
+        110.88999938964844,
+        236.27029418945312
+      ],
+      "text_sha256": "c16e7ae7dcbad54a2fe9740ea3466d99135f4d2fb6b835aab81d863441b72087"
+    },
+    {
+      "block_id": "page-0499-block-0012",
+      "order": 12,
+      "text": "Induction and stabilisation of OST maintenance medication\n",
+      "bbox": [
+        61.88999938964844,
+        259.7052917480469,
+        367.5030517578125,
+        272.74029541015625
+      ],
+      "text_sha256": "007f10edf2e865a8534285104e9b21948c44c33d62c417a97fc1af6f763f75e6"
+    },
+    {
+      "block_id": "page-0499-block-0013",
+      "order": 13,
+      "text": "Methadone and buprenorphine are the OST medications recommended by NICE for \nmaintenance substitute prescribing. Both methadone and buprenorphine maintenance \nare effective in treating withdrawal symptoms and decreasing use of illicit opioids.11 \nRecent guidelines and systematic reviews find that there is no evidence to support one \nover the other.1 The pharmacology of methadone and buprenorphine differs. Methadone \nis a full agonist at µ-opioid receptors while buprenorphine is a partial agonist. This dif-\nference in pharmacology affords advantages and disadvantages of each drug tabulated \nin Table 4.9. The decision which to use is an individualised one based on the client’s \npreference; their past experience of either; polysubstance use (especially co-morbid ben-\nzodiazepine or alcohol dependence); risk of diversion (medication not being taken by \nthe person it was prescribed for and being sold/given to others); their long-term plans \n(including a preference for one or other as a detoxification regimen); and, in the case of \nbuprenorphine, their ability to refrain from heroin use for long enough to avoid precipi-\ntated opioid withdrawal symptoms. Retention in treatment appears to be more easily \nachievable with methadone than buprenorphine, at least at low dose.7\n",
+      "bbox": [
+        61.88999938964844,
+        278.55029296875,
+        436.7010192871094,
+        458.2702941894531
+      ],
+      "text_sha256": "410689b9535315df987f805ee84523d2684fcfb8399fa8d1078b8e5831f5ee15"
+    },
+    {
+      "block_id": "page-0499-block-0014",
+      "order": 14,
+      "text": "The patient’s physical health is also a significant factor to consider here; for example, \nthere is some evidence to support that buprenorphine is less likely to cause respiratory \ndepression than methadone for healthy opioid using patients.12 Around a third of \npatients in drug services have spirometry consistent with COPD.13 However, there is no \npublished evidence that buprenorphine is better tolerated in this group.\n",
+      "bbox": [
+        61.88999938964844,
+        458.55029296875,
+        436.7100830078125,
+        518.2703247070312
+      ],
+      "text_sha256": "e11141cd9237f453c9a61d0d0f600c030ade2236c6afd70b474a3d1f9ee2a667"
+    },
+    {
+      "block_id": "page-0499-block-0015",
+      "order": 15,
+      "text": "In rare cases, patients may be allergic to methadone or buprenorphine or to some of \nthe constituents within the formulations.\n",
+      "bbox": [
+        61.8905029296875,
+        518.55029296875,
+        436.6905517578125,
+        542.2703247070312
+      ],
+      "text_sha256": "8869c5964d2099bc16c0b4b06a97e97f90a6f2787a39f43b24b3a8699e53d40d"
+    },
+    {
+      "block_id": "page-0499-block-0016",
+      "order": 16,
+      "text": "Methadone\n",
+      "bbox": [
+        61.88999938964844,
+        559.705322265625,
+        121.78499603271484,
+        572.7402954101562
+      ],
+      "text_sha256": "e2d3d96e2b540dd8fd1df0c11e904ea0124ca774b34df2c7c41ff159b7777985"
+    },
+    {
+      "block_id": "page-0499-block-0017",
+      "order": 17,
+      "text": "Clinical effectiveness\n",
+      "bbox": [
+        61.88999938964844,
+        578.6403198242188,
+        159.50999450683594,
+        590.4902954101562
+      ],
+      "text_sha256": "27e65ab4659ae1e27223e7249a0043dbe89a049f0123cdb57c4ad1cd65d83925"
+    },
+    {
+      "block_id": "page-0499-block-0018",
+      "order": 18,
+      "text": "Methadone is a long-acting opioid agonist. It has been shown to be an effective mainte-\nnance treatment of heroin dependence by retaining patients in treatment and decreasing \n",
+      "bbox": [
+        61.88999938964844,
+        596.55029296875,
+        436.6902160644531,
+        620.2703247070312
+      ],
+      "text_sha256": "8d8ced3abd6996e7c8bb3ef7717df89f7b151670429a1dcf76f672481978eeae"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

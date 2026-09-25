@@ -1,0 +1,215 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0375",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 375,
+  "source_page_index": 374,
+  "source_page_display": 375,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "354    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nTable 3.11  (Continued)\nDrug\nEffect on ECT  \nseizure duration\nComments3,15–18\nLithium34–37,\nPossibly increased\nConflicting data on lithium and ECT. The combination may be more \nlikely to lead to delirium and confusion, and some authorities suggest \ndiscontinuing lithium 48 hours before ECT. In the UK, ECT is often used \nduring lithium therapy but starting with a low stimulus and with very \nclose monitoring. The combination is generally well tolerated.38 Note \nthat lithium potentiates the effects of non-depolarising neuromuscular \nblockers such as suxamethonium. Concomitant use of thiopentone or \npropofol with lithium treatment lowers seizure threshold.39\nAntipsychotics40–44\nVariable – increased \nwith phenothiazines \nand clozapine\nOthers – no obvious \neffect reported\nFew published data but widely used. Phenothiazines and clozapine \nare perhaps most likely to prolong seizures, and some suggest \nwithdrawal before ECT. However, safe concurrent use has been \nreported (particularly with clozapine45,46 which is now usually \ncontinued). ECT is effective in clozapine non-response.47\nECT and antipsychotics appear generally to be a safe combination. \nFew data on aripiprazole, quetiapine and ziprasidone, but they too \nappear to be safe. One case series48 suggests antipsychotics increase \npost ictal cognitive dysfunction.\nAntiseizure \nmedications49–52\nReduced\nIf used as a mood-stabiliser, continue but be prepared to use higher \nenergy stimulus (not always required). If used for epilepsy, their \neffect is to normalise seizure threshold. Interactions are possible. \nValproate may prolong the effect of thiopental; carbamazepine may \ninhibit neuromuscular blockade. A small RCT found no significant \ndifference between carbamazepine and valproate (full dose vs half \ndose) in seizure duration, seizure threshold and cognition \noutcomes.53 Lamotrigine is reported to cause no problems.\nBarbiturates\nReduced\nAll barbiturates reduce seizure duration in ECT but are widely used \nas sedative anaesthetic agents.\nThiopental and methohexital may be associated with cardiac \narrhythmia.\nFor drugs known to lower seizure threshold, treatment is best begun with a low-\nenergy stimulus (50mC). Staff should be alerted to the possibility of prolonged seizures \nand IV diazepam should be available. With drugs known to elevate seizure threshold, \nhigher stimuli may, of course, be required. Methods are available to lower seizure \nthreshold or prolong seizures,54 but discussion of these is beyond the scope of this book.\nECT frequently causes confusion and disorientation; more rarely, it causes delirium. \nConcurrent lithium may increase the risk of delirium.34 There have also been two case \nreports of serotonin syndrome; one occurred after ECT in a patient on combination of \ntrazodone, bupropion and quetiapine55 and the other in a patient receiving lithium \nduringECT therapy.56 Close observation is essential. Very limited data support the use \nof thiamine (200mg daily) in reducing post-ECT confusion.57 Nortriptyline seems to \nenhance ECT efficacy and reduce cognitive adverse effects.1 Cognitive enhancers (done-\npezil, memantine, rivastigmine) might improve cognitive function and reduce ECT-\ninduced cognitive side effects (and appear to be safe).58,59 Ibuprofen may be used to \nprevent headache,60 and intranasal sumatriptan61 can be used to treat it.\n",
+  "raw_text_sha256": "d55104ba072c3f4d7ec2ac00f855b046c4cfe224665a6035416aed09fe011739",
+  "coordinates_sha256": "be896fd63081c6b8bddaa9dfc0fc3170082973742e6f958b3686ecced5f71401",
+  "block_sequence_sha256": "a2bb1d887d061e03522e08e4c67bff7949e4a2a46b18587f273bc51bea14bd0d",
+  "blocks": [
+    {
+      "block_id": "page-0375-block-0000",
+      "order": 0,
+      "text": "354    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "c2546dbe373049d68f1bfdcc8fb3452ad23bb9843bac5c7f0ddf9578c3c75d67"
+    },
+    {
+      "block_id": "page-0375-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0375-block-0002",
+      "order": 2,
+      "text": "Table 3.11  (Continued)\n",
+      "bbox": [
+        67.88999938964844,
+        70.08790588378906,
+        144.17999267578125,
+        78.97540283203125
+      ],
+      "text_sha256": "f22a09f3290e023ea63a711acc5422947a1449d7333961e56f29e6324c266257"
+    },
+    {
+      "block_id": "page-0375-block-0003",
+      "order": 3,
+      "text": "Drug\n",
+      "bbox": [
+        61.88999938964844,
+        99.07289123535156,
+        79.38749694824219,
+        107.96038818359375
+      ],
+      "text_sha256": "feeef2eabd03bd6219846b6c95a917cef51eff084f3ec2edbb873258f191a35b"
+    },
+    {
+      "block_id": "page-0375-block-0004",
+      "order": 4,
+      "text": "Effect on ECT  \nseizure duration\nComments3,15–18\n",
+      "bbox": [
+        138.0,
+        89.07539367675781,
+        267.9466857910156,
+        107.96038818359375
+      ],
+      "text_sha256": "06219f7c3e739f891ae477ef2018d2e0d95d51f202137ce0869a60b27b3e0c1b"
+    },
+    {
+      "block_id": "page-0375-block-0005",
+      "order": 5,
+      "text": "Lithium34–37,\nPossibly increased\nConflicting data on lithium and ECT. The combination may be more \nlikely to lead to delirium and confusion, and some authorities suggest \ndiscontinuing lithium 48 hours before ECT. In the UK, ECT is often used \nduring lithium therapy but starting with a low stimulus and with very \nclose monitoring. The combination is generally well tolerated.38 Note \nthat lithium potentiates the effects of non-depolarising neuromuscular \nblockers such as suxamethonium. Concomitant use of thiopentone or \npropofol with lithium treatment lowers seizure threshold.39\n",
+      "bbox": [
+        61.88999938964844,
+        115.84791564941406,
+        435.9001770019531,
+        194.7279052734375
+      ],
+      "text_sha256": "a0350118572fb68375e38d47a634c91ca2a8b641bad505b304d172eeac694836"
+    },
+    {
+      "block_id": "page-0375-block-0006",
+      "order": 6,
+      "text": "Antipsychotics40–44\nVariable – increased \nwith phenothiazines \nand clozapine\n",
+      "bbox": [
+        61.88999938964844,
+        200.87290954589844,
+        204.68267822265625,
+        229.75540161132812
+      ],
+      "text_sha256": "e5a5df2483580829769ef2b3aa0922c9504436639d73583496112528b425b1d1"
+    },
+    {
+      "block_id": "page-0375-block-0007",
+      "order": 7,
+      "text": "Others – no obvious \neffect reported\n",
+      "bbox": [
+        138.0001983642578,
+        235.05039978027344,
+        204.2701873779297,
+        253.75540161132812
+      ],
+      "text_sha256": "0f595fc31221daef700c97268b387450f1bfaabf27eb5f9d171cfb641623d601"
+    },
+    {
+      "block_id": "page-0375-block-0008",
+      "order": 8,
+      "text": "Few published data but widely used. Phenothiazines and clozapine \nare perhaps most likely to prolong seizures, and some suggest \nwithdrawal before ECT. However, safe concurrent use has been \nreported (particularly with clozapine45,46 which is now usually \ncontinued). ECT is effective in clozapine non-response.47\n",
+      "bbox": [
+        214.89019775390625,
+        201.04539489746094,
+        429.9453430175781,
+        249.75790405273438
+      ],
+      "text_sha256": "260f5f8c140791f43363b93dfe2e4005b28f53634d1e960f46cfbc8a987ac664"
+    },
+    {
+      "block_id": "page-0375-block-0009",
+      "order": 9,
+      "text": "ECT and antipsychotics appear generally to be a safe combination. \nFew data on aripiprazole, quetiapine and ziprasidone, but they too \nappear to be safe. One case series48 suggests antipsychotics increase \npost ictal cognitive dysfunction.\n",
+      "bbox": [
+        214.88858032226562,
+        257.05291748046875,
+        433.633544921875,
+        295.7579040527344
+      ],
+      "text_sha256": "4edee3d28f5bfe2adb0e4a94c343aa6d8ad869c225b44145bc58191fdc68f893"
+    },
+    {
+      "block_id": "page-0375-block-0010",
+      "order": 10,
+      "text": "Antiseizure \nmedications49–52\n",
+      "bbox": [
+        61.888580322265625,
+        301.89288330078125,
+        116.30257415771484,
+        320.77789306640625
+      ],
+      "text_sha256": "40a2dbf79a4f99926f9b227e4862f19da5c1f8b1492d705458d6b2a7700ad01e"
+    },
+    {
+      "block_id": "page-0375-block-0011",
+      "order": 11,
+      "text": "Reduced\nIf used as a mood-stabiliser, continue but be prepared to use higher \nenergy stimulus (not always required). If used for epilepsy, their \neffect is to normalise seizure threshold. Interactions are possible. \nValproate may prolong the effect of thiopental; carbamazepine may \ninhibit neuromuscular blockade. A small RCT found no significant \ndifference between carbamazepine and valproate (full dose vs half \ndose) in seizure duration, seizure threshold and cognition \noutcomes.53 Lamotrigine is reported to cause no problems.\n",
+      "bbox": [
+        138.0001983642578,
+        302.0779113769531,
+        433.66522216796875,
+        380.785400390625
+      ],
+      "text_sha256": "69d694ab6b80bf17a58eb3e80b7159abbc6007362bb846976de948fdf209ba4b"
+    },
+    {
+      "block_id": "page-0375-block-0012",
+      "order": 12,
+      "text": "Barbiturates\nReduced\nAll barbiturates reduce seizure duration in ECT but are widely used \nas sedative anaesthetic agents.\n",
+      "bbox": [
+        61.89170837402344,
+        386.9203796386719,
+        429.5192565917969,
+        405.8053894042969
+      ],
+      "text_sha256": "2fd977fd7b850df16abefb54ab96869428362d7fc9508d2f44242d97ddc07643"
+    },
+    {
+      "block_id": "page-0375-block-0013",
+      "order": 13,
+      "text": "Thiopental and methohexital may be associated with cardiac \narrhythmia.\n",
+      "bbox": [
+        214.89170837402344,
+        413.09539794921875,
+        409.771728515625,
+        431.8003845214844
+      ],
+      "text_sha256": "fd8280a7ded8d29ef69624203b1cc8b3a2ab7c421cf3ed2ce7243e4f748f3486"
+    },
+    {
+      "block_id": "page-0375-block-0014",
+      "order": 14,
+      "text": "For drugs known to lower seizure threshold, treatment is best begun with a low-\nenergy stimulus (50mC). Staff should be alerted to the possibility of prolonged seizures \nand IV diazepam should be available. With drugs known to elevate seizure threshold, \nhigher stimuli may, of course, be required. Methods are available to lower seizure \nthreshold or prolong seizures,54 but discussion of these is beyond the scope of this book.\n",
+      "bbox": [
+        61.88999938964844,
+        448.4953918457031,
+        436.64007568359375,
+        508.21539306640625
+      ],
+      "text_sha256": "ce4afcc017af72d50bda3a1906e925091b40c5c0ae00e30f8c4274805d433d5a"
+    },
+    {
+      "block_id": "page-0375-block-0015",
+      "order": 15,
+      "text": "ECT frequently causes confusion and disorientation; more rarely, it causes delirium. \nConcurrent lithium may increase the risk of delirium.34 There have also been two case \nreports of serotonin syndrome; one occurred after ECT in a patient on combination of \ntrazodone, bupropion and quetiapine55 and the other in a patient receiving lithium \nduringECT therapy.56 Close observation is essential. Very limited data support the use \nof thiamine (200mg daily) in reducing post-ECT confusion.57 Nortriptyline seems to \nenhance ECT efficacy and reduce cognitive adverse effects.1 Cognitive enhancers (done-\npezil, memantine, rivastigmine) might improve cognitive function and reduce ECT-\ninduced cognitive side effects (and appear to be safe).58,59 Ibuprofen may be used to \nprevent headache,60 and intranasal sumatriptan61 can be used to treat it.\n",
+      "bbox": [
+        61.88749694824219,
+        508.49542236328125,
+        436.6937255859375,
+        628.2154541015625
+      ],
+      "text_sha256": "6042b9926045e41a4592b98a12cb977b2e6848d7a7dcc3fdc5fe6ee5ba25e0aa"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

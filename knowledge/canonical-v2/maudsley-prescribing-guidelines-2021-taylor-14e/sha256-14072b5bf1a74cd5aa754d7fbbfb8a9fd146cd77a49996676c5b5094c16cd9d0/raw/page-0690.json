@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0690",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 690,
+  "source_page_index": 689,
+  "source_page_display": 690,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Prescribing in older people    669\nCHAPTER  6\nthey are under continuous supervision and control and are not free to leave. The admin-\nistration of covert medication will only in itself lead to a deprivation of liberty where \nthat covert medication affects the patients’ behaviour, mental health or it acts as a seda-\ntive to such an extent that it will deprive the patients of their liberty. The use of covert \nmedication within a care plan must be clearly identified within the DoLS assessment \nand authorisation.\nWhen considering covert use of psychiatric medication:11\n1.\t If the patient meets the criteria for the MHA, this must be used in preference to the \nMCA.\n2.\t The MCA can be used as authority for covert use of psychiatric medication in \npatients who are not under the MHA if the medication is necessary to prevent dete-\nrioration or ensure an improvement in the patient’s mental health and it is in the \nperson’s best interest to receive the drug. The usual procedures for covert medica-\ntion, including documentation of capacity assessment, best interests meeting and \npharmacist’s review, should be followed.\n3.\t Caution is needed in the use of medication, which may sedate or reduce a \npatient’s physical mobility (see the earlier paragraph), as use of such drugs may \nconstitute a Deprivation of Liberty and require the patient to be under the DoLS \nframework. Documentation of whether the proposed use of a covert psychiatric \ndrug constitutes a Deprivation of Liberty is important. NB: if a patient is found \nto lack capacity to consent to the admission and does not meet the criteria for \ndetention under the MHA, DoLS should be used, so most inpatients who lack \ncapacity to consent to medication will already be under the MHA or DoLS, \nalthough there may be some who can consent to admission but not to \nmedication.\nSummary of process\nThe process for covert administration of medicines should include the following:\n■\n■The assurance that all efforts have been made to give medication openly in its normal \nform before considering covert administration.\n■\n■Assessment of capacity of the patient to make a decision regarding their treatment \nwith medication. If the patient has capacity, their wishes should be respected and \ncovert medication not administered.\n■\n■A record of the examination of the patient’s capacity must be made in the clinical \nnotes, and evidence for incapacity documented.\n■\n■If the patient lacks capacity, there should be a Best Interests Meeting which should be \nattended by relevant health professionals and a person who can communicate the \nviews and interests of the patient (family member, friend or independent mental \ncapacity advocate). These meetings can be held virtually. If the patient has an attor-\nney appointed under the MCA for health and welfare decisions, then this person \nshould be present at the meeting.\n",
+  "raw_text_sha256": "de8fb6a644d149dcf30bdbb81c84273780e968701859845a41a22d69e2ba9cf6",
+  "coordinates_sha256": "e789b766607ef7a019526811013e9ab9d1d3878761c4a90e29bf07e9fd912a9a",
+  "block_sequence_sha256": "94614bd37e8422b34edacd44c69457c0d97d0dbcb94020e5149cf20b0b561504",
+  "blocks": [
+    {
+      "block_id": "page-0690-block-0000",
+      "order": 0,
+      "text": "Prescribing in older people    669\n",
+      "bbox": [
+        281.576904296875,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "d14e27d2b47ddacf282d316b7c34dfb6f79d75449853a7a987e12424d486e73c"
+    },
+    {
+      "block_id": "page-0690-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        454.4096984863281,
+        405.35260009765625,
+        463.88970947265625,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0690-block-0002",
+      "order": 2,
+      "text": "they are under continuous supervision and control and are not free to leave. The admin-\nistration of covert medication will only in itself lead to a deprivation of liberty where \nthat covert medication affects the patients’ behaviour, mental health or it acts as a seda-\ntive to such an extent that it will deprive the patients of their liberty. The use of covert \nmedication within a care plan must be clearly identified within the DoLS assessment \nand authorisation.\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.8199157714844,
+        134.27041625976562
+      ],
+      "text_sha256": "3680513e8e699ff1d9d7da69c6715c8d751762ca5c0255825454407608745328"
+    },
+    {
+      "block_id": "page-0690-block-0003",
+      "order": 3,
+      "text": "When considering covert use of psychiatric medication:11\n",
+      "bbox": [
+        58.0,
+        134.5504150390625,
+        302.8404846191406,
+        146.27041625976562
+      ],
+      "text_sha256": "64c16f950ecf81c034e3f3278f42103ac89336ae77a1dbc583dc18a39e8ac71e"
+    },
+    {
+      "block_id": "page-0690-block-0004",
+      "order": 4,
+      "text": "1.\t If the patient meets the criteria for the MHA, this must be used in preference to the \nMCA.\n2.\t The MCA can be used as authority for covert use of psychiatric medication in \npatients who are not under the MHA if the medication is necessary to prevent dete-\nrioration or ensure an improvement in the patient’s mental health and it is in the \nperson’s best interest to receive the drug. The usual procedures for covert medica-\ntion, including documentation of capacity assessment, best interests meeting and \npharmacist’s review, should be followed.\n3.\t Caution is needed in the use of medication, which may sedate or reduce a \npatient’s physical mobility (see the earlier paragraph), as use of such drugs may \nconstitute a Deprivation of Liberty and require the patient to be under the DoLS \nframework. Documentation of whether the proposed use of a covert psychiatric \ndrug constitutes a Deprivation of Liberty is important. NB: if a patient is found \nto lack capacity to consent to the admission and does not meet the criteria for \ndetention under the MHA, DoLS should be used, so most inpatients who lack \ncapacity to consent to medication will already be under the MHA or DoLS, \nalthough there may be some who can consent to admission but not to \nmedication.\n",
+      "bbox": [
+        51.74989318847656,
+        152.5504150390625,
+        422.81024169921875,
+        368.2704162597656
+      ],
+      "text_sha256": "a87d4c39c254fe79c0def3529f8c2b9e040fea14e5e20b51014df43801f09291"
+    },
+    {
+      "block_id": "page-0690-block-0005",
+      "order": 5,
+      "text": "Summary of process\n",
+      "bbox": [
+        48.0,
+        385.7054748535156,
+        152.31300354003906,
+        398.740478515625
+      ],
+      "text_sha256": "dc9b4f1f652440a0956a632cdf4bfbd8f2bea3769de75fc1b9cef5346d17ac35"
+    },
+    {
+      "block_id": "page-0690-block-0006",
+      "order": 6,
+      "text": "The process for covert administration of medicines should include the following:\n",
+      "bbox": [
+        48.0,
+        404.55047607421875,
+        395.2799377441406,
+        416.2704772949219
+      ],
+      "text_sha256": "b090d9f451f7e5b9e8230f69cd527d9b9745d50d803fb6011d1f9e7a586d68a4"
+    },
+    {
+      "block_id": "page-0690-block-0007",
+      "order": 7,
+      "text": "■\n■The assurance that all efforts have been made to give medication openly in its normal \n",
+      "bbox": [
+        47.999900817871094,
+        422.55047607421875,
+        422.8099060058594,
+        434.2704772949219
+      ],
+      "text_sha256": "a8aad3f731173e4b2aae867c8992c3c8648ac7ea60d271cd4a3ccf378e6a3832"
+    },
+    {
+      "block_id": "page-0690-block-0008",
+      "order": 8,
+      "text": "form before considering covert administration.\n",
+      "bbox": [
+        57.0,
+        434.55047607421875,
+        258.67999267578125,
+        446.2704772949219
+      ],
+      "text_sha256": "12088e762cd9851ecd3751e41d056c0db8aa7512edb9abf1b3cc1a00695cd1f3"
+    },
+    {
+      "block_id": "page-0690-block-0009",
+      "order": 9,
+      "text": "■\n■Assessment of capacity of the patient to make a decision regarding their treatment \n",
+      "bbox": [
+        47.999900817871094,
+        446.55047607421875,
+        422.7600402832031,
+        458.2704772949219
+      ],
+      "text_sha256": "35ca59f4f5e250c96464e23dffe450328d51bd05e1673f1466cfc139ef8837d9"
+    },
+    {
+      "block_id": "page-0690-block-0010",
+      "order": 10,
+      "text": "with medication. If the patient has capacity, their wishes should be respected and \ncovert medication not administered.\n",
+      "bbox": [
+        57.0,
+        458.55047607421875,
+        422.7200622558594,
+        482.2704772949219
+      ],
+      "text_sha256": "08d0e8617e40a197e5186a32d4037e9ac6152220c66f2d318b1e6d4f733cbcd2"
+    },
+    {
+      "block_id": "page-0690-block-0011",
+      "order": 11,
+      "text": "■\n■A record of the examination of the patient’s capacity must be made in the clinical \n",
+      "bbox": [
+        47.999900817871094,
+        482.55047607421875,
+        422.7498779296875,
+        494.2704772949219
+      ],
+      "text_sha256": "86199a4440b2b4b6ce3e66890c00b89d0c447e580ed371f165684b674d88a810"
+    },
+    {
+      "block_id": "page-0690-block-0012",
+      "order": 12,
+      "text": "notes, and evidence for incapacity documented.\n",
+      "bbox": [
+        57.0,
+        494.55047607421875,
+        261.0899963378906,
+        506.2704772949219
+      ],
+      "text_sha256": "b5fbf21f7985211c26fdcd165c12f6a36b54ba7b8104813a25ebae44a8a54f83"
+    },
+    {
+      "block_id": "page-0690-block-0013",
+      "order": 13,
+      "text": "■\n■If the patient lacks capacity, there should be a Best Interests Meeting which should be \n",
+      "bbox": [
+        47.999900817871094,
+        506.55047607421875,
+        422.7800598144531,
+        518.2705078125
+      ],
+      "text_sha256": "6cb633d3c0848e8dba117281bc567594eac349fb26f447b6a5d8510c772fb313"
+    },
+    {
+      "block_id": "page-0690-block-0014",
+      "order": 14,
+      "text": "attended by relevant health professionals and a person who can communicate the \nviews and interests of the patient (family member, friend or independent mental \ncapacity advocate). These meetings can be held virtually. If the patient has an attor-\nney appointed under the MCA for health and welfare decisions, then this person \nshould be present at the meeting.\n",
+      "bbox": [
+        57.0,
+        518.5504760742188,
+        422.8100280761719,
+        578.2705078125
+      ],
+      "text_sha256": "42bf27ef7e13051c02ee7ceaaedadbce4d6ec634e266062074068f04efaaa0cd"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

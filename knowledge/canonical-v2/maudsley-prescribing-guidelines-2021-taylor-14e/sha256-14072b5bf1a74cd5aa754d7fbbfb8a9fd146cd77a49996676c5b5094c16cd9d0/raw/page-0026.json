@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0026",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 26,
+  "source_page_index": 25,
+  "source_page_display": 26,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    5\nCHAPTER 1\nAntipsychotics are effective in both the acute and maintenance treatment of schizo-\nphrenia and other psychotic disorders. They differ in their pharmacology, pharmacoki-\nnetics, overall efficacy/effectiveness and tolerability, but perhaps more importantly, \nresponse and tolerability differ between patients. This variability of individual response \nmeans that there is no clear first-line antipsychotic medication that is preferable for all.\nRelative efficacy\nFollowing the publication of the independent CATIE4 and CUtLASS5 studies, the World \nPsychiatric Association reviewed the evidence relating to the relative efficacy of 51 \nFGAs and 11 SGAs and concluded that, if differences in EPS could be minimised (by \ncareful dosing) and anticholinergic use avoided, there was no convincing evidence to \nsupport any advantage for SGAs over FGAs.6 As a class, SGAs may have a lower pro-\npensity for EPS and tardive dyskinesia (TD),7 but this is somewhat offset by a higher \npropensity to cause metabolic side effects. A meta-analysis of antipsychotic medications \nfor first-episode psychosis8 found few differences between FGAs and SGAs as groups of \ndrugs but minor advantages for olanzapine and amisulpride individually. A later net-\nwork meta-analysis of first-episode studies found small efficacy advantages for olan-\nzapine and amisulpride and overall poor performance for haloperidol.9\nWhen individual non-clozapine SGAs are compared, initial summary data suggested \nthat olanzapine is marginally more effective than aripiprazole, risperidone, quetiapine \nand ziprasidone, and that risperidone has a minor advantage over quetiapine and \nziprasidone.10 FGA-controlled trials also suggest an advantage for olanzapine, risperi-\ndone and amisulpride over older drugs.11,12 A network meta-analysis13 broadly con-\nfirmed these findings, ranking amisulpride second behind clozapine and olanzapine \nthird. These three drugs were the only ones to show clear efficacy advantages over \nhaloperidol. The magnitude of differences was again small (but potentially substantial \nenough to be clinically important)13 and must be weighed against the very different side \neffect profiles associated with individual antipsychotics. A 2019 network meta-analysis \nof 32 antipsychotics14 ranked amisulpride as the most effective drug for positive symp-\ntoms and clozapine as the best for both negative symptoms and overall symptom \nimprovement. Olanzapine and risperidone were also highly ranked for positive symp-\ntom response. The greatest (beneficial) effect on depressive symptoms was seen with \nsulpiride, clozapine, amisulpride, olanzapine and the dopamine partial agonists, per-\nhaps reflecting the relative absence of neuroleptic-induced dysphoria common to most \nFGAs.15 There was a tendency for more recently introduced drugs to have a lower \nestimated efficacy – a phenomenon that derives from the substantial increase in placebo \nresponse since 1970.16\nClozapine is clearly the drug of choice in refractory schizophrenia17 although, \nbizarrely, this is not a universal finding,18 probably because of the nature and quality of \nmany active-comparator trials.19,20\nBoth FGAs and SGAs are associated with a number of adverse effects. These include \nweight gain, dyslipidaemia, increases in plasma glucose/diabetes,21,22 hyperprolactinae-\nmia, hip fracture,23 sexual dysfunction, EPS including neuroleptic malignant syn-\ndrome,24 anticholinergic effects, venous thromboembolism (VTE),25 sedation and \npostural hypotension. The exact profile is drug-specific (see individual sections on \n",
+  "raw_text_sha256": "45e6e308bfcb0c8a5f83168853b71c287bdda5cffb5ec8eed0c5f14f50b39fd0",
+  "coordinates_sha256": "fb6fedbc845a001a0378741ed38678d19caa0d5178b43a9d83b43507e6c8f131",
+  "block_sequence_sha256": "bbee0368ca51ccc52e50e33ec9f3ad65c7e9f0e148774def6d1fc89c8e02b847",
+  "blocks": [
+    {
+      "block_id": "page-0026-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    5\n",
+      "bbox": [
+        250.6403045654297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "fe6f8c3855c4103edbc00fdd862b4d415b9b4b50d31f3670985b3340afa1d4ed"
+    },
+    {
+      "block_id": "page-0026-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0026-block-0002",
+      "order": 2,
+      "text": "Antipsychotics are effective in both the acute and maintenance treatment of schizo-\nphrenia and other psychotic disorders. They differ in their pharmacology, pharmacoki-\nnetics, overall efficacy/effectiveness and tolerability, but perhaps more importantly, \nresponse and tolerability differ between patients. This variability of individual response \nmeans that there is no clear first-line antipsychotic medication that is preferable for all.\n",
+      "bbox": [
+        47.99909973144531,
+        62.5494384765625,
+        422.7990417480469,
+        122.26943969726562
+      ],
+      "text_sha256": "2116f739faec00844417c50a7b723569dd6a3ec681725dfd81a352b202e5d208"
+    },
+    {
+      "block_id": "page-0026-block-0003",
+      "order": 3,
+      "text": "Relative efficacy\n",
+      "bbox": [
+        47.99909973144531,
+        140.63943481445312,
+        124.51908874511719,
+        152.48944091796875
+      ],
+      "text_sha256": "2df0ebd22d65f21b31c553914b24d1b62d53ca89ec5ee26bb3df5027567040bb"
+    },
+    {
+      "block_id": "page-0026-block-0004",
+      "order": 4,
+      "text": "Following the publication of the independent CATIE4 and CUtLASS5 studies, the World \nPsychiatric Association reviewed the evidence relating to the relative efficacy of 51 \nFGAs and 11 SGAs and concluded that, if differences in EPS could be minimised (by \ncareful dosing) and anticholinergic use avoided, there was no convincing evidence to \nsupport any advantage for SGAs over FGAs.6 As a class, SGAs may have a lower pro-\npensity for EPS and tardive dyskinesia (TD),7 but this is somewhat offset by a higher \npropensity to cause metabolic side effects. A meta-analysis of antipsychotic medications \nfor first-episode psychosis8 found few differences between FGAs and SGAs as groups of \ndrugs but minor advantages for olanzapine and amisulpride individually. A later net-\nwork meta-analysis of first-episode studies found small efficacy advantages for olan-\nzapine and amisulpride and overall poor performance for haloperidol.9\n",
+      "bbox": [
+        47.99470520019531,
+        158.5494384765625,
+        422.8047790527344,
+        290.2695007324219
+      ],
+      "text_sha256": "0bb93dbb1ea344e5ea7fc4be65cf57219c67c904f243ad7b8b30fc81a84c5631"
+    },
+    {
+      "block_id": "page-0026-block-0005",
+      "order": 5,
+      "text": "When individual non-clozapine SGAs are compared, initial summary data suggested \nthat olanzapine is marginally more effective than aripiprazole, risperidone, quetiapine \nand ziprasidone, and that risperidone has a minor advantage over quetiapine and \nziprasidone.10 FGA-controlled trials also suggest an advantage for olanzapine, risperi-\ndone and amisulpride over older drugs.11,12 A network meta-analysis13 broadly con-\nfirmed these findings, ranking amisulpride second behind clozapine and olanzapine \nthird. These three drugs were the only ones to show clear efficacy advantages over \nhaloperidol. The magnitude of differences was again small (but potentially substantial \nenough to be clinically important)13 and must be weighed against the very different side \neffect profiles associated with individual antipsychotics. A 2019 network meta-analysis \nof 32 antipsychotics14 ranked amisulpride as the most effective drug for positive symp-\ntoms and clozapine as the best for both negative symptoms and overall symptom \nimprovement. Olanzapine and risperidone were also highly ranked for positive symp-\ntom response. The greatest (beneficial) effect on depressive symptoms was seen with \nsulpiride, clozapine, amisulpride, olanzapine and the dopamine partial agonists, per-\nhaps reflecting the relative absence of neuroleptic-induced dysphoria common to most \nFGAs.15 There was a tendency for more recently introduced drugs to have a lower \nestimated efficacy – a phenomenon that derives from the substantial increase in placebo \nresponse since 1970.16\n",
+      "bbox": [
+        47.99711608886719,
+        290.54949951171875,
+        422.8080749511719,
+        518.26953125
+      ],
+      "text_sha256": "4885fda3d32552e9f672b90cbd6b61a280dfdd3fd285bcea42edd3d28ccbf5d2"
+    },
+    {
+      "block_id": "page-0026-block-0006",
+      "order": 6,
+      "text": "Clozapine is clearly the drug of choice in refractory schizophrenia17 although, \nbizarrely, this is not a universal finding,18 probably because of the nature and quality of \nmany active-comparator trials.19,20\n",
+      "bbox": [
+        47.99659729003906,
+        518.5494995117188,
+        422.7792663574219,
+        554.26953125
+      ],
+      "text_sha256": "903000e375d712fc4b08639ab6b5bee0265388b547798f74d6b97e09b60ccb0b"
+    },
+    {
+      "block_id": "page-0026-block-0007",
+      "order": 7,
+      "text": "Both FGAs and SGAs are associated with a number of adverse effects. These include \nweight gain, dyslipidaemia, increases in plasma glucose/diabetes,21,22 hyperprolactinae-\nmia, hip fracture,23 sexual dysfunction, EPS including neuroleptic malignant syn-\ndrome,24 anticholinergic effects, venous thromboembolism (VTE),25 sedation and \npostural hypotension. The exact profile is drug-specific (see individual sections on \n",
+      "bbox": [
+        47.994606018066406,
+        554.5494995117188,
+        422.7988586425781,
+        614.2694702148438
+      ],
+      "text_sha256": "ddabe550edfb774523633baf72737b5155a71c4bac53aa78e450f88f92684beb"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

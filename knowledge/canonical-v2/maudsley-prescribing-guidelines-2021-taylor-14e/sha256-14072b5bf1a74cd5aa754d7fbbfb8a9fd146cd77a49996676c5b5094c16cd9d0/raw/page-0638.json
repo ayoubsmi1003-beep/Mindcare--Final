@@ -1,0 +1,587 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0638",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 638,
+  "source_page_index": 637,
+  "source_page_display": 638,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Prescribing in older people    617\nCHAPTER  6\nNICE recommendations\nNICE Guidance on Dementia78 was last updated in June 2018.\nSummary of NICE guidance for the treatment of Alzheimer’s disease78,79\n■\n■The three AChE-Is donepezil, galantamine and rivastigmine are recommended for managing mild-to-moderate AD.\n■\n■Memantine is recommended for managing moderate AD for people who are intolerant of or have a contrain-\ndication to AChE-Is, or for managing severe AD.\n■\n■For people with an established diagnosis of AD who are already taking an AChE-I:\n■\n■consider memantine in addition to an AChE-I if they have moderate disease;\n■\n■offer memantine in addition to an AChE-I if they have severe disease.\n■\n■Treatment should be under the following conditions:\nFor people who are not taking an AChE-I or memantine, prescribers should only start treatment with these on the \nadvice of a clinician who has the necessary knowledge and skills. \nThis could include:\n■\n■secondary care medical specialists such as psychiatrists, geriatricians and neurologists; and\n■\n■other healthcare professionals (such as GPs, nurse consultants and advanced nurse practitioners), if they \nhave specialist expertise in diagnosing and treating AD.\n■\n■Once a decision has been made to start an AChE-I or memantine, the first prescription may be made in \nprimary care.\n■\n■For people with an established diagnosis of AD who are already taking an AChE-I, primary care prescribers may start \ntreatment with memantine without taking advice from a specialist clinician.\n■\n■Ensure that local arrangements for prescribing, supply and treatment review follow the NICE guideline on \nmedicines optimisation.80\n■\n■Do not stop AChE-Is in people with AD because of disease severity alone.\n■\n■Therapy with AChE-I should be initiated with a drug with the lowest acquisition cost (taking into account \nrequired daily dose and the price per dose once shared care has started). An alternative may be considered on \nthe basis of adverse effects profile, expectations about adherence, medical co-morbidity, possibility of drug \ninteractions and dosing profiles.\nSummary of NICE guidance for the treatment of non-AD dementia78,79\n■\n■Offer donepezil or rivastigmine to people with mild-to-moderate DLB.\n■\n■Only consider galantamine for people with mild-to-moderate DLB if donepezil and rivastigmine are not tolerated.\n■\n■Consider donepezil or rivastigmine for people with severe DLB.\n■\n■Consider memantine for people with DLB if AChE-Is are not tolerated or are contraindicated.\n■\n■Only consider AChE-Is or memantine for people with vascular dementia if they have suspected co-morbid AD, \nParkinson’s disease dementia or DLB.\n■\n■Do not offer AChE-Is or memantine to people with frontotemporal dementia.\n■\n■Do not offer AChE-Is or memantine to people with cognitive impairment caused by multiple sclerosis.\n■\n■For guidance on pharmacological management of Parkinson’s disease dementia, see Parkinson’s disease \ndementia in the NICE guideline on Parkinson’s disease.\nMedicines that may cause cognitive impairment1\n■\n■Be aware that some commonly prescribed medicines are associated with increased anticholinergic burden, and \ntherefore cognitive impairment.\n■\n■Consider minimising the use of medicines associated with increased anticholinergic burden, and if possible \nlook for alternatives:\n■\n■when assessing whether to refer a person with suspected dementia for diagnosis\n■\n■during medication reviews with people living with dementia.\n■\n■Be aware that there are validated tools for assessing anticholinergic burden but there is insufficient evidence to \nrecommend one over the others (see section ‘Safer prescribing for physical health conditions in dementia’).\n■\n■For guidance on carrying out medication reviews, see medication review in the NICE guideline on medicines \noptimisation.\nNB: The Anticholinergic Effect on Cognition (AEC) scale can be accessed at www.medichec.com\n",
+  "raw_text_sha256": "c91fdd8ba9aec29de3508083ba73b29f2a2f5ade70bbae18bd203169f4f3a4ad",
+  "coordinates_sha256": "831b2ab3f18bd4ed59f8dc3418e43eb4f44b4d926b22cc9a267d670ad98d7789",
+  "block_sequence_sha256": "8ede578b1fc66c2efe55bc435caa4471033914cfdbc9b0b76c46e478f94aa5c9",
+  "blocks": [
+    {
+      "block_id": "page-0638-block-0000",
+      "order": 0,
+      "text": "Prescribing in older people    617\n",
+      "bbox": [
+        281.576904296875,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "db592b000957c595d5a72e537f3581d0a1ca31823fe7d7355ccf9c35e067a61a"
+    },
+    {
+      "block_id": "page-0638-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        454.4096984863281,
+        405.35260009765625,
+        463.88970947265625,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0638-block-0002",
+      "order": 2,
+      "text": "NICE recommendations\n",
+      "bbox": [
+        48.0,
+        62.31546401977539,
+        167.59197998046875,
+        75.3504638671875
+      ],
+      "text_sha256": "fbcbd42bae346e28caf7d0e7c62802e3864949e55da1b2634852fae4903df9ca"
+    },
+    {
+      "block_id": "page-0638-block-0003",
+      "order": 3,
+      "text": "NICE Guidance on Dementia78 was last updated in June 2018.\n",
+      "bbox": [
+        48.0,
+        81.16046142578125,
+        317.8616943359375,
+        92.88046264648438
+      ],
+      "text_sha256": "eb543e88fbdfe1d6667af41b212c15997270ff05e9f731faef3765f8c38fb78f"
+    },
+    {
+      "block_id": "page-0638-block-0004",
+      "order": 4,
+      "text": "Summary of NICE guidance for the treatment of Alzheimer’s disease78,79\n",
+      "bbox": [
+        52.5,
+        109.15100860595703,
+        336.1819152832031,
+        119.2235107421875
+      ],
+      "text_sha256": "5fc0f35fc3714676382fc830a62e8a9ec01349ea70780b5976b014b467a1e860"
+    },
+    {
+      "block_id": "page-0638-block-0005",
+      "order": 5,
+      "text": "■\n■The three AChE-Is donepezil, galantamine and rivastigmine are recommended for managing mild-to-moderate AD.\n",
+      "bbox": [
+        52.499900817871094,
+        127.0909652709961,
+        408.3450927734375,
+        135.7984619140625
+      ],
+      "text_sha256": "e230017866669c8ea4ae4c604b2d38d313480231275177617f53936ab567c4c2"
+    },
+    {
+      "block_id": "page-0638-block-0006",
+      "order": 6,
+      "text": "■\n■Memantine is recommended for managing moderate AD for people who are intolerant of or have a contrain-\n",
+      "bbox": [
+        52.499900817871094,
+        138.09095764160156,
+        410.8650817871094,
+        146.7984619140625
+      ],
+      "text_sha256": "7d280dc20198d0036419d5e98cdf14bcff37344d9851f2db741ffa512f60a82f"
+    },
+    {
+      "block_id": "page-0638-block-0007",
+      "order": 7,
+      "text": "dication to AChE-Is, or for managing severe AD.\n",
+      "bbox": [
+        61.5,
+        147.09095764160156,
+        215.14500427246094,
+        155.7984619140625
+      ],
+      "text_sha256": "c7c94867d4a66966942f1310f66b55b695a08b3625ee4c1dfcc8cf1b35ff4ef7"
+    },
+    {
+      "block_id": "page-0638-block-0008",
+      "order": 8,
+      "text": "■\n■For people with an established diagnosis of AD who are already taking an AChE-I:\n",
+      "bbox": [
+        52.499900817871094,
+        158.09095764160156,
+        322.96502685546875,
+        166.7984619140625
+      ],
+      "text_sha256": "124ddcfdc0f75a3ffc3dcdfda5fd67ac9173fb3c07d582f0799ea09771a389a1"
+    },
+    {
+      "block_id": "page-0638-block-0009",
+      "order": 9,
+      "text": "■\n■consider memantine in addition to an AChE-I if they have moderate disease;\n",
+      "bbox": [
+        61.999900817871094,
+        169.09095764160156,
+        313.8675537109375,
+        177.7984619140625
+      ],
+      "text_sha256": "9e9832f752b11c53f5916e13a38b2bb0be7f737035f3545558507b61bae5d13c"
+    },
+    {
+      "block_id": "page-0638-block-0010",
+      "order": 10,
+      "text": "■\n■offer memantine in addition to an AChE-I if they have severe disease.\n",
+      "bbox": [
+        61.999900817871094,
+        180.0909881591797,
+        291.50250244140625,
+        188.79849243164062
+      ],
+      "text_sha256": "848b88cc176d979a976a64b0fef7922c81c7e5596304d0e4e9c65669d332c130"
+    },
+    {
+      "block_id": "page-0638-block-0011",
+      "order": 11,
+      "text": "■\n■Treatment should be under the following conditions:\nFor people who are not taking an AChE-I or memantine, prescribers should only start treatment with these on the \nadvice of a clinician who has the necessary knowledge and skills. \n",
+      "bbox": [
+        52.499900817871094,
+        191.0909881591797,
+        417.9900817871094,
+        219.80099487304688
+      ],
+      "text_sha256": "2c8a08b8d4a21bdee31351679612aef582a810bab215d0fc6b0b6b1f2bb81fa9"
+    },
+    {
+      "block_id": "page-0638-block-0012",
+      "order": 12,
+      "text": "This could include:\n",
+      "bbox": [
+        62.49749755859375,
+        220.09349060058594,
+        121.67999267578125,
+        228.80099487304688
+      ],
+      "text_sha256": "b7140b85e6a1c975342011e935125790fb68a7b8b1d4d273574e1ab0561f3231"
+    },
+    {
+      "block_id": "page-0638-block-0013",
+      "order": 13,
+      "text": "■\n■secondary care medical specialists such as psychiatrists, geriatricians and neurologists; and\n",
+      "bbox": [
+        61.999900817871094,
+        231.0909881591797,
+        357.330078125,
+        239.79849243164062
+      ],
+      "text_sha256": "f517b63331662eeb317355e5df5fa119cec40f863ea94edd637b2a2ae69c449c"
+    },
+    {
+      "block_id": "page-0638-block-0014",
+      "order": 14,
+      "text": "■\n■other healthcare professionals (such as GPs, nurse consultants and advanced nurse practitioners), if they \n",
+      "bbox": [
+        61.999900817871094,
+        242.0909881591797,
+        404.0325012207031,
+        250.79849243164062
+      ],
+      "text_sha256": "ebf4b022ad8505c42a92f2d9661cc0be3106049cd66f8f7811e93769ea8850c6"
+    },
+    {
+      "block_id": "page-0638-block-0015",
+      "order": 15,
+      "text": "have specialist expertise in diagnosing and treating AD.\n",
+      "bbox": [
+        70.5,
+        251.0909881591797,
+        246.64498901367188,
+        259.7984924316406
+      ],
+      "text_sha256": "0660aabe21566c7b460b064c9e73e7596565f9b232599e1b931ef033a485a5d4"
+    },
+    {
+      "block_id": "page-0638-block-0016",
+      "order": 16,
+      "text": "■\n■Once a decision has been made to start an AChE-I or memantine, the first prescription may be made in \n",
+      "bbox": [
+        52.499900817871094,
+        262.09100341796875,
+        392.1550598144531,
+        270.7984924316406
+      ],
+      "text_sha256": "05912fab208071a12bb5ddcce41bac1c2b11195092358fedd48e10e84aeb3c53"
+    },
+    {
+      "block_id": "page-0638-block-0017",
+      "order": 17,
+      "text": "primary care.\n",
+      "bbox": [
+        61.0,
+        271.09100341796875,
+        102.51998901367188,
+        279.7984924316406
+      ],
+      "text_sha256": "2bf6ed81ba6937efbc5115e9a68d67dfa54eb103cfc41be54d830bfb3d3b8311"
+    },
+    {
+      "block_id": "page-0638-block-0018",
+      "order": 18,
+      "text": "■\n■For people with an established diagnosis of AD who are already taking an AChE-I, primary care prescribers may start \n",
+      "bbox": [
+        52.499900817871094,
+        282.09100341796875,
+        416.74005126953125,
+        290.7984924316406
+      ],
+      "text_sha256": "550349ec035d8d2d27b95ed54943492b1537826a7bb5948eb892315e91636dfd"
+    },
+    {
+      "block_id": "page-0638-block-0019",
+      "order": 19,
+      "text": "treatment with memantine without taking advice from a specialist clinician.\n",
+      "bbox": [
+        61.0,
+        291.09100341796875,
+        290.45513916015625,
+        299.7984924316406
+      ],
+      "text_sha256": "c73145e15ebe7ff4ea5d2f05f84f1a1fbe3b4fcd0adc0348869fff3d63d38b0b"
+    },
+    {
+      "block_id": "page-0638-block-0020",
+      "order": 20,
+      "text": "■\n■Ensure that local arrangements for prescribing, supply and treatment review follow the NICE guideline on \n",
+      "bbox": [
+        52.499900817871094,
+        302.09100341796875,
+        399.2575378417969,
+        310.7984924316406
+      ],
+      "text_sha256": "c476f46d60c09056000ba97c24abf19bac29314efaf44ee1374e3ae250006f01"
+    },
+    {
+      "block_id": "page-0638-block-0021",
+      "order": 21,
+      "text": "medicines optimisation.80\n",
+      "bbox": [
+        61.0,
+        311.09100341796875,
+        141.28111267089844,
+        319.7984924316406
+      ],
+      "text_sha256": "c04233fd57556101c24d6666ec1062a2534dde0a5160e49b89ee2812690af1ee"
+    },
+    {
+      "block_id": "page-0638-block-0022",
+      "order": 22,
+      "text": "■\n■Do not stop AChE-Is in people with AD because of disease severity alone.\n",
+      "bbox": [
+        52.499900817871094,
+        322.09100341796875,
+        295.2249755859375,
+        330.7984924316406
+      ],
+      "text_sha256": "e358713d7056de819208cc725f837d7506bb446428290e0c137a771a8dcf8abf"
+    },
+    {
+      "block_id": "page-0638-block-0023",
+      "order": 23,
+      "text": "■\n■Therapy with AChE-I should be initiated with a drug with the lowest acquisition cost (taking into account \n",
+      "bbox": [
+        52.499900817871094,
+        333.09100341796875,
+        398.5675964355469,
+        341.7984924316406
+      ],
+      "text_sha256": "bf5e1d4fa85090a4c49dba364f8f4c969b6df75595cf297611913d6c2ccbf759"
+    },
+    {
+      "block_id": "page-0638-block-0024",
+      "order": 24,
+      "text": "required daily dose and the price per dose once shared care has started). An alternative may be considered on \nthe basis of adverse effects profile, expectations about adherence, medical co-morbidity, possibility of drug \ninteractions and dosing profiles.\n",
+      "bbox": [
+        61.0,
+        342.09100341796875,
+        413.4400634765625,
+        368.7984924316406
+      ],
+      "text_sha256": "2c72753353e1593d55e7af2177caca45a3ca5d1f95cec8cdab0cd4a07e066a12"
+    },
+    {
+      "block_id": "page-0638-block-0025",
+      "order": 25,
+      "text": "Summary of NICE guidance for the treatment of non-AD dementia78,79\n",
+      "bbox": [
+        52.5,
+        377.1509704589844,
+        329.2458190917969,
+        387.2234802246094
+      ],
+      "text_sha256": "5e4bfbc0022469214969d05bd4560d4080ec4b469599f43a240806534b335e88"
+    },
+    {
+      "block_id": "page-0638-block-0026",
+      "order": 26,
+      "text": "■\n■Offer donepezil or rivastigmine to people with mild-to-moderate DLB.\n",
+      "bbox": [
+        52.499900817871094,
+        396.71600341796875,
+        283.8749084472656,
+        405.4234924316406
+      ],
+      "text_sha256": "52f8eb99bc17b5a4faeafd01b5807a90d5c2f4178ab55ca58fc58fd55f79faad"
+    },
+    {
+      "block_id": "page-0638-block-0027",
+      "order": 27,
+      "text": "■\n■Only consider galantamine for people with mild-to-moderate DLB if donepezil and rivastigmine are not tolerated.\n",
+      "bbox": [
+        52.499900817871094,
+        407.71600341796875,
+        405.72760009765625,
+        416.4234924316406
+      ],
+      "text_sha256": "293fcb4bf89254b1dfe88214875968fb49e70df191853a1714902d38087d27d8"
+    },
+    {
+      "block_id": "page-0638-block-0028",
+      "order": 28,
+      "text": "■\n■Consider donepezil or rivastigmine for people with severe DLB.\n",
+      "bbox": [
+        52.499900817871094,
+        418.71600341796875,
+        261.8099670410156,
+        427.4234924316406
+      ],
+      "text_sha256": "efe6e83499ea302df1e12ba0ddb31e65a35a2d794e87a8e5e332aaddbf994489"
+    },
+    {
+      "block_id": "page-0638-block-0029",
+      "order": 29,
+      "text": "■\n■Consider memantine for people with DLB if AChE-Is are not tolerated or are contraindicated.\n",
+      "bbox": [
+        52.499900817871094,
+        429.71600341796875,
+        357.5175476074219,
+        438.4234924316406
+      ],
+      "text_sha256": "0e7f300e11b956f8a6f03b7ff0d31d848a461cc90139a79975587cfce579d8ad"
+    },
+    {
+      "block_id": "page-0638-block-0030",
+      "order": 30,
+      "text": "■\n■Only consider AChE-Is or memantine for people with vascular dementia if they have suspected co-morbid AD, \n",
+      "bbox": [
+        52.499900817871094,
+        440.71600341796875,
+        414.03753662109375,
+        449.4234924316406
+      ],
+      "text_sha256": "0829c3853c00f1b37c04f973b3e3cef5699536dc8310f9a89de137050aa6a852"
+    },
+    {
+      "block_id": "page-0638-block-0031",
+      "order": 31,
+      "text": "Parkinson’s disease dementia or DLB.\n",
+      "bbox": [
+        61.5,
+        449.71600341796875,
+        179.02500915527344,
+        458.4234924316406
+      ],
+      "text_sha256": "c8db7928bbb3d8240ed25ec46f8492b8246d8fe6537ec2a0b0273a545ac3875c"
+    },
+    {
+      "block_id": "page-0638-block-0032",
+      "order": 32,
+      "text": "■\n■Do not offer AChE-Is or memantine to people with frontotemporal dementia.\n",
+      "bbox": [
+        52.499900817871094,
+        460.71600341796875,
+        308.76751708984375,
+        469.4234924316406
+      ],
+      "text_sha256": "e719980ae63a49b29d3e8888c9ab0e7d99b9d9a50ae690e2b28423f1d9885469"
+    },
+    {
+      "block_id": "page-0638-block-0033",
+      "order": 33,
+      "text": "■\n■Do not offer AChE-Is or memantine to people with cognitive impairment caused by multiple sclerosis.\n",
+      "bbox": [
+        52.499900817871094,
+        471.71600341796875,
+        385.0125732421875,
+        480.4234924316406
+      ],
+      "text_sha256": "79e21e0c3dcd4c2dd37c827947204b988944f55e4b232f4c4ca8033cfaee597d"
+    },
+    {
+      "block_id": "page-0638-block-0034",
+      "order": 34,
+      "text": "■\n■For guidance on pharmacological management of Parkinson’s disease dementia, see Parkinson’s disease \n",
+      "bbox": [
+        52.499900817871094,
+        482.71600341796875,
+        394.0650634765625,
+        491.4234924316406
+      ],
+      "text_sha256": "0a2e3d82bde3ecdecc7fe93b8048ca62ded3e14b90d04d2619e0d29fcd6326c3"
+    },
+    {
+      "block_id": "page-0638-block-0035",
+      "order": 35,
+      "text": "dementia in the NICE guideline on Parkinson’s disease.\n",
+      "bbox": [
+        61.5,
+        491.71600341796875,
+        235.29745483398438,
+        500.4234924316406
+      ],
+      "text_sha256": "dc4269bdf0759e211fbcb9be8102b54266f2738da80b0cf0330ce10487f6b4a0"
+    },
+    {
+      "block_id": "page-0638-block-0036",
+      "order": 36,
+      "text": "Medicines that may cause cognitive impairment1\n",
+      "bbox": [
+        52.5,
+        508.7760009765625,
+        246.06967163085938,
+        518.8485107421875
+      ],
+      "text_sha256": "a28852e72bd5ebdb5ab8c884db91e3c626c1f10c683420e9aab50541bd05c209"
+    },
+    {
+      "block_id": "page-0638-block-0037",
+      "order": 37,
+      "text": "■\n■Be aware that some commonly prescribed medicines are associated with increased anticholinergic burden, and \n",
+      "bbox": [
+        52.499900817871094,
+        528.3409423828125,
+        416.2800598144531,
+        537.0484619140625
+      ],
+      "text_sha256": "bdb52ef65faf4740b53e2fb646f447c1494c064c6a9d8652d06b6acda2bf105a"
+    },
+    {
+      "block_id": "page-0638-block-0038",
+      "order": 38,
+      "text": "therefore cognitive impairment.\n",
+      "bbox": [
+        61.5,
+        537.3409423828125,
+        162.47247314453125,
+        546.0484619140625
+      ],
+      "text_sha256": "b59aff45fcaec2c9609da55a45623e0a03cb86df5a697480f69c20284d4aed8d"
+    },
+    {
+      "block_id": "page-0638-block-0039",
+      "order": 39,
+      "text": "■\n■Consider minimising the use of medicines associated with increased anticholinergic burden, and if possible \n",
+      "bbox": [
+        52.499900817871094,
+        548.3409423828125,
+        403.3726501464844,
+        557.0484619140625
+      ],
+      "text_sha256": "990cd59d55d1a9efe0bb9287a1990b96a4e8a220cea9b87199657cd43a5ad31d"
+    },
+    {
+      "block_id": "page-0638-block-0040",
+      "order": 40,
+      "text": "look for alternatives:\n",
+      "bbox": [
+        61.5,
+        557.3409423828125,
+        127.04998779296875,
+        566.0484619140625
+      ],
+      "text_sha256": "649fb1e51e0c933c730becb34b422902211b6654fc268517ec6e2b6f242d6913"
+    },
+    {
+      "block_id": "page-0638-block-0041",
+      "order": 41,
+      "text": "■\n■when assessing whether to refer a person with suspected dementia for diagnosis\n",
+      "bbox": [
+        61.999900817871094,
+        568.3409423828125,
+        328.755126953125,
+        577.0484619140625
+      ],
+      "text_sha256": "5e468ff111d18a37b6c7576465a60ca2a10273ec518e03a7da1be3689032cbb5"
+    },
+    {
+      "block_id": "page-0638-block-0042",
+      "order": 42,
+      "text": "■\n■during medication reviews with people living with dementia.\n",
+      "bbox": [
+        61.999900817871094,
+        579.3409423828125,
+        263.72247314453125,
+        588.0484619140625
+      ],
+      "text_sha256": "e1e242be72fe0c87d9962317f79b008ccce72cd3d65cbeebddc19c894278f717"
+    },
+    {
+      "block_id": "page-0638-block-0043",
+      "order": 43,
+      "text": "■\n■Be aware that there are validated tools for assessing anticholinergic burden but there is insufficient evidence to \n",
+      "bbox": [
+        52.499900817871094,
+        590.3409423828125,
+        416.4775085449219,
+        599.0484619140625
+      ],
+      "text_sha256": "626878d6f9fbd13b8dbe75650050200f9479e548661748c318e1ae644c2d78fc"
+    },
+    {
+      "block_id": "page-0638-block-0044",
+      "order": 44,
+      "text": "recommend one over the others (see section ‘Safer prescribing for physical health conditions in dementia’).\n",
+      "bbox": [
+        61.0,
+        599.3409423828125,
+        402.0251159667969,
+        608.0484619140625
+      ],
+      "text_sha256": "7ff8d3955f75d02584e887e184f3359890b3c63e0e18266a65f7c74a72bcd3ae"
+    },
+    {
+      "block_id": "page-0638-block-0045",
+      "order": 45,
+      "text": "■\n■For guidance on carrying out medication reviews, see medication review in the NICE guideline on medicines \n",
+      "bbox": [
+        52.499900817871094,
+        610.3409423828125,
+        406.60760498046875,
+        619.0484619140625
+      ],
+      "text_sha256": "8b463eeb87b10875a98191b44e68e8c93078ee10cf52460e8b7047755b39743f"
+    },
+    {
+      "block_id": "page-0638-block-0046",
+      "order": 46,
+      "text": "optimisation.\nNB: The Anticholinergic Effect on Cognition (AEC) scale can be accessed at www.medichec.com\n",
+      "bbox": [
+        52.502498626708984,
+        619.3409423828125,
+        358.66748046875,
+        639.051025390625
+      ],
+      "text_sha256": "3ec5b83c0f8ca094b3645045d5932be4f83b6d8f7af9de0842a62031ffa094f7"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

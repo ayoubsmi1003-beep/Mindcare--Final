@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0444",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 444,
+  "source_page_index": 443,
+  "source_page_display": 444,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    423\nCHAPTER 3\nAnxiety spectrum disorders\nAnxiety disorders can occur in isolation, be co-morbid with other psychiatric disorders \n(particularly depression), be a consequence of physical illness such as thyrotoxicosis or be \ndrug-induced (e.g. by caffeine). Co-morbidity with other psychiatric disorders is very \ncommon.\nThese disorders tend to be chronic and treatment is often only partially successful. \nPeople with anxiety disorders may be especially prone to adverse effects.1 High initial \ndoses of SSRIs in particular may be poorly tolerated, for example.\nBenzodiazepines\nBenzodiazepines provide rapid symptomatic relief from acute anxiety states.2 All guide-\nlines and consensus statements recommend that this group of drugs should be used only \nto treat anxiety that is severe, disabling, or subjecting the individual to extreme distress. \nBecause of their potential to cause physical dependence and withdrawal symptoms, \nthese drugs should be used at the lowest effective dose for the shortest period of time \n(maximum 4 weeks), while longer-term treatment strategies are put in place and with \ncaution in patients with substance misuse. For the majority of patients these recom-\nmendations are sensible and should be followed. A very small number of patients with \nseverely disabling anxiety may benefit from long-term treatment with a benzodiazepine, \nand these patients should not be denied treatment. Benzodiazepines are, however, \nknown to be over-prescribed in the long-term for both treatment of anxiety3 and depres-\nsion,4 perhaps especially in the United States where attitudes to benzodiazepines differ \nmarkedly from other developed countries.5\nNICE recommends that benzodiazepines should not be used to treat panic disorder.6 \nIn other countries, alprazolam is widely used for this indication. Benzodiazepines \nshould be used with extreme care in post-traumatic stress disorder (PTSD).7\nSSRIs/SNRIs\nWhen used to treat Generalised Anxiety Disorder (GAD), SSRIs should initially be pre-\nscribed at half the normal starting dose and titrated to the normal antidepressant dos-\nage range as tolerated (initial worsening of anxiety may be seen when treatment is \nstarted8). The same advice applies to the use of venlafaxine and duloxetine. Modest \nbenefit is usually seen within 6 weeks and continues to increase over time.9 The optimal \nduration of treatment has not been determined but should be at least one year.10,11 \nEffective treatment of GAD may prevent the development of major depression.10\nAn early network meta-analysis suggests fluoxetine is the most effective SSRI in GAD \nand sertraline the best tolerated.12 More recent analyses suggest that bupropion13 or \nagomelatine14 is the most effective drug in GAD. Neither analysis found clear effects \nover placebo for lorazepam or vortioxetine.\nWhen used to treat panic disorder, the same starting dose and dosage titration as in \nGAD should be used. Doses of clomipramine,15 citalopram16 and sertraline17 towards \nthe bottom of the antidepressant range give the best balance between efficacy and side-\neffects, whereas higher doses of paroxetine (40mg and above) may be required.18 Higher \ndoses of all drugs may be effective when standard doses have failed – efficacy of SSRIs \n(but not SNRIs) increases across the licensed dose range in anxiety disorders.19 Onset \n",
+  "raw_text_sha256": "788111113d8003967c7e3adb2cb11bccab7ac047220a60f50e7f1d13430dd28a",
+  "coordinates_sha256": "6cb53724c27cea613421e88c644062d970ed2455f7a926d5be21926c2668be27",
+  "block_sequence_sha256": "54a6779f16890b7bee226be81d1047882929ca4c9c9acff19e36eccdbd66a02a",
+  "blocks": [
+    {
+      "block_id": "page-0444-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    423\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "b514a30120378a65d3c3cf22077c0e0dee9544bca5fe5305fd5fc73e951c7c49"
+    },
+    {
+      "block_id": "page-0444-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0444-block-0002",
+      "order": 2,
+      "text": "Anxiety spectrum disorders\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        196.5919952392578,
+        79.1004638671875
+      ],
+      "text_sha256": "413810cdf78ca8a513b1cd781a4b749376c94327f1e872693683e362e9f6b34e"
+    },
+    {
+      "block_id": "page-0444-block-0003",
+      "order": 3,
+      "text": "Anxiety disorders can occur in isolation, be co-morbid with other psychiatric disorders \n(particularly depression), be a consequence of physical illness such as thyrotoxicosis or be \ndrug-induced (e.g. by caffeine). Co-morbidity with other psychiatric disorders is very \ncommon.\n",
+      "bbox": [
+        48.0,
+        84.91046142578125,
+        422.77984619140625,
+        132.63046264648438
+      ],
+      "text_sha256": "663755c058526cae94ca9a59dc10b79ed5959f9d257c3bc40a5649ed79b326bf"
+    },
+    {
+      "block_id": "page-0444-block-0004",
+      "order": 4,
+      "text": "These disorders tend to be chronic and treatment is often only partially successful. \nPeople with anxiety disorders may be especially prone to adverse effects.1 High initial \ndoses of SSRIs in particular may be poorly tolerated, for example.\n",
+      "bbox": [
+        48.0,
+        132.91046142578125,
+        422.82000732421875,
+        168.63046264648438
+      ],
+      "text_sha256": "6b84aaee368febbc3911eb821ea3cea43f56028365131ee0adcbde5ab60098e1"
+    },
+    {
+      "block_id": "page-0444-block-0005",
+      "order": 5,
+      "text": "Benzodiazepines\n",
+      "bbox": [
+        48.0,
+        186.06549072265625,
+        134.7899932861328,
+        199.10049438476562
+      ],
+      "text_sha256": "b2415b7ae654663c88764302a51bd5b9c4cc200adbc533f41662bd096b532f6c"
+    },
+    {
+      "block_id": "page-0444-block-0006",
+      "order": 6,
+      "text": "Benzodiazepines provide rapid symptomatic relief from acute anxiety states.2 All guide-\nlines and consensus statements recommend that this group of drugs should be used only \nto treat anxiety that is severe, disabling, or subjecting the individual to extreme distress. \nBecause of their potential to cause physical dependence and withdrawal symptoms, \nthese drugs should be used at the lowest effective dose for the shortest period of time \n(maximum 4 weeks), while longer-term treatment strategies are put in place and with \ncaution in patients with substance misuse. For the majority of patients these recom-\nmendations are sensible and should be followed. A very small number of patients with \nseverely disabling anxiety may benefit from long-term treatment with a benzodiazepine, \nand these patients should not be denied treatment. Benzodiazepines are, however, \nknown to be over-prescribed in the long-term for both treatment of anxiety3 and depres-\nsion,4 perhaps especially in the United States where attitudes to benzodiazepines differ \nmarkedly from other developed countries.5\n",
+      "bbox": [
+        47.99798583984375,
+        204.91049194335938,
+        422.81787109375,
+        360.6304931640625
+      ],
+      "text_sha256": "2ae9ceb9345f2559517ad076e6c9649acb31d50a7fd61c86297d9ea571e026ce"
+    },
+    {
+      "block_id": "page-0444-block-0007",
+      "order": 7,
+      "text": "NICE recommends that benzodiazepines should not be used to treat panic disorder.6 \nIn other countries, alprazolam is widely used for this indication. Benzodiazepines \nshould be used with extreme care in post-traumatic stress disorder (PTSD).7\n",
+      "bbox": [
+        48.000396728515625,
+        360.9104919433594,
+        422.7803955078125,
+        396.6304931640625
+      ],
+      "text_sha256": "b37f14ab89a9be79ec9f4045b04bc52201731ab0be6d7c33c970bda7ff21d498"
+    },
+    {
+      "block_id": "page-0444-block-0008",
+      "order": 8,
+      "text": "SSRIs/SNRIs\n",
+      "bbox": [
+        48.0,
+        414.06549072265625,
+        107.89500427246094,
+        427.1004943847656
+      ],
+      "text_sha256": "0eec7be695a5ee8636f3688fd2fb58f924427d638353ba8727255306a8d35589"
+    },
+    {
+      "block_id": "page-0444-block-0009",
+      "order": 9,
+      "text": "When used to treat Generalised Anxiety Disorder (GAD), SSRIs should initially be pre-\nscribed at half the normal starting dose and titrated to the normal antidepressant dos-\nage range as tolerated (initial worsening of anxiety may be seen when treatment is \nstarted8). The same advice applies to the use of venlafaxine and duloxetine. Modest \nbenefit is usually seen within 6 weeks and continues to increase over time.9 The optimal \nduration of treatment has not been determined but should be at least one year.10,11 \nEffective treatment of GAD may prevent the development of major depression.10\n",
+      "bbox": [
+        47.99609375,
+        432.6705017089844,
+        422.78607177734375,
+        516.6304931640625
+      ],
+      "text_sha256": "2c9b504c9e0222c104af7043b870c143fe5d00ff2a0d4b2914ab5011344e9011"
+    },
+    {
+      "block_id": "page-0444-block-0010",
+      "order": 10,
+      "text": "An early network meta-analysis suggests fluoxetine is the most effective SSRI in GAD \nand sertraline the best tolerated.12 More recent analyses suggest that bupropion13 or \nagomelatine14 is the most effective drug in GAD. Neither analysis found clear effects \nover placebo for lorazepam or vortioxetine.\n",
+      "bbox": [
+        48.0,
+        516.9104614257812,
+        422.7816162109375,
+        564.6304931640625
+      ],
+      "text_sha256": "769c196dd4dc53d1eb6259029e254c2a60be884ea2b7e26b503f103140b91d73"
+    },
+    {
+      "block_id": "page-0444-block-0011",
+      "order": 11,
+      "text": "When used to treat panic disorder, the same starting dose and dosage titration as in \nGAD should be used. Doses of clomipramine,15 citalopram16 and sertraline17 towards \nthe bottom of the antidepressant range give the best balance between efficacy and side-\neffects, whereas higher doses of paroxetine (40mg and above) may be required.18 Higher \ndoses of all drugs may be effective when standard doses have failed – efficacy of SSRIs \n(but not SNRIs) increases across the licensed dose range in anxiety disorders.19 Onset \n",
+      "bbox": [
+        48.0006103515625,
+        564.6704711914062,
+        422.7842102050781,
+        636.6304931640625
+      ],
+      "text_sha256": "521a498e9bb176031e43ff4cc649fac3dfb2348b2dcf8f7a256b73074b0bd1d5"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0485",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 485,
+  "source_page_index": 484,
+  "source_page_display": 485,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "464    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nNaltrexone is well tolerated but side effects include nausea (especially in the early \nstages of treatment), headache, abdominal pain, reduced appetite and tiredness. A \ncomprehensive medical assessment should be carried out prior to commencing nal-\ntrexone, together with baseline renal function tests and LFTs. Naltrexone can be \nstarted when patients are still drinking or during medically assisted withdrawal. \nThere is no clear evidence as to the optimal duration of treatment but 6 months \nappears to be an appropriate period with follow up, including monitoring liver \nfunction.9\nPatients on naltrexone should not be given opioid agonist drugs for analgesia: non-\nopioid analgesics should be used instead. In the event that opioid analgesia is necessary, \nit can be instituted 48–72 hours after cessation of naltrexone. Hepatotoxicity has been \ndescribed with high doses of naltrexone, so use should be avoided in acute liver \nfailure.23\nNaltrexone: NICE Clinical Guideline 115, 20112,22\nNaltrexone [50mg/day] should be offered for relapse prevention in moderately to severely \ndependent drinkers, in combination with psychosocial treatment. It should be prescribed for up to \n6 months, or longer for those who perceive benefit and wish to continue taking it. Treatment \nshould be stopped in those who continue to drink for 4–6 weeks after starting the drug or in \nthose who feel unwell while taking it.\nLong-acting injectable naltrexone has been developed to improve compliance. Side \neffects are similar to those seen with the oral preparation.24 NICE concluded that the \ninitial evidence was encouraging but not enough to support routine use.\nNalmefene\nNalmefene is also an opioid antagonist, recommended by NICE as an option for reduc-\ning alcohol consumption, for people with alcohol dependence.2,22 It has been shown in \none indirect meta-analysis to be superior to naltrexone in reducing heavy drinking.25 \nHowever, use of nalmefene remains controversial, with another meta-analysis sug-\ngested that nalmefene had only limited efficacy in reducing alcohol consumption and \nthat its value in treating alcohol addiction and relapse prevention is not fully \nestablished.26\nDisulfiram (antabuse)\nDisulfiram inhibits the enzyme aldehyde dehydrogenase, thus preventing complete \nmetabolism of alcohol in the liver. This results in an accumulation of the toxic interme-\ndiate product acetaldehyde, which causes the alcohol–disulfiram reaction.\n",
+  "raw_text_sha256": "2b808d9bb76ba6b502b889129d6d434796a30b062da72b3631d9ccbde4371254",
+  "coordinates_sha256": "4bbf79c9f929b5ba91ee9f82526240fda063e079d6df543c6cd2cb753ed0411c",
+  "block_sequence_sha256": "a85e6a28fb65f8928154494df14d4b553e823e886e468b4084dd594f0e78717e",
+  "blocks": [
+    {
+      "block_id": "page-0485-block-0000",
+      "order": 0,
+      "text": "464    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "addb00f93dee538608437e34d03b29ebb365c7bdf473249add9dcd9ff588e0ba"
+    },
+    {
+      "block_id": "page-0485-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0485-block-0002",
+      "order": 2,
+      "text": "Naltrexone is well tolerated but side effects include nausea (especially in the early \nstages of treatment), headache, abdominal pain, reduced appetite and tiredness. A \ncomprehensive medical assessment should be carried out prior to commencing nal-\ntrexone, together with baseline renal function tests and LFTs. Naltrexone can be \nstarted when patients are still drinking or during medically assisted withdrawal. \nThere is no clear evidence as to the optimal duration of treatment but 6 months \nappears to be an appropriate period with follow up, including monitoring liver \nfunction.9\n",
+      "bbox": [
+        61.889801025390625,
+        62.55029296875,
+        436.70965576171875,
+        158.27029418945312
+      ],
+      "text_sha256": "3a15be894f1fb0242310354181f8fea3a5b1f22a301cea06ea1c934ad1949454"
+    },
+    {
+      "block_id": "page-0485-block-0003",
+      "order": 3,
+      "text": "Patients on naltrexone should not be given opioid agonist drugs for analgesia: non-\nopioid analgesics should be used instead. In the event that opioid analgesia is necessary, \nit can be instituted 48–72 hours after cessation of naltrexone. Hepatotoxicity has been \ndescribed with high doses of naltrexone, so use should be avoided in acute liver \nfailure.23\n",
+      "bbox": [
+        61.889801025390625,
+        158.55029296875,
+        436.7196960449219,
+        218.27029418945312
+      ],
+      "text_sha256": "a258e062a455306e3236261c85b5f70e56b39dfdea1f751b56f37b31aaf3dbc3"
+    },
+    {
+      "block_id": "page-0485-block-0004",
+      "order": 4,
+      "text": "Naltrexone: NICE Clinical Guideline 115, 20112,22\n",
+      "bbox": [
+        68.88999938964844,
+        244.22959899902344,
+        257.4232177734375,
+        254.30209350585938
+      ],
+      "text_sha256": "59fa5522ba20748cee9fa80128dd9941193f944793e14a9d09d63db297f06eb3"
+    },
+    {
+      "block_id": "page-0485-block-0005",
+      "order": 5,
+      "text": "Naltrexone [50mg/day] should be offered for relapse prevention in moderately to severely \ndependent drinkers, in combination with psychosocial treatment. It should be prescribed for up to \n6 months, or longer for those who perceive benefit and wish to continue taking it. Treatment \nshould be stopped in those who continue to drink for 4–6 weeks after starting the drug or in \nthose who feel unwell while taking it.\n",
+      "bbox": [
+        68.88999938964844,
+        263.75860595703125,
+        425.6522216796875,
+        313.6111145019531
+      ],
+      "text_sha256": "0ac39e4bff0f0db3a9277e887a91a7c83eed58b1b7527d11d38b5e69d22bf27f"
+    },
+    {
+      "block_id": "page-0485-block-0006",
+      "order": 6,
+      "text": "Long-acting injectable naltrexone has been developed to improve compliance. Side \neffects are similar to those seen with the oral preparation.24 NICE concluded that the \ninitial evidence was encouraging but not enough to support routine use.\n",
+      "bbox": [
+        61.88999938964844,
+        339.7139892578125,
+        436.6738586425781,
+        375.4339904785156
+      ],
+      "text_sha256": "841b10a3486b290837bf99fb1aea11f0e45d06bcfeb19fd4f54f28ec4a5949a0"
+    },
+    {
+      "block_id": "page-0485-block-0007",
+      "order": 7,
+      "text": "Nalmefene\n",
+      "bbox": [
+        61.893890380859375,
+        393.8039855957031,
+        113.02388000488281,
+        405.65399169921875
+      ],
+      "text_sha256": "19b1cc2ae28635b9bb232a4701eb4e728384cb6a3bcf5740c907246e4ae11c1b"
+    },
+    {
+      "block_id": "page-0485-block-0008",
+      "order": 8,
+      "text": "Nalmefene is also an opioid antagonist, recommended by NICE as an option for reduc-\ning alcohol consumption, for people with alcohol dependence.2,22 It has been shown in \none indirect meta-analysis to be superior to naltrexone in reducing heavy drinking.25 \nHowever, use of nalmefene remains controversial, with another meta-analysis sug-\ngested that nalmefene had only limited efficacy in reducing alcohol consumption and \nthat its value in treating alcohol addiction and relapse prevention is not fully \nestablished.26\n",
+      "bbox": [
+        61.889801025390625,
+        411.7139892578125,
+        436.6796569824219,
+        495.4339904785156
+      ],
+      "text_sha256": "14f3224b975079bd16db2ae2bada016c2f5de77b31317827798692e0cb82b3ca"
+    },
+    {
+      "block_id": "page-0485-block-0009",
+      "order": 9,
+      "text": "Disulfiram (antabuse)\n",
+      "bbox": [
+        61.88999938964844,
+        513.8040161132812,
+        163.00999450683594,
+        525.6539916992188
+      ],
+      "text_sha256": "f49fbef5a337abad68bd2e053f049019593f2d594b70cb7d978950aea245f927"
+    },
+    {
+      "block_id": "page-0485-block-0010",
+      "order": 10,
+      "text": "Disulfiram inhibits the enzyme aldehyde dehydrogenase, thus preventing complete \nmetabolism of alcohol in the liver. This results in an accumulation of the toxic interme-\ndiate product acetaldehyde, which causes the alcohol–disulfiram reaction.\n",
+      "bbox": [
+        61.88999938964844,
+        531.7139892578125,
+        436.6899719238281,
+        567.4340209960938
+      ],
+      "text_sha256": "12e1e657c9b5d20bab97059b26f616751dbc8e9c6b8c10c47953756ee304a441"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

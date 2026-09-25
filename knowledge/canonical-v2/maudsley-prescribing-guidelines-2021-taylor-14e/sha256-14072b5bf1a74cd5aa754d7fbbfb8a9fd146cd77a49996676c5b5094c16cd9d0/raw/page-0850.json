@@ -1,0 +1,287 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0850",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 850,
+  "source_page_index": 849,
+  "source_page_display": 850,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    829\nCHAPTER 10\nPrescribing in patients with psychiatric illness at the end of life\nGenerally, prescribing in patients with psychiatric illness who are approaching end of \nlife should follow the principles of good prescribing practice in palliative care.1 This \nincludes reviewing the appropriateness of a drug, its dose and potential for its discon-\ntinuation. Furthermore, if swallowing becomes impaired, it includes making adjust-\nments, such as the use of liquid preparations or parenteral administration.\nThere is a lack of specific guidance around long-term psychiatric medications in this \nsetting to support clinicians. This adds to reluctance, particularly by generalists, to \nadjust or stop such drugs.2,3 This suggests there is scope for improved liaison between \nnon-psychiatry and psychiatry services.\nPhysical deterioration may impact on factors (e.g. reducing smoking, drinking less \nfluid) which in turn alter a drug’s pharmacokinetics and/or pharmacodynamics, making \nongoing review important. Furthermore, polypharmacy is common, increasing the risk \nof drug–drug interaction and toxicity, for example, tramadol and SSRI antidepressants \nleading to serotonin toxicity.\nDepression is common4 but often not recognised at the end of life.5 This is important, \ngiven that antidepressants may be beneficial even when prognosis is short.6 Mirtazapine \nand citalopram are most strongly supported for use in this population.7 Psychostimulants \nsuch as modafinil may reduce symptoms of depression in the short term, but there is \nless evidence for sustained effectiveness.8\nThere is a lack of evidence to guide drug management of anxiety at the end of life.9,10 \nNon-drug approaches have a stronger evidence base for effectiveness.11\nThough commonly used for management of delirium, evidence of effectiveness of \nantipsychotics is mixed. Nonetheless, national guidelines support their use for very \ndistressed patients or those for whom other approaches have been unsuccessful.12\nTable 10.14  Examples of drugs prescribed in psychiatry which are also used for symptom management in \npalliative care1\nSymptom\nExample drugs\nNeuropathic pain\nAmitriptyline\nImipramine\nDuloxetine\nGabapentin/pregabalin\nClonazepam\nNausea and vomiting\nHaloperidol\nOlanzapine\nLorazepam\nAnorexia\nMirtazapine\nSkeletal muscle spasm\nDiazepam\n(Continued)\n",
+  "raw_text_sha256": "b40f84e6140c4b0cec5179fee1738335278686f675e3086bc56ef653da54a742",
+  "coordinates_sha256": "7dd3f53969c08f30e24258d74e03f9d7ccc6a712e263effb0ce5a2760ab55bfa",
+  "block_sequence_sha256": "152eb53ff4564dbf850d3e087e38075cc2498b2e9001dd3732ae686318e2def6",
+  "blocks": [
+    {
+      "block_id": "page-0850-block-0000",
+      "order": 0,
+      "text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    829\n",
+      "bbox": [
+        47.999698638916016,
+        31.395221710205078,
+        419.96697998046875,
+        41.0272216796875
+      ],
+      "text_sha256": "92f060a7486d0165cbabb2410b1af5e6ff2e1795b0dbcb7a48bc15704499c557"
+    },
+    {
+      "block_id": "page-0850-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        454.4096984863281,
+        75.763671875,
+        463.88970947265625,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0850-block-0002",
+      "order": 2,
+      "text": "Prescribing in patients with psychiatric illness at the end of life\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        379.3681640625,
+        79.1004638671875
+      ],
+      "text_sha256": "e5e4db694092aec3f41dcb4a23bb3dab58f4e5045e3b7f05ac91c9466674c8c9"
+    },
+    {
+      "block_id": "page-0850-block-0003",
+      "order": 3,
+      "text": "Generally, prescribing in patients with psychiatric illness who are approaching end of \nlife should follow the principles of good prescribing practice in palliative care.1 This \nincludes reviewing the appropriateness of a drug, its dose and potential for its discon-\ntinuation. Furthermore, if swallowing becomes impaired, it includes making adjust-\nments, such as the use of liquid preparations or parenteral administration.\n",
+      "bbox": [
+        48.0,
+        84.91046142578125,
+        422.7821044921875,
+        144.63046264648438
+      ],
+      "text_sha256": "31bae951b665be01b2ad3c46b09d2ebb0e050b1167b8dc752c5c037a1f768c85"
+    },
+    {
+      "block_id": "page-0850-block-0004",
+      "order": 4,
+      "text": "There is a lack of specific guidance around long-term psychiatric medications in this \nsetting to support clinicians. This adds to reluctance, particularly by generalists, to \nadjust or stop such drugs.2,3 This suggests there is scope for improved liaison between \nnon-psychiatry and psychiatry services.\n",
+      "bbox": [
+        48.0020751953125,
+        144.91046142578125,
+        422.8020935058594,
+        192.63046264648438
+      ],
+      "text_sha256": "ef0fbecf63df8fb913d189a6e181e3f369cdc969afb8dac31c7df16307261e62"
+    },
+    {
+      "block_id": "page-0850-block-0005",
+      "order": 5,
+      "text": "Physical deterioration may impact on factors (e.g. reducing smoking, drinking less \nfluid) which in turn alter a drug’s pharmacokinetics and/or pharmacodynamics, making \nongoing review important. Furthermore, polypharmacy is common, increasing the risk \nof drug–drug interaction and toxicity, for example, tramadol and SSRI antidepressants \nleading to serotonin toxicity.\n",
+      "bbox": [
+        48.002197265625,
+        192.91046142578125,
+        422.78228759765625,
+        252.63046264648438
+      ],
+      "text_sha256": "97238ff20afa0a8bf7691cd5ffa39dd39184524f60e305d5c10f761b560ad088"
+    },
+    {
+      "block_id": "page-0850-block-0006",
+      "order": 6,
+      "text": "Depression is common4 but often not recognised at the end of life.5 This is important, \ngiven that antidepressants may be beneficial even when prognosis is short.6 Mirtazapine \nand citalopram are most strongly supported for use in this population.7 Psychostimulants \nsuch as modafinil may reduce symptoms of depression in the short term, but there is \nless evidence for sustained effectiveness.8\n",
+      "bbox": [
+        47.998504638671875,
+        252.91046142578125,
+        422.78338623046875,
+        312.6304931640625
+      ],
+      "text_sha256": "29409a6e940455a8dea63e6520871cd182beca1b02e882f41bac95f61fc4995e"
+    },
+    {
+      "block_id": "page-0850-block-0007",
+      "order": 7,
+      "text": "There is a lack of evidence to guide drug management of anxiety at the end of life.9,10 \nNon-drug approaches have a stronger evidence base for effectiveness.11\n",
+      "bbox": [
+        48.000396728515625,
+        312.9104919433594,
+        422.7803955078125,
+        336.6304931640625
+      ],
+      "text_sha256": "38e189c89f842c4696bb8769404c05d9bdd572720c59bbb6f9d52ebff767b5ac"
+    },
+    {
+      "block_id": "page-0850-block-0008",
+      "order": 8,
+      "text": "Though commonly used for management of delirium, evidence of effectiveness of \nantipsychotics is mixed. Nonetheless, national guidelines support their use for very \ndistressed patients or those for whom other approaches have been unsuccessful.12\n",
+      "bbox": [
+        48.0,
+        336.9104919433594,
+        422.7800598144531,
+        372.6304931640625
+      ],
+      "text_sha256": "86fbac2145e9082e27a411cea71eee4c8badb9e8495301b60b26b3e6732d99a6"
+    },
+    {
+      "block_id": "page-0850-block-0009",
+      "order": 9,
+      "text": "Table 10.14  Examples of drugs prescribed in psychiatry which are also used for symptom management in \npalliative care1\n",
+      "bbox": [
+        54.0,
+        397.3379821777344,
+        394.2075500488281,
+        416.2229919433594
+      ],
+      "text_sha256": "ce4f9cab1629bc52ac9687bd6130bfe8ec8d55a03cc90a26afa1af2a0f8fa85d"
+    },
+    {
+      "block_id": "page-0850-block-0010",
+      "order": 10,
+      "text": "Symptom\nExample drugs\n",
+      "bbox": [
+        52.0,
+        426.0729675292969,
+        289.5924377441406,
+        434.9604797363281
+      ],
+      "text_sha256": "16ba157b717fe42e9562f1071d5c311e5e9a3436939a61da336a98da1ca225bb"
+    },
+    {
+      "block_id": "page-0850-block-0011",
+      "order": 11,
+      "text": "Neuropathic pain\nAmitriptyline\n",
+      "bbox": [
+        52.0,
+        443.87799072265625,
+        278.32000732421875,
+        452.5854797363281
+      ],
+      "text_sha256": "ad94a8d550fa77e7b72dc9013914b128fea3dc55ce29e23a62ab4d5f09e098a4"
+    },
+    {
+      "block_id": "page-0850-block-0012",
+      "order": 12,
+      "text": "Imipramine\n",
+      "bbox": [
+        237.49749755859375,
+        456.87548828125,
+        273.32501220703125,
+        465.5829772949219
+      ],
+      "text_sha256": "d5fdbd98e0cf5dea554e2dd25dd2ee0d6a80945247038f553bd1a6fb66eac69d"
+    },
+    {
+      "block_id": "page-0850-block-0013",
+      "order": 13,
+      "text": "Duloxetine\n",
+      "bbox": [
+        237.49749755859375,
+        469.87298583984375,
+        271.6675109863281,
+        478.5804748535156
+      ],
+      "text_sha256": "fd3812c1a879387912f79ffdf5a1203f1420234837147afb509d5a67116fd857"
+    },
+    {
+      "block_id": "page-0850-block-0014",
+      "order": 14,
+      "text": "Gabapentin/pregabalin\n",
+      "bbox": [
+        237.49749755859375,
+        482.8704833984375,
+        310.71258544921875,
+        491.5779724121094
+      ],
+      "text_sha256": "f60d28df8da41e020be85b4182fb5243897edd89f9af595152b55084b9d824f2"
+    },
+    {
+      "block_id": "page-0850-block-0015",
+      "order": 15,
+      "text": "Clonazepam\n",
+      "bbox": [
+        237.49749755859375,
+        495.86798095703125,
+        277.50250244140625,
+        504.5754699707031
+      ],
+      "text_sha256": "e61723fa0dfb797859df19cb4b5b90f7e99cfa31cfedf03164a19809fe95ab28"
+    },
+    {
+      "block_id": "page-0850-block-0016",
+      "order": 16,
+      "text": "Nausea and vomiting\nHaloperidol\n",
+      "bbox": [
+        52.0,
+        513.492919921875,
+        274.17254638671875,
+        522.200439453125
+      ],
+      "text_sha256": "9c18480e9d741edb281112c6d5a0a1454af32518eb0d4ae427d05befe00c5015"
+    },
+    {
+      "block_id": "page-0850-block-0017",
+      "order": 17,
+      "text": "Olanzapine\n",
+      "bbox": [
+        237.49749755859375,
+        526.490478515625,
+        273.33251953125,
+        535.197998046875
+      ],
+      "text_sha256": "0d885341cd7a3b92c6209db4205eb93aa8d75701ae5100041f1fc34db3920e8f"
+    },
+    {
+      "block_id": "page-0850-block-0018",
+      "order": 18,
+      "text": "Lorazepam\n",
+      "bbox": [
+        237.49749755859375,
+        539.4879150390625,
+        272.4925231933594,
+        548.1954345703125
+      ],
+      "text_sha256": "94f9ef0039a8f65b3cc61dcbf7a237cde71587e39e07107ee0bc5487f867b382"
+    },
+    {
+      "block_id": "page-0850-block-0019",
+      "order": 19,
+      "text": "Anorexia\nMirtazapine\n",
+      "bbox": [
+        52.0,
+        557.1129150390625,
+        275.4100036621094,
+        565.8204345703125
+      ],
+      "text_sha256": "7db249ed7e16253d2ae861d7c6c039a135946071e080c23735d5a1b5179d4744"
+    },
+    {
+      "block_id": "page-0850-block-0020",
+      "order": 20,
+      "text": "Skeletal muscle spasm\nDiazepam\n",
+      "bbox": [
+        52.0,
+        574.7379150390625,
+        269.1625061035156,
+        583.4454345703125
+      ],
+      "text_sha256": "03a613f74a88a63680a1b0a6785e06e26d17a13a43a28e2e56c4768899f1aef4"
+    },
+    {
+      "block_id": "page-0850-block-0021",
+      "order": 21,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.97998046875,
+        593.3004760742188,
+        419.99493408203125,
+        602.052978515625
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

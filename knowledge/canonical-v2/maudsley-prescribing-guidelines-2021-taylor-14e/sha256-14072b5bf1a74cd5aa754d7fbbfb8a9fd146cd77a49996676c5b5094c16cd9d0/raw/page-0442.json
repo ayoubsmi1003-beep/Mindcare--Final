@@ -1,0 +1,467 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0442",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 442,
+  "source_page_index": 441,
+  "source_page_display": 442,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    421\nCHAPTER 3\nAntidepressants: relative adverse effects – a rough guide\nTable 3.26 gives a very approximate, unreferenced view of the absolute and relative risk \nof a small range of adverse effects associated with standard antidepressants.\nTable 3.26  Common adverse effects of antidepressants\nDrug\nSedation\nPostural \nhypotension§\nCardiac \nconduction \ndisturbance§\nAnticholinergic \neffects\nNausea/\nVomiting\nSexual \ndysfunction§\nTricyclics\nAmitriptyline\n+++\n+++\n+++\n+++\n+\n+++\nClomipramine\n++\n+++\n+++\n++\n++\n+++\nDosulepin\n+++\n+++\n+++\n++\n+\n+\nDoxepin\n+++\n++\n+++\n+++\n+\n+\nImipramine\n++\n+++\n+++\n+++\n+\n+\nLofepramine\n+\n+\n+\n++\n+\n+\nNortriptyline\n+\n++\n++\n+\n+\n+\nTrimipramine\n+++\n+++\n++\n++\n+\n+\nOther \nantidepressants\nAgomelatine\n+\n–\n–\n–\n–\n–\nDuloxetine (SNRI)\n–\n–*\n–\n–\n++\n++\nLevomilnacipran \n(SNRI)\n–\n–*\n–\n–\n++\n++\nMianserin\n++\n–\n–\n–\n–\n–\nMirtazapine\n+++\n+\n–\n+\n+\n–\nReboxetine\n+\n–*\n–\n+\n+\n+\nTrazodone\n+++\n+\n+\n+\n+\n+\nVenlafaxine (SNRI)\n–\n–*\n+\n–\n+++\n+++\nSelective \nserotonin \nreuptake \ninhibitors (SSRIs)\nCitalopram\n–\n–\n+\n–\n++\n+++\nEscitalopram\n–\n–\n+\n–\n++\n+++\nFluoxetine\n–\n–\n–\n–\n++\n+++\nFluvoxamine\n+\n–\n–\n–\n+++\n+++\nParoxetine\n+\n–\n–\n+\n++\n+++\n(Continued)\n",
+  "raw_text_sha256": "46228ba5ef7c686b6f9798f4d367e2dfa6818e9cfc47557c7fceeda30d8a42f0",
+  "coordinates_sha256": "7bd38e8fde6de7ee60632daea85acef4bd318ed9b329426ab0b7913cb35d4141",
+  "block_sequence_sha256": "720459e5594cbaccd9e484bd365cc5bf6395c29568672260c65d9bf6c6d36510",
+  "blocks": [
+    {
+      "block_id": "page-0442-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    421\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "d9f4a170a85c83e41650a5e9e9b437e85f43d9948460f4b5a4fda420f14d564e"
+    },
+    {
+      "block_id": "page-0442-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0442-block-0002",
+      "order": 2,
+      "text": "Antidepressants: relative adverse effects – a rough guide\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        348.8321228027344,
+        79.1004638671875
+      ],
+      "text_sha256": "80138291f99d1a29b68642838134ccb898a6bb8e76456115124e66f4dd185dca"
+    },
+    {
+      "block_id": "page-0442-block-0003",
+      "order": 3,
+      "text": "Table 3.26 gives a very approximate, unreferenced view of the absolute and relative risk \nof a small range of adverse effects associated with standard antidepressants.\n",
+      "bbox": [
+        48.0,
+        84.91046142578125,
+        422.7799987792969,
+        108.63046264648438
+      ],
+      "text_sha256": "2ee9c1126265738d42a446dfb87054255729b02d8fbfb797e6861d02f8fd1425"
+    },
+    {
+      "block_id": "page-0442-block-0004",
+      "order": 4,
+      "text": "Table 3.26  Common adverse effects of antidepressants\n",
+      "bbox": [
+        54.0,
+        135.94459533691406,
+        232.5149688720703,
+        144.83209228515625
+      ],
+      "text_sha256": "cff4876703d4fcc9227fe55c9d89307d7edeb887ff0fc1ad16ad4dd65d9f9faa"
+    },
+    {
+      "block_id": "page-0442-block-0005",
+      "order": 5,
+      "text": "Drug\nSedation\n",
+      "bbox": [
+        48.0,
+        176.17958068847656,
+        152.760009765625,
+        185.06707763671875
+      ],
+      "text_sha256": "0dcba38f07dd9a8a8b2342001d068ddf1e08a141f10e1d44b5759380012c4fc8"
+    },
+    {
+      "block_id": "page-0442-block-0006",
+      "order": 6,
+      "text": "Postural \nhypotension§\n",
+      "bbox": [
+        160.5,
+        166.1820831298828,
+        207.09780883789062,
+        185.06707763671875
+      ],
+      "text_sha256": "a0abf9c958b18b1831dd19d3a948d9fd15f9d3d335f351ad56f4ef0063d55007"
+    },
+    {
+      "block_id": "page-0442-block-0007",
+      "order": 7,
+      "text": "Cardiac \nconduction \ndisturbance§\n",
+      "bbox": [
+        216.4998016357422,
+        156.17958068847656,
+        260.18023681640625,
+        185.06207275390625
+      ],
+      "text_sha256": "83754037557a3e727d6775503dea63512683ee1b86b0604f1b7234be43359e3b"
+    },
+    {
+      "block_id": "page-0442-block-0008",
+      "order": 8,
+      "text": "Anticholinergic \neffects\n",
+      "bbox": [
+        270.4997863769531,
+        166.17958068847656,
+        325.9172058105469,
+        185.0645751953125
+      ],
+      "text_sha256": "d4dacffb66fb35f5c69578c4127b0fbabc5c641f657f8b82ff4e4f987c0c8ffc"
+    },
+    {
+      "block_id": "page-0442-block-0009",
+      "order": 9,
+      "text": "Nausea/\nVomiting\n",
+      "bbox": [
+        330.4997863769531,
+        166.17958068847656,
+        362.5922546386719,
+        185.0645751953125
+      ],
+      "text_sha256": "b2aee2e678c470ed06f397a8ffc20832e57aedb530620a0e5a444903187c82d8"
+    },
+    {
+      "block_id": "page-0442-block-0010",
+      "order": 10,
+      "text": "Sexual \ndysfunction§\n",
+      "bbox": [
+        374.5022888183594,
+        166.17958068847656,
+        418.59271240234375,
+        185.0645751953125
+      ],
+      "text_sha256": "34b80b1dc252e4a8e40343f67f268dd3b013292aaef0da1b55389ecbf678435a"
+    },
+    {
+      "block_id": "page-0442-block-0011",
+      "order": 11,
+      "text": "Tricyclics\n",
+      "bbox": [
+        48.0,
+        192.95460510253906,
+        78.14250946044922,
+        201.84210205078125
+      ],
+      "text_sha256": "4d9037008f9abcb8895c6f1c1350b549402008e0fc54be375838a6cdb00bddfd"
+    },
+    {
+      "block_id": "page-0442-block-0012",
+      "order": 12,
+      "text": "Amitriptyline\n+++\n+++\n+++\n+++\n+\n+++\n",
+      "bbox": [
+        48.0,
+        208.15708923339844,
+        388.0050048828125,
+        216.86459350585938
+      ],
+      "text_sha256": "8c1f61ef735f67fcf39819e26a8da725149f7dd6fc5f7159ae00ee97e0ee687f"
+    },
+    {
+      "block_id": "page-0442-block-0013",
+      "order": 13,
+      "text": "Clomipramine\n++\n+++\n+++\n++\n++\n+++\n",
+      "bbox": [
+        48.00750732421875,
+        223.17958068847656,
+        388.01251220703125,
+        231.8870849609375
+      ],
+      "text_sha256": "0d63b9f87935ae732896bb9df43a7d785396f530ccba229f76b28bc64d6a18cf"
+    },
+    {
+      "block_id": "page-0442-block-0014",
+      "order": 14,
+      "text": "Dosulepin\n+++\n+++\n+++\n++\n+\n+\n",
+      "bbox": [
+        48.0150146484375,
+        238.2020721435547,
+        379.02001953125,
+        246.90957641601562
+      ],
+      "text_sha256": "36f97f8831a28565354e656742f72e9f0aa8b2d0710b4151a5f5994669332060"
+    },
+    {
+      "block_id": "page-0442-block-0015",
+      "order": 15,
+      "text": "Doxepin\n+++\n++\n+++\n+++\n+\n+\n",
+      "bbox": [
+        48.02252197265625,
+        253.2245635986328,
+        379.02752685546875,
+        261.93206787109375
+      ],
+      "text_sha256": "f72f9acbb0d5283ad2cb512cf1f78216580f74e2e9aaf45e14a9aa63a6ce50f0"
+    },
+    {
+      "block_id": "page-0442-block-0016",
+      "order": 16,
+      "text": "Imipramine\n++\n+++\n+++\n+++\n+\n+\n",
+      "bbox": [
+        48.030029296875,
+        268.2470703125,
+        379.0350341796875,
+        276.9545593261719
+      ],
+      "text_sha256": "2c3e3ffb16ecc211cb3b206ac5318070eed0737f1498036b381122d882b6c2c4"
+    },
+    {
+      "block_id": "page-0442-block-0017",
+      "order": 17,
+      "text": "Lofepramine\n+\n+\n+\n++\n+\n+\n",
+      "bbox": [
+        48.03753662109375,
+        283.2695617675781,
+        379.04254150390625,
+        291.97705078125
+      ],
+      "text_sha256": "c5645f438bc91fbf97aa549c696b5d50199aee887492a4481a40f538332d7791"
+    },
+    {
+      "block_id": "page-0442-block-0018",
+      "order": 18,
+      "text": "Nortriptyline\n+\n++\n++\n+\n+\n+\n",
+      "bbox": [
+        48.0450439453125,
+        298.29205322265625,
+        379.050048828125,
+        306.9995422363281
+      ],
+      "text_sha256": "ceca607575bc5c5404de707ae5bcdbdbf79287a50046376645ce1eaa1e22c16d"
+    },
+    {
+      "block_id": "page-0442-block-0019",
+      "order": 19,
+      "text": "Trimipramine\n+++\n+++\n++\n++\n+\n+\n",
+      "bbox": [
+        48.05255126953125,
+        313.3145446777344,
+        379.05755615234375,
+        322.02203369140625
+      ],
+      "text_sha256": "043bc78bc558a49797ac40184770f41eb4c5dc5dcd0e5c3ef1227ea9c2836922"
+    },
+    {
+      "block_id": "page-0442-block-0020",
+      "order": 20,
+      "text": "Other \nantidepressants\n",
+      "bbox": [
+        48.06005859375,
+        328.1570129394531,
+        103.76255798339844,
+        347.0420227050781
+      ],
+      "text_sha256": "4754043804b7c5dd5c42a70c7dc611acef7edd9f1ff88a206eef6145f30543b0"
+    },
+    {
+      "block_id": "page-0442-block-0021",
+      "order": 21,
+      "text": "Agomelatine\n+\n–\n–\n–\n–\n–\n",
+      "bbox": [
+        48.06005859375,
+        353.3570251464844,
+        378.3150634765625,
+        362.06451416015625
+      ],
+      "text_sha256": "e9f587aa4606e40136084f3f3ce688334a2f90e0b007e0f3a5e1b9cede691ed3"
+    },
+    {
+      "block_id": "page-0442-block-0022",
+      "order": 22,
+      "text": "Duloxetine (SNRI)\n–\n–*\n–\n–\n++\n++\n",
+      "bbox": [
+        48.06756591796875,
+        368.3795166015625,
+        383.57257080078125,
+        377.0870056152344
+      ],
+      "text_sha256": "a0b2060ec9494708042ec4c3a54a13475eea62847dbb21652601463d4f0b936c"
+    },
+    {
+      "block_id": "page-0442-block-0023",
+      "order": 23,
+      "text": "Levomilnacipran \n(SNRI)\n",
+      "bbox": [
+        48.0750732421875,
+        383.4020080566406,
+        101.82007598876953,
+        402.10699462890625
+      ],
+      "text_sha256": "ad450dfe9e83ba93c257d6120649dd797f05efb0ee923370488e877abf89e02e"
+    },
+    {
+      "block_id": "page-0442-block-0024",
+      "order": 24,
+      "text": "–\n–*\n–\n–\n++\n++\n",
+      "bbox": [
+        121.5750732421875,
+        383.4020080566406,
+        383.580078125,
+        392.1094970703125
+      ],
+      "text_sha256": "bdcc932df099a1ef1a149d70c3bb75c82a30f18f02d0394a49a1b0426645c3d2"
+    },
+    {
+      "block_id": "page-0442-block-0025",
+      "order": 25,
+      "text": "Mianserin\n++\n–\n–\n–\n–\n–\n",
+      "bbox": [
+        48.08258056640625,
+        408.42950439453125,
+        378.33758544921875,
+        417.1369934082031
+      ],
+      "text_sha256": "f0308ccd6887216da542adf842a72958db3d16b9e414fd4e1670d47c29cc9af1"
+    },
+    {
+      "block_id": "page-0442-block-0026",
+      "order": 26,
+      "text": "Mirtazapine\n+++\n+\n–\n+\n+\n–\n",
+      "bbox": [
+        48.090087890625,
+        423.4519958496094,
+        378.3450927734375,
+        432.15948486328125
+      ],
+      "text_sha256": "e26affb025750abb554ff0dcd978ffd8b6ffe2be4add9f7a8d3f748f27b74108"
+    },
+    {
+      "block_id": "page-0442-block-0027",
+      "order": 27,
+      "text": "Reboxetine\n+\n–*\n–\n+\n+\n+\n",
+      "bbox": [
+        48.09759521484375,
+        438.4745178222656,
+        379.10260009765625,
+        447.1820068359375
+      ],
+      "text_sha256": "bddb77596980cd62be542acd7629bb6c6455519a50a203b9cc42ce53fd34f043"
+    },
+    {
+      "block_id": "page-0442-block-0028",
+      "order": 28,
+      "text": "Trazodone\n+++\n+\n+\n+\n+\n+\n",
+      "bbox": [
+        48.1051025390625,
+        453.49700927734375,
+        379.110107421875,
+        462.2044982910156
+      ],
+      "text_sha256": "b8a6b1645424270d22dffa076a623951e78e8973d61cd2c7052f4d9799f4a139"
+    },
+    {
+      "block_id": "page-0442-block-0029",
+      "order": 29,
+      "text": "Venlafaxine (SNRI)\n–\n–*\n+\n–\n+++\n+++\n",
+      "bbox": [
+        48.11260986328125,
+        468.5195007324219,
+        388.11761474609375,
+        477.22698974609375
+      ],
+      "text_sha256": "b1b625a3123e6a68e98c7e27278da1dbf9ef73453a3288faaefd605864eac80d"
+    },
+    {
+      "block_id": "page-0442-block-0030",
+      "order": 30,
+      "text": "Selective \nserotonin \nreuptake \ninhibitors (SSRIs)\n",
+      "bbox": [
+        48.1201171875,
+        483.36199951171875,
+        107.28760528564453,
+        522.2420043945312
+      ],
+      "text_sha256": "7deed7c449172cb6210a3e7f2480f66c1d4fc9a77b8f0a1ad9c7bbb577a927bc"
+    },
+    {
+      "block_id": "page-0442-block-0031",
+      "order": 31,
+      "text": "Citalopram\n–\n–\n+\n–\n++\n+++\n",
+      "bbox": [
+        48.1201171875,
+        528.5570068359375,
+        388.1251220703125,
+        537.2645263671875
+      ],
+      "text_sha256": "85388490ab2e7ecfc1e39482ee1fee620231f984125970183158ffcf2e4aae69"
+    },
+    {
+      "block_id": "page-0442-block-0032",
+      "order": 32,
+      "text": "Escitalopram\n–\n–\n+\n–\n++\n+++\n",
+      "bbox": [
+        48.12762451171875,
+        543.5794677734375,
+        388.13262939453125,
+        552.2869873046875
+      ],
+      "text_sha256": "eda3a8f5dc4c3338fec90fa81f77b2da4b0889b47bd4eda2a0eba0dba93dca81"
+    },
+    {
+      "block_id": "page-0442-block-0033",
+      "order": 33,
+      "text": "Fluoxetine\n–\n–\n–\n–\n++\n+++\n",
+      "bbox": [
+        48.1351318359375,
+        558.6019897460938,
+        388.14013671875,
+        567.3095092773438
+      ],
+      "text_sha256": "0f837f188ecf53e8dd9a810f00334d3933b8d0d677683084faa155d9cf1993fb"
+    },
+    {
+      "block_id": "page-0442-block-0034",
+      "order": 34,
+      "text": "Fluvoxamine\n+\n–\n–\n–\n+++\n+++\n",
+      "bbox": [
+        48.14263916015625,
+        573.62451171875,
+        388.14764404296875,
+        582.33203125
+      ],
+      "text_sha256": "43c9711a5e71f3fce0c6a7d9e2cdc9247b88daf7985b499eb5aca0195e3e8150"
+    },
+    {
+      "block_id": "page-0442-block-0035",
+      "order": 35,
+      "text": "Paroxetine\n+\n–\n–\n+\n++\n+++\n",
+      "bbox": [
+        48.150146484375,
+        588.64697265625,
+        388.1551513671875,
+        597.3544921875
+      ],
+      "text_sha256": "214b80c32e51236fca5af3e6b68f7724a759cf240d7dba14feb4f33c277740fa"
+    },
+    {
+      "block_id": "page-0442-block-0036",
+      "order": 36,
+      "text": "(Continued)\n",
+      "bbox": [
+        384.14263916015625,
+        604.56201171875,
+        420.1575927734375,
+        613.3145141601562
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

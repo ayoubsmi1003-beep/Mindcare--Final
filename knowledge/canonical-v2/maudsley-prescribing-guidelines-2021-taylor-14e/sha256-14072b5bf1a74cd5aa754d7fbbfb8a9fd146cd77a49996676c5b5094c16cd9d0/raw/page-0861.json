@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0861",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 861,
+  "source_page_index": 860,
+  "source_page_display": 861,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "840    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  11\nhave major therapeutic effects and their concentrations are only loosely associated with \nparent drug levels.106\nMost current reports of quetiapine concentration associations are derived from anal-\nysis of trough samples. Because of the short half-life of quetiapine, trough levels tend to \ndrop to within a relatively small range regardless of dose and previous peak level. Thus \npeak plasma levels may be more closely related to dose and clinical response,97 although \nmonitoring of such is not currently justified in the absence of an established peak \nplasma target range. Interestingly, a study of quetiapine in patients with borderline \npersonality disorder or drug-induced psychosis showed a linear relationship between \nresponse and 12-hour plasma level.104 Peak to trough variation is greater for IR formu-\nlations (roughly a maximum of 4000µg/L to zero) than for slow release preparations \n(roughly a maximum of 3000µg/L to around 100µg/L).43\nQuetiapine has an established dose–response relationship, and appears to be well \ntolerated at doses well beyond the licensed dose range.107 In practice, dose adjustment \nshould be based on patient response and tolerability.\nRisperidone\nThe therapeutic range for risperidone is generally agreed to be 20–60µg/L of the active \nmoiety (risperidone  +  9-OH-risperidone)91,108,109 although other ranges (25–150µg/L \nand 25–80µg/L) have been proposed.110 Plasma levels of 20–60µg/L are usually afforded \nby oral doses of between 3mg and 6mg a day.108,111–113 Occupancy of striatal dopamine \nD2 receptors has been shown to be around 65% (the minimum required for acute thera-\npeutic effect) at plasma levels of approximately 20µg/L.109,114\nRisperidone long-acting injection (25mg/2 weeks) appears to afford plasma levels \naveraging between 4.4µg/L and 22.7µg/L.112 Dopamine D2 occupancies at this dose \nhave been variously estimated at between 25% and 71%.109,115,116 There is consider-\nable inter-individual variation around these mean values with a substantial minority \nof patients with plasma levels above those shown. Nonetheless, these data do cast \ndoubt on the efficacy of a dose of 25mg/2 weeks,112 although it is noteworthy that \nthere is some evidence that long-acting antipsychotic preparations are effective \ndespite apparently sub-therapeutic plasma levels and dopamine occupancies.117 \nIndeed, evidence continues to grow that sustained high dopamine occupancy is not \nnecessary to prevent recurrence in longer term treatment118–120 (as opposed to provid-\ning acute effects).\nDisturbingly, however, a report of assay results for patients receiving RLAI121 found \n50% of patients with levels below 20µg/L and for 10% no risperidone/9-hydroxyrisp-\neridone was detected. Thus therapeutic drug monitoring might be clinically helpful for \nthose on RLAI but this rather defeats the object of a long-acting injection.\nLimited data for paliperidone palmitate 1-monthly LAI suggest that standard loading \ndoses give plasma levels of 25–45µg/L; while at steady state, plasma levels ranged from \n10–25µg/L for 100mg/month to 15–35µg/L for 150mg/month.122 Plasma concentra-\ntions may gradually rise in the first year of treatment to around 35µg/L (mean dose \n138mg/month)123 and remain stable thereafter.124 For the 3-monthly injection, steady \nstate plasma concentrations range from 30–55µg/L for 525mg every 3 months, \n25–55µg/L for 350mg every 3 months and 20–35µg/L for 263mg every 3 months.125\n",
+  "raw_text_sha256": "9c44e46107d46fd5e1c5f1eb6619a3968a9064bde1e7c271f496eedd2d65d9b5",
+  "coordinates_sha256": "0ba407343fb701d6d5fd1e5e83064bf10db159ca2ebba02d4721d69d864cb0a7",
+  "block_sequence_sha256": "4873687a3c6d882dee89ad6a018d602868df1f0628d22b1c1a8b47d1820b637e",
+  "blocks": [
+    {
+      "block_id": "page-0861-block-0000",
+      "order": 0,
+      "text": "840    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "0b04bcd57333df41104ce1fbccf01a9d66114d01f374830eed6e5966522561c8"
+    },
+    {
+      "block_id": "page-0861-block-0001",
+      "order": 1,
+      "text": "CHAPTER  11\n",
+      "bbox": [
+        18.520000457763672,
+        139.8785400390625,
+        28.0,
+        187.89450073242188
+      ],
+      "text_sha256": "83984f4328940309c03288e26b8edf9834cfa8fef30d3eedac5a4c266fe9aee7"
+    },
+    {
+      "block_id": "page-0861-block-0002",
+      "order": 2,
+      "text": "have major therapeutic effects and their concentrations are only loosely associated with \nparent drug levels.106\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.64007568359375,
+        86.27029418945312
+      ],
+      "text_sha256": "127b4dd4325a3d57d32a15af25f670996ba28251e09f7771c3596de7b96cfcdd"
+    },
+    {
+      "block_id": "page-0861-block-0003",
+      "order": 3,
+      "text": "Most current reports of quetiapine concentration associations are derived from anal-\nysis of trough samples. Because of the short half-life of quetiapine, trough levels tend to \ndrop to within a relatively small range regardless of dose and previous peak level. Thus \npeak plasma levels may be more closely related to dose and clinical response,97 although \nmonitoring of such is not currently justified in the absence of an established peak \nplasma target range. Interestingly, a study of quetiapine in patients with borderline \npersonality disorder or drug-induced psychosis showed a linear relationship between \nresponse and 12-hour plasma level.104 Peak to trough variation is greater for IR formu-\nlations (roughly a maximum of 4000µg/L to zero) than for slow release preparations \n(roughly a maximum of 3000µg/L to around 100µg/L).43\n",
+      "bbox": [
+        61.88970947265625,
+        86.55029296875,
+        436.7015075683594,
+        206.27029418945312
+      ],
+      "text_sha256": "15c687cd9a0765bdd2cf0eff8f9342d17aef76ee1917d1044245e3aa01bfb3e6"
+    },
+    {
+      "block_id": "page-0861-block-0004",
+      "order": 4,
+      "text": "Quetiapine has an established dose–response relationship, and appears to be well \ntolerated at doses well beyond the licensed dose range.107 In practice, dose adjustment \nshould be based on patient response and tolerability.\n",
+      "bbox": [
+        61.888214111328125,
+        206.55029296875,
+        436.668212890625,
+        242.27029418945312
+      ],
+      "text_sha256": "4396fc10c1858ff7a7416e7e86ef6789a19dafa5c82fbcb7ce9b522367b0fe47"
+    },
+    {
+      "block_id": "page-0861-block-0005",
+      "order": 5,
+      "text": "Risperidone\n",
+      "bbox": [
+        61.88999938964844,
+        259.7052917480469,
+        123.00599670410156,
+        272.74029541015625
+      ],
+      "text_sha256": "a57deef574cb1285a2da93e7b14c7d8834b8dfb167369a3c9262f566493ff650"
+    },
+    {
+      "block_id": "page-0861-block-0006",
+      "order": 6,
+      "text": "The therapeutic range for risperidone is generally agreed to be 20–60µg/L of the active \nmoiety (risperidone  +  9-OH-risperidone)91,108,109 although other ranges (25–150µg/L \nand 25–80µg/L) have been proposed.110 Plasma levels of 20–60µg/L are usually afforded \nby oral doses of between 3mg and 6mg a day.108,111–113 Occupancy of striatal dopamine \nD2 receptors has been shown to be around 65% (the minimum required for acute thera-\npeutic effect) at plasma levels of approximately 20µg/L.109,114\n",
+      "bbox": [
+        61.88908386230469,
+        278.310302734375,
+        436.6790466308594,
+        350.2702941894531
+      ],
+      "text_sha256": "00265f577d00b884825d35c95e349ace5da1700ea35e5dc0c45999850aaa8fd9"
+    },
+    {
+      "block_id": "page-0861-block-0007",
+      "order": 7,
+      "text": "Risperidone long-acting injection (25mg/2 weeks) appears to afford plasma levels \naveraging between 4.4µg/L and 22.7µg/L.112 Dopamine D2 occupancies at this dose \nhave been variously estimated at between 25% and 71%.109,115,116 There is consider-\nable inter-individual variation around these mean values with a substantial minority \nof patients with plasma levels above those shown. Nonetheless, these data do cast \ndoubt on the efficacy of a dose of 25mg/2 weeks,112 although it is noteworthy that \nthere is some evidence that long-acting antipsychotic preparations are effective \ndespite apparently sub-therapeutic plasma levels and dopamine occupancies.117 \nIndeed, evidence continues to grow that sustained high dopamine occupancy is not \nnecessary to prevent recurrence in longer term treatment118–120 (as opposed to provid-\ning acute effects).\n",
+      "bbox": [
+        61.88999938964844,
+        350.55029296875,
+        436.711669921875,
+        482.2702941894531
+      ],
+      "text_sha256": "72f2e3004ee718b14fb6b73897fdcef82ceea0fb369f638a4c4f0253f3d9902e"
+    },
+    {
+      "block_id": "page-0861-block-0008",
+      "order": 8,
+      "text": "Disturbingly, however, a report of assay results for patients receiving RLAI121 found \n50% of patients with levels below 20µg/L and for 10% no risperidone/9-hydroxyrisp-\neridone was detected. Thus therapeutic drug monitoring might be clinically helpful for \nthose on RLAI but this rather defeats the object of a long-acting injection.\n",
+      "bbox": [
+        61.88751220703125,
+        482.55029296875,
+        436.66748046875,
+        530.2703247070312
+      ],
+      "text_sha256": "9695bee5f78fb94d5539c27ced4d1126f1947b5042608cdecf0014928f66f6f0"
+    },
+    {
+      "block_id": "page-0861-block-0009",
+      "order": 9,
+      "text": "Limited data for paliperidone palmitate 1-monthly LAI suggest that standard loading \ndoses give plasma levels of 25–45µg/L; while at steady state, plasma levels ranged from \n10–25µg/L for 100mg/month to 15–35µg/L for 150mg/month.122 Plasma concentra-\ntions may gradually rise in the first year of treatment to around 35µg/L (mean dose \n138mg/month)123 and remain stable thereafter.124 For the 3-monthly injection, steady \nstate plasma concentrations range from 30–55µg/L for 525mg every 3 months, \n25–55µg/L for 350mg every 3 months and 20–35µg/L for 263mg every 3 months.125\n",
+      "bbox": [
+        61.88751220703125,
+        530.55029296875,
+        436.7074890136719,
+        614.2703247070312
+      ],
+      "text_sha256": "5291b0b1451989ab8ba7f2df64ddf44d4f638d8b6315bc077b0f60658c952a3b"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

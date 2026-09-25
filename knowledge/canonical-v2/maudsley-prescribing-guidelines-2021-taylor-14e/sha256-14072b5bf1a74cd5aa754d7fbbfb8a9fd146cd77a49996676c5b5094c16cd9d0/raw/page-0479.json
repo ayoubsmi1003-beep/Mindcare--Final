@@ -1,0 +1,503 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0479",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 479,
+  "source_page_index": 478,
+  "source_page_display": 479,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "458    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nTable 4.3  Alcohol withdrawal treatment interventions – summary\nSeverity\nSupportive/\nmedical care\nPharmacotherapy for \nneuro-adaptation \nreversal\nThiamine \nsupplementation\nSetting\nMild\nCIWA-Ar ≤ 10\nModerate-to-high-\nlevel supportive \ncare, little, if any \nmedical care \nrequired\nLittle to none required\nSimple remedies only \n(see below)\nOral likely to be \nsufficient if patient is \nwell nourished\nHome\nModerate\nCIWA-Ar ≤ 15\nModerate-to-high-\nlevel supportive \ncare, little medical \ncare required\nLittle to none required\nSymptomatic treatment \nonly\nIntramuscular Pabrinex \nshould be offered if the \npatient is malnourished \nfollowed by oral \nsupplementation\nHome or \ncommunity \nteam\nSevere\nCIWA-Ar > 15\nHigh-level \nsupportive care \nplus medical \nmonitoring\nSymptomatic and \nsubstitution treatment \n(chlordiazepoxide) \nprobably required\nIntramuscular Pabrinex \nshould be offered \nfollowed by oral \nsupplementation\nCommunity \nteam or \nhospital\nCIWA-Ar > 10 plus \nco-morbid \nalcohol-related \nmedical problems\nHigh-level \nsupportive care \nplus specialist \nmedical care\nSymptomatic and \nsubstitution treatments \nusually required\nIntramuscular Pabrinex \nfollowed by oral \nsupplementation\nHospital\nBenzodiazepines are the treatment of choice for alcohol withdrawal. They exhibit \ncross-tolerance with alcohol and have anticonvulsant properties. Use is supported by \nNICE guidelines;2,14 a Cochrane systematic review;7 and the BAP guidelines.9 Parenteral \nthiamine (vitamin B1), another vitamin replacement, is an important adjunctive \nTable 4.2  Short Alcohol Withdrawal Scale (SAWS)13\nNone(0)\nMild(1)\nModerate(2)\nSevere(3)\nAnxious\nSleep disturbance\nProblems with memory\nNausea\nRestless\nTremor (shakes)\nFeeling confused\nSweating\nMiserable\nHeart pounding\n",
+  "raw_text_sha256": "28f5340b0abbf45481497dbfb321b0efdff1679fb65b2582d558b2c7776bcb36",
+  "coordinates_sha256": "66be78e5d487b1837d3bc0285fdd1df088a3c192c5ae0855dee53188a6c570a5",
+  "block_sequence_sha256": "1515c32afcb6f0af28c0b47423d3b9594e4ec2afb8fd14d49030dec692eb0d58",
+  "blocks": [
+    {
+      "block_id": "page-0479-block-0000",
+      "order": 0,
+      "text": "458    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "a41ceee9396e9ce2c2bbdc9ba92f2ef68795da314f0a1f8721c848e102cbb185"
+    },
+    {
+      "block_id": "page-0479-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0479-block-0002",
+      "order": 2,
+      "text": "Table 4.3  Alcohol withdrawal treatment interventions – summary\n",
+      "bbox": [
+        67.88999938964844,
+        289.2947692871094,
+        278.6099548339844,
+        298.1822814941406
+      ],
+      "text_sha256": "bb4d16be03dab54a644b4744bd4f5e556c375f93a1052f9c5778fa3309189581"
+    },
+    {
+      "block_id": "page-0479-block-0003",
+      "order": 3,
+      "text": "Severity\nSupportive/\nmedical care\n",
+      "bbox": [
+        65.88999938964844,
+        307.1697692871094,
+        181.0150146484375,
+        326.0547790527344
+      ],
+      "text_sha256": "e91bd89346b31012851db64548fae3689dcfdfe1aa78b2b34f29dc6b03c6171a"
+    },
+    {
+      "block_id": "page-0479-block-0004",
+      "order": 4,
+      "text": "Pharmacotherapy for \nneuro-adaptation \nreversal\n",
+      "bbox": [
+        205.1425018310547,
+        307.1697692871094,
+        281.8299865722656,
+        336.0522766113281
+      ],
+      "text_sha256": "7e5b8c314e863b73b1ca2811edc0e3f0ce8a01a5b19c53130b3d38fd488f483b"
+    },
+    {
+      "block_id": "page-0479-block-0005",
+      "order": 5,
+      "text": "Thiamine \nsupplementation\n",
+      "bbox": [
+        294.54998779296875,
+        307.1622619628906,
+        354.5574645996094,
+        326.0472717285156
+      ],
+      "text_sha256": "af7316c32d9399f8c2f124990fb2180c71042fa227dc5b4bbf58c703390ecd4e"
+    },
+    {
+      "block_id": "page-0479-block-0006",
+      "order": 6,
+      "text": "Setting\n",
+      "bbox": [
+        379.8999938964844,
+        307.1622619628906,
+        405.32501220703125,
+        316.0497741699219
+      ],
+      "text_sha256": "a2cc1b99c64856e75b4bf92e33021b2acbf82e18cdd4da66ad04efffd3d6690c"
+    },
+    {
+      "block_id": "page-0479-block-0007",
+      "order": 7,
+      "text": "Mild\nCIWA-Ar ≤ 10\n",
+      "bbox": [
+        65.88998413085938,
+        342.96728515625,
+        111.06998443603516,
+        361.6722717285156
+      ],
+      "text_sha256": "5d6cd27393ffce5283f48606b68bdd0596a7faaef49dc36b6754b7224bbf3ea9"
+    },
+    {
+      "block_id": "page-0479-block-0008",
+      "order": 8,
+      "text": "Moderate-to-high-\nlevel supportive \ncare, little, if any \nmedical care \nrequired\n",
+      "bbox": [
+        137.38748168945312,
+        342.96728515625,
+        196.97494506835938,
+        391.6647644042969
+      ],
+      "text_sha256": "885986404ad73b2733ccc06934b05f20f72e8bfb4e0feac69b5ad4889a543a28"
+    },
+    {
+      "block_id": "page-0479-block-0009",
+      "order": 9,
+      "text": "Little to none required\nSimple remedies only \n(see below)\n",
+      "bbox": [
+        205.14248657226562,
+        342.95977783203125,
+        276.1300048828125,
+        371.6622619628906
+      ],
+      "text_sha256": "56725ea5cadb6d4cd87dc4fca148e48f5b55e3a42da57403a3e40f72489ef53c"
+    },
+    {
+      "block_id": "page-0479-block-0010",
+      "order": 10,
+      "text": "Oral likely to be \nsufficient if patient is \nwell nourished\n",
+      "bbox": [
+        294.54998779296875,
+        342.9522705078125,
+        363.1600341796875,
+        371.6547546386719
+      ],
+      "text_sha256": "0268d947919d0f7d0cb87cf7aae552d36c57326bd57980b365abe1a3a4460fe7"
+    },
+    {
+      "block_id": "page-0479-block-0011",
+      "order": 11,
+      "text": "Home\n",
+      "bbox": [
+        379.8999938964844,
+        342.94476318359375,
+        399.07000732421875,
+        351.6522521972656
+      ],
+      "text_sha256": "23ce42b5dfb02f0b0ed05c86ea38d5bfd4d5f736ff524467ba010fd3f509ed27"
+    },
+    {
+      "block_id": "page-0479-block-0012",
+      "order": 12,
+      "text": "Moderate\nCIWA-Ar ≤ 15\n",
+      "bbox": [
+        65.88998413085938,
+        398.572265625,
+        111.06998443603516,
+        417.2772521972656
+      ],
+      "text_sha256": "b0524d0574507915adaa49e149b9ee78631c06c9dc683d4a7177b0488e121800"
+    },
+    {
+      "block_id": "page-0479-block-0013",
+      "order": 13,
+      "text": "Moderate-to-high-\nlevel supportive \ncare, little medical \ncare required\n",
+      "bbox": [
+        137.38748168945312,
+        398.572265625,
+        197.2374725341797,
+        437.2722473144531
+      ],
+      "text_sha256": "14911ce5b8be29fe3fa2f71e76bc7d975b873a0519d6af51d9bea43d9c5a715b"
+    },
+    {
+      "block_id": "page-0479-block-0014",
+      "order": 14,
+      "text": "Little to none required\nSymptomatic treatment \nonly\n",
+      "bbox": [
+        205.14248657226562,
+        398.56475830078125,
+        282.489990234375,
+        427.2672424316406
+      ],
+      "text_sha256": "692a0c1cf1e6c8f0d4dda50ded6746acd9c9de3976a3fefcf77937b4599891f6"
+    },
+    {
+      "block_id": "page-0479-block-0015",
+      "order": 15,
+      "text": "Intramuscular Pabrinex \nshould be offered if the \npatient is malnourished \nfollowed by oral \nsupplementation\n",
+      "bbox": [
+        294.54998779296875,
+        398.5572509765625,
+        371.800048828125,
+        447.2547302246094
+      ],
+      "text_sha256": "992a1a07de7d5caf7ba0886aa27f8e7f2b5060571a4c4213af649c5bce69e63b"
+    },
+    {
+      "block_id": "page-0479-block-0016",
+      "order": 16,
+      "text": "Home or \ncommunity \nteam\n",
+      "bbox": [
+        379.8999938964844,
+        398.54974365234375,
+        417.8125,
+        427.2522277832031
+      ],
+      "text_sha256": "93673726d73d9a2d1fbac41c414408cdec014470fbc9edd5c6ffafca32f5bb7c"
+    },
+    {
+      "block_id": "page-0479-block-0017",
+      "order": 17,
+      "text": "Severe\nCIWA-Ar > 15\n",
+      "bbox": [
+        65.88998413085938,
+        454.16973876953125,
+        111.32498168945312,
+        472.8747253417969
+      ],
+      "text_sha256": "56278437fc5c89b503e7921aaa110fd57057018c32f66b22127db31aa55e949a"
+    },
+    {
+      "block_id": "page-0479-block-0018",
+      "order": 18,
+      "text": "High-level \nsupportive care \nplus medical \nmonitoring\n",
+      "bbox": [
+        137.38748168945312,
+        454.16973876953125,
+        188.0874786376953,
+        492.8697204589844
+      ],
+      "text_sha256": "dd4ec75cf98428ee57238c8a80c2cb133316e9d94b586b028122893e86dff711"
+    },
+    {
+      "block_id": "page-0479-block-0019",
+      "order": 19,
+      "text": "Symptomatic and \nsubstitution treatment \n(chlordiazepoxide) \nprobably required\n",
+      "bbox": [
+        205.14248657226562,
+        454.1622314453125,
+        278.34246826171875,
+        492.8622131347656
+      ],
+      "text_sha256": "f75bdad97d84eeab171685e0b72ea4191c938b65db047c09a6d2f188a15400fb"
+    },
+    {
+      "block_id": "page-0479-block-0020",
+      "order": 20,
+      "text": "Intramuscular Pabrinex \nshould be offered \nfollowed by oral \nsupplementation\n",
+      "bbox": [
+        294.54998779296875,
+        454.15472412109375,
+        369.1300354003906,
+        492.8547058105469
+      ],
+      "text_sha256": "18299c0ff773f97631065d65d70faaf3b5946cd9a0b8b8197e9ff0dc5b9c7b11"
+    },
+    {
+      "block_id": "page-0479-block-0021",
+      "order": 21,
+      "text": "Community \nteam or \nhospital\n",
+      "bbox": [
+        379.8999938964844,
+        454.147216796875,
+        419.4850158691406,
+        482.8497009277344
+      ],
+      "text_sha256": "ea551d4c66e4f003556c311da98038cc8fdaf2ea29602fef45fe22d3ff74b6e6"
+    },
+    {
+      "block_id": "page-0479-block-0022",
+      "order": 22,
+      "text": "CIWA-Ar > 10 plus \nco-morbid \nalcohol-related \nmedical problems\n",
+      "bbox": [
+        65.88998413085938,
+        499.76971435546875,
+        128.41748046875,
+        538.4697265625
+      ],
+      "text_sha256": "3e85db89ab9f227f34cf1263069f0c872c6f8d003ab266c2283029a4182be841"
+    },
+    {
+      "block_id": "page-0479-block-0023",
+      "order": 23,
+      "text": "High-level \nsupportive care \nplus specialist \nmedical care\n",
+      "bbox": [
+        137.38748168945312,
+        499.76220703125,
+        188.0874786376953,
+        538.462158203125
+      ],
+      "text_sha256": "5a3f18bda4d147abe45314929e7b592a9428cdb6d785e4a41bbf0756e8e205bb"
+    },
+    {
+      "block_id": "page-0479-block-0024",
+      "order": 24,
+      "text": "Symptomatic and \nsubstitution treatments \nusually required\n",
+      "bbox": [
+        205.14248657226562,
+        499.75469970703125,
+        281.2599792480469,
+        528.4571533203125
+      ],
+      "text_sha256": "5c64458828dd506998e01c4c96212dea9a34c6e9d4919e4a42bffc8c00fdc97b"
+    },
+    {
+      "block_id": "page-0479-block-0025",
+      "order": 25,
+      "text": "Intramuscular Pabrinex \nfollowed by oral \nsupplementation\n",
+      "bbox": [
+        294.54998779296875,
+        499.7471923828125,
+        369.1300354003906,
+        528.44970703125
+      ],
+      "text_sha256": "520d1989fe6221f5cd49f0fdb56eb2c1e08356323208e64d084c0609849be3ad"
+    },
+    {
+      "block_id": "page-0479-block-0026",
+      "order": 26,
+      "text": "Hospital\n",
+      "bbox": [
+        379.8999938964844,
+        499.73968505859375,
+        405.737548828125,
+        508.4471740722656
+      ],
+      "text_sha256": "4eb9377a82f02f13604ab2cf26abbeb4f2a651ab90ab699ae77c95317ec3ba86"
+    },
+    {
+      "block_id": "page-0479-block-0027",
+      "order": 27,
+      "text": "Benzodiazepines are the treatment of choice for alcohol withdrawal. They exhibit \ncross-tolerance with alcohol and have anticonvulsant properties. Use is supported by \nNICE guidelines;2,14 a Cochrane systematic review;7 and the BAP guidelines.9 Parenteral \nthiamine (vitamin B1), another vitamin replacement, is an important adjunctive \n",
+      "bbox": [
+        61.88970947265625,
+        566.9739990234375,
+        436.6900634765625,
+        614.9340209960938
+      ],
+      "text_sha256": "c5b8e721e44167bc33ae3d43fe77e16f1308130e36b602964914f8c85a82d6b5"
+    },
+    {
+      "block_id": "page-0479-block-0028",
+      "order": 28,
+      "text": "Table 4.2  Short Alcohol Withdrawal Scale (SAWS)13\n",
+      "bbox": [
+        67.88999938964844,
+        68.45913696289062,
+        235.59471130371094,
+        78.97528076171875
+      ],
+      "text_sha256": "ae5bf847da36bd155043919b8b26a6c5d6bb1b45000f5b32867d12a666c0840c"
+    },
+    {
+      "block_id": "page-0479-block-0029",
+      "order": 29,
+      "text": "None(0)\nMild(1)\nModerate(2)\nSevere(3)\n",
+      "bbox": [
+        187.464599609375,
+        87.96278381347656,
+        408.09222412109375,
+        96.85028076171875
+      ],
+      "text_sha256": "9cefff50fa8c2739e7e2639900072a281aafd6e73083403239c35884c05afeae"
+    },
+    {
+      "block_id": "page-0479-block-0030",
+      "order": 30,
+      "text": "Anxious\n",
+      "bbox": [
+        65.90460205078125,
+        103.7652816772461,
+        91.32960510253906,
+        112.4727783203125
+      ],
+      "text_sha256": "9004caf9b58b1bc72e3e7b18e99c3a9c7741a3c7ff3986848555e0c95d645ab7"
+    },
+    {
+      "block_id": "page-0479-block-0031",
+      "order": 31,
+      "text": "Sleep disturbance\n",
+      "bbox": [
+        65.90460205078125,
+        119.38777923583984,
+        122.16209411621094,
+        128.09527587890625
+      ],
+      "text_sha256": "34d21fc1d1b4d31dc6112b61dc2d6e08e001db41677d04e2239553a3fa7d7135"
+    },
+    {
+      "block_id": "page-0479-block-0032",
+      "order": 32,
+      "text": "Problems with memory\n",
+      "bbox": [
+        65.90460205078125,
+        135.01026916503906,
+        139.51708984375,
+        143.7177734375
+      ],
+      "text_sha256": "065d76abdc7542d5e80b139e830d215f80c490e4dd6af9698adb41b61e960e18"
+    },
+    {
+      "block_id": "page-0479-block-0033",
+      "order": 33,
+      "text": "Nausea\n",
+      "bbox": [
+        65.90460205078125,
+        150.6327667236328,
+        89.2446060180664,
+        159.34027099609375
+      ],
+      "text_sha256": "b47875d90c2fc63e3fee0415015ecc4defb7d1e66be078544b95c3e78657baed"
+    },
+    {
+      "block_id": "page-0479-block-0034",
+      "order": 34,
+      "text": "Restless\n",
+      "bbox": [
+        65.90460205078125,
+        166.25526428222656,
+        90.48960876464844,
+        174.9627685546875
+      ],
+      "text_sha256": "024cd456dae82f196451a7f504370e929124db374234203fabb3cd9e02189aef"
+    },
+    {
+      "block_id": "page-0479-block-0035",
+      "order": 35,
+      "text": "Tremor (shakes)\n",
+      "bbox": [
+        65.90460205078125,
+        181.8777618408203,
+        115.50209045410156,
+        190.58526611328125
+      ],
+      "text_sha256": "9203d4c67bf5cd5fa0c298641fca89a9065bf9b4cc1bedf68ebefd5ab4159148"
+    },
+    {
+      "block_id": "page-0479-block-0036",
+      "order": 36,
+      "text": "Feeling confused\n",
+      "bbox": [
+        65.90460205078125,
+        197.50025939941406,
+        119.66459655761719,
+        206.207763671875
+      ],
+      "text_sha256": "8835974c1114a3ececc257eecf3f5d634b7c743cf09f192cc77e4aaa758571df"
+    },
+    {
+      "block_id": "page-0479-block-0037",
+      "order": 37,
+      "text": "Sweating\n",
+      "bbox": [
+        65.90460205078125,
+        213.1227569580078,
+        95.49209594726562,
+        221.83026123046875
+      ],
+      "text_sha256": "c485fec73cb1206046be7016fc5eaf0790cc2feb37bf3c454309bd187e2ef85c"
+    },
+    {
+      "block_id": "page-0479-block-0038",
+      "order": 38,
+      "text": "Miserable\n",
+      "bbox": [
+        65.90460205078125,
+        228.74525451660156,
+        96.73710632324219,
+        237.4527587890625
+      ],
+      "text_sha256": "d43529a69474725ad083d12c48ecd941a3d8e4760a353710725b2b2848fbbe11"
+    },
+    {
+      "block_id": "page-0479-block-0039",
+      "order": 39,
+      "text": "Heart pounding\n",
+      "bbox": [
+        65.90460205078125,
+        244.3677520751953,
+        116.34208679199219,
+        253.07525634765625
+      ],
+      "text_sha256": "f809ac88781bde26d292dcfd47b186c0750d2aea69550f8f139a694b122cf1c3"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

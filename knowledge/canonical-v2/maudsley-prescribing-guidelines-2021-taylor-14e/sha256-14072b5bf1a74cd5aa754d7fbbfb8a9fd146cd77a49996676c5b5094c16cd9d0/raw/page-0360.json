@@ -1,0 +1,851 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0360",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 360,
+  "source_page_index": 359,
+  "source_page_display": 360,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    339\nCHAPTER 3\n \n(Continued)\nMoclobemide\nMirtazapine\nReboxetine\nTrazodone\nOther SSRIs,f\nVortioxetine\nSNRIs\nDuloxetine\nVenlafaxine\nDesvenlaxine\nTCAs (except \nclomipramine)\nStop \nagomelatine \nthen start \nmoclobemide\nStop \nagomelatine \nthen start \nmirtazapine\nStop \nagomelatine \nthen start \nreboxetine\nStop \nagomelatine \nthen start \ntrazodone\nStop \nagomelatine \nthen start \nSSRI\nStop \nagomelatine \nthen start \nSNRI\nStop \nagomelatine \nthen start TCA\nTaper and \nstop then start \nmoclobemide\nCross-taper \ncautiously\nCross-taper \ncautiously\nCross-taper \ncautiously\nCross-taper \ncautiously\nCross-taper \ncautiously\nCross-taper \ncautiously with \nlow dose TCA\nTaper and \nstop then wait \nfor 1 week \nthen start \nmoclobemide\nCross-taper \ncautiously\nCross-taper \ncautiously\nCross-taper \ncautiously\nTaper and \nstop then \nstart low \ndose\nTaper and \nstop. Start \nlow dose \nSNRI\nCross-taper \ncautiously\nStop \nfluoxetine \nthen wait for \n5–6 weeks \nthen start \nmoclobemide\nCross-taper \ncautiously\nCross-taper \ncautiously\nCross-taper \ncautiously\nStop \nfluoxetine. \nWait \n4–7 days \nthen start \nlow dose\nStop \nfluoxetine. \nWait \n4–7 days \nthen start \nSNRI\nStop fluoxetine. \nWait 4–7 days \nthen start low \ndose TCA\nTaper and \nstop then wait \nfor 1 week \nthen start \nmoclobemide\nCross-taper \ncautiously. \nStart \nmirtazapine \nat 15mg\nCross-taper \ncautiously\nCross-taper \ncautiously\nDirect \nswitch \npossible\nDirect switch \npossible\nCross-taper \ncautiously with \nlow dose TCA\nTaper and \nstop then wait \nfor 2 weeks \nthen start \nmoclobemide\nTaper and \nstop then \nwait for \n2 weeks\nTaper and \nstop then \nwait for \n2 weeks\nTaper and \nstop then \nwait for \n2 weeks\nTaper and \nstop then \nwait for \n2 weeks\nTaper and \nstop then \nwait for \n2 weeks\nTaper and stop \nthen wait for \n2 weeksj\nTaper and \nstop then \nwait \n24 hours\nTaper and \nstop then \nwait \n24 hours\nTaper and \nstop then \nwait \n24 hours\nTaper and \nstop then \nwait \n24 hours\nTaper and \nstop then \nwait \n24 hours\nTaper and stop \nthen wait \n24 hours\nTaper and \nstop then wait \nfor 1 week \nthen start \nmoclobemide\nCross-taper \ncautiously\nCross-taper \ncautiously\nCross-taper \ncautiously\nCross-taper \ncautiously\nCross-taper \ncautiously\nTaper and \nstop then wait \nfor 1 week \nthen start \nmoclobemide\nCross-taper \ncautiously\nCross-taper \ncautiously\nCross-taper \ncautiously\nCross-taper \ncautiously\nCross-taper \ncautiously\n",
+  "raw_text_sha256": "cfe4fc5c6f5fe5342cfbe6aa849b3eb67411e9f573aa3abe1319c8e312fe3b75",
+  "coordinates_sha256": "cfa6c6132d6df7582f11b628df3f3ca89d8a65e0dd67f80775c2d18efda2a929",
+  "block_sequence_sha256": "c74c6e5c5553400f0132b5509e16507aebce276ad80493d44236261a1ec72a3c",
+  "blocks": [
+    {
+      "block_id": "page-0360-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    339\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "2240c5962166e1437b3d6c6017a7fd098b8ff4fd51d40c3b5ed11b65c4b80a5f"
+    },
+    {
+      "block_id": "page-0360-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0360-block-0002",
+      "order": 2,
+      "text": " \n",
+      "bbox": [
+        54.0,
+        70.08790588378906,
+        56.084999084472656,
+        78.97540283203125
+      ],
+      "text_sha256": "e16f1596201850fd4a63680b27f603cb64e67176159be3d8ed78a4403fdb1700"
+    },
+    {
+      "block_id": "page-0360-block-0003",
+      "order": 3,
+      "text": "(Continued)\n",
+      "bbox": [
+        382.4850158691406,
+        617.4678955078125,
+        420.00006103515625,
+        626.2203979492188
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0360-block-0004",
+      "order": 4,
+      "text": "Moclobemide\nMirtazapine\nReboxetine\nTrazodone\n",
+      "bbox": [
+        48.0,
+        120.32301330566406,
+        243.0900421142578,
+        129.21051025390625
+      ],
+      "text_sha256": "f2db25da01b4b6b555517fa954884de6577a51af2124d7c073d3b165e9f40fbe"
+    },
+    {
+      "block_id": "page-0360-block-0005",
+      "order": 5,
+      "text": "Other SSRIs,f\n",
+      "bbox": [
+        258.75750732421875,
+        110.32551574707031,
+        303.3843078613281,
+        119.2130126953125
+      ],
+      "text_sha256": "147d490dd1ce75d65ad0c1609c65f52caa1c87ab84e429e5a04c5d4532156da5"
+    },
+    {
+      "block_id": "page-0360-block-0006",
+      "order": 6,
+      "text": "Vortioxetine\n",
+      "bbox": [
+        258.7538146972656,
+        120.32301330566406,
+        302.5238342285156,
+        129.21051025390625
+      ],
+      "text_sha256": "bdb32e1b0d648fc72b968d5533603afcd8ea033a01aa2272fa3d8fd6a8dcbdf5"
+    },
+    {
+      "block_id": "page-0360-block-0007",
+      "order": 7,
+      "text": "SNRIs\nDuloxetine\nVenlafaxine\nDesvenlaxine\n",
+      "bbox": [
+        310.5563049316406,
+        90.32301330566406,
+        357.6563415527344,
+        129.2030029296875
+      ],
+      "text_sha256": "50d3ef036f8453789fc28e60a778971e59c3bd494c3b2bcc700232263e6ff397"
+    },
+    {
+      "block_id": "page-0360-block-0008",
+      "order": 8,
+      "text": "TCAs (except \nclomipramine)\n",
+      "bbox": [
+        363.9413146972656,
+        110.31800842285156,
+        414.3638000488281,
+        129.2030029296875
+      ],
+      "text_sha256": "313ef709113a20251e9b5fe795c133d10eff1dc138538a336a761ec01ccfc790"
+    },
+    {
+      "block_id": "page-0360-block-0009",
+      "order": 9,
+      "text": "Stop \nagomelatine \nthen start \nmoclobemide\n",
+      "bbox": [
+        48.0,
+        137.27796936035156,
+        91.33499908447266,
+        175.97796630859375
+      ],
+      "text_sha256": "4dcd4a5823232c50b00db2f7d87add72e80818d330beaf64635ed81818ad0d78"
+    },
+    {
+      "block_id": "page-0360-block-0010",
+      "order": 10,
+      "text": "Stop \nagomelatine \nthen start \nmirtazapine\n",
+      "bbox": [
+        106.59750366210938,
+        137.2704620361328,
+        147.14251708984375,
+        175.970458984375
+      ],
+      "text_sha256": "db7eab79f1d120cc0bebd80267909809d13ac1a8663bc6587f76e38700a80f19"
+    },
+    {
+      "block_id": "page-0360-block-0011",
+      "order": 11,
+      "text": "Stop \nagomelatine \nthen start \nreboxetine\n",
+      "bbox": [
+        157.3800048828125,
+        137.26295471191406,
+        197.92498779296875,
+        175.96295166015625
+      ],
+      "text_sha256": "66b2e9bea4f36494b3fb9a733dd5e62fae53905b90ead70081c25258f401fd99"
+    },
+    {
+      "block_id": "page-0360-block-0012",
+      "order": 12,
+      "text": "Stop \nagomelatine \nthen start \ntrazodone\n",
+      "bbox": [
+        209.2725067138672,
+        137.2554473876953,
+        250.94248962402344,
+        175.9554443359375
+      ],
+      "text_sha256": "a37e6255e39389ce2e32ea5c505f0f0bc3862f8d3c295647ff5037a53f1dd40b"
+    },
+    {
+      "block_id": "page-0360-block-0013",
+      "order": 13,
+      "text": "Stop \nagomelatine \nthen start \nSSRI\n",
+      "bbox": [
+        261.75750732421875,
+        137.24794006347656,
+        303.42755126953125,
+        175.94793701171875
+      ],
+      "text_sha256": "13db1482ed02749d3cbe0ae0782b13f9b4460f637649f7bdf9f5579f75c53b61"
+    },
+    {
+      "block_id": "page-0360-block-0014",
+      "order": 14,
+      "text": "Stop \nagomelatine \nthen start \nSNRI\n",
+      "bbox": [
+        313.55999755859375,
+        137.2404327392578,
+        355.23004150390625,
+        175.9404296875
+      ],
+      "text_sha256": "9ab606842a6f27aba8b8c68100b3307a7088b8f552bfc72c1daf5fd766058465"
+    },
+    {
+      "block_id": "page-0360-block-0015",
+      "order": 15,
+      "text": "Stop \nagomelatine \nthen start TCA\n",
+      "bbox": [
+        366.94500732421875,
+        137.23292541503906,
+        413.6175231933594,
+        165.9354248046875
+      ],
+      "text_sha256": "7f65db0ce8839c16389d605c27a7ad230a36505aefed2b2f0e8f5ae9eb255817"
+    },
+    {
+      "block_id": "page-0360-block-0016",
+      "order": 16,
+      "text": "Taper and \nstop then start \nmoclobemide\n",
+      "bbox": [
+        48.0,
+        182.30299377441406,
+        96.6824951171875,
+        211.0054931640625
+      ],
+      "text_sha256": "8b871a64aad2bc83f2ca5331577199fa1c3ee329fa0561ebbb1ef6164982be1d"
+    },
+    {
+      "block_id": "page-0360-block-0017",
+      "order": 17,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        106.59750366210938,
+        182.2954864501953,
+        145.2150115966797,
+        201.00048828125
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    },
+    {
+      "block_id": "page-0360-block-0018",
+      "order": 18,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        157.3800048828125,
+        182.2954864501953,
+        195.99749755859375,
+        201.00048828125
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    },
+    {
+      "block_id": "page-0360-block-0019",
+      "order": 19,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        209.2725067138672,
+        182.2954864501953,
+        247.88999938964844,
+        201.00048828125
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    },
+    {
+      "block_id": "page-0360-block-0020",
+      "order": 20,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        261.75750732421875,
+        182.2954864501953,
+        300.3750305175781,
+        201.00048828125
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    },
+    {
+      "block_id": "page-0360-block-0021",
+      "order": 21,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        313.55999755859375,
+        182.2954864501953,
+        352.1775207519531,
+        201.00048828125
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    },
+    {
+      "block_id": "page-0360-block-0022",
+      "order": 22,
+      "text": "Cross-taper \ncautiously with \nlow dose TCA\n",
+      "bbox": [
+        366.94500732421875,
+        182.2954864501953,
+        416.9475402832031,
+        210.99798583984375
+      ],
+      "text_sha256": "71fcfc61265201cdd04065b84d8ee40cf8978156efb2db4a61111e4cb0ab6fe7"
+    },
+    {
+      "block_id": "page-0360-block-0023",
+      "order": 23,
+      "text": "Taper and \nstop then wait \nfor 1 week \nthen start \nmoclobemide\n",
+      "bbox": [
+        48.0,
+        227.32798767089844,
+        96.3449935913086,
+        276.0254821777344
+      ],
+      "text_sha256": "5d45ae03ed9afc8da885fa7fcd87fd8dacf5ae3973412d55d95d7e54b1f4889f"
+    },
+    {
+      "block_id": "page-0360-block-0024",
+      "order": 24,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        106.59750366210938,
+        227.3204803466797,
+        145.2150115966797,
+        246.02548217773438
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    },
+    {
+      "block_id": "page-0360-block-0025",
+      "order": 25,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        157.3800048828125,
+        227.3204803466797,
+        195.99749755859375,
+        246.02548217773438
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    },
+    {
+      "block_id": "page-0360-block-0026",
+      "order": 26,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        209.2725067138672,
+        227.3204803466797,
+        247.88999938964844,
+        246.02548217773438
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    },
+    {
+      "block_id": "page-0360-block-0027",
+      "order": 27,
+      "text": "Taper and \nstop then \nstart low \ndose\n",
+      "bbox": [
+        261.75750732421875,
+        227.3204803466797,
+        295.1025390625,
+        266.0204772949219
+      ],
+      "text_sha256": "3034c51726c9dd8904502ff4b69c77fcc41dde6b7f78994055a502fb5434e801"
+    },
+    {
+      "block_id": "page-0360-block-0028",
+      "order": 28,
+      "text": "Taper and \nstop. Start \nlow dose \nSNRI\n",
+      "bbox": [
+        313.55999755859375,
+        227.31297302246094,
+        348.5625,
+        266.0129699707031
+      ],
+      "text_sha256": "4c82f8399f73a451232e16424a39bc598a4d55af402bdd8dfec54808569b83c3"
+    },
+    {
+      "block_id": "page-0360-block-0029",
+      "order": 29,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        366.94500732421875,
+        227.3054656982422,
+        405.5625305175781,
+        246.01046752929688
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    },
+    {
+      "block_id": "page-0360-block-0030",
+      "order": 30,
+      "text": "Stop \nfluoxetine \nthen wait for \n5–6 weeks \nthen start \nmoclobemide\n",
+      "bbox": [
+        48.0,
+        282.3529968261719,
+        91.75499725341797,
+        341.0479736328125
+      ],
+      "text_sha256": "ffe32c32069f5a62a191608bfa9e8704d933858d3ee96e4f4ee0496ca1426803"
+    },
+    {
+      "block_id": "page-0360-block-0031",
+      "order": 31,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        106.59750366210938,
+        282.3379821777344,
+        145.2150115966797,
+        301.04296875
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    },
+    {
+      "block_id": "page-0360-block-0032",
+      "order": 32,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        157.3800048828125,
+        282.3379821777344,
+        195.99749755859375,
+        301.04296875
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    },
+    {
+      "block_id": "page-0360-block-0033",
+      "order": 33,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        209.2725067138672,
+        282.3379821777344,
+        247.88999938964844,
+        301.04296875
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    },
+    {
+      "block_id": "page-0360-block-0034",
+      "order": 34,
+      "text": "Stop \nfluoxetine. \nWait \n4–7 days \nthen start \nlow dose\n",
+      "bbox": [
+        261.75750732421875,
+        282.3379821777344,
+        297.592529296875,
+        341.032958984375
+      ],
+      "text_sha256": "102216a87e9ba757a882cf61ccfc0b0d7ff312323a9af5ebbe90d75bc6e5f810"
+    },
+    {
+      "block_id": "page-0360-block-0035",
+      "order": 35,
+      "text": "Stop \nfluoxetine. \nWait \n4–7 days \nthen start \nSNRI\n",
+      "bbox": [
+        313.55999755859375,
+        282.3229675292969,
+        349.39501953125,
+        341.0179443359375
+      ],
+      "text_sha256": "2ef04d00e4bf7608265258dbd85999348f7f204e5ba9d2d856368f827cb461dc"
+    },
+    {
+      "block_id": "page-0360-block-0036",
+      "order": 36,
+      "text": "Stop fluoxetine. \nWait 4–7 days \nthen start low \ndose TCA\n",
+      "bbox": [
+        366.94500732421875,
+        282.3079528808594,
+        419.4525451660156,
+        321.0079345703125
+      ],
+      "text_sha256": "b4326739e983173757c2293ca84d1e58f9528f022d5861dff03f552181a51a04"
+    },
+    {
+      "block_id": "page-0360-block-0037",
+      "order": 37,
+      "text": "Taper and \nstop then wait \nfor 1 week \nthen start \nmoclobemide\n",
+      "bbox": [
+        48.0,
+        347.37799072265625,
+        96.3449935913086,
+        396.0754699707031
+      ],
+      "text_sha256": "5d45ae03ed9afc8da885fa7fcd87fd8dacf5ae3973412d55d95d7e54b1f4889f"
+    },
+    {
+      "block_id": "page-0360-block-0038",
+      "order": 38,
+      "text": "Cross-taper \ncautiously. \nStart \nmirtazapine \nat 15mg\n",
+      "bbox": [
+        106.59750366210938,
+        347.3704833984375,
+        146.17498779296875,
+        396.0679626464844
+      ],
+      "text_sha256": "c7d9f231cf385061fe43458351cb161887d0eef1c1f32c4315d14dd770f26b7c"
+    },
+    {
+      "block_id": "page-0360-block-0039",
+      "order": 39,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        157.3800048828125,
+        347.36297607421875,
+        195.99749755859375,
+        366.0679626464844
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    },
+    {
+      "block_id": "page-0360-block-0040",
+      "order": 40,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        209.2725067138672,
+        347.36297607421875,
+        247.88999938964844,
+        366.0679626464844
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    },
+    {
+      "block_id": "page-0360-block-0041",
+      "order": 41,
+      "text": "Direct \nswitch \npossible\n",
+      "bbox": [
+        261.75750732421875,
+        347.36297607421875,
+        287.1825866699219,
+        376.0654602050781
+      ],
+      "text_sha256": "a6210470945bcc38c2ddc08bf944b0726ab96c0b97e34f8b8ed06b56ec09d6e3"
+    },
+    {
+      "block_id": "page-0360-block-0042",
+      "order": 42,
+      "text": "Direct switch \npossible\n",
+      "bbox": [
+        313.55999755859375,
+        347.35546875,
+        356.7524719238281,
+        366.0604553222656
+      ],
+      "text_sha256": "d1013b12e08116dd7cda13e98211164fd2f8f8fe66b060c65c721554f4267c0c"
+    },
+    {
+      "block_id": "page-0360-block-0043",
+      "order": 43,
+      "text": "Cross-taper \ncautiously with \nlow dose TCA\n",
+      "bbox": [
+        366.94500732421875,
+        347.35546875,
+        416.9475402832031,
+        376.0579528808594
+      ],
+      "text_sha256": "71fcfc61265201cdd04065b84d8ee40cf8978156efb2db4a61111e4cb0ab6fe7"
+    },
+    {
+      "block_id": "page-0360-block-0044",
+      "order": 44,
+      "text": "Taper and \nstop then wait \nfor 2 weeks \nthen start \nmoclobemide\n",
+      "bbox": [
+        48.0,
+        402.40301513671875,
+        96.3449935913086,
+        451.1004943847656
+      ],
+      "text_sha256": "d86686650f02f61bedfe903b6b1ba860170202742db73b8185cb3021bea66ea4"
+    },
+    {
+      "block_id": "page-0360-block-0045",
+      "order": 45,
+      "text": "Taper and \nstop then \nwait for \n2 weeks\n",
+      "bbox": [
+        106.59750366210938,
+        402.3955078125,
+        139.9425048828125,
+        441.0954895019531
+      ],
+      "text_sha256": "be057009f5126f5bfc1b3fda935d07558e6c81309b8daf0546f2e4bc9d7892b1"
+    },
+    {
+      "block_id": "page-0360-block-0046",
+      "order": 46,
+      "text": "Taper and \nstop then \nwait for \n2 weeks\n",
+      "bbox": [
+        157.3800048828125,
+        402.38800048828125,
+        190.72500610351562,
+        441.0879821777344
+      ],
+      "text_sha256": "be057009f5126f5bfc1b3fda935d07558e6c81309b8daf0546f2e4bc9d7892b1"
+    },
+    {
+      "block_id": "page-0360-block-0047",
+      "order": 47,
+      "text": "Taper and \nstop then \nwait for \n2 weeks\n",
+      "bbox": [
+        209.2725067138672,
+        402.3804931640625,
+        242.6175079345703,
+        441.0804748535156
+      ],
+      "text_sha256": "be057009f5126f5bfc1b3fda935d07558e6c81309b8daf0546f2e4bc9d7892b1"
+    },
+    {
+      "block_id": "page-0360-block-0048",
+      "order": 48,
+      "text": "Taper and \nstop then \nwait for \n2 weeks\n",
+      "bbox": [
+        261.75750732421875,
+        402.37298583984375,
+        295.1025390625,
+        441.0729675292969
+      ],
+      "text_sha256": "be057009f5126f5bfc1b3fda935d07558e6c81309b8daf0546f2e4bc9d7892b1"
+    },
+    {
+      "block_id": "page-0360-block-0049",
+      "order": 49,
+      "text": "Taper and \nstop then \nwait for \n2 weeks\n",
+      "bbox": [
+        313.55999755859375,
+        402.365478515625,
+        346.905029296875,
+        441.0654602050781
+      ],
+      "text_sha256": "be057009f5126f5bfc1b3fda935d07558e6c81309b8daf0546f2e4bc9d7892b1"
+    },
+    {
+      "block_id": "page-0360-block-0050",
+      "order": 50,
+      "text": "Taper and stop \nthen wait for \n2 weeksj\n",
+      "bbox": [
+        366.94500732421875,
+        402.35797119140625,
+        416.13006591796875,
+        431.0604553222656
+      ],
+      "text_sha256": "f3efc26a9194e667fe7fff1448e256aa56407899252f51204ea7bb96dce84fde"
+    },
+    {
+      "block_id": "page-0360-block-0051",
+      "order": 51,
+      "text": "Taper and \nstop then \nwait \n24 hours\n",
+      "bbox": [
+        106.59449768066406,
+        457.4280090332031,
+        139.9394989013672,
+        496.12799072265625
+      ],
+      "text_sha256": "21cf1530680a191f067c0d16fdf0f6324c0ef6c2dea51cf3cf60b73f1379b2b3"
+    },
+    {
+      "block_id": "page-0360-block-0052",
+      "order": 52,
+      "text": "Taper and \nstop then \nwait \n24 hours\n",
+      "bbox": [
+        157.3769989013672,
+        457.4205017089844,
+        190.7220001220703,
+        496.1204833984375
+      ],
+      "text_sha256": "21cf1530680a191f067c0d16fdf0f6324c0ef6c2dea51cf3cf60b73f1379b2b3"
+    },
+    {
+      "block_id": "page-0360-block-0053",
+      "order": 53,
+      "text": "Taper and \nstop then \nwait \n24 hours\n",
+      "bbox": [
+        209.26950073242188,
+        457.4129943847656,
+        242.614501953125,
+        496.11297607421875
+      ],
+      "text_sha256": "21cf1530680a191f067c0d16fdf0f6324c0ef6c2dea51cf3cf60b73f1379b2b3"
+    },
+    {
+      "block_id": "page-0360-block-0054",
+      "order": 54,
+      "text": "Taper and \nstop then \nwait \n24 hours\n",
+      "bbox": [
+        261.7545166015625,
+        457.4054870605469,
+        295.09954833984375,
+        496.10546875
+      ],
+      "text_sha256": "21cf1530680a191f067c0d16fdf0f6324c0ef6c2dea51cf3cf60b73f1379b2b3"
+    },
+    {
+      "block_id": "page-0360-block-0055",
+      "order": 55,
+      "text": "Taper and \nstop then \nwait \n24 hours\n",
+      "bbox": [
+        313.5570068359375,
+        457.3979797363281,
+        346.90203857421875,
+        496.09796142578125
+      ],
+      "text_sha256": "21cf1530680a191f067c0d16fdf0f6324c0ef6c2dea51cf3cf60b73f1379b2b3"
+    },
+    {
+      "block_id": "page-0360-block-0056",
+      "order": 56,
+      "text": "Taper and stop \nthen wait \n24 hours\n",
+      "bbox": [
+        366.9420166015625,
+        457.3904724121094,
+        416.1270751953125,
+        486.09295654296875
+      ],
+      "text_sha256": "3f4c77218b2fab0561978c4e2fe9ec9ddd5fc14ac0e20a5ef13a0a0f657c52a0"
+    },
+    {
+      "block_id": "page-0360-block-0057",
+      "order": 57,
+      "text": "Taper and \nstop then wait \nfor 1 week \nthen start \nmoclobemide\n",
+      "bbox": [
+        48.0,
+        502.4530029296875,
+        96.3449935913086,
+        551.1505126953125
+      ],
+      "text_sha256": "5d45ae03ed9afc8da885fa7fcd87fd8dacf5ae3973412d55d95d7e54b1f4889f"
+    },
+    {
+      "block_id": "page-0360-block-0058",
+      "order": 58,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        157.3800048828125,
+        502.44549560546875,
+        195.99749755859375,
+        521.1505126953125
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    },
+    {
+      "block_id": "page-0360-block-0059",
+      "order": 59,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        209.2725067138672,
+        502.44549560546875,
+        247.88999938964844,
+        521.1505126953125
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    },
+    {
+      "block_id": "page-0360-block-0060",
+      "order": 60,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        261.75750732421875,
+        502.44549560546875,
+        300.3750305175781,
+        521.1505126953125
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    },
+    {
+      "block_id": "page-0360-block-0061",
+      "order": 61,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        313.55999755859375,
+        502.44549560546875,
+        352.1775207519531,
+        521.1505126953125
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    },
+    {
+      "block_id": "page-0360-block-0062",
+      "order": 62,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        366.94500732421875,
+        502.44549560546875,
+        405.5625305175781,
+        521.1505126953125
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    },
+    {
+      "block_id": "page-0360-block-0063",
+      "order": 63,
+      "text": "Taper and \nstop then wait \nfor 1 week \nthen start \nmoclobemide\n",
+      "bbox": [
+        48.0,
+        557.4779663085938,
+        96.3449935913086,
+        606.1754760742188
+      ],
+      "text_sha256": "5d45ae03ed9afc8da885fa7fcd87fd8dacf5ae3973412d55d95d7e54b1f4889f"
+    },
+    {
+      "block_id": "page-0360-block-0064",
+      "order": 64,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        106.59750366210938,
+        557.470458984375,
+        145.2150115966797,
+        576.1754760742188
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    },
+    {
+      "block_id": "page-0360-block-0065",
+      "order": 65,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        209.27249145507812,
+        557.470458984375,
+        247.88998413085938,
+        576.1754760742188
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    },
+    {
+      "block_id": "page-0360-block-0066",
+      "order": 66,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        261.75750732421875,
+        557.470458984375,
+        300.3750305175781,
+        576.1754760742188
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    },
+    {
+      "block_id": "page-0360-block-0067",
+      "order": 67,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        313.55999755859375,
+        557.470458984375,
+        352.1775207519531,
+        576.1754760742188
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    },
+    {
+      "block_id": "page-0360-block-0068",
+      "order": 68,
+      "text": "Cross-taper \ncautiously\n",
+      "bbox": [
+        366.94500732421875,
+        557.470458984375,
+        405.5625305175781,
+        576.1754760742188
+      ],
+      "text_sha256": "07b91397558f8619536986b38f2bf1bd12371b9276621fdab03a0e9b04b06818"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

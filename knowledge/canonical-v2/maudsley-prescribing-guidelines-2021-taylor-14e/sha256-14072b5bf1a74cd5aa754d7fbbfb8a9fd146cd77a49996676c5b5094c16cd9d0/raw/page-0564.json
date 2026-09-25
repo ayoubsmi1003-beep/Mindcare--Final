@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0564",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 564,
+  "source_page_index": 563,
+  "source_page_display": 564,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Children and adolescents    543\nCHAPTER 5\nstarted at low doses (25–50mg daily and 5–10mg daily, respectively) and titrated \nto therapeutic doses (50–200mg daily and 10–20mg daily, respectively). The half-\nlives of sertraline, escitalopram, and some other antidepressants may be shorter \nin young people than adults, so twice-daily dosing may be considered, particu-\nlarly at low doses, to prevent discontinuation symptoms.24 Escitalopram is \napproved by the FDA for treatment of depression in patients aged 12  years \nand over.\n■\n■Partial or non-response to SSRI alone: For children and adolescents who have \nsignificant depressive symptoms resulting in distress or impairment despite an \nadequate trial of an SSRI alone, consider combination SSRI and psychological \ntherapy.21,25\n■\n■Medication for treatment-resistant depression (partial or non-response to SSRI \nand psychological therapy): For children and adolescents who have significant \ndepressive symptoms resulting in distress or impairment despite adequate trials of \nan SSRI (fluoxetine) and psychological therapy, consider a switch to a different \nSSRI (sertraline, citalopram4 or escitalopram).25 This guidance is based on the \nTORDIA trial, the only randomised controlled trial that has examined the com-\nparative efficacy of different treatment strategies for SSRI-resistant depression in \nyoung people.6 This trial found that many participants improved when switched \nto another SSRI or venlafaxine, and improved even more when this medication \nswitch was combined with concurrent CBT. A switch to an SSRI was just as effica-\ncious as a switch to venlafaxine but had less severe side effects, so an SSRI switch \nis preferred.\n■\n■If limited response despite adequate trials of the above medications, consider aug-\nmenting SSRI treatment with another medication such as a second-generation antip-\nsychotic or lithium – in particular, consider augmentation if there has been partial \nresponse to an SSRI. Alternatively, consider switching to an antidepressant from a \ndifferent class, for example mirtazapine (particularly consider mirtazapine if sleep is \npoor).\n\t Finally, if still no response to these medications and the young person’s depression is \nvery severe, interventional treatments could be considered, such as repetitive tran-\nscranial magnetic stimulation, electroconvulsive therapy or esketamine. These inter-\nventional treatments are not recommended for young children. Owing to a lack of \nresearch in children and adolescents, all recommendations beyond switching to a \ndifferent SSRI are based on evidence from adult studies.25\n■\n■NICE recommends against prescribing paroxetine, venlafaxine, tricyclic antidepres-\nsants, or St. John’s Wort for depression in young people, because of potential side \neffects and interactions.4\n■\n■Omega-3 fatty acid supplementation has minimal-to-no benefit in adults with depres-\nsion,25 and although an initial randomised controlled trial in young people suggested \na benefit,26 a subsequent larger trial did not demonstrate effectiveness.27 Therefore, \nomega-3 fatty acid supplementation is not recommended for depression in young \npeople.\n■\n■Box 5.1 summarises medication treatment for depression in children and adolescents.\n",
+  "raw_text_sha256": "cbba0ddcde03b025b819147e914a5c5e124d955f5324fd13361b6cf1e58e99f7",
+  "coordinates_sha256": "1a042b8ea5035f936c17e2a4851c9b3232307396067a8ab3a96a7d798f072ec5",
+  "block_sequence_sha256": "d500ad0a852ae995295c9f47168586daa1ae380d4b93aac702561bf5d0762b6a",
+  "blocks": [
+    {
+      "block_id": "page-0564-block-0000",
+      "order": 0,
+      "text": "Children and adolescents    543\n",
+      "bbox": [
+        288.94488525390625,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "798bc77c4970a0de4963eea69adc203496061aa2750e79898980c25571be6f99"
+    },
+    {
+      "block_id": "page-0564-block-0001",
+      "order": 1,
+      "text": "CHAPTER 5\n",
+      "bbox": [
+        454.4096984863281,
+        339.3385009765625,
+        463.88970947265625,
+        380.6824951171875
+      ],
+      "text_sha256": "f4b8b4a0fc64e7b3b74e7336306d0959d0384683e387792724f393162639020a"
+    },
+    {
+      "block_id": "page-0564-block-0002",
+      "order": 2,
+      "text": "started at low doses (25–50mg daily and 5–10mg daily, respectively) and titrated \nto therapeutic doses (50–200mg daily and 10–20mg daily, respectively). The half-\nlives of sertraline, escitalopram, and some other antidepressants may be shorter \nin young people than adults, so twice-daily dosing may be considered, particu-\nlarly at low doses, to prevent discontinuation symptoms.24 Escitalopram is \napproved by the FDA for treatment of depression in patients aged 12  years \nand over.\n",
+      "bbox": [
+        56.999603271484375,
+        62.5504150390625,
+        422.8098449707031,
+        146.27041625976562
+      ],
+      "text_sha256": "f01b73df31a1b500023b0360d4d03869288a8586d1f0a85fb65217086c1c4853"
+    },
+    {
+      "block_id": "page-0564-block-0003",
+      "order": 3,
+      "text": "■\n■Partial or non-response to SSRI alone: For children and adolescents who have \n",
+      "bbox": [
+        47.999900817871094,
+        146.5504150390625,
+        422.75030517578125,
+        158.27041625976562
+      ],
+      "text_sha256": "d2c8ccf85c1547d2c4e504586701e6aeafa675a92d0ce0d03a52d4d17a2ad554"
+    },
+    {
+      "block_id": "page-0564-block-0004",
+      "order": 4,
+      "text": "significant depressive symptoms resulting in distress or impairment despite an \nadequate trial of an SSRI alone, consider combination SSRI and psychological \ntherapy.21,25\n",
+      "bbox": [
+        57.0,
+        158.5504150390625,
+        422.78009033203125,
+        194.27041625976562
+      ],
+      "text_sha256": "f05b8134c1f4534fdb463f4f9636c1b9ebeb9b28ff2f97886ca06039145f7c79"
+    },
+    {
+      "block_id": "page-0564-block-0005",
+      "order": 5,
+      "text": "■\n■Medication for treatment-resistant depression (partial or non-response to SSRI \n",
+      "bbox": [
+        47.999900817871094,
+        194.55047607421875,
+        422.81011962890625,
+        206.27047729492188
+      ],
+      "text_sha256": "2ac545af8d9e979a06fd9de3517352477e17c7d5923db71f9ccc8926147c7e12"
+    },
+    {
+      "block_id": "page-0564-block-0006",
+      "order": 6,
+      "text": "and psychological therapy): For children and adolescents who have significant \ndepressive symptoms resulting in distress or impairment despite adequate trials of \nan SSRI (fluoxetine) and psychological therapy, consider a switch to a different \nSSRI (sertraline, citalopram4 or escitalopram).25 This guidance is based on the \nTORDIA trial, the only randomised controlled trial that has examined the com-\nparative efficacy of different treatment strategies for SSRI-resistant depression in \nyoung people.6 This trial found that many participants improved when switched \nto another SSRI or venlafaxine, and improved even more when this medication \nswitch was combined with concurrent CBT. A switch to an SSRI was just as effica-\ncious as a switch to venlafaxine but had less severe side effects, so an SSRI switch \nis preferred.\n",
+      "bbox": [
+        56.99578857421875,
+        206.55047607421875,
+        422.8204345703125,
+        338.2704772949219
+      ],
+      "text_sha256": "2bf66ecef3ecdf541d03194527fab05878b96fda94498e8f7e58ef0c1289062e"
+    },
+    {
+      "block_id": "page-0564-block-0007",
+      "order": 7,
+      "text": "■\n■If limited response despite adequate trials of the above medications, consider aug-\n",
+      "bbox": [
+        47.999900817871094,
+        338.55047607421875,
+        419.9800109863281,
+        350.2704772949219
+      ],
+      "text_sha256": "cfd60a34b531769d7f6f08ab71765c75f476fef48592440d9138e0c45620141c"
+    },
+    {
+      "block_id": "page-0564-block-0008",
+      "order": 8,
+      "text": "menting SSRI treatment with another medication such as a second-generation antip-\nsychotic or lithium – in particular, consider augmentation if there has been partial \nresponse to an SSRI. Alternatively, consider switching to an antidepressant from a \ndifferent class, for example mirtazapine (particularly consider mirtazapine if sleep is \npoor).\n\t Finally, if still no response to these medications and the young person’s depression is \n",
+      "bbox": [
+        48.0,
+        350.55047607421875,
+        422.8301086425781,
+        422.2704772949219
+      ],
+      "text_sha256": "7adcbbcdf1a997e26f81bd0b9d33b0ac96da20297e57c0ca1b028dc0df08a2e0"
+    },
+    {
+      "block_id": "page-0564-block-0009",
+      "order": 9,
+      "text": "very severe, interventional treatments could be considered, such as repetitive tran-\nscranial magnetic stimulation, electroconvulsive therapy or esketamine. These inter-\nventional treatments are not recommended for young children. Owing to a lack of \nresearch in children and adolescents, all recommendations beyond switching to a \ndifferent SSRI are based on evidence from adult studies.25\n",
+      "bbox": [
+        57.0,
+        422.55047607421875,
+        422.7999572753906,
+        482.2704772949219
+      ],
+      "text_sha256": "ac5ee6fdd8ba0051541a6948b2edb57794affee8c8aa08ec077814310b139c01"
+    },
+    {
+      "block_id": "page-0564-block-0010",
+      "order": 10,
+      "text": "■\n■NICE recommends against prescribing paroxetine, venlafaxine, tricyclic antidepres-\n",
+      "bbox": [
+        47.999900817871094,
+        482.55047607421875,
+        419.9699401855469,
+        494.2704772949219
+      ],
+      "text_sha256": "00a3b7622628a234a86092e328b9d6df0a864ce9bce049a84ff170a76cce5750"
+    },
+    {
+      "block_id": "page-0564-block-0011",
+      "order": 11,
+      "text": "sants, or St. John’s Wort for depression in young people, because of potential side \neffects and interactions.4\n",
+      "bbox": [
+        57.0,
+        494.55047607421875,
+        422.7198486328125,
+        518.2705078125
+      ],
+      "text_sha256": "4b6de836ebd420c3f3738a8d07e699e303f7c8bf1a061326de5420a8c953db39"
+    },
+    {
+      "block_id": "page-0564-block-0012",
+      "order": 12,
+      "text": "■\n■Omega-3 fatty acid supplementation has minimal-to-no benefit in adults with depres-\n",
+      "bbox": [
+        47.999900817871094,
+        518.5504760742188,
+        420.0398864746094,
+        530.2705078125
+      ],
+      "text_sha256": "bd0885dcf6a48d26cbc8b2d170aff25d852b2d661ce1f6b0fa815e07ccb524e5"
+    },
+    {
+      "block_id": "page-0564-block-0013",
+      "order": 13,
+      "text": "sion,25 and although an initial randomised controlled trial in young people suggested \na benefit,26 a subsequent larger trial did not demonstrate effectiveness.27 Therefore, \nomega-3 fatty acid supplementation is not recommended for depression in young \npeople.\n",
+      "bbox": [
+        56.997100830078125,
+        530.5504760742188,
+        422.7771301269531,
+        578.2705078125
+      ],
+      "text_sha256": "7ef8e7cecb9cc5beab9381a19b635e193c6b9fa8dffc2e87069c1e105ac3af06"
+    },
+    {
+      "block_id": "page-0564-block-0014",
+      "order": 14,
+      "text": "■\n■Box 5.1 summarises medication treatment for depression in children and adolescents.\n",
+      "bbox": [
+        47.999900817871094,
+        578.5504150390625,
+        416.6098327636719,
+        590.2704467773438
+      ],
+      "text_sha256": "90843311e3ab53fcda26ed5f5b3b240934a44af604fafec7a4acb545402e6f86"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

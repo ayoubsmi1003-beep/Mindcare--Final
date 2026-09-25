@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0456",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 456,
+  "source_page_index": 455,
+  "source_page_display": 456,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    435\nCHAPTER 3\n\t126.\t Bloch MH, et al. Effects of ketamine in treatment-refractory obsessive-compulsive disorder. Biol Psychiatry 2012; 72:964–970.\n\t127.\t Koran LM, et al. Double-blind treatment with oral morphine in treatment-resistant obsessive-compulsive disorder. J Clin Psychiatry 2005; \n66:353–359.\n\t128.\t National Institute for Health and Clinical Excellence. Social anxiety disorder: recognition, assessment and treatment. Clinical Guidance \n[CG159]. 2013 (Last updated March 2020); https://www.nice.org.uk/guidance/cg159\n\t129.\t Liu X, et al. Efficacy and tolerability of fluvoxamine in adults with social anxiety disorder: a meta-analysis. Medicine (Baltimore) 2018; \n97:e11547.\n\t130.\t Baldwin DS, et al. Efficacy of escitalopram in the treatment of social anxiety disorder: a meta-analysis versus placebo. Eur \nNeuropsychopharmacol 2016; 26:1062–1069.\n\t131.\t Careri JM, et al. A 12-week double-blind, placebo-controlled, flexible-dose trial of vilazodone in generalized social anxiety disorder. \nPrimary Care Companion CNS Disord 2015; 17:10.4088/PCC.15m01831.\n\t132.\t Blanco C, et al. The evidence-based pharmacotherapy of social anxiety disorder. Int J Neuropsychopharmacol 2013; 16:235–249.\n\t133.\t Pollack MH, et al. A double-blind randomized controlled trial of augmentation and switch strategies for refractory social anxiety disorder. \nAm J Psychiatry 2014; 171:44–53.\n\t134.\t Simon NM, et al. An open-label study of levetiracetam for the treatment of social anxiety disorder. J Clin Psychiatry 2004; \n65:1219–1222.\n\t135.\t Blanco C, et al. A placebo-controlled trial of phenelzine, cognitive behavioral group therapy, and their combination for social anxiety dis-\norder. Arch Gen Psychiatry 2010; 67:286–295.\n\t136.\t Taylor JH, et al. Ketamine for social anxiety disorder: a randomized, placebo-controlled crossover trial. Neuropsychopharmacology 2018; \n43:325–333.\n\t137.\t Van Ameringen M, et al. An open trial of topiramate in the treatment of generalized social phobia. J Clin Psychiatry 2004; \n65:1674–1678.\n\t138.\t Kinrys G, et al. Valproic acid for the treatment of social anxiety disorder. Int Clin Psychopharmacol 2003; 18:169–172.\n",
+  "raw_text_sha256": "a6b3b8a6cb72572a6ddfd7b1f464a94e178054ffb6e723e4a1fdec625a55dfec",
+  "coordinates_sha256": "21005da4c75238934165f4d3d80452a8754566bed0e4830e394dac652a8ddbec",
+  "block_sequence_sha256": "ffaa7c20ea87448094f76d6f97c3a0ff6ec2070c0bf9e894035b0330ac39e0e4",
+  "blocks": [
+    {
+      "block_id": "page-0456-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    435\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "f41c30805003e2e31c474fa213aa803c0384a2a60719ad83a5adf5024bfbfded"
+    },
+    {
+      "block_id": "page-0456-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0456-block-0002",
+      "order": 2,
+      "text": "\t126.\t Bloch MH, et al. Effects of ketamine in treatment-refractory obsessive-compulsive disorder. Biol Psychiatry 2012; 72:964–970.\n\t127.\t Koran LM, et al. Double-blind treatment with oral morphine in treatment-resistant obsessive-compulsive disorder. J Clin Psychiatry 2005; \n",
+      "bbox": [
+        48.0,
+        63.12638854980469,
+        421.6861572265625,
+        79.30238342285156
+      ],
+      "text_sha256": "0d9d66f6a80108f8cecbacd8336aa4bc40ec8bb2b01841d1c67fed1790e3d955"
+    },
+    {
+      "block_id": "page-0456-block-0003",
+      "order": 3,
+      "text": "66:353–359.\n\t128.\t National Institute for Health and Clinical Excellence. Social anxiety disorder: recognition, assessment and treatment. Clinical Guidance \n",
+      "bbox": [
+        48.0,
+        81.12638854980469,
+        421.67413330078125,
+        97.30238342285156
+      ],
+      "text_sha256": "0294aea25740e5de600a996ede8f910bc6e523fd8d28339dd06948f74ca2ee10"
+    },
+    {
+      "block_id": "page-0456-block-0004",
+      "order": 4,
+      "text": "[CG159]. 2013 (Last updated March 2020); https://www.nice.org.uk/guidance/cg159\n\t129.\t Liu X, et al. Efficacy and tolerability of fluvoxamine in adults with social anxiety disorder: a meta-analysis. Medicine (Baltimore) 2018; \n",
+      "bbox": [
+        48.0,
+        99.2703857421875,
+        421.65008544921875,
+        115.30238342285156
+      ],
+      "text_sha256": "fb02d13d148be82cada5b07079e1366e2ef340d93e699274b1514c5576eebd15"
+    },
+    {
+      "block_id": "page-0456-block-0005",
+      "order": 5,
+      "text": "97:e11547.\n\t130.\t Baldwin DS, et al. Efficacy of escitalopram in the treatment of social anxiety disorder: a meta-analysis versus placebo. Eur \n",
+      "bbox": [
+        48.0,
+        117.12638854980469,
+        421.63818359375,
+        133.30238342285156
+      ],
+      "text_sha256": "ecc7cafad999d8a0e83b69be695012fd3959222564ef42daf188b6a75b24660e"
+    },
+    {
+      "block_id": "page-0456-block-0006",
+      "order": 6,
+      "text": "Neuropsychopharmacol 2016; 26:1062–1069.\n\t131.\t Careri JM, et al. A 12-week double-blind, placebo-controlled, flexible-dose trial of vilazodone in generalized social anxiety disorder. \n",
+      "bbox": [
+        48.0,
+        135.1263885498047,
+        421.6319274902344,
+        151.30238342285156
+      ],
+      "text_sha256": "f2ec92b951fa6f75e8e5dd1b94ff94ea339a495da9b9539b089e4e82745915b1"
+    },
+    {
+      "block_id": "page-0456-block-0007",
+      "order": 7,
+      "text": "Primary Care Companion CNS Disord 2015; 17:10.4088/PCC.15m01831.\n\t132.\t Blanco C, et al. The evidence-based pharmacotherapy of social anxiety disorder. Int J Neuropsychopharmacol 2013; 16:235–249.\n\t133.\t Pollack MH, et al. A double-blind randomized controlled trial of augmentation and switch strategies for refractory social anxiety disorder. \n",
+      "bbox": [
+        48.0,
+        153.1263885498047,
+        421.6679382324219,
+        178.30238342285156
+      ],
+      "text_sha256": "c2b9fa7b2a74a7e50770e9b19f6485f0d5b42d958e99e1e541ae0315936ba217"
+    },
+    {
+      "block_id": "page-0456-block-0008",
+      "order": 8,
+      "text": "Am J Psychiatry 2014; 171:44–53.\n\t134.\t Simon NM, et al. An open-label study of levetiracetam for the treatment of social anxiety disorder. J Clin Psychiatry 2004; \n",
+      "bbox": [
+        48.0,
+        180.1263885498047,
+        421.6260681152344,
+        196.30238342285156
+      ],
+      "text_sha256": "48c5f3a651e20cc1d2cda23fcc8c3cab25fea60f3be763c7db5478d49f829674"
+    },
+    {
+      "block_id": "page-0456-block-0009",
+      "order": 9,
+      "text": "65:1219–1222.\n\t135.\t Blanco C, et al. A placebo-controlled trial of phenelzine, cognitive behavioral group therapy, and their combination for social anxiety dis-\n",
+      "bbox": [
+        48.0,
+        198.1263885498047,
+        420.00006103515625,
+        214.30238342285156
+      ],
+      "text_sha256": "4cbf8a1499d807e4e0645e9f7b959bccffaafab71794a7abc90b1abc42e99bd2"
+    },
+    {
+      "block_id": "page-0456-block-0010",
+      "order": 10,
+      "text": "order. Arch Gen Psychiatry 2010; 67:286–295.\n\t136.\t Taylor JH, et al. Ketamine for social anxiety disorder: a randomized, placebo-controlled crossover trial. Neuropsychopharmacology 2018; \n",
+      "bbox": [
+        48.0,
+        216.1263885498047,
+        421.6800842285156,
+        232.30238342285156
+      ],
+      "text_sha256": "b774cdb83b0225aabfb4a1ed186f6388052c8956fc5ee874f25c4c5418eb8aa0"
+    },
+    {
+      "block_id": "page-0456-block-0011",
+      "order": 11,
+      "text": "43:325–333.\n\t137.\t Van Ameringen M, et al. An open trial of topiramate in the treatment of generalized social phobia. J Clin Psychiatry 2004; \n",
+      "bbox": [
+        48.0,
+        234.1263885498047,
+        421.63189697265625,
+        250.30238342285156
+      ],
+      "text_sha256": "e68700511bd80777b443e9162bffb5c888f0867dc3500c76bf51f07d9d62aaa5"
+    },
+    {
+      "block_id": "page-0456-block-0012",
+      "order": 12,
+      "text": "65:1674–1678.\n\t138.\t Kinrys G, et al. Valproic acid for the treatment of social anxiety disorder. Int Clin Psychopharmacol 2003; 18:169–172.\n",
+      "bbox": [
+        48.0,
+        252.1263885498047,
+        372.94793701171875,
+        268.3023986816406
+      ],
+      "text_sha256": "e446c5ddd970a8f2a2dda0169d54c3611cef02b485d586089860e790ed7b6178"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

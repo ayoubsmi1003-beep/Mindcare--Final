@@ -1,0 +1,431 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0846",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 846,
+  "source_page_index": 845,
+  "source_page_display": 846,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    825\nCHAPTER 10\nLithium around the time of bariatric surgery\nThe continued use of lithium throughout the perioperative phases of bariatric surgery requires \nparticularly close monitoring. The following guidance is based on available case reports and expert \nopinion:40\n■\n■Monitor lithium plasma levels weekly in during pre-operative phase and for 6 weeks post-sur-\ngery (as fluid intake gradually increases), 2-weekly for 6 months and monthly thereafter. Resume \nusual lithium monitoring 1 year post-bariatric surgery.\n■\n■If plasma levels increase by >25% or approach 1.2mmol/L, consider decreasing lithium dose.\n■\n■Withhold lithium if signs of toxicity are present and review dose.\n■\n■Monitor mental state periodically, using formal rating scales if possible.\n■\n■Encourage patient to drink 2.5–3 litres of fluid per day in the pre-operative phase (including \nliquid meal replacement).\nOther drugs\nTable 10.13  Miscellaneous agents in bariatric surgery\nDrug\nSummary of evidence and considerations\nBenzodiazepines42–45\n■\n■Bioavailability probably unaffected, shorter time to peak concentration\nMethadone46\n■\n■Substantial increase in bioavailability after sleeve gastrectomy in one case report, possi-\nbly related increased rate of gastric emptying; consider plasma level and QT monitoring\nMethylphenidate47,48\n■\n■Conflicting limited data; one case report of reduced treatment efficacy after RYGB \nthat resolved after switching to transdermal patch suggesting reduced oral bioavail-\nability; another reports signs of toxicity\nFBC, full blood count; LFT, liver function test; RYGB, Roux-en-Y gastric bypass.\nGeneral summary\n■\n■The literature on mood stabilisers after bariatric surgery is limited to a few case reports; the use of lithium \nrequires particular care owing to its narrow therapeutic index.\n■\n■The absorption of oral contraceptives may be reduced after bariatric surgery.41 In patients prescribed terato-\ngenic mood stabilisers, non-oral methods of contraception are recommended.\nValproate7,34\n■\n■Single case report suggests that absorption may be significantly reduced after malab-\nsorptive procedures; no data on restrictive procedures\n■\n■Dose reductions may be necessary after weight loss (plasma levels related to bodyweight)\n■\n■Switch to liquid preparation before surgery or if malabsorption suspected on controlled \nrelease/enteric coated tablets\n■\n■Baseline plasma valproate levels, FBC and LFTs with ongoing monitoring recommended\n■\n■Monitor for clinical signs of poor tolerability, possibly occurring at normal plasma levels\nTable 10.12  (Continued)\nDrug\nSummary of evidence and considerations\n",
+  "raw_text_sha256": "826b5b311e86462ff8ba602e7e9729d2a558b136bbcb97ed59027f4243593074",
+  "coordinates_sha256": "509e7d9230d30baab1d3741a5d928cde32935c1a989546c65a618637a44ee7fb",
+  "block_sequence_sha256": "1c20c6aa698de3857001f95e5d957c60a0ba3b9d30a0d848d160e755d749538e",
+  "blocks": [
+    {
+      "block_id": "page-0846-block-0000",
+      "order": 0,
+      "text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    825\n",
+      "bbox": [
+        47.999698638916016,
+        31.395221710205078,
+        419.96697998046875,
+        41.0272216796875
+      ],
+      "text_sha256": "3991df290609f626130f5ea6013cafd76848666fd1a2dc20f36f9541d0287b59"
+    },
+    {
+      "block_id": "page-0846-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        454.4096984863281,
+        75.763671875,
+        463.88970947265625,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0846-block-0002",
+      "order": 2,
+      "text": "Lithium around the time of bariatric surgery\n",
+      "bbox": [
+        55.5,
+        285.1853942871094,
+        231.5265350341797,
+        295.2579040527344
+      ],
+      "text_sha256": "5807a8481fc5b7e7b4de7ea193e13899f43006bf4f9dea196096703d91d62ed5"
+    },
+    {
+      "block_id": "page-0846-block-0003",
+      "order": 3,
+      "text": "The continued use of lithium throughout the perioperative phases of bariatric surgery requires \nparticularly close monitoring. The following guidance is based on available case reports and expert \nopinion:40\n",
+      "bbox": [
+        55.5,
+        304.7184143066406,
+        413.3415832519531,
+        334.57891845703125
+      ],
+      "text_sha256": "1c63464b87afacc6afba76b6003ef072333a60e9471508d3ff98ec0f8038df93"
+    },
+    {
+      "block_id": "page-0846-block-0004",
+      "order": 4,
+      "text": "■\n■Monitor lithium plasma levels weekly in during pre-operative phase and for 6 weeks post-sur-\n",
+      "bbox": [
+        55.499900817871094,
+        340.7143859863281,
+        401.53515625,
+        350.5828857421875
+      ],
+      "text_sha256": "78468a776763c00cf2e5c69542245de50086ce6b4f283882987402aafd96a276"
+    },
+    {
+      "block_id": "page-0846-block-0005",
+      "order": 5,
+      "text": "gery (as fluid intake gradually increases), 2-weekly for 6 months and monthly thereafter. Resume \nusual lithium monitoring 1 year post-bariatric surgery.\n",
+      "bbox": [
+        64.0,
+        350.71038818359375,
+        415.2287292480469,
+        370.57489013671875
+      ],
+      "text_sha256": "42f9358de198ad59f5e754af111b948764cdf99c93ef0a86d89ee7916ebfb675"
+    },
+    {
+      "block_id": "page-0846-block-0006",
+      "order": 6,
+      "text": "■\n■If plasma levels increase by >25% or approach 1.2mmol/L, consider decreasing lithium dose.\n",
+      "bbox": [
+        55.499900817871094,
+        370.7143859863281,
+        398.296630859375,
+        380.5828857421875
+      ],
+      "text_sha256": "b57bb002d7b2744f8c169c25a60f8884f0496849df24874d5f13e9c8e5f334db"
+    },
+    {
+      "block_id": "page-0846-block-0007",
+      "order": 7,
+      "text": "■\n■Withhold lithium if signs of toxicity are present and review dose.\n",
+      "bbox": [
+        55.499900817871094,
+        380.7143859863281,
+        296.5685729980469,
+        390.5828857421875
+      ],
+      "text_sha256": "2ea93356daa0d0837b052b9ee4209615da709ef23b0578f0cbf8091d8ca68e16"
+    },
+    {
+      "block_id": "page-0846-block-0008",
+      "order": 8,
+      "text": "■\n■Monitor mental state periodically, using formal rating scales if possible.\n",
+      "bbox": [
+        55.499900817871094,
+        390.7143859863281,
+        320.12200927734375,
+        400.5828857421875
+      ],
+      "text_sha256": "725dfa01454732046a59ae39cc44e2a775c3b34852eed6bab6b5be32fe39e664"
+    },
+    {
+      "block_id": "page-0846-block-0009",
+      "order": 9,
+      "text": "■\n■Encourage patient to drink 2.5–3 litres of fluid per day in the pre-operative phase (including \n",
+      "bbox": [
+        55.499900817871094,
+        400.7143859863281,
+        398.0926818847656,
+        410.5828857421875
+      ],
+      "text_sha256": "4f19e7fa899ae009e8f82ea5d52d89da0faa7b24f2c4bb150f70648c5c69ac9a"
+    },
+    {
+      "block_id": "page-0846-block-0010",
+      "order": 10,
+      "text": "liquid meal replacement).\n",
+      "bbox": [
+        64.0,
+        410.71038818359375,
+        155.4600067138672,
+        420.5788879394531
+      ],
+      "text_sha256": "d21728b6577e203465852d52f812cf7285590348ece1de1602727d33a19399ea"
+    },
+    {
+      "block_id": "page-0846-block-0011",
+      "order": 11,
+      "text": "Other drugs\n",
+      "bbox": [
+        47.999698638916016,
+        450.6385803222656,
+        104.6697006225586,
+        462.48858642578125
+      ],
+      "text_sha256": "3b2e081737a6c99cc29e76c99e42cc9c981fa665531b664fe829a17d59e94f54"
+    },
+    {
+      "block_id": "page-0846-block-0012",
+      "order": 12,
+      "text": "Table 10.13  Miscellaneous agents in bariatric surgery\n",
+      "bbox": [
+        53.999698638916016,
+        476.97607421875,
+        226.1171875,
+        485.86358642578125
+      ],
+      "text_sha256": "c5cb6fdeb0a928f1d260fbf28c7d0367fa6ba02e7df3ceab9342121a7d6036df"
+    },
+    {
+      "block_id": "page-0846-block-0013",
+      "order": 13,
+      "text": "Drug\nSummary of evidence and considerations\n",
+      "bbox": [
+        51.999698638916016,
+        497.2110595703125,
+        277.02972412109375,
+        506.09857177734375
+      ],
+      "text_sha256": "47d7fed9520ca7f9585813edc3d37aba02b7078419841ac7bcc1457474631550"
+    },
+    {
+      "block_id": "page-0846-block-0014",
+      "order": 14,
+      "text": "Benzodiazepines42–45\n■\n■Bioavailability probably unaffected, shorter time to peak concentration\n",
+      "bbox": [
+        48.002197265625,
+        517.3335571289062,
+        361.7372131347656,
+        528.238525390625
+      ],
+      "text_sha256": "3a5f0782417b87a14ea7c8cc2435e0a895b26565c251ad2cc19f39775769efda"
+    },
+    {
+      "block_id": "page-0846-block-0015",
+      "order": 15,
+      "text": "Methadone46\n■\n■Substantial increase in bioavailability after sleeve gastrectomy in one case report, possi-\n",
+      "bbox": [
+        47.99720001220703,
+        537.4784545898438,
+        412.74462890625,
+        546.365966796875
+      ],
+      "text_sha256": "5dfc6763050b0331348228e400404e6e88641029b6c10b73f186252ba242239a"
+    },
+    {
+      "block_id": "page-0846-block-0016",
+      "order": 16,
+      "text": "bly related increased rate of gastric emptying; consider plasma level and QT monitoring\n",
+      "bbox": [
+        136.99969482421875,
+        549.656005859375,
+        413.7872009277344,
+        558.363525390625
+      ],
+      "text_sha256": "da8960ec3ebc0c78970c0931259615215cf80a93b68f33ef17e66b9c31605a6d"
+    },
+    {
+      "block_id": "page-0846-block-0017",
+      "order": 17,
+      "text": "Methylphenidate47,48\n■\n■Conflicting limited data; one case report of reduced treatment efficacy after RYGB \n",
+      "bbox": [
+        47.99720001220703,
+        567.6034545898438,
+        401.3746337890625,
+        576.490966796875
+      ],
+      "text_sha256": "ef1fc404256274fc2a14004e87ba6302106cee82d48a84dba2424a0ef1c2a532"
+    },
+    {
+      "block_id": "page-0846-block-0018",
+      "order": 18,
+      "text": "that resolved after switching to transdermal patch suggesting reduced oral bioavail-\nability; another reports signs of toxicity\n",
+      "bbox": [
+        136.99969482421875,
+        577.7784423828125,
+        403.8348083496094,
+        596.4835205078125
+      ],
+      "text_sha256": "e77e7121be39edc7234ff6779bcfb229fb0f9ae712e654de3a4d4476cb33364b"
+    },
+    {
+      "block_id": "page-0846-block-0019",
+      "order": 19,
+      "text": "FBC, full blood count; LFT, liver function test; RYGB, Roux-en-Y gastric bypass.\n",
+      "bbox": [
+        47.99720001220703,
+        188.5435028076172,
+        297.1022033691406,
+        197.25100708007812
+      ],
+      "text_sha256": "a9987266e54c1a626adc5abbd47720015b21bc0d7686873a397fad5145f9e3e4"
+    },
+    {
+      "block_id": "page-0846-block-0020",
+      "order": 20,
+      "text": "General summary\n",
+      "bbox": [
+        51.99470138549805,
+        209.7534942626953,
+        114.0947036743164,
+        218.6409912109375
+      ],
+      "text_sha256": "9bf043f345aa3ee6d953b168a1cd59f619c6a5102c47bc779300eee69d90bf8a"
+    },
+    {
+      "block_id": "page-0846-block-0021",
+      "order": 21,
+      "text": "■\n■The literature on mood stabilisers after bariatric surgery is limited to a few case reports; the use of lithium \n",
+      "bbox": [
+        51.999900817871094,
+        219.93299865722656,
+        399.48992919921875,
+        228.6405029296875
+      ],
+      "text_sha256": "088c8b4da5e75425fa6dbdfc2712909683e2d47f331b8f594fbd35a75321ebf9"
+    },
+    {
+      "block_id": "page-0846-block-0022",
+      "order": 22,
+      "text": "requires particular care owing to its narrow therapeutic index.\n",
+      "bbox": [
+        61.0,
+        229.9304962158203,
+        257.9725036621094,
+        238.63800048828125
+      ],
+      "text_sha256": "1e5b2334bc6b552076fdf18bbd8c5b6d3a8b83367a2f3fdd4ed6844acf7fd499"
+    },
+    {
+      "block_id": "page-0846-block-0023",
+      "order": 23,
+      "text": "■\n■The absorption of oral contraceptives may be reduced after bariatric surgery.41 In patients prescribed terato-\n",
+      "bbox": [
+        51.999900817871094,
+        239.93299865722656,
+        403.6595764160156,
+        248.6405029296875
+      ],
+      "text_sha256": "72744c76e9081cb3842a257e9a1ba7c44d299a7272694297936dc0262387c36d"
+    },
+    {
+      "block_id": "page-0846-block-0024",
+      "order": 24,
+      "text": "genic mood stabilisers, non-oral methods of contraception are recommended.\n",
+      "bbox": [
+        60.99949645996094,
+        249.9304962158203,
+        309.9319763183594,
+        258.63800048828125
+      ],
+      "text_sha256": "3f1ff8e6f63b1670c760f7867cd4d935387fde38c4b062fd13f17bfb3407c84e"
+    },
+    {
+      "block_id": "page-0846-block-0025",
+      "order": 25,
+      "text": "Valproate7,34\n■\n■Single case report suggests that absorption may be significantly reduced after malab-\n",
+      "bbox": [
+        52.0,
+        106.48970031738281,
+        402.425048828125,
+        115.377197265625
+      ],
+      "text_sha256": "7e932cf35a6969a9a012da4c2c8188b509703895f5de1f1955bc5d272462de9b"
+    },
+    {
+      "block_id": "page-0846-block-0026",
+      "order": 26,
+      "text": "sorptive procedures; no data on restrictive procedures\n",
+      "bbox": [
+        131.0,
+        116.66719818115234,
+        302.00750732421875,
+        125.37469482421875
+      ],
+      "text_sha256": "72bfb422a268fac39163ef62dc2d8af4cfd905c0aabc970fcf845f9e250b6af9"
+    },
+    {
+      "block_id": "page-0846-block-0027",
+      "order": 27,
+      "text": "■\n■Dose reductions may be necessary after weight loss (plasma levels related to bodyweight)\n",
+      "bbox": [
+        121.9999008178711,
+        126.6697006225586,
+        415.7601013183594,
+        135.377197265625
+      ],
+      "text_sha256": "13213036383546f2c81f47bb549206fd8e326ff926cdd55baa5880e7a8be840c"
+    },
+    {
+      "block_id": "page-0846-block-0028",
+      "order": 28,
+      "text": "■\n■Switch to liquid preparation before surgery or if malabsorption suspected on controlled \n",
+      "bbox": [
+        121.9999008178711,
+        136.66969299316406,
+        411.0576171875,
+        145.377197265625
+      ],
+      "text_sha256": "cb2c8bc77979df672c8914c1ddb326269a1046f8b4260061a1c3a3d8cbd2135a"
+    },
+    {
+      "block_id": "page-0846-block-0029",
+      "order": 29,
+      "text": "release/enteric coated tablets\n",
+      "bbox": [
+        131.0,
+        146.6671905517578,
+        223.7749786376953,
+        155.37469482421875
+      ],
+      "text_sha256": "1d9bbcc2a864887a6636e764944e4b9d350a9c49f3912d0668d2794c032b8b82"
+    },
+    {
+      "block_id": "page-0846-block-0030",
+      "order": 30,
+      "text": "■\n■Baseline plasma valproate levels, FBC and LFTs with ongoing monitoring recommended\n",
+      "bbox": [
+        121.9999008178711,
+        156.66969299316406,
+        408.275146484375,
+        165.377197265625
+      ],
+      "text_sha256": "ddd1740fdb8241319ffce185fffdfdd32808137e3c8ea7359646f60079510186"
+    },
+    {
+      "block_id": "page-0846-block-0031",
+      "order": 31,
+      "text": "■\n■Monitor for clinical signs of poor tolerability, possibly occurring at normal plasma levels\n",
+      "bbox": [
+        121.9999008178711,
+        166.66969299316406,
+        407.8250732421875,
+        175.377197265625
+      ],
+      "text_sha256": "493063c4f1ec82798c058ed710727cb5f8759d58540309b3dd6ed456a7cd8f04"
+    },
+    {
+      "block_id": "page-0846-block-0032",
+      "order": 32,
+      "text": "Table 10.12  (Continued)\n",
+      "bbox": [
+        54.0,
+        70.08790588378906,
+        134.45999145507812,
+        78.97540283203125
+      ],
+      "text_sha256": "bf9c405f0457ee51c4e5f025762cd217dff0add745eb6b173123fa3a5f5ce267"
+    },
+    {
+      "block_id": "page-0846-block-0033",
+      "order": 33,
+      "text": "Drug\nSummary of evidence and considerations\n",
+      "bbox": [
+        51.99959945678711,
+        88.87568664550781,
+        267.0246276855469,
+        97.76318359375
+      ],
+      "text_sha256": "47d7fed9520ca7f9585813edc3d37aba02b7078419841ac7bcc1457474631550"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

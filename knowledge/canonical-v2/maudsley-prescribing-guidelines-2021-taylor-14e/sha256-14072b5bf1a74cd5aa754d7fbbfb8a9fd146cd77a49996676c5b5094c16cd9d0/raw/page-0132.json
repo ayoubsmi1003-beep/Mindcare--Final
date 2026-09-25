@@ -1,0 +1,1259 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0132",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 132,
+  "source_page_index": 131,
+  "source_page_display": 132,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Dystonia (uncontrolled \nmuscular spasm)\nPseudoparkinsonism \n(bradykinesia, tremor, etc.)\nAkathisia \n(restlessness)16\nTardive dyskinesia \n(abnormal involuntary movements)\nTime taken to\ndevelop\nAcute dystonia can occur within \nhours of starting antipsychotic \nmedication (minutes if the IM or IV \nroute is used).\nTardive dystonia occurs after \nmonths to years of antipsychotic \ntreatment.\nDays to weeks after\nantipsychotic medication is\nstarted or the dose is\nincreased\nAcute akathisia occurs within hours \nto weeks of starting antipsychotic \nmedication or increasing the dose.\nAkathisia that has persisted for \nseveral months or so is called \n‘chronic akathisia’. Tardive akathisia \ntends to occur later in treatment \nand may be exacerbated or \nprovoked by antipsychotic dose \nreduction or withdrawal.16\nMonths to years\nThe proportion of cases showing \nreversibility on cessation of antipsychotic \nmedication is unclear and may partly \ndepend on age20\nTreatment\nAnticholinergic drugs\ngiven orally, IM or IV\ndepending on the severity of \nsymptoms20\n■\n■Remember the patient may be \nunable to swallow\n■\n■Response to IV administration \nwill be seen within 5 minutes\n■\n■Response to IM administration \ntakes around 20 minutes\n■\n■Tardive dystonia may respond to \nECT35,36\n■\n■Where severe symptoms do not \nrespond to simpler measures \nincluding switching to an anti-\npsychotic with a low propensity \nfor EPS, botulinum toxin may be \neffective37,38\nSeveral options are\navailable depending on the clinical \ncircumstances:\n■\n■Reduce the antipsychotic dose\n■\n■Change to an antipsychotic medi-\ncation with a lower propensity for \npseudoparkinsonism (see section \non relative liability of antipsychotic \nmedications for adverse effects)\n■\n■Prescribe an anticholinergic. The \nmajority of patients do not require \nlong-term anticholinergic agents. \nUse should be reviewed at least \nevery 3 months. Do not prescribe \nat night (symptoms usually absent \nduring sleep)\n■\n■Reduce the antipsychotic dose\n■\n■Change to an antipsychotic drug \nwith lower propensity for akathi-\nsia (see sections on akathisia and \nrelative liability of antipsychotic \nmedications for adverse effects)\n■\n■A reduction in symptoms may be \nseen with:39–41 low-dose propran-\nolol, 30–80mg/day, clonazepam \n(low dose), 5HT2 antagonists \nsuch as: cyproheptadine,36 \nmirtazapine,40 trazodone,42,43 \nmianserin,44 and cyprohepta-\ndine36 may help, as may possibly \ndiphenhydramine.45\nAll are unlicensed for this indication\nAnticholinergics are generally \nunhelpful unless akathisia is part of \na general EPS spectrum46\n■\n■Stop anticholinergic if prescribed\n■\n■Reduce dose of antipsychotic medication\n■\n■Change to an antipsychotic with lower \npropensity for TD,47–50 note that data are \nconflicting.51,52\n■\n■Clozapine is the antipsychotic most \nlikely to be associated with resolution of \nsymptoms.53,54 Quetiapine may also be \nuseful in this regard.55\n■\n■Both valbenazine and deutetrabenazine \nhave a positive risk-benefit balance as \nadd-on treatments53,56–60\n■\n■There is also some evidence for \ntetrabenazine and ginkgo biloba61 as \nadd-on treatments. For other treatment \noptions60,62 the review by the American \nAcademy of Neurology63 and the section \non tardive dyskinesia\n",
+  "raw_text_sha256": "57653779886847cbf42b5262e228017aeb4a5a6bc80ba736289e8c87607b8891",
+  "coordinates_sha256": "d826042f667ad033a63b389da69731465f40f55c866050b3de579aa9f48395c5",
+  "block_sequence_sha256": "37555981bcf462bc5940db9a5711b551bab2317fc30a53118546bf1ef68dcad3",
+  "blocks": [
+    {
+      "block_id": "page-0132-block-0000",
+      "order": 0,
+      "text": "Dystonia (uncontrolled \n",
+      "bbox": [
+        54.22159957885742,
+        482.0549621582031,
+        63.109100341796875,
+        564.8400268554688
+      ],
+      "text_sha256": "0001397981bca82c28a804a94ae61bdd6da1fc821675eb9058ffc8a6ce9b21de"
+    },
+    {
+      "block_id": "page-0132-block-0001",
+      "order": 1,
+      "text": "muscular spasm)\nPseudoparkinsonism \n",
+      "bbox": [
+        54.22159957885742,
+        370.2525939941406,
+        73.10659790039062,
+        564.8400268554688
+      ],
+      "text_sha256": "cb0f4fe4b641b45c9f8727716126b221b265416231057b16dd9a3008879e0953"
+    },
+    {
+      "block_id": "page-0132-block-0002",
+      "order": 2,
+      "text": "(bradykinesia, tremor, etc.)\nAkathisia \n",
+      "bbox": [
+        54.22159957885742,
+        280.83001708984375,
+        73.10659790039062,
+        444.84002685546875
+      ],
+      "text_sha256": "666c5563cb5071a2144a8f8e1963ead50d21828f68296af53ed043cb6159b2f2"
+    },
+    {
+      "block_id": "page-0132-block-0003",
+      "order": 3,
+      "text": "(restlessness)16\nTardive dyskinesia \n",
+      "bbox": [
+        54.22159957885742,
+        127.8545150756836,
+        73.10659790039062,
+        315.84002685546875
+      ],
+      "text_sha256": "9fc425ec06fc158a6698730df339d00e88f1e67cecc372bf3ceb597684478c97"
+    },
+    {
+      "block_id": "page-0132-block-0004",
+      "order": 4,
+      "text": "(abnormal involuntary movements)\n",
+      "bbox": [
+        64.21910095214844,
+        68.97198486328125,
+        73.10659790039062,
+        193.99700927734375
+      ],
+      "text_sha256": "d1cf8006c4bf24a13a68e4578d18be528fa29d52d4fa939d742c6f34ea80a208"
+    },
+    {
+      "block_id": "page-0132-block-0005",
+      "order": 5,
+      "text": "Time taken to\n",
+      "bbox": [
+        80.99659729003906,
+        583.5694580078125,
+        89.88409423828125,
+        632.342041015625
+      ],
+      "text_sha256": "3d6d3134ec5626f1e0e8e437e38d98251d2a08121e0a842de9941b9f095608ee"
+    },
+    {
+      "block_id": "page-0132-block-0006",
+      "order": 6,
+      "text": "develop\nAcute dystonia can occur within \n",
+      "bbox": [
+        81.17659759521484,
+        460.2469787597656,
+        99.881591796875,
+        632.342041015625
+      ],
+      "text_sha256": "49a36c40084e30a409dfc6e3eed0a8c500769995c0e8f0f3c15b1523aa05557a"
+    },
+    {
+      "block_id": "page-0132-block-0007",
+      "order": 7,
+      "text": "hours of starting antipsychotic \n",
+      "bbox": [
+        91.1740951538086,
+        466.0820617675781,
+        99.881591796875,
+        564.842041015625
+      ],
+      "text_sha256": "c97bdfdbbba794a52327524b9cfa18651b3ed34feb62b399f6cbd516f3a02cb7"
+    },
+    {
+      "block_id": "page-0132-block-0008",
+      "order": 8,
+      "text": "medication (minutes if the IM or IV \n",
+      "bbox": [
+        101.17159271240234,
+        451.5020446777344,
+        109.87908935546875,
+        564.842041015625
+      ],
+      "text_sha256": "39c1fe7e28fbae16ac037c6202bf42adf5ce72621b210781ca6c5ff5b3db3359"
+    },
+    {
+      "block_id": "page-0132-block-0009",
+      "order": 9,
+      "text": "route is used).\n",
+      "bbox": [
+        111.1690902709961,
+        519.9619750976562,
+        119.8765869140625,
+        564.842041015625
+      ],
+      "text_sha256": "e263fab95fc8e21144bf7927dbe8de2195a515d83fcd585a31cc1e3f208ff449"
+    },
+    {
+      "block_id": "page-0132-block-0010",
+      "order": 10,
+      "text": "Tardive dystonia occurs after \n",
+      "bbox": [
+        121.16658782958984,
+        472.4795227050781,
+        129.87408447265625,
+        564.842041015625
+      ],
+      "text_sha256": "707e9bdd5114d55066bc26b76c2cbe097c8c3033912b9ef0b2a69d1141bc9833"
+    },
+    {
+      "block_id": "page-0132-block-0011",
+      "order": 11,
+      "text": "months to years of antipsychotic \n",
+      "bbox": [
+        131.16407775878906,
+        459.0020446777344,
+        139.87158203125,
+        564.842041015625
+      ],
+      "text_sha256": "72c1e989e03033aa22952e7f7e05f9de8c960a9898b549179ac8bcacf203fb9f"
+    },
+    {
+      "block_id": "page-0132-block-0012",
+      "order": 12,
+      "text": "treatment.\n",
+      "bbox": [
+        141.1615753173828,
+        531.2344970703125,
+        149.86907958984375,
+        564.842041015625
+      ],
+      "text_sha256": "c7ee1e800687c10edbbb02024eb4f31c4b3fa5cf04cca37d3a200a41e1c311f0"
+    },
+    {
+      "block_id": "page-0132-block-0013",
+      "order": 13,
+      "text": "Days to weeks after\n",
+      "bbox": [
+        81.16158294677734,
+        381.9245300292969,
+        89.86907958984375,
+        444.8420104980469
+      ],
+      "text_sha256": "8b9dd61ab8cf2f0c6de708947069101d2cd9c8927a36fdf12f639ca50ce08356"
+    },
+    {
+      "block_id": "page-0132-block-0014",
+      "order": 14,
+      "text": "antipsychotic medication is\n",
+      "bbox": [
+        91.1590805053711,
+        359.0119323730469,
+        99.8665771484375,
+        444.8420104980469
+      ],
+      "text_sha256": "bd72ba08683ab0e2540ff36ed349933086c67f052be3483de25617e39aca3a50"
+    },
+    {
+      "block_id": "page-0132-block-0015",
+      "order": 15,
+      "text": "started or the dose is\n",
+      "bbox": [
+        101.15657806396484,
+        377.7469482421875,
+        109.86407470703125,
+        444.8420104980469
+      ],
+      "text_sha256": "66239eafe33a11eca04ad0f89188956ecf6e0f1cc999e5a518baf9d22b59c28c"
+    },
+    {
+      "block_id": "page-0132-block-0016",
+      "order": 16,
+      "text": "increased\n",
+      "bbox": [
+        111.1540756225586,
+        414.97698974609375,
+        119.861572265625,
+        444.8420104980469
+      ],
+      "text_sha256": "dbc41a553ef899268c2433e6ba7ef28eb9e5134e0f11db32143c3d346e80b295"
+    },
+    {
+      "block_id": "page-0132-block-0017",
+      "order": 17,
+      "text": "Acute akathisia occurs within hours \n",
+      "bbox": [
+        81.1540756225586,
+        200.4095001220703,
+        89.861572265625,
+        315.8420104980469
+      ],
+      "text_sha256": "3ae0359851a9b216c0512288e85e93b648ca8b6601207a110d7045c133e13539"
+    },
+    {
+      "block_id": "page-0132-block-0018",
+      "order": 18,
+      "text": "to weeks of starting antipsychotic \n",
+      "bbox": [
+        91.15157318115234,
+        206.2519073486328,
+        99.85906982421875,
+        315.8420104980469
+      ],
+      "text_sha256": "9c391bb9b2ea45a9f79efe84a46213ee2170e44415264987b294192c7161ba8b"
+    },
+    {
+      "block_id": "page-0132-block-0019",
+      "order": 19,
+      "text": "medication or increasing the dose.\n",
+      "bbox": [
+        101.1490707397461,
+        205.9594268798828,
+        109.8565673828125,
+        315.8420104980469
+      ],
+      "text_sha256": "0fa3e663ba05b529931c4e551ca00f9a5dc543a22de207b5dfd1740047de9a49"
+    },
+    {
+      "block_id": "page-0132-block-0020",
+      "order": 20,
+      "text": "Akathisia that has persisted for \n",
+      "bbox": [
+        111.14656829833984,
+        214.9969024658203,
+        119.85406494140625,
+        315.8420104980469
+      ],
+      "text_sha256": "d9e9fa0786fde55657b0610d45bad4664cbf5538e95258d5ff36a89cad17c6c9"
+    },
+    {
+      "block_id": "page-0132-block-0021",
+      "order": 21,
+      "text": "several months or so is called \n",
+      "bbox": [
+        121.1440658569336,
+        220.83192443847656,
+        129.8515625,
+        315.8420104980469
+      ],
+      "text_sha256": "4b5fff8070ad67b76c31131ab80615a2cacdf5de1102991956b2b62aaf9fb254"
+    },
+    {
+      "block_id": "page-0132-block-0022",
+      "order": 22,
+      "text": "‘chronic akathisia’. Tardive akathisia \n",
+      "bbox": [
+        131.1415557861328,
+        200.27455139160156,
+        139.84906005859375,
+        315.8420104980469
+      ],
+      "text_sha256": "a513152fc3dfa0db53cb885eb72ed13f6b30b766015e6b38e988c62613337503"
+    },
+    {
+      "block_id": "page-0132-block-0023",
+      "order": 23,
+      "text": "tends to occur later in treatment \n",
+      "bbox": [
+        141.13905334472656,
+        210.1444854736328,
+        149.8465576171875,
+        315.8420104980469
+      ],
+      "text_sha256": "4ab39c70f98213de93935cd7268df856069478ef4939081d0f223298b5b6fc65"
+    },
+    {
+      "block_id": "page-0132-block-0024",
+      "order": 24,
+      "text": "and may be exacerbated or \n",
+      "bbox": [
+        151.1365509033203,
+        226.66700744628906,
+        159.84405517578125,
+        315.8420104980469
+      ],
+      "text_sha256": "89b80b06727ab928bbb3a33a0265623bcb770a765a15919cfebd0415dbad05ed"
+    },
+    {
+      "block_id": "page-0132-block-0025",
+      "order": 25,
+      "text": "provoked by antipsychotic dose \n",
+      "bbox": [
+        161.13404846191406,
+        213.4594268798828,
+        169.841552734375,
+        315.8420104980469
+      ],
+      "text_sha256": "6847949effac986a21d2fc274e1f081cde64ff895b533a6235d4c9e4b45b3ae3"
+    },
+    {
+      "block_id": "page-0132-block-0026",
+      "order": 26,
+      "text": "reduction or withdrawal.16\n",
+      "bbox": [
+        171.1315460205078,
+        231.93589782714844,
+        179.83905029296875,
+        315.8420104980469
+      ],
+      "text_sha256": "0a334d69d2c75adf34e82bca74e551a94173e8f4c363de9a5e1cbc794a78a9cc"
+    },
+    {
+      "block_id": "page-0132-block-0027",
+      "order": 27,
+      "text": "Months to years\n",
+      "bbox": [
+        81.17660522460938,
+        136.3220672607422,
+        89.88410186767578,
+        187.99700927734375
+      ],
+      "text_sha256": "005d6bc0fcde0ad2d0686bec98221387cd355e317673cb347cf3f6a7ae847ae0"
+    },
+    {
+      "block_id": "page-0132-block-0028",
+      "order": 28,
+      "text": "The proportion of cases showing \n",
+      "bbox": [
+        91.17411041259766,
+        81.4297103881836,
+        99.88160705566406,
+        187.99700927734375
+      ],
+      "text_sha256": "bd928516810ca33e83633f5029830193f5b50c87063e71374ce318a8235a94a0"
+    },
+    {
+      "block_id": "page-0132-block-0029",
+      "order": 29,
+      "text": "reversibility on cessation of antipsychotic \n",
+      "bbox": [
+        101.1716079711914,
+        56.469749450683594,
+        109.87910461425781,
+        187.99700927734375
+      ],
+      "text_sha256": "90f582f0c7f0be87bb2b4fc5f47e938acb4d4b58b5b9cbd6b55d49a0bce9d8ae"
+    },
+    {
+      "block_id": "page-0132-block-0030",
+      "order": 30,
+      "text": "medication is unclear and may partly \n",
+      "bbox": [
+        111.16910552978516,
+        68.8296127319336,
+        119.87660217285156,
+        187.99700927734375
+      ],
+      "text_sha256": "9a0eece2f579d011668f27df9e4e9cdf8031cc0bf149b75aad09bc3502d33b3a"
+    },
+    {
+      "block_id": "page-0132-block-0031",
+      "order": 31,
+      "text": "depend on age20\n",
+      "bbox": [
+        121.1666030883789,
+        134.7748260498047,
+        129.8740997314453,
+        187.99700927734375
+      ],
+      "text_sha256": "8daf0397662df639ad8e1ea2d2cdda4e7c89a4968bc4e8c32041d7dbb843868f"
+    },
+    {
+      "block_id": "page-0132-block-0032",
+      "order": 32,
+      "text": "Treatment\nAnticholinergic drugs\n",
+      "bbox": [
+        196.0216064453125,
+        496.9123229980469,
+        204.9091033935547,
+        632.33984375
+      ],
+      "text_sha256": "1c79364a99cb12ddf8b12819e1ec84b480cde95e85f654a67ed8ed7314743b9b"
+    },
+    {
+      "block_id": "page-0132-block-0033",
+      "order": 33,
+      "text": "given orally, IM or IV\n",
+      "bbox": [
+        206.1990966796875,
+        499.6948547363281,
+        214.90660095214844,
+        564.83984375
+      ],
+      "text_sha256": "a7a8d5280f2a6c7dc31c2f487eb9ac4ef5706c73b286ae0fdf1f0e5e63b7af0a"
+    },
+    {
+      "block_id": "page-0132-block-0034",
+      "order": 34,
+      "text": "depending on the severity of \n",
+      "bbox": [
+        216.19659423828125,
+        471.0673522949219,
+        224.9040985107422,
+        564.83984375
+      ],
+      "text_sha256": "fde02cf9b57e403d31a972e1be87d76a24800c28cfcfeb71b83f523a9d7bf8ea"
+    },
+    {
+      "block_id": "page-0132-block-0035",
+      "order": 35,
+      "text": "symptoms20\n",
+      "bbox": [
+        226.194091796875,
+        527.4808349609375,
+        234.90159606933594,
+        564.83984375
+      ],
+      "text_sha256": "ad81820d5a37fb9f53ff041828d67269d12e168207336b5b73ee5c148cb03819"
+    },
+    {
+      "block_id": "page-0132-block-0036",
+      "order": 36,
+      "text": "■\n■Remember the patient may be \n",
+      "bbox": [
+        238.20159912109375,
+        456.6675109863281,
+        246.9091033935547,
+        564.840087890625
+      ],
+      "text_sha256": "2114c62d9534f8e626f92c3c26f559705f5ca2f5219fa960ad3b6cb059b8e97f"
+    },
+    {
+      "block_id": "page-0132-block-0037",
+      "order": 37,
+      "text": "unable to swallow\n",
+      "bbox": [
+        247.20159912109375,
+        497.4900207519531,
+        255.9091033935547,
+        555.8400268554688
+      ],
+      "text_sha256": "9da65047308acca5f2f51599190b2dc644fc15080bb328f2b729348dbe1761ed"
+    },
+    {
+      "block_id": "page-0132-block-0038",
+      "order": 38,
+      "text": "■\n■Response to IV administration \n",
+      "bbox": [
+        256.2016296386719,
+        458.737548828125,
+        264.90911865234375,
+        564.840087890625
+      ],
+      "text_sha256": "ef27ecc8250a43aa15aca134ec53896b86cccb1cd41372c9cf73e1658c64d1c1"
+    },
+    {
+      "block_id": "page-0132-block-0039",
+      "order": 39,
+      "text": "will be seen within 5 minutes\n",
+      "bbox": [
+        265.2016296386719,
+        462.4875183105469,
+        273.90911865234375,
+        555.8400268554688
+      ],
+      "text_sha256": "6d2795be7ad73a82b8a4009d0aaeee5d7411bddde3f59626a5e7f648ba097859"
+    },
+    {
+      "block_id": "page-0132-block-0040",
+      "order": 40,
+      "text": "■\n■Response to IM administration \n",
+      "bbox": [
+        274.2016296386719,
+        456.65252685546875,
+        282.90911865234375,
+        564.840087890625
+      ],
+      "text_sha256": "e4bd8d26f9b4e3e97264c6814f2d9560cba590f217aec2e2a2d3c7c27aa9d9c7"
+    },
+    {
+      "block_id": "page-0132-block-0041",
+      "order": 41,
+      "text": "takes around 20 minutes\n",
+      "bbox": [
+        283.2016296386719,
+        476.3700256347656,
+        291.90911865234375,
+        555.8400268554688
+      ],
+      "text_sha256": "b54815955169df959c51d7d9e950e2671e6eec4dc3429bccfb3b6122a78411d0"
+    },
+    {
+      "block_id": "page-0132-block-0042",
+      "order": 42,
+      "text": "■\n■Tardive dystonia may respond to \n",
+      "bbox": [
+        292.2016296386719,
+        451.0950012207031,
+        300.90911865234375,
+        564.840087890625
+      ],
+      "text_sha256": "a0ed557f7eabf7fd64041464ddd17ff4088974decf42f404b8fa9d56245b6e15"
+    },
+    {
+      "block_id": "page-0132-block-0043",
+      "order": 43,
+      "text": "ECT35,36\n",
+      "bbox": [
+        301.2016296386719,
+        532.3976440429688,
+        309.90911865234375,
+        555.8400268554688
+      ],
+      "text_sha256": "7e55be212f0de35011cd5754b8c22c41ce7c5f18a9585ae43b3ebbad1dfe0f32"
+    },
+    {
+      "block_id": "page-0132-block-0044",
+      "order": 44,
+      "text": "■\n■Where severe symptoms do not \n",
+      "bbox": [
+        310.2016296386719,
+        452.7674865722656,
+        318.90911865234375,
+        564.840087890625
+      ],
+      "text_sha256": "b7f4b34de2bedae984bc7c9df6ff17ce3c30cc2dbfdcea383c051ec38b5f3899"
+    },
+    {
+      "block_id": "page-0132-block-0045",
+      "order": 45,
+      "text": "respond to simpler measures \n",
+      "bbox": [
+        319.2016296386719,
+        462.34503173828125,
+        327.90911865234375,
+        555.8400268554688
+      ],
+      "text_sha256": "2dc656b85b9733bd3e8b8f26026d210c61604dc265794bb243f081cd165c7b5d"
+    },
+    {
+      "block_id": "page-0132-block-0046",
+      "order": 46,
+      "text": "including switching to an anti-\n",
+      "bbox": [
+        328.2016296386719,
+        458.7375183105469,
+        336.90911865234375,
+        555.8400268554688
+      ],
+      "text_sha256": "b4465054698bad94ad7c69e9aaa2a46e7ddc8b9c0953819ca9117853117ed5a0"
+    },
+    {
+      "block_id": "page-0132-block-0047",
+      "order": 47,
+      "text": "psychotic with a low propensity \n",
+      "bbox": [
+        337.2016296386719,
+        453.0450134277344,
+        345.90911865234375,
+        555.8400268554688
+      ],
+      "text_sha256": "8200102093aabbe635442361250b17f4e4d7b6d4e1f381a510ebe352b258a31a"
+    },
+    {
+      "block_id": "page-0132-block-0048",
+      "order": 48,
+      "text": "for EPS, botulinum toxin may be \n",
+      "bbox": [
+        346.2016296386719,
+        450.8250427246094,
+        354.90911865234375,
+        555.8400268554688
+      ],
+      "text_sha256": "ad1d9337cfed144f405c7956917fd5b2517a900b91727228367dfda779b654b0"
+    },
+    {
+      "block_id": "page-0132-block-0049",
+      "order": 49,
+      "text": "effective37,38\n",
+      "bbox": [
+        355.2016296386719,
+        517.9680786132812,
+        363.90911865234375,
+        555.8400268554688
+      ],
+      "text_sha256": "e9c783c9668850ad565b7e2d0b8e0de97d977734e1ff22839a7ab5c085ca1ce9"
+    },
+    {
+      "block_id": "page-0132-block-0050",
+      "order": 50,
+      "text": "Several options are\n",
+      "bbox": [
+        196.20159912109375,
+        384.5547790527344,
+        204.9091033935547,
+        444.8398132324219
+      ],
+      "text_sha256": "b11393840d65ff000faa712fac5beb61436e4123a978214efcf60c16484e3ce4"
+    },
+    {
+      "block_id": "page-0132-block-0051",
+      "order": 51,
+      "text": "available depending on the clinical \n",
+      "bbox": [
+        206.1990966796875,
+        332.7371826171875,
+        214.90660095214844,
+        444.8398132324219
+      ],
+      "text_sha256": "80357e6d3f9fc73839ecedac8ab58f8bcfb4ec602096b986ebc6bc800c072a9e"
+    },
+    {
+      "block_id": "page-0132-block-0052",
+      "order": 52,
+      "text": "circumstances:\n",
+      "bbox": [
+        216.19659423828125,
+        398.31732177734375,
+        224.9040985107422,
+        444.8398132324219
+      ],
+      "text_sha256": "19b2b5cce4c712d12b58186123c90f5ccef16a6697ab1fafe7be565553a42cf5"
+    },
+    {
+      "block_id": "page-0132-block-0053",
+      "order": 53,
+      "text": "■\n■Reduce the antipsychotic dose\n",
+      "bbox": [
+        228.20159912109375,
+        339.1572265625,
+        236.9091033935547,
+        444.83990478515625
+      ],
+      "text_sha256": "5950f6a43be5dfca204bf0d205768b5ea87ba61cd6e3eff57fccb474fb172fe5"
+    },
+    {
+      "block_id": "page-0132-block-0054",
+      "order": 54,
+      "text": "■\n■Change to an antipsychotic medi-\n",
+      "bbox": [
+        237.20159912109375,
+        327.9072265625,
+        245.9091033935547,
+        444.83990478515625
+      ],
+      "text_sha256": "16b13611c075151bc85ae2d24cc75faba346c3b79b101506abb88838c8b8b543"
+    },
+    {
+      "block_id": "page-0132-block-0055",
+      "order": 55,
+      "text": "cation with a lower propensity for \n",
+      "bbox": [
+        246.20159912109375,
+        325.5447692871094,
+        254.9091033935547,
+        435.8398132324219
+      ],
+      "text_sha256": "e0cfbfae4e9f300ed272ed0680dafd1ef305f22964ef76379c82519af83c13cb"
+    },
+    {
+      "block_id": "page-0132-block-0056",
+      "order": 56,
+      "text": "pseudoparkinsonism (see section \n",
+      "bbox": [
+        255.2016143798828,
+        329.1446533203125,
+        263.90911865234375,
+        435.8398132324219
+      ],
+      "text_sha256": "8159f3977f4160912e014f4d1c7bbdbf8ec4f6ade85f2e6b682208697d9d50c7"
+    },
+    {
+      "block_id": "page-0132-block-0057",
+      "order": 57,
+      "text": "on relative liability of antipsychotic \n",
+      "bbox": [
+        264.2016296386719,
+        323.9022521972656,
+        272.90911865234375,
+        435.8398132324219
+      ],
+      "text_sha256": "d559c7a0ff8c538c9d49f555db4fb1460670c21d790f01b8f3b33cdcbda56ed8"
+    },
+    {
+      "block_id": "page-0132-block-0058",
+      "order": 58,
+      "text": "medications for adverse effects)\n",
+      "bbox": [
+        273.2016296386719,
+        334.7322998046875,
+        281.90911865234375,
+        435.8398132324219
+      ],
+      "text_sha256": "2ee456a3ae44ccee4060d600061e21f2c6a21c6e2cc67d287fa8a2df7564b59f"
+    },
+    {
+      "block_id": "page-0132-block-0059",
+      "order": 59,
+      "text": "■\n■Prescribe an anticholinergic. The \n",
+      "bbox": [
+        282.2016296386719,
+        330.9672546386719,
+        290.90911865234375,
+        444.83990478515625
+      ],
+      "text_sha256": "f4bcb9ea1d0d99755214c4cad2f77a857b4413c377cc0ab43ed1b8e6fb4da809"
+    },
+    {
+      "block_id": "page-0132-block-0060",
+      "order": 60,
+      "text": "majority of patients do not require \n",
+      "bbox": [
+        291.2016296386719,
+        324.0147399902344,
+        299.90911865234375,
+        435.8398132324219
+      ],
+      "text_sha256": "4f6f3b742004bac4ee66cc0df45bb17f4f1ad20424c7f0a5a0b3ba325fabda70"
+    },
+    {
+      "block_id": "page-0132-block-0061",
+      "order": 61,
+      "text": "long-term anticholinergic agents. \n",
+      "bbox": [
+        300.2016296386719,
+        327.9147033691406,
+        308.90911865234375,
+        435.8398132324219
+      ],
+      "text_sha256": "d1bc9fb951d2caed5838fad4bbb525e6aea4b447ed09331c28fef3598d40d032"
+    },
+    {
+      "block_id": "page-0132-block-0062",
+      "order": 62,
+      "text": "Use should be reviewed at least \n",
+      "bbox": [
+        309.2016296386719,
+        333.0372619628906,
+        317.90911865234375,
+        435.8398132324219
+      ],
+      "text_sha256": "bd7449c6eba7b6bc7295c7fc2f8b0d1016fc764c135aa649b6c45abab7939b4a"
+    },
+    {
+      "block_id": "page-0132-block-0063",
+      "order": 63,
+      "text": "every 3 months. Do not prescribe \n",
+      "bbox": [
+        318.2016296386719,
+        327.6222839355469,
+        326.90911865234375,
+        435.8398132324219
+      ],
+      "text_sha256": "08ba58a3c738c897d2f403a96606968e5d4f284698d9cf76d59d59c96a41ad79"
+    },
+    {
+      "block_id": "page-0132-block-0064",
+      "order": 64,
+      "text": "at night (symptoms usually absent \n",
+      "bbox": [
+        327.2016296386719,
+        324.9897155761719,
+        335.90911865234375,
+        435.8398132324219
+      ],
+      "text_sha256": "4c0dc8eb09174129556aa83d0b31386e9f2a4846e5654dfa70c5f98ce4bca4dd"
+    },
+    {
+      "block_id": "page-0132-block-0065",
+      "order": 65,
+      "text": "during sleep)\n",
+      "bbox": [
+        336.2016296386719,
+        394.5747375488281,
+        344.90911865234375,
+        435.8398132324219
+      ],
+      "text_sha256": "197ec00e4db40f3f03b8cd006147865f36db76158c2a4853deee3eb5e621ba9e"
+    },
+    {
+      "block_id": "page-0132-block-0066",
+      "order": 66,
+      "text": "■\n■Reduce the antipsychotic dose\n",
+      "bbox": [
+        196.20159912109375,
+        210.1572265625,
+        204.9091033935547,
+        315.83990478515625
+      ],
+      "text_sha256": "5950f6a43be5dfca204bf0d205768b5ea87ba61cd6e3eff57fccb474fb172fe5"
+    },
+    {
+      "block_id": "page-0132-block-0067",
+      "order": 67,
+      "text": "■\n■Change to an antipsychotic drug \n",
+      "bbox": [
+        205.20159912109375,
+        200.1447296142578,
+        213.9091033935547,
+        315.83990478515625
+      ],
+      "text_sha256": "28e742e625a8594eb301ca6fdd7a9aa2ae79a6dfd718b9443ebfee71691dc3fc"
+    },
+    {
+      "block_id": "page-0132-block-0068",
+      "order": 68,
+      "text": "with lower propensity for akathi-\n",
+      "bbox": [
+        214.20159912109375,
+        201.96728515625,
+        222.9091033935547,
+        306.8398132324219
+      ],
+      "text_sha256": "aa9a70207162edeaaa83de49de948975d51ecb1eb9bd2b0dddc25a695a7e1569"
+    },
+    {
+      "block_id": "page-0132-block-0069",
+      "order": 69,
+      "text": "sia (see sections on akathisia and \n",
+      "bbox": [
+        223.20159912109375,
+        199.7322540283203,
+        231.9091033935547,
+        306.8398132324219
+      ],
+      "text_sha256": "75ae6ba754a67ef9100a68b782298e74f27f7c7e9ce610f4c45caa907b573845"
+    },
+    {
+      "block_id": "page-0132-block-0070",
+      "order": 70,
+      "text": "relative liability of antipsychotic \n",
+      "bbox": [
+        232.20159912109375,
+        205.3272247314453,
+        240.9091033935547,
+        306.8398132324219
+      ],
+      "text_sha256": "9087479043a8c9bc731facbcb990a77a8036b825af1a4452856e010fb24cde73"
+    },
+    {
+      "block_id": "page-0132-block-0071",
+      "order": 71,
+      "text": "medications for adverse effects)\n",
+      "bbox": [
+        241.20159912109375,
+        205.73231506347656,
+        249.9091033935547,
+        306.8398132324219
+      ],
+      "text_sha256": "2ee456a3ae44ccee4060d600061e21f2c6a21c6e2cc67d287fa8a2df7564b59f"
+    },
+    {
+      "block_id": "page-0132-block-0072",
+      "order": 72,
+      "text": "■\n■A reduction in symptoms may be \n",
+      "bbox": [
+        250.2016143798828,
+        199.4622344970703,
+        258.90911865234375,
+        315.83990478515625
+      ],
+      "text_sha256": "1bbe41fcfd13d0acf2adc111f8dcfe1067bb79dfe010416b0f84f96b318371c1"
+    },
+    {
+      "block_id": "page-0132-block-0073",
+      "order": 73,
+      "text": "seen with:39–41 low-dose propran-\n",
+      "bbox": [
+        259.2016296386719,
+        200.87188720703125,
+        267.90911865234375,
+        306.8398132324219
+      ],
+      "text_sha256": "e97da252bf8ebe9bc66b043a31993215b21f78e3d71de04f7fdaf6c3216ecaf1"
+    },
+    {
+      "block_id": "page-0132-block-0074",
+      "order": 74,
+      "text": "olol, 30–80mg/day, clonazepam \n",
+      "bbox": [
+        268.2016296386719,
+        202.91932678222656,
+        276.90911865234375,
+        306.83941650390625
+      ],
+      "text_sha256": "1748242cc8160fbc99a5e44f297bcff419ddecba22d2afd5fa01366c10ff0695"
+    },
+    {
+      "block_id": "page-0132-block-0075",
+      "order": 75,
+      "text": "(low dose), 5HT2 antagonists \n",
+      "bbox": [
+        277.2016296386719,
+        213.53892517089844,
+        287.624755859375,
+        306.83941650390625
+      ],
+      "text_sha256": "2617b620588b02c5667daf0be25da9cc1262f4ba53289d02a1844417be5e1b0c"
+    },
+    {
+      "block_id": "page-0132-block-0076",
+      "order": 76,
+      "text": "such as: cyproheptadine,36 \n",
+      "bbox": [
+        286.2016296386719,
+        220.8433074951172,
+        294.90911865234375,
+        306.8389892578125
+      ],
+      "text_sha256": "e05239001aedc08027f01fe3d92d29e7a3f5344c8c065de2ac659d80286b69f3"
+    },
+    {
+      "block_id": "page-0132-block-0077",
+      "order": 77,
+      "text": "mirtazapine,40 trazodone,42,43 \n",
+      "bbox": [
+        295.2016296386719,
+        212.7010040283203,
+        303.90911865234375,
+        306.83831787109375
+      ],
+      "text_sha256": "d8e3d0888012d8a2e40b0c029659a81404d38f0bd87e99cc25143d9cacc18f70"
+    },
+    {
+      "block_id": "page-0132-block-0078",
+      "order": 78,
+      "text": "mianserin,44 and cyprohepta-\n",
+      "bbox": [
+        304.2016296386719,
+        214.60299682617188,
+        312.90911865234375,
+        306.84100341796875
+      ],
+      "text_sha256": "80374ba442d601c7ed43932291dc2e7c09e715a7ca739cf381acf5c35d1d2373"
+    },
+    {
+      "block_id": "page-0132-block-0079",
+      "order": 79,
+      "text": "dine36 may help, as may possibly \n",
+      "bbox": [
+        313.2016296386719,
+        201.54518127441406,
+        321.90911865234375,
+        306.8380126953125
+      ],
+      "text_sha256": "f4c8dc9a987174691a620253ba1fb20638be76271ec4f6eaca6a9b1c70f9775f"
+    },
+    {
+      "block_id": "page-0132-block-0080",
+      "order": 80,
+      "text": "diphenhydramine.45\n",
+      "bbox": [
+        322.2016296386719,
+        244.04808044433594,
+        330.90911865234375,
+        306.83770751953125
+      ],
+      "text_sha256": "f63c20e346fbce9f460cf216b9ccba45ee61ec938a2e9293218c2c55c2784dff"
+    },
+    {
+      "block_id": "page-0132-block-0081",
+      "order": 81,
+      "text": "All are unlicensed for this indication\n",
+      "bbox": [
+        335.2016296386719,
+        201.7947235107422,
+        343.90911865234375,
+        315.8398132324219
+      ],
+      "text_sha256": "d5ddd775295664de664a2707902479700114a8572362a19834f5b5b6f91634dc"
+    },
+    {
+      "block_id": "page-0132-block-0082",
+      "order": 82,
+      "text": "Anticholinergics are generally \n",
+      "bbox": [
+        348.1991271972656,
+        220.1397247314453,
+        356.9066162109375,
+        315.8398132324219
+      ],
+      "text_sha256": "6d276df56340d8c9cc4a244ae88d337af6c0edec35277700e280355bbbaac45e"
+    },
+    {
+      "block_id": "page-0132-block-0083",
+      "order": 83,
+      "text": "unhelpful unless akathisia is part of \n",
+      "bbox": [
+        358.1966247558594,
+        201.2321319580078,
+        366.90411376953125,
+        315.8398132324219
+      ],
+      "text_sha256": "095f0c1e9d5b9e4b457d68f7831311ba17f4b5ded87bfd2203b71b9213e81459"
+    },
+    {
+      "block_id": "page-0132-block-0084",
+      "order": 84,
+      "text": "a general EPS spectrum46\n",
+      "bbox": [
+        368.1941223144531,
+        236.3907012939453,
+        376.901611328125,
+        315.8398132324219
+      ],
+      "text_sha256": "49ec619ef59aa56d08ae585e74b8521d41d2612b71ad99bb22547bc907de6ce1"
+    },
+    {
+      "block_id": "page-0132-block-0085",
+      "order": 85,
+      "text": "■\n■Stop anticholinergic if prescribed\n",
+      "bbox": [
+        196.20159912109375,
+        80.54472351074219,
+        204.9091033935547,
+        193.99713134765625
+      ],
+      "text_sha256": "13314dbe132d3c57e86c80511d34390920d5dc0c72ac90446a15734c19177e5b"
+    },
+    {
+      "block_id": "page-0132-block-0086",
+      "order": 86,
+      "text": "■\n■Reduce dose of antipsychotic medication\n",
+      "bbox": [
+        205.20159912109375,
+        54.56467819213867,
+        213.9091033935547,
+        193.99713134765625
+      ],
+      "text_sha256": "88f9a569f2cd153ea3f3af14b2242d3e7ce1a32a6eaeb4a1c03db97b5ee49a2c"
+    },
+    {
+      "block_id": "page-0132-block-0087",
+      "order": 87,
+      "text": "■\n■Change to an antipsychotic with lower \n",
+      "bbox": [
+        214.20159912109375,
+        59.139610290527344,
+        222.9091033935547,
+        193.99713134765625
+      ],
+      "text_sha256": "e948820a08342e805c988d444a0d25d0c5953fd129e43a6e7dbab9e710f16112"
+    },
+    {
+      "block_id": "page-0132-block-0088",
+      "order": 88,
+      "text": "propensity for TD,47–50 note that data are \n",
+      "bbox": [
+        223.20159912109375,
+        53.754417419433594,
+        231.9091033935547,
+        184.99700927734375
+      ],
+      "text_sha256": "05170d819084aba0092805dae67363aff8a559cb305c478fa6d0742aeb0a7266"
+    },
+    {
+      "block_id": "page-0132-block-0089",
+      "order": 89,
+      "text": "conflicting.51,52\n",
+      "bbox": [
+        232.20159912109375,
+        138.6351776123047,
+        240.9091033935547,
+        184.99688720703125
+      ],
+      "text_sha256": "132dcf3dc0b84fa10e11f9a6da5f5222b95ef9aa1d8a6bdc8185ad671d457d66"
+    },
+    {
+      "block_id": "page-0132-block-0090",
+      "order": 90,
+      "text": "■\n■Clozapine is the antipsychotic most \n",
+      "bbox": [
+        241.20159912109375,
+        70.4046859741211,
+        249.9091033935547,
+        193.99713134765625
+      ],
+      "text_sha256": "383a3e81685b8012fe81db22b925a16f0181f268bc79bb56834c1acbcf766ede"
+    },
+    {
+      "block_id": "page-0132-block-0091",
+      "order": 91,
+      "text": "likely to be associated with resolution of \n",
+      "bbox": [
+        250.2016143798828,
+        54.699729919433594,
+        258.90911865234375,
+        184.99700927734375
+      ],
+      "text_sha256": "a980099140796686100cafb225579c9645397d43ba3656ddaed479e80d7e0b52"
+    },
+    {
+      "block_id": "page-0132-block-0092",
+      "order": 92,
+      "text": "symptoms.53,54 Quetiapine may also be \n",
+      "bbox": [
+        259.2016296386719,
+        60.297630310058594,
+        267.90911865234375,
+        184.99700927734375
+      ],
+      "text_sha256": "5496e214cfed4f6000c4fc81e70e220718ae96e42fcc6ca5f33e3bc2617122d5"
+    },
+    {
+      "block_id": "page-0132-block-0093",
+      "order": 93,
+      "text": "useful in this regard.55\n",
+      "bbox": [
+        268.2016296386719,
+        114.97538757324219,
+        276.90911865234375,
+        185.00006103515625
+      ],
+      "text_sha256": "1e16f600fb319b1e33fc629a9f6ac1bd562698653375ef9e0912b82524b6dd64"
+    },
+    {
+      "block_id": "page-0132-block-0094",
+      "order": 94,
+      "text": "■\n■Both valbenazine and deutetrabenazine \n",
+      "bbox": [
+        277.2016296386719,
+        56.222190856933594,
+        285.90911865234375,
+        193.99713134765625
+      ],
+      "text_sha256": "ab59dd7de49d45233c9b69270559cb0af799979105ac9f3ff5014d4378066976"
+    },
+    {
+      "block_id": "page-0132-block-0095",
+      "order": 95,
+      "text": "have a positive risk-benefit balance as \n",
+      "bbox": [
+        286.2016296386719,
+        62.484642028808594,
+        294.90911865234375,
+        184.99700927734375
+      ],
+      "text_sha256": "196575ca15484c300cac25b04e464d4265e5aeab3af3222f5c42bc0c8249ef68"
+    },
+    {
+      "block_id": "page-0132-block-0096",
+      "order": 96,
+      "text": "add-on treatments53,56–60\n",
+      "bbox": [
+        295.2016296386719,
+        107.55638122558594,
+        303.90911865234375,
+        184.99700927734375
+      ],
+      "text_sha256": "e84aa133c87c38e91c16c2b0b428dfe687c063331a9ec110d2f3adc9a89e6501"
+    },
+    {
+      "block_id": "page-0132-block-0097",
+      "order": 97,
+      "text": "■\n■There is also some evidence for \n",
+      "bbox": [
+        304.2016296386719,
+        83.4546127319336,
+        312.90911865234375,
+        193.99713134765625
+      ],
+      "text_sha256": "85065a80771f461df586e665f563c3364a06b9ce70261154b6d318ccb0f564e4"
+    },
+    {
+      "block_id": "page-0132-block-0098",
+      "order": 98,
+      "text": "tetrabenazine and ginkgo biloba61 as \n",
+      "bbox": [
+        313.2016296386719,
+        65.52059173583984,
+        321.90911865234375,
+        184.99700927734375
+      ],
+      "text_sha256": "a64c9803852c632aa9f1202e0ffd11102c3228a24a96946f6a149019de63a3db"
+    },
+    {
+      "block_id": "page-0132-block-0099",
+      "order": 99,
+      "text": "add-on treatments. For other treatment \n",
+      "bbox": [
+        322.2016296386719,
+        56.513206481933594,
+        330.90911865234375,
+        184.99560546875
+      ],
+      "text_sha256": "91d9a5862f0e39e46097a5ce5b6dede72457610d6f64cd5731d074c5148f98f1"
+    },
+    {
+      "block_id": "page-0132-block-0100",
+      "order": 100,
+      "text": "options60,62 the review by the American \n",
+      "bbox": [
+        331.2016296386719,
+        58.347251892089844,
+        339.90911865234375,
+        184.99560546875
+      ],
+      "text_sha256": "f4f89d4c9026feb4945a0eec97dfddac5615f3c2d32c6b9701b913f218f9026d"
+    },
+    {
+      "block_id": "page-0132-block-0101",
+      "order": 101,
+      "text": "Academy of Neurology63 and the section \n",
+      "bbox": [
+        340.2016296386719,
+        53.580589294433594,
+        348.90911865234375,
+        184.99981689453125
+      ],
+      "text_sha256": "8ca55e2002a678893365db8f9d9884ee0dc85b3f80d7f160f906e7b33cf033a7"
+    },
+    {
+      "block_id": "page-0132-block-0102",
+      "order": 102,
+      "text": "on tardive dyskinesia\n",
+      "bbox": [
+        349.2016296386719,
+        118.87567138671875,
+        357.90911865234375,
+        184.99554443359375
+      ],
+      "text_sha256": "1d677a9a123be8d9eb93a131f71748b59f9c065a5ffdcc7c5e439d491b17b084"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

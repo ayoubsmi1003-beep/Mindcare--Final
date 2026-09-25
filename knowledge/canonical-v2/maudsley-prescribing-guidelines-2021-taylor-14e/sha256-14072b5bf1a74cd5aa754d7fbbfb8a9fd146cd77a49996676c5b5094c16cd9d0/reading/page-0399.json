@@ -1,0 +1,14 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0399",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 399,
+  "source_page_index": 398,
+  "repaired_text": "378    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nDrug interactions with antidepressants\nDrugs can interact with each other in two different ways:\n■\n■Pharmacokinetic interactions where one drug interferes with the absorption, distribution, metabolism or elimination of another drug. This may result in a subtherapeutic \neffect or toxicity. The largest group of pharmacokinetic interactions involves drugs \nthat inhibit or induce hepatic CYP450 enzymes (see Tables 3.14 and 3.15). Other \nenzyme systems include FMO1 and UGT.2 While both of these latter enzyme systems \nare involved in the metabolism of psychotropic drugs, the potential for drugs to \ninhibit or induce these enzyme systems has been less well studied.\n\t The clinical consequences of pharmacokinetic interactions in an individual patient\ncan be difficult to predict. Some are highly clinically significant; for example, when \nparoxetine (a potent CYP2D6 inhibitor) is taken with tamoxifen, up to 1 extra \nwoman in 20 will die within 5 years of stopping tamoxifen.3 The following factors \naffect outcome of interactions: the degree of enzyme inhibition or induction, the \npharmacokinetic properties of the affected drug and other co-administered drugs, \nthe relationship between plasma level and pharmacodynamic effect for the affected \ndrug, and patient-specific factors such as variability in the role of primary and sec-\nondary metabolic pathways and the presence of co-morbid physical illness.4\nTable 3.14  Summary of antidepressant effects on CYP enzymes5–7\nAntidepressant\nSubstrate for\nInhibits\nSSRIs\nCitalopram\nCYP2C19, CYP2D6, CYP3A4\nCYP2D6 (weak)\nEscitalopram\nCYP2C19, CYP2D6, CYP3A4\nCYP2D6 (weak)\nFluoxetine\nCYP2D6, CYP3A4\nCYP2D6 (moderate to potent), \nCYP2C9 (moderate), CYP3A4 \n(weak)\nFluvoxamine\nCYP2D6; others possibly involved\nCYP1A2 (potent), CYP2C19 \n(potent), CYP3A4 (weak), CYP2C9 \n(weak)\nParoxetine\nCYP2D6\nCYP2D6 (potent)\nSertraline\nCYP3A4, CYP2D6 (minor) and possibly \nother pathways\nCYP2D6 (weak)\nSNRIs\nDesvenlafaxine\nCYP3A4\nCYP2D6 (weak)\nDuloxetine\nCYP1A2, CYP2D6\nCYP2D6 (moderate)\nLevomilnacipran\nCYP3A4, CYP2C8, CYP2C19, CYP2D6\nVenlafaxine\nCYP2D6, CYP3A4\nCYP2D6 (weak)\n(Continued)",
+  "repaired_text_sha256": "54cd076bc77ec6a27880f1fbf88a67610f87bd7c6f248b93ebac1e8c1045d217",
+  "raw_text_sha256": "4ab46adba6a6c343ea2e4238c1aa6501815f2d8e6be810e626a8d9db11978b81",
+  "repair_ids": [
+    "repair-000429"
+  ],
+  "raw_file": "raw/page-0399.json"
+}

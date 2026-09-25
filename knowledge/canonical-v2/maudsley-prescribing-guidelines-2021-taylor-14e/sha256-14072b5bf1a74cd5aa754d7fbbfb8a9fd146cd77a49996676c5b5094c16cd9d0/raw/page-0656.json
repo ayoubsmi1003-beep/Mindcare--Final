@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0656",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 656,
+  "source_page_index": 655,
+  "source_page_display": 656,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Prescribing in older people    635\nCHAPTER  6\ntrospium,16 studies found no significant change in cognitive function.17,18 Studies inves-\ntigating whether or not fesoterodine causes cognitive impairment found no detectable \nimpairment of cognition in a variety of cognitive measurements (Table 6.5).19,20\nAll tertiary amine drugs, i.e. oxybutynin, tolterodine, solifenacin, fesoterodine and \ndarifenacin, are metabolised by cytochrome P450 (CYP450) enzymes. Increasing age or \nco-administration of drugs that inhibit these enzymes (e.g. erythromycin and fluoxe-\ntine) can lead to higher serum levels and therefore increased adverse effects. The metab-\nolism of trospium is unknown, although metabolism via CYP450 system does not \noccur, meaning that pharmacokinetic drug interactions are unlikely with this drug.8\nAlpha-blockers for urinary retention\nAlpha-blockers such as tamsulosin, alfuzosin and prazosin cause drowsiness, dizziness \nand depression.21 There is no published literature reporting their effects on cognition, \nbut alpha-blockers do not feature on any anticholinergic cognitive burden list.\nDrugs used in GI disorders\nLoperamide\nAlthough loperamide may have some anticholinergic activity, there are no data to sug-\ngest that it can worsen cognitive function in patients with dementia. It may add to the \nanticholinergic cognitive burden if used in conjunction with other anticholinergic drugs.\nLaxatives\nThere is no evidence to suggest that laxatives have any negative impact on cognitive \nfunction. In fact, since constipation can lead to delirium and BPSD, treating it may \nimprove these symptoms.\nAntiemetics\nCyclizine is a first-generation histamine antagonist and can impair cognitive and psy-\nchomotor performance (see antihistamines section).22\nMetoclopramide has little anticholinergic action, but the D2 receptor antagonism of \nboth metoclopramide and prochlorperazine can produce movement disorders and so \nthese drugs must be used with caution in people with dementia.\nDomperidone is a dopamine D2 receptor antagonist that does not usually cross the \nBBB. However, since BBB alterations can occur in dementia, CNS penetration of dom-\nperidone and resulting adverse effects can occur.23 Recent reports have highlighted a \nsmall increased risk of serious cardiac adverse effects with domperidone, especially in \nolder people. The maximum dose has been reduced to 30mg/day and the maximum \ntreatment duration should not exceed 1 week. Domperidone is now contraindicated \nin those with underlying cardiac conditions or severe hepatic impairment and in \npatients receiving other medications known to prolong QT interval or potent CYP3A4 \ninhibitors.24\nSerotonin 5-HT3 receptor antagonists, used for treating chemotherapy-induced nau-\nsea and vomiting, do not have adverse effects on cognition, and they may have some \n",
+  "raw_text_sha256": "7b799b26d283d5e586fa37314ee62fb18164eaad3a2d2ad88a3f1e6a11cd7642",
+  "coordinates_sha256": "111448421bdec25cf92e612de18095e1fc4156ea550a4d4ae036758d197904ea",
+  "block_sequence_sha256": "671c81747076399222d244c80de41fc03a292802c8a50df2ec9a46f6123a1f54",
+  "blocks": [
+    {
+      "block_id": "page-0656-block-0000",
+      "order": 0,
+      "text": "Prescribing in older people    635\n",
+      "bbox": [
+        281.576904296875,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "f4bba4d08ec7c85267b3c9b8d43717481d6dafbd62a28deea5583df2b1fb2bb9"
+    },
+    {
+      "block_id": "page-0656-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        454.4096984863281,
+        405.35260009765625,
+        463.88970947265625,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0656-block-0002",
+      "order": 2,
+      "text": "trospium,16 studies found no significant change in cognitive function.17,18 Studies inves-\ntigating whether or not fesoterodine causes cognitive impairment found no detectable \nimpairment of cognition in a variety of cognitive measurements (Table 6.5).19,20\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.7441711425781,
+        98.27041625976562
+      ],
+      "text_sha256": "3ae3fb56a474b60842fc04662397a5aba780a79e3ce432dca9d675732e363295"
+    },
+    {
+      "block_id": "page-0656-block-0003",
+      "order": 3,
+      "text": "All tertiary amine drugs, i.e. oxybutynin, tolterodine, solifenacin, fesoterodine and \ndarifenacin, are metabolised by cytochrome P450 (CYP450) enzymes. Increasing age or \nco-administration of drugs that inhibit these enzymes (e.g. erythromycin and fluoxe-\ntine) can lead to higher serum levels and therefore increased adverse effects. The metab-\nolism of trospium is unknown, although metabolism via CYP450 system does not \noccur, meaning that pharmacokinetic drug interactions are unlikely with this drug.8\n",
+      "bbox": [
+        48.0,
+        98.5504150390625,
+        422.79998779296875,
+        170.27041625976562
+      ],
+      "text_sha256": "fdafab112e45f42541244081ef3a9b2909278171f534955f010e1fc5151b505b"
+    },
+    {
+      "block_id": "page-0656-block-0004",
+      "order": 4,
+      "text": "Alpha-blockers for urinary retention\n",
+      "bbox": [
+        48.0,
+        188.64047241210938,
+        218.58998107910156,
+        200.490478515625
+      ],
+      "text_sha256": "eeacbb92f36ab2b51cf284dfd8c4ba9d554311be690f71bece1d49f206b7f7ca"
+    },
+    {
+      "block_id": "page-0656-block-0005",
+      "order": 5,
+      "text": "Alpha-blockers such as tamsulosin, alfuzosin and prazosin cause drowsiness, dizziness \nand depression.21 There is no published literature reporting their effects on cognition, \nbut alpha-blockers do not feature on any anticholinergic cognitive burden list.\n",
+      "bbox": [
+        48.0,
+        206.31048583984375,
+        422.77337646484375,
+        242.27047729492188
+      ],
+      "text_sha256": "f1880f1d4b206950d14e40c379b56f9343743879fa9f4511f0de2b58a35cba2f"
+    },
+    {
+      "block_id": "page-0656-block-0006",
+      "order": 6,
+      "text": "Drugs used in GI disorders\n",
+      "bbox": [
+        48.00340270996094,
+        260.6404724121094,
+        171.33340454101562,
+        272.490478515625
+      ],
+      "text_sha256": "3b2b943863a95a93e9d38fa77f14af780abfa568abaeac71527b1bedb49ba3b2"
+    },
+    {
+      "block_id": "page-0656-block-0007",
+      "order": 7,
+      "text": "Loperamide\nAlthough loperamide may have some anticholinergic activity, there are no data to sug-\ngest that it can worsen cognitive function in patients with dementia. It may add to the \nanticholinergic cognitive burden if used in conjunction with other anticholinergic drugs.\n",
+      "bbox": [
+        48.0,
+        279.10797119140625,
+        422.8299865722656,
+        326.2704772949219
+      ],
+      "text_sha256": "b225c6f4c3e227d9b77f7aea0a090850a29981b7b7c4bb6e3351bfe050eca44c"
+    },
+    {
+      "block_id": "page-0656-block-0008",
+      "order": 8,
+      "text": "Laxatives\nThere is no evidence to suggest that laxatives have any negative impact on cognitive \nfunction. In fact, since constipation can lead to delirium and BPSD, treating it may \nimprove these symptoms.\n",
+      "bbox": [
+        48.0,
+        339.10797119140625,
+        422.82989501953125,
+        386.2704772949219
+      ],
+      "text_sha256": "4c7482cd4710a0a5d11581ff7847f35830a962cc0ef592e9b8a05695222156c2"
+    },
+    {
+      "block_id": "page-0656-block-0009",
+      "order": 9,
+      "text": "Antiemetics\nCyclizine is a first-generation histamine antagonist and can impair cognitive and psy-\nchomotor performance (see antihistamines section).22\n",
+      "bbox": [
+        48.0,
+        399.10797119140625,
+        419.9900207519531,
+        434.2704772949219
+      ],
+      "text_sha256": "4fe4859e6007450be60ffc9077a73e2f00c868da69b9ec1cce21d695f86c4286"
+    },
+    {
+      "block_id": "page-0656-block-0010",
+      "order": 10,
+      "text": "Metoclopramide has little anticholinergic action, but the D2 receptor antagonism of \nboth metoclopramide and prochlorperazine can produce movement disorders and so \nthese drugs must be used with caution in people with dementia.\n",
+      "bbox": [
+        48.004791259765625,
+        434.31048583984375,
+        422.7747497558594,
+        470.2704772949219
+      ],
+      "text_sha256": "e7c1caaaa653ca18f30d624c246df94b141295c709b7ff8b02bc7fd038286099"
+    },
+    {
+      "block_id": "page-0656-block-0011",
+      "order": 11,
+      "text": "Domperidone is a dopamine D2 receptor antagonist that does not usually cross the \nBBB. However, since BBB alterations can occur in dementia, CNS penetration of dom-\nperidone and resulting adverse effects can occur.23 Recent reports have highlighted a \nsmall increased risk of serious cardiac adverse effects with domperidone, especially in \nolder people. The maximum dose has been reduced to 30mg/day and the maximum \ntreatment duration should not exceed 1 week. Domperidone is now contraindicated \nin those with underlying cardiac conditions or severe hepatic impairment and in \npatients receiving other medications known to prolong QT interval or potent CYP3A4 \ninhibitors.24\n",
+      "bbox": [
+        47.999603271484375,
+        470.31048583984375,
+        422.8197937011719,
+        578.2705078125
+      ],
+      "text_sha256": "42d4630a58b02853f9087401db3f934b5d1cabfb44b4a2456c005ff7e0e3c2eb"
+    },
+    {
+      "block_id": "page-0656-block-0012",
+      "order": 12,
+      "text": "Serotonin 5-HT3 receptor antagonists, used for treating chemotherapy-induced nau-\nsea and vomiting, do not have adverse effects on cognition, and they may have some \n",
+      "bbox": [
+        47.99500274658203,
+        578.5504150390625,
+        422.7750244140625,
+        602.2704467773438
+      ],
+      "text_sha256": "2af6ef34e4cddae877028a454a9fa3e434845fc657f99e06cc233f5906e7a1b9"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

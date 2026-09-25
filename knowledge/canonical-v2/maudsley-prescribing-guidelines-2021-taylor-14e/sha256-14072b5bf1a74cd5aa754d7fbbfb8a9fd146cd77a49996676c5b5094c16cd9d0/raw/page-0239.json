@@ -1,0 +1,263 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0239",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 239,
+  "source_page_index": 238,
+  "source_page_display": 239,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "218    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nAdverse effect\nTime course\nComment\nPancreatitis63–70\nUsually first six \nweeks, possibly \nlater in \ntreatment71\nSeveral reports of asymptomatic and symptomatic pancreatitis. \nSymptoms include fever, abdominal pain and distension, nausea \nand vomiting, raised CRP and raised lipase and/or amylase. Sodium \nvalproate may increase the risk.26 Majority of attempts to \nrechallenge fail66,72–74 but one successful case is reported75\nParotid gland \nswelling76–82\nUsually first few \nweeks, but may \noccur later83\nSeveral case reports. Unclear mechanism, possibly immunological \nor thickening of saliva leading to calcium precipitation. Can be \nrecurrent. May resolve spontaneously.84 Treatment of \nhypersalivation with terazosin in combination with benzatropine \nmay be helpful\nPericarditis and \npericardial effusion85–93\nAny time\nSeveral reports in the literature. Symptoms include fatigue, chest \npain, dyspnoea and tachycardia, but may be asymptomatic.94 Signs \ninclude raised inflammatory markers (specifically trop I) and \npro-BNP levels.95 Use echocardiogram to confirm/rule out effusion. \nSuccessful rechallenge possible96,97\nStuttering98–106\nAny time\nCase reports. May be a result of EPS or epileptiform activity. Check \nplasma levels, consider dose reduction and/or antiseizure drugs – \nmay be a warning sign for impending generalised seizures107\nThrombocytopenia108–111\nFirst 3 months\nFew data but apparently fairly common (incidence over 1 year of \n3112–8%113). Probably transient and clinically unimportant, but \npersistent in some cases114,115 and recurrent on rechallenge in \nothers.116 Thrombocytosis also reported117\nSkin reactions118\nAny time\nPresence of skin diseases in general is higher in those with \nschizophrenia.119 Four reports of vasculitis120–123 in which patients \ndeveloped confluent erythematous rash on lower limbs. One report \nof Stevens-Johnson syndrome,124 two reports of pityriasis \nrosea,125,126 one report of a papular rash,127 one report of \nexanthematic pustulosis128 and one fatal case of Sweet’s \nsyndrome.129 Skin rash is commonly reported in DRESS syndrome32\nThromboembolism130–134\nAny time135\nWeight increase and sedation may contribute to risk. Mechanism \nmay be increased platelet aggregation via 5HT2A receptor \nactivation.136 Clozapine increases risk of pulmonary \nthromboembolism by 28 times compared with the general \npopulation.137 The risk may be dose-related.138 Threshold for \nprophylactic antithrombotic treatment where additional risk factors \nare present (surgery, immobility) should be low. Continuation of \ntherapy after embolism may be possible139 but consult \nhaematologist as without prophylactic antithrombotic treatment \nrecurrence is likely140,141\nReferences\n\t 1.\t Thompson A, et al. Late onset neutropenia with clozapine. Can J Psychiatry 2004; 49:647–648.\n\t 2.\t Bhanji NH, et al. Late-onset agranulocytosis in a patient with schizophrenia after 17 months of clozapine treatment. J Clin Psychopharmacol \n2003; 23:522–523.\n\t 3.\t Sedky K, et al. Clozapine-induced agranulocytosis after 11 years of treatment (Letter). Am J Psychiatry 2005; 162:814.\n\t 4.\t De Araujo CF, et al. Delayed-onset severe neutropenia associated with clozapine with successful rechallenge at lower dose. J Clin \nPsychopharmacol 2021; 41:77–79.\n\t 5.\t Kang BJ, et al. Long-term patient monitoring for clozapine-induced agranulocytosis and neutropenia in Korea: when is it safe to discontinue \nCPMS? Human Psychopharmacology 2006; 21:387–391.\n(Continued )\n",
+  "raw_text_sha256": "eafbfa9b6c4a3cdf853a0fa5cb33f3f91d66e7f221a7fb10a01a63c27ad96897",
+  "coordinates_sha256": "ea8499b52a9e6b70b11f32af4796078a712a3257a23ef94e9a882411e75cdd51",
+  "block_sequence_sha256": "4313ccd422ee13097713c13f32f84d4af4b37b1b177340896c37919ef021b725",
+  "blocks": [
+    {
+      "block_id": "page-0239-block-0000",
+      "order": 0,
+      "text": "218    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "13276a6cc9ac0c10638bd73a5f954402ebb420e26272a7c6acf46a26332ae58e"
+    },
+    {
+      "block_id": "page-0239-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0239-block-0002",
+      "order": 2,
+      "text": "Adverse effect\nTime course\nComment\n",
+      "bbox": [
+        61.88909912109375,
+        90.11561584472656,
+        252.64410400390625,
+        99.00311279296875
+      ],
+      "text_sha256": "078e96fe408dc94a60e6ba2be7d0d6aee976808e14b85126f441f08cfd6df04c"
+    },
+    {
+      "block_id": "page-0239-block-0003",
+      "order": 3,
+      "text": "Pancreatitis63–70\nUsually first six \nweeks, possibly \nlater in \ntreatment71\n",
+      "bbox": [
+        61.88909912109375,
+        107.07064056396484,
+        203.15159606933594,
+        145.7706298828125
+      ],
+      "text_sha256": "70ac924d545dba8518c5932359b02442ba8d2034526eb01560cb5bf44ee622b9"
+    },
+    {
+      "block_id": "page-0239-block-0004",
+      "order": 4,
+      "text": "Several reports of asymptomatic and symptomatic pancreatitis. \nSymptoms include fever, abdominal pain and distension, nausea \nand vomiting, raised CRP and raised lipase and/or amylase. Sodium \nvalproate may increase the risk.26 Majority of attempts to \nrechallenge fail66,72–74 but one successful case is reported75\n",
+      "bbox": [
+        218.4718017578125,
+        107.07064056396484,
+        434.3519592285156,
+        155.77813720703125
+      ],
+      "text_sha256": "4a7288ab3f2df25cb3b4a8616c4b08ee9676703ecc65d5e73e02418e313adf0f"
+    },
+    {
+      "block_id": "page-0239-block-0005",
+      "order": 5,
+      "text": "Parotid gland \nswelling76–82\n",
+      "bbox": [
+        61.889198303222656,
+        162.09559631347656,
+        106.34917449951172,
+        180.80059814453125
+      ],
+      "text_sha256": "a739fea00ce77d12e1f25083505ce80afadeb12577928a022e55e8c042bbf7d6"
+    },
+    {
+      "block_id": "page-0239-block-0006",
+      "order": 6,
+      "text": "Usually first few \nweeks, but may \noccur later83\n",
+      "bbox": [
+        151.8892059326172,
+        162.09559631347656,
+        204.80169677734375,
+        190.798095703125
+      ],
+      "text_sha256": "73ca37ef10fa5e2165b7f251aafdfd9e5b19450b68dfa7408a2974f9f0411f8b"
+    },
+    {
+      "block_id": "page-0239-block-0007",
+      "order": 7,
+      "text": "Several case reports. Unclear mechanism, possibly immunological \nor thickening of saliva leading to calcium precipitation. Can be \nrecurrent. May resolve spontaneously.84 Treatment of \nhypersalivation with terazosin in combination with benzatropine \nmay be helpful\n",
+      "bbox": [
+        218.47189331054688,
+        162.09559631347656,
+        428.3445129394531,
+        210.798095703125
+      ],
+      "text_sha256": "003ad4324236bf1ddab9b880209e8bbbf784a1a270f15e737acd7b07265e64a6"
+    },
+    {
+      "block_id": "page-0239-block-0008",
+      "order": 8,
+      "text": "Pericarditis and \npericardial effusion85–93\n",
+      "bbox": [
+        61.88800048828125,
+        217.1130828857422,
+        134.361572265625,
+        235.81808471679688
+      ],
+      "text_sha256": "fba2b7386f8efcb44603c7377cc526d16c2e856a09d861507d1b8f21a3556e68"
+    },
+    {
+      "block_id": "page-0239-block-0009",
+      "order": 9,
+      "text": "Any time\nSeveral reports in the literature. Symptoms include fatigue, chest \npain, dyspnoea and tachycardia, but may be asymptomatic.94 Signs \ninclude raised inflammatory markers (specifically trop I) and \npro-BNP levels.95 Use echocardiogram to confirm/rule out effusion. \nSuccessful rechallenge possible96,97\n",
+      "bbox": [
+        151.8892059326172,
+        217.12062072753906,
+        434.0597229003906,
+        265.82562255859375
+      ],
+      "text_sha256": "87ffa9136980577f066b03a7022296cda3327f483263baef2e756c28f9a285df"
+    },
+    {
+      "block_id": "page-0239-block-0010",
+      "order": 10,
+      "text": "Stuttering98–106\nAny time\nCase reports. May be a result of EPS or epileptiform activity. Check \nplasma levels, consider dose reduction and/or antiseizure drugs – \nmay be a warning sign for impending generalised seizures107\n",
+      "bbox": [
+        61.889198303222656,
+        272.1456298828125,
+        430.4239196777344,
+        300.8481140136719
+      ],
+      "text_sha256": "aac1f6c5e8a4458f702b4055ea49bf5c5e4d0ca7328ace1ee19ae8e8e126d16a"
+    },
+    {
+      "block_id": "page-0239-block-0011",
+      "order": 11,
+      "text": "Thrombocytopenia108–111\nFirst 3 months\nFew data but apparently fairly common (incidence over 1 year of \n3112–8%113). Probably transient and clinically unimportant, but \npersistent in some cases114,115 and recurrent on rechallenge in \nothers.116 Thrombocytosis also reported117\n",
+      "bbox": [
+        61.889198303222656,
+        307.1706237792969,
+        426.6817321777344,
+        345.87811279296875
+      ],
+      "text_sha256": "5b7c6251e565d30484be562640e32b32f11a8dd3de56a992eff21e49e353442d"
+    },
+    {
+      "block_id": "page-0239-block-0012",
+      "order": 12,
+      "text": "Skin reactions118\nAny time\nPresence of skin diseases in general is higher in those with \nschizophrenia.119 Four reports of vasculitis120–123 in which patients \ndeveloped confluent erythematous rash on lower limbs. One report \nof Stevens-Johnson syndrome,124 two reports of pityriasis \nrosea,125,126 one report of a papular rash,127 one report of \nexanthematic pustulosis128 and one fatal case of Sweet’s \nsyndrome.129 Skin rash is commonly reported in DRESS syndrome32\n",
+      "bbox": [
+        61.889198303222656,
+        352.19561767578125,
+        435.4514465332031,
+        420.9031066894531
+      ],
+      "text_sha256": "3097de3b84af78c55a1c7eeb07c9f7d998a60022c698beee0cf811345ca2c8fd"
+    },
+    {
+      "block_id": "page-0239-block-0013",
+      "order": 13,
+      "text": "Thromboembolism130–134\nAny time135\nWeight increase and sedation may contribute to risk. Mechanism \nmay be increased platelet aggregation via 5HT2A receptor \nactivation.136 Clozapine increases risk of pulmonary \nthromboembolism by 28 times compared with the general \npopulation.137 The risk may be dose-related.138 Threshold for \nprophylactic antithrombotic treatment where additional risk factors \nare present (surgery, immobility) should be low. Continuation of \ntherapy after embolism may be possible139 but consult \nhaematologist as without prophylactic antithrombotic treatment \nrecurrence is likely140,141\n",
+      "bbox": [
+        61.88909912109375,
+        427.2206115722656,
+        434.5900573730469,
+        525.923095703125
+      ],
+      "text_sha256": "b0500e4b2186955eedcfc524769f8cb132c8ab39261976ac0de513adc217ab4b"
+    },
+    {
+      "block_id": "page-0239-block-0014",
+      "order": 14,
+      "text": "References\n",
+      "bbox": [
+        61.889198303222656,
+        552.7681274414062,
+        117.92318725585938,
+        565.8031005859375
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0239-block-0015",
+      "order": 15,
+      "text": "\t 1.\t Thompson A, et al. Late onset neutropenia with clozapine. Can J Psychiatry 2004; 49:647–648.\n\t 2.\t Bhanji NH, et al. Late-onset agranulocytosis in a patient with schizophrenia after 17 months of clozapine treatment. J Clin Psychopharmacol \n",
+      "bbox": [
+        61.889198303222656,
+        570.7451171875,
+        435.5692443847656,
+        586.9210815429688
+      ],
+      "text_sha256": "62152957d7dcd3994ca4e094fd59ec96537b14ce5497abeccd1c69c2e432f197"
+    },
+    {
+      "block_id": "page-0239-block-0016",
+      "order": 16,
+      "text": "2003; 23:522–523.\n\t 3.\t Sedky K, et al. Clozapine-induced agranulocytosis after 11 years of treatment (Letter). Am J Psychiatry 2005; 162:814.\n\t 4.\t De Araujo CF, et al. Delayed-onset severe neutropenia associated with clozapine with successful rechallenge at lower dose. J Clin \n",
+      "bbox": [
+        61.90119934082031,
+        588.7451171875,
+        435.5752868652344,
+        613.9210815429688
+      ],
+      "text_sha256": "b31942aa8df6bae49c9c5eea0a454d62740465af40907995789d9ef6b62fed93"
+    },
+    {
+      "block_id": "page-0239-block-0017",
+      "order": 17,
+      "text": "Psychopharmacol 2021; 41:77–79.\n\t 5.\t Kang BJ, et al. Long-term patient monitoring for clozapine-induced agranulocytosis and neutropenia in Korea: when is it safe to discontinue \n",
+      "bbox": [
+        61.91320037841797,
+        615.7451171875,
+        435.5932312011719,
+        631.9210815429688
+      ],
+      "text_sha256": "7e84b59c833e3f3793af075e707e62ed1c102b9fd3bbbb02f9d96a210d2d9cbd"
+    },
+    {
+      "block_id": "page-0239-block-0018",
+      "order": 18,
+      "text": "CPMS? Human Psychopharmacology 2006; 21:387–391.\n",
+      "bbox": [
+        72.91719818115234,
+        633.7451171875,
+        221.78915405273438,
+        640.9210815429688
+      ],
+      "text_sha256": "3ecf657275d1704f6e57bb54ae8832a8bd4959c1301c46c58376fd62425a17cb"
+    },
+    {
+      "block_id": "page-0239-block-0019",
+      "order": 19,
+      "text": "(Continued )\n",
+      "bbox": [
+        67.88870239257812,
+        70.221923828125,
+        105.71869659423828,
+        78.97442626953125
+      ],
+      "text_sha256": "c3ab12e8f78345edd17b557a29fa53292de3a5be0a3e66e15f19816503883eb0"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

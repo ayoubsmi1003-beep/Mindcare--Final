@@ -1,0 +1,383 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0927",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 927,
+  "source_page_index": 926,
+  "source_page_display": 927,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "906    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 14\napproximately 14 hours when given with glucuronidation-inducing drugs such as car-\nbamazepine or phenytoin. The half-life is increased to approximately 70 hours when \ngiven with valproate. This means that the time before complete re-titration is necessary \ntherefore varies between 3 and 7 days, depending on the other drugs prescribed.1\nTable 14.1  \u0007Restarting medication up to two weeks after stopping oral treatment (data obtained from EU \nregulatory documents (SPCs)2)\nDrugs that require re-titration\nDrugs that are \nusually safe for \nrestarting at  \nthe previous \ndose\nDrugs that are probably \nsafe for restarting at  \nthe previous dose\nDrug\nTime after which \nre-titration must \nbe performed\nFurther guidance\nClozapine\nLamotrigine\nMethadone\nBuprenorphine\nPaliperidone \nlong-acting \ninjection\nAripiprazole \nlong-acting \ninjection\n48 hours\n3–7 days\n3 days\n3 days\nDepends on \nformulation\n>5 weeks if 2nd or \n3rd dose missed\n>6 weeks in \nchronic treatment\nSee ‘Re-starting \nclozapine after \nafter a break in \ntreatment’ in \nChapter 1\nSee discussion in \nthe text\nSee ‘Opioid \ndependence’ in \nChapter 4\nSee ‘Paliperidone \npalmitate \nlong-acting \ninjection’ in \nChapter 1\nSee ‘Aripiprazole \nlong-acting \ninjection’ in \nChapter 1\nAcamprosate\nAsenapine\nFluoxetine\nHaloperidol\nIsocarboxazid\nLofepramine\nMethylphenidate\nPhenelzine\nSulpiride\nTranylcypromine\nValproate\nAntipsychotics (except \nclozapine, quetiapine and \nrisperidone)\nCarbamazepine\nCholinesterase inhibitors\nCNS stimulants\nDisulfiram\nLithium (titration advised if \nrenal function has changed)\nMAOIs\nMemantine\nNaltrexone\nOther antidepressants (but \nbeware loss of tolerance to \nsedative effects)\nPregabalin\nSSRIs\nTCAs (but beware loss of \ntolerance to sedative and \nhypotensive effects)\nCNS, central nervous system; MAOI, monoamine oxidase inhibitor; SSRI, selective serotonin reuptake inhibitor; TCA, \ntricyclic antidepressant.\nReferences\n\t 1.\t Aurobindo Pharma – Milpharm Ltd. Summary of Product Characteristics. Lamotrigine 25mg Tablets. 2019; https://www.medicines.org.uk/\nemc/product/4736/smpc.\n\t 2.\t EMC. https://www.medicines.org.uk/emc/; accessed June 2020.\n",
+  "raw_text_sha256": "5308ab23849dd6441132cfbfbbb60aa0c6b901707ac663a57c59e5a0afe80657",
+  "coordinates_sha256": "2e7137a98b640241fcd894340adce91f813a9dd9a6abdfd154839bf5e8557659",
+  "block_sequence_sha256": "9ee635642338018b220a60243860eeee2dab8b343f07c2330c7c2a3fdedfa2e5",
+  "blocks": [
+    {
+      "block_id": "page-0927-block-0000",
+      "order": 0,
+      "text": "906    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "f7c92a30539425eff26c77db02f33fbf5500dbce79fbcd8d945ccbc2fc43e166"
+    },
+    {
+      "block_id": "page-0927-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        18.520000457763672,
+        338.7405090332031,
+        28.0,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0927-block-0002",
+      "order": 2,
+      "text": "approximately 14 hours when given with glucuronidation-inducing drugs such as car-\nbamazepine or phenytoin. The half-life is increased to approximately 70 hours when \ngiven with valproate. This means that the time before complete re-titration is necessary \ntherefore varies between 3 and 7 days, depending on the other drugs prescribed.1\n",
+      "bbox": [
+        61.8909912109375,
+        61.8770751953125,
+        436.6313171386719,
+        109.59707641601562
+      ],
+      "text_sha256": "71c2e2a3c57e8bc31e178ba82f2adaca2f642669e79ee103828288c74d09fd5f"
+    },
+    {
+      "block_id": "page-0927-block-0003",
+      "order": 3,
+      "text": "Table 14.1  \u0007Restarting medication up to two weeks after stopping oral treatment (data obtained from EU \n",
+      "bbox": [
+        67.89099884033203,
+        142.70460510253906,
+        406.0210266113281,
+        151.59210205078125
+      ],
+      "text_sha256": "5383b9f9498d4cf527c9e67cc1e25c394f21e2f332367a6cee45ab38c4d093d8"
+    },
+    {
+      "block_id": "page-0927-block-0004",
+      "order": 4,
+      "text": "regulatory documents (SPCs)2)\n",
+      "bbox": [
+        106.66600036621094,
+        152.88209533691406,
+        202.72630310058594,
+        161.59210205078125
+      ],
+      "text_sha256": "c9230f1588e2f121567384ebd69de77585188ebd0e788fb6e2a04325ae394fac"
+    },
+    {
+      "block_id": "page-0927-block-0005",
+      "order": 5,
+      "text": "Drugs that require re-titration\nDrugs that are \nusually safe for \nrestarting at  \nthe previous \ndose\n",
+      "bbox": [
+        61.89099884033203,
+        172.93959045410156,
+        317.6559753417969,
+        222.04959106445312
+      ],
+      "text_sha256": "075dc949f6e3a7b9f5d3f24c4ef0008732cbfd8fe08c2ec7ff410e0b74f97878"
+    },
+    {
+      "block_id": "page-0927-block-0006",
+      "order": 6,
+      "text": "Drugs that are probably \nsafe for restarting at  \nthe previous dose\nDrug\n",
+      "bbox": [
+        61.8909912109375,
+        193.1595916748047,
+        418.30596923828125,
+        222.04208374023438
+      ],
+      "text_sha256": "a06658ce45caa2f5d34fdf0d590f9b59ab111779d865280db964483d1f319c8b"
+    },
+    {
+      "block_id": "page-0927-block-0007",
+      "order": 7,
+      "text": "Time after which \nre-titration must \nbe performed\nFurther guidance\n",
+      "bbox": [
+        115.98098754882812,
+        193.15208435058594,
+        245.64849853515625,
+        222.03457641601562
+      ],
+      "text_sha256": "c4be3e6a8aaafc6fc41b7deb289c7a0c2a4f3c38f77e8d914e305586648ead4f"
+    },
+    {
+      "block_id": "page-0927-block-0008",
+      "order": 8,
+      "text": "Clozapine\n",
+      "bbox": [
+        61.890987396240234,
+        233.70457458496094,
+        93.56348419189453,
+        242.41207885742188
+      ],
+      "text_sha256": "0bd60b9b2d37cb1923ef72b68316ecf506009979d23dbd051c264f05e5e95770"
+    },
+    {
+      "block_id": "page-0927-block-0009",
+      "order": 9,
+      "text": "Lamotrigine\n",
+      "bbox": [
+        61.890987396240234,
+        293.70458984375,
+        99.80347442626953,
+        302.4120788574219
+      ],
+      "text_sha256": "b3394accac2a452befc71e3d9bca026942127890bcb6902fd524c67fc40dbe1f"
+    },
+    {
+      "block_id": "page-0927-block-0010",
+      "order": 10,
+      "text": "Methadone\nBuprenorphine\n",
+      "bbox": [
+        61.890987396240234,
+        323.70458984375,
+        109.27597045898438,
+        342.4095764160156
+      ],
+      "text_sha256": "50e7df83d49a7f60249d0c0f5b991071280b3f879f200eb6d04a13edd8bd0c1a"
+    },
+    {
+      "block_id": "page-0927-block-0011",
+      "order": 11,
+      "text": "Paliperidone \nlong-acting \ninjection\n",
+      "bbox": [
+        61.890987396240234,
+        373.6995849609375,
+        103.14848327636719,
+        402.4020690917969
+      ],
+      "text_sha256": "b3ac4083dd96e285f2bddbc9cac5c6921b10f60baa31162f66f6499434e07282"
+    },
+    {
+      "block_id": "page-0927-block-0012",
+      "order": 12,
+      "text": "Aripiprazole \nlong-acting \ninjection\n",
+      "bbox": [
+        61.890987396240234,
+        443.69708251953125,
+        102.30847930908203,
+        472.3995666503906
+      ],
+      "text_sha256": "98919c4a9a3a195f5b20097fa37d951e78d8bf5f633107f146f479314d6c8684"
+    },
+    {
+      "block_id": "page-0927-block-0013",
+      "order": 13,
+      "text": "48 hours\n",
+      "bbox": [
+        115.98098754882812,
+        233.68955993652344,
+        144.3309783935547,
+        242.39706420898438
+      ],
+      "text_sha256": "d74a55dfcceafef7c06e5698fd4c7474d7233e066da11ecdfac06ddffddde341"
+    },
+    {
+      "block_id": "page-0927-block-0014",
+      "order": 14,
+      "text": "3–7 days\n",
+      "bbox": [
+        115.98098754882812,
+        293.6895751953125,
+        144.323486328125,
+        302.3970642089844
+      ],
+      "text_sha256": "537a838031e99b52ff472d51681a8fe5db43dae6c2bd62b861730cbfc7d9e501"
+    },
+    {
+      "block_id": "page-0927-block-0015",
+      "order": 15,
+      "text": "3 days\n3 days\n",
+      "bbox": [
+        115.98098754882812,
+        323.6895751953125,
+        136.40347290039062,
+        342.3945617675781
+      ],
+      "text_sha256": "8c35b809ca6f2a3c202886f5a356729e5ff897dc8c5cdd70aa79be1b91f22afd"
+    },
+    {
+      "block_id": "page-0927-block-0016",
+      "order": 16,
+      "text": "Depends on \nformulation\n",
+      "bbox": [
+        115.98098754882812,
+        373.6845703125,
+        156.42098999023438,
+        392.3895568847656
+      ],
+      "text_sha256": "903b7b78ffb6fd0534917e7907cf7e18614308d2ba21d2fb6b88a3e233d4dd26"
+    },
+    {
+      "block_id": "page-0927-block-0017",
+      "order": 17,
+      "text": ">5 weeks if 2nd or \n3rd dose missed\n",
+      "bbox": [
+        115.98098754882812,
+        443.68206787109375,
+        178.41848754882812,
+        462.3870544433594
+      ],
+      "text_sha256": "9229fe7ce74264016f6f2655d8f053c60dfd73cfe9cbcd7d16c0dbf239534e07"
+    },
+    {
+      "block_id": "page-0927-block-0018",
+      "order": 18,
+      "text": ">6 weeks in \nchronic treatment\n",
+      "bbox": [
+        115.98098754882812,
+        503.68206787109375,
+        172.78598022460938,
+        522.3870849609375
+      ],
+      "text_sha256": "ca20b517f3a375ab156fc3ec2e689e8c7b4d4a39da54fbadd641019b22ef2b0c"
+    },
+    {
+      "block_id": "page-0927-block-0019",
+      "order": 19,
+      "text": "See ‘Re-starting \nclozapine after \nafter a break in \ntreatment’ in \nChapter 1\n",
+      "bbox": [
+        185.6409912109375,
+        233.6820526123047,
+        237.72848510742188,
+        282.3795471191406
+      ],
+      "text_sha256": "1c8febf13103749fddd26e7c8fc3d361b4d4013f159ac757119bf2417665093c"
+    },
+    {
+      "block_id": "page-0927-block-0020",
+      "order": 20,
+      "text": "See discussion in \nthe text\n",
+      "bbox": [
+        185.6409912109375,
+        293.674560546875,
+        241.07347106933594,
+        312.3795471191406
+      ],
+      "text_sha256": "9c1698d92ae6e6111a01b38ddb3150a44d832bb6e02abfcf10a7415f85729c9a"
+    },
+    {
+      "block_id": "page-0927-block-0021",
+      "order": 21,
+      "text": "See ‘Opioid \ndependence’ in \nChapter 4\n",
+      "bbox": [
+        185.6409912109375,
+        323.674560546875,
+        236.91099548339844,
+        352.3770446777344
+      ],
+      "text_sha256": "f2240ca912671e5256821086f000e10c6d7a8ae2cebf68f213a88c78671c8145"
+    },
+    {
+      "block_id": "page-0927-block-0022",
+      "order": 22,
+      "text": "See ‘Paliperidone \npalmitate \nlong-acting \ninjection’ in \nChapter 1\n",
+      "bbox": [
+        185.6409912109375,
+        373.6695556640625,
+        242.3184814453125,
+        422.3670349121094
+      ],
+      "text_sha256": "e5318b430dc7258177a2cb056ab8c578ac6334bd90afc3f9ea78fa69dd3e3403"
+    },
+    {
+      "block_id": "page-0927-block-0023",
+      "order": 23,
+      "text": "See ‘Aripiprazole \nlong-acting \ninjection’ in \nChapter 1\n",
+      "bbox": [
+        185.6409912109375,
+        443.6595458984375,
+        241.47848510742188,
+        482.3595275878906
+      ],
+      "text_sha256": "951e63f340f6a8c3a71d5674cf7ec3b590b8ab20fc423c370357c7e24a993b6e"
+    },
+    {
+      "block_id": "page-0927-block-0024",
+      "order": 24,
+      "text": "Acamprosate\nAsenapine\nFluoxetine\nHaloperidol\nIsocarboxazid\nLofepramine\nMethylphenidate\nPhenelzine\nSulpiride\nTranylcypromine\nValproate\n",
+      "bbox": [
+        261.3909912109375,
+        233.6520233154297,
+        315.5635681152344,
+        342.3345031738281
+      ],
+      "text_sha256": "1567cb49f17d2d0a6df546719953bb57ceab5560ece8a4421f6bf1b54836012a"
+    },
+    {
+      "block_id": "page-0927-block-0025",
+      "order": 25,
+      "text": "Antipsychotics (except \nclozapine, quetiapine and \nrisperidone)\nCarbamazepine\nCholinesterase inhibitors\nCNS stimulants\nDisulfiram\nLithium (titration advised if \nrenal function has changed)\nMAOIs\nMemantine\nNaltrexone\nOther antidepressants (but \nbeware loss of tolerance to \nsedative effects)\nPregabalin\nSSRIs\nTCAs (but beware loss of \ntolerance to sedative and \nhypotensive effects)\n",
+      "bbox": [
+        331.8909912109375,
+        233.62950134277344,
+        420.9460754394531,
+        432.2894592285156
+      ],
+      "text_sha256": "d0a7732a26efa60ba040ef742c29fc382564ebd75f8d78fd6121297472b17c85"
+    },
+    {
+      "block_id": "page-0927-block-0026",
+      "order": 26,
+      "text": "CNS, central nervous system; MAOI, monoamine oxidase inhibitor; SSRI, selective serotonin reuptake inhibitor; TCA, \ntricyclic antidepressant.\n",
+      "bbox": [
+        61.8909912109375,
+        532.5794677734375,
+        433.7560729980469,
+        551.284423828125
+      ],
+      "text_sha256": "94f3826a585394e57da88ca8af656d86a6524699169dfd7ae0554fa6de8a7dde"
+    },
+    {
+      "block_id": "page-0927-block-0027",
+      "order": 27,
+      "text": "References\n",
+      "bbox": [
+        61.89099884033203,
+        572.0245361328125,
+        117.92499542236328,
+        585.0595092773438
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0927-block-0028",
+      "order": 28,
+      "text": "\t 1.\t Aurobindo Pharma – Milpharm Ltd. Summary of Product Characteristics. Lamotrigine 25mg Tablets. 2019; https://www.medicines.org.uk/\n",
+      "bbox": [
+        61.89099884033203,
+        590.1455078125,
+        433.8609619140625,
+        597.177490234375
+      ],
+      "text_sha256": "9d9ec5cf9693aa3cfd228ee599cf03d438567e09101b5d8089f99b650802bab4"
+    },
+    {
+      "block_id": "page-0927-block-0029",
+      "order": 29,
+      "text": "emc/product/4736/smpc.\n\t 2.\t EMC. https://www.medicines.org.uk/emc/; accessed June 2020.\n",
+      "bbox": [
+        61.89699935913086,
+        599.1455078125,
+        235.81298828125,
+        615.177490234375
+      ],
+      "text_sha256": "07517f03ef8f080e70b3ea10ddb4b25de8fbd429f5fb7340c9c5cd217aef91d2"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

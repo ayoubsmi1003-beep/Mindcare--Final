@@ -1,0 +1,263 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0706",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 706,
+  "source_page_index": 705,
+  "source_page_display": 706,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Pregnancy and breastfeeding    685\nCHAPTER 7\nDepression during pregnancy and postpartum51–53\n■\n■Approximately 10% of pregnant women develop or have a preexisting depressive \nillness. Around a third of cases of postpartum depression begin before birth.\n■\n■There is a significant increase in new psychiatric episodes in the first 3 months after \ndelivery. At least 80% are mood disorders, particularly severe depression.\n■\n■Women who have had a previous episode of depressive illness (postpartum or not) are at \nhigher risk of further episodes during pregnancy and postpartum. The risk is highest in \nwomen with bipolar illness who are also at risk of mania or mixed affective episodes.\n■\n■There is some evidence that depression increases the risk of spontaneous abortion, \nhaving a low birth weight or small for gestational age baby, or of preterm delivery, \nthough effects are small.4,54,55 The mental health of the mother influences foetal well-\nbeing, obstetric outcome and child development.\nThe risks of not treating depression include:\n■\n■Harm to the mother through poor self-care, lack of obstetric care or self-harm.\n■\n■Harm to the foetus or neonate (ranging from neglect to infanticide).\nTreatment with antidepressants\nRelapse rates are higher in those with a history of depression who discontinue medica-\ntion compared to those who continue. One study found that 68% of women who were \nwell on antidepressant treatment and stopped during pregnancy relapsed, compared \nwith 26% who continued antidepressants.51 Risk is likely to be highest for women with \na history of severe and/or recurrent depression.56\nSome data suggest that antidepressants may increase the risk of spontaneous abor-\ntion (but note that confounding factors were not controlled for), preterm delivery, low \nbirth weight, respiratory distress in the neonate, a low APGAR score at birth and admis-\nsion to a special care baby unit.57 Most studies are observational and do not control for \nmaternal depression. In a large cohort study the presence of depressive symptoms but \nnot antidepressant use58 was associated with preterm birth and babies small for gesta-\ntional age. Interestingly, a large Finnish study found SSRI use to be associated with a \nlower risk of preterm birth and caesarean delivery compared with unexposed women \ndiagnosed with a psychiatric illness59 and untreated maternal depression itself is associ-\nated with an increased risk of both low birth weight and preterm birth60. SSRIs do not \nappear to increase the risk of stillbirth or neonatal mortality.61,62\nWhile it is reasonably certain that commonly used antidepressants are not major \nteratogens,63 some antidepressants have been associated with specific congenital mal-\nformations,64 many of which are rare. Most of these potential associations remain \n■\n■Antipsychotic discontinuation symptoms can occur in the neonate (e.g. crying, agitation, increased \nsuckling). This is thought to be a class effect.50 When antipsychotics are taken in pregnancy it is \nrecommended that the woman gives birth in a unit that has access to paediatric intensive care \nfacilities.22 Some centres used mixed (breast/bottle) feeding to minimise withdrawal symptoms.\n",
+  "raw_text_sha256": "e599e8cd7ee4771b0709abd743663271deec055bb9e492f19d9327a00457c8ff",
+  "coordinates_sha256": "08cfe27a7fa16c61a8e7f59df47a5bc02d515d4eb48e3b2d4758153fa7ccd60d",
+  "block_sequence_sha256": "b5dfb54b6c1d2ccb3b22aaf2fac9e3d007041667a25f859fe3e55c33093c38c1",
+  "blocks": [
+    {
+      "block_id": "page-0706-block-0000",
+      "order": 0,
+      "text": "Pregnancy and breastfeeding    685\n",
+      "bbox": [
+        271.769287109375,
+        31.395221710205078,
+        420.00048828125,
+        41.0272216796875
+      ],
+      "text_sha256": "cc0857096ea0d02c7827ceec8c3f4da7710ea940579006b02b9b61c4a9e0b78e"
+    },
+    {
+      "block_id": "page-0706-block-0001",
+      "order": 1,
+      "text": "CHAPTER 7\n",
+      "bbox": [
+        454.4096984863281,
+        472.7144775390625,
+        463.88970947265625,
+        514.0584716796875
+      ],
+      "text_sha256": "6d1a2318236627f2d413db0336034ac4d71cea7172bd0baddf04c66a07292590"
+    },
+    {
+      "block_id": "page-0706-block-0002",
+      "order": 2,
+      "text": "Depression during pregnancy and postpartum51–53\n",
+      "bbox": [
+        48.0,
+        141.83157348632812,
+        303.41839599609375,
+        154.8665771484375
+      ],
+      "text_sha256": "c234e03d672ccc171721749e55370c75f2f75176d7dcd0e24422d1242a4ae220"
+    },
+    {
+      "block_id": "page-0706-block-0003",
+      "order": 3,
+      "text": "■\n■Approximately 10% of pregnant women develop or have a preexisting depressive \n",
+      "bbox": [
+        47.999900817871094,
+        160.67657470703125,
+        422.7900695800781,
+        172.39657592773438
+      ],
+      "text_sha256": "e5f2794e9617a15428b647583846d1e69e599ce040456ad5bcc06be146a69a7c"
+    },
+    {
+      "block_id": "page-0706-block-0004",
+      "order": 4,
+      "text": "illness. Around a third of cases of postpartum depression begin before birth.\n",
+      "bbox": [
+        57.0,
+        172.67657470703125,
+        384.66998291015625,
+        184.39657592773438
+      ],
+      "text_sha256": "635e9f795aed39ccbde2f9a064a5c81f34616aeb61a5c313df2bc9dce7ed2024"
+    },
+    {
+      "block_id": "page-0706-block-0005",
+      "order": 5,
+      "text": "■\n■There is a significant increase in new psychiatric episodes in the first 3 months after \n",
+      "bbox": [
+        47.999900817871094,
+        184.67657470703125,
+        422.75994873046875,
+        196.39657592773438
+      ],
+      "text_sha256": "a82f4bec5e00f1e23fd06b2ed6c0c807d33b18b5934c59c1201e3ca0ec6217e7"
+    },
+    {
+      "block_id": "page-0706-block-0006",
+      "order": 6,
+      "text": "delivery. At least 80% are mood disorders, particularly severe depression.\n",
+      "bbox": [
+        57.0,
+        196.67657470703125,
+        372.7900695800781,
+        208.39657592773438
+      ],
+      "text_sha256": "117f16a1e7426b40a7450d7f8ddbb5ed364dce70cc0b37b48b023911f16a8644"
+    },
+    {
+      "block_id": "page-0706-block-0007",
+      "order": 7,
+      "text": "■\n■Women who have had a previous episode of depressive illness (postpartum or not) are at \n",
+      "bbox": [
+        47.999900817871094,
+        208.67657470703125,
+        422.8098449707031,
+        220.39657592773438
+      ],
+      "text_sha256": "8fbf97ea396099d01ef8ef4476017f2559e3b58bf31d5895d6cfa5e44dc9be96"
+    },
+    {
+      "block_id": "page-0706-block-0008",
+      "order": 8,
+      "text": "higher risk of further episodes during pregnancy and postpartum. The risk is highest in \nwomen with bipolar illness who are also at risk of mania or mixed affective episodes.\n",
+      "bbox": [
+        57.0,
+        220.67657470703125,
+        422.7597961425781,
+        244.39657592773438
+      ],
+      "text_sha256": "61f724f0a042cd933db1ac249786664692773ebba19807c6a1252bfe7df3354b"
+    },
+    {
+      "block_id": "page-0706-block-0009",
+      "order": 9,
+      "text": "■\n■There is some evidence that depression increases the risk of spontaneous abortion, \n",
+      "bbox": [
+        47.999900817871094,
+        244.67657470703125,
+        422.8199768066406,
+        256.3965759277344
+      ],
+      "text_sha256": "01beb822e4c5ed24ecf22cd763b4ebc9b8081ed8a7d1695deab8f80c77247141"
+    },
+    {
+      "block_id": "page-0706-block-0010",
+      "order": 10,
+      "text": "having a low birth weight or small for gestational age baby, or of preterm delivery, \nthough effects are small.4,54,55 The mental health of the mother influences foetal well-\nbeing, obstetric outcome and child development.\n",
+      "bbox": [
+        57.0,
+        256.67657470703125,
+        422.73992919921875,
+        292.3965759277344
+      ],
+      "text_sha256": "295807184d7748371013add9ad574ec7d7fd136a3c9602f68bbb147f562d1ceb"
+    },
+    {
+      "block_id": "page-0706-block-0011",
+      "order": 11,
+      "text": "The risks of not treating depression include:\n",
+      "bbox": [
+        58.00390625,
+        298.67657470703125,
+        247.49388122558594,
+        310.3965759277344
+      ],
+      "text_sha256": "666850aab636aade7678100241ee9f4496ed4c76118bf9538e4b5f7849b1063b"
+    },
+    {
+      "block_id": "page-0706-block-0012",
+      "order": 12,
+      "text": "■\n■Harm to the mother through poor self-care, lack of obstetric care or self-harm.\n",
+      "bbox": [
+        47.999900817871094,
+        316.67657470703125,
+        396.6399841308594,
+        328.3965759277344
+      ],
+      "text_sha256": "e46e6918df9518de37fa2836da6a3574370a35dd03146dc0ad0ab7427ec0da0e"
+    },
+    {
+      "block_id": "page-0706-block-0013",
+      "order": 13,
+      "text": "■\n■Harm to the foetus or neonate (ranging from neglect to infanticide).\n",
+      "bbox": [
+        47.999900817871094,
+        328.67657470703125,
+        349.7898864746094,
+        340.3965759277344
+      ],
+      "text_sha256": "04da47b577f692a0dab0afe7f0b07e02e37b28f27d4a21a4389a73b7cb19f01c"
+    },
+    {
+      "block_id": "page-0706-block-0014",
+      "order": 14,
+      "text": "Treatment with antidepressants\n",
+      "bbox": [
+        48.0,
+        363.8315734863281,
+        212.24098205566406,
+        376.8665771484375
+      ],
+      "text_sha256": "24bebb29cf45c2fddd505269085cd26d0979eb3b59aadcbb5f7fff3dcf4d09d0"
+    },
+    {
+      "block_id": "page-0706-block-0015",
+      "order": 15,
+      "text": "Relapse rates are higher in those with a history of depression who discontinue medica-\ntion compared to those who continue. One study found that 68% of women who were \nwell on antidepressant treatment and stopped during pregnancy relapsed, compared \nwith 26% who continued antidepressants.51 Risk is likely to be highest for women with \na history of severe and/or recurrent depression.56\n",
+      "bbox": [
+        48.0,
+        382.67657470703125,
+        422.8298645019531,
+        442.3965759277344
+      ],
+      "text_sha256": "9dd289fec9b0264166cb7cd98ddafdc6102a23967f9b8465734ec28e066cbe55"
+    },
+    {
+      "block_id": "page-0706-block-0016",
+      "order": 16,
+      "text": "Some data suggest that antidepressants may increase the risk of spontaneous abor-\ntion (but note that confounding factors were not controlled for), preterm delivery, low \nbirth weight, respiratory distress in the neonate, a low APGAR score at birth and admis-\nsion to a special care baby unit.57 Most studies are observational and do not control for \nmaternal depression. In a large cohort study the presence of depressive symptoms but \nnot antidepressant use58 was associated with preterm birth and babies small for gesta-\ntional age. Interestingly, a large Finnish study found SSRI use to be associated with a \nlower risk of preterm birth and caesarean delivery compared with unexposed women \ndiagnosed with a psychiatric illness59 and untreated maternal depression itself is associ-\nated with an increased risk of both low birth weight and preterm birth60. SSRIs do not \nappear to increase the risk of stillbirth or neonatal mortality.61,62\n",
+      "bbox": [
+        47.99871826171875,
+        442.67657470703125,
+        422.81201171875,
+        574.3966064453125
+      ],
+      "text_sha256": "817cebcda2e5e02c7fe0862ac5663c951b5fef4c3c29d383fec4dfdc685256d7"
+    },
+    {
+      "block_id": "page-0706-block-0017",
+      "order": 17,
+      "text": "While it is reasonably certain that commonly used antidepressants are not major \nteratogens,63 some antidepressants have been associated with specific congenital mal-\nformations,64 many of which are rare. Most of these potential associations remain \n",
+      "bbox": [
+        48.0,
+        574.6765747070312,
+        422.7724609375,
+        610.3966064453125
+      ],
+      "text_sha256": "dbd5896e92403a964aafa217eedfbe59cb075e0cf139bedc15b81d422458c26e"
+    },
+    {
+      "block_id": "page-0706-block-0018",
+      "order": 18,
+      "text": "■\n■Antipsychotic discontinuation symptoms can occur in the neonate (e.g. crying, agitation, increased \n",
+      "bbox": [
+        55.249900817871094,
+        70.48190307617188,
+        415.114501953125,
+        80.35040283203125
+      ],
+      "text_sha256": "311fe8b7160df6da58cb671678c9aad657f6aa56b90f890c37b66cf32df1d4be"
+    },
+    {
+      "block_id": "page-0706-block-0019",
+      "order": 19,
+      "text": "suckling). This is thought to be a class effect.50 When antipsychotics are taken in pregnancy it is \nrecommended that the woman gives birth in a unit that has access to paediatric intensive care \nfacilities.22 Some centres used mixed (breast/bottle) feeding to minimise withdrawal symptoms.\n",
+      "bbox": [
+        63.74639892578125,
+        80.47787475585938,
+        402.828369140625,
+        110.35040283203125
+      ],
+      "text_sha256": "ae8a05ed181ac577cd6b160e64a4c80c0a2f5757d4e4d02b3dd662cf1dab067b"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

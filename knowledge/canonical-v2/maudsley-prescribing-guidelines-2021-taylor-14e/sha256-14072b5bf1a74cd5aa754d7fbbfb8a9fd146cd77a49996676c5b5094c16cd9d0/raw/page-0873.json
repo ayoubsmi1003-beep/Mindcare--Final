@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0873",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 873,
+  "source_page_index": 872,
+  "source_page_display": 873,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "852    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  11\nCPY1A2\nSUBSTRATES\nINHIBITORS\nINDUCERS\nAgomelatine\nAmitriptyline*\nAsenapine\nBupropion*\nCaffeine\nChlorpromazine\nClomipramine*\nClozapine\nDuloxetine\nFluphenazine\nFluvoxamine\nImipramine*\nMelatonin\nMirtazapine*\nOlanzapine\nPerphenazine\n?Pimozide*\nRamelteon\nZolpidem*\nFluvoxamine\nMoclobemide\nPerphenazine\n‘Barbiturates’\nCarbamazepine\nModafinil*\nPhenobarbital\nPhenytoin\nCYP2A6\nSUBSTRATES\nINHIBITORS\nINDUCERS\nBupropion*\nCaffeine\nNicotine\nTranylcypromine\nPhenobarbital\nCPY2B6\nSUBSTRATES\nINHIBITORS\nINDUCERS\nBupropion\nMethadone*\nNicotine\nSertraline*\nFluoxetine*\nFluvoxamine\nMemantine\nParoxetine*\nSertraline*\nCarbamazepine*\nModafinil*\nPhenobarbital\nPhenytoin\nCYP2B7\nSUBSTRATES\nINHIBITORS\nINDUCERS\nBuprenorphine*\nNot known\nNot known\n",
+  "raw_text_sha256": "86d5f9fbbdd4c06ae411e470e766062cd04bf6c728862a64e1ee3a30a61a5744",
+  "coordinates_sha256": "aed9b6e558b99a391de55092989c23a769ed02582d27a422de9b237c27ad0285",
+  "block_sequence_sha256": "86de253143b61dc97e71fe8afa2794341808d52dcdb916572191217e25a22f83",
+  "blocks": [
+    {
+      "block_id": "page-0873-block-0000",
+      "order": 0,
+      "text": "852    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "3b7ff2ed6ca7e4ca8e553798d520d399a7fb64457eb243ec8d105908e68abdc4"
+    },
+    {
+      "block_id": "page-0873-block-0001",
+      "order": 1,
+      "text": "CHAPTER  11\n",
+      "bbox": [
+        18.520000457763672,
+        139.8785400390625,
+        28.0,
+        187.89450073242188
+      ],
+      "text_sha256": "83984f4328940309c03288e26b8edf9834cfa8fef30d3eedac5a4c266fe9aee7"
+    },
+    {
+      "block_id": "page-0873-block-0002",
+      "order": 2,
+      "text": "CPY1A2\n",
+      "bbox": [
+        128.83489990234375,
+        62.31540298461914,
+        169.18289184570312,
+        75.35040283203125
+      ],
+      "text_sha256": "1ed7bb8e37dd1cb79243779b703c7b9e5d8a0456ca2e0e0b1b81a3f69ef4f4af"
+    },
+    {
+      "block_id": "page-0873-block-0003",
+      "order": 3,
+      "text": "SUBSTRATES\nINHIBITORS\nINDUCERS\n",
+      "bbox": [
+        128.83489990234375,
+        90.46290588378906,
+        329.4149169921875,
+        99.35040283203125
+      ],
+      "text_sha256": "2aca33d2fae48aff4424d149aa2192c475fc0f30fe30d39d54ea488cfa4c1797"
+    },
+    {
+      "block_id": "page-0873-block-0004",
+      "order": 4,
+      "text": "Agomelatine\nAmitriptyline*\nAsenapine\nBupropion*\nCaffeine\nChlorpromazine\nClomipramine*\nClozapine\nDuloxetine\nFluphenazine\nFluvoxamine\nImipramine*\nMelatonin\nMirtazapine*\nOlanzapine\nPerphenazine\n?Pimozide*\nRamelteon\nZolpidem*\n",
+      "bbox": [
+        128.84239196777344,
+        108.59040832519531,
+        179.96237182617188,
+        297.432861328125
+      ],
+      "text_sha256": "1c4ed9d73e662fe0ded4a3ff624d9464c2da4b70c66d5f612c0fb8ba2db15472"
+    },
+    {
+      "block_id": "page-0873-block-0005",
+      "order": 5,
+      "text": "Fluvoxamine\nMoclobemide\nPerphenazine\n",
+      "bbox": [
+        214.21490478515625,
+        108.54536437988281,
+        259.22991943359375,
+        137.4278564453125
+      ],
+      "text_sha256": "01870d955684a8b2496da720d2822922efa72297041df40cb2c7962ae38a280e"
+    },
+    {
+      "block_id": "page-0873-block-0006",
+      "order": 6,
+      "text": "‘Barbiturates’\nCarbamazepine\nModafinil*\nPhenobarbital\nPhenytoin\n",
+      "bbox": [
+        293.58740234375,
+        108.53785705566406,
+        343.5899353027344,
+        157.41534423828125
+      ],
+      "text_sha256": "2da1abf0ee468e42f58bd460b9e5394d75384e7352c2adba59fa46f6c4796f5f"
+    },
+    {
+      "block_id": "page-0873-block-0007",
+      "order": 7,
+      "text": "CYP2A6\n",
+      "bbox": [
+        128.83489990234375,
+        324.0653991699219,
+        169.18289184570312,
+        337.10040283203125
+      ],
+      "text_sha256": "f87f047482c3a608a35e74cefdd0319d42e0fd808c919a9bb43f61e422a0e36c"
+    },
+    {
+      "block_id": "page-0873-block-0008",
+      "order": 8,
+      "text": "SUBSTRATES\nINHIBITORS\nINDUCERS\n",
+      "bbox": [
+        128.83489990234375,
+        352.212890625,
+        329.4149169921875,
+        361.10040283203125
+      ],
+      "text_sha256": "2aca33d2fae48aff4424d149aa2192c475fc0f30fe30d39d54ea488cfa4c1797"
+    },
+    {
+      "block_id": "page-0873-block-0009",
+      "order": 9,
+      "text": "Bupropion*\nCaffeine\nNicotine\n",
+      "bbox": [
+        128.84239196777344,
+        370.5204162597656,
+        166.22987365722656,
+        399.222900390625
+      ],
+      "text_sha256": "080ae57be78797bf7f2ccfb0a4c350ec677f6db8ed080c00c7c98c6ff3d7bcd6"
+    },
+    {
+      "block_id": "page-0873-block-0010",
+      "order": 10,
+      "text": "Tranylcypromine\nPhenobarbital\n",
+      "bbox": [
+        214.21490478515625,
+        370.5129089355469,
+        337.7624816894531,
+        379.22039794921875
+      ],
+      "text_sha256": "123b7e72b8fc61022f5f37c263319eddf6d297567d8f7de385271a49d82885e2"
+    },
+    {
+      "block_id": "page-0873-block-0011",
+      "order": 11,
+      "text": "CPY2B6\n",
+      "bbox": [
+        128.83489990234375,
+        425.8153991699219,
+        167.96188354492188,
+        438.85040283203125
+      ],
+      "text_sha256": "d4760c5dc6d8b4b6770bf4c29cd74aa80cff64b01c66659a77027a787174d594"
+    },
+    {
+      "block_id": "page-0873-block-0012",
+      "order": 12,
+      "text": "SUBSTRATES\nINHIBITORS\nINDUCERS\n",
+      "bbox": [
+        128.83489990234375,
+        453.962890625,
+        329.4149169921875,
+        462.85040283203125
+      ],
+      "text_sha256": "2aca33d2fae48aff4424d149aa2192c475fc0f30fe30d39d54ea488cfa4c1797"
+    },
+    {
+      "block_id": "page-0873-block-0013",
+      "order": 13,
+      "text": "Bupropion\nMethadone*\nNicotine\nSertraline*\n",
+      "bbox": [
+        128.84239196777344,
+        472.09039306640625,
+        170.1073760986328,
+        510.97039794921875
+      ],
+      "text_sha256": "a7c4528510dd77d9c699684fcd5463b5fdabf6f658cd90f85a4695423f141d13"
+    },
+    {
+      "block_id": "page-0873-block-0014",
+      "order": 14,
+      "text": "Fluoxetine*\nFluvoxamine\nMemantine\nParoxetine*\nSertraline*\n",
+      "bbox": [
+        214.21490478515625,
+        472.2629089355469,
+        253.79238891601562,
+        520.9603881835938
+      ],
+      "text_sha256": "0a300cee232f6090a7d6aa7020bdaac14bef08814b42b6a0a6e15915c4513032"
+    },
+    {
+      "block_id": "page-0873-block-0015",
+      "order": 15,
+      "text": "Carbamazepine*\nModafinil*\nPhenobarbital\nPhenytoin\n",
+      "bbox": [
+        293.58740234375,
+        472.2554016113281,
+        347.75994873046875,
+        510.95538330078125
+      ],
+      "text_sha256": "dd3ee237e1a8b09e355381b9c48b307f6c997c89eccba3bddc4fd6e37f02e59c"
+    },
+    {
+      "block_id": "page-0873-block-0016",
+      "order": 16,
+      "text": "CYP2B7\n",
+      "bbox": [
+        128.83489990234375,
+        549.5654296875,
+        167.96188354492188,
+        562.6004028320312
+      ],
+      "text_sha256": "e36b320452f3715a9684b62ffd46ac820d21d096e5a1fb790c3bb7084ac9dc48"
+    },
+    {
+      "block_id": "page-0873-block-0017",
+      "order": 17,
+      "text": "SUBSTRATES\nINHIBITORS\nINDUCERS\n",
+      "bbox": [
+        128.83489990234375,
+        577.712890625,
+        329.4149169921875,
+        586.6004028320312
+      ],
+      "text_sha256": "2aca33d2fae48aff4424d149aa2192c475fc0f30fe30d39d54ea488cfa4c1797"
+    },
+    {
+      "block_id": "page-0873-block-0018",
+      "order": 18,
+      "text": "Buprenorphine*\nNot known\nNot known\n",
+      "bbox": [
+        128.84239196777344,
+        596.0203857421875,
+        329.43743896484375,
+        604.7279052734375
+      ],
+      "text_sha256": "ee4c7246e1fb9b1a23054dd93cc8d939116d2c18a31dcc305c5a943ec91ca76f"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

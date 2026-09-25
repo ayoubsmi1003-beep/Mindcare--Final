@@ -1,0 +1,275 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0693",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 693,
+  "source_page_index": 692,
+  "source_page_display": 693,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "672    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  6\nReferences\n\t 1.\t Royal Pharmaceutical Society and Royal College of Nursing. Professional guidance on the administration of medicines in healthcare settings. \n2019; https://www.rpharms.com/Portals/0/RPS%20document%20library/Open%20access/Professional%20standards/SSHM%20and%20\nAdmin/Admin%20of%20Meds%20prof%20guidance.pdf?ver=2019-01-23-145026-567.\n\t 2.\t Royal College of Psychiatrists. College statement on covert administration of medicines. Psychiatric Bulletin 2004; 28:385–386.\n\t 3.\t Office of Public Sector Information. Mental capacity act 2005 – Chapter 9. 2005; http://www.legislation.gov.uk/ukpga/2005/9/pdfs/\nukpga_20050009_en.pdf.\n\t 4.\t The National Archives. Mental health act 2007; http://www.legislation.gov.uk/ukpga/2007/12/contents.\n\t 5.\t British Medical Association and the Law Society. Assessment of mental capacity. a practical guide for doctors and lawyer, 4th ed. London: \nLaw Society Publishing, 2015.\n\t 6.\t Office of the Public Guardian. Mental capacity act code of practice (updated 2016). https://www.gov.uk/government/publications/\nmental-capacity-act-code-of-practice.\n\t 7.\t Department for Constitutional Affairs. Mental capacity act 2005 – code of practice. 2005; http://www.justice.gov.uk.\n\t 8.\t Care Quality Commission. Covert administration of medicines. 2020; https://www.cqc.org.uk/guidance-providers/adult-social-care/\ncovert-administration-medicines.\n\t 9.\t Hempsons. Newsflash: covert medication and DOLS – new court guidance. 2016; http://www.hempsons.co.uk/news/newsflash-covert- \nmedication-dols-new-court-guidance.\n\t10.\t The Prescription Training Company Ltd. Covert administration of medicines. Recent court of protection ruling on covert medication – 6th \nJuly 2016. https://medicationtraining.co.uk/covert-administration-medicines.\n\t11.\t Care Quality Commission. Brief guide: covert medication in mental health services. 2016; https://www.cqc.org.uk/sites/default/\nfiles/20161122_briefguide-covert_medication.pdf.\n\t12.\t National Institute for Health and Care Excellence. Managing medicines in care homes. Social Care Guideline [SC1] 2014 (updated 2020); \nhttps://www.nice.org.uk/guidance/sc1.\n\t13.\t PrescQIPP. Bulletin 101 – Best practice guidance in covert administration of medication. 2015; https://www.prescqipp.info/umbraco/surface/\nauthorisedmediasurface/index?url=%2fmedia%2f1174%2fb101-covert-administration-21.pdf.\nFurther reading\nQuality Care Commission. Covert administration of medicines 2020; https://www.cqc.org.uk/guidance-providers/adult-social-care/covert- \nadministration-medicines\nKelly Fatemi. Covert administration of medicines in care homes The Pharmaceutical Journal 2016. https://www.pharmaceutical-journal.com/\ncpd-and-learning/learning-article/covert-administration-of-medicines-in-care-homes/20201536.fullarticle?firstPass=false\nNational Institute for Health and Care Excellence. Medicines Management in care Homes. NICE Quality Standard 2015; https://www.nice.org.\nuk/guidance/qs85/resources/medicines-management-in-care-homes-pdf-2098910254021\nFor Scotland\nMental Welfare Commission for Scotland. Good Practice Guide: Covert administration 2013 (reviewed 2017);\nhttps://www.mwcscot.org.uk/sites/default/files/2019-06/covert_medication.pdf\n",
+  "raw_text_sha256": "3a71ef2c3ad3a90598ff7226b84c3b113b56aacc76a5692f2e433dfd17de0a78",
+  "coordinates_sha256": "102322056ab0ccc202d34d8333b2fff9b550c08c1c6d4de37eec0f5cc41b8bf6",
+  "block_sequence_sha256": "29e8c04362634c7262d08a8e9f8e250737606a3db2918b7aa363513ef700a6aa",
+  "blocks": [
+    {
+      "block_id": "page-0693-block-0000",
+      "order": 0,
+      "text": "672    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "41f7b65ada121b18d62f08529712a4e97fe9ba1a33433c2865858254dbd20152"
+    },
+    {
+      "block_id": "page-0693-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        18.520000457763672,
+        405.35260009765625,
+        28.0,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0693-block-0002",
+      "order": 2,
+      "text": "References\n",
+      "bbox": [
+        61.88999938964844,
+        62.31540298461914,
+        117.92399597167969,
+        75.35040283203125
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0693-block-0003",
+      "order": 3,
+      "text": "\t 1.\t Royal Pharmaceutical Society and Royal College of Nursing. Professional guidance on the administration of medicines in healthcare settings. \n",
+      "bbox": [
+        61.88999938964844,
+        80.4364013671875,
+        435.5398864746094,
+        87.46839904785156
+      ],
+      "text_sha256": "f841de6a477ae93f819551debdb53d42bb082f352a6ba970f1f97e62c0df8185"
+    },
+    {
+      "block_id": "page-0693-block-0004",
+      "order": 4,
+      "text": "2019; https://www.rpharms.com/Portals/0/RPS%20document%20library/Open%20access/Professional%20standards/SSHM%20and%20\nAdmin/Admin%20of%20Meds%20prof%20guidance.pdf?ver=2019-01-23-145026-567.\n\t 2.\t Royal College of Psychiatrists. College statement on covert administration of medicines. Psychiatric Bulletin 2004; 28:385–386.\n\t 3.\t Office of Public Sector Information. Mental capacity act 2005 – Chapter 9. 2005; http://www.legislation.gov.uk/ukpga/2005/9/pdfs/\n",
+      "bbox": [
+        61.895999908447266,
+        89.4364013671875,
+        433.89605712890625,
+        123.46839904785156
+      ],
+      "text_sha256": "4aa70afc9aa7ee63b65bbb9402bcc7e24a042859c3f30fd83e62cd72b41e9f3e"
+    },
+    {
+      "block_id": "page-0693-block-0005",
+      "order": 5,
+      "text": "ukpga_20050009_en.pdf.\n\t 4.\t The National Archives. Mental health act 2007; http://www.legislation.gov.uk/ukpga/2007/12/contents.\n\t 5.\t British Medical Association and the Law Society. Assessment of mental capacity. a practical guide for doctors and lawyer, 4th ed. London: \n",
+      "bbox": [
+        61.90800094604492,
+        125.4364013671875,
+        435.5759582519531,
+        150.46839904785156
+      ],
+      "text_sha256": "e76195d35a79cf0cf1fc69520e6b68b3c46835871965ccaa8ea4bccf6f7aad6c"
+    },
+    {
+      "block_id": "page-0693-block-0006",
+      "order": 6,
+      "text": "Law Society Publishing, 2015.\n\t 6.\t Office of the Public Guardian. Mental capacity act code of practice (updated 2016). https://www.gov.uk/government/publications/\n",
+      "bbox": [
+        61.91999816894531,
+        152.4364013671875,
+        433.8958740234375,
+        168.46839904785156
+      ],
+      "text_sha256": "8602fba3b8d1f3c3532fa19948a473d379e3452b0204bfdc9194d543e25a3c7d"
+    },
+    {
+      "block_id": "page-0693-block-0007",
+      "order": 7,
+      "text": "mental-capacity-act-code-of-practice.\n\t 7.\t Department for Constitutional Affairs. Mental capacity act 2005 – code of practice. 2005; http://www.justice.gov.uk.\n\t 8.\t Care Quality Commission. Covert administration of medicines. 2020; https://www.cqc.org.uk/guidance-providers/adult-social-care/\n",
+      "bbox": [
+        61.92599868774414,
+        170.4364013671875,
+        433.91998291015625,
+        195.46839904785156
+      ],
+      "text_sha256": "078836bad337c8345f2823d896ee372779be70967e9c346c0addc8ceb64eb0bb"
+    },
+    {
+      "block_id": "page-0693-block-0008",
+      "order": 8,
+      "text": "covert-administration-medicines.\n\t 9.\t Hempsons. Newsflash: covert medication and DOLS – new court guidance. 2016; http://www.hempsons.co.uk/news/newsflash-covert- \n",
+      "bbox": [
+        61.9379997253418,
+        197.4364013671875,
+        435.5999450683594,
+        213.46839904785156
+      ],
+      "text_sha256": "536949f9079537be71c7dd3132b36ba4da835475057ac2de388d744d2cf956fa"
+    },
+    {
+      "block_id": "page-0693-block-0009",
+      "order": 9,
+      "text": "medication-dols-new-court-guidance.\n\t10.\t The Prescription Training Company Ltd. Covert administration of medicines. Recent court of protection ruling on covert medication – 6th \n",
+      "bbox": [
+        61.944000244140625,
+        215.4364013671875,
+        435.60595703125,
+        231.46839904785156
+      ],
+      "text_sha256": "6923e847c67461a9ceda8dd030a580b95fa8855bc6b363d79459dce5a8fb715e"
+    },
+    {
+      "block_id": "page-0693-block-0010",
+      "order": 10,
+      "text": "July 2016. https://medicationtraining.co.uk/covert-administration-medicines.\n\t11.\t Care Quality Commission. Brief guide: covert medication in mental health services. 2016; https://www.cqc.org.uk/sites/default/\n",
+      "bbox": [
+        61.95000076293945,
+        233.4364013671875,
+        433.9198913574219,
+        249.46839904785156
+      ],
+      "text_sha256": "4ab15f3d844c724d13f5187444714d38c31eb23bae891054d1e7243e18659f9f"
+    },
+    {
+      "block_id": "page-0693-block-0011",
+      "order": 11,
+      "text": "files/20161122_briefguide-covert_medication.pdf.\n\t12.\t National Institute for Health and Care Excellence. Managing medicines in care homes. Social Care Guideline [SC1] 2014 (updated 2020); \n",
+      "bbox": [
+        61.95600128173828,
+        251.4364013671875,
+        435.6480712890625,
+        267.4684143066406
+      ],
+      "text_sha256": "003b4d8fc5031629a050ed348c60448bac79772b91603ba7c9ee8b814b23fafc"
+    },
+    {
+      "block_id": "page-0693-block-0012",
+      "order": 12,
+      "text": "https://www.nice.org.uk/guidance/sc1.\n\t13.\t PrescQIPP. Bulletin 101 – Best practice guidance in covert administration of medication. 2015; https://www.prescqipp.info/umbraco/surface/\n",
+      "bbox": [
+        61.96200180053711,
+        269.4364013671875,
+        433.95599365234375,
+        285.4684143066406
+      ],
+      "text_sha256": "08a7b6692f999cbb25d23057a3ee891db72a7d8e1d3be9f605d77403b9221761"
+    },
+    {
+      "block_id": "page-0693-block-0013",
+      "order": 13,
+      "text": "authorisedmediasurface/index?url=%2fmedia%2f1174%2fb101-covert-administration-21.pdf.\n",
+      "bbox": [
+        72.96600341796875,
+        287.4364013671875,
+        318.6659240722656,
+        294.4684143066406
+      ],
+      "text_sha256": "4d4128dd098151560e2063620ec8b3edd031be9986ed798e5a6394075b4bee44"
+    },
+    {
+      "block_id": "page-0693-block-0014",
+      "order": 14,
+      "text": "Further reading\n",
+      "bbox": [
+        61.889801025390625,
+        307.17498779296875,
+        142.3767852783203,
+        320.2099914550781
+      ],
+      "text_sha256": "97a7eb93e6fca560969f4c10a52d2ef83995974b08b112934e0d108909963303"
+    },
+    {
+      "block_id": "page-0693-block-0015",
+      "order": 15,
+      "text": "Quality Care Commission. Covert administration of medicines 2020; https://www.cqc.org.uk/guidance-providers/adult-social-care/covert- \n",
+      "bbox": [
+        61.889801025390625,
+        326.7959899902344,
+        435.55780029296875,
+        333.8280029296875
+      ],
+      "text_sha256": "47d99b893d544942918bd38c37224d0fd6f44f0c37d84566598fc6ce722af97d"
+    },
+    {
+      "block_id": "page-0693-block-0016",
+      "order": 16,
+      "text": "administration-medicines\nKelly Fatemi. Covert administration of medicines in care homes The Pharmaceutical Journal 2016. https://www.pharmaceutical-journal.com/\n",
+      "bbox": [
+        61.889801025390625,
+        335.7959899902344,
+        433.9078063964844,
+        351.8280029296875
+      ],
+      "text_sha256": "b18574a9baff60a525c3598c6dcd81cda87a45c8e283e64e21badf2e73a49e09"
+    },
+    {
+      "block_id": "page-0693-block-0017",
+      "order": 17,
+      "text": "cpd-and-learning/learning-article/covert-administration-of-medicines-in-care-homes/20201536.fullarticle?firstPass=false\nNational Institute for Health and Care Excellence. Medicines Management in care Homes. NICE Quality Standard 2015; https://www.nice.org.\n",
+      "bbox": [
+        61.889801025390625,
+        353.7959899902344,
+        433.88372802734375,
+        369.8280029296875
+      ],
+      "text_sha256": "cbcd05152135908a249ed5c45b363b861628a8cf121c689bae19618947ac4f5f"
+    },
+    {
+      "block_id": "page-0693-block-0018",
+      "order": 18,
+      "text": "uk/guidance/qs85/resources/medicines-management-in-care-homes-pdf-2098910254021\n",
+      "bbox": [
+        73.88980102539062,
+        371.7959899902344,
+        301.2417907714844,
+        378.8280029296875
+      ],
+      "text_sha256": "44aa5b76c59b941d107503a19f45e0ad205f81c9ec3652336c60985773cdbc37"
+    },
+    {
+      "block_id": "page-0693-block-0019",
+      "order": 19,
+      "text": "For Scotland\n",
+      "bbox": [
+        61.889801025390625,
+        394.17498779296875,
+        126.06379699707031,
+        407.2099914550781
+      ],
+      "text_sha256": "4a05539058d23162219f1a360277173f3a11755271a0e60c04980a0e3f2bff97"
+    },
+    {
+      "block_id": "page-0693-block-0020",
+      "order": 20,
+      "text": "Mental Welfare Commission for Scotland. Good Practice Guide: Covert administration 2013 (reviewed 2017);\nhttps://www.mwcscot.org.uk/sites/default/files/2019-06/covert_medication.pdf\n",
+      "bbox": [
+        61.889801025390625,
+        412.7959899902344,
+        347.375732421875,
+        427.82598876953125
+      ],
+      "text_sha256": "ae7b277f10463d91935c3818baea1be311e0b3f8bc0708fad2249cc271289ec2"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

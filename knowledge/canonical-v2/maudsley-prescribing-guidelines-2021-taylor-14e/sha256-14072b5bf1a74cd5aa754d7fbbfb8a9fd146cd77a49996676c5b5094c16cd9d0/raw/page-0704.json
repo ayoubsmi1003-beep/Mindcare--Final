@@ -1,0 +1,215 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0704",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 704,
+  "source_page_index": 703,
+  "source_page_display": 704,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Pregnancy and breastfeeding    683\nCHAPTER 7\nSecond-generation antipsychotics\n■\n■Are unlikely to be major teratogens.\n■\n■A prospective study that included 561 women who took an SGA (mostly olanzapine, \nquetiapine, clozapine, risperidone or aripiprazole) during pregnancy concluded that \nSGA exposure was associated with increased birth weight, a modestly increased risk \nof cardiac septal defects (possibly due to screening bias or co-exposure to SSRIs), and, \nas with FGAs, withdrawal effects in 15% neonates.20\n■\n■However, in a large American study including over a million women, no meaningful \nincrease in the risk of major malformations or cardiac malformations was seen in \n9258 women prescribed an SGA. A small increase in absolute risk was seen with \nrisperidone. The authors suggest that this particular finding should be interpreted \nwith caution and be seen as an initial safety signal which requires further investiga-\ntion.23 In a separate study of 214 women taking an SGA the absolute risk of major \nmalformation was estimated to be 1.4% compared with 1.1% in the control group.23\n■\n■A separate American study which analysed data from the National Birth Defects \nPrevention Study reported an increased association between SGA use in early preg-\nnancy and conotruncal heart defects, tetralogy of fallot, anorectal atresia/stenosis and \ngastroschisis. The study included over 22,000 cases and over 11,000 controls. Women \nexposed to SGAs were more likely to report pre-pregnancy obesity, illicit drug use, \nsmoking and alcohol use and use of other psychiatric medications during pregnancy.26\n■\n■In a population-based study of over a million women an increased risk of gestational \ndiabetes, caesarean section, large for gestational age and preterm birth were reported \nin women prescribed an SGA compared with no antipsychotic. The risks of caesarean \nsection and large for gestational age were reported to be higher with SGAs compared \nwith FGAs.27 Maternal mental illness may also be an important factor in the risk for \ngestational diabetes.28,29 Aripiprazole may not be associated with an increased risk.30\n■\n■There are most data for olanzapine, which has been associated with both lower birth \nweight and increased risk of intensive care admission,31 a large head circumference32 and \nwith macrosomia;33 the last of these is consistent with the reported increase in the risk of \ngestational diabetes.20,32,34,35 Olanzapine seems to be relatively safe with respect to congeni-\ntal malformations; the prevalence being consistent with population norms in a study that \nreported on 610 prospectively followed pregnancies.36 Olanzapine has however been asso-\nciated with a range of problems including hip dysplasia,37 meningocele, ankyloblepharon,38 \nand neural tube defects20 (an effect that could be related to pre-pregnancy obesity rather \nthan drug exposure39). Importantly there is no clustering of congenital malformations.\n■\n■The use of clozapine appears to present no increased risk of malformation, although \ngestational diabetes and neonatal seizures may be more likely to occur.34 There is a \nsingle case report of maternal overdose resulting in foetal death20 and there are \n­theoretical concerns about the risk of agranulocytosis in the foetus/neonate.20 \nPharmacovigilance data do not indicate clozapine to be less safe in pregnancy than \nother antipsychotics.40 Clozapine is now included by NICE in medications that may \nbe prescribed in pregnancy. Lower mean adaptive behaviour scores have been \nreported in infants exposed to clozapine in-utero compared with risperidone, quetia-\npine or olanzapine. A higher rate of disturbed sleep and liability was reported in \nclozapine-exposed infants in the same study.41 On the balance of evidence available, \n",
+  "raw_text_sha256": "345ccb4fb2482a9279686b58d097db63067bc923246fb4d632a89b3ce1afb0bc",
+  "coordinates_sha256": "02cdbfc8f4473f036fead2f6d40bb46627f648f2ba570a581ffb6ce64a7bdd7f",
+  "block_sequence_sha256": "0522806d3643959127ad2798a51a9df084c543487804aac1df7b96f1781b97bd",
+  "blocks": [
+    {
+      "block_id": "page-0704-block-0000",
+      "order": 0,
+      "text": "Pregnancy and breastfeeding    683\n",
+      "bbox": [
+        271.769287109375,
+        31.395221710205078,
+        420.00048828125,
+        41.0272216796875
+      ],
+      "text_sha256": "de6a1caafb495bda3672f7b4baa2a0f5f9ac5537769de79c34bd86149b6b9a27"
+    },
+    {
+      "block_id": "page-0704-block-0001",
+      "order": 1,
+      "text": "CHAPTER 7\n",
+      "bbox": [
+        454.4096984863281,
+        472.7144775390625,
+        463.88970947265625,
+        514.0584716796875
+      ],
+      "text_sha256": "6d1a2318236627f2d413db0336034ac4d71cea7172bd0baddf04c66a07292590"
+    },
+    {
+      "block_id": "page-0704-block-0002",
+      "order": 2,
+      "text": "Second-generation antipsychotics\n",
+      "bbox": [
+        48.0,
+        62.500465393066406,
+        206.89999389648438,
+        74.3504638671875
+      ],
+      "text_sha256": "dac4e204d703c7d610999f46fe70b16b562484f3042a6f00948f6cd057a8f076"
+    },
+    {
+      "block_id": "page-0704-block-0003",
+      "order": 3,
+      "text": "■\n■Are unlikely to be major teratogens.\n",
+      "bbox": [
+        47.999900817871094,
+        86.41046142578125,
+        212.5599822998047,
+        98.13046264648438
+      ],
+      "text_sha256": "660e265da80095d48536bc90e77e826349f9ac003c8d8b2390c3928e367818d4"
+    },
+    {
+      "block_id": "page-0704-block-0004",
+      "order": 4,
+      "text": "■\n■A prospective study that included 561 women who took an SGA (mostly olanzapine, \n",
+      "bbox": [
+        47.999900817871094,
+        98.41046142578125,
+        422.8198547363281,
+        110.13046264648438
+      ],
+      "text_sha256": "efd8e69fcbf4d05c486fb2d5b4b973db0d1007f6ffe031e852c4e6f04e5e3a39"
+    },
+    {
+      "block_id": "page-0704-block-0005",
+      "order": 5,
+      "text": "quetiapine, clozapine, risperidone or aripiprazole) during pregnancy concluded that \nSGA exposure was associated with increased birth weight, a modestly increased risk \nof cardiac septal defects (possibly due to screening bias or co-exposure to SSRIs), and, \nas with FGAs, withdrawal effects in 15% neonates.20\n",
+      "bbox": [
+        57.0,
+        110.41046142578125,
+        422.78009033203125,
+        158.13046264648438
+      ],
+      "text_sha256": "7587f3bf619c6ea9550c82dac3caf1c9e6fd2cfb17d344434e333a173209a092"
+    },
+    {
+      "block_id": "page-0704-block-0006",
+      "order": 6,
+      "text": "■\n■However, in a large American study including over a million women, no meaningful \n",
+      "bbox": [
+        47.999900817871094,
+        158.41046142578125,
+        422.73992919921875,
+        170.13046264648438
+      ],
+      "text_sha256": "c7952679a535e1b63a4863fdd7259aa94756d699c07250ec049e510d2c1cce40"
+    },
+    {
+      "block_id": "page-0704-block-0007",
+      "order": 7,
+      "text": "increase in the risk of major malformations or cardiac malformations was seen in \n9258 women prescribed an SGA. A small increase in absolute risk was seen with \nrisperidone. The authors suggest that this particular finding should be interpreted \nwith caution and be seen as an initial safety signal which requires further investiga-\ntion.23 In a separate study of 214 women taking an SGA the absolute risk of major \nmalformation was estimated to be 1.4% compared with 1.1% in the control group.23\n",
+      "bbox": [
+        57.0,
+        170.41046142578125,
+        422.8199768066406,
+        242.1304931640625
+      ],
+      "text_sha256": "264b815d472ceaa5fb3476140762605ce5bb5802f036809e463905addbc61e84"
+    },
+    {
+      "block_id": "page-0704-block-0008",
+      "order": 8,
+      "text": "■\n■A separate American study which analysed data from the National Birth Defects \n",
+      "bbox": [
+        47.999900817871094,
+        242.41049194335938,
+        422.7801208496094,
+        254.1304931640625
+      ],
+      "text_sha256": "6e464143def9f58c4349ae50d714d73f40370d000d362ff5553c2a20f29a7533"
+    },
+    {
+      "block_id": "page-0704-block-0009",
+      "order": 9,
+      "text": "Prevention Study reported an increased association between SGA use in early preg-\nnancy and conotruncal heart defects, tetralogy of fallot, anorectal atresia/stenosis and \ngastroschisis. The study included over 22,000 cases and over 11,000 controls. Women \nexposed to SGAs were more likely to report pre-pregnancy obesity, illicit drug use, \nsmoking and alcohol use and use of other psychiatric medications during pregnancy.26\n",
+      "bbox": [
+        57.0,
+        254.41049194335938,
+        422.8102722167969,
+        314.1304931640625
+      ],
+      "text_sha256": "85af20a68b5f78fd9ab9bc122622a3e1126e6b4563467bfc42388b6b774a2dbd"
+    },
+    {
+      "block_id": "page-0704-block-0010",
+      "order": 10,
+      "text": "■\n■In a population-based study of over a million women an increased risk of gestational \n",
+      "bbox": [
+        47.999900817871094,
+        314.4104919433594,
+        422.8099670410156,
+        326.1304931640625
+      ],
+      "text_sha256": "6d77609783f34b5bc71e761ccf86f1b801953dd60f9530cbe81c1f8d2cb66fc2"
+    },
+    {
+      "block_id": "page-0704-block-0011",
+      "order": 11,
+      "text": "diabetes, caesarean section, large for gestational age and preterm birth were reported \nin women prescribed an SGA compared with no antipsychotic. The risks of caesarean \nsection and large for gestational age were reported to be higher with SGAs compared \nwith FGAs.27 Maternal mental illness may also be an important factor in the risk for \ngestational diabetes.28,29 Aripiprazole may not be associated with an increased risk.30\n",
+      "bbox": [
+        56.99909973144531,
+        326.4104919433594,
+        422.8289794921875,
+        386.1304931640625
+      ],
+      "text_sha256": "5c984cfab8bf73974ec2662f7c308250e65a37ac4a25ee7dbbe419b073bd6401"
+    },
+    {
+      "block_id": "page-0704-block-0012",
+      "order": 12,
+      "text": "■\n■There are most data for olanzapine, which has been associated with both lower birth \n",
+      "bbox": [
+        47.999900817871094,
+        386.4104919433594,
+        422.820068359375,
+        398.1304931640625
+      ],
+      "text_sha256": "c805b74d9427dffe89d56d30e2ec11dae5db0fc32c9244b768ec8516d0f0ff40"
+    },
+    {
+      "block_id": "page-0704-block-0013",
+      "order": 13,
+      "text": "weight and increased risk of intensive care admission,31 a large head circumference32 and \nwith macrosomia;33 the last of these is consistent with the reported increase in the risk of \ngestational diabetes.20,32,34,35 Olanzapine seems to be relatively safe with respect to congeni-\ntal malformations; the prevalence being consistent with population norms in a study that \nreported on 610 prospectively followed pregnancies.36 Olanzapine has however been asso-\nciated with a range of problems including hip dysplasia,37 meningocele, ankyloblepharon,38 \nand neural tube defects20 (an effect that could be related to pre-pregnancy obesity rather \nthan drug exposure39). Importantly there is no clustering of congenital malformations.\n",
+      "bbox": [
+        56.9989013671875,
+        398.4104919433594,
+        422.8046569824219,
+        494.1304931640625
+      ],
+      "text_sha256": "6eee362e98d6bafcfc5403e5f5b0baa946dceb1fedd1321e1e3762615922812e"
+    },
+    {
+      "block_id": "page-0704-block-0014",
+      "order": 14,
+      "text": "■\n■The use of clozapine appears to present no increased risk of malformation, although \n",
+      "bbox": [
+        48.0,
+        494.4104919433594,
+        422.79998779296875,
+        506.1304931640625
+      ],
+      "text_sha256": "8271d501c5e17c01e4fca178a4cf3db10917cb687e4686ba1492ce557bb75683"
+    },
+    {
+      "block_id": "page-0704-block-0015",
+      "order": 15,
+      "text": "gestational diabetes and neonatal seizures may be more likely to occur.34 There is a \nsingle case report of maternal overdose resulting in foetal death20 and there are \n­theoretical concerns about the risk of agranulocytosis in the foetus/neonate.20 \nPharmacovigilance data do not indicate clozapine to be less safe in pregnancy than \nother antipsychotics.40 Clozapine is now included by NICE in medications that may \nbe prescribed in pregnancy. Lower mean adaptive behaviour scores have been \nreported in infants exposed to clozapine in-utero compared with risperidone, quetia-\npine or olanzapine. A higher rate of disturbed sleep and liability was reported in \nclozapine-exposed infants in the same study.41 On the balance of evidence available, \n",
+      "bbox": [
+        56.997596740722656,
+        506.41046142578125,
+        422.79046630859375,
+        614.1304931640625
+      ],
+      "text_sha256": "d253701ddc9e5167b3edc3af402ca100cabd549a7fbf15acd3d68097e9e8a159"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

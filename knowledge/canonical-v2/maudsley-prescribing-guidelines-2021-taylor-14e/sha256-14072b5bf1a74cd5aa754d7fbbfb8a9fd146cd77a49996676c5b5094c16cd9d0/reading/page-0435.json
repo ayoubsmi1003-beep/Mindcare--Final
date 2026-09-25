@@ -1,0 +1,15 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0435",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 435,
+  "source_page_index": 434,
+  "repaired_text": "414    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nA review of 13 studies found an increased odds ratio (1.21–4.14) of perioperative \nbleeding with SSRIs.53 One study noted an increased risk of bleeding in women under-\ngoing breast surgery,54 and the authors suggest withholding SSRIs for 2 weeks prior to \nsuch planned surgery. Others conclude that there is insufficient evidence to support \nroutine discontinuation of SSRIs prior to surgery and call for RCTs to be conducted in \nthis area of care.55 Venlafaxine may have similar effects,53 but duloxetine may not affect \nbleeding risk.56\nAlternatives to SSRIs/SNRIs\nNon-SSRI antidepressants such as mirtazapine and bupropion have been suggested as \nsafer alternatives to SSRIs and SNRIs.57 Preliminary studies suggest mirtazapine, bupro-\npion and nortriptyline have minimal effects on measurable clotting mechanisms.58 \nHowever, there is little evidence that these drugs are safer, and one meta-analysis found \nan increased risk of UGI bleeding with mirtazapine (vs. no treatment) and no difference \nin bleeding risk between mirtazapine or bupropion and SSRIs.59\nOverall\nSerotonergic antidepressants increase the risk of various types of bleeding. Evidence is \nstrongest for SSRIs, and it is likely that risk of bleeding is related to affinity for the sero-\ntonin transporter. SSRIs increase the risk of GI bleeding, haemorrhagic stroke, periop-\nerative bleeding, postpartum haemorrhage and uterine bleeding. Their effect is \nexacerbated by co-prescription with aspirin, anticoagulants and NSAIDs. In most cases, \nthe use of SSRIs increases the risk of an event by a clinically meaningful extent, but \nespecially when co-prescribed with other drugs which affect clotting.\nSummary\n■\n■SSRIs increase the risk of GI, uterine, cerebral and perioperative bleeding.\n■\n■Risk is increased still further in those also receiving aspirin, NSAIDs or oral\nanticoagulants.\n■\n■Try to avoid SSRIs/SNRIs in patients receiving NSAIDs, aspirin or oral anticoagulants or in those with a history of cerebral or GI bleeds.\n■\n■Safer alternatives have not been definitively identified, but noradrenergic antidepressants (nortriptyline, bupropion) may be preferred.\n■\n■If SSRI/SNRI use cannot be avoided, monitor closely and prescribe gastro-protective\nproton pump inhibitors.\n■\n■Limited evidence suggests risks may be lower with less potent serotonin re-uptake\ninhibitors.",
+  "repaired_text_sha256": "cd3b6f5b44fb7a2aa4f3970eb7605c3a58841ca6befd8b26f41c94e2896941d1",
+  "raw_text_sha256": "aa7c8ebd8bb8d80e5cf08e53aa10068fc8636f56dffd40b19567d56a597ba0e8",
+  "repair_ids": [
+    "repair-000447",
+    "repair-000448"
+  ],
+  "raw_file": "raw/page-0435.json"
+}

@@ -1,0 +1,287 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0857",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 857,
+  "source_page_index": 856,
+  "source_page_display": 857,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "836    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  11\nDrug\nTarget range\nSample \ntiming\nTime to steady \nstate\nComments\nLithium12–16\n0.6–1.0mmol/L\n(0.4mmol may be \nsufficient for some \npatients/\nindications; \n>1.0mmol/L \nrequired for mania)\n12 hours\n5 days\nPost-dose\nWell-established target range, \nalbeit derived from ancient data \nsources. A fairly recent study17 \nsuggested 0.6mmol/L was the \nminimum level for a prophylactic \neffect.\nOlanzapine\n20–40µg/L\n12 hours\n1 week\nSee text.\nPaliperidone18\n20–60µg/L\n(9-OH risperidone)\nTrough\n2–3 days oral\n2 months depot\nTarget range is the same as that \nestablished for risperidone.19 As \nwith risperidone, routine plasma \nlevel monitoring is not \nrecommended.\nPhenytoin5\n10–20mg/L\nTrough\nVariable\nFollows zero-order kinetics.\nFree levels may be useful in some \ncircumstances.\nQuetiapine\nAround\n50–100µg/L?\nTrough?\n2–3 days oral\nTarget range poorly defined. \nPlasma level monitoring not \nrecommended. See text.\nRisperidone\n20–60µg/L\n(active moiety – \nrisperidone + 9-OH \nrisperidone)\nTrough\n2–3 days oral\n6–8 weeks \ninjection\nRoutine plasma level monitoring is \nnot recommended.\nSee text.\nTricyclics20\nNortriptyline\n50–150µg/L\nAmitriptyline\n100–200µg/L\nTrough\n2–3 days\nRarely used and of dubious benefit.\nUse ECG to assess toxicity.\nValproate4,5,21–23\n50–100mg/L\nEpilepsy and \nbipolar\nTrough\n2–3 days\nSome doubt over value of levels in \nepilepsy and in bipolar disorder. \nSome evidence that, in mania, \nlevels up to 125mg/L are tolerated \nand more effective than lower \nconcentrations. Valproate plasma \nlevels are linearly related to plasma \nammonia.24\nTable 11.1  (Continued)\n",
+  "raw_text_sha256": "61bd5b644abdef50f366a0f5d7f7f4bfd4b2bd3f69f2dcfee97a72e55e7bb741",
+  "coordinates_sha256": "c6730c70711e2f609abd42d1f807db9d1394404f6b7816a71e2c5aa65542e7f4",
+  "block_sequence_sha256": "1a12137b37ef9cfa0b03ab41ed722123fcabf4a366b9a874c40bcee18712e142",
+  "blocks": [
+    {
+      "block_id": "page-0857-block-0000",
+      "order": 0,
+      "text": "836    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "8d47c62a574b34cb627f5b02e50cabf362f1589239d6514cd4ea900dc4cb65b6"
+    },
+    {
+      "block_id": "page-0857-block-0001",
+      "order": 1,
+      "text": "CHAPTER  11\n",
+      "bbox": [
+        18.520000457763672,
+        139.8785400390625,
+        28.0,
+        187.89450073242188
+      ],
+      "text_sha256": "83984f4328940309c03288e26b8edf9834cfa8fef30d3eedac5a4c266fe9aee7"
+    },
+    {
+      "block_id": "page-0857-block-0002",
+      "order": 2,
+      "text": "Drug\nTarget range\n",
+      "bbox": [
+        61.88999938964844,
+        99.98262023925781,
+        180.6899871826172,
+        108.8701171875
+      ],
+      "text_sha256": "990619ac504d6951c1bc24e3d42634629166d037309c125c50c7396f14213cc3"
+    },
+    {
+      "block_id": "page-0857-block-0003",
+      "order": 3,
+      "text": "Sample \ntiming\n",
+      "bbox": [
+        211.4774932861328,
+        89.98512268066406,
+        239.40750122070312,
+        108.8701171875
+      ],
+      "text_sha256": "454f235668fb42379d5b6ed40084e706e6bde60a533d98912039067743c1ca69"
+    },
+    {
+      "block_id": "page-0857-block-0004",
+      "order": 4,
+      "text": "Time to steady \nstate\nComments\n",
+      "bbox": [
+        254.9774932861328,
+        89.98512268066406,
+        357.3899841308594,
+        108.8701171875
+      ],
+      "text_sha256": "fcee43422fd89afb790a5a4522079e98c7cef353748410218efa230106d01e2d"
+    },
+    {
+      "block_id": "page-0857-block-0005",
+      "order": 5,
+      "text": "Lithium12–16\n0.6–1.0mmol/L\n(0.4mmol may be \nsufficient for some \npatients/\nindications; \n>1.0mmol/L \nrequired for mania)\n",
+      "bbox": [
+        61.889984130859375,
+        118.10762023925781,
+        197.61997985839844,
+        186.9801025390625
+      ],
+      "text_sha256": "5af3d25f64be231f73d7e18d9568866bc93206c3b0f3174f1eb6458bb58d9e71"
+    },
+    {
+      "block_id": "page-0857-block-0006",
+      "order": 6,
+      "text": "12 hours\n5 days\nPost-dose\n",
+      "bbox": [
+        211.47999572753906,
+        118.2726058959961,
+        285.8200378417969,
+        136.97760009765625
+      ],
+      "text_sha256": "1e83cdc4428ee78396e4e5197da44371ad9bf92d10bc1f882de739662976ac5c"
+    },
+    {
+      "block_id": "page-0857-block-0007",
+      "order": 7,
+      "text": "Well-established target range, \nalbeit derived from ancient data \nsources. A fairly recent study17 \nsuggested 0.6mmol/L was the \nminimum level for a prophylactic \neffect.\n",
+      "bbox": [
+        319.89080810546875,
+        118.2726058959961,
+        426.413330078125,
+        176.98760986328125
+      ],
+      "text_sha256": "2ebd58589745baf832816166da0c8a443f4ae126e6f815234205bd1749f63c48"
+    },
+    {
+      "block_id": "page-0857-block-0008",
+      "order": 8,
+      "text": "Olanzapine\n20–40µg/L\n12 hours\n1 week\nSee text.\n",
+      "bbox": [
+        61.89080810546875,
+        206.2226104736328,
+        347.3857727050781,
+        215.110107421875
+      ],
+      "text_sha256": "3445cc976cd76df7ce7d1e1a389744c118e515559450c599b67cef65070ab281"
+    },
+    {
+      "block_id": "page-0857-block-0009",
+      "order": 9,
+      "text": "Paliperidone18\n20–60µg/L\n(9-OH risperidone)\n",
+      "bbox": [
+        61.89080810546875,
+        224.35011291503906,
+        194.85247802734375,
+        243.24258422851562
+      ],
+      "text_sha256": "3ada1b12d646f3ab6d267f870a28d99bb84c22a817722df26f6b0a0a8413aac5"
+    },
+    {
+      "block_id": "page-0857-block-0010",
+      "order": 10,
+      "text": "Trough\n2–3 days oral\n2 months depot\nTarget range is the same as that \nestablished for risperidone.19 As \nwith risperidone, routine plasma \nlevel monitoring is not \nrecommended.\n",
+      "bbox": [
+        211.47999572753906,
+        224.53758239746094,
+        425.19110107421875,
+        273.2375793457031
+      ],
+      "text_sha256": "511ed32de9cd1689aec711422267aef81822d21a7b3a5df6f51841082f95fd9f"
+    },
+    {
+      "block_id": "page-0857-block-0011",
+      "order": 11,
+      "text": "Phenytoin5\n10–20mg/L\nTrough\nVariable\nFollows zero-order kinetics.\nFree levels may be useful in some \ncircumstances.\n",
+      "bbox": [
+        61.8909912109375,
+        282.4775695800781,
+        428.0950012207031,
+        311.3650817871094
+      ],
+      "text_sha256": "d150433b23c9f31fb78fcfa2801498e63e9a6b78f6bdff3180321161aefa201a"
+    },
+    {
+      "block_id": "page-0857-block-0012",
+      "order": 12,
+      "text": "Quetiapine\nAround\n50–100µg/L?\nTrough?\n2–3 days oral\nTarget range poorly defined. \nPlasma level monitoring not \nrecommended. See text.\n",
+      "bbox": [
+        61.892486572265625,
+        330.6025695800781,
+        412.41259765625,
+        359.4850769042969
+      ],
+      "text_sha256": "90d89073aaf56714e7d71712b3cd0095f7da1dd0b6c9c8bee3cdeecd503b1c8e"
+    },
+    {
+      "block_id": "page-0857-block-0013",
+      "order": 13,
+      "text": "Risperidone\n20–60µg/L\n(active moiety – \nrisperidone + 9-OH \nrisperidone)\n",
+      "bbox": [
+        61.892486572265625,
+        368.7250671386719,
+        199.3524627685547,
+        407.6050720214844
+      ],
+      "text_sha256": "32557c837da9682290b3d555ed41a51b4de5aead30a93c1a2467a8a807c6fb68"
+    },
+    {
+      "block_id": "page-0857-block-0014",
+      "order": 14,
+      "text": "Trough\n2–3 days oral\n6–8 weeks \ninjection\n",
+      "bbox": [
+        211.47998046875,
+        368.7175598144531,
+        301.24749755859375,
+        397.6000671386719
+      ],
+      "text_sha256": "64ed6d3499f0e6be0b2c260b892a2ffd08b39aab6db5346e72725dd97c42289a"
+    },
+    {
+      "block_id": "page-0857-block-0015",
+      "order": 15,
+      "text": "Routine plasma level monitoring is \nnot recommended.\nSee text.\n",
+      "bbox": [
+        319.8924865722656,
+        368.89007568359375,
+        431.57513427734375,
+        397.5925598144531
+      ],
+      "text_sha256": "c4da5437ca41456ebd4382390457b4b3878cd3f2debecd2ade500cfae55a9347"
+    },
+    {
+      "block_id": "page-0857-block-0016",
+      "order": 16,
+      "text": "Tricyclics20\nNortriptyline\n50–150µg/L\n",
+      "bbox": [
+        61.892486572265625,
+        416.8300476074219,
+        176.52249145507812,
+        435.7425842285156
+      ],
+      "text_sha256": "85b7f3e123901f5c4107e548f06c51dd51a2e8be60469f696182176b9615a6e4"
+    },
+    {
+      "block_id": "page-0857-block-0017",
+      "order": 17,
+      "text": "Amitriptyline\n100–200µg/L\n",
+      "bbox": [
+        136.08999633789062,
+        443.0325927734375,
+        180.69248962402344,
+        461.7375793457031
+      ],
+      "text_sha256": "4367d6c4bdbf704a3605d4e3511156a7b58fc4c9bd02b9a70a2605153809f007"
+    },
+    {
+      "block_id": "page-0857-block-0018",
+      "order": 18,
+      "text": "Trough\n2–3 days\nRarely used and of dubious benefit.\nUse ECG to assess toxicity.\n",
+      "bbox": [
+        211.47999572753906,
+        417.03009033203125,
+        433.1276550292969,
+        435.7350769042969
+      ],
+      "text_sha256": "ff473b7fed340e321745056de35063c1f86cfe7866af521a0ebd333916a9634d"
+    },
+    {
+      "block_id": "page-0857-block-0019",
+      "order": 19,
+      "text": "Valproate4,5,21–23\n50–100mg/L\nEpilepsy and \nbipolar\n",
+      "bbox": [
+        61.892486572265625,
+        480.9750671386719,
+        178.60748291015625,
+        509.8650817871094
+      ],
+      "text_sha256": "877ea706c99981ac48817a4de8ef606d499c0edf42440493eaa399370b17ae17"
+    },
+    {
+      "block_id": "page-0857-block-0020",
+      "order": 20,
+      "text": "Trough\n2–3 days\nSome doubt over value of levels in \nepilepsy and in bipolar disorder. \nSome evidence that, in mania, \nlevels up to 125mg/L are tolerated \nand more effective than lower \nconcentrations. Valproate plasma \nlevels are linearly related to plasma \nammonia.24\n",
+      "bbox": [
+        211.47999572753906,
+        481.15509033203125,
+        432.947509765625,
+        559.8450927734375
+      ],
+      "text_sha256": "3a42a54c8ad542c3ed60317cf8249b3029613d5684574d1654b4ce42cf7499f1"
+    },
+    {
+      "block_id": "page-0857-block-0021",
+      "order": 21,
+      "text": "Table 11.1  (Continued)\n",
+      "bbox": [
+        67.88980102539062,
+        70.08790588378906,
+        144.17979431152344,
+        78.97540283203125
+      ],
+      "text_sha256": "fd9a06f32cc021b709373f52828609dac116f4163ee05a433b9980dd9672ac7d"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

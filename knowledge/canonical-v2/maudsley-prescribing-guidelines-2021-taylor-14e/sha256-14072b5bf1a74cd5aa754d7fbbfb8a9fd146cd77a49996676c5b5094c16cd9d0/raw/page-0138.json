@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0138",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 138,
+  "source_page_index": 137,
+  "source_page_display": 138,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    117\nCHAPTER 1\nTreatment of tardive dyskinesia\nTardive dyskinesia (TD) is a somewhat less commonly encountered problem now than \nin previous decades,1,2 probably because of the introduction and widespread use of \nSGAs,3–6 which generally have a lower risk for the condition than FGAs. Treatment of \nestablished TD is often unsuccessful, so prevention, early detection and early treatment \nare essential.7,8 There is evidence to suggest that TD is associated with greater cognitive \nimpairment,7,9 more severe psychopathology10,11 and higher mortality.12,13\nWhile SGAs are less likely to cause TD,14–19 the condition does occur with these medi-\ncations, with an overall estimated incidence of nearly 4%,18 although the liability varies \nacross the individual the SGA medications.20–23 One meta-analysis estimated the yearly \nrisk of TD in those on FGAs to be 3.7–12.5% (depending on the drug) and 1.7–4.8% \nwith SGAs.24 The risk of developing TD may be related to the extent of D2 receptor \noccupancy (greater occupancy, higher risk) with a medication.25 However, data from an \nextensive meta-analysis of relevant RCTs did not support the notion that the lower risk \nof TD with SGAs compared with FGAs is related to the use of high dosage of the lat-\nter.24 There is a hint that dopamine partial agonists (or at least aripiprazole) may have \nthe lowest rate of TD.24 Whether the risk of TD differs between FGA and SGA LAI \npreparations is unclear,26 but it might be assumed that lower rates are likely with SGA \nLAIs.\nTD can occur with low doses of haloperidol (and in the absence of prior acute move-\nment disorder27) and following the use of other dopamine antagonists such as \nmetoclopramide.28\nTD has also been observed in never-medicated patients with both first-episode29,30 \nand established31 schizophrenia.\nTreatment – first steps\nMost authorities recommend the withdrawal of any co-prescribed anticholinergic \nagents and a reduction in the dose of antipsychotic medication as initial steps in those \nwith early signs of TD32,33 (although dose reduction can initially worsen TD). Cochrane, \nhowever, found little support for dose reduction34 or anticholinergic withdrawal35 and \nthe American Academy of Neurology does not recommend dose reduction.36 \nNevertheless, it is common practice to withdraw the antipsychotic medication pre-\nscribed when TD is first observed and to substitute another, which is perceived to have \na lower liability for the condition. However, the evidence for benefit in switching to any \nparticular SGA is limited.36 The use of clozapine32,37 is probably best supported in this \nregard, but quetiapine, another weak striatal dopamine antagonist, may also be effec-\ntive,38–44 and olanzapine39–42,45,46 and aripiprazole47 are further potential options. There \nare a few supporting data for risperidone,48 but this would not a logical choice in a \npatient with established TD, given that risperidone is more likely than clozapine, olan-\nzapine and quetiapine to be associated with acute movement disorder.\n",
+  "raw_text_sha256": "25261580aae1d0f7f5ce8d228784046b7a6b5df436642056cf1dd1d0801ecd32",
+  "coordinates_sha256": "e4d862ba345f8794bc5d71a4a49fa07a28ee5bd787c51a3fa6477da859864f45",
+  "block_sequence_sha256": "58d01df84514c1fb3c9e21e9991be4b2758ccde7f5799ca8caaaa27e105ea616",
+  "blocks": [
+    {
+      "block_id": "page-0138-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    117\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "90fdd59245084f5bf2a85f4724452a48cba60ee00668604b77fa93d7dca0106f"
+    },
+    {
+      "block_id": "page-0138-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0138-block-0002",
+      "order": 2,
+      "text": "Treatment of tardive dyskinesia\n",
+      "bbox": [
+        54.99909973144531,
+        65.81448364257812,
+        218.0410614013672,
+        78.8494873046875
+      ],
+      "text_sha256": "7def75dc7066e92a9248819b047b0212734917df60865c6aad5a7f9a7278fff8"
+    },
+    {
+      "block_id": "page-0138-block-0003",
+      "order": 3,
+      "text": "Tardive dyskinesia (TD) is a somewhat less commonly encountered problem now than \nin previous decades,1,2 probably because of the introduction and widespread use of \nSGAs,3–6 which generally have a lower risk for the condition than FGAs. Treatment of \nestablished TD is often unsuccessful, so prevention, early detection and early treatment \nare essential.7,8 There is evidence to suggest that TD is associated with greater cognitive \nimpairment,7,9 more severe psychopathology10,11 and higher mortality.12,13\n",
+      "bbox": [
+        47.994606018066406,
+        84.65948486328125,
+        422.8044738769531,
+        156.37948608398438
+      ],
+      "text_sha256": "3b20ac915c04d0af44d49d31ea306e15a9fdf35e4cccc0b89d4d08c32778ee76"
+    },
+    {
+      "block_id": "page-0138-block-0004",
+      "order": 4,
+      "text": "While SGAs are less likely to cause TD,14–19 the condition does occur with these medi-\ncations, with an overall estimated incidence of nearly 4%,18 although the liability varies \nacross the individual the SGA medications.20–23 One meta-analysis estimated the yearly \nrisk of TD in those on FGAs to be 3.7–12.5% (depending on the drug) and 1.7–4.8% \nwith SGAs.24 The risk of developing TD may be related to the extent of D2 receptor \noccupancy (greater occupancy, higher risk) with a medication.25 However, data from an \nextensive meta-analysis of relevant RCTs did not support the notion that the lower risk \nof TD with SGAs compared with FGAs is related to the use of high dosage of the lat-\nter.24 There is a hint that dopamine partial agonists (or at least aripiprazole) may have \nthe lowest rate of TD.24 Whether the risk of TD differs between FGA and SGA LAI \npreparations is unclear,26 but it might be assumed that lower rates are likely with SGA \nLAIs.\n",
+      "bbox": [
+        47.99510192871094,
+        156.65948486328125,
+        422.7911682128906,
+        300.3794250488281
+      ],
+      "text_sha256": "452f451422cbf41703b9a497683b77d276a30ef467ca99b75c2dfe06b618489d"
+    },
+    {
+      "block_id": "page-0138-block-0005",
+      "order": 5,
+      "text": "TD can occur with low doses of haloperidol (and in the absence of prior acute move-\nment disorder27) and following the use of other dopamine antagonists such as \nmetoclopramide.28\n",
+      "bbox": [
+        47.99669647216797,
+        300.659423828125,
+        422.7466735839844,
+        336.3794250488281
+      ],
+      "text_sha256": "4f10fa4aec34201c669f1231be24bedacac42c5209a97556548550c0ea8be35d"
+    },
+    {
+      "block_id": "page-0138-block-0006",
+      "order": 6,
+      "text": "TD has also been observed in never-medicated patients with both first-episode29,30 \nand established31 schizophrenia.\n",
+      "bbox": [
+        47.99949645996094,
+        336.659423828125,
+        422.7795104980469,
+        360.3794250488281
+      ],
+      "text_sha256": "141ee83c1df51070a1f14fd70f69a06baaf37d9785f8ddc60bfaa7996c107d06"
+    },
+    {
+      "block_id": "page-0138-block-0007",
+      "order": 7,
+      "text": "Treatment – first steps\n",
+      "bbox": [
+        47.99909973144531,
+        377.8144226074219,
+        162.92710876464844,
+        390.84942626953125
+      ],
+      "text_sha256": "a0adb658521d16c8ce22a115f2ab5ea48c0e32e62222ce4cb22a0b57c6db4ac7"
+    },
+    {
+      "block_id": "page-0138-block-0008",
+      "order": 8,
+      "text": "Most authorities recommend the withdrawal of any co-prescribed anticholinergic \nagents and a reduction in the dose of antipsychotic medication as initial steps in those \nwith early signs of TD32,33 (although dose reduction can initially worsen TD). Cochrane, \nhowever, found little support for dose reduction34 or anticholinergic withdrawal35 and \nthe American Academy of Neurology does not recommend dose reduction.36 \nNevertheless, it is common practice to withdraw the antipsychotic medication pre-\nscribed when TD is first observed and to substitute another, which is perceived to have \na lower liability for the condition. However, the evidence for benefit in switching to any \nparticular SGA is limited.36 The use of clozapine32,37 is probably best supported in this \nregard, but quetiapine, another weak striatal dopamine antagonist, may also be effec-\ntive,38–44 and olanzapine39–42,45,46 and aripiprazole47 are further potential options. There \nare a few supporting data for risperidone,48 but this would not a logical choice in a \npatient with established TD, given that risperidone is more likely than clozapine, olan-\nzapine and quetiapine to be associated with acute movement disorder.\n",
+      "bbox": [
+        47.99650573730469,
+        396.659423828125,
+        422.8189392089844,
+        564.3794555664062
+      ],
+      "text_sha256": "c022f3b2d455e579cf49e63e6a090c5c28fb01b33c4a73f361348a1b45ae8c1c"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0904",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 904,
+  "source_page_index": 903,
+  "source_page_display": 904,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Psychotropic drugs in special conditions    883\nCHAPTER 13\nDriving and psychotropic medicines\nEveryone has a duty to drive reasonably, and in almost all countries drivers are legally \nresponsible for accidents they cause whether or not under the influence of drugs and \nalcohol.1\nMany factors have been shown to affect driving performance. These include age, \ngender, personality, physical and mental state and being under the influence of alcohol, \nprescribed medicines, street drugs or over-the-counter medicines.2,3 Studying the effects \nof any of these individual factors in isolation is extremely difficult. Some studies have \nattempted to categorise medicinal drugs according to how they affect driving perfor-\nmance,4 and some have assessed the effect of medication on tests such as response-time \nand attention,5 but these tests do not directly measure ability to drive.\nAs many as 10% of people killed or injured in road traffic accidents (RTAs) are tak-\ning psychotropic medication (Table 13.2).5 Patients with personality disorders and \nalcoholism have the highest rates of motoring offences and are more likely to be \ninvolved in accidents.5 In most countries people whose driving ability may be impaired \nthrough their illness or prescribed medication are required to inform their motor \ninsurer. Failure to do so is considered to be ‘withholding a material fact’ and may render \nthe insurance policy void.\nEffects of mental illness\nIn the UK, severe mental disorder is a prescribed disability for the purposes of the Road \nTraffic Act 1988.6 Regulations define mental disorder as including mental illness, \narrested or incomplete development of the mind, psychopathic disorder or severe \nimpairment of intelligence or social functioning. There is an assessing fitness to drive \nguide at www.gov.uk. Amongst physical conditions commonly seen in mental illness \nlicence restrictions may also apply to people with diabetes, particularly if treated with \ninsulin or if there are established micro- or macro-vascular complications. In the USA, \nregulations related to driving and mental health disorders vary somewhat from state to \nstate (see Department of Motor Vehicles website for each state).\nMany people with early dementia are capable of driving safely.7,8 In the UK, all drivers \nwith new diagnoses of Alzheimer’s disease and other dementias must notify the Driver and \nVehicle Licensing Agency (DVLA).7 The doctor may need to make an immediate decision \non safety to drive and ensure that the licensing agency is notified.9 There are no data to \nsupport ongoing driving assessments as a way of maintaining driving ability or improving \nroad safety of drivers with dementia.10 In the USA, some states mandate doctors to report \na diagnosis of dementia, but in others the issue may only arise on licence renewal.\nPsychiatric medicines, driving and UK law\nMost countries prohibit the use of a range of illicit substances when driving. In the UK, \ndrug-driving law gives threshold blood concentration for eight drugs associated with \nillicit use (zero tolerance approach – threshold set to reveal any recent use) and eight \nmedicinal drugs.11 For the latter group, Table 13.3 gives the legal limit and expected \nplasma concentrations in clinical use.\n",
+  "raw_text_sha256": "9e28a770b9802a9f72e4e16f0e5cb21c7bc694cec8f7b917e7b98cf3c6f62641",
+  "coordinates_sha256": "a1764dd8de994a5c2ec48a890ec9e114ae2cd8c56d591a5a17eac6b650e48b1e",
+  "block_sequence_sha256": "5ccab5a9fc177ea47bc1fec81529f660fa033a04c909235fa04764f8e7d18389",
+  "blocks": [
+    {
+      "block_id": "page-0904-block-0000",
+      "order": 0,
+      "text": "Psychotropic drugs in special conditions    883\n",
+      "bbox": [
+        227.09710693359375,
+        31.395221710205078,
+        420.0010986328125,
+        41.0272216796875
+      ],
+      "text_sha256": "8777e9111c67d3bf7ae755a6817cf42dba8f6da5b68cceb2ea3dcf1b45a4c06c"
+    },
+    {
+      "block_id": "page-0904-block-0001",
+      "order": 1,
+      "text": "CHAPTER 13\n",
+      "bbox": [
+        454.4096984863281,
+        272.95111083984375,
+        463.88970947265625,
+        318.74310302734375
+      ],
+      "text_sha256": "a01ce0756ef6b5d41c48be6624d8bd154fa95cf67cb49768f2593332d3a2ec98"
+    },
+    {
+      "block_id": "page-0904-block-0002",
+      "order": 2,
+      "text": "Driving and psychotropic medicines\n",
+      "bbox": [
+        55.039398193359375,
+        65.39218139648438,
+        238.79437255859375,
+        78.42718505859375
+      ],
+      "text_sha256": "f1fb87ec7a373b5ade535017d018dd4f59a34440d3bcf22b53d693de722be376"
+    },
+    {
+      "block_id": "page-0904-block-0003",
+      "order": 3,
+      "text": "Everyone has a duty to drive reasonably, and in almost all countries drivers are legally \nresponsible for accidents they cause whether or not under the influence of drugs and \nalcohol.1\n",
+      "bbox": [
+        48.039398193359375,
+        84.2371826171875,
+        422.8193664550781,
+        119.95718383789062
+      ],
+      "text_sha256": "45b586be2b15ab31615385fd58721013f18a8626ee58ee2819d430413e947029"
+    },
+    {
+      "block_id": "page-0904-block-0004",
+      "order": 4,
+      "text": "Many factors have been shown to affect driving performance. These include age, \ngender, personality, physical and mental state and being under the influence of alcohol, \nprescribed medicines, street drugs or over-the-counter medicines.2,3 Studying the effects \nof any of these individual factors in isolation is extremely difficult. Some studies have \nattempted to categorise medicinal drugs according to how they affect driving perfor-\nmance,4 and some have assessed the effect of medication on tests such as response-time \nand attention,5 but these tests do not directly measure ability to drive.\n",
+      "bbox": [
+        48.037017822265625,
+        120.2371826171875,
+        422.8269958496094,
+        203.95718383789062
+      ],
+      "text_sha256": "e467bdad9c55a71ebdda2c32c509e9d5109b99d6e60336092fd116ecb996d873"
+    },
+    {
+      "block_id": "page-0904-block-0005",
+      "order": 5,
+      "text": "As many as 10% of people killed or injured in road traffic accidents (RTAs) are tak-\ning psychotropic medication (Table 13.2).5 Patients with personality disorders and \nalcoholism have the highest rates of motoring offences and are more likely to be \ninvolved in accidents.5 In most countries people whose driving ability may be impaired \nthrough their illness or prescribed medication are required to inform their motor \ninsurer. Failure to do so is considered to be ‘withholding a material fact’ and may render \nthe insurance policy void.\n",
+      "bbox": [
+        48.035400390625,
+        204.2371826171875,
+        422.8354187011719,
+        287.9571838378906
+      ],
+      "text_sha256": "17f0c88b7f15613e789c90b94eb365d141e1aad9e932365d1532c1f94d40fca2"
+    },
+    {
+      "block_id": "page-0904-block-0006",
+      "order": 6,
+      "text": "Effects of mental illness\n",
+      "bbox": [
+        48.039398193359375,
+        305.3921813964844,
+        170.70037841796875,
+        318.42718505859375
+      ],
+      "text_sha256": "528ad6e2ae7ac565131a0e089d71b6b76938f21ab8afc9170d99355d97d5554f"
+    },
+    {
+      "block_id": "page-0904-block-0007",
+      "order": 7,
+      "text": "In the UK, severe mental disorder is a prescribed disability for the purposes of the Road \nTraffic Act 1988.6 Regulations define mental disorder as including mental illness, \narrested or incomplete development of the mind, psychopathic disorder or severe \nimpairment of intelligence or social functioning. There is an assessing fitness to drive \nguide at www.gov.uk. Amongst physical conditions commonly seen in mental illness \nlicence restrictions may also apply to people with diabetes, particularly if treated with \ninsulin or if there are established micro- or macro-vascular complications. In the USA, \nregulations related to driving and mental health disorders vary somewhat from state to \nstate (see Department of Motor Vehicles website for each state).\n",
+      "bbox": [
+        48.034698486328125,
+        324.2371826171875,
+        422.87945556640625,
+        431.9571838378906
+      ],
+      "text_sha256": "9f83cd17328cd34517aac873566d62ee16096954c79d6204b139e016af0091f4"
+    },
+    {
+      "block_id": "page-0904-block-0008",
+      "order": 8,
+      "text": "Many people with early dementia are capable of driving safely.7,8 In the UK, all drivers \nwith new diagnoses of Alzheimer’s disease and other dementias must notify the Driver and \nVehicle Licensing Agency (DVLA).7 The doctor may need to make an immediate decision \non safety to drive and ensure that the licensing agency is notified.9 There are no data to \nsupport ongoing driving assessments as a way of maintaining driving ability or improving \nroad safety of drivers with dementia.10 In the USA, some states mandate doctors to report \na diagnosis of dementia, but in others the issue may only arise on licence renewal.\n",
+      "bbox": [
+        48.034515380859375,
+        432.2371826171875,
+        422.8643798828125,
+        515.9572143554688
+      ],
+      "text_sha256": "3da3f8ed90fd52aca88c96b94aae2d6351781b594feabc87bad1004106f0ab8f"
+    },
+    {
+      "block_id": "page-0904-block-0009",
+      "order": 9,
+      "text": "Psychiatric medicines, driving and UK law\n",
+      "bbox": [
+        48.039398193359375,
+        533.3922119140625,
+        262.5833435058594,
+        546.4271850585938
+      ],
+      "text_sha256": "2d817b1cc4badbd6cbb8ca5e7d06b5ae907a6e54d5134196f7e15065c7e9a140"
+    },
+    {
+      "block_id": "page-0904-block-0010",
+      "order": 10,
+      "text": "Most countries prohibit the use of a range of illicit substances when driving. In the UK, \ndrug-driving law gives threshold blood concentration for eight drugs associated with \nillicit use (zero tolerance approach – threshold set to reveal any recent use) and eight \nmedicinal drugs.11 For the latter group, Table 13.3 gives the legal limit and expected \nplasma concentrations in clinical use.\n",
+      "bbox": [
+        48.039398193359375,
+        552.2371826171875,
+        422.8692626953125,
+        611.9572143554688
+      ],
+      "text_sha256": "cb5ce52e9c0e0d03354f72daea7e70a9a4e1f7821687e974a21707ada2a8f7bb"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

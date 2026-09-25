@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0929",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 929,
+  "source_page_index": 928,
+  "source_page_display": 929,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "908    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 14\nTable 14.2  (Continued)\nParameter\nReference range10\nAgents reported to raise levels\nAgents reported to \nlower levels\nAlbumin\n35–50g/L (gradually \ndecreases after age 40)\nMicroalbuminuria may be a feature \nof metabolic syndrome secondary \nto psychotropic use (especially \nphenothiazines, clozapine, \nolanzapine and possibly quetiapine)\nChronic use of \namfetamine or cocaine\nAlkaline phosphatase\n50–120U/L\nBaclofen, beta-blockers, \nbenzodiazepines, caffeine (excess/\nchronic use), carbamazepine, \ncitalopram, clozapine, disulfiram, \nduloxetine, galantamine, haloperidol, \nloxapine, memantine, modafinil, \nnortriptyline, olanzapine, phenytoin, \nsertraline, topiramate, trazodone, \nvalbenazine, valproate; also \nassociated with agents causing NMS\nBuprenorphine, \nfluoxetine (in children), \nzolpidem (rarely)\nAmmonia\n11–32μmol/L \n(increased following meals \nand exercise)\nBarbiturates, carbamazepine, \ntobacco smoking, topiramate, \nvalproate (may present with signs \nof encephalopathy)\nNone known\nAmylase\n28–100U/L\nAlcohol (acute), donepezil, opioids, \npregabalin, rivastigmine, SSRIs \n(rarely)\nAgents associated with \npancreatitis: alcohol, \ncarbamazepine, clozapine, \nolanzapine, valproate\nNone known\nAspartate \naminotransferase \n(AST)\nFemales: ≤34U/L \nMales: ≤45U/L\nAs for Alanine Transferase; \nbaclofen. Note: ALT is preferred as \nan indicator of liver damage.\nTrifluoperazine, \nvigabatrin\nBicarbonate\n22–29mmol/L\nLaxative abuse\nAgents associated with \nSIADH: all \nantidepressants, \nantipsychotics \n(clozapine, haloperidol, \nolanzapine, \nphenothiazines, \npimozide, risperidone/\npaliperidone, \nquetiapine); \ncarbamazepine; also \nassociated with agents \ncausing metabolic \nacidosis (alcohol, \ncocaine, topiramate, \nzonisamide)\n",
+  "raw_text_sha256": "fa072897698745dfffc61f6fd34b37eef2d544b19bdb3beff0b1935ea5b1a562",
+  "coordinates_sha256": "ed6af737cc474516fff3273f3b068ff66debc63ecb62316d44545db190d753f1",
+  "block_sequence_sha256": "838bd5092d0302bbab3987330349adf7e8c895bd48ff8719398c254ed4568a46",
+  "blocks": [
+    {
+      "block_id": "page-0929-block-0000",
+      "order": 0,
+      "text": "908    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "5d0b7c15bcf09986517faa3622b82c218ab4c87b167c263d33a9595eca9ca902"
+    },
+    {
+      "block_id": "page-0929-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        18.520000457763672,
+        338.7405090332031,
+        28.0,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0929-block-0002",
+      "order": 2,
+      "text": "Table 14.2  (Continued)\n",
+      "bbox": [
+        67.88980102539062,
+        70.08790588378906,
+        144.17979431152344,
+        78.97540283203125
+      ],
+      "text_sha256": "8bd13b41fda1b6770466837f45163f93b570ec912d9c083e8b068ddb8e61d0bd"
+    },
+    {
+      "block_id": "page-0929-block-0003",
+      "order": 3,
+      "text": "Parameter\nReference range10\nAgents reported to raise levels\nAgents reported to \nlower levels\n",
+      "bbox": [
+        61.889801025390625,
+        90.11286926269531,
+        424.34716796875,
+        108.99786376953125
+      ],
+      "text_sha256": "aa61555c628d7c54f10a422c1400f45d1c140ad78ce30a6f27ae2348bfc3308b"
+    },
+    {
+      "block_id": "page-0929-block-0004",
+      "order": 4,
+      "text": "Albumin\n35–50g/L (gradually \ndecreases after age 40)\n",
+      "bbox": [
+        61.887176513671875,
+        116.8128890991211,
+        209.9296875,
+        135.51788330078125
+      ],
+      "text_sha256": "3b3e2c331bd312b1cb1e4f177d58a68925543168c01fd44a800938f0ee391aab"
+    },
+    {
+      "block_id": "page-0929-block-0005",
+      "order": 5,
+      "text": "Microalbuminuria may be a feature \nof metabolic syndrome secondary \nto psychotropic use (especially \nphenothiazines, clozapine, \nolanzapine and possibly quetiapine)\n",
+      "bbox": [
+        232.63967895507812,
+        116.8128890991211,
+        346.9546813964844,
+        165.5103759765625
+      ],
+      "text_sha256": "84fb1817edebc0aa9f5f3946cdefadaa99b768c8481a8aa22805ea5ad5006c62"
+    },
+    {
+      "block_id": "page-0929-block-0006",
+      "order": 6,
+      "text": "Chronic use of \namfetamine or cocaine\n",
+      "bbox": [
+        354.8896789550781,
+        116.80538177490234,
+        428.2171936035156,
+        135.5103759765625
+      ],
+      "text_sha256": "875792eb040b5699f8f7d02595b8d2c165981b266834450a0c4af60f07f82d16"
+    },
+    {
+      "block_id": "page-0929-block-0007",
+      "order": 7,
+      "text": "Alkaline phosphatase\n50–120U/L\nBaclofen, beta-blockers, \nbenzodiazepines, caffeine (excess/\nchronic use), carbamazepine, \ncitalopram, clozapine, disulfiram, \nduloxetine, galantamine, haloperidol, \nloxapine, memantine, modafinil, \nnortriptyline, olanzapine, phenytoin, \nsertraline, topiramate, trazodone, \nvalbenazine, valproate; also \nassociated with agents causing NMS\n",
+      "bbox": [
+        61.887176513671875,
+        171.8253936767578,
+        348.97967529296875,
+        270.5103759765625
+      ],
+      "text_sha256": "46749e08c7e0a54c2263aa7eb5e3b48a30260d734be921d5bb9a3202f043d314"
+    },
+    {
+      "block_id": "page-0929-block-0008",
+      "order": 8,
+      "text": "Buprenorphine, \nfluoxetine (in children), \nzolpidem (rarely)\n",
+      "bbox": [
+        354.8896789550781,
+        171.80287170410156,
+        430.1822204589844,
+        200.50537109375
+      ],
+      "text_sha256": "9321371f229249d210d2bd49d470c6ebf30c075d8c4ec18139d89bff1828449f"
+    },
+    {
+      "block_id": "page-0929-block-0009",
+      "order": 9,
+      "text": "Ammonia\n11–32μmol/L \n(increased following meals \nand exercise)\n",
+      "bbox": [
+        61.887176513671875,
+        276.82537841796875,
+        222.43215942382812,
+        305.5278625488281
+      ],
+      "text_sha256": "82afee0e81fe066619b1c29440c965d9c08ee8766abd6096c23faf5b2c8ac306"
+    },
+    {
+      "block_id": "page-0929-block-0010",
+      "order": 10,
+      "text": "Barbiturates, carbamazepine, \ntobacco smoking, topiramate, \nvalproate (may present with signs \nof encephalopathy)\n",
+      "bbox": [
+        232.63967895507812,
+        276.81787109375,
+        341.5472106933594,
+        315.5178527832031
+      ],
+      "text_sha256": "aecc6cbe6d319917b3dd1a9faad62ac404997fbcbc36cd8a15c240e612bbeccd"
+    },
+    {
+      "block_id": "page-0929-block-0011",
+      "order": 11,
+      "text": "None known\n",
+      "bbox": [
+        354.8896789550781,
+        276.81036376953125,
+        396.1622314453125,
+        285.5178527832031
+      ],
+      "text_sha256": "ba6586dc579443d5e17252c96d100bb0bdb30ec0ac15a8dc02e530767503ecc9"
+    },
+    {
+      "block_id": "page-0929-block-0012",
+      "order": 12,
+      "text": "Amylase\n28–100U/L\nAlcohol (acute), donepezil, opioids, \npregabalin, rivastigmine, SSRIs \n(rarely)\nAgents associated with \npancreatitis: alcohol, \ncarbamazepine, clozapine, \nolanzapine, valproate\n",
+      "bbox": [
+        61.887176513671875,
+        321.8328552246094,
+        346.84222412109375,
+        390.52532958984375
+      ],
+      "text_sha256": "f0bbc3a084ba7280e1ef56aef517b741bbb88c29f5695ae92227820c00c0cac3"
+    },
+    {
+      "block_id": "page-0929-block-0013",
+      "order": 13,
+      "text": "None known\n",
+      "bbox": [
+        354.8896789550781,
+        321.8178405761719,
+        396.1622314453125,
+        330.52532958984375
+      ],
+      "text_sha256": "ba6586dc579443d5e17252c96d100bb0bdb30ec0ac15a8dc02e530767503ecc9"
+    },
+    {
+      "block_id": "page-0929-block-0014",
+      "order": 14,
+      "text": "Aspartate \naminotransferase \n(AST)\n",
+      "bbox": [
+        61.887176513671875,
+        396.84033203125,
+        118.96966552734375,
+        425.5428161621094
+      ],
+      "text_sha256": "f87bfcad4112d3aea0a6b83f04e90bd146daab6f414ec2114e3ed9c36e1dc0c0"
+    },
+    {
+      "block_id": "page-0929-block-0015",
+      "order": 15,
+      "text": "Females: ≤34U/L \nMales: ≤45U/L\n",
+      "bbox": [
+        135.88967895507812,
+        396.83282470703125,
+        190.55718994140625,
+        415.5378112792969
+      ],
+      "text_sha256": "6d3679c44345d2d8a9ca89c4f5df4609eb21e52dea10afbda5937ecdaef53529"
+    },
+    {
+      "block_id": "page-0929-block-0016",
+      "order": 16,
+      "text": "As for Alanine Transferase; \nbaclofen. Note: ALT is preferred as \nan indicator of liver damage.\n",
+      "bbox": [
+        232.63967895507812,
+        396.83282470703125,
+        344.19464111328125,
+        425.5353088378906
+      ],
+      "text_sha256": "0d195339e44b28c2cd8cc2eea75ee798dfcce150dd94a81bc71f75328d48cba3"
+    },
+    {
+      "block_id": "page-0929-block-0017",
+      "order": 17,
+      "text": "Trifluoperazine, \nvigabatrin\n",
+      "bbox": [
+        354.8896789550781,
+        396.8253173828125,
+        405.8672180175781,
+        415.5303039550781
+      ],
+      "text_sha256": "e93915f98b99e3d45e38d00a89684715c3ccb2ed90f491a93d0c21a64854b8b3"
+    },
+    {
+      "block_id": "page-0929-block-0018",
+      "order": 18,
+      "text": "Bicarbonate\n22–29mmol/L\nLaxative abuse\nAgents associated with \nSIADH: all \nantidepressants, \nantipsychotics \n(clozapine, haloperidol, \nolanzapine, \nphenothiazines, \npimozide, risperidone/\npaliperidone, \nquetiapine); \ncarbamazepine; also \nassociated with agents \ncausing metabolic \nacidosis (alcohol, \ncocaine, topiramate, \nzonisamide)\n",
+      "bbox": [
+        61.887176513671875,
+        431.8503112792969,
+        431.1572570800781,
+        590.520263671875
+      ],
+      "text_sha256": "91915c8e5bafec97eca20523f5f4fc0327aa921349b1f8693b4197ffb2f8b5c0"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

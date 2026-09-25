@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0644",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 644,
+  "source_page_index": 643,
+  "source_page_display": 644,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Prescribing in older people    623\nCHAPTER  6\nAducanumab is an antibody and works by targeting Aβ. It preferentially binds to the \naggregated Aβ. Through this interaction, aducanumab could reduce the build-up of \nβ-amyloid and therefore the number of amyloid plaques present in the brain thus poten-\ntially slows neurodegeneration and disease progression. Although in early 2019, the \nmanufacturers (Biogen) announced that aducanumab failed futility analyses in two \nidentically designed phase 3 AD trials and discontinued its development, later in the \nyear they made the announcement that they were applying for US FDA marketing \napproval. They explained that they had reanalysed data from the trials to include \npatients who had continued in the studies after the cut-off date for the futility analyses \nand stated that one trial showed significant findings and a subset from the second trial \nsupports these positive findings.121 Whilst a recent review of the data by a panel of \nexternal experts was not promising, the FDA is set to announce its final decision on \nwhether to approve aducanumab by March 2021.\nTherapies targeting β-amyloid have been the focus of research for almost 30 years. \nHowever, highly promising drugs have failed to show clinical benefits in phase III trials. \nEven the positive findings presented by Biogen on aducanumab are not entirely clear, and \nfurther data are necessary to confirm its validity. Therefore, researchers are turning their \nefforts around to tau-targeting therapies, since tau protein appears to be better correlated \nwith the severity of cognitive decline than amyloid β. Currently, most anti-tau agents in \nclinical trials are immunotherapies and they are in the early stages of clinical research. \nFour monoclonal antibodies anti-tau (gosuranemab, tilavonemab, semorinemab and \nzagotenemab) and one anti-tau vaccine (AADvac1) have reached phase II, so far.122\nVascular dementia (VaD)\nVascular dementia has been reported to comprise 10–50% of dementia cases and is the \nsecond most common type of dementia after AD. It is caused by ischaemic damage to \nthe brain and is associated with cognitive impairment and behavioural disturbances. \nThe management options are currently very limited and focus on controlling the under-\nlying risk factors for cerebrovascular disease.123\nNote that it is impossible to diagnose with certainty vascular or Alzheimer’s dementia \nand much dementia has mixed causation. This might explain why certain AChE-Is do \nnot always provide consistent results in probable vascular dementia, and the data indi-\ncating efficacy in cognitive outcomes were derived from older patients, who were there-\nfore likely to have concomitant AD pathology.124\nNone of the currently available drugs is formally licensed in the UK for vascular \ndementia. The management of vascular dementia has been summarised.125,126 Unlike the \nsituation with stroke, there is no conclusive evidence that treatment of hyperlipidaemia \nwith statins or treatment of blood clotting abnormalities with acetylsalicylic acid do \nhave an effect on vascular dementia incidence or disease progression.127 Similarly, a \nCochrane review found that there were no studies supporting the role of statins in the \ntreatment of VaD.105 The Cochrane review for donepezil in vascular cognitive impair-\nment found evidence to support its benefit in improving cognition function, clinical \nglobal impression and activities of daily living after 6 months treatment.128 In a \nCochrane review for galantamine for vascular cognitive impairment,129,130 there were \n",
+  "raw_text_sha256": "d2eef5436eac3bf7cf69018f61db65e01c36484714536864dcdadc7392b9cc80",
+  "coordinates_sha256": "5e49415dbc4f365c1fefec156b591e55e17296d01416219c971536858d4d95ea",
+  "block_sequence_sha256": "e30e63ba2a78e7c0228189b6a9c3097e42359cd2207c0edc4bba03bcaf96a0a3",
+  "blocks": [
+    {
+      "block_id": "page-0644-block-0000",
+      "order": 0,
+      "text": "Prescribing in older people    623\n",
+      "bbox": [
+        281.576904296875,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "ed7a177b100885290e45c66250d7436028fb8936e6d829128bc66bb2e456636a"
+    },
+    {
+      "block_id": "page-0644-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        454.4096984863281,
+        405.35260009765625,
+        463.88970947265625,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0644-block-0002",
+      "order": 2,
+      "text": "Aducanumab is an antibody and works by targeting Aβ. It preferentially binds to the \naggregated Aβ. Through this interaction, aducanumab could reduce the build-up of \nβ-amyloid and therefore the number of amyloid plaques present in the brain thus poten-\ntially slows neurodegeneration and disease progression. Although in early 2019, the \nmanufacturers (Biogen) announced that aducanumab failed futility analyses in two \nidentically designed phase 3 AD trials and discontinued its development, later in the \nyear they made the announcement that they were applying for US FDA marketing \napproval. They explained that they had reanalysed data from the trials to include \npatients who had continued in the studies after the cut-off date for the futility analyses \nand stated that one trial showed significant findings and a subset from the second trial \nsupports these positive findings.121 Whilst a recent review of the data by a panel of \nexternal experts was not promising, the FDA is set to announce its final decision on \nwhether to approve aducanumab by March 2021.\n",
+      "bbox": [
+        48.0,
+        61.520416259765625,
+        422.80999755859375,
+        218.27047729492188
+      ],
+      "text_sha256": "4a4c7b237a6910747ede2ef53d921296ae09e5d64c428299b73818aaf596c99a"
+    },
+    {
+      "block_id": "page-0644-block-0003",
+      "order": 3,
+      "text": "Therapies targeting β-amyloid have been the focus of research for almost 30 years. \nHowever, highly promising drugs have failed to show clinical benefits in phase III trials. \nEven the positive findings presented by Biogen on aducanumab are not entirely clear, and \nfurther data are necessary to confirm its validity. Therefore, researchers are turning their \nefforts around to tau-targeting therapies, since tau protein appears to be better correlated \nwith the severity of cognitive decline than amyloid β. Currently, most anti-tau agents in \nclinical trials are immunotherapies and they are in the early stages of clinical research. \nFour monoclonal antibodies anti-tau (gosuranemab, tilavonemab, semorinemab and \nzagotenemab) and one anti-tau vaccine (AADvac1) have reached phase II, so far.122\n",
+      "bbox": [
+        48.00011444091797,
+        217.52047729492188,
+        422.8003234863281,
+        326.2704772949219
+      ],
+      "text_sha256": "2f03b3e9c6294165b6a823286b9f77f0f0f443133f1e3dd83807ac4941cf5a54"
+    },
+    {
+      "block_id": "page-0644-block-0004",
+      "order": 4,
+      "text": "Vascular dementia (VaD)\n",
+      "bbox": [
+        48.0,
+        343.7054748535156,
+        173.92799377441406,
+        356.740478515625
+      ],
+      "text_sha256": "6e165d480828a13d5452f1cfdb5756d024bd5715ab146749a4477a8e9fb4d665"
+    },
+    {
+      "block_id": "page-0644-block-0005",
+      "order": 5,
+      "text": "Vascular dementia has been reported to comprise 10–50% of dementia cases and is the \nsecond most common type of dementia after AD. It is caused by ischaemic damage to \nthe brain and is associated with cognitive impairment and behavioural disturbances. \nThe management options are currently very limited and focus on controlling the under-\nlying risk factors for cerebrovascular disease.123\n",
+      "bbox": [
+        48.0,
+        362.55047607421875,
+        422.7999572753906,
+        422.2704772949219
+      ],
+      "text_sha256": "da666382d79960581e3dc47b8a0c047de00943e4af9eef6c60f6a16827a3f1b2"
+    },
+    {
+      "block_id": "page-0644-block-0006",
+      "order": 6,
+      "text": "Note that it is impossible to diagnose with certainty vascular or Alzheimer’s dementia \nand much dementia has mixed causation. This might explain why certain AChE-Is do \nnot always provide consistent results in probable vascular dementia, and the data indi-\ncating efficacy in cognitive outcomes were derived from older patients, who were there-\nfore likely to have concomitant AD pathology.124\n",
+      "bbox": [
+        48.0,
+        422.55047607421875,
+        422.76007080078125,
+        482.2704772949219
+      ],
+      "text_sha256": "375bf5b89dc7be81cd36df9f764d90e3aca4d6dad9427656c63902e7dea41dc9"
+    },
+    {
+      "block_id": "page-0644-block-0007",
+      "order": 7,
+      "text": "None of the currently available drugs is formally licensed in the UK for vascular \ndementia. The management of vascular dementia has been summarised.125,126 Unlike the \nsituation with stroke, there is no conclusive evidence that treatment of hyperlipidaemia \nwith statins or treatment of blood clotting abnormalities with acetylsalicylic acid do \nhave an effect on vascular dementia incidence or disease progression.127 Similarly, a \nCochrane review found that there were no studies supporting the role of statins in the \ntreatment of VaD.105 The Cochrane review for donepezil in vascular cognitive impair-\nment found evidence to support its benefit in improving cognition function, clinical \nglobal impression and activities of daily living after 6 months treatment.128 In a \nCochrane review for galantamine for vascular cognitive impairment,129,130 there were \n",
+      "bbox": [
+        47.996917724609375,
+        482.55047607421875,
+        422.8167724609375,
+        602.2704467773438
+      ],
+      "text_sha256": "f4a9d44eb103cf2635bedab67381f712387d56bbc715fb2185dfa6839bfdc817"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

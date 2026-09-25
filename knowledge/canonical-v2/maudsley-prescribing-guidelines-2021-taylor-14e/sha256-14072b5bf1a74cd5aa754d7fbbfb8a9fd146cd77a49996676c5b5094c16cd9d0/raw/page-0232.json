@@ -1,0 +1,431 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0232",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 232,
+  "source_page_index": 231,
+  "source_page_display": 232,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    211\nCHAPTER 1\n■\n■temperature rises above 38°C (this is very common and is not a good reason, on its \nown, for stopping clozapine)\n■\n■pulse is > 100bpm (also common and not, on its own a reason for stopping, but may \nsometimes be linked to myocarditis)\n■\n■postural drop of >30mmHg\n■\n■patient is clearly over-sedated\n■\n■any signs of constipation\n■\n■flu-like symptoms (malaise, fatigue, etc.)\n■\n■chest pain, dyspnoea, tachypnoea\n■\n■any other adverse effect that is intolerable\n■\n■changes in smoking habit\nA doctor should see the patient at least once a week for the first month to assess mental \nand physical state.\nRecommended additional monitoring\nBaseline\n1 month\n3 months\n4–6 months\n12 months\nWeight/BMI/waist\nWeight/BMI/weight\nWeight/BMI/waist\nWeight/BMI/waist\nWeight/BMI/waist\nPlasma glucose  \nand lipids\nPlasma glucose  \nand lipids\nPlasma glucose and \nlipids\nPlasma glucose \nand lipids\nLiver function tests (LFTs)\nLFTs\nConsider monitoring plasma troponin, beta-natriuretic peptide and c-reactive protein \nweekly in the first six weeks of treatment, particularly where there is any suspicion of \nmyocarditis (see the section on myocarditis).\nSwitching from other antipsychotics\n■\n■The switching regime will be largely dependent on the patient’s mental state\n■\n■Consider potential additive side-effects of antipsychotics (e.g. hypotension, sedation, \neffect on QTc interval)\n■\n■Consider drug interactions (e.g. some SSRIs may increase clozapine levels)\n■\n■All depots, sertindole, pimozide and ziprasidone should be stopped before clozapine \nis started\n■\n■Other antipsychotics and clozapine may be cross-tapered with varying degrees of \ncaution. ECG monitoring is prudent when clozapine is co-prescribed with other drugs \nknown to affect QT interval\nSerious cardiac adverse effects\nPatients should be closely observed for signs or symptoms of myocarditis, particularly dur-\ning the first 2 months and advised to inform staff if they experience these, and to seek out-\nof-hours review if necessary. These include persistent tachycardia (although commonly \nbenign), palpitations, shortness of breath, fever, arrhythmia, symptoms mimicking myocar-\ndial infarction, chest pain and other unexplained symptoms of heart failure. See section on \nClozapine: serious haematological and cardiovascular adverse effects in this chapter.\n",
+  "raw_text_sha256": "a467ba42d1c85b205b502420c38718cf89d8d14d9549e999b8c5e88d43e79cf1",
+  "coordinates_sha256": "758183cf9fd011036f56ac4e162e40fb133e703cee0ceaeeec3408c4863fd83f",
+  "block_sequence_sha256": "3cd961ff278515a55c351f1f8ff44dff080ea47f057b056f65e4e73292d20e2e",
+  "blocks": [
+    {
+      "block_id": "page-0232-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    211\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "6f0e1fbbe579d05fe66f9873def283b3919f6723bb6708835874a2c38d5ad7a5"
+    },
+    {
+      "block_id": "page-0232-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0232-block-0002",
+      "order": 2,
+      "text": "■\n■temperature rises above 38°C (this is very common and is not a good reason, on its \n",
+      "bbox": [
+        47.999000549316406,
+        62.30931854248047,
+        422.7791442871094,
+        74.26931762695312
+      ],
+      "text_sha256": "edf5abe0943fcac1567498f7e364002cdc4e293bd220b87670624b5bcdc5f675"
+    },
+    {
+      "block_id": "page-0232-block-0003",
+      "order": 3,
+      "text": "own, for stopping clozapine)\n",
+      "bbox": [
+        56.999107360839844,
+        74.54931640625,
+        180.55908203125,
+        86.26931762695312
+      ],
+      "text_sha256": "5d9f367f45bc84444ab5618d881a95b96d622b5ec9ddcd9eb6e5e3d2247690fe"
+    },
+    {
+      "block_id": "page-0232-block-0004",
+      "order": 4,
+      "text": "■\n■pulse is > 100bpm (also common and not, on its own a reason for stopping, but may \n",
+      "bbox": [
+        47.99909973144531,
+        86.30931854248047,
+        422.7890930175781,
+        98.26931762695312
+      ],
+      "text_sha256": "91b91a6f669316a95399768e608a751beb6d2177c7a34d05e3c121cf522cbbfa"
+    },
+    {
+      "block_id": "page-0232-block-0005",
+      "order": 5,
+      "text": "sometimes be linked to myocarditis)\n",
+      "bbox": [
+        56.99909973144531,
+        98.54931640625,
+        212.53907775878906,
+        110.26931762695312
+      ],
+      "text_sha256": "a2429bb8a21b561990062e68baedde83429cd1b925b9903fd736e567a8aa8be0"
+    },
+    {
+      "block_id": "page-0232-block-0006",
+      "order": 6,
+      "text": "■\n■postural drop of >30mmHg\n",
+      "bbox": [
+        47.99909973144531,
+        110.30931854248047,
+        176.73907470703125,
+        122.26931762695312
+      ],
+      "text_sha256": "01543db00833d8a18a2f7408b5a42fb36cb04bad613ea5841e6669879f360c70"
+    },
+    {
+      "block_id": "page-0232-block-0007",
+      "order": 7,
+      "text": "■\n■patient is clearly over-sedated\n",
+      "bbox": [
+        47.99909973144531,
+        122.30931854248047,
+        183.50909423828125,
+        134.26931762695312
+      ],
+      "text_sha256": "e6fa66344e33c4b8fa684fae22d4c73075bdb8f90dcce008e77e5b7be547befe"
+    },
+    {
+      "block_id": "page-0232-block-0008",
+      "order": 8,
+      "text": "■\n■any signs of constipation\n",
+      "bbox": [
+        47.99909973144531,
+        134.309326171875,
+        164.0190887451172,
+        146.26931762695312
+      ],
+      "text_sha256": "0296ac3c96f44fbbb96421558b9589bea093afaa781984d4a647eaca4286c8b5"
+    },
+    {
+      "block_id": "page-0232-block-0009",
+      "order": 9,
+      "text": "■\n■flu-like symptoms (malaise, fatigue, etc.)\n",
+      "bbox": [
+        47.99909973144531,
+        146.309326171875,
+        230.4591064453125,
+        158.26931762695312
+      ],
+      "text_sha256": "07f35ebdaef84e573470d8dd493a87c0bd7e59edefd237d494578f355b1c0277"
+    },
+    {
+      "block_id": "page-0232-block-0010",
+      "order": 10,
+      "text": "■\n■chest pain, dyspnoea, tachypnoea\n",
+      "bbox": [
+        47.99909973144531,
+        158.309326171875,
+        200.01910400390625,
+        170.26931762695312
+      ],
+      "text_sha256": "26de7ba488486500c71ed70b0d57448a15541e993d172d8271e193fac628d480"
+    },
+    {
+      "block_id": "page-0232-block-0011",
+      "order": 11,
+      "text": "■\n■any other adverse effect that is intolerable\n",
+      "bbox": [
+        47.99909973144531,
+        170.309326171875,
+        236.59910583496094,
+        182.26931762695312
+      ],
+      "text_sha256": "e3d21d744f255f540febc6f8cd3bbf7c800763556359cf78623a35179e74fc38"
+    },
+    {
+      "block_id": "page-0232-block-0012",
+      "order": 12,
+      "text": "■\n■changes in smoking habit\n",
+      "bbox": [
+        47.99909973144531,
+        182.309326171875,
+        166.3590850830078,
+        194.26931762695312
+      ],
+      "text_sha256": "cd0fc7000daa77ee70c77a47eada06d1bbfe7af8b00920159723f7247617b418"
+    },
+    {
+      "block_id": "page-0232-block-0013",
+      "order": 13,
+      "text": "A doctor should see the patient at least once a week for the first month to assess mental \nand physical state.\n",
+      "bbox": [
+        47.99909973144531,
+        200.54931640625,
+        422.7891540527344,
+        224.26931762695312
+      ],
+      "text_sha256": "8993b1dbe3e6382e0ece017ea8108a777068dd29f8316653d693a8f740dd7305"
+    },
+    {
+      "block_id": "page-0232-block-0014",
+      "order": 14,
+      "text": "Recommended additional monitoring\n",
+      "bbox": [
+        47.99909973144531,
+        241.70431518554688,
+        241.13705444335938,
+        254.73931884765625
+      ],
+      "text_sha256": "3860df49cc291f82bc3d05c2d8441034f0b3d95112ddc9bd5215e859aaf56bee"
+    },
+    {
+      "block_id": "page-0232-block-0015",
+      "order": 15,
+      "text": "Baseline\n1 month\n3 months\n4–6 months\n12 months\n",
+      "bbox": [
+        47.99909973144531,
+        270.2117919921875,
+        400.4465637207031,
+        279.09930419921875
+      ],
+      "text_sha256": "09dc9fed08708199d8b210dfb1d974dc5a1ef51696a0ce1b12555b55c3dd857b"
+    },
+    {
+      "block_id": "page-0232-block-0016",
+      "order": 16,
+      "text": "Weight/BMI/waist\nWeight/BMI/weight\nWeight/BMI/waist\nWeight/BMI/waist\nWeight/BMI/waist\n",
+      "bbox": [
+        47.99908447265625,
+        287.41680908203125,
+        419.8941650390625,
+        296.1242980957031
+      ],
+      "text_sha256": "88b12d39cba58ceb90629bdda84550a5bc4c7752bc0593ed0dabee50dbfb77f8"
+    },
+    {
+      "block_id": "page-0232-block-0017",
+      "order": 17,
+      "text": "Plasma glucose  \nand lipids\n",
+      "bbox": [
+        47.99908447265625,
+        302.4393005371094,
+        100.50659942626953,
+        321.144287109375
+      ],
+      "text_sha256": "f96e884ce7f2c89bcf96d98bd259306ca3d7972fb075fb26747a54f04dac2be0"
+    },
+    {
+      "block_id": "page-0232-block-0018",
+      "order": 18,
+      "text": "Plasma glucose  \nand lipids\n",
+      "bbox": [
+        133.1090850830078,
+        302.4393005371094,
+        185.6165771484375,
+        321.144287109375
+      ],
+      "text_sha256": "f96e884ce7f2c89bcf96d98bd259306ca3d7972fb075fb26747a54f04dac2be0"
+    },
+    {
+      "block_id": "page-0232-block-0019",
+      "order": 19,
+      "text": "Plasma glucose and \nlipids\n",
+      "bbox": [
+        286.10906982421875,
+        302.4393005371094,
+        350.7066345214844,
+        321.144287109375
+      ],
+      "text_sha256": "f359a1931e16e9be65812ba763044c150368a89b24fcc5f8a15d4e489a1358d7"
+    },
+    {
+      "block_id": "page-0232-block-0020",
+      "order": 20,
+      "text": "Plasma glucose \nand lipids\n",
+      "bbox": [
+        363.35906982421875,
+        302.4393005371094,
+        413.7816467285156,
+        321.144287109375
+      ],
+      "text_sha256": "26429d0c3cfd08cb9b345285f93f6c3bccf6e47b97e7aececc87cfe51d6797ad"
+    },
+    {
+      "block_id": "page-0232-block-0021",
+      "order": 21,
+      "text": "Liver function tests (LFTs)\nLFTs\n",
+      "bbox": [
+        47.99906921386719,
+        327.45928955078125,
+        298.6040954589844,
+        336.1667785644531
+      ],
+      "text_sha256": "70f5cb223c2a35f92ac13ad174a93a8ba948c30df899752007b32cbf48bbe9bb"
+    },
+    {
+      "block_id": "page-0232-block-0022",
+      "order": 22,
+      "text": "Consider monitoring plasma troponin, beta-natriuretic peptide and c-reactive protein \nweekly in the first six weeks of treatment, particularly where there is any suspicion of \nmyocarditis (see the section on myocarditis).\n",
+      "bbox": [
+        47.99909973144531,
+        351.85931396484375,
+        422.7990417480469,
+        387.5793151855469
+      ],
+      "text_sha256": "af5ee192cb53ddd60ae08cc0eb25cba15841c016e484be86b61c53ec54e951fe"
+    },
+    {
+      "block_id": "page-0232-block-0023",
+      "order": 23,
+      "text": "Switching from other antipsychotics\n",
+      "bbox": [
+        47.99909973144531,
+        405.0143127441406,
+        234.8120880126953,
+        418.04931640625
+      ],
+      "text_sha256": "46d1c4dff22db49a56b0d43158cc40c3ae49321ff898b8167464c3e1f14014ef"
+    },
+    {
+      "block_id": "page-0232-block-0024",
+      "order": 24,
+      "text": "■\n■The switching regime will be largely dependent on the patient’s mental state\n",
+      "bbox": [
+        47.99909973144531,
+        429.85931396484375,
+        383.489013671875,
+        441.5793151855469
+      ],
+      "text_sha256": "3e71721110758ba3c251977d8e9c457ec0f26071c37b144b1887203267ed764d"
+    },
+    {
+      "block_id": "page-0232-block-0025",
+      "order": 25,
+      "text": "■\n■Consider potential additive side-effects of antipsychotics (e.g. hypotension, sedation, \n",
+      "bbox": [
+        47.99909973144531,
+        441.85931396484375,
+        422.7790222167969,
+        453.5793151855469
+      ],
+      "text_sha256": "38d10511cff57e6878ca9e6d26422a95db41b79247006d81ff6821aa684b1634"
+    },
+    {
+      "block_id": "page-0232-block-0026",
+      "order": 26,
+      "text": "effect on QTc interval)\n",
+      "bbox": [
+        56.99909973144531,
+        453.85931396484375,
+        154.44911193847656,
+        465.5793151855469
+      ],
+      "text_sha256": "bb97f08ba7370aaba3cc59075148ca87a68a6934bdeba28ab0d1a0699858e780"
+    },
+    {
+      "block_id": "page-0232-block-0027",
+      "order": 27,
+      "text": "■\n■Consider drug interactions (e.g. some SSRIs may increase clozapine levels)\n",
+      "bbox": [
+        47.99909973144531,
+        465.85931396484375,
+        376.0691223144531,
+        477.5793151855469
+      ],
+      "text_sha256": "02a42ac642417382e97c088be9721791bf3c9c3c08fd1b7669402acfcaa47257"
+    },
+    {
+      "block_id": "page-0232-block-0028",
+      "order": 28,
+      "text": "■\n■All depots, sertindole, pimozide and ziprasidone should be stopped before clozapine \n",
+      "bbox": [
+        47.99909973144531,
+        477.85931396484375,
+        422.7491760253906,
+        489.5793151855469
+      ],
+      "text_sha256": "cede37b3940890b45185bbb0e848bf49ca8c230f4d95a59e54f1876534ef43a6"
+    },
+    {
+      "block_id": "page-0232-block-0029",
+      "order": 29,
+      "text": "is started\n",
+      "bbox": [
+        56.99909973144531,
+        489.85931396484375,
+        95.88909912109375,
+        501.5793151855469
+      ],
+      "text_sha256": "44475067727cf4d5567b55c76a9f4b6b7f477b84363bb5455b783c39b7768c1d"
+    },
+    {
+      "block_id": "page-0232-block-0030",
+      "order": 30,
+      "text": "■\n■Other antipsychotics and clozapine may be cross-tapered with varying degrees of \n",
+      "bbox": [
+        47.99909973144531,
+        501.85931396484375,
+        422.7991638183594,
+        513.579345703125
+      ],
+      "text_sha256": "cbd851aff2804ccdf4b2b5d3cb6a45155c860653f786ad993c45795ef0db9809"
+    },
+    {
+      "block_id": "page-0232-block-0031",
+      "order": 31,
+      "text": "caution. ECG monitoring is prudent when clozapine is co-prescribed with other drugs \nknown to affect QT interval\n",
+      "bbox": [
+        56.99909973144531,
+        513.8593139648438,
+        422.7891540527344,
+        537.579345703125
+      ],
+      "text_sha256": "6e741a5ad677323b6054fd249e67b4111d3a46f23b38cce9529c0685baaee8fd"
+    },
+    {
+      "block_id": "page-0232-block-0032",
+      "order": 32,
+      "text": "Serious cardiac adverse effects\n",
+      "bbox": [
+        47.99909973144531,
+        555.0143432617188,
+        205.9151153564453,
+        568.04931640625
+      ],
+      "text_sha256": "8eba4919ee6680045427580784455cba3c562db0234b1461b8fe7e8f07b6cd60"
+    },
+    {
+      "block_id": "page-0232-block-0033",
+      "order": 33,
+      "text": "Patients should be closely observed for signs or symptoms of myocarditis, particularly dur-\ning the first 2 months and advised to inform staff if they experience these, and to seek out-\nof-hours review if necessary. These include persistent tachycardia (although commonly \nbenign), palpitations, shortness of breath, fever, arrhythmia, symptoms mimicking myocar-\ndial infarction, chest pain and other unexplained symptoms of heart failure. See section on \nClozapine: serious haematological and cardiovascular adverse effects in this chapter.\n",
+      "bbox": [
+        47.99909973144531,
+        573.8594360351562,
+        422.7593078613281,
+        645.5794677734375
+      ],
+      "text_sha256": "53f2cff65d45615f52e32a7210fd31a5152afe92469b466c46985d7a1b29c986"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

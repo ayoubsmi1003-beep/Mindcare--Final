@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0778",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 778,
+  "source_page_index": 777,
+  "source_page_display": 778,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\nChapter 9\nDrug treatment of other \npsychiatric conditions\nBorderline personality disorder (BPD)\nBorderline personality disorder (BPD) is common in psychiatric settings, affecting 20% \nof community psychiatric patients.1 Common co-morbid conditions affecting patients \nwith BPD include affective disorders (both unipolar and bipolar affective disorder) anx-\niety spectrum disorders, eating disorders, and drug and alcohol misuse, and the lifetime \nrisk of having at least one co-morbid mental disorder approaches 100%.2 Co-morbid \nconditions, such as depression and anxiety, should be managed according to usual \nguidance for the particular condition, irrespective of any coexisting BPD diagnosis. The \nsuicide rate in BPD is similar to that seen in affective disorders and schizophrenia, \naffecting about 1-in-10 patients.3,4\nAlthough classified as a personality disorder, several aspects of BPD have been assumed \nto be responsive to drug treatment. These include affective instability, transient or stress-\nrelated quasi-psychotic or depressive symptoms, suicidal and self-harming behaviours, and \nimpulsivity.4 A high proportion of people with BPD are prescribed psychotropic drugs2,5,6 \noften in polypharmacy regimes.7 A survey of prescribing practice in England found that \nover 90% of patients with BPD had been prescribed psychotropic medication, most com-\nmonly antidepressants or antipsychotics, particularly for affective instability.6 The preva-\nlence of prescribing antipsychotics, antidepressants and mood stabilisers in those with BPD \nas a sole psychiatric diagnosis is the same as in those with BPD and a clear and documented \nco-morbid diagnosis of schizophrenia, depression or bipolar disorder, respectively.6 This \nsuggests that psychotropics are often prescribed for the treatment of BPD per se (for which \nthere is very limited support) rather than for specific co-morbid conditions. No drug is spe-\ncifically licensed for the treatment of BPD, or indeed any aspect of BPD. Psychological \ntreatments such as DBT are better supported – Cochrane noted 75 randomised controlled \ntrials (RCTs) of psychological treatments in 2020.8\nIn 2009 NICE9 recommended that:\n■\n■Drug treatment should not be used routinely for borderline personality disorder or \n",
+  "raw_text_sha256": "4f7abea1a3c70074ac4e2e28dcb72b9adc095d3ee883a9f986369203c96eb0d6",
+  "coordinates_sha256": "f7b1143f32962b4a8dc570ef38a6bb7da636c3710a31c43288b208e2a2c59fb4",
+  "block_sequence_sha256": "16c2f1fc0b54374c280414def8f67bb10750e02be0035dc3ab68a8387cfff5ae",
+  "blocks": [
+    {
+      "block_id": "page-0778-block-0000",
+      "order": 0,
+      "text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\n",
+      "bbox": [
+        47.99980163574219,
+        585.1019897460938,
+        348.48388671875,
+        614.4779663085938
+      ],
+      "text_sha256": "c78fcd1eeb2357afb8eb5b97a8c858d68167bd409b9074c0da4e20c032bd5665"
+    },
+    {
+      "block_id": "page-0778-block-0001",
+      "order": 1,
+      "text": "Chapter 9\n",
+      "bbox": [
+        324.43121337890625,
+        59.724403381347656,
+        420.001220703125,
+        82.60040283203125
+      ],
+      "text_sha256": "baabf57f70baea2054d69ca3906d517453be418c785d8ba20bfd92af2b0ee812"
+    },
+    {
+      "block_id": "page-0778-block-0002",
+      "order": 2,
+      "text": "Drug treatment of other \n",
+      "bbox": [
+        168.564697265625,
+        111.36316680908203,
+        426.11871337890625,
+        137.43316650390625
+      ],
+      "text_sha256": "78f1a547a2f9da7fce109d226485a662fa80192380a2aa5b3adf80443dd25f12"
+    },
+    {
+      "block_id": "page-0778-block-0003",
+      "order": 3,
+      "text": "psychiatric conditions\n",
+      "bbox": [
+        196.35069274902344,
+        135.36517333984375,
+        420.002685546875,
+        161.4351806640625
+      ],
+      "text_sha256": "3c79a5d13452e0d15e152f23565e8771df06caa32b2a5179421628df21b0a086"
+    },
+    {
+      "block_id": "page-0778-block-0004",
+      "order": 4,
+      "text": "Borderline personality disorder (BPD)\n",
+      "bbox": [
+        55.0,
+        229.43197631835938,
+        246.5209503173828,
+        242.46697998046875
+      ],
+      "text_sha256": "fe3b5adb9819dad4b3b782bde333edea3f70a47629b70f8d4850b76a83da481c"
+    },
+    {
+      "block_id": "page-0778-block-0005",
+      "order": 5,
+      "text": "Borderline personality disorder (BPD) is common in psychiatric settings, affecting 20% \nof community psychiatric patients.1 Common co-morbid conditions affecting patients \nwith BPD include affective disorders (both unipolar and bipolar affective disorder) anx-\niety spectrum disorders, eating disorders, and drug and alcohol misuse, and the lifetime \nrisk of having at least one co-morbid mental disorder approaches 100%.2 Co-morbid \nconditions, such as depression and anxiety, should be managed according to usual \nguidance for the particular condition, irrespective of any coexisting BPD diagnosis. The \nsuicide rate in BPD is similar to that seen in affective disorders and schizophrenia, \naffecting about 1-in-10 patients.3,4\n",
+      "bbox": [
+        48.0,
+        248.2769775390625,
+        422.8236389160156,
+        355.9969787597656
+      ],
+      "text_sha256": "0a44b5ac39860796353efd0df07576435078c7b5fe7e1834deff81f205ca2d6a"
+    },
+    {
+      "block_id": "page-0778-block-0006",
+      "order": 6,
+      "text": "Although classified as a personality disorder, several aspects of BPD have been assumed \nto be responsive to drug treatment. These include affective instability, transient or stress-\nrelated quasi-psychotic or depressive symptoms, suicidal and self-harming behaviours, and \nimpulsivity.4 A high proportion of people with BPD are prescribed psychotropic drugs2,5,6 \noften in polypharmacy regimes.7 A survey of prescribing practice in England found that \nover 90% of patients with BPD had been prescribed psychotropic medication, most com-\nmonly antidepressants or antipsychotics, particularly for affective instability.6 The preva-\nlence of prescribing antipsychotics, antidepressants and mood stabilisers in those with BPD \nas a sole psychiatric diagnosis is the same as in those with BPD and a clear and documented \nco-morbid diagnosis of schizophrenia, depression or bipolar disorder, respectively.6 This \nsuggests that psychotropics are often prescribed for the treatment of BPD per se (for which \nthere is very limited support) rather than for specific co-morbid conditions. No drug is spe-\ncifically licensed for the treatment of BPD, or indeed any aspect of BPD. Psychological \ntreatments such as DBT are better supported – Cochrane noted 75 randomised controlled \ntrials (RCTs) of psychological treatments in 2020.8\n",
+      "bbox": [
+        47.999298095703125,
+        356.2769775390625,
+        422.8102111816406,
+        535.9970092773438
+      ],
+      "text_sha256": "496ff24267b1deb5454d72d6cb13df44d8a0f08cde09e421a043330eef178c48"
+    },
+    {
+      "block_id": "page-0778-block-0007",
+      "order": 7,
+      "text": "In 2009 NICE9 recommended that:\n",
+      "bbox": [
+        58.0,
+        536.2769775390625,
+        208.99090576171875,
+        547.9970092773438
+      ],
+      "text_sha256": "bdf0df96afb9fb5f23c5b5e300f5aec85b63dd491290ae70af7e1a5b1e7320d0"
+    },
+    {
+      "block_id": "page-0778-block-0008",
+      "order": 8,
+      "text": "■\n■Drug treatment should not be used routinely for borderline personality disorder or \n",
+      "bbox": [
+        47.999900817871094,
+        554.2769775390625,
+        422.8100280761719,
+        565.9970092773438
+      ],
+      "text_sha256": "9f6217a551fffd244cb67c13862612c1657eaf8c2bab00b556859d78afb5519a"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

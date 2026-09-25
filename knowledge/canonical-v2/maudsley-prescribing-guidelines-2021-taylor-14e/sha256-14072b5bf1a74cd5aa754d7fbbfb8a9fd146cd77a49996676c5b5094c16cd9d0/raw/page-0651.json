@@ -1,0 +1,107 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0651",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 651,
+  "source_page_index": 650,
+  "source_page_display": 651,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "630    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  6\n\t139.\t Matsunaga S, et al. Efficacy and safety of cholinesterase inhibitors for mild cognitive impairment: asystematic review and meta-analysis. J \nAlzheimers Dis 2019; 71:513–523.\n\t140.\t Kasper S, et al. Management of mild cognitive impairment (MCI): the need for national and international guidelines. World J Biol Psychiatry \n2020; 21:579–594.\n\t141.\t Nardell M, et al. Pharmacological treatments for frontotemporal dementias: a systematic review of randomized controlled trials. Am J \nAlzheimers Dis Other Demen 2014; 29:123–132.\n\t142.\t Li Y, et al. Cholinesterase inhibitors for rarer dementias associated with neurological conditions. Cochrane Database Syst Rev 2015; \nCd009444.\n",
+  "raw_text_sha256": "21e637a98475b33f58e321c422e952e697faaf71bb71f8c7bcbbd162e3a4c7ea",
+  "coordinates_sha256": "d36a5a85a4e4c21f8c86823134089f44a2d1cf8805601d492945dc089bdb01a7",
+  "block_sequence_sha256": "eafeb6c5ed4d80d38463c8cb10a65b6e49538918bcbb28ffbab784f5682ef038",
+  "blocks": [
+    {
+      "block_id": "page-0651-block-0000",
+      "order": 0,
+      "text": "630    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "ec900aba8b37a19c33abe787f4d10fe9f739966cab0dbf5e6c37798c5b84f137"
+    },
+    {
+      "block_id": "page-0651-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        18.520000457763672,
+        405.35260009765625,
+        28.0,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0651-block-0002",
+      "order": 2,
+      "text": "\t139.\t Matsunaga S, et al. Efficacy and safety of cholinesterase inhibitors for mild cognitive impairment: asystematic review and meta-analysis. J \n",
+      "bbox": [
+        61.88999938964844,
+        63.2703857421875,
+        435.5159912109375,
+        70.30238342285156
+      ],
+      "text_sha256": "53c1bf6ccf087e0901ca57c5c46ebf920f368e258fdfc643a2bee40a8a37115f"
+    },
+    {
+      "block_id": "page-0651-block-0003",
+      "order": 3,
+      "text": "Alzheimers Dis 2019; 71:513–523.\n\t140.\t Kasper S, et al. Management of mild cognitive impairment (MCI): the need for national and international guidelines. World J Biol Psychiatry \n",
+      "bbox": [
+        61.88999938964844,
+        72.12638854980469,
+        435.5881652832031,
+        88.30238342285156
+      ],
+      "text_sha256": "de5ce0a4e6dea96bc18b12c4c45eae5e2fd21fb36e62b5a1a37a01a1371c6540"
+    },
+    {
+      "block_id": "page-0651-block-0004",
+      "order": 4,
+      "text": "2020; 21:579–594.\n\t141.\t Nardell M, et al. Pharmacological treatments for frontotemporal dementias: a systematic review of randomized controlled trials. Am J \n",
+      "bbox": [
+        61.88999938964844,
+        90.12638854980469,
+        435.5219421386719,
+        106.30238342285156
+      ],
+      "text_sha256": "0be2f2b67b34e6cc0871a251af8f41c852008062679318223bdde9703e4bb44b"
+    },
+    {
+      "block_id": "page-0651-block-0005",
+      "order": 5,
+      "text": "Alzheimers Dis Other Demen 2014; 29:123–132.\n\t142.\t Li Y, et al. Cholinesterase inhibitors for rarer dementias associated with neurological conditions. Cochrane Database Syst Rev 2015; \n",
+      "bbox": [
+        61.88999938964844,
+        108.12638854980469,
+        435.5280456542969,
+        124.30238342285156
+      ],
+      "text_sha256": "7f97f51db075404d0a9f06afe9bafab9bcea836f11222c456692984b2c5852ff"
+    },
+    {
+      "block_id": "page-0651-block-0006",
+      "order": 6,
+      "text": "Cd009444.\n",
+      "bbox": [
+        76.88999938964844,
+        126.2703857421875,
+        106.24198913574219,
+        133.30238342285156
+      ],
+      "text_sha256": "1988e667150c72b0369b75d088b1d96124cfc2f721f90a5830bd2aff255a6931"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

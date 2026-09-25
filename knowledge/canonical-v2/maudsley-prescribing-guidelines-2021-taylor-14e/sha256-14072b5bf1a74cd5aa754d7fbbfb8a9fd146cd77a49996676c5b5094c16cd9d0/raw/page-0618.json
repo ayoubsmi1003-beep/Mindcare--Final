@@ -1,0 +1,347 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0618",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 618,
+  "source_page_index": 617,
+  "source_page_display": 618,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Children and adolescents    597\nCHAPTER 5\nTable 5.7  (Continued)\nMedication\nDose\nOnset of action\nComment\nMidazolam* IM, IV \nor buccal11,12\n0.1–0.15mg/kg (IM)\nBuccal midazolam \n300–500µg/kg or\n6–10 years = 7.5mg\n>10 years = 10mg\n10–20 minutes \nIM\n(1–3 minutes IV)\nQuicker onset and shorter duration of action \nthan lorazepam or diazepam.\nIV administration should only be used \n(usually as a last resort) with extreme \ncaution and where resuscitation facilities are \navailable.\nShorter onset and duration of action than \nhaloperidol\nWhen given as buccal liquid, onset of action \nis 15–30 minutes.13 Some published data in \nmental health but only in adults.14 Buccal \nliquid is unlicensed for this use.\nDiazepam* IV\n(not for IM \nadministration)15\n0.1mg/kg/dose by slow IV \ninjection.\nMax 40mg total daily \ndose <12 years and \n60mg >12 years\n1–3 minutes\nLong half-life that does not correlate with \nlength of sedation. Possibility of \naccumulation\nNever give as IM injection\nZiprasidone IM16–19\n(not UK)\n10–20mg\n15–30 minutes \nIM\nApparently effective. QT prolongation is of \nconcern in this patient group\nECG essential\nAripiprazole IM20,21\n9.75mg\n15–30 minutes\nEvidence of effectiveness in adults but no \nclinical trial data for children and adolescents\nPromethazine IM\n<12 years: 5–25mg\n(max 50mg/day)\n>12 years: 25–50mg\n(max 100mg/day)\nUp to 60 minutes\nAn effective sedative, although has a slow \nonset of action. Useful if the cause of \nbehavioural disturbance is unknown and there \nis concern about the use of antipsychotic \nmedication in a child or young person\n*Note that young people are particularly vulnerable to disinhibitory reactions with benzodiazepines.\nOral medication should always be offered (and repeated if necessary if the young \nperson is willing to take it), before resorting to parenteral treatment. Buccal mida-\nzolam14 and inhaled loxapine22 have not been widely investigated in children in RT at \nthe time of writing and have limited availability. Buccal midazolam is commonly used \nfor seizures in children. Monitoring after RT is the same as in adults (see section on RT, \nChapter 3).\n",
+  "raw_text_sha256": "8df9a23cb581a438bd0c8d03c7084d7267d88e1fc8eb3f93d7658686350e3341",
+  "coordinates_sha256": "a14a435fc959dfcf3a97fb8d6e45f3d83a0e48ab81c30fc9f6588d51f9749ac3",
+  "block_sequence_sha256": "7fb5149af4b931341a49a08d50c95327f0514984777d8bc83583dbce56435369",
+  "blocks": [
+    {
+      "block_id": "page-0618-block-0000",
+      "order": 0,
+      "text": "Children and adolescents    597\n",
+      "bbox": [
+        288.94488525390625,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "5807a97d0d25e43ff5c2f0e2c22ccc6d109b5d218cc38760be4fde056ed855e3"
+    },
+    {
+      "block_id": "page-0618-block-0001",
+      "order": 1,
+      "text": "CHAPTER 5\n",
+      "bbox": [
+        454.4096984863281,
+        339.3385009765625,
+        463.88970947265625,
+        380.6824951171875
+      ],
+      "text_sha256": "f4b8b4a0fc64e7b3b74e7336306d0959d0384683e387792724f393162639020a"
+    },
+    {
+      "block_id": "page-0618-block-0002",
+      "order": 2,
+      "text": "Table 5.7  (Continued)\n",
+      "bbox": [
+        54.0,
+        70.08790588378906,
+        126.11998748779297,
+        78.97540283203125
+      ],
+      "text_sha256": "9146286e30eb803fc0677593db81257abace18d6b77711253807c9eea3177b69"
+    },
+    {
+      "block_id": "page-0618-block-0003",
+      "order": 3,
+      "text": "Medication\nDose\nOnset of action\nComment\n",
+      "bbox": [
+        48.0,
+        90.46290588378906,
+        308.17498779296875,
+        99.35040283203125
+      ],
+      "text_sha256": "d12c036ed537ba6166e8a719c516cee1919942b3240758f32f713fe9b0b7042e"
+    },
+    {
+      "block_id": "page-0618-block-0004",
+      "order": 4,
+      "text": "Midazolam* IM, IV \nor buccal11,12\n",
+      "bbox": [
+        48.00750732421875,
+        107.66793060302734,
+        110.51250457763672,
+        126.3729248046875
+      ],
+      "text_sha256": "55e75bc8afccb4f30df96124e946dc1189e4cfcb520eb1cf98af42a4f28f69fe"
+    },
+    {
+      "block_id": "page-0618-block-0005",
+      "order": 5,
+      "text": "0.1–0.15mg/kg (IM)\n",
+      "bbox": [
+        117.0,
+        107.6678695678711,
+        180.77999877929688,
+        116.3753662109375
+      ],
+      "text_sha256": "d9f2bc3222c4be073d734e11d4fa237cca82ad556e52bc4616cfa8865b2398f5"
+    },
+    {
+      "block_id": "page-0618-block-0006",
+      "order": 6,
+      "text": "Buccal midazolam \n300–500µg/kg or\n6–10 years = 7.5mg\n>10 years = 10mg\n",
+      "bbox": [
+        117.0,
+        123.66536712646484,
+        181.10250854492188,
+        162.3653564453125
+      ],
+      "text_sha256": "bcb9126bb0a32036deff51ad4455e19e48756cdaa989119106298b04bbe6c7c8"
+    },
+    {
+      "block_id": "page-0618-block-0007",
+      "order": 7,
+      "text": "10–20 minutes \nIM\n(1–3 minutes IV)\n",
+      "bbox": [
+        212.00250244140625,
+        107.66036224365234,
+        264.09747314453125,
+        136.36285400390625
+      ],
+      "text_sha256": "480da4f7740ae6d0970bf699f3a89ffcb6b06997829ad6e5d31fdbfdd9821bb1"
+    },
+    {
+      "block_id": "page-0618-block-0008",
+      "order": 8,
+      "text": "Quicker onset and shorter duration of action \nthan lorazepam or diazepam.\n",
+      "bbox": [
+        274.0050048828125,
+        107.6528549194336,
+        418.6126403808594,
+        126.35784912109375
+      ],
+      "text_sha256": "d49f286fe0a7b27c4e60d4e633bea19b40313b6da37fd69cadcbf2348869ce61"
+    },
+    {
+      "block_id": "page-0618-block-0009",
+      "order": 9,
+      "text": "IV administration should only be used \n(usually as a last resort) with extreme \ncaution and where resuscitation facilities are \navailable.\n",
+      "bbox": [
+        274.0050048828125,
+        133.64784240722656,
+        417.3525695800781,
+        172.34783935546875
+      ],
+      "text_sha256": "0e2fbe3afef976985641e3284aa49e2152363bd5396bedfb21bc63447a9b42b4"
+    },
+    {
+      "block_id": "page-0618-block-0010",
+      "order": 10,
+      "text": "Shorter onset and duration of action than \nhaloperidol\n",
+      "bbox": [
+        274.0050048828125,
+        179.63783264160156,
+        409.45513916015625,
+        198.34283447265625
+      ],
+      "text_sha256": "ecbd71d5f7d432f90b78cbb83ca450fc2d006101b581752ff19199766262030f"
+    },
+    {
+      "block_id": "page-0618-block-0011",
+      "order": 11,
+      "text": "When given as buccal liquid, onset of action \nis 15–30 minutes.13 Some published data in \nmental health but only in adults.14 Buccal \nliquid is unlicensed for this use.\n",
+      "bbox": [
+        274.0010986328125,
+        205.63282775878906,
+        417.36761474609375,
+        244.37289428710938
+      ],
+      "text_sha256": "18c7e2b18238a75b1a32ef5fbd9fe8f22c32d2690d875fda6c3e1208f1de25a3"
+    },
+    {
+      "block_id": "page-0618-block-0012",
+      "order": 12,
+      "text": "Diazepam* IV\n(not for IM \nadministration)15\n",
+      "bbox": [
+        48.00360107421875,
+        250.68788146972656,
+        100.77901458740234,
+        279.390380859375
+      ],
+      "text_sha256": "d995f89cd9fbfee1a6c766bf86e921609e7c0737f5f5a52fb19d1b2ddf508262"
+    },
+    {
+      "block_id": "page-0618-block-0013",
+      "order": 13,
+      "text": "0.1mg/kg/dose by slow IV \ninjection.\nMax 40mg total daily \ndose <12 years and \n60mg >12 years\n",
+      "bbox": [
+        117.0,
+        250.69288635253906,
+        201.61502075195312,
+        299.390380859375
+      ],
+      "text_sha256": "4f202be694c7ad8e107e92ce9d2e207e3f1e7958433683fe99792364be1b86e2"
+    },
+    {
+      "block_id": "page-0618-block-0014",
+      "order": 14,
+      "text": "1–3 minutes\nLong half-life that does not correlate with \nlength of sedation. Possibility of \naccumulation\n",
+      "bbox": [
+        212.00250244140625,
+        250.6853790283203,
+        409.29754638671875,
+        279.38787841796875
+      ],
+      "text_sha256": "73faab6f5b3faf38e7a13319a736831343d3b52d6e6a571638efa8d67c3e9ba8"
+    },
+    {
+      "block_id": "page-0618-block-0015",
+      "order": 15,
+      "text": "Never give as IM injection\n",
+      "bbox": [
+        274.0050048828125,
+        286.49786376953125,
+        365.27996826171875,
+        295.3853759765625
+      ],
+      "text_sha256": "e9448d5f1d45ca2d9294a0cb876ecc3142d099579352746d93eed673b0014c8c"
+    },
+    {
+      "block_id": "page-0618-block-0016",
+      "order": 16,
+      "text": "Ziprasidone IM16–19\n",
+      "bbox": [
+        48.00750732421875,
+        305.70538330078125,
+        107.00257873535156,
+        314.4128723144531
+      ],
+      "text_sha256": "d6e9830c95d897f21ae7be7fa2c9087eebe02f50a31257c4ccba2451187b0de8"
+    },
+    {
+      "block_id": "page-0618-block-0017",
+      "order": 17,
+      "text": "(not UK)\n",
+      "bbox": [
+        48.0,
+        315.7178955078125,
+        74.67749786376953,
+        324.4253845214844
+      ],
+      "text_sha256": "7079b45d9e853c6b1667606517c7e346a8ac503ce430d23a01057b2a1ad27941"
+    },
+    {
+      "block_id": "page-0618-block-0018",
+      "order": 18,
+      "text": "10–20mg\n15–30 minutes \nIM\n",
+      "bbox": [
+        117.0,
+        305.72039794921875,
+        262.0199890136719,
+        324.4253845214844
+      ],
+      "text_sha256": "b9b063ff50fc4a0fac644aa6b9605f52bc333a7123664324141f5659bb1d130c"
+    },
+    {
+      "block_id": "page-0618-block-0019",
+      "order": 19,
+      "text": "Apparently effective. QT prolongation is of \nconcern in this patient group\n",
+      "bbox": [
+        274.0050048828125,
+        305.72039794921875,
+        411.945068359375,
+        324.4253845214844
+      ],
+      "text_sha256": "c4c1dabf5bc8343610ed5d14a6dd020744ad905a1ff195efae6ab14def38117c"
+    },
+    {
+      "block_id": "page-0618-block-0020",
+      "order": 20,
+      "text": "ECG essential\n",
+      "bbox": [
+        274.0050048828125,
+        331.5353698730469,
+        321.0975036621094,
+        340.4228820800781
+      ],
+      "text_sha256": "fc998b385938404c4bed719d9aa6baba52601465880e2bf974319bbc0f0c0746"
+    },
+    {
+      "block_id": "page-0618-block-0021",
+      "order": 21,
+      "text": "Aripiprazole IM20,21\n9.75mg\n15–30 minutes\nEvidence of effectiveness in adults but no \nclinical trial data for children and adolescents\n",
+      "bbox": [
+        48.00750732421875,
+        346.7378845214844,
+        417.0,
+        365.4478759765625
+      ],
+      "text_sha256": "dd4f3dafcaf00228beb59be78e3afd1fa498fdf3328ce60f4d901ee2c52d0e70"
+    },
+    {
+      "block_id": "page-0618-block-0022",
+      "order": 22,
+      "text": "Promethazine IM\n<12 years: 5–25mg\n(max 50mg/day)\n",
+      "bbox": [
+        48.00750732421875,
+        371.76287841796875,
+        179.0250244140625,
+        390.4678649902344
+      ],
+      "text_sha256": "b833a7ae8864ade275774fb076532daa9bdc8d3a78e64d7fcc130480d3e1c02a"
+    },
+    {
+      "block_id": "page-0618-block-0023",
+      "order": 23,
+      "text": ">12 years: 25–50mg\n(max 100mg/day)\n",
+      "bbox": [
+        117.00750732421875,
+        397.75787353515625,
+        183.19500732421875,
+        416.4628601074219
+      ],
+      "text_sha256": "a54ce15b1c5cd7e291bfe03afd2cd28e5aff76b5fd51abcc5ac66721060e4563"
+    },
+    {
+      "block_id": "page-0618-block-0024",
+      "order": 24,
+      "text": "Up to 60 minutes\nAn effective sedative, although has a slow \nonset of action. Useful if the cause of \nbehavioural disturbance is unknown and there \nis concern about the use of antipsychotic \nmedication in a child or young person\n",
+      "bbox": [
+        212.010009765625,
+        371.75537109375,
+        416.2726745605469,
+        420.4528503417969
+      ],
+      "text_sha256": "7ec9d06dd6b4c15ad5b6b26da5702147680a88192d74f1a535852482289de30f"
+    },
+    {
+      "block_id": "page-0618-block-0025",
+      "order": 25,
+      "text": "*Note that young people are particularly vulnerable to disinhibitory reactions with benzodiazepines.\n",
+      "bbox": [
+        48.0150146484375,
+        430.74285888671875,
+        366.1199951171875,
+        439.4503479003906
+      ],
+      "text_sha256": "37c8f14237590027df372be1c9b099910cb7d30e7831df27284e8b9ad57f5cb6"
+    },
+    {
+      "block_id": "page-0618-block-0026",
+      "order": 26,
+      "text": "Oral medication should always be offered (and repeated if necessary if the young \nperson is willing to take it), before resorting to parenteral treatment. Buccal mida-\nzolam14 and inhaled loxapine22 have not been widely investigated in children in RT at \nthe time of writing and have limited availability. Buccal midazolam is commonly used \nfor seizures in children. Monitoring after RT is the same as in adults (see section on RT, \nChapter 3).\n",
+      "bbox": [
+        47.99749755859375,
+        463.7139892578125,
+        422.8074035644531,
+        535.4340209960938
+      ],
+      "text_sha256": "fd3464d6edfc7872ca06bf442cec5429399fd00497fbca59549000e5607347e8"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

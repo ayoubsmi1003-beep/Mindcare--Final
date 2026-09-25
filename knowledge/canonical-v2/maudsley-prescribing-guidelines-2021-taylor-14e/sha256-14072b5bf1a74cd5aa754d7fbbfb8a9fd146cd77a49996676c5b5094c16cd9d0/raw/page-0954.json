@@ -1,0 +1,275 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0954",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 954,
+  "source_page_index": 953,
+  "source_page_display": 954,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Miscellany    933\nCHAPTER 14\nAntipsychotic generic name and \nformulation\nSite(s) of administration\nPipotiazine palmitate\n(in sesame oil)\nDeep intramuscular injection into the muscle in the thigh or \nbottom.15\nZuclopenthixol decanoate\n(in thin vegetable oil derived from coconuts)\nDeep intramuscular injection into the upper outer buttock \n(dorsogluteal) or lateral thigh (vastus lateralis).5\nAtypical antipsychotic (SGA) depots\nAntipsychotic generic name and \nformulation\nSite of administration\nAripiprazole\nPowder and vehicle for prolonged release \nsuspension\nGluteal muscle administration5\nThe recommended needle for gluteal administration is a 38mm \n(1.5inch), 22 gauge hypodermic safety needle; for obese patients \n(body mass index >28kg/m2), a 50mm (2inch), 21 gauge \nhypodermic safety needle should be used. Gluteal injections \nshould be alternated between the two gluteal muscles.\nDeltoid muscle administration5\nThe recommended needle for deltoid administration is a 25mm \n(1inch), 23 gauge hypodermic safety needle; for obese patients, a \n38mm (1.5inch), 22 gauge hypodermic safety needle should be \nused. Deltoid injections should be alternated between the two \ndeltoid muscles.\nThe powder and vehicle vials and the pre-filled syringe are for \nsingle-use only.5\nAripiprazole lauroxil\nIntramuscular administration into the deltoid or gluteal \nmuscle.16\nOlanzapine pamoate monohydrate\nPowder and vehicle for prolonged release \nsuspension\nOlanzapine pamoate monohydrate should only be administered \nby deep intramuscular gluteal injection by a healthcare \nprofessional trained in the appropriate injection technique  \nand in locations where post-injection observation and access  \nto appropriate medical care in the case of overdose can be \nassured.17\nPaliperidone palmitate\nProlonged release suspension for injection\nInjected slowly, deep into the deltoid or dorsogluteal muscle \n(the two initial loading doses should be administered in the \ndeltoid muscle so as to attain therapeutic concentrations \nrapidly).5,18\nAdministration should be in a single injection. The dose should \nnot be given in divided injections.18\n(Continued)\nTable 14.7  (Continued)\n",
+  "raw_text_sha256": "8d42e50d52d357c97354ae3631d177b8ddadec4d1a1fca746d33e178bda495e8",
+  "coordinates_sha256": "baf57a74ad41962312bcf2f2a642eb672b10eb1dff3bba8450e1f4ff9a4c745f",
+  "block_sequence_sha256": "6789329541b0ca99ed0155b0a46f2a0c5e6e53b1bec4af19a04e96b288eefe04",
+  "blocks": [
+    {
+      "block_id": "page-0954-block-0000",
+      "order": 0,
+      "text": "Miscellany    933\n",
+      "bbox": [
+        349.2962951660156,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "d432825cc5962141d77624baf1725da381a389bb6ea9718351f9a9c7078bebbc"
+    },
+    {
+      "block_id": "page-0954-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        454.4096984863281,
+        338.7405090332031,
+        463.88970947265625,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0954-block-0002",
+      "order": 2,
+      "text": "Antipsychotic generic name and \nformulation\nSite(s) of administration\n",
+      "bbox": [
+        47.99869918823242,
+        89.69972229003906,
+        287.4962158203125,
+        108.584716796875
+      ],
+      "text_sha256": "d512d42c6da481513c028d4bf88b23bd1acdaed5161cd96bfc6cfdf69d1a0b07"
+    },
+    {
+      "block_id": "page-0954-block-0003",
+      "order": 3,
+      "text": "Pipotiazine palmitate\n(in sesame oil)\n",
+      "bbox": [
+        47.99870300292969,
+        119.81971740722656,
+        123.02869415283203,
+        138.7047119140625
+      ],
+      "text_sha256": "b31481af9a34e8a252cdbb186ad38b81e4820353d48f9b59e957509a43cdc2fe"
+    },
+    {
+      "block_id": "page-0954-block-0004",
+      "order": 4,
+      "text": "Deep intramuscular injection into the muscle in the thigh or \nbottom.15\n",
+      "bbox": [
+        202.48370361328125,
+        119.81971740722656,
+        398.3387451171875,
+        138.7047119140625
+      ],
+      "text_sha256": "2e56b98edd4bd8ac6d5cabd387ad61d84c0015767a97ff58dc8f907dd384853d"
+    },
+    {
+      "block_id": "page-0954-block-0005",
+      "order": 5,
+      "text": "Zuclopenthixol decanoate\n(in thin vegetable oil derived from coconuts)\n",
+      "bbox": [
+        47.99869918823242,
+        144.8498077392578,
+        188.7136993408203,
+        163.73480224609375
+      ],
+      "text_sha256": "90d919cdaaf91599f59fc3c69a8d5936b4d7640d9ce2d000d1b09069f864bbda"
+    },
+    {
+      "block_id": "page-0954-block-0006",
+      "order": 6,
+      "text": "Deep intramuscular injection into the upper outer buttock \n(dorsogluteal) or lateral thigh (vastus lateralis).5\n",
+      "bbox": [
+        202.48370361328125,
+        144.8498077392578,
+        396.25372314453125,
+        163.73480224609375
+      ],
+      "text_sha256": "754a7b20750e3b2a7ab4a0b09dee4e32652b14da344893f41fd9b0f818ac00a5"
+    },
+    {
+      "block_id": "page-0954-block-0007",
+      "order": 7,
+      "text": "Atypical antipsychotic (SGA) depots\n",
+      "bbox": [
+        47.99869918823242,
+        169.4848175048828,
+        173.8336944580078,
+        178.372314453125
+      ],
+      "text_sha256": "d9a38849e29405e4b7cb1b8d751eea2d5f04d3d3bb659d0e0ba34058f8c896f2"
+    },
+    {
+      "block_id": "page-0954-block-0008",
+      "order": 8,
+      "text": "Antipsychotic generic name and \nformulation\nSite of administration\n",
+      "bbox": [
+        47.99869918823242,
+        189.7198028564453,
+        279.1712341308594,
+        208.60479736328125
+      ],
+      "text_sha256": "eb4bc814619ac51c05987e6276297eb81d553e4fcbda669cad7bebda62645510"
+    },
+    {
+      "block_id": "page-0954-block-0009",
+      "order": 9,
+      "text": "Aripiprazole\nPowder and vehicle for prolonged release \nsuspension\n",
+      "bbox": [
+        47.99870300292969,
+        219.8397979736328,
+        182.33868408203125,
+        248.7222900390625
+      ],
+      "text_sha256": "b877c9ce1f4a7ae2e476369e6f2f6c889ba617cfa73d9c09b60c0ecd7af00fde"
+    },
+    {
+      "block_id": "page-0954-block-0010",
+      "order": 10,
+      "text": "Gluteal muscle administration5\n",
+      "bbox": [
+        202.48370361328125,
+        219.83229064941406,
+        304.5041198730469,
+        228.71978759765625
+      ],
+      "text_sha256": "2d35664b087a98919112c7439a4f6919c70a0c75497a289dbcb1b0b88e2b2c99"
+    },
+    {
+      "block_id": "page-0954-block-0011",
+      "order": 11,
+      "text": "The recommended needle for gluteal administration is a 38mm \n(1.5inch), 22 gauge hypodermic safety needle; for obese patients \n(body mass index >28kg/m2), a 50mm (2inch), 21 gauge \nhypodermic safety needle should be used. Gluteal injections \nshould be alternated between the two gluteal muscles.\nDeltoid muscle administration5\n",
+      "bbox": [
+        202.48179626464844,
+        230.02467346191406,
+        412.534423828125,
+        288.72467041015625
+      ],
+      "text_sha256": "11b68b254e11b3fea68286e2be17d707f8abef691910ed0d7cefc6e34de1d6a7"
+    },
+    {
+      "block_id": "page-0954-block-0012",
+      "order": 12,
+      "text": "The recommended needle for deltoid administration is a 25mm \n(1inch), 23 gauge hypodermic safety needle; for obese patients, a \n38mm (1.5inch), 22 gauge hypodermic safety needle should be \nused. Deltoid injections should be alternated between the two \ndeltoid muscles.\nThe powder and vehicle vials and the pre-filled syringe are for \nsingle-use only.5\n",
+      "bbox": [
+        202.48179626464844,
+        290.0246887207031,
+        414.1993713378906,
+        358.7171630859375
+      ],
+      "text_sha256": "f3485c7543db8979c342c3b203134b5e273e34d134cc4406c8dd41ac6395cba3"
+    },
+    {
+      "block_id": "page-0954-block-0013",
+      "order": 13,
+      "text": "Aripiprazole lauroxil\nIntramuscular administration into the deltoid or gluteal \nmuscle.16\n",
+      "bbox": [
+        47.99879837036133,
+        364.86968994140625,
+        385.423828125,
+        383.75469970703125
+      ],
+      "text_sha256": "67374c3fd87654a8208e9d3ae4081000c2ff476741604de09ede000cb1138d20"
+    },
+    {
+      "block_id": "page-0954-block-0014",
+      "order": 14,
+      "text": "Olanzapine pamoate monohydrate\nPowder and vehicle for prolonged release \nsuspension\n",
+      "bbox": [
+        47.99869918823242,
+        389.8946838378906,
+        182.33868408203125,
+        418.7771911621094
+      ],
+      "text_sha256": "57a19f54b227ee2be4b9f8c5df4b23fc344406cb967327a5969ab819d753600d"
+    },
+    {
+      "block_id": "page-0954-block-0015",
+      "order": 15,
+      "text": "Olanzapine pamoate monohydrate should only be administered \nby deep intramuscular gluteal injection by a healthcare \nprofessional trained in the appropriate injection technique  \nand in locations where post-injection observation and access  \nto appropriate medical care in the case of overdose can be \nassured.17\n",
+      "bbox": [
+        202.48370361328125,
+        390.06719970703125,
+        407.8038330078125,
+        448.7621765136719
+      ],
+      "text_sha256": "7247efacd0a4b720c1001c1e1d6082eefd5058f2776c095e1d8d23c9404aaafc"
+    },
+    {
+      "block_id": "page-0954-block-0016",
+      "order": 16,
+      "text": "Paliperidone palmitate\nProlonged release suspension for injection\n",
+      "bbox": [
+        47.99869918823242,
+        454.919677734375,
+        181.92616271972656,
+        473.8046875
+      ],
+      "text_sha256": "9d8a96e922ebc85f7adfabb51d7a8558e655d6872426dc860b4cddc17f8e23c1"
+    },
+    {
+      "block_id": "page-0954-block-0017",
+      "order": 17,
+      "text": "Injected slowly, deep into the deltoid or dorsogluteal muscle \n(the two initial loading doses should be administered in the \ndeltoid muscle so as to attain therapeutic concentrations \nrapidly).5,18\n",
+      "bbox": [
+        202.48370361328125,
+        454.919677734375,
+        407.2411193847656,
+        493.7996826171875
+      ],
+      "text_sha256": "508beb436d798aeb946f8e382dbb01d2fbb8949c2cf83b48e14a198a4df6f56e"
+    },
+    {
+      "block_id": "page-0954-block-0018",
+      "order": 18,
+      "text": "Administration should be in a single injection. The dose should \nnot be given in divided injections.18\n",
+      "bbox": [
+        202.48179626464844,
+        498.0997009277344,
+        404.6294860839844,
+        516.8046875
+      ],
+      "text_sha256": "c86a9cbf869998a3575ea4b1da4bac208b1b00307b8202d4527b3fb6f806a472"
+    },
+    {
+      "block_id": "page-0954-block-0019",
+      "order": 19,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.9840087890625,
+        526.4176025390625,
+        419.99896240234375,
+        535.1701049804688
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0954-block-0020",
+      "order": 20,
+      "text": "Table 14.7  (Continued)\n",
+      "bbox": [
+        54.0,
+        69.46467590332031,
+        130.2899932861328,
+        78.3521728515625
+      ],
+      "text_sha256": "b911c7f4e765a615a62d09e1132d00a619d484428516bdb00996411660b3405a"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

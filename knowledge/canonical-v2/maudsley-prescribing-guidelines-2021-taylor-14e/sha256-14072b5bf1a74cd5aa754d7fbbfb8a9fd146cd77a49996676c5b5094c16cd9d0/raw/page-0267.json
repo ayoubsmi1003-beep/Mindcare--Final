@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0267",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 267,
+  "source_page_index": 266,
+  "source_page_display": 267,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "246    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nReferences\n\t 1.\t Gressier F, et al. Pharmacogenetics of clozapine response and induced weight gain: a comprehensive review and meta-analysis. Eur \nNeuropsychopharmacol 2016; 26:163–185.\n\t 2.\t Athanasiou MC, et al. Candidate gene analysis identifies a polymorphism in HLA-DQB1 associated with clozapine-induced agranulocytosis. \nJ Clin Psychiatry 2011; 72:458–463.\n\t 3.\t Dettling M, et al. Genetic determinants of clozapine-induced agranulocytosis: recent results of HLA subtyping in a non-jewish caucasian \nsample. Arch Gen Psychiatry 2001; 58:93–94.\n\t 4.\t Yunis JJ, et al. HLA associations in clozapine-induced agranulocytosis. Blood 1995; 86:1177–1183.\n\t 5.\t Saito T, et al. Pharmacogenomic study of clozapine-induced agranulocytosis/granulocytopenia in a Japanese population. Biol Psychiatry \n2016; 80:636–642.\n\t 6.\t Girardin FR, et al. Cost-effectiveness of HLA-DQB1/HLA-B pharmacogenetic-guided treatment and blood monitoring in US patients taking \nclozapine. Pharmacogenomics J 2019; 19:211–218.\n\t 7.\t Goldstein JI, et al. Clozapine-induced agranulocytosis is associated with rare HLA-DQB1 and HLA-B alleles. Nat Commun 2014; 5:4757.\n\t 8.\t Legge SE, et al. Genetics of clozapine-associated neutropenia: recent advances, challenges and future perspective. Pharmacogenomics 2019; \n20:279–290.\n\t 9.\t Charles BA, et al. Analyses of genome wide association data, cytokines, and gene expression in African-Americans with benign ethnic neutro-\npenia. PLoS One 2018; 13:e0194400.\n\t10.\t Thorn CF, et al. PharmGKB summary: clozapine pathway, pharmacokinetics. Pharmacogenet Genomics 2018; 28:214–222.\n\t11.\t Tóth K, et al. Potential role of patients’ CYP3A-status in clozapine pharmacokinetics. Int J Neuropsychopharmacol 2017; 20:529–537.\n\t12.\t John AP, et al. Unusually high serum levels of clozapine associated with genetic polymorphism of CYP3A enzymes. Asian J Psychiatr 2020; \n57:102126.\n\t13.\t Smith RL, et al. Identification of a novel polymorphism associated with reduced clozapine concentration in schizophrenia patients-a genome-\nwide association study adjusting for smoking habits. Trans Psychiatry 2020; 10:198.\n\t14.\t Pardiñas AF, et al. Pharmacogenomic variants and drug interactions identified through the genetic analysis of clozapine metabolism. Am J \nPsychiatry 2019; 176:477–486.\n\t15.\t Lacaze P, et al. Genetic associations with clozapine-induced myocarditis in patients with schizophrenia. Translational Psychiatry 2020; 10:37.\n\t16.\t Li N, et al. Progress in genetic polymorphisms related to lipid disturbances induced by atypical antipsychotic drugs. Front Pharmacol 2020; \n10:1669.\n",
+  "raw_text_sha256": "e2e63ca3eee9a82b1b3511c8c1037b033ba6b38aa62ed232f143613bb4f10fb3",
+  "coordinates_sha256": "b42d9b53d6c2bebee8b21765de926df81e6a7b33447db7664afad1a8d104166b",
+  "block_sequence_sha256": "b9df84cd62ca1505a2b9656eab980f0ff10e1ad67947353a5f9a796f6303b32e",
+  "blocks": [
+    {
+      "block_id": "page-0267-block-0000",
+      "order": 0,
+      "text": "246    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "7e5197296584ba0b1c4e4c4f55384e5c9c8f27eceb739c135f80ecd60a6176cd"
+    },
+    {
+      "block_id": "page-0267-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0267-block-0002",
+      "order": 2,
+      "text": "References\n",
+      "bbox": [
+        61.88890075683594,
+        61.66092300415039,
+        117.92289733886719,
+        74.6959228515625
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0267-block-0003",
+      "order": 3,
+      "text": "\t 1.\t Gressier F, et al. Pharmacogenetics of clozapine response and induced weight gain: a comprehensive review and meta-analysis. Eur \n",
+      "bbox": [
+        61.88890075683594,
+        79.78192138671875,
+        435.5448913574219,
+        86.81391906738281
+      ],
+      "text_sha256": "27978c9102de0b8fe4b546731b2e7d41de5733df8f4fb62a2f191b219ec7acf1"
+    },
+    {
+      "block_id": "page-0267-block-0004",
+      "order": 4,
+      "text": "Neuropsychopharmacol 2016; 26:163–185.\n\t 2.\t Athanasiou MC, et al. Candidate gene analysis identifies a polymorphism in HLA-DQB1 associated with clozapine-induced agranulocytosis. \n",
+      "bbox": [
+        61.8948974609375,
+        88.63792419433594,
+        435.5509338378906,
+        104.81391906738281
+      ],
+      "text_sha256": "a2778ff4cc526e8fedc7b658e30b2c91f6a026b9030cd4785b12f756bf451572"
+    },
+    {
+      "block_id": "page-0267-block-0005",
+      "order": 5,
+      "text": "J Clin Psychiatry 2011; 72:458–463.\n\t 3.\t Dettling M, et al. Genetic determinants of clozapine-induced agranulocytosis: recent results of HLA subtyping in a non-jewish caucasian \n",
+      "bbox": [
+        61.900901794433594,
+        106.63792419433594,
+        435.5808410644531,
+        122.81391906738281
+      ],
+      "text_sha256": "7ec7c438bf21458935de1a6f5718b03703cab7f468be77645150cdbcf82f78bb"
+    },
+    {
+      "block_id": "page-0267-block-0006",
+      "order": 6,
+      "text": "sample. Arch Gen Psychiatry 2001; 58:93–94.\n\t 4.\t Yunis JJ, et al. HLA associations in clozapine-induced agranulocytosis. Blood 1995; 86:1177–1183.\n\t 5.\t Saito T, et al. Pharmacogenomic study of clozapine-induced agranulocytosis/granulocytopenia in a Japanese population. Biol Psychiatry \n",
+      "bbox": [
+        61.906898498535156,
+        124.63792419433594,
+        435.6170349121094,
+        149.8139190673828
+      ],
+      "text_sha256": "2039e293daeeab519a88036fbc8d69f7652fe62bbbb4d82f3236c1c933bf4d00"
+    },
+    {
+      "block_id": "page-0267-block-0007",
+      "order": 7,
+      "text": "2016; 80:636–642.\n\t 6.\t Girardin FR, et al. Cost-effectiveness of HLA-DQB1/HLA-B pharmacogenetic-guided treatment and blood monitoring in US patients taking \n",
+      "bbox": [
+        61.91889953613281,
+        151.63792419433594,
+        435.6046447753906,
+        167.8139190673828
+      ],
+      "text_sha256": "d68f23be06a44d5ea3e56d863cfe0632556f9fd9882e7443f8e4370aaf916465"
+    },
+    {
+      "block_id": "page-0267-block-0008",
+      "order": 8,
+      "text": "clozapine. Pharmacogenomics J 2019; 19:211–218.\n\t 7.\t Goldstein JI, et al. Clozapine-induced agranulocytosis is associated with rare HLA-DQB1 and HLA-B alleles. Nat Commun 2014; 5:4757.\n\t 8.\t Legge SE, et al. Genetics of clozapine-associated neutropenia: recent advances, challenges and future perspective. Pharmacogenomics 2019; \n",
+      "bbox": [
+        61.924896240234375,
+        169.63792419433594,
+        435.6349792480469,
+        194.8139190673828
+      ],
+      "text_sha256": "2759c4862534e3952698b0c3398063e237d53c765f11c84389eb87f3e0959007"
+    },
+    {
+      "block_id": "page-0267-block-0009",
+      "order": 9,
+      "text": "20:279–290.\n\t 9.\t Charles BA, et al. Analyses of genome wide association data, cytokines, and gene expression in African-Americans with benign ethnic neutro-\n",
+      "bbox": [
+        61.93689727783203,
+        196.63792419433594,
+        433.98504638671875,
+        212.8139190673828
+      ],
+      "text_sha256": "b2b060053ddf7c781651e0d29c502ee0d1864cabb031449970579ca4683c44af"
+    },
+    {
+      "block_id": "page-0267-block-0010",
+      "order": 10,
+      "text": "penia. PLoS One 2018; 13:e0194400.\n\t10.\t Thorn CF, et al. PharmGKB summary: clozapine pathway, pharmacokinetics. Pharmacogenet Genomics 2018; 28:214–222.\n\t11.\t Tóth K, et al. Potential role of patients’ CYP3A-status in clozapine pharmacokinetics. Int J Neuropsychopharmacol 2017; 20:529–537.\n\t12.\t John AP, et al. Unusually high serum levels of clozapine associated with genetic polymorphism of CYP3A enzymes. Asian J Psychiatr 2020; \n",
+      "bbox": [
+        61.942901611328125,
+        214.63792419433594,
+        435.5809631347656,
+        248.8139190673828
+      ],
+      "text_sha256": "022e262b60f17ca6e357ec87db6a380f85f8781b4d50b3b93c1956dfae766ac3"
+    },
+    {
+      "block_id": "page-0267-block-0011",
+      "order": 11,
+      "text": "57:102126.\n\t13.\t Smith RL, et al. Identification of a novel polymorphism associated with reduced clozapine concentration in schizophrenia patients-a genome-\n",
+      "bbox": [
+        61.960899353027344,
+        250.63792419433594,
+        433.97882080078125,
+        266.8139343261719
+      ],
+      "text_sha256": "4a02ecd2460426ec84fdc6661a43141ea2fb1a202a5d3a91b422eb48f6382190"
+    },
+    {
+      "block_id": "page-0267-block-0012",
+      "order": 12,
+      "text": "wide association study adjusting for smoking habits. Trans Psychiatry 2020; 10:198.\n\t14.\t Pardiñas AF, et al. Pharmacogenomic variants and drug interactions identified through the genetic analysis of clozapine metabolism. Am J \n",
+      "bbox": [
+        61.966896057128906,
+        268.6379089355469,
+        435.6469421386719,
+        284.8139343261719
+      ],
+      "text_sha256": "781a209f45b61af301bc735935b19115836079000d25ad766c45484001b271c9"
+    },
+    {
+      "block_id": "page-0267-block-0013",
+      "order": 13,
+      "text": "Psychiatry 2019; 176:477–486.\n\t15.\t Lacaze P, et al. Genetic associations with clozapine-induced myocarditis in patients with schizophrenia. Translational Psychiatry 2020; 10:37.\n\t16.\t Li N, et al. Progress in genetic polymorphisms related to lipid disturbances induced by atypical antipsychotic drugs. Front Pharmacol 2020; \n",
+      "bbox": [
+        61.972900390625,
+        286.6379089355469,
+        435.6348571777344,
+        311.8139343261719
+      ],
+      "text_sha256": "d70b8617be4cbabca4795a2062a699e25b95d1ba187cfe0e88ab5aa9643a73dd"
+    },
+    {
+      "block_id": "page-0267-block-0014",
+      "order": 14,
+      "text": "10:1669.\n",
+      "bbox": [
+        72.97691345214844,
+        313.6379089355469,
+        96.32890319824219,
+        320.8139343261719
+      ],
+      "text_sha256": "504e185ea81fbdd3f0be4b91577ee9e908039b9e5a302d6559b264f6c5be7d09"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

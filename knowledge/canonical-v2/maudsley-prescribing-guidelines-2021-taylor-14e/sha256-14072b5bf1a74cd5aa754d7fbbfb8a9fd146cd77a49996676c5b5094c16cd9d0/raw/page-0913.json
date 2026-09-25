@@ -1,0 +1,575 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0913",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 913,
+  "source_page_index": 912,
+  "source_page_display": 913,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "892    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 13\nTable 13.4  (Continued)\nDrug or drug group\nConsiderations\nSafe in surgery?\nAlternative formulations\nAntipsychotics4,15,24–28\n■\n■Some antipsychotics widely used in \nanaesthetic practice\n■\n■Increased risk of arrhythmia with \nmost drugs\n■\n■α1 blockade may lead to \nhypotension and interfere with \neffects of epinephrine and \nnorepinephrine\n■\n■Most drugs lower seizure threshold\n■\n■May enhance interoperative core \nhypothermia\n■\n■Some evidence of safe use in \nsurgery29\n■\n■Clozapine may delay recovery from \nanaesthesia\n■\n■Gaseous anaesthetics may affect \ndopamine metabolism\n■\n■Preoperative olanzapine reduces risk \nof delirium30 as may preoperative \naripiprazole31\n■\n■Use of SGAs may reduce \npostoperative nausea32\nProbably, usually \ncontinued to \navoid relapse33\nLiquid preparations of \nsome antipsychotics are \navailable.\nSome ‘specials’ liquids can \nbe made for NG delivery.\nBefore crushing tablets and \nmixing with water, confirm \nstability with either local \nguidelines or the drug \nmanufacturer.\nBenzodiazepines4,9\n■\n■Reduced requirements for induction \nand maintenance anaesthetics\n■\n■Many have prolonged action (days \nor weeks), so early withdrawal is \nnecessary\n■\n■Withdrawal symptoms possible\nProbably; usually \ncontinued\nLiquid, IM, IV and rectal \ndiazepam are available (do \nnot use IM route).\nBuccal liquid available for \nmidazolam\nSublingual (use normal \ntablets), IM, IV and \nlorazepam are available.\nLithium3,4,12,15\n■\n■Prolongs the action of both \ndepolarising and non-depolarising \nmuscle relaxants\n■\n■Surgery-related electrolyte \ndisturbance and reduced renal \nfunction may precipitate lithium \ntoxicity. Avoid dehydration and \nNSAIDs\n■\n■Possible increased risk of arrhythmia\nProbably safe in \nminor surgery but \nusually \ndiscontinued \nbefore major \nprocedures and \nre-started once \nelectrolytes \nnormalise\nSlow \ndiscontinuation is \nessential \n– anaesthetists \nmay not \nappreciate this34\nThe bioavailability of \nlithium varies between \nbrands. Care is needed \nwith equivalent doses of \nsalts: lithium carbonate \n200mg = lithium citrate \n509mg.\nLiquid lithium citrate is \navailable and is usually \nadministered twice daily.\n(Continued)\n",
+  "raw_text_sha256": "abff49802d812c5cd281a514c87c9f8841b672b61d971d95b46203066cb0259a",
+  "coordinates_sha256": "afc47946c934afd02b2a6d9815544fc7f992bb7a6fa975e9baac1f37ce46546d",
+  "block_sequence_sha256": "0bdd0488cb321d3bc3da68bb4a677879065ebb50a81f9709e24ffef090fa8787",
+  "blocks": [
+    {
+      "block_id": "page-0913-block-0000",
+      "order": 0,
+      "text": "892    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "a13491a3925696353291862186bd11abd44a1dc220e4de5d39eee0a4ee2c57b5"
+    },
+    {
+      "block_id": "page-0913-block-0001",
+      "order": 1,
+      "text": "CHAPTER 13\n",
+      "bbox": [
+        18.520000457763672,
+        272.95111083984375,
+        28.0,
+        318.74310302734375
+      ],
+      "text_sha256": "a01ce0756ef6b5d41c48be6624d8bd154fa95cf67cb49768f2593332d3a2ec98"
+    },
+    {
+      "block_id": "page-0913-block-0002",
+      "order": 2,
+      "text": "Table 13.4  (Continued)\n",
+      "bbox": [
+        67.89119720458984,
+        70.08790588378906,
+        144.1811981201172,
+        78.97540283203125
+      ],
+      "text_sha256": "be0f7b93745defa14b8e0813d5391cb4f91c1adbf82144540cdf8c18d5360410"
+    },
+    {
+      "block_id": "page-0913-block-0003",
+      "order": 3,
+      "text": "Drug or drug group\nConsiderations\nSafe in surgery?\nAlternative formulations\n",
+      "bbox": [
+        61.89120101928711,
+        91.21290588378906,
+        426.9313049316406,
+        100.10040283203125
+      ],
+      "text_sha256": "b862460adbeb4f4846bd756587e0731c6e0c846105defcb05cd08407e11ea815"
+    },
+    {
+      "block_id": "page-0913-block-0004",
+      "order": 4,
+      "text": "Antipsychotics4,15,24–28\n■\n■Some antipsychotics widely used in \n",
+      "bbox": [
+        61.898712158203125,
+        109.2654037475586,
+        265.83087158203125,
+        117.97540283203125
+      ],
+      "text_sha256": "4c3aff48b393f4ac0fee60fc7b10be848981a80e6ddd778564bf4ad5aaf30d07"
+    },
+    {
+      "block_id": "page-0913-block-0005",
+      "order": 5,
+      "text": "anaesthetic practice\n",
+      "bbox": [
+        151.65089416503906,
+        119.2654037475586,
+        214.97337341308594,
+        127.972900390625
+      ],
+      "text_sha256": "42958a8ca3b3b7b7fcb07e441fe86f2a5d5b3a062377a842d4594e1c5720081a"
+    },
+    {
+      "block_id": "page-0913-block-0006",
+      "order": 6,
+      "text": "■\n■Increased risk of arrhythmia with \n",
+      "bbox": [
+        144.0959014892578,
+        129.2678985595703,
+        258.1808776855469,
+        137.97540283203125
+      ],
+      "text_sha256": "a6acb6576712eb4c52b056749daed2b97d6d5017ab5177e92a9ebc2e2eb5c5b2"
+    },
+    {
+      "block_id": "page-0913-block-0007",
+      "order": 7,
+      "text": "most drugs\n",
+      "bbox": [
+        151.65089416503906,
+        139.26539611816406,
+        187.49337768554688,
+        147.972900390625
+      ],
+      "text_sha256": "c1769a4ba6037ac585890ad8283a5e12aad4d1a1124439c36285515028053102"
+    },
+    {
+      "block_id": "page-0913-block-0008",
+      "order": 8,
+      "text": "■\n■α1 blockade may lead to \n",
+      "bbox": [
+        144.0959014892578,
+        148.24790954589844,
+        230.79940795898438,
+        159.69102478027344
+      ],
+      "text_sha256": "7c502dc5c05a444b8717b40caec07f5139035766b4b82e67396d2d3459f15633"
+    },
+    {
+      "block_id": "page-0913-block-0009",
+      "order": 9,
+      "text": "hypotension and interfere with \neffects of epinephrine and \nnorepinephrine\n",
+      "bbox": [
+        151.6519012451172,
+        159.26539611816406,
+        252.369384765625,
+        187.9678955078125
+      ],
+      "text_sha256": "7b64fa37adb32b4c9c318d4f02e3f6b5b4297be7eb6b6ac569c48fb7e8923a8c"
+    },
+    {
+      "block_id": "page-0913-block-0010",
+      "order": 10,
+      "text": "■\n■Most drugs lower seizure threshold\n",
+      "bbox": [
+        144.09579467773438,
+        189.2678985595703,
+        263.9034118652344,
+        197.97540283203125
+      ],
+      "text_sha256": "b4e38c050acf2db9ea3adaf7a583377263d3e683300ba239a68ce2422ac7d6f8"
+    },
+    {
+      "block_id": "page-0913-block-0011",
+      "order": 11,
+      "text": "■\n■May enhance interoperative core \n",
+      "bbox": [
+        144.09579467773438,
+        199.2678985595703,
+        258.46588134765625,
+        207.97540283203125
+      ],
+      "text_sha256": "b09e5cc6ecafd9fda1a2e993dbe5ee8f0d33a67d6457270ab8d1785975cfd30f"
+    },
+    {
+      "block_id": "page-0913-block-0012",
+      "order": 12,
+      "text": "hypothermia\n",
+      "bbox": [
+        151.65089416503906,
+        209.26539611816406,
+        192.06837463378906,
+        217.972900390625
+      ],
+      "text_sha256": "470595b3058ea2621d1893bdedbf4e453257d19e4908f8dc5c1393bad6b0c28e"
+    },
+    {
+      "block_id": "page-0913-block-0013",
+      "order": 13,
+      "text": "■\n■Some evidence of safe use in \n",
+      "bbox": [
+        144.09579467773438,
+        219.2678985595703,
+        246.24839782714844,
+        227.97540283203125
+      ],
+      "text_sha256": "4f409fde4d4c50d6403ff7ee7a8f3e4da85ba8c012bff6c8dc19abf5ee2265ec"
+    },
+    {
+      "block_id": "page-0913-block-0014",
+      "order": 14,
+      "text": "surgery29\n",
+      "bbox": [
+        151.65089416503906,
+        229.26539611816406,
+        179.84530639648438,
+        237.972900390625
+      ],
+      "text_sha256": "cb8037b7649c52fb5af008d437c3a8248d466fecf66cd2f72b0b34a212a32f0c"
+    },
+    {
+      "block_id": "page-0913-block-0015",
+      "order": 15,
+      "text": "■\n■Clozapine may delay recovery from \n",
+      "bbox": [
+        144.09579467773438,
+        239.2678985595703,
+        265.53839111328125,
+        247.97540283203125
+      ],
+      "text_sha256": "b4bacd3ec987999d74adf207740c862b5533c4a89946f37dc46aeb6d81afa968"
+    },
+    {
+      "block_id": "page-0913-block-0016",
+      "order": 16,
+      "text": "anaesthesia\n",
+      "bbox": [
+        151.65089416503906,
+        249.26539611816406,
+        188.73837280273438,
+        257.972900390625
+      ],
+      "text_sha256": "80ee9efb2fbfe8c13286e2fd3fc1c707b273cb741c7684233ab905ca2184684c"
+    },
+    {
+      "block_id": "page-0913-block-0017",
+      "order": 17,
+      "text": "■\n■Gaseous anaesthetics may affect \n",
+      "bbox": [
+        144.09579467773438,
+        259.2679138183594,
+        251.23587036132812,
+        267.97540283203125
+      ],
+      "text_sha256": "384b660d3753a18a71cbed0c87bc9993fe66085891203070d68f8dcaf1c91447"
+    },
+    {
+      "block_id": "page-0913-block-0018",
+      "order": 18,
+      "text": "dopamine metabolism\n",
+      "bbox": [
+        151.65089416503906,
+        269.2654113769531,
+        218.9933624267578,
+        277.972900390625
+      ],
+      "text_sha256": "b1df61e26b41f850c663e4e14033031ced02dd83027645373e6ce4b7153fd091"
+    },
+    {
+      "block_id": "page-0913-block-0019",
+      "order": 19,
+      "text": "■\n■Preoperative olanzapine reduces risk \n",
+      "bbox": [
+        144.09579467773438,
+        279.2679138183594,
+        269.3033752441406,
+        287.97540283203125
+      ],
+      "text_sha256": "f00b0104a3ed110f7acad130b09e0f9516b377b2f9b3ab42927f71bf323d147b"
+    },
+    {
+      "block_id": "page-0913-block-0020",
+      "order": 20,
+      "text": "of delirium30 as may preoperative \naripiprazole31\n",
+      "bbox": [
+        151.65089416503906,
+        289.2654113769531,
+        259.2925720214844,
+        307.972900390625
+      ],
+      "text_sha256": "838a2cbebad4ba68733f6379188ecd0aec8a8e81251f5150475dfb623c6d12d7"
+    },
+    {
+      "block_id": "page-0913-block-0021",
+      "order": 21,
+      "text": "■\n■Use of SGAs may reduce \n",
+      "bbox": [
+        144.09579467773438,
+        309.2679138183594,
+        232.35841369628906,
+        317.97540283203125
+      ],
+      "text_sha256": "fca9331ffe86361ba10373b2c4ab706f7885fb878206156550439f48737dee9e"
+    },
+    {
+      "block_id": "page-0913-block-0022",
+      "order": 22,
+      "text": "postoperative nausea32\n",
+      "bbox": [
+        151.65089416503906,
+        319.2654113769531,
+        224.4401092529297,
+        327.972900390625
+      ],
+      "text_sha256": "ace254df64cb3a0e671ed7fdc267aadffa7f10e482f48544379b3f4212166938"
+    },
+    {
+      "block_id": "page-0913-block-0023",
+      "order": 23,
+      "text": "Probably, usually \ncontinued to \navoid relapse33\n",
+      "bbox": [
+        274.4895935058594,
+        109.26790618896484,
+        329.0896301269531,
+        137.97039794921875
+      ],
+      "text_sha256": "62b87a2ec6d6bf27a20534baf32e2fcc2fd1796facead6bbcb077f19f2f9c83e"
+    },
+    {
+      "block_id": "page-0913-block-0024",
+      "order": 24,
+      "text": "Liquid preparations of \nsome antipsychotics are \navailable.\n",
+      "bbox": [
+        339.6864929199219,
+        109.26790618896484,
+        417.4690246582031,
+        137.97039794921875
+      ],
+      "text_sha256": "34c4c030bc5261af7549d7f6c79a998bdf3c1a7995b4456f89381559462a4595"
+    },
+    {
+      "block_id": "page-0913-block-0025",
+      "order": 25,
+      "text": "Some ‘specials’ liquids can \nbe made for NG delivery.\n",
+      "bbox": [
+        339.6864929199219,
+        142.0954132080078,
+        425.9515686035156,
+        160.8004150390625
+      ],
+      "text_sha256": "42f8310deea7f41f154595178e345ddc20b1b42c738276f15d903e0208c85c20"
+    },
+    {
+      "block_id": "page-0913-block-0026",
+      "order": 26,
+      "text": "Before crushing tablets and \nmixing with water, confirm \nstability with either local \nguidelines or the drug \nmanufacturer.\n",
+      "bbox": [
+        339.6864929199219,
+        164.92543029785156,
+        429.1540832519531,
+        213.6229248046875
+      ],
+      "text_sha256": "fb21b82fab559d892d0717b913c8a465a8921317587bc42441ca054b6d343e74"
+    },
+    {
+      "block_id": "page-0913-block-0027",
+      "order": 27,
+      "text": "Benzodiazepines4,9\n■\n■Reduced requirements for induction \n",
+      "bbox": [
+        61.89398193359375,
+        334.2679138183594,
+        268.48590087890625,
+        343.0003967285156
+      ],
+      "text_sha256": "a8e2d92f5f651ab31a162e479b230a6f3263d395dce027cc5a399419c8988bbc"
+    },
+    {
+      "block_id": "page-0913-block-0028",
+      "order": 28,
+      "text": "and maintenance anaesthetics\n",
+      "bbox": [
+        151.65089416503906,
+        344.2904052734375,
+        248.32586669921875,
+        352.9978942871094
+      ],
+      "text_sha256": "7e92db5e3f32738836dd40151dabefac650cc770619520209744246cd1fdee77"
+    },
+    {
+      "block_id": "page-0913-block-0029",
+      "order": 29,
+      "text": "■\n■Many have prolonged action (days \n",
+      "bbox": [
+        144.0959014892578,
+        354.29290771484375,
+        263.6258850097656,
+        363.0003967285156
+      ],
+      "text_sha256": "100361df530a657e69a302dba2bac5b467f88b8532bf667ad59fe53e9a77ab7c"
+    },
+    {
+      "block_id": "page-0913-block-0030",
+      "order": 30,
+      "text": "or weeks), so early withdrawal is \nnecessary\n",
+      "bbox": [
+        151.65089416503906,
+        364.2904052734375,
+        257.4984130859375,
+        382.9953918457031
+      ],
+      "text_sha256": "34d99c20dfb895cec5cb353954a926d449dfc8b3fded4d9db919d0a94428be31"
+    },
+    {
+      "block_id": "page-0913-block-0031",
+      "order": 31,
+      "text": "■\n■Withdrawal symptoms possible\n",
+      "bbox": [
+        144.0959014892578,
+        384.29290771484375,
+        251.0033416748047,
+        393.0003967285156
+      ],
+      "text_sha256": "06aecbb0a338d6a39b8ef28b20a14229bb5489620a1f23429591d75eee67db0a"
+    },
+    {
+      "block_id": "page-0913-block-0032",
+      "order": 32,
+      "text": "Probably; usually \ncontinued\n",
+      "bbox": [
+        274.48590087890625,
+        334.2904052734375,
+        329.77593994140625,
+        352.9953918457031
+      ],
+      "text_sha256": "dad53985d0ef47347f36e7e55eb69638f71c2100481a5ed5d069d87404b20236"
+    },
+    {
+      "block_id": "page-0913-block-0033",
+      "order": 33,
+      "text": "Liquid, IM, IV and rectal \ndiazepam are available (do \nnot use IM route).\n",
+      "bbox": [
+        339.68341064453125,
+        334.2904052734375,
+        426.638427734375,
+        362.9928894042969
+      ],
+      "text_sha256": "cc6c9d519a8fef82f0599c666dba8d958bcf413a2a2d2d239672bcd314dee7e0"
+    },
+    {
+      "block_id": "page-0913-block-0034",
+      "order": 34,
+      "text": "Buccal liquid available for \nmidazolam\n",
+      "bbox": [
+        339.68341064453125,
+        367.1178894042969,
+        422.6034851074219,
+        385.8228759765625
+      ],
+      "text_sha256": "16ede509d3287a884513923ed69fda48905f7886833b701b762d492bf54cb697"
+    },
+    {
+      "block_id": "page-0913-block-0035",
+      "order": 35,
+      "text": "Sublingual (use normal \ntablets), IM, IV and \nlorazepam are available.\n",
+      "bbox": [
+        339.68341064453125,
+        389.9478759765625,
+        416.62591552734375,
+        418.6503601074219
+      ],
+      "text_sha256": "f799fbbc98af807ea147606069269ecb818e5236f9d25337fd7ef63132ea6ce3"
+    },
+    {
+      "block_id": "page-0913-block-0036",
+      "order": 36,
+      "text": "Lithium3,4,12,15\n■\n■Prolongs the action of both \n",
+      "bbox": [
+        61.890899658203125,
+        424.9653625488281,
+        241.12588500976562,
+        433.6947021484375
+      ],
+      "text_sha256": "8df44ba9b5dd41f67831503a98215ae695b527666a0af08c1d22a2da2eb843e1"
+    },
+    {
+      "block_id": "page-0913-block-0037",
+      "order": 37,
+      "text": "depolarising and non-depolarising \nmuscle relaxants\n",
+      "bbox": [
+        151.65089416503906,
+        434.9847106933594,
+        262.5233459472656,
+        453.689697265625
+      ],
+      "text_sha256": "753ac3d041dd34e8cb28d3bb75f86a4775d55abf18d4aac9ff81828c23ada5f9"
+    },
+    {
+      "block_id": "page-0913-block-0038",
+      "order": 38,
+      "text": "■\n■Surgery-related electrolyte \n",
+      "bbox": [
+        144.0959014892578,
+        454.9872131347656,
+        237.1958770751953,
+        463.6947021484375
+      ],
+      "text_sha256": "d9ca4dda06174dea4d902c308c9774ac4f1d3c2117572f2c5e1c156f0bf15297"
+    },
+    {
+      "block_id": "page-0913-block-0039",
+      "order": 39,
+      "text": "disturbance and reduced renal \nfunction may precipitate lithium \ntoxicity. Avoid dehydration and \nNSAIDs\n",
+      "bbox": [
+        151.65089416503906,
+        464.9847106933594,
+        255.6758575439453,
+        503.6846923828125
+      ],
+      "text_sha256": "8b3fcf45965c4af26878bdbbf1529f070172506e7570b4e93c4abe8aebabb101"
+    },
+    {
+      "block_id": "page-0913-block-0040",
+      "order": 40,
+      "text": "■\n■Possible increased risk of arrhythmia\n",
+      "bbox": [
+        144.0959014892578,
+        504.9872131347656,
+        266.9333801269531,
+        513.6947021484375
+      ],
+      "text_sha256": "d8f96f2716250635e34f75d556b816f96a17a549a0814e50e856d30214173c6e"
+    },
+    {
+      "block_id": "page-0913-block-0041",
+      "order": 41,
+      "text": "Probably safe in \nminor surgery but \nusually \ndiscontinued \nbefore major \nprocedures and \nre-started once \nelectrolytes \nnormalise\n",
+      "bbox": [
+        274.48590087890625,
+        424.9847106933594,
+        333.66094970703125,
+        513.6721801757812
+      ],
+      "text_sha256": "d170a5d66601990a10e44ce867426ada0016f6124396ddead65c696ddeb920ae"
+    },
+    {
+      "block_id": "page-0913-block-0042",
+      "order": 42,
+      "text": "Slow \ndiscontinuation is \nessential \n– anaesthetists \nmay not \nappreciate this34\n",
+      "bbox": [
+        274.48590087890625,
+        517.7971801757812,
+        332.416015625,
+        576.4921875
+      ],
+      "text_sha256": "c782a3d6eade1fd1a9b28e669f6b355fcea91dbe75768f4a0d0e28890d65a646"
+    },
+    {
+      "block_id": "page-0913-block-0043",
+      "order": 43,
+      "text": "The bioavailability of \nlithium varies between \nbrands. Care is needed \nwith equivalent doses of \nsalts: lithium carbonate \n200mg = lithium citrate \n509mg.\n",
+      "bbox": [
+        339.6864929199219,
+        424.9872131347656,
+        419.7040710449219,
+        493.6796875
+      ],
+      "text_sha256": "1763146abeb3f67499b670dcb5666074b66180c96a931837373988cb2773da59"
+    },
+    {
+      "block_id": "page-0913-block-0044",
+      "order": 44,
+      "text": "Liquid lithium citrate is \navailable and is usually \nadministered twice daily.\n",
+      "bbox": [
+        339.6864929199219,
+        497.8047180175781,
+        418.0240173339844,
+        526.5072021484375
+      ],
+      "text_sha256": "a072f8ec5ddcfe0e91abc842976aa0748e9fc839110b90c959195cebebaae070"
+    },
+    {
+      "block_id": "page-0913-block-0045",
+      "order": 45,
+      "text": "(Continued)\n",
+      "bbox": [
+        397.8714904785156,
+        588.2246704101562,
+        433.8864440917969,
+        596.9771728515625
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

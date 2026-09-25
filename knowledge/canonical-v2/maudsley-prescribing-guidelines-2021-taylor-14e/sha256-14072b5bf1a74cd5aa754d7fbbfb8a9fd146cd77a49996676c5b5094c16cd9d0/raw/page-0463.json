@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0463",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 463,
+  "source_page_index": 462,
+  "source_page_display": 463,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "442    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nThere has been limited formal study into the duration of withdrawal symptoms, with \nsome reports of weeks-long duration, but they can last longer than a year, especially in \nthe case of long-term use.20,23 For a minority, withdrawal symptoms can be protracted \nand last years, sometimes called the ‘post-acute withdrawal syndrome’.26\nStopping benzodiazepines\nIf the patient is in agreement, benzodiazepines should be withdrawn. Tapering can be \ndifficult and should not be imposed on a patient against their will. A cluster randomised \ntrial supports the effectiveness of a face-to-face educational intervention.27 Continuing \nsupport can be required to prepare a patient for withdrawal and to support them \nthrough the process (e.g. psychological therapies or self-help groups).28\nDosage reduction (tapering)\nGradual reduction of benzodiazepine dose reduces the intensity of withdrawal symp-\ntoms by spreading them out over a longer time period (and giving time for neural adap-\ntations to the drug to resolve).22 Meta-analysis has confirmed that gradual dose \nreduction (‘tapering’) improves drug cessation rates compared with routine clinical \ncare.29 Most studies find that a gradual withdrawal over at least 10 weeks is most suc-\ncessful in achieving long-term abstinence,30 although many patients will require consid-\nerably longer (sometimes several years). Sudden benzodiazepine withdrawal has \npotentially fatal consequences, so tapering is always advisable.\nDirect taper or switching to diazepam?\nPatients who take short- or intermediate-acting benzodiazepines can be tapered off \nthese drugs directly but more than once a day dosing might be required.\nAn alternative approach is to switch to an equivalent dose of diazepam (which has a \nlong half-life and therefore might provokes less severe withdrawal),20,24 noting that \nsome patients report withdrawal symptoms from abrupt switches to diazepam and so \na step-wise switch is probably prudent. Cochrane is lukewarm about switching to diaz-\nepam.30 Approximate ‘diazepam equivalent’31 doses are shown Table 3.29. Owing to \nTable 3.29  Approximate ‘diazepam equivalent’31 doses\nChlordiazepoxide\n25mg\nClonazepam\n0.5mg\nDiazepam\n10mg\nLorazepam\n1mg\nLormetazepam\n1–2mg\nNitrazepam\n10mg\nOxazepam\n20mg\nTemazepam\n20mg\n",
+  "raw_text_sha256": "455c7bce03fb61661e331d2cf40e6d69b0ecd98ecd059d5892362fddef9127a7",
+  "coordinates_sha256": "d103246e3f0b398d13506beb7f9a4f622d7457eb635f34db348b4a926d337187",
+  "block_sequence_sha256": "61bc051e4ed13e3a62b79140c65021f5378ec503403af9bfe6a4d5f8e096c100",
+  "blocks": [
+    {
+      "block_id": "page-0463-block-0000",
+      "order": 0,
+      "text": "442    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "6b7043918fda679952e0fda8a48d89f2996e23f0b903688670a6e6e91ab23cdc"
+    },
+    {
+      "block_id": "page-0463-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0463-block-0002",
+      "order": 2,
+      "text": "There has been limited formal study into the duration of withdrawal symptoms, with \nsome reports of weeks-long duration, but they can last longer than a year, especially in \nthe case of long-term use.20,23 For a minority, withdrawal symptoms can be protracted \nand last years, sometimes called the ‘post-acute withdrawal syndrome’.26\n",
+      "bbox": [
+        61.88739776611328,
+        62.55029296875,
+        436.6674499511719,
+        110.27029418945312
+      ],
+      "text_sha256": "de6fc9302e1b614ff4ab221b80cbadb4534a13b054474a0f2077d65ff60f5f2f"
+    },
+    {
+      "block_id": "page-0463-block-0003",
+      "order": 3,
+      "text": "Stopping benzodiazepines\n",
+      "bbox": [
+        61.88999938964844,
+        127.70529174804688,
+        198.79595947265625,
+        140.74029541015625
+      ],
+      "text_sha256": "17618288d7f6b8b16f39c3b17e63225470ca45e4f0f41469e03fe883746348dc"
+    },
+    {
+      "block_id": "page-0463-block-0004",
+      "order": 4,
+      "text": "If the patient is in agreement, benzodiazepines should be withdrawn. Tapering can be \ndifficult and should not be imposed on a patient against their will. A cluster randomised \ntrial supports the effectiveness of a face-to-face educational intervention.27 Continuing \nsupport can be required to prepare a patient for withdrawal and to support them \nthrough the process (e.g. psychological therapies or self-help groups).28\n",
+      "bbox": [
+        61.88999938964844,
+        146.55029296875,
+        436.71002197265625,
+        206.27029418945312
+      ],
+      "text_sha256": "d9bfa6cb66d85e064cbbc15dbe7088bd7d3230c235fc0891481469baca92ab8f"
+    },
+    {
+      "block_id": "page-0463-block-0005",
+      "order": 5,
+      "text": "Dosage reduction (tapering)\n",
+      "bbox": [
+        61.88999938964844,
+        223.70529174804688,
+        207.14495849609375,
+        236.74029541015625
+      ],
+      "text_sha256": "cbdde67dce1f54b50db4a8ca27b3b71e6aa6bf99e0036bda29db8cba9f0a9ced"
+    },
+    {
+      "block_id": "page-0463-block-0006",
+      "order": 6,
+      "text": "Gradual reduction of benzodiazepine dose reduces the intensity of withdrawal symp-\ntoms by spreading them out over a longer time period (and giving time for neural adap-\ntations to the drug to resolve).22 Meta-analysis has confirmed that gradual dose \nreduction (‘tapering’) improves drug cessation rates compared with routine clinical \ncare.29 Most studies find that a gradual withdrawal over at least 10 weeks is most suc-\ncessful in achieving long-term abstinence,30 although many patients will require consid-\nerably longer (sometimes several years). Sudden benzodiazepine withdrawal has \npotentially fatal consequences, so tapering is always advisable.\n",
+      "bbox": [
+        61.88999938964844,
+        242.55029296875,
+        436.69305419921875,
+        338.2702941894531
+      ],
+      "text_sha256": "1792d2ba4acfeab9557f8517c8b92c3d8094e124584a0186986e80713181f2f4"
+    },
+    {
+      "block_id": "page-0463-block-0007",
+      "order": 7,
+      "text": "Direct taper or switching to diazepam?\n",
+      "bbox": [
+        61.88999938964844,
+        355.7052917480469,
+        262.782958984375,
+        368.74029541015625
+      ],
+      "text_sha256": "30395e76236e2897070c7c3b2c0c4914935389bede4f060ff679eec8158affc9"
+    },
+    {
+      "block_id": "page-0463-block-0008",
+      "order": 8,
+      "text": "Patients who take short- or intermediate-acting benzodiazepines can be tapered off \nthese drugs directly but more than once a day dosing might be required.\n",
+      "bbox": [
+        61.88999938964844,
+        374.55029296875,
+        436.6599426269531,
+        398.2702941894531
+      ],
+      "text_sha256": "424e7964ed50654f2c940b645b7d52eb35726cfdd390eb492aa434a7109ae425"
+    },
+    {
+      "block_id": "page-0463-block-0009",
+      "order": 9,
+      "text": "An alternative approach is to switch to an equivalent dose of diazepam (which has a \nlong half-life and therefore might provokes less severe withdrawal),20,24 noting that \nsome patients report withdrawal symptoms from abrupt switches to diazepam and so \na step-wise switch is probably prudent. Cochrane is lukewarm about switching to diaz-\nepam.30 Approximate ‘diazepam equivalent’31 doses are shown Table 3.29. Owing to \n",
+      "bbox": [
+        61.889007568359375,
+        398.55029296875,
+        436.6805114746094,
+        458.2702941894531
+      ],
+      "text_sha256": "d164cf9a1f7a86d8503cd3ccffbc83d5f61f4b972037f93ff8913a3c7f41e329"
+    },
+    {
+      "block_id": "page-0463-block-0010",
+      "order": 10,
+      "text": "Table 3.29  Approximate ‘diazepam equivalent’31 doses\n",
+      "bbox": [
+        155.889892578125,
+        477.94146728515625,
+        332.74102783203125,
+        486.8289794921875
+      ],
+      "text_sha256": "dcec9c0127ec41cbce0fb71bdc17103ab649989a350ea05ef42ec4a58e6dd176"
+    },
+    {
+      "block_id": "page-0463-block-0011",
+      "order": 11,
+      "text": "Chlordiazepoxide\n25mg\n",
+      "bbox": [
+        149.889892578125,
+        495.1465148925781,
+        272.6499328613281,
+        503.85400390625
+      ],
+      "text_sha256": "4dd4ecfc43495249ba062306e01e7b15c33df045f85267e64001f2486b1247f9"
+    },
+    {
+      "block_id": "page-0463-block-0012",
+      "order": 12,
+      "text": "Clonazepam\n0.5mg\n",
+      "bbox": [
+        149.889892578125,
+        510.1689758300781,
+        274.73492431640625,
+        518.87646484375
+      ],
+      "text_sha256": "cb0c60eac5b2263c5f44189c6025d2b35300b9a6ad9a2b2a7355cb2e323b75e9"
+    },
+    {
+      "block_id": "page-0463-block-0013",
+      "order": 13,
+      "text": "Diazepam\n10mg\n",
+      "bbox": [
+        149.889892578125,
+        525.011474609375,
+        273.482421875,
+        533.8989868164062
+      ],
+      "text_sha256": "dd88682fc8d1305b31b0a711262880c558bd3e7e52022ecdc3982f89ef36ad62"
+    },
+    {
+      "block_id": "page-0463-block-0014",
+      "order": 14,
+      "text": "Lorazepam\n1mg\n",
+      "bbox": [
+        149.889892578125,
+        540.2139892578125,
+        268.47991943359375,
+        548.9215087890625
+      ],
+      "text_sha256": "00133218be4115ca2b772399b09e251266f9581f659b5ce9445fc11ed712b670"
+    },
+    {
+      "block_id": "page-0463-block-0015",
+      "order": 15,
+      "text": "Lormetazepam\n1–2mg\n",
+      "bbox": [
+        149.889892578125,
+        555.2365112304688,
+        276.3999328613281,
+        563.9440307617188
+      ],
+      "text_sha256": "ab7443cad51318bee7fbde2a3e96c43ee927e897e7bef2b3a01513fd3334b4c0"
+    },
+    {
+      "block_id": "page-0463-block-0016",
+      "order": 16,
+      "text": "Nitrazepam\n10mg\n",
+      "bbox": [
+        149.889892578125,
+        570.2589721679688,
+        272.6499328613281,
+        578.9664916992188
+      ],
+      "text_sha256": "53938463bfeda0c812d5c080ca539f57995c1422138c05c0558d9cb83c945d1c"
+    },
+    {
+      "block_id": "page-0463-block-0017",
+      "order": 17,
+      "text": "Oxazepam\n20mg\n",
+      "bbox": [
+        149.889892578125,
+        585.281494140625,
+        272.6499328613281,
+        593.989013671875
+      ],
+      "text_sha256": "e05a6ab276e8fdb665c9771a4fcf8169e07e3e6c11b0ab868e2a5c7f1dbbf3fe"
+    },
+    {
+      "block_id": "page-0463-block-0018",
+      "order": 18,
+      "text": "Temazepam\n20mg\n",
+      "bbox": [
+        149.889892578125,
+        600.3040161132812,
+        272.6499328613281,
+        609.0115356445312
+      ],
+      "text_sha256": "f2a76e17d3124357eaa3a0e6101849c2bcb44df2c568105e1ed5e5ce86aa71ce"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

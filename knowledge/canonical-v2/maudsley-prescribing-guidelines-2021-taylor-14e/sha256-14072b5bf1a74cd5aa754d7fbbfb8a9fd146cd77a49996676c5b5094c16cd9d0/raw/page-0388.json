@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0388",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 388,
+  "source_page_index": 387,
+  "source_page_display": 388,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    367\nCHAPTER 3\nbuccal administration of amitriptyline tablets8 achieving therapeutic plasma levels. \nAnother case used orodispersible mirtazapine, assuming buccal absorption,9 although \nno plasma levels were reported, and no information is available to suggest that orodis-\npersible mirtazapine is actually absorbed through the buccal mucosa (as opposed to \ndispersing in saliva that is then swallowed).\nIntravenous and intramuscular injections\nIntravenous formulations avoid the first-pass effect, leading to somewhat higher drug \nplasma levels10,11 and perhaps greater response11,12 but not necessarily faster onset of \naction.12–14 The placebo effect associated with IV administration is known to be large.15 \nNote that calculating the correct parenteral dose of antidepressants is difficult given the \nvariable first-pass effect to which oral drugs are usually subject. Parenteral doses can be \nexpected to be much lower than oral doses and give the same effect.\nIntravenous citalopram followed by maintenance oral citalopram may be a clinically \nuseful treatment strategy for severely depressed, hospitalised patients.13 Better efficacy \nand faster response (compared with oral doses) have also been demonstrated when \nusing IV citalopram in treating symptoms of obsessive compulsive disorder.16 The IV \npreparation appears to be well-tolerated, with the most common adverse events being \nnausea, headache, tremor and somnolence – similar to oral administration.17,18 A case \nreport of a 65-year-old man describes acute hyperkinetic delirium associated with IV \ncitalopram.19 Intravenous escitalopram also exists although studies reported to date are \npharmacokinetic analyses.20 Note that oral citalopram is associated with a higher risk \nof QTc prolongation than other SSRIs. If used IV in a medically compromised patient, \nECG monitoring is recommended.\nMirtazapine is also available as an intravenous preparation. It has been administered \nby slow infusion at a dose of 15mg a day for 14 days in two studies and was well toler-\nated in depressed patients.21,22 There are reports of IV mirtazapine 6–30mg/day being \nused to treat hyperemesis gravidarum.23,24\nAmitriptyline was available as both an IV and IM injection (IM injection has been \ngiven IV), and both routes have been used in the treatment of post-operative pain and \ndepression.25 The concentration of the IM preparation (10mg/mL) may mean that a \nhigh volume injection is needed to achieve antidepressant doses, and this clearly mili-\ntates against its use intramuscularly.26 It is no longer available in most parts of the \nworld. Clomipramine is probably the most widely studied IV antidepressant. Pulse \nloading doses of intravenous clomipramine have been shown to produce a larger more \nrapid decrease in obsessive compulsive disorder symptoms compared with oral \ndoses.10,27 The potential for serious cardiac side effects when using any tricyclic antide-\npressant intravenously necessitates monitoring of pulse, blood pressure and ECG.\nAllopregnanolone (marketed as brexanolone) is an endogenous progesterone metab-\nolite licensed in the USA for intravenous treatment of postpartum depression. Given the \nunique mechanism of action, it is not suitable for treatment of other types of \ndepression.\nIntravenous vortioxetine has been used to accelerate response to the oral formula-\ntion,28 but this is not a commercially available preparation.\n",
+  "raw_text_sha256": "624f2e38f421dfa6ccba91b89f631bf42bbc4e5c1c67d8f7f60fe9bf9fbbb20e",
+  "coordinates_sha256": "57a10035490dfac2abcf0fdb3edc8a29b3dd07efe3e47ca3cc6888cc44db5e5f",
+  "block_sequence_sha256": "5870c8d49e3aa143234c0b882326bf0e37054ced0b5fb9933b5f5568c7e1ddfc",
+  "blocks": [
+    {
+      "block_id": "page-0388-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    367\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "5e1a8d7f9623b44343b0c9e8078e19898512587dbaab30dd19bceb399a5da098"
+    },
+    {
+      "block_id": "page-0388-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0388-block-0002",
+      "order": 2,
+      "text": "buccal administration of amitriptyline tablets8 achieving therapeutic plasma levels. \nAnother case used orodispersible mirtazapine, assuming buccal absorption,9 although \nno plasma levels were reported, and no information is available to suggest that orodis-\npersible mirtazapine is actually absorbed through the buccal mucosa (as opposed to \ndispersing in saliva that is then swallowed).\n",
+      "bbox": [
+        47.99580383300781,
+        62.5504150390625,
+        422.78277587890625,
+        122.27041625976562
+      ],
+      "text_sha256": "0c2de7446d15dbcdf3a8addfc1af2f5a6197e0ef165666bf0e9846f64ef9090f"
+    },
+    {
+      "block_id": "page-0388-block-0003",
+      "order": 3,
+      "text": "Intravenous and intramuscular injections\n",
+      "bbox": [
+        48.0028076171875,
+        140.64041137695312,
+        239.6927947998047,
+        152.49041748046875
+      ],
+      "text_sha256": "025dbc684b9cb25fa3a28b22614521e8fb1896c3b100d8141c6dd01873bec3f5"
+    },
+    {
+      "block_id": "page-0388-block-0004",
+      "order": 4,
+      "text": "Intravenous formulations avoid the first-pass effect, leading to somewhat higher drug \nplasma levels10,11 and perhaps greater response11,12 but not necessarily faster onset of \naction.12–14 The placebo effect associated with IV administration is known to be large.15 \nNote that calculating the correct parenteral dose of antidepressants is difficult given the \nvariable first-pass effect to which oral drugs are usually subject. Parenteral doses can be \nexpected to be much lower than oral doses and give the same effect.\n",
+      "bbox": [
+        47.996185302734375,
+        158.5504150390625,
+        422.82275390625,
+        230.27047729492188
+      ],
+      "text_sha256": "dc3a4f9604e2238a7f511d1b05c2c76e292ef384e435a8b6aa9c3b8dfe9711c1"
+    },
+    {
+      "block_id": "page-0388-block-0005",
+      "order": 5,
+      "text": "Intravenous citalopram followed by maintenance oral citalopram may be a clinically \nuseful treatment strategy for severely depressed, hospitalised patients.13 Better efficacy \nand faster response (compared with oral doses) have also been demonstrated when \nusing IV citalopram in treating symptoms of obsessive compulsive disorder.16 The IV \npreparation appears to be well-tolerated, with the most common adverse events being \nnausea, headache, tremor and somnolence – similar to oral administration.17,18 A case \nreport of a 65-year-old man describes acute hyperkinetic delirium associated with IV \ncitalopram.19 Intravenous escitalopram also exists although studies reported to date are \npharmacokinetic analyses.20 Note that oral citalopram is associated with a higher risk \nof QTc prolongation than other SSRIs. If used IV in a medically compromised patient, \nECG monitoring is recommended.\n",
+      "bbox": [
+        47.997291564941406,
+        230.31048583984375,
+        422.7903747558594,
+        362.2704772949219
+      ],
+      "text_sha256": "542f9dc2e1440965989a66d9f240bca986fe8ea0c0808d5a05efe9a7ccffff82"
+    },
+    {
+      "block_id": "page-0388-block-0006",
+      "order": 6,
+      "text": "Mirtazapine is also available as an intravenous preparation. It has been administered \nby slow infusion at a dose of 15mg a day for 14 days in two studies and was well toler-\nated in depressed patients.21,22 There are reports of IV mirtazapine 6–30mg/day being \nused to treat hyperemesis gravidarum.23,24\n",
+      "bbox": [
+        47.997283935546875,
+        362.31048583984375,
+        422.7481689453125,
+        410.2704772949219
+      ],
+      "text_sha256": "d049aea088b8b09a339bca8724ea9cc489a38d84381e25e43cf03f38805cd339"
+    },
+    {
+      "block_id": "page-0388-block-0007",
+      "order": 7,
+      "text": "Amitriptyline was available as both an IV and IM injection (IM injection has been \ngiven IV), and both routes have been used in the treatment of post-operative pain and \ndepression.25 The concentration of the IM preparation (10mg/mL) may mean that a \nhigh volume injection is needed to achieve antidepressant doses, and this clearly mili-\ntates against its use intramuscularly.26 It is no longer available in most parts of the \nworld. Clomipramine is probably the most widely studied IV antidepressant. Pulse \nloading doses of intravenous clomipramine have been shown to produce a larger more \nrapid decrease in obsessive compulsive disorder symptoms compared with oral \ndoses.10,27 The potential for serious cardiac side effects when using any tricyclic antide-\npressant intravenously necessitates monitoring of pulse, blood pressure and ECG.\n",
+      "bbox": [
+        47.996299743652344,
+        410.31048583984375,
+        422.8216857910156,
+        530.2705078125
+      ],
+      "text_sha256": "d8075c50fc16d8ec5b5c500514dc1b63b4b13022f9333010b1bcdff01357b86e"
+    },
+    {
+      "block_id": "page-0388-block-0008",
+      "order": 8,
+      "text": "Allopregnanolone (marketed as brexanolone) is an endogenous progesterone metab-\nolite licensed in the USA for intravenous treatment of postpartum depression. Given the \nunique mechanism of action, it is not suitable for treatment of other types of \ndepression.\n",
+      "bbox": [
+        47.996299743652344,
+        530.3104858398438,
+        422.8062744140625,
+        578.2705078125
+      ],
+      "text_sha256": "4a7edb6b38195ee11d4e7557014bf2ffe8b2f56e354e342288a24d3b71fe7b0a"
+    },
+    {
+      "block_id": "page-0388-block-0009",
+      "order": 9,
+      "text": "Intravenous vortioxetine has been used to accelerate response to the oral formula-\ntion,28 but this is not a commercially available preparation.\n",
+      "bbox": [
+        47.996299743652344,
+        578.3104858398438,
+        419.99627685546875,
+        602.2705078125
+      ],
+      "text_sha256": "fd049f794d7331e58755e5daaaa641f967f02ac5dd0ab8231682dc18394ceada"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

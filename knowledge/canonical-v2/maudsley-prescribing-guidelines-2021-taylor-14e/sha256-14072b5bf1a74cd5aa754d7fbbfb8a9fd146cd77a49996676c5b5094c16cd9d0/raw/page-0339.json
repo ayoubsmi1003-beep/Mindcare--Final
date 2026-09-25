@@ -1,0 +1,515 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0339",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 339,
+  "source_page_index": 338,
+  "source_page_display": 339,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "318    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nTable 3.3  Treatment-resistant depression – first choice: commonly used treatments generally well supported by \npublished literature (no preference implied by order)\nTreatment\nAdvantages\nDisadvantages\nAdd aripiprazole21–27\n(2–20mg/day) to antidepressant\n■\n■Good evidence base\n■\n■Usually well tolerated and safe\n■\n■Low doses (2–10mg/day) may \nbe effective\n■\n■Supported by a recent \n­meta-analysis28\n■\n■Akathisia and restlessness common at \nstandard doses (≥10mg/day)\n■\n■Insomnia may be problematic\nAdd lithium29\nAim for plasma\nlevel of 0.4–0.8mmol/L initially, \nincreasing to up to 1.0mmol/L if \nsub-optimal response\n■\n■Well established\n■\n■Well supported in the literature\n■\n■Recommended by NICE30\n■\n■Supported by a recent meta-\nanalysis28\n■\n■Sometimes poorly tolerated at higher \nplasma levels\n■\n■Potentially toxic\n■\n■Usually needs a specialist referral\n■\n■Plasma level monitoring is essential \n(and TFTs; eGFR)\n■\n■May not be effective in patients resis-\ntant to multiple treatments\nCombine olanzapine and \nfluoxetine31\n(6.25–12.5mg + 25–50mg daily \nUS licensed dose)*\n■\n■Well researched\n■\n■Usually well tolerated\n■\n■Olanzapine + TCA may also \nbe effective32\n■\n■Olanzapine alone may be \n­effective33,34\n■\n■Risk of weight gain\n■\n■Limited clinical experience outside USA\n■\n■Most data relate to bipolar depression\nremission was seen in 28% (response [50% reduction in symptoms score] in 47%). \nSubjects who failed to remit were entered into the continued study of sequential treat-\nments.14–18 Remission rates are given in Figure 3.2. Very few statistically significant \ndifferences were noted from this point on. At stage 3,17 T3 was found to be significantly \nbetter tolerated than lithium. At stage 4,18 tranylcypromine was less effective and less \nwell tolerated than the mirtazapine/venlafaxine combination. Overall, remission rates, \nas can be seen, were worryingly low, although it should be noted that the trial consisted \nof participants with long histories of recurrent depression.\nSTAR*D demonstrated that the treatment for resistant depression requires a flexible \napproach and that response to a particular treatment option is not readily predicted by \npharmacology or previous treatments. The programme established bupropion and bus-\npirone augmentation as worthwhile options and resurrected from some obscurity the \nuse of T3 augmentation and of nortriptyline. It also, to some extent, confirmed the \nsafety and (to a lesser extent) efficacy of the combination of mirtazapine and \nvenlafaxine.\nIt should be noted that there are numerous valid criticisms of the STAR*D pro-\ngramme. These include: the absence of a placebo group; the open nature of treatment \nand some assessments; the failure to account for patients withdrawing after their first \nvisit; the unexplained use of an a priori secondary measure as the main outcome metric; \npayments made to subjects; and the observation that 93% of 1,518 remitted patients \nhad relapsed or dropped out of the study at 12 months’ follow-up.19,20 These factors do \nnot, perhaps, alter the interpretation of comparative data but do further emphasise the \nlow expectations of treatment of long-standing, treatment-resistant depression with the \nantidepressant regimens included in the study.\n(Continued)\n",
+  "raw_text_sha256": "3f29b509c6c0d48b31ab7f3951f6726a051279b0c09c8740d561d55cd8eb15a3",
+  "coordinates_sha256": "a76622b57a921f820c5b34539896d2d8a00bf06d28fe85380479025f703e8cdd",
+  "block_sequence_sha256": "20a8dbb32eb8f0ea69be053ed60ab90e186bcc3095d1ab1cb2f243319925328e",
+  "blocks": [
+    {
+      "block_id": "page-0339-block-0000",
+      "order": 0,
+      "text": "318    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "6722ed2779730e80edf05b9bece23098a4f1dc744cceaeebb0dc5f06064103c0"
+    },
+    {
+      "block_id": "page-0339-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0339-block-0002",
+      "order": 2,
+      "text": "Table 3.3  Treatment-resistant depression – first choice: commonly used treatments generally well supported by \npublished literature (no preference implied by order)\n",
+      "bbox": [
+        67.88999938964844,
+        373.9878845214844,
+        425.45257568359375,
+        392.8728942871094
+      ],
+      "text_sha256": "0cfb978d9170ff4b4f8c8834f4217a930ded720cd1cf766fd5b587b6521a7e08"
+    },
+    {
+      "block_id": "page-0339-block-0003",
+      "order": 3,
+      "text": "Treatment\nAdvantages\nDisadvantages\n",
+      "bbox": [
+        61.88999938964844,
+        404.2228698730469,
+        349.0650329589844,
+        413.1103820800781
+      ],
+      "text_sha256": "1ff6849f9e4ad0351924a5532df48ac182cec3eb3b0a57ea3af8e9f08491bc58"
+    },
+    {
+      "block_id": "page-0339-block-0004",
+      "order": 4,
+      "text": "Add aripiprazole21–27\n",
+      "bbox": [
+        61.8900146484375,
+        421.0003662109375,
+        131.3252716064453,
+        429.88787841796875
+      ],
+      "text_sha256": "b96e9c1b065b8e88b7005cb17cebf614a90217073037bcde0aee4047541f997c"
+    },
+    {
+      "block_id": "page-0339-block-0005",
+      "order": 5,
+      "text": "(2–20mg/day) to antidepressant\n",
+      "bbox": [
+        61.88999938964844,
+        431.1778869628906,
+        163.4474639892578,
+        439.8853759765625
+      ],
+      "text_sha256": "1d9d608e2e581965b0c0c76b4a1edc60199b390168279b41239f1cd0920e0238"
+    },
+    {
+      "block_id": "page-0339-block-0006",
+      "order": 6,
+      "text": "■\n■Good evidence base\n",
+      "bbox": [
+        181.1396942138672,
+        421.17791748046875,
+        254.73728942871094,
+        429.8854064941406
+      ],
+      "text_sha256": "b90e6d823dec5162ff848f0e81e7edaf7e7a37511ec4de24594a2fbe20568ab0"
+    },
+    {
+      "block_id": "page-0339-block-0007",
+      "order": 7,
+      "text": "■\n■Usually well tolerated and safe\n",
+      "bbox": [
+        181.1396942138672,
+        430.1778869628906,
+        285.38226318359375,
+        438.8853759765625
+      ],
+      "text_sha256": "c3b13032f7e8ed2da748d5bc6631709e1cef69e2c3e50dd3580fe9a863e37091"
+    },
+    {
+      "block_id": "page-0339-block-0008",
+      "order": 8,
+      "text": "■\n■Low doses (2–10mg/day) may \n",
+      "bbox": [
+        181.1396942138672,
+        439.1778869628906,
+        287.249755859375,
+        447.8853759765625
+      ],
+      "text_sha256": "217f7ba0d7718cb1881a05240e9e850f5cbbc41f627f5b33cdd78c81e9fb4024"
+    },
+    {
+      "block_id": "page-0339-block-0009",
+      "order": 9,
+      "text": "be effective\n■\n■Supported by a recent \n",
+      "bbox": [
+        181.1396942138672,
+        448.1778869628906,
+        262.934814453125,
+        465.8853759765625
+      ],
+      "text_sha256": "e30a25ee35d29d721edee3bb5ca9a4c7f4092adbaa78b8f06386b956d411dd9f"
+    },
+    {
+      "block_id": "page-0339-block-0010",
+      "order": 10,
+      "text": "­meta-analysis28\n",
+      "bbox": [
+        190.13980102539062,
+        466.1778869628906,
+        237.9088134765625,
+        474.8853759765625
+      ],
+      "text_sha256": "1abb792bd79bb7910635f2942cd083a693dee496fa0b8e84b3ba0a30dab650a9"
+    },
+    {
+      "block_id": "page-0339-block-0011",
+      "order": 11,
+      "text": "■\n■Akathisia and restlessness common at \n",
+      "bbox": [
+        297.38970947265625,
+        421.17791748046875,
+        429.1874084472656,
+        429.8854064941406
+      ],
+      "text_sha256": "9d357833ef05c8d34dceaa9b0bcffdf718abc8d6d8c4b216b223fa329db99e09"
+    },
+    {
+      "block_id": "page-0339-block-0012",
+      "order": 12,
+      "text": "standard doses (≥10mg/day)\n■\n■Insomnia may be problematic\n",
+      "bbox": [
+        297.38970947265625,
+        430.17791748046875,
+        400.42486572265625,
+        447.8853759765625
+      ],
+      "text_sha256": "4781bed453f46c5298aa9cbf6b948058a50d6843780aded9198d21ccd7dee520"
+    },
+    {
+      "block_id": "page-0339-block-0013",
+      "order": 13,
+      "text": "Add lithium29\n",
+      "bbox": [
+        61.88981628417969,
+        481.0203857421875,
+        107.18441009521484,
+        489.90789794921875
+      ],
+      "text_sha256": "0fb8bc7bb07953e9d713c551e32132b1a8cf7777fbd268e104452b3be67a3a14"
+    },
+    {
+      "block_id": "page-0339-block-0014",
+      "order": 14,
+      "text": "Aim for plasma\nlevel of 0.4–0.8mmol/L initially, \nincreasing to up to 1.0mmol/L if \nsub-optimal response\n",
+      "bbox": [
+        61.88999938964844,
+        491.2029113769531,
+        166.35748291015625,
+        529.9028930664062
+      ],
+      "text_sha256": "5ae155ba0f813b294e0dfce1b8160ab85ebc6e55faa667fdf4840e299147b020"
+    },
+    {
+      "block_id": "page-0339-block-0015",
+      "order": 15,
+      "text": "■\n■Well established\n",
+      "bbox": [
+        181.1396942138672,
+        481.2029113769531,
+        241.67227172851562,
+        489.910400390625
+      ],
+      "text_sha256": "419be7e280b896abc0455398cbec4a94ed8b2046ce5b9cdb7e16f2071c7c62d7"
+    },
+    {
+      "block_id": "page-0339-block-0016",
+      "order": 16,
+      "text": "■\n■Well supported in the literature\n",
+      "bbox": [
+        181.1396942138672,
+        490.2029113769531,
+        285.3973388671875,
+        498.910400390625
+      ],
+      "text_sha256": "994935e46161dbdbfc79db693efea18ee55ffcb7e621aa876c5cc7ca5c071834"
+    },
+    {
+      "block_id": "page-0339-block-0017",
+      "order": 17,
+      "text": "■\n■Recommended by NICE30\n",
+      "bbox": [
+        181.1396942138672,
+        499.2029113769531,
+        270.016357421875,
+        507.910400390625
+      ],
+      "text_sha256": "fc9444ccf60e1913c8db7e8d94dee08f7ea6473fc5a41a300c8bf7b0688169d2"
+    },
+    {
+      "block_id": "page-0339-block-0018",
+      "order": 18,
+      "text": "■\n■Supported by a recent meta-\n",
+      "bbox": [
+        181.1396942138672,
+        508.2029113769531,
+        281.67730712890625,
+        516.910400390625
+      ],
+      "text_sha256": "0480633fe85e89759be8777dc97ff0db7f2250c843578fcdcba8354a82822d06"
+    },
+    {
+      "block_id": "page-0339-block-0019",
+      "order": 19,
+      "text": "analysis28\n",
+      "bbox": [
+        190.13980102539062,
+        517.202880859375,
+        219.16651916503906,
+        525.910400390625
+      ],
+      "text_sha256": "797084407a3eb0c32f3191484ab7ad9d25244da5b00773c379c8918b14ca0a05"
+    },
+    {
+      "block_id": "page-0339-block-0020",
+      "order": 20,
+      "text": "■\n■Sometimes poorly tolerated at higher \n",
+      "bbox": [
+        297.38970947265625,
+        481.2029113769531,
+        427.2298889160156,
+        489.910400390625
+      ],
+      "text_sha256": "88a862aa63306d74d9e2001d3295e371d80934b63ede2c1d2cdb6d9717c41fb4"
+    },
+    {
+      "block_id": "page-0339-block-0021",
+      "order": 21,
+      "text": "plasma levels\n■\n■Potentially toxic\n",
+      "bbox": [
+        297.38970947265625,
+        490.2029113769531,
+        356.3773193359375,
+        507.910400390625
+      ],
+      "text_sha256": "6a4a8baf682263cf4aa70e8e778944f13b93cd6dddd1756d71d44878014f89a3"
+    },
+    {
+      "block_id": "page-0339-block-0022",
+      "order": 22,
+      "text": "■\n■Usually needs a specialist referral\n",
+      "bbox": [
+        297.38970947265625,
+        508.2029113769531,
+        410.8348693847656,
+        516.910400390625
+      ],
+      "text_sha256": "115d149ae4a0dd38884166ce72356dd3739b95f5d2255e21ecbe0902e0d99d79"
+    },
+    {
+      "block_id": "page-0339-block-0023",
+      "order": 23,
+      "text": "■\n■Plasma level monitoring is essential \n",
+      "bbox": [
+        297.38970947265625,
+        517.202880859375,
+        420.1424255371094,
+        525.910400390625
+      ],
+      "text_sha256": "f12450fa3851d32ad31a51ca5555a0b657e8fde66c098734afc5c98a90b7db23"
+    },
+    {
+      "block_id": "page-0339-block-0024",
+      "order": 24,
+      "text": "(and TFTs; eGFR)\n■\n■May not be effective in patients resis-\n",
+      "bbox": [
+        297.38970947265625,
+        526.202880859375,
+        425.6998291015625,
+        543.910400390625
+      ],
+      "text_sha256": "c62f6b640e78117d5ae73633ac0308da0e13daf492882955e68f2fd868867309"
+    },
+    {
+      "block_id": "page-0339-block-0025",
+      "order": 25,
+      "text": "tant to multiple treatments\n",
+      "bbox": [
+        306.3898010253906,
+        544.202880859375,
+        392.4973449707031,
+        552.910400390625
+      ],
+      "text_sha256": "4d70727cd4bb3bdf804f6c9cbbda042477fbc8644a5b02af2ec41b838b14fa83"
+    },
+    {
+      "block_id": "page-0339-block-0026",
+      "order": 26,
+      "text": "Combine olanzapine and \nfluoxetine31\n",
+      "bbox": [
+        61.88981628417969,
+        559.0453491210938,
+        148.1697998046875,
+        577.9303588867188
+      ],
+      "text_sha256": "33f4919c67cca2e60643bc6870d10b53777b335a9b93ccc6d93b95511b56dbee"
+    },
+    {
+      "block_id": "page-0339-block-0027",
+      "order": 27,
+      "text": "(6.25–12.5mg + 25–50mg daily \nUS licensed dose)*\n",
+      "bbox": [
+        61.88999938964844,
+        579.2279052734375,
+        165.59996032714844,
+        597.932861328125
+      ],
+      "text_sha256": "b3a083ad0b0c3112ecd870dc2f7167e0ec2daa993a7df388b94d7210100b25e8"
+    },
+    {
+      "block_id": "page-0339-block-0028",
+      "order": 28,
+      "text": "■\n■Well researched\n",
+      "bbox": [
+        181.1396942138672,
+        559.2279052734375,
+        240.5623016357422,
+        567.9354248046875
+      ],
+      "text_sha256": "924e6cc87ff1a77e7d80274144fdb7e1dc41e29911e6caf29202654486708c9f"
+    },
+    {
+      "block_id": "page-0339-block-0029",
+      "order": 29,
+      "text": "■\n■Usually well tolerated\n",
+      "bbox": [
+        181.1396942138672,
+        568.2279052734375,
+        258.4722900390625,
+        576.9354248046875
+      ],
+      "text_sha256": "572de43600576c5281fdd89078b08aa9adf685806e1d16790b3df14374fbaa05"
+    },
+    {
+      "block_id": "page-0339-block-0030",
+      "order": 30,
+      "text": "■\n■Olanzapine + TCA may also \n",
+      "bbox": [
+        181.1396942138672,
+        577.2279052734375,
+        280.48480224609375,
+        585.9354248046875
+      ],
+      "text_sha256": "14b9f4112a3189c4fee425b391bf1524d85459561092e70e2d1a35e1012b9786"
+    },
+    {
+      "block_id": "page-0339-block-0031",
+      "order": 31,
+      "text": "be effective32\n",
+      "bbox": [
+        190.13980102539062,
+        586.2279052734375,
+        231.9390106201172,
+        594.9354248046875
+      ],
+      "text_sha256": "4a537c1e2b95b398117932d3820e665144cd98f25473230e59c53085b4743118"
+    },
+    {
+      "block_id": "page-0339-block-0032",
+      "order": 32,
+      "text": "■\n■Olanzapine alone may be \n",
+      "bbox": [
+        181.1396942138672,
+        595.2279052734375,
+        273.0672607421875,
+        603.9354248046875
+      ],
+      "text_sha256": "65ce62965ce5e943e7dd77fd08efeba19f03014a711c423a0d731524c8c21750"
+    },
+    {
+      "block_id": "page-0339-block-0033",
+      "order": 33,
+      "text": "­effective33,34\n",
+      "bbox": [
+        190.13980102539062,
+        604.2279052734375,
+        228.01177978515625,
+        612.9354248046875
+      ],
+      "text_sha256": "41bf0184b8333516f13d0a22da32f423fc113eee8c354fccd4c45015d7e17edd"
+    },
+    {
+      "block_id": "page-0339-block-0034",
+      "order": 34,
+      "text": "■\n■Risk of weight gain\n",
+      "bbox": [
+        297.38970947265625,
+        559.2279052734375,
+        367.6573791503906,
+        567.9354248046875
+      ],
+      "text_sha256": "c44e759297fca43cbe8ca4d9e85ebeaaab4ad203faea167e9be30dd5e060a47b"
+    },
+    {
+      "block_id": "page-0339-block-0035",
+      "order": 35,
+      "text": "■\n■Limited clinical experience outside USA\n",
+      "bbox": [
+        297.38970947265625,
+        568.2279052734375,
+        430.5523681640625,
+        576.9354248046875
+      ],
+      "text_sha256": "6850aa2246843b4b7d8c38916dc016068f81975ac7190fc9dc853b65ee19f140"
+    },
+    {
+      "block_id": "page-0339-block-0036",
+      "order": 36,
+      "text": "■\n■Most data relate to bipolar depression\n",
+      "bbox": [
+        297.38970947265625,
+        577.2279052734375,
+        427.80743408203125,
+        585.9354248046875
+      ],
+      "text_sha256": "785c9d36c7e49098ec770e15dbe777a69fa660bfe1dd0769d477d1abf4929aec"
+    },
+    {
+      "block_id": "page-0339-block-0037",
+      "order": 37,
+      "text": "remission was seen in 28% (response [50% reduction in symptoms score] in 47%). \nSubjects who failed to remit were entered into the continued study of sequential treat-\nments.14–18 Remission rates are given in Figure 3.2. Very few statistically significant \ndifferences were noted from this point on. At stage 3,17 T3 was found to be significantly \nbetter tolerated than lithium. At stage 4,18 tranylcypromine was less effective and less \nwell tolerated than the mirtazapine/venlafaxine combination. Overall, remission rates, \nas can be seen, were worryingly low, although it should be noted that the trial consisted \nof participants with long histories of recurrent depression.\n",
+      "bbox": [
+        61.88670349121094,
+        62.55029296875,
+        436.686767578125,
+        158.27029418945312
+      ],
+      "text_sha256": "b92544494b2a3a7d4c2b8fe9bb1c6cf4cf674fab01daa2c6fa8dd8a82edb2504"
+    },
+    {
+      "block_id": "page-0339-block-0038",
+      "order": 38,
+      "text": "STAR*D demonstrated that the treatment for resistant depression requires a flexible \napproach and that response to a particular treatment option is not readily predicted by \npharmacology or previous treatments. The programme established bupropion and bus-\npirone augmentation as worthwhile options and resurrected from some obscurity the \nuse of T3 augmentation and of nortriptyline. It also, to some extent, confirmed the \nsafety and (to a lesser extent) efficacy of the combination of mirtazapine and \nvenlafaxine.\n",
+      "bbox": [
+        61.88669967651367,
+        158.55029296875,
+        436.70684814453125,
+        242.27029418945312
+      ],
+      "text_sha256": "f75f6a8400d6bbbc41180ea61af714e5a9741c3574df182a03626d7dbea04734"
+    },
+    {
+      "block_id": "page-0339-block-0039",
+      "order": 39,
+      "text": "It should be noted that there are numerous valid criticisms of the STAR*D pro-\ngramme. These include: the absence of a placebo group; the open nature of treatment \nand some assessments; the failure to account for patients withdrawing after their first \nvisit; the unexplained use of an a priori secondary measure as the main outcome metric; \npayments made to subjects; and the observation that 93% of 1,518 remitted patients \nhad relapsed or dropped out of the study at 12 months’ follow-up.19,20 These factors do \nnot, perhaps, alter the interpretation of comparative data but do further emphasise the \nlow expectations of treatment of long-standing, treatment-resistant depression with the \nantidepressant regimens included in the study.\n",
+      "bbox": [
+        61.88670349121094,
+        242.55029296875,
+        436.70440673828125,
+        350.2702941894531
+      ],
+      "text_sha256": "0f61e58a4fb45c35352b0157ff7227f87c2c53a5b0c2317a50ec7ceafeacde1a"
+    },
+    {
+      "block_id": "page-0339-block-0040",
+      "order": 40,
+      "text": "(Continued)\n",
+      "bbox": [
+        396.3753967285156,
+        620.7479858398438,
+        433.89044189453125,
+        629.50048828125
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

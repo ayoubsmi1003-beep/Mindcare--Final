@@ -1,0 +1,371 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0879",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 879,
+  "source_page_index": 878,
+  "source_page_display": 879,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "858    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  11\nReferences\n\t 1.\t Kroon LA. Drug interactions with smoking. Am J Health Syst Pharm 2007; 64:1917–1921.\n\t 2.\t Scherf-Clavel M, et al. Analysis of smoking behavior on the pharmacokinetics of antidepressants and antipsychotics: evidence for the role of \nalternative pathways apart from CYP1A2. Int Clin Psychopharmacol 2019; 34:93–100.\n\t 3.\t Desai HD, et al. Smoking in patients receiving psychotropic medications: a pharmacokinetic perspective. CNS Drugs 2001; 15:469–494.\n\t 4.\t Faber MS, et al. Time response of cytochrome P450 1A2 activity on cessation of heavy smoking. Clin Pharmacol Ther 2004; 76:178–184.\n\t 5.\t Servier Laboratories Limited. Summary of Product Characteristics. Valdoxan (Agomelatine) 2020; https://www.medicines.org.uk/emc/\nmedicine/21830.\n\t 6.\t Miller LG. Recent developments in the study of the effects of cigarette smoking on clinical pharmacokinetics and clinical pharmacodynamics. \nClin Pharmacokinet 1989; 17:90–108.\n\t 7.\t Goff DC, et al. Cigarette smoking in schizophrenia: relationship to psychopathology and medication side effects. Am J Psychiatry 1992; \n149:1189–1194.\n\t 8.\t Haring C, et al. Influence of patient-related variables on clozapine plasma levels. Am J Psychiatry 1990; 147:1471–1475.\n\t 9.\t Haring C, et al. Dose-related plasma levels of clozapine: influence of smoking behaviour, sex and age. Psychopharmacology 1989; 99 \nSuppl:S38–S40.\n\t10.\t Diaz FJ, et al. Estimating the size of the effects of co-medications on plasma clozapine concentrations using a model that controls for clozap-\nine doses and confounding variables. Pharmacopsychiatry 2008; 41:81–91.\n\t11.\t Murayama-Sung L, et al. The impact of hospital smoking ban on clozapine and norclozapine levels. J Clin Psychopharmacol 2011; \n31:124–126.\n\t12.\t Cormac I, et al. A retrospective evaluation of the impact of total smoking cessation on psychiatric inpatients taking clozapine. Acta Psychiatr \nScand 2010; 121:393–397.\n\t13.\t Tsuda Y, et al. Meta-analysis: the effects of smoking on the disposition of two commonly used antipsychotic agents, olanzapine and clozapine. \nBMJ Open 2014; 4:e004216.\n\t14.\t Augustin M, et al. Effect of fluvoxamine augmentation and smoking on clozapine serum concentrations. Schizophr Res 2019; \n210:143–148.\n\t15.\t Qurashi I, et al. Changes in smoking status, mental state and plasma clozapine concentration: retrospective cohort evaluation. BJPsych \nBulletin 2019; 43:271–274.\n\t16.\t Ereshefsky L, et al. Pharmacokinetic factors affecting antidepressant drug clearance and clinical effect: evaluation of doxepin and imipra-\nmine–new data and review. Clin Chem 1988; 34:863–880.\n\t17.\t Fric M, et al. The influence of smoking on the serum level of duloxetine. Pharmacopsychiatry 2008; 41:151–155.\n\t18.\t Augustin M, et al. Differences in duloxetine dosing strategies in smoking and nonsmoking patients: therapeutic drug monitoring uncovers the \nimpact on drug metabolism. J Clin Psychiatry 2018; 79:17m12086.\nDrug\nEffect of smoking\nAction to be taken on \nstopping smoking\nAction to be taken on \nre-starting\nTrazodone31\nAround 25% reduction\nMonitor for increased \nsedation. Consider dose \nreduction\nMonitor closely. Consider \nincreasing dose\nTricyclic \nantidepressants3,6\nPlasma levels reduced by \n25–50%.\nMonitor closely. Consider \nreducing dose by 10–25% \nover 1 week. Consider \nfurther dose reductions\nMonitor closely. Consider \nrestarting previous smoking \ndose\nZuclopenthixol32,33\nUnclear, but effect \nprobably minimal\nMonitor\nMonitor\nNote: Only cigarette smoking induces hepatic enzymes in the manner described above – nicotine replacement, vaping \ndevices and electronic cigarettes (which do not contain polycyclic aromatic compounds) have no effect on enzyme \nactivity (see Blacker, 2020,34 for an illustrative case).\n(Continued)\n",
+  "raw_text_sha256": "41c0f7aab435ac53d8ebde1f500b6c39dacc640042b37678745bd8044b624797",
+  "coordinates_sha256": "ad14d4dafb33238c2c5e360d9d14eafd411bc280f69bdfe22c22bdd164067cae",
+  "block_sequence_sha256": "0581b41fd62afe80927cf129cca11c699514b99bd571ea2aa5465e6e1b99aa05",
+  "blocks": [
+    {
+      "block_id": "page-0879-block-0000",
+      "order": 0,
+      "text": "858    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "8d1fb08208eabc450dbca057d5183957ee3553533226e3f6cadd46b0d1960830"
+    },
+    {
+      "block_id": "page-0879-block-0001",
+      "order": 1,
+      "text": "CHAPTER  11\n",
+      "bbox": [
+        18.520000457763672,
+        139.8785400390625,
+        28.0,
+        187.89450073242188
+      ],
+      "text_sha256": "83984f4328940309c03288e26b8edf9834cfa8fef30d3eedac5a4c266fe9aee7"
+    },
+    {
+      "block_id": "page-0879-block-0002",
+      "order": 2,
+      "text": "References\n",
+      "bbox": [
+        61.88999938964844,
+        293.9844970703125,
+        117.92399597167969,
+        307.0195007324219
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0879-block-0003",
+      "order": 3,
+      "text": "\t 1.\t Kroon LA. Drug interactions with smoking. Am J Health Syst Pharm 2007; 64:1917–1921.\n\t 2.\t Scherf-Clavel M, et al. Analysis of smoking behavior on the pharmacokinetics of antidepressants and antipsychotics: evidence for the role of \n",
+      "bbox": [
+        61.88999938964844,
+        311.96148681640625,
+        435.5881042480469,
+        328.13751220703125
+      ],
+      "text_sha256": "c78dbf2c30cd745af35a78d2e03638c5e7591d6025ed251d6b02248612c83193"
+    },
+    {
+      "block_id": "page-0879-block-0004",
+      "order": 4,
+      "text": "alternative pathways apart from CYP1A2. Int Clin Psychopharmacol 2019; 34:93–100.\n\t 3.\t Desai HD, et al. Smoking in patients receiving psychotropic medications: a pharmacokinetic perspective. CNS Drugs 2001; 15:469–494.\n\t 4.\t Faber MS, et al. Time response of cytochrome P450 1A2 activity on cessation of heavy smoking. Clin Pharmacol Ther 2004; 76:178–184.\n\t 5.\t Servier Laboratories Limited. Summary of Product Characteristics. Valdoxan (Agomelatine) 2020; https://www.medicines.org.uk/emc/\n",
+      "bbox": [
+        61.902000427246094,
+        329.96148681640625,
+        433.9259948730469,
+        364.13751220703125
+      ],
+      "text_sha256": "285f75107368778649fe09cd61360dc79a4f4dc6133824042212b365919a5bb8"
+    },
+    {
+      "block_id": "page-0879-block-0005",
+      "order": 5,
+      "text": "medicine/21830.\n\t 6.\t Miller LG. Recent developments in the study of the effects of cigarette smoking on clinical pharmacokinetics and clinical pharmacodynamics. \n",
+      "bbox": [
+        61.91999816894531,
+        366.1054992675781,
+        435.612060546875,
+        382.13751220703125
+      ],
+      "text_sha256": "f28944e2d7b85dc89c5bf5677b72b0e208d0250903f79c4952b186750855530f"
+    },
+    {
+      "block_id": "page-0879-block-0006",
+      "order": 6,
+      "text": "Clin Pharmacokinet 1989; 17:90–108.\n\t 7.\t Goff DC, et al. Cigarette smoking in schizophrenia: relationship to psychopathology and medication side effects. Am J Psychiatry 1992; \n",
+      "bbox": [
+        61.92599868774414,
+        383.96148681640625,
+        435.63006591796875,
+        400.13751220703125
+      ],
+      "text_sha256": "92a8d97923278abd51e5d43a427f0e5da0570c7aade079ae5f477e254edd9961"
+    },
+    {
+      "block_id": "page-0879-block-0007",
+      "order": 7,
+      "text": "149:1189–1194.\n\t 8.\t Haring C, et al. Influence of patient-related variables on clozapine plasma levels. Am J Psychiatry 1990; 147:1471–1475.\n\t 9.\t Haring C, et al. Dose-related plasma levels of clozapine: influence of smoking behaviour, sex and age. Psychopharmacology 1989; 99 \n",
+      "bbox": [
+        61.93199920654297,
+        401.96148681640625,
+        435.5760803222656,
+        427.13751220703125
+      ],
+      "text_sha256": "cc4a3fe36cae77377d78a99e1b878cc4d3c700473e9c3150791d1bfd91133670"
+    },
+    {
+      "block_id": "page-0879-block-0008",
+      "order": 8,
+      "text": "Suppl:S38–S40.\n\t10.\t Diaz FJ, et al. Estimating the size of the effects of co-medications on plasma clozapine concentrations using a model that controls for clozap-\n",
+      "bbox": [
+        61.944000244140625,
+        428.96148681640625,
+        433.9620361328125,
+        445.13751220703125
+      ],
+      "text_sha256": "65c4e6f4324635cccb614afe5d510cd1938b4d2af8b351dc9cdaceb759778655"
+    },
+    {
+      "block_id": "page-0879-block-0009",
+      "order": 9,
+      "text": "ine doses and confounding variables. Pharmacopsychiatry 2008; 41:81–91.\n\t11.\t Murayama-Sung L, et al. The impact of hospital smoking ban on clozapine and norclozapine levels. J Clin Psychopharmacol 2011; \n",
+      "bbox": [
+        61.95000076293945,
+        446.96148681640625,
+        435.63006591796875,
+        463.13751220703125
+      ],
+      "text_sha256": "da3f0886242e89d2e6420d94086ee9c910954d76f39018dfffca722c332c5e92"
+    },
+    {
+      "block_id": "page-0879-block-0010",
+      "order": 10,
+      "text": "31:124–126.\n\t12.\t Cormac I, et al. A retrospective evaluation of the impact of total smoking cessation on psychiatric inpatients taking clozapine. Acta Psychiatr \n",
+      "bbox": [
+        61.95600128173828,
+        464.96148681640625,
+        435.66009521484375,
+        481.13751220703125
+      ],
+      "text_sha256": "a1b203bd5e9fba79c5f3ba3f035f876619293f9cdeff13832f9365aa585d9574"
+    },
+    {
+      "block_id": "page-0879-block-0011",
+      "order": 11,
+      "text": "Scand 2010; 121:393–397.\n\t13.\t Tsuda Y, et al. Meta-analysis: the effects of smoking on the disposition of two commonly used antipsychotic agents, olanzapine and clozapine. \n",
+      "bbox": [
+        61.96200180053711,
+        482.96148681640625,
+        435.6420593261719,
+        499.13751220703125
+      ],
+      "text_sha256": "734d0bb46b0e237f575a0bbc9ec5fbbb25fb9e9aab68d347856fac2d525dd920"
+    },
+    {
+      "block_id": "page-0879-block-0012",
+      "order": 12,
+      "text": "BMJ Open 2014; 4:e004216.\n\t14.\t Augustin M, et al. Effect of fluvoxamine augmentation and smoking on clozapine serum concentrations. Schizophr Res 2019; \n",
+      "bbox": [
+        61.96799850463867,
+        500.96148681640625,
+        435.612060546875,
+        517.1375122070312
+      ],
+      "text_sha256": "0f600ac0523088629b3ac7e273c0ebb9c044269062f19238edbbd58e0734bcad"
+    },
+    {
+      "block_id": "page-0879-block-0013",
+      "order": 13,
+      "text": "210:143–148.\n\t15.\t Qurashi I, et al. Changes in smoking status, mental state and plasma clozapine concentration: retrospective cohort evaluation. BJPsych \n",
+      "bbox": [
+        61.9739990234375,
+        518.9615478515625,
+        435.67193603515625,
+        535.1375122070312
+      ],
+      "text_sha256": "3b8263d8a4b983e82b663462b62866eaf6739433580af2e4c1cb14711a566eb8"
+    },
+    {
+      "block_id": "page-0879-block-0014",
+      "order": 14,
+      "text": "Bulletin 2019; 43:271–274.\n\t16.\t Ereshefsky L, et al. Pharmacokinetic factors affecting antidepressant drug clearance and clinical effect: evaluation of doxepin and imipra-\n",
+      "bbox": [
+        61.97999954223633,
+        536.9615478515625,
+        433.9679260253906,
+        553.1375122070312
+      ],
+      "text_sha256": "2d6ce0015e7a288075fa5a12de23cbe1abafcadd3720da209f849a1f5e6bbf5e"
+    },
+    {
+      "block_id": "page-0879-block-0015",
+      "order": 15,
+      "text": "mine–new data and review. Clin Chem 1988; 34:863–880.\n\t17.\t Fric M, et al. The influence of smoking on the serum level of duloxetine. Pharmacopsychiatry 2008; 41:151–155.\n\t18.\t Augustin M, et al. Differences in duloxetine dosing strategies in smoking and nonsmoking patients: therapeutic drug monitoring uncovers the \n",
+      "bbox": [
+        61.986000061035156,
+        554.9615478515625,
+        435.64202880859375,
+        580.1375122070312
+      ],
+      "text_sha256": "f71c4e17dd285daacf92dfbd7f10f102b69dcd99f7f020a65d451a6879ab6745"
+    },
+    {
+      "block_id": "page-0879-block-0016",
+      "order": 16,
+      "text": "impact on drug metabolism. J Clin Psychiatry 2018; 79:17m12086.\n",
+      "bbox": [
+        72.99600219726562,
+        581.9615478515625,
+        247.73995971679688,
+        589.1375122070312
+      ],
+      "text_sha256": "00afb9b0e792594a64dee6a0eba5f0bda6b869db2f8e309335c91599ede58076"
+    },
+    {
+      "block_id": "page-0879-block-0017",
+      "order": 17,
+      "text": "Drug\nEffect of smoking\n",
+      "bbox": [
+        61.88999938964844,
+        92.21290588378906,
+        211.95751953125,
+        101.10040283203125
+      ],
+      "text_sha256": "9da7fc4de71a795389f58ca235293e704b09cf68c335e77c690c03fc4468b02b"
+    },
+    {
+      "block_id": "page-0879-block-0018",
+      "order": 18,
+      "text": "Action to be taken on \nstopping smoking\n",
+      "bbox": [
+        246.6300048828125,
+        82.21540832519531,
+        325.39495849609375,
+        101.10040283203125
+      ],
+      "text_sha256": "4ff275b21bb2b46154e99edfcc4d95c0d307f205fba87551f69b1ebd44ac1581"
+    },
+    {
+      "block_id": "page-0879-block-0019",
+      "order": 19,
+      "text": "Action to be taken on \nre-starting\n",
+      "bbox": [
+        343.260009765625,
+        82.21540832519531,
+        422.02496337890625,
+        101.10040283203125
+      ],
+      "text_sha256": "2b3858c5f02ff7e10d30e5b9be0407e9b489a6b58851565cbf14c7b3c57beddb"
+    },
+    {
+      "block_id": "page-0879-block-0020",
+      "order": 20,
+      "text": "Trazodone31\nAround 25% reduction\nMonitor for increased \nsedation. Consider dose \nreduction\n",
+      "bbox": [
+        61.8900146484375,
+        110.34040832519531,
+        325.4102783203125,
+        139.22039794921875
+      ],
+      "text_sha256": "5ea1067614af2fc970feaa492ffabce9c8422d4b139d1fa4c9b06cf0b45ea268"
+    },
+    {
+      "block_id": "page-0879-block-0021",
+      "order": 21,
+      "text": "Monitor closely. Consider \nincreasing dose\n",
+      "bbox": [
+        343.26019287109375,
+        110.5103988647461,
+        425.91778564453125,
+        129.21539306640625
+      ],
+      "text_sha256": "f0c8fd64ff4d5fc546f85548228d3e0f24b78da010adb7f729a62c0bc1450a5b"
+    },
+    {
+      "block_id": "page-0879-block-0022",
+      "order": 22,
+      "text": "Tricyclic \nantidepressants3,6\n",
+      "bbox": [
+        61.89019775390625,
+        148.45289611816406,
+        123.66956329345703,
+        167.337890625
+      ],
+      "text_sha256": "da917ca76ed15d01d043017d7be203cdefd3d56fffa54629f80364f4562a327e"
+    },
+    {
+      "block_id": "page-0879-block-0023",
+      "order": 23,
+      "text": "Plasma levels reduced by \n25–50%.\nMonitor closely. Consider \nreducing dose by 10–25% \nover 1 week. Consider \nfurther dose reductions\n",
+      "bbox": [
+        150.0001983642578,
+        148.6428985595703,
+        333.1952819824219,
+        187.3428955078125
+      ],
+      "text_sha256": "8929a6e99460c8ee4362e511fe4dae2ee6134c8ce7463df387aa1b29f02ff90a"
+    },
+    {
+      "block_id": "page-0879-block-0024",
+      "order": 24,
+      "text": "Monitor closely. Consider \nrestarting previous smoking \ndose\n",
+      "bbox": [
+        343.26019287109375,
+        148.63539123535156,
+        433.41778564453125,
+        177.337890625
+      ],
+      "text_sha256": "77c8df57668475a802a51b332aec661b60477471785c999790a5cbc1aa7bb701"
+    },
+    {
+      "block_id": "page-0879-block-0025",
+      "order": 25,
+      "text": "Zuclopenthixol32,33\nUnclear, but effect \nprobably minimal\n",
+      "bbox": [
+        61.89019775390625,
+        196.5753936767578,
+        210.8402099609375,
+        215.472900390625
+      ],
+      "text_sha256": "625c118d499b150dc61830e217c1d2cab39b1dd75f3a4ce03a29a2c60bf331ca"
+    },
+    {
+      "block_id": "page-0879-block-0026",
+      "order": 26,
+      "text": "Monitor\nMonitor\n",
+      "bbox": [
+        246.63018798828125,
+        196.7678985595703,
+        369.0977478027344,
+        205.47540283203125
+      ],
+      "text_sha256": "41b2e661f583d92221be255e83013d9afc5ef120db56ede9c1cf4f8e6d49ad76"
+    },
+    {
+      "block_id": "page-0879-block-0027",
+      "order": 27,
+      "text": "Note: Only cigarette smoking induces hepatic enzymes in the manner described above – nicotine replacement, vaping \ndevices and electronic cigarettes (which do not contain polycyclic aromatic compounds) have no effect on enzyme \nactivity (see Blacker, 2020,34 for an illustrative case).\n",
+      "bbox": [
+        61.89019775390625,
+        225.51539611816406,
+        435.9753112792969,
+        254.22540283203125
+      ],
+      "text_sha256": "302a95476338a027250360196f191b1948024145da9dfd43324290e450a22e89"
+    },
+    {
+      "block_id": "page-0879-block-0028",
+      "order": 28,
+      "text": "(Continued)\n",
+      "bbox": [
+        62.00360107421875,
+        63.110416412353516,
+        98.01860809326172,
+        71.8629150390625
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0572",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 572,
+  "source_page_index": 571,
+  "source_page_display": 572,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Children and adolescents    551\nCHAPTER 5\nTable 5.3  Recommended first-line treatments for acute mania*\nAripiprazole\n10mg daily\nRisperidone\n0.5–2.5mg daily\nOlanzapine\n5–20mg daily\nQuetiapine\nUp to 400mg daily\nAsenapine\n2.5–10mg twice daily\n*Continue acutely effective dosing regimen as prophylaxis, and \nconsider need for lithium.\nTable 5.4  Recommended first-line treatments for bipolar depression*\nLurasidone\n18.5(20)mg–74(80)mg a day\nOlanzapine/fluoxetine\n6/25–12/50mg daily\nQuetiapine\nUp to 300mg daily\n*Continue acutely effective dosing regimen as prophylaxis, and \nconsider need for lithium.\nTable 5.2  (Continued)\nMedication\nComments\nLurasidone\nLurasidone has been shown to be effective in bipolar depression in adults49–51 and it \ndoes not seem to cause weight gain and other metabolic disturbances. It is safe and \neffective in treating schizophrenia in adolescents52 and has been shown to be \neffective in children (10–17 years) both acutely10 and in a 2-year follow-up.12 Dose \nranged from 18.5(20)mg to 74(80)mg but a small majority received the lowest dose. \nLurasidone may be the preferred antipsychotic in children on account of its good \ntolerability53\nLamotrigine\nLamotrigine has only modest, if any, effects in adult bipolar depression;54 it has not \nbeen studied in RCTs for the treatment of acute bipolar depression in children and \nadolescents and is, therefore, not recommended as a first line. Moreover, a \nplacebo-controlled randomised withdrawal study of adjunctive lamotrigine for bipolar \ndisorder in youth, lasting over 36 weeks, failed to show any benefit in preventing \ntime to occurrence of a bipolar event55\nRCT, randomised controlled trial.\n",
+  "raw_text_sha256": "27adaeb08cd614bad105b6e3cb0e710d95a46e71d4a8d0abf9c44d83ce266b02",
+  "coordinates_sha256": "100e0a06cb3fadc4eac79903b7f9093f7b1a59d7fdf4acd2144a03243cf13a04",
+  "block_sequence_sha256": "ee3d28da808656fe12607d391fc4678eec851de584748a7aeabfdbe6f4576aad",
+  "blocks": [
+    {
+      "block_id": "page-0572-block-0000",
+      "order": 0,
+      "text": "Children and adolescents    551\n",
+      "bbox": [
+        288.94488525390625,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "d98740f60bb1c554dee4faaa71914a1f0149ed6f15f6efe09abe6392722419a9"
+    },
+    {
+      "block_id": "page-0572-block-0001",
+      "order": 1,
+      "text": "CHAPTER 5\n",
+      "bbox": [
+        454.4096984863281,
+        339.3385009765625,
+        463.88970947265625,
+        380.6824951171875
+      ],
+      "text_sha256": "f4b8b4a0fc64e7b3b74e7336306d0959d0384683e387792724f393162639020a"
+    },
+    {
+      "block_id": "page-0572-block-0002",
+      "order": 2,
+      "text": "Table 5.3  Recommended first-line treatments for acute mania*\n",
+      "bbox": [
+        132.24989318847656,
+        286.91656494140625,
+        334.1494140625,
+        295.8040771484375
+      ],
+      "text_sha256": "bb9a98702cdbbca5ea6707bbcba31de9d6ae841db4525dadff1f7da7e4151d6a"
+    },
+    {
+      "block_id": "page-0572-block-0003",
+      "order": 3,
+      "text": "Aripiprazole\n10mg daily\n",
+      "bbox": [
+        126.2499008178711,
+        304.1216125488281,
+        268.6749267578125,
+        312.8291015625
+      ],
+      "text_sha256": "d4bff243ce442e5e6c831e7bb44f82f396ea1b11038321ab4aae0f1957e3f991"
+    },
+    {
+      "block_id": "page-0572-block-0004",
+      "order": 4,
+      "text": "Risperidone\n0.5–2.5mg daily\n",
+      "bbox": [
+        126.24990844726562,
+        319.14410400390625,
+        284.9349365234375,
+        327.8515930175781
+      ],
+      "text_sha256": "db0aa447dd49a3cb89679f39092125f87b3c54e3255b35f78f6d6f48f0140faa"
+    },
+    {
+      "block_id": "page-0572-block-0005",
+      "order": 5,
+      "text": "Olanzapine\n5–20mg daily\n",
+      "bbox": [
+        126.24990844726562,
+        334.1665954589844,
+        276.59490966796875,
+        342.87408447265625
+      ],
+      "text_sha256": "977346acf6c3cfc5d37711032aab31ff59abc8b0a6cda72769aa440920a8fb83"
+    },
+    {
+      "block_id": "page-0572-block-0006",
+      "order": 6,
+      "text": "Quetiapine\nUp to 400mg daily\n",
+      "bbox": [
+        126.24990844726562,
+        349.1890869140625,
+        292.85498046875,
+        357.8965759277344
+      ],
+      "text_sha256": "8c1535e1aac2a185c43efd547eec2c999a4a4dc8cf329ac6d5659a33fd9f1367"
+    },
+    {
+      "block_id": "page-0572-block-0007",
+      "order": 7,
+      "text": "Asenapine\n2.5–10mg twice daily\n",
+      "bbox": [
+        126.24990844726562,
+        364.2115783691406,
+        302.0124206542969,
+        372.9190673828125
+      ],
+      "text_sha256": "8ac33afd581643c67ae8f19d3e5313b005157f77430480c6f8dab0e9482284d1"
+    },
+    {
+      "block_id": "page-0572-block-0008",
+      "order": 8,
+      "text": "*Continue acutely effective dosing regimen as prophylaxis, and \nconsider need for lithium.\n",
+      "bbox": [
+        126.2499008178711,
+        383.2215881347656,
+        328.301025390625,
+        401.92657470703125
+      ],
+      "text_sha256": "b0d062bfc72906b34e6257a18a35def385c605757ffec01b4f112fa728ee2e87"
+    },
+    {
+      "block_id": "page-0572-block-0009",
+      "order": 9,
+      "text": "Table 5.4  Recommended first-line treatments for bipolar depression*\n",
+      "bbox": [
+        126.2499008178711,
+        433.21826171875,
+        347.19921875,
+        442.10577392578125
+      ],
+      "text_sha256": "f7231eb08d3d1eb719df9365487ea448068b693897e80780e993a7358e7f8492"
+    },
+    {
+      "block_id": "page-0572-block-0010",
+      "order": 10,
+      "text": "Lurasidone\n18.5(20)mg–74(80)mg a day\n",
+      "bbox": [
+        120.2499008178711,
+        450.4233093261719,
+        330.4599609375,
+        459.13079833984375
+      ],
+      "text_sha256": "822f431c354840f060e0a0651a429ed6b5071872df51114bb8177ac9f5268ef8"
+    },
+    {
+      "block_id": "page-0572-block-0011",
+      "order": 11,
+      "text": "Olanzapine/fluoxetine\n6/25–12/50mg daily\n",
+      "bbox": [
+        120.24990844726562,
+        465.4458312988281,
+        302.9424743652344,
+        474.1533203125
+      ],
+      "text_sha256": "07ad1d41eb3448ddda58ba7de0281d1e8a3daaf09bac483a48d5c8132fb49187"
+    },
+    {
+      "block_id": "page-0572-block-0012",
+      "order": 12,
+      "text": "Quetiapine\nUp to 300mg daily\n",
+      "bbox": [
+        120.24990844726562,
+        480.46832275390625,
+        298.35247802734375,
+        489.1758117675781
+      ],
+      "text_sha256": "169a8b678e6e3bf319364df089f46814cc4ab826978eaab084e6667ac1f8887d"
+    },
+    {
+      "block_id": "page-0572-block-0013",
+      "order": 13,
+      "text": "*Continue acutely effective dosing regimen as prophylaxis, and \nconsider need for lithium.\n",
+      "bbox": [
+        120.2499008178711,
+        499.4732971191406,
+        322.301025390625,
+        518.1782836914062
+      ],
+      "text_sha256": "b0d062bfc72906b34e6257a18a35def385c605757ffec01b4f112fa728ee2e87"
+    },
+    {
+      "block_id": "page-0572-block-0014",
+      "order": 14,
+      "text": "Table 5.2  (Continued)\n",
+      "bbox": [
+        54.0,
+        70.08790588378906,
+        126.11998748779297,
+        78.97540283203125
+      ],
+      "text_sha256": "acc87a1b41351a96c567d25edcdae804528530d3a3f82b7b8b48398a29a414d0"
+    },
+    {
+      "block_id": "page-0572-block-0015",
+      "order": 15,
+      "text": "Medication\nComments\n",
+      "bbox": [
+        48.0,
+        90.51850891113281,
+        177.50250244140625,
+        99.406005859375
+      ],
+      "text_sha256": "35aee83f47070555718b2b25a126fdd48bff57144c738e16c7b958a5157b9767"
+    },
+    {
+      "block_id": "page-0572-block-0016",
+      "order": 16,
+      "text": "Lurasidone\nLurasidone has been shown to be effective in bipolar depression in adults49–51 and it \ndoes not seem to cause weight gain and other metabolic disturbances. It is safe and \neffective in treating schizophrenia in adolescents52 and has been shown to be \neffective in children (10–17 years) both acutely10 and in a 2-year follow-up.12 Dose \nranged from 18.5(20)mg to 74(80)mg but a small majority received the lowest dose. \nLurasidone may be the preferred antipsychotic in children on account of its good \ntolerability53\n",
+      "bbox": [
+        48.0,
+        107.72347259521484,
+        411.4566650390625,
+        176.4234619140625
+      ],
+      "text_sha256": "7fe13f5a083a975a3136c1012b4e90cc4c39b5440e43ee0278c5df8f2df4c5e7"
+    },
+    {
+      "block_id": "page-0572-block-0017",
+      "order": 17,
+      "text": "Lamotrigine\nLamotrigine has only modest, if any, effects in adult bipolar depression;54 it has not \nbeen studied in RCTs for the treatment of acute bipolar depression in children and \nadolescents and is, therefore, not recommended as a first line. Moreover, a \nplacebo-controlled randomised withdrawal study of adjunctive lamotrigine for bipolar \ndisorder in youth, lasting over 36 weeks, failed to show any benefit in preventing \ntime to occurrence of a bipolar event55\n",
+      "bbox": [
+        48.0,
+        182.74839782714844,
+        415.3094787597656,
+        241.44338989257812
+      ],
+      "text_sha256": "4555193febf0e8ba211a9e4527d702f7ce741632a07f33ad7c2b1b5953b5810e"
+    },
+    {
+      "block_id": "page-0572-block-0018",
+      "order": 18,
+      "text": "RCT, randomised controlled trial.\n",
+      "bbox": [
+        47.999900817871094,
+        253.74839782714844,
+        152.04737854003906,
+        262.4559020996094
+      ],
+      "text_sha256": "bf412c8e0244943ae1ca16e67d76cb24c2fdcd065e2a713a4a99db9e0e5a4b46"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

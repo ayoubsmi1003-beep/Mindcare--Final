@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0458",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 458,
+  "source_page_index": 457,
+  "source_page_display": 458,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    437\nCHAPTER 3\nprescribing hypnotics.14,15 A high proportion of hospitalised patients are prescribed \nhypnotics.16 These should not be routinely continued at discharge.\nUse in depression\nBenzodiazepines are not a treatment for major depressive illness. The only meta-analy-\nsis conducted found no advantage for benzodiazepines over placebo in depression.17 \nHowever, there is some evidence that benzodiazepines may be helpful in preventing \nrelapse of psychotic depression.18\nIn the United Kingdom, the National Service Framework for Mental Health19 at one \ntime emphasised this point by including a requirement that GPs audit the ratio of ben-\nzodiazepines to antidepressants prescribed in their practice. NICE suggests that a ben-\nzodiazepine may be helpful for up to 2  weeks early in treatment, particularly in \ncombination with an SSRI (to help with sleep and the management of SSRI-induced \nagitation).6 Use beyond this timeframe is discouraged. Limiting initial supply quantities \nto short periods (1–7 days) may reduce the risk of patients becoming long-term users of \nbenzodiazepines.20\nUse in psychosis\nBenzodiazepines are commonly used for rapid tranquilisation, either alone, or in com-\nbination with an antipsychotic.21 However, a Cochrane review concluded that there is \nno convincing evidence that combining an antipsychotic and a benzodiazepine offers \nany advantage over the use of antipsychotics or benzodiazepines alone.22\nA further Cochrane review in schizophrenia concluded that there are no proven ben-\nefits, outside short-term sedation.23 In contrast, another systematic review using differ-\nent outcome measures found superiority over placebo for global, psychiatric and \nbehavioural outcomes, but inferiority to antipsychotics on longer-term global out-\ncomes.24 A significant minority of patients with established psychotic illness fail to \nrespond adequately to antipsychotics alone, and this can result in benzodiazepines \nbeing prescribed on a chronic basis.25 There is, however, no evidence to support benzo-\ndiazepine augmentation of antipsychotics in schizophrenia, and use should be reserved \nfor the short-term sedation of acutely agitated patients.26 Evidence supporting the use \nof benzodiazepines in tardive dyskinesia is weak,27 but these drugs remain a treatment \noption in this condition.\nSide effects\nHeadaches, confusion, ataxia, dysarthria, blurred vision, gastrointestinal disturbances, \njaundice and paradoxical excitement are all possible side-effects. Benzodiazepines \nimpair cognition, and long-term use has been associated with a range of cognitive defi-\ncits (e.g. memory, attention and processing speed), which may even persist after with-\ndrawal.28 The use of benzodiazepines has been associated with at least a 50% increase \nin the risk of hip fracture in the elderly.29 This is probably because benzodiazepines \nincrease the risk of falls.30 Patients newly prescribed benzodiazepine have the highest \nrisk.29 High doses are particularly problematic.30 This would seem to be a class effect \n",
+  "raw_text_sha256": "6f1aa7c85d3853d962842fb561399b9d1a8ed3cc7252a00416c6963ade962f16",
+  "coordinates_sha256": "297e3eab02663c474e119ce3bf41a74cd250909e4e128704b398a630b422ecda",
+  "block_sequence_sha256": "7a37ba199d35cd257b7fbb5eacb74b4551a778a00b24870fa5a3b35f5554b208",
+  "blocks": [
+    {
+      "block_id": "page-0458-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    437\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "d4630f0f38701bf0a0d67c18c065dfecdab740c56e389bd6ec6fab7f881234e7"
+    },
+    {
+      "block_id": "page-0458-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0458-block-0002",
+      "order": 2,
+      "text": "prescribing hypnotics.14,15 A high proportion of hospitalised patients are prescribed \nhypnotics.16 These should not be routinely continued at discharge.\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.7943420410156,
+        86.27041625976562
+      ],
+      "text_sha256": "04e9c95abb58ef3fcb084553ffe8d3042741fbc165375efaad296d6e4bd5b6f5"
+    },
+    {
+      "block_id": "page-0458-block-0003",
+      "order": 3,
+      "text": "Use in depression\n",
+      "bbox": [
+        48.0,
+        103.70541381835938,
+        138.8599853515625,
+        116.74041748046875
+      ],
+      "text_sha256": "15535d15573ef948131ca55197f05488002c3c93db39b77e46a71af94fb7887a"
+    },
+    {
+      "block_id": "page-0458-block-0004",
+      "order": 4,
+      "text": "Benzodiazepines are not a treatment for major depressive illness. The only meta-analy-\nsis conducted found no advantage for benzodiazepines over placebo in depression.17 \nHowever, there is some evidence that benzodiazepines may be helpful in preventing \nrelapse of psychotic depression.18\n",
+      "bbox": [
+        48.0,
+        122.5504150390625,
+        422.7803955078125,
+        170.27041625976562
+      ],
+      "text_sha256": "a7f6c9650535226ba4b578900a5b555371717187736fa4dd8b43e525dc314c46"
+    },
+    {
+      "block_id": "page-0458-block-0005",
+      "order": 5,
+      "text": "In the United Kingdom, the National Service Framework for Mental Health19 at one \ntime emphasised this point by including a requirement that GPs audit the ratio of ben-\nzodiazepines to antidepressants prescribed in their practice. NICE suggests that a ben-\nzodiazepine may be helpful for up to 2  weeks early in treatment, particularly in \ncombination with an SSRI (to help with sleep and the management of SSRI-induced \nagitation).6 Use beyond this timeframe is discouraged. Limiting initial supply quantities \nto short periods (1–7 days) may reduce the risk of patients becoming long-term users of \nbenzodiazepines.20\n",
+      "bbox": [
+        48.001197814941406,
+        170.55047607421875,
+        422.8211669921875,
+        266.2704772949219
+      ],
+      "text_sha256": "ffd6c8c22311bf2986c059ad12a405c4d14aadfdebebf9825af72de7af0da527"
+    },
+    {
+      "block_id": "page-0458-block-0006",
+      "order": 6,
+      "text": "Use in psychosis\n",
+      "bbox": [
+        48.0,
+        283.7054748535156,
+        131.7100067138672,
+        296.740478515625
+      ],
+      "text_sha256": "5644197e585a0d2c74d80290448ffe868ae94ab74ab6acfa23a1e05e763a1f8f"
+    },
+    {
+      "block_id": "page-0458-block-0007",
+      "order": 7,
+      "text": "Benzodiazepines are commonly used for rapid tranquilisation, either alone, or in com-\nbination with an antipsychotic.21 However, a Cochrane review concluded that there is \nno convincing evidence that combining an antipsychotic and a benzodiazepine offers \nany advantage over the use of antipsychotics or benzodiazepines alone.22\n",
+      "bbox": [
+        48.0,
+        302.55047607421875,
+        422.80133056640625,
+        350.2704772949219
+      ],
+      "text_sha256": "4f7fa7b8dcf42679c0a658b8e9f7c98844f3466039e7c32ab8f83d90c51d7a13"
+    },
+    {
+      "block_id": "page-0458-block-0008",
+      "order": 8,
+      "text": "A further Cochrane review in schizophrenia concluded that there are no proven ben-\nefits, outside short-term sedation.23 In contrast, another systematic review using differ-\nent outcome measures found superiority over placebo for global, psychiatric and \nbehavioural outcomes, but inferiority to antipsychotics on longer-term global out-\ncomes.24 A significant minority of patients with established psychotic illness fail to \nrespond adequately to antipsychotics alone, and this can result in benzodiazepines \nbeing prescribed on a chronic basis.25 There is, however, no evidence to support benzo-\ndiazepine augmentation of antipsychotics in schizophrenia, and use should be reserved \nfor the short-term sedation of acutely agitated patients.26 Evidence supporting the use \nof benzodiazepines in tardive dyskinesia is weak,27 but these drugs remain a treatment \noption in this condition.\n",
+      "bbox": [
+        47.99668884277344,
+        350.55047607421875,
+        422.7923583984375,
+        482.2704772949219
+      ],
+      "text_sha256": "9534c8565f8b38ff3eb089d7ab2b723157cbcd982bafa6ef626c0f76731aa4a6"
+    },
+    {
+      "block_id": "page-0458-block-0009",
+      "order": 9,
+      "text": "Side effects\n",
+      "bbox": [
+        48.0,
+        499.7054748535156,
+        107.70800018310547,
+        512.740478515625
+      ],
+      "text_sha256": "8130593994dac0972f1f377b8d9cf1edb4acfe1ad9c8b38fef0a831c332b8513"
+    },
+    {
+      "block_id": "page-0458-block-0010",
+      "order": 10,
+      "text": "Headaches, confusion, ataxia, dysarthria, blurred vision, gastrointestinal disturbances, \njaundice and paradoxical excitement are all possible side-effects. Benzodiazepines \nimpair cognition, and long-term use has been associated with a range of cognitive defi-\ncits (e.g. memory, attention and processing speed), which may even persist after with-\ndrawal.28 The use of benzodiazepines has been associated with at least a 50% increase \nin the risk of hip fracture in the elderly.29 This is probably because benzodiazepines \nincrease the risk of falls.30 Patients newly prescribed benzodiazepine have the highest \nrisk.29 High doses are particularly problematic.30 This would seem to be a class effect \n",
+      "bbox": [
+        47.99860382080078,
+        518.5504760742188,
+        422.82281494140625,
+        614.2704467773438
+      ],
+      "text_sha256": "0c42148592343d1c1888ad50cb4958215226c280766222e909da4e401d863631"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

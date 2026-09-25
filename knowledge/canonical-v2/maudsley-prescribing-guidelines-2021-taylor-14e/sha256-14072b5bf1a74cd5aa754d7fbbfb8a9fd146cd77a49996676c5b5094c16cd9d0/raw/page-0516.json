@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0516",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 516,
+  "source_page_index": 515,
+  "source_page_display": 516,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    495\nCHAPTER 4\nOpioid withdrawal in a community setting\nMethadone\nFollowing a period of stabilisation with methadone or a longer period of mainte-\nnance, the patient and prescriber may agree a reduction programme as part of a care \nplan to reduce the daily methadone dose. The usual reduction would be by 5–10mg \nweekly or every 2 weeks although there can be much variation in the reduction and \nspeed of reduction. In the community setting, patient preference is the most impor-\ntant variable in terms of dose reduction and rate of reduction. The detoxification \nprogramme should be reviewed regularly and remain flexible to adjustments and \nchanges, such as relapse to illicit drug use or patient anxieties about speed of reduc-\ntion. Factors such as an increase in heroin or other drug use or worsening of the \npatient’s physical, psychological or social well-being may warrant a temporary \nincrease, or stabilisation of the dose or a slowing down of the reduction rate. Towards \nthe end of the detoxification, the dose reduction may be slower: 1–2mg/week. Recent \nstudies show that the length of stability on maintenance treatment and prolonged \nreduction schedules (up to a year) substantially improve the chances of achieving \nabstinence.78\nBuprenorphine\nThe same principles as for methadone apply when planning a buprenorphine detoxifi-\ncation regime. Dose reduction should be gradual to minimise withdrawal discomfort. \nSuggested reduction regime:\nDaily buprenorphine dose\nReduction rate\nAbove 16mg\n4mg every 1–2 weeks\n8–16mg\n2–4mg every 1–2 weeks\n2–8mg\n2mg/week or fortnight\nBelow 2mg\nReduce by 0.4–0.8mg/week\nOpioid withdrawal in a specialist addiction in-patient setting\nMethadone\nPatients should have a starting dose assessment of methadone, over 48 hours by a spe-\ncialist inpatient team. The dose may then be reduced following a linear regime over up \nto 4 weeks.76\nBuprenorphine\nBuprenorphine can be used effectively for short-term inpatient detoxifications follow-\ning the same principles as for methadone.\n",
+  "raw_text_sha256": "9c10ffd15a0ff2f625c0ce45d0638557fc6b37e4a331debe9af13e291d404d02",
+  "coordinates_sha256": "23790219d3d0ae1db47e367973075850942baa5158a2f26a60547f9beb5934da",
+  "block_sequence_sha256": "e9f259bd2a9e69d2587b6647c0a95f168b877014b0871de6a582378877d4a736",
+  "blocks": [
+    {
+      "block_id": "page-0516-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    495\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "10f5237b60bbbb3da55158ade3179586879294da49781509033eaeaea1e64ef0"
+    },
+    {
+      "block_id": "page-0516-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0516-block-0002",
+      "order": 2,
+      "text": "Opioid withdrawal in a community setting\n",
+      "bbox": [
+        48.0,
+        62.31546401977539,
+        268.04400634765625,
+        75.3504638671875
+      ],
+      "text_sha256": "e276ec7671b29223acb0ee6d6376d53a3755ac0dfc96969718a5478cd8cdf960"
+    },
+    {
+      "block_id": "page-0516-block-0003",
+      "order": 3,
+      "text": "Methadone\n",
+      "bbox": [
+        48.0,
+        81.2504653930664,
+        102.45000457763672,
+        93.1004638671875
+      ],
+      "text_sha256": "e2d3d96e2b540dd8fd1df0c11e904ea0124ca774b34df2c7c41ff159b7777985"
+    },
+    {
+      "block_id": "page-0516-block-0004",
+      "order": 4,
+      "text": "Following a period of stabilisation with methadone or a longer period of mainte-\nnance, the patient and prescriber may agree a reduction programme as part of a care \nplan to reduce the daily methadone dose. The usual reduction would be by 5–10mg \nweekly or every 2 weeks although there can be much variation in the reduction and \nspeed of reduction. In the community setting, patient preference is the most impor-\ntant variable in terms of dose reduction and rate of reduction. The detoxification \nprogramme should be reviewed regularly and remain flexible to adjustments and \nchanges, such as relapse to illicit drug use or patient anxieties about speed of reduc-\ntion. Factors such as an increase in heroin or other drug use or worsening of the \npatient’s physical, psychological or social well-being may warrant a temporary \nincrease, or stabilisation of the dose or a slowing down of the reduction rate. Towards \nthe end of the detoxification, the dose reduction may be slower: 1–2mg/week. Recent \nstudies show that the length of stability on maintenance treatment and prolonged \nreduction schedules (up to a year) substantially improve the chances of achieving \nabstinence.78\n",
+      "bbox": [
+        48.0,
+        99.16046142578125,
+        422.830078125,
+        278.8804626464844
+      ],
+      "text_sha256": "f0f1b333051be275aca782d86432ef1fa93f07bc3517268562381e8e4753df24"
+    },
+    {
+      "block_id": "page-0516-block-0005",
+      "order": 5,
+      "text": "Buprenorphine\n",
+      "bbox": [
+        48.0,
+        297.25048828125,
+        118.55999755859375,
+        309.1004943847656
+      ],
+      "text_sha256": "92117a660f9da06ce129dce4faf2b22eb9fd759b6e7a4e996929f6ea93010de2"
+    },
+    {
+      "block_id": "page-0516-block-0006",
+      "order": 6,
+      "text": "The same principles as for methadone apply when planning a buprenorphine detoxifi-\ncation regime. Dose reduction should be gradual to minimise withdrawal discomfort. \nSuggested reduction regime:\n",
+      "bbox": [
+        48.0,
+        315.1604919433594,
+        422.8099365234375,
+        350.8804931640625
+      ],
+      "text_sha256": "aa44db36856dcfae603b81c6b1b20d8ef010a8148d1dd382dbf0bedd2b630c41"
+    },
+    {
+      "block_id": "page-0516-block-0007",
+      "order": 7,
+      "text": "Daily buprenorphine dose\nReduction rate\n",
+      "bbox": [
+        108.41069793701172,
+        370.4629821777344,
+        289.5882263183594,
+        379.3504943847656
+      ],
+      "text_sha256": "bb531b8f5dfdcf66cc1602eca32b3586612dd8f667c25439d3a1b087546437d5"
+    },
+    {
+      "block_id": "page-0516-block-0008",
+      "order": 8,
+      "text": "Above 16mg\n4mg every 1–2 weeks\n",
+      "bbox": [
+        108.41070556640625,
+        388.7705078125,
+        307.50567626953125,
+        397.4779968261719
+      ],
+      "text_sha256": "4bebfe5b4bea32c081c6944f732ab24ef4cc02486719973164f02da9394aaab3"
+    },
+    {
+      "block_id": "page-0516-block-0009",
+      "order": 9,
+      "text": "8–16mg\n2–4mg every 1–2 weeks\n",
+      "bbox": [
+        108.41070556640625,
+        406.89801025390625,
+        315.4256896972656,
+        415.6054992675781
+      ],
+      "text_sha256": "e93a3b326201a180f023f1ff5173f4a3694a4f8d6adb37f32074bba749003e19"
+    },
+    {
+      "block_id": "page-0516-block-0010",
+      "order": 10,
+      "text": "2–8mg\n2mg/week or fortnight\n",
+      "bbox": [
+        108.41070556640625,
+        425.0255126953125,
+        310.84326171875,
+        433.7330017089844
+      ],
+      "text_sha256": "dc6afb9aa80fdd00090154a8cd62f9cd95ac325f868cf29cd16fad893924f992"
+    },
+    {
+      "block_id": "page-0516-block-0011",
+      "order": 11,
+      "text": "Below 2mg\nReduce by 0.4–0.8mg/week\n",
+      "bbox": [
+        108.41070556640625,
+        443.15301513671875,
+        327.1107177734375,
+        451.8605041503906
+      ],
+      "text_sha256": "455f0ae2a1777a68c9a3c36d0c2adbd16cb0c97dda2c52b7057a3dd863aefa7d"
+    },
+    {
+      "block_id": "page-0516-block-0012",
+      "order": 12,
+      "text": "Opioid withdrawal in a specialist addiction in-patient setting\n",
+      "bbox": [
+        48.0,
+        478.44049072265625,
+        362.1710510253906,
+        491.4754943847656
+      ],
+      "text_sha256": "da32e8e92594d7c21b364c577bd27a9d427b495b6c9bdfb4aa8672b259343555"
+    },
+    {
+      "block_id": "page-0516-block-0013",
+      "order": 13,
+      "text": "Methadone\n",
+      "bbox": [
+        48.0,
+        497.37548828125,
+        102.45000457763672,
+        509.2254943847656
+      ],
+      "text_sha256": "e2d3d96e2b540dd8fd1df0c11e904ea0124ca774b34df2c7c41ff159b7777985"
+    },
+    {
+      "block_id": "page-0516-block-0014",
+      "order": 14,
+      "text": "Patients should have a starting dose assessment of methadone, over 48 hours by a spe-\ncialist inpatient team. The dose may then be reduced following a linear regime over up \nto 4 weeks.76\n",
+      "bbox": [
+        48.0,
+        515.2854614257812,
+        422.8000183105469,
+        551.0054931640625
+      ],
+      "text_sha256": "add844d2ec528b48c4a91cf6f6b471ced72c1cebb8e230adf7bbf57d2cb35582"
+    },
+    {
+      "block_id": "page-0516-block-0015",
+      "order": 15,
+      "text": "Buprenorphine\n",
+      "bbox": [
+        48.0,
+        569.37548828125,
+        118.55999755859375,
+        581.2254638671875
+      ],
+      "text_sha256": "92117a660f9da06ce129dce4faf2b22eb9fd759b6e7a4e996929f6ea93010de2"
+    },
+    {
+      "block_id": "page-0516-block-0016",
+      "order": 16,
+      "text": "Buprenorphine can be used effectively for short-term inpatient detoxifications follow-\ning the same principles as for methadone.\n",
+      "bbox": [
+        48.0,
+        587.2854614257812,
+        419.9898681640625,
+        611.0054931640625
+      ],
+      "text_sha256": "a6edc25cbec943f3c9a3f857f0b403451e77142695e799bcc212f5dc47931977"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

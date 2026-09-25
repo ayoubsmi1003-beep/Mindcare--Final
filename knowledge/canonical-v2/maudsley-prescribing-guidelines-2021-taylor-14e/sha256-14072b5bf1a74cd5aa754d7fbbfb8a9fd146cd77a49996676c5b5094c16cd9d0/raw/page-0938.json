@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0938",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 938,
+  "source_page_index": 937,
+  "source_page_display": 938,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Miscellany    917\nCHAPTER 14\nSummary of psychiatric side effects of non-psychotropics\nIt is increasingly recognised that non-psychotropic medications can induce a wide range \nof psychiatric symptoms.1 Up to two-thirds of all drugs have potential psychiatric side \neffects listed in their product labelling,2 although in most cases the evidence supporting \na causal link is limited. Psychiatric side effects are poorly characterised in drug clinical \ntrials, often only becoming apparent during post-marketing surveillance.3 Given this \nlevel of uncertainty, suspected psychiatric side effects should be diagnosed and man-\naged on a case-by-case basis. As a general guide, the psychiatric side effects of non-\npsychotropics are shown in Table 14.4. For individual drugs and agents not listed \nbelow, additional sources of information and the product literature should be con-\nsulted. Note that psychiatric side effects of drugs used in psychiatry and drugs for HIV \nand epilepsy are summarised elsewhere in the Guidelines.\nTable 14.4  Summary of psychiatric adverse drug reactions (ADRs) with non-psychotropics4–7\nDrug\nPsychiatric side effect\nComment\nACE inhibitors\nE.g. Captopril, lisinopril\nFatigue, hallucinations, delirium,  \nmood disturbances\nCaptopril most strongly associated \nwith mood effects. Overall limited \npsychiatric ADRs\nAnalgesics\nOpioids\nSedation, dysphoria, confusion, \nmood changes including \neuphoria, sleep disturbances, \nhallucinations, psychosis, \ndelirium, dependence\nPsychiatric ADRs are relatively common \nwith opioids. Psychosis during opioid \nwithdrawal has also been reported \nrarely8\n5HT1 agonists \n(e.g. sumatriptan)\nFatigue, anxiety, panic attacks\nAntibiotics\nCephalosporins, penicillins, \nquinolones (including \nfluoroquinolones), tetracyclines\nSleep disturbances (insomnia and \nsomnolence, abnormal dreams, \nnightmares), anxiety, delirium and \nconfusional states, depression and \nagitation, psychotic symptoms (e.g. \nhallucinations, suicidal ideation)\nAll antibiotics can cause delirium. \nPatients with underlying medical \nconditions can be at higher risk of \ndeveloping psychiatric ADRs. Of the \nquinolones, ciprofloxacin causes the \nmost psychiatric ADRs, including \nmood disturbances, agitation and \nconfusion. Onset of psychiatric \nADRs can be fast, e.g. after one \ndose\n(Continued)\n",
+  "raw_text_sha256": "479a8d9c1d5b3bbfa051e8858e8cadf35a4c3bd3e4888ed871cd8089f22c86d0",
+  "coordinates_sha256": "4a617271f72d7eb7b33026ee05590873496687c91bc37a6e5d95d94fd9b53d8e",
+  "block_sequence_sha256": "598cbcf06f88b8c630137094ed9d89722b96fdf80d0919cd626c640137f236df",
+  "blocks": [
+    {
+      "block_id": "page-0938-block-0000",
+      "order": 0,
+      "text": "Miscellany    917\n",
+      "bbox": [
+        349.2962951660156,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "5645e1743641360f98dea4489afd585c6c0bb5c50df68873c57731ac81ba8924"
+    },
+    {
+      "block_id": "page-0938-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        454.4096984863281,
+        338.7405090332031,
+        463.88970947265625,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0938-block-0002",
+      "order": 2,
+      "text": "Summary of psychiatric side effects of non-psychotropics\n",
+      "bbox": [
+        55.039398193359375,
+        66.06546020507812,
+        349.21246337890625,
+        79.1004638671875
+      ],
+      "text_sha256": "f03304aaba069c41a57c4dad54feff832312cf2216e9ac4d25eb3e740744db74"
+    },
+    {
+      "block_id": "page-0938-block-0003",
+      "order": 3,
+      "text": "It is increasingly recognised that non-psychotropic medications can induce a wide range \nof psychiatric symptoms.1 Up to two-thirds of all drugs have potential psychiatric side \neffects listed in their product labelling,2 although in most cases the evidence supporting \na causal link is limited. Psychiatric side effects are poorly characterised in drug clinical \ntrials, often only becoming apparent during post-marketing surveillance.3 Given this \nlevel of uncertainty, suspected psychiatric side effects should be diagnosed and man-\naged on a case-by-case basis. As a general guide, the psychiatric side effects of non-\npsychotropics are shown in Table 14.4. For individual drugs and agents not listed \nbelow, additional sources of information and the product literature should be con-\nsulted. Note that psychiatric side effects of drugs used in psychiatry and drugs for HIV \nand epilepsy are summarised elsewhere in the Guidelines.\n",
+      "bbox": [
+        48.0360107421875,
+        84.91046142578125,
+        422.8674621582031,
+        216.63046264648438
+      ],
+      "text_sha256": "ea52a03ad22491023232b659d11a08ad49c7d73e5c8d708c01662848e9cdc804"
+    },
+    {
+      "block_id": "page-0938-block-0004",
+      "order": 4,
+      "text": "Table 14.4  Summary of psychiatric adverse drug reactions (ADRs) with non-psychotropics4–7\n",
+      "bbox": [
+        54.0,
+        249.02928161621094,
+        347.9054870605469,
+        257.9167785644531
+      ],
+      "text_sha256": "cd646dad3f76f4461bcd733cb89d33509e7c6431a478295974ce8f0b59dbae60"
+    },
+    {
+      "block_id": "page-0938-block-0005",
+      "order": 5,
+      "text": "Drug\nPsychiatric side effect\nComment\n",
+      "bbox": [
+        48.0,
+        267.6542663574219,
+        329.5050354003906,
+        276.5417785644531
+      ],
+      "text_sha256": "9e349db6f15484697169ed1ed9f4f9a823886c66f8e2c04ad5ea86c3d6a8ec83"
+    },
+    {
+      "block_id": "page-0938-block-0006",
+      "order": 6,
+      "text": "ACE inhibitors\n",
+      "bbox": [
+        48.00001525878906,
+        284.67926025390625,
+        98.00251007080078,
+        293.5667724609375
+      ],
+      "text_sha256": "c793bde93264efe2ce997e4082a7607211de0b3a0f0c9f040e2fc484119c27be"
+    },
+    {
+      "block_id": "page-0938-block-0007",
+      "order": 7,
+      "text": "E.g. Captopril, lisinopril\nFatigue, hallucinations, delirium,  \nmood disturbances\n",
+      "bbox": [
+        48.00001525878906,
+        299.88177490234375,
+        281.1824951171875,
+        318.5867614746094
+      ],
+      "text_sha256": "44c5783a5a419861ff9db11abffc33cd065066434c327e7b49d432743e23e8b9"
+    },
+    {
+      "block_id": "page-0938-block-0008",
+      "order": 8,
+      "text": "Captopril most strongly associated \nwith mood effects. Overall limited \npsychiatric ADRs\n",
+      "bbox": [
+        295.33502197265625,
+        299.88177490234375,
+        407.2951354980469,
+        328.5842590332031
+      ],
+      "text_sha256": "50eff17cc24aee592243743d9b78198708e3046aee120777032c26b648d2bac9"
+    },
+    {
+      "block_id": "page-0938-block-0009",
+      "order": 9,
+      "text": "Analgesics\n",
+      "bbox": [
+        48.00001525878906,
+        334.71923828125,
+        85.08001708984375,
+        343.60675048828125
+      ],
+      "text_sha256": "366ae807be15fdc8e077e0c600ba2bfa78aa32e3f0b66958b1fb71134ebfa588"
+    },
+    {
+      "block_id": "page-0938-block-0010",
+      "order": 10,
+      "text": "Opioids\nSedation, dysphoria, confusion, \nmood changes including \neuphoria, sleep disturbances, \nhallucinations, psychosis, \ndelirium, dependence\n",
+      "bbox": [
+        48.00001525878906,
+        349.9217529296875,
+        280.70257568359375,
+        398.6192321777344
+      ],
+      "text_sha256": "e1cf5a9f5d647ade8b2364df97cb4cfb334ebe3c6733cb0114983b4323716647"
+    },
+    {
+      "block_id": "page-0938-block-0011",
+      "order": 11,
+      "text": "Psychiatric ADRs are relatively common \nwith opioids. Psychosis during opioid \nwithdrawal has also been reported \nrarely8\n",
+      "bbox": [
+        295.33502197265625,
+        349.91424560546875,
+        421.7174987792969,
+        388.6142272949219
+      ],
+      "text_sha256": "66325ba4241ccfa052c91bd9907371983012ee2b39f11ef88df0a113b3d99823"
+    },
+    {
+      "block_id": "page-0938-block-0012",
+      "order": 12,
+      "text": "5HT1 agonists \n(e.g. sumatriptan)\n",
+      "bbox": [
+        48.0,
+        404.95928955078125,
+        104.6785888671875,
+        423.6642761230469
+      ],
+      "text_sha256": "e780c6ecb27748f7530bac8f80bf39f25ca0ee6bfbbdbbf03e44a438d23894e9"
+    },
+    {
+      "block_id": "page-0938-block-0013",
+      "order": 13,
+      "text": "Fatigue, anxiety, panic attacks\n",
+      "bbox": [
+        173.67111206054688,
+        404.95928955078125,
+        268.80859375,
+        413.6667785644531
+      ],
+      "text_sha256": "e7fa7c5c24154210c4af7e172b91f442bcd34ebd4d2b07ef5a1706a6cf6d440d"
+    },
+    {
+      "block_id": "page-0938-block-0014",
+      "order": 14,
+      "text": "Antibiotics\n",
+      "bbox": [
+        48.00110626220703,
+        429.8067626953125,
+        85.91360473632812,
+        438.69427490234375
+      ],
+      "text_sha256": "00273ed6c3ed84a123184f3d8cd75a949c8ff0f9ab9ebb176f33de528a7efa07"
+    },
+    {
+      "block_id": "page-0938-block-0015",
+      "order": 15,
+      "text": "Cephalosporins, penicillins, \nquinolones (including \nfluoroquinolones), tetracyclines\n",
+      "bbox": [
+        48.00110626220703,
+        445.0093078613281,
+        147.45858764648438,
+        473.7117919921875
+      ],
+      "text_sha256": "3748ef4d919f024bdb8eb1b130a61d527be768f152107132970b03df3c8dde4c"
+    },
+    {
+      "block_id": "page-0938-block-0016",
+      "order": 16,
+      "text": "Sleep disturbances (insomnia and \nsomnolence, abnormal dreams, \nnightmares), anxiety, delirium and \nconfusional states, depression and \nagitation, psychotic symptoms (e.g. \nhallucinations, suicidal ideation)\n",
+      "bbox": [
+        173.67111206054688,
+        445.0018005371094,
+        288.68359375,
+        503.69677734375
+      ],
+      "text_sha256": "4850e935374f17bb04cf61f388221fe1aee0ec934f7a7d569e03051b6321836f"
+    },
+    {
+      "block_id": "page-0938-block-0017",
+      "order": 17,
+      "text": "All antibiotics can cause delirium. \nPatients with underlying medical \nconditions can be at higher risk of \ndeveloping psychiatric ADRs. Of the \nquinolones, ciprofloxacin causes the \nmost psychiatric ADRs, including \nmood disturbances, agitation and \nconfusion. Onset of psychiatric \nADRs can be fast, e.g. after one \ndose\n",
+      "bbox": [
+        295.33612060546875,
+        444.9867858886719,
+        412.3062438964844,
+        543.6717529296875
+      ],
+      "text_sha256": "eb5d3a9abbfaea817b60bee9bf30079a69fe913f52fe44d05ffcbb3185e1d54f"
+    },
+    {
+      "block_id": "page-0938-block-0018",
+      "order": 18,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.9861145019531,
+        554.9442749023438,
+        420.0010681152344,
+        563.69677734375
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

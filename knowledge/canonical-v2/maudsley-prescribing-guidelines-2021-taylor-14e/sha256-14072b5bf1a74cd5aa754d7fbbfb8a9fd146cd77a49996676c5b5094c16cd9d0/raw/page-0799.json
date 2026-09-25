@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0799",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 799,
+  "source_page_index": 798,
+  "source_page_display": 799,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "778    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\nAlthough most psychotropic agents are thought to be safe in PLWH, definitive data are \nlacking in many cases, and this group may be more sensitive to higher doses, side effects \nand interactions.2 Patients with advanced HIV disease are more likely to suffer exagger-\nated adverse reactions to psychotropic medication.\nSchizophrenia\nIn general, there is no difference between the pharmacological treatment of schizophre-\nnia in PLWH and the treatment of an uninfected person,3 but some specific considera-\ntions should be kept in mind. PLWH are more susceptible to extrapyramidal side effects \n(EPSEs)2 due to HIV invasion into basal ganglia, particularly during advanced illness. \nHence, second‐generation antipsychotics (SGAs), such as quetiapine, risperidone and \naripiprazole have been suggested as first-line choices for the treatment of psychosis \nunrelated to dementia or delirium.4 The possible additive metabolic effects of antipsy-\nchotics and antiretrovirals require close monitoring. QT interval prolongation can be a \ncomplication of HIV progression, co-morbidities, antiretrovirals, as well as antipsy-\nchotics.5 Drug interactions are discussed further in this section.\nThere are limited published reports of clozapine use for treatment-resistant schizo-\nphrenia in PLWH.6–8 Clozapine can be used in people with refractory schizophrenia and \nHIV with the aim of achieving control of the viral load. A multidisciplinary approach \nis required in such cases.6,8\nHowever, close monitoring of the white cell count is required since, clozapine, certain \nantiretroviral therapy (ART), and the HIV virus itself can all have suppressive effects on \nthe bone marrow.6,8 Clozapine may also be helpful in the treatment of individuals with \nHIV-associated psychosis with drug-induced parkinsonism.9\nDelirium\nOrganic causes should be identified and treated. Short-term symptomatic treatment \nmay include low-dose SGAs (e.g. risperidone4). There have been few RCTs in delirious \npatients with AIDS; earlier studies document the efficacy of typical antipsychotics,10 \nand low-dose haloperidol was the agent of choice in one consensus study.4 However, \nfirst‐generation antipsychotic (FGAs) should be used cautiously given the increased \nsusceptibility to EPSEs in this patient group.10 Benzodiazepines should be used cau-\ntiously as they may worsen delirium (except when alcohol or benzodiazepine with-\ndrawal is the precipitating factor).10\nDepression\nDepression in PLWH is common, with an estimated prevalence of 20–40%.11 It \nmay be a consequence of HIV infection or a pre-existing disorder. Studies suggest \nthat depression comorbid with HIV is associated with poor adherence to ART and \nreduced viral suppression.12 Antidepressants are more effective than placebo in the \ntreatment of depression in PLWH12 and may improve adherence to ART,13 but there \nis a gap in research comparing antidepressant types in this patient group. Selective \nserotonin reuptake inhibitors (SSRIs) are preferable as first-line agents. Escitalopram/\n",
+  "raw_text_sha256": "77a23e33417e4ddb3e1be8ca7dd3458c5e8fd7dbb978b16ea3f3d747078b8807",
+  "coordinates_sha256": "4a731aa42ef5d076fb240158d840c29fd6ee3b29b77feaa50145617ad79c62e8",
+  "block_sequence_sha256": "bdfae9b7f42d8d7c68da0e5e18bc26e239533ee7c6debf856a868b4c5e8e90dc",
+  "blocks": [
+    {
+      "block_id": "page-0799-block-0000",
+      "order": 0,
+      "text": "778    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "d7d228378cf38164ce1cc6f4856060afa0484b9dee4c0359c80802b33d6599ad"
+    },
+    {
+      "block_id": "page-0799-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0799-block-0002",
+      "order": 2,
+      "text": "Although most psychotropic agents are thought to be safe in PLWH, definitive data are \nlacking in many cases, and this group may be more sensitive to higher doses, side effects \nand interactions.2 Patients with advanced HIV disease are more likely to suffer exagger-\nated adverse reactions to psychotropic medication.\n",
+      "bbox": [
+        61.889801025390625,
+        62.55029296875,
+        436.6597900390625,
+        110.27029418945312
+      ],
+      "text_sha256": "f350ae7917614bc77817e455df16e924e1f2984602cb74ab5f6fddabf06c4ea7"
+    },
+    {
+      "block_id": "page-0799-block-0003",
+      "order": 3,
+      "text": "Schizophrenia\n",
+      "bbox": [
+        61.889801025390625,
+        127.70529174804688,
+        134.42379760742188,
+        140.74029541015625
+      ],
+      "text_sha256": "c429990104d2a691dcecca2a42e3a2ae92b1ace371bcbbefcfb51e2f1ad64a03"
+    },
+    {
+      "block_id": "page-0799-block-0004",
+      "order": 4,
+      "text": "In general, there is no difference between the pharmacological treatment of schizophre-\nnia in PLWH and the treatment of an uninfected person,3 but some specific considera-\ntions should be kept in mind. PLWH are more susceptible to extrapyramidal side effects \n(EPSEs)2 due to HIV invasion into basal ganglia, particularly during advanced illness. \nHence, second‐generation antipsychotics (SGAs), such as quetiapine, risperidone and \naripiprazole have been suggested as first-line choices for the treatment of psychosis \nunrelated to dementia or delirium.4 The possible additive metabolic effects of antipsy-\nchotics and antiretrovirals require close monitoring. QT interval prolongation can be a \ncomplication of HIV progression, co-morbidities, antiretrovirals, as well as antipsy-\nchotics.5 Drug interactions are discussed further in this section.\n",
+      "bbox": [
+        61.885101318359375,
+        146.55029296875,
+        436.700927734375,
+        266.2702941894531
+      ],
+      "text_sha256": "6132984c729a1b6bcfc858ed24128f76b957098273072678a536a320fcbe280b"
+    },
+    {
+      "block_id": "page-0799-block-0005",
+      "order": 5,
+      "text": "There are limited published reports of clozapine use for treatment-resistant schizo-\nphrenia in PLWH.6–8 Clozapine can be used in people with refractory schizophrenia and \nHIV with the aim of achieving control of the viral load. A multidisciplinary approach \nis required in such cases.6,8\n",
+      "bbox": [
+        61.88499450683594,
+        266.55029296875,
+        436.635009765625,
+        314.2702941894531
+      ],
+      "text_sha256": "58b6f604479db75fcdad6b935ffb7baca553615af79916310d1baba90bf3d55f"
+    },
+    {
+      "block_id": "page-0799-block-0006",
+      "order": 6,
+      "text": "However, close monitoring of the white cell count is required since, clozapine, certain \nantiretroviral therapy (ART), and the HIV virus itself can all have suppressive effects on \nthe bone marrow.6,8 Clozapine may also be helpful in the treatment of individuals with \nHIV-associated psychosis with drug-induced parkinsonism.9\n",
+      "bbox": [
+        61.889801025390625,
+        314.55029296875,
+        436.70989990234375,
+        362.2702941894531
+      ],
+      "text_sha256": "ba6028c17767837b0194a010d749fca8b2c4ef8c3fee01615790e9adac91cd47"
+    },
+    {
+      "block_id": "page-0799-block-0007",
+      "order": 7,
+      "text": "Delirium\n",
+      "bbox": [
+        61.889801025390625,
+        379.7052917480469,
+        105.90079498291016,
+        392.74029541015625
+      ],
+      "text_sha256": "88a5dc3974e38b9f2d0589ea59c3527dc472f7c18540d8988c005c98e7a09120"
+    },
+    {
+      "block_id": "page-0799-block-0008",
+      "order": 8,
+      "text": "Organic causes should be identified and treated. Short-term symptomatic treatment \nmay include low-dose SGAs (e.g. risperidone4). There have been few RCTs in delirious \npatients with AIDS; earlier studies document the efficacy of typical antipsychotics,10 \nand low-dose haloperidol was the agent of choice in one consensus study.4 However, \nfirst‐generation antipsychotic (FGAs) should be used cautiously given the increased \nsusceptibility to EPSEs in this patient group.10 Benzodiazepines should be used cau-\ntiously as they may worsen delirium (except when alcohol or benzodiazepine with-\ndrawal is the precipitating factor).10\n",
+      "bbox": [
+        61.88679504394531,
+        398.55029296875,
+        436.67974853515625,
+        494.2702941894531
+      ],
+      "text_sha256": "31d90156ffaee47420926b81b7bb06b144e4ad037e9023e90f2a79ab2149392b"
+    },
+    {
+      "block_id": "page-0799-block-0009",
+      "order": 9,
+      "text": "Depression\n",
+      "bbox": [
+        61.889801025390625,
+        511.7052917480469,
+        119.13380432128906,
+        524.7402954101562
+      ],
+      "text_sha256": "ce671d3d1ab8a2414473ed7cde1062546ccf670ea792bc40a6968a2aa033a858"
+    },
+    {
+      "block_id": "page-0799-block-0010",
+      "order": 10,
+      "text": "Depression in PLWH is common, with an estimated prevalence of 20–40%.11 It \nmay be a consequence of HIV infection or a pre-existing disorder. Studies suggest \nthat depression comorbid with HIV is associated with poor adherence to ART and \nreduced viral suppression.12 Antidepressants are more effective than placebo in the \ntreatment of depression in PLWH12 and may improve adherence to ART,13 but there \nis a gap in research comparing antidepressant types in this patient group. Selective \nserotonin reuptake inhibitors (SSRIs) are preferable as first-line agents. Escitalopram/\n",
+      "bbox": [
+        61.888519287109375,
+        530.55029296875,
+        436.713623046875,
+        614.2703247070312
+      ],
+      "text_sha256": "0b40a8da3964ee829d09d1464b3483f64cbcd9d8476529d3368d2e6d789818c8"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

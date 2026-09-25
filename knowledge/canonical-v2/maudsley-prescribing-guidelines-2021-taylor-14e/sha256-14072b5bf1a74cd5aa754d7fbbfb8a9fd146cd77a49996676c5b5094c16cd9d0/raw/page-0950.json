@@ -1,0 +1,395 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0950",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 950,
+  "source_page_index": 949,
+  "source_page_display": 950,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Miscellany    929\nCHAPTER 14\nThe Code of Practice 25.56 states:\nStatutory consultees may expect to have a private discussion with the SOAD and to \nbe listened to with consideration. Issues that the consultees may be asked about \ninclude, but are not limited to:\n■\n■the proposed treatment and the patient’s ability to consent to it;\n■\n■their understanding of the past and present views and wishes of the patient;\n■\n■other treatment options and the way in which the decision on the treatment \nproposal was arrived at;\n■\n■the patient’s progress and the views of the patient’s carers; and\n■\n■where relevant, the implications of imposing treatment on a patient who does not \nwant it and the reasons why the patient is refusing treatment.\nWhat is consent?\nThe Code of 24.34 defines consent as:\n… the voluntary and continuing permission of a patient to be given a particular \ntreatment, based on a sufficient knowledge of the purpose, nature, likely effects and \nrisks of that treatment, including the likelihood of its success and any alternatives to \nit. Permission given under any unfair or undue pressure is not consent.\nFor a patient to consent formally they must have the ‘capacity’ to make a decision.\nWhat is capacity?\nThe Mental Capacity Act 2005 states that\n■\n■people must be assumed to have capacity unless it is established that they lack \ncapacity;\n■\n■people are not to be treated as unable to make a decision unless all practicable steps \nto help them do so have been taken without success; and\n■\n■people are not to be treated as unable to make a decision merely because they make \nan unwise decision\nA patient is deemed to lack capacity if they cannot:\n■\n■understand relevant information about the decision to be made\nor\n■\n■retain that information in their mind\nor\n■\n■use or weigh that information as part of the decision making process\nor\n■\n■communicate their decision (by talking, using sign language or any other means).\n",
+  "raw_text_sha256": "c5af3cb0d638d121eff6bfb8e77ab2af846bc2a2c29c0a55d5246654ace9f0b3",
+  "coordinates_sha256": "1811a8dc3e941968aa604a5b7f3e3c87130a6769ce93c15699912f416c894cb4",
+  "block_sequence_sha256": "a0a4124b2735fb9a940abec37b5751de267618ba9f5e8d00091a41cba81a0768",
+  "blocks": [
+    {
+      "block_id": "page-0950-block-0000",
+      "order": 0,
+      "text": "Miscellany    929\n",
+      "bbox": [
+        349.2962951660156,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "4553054fd1bb68390ef5a71ae10e6ffa744c809b8432d3804e38a16ee26caf02"
+    },
+    {
+      "block_id": "page-0950-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        454.4096984863281,
+        338.7405090332031,
+        463.88970947265625,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0950-block-0002",
+      "order": 2,
+      "text": "The Code of Practice 25.56 states:\n",
+      "bbox": [
+        58.039398193359375,
+        61.8770751953125,
+        205.8293914794922,
+        73.59707641601562
+      ],
+      "text_sha256": "49d1318858101b8c41cdfd71aa98aca6373810db842cdb7ef8dbbfe7ab3abda8"
+    },
+    {
+      "block_id": "page-0950-block-0003",
+      "order": 3,
+      "text": "Statutory consultees may expect to have a private discussion with the SOAD and to \nbe listened to with consideration. Issues that the consultees may be asked about \ninclude, but are not limited to:\n",
+      "bbox": [
+        60.539398193359375,
+        85.8770751953125,
+        422.8094482421875,
+        121.59707641601562
+      ],
+      "text_sha256": "0837abfab77ea82e8cbf2ec0711d694a088021a7ca712bb34a9fb7aa1058a85d"
+    },
+    {
+      "block_id": "page-0950-block-0004",
+      "order": 4,
+      "text": "■\n■the proposed treatment and the patient’s ability to consent to it;\n",
+      "bbox": [
+        62.23429870605469,
+        127.8770751953125,
+        345.8893127441406,
+        139.59707641601562
+      ],
+      "text_sha256": "9977754f77e223453947046da1dcade0c2f6e3fe6bedfdcebe6395c037a27035"
+    },
+    {
+      "block_id": "page-0950-block-0005",
+      "order": 5,
+      "text": "■\n■their understanding of the past and present views and wishes of the patient;\n",
+      "bbox": [
+        62.23429870605469,
+        139.8770751953125,
+        396.6693420410156,
+        151.59707641601562
+      ],
+      "text_sha256": "dc20ccf7c4a1a64dd6257f46c315ed513e42b1633aeb1a5afeb20cf04d4ba52b"
+    },
+    {
+      "block_id": "page-0950-block-0006",
+      "order": 6,
+      "text": "■\n■other treatment options and the way in which the decision on the treatment \n",
+      "bbox": [
+        62.23429870605469,
+        151.8770751953125,
+        422.7793273925781,
+        163.59707641601562
+      ],
+      "text_sha256": "8b6b1eec8193d5d90d2a4de5a69a60468d9e165428ae072da99c603596412deb"
+    },
+    {
+      "block_id": "page-0950-block-0007",
+      "order": 7,
+      "text": "proposal was arrived at;\n",
+      "bbox": [
+        71.03939819335938,
+        163.8770751953125,
+        175.51937866210938,
+        175.59707641601562
+      ],
+      "text_sha256": "e6696c13aa9400ed9840898cb67499f39473e48626b54fd8def86289d5afb4c4"
+    },
+    {
+      "block_id": "page-0950-block-0008",
+      "order": 8,
+      "text": "■\n■the patient’s progress and the views of the patient’s carers; and\n",
+      "bbox": [
+        62.23429870605469,
+        175.8770751953125,
+        340.159423828125,
+        187.59707641601562
+      ],
+      "text_sha256": "6ad5b97cdb343d9d59e420fc0d52b06ac7ce53a4e0da5ef783f31dd036b81d8d"
+    },
+    {
+      "block_id": "page-0950-block-0009",
+      "order": 9,
+      "text": "■\n■where relevant, the implications of imposing treatment on a patient who does not \n",
+      "bbox": [
+        62.23429870605469,
+        187.8770751953125,
+        422.8592834472656,
+        199.59707641601562
+      ],
+      "text_sha256": "450d78824ed683882be126b1ac10a1cbb0aa177cd37a32c23837df330a171ec7"
+    },
+    {
+      "block_id": "page-0950-block-0010",
+      "order": 10,
+      "text": "want it and the reasons why the patient is refusing treatment.\n",
+      "bbox": [
+        71.03939819335938,
+        199.8770751953125,
+        335.5093688964844,
+        211.59707641601562
+      ],
+      "text_sha256": "6c0e4f17db85500e0d57d70570063b9b8740b8a435df071e0960ddb2ad236086"
+    },
+    {
+      "block_id": "page-0950-block-0011",
+      "order": 11,
+      "text": "What is consent?\n",
+      "bbox": [
+        48.039398193359375,
+        229.03207397460938,
+        136.03939819335938,
+        242.06707763671875
+      ],
+      "text_sha256": "782803f2b56e1034163beeb3be660ca1edc3eadd8108f4e9e88925d8fc4eafd6"
+    },
+    {
+      "block_id": "page-0950-block-0012",
+      "order": 12,
+      "text": "The Code of 24.34 defines consent as:\n",
+      "bbox": [
+        48.039398193359375,
+        247.8770751953125,
+        212.51937866210938,
+        259.5970764160156
+      ],
+      "text_sha256": "7c30e56b67677675384549a428014deb66b28c673869fdef20fc42a18a73dcf5"
+    },
+    {
+      "block_id": "page-0950-block-0013",
+      "order": 13,
+      "text": "… the voluntary and continuing permission of a patient to be given a particular \ntreatment, based on a sufficient knowledge of the purpose, nature, likely effects and \nrisks of that treatment, including the likelihood of its success and any alternatives to \nit. Permission given under any unfair or undue pressure is not consent.\n",
+      "bbox": [
+        60.539398193359375,
+        271.8770751953125,
+        422.81927490234375,
+        319.5970764160156
+      ],
+      "text_sha256": "d3853271f19b2c7866b0bfeb40368392f8821d1d2fce38c8a3bb65d25634d17f"
+    },
+    {
+      "block_id": "page-0950-block-0014",
+      "order": 14,
+      "text": "For a patient to consent formally they must have the ‘capacity’ to make a decision.\n",
+      "bbox": [
+        48.039398193359375,
+        331.8770751953125,
+        403.4393615722656,
+        343.5970764160156
+      ],
+      "text_sha256": "bc8a7ec09c0bb05fc7e56076e3aa2d2c2b4936a0241f2c5a0a2e912376513c70"
+    },
+    {
+      "block_id": "page-0950-block-0015",
+      "order": 15,
+      "text": "What is capacity?\n",
+      "bbox": [
+        48.039398193359375,
+        361.0320739746094,
+        137.88739013671875,
+        374.06707763671875
+      ],
+      "text_sha256": "2553f26f7e2ae480f9b4fe057d2e6ec693b3c564ab900c363ffff745f17a0467"
+    },
+    {
+      "block_id": "page-0950-block-0016",
+      "order": 16,
+      "text": "The Mental Capacity Act 2005 states that\n",
+      "bbox": [
+        48.039398193359375,
+        379.8770751953125,
+        228.7694091796875,
+        391.5970764160156
+      ],
+      "text_sha256": "a1d7d778014049a21a9af66218678eb6be46c51b4da3fa6cf7b5741edbc9a745"
+    },
+    {
+      "block_id": "page-0950-block-0017",
+      "order": 17,
+      "text": "■\n■people must be assumed to have capacity unless it is established that they lack \n",
+      "bbox": [
+        48.03929901123047,
+        400.8770751953125,
+        422.8042907714844,
+        412.5970764160156
+      ],
+      "text_sha256": "1f75cd98cd1e84510c7935ef4bc852d77dca09f90bb624d0683b8cbb102e7f56"
+    },
+    {
+      "block_id": "page-0950-block-0018",
+      "order": 18,
+      "text": "capacity;\n",
+      "bbox": [
+        56.844398498535156,
+        412.8770751953125,
+        95.17440032958984,
+        424.5970764160156
+      ],
+      "text_sha256": "48b5228f83705959ddbb0953c17a6c561f40a8eb08960041e6fa7e0d8536ffbe"
+    },
+    {
+      "block_id": "page-0950-block-0019",
+      "order": 19,
+      "text": "■\n■people are not to be treated as unable to make a decision unless all practicable steps \n",
+      "bbox": [
+        48.03929901123047,
+        424.8770751953125,
+        422.844482421875,
+        436.5970764160156
+      ],
+      "text_sha256": "6bdf4a3213bc4bb284c0643c743c84ddec48309be6ef35c2472db19bbdab7f31"
+    },
+    {
+      "block_id": "page-0950-block-0020",
+      "order": 20,
+      "text": "to help them do so have been taken without success; and\n",
+      "bbox": [
+        56.844398498535156,
+        436.8770751953125,
+        301.33441162109375,
+        448.5970764160156
+      ],
+      "text_sha256": "f0e1699b9f09d85720d19163fabd27ca7a028e5c346297baa02036551bcf3246"
+    },
+    {
+      "block_id": "page-0950-block-0021",
+      "order": 21,
+      "text": "■\n■people are not to be treated as unable to make a decision merely because they make \n",
+      "bbox": [
+        48.03929901123047,
+        448.8770751953125,
+        422.8443298339844,
+        460.5970764160156
+      ],
+      "text_sha256": "cf54e933a5fa5b7868ce1f4f55e326a62e386acfbb9a688d8487e2274139a8ab"
+    },
+    {
+      "block_id": "page-0950-block-0022",
+      "order": 22,
+      "text": "an unwise decision\n",
+      "bbox": [
+        56.844398498535156,
+        460.8770751953125,
+        137.98439025878906,
+        472.5970764160156
+      ],
+      "text_sha256": "b76c6638d371f3d7a21567227db8e915232e043353f10a9f93ee3c68ba85fc92"
+    },
+    {
+      "block_id": "page-0950-block-0023",
+      "order": 23,
+      "text": "A patient is deemed to lack capacity if they cannot:\n",
+      "bbox": [
+        48.04439926147461,
+        478.8770751953125,
+        268.5943908691406,
+        490.5970764160156
+      ],
+      "text_sha256": "e8aa0821f7013586f51774802dc956370aedbd539822848f463b4bf63d00f880"
+    },
+    {
+      "block_id": "page-0950-block-0024",
+      "order": 24,
+      "text": "■\n■understand relevant information about the decision to be made\n",
+      "bbox": [
+        48.03929901123047,
+        499.8770751953125,
+        329.1043701171875,
+        511.5970764160156
+      ],
+      "text_sha256": "ed6cfb4410537435e3e157f3227068305be9809204f2eb4150b30aae48d5eb5f"
+    },
+    {
+      "block_id": "page-0950-block-0025",
+      "order": 25,
+      "text": "or\n",
+      "bbox": [
+        56.844398498535156,
+        511.8770751953125,
+        66.29440307617188,
+        523.5971069335938
+      ],
+      "text_sha256": "a1c74ae37f82d3ee9b65439846c1ae28413a6070182ce475293aefa165d2b65f"
+    },
+    {
+      "block_id": "page-0950-block-0026",
+      "order": 26,
+      "text": "■\n■retain that information in their mind\n",
+      "bbox": [
+        48.03929901123047,
+        523.8770751953125,
+        215.19436645507812,
+        535.5971069335938
+      ],
+      "text_sha256": "c03a6e894bc0b3b93382ace5f3757dd2cef52c50d8fde53c5e83f279fa9eb9a9"
+    },
+    {
+      "block_id": "page-0950-block-0027",
+      "order": 27,
+      "text": "or\n",
+      "bbox": [
+        56.844398498535156,
+        535.8770751953125,
+        66.29440307617188,
+        547.5971069335938
+      ],
+      "text_sha256": "a1c74ae37f82d3ee9b65439846c1ae28413a6070182ce475293aefa165d2b65f"
+    },
+    {
+      "block_id": "page-0950-block-0028",
+      "order": 28,
+      "text": "■\n■use or weigh that information as part of the decision making process\n",
+      "bbox": [
+        48.03929901123047,
+        547.8770751953125,
+        353.0044250488281,
+        559.5971069335938
+      ],
+      "text_sha256": "88ad0d64d910b953b715e6cc30c62b6fdb9ec3b4b6ee39a417c617e7d597f6ad"
+    },
+    {
+      "block_id": "page-0950-block-0029",
+      "order": 29,
+      "text": "or\n",
+      "bbox": [
+        56.844398498535156,
+        559.8770751953125,
+        66.29440307617188,
+        571.5971069335938
+      ],
+      "text_sha256": "a1c74ae37f82d3ee9b65439846c1ae28413a6070182ce475293aefa165d2b65f"
+    },
+    {
+      "block_id": "page-0950-block-0030",
+      "order": 30,
+      "text": "■\n■communicate their decision (by talking, using sign language or any other means).\n",
+      "bbox": [
+        48.03929901123047,
+        571.8770751953125,
+        405.9643859863281,
+        583.5971069335938
+      ],
+      "text_sha256": "99dfd985c55809eafc539f08fd28fb60e1e4e97225d5d4b66409bc01e0952a44"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

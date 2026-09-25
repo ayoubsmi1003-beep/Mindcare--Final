@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0502",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 502,
+  "source_page_index": 501,
+  "source_page_display": 502,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    481\nCHAPTER 4\nbeing wary of possible over-reporting. A person’s tolerance to methadone can be sig-\nnificantly reduced within 3–4 days of not using opioids, so caution must be exercised \nafter this time, with careful re-titration from a starting dose.\n■\n■Use of other central nervous system depressant drugs, e.g. alcohol, benzodiazepines \nand psychiatric medications such as pregabalin, increases risks of toxicity.\n■\n■Age - risk of drug-related death is increased by a factor of 2.9 in patients over 45.28\n■\n■Co-morbid physical health problems, e.g. COPD, result in low baseline oxygen \nsaturation.\n■\n■Long half-life of methadone, as cumulative toxicity, may develop over the course of \n3–10 days.29,30 For this reason, a patient should be reviewed regularly for signs of \nintoxication and the dose must be omitted if there is any sign of drowsiness or other \nevidence of toxicity.\n■\n■Inappropriate dosing can result in fatal overdose, particularly in the first few \ndays.24,25,31,32 Deaths have occurred following the commencement of a daily dose of \nless than 30mg methadone.1\nIt is safer to start with a low dose that can subsequently be increased at intervals if \nthis dose later proves to be insufficient. Direct conversion tables for opioids and metha-\ndone should be viewed cautiously, as there are a number of factors influencing the \nvalues at any given time, e.g. changes in quality of street heroin. It is much safer to \ntitrate the dose against presenting withdrawal symptoms.\nThe initial total daily dose for most cases will be in the range of 10–30mg methadone \ndepending on the level of tolerance.1,33 If this level is uncertain, 10–20mg is recom-\nmended. In an acute medical or psychiatric ward, starting doses of up to 20mg daily are \nusually recommended, as patients in these settings are likely to be physically unwell in \nthe former, or being treated with various other psychoactive drugs in the latter case.\nNote: The onset of action should be evident within half an hour, with peak plasma \nlevels being achieved after approximately 2–4 hours of dosing.\nMethadone induction and stabilisation in the community\nThis applies to patients who have not been on a prescription in the previous 3 days \n(including those who have been on OST and not picked up their prescription for 3 \ndays). The initial 2 weeks of treatment with methadone are associated with a substan-\ntially increased risk of overdose mortality.1,23,34–36 It is important that appropriate assess-\nment, titration of doses and monitoring are performed during this period. Induction is \nusually undertaken in specialist services by those with appropriate competencies and \nafter a full assessment with urine toxicology and clear evidence of opioid use and \nwithdrawal.\n■\n■First week\nOutpatients should attend up to 3 times per week to enable assessment by the pre-\nscriber and any dose titration against withdrawal symptoms. Dose increases should not \nexceed 5–10mg on each occasion and not usually more than 30mg in the first week \nabove the initial starting dose.33 Note that steady-state plasma levels are only achieved \n",
+  "raw_text_sha256": "d29024fb50a1b0c40518f5e56a0da238d7de8deb21f1462e78acc703f148c32d",
+  "coordinates_sha256": "ed1092b4721764d84f1189a23fa359f6d866108299b5a35e1f7d0f85f199a93b",
+  "block_sequence_sha256": "8c2ebdb06fe8adde20eb67f91a8b9508813fee2edaecac98d2b9ea9e5c311cc7",
+  "blocks": [
+    {
+      "block_id": "page-0502-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    481\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "71d4b24ec01fa545b6756a28800dbc9b1747ffd21882a534360f68e5887652c9"
+    },
+    {
+      "block_id": "page-0502-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0502-block-0002",
+      "order": 2,
+      "text": "being wary of possible over-reporting. A person’s tolerance to methadone can be sig-\nnificantly reduced within 3–4 days of not using opioids, so caution must be exercised \nafter this time, with careful re-titration from a starting dose.\n",
+      "bbox": [
+        57.0,
+        62.5504150390625,
+        422.79998779296875,
+        98.27041625976562
+      ],
+      "text_sha256": "8f8769cdb3bf07f041ba1333246c4730b0336930ab8807bfabbe7c29b14beea1"
+    },
+    {
+      "block_id": "page-0502-block-0003",
+      "order": 3,
+      "text": "■\n■Use of other central nervous system depressant drugs, e.g. alcohol, benzodiazepines \n",
+      "bbox": [
+        47.999900817871094,
+        98.5504150390625,
+        422.8099670410156,
+        110.27041625976562
+      ],
+      "text_sha256": "fae34530764426b9ebcd3b22791730b32cf6260b2ea794a769e3ebfa56a22ee4"
+    },
+    {
+      "block_id": "page-0502-block-0004",
+      "order": 4,
+      "text": "and psychiatric medications such as pregabalin, increases risks of toxicity.\n",
+      "bbox": [
+        57.0,
+        110.5504150390625,
+        374.6600036621094,
+        122.27041625976562
+      ],
+      "text_sha256": "ff758decfa3a612c7ba5819fdefb2df67d8fdf67ed952fd6602e2fcd1c09bb92"
+    },
+    {
+      "block_id": "page-0502-block-0005",
+      "order": 5,
+      "text": "■\n■Age - risk of drug-related death is increased by a factor of 2.9 in patients over 45.28\n",
+      "bbox": [
+        47.999900817871094,
+        122.5504150390625,
+        415.20977783203125,
+        134.27041625976562
+      ],
+      "text_sha256": "00c36d3f27185389ecad4a2f59116653bfd4e995e61ffd99b6304940a6955555"
+    },
+    {
+      "block_id": "page-0502-block-0006",
+      "order": 6,
+      "text": "■\n■Co-morbid physical health problems, e.g. COPD, result in low baseline oxygen \n",
+      "bbox": [
+        47.999900817871094,
+        134.5504150390625,
+        422.7499084472656,
+        146.27041625976562
+      ],
+      "text_sha256": "90ec7751dc508f7f6b2e6c9e42779da142ba09baa541f9cfe40465ad52f11936"
+    },
+    {
+      "block_id": "page-0502-block-0007",
+      "order": 7,
+      "text": "saturation.\n",
+      "bbox": [
+        57.0,
+        146.5504150390625,
+        103.67999267578125,
+        158.27041625976562
+      ],
+      "text_sha256": "30cc6131b08bf7902f1e1f33f700b72760991259605da0a3178ce64527dbb2cc"
+    },
+    {
+      "block_id": "page-0502-block-0008",
+      "order": 8,
+      "text": "■\n■Long half-life of methadone, as cumulative toxicity, may develop over the course of \n",
+      "bbox": [
+        47.999900817871094,
+        158.5504150390625,
+        422.7699279785156,
+        170.27041625976562
+      ],
+      "text_sha256": "e5cf02b35391a6842a77205c63fcd293fefa36946a1df5e3e75d359a43999924"
+    },
+    {
+      "block_id": "page-0502-block-0009",
+      "order": 9,
+      "text": "3–10 days.29,30 For this reason, a patient should be reviewed regularly for signs of \nintoxication and the dose must be omitted if there is any sign of drowsiness or other \nevidence of toxicity.\n",
+      "bbox": [
+        56.997798919677734,
+        170.5504150390625,
+        422.77789306640625,
+        206.27047729492188
+      ],
+      "text_sha256": "afa4443e3c96c3114d85eb9480c0fe5476f947ec452d360598b185cb87866993"
+    },
+    {
+      "block_id": "page-0502-block-0010",
+      "order": 10,
+      "text": "■\n■Inappropriate dosing can result in fatal overdose, particularly in the first few \n",
+      "bbox": [
+        47.999900817871094,
+        206.55047607421875,
+        422.8100280761719,
+        218.27047729492188
+      ],
+      "text_sha256": "6c3553119ec98dd25adbb91a393d8c8371306eac6862ff74683c5c474c2cf191"
+    },
+    {
+      "block_id": "page-0502-block-0011",
+      "order": 11,
+      "text": "days.24,25,31,32 Deaths have occurred following the commencement of a daily dose of \nless than 30mg methadone.1\n",
+      "bbox": [
+        57.0,
+        218.55047607421875,
+        422.7439270019531,
+        242.27047729492188
+      ],
+      "text_sha256": "e6bd677c54619c8709fca936ff0f2f01c9085073ffb2ad340aca05e187afc5fe"
+    },
+    {
+      "block_id": "page-0502-block-0012",
+      "order": 12,
+      "text": "It is safer to start with a low dose that can subsequently be increased at intervals if \nthis dose later proves to be insufficient. Direct conversion tables for opioids and metha-\ndone should be viewed cautiously, as there are a number of factors influencing the \nvalues at any given time, e.g. changes in quality of street heroin. It is much safer to \ntitrate the dose against presenting withdrawal symptoms.\n",
+      "bbox": [
+        48.0,
+        248.55047607421875,
+        422.7799377441406,
+        308.2704772949219
+      ],
+      "text_sha256": "3a6f6cfd840898f9b79080662990bd2d14eb89245de85d94235bc3ae9a664cdb"
+    },
+    {
+      "block_id": "page-0502-block-0013",
+      "order": 13,
+      "text": "The initial total daily dose for most cases will be in the range of 10–30mg methadone \ndepending on the level of tolerance.1,33 If this level is uncertain, 10–20mg is recom-\nmended. In an acute medical or psychiatric ward, starting doses of up to 20mg daily are \nusually recommended, as patients in these settings are likely to be physically unwell in \nthe former, or being treated with various other psychoactive drugs in the latter case.\n",
+      "bbox": [
+        48.0,
+        308.31048583984375,
+        422.82232666015625,
+        368.2704772949219
+      ],
+      "text_sha256": "aa1dcfe946c1a68ce938fe2fc9d124281c48e77340aecdae320680b1c1eae57a"
+    },
+    {
+      "block_id": "page-0502-block-0014",
+      "order": 14,
+      "text": "Note: The onset of action should be evident within half an hour, with peak plasma \nlevels being achieved after approximately 2–4 hours of dosing.\n",
+      "bbox": [
+        48.00239562988281,
+        368.55047607421875,
+        422.8223571777344,
+        392.2704772949219
+      ],
+      "text_sha256": "703c6e8ec497e6ed67c731e1f9c04c1897171448b03f66358ac347d80c592dae"
+    },
+    {
+      "block_id": "page-0502-block-0015",
+      "order": 15,
+      "text": "Methadone induction and stabilisation in the community\n",
+      "bbox": [
+        48.00239562988281,
+        410.6404724121094,
+        315.8123779296875,
+        422.490478515625
+      ],
+      "text_sha256": "33ade281489ef7583e69dc585aad30cd6294ea01df98c77943a9b8ef6a7fa4c4"
+    },
+    {
+      "block_id": "page-0502-block-0016",
+      "order": 16,
+      "text": "This applies to patients who have not been on a prescription in the previous 3 days \n(including those who have been on OST and not picked up their prescription for 3 \ndays). The initial 2 weeks of treatment with methadone are associated with a substan-\ntially increased risk of overdose mortality.1,23,34–36 It is important that appropriate assess-\nment, titration of doses and monitoring are performed during this period. Induction is \nusually undertaken in specialist services by those with appropriate competencies and \nafter a full assessment with urine toxicology and clear evidence of opioid use and \nwithdrawal.\n",
+      "bbox": [
+        48.00239562988281,
+        428.55047607421875,
+        422.83233642578125,
+        524.2705078125
+      ],
+      "text_sha256": "87a7654fe6b7a15210870ccfa7ac0bc0aa6092963b6d6057cf8a1954bdc37b06"
+    },
+    {
+      "block_id": "page-0502-block-0017",
+      "order": 17,
+      "text": "■\n■First week\n",
+      "bbox": [
+        47.999900817871094,
+        536.3104858398438,
+        101.21000671386719,
+        548.2705078125
+      ],
+      "text_sha256": "19ed86d48a0c8981208c75289fcbb122a10f0ca1b46d2746e33c797ad5b4c02d"
+    },
+    {
+      "block_id": "page-0502-block-0018",
+      "order": 18,
+      "text": "Outpatients should attend up to 3 times per week to enable assessment by the pre-\nscriber and any dose titration against withdrawal symptoms. Dose increases should not \nexceed 5–10mg on each occasion and not usually more than 30mg in the first week \nabove the initial starting dose.33 Note that steady-state plasma levels are only achieved \n",
+      "bbox": [
+        48.0,
+        554.5504760742188,
+        422.7689514160156,
+        602.2705078125
+      ],
+      "text_sha256": "7023ea55db5befb47d8525e20887368c66309f614e670cc8b1e0c3e59be9ce5c"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,431 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0878",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 878,
+  "source_page_index": 877,
+  "source_page_display": 878,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Pharmacokinetics    857\nCHAPTER 11\n(Continued)\nDrug\nEffect of smoking\nAction to be taken on \nstopping smoking\nAction to be taken on \nre-starting\nDoxepin2,16\nPlasma levels reduced by \naround 25% (levels of \nnordoxepin metabolite \nincreased)\nMonitor closely\nDose may need to be \nreduced\nConsider reintroducing \nprevious dose\nDuloxetine17,18\nPlasma levels may be \nreduced by up to 50%\nMonitor closely\nDose may need to be \nreduced\nConsider reintroducing \nprevious smoking dose\nEscitalopram19\nIn practice smokers have \nlower blood levels despite \nbeing given higher doses\nReduction in levels may be \nup to 50% (possibly via \ninduction of CYP2C19)\nMonitor closely\nConsider 25% dose \nreduction\nMonitor closely\nReinstate smoking dose\nFluphenazine20\nReduces plasma levels by \nup to 50%\nOn stopping, reduce dose \nby 25%. Monitor carefully \nover following 4–8 weeks. \nConsider further dose \nreductions\nOn re-starting, increase \ndose to previous smoking \ndose\nFluvoxamine21\nPlasma levels decreased \nby around a third\nMonitor closely\nDose may need to be \nreduced\nDose may need to be \nincreased to previous level\nHaloperidol22,23\nReduces plasma levels by \naround 25–50%\nReduce dose by around \n25%. Monitor carefully. \nConsider further dose \nreductions\nOn re-starting, increase \ndose to previous smoking \ndose\nLoxapine24 (inhaled)\nHalf-life reduced from \n15.7 hours to 13.6 hours\nMonitor\nMonitor\nMirtazapine25\nUnclear, but effect \nprobably minimal\nMonitor\nMonitor\nOlanzapine13,26–29\nReduces plasma levels by \nup to 50%\nTake plasma level before \nstopping. On stopping, \nreduce dose by 25%. \nAfter one week, repeat \nplasma level. Consider \nfurther dose reductions\nTake plasma level before \nrestarting. Increase dose to \nprevious smoking dose over \none week. Repeat plasma \nlevel\nRisperidone/\npaliperidone2,30\nActive moiety \nconcentrations probably \nlower in smokers\nMinor effect\n(possibly via induction of \nCYP3A4)\nMonitor closely\nMonitor closely\n(Continued)\n",
+  "raw_text_sha256": "eb45d30bd33c2a3e9503af2fb02b9791676e7274bc08914e3ceeeb3b006d5fff",
+  "coordinates_sha256": "27105f26790376507bb501b9fb5d55788560a4d488e91211bb96d7b1ed16161d",
+  "block_sequence_sha256": "218ac27cf127c00894fc973c2d64e50a3f608615c208fded9a8b8c205e3407f3",
+  "blocks": [
+    {
+      "block_id": "page-0878-block-0000",
+      "order": 0,
+      "text": "Pharmacokinetics    857\n",
+      "bbox": [
+        320.4088134765625,
+        31.395221710205078,
+        420.00079345703125,
+        41.0272216796875
+      ],
+      "text_sha256": "5d908a60ade57bc0678c79ddf8dd349c77f52ad2341e657659cb362720c8f64e"
+    },
+    {
+      "block_id": "page-0878-block-0001",
+      "order": 1,
+      "text": "CHAPTER 11\n",
+      "bbox": [
+        454.4096984863281,
+        140.99053955078125,
+        463.88970947265625,
+        186.78250122070312
+      ],
+      "text_sha256": "8577f8a61d9be9d957b7354680b21b61adb6e8c4601aaa9be76ccc79360dc7f3"
+    },
+    {
+      "block_id": "page-0878-block-0002",
+      "order": 2,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.9856872558594,
+        601.3123168945312,
+        420.0006408691406,
+        610.0648193359375
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0878-block-0003",
+      "order": 3,
+      "text": "Drug\nEffect of smoking\n",
+      "bbox": [
+        48.0,
+        92.21290588378906,
+        198.06752014160156,
+        101.10040283203125
+      ],
+      "text_sha256": "9da7fc4de71a795389f58ca235293e704b09cf68c335e77c690c03fc4468b02b"
+    },
+    {
+      "block_id": "page-0878-block-0004",
+      "order": 4,
+      "text": "Action to be taken on \nstopping smoking\n",
+      "bbox": [
+        232.739990234375,
+        82.21540832519531,
+        311.5049743652344,
+        101.10040283203125
+      ],
+      "text_sha256": "4ff275b21bb2b46154e99edfcc4d95c0d307f205fba87551f69b1ebd44ac1581"
+    },
+    {
+      "block_id": "page-0878-block-0005",
+      "order": 5,
+      "text": "Action to be taken on \nre-starting\n",
+      "bbox": [
+        329.3699951171875,
+        82.21540832519531,
+        408.13494873046875,
+        101.10040283203125
+      ],
+      "text_sha256": "2b3858c5f02ff7e10d30e5b9be0407e9b489a6b58851565cbf14c7b3c57beddb"
+    },
+    {
+      "block_id": "page-0878-block-0006",
+      "order": 6,
+      "text": "Doxepin2,16\nPlasma levels reduced by \naround 25% (levels of \nnordoxepin metabolite \nincreased)\n",
+      "bbox": [
+        48.0,
+        110.34040832519531,
+        216.81019592285156,
+        149.2178955078125
+      ],
+      "text_sha256": "be2ca1764c38a2286dddd801a878e9cef5b539fc641a24753d9f0c3e946a7bd2"
+    },
+    {
+      "block_id": "page-0878-block-0007",
+      "order": 7,
+      "text": "Monitor closely\nDose may need to be \nreduced\n",
+      "bbox": [
+        232.74020385742188,
+        110.5103988647461,
+        302.7602233886719,
+        139.212890625
+      ],
+      "text_sha256": "89dbec5dbf28ba75b8a45557c9655aa7bf7412513cdda926f836a107af10e3da"
+    },
+    {
+      "block_id": "page-0878-block-0008",
+      "order": 8,
+      "text": "Consider reintroducing \nprevious dose\n",
+      "bbox": [
+        329.3702087402344,
+        110.50289154052734,
+        404.5353088378906,
+        129.2078857421875
+      ],
+      "text_sha256": "7a0b1b261099520cb41816681286b06d79e2c24faef7b0f83e965a6ae97489dd"
+    },
+    {
+      "block_id": "page-0878-block-0009",
+      "order": 9,
+      "text": "Duloxetine17,18\nPlasma levels may be \nreduced by up to 50%\n",
+      "bbox": [
+        48.000213623046875,
+        158.44288635253906,
+        208.50021362304688,
+        177.347900390625
+      ],
+      "text_sha256": "868055ea8877938f01e39a5b8e7af830bca7c104eebbb63b5f46d32bc3f3be95"
+    },
+    {
+      "block_id": "page-0878-block-0010",
+      "order": 10,
+      "text": "Monitor closely\nDose may need to be \nreduced\n",
+      "bbox": [
+        232.74020385742188,
+        158.6428985595703,
+        302.7602233886719,
+        187.34539794921875
+      ],
+      "text_sha256": "89dbec5dbf28ba75b8a45557c9655aa7bf7412513cdda926f836a107af10e3da"
+    },
+    {
+      "block_id": "page-0878-block-0011",
+      "order": 11,
+      "text": "Consider reintroducing \nprevious smoking dose\n",
+      "bbox": [
+        329.3702087402344,
+        158.63539123535156,
+        404.5353088378906,
+        177.34039306640625
+      ],
+      "text_sha256": "d18f8f3420c1ea599d9e03146387430047df4ec8cbfd3330f644af499131b805"
+    },
+    {
+      "block_id": "page-0878-block-0012",
+      "order": 12,
+      "text": "Escitalopram19\nIn practice smokers have \nlower blood levels despite \nbeing given higher doses\nReduction in levels may be \nup to 50% (possibly via \ninduction of CYP2C19)\n",
+      "bbox": [
+        48.000213623046875,
+        196.57789611816406,
+        222.78768920898438,
+        255.462890625
+      ],
+      "text_sha256": "77bd8df2291a1421b4452bbd78efa47ea11fe5c0cf40b600d0536b87cd849d72"
+    },
+    {
+      "block_id": "page-0878-block-0013",
+      "order": 13,
+      "text": "Monitor closely\nConsider 25% dose \nreduction\n",
+      "bbox": [
+        232.74020385742188,
+        196.7528839111328,
+        298.18524169921875,
+        225.45538330078125
+      ],
+      "text_sha256": "fa1e18b7778008e26b2c35f6c9f2da086e2b3faef8c9f795d5b48b1fa6b9597e"
+    },
+    {
+      "block_id": "page-0878-block-0014",
+      "order": 14,
+      "text": "Monitor closely\nReinstate smoking dose\n",
+      "bbox": [
+        329.3702087402344,
+        196.74537658691406,
+        404.8053283691406,
+        215.45037841796875
+      ],
+      "text_sha256": "536eb095552fb56bfc3cf881db78ecd19347c98d25452e7025a06f93ebb40bae"
+    },
+    {
+      "block_id": "page-0878-block-0015",
+      "order": 15,
+      "text": "Fluphenazine20\nReduces plasma levels by \nup to 50%\n",
+      "bbox": [
+        48.000213623046875,
+        264.6878662109375,
+        217.78518676757812,
+        283.597900390625
+      ],
+      "text_sha256": "352dc423f62398a5d953c5aa9b8d0f57184579527b86fca15d7f230545e5c197"
+    },
+    {
+      "block_id": "page-0878-block-0016",
+      "order": 16,
+      "text": "On stopping, reduce dose \nby 25%. Monitor carefully \nover following 4–8 weeks. \nConsider further dose \nreductions\n",
+      "bbox": [
+        232.74020385742188,
+        264.8929138183594,
+        319.01275634765625,
+        313.59039306640625
+      ],
+      "text_sha256": "ab1cb7910f060c4911f59e5d6b2df427cca006df26bf4646938c80633046a71d"
+    },
+    {
+      "block_id": "page-0878-block-0017",
+      "order": 17,
+      "text": "On re-starting, increase \ndose to previous smoking \ndose\n",
+      "bbox": [
+        329.3702087402344,
+        264.8854064941406,
+        413.01031494140625,
+        293.587890625
+      ],
+      "text_sha256": "b419c61f2d7274a0bc9fa1ccb1bee4ec5d642678bc88bbcc2b19cefd55ce98aa"
+    },
+    {
+      "block_id": "page-0878-block-0018",
+      "order": 18,
+      "text": "Fluvoxamine21\nPlasma levels decreased \nby around a third\n",
+      "bbox": [
+        48.000213623046875,
+        322.8228759765625,
+        213.47268676757812,
+        341.722900390625
+      ],
+      "text_sha256": "1aefb78c8dc62defd199bfee07aec133735cb5c2f5611d2d65d4394d5b07459a"
+    },
+    {
+      "block_id": "page-0878-block-0019",
+      "order": 19,
+      "text": "Monitor closely\nDose may need to be \nreduced\n",
+      "bbox": [
+        232.74020385742188,
+        323.0179138183594,
+        302.7602233886719,
+        351.72039794921875
+      ],
+      "text_sha256": "89dbec5dbf28ba75b8a45557c9655aa7bf7412513cdda926f836a107af10e3da"
+    },
+    {
+      "block_id": "page-0878-block-0020",
+      "order": 20,
+      "text": "Dose may need to be \nincreased to previous level\n",
+      "bbox": [
+        329.3702087402344,
+        323.0104064941406,
+        412.8527526855469,
+        341.71539306640625
+      ],
+      "text_sha256": "5765bf06b371378532cf675dda5b3855712e200e74ccea0fa463a3c2eaa7e311"
+    },
+    {
+      "block_id": "page-0878-block-0021",
+      "order": 21,
+      "text": "Haloperidol22,23\nReduces plasma levels by \naround 25–50%\n",
+      "bbox": [
+        48.000213623046875,
+        360.952880859375,
+        217.78518676757812,
+        379.847900390625
+      ],
+      "text_sha256": "6e15087da4bd19c8526a2476bd5eb1f5836a61f2105c35f8262d498066e441f5"
+    },
+    {
+      "block_id": "page-0878-block-0022",
+      "order": 22,
+      "text": "Reduce dose by around \n25%. Monitor carefully. \nConsider further dose \nreductions\n",
+      "bbox": [
+        232.74020385742188,
+        361.1429138183594,
+        310.6727294921875,
+        399.8428955078125
+      ],
+      "text_sha256": "a86212f559075276afaf97a9192bc62c92f584fbd9fc9f27954b3d837e9e7f79"
+    },
+    {
+      "block_id": "page-0878-block-0023",
+      "order": 23,
+      "text": "On re-starting, increase \ndose to previous smoking \ndose\n",
+      "bbox": [
+        329.3702087402344,
+        361.1354064941406,
+        413.01031494140625,
+        389.837890625
+      ],
+      "text_sha256": "b419c61f2d7274a0bc9fa1ccb1bee4ec5d642678bc88bbcc2b19cefd55ce98aa"
+    },
+    {
+      "block_id": "page-0878-block-0024",
+      "order": 24,
+      "text": "Loxapine24 (inhaled)\nHalf-life reduced from \n15.7 hours to 13.6 hours\nMonitor\nMonitor\n",
+      "bbox": [
+        48.000213623046875,
+        409.07537841796875,
+        355.2095642089844,
+        427.972900390625
+      ],
+      "text_sha256": "2f72677117acad4b4768d86ecb65a68d53463adabce37c1a61c7f1495655ca30"
+    },
+    {
+      "block_id": "page-0878-block-0025",
+      "order": 25,
+      "text": "Mirtazapine25\nUnclear, but effect \nprobably minimal\n",
+      "bbox": [
+        48.00201416015625,
+        437.212890625,
+        196.95021057128906,
+        456.097900390625
+      ],
+      "text_sha256": "5b3320c3c0e6fd19310b19015d9da2fd9315703529cfb44fe88029ccff0ca0f2"
+    },
+    {
+      "block_id": "page-0878-block-0026",
+      "order": 26,
+      "text": "Monitor\nMonitor\n",
+      "bbox": [
+        232.74020385742188,
+        437.3929138183594,
+        355.207763671875,
+        446.10040283203125
+      ],
+      "text_sha256": "41b2e661f583d92221be255e83013d9afc5ef120db56ede9c1cf4f8e6d49ad76"
+    },
+    {
+      "block_id": "page-0878-block-0027",
+      "order": 27,
+      "text": "Olanzapine13,26–29\nReduces plasma levels by \nup to 50%\n",
+      "bbox": [
+        48.000213623046875,
+        465.337890625,
+        217.78518676757812,
+        484.222900390625
+      ],
+      "text_sha256": "5fc0777e22e3541955d81532d9ec541770cd2ecda50dbe88466bf817b66f023b"
+    },
+    {
+      "block_id": "page-0878-block-0028",
+      "order": 28,
+      "text": "Take plasma level before \nstopping. On stopping, \nreduce dose by 25%. \nAfter one week, repeat \nplasma level. Consider \nfurther dose reductions\n",
+      "bbox": [
+        232.74020385742188,
+        465.5179138183594,
+        312.6076965332031,
+        524.212890625
+      ],
+      "text_sha256": "bd92bb68360eb399ff43601236e93dd9053f00e1c9cc5d0393ca7e554f074a84"
+    },
+    {
+      "block_id": "page-0878-block-0029",
+      "order": 29,
+      "text": "Take plasma level before \nrestarting. Increase dose to \nprevious smoking dose over \none week. Repeat plasma \nlevel\n",
+      "bbox": [
+        329.3702087402344,
+        465.5028991699219,
+        420.0903015136719,
+        514.2003784179688
+      ],
+      "text_sha256": "85c8971336414f9ec8beae39d1f41836a1d2303e8bfe2e91c031b77faa41f075"
+    },
+    {
+      "block_id": "page-0878-block-0030",
+      "order": 30,
+      "text": "Risperidone/\npaliperidone2,30\n",
+      "bbox": [
+        48.000213623046875,
+        533.4378662109375,
+        101.10346984863281,
+        552.3228759765625
+      ],
+      "text_sha256": "7327643f705295048d15d0c78b20cdfeb669c322ecdc5f47663a885678163cd3"
+    },
+    {
+      "block_id": "page-0878-block-0031",
+      "order": 31,
+      "text": "Active moiety \nconcentrations probably \nlower in smokers\nMinor effect\n(possibly via induction of \nCYP3A4)\n",
+      "bbox": [
+        136.11019897460938,
+        533.6428833007812,
+        216.96017456054688,
+        592.337890625
+      ],
+      "text_sha256": "b65c43a8668b72ff37548251d3f6f1c927a52e72c138b38df0860a486b95a67e"
+    },
+    {
+      "block_id": "page-0878-block-0032",
+      "order": 32,
+      "text": "Monitor closely\nMonitor closely\n",
+      "bbox": [
+        232.74020385742188,
+        533.6278686523438,
+        378.1202697753906,
+        542.3353881835938
+      ],
+      "text_sha256": "1b69a1ca2c69c12a7e283695fa536ded34741d938686d96a7ca8441e46a94cae"
+    },
+    {
+      "block_id": "page-0878-block-0033",
+      "order": 33,
+      "text": "(Continued)\n",
+      "bbox": [
+        48.112701416015625,
+        63.100406646728516,
+        84.1277084350586,
+        71.8529052734375
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

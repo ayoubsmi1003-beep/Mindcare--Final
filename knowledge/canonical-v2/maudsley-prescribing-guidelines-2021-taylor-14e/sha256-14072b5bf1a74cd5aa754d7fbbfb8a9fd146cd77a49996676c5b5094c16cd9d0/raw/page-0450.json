@@ -1,0 +1,455 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0450",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 450,
+  "source_page_index": 449,
+  "source_page_display": 450,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    429\nCHAPTER 3\nBox 3.7  Obsessive compulsive disorder\nFirst-line drug treatment (In order of preference)\nDrug\nComments\nAny SSRI39\n(Up to maximum licensed dose\nIf the first SSRI is not tolerated or has a poor response an \nalternative SSRI may be tried29\nClomipramine\n(Up to 250mg)\nOwing to poorer tolerability, recommended trying at least one SSRI \nfirst29\nSecond-line drug treatment (Unlicensed or weaker evidence base)\nAdd antipsychotic to SSRI\n(Low to moderate doses of \nantipsychotics used in studies)100,101\nMost evidence supports the use of aripiprazole or risperidone.100 \nSome evidence for haloperidol101\nCitalopram\n40mg with clomipramine 150mg\nBased on small randomised open label study102 Recommended by \nNICE29\nECG monitoring required\nAcetylcysteine103\nup to 2400mg/day added to SRRI or \nclomipramine\nGastrointestinal adverse effects may be problematic. Two of five \ncontrolled studies negative. Pooled effect shows benefit104\nLamotrigine\n100mg + added to SSRI105\nLamotrigine dose must be titrated gradually as indicated in the SPC\nMay worsen OCD in some106\nTopiramate\nup to 400mg added to SSRI107,108\nTopiramate is not well tolerated, suggested benefits for compulsion \nbut not obsessions.107 Two trials found topiramate ineffective109,110\nExperimental\nHigh dose SSRI:\nEscitalopram\n25–50mg111\nSertraline\n250–400mg112\nDose titrated gradually according to tolerability. ECG monitoring \nrecommended\nMemantine\nGood evidence for 20mg/day added to SSRIs113\nNSAIDS\nEg celecoxib 400mg/day\nSome supporting evidence110\nAmantadine\n200mg/day\nOne positive RCT114\nSNRIs\nVenlafaxine\nup to 375mg115\nDuloxetine\n60mg116\nMirtazapine\n30–60mg117\nSmall trial in 30 patients\n5HT3 antagonists\nGranisetron\n1mg with fluvoxamine 200mg118\nOndansetron\n4mg with fluoxetine 20mg119\nSome evidence for each drug but ondansetron may be the more \neffective120\n(Continued)\n",
+  "raw_text_sha256": "89f544a9b865a6041b82b5b87b8cf346a20f5f829dfdac0a12bb05f243c42a26",
+  "coordinates_sha256": "ef9b84cca90131d3d54ef5946d24700b65aff6cb9ee6197ee64610fd124c801b",
+  "block_sequence_sha256": "9fdab81ea71f6a123bc27bed2504036e86be2325234a680017070937926d98a8",
+  "blocks": [
+    {
+      "block_id": "page-0450-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    429\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "7bc44b5f70395d6fb7de781f9e210036417c08fd5fee9844016e1b6564eeb0c4"
+    },
+    {
+      "block_id": "page-0450-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0450-block-0002",
+      "order": 2,
+      "text": "Box 3.7  Obsessive compulsive disorder\n",
+      "bbox": [
+        55.25,
+        69.32788848876953,
+        197.7270050048828,
+        79.400390625
+      ],
+      "text_sha256": "9bd522e2ef922fcb8d54ed036f9dafd1f8414f4855ff2272f45fa602b3be3324"
+    },
+    {
+      "block_id": "page-0450-block-0003",
+      "order": 3,
+      "text": "First-line drug treatment (In order of preference)\n",
+      "bbox": [
+        55.25,
+        91.21290588378906,
+        217.65501403808594,
+        100.10040283203125
+      ],
+      "text_sha256": "7860decf459493484c06f47273479d01ae0545e1854c82910b103b368e1f2756"
+    },
+    {
+      "block_id": "page-0450-block-0004",
+      "order": 4,
+      "text": "Drug\nComments\n",
+      "bbox": [
+        55.25,
+        106.23542785644531,
+        234.86000061035156,
+        115.1229248046875
+      ],
+      "text_sha256": "f0d3aba6cb5c63a8b3ce76553ca73a800f481925284fe7cc72b7ce3c93bfebe6"
+    },
+    {
+      "block_id": "page-0450-block-0005",
+      "order": 5,
+      "text": "Any SSRI39\n",
+      "bbox": [
+        55.25,
+        121.43795013427734,
+        88.03441619873047,
+        130.14544677734375
+      ],
+      "text_sha256": "463ceb238ddaab97f3de7aadc4d80df4c3c7f0efa7cc070b39b42a79e50c9b9b"
+    },
+    {
+      "block_id": "page-0450-block-0006",
+      "order": 6,
+      "text": "(Up to maximum licensed dose\n",
+      "bbox": [
+        55.25,
+        131.44288635253906,
+        153.5974884033203,
+        140.150390625
+      ],
+      "text_sha256": "5f373b1b7702eec90b3473e6f683d94c7da7ee88306cf73bc704f79386c5a23c"
+    },
+    {
+      "block_id": "page-0450-block-0007",
+      "order": 7,
+      "text": "If the first SSRI is not tolerated or has a poor response an \nalternative SSRI may be tried29\n",
+      "bbox": [
+        197.36000061035156,
+        121.44539642333984,
+        381.0126037597656,
+        140.150390625
+      ],
+      "text_sha256": "9ab0278cef75b40b5cb9d761fa951367c6e6c6e5b9a1bfe507df434142e4d088"
+    },
+    {
+      "block_id": "page-0450-block-0008",
+      "order": 8,
+      "text": "Clomipramine\n(Up to 250mg)\n",
+      "bbox": [
+        55.25,
+        146.46791076660156,
+        102.35748291015625,
+        165.17291259765625
+      ],
+      "text_sha256": "b11c1a9049eca537a000fea68988a0278230a6e2e1f327450e8cf15ecb646cb1"
+    },
+    {
+      "block_id": "page-0450-block-0009",
+      "order": 9,
+      "text": "Owing to poorer tolerability, recommended trying at least one SSRI \nfirst29\n",
+      "bbox": [
+        197.36000061035156,
+        146.46791076660156,
+        412.6700744628906,
+        165.17291259765625
+      ],
+      "text_sha256": "6ce8aff0ab46632463f1389c1ffddfde98f537568b644cc272eebf8d9055b47c"
+    },
+    {
+      "block_id": "page-0450-block-0010",
+      "order": 10,
+      "text": "Second-line drug treatment (Unlicensed or weaker evidence base)\n",
+      "bbox": [
+        55.25,
+        171.31288146972656,
+        273.9049987792969,
+        180.20037841796875
+      ],
+      "text_sha256": "5f95b7bd894530ffdf1a64371daa57681887098ca5e775259c80f6fec0279eea"
+    },
+    {
+      "block_id": "page-0450-block-0011",
+      "order": 11,
+      "text": "Add antipsychotic to SSRI\n(Low to moderate doses of \nantipsychotics used in studies)100,101\n",
+      "bbox": [
+        55.25,
+        186.51536560058594,
+        166.9008026123047,
+        215.21786499023438
+      ],
+      "text_sha256": "5de0ee1740491597c39fd0d4db42ce3fdabac07ad8a352ff67775abf239f6712"
+    },
+    {
+      "block_id": "page-0450-block-0012",
+      "order": 12,
+      "text": "Most evidence supports the use of aripiprazole or risperidone.100 \nSome evidence for haloperidol101\n",
+      "bbox": [
+        197.36000061035156,
+        186.5178985595703,
+        404.27117919921875,
+        205.222900390625
+      ],
+      "text_sha256": "41d415b62efd09670c752e5e6069073b307e6b9ba205e1a7057601f060ffd175"
+    },
+    {
+      "block_id": "page-0450-block-0013",
+      "order": 13,
+      "text": "Citalopram\n40mg with clomipramine 150mg\nBased on small randomised open label study102 Recommended by \nNICE29\n",
+      "bbox": [
+        55.25,
+        221.5428924560547,
+        408.037109375,
+        240.24789428710938
+      ],
+      "text_sha256": "48c27471770f16c5dc542665f816ca814cbe80484b57c2e9dae49dbe656f0c0a"
+    },
+    {
+      "block_id": "page-0450-block-0014",
+      "order": 14,
+      "text": "ECG monitoring required\n",
+      "bbox": [
+        197.360107421875,
+        241.5428924560547,
+        277.5201416015625,
+        250.25039672851562
+      ],
+      "text_sha256": "4f1110bdc32510ea9c71034854d9d07ad6dc8dd807b581956e83a9c582e893f3"
+    },
+    {
+      "block_id": "page-0450-block-0015",
+      "order": 15,
+      "text": "Acetylcysteine103\n",
+      "bbox": [
+        55.25010681152344,
+        256.5653991699219,
+        107.52742004394531,
+        265.27288818359375
+      ],
+      "text_sha256": "3f56afc9e8ed3957efa99293310d2eeabb96690e2c572517adff3e12618ae727"
+    },
+    {
+      "block_id": "page-0450-block-0016",
+      "order": 16,
+      "text": "up to 2400mg/day added to SRRI or \nclomipramine\n",
+      "bbox": [
+        55.250099182128906,
+        266.5679016113281,
+        172.3850860595703,
+        285.27288818359375
+      ],
+      "text_sha256": "4f7266b0258b3992009db80a93e0c492bca0cb8a339014c1bfa8facc1424d9a5"
+    },
+    {
+      "block_id": "page-0450-block-0017",
+      "order": 17,
+      "text": "Gastrointestinal adverse effects may be problematic. Two of five \ncontrolled studies negative. Pooled effect shows benefit104\n",
+      "bbox": [
+        197.360107421875,
+        256.5628967285156,
+        403.2875061035156,
+        275.26788330078125
+      ],
+      "text_sha256": "62fd1bcc0d81e46d21ac01b36a0a62a3f7fbd656d41179553edd7ea2b045f5ea"
+    },
+    {
+      "block_id": "page-0450-block-0018",
+      "order": 18,
+      "text": "Lamotrigine\n100mg + added to SSRI105\nLamotrigine dose must be titrated gradually as indicated in the SPC\nMay worsen OCD in some106\n",
+      "bbox": [
+        55.250099182128906,
+        291.5928955078125,
+        411.9652099609375,
+        310.2978820800781
+      ],
+      "text_sha256": "86d72e7088f11ccc036831f98f3777a46d9b1a2fd6dfc3d744b2457ca138f8e7"
+    },
+    {
+      "block_id": "page-0450-block-0019",
+      "order": 19,
+      "text": "Topiramate\nup to 400mg added to SSRI107,108\n",
+      "bbox": [
+        55.250099182128906,
+        316.6178894042969,
+        159.4243927001953,
+        335.3228759765625
+      ],
+      "text_sha256": "5d4a8a1a6a30a2661aa6527771bd48af5d21987c95ffbe75b147deeb4e5bfd6c"
+    },
+    {
+      "block_id": "page-0450-block-0020",
+      "order": 20,
+      "text": "Topiramate is not well tolerated, suggested benefits for compulsion \nbut not obsessions.107 Two trials found topiramate ineffective109,110\n",
+      "bbox": [
+        197.360107421875,
+        316.6178894042969,
+        414.477783203125,
+        335.32537841796875
+      ],
+      "text_sha256": "fc030bf91282c0d2dbe40c72acfa3a29d9f314bcbed2922b9af5cad1217c8d52"
+    },
+    {
+      "block_id": "page-0450-block-0021",
+      "order": 21,
+      "text": "Experimental\n",
+      "bbox": [
+        55.250099182128906,
+        341.462890625,
+        101.9375991821289,
+        350.35040283203125
+      ],
+      "text_sha256": "702e2f7671070157a0c2a6eb9d738ac3bfa6e376d61bff37dcfbbc7ca052d904"
+    },
+    {
+      "block_id": "page-0450-block-0022",
+      "order": 22,
+      "text": "High dose SSRI:\nEscitalopram\n25–50mg111\n",
+      "bbox": [
+        55.250099182128906,
+        356.4853820800781,
+        109.84257507324219,
+        385.3678894042969
+      ],
+      "text_sha256": "d6b3ad73b1e66b9b86bfb4ef0ffacd64cc1792b4a70501ae22671467b16427d0"
+    },
+    {
+      "block_id": "page-0450-block-0023",
+      "order": 23,
+      "text": "Sertraline\n250–400mg112\n",
+      "bbox": [
+        55.250099182128906,
+        386.66790771484375,
+        101.73081970214844,
+        405.3728942871094
+      ],
+      "text_sha256": "40720dee33cd61be38abfa1a3fd7b9d8e9c4582dd61595b522e57ea690415021"
+    },
+    {
+      "block_id": "page-0450-block-0024",
+      "order": 24,
+      "text": "Dose titrated gradually according to tolerability. ECG monitoring \nrecommended\n",
+      "bbox": [
+        197.360107421875,
+        356.66790771484375,
+        404.4652099609375,
+        375.3728942871094
+      ],
+      "text_sha256": "f7b6a88e7b32697dda1bea7c7ae6d15fbc3148c7a3b2c00ffc6cd0ae6c9dac8d"
+    },
+    {
+      "block_id": "page-0450-block-0025",
+      "order": 25,
+      "text": "Memantine\nGood evidence for 20mg/day added to SSRIs113\n",
+      "bbox": [
+        55.25010681152344,
+        411.6878967285156,
+        347.18988037109375,
+        420.3953857421875
+      ],
+      "text_sha256": "8baffe0423698fb600cfc218bbaa5c4bf3d41dd9a22cc48e207077151df52cf7"
+    },
+    {
+      "block_id": "page-0450-block-0026",
+      "order": 26,
+      "text": "NSAIDS\nEg celecoxib 400mg/day\n",
+      "bbox": [
+        55.250099182128906,
+        426.5378723144531,
+        132.76258850097656,
+        445.4228820800781
+      ],
+      "text_sha256": "c6fadee42924e694f5e49a5090cc7080d0199e78e2c824c857545822d69979fe"
+    },
+    {
+      "block_id": "page-0450-block-0027",
+      "order": 27,
+      "text": "Some supporting evidence110\n",
+      "bbox": [
+        197.360107421875,
+        426.7178955078125,
+        289.2527770996094,
+        435.4253845214844
+      ],
+      "text_sha256": "8af5479a0bad96c3f1a9add39e735276b9bfd37fe35a797c7627567ab00893ff"
+    },
+    {
+      "block_id": "page-0450-block-0028",
+      "order": 28,
+      "text": "Amantadine\n200mg/day\nOne positive RCT114\n",
+      "bbox": [
+        55.250099182128906,
+        451.7428894042969,
+        259.2453308105469,
+        470.4478759765625
+      ],
+      "text_sha256": "45c9659d0e203654282069c6d00513170754298e32db6c300a6ded2ed727f1ee"
+    },
+    {
+      "block_id": "page-0450-block-0029",
+      "order": 29,
+      "text": "SNRIs\nVenlafaxine\nup to 375mg115\n",
+      "bbox": [
+        55.250099182128906,
+        476.587890625,
+        104.64832305908203,
+        505.47039794921875
+      ],
+      "text_sha256": "ae6a0c97839db53b17902bcd6e4eca92611759d7aa7997dbb3e6acda79132278"
+    },
+    {
+      "block_id": "page-0450-block-0030",
+      "order": 30,
+      "text": "Duloxetine\n60mg116\n",
+      "bbox": [
+        55.250099182128906,
+        506.7679138183594,
+        89.42009735107422,
+        525.472900390625
+      ],
+      "text_sha256": "7caa04e32b335713d35c5eba81fcc812d25dc135a9efaf4f14e721cd0773b051"
+    },
+    {
+      "block_id": "page-0450-block-0031",
+      "order": 31,
+      "text": "Mirtazapine\n30–60mg117\nSmall trial in 30 patients\n",
+      "bbox": [
+        55.250099182128906,
+        531.7928466796875,
+        274.4450988769531,
+        550.4979248046875
+      ],
+      "text_sha256": "d811e3d182c47f009c0061a99aebd51152261bca9488e4ff6bc55070ad85673a"
+    },
+    {
+      "block_id": "page-0450-block-0032",
+      "order": 32,
+      "text": "5HT3 antagonists\nGranisetron\n1mg with fluvoxamine 200mg118\n",
+      "bbox": [
+        55.25010681152344,
+        556.640380859375,
+        159.2250213623047,
+        585.5228881835938
+      ],
+      "text_sha256": "829651e255e081aa3ccf3fccba9b0dbb6c430f565d4d5702a16b57b8e7470306"
+    },
+    {
+      "block_id": "page-0450-block-0033",
+      "order": 33,
+      "text": "Ondansetron\n4mg with fluoxetine 20mg119\n",
+      "bbox": [
+        55.250099182128906,
+        586.81787109375,
+        147.97511291503906,
+        605.5228881835938
+      ],
+      "text_sha256": "67d28911d31f74f1231b060757e7ae0c013be414832c075c68cd5ee8eea94ec1"
+    },
+    {
+      "block_id": "page-0450-block-0034",
+      "order": 34,
+      "text": "Some evidence for each drug but ondansetron may be the more \neffective120\n",
+      "bbox": [
+        197.360107421875,
+        556.81787109375,
+        404.63018798828125,
+        575.5228881835938
+      ],
+      "text_sha256": "7a3aa3370e8467a776fb4cdf65f57a62d0708e05f587312ede3379436eb84475"
+    },
+    {
+      "block_id": "page-0450-block-0035",
+      "order": 35,
+      "text": "(Continued)\n",
+      "bbox": [
+        376.4849853515625,
+        619.1228637695312,
+        412.49993896484375,
+        627.8753662109375
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

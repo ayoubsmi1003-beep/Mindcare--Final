@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0524",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 524,
+  "source_page_index": 523,
+  "source_page_display": 524,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    503\nCHAPTER 4\nNicotine and smoking cessation\nTobacco smoking is the leading preventable cause of illness and premature death world-\nwide. Smoking cessation interventions are clinically and cost-effective for people with \nand without a mental illness.\nIn the UK, NICE recommends that every person who smokes, including those receiv-\ning community and inpatient mental health care, should be offered support to stop \nsmoking; for people who are unable or are unwilling to give up, they should be pro-\nvided with treatment to temporarily abstain from smoking whilst they are in a hospital \nsetting.1\nIn those people wishing to make an attempt to give up smoking, there are three first-\nline stop smoking medications that are recommended by NICE: nicotine replacement \ntherapy (NRT), varenicline and bupropion, all of which at least double the chance of \nsuccessfully stopping. Quit rates can be increased further if the smoker is also provided \nwith behavioural support from a trained tobacco dependence treatment advisor.2\nThose people who are unwilling or feel unable to give up should be encouraged to \nminimise harm and substitute nicotine from tobacco cigarettes with either NRT or an \nelectronic cigarette (e-cigarette)/vaping device.3,4\nThe effectiveness of smoking cessation treatments appears not to be reduced in \npatients with a variety of mental health problems.5\nNicotine replacement therapy (NRT)\nNRT is licensed for smokers over the age of 12 to help those who want to stop smok-\ning, reduce before quitting or during a temporary period of enforced abstinence when \na person is unable to smoke. It is also indicated for pregnant and breastfeeding women \nattempting to stop smoking.\nThe aim of NRT in those stopping smoking is to assist the transition from cigarette \nsmoking to complete abstinence. This is achieved by temporarily replacing some of the \nnicotine obtained from tobacco cigarettes with NRT products and minimising nicotine \nwithdrawal symptoms and the motivation to smoke. People who have stopped smoking \ncan safely use NRT if they wish to continue using nicotine recreationally or to prevent \nrelapse back to smoking.\nNRT is a versatile stop-smoking medicine. There are currently eight licensed NRT \nproducts in the UK: transdermal patches, lozenges, gum, sublingual tablets, inhalator, \nnasal spray, mouth spray and oral strips.\nAll products are all General Sales List medicines and can be bought over the counter \n(in the UK). NRT is formulated for systemic absorption either through the skin in the \ncase of patches or the oral or nasal mucosa in the case of all the other products. This \nmeans that absorption of nicotine from NRT is much slower than nicotine from inhal-\ning a tobacco cigarette and the risk of becoming addicted to NRT is lower.6\nClinical effectiveness\nNRT is the most studied medication for smoking cessation. There have been over 150 \ntrials, including over 50,000 smokers. The odds ratio (OR) of abstinence for any form \nof NRT compared with placebo is 1.84. Combination NRT (i.e. combining two \n",
+  "raw_text_sha256": "0fe27fad660333244d3a6f8ec1660aa196cdab7efb4d990d7b058db03f644a24",
+  "coordinates_sha256": "cb6b7558e887eda536862ff76938b9cb248e10b438cc5db6b79ddb8099912d77",
+  "block_sequence_sha256": "944e6dbb4017a730b5f9c0a2fef21fa1e2e4ebf31ca285bec838d3c8a54757c8",
+  "blocks": [
+    {
+      "block_id": "page-0524-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    503\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "63439c5358225f17f1946e9845640abf9f388328c197e57a13dc49c98ad36c7e"
+    },
+    {
+      "block_id": "page-0524-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0524-block-0002",
+      "order": 2,
+      "text": "Nicotine and smoking cessation\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        218.17396545410156,
+        79.1004638671875
+      ],
+      "text_sha256": "ce99393ae70d4e58a17e9ce3338deac9e3f51450cf7c21fd13b025ed558d1956"
+    },
+    {
+      "block_id": "page-0524-block-0003",
+      "order": 3,
+      "text": "Tobacco smoking is the leading preventable cause of illness and premature death world-\nwide. Smoking cessation interventions are clinically and cost-effective for people with \nand without a mental illness.\n",
+      "bbox": [
+        48.0,
+        84.91046142578125,
+        422.77984619140625,
+        120.63046264648438
+      ],
+      "text_sha256": "975087931aae3845057fca6e75be1f7a7df8fd573c5bbd0a2f2128dc6bcfe50c"
+    },
+    {
+      "block_id": "page-0524-block-0004",
+      "order": 4,
+      "text": "In the UK, NICE recommends that every person who smokes, including those receiv-\ning community and inpatient mental health care, should be offered support to stop \nsmoking; for people who are unable or are unwilling to give up, they should be pro-\nvided with treatment to temporarily abstain from smoking whilst they are in a hospital \nsetting.1\n",
+      "bbox": [
+        48.0,
+        120.91046142578125,
+        422.7899475097656,
+        180.63046264648438
+      ],
+      "text_sha256": "494478081e5862e0f9f3db47d9219b9ea180719b1811d03e54b4b04db138ad5b"
+    },
+    {
+      "block_id": "page-0524-block-0005",
+      "order": 5,
+      "text": "In those people wishing to make an attempt to give up smoking, there are three first-\nline stop smoking medications that are recommended by NICE: nicotine replacement \ntherapy (NRT), varenicline and bupropion, all of which at least double the chance of \nsuccessfully stopping. Quit rates can be increased further if the smoker is also provided \nwith behavioural support from a trained tobacco dependence treatment advisor.2\n",
+      "bbox": [
+        48.0,
+        180.91049194335938,
+        422.81988525390625,
+        240.6304931640625
+      ],
+      "text_sha256": "dc61149c4110d9520b0b980ddb0ca84e90d9ed0c38d4ab5c50710b457eb682e4"
+    },
+    {
+      "block_id": "page-0524-block-0006",
+      "order": 6,
+      "text": "Those people who are unwilling or feel unable to give up should be encouraged to \nminimise harm and substitute nicotine from tobacco cigarettes with either NRT or an \nelectronic cigarette (e-cigarette)/vaping device.3,4\n",
+      "bbox": [
+        48.0,
+        240.91049194335938,
+        422.7600402832031,
+        276.6304931640625
+      ],
+      "text_sha256": "e91a5bbe61565d7b21c39968a8145060b57f9c45f7fd84161a3de46c919708ae"
+    },
+    {
+      "block_id": "page-0524-block-0007",
+      "order": 7,
+      "text": "The effectiveness of smoking cessation treatments appears not to be reduced in \npatients with a variety of mental health problems.5\n",
+      "bbox": [
+        48.0,
+        276.9104919433594,
+        422.76995849609375,
+        300.6304931640625
+      ],
+      "text_sha256": "9d42e9fd0b210c4a7b9cc8d1d0e89173cdf190f116d14eb02ba3ccf24a56b3cc"
+    },
+    {
+      "block_id": "page-0524-block-0008",
+      "order": 8,
+      "text": "Nicotine replacement therapy (NRT)\n",
+      "bbox": [
+        48.0,
+        318.06549072265625,
+        232.19496154785156,
+        331.1004943847656
+      ],
+      "text_sha256": "0a14f777cbee573836bb4a0dc2da226b3c3c72ad682dbedb7283f3acd59ad54c"
+    },
+    {
+      "block_id": "page-0524-block-0009",
+      "order": 9,
+      "text": "NRT is licensed for smokers over the age of 12 to help those who want to stop smok-\ning, reduce before quitting or during a temporary period of enforced abstinence when \na person is unable to smoke. It is also indicated for pregnant and breastfeeding women \nattempting to stop smoking.\n",
+      "bbox": [
+        48.0,
+        336.9104919433594,
+        422.8200378417969,
+        384.6304931640625
+      ],
+      "text_sha256": "e0edc9009b694b2ba594d69ea02086c192ee50eeaba7d702d25b53cc450be4d6"
+    },
+    {
+      "block_id": "page-0524-block-0010",
+      "order": 10,
+      "text": "The aim of NRT in those stopping smoking is to assist the transition from cigarette \nsmoking to complete abstinence. This is achieved by temporarily replacing some of the \nnicotine obtained from tobacco cigarettes with NRT products and minimising nicotine \nwithdrawal symptoms and the motivation to smoke. People who have stopped smoking \ncan safely use NRT if they wish to continue using nicotine recreationally or to prevent \nrelapse back to smoking.\n",
+      "bbox": [
+        48.0,
+        384.9104919433594,
+        422.7800598144531,
+        456.6304931640625
+      ],
+      "text_sha256": "8728002a1b64e00ac42d4f6ab682b54161de9556e6cf2f69080621292bbc7906"
+    },
+    {
+      "block_id": "page-0524-block-0011",
+      "order": 11,
+      "text": "NRT is a versatile stop-smoking medicine. There are currently eight licensed NRT \nproducts in the UK: transdermal patches, lozenges, gum, sublingual tablets, inhalator, \nnasal spray, mouth spray and oral strips.\n",
+      "bbox": [
+        48.0,
+        456.9104919433594,
+        422.7699890136719,
+        492.6304931640625
+      ],
+      "text_sha256": "16e41597a0e86a38990ae5c2883739ba29db1ade42fe73b9d5d50f33c0868f73"
+    },
+    {
+      "block_id": "page-0524-block-0012",
+      "order": 12,
+      "text": "All products are all General Sales List medicines and can be bought over the counter \n(in the UK). NRT is formulated for systemic absorption either through the skin in the \ncase of patches or the oral or nasal mucosa in the case of all the other products. This \nmeans that absorption of nicotine from NRT is much slower than nicotine from inhal-\ning a tobacco cigarette and the risk of becoming addicted to NRT is lower.6\n",
+      "bbox": [
+        48.0,
+        492.9104919433594,
+        422.8199462890625,
+        552.6304931640625
+      ],
+      "text_sha256": "f16dddae7b5e2d1f8803de046bacc16faffe68d92b5964369b5a934bd9d367f0"
+    },
+    {
+      "block_id": "page-0524-block-0013",
+      "order": 13,
+      "text": "Clinical effectiveness\n",
+      "bbox": [
+        48.0,
+        571.00048828125,
+        145.61997985839844,
+        582.8504638671875
+      ],
+      "text_sha256": "27e65ab4659ae1e27223e7249a0043dbe89a049f0123cdb57c4ad1cd65d83925"
+    },
+    {
+      "block_id": "page-0524-block-0014",
+      "order": 14,
+      "text": "NRT is the most studied medication for smoking cessation. There have been over 150 \ntrials, including over 50,000 smokers. The odds ratio (OR) of abstinence for any form \nof NRT compared with placebo is 1.84. Combination NRT (i.e. combining two \n",
+      "bbox": [
+        48.0,
+        588.9104614257812,
+        422.77996826171875,
+        624.6304931640625
+      ],
+      "text_sha256": "8a5df237e2795542dbc9db18c1d659d40dfd5359df8e3a8d12b817be1284db5e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

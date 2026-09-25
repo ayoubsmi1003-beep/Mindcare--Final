@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0825",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 825,
+  "source_page_index": 824,
+  "source_page_display": 825,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "804    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\nMental and behavioural symptoms\nA wide variety of mental and behavioural symptoms occur in HD, including anxiety, \ndepression, suicidality, preservation, disinhibition, irritability, apathy and, rarely, psy-\nchosis.17 Mental and behavioural symptoms can emerge before motor disturbances and \nreduce quality of life substantially.17 In comparison with other HD features, psychiatric \nTable 10.7  Evidence and experience regarding the pharmacological treatment of motor symptoms in Huntington’s disease\nSymptoms\nTreatments\nChorea\n■\n■Tetrabenazine: Unlike antipsychotics, tetrabenazine’s effectiveness is well established.6,7,9 \nHowever, adverse effects including sedation, depression and parkinsonism may limit its \nclinical benefit. In clinical practice, many prefer to use tetrabenazine first line in patients \nwithout depressive symptoms and suicidal behaviour.7 Compliance with a multiple daily \ndosing regimen (e.g. TDS) is needed. Deutetrabenazine, licensed in the United States \nfor chorea in HD, has not been directly compared with tetrabenazine but it may offer an \nimproved pharmacokinetic and side effect profile.9\n■\n■Antipsychotics: Considered first-line treatment, particularly in the presence of depres-\nsion, aggression, psychosis, or when poor drug compliance is suspected7,8,10 despite a lack \nof data from RCTs. SGAs such as risperidone or olanzapine are used most commonly.7 \nPotentially limiting side effects include dyskinesia, parkinsonism and metabolic syndrome.4 \nFGAs have been used successfully but are less popular in clinical practice because of the \nrisk of EPSEs.10 The Enroll-HD observational database has suggested that risperidone and \nolanzapine are at least as effective as tetrabenazine11 but worsen cognition.12 For severe \nchorea, antipsychotics and tetrabenazine have been used in combination.7 Tetrabenazine \nand deutetrabenazine both have the potential for QT prolongation, as do most antipsy-\nchotics.\n■\n■Other agents: Amantadine, riluzole and nabilone have been recommended as alterna-\ntives to tetrabenazine,13 but the evidence base for beneficial effects with these agents is \ncontroversial,4 and some guidelines recommend against using amantadine and riluzole7,8 \nor do not mention at all.7 Clinical trials with other cannabinoids (nabiximols and cannabi-\ndiol) showed no difference from placebo.14 Clonazepam is sometimes used as an adjunc-\ntive therapy in the presence of comorbid features; a small case series reported benefit with \nhigh doses.4,15 Levetiracetam has been used successfully in two small open label studies; \nsomnolence led to a 33% dropout in one study and parkinsonism was also reported.15 \nPridopidine has not been shown to be effective in RCTs so far; further evaluation is \nrequired.16 Other negative studies also include those examining the use of latrepirdine, \nethyl-EPA and mavoglurant.15\nHypokinetic \nrigidity\n■\n■Levodopa may provide partial and temporary relief of symptoms.7 Note the potential for \nsuch drugs to exacerbate behavioural disturbances.8 Rigidity may be caused/worsened by \nantipsychotics or tetrabenazine; dose reduction or discontinuation should be considered in \nthe first instance, after weighing any derived benefits against symptoms severity.7 Positive \ncase reports exist for amantadine and dopamine agonists (though guidelines do not make \nrecommendations on their use).7\nMyoclonus\n■\n■Valproate or clonazepam have been suggested, used alone or combination.7 Levetiracetam \nis a therapeutic alternative.7\nDystonia\n■\n■Botulinum toxin injections have been suggested for focal dystonia;7 clonazepam or ba-\nclofen has been suggested for non-focal dystonia.4\n",
+  "raw_text_sha256": "22fa33e486711f60d6b7e399d66a5ca628e8256eb7943cbc2e9098b87ffa342c",
+  "coordinates_sha256": "e6d00335278f88d091b54f47e47b6f135379d1218067d001bc12378eecf6f7cd",
+  "block_sequence_sha256": "08b3e204054e4fa2b0d2da6f59c9b501f6b5abde776767539b71d2f4951fa520",
+  "blocks": [
+    {
+      "block_id": "page-0825-block-0000",
+      "order": 0,
+      "text": "804    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "93444e5ec0d22dba8bd28c6056d042a3e6b588a8502a341ad20d82222d5e9825"
+    },
+    {
+      "block_id": "page-0825-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0825-block-0002",
+      "order": 2,
+      "text": "Mental and behavioural symptoms\n",
+      "bbox": [
+        61.88999938964844,
+        548.3690185546875,
+        242.20196533203125,
+        561.4039916992188
+      ],
+      "text_sha256": "ab6f8ff63b206ef4a2d389011516da67c2921b98eca50968b76273877fb4ff11"
+    },
+    {
+      "block_id": "page-0825-block-0003",
+      "order": 3,
+      "text": "A wide variety of mental and behavioural symptoms occur in HD, including anxiety, \ndepression, suicidality, preservation, disinhibition, irritability, apathy and, rarely, psy-\nchosis.17 Mental and behavioural symptoms can emerge before motor disturbances and \nreduce quality of life substantially.17 In comparison with other HD features, psychiatric \n",
+      "bbox": [
+        61.88999938964844,
+        567.2139892578125,
+        436.7099914550781,
+        614.9340209960938
+      ],
+      "text_sha256": "9b7a8e4b236a5f458a7aac9b2e2e75d98b1e59c6024916198dd9af2a39f9ccbc"
+    },
+    {
+      "block_id": "page-0825-block-0004",
+      "order": 4,
+      "text": "Table 10.7  Evidence and experience regarding the pharmacological treatment of motor symptoms in Huntington’s disease\n",
+      "bbox": [
+        67.88999938964844,
+        70.08790588378906,
+        429.0298156738281,
+        78.97540283203125
+      ],
+      "text_sha256": "94b4abb17b98a4567d5221017a5ca91f21746b610b61d1f64047c39b60742928"
+    },
+    {
+      "block_id": "page-0825-block-0005",
+      "order": 5,
+      "text": "Symptoms\nTreatments\n",
+      "bbox": [
+        65.88999938964844,
+        88.82289123535156,
+        170.7474822998047,
+        97.71038818359375
+      ],
+      "text_sha256": "654602292d5fea1cc0c4fb70478f93352a2864af123a0c08ee99472b416442f3"
+    },
+    {
+      "block_id": "page-0825-block-0006",
+      "order": 6,
+      "text": "Chorea\n■\n■Tetrabenazine: Unlike antipsychotics, tetrabenazine’s effectiveness is well established.6,7,9 \n",
+      "bbox": [
+        65.88999938964844,
+        106.44789123535156,
+        428.9264831542969,
+        115.33538818359375
+      ],
+      "text_sha256": "b9736fad4f4035b259b93e02e38205e9b9a3674ba24145fc9024d335caab5845"
+    },
+    {
+      "block_id": "page-0825-block-0007",
+      "order": 7,
+      "text": "However, adverse effects including sedation, depression and parkinsonism may limit its \nclinical benefit. In clinical practice, many prefer to use tetrabenazine first line in patients \nwithout depressive symptoms and suicidal behaviour.7 Compliance with a multiple daily \ndosing regimen (e.g. TDS) is needed. Deutetrabenazine, licensed in the United States \nfor chorea in HD, has not been directly compared with tetrabenazine but it may offer an \nimproved pharmacokinetic and side effect profile.9\n",
+      "bbox": [
+        140.55718994140625,
+        116.6253890991211,
+        424.2146911621094,
+        175.327880859375
+      ],
+      "text_sha256": "1592a9b881170eda0b0475ef868c7301b0f570e43a198fc063b5c46db9c9f24e"
+    },
+    {
+      "block_id": "page-0825-block-0008",
+      "order": 8,
+      "text": "■\n■Antipsychotics: Considered first-line treatment, particularly in the presence of depres-\n",
+      "bbox": [
+        131.5579071044922,
+        176.44789123535156,
+        417.9380187988281,
+        185.33538818359375
+      ],
+      "text_sha256": "1dd7d692b9a4b1e0e9f6bce8766975d2bd8d227b1bb170513c8062633c93768e"
+    },
+    {
+      "block_id": "page-0825-block-0009",
+      "order": 9,
+      "text": "sion, aggression, psychosis, or when poor drug compliance is suspected7,8,10 despite a lack \nof data from RCTs. SGAs such as risperidone or olanzapine are used most commonly.7 \nPotentially limiting side effects include dyskinesia, parkinsonism and metabolic syndrome.4 \nFGAs have been used successfully but are less popular in clinical practice because of the \nrisk of EPSEs.10 The Enroll-HD observational database has suggested that risperidone and \nolanzapine are at least as effective as tetrabenazine11 but worsen cognition.12 For severe \nchorea, antipsychotics and tetrabenazine have been used in combination.7 Tetrabenazine \nand deutetrabenazine both have the potential for QT prolongation, as do most antipsy-\nchotics.\n",
+      "bbox": [
+        140.55526733398438,
+        186.62538146972656,
+        429.8152770996094,
+        275.33038330078125
+      ],
+      "text_sha256": "a28e63c5e89912e4d4253c551c67453a580607b54e071489db9a7cb88221bfe6"
+    },
+    {
+      "block_id": "page-0825-block-0010",
+      "order": 10,
+      "text": "■\n■Other agents: Amantadine, riluzole and nabilone have been recommended as alterna-\n",
+      "bbox": [
+        131.5579071044922,
+        276.4478759765625,
+        419.7756042480469,
+        285.33538818359375
+      ],
+      "text_sha256": "e134c22085d500554083bb5935108fcbaabf6d0d76f007572c82e0ba596bd5f4"
+    },
+    {
+      "block_id": "page-0825-block-0011",
+      "order": 11,
+      "text": "tives to tetrabenazine,13 but the evidence base for beneficial effects with these agents is \ncontroversial,4 and some guidelines recommend against using amantadine and riluzole7,8 \nor do not mention at all.7 Clinical trials with other cannabinoids (nabiximols and cannabi-\ndiol) showed no difference from placebo.14 Clonazepam is sometimes used as an adjunc-\ntive therapy in the presence of comorbid features; a small case series reported benefit with \nhigh doses.4,15 Levetiracetam has been used successfully in two small open label studies; \nsomnolence led to a 33% dropout in one study and parkinsonism was also reported.15 \nPridopidine has not been shown to be effective in RCTs so far; further evaluation is \nrequired.16 Other negative studies also include those examining the use of latrepirdine, \nethyl-EPA and mavoglurant.15\n",
+      "bbox": [
+        140.55799865722656,
+        286.6253967285156,
+        431.84429931640625,
+        385.3328857421875
+      ],
+      "text_sha256": "d9990ef3ab7bdd272bfe431e117c564e42a1470165a80f582cebf1869326f996"
+    },
+    {
+      "block_id": "page-0825-block-0012",
+      "order": 12,
+      "text": "Hypokinetic \nrigidity\n",
+      "bbox": [
+        65.88999938964844,
+        394.0728759765625,
+        110.06498718261719,
+        412.9578857421875
+      ],
+      "text_sha256": "93435d879b7811e06ed1e249d790de4b15fb0a8e5a8df013d22bcb534e7d3d94"
+    },
+    {
+      "block_id": "page-0825-block-0013",
+      "order": 13,
+      "text": "■\n■Levodopa may provide partial and temporary relief of symptoms.7 Note the potential for \n",
+      "bbox": [
+        131.5579071044922,
+        394.2528991699219,
+        423.14935302734375,
+        402.96038818359375
+      ],
+      "text_sha256": "dc1b2e6796f028a447a1960c897ef3e0bbd4b70c3cefdc69f1ea9c835bc3f8cb"
+    },
+    {
+      "block_id": "page-0825-block-0014",
+      "order": 14,
+      "text": "such drugs to exacerbate behavioural disturbances.8 Rigidity may be caused/worsened by \nantipsychotics or tetrabenazine; dose reduction or discontinuation should be considered in \nthe first instance, after weighing any derived benefits against symptoms severity.7 Positive \ncase reports exist for amantadine and dopamine agonists (though guidelines do not make \nrecommendations on their use).7\n",
+      "bbox": [
+        140.55618286132812,
+        404.2503967285156,
+        431.1825256347656,
+        452.95538330078125
+      ],
+      "text_sha256": "e26b5160b3c2f69d670123c6c52bb99d2e768795514741fa8e665e7f11579d51"
+    },
+    {
+      "block_id": "page-0825-block-0015",
+      "order": 15,
+      "text": "Myoclonus\n■\n■Valproate or clonazepam have been suggested, used alone or combination.7 Levetiracetam \n",
+      "bbox": [
+        65.88999938964844,
+        461.6978759765625,
+        431.9763488769531,
+        470.58538818359375
+      ],
+      "text_sha256": "dc124b59e305541f46a6a7f37ab61f29ebc4591fdef4e6c85b8d1fc585ae7787"
+    },
+    {
+      "block_id": "page-0825-block-0016",
+      "order": 16,
+      "text": "is a therapeutic alternative.7\n",
+      "bbox": [
+        140.55641174316406,
+        471.8753967285156,
+        229.3653106689453,
+        480.5828857421875
+      ],
+      "text_sha256": "bfcde8614622dc2f7f4b838aa0ce870af5496d65b26427b42a273730c7d351cf"
+    },
+    {
+      "block_id": "page-0825-block-0017",
+      "order": 17,
+      "text": "Dystonia\n■\n■Botulinum toxin injections have been suggested for focal dystonia;7 clonazepam or ba-\n",
+      "bbox": [
+        65.88999938964844,
+        489.3228759765625,
+        416.7816162109375,
+        498.21038818359375
+      ],
+      "text_sha256": "c0eccacbb7186717255832000653d1611908d1eabd134d07d60eb267041ac27a"
+    },
+    {
+      "block_id": "page-0825-block-0018",
+      "order": 18,
+      "text": "clofen has been suggested for non-focal dystonia.4\n",
+      "bbox": [
+        140.5565948486328,
+        499.5003967285156,
+        302.6100158691406,
+        508.2078857421875
+      ],
+      "text_sha256": "10d72fcd9e34d771e957e9216b1427658fd1e3780d3866652f45b411150467cd"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0886",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 886,
+  "source_page_index": 885,
+  "source_page_display": 886,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\nCaffeine\nCaffeine is probably the most popular psychoactive substance in the world. Mean daily \nconsumption in the UK is 350–620mg.1 A quarter of the general population and half of \nthose with psychiatric illness regularly consume over 500mg caffeine/day.2 Consumption \nof caffeine should be routinely discussed with an individual to assess its effect on their \nsymptoms and presentation.3 In particular, caffeine withdrawal can have a marked \neffect on mental and physical health (Table 12.1).\nChocolate also contains caffeine. Martindale lists over 600 medicines that contain \ncaffeine.4 Most are available without a prescription and are marketed as analgesics or \nappetite suppressants.\nOther substances\nChapter 12\nTable 12.1  Caffeine content of drinks\nDrink\nCaffeine content\nBrewed coffee\n100mg/cup\nRed Bull\n80mg/can (other energy drinks may contain substantially more)\nInstant coffee\n60mg/cup\nBlack tea\n45mg/cup\nGreen tea\n20–30mg/cup\nSoft drinks\n25–50mg/can\n",
+  "raw_text_sha256": "f6023b21052cbbbf8413ee98f79dc72053f88985307b72904d251a993cabe263",
+  "coordinates_sha256": "7fbf10617208dbfbb6e405db86d85b58756acbcf56b93f0f399c6c5f8f50025e",
+  "block_sequence_sha256": "b1f52af7bf138580efc9b56c193fd424e616a4f56a73e1a4420fd775d6989038",
+  "blocks": [
+    {
+      "block_id": "page-0886-block-0000",
+      "order": 0,
+      "text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\n",
+      "bbox": [
+        47.99980163574219,
+        585.1019897460938,
+        348.48388671875,
+        614.4779663085938
+      ],
+      "text_sha256": "c78fcd1eeb2357afb8eb5b97a8c858d68167bd409b9074c0da4e20c032bd5665"
+    },
+    {
+      "block_id": "page-0886-block-0001",
+      "order": 1,
+      "text": "Caffeine\n",
+      "bbox": [
+        55.0,
+        205.54217529296875,
+        98.20799255371094,
+        218.57717895507812
+      ],
+      "text_sha256": "7ac5bfba03fbb16d8996fae52e3d7738b6c087897db65e7e4b2a7f4fdd074b68"
+    },
+    {
+      "block_id": "page-0886-block-0002",
+      "order": 2,
+      "text": "Caffeine is probably the most popular psychoactive substance in the world. Mean daily \nconsumption in the UK is 350–620mg.1 A quarter of the general population and half of \nthose with psychiatric illness regularly consume over 500mg caffeine/day.2 Consumption \nof caffeine should be routinely discussed with an individual to assess its effect on their \nsymptoms and presentation.3 In particular, caffeine withdrawal can have a marked \neffect on mental and physical health (Table 12.1).\n",
+      "bbox": [
+        47.99659729003906,
+        224.38717651367188,
+        422.81146240234375,
+        296.107177734375
+      ],
+      "text_sha256": "ea74491c3a93897526ad133b72006b18d818eebc212fa1fc263ad9696ead274b"
+    },
+    {
+      "block_id": "page-0886-block-0003",
+      "order": 3,
+      "text": "Chocolate also contains caffeine. Martindale lists over 600 medicines that contain \ncaffeine.4 Most are available without a prescription and are marketed as analgesics or \nappetite suppressants.\n",
+      "bbox": [
+        48.00089645385742,
+        296.3871765136719,
+        422.7911376953125,
+        332.107177734375
+      ],
+      "text_sha256": "70b8d25e33a5c9379c653e10b997244110e585f04b1e3d9a83da2af97d99708b"
+    },
+    {
+      "block_id": "page-0886-block-0004",
+      "order": 4,
+      "text": "Other substances\n",
+      "bbox": [
+        241.5605010986328,
+        111.36316680908203,
+        420.00250244140625,
+        137.43316650390625
+      ],
+      "text_sha256": "8e517cbc059b05aba8777fd2651b831f76e73b589916c39c4ecc780892a24e05"
+    },
+    {
+      "block_id": "page-0886-block-0005",
+      "order": 5,
+      "text": "Chapter 12\n",
+      "bbox": [
+        312.8031921386719,
+        59.724403381347656,
+        420.0011901855469,
+        82.60040283203125
+      ],
+      "text_sha256": "b6602ff6e1d6276f2ddd4a91185479920439bd532706a2273b5fd75a22a5b9e1"
+    },
+    {
+      "block_id": "page-0886-block-0006",
+      "order": 6,
+      "text": "Table 12.1  Caffeine content of drinks\n",
+      "bbox": [
+        75.75,
+        374.6545715332031,
+        198.1499786376953,
+        383.5420837402344
+      ],
+      "text_sha256": "9e26c53c5df92d4629ddfc835eceac0a3b01424dc1be2d227a239951cee97d52"
+    },
+    {
+      "block_id": "page-0886-block-0007",
+      "order": 7,
+      "text": "Drink\nCaffeine content\n",
+      "bbox": [
+        69.75,
+        395.2795715332031,
+        250.87501525878906,
+        404.1670837402344
+      ],
+      "text_sha256": "a41eb700d8849bd488622eea61acbdbf9cac080cbbb0c5b3afeeac2afc26a9e6"
+    },
+    {
+      "block_id": "page-0886-block-0008",
+      "order": 8,
+      "text": "Brewed coffee\n100mg/cup\n",
+      "bbox": [
+        69.75,
+        415.58209228515625,
+        228.92999267578125,
+        424.2895812988281
+      ],
+      "text_sha256": "0004c7f89f6eba61080e6972e49d8f11944c483d33b3634e5b60f76d04c0935d"
+    },
+    {
+      "block_id": "page-0886-block-0009",
+      "order": 9,
+      "text": "Red Bull\n80mg/can (other energy drinks may contain substantially more)\n",
+      "bbox": [
+        69.75,
+        430.6045837402344,
+        393.8025817871094,
+        439.31207275390625
+      ],
+      "text_sha256": "514a82842f6e40cfdae65fd8fd9728ba16406adb0fbea01124a7749aaeafcc3c"
+    },
+    {
+      "block_id": "page-0886-block-0010",
+      "order": 10,
+      "text": "Instant coffee\n60mg/cup\n",
+      "bbox": [
+        69.75,
+        445.6271057128906,
+        224.75999450683594,
+        454.3345947265625
+      ],
+      "text_sha256": "5af6106f7dc70ee8cbb0629f73dfa752d3e24af19f0d524e6e43bab60fc35970"
+    },
+    {
+      "block_id": "page-0886-block-0011",
+      "order": 11,
+      "text": "Black tea\n45mg/cup\n",
+      "bbox": [
+        69.75,
+        460.6496276855469,
+        224.75999450683594,
+        469.35711669921875
+      ],
+      "text_sha256": "2dac35d4eb065a1ebbe9e2670d4021dc7287c5398a71fbdbf2d9c10736840901"
+    },
+    {
+      "block_id": "page-0886-block-0012",
+      "order": 12,
+      "text": "Green tea\n20–30mg/cup\n",
+      "bbox": [
+        69.75,
+        475.672119140625,
+        236.84999084472656,
+        484.3796081542969
+      ],
+      "text_sha256": "744022a051f77b9698809372dfdd860d0a9210fd794a50034e257c11ce2257fa"
+    },
+    {
+      "block_id": "page-0886-block-0013",
+      "order": 13,
+      "text": "Soft drinks\n25–50mg/can\n",
+      "bbox": [
+        69.75,
+        490.6946105957031,
+        236.42999267578125,
+        499.402099609375
+      ],
+      "text_sha256": "fef0256e5c12ea36e05dbead5885baa1d4bb02b567e67befa931d81825ff9ec9"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,491 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0275",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 275,
+  "source_page_index": 274,
+  "source_page_display": 275,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "254    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  2\nThe following drugs are NSAIDs or COX-2 inhibitors: aceclofenac, acemetacin, \ncelecoxib, dexibuprofen, dexketoprofen, diclofenac, diflunisal, etodolac, etoricoxib, \nfenbufen, fenoprofen, flurbiprofen, ibuprofen, indometacin, ketoprofen, lumira-\ncoxib, mefenamic acid, meloxicam, nabumetone, naproxen, piroxicam, sulindac, ten-\noxicam and tiaprofenic acid.\nCarbamazepine\nThere are rare reports of neurotoxicity when carbamazepine is combined with lithium. \nMost are old and in the context of treatment involving high plasma lithium levels. It is \nof note though that carbamazepine can cause hyponatraemia, which may in turn lead \nto lithium retention and toxicity. Similarly, rare reports of CNS toxicity implicate SSRIs, \nanother group of drugs that can cause hyponatraemia.\nTable 2.2  Lithium – clinically relevant drug interactions\nDrug group\nMagnitude of effect\nTimescale  \nof effect\nAdditional information\nACE inhibitors\n■\n■Unpredictable\n■\n■Up to fourfold increases \nin [Li]\nDevelops over \nseveral weeks\n■\n■Sevenfold increased risk of ­hospitalisation \nfor lithium toxicity in the elderly\n■\n■Angiotensin II receptor antagonists \nmay be associated with similar risk.\nThiazide \ndiuretics\n■\n■Unpredictable\n■\n■Up to fourfold increases \nin [Li]\nUsually apparent \nin first 10 days\n■\n■Loop diuretics are safer\n■\n■Any effect will be apparent in the first \nmonth\nNSAIDs\n■\n■Unpredictable\n■\n■From 10% to more than \nfourfold increases in [Li]\nVariable; few days \nto several months\n■\n■NSAIDs are widely used on a PRN basis\n■\n■Can be bought without a prescription\n[Li], lithium concentration, prn, pro re nata (as required).\nReferences\n\t 1.\t Bray NJ, et al. The genetics of neuropsychiatric disorders. Brain Neurosci Adv 2019; 2:2398212818799271.\n\t 2.\t Alda M. Lithium in the treatment of bipolar disorder: pharmacology and pharmacogenetics. Mol Psychiatry 2015; 20:661–670.\n\t 3.\t Jope RS, et al. Lithium to the rescue. 2016; http://dana.org/Cerebrum/2016/Lithium_to_the_Rescue.\n\t 4.\t Hanson ND, et al. Lithium, but not fluoxetine or the corticotropin-releasing factor receptor 1 receptor antagonist R121919, increases cell \nproliferation in the adult dentate gyrus. J Pharmacol Exp Ther 2011; 337:180–186.\n\t 5.\t Matsunaga S, et al. Lithium as a treatment for Alzheimer’s disease: a systematic review and meta-analysis. J Alzheimer’s Dis 2015; \n48:403–410.\n\t 6.\t Netto I, et al. Reversible lithium neurotoxicity: review of the literature. Prim Care Companion CNS Disord 2012; 14. PCC.11r01197.\n\t 7.\t Adityanjee, et al. The syndrome of irreversible lithium-effectuated neurotoxicity. Clin Neuropharmacol 2005; 28:38–49.\n\t 8.\t Memon A, et al. Association between naturally occurring lithium in drinking water and suicide rates: systematic review and meta-analysis of \necological studies. Br J Psychiatry 2020; 1–12. 217:667-678.\n\t 9.\t Kessing LV, et al. Association of lithium in drinking water with the incidence of dementia. JAMA Psychiatry 2017; 74:1005–1010.\n\t10.\t Goodwin GM, et al. Evidence-based guidelines for treating bipolar disorder: revised third edition recommendations from the British \nAssociation for Psychopharmacology. J Psychopharmacol 2016; 30:495–553.\n\t11.\t Hui TP, et al. A systematic review and meta-analysis of clinical predictors of lithium response in bipolar disorder. Acta Psychiatr Scand 2019; \n140:94–115.\n\t12.\t Bahji A, et al. Comparative efficacy and tolerability of pharmacological treatments for the treatment of acute bipolar depression: a systematic \nreview and network meta-analysis. J Affect Disord 2020; 269:154–184.\n\t13.\t Taylor DM, et al. Comparative efficacy and acceptability of drug treatments for bipolar depression: a multiple-treatments meta-analysis. Acta \nPsychiatr Scand 2014; 130:452–469.\n",
+  "raw_text_sha256": "a6f8fd664f80e36e3c18decfa328db47520c64433cade30b1f2fc38b37c1d767",
+  "coordinates_sha256": "674ed7533dd0f1c3ad0e11a397d0b0a7f7e2a3f17dd7961750126f3c856843bd",
+  "block_sequence_sha256": "d0830ff487aa65776ae7c29489e328dc6cb20aae3ea6dfa64526cb491c367795",
+  "blocks": [
+    {
+      "block_id": "page-0275-block-0000",
+      "order": 0,
+      "text": "254    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "d23dcbabebe679f5c431cf60426fe90a84f559ce748dd25609d09f9337ffccd3"
+    },
+    {
+      "block_id": "page-0275-block-0001",
+      "order": 1,
+      "text": "CHAPTER  2\n",
+      "bbox": [
+        19.520000457763672,
+        145.23529052734375,
+        29.0,
+        188.80328369140625
+      ],
+      "text_sha256": "5befcde2fefe074681a51514b484ad31516d952c51183625b5b7b1fb84f30d2c"
+    },
+    {
+      "block_id": "page-0275-block-0002",
+      "order": 2,
+      "text": "The following drugs are NSAIDs or COX-2 inhibitors: aceclofenac, acemetacin, \ncelecoxib, dexibuprofen, dexketoprofen, diclofenac, diflunisal, etodolac, etoricoxib, \nfenbufen, fenoprofen, flurbiprofen, ibuprofen, indometacin, ketoprofen, lumira-\ncoxib, mefenamic acid, meloxicam, nabumetone, naproxen, piroxicam, sulindac, ten-\noxicam and tiaprofenic acid.\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.6702575683594,
+        122.27029418945312
+      ],
+      "text_sha256": "f303df67e3e5e6e0454a0bf21c281f07e854aaa44a24ce6c92674388a79ea508"
+    },
+    {
+      "block_id": "page-0275-block-0003",
+      "order": 3,
+      "text": "Carbamazepine\n",
+      "bbox": [
+        61.88999938964844,
+        140.64028930664062,
+        134.6899871826172,
+        152.49029541015625
+      ],
+      "text_sha256": "4dfbcc7868753a38e09b7a63c84ebc448722e70b17b881574105c13f526c2689"
+    },
+    {
+      "block_id": "page-0275-block-0004",
+      "order": 4,
+      "text": "There are rare reports of neurotoxicity when carbamazepine is combined with lithium. \nMost are old and in the context of treatment involving high plasma lithium levels. It is \nof note though that carbamazepine can cause hyponatraemia, which may in turn lead \nto lithium retention and toxicity. Similarly, rare reports of CNS toxicity implicate SSRIs, \nanother group of drugs that can cause hyponatraemia.\n",
+      "bbox": [
+        61.88999938964844,
+        158.55029296875,
+        436.7100524902344,
+        218.27029418945312
+      ],
+      "text_sha256": "539437661d126a646ec646c62b77f398c17c4eb23d4e22ee9ed410f483857a68"
+    },
+    {
+      "block_id": "page-0275-block-0005",
+      "order": 5,
+      "text": "Table 2.2  Lithium – clinically relevant drug interactions\n",
+      "bbox": [
+        67.88999938964844,
+        238.35780334472656,
+        244.01246643066406,
+        247.24530029296875
+      ],
+      "text_sha256": "b7104474e46d551173bee1567e8cfd23bdb7ae5a5fa3f6c9e3f3cf0c76ab56f9"
+    },
+    {
+      "block_id": "page-0275-block-0006",
+      "order": 6,
+      "text": "Drug group\nMagnitude of effect\nTimescale  \nof effect\n",
+      "bbox": [
+        65.88999938964844,
+        256.2327880859375,
+        258.3475036621094,
+        275.1177978515625
+      ],
+      "text_sha256": "1aa0d36f74ca54a31b93f780534984f0377b36014937ac23edd2911176ee9b70"
+    },
+    {
+      "block_id": "page-0275-block-0007",
+      "order": 7,
+      "text": "Additional information\n",
+      "bbox": [
+        289.0,
+        256.2327880859375,
+        370.262451171875,
+        265.12030029296875
+      ],
+      "text_sha256": "2016196b59fcfb549c349fb92a10ccace9d60ca444ac43ca7e4973144f190cc0"
+    },
+    {
+      "block_id": "page-0275-block-0008",
+      "order": 8,
+      "text": "ACE inhibitors\n■\n■Unpredictable\n",
+      "bbox": [
+        65.88999938964844,
+        282.0378112792969,
+        173.3424835205078,
+        290.747802734375
+      ],
+      "text_sha256": "d3bcf5e6166bda965b93c5d845812c2e7ac94583e30c5e82b9fd7b26f7e31ce5"
+    },
+    {
+      "block_id": "page-0275-block-0009",
+      "order": 9,
+      "text": "■\n■Up to fourfold increases \n",
+      "bbox": [
+        119.88990020751953,
+        291.0378112792969,
+        207.51998901367188,
+        299.74530029296875
+      ],
+      "text_sha256": "b455e797ade156418d06cd5952aca2d76bc8bdf120e86ae80d5907c91e6b5fd7"
+    },
+    {
+      "block_id": "page-0275-block-0010",
+      "order": 10,
+      "text": "in [Li]\n",
+      "bbox": [
+        128.88999938964844,
+        300.0378112792969,
+        145.97500610351562,
+        308.74530029296875
+      ],
+      "text_sha256": "c9b70016818d7d5899dfe5352ce3317c58e4f59710dbb98669a5d09976322e87"
+    },
+    {
+      "block_id": "page-0275-block-0011",
+      "order": 11,
+      "text": "Develops over \nseveral weeks\n",
+      "bbox": [
+        220.0,
+        282.0378112792969,
+        266.6724853515625,
+        300.7427978515625
+      ],
+      "text_sha256": "a266c8b76d8c688b9629fef88a637750f881459e756ae4d137699f6bb4750b8b"
+    },
+    {
+      "block_id": "page-0275-block-0012",
+      "order": 12,
+      "text": "■\n■Sevenfold increased risk of ­hospitalisation \n",
+      "bbox": [
+        289.0025939941406,
+        282.0378112792969,
+        431.6226806640625,
+        290.74530029296875
+      ],
+      "text_sha256": "445d20f8b3875266f442c813e1dfdcf03b1fe026df169da6ade11bdfc3b55a06"
+    },
+    {
+      "block_id": "page-0275-block-0013",
+      "order": 13,
+      "text": "for lithium toxicity in the elderly\n■\n■Angiotensin II receptor antagonists \n",
+      "bbox": [
+        289.0025939941406,
+        291.0378112792969,
+        424.13006591796875,
+        308.74530029296875
+      ],
+      "text_sha256": "1950f39b853a334490abb10b3603019cdfa313b9549651caee37badb5acdc8e8"
+    },
+    {
+      "block_id": "page-0275-block-0014",
+      "order": 14,
+      "text": "may be associated with similar risk.\n",
+      "bbox": [
+        298.002685546875,
+        309.0378112792969,
+        410.0827331542969,
+        317.74530029296875
+      ],
+      "text_sha256": "7e1ade4e477d59a0d5e69242a5538e71620e9365382c70dfc85f10857e21edcc"
+    },
+    {
+      "block_id": "page-0275-block-0015",
+      "order": 15,
+      "text": "Thiazide \ndiuretics\n",
+      "bbox": [
+        65.89268493652344,
+        324.6603088378906,
+        94.2276840209961,
+        343.36529541015625
+      ],
+      "text_sha256": "0a116475fe406b0adf84f484479f1ceddb253419c1034b830e54f142e90847db"
+    },
+    {
+      "block_id": "page-0275-block-0016",
+      "order": 16,
+      "text": "■\n■Unpredictable\n",
+      "bbox": [
+        119.88990020751953,
+        324.6628112792969,
+        173.3424835205078,
+        333.37030029296875
+      ],
+      "text_sha256": "6a5cde22dfeee1fdf4a74b67cfdc5a86a243a0eec230f55cf7d6ed82e1e78916"
+    },
+    {
+      "block_id": "page-0275-block-0017",
+      "order": 17,
+      "text": "■\n■Up to fourfold increases \n",
+      "bbox": [
+        119.88990020751953,
+        333.6628112792969,
+        207.51998901367188,
+        342.37030029296875
+      ],
+      "text_sha256": "b455e797ade156418d06cd5952aca2d76bc8bdf120e86ae80d5907c91e6b5fd7"
+    },
+    {
+      "block_id": "page-0275-block-0018",
+      "order": 18,
+      "text": "in [Li]\n",
+      "bbox": [
+        128.88999938964844,
+        342.6628112792969,
+        145.97500610351562,
+        351.37030029296875
+      ],
+      "text_sha256": "c9b70016818d7d5899dfe5352ce3317c58e4f59710dbb98669a5d09976322e87"
+    },
+    {
+      "block_id": "page-0275-block-0019",
+      "order": 19,
+      "text": "Usually apparent \nin first 10 days\n",
+      "bbox": [
+        220.0,
+        324.6628112792969,
+        275.28997802734375,
+        343.3677978515625
+      ],
+      "text_sha256": "9570c777ef1007a0988554583a6e1987aa8b84299a9fcdb3a41ae73077193458"
+    },
+    {
+      "block_id": "page-0275-block-0020",
+      "order": 20,
+      "text": "■\n■Loop diuretics are safer\n",
+      "bbox": [
+        289.0025939941406,
+        324.6628112792969,
+        371.90020751953125,
+        333.37030029296875
+      ],
+      "text_sha256": "ff6834b60056bb104b20a7c302a198a916ad11eff6d9d15fd3d0f2b4e3bd9881"
+    },
+    {
+      "block_id": "page-0275-block-0021",
+      "order": 21,
+      "text": "■\n■Any effect will be apparent in the first \n",
+      "bbox": [
+        289.0025939941406,
+        333.6628112792969,
+        421.07769775390625,
+        342.37030029296875
+      ],
+      "text_sha256": "d8950c20faebac29c06c2bf8344c0e3489badfc8e8c810051a15960b3c4e0e2f"
+    },
+    {
+      "block_id": "page-0275-block-0022",
+      "order": 22,
+      "text": "month\n",
+      "bbox": [
+        298.002685546875,
+        342.6628112792969,
+        319.2577209472656,
+        351.37030029296875
+      ],
+      "text_sha256": "b4a666ef7afa5db2f7665fe063d008acc997b30f224749b52ba383a8352494ac"
+    },
+    {
+      "block_id": "page-0275-block-0023",
+      "order": 23,
+      "text": "NSAIDs\n■\n■Unpredictable\n",
+      "bbox": [
+        65.89268493652344,
+        358.2853088378906,
+        173.3424835205078,
+        366.99530029296875
+      ],
+      "text_sha256": "2dcb506fff70cb906fba998ba3ff333d3c25ef4c217604095acd5ba6420e4a2c"
+    },
+    {
+      "block_id": "page-0275-block-0024",
+      "order": 24,
+      "text": "■\n■From 10% to more than \n",
+      "bbox": [
+        119.88990020751953,
+        367.2878112792969,
+        209.05001831054688,
+        375.99530029296875
+      ],
+      "text_sha256": "f865d2e437ecdaea74ebe231be193c6701e7318f68f3eb56a37f02f44c889de7"
+    },
+    {
+      "block_id": "page-0275-block-0025",
+      "order": 25,
+      "text": "fourfold increases in [Li]\n",
+      "bbox": [
+        128.88999938964844,
+        376.2878112792969,
+        204.59498596191406,
+        384.99530029296875
+      ],
+      "text_sha256": "77a0a577bb7c91825f86507ba2d089b5141f0adad1ea49541776bf8a7f6644bb"
+    },
+    {
+      "block_id": "page-0275-block-0026",
+      "order": 26,
+      "text": "Variable; few days \nto several months\n",
+      "bbox": [
+        220.0,
+        358.2878112792969,
+        280.0074768066406,
+        376.9927978515625
+      ],
+      "text_sha256": "43e68a31290be568c906238f7422665136c13d316b11c9747b92fb3bc3772751"
+    },
+    {
+      "block_id": "page-0275-block-0027",
+      "order": 27,
+      "text": "■\n■NSAIDs are widely used on a PRN basis\n",
+      "bbox": [
+        289.0025939941406,
+        358.2878112792969,
+        421.6552734375,
+        366.99530029296875
+      ],
+      "text_sha256": "26944ee9a4f0fea1a7fbaf6292f73bc828fc3bcfbf5c11eea025199c0cf6af46"
+    },
+    {
+      "block_id": "page-0275-block-0028",
+      "order": 28,
+      "text": "■\n■Can be bought without a prescription\n",
+      "bbox": [
+        289.0025939941406,
+        367.2878112792969,
+        418.7378234863281,
+        375.99530029296875
+      ],
+      "text_sha256": "1dc165780bc44ca5988c88685441d51195d5c851a30189d19815dbf5ca8ff4e4"
+    },
+    {
+      "block_id": "page-0275-block-0029",
+      "order": 29,
+      "text": "[Li], lithium concentration, prn, pro re nata (as required).\n",
+      "bbox": [
+        61.88768005371094,
+        394.5353088378906,
+        241.51271057128906,
+        403.2427978515625
+      ],
+      "text_sha256": "ab22a4ed31169496c97e80e7b5d6d222d33ecd11f5bae5b8750bc30de643ae59"
+    },
+    {
+      "block_id": "page-0275-block-0030",
+      "order": 30,
+      "text": "References\n",
+      "bbox": [
+        61.88999938964844,
+        417.96539306640625,
+        117.92399597167969,
+        431.0003967285156
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0275-block-0031",
+      "order": 31,
+      "text": "\t 1.\t Bray NJ, et al. The genetics of neuropsychiatric disorders. Brain Neurosci Adv 2019; 2:2398212818799271.\n\t 2.\t Alda M. Lithium in the treatment of bipolar disorder: pharmacology and pharmacogenetics. Mol Psychiatry 2015; 20:661–670.\n\t 3.\t Jope RS, et al. Lithium to the rescue. 2016; http://dana.org/Cerebrum/2016/Lithium_to_the_Rescue.\n\t 4.\t Hanson ND, et al. Lithium, but not fluoxetine or the corticotropin-releasing factor receptor 1 receptor antagonist R121919, increases cell \n",
+      "bbox": [
+        61.88999938964844,
+        435.9423828125,
+        435.6000671386719,
+        470.118408203125
+      ],
+      "text_sha256": "da07b28e116464f6d52fef3b464bfe9b6cf9b6a5b6655da3b9f2f6ed28f15733"
+    },
+    {
+      "block_id": "page-0275-block-0032",
+      "order": 32,
+      "text": "proliferation in the adult dentate gyrus. J Pharmacol Exp Ther 2011; 337:180–186.\n\t 5.\t Matsunaga S, et al. Lithium as a treatment for Alzheimer’s disease: a systematic review and meta-analysis. J Alzheimer’s Dis 2015; \n",
+      "bbox": [
+        61.91400146484375,
+        471.9423828125,
+        435.5520324707031,
+        488.118408203125
+      ],
+      "text_sha256": "bcf757c21247134095fc9b64f022797d3530875c3ec3bcd476992b660a410b5e"
+    },
+    {
+      "block_id": "page-0275-block-0033",
+      "order": 33,
+      "text": "48:403–410.\n\t 6.\t Netto I, et al. Reversible lithium neurotoxicity: review of the literature. Prim Care Companion CNS Disord 2012; 14. PCC.11r01197.\n\t 7.\t Adityanjee, et al. The syndrome of irreversible lithium-effectuated neurotoxicity. Clin Neuropharmacol 2005; 28:38–49.\n\t 8.\t Memon A, et al. Association between naturally occurring lithium in drinking water and suicide rates: systematic review and meta-analysis of \n",
+      "bbox": [
+        61.91999816894531,
+        489.9423828125,
+        435.58197021484375,
+        524.1183471679688
+      ],
+      "text_sha256": "1b1e859b0e0ee37f375a73db5b188a2535347d3680b08e913445775b9f8ca7f2"
+    },
+    {
+      "block_id": "page-0275-block-0034",
+      "order": 34,
+      "text": "ecological studies. Br J Psychiatry 2020; 1–12. 217:667-678.\n\t 9.\t Kessing LV, et al. Association of lithium in drinking water with the incidence of dementia. JAMA Psychiatry 2017; 74:1005–1010.\n\t10.\t Goodwin GM, et al. Evidence-based guidelines for treating bipolar disorder: revised third edition recommendations from the British \n",
+      "bbox": [
+        61.9379997253418,
+        526.0863647460938,
+        435.6300048828125,
+        551.1183471679688
+      ],
+      "text_sha256": "2b4bc30a47afc3dd7fb84a445197b8f33cc79157dd39776e6e67ee78776461a9"
+    },
+    {
+      "block_id": "page-0275-block-0035",
+      "order": 35,
+      "text": "Association for Psychopharmacology. J Psychopharmacol 2016; 30:495–553.\n\t11.\t Hui TP, et al. A systematic review and meta-analysis of clinical predictors of lithium response in bipolar disorder. Acta Psychiatr Scand 2019; \n",
+      "bbox": [
+        61.95000076293945,
+        552.9423828125,
+        435.5701599121094,
+        569.1183471679688
+      ],
+      "text_sha256": "52461ebf1f837d4cf9d9e64efae50953fe5c3ee33a3ba2f397d39f28a9b7b9ce"
+    },
+    {
+      "block_id": "page-0275-block-0036",
+      "order": 36,
+      "text": "140:94–115.\n\t12.\t Bahji A, et al. Comparative efficacy and tolerability of pharmacological treatments for the treatment of acute bipolar depression: a systematic \n",
+      "bbox": [
+        61.95600128173828,
+        570.9423828125,
+        435.6180419921875,
+        587.1183471679688
+      ],
+      "text_sha256": "5fe760d21c166f5db69b11dc344d4f32baad528c18d0d9a40f4bd233614c94ac"
+    },
+    {
+      "block_id": "page-0275-block-0037",
+      "order": 37,
+      "text": "review and network meta-analysis. J Affect Disord 2020; 269:154–184.\n\t13.\t Taylor DM, et al. Comparative efficacy and acceptability of drug treatments for bipolar depression: a multiple-treatments meta-analysis. Acta \n",
+      "bbox": [
+        61.96200180053711,
+        588.9423828125,
+        435.64794921875,
+        605.1183471679688
+      ],
+      "text_sha256": "730e675f3246bfde31866cc3679300116a25d51f13577dd8a04b0963807aa7d6"
+    },
+    {
+      "block_id": "page-0275-block-0038",
+      "order": 38,
+      "text": "Psychiatr Scand 2014; 130:452–469.\n",
+      "bbox": [
+        72.96599578857422,
+        606.9423828125,
+        168.60597229003906,
+        614.1183471679688
+      ],
+      "text_sha256": "8282a18a0ed32fac18b9ec02e2ed01f2c86ffe2549d58871bef38510cfbfccb2"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

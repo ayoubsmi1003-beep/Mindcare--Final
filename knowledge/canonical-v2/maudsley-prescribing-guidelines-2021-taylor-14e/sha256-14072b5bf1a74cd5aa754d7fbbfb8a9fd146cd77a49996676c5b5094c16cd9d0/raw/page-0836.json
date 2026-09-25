@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0836",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 836,
+  "source_page_index": 835,
+  "source_page_display": 836,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    815\nCHAPTER 10\nPsychosis in Parkinson’s Disease\nPsychosis in PD is often characterised by visual hallucinations.29 Auditory hallucina-\ntions and delusions occur far less frequently,30 and usually in younger patients.31 \nPsychosis and dementia frequently co-exist. Having one predicts the development of the \nother.32 Sleep disorders are also an established risk factor for the development of \npsychosis.33\nAbnormalities in dopamine, serotonin and acetylcholine neurotransmission have all \nbeen implicated, but the exact aetiology of PD psychosis is poorly understood. In the \nmajority of patients, psychotic symptoms are thought to be secondary to dopaminergic \nmedication rather than part of PD itself; psychosis secondary to medication may be \ndetermined at least in part through polymorphisms of the ACE gene.34 From the limited \ndata available, anticholinergics and dopamine agonists seem to be associated with a \nhigher risk of inducing psychosis than levodopa or COMT inhibitors.30,35 Psychosis is a \nmajor contributor to caregiver distress and a risk factor for institutionalisation and \nearly death.32\nPsychosis in PD – recommendations for treatment\nStep\nIntervention\n1\nExclude organic causes (delirium).\n2\nOptimise the environment to maximise orientation and minimise problems due to poor \ncaregiver–patient interactions.\n3\nIf the patient has insight and hallucinations are infrequent and not troubling, do not treat.\n4\nConsider reducing or stopping anticholinergics and dopamine agonists. Monitor for signs of \nmotor deterioration. Be prepared to restart/increase the dose of these drugs again to achieve the \nbest balance between psychosis and mobility.\n5\nConsider an atypical antipsychotic. The efficacy of clozapine (see below, point 7) is supported by \nplacebo-controlled RCTs.29 In contrast, there are several negative placebo-controlled trials each for \nquetiapine and olanzapine.29 Low-dose quetiapine is the best tolerated, although EPSEs and \nstereotypical movements can occur. It is probably reasonable to try quetiapine36 before clozapine \nbut the success rate may be low. Olanzapine, ziprasidone and aripiprazole are likely to all have \ngreater adverse effects on motor function than quetiapine, although one small trial37 supports \nthe safe use of ziprasidone. Risperidone and typical antipsychotics should be avoided completely. \nSevere rebound psychosis has been described when antipsychotic drugs (quetiapine or clozapine) \nare discontinued.\nAll antipsychotics may be relatively less effective in managing psychotic symptoms in patients \nwith dementia, and such patients may be more prone to developing motor and cognitive side \neffects.38 Antipsychotics have been associated with an increased risk of vascular events in the \nelderly. In PD all antipsychotics are linked to increased mortality39 although the effect of clozapine \nis not known.\n6\nConsider a cholinesterase inhibitor, particularly if the patient has co-morbid dementia29,40 \nCholinesterase inhibitors may also reduce the risk of falls.41 Early use of donepezil does not \nprevent or reduce episodes of psychosis although there is some benefit on cognition.42\n(Continued)\n",
+  "raw_text_sha256": "abd2378ec1d4a16a96372c65aa0949a8da2e281923fe0798784435be66bdf6fc",
+  "coordinates_sha256": "b1a0174468ac9f334dc35c618c11abfd6e1c813cedfdefb48b0fe77a0f97879d",
+  "block_sequence_sha256": "5ae3134112d854935d8ec83c18da31f42d951e6085e29822edf487fc516cba18",
+  "blocks": [
+    {
+      "block_id": "page-0836-block-0000",
+      "order": 0,
+      "text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    815\n",
+      "bbox": [
+        47.999698638916016,
+        31.395221710205078,
+        419.96697998046875,
+        41.0272216796875
+      ],
+      "text_sha256": "a4883f42dc2f5554af309d8b9b9953ee77112799b95107f469d1dac7507aa6c5"
+    },
+    {
+      "block_id": "page-0836-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        454.4096984863281,
+        75.763671875,
+        463.88970947265625,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0836-block-0002",
+      "order": 2,
+      "text": "Psychosis in Parkinson’s Disease\n",
+      "bbox": [
+        47.99980163574219,
+        62.31540298461914,
+        212.19677734375,
+        75.35040283203125
+      ],
+      "text_sha256": "a9d6cce406f87fc84ab38894a81e41caf9062f93458052fdfb7c6d40f2af3866"
+    },
+    {
+      "block_id": "page-0836-block-0003",
+      "order": 3,
+      "text": "Psychosis in PD is often characterised by visual hallucinations.29 Auditory hallucina-\ntions and delusions occur far less frequently,30 and usually in younger patients.31 \nPsychosis and dementia frequently co-exist. Having one predicts the development of the \nother.32 Sleep disorders are also an established risk factor for the development of \npsychosis.33\n",
+      "bbox": [
+        47.999786376953125,
+        81.160400390625,
+        422.8025207519531,
+        140.88040161132812
+      ],
+      "text_sha256": "8be26bb7d3448773ebdaeef85a2a1ab81e48379be876f18160c41477f11fafc0"
+    },
+    {
+      "block_id": "page-0836-block-0004",
+      "order": 4,
+      "text": "Abnormalities in dopamine, serotonin and acetylcholine neurotransmission have all \nbeen implicated, but the exact aetiology of PD psychosis is poorly understood. In the \nmajority of patients, psychotic symptoms are thought to be secondary to dopaminergic \nmedication rather than part of PD itself; psychosis secondary to medication may be \ndetermined at least in part through polymorphisms of the ACE gene.34 From the limited \ndata available, anticholinergics and dopamine agonists seem to be associated with a \nhigher risk of inducing psychosis than levodopa or COMT inhibitors.30,35 Psychosis is a \nmajor contributor to caregiver distress and a risk factor for institutionalisation and \nearly death.32\n",
+      "bbox": [
+        47.998779296875,
+        141.160400390625,
+        422.8197937011719,
+        248.88040161132812
+      ],
+      "text_sha256": "8d29d4291814ad12d601f27723f1b3f7c911a773d60c87209a7d20a77babbfbf"
+    },
+    {
+      "block_id": "page-0836-block-0005",
+      "order": 5,
+      "text": "Psychosis in PD – recommendations for treatment\n",
+      "bbox": [
+        53.99980163574219,
+        267.587890625,
+        228.33729553222656,
+        276.47540283203125
+      ],
+      "text_sha256": "507e9a2179b1db857f32e45724dff75fdc98e12e29c266bb3ece4b2c96480c8e"
+    },
+    {
+      "block_id": "page-0836-block-0006",
+      "order": 6,
+      "text": "Step\nIntervention\n",
+      "bbox": [
+        51.99980163574219,
+        286.3228759765625,
+        147.75982666015625,
+        295.21038818359375
+      ],
+      "text_sha256": "226955917d1a9ae551d54b27d8369810f1ceb1bcd1e1028448b6ed101a4b17c3"
+    },
+    {
+      "block_id": "page-0836-block-0007",
+      "order": 7,
+      "text": "1\nExclude organic causes (delirium).\n",
+      "bbox": [
+        51.99980163574219,
+        303.9478759765625,
+        211.08978271484375,
+        312.83538818359375
+      ],
+      "text_sha256": "c1a223f1b9c235482d5bd1dd0273619d7f7a7cf7a291fdffa5a6bdd5895c6b7a"
+    },
+    {
+      "block_id": "page-0836-block-0008",
+      "order": 8,
+      "text": "2\nOptimise the environment to maximise orientation and minimise problems due to poor \ncaregiver–patient interactions.\n",
+      "bbox": [
+        51.99979782104492,
+        321.5728759765625,
+        382.92242431640625,
+        340.4578857421875
+      ],
+      "text_sha256": "e3a0777aff378405a454329f678a3c0ea409eeebda8853cc34986a7aaf48bcd4"
+    },
+    {
+      "block_id": "page-0836-block-0009",
+      "order": 9,
+      "text": "3\nIf the patient has insight and hallucinations are infrequent and not troubling, do not treat.\n",
+      "bbox": [
+        51.99979782104492,
+        349.19537353515625,
+        391.4423828125,
+        358.0828857421875
+      ],
+      "text_sha256": "626c975fda42f3871f0b1b047f29107f6b3d7f075f0270259b2911839009eb9e"
+    },
+    {
+      "block_id": "page-0836-block-0010",
+      "order": 10,
+      "text": "4\nConsider reducing or stopping anticholinergics and dopamine agonists. Monitor for signs of \nmotor deterioration. Be prepared to restart/increase the dose of these drugs again to achieve the \nbest balance between psychosis and mobility.\n",
+      "bbox": [
+        51.99979782104492,
+        366.82037353515625,
+        414.7524108886719,
+        395.702880859375
+      ],
+      "text_sha256": "e97dfecd9a7c5f24ad925c1d0a7a60f70f897b96ce9e6e3c8b84382b784c0cf0"
+    },
+    {
+      "block_id": "page-0836-block-0011",
+      "order": 11,
+      "text": "5\nConsider an atypical antipsychotic. The efficacy of clozapine (see below, point 7) is supported by \nplacebo-controlled RCTs.29 In contrast, there are several negative placebo-controlled trials each for \nquetiapine and olanzapine.29 Low-dose quetiapine is the best tolerated, although EPSEs and \nstereotypical movements can occur. It is probably reasonable to try quetiapine36 before clozapine \nbut the success rate may be low. Olanzapine, ziprasidone and aripiprazole are likely to all have \ngreater adverse effects on motor function than quetiapine, although one small trial37 supports \nthe safe use of ziprasidone. Risperidone and typical antipsychotics should be avoided completely. \nSevere rebound psychosis has been described when antipsychotic drugs (quetiapine or clozapine) \nare discontinued.\n",
+      "bbox": [
+        51.99979782104492,
+        404.44036865234375,
+        417.9212951660156,
+        493.327880859375
+      ],
+      "text_sha256": "66c134028594e4fb7f376c3456021248c4d77625db9e17b405b255062f810354"
+    },
+    {
+      "block_id": "page-0836-block-0012",
+      "order": 12,
+      "text": "All antipsychotics may be relatively less effective in managing psychotic symptoms in patients \nwith dementia, and such patients may be more prone to developing motor and cognitive side \neffects.38 Antipsychotics have been associated with an increased risk of vascular events in the \nelderly. In PD all antipsychotics are linked to increased mortality39 although the effect of clozapine \nis not known.\n",
+      "bbox": [
+        103.99908447265625,
+        497.6178894042969,
+        416.5241394042969,
+        546.3328857421875
+      ],
+      "text_sha256": "3be4cf2abb625b7e72afc003556236736c186952b8f3e1da737445186d22cf30"
+    },
+    {
+      "block_id": "page-0836-block-0013",
+      "order": 13,
+      "text": "6\nConsider a cholinesterase inhibitor, particularly if the patient has co-morbid dementia29,40 \nCholinesterase inhibitors may also reduce the risk of falls.41 Early use of donepezil does not \nprevent or reduce episodes of psychosis although there is some benefit on cognition.42\n",
+      "bbox": [
+        52.001583099365234,
+        555.0703735351562,
+        398.71380615234375,
+        583.9578857421875
+      ],
+      "text_sha256": "5cb271a979b802030725d37d8a6c0e2fe762f2a3a8739052fbff5adc209920dc"
+    },
+    {
+      "block_id": "page-0836-block-0014",
+      "order": 14,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.9849853515625,
+        593.5470581054688,
+        419.99993896484375,
+        602.299560546875
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

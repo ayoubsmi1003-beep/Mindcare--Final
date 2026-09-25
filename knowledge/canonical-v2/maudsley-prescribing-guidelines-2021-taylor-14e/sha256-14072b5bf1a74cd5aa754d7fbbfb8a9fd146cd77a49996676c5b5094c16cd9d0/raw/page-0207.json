@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0207",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 207,
+  "source_page_index": 206,
+  "source_page_display": 207,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "186    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\n\t55.\t McEvoy JP, et al. Effectiveness of lurasidone in patients with schizophrenia or schizoaffective disorder switched from other antipsychotics: a \nrandomized, 6-week, open-label study. J Clin Psychiatry 2013; 74:170–179.\n\t56.\t McEvoy JP, et al. Effectiveness of paliperidone palmitate vs haloperidol decanoate for maintenance treatment of schizophrenia: a randomized \nclinical trial. JAMA 2014; 311:1978–1987.\n\t57.\t Nasrallah HA, et al. The safety and tolerability of cariprazine in long-term treatment of schizophrenia: a post hoc pooled analysis. BMC \nPsychiatry 2017; 17:305.\n\t58.\t Shim JC, et al. Adjunctive treatment with a dopamine partial agonist, aripiprazole, for antipsychotic-induced hyperprolactinemia: a placebo-\ncontrolled trial. Am J Psychiatry 2007; 164:1404–1410.\n\t59.\t Fleischhacker WW, et al. Weight change on aripiprazole-clozapine combination in schizophrenic patients with weight gain and suboptimal \nresponse on clozapine: 16-week double-blind study. Eur Psychiatry 2008; 23 Suppl 2:S114–S115.\n\t60.\t Henderson DC, et al. Aripiprazole added to overweight and obese olanzapine-treated schizophrenia patients. J Clin Psychopharmacol 2009; \n29:165–169.\n\t61.\t Preda A, et al. A safety evaluation of aripiprazole in the treatment of schizophrenia. Exp Opin Drug Saf 2020; 19:1529–1538.\n\t62.\t Correll CU, et al. Safety and tolerability of lumateperone 42 mg: an open-label antipsychotic switch study in outpatients with stable schizo-\nphrenia. Schizophr Res 2021; 228:198–205.\n\t63.\t Mathis MV, et al. The US Food and Drug Administration’s perspective on the new antipsychotic pimavanserin. J Clin Psychiatry 2017; \n78:e668–e673.\n\t64.\t Cruz MP. Pimavanserin (nuplazid): a treatment for hallucinations and delusions associated with parkinson’s disease. P & T 2017; \n42:368–371.\n\t65.\t Greenwood J, et al. Lumateperone: a novel antipsychotic for schizophrenia. Ann Pharmacother 2021; 55:98–104.\n",
+  "raw_text_sha256": "6bdcc62c6b399d113e0df258f7b164df4e6fb6a2ef03c7c5e43734d3eebb2bf5",
+  "coordinates_sha256": "61a4d3016a1a403e4f37bb35ae723d983c6ebd4fed2ddeebb3c981eef055a5b5",
+  "block_sequence_sha256": "5e1f330869560d26a4f8049c825843155a0f84ec7c7b1ce0ea40c1f3b08beadc",
+  "blocks": [
+    {
+      "block_id": "page-0207-block-0000",
+      "order": 0,
+      "text": "186    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "e4b44a74040633fcac8662f2a0a6a6cde8bf5a4ff926195eb78ed375544a5c15"
+    },
+    {
+      "block_id": "page-0207-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0207-block-0002",
+      "order": 2,
+      "text": "\t55.\t McEvoy JP, et al. Effectiveness of lurasidone in patients with schizophrenia or schizoaffective disorder switched from other antipsychotics: a \n",
+      "bbox": [
+        61.88909912109375,
+        63.2694091796875,
+        435.5270690917969,
+        70.30140686035156
+      ],
+      "text_sha256": "36d1daf318b949b9e5c720fe3c68160104916ca073625e088f2d682611ba2548"
+    },
+    {
+      "block_id": "page-0207-block-0003",
+      "order": 3,
+      "text": "randomized, 6-week, open-label study. J Clin Psychiatry 2013; 74:170–179.\n\t56.\t McEvoy JP, et al. Effectiveness of paliperidone palmitate vs haloperidol decanoate for maintenance treatment of schizophrenia: a randomized \n",
+      "bbox": [
+        61.895103454589844,
+        72.12541198730469,
+        435.5932312011719,
+        88.30140686035156
+      ],
+      "text_sha256": "b446eace9893d889cddaab0b253de6e66f5fd7762c7411b5a9dcd008d67bf288"
+    },
+    {
+      "block_id": "page-0207-block-0004",
+      "order": 4,
+      "text": "clinical trial. JAMA 2014; 311:1978–1987.\n\t57.\t Nasrallah HA, et al. The safety and tolerability of cariprazine in long-term treatment of schizophrenia: a post hoc pooled analysis. BMC \n",
+      "bbox": [
+        61.901100158691406,
+        90.12541198730469,
+        435.5210876464844,
+        106.30140686035156
+      ],
+      "text_sha256": "7bfbe70a90823cfe9aaccfc06f3e174369b84432c35eb5ec89dc49199e6d2c53"
+    },
+    {
+      "block_id": "page-0207-block-0005",
+      "order": 5,
+      "text": "Psychiatry 2017; 17:305.\n\t58.\t Shim JC, et al. Adjunctive treatment with a dopamine partial agonist, aripiprazole, for antipsychotic-induced hyperprolactinemia: a placebo-\n",
+      "bbox": [
+        61.90709686279297,
+        108.12541198730469,
+        433.87115478515625,
+        124.30140686035156
+      ],
+      "text_sha256": "de0b916ff9d42ae14ba5f3e477ed41e2e396d52fa8d60d7d9f2210ecaf0ea16a"
+    },
+    {
+      "block_id": "page-0207-block-0006",
+      "order": 6,
+      "text": "controlled trial. Am J Psychiatry 2007; 164:1404–1410.\n\t59.\t Fleischhacker WW, et al. Weight change on aripiprazole-clozapine combination in schizophrenic patients with weight gain and suboptimal \n",
+      "bbox": [
+        61.91310119628906,
+        126.12541198730469,
+        435.5871887207031,
+        142.30140686035156
+      ],
+      "text_sha256": "176da730458a1c9dca148974938e5b5b5c396638bb9ec31bba6a72e3bc37fb38"
+    },
+    {
+      "block_id": "page-0207-block-0007",
+      "order": 7,
+      "text": "response on clozapine: 16-week double-blind study. Eur Psychiatry 2008; 23 Suppl 2:S114–S115.\n\t60.\t Henderson DC, et al. Aripiprazole added to overweight and obese olanzapine-treated schizophrenia patients. J Clin Psychopharmacol 2009; \n",
+      "bbox": [
+        61.919097900390625,
+        144.1254119873047,
+        435.6110534667969,
+        160.30140686035156
+      ],
+      "text_sha256": "fe211012daab5764de691d205a368bf57571320c224c709866656ccb8ee5e641"
+    },
+    {
+      "block_id": "page-0207-block-0008",
+      "order": 8,
+      "text": "29:165–169.\n\t61.\t Preda A, et al. A safety evaluation of aripiprazole in the treatment of schizophrenia. Exp Opin Drug Saf 2020; 19:1529–1538.\n\t62.\t Correll CU, et al. Safety and tolerability of lumateperone 42 mg: an open-label antipsychotic switch study in outpatients with stable schizo-\n",
+      "bbox": [
+        61.92510223388672,
+        162.1254119873047,
+        433.93109130859375,
+        187.30140686035156
+      ],
+      "text_sha256": "4d94c2b78c6b5d69946b281fe5b74a6e7210da336d4ae7843ad9a67ebf54e982"
+    },
+    {
+      "block_id": "page-0207-block-0009",
+      "order": 9,
+      "text": "phrenia. Schizophr Res 2021; 228:198–205.\n\t63.\t Mathis MV, et al. The US Food and Drug Administration’s perspective on the new antipsychotic pimavanserin. J Clin Psychiatry 2017; \n",
+      "bbox": [
+        61.937103271484375,
+        189.1254119873047,
+        435.6230773925781,
+        205.30140686035156
+      ],
+      "text_sha256": "e939cb33b99e6be750e1d1b2474755116b11c67af4d7272b9c8de541f4a1001c"
+    },
+    {
+      "block_id": "page-0207-block-0010",
+      "order": 10,
+      "text": "78:e668–e673.\n\t64.\t Cruz MP. Pimavanserin (nuplazid): a treatment for hallucinations and delusions associated with parkinson’s disease. P & T 2017; \n",
+      "bbox": [
+        61.94309997558594,
+        207.1254119873047,
+        435.6050720214844,
+        223.30140686035156
+      ],
+      "text_sha256": "de6d970a241ee317abaf65fb974327b849282436d0c84c98c0e715997de7c2fe"
+    },
+    {
+      "block_id": "page-0207-block-0011",
+      "order": 11,
+      "text": "42:368–371.\n\t65.\t Greenwood J, et al. Lumateperone: a novel antipsychotic for schizophrenia. Ann Pharmacother 2021; 55:98–104.\n",
+      "bbox": [
+        61.9490966796875,
+        225.1254119873047,
+        366.8871154785156,
+        241.30140686035156
+      ],
+      "text_sha256": "8e6fe07a0a8f8e73074a3259e55a86748697633569ee74d53c9b01979c77f343"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

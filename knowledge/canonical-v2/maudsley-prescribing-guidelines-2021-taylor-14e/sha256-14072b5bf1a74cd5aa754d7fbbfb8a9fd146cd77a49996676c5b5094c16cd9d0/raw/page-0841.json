@@ -1,0 +1,503 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0841",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 841,
+  "source_page_index": 840,
+  "source_page_display": 841,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "820    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\nRecommendations – psychotropics in AF\nCondition\nSuggested drugs\nDrugs to avoid\nSchizophrenia/schizoaffective \ndisorder\nThe condition itself may be \nassociated with an increased risk of \nAF10\nOne case–control study suggested \nantipsychotics increase risk of AF by \n17%11\nIn paroxysmal or persistent AF, \ncariprazine, brexpiprazole or \nlurasidone may be appropriate \nchoices\nIn permanent AF with rate control, \ndrug choice is less crucial but \nprobably best to avoid drugs with \npotent effects on the ECG \n(ziprasidone, pimozide, sertindole, \netc.) and those which increase heart \nrate\nAF reported with clozapine,12,13 \nolanzapine14,15 aripiprazole16,17 and \npaliperidone.18 Causation not clearly \nestablished but avoid use in lone, \nparoxysmal or persistent AF\nAvoid QT-prolonging drugs in \nischaemic heart disease (see section \non QT prolongation)\nAssociation of antipsychotics with \nAF11 may be linked to metabolic \ndisturbance19 although some studies \nsuggest no link between \nantipsychotics and AF20\nBipolar disorder\nValproate\nLithium\nCarbamazepine\nMood stabilisers appear not to \naffect risk of AF\nValproate may cause A-V \nconduction block21\nOne case of AF following lithium \noverdose22 and one in chronic \ntoxicity23\nDepression\nUntreated depression predicts \nrecurrence of AF24\nPresence of AF increases risk of \ndepression and anxiety25\nSSRIs but beware interaction with \nwarfarin and other anticoagulants26 \nas severe bleeding risk is increased27\nAnimal studies suggest an \nantiarrhythmic effect for SSRIs28,29\nParoxetine improved paroxysmal \nAF in a series of non-depressed \npatients30\nVenlafaxine does not directly \naffect atrial conduction31 and may \ncardiovert paroxysmal AF32\nAF incidence falls after starting \nantidepressant treatment33,34\nNo evidence that agomelatine \naffects cardiac conduction or clotting\nAvoid tricyclics in coronary disease35\nTricyclics may provoke AF36,37 but do \nnot increase risk of haemorrhage \nwhen combined with warfarin26\nA database study suggests \nantidepressants in general do not \nincrease risk of AF38\nAnxiety disorders\n(anxiety symptoms increase risk of \nAF)39\nBenzodiazepines\nSSRIs (see previous sections)\nTricyclics (see previous sections)\nOne case of pregabalin-associated \nAF40\nAlzheimer’s disease\nAcetylcholinesterase inhibitors \n(but beware bradycardic effects in \npatients with paroxysmal ‘vagal’ AF \n(paroxysmal AF provoked by low \nheart rate))\nRivastigmine has least interaction \npotential\nMemantine\nAvoid cholinesterase inhibitors in \nparoxysmal ‘vagal’ AF\n",
+  "raw_text_sha256": "f2420a3486021cf82fb8ef7c9e292900057163957b2385fcf4183a1d84843bd8",
+  "coordinates_sha256": "807b5ad7ae21404856c80d319236903afab3a476f8dc5ba2781592b462175b76",
+  "block_sequence_sha256": "d80094c61235a6683e63a17c8df18124f29204c2831a70c4c59e18ccc24b748a",
+  "blocks": [
+    {
+      "block_id": "page-0841-block-0000",
+      "order": 0,
+      "text": "820    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "0709754bb20d94ab308ae973de80783c1d62aba61c95438a42925a43d7645067"
+    },
+    {
+      "block_id": "page-0841-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0841-block-0002",
+      "order": 2,
+      "text": "Recommendations – psychotropics in AF\n",
+      "bbox": [
+        68.88999938964844,
+        66.06546020507812,
+        275.85498046875,
+        79.1004638671875
+      ],
+      "text_sha256": "5191869528b79d5def24706c7262286cc27ddbd8f8be1792ddb9ffa7142d5588"
+    },
+    {
+      "block_id": "page-0841-block-0003",
+      "order": 3,
+      "text": "Condition\nSuggested drugs\nDrugs to avoid\n",
+      "bbox": [
+        65.88999938964844,
+        90.07301330566406,
+        365.97247314453125,
+        98.96051025390625
+      ],
+      "text_sha256": "f80717469425af151ae441accf8c947378782be421dab6ce3d0126be4eb53740"
+    },
+    {
+      "block_id": "page-0841-block-0004",
+      "order": 4,
+      "text": "Schizophrenia/schizoaffective \ndisorder\n",
+      "bbox": [
+        65.88250732421875,
+        105.69551086425781,
+        172.71250915527344,
+        124.58050537109375
+      ],
+      "text_sha256": "eb3cd8d3eb30da11a1712624d5edfdb9527ff23d6c9a6782f0f70bc1e8854818"
+    },
+    {
+      "block_id": "page-0841-block-0005",
+      "order": 5,
+      "text": "The condition itself may be \nassociated with an increased risk of \nAF10\n",
+      "bbox": [
+        65.88250732421875,
+        128.87049865722656,
+        180.75999450683594,
+        157.572998046875
+      ],
+      "text_sha256": "8f4d825bb96ca277b4f4610393ce60b1a02c9e3a785f6aec0454d7b85bcb4a14"
+    },
+    {
+      "block_id": "page-0841-block-0006",
+      "order": 6,
+      "text": "One case–control study suggested \nantipsychotics increase risk of AF by \n17%11\n",
+      "bbox": [
+        65.88999938964844,
+        161.8780059814453,
+        182.0050048828125,
+        190.58050537109375
+      ],
+      "text_sha256": "72cb0c100881194f16f8ffa9ed94ee845ce63a41a6b5a2577cbbab85f7505d01"
+    },
+    {
+      "block_id": "page-0841-block-0007",
+      "order": 7,
+      "text": "In paroxysmal or persistent AF, \ncariprazine, brexpiprazole or \nlurasidone may be appropriate \nchoices\n",
+      "bbox": [
+        189.889892578125,
+        105.87801361083984,
+        293.5174560546875,
+        144.5780029296875
+      ],
+      "text_sha256": "8378b8ddf00be719c291a327b8f7494527bc2258f15fa0bbc10341b08ac38591"
+    },
+    {
+      "block_id": "page-0841-block-0008",
+      "order": 8,
+      "text": "In permanent AF with rate control, \ndrug choice is less crucial but \nprobably best to avoid drugs with \npotent effects on the ECG \n(ziprasidone, pimozide, sertindole, \netc.) and those which increase heart \nrate\n",
+      "bbox": [
+        189.889892578125,
+        148.8679962158203,
+        307.27239990234375,
+        217.56048583984375
+      ],
+      "text_sha256": "a77b8c072369aaf3e95b7760733a11f3e06730616a0138a4a5335de9c1a20e17"
+    },
+    {
+      "block_id": "page-0841-block-0009",
+      "order": 9,
+      "text": "AF reported with clozapine,12,13 \nolanzapine14,15 aripiprazole16,17 and \npaliperidone.18 Causation not clearly \nestablished but avoid use in lone, \nparoxysmal or persistent AF\n",
+      "bbox": [
+        313.88629150390625,
+        105.8554916381836,
+        431.6866455078125,
+        154.58050537109375
+      ],
+      "text_sha256": "3888421f4fe28094ab61c675fcc5f73d6df4805adffa88d6f0c0018da9c842a0"
+    },
+    {
+      "block_id": "page-0841-block-0010",
+      "order": 10,
+      "text": "Avoid QT-prolonging drugs in \nischaemic heart disease (see section \non QT prolongation)\n",
+      "bbox": [
+        313.8916015625,
+        158.87049865722656,
+        429.7291564941406,
+        187.572998046875
+      ],
+      "text_sha256": "a818b70882a0c161f60ce9ce4394a7d658e384648fe20c9f4d741db32d4bdcd7"
+    },
+    {
+      "block_id": "page-0841-block-0011",
+      "order": 11,
+      "text": "Association of antipsychotics with \nAF11 may be linked to metabolic \ndisturbance19 although some studies \nsuggest no link between \nantipsychotics and AF20\n",
+      "bbox": [
+        313.8916015625,
+        191.8629913330078,
+        431.97918701171875,
+        240.58047485351562
+      ],
+      "text_sha256": "69e465266a6c85dab358ba3441a0c6ab5aa219e3001e95b75ec0d46e2110f817"
+    },
+    {
+      "block_id": "page-0841-block-0012",
+      "order": 12,
+      "text": "Bipolar disorder\nValproate\n",
+      "bbox": [
+        65.88999938964844,
+        247.32298278808594,
+        223.93751525878906,
+        256.2104797363281
+      ],
+      "text_sha256": "b0d3c90900928616940ec36091c1893db33ba461da691c87972477b1d458ae6d"
+    },
+    {
+      "block_id": "page-0841-block-0013",
+      "order": 13,
+      "text": "Lithium\n",
+      "bbox": [
+        189.88751220703125,
+        260.3204650878906,
+        216.55752563476562,
+        269.2079772949219
+      ],
+      "text_sha256": "4b3fa0d998941b086da02bea9d4933fcdb1d8d7699758dff916b0ea211843213"
+    },
+    {
+      "block_id": "page-0841-block-0014",
+      "order": 14,
+      "text": "Carbamazepine\n",
+      "bbox": [
+        189.88751220703125,
+        273.3179626464844,
+        244.48751831054688,
+        282.2054748535156
+      ],
+      "text_sha256": "4dfbcc7868753a38e09b7a63c84ebc448722e70b17b881574105c13f526c2689"
+    },
+    {
+      "block_id": "page-0841-block-0015",
+      "order": 15,
+      "text": "Mood stabilisers appear not to \naffect risk of AF\n",
+      "bbox": [
+        313.885009765625,
+        247.49546813964844,
+        413.4926452636719,
+        266.2004699707031
+      ],
+      "text_sha256": "58b620a745247610bd7a93e91f52503b3084c5a0db0706006d44377ff55805b6"
+    },
+    {
+      "block_id": "page-0841-block-0016",
+      "order": 16,
+      "text": "Valproate may cause A-V \nconduction block21\n",
+      "bbox": [
+        313.885009765625,
+        270.490478515625,
+        395.83746337890625,
+        289.1954650878906
+      ],
+      "text_sha256": "d4858116c95b492aa2f719e03aa2ab1226db1e90cde45ec516c94d564147f1fe"
+    },
+    {
+      "block_id": "page-0841-block-0017",
+      "order": 17,
+      "text": "One case of AF following lithium \noverdose22 and one in chronic \ntoxicity23\n",
+      "bbox": [
+        313.8898010253906,
+        293.50299072265625,
+        420.56988525390625,
+        322.2079772949219
+      ],
+      "text_sha256": "288f87d2d674ec7c622bdf31015e58c9fef622c79b1de6b2f310faf1227e0ea2"
+    },
+    {
+      "block_id": "page-0841-block-0018",
+      "order": 18,
+      "text": "Depression\n",
+      "bbox": [
+        65.88999938964844,
+        328.9479675292969,
+        104.91999053955078,
+        337.8354797363281
+      ],
+      "text_sha256": "ce671d3d1ab8a2414473ed7cde1062546ccf670ea792bc40a6968a2aa033a858"
+    },
+    {
+      "block_id": "page-0841-block-0019",
+      "order": 19,
+      "text": "Untreated depression predicts \nrecurrence of AF24\n",
+      "bbox": [
+        65.88999938964844,
+        342.12548828125,
+        162.99998474121094,
+        360.8304748535156
+      ],
+      "text_sha256": "126a9d63e0a9cb16ca317c93a56b9d79bc706e7f08f5ff333dcab33064500333"
+    },
+    {
+      "block_id": "page-0841-block-0020",
+      "order": 20,
+      "text": "Presence of AF increases risk of \ndepression and anxiety25\n",
+      "bbox": [
+        65.88999938964844,
+        365.12799072265625,
+        167.28997802734375,
+        383.8329772949219
+      ],
+      "text_sha256": "1f4bce97ef9641e555f1893030aa0754c2804b8e5f5aa2358d941d3f5fa2d42d"
+    },
+    {
+      "block_id": "page-0841-block-0021",
+      "order": 21,
+      "text": "SSRIs but beware interaction with \nwarfarin and other anticoagulants26 \nas severe bleeding risk is increased27\n",
+      "bbox": [
+        189.889892578125,
+        328.9479675292969,
+        305.6011047363281,
+        357.8329772949219
+      ],
+      "text_sha256": "1b4aedc9d3dd62715be8483d0138e3aaa4079cb1a66f9024b978458d0676b5f4"
+    },
+    {
+      "block_id": "page-0841-block-0022",
+      "order": 22,
+      "text": "Animal studies suggest an \nantiarrhythmic effect for SSRIs28,29\n",
+      "bbox": [
+        189.889892578125,
+        362.12799072265625,
+        296.926025390625,
+        380.8329772949219
+      ],
+      "text_sha256": "cce9428bfa51c1ed0805974e5346a99b75daf80f49791bc17b9e2f273b953cd5"
+    },
+    {
+      "block_id": "page-0841-block-0023",
+      "order": 23,
+      "text": "Paroxetine improved paroxysmal \nAF in a series of non-depressed \npatients30\n",
+      "bbox": [
+        189.889892578125,
+        384.9479675292969,
+        299.50238037109375,
+        413.8304748535156
+      ],
+      "text_sha256": "03527ea4e6001294d4310a7f7f3fc29745c949ba09c54d5c88efaa5eda434b25"
+    },
+    {
+      "block_id": "page-0841-block-0024",
+      "order": 24,
+      "text": "Venlafaxine does not directly \naffect atrial conduction31 and may \ncardiovert paroxysmal AF32\n",
+      "bbox": [
+        189.889892578125,
+        417.9479675292969,
+        300.4485778808594,
+        446.8329772949219
+      ],
+      "text_sha256": "cf9a44c694d7d26451fce794f0c437fc5e699325ab858366f8c91bf1252b1dfc"
+    },
+    {
+      "block_id": "page-0841-block-0025",
+      "order": 25,
+      "text": "AF incidence falls after starting \nantidepressant treatment33,34\n",
+      "bbox": [
+        189.889892578125,
+        451.1280212402344,
+        290.2998962402344,
+        469.8330078125
+      ],
+      "text_sha256": "10608793b19c3df3c05d6f470c5c21746a8ca17ded7b1e92d3d359f64ae394e9"
+    },
+    {
+      "block_id": "page-0841-block-0026",
+      "order": 26,
+      "text": "No evidence that agomelatine \naffects cardiac conduction or clotting\n",
+      "bbox": [
+        189.889892578125,
+        473.947998046875,
+        302.8174743652344,
+        492.8330078125
+      ],
+      "text_sha256": "b35253872f750e9df55fc7d38973f1116aa5a754a7f163b9651f72c76270d236"
+    },
+    {
+      "block_id": "page-0841-block-0027",
+      "order": 27,
+      "text": "Avoid tricyclics in coronary disease35\n",
+      "bbox": [
+        313.8874206542969,
+        329.1230163574219,
+        428.0551452636719,
+        337.83050537109375
+      ],
+      "text_sha256": "c6c4a53cdb7a760fb61a2e47887aee97e89e17c81b683dd4445014c9a66f096b"
+    },
+    {
+      "block_id": "page-0841-block-0028",
+      "order": 28,
+      "text": "Tricyclics may provoke AF36,37 but do \nnot increase risk of haemorrhage \nwhen combined with warfarin26\n",
+      "bbox": [
+        313.8898010253906,
+        342.12799072265625,
+        430.6684265136719,
+        370.8304748535156
+      ],
+      "text_sha256": "c849f96537f500106eaa8cb1f1b9ec5201a747c0040c47eb36adecc8f262afd6"
+    },
+    {
+      "block_id": "page-0841-block-0029",
+      "order": 29,
+      "text": "A database study suggests \nantidepressants in general do not \nincrease risk of AF38\n",
+      "bbox": [
+        313.8898010253906,
+        375.12799072265625,
+        422.5349426269531,
+        403.8304748535156
+      ],
+      "text_sha256": "fa0a12c0310b14d9ca8034ffc26d6008cb86e15e55c3c5beaf3fd894a51a6cfc"
+    },
+    {
+      "block_id": "page-0841-block-0030",
+      "order": 30,
+      "text": "Anxiety disorders\n",
+      "bbox": [
+        65.88999938964844,
+        499.572998046875,
+        127.84748840332031,
+        508.46051025390625
+      ],
+      "text_sha256": "fd05e79fb8723aa267e9f3fadaf725edd302e6eace869cdcb84acfdb73cfecd0"
+    },
+    {
+      "block_id": "page-0841-block-0031",
+      "order": 31,
+      "text": "(anxiety symptoms increase risk of \nAF)39\n",
+      "bbox": [
+        65.88999938964844,
+        512.75048828125,
+        176.58248901367188,
+        531.4555053710938
+      ],
+      "text_sha256": "7312cbf49ac1b59e5d903c08a0d543f4febdfb0236a316ba57c9de5ad350474e"
+    },
+    {
+      "block_id": "page-0841-block-0032",
+      "order": 32,
+      "text": "Benzodiazepines\n",
+      "bbox": [
+        189.889892578125,
+        499.572998046875,
+        249.06492614746094,
+        508.46051025390625
+      ],
+      "text_sha256": "b2415b7ae654663c88764302a51bd5b9c4cc200adbc533f41662bd096b532f6c"
+    },
+    {
+      "block_id": "page-0841-block-0033",
+      "order": 33,
+      "text": "SSRIs (see previous sections)\n",
+      "bbox": [
+        189.889892578125,
+        512.5704956054688,
+        281.0224304199219,
+        521.4580078125
+      ],
+      "text_sha256": "ee49207aa4df0446165915dc196b9be3572ffea364f3f94274c46ac9c45e47e0"
+    },
+    {
+      "block_id": "page-0841-block-0034",
+      "order": 34,
+      "text": "Tricyclics (see previous sections)\n",
+      "bbox": [
+        313.88739013671875,
+        499.7530212402344,
+        413.472412109375,
+        508.46051025390625
+      ],
+      "text_sha256": "5525af7702b9ed8825e845370faa7b7a07f76697929488e9498a11b9b1ea387d"
+    },
+    {
+      "block_id": "page-0841-block-0035",
+      "order": 35,
+      "text": "One case of pregabalin-associated \nAF40\n",
+      "bbox": [
+        313.88739013671875,
+        512.75048828125,
+        425.0149841308594,
+        531.4555053710938
+      ],
+      "text_sha256": "4ac9288cd4a14d7b297e30d4c6ff6d9b42e67fbcbf59f5ce2c858d6116bf9c7d"
+    },
+    {
+      "block_id": "page-0841-block-0036",
+      "order": 36,
+      "text": "Alzheimer’s disease\nAcetylcholinesterase inhibitors \n(but beware bradycardic effects in \npatients with paroxysmal ‘vagal’ AF \n(paroxysmal AF provoked by low \nheart rate))\n",
+      "bbox": [
+        65.88999938964844,
+        538.197998046875,
+        304.7574768066406,
+        587.0755004882812
+      ],
+      "text_sha256": "10697b8360ced42cdc8a3ab92d2b9e2e2d9c74989cc7c9a825aa6f0a77723efe"
+    },
+    {
+      "block_id": "page-0841-block-0037",
+      "order": 37,
+      "text": "Rivastigmine has least interaction \npotential\n",
+      "bbox": [
+        189.88751220703125,
+        591.1854858398438,
+        303.2350769042969,
+        610.0704956054688
+      ],
+      "text_sha256": "bcbc1a17000b6354a943505bc71c1181f930f3d4dc49f59f7871e3b8854b725b"
+    },
+    {
+      "block_id": "page-0841-block-0038",
+      "order": 38,
+      "text": "Memantine\n",
+      "bbox": [
+        189.88751220703125,
+        614.1804809570312,
+        230.31251525878906,
+        623.0679931640625
+      ],
+      "text_sha256": "7e3dc6e3071bb16b3fbe386ab22fecdbd666d3bc1f74f537f2808c226af7cc02"
+    },
+    {
+      "block_id": "page-0841-block-0039",
+      "order": 39,
+      "text": "Avoid cholinesterase inhibitors in \nparoxysmal ‘vagal’ AF\n",
+      "bbox": [
+        313.885009765625,
+        538.3629150390625,
+        420.85015869140625,
+        557.0679931640625
+      ],
+      "text_sha256": "340be1add83768aa5f9ae00086e9eeb3753685a99fc44139c852d3534ddcacd5"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

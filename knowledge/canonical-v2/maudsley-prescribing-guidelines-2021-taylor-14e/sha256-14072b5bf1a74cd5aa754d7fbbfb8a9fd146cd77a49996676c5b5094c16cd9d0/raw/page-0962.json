@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0962",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 962,
+  "source_page_index": 961,
+  "source_page_display": 962,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Miscellany    941\nCHAPTER 14\n\t46.\t Fitzgerald K, et al. Pilot randomized active-placebo controlled double-blind trial of low dose ketamine for the treatment of multiple sclerosis-\nrelated fatigue (1642). Neurology 2020; 94:1642.\n\t47.\t TREC G. Rapid tranquillisation for agitated patients in emergency psychiatric rooms: a randomised trial of midazolam versus haloperidol \nplus promethazine. Bmj 2003; 327:708–713.\n\t48.\t Spain D, et al. Safety and effectiveness of high-dose midazolam for severe behavioural disturbance in an emergency department with sus-\npected psychostimulant-affected patients. Emergency Medicine Australasia: EMA 2008; 20:112–120.\n\t49.\t Brown HE, et al. Efficacy and Tolerability of Adjunctive Intravenous Sodium Nitroprusside Treatment for Outpatients With Schizophrenia: \nA Randomized Clinical Trial. JAMA Psychiatry 2019; 76:691–699.\n\t50.\t Martel ML, et al. A Large Retrospective Cohort of Patients Receiving Intravenous Olanzapine in the Emergency Department. Acad Emerg \nMed 2016; 23:29–35.\n\t51.\t Cole JB, et al. A Prospective Observational Study of Patients Receiving Intravenous and Intramuscular Olanzapine in the Emergency \nDepartment. Ann Emerg Med 2017; 69:327–336.e322.\n\t52.\t Sud P, et al. Intravenous droperidol or olanzapine as an adjunct to midazolam for the acutely agitated patient: a multicenter, randomized, \ndouble-blind, placebo-controlled clinical trial. Annals of Emergency Medicine 2013; 61:597–598.\n\t53.\t Drevets WC, et al. Replication of scopolamine’s antidepressant efficacy in major depressive disorder: a randomized, placebo-controlled clini-\ncal trial. Biol Psychiatry 2010; 67:432–438.\n\t54.\t Buoli M, et al. Is trazodone more effective than clomipramine in major depressed outpatients? A single-blind study with intravenous and oral \nadministration. CNS Spectrums 2019; 24:258–264.\n\t55.\t Asadollahi S, et al. Efficacy and safety of valproic acid versus haloperidol in patients with acute agitation: results of a randomized, double-\nblind, parallel-group trial. International Clinical Psychopharmacology 2015; 30:142–150.\n\t56.\t Sekhar S, et al. Efficacy of sodium valproate and haloperidol in the management of acute mania: a randomized open-label comparative study. \nJ Clin Pharmacol 2010; 50:688–692.\n",
+  "raw_text_sha256": "870265eb32103f219a0b870812cc93976f9e44b396c83fe83573e28f0cb5b5f2",
+  "coordinates_sha256": "b22a14ecac29a662fb922577cb15a2e9e9cfa87a27e889ba3913d77465dfd57b",
+  "block_sequence_sha256": "eab0ff32212e1d576d8e84b405bbf03cec94ea04b955959b50f3f5df189ac70f",
+  "blocks": [
+    {
+      "block_id": "page-0962-block-0000",
+      "order": 0,
+      "text": "Miscellany    941\n",
+      "bbox": [
+        349.2962951660156,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "7c2356c803c7af91d3af19d8138c3aec518af5a917ec8be0cbdd2879bfc7c43b"
+    },
+    {
+      "block_id": "page-0962-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        454.4096984863281,
+        338.7405090332031,
+        463.88970947265625,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0962-block-0002",
+      "order": 2,
+      "text": "\t46.\t Fitzgerald K, et al. Pilot randomized active-placebo controlled double-blind trial of low dose ketamine for the treatment of multiple sclerosis-\n",
+      "bbox": [
+        48.0,
+        63.2703857421875,
+        419.9518127441406,
+        70.30238342285156
+      ],
+      "text_sha256": "d759f2a9b95207f4f7ba9d95994c483f37621b440317b09014aaeab6aa333fb0"
+    },
+    {
+      "block_id": "page-0962-block-0003",
+      "order": 3,
+      "text": "related fatigue (1642). Neurology 2020; 94:1642.\n\t47.\t TREC G. Rapid tranquillisation for agitated patients in emergency psychiatric rooms: a randomised trial of midazolam versus haloperidol \n",
+      "bbox": [
+        48.00600051879883,
+        72.12638854980469,
+        421.68011474609375,
+        88.30238342285156
+      ],
+      "text_sha256": "afcf4ce0c2881c502180591517fbce95973fc9c7a6b54840a0f23169aab41fd1"
+    },
+    {
+      "block_id": "page-0962-block-0004",
+      "order": 4,
+      "text": "plus promethazine. Bmj 2003; 327:708–713.\n\t48.\t Spain D, et al. Safety and effectiveness of high-dose midazolam for severe behavioural disturbance in an emergency department with sus-\n",
+      "bbox": [
+        48.012001037597656,
+        90.12638854980469,
+        420.0179748535156,
+        106.30238342285156
+      ],
+      "text_sha256": "423aff4654305f1dbcaf3d94216289f27d2978329f5c098192511e8799892ecb"
+    },
+    {
+      "block_id": "page-0962-block-0005",
+      "order": 5,
+      "text": "pected psychostimulant-affected patients. Emergency Medicine Australasia: EMA 2008; 20:112–120.\n\t49.\t Brown HE, et al. Efficacy and Tolerability of Adjunctive Intravenous Sodium Nitroprusside Treatment for Outpatients With Schizophrenia: \n",
+      "bbox": [
+        48.018001556396484,
+        108.12638854980469,
+        421.6860046386719,
+        124.30238342285156
+      ],
+      "text_sha256": "e1c31a578c5ce8e78166d520af671d34776195a0246fd80ea79e88c18a1fd929"
+    },
+    {
+      "block_id": "page-0962-block-0006",
+      "order": 6,
+      "text": "A Randomized Clinical Trial. JAMA Psychiatry 2019; 76:691–699.\n\t50.\t Martel ML, et al. A Large Retrospective Cohort of Patients Receiving Intravenous Olanzapine in the Emergency Department. Acad Emerg \n",
+      "bbox": [
+        48.02399826049805,
+        126.12638854980469,
+        421.6800842285156,
+        142.30238342285156
+      ],
+      "text_sha256": "fa507f4b7ac859bd126a5cf0dbeba960fef003d70562731a0faf987391658d02"
+    },
+    {
+      "block_id": "page-0962-block-0007",
+      "order": 7,
+      "text": "Med 2016; 23:29–35.\n\t51.\t Cole JB, et al. A Prospective Observational Study of Patients Receiving Intravenous and Intramuscular Olanzapine in the Emergency \n",
+      "bbox": [
+        48.029998779296875,
+        144.1263885498047,
+        421.6560363769531,
+        160.30238342285156
+      ],
+      "text_sha256": "28dbb97da3689844bc911b8416d30bd593b2bca9023b813c2b5d6ba498a9c8e3"
+    },
+    {
+      "block_id": "page-0962-block-0008",
+      "order": 8,
+      "text": "Department. Ann Emerg Med 2017; 69:327–336.e322.\n\t52.\t Sud P, et al. Intravenous droperidol or olanzapine as an adjunct to midazolam for the acutely agitated patient: a multicenter, randomized, \n",
+      "bbox": [
+        48.0359992980957,
+        162.1263885498047,
+        421.7159118652344,
+        178.30238342285156
+      ],
+      "text_sha256": "5bc26989104b51728a3f506979328ce55544ebe961b0a1bfbe9917de17bf13a3"
+    },
+    {
+      "block_id": "page-0962-block-0009",
+      "order": 9,
+      "text": "double-blind, placebo-controlled clinical trial. Annals of Emergency Medicine 2013; 61:597–598.\n\t53.\t Drevets WC, et al. Replication of scopolamine’s antidepressant efficacy in major depressive disorder: a randomized, placebo-controlled clini-\n",
+      "bbox": [
+        48.04199981689453,
+        180.1263885498047,
+        420.0240783691406,
+        196.30238342285156
+      ],
+      "text_sha256": "e3566e8152922e03f18b7b3c493347b6977925bd80e57a9b605b99b50effe588"
+    },
+    {
+      "block_id": "page-0962-block-0010",
+      "order": 10,
+      "text": "cal trial. Biol Psychiatry 2010; 67:432–438.\n\t54.\t Buoli M, et al. Is trazodone more effective than clomipramine in major depressed outpatients? A single-blind study with intravenous and oral \n",
+      "bbox": [
+        48.04800033569336,
+        198.1263885498047,
+        421.70391845703125,
+        214.30238342285156
+      ],
+      "text_sha256": "9baa6391bde597c550f370c9fc8b57d63843de18bef5ea48a90fe43ac097a5a1"
+    },
+    {
+      "block_id": "page-0962-block-0011",
+      "order": 11,
+      "text": "administration. CNS Spectrums 2019; 24:258–264.\n\t55.\t Asadollahi S, et al. Efficacy and safety of valproic acid versus haloperidol in patients with acute agitation: results of a randomized, double-\n",
+      "bbox": [
+        48.05400085449219,
+        216.1263885498047,
+        420.0239562988281,
+        232.30238342285156
+      ],
+      "text_sha256": "ed984adffb57075e57fa8547a26f55c89620744f762ec28a6c346ba8c59bdb1a"
+    },
+    {
+      "block_id": "page-0962-block-0012",
+      "order": 12,
+      "text": "blind, parallel-group trial. International Clinical Psychopharmacology 2015; 30:142–150.\n\t56.\t Sekhar S, et al. Efficacy of sodium valproate and haloperidol in the management of acute mania: a randomized open-label comparative study. \n",
+      "bbox": [
+        48.060001373291016,
+        234.1263885498047,
+        421.6798400878906,
+        250.30238342285156
+      ],
+      "text_sha256": "fc08761e9a5150574a150e3c23da54872a3d34dc82dec8cc5a9777b8199e71b1"
+    },
+    {
+      "block_id": "page-0962-block-0013",
+      "order": 13,
+      "text": "J Clin Pharmacol 2010; 50:688–692.\n",
+      "bbox": [
+        59.06399917602539,
+        252.1263885498047,
+        155.11196899414062,
+        259.3023986816406
+      ],
+      "text_sha256": "3c11a39486cdf3f31f7ba178dd0336bee970861dc2fc886287c0698fb6273544"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

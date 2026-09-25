@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0082",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 82,
+  "source_page_index": 81,
+  "source_page_display": 82,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    61\nCHAPTER 1\nneed for repeat doses in acute psychosis. Indeed this was the principal finding of the \nfirst double-blind study of ZA.60 Participants were given either ZA or haloperidol IM \nand assessed over three days. Changes in BPRS and CGI scores were near identical on \neach daily assessment. However, only 1 of 23 ZA patients required a second injection, \nwhereas 7 of 21 required a repeat dose of haloperidol. Speed of onset was not exam-\nined. Similar findings were reported by Thai researchers comparing the same treat-\nments,61 and in three other studies of moderate size (n = 44,62 n = 40,63 n = 50).64 In each \nstudy, the timing of assessments was such that time to onset of effect could not be \ndetermined.\nA Cochrane review65 included all of the above comparative studies as well as three \nfurther studies66–68 for which we were unable to obtain full details. The Cochrane \nauthors concluded that all studies were methodically flawed and poorly reported and \nthat ZA did not appear to have a ‘rapid onset of action’. They noted that ZA was prob-\nably no less effective than other treatments and that its use might ‘result in less numer-\nous coercive injections’.\nOverall, the utility of ZA in rapid tranquillisation is limited by a somewhat delayed \nonset of both sedative and antipsychotic actions. Sedation may be apparent in a minor-\nity of patients after 2–4 hours, but antipsychotic action is evident only after 8 hours. If \nZA is given to a restrained patient, their behaviour on release from restraint is likely to \nbe unchanged and will remain as such for several hours. ZA has a role in reducing the \nnumber of restraints for IM injection, but it has no role in rapid tranquillisation.\nGuidelines for the use of zuclopenthixol acetate (Acuphase)\nZuclopenthixol acetate (ZA) is not a rapidly tranquillising agent. It should be used only after an \nacutely psychotic patient has required repeated injections of short-acting antipsychotic drugs such \nas haloperidol or olanzapine, or sedative drugs such as lorazepam. It is perhaps best reserved for \nthose few patients who have a prior history of good response to Acuphase.\nZA should be given only when enough time has elapsed to assess the full response to previously \ninjected drugs: allow 15 minutes after IV injections; 60 minutes after IM.\nZA should never be administered for rapid tranquillisation (onset of effect is too slow) or to a \npatient who is physically resistant (risk of intravasation and oil embolus) or to neuroleptic-naïve \npatients (risk of prolonged EPSE).\n",
+  "raw_text_sha256": "a553ef8e3116908b94b442c9113d602e708bae864708122b2b14d22418d04b51",
+  "coordinates_sha256": "cab64288f74b1cc7a34d65d92a1aad468d536ad29a45eb14df8b9174ba0c1ab5",
+  "block_sequence_sha256": "69fff543efbf2139bd404d7440ba89b5de7c005cc29bd552e91c8ec671348370",
+  "blocks": [
+    {
+      "block_id": "page-0082-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    61\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "2cecfdeb376254c72ed1671917a199dd7d424a3a48ac53c4f8421ac289f640ff"
+    },
+    {
+      "block_id": "page-0082-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0082-block-0002",
+      "order": 2,
+      "text": "need for repeat doses in acute psychosis. Indeed this was the principal finding of the \nfirst double-blind study of ZA.60 Participants were given either ZA or haloperidol IM \nand assessed over three days. Changes in BPRS and CGI scores were near identical on \neach daily assessment. However, only 1 of 23 ZA patients required a second injection, \nwhereas 7 of 21 required a repeat dose of haloperidol. Speed of onset was not exam-\nined. Similar findings were reported by Thai researchers comparing the same treat-\nments,61 and in three other studies of moderate size (n = 44,62 n = 40,63 n = 50).64 In each \nstudy, the timing of assessments was such that time to onset of effect could not be \ndetermined.\n",
+      "bbox": [
+        47.997894287109375,
+        62.5494384765625,
+        422.8279724121094,
+        170.26943969726562
+      ],
+      "text_sha256": "6f2fdbb0ead98137c375eca525b4e83cf8660c32ae19acc25e826318915552cf"
+    },
+    {
+      "block_id": "page-0082-block-0003",
+      "order": 3,
+      "text": "A Cochrane review65 included all of the above comparative studies as well as three \nfurther studies66–68 for which we were unable to obtain full details. The Cochrane \nauthors concluded that all studies were methodically flawed and poorly reported and \nthat ZA did not appear to have a ‘rapid onset of action’. They noted that ZA was prob-\nably no less effective than other treatments and that its use might ‘result in less numer-\nous coercive injections’.\n",
+      "bbox": [
+        47.994300842285156,
+        170.5494384765625,
+        422.8042907714844,
+        242.26943969726562
+      ],
+      "text_sha256": "ba8ca9a0623d2a9d1bdd71c9c48ffad1dbee4367ea6c4bdcc0d95510e4d93ac8"
+    },
+    {
+      "block_id": "page-0082-block-0004",
+      "order": 4,
+      "text": "Overall, the utility of ZA in rapid tranquillisation is limited by a somewhat delayed \nonset of both sedative and antipsychotic actions. Sedation may be apparent in a minor-\nity of patients after 2–4 hours, but antipsychotic action is evident only after 8 hours. If \nZA is given to a restrained patient, their behaviour on release from restraint is likely to \nbe unchanged and will remain as such for several hours. ZA has a role in reducing the \nnumber of restraints for IM injection, but it has no role in rapid tranquillisation.\n",
+      "bbox": [
+        47.99430847167969,
+        242.5494384765625,
+        422.8042297363281,
+        314.2694396972656
+      ],
+      "text_sha256": "e702015b3142c6aeba9fec5c08c887cb89748d395ffb34a4881e7e6ed38f091f"
+    },
+    {
+      "block_id": "page-0082-block-0005",
+      "order": 5,
+      "text": "Guidelines for the use of zuclopenthixol acetate (Acuphase)\n",
+      "bbox": [
+        55.49909973144531,
+        335.87261962890625,
+        294.00067138671875,
+        345.94512939453125
+      ],
+      "text_sha256": "d44972bd38aac0569fa1e7ef4369ab2fc178d4d3955ca35319563549dde85176"
+    },
+    {
+      "block_id": "page-0082-block-0006",
+      "order": 6,
+      "text": "Zuclopenthixol acetate (ZA) is not a rapidly tranquillising agent. It should be used only after an \nacutely psychotic patient has required repeated injections of short-acting antipsychotic drugs such \nas haloperidol or olanzapine, or sedative drugs such as lorazepam. It is perhaps best reserved for \nthose few patients who have a prior history of good response to Acuphase.\n",
+      "bbox": [
+        55.49909973144531,
+        358.3976135253906,
+        411.7512512207031,
+        398.2541198730469
+      ],
+      "text_sha256": "5e9fa39be921aadea64530f16f23de34874b20c8c41988a9282e83647113415d"
+    },
+    {
+      "block_id": "page-0082-block-0007",
+      "order": 7,
+      "text": "ZA should be given only when enough time has elapsed to assess the full response to previously \ninjected drugs: allow 15 minutes after IV injections; 60 minutes after IM.\n",
+      "bbox": [
+        55.49909973144531,
+        401.3821105957031,
+        404.7386779785156,
+        421.2466125488281
+      ],
+      "text_sha256": "43673ba8870d7dda6f70c8b595af83f8ea67a1967d724ff9c9b45739a214cb20"
+    },
+    {
+      "block_id": "page-0082-block-0008",
+      "order": 8,
+      "text": "ZA should never be administered for rapid tranquillisation (onset of effect is too slow) or to a \npatient who is physically resistant (risk of intravasation and oil embolus) or to neuroleptic-naïve \npatients (risk of prolonged EPSE).\n",
+      "bbox": [
+        55.49909973144531,
+        424.3746032714844,
+        400.4208068847656,
+        454.235107421875
+      ],
+      "text_sha256": "2c323aa81941bdb4c6185302689fe8c662e281239c42153c6a77d4a10d1c65da"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

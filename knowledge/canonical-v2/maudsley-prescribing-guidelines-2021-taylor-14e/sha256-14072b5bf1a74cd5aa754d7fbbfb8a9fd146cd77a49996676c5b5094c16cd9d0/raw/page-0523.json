@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0523",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 523,
+  "source_page_index": 522,
+  "source_page_display": 523,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "502    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\n\t75.\t Lingford-Hughes AR, et al. BAP updated guidelines: evidence-based guidelines for the pharmacological management of substance abuse, \nharmful use, addiction and comorbidity: recommendations from BAP. J Psychopharmacol 2012; 26:899–952.\n\t76.\t National Institute for Clinical Excellence. Drug misuse in over 16s: opioid detoxification. Clinical Guidance 52. 2007; https://www.nice.org.\nuk/guidance/cg52.\n\t77.\t National Institute for Clinical Excellence. Drug misuse in over 16s: psychosocial interventions. Clinical Guidance [CG51]. 2007; (last \nchecked July 2016). https://www.nice.org.uk/guidance/cg51.\n\t78.\t Nosyk B, et al. Defining dosing pattern characteristics of successful tapers following methadone maintenance treatment: results from a pop-\nulation-based retrospective cohort study. Addiction 2012; 107:1621–1629.\n\t79.\t Minozzi S, et al. Oral naltrexone maintenance treatment for opioid dependence. Cochrane Database Syst Rev 2011; 4:CD001333.\n\t80.\t National Institute for Clinical Excellence. Naltrexone for the management of opioid dependence. Technology Appraisal [TA115]. 2007 \n(reviewed November 2010); https://www.nice.org.uk/guidance/ta115.\n\t81.\t Kunoe N, et al. Naltrexone implants after in-patient treatment for opioid dependence: randomised controlled trial. Br J Psychiatry 2009; \n194:541–546.\n\t82.\t The British Pain Society, et al. Pain and substance misuse: improving the patient experience. A consensus statement prepared by The British \nPain Society in collaboration with The Royal College of Psychiatrists, The Royal College of General Practitioners and The Advisory Council \non the Misuse of Drugs. 2007; http://www.britishpainsociety.org/book_drug_misuse_main.pdf.\n\t83.\t Winklbaur B, et al. Treating pregnant women dependent on opioids is not the same as treating pregnancy and opioid dependence: a knowl-\nedge synthesis for better treatment for women and neonates. Addiction 2008; 103:1429–1440.\n\t84.\t Finnegan LP. Neonatal abstinence syndrome. in RA Hoekelman, et al., ed. Primary pediatric care. St Louis: Mosby 1992; 1367–1378.\n\t85.\t Winklbaur B, et al. Opioid dependence and pregnancy. Curr Opin Psychiatry 2008; 21:255–259.\n\t86.\t Minozzi S, et al. Maintenance agonist treatments for opiate-dependent pregnant women. Cochrane Database Syst Rev 2013; 12:CD006318.\n\t87.\t Fischer G, et al. Methadone versus buprenorphine in pregnant addicts: a double-blind, double-dummy comparison study. Addiction 2006; \n101:275–281.\n\t88.\t Holmes AP, et al. Breastfeeding considerations for mothers of infants with neonatal abstinence syndrome. Pharmacotherapy 2017; \n37:861–869.\n",
+  "raw_text_sha256": "ab8512ef59e18427d702aec7c99dc36a9599d701fb7e31176b66d55440d9bb72",
+  "coordinates_sha256": "f68792e2b547f09bbe9e6bfbd34490c5752c90512c874de1831f6e086f1966db",
+  "block_sequence_sha256": "5bb4ac562877f19458e36a81bf1dd6aa0a206edc24ab330941d24764183fc29e",
+  "blocks": [
+    {
+      "block_id": "page-0523-block-0000",
+      "order": 0,
+      "text": "502    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "d990a3fa931e14a8c7a3a26301914ec66c36311f825082693cba1bf647df9e81"
+    },
+    {
+      "block_id": "page-0523-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0523-block-0002",
+      "order": 2,
+      "text": "\t75.\t Lingford-Hughes AR, et al. BAP updated guidelines: evidence-based guidelines for the pharmacological management of substance abuse, \n",
+      "bbox": [
+        61.88999938964844,
+        63.2703857421875,
+        435.5218811035156,
+        70.30238342285156
+      ],
+      "text_sha256": "9f59ad5f26fff379e0d6b0013b61f23682586441ffc0c24ca4339b7d9e670dd0"
+    },
+    {
+      "block_id": "page-0523-block-0003",
+      "order": 3,
+      "text": "harmful use, addiction and comorbidity: recommendations from BAP. J Psychopharmacol 2012; 26:899–952.\n\t76.\t National Institute for Clinical Excellence. Drug misuse in over 16s: opioid detoxification. Clinical Guidance 52. 2007; https://www.nice.org.\n",
+      "bbox": [
+        61.895999908447266,
+        72.12638854980469,
+        433.8598937988281,
+        88.30238342285156
+      ],
+      "text_sha256": "15a8b6ddc7e1fdfa6815035564e87eada0da98492a5513088c713e54e001ecec"
+    },
+    {
+      "block_id": "page-0523-block-0004",
+      "order": 4,
+      "text": "uk/guidance/cg52.\n\t77.\t National Institute for Clinical Excellence. Drug misuse in over 16s: psychosocial interventions. Clinical Guidance [CG51]. 2007; (last \n",
+      "bbox": [
+        61.902000427246094,
+        90.2703857421875,
+        435.5819091796875,
+        106.30238342285156
+      ],
+      "text_sha256": "627071f5eedd038cdb983312715792ecc0ac38fe0876e5630b012a52a8920291"
+    },
+    {
+      "block_id": "page-0523-block-0005",
+      "order": 5,
+      "text": "checked July 2016). https://www.nice.org.uk/guidance/cg51.\n\t78.\t Nosyk B, et al. Defining dosing pattern characteristics of successful tapers following methadone maintenance treatment: results from a pop-\n",
+      "bbox": [
+        61.90800094604492,
+        108.2703857421875,
+        433.926025390625,
+        124.30238342285156
+      ],
+      "text_sha256": "6a59ae96fc5444eea6e76b443e1fa8dcfa29608351189879adbce88a46c0da39"
+    },
+    {
+      "block_id": "page-0523-block-0006",
+      "order": 6,
+      "text": "ulation-based retrospective cohort study. Addiction 2012; 107:1621–1629.\n\t79.\t Minozzi S, et al. Oral naltrexone maintenance treatment for opioid dependence. Cochrane Database Syst Rev 2011; 4:CD001333.\n\t80.\t National Institute for Clinical Excellence. Naltrexone for the management of opioid dependence. Technology Appraisal [TA115]. 2007 \n",
+      "bbox": [
+        61.91400146484375,
+        126.12638854980469,
+        435.59393310546875,
+        151.30238342285156
+      ],
+      "text_sha256": "08d0f5fed7d0b6e6b11701b4ffa8bc789c5206e4f113e3b70633adfc55621490"
+    },
+    {
+      "block_id": "page-0523-block-0007",
+      "order": 7,
+      "text": "(reviewed November 2010); https://www.nice.org.uk/guidance/ta115.\n\t81.\t Kunoe N, et al. Naltrexone implants after in-patient treatment for opioid dependence: randomised controlled trial. Br J Psychiatry 2009; \n",
+      "bbox": [
+        61.92599868774414,
+        153.2703857421875,
+        435.5760192871094,
+        169.30238342285156
+      ],
+      "text_sha256": "ad35a557887cb893121770764c4a730b0696a62f8d9723681c993a76f421c121"
+    },
+    {
+      "block_id": "page-0523-block-0008",
+      "order": 8,
+      "text": "194:541–546.\n\t82.\t The British Pain Society, et al. Pain and substance misuse: improving the patient experience. A consensus statement prepared by The British \n",
+      "bbox": [
+        61.93199920654297,
+        171.1263885498047,
+        435.5580749511719,
+        187.30238342285156
+      ],
+      "text_sha256": "dd790c891fa4279efc0c15f97ffae3d1644a7c02fbe23fe1d00d0311bbd54b4e"
+    },
+    {
+      "block_id": "page-0523-block-0009",
+      "order": 9,
+      "text": "Pain Society in collaboration with The Royal College of Psychiatrists, The Royal College of General Practitioners and The Advisory Council \non the Misuse of Drugs. 2007; http://www.britishpainsociety.org/book_drug_misuse_main.pdf.\n\t83.\t Winklbaur B, et al. Treating pregnant women dependent on opioids is not the same as treating pregnancy and opioid dependence: a knowl-\n",
+      "bbox": [
+        61.9379997253418,
+        189.2703857421875,
+        435.6180419921875,
+        214.30238342285156
+      ],
+      "text_sha256": "98e09f30caae95aa637b69eabbb2b4779a829b97d63f7794f74a80eed4f9c8da"
+    },
+    {
+      "block_id": "page-0523-block-0010",
+      "order": 10,
+      "text": "edge synthesis for better treatment for women and neonates. Addiction 2008; 103:1429–1440.\n\t84.\t Finnegan LP. Neonatal abstinence syndrome. in RA Hoekelman, et al., ed. Primary pediatric care. St Louis: Mosby 1992; 1367–1378.\n\t85.\t Winklbaur B, et al. Opioid dependence and pregnancy. Curr Opin Psychiatry 2008; 21:255–259.\n\t86.\t Minozzi S, et al. Maintenance agonist treatments for opiate-dependent pregnant women. Cochrane Database Syst Rev 2013; 12:CD006318.\n\t87.\t Fischer G, et al. Methadone versus buprenorphine in pregnant addicts: a double-blind, double-dummy comparison study. Addiction 2006; \n",
+      "bbox": [
+        61.944000244140625,
+        216.1263885498047,
+        435.617919921875,
+        259.3023986816406
+      ],
+      "text_sha256": "497c43fdb9d820ad66bc93ae0983610a5d22291365e82ce95db45cd0553cf432"
+    },
+    {
+      "block_id": "page-0523-block-0011",
+      "order": 11,
+      "text": "101:275–281.\n\t88.\t Holmes AP, et al. Breastfeeding considerations for mothers of infants with neonatal abstinence syndrome. Pharmacotherapy 2017; \n",
+      "bbox": [
+        61.96200180053711,
+        261.1263732910156,
+        435.6600341796875,
+        277.3023986816406
+      ],
+      "text_sha256": "f3ebe648ab8fc37f536c882dcb3c7586b1c6cb0f3fa9e2e54afd72f93fbc4ea9"
+    },
+    {
+      "block_id": "page-0523-block-0012",
+      "order": 12,
+      "text": "37:861–869.\n",
+      "bbox": [
+        72.96600341796875,
+        279.1263732910156,
+        105.989990234375,
+        286.3023986816406
+      ],
+      "text_sha256": "8c093de582a68b80f149fb59a1ce56799492737da1cfcf71329789b70ba98d3f"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

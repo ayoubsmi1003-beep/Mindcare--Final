@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0930",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 930,
+  "source_page_index": 929,
+  "source_page_display": 930,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Miscellany    909\nCHAPTER 14\nTable 14.2  (Continued)\n(Continued)\nParameter\nReference range10\nAgents reported to raise levels\nAgents reported to \nlower levels\nBilirubin\n≤21μmol/L (total)\nAmitriptyline, atomoxetine, \nbenzodiazepines, carbamazepine, \nchlordiazepoxide, chlorpromazine, \ncitalopram, clomethiazole, \nclozapine, disulfiram, imipramine, \nfluphenazine, lamotrigine, \nmeprobamate, milnacipran, \nolanzapine, phenothiazines, \nphenytoin, promethazine, \nsertraline, valbenazine, valproate; \nalso associated with agents \ncausing cholestasis/hepatic \ndamage\nBarbiturates\nC-reactive protein\n<10mg/L\nBuprenorphine (rare); also \nassociated with agents causing \nmyocarditis (clozapine)\nNone known\nCalcium\n2.20–2.60mmol/L (total, \nadjusted) \n1.15–1.34mmol/L (ionised)\nLithium (rare)\nBarbiturates, \ncarbamazepine, \nhaloperidol, valproate\nCarbohydrate- \ndeficient transferrin \n(CDT)\n≤1.5%\nAlcohol (CDT levels of 1.6–1.9% \nsuggest high intake; levels ≥ 2% \nsuggest excessive intake)\nNone known\nChloride\n95–108mmol/L\nAgents causing hyperchloremic \nmetabolic acidosis: topiramate, \nzonisamide\nMedications associated \nwith SIADH: all \nantidepressants, \nantipsychotics \n(clozapine, haloperidol, \nolanzapine, \nphenothiazines, \npimozide, risperidone/\npaliperidone, \nquetiapine); \ncarbamazepine, \nlaxative abuse\nCholesterol (total)\n≤5.2mmol/L \n(usually compared to \nrecommended action limits \nrather than reference \nranges)\nAntipsychotics, especially those \nimplicated in the metabolic \nsyndrome (phenothiazines, \nclozapine, olanzapine and \nquetiapine). Rarely: aripiprazole, \nbeta-blockers (additive effects with \nclozapine), carbamazepine, \ndisulfiram, duloxetine, memantine, \nmirtazapine, modafinil, phenytoin, \nrivastigmine, sertraline, venlafaxine\nPrazosin, thyroid \nagents\n",
+  "raw_text_sha256": "955057938105c35d724b63e16250dc292de3be4663c1ebb832d3655194232f17",
+  "coordinates_sha256": "47b8f0e94dcf22802820b1ab673b9747a16c496e03be4f4b6b32dbb6ece00459",
+  "block_sequence_sha256": "907e7900d5d14c837eb9d829fe1b6682cb1900b587ba112f458852e3daf981e5",
+  "blocks": [
+    {
+      "block_id": "page-0930-block-0000",
+      "order": 0,
+      "text": "Miscellany    909\n",
+      "bbox": [
+        349.2962951660156,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "8b62d74f6fde7e24f7d336c1c87741cf7584ad61ab8a1f987c25b6aa001f30c1"
+    },
+    {
+      "block_id": "page-0930-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        454.4096984863281,
+        338.7405090332031,
+        463.88970947265625,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0930-block-0002",
+      "order": 2,
+      "text": "Table 14.2  (Continued)\n",
+      "bbox": [
+        54.0,
+        69.41468811035156,
+        130.2899932861328,
+        78.30218505859375
+      ],
+      "text_sha256": "8bd13b41fda1b6770466837f45163f93b570ec912d9c083e8b068ddb8e61d0bd"
+    },
+    {
+      "block_id": "page-0930-block-0003",
+      "order": 3,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.9849853515625,
+        588.7296752929688,
+        419.99993896484375,
+        597.482177734375
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0930-block-0004",
+      "order": 4,
+      "text": "Parameter\nReference range10\nAgents reported to raise levels\nAgents reported to \nlower levels\n",
+      "bbox": [
+        48.039398193359375,
+        89.01850891113281,
+        410.4967956542969,
+        107.90350341796875
+      ],
+      "text_sha256": "aa61555c628d7c54f10a422c1400f45d1c140ad78ce30a6f27ae2348bfc3308b"
+    },
+    {
+      "block_id": "page-0930-block-0005",
+      "order": 5,
+      "text": "Bilirubin\n≤21μmol/L (total)\nAmitriptyline, atomoxetine, \nbenzodiazepines, carbamazepine, \nchlordiazepoxide, chlorpromazine, \ncitalopram, clomethiazole, \nclozapine, disulfiram, imipramine, \nfluphenazine, lamotrigine, \nmeprobamate, milnacipran, \nolanzapine, phenothiazines, \nphenytoin, promethazine, \nsertraline, valbenazine, valproate; \nalso associated with agents \ncausing cholestasis/hepatic \ndamage\n",
+      "bbox": [
+        48.03680419921875,
+        115.7185287475586,
+        334.99432373046875,
+        244.39599609375
+      ],
+      "text_sha256": "56ab4c70ae4c06f64c5d0f2a02b503e69a386318e486e63572e32768d8f0c382"
+    },
+    {
+      "block_id": "page-0930-block-0006",
+      "order": 6,
+      "text": "Barbiturates\n",
+      "bbox": [
+        341.039306640625,
+        115.6884994506836,
+        379.3718566894531,
+        124.39599609375
+      ],
+      "text_sha256": "808ff0f494a7c40387bc2c872a7fe00e7c140654dec90c7e80da9e4cb729ecf6"
+    },
+    {
+      "block_id": "page-0930-block-0007",
+      "order": 7,
+      "text": "C-reactive protein\n<10mg/L\nBuprenorphine (rare); also \nassociated with agents causing \nmyocarditis (clozapine)\n",
+      "bbox": [
+        48.03680419921875,
+        250.7110137939453,
+        319.6418762207031,
+        279.41351318359375
+      ],
+      "text_sha256": "0427e5abd18e3a6346c189456aa9499c3336b84e0fb1939d0e9c5b47b2e47095"
+    },
+    {
+      "block_id": "page-0930-block-0008",
+      "order": 8,
+      "text": "None known\n",
+      "bbox": [
+        341.039306640625,
+        250.70350646972656,
+        382.3118591308594,
+        259.4110107421875
+      ],
+      "text_sha256": "ba6586dc579443d5e17252c96d100bb0bdb30ec0ac15a8dc02e530767503ecc9"
+    },
+    {
+      "block_id": "page-0930-block-0009",
+      "order": 9,
+      "text": "Calcium\n2.20–2.60mmol/L (total, \nadjusted) \n1.15–1.34mmol/L (ionised)\n",
+      "bbox": [
+        48.03680419921875,
+        285.728515625,
+        202.26675415039062,
+        314.4309997558594
+      ],
+      "text_sha256": "1da19db1f9b516e5f5e7ee55e223f938ce3497c0d3c5f9439937919336b144b1"
+    },
+    {
+      "block_id": "page-0930-block-0010",
+      "order": 10,
+      "text": "Lithium (rare)\nBarbiturates, \ncarbamazepine, \nhaloperidol, valproate\n",
+      "bbox": [
+        218.789306640625,
+        285.72100830078125,
+        410.49688720703125,
+        314.4234924316406
+      ],
+      "text_sha256": "11235eb1fb91bdcffc8dfd4b7a2aff43f506a88b524b0ffcd991e74051fa60f2"
+    },
+    {
+      "block_id": "page-0930-block-0011",
+      "order": 11,
+      "text": "Carbohydrate- \ndeficient transferrin \n(CDT)\n",
+      "bbox": [
+        48.03680419921875,
+        320.7384948730469,
+        112.6117935180664,
+        349.44097900390625
+      ],
+      "text_sha256": "0eaae9744982b44e89f425393b1c0ab20f8d811106c931092d1fce48a1aecaf0"
+    },
+    {
+      "block_id": "page-0930-block-0012",
+      "order": 12,
+      "text": "≤1.5%\nAlcohol (CDT levels of 1.6–1.9% \nsuggest high intake; levels ≥ 2% \nsuggest excessive intake)\n",
+      "bbox": [
+        122.03929901123047,
+        320.7309875488281,
+        325.07183837890625,
+        349.4334716796875
+      ],
+      "text_sha256": "c420b4ab14fb8f99c34ccaa5bed333750f4eb34723e2813d8b0a62d33ce67ebe"
+    },
+    {
+      "block_id": "page-0930-block-0013",
+      "order": 13,
+      "text": "None known\n",
+      "bbox": [
+        341.039306640625,
+        320.7234802246094,
+        382.3118591308594,
+        329.43096923828125
+      ],
+      "text_sha256": "ba6586dc579443d5e17252c96d100bb0bdb30ec0ac15a8dc02e530767503ecc9"
+    },
+    {
+      "block_id": "page-0930-block-0014",
+      "order": 14,
+      "text": "Chloride\n95–108mmol/L\nAgents causing hyperchloremic \nmetabolic acidosis: topiramate, \nzonisamide\n",
+      "bbox": [
+        48.03680419921875,
+        355.74847412109375,
+        320.19683837890625,
+        384.4509582519531
+      ],
+      "text_sha256": "f78764c3455b20b29085d04284ddcd4654549831fbbfea11dc5354c3df5a2bcf"
+    },
+    {
+      "block_id": "page-0930-block-0015",
+      "order": 15,
+      "text": "Medications associated \nwith SIADH: all \nantidepressants, \nantipsychotics \n(clozapine, haloperidol, \nolanzapine, \nphenothiazines, \npimozide, risperidone/\npaliperidone, \nquetiapine); \ncarbamazepine, \nlaxative abuse\n",
+      "bbox": [
+        341.039306640625,
+        355.740966796875,
+        417.306884765625,
+        474.4209289550781
+      ],
+      "text_sha256": "fb4913b638daa0aff239befc5773a923cd5be3d142e0ff44906d6ceaae31e2ef"
+    },
+    {
+      "block_id": "page-0930-block-0016",
+      "order": 16,
+      "text": "Cholesterol (total)\n≤5.2mmol/L \n(usually compared to \nrecommended action limits \nrather than reference \nranges)\n",
+      "bbox": [
+        48.03680419921875,
+        480.7359313964844,
+        210.65176391601562,
+        529.4334106445312
+      ],
+      "text_sha256": "bd0b52e4152538a158a6812a7ba81cdb5f7e7a5e284cb620a8dd23415e48647c"
+    },
+    {
+      "block_id": "page-0930-block-0017",
+      "order": 17,
+      "text": "Antipsychotics, especially those \nimplicated in the metabolic \nsyndrome (phenothiazines, \nclozapine, olanzapine and \nquetiapine). Rarely: aripiprazole, \nbeta-blockers (additive effects with \nclozapine), carbamazepine, \ndisulfiram, duloxetine, memantine, \nmirtazapine, modafinil, phenytoin, \nrivastigmine, sertraline, venlafaxine\n",
+      "bbox": [
+        218.789306640625,
+        480.7284240722656,
+        332.3992919921875,
+        579.4133911132812
+      ],
+      "text_sha256": "fde7b74b11a935947ba26a5857fe1b75a713a4033e59b18811a80e4811ac73bf"
+    },
+    {
+      "block_id": "page-0930-block-0018",
+      "order": 18,
+      "text": "Prazosin, thyroid \nagents\n",
+      "bbox": [
+        341.039306640625,
+        480.7059020996094,
+        395.9093322753906,
+        499.410888671875
+      ],
+      "text_sha256": "88a02bd9568af145da1831ca78321ef609d7c8e601de1f994053e1073e19deea"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

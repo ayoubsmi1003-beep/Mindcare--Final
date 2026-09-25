@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0343",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 343,
+  "source_page_index": 342,
+  "source_page_display": 343,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "322    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nReferences\n\t 1.\t Marcantoni WS, et al. A systematic review and meta-analysis of the efficacy of intravenous ketamine infusion for treatment resistant depres-\nsion: January 2009–January 2019. J Affect Disord 2020; 277:831–841.\n\t 2.\t Papakostas GI, et al. Efficacy of esketamine augmentation in major depressive disorder: a meta-analysis. J Clin Psychiatry 2020; 81:19r12889.\n\t 3.\t Wilkinson ST, et al. The effect of a single dose of intravenous ketamine on suicidal ideation: a systematic review and individual participant \ndata meta-analysis. Am J Psychiatry 2018; 175:150–158.\n\t 4.\t Witt K, et al. Ketamine for suicidal ideation in adults with psychiatric disorders: a systematic review and meta-analysis of treatment trials. \nAust N Z J Psychiatry 2020; 54:29–45.\n\t 5.\t Beck K, et al. Association of ketamine with psychiatric symptoms and implications for its therapeutic use and for understanding schizophre-\nnia: a systematic review and meta-analysis. JAMA Network Open 2020; 3:e204693.\n\t 6.\t Aan Het Rot M, et al. Safety and efficacy of repeated-dose intravenous ketamine for treatment-resistant depression. Biol Psychiatry 2010; \n67:139–145.\n\t 7.\t Short B, et al. Side-effects associated with ketamine use in depression: a systematic review. Lancet Psychiatry 2018; 5:65–78.\n\t 8.\t Goh KK, et al. Lamotrigine augmentation in treatment-resistant unipolar depression: a comprehensive meta-analysis of efficacy and safety. J \nPsychopharmacology 2019; 33:700–713.\n\t 9.\t Papadimitropoulou K, et al. Comparative efficacy and tolerability of pharmacological and somatic interventions in adult patients with \ntreatment-resistant depression: a systematic review and network meta-analysis. Curr Med Res Opin 2017; 33:701–711.\n\t10.\t Folkerts HW, et al. Electroconvulsive therapy vs. paroxetine in treatment-resistant depression – a randomized study. Acta Psychiatr Scand \n1997; 96:334–342.\n\t11.\t Gonzalez-Pinto A, et al. Efficacy and safety of venlafaxine-ECT combination in treatment-resistant depression. J Neuropsychiatry Clin \nNeurosci 2002; 14:206–209.\n\t12.\t Eranti S, et al. A randomized, controlled trial with 6-month follow-up of repetitive transcranial magnetic stimulation and electroconvulsive \ntherapy for severe depression. Am J Psychiatry 2007; 164:73–81.\n\t13.\t Joffe RT, et al. A comparison of triiodothyronine and thyroxine in the potentiation of tricyclic antidepressants. Psychiatry Res 1990; \n32:241–251.\n\t14.\t Anderson IM. Drug treatment of depression: reflections on the evidence. Adv Psychiatric Treatment 2003; 9:11–20.\n\t15.\t Nierenberg AA, et al. A comparison of lithium and T(3) augmentation following two failed medication treatments for depression: a STAR*D \nreport. Am J Psychiatry 2006; 163:1519–1530.\n\t16.\t Iosifescu DV, et al. An open study of triiodothyronine augmentation of selective serotonin reuptake inhibitors in treatment-resistant major \ndepressive disorder. J Clin Psychiatry 2005; 66:1038–1042.\n\t17.\t Abraham G, et al. T3 augmentation of SSRI resistant depression. J Affect Disord 2006; 91:211–215.\n\t18.\t Kelly TF, et al. Long term augmentation with T3 in refractory major depression. J Affect Disord 2009; 115:230–233.\n\t19.\t Parmentier T, et al. The use of triiodothyronine (T3) in the treatment of bipolar depression: a review of the literature. J Affect Disord 2018; \n229:410–414.\n\t20.\t Garlow SJ, et al. The combination of triiodothyronine (T3) and sertraline is not superior to sertraline monotherapy in the treatment of major \ndepressive disorder. J Psychiatr Res 2012; 46:1406–1413.\n",
+  "raw_text_sha256": "bf03e2351fe2992f4e52f2811009e2b506ed179ad3f02c28b50cd5f1e84270c6",
+  "coordinates_sha256": "376c73bd6ae98a5904d4f7c7128cc096d7e41a55bdc7316fcef298de6d633bac",
+  "block_sequence_sha256": "f804428558fb8ff845b01d66d19478c0704e67f1299fd375cf7b628c6a091e4e",
+  "blocks": [
+    {
+      "block_id": "page-0343-block-0000",
+      "order": 0,
+      "text": "322    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "06eec6f422371ecd4d566bafe79b31d32e50e5af9661f47f33e7d7f0bb559edc"
+    },
+    {
+      "block_id": "page-0343-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0343-block-0002",
+      "order": 2,
+      "text": "References\n",
+      "bbox": [
+        61.88999938964844,
+        62.31540298461914,
+        117.92399597167969,
+        75.35040283203125
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0343-block-0003",
+      "order": 3,
+      "text": "\t 1.\t Marcantoni WS, et al. A systematic review and meta-analysis of the efficacy of intravenous ketamine infusion for treatment resistant depres-\n",
+      "bbox": [
+        61.88999938964844,
+        80.4364013671875,
+        433.8540344238281,
+        87.46839904785156
+      ],
+      "text_sha256": "ec0c688e9cb4be51bac6559de0f28afa0daf98168213f329d8b2d07818617ed7"
+    },
+    {
+      "block_id": "page-0343-block-0004",
+      "order": 4,
+      "text": "sion: January 2009–January 2019. J Affect Disord 2020; 277:831–841.\n\t 2.\t Papakostas GI, et al. Efficacy of esketamine augmentation in major depressive disorder: a meta-analysis. J Clin Psychiatry 2020; 81:19r12889.\n\t 3.\t Wilkinson ST, et al. The effect of a single dose of intravenous ketamine on suicidal ideation: a systematic review and individual participant \n",
+      "bbox": [
+        61.895999908447266,
+        89.29240417480469,
+        435.5938720703125,
+        114.46839904785156
+      ],
+      "text_sha256": "17d469098a2f28ed014627c746afa0849203cecadefc1ceb866475e6aacedf34"
+    },
+    {
+      "block_id": "page-0343-block-0005",
+      "order": 5,
+      "text": "data meta-analysis. Am J Psychiatry 2018; 175:150–158.\n\t 4.\t Witt K, et al. Ketamine for suicidal ideation in adults with psychiatric disorders: a systematic review and meta-analysis of treatment trials. \n",
+      "bbox": [
+        61.90800094604492,
+        116.29240417480469,
+        435.6239929199219,
+        132.46839904785156
+      ],
+      "text_sha256": "8aace475c0161e29d39a0c1622ec2b0a3fb95eb4e1b3c8f7368d4685f1097163"
+    },
+    {
+      "block_id": "page-0343-block-0006",
+      "order": 6,
+      "text": "Aust N Z J Psychiatry 2020; 54:29–45.\n\t 5.\t Beck K, et al. Association of ketamine with psychiatric symptoms and implications for its therapeutic use and for understanding schizophre-\n",
+      "bbox": [
+        61.91400146484375,
+        134.2924041748047,
+        433.93792724609375,
+        150.46839904785156
+      ],
+      "text_sha256": "d2628d8f78aea894d67621ee725f4609b60283603a10231b06a3ae871817988b"
+    },
+    {
+      "block_id": "page-0343-block-0007",
+      "order": 7,
+      "text": "nia: a systematic review and meta-analysis. JAMA Network Open 2020; 3:e204693.\n\t 6.\t Aan Het Rot M, et al. Safety and efficacy of repeated-dose intravenous ketamine for treatment-resistant depression. Biol Psychiatry 2010; \n",
+      "bbox": [
+        61.91999816894531,
+        152.2924041748047,
+        435.61212158203125,
+        168.46839904785156
+      ],
+      "text_sha256": "a774a98316055ea059cb4b4d72fc117847561b8b40e12493aaa7b93494f81119"
+    },
+    {
+      "block_id": "page-0343-block-0008",
+      "order": 8,
+      "text": "67:139–145.\n\t 7.\t Short B, et al. Side-effects associated with ketamine use in depression: a systematic review. Lancet Psychiatry 2018; 5:65–78.\n\t 8.\t Goh KK, et al. Lamotrigine augmentation in treatment-resistant unipolar depression: a comprehensive meta-analysis of efficacy and safety. J \n",
+      "bbox": [
+        61.92599868774414,
+        170.2924041748047,
+        435.57598876953125,
+        195.46839904785156
+      ],
+      "text_sha256": "3da3119eb8898e0c91b91625d11d197e71c53d67dc0030e46960ee6f197bbc3d"
+    },
+    {
+      "block_id": "page-0343-block-0009",
+      "order": 9,
+      "text": "Psychopharmacology 2019; 33:700–713.\n\t 9.\t Papadimitropoulou K, et al. Comparative efficacy and tolerability of pharmacological and somatic interventions in adult patients with \n",
+      "bbox": [
+        61.9379997253418,
+        197.2924041748047,
+        435.5758056640625,
+        213.46839904785156
+      ],
+      "text_sha256": "dc427ccdcada9db71326f436cbe91b4c7a3ba10aac2ad3f924417544d25f8927"
+    },
+    {
+      "block_id": "page-0343-block-0010",
+      "order": 10,
+      "text": "treatment-resistant depression: a systematic review and network meta-analysis. Curr Med Res Opin 2017; 33:701–711.\n\t10.\t Folkerts HW, et al. Electroconvulsive therapy vs. paroxetine in treatment-resistant depression – a randomized study. Acta Psychiatr Scand \n",
+      "bbox": [
+        61.944000244140625,
+        215.2924041748047,
+        435.6239929199219,
+        231.46839904785156
+      ],
+      "text_sha256": "7e3e971fd4f0a562d055c006212a58890f8ba163ecbce3cfc3361daa9beb1d78"
+    },
+    {
+      "block_id": "page-0343-block-0011",
+      "order": 11,
+      "text": "1997; 96:334–342.\n\t11.\t Gonzalez-Pinto A, et al. Efficacy and safety of venlafaxine-ECT combination in treatment-resistant depression. J Neuropsychiatry Clin \n",
+      "bbox": [
+        61.95000076293945,
+        233.2924041748047,
+        435.6239318847656,
+        249.46839904785156
+      ],
+      "text_sha256": "fc645e6c11a29438a8b59852f5566e97397a3dad6cd8d717387f769e419467dd"
+    },
+    {
+      "block_id": "page-0343-block-0012",
+      "order": 12,
+      "text": "Neurosci 2002; 14:206–209.\n\t12.\t Eranti S, et al. A randomized, controlled trial with 6-month follow-up of repetitive transcranial magnetic stimulation and electroconvulsive \n",
+      "bbox": [
+        61.95600128173828,
+        251.2924041748047,
+        435.5878601074219,
+        267.4684143066406
+      ],
+      "text_sha256": "a058e6b398af79d17e14877016a185da268713442a83bf37f6dfd91cecc9e4fd"
+    },
+    {
+      "block_id": "page-0343-block-0013",
+      "order": 13,
+      "text": "therapy for severe depression. Am J Psychiatry 2007; 164:73–81.\n\t13.\t Joffe RT, et al. A comparison of triiodothyronine and thyroxine in the potentiation of tricyclic antidepressants. Psychiatry Res 1990; \n",
+      "bbox": [
+        61.96200180053711,
+        269.2923889160156,
+        435.6720275878906,
+        285.4684143066406
+      ],
+      "text_sha256": "2fb06ad106e17f74dce8e85bf7a6fc54f491359c4a0ed50f3c4b3bff11a003a5"
+    },
+    {
+      "block_id": "page-0343-block-0014",
+      "order": 14,
+      "text": "32:241–251.\n\t14.\t Anderson IM. Drug treatment of depression: reflections on the evidence. Adv Psychiatric Treatment 2003; 9:11–20.\n\t15.\t Nierenberg AA, et al. A comparison of lithium and T(3) augmentation following two failed medication treatments for depression: a STAR*D \n",
+      "bbox": [
+        61.96799850463867,
+        287.2923889160156,
+        435.67803955078125,
+        312.4684143066406
+      ],
+      "text_sha256": "16da1df79448f38846dac70e97ef500624b55286a0b3494b021b3c4d7a141d02"
+    },
+    {
+      "block_id": "page-0343-block-0015",
+      "order": 15,
+      "text": "report. Am J Psychiatry 2006; 163:1519–1530.\n\t16.\t Iosifescu DV, et al. An open study of triiodothyronine augmentation of selective serotonin reuptake inhibitors in treatment-resistant major \n",
+      "bbox": [
+        61.97999954223633,
+        314.2923889160156,
+        435.6118469238281,
+        330.4684143066406
+      ],
+      "text_sha256": "d3e8da0a4221a506702dc849b7d3b86249ceeef8e7e12c0ed4ad93910fb88935"
+    },
+    {
+      "block_id": "page-0343-block-0016",
+      "order": 16,
+      "text": "depressive disorder. J Clin Psychiatry 2005; 66:1038–1042.\n\t17.\t Abraham G, et al. T3 augmentation of SSRI resistant depression. J Affect Disord 2006; 91:211–215.\n\t18.\t Kelly TF, et al. Long term augmentation with T3 in refractory major depression. J Affect Disord 2009; 115:230–233.\n\t19.\t Parmentier T, et al. The use of triiodothyronine (T3) in the treatment of bipolar depression: a review of the literature. J Affect Disord 2018; \n",
+      "bbox": [
+        61.986000061035156,
+        332.2923889160156,
+        435.6178894042969,
+        366.4684143066406
+      ],
+      "text_sha256": "97d9b5578e05f4b4676aa6b71c253c52f10de232234ec2a675e0288a07727c56"
+    },
+    {
+      "block_id": "page-0343-block-0017",
+      "order": 17,
+      "text": "229:410–414.\n\t20.\t Garlow SJ, et al. The combination of triiodothyronine (T3) and sertraline is not superior to sertraline monotherapy in the treatment of major \n",
+      "bbox": [
+        62.00400161743164,
+        368.2923889160156,
+        435.64190673828125,
+        384.4684143066406
+      ],
+      "text_sha256": "27f4c93642802f00cc74e1127134dc553488df8561ee39b2fe3e9084584fc229"
+    },
+    {
+      "block_id": "page-0343-block-0018",
+      "order": 18,
+      "text": "depressive disorder. J Psychiatr Res 2012; 46:1406–1413.\n",
+      "bbox": [
+        73.00800323486328,
+        386.2923889160156,
+        221.77197265625,
+        393.4684143066406
+      ],
+      "text_sha256": "8b067cd8fea27ec3aab2730e3e470f8f3b53fcc7c3625b299213693c92acd57a"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

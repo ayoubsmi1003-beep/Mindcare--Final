@@ -1,0 +1,59 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0558",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 558,
+  "source_page_index": 557,
+  "source_page_display": 558,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of special \npatient groups\nPart 2 \n",
+  "raw_text_sha256": "ec57e8aa4d88219d161426a7e9577061ed270f8452c73c70bd7a2491525ee45b",
+  "coordinates_sha256": "bb898560ee3e17eeadd0d875d76541acb96c2aac8b612298db8efae0cbbe7f86",
+  "block_sequence_sha256": "ad1f53c64eab195ac5af45d172ab0d8a72ffb5f175d360bb84da3d1d14f23d17",
+  "blocks": [
+    {
+      "block_id": "page-0558-block-0000",
+      "order": 0,
+      "text": "Drug treatment of special \n",
+      "bbox": [
+        155.122802734375,
+        111.36316680908203,
+        426.1187744140625,
+        137.43316650390625
+      ],
+      "text_sha256": "384cc97991befc6cd953f6a82c110c91a72e6570b3ed7cdfd898192a6fd23f23"
+    },
+    {
+      "block_id": "page-0558-block-0001",
+      "order": 1,
+      "text": "patient groups\n",
+      "bbox": [
+        267.6087951660156,
+        135.36517333984375,
+        420.00274658203125,
+        161.4351806640625
+      ],
+      "text_sha256": "dda5e8b5649494542de99152d481f8bf6c30cd1a5f95cc8a047cba6cbdb8c11c"
+    },
+    {
+      "block_id": "page-0558-block-0002",
+      "order": 2,
+      "text": "Part 2 \n",
+      "bbox": [
+        362.4689025878906,
+        59.724403381347656,
+        425.81488037109375,
+        82.60040283203125
+      ],
+      "text_sha256": "c3bccdbf68f7b3508b7cf0c787304e27c7e931f92c5ffb48e99422f16b906ef1"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,263 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0932",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 932,
+  "source_page_index": 931,
+  "source_page_display": 932,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Miscellany    911\nCHAPTER 14\nParameter\nReference range10\nAgents reported to raise levels\nAgents reported to \nlower levels\nLactate \ndehydrogenase\n90–200U/L \n(levels rise gradually with \nage)\nBenzodiazepines, clozapine, \nmethadone, TCAs (especially \nimipramine), valproate, also \nassociated with agents causing NMS\nNone known\nLipoproteins: HDL\n>1.2mmol/L\nCarbamazepine, nicotine, \nphenobarbital, phenytoin\nBeta-blockers, \nolanzapine, \nphenothiazines, \nvalproate\nLipoproteins: LDL\n<3.5mmol/L\nBeta-blockers, caffeine (controversial), \ncarbamazepine, chlorpromazine, \nclozapine, iloperidone, memantine, \nmirtazapine, modafinil, olanzapine, \nphenothiazines, quetiapine, risperidone/\npaliperidone, rivastigmine, venlafaxine\nPrazosin\nPhosphate\n0.8–1.5mmol/L\nDexamfetamine; also associated with \nagents causing NMS\nCarbamazepine, \nlithium, mianserin, \ntopiramate\nPotassium\n3.5–5.3mmol/L\nBeta-blockers, lithium\nAlcohol, disulfiram, \ncaffeine, cocaine, \nhaloperidol, lithium, \nmianserin, pregabalin, \nreboxetine, \nrivastigmine, sodium \noxybate, \nsympathomimetics, \ntopiramate, \nzonisamide; may also \nbe a feature of \ndelirium tremens\nProlactin\nNormal: <350mU/L \nAbnormal: >600mU/L\nAntidepressants: especially \namoxapine, MAOIs and TCAs; SSRIs \nand venlafaxine also implicated\nAntipsychotics: amisulpride, haloperidol, \npimozide, risperidone/paliperidone, \nsulpiride and others (aripiprazole†, \nasenapine, brexpiprazole, cariprazine, \nclozapine, lurasidone, olanzapine, \nquetiapine and ziprasidone have \nminimal effects on prolactin levels)\nOther: benzodiazepines, buspirone, \ndeutetrabena­zine, opioids, ramelteon, \ntetrabenazine, valbenazine\nAripiprazole, dopamine \nagonists, pirenzepine\nProtein (total)\n60–80g/L\nNone known\nOlanzapine (rarely)\nTable 14.2  (Continued)\n(Continued)\n",
+  "raw_text_sha256": "cbe73ef33b480ebbee02533e6b969bf4449046f69127e761ce0568abcb46439a",
+  "coordinates_sha256": "1d4a927e25fdb976d3e5851a2e37fd9198e3be1c2789cf34f564c028eeeb4ca4",
+  "block_sequence_sha256": "0a7d51dc1aa35687f550404950b167331c4b38b9f5162ba24aa37cf990e819e0",
+  "blocks": [
+    {
+      "block_id": "page-0932-block-0000",
+      "order": 0,
+      "text": "Miscellany    911\n",
+      "bbox": [
+        349.2962951660156,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "976c169322dec851f3318006e56b0be9683540a959898d1ecabbac23181b6b79"
+    },
+    {
+      "block_id": "page-0932-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        454.4096984863281,
+        338.7405090332031,
+        463.88970947265625,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0932-block-0002",
+      "order": 2,
+      "text": "Parameter\nReference range10\nAgents reported to raise levels\nAgents reported to \nlower levels\n",
+      "bbox": [
+        48.039398193359375,
+        89.78968811035156,
+        410.4967956542969,
+        108.6746826171875
+      ],
+      "text_sha256": "aa61555c628d7c54f10a422c1400f45d1c140ad78ce30a6f27ae2348bfc3308b"
+    },
+    {
+      "block_id": "page-0932-block-0003",
+      "order": 3,
+      "text": "Lactate \ndehydrogenase\n",
+      "bbox": [
+        48.03680419921875,
+        116.48970794677734,
+        96.66680145263672,
+        135.1947021484375
+      ],
+      "text_sha256": "77443a34000660cf9c477ff5557767531f24fe9ee06be21755f8f65a8294e8b4"
+    },
+    {
+      "block_id": "page-0932-block-0004",
+      "order": 4,
+      "text": "90–200U/L \n(levels rise gradually with \nage)\n",
+      "bbox": [
+        122.03929901123047,
+        116.48970794677734,
+        203.706787109375,
+        145.19219970703125
+      ],
+      "text_sha256": "142b31eab823032a2546dbb7c610fafb9cf0e4c7f001dd9cb758c38dd1dc48bd"
+    },
+    {
+      "block_id": "page-0932-block-0005",
+      "order": 5,
+      "text": "Benzodiazepines, clozapine, \nmethadone, TCAs (especially \nimipramine), valproate, also \nassociated with agents causing NMS\n",
+      "bbox": [
+        214.7917938232422,
+        116.4822006225586,
+        331.0643615722656,
+        155.18218994140625
+      ],
+      "text_sha256": "3f06abea76c976cc330665d635635eaef7a1fe0665ea37b40efacab5f1e3dd6b"
+    },
+    {
+      "block_id": "page-0932-block-0006",
+      "order": 6,
+      "text": "None known\n",
+      "bbox": [
+        341.039306640625,
+        116.47469329833984,
+        382.3118591308594,
+        125.18218994140625
+      ],
+      "text_sha256": "ba6586dc579443d5e17252c96d100bb0bdb30ec0ac15a8dc02e530767503ecc9"
+    },
+    {
+      "block_id": "page-0932-block-0007",
+      "order": 7,
+      "text": "Lipoproteins: HDL\n>1.2mmol/L\nCarbamazepine, nicotine, \nphenobarbital, phenytoin\n",
+      "bbox": [
+        48.03680419921875,
+        161.49720764160156,
+        298.55181884765625,
+        180.20220947265625
+      ],
+      "text_sha256": "8a08488d51430a84641bda765d105d3484701aad5c57ffca2d33278362f5597e"
+    },
+    {
+      "block_id": "page-0932-block-0008",
+      "order": 8,
+      "text": "Beta-blockers, \nolanzapine, \nphenothiazines, \nvalproate\n",
+      "bbox": [
+        341.039306640625,
+        161.49720764160156,
+        393.55438232421875,
+        200.19720458984375
+      ],
+      "text_sha256": "1202e64d699f0724930b2f650de3c1b60b3246ad5a476cfeedd8666f764bebbe"
+    },
+    {
+      "block_id": "page-0932-block-0009",
+      "order": 9,
+      "text": "Lipoproteins: LDL\n<3.5mmol/L\nBeta-blockers, caffeine (controversial), \ncarbamazepine, chlorpromazine, \nclozapine, iloperidone, memantine, \nmirtazapine, modafinil, olanzapine, \nphenothiazines, quetiapine, risperidone/\npaliperidone, rivastigmine, venlafaxine\n",
+      "bbox": [
+        48.03680419921875,
+        206.51219177246094,
+        335.42938232421875,
+        265.2071838378906
+      ],
+      "text_sha256": "71170049dc1b1541eec2c44b81d6f60c9fe436123322951c6528daee2072a8cf"
+    },
+    {
+      "block_id": "page-0932-block-0010",
+      "order": 10,
+      "text": "Prazosin\n",
+      "bbox": [
+        341.039306640625,
+        206.49717712402344,
+        367.2893371582031,
+        215.20468139648438
+      ],
+      "text_sha256": "bb9aab032d9781e153c80dbb8e49a29dbd876d2889d45d23eaabd83017654dc8"
+    },
+    {
+      "block_id": "page-0932-block-0011",
+      "order": 11,
+      "text": "Phosphate\n0.8–1.5mmol/L\nDexamfetamine; also associated with \nagents causing NMS\n",
+      "bbox": [
+        48.03680419921875,
+        271.5221862792969,
+        335.21185302734375,
+        290.2271728515625
+      ],
+      "text_sha256": "8ef67d90153dfe39a301a5cd8f1e59fe1548a0c3c1e3a99e14e7eefdf6eb7c09"
+    },
+    {
+      "block_id": "page-0932-block-0012",
+      "order": 12,
+      "text": "Carbamazepine, \nlithium, mianserin, \ntopiramate\n",
+      "bbox": [
+        341.039306640625,
+        271.5221862792969,
+        402.2918701171875,
+        300.22467041015625
+      ],
+      "text_sha256": "52a4219e5850b97a9b8fce076a9b04c15f0691b82b3af8f0f04d25d937eda6a6"
+    },
+    {
+      "block_id": "page-0932-block-0013",
+      "order": 13,
+      "text": "Potassium\n3.5–5.3mmol/L\nBeta-blockers, lithium\nAlcohol, disulfiram, \ncaffeine, cocaine, \nhaloperidol, lithium, \nmianserin, pregabalin, \nreboxetine, \nrivastigmine, sodium \noxybate, \nsympathomimetics, \ntopiramate, \nzonisamide; may also \nbe a feature of \ndelirium tremens\n",
+      "bbox": [
+        48.03680419921875,
+        306.5396728515625,
+        413.8343811035156,
+        425.2196350097656
+      ],
+      "text_sha256": "5fe4c9278caab0b39a643c33d3a73883ec982384e82982fe2ed0f77b2b9b7d38"
+    },
+    {
+      "block_id": "page-0932-block-0014",
+      "order": 14,
+      "text": "Prolactin\nNormal: <350mU/L \nAbnormal: >600mU/L\n",
+      "bbox": [
+        48.03680419921875,
+        431.5346374511719,
+        191.5568084716797,
+        450.2396240234375
+      ],
+      "text_sha256": "753769b0908566c4d1db168d0995408981bc6a7deb7cc230630e2e7627d66733"
+    },
+    {
+      "block_id": "page-0932-block-0015",
+      "order": 15,
+      "text": "Antidepressants: especially \namoxapine, MAOIs and TCAs; SSRIs \nand venlafaxine also implicated\nAntipsychotics: amisulpride, haloperidol, \npimozide, risperidone/paliperidone, \nsulpiride and others (aripiprazole†, \nasenapine, brexpiprazole, cariprazine, \nclozapine, lurasidone, olanzapine, \nquetiapine and ziprasidone have \nminimal effects on prolactin levels)\nOther: benzodiazepines, buspirone, \ndeutetrabena­zine, opioids, ramelteon, \ntetrabenazine, valbenazine\n",
+      "bbox": [
+        214.7917022705078,
+        431.3546142578125,
+        339.1269226074219,
+        560.3096923828125
+      ],
+      "text_sha256": "4b56b31369a13299be83a867078409c7aa40561e393da9859c0694122d967452"
+    },
+    {
+      "block_id": "page-0932-block-0016",
+      "order": 16,
+      "text": "Aripiprazole, dopamine \nagonists, pirenzepine\n",
+      "bbox": [
+        341.0391845703125,
+        431.6022033691406,
+        417.7192687988281,
+        450.30718994140625
+      ],
+      "text_sha256": "d1e629b62cafcf142a5fa2850f5400c5e9340f5190f0a8220e5b5359e92f6174"
+    },
+    {
+      "block_id": "page-0932-block-0017",
+      "order": 17,
+      "text": "Protein (total)\n60–80g/L\nNone known\nOlanzapine (rarely)\n",
+      "bbox": [
+        48.03668212890625,
+        566.6246948242188,
+        400.48419189453125,
+        575.3322143554688
+      ],
+      "text_sha256": "353cd31238cbdd3516e05e20158022d92233dd891ab87dc3f619edc1fcb28329"
+    },
+    {
+      "block_id": "page-0932-block-0018",
+      "order": 18,
+      "text": "Table 14.2  (Continued)\n",
+      "bbox": [
+        54.0,
+        70.08790588378906,
+        130.2899932861328,
+        78.97540283203125
+      ],
+      "text_sha256": "8bd13b41fda1b6770466837f45163f93b570ec912d9c083e8b068ddb8e61d0bd"
+    },
+    {
+      "block_id": "page-0932-block-0019",
+      "order": 19,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.9849853515625,
+        584.2579345703125,
+        419.99993896484375,
+        593.0104370117188
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

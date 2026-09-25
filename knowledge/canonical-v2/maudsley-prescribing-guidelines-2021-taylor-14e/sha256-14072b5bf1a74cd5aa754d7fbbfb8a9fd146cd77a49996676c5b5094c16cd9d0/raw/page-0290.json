@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0290",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 290,
+  "source_page_index": 289,
+  "source_page_display": 290,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Bipolar disorder    269\nCHAPTER 2\nAntipsychotics in bipolar disorder\nAntipsychotic drugs do not only have ‘antipsychotic’ actions, with individual \n­antipsychotics variously possessing sedative, anxiolytic, antimanic, mood-stabilising \nand antidepressant properties. Some antipsychotics (quetiapine and olanzapine) show \nall of these activities.1\nAntipsychotics have been used in acute and maintenance treatment of BD since the \n1960s, with evidence to suggest effectiveness at both poles of the illness, as well as \nmixed states.\nAntipsychotics licensed by the Food and Drug Administration (FDA) for use in BD \ninclude aripiprazole (mania, mixed episodes, maintenance treatment), asenapine \n(mania, mixed states), cariprazine (depression), lurasidone (depression), olanzapine \n(mania, mixed episodes, maintenance), olanzapine and fluoxetine (depression), quetia-\npine (mania, maintenance, depression), risperidone (mania, mixed episodes) and ziprasi-\ndone (mania, maintenance). Risperidone long-acting injection (LAI) has been approved \nfor monotherapy or adjunctive maintenance, and aripiprazole depot for monotherapy \nmaintenance treatment. European Union (EU) labelling is similar except that olanzap-\nine/fluoxetine in combination is not licensed for any indication, and no second-genera-\ntion antipsychotic (SGA) LAI has a licence for maintenance.\nFirst-generation antipsychotics\nFirst-generation antipsychotics (FGAs) have long been used in mania, and several \nstudies support their use in the acute phase of illness, with superiority over placebo \nand comparable effects to lithium.2,3 Their effectiveness is enhanced by combination \nwith lithium.4,5 In the longer term (maintenance) treatment of BD, FGAs are widely \nused (presumably for prophylaxis)6 but robust supporting data are absent.7 The \nobservation that FGAs are associated with both depression and tardive dyskinesia in \nBD militates against their long-term use.7–9 The use of FGA depots is common in \npractice but poorly supported and seems to be associated with a high risk of depres-\nsion10 (see section ‘Antipsychotic long-acting injections in bipolar disorder’). SGAs \nare less likely to cause depression than treatment with haloperidol.11\nSecond-generation antipsychotics\nMania\nNetwork meta-analyses indicate superiority of antipsychotics over placebo in mania, \nbut no statistical superiority to other compounds, such as lithium.12 The order deter-\nmined was: risperidone, haloperidol, cariprazine, olanzapine, aripiprazole, quetiapine, \npaliperidone, asenapine and ziprasidone, in terms of response rate. It should also be \nnoted that response rate was similar to lithium and antiseizure medications.13\nAdjunctive treatment with antipsychotics is more effective than monotherapy with \nmood stabiliser medication at 1 and 3 weeks, and augmentation with mood stabiliser \nmedication is more effective than antipsychotics monotherapy at 3 weeks. The com-\nbination is associated with more side effects, especially somnolence.14 Interpretation of \n",
+  "raw_text_sha256": "b0060d943b8feed3d9ef8cd0870103946a7f41d6b9471fa2a6fd5d3c2ee3131c",
+  "coordinates_sha256": "fe1c69a5c0eeff1e7a489956f5ec253a72dd274f2795a9e13e1681f0e27df9cc",
+  "block_sequence_sha256": "2d0fa38a4c5b29cc258177febe8d123f790bdab00235a3f7cf8aa26d1fd2a6d9",
+  "blocks": [
+    {
+      "block_id": "page-0290-block-0000",
+      "order": 0,
+      "text": "Bipolar disorder    269\n",
+      "bbox": [
+        326.5046081542969,
+        31.395221710205078,
+        420.0005798339844,
+        41.0272216796875
+      ],
+      "text_sha256": "0c27eb1c33b486d1868d7c78955a32694cbca891e89184594cab9573b89c6e17"
+    },
+    {
+      "block_id": "page-0290-block-0001",
+      "order": 1,
+      "text": "CHAPTER 2\n",
+      "bbox": [
+        454.4096984863281,
+        146.3472900390625,
+        463.88970947265625,
+        187.6912841796875
+      ],
+      "text_sha256": "5eaa1f2591abe1a1b2f7664fa3de7ff01a032d44ee83fa594c7852135d4287aa"
+    },
+    {
+      "block_id": "page-0290-block-0002",
+      "order": 2,
+      "text": "Antipsychotics in bipolar disorder\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        228.35997009277344,
+        79.1004638671875
+      ],
+      "text_sha256": "ed3d0aff4ba1fed21c4655b5752ecf509b42e5a5c8ecfee0dc8e8c3fe94eb986"
+    },
+    {
+      "block_id": "page-0290-block-0003",
+      "order": 3,
+      "text": "Antipsychotic drugs do not only have ‘antipsychotic’ actions, with individual \n­antipsychotics variously possessing sedative, anxiolytic, antimanic, mood-stabilising \nand antidepressant properties. Some antipsychotics (quetiapine and olanzapine) show \nall of these activities.1\n",
+      "bbox": [
+        48.0,
+        84.91046142578125,
+        422.7699279785156,
+        132.63046264648438
+      ],
+      "text_sha256": "b74b66906f4c65072ee6c830ebff00923f51c5849ffffbfeebed769bbb801993"
+    },
+    {
+      "block_id": "page-0290-block-0004",
+      "order": 4,
+      "text": "Antipsychotics have been used in acute and maintenance treatment of BD since the \n1960s, with evidence to suggest effectiveness at both poles of the illness, as well as \nmixed states.\n",
+      "bbox": [
+        48.0,
+        132.91046142578125,
+        422.73992919921875,
+        168.63046264648438
+      ],
+      "text_sha256": "8fffc304b09809c5a59848d1f31858a59f730477beafc93a84d2b8bd4451ce45"
+    },
+    {
+      "block_id": "page-0290-block-0005",
+      "order": 5,
+      "text": "Antipsychotics licensed by the Food and Drug Administration (FDA) for use in BD \ninclude aripiprazole (mania, mixed episodes, maintenance treatment), asenapine \n(mania, mixed states), cariprazine (depression), lurasidone (depression), olanzapine \n(mania, mixed episodes, maintenance), olanzapine and fluoxetine (depression), quetia-\npine (mania, maintenance, depression), risperidone (mania, mixed episodes) and ziprasi-\ndone (mania, maintenance). Risperidone long-acting injection (LAI) has been approved \nfor monotherapy or adjunctive maintenance, and aripiprazole depot for monotherapy \nmaintenance treatment. European Union (EU) labelling is similar except that olanzap-\nine/fluoxetine in combination is not licensed for any indication, and no second-genera-\ntion antipsychotic (SGA) LAI has a licence for maintenance.\n",
+      "bbox": [
+        48.0,
+        168.91046142578125,
+        422.8099365234375,
+        288.6304626464844
+      ],
+      "text_sha256": "965f42689cb74afcf91bf7e4d9ec4600f589a378aa8ecf533a606f24b58b79aa"
+    },
+    {
+      "block_id": "page-0290-block-0006",
+      "order": 6,
+      "text": "First-generation antipsychotics\n",
+      "bbox": [
+        48.0,
+        306.06549072265625,
+        206.8949737548828,
+        319.1004943847656
+      ],
+      "text_sha256": "614eddeacc1cdcf8546bb1f06ac22050181819d3689b21e2869c07984ffa8929"
+    },
+    {
+      "block_id": "page-0290-block-0007",
+      "order": 7,
+      "text": "First-generation antipsychotics (FGAs) have long been used in mania, and several \nstudies support their use in the acute phase of illness, with superiority over placebo \nand comparable effects to lithium.2,3 Their effectiveness is enhanced by combination \nwith lithium.4,5 In the longer term (maintenance) treatment of BD, FGAs are widely \nused (presumably for prophylaxis)6 but robust supporting data are absent.7 The \nobservation that FGAs are associated with both depression and tardive dyskinesia in \nBD militates against their long-term use.7–9 The use of FGA depots is common in \npractice but poorly supported and seems to be associated with a high risk of depres-\nsion10 (see section ‘Antipsychotic long-acting injections in bipolar disorder’). SGAs \nare less likely to cause depression than treatment with haloperidol.11\n",
+      "bbox": [
+        47.99949645996094,
+        324.9104919433594,
+        422.8245849609375,
+        444.6304931640625
+      ],
+      "text_sha256": "1f96b3c756e71b3078c23c49165b47f0b4758aff31c37babf935a4457076be70"
+    },
+    {
+      "block_id": "page-0290-block-0008",
+      "order": 8,
+      "text": "Second-generation antipsychotics\n",
+      "bbox": [
+        48.0,
+        462.06549072265625,
+        222.17398071289062,
+        475.1004943847656
+      ],
+      "text_sha256": "dac4e204d703c7d610999f46fe70b16b562484f3042a6f00948f6cd057a8f076"
+    },
+    {
+      "block_id": "page-0290-block-0009",
+      "order": 9,
+      "text": "Mania\n",
+      "bbox": [
+        48.0,
+        481.00048828125,
+        77.44999694824219,
+        492.8504943847656
+      ],
+      "text_sha256": "85a6d14cf42b6e0d7f64a4b18550a75f33493b0a33a8a8e40cac08447d01a42d"
+    },
+    {
+      "block_id": "page-0290-block-0010",
+      "order": 10,
+      "text": "Network meta-analyses indicate superiority of antipsychotics over placebo in mania, \nbut no statistical superiority to other compounds, such as lithium.12 The order deter-\nmined was: risperidone, haloperidol, cariprazine, olanzapine, aripiprazole, quetiapine, \npaliperidone, asenapine and ziprasidone, in terms of response rate. It should also be \nnoted that response rate was similar to lithium and antiseizure medications.13\n",
+      "bbox": [
+        47.998687744140625,
+        498.9104919433594,
+        422.8100280761719,
+        558.6304931640625
+      ],
+      "text_sha256": "473dc28a6e7b4a3590101c427817f65ffac96f2556194ce114a349a8db0e1cd4"
+    },
+    {
+      "block_id": "page-0290-block-0011",
+      "order": 11,
+      "text": "Adjunctive treatment with antipsychotics is more effective than monotherapy with \nmood stabiliser medication at 1 and 3 weeks, and augmentation with mood stabiliser \nmedication is more effective than antipsychotics monotherapy at 3 weeks. The com-\nbination is associated with more side effects, especially somnolence.14 Interpretation of \n",
+      "bbox": [
+        48.0,
+        558.9104614257812,
+        422.7901306152344,
+        606.6304931640625
+      ],
+      "text_sha256": "f69111dba8b0f02bff53edc335e62e5f968e860bbf760012ff1bc8b07a2ad33c"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

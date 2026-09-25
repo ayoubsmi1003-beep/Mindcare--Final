@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0589",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 589,
+  "source_page_index": 588,
+  "source_page_display": 589,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "568    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  5\ncomorbidity,1 pharmacotherapy may be needed to target co-occurring psychiatric dis-\norders. In adult PTSD, the best supported treatments are fluoxetine, paroxetine and \nvenlafaxine.7 MDMA8 and psychedelic drugs9 also show promise. None of these agents \nis currently used to any extent in children and adolescents.\nReferences\n\t 1.\t Lewis SJ, et al. The epidemiology of trauma and post-traumatic stress disorder in a representative cohort of young people in England and \nWales. Lancet Psychiatry 2019; 6:247–256.\n\t 2.\t National Institute for Clinical Excellence. Post-traumatic stress disorder. NICE guideline [NG116] 2018; https://www.nice.org.uk/guidance/\nNG116.\n\t 3.\t Cohen JA, et al. Practice parameter for the assessment and treatment of children and adolescents with posttraumatic stress disorder. J Am \nAcad Child Adolesc Psychiatry 2010; 49:414–430.\n\t 4.\t International Society for Traumatic Stress Studies (ISTSS). Posttraumatic stress disorder prevention and treatment guidelines: methodology \nand recommendations 2019; https://istss.org/getattachment/Treating-Trauma/New-ISTSS-Prevention-and-Treatment-Guidelines/ISTSS_\nPreventionTreatmentGuidelines_FNL-March-19-2019.pdf.aspx.\n\t 5.\t Cipriani A, et al. Comparative efficacy and acceptability of pharmacological treatments for post-traumatic stress disorder in adults: a net-\nwork meta-analysis. Psychol Med 2018; 48:1975–1984.\n\t 6.\t Huang ZD, et al. Comparative efficacy and acceptability of pharmaceutical management for adults with post-traumatic stress disorder: a \nsystematic review and meta-analysis. Front Pharmacol 2020; 11:559.\n\t 7.\t Ehret M. Treatment of posttraumatic stress disorder: focus on pharmacotherapy. Ment Health Clin 2019; 9:373–382.\n\t 8.\t Jerome L, et al. Long-term follow-up outcomes of MDMA-assisted psychotherapy for treatment of PTSD: a longitudinal pooled analysis of \nsix phase 2 trials. Psychopharmacology (Berl) 2020; 237:2485–2497.\n\t 9.\t Krediet E, et al. Reviewing the potential of psychedelics for the treatment of PTSD. Int J Neuropsychopharmacol 2020; 23:385–400.\n",
+  "raw_text_sha256": "259b358c17bb14722270d7c8d30a01222a42b55cffd8f6ab563c90ff487a67a2",
+  "coordinates_sha256": "d93cc14164f72c1868b75772a7ef558f3a36cb88908d01f3c58c5023bf9e875e",
+  "block_sequence_sha256": "ebbeec8559349833b8c73e403269c0768000948d0b17d22e12963ab79ead24c5",
+  "blocks": [
+    {
+      "block_id": "page-0589-block-0000",
+      "order": 0,
+      "text": "568    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "1c8f9a5e99f58c240a4cd4680114434fc2e78fbcb32dd645b56d52dfd3de518d"
+    },
+    {
+      "block_id": "page-0589-block-0001",
+      "order": 1,
+      "text": "CHAPTER  5\n",
+      "bbox": [
+        18.520000457763672,
+        338.22650146484375,
+        28.0,
+        381.79449462890625
+      ],
+      "text_sha256": "4086e0916f45ec531cc17b8c611334eb2b1ef26051ba536579b8ef3c22c1648d"
+    },
+    {
+      "block_id": "page-0589-block-0002",
+      "order": 2,
+      "text": "comorbidity,1 pharmacotherapy may be needed to target co-occurring psychiatric dis-\norders. In adult PTSD, the best supported treatments are fluoxetine, paroxetine and \nvenlafaxine.7 MDMA8 and psychedelic drugs9 also show promise. None of these agents \nis currently used to any extent in children and adolescents.\n",
+      "bbox": [
+        61.886199951171875,
+        62.55029296875,
+        436.7010803222656,
+        110.27029418945312
+      ],
+      "text_sha256": "e8b2879c1bf8ed720a19a2636804ddcc92f614a64b890f1c04ee83ec7f6e2f71"
+    },
+    {
+      "block_id": "page-0589-block-0003",
+      "order": 3,
+      "text": "References\n",
+      "bbox": [
+        61.88999938964844,
+        127.70529174804688,
+        117.92399597167969,
+        140.74029541015625
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0589-block-0004",
+      "order": 4,
+      "text": "\t 1.\t Lewis SJ, et al. The epidemiology of trauma and post-traumatic stress disorder in a representative cohort of young people in England and \n",
+      "bbox": [
+        61.88999938964844,
+        145.8262939453125,
+        435.6060791015625,
+        152.85829162597656
+      ],
+      "text_sha256": "509f676d139b2bb063c2d1d6e546afbfbdecf485357306675dbc2c0c0dad91d3"
+    },
+    {
+      "block_id": "page-0589-block-0005",
+      "order": 5,
+      "text": "Wales. Lancet Psychiatry 2019; 6:247–256.\n\t 2.\t National Institute for Clinical Excellence. Post-traumatic stress disorder. NICE guideline [NG116] 2018; https://www.nice.org.uk/guidance/\n",
+      "bbox": [
+        61.895999908447266,
+        154.6822967529297,
+        433.88995361328125,
+        170.85829162597656
+      ],
+      "text_sha256": "2c8adaf7ad48f5390399188ea0cca75dec558df5cfd7bcbfa868c718034cc4f1"
+    },
+    {
+      "block_id": "page-0589-block-0006",
+      "order": 6,
+      "text": "NG116.\n\t 3.\t Cohen JA, et al. Practice parameter for the assessment and treatment of children and adolescents with posttraumatic stress disorder. J Am \n",
+      "bbox": [
+        61.902000427246094,
+        172.8262939453125,
+        435.59417724609375,
+        188.85829162597656
+      ],
+      "text_sha256": "3c6ffeaa88639fb9db2830d25eee54d42fe0a4b7e7ce66cfbfe49a4113983b7a"
+    },
+    {
+      "block_id": "page-0589-block-0007",
+      "order": 7,
+      "text": "Acad Child Adolesc Psychiatry 2010; 49:414–430.\n\t 4.\t International Society for Traumatic Stress Studies (ISTSS). Posttraumatic stress disorder prevention and treatment guidelines: methodology \n",
+      "bbox": [
+        61.90800094604492,
+        190.6822967529297,
+        435.5880126953125,
+        206.85829162597656
+      ],
+      "text_sha256": "8b86918ffdd2a65639722b95eb85d01091802667e96403f8e59110795ec46ebd"
+    },
+    {
+      "block_id": "page-0589-block-0008",
+      "order": 8,
+      "text": "and recommendations 2019; https://istss.org/getattachment/Treating-Trauma/New-ISTSS-Prevention-and-Treatment-Guidelines/ISTSS_\nPreventionTreatmentGuidelines_FNL-March-19-2019.pdf.aspx.\n\t 5.\t Cipriani A, et al. Comparative efficacy and acceptability of pharmacological treatments for post-traumatic stress disorder in adults: a net-\n",
+      "bbox": [
+        61.91400146484375,
+        208.8262939453125,
+        433.9139099121094,
+        233.85829162597656
+      ],
+      "text_sha256": "a2c813e5795a1faa94231823e8bc12f8d170d8a7f0ccf4c7907340d89e8d46dc"
+    },
+    {
+      "block_id": "page-0589-block-0009",
+      "order": 9,
+      "text": "work meta-analysis. Psychol Med 2018; 48:1975–1984.\n\t 6.\t Huang ZD, et al. Comparative efficacy and acceptability of pharmaceutical management for adults with post-traumatic stress disorder: a \n",
+      "bbox": [
+        61.91999816894531,
+        235.6822967529297,
+        435.5999450683594,
+        251.85829162597656
+      ],
+      "text_sha256": "661c68e621f79b0a33d4f4df8e3ee4b8f708403fa469288ebe9afd97822ffbbe"
+    },
+    {
+      "block_id": "page-0589-block-0010",
+      "order": 10,
+      "text": "systematic review and meta-analysis. Front Pharmacol 2020; 11:559.\n\t 7.\t Ehret M. Treatment of posttraumatic stress disorder: focus on pharmacotherapy. Ment Health Clin 2019; 9:373–382.\n\t 8.\t Jerome L, et al. Long-term follow-up outcomes of MDMA-assisted psychotherapy for treatment of PTSD: a longitudinal pooled analysis of \n",
+      "bbox": [
+        61.92599868774414,
+        253.6822967529297,
+        435.5939636230469,
+        278.8583068847656
+      ],
+      "text_sha256": "e0bf3bf45ab561248adf66d8912a1d0854fccca5a74a591052454065c69ba175"
+    },
+    {
+      "block_id": "page-0589-block-0011",
+      "order": 11,
+      "text": "six phase 2 trials. Psychopharmacology (Berl) 2020; 237:2485–2497.\n\t 9.\t Krediet E, et al. Reviewing the potential of psychedelics for the treatment of PTSD. Int J Neuropsychopharmacol 2020; 23:385–400.\n",
+      "bbox": [
+        61.9379997253418,
+        280.6822814941406,
+        415.2659912109375,
+        296.8583068847656
+      ],
+      "text_sha256": "0147f369f2f8fbbbe042bdfabd7297eca0c76fd4f8dc61e52fd09ac93181233f"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

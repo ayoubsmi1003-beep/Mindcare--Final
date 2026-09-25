@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0659",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 659,
+  "source_page_index": 658,
+  "source_page_display": 659,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "638    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  6\nHypersalivation\nOral anticholinergic agents used for hypersalivation (e.g. hyoscine hydrobromide) \nshould be avoided in the elderly because of the risk of cognitive impairment, delirium \nand constipation (see section on anticholinergic and antispasmodic drugs). Pirenzepine \nis a relatively selective M1 and M4 muscarinic receptor antagonist which is not thought \nto cross the BBB and therefore has little CNS penetration.34\nAtropine solution given sublingually or used as a mouthwash is sometimes used to \nmanage hypersalivation. There are no data available on the extent of penetration \nthrough the BBB when atropine is administered by this route.\nMyasthenia gravis (MG)\nUnlike AChE-Is used in AD (donepezil, rivastigmine and galantamine), those used in \nmyasthenia gravis (pyridostigmine and neostigmine) act peripherally and do not cross \nthe BBB (so as to minimise unwanted central effects).35 It is possible that combining \nperipheral and central AChE-Is may add to the cholinomimetic adverse effect burden \n(e.g. nausea, vomiting diarrhoea, abdominal cramps and increased salivation). \nMemantine may be an alternative to cholinesterase inhibitors in cases where the com-\nbined cholinomimetic effects of drugs used for MG and AD are not tolerated.\nAnalgesics\nNSAIDs and paracetamol\nParacetamol (acetaminophen) is a safe drug and there is no evidence that it causes cogni-\ntive impairment other than in overdose when it may cause delirium.36 There is some \nevidence that chronic use of aspirin can cause confusional states.37 Case reports impli-\ncate NSAIDs in causing delirium and psychosis,38 although clinical trials have not dem-\nonstrated significant adverse effects on cognition with naproxen39 or indomethacin.40 \nNSAIDs are difficult to use in older people due to their cardiovascular risk and risk of \nGI bleeding.41 It is good practice to prescribe gastroprotection with these drugs or con-\nsider using topical NSAIDs (if clinically appropriate), to reduce the risk of GI bleeding.\nOpiates\nSedation is a potential problem with all opiates.42 Delirium induced by opioids may be \nassociated with agitation, hallucinations or delusions.42 Pethidine is associated with a \nhigh risk of cognitive impairment, as its metabolites have anti-cholinergic properties \nand accumulate rapidly if renal function is impaired.43 Codeine may increase the risk of \nfalls, and both tramadol and codeine have a high risk of drug–drug interactions, as well \nas considerable variation in response and adverse effects.44 Fentanyl patches, useful as \nthey can be, should not be used to initiate opioid analgesia in frail older people45 because \nof their long duration of action even after the patch is removed, making the treatment \nof side effects more difficult.44 Morphine is a very effective analgesic but is likely to \ncause cognitive problems and other adverse effects in older patients.46 Oxycodone has \na short half-life, few drug–drug interactions and more predictable dose–response \n",
+  "raw_text_sha256": "8cf1d70f0bc960aff9cb3a2e9fe6e1506f547d56c999dd21a0ce29644cbc4e03",
+  "coordinates_sha256": "cce135026dd8bcdbfb6bbfaf6d7940074a4d292a523db81c78375c594d9f67c1",
+  "block_sequence_sha256": "4b18b6ccbafbe83d315434720c90c4647cc23d78fe4db5513c14f9f4a275d093",
+  "blocks": [
+    {
+      "block_id": "page-0659-block-0000",
+      "order": 0,
+      "text": "638    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "36730483265750e0153834c8e30d76ac316ba363bce56555542b72b2c68642ac"
+    },
+    {
+      "block_id": "page-0659-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        18.520000457763672,
+        405.35260009765625,
+        28.0,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0659-block-0002",
+      "order": 2,
+      "text": "Hypersalivation\n",
+      "bbox": [
+        61.88999938964844,
+        62.500465393066406,
+        135.79998779296875,
+        74.3504638671875
+      ],
+      "text_sha256": "5362a1ba2bca5f8daaae1f95cc1ebf3457de60b7e813882ef6b2df52ed03e653"
+    },
+    {
+      "block_id": "page-0659-block-0003",
+      "order": 3,
+      "text": "Oral anticholinergic agents used for hypersalivation (e.g. hyoscine hydrobromide) \nshould be avoided in the elderly because of the risk of cognitive impairment, delirium \nand constipation (see section on anticholinergic and antispasmodic drugs). Pirenzepine \nis a relatively selective M1 and M4 muscarinic receptor antagonist which is not thought \nto cross the BBB and therefore has little CNS penetration.34\n",
+      "bbox": [
+        61.88999938964844,
+        80.41046142578125,
+        436.6800537109375,
+        140.13046264648438
+      ],
+      "text_sha256": "81b19fca1554f9f6148d2c1203925d2d7f205cba8085036a339d774fc67a5190"
+    },
+    {
+      "block_id": "page-0659-block-0004",
+      "order": 4,
+      "text": "Atropine solution given sublingually or used as a mouthwash is sometimes used to \nmanage hypersalivation. There are no data available on the extent of penetration \nthrough the BBB when atropine is administered by this route.\n",
+      "bbox": [
+        61.88999938964844,
+        140.17047119140625,
+        436.70989990234375,
+        176.13046264648438
+      ],
+      "text_sha256": "0d2c508a2d57eab5d81c918255d0f99a1c289c0f4444e88c5584659d9a36f1ec"
+    },
+    {
+      "block_id": "page-0659-block-0005",
+      "order": 5,
+      "text": "Myasthenia gravis (MG)\n",
+      "bbox": [
+        61.88999938964844,
+        194.50045776367188,
+        174.1199951171875,
+        206.3504638671875
+      ],
+      "text_sha256": "cb4b6ce836c37cb416ccce805141a6d67b5548c6732f5387c13aed54a967c8af"
+    },
+    {
+      "block_id": "page-0659-block-0006",
+      "order": 6,
+      "text": "Unlike AChE-Is used in AD (donepezil, rivastigmine and galantamine), those used in \nmyasthenia gravis (pyridostigmine and neostigmine) act peripherally and do not cross \nthe BBB (so as to minimise unwanted central effects).35 It is possible that combining \nperipheral and central AChE-Is may add to the cholinomimetic adverse effect burden \n(e.g. nausea, vomiting diarrhoea, abdominal cramps and increased salivation). \nMemantine may be an alternative to cholinesterase inhibitors in cases where the com-\nbined cholinomimetic effects of drugs used for MG and AD are not tolerated.\n",
+      "bbox": [
+        61.88999938964844,
+        212.41046142578125,
+        436.6824951171875,
+        296.1304931640625
+      ],
+      "text_sha256": "181fa439fff300ddab3d329246dbd4e146106a9d2fae6de272d5a2e44a006f7b"
+    },
+    {
+      "block_id": "page-0659-block-0007",
+      "order": 7,
+      "text": "Analgesics\n",
+      "bbox": [
+        61.892486572265625,
+        314.50048828125,
+        111.33248901367188,
+        326.3504943847656
+      ],
+      "text_sha256": "366ae807be15fdc8e077e0c600ba2bfa78aa32e3f0b66958b1fb71134ebfa588"
+    },
+    {
+      "block_id": "page-0659-block-0008",
+      "order": 8,
+      "text": "NSAIDs and paracetamol\nParacetamol (acetaminophen) is a safe drug and there is no evidence that it causes cogni-\ntive impairment other than in overdose when it may cause delirium.36 There is some \nevidence that chronic use of aspirin can cause confusional states.37 Case reports impli-\ncate NSAIDs in causing delirium and psychosis,38 although clinical trials have not dem-\nonstrated significant adverse effects on cognition with naproxen39 or indomethacin.40 \nNSAIDs are difficult to use in older people due to their cardiovascular risk and risk of \nGI bleeding.41 It is good practice to prescribe gastroprotection with these drugs or con-\nsider using topical NSAIDs (if clinically appropriate), to reduce the risk of GI bleeding.\n",
+      "bbox": [
+        61.888702392578125,
+        332.9679870605469,
+        436.67864990234375,
+        440.1304931640625
+      ],
+      "text_sha256": "b5e147846f34e1441ed71cac581a9fc0f5babe1af75bc82fb8d5504ead15dbf2"
+    },
+    {
+      "block_id": "page-0659-block-0009",
+      "order": 9,
+      "text": "Opiates\nSedation is a potential problem with all opiates.42 Delirium induced by opioids may be \nassociated with agitation, hallucinations or delusions.42 Pethidine is associated with a \nhigh risk of cognitive impairment, as its metabolites have anti-cholinergic properties \nand accumulate rapidly if renal function is impaired.43 Codeine may increase the risk of \nfalls, and both tramadol and codeine have a high risk of drug–drug interactions, as well \nas considerable variation in response and adverse effects.44 Fentanyl patches, useful as \nthey can be, should not be used to initiate opioid analgesia in frail older people45 because \nof their long duration of action even after the patch is removed, making the treatment \nof side effects more difficult.44 Morphine is a very effective analgesic but is likely to \ncause cognitive problems and other adverse effects in older patients.46 Oxycodone has \na short half-life, few drug–drug interactions and more predictable dose–response \n",
+      "bbox": [
+        61.8814697265625,
+        452.9679870605469,
+        436.6869201660156,
+        596.1304931640625
+      ],
+      "text_sha256": "5ba819fb8f5603f9daad9098464e959534a8335f2abab11913e0a929924e2bae"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

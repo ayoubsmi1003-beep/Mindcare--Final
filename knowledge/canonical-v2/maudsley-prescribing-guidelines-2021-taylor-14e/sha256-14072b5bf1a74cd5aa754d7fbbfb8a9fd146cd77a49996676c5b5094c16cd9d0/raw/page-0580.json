@@ -1,0 +1,419 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0580",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 580,
+  "source_page_index": 579,
+  "source_page_display": 580,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Children and adolescents    559\nCHAPTER 5\n■\n■Dosage for treatment with SSRIs is often similar to dosage in adults because of \nfaster metabolism in children.\n■\n■Therapeutic effect should appear by 6–8 weeks of treatment. It is important to \ncommunicate this to families.\n■\n■If partial or non-response, consider accuracy of diagnosis, adequacy of medication \ntrial, and compliance of patient.\n■\n■To improve response, consider: adding CBT, changing medication (e.g. switch \nSSRIs, other classes), or combining medications (e.g. for co-morbidities, to treat \nside effects, to potentiate action). Augmentation strategies with buspirone, benzo-\ndiazepines, atypical antipsychotics, and stimulant medications have been proposed \nbut lack empirical support.7\n■\n■Maintenance phase\n■\n■Continue maintenance treatment for at least 1 year of stable improvement.\n■\n■Monitor response and side effects regularly.\n■\n■Discontinuation phase\nTable 5.5  Typical dosage of medications for treatment of anxiety disorders in children \nand adolescents\nMedication\nStarting dose (mg)\nDose range (mg/day)\nSSRI\nSertraline\n12.5–25\n25–200\nFluoxetine\n5–10\n10–60\nFluvoxamine\n12.5–25\n50–200\n(BD if >50)\nParoxetine\n5–10\n10–40\nCitalopram*\n5–10\n10–40\nSNRI\nVenlafaxine XR\n37.5\n37.5–225\nDuloxetine\n30\n30–120\nAlpha2 agonist\nGuanfacine\n1\n1–6\n5-HT1A partial agonist\nBuspirone*\n5 TDS\n15–60\nBenzodiazepine (PRN)\nClonazepam*\n0.25–0.5\n–\nLorazepam*\n0.5–1\n–\n*Treatments not supported by RCT evidence. \nNote: Always check dose with latest formal guidance, for example British National \nFormulary for Children (in the UK).\nBD - twice daily\nTDS - three times daily\n",
+  "raw_text_sha256": "429526114227ae9c3978a56b33b4463e2dc63f44cf658ac7460939b24a1170f6",
+  "coordinates_sha256": "d5c92714d36f830e63022c7cb9240b33baf5dc3958ea46af6c2c23441a5ce292",
+  "block_sequence_sha256": "8d550f670068e1037eeed9960fad200e15ebf1e0df522ad038ddddeac6bfb8c5",
+  "blocks": [
+    {
+      "block_id": "page-0580-block-0000",
+      "order": 0,
+      "text": "Children and adolescents    559\n",
+      "bbox": [
+        288.94488525390625,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "cc06c1f9990f7789bba11deb350d21bcdc5e66ec3efe1669b727a3377af14ab1"
+    },
+    {
+      "block_id": "page-0580-block-0001",
+      "order": 1,
+      "text": "CHAPTER 5\n",
+      "bbox": [
+        454.4096984863281,
+        339.3385009765625,
+        463.88970947265625,
+        380.6824951171875
+      ],
+      "text_sha256": "f4b8b4a0fc64e7b3b74e7336306d0959d0384683e387792724f393162639020a"
+    },
+    {
+      "block_id": "page-0580-block-0002",
+      "order": 2,
+      "text": "■\n■Dosage for treatment with SSRIs is often similar to dosage in adults because of \n",
+      "bbox": [
+        57.19490051269531,
+        452.4639892578125,
+        422.7999572753906,
+        464.1839904785156
+      ],
+      "text_sha256": "740e4657d1b12ee6e3b7af804591ae42871482c5d5e97ea9457e8e6585a1dd42"
+    },
+    {
+      "block_id": "page-0580-block-0003",
+      "order": 3,
+      "text": "faster metabolism in children.\n",
+      "bbox": [
+        66.0,
+        464.4639892578125,
+        194.3300018310547,
+        476.1839904785156
+      ],
+      "text_sha256": "8a81479ba438ee472c391541e0f378355783ea6b05ddce0466277072d46c3ca6"
+    },
+    {
+      "block_id": "page-0580-block-0004",
+      "order": 4,
+      "text": "■\n■Therapeutic effect should appear by 6–8 weeks of treatment. It is important to \n",
+      "bbox": [
+        57.19490051269531,
+        476.4639892578125,
+        422.8199157714844,
+        488.1839904785156
+      ],
+      "text_sha256": "1e30761aa107b7b3160e11610a207d5e8e87a7ff453a46750efedfe60140fe93"
+    },
+    {
+      "block_id": "page-0580-block-0005",
+      "order": 5,
+      "text": "communicate this to families.\n",
+      "bbox": [
+        66.0,
+        488.4639892578125,
+        192.63999938964844,
+        500.1839904785156
+      ],
+      "text_sha256": "bc2a97416f92634dc82b73024a9ef64e914a25475c8d57836eff110e504a0063"
+    },
+    {
+      "block_id": "page-0580-block-0006",
+      "order": 6,
+      "text": "■\n■If partial or non-response, consider accuracy of diagnosis, adequacy of medication \n",
+      "bbox": [
+        57.19490051269531,
+        500.4639892578125,
+        422.7999572753906,
+        512.1840209960938
+      ],
+      "text_sha256": "c76a22fa2c0de9d83bf0fdbec3cb9f9a8d0abf99a7ebaa28ea47a90aa438228b"
+    },
+    {
+      "block_id": "page-0580-block-0007",
+      "order": 7,
+      "text": "trial, and compliance of patient.\n",
+      "bbox": [
+        66.0,
+        512.4639892578125,
+        203.97998046875,
+        524.1840209960938
+      ],
+      "text_sha256": "c8fa247e5b3c390dad1bf71471cffc7d14b749c75892b2616545e84444cf8685"
+    },
+    {
+      "block_id": "page-0580-block-0008",
+      "order": 8,
+      "text": "■\n■To improve response, consider: adding CBT, changing medication (e.g. switch \n",
+      "bbox": [
+        57.19490051269531,
+        524.4639892578125,
+        422.8099365234375,
+        536.1840209960938
+      ],
+      "text_sha256": "051c1666cc977bf615374058ff84f6c3f166aedcb3d184f6db95b22f0b453d28"
+    },
+    {
+      "block_id": "page-0580-block-0009",
+      "order": 9,
+      "text": "SSRIs, other classes), or combining medications (e.g. for co-morbidities, to treat \nside effects, to potentiate action). Augmentation strategies with buspirone, benzo-\ndiazepines, atypical antipsychotics, and stimulant medications have been proposed \nbut lack empirical support.7\n",
+      "bbox": [
+        66.0,
+        536.4639892578125,
+        422.78997802734375,
+        584.1840209960938
+      ],
+      "text_sha256": "06abb289a5d7e613a4f7bb801f988ef6fcf336393d58c72a8887c52b153589c4"
+    },
+    {
+      "block_id": "page-0580-block-0010",
+      "order": 10,
+      "text": "■\n■Maintenance phase\n",
+      "bbox": [
+        47.999900817871094,
+        584.4639892578125,
+        140.33999633789062,
+        596.1840209960938
+      ],
+      "text_sha256": "1f6ec054c5585730dc3174e138a463a0421d40c77ef7f314e403c10a661e2eae"
+    },
+    {
+      "block_id": "page-0580-block-0011",
+      "order": 11,
+      "text": "■\n■Continue maintenance treatment for at least 1 year of stable improvement.\n",
+      "bbox": [
+        57.19490051269531,
+        596.4639892578125,
+        388.19000244140625,
+        608.1840209960938
+      ],
+      "text_sha256": "c670cabdf548439ebdc63244a998cda4bffa487ebcb7ffc0140c2eb1fadf91c7"
+    },
+    {
+      "block_id": "page-0580-block-0012",
+      "order": 12,
+      "text": "■\n■Monitor response and side effects regularly.\n",
+      "bbox": [
+        57.19490051269531,
+        608.4639892578125,
+        253.99998474121094,
+        620.1840209960938
+      ],
+      "text_sha256": "187d3216a08d801239caec248f68b94d9347e37b642822f212b7b7b008a213f4"
+    },
+    {
+      "block_id": "page-0580-block-0013",
+      "order": 13,
+      "text": "■\n■Discontinuation phase\n",
+      "bbox": [
+        47.999900817871094,
+        620.4639892578125,
+        153.69998168945312,
+        632.1840209960938
+      ],
+      "text_sha256": "d01d1d779b72fb229366c0dc82534e1730e16cfbeb4056e7a45ad6444795a926"
+    },
+    {
+      "block_id": "page-0580-block-0014",
+      "order": 14,
+      "text": "Table 5.5  Typical dosage of medications for treatment of anxiety disorders in children \nand adolescents\n",
+      "bbox": [
+        94.4999008178711,
+        70.33790588378906,
+        370.37994384765625,
+        89.222900390625
+      ],
+      "text_sha256": "4f631ec3952afbc1707a3c947c81b6a331ebf23c12bdb57dea13972b8fd97782"
+    },
+    {
+      "block_id": "page-0580-block-0015",
+      "order": 15,
+      "text": "Medication\nStarting dose (mg)\nDose range (mg/day)\n",
+      "bbox": [
+        88.4999008178711,
+        100.96290588378906,
+        356.6699523925781,
+        109.85040283203125
+      ],
+      "text_sha256": "ac5d74c34cf1e1ff3a8f30ab6d5de4852f61f488a7b5fe2de613c4d04a7e645d"
+    },
+    {
+      "block_id": "page-0580-block-0016",
+      "order": 16,
+      "text": "SSRI\n",
+      "bbox": [
+        88.4924087524414,
+        121.08540344238281,
+        103.4999008178711,
+        129.972900390625
+      ],
+      "text_sha256": "4fb25beada4d34f56a864d288eb6e5598d7317d9f746a08d6292bdf7dcfc51e9"
+    },
+    {
+      "block_id": "page-0580-block-0017",
+      "order": 17,
+      "text": "Sertraline\n12.5–25\n25–200\n",
+      "bbox": [
+        88.4924087524414,
+        136.2879180908203,
+        307.08746337890625,
+        144.99542236328125
+      ],
+      "text_sha256": "baac926dd254fb0b743804a926c8c8e4dbcd92b421dda316c15d95204f8dcc36"
+    },
+    {
+      "block_id": "page-0580-block-0018",
+      "order": 18,
+      "text": "Fluoxetine\n5–10\n10–60\n",
+      "bbox": [
+        88.48489379882812,
+        151.31044006347656,
+        302.9099426269531,
+        160.0179443359375
+      ],
+      "text_sha256": "d2b857b3fabe26ea0ad003ab4a9ccef5d065a4aea2de63b585158228aaf097d9"
+    },
+    {
+      "block_id": "page-0580-block-0019",
+      "order": 19,
+      "text": "Fluvoxamine\n12.5–25\n50–200\n(BD if >50)\n",
+      "bbox": [
+        88.47738647460938,
+        166.3329620361328,
+        316.9873962402344,
+        185.0379638671875
+      ],
+      "text_sha256": "1b6ba2b21428640dcad3cf0945adda569c1ffce7917718547f5304f051148fbb"
+    },
+    {
+      "block_id": "page-0580-block-0020",
+      "order": 20,
+      "text": "Paroxetine\n5–10\n10–40\n",
+      "bbox": [
+        88.46987915039062,
+        191.3529510498047,
+        302.8949279785156,
+        200.06045532226562
+      ],
+      "text_sha256": "49feb565a3e3ca47ef923b7d44814a1a2acf3aa26b14206d4f7d9dabda277438"
+    },
+    {
+      "block_id": "page-0580-block-0021",
+      "order": 21,
+      "text": "Citalopram*\n5–10\n10–40\n",
+      "bbox": [
+        88.46237182617188,
+        206.3754425048828,
+        302.92742919921875,
+        215.10040283203125
+      ],
+      "text_sha256": "9a1d01f7e90af8938c14d6b919b4cfe9ba4e0d05c26fdb7f852fc5fb2bf757cd"
+    },
+    {
+      "block_id": "page-0580-block-0022",
+      "order": 22,
+      "text": "SNRI\n",
+      "bbox": [
+        88.494873046875,
+        224.8354034423828,
+        104.74736785888672,
+        233.722900390625
+      ],
+      "text_sha256": "1be53e36c446aab4a69ec345dcadc69b9d45bbaa00395c71db5fb2220999ed47"
+    },
+    {
+      "block_id": "page-0580-block-0023",
+      "order": 23,
+      "text": "Venlafaxine XR\n37.5\n37.5–225\n",
+      "bbox": [
+        88.494873046875,
+        240.0378875732422,
+        313.3449401855469,
+        248.74539184570312
+      ],
+      "text_sha256": "7208086555944c2e97ced6610c26b5b1e22f82b65f033e05a2cafe5c7cdb4906"
+    },
+    {
+      "block_id": "page-0580-block-0024",
+      "order": 24,
+      "text": "Duloxetine\n30\n30–120\n",
+      "bbox": [
+        88.48736572265625,
+        255.0603790283203,
+        307.0824279785156,
+        263.76788330078125
+      ],
+      "text_sha256": "c63dcec1c7cf2de3f40ff9b82327cd0810dfc5b8e206cd5420d782a6475fdae8"
+    },
+    {
+      "block_id": "page-0580-block-0025",
+      "order": 25,
+      "text": "Alpha2 agonist\n",
+      "bbox": [
+        88.4798583984375,
+        273.50286865234375,
+        140.10069274902344,
+        284.11602783203125
+      ],
+      "text_sha256": "197364f7921d16fadcd2e5dfa5bc8e309143008a0ef3ec7b2735bcc3ddd39394"
+    },
+    {
+      "block_id": "page-0580-block-0026",
+      "order": 26,
+      "text": "Guanfacine\n1\n1–6\n",
+      "bbox": [
+        88.50070190429688,
+        288.71539306640625,
+        294.5857238769531,
+        297.4228820800781
+      ],
+      "text_sha256": "e2650b1853a3260c93f90aab8d928922a75a064f5e8e6ef3a0998f9653e26b8a"
+    },
+    {
+      "block_id": "page-0580-block-0027",
+      "order": 27,
+      "text": "5-HT1A partial agonist\n",
+      "bbox": [
+        88.49319458007812,
+        307.1578674316406,
+        163.44723510742188,
+        317.7660217285156
+      ],
+      "text_sha256": "80e5b005f8aaad7967c13bcc9c46fea70bc484177413ec71ee7dbce7b2d2dbda"
+    },
+    {
+      "block_id": "page-0580-block-0028",
+      "order": 28,
+      "text": "Buspirone*\n5 TDS\n15–60\n",
+      "bbox": [
+        88.49970245361328,
+        322.3653869628906,
+        302.92742919921875,
+        331.07537841796875
+      ],
+      "text_sha256": "551ae4551f6d824c0255d6b291ce0338a5d4e87a96e4105ab5b03f5e5225e137"
+    },
+    {
+      "block_id": "page-0580-block-0029",
+      "order": 29,
+      "text": "Benzodiazepine (PRN)\n",
+      "bbox": [
+        88.494873046875,
+        340.81036376953125,
+        165.58737182617188,
+        349.6978759765625
+      ],
+      "text_sha256": "73ff5ec0a724987e85e5b487b48f4fc196712b41a5a79d1181133b1dbd1705c2"
+    },
+    {
+      "block_id": "page-0580-block-0030",
+      "order": 30,
+      "text": "Clonazepam*\n0.25–0.5\n–\n",
+      "bbox": [
+        88.494873046875,
+        356.01287841796875,
+        286.24737548828125,
+        364.72540283203125
+      ],
+      "text_sha256": "83d8316df408910c35fa65d347996a322e8521d3baa46060d0a7c9cbd9d29c1e"
+    },
+    {
+      "block_id": "page-0580-block-0031",
+      "order": 31,
+      "text": "Lorazepam*\n0.5–1\n–\n",
+      "bbox": [
+        88.494873046875,
+        371.0404052734375,
+        286.24737548828125,
+        379.7503967285156
+      ],
+      "text_sha256": "84aef3452f25c257420e563b5a9145b82a3b113d0edf4c36a2c3840e789c6bfa"
+    },
+    {
+      "block_id": "page-0580-block-0032",
+      "order": 32,
+      "text": "*Treatments not supported by RCT evidence. \nNote: Always check dose with latest formal guidance, for example British National \nFormulary for Children (in the UK).\nBD - twice daily\nTDS - three times daily\n",
+      "bbox": [
+        88.4999008178711,
+        391.54290771484375,
+        352.2760314941406,
+        440.2403869628906
+      ],
+      "text_sha256": "ed341bd5623c88de4ecb7061785d0361fe0a9442b919b34989e316ac5e4fb1b9"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

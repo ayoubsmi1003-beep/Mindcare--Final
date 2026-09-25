@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0257",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 257,
+  "source_page_index": 256,
+  "source_page_display": 257,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "236    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nClozapine, neutropenia and lithium\nRisk of clozapine-induced neutropenia and agranulocytosis\nAround 2.7% of patients treated with clozapine develop neutropenia. Of these, half do \nso within the first 18 weeks of treatment and three-quarters by the end of the first year.1 \nRisk factors include being Afro-Caribbean, younger age and having a low baseline \nwhite cell count (WCC).1 Risk is not dose-related. The mechanism of clozapine-induced \nneutropenia/agranulocytosis is unclear; both immune-mediated and direct cytotoxic \neffects may be important. Furthermore, the mechanism may differ between individuals \nand also between mild and severe forms of marrow suppression.2 One third of patients \nwho stop clozapine because they have developed neutropenia or agranulocytosis will \ndevelop a blood dyscrasia on rechallenge. Where the index dyscrasia was agranulocy-\ntosis, the second blood dyscrasia is inevitable and invariably occurs more rapidly and is \nmore severe and lasts longer.3 This is not necessarily the case where the index dyscrasia \nwas neutropenia.4\nConfusion arises because of the various possible reasons for a low neutrophil count \nin people taking clozapine. A single low count might just be a coincidental finding of no \nclinical relevance, as is common with all drugs. Several low counts (consecutive or \nintermittent) might be seen in people with benign ethnic neutropenia (BEN – see below) \nor as a result of clozapine-associated bone marrow suppression (especially if consecu-\ntive and progressively falling). Full-blown agranulocytosis can probably always be \ninterpreted as being the result of severe bone marrow suppression caused by clozapine. \nThe pattern of the results can be important. In non-BEN patients agranulocytosis is \ngenerally preceded by normal neutrophil counts which are then followed by a precipi-\ntous fall in neutrophils (usually over a week or less)5,6 and a prolonged period of counts \nnear to zero (assuming that it has not been treated).\nNeutrophil counts that do not follow this characteristic pattern are difficult to inter-\npret. An Icelandic study found no difference in the risk of severe neutropenia between \nclozapine and non-clozapine antipsychotics, suggesting that many cases of neutropenia \nduring clozapine treatment are probably not caused by clozapine.7 Indeed, a meta-\nanalysis comparing the risk of neutropenia between clozapine and other antipsychotics \nfound that clozapine did not have a stronger association with neutropenia than other \nantipsychotic medications.8\nThe prevalence of agranulocytosis during clozapine treatment is (0.4%),9 lower than \npreviously thought and risk of death resulting from this is 0.05%: a rare event. Over \n80% of cases of agranulocytosis develop within the first 18 weeks of treatment.1 The \nNetherlands Clozapine Collaboration Group10 consider the risk of agranulocytosis so \nlow that a mentally competent patient may stop routine haematological monitoring \nafter 6 months of treatment. The group still nevertheless recommend low frequency \ntesting, for example, four times a year if routine monitoring is stopped.\nRisk factors for agranulocytosis include increasing age and Asian race.1 Some patients \nmay be genetically predisposed.11 Although the timescale and individual risk factors for \nthe development of agranulocytosis are different from those associated with neutrope-\nnia/coincidental low neutrophil counts, it is difficult to be certain in any given patient \nthat neutropenia is not a precursor to agranulocytosis.\n",
+  "raw_text_sha256": "95f21ffe1635ded58a20f09c751a64577250c668e29a9d406987fc134234a6f9",
+  "coordinates_sha256": "689ef55eecb3f077fffdbf1b8c8bd67ac50f06b7b31f222b0587215fb735a0c8",
+  "block_sequence_sha256": "205880b7576f0ff9d5b4f1338b18141121f399aebda0f40ef53feaf3b3fb7a58",
+  "blocks": [
+    {
+      "block_id": "page-0257-block-0000",
+      "order": 0,
+      "text": "236    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "762fc95a88a77909e202137bd6bf3a4527b25f542c38bdd8257f6b948334c9bd"
+    },
+    {
+      "block_id": "page-0257-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0257-block-0002",
+      "order": 2,
+      "text": "Clozapine, neutropenia and lithium\n",
+      "bbox": [
+        68.88909912109375,
+        66.06448364257812,
+        251.4560546875,
+        79.0994873046875
+      ],
+      "text_sha256": "f67355beab9a9b8c2f699c8e40efbb92d49d8efeb70d3c1178d5a5862e72c021"
+    },
+    {
+      "block_id": "page-0257-block-0003",
+      "order": 3,
+      "text": "Risk of clozapine-induced neutropenia and agranulocytosis\n",
+      "bbox": [
+        61.893096923828125,
+        90.06649780273438,
+        366.6701354980469,
+        103.10150146484375
+      ],
+      "text_sha256": "70b8b67e97d4ee82f0a414b31c212e31390663858e4339c79413ff75c2bf6e39"
+    },
+    {
+      "block_id": "page-0257-block-0004",
+      "order": 4,
+      "text": "Around 2.7% of patients treated with clozapine develop neutropenia. Of these, half do \nso within the first 18 weeks of treatment and three-quarters by the end of the first year.1 \nRisk factors include being Afro-Caribbean, younger age and having a low baseline \nwhite cell count (WCC).1 Risk is not dose-related. The mechanism of clozapine-induced \nneutropenia/agranulocytosis is unclear; both immune-mediated and direct cytotoxic \neffects may be important. Furthermore, the mechanism may differ between individuals \nand also between mild and severe forms of marrow suppression.2 One third of patients \nwho stop clozapine because they have developed neutropenia or agranulocytosis will \ndevelop a blood dyscrasia on rechallenge. Where the index dyscrasia was agranulocy-\ntosis, the second blood dyscrasia is inevitable and invariably occurs more rapidly and is \nmore severe and lasts longer.3 This is not necessarily the case where the index dyscrasia \nwas neutropenia.4\n",
+      "bbox": [
+        61.88740539550781,
+        108.90948486328125,
+        436.7090148925781,
+        252.6295166015625
+      ],
+      "text_sha256": "36661b8148a6cf91b5f9c4697c70d616b0d91baabce8444ee4917f1c4600f26f"
+    },
+    {
+      "block_id": "page-0257-block-0005",
+      "order": 5,
+      "text": "Confusion arises because of the various possible reasons for a low neutrophil count \nin people taking clozapine. A single low count might just be a coincidental finding of no \nclinical relevance, as is common with all drugs. Several low counts (consecutive or \nintermittent) might be seen in people with benign ethnic neutropenia (BEN – see below) \nor as a result of clozapine-associated bone marrow suppression (especially if consecu-\ntive and progressively falling). Full-blown agranulocytosis can probably always be \ninterpreted as being the result of severe bone marrow suppression caused by clozapine. \nThe pattern of the results can be important. In non-BEN patients agranulocytosis is \ngenerally preceded by normal neutrophil counts which are then followed by a precipi-\ntous fall in neutrophils (usually over a week or less)5,6 and a prolonged period of counts \nnear to zero (assuming that it has not been treated).\n",
+      "bbox": [
+        61.88859558105469,
+        252.90951538085938,
+        436.7189025878906,
+        384.6295166015625
+      ],
+      "text_sha256": "92213c50b75debd1ca535cd86dfea1ab1f6b61fbf75aa0620ade477e35a2888b"
+    },
+    {
+      "block_id": "page-0257-block-0006",
+      "order": 6,
+      "text": "Neutrophil counts that do not follow this characteristic pattern are difficult to inter-\npret. An Icelandic study found no difference in the risk of severe neutropenia between \nclozapine and non-clozapine antipsychotics, suggesting that many cases of neutropenia \nduring clozapine treatment are probably not caused by clozapine.7 Indeed, a meta-\nanalysis comparing the risk of neutropenia between clozapine and other antipsychotics \nfound that clozapine did not have a stronger association with neutropenia than other \nantipsychotic medications.8\n",
+      "bbox": [
+        61.88859558105469,
+        384.9095153808594,
+        436.7032775878906,
+        468.6295166015625
+      ],
+      "text_sha256": "9efeee17378d762160c9599846bc22c32b1cc5ea6d8edd5f48a1408267c9539c"
+    },
+    {
+      "block_id": "page-0257-block-0007",
+      "order": 7,
+      "text": "The prevalence of agranulocytosis during clozapine treatment is (0.4%),9 lower than \npreviously thought and risk of death resulting from this is 0.05%: a rare event. Over \n80% of cases of agranulocytosis develop within the first 18 weeks of treatment.1 The \nNetherlands Clozapine Collaboration Group10 consider the risk of agranulocytosis so \nlow that a mentally competent patient may stop routine haematological monitoring \nafter 6 months of treatment. The group still nevertheless recommend low frequency \ntesting, for example, four times a year if routine monitoring is stopped.\n",
+      "bbox": [
+        61.88410949707031,
+        468.9095153808594,
+        436.6841125488281,
+        552.6295166015625
+      ],
+      "text_sha256": "5432c8b5273541e24f3c84c916f02bf2e065727a8b193a5fb34c46cbd494328f"
+    },
+    {
+      "block_id": "page-0257-block-0008",
+      "order": 8,
+      "text": "Risk factors for agranulocytosis include increasing age and Asian race.1 Some patients \nmay be genetically predisposed.11 Although the timescale and individual risk factors for \nthe development of agranulocytosis are different from those associated with neutrope-\nnia/coincidental low neutrophil counts, it is difficult to be certain in any given patient \nthat neutropenia is not a precursor to agranulocytosis.\n",
+      "bbox": [
+        61.88798522949219,
+        552.9094848632812,
+        436.6679992675781,
+        612.6295166015625
+      ],
+      "text_sha256": "4f839682b08e283108ee842d03f22c0f598fc5003edbcb20c28098fbba65b202"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

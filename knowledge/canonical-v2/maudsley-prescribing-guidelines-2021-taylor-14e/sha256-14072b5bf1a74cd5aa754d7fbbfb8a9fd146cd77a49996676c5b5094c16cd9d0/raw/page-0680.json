@@ -1,0 +1,299 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0680",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 680,
+  "source_page_index": 679,
+  "source_page_display": 680,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": " \n \n \n \n \n \n \n \nAntipsychotics\nAmisulpride\nChronic schizophrenia\n50mg daily*\n100–200mg daily*\n400mg daily6 (caution > 200mg \ndaily)*\nLate life psychosis\n25–50mg daily*\n50–100mg daily* (increase in \n25mg steps)\n200mg daily7 (caution > 100mg \ndaily)*\nAgitation/psychosis in dementia\nCaution: QTc prolongation\n25mg nocte8\n25–50mg daily8\n50mg daily8\nAripiprazole\nSchizophrenia, mania (oral)\n5mg mane*\n5–15mg daily*\n20mg mane*\nControl of agitation (IM \ninjection)\n5.25mg*\n5.25–9.75mg*\n15mg daily* (combined oral + IM)\nBrexpiprazole\nDosage not established in older adults9\nCariprazine\nDosage not established in older adults10\nClozapine\nSchizophrenia\n6.25–12.5mg daily11,12 increased \nby not more than 6.25–12.5mg \nonce or twice a week11\n50–100mg daily11,12\n100mg daily11,12\nParkinson’s related psychosis\n6.25mg daily13\n25–37.5mg daily13\n50mg daily13\nIM injection\nThe oral bioavailability of clozapine is about half that of the intramuscular injection\nE.g. 50mg daily of the IM injection is roughly equivalent to 100mg daily of the tablets/oral solution. After \neach injection has been given, the patient must be observed every 15 minutes for the first 2 hours to \ncheck for excess sedation\nNB: If IM lorazepam is required, leave at least ONE HOUR between administration of IM clozapine and IM \nlorazepam\nIloperidone\nNo formal recommendations are available for dosing in older adults\n(Continued)\n",
+  "raw_text_sha256": "77e6de6c63eae91562a735d73f4927dfd53e3d20fd38dc24ab9485e9fdc9cac6",
+  "coordinates_sha256": "7c1447b7b2ad01a99a6c332b028c5fff26f3f3079c6d5239f445b27ef3a0b2cc",
+  "block_sequence_sha256": "d84a7e1da6f41a25ccbb5ec47f812c88e11da9b583fa43818db14b4c2c1ad33c",
+  "blocks": [
+    {
+      "block_id": "page-0680-block-0000",
+      "order": 0,
+      "text": " \n \n \n \n \n \n \n \n",
+      "bbox": [
+        53.86249923706055,
+        111.25643157958984,
+        62.75,
+        495.968994140625
+      ],
+      "text_sha256": "20b79b9461a156f3ed7f44fb084f3907cf9ba9539e0d77040eeb552faf2dadff"
+    },
+    {
+      "block_id": "page-0680-block-0001",
+      "order": 1,
+      "text": "Antipsychotics\n",
+      "bbox": [
+        81.98750305175781,
+        561.4139404296875,
+        90.875,
+        612.6539306640625
+      ],
+      "text_sha256": "66a87c9d9c00b8fa993ae9a90f576148dfe50f1c930aed10c7efe7d8254d7496"
+    },
+    {
+      "block_id": "page-0680-block-0002",
+      "order": 2,
+      "text": "Amisulpride\nChronic schizophrenia\n50mg daily*\n100–200mg daily*\n400mg daily6 (caution > 200mg \ndaily)*\n",
+      "bbox": [
+        100.2925033569336,
+        72.63704681396484,
+        118.99749755859375,
+        612.6539306640625
+      ],
+      "text_sha256": "fc4e583a0bad8efea5c0a5c801912f96756ab8b6d2417be3b14a31ccf24434e4"
+    },
+    {
+      "block_id": "page-0680-block-0003",
+      "order": 3,
+      "text": "Late life psychosis\n25–50mg daily*\n50–100mg daily* (increase in \n25mg steps)\n200mg daily7 (caution > 100mg \ndaily)*\n",
+      "bbox": [
+        128.41749572753906,
+        72.63704681396484,
+        147.12249755859375,
+        522.6370239257812
+      ],
+      "text_sha256": "8da5d0505d644ec9e3711f2328ceb43139a7c041a6d2e9f38ff36989bbba1ffc"
+    },
+    {
+      "block_id": "page-0680-block-0004",
+      "order": 4,
+      "text": "Agitation/psychosis in dementia\n",
+      "bbox": [
+        156.54249572753906,
+        421.3720397949219,
+        165.25,
+        522.6370239257812
+      ],
+      "text_sha256": "6dc60efe791f0b1f459f4eaa045c89d14337f6f1e3e48e9345c4f131eff9cfe1"
+    },
+    {
+      "block_id": "page-0680-block-0005",
+      "order": 5,
+      "text": "Caution: QTc prolongation\n25mg nocte8\n25–50mg daily8\n50mg daily8\n",
+      "bbox": [
+        156.54249572753906,
+        138.41197204589844,
+        175.24749755859375,
+        522.6370239257812
+      ],
+      "text_sha256": "4c52aa32b07c46259ce4afd16878dabba1a262fb39ce322c9bbad747506bd290"
+    },
+    {
+      "block_id": "page-0680-block-0006",
+      "order": 6,
+      "text": "Aripiprazole\nSchizophrenia, mania (oral)\n5mg mane*\n5–15mg daily*\n20mg mane*\n",
+      "bbox": [
+        184.66749572753906,
+        133.33653259277344,
+        193.375,
+        612.6539916992188
+      ],
+      "text_sha256": "b972ef5ad38a4dbf4e53e08bb19c6ee8ae8bf6a035fa8d47b8f33148fd91e79f"
+    },
+    {
+      "block_id": "page-0680-block-0007",
+      "order": 7,
+      "text": "Control of agitation (IM \n",
+      "bbox": [
+        202.7949981689453,
+        444.8415222167969,
+        211.50250244140625,
+        522.6389770507812
+      ],
+      "text_sha256": "4981c73246993f275da550c6165722b84701ec2acdd335ce87e1c36e09047e6d"
+    },
+    {
+      "block_id": "page-0680-block-0008",
+      "order": 8,
+      "text": "injection)\n5.25mg*\n5.25–9.75mg*\n15mg daily* (combined oral + IM)\n",
+      "bbox": [
+        202.7949981689453,
+        67.57662200927734,
+        221.5,
+        522.6389770507812
+      ],
+      "text_sha256": "dd856a8947baad69f74e3bd23dd9d0d29d56a95602660e68a26afdeec117550d"
+    },
+    {
+      "block_id": "page-0680-block-0009",
+      "order": 9,
+      "text": "Brexpiprazole\nDosage not established in older adults9\n",
+      "bbox": [
+        230.9199981689453,
+        398.5073547363281,
+        239.62750244140625,
+        612.6539916992188
+      ],
+      "text_sha256": "3d795d6b5937236ef4b331e1a62b0750ddd39f5a07fadb419cece9f2251d3be6"
+    },
+    {
+      "block_id": "page-0680-block-0010",
+      "order": 10,
+      "text": "Cariprazine\nDosage not established in older adults10\n",
+      "bbox": [
+        249.04249572753906,
+        396.0761413574219,
+        257.75,
+        612.6539916992188
+      ],
+      "text_sha256": "0fc2aaccf6dc9920ebff9859bdcf60fea7e0d60dfea39fa33f432c7578567f93"
+    },
+    {
+      "block_id": "page-0680-block-0011",
+      "order": 11,
+      "text": "Clozapine\nSchizophrenia\n6.25–12.5mg daily11,12 increased \nby not more than 6.25–12.5mg \n",
+      "bbox": [
+        267.1675109863281,
+        301.2018737792969,
+        285.87249755859375,
+        612.6539916992188
+      ],
+      "text_sha256": "f6aa5c0efc2de98e66a09b382181152089cf9a4264fd0094762d6e989050b0fb"
+    },
+    {
+      "block_id": "page-0680-block-0012",
+      "order": 12,
+      "text": "once or twice a week11\n",
+      "bbox": [
+        287.1625061035156,
+        332.9971618652344,
+        295.8699951171875,
+        406.2018737792969
+      ],
+      "text_sha256": "a721e25c86bd2cd08f093323071f80ad5c2441b2d2c76622ad3b94586d67415d"
+    },
+    {
+      "block_id": "page-0680-block-0013",
+      "order": 13,
+      "text": "50–100mg daily11,12\n100mg daily11,12\n",
+      "bbox": [
+        267.1675109863281,
+        125.73326110839844,
+        275.875,
+        288.2841796875
+      ],
+      "text_sha256": "f101e6d6fc44b4ed8dd0c391d405650c1727f4c5281e3952c1b2c3c410bdb226"
+    },
+    {
+      "block_id": "page-0680-block-0014",
+      "order": 14,
+      "text": "Parkinson’s related psychosis\n6.25mg daily13\n25–37.5mg daily13\n50mg daily13\n",
+      "bbox": [
+        305.2925109863281,
+        135.9808807373047,
+        314.0,
+        522.6397094726562
+      ],
+      "text_sha256": "0fada5578e07dbf0a0c331aaa4cf230d359c13e4fb5a5079117a792032b91f6b"
+    },
+    {
+      "block_id": "page-0680-block-0015",
+      "order": 15,
+      "text": "IM injection\nThe oral bioavailability of clozapine is about half that of the intramuscular injection\n",
+      "bbox": [
+        323.4175109863281,
+        142.0221405029297,
+        332.125,
+        522.6397094726562
+      ],
+      "text_sha256": "fe2f606dbb34c2184825250750d50453dc9487911c4e4ddeaa7ca72ba6ec3719"
+    },
+    {
+      "block_id": "page-0680-block-0016",
+      "order": 16,
+      "text": "E.g. 50mg daily of the IM injection is roughly equivalent to 100mg daily of the tablets/oral solution. After \n",
+      "bbox": [
+        333.4150085449219,
+        68.7771224975586,
+        342.12249755859375,
+        406.20220947265625
+      ],
+      "text_sha256": "fddf1fb85270633cbad70b5392affb7515f0a216537504a96f0f4d38b171468f"
+    },
+    {
+      "block_id": "page-0680-block-0017",
+      "order": 17,
+      "text": "each injection has been given, the patient must be observed every 15 minutes for the first 2 hours to \n",
+      "bbox": [
+        343.4125061035156,
+        82.3972396850586,
+        352.1199951171875,
+        406.20220947265625
+      ],
+      "text_sha256": "ba1127e8c0ffbcf38287db12693c48399891e78c8592ef5df9d2342f77e7840a"
+    },
+    {
+      "block_id": "page-0680-block-0018",
+      "order": 18,
+      "text": "check for excess sedation\n",
+      "bbox": [
+        353.4100036621094,
+        325.3671875,
+        362.11749267578125,
+        406.20220947265625
+      ],
+      "text_sha256": "f64cc59cb531426150f31dad0cf33702821a3250d4c80070f7b4be6a0954dc45"
+    },
+    {
+      "block_id": "page-0680-block-0019",
+      "order": 19,
+      "text": "NB: If IM lorazepam is required, leave at least ONE HOUR between administration of IM clozapine and IM \n",
+      "bbox": [
+        363.4075012207031,
+        68.51485443115234,
+        372.114990234375,
+        406.20220947265625
+      ],
+      "text_sha256": "2cc23b083a72150bcc5bec2fdb853e225409215fd2b8b044f386450c817989d4"
+    },
+    {
+      "block_id": "page-0680-block-0020",
+      "order": 20,
+      "text": "lorazepam\n",
+      "bbox": [
+        373.4049987792969,
+        372.8721923828125,
+        382.11248779296875,
+        406.20220947265625
+      ],
+      "text_sha256": "8856f7ff54a3cfcb819d4d02364ca0d733a24bc28363223044026ecdc5333814"
+    },
+    {
+      "block_id": "page-0680-block-0021",
+      "order": 21,
+      "text": "Iloperidone\nNo formal recommendations are available for dosing in older adults\n",
+      "bbox": [
+        391.5325012207031,
+        307.4645690917969,
+        400.239990234375,
+        612.6547241210938
+      ],
+      "text_sha256": "1771840487a92672e5f3e9ebf5ab23ee124ec8c07ad5cede6dffc70adfef0f9f"
+    },
+    {
+      "block_id": "page-0680-block-0022",
+      "order": 22,
+      "text": "(Continued)\n",
+      "bbox": [
+        409.614990234375,
+        64.35213470458984,
+        418.36749267578125,
+        100.3671875
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0046",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 46,
+  "source_page_index": 45,
+  "source_page_display": 46,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    25\nCHAPTER 1\nAntipsychotic prophylaxis\nFirst episode of psychosis\nAntipsychotics provide effective protection against relapse, at least in the short to medium \nterm1 and the introduction of antipsychotics in the 1950s seems to have improved out-\ncomes overall.2 A meta-analysis of placebo-controlled trials found that 26% of first-epi-\nsode patients randomised to receive maintenance antipsychotic relapsed after 6–12 \nmonths compared with 61% randomised to receive placebo.3 Although the current con-\nsensus is that antipsychotics should be prescribed for 1–2 years after a first episode of \nschizophrenia,4,5 one study6 found that withdrawing antipsychotic treatment in line with \nthis consensus led to a relapse rate of almost 80% after one year medication-free and \n98% after 2 years. A 2019 Swedish population study revealed that the longer the treat-\nment with antipsychotics, the lower the risk of hospitalisation (e.g. those with 5 years’ \ntreatment had half the hospitalisation rate of those treated for less than 6 months).7\nOther studies in first-episode schizophrenia confirmed that only a small minority of \npatients who discontinue remain well 1–2 years later8–11 (e.g. a small study found 94% of \nfirst-episode patients relapsed within 2 years of stopping risperidone long-acting injection, \n97% at three years12). A 2018 meta-analysis of 8 RCTs was rather more optimistic and \nfound relapse rates averaged 35% (treated) and 61% (discontinued) at 18–24 months.13\nA 5-year follow-up of a 2-year RCT during which patients received either mainte-\nnance antipsychotic treatment or had their antipsychotic dose reduced or discontinued \ncompletely found that while there was a clear advantage for maintenance treatment \nwith respect to reducing short-term relapse this advantage was lost in the medium-\nterm. Furthermore, the dose-reduction/discontinuation group were receiving lower \ndoses of antipsychotic drugs at follow-up and had better functional outcomes.14 There \nare numerous interpretations of these outcomes, but the most that can be concluded is \nthat dose reduction is a possible option in first-episode psychosis. The study has been \nheavily criticised15 and here are certainly other studies showing disastrous outcomes \nfrom antipsychotic discontinuation,16 albeit over shorter periods with fewer subjects. \nNonetheless, some patients with first-episode psychosis will not need long-term antip-\nsychotics to stay well – figures as high as 18–30% have been put forward.17\nThere are no reliable patient factors linked to outcome following discontinuation of \nantipsychotics in first-episode patients (other than cannabis use18), and there remains \nmore evidence in favour of continuing antipsychotics than for stopping them.19 There \nare indications that very prolonged discontinuation regimens using hyperbolic tapering \n(see the section of stopping antipsychotics) may offer the best chance of successfully \nwithdrawing from antipsychotic treatment.20,21\nIt should be noted that definitions of relapse usually focus on the severity of positive \nsymptoms, and largely ignore cognitive and negative symptoms: positive symptoms are \nmore likely to lead to hospitalisation while cognitive and negative symptoms (which \nrespond less well, and in some circumstances may even be exacerbated by antipsychotic \ntreatment) have a greater overall impact on quality of life.\nWith respect to antipsychotic choice, in the context of an RCT, clozapine did not \noffer any advantage over chlorpromazine in the medium term in first-episode patients \nwith non-refractory illness.22 But in a large naturalistic study of patients with a first \nadmission for schizophrenia, clozapine and olanzapine fared better with respect to \n",
+  "raw_text_sha256": "0e4e9ff9933b1ec27a911f5b5506173a5989995cd5c5c7366b1120c580df2eac",
+  "coordinates_sha256": "119cc39aff167c77f0b75b9fd25cbd8080d3858acd28b4936652c07fdb28a5ed",
+  "block_sequence_sha256": "f2d057cd7a522a89d2044e79aafacb7d8878adf2647db4c8ee2ee9cedac23056",
+  "blocks": [
+    {
+      "block_id": "page-0046-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    25\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "9c0bbf919181fddc8831545dac869ba14bca36434475a5c19ca4d7a30947e071"
+    },
+    {
+      "block_id": "page-0046-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0046-block-0002",
+      "order": 2,
+      "text": "Antipsychotic prophylaxis\n",
+      "bbox": [
+        54.99909973144531,
+        66.06442260742188,
+        188.6380615234375,
+        79.09942626953125
+      ],
+      "text_sha256": "36896530b9159b22c0d45810f22b336186e27d324db81ec5020279de61cf8829"
+    },
+    {
+      "block_id": "page-0046-block-0003",
+      "order": 3,
+      "text": "First episode of psychosis\n",
+      "bbox": [
+        48.00309753417969,
+        90.06643676757812,
+        179.38706970214844,
+        103.1014404296875
+      ],
+      "text_sha256": "d4d9a14afb76a8aebeea2bc83d7eaf396324b526fa02b05860f853d9ed898bad"
+    },
+    {
+      "block_id": "page-0046-block-0004",
+      "order": 4,
+      "text": "Antipsychotics provide effective protection against relapse, at least in the short to medium \nterm1 and the introduction of antipsychotics in the 1950s seems to have improved out-\ncomes overall.2 A meta-analysis of placebo-controlled trials found that 26% of first-epi-\nsode patients randomised to receive maintenance antipsychotic relapsed after 6–12 \nmonths compared with 61% randomised to receive placebo.3 Although the current con-\nsensus is that antipsychotics should be prescribed for 1–2 years after a first episode of \nschizophrenia,4,5 one study6 found that withdrawing antipsychotic treatment in line with \nthis consensus led to a relapse rate of almost 80% after one year medication-free and \n98% after 2 years. A 2019 Swedish population study revealed that the longer the treat-\nment with antipsychotics, the lower the risk of hospitalisation (e.g. those with 5 years’ \ntreatment had half the hospitalisation rate of those treated for less than 6 months).7\n",
+      "bbox": [
+        47.99909973144531,
+        108.909423828125,
+        422.8293762207031,
+        240.62942504882812
+      ],
+      "text_sha256": "3447a065d76fbe9664d96f9c94664b47157394814acfe829eabe4cb78c5cc597"
+    },
+    {
+      "block_id": "page-0046-block-0005",
+      "order": 5,
+      "text": "Other studies in first-episode schizophrenia confirmed that only a small minority of \npatients who discontinue remain well 1–2 years later8–11 (e.g. a small study found 94% of \nfirst-episode patients relapsed within 2 years of stopping risperidone long-acting injection, \n97% at three years12). A 2018 meta-analysis of 8 RCTs was rather more optimistic and \nfound relapse rates averaged 35% (treated) and 61% (discontinued) at 18–24 months.13\n",
+      "bbox": [
+        47.997093200683594,
+        240.909423828125,
+        422.8171081542969,
+        300.6294250488281
+      ],
+      "text_sha256": "7778d32e79627dc2465fa1c03c702c2c1847389449645b6e018a493af3e7d053"
+    },
+    {
+      "block_id": "page-0046-block-0006",
+      "order": 6,
+      "text": "A 5-year follow-up of a 2-year RCT during which patients received either mainte-\nnance antipsychotic treatment or had their antipsychotic dose reduced or discontinued \ncompletely found that while there was a clear advantage for maintenance treatment \nwith respect to reducing short-term relapse this advantage was lost in the medium-\nterm. Furthermore, the dose-reduction/discontinuation group were receiving lower \ndoses of antipsychotic drugs at follow-up and had better functional outcomes.14 There \nare numerous interpretations of these outcomes, but the most that can be concluded is \nthat dose reduction is a possible option in first-episode psychosis. The study has been \nheavily criticised15 and here are certainly other studies showing disastrous outcomes \nfrom antipsychotic discontinuation,16 albeit over shorter periods with fewer subjects. \nNonetheless, some patients with first-episode psychosis will not need long-term antip-\nsychotics to stay well – figures as high as 18–30% have been put forward.17\n",
+      "bbox": [
+        47.99420166015625,
+        300.909423828125,
+        422.8191223144531,
+        444.6294250488281
+      ],
+      "text_sha256": "ae94a69fc1fe6afef42f9fb276d70600b07776addd7220f4dde43d57bd74ccb5"
+    },
+    {
+      "block_id": "page-0046-block-0007",
+      "order": 7,
+      "text": "There are no reliable patient factors linked to outcome following discontinuation of \nantipsychotics in first-episode patients (other than cannabis use18), and there remains \nmore evidence in favour of continuing antipsychotics than for stopping them.19 There \nare indications that very prolonged discontinuation regimens using hyperbolic tapering \n(see the section of stopping antipsychotics) may offer the best chance of successfully \nwithdrawing from antipsychotic treatment.20,21\n",
+      "bbox": [
+        47.99479675292969,
+        444.909423828125,
+        422.8195495605469,
+        516.6294555664062
+      ],
+      "text_sha256": "6814c7bed183b21905877696d17f8b51cf8fb4cfb5722f9b7e4827bd48674af6"
+    },
+    {
+      "block_id": "page-0046-block-0008",
+      "order": 8,
+      "text": "It should be noted that definitions of relapse usually focus on the severity of positive \nsymptoms, and largely ignore cognitive and negative symptoms: positive symptoms are \nmore likely to lead to hospitalisation while cognitive and negative symptoms (which \nrespond less well, and in some circumstances may even be exacerbated by antipsychotic \ntreatment) have a greater overall impact on quality of life.\n",
+      "bbox": [
+        47.99909973144531,
+        516.909423828125,
+        422.7889709472656,
+        576.6294555664062
+      ],
+      "text_sha256": "e542f60ac96c85534e4a1749be808174d623e496b4b0e9ae04503eb8651c5fcc"
+    },
+    {
+      "block_id": "page-0046-block-0009",
+      "order": 9,
+      "text": "With respect to antipsychotic choice, in the context of an RCT, clozapine did not \noffer any advantage over chlorpromazine in the medium term in first-episode patients \nwith non-refractory illness.22 But in a large naturalistic study of patients with a first \nadmission for schizophrenia, clozapine and olanzapine fared better with respect to \n",
+      "bbox": [
+        47.99909973144531,
+        576.909423828125,
+        422.7701110839844,
+        624.6294555664062
+      ],
+      "text_sha256": "79dcc7b9c4f8cf46025ea7d4bc84f4dc67705dca46c82297cc0e1ec79c43ee68"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

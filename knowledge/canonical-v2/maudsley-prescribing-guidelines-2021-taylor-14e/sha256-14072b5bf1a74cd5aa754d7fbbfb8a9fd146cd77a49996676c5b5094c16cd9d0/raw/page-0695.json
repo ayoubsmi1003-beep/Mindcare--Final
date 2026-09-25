@@ -1,0 +1,995 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0695",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 695,
+  "source_page_index": 694,
+  "source_page_display": 695,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Table 6.8  Antidepressants and older people\nAnticholinergic \nside effects \n(urinary retention, \ndry mouth, \nblurred vision, \nconstipation)\nPostural \nhypotension\nSedation\nWeight \ngain\nSafety in \noverdose\nOther side effects\nDrug interactions\nOlder \ntricyclics20\nVariable: moderate \nwith nortriptyline, \nimipramine and \ndosulepin \n(dothiepin)\nMarked with \nothers\nAll can also cause \ncentral \nanticholinergic \neffects (confusion)\nAll can cause \npostural \nhypotension\nDosage \ntitration is \nrequired\nVariable: \nfrom \nminimal \nwith \nimipramine \nto profound \nwith \ntrimipramine\nAll tricyclics \ncan cause \nweight gain\nDothiepin and \namitriptyline \nare the most \ntoxic (seizures \nand cardiac \narrhythmia)\nSeizures, anticholinergic- \ninduced cognitive \nimpairment\nIncreased risk of bleeds with \nserotonergic drugs\nMainly pharmacodynamic: \nincreased sedation with \nbenzodiazepines, increased \nhypotension with diuretics, \nincreased constipation with \nother anticholinergic drugs, \netc.\nLofepramine\nModerate, \nalthough \nconstipation/\nsweating can be \nsevere\nCan be a \nproblem but \ngenerally \nbetter \ntolerated \nthan the \nolder tricyclics\nMinimal\nFew data, but \nlack of \nspontaneous \nreports may \nindicate less \npotential than \nthe older \ntricyclics\nRelatively safe\nRaised LFTs\nLess likely to cause \nhyponatraemia than other \nTCAs and SSRIs\n",
+  "raw_text_sha256": "3e7d16474ccdf340e5aed10b0ad4045150a82838ee617c36ee856a75ea1c1af0",
+  "coordinates_sha256": "438a65107f8241558c0dd16435d3f6f8b07a08da086ac70b9fec4aa25528701f",
+  "block_sequence_sha256": "ba0a8be9c11f022eaf3687e4832af8686672de1734c9aa5a9a70926669f65e95",
+  "blocks": [
+    {
+      "block_id": "page-0695-block-0000",
+      "order": 0,
+      "text": "Table 6.8  Antidepressants and older people\n",
+      "bbox": [
+        106.81490325927734,
+        465.06903076171875,
+        115.70240020751953,
+        606.6539916992188
+      ],
+      "text_sha256": "ef9b397358272b3aef5b04e20a4c702c24e9250966be723fd595b5f06187fae9"
+    },
+    {
+      "block_id": "page-0695-block-0001",
+      "order": 1,
+      "text": "Anticholinergic \n",
+      "bbox": [
+        126.68989562988281,
+        502.3365478515625,
+        135.577392578125,
+        555.6539916992188
+      ],
+      "text_sha256": "3630084635df5f5c8d30f30e5d2f5d9c2fffffb4d633101e14c1e08a163e376c"
+    },
+    {
+      "block_id": "page-0695-block-0002",
+      "order": 2,
+      "text": "side effects \n",
+      "bbox": [
+        136.68739318847656,
+        515.3489379882812,
+        145.57489013671875,
+        555.6539916992188
+      ],
+      "text_sha256": "f274b1a63606db971f3d587875fdb290386066ba4f795a2d2f082a5b1250b2de"
+    },
+    {
+      "block_id": "page-0695-block-0003",
+      "order": 3,
+      "text": "(urinary retention, \n",
+      "bbox": [
+        146.6848907470703,
+        491.3865051269531,
+        155.5723876953125,
+        555.6539916992188
+      ],
+      "text_sha256": "31bc79c89552658e942c9f9406e80917ef7a7a5c22c5a96f2db441c1897ccd29"
+    },
+    {
+      "block_id": "page-0695-block-0004",
+      "order": 4,
+      "text": "dry mouth, \n",
+      "bbox": [
+        156.68238830566406,
+        515.7465209960938,
+        165.56988525390625,
+        555.6539916992188
+      ],
+      "text_sha256": "4748a5c377c144d317a739c4f3d776a758204113484c754b39d072d0af2bf1e3"
+    },
+    {
+      "block_id": "page-0695-block-0005",
+      "order": 5,
+      "text": "blurred vision, \n",
+      "bbox": [
+        166.6798858642578,
+        504.9615173339844,
+        175.5673828125,
+        555.6539916992188
+      ],
+      "text_sha256": "0ebe9bf5586fc06cffa2322c61941a2a29d7f7d41bfb28994f0c24f5b7f4fe2d"
+    },
+    {
+      "block_id": "page-0695-block-0006",
+      "order": 6,
+      "text": "constipation)\nPostural \n",
+      "bbox": [
+        166.6798858642578,
+        451.8164978027344,
+        185.56488037109375,
+        555.6539916992188
+      ],
+      "text_sha256": "b3306609f471364f85aa87c24a34b23b0f356f076d12e6e0cf070f57ce5d2860"
+    },
+    {
+      "block_id": "page-0695-block-0007",
+      "order": 7,
+      "text": "hypotension\nSedation\nWeight \n",
+      "bbox": [
+        166.6798858642578,
+        344.86651611328125,
+        185.56488037109375,
+        482.656494140625
+      ],
+      "text_sha256": "dc6d8d633adfee719e7ce63cfc50dc607e903cdfca4ed02596c79dac11589c46"
+    },
+    {
+      "block_id": "page-0695-block-0008",
+      "order": 8,
+      "text": "gain\nSafety in \n",
+      "bbox": [
+        166.6798858642578,
+        286.2989501953125,
+        185.56488037109375,
+        372.65399169921875
+      ],
+      "text_sha256": "9008c901d656e63465a1b8ddd2dbcdaaceb2e6b8c5efc8ee11bd20df0d7850dd"
+    },
+    {
+      "block_id": "page-0695-block-0009",
+      "order": 9,
+      "text": "overdose\nOther side effects\nDrug interactions\n",
+      "bbox": [
+        176.67738342285156,
+        90.39894104003906,
+        185.56488037109375,
+        319.6514892578125
+      ],
+      "text_sha256": "d86035b26598249e1c3269af9e4cd1287dd3e614afbfb7d4190b67eec81a44e3"
+    },
+    {
+      "block_id": "page-0695-block-0010",
+      "order": 10,
+      "text": "Older \n",
+      "bbox": [
+        194.8048858642578,
+        590.9789428710938,
+        203.6923828125,
+        612.6539916992188
+      ],
+      "text_sha256": "e2f919a97087604af928e5100bfd32945e02c309fa2b503d420495f0b089a143"
+    },
+    {
+      "block_id": "page-0695-block-0011",
+      "order": 11,
+      "text": "tricyclics20\nVariable: moderate \n",
+      "bbox": [
+        194.99488830566406,
+        493.1490173339844,
+        213.68988037109375,
+        612.6539916992188
+      ],
+      "text_sha256": "579f2c3a5657d9adeb92eb96d43fb939e8ede8a53f0adc80b8eb88cd2acf9951"
+    },
+    {
+      "block_id": "page-0695-block-0012",
+      "order": 12,
+      "text": "with nortriptyline, \n",
+      "bbox": [
+        204.9923858642578,
+        496.4865417480469,
+        213.69989013671875,
+        555.6539916992188
+      ],
+      "text_sha256": "912e73fda5f51313e54c08d9a8a94c68661f843c1fbe038e322e51a2f7c71f9b"
+    },
+    {
+      "block_id": "page-0695-block-0013",
+      "order": 13,
+      "text": "imipramine and \n",
+      "bbox": [
+        214.98988342285156,
+        503.5665283203125,
+        223.6973876953125,
+        555.6539916992188
+      ],
+      "text_sha256": "10d5d1f6d92b794487d881ab34980d0550918b38d2e8df6865f57da8e98a9edb"
+    },
+    {
+      "block_id": "page-0695-block-0014",
+      "order": 14,
+      "text": "dosulepin \n",
+      "bbox": [
+        224.9873809814453,
+        522.7214965820312,
+        233.69488525390625,
+        555.6539916992188
+      ],
+      "text_sha256": "2f6b719a6596014df315aa2c3ba50a76d5c52f15a36f34cbda9d53c8c29c9776"
+    },
+    {
+      "block_id": "page-0695-block-0015",
+      "order": 15,
+      "text": "(dothiepin)\n",
+      "bbox": [
+        234.98487854003906,
+        521.0564575195312,
+        243.6923828125,
+        555.6539916992188
+      ],
+      "text_sha256": "7adb3aa791466c691fd5b2c0c048929ab20c634808fdacf95810037d31ff7057"
+    },
+    {
+      "block_id": "page-0695-block-0016",
+      "order": 16,
+      "text": "Marked with \n",
+      "bbox": [
+        247.9823760986328,
+        512.7315063476562,
+        256.68988037109375,
+        555.6539916992188
+      ],
+      "text_sha256": "7d1bffec8a45030e7af0fee24e11e43033e185ad2a4086cb3b4d999aabc17b12"
+    },
+    {
+      "block_id": "page-0695-block-0017",
+      "order": 17,
+      "text": "others\n",
+      "bbox": [
+        257.9798889160156,
+        535.6514892578125,
+        266.6873779296875,
+        555.6539916992188
+      ],
+      "text_sha256": "afd4164db03d56e32e9ed6fa759036322ca130bb4996ab23eec455ec62e6e751"
+    },
+    {
+      "block_id": "page-0695-block-0018",
+      "order": 18,
+      "text": "All can also cause \n",
+      "bbox": [
+        270.9773864746094,
+        497.3114929199219,
+        279.68487548828125,
+        555.6539916992188
+      ],
+      "text_sha256": "24c82e94947b06467d6ff3e9c0392d0b426d0c4ba87062802ef39fbcba60f836"
+    },
+    {
+      "block_id": "page-0695-block-0019",
+      "order": 19,
+      "text": "central \n",
+      "bbox": [
+        280.9748840332031,
+        531.9089965820312,
+        289.682373046875,
+        555.6539916992188
+      ],
+      "text_sha256": "1b41a738cfb8f08b85ca77f69028d46b3c383ae751f8367df767ed80fb9324e2"
+    },
+    {
+      "block_id": "page-0695-block-0020",
+      "order": 20,
+      "text": "anticholinergic \n",
+      "bbox": [
+        290.9723815917969,
+        506.9040222167969,
+        299.67987060546875,
+        555.6539916992188
+      ],
+      "text_sha256": "0a35970e424b7bebea454320b8dc36c203942139bde8d691d6f08aac75637960"
+    },
+    {
+      "block_id": "page-0695-block-0021",
+      "order": 21,
+      "text": "effects (confusion)\n",
+      "bbox": [
+        300.9698791503906,
+        497.0340270996094,
+        309.6773681640625,
+        555.6539916992188
+      ],
+      "text_sha256": "b58fad3f0b0caf3e5c801e3055459742205025c4eb9aa34aeb943f77da628556"
+    },
+    {
+      "block_id": "page-0695-block-0022",
+      "order": 22,
+      "text": "All can cause \n",
+      "bbox": [
+        194.9723663330078,
+        438.9015197753906,
+        203.67987060546875,
+        482.656494140625
+      ],
+      "text_sha256": "9c8c28f644f73408bb59fa58e1355a732d40ee0495715998f7a12b0f1811c5ee"
+    },
+    {
+      "block_id": "page-0695-block-0023",
+      "order": 23,
+      "text": "postural \n",
+      "bbox": [
+        204.96986389160156,
+        454.7340393066406,
+        213.6773681640625,
+        482.656494140625
+      ],
+      "text_sha256": "ba301c659f7682be9f4498f609e93e70231dc1551733feda71a24f24d73a6480"
+    },
+    {
+      "block_id": "page-0695-block-0024",
+      "order": 24,
+      "text": "hypotension\n",
+      "bbox": [
+        214.9673614501953,
+        443.47650146484375,
+        223.67486572265625,
+        482.656494140625
+      ],
+      "text_sha256": "17838589008c5efbb91c863487012b6f48e44705ee156202a97f82c520175de1"
+    },
+    {
+      "block_id": "page-0695-block-0025",
+      "order": 25,
+      "text": "Dosage \n",
+      "bbox": [
+        224.96485900878906,
+        456.8114929199219,
+        233.67236328125,
+        482.656494140625
+      ],
+      "text_sha256": "6cecb7547560c36cff00a34c8b787576294636edaf60eed6bc02f5fcafaf2a92"
+    },
+    {
+      "block_id": "page-0695-block-0026",
+      "order": 26,
+      "text": "titration is \n",
+      "bbox": [
+        234.9623565673828,
+        448.4940490722656,
+        243.66986083984375,
+        482.656494140625
+      ],
+      "text_sha256": "082bb6fdcd237f655f7e64ddedba2162e5b0069f2bb4cf3e09463f6b1ba06ed0"
+    },
+    {
+      "block_id": "page-0695-block-0027",
+      "order": 27,
+      "text": "required\n",
+      "bbox": [
+        244.95985412597656,
+        456.2565002441406,
+        253.6673583984375,
+        482.656494140625
+      ],
+      "text_sha256": "a5b0a56fd8d2fcf82092fb779244729989674b90787530cbf7946f4d00da53a6"
+    },
+    {
+      "block_id": "page-0695-block-0028",
+      "order": 28,
+      "text": "Variable: \n",
+      "bbox": [
+        194.9573516845703,
+        396.0690002441406,
+        203.66485595703125,
+        425.656494140625
+      ],
+      "text_sha256": "79008c98eb08649ef9dc4c39ad4fcc2b7356f926c03f3fb52997bb4aa837ded8"
+    },
+    {
+      "block_id": "page-0695-block-0029",
+      "order": 29,
+      "text": "from \n",
+      "bbox": [
+        204.95484924316406,
+        408.29400634765625,
+        213.662353515625,
+        425.656494140625
+      ],
+      "text_sha256": "80abbe656411461b8ec534e155b016d389a1255d852bac9c95d44dd052575f48"
+    },
+    {
+      "block_id": "page-0695-block-0030",
+      "order": 30,
+      "text": "minimal \n",
+      "bbox": [
+        214.9523468017578,
+        398.1614685058594,
+        223.65985107421875,
+        425.656494140625
+      ],
+      "text_sha256": "795bf425fec480e215802c591f636ade6557ab90e1ac9cd2299f2fe14f6a8298"
+    },
+    {
+      "block_id": "page-0695-block-0031",
+      "order": 31,
+      "text": "with \n",
+      "bbox": [
+        224.94984436035156,
+        409.40399169921875,
+        233.6573486328125,
+        425.656494140625
+      ],
+      "text_sha256": "b366ea9b5c87c6068bed10466f9d9f50fea1aec1b54a9549f0c1905cdc50bf8e"
+    },
+    {
+      "block_id": "page-0695-block-0032",
+      "order": 32,
+      "text": "imipramine \n",
+      "bbox": [
+        234.9473419189453,
+        387.74395751953125,
+        243.65484619140625,
+        425.656494140625
+      ],
+      "text_sha256": "81532bc05f23262b63b3dbf427985348b363ee690db6cec75946fb17a8fc2a52"
+    },
+    {
+      "block_id": "page-0695-block-0033",
+      "order": 33,
+      "text": "to profound \n",
+      "bbox": [
+        244.94483947753906,
+        384.9389343261719,
+        253.65234375,
+        425.656494140625
+      ],
+      "text_sha256": "e77b722d37e98532fd087944e5cd4f46d56932b1fcbb577564dc89596a055578"
+    },
+    {
+      "block_id": "page-0695-block-0034",
+      "order": 34,
+      "text": "with \n",
+      "bbox": [
+        254.9423370361328,
+        409.40399169921875,
+        263.64984130859375,
+        425.656494140625
+      ],
+      "text_sha256": "b366ea9b5c87c6068bed10466f9d9f50fea1aec1b54a9549f0c1905cdc50bf8e"
+    },
+    {
+      "block_id": "page-0695-block-0035",
+      "order": 35,
+      "text": "trimipramine\n",
+      "bbox": [
+        264.9398498535156,
+        384.8339538574219,
+        273.6473388671875,
+        425.656494140625
+      ],
+      "text_sha256": "c9c10e88d85dc43ac0aee09d400e156ffeaef7eb2fba9ed1683c810914dfb858"
+    },
+    {
+      "block_id": "page-0695-block-0036",
+      "order": 36,
+      "text": "All tricyclics \n",
+      "bbox": [
+        194.9423370361328,
+        333.92401123046875,
+        203.64984130859375,
+        372.65399169921875
+      ],
+      "text_sha256": "4e47d9497d174ad5bb88e5bb6f42c169416ba4c1ad393accceb151c6ac99ab05"
+    },
+    {
+      "block_id": "page-0695-block-0037",
+      "order": 37,
+      "text": "can cause \n",
+      "bbox": [
+        204.93983459472656,
+        339.3164978027344,
+        213.6473388671875,
+        372.65399169921875
+      ],
+      "text_sha256": "c499c9c2ee3e857fc96a29bd35e9556b6539b65f70c3720cf21b3d81dfe0b877"
+    },
+    {
+      "block_id": "page-0695-block-0038",
+      "order": 38,
+      "text": "weight gain\n",
+      "bbox": [
+        214.9373321533203,
+        334.7264404296875,
+        223.64483642578125,
+        372.65399169921875
+      ],
+      "text_sha256": "a229f3e7c7e1a44b832e98550db5d73b2c7529750bb7257852e103eec2078fd3"
+    },
+    {
+      "block_id": "page-0695-block-0039",
+      "order": 39,
+      "text": "Dothiepin and \n",
+      "bbox": [
+        194.93482971191406,
+        272.13140869140625,
+        203.642333984375,
+        319.6514892578125
+      ],
+      "text_sha256": "31d3b8ccd8e7e170190ee95ca215aceae8efd9e5d532cd0f89cc255d24cd22db"
+    },
+    {
+      "block_id": "page-0695-block-0040",
+      "order": 40,
+      "text": "amitriptyline \n",
+      "bbox": [
+        204.9323272705078,
+        277.9964599609375,
+        213.63983154296875,
+        319.6514892578125
+      ],
+      "text_sha256": "8a73dcfb50d24d3cca47c74e9b901ca4beacd5fd7ee32610e25d62564991d56c"
+    },
+    {
+      "block_id": "page-0695-block-0041",
+      "order": 41,
+      "text": "are the most \n",
+      "bbox": [
+        214.92982482910156,
+        277.28399658203125,
+        223.6373291015625,
+        319.6514892578125
+      ],
+      "text_sha256": "baf1db0b0da8e13c26657c6f7d8680ddd57c978b4d932c73559b84d81500483a"
+    },
+    {
+      "block_id": "page-0695-block-0042",
+      "order": 42,
+      "text": "toxic (seizures \n",
+      "bbox": [
+        224.9273223876953,
+        273.54150390625,
+        233.63482666015625,
+        319.6514892578125
+      ],
+      "text_sha256": "eb57bbdce3d5badc71f781d8b2f71486d3a188ba836ae18e6bdec4145e970c98"
+    },
+    {
+      "block_id": "page-0695-block-0043",
+      "order": 43,
+      "text": "and cardiac \n",
+      "bbox": [
+        234.92481994628906,
+        281.03399658203125,
+        243.63232421875,
+        319.6514892578125
+      ],
+      "text_sha256": "329b2745e60b71f6167a461bb47962bce865e2ceff8c0bdcd5b367b04d4ea0fa"
+    },
+    {
+      "block_id": "page-0695-block-0044",
+      "order": 44,
+      "text": "arrhythmia)\n",
+      "bbox": [
+        244.9223175048828,
+        282.9914855957031,
+        253.62982177734375,
+        319.6514892578125
+      ],
+      "text_sha256": "2f8b4af75b118e915db50bd81112d9a9fb9a312eaeee3f6d7559da16373ab776"
+    },
+    {
+      "block_id": "page-0695-block-0045",
+      "order": 45,
+      "text": "Seizures, anticholinergic- \n",
+      "bbox": [
+        194.91981506347656,
+        175.5388946533203,
+        203.6273193359375,
+        256.6514892578125
+      ],
+      "text_sha256": "b5156225e93acb3beea82f34b054376c3ed3b414f1c7030cc9b6b552d42f686c"
+    },
+    {
+      "block_id": "page-0695-block-0046",
+      "order": 46,
+      "text": "induced cognitive \n",
+      "bbox": [
+        204.9173126220703,
+        198.3089141845703,
+        213.62481689453125,
+        256.6514892578125
+      ],
+      "text_sha256": "932d5af880dd92d06cf8e109e83e9bb93253a9a5c34693af17068d6d5a9d3258"
+    },
+    {
+      "block_id": "page-0695-block-0047",
+      "order": 47,
+      "text": "impairment\n",
+      "bbox": [
+        214.91481018066406,
+        219.991455078125,
+        223.622314453125,
+        256.6514892578125
+      ],
+      "text_sha256": "e139b201b47275e3144e362476e2c97d6f949889148c768cc6b14dc96ae27e3b"
+    },
+    {
+      "block_id": "page-0695-block-0048",
+      "order": 48,
+      "text": "Increased risk of bleeds with \n",
+      "bbox": [
+        227.9123077392578,
+        164.27394104003906,
+        236.61981201171875,
+        256.6514892578125
+      ],
+      "text_sha256": "4ac798741e6e441acdfc749b9c53a87c0a552ce9e0ac36122f9e35f9e0eb6863"
+    },
+    {
+      "block_id": "page-0695-block-0049",
+      "order": 49,
+      "text": "serotonergic drugs\n",
+      "bbox": [
+        237.90980529785156,
+        197.19142150878906,
+        246.6173095703125,
+        256.6514892578125
+      ],
+      "text_sha256": "d635f9f25c673deb7933f7a5dc0f73c3246d50f9983db5b6582d4b3e84835d62"
+    },
+    {
+      "block_id": "page-0695-block-0050",
+      "order": 50,
+      "text": "Mainly pharmacodynamic: \n",
+      "bbox": [
+        194.9123077392578,
+        65.40157318115234,
+        203.61981201171875,
+        151.6514892578125
+      ],
+      "text_sha256": "d1337265faeb6f69b8c2197512f796e860d0b1c0a77d145ae6a4955d76b49a32"
+    },
+    {
+      "block_id": "page-0695-block-0051",
+      "order": 51,
+      "text": "increased sedation with \n",
+      "bbox": [
+        204.90980529785156,
+        74.27413177490234,
+        213.6173095703125,
+        151.6514892578125
+      ],
+      "text_sha256": "dbd71485ce93e9110b00eba1ddd59449ddec2a14642b5a762dd87bb6f3b8e8e6"
+    },
+    {
+      "block_id": "page-0695-block-0052",
+      "order": 52,
+      "text": "benzodiazepines, increased \n",
+      "bbox": [
+        214.9073028564453,
+        62.604148864746094,
+        223.61480712890625,
+        151.6514892578125
+      ],
+      "text_sha256": "dee81d7d956ff1eecd0855f8c7d0213b87bba596bba9c5079f7b36c51795b04c"
+    },
+    {
+      "block_id": "page-0695-block-0053",
+      "order": 53,
+      "text": "hypotension with diuretics, \n",
+      "bbox": [
+        224.90480041503906,
+        63.436668395996094,
+        233.6123046875,
+        151.6514892578125
+      ],
+      "text_sha256": "782d5541d62e7f9c3b16f4e0139f30bf814503ae774267de999fe3f66e088427"
+    },
+    {
+      "block_id": "page-0695-block-0054",
+      "order": 54,
+      "text": "increased constipation with \n",
+      "bbox": [
+        234.9022979736328,
+        62.191673278808594,
+        243.60980224609375,
+        151.6514892578125
+      ],
+      "text_sha256": "80004d9e8bacaae949b9a2b533284b093a0a56c459789aef8df863ab618cb9f0"
+    },
+    {
+      "block_id": "page-0695-block-0055",
+      "order": 55,
+      "text": "other anticholinergic drugs, \n",
+      "bbox": [
+        244.89979553222656,
+        61.636680603027344,
+        253.6072998046875,
+        151.6514892578125
+      ],
+      "text_sha256": "304f44989f38106983f2aea8eb8beb01edb3633ada6d447c8cf29ab3f5b0bafc"
+    },
+    {
+      "block_id": "page-0695-block-0056",
+      "order": 56,
+      "text": "etc.\n",
+      "bbox": [
+        254.8972930908203,
+        139.9889678955078,
+        263.60479736328125,
+        151.6514892578125
+      ],
+      "text_sha256": "c66cb1fcf1daa496ad95267fe8ec4460604bae2eeefaabe4f78d51898dab153a"
+    },
+    {
+      "block_id": "page-0695-block-0057",
+      "order": 57,
+      "text": "Lofepramine\nModerate, \n",
+      "bbox": [
+        318.33978271484375,
+        520.2315063476562,
+        327.227294921875,
+        612.6539916992188
+      ],
+      "text_sha256": "bd39b7b1783b27dc764febc954c8e3782e3c69b6736371d2f9ea5c3a49743a80"
+    },
+    {
+      "block_id": "page-0695-block-0058",
+      "order": 58,
+      "text": "although \n",
+      "bbox": [
+        328.5173034667969,
+        524.8064575195312,
+        337.22479248046875,
+        555.6539916992188
+      ],
+      "text_sha256": "3c2898647f0864c878ec9c435b24d2927f7ff9c827aa2179c015308d4535b06d"
+    },
+    {
+      "block_id": "page-0695-block-0059",
+      "order": 59,
+      "text": "constipation/\n",
+      "bbox": [
+        338.5148010253906,
+        514.396484375,
+        347.2222900390625,
+        555.6539916992188
+      ],
+      "text_sha256": "7ef66226fe20204c1141ea7ebd6064dd49c7eba9035c3d521aa1b816d301c42d"
+    },
+    {
+      "block_id": "page-0695-block-0060",
+      "order": 60,
+      "text": "sweating can be \n",
+      "bbox": [
+        348.5122985839844,
+        501.4739990234375,
+        357.21978759765625,
+        555.6539916992188
+      ],
+      "text_sha256": "f8a675bbd7d96fe145efcae592df9bbc9593af3fcb4551c1e2883868b401f8a3"
+    },
+    {
+      "block_id": "page-0695-block-0061",
+      "order": 61,
+      "text": "severe\n",
+      "bbox": [
+        358.5097961425781,
+        535.7940063476562,
+        367.21728515625,
+        555.6539916992188
+      ],
+      "text_sha256": "7c015a513d77254efd561040d6f2b067bb578249a073b4f05cd702309df702fb"
+    },
+    {
+      "block_id": "page-0695-block-0062",
+      "order": 62,
+      "text": "Can be a \n",
+      "bbox": [
+        318.5122985839844,
+        451.8089904785156,
+        327.21978759765625,
+        482.656494140625
+      ],
+      "text_sha256": "245ce60883f08e69aaf6c4e5bf15b3ce36a2b64d331a59fd42da9b0a51d24990"
+    },
+    {
+      "block_id": "page-0695-block-0063",
+      "order": 63,
+      "text": "problem but \n",
+      "bbox": [
+        328.5097961425781,
+        441.114013671875,
+        337.21728515625,
+        482.656494140625
+      ],
+      "text_sha256": "7ac83812ef26fad5d1306dbb41ec6bd7b4c0cbf7952c03dcaa8e6734ee6b253a"
+    },
+    {
+      "block_id": "page-0695-block-0064",
+      "order": 64,
+      "text": "generally \n",
+      "bbox": [
+        338.5072937011719,
+        451.8240051269531,
+        347.21478271484375,
+        482.656494140625
+      ],
+      "text_sha256": "f6261d80dd384384a4258e2a5c190a25302af7a47b953bf451ce6f13596ac104"
+    },
+    {
+      "block_id": "page-0695-block-0065",
+      "order": 65,
+      "text": "better \n",
+      "bbox": [
+        348.5047912597656,
+        461.4090270996094,
+        357.2122802734375,
+        482.656494140625
+      ],
+      "text_sha256": "bdfb8ca1ef8995e7d54e963ec5668f82c52e7481540dba2f6cfcdcdad53408fe"
+    },
+    {
+      "block_id": "page-0695-block-0066",
+      "order": 66,
+      "text": "tolerated \n",
+      "bbox": [
+        358.5022888183594,
+        451.8240051269531,
+        367.20977783203125,
+        482.656494140625
+      ],
+      "text_sha256": "ced4d5f12cdb09f7632b14ffc1707d70c10da99d7fcc299ecd12856dc1d9717a"
+    },
+    {
+      "block_id": "page-0695-block-0067",
+      "order": 67,
+      "text": "than the \n",
+      "bbox": [
+        368.4997863769531,
+        453.48150634765625,
+        377.207275390625,
+        482.656494140625
+      ],
+      "text_sha256": "eccb940b3bedcc3184706747ec1c7149b4024549d44696e386e938ab97262fe8"
+    },
+    {
+      "block_id": "page-0695-block-0068",
+      "order": 68,
+      "text": "older tricyclics\n",
+      "bbox": [
+        378.4972839355469,
+        438.0915222167969,
+        387.20477294921875,
+        482.656494140625
+      ],
+      "text_sha256": "5b22197f24e4d89817a5f1a2d131f6a4242aec4e8407ec8f6bf128c0dea1681a"
+    },
+    {
+      "block_id": "page-0695-block-0069",
+      "order": 69,
+      "text": "Minimal\nFew data, but \n",
+      "bbox": [
+        318.4972839355469,
+        328.19403076171875,
+        327.20477294921875,
+        425.656494140625
+      ],
+      "text_sha256": "148a03d75ed48aaaf7ebdb305b1f8d8acd97a2469659149dd2d1bf8082470d77"
+    },
+    {
+      "block_id": "page-0695-block-0070",
+      "order": 70,
+      "text": "lack of \n",
+      "bbox": [
+        328.4947814941406,
+        350.22149658203125,
+        337.2022705078125,
+        372.65399169921875
+      ],
+      "text_sha256": "a80f08767ad3ee551f24f431662cff31bf2164b869e2e839ca089259753ca208"
+    },
+    {
+      "block_id": "page-0695-block-0071",
+      "order": 71,
+      "text": "spontaneous \n",
+      "bbox": [
+        338.4922790527344,
+        331.2165832519531,
+        347.19976806640625,
+        372.65399169921875
+      ],
+      "text_sha256": "1350841c8b473a2e67d7edb0ff6fbf801f5dbf257944cb47401a4f32b34fa5d4"
+    },
+    {
+      "block_id": "page-0695-block-0072",
+      "order": 72,
+      "text": "reports may \n",
+      "bbox": [
+        348.4897766113281,
+        334.2915344238281,
+        357.197265625,
+        372.65399169921875
+      ],
+      "text_sha256": "941cd183c60c092b97109dd30a08cb9578901d81a02c640646242bbd87930118"
+    },
+    {
+      "block_id": "page-0695-block-0073",
+      "order": 73,
+      "text": "indicate less \n",
+      "bbox": [
+        358.4872741699219,
+        334.0364990234375,
+        367.19476318359375,
+        372.65399169921875
+      ],
+      "text_sha256": "8c5b55193d42f495e40407aa4efae58a1eadc40ca1557f2cf46de3706c9c6fef"
+    },
+    {
+      "block_id": "page-0695-block-0074",
+      "order": 74,
+      "text": "potential than \n",
+      "bbox": [
+        368.4847717285156,
+        327.5115051269531,
+        377.1922607421875,
+        372.65399169921875
+      ],
+      "text_sha256": "93d62a2d79b55fc71734e87b15711a6ba09cfa833194d0f248ed052d7dd1f36e"
+    },
+    {
+      "block_id": "page-0695-block-0075",
+      "order": 75,
+      "text": "the older \n",
+      "bbox": [
+        378.4822692871094,
+        343.0140075683594,
+        387.18975830078125,
+        372.65399169921875
+      ],
+      "text_sha256": "101772a7f555bb963f619efab444ec24ae8cc8e4ce40fb8d4cf3049be9a59c0a"
+    },
+    {
+      "block_id": "page-0695-block-0076",
+      "order": 76,
+      "text": "tricyclics\n",
+      "bbox": [
+        388.4797668457031,
+        347.7764587402344,
+        397.187255859375,
+        372.65399169921875
+      ],
+      "text_sha256": "872629e51338e8ad2cc2d4d1e9ba14386810adaa0acff81e3ef69d161573bfcc"
+    },
+    {
+      "block_id": "page-0695-block-0077",
+      "order": 77,
+      "text": "Relatively safe\nRaised LFTs\n",
+      "bbox": [
+        318.4822692871094,
+        221.6489715576172,
+        327.18975830078125,
+        319.6514892578125
+      ],
+      "text_sha256": "4f30a8c8749e4d2bee7862e4a61cb860db00d4ec813fb8c1ad1a4d5d8711b642"
+    },
+    {
+      "block_id": "page-0695-block-0078",
+      "order": 78,
+      "text": "Less likely to cause \n",
+      "bbox": [
+        331.4797668457031,
+        194.98646545410156,
+        340.187255859375,
+        256.6514892578125
+      ],
+      "text_sha256": "f5efc0138ad58965944099f1c5e6e9517252a96740d04be5b57138cfb780ed3c"
+    },
+    {
+      "block_id": "page-0695-block-0079",
+      "order": 79,
+      "text": "hyponatraemia than other \n",
+      "bbox": [
+        341.4772644042969,
+        170.80641174316406,
+        350.18475341796875,
+        256.6514892578125
+      ],
+      "text_sha256": "9c342ba619cd10fb52e4a94f426cc40cd20ac3f6c7b2c4b406aa8cab9ff9ac42"
+    },
+    {
+      "block_id": "page-0695-block-0080",
+      "order": 80,
+      "text": "TCAs and SSRIs\n",
+      "bbox": [
+        351.4747619628906,
+        207.46644592285156,
+        360.1822509765625,
+        256.6514892578125
+      ],
+      "text_sha256": "4855b46096890a3f4e78b103f84ee3eacb97507da4884a93abfe8fd53e27ab8f"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

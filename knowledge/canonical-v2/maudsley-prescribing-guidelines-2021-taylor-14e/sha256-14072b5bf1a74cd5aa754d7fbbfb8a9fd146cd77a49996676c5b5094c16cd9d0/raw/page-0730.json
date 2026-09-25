@@ -1,0 +1,467 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0730",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 730,
+  "source_page_index": 729,
+  "source_page_display": 730,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug\nInfant plasma \nconcentrations\nRelative infant \ndose (RID)\nReported acute adverse effects in \ninfant\nReported developmental effects in \ninfant\nVenlafaxine,4,11,23,38,65,91–98\nUndetectable to up to 37% \nof maternal plasma levels.\n6–9%\nLethargy, jitteriness, rapid breathing, \npoor suckling and dehydration in an \ninfant also exposed in utero. \nSymptoms subsided over a week on \nbreastfeeding. Authors suggested \nthat breastfeeding may have helped \nmanage infant withdrawal symptoms \npostpartum.\nNone reported\nIn a study of 78 infants of mothers \ntaking an SSRI or venlafaxine no \ndifference in weight was noted at 6 \nmonths compared with the ‘normative’ \nweight.\nVortioxetine\nNo published data available \nat the time of writing.\nTable 7.4  Antipsychotics in breastfeeding\nDrug\nInfant plasma \nconcentration\nEstimated daily infant \ndose as proportion of \nmaternal dose (RID)\nAcute adverse effects in \ninfant\nDevelopmental effects in infant\nAmisulpride4,94,99–101\n10.5% of the maternal \nplasma concentration.*\n4.7–10.7%\nNone reported.\nNone reported.\nAripiprazole4,102–107\n4% of maternal plasma \nconcentration.*\n0.9–8.3%\nNone reported.\nNone reported.\nAsenapine\nNo published data available \nat the time of writing.\nBrexpiprazole\nNo published data available \nat the time of writing.\n(Continued)\nTable 7.3  (Continued)\n",
+  "raw_text_sha256": "177ef6396186cb09f2cbaa6edd4f68b4ad389cee2316131aaf097f6f05970f7e",
+  "coordinates_sha256": "3affdaac6744c9b7a568b023faf9ca96acedd5a4fe628f930c05ce1b55e7822f",
+  "block_sequence_sha256": "0eee3bc76ef7474cec67bc247dd79b2d22c61968f7de740094aa66a1c2b05433",
+  "blocks": [
+    {
+      "block_id": "page-0730-block-0000",
+      "order": 0,
+      "text": "Drug\nInfant plasma \n",
+      "bbox": [
+        74.29000854492188,
+        441.7214660644531,
+        93.17500305175781,
+        612.6539916992188
+      ],
+      "text_sha256": "740ab9eb672cde86fd19cae765bab98ff010246377b1aac1269ef7543dd4a3b7"
+    },
+    {
+      "block_id": "page-0730-block-0001",
+      "order": 1,
+      "text": "concentrations\nRelative infant \n",
+      "bbox": [
+        74.29000854492188,
+        334.05145263671875,
+        93.17500305175781,
+        492.1514892578125
+      ],
+      "text_sha256": "bb1205aa23f4c324e61f2d45e2cc5a89247e633799704f1f4a6b66b6effcd299"
+    },
+    {
+      "block_id": "page-0730-block-0002",
+      "order": 2,
+      "text": "dose (RID)\nReported acute adverse effects in \n",
+      "bbox": [
+        74.29000854492188,
+        203.4314422607422,
+        93.17500305175781,
+        387.82647705078125
+      ],
+      "text_sha256": "3177e1242b62d10d9d24ae8b72819a2a6f978aa6260c48d73981167f1f9dad77"
+    },
+    {
+      "block_id": "page-0730-block-0003",
+      "order": 3,
+      "text": "infant\nReported developmental effects in \n",
+      "bbox": [
+        74.29000854492188,
+        67.8989486694336,
+        93.17500305175781,
+        323.32647705078125
+      ],
+      "text_sha256": "5208ea628ac7af2784c52fbd80c2393eb82f42a793d04e9fc000a75672474e8b"
+    },
+    {
+      "block_id": "page-0730-block-0004",
+      "order": 4,
+      "text": "infant\n",
+      "bbox": [
+        84.28750610351562,
+        170.70896911621094,
+        93.17500305175781,
+        191.9639892578125
+      ],
+      "text_sha256": "e7126f01d55795d9d0761c51e3f277a39d4ed441a3504bd0a6901247c19c0069"
+    },
+    {
+      "block_id": "page-0730-block-0005",
+      "order": 5,
+      "text": "Venlafaxine,4,11,23,38,65,91–98\nUndetectable to up to 37% \n",
+      "bbox": [
+        104.59000396728516,
+        401.7114562988281,
+        113.30000305175781,
+        612.6539916992188
+      ],
+      "text_sha256": "eae2b01bb61e6d80f73e359849553ef18d265aa084c6fe85484fa9fdbc92a8e0"
+    },
+    {
+      "block_id": "page-0730-block-0006",
+      "order": 6,
+      "text": "of maternal plasma levels.\n6–9%\nLethargy, jitteriness, rapid breathing, \n",
+      "bbox": [
+        104.5925064086914,
+        204.97889709472656,
+        123.29750061035156,
+        492.15399169921875
+      ],
+      "text_sha256": "316f4d6b1dbe86dfe716598d1e3d40aba10af5a8bf14070ce03118ea8b061bf6"
+    },
+    {
+      "block_id": "page-0730-block-0007",
+      "order": 7,
+      "text": "poor suckling and dehydration in an \n",
+      "bbox": [
+        114.59000396728516,
+        205.78880310058594,
+        123.29750061035156,
+        323.3289794921875
+      ],
+      "text_sha256": "c305c887694170bc98d5887204027349921069a42f93ac292ac6d7a6c57daf3a"
+    },
+    {
+      "block_id": "page-0730-block-0008",
+      "order": 8,
+      "text": "infant also exposed in utero. \n",
+      "bbox": [
+        124.54249572753906,
+        231.3489227294922,
+        133.2949981689453,
+        323.3289794921875
+      ],
+      "text_sha256": "040fbf3656dfef6800e6373d51b4a8ed479f25fab0a8f6f288bd20d0c3b154a9"
+    },
+    {
+      "block_id": "page-0730-block-0009",
+      "order": 9,
+      "text": "Symptoms subsided over a week on \n",
+      "bbox": [
+        134.58499145507812,
+        206.6363983154297,
+        143.29249572753906,
+        323.3289794921875
+      ],
+      "text_sha256": "562f462a6268c63a0bd3ba53191ca0e96ada2c8e89639c2582be24b766c417e9"
+    },
+    {
+      "block_id": "page-0730-block-0010",
+      "order": 10,
+      "text": "breastfeeding. Authors suggested \n",
+      "bbox": [
+        144.58248901367188,
+        213.4313201904297,
+        153.2899932861328,
+        323.3289794921875
+      ],
+      "text_sha256": "58c52a6eb80e93e0b9d2870e0e8ab9f45d2f7f924b66b345803c579d1636362c"
+    },
+    {
+      "block_id": "page-0730-block-0011",
+      "order": 11,
+      "text": "that breastfeeding may have helped \n",
+      "bbox": [
+        154.57998657226562,
+        206.3664093017578,
+        163.28749084472656,
+        323.3289794921875
+      ],
+      "text_sha256": "c37956939dc40c15754e5ee5c138c82d6e07a4fda186886bdb550e237cc4da6f"
+    },
+    {
+      "block_id": "page-0730-block-0012",
+      "order": 12,
+      "text": "manage infant withdrawal symptoms \n",
+      "bbox": [
+        164.57748413085938,
+        202.0688934326172,
+        173.2849884033203,
+        323.3289794921875
+      ],
+      "text_sha256": "3d397142deeeb5880fe0b22083f753f93e6e72622a1163e22e48e3c9dca3cbd0"
+    },
+    {
+      "block_id": "page-0730-block-0013",
+      "order": 13,
+      "text": "postpartum.\n",
+      "bbox": [
+        174.57498168945312,
+        284.15643310546875,
+        183.28248596191406,
+        323.3289794921875
+      ],
+      "text_sha256": "0c20decf32d353c87af77338dcaa081bb6efa1527d4d0c5337fee47609daba61"
+    },
+    {
+      "block_id": "page-0730-block-0014",
+      "order": 14,
+      "text": "None reported\n",
+      "bbox": [
+        104.5774917602539,
+        145.42149353027344,
+        113.28498840332031,
+        191.96649169921875
+      ],
+      "text_sha256": "ee15e2569729659f4e2175a3a0ff5fb3c14f9a74f0c7aac51085138b8bafe0b1"
+    },
+    {
+      "block_id": "page-0730-block-0015",
+      "order": 15,
+      "text": "In a study of 78 infants of mothers \n",
+      "bbox": [
+        120.57498931884766,
+        79.02413177490234,
+        129.28248596191406,
+        191.96649169921875
+      ],
+      "text_sha256": "d4711871609fb42fcabf2a619de0ddb4bad38c96658c33d62e663749e73f9ff7"
+    },
+    {
+      "block_id": "page-0730-block-0016",
+      "order": 16,
+      "text": "taking an SSRI or venlafaxine no \n",
+      "bbox": [
+        130.57247924804688,
+        87.3640365600586,
+        139.2799835205078,
+        191.96649169921875
+      ],
+      "text_sha256": "ce2494ceeaef5848b482f1bfdf5d7e67ce94a7edc99723c090860e80dfe4d1a1"
+    },
+    {
+      "block_id": "page-0730-block-0017",
+      "order": 17,
+      "text": "difference in weight was noted at 6 \n",
+      "bbox": [
+        140.56997680664062,
+        75.9640121459961,
+        149.27748107910156,
+        191.96649169921875
+      ],
+      "text_sha256": "a185aae8d7bf777db71e93305acd1413b68ce04af5cf32e496a967371169e859"
+    },
+    {
+      "block_id": "page-0730-block-0018",
+      "order": 18,
+      "text": "months compared with the ‘normative’ \n",
+      "bbox": [
+        150.56747436523438,
+        64.58650970458984,
+        159.2749786376953,
+        191.96649169921875
+      ],
+      "text_sha256": "798d2a2ebd66bfb25a74f10b13f7b6c05cb2ec5d180ea82332944a8a5ff0f6df"
+    },
+    {
+      "block_id": "page-0730-block-0019",
+      "order": 19,
+      "text": "weight.\n",
+      "bbox": [
+        160.56497192382812,
+        167.7940216064453,
+        169.27247619628906,
+        191.96649169921875
+      ],
+      "text_sha256": "3569ccef31acfd64937896f43a8ad9180b7aea7695d20eab9d8ceefb5af4fe48"
+    },
+    {
+      "block_id": "page-0730-block-0020",
+      "order": 20,
+      "text": "Vortioxetine\nNo published data available \n",
+      "bbox": [
+        194.68997192382812,
+        402.1315002441406,
+        203.39747619628906,
+        612.656494140625
+      ],
+      "text_sha256": "548129d1b06a9f7340da3322a6ef946590c6efbdaf59dbfd2b9e43ba1d11a94a"
+    },
+    {
+      "block_id": "page-0730-block-0021",
+      "order": 21,
+      "text": "at the time of writing.\n",
+      "bbox": [
+        204.68746948242188,
+        421.7364501953125,
+        213.3949737548828,
+        492.15399169921875
+      ],
+      "text_sha256": "c2eb2b9e91cf356ae197bef48dea7b6f47ff9bca4462ee8c8e53c77edafc2a6d"
+    },
+    {
+      "block_id": "page-0730-block-0022",
+      "order": 22,
+      "text": "Table 7.4  Antipsychotics in breastfeeding\n",
+      "bbox": [
+        246.9488983154297,
+        472.59149169921875,
+        255.83639526367188,
+        606.6539916992188
+      ],
+      "text_sha256": "ad10134e54db63ade1b31f960f835bbab0d70331f15bb171c4e651864db36e21"
+    },
+    {
+      "block_id": "page-0730-block-0023",
+      "order": 23,
+      "text": "Drug\nInfant plasma \n",
+      "bbox": [
+        277.5763854980469,
+        439.2239685058594,
+        296.4613952636719,
+        612.6539916992188
+      ],
+      "text_sha256": "740ab9eb672cde86fd19cae765bab98ff010246377b1aac1269ef7543dd4a3b7"
+    },
+    {
+      "block_id": "page-0730-block-0024",
+      "order": 24,
+      "text": "concentration\n",
+      "bbox": [
+        287.5738830566406,
+        440.90399169921875,
+        296.4613952636719,
+        489.65399169921875
+      ],
+      "text_sha256": "5e7b39b8735747a51153dd69c9b4c9de9c17893912aab750c14d6dfcd85b4665"
+    },
+    {
+      "block_id": "page-0730-block-0025",
+      "order": 25,
+      "text": "Estimated daily infant \n",
+      "bbox": [
+        267.5713806152344,
+        309.8489685058594,
+        276.4588928222656,
+        389.46148681640625
+      ],
+      "text_sha256": "2841e2ae24ac2a5a655457c138f0cb23dacf705d1b0e79882dd0fceac11fad57"
+    },
+    {
+      "block_id": "page-0730-block-0026",
+      "order": 26,
+      "text": "dose as proportion of \n",
+      "bbox": [
+        277.5688781738281,
+        311.25909423828125,
+        286.4563903808594,
+        389.46148681640625
+      ],
+      "text_sha256": "21fbe6c96b9b77500331b3393eeb77725f2a895797804d7adb4058055a75758d"
+    },
+    {
+      "block_id": "page-0730-block-0027",
+      "order": 27,
+      "text": "maternal dose (RID)\nAcute adverse effects in \n",
+      "bbox": [
+        277.5688781738281,
+        207.3539581298828,
+        296.4538879394531,
+        389.46148681640625
+      ],
+      "text_sha256": "e1bd3585ae717c1b911d4bf2fdaceab2365a65bd49c19794f6485141ed38afd7"
+    },
+    {
+      "block_id": "page-0730-block-0028",
+      "order": 28,
+      "text": "infant\nDevelopmental effects in infant\n",
+      "bbox": [
+        287.5663757324219,
+        66.36893463134766,
+        296.4538879394531,
+        293.90399169921875
+      ],
+      "text_sha256": "6ca6973910aaf5c340def8cac268e73890761e31bdeb5e80f907abd8e9a63028"
+    },
+    {
+      "block_id": "page-0730-block-0029",
+      "order": 29,
+      "text": "Amisulpride4,94,99–101\n10.5% of the maternal \nplasma concentration.*\n4.7–10.7%\nNone reported.\nNone reported.\n",
+      "bbox": [
+        307.868896484375,
+        129.2981719970703,
+        326.5838928222656,
+        612.6539306640625
+      ],
+      "text_sha256": "eb41dc1f3889c0c8a3ef110e03f4d2c29ad420bf0226fa8176475211198451c2"
+    },
+    {
+      "block_id": "page-0730-block-0030",
+      "order": 30,
+      "text": "Aripiprazole4,102–107\n4% of maternal plasma \nconcentration.*\n0.9–8.3%\nNone reported.\nNone reported.\n",
+      "bbox": [
+        336.00390625,
+        129.2981719970703,
+        354.7088928222656,
+        612.650634765625
+      ],
+      "text_sha256": "176865ed952bd4cb5ed1e258bae44287224f5882a9e3a079fe44a6da86d2e340"
+    },
+    {
+      "block_id": "page-0730-block-0031",
+      "order": 31,
+      "text": "Asenapine\nNo published data available \n",
+      "bbox": [
+        364.12890625,
+        399.62811279296875,
+        372.8363952636719,
+        612.650634765625
+      ],
+      "text_sha256": "ff289d43b03a245290d235f306a849b082cdc62028d5cf123ee30920c56bf6d6"
+    },
+    {
+      "block_id": "page-0730-block-0032",
+      "order": 32,
+      "text": "at the time of writing.\n",
+      "bbox": [
+        374.12640380859375,
+        419.2330627441406,
+        382.8338928222656,
+        489.6506042480469
+      ],
+      "text_sha256": "c2eb2b9e91cf356ae197bef48dea7b6f47ff9bca4462ee8c8e53c77edafc2a6d"
+    },
+    {
+      "block_id": "page-0730-block-0033",
+      "order": 33,
+      "text": "Brexpiprazole\nNo published data available \n",
+      "bbox": [
+        392.25390625,
+        399.62811279296875,
+        400.9613952636719,
+        612.650634765625
+      ],
+      "text_sha256": "b5417380d08e33142bb47c0e6ef25fad5f6a9f60f91ee85fb62df0e3241bfa75"
+    },
+    {
+      "block_id": "page-0730-block-0034",
+      "order": 34,
+      "text": "at the time of writing.\n",
+      "bbox": [
+        402.25140380859375,
+        419.2330627441406,
+        410.9588928222656,
+        489.6506042480469
+      ],
+      "text_sha256": "c2eb2b9e91cf356ae197bef48dea7b6f47ff9bca4462ee8c8e53c77edafc2a6d"
+    },
+    {
+      "block_id": "page-0730-block-0035",
+      "order": 35,
+      "text": "(Continued)\n",
+      "bbox": [
+        420.04888916015625,
+        64.3480453491211,
+        428.8013916015625,
+        100.36309814453125
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0730-block-0036",
+      "order": 36,
+      "text": "Table 7.3  (Continued)\n",
+      "bbox": [
+        53.73749923706055,
+        534.5339965820312,
+        62.625,
+        606.6539916992188
+      ],
+      "text_sha256": "0670877b7147a8e2e130f77db8bb3e9296a072628049a331b5ad9602295f1c55"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

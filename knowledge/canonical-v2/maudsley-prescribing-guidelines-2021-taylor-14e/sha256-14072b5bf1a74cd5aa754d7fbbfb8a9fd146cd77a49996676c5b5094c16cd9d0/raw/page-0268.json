@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0268",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 268,
+  "source_page_index": 267,
+  "source_page_display": 268,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\nChapter 2\nBipolar disorder\nLithium\nMechanism of action\nLithium is the third element of the periodic table, in the same column as hydrogen and \nsodium. Potentially implicated in a wide range of biological processes and with a \n­multiplicity of other effects, it has proven very difficult to ascertain the key mechanism(s) \nof action of lithium in regulating mood and behaviour. For example, there is some older \nevidence that people with bipolar illness have higher intracellular concentrations of \nsodium and calcium than controls and that lithium can reduce these. Interestingly, \n­calcium-related genes have been implicated by genetic studies in bipolar disorder (BD).1 \nGlycogen synthase kinase 3 (GSK3), cAMP response element-binding protein (CREB) \nand Na(+)/K(+) ATPase-related mechanisms may be important for lithium’s effects. For \na review of lithium’s potential mechanism(s) of action, see Alda.2 Lithium may have \nneuroprotective effects that preserve the function of neurones and neuronal ­circuits.3 \nLithium also promotes the creation of new neurones (neurogenesis) in the ­hippocampus, \nwhich is potentially important for learning, memory and stress responses.4 Although \nthe older literature pertaining to the possible neuroprotective effect of lithium consisted \nlargely on either in vitro or animal studies, a meta-analysis suggests that lithium may \nprevent transition to dementia.5 Notably, however, both reversible and irreversible \n­neurotoxicities related to lithium are recognised as adverse effects.6,7 Lithium is present \nin low levels in the environment (e.g. in drinking water), and environmental lithium has \nbeen reported to be inversely related to suicide and dementia at population levels.8,9\nClinical indications\nAcute treatment of mania\nLithium is effective for the treatment of mania, at a plasma level of 0.8–1.0mmol/L.10 If \na faster action is needed, an adjunctive or single-agent antipsychotic with an evidence \nbase for treating mania is recommended.10 It can be difficult to achieve therapeutic \n",
+  "raw_text_sha256": "3f67049d1ac8704b4f97d352c123c054936860f1d64d5a59086f3bdb8885997f",
+  "coordinates_sha256": "989e976f58fcb2377e8aa18150657f76c2f74e72834f9aca8202e75c4a937ac1",
+  "block_sequence_sha256": "836e35130bf50757f9eaef351700a8444c1a83bdeac9de2e80e34273a551f486",
+  "blocks": [
+    {
+      "block_id": "page-0268-block-0000",
+      "order": 0,
+      "text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\n",
+      "bbox": [
+        47.99980163574219,
+        585.1019897460938,
+        348.48388671875,
+        614.4779663085938
+      ],
+      "text_sha256": "c78fcd1eeb2357afb8eb5b97a8c858d68167bd409b9074c0da4e20c032bd5665"
+    },
+    {
+      "block_id": "page-0268-block-0001",
+      "order": 1,
+      "text": "Chapter 2\n",
+      "bbox": [
+        324.43121337890625,
+        59.724403381347656,
+        420.001220703125,
+        82.60040283203125
+      ],
+      "text_sha256": "934ae1b21189cf2caec91fc141e2791b13f82f6d87925ea368085244aad841d7"
+    },
+    {
+      "block_id": "page-0268-block-0002",
+      "order": 2,
+      "text": "Bipolar disorder\n",
+      "bbox": [
+        255.37559509277344,
+        111.36316680908203,
+        420.0015563964844,
+        137.43316650390625
+      ],
+      "text_sha256": "b07774e0031f5249e7d5077c60e8dfe3fb18493619baff9d1c91c4fd01fb0e19"
+    },
+    {
+      "block_id": "page-0268-block-0003",
+      "order": 3,
+      "text": "Lithium\n",
+      "bbox": [
+        55.0,
+        205.70217895507812,
+        94.11599731445312,
+        218.7371826171875
+      ],
+      "text_sha256": "4b3fa0d998941b086da02bea9d4933fcdb1d8d7699758dff916b0ea211843213"
+    },
+    {
+      "block_id": "page-0268-block-0004",
+      "order": 4,
+      "text": "Mechanism of action\n",
+      "bbox": [
+        48.00400161743164,
+        229.70419311523438,
+        155.56199645996094,
+        242.73919677734375
+      ],
+      "text_sha256": "535c20303523d6e64ad30d5ac56c2ed123d9dcb7a2847cd23460db882c8e2768"
+    },
+    {
+      "block_id": "page-0268-block-0005",
+      "order": 5,
+      "text": "Lithium is the third element of the periodic table, in the same column as hydrogen and \nsodium. Potentially implicated in a wide range of biological processes and with a \n­multiplicity of other effects, it has proven very difficult to ascertain the key mechanism(s) \nof action of lithium in regulating mood and behaviour. For example, there is some older \nevidence that people with bipolar illness have higher intracellular concentrations of \nsodium and calcium than controls and that lithium can reduce these. Interestingly, \n­calcium-related genes have been implicated by genetic studies in bipolar disorder (BD).1 \nGlycogen synthase kinase 3 (GSK3), cAMP response element-binding protein (CREB) \nand Na(+)/K(+) ATPase-related mechanisms may be important for lithium’s effects. For \na review of lithium’s potential mechanism(s) of action, see Alda.2 Lithium may have \nneuroprotective effects that preserve the function of neurones and neuronal ­circuits.3 \nLithium also promotes the creation of new neurones (neurogenesis) in the ­hippocampus, \nwhich is potentially important for learning, memory and stress responses.4 Although \nthe older literature pertaining to the possible neuroprotective effect of lithium consisted \nlargely on either in vitro or animal studies, a meta-analysis suggests that lithium may \nprevent transition to dementia.5 Notably, however, both reversible and irreversible \n­neurotoxicities related to lithium are recognised as adverse effects.6,7 Lithium is present \nin low levels in the environment (e.g. in drinking water), and environmental lithium has \nbeen reported to be inversely related to suicide and dementia at population levels.8,9\n",
+      "bbox": [
+        47.996002197265625,
+        248.54718017578125,
+        422.8199768066406,
+        476.2673034667969
+      ],
+      "text_sha256": "793bd8f9c7dbdb44615168fae21b6742b1ae6a63ebd3e1176f12872261c1fad2"
+    },
+    {
+      "block_id": "page-0268-block-0006",
+      "order": 6,
+      "text": "Clinical indications\n",
+      "bbox": [
+        48.0,
+        493.7023010253906,
+        143.95298767089844,
+        506.7373046875
+      ],
+      "text_sha256": "e6965031db8a024ea2f5db79e892cbb309267acbfe7b481bec77d821db1bb1d0"
+    },
+    {
+      "block_id": "page-0268-block-0007",
+      "order": 7,
+      "text": "Acute treatment of mania\n",
+      "bbox": [
+        48.0,
+        512.6373291015625,
+        169.69998168945312,
+        524.4873046875
+      ],
+      "text_sha256": "8794dce6140a80331c432a1f8253a4dffc4a595e5df6cd1a4314d4c189f16150"
+    },
+    {
+      "block_id": "page-0268-block-0008",
+      "order": 8,
+      "text": "Lithium is effective for the treatment of mania, at a plasma level of 0.8–1.0mmol/L.10 If \na faster action is needed, an adjunctive or single-agent antipsychotic with an evidence \nbase for treating mania is recommended.10 It can be difficult to achieve therapeutic \n",
+      "bbox": [
+        48.0,
+        530.5473022460938,
+        422.7999267578125,
+        566.267333984375
+      ],
+      "text_sha256": "ec971642b8d2a0a2adc6c10caad53fd6de6b266e69149873635108944cd43a51"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

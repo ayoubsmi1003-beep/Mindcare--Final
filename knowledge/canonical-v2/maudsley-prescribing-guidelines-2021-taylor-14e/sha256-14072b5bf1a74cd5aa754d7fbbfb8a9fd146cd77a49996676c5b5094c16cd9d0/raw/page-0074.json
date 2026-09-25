@@ -1,0 +1,107 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0074",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 74,
+  "source_page_index": 73,
+  "source_page_display": 74,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    53\nCHAPTER 1\nsome 5000 patients in 60 different NHS Trusts, it was found that 40% of the patients \nwhose illnesses met the criteria for treatment-resistant schizophrenia had not received \nclozapine. For the vast majority (85%) of those who had started clozapine, this had \nbeen delayed after the failure of two serial trials of antipsychotic medication for much \nlonger than is advised in most guidelines.12\nSome patients may be averse to the mandatory regular blood testing, the side effects \nand the regular appointments required as part of the clozapine regimen. In such patients, \nthe options are switching to another antipsychotic medication or to add one. The data \non switching are sparse. While almost every clinical trial in patients with established \nschizophrenia has entailed the patient switching from one antipsychotic medication to \nanother, there are no rigorous studies addressing preferred medication switches (e.g. if \nrisperidone fails – what next? olanzapine, quetiapine, aripiprazole or ziprasidone). If \none looks at only the switching trials which have been sponsored by the drug compa-\nnies – it leads to a rather confusing picture, with the trial results being very closely \nlinked to the sponsors’ interest (see Heres S, et al. Why olanzapine beats risperidone, \nrisperidone beats quetiapine, and quetiapine beats olanzapine: an exploratory analysis \nof head-to-head comparison studies of second-generation antipsychotics13).\nCATIE, the major US-based publicly funded comparative trial, examined patients \nwho had failed their first SGA and were then randomly assigned to a different second \none14 – patients switched to olanzapine and risperidone did better than those switched \nto quetiapine and ziprasidone. This greater effectiveness is supported by a meta-analy-\nsis that compared a number of SGAs with FGAs and concluded that other than clozap-\nine, only amisulpride, risperidone and olanzapine were superior to FGAs in efficacy;15 \nand a meta-analysis comparing SGAs amongst themselves suggested that olanzapine \nand risperidone (in that order) may be modestly more effective than the others.16 \nNevertheless, if a patient has not yet tried olanzapine or risperidone, it would be a rea-\nsonable decision to switch to these medications provided the side-effect balance is \nfavourable. Comparing these two medications – the data are somewhat limited. \nHowever, a number of controlled, but open-label studies do show an asymmetrical \nadvantage (i.e. switching to olanzapine being more effective, than to risperidone) – pro-\nviding some direction, albeit incomplete.17,18\nThe best medication regimen (aside from clozapine) to choose for a patient who fails \non olanzapine and risperidone remains unclear. Should one switch to, say, aripiprazole \nor ziprasidone or even an older FGA, or should another antipsychotic medication be \nadded? Interestingly, studies that have switched patients to aripiprazole for reasons of \ntolerability (weight gain, etc.) either find no loss of efficacy19,20 or an improvement in \nsymptom severity after switching.21,22 The switching method is vitally important, with \nadd-on switching (establishing the dose of aripiprazole before withdrawing the former \ndrug) and cross-tapering giving substantially better outcomes than stop-start.21\nAfter ‘switching’, adding another antipsychotic is probably the most common clinical \nstrategy chosen, as 39–43% of patients in routine care are prescribed more than one \nantipsychotic.23 Often, a second antipsychotic is added for additional properties (e.g. \nquetiapine for sedation or aripiprazole to decrease plasma prolactin – these matters are \ndiscussed elsewhere). We are concerned here solely with the use of combined antipsy-\nchotic medications to increase efficacy. From a theoretical point of view, since all antip-\nsychotic medications block D2 receptors (unlike, say, anti-hypertensives which use \ndifferent mechanisms), there is a limited rationale for addition. Studies of add-ons have \n",
+  "raw_text_sha256": "985826cc45bd8d4af44bae743a77fe63cd2cdd7a9cf940ade9a7ef1381ca262c",
+  "coordinates_sha256": "ab1ebaa5097b0d2008eb39c19b13f723352b71edb0f9dbde2bdf5840146ce251",
+  "block_sequence_sha256": "0efdb8657c7ff57e166c5c8590b64e58de71b0b2e099531b2f84833723f13f2e",
+  "blocks": [
+    {
+      "block_id": "page-0074-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    53\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "58cca10ad19a79b0fdc3744d713270bc54edce07769589e3e9d383313e927b52"
+    },
+    {
+      "block_id": "page-0074-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0074-block-0002",
+      "order": 2,
+      "text": "some 5000 patients in 60 different NHS Trusts, it was found that 40% of the patients \nwhose illnesses met the criteria for treatment-resistant schizophrenia had not received \nclozapine. For the vast majority (85%) of those who had started clozapine, this had \nbeen delayed after the failure of two serial trials of antipsychotic medication for much \nlonger than is advised in most guidelines.12\n",
+      "bbox": [
+        47.99909973144531,
+        62.5494384765625,
+        422.8090515136719,
+        122.26943969726562
+      ],
+      "text_sha256": "2cb691e1f1582f4ec96b28d7e3bc60d7fcbf8498a9e1e3b61d9272785e691f50"
+    },
+    {
+      "block_id": "page-0074-block-0003",
+      "order": 3,
+      "text": "Some patients may be averse to the mandatory regular blood testing, the side effects \nand the regular appointments required as part of the clozapine regimen. In such patients, \nthe options are switching to another antipsychotic medication or to add one. The data \non switching are sparse. While almost every clinical trial in patients with established \nschizophrenia has entailed the patient switching from one antipsychotic medication to \nanother, there are no rigorous studies addressing preferred medication switches (e.g. if \nrisperidone fails – what next? olanzapine, quetiapine, aripiprazole or ziprasidone). If \none looks at only the switching trials which have been sponsored by the drug compa-\nnies – it leads to a rather confusing picture, with the trial results being very closely \nlinked to the sponsors’ interest (see Heres S, et al. Why olanzapine beats risperidone, \nrisperidone beats quetiapine, and quetiapine beats olanzapine: an exploratory analysis \nof head-to-head comparison studies of second-generation antipsychotics13).\n",
+      "bbox": [
+        47.99909973144531,
+        122.5494384765625,
+        422.8190612792969,
+        266.2695007324219
+      ],
+      "text_sha256": "7db5747976a5930038d1f307211d75935e278f78c27e445565a04ba6d8d130d4"
+    },
+    {
+      "block_id": "page-0074-block-0004",
+      "order": 4,
+      "text": "CATIE, the major US-based publicly funded comparative trial, examined patients \nwho had failed their first SGA and were then randomly assigned to a different second \none14 – patients switched to olanzapine and risperidone did better than those switched \nto quetiapine and ziprasidone. This greater effectiveness is supported by a meta-analy-\nsis that compared a number of SGAs with FGAs and concluded that other than clozap-\nine, only amisulpride, risperidone and olanzapine were superior to FGAs in efficacy;15 \nand a meta-analysis comparing SGAs amongst themselves suggested that olanzapine \nand risperidone (in that order) may be modestly more effective than the others.16 \nNevertheless, if a patient has not yet tried olanzapine or risperidone, it would be a rea-\nsonable decision to switch to these medications provided the side-effect balance is \nfavourable. Comparing these two medications – the data are somewhat limited. \nHowever, a number of controlled, but open-label studies do show an asymmetrical \nadvantage (i.e. switching to olanzapine being more effective, than to risperidone) – pro-\nviding some direction, albeit incomplete.17,18\n",
+      "bbox": [
+        47.99897766113281,
+        266.54949951171875,
+        422.8195495605469,
+        434.2695007324219
+      ],
+      "text_sha256": "b2a43fda9e82efeba7fd5ae214585b5fa19826353184494acdaa20e2105fcc84"
+    },
+    {
+      "block_id": "page-0074-block-0005",
+      "order": 5,
+      "text": "The best medication regimen (aside from clozapine) to choose for a patient who fails \non olanzapine and risperidone remains unclear. Should one switch to, say, aripiprazole \nor ziprasidone or even an older FGA, or should another antipsychotic medication be \nadded? Interestingly, studies that have switched patients to aripiprazole for reasons of \ntolerability (weight gain, etc.) either find no loss of efficacy19,20 or an improvement in \nsymptom severity after switching.21,22 The switching method is vitally important, with \nadd-on switching (establishing the dose of aripiprazole before withdrawing the former \ndrug) and cross-tapering giving substantially better outcomes than stop-start.21\n",
+      "bbox": [
+        47.99510192871094,
+        434.54949951171875,
+        422.8240661621094,
+        530.26953125
+      ],
+      "text_sha256": "9f92012cd32f041c7dbe00d3545718361d6df1b70b677000d4f973ecf6c7423b"
+    },
+    {
+      "block_id": "page-0074-block-0006",
+      "order": 6,
+      "text": "After ‘switching’, adding another antipsychotic is probably the most common clinical \nstrategy chosen, as 39–43% of patients in routine care are prescribed more than one \nantipsychotic.23 Often, a second antipsychotic is added for additional properties (e.g. \nquetiapine for sedation or aripiprazole to decrease plasma prolactin – these matters are \ndiscussed elsewhere). We are concerned here solely with the use of combined antipsy-\nchotic medications to increase efficacy. From a theoretical point of view, since all antip-\nsychotic medications block D2 receptors (unlike, say, anti-hypertensives which use \ndifferent mechanisms), there is a limited rationale for addition. Studies of add-ons have \n",
+      "bbox": [
+        47.99909973144531,
+        530.5494995117188,
+        422.8115539550781,
+        626.2694702148438
+      ],
+      "text_sha256": "87b9322d5e0337350ebd9c1245c4304b1f2c0c1d11a92654e3b93a08e40c786a"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

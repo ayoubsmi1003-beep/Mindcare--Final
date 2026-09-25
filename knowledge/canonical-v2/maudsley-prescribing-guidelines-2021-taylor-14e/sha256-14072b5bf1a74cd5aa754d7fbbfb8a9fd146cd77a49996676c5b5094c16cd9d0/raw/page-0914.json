@@ -1,0 +1,395 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0914",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 914,
+  "source_page_index": 913,
+  "source_page_display": 914,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Psychotropic drugs in special conditions    893\nCHAPTER 13\nDrug or drug group\nConsiderations\nSafe in surgery?\nAlternative formulations\nMethadone 3,9\n■\n■May reduce opiate requirements\n■\n■Naloxone may induce withdrawal\n■\n■Methadone prolongs QT interval\n■\n■When using opiates, use only full \nagonists (avoid buprenorphine)\nProbably, usually \ncontinued\nIM dose = oral dose\nModafinil35,36\n■\n■Limited data suggest no interference \nwith anaesthesia\n■\n■Improves recovery after anaesthesia\nProbably, data \nlimited\nNone\nPregabalin37\n■\n■Preoperative pregabalin reduces \npost-op nausea\nYes\nNone\nCNS, central nervous system; IM, intramuscular; IV, intravenous; MAOI, monoamine oxidase inhibitor; NSAID, \nnon-steroidal anti-inflammatory drug; SSRI, selective serotonin reuptake inhibitor; TCA, tricyclic antidepressant.\nTable 13.4  (Continued)\nSmoking\nFor many patients undergoing surgery and recovery in a hospital there will be little or \nno opportunity to smoke. Abrupt cessation of smoking is likely to affect mental state \nand may also result in drug toxicity if psychotropics are continued (see section on \n‘Smoking and psychotropic drugs’, Chapter 11 – Pharmacokinetics).\nChanging formulation\nAlternative routes and formulations may be sought for a variety of reasons related to \nsurgery. When changing the route or formulation, bioavailability may also change and \nso care should be taken to ensure the appropriate dose and frequency is prescribed. \nOral preparations may sometimes be administered via a nasogastric (NG), percutane-\nous endoscopic gastrostomy (PEG) or jejunostomy tube, either in liquid formulations \nor as crushed tablets. Bioavailability issues may arise because of adsorption of drugs to \nthe delivery tube material.\nRisks associated with discontinuing psychotropics\n■\n■Relapse (especially if treatment ceased for more than a few days)38\n■\n■Worsening of condition. For example, abrupt cessation of lithium worsens outcome \nin bipolar affective disorder,39 as does abrupt stopping of antidepressants40 and \nantipsychotics41\n■\n■Suicide. Cessation of antidepressants may increase risk of suicide42\n■\n■Withdrawal symptoms. These may complicate diagnosis in the perioperative period\n■\n■Delirium. Common in those discontinuing antipsychotics43 and antidepressants6\n",
+  "raw_text_sha256": "28f22b272a83284592266659c2031c61f30107057966a23d5bde70971a804a97",
+  "coordinates_sha256": "5dfd3c8d55d39626d8449c38f8eab1b94d242c971559972d24e7d853039e08b6",
+  "block_sequence_sha256": "670eb6d133ea2c30ae25ecdecb47bc14c8f0425dded84455b4cd7ca893c99328",
+  "blocks": [
+    {
+      "block_id": "page-0914-block-0000",
+      "order": 0,
+      "text": "Psychotropic drugs in special conditions    893\n",
+      "bbox": [
+        227.09710693359375,
+        31.395221710205078,
+        420.0010986328125,
+        41.0272216796875
+      ],
+      "text_sha256": "2b0ee87bc2bf734c9001c6651e40869757647fa0134eeee8393e479474ceb0fe"
+    },
+    {
+      "block_id": "page-0914-block-0001",
+      "order": 1,
+      "text": "CHAPTER 13\n",
+      "bbox": [
+        454.4096984863281,
+        272.95111083984375,
+        463.88970947265625,
+        318.74310302734375
+      ],
+      "text_sha256": "a01ce0756ef6b5d41c48be6624d8bd154fa95cf67cb49768f2593332d3a2ec98"
+    },
+    {
+      "block_id": "page-0914-block-0002",
+      "order": 2,
+      "text": "Drug or drug group\nConsiderations\nSafe in surgery?\nAlternative formulations\n",
+      "bbox": [
+        48.0,
+        89.96437072753906,
+        413.04010009765625,
+        98.85186767578125
+      ],
+      "text_sha256": "b862460adbeb4f4846bd756587e0731c6e0c846105defcb05cd08407e11ea815"
+    },
+    {
+      "block_id": "page-0914-block-0003",
+      "order": 3,
+      "text": "Methadone 3,9\n■\n■May reduce opiate requirements\n",
+      "bbox": [
+        48.00750732421875,
+        104.91939544677734,
+        241.1096954345703,
+        113.62701416015625
+      ],
+      "text_sha256": "c9aa3528f4da4b0e53c0a8487d82bd8b283ad459374ec04c5c7725057bcf9079"
+    },
+    {
+      "block_id": "page-0914-block-0004",
+      "order": 4,
+      "text": "■\n■Naloxone may induce withdrawal\n",
+      "bbox": [
+        130.20469665527344,
+        114.91951751708984,
+        244.439697265625,
+        123.62701416015625
+      ],
+      "text_sha256": "e76e4651451025e9df95ce2d454ddddb511caa74f0a5d092944aeec8c560c6f1"
+    },
+    {
+      "block_id": "page-0914-block-0005",
+      "order": 5,
+      "text": "■\n■Methadone prolongs QT interval\n",
+      "bbox": [
+        130.20469665527344,
+        124.91951751708984,
+        241.39466857910156,
+        133.62701416015625
+      ],
+      "text_sha256": "b4cb927de52a3ef1029877343375798bde621a10778378bc1398332c3807c2f3"
+    },
+    {
+      "block_id": "page-0914-block-0006",
+      "order": 6,
+      "text": "■\n■When using opiates, use only full \n",
+      "bbox": [
+        130.20469665527344,
+        134.9195098876953,
+        245.70718383789062,
+        143.62701416015625
+      ],
+      "text_sha256": "02e56f5b0b84b442a942d3c9d3e417259fce9f6ca82d547eca9269691b886ff4"
+    },
+    {
+      "block_id": "page-0914-block-0007",
+      "order": 7,
+      "text": "agonists (avoid buprenorphine)\n",
+      "bbox": [
+        137.75970458984375,
+        144.91700744628906,
+        236.82717895507812,
+        153.62451171875
+      ],
+      "text_sha256": "ac0a010d8aafc3a17f11b72d523fbfdcf1fd74e34ef1941d8f843ac5f2b2be20"
+    },
+    {
+      "block_id": "page-0914-block-0008",
+      "order": 8,
+      "text": "Probably, usually \ncontinued\n",
+      "bbox": [
+        260.5946960449219,
+        104.91951751708984,
+        315.1947326660156,
+        123.62451171875
+      ],
+      "text_sha256": "700bc804240fad52e85b50ab1736e032ad7c57d31a70f4c51ebb6be04d24f99e"
+    },
+    {
+      "block_id": "page-0914-block-0009",
+      "order": 9,
+      "text": "IM dose = oral dose\n",
+      "bbox": [
+        325.7922058105469,
+        104.91951751708984,
+        389.0622863769531,
+        113.62701416015625
+      ],
+      "text_sha256": "5e36ba30b1906944862653c0285af5338a1c9d7d2670a4cf2c451589a665367a"
+    },
+    {
+      "block_id": "page-0914-block-0010",
+      "order": 10,
+      "text": "Modafinil35,36\n■\n■Limited data suggest no interference \n",
+      "bbox": [
+        47.99969482421875,
+        159.9444122314453,
+        256.6796875,
+        168.654541015625
+      ],
+      "text_sha256": "2ecab4c96c61e93f98deca39bcc237937778b212a751b437c55ebcf4646811b0"
+    },
+    {
+      "block_id": "page-0914-block-0011",
+      "order": 11,
+      "text": "with anaesthesia\n",
+      "bbox": [
+        137.75970458984375,
+        169.94190979003906,
+        191.0996856689453,
+        178.6494140625
+      ],
+      "text_sha256": "791634224514fcf00360a655fb3f8f839a3d4bb40cc82e3ec21aa8bc16d1246b"
+    },
+    {
+      "block_id": "page-0914-block-0012",
+      "order": 12,
+      "text": "■\n■Improves recovery after anaesthesia\n",
+      "bbox": [
+        130.20469665527344,
+        179.9443817138672,
+        251.22718811035156,
+        188.65188598632812
+      ],
+      "text_sha256": "a45d30c4401a5ed91e7f301d88ac356f11b09ea3e3536b0dd462280a8d20b15b"
+    },
+    {
+      "block_id": "page-0914-block-0013",
+      "order": 13,
+      "text": "Probably, data \nlimited\n",
+      "bbox": [
+        260.5946960449219,
+        159.94190979003906,
+        307.6947021484375,
+        178.64691162109375
+      ],
+      "text_sha256": "42aebb7ea33dd13ac7e89b048db17693f516b5e77d82fde1403dd52e5c1fd460"
+    },
+    {
+      "block_id": "page-0914-block-0014",
+      "order": 14,
+      "text": "None\n",
+      "bbox": [
+        325.7922058105469,
+        159.94190979003906,
+        342.8847351074219,
+        168.6494140625
+      ],
+      "text_sha256": "af5d8a21858f42808c9bcc17012b77bcc2fd6ab3b071dbd4a05f13f410470541"
+    },
+    {
+      "block_id": "page-0914-block-0015",
+      "order": 15,
+      "text": "Pregabalin37\n■\n■Preoperative pregabalin reduces \n",
+      "bbox": [
+        47.99969482421875,
+        194.96690368652344,
+        241.52969360351562,
+        203.6768798828125
+      ],
+      "text_sha256": "5e91aa38af7f0655107ef1e31409a3ff3a027c9b431665e12966be8e506162a9"
+    },
+    {
+      "block_id": "page-0914-block-0016",
+      "order": 16,
+      "text": "post-op nausea\n",
+      "bbox": [
+        137.75970458984375,
+        204.9668731689453,
+        186.94468688964844,
+        213.67437744140625
+      ],
+      "text_sha256": "1137898275b86646b3d3436548c82ec64326a7ad67238411fd55a31e589e88d4"
+    },
+    {
+      "block_id": "page-0914-block-0017",
+      "order": 17,
+      "text": "Yes\nNone\n",
+      "bbox": [
+        260.5946960449219,
+        194.96937561035156,
+        342.8847351074219,
+        203.6768798828125
+      ],
+      "text_sha256": "9cf9f46781408c14ead811b7cb6bd23cf5f08746eb5c91904f6d281b596c196d"
+    },
+    {
+      "block_id": "page-0914-block-0018",
+      "order": 18,
+      "text": "CNS, central nervous system; IM, intramuscular; IV, intravenous; MAOI, monoamine oxidase inhibitor; NSAID, \nnon-steroidal anti-inflammatory drug; SSRI, selective serotonin reuptake inhibitor; TCA, tricyclic antidepressant.\n",
+      "bbox": [
+        47.99969482421875,
+        231.0968780517578,
+        401.6397399902344,
+        249.8018798828125
+      ],
+      "text_sha256": "54bbe0cb7e9df66895ff2d96ee1d5979fbb2548e0b81b56e50e8c401970a6222"
+    },
+    {
+      "block_id": "page-0914-block-0019",
+      "order": 19,
+      "text": "Table 13.4  (Continued)\n",
+      "bbox": [
+        54.42279815673828,
+        69.41468811035156,
+        130.71279907226562,
+        78.30218505859375
+      ],
+      "text_sha256": "be0f7b93745defa14b8e0813d5391cb4f91c1adbf82144540cdf8c18d5360410"
+    },
+    {
+      "block_id": "page-0914-block-0020",
+      "order": 20,
+      "text": "Smoking\n",
+      "bbox": [
+        48.0,
+        288.98907470703125,
+        93.23199462890625,
+        302.0240783691406
+      ],
+      "text_sha256": "8afd0b048a86acf7393f96db0574c8ff796d0b6f8c77de766cc302435d8cfd28"
+    },
+    {
+      "block_id": "page-0914-block-0021",
+      "order": 21,
+      "text": "For many patients undergoing surgery and recovery in a hospital there will be little or \nno opportunity to smoke. Abrupt cessation of smoking is likely to affect mental state \nand may also result in drug toxicity if psychotropics are continued (see section on \n‘Smoking and psychotropic drugs’, Chapter 11 – Pharmacokinetics).\n",
+      "bbox": [
+        48.0,
+        307.8340759277344,
+        422.8099670410156,
+        355.5540771484375
+      ],
+      "text_sha256": "9033496ea044ef47085acecbfc66328ecc213dd39ef771ba06d3c5e30e2824e3"
+    },
+    {
+      "block_id": "page-0914-block-0022",
+      "order": 22,
+      "text": "Changing formulation\n",
+      "bbox": [
+        48.0,
+        372.98907470703125,
+        162.28997802734375,
+        386.0240783691406
+      ],
+      "text_sha256": "af4cdf3e09f25e8385510ba3a13d808d7fdc147214bdcfaa841d46e1ba7ea6d7"
+    },
+    {
+      "block_id": "page-0914-block-0023",
+      "order": 23,
+      "text": "Alternative routes and formulations may be sought for a variety of reasons related to \nsurgery. When changing the route or formulation, bioavailability may also change and \nso care should be taken to ensure the appropriate dose and frequency is prescribed. \nOral preparations may sometimes be administered via a nasogastric (NG), percutane-\nous endoscopic gastrostomy (PEG) or jejunostomy tube, either in liquid formulations \nor as crushed tablets. Bioavailability issues may arise because of adsorption of drugs to \nthe delivery tube material.\n",
+      "bbox": [
+        48.0,
+        391.8340759277344,
+        422.81988525390625,
+        475.5540771484375
+      ],
+      "text_sha256": "d846e12706f7dafdad8817207aedfdf648c5ecb2cbf7a87e8bdefd57f8923a47"
+    },
+    {
+      "block_id": "page-0914-block-0024",
+      "order": 24,
+      "text": "Risks associated with discontinuing psychotropics\n",
+      "bbox": [
+        48.0,
+        492.9891052246094,
+        304.4539794921875,
+        506.02410888671875
+      ],
+      "text_sha256": "1e3f7e9c62467b27395b6ac660ad437de60bc0d9a499472d5e079dd1e91a4ea6"
+    },
+    {
+      "block_id": "page-0914-block-0025",
+      "order": 25,
+      "text": "■\n■Relapse (especially if treatment ceased for more than a few days)38\n",
+      "bbox": [
+        47.999900817871094,
+        511.8341064453125,
+        342.14447021484375,
+        523.5541381835938
+      ],
+      "text_sha256": "d9dcc2bb97635b8a129d445465a3b7a41456beb43f9500025444ed7c1f8db6ba"
+    },
+    {
+      "block_id": "page-0914-block-0026",
+      "order": 26,
+      "text": "■\n■Worsening of condition. For example, abrupt cessation of lithium worsens outcome \n",
+      "bbox": [
+        47.999900817871094,
+        523.8341064453125,
+        422.7749328613281,
+        535.5541381835938
+      ],
+      "text_sha256": "63b963112f631eb0136aaf61decc6471708f5e988952365671ff454b9f74e2d0"
+    },
+    {
+      "block_id": "page-0914-block-0027",
+      "order": 27,
+      "text": "in bipolar affective disorder,39 as does abrupt stopping of antidepressants40 and \nantipsychotics41\n",
+      "bbox": [
+        56.80500030517578,
+        535.8341064453125,
+        422.7764892578125,
+        559.5541381835938
+      ],
+      "text_sha256": "b4b6295245647b285d96fa69f508b9f43441101067c35e5366260c93f33c7141"
+    },
+    {
+      "block_id": "page-0914-block-0028",
+      "order": 28,
+      "text": "■\n■Suicide. Cessation of antidepressants may increase risk of suicide42\n",
+      "bbox": [
+        47.999900817871094,
+        559.8341064453125,
+        342.39495849609375,
+        571.5541381835938
+      ],
+      "text_sha256": "fc72e1e6455045fb51391cdba43234eb3638aee1aa8e9c8ce866b11155af01de"
+    },
+    {
+      "block_id": "page-0914-block-0029",
+      "order": 29,
+      "text": "■\n■Withdrawal symptoms. These may complicate diagnosis in the perioperative period\n",
+      "bbox": [
+        47.999900817871094,
+        571.8341064453125,
+        415.34503173828125,
+        583.5541381835938
+      ],
+      "text_sha256": "29fab316e93a5f9df16b3ff6b299ba2b51fcd18ffa3ae4c3d0f9b7cd28ff14bd"
+    },
+    {
+      "block_id": "page-0914-block-0030",
+      "order": 30,
+      "text": "■\n■Delirium. Common in those discontinuing antipsychotics43 and antidepressants6\n",
+      "bbox": [
+        47.999900817871094,
+        583.8341064453125,
+        400.106689453125,
+        595.5541381835938
+      ],
+      "text_sha256": "affc5148f6adffe1c3860cb46337d65555d476833db9dc73a220512349197440"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

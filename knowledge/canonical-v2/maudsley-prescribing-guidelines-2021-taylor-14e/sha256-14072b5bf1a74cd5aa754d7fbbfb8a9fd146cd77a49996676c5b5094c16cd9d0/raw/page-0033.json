@@ -1,0 +1,431 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0033",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 33,
+  "source_page_index": 32,
+  "source_page_display": 33,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "12    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nLicensed maximum doses\nThe following table lists the licensed maximum doses of antipsychotics according to the \nEMA labelling as of February 2021.\nDrug\nMaximum dose\nFGAs – oral\nChlorpromazine\n1000mg/day\nFlupentixol\n18mg/day\nHaloperidol\n20mg/day\nLevomepromazine\n1200mg/day\nPericyazine\n300mg/day\nPerphenazine\n24mg/day (64mg/day hospitalised patients)\nPimozide\n20mg/day\nSulpiride\n2400mg/day\nTrifluoperazine\n20mg/day\nZuclopenthixol\n150mg/day\nSGAs – oral\nAmisulpride\n1200mg/day\nAripiprazole\n30mg/day\nAsenapine\n20mg/day (sublingual)\nCariprazine\n6mg/day\nClozapine\n900mg/day\nLurasidone\n160mg (HCl)/148mg (base)/day\nOlanzapine\n20mg/day\nPaliperidone\n12mg/day\nQuetiapine\n750mg/day schizophrenia (800mg/day for MR preparation)\n800mg/day bipolar disorder\nRisperidone\n16mg/day\nSertindole\n24mg/day\nLong-acting injections\nAripiprazole depot\n400mg/month\nFlupentixol depot\n400mg/week\nFluphenazine depot\n100mg every 14–35 days\nHaloperidol depot\n300mg every 4 weeks\nPaliperidone depot\n1-monthly\n150mg/month\n",
+  "raw_text_sha256": "ead94e395d658c1de0541525bfa3ad671d8a83f44728f741097660bdaa8dea6d",
+  "coordinates_sha256": "119a226f07e1946bcb945eb9a314b4dde8cf11b44b012122763ad136aa1b49c9",
+  "block_sequence_sha256": "d59070c1754c21b9c692e89edc41f23d0f6fea235661cdbc6b95b794729e15a6",
+  "blocks": [
+    {
+      "block_id": "page-0033-block-0000",
+      "order": 0,
+      "text": "12    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "0e62d8fbfc337b279dffb7c6e30d7913374aebeadda6eec53fd7af6c4709c20b"
+    },
+    {
+      "block_id": "page-0033-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0033-block-0002",
+      "order": 2,
+      "text": "Licensed maximum doses\n",
+      "bbox": [
+        68.88909912109375,
+        66.06442260742188,
+        197.3690643310547,
+        79.09942626953125
+      ],
+      "text_sha256": "cae226dc998584f944f3416c2e98567f4440429a93860a35c375c46f327d89e1"
+    },
+    {
+      "block_id": "page-0033-block-0003",
+      "order": 3,
+      "text": "The following table lists the licensed maximum doses of antipsychotics according to the \nEMA labelling as of February 2021.\n",
+      "bbox": [
+        61.88909912109375,
+        84.909423828125,
+        436.7090148925781,
+        108.62942504882812
+      ],
+      "text_sha256": "757ad4184854b7aca97368dc39a95e3a2bab2c3c78b5fbd632bfde90e7ffcb8e"
+    },
+    {
+      "block_id": "page-0033-block-0004",
+      "order": 4,
+      "text": "Drug\nMaximum dose\n",
+      "bbox": [
+        61.88909912109375,
+        124.57191467285156,
+        248.06155395507812,
+        133.45941162109375
+      ],
+      "text_sha256": "914ed242ceff0373ad4c35270cf9db180aca250b34588b84445fa6f70d5ed130"
+    },
+    {
+      "block_id": "page-0033-block-0005",
+      "order": 5,
+      "text": "FGAs – oral\n",
+      "bbox": [
+        61.88909912109375,
+        141.59693908691406,
+        101.4740982055664,
+        150.48443603515625
+      ],
+      "text_sha256": "2dbedc9fec271b707275a5d09d0819e43f9ae2d73d827567997687b00c586352"
+    },
+    {
+      "block_id": "page-0033-block-0006",
+      "order": 6,
+      "text": "Chlorpromazine\n1000mg/day\n",
+      "bbox": [
+        61.88909912109375,
+        159.90443420410156,
+        234.32159423828125,
+        168.6119384765625
+      ],
+      "text_sha256": "e18c219d453bcc1babb60b5d84da7d82b26df775ad40d7977f17f1e793f3a91c"
+    },
+    {
+      "block_id": "page-0033-block-0007",
+      "order": 7,
+      "text": "Flupentixol\n18mg/day\n",
+      "bbox": [
+        61.88909912109375,
+        174.04945373535156,
+        225.98159790039062,
+        182.7569580078125
+      ],
+      "text_sha256": "26ea3f01577ef99d949fb4935980933e99c66dc59e91e28351fdae9ab6591092"
+    },
+    {
+      "block_id": "page-0033-block-0008",
+      "order": 8,
+      "text": "Haloperidol\n20mg/day\n",
+      "bbox": [
+        61.88909912109375,
+        189.0719757080078,
+        225.98159790039062,
+        197.77947998046875
+      ],
+      "text_sha256": "5fd65c0a320ed5064485a8c71ef968c0249e0277463997a9da6f1561e05ad98e"
+    },
+    {
+      "block_id": "page-0033-block-0009",
+      "order": 9,
+      "text": "Levomepromazine\n1200mg/day\n",
+      "bbox": [
+        61.88909912109375,
+        204.09449768066406,
+        234.32159423828125,
+        212.802001953125
+      ],
+      "text_sha256": "7d1c5ea64f6c86ced11d8b045177142c7216f208609e9f184a82ec3a9bad883f"
+    },
+    {
+      "block_id": "page-0033-block-0010",
+      "order": 10,
+      "text": "Pericyazine\n300mg/day\n",
+      "bbox": [
+        61.88909912109375,
+        219.1169891357422,
+        230.151611328125,
+        227.82449340820312
+      ],
+      "text_sha256": "bbcc88c153dcfa6fcdb37661d84b85a4b538d51deb8fbf611483c2635440b5aa"
+    },
+    {
+      "block_id": "page-0033-block-0011",
+      "order": 11,
+      "text": "Perphenazine\n24mg/day (64mg/day hospitalised patients)\n",
+      "bbox": [
+        61.88909912109375,
+        234.1394805908203,
+        331.4242248535156,
+        242.84698486328125
+      ],
+      "text_sha256": "b3e057133c00885b59ab66c22fa5451ef57d3ec041691a8a5813890731a9e16a"
+    },
+    {
+      "block_id": "page-0033-block-0012",
+      "order": 12,
+      "text": "Pimozide\n20mg/day\n",
+      "bbox": [
+        61.88909912109375,
+        249.16197204589844,
+        225.98159790039062,
+        257.8694763183594
+      ],
+      "text_sha256": "a8c725f3a74e3d3e74ea7918a31e26ed69120f9828fc731a16bb83282fce0b59"
+    },
+    {
+      "block_id": "page-0033-block-0013",
+      "order": 13,
+      "text": "Sulpiride\n2400mg/day\n",
+      "bbox": [
+        61.88909912109375,
+        264.1844787597656,
+        234.32159423828125,
+        272.8919677734375
+      ],
+      "text_sha256": "1256c7d24bcaa7f4dfe00f9d1d96ea4470ab3163fe7c6901f384d530417414ae"
+    },
+    {
+      "block_id": "page-0033-block-0014",
+      "order": 14,
+      "text": "Trifluoperazine\n20mg/day\n",
+      "bbox": [
+        61.88909912109375,
+        279.20697021484375,
+        225.98159790039062,
+        287.9144592285156
+      ],
+      "text_sha256": "0421e1a12adeaa39dd85345ae7868693b916316132f99d25398f49a8944ca578"
+    },
+    {
+      "block_id": "page-0033-block-0015",
+      "order": 15,
+      "text": "Zuclopenthixol\n150mg/day\n",
+      "bbox": [
+        61.88909912109375,
+        294.2294616699219,
+        230.151611328125,
+        302.93695068359375
+      ],
+      "text_sha256": "4faeb1869629cfab400a3afa24a2c38ecdb77df4bdd526d4908aac5edef07c65"
+    },
+    {
+      "block_id": "page-0033-block-0016",
+      "order": 16,
+      "text": "SGAs – oral\n",
+      "bbox": [
+        61.88909912109375,
+        309.0719299316406,
+        101.89409637451172,
+        317.9594421386719
+      ],
+      "text_sha256": "a266c0ebd370b1319fe6db67cb7ddd07b54459bb27855f6c83c25d885e453739"
+    },
+    {
+      "block_id": "page-0033-block-0017",
+      "order": 17,
+      "text": "Amisulpride\n1200mg/day\n",
+      "bbox": [
+        61.88909912109375,
+        324.2744445800781,
+        234.32159423828125,
+        332.98193359375
+      ],
+      "text_sha256": "de55538b44e7d9e6214992fe213002be58bfe57014055e6144b5e3007b3d53ee"
+    },
+    {
+      "block_id": "page-0033-block-0018",
+      "order": 18,
+      "text": "Aripiprazole\n30mg/day\n",
+      "bbox": [
+        61.88909912109375,
+        339.29693603515625,
+        225.98159790039062,
+        348.0044250488281
+      ],
+      "text_sha256": "dd7f88597d7a05707c6a8d1a9a826b71f39b6128b9990ba13bff0a4b3873b0e3"
+    },
+    {
+      "block_id": "page-0033-block-0019",
+      "order": 19,
+      "text": "Asenapine\n20mg/day (sublingual)\n",
+      "bbox": [
+        61.88909912109375,
+        354.3194274902344,
+        264.7491760253906,
+        363.02691650390625
+      ],
+      "text_sha256": "1a9c4e393fc20eaa340d42516219ac2be36516d873e3be1f847d5343d0c3c5bb"
+    },
+    {
+      "block_id": "page-0033-block-0020",
+      "order": 20,
+      "text": "Cariprazine\n6mg/day\n",
+      "bbox": [
+        61.88909912109375,
+        369.3419189453125,
+        221.8115997314453,
+        378.0494079589844
+      ],
+      "text_sha256": "064424acd7dd509ae3bf20efc5322013c69651f2a69ee41882db377f4df5f70d"
+    },
+    {
+      "block_id": "page-0033-block-0021",
+      "order": 21,
+      "text": "Clozapine\n900mg/day\n",
+      "bbox": [
+        61.88909912109375,
+        384.3644104003906,
+        230.151611328125,
+        393.0718994140625
+      ],
+      "text_sha256": "a9b6b8dec3018ee338905661a95d15c89a09be61d4f75728cf3ad87a3e34a83a"
+    },
+    {
+      "block_id": "page-0033-block-0022",
+      "order": 22,
+      "text": "Lurasidone\n160mg (HCl)/148mg (base)/day\n",
+      "bbox": [
+        61.88909912109375,
+        399.38690185546875,
+        293.9316101074219,
+        408.0943908691406
+      ],
+      "text_sha256": "1c8ed620f418274f4571b5500cc66627cb41542d016cad3bf5dd91b122932536"
+    },
+    {
+      "block_id": "page-0033-block-0023",
+      "order": 23,
+      "text": "Olanzapine\n20mg/day\n",
+      "bbox": [
+        61.88909912109375,
+        414.4093933105469,
+        225.98159790039062,
+        423.11688232421875
+      ],
+      "text_sha256": "0618c23f527042be7f7301c1016b48fdc7942c54157dd8259a1f1575506f4dd5"
+    },
+    {
+      "block_id": "page-0033-block-0024",
+      "order": 24,
+      "text": "Paliperidone\n12mg/day\n",
+      "bbox": [
+        61.88909912109375,
+        429.431884765625,
+        225.98159790039062,
+        438.1393737792969
+      ],
+      "text_sha256": "14a234efb1472413bf36bad6d1633261e5dfb96921f7ac5fa51eadf0c3b46da3"
+    },
+    {
+      "block_id": "page-0033-block-0025",
+      "order": 25,
+      "text": "Quetiapine\n750mg/day schizophrenia (800mg/day for MR preparation)\n800mg/day bipolar disorder\n",
+      "bbox": [
+        61.88909912109375,
+        444.4543762207031,
+        381.5841979980469,
+        463.15936279296875
+      ],
+      "text_sha256": "8be61c835e3f30e27408b643d252108ab8fc4479d77547ce28c21b0418ff64cb"
+    },
+    {
+      "block_id": "page-0033-block-0026",
+      "order": 26,
+      "text": "Risperidone\n16mg/day\n",
+      "bbox": [
+        61.88909912109375,
+        469.4743957519531,
+        225.98159790039062,
+        478.181884765625
+      ],
+      "text_sha256": "bd65eeb52dfa9aca5dd1b77e30df1881ada500dc412d685e4ff12f00f19c7cf3"
+    },
+    {
+      "block_id": "page-0033-block-0027",
+      "order": 27,
+      "text": "Sertindole\n24mg/day\n",
+      "bbox": [
+        61.88909912109375,
+        484.49688720703125,
+        225.98159790039062,
+        493.2043762207031
+      ],
+      "text_sha256": "c2750027ed2dfd4566d92942b9e4407b99fce2e10082925c25b9a494b0c6c3dc"
+    },
+    {
+      "block_id": "page-0033-block-0028",
+      "order": 28,
+      "text": "Long-acting injections\n",
+      "bbox": [
+        61.88909912109375,
+        499.33935546875,
+        139.38662719726562,
+        508.22686767578125
+      ],
+      "text_sha256": "5aabcb97551eb10cd085c63fe13b24da68b88322f26e26934ca017c948a64a67"
+    },
+    {
+      "block_id": "page-0033-block-0029",
+      "order": 29,
+      "text": "Aripiprazole depot\n400mg/month\n",
+      "bbox": [
+        61.88909912109375,
+        514.5418701171875,
+        240.1566162109375,
+        523.2493896484375
+      ],
+      "text_sha256": "e70c5664b5e2feabcdfb52715b0f8dc8c9594105b913bc2a9c179a97957eca13"
+    },
+    {
+      "block_id": "page-0033-block-0030",
+      "order": 30,
+      "text": "Flupentixol depot\n400mg/week\n",
+      "bbox": [
+        61.88909912109375,
+        529.5643920898438,
+        235.98658752441406,
+        538.2719116210938
+      ],
+      "text_sha256": "af5b491ede17f90699cf1b239732baff8c91afbdd5cd51a8476872d1915215fd"
+    },
+    {
+      "block_id": "page-0033-block-0031",
+      "order": 31,
+      "text": "Fluphenazine depot\n100mg every 14–35 days\n",
+      "bbox": [
+        61.88909912109375,
+        544.5869140625,
+        274.3266296386719,
+        553.29443359375
+      ],
+      "text_sha256": "a10aa4680ac262b0f444432075e3ec88fe381cc7026513c5e833a6fae50a1b19"
+    },
+    {
+      "block_id": "page-0033-block-0032",
+      "order": 32,
+      "text": "Haloperidol depot\n300mg every 4 weeks\n",
+      "bbox": [
+        61.88909912109375,
+        559.609375,
+        263.9015808105469,
+        568.31689453125
+      ],
+      "text_sha256": "184d873a796512da690716a283df64fb507364ebfce5992116de818a33d612d8"
+    },
+    {
+      "block_id": "page-0033-block-0033",
+      "order": 33,
+      "text": "Paliperidone depot\n1-monthly\n150mg/month\n",
+      "bbox": [
+        61.88909912109375,
+        574.6318969726562,
+        240.1566162109375,
+        593.3369140625
+      ],
+      "text_sha256": "663d711d1f2141f66f306e5cb1129e82173749eae9d0ac401831c48ee40f9d01"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

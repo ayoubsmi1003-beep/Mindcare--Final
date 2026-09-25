@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0266",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 266,
+  "source_page_index": 265,
+  "source_page_display": 266,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    245\nCHAPTER 1\nBenign ethnic neutropenia\nACKR1 rs2814778\t\n\u0007CC genotype at rs2814778 (Duffy Null Status) is considered \nto be the cause of BEN9\nMetabolism\nClozapine is largely metabolised by CYP1A2 and, to a lesser extent, CYP3A4/5. \nCYP2D6 plays almost no role. Metabolic rate is usually classified as poor (PM), inter-\nmediate (IM) or extensive (EM) and each is associated with a particular genetic variant. \nGenetic analysis can therefore allow an estimate of the target dose of clozapine for an \nindividual.\nCytochrome p4501A2\t\n\u0007PM/IM/EM status as normally defined by analysis of e.g. \nCYP1A2*1 F/1 C/1A/1K10\nCytochrome p4503A4\t\nPM/IM/EM status\n\t\n\u0007CYP3A4 is a minor route of clozapine metabolism but \nmetaboliser status affects blood concentration.11\nCytochrome p4503A5\t\nPM/IM/EM status\n\t\n\u0007CYP3A5 PM status associated with elevated clozapine \nblood levels12\nOther non-CYP genetic associations have also been demonstrated.\nNFIB rs28379954 T > C\t\n\u0007CT carriers have much lower blood concentrations than \nTT carriers in both smokers and non-smokers13\nAlso the rs2472297 genotype independently predicts clozapine plasm levels.14 Levels \nare highest in C/C carriers and lowest in T/T carriers (C/T somewhere in between). This \nsingle nucleotide polymorphism is located bewteen genes coding for CYP1A1 and \nCYP1A2 on chromosome 15.\nOther adverse effects\nGenetic predictors of myocarditis15 and weight gain16 have also been found but associa-\ntions are probably too weak to allow clinical application.10\n",
+  "raw_text_sha256": "7ebe1960d7c0987c22b37ae6a813a746ce5773b789cfd84fba5a67d086668d20",
+  "coordinates_sha256": "e4592da43cc911c53b75aa4aecd5d208d2dadac9ff0db1962d1cc89e81bf5329",
+  "block_sequence_sha256": "bbe6486c2f585c329c2e93c2fd42d45ebdd97a47cc4fcc3536a6e2d51865361d",
+  "blocks": [
+    {
+      "block_id": "page-0266-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    245\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "654d5ebc85eb42d7fd1bb1d68eff3844f929b5171aeb939559ca6b0be15a7478"
+    },
+    {
+      "block_id": "page-0266-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0266-block-0002",
+      "order": 2,
+      "text": "Benign ethnic neutropenia\n",
+      "bbox": [
+        47.99909973144531,
+        62.31442642211914,
+        185.32305908203125,
+        75.34942626953125
+      ],
+      "text_sha256": "4469e7199110875461801f06487f9b87172e39ef3449b40515a0736639134699"
+    },
+    {
+      "block_id": "page-0266-block-0003",
+      "order": 3,
+      "text": "ACKR1 rs2814778\t\n\u0007CC genotype at rs2814778 (Duffy Null Status) is considered \nto be the cause of BEN9\n",
+      "bbox": [
+        47.99909973144531,
+        80.91942596435547,
+        422.7491149902344,
+        104.87942504882812
+      ],
+      "text_sha256": "4d4b4480a7a5c9ef85856e79c1d0516840e2017d3f7d50bb1dc6fde9d323e1d8"
+    },
+    {
+      "block_id": "page-0266-block-0004",
+      "order": 4,
+      "text": "Metabolism\n",
+      "bbox": [
+        47.99909973144531,
+        122.31442260742188,
+        109.1150894165039,
+        135.34942626953125
+      ],
+      "text_sha256": "553aec7c00b763ffff876aa2d15068131e6cf9dcbdacb488a32ed07023c4efc9"
+    },
+    {
+      "block_id": "page-0266-block-0005",
+      "order": 5,
+      "text": "Clozapine is largely metabolised by CYP1A2 and, to a lesser extent, CYP3A4/5. \nCYP2D6 plays almost no role. Metabolic rate is usually classified as poor (PM), inter-\nmediate (IM) or extensive (EM) and each is associated with a particular genetic variant. \nGenetic analysis can therefore allow an estimate of the target dose of clozapine for an \nindividual.\n",
+      "bbox": [
+        47.99909973144531,
+        141.159423828125,
+        422.8189392089844,
+        200.87942504882812
+      ],
+      "text_sha256": "83a0ea997c474528cd10915fd0afa3f76d242af32a58919fb82657dc70b3f4b0"
+    },
+    {
+      "block_id": "page-0266-block-0006",
+      "order": 6,
+      "text": "Cytochrome p4501A2\t\n\u0007PM/IM/EM status as normally defined by analysis of e.g. \nCYP1A2*1 F/1 C/1A/1K10\n",
+      "bbox": [
+        47.99909973144531,
+        206.91943359375,
+        422.7991638183594,
+        230.87942504882812
+      ],
+      "text_sha256": "0d2973909434c4df49a1baa60dd0711b9104068e0f18adf847fb9f773daedb50"
+    },
+    {
+      "block_id": "page-0266-block-0007",
+      "order": 7,
+      "text": "Cytochrome p4503A4\t\nPM/IM/EM status\n\t\n\u0007CYP3A4 is a minor route of clozapine metabolism but \nmetaboliser status affects blood concentration.11\n",
+      "bbox": [
+        47.99909973144531,
+        233.91943359375,
+        422.7691345214844,
+        272.8794250488281
+      ],
+      "text_sha256": "f38746d63215e4c61a6da90fc241e0c173c68db739e100cc1895e9d72ce9def1"
+    },
+    {
+      "block_id": "page-0266-block-0008",
+      "order": 8,
+      "text": "Cytochrome p4503A5\t\nPM/IM/EM status\n\t\n\u0007CYP3A5 PM status associated with elevated clozapine \nblood levels12\n",
+      "bbox": [
+        47.99909973144531,
+        275.91943359375,
+        422.7990417480469,
+        314.8794250488281
+      ],
+      "text_sha256": "d1471922a86e43e8dba1ab65f72eb481587b7501a98b1a1486aa24d06c7ceda8"
+    },
+    {
+      "block_id": "page-0266-block-0009",
+      "order": 9,
+      "text": "Other non-CYP genetic associations have also been demonstrated.\n",
+      "bbox": [
+        47.99909973144531,
+        327.159423828125,
+        333.2790832519531,
+        338.8794250488281
+      ],
+      "text_sha256": "7a3e3e29c10912c3558c843ec8215e6f884526e32950aeb9e162263cd12b21b6"
+    },
+    {
+      "block_id": "page-0266-block-0010",
+      "order": 10,
+      "text": "NFIB rs28379954 T > C\t\n\u0007CT carriers have much lower blood concentrations than \nTT carriers in both smokers and non-smokers13\n",
+      "bbox": [
+        47.99909973144531,
+        353.91943359375,
+        422.7591247558594,
+        377.8794250488281
+      ],
+      "text_sha256": "2b47f5061a084561981b48e437eefc7faac03c24439e631f783a0f7f78f74520"
+    },
+    {
+      "block_id": "page-0266-block-0011",
+      "order": 11,
+      "text": "Also the rs2472297 genotype independently predicts clozapine plasm levels.14 Levels \nare highest in C/C carriers and lowest in T/T carriers (C/T somewhere in between). This \nsingle nucleotide polymorphism is located bewteen genes coding for CYP1A1 and \nCYP1A2 on chromosome 15.\n",
+      "bbox": [
+        47.99909973144531,
+        389.91943359375,
+        422.8218078613281,
+        437.8794250488281
+      ],
+      "text_sha256": "a1b47a2b41f7219c9e8dba859d7beb00e9e2a5e753d62e35eb97b709a821f6b3"
+    },
+    {
+      "block_id": "page-0266-block-0012",
+      "order": 12,
+      "text": "Other adverse effects\n",
+      "bbox": [
+        47.99909973144531,
+        455.3144226074219,
+        159.05511474609375,
+        468.34942626953125
+      ],
+      "text_sha256": "79e7598700c6862e00dadad43b3bd7dc3118567217da80f17abe1a7c012c17a3"
+    },
+    {
+      "block_id": "page-0266-block-0013",
+      "order": 13,
+      "text": "Genetic predictors of myocarditis15 and weight gain16 have also been found but associa-\ntions are probably too weak to allow clinical application.10\n",
+      "bbox": [
+        47.99909973144531,
+        474.159423828125,
+        420.0216369628906,
+        497.8794250488281
+      ],
+      "text_sha256": "8253b60e7c644dc64b6bdd6dac19c32af8a5769d526e0190d1c359e2098d82fd"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

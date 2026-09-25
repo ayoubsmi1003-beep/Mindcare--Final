@@ -1,0 +1,59 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0021",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 21,
+  "source_page_index": 20,
+  "source_page_display": 21,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "xx    List of abbreviations\nSSRI\t\n\u0007selective serotonin reuptake \ninhibitor\nSTAR*D\t\n\u0007Sequenced Treatment \nAlternatives to Relieve \nDepression programme\nSTS\t\nselegiline transdermal system\nTADS\t\n\u0007Treatment of Adolescents with \nDepression Study\nTCA\t\ntricyclic antidepressant\nTD\t\ntardive dyskinesia\ntDCS\t\n\u0007transcranial direct current \nstimulation\nTDP\t\ntorsades de pointes\ntds\t\n\u0007ter die sumendum (three times  \na day)\nTEAM\t\nTreatment of Early Age Mania\nTF‐CBT\t\n\u0007trauma‐focused cognitive \nbehavioural therapy\nTFT\t\nthyroid function test\nTHC/CBD\t\n\u0007tetrahydrocannabinol/\ncannabidiol\nTIA\t\ntransient ischaemic attack\nTMS\t\n\u0007transcranial magnetic \nstimulation\nTORDIA\t\n\u0007Treatment of Resistant \nDepression in Adolescence\nTPR\t\ntemperature, pulse, respiration\nTRS\t\n\u0007treatment‐resistant \nschizophrenia\nTS\t\nTourette syndrome\nU&Es\t\nurea and electrolytes\nUGIB\t\nupper gastrointestinal bleeding\nUGT\t\nUDP‐glucuronosyl transferase\nVaD\t\nvascular dementia\nVNS\t\nvagal nerve stimulation\nVTE\t\nvenous thromboembolism\nWBC\t\nwhite blood cell\nWCC\t\nwhite cell count\nWHO\t\nWorld Health Organization\nXL\t\nextended release\nYMRS\t\nYoung Mania Rating Scale\nZA\t\nzuclopenthixol acetate\n",
+  "raw_text_sha256": "800b7decd50fb85fe0c3843aa5f7d4bc004966226dc1ebe739d02375e370d6c9",
+  "coordinates_sha256": "9b2f61deb69df2cc6a6749917f27b932294ba5d9b066e77532a5df10b0cb47ea",
+  "block_sequence_sha256": "804735f8cf5a79e16f8938151f06935d4c942386f4033d618c8a77a2e8ff7e4f",
+  "blocks": [
+    {
+      "block_id": "page-0021-block-0000",
+      "order": 0,
+      "text": "xx    List of abbreviations\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        169.35379028320312,
+        41.0272216796875
+      ],
+      "text_sha256": "ed4954c6b9f721d819a916c1f2e265c3fed17dd45f0ed99746bf05ecc938825e"
+    },
+    {
+      "block_id": "page-0021-block-0001",
+      "order": 1,
+      "text": "SSRI\t\n\u0007selective serotonin reuptake \ninhibitor\nSTAR*D\t\n\u0007Sequenced Treatment \nAlternatives to Relieve \nDepression programme\nSTS\t\nselegiline transdermal system\nTADS\t\n\u0007Treatment of Adolescents with \nDepression Study\nTCA\t\ntricyclic antidepressant\nTD\t\ntardive dyskinesia\ntDCS\t\n\u0007transcranial direct current \nstimulation\nTDP\t\ntorsades de pointes\ntds\t\n\u0007ter die sumendum (three times  \na day)\nTEAM\t\nTreatment of Early Age Mania\nTF‐CBT\t\n\u0007trauma‐focused cognitive \nbehavioural therapy\nTFT\t\nthyroid function test\nTHC/CBD\t\n\u0007tetrahydrocannabinol/\ncannabidiol\n",
+      "bbox": [
+        61.889984130859375,
+        62.865318298339844,
+        237.16949462890625,
+        297.5943298339844
+      ],
+      "text_sha256": "e474693df7212158f9e477c68bbc3fb68b297bd08ac31653651ef46a583fb746"
+    },
+    {
+      "block_id": "page-0021-block-0002",
+      "order": 2,
+      "text": "TIA\t\ntransient ischaemic attack\nTMS\t\n\u0007transcranial magnetic \nstimulation\nTORDIA\t\n\u0007Treatment of Resistant \nDepression in Adolescence\nTPR\t\ntemperature, pulse, respiration\nTRS\t\n\u0007treatment‐resistant \nschizophrenia\nTS\t\nTourette syndrome\nU&Es\t\nurea and electrolytes\nUGIB\t\nupper gastrointestinal bleeding\nUGT\t\nUDP‐glucuronosyl transferase\nVaD\t\nvascular dementia\nVNS\t\nvagal nerve stimulation\nVTE\t\nvenous thromboembolism\nWBC\t\nwhite blood cell\nWCC\t\nwhite cell count\nWHO\t\nWorld Health Organization\nXL\t\nextended release\nYMRS\t\nYoung Mania Rating Scale\nZA\t\nzuclopenthixol acetate\n",
+      "bbox": [
+        253.8839874267578,
+        62.923057556152344,
+        426.4492492675781,
+        297.652099609375
+      ],
+      "text_sha256": "798d3354afe6a241e50550a6ae72052edc98a39a4baad104ab58cf6376bd3cb7"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

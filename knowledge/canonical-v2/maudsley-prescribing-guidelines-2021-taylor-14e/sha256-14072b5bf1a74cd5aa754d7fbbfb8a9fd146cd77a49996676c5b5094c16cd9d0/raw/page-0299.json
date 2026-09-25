@@ -1,0 +1,887 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0299",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 299,
+  "source_page_index": 298,
+  "source_page_display": 299,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "\u0003(Continued )\nProlactin\nChildren and \nadolescents \nonly\nAt start and if symptoms of \nraised prolactin develop\nRaised prolactin unlikely with \nquetiapine or aripiprazole. Very \noccasionally seen with \nolanzapine and asenapine. Very \ncommon with risperidone and \nFGAs\nECG\nIf indicated by \ncardiovascular \ndisease or risk \nfactors\nAt start if there are risk factors \nfor or existing cardiovascular \ndisease (or haloperidol is \nprescribed). If relevant \nabnormalities are detected, as a \nminimum recheck after each \ndose increase.\nAt start if risk factors for or \nexisting cardiovascular disease. If \nrelevant abnormalities are \ndetected, as a minimum recheck \nafter each dose increase.\nAt start if risk factors \nfor or existing \ncardiovascular disease. \nIf relevant abnormalities \nare detected, as a \nminimum recheck after \neach dose increase.\nWaist \ncircumference \nand/or BMI\nYes\nYes, as part of a \nroutine physical \nhealth check.\nMonthly for the first 3 months \nthen annually\nAt start, and then every 6 \nmonths\nEvery 3 months for the first \nyear then annually\nAt start and when \nneeded if the patient \ngains weight rapidly\nPlasma levels of \ndrug\nAt least 3–4 days after initiation \nand 3–4 days after every dose \nchange until levels stable, then \nevery 3 months in the first year, \nthen every 6 months for most \npatients (see NICE2)\nTitrate by effect and \ntolerability. Do not \nroutinely measure unless \nthere is evidence of lack of \neffectiveness, poor \nadherence or toxicity\nTwo weeks after \ninitiation and two weeks \nafter dose change. \nThereafter, do not \nroutinely measure unless \nthere is evidence of lack \nof effectiveness, poor \nadherence or toxicity\nFor patients on lamotrigine, do an annual health check, but no special monitoring tests are needed although blood levels may indicate if high doses might be considered. \nReferences\n\t 1.\t Ng F, et al. The International Society for Bipolar Disorders (ISBD) consensus guidelines for the safety monitoring of bipolar disorder treatments. Bipolar Disord 2009; 11:559–595.\n\t 2.\t National Institute for Health and Care Excellence. Bipolar disorder: assessment and management. Clinical Guidance [CG185]. 2014 (Last updated February 2020); https://www.nice.org.uk/guidance/cg185.\n",
+  "raw_text_sha256": "f49a119291d84a82443166c1833f5673ae524b74410cb4f31506582e4cd30f19",
+  "coordinates_sha256": "50690e0edd17f205e2aab351338c4fe9aec7256dd4415e1717f94fe1dabc1120",
+  "block_sequence_sha256": "16f168e56ccff21e039b0bb77d944fe69f023abfeecf1a624febd7a5fdd24b42",
+  "blocks": [
+    {
+      "block_id": "page-0299-block-0000",
+      "order": 0,
+      "text": "\u0003(Continued )\n",
+      "bbox": [
+        67.62750244140625,
+        568.2014770507812,
+        76.51499938964844,
+        606.6539916992188
+      ],
+      "text_sha256": "90c473996d890d7e46dd3846054d4ca955e156c108a6f427e77cfbf7293d5dd0"
+    },
+    {
+      "block_id": "page-0299-block-0001",
+      "order": 1,
+      "text": "Prolactin\nChildren and \n",
+      "bbox": [
+        85.43250274658203,
+        507.1040344238281,
+        94.13999938964844,
+        608.6539916992188
+      ],
+      "text_sha256": "ba85eb215df73a5027d1ca8b1ad68492b19ee141572787e2c39e4ddc0ededf0b"
+    },
+    {
+      "block_id": "page-0299-block-0002",
+      "order": 2,
+      "text": "adolescents \n",
+      "bbox": [
+        95.43000030517578,
+        511.1465148925781,
+        104.13749694824219,
+        550.3189697265625
+      ],
+      "text_sha256": "98b74eb89f40ee56141bcddd943d59bd97b4df595c9bad9e047e0aa46dfd6139"
+    },
+    {
+      "block_id": "page-0299-block-0003",
+      "order": 3,
+      "text": "only\n",
+      "bbox": [
+        105.42749786376953,
+        536.9840087890625,
+        114.13499450683594,
+        550.3189697265625
+      ],
+      "text_sha256": "321b4285d2fec34a6dc5b6fdb1ab9ee46b1a3129c83e52a00a713a38bac0fe00"
+    },
+    {
+      "block_id": "page-0299-block-0004",
+      "order": 4,
+      "text": "At start and if symptoms of \n",
+      "bbox": [
+        85.42499542236328,
+        343.7314758300781,
+        94.13249206542969,
+        433.3190002441406
+      ],
+      "text_sha256": "8c7199f6f90988ce031b978abc495a906a0a774ae7f518fa13538be86dcde4cb"
+    },
+    {
+      "block_id": "page-0299-block-0005",
+      "order": 5,
+      "text": "raised prolactin develop\n",
+      "bbox": [
+        95.42249298095703,
+        357.6139221191406,
+        104.12998962402344,
+        433.3190002441406
+      ],
+      "text_sha256": "17f4225c1bb6c1e2a29817e565a4290f1ed24c55784b56f87bd4e5a5fa8c28d0"
+    },
+    {
+      "block_id": "page-0299-block-0006",
+      "order": 6,
+      "text": "Raised prolactin unlikely with \n",
+      "bbox": [
+        105.41999053955078,
+        338.44390869140625,
+        114.12748718261719,
+        433.3190002441406
+      ],
+      "text_sha256": "2360318844f9d051ed7e7e69b8d9f244870762bb95b5bb2d71c96553555455ce"
+    },
+    {
+      "block_id": "page-0299-block-0007",
+      "order": 7,
+      "text": "quetiapine or aripiprazole. Very \n",
+      "bbox": [
+        115.41748809814453,
+        331.6414489746094,
+        124.12498474121094,
+        433.3190002441406
+      ],
+      "text_sha256": "dd21732bb0811fe97a5ab11b1b1d8a8799ea9a83281604b13a6c421788607f09"
+    },
+    {
+      "block_id": "page-0299-block-0008",
+      "order": 8,
+      "text": "occasionally seen with \n",
+      "bbox": [
+        125.41498565673828,
+        360.3964538574219,
+        134.1224822998047,
+        433.3190002441406
+      ],
+      "text_sha256": "fb0714e34b128bb40536362e3dc396a823e75363243a476cac32d5496f525f84"
+    },
+    {
+      "block_id": "page-0299-block-0009",
+      "order": 9,
+      "text": "olanzapine and asenapine. Very \n",
+      "bbox": [
+        135.4124755859375,
+        330.3739318847656,
+        144.11997985839844,
+        433.3190002441406
+      ],
+      "text_sha256": "21d09ab374707887faa68eba4af54b3b21b936261184cb5751fa5a25f8589a87"
+    },
+    {
+      "block_id": "page-0299-block-0010",
+      "order": 10,
+      "text": "common with risperidone and \n",
+      "bbox": [
+        145.40997314453125,
+        334.9638977050781,
+        154.1174774169922,
+        433.3190002441406
+      ],
+      "text_sha256": "69eccc03f11f1fcee30f1aa0f82a9b7f6db32a14f9524c0c048d648b254db868"
+    },
+    {
+      "block_id": "page-0299-block-0011",
+      "order": 11,
+      "text": "FGAs\n",
+      "bbox": [
+        155.407470703125,
+        416.65399169921875,
+        164.11497497558594,
+        433.3190002441406
+      ],
+      "text_sha256": "4efcf888dd4ef8955efd5a30dc18d37775bea1f0e2b62c7daf8584709f7d0e76"
+    },
+    {
+      "block_id": "page-0299-block-0012",
+      "order": 12,
+      "text": "ECG\nIf indicated by \n",
+      "bbox": [
+        171.02996826171875,
+        503.2340393066406,
+        179.7374725341797,
+        608.6539916992188
+      ],
+      "text_sha256": "92ef603de4916620bbcf3a6f6b868f4f2706c2634fad7dc2f194c5260c9883c9"
+    },
+    {
+      "block_id": "page-0299-block-0013",
+      "order": 13,
+      "text": "cardiovascular \n",
+      "bbox": [
+        181.0274658203125,
+        503.37652587890625,
+        189.73497009277344,
+        550.3189697265625
+      ],
+      "text_sha256": "16b64586b2232173957c82a7ef2cb0d596250ff5abc8ae39dc0cc9d64bf811f0"
+    },
+    {
+      "block_id": "page-0299-block-0014",
+      "order": 14,
+      "text": "disease or risk \n",
+      "bbox": [
+        191.02496337890625,
+        503.6465148925781,
+        199.7324676513672,
+        550.3189697265625
+      ],
+      "text_sha256": "1128d0e72c193a8dcbd730219b66382c0d0061e45840be0d55d7303dd2957297"
+    },
+    {
+      "block_id": "page-0299-block-0015",
+      "order": 15,
+      "text": "factors\n",
+      "bbox": [
+        201.0224609375,
+        528.6590576171875,
+        209.72996520996094,
+        550.3189697265625
+      ],
+      "text_sha256": "5d9d4cfbcf045126ba7b42cb18202ac859f5ae3498e23eb19cc71860d0353141"
+    },
+    {
+      "block_id": "page-0299-block-0016",
+      "order": 16,
+      "text": "At start if there are risk factors \n",
+      "bbox": [
+        171.0224609375,
+        334.01904296875,
+        179.72996520996094,
+        433.3190002441406
+      ],
+      "text_sha256": "c0eab724d0113bf9ac5e018c5fd1dcf76352462786af5ba7de542b826e32ab2b"
+    },
+    {
+      "block_id": "page-0299-block-0017",
+      "order": 17,
+      "text": "for or existing cardiovascular \n",
+      "bbox": [
+        181.01995849609375,
+        340.12396240234375,
+        189.7274627685547,
+        433.3190002441406
+      ],
+      "text_sha256": "670621eb27d96d93aec19be293b46c3a233cfa262212ac3a09110ebaf90e5307"
+    },
+    {
+      "block_id": "page-0299-block-0018",
+      "order": 18,
+      "text": "disease (or haloperidol is \n",
+      "bbox": [
+        191.0174560546875,
+        352.8813781738281,
+        199.72496032714844,
+        433.3190002441406
+      ],
+      "text_sha256": "d8a67128b33046b4155efaa7b9e856ba0e054c1c4f49297d971eec6fad4b7e01"
+    },
+    {
+      "block_id": "page-0299-block-0019",
+      "order": 19,
+      "text": "prescribed). If relevant \n",
+      "bbox": [
+        201.01495361328125,
+        360.67401123046875,
+        209.7224578857422,
+        433.3190002441406
+      ],
+      "text_sha256": "8ddcf948251bf58f813447915fd3e82f74d58d81b0e899187b8887a8dcf105f3"
+    },
+    {
+      "block_id": "page-0299-block-0020",
+      "order": 20,
+      "text": "abnormalities are detected, as a \n",
+      "bbox": [
+        211.012451171875,
+        329.698974609375,
+        219.71995544433594,
+        433.3190002441406
+      ],
+      "text_sha256": "2ec5afd60afa6a3295c3805083e171556767a896859f2bb216abf609c74d80d8"
+    },
+    {
+      "block_id": "page-0299-block-0021",
+      "order": 21,
+      "text": "minimum recheck after each \n",
+      "bbox": [
+        221.00994873046875,
+        340.13153076171875,
+        229.7174530029297,
+        433.3190002441406
+      ],
+      "text_sha256": "f169a25b3b9ac9dcae75f42bf489b513c0b5df12b16f8cf790921bb3d0ee354e"
+    },
+    {
+      "block_id": "page-0299-block-0022",
+      "order": 22,
+      "text": "dose increase.\n",
+      "bbox": [
+        231.0074462890625,
+        388.44647216796875,
+        239.71495056152344,
+        433.3190002441406
+      ],
+      "text_sha256": "48da5c8cd09301ada39104c6e3b409ecd044d7635939fefae5e5a51a5a9b545f"
+    },
+    {
+      "block_id": "page-0299-block-0023",
+      "order": 23,
+      "text": "At start if risk factors for or \n",
+      "bbox": [
+        171.0074462890625,
+        234.5764923095703,
+        179.71495056152344,
+        323.3164978027344
+      ],
+      "text_sha256": "cebd94b60e37c5974c752dd68d0719c12cf6bfb4365a6becbad2a0a8e34ecfa7"
+    },
+    {
+      "block_id": "page-0299-block-0024",
+      "order": 24,
+      "text": "existing cardiovascular disease. If \n",
+      "bbox": [
+        181.00494384765625,
+        216.7864227294922,
+        189.7124481201172,
+        323.3164978027344
+      ],
+      "text_sha256": "06abb20aed9b471dfa30be5839809d7b351cecebfb9849f79c78e1f90b2895a9"
+    },
+    {
+      "block_id": "page-0299-block-0025",
+      "order": 25,
+      "text": "relevant abnormalities are \n",
+      "bbox": [
+        191.00244140625,
+        239.0089569091797,
+        199.70994567871094,
+        323.3164978027344
+      ],
+      "text_sha256": "b506bc1bcfb7178e941d437afbf08a7c85c2d40a9470ea0aaf74bba5548ef738"
+    },
+    {
+      "block_id": "page-0299-block-0026",
+      "order": 26,
+      "text": "detected, as a minimum recheck \n",
+      "bbox": [
+        200.99993896484375,
+        217.61900329589844,
+        209.7074432373047,
+        323.3164978027344
+      ],
+      "text_sha256": "ffbd64d184d6ec60a8ddb08365d37aa4480c7e0ac32d98e1eface6a9653f4a23"
+    },
+    {
+      "block_id": "page-0299-block-0027",
+      "order": 27,
+      "text": "after each dose increase.\n",
+      "bbox": [
+        210.9974365234375,
+        244.28147888183594,
+        219.70494079589844,
+        323.3164978027344
+      ],
+      "text_sha256": "460de933e0cc11386109a6d4d998942dc3787b283b9e759bd1c1ed94e0f39743"
+    },
+    {
+      "block_id": "page-0299-block-0028",
+      "order": 28,
+      "text": "At start if risk factors \n",
+      "bbox": [
+        170.99993896484375,
+        45.576560974121094,
+        179.7074432373047,
+        114.31402587890625
+      ],
+      "text_sha256": "efba6d0052c51f631c39b039a4f7903fed9032263c4c6d2d9375ed2629cb66bc"
+    },
+    {
+      "block_id": "page-0299-block-0029",
+      "order": 29,
+      "text": "for or existing \n",
+      "bbox": [
+        180.9974365234375,
+        68.06160736083984,
+        189.70494079589844,
+        114.31402587890625
+      ],
+      "text_sha256": "85962d09c22573cb3dc9a1afa7ffbeb4fd3831cbb100ca340e7049ba832369ac"
+    },
+    {
+      "block_id": "page-0299-block-0030",
+      "order": 30,
+      "text": "cardiovascular disease. \n",
+      "bbox": [
+        190.99493408203125,
+        40.281639099121094,
+        199.7024383544922,
+        114.31402587890625
+      ],
+      "text_sha256": "106b2b52f51de2b6414a31efc178fe3a2bdba5ac07560d8b5105aa61bfd61ce1"
+    },
+    {
+      "block_id": "page-0299-block-0031",
+      "order": 31,
+      "text": "If relevant abnormalities \n",
+      "bbox": [
+        200.992431640625,
+        35.706687927246094,
+        209.69993591308594,
+        114.31402587890625
+      ],
+      "text_sha256": "654ba23caacad6ad565b28e3ba90cf8586b3f01d09108d15cf883d5d4e4a833c"
+    },
+    {
+      "block_id": "page-0299-block-0032",
+      "order": 32,
+      "text": "are detected, as a \n",
+      "bbox": [
+        210.98992919921875,
+        55.693992614746094,
+        219.6974334716797,
+        114.31402587890625
+      ],
+      "text_sha256": "4f4184b55992c7e990da352a3974cd050b57b36e524dfa90e59601b573ab913c"
+    },
+    {
+      "block_id": "page-0299-block-0033",
+      "order": 33,
+      "text": "minimum recheck after \n",
+      "bbox": [
+        220.9874267578125,
+        38.211570739746094,
+        229.69493103027344,
+        114.31402587890625
+      ],
+      "text_sha256": "9977113c077614ef9f86ebd4361c6bf83fc08bec0f2cfa532c6907b45aaff4e0"
+    },
+    {
+      "block_id": "page-0299-block-0034",
+      "order": 34,
+      "text": "each dose increase.\n",
+      "bbox": [
+        230.98492431640625,
+        52.356590270996094,
+        239.6924285888672,
+        114.31402587890625
+      ],
+      "text_sha256": "18ad4613e436a19d05b81cce7d9e4a0a36b58479d04fb00aeb3ddfabd7896dc8"
+    },
+    {
+      "block_id": "page-0299-block-0035",
+      "order": 35,
+      "text": "Waist \n",
+      "bbox": [
+        246.607421875,
+        588.9365234375,
+        255.31492614746094,
+        608.654052734375
+      ],
+      "text_sha256": "cbf7b1e5dedce66a2562e3f14cacb0756ed6861378f7829213b7a77464bacac8"
+    },
+    {
+      "block_id": "page-0299-block-0036",
+      "order": 36,
+      "text": "circumference \n",
+      "bbox": [
+        256.6049499511719,
+        561.8540649414062,
+        265.31243896484375,
+        608.654052734375
+      ],
+      "text_sha256": "a6d5113c85a6e39599af8aaf55d01adc4ed9a201f4c0dafd6fd5d73ec806cb31"
+    },
+    {
+      "block_id": "page-0299-block-0037",
+      "order": 37,
+      "text": "and/or BMI\n",
+      "bbox": [
+        266.6024475097656,
+        573.2240600585938,
+        275.3099365234375,
+        608.654052734375
+      ],
+      "text_sha256": "2adfde889666b9fba93de0736fb98b1fd292e88a1b0183096aed47a67d35dffb"
+    },
+    {
+      "block_id": "page-0299-block-0038",
+      "order": 38,
+      "text": "Yes\nYes, as part of a \n",
+      "bbox": [
+        246.5999298095703,
+        440.2490539550781,
+        255.30743408203125,
+        550.319091796875
+      ],
+      "text_sha256": "301a4394f0bca8f5d6eea45a59a955d92fe36f6cb1a6c38f574e86a9bcfbee5c"
+    },
+    {
+      "block_id": "page-0299-block-0039",
+      "order": 39,
+      "text": "routine physical \n",
+      "bbox": [
+        256.5974426269531,
+        441.3666076660156,
+        265.304931640625,
+        493.3190612792969
+      ],
+      "text_sha256": "f36510ed3b73ad1be07f3e9077da5f87b5f2a762386d6c67cb4ca51097a56cf5"
+    },
+    {
+      "block_id": "page-0299-block-0040",
+      "order": 40,
+      "text": "health check.\n",
+      "bbox": [
+        266.5949401855469,
+        450.8165588378906,
+        275.30242919921875,
+        493.3190612792969
+      ],
+      "text_sha256": "eb90fbfc166e88fa8c333325837d77c3726397f58a9248716f05405be9260dd0"
+    },
+    {
+      "block_id": "page-0299-block-0041",
+      "order": 41,
+      "text": "Monthly for the first 3 months \n",
+      "bbox": [
+        246.59242248535156,
+        334.13897705078125,
+        255.2999267578125,
+        433.3190612792969
+      ],
+      "text_sha256": "921f9bcdfcc94e5f2ec97effb52fe230393d57cc3322973a0c5bb21c143c0bda"
+    },
+    {
+      "block_id": "page-0299-block-0042",
+      "order": 42,
+      "text": "then annually\nAt start, and then every 6 \n",
+      "bbox": [
+        246.59242248535156,
+        239.5565643310547,
+        265.29742431640625,
+        433.3190612792969
+      ],
+      "text_sha256": "e97828b3c734a66af0b8c38e0cc98cde6924204498ef18f36886b40f0d0dbbe9"
+    },
+    {
+      "block_id": "page-0299-block-0043",
+      "order": 43,
+      "text": "months\nEvery 3 months for the first \n",
+      "bbox": [
+        246.59242248535156,
+        120.2242660522461,
+        265.29742431640625,
+        323.3165588378906
+      ],
+      "text_sha256": "18dbb5d08df60ac01f18497735d92462e73e697ba708115d2b22725a48ccd47c"
+    },
+    {
+      "block_id": "page-0299-block-0044",
+      "order": 44,
+      "text": "year then annually\nAt start and when \n",
+      "bbox": [
+        246.59242248535156,
+        54.299034118652344,
+        265.29742431640625,
+        209.31655883789062
+      ],
+      "text_sha256": "81eef341d7795b340e17beb24300111b0accfff237f585d025e02d7d2a27721e"
+    },
+    {
+      "block_id": "page-0299-block-0045",
+      "order": 45,
+      "text": "needed if the patient \n",
+      "bbox": [
+        256.5899353027344,
+        45.134117126464844,
+        265.29742431640625,
+        114.31402587890625
+      ],
+      "text_sha256": "c245f1c9ebf9110e4a37491954ff6d4ac303c0a5556e76c7642a32d035886ff9"
+    },
+    {
+      "block_id": "page-0299-block-0046",
+      "order": 46,
+      "text": "gains weight rapidly\n",
+      "bbox": [
+        266.5874328613281,
+        50.13667297363281,
+        275.294921875,
+        114.31402587890625
+      ],
+      "text_sha256": "09bdd70b6b3639774168334f09eb81aa6e936e2ec69ce5cdfa1b7bec964d83b0"
+    },
+    {
+      "block_id": "page-0299-block-0047",
+      "order": 47,
+      "text": "Plasma levels of \n",
+      "bbox": [
+        282.2099304199219,
+        556.5740356445312,
+        290.91741943359375,
+        608.654052734375
+      ],
+      "text_sha256": "a4dacb8c0652911610e4c9bbebf1e2fcc1bd9d4db22d975b7944f757609528f7"
+    },
+    {
+      "block_id": "page-0299-block-0048",
+      "order": 48,
+      "text": "drug\nAt least 3–4 days after initiation \n",
+      "bbox": [
+        282.2099304199219,
+        219.5614776611328,
+        300.9149169921875,
+        608.654052734375
+      ],
+      "text_sha256": "2a5487889d962630f16d9edd7ab34e4f842e6d8ce520ec8f10f7d523cecae448"
+    },
+    {
+      "block_id": "page-0299-block-0049",
+      "order": 49,
+      "text": "and 3–4 days after every dose \n",
+      "bbox": [
+        292.2074279785156,
+        225.80152893066406,
+        300.9149169921875,
+        323.3165588378906
+      ],
+      "text_sha256": "389dd738b0f8adc7cc6b55e7ddc91e35c2a9c5bf6137ce976b3c3e88689024ae"
+    },
+    {
+      "block_id": "page-0299-block-0050",
+      "order": 50,
+      "text": "change until levels stable, then \n",
+      "bbox": [
+        302.2049255371094,
+        222.8839569091797,
+        310.91241455078125,
+        323.3165588378906
+      ],
+      "text_sha256": "b183cb5fa3db8aa648d6de7e65f49b7249e51c0f3b1489f792f4723b80e5b26c"
+    },
+    {
+      "block_id": "page-0299-block-0051",
+      "order": 51,
+      "text": "every 3 months in the first year, \n",
+      "bbox": [
+        312.02239990234375,
+        215.2415313720703,
+        320.909912109375,
+        323.3165588378906
+      ],
+      "text_sha256": "b2d8633efb930b73898854a16efbac8fc55ac47c94adc1f3bb109e40c2819d87"
+    },
+    {
+      "block_id": "page-0299-block-0052",
+      "order": 52,
+      "text": "then every 6 months for most \n",
+      "bbox": [
+        322.1999206542969,
+        226.2215118408203,
+        330.90740966796875,
+        323.3165588378906
+      ],
+      "text_sha256": "437c4ff8f34d2e52c88ac160fee52978468536b672d585a029a162cf317ad139"
+    },
+    {
+      "block_id": "page-0299-block-0053",
+      "order": 53,
+      "text": "patients (see NICE2)\n",
+      "bbox": [
+        332.1974182128906,
+        261.2904052734375,
+        341.0150146484375,
+        323.3165588378906
+      ],
+      "text_sha256": "b07bc3fda293e9203654bf2d3d43efc3b64a62cda5dcb565f8ca93488ada690d"
+    },
+    {
+      "block_id": "page-0299-block-0054",
+      "order": 54,
+      "text": "Titrate by effect and \n",
+      "bbox": [
+        282.3050231933594,
+        142.61036682128906,
+        291.01251220703125,
+        209.31539916992188
+      ],
+      "text_sha256": "2ada43d25da9b4e52ec6963595f2d5dc653050d8dcfd012136d03c58f38efda9"
+    },
+    {
+      "block_id": "page-0299-block-0055",
+      "order": 55,
+      "text": "tolerability. Do not \n",
+      "bbox": [
+        292.3025207519531,
+        148.33277893066406,
+        301.010009765625,
+        209.31539916992188
+      ],
+      "text_sha256": "ac79a6e842273bd5b1c88b82fd7959df6e55638ada6405fc267a2ccb48f4133e"
+    },
+    {
+      "block_id": "page-0299-block-0056",
+      "order": 56,
+      "text": "routinely measure unless \n",
+      "bbox": [
+        302.3000183105469,
+        128.7429962158203,
+        311.00750732421875,
+        209.31539916992188
+      ],
+      "text_sha256": "3ef6140dd576c01fa0c94d7887dda87bd1e853a7869a0c014759dc1565be1348"
+    },
+    {
+      "block_id": "page-0299-block-0057",
+      "order": 57,
+      "text": "there is evidence of lack of \n",
+      "bbox": [
+        312.2975158691406,
+        121.9478988647461,
+        321.0050048828125,
+        209.31539916992188
+      ],
+      "text_sha256": "c6bbcd27afe4143de6137095e17e4a590545d110183e90c44bfd0b4f53c08886"
+    },
+    {
+      "block_id": "page-0299-block-0058",
+      "order": 58,
+      "text": "effectiveness, poor \n",
+      "bbox": [
+        322.2950134277344,
+        147.36549377441406,
+        331.00250244140625,
+        209.31539916992188
+      ],
+      "text_sha256": "87bfca9e316f7c617dbd12d3ea563a30d2582a9972d28aba233993a1fddfe2db"
+    },
+    {
+      "block_id": "page-0299-block-0059",
+      "order": 59,
+      "text": "adherence or toxicity\n",
+      "bbox": [
+        332.2925109863281,
+        142.7903594970703,
+        341.0,
+        209.31539916992188
+      ],
+      "text_sha256": "98a199c74259c42989e6a79adce458e4ffe17c2dc39c3bd6034a3c1fbcd28320"
+    },
+    {
+      "block_id": "page-0299-block-0060",
+      "order": 60,
+      "text": "Two weeks after \n",
+      "bbox": [
+        282.2900085449219,
+        61.100486755371094,
+        290.99749755859375,
+        114.31292724609375
+      ],
+      "text_sha256": "f66ea57c8e1f51fa82fb18e718f27bafa6a1f699b545a3a864cff48f18ca42f8"
+    },
+    {
+      "block_id": "page-0299-block-0061",
+      "order": 61,
+      "text": "initiation and two weeks \n",
+      "bbox": [
+        292.2875061035156,
+        35.233055114746094,
+        300.9949951171875,
+        114.31292724609375
+      ],
+      "text_sha256": "6dfe81d34bca6ca4887242103f548a7c22bd447910d5c25310de334b294adbd0"
+    },
+    {
+      "block_id": "page-0299-block-0062",
+      "order": 62,
+      "text": "after dose change. \n",
+      "bbox": [
+        302.2850036621094,
+        53.908103942871094,
+        310.99249267578125,
+        114.31292724609375
+      ],
+      "text_sha256": "8879729201280acd929819724d053956e566d56ae0175d993a3f00a41814310b"
+    },
+    {
+      "block_id": "page-0299-block-0063",
+      "order": 63,
+      "text": "Thereafter, do not \n",
+      "bbox": [
+        312.2825012207031,
+        55.985679626464844,
+        320.989990234375,
+        114.31292724609375
+      ],
+      "text_sha256": "b0ac0579bbeeb2fb401285de6059fcbc557ae8830b0875b2da13478c2380c47c"
+    },
+    {
+      "block_id": "page-0299-block-0064",
+      "order": 64,
+      "text": "routinely measure unless \n",
+      "bbox": [
+        322.2799987792969,
+        35.465538024902344,
+        330.98748779296875,
+        114.31292724609375
+      ],
+      "text_sha256": "3ef6140dd576c01fa0c94d7887dda87bd1e853a7869a0c014759dc1565be1348"
+    },
+    {
+      "block_id": "page-0299-block-0065",
+      "order": 65,
+      "text": "there is evidence of lack \n",
+      "bbox": [
+        332.2774963378906,
+        37.498008728027344,
+        340.9849853515625,
+        114.31292724609375
+      ],
+      "text_sha256": "bb1e598938966aafc068cdec42e6d2d182df7c7d7f2696af5e8c41f42d73d7f7"
+    },
+    {
+      "block_id": "page-0299-block-0066",
+      "order": 66,
+      "text": "of effectiveness, poor \n",
+      "bbox": [
+        342.2749938964844,
+        45.185569763183594,
+        350.98248291015625,
+        114.31292724609375
+      ],
+      "text_sha256": "706a3612a68f8a1fbc3ef4a9b03b3ffeeda8d38136f11fbbff8826b3f80f8be6"
+    },
+    {
+      "block_id": "page-0299-block-0067",
+      "order": 67,
+      "text": "adherence or toxicity\n",
+      "bbox": [
+        352.2724914550781,
+        49.28810119628906,
+        360.97998046875,
+        114.31292724609375
+      ],
+      "text_sha256": "98a199c74259c42989e6a79adce458e4ffe17c2dc39c3bd6034a3c1fbcd28320"
+    },
+    {
+      "block_id": "page-0299-block-0068",
+      "order": 68,
+      "text": "For patients on lamotrigine, do an annual health check, but no special monitoring tests are needed although blood levels may indicate if high doses might be considered. \n",
+      "bbox": [
+        370.3399658203125,
+        65.2853012084961,
+        379.22747802734375,
+        612.650390625
+      ],
+      "text_sha256": "758b33dcbce5786045b1ec18282b742ca9105540c84ee68b0ee3fb3daa45fcd5"
+    },
+    {
+      "block_id": "page-0299-block-0069",
+      "order": 69,
+      "text": "References\n",
+      "bbox": [
+        397.1050109863281,
+        556.6200561523438,
+        410.1400146484375,
+        612.6539916992188
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0299-block-0070",
+      "order": 70,
+      "text": "\t 1.\t Ng F, et al. The International Society for Bipolar Disorders (ISBD) consensus guidelines for the safety monitoring of bipolar disorder treatments. Bipolar Disord 2009; 11:559–595.\n",
+      "bbox": [
+        415.0820007324219,
+        137.54385375976562,
+        422.2580261230469,
+        612.6539916992188
+      ],
+      "text_sha256": "d382aff3f31aebf7af3e569f4b48a67336b4bf70806644819f21de793ff94433"
+    },
+    {
+      "block_id": "page-0299-block-0071",
+      "order": 71,
+      "text": "\t 2.\t National Institute for Health and Care Excellence. Bipolar disorder: assessment and management. Clinical Guidance [CG185]. 2014 (Last updated February 2020); https://www.nice.org.uk/guidance/cg185.\n",
+      "bbox": [
+        424.22601318359375,
+        71.42361450195312,
+        431.2580261230469,
+        612.6480102539062
+      ],
+      "text_sha256": "7f28055820a205f3cfc5089e8f0e43a3eaa93fa69934b2a1a296b648473b26f3"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

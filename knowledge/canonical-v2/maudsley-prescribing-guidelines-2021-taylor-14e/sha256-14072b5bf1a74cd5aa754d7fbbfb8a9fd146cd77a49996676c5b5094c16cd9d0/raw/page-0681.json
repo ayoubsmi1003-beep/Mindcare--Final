@@ -1,0 +1,491 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0681",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 681,
+  "source_page_index": 680,
+  "source_page_display": 681,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "\u0003(Continued )\nDrug\nSpecific indication/additional \nnotes\nStarting dose\nUsual maintenance dose\nMaximum dose in elderly\nLumateperone14\nSchizophrenia\n42mg daily (equivalent to 60mg \nlumateperone tosylate)\nDose titration not required\n42mg daily\n42mg daily\nLurasidone\nSchizophrenia\n37mg once daily (or 18.5mg daily \nwhen given with concomitant \nmoderate CYP3A4 inhibitors \n(max. dose 74 mg once daily)\nDosing for elderly with normal \nrenal function (CrCl ≥80mL/\nminute) are the same as for \nadults with normal renal \nfunction. However, because \nelderly may have diminished \nrenal function, dose adjustments \nmay be required according to \ntheir renal function status15\n18.5–111mg daily16\nLimited data on higher doses used \nin older adults. No data are \navailable in elderly people treated \nwith 148mg. Caution should be \nexercised when treating \npatients ≥65 years of age with \nhigher doses15\nOlanzapine\nSchizophrenia\n2.5mg nocte*\n5–10mg daily*\n15mg nocte12\nAgitation/psychosis in dementia\n2.5mg nocte*\n2.5–10mg daily*\n10mg nocte* (optimal dose is 5mg \ndaily)12\nPimavanserin17\nSchizophrenia\n34mg daily (or 10mg daily if \nco-administered with strong \nCYP3A4 inhibitors)\nDose titration not required\n34mg daily (or 10mg daily if \nco-administered with strong \nCYP3A4 inhibitors)\n34mg daily (or 10mg daily if \nco-administered with strong \nCYP3A4 inhibitors)\nMonitor patients for reduced \nefficacy if used concomitantly with \nstrong CYP3A4 inducers\nQuetiapine\nSchizophrenia\n12.5–25mg daily12\n75–125mg daily11\n200–300mg daily12\nAgitation/psychosis in dementia\n12.5–25mg daily*\n50–100mg daily*\n100–300mg daily12\n",
+  "raw_text_sha256": "41d555c7f9d0894f3e815da65d9cddb7407a99b9dda8b96285c929eb995f13b7",
+  "coordinates_sha256": "df05c1efb34cca9592e978d2853abc9330e81a178da9972df15a5d487c721b1e",
+  "block_sequence_sha256": "18e9da3e9aff68fa8ec4a5c21bb71cf2331771a7ada6f7b0e9298f1811ff34c5",
+  "blocks": [
+    {
+      "block_id": "page-0681-block-0000",
+      "order": 0,
+      "text": "\u0003(Continued )\n",
+      "bbox": [
+        67.62750244140625,
+        568.2014770507812,
+        76.51499938964844,
+        606.6539916992188
+      ],
+      "text_sha256": "90c473996d890d7e46dd3846054d4ca955e156c108a6f427e77cfbf7293d5dd0"
+    },
+    {
+      "block_id": "page-0681-block-0001",
+      "order": 1,
+      "text": "Drug\nSpecific indication/additional \n",
+      "bbox": [
+        87.00250244140625,
+        418.0364685058594,
+        95.88999938964844,
+        612.6539916992188
+      ],
+      "text_sha256": "24f208c01b320a880057a7db859ef0394c24559575428d3392d29ed72c3b2942"
+    },
+    {
+      "block_id": "page-0681-block-0002",
+      "order": 2,
+      "text": "notes\nStarting dose\nUsual maintenance dose\nMaximum dose in elderly\n",
+      "bbox": [
+        87.00250244140625,
+        87.07633972167969,
+        105.88749694824219,
+        522.6389770507812
+      ],
+      "text_sha256": "d017d7fd2e6b27a0a2854089b7c2bd8b8247bb9c0cbcaead450515d1ad7004a8"
+    },
+    {
+      "block_id": "page-0681-block-0003",
+      "order": 3,
+      "text": "Lumateperone14\nSchizophrenia\n42mg daily (equivalent to 60mg \nlumateperone tosylate)\n",
+      "bbox": [
+        115.30750274658203,
+        302.0121154785156,
+        134.0124969482422,
+        612.6539306640625
+      ],
+      "text_sha256": "0bcb14949bb9ba20dd762b61e662eac78902606b4886a1d7ebacd6b202d2e4d5"
+    },
+    {
+      "block_id": "page-0681-block-0004",
+      "order": 4,
+      "text": "Dose titration not required\n",
+      "bbox": [
+        135.302490234375,
+        321.4596252441406,
+        144.00999450683594,
+        406.20220947265625
+      ],
+      "text_sha256": "b3ff0812ca648cc0891f7895895de68e50592c349d6b517f8719efd3f04ed0b8"
+    },
+    {
+      "block_id": "page-0681-block-0005",
+      "order": 5,
+      "text": "42mg daily\n42mg daily\n",
+      "bbox": [
+        115.29999542236328,
+        140.8448028564453,
+        124.00749206542969,
+        288.2872009277344
+      ],
+      "text_sha256": "7721acbaf4a1bbc3d6fdc66c61485c811977b0e2cba1048151000c703b2476e9"
+    },
+    {
+      "block_id": "page-0681-block-0006",
+      "order": 6,
+      "text": "Lurasidone\nSchizophrenia\n37mg once daily (or 18.5mg daily \nwhen given with concomitant \n",
+      "bbox": [
+        153.4224853515625,
+        298.9147033691406,
+        172.1274871826172,
+        612.6547241210938
+      ],
+      "text_sha256": "e50cb08eb5e63bf88d5d06bde290f39bfeeca6790f0c4d4b4823163d8a520a15"
+    },
+    {
+      "block_id": "page-0681-block-0007",
+      "order": 7,
+      "text": "moderate CYP3A4 inhibitors \n",
+      "bbox": [
+        173.41748046875,
+        314.7248229980469,
+        182.12498474121094,
+        406.20220947265625
+      ],
+      "text_sha256": "4b6d41ff7219e70ca81cf5b7697af395669793aaab7aeda91078900cc8877c24"
+    },
+    {
+      "block_id": "page-0681-block-0008",
+      "order": 8,
+      "text": "(max. dose 74 mg once daily)\n",
+      "bbox": [
+        183.41497802734375,
+        314.4546813964844,
+        192.12249755859375,
+        406.20220947265625
+      ],
+      "text_sha256": "ba6a47dd0e5461d453e6f2657337e3f9dda192456bcb88c7ae5e02e53fa1b416"
+    },
+    {
+      "block_id": "page-0681-block-0009",
+      "order": 9,
+      "text": "Dosing for elderly with normal \n",
+      "bbox": [
+        193.41249084472656,
+        307.0220947265625,
+        202.1199951171875,
+        406.2021789550781
+      ],
+      "text_sha256": "61990a580440304644a947dce6121cd48be90f0af8b5f9597e3e82252733a5aa"
+    },
+    {
+      "block_id": "page-0681-block-0010",
+      "order": 10,
+      "text": "renal function (CrCl ≥80mL/\n",
+      "bbox": [
+        203.4099884033203,
+        317.07965087890625,
+        212.11749267578125,
+        406.2021789550781
+      ],
+      "text_sha256": "3682e9f6f087a4d347e94ed00b9baaa754b89b7d87df3beed045db3e5dd6eb85"
+    },
+    {
+      "block_id": "page-0681-block-0011",
+      "order": 11,
+      "text": "minute) are the same as for \n",
+      "bbox": [
+        213.40748596191406,
+        316.3296813964844,
+        222.114990234375,
+        406.2021789550781
+      ],
+      "text_sha256": "5e166b61f119e339cf8c3905d565981f73dda2336387f79b78a4236914c05378"
+    },
+    {
+      "block_id": "page-0681-block-0012",
+      "order": 12,
+      "text": "adults with normal renal \n",
+      "bbox": [
+        223.4049835205078,
+        326.3271179199219,
+        232.11248779296875,
+        406.2021789550781
+      ],
+      "text_sha256": "f7a913c7b55dc894e78b90dfb6e36491e1f7de9bbdb120536d8cb97df3a4ef83"
+    },
+    {
+      "block_id": "page-0681-block-0013",
+      "order": 13,
+      "text": "function. However, because \n",
+      "bbox": [
+        233.40248107910156,
+        315.6246643066406,
+        242.1099853515625,
+        406.2021789550781
+      ],
+      "text_sha256": "2bed94ecadc06abc16e04cbd8ee420f1524ed13637787b6b2d4e25fadd9d1165"
+    },
+    {
+      "block_id": "page-0681-block-0014",
+      "order": 14,
+      "text": "elderly may have diminished \n",
+      "bbox": [
+        243.3999786376953,
+        314.11712646484375,
+        252.10748291015625,
+        406.2021789550781
+      ],
+      "text_sha256": "5bab120ec1b159d439fcbe77f4bd019c210f5f12093e14ba0c17be336b993f3b"
+    },
+    {
+      "block_id": "page-0681-block-0015",
+      "order": 15,
+      "text": "renal function, dose adjustments \n",
+      "bbox": [
+        253.39747619628906,
+        299.6495666503906,
+        262.10498046875,
+        406.2021789550781
+      ],
+      "text_sha256": "7ebfd7216acab613af5cf47e513cf6d5edf095cec2e5cd47c59257da08b33b65"
+    },
+    {
+      "block_id": "page-0681-block-0016",
+      "order": 16,
+      "text": "may be required according to \n",
+      "bbox": [
+        263.3949890136719,
+        310.34466552734375,
+        272.10247802734375,
+        406.2021789550781
+      ],
+      "text_sha256": "8d46720673c16117661eb56ffaef91116ffd05d02917c9e07fe71f9be8ec41ee"
+    },
+    {
+      "block_id": "page-0681-block-0017",
+      "order": 17,
+      "text": "their renal function status15\n",
+      "bbox": [
+        273.3924865722656,
+        319.3851623535156,
+        282.0999755859375,
+        406.2021789550781
+      ],
+      "text_sha256": "3a64adcdfca4259fe730f74b4139e11c0b7bd64f983fa41a8b7af70d6480660d"
+    },
+    {
+      "block_id": "page-0681-block-0018",
+      "order": 18,
+      "text": "18.5–111mg daily16\nLimited data on higher doses used \n",
+      "bbox": [
+        153.4324951171875,
+        64.5678939819336,
+        162.13999938964844,
+        288.2841796875
+      ],
+      "text_sha256": "fb8bfb14721b368b3f569c2c51fd9c6ae595f86e895b9b5df938cfa33a42ecbe"
+    },
+    {
+      "block_id": "page-0681-block-0019",
+      "order": 19,
+      "text": "in older adults. No data are \n",
+      "bbox": [
+        163.42999267578125,
+        87.21028900146484,
+        172.1374969482422,
+        176.26519775390625
+      ],
+      "text_sha256": "d88c58e269f285f8d83d023511bd9d26a17ae1041665b03736337c7502ecb6a8"
+    },
+    {
+      "block_id": "page-0681-block-0020",
+      "order": 20,
+      "text": "available in elderly people treated \n",
+      "bbox": [
+        173.427490234375,
+        67.2303695678711,
+        182.13499450683594,
+        176.26519775390625
+      ],
+      "text_sha256": "0b4c840ebc0742eac08acd6e2abc7487fd3427a073272024d8e363032ba95fc3"
+    },
+    {
+      "block_id": "page-0681-block-0021",
+      "order": 21,
+      "text": "with 148mg. Caution should be \n",
+      "bbox": [
+        183.42498779296875,
+        72.0528793334961,
+        192.1324920654297,
+        176.26519775390625
+      ],
+      "text_sha256": "a9d55b268a1a6332d29ebb6528aad7ce1adba9183925dea877d2100121e2bafe"
+    },
+    {
+      "block_id": "page-0681-block-0022",
+      "order": 22,
+      "text": "exercised when treating \n",
+      "bbox": [
+        193.4224853515625,
+        98.1977767944336,
+        202.12998962402344,
+        176.26519775390625
+      ],
+      "text_sha256": "d0fa77891889ab0087d035a714a94435ce0a22595b9cd80a2ce15c3b128d40fe"
+    },
+    {
+      "block_id": "page-0681-block-0023",
+      "order": 23,
+      "text": "patients ≥65 years of age with \n",
+      "bbox": [
+        203.41998291015625,
+        77.00276947021484,
+        212.1274871826172,
+        176.26519775390625
+      ],
+      "text_sha256": "45813ff651e91aa18e88163a27b299d0a8933de9c42b6e738e24d91696329d89"
+    },
+    {
+      "block_id": "page-0681-block-0024",
+      "order": 24,
+      "text": "higher doses15\n",
+      "bbox": [
+        213.41748046875,
+        130.97080993652344,
+        222.12498474121094,
+        176.26519775390625
+      ],
+      "text_sha256": "a890c3d6084539cc53bc6d66c07a5f6bd47cef47595b0fdad627ed7f2653cc73"
+    },
+    {
+      "block_id": "page-0681-block-0025",
+      "order": 25,
+      "text": "Olanzapine\nSchizophrenia\n2.5mg nocte*\n5–10mg daily*\n15mg nocte12\n",
+      "bbox": [
+        291.5575256347656,
+        132.64317321777344,
+        300.2650146484375,
+        612.6539916992188
+      ],
+      "text_sha256": "92c8ba03983a6658a68970f50eff6e9d83d8aee90a4b0d2e17aec8ad49473d7c"
+    },
+    {
+      "block_id": "page-0681-block-0026",
+      "order": 26,
+      "text": "Agitation/psychosis in dementia\n2.5mg nocte*\n2.5–10mg daily*\n10mg nocte* (optimal dose is 5mg \ndaily)12\n",
+      "bbox": [
+        309.6825256347656,
+        62.484886169433594,
+        328.38751220703125,
+        522.6397094726562
+      ],
+      "text_sha256": "3af37764ddd34c1ef381881de40a2282950560ba59d1b68eb5329709855a7585"
+    },
+    {
+      "block_id": "page-0681-block-0027",
+      "order": 27,
+      "text": "Pimavanserin17\nSchizophrenia\n34mg daily (or 10mg daily if \nco-administered with strong \n",
+      "bbox": [
+        337.8075256347656,
+        314.1021423339844,
+        356.51251220703125,
+        612.6539916992188
+      ],
+      "text_sha256": "9dc44a59409d2d5f69c4a669cb29c5d34657931eb29894677b7d7311a3114d81"
+    },
+    {
+      "block_id": "page-0681-block-0028",
+      "order": 28,
+      "text": "CYP3A4 inhibitors)\n",
+      "bbox": [
+        357.8025207519531,
+        345.7671203613281,
+        366.510009765625,
+        406.20220947265625
+      ],
+      "text_sha256": "738c4925fbbfcf2a2368abcf8060b72da597a13200246cffb9f4259b17d4f937"
+    },
+    {
+      "block_id": "page-0681-block-0029",
+      "order": 29,
+      "text": "Dose titration not required\n",
+      "bbox": [
+        367.8000183105469,
+        321.4596252441406,
+        376.50750732421875,
+        406.20220947265625
+      ],
+      "text_sha256": "b3ff0812ca648cc0891f7895895de68e50592c349d6b517f8719efd3f04ed0b8"
+    },
+    {
+      "block_id": "page-0681-block-0030",
+      "order": 30,
+      "text": "34mg daily (or 10mg daily if \nco-administered with strong \n",
+      "bbox": [
+        337.8000183105469,
+        196.18711853027344,
+        356.5050048828125,
+        288.2872009277344
+      ],
+      "text_sha256": "7a2592394786ee8947731e3762ef5a49bbc3370e5318f2ace9826e2c4917fc86"
+    },
+    {
+      "block_id": "page-0681-block-0031",
+      "order": 31,
+      "text": "CYP3A4 inhibitors)\n",
+      "bbox": [
+        357.7950134277344,
+        227.8520965576172,
+        366.50250244140625,
+        288.2872009277344
+      ],
+      "text_sha256": "738c4925fbbfcf2a2368abcf8060b72da597a13200246cffb9f4259b17d4f937"
+    },
+    {
+      "block_id": "page-0681-block-0032",
+      "order": 32,
+      "text": "34mg daily (or 10mg daily if \nco-administered with strong \n",
+      "bbox": [
+        337.7925109863281,
+        84.16732025146484,
+        356.49749755859375,
+        176.2672119140625
+      ],
+      "text_sha256": "7a2592394786ee8947731e3762ef5a49bbc3370e5318f2ace9826e2c4917fc86"
+    },
+    {
+      "block_id": "page-0681-block-0033",
+      "order": 33,
+      "text": "CYP3A4 inhibitors)\n",
+      "bbox": [
+        357.7875061035156,
+        115.83235931396484,
+        366.4949951171875,
+        176.2672119140625
+      ],
+      "text_sha256": "738c4925fbbfcf2a2368abcf8060b72da597a13200246cffb9f4259b17d4f937"
+    },
+    {
+      "block_id": "page-0681-block-0034",
+      "order": 34,
+      "text": "Monitor patients for reduced \n",
+      "bbox": [
+        367.7850036621094,
+        81.80489349365234,
+        376.49249267578125,
+        176.2672119140625
+      ],
+      "text_sha256": "e4f9876bf69b591fdc12f09ddb6d6b040a3ef78911764c11f6c06f7b77fd5778"
+    },
+    {
+      "block_id": "page-0681-block-0035",
+      "order": 35,
+      "text": "efficacy if used concomitantly with \n",
+      "bbox": [
+        377.7825012207031,
+        63.497276306152344,
+        386.489990234375,
+        176.2672119140625
+      ],
+      "text_sha256": "ab14a6b9236c1a4e9c3c1aee996ad52970efd23979c75e67d29ef1052a9e1370"
+    },
+    {
+      "block_id": "page-0681-block-0036",
+      "order": 36,
+      "text": "strong CYP3A4 inducers\n",
+      "bbox": [
+        387.7799987792969,
+        98.46231842041016,
+        396.48748779296875,
+        176.2672119140625
+      ],
+      "text_sha256": "06751faaa6f6c054950be3c8ee21126470aa1ad0fb1802d863ea0941dcc11603"
+    },
+    {
+      "block_id": "page-0681-block-0037",
+      "order": 37,
+      "text": "Quetiapine\nSchizophrenia\n12.5–25mg daily12\n75–125mg daily11\n200–300mg daily12\n",
+      "bbox": [
+        405.9075012207031,
+        115.55101013183594,
+        414.6400146484375,
+        612.6547241210938
+      ],
+      "text_sha256": "7923a4d97144c6300df832167b54bb31be0ab542ce3498eafbd5460c3d101486"
+    },
+    {
+      "block_id": "page-0681-block-0038",
+      "order": 38,
+      "text": "Agitation/psychosis in dementia\n12.5–25mg daily*\n50–100mg daily*\n100–300mg daily12\n",
+      "bbox": [
+        424.0575256347656,
+        115.55101013183594,
+        432.7650146484375,
+        522.6397094726562
+      ],
+      "text_sha256": "16531c162bdfdadbeaa705a149272d32023d4c5726309690983a33399de0bed0"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

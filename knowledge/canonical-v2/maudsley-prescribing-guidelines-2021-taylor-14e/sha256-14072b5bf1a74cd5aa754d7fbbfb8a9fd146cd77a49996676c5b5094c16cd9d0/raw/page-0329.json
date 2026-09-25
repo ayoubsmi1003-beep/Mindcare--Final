@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0329",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 329,
+  "source_page_index": 328,
+  "source_page_display": 329,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "308    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nor drug should be considered. It is important, however, to be clear about what consti-\ntutes ‘no effect’. Different patterns of response have been identified,10 and in some indi-\nviduals response is slow to emerge. However, in those ultimately responsive to treatment, \nall will very probably have begun to show at least minor improvement at 4 weeks. \nThus, those showing no discernible improvement at this time will very probably never \nrespond to the prescribed drug at that dose. In contrast, those showing small improve-\nments at 4 weeks (that is, improvement not meeting criteria for ‘response’) may well go \non to respond fully.11 A ‘mega-analysis’12 has shown that if antidepressant (citalopram, \nparoxetine or sertraline specifically) trials are examined with regards to the effects on \ndepressed mood alone (rather than the total Hamilton Depression Rating Scale score), \nthen both a rapid effect and a dose-response relationship are evident.\nChoice of antidepressant and relative side effects\nSelective serotonin re-uptake inhibitors (SSRIs) are well tolerated compared with the \nolder tricyclic antidepressants (TCAs) and mono-amine oxidase inhibitors (MAOIs), \nand are generally recommended as first-line pharmacological treatment for depres-\nsion.13 There is a suggestion from network meta-analyses1,14 that some antidepressants \nmay be more effective overall than others, but this has not been consistently demon-\nstrated in head-to-head studies and should therefore be treated with caution. Side effect \nprofiles of antidepressants do differ. For example, paroxetine has been associated with \nmore weight gain and a higher incidence of sexual dysfunction, and sertraline with a \nhigher incidence of diarrhoea than other SSRIs.15 Dual re-uptake inhibitors such as \nvenlafaxine and duloxetine tend to be tolerated less well than SSRIs but better than \nTCAs. With all drugs there is marked inter-individual variation in tolerability which is \nnot easily predicted by knowledge of a drug’s likely adverse effects. A flexible approach \nis usually required to find the right drug for a particular patient.\nAs well as headache and GI symptoms, SSRIs as a class are associated with a range \nof other side effects, including sexual dysfunction (see the relevant section in this chap-\nter), hyponatraemia (see the section on hyponatraemia) and GI bleeds (see SSRIs and \nbleeding). TCAs have a number of adverse cardiovascular effects (hypotension, tachy-\ncardia and QTc prolongation), and are particularly toxic in overdose16 (see section on \nPsychotropic drugs in overdose in Chapter 13). The now rarely used MAOIs have the \npotential to interact with tyramine-containing foods to cause hypertensive crisis and \nmuch more commonly cause hypotension. All antidepressant drugs can cause discon-\ntinuation symptoms, with short half-life drugs probably being most problematic in this \nrespect (see section on Stopping antidepressants). See the following pages for a sum-\nmary of the clinically relevant side effects of available antidepressant drugs.\nDrug interactions\nSome SSRIs are potent inhibitors of individual or multiple hepatic cytochrome P450 \n(CYP) pathways and the magnitude of these effects is dose-related. A number of clini-\ncally significant drug interactions can therefore be predicted. For example, fluvoxamine \nis a potent inhibitor of CYP1A2, which can result in increased theophylline serum lev-\nels, fluoxetine is a potent inhibitor of CYP2D6, which can result in increased seizure \n",
+  "raw_text_sha256": "6c8673afaf857ec8f5b77323fb398699458f098b7bfb3ba458b8d6d0003f0dff",
+  "coordinates_sha256": "291d9e1e90fd7e81df9642e02df4cb88e69111aea58922df9c18bdf1ceaeef18",
+  "block_sequence_sha256": "7d66fc22c36a9259271c331005a42b8b5c9156fbfff37c9fe2ade5039d4e55d9",
+  "blocks": [
+    {
+      "block_id": "page-0329-block-0000",
+      "order": 0,
+      "text": "308    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "965ed3c0b3402748e22bfba3d812005f42cf88e9d4082136044849fa754c11ef"
+    },
+    {
+      "block_id": "page-0329-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0329-block-0002",
+      "order": 2,
+      "text": "or drug should be considered. It is important, however, to be clear about what consti-\ntutes ‘no effect’. Different patterns of response have been identified,10 and in some indi-\nviduals response is slow to emerge. However, in those ultimately responsive to treatment, \nall will very probably have begun to show at least minor improvement at 4 weeks. \nThus, those showing no discernible improvement at this time will very probably never \nrespond to the prescribed drug at that dose. In contrast, those showing small improve-\nments at 4 weeks (that is, improvement not meeting criteria for ‘response’) may well go \non to respond fully.11 A ‘mega-analysis’12 has shown that if antidepressant (citalopram, \nparoxetine or sertraline specifically) trials are examined with regards to the effects on \ndepressed mood alone (rather than the total Hamilton Depression Rating Scale score), \nthen both a rapid effect and a dose-response relationship are evident.\n",
+      "bbox": [
+        61.886199951171875,
+        62.55029296875,
+        436.7071533203125,
+        194.27029418945312
+      ],
+      "text_sha256": "7130c4b3c6d14b1e33e5f5680ba0a2633d969b8be997b429d7e2b3b868b60eab"
+    },
+    {
+      "block_id": "page-0329-block-0003",
+      "order": 3,
+      "text": "Choice of antidepressant and relative side effects\n",
+      "bbox": [
+        61.88999938964844,
+        211.70529174804688,
+        316.18798828125,
+        224.74029541015625
+      ],
+      "text_sha256": "dbaa92acc28efdb81d9a19ffb044ea640eaaeab113df77d5b0ae549adca28efc"
+    },
+    {
+      "block_id": "page-0329-block-0004",
+      "order": 4,
+      "text": "Selective serotonin re-uptake inhibitors (SSRIs) are well tolerated compared with the \nolder tricyclic antidepressants (TCAs) and mono-amine oxidase inhibitors (MAOIs), \nand are generally recommended as first-line pharmacological treatment for depres-\nsion.13 There is a suggestion from network meta-analyses1,14 that some antidepressants \nmay be more effective overall than others, but this has not been consistently demon-\nstrated in head-to-head studies and should therefore be treated with caution. Side effect \nprofiles of antidepressants do differ. For example, paroxetine has been associated with \nmore weight gain and a higher incidence of sexual dysfunction, and sertraline with a \nhigher incidence of diarrhoea than other SSRIs.15 Dual re-uptake inhibitors such as \nvenlafaxine and duloxetine tend to be tolerated less well than SSRIs but better than \nTCAs. With all drugs there is marked inter-individual variation in tolerability which is \nnot easily predicted by knowledge of a drug’s likely adverse effects. A flexible approach \nis usually required to find the right drug for a particular patient.\n",
+      "bbox": [
+        61.88999938964844,
+        230.55029296875,
+        436.714599609375,
+        386.2702941894531
+      ],
+      "text_sha256": "95c53d2e5c31ba971588ddd9682691bbc0f4f39e10d3885b51c9f7b1a58c0791"
+    },
+    {
+      "block_id": "page-0329-block-0005",
+      "order": 5,
+      "text": "As well as headache and GI symptoms, SSRIs as a class are associated with a range \nof other side effects, including sexual dysfunction (see the relevant section in this chap-\nter), hyponatraemia (see the section on hyponatraemia) and GI bleeds (see SSRIs and \nbleeding). TCAs have a number of adverse cardiovascular effects (hypotension, tachy-\ncardia and QTc prolongation), and are particularly toxic in overdose16 (see section on \nPsychotropic drugs in overdose in Chapter 13). The now rarely used MAOIs have the \npotential to interact with tyramine-containing foods to cause hypertensive crisis and \nmuch more commonly cause hypotension. All antidepressant drugs can cause discon-\ntinuation symptoms, with short half-life drugs probably being most problematic in this \nrespect (see section on Stopping antidepressants). See the following pages for a sum-\nmary of the clinically relevant side effects of available antidepressant drugs.\n",
+      "bbox": [
+        61.888397216796875,
+        386.55029296875,
+        436.7129211425781,
+        518.2703247070312
+      ],
+      "text_sha256": "560afcc74d5eae34b7afef7c6fab4a25b01121e34de7cb8aa6818474baa86c75"
+    },
+    {
+      "block_id": "page-0329-block-0006",
+      "order": 6,
+      "text": "Drug interactions\n",
+      "bbox": [
+        61.88999938964844,
+        535.705322265625,
+        151.72698974609375,
+        548.7402954101562
+      ],
+      "text_sha256": "5186b3517636eb30beb613a4f1459f26e323cf9c4f02370f28a210f501a4f144"
+    },
+    {
+      "block_id": "page-0329-block-0007",
+      "order": 7,
+      "text": "Some SSRIs are potent inhibitors of individual or multiple hepatic cytochrome P450 \n(CYP) pathways and the magnitude of these effects is dose-related. A number of clini-\ncally significant drug interactions can therefore be predicted. For example, fluvoxamine \nis a potent inhibitor of CYP1A2, which can result in increased theophylline serum lev-\nels, fluoxetine is a potent inhibitor of CYP2D6, which can result in increased seizure \n",
+      "bbox": [
+        61.88999938964844,
+        554.55029296875,
+        436.7100830078125,
+        614.2703247070312
+      ],
+      "text_sha256": "c270138c553d2090c92cf1752cb2095ead5824fddb9a2bb8b9e9097b017c2dd4"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,263 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0820",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 820,
+  "source_page_index": 819,
+  "source_page_display": 820,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    799\nCHAPTER 10\nCurrently and historically used medications for behaviour disorder\nDrug class\nClinical applications\nNotes\nAntipsychotics6\nUse in psychosis with LD is \njustified\nUsed across a broad range of \nbehavioural disturbances7\nMay be useful for aggression \nand irritability\nThe most widely used8,9 yet most controversial medication \nfor behavioural problems.10,11 Although an RCT12 cast doubt \non their efficacy for this indication the study was not \nwithout its problems and there is a significant body of \nother evidence supporting their use including a number of \nsmall RCTs in children with LD\nDiscontinuation studies in long-term treatment commonly \n(but not always) show re-emergence of problem behaviours\nNICE suggests considering slow withdrawal of \nantipsychotics in all those who do not have psychotic \nsymptoms.13 The UK STOMP programme promotes \ndeprescribing of antipsychotics.14 It has been successful, but \nantipsychotics are often replaced by other psychotropics.15\nBefore the advent of SGAs the best evidence was for \nhaloperidol16 in the context of autism and for \nzuclopenthixol for behavioural disturbance.17 \nZuclopenthixol may reduce aggression and challenging \nbehaviour.18\nAmongst SGAs the best evidence is for risperidone19,20 at \nlow dose (0.5–2mg) for aggression and mood instability, \nparticularly with associated autism though also in \nnon-autistic cases. Aripiprazole has an FDA licence for \nbehavioural disturbance in young people with autism.21,22\nSome evidence to support olanzapine23 and case reports \nof clozapine24 for very severe cases of aggression though \nnot widely used and unlikely to be used outside highly \nspecialist (inpatient) settings. In 2015, Cochrane uncovered \n38 case reports and chart reviews but found no RCT \nevidence for the use of clozapine in psychosis in LD.25\nResults for quetiapine are modest at best.26\nSSRIs\nHelpful for severe anxiety and \nobsessionality in autistic \nspectrum disorder. Use here is \noff-licence unless an additional \ndiagnosis of anxiety disorder \nor OCD is made\nAlso used as a first-line \nalternative to antipsychotics \nfor aggression and impulsivity\nCommonly used in combination with antipsychotics though \nlimited evidence base for combination treatment. \nEffectiveness in absence of mood or anxiety-spectrum \ndisorder is unclear, however, and a 2013 Cochrane review \nwas pessimistic27 about the evidence for their effectiveness \nfor behaviour disorder in autistic children (who may be at \nheightened risk of adverse effects) though a little more \nencouraging in adults. Some good evidence for fluoxetine \nin OCD in LD/autism although dropout rate is high.28\nGenerally, quality of trials is poor and effects may be \nexaggerated by use in less severe cases.29 Caution needed \nbecause of the risk of precipitation of hypomania in this \npopulation.30 As with antipsychotics, there are major \nconcerns about overprescribing.31\nVenlafaxine is probably not effective.32\n(Continued)\n",
+  "raw_text_sha256": "410a79eb744b0affd6f3fd17b85151f2da57b55a4ce57e4a7a0b690e8d174e17",
+  "coordinates_sha256": "a38d3d78c767583fd4c0bf6963e415b2d0f2525278dc2feeb2ce1b104926ce0a",
+  "block_sequence_sha256": "5e021cb76339da9e175c33dfb7a4c5ea5e09127fc199f8fc268e0682e80ae3ad",
+  "blocks": [
+    {
+      "block_id": "page-0820-block-0000",
+      "order": 0,
+      "text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    799\n",
+      "bbox": [
+        47.999698638916016,
+        31.395221710205078,
+        419.96697998046875,
+        41.0272216796875
+      ],
+      "text_sha256": "354e7509d5237d295d1950952b3bbba8f91a77382a2742f3d22e1d84ccb12b24"
+    },
+    {
+      "block_id": "page-0820-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        454.4096984863281,
+        75.763671875,
+        463.88970947265625,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0820-block-0002",
+      "order": 2,
+      "text": "Currently and historically used medications for behaviour disorder\n",
+      "bbox": [
+        48.0,
+        62.31540298461914,
+        390.4960632324219,
+        75.35040283203125
+      ],
+      "text_sha256": "a6e5935437ba609f9923f13d41b0aeb70d0c2826b2b3d143060044740f2a7d48"
+    },
+    {
+      "block_id": "page-0820-block-0003",
+      "order": 3,
+      "text": "Drug class\nClinical applications\nNotes\n",
+      "bbox": [
+        48.0,
+        88.82289123535156,
+        249.50250244140625,
+        97.71038818359375
+      ],
+      "text_sha256": "5b5226743abd3e7e3b81240b88e867eecaf8f5d0ef5af556253236b52952c8d5"
+    },
+    {
+      "block_id": "page-0820-block-0004",
+      "order": 4,
+      "text": "Antipsychotics6\nUse in psychosis with LD is \njustified\n",
+      "bbox": [
+        48.0,
+        109.1253890991211,
+        204.7949981689453,
+        127.8328857421875
+      ],
+      "text_sha256": "a84d9d57a296f710440d8852f754c3eee3f0381ecf302dc6e93953fa186d06a9"
+    },
+    {
+      "block_id": "page-0820-block-0005",
+      "order": 5,
+      "text": "Used across a broad range of \nbehavioural disturbances7\n",
+      "bbox": [
+        118.11000061035156,
+        132.1228790283203,
+        213.28501892089844,
+        150.827880859375
+      ],
+      "text_sha256": "cb9dbfe881cc9eb8286f6ff802e4964aa1b1f02989b7e1615ed055a6aadad776"
+    },
+    {
+      "block_id": "page-0820-block-0006",
+      "order": 6,
+      "text": "May be useful for aggression \nand irritability\n",
+      "bbox": [
+        118.11000061035156,
+        155.1278839111328,
+        212.57998657226562,
+        173.8328857421875
+      ],
+      "text_sha256": "c2eeec4efff499e2ff21fde8b002d2805c94768b4007591a306e3c0f3510a73c"
+    },
+    {
+      "block_id": "page-0820-block-0007",
+      "order": 7,
+      "text": "The most widely used8,9 yet most controversial medication \nfor behavioural problems.10,11 Although an RCT12 cast doubt \non their efficacy for this indication the study was not \nwithout its problems and there is a significant body of \nother evidence supporting their use including a number of \nsmall RCTs in children with LD\n",
+      "bbox": [
+        229.08511352539062,
+        109.12288665771484,
+        421.88763427734375,
+        167.82537841796875
+      ],
+      "text_sha256": "59e863249f52a4ecff46d931785e94898c2598139be3a79f8fade9230f2ac6a7"
+    },
+    {
+      "block_id": "page-0820-block-0008",
+      "order": 8,
+      "text": "Discontinuation studies in long-term treatment commonly \n(but not always) show re-emergence of problem behaviours\n",
+      "bbox": [
+        229.08511352539062,
+        172.11537170410156,
+        419.68267822265625,
+        190.82037353515625
+      ],
+      "text_sha256": "a9315e061edd26b81b6d1cd5d6e13b54d0611d6c50aa8f81bef2ecd92f93a430"
+    },
+    {
+      "block_id": "page-0820-block-0009",
+      "order": 9,
+      "text": "NICE suggests considering slow withdrawal of \nantipsychotics in all those who do not have psychotic \nsymptoms.13 The UK STOMP programme promotes \ndeprescribing of antipsychotics.14 It has been successful, but \nantipsychotics are often replaced by other psychotropics.15\n",
+      "bbox": [
+        229.08441162109375,
+        195.11036682128906,
+        422.07440185546875,
+        243.8328857421875
+      ],
+      "text_sha256": "b88fdcdd9feff74830d2486526dc63b17c81eff73a9315b787a7a821cd789676"
+    },
+    {
+      "block_id": "page-0820-block-0010",
+      "order": 10,
+      "text": "Before the advent of SGAs the best evidence was for \nhaloperidol16 in the context of autism and for \nzuclopenthixol for behavioural disturbance.17 \nZuclopenthixol may reduce aggression and challenging \nbehaviour.18\n",
+      "bbox": [
+        229.0865020751953,
+        248.1278839111328,
+        405.9370422363281,
+        296.83038330078125
+      ],
+      "text_sha256": "6785127fdd912a1439b96a8a2a9e402b5a53c90b4e6d7a374a9a57423cde4124"
+    },
+    {
+      "block_id": "page-0820-block-0011",
+      "order": 11,
+      "text": "Amongst SGAs the best evidence is for risperidone19,20 at \nlow dose (0.5–2mg) for aggression and mood instability, \nparticularly with associated autism though also in \nnon-autistic cases. Aripiprazole has an FDA licence for \nbehavioural disturbance in young people with autism.21,22\n",
+      "bbox": [
+        229.0865020751953,
+        300.9478759765625,
+        416.7170715332031,
+        349.82537841796875
+      ],
+      "text_sha256": "fa9a592a906b1262470da45331cb725df7bc0ff88d480636a941bcb8c434d84a"
+    },
+    {
+      "block_id": "page-0820-block-0012",
+      "order": 12,
+      "text": "Some evidence to support olanzapine23 and case reports \nof clozapine24 for very severe cases of aggression though \nnot widely used and unlikely to be used outside highly \nspecialist (inpatient) settings. In 2015, Cochrane uncovered \n38 case reports and chart reviews but found no RCT \nevidence for the use of clozapine in psychosis in LD.25\n",
+      "bbox": [
+        229.0865936279297,
+        353.9478759765625,
+        419.8284912109375,
+        412.82537841796875
+      ],
+      "text_sha256": "4ebe00a4f3b9218c9aabd0aeef12c7d6cdd745b9a65bb0ea94e524844d2aa9c3"
+    },
+    {
+      "block_id": "page-0820-block-0013",
+      "order": 13,
+      "text": "Results for quetiapine are modest at best.26\n",
+      "bbox": [
+        229.0865020751953,
+        416.9478759765625,
+        370.9201354980469,
+        425.83538818359375
+      ],
+      "text_sha256": "9a3c321ee0747d2ad0ab49468cb99d0e2396162542b3638539b3ace5d89197b5"
+    },
+    {
+      "block_id": "page-0820-block-0014",
+      "order": 14,
+      "text": "SSRIs\nHelpful for severe anxiety and \nobsessionality in autistic \nspectrum disorder. Use here is \noff-licence unless an additional \ndiagnosis of anxiety disorder \nor OCD is made\n",
+      "bbox": [
+        48.0,
+        435.2528991699219,
+        218.81996154785156,
+        493.9478759765625
+      ],
+      "text_sha256": "426508cce9e906b0b2abee122cbec02fb623086cc84b1f9337fbd0a317997a66"
+    },
+    {
+      "block_id": "page-0820-block-0015",
+      "order": 15,
+      "text": "Also used as a first-line \nalternative to antipsychotics \nfor aggression and impulsivity\n",
+      "bbox": [
+        118.11000061035156,
+        498.2378845214844,
+        212.98495483398438,
+        526.9403686523438
+      ],
+      "text_sha256": "44921602d036dbae7220ae7d3e53935e0d7527ae734a748d9ce811fca879eb60"
+    },
+    {
+      "block_id": "page-0820-block-0016",
+      "order": 16,
+      "text": "Commonly used in combination with antipsychotics though \nlimited evidence base for combination treatment. \nEffectiveness in absence of mood or anxiety-spectrum \ndisorder is unclear, however, and a 2013 Cochrane review \nwas pessimistic27 about the evidence for their effectiveness \nfor behaviour disorder in autistic children (who may be at \nheightened risk of adverse effects) though a little more \nencouraging in adults. Some good evidence for fluoxetine \nin OCD in LD/autism although dropout rate is high.28\n",
+      "bbox": [
+        229.08749389648438,
+        435.2303771972656,
+        421.627685546875,
+        523.9503784179688
+      ],
+      "text_sha256": "0e1385f65b4e62611cdd7f29df9d12eaa087ae1a80e8b1d4ad05b15c81503fbd"
+    },
+    {
+      "block_id": "page-0820-block-0017",
+      "order": 17,
+      "text": "Generally, quality of trials is poor and effects may be \nexaggerated by use in less severe cases.29 Caution needed \nbecause of the risk of precipitation of hypomania in this \npopulation.30 As with antipsychotics, there are major \nconcerns about overprescribing.31\n",
+      "bbox": [
+        229.0865020751953,
+        528.2528686523438,
+        415.51507568359375,
+        576.9578857421875
+      ],
+      "text_sha256": "4d9e63ad141bfebee5fe2047b4cbc582ed4275d2b1fd40d31eda710f2437b988"
+    },
+    {
+      "block_id": "page-0820-block-0018",
+      "order": 18,
+      "text": "Venlafaxine is probably not effective.32\n",
+      "bbox": [
+        229.0865936279297,
+        581.0728759765625,
+        356.20513916015625,
+        589.9603881835938
+      ],
+      "text_sha256": "804326261732be4c66e67e1228bb9563e277cc2aeca9d484abf1c067b1f49cb1"
+    },
+    {
+      "block_id": "page-0820-block-0019",
+      "order": 19,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.9849853515625,
+        599.665771484375,
+        419.99993896484375,
+        608.4182739257812
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,107 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0796",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 796,
+  "source_page_index": 795,
+  "source_page_display": 796,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of other psychiatric conditions     775\nCHAPTER 9\n\t77.\t van Eijk MM, et al. Effect of rivastigmine as an adjunct to usual care with haloperidol on duration of delirium and mortality in critically ill \npatients: a multicentre, double-blind, placebo-controlled randomised trial. Lancet 2010; 376:1829–1837.\n\t78.\t Yu A, et al. Cholinesterase inhibitors for the treatment of delirium in non-ICU settings. Cochrane Database Syst Rev 2018; 6:Cd012494.\n\t79.\t Sher Y, et al. Adjunctive valproic acid in management-refractory hyperactive delirium: a case series and rationale. J Neuropsychiatry Clin \nNeurosci 2015; 27:365–370.\n\t80.\t Gagnon DJ, et al. Valproate for agitation in critically ill patients: a retrospective study. J Crit Care 2017; 37:119–125.\n\t81.\t Crowley KE, et al. Valproic acid for the management of agitation and delirium in the intensive care setting: a retrospective analysis. Clin Ther \n2020; 42:e65–e73.\n\t82.\t Quinn NJ, et al. Prescribing practices of valproic acid for agitation and delirium in the intensive care unit. Ann Pharmacother \n2021;55:311–317\n",
+  "raw_text_sha256": "223fdbd16e05a43d3328b6a69859eb43cc18c7623b96d877543ea8a50e5efac7",
+  "coordinates_sha256": "fa182bd05a8ff46d269e7bb1b54de6903eabd838898044469aace8056d60bf89",
+  "block_sequence_sha256": "df5426731c47bfdd01b45236f138e63eb8dae465c1ce1271ee8aab32ce58eb7b",
+  "blocks": [
+    {
+      "block_id": "page-0796-block-0000",
+      "order": 0,
+      "text": "Drug treatment of other psychiatric conditions     775\n",
+      "bbox": [
+        196.0341033935547,
+        31.395221710205078,
+        420.0020751953125,
+        41.0272216796875
+      ],
+      "text_sha256": "1829181e1610a4e960370ac366580544f1fc9af61437d6471fbfa3e30bee0cb9"
+    },
+    {
+      "block_id": "page-0796-block-0001",
+      "order": 1,
+      "text": "CHAPTER 9\n",
+      "bbox": [
+        454.4096984863281,
+        598.7144775390625,
+        463.88970947265625,
+        640.0584716796875
+      ],
+      "text_sha256": "a82498383e032e8013503b8de1dd71e97ad0ce75549c664143d6c75c10c3a855"
+    },
+    {
+      "block_id": "page-0796-block-0002",
+      "order": 2,
+      "text": "\t77.\t van Eijk MM, et al. Effect of rivastigmine as an adjunct to usual care with haloperidol on duration of delirium and mortality in critically ill \n",
+      "bbox": [
+        48.0,
+        63.2703857421875,
+        421.64398193359375,
+        70.30238342285156
+      ],
+      "text_sha256": "e288f0a1ce49138a5a5db048d4fdbf5fbc3f352d842ee5eeb6ee58509a4e0558"
+    },
+    {
+      "block_id": "page-0796-block-0003",
+      "order": 3,
+      "text": "patients: a multicentre, double-blind, placebo-controlled randomised trial. Lancet 2010; 376:1829–1837.\n\t78.\t Yu A, et al. Cholinesterase inhibitors for the treatment of delirium in non-ICU settings. Cochrane Database Syst Rev 2018; 6:Cd012494.\n\t79.\t Sher Y, et al. Adjunctive valproic acid in management-refractory hyperactive delirium: a case series and rationale. J Neuropsychiatry Clin \n",
+      "bbox": [
+        48.00600051879883,
+        72.12638854980469,
+        421.67999267578125,
+        97.30238342285156
+      ],
+      "text_sha256": "d00dedd680caf91964b37153057d9c79ac2ffe21983db41a56f44de020dbdc7f"
+    },
+    {
+      "block_id": "page-0796-block-0004",
+      "order": 4,
+      "text": "Neurosci 2015; 27:365–370.\n\t80.\t Gagnon DJ, et al. Valproate for agitation in critically ill patients: a retrospective study. J Crit Care 2017; 37:119–125.\n\t81.\t Crowley KE, et al. Valproic acid for the management of agitation and delirium in the intensive care setting: a retrospective analysis. Clin Ther \n",
+      "bbox": [
+        48.018001556396484,
+        99.12638854980469,
+        421.72802734375,
+        124.30238342285156
+      ],
+      "text_sha256": "175d60df53c5a89beb1e929e9a505ec334b229f8b826a4c779f7bdd40082695a"
+    },
+    {
+      "block_id": "page-0796-block-0005",
+      "order": 5,
+      "text": "2020; 42:e65–e73.\n\t82.\t Quinn NJ, et al. Prescribing practices of valproic acid for agitation and delirium in the intensive care unit. Ann Pharmacother \n",
+      "bbox": [
+        48.029998779296875,
+        126.12638854980469,
+        421.66802978515625,
+        142.30238342285156
+      ],
+      "text_sha256": "d09860fad80b232df23dd4842f1f085ffbb11d96424728c9f36d2f0669c1de1f"
+    },
+    {
+      "block_id": "page-0796-block-0006",
+      "order": 6,
+      "text": "2021;55:311–317\n",
+      "bbox": [
+        59.034000396728516,
+        144.2703857421875,
+        105.40198516845703,
+        151.30238342285156
+      ],
+      "text_sha256": "a5c596031b536a51ef6e24f154ee5825e15648e3f00482ad564dcf770df3428b"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

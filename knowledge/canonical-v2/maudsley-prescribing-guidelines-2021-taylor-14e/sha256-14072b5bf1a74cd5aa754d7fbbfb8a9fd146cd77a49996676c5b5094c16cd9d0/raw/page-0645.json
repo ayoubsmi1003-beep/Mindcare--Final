@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0645",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 645,
+  "source_page_index": 644,
+  "source_page_display": 645,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "624    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  6\nlimited data suggesting some advantage over placebo in areas of cognition and global \nclinical state. Trials of galantamine reported high rates of GI side effects. The Cochrane \nreview for rivastigmine in vascular cognitive impairment found some evidence of ben-\nefit; however, the conclusion was based on one large study, and side effects with riv-\nastigmine lead to withdrawal in a significant proportion of patients.105,131 Furthermore, \na meta-analysis of RCTs found that cholinesterase inhibitors and memantine produce \nsmall benefits in cognition of uncertain clinical significance and concluded that data \nwere insufficient to support widespread use of these agents in vascular dementia.123 \nRecently, a systematic review and Bayesian network meta-analysis comparing the effi-\ncacy and safety of cognitive enhancers for treating vascular cognitive impairment found \nsignificant efficacy for donepezil, galantamine and memantine on cognition. Memantine \nwas found to provide significant efficacy in global status. They were all safe and well \ntolerated.132 A new Cochrane review of systematic reviews of cholinesterase inhibitors \nfor vascular dementia and other vascular cognitive impairments is underway.\nDementia with Lewy bodies (DLB)\nIt has been suggested that DLB may account for 15–25% of cases of dementia (although \nautopsy suggests much lower rates). Characteristic symptoms are dementia with fluc-\ntuation of cognitive ability, early and persistent visual hallucinations and spontaneous \nmotor features of parkinsonism. Falls, syncope, transient disturbances of consciousness, \nneuroleptic sensitivity and hallucinations in other modalities are also common.133\nThe 2018 update of the NICE guidelines1 recommends the use of cholinesterase \ninhibitors and memantine in DLB (see table of summary of NICE guidance).\nMeta-analyses of clinical trials of rivastigmine and donepezil support the use of cho-\nlinesterase inhibitors in DLB for improving cognition, global function and activities of \nliving, with evidence that even if patients do not improve with AChE-Is they are less \nlikely to deteriorate while taking them. The efficacy of memantine in DLB is less clear, \nbut it is well tolerated and may have benefits, either as monotherapy or adjunctive to \nan AChE-I.134\nThere are significant complexities in managing an individual with DLB. Presentation \nvaries between patients and can vary over time within an individual. Treatments can \naddress one symptom but worsen another, which makes disease management difficult. \nSymptoms are often managed in isolation and by different specialists, which makes \nhigh-quality care difficult to accomplish. Clinical trials and meta-analyses now provide \nan evidence base for the treatment of cognitive, neuropsychiatric and motor symptoms \nin patients with Lewy body dementia. Furthermore, consensus opinion from experts \nsupports the application of treatments for related conditions, such as Parkinson’s dis-\nease, for the management of common symptoms (e.g. autonomic dysfunction) in \npatients with Lewy body dementia. However, evidence gaps remain and future clinical \ntrials need to focus on the treatment of symptoms specific to patients with Lewy body \ndementia.135 For a helpful guide on management of specific symptoms in DLB, see \n‘Management of Lewy body dementia Summary sheets – Diamond Lewy’.136\n",
+  "raw_text_sha256": "453d3892cec7743ab24ea7849c50c8c03922ee867b9a0a580832d159b1bc25bb",
+  "coordinates_sha256": "991da12d22c2b3d7e7173411d561da785b1da3388f18edf292469d6adedc70a2",
+  "block_sequence_sha256": "a1a6d8af2e767d7d185368c4e235ee550c084ec6334e0e0775d1d05347545a39",
+  "blocks": [
+    {
+      "block_id": "page-0645-block-0000",
+      "order": 0,
+      "text": "624    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "9b78b73c6ec0fec8ba913a82d7a9089d195349c79ab1e763d9f27a32e32e8c03"
+    },
+    {
+      "block_id": "page-0645-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        18.520000457763672,
+        405.35260009765625,
+        28.0,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0645-block-0002",
+      "order": 2,
+      "text": "limited data suggesting some advantage over placebo in areas of cognition and global \nclinical state. Trials of galantamine reported high rates of GI side effects. The Cochrane \nreview for rivastigmine in vascular cognitive impairment found some evidence of ben-\nefit; however, the conclusion was based on one large study, and side effects with riv-\nastigmine lead to withdrawal in a significant proportion of patients.105,131 Furthermore, \na meta-analysis of RCTs found that cholinesterase inhibitors and memantine produce \nsmall benefits in cognition of uncertain clinical significance and concluded that data \nwere insufficient to support widespread use of these agents in vascular dementia.123 \nRecently, a systematic review and Bayesian network meta-analysis comparing the effi-\ncacy and safety of cognitive enhancers for treating vascular cognitive impairment found \nsignificant efficacy for donepezil, galantamine and memantine on cognition. Memantine \nwas found to provide significant efficacy in global status. They were all safe and well \ntolerated.132 A new Cochrane review of systematic reviews of cholinesterase inhibitors \nfor vascular dementia and other vascular cognitive impairments is underway.\n",
+      "bbox": [
+        61.886383056640625,
+        62.55029296875,
+        436.7099914550781,
+        230.27029418945312
+      ],
+      "text_sha256": "491c3f76e3ffa63047b5bf2f7156f0d942e8b01aeb8e9aab515f380a9459ae44"
+    },
+    {
+      "block_id": "page-0645-block-0003",
+      "order": 3,
+      "text": "Dementia with Lewy bodies (DLB)\n",
+      "bbox": [
+        61.88999938964844,
+        247.70529174804688,
+        237.30694580078125,
+        260.74029541015625
+      ],
+      "text_sha256": "beb3b5d7b0b4ee0b53e957c11f8425fb8216b0ce7ff36196dd39ef4bf3fe23c7"
+    },
+    {
+      "block_id": "page-0645-block-0004",
+      "order": 4,
+      "text": "It has been suggested that DLB may account for 15–25% of cases of dementia (although \nautopsy suggests much lower rates). Characteristic symptoms are dementia with fluc-\ntuation of cognitive ability, early and persistent visual hallucinations and spontaneous \nmotor features of parkinsonism. Falls, syncope, transient disturbances of consciousness, \nneuroleptic sensitivity and hallucinations in other modalities are also common.133\n",
+      "bbox": [
+        61.88999938964844,
+        266.55029296875,
+        436.70001220703125,
+        326.2702941894531
+      ],
+      "text_sha256": "b5d2775f9c4a962de31bebc21ea6e895a1e3253923695ac37a7103fb10d716a2"
+    },
+    {
+      "block_id": "page-0645-block-0005",
+      "order": 5,
+      "text": "The 2018 update of the NICE guidelines1 recommends the use of cholinesterase \ninhibitors and memantine in DLB (see table of summary of NICE guidance).\n",
+      "bbox": [
+        61.89390563964844,
+        326.55029296875,
+        436.6639709472656,
+        350.2702941894531
+      ],
+      "text_sha256": "a9065f8c1f31a08e6386869e50e846acc90b0e426ddc064dba7e32f3df4ac93d"
+    },
+    {
+      "block_id": "page-0645-block-0006",
+      "order": 6,
+      "text": "Meta-analyses of clinical trials of rivastigmine and donepezil support the use of cho-\nlinesterase inhibitors in DLB for improving cognition, global function and activities of \nliving, with evidence that even if patients do not improve with AChE-Is they are less \nlikely to deteriorate while taking them. The efficacy of memantine in DLB is less clear, \nbut it is well tolerated and may have benefits, either as monotherapy or adjunctive to \nan AChE-I.134\n",
+      "bbox": [
+        61.89390563964844,
+        350.55029296875,
+        436.723876953125,
+        422.2702941894531
+      ],
+      "text_sha256": "ce934e59812afa76ba439292bda1ce22cd33a768aebd4faf56d8aac007e21dcc"
+    },
+    {
+      "block_id": "page-0645-block-0007",
+      "order": 7,
+      "text": "There are significant complexities in managing an individual with DLB. Presentation \nvaries between patients and can vary over time within an individual. Treatments can \naddress one symptom but worsen another, which makes disease management difficult. \nSymptoms are often managed in isolation and by different specialists, which makes \nhigh-quality care difficult to accomplish. Clinical trials and meta-analyses now provide \nan evidence base for the treatment of cognitive, neuropsychiatric and motor symptoms \nin patients with Lewy body dementia. Furthermore, consensus opinion from experts \nsupports the application of treatments for related conditions, such as Parkinson’s dis-\nease, for the management of common symptoms (e.g. autonomic dysfunction) in \npatients with Lewy body dementia. However, evidence gaps remain and future clinical \ntrials need to focus on the treatment of symptoms specific to patients with Lewy body \ndementia.135 For a helpful guide on management of specific symptoms in DLB, see \n‘Management of Lewy body dementia Summary sheets – Diamond Lewy’.136\n",
+      "bbox": [
+        61.88999938964844,
+        422.55029296875,
+        436.70001220703125,
+        578.2703247070312
+      ],
+      "text_sha256": "86a2fd66aef2b48dff27252b7c84b1ac166a8b73b2ddab541166a37cb6e80bba"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

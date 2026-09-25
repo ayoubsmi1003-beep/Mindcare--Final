@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0882",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 882,
+  "source_page_index": 881,
+  "source_page_display": 882,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Pharmacokinetics    861\nCHAPTER 11\nInteractions are difficult to predict in alcohol misusers because two opposing pro-\ncesses may be at work: competition for enzymatic sites during periods of consumption \nor intoxication (increasing drug plasma levels) and enzyme induction prevailing during \nperiods of sobriety (reducing drug plasma levels8). In chronic drinkers, particularly \nthose who binge-drink, serum levels of prescribed drugs may reach toxic levels during \nperiods of intoxication with alcohol and then be sub-therapeutic when the patient is \nsober. Even in non-intoxicated individuals there is some evidence that co-administered \nalcohol confers competitive inhibition of CYP3A4, leading to increased exposure to \ndrugs metabolised by this enzyme (Table 11.6).13 This makes it very difficult to optimise \ntreatment of physical or mental illness.\nTable 11.5  Drugs that inhibit alcohol dehydrogenase and aldehyde dehydrogenase\nEnzyme\nInhibited by\nPotential consequences\nAlcohol dehydrogenase\nAspirin\nH2 antagonists\nReduced metabolism of alcohol \nresulting in higher plasma levels for \nlonger periods of time\nAldehyde dehydrogenase\nChlorpropamide\nDisulfiram\nGriseofulvin\nIsoniazid\nIsosorbide dinitrate\nMetronidazole*\nNitrofurantoin\nSulphamethoxazole\nTolbutamide\nReduced ability to metabolise \nacetaldehyde leading to ‘Antabuse’ \ntype reaction: facial flushing, \nheadache, tachycardia, nausea and \nvomiting, arrhythmias and \nhypotension\n*Evidence that metronidazole has any effect on aldehyde dehydrogenase is surprisingly weak.10–12\nTable 11.6  Co-administration of alcohol and substrates for CYP2E1 and CYP3A4\nSubstrates for enzyme \n(note: this is not an\nexhaustive list)\nEffects in an intoxicated \npatient\nEffects in a chronic, sober \ndrinker\nCYP2E1\nParacetamol\nIsoniazid\nPhenobarbitone\nWarfarin\nZopiclone\nCompetition between \nalcohol and drug leading to \nreduced rates of metabolism \nof both compounds. \nIncreased plasma levels may \nlead to toxicity\nActivity of CYP2E1 is increased \nup 10-fold\nIncreased metabolism of drugs \npotentially leading to \ntherapeutic failure\n(Continued)\n",
+  "raw_text_sha256": "cef451d573e0096c057a60a332519ab09c09d98710928ae9e9576ae5859baa86",
+  "coordinates_sha256": "d404d2d6ea3be01bf7ce211d81c82afcfade9bbc3befc65aa33330f5be7ef562",
+  "block_sequence_sha256": "a19c33844a0c6ef891ae108d0eb2bb10ce543a7cff5ecdcda5fa1ae2c375f634",
+  "blocks": [
+    {
+      "block_id": "page-0882-block-0000",
+      "order": 0,
+      "text": "Pharmacokinetics    861\n",
+      "bbox": [
+        320.4088134765625,
+        31.395221710205078,
+        420.00079345703125,
+        41.0272216796875
+      ],
+      "text_sha256": "aecb4d2ed60de0e798501fbe2630e82ab43a928c4896f686d88df38e5bbd09e6"
+    },
+    {
+      "block_id": "page-0882-block-0001",
+      "order": 1,
+      "text": "CHAPTER 11\n",
+      "bbox": [
+        454.4096984863281,
+        140.99053955078125,
+        463.88970947265625,
+        186.78250122070312
+      ],
+      "text_sha256": "8577f8a61d9be9d957b7354680b21b61adb6e8c4601aaa9be76ccc79360dc7f3"
+    },
+    {
+      "block_id": "page-0882-block-0002",
+      "order": 2,
+      "text": "Interactions are difficult to predict in alcohol misusers because two opposing pro-\ncesses may be at work: competition for enzymatic sites during periods of consumption \nor intoxication (increasing drug plasma levels) and enzyme induction prevailing during \nperiods of sobriety (reducing drug plasma levels8). In chronic drinkers, particularly \nthose who binge-drink, serum levels of prescribed drugs may reach toxic levels during \nperiods of intoxication with alcohol and then be sub-therapeutic when the patient is \nsober. Even in non-intoxicated individuals there is some evidence that co-administered \nalcohol confers competitive inhibition of CYP3A4, leading to increased exposure to \ndrugs metabolised by this enzyme (Table 11.6).13 This makes it very difficult to optimise \ntreatment of physical or mental illness.\n",
+      "bbox": [
+        47.99989318847656,
+        294.87750244140625,
+        422.82049560546875,
+        414.5975036621094
+      ],
+      "text_sha256": "a4295eda9f18174a6c7c9ab408b8da6a7c4682c72ecc9319357ce56e7bf7ccac"
+    },
+    {
+      "block_id": "page-0882-block-0003",
+      "order": 3,
+      "text": "Table 11.5  Drugs that inhibit alcohol dehydrogenase and aldehyde dehydrogenase\n",
+      "bbox": [
+        54.0,
+        70.08790588378906,
+        320.070068359375,
+        78.97540283203125
+      ],
+      "text_sha256": "84c71b0327230936ff2121c6c8d657e03df9232e709141b38a72cb1952503819"
+    },
+    {
+      "block_id": "page-0882-block-0004",
+      "order": 4,
+      "text": "Enzyme\nInhibited by\nPotential consequences\n",
+      "bbox": [
+        48.0,
+        89.96290588378906,
+        384.50244140625,
+        98.85040283203125
+      ],
+      "text_sha256": "bca89937d924b485c86c2817fd41b5cb26440765728df5197941de33e766ba98"
+    },
+    {
+      "block_id": "page-0882-block-0005",
+      "order": 5,
+      "text": "Alcohol dehydrogenase\nAspirin\nH2 antagonists\n",
+      "bbox": [
+        47.99249267578125,
+        108.09040832519531,
+        224.1934814453125,
+        128.69102478027344
+      ],
+      "text_sha256": "31ad7429d910498141b602f96ce5817c19df8622b94c643b98a344159ca22ff8"
+    },
+    {
+      "block_id": "page-0882-block-0006",
+      "order": 6,
+      "text": "Reduced metabolism of alcohol \nresulting in higher plasma levels for \nlonger periods of time\n",
+      "bbox": [
+        301.9985046386719,
+        108.2704086303711,
+        416.8761291503906,
+        136.972900390625
+      ],
+      "text_sha256": "b2e23f172267d4d4af55afa2ceada9e9508360c832cdc446280a5abeb9326d33"
+    },
+    {
+      "block_id": "page-0882-block-0007",
+      "order": 7,
+      "text": "Aldehyde dehydrogenase\nChlorpropamide\nDisulfiram\nGriseofulvin\nIsoniazid\nIsosorbide dinitrate\nMetronidazole*\n",
+      "bbox": [
+        47.996002197265625,
+        146.21290588378906,
+        238.8334503173828,
+        205.087890625
+      ],
+      "text_sha256": "83e7ee884f53a82658a0bcb1ca26036fb9800a48ce37828f865b8c284bc898f8"
+    },
+    {
+      "block_id": "page-0882-block-0008",
+      "order": 8,
+      "text": "Nitrofurantoin\nSulphamethoxazole\nTolbutamide\n",
+      "bbox": [
+        177.99989318847656,
+        206.3928985595703,
+        240.50486755371094,
+        235.09539794921875
+      ],
+      "text_sha256": "72856eeb18825840a99a822981325c50a0e1984512e94e78ee29bd64f47a92d1"
+    },
+    {
+      "block_id": "page-0882-block-0009",
+      "order": 9,
+      "text": "Reduced ability to metabolise \nacetaldehyde leading to ‘Antabuse’ \ntype reaction: facial flushing, \nheadache, tachycardia, nausea and \nvomiting, arrhythmias and \nhypotension\n",
+      "bbox": [
+        301.9974060058594,
+        146.38539123535156,
+        417.0249938964844,
+        205.08038330078125
+      ],
+      "text_sha256": "67b94cc345305d4181dd2ed32cfc9e5a121d25e84e44db8064edd05352f86236"
+    },
+    {
+      "block_id": "page-0882-block-0010",
+      "order": 10,
+      "text": "*Evidence that metronidazole has any effect on aldehyde dehydrogenase is surprisingly weak.10–12\n",
+      "bbox": [
+        48.0,
+        245.1428985595703,
+        357.3890380859375,
+        253.85040283203125
+      ],
+      "text_sha256": "ee13b95268264d088efe3940c035a45ac80f9f7309d070789c7bef4e26dd6d2b"
+    },
+    {
+      "block_id": "page-0882-block-0011",
+      "order": 11,
+      "text": "Table 11.6  Co-administration of alcohol and substrates for CYP2E1 and CYP3A4\n",
+      "bbox": [
+        54.0,
+        459.41510009765625,
+        314.0775451660156,
+        468.3026123046875
+      ],
+      "text_sha256": "6cd374258808c2b79477a36ccfdfba6fdb72eb0563038ecbd6ad39ff666e1285"
+    },
+    {
+      "block_id": "page-0882-block-0012",
+      "order": 12,
+      "text": "Substrates for enzyme \n(note: this is not an\nexhaustive list)\n",
+      "bbox": [
+        110.40650177001953,
+        479.29010009765625,
+        191.67649841308594,
+        508.172607421875
+      ],
+      "text_sha256": "28f30943a5be09d749be848a0666229ab74ba298b601ef91c2e5b97e16898718"
+    },
+    {
+      "block_id": "page-0882-block-0013",
+      "order": 13,
+      "text": "Effects in an intoxicated \npatient\n",
+      "bbox": [
+        215.60150146484375,
+        489.28759765625,
+        302.5715026855469,
+        508.172607421875
+      ],
+      "text_sha256": "fc5d03e6d7986538f8e59c1dd6c9708da646db18961a720470d1bbda40c0b338"
+    },
+    {
+      "block_id": "page-0882-block-0014",
+      "order": 14,
+      "text": "Effects in a chronic, sober \ndrinker\n",
+      "bbox": [
+        320.7965087890625,
+        489.28759765625,
+        412.618896484375,
+        508.172607421875
+      ],
+      "text_sha256": "1bccecffbe3495207d85d9c8a86d9a205c18c1f6532a58a84446a2702a1d3c35"
+    },
+    {
+      "block_id": "page-0882-block-0015",
+      "order": 15,
+      "text": "CYP2E1\nParacetamol\nIsoniazid\nPhenobarbitone\nWarfarin\nZopiclone\n",
+      "bbox": [
+        47.99151611328125,
+        517.547607421875,
+        161.24899291992188,
+        566.2901000976562
+      ],
+      "text_sha256": "64442d2712f6e2059995a61806e60bc10356a6065699bca33abe08d7a09858d6"
+    },
+    {
+      "block_id": "page-0882-block-0016",
+      "order": 16,
+      "text": "Competition between \nalcohol and drug leading to \nreduced rates of metabolism \nof both compounds. \nIncreased plasma levels may \nlead to toxicity\n",
+      "bbox": [
+        215.59402465820312,
+        517.5850830078125,
+        308.79656982421875,
+        576.2800903320312
+      ],
+      "text_sha256": "4c24ca5516b81dd7d04903ac11143834872fbe417b244c33d049c2ca829a17e5"
+    },
+    {
+      "block_id": "page-0882-block-0017",
+      "order": 17,
+      "text": "Activity of CYP2E1 is increased \nup 10-fold\nIncreased metabolism of drugs \npotentially leading to \ntherapeutic failure\n",
+      "bbox": [
+        320.7890319824219,
+        517.570068359375,
+        421.071533203125,
+        566.267578125
+      ],
+      "text_sha256": "72f8b5f17b20e537f78b793bddb378c092b06137ec0aa4d7d176150580a096dd"
+    },
+    {
+      "block_id": "page-0882-block-0018",
+      "order": 18,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.9690246582031,
+        585.2275390625,
+        419.9839782714844,
+        593.9800415039062
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

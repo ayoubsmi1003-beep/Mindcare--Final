@@ -1,0 +1,107 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0504",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 504,
+  "source_page_index": 503,
+  "source_page_display": 504,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    483\nCHAPTER 4\nRecommended ECG monitoring\nIn 2006, the MHRA recommended that patients with the following risk factors for \nQT interval prolongation are carefully monitored whilst taking methadone: heart or \nliver disease, electrolyte abnormalities, concomitant treatment with CYP3A4 inhibi-\ntors, or medicines with the potential to cause QT interval prolongation (e.g. some \nantipsychotics and erythromycin). Cocaine and synthetic cannabinoid receptor ago-\nnists (SCRAs), or ‘Spice’, may lengthen QT, so patients who also take cocaine or Spice \nshould be monitored.45,46 In addition, any patient requiring more than 100mg of \nmethadone per day should be closely monitored47 as the risk of QTc prolongation is \ndose related.42 Other patient factors increasing the risk of QT prolongation include \nco-morbid eating disorder, history of heart disease or stroke, liver disease, metabolic \nderangements such as hypokalaemia, hypocalcaemia and HIV-positive status (irre-\nspective of medications).48\nThus, in individuals with the risk factors listed earlier should have a baseline ECG \nand subsequent ECG monitoring. The timeframe for the latter is not yet subject to a \nrigorous evidence base; annual checks in the absence of cardiac symptomatology would \nbe a reasonable minimum frequency. It is also important to check the actions of any \nmedications being prescribed with methadone for CYP3A4 inhibitory activity, to inform \nthe risk–benefit analysis when commencing methadone.49 Buprenorphine appears to be \nassociated with less QTc prolongation and therefore maybe a safer alternative in this \nrespect,50 although there are few studies in this area at present; and there are many \nother factors to take into account when choosing an appropriate opioid substitute.\nBrief guidelines as to actions to take are documented in Table 4.10. Always seek spe-\ncialist advice where there is any suspicion of prolongation of the QT interval. A review \nof ECG monitoring suggests that there is insufficient evidence for the efficacy of QTc \nscreening strategies for preventing cardiac morbidity and mortality in methadone-\nmaintained patients and there is concern that in some settings the procedures involved \nmay be enough to deter patients from entering or staying in a methadone programme.51 \nPatients on or about to start methadone in inpatient settings of both medical and psy-\nchiatric wards should always have an ECG. Patients on high doses or with other risk \nfactors should, if possible, have ECGs, when treated in the community, although con-\nsideration should be taken of the risks and benefits if a community patient refuses to \nattend for ECG monitoring.\nBuprenorphine\nBuprenorphine (marketed as Subutex in most countries) is a synthetic partial opioid \nagonist with low intrinsic activity and high affinity at µ-opioid receptors. This means \nthat it produces less euphoria even at receptor-saturating doses and simultaneously \nblocks the action of other opioids. It is an effective treatment for heroin addiction if \nprescribed at fixed doses, although not more effective than methadone at adequate dos-\nages.11 It is associated with lower likelihood retention in treatment than methadone, \nand clinical experience with buprenorphine suggests that it can be difficult to initiate \nbecause of the balancing act required to attain sufficient withdrawal to start, but in not \nso much withdrawal that prevents attendance at the treatment centre. It has also been \nfound to be effective in reducing prescription opioid use and improving treatment \n",
+  "raw_text_sha256": "e3e6f96f3382a8305abc9aac47f1ee0bf329cc0e995c26a06d3dbe722ebe8856",
+  "coordinates_sha256": "d8ae905de382c374efdad66050776a252d8c5c0937327fb311a7b8ac45dba44d",
+  "block_sequence_sha256": "5ee9445f9f003b131a4d36672a095f3f3da720514a3eef67b1cb17fd3e7511ff",
+  "blocks": [
+    {
+      "block_id": "page-0504-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    483\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "2a9422d7ba6d56e4dd8d34fdf9135857d6be62785ab08a5e9625a1161c73f308"
+    },
+    {
+      "block_id": "page-0504-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0504-block-0002",
+      "order": 2,
+      "text": "Recommended ECG monitoring\nIn 2006, the MHRA recommended that patients with the following risk factors for \nQT interval prolongation are carefully monitored whilst taking methadone: heart or \nliver disease, electrolyte abnormalities, concomitant treatment with CYP3A4 inhibi-\ntors, or medicines with the potential to cause QT interval prolongation (e.g. some \nantipsychotics and erythromycin). Cocaine and synthetic cannabinoid receptor ago-\nnists (SCRAs), or ‘Spice’, may lengthen QT, so patients who also take cocaine or Spice \nshould be monitored.45,46 In addition, any patient requiring more than 100mg of \nmethadone per day should be closely monitored47 as the risk of QTc prolongation is \ndose related.42 Other patient factors increasing the risk of QT prolongation include \nco-morbid eating disorder, history of heart disease or stroke, liver disease, metabolic \nderangements such as hypokalaemia, hypocalcaemia and HIV-positive status (irre-\nspective of medications).48\n",
+      "bbox": [
+        47.99650192260742,
+        62.59296417236328,
+        422.8301086425781,
+        217.75546264648438
+      ],
+      "text_sha256": "98cbe20d124ff4b89bdac72739e7a52a22f2acf7b1dd46f65a711a1b19fbaad8"
+    },
+    {
+      "block_id": "page-0504-block-0003",
+      "order": 3,
+      "text": "Thus, in individuals with the risk factors listed earlier should have a baseline ECG \nand subsequent ECG monitoring. The timeframe for the latter is not yet subject to a \nrigorous evidence base; annual checks in the absence of cardiac symptomatology would \nbe a reasonable minimum frequency. It is also important to check the actions of any \nmedications being prescribed with methadone for CYP3A4 inhibitory activity, to inform \nthe risk–benefit analysis when commencing methadone.49 Buprenorphine appears to be \nassociated with less QTc prolongation and therefore maybe a safer alternative in this \nrespect,50 although there are few studies in this area at present; and there are many \nother factors to take into account when choosing an appropriate opioid substitute.\n",
+      "bbox": [
+        48.0,
+        218.03549194335938,
+        422.8322448730469,
+        325.7554931640625
+      ],
+      "text_sha256": "54d50a306a939454619e57d2f50508d5091ac6f0b8e7d49934c942c1b72b7611"
+    },
+    {
+      "block_id": "page-0504-block-0004",
+      "order": 4,
+      "text": "Brief guidelines as to actions to take are documented in Table 4.10. Always seek spe-\ncialist advice where there is any suspicion of prolongation of the QT interval. A review \nof ECG monitoring suggests that there is insufficient evidence for the efficacy of QTc \nscreening strategies for preventing cardiac morbidity and mortality in methadone-\nmaintained patients and there is concern that in some settings the procedures involved \nmay be enough to deter patients from entering or staying in a methadone programme.51 \nPatients on or about to start methadone in inpatient settings of both medical and psy-\nchiatric wards should always have an ECG. Patients on high doses or with other risk \nfactors should, if possible, have ECGs, when treated in the community, although con-\nsideration should be taken of the risks and benefits if a community patient refuses to \nattend for ECG monitoring.\n",
+      "bbox": [
+        48.000396728515625,
+        326.0354919433594,
+        422.822265625,
+        457.7554931640625
+      ],
+      "text_sha256": "37daf8105e6385e021ca5e126880dcf155a2776600ee4698cc00b390b2e91f3d"
+    },
+    {
+      "block_id": "page-0504-block-0005",
+      "order": 5,
+      "text": "Buprenorphine\n",
+      "bbox": [
+        48.0,
+        475.19049072265625,
+        125.41799926757812,
+        488.2254943847656
+      ],
+      "text_sha256": "92117a660f9da06ce129dce4faf2b22eb9fd759b6e7a4e996929f6ea93010de2"
+    },
+    {
+      "block_id": "page-0504-block-0006",
+      "order": 6,
+      "text": "Buprenorphine (marketed as Subutex in most countries) is a synthetic partial opioid \nagonist with low intrinsic activity and high affinity at µ-opioid receptors. This means \nthat it produces less euphoria even at receptor-saturating doses and simultaneously \nblocks the action of other opioids. It is an effective treatment for heroin addiction if \nprescribed at fixed doses, although not more effective than methadone at adequate dos-\nages.11 It is associated with lower likelihood retention in treatment than methadone, \nand clinical experience with buprenorphine suggests that it can be difficult to initiate \nbecause of the balancing act required to attain sufficient withdrawal to start, but in not \nso much withdrawal that prevents attendance at the treatment centre. It has also been \nfound to be effective in reducing prescription opioid use and improving treatment \n",
+      "bbox": [
+        48.0,
+        494.0354919433594,
+        422.8299560546875,
+        613.7554931640625
+      ],
+      "text_sha256": "9048a2d18b41c55d666afda4ae51aebd7b0a1e5b354eded6ac322a4fc23bbf17"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

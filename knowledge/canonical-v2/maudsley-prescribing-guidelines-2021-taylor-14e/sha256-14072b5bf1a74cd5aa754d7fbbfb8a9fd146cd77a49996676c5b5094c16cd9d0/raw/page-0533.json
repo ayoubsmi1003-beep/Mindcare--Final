@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0533",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 533,
+  "source_page_index": 532,
+  "source_page_display": 533,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "512    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\npharmacological treatment. Insomnia can be treated with short courses of hypnotics, \nagain noting the risk of dependence on these agents.1–3\nMaintenance\nDexamfetamine (or other stimulant medication) maintenance for the treatment of \namfetamine dependence should not be initiated as there is no good evidence for this \npractice.1–3\nExisting dexamfetamine patients\nIn the UK, there remain some patients who have been prescribed dexamfetamine as a \nmaintenance treatment for drug dependence for many years. Ideally, such patients \nshould be gradually detoxified over several months. For some, though, the consequences \nof enforced detoxification may be worse than continuing to prescribe dexamfetamine. \nIn these cases, the best decision may be to continue to prescribe. A decision to continue \nprescribing dexamfetamine should only be made by an addiction specialist.1\nPolysubstance abuse\nIn those who are dependent on opioids and cocaine, the provision of effective substitu-\ntion therapy for treatment of the opioid dependence with either methadone or buprenor-\nphine can lead to a reduction in cocaine use.1\nPsychosis associated with stimulant drugs\nPsychotic symptoms in association with methamphetamine are related to the frequency \nof use and severity of methamphetamine dependence.4 In many, perhaps most cases, \npsychotic symptoms can resolve with the resolution of intoxication, i.e. over the course \nof a day or so. The majority of patients attending an emergency setting with acute psy-\nchotic symptoms in the context of very recent methamphetamine use can be managed \nwith simple sedation,5 e.g. diazepam 5–10mg as needed 4–6 hourly for agitation – and \ntherapeutic rest. Some patients, however, may need more intensive treatment in line \nwith the treatment of acute psychosis in Chapter 2.\nIt should be noted though that psychotic symptoms in the context of stimulant use are \nprogressive with continued use; they tend to start earlier in each binge and to last longer. \nA median of 25% of patients report ongoing symptoms 1 month post methamphetamine \nconsumption.6 Psychosis in the context of intoxication is associated with persecutory \ndelusions and tactile hallucinations, while more persistent methamphetamine-associated \npsychosis is characterised by delusions of persecution and auditory hallucinations and is \nlargely indistinguishable from a primary psychotic disorder.6 In the emergency depart-\nment, it can be difficult to make a clear diagnosis. Between 16% and 38% of patients \ninitially diagnosed with methamphetamine psychosis are later diagnosed as having \nschizophrenia.6\nIn the acute setting, another important differential in methamphetamine users pre-\nsenting with agitated psychosis is GBL withdrawal delirium, where stimulant/GBL \n",
+  "raw_text_sha256": "50c9e573d5f0beeb021227ae01ae835a4cbafc5e71444f8a593faac3472968c8",
+  "coordinates_sha256": "2b044105a8a1f50ca2d17d6db3e3cb6a43d81ac30eb540f954320029d43dbcca",
+  "block_sequence_sha256": "8957fae66e5b30fe41ad9e8f313396e2c095eba10a2461c6e8e594d82f2ee27c",
+  "blocks": [
+    {
+      "block_id": "page-0533-block-0000",
+      "order": 0,
+      "text": "512    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "4ec780199a5cf69a13a9aae7132613df59a9a39cf972982c32dc56998f11cede"
+    },
+    {
+      "block_id": "page-0533-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0533-block-0002",
+      "order": 2,
+      "text": "pharmacological treatment. Insomnia can be treated with short courses of hypnotics, \nagain noting the risk of dependence on these agents.1–3\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.70001220703125,
+        86.27029418945312
+      ],
+      "text_sha256": "329b300272fccfaf5e44477d122345f4f908d1c1b301ed32c63a0fc22decf8d9"
+    },
+    {
+      "block_id": "page-0533-block-0003",
+      "order": 3,
+      "text": "Maintenance\n",
+      "bbox": [
+        61.88999938964844,
+        104.64029693603516,
+        123.00999450683594,
+        116.49029541015625
+      ],
+      "text_sha256": "245496722c77b035921bdab558c16a0fb4cd3c619e21d32b387265c51b86637f"
+    },
+    {
+      "block_id": "page-0533-block-0004",
+      "order": 4,
+      "text": "Dexamfetamine (or other stimulant medication) maintenance for the treatment of \namfetamine dependence should not be initiated as there is no good evidence for this \npractice.1–3\n",
+      "bbox": [
+        61.88999938964844,
+        122.55029296875,
+        436.71002197265625,
+        158.27029418945312
+      ],
+      "text_sha256": "742dbf5fed2028c4627d48a35af24ce71ea1946cbf04c638aac7afe3a83b2f00"
+    },
+    {
+      "block_id": "page-0533-block-0005",
+      "order": 5,
+      "text": "Existing dexamfetamine patients\n",
+      "bbox": [
+        61.88999938964844,
+        176.64028930664062,
+        216.93997192382812,
+        188.49029541015625
+      ],
+      "text_sha256": "32a36c3acb609397d9155163d686f6e0bb68d8b2f484ed858125247e8b3d276e"
+    },
+    {
+      "block_id": "page-0533-block-0006",
+      "order": 6,
+      "text": "In the UK, there remain some patients who have been prescribed dexamfetamine as a \nmaintenance treatment for drug dependence for many years. Ideally, such patients \nshould be gradually detoxified over several months. For some, though, the consequences \nof enforced detoxification may be worse than continuing to prescribe dexamfetamine. \nIn these cases, the best decision may be to continue to prescribe. A decision to continue \nprescribing dexamfetamine should only be made by an addiction specialist.1\n",
+      "bbox": [
+        61.88999938964844,
+        194.55029296875,
+        436.6799011230469,
+        266.2702941894531
+      ],
+      "text_sha256": "af827b59149148cb408d547e9851a14c7f442c02e08f7423861d86f24f4f5403"
+    },
+    {
+      "block_id": "page-0533-block-0007",
+      "order": 7,
+      "text": "Polysubstance abuse\n",
+      "bbox": [
+        61.88999938964844,
+        283.7052917480469,
+        168.8429718017578,
+        296.74029541015625
+      ],
+      "text_sha256": "75ca1502ab58d583eb78a04984c6584380d99a51eae889a6ff1a2c320beda47c"
+    },
+    {
+      "block_id": "page-0533-block-0008",
+      "order": 8,
+      "text": "In those who are dependent on opioids and cocaine, the provision of effective substitu-\ntion therapy for treatment of the opioid dependence with either methadone or buprenor-\nphine can lead to a reduction in cocaine use.1\n",
+      "bbox": [
+        61.889984130859375,
+        302.55029296875,
+        433.929931640625,
+        338.2702941894531
+      ],
+      "text_sha256": "e7fcc3f9982723063b5a56c29e8ea95ff155bf9258948a5efe16bdc89f0e61f3"
+    },
+    {
+      "block_id": "page-0533-block-0009",
+      "order": 9,
+      "text": "Psychosis associated with stimulant drugs\n",
+      "bbox": [
+        61.88999938964844,
+        355.7052917480469,
+        278.2270202636719,
+        368.74029541015625
+      ],
+      "text_sha256": "6585f4516f5a1f960d515631c08d859b2f5e9b047502d7f33cd6cbaeab635fa3"
+    },
+    {
+      "block_id": "page-0533-block-0010",
+      "order": 10,
+      "text": "Psychotic symptoms in association with methamphetamine are related to the frequency \nof use and severity of methamphetamine dependence.4 In many, perhaps most cases, \npsychotic symptoms can resolve with the resolution of intoxication, i.e. over the course \nof a day or so. The majority of patients attending an emergency setting with acute psy-\nchotic symptoms in the context of very recent methamphetamine use can be managed \nwith simple sedation,5 e.g. diazepam 5–10mg as needed 4–6 hourly for agitation – and \ntherapeutic rest. Some patients, however, may need more intensive treatment in line \nwith the treatment of acute psychosis in Chapter 2.\n",
+      "bbox": [
+        61.885406494140625,
+        374.55029296875,
+        436.6654052734375,
+        470.2702941894531
+      ],
+      "text_sha256": "1ad19e370611f7b24ffddb37d9f908913e7fdae8051ca8bccaee83f10613f58f"
+    },
+    {
+      "block_id": "page-0533-block-0011",
+      "order": 11,
+      "text": "It should be noted though that psychotic symptoms in the context of stimulant use are \nprogressive with continued use; they tend to start earlier in each binge and to last longer. \nA median of 25% of patients report ongoing symptoms 1 month post methamphetamine \nconsumption.6 Psychosis in the context of intoxication is associated with persecutory \ndelusions and tactile hallucinations, while more persistent methamphetamine-associated \npsychosis is characterised by delusions of persecution and auditory hallucinations and is \nlargely indistinguishable from a primary psychotic disorder.6 In the emergency depart-\nment, it can be difficult to make a clear diagnosis. Between 16% and 38% of patients \ninitially diagnosed with methamphetamine psychosis are later diagnosed as having \nschizophrenia.6\n",
+      "bbox": [
+        61.88690185546875,
+        470.55029296875,
+        436.7070617675781,
+        590.2703247070312
+      ],
+      "text_sha256": "9420d8e73094b9d932b9743be877bc719a74f08252c80d5ae02347106164216b"
+    },
+    {
+      "block_id": "page-0533-block-0012",
+      "order": 12,
+      "text": "In the acute setting, another important differential in methamphetamine users pre-\nsenting with agitated psychosis is GBL withdrawal delirium, where stimulant/GBL \n",
+      "bbox": [
+        61.88990020751953,
+        590.55029296875,
+        436.66986083984375,
+        614.2703247070312
+      ],
+      "text_sha256": "bec1bb17ce53f8c8567ce058087b5193e41b8d1559661415be4db0515f9f771c"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

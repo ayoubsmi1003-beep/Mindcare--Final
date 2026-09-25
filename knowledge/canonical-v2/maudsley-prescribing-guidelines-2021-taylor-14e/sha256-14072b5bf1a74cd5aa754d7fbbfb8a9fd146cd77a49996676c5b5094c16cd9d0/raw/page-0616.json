@@ -1,0 +1,323 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0616",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 616,
+  "source_page_index": 615,
+  "source_page_display": 616,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Children and adolescents    595\nCHAPTER 5\nNo response \nto >5mg\nMelatonin*\nUse Slenyto* 2−5mg\nConsider use of >5mg if response poor\nNot effective\nResponse\nIdentify and treat\nsecondary causes\nSleep hygiene\nParent-led sleep behavioural interventions\nChildhood insomnia\nContinue at minimum effective dose\nDiscontinue \nmelatonin\n*At present this is the only UK preparation of melatonin with a product licence for children with ASD.\nThe mini pills can be administered in yoghurt/apple sauce and more children are able to swallow them.\n(All forms of melatonin can be crushed and mixed in water (but cease to be prolonged release) if the\nchild cannot swallow tablets.)\nFigure 5.3  Summary of recommendations.\nReferences\n\t 1.\t Gringras P. When to use drugs to help sleep. Arch Dis Child 2008; 93:976–981.\n\t 2.\t Macchi MM, et al. Human pineal physiology and functional significance of melatonin. Front Neuroendocrinol 2004; 25:177–195.\n\t 3.\t Gringras P, et al. Efficacy and safety of pediatric prolonged-release melatonin for insomnia in children with autism spectrum disorder. J Am \nAcad Child Adolescent Psychiatry 2017; 56:948–957.e944.\n\t 4.\t Williams Buckley A, et al. Practice guideline: treatment for insomnia and disrupted sleep behavior in children and adolescents with autism \nspectrum disorder: report of the Guideline Development, Dissemination, and Implementation Subcommittee of the American Academy of \nNeurology. Neurology 2020; 94:392–404.\n\t 5.\t Arendt J, et al. Melatonin and its agonists: an update. Br J Psychiatry 2008; 193:267–269.\n\t 6.\t Ferracioli-Oda E, et al. Meta-analysis: melatonin for the treatment of primary sleep disorders. PLoS One 2013; 8:e63773.\n\t 7.\t Sheldon SH Pro-convulsant effects of oral melatonin in neurologically disabled children. Lancet 1998; 351:1254.\n\t 8.\t Maestroni GJ The immunoneuroendocrine role of melatonin. J Pineal Res 1993; 14:1–10.\n\t 9.\t Sutherland ER, et al. Elevated serum melatonin is associated with the nocturnal worsening of asthma. J Allergy Clin Immunol 2003; \n112:513–517.\n\t10.\t Chase JE, et al. Melatonin: therapeutic use in sleep disorders. Ann Pharmacother 1997; 31:1218–1226.\n\t11.\t Jan JE, et al. Melatonin treatment of sleep-wake cycle disorders in children and adolescents. Dev Med Child Neurol 1999; 41:491–500.\n\t12.\t Coppola G, et al. Melatonin in wake-sleep disorders in children, adolescents and young adults with mental retardation with or without epi-\nlepsy: a double-blind, cross-over, placebo-controlled trial. Brain Dev 2004; 26:373–376.\n\t13.\t Garstang J, et al. Randomized controlled trial of melatonin for children with autistic spectrum disorders and sleep problems. Child Care \nHealth Dev 2006; 32:585–589.\n\t14.\t Gringras P, et al. Melatonin for sleep problems in children with neurodevelopmental disorders: randomised double masked placebo con-\ntrolled trial. BMJ 2012; 345:e6664.\n\t15.\t Brigo F, et al. Melatonin as add-on treatment for epilepsy. Cochrane Database Syst Rev 2016:Cd006967.\n\t16.\t Malow BA, et al. Sleep, growth, and puberty after 2 years of prolonged-release melatonin in children with autism spectrum disorder. J Am \nAcad Child Adolesc Psychiatry 2020:S0890-8567(0820)30034-30034.\n\t17.\t Sack RL, et al. Sleep-promoting effects of melatonin: at what dose, in whom, under what conditions, and by what mechanisms? Sleep 1997; \n20:908–915.\n",
+  "raw_text_sha256": "c495795280a2cd13abe9ba6651d07e0772e6474b22c2d7f52d6a84af0d7cafc1",
+  "coordinates_sha256": "db27a4b956638c5022a123d8087fbd4483d2413026c43373ecce219bebbc8b1b",
+  "block_sequence_sha256": "352e9bb29d920f1c4e410aa9d1bf0fc72d3079a2050da9c04767730c7823e67b",
+  "blocks": [
+    {
+      "block_id": "page-0616-block-0000",
+      "order": 0,
+      "text": "Children and adolescents    595\n",
+      "bbox": [
+        288.94488525390625,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "05fe6184f221f5b76d2595556b5c5d1acb7dc9389014b8beeb68d578bd568f41"
+    },
+    {
+      "block_id": "page-0616-block-0001",
+      "order": 1,
+      "text": "CHAPTER 5\n",
+      "bbox": [
+        454.4096984863281,
+        339.3385009765625,
+        463.88970947265625,
+        380.6824951171875
+      ],
+      "text_sha256": "f4b8b4a0fc64e7b3b74e7336306d0959d0384683e387792724f393162639020a"
+    },
+    {
+      "block_id": "page-0616-block-0002",
+      "order": 2,
+      "text": "No response \n",
+      "bbox": [
+        168.2071990966797,
+        166.65818786621094,
+        212.8096923828125,
+        175.32818603515625
+      ],
+      "text_sha256": "fc633714d9ac506739d771d4ba16d93b5cc07c7823df1a73ac1639f7e449738b"
+    },
+    {
+      "block_id": "page-0616-block-0003",
+      "order": 3,
+      "text": "to >5mg\n",
+      "bbox": [
+        176.85470581054688,
+        175.65818786621094,
+        204.16221618652344,
+        184.32818603515625
+      ],
+      "text_sha256": "3b89fcea86d50d2fdda1c9559e2c60682b08fd5a25f04d48eaa75b96ed551c69"
+    },
+    {
+      "block_id": "page-0616-block-0004",
+      "order": 4,
+      "text": "Melatonin*\nUse Slenyto* 2−5mg\nConsider use of >5mg if response poor\n",
+      "bbox": [
+        232.9171905517578,
+        183.22569274902344,
+        362.352294921875,
+        209.89569091796875
+      ],
+      "text_sha256": "d51235d16811c95b317ca1e1104e8b171631358dacfc78664d07dfecf9c90d16"
+    },
+    {
+      "block_id": "page-0616-block-0005",
+      "order": 5,
+      "text": "Not effective\n",
+      "bbox": [
+        309.3883056640625,
+        158.8815155029297,
+        351.0733337402344,
+        167.551513671875
+      ],
+      "text_sha256": "9038554baf571a515f12d7e49e91a40979801f8d5a739eb997f028bb7a8953d3"
+    },
+    {
+      "block_id": "page-0616-block-0006",
+      "order": 6,
+      "text": "Response\n",
+      "bbox": [
+        309.3883056640625,
+        230.0340118408203,
+        343.15338134765625,
+        238.70401000976562
+      ],
+      "text_sha256": "19524cb446172954b5334de0cab397112c4f6121de782c43c64393567408de95"
+    },
+    {
+      "block_id": "page-0616-block-0007",
+      "order": 7,
+      "text": "Identify and treat\nsecondary causes\n",
+      "bbox": [
+        309.3883056640625,
+        100.48649597167969,
+        369.8309020996094,
+        118.156494140625
+      ],
+      "text_sha256": "7d467ea2bb1bdc5408be2ea63c78af5d2144ca56dd05f6c27b26c00fec258865"
+    },
+    {
+      "block_id": "page-0616-block-0008",
+      "order": 8,
+      "text": "Sleep hygiene\nParent-led sleep behavioural interventions\n",
+      "bbox": [
+        229.90330505371094,
+        127.70396423339844,
+        369.9660339355469,
+        145.37396240234375
+      ],
+      "text_sha256": "db4af98d90c956d4cdc82796ba8a50ab02d63f9685f1664c7c07eb251d4b3e3b"
+    },
+    {
+      "block_id": "page-0616-block-0009",
+      "order": 9,
+      "text": "Childhood insomnia\n",
+      "bbox": [
+        266.1612854003906,
+        78.84721374511719,
+        332.0189514160156,
+        87.5172119140625
+      ],
+      "text_sha256": "7ef9ce5b06a06accd10739e680ad04be3d8484cc280aef2684a4fda8760d8103"
+    },
+    {
+      "block_id": "page-0616-block-0010",
+      "order": 10,
+      "text": "Continue at minimum effective dose\n",
+      "bbox": [
+        240.248779296875,
+        252.3672332763672,
+        359.4613952636719,
+        261.0372314453125
+      ],
+      "text_sha256": "67994c6eb98ee1278cfc8178d9bb8c32392949851eb5888c0876a09279c75bfc"
+    },
+    {
+      "block_id": "page-0616-block-0011",
+      "order": 11,
+      "text": "Discontinue \n",
+      "bbox": [
+        99.05377197265625,
+        178.91224670410156,
+        140.3187713623047,
+        187.58224487304688
+      ],
+      "text_sha256": "ea2e3f8e5ce7410a3cf48851038f5a0ec5f6170f68de7b7f2784a4a57c3a39a4"
+    },
+    {
+      "block_id": "page-0616-block-0012",
+      "order": 12,
+      "text": "melatonin\n",
+      "bbox": [
+        103.43376922607422,
+        187.91224670410156,
+        135.94625854492188,
+        196.58224487304688
+      ],
+      "text_sha256": "1661d336ebd75cf04a354a44885c95974e1467f95c88465967674ef7d29184fa"
+    },
+    {
+      "block_id": "page-0616-block-0013",
+      "order": 13,
+      "text": "*At present this is the only UK preparation of melatonin with a product licence for children with ASD.\nThe mini pills can be administered in yoghurt/apple sauce and more children are able to swallow them.\n(All forms of melatonin can be crushed and mixed in water (but cease to be prolonged release) if the\nchild cannot swallow tablets.)\n",
+      "bbox": [
+        64.11830139160156,
+        282.8451843261719,
+        403.8384704589844,
+        318.51519775390625
+      ],
+      "text_sha256": "613781b3c5efca6305a89a046e1f1a35de97ee0a3b7d06ab8d7788d8c8ef405d"
+    },
+    {
+      "block_id": "page-0616-block-0014",
+      "order": 14,
+      "text": "Figure 5.3  Summary of recommendations.\n",
+      "bbox": [
+        48.0,
+        334.7890930175781,
+        186.49497985839844,
+        343.6766052246094
+      ],
+      "text_sha256": "4d74ad20d7f253c33c132a4e71921b9ce8d9dc3b6749368b12e2cfba9a11f5aa"
+    },
+    {
+      "block_id": "page-0616-block-0015",
+      "order": 15,
+      "text": "References\n",
+      "bbox": [
+        48.0,
+        363.8689880371094,
+        104.03400421142578,
+        376.90399169921875
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0616-block-0016",
+      "order": 16,
+      "text": "\t 1.\t Gringras P. When to use drugs to help sleep. Arch Dis Child 2008; 93:976–981.\n\t 2.\t Macchi MM, et al. Human pineal physiology and functional significance of melatonin. Front Neuroendocrinol 2004; 25:177–195.\n\t 3.\t Gringras P, et al. Efficacy and safety of pediatric prolonged-release melatonin for insomnia in children with autism spectrum disorder. J Am \n",
+      "bbox": [
+        48.0,
+        381.8459777832031,
+        421.6799621582031,
+        407.0220031738281
+      ],
+      "text_sha256": "418257ab7a91e86a16a1416096711c5e052dc1b8348efe0265899a8da8293136"
+    },
+    {
+      "block_id": "page-0616-block-0017",
+      "order": 17,
+      "text": "Acad Child Adolescent Psychiatry 2017; 56:948–957.e944.\n\t 4.\t Williams Buckley A, et al. Practice guideline: treatment for insomnia and disrupted sleep behavior in children and adolescents with autism \n",
+      "bbox": [
+        48.018001556396484,
+        408.8459777832031,
+        421.6320495605469,
+        425.0220031738281
+      ],
+      "text_sha256": "098178857c1c2fbc3d70480559549ecf4052724333fa114a806eb7c412624310"
+    },
+    {
+      "block_id": "page-0616-block-0018",
+      "order": 18,
+      "text": "spectrum disorder: report of the Guideline Development, Dissemination, and Implementation Subcommittee of the American Academy of \nNeurology. Neurology 2020; 94:392–404.\n\t 5.\t Arendt J, et al. Melatonin and its agonists: an update. Br J Psychiatry 2008; 193:267–269.\n\t 6.\t Ferracioli-Oda E, et al. Meta-analysis: melatonin for the treatment of primary sleep disorders. PLoS One 2013; 8:e63773.\n\t 7.\t Sheldon SH Pro-convulsant effects of oral melatonin in neurologically disabled children. Lancet 1998; 351:1254.\n\t 8.\t Maestroni GJ The immunoneuroendocrine role of melatonin. J Pineal Res 1993; 14:1–10.\n\t 9.\t Sutherland ER, et al. Elevated serum melatonin is associated with the nocturnal worsening of asthma. J Allergy Clin Immunol 2003; \n",
+      "bbox": [
+        48.02399826049805,
+        426.989990234375,
+        421.7221374511719,
+        488.0220031738281
+      ],
+      "text_sha256": "bb480cbbd33419065ae0cba3935620dda7d57e4d65ea4fec410da5842c53092a"
+    },
+    {
+      "block_id": "page-0616-block-0019",
+      "order": 19,
+      "text": "112:513–517.\n\t10.\t Chase JE, et al. Melatonin: therapeutic use in sleep disorders. Ann Pharmacother 1997; 31:1218–1226.\n\t11.\t Jan JE, et al. Melatonin treatment of sleep-wake cycle disorders in children and adolescents. Dev Med Child Neurol 1999; 41:491–500.\n\t12.\t Coppola G, et al. Melatonin in wake-sleep disorders in children, adolescents and young adults with mental retardation with or without epi-\n",
+      "bbox": [
+        48.05400085449219,
+        489.8459777832031,
+        420.10186767578125,
+        524.02197265625
+      ],
+      "text_sha256": "cf397c0bb1dbdfd1476bd60428658717caf55e637dbefd9f35c724d4eadf2bc7"
+    },
+    {
+      "block_id": "page-0616-block-0020",
+      "order": 20,
+      "text": "lepsy: a double-blind, cross-over, placebo-controlled trial. Brain Dev 2004; 26:373–376.\n\t13.\t Garstang J, et al. Randomized controlled trial of melatonin for children with autistic spectrum disorders and sleep problems. Child Care \n",
+      "bbox": [
+        48.071998596191406,
+        525.8460083007812,
+        421.7820129394531,
+        542.02197265625
+      ],
+      "text_sha256": "d983d2a911f5be116ac96ab14348f0da4832f293f4bd70d66d04470668e75992"
+    },
+    {
+      "block_id": "page-0616-block-0021",
+      "order": 21,
+      "text": "Health Dev 2006; 32:585–589.\n\t14.\t Gringras P, et al. Melatonin for sleep problems in children with neurodevelopmental disorders: randomised double masked placebo con-\n",
+      "bbox": [
+        48.077999114990234,
+        543.8460083007812,
+        420.12005615234375,
+        560.02197265625
+      ],
+      "text_sha256": "46b1b26dea04f095f0cafff491cbe9dc9b75583aeea71ff81702685ddc14bf08"
+    },
+    {
+      "block_id": "page-0616-block-0022",
+      "order": 22,
+      "text": "trolled trial. BMJ 2012; 345:e6664.\n\t15.\t Brigo F, et al. Melatonin as add-on treatment for epilepsy. Cochrane Database Syst Rev 2016:Cd006967.\n\t16.\t Malow BA, et al. Sleep, growth, and puberty after 2 years of prolonged-release melatonin in children with autism spectrum disorder. J Am \n",
+      "bbox": [
+        48.08399963378906,
+        561.8460083007812,
+        421.7999267578125,
+        587.02197265625
+      ],
+      "text_sha256": "8c9ae8bfd3f034c6134cd77969613c9ad0b7bb35358d0b4e206b76672507cd7f"
+    },
+    {
+      "block_id": "page-0616-block-0023",
+      "order": 23,
+      "text": "Acad Child Adolesc Psychiatry 2020:S0890-8567(0820)30034-30034.\n\t17.\t Sack RL, et al. Sleep-promoting effects of melatonin: at what dose, in whom, under what conditions, and by what mechanisms? Sleep 1997; \n",
+      "bbox": [
+        48.09600067138672,
+        588.989990234375,
+        421.76397705078125,
+        605.02197265625
+      ],
+      "text_sha256": "d4980328dfa915ee1394b3cc13e47c8af2c72a65b33d1fab2a4858a7b1b3de68"
+    },
+    {
+      "block_id": "page-0616-block-0024",
+      "order": 24,
+      "text": "20:908–915.\n",
+      "bbox": [
+        59.0999755859375,
+        606.8460083007812,
+        92.12396240234375,
+        614.02197265625
+      ],
+      "text_sha256": "0403ab6cfec5754dd09eba87ff9360b5144959b04fa67a84ec98f602f6240e4f"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,215 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0047",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 47,
+  "source_page_index": 46,
+  "source_page_display": 47,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "26    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\npreventing readmission than other oral antipsychotics.23 In this same study, the use of a \nlong-acting antipsychotic injection seemed to offer advantages over oral antipsychotics \ndespite confounding by indication (depots will have been prescribed to those consid-\nered to be poor adherers, oral to those perceived to have good adherence23). Later stud-\nies show a huge advantage for long-acting risperidone over oral risperidone in \nfirst-episode patients24 and a smaller but substantial benefit for paliperidone LAI over \noral antipsychotics in ‘recently diagnosed schizophrenia’.25 In the latest study, amisul-\npride was shown to give good outcomes and staying on amisulpride after not initially \nreaching remission was as successful as switching to olanzapine.26\nIn practice, a firm diagnosis of schizophrenia is rarely made after a first episode, and \nthe majority of prescribers and/or patients will have at least attempted to stop antipsy-\nchotic treatment within one year.27 Ideally, patients should have their dose reduced very \ngradually, and all relevant family members and healthcare staff should be aware of the \ndiscontinuation (such a situation is most likely to be achieved by using long-acting injec-\ntion). It is vital that patients, carers and key-workers are aware of the early signs of \nrelapse and how to access help. Antipsychotics should not be considered the only inter-\nvention. Evidence-based psychosocial and psychological interventions are clearly also \nimportant.28\nMulti-episode schizophrenia\nThe majority of those who have one episode of schizophrenia will go on to have fur-\nther episodes. Patients with residual symptoms, a greater side effect burden and a less \npositive attitude to treatment are at greater risk of relapse.29 With each subsequent \nepisode, the baseline level of functioning deteriorates,30 and the majority of this decline \nis seen in the first decade of illness. Suicide risk (10%) is also concentrated in the first \ndecade of illness. Antipsychotic drugs, when taken regularly, protect against relapse in \nthe short, medium and (less certainty) long term.3,31 Those who receive targeted antip-\nsychotics (i.e. only when symptoms re-emerge) seem to have a worse outcome than \nthose who receive prophylactic antipsychotics,32,33 and the risk of TD may also be \nhigher. Similarly, low-dose antipsychotics are less effective than standard doses.34\nFollowing table summarises the known benefits and harms associated with mainte-\nnance antipsychotic treatment as reported in a meta-analysis by Leucht et al. (2012).3\nBenefits\nHarms\nOutcome\nAntipsychotic Placebo NNT\nAdverse effect\nAntipsychotic Placebo\nNNH*\nRelapse at 7–12 months 27%\n64%\n3\nMovement disorder\n16%\n9%\n17\nRe-admission\n10%\n26%\n5\nAnticholinergic effects 24%\n16%\n11\nImprovement in mental \nstate\n30%\n12%\n4\nSedation\n13%\n9%\n20\nViolent/aggressive \nbehaviour\n2%\n12%\n11\nWeight gain\n10%\n6%\n20\nNNT = number needed to treat for one patient to benefit; NNH = number treated for one patient to be harmed.\n*Likely to be a considerable underestimate as adverse effects are rarely systematically assessed in clinical trials.35\n",
+  "raw_text_sha256": "be658af3f69a558c39c162c81842485ae3ec04cb38478dd440c4beba33518bc4",
+  "coordinates_sha256": "f6b50dcf8a0cbdb46f27a226f57dbe496b443cca14a0c56c8bcb7c01c957b079",
+  "block_sequence_sha256": "c095fb5412e5461e6e093341907f24096baddb51de126d42b6d1c8a6174a92f9",
+  "blocks": [
+    {
+      "block_id": "page-0047-block-0000",
+      "order": 0,
+      "text": "26    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "fc4546335bc01ceffaa244d5cf2000f57be3a8b53927ff43b83e89f775f12758"
+    },
+    {
+      "block_id": "page-0047-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0047-block-0002",
+      "order": 2,
+      "text": "preventing readmission than other oral antipsychotics.23 In this same study, the use of a \nlong-acting antipsychotic injection seemed to offer advantages over oral antipsychotics \ndespite confounding by indication (depots will have been prescribed to those consid-\nered to be poor adherers, oral to those perceived to have good adherence23). Later stud-\nies show a huge advantage for long-acting risperidone over oral risperidone in \nfirst-episode patients24 and a smaller but substantial benefit for paliperidone LAI over \noral antipsychotics in ‘recently diagnosed schizophrenia’.25 In the latest study, amisul-\npride was shown to give good outcomes and staying on amisulpride after not initially \nreaching remission was as successful as switching to olanzapine.26\n",
+      "bbox": [
+        61.88459777832031,
+        62.5494384765625,
+        436.7065734863281,
+        170.26943969726562
+      ],
+      "text_sha256": "7e45554a01241962e180f4f71bb189c2006bb2f2f7f461fdfbda92fcfdc8a045"
+    },
+    {
+      "block_id": "page-0047-block-0003",
+      "order": 3,
+      "text": "In practice, a firm diagnosis of schizophrenia is rarely made after a first episode, and \nthe majority of prescribers and/or patients will have at least attempted to stop antipsy-\nchotic treatment within one year.27 Ideally, patients should have their dose reduced very \ngradually, and all relevant family members and healthcare staff should be aware of the \ndiscontinuation (such a situation is most likely to be achieved by using long-acting injec-\ntion). It is vital that patients, carers and key-workers are aware of the early signs of \nrelapse and how to access help. Antipsychotics should not be considered the only inter-\nvention. Evidence-based psychosocial and psychological interventions are clearly also \nimportant.28\n",
+      "bbox": [
+        61.88849639892578,
+        170.5494384765625,
+        436.7083435058594,
+        278.2694396972656
+      ],
+      "text_sha256": "f7bc3ef0b118af242a7a8404accb1ff0641d0fbb6086acee8593be71a42183be"
+    },
+    {
+      "block_id": "page-0047-block-0004",
+      "order": 4,
+      "text": "Multi-episode schizophrenia\n",
+      "bbox": [
+        61.88849639892578,
+        295.7044982910156,
+        207.74844360351562,
+        308.739501953125
+      ],
+      "text_sha256": "c82622dadee730a6ae3eace1a3474d79601cc37e9c5bec63c2a019b358fce51f"
+    },
+    {
+      "block_id": "page-0047-block-0005",
+      "order": 5,
+      "text": "The majority of those who have one episode of schizophrenia will go on to have fur-\nther episodes. Patients with residual symptoms, a greater side effect burden and a less \npositive attitude to treatment are at greater risk of relapse.29 With each subsequent \nepisode, the baseline level of functioning deteriorates,30 and the majority of this decline \nis seen in the first decade of illness. Suicide risk (10%) is also concentrated in the first \ndecade of illness. Antipsychotic drugs, when taken regularly, protect against relapse in \nthe short, medium and (less certainty) long term.3,31 Those who receive targeted antip-\nsychotics (i.e. only when symptoms re-emerge) seem to have a worse outcome than \nthose who receive prophylactic antipsychotics,32,33 and the risk of TD may also be \nhigher. Similarly, low-dose antipsychotics are less effective than standard doses.34\n",
+      "bbox": [
+        61.88359069824219,
+        314.54949951171875,
+        436.7068786621094,
+        434.2695007324219
+      ],
+      "text_sha256": "30c8d5f8297ec25df05568e652d87b8d99086d5f6ebf3c42985d90617032dbdb"
+    },
+    {
+      "block_id": "page-0047-block-0006",
+      "order": 6,
+      "text": "Following table summarises the known benefits and harms associated with mainte-\nnance antipsychotic treatment as reported in a meta-analysis by Leucht et al. (2012).3\n",
+      "bbox": [
+        61.88849639892578,
+        434.54949951171875,
+        433.9085388183594,
+        458.2695007324219
+      ],
+      "text_sha256": "84be27ee0fe0bc02ecd82e6d7c11d2b98acd87c005fbba40aaca67234a5d4ed7"
+    },
+    {
+      "block_id": "page-0047-block-0007",
+      "order": 7,
+      "text": "Benefits\nHarms\n",
+      "bbox": [
+        61.88849639892578,
+        481.09649658203125,
+        274.3860168457031,
+        489.9840087890625
+      ],
+      "text_sha256": "695328d18a1dee49b16596df1edf2057d6b6905a5b089d25bf51e4189b9888b2"
+    },
+    {
+      "block_id": "page-0047-block-0008",
+      "order": 8,
+      "text": "Outcome\nAntipsychotic Placebo NNT\nAdverse effect\nAntipsychotic Placebo\nNNH*\n",
+      "bbox": [
+        61.88850402832031,
+        498.33148193359375,
+        430.3036193847656,
+        507.218994140625
+      ],
+      "text_sha256": "d99861335e3dc659f441ca53d042c2e758489e385ea1d9a8856ff176e46d5280"
+    },
+    {
+      "block_id": "page-0047-block-0009",
+      "order": 9,
+      "text": "Relapse at 7–12 months 27%\n64%\n3\nMovement disorder\n16%\n9%\n17\n",
+      "bbox": [
+        61.88850402832031,
+        515.8889770507812,
+        418.2286682128906,
+        524.5964965820312
+      ],
+      "text_sha256": "15d42be5015d174eaac1ebfbf1da884a792e8e66a4158894912d1d1adca6f4a9"
+    },
+    {
+      "block_id": "page-0047-block-0010",
+      "order": 10,
+      "text": "Re-admission\n10%\n26%\n5\nAnticholinergic effects 24%\n16%\n11\n",
+      "bbox": [
+        61.88850402832031,
+        533.5139770507812,
+        418.2286071777344,
+        542.2214965820312
+      ],
+      "text_sha256": "5579580bf18c504147c3f9c9f9605ee458b45e2c8d82cc0faa5800ef5f76a8da"
+    },
+    {
+      "block_id": "page-0047-block-0011",
+      "order": 11,
+      "text": "Improvement in mental \nstate\n",
+      "bbox": [
+        61.88850402832031,
+        551.1389770507812,
+        138.41848754882812,
+        569.843994140625
+      ],
+      "text_sha256": "3e91815938fa159d6a27a2f98cbbec5f8a6321c28f1d6be8de3ebb5724e20ce6"
+    },
+    {
+      "block_id": "page-0047-block-0012",
+      "order": 12,
+      "text": "30%\n12%\n4\nSedation\n13%\n9%\n20\n",
+      "bbox": [
+        142.8885040283203,
+        551.1389770507812,
+        418.2286071777344,
+        559.8464965820312
+      ],
+      "text_sha256": "abd9af191001613b69d906376df01c17882194db4f94f18a47d2b72b43244cdf"
+    },
+    {
+      "block_id": "page-0047-block-0013",
+      "order": 13,
+      "text": "Violent/aggressive \nbehaviour\n",
+      "bbox": [
+        61.88850402832031,
+        578.761474609375,
+        121.38597869873047,
+        597.4664916992188
+      ],
+      "text_sha256": "8724c7e07e0eca226d7e5f03039d9b7e8d7122c029f4e3b032bf406719511f6a"
+    },
+    {
+      "block_id": "page-0047-block-0014",
+      "order": 14,
+      "text": "2%\n12%\n11\nWeight gain\n10%\n6%\n20\n",
+      "bbox": [
+        142.8885040283203,
+        578.761474609375,
+        418.2286682128906,
+        587.468994140625
+      ],
+      "text_sha256": "47a2decdc8fb133c45bf903c4c1a35055a7fa6077ba5133e0b8cf3268722eb48"
+    },
+    {
+      "block_id": "page-0047-block-0015",
+      "order": 15,
+      "text": "NNT = number needed to treat for one patient to benefit; NNH = number treated for one patient to be harmed.\n*Likely to be a considerable underestimate as adverse effects are rarely systematically assessed in clinical trials.35\n",
+      "bbox": [
+        61.88850402832031,
+        608.2589721679688,
+        412.2881164550781,
+        626.9639892578125
+      ],
+      "text_sha256": "a7bf5e8fcdad935c8b0c9e0d973e437a6b11feece26ba984f6aeb771dcb2b1e5"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0513",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 513,
+  "source_page_index": 512,
+  "source_page_display": 513,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "492    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nsupervised dose is more than 3 days ago, the patient will need to have their OST re-\ninitiated to avoid overdose (see section regarding ‘Initiation of treatment’). Patients \nadmitted at weekends may have take-away doses and may not necessarily disclose \nthese if they are not directly asked about them. If more than 3 days have passed since \nthe patient’s last dose of OST, they will have lost tolerance and will need to be re-\ninitiated according to the advice of an addictions clinician.\nContinuation at the reported dose of OST should only take place if the above infor-\nmation is confirmed and:\n■\n■The patient appears alert and comfortable on this dose.\n■\n■The patient does not appear to be intoxicated with other substances.\nTable 4.14  Treatment of drug dependence to target specific symptoms (adapted from ‘Drug misuse and \ndependence: UK guidelines for clinical management’ 20171)\nSymptom\nTreatment\nDiarrhoea\nLoperamide 4mg then 2mg after each loose stool; maximum 16mg \ndaily for up to 5 days\nNausea and vomiting\nMetoclopramide 10mg tds for a maximum of 5 days or \nprochlorperazine 5mg tds or 12.5mg IM bd\nAbdominal cramps\nMebeverine 135mg tds\nAgitation, anxiety and insomnia\nDiazepam up to 5–10mg tds when required or zopiclone 7.5mg \nnocte for patients with a history of benzodiazepine dependence\nMuscular pains and headaches\nParacetamol, aspirin or non-steroidal anti-inflammatories. Topical \nrubefacients can be helpful in relieving muscle aches from \nmethadone withdrawal\nbd, bis die (twice a day); tds, ter die sumendum (three times a day).\nJunior doctors may find themselves looking after a patient in opioid withdrawal in \ncircumstances where it is not immediately possible to establish all the above information \nand so safely prescribe OST. Opioid withdrawal, while not fatal, is highly aversive and \ncarries risks if it is associated with a patient self-discharging when in need of inpatient \ncare. Other medications can be helpful in managing opioid withdrawal until such help \ncan be sought, though there is little place for them once OST is prescribed and their use \nduring OST induction is discouraged because of the risks associated with polypharmacy \nand polysubstance use. The following are recommended by the current UK clinical guide-\nlines for the treatment of drug dependence to target specific symptoms (Table 4.14):1\nPatients admitted for emergency psychiatric treatment should not be detoxified from \ntheir OST, and consideration should be given to the initiation of OST in opiate-­dependent \npatients who are not yet in treatment (with the advice of local addiction specialists).\nIF THERE IS ANY DOUBT OR CONCERN REGARDING ANY FACTORS LISTED EARLIER, OST SHOULD \nNOT BE PRESCRIBED.\n",
+  "raw_text_sha256": "b5523a98fe05cdc1e6e491fd077e74949a6d0318ea2698b22acb582f976ddfa7",
+  "coordinates_sha256": "8ead786a5b4ea87e4da5530f3b9b48c94fae069cca8ecbd6fcb380b8e77fcc8f",
+  "block_sequence_sha256": "ae0b26a210871a9f8dae5b71cdda2fc28bd09539ff7e10b7731afe8a5f8d0596",
+  "blocks": [
+    {
+      "block_id": "page-0513-block-0000",
+      "order": 0,
+      "text": "492    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "09ac4d0fe99be991101a6486fade5173b74caa3c66de9492dc810e9d7260d633"
+    },
+    {
+      "block_id": "page-0513-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0513-block-0002",
+      "order": 2,
+      "text": "supervised dose is more than 3 days ago, the patient will need to have their OST re-\ninitiated to avoid overdose (see section regarding ‘Initiation of treatment’). Patients \nadmitted at weekends may have take-away doses and may not necessarily disclose \nthese if they are not directly asked about them. If more than 3 days have passed since \nthe patient’s last dose of OST, they will have lost tolerance and will need to be re-\ninitiated according to the advice of an addictions clinician.\n",
+      "bbox": [
+        70.88980102539062,
+        62.55029296875,
+        436.69989013671875,
+        134.27029418945312
+      ],
+      "text_sha256": "b65908bde0405d131be69dc0949cca4398331bd6660052d10a6d35e8d01aee05"
+    },
+    {
+      "block_id": "page-0513-block-0003",
+      "order": 3,
+      "text": "Continuation at the reported dose of OST should only take place if the above infor-\nmation is confirmed and:\n",
+      "bbox": [
+        61.889801025390625,
+        140.55029296875,
+        433.8898010253906,
+        164.27029418945312
+      ],
+      "text_sha256": "287842df1af3503387e55a56a0f577ac734f3686ce817e0de0f560b1e20290b0"
+    },
+    {
+      "block_id": "page-0513-block-0004",
+      "order": 4,
+      "text": "■\n■The patient appears alert and comfortable on this dose.\n",
+      "bbox": [
+        61.88970184326172,
+        170.55029296875,
+        309.809814453125,
+        182.27029418945312
+      ],
+      "text_sha256": "3f528fa1e04fffaf93163b7573253673d63376908e9e2312ee81d6551dbf2ccb"
+    },
+    {
+      "block_id": "page-0513-block-0005",
+      "order": 5,
+      "text": "■\n■The patient does not appear to be intoxicated with other substances.\n",
+      "bbox": [
+        61.88970184326172,
+        182.55029296875,
+        366.4997863769531,
+        194.27029418945312
+      ],
+      "text_sha256": "375d0c80544ee5bfafa43df952a1556f97dbaac37d413f64991e0fafcb4282b5"
+    },
+    {
+      "block_id": "page-0513-block-0006",
+      "order": 6,
+      "text": "Table 4.14  Treatment of drug dependence to target specific symptoms (adapted from ‘Drug misuse and \ndependence: UK guidelines for clinical management’ 20171)\n",
+      "bbox": [
+        67.88999938964844,
+        374.76678466796875,
+        403.67254638671875,
+        393.654296875
+      ],
+      "text_sha256": "9bdf1fa51db98229b014f15ae36ef4f97ef6b0ec2d5f00e348c8022bac764c7f"
+    },
+    {
+      "block_id": "page-0513-block-0007",
+      "order": 7,
+      "text": "Symptom\nTreatment\n",
+      "bbox": [
+        61.88999938964844,
+        404.64178466796875,
+        247.24497985839844,
+        413.529296875
+      ],
+      "text_sha256": "0fc1516435c25d2677792ced883e261b433bfd7ae039e3c77b41980a6dba7171"
+    },
+    {
+      "block_id": "page-0513-block-0008",
+      "order": 8,
+      "text": "Diarrhoea\nLoperamide 4mg then 2mg after each loose stool; maximum 16mg \ndaily for up to 5 days\n",
+      "bbox": [
+        61.88999938964844,
+        422.9493103027344,
+        428.0850830078125,
+        441.654296875
+      ],
+      "text_sha256": "eb3fcfe5f7566b667dbe880275ebc338a1f33754b006e72b95aa74e30d38d53c"
+    },
+    {
+      "block_id": "page-0513-block-0009",
+      "order": 9,
+      "text": "Nausea and vomiting\nMetoclopramide 10mg tds for a maximum of 5 days or \nprochlorperazine 5mg tds or 12.5mg IM bd\n",
+      "bbox": [
+        61.88999938964844,
+        451.0743103027344,
+        389.32501220703125,
+        469.779296875
+      ],
+      "text_sha256": "87c21d1ce07165ff768aa7a6a437a170b41324ddcfb2ccfd1a67833123b6c3cf"
+    },
+    {
+      "block_id": "page-0513-block-0010",
+      "order": 10,
+      "text": "Abdominal cramps\nMebeverine 135mg tds\n",
+      "bbox": [
+        61.88999938964844,
+        479.1993103027344,
+        285.5700378417969,
+        487.90679931640625
+      ],
+      "text_sha256": "785b59ad65cb714a8efa894386bb169f27e7e97618d170529eb507561f59b5db"
+    },
+    {
+      "block_id": "page-0513-block-0011",
+      "order": 11,
+      "text": "Agitation, anxiety and insomnia\nDiazepam up to 5–10mg tds when required or zopiclone 7.5mg \nnocte for patients with a history of benzodiazepine dependence\n",
+      "bbox": [
+        61.88999938964844,
+        497.3268127441406,
+        417.4276428222656,
+        516.0317993164062
+      ],
+      "text_sha256": "9fca2b39d39750ae9960f92fbad8553627903764afa4bdc0b55b115647784b97"
+    },
+    {
+      "block_id": "page-0513-block-0012",
+      "order": 12,
+      "text": "Muscular pains and headaches\nParacetamol, aspirin or non-steroidal anti-inflammatories. Topical \nrubefacients can be helpful in relieving muscle aches from \nmethadone withdrawal\n",
+      "bbox": [
+        61.88999938964844,
+        525.4517822265625,
+        420.4201965332031,
+        554.154296875
+      ],
+      "text_sha256": "f17c83e26676171be1f741de1dcf1ac0823f35fdfceadc99c20c314c88190fb0"
+    },
+    {
+      "block_id": "page-0513-block-0013",
+      "order": 13,
+      "text": "bd, bis die (twice a day); tds, ter die sumendum (three times a day).\n",
+      "bbox": [
+        61.88999938964844,
+        564.19677734375,
+        276.79498291015625,
+        572.904296875
+      ],
+      "text_sha256": "0d3d56f9cd15a7d4c57a5967666e75069d58a2fc93178c8643996e4b7ad355f9"
+    },
+    {
+      "block_id": "page-0513-block-0014",
+      "order": 14,
+      "text": "Junior doctors may find themselves looking after a patient in opioid withdrawal in \ncircumstances where it is not immediately possible to establish all the above information \nand so safely prescribe OST. Opioid withdrawal, while not fatal, is highly aversive and \ncarries risks if it is associated with a patient self-discharging when in need of inpatient \ncare. Other medications can be helpful in managing opioid withdrawal until such help \ncan be sought, though there is little place for them once OST is prescribed and their use \nduring OST induction is discouraged because of the risks associated with polypharmacy \nand polysubstance use. The following are recommended by the current UK clinical guide-\nlines for the treatment of drug dependence to target specific symptoms (Table 4.14):1\n",
+      "bbox": [
+        61.88999938964844,
+        250.41940307617188,
+        436.72027587890625,
+        358.139404296875
+      ],
+      "text_sha256": "3e8057c8fc0c1b67a6ca878c95ba3dece19cf302eaa715e818027139cf20f87f"
+    },
+    {
+      "block_id": "page-0513-block-0015",
+      "order": 15,
+      "text": "Patients admitted for emergency psychiatric treatment should not be detoxified from \ntheir OST, and consideration should be given to the initiation of OST in opiate-­dependent \npatients who are not yet in treatment (with the advice of local addiction specialists).\n",
+      "bbox": [
+        61.88999938964844,
+        585.149169921875,
+        436.69976806640625,
+        620.8692016601562
+      ],
+      "text_sha256": "3de6a8ac2106adf7e3121905dcbeba558dd6c7bfd71e80d8ede485b32c1dba32"
+    },
+    {
+      "block_id": "page-0513-block-0016",
+      "order": 16,
+      "text": "IF THERE IS ANY DOUBT OR CONCERN REGARDING ANY FACTORS LISTED EARLIER, OST SHOULD \nNOT BE PRESCRIBED.\n",
+      "bbox": [
+        69.13999938964844,
+        213.31887817382812,
+        425.7489013671875,
+        233.18338012695312
+      ],
+      "text_sha256": "56b7d934f9ef8380783e41815bfa2d53b6d85418141ed2f1ddffd4aaf4b9f4b3"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

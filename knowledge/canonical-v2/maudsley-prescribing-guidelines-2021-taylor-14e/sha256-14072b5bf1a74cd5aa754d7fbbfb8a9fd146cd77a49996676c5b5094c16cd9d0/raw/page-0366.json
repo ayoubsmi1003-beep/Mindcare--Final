@@ -1,0 +1,215 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0366",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 366,
+  "source_page_index": 365,
+  "source_page_display": 366,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    345\nCHAPTER 3\nClinical relevance14,15\nThe symptoms of a withdrawal reaction may be mistaken for a relapse of illness or the \nemergence of a new physical illness16 leading to unnecessary investigations or reintro-\nduction of the antidepressant. Symptoms may be severe enough to interfere with daily \nfunctioning, and those who have experienced discontinuation symptoms may reason \n(perhaps appropriately) that antidepressants are ‘addictive’ and not wish to accept \ntreatment. There is also evidence of emergent suicidal thoughts on discontinuation with \nparoxetine.17\nWho is most at risk?10,14–16,18\nAlthough anyone can experience discontinuation symptoms, the risk is increased in \nthose prescribed short half-life drugs7 (e.g. paroxetine, venlafaxine), particularly if they \ndo not take them regularly. Two-thirds of patients prescribed antidepressants skip a few \ndoses from time to time,19 and many patients stop their antidepressant abruptly.20 The \nrisk is also increased in those who have been taking antidepressants for 8 weeks or \nlonger,21 those taking antidepressants at higher doses, those who have developed anxi-\nety symptoms at the start of antidepressant therapy (particularly with SSRIs), those \nreceiving other centrally acting medication (e.g. antihypertensives, antihistamines, \nantipsychotics), children and adolescents,7 younger patients22 and those who have expe-\nrienced withdrawal symptoms before.\nAntidepressant withdrawal symptoms are common in neonates born to women tak-\ning antidepressants (see section on ‘Pregnancy’ in Chapter 7).\nHow to avoid14–16,18\nGenerally, antidepressant therapy should be discontinued gradually.6 Readers are \nreferred to the section on ‘Stopping antidepressants’ in this chapter for advice on spe-\ncific antidepressants. The shorter the half-life of the drug, the more important that this \nrule is followed. The end of the taper may need to be slower, as symptoms may not \nAntidepressant type\nSymptoms\nNaSSAs (e.g. mirtazapine)\nPanic, anxiety, restlessness, irritability, hypomania, insomnia, dizziness, paresthesia, \nnausea, vomiting10\nSerotonin modulators \n(vortioxetine, vilazodone)\nNone reported,10 though these are relatively new antidepressants with less clinical \nexperience. Shared pharmacological actions with other antidepressants (SSRIs) so \npossibility of withdrawal symptoms cannot be discounted10\nTCAs\nGeneral somatic and GI distress, sleep disturbances characterised by initial and \nmiddle insomnia or excessively vivid and frightening dreams, akathisia or \nparkinsonism, hypomania or mania, cardiac arrhythmia10\nTrazodone\nHypomania, anxiety, restless sleep, nightmares, depersonalisation, formication, \nheadache10\n*Tranylcypromine may have amfetamine-like properties at higher doses12 and therefore could be associated with a \ntrue ‘withdrawal syndrome’. Delirium may occur.13\n",
+  "raw_text_sha256": "116bd535e3353ae4bfb6eca25a93841bc3a78fd68fa980fe54bce9de266a3aec",
+  "coordinates_sha256": "d918e1929c7202c64b27a751ee89016aa4a739e6d9a99d6be2d70f86ae702d42",
+  "block_sequence_sha256": "f391e44a9bba6d53d6711d1c211e3f47bf8e83eb9f080f1dd5ff97f1438f90f2",
+  "blocks": [
+    {
+      "block_id": "page-0366-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    345\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "009bf048d8699fe32750bf4ec95b11bae60ab60eee49de13f14d5d25c2a0102d"
+    },
+    {
+      "block_id": "page-0366-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0366-block-0002",
+      "order": 2,
+      "text": "Clinical relevance14,15\n",
+      "bbox": [
+        48.0,
+        249.9063720703125,
+        143.72608947753906,
+        261.7563781738281
+      ],
+      "text_sha256": "8a57ceb61aedf9fa7d90d4ca7680d8d31b5bd8be053630fae95d33b5ec9cbd77"
+    },
+    {
+      "block_id": "page-0366-block-0003",
+      "order": 3,
+      "text": "The symptoms of a withdrawal reaction may be mistaken for a relapse of illness or the \nemergence of a new physical illness16 leading to unnecessary investigations or reintro-\nduction of the antidepressant. Symptoms may be severe enough to interfere with daily \nfunctioning, and those who have experienced discontinuation symptoms may reason \n(perhaps appropriately) that antidepressants are ‘addictive’ and not wish to accept \ntreatment. There is also evidence of emergent suicidal thoughts on discontinuation with \nparoxetine.17\n",
+      "bbox": [
+        48.0,
+        267.8163757324219,
+        422.8235168457031,
+        351.536376953125
+      ],
+      "text_sha256": "5f36cde951da789b81cc54ed015f3a6f1306a3321f210bfed7fa137d36c67ba8"
+    },
+    {
+      "block_id": "page-0366-block-0004",
+      "order": 4,
+      "text": "Who is most at risk?10,14–16,18\n",
+      "bbox": [
+        48.0,
+        369.9063720703125,
+        175.0973663330078,
+        381.7563781738281
+      ],
+      "text_sha256": "5052bd51bcb60c77d4046ed5ba2e3684a80e4e8ea06fcf32231ad2a0c6f289da"
+    },
+    {
+      "block_id": "page-0366-block-0005",
+      "order": 5,
+      "text": "Although anyone can experience discontinuation symptoms, the risk is increased in \nthose prescribed short half-life drugs7 (e.g. paroxetine, venlafaxine), particularly if they \ndo not take them regularly. Two-thirds of patients prescribed antidepressants skip a few \ndoses from time to time,19 and many patients stop their antidepressant abruptly.20 The \nrisk is also increased in those who have been taking antidepressants for 8 weeks or \nlonger,21 those taking antidepressants at higher doses, those who have developed anxi-\nety symptoms at the start of antidepressant therapy (particularly with SSRIs), those \nreceiving other centrally acting medication (e.g. antihypertensives, antihistamines, \nantipsychotics), children and adolescents,7 younger patients22 and those who have expe-\nrienced withdrawal symptoms before.\n",
+      "bbox": [
+        47.99659729003906,
+        387.8163757324219,
+        422.82275390625,
+        507.5364074707031
+      ],
+      "text_sha256": "0559b920f76a76ccc363a1ae3b6c79bbbc1d11206220619a8396f78716cbb5d3"
+    },
+    {
+      "block_id": "page-0366-block-0006",
+      "order": 6,
+      "text": "Antidepressant withdrawal symptoms are common in neonates born to women tak-\ning antidepressants (see section on ‘Pregnancy’ in Chapter 7).\n",
+      "bbox": [
+        47.996673583984375,
+        507.81640625,
+        420.0165710449219,
+        531.5364379882812
+      ],
+      "text_sha256": "b69ec2fd26b03858acb311803778d1571c07b5267ed975aa2cf72e15e43759aa"
+    },
+    {
+      "block_id": "page-0366-block-0007",
+      "order": 7,
+      "text": "How to avoid14–16,18\n",
+      "bbox": [
+        47.996673583984375,
+        549.9064331054688,
+        135.88401794433594,
+        561.7564086914062
+      ],
+      "text_sha256": "f2eac92e708cd9fc8c9a011d45828a2df0472dc3fe6d058ecad293216ac5f00d"
+    },
+    {
+      "block_id": "page-0366-block-0008",
+      "order": 8,
+      "text": "Generally, antidepressant therapy should be discontinued gradually.6 Readers are \nreferred to the section on ‘Stopping antidepressants’ in this chapter for advice on spe-\ncific antidepressants. The shorter the half-life of the drug, the more important that this \nrule is followed. The end of the taper may need to be slower, as symptoms may not \n",
+      "bbox": [
+        47.995819091796875,
+        567.81640625,
+        422.8258361816406,
+        615.5364379882812
+      ],
+      "text_sha256": "7e8b273993cc97ccfc43d145fdf242d009dc63c3b1e08f7ed62a6bc0101762dc"
+    },
+    {
+      "block_id": "page-0366-block-0009",
+      "order": 9,
+      "text": "Antidepressant type\nSymptoms\n",
+      "bbox": [
+        47.999698638916016,
+        70.57289123535156,
+        191.58718872070312,
+        79.46038818359375
+      ],
+      "text_sha256": "22924008fb9bdcb78601df33a16b7f8572e9232dbbfa07620240cd5861010dc1"
+    },
+    {
+      "block_id": "page-0366-block-0010",
+      "order": 10,
+      "text": "NaSSAs (e.g. mirtazapine)\nPanic, anxiety, restlessness, irritability, hypomania, insomnia, dizziness, paresthesia, \nnausea, vomiting10\n",
+      "bbox": [
+        47.999698638916016,
+        88.0254135131836,
+        419.52728271484375,
+        106.73040771484375
+      ],
+      "text_sha256": "95ece31118f77327fe44bee34f87ba8933d8919c6247aeb13291b0678ade2efa"
+    },
+    {
+      "block_id": "page-0366-block-0011",
+      "order": 11,
+      "text": "Serotonin modulators \n(vortioxetine, vilazodone)\n",
+      "bbox": [
+        47.999698638916016,
+        113.0528793334961,
+        128.002197265625,
+        131.75787353515625
+      ],
+      "text_sha256": "1b481e097114825d3f0d317f25248c1bb7ba7b3185bf7cd3af044e88dd885b08"
+    },
+    {
+      "block_id": "page-0366-block-0012",
+      "order": 12,
+      "text": "None reported,10 though these are relatively new antidepressants with less clinical \nexperience. Shared pharmacological actions with other antidepressants (SSRIs) so \npossibility of withdrawal symptoms cannot be discounted10\n",
+      "bbox": [
+        154.49969482421875,
+        113.0528793334961,
+        416.7692565917969,
+        141.75537109375
+      ],
+      "text_sha256": "3fb2a01d14a4ffa66c7b9d901685483c9a8ea2f2d688089ad847c0c78e6c1de5"
+    },
+    {
+      "block_id": "page-0366-block-0013",
+      "order": 13,
+      "text": "TCAs\nGeneral somatic and GI distress, sleep disturbances characterised by initial and \nmiddle insomnia or excessively vivid and frightening dreams, akathisia or \nparkinsonism, hypomania or mania, cardiac arrhythmia10\n",
+      "bbox": [
+        47.999698638916016,
+        148.07789611816406,
+        406.4622802734375,
+        176.7803955078125
+      ],
+      "text_sha256": "cd187256384f5f45fbee432cb9f14ca3e382ba4a7cae3795d793562c8f0afc32"
+    },
+    {
+      "block_id": "page-0366-block-0014",
+      "order": 14,
+      "text": "Trazodone\nHypomania, anxiety, restless sleep, nightmares, depersonalisation, formication, \nheadache10\n",
+      "bbox": [
+        47.999698638916016,
+        183.10289001464844,
+        406.8973083496094,
+        201.80789184570312
+      ],
+      "text_sha256": "1347b7b7d2b6ec9fac0ef26faca7da11ada36d4198611568b89c510d40392e5d"
+    },
+    {
+      "block_id": "page-0366-block-0015",
+      "order": 15,
+      "text": "*Tranylcypromine may have amfetamine-like properties at higher doses12 and therefore could be associated with a \ntrue ‘withdrawal syndrome’. Delirium may occur.13\n",
+      "bbox": [
+        47.999481201171875,
+        212.10289001464844,
+        414.15704345703125,
+        230.80789184570312
+      ],
+      "text_sha256": "113410f1c0d49382133879cb938c3cc545b151aa5d48148535368795ad2a0e43"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,12 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0166",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 166,
+  "source_page_index": 165,
+  "repaired_text": "Schizophrenia and related psychoses    145\nCHAPTER 1\nConsider measuring QTc within a week of achieving a therapeutic dose of a newly \nprescribed antipsychotic that is associated with a moderate or high risk of QTc prolon-\ngation or of newly prescribed combined antipsychotics (Table 1.24).\nMetabolic inhibition\nThe effect of drugs on the QTc interval is usually plasma level-dependent. Drug interac-\ntions are therefore important, especially when metabolic inhibition results in increased \nplasma levels of the drug affecting QTc. Commonly used metabolic inhibitors include \nfluvoxamine, fluoxetine, paroxetine and valproate.\nTable 1.23  Non-psychotropics associated with QT prolongation \n(see Crediblemeds.org for latest information)\nAntibiotics\nErythromycin\nClarithromycin\nAmpicillin\nCo-trimoxazole\nPentamidine\n(some four quinolones affect QTc –  \nsee manufacturers’ literature)\nAntiarrhythmics\nQuinidine\nDisopyramide\nProcainamide\nSotalol\nAmiodarone\nBretylium\nAntimalarials\nChloroquine\nMefloquine\nQuinine\nOthers\nAmantadine\nCyclosporin\nDiphenhydramine\nHydroxyzine\nMethadone\nNicardipine\nTamoxifen\nNote: β2 agonists and sympathomimetics may provoke torsade de \npointes in patients with prolonged QTc.\nTable 1.24  Management of QT prolongation in patients receiving antipsychotic drugs\nQTc\nAction\nRefer to cardiologist\n<440ms (men) or <470ms (women)\nNone unless abnormal T-wave morphology\nConsider if in doubt\n>440ms (men) or > 470ms \n(women) but < 500ms\nConsider reducing dose or switching to drug \nof lower effect; repeat ECG\nConsider\n>500ms\nRepeat ECG. Stop suspected causative drug(s) \nand switch to drug of lower effect\nImmediately\nAbnormal T-wave morphology\nReview treatment. Consider reducing dose or \nswitching to drug of lower effect\nImmediately",
+  "repaired_text_sha256": "ad18be8303ddbd2a5da11a023395eb5b95048e84d47cec877cbd58fe198ca96a",
+  "raw_text_sha256": "86a16c26e344e5b3696f473f958a8d3227de94ca3f18e8cdca62f82ffdc4070f",
+  "repair_ids": [],
+  "raw_file": "raw/page-0166.json"
+}

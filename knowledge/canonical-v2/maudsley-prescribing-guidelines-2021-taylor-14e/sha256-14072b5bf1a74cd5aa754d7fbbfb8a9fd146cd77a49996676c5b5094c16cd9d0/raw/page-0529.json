@@ -1,0 +1,323 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0529",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 529,
+  "source_page_index": 528,
+  "source_page_display": 529,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "508    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nfrom long-term vapour inhalation from e-cigarettes is unlikely to exceed 5% of the \nharm from smoking tobacco. Concurrent smoking and vaping (dual use) may not \nreduce the risk of adverse health effects, and people who vape should be encouraged to \nstop smoking completely, whereas people who have never smoked should be encour-\naged not to smoke and not to vape.24,26\nTable 4.16  Treatment algorithm for those people making an attempt to stop smoking\nFirst-line quit attempt pharmacological treatment is combination NRT or varenicline.\nAll quit attempts should be supported at least weekly by a trained tobacco dependence treatment advisor.\nCombination NRT quit attempt\nVarenicline quit attempt\nFor people who smoke more than 20 cigarettes/day or \nwho smoke within 30 minutes of waking up:\nStart 21mg (24 hours) or 25mg (16 hours) patch and an \noral/nasal NRT product of the person’s choice\nContinue patch use for up to 12 weeks, aiming to \nreduce patch dosage every 4 weeks\nContinue oral/nasal product use whilst experiencing craving\nSet target ‘stopping date’ between 1 and 2 weeks of \nvarenicline treatment\nStart 0.5mg PO varenicline once daily on days 1–3\nIncrease to 0.5mg PO varenicline twice daily on days \n4–7\nIncrease to 1mg PO varenicline twice daily on days 8–84\nConsider 1mg varenicline PO twice daily for an \nadditional 12 weeks for the maintenance of abstinence \nin people who have successfully stopped smoking at the \nend of the initial 12 weeks course of varenicline\nFor people who smoke less than 20 cigarettes/day and \ndo not smoke within 30 minutes of waking up:\nStart 14mg (24 hours) or 15mg (16 hours) patch and/or \nan oral/nasal NRT product of the person’s choice\nContinue patch use for up to 12 weeks, aiming to \nreduce patch dosage every 4 weeks\nContinue oral/nasal product use whilst experiencing \ncraving\nBupropion could be considered second line or where people who smoke express a preference for bupropion \ntherapy.\nBupropion quit attempt\nSet target ‘stopping date’ between 1 and 2 weeks of bupropion treatment\nStart 150mg PO bupropion daily on days 1–6\nIncrease to 150mg PO bupropion twice daily on days 7–49 (with an interval of at least 8 hours between doses)\nMaintain dose at 150mg PO bupropion on days 50–63 (otherwise, discontinue if person has not quit)\nIn patients with serious mental illness, both varenicline and bupropion have been shown to increase the odds of \nstopping smoking by greater than 4 times compared to placebo. In patients with stable psychiatric co-morbidity, \nan NRT patch was also found to double the abstinence rates compared to placebo. Both varenicline and \nbupropion did not significantly increase the risk of neuropsychiatric adverse events (including anxiety, depression, \naggression, psychosis, and suicidal behaviour) when compared with placebo or NRT in patients with or without a \nhistory of psychiatric disorders\nIt is always advisable to monitor patient’s mental health when undergoing a quit attempt\nPeople who smoke wishing to use an e-cigarette to quit should generally set a quit date and use the e-cigarette to \nstop in one go by replacing all their tobacco cigarettes with an e-cigarette as soon as possible. Alternatively, they can \ngradually reduce the amount they smoke over several weeks and increase the use of the e-cigarette until they have \ncompletely switched. Similar to the use of NRT, advise the service user to start with a higher strength of nicotine\npo, per os (by mouth)\n",
+  "raw_text_sha256": "217ccad6cb97f9dd0c8d1b49ba2b39d246edc5a22dda10686fbb10a1bdb7febf",
+  "coordinates_sha256": "313d4862bc6cfb7118c6458fc1631dc9161b352ea7bfd31433cb957acecbcad2",
+  "block_sequence_sha256": "2e1a4d37ee1bb08d8e1108c4176b1477696b876c8ee3e2d0c6f86d7e88928550",
+  "blocks": [
+    {
+      "block_id": "page-0529-block-0000",
+      "order": 0,
+      "text": "508    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "ca333554e4806e324d8421e8e13ba7e4d6c5a31e7e7d3d88dcd4a801858dbad9"
+    },
+    {
+      "block_id": "page-0529-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0529-block-0002",
+      "order": 2,
+      "text": "from long-term vapour inhalation from e-cigarettes is unlikely to exceed 5% of the \nharm from smoking tobacco. Concurrent smoking and vaping (dual use) may not \nreduce the risk of adverse health effects, and people who vape should be encouraged to \nstop smoking completely, whereas people who have never smoked should be encour-\naged not to smoke and not to vape.24,26\n",
+      "bbox": [
+        61.889984130859375,
+        62.55029296875,
+        436.7099609375,
+        122.27029418945312
+      ],
+      "text_sha256": "38f8006ad46310b81c1384dbd470e38a149bb5a31fb632657bd2dc0b4bd71fca"
+    },
+    {
+      "block_id": "page-0529-block-0003",
+      "order": 3,
+      "text": "Table 4.16  Treatment algorithm for those people making an attempt to stop smoking\n",
+      "bbox": [
+        67.88980102539062,
+        155.6120147705078,
+        343.3723449707031,
+        164.49951171875
+      ],
+      "text_sha256": "6bfd157a0b3fcdb9a1d623c047fce528b5d2701c0b53f0176b7c0ef77c8618d1"
+    },
+    {
+      "block_id": "page-0529-block-0004",
+      "order": 4,
+      "text": "First-line quit attempt pharmacological treatment is combination NRT or varenicline.\nAll quit attempts should be supported at least weekly by a trained tobacco dependence treatment advisor.\n",
+      "bbox": [
+        61.889801025390625,
+        171.60951232910156,
+        400.6948547363281,
+        190.4945068359375
+      ],
+      "text_sha256": "2b00b4d50da51e5ce8e1887fb35f496e7b8907e04aeff467b49aff862340bb2d"
+    },
+    {
+      "block_id": "page-0529-block-0005",
+      "order": 5,
+      "text": "Combination NRT quit attempt\nVarenicline quit attempt\n",
+      "bbox": [
+        61.889801025390625,
+        200.4869842529297,
+        339.2023010253906,
+        209.37448120117188
+      ],
+      "text_sha256": "a708582137e039c0dab085c4b909c5f8b56b4560e6bef3766f87a64fc9a7dd67"
+    },
+    {
+      "block_id": "page-0529-block-0006",
+      "order": 6,
+      "text": "For people who smoke more than 20 cigarettes/day or \nwho smoke within 30 minutes of waking up:\n",
+      "bbox": [
+        61.889801025390625,
+        218.7944793701172,
+        237.4873046875,
+        237.49948120117188
+      ],
+      "text_sha256": "d8e396960cec93c80cc033fb7dd29db1ce511898170d0a88756e994f2d42ccdd"
+    },
+    {
+      "block_id": "page-0529-block-0007",
+      "order": 7,
+      "text": "Start 21mg (24 hours) or 25mg (16 hours) patch and an \noral/nasal NRT product of the person’s choice\n",
+      "bbox": [
+        61.889801025390625,
+        241.7894744873047,
+        242.79730224609375,
+        260.4944763183594
+      ],
+      "text_sha256": "7677a065ce20d5673df9d6fa2c84df4bdb57468a2d96675ed3a18bb03b9d5a24"
+    },
+    {
+      "block_id": "page-0529-block-0008",
+      "order": 8,
+      "text": "Continue patch use for up to 12 weeks, aiming to \nreduce patch dosage every 4 weeks\n",
+      "bbox": [
+        61.889801025390625,
+        264.78448486328125,
+        224.02481079101562,
+        283.4894714355469
+      ],
+      "text_sha256": "e5cd3cf89dc3ad6a2c51cd233fd81a620d10e59af785ae286d800b2d68b615de"
+    },
+    {
+      "block_id": "page-0529-block-0009",
+      "order": 9,
+      "text": "Continue oral/nasal product use whilst experiencing craving\n",
+      "bbox": [
+        61.889801025390625,
+        287.77947998046875,
+        241.7623748779297,
+        296.4869689941406
+      ],
+      "text_sha256": "72c2d3b1c6e456fcfceb17be6f81a854273f2ab44da7448e215143b444572001"
+    },
+    {
+      "block_id": "page-0529-block-0010",
+      "order": 10,
+      "text": "Set target ‘stopping date’ between 1 and 2 weeks of \nvarenicline treatment\n",
+      "bbox": [
+        253.88980102539062,
+        244.78196716308594,
+        425.18988037109375,
+        263.4869689941406
+      ],
+      "text_sha256": "4bdf7ce3b529950fd101a6e443016fac49dd0b17d98181f7ad9a7b3185972a22"
+    },
+    {
+      "block_id": "page-0529-block-0011",
+      "order": 11,
+      "text": "Start 0.5mg PO varenicline once daily on days 1–3\n",
+      "bbox": [
+        253.88980102539062,
+        267.7769775390625,
+        413.7748718261719,
+        276.4844665527344
+      ],
+      "text_sha256": "ead8ec824f54a3c209d506f210e4bfb9878381ad564cb66dae93613a4ba91147"
+    },
+    {
+      "block_id": "page-0529-block-0012",
+      "order": 12,
+      "text": "Increase to 0.5mg PO varenicline twice daily on days \n4–7\n",
+      "bbox": [
+        253.88980102539062,
+        280.77447509765625,
+        422.79730224609375,
+        299.4794616699219
+      ],
+      "text_sha256": "a35cec29fd53b4a8939cc836300631a959fea6d8da41d015e02c76dbece725ce"
+    },
+    {
+      "block_id": "page-0529-block-0013",
+      "order": 13,
+      "text": "Increase to 1mg PO varenicline twice daily on days 8–84\n",
+      "bbox": [
+        253.88980102539062,
+        303.76947021484375,
+        432.8023376464844,
+        312.4769592285156
+      ],
+      "text_sha256": "85af6aa5b418dd490a942cf79a815b451e9542d05a9d574b373f270a9a9a9be4"
+    },
+    {
+      "block_id": "page-0529-block-0014",
+      "order": 14,
+      "text": "Consider 1mg varenicline PO twice daily for an \nadditional 12 weeks for the maintenance of abstinence \nin people who have successfully stopped smoking at the \nend of the initial 12 weeks course of varenicline\n",
+      "bbox": [
+        253.88980102539062,
+        316.7669677734375,
+        435.5999450683594,
+        355.4669494628906
+      ],
+      "text_sha256": "d3dfcadf7c22a79160f079faac49b478f585d135ced8bfb18675aee8e7567e7b"
+    },
+    {
+      "block_id": "page-0529-block-0015",
+      "order": 15,
+      "text": "For people who smoke less than 20 cigarettes/day and \ndo not smoke within 30 minutes of waking up:\n",
+      "bbox": [
+        61.889801025390625,
+        305.88446044921875,
+        237.62979125976562,
+        324.5894470214844
+      ],
+      "text_sha256": "f34d520ff6e56f5fa056f9bb5f675ef6fd2949aa06bb172928038c86f42ecb24"
+    },
+    {
+      "block_id": "page-0529-block-0016",
+      "order": 16,
+      "text": "Start 14mg (24 hours) or 15mg (16 hours) patch and/or \nan oral/nasal NRT product of the person’s choice\n",
+      "bbox": [
+        61.889801025390625,
+        328.87945556640625,
+        241.5447998046875,
+        347.5844421386719
+      ],
+      "text_sha256": "87af650f6f77a8fc0e1f3c48664784a43f3a3a57eac1fb4a515e4585acf8e87f"
+    },
+    {
+      "block_id": "page-0529-block-0017",
+      "order": 17,
+      "text": "Continue patch use for up to 12 weeks, aiming to \nreduce patch dosage every 4 weeks\n",
+      "bbox": [
+        61.889801025390625,
+        351.87445068359375,
+        224.02481079101562,
+        370.5794372558594
+      ],
+      "text_sha256": "e5cd3cf89dc3ad6a2c51cd233fd81a620d10e59af785ae286d800b2d68b615de"
+    },
+    {
+      "block_id": "page-0529-block-0018",
+      "order": 18,
+      "text": "Continue oral/nasal product use whilst experiencing \ncraving\n",
+      "bbox": [
+        61.889801025390625,
+        374.86944580078125,
+        229.28977966308594,
+        393.5744323730469
+      ],
+      "text_sha256": "831c876bcb6cbf78f9f10e13b4d2b9acf9c175ed4340c632676c0e3354b84cb2"
+    },
+    {
+      "block_id": "page-0529-block-0019",
+      "order": 19,
+      "text": "Bupropion could be considered second line or where people who smoke express a preference for bupropion \ntherapy.\n",
+      "bbox": [
+        61.889801025390625,
+        402.99444580078125,
+        408.54736328125,
+        421.6994323730469
+      ],
+      "text_sha256": "115894734b6358b7a4c26014ba282eda6c0e40b2bf9ae0c9d1a155ec69c95f0b"
+    },
+    {
+      "block_id": "page-0529-block-0020",
+      "order": 20,
+      "text": "Bupropion quit attempt\n",
+      "bbox": [
+        61.889801025390625,
+        430.9394226074219,
+        145.5147705078125,
+        439.8269348144531
+      ],
+      "text_sha256": "8739530e84c81b0b8bf13807d8f2ecbf61026440199303f978d4899c57e1d295"
+    },
+    {
+      "block_id": "page-0529-block-0021",
+      "order": 21,
+      "text": "Set target ‘stopping date’ between 1 and 2 weeks of bupropion treatment\nStart 150mg PO bupropion daily on days 1–6\nIncrease to 150mg PO bupropion twice daily on days 7–49 (with an interval of at least 8 hours between doses)\nMaintain dose at 150mg PO bupropion on days 50–63 (otherwise, discontinue if person has not quit)\n",
+      "bbox": [
+        61.889801025390625,
+        449.2469482421875,
+        414.6224060058594,
+        487.9469299316406
+      ],
+      "text_sha256": "836c20314ff5f687cf37b59b27942173eaef8f9cd2c8d167ea691eb9d39d1153"
+    },
+    {
+      "block_id": "page-0529-block-0022",
+      "order": 22,
+      "text": "In patients with serious mental illness, both varenicline and bupropion have been shown to increase the odds of \nstopping smoking by greater than 4 times compared to placebo. In patients with stable psychiatric co-morbidity, \nan NRT patch was also found to double the abstinence rates compared to placebo. Both varenicline and \nbupropion did not significantly increase the risk of neuropsychiatric adverse events (including anxiety, depression, \naggression, psychosis, and suicidal behaviour) when compared with placebo or NRT in patients with or without a \nhistory of psychiatric disorders\nIt is always advisable to monitor patient’s mental health when undergoing a quit attempt\n",
+      "bbox": [
+        61.889801025390625,
+        497.1869201660156,
+        429.08251953125,
+        566.0594482421875
+      ],
+      "text_sha256": "ab351060e387200a3485f2ea260323b0800dbfb3451385fca5a502323a88241d"
+    },
+    {
+      "block_id": "page-0529-block-0023",
+      "order": 23,
+      "text": "People who smoke wishing to use an e-cigarette to quit should generally set a quit date and use the e-cigarette to \nstop in one go by replacing all their tobacco cigarettes with an e-cigarette as soon as possible. Alternatively, they can \ngradually reduce the amount they smoke over several weeks and increase the use of the e-cigarette until they have \ncompletely switched. Similar to the use of NRT, advise the service user to start with a higher strength of nicotine\n",
+      "bbox": [
+        61.889801025390625,
+        575.2993774414062,
+        429.9447326660156,
+        614.179443359375
+      ],
+      "text_sha256": "0c8c45951ca9e85a9232f7c18c72282b859640955f970599dbcaba02a4a9c7a3"
+    },
+    {
+      "block_id": "page-0529-block-0024",
+      "order": 24,
+      "text": "po, per os (by mouth)\n",
+      "bbox": [
+        61.889801025390625,
+        624.221923828125,
+        131.0847930908203,
+        632.929443359375
+      ],
+      "text_sha256": "9d27fb92dfd1b29c6ed0e5ed55e4fc9c62bebf8906232d563f29cb27da1ffa07"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

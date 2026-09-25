@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0517",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 517,
+  "source_page_index": 516,
+  "source_page_display": 517,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "496    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nNaltrexone in relapse prevention\nEvidence for the effectiveness of naltrexone as a treatment for relapse prevention in \nopioid misusers has been inconclusive.79 However, naltrexone has been found by NICE \nto be a cost-effective treatment strategy in aiding abstinence from opioid misuse for \nthose who prefer an abstinence programme, are fully informed of the potential adverse \neffects and benefits of treatment, are highly motivated to remain on treatment and have \na partner supporting concordance.80 A naltrexone implant, not currently licensed in the \nUK, may also have a role to play in reducing opioid use in a motivated population of \npatients.81\nClose monitoring is particularly important when naltrexone is initiated because of \nthe higher risk of fatal overdose at this time. Discontinuation of naltrexone may also be \nassociated with an increase in inadvertent overdose from illicit opioids. Thus, supervi-\nsion of naltrexone administration and careful choice of who has prescribed it (those \nwho are abstinence focused and motivated) is very important. Moreover, people taking \nnaltrexone often experience adverse effects of unease (dysphoria), depression and \ninsomnia, which can lead to relapse to illicit opioid use while on naltrexone treatment, \nor failure to continue on treatment. The dysphoria may be caused by either withdrawal \nfrom illicit drugs or by the naltrexone treatment itself, emphasising the importance of \nprescribing naltrexone as part of a care programme that includes psychosocial therapy \nand general support.80\nInitiating naltrexone\nNaltrexone has the propensity to cause a severe withdrawal reaction in patients who \nare either currently taking opioid drugs or who were previously taking opioid drugs \nand there has not been a sufficient ‘wash-out’ period before administering naltrexone.\nThe minimum recommended interval between stopping the opioid and starting nal-\ntrexone depends on the opioid used, duration of use and the amount taken as a last \ndose. Opioid agonists with long half-lives such as methadone will require a wash-out \nperiod of up to 10 days, whereas shorter acting opioids such as heroin, morphine or \nfentanyl may only require up to 7 days. Experience with buprenorphine indicates that \na wash-out period of up to 7 days is sufficient if the final buprenorphine dose is >2mg, \nand duration of use >2 weeks. In some cases naltrexone may be started within 2–3 days \nof a patient stopping (e.g. if final buprenorphine dose <2mg and duration of use <2 \nweeks).\nA test dose of naloxone (0.2–0.8mg, which has a much shorter half-life than naltrex-\none), may be given to the patient as an IM dose prior to starting naltrexone treatment. \nAny withdrawal symptoms precipitated will be of shorter duration than if precipitated \nby naltrexone.\nPatients must be advised of the risk of withdrawal before giving the dose. It is worth \nthoroughly questioning the patient as to whether they have taken any opioid containing \npreparation unknowingly (e.g. over-the-counter analgesic).\n",
+  "raw_text_sha256": "94f3940809691c0021554cfb48b36fad10cec0c30c62a1c563e8ed397bfbb9f5",
+  "coordinates_sha256": "ee3e70c7630c77f7efabe5a333b78d736f9ae44eb7eace871584e0c53193e7ff",
+  "block_sequence_sha256": "ca06fb2e1f29b643aa35257d445dbb7daede71f9a537a00933530016b64e2fcf",
+  "blocks": [
+    {
+      "block_id": "page-0517-block-0000",
+      "order": 0,
+      "text": "496    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "e716bb0ee687e1f2505384fb1940a8eeba6f21cfbfff30e7a2560177146768ba"
+    },
+    {
+      "block_id": "page-0517-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0517-block-0002",
+      "order": 2,
+      "text": "Naltrexone in relapse prevention\n",
+      "bbox": [
+        61.88999938964844,
+        62.31540298461914,
+        231.8509521484375,
+        75.35040283203125
+      ],
+      "text_sha256": "558bf55978d4cd85137d7de8446861ff9121212d54a8c6fac95a563e4ed5ac95"
+    },
+    {
+      "block_id": "page-0517-block-0003",
+      "order": 3,
+      "text": "Evidence for the effectiveness of naltrexone as a treatment for relapse prevention in \nopioid misusers has been inconclusive.79 However, naltrexone has been found by NICE \nto be a cost-effective treatment strategy in aiding abstinence from opioid misuse for \nthose who prefer an abstinence programme, are fully informed of the potential adverse \neffects and benefits of treatment, are highly motivated to remain on treatment and have \na partner supporting concordance.80 A naltrexone implant, not currently licensed in the \nUK, may also have a role to play in reducing opioid use in a motivated population of \npatients.81\n",
+      "bbox": [
+        61.885101318359375,
+        81.160400390625,
+        436.6950988769531,
+        176.88040161132812
+      ],
+      "text_sha256": "32fa2a961b3aa9e28bb4782eadc3fb4714e1c2a9d3bfd88e178b72a281ceecc4"
+    },
+    {
+      "block_id": "page-0517-block-0004",
+      "order": 4,
+      "text": "Close monitoring is particularly important when naltrexone is initiated because of \nthe higher risk of fatal overdose at this time. Discontinuation of naltrexone may also be \nassociated with an increase in inadvertent overdose from illicit opioids. Thus, supervi-\nsion of naltrexone administration and careful choice of who has prescribed it (those \nwho are abstinence focused and motivated) is very important. Moreover, people taking \nnaltrexone often experience adverse effects of unease (dysphoria), depression and \ninsomnia, which can lead to relapse to illicit opioid use while on naltrexone treatment, \nor failure to continue on treatment. The dysphoria may be caused by either withdrawal \nfrom illicit drugs or by the naltrexone treatment itself, emphasising the importance of \nprescribing naltrexone as part of a care programme that includes psychosocial therapy \nand general support.80\n",
+      "bbox": [
+        61.88999938964844,
+        177.160400390625,
+        436.7099609375,
+        308.8804016113281
+      ],
+      "text_sha256": "b0608d5fbf90a085e3acd03cb0c4fd26a158b1e9b4c11f6335bf42945965773e"
+    },
+    {
+      "block_id": "page-0517-block-0005",
+      "order": 5,
+      "text": "Initiating naltrexone\n",
+      "bbox": [
+        61.88999938964844,
+        327.2503967285156,
+        158.58998107910156,
+        339.10040283203125
+      ],
+      "text_sha256": "6fdeb41fce15beca1229f25382e1ffcf0279ab8b27f1a4f66e3b56c831e5bd39"
+    },
+    {
+      "block_id": "page-0517-block-0006",
+      "order": 6,
+      "text": "Naltrexone has the propensity to cause a severe withdrawal reaction in patients who \nare either currently taking opioid drugs or who were previously taking opioid drugs \nand there has not been a sufficient ‘wash-out’ period before administering naltrexone.\n",
+      "bbox": [
+        61.88999938964844,
+        345.160400390625,
+        436.7099304199219,
+        380.8804016113281
+      ],
+      "text_sha256": "add2311856a7379150dd2a68c732dd4bee34abd2ff6f31571e74495170b0c6af"
+    },
+    {
+      "block_id": "page-0517-block-0007",
+      "order": 7,
+      "text": "The minimum recommended interval between stopping the opioid and starting nal-\ntrexone depends on the opioid used, duration of use and the amount taken as a last \ndose. Opioid agonists with long half-lives such as methadone will require a wash-out \nperiod of up to 10 days, whereas shorter acting opioids such as heroin, morphine or \nfentanyl may only require up to 7 days. Experience with buprenorphine indicates that \na wash-out period of up to 7 days is sufficient if the final buprenorphine dose is >2mg, \nand duration of use >2 weeks. In some cases naltrexone may be started within 2–3 days \nof a patient stopping (e.g. if final buprenorphine dose <2mg and duration of use <2 \nweeks).\n",
+      "bbox": [
+        61.88999938964844,
+        381.160400390625,
+        436.7099304199219,
+        488.8804016113281
+      ],
+      "text_sha256": "065dd0b14092d62bafa108f2099a3e4dc75659f5e81fd50c1ccf0cfefcf1e427"
+    },
+    {
+      "block_id": "page-0517-block-0008",
+      "order": 8,
+      "text": "A test dose of naloxone (0.2–0.8mg, which has a much shorter half-life than naltrex-\none), may be given to the patient as an IM dose prior to starting naltrexone treatment. \nAny withdrawal symptoms precipitated will be of shorter duration than if precipitated \nby naltrexone.\n",
+      "bbox": [
+        61.88999938964844,
+        489.160400390625,
+        436.72998046875,
+        536.8804321289062
+      ],
+      "text_sha256": "0053d031d93b831becdeb40fc6105ac239d0c4f20a57fba7ee18866ae3d39b0c"
+    },
+    {
+      "block_id": "page-0517-block-0009",
+      "order": 9,
+      "text": "Patients must be advised of the risk of withdrawal before giving the dose. It is worth \nthoroughly questioning the patient as to whether they have taken any opioid containing \npreparation unknowingly (e.g. over-the-counter analgesic).\n",
+      "bbox": [
+        61.88999557495117,
+        537.160400390625,
+        436.6298828125,
+        572.8804321289062
+      ],
+      "text_sha256": "91b97575d420e9ad2c996140cec32ff8bf354191575f0a589f5d395dc656aafd"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

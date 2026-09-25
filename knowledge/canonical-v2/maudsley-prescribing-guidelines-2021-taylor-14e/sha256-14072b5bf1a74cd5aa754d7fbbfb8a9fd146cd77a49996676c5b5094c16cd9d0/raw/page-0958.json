@@ -1,0 +1,395 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0958",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 958,
+  "source_page_index": 957,
+  "source_page_display": 958,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Miscellany    937\nCHAPTER 14\nIntravenous formulations in psychiatry\nThe intravenous (IV) route is one of the main parenteral routes for drug administration \noutside psychiatry (see Table 14.8). Advantages include rapid onset of action, precise \ntitration, patient-specific dosing and bypass of liver metabolism. Hypersensitivity reac-\ntions, prevalence of adverse effects, infection risk and a higher overall cost some of its \nmost debated downsides. Unlike other areas of medicine, IV has been significantly \nunder-utilised in psychiatry. A testament to this is the audit undertaken by the Prescribing \nfor Mental Health Observatory in 2013 in the UK – from the recorded 2,172 episodes \nof acute disturbance, use of IV medication was limited to only two instances.1\nWhile the main focus of delivering psychotropic medication through the IV route has \nbeen the management of acutely disturbed behaviour, its indications include a wide \nrange of diagnoses, including affective and anxiety disorder, among others. Given the \nspecial care and expertise needed for the safe administration of IV formulations, they \nare most commonly considered when standard options fail to produce the desirable \neffect and in special clinical settings where trained staff, optimal monitoring, resuscita-\ntion equipment and ventilators are all at hand, such as the general hospital.2 Some \ndrugs may only be given by the IV route (brexanolone for example).\nTable 14.8  Intravenous medication in psychiatry\nMedication\nIndication\nClass\nDosea\nAdverse Effectsb\nComments\nBiperiden3\nAkathisia\nPeripheral \nanticholinergic\n5mg\nNone of note\nWeak evidence\nBrexanolone4,5 \n(allopregnanolone)\nPostnatal \nDepression\nGABA – A \npositive \nallosteric \nmodulator\nWeight-based \ndosing, with a \nrecommended \nmaximal dose of \n90μg/kg/hour\nSleepiness, dry \nmouth, loss of \nconsciousness, and \nhot flushes\nThe intravenous \ninfusion takes about \n60 hours (2½ days) \nto complete\nCitalopram\nDepression6,7\nSSRI\n10–20mg\nFatigue, insomnia, \nanxiety, headaches\nNo serious adverse \nevents reported\nTreatment-\nresistant OCD8\n20–80mg\nClomipramine8–11\nTreatment-\nresistant OCD\nTCA\n150–250mg\nNausea, \nhypotension, \nbradycardia\nSignificant \nimprovement \nsometimes noted\nDexmedetomi­\ndine12–17\nAcute \ndisturbance\nHighly selective \nα2-adrenergic \nreceptor \nagonist\n0.2–1.4μg/kg/\nhour\nBradycardia, \nhypotension\nOnly appropriate for \nin an ICU setting\nDiazepam18\nAcute \ndisturbance\nBenzodiazepine 5–20mg\nRespiratory \ndepression\nWidely used, despite \nthe dearth of \navailable evidence\n(Continued)\n",
+  "raw_text_sha256": "286da6379b69a9edda50ecb1cd0be2284a020c0cd16803e6d2b9ca5e85c608ac",
+  "coordinates_sha256": "953b5a338d7f8ae37179295230a23493ed94290d078f32424d34ac11307a1905",
+  "block_sequence_sha256": "983f8be01541b8c1c76267f9a1892ea7ad1e3d7e552f6cb82ef8d8132cb2d1dc",
+  "blocks": [
+    {
+      "block_id": "page-0958-block-0000",
+      "order": 0,
+      "text": "Miscellany    937\n",
+      "bbox": [
+        349.2962951660156,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "114d139017c92b64b6b49463a55aff30bd3d60716f4e09d214af14da1ca026c9"
+    },
+    {
+      "block_id": "page-0958-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        454.4096984863281,
+        338.7405090332031,
+        463.88970947265625,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0958-block-0002",
+      "order": 2,
+      "text": "Intravenous formulations in psychiatry\n",
+      "bbox": [
+        55.0,
+        65.39218139648438,
+        255.4749755859375,
+        78.42718505859375
+      ],
+      "text_sha256": "ff0d98b122eb8033c34c987587cb1a5c694d940c2ed0b6a206487bb7275abb47"
+    },
+    {
+      "block_id": "page-0958-block-0003",
+      "order": 3,
+      "text": "The intravenous (IV) route is one of the main parenteral routes for drug administration \noutside psychiatry (see Table 14.8). Advantages include rapid onset of action, precise \ntitration, patient-specific dosing and bypass of liver metabolism. Hypersensitivity reac-\ntions, prevalence of adverse effects, infection risk and a higher overall cost some of its \nmost debated downsides. Unlike other areas of medicine, IV has been significantly \nunder-utilised in psychiatry. A testament to this is the audit undertaken by the Prescribing \nfor Mental Health Observatory in 2013 in the UK – from the recorded 2,172 episodes \nof acute disturbance, use of IV medication was limited to only two instances.1\n",
+      "bbox": [
+        48.0,
+        84.2371826171875,
+        422.8099670410156,
+        179.95718383789062
+      ],
+      "text_sha256": "50bc27f1182edb72c8e247b7d23c4a25bfb1e0ca55140c55750fe0a47957319f"
+    },
+    {
+      "block_id": "page-0958-block-0004",
+      "order": 4,
+      "text": "While the main focus of delivering psychotropic medication through the IV route has \nbeen the management of acutely disturbed behaviour, its indications include a wide \nrange of diagnoses, including affective and anxiety disorder, among others. Given the \nspecial care and expertise needed for the safe administration of IV formulations, they \nare most commonly considered when standard options fail to produce the desirable \neffect and in special clinical settings where trained staff, optimal monitoring, resuscita-\ntion equipment and ventilators are all at hand, such as the general hospital.2 Some \ndrugs may only be given by the IV route (brexanolone for example).\n",
+      "bbox": [
+        47.99517822265625,
+        180.2371826171875,
+        422.8200378417969,
+        275.9571838378906
+      ],
+      "text_sha256": "d375bf08ee47a966cdf0c7b7bdcdebeefad8eef879867f5d18759cda60a497bc"
+    },
+    {
+      "block_id": "page-0958-block-0005",
+      "order": 5,
+      "text": "Table 14.8  Intravenous medication in psychiatry\n",
+      "bbox": [
+        54.0,
+        316.9949645996094,
+        209.02496337890625,
+        325.8824768066406
+      ],
+      "text_sha256": "0a195de50f26ec336fd4469c7d8f77d2e3137f5e5d557481a3446dde84093878"
+    },
+    {
+      "block_id": "page-0958-block-0006",
+      "order": 6,
+      "text": "Medication\nIndication\nClass\nDosea\nAdverse Effectsb\nComments\n",
+      "bbox": [
+        48.0,
+        335.6199645996094,
+        387.70831298828125,
+        344.5074768066406
+      ],
+      "text_sha256": "1c3c3f1d5961ee985d648abfb33b9e69eca39c8dbc9281b7e8e278091287bc22"
+    },
+    {
+      "block_id": "page-0958-block-0007",
+      "order": 7,
+      "text": "Biperiden3\nAkathisia\nPeripheral \nanticholinergic\n",
+      "bbox": [
+        48.003326416015625,
+        352.8249816894531,
+        211.5399627685547,
+        371.5299987792969
+      ],
+      "text_sha256": "9510f5ca8bf819a1bca2896a626b513d7e64eceff7c1574e1e4882d11c755de9"
+    },
+    {
+      "block_id": "page-0958-block-0008",
+      "order": 8,
+      "text": "5mg\nNone of note\nWeak evidence\n",
+      "bbox": [
+        219.87249755859375,
+        352.82501220703125,
+        398.40252685546875,
+        361.5325012207031
+      ],
+      "text_sha256": "47536a51bf1db26cdfa371f08c11c8ca338ff6baabd96f5a151f852f14dcb7d9"
+    },
+    {
+      "block_id": "page-0958-block-0009",
+      "order": 9,
+      "text": "Brexanolone4,5 \n(allopregnanolone)\n",
+      "bbox": [
+        48.00250244140625,
+        377.8500061035156,
+        104.06500244140625,
+        396.55499267578125
+      ],
+      "text_sha256": "75758f4f8d9e6f1efc6961403fd4fff2807ff099d2af65859fbb7a2a226034f5"
+    },
+    {
+      "block_id": "page-0958-block-0010",
+      "order": 10,
+      "text": "Postnatal \nDepression\n",
+      "bbox": [
+        110.875,
+        377.8500061035156,
+        145.74998474121094,
+        396.55499267578125
+      ],
+      "text_sha256": "1a2681f45585561e2faa21d28d298c043b32ef06991ede64f85c5a15b718ce54"
+    },
+    {
+      "block_id": "page-0958-block-0011",
+      "order": 11,
+      "text": "GABA – A \npositive \nallosteric \nmodulator\n",
+      "bbox": [
+        164.875,
+        377.8500061035156,
+        199.47251892089844,
+        416.54998779296875
+      ],
+      "text_sha256": "83e5d891943a9aab70de98047c63c36c724fa0efd5751367dc58eb1c77e3d022"
+    },
+    {
+      "block_id": "page-0958-block-0012",
+      "order": 12,
+      "text": "Weight-based \ndosing, with a \nrecommended \nmaximal dose of \n90μg/kg/hour\n",
+      "bbox": [
+        219.87249755859375,
+        377.8424987792969,
+        274.4574890136719,
+        426.53997802734375
+      ],
+      "text_sha256": "ca95bc44593612890ae3b481f7a61872b86120e09e66422729cf84f771f1741e"
+    },
+    {
+      "block_id": "page-0958-block-0013",
+      "order": 13,
+      "text": "Sleepiness, dry \nmouth, loss of \nconsciousness, and \nhot flushes\n",
+      "bbox": [
+        281.875,
+        377.8349914550781,
+        344.8150939941406,
+        416.53497314453125
+      ],
+      "text_sha256": "fff6691e39e687ed4466b3681ca46934ba2df8b92142c33f1ec76d4e70592376"
+    },
+    {
+      "block_id": "page-0958-block-0014",
+      "order": 14,
+      "text": "The intravenous \ninfusion takes about \n60 hours (2½ days) \nto complete\n",
+      "bbox": [
+        350.20751953125,
+        377.8274841308594,
+        417.31011962890625,
+        416.5274658203125
+      ],
+      "text_sha256": "93bcff92fa1d91219e0970f2622b7cb729f1863af68589543e6ba15b2fb54614"
+    },
+    {
+      "block_id": "page-0958-block-0015",
+      "order": 15,
+      "text": "Citalopram\nDepression6,7\nSSRI\n10–20mg\nFatigue, insomnia, \nanxiety, headaches\n",
+      "bbox": [
+        48.002532958984375,
+        432.84747314453125,
+        342.3050537109375,
+        451.5799865722656
+      ],
+      "text_sha256": "a301d0723222ae5c10bca0f1059c782e31560203fb0cd48f1507e22268350a8c"
+    },
+    {
+      "block_id": "page-0958-block-0016",
+      "order": 16,
+      "text": "No serious adverse \nevents reported\nTreatment-\nresistant OCD8\n",
+      "bbox": [
+        110.87753295898438,
+        432.875,
+        411.89007568359375,
+        469.65496826171875
+      ],
+      "text_sha256": "ecba5117085f1550859e221aba1b1b2220ef3f9881f10cb0bcae0fe6d3d9928c"
+    },
+    {
+      "block_id": "page-0958-block-0017",
+      "order": 17,
+      "text": "20–80mg\n",
+      "bbox": [
+        219.875,
+        450.9499816894531,
+        250.7224884033203,
+        459.657470703125
+      ],
+      "text_sha256": "14e343a7d0e7906c1d2ae7bb9273832efbca00d3b540143827cb12ff3cfa49b9"
+    },
+    {
+      "block_id": "page-0958-block-0018",
+      "order": 18,
+      "text": "Clomipramine8–11\nTreatment-\nresistant OCD\n",
+      "bbox": [
+        47.99749755859375,
+        475.9750061035156,
+        154.90750122070312,
+        494.67999267578125
+      ],
+      "text_sha256": "1c3ee2fa8255145c915dd96887eedb8416906fed2223d996164dccfd4ca5d849"
+    },
+    {
+      "block_id": "page-0958-block-0019",
+      "order": 19,
+      "text": "TCA\n150–250mg\nNausea, \nhypotension, \nbradycardia\n",
+      "bbox": [
+        164.875,
+        475.9750061035156,
+        325.2250671386719,
+        504.677490234375
+      ],
+      "text_sha256": "0e02d76de02dacba431875f9f740ad2ed01f65c0e646a267d9ace5b837bcffc0"
+    },
+    {
+      "block_id": "page-0958-block-0020",
+      "order": 20,
+      "text": "Significant \nimprovement \nsometimes noted\n",
+      "bbox": [
+        350.20751953125,
+        475.9674987792969,
+        405.21258544921875,
+        504.66998291015625
+      ],
+      "text_sha256": "3f51d7fc141154f793835a3d5e1406e4b735671f36fb98f2bc5af4fbe2ba7b96"
+    },
+    {
+      "block_id": "page-0958-block-0021",
+      "order": 21,
+      "text": "Dexmedetomi­\ndine12–17\n",
+      "bbox": [
+        48.002498626708984,
+        510.9850158691406,
+        95.08000183105469,
+        529.6900024414062
+      ],
+      "text_sha256": "6ba60aabf6d4de88711fad7cb023a091bb53bdf6dafe0a976b842a07a9b529f9"
+    },
+    {
+      "block_id": "page-0958-block-0022",
+      "order": 22,
+      "text": "Acute \ndisturbance\n",
+      "bbox": [
+        110.875,
+        511.0000305175781,
+        147.96249389648438,
+        529.7049560546875
+      ],
+      "text_sha256": "531c01a2c436da48b180d969d1d51bfd8f56c8180eabdae4ec023262860adb0d"
+    },
+    {
+      "block_id": "page-0958-block-0023",
+      "order": 23,
+      "text": "Highly selective \nα2-adrenergic \nreceptor \nagonist\n",
+      "bbox": [
+        164.875,
+        511.0000305175781,
+        215.70248413085938,
+        549.7025146484375
+      ],
+      "text_sha256": "bd974e831aea683cbf9682f812a0670e85d9eae63ad81b2b3d8dc8c21db0c244"
+    },
+    {
+      "block_id": "page-0958-block-0024",
+      "order": 24,
+      "text": "0.2–1.4μg/kg/\nhour\n",
+      "bbox": [
+        219.87350463867188,
+        510.9950256347656,
+        264.90350341796875,
+        529.699951171875
+      ],
+      "text_sha256": "bbbd3d522f54e138f248a022e9ffff728e93f6b7445e195ef83fca395a333af1"
+    },
+    {
+      "block_id": "page-0958-block-0025",
+      "order": 25,
+      "text": "Bradycardia, \nhypotension\n",
+      "bbox": [
+        281.8760070800781,
+        510.9950256347656,
+        322.9909973144531,
+        529.699951171875
+      ],
+      "text_sha256": "9671a4d35b20244629272477abd916bdf1aa5688de9937fb83b6cecd3be5885c"
+    },
+    {
+      "block_id": "page-0958-block-0026",
+      "order": 26,
+      "text": "Only appropriate for \nin an ICU setting\n",
+      "bbox": [
+        350.20849609375,
+        510.9950256347656,
+        417.1610412597656,
+        529.699951171875
+      ],
+      "text_sha256": "2df0dbc9129ff88eb587ed55ba186e1dd2b72be390ebc290e56f61d696ec6733"
+    },
+    {
+      "block_id": "page-0958-block-0027",
+      "order": 27,
+      "text": "Diazepam18\nAcute \ndisturbance\n",
+      "bbox": [
+        48.003509521484375,
+        556.0174560546875,
+        147.96249389648438,
+        574.72998046875
+      ],
+      "text_sha256": "1ca6db1c594c28729c3b88cbb8211f260ab051905fff82072327a9cff2bd94e5"
+    },
+    {
+      "block_id": "page-0958-block-0028",
+      "order": 28,
+      "text": "Benzodiazepine 5–20mg\nRespiratory \ndepression\n",
+      "bbox": [
+        164.875,
+        556.0249633789062,
+        319.375,
+        574.72998046875
+      ],
+      "text_sha256": "0549b03fcc784a3eeda2141880ba85c42280e62b061078d51ad6eb9182199241"
+    },
+    {
+      "block_id": "page-0958-block-0029",
+      "order": 29,
+      "text": "Widely used, despite \nthe dearth of \navailable evidence\n",
+      "bbox": [
+        350.20751953125,
+        556.0249633789062,
+        418.3150634765625,
+        584.7274780273438
+      ],
+      "text_sha256": "a8056338db3957a72f442d94f632247f566744bbbdc1331eb86e396b1677d5e7"
+    },
+    {
+      "block_id": "page-0958-block-0030",
+      "order": 30,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.9800109863281,
+        596.4124755859375,
+        419.9949645996094,
+        605.1649780273438
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

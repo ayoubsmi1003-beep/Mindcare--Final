@@ -1,0 +1,299 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0399",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 399,
+  "source_page_index": 398,
+  "source_page_display": 399,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "378    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nDrug interactions with antidepressants\nDrugs can interact with each other in two different ways:\n■\n■Pharmacokinetic interactions where one drug interferes with the absorption, distribu-\ntion, metabolism or elimination of another drug. This may result in a subtherapeutic \neffect or toxicity. The largest group of pharmacokinetic interactions involves drugs \nthat inhibit or induce hepatic CYP450 enzymes (see Tables 3.14 and 3.15). Other \nenzyme systems include FMO1 and UGT.2 While both of these latter enzyme systems \nare involved in the metabolism of psychotropic drugs, the potential for drugs to \ninhibit or induce these enzyme systems has been less well studied.\n\t The clinical consequences of pharmacokinetic interactions in an individual patient \ncan be difficult to predict. Some are highly clinically significant; for example, when \nparoxetine (a potent CYP2D6 inhibitor) is taken with tamoxifen, up to 1 extra \nwoman in 20 will die within 5 years of stopping tamoxifen.3 The following factors \naffect outcome of interactions: the degree of enzyme inhibition or induction, the \npharmacokinetic properties of the affected drug and other co-administered drugs, \nthe relationship between plasma level and pharmacodynamic effect for the affected \ndrug, and patient-specific factors such as variability in the role of primary and sec-\nondary metabolic pathways and the presence of co-morbid physical illness.4\nTable 3.14  Summary of antidepressant effects on CYP enzymes5–7\nAntidepressant\nSubstrate for\nInhibits\nSSRIs\nCitalopram\nCYP2C19, CYP2D6, CYP3A4\nCYP2D6 (weak)\nEscitalopram\nCYP2C19, CYP2D6, CYP3A4\nCYP2D6 (weak)\nFluoxetine\nCYP2D6, CYP3A4\nCYP2D6 (moderate to potent), \nCYP2C9 (moderate), CYP3A4 \n(weak)\nFluvoxamine\nCYP2D6; others possibly involved\nCYP1A2 (potent), CYP2C19 \n(potent), CYP3A4 (weak), CYP2C9 \n(weak)\nParoxetine\nCYP2D6\nCYP2D6 (potent)\nSertraline\nCYP3A4, CYP2D6 (minor) and possibly \nother pathways\nCYP2D6 (weak)\nSNRIs\nDesvenlafaxine\nCYP3A4\nCYP2D6 (weak)\nDuloxetine\nCYP1A2, CYP2D6\nCYP2D6 (moderate)\nLevomilnacipran\nCYP3A4, CYP2C8, CYP2C19, CYP2D6\nVenlafaxine\nCYP2D6, CYP3A4\nCYP2D6 (weak)\n(Continued)\n",
+  "raw_text_sha256": "4ab46adba6a6c343ea2e4238c1aa6501815f2d8e6be810e626a8d9db11978b81",
+  "coordinates_sha256": "14b44d2a5f68c153b24f0afde18b44fd90404648a6db48959818ffef790006f4",
+  "block_sequence_sha256": "2e5fb33ab84e7c987831e1a91a2f15c78140f720ca1a762eee0f50ab4135bb31",
+  "blocks": [
+    {
+      "block_id": "page-0399-block-0000",
+      "order": 0,
+      "text": "378    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "2b200ad52722df9c20a82d4e9b29ed198300e015210198f2dad0e5f71afe8bea"
+    },
+    {
+      "block_id": "page-0399-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0399-block-0002",
+      "order": 2,
+      "text": "Drug interactions with antidepressants\n",
+      "bbox": [
+        68.88999938964844,
+        66.06539916992188,
+        270.3769836425781,
+        79.10040283203125
+      ],
+      "text_sha256": "7b42222384af8da9c6091fefddd1ae18f96150d1f5702a26d04e574f55a3cd84"
+    },
+    {
+      "block_id": "page-0399-block-0003",
+      "order": 3,
+      "text": "Drugs can interact with each other in two different ways:\n",
+      "bbox": [
+        61.88999938964844,
+        84.910400390625,
+        308.5899658203125,
+        96.63040161132812
+      ],
+      "text_sha256": "ab5c93b1b27ce7a64b2e39fb36a7a480d94053086befb31f0259ff22a4376ce7"
+    },
+    {
+      "block_id": "page-0399-block-0004",
+      "order": 4,
+      "text": "■\n■Pharmacokinetic interactions where one drug interferes with the absorption, distribu-\n",
+      "bbox": [
+        61.88990020751953,
+        102.67040252685547,
+        433.8599853515625,
+        114.63040161132812
+      ],
+      "text_sha256": "33a9f7128b34ee6ffe65ffc1c699fbb6c9b3917e351e8e8b10295b0bb4dd2ed7"
+    },
+    {
+      "block_id": "page-0399-block-0005",
+      "order": 5,
+      "text": "tion, metabolism or elimination of another drug. This may result in a subtherapeutic \neffect or toxicity. The largest group of pharmacokinetic interactions involves drugs \nthat inhibit or induce hepatic CYP450 enzymes (see Tables 3.14 and 3.15). Other \nenzyme systems include FMO1 and UGT.2 While both of these latter enzyme systems \nare involved in the metabolism of psychotropic drugs, the potential for drugs to \ninhibit or induce these enzyme systems has been less well studied.\n\t The clinical consequences of pharmacokinetic interactions in an individual patient \n",
+      "bbox": [
+        61.88570022583008,
+        114.910400390625,
+        436.7055969238281,
+        198.63040161132812
+      ],
+      "text_sha256": "c8b18e220d2fbb3b8d0ca409de19b068322b6b229c52bf3facafb2a5fd6467d7"
+    },
+    {
+      "block_id": "page-0399-block-0006",
+      "order": 6,
+      "text": "can be difficult to predict. Some are highly clinically significant; for example, when \nparoxetine (a potent CYP2D6 inhibitor) is taken with tamoxifen, up to 1 extra \nwoman in 20 will die within 5 years of stopping tamoxifen.3 The following factors \naffect outcome of interactions: the degree of enzyme inhibition or induction, the \npharmacokinetic properties of the affected drug and other co-administered drugs, \nthe relationship between plasma level and pharmacodynamic effect for the affected \ndrug, and patient-specific factors such as variability in the role of primary and sec-\nondary metabolic pathways and the presence of co-morbid physical illness.4\n",
+      "bbox": [
+        70.88569641113281,
+        198.910400390625,
+        436.7154541015625,
+        294.6304016113281
+      ],
+      "text_sha256": "0e6b1d4143c8136a563a18f7ad43d458ca6bd10141c50fc89fa9b25d564f01bc"
+    },
+    {
+      "block_id": "page-0399-block-0007",
+      "order": 7,
+      "text": "Table 3.14  Summary of antidepressant effects on CYP enzymes5–7\n",
+      "bbox": [
+        67.88999938964844,
+        323.7378845214844,
+        279.69439697265625,
+        332.6253967285156
+      ],
+      "text_sha256": "e4f97a6d4941860ae23dc3223fd7f49e8b328d98d1e6cc95484448d5958a0ecc"
+    },
+    {
+      "block_id": "page-0399-block-0008",
+      "order": 8,
+      "text": "Antidepressant\nSubstrate for\nInhibits\n",
+      "bbox": [
+        61.88999938964844,
+        343.9728698730469,
+        345.64495849609375,
+        352.8603820800781
+      ],
+      "text_sha256": "65dad7f544eb5d9b0b1aa5d2c01c867d82e4d6fd8c2e51430e2c9d31968a2347"
+    },
+    {
+      "block_id": "page-0399-block-0009",
+      "order": 9,
+      "text": "SSRIs\n",
+      "bbox": [
+        61.89752197265625,
+        360.9303894042969,
+        78.1500244140625,
+        369.63787841796875
+      ],
+      "text_sha256": "08664af043726394eab1e4e2704bac7181aaedd9d7ee03b04a6945c2535a7755"
+    },
+    {
+      "block_id": "page-0399-block-0010",
+      "order": 10,
+      "text": "Citalopram\nCYP2C19, CYP2D6, CYP3A4\nCYP2D6 (weak)\n",
+      "bbox": [
+        111.9000244140625,
+        375.7728576660156,
+        369.0,
+        384.6603698730469
+      ],
+      "text_sha256": "f4b82f13e6cbe9f4e079c54b0340ded12fa578d2e2fb1380bf08650357467bcc"
+    },
+    {
+      "block_id": "page-0399-block-0011",
+      "order": 11,
+      "text": "Escitalopram\nCYP2C19, CYP2D6, CYP3A4\nCYP2D6 (weak)\n",
+      "bbox": [
+        111.9000244140625,
+        390.79534912109375,
+        369.0,
+        399.682861328125
+      ],
+      "text_sha256": "758f9ddac305be5ba2d1deda05816511329b47622897f24c74f18fad474a7f30"
+    },
+    {
+      "block_id": "page-0399-block-0012",
+      "order": 12,
+      "text": "Fluoxetine\nCYP2D6, CYP3A4\nCYP2D6 (moderate to potent), \nCYP2C9 (moderate), CYP3A4 \n(weak)\n",
+      "bbox": [
+        111.9000244140625,
+        405.8178405761719,
+        420.2625732421875,
+        434.7003479003906
+      ],
+      "text_sha256": "906c583e36506eeeb638d1807c6633808e879c3a0dc3b6124203ab69656381d9"
+    },
+    {
+      "block_id": "page-0399-block-0013",
+      "order": 13,
+      "text": "Fluvoxamine\nCYP2D6; others possibly involved\nCYP1A2 (potent), CYP2C19 \n(potent), CYP3A4 (weak), CYP2C9 \n(weak)\n",
+      "bbox": [
+        111.9000244140625,
+        440.8353271484375,
+        430.6874694824219,
+        469.71783447265625
+      ],
+      "text_sha256": "301f08f50efcb7be3787e1842723d06e0abf70917194c0ca4b3afc618a48f321"
+    },
+    {
+      "block_id": "page-0399-block-0014",
+      "order": 14,
+      "text": "Paroxetine\nCYP2D6\nCYP2D6 (potent)\n",
+      "bbox": [
+        111.9000244140625,
+        475.85284423828125,
+        374.4225769042969,
+        484.7403564453125
+      ],
+      "text_sha256": "ea4e7a60a20bede2e6f13c51e8b5a6db9634a31e1458586203a1b9557e419e53"
+    },
+    {
+      "block_id": "page-0399-block-0015",
+      "order": 15,
+      "text": "Sertraline\nCYP3A4, CYP2D6 (minor) and possibly \nother pathways\n",
+      "bbox": [
+        111.9000244140625,
+        490.8753662109375,
+        303.8026123046875,
+        509.7603759765625
+      ],
+      "text_sha256": "5c0c38b8671c0c56d76fd16090e895b82f53c40c2ba91109117cc629f766fd01"
+    },
+    {
+      "block_id": "page-0399-block-0016",
+      "order": 16,
+      "text": "CYP2D6 (weak)\n",
+      "bbox": [
+        319.40252685546875,
+        490.8753662109375,
+        370.2525329589844,
+        499.76287841796875
+      ],
+      "text_sha256": "4098759fd7f6f4789ed719fae229283136a1b2d79e9735f43abb199a4f55938d"
+    },
+    {
+      "block_id": "page-0399-block-0017",
+      "order": 17,
+      "text": "SNRIs\n",
+      "bbox": [
+        61.905029296875,
+        516.0828247070312,
+        79.4100341796875,
+        524.7903442382812
+      ],
+      "text_sha256": "707c706264f3f87ed219b177d70e40463b69c48a81d3050abcb28d71e803b959"
+    },
+    {
+      "block_id": "page-0399-block-0018",
+      "order": 18,
+      "text": "Desvenlafaxine\nCYP3A4\nCYP2D6 (weak)\n",
+      "bbox": [
+        111.90753173828125,
+        530.9253540039062,
+        369.00750732421875,
+        539.8128662109375
+      ],
+      "text_sha256": "b69d806a2390821a12aaa4da3874bcf7d53379283c38cd0690bb7470607c15a5"
+    },
+    {
+      "block_id": "page-0399-block-0019",
+      "order": 19,
+      "text": "Duloxetine\nCYP1A2, CYP2D6\nCYP2D6 (moderate)\n",
+      "bbox": [
+        111.90753173828125,
+        545.9478759765625,
+        382.7550354003906,
+        554.8353881835938
+      ],
+      "text_sha256": "236e07bcacca3d5aa997e551a6d932b6481ce8dd8e3261c552f32c97cfa00b0e"
+    },
+    {
+      "block_id": "page-0399-block-0020",
+      "order": 20,
+      "text": "Levomilnacipran\nCYP3A4, CYP2C8, CYP2C19, CYP2D6\n",
+      "bbox": [
+        111.90753173828125,
+        560.9703369140625,
+        296.2650451660156,
+        569.8578491210938
+      ],
+      "text_sha256": "8ea54244ce4a0cc2b12c466d6b0ba3cbfd544a2dbcc73bdc1f27c526c6dff811"
+    },
+    {
+      "block_id": "page-0399-block-0021",
+      "order": 21,
+      "text": "Venlafaxine\nCYP2D6, CYP3A4\nCYP2D6 (weak)\n",
+      "bbox": [
+        111.90753173828125,
+        575.9928588867188,
+        369.00750732421875,
+        584.88037109375
+      ],
+      "text_sha256": "2e62e426808d9378bd114fbb71d28d9adc16120245faded409afaa54aea0e5b1"
+    },
+    {
+      "block_id": "page-0399-block-0022",
+      "order": 22,
+      "text": "(Continued)\n",
+      "bbox": [
+        396.39752197265625,
+        592.6128540039062,
+        433.9125671386719,
+        601.3653564453125
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

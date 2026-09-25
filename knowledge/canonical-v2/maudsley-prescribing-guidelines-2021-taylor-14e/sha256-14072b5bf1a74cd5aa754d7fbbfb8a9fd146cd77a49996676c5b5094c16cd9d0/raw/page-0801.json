@@ -1,0 +1,215 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0801",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 801,
+  "source_page_index": 800,
+  "source_page_display": 801,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "780    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\nantipsychotics, quetiapine, olanzapine and aripiprazole (as there is lower risk of EPSEs). \nA case report describes successful treatment of ‘HIV mania’ with ziprasidone.30\nAnxiety disorders\nAnxiety disorders are highly prevalent in PLWH. Generalised anxiety, panic disorders \nand PTSD are commonly reported. SSRIs are first-line options for anxiety and panic \ndisorders treatment in standard guidelines, as well as in PLWH3 (see ‘Depression’ in this \nsection for preferred options). Benzodiazepines may have some utility in the acute treat-\nment of anxiety but require caution because of the potential of misuse, possible drug \ninteractions and increased risk of neurocognitive impairment in PLWH.31\nLorazepam, oxazepam and temazepam are metabolised by non-CYP450 pathways, \nhence have lower risk of interactions and may be preferred options for PLWH.32 \nBuspirone may also be useful.33\nHIV-associated neurocognitive disorders\nIn the current era of effective antiretrovirals, the incidence of severe HIV-associated \ncerebral disease has declined dramatically; however, more subtle forms of HIV-\nassociated neurocognitive disorders (HAND) remain prevalent.34,35 Risk factors include \ncomorbidities (e.g. HCV coinfection), HIV infection itself and patient genetic factors. \nHAND encompasses three sub-disorders, ranging from more common, asymptomatic \nneurocognitive impairment (ANI), to more severe less common, HIV-associated demen-\ntia (HAD) disorders. Screening for cognitive impairment is recommended in PLWH.11 \nCogState or the HIV dementia scale have been used though may not identify ANI.35\nSymptoms include apathy, irritability, inertia, lack of spontaneity, social withdrawal, \npsychomotor slowing, complaints of diminished attention and concentration, emo-\ntional lability, and occasionally, ‘HIV mania’.29\nThe main treatment is antiretroviral therapy with high CNS penetration effectiveness \n(CPE) aiming at reaching good levels in the CNS with minimal drug-related neurotoxicity. \nFurther adjunctive treatments have been studied (minocycline, memantine, selegiline, lith-\nium, valproate, lexipafant, nimodipine, psychostimulants, natalizumab interferons, etc.).36\nIn a recent study paroxetine was associated with neurocognitive improvements (after \nadjusting for depression),37 while a trial of rivastigmine patch was negative. Further \nstudies are needed to confirm the effects of these adjunctive treatments for HAND.\nInteractions between antiretroviral drugs and psychotropics\nPharmacokinetic interactions between antiretroviral drugs and psychotropics occur fre-\nquently and can be clinically significant. Potential interactions should be checked for all \npatients receiving antiretrovirals and psychotropics concomitantly. Drug history for \nchecking drug interactions should include current prescribed medication, alternative/\nherbal treatments, recreational drugs and other non-prescribed medicines.34\nReaders are directed to regularly updated online resources for information about indi-\nvidual pharmacokinetic interactions:\n■\n■www.hiv-druginteractions.org (also available as an App)\n■\n■www.hivinsite.ucsf.edu\n",
+  "raw_text_sha256": "0f93acb6cff545e94bfc1230f4413ce565fe3b4f77c4e6629a053a493630db83",
+  "coordinates_sha256": "6a12a452660d5d919a458bfc3992b7a249ab1dfc10a981124079e50de93f9e42",
+  "block_sequence_sha256": "838c8895b3f19c1ebc2fbf98b07e2c597ce00d6e6c26e6bcafe02c10b4298c24",
+  "blocks": [
+    {
+      "block_id": "page-0801-block-0000",
+      "order": 0,
+      "text": "780    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "981398b997761c305098ab557f82d69915d3ad64dcf4e051d2145b710474f809"
+    },
+    {
+      "block_id": "page-0801-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0801-block-0002",
+      "order": 2,
+      "text": "antipsychotics, quetiapine, olanzapine and aripiprazole (as there is lower risk of EPSEs). \nA case report describes successful treatment of ‘HIV mania’ with ziprasidone.30\n",
+      "bbox": [
+        61.889801025390625,
+        62.55029296875,
+        436.6796875,
+        86.27029418945312
+      ],
+      "text_sha256": "0e0512f36642032a4c330bda0c0989f95c6719ac8bcc48920bc5cc321f776c8d"
+    },
+    {
+      "block_id": "page-0801-block-0003",
+      "order": 3,
+      "text": "Anxiety disorders\n",
+      "bbox": [
+        61.889801025390625,
+        100.70529174804688,
+        152.76080322265625,
+        113.74029541015625
+      ],
+      "text_sha256": "fd05e79fb8723aa267e9f3fadaf725edd302e6eace869cdcb84acfdb73cfecd0"
+    },
+    {
+      "block_id": "page-0801-block-0004",
+      "order": 4,
+      "text": "Anxiety disorders are highly prevalent in PLWH. Generalised anxiety, panic disorders \nand PTSD are commonly reported. SSRIs are first-line options for anxiety and panic \ndisorders treatment in standard guidelines, as well as in PLWH3 (see ‘Depression’ in this \nsection for preferred options). Benzodiazepines may have some utility in the acute treat-\nment of anxiety but require caution because of the potential of misuse, possible drug \ninteractions and increased risk of neurocognitive impairment in PLWH.31\n",
+      "bbox": [
+        61.886505126953125,
+        119.55029296875,
+        436.6996765136719,
+        191.27029418945312
+      ],
+      "text_sha256": "dbbf3c067c879f592ade1f841499e2106d298cb9d7ebd529de9d2123123b8571"
+    },
+    {
+      "block_id": "page-0801-block-0005",
+      "order": 5,
+      "text": "Lorazepam, oxazepam and temazepam are metabolised by non-CYP450 pathways, \nhence have lower risk of interactions and may be preferred options for PLWH.32 \nBuspirone may also be useful.33\n",
+      "bbox": [
+        61.889801025390625,
+        191.55029296875,
+        436.6797180175781,
+        227.27029418945312
+      ],
+      "text_sha256": "54fab3daecd5f76a8e86354723e983e36e88eae73caca6963b1e79f0418d3b65"
+    },
+    {
+      "block_id": "page-0801-block-0006",
+      "order": 6,
+      "text": "HIV-associated neurocognitive disorders\n",
+      "bbox": [
+        61.889801025390625,
+        241.70529174804688,
+        268.6787414550781,
+        254.74029541015625
+      ],
+      "text_sha256": "a5be937582b2a2f45875cdf9d4facd33a94a1515b103aa8f93a812a25c360ddf"
+    },
+    {
+      "block_id": "page-0801-block-0007",
+      "order": 7,
+      "text": "In the current era of effective antiretrovirals, the incidence of severe HIV-associated \ncerebral disease has declined dramatically; however, more subtle forms of HIV-\nassociated neurocognitive disorders (HAND) remain prevalent.34,35 Risk factors include \ncomorbidities (e.g. HCV coinfection), HIV infection itself and patient genetic factors. \nHAND encompasses three sub-disorders, ranging from more common, asymptomatic \nneurocognitive impairment (ANI), to more severe less common, HIV-associated demen-\ntia (HAD) disorders. Screening for cognitive impairment is recommended in PLWH.11 \nCogState or the HIV dementia scale have been used though may not identify ANI.35\n",
+      "bbox": [
+        61.889801025390625,
+        260.55029296875,
+        436.71044921875,
+        356.2702941894531
+      ],
+      "text_sha256": "8958d6db90e4b76ecd0dced97325bc6894865f20a0e170e567c1f3f8ac32f84c"
+    },
+    {
+      "block_id": "page-0801-block-0008",
+      "order": 8,
+      "text": "Symptoms include apathy, irritability, inertia, lack of spontaneity, social withdrawal, \npsychomotor slowing, complaints of diminished attention and concentration, emo-\ntional lability, and occasionally, ‘HIV mania’.29\n",
+      "bbox": [
+        61.889801025390625,
+        356.55029296875,
+        436.6797180175781,
+        392.2702941894531
+      ],
+      "text_sha256": "9f432b31e3d067564e95eb15d80229e313961dc8851a90f957352c38fa7bc027"
+    },
+    {
+      "block_id": "page-0801-block-0009",
+      "order": 9,
+      "text": "The main treatment is antiretroviral therapy with high CNS penetration effectiveness \n(CPE) aiming at reaching good levels in the CNS with minimal drug-related neurotoxicity. \nFurther adjunctive treatments have been studied (minocycline, memantine, selegiline, lith-\nium, valproate, lexipafant, nimodipine, psychostimulants, natalizumab interferons, etc.).36\n",
+      "bbox": [
+        61.889801025390625,
+        392.55029296875,
+        436.6499328613281,
+        440.2702941894531
+      ],
+      "text_sha256": "da807e241aef8c50290fe98f5c26406bbb8105c68e45f3319ac9b56a839d6178"
+    },
+    {
+      "block_id": "page-0801-block-0010",
+      "order": 10,
+      "text": "In a recent study paroxetine was associated with neurocognitive improvements (after \nadjusting for depression),37 while a trial of rivastigmine patch was negative. Further \nstudies are needed to confirm the effects of these adjunctive treatments for HAND.\n",
+      "bbox": [
+        61.889801025390625,
+        440.55029296875,
+        436.630859375,
+        476.2702941894531
+      ],
+      "text_sha256": "bdbe8a2d3a1f8c2435ee1a3d0fca3a5a48a9e696993043acb9cadfdcb1078fd2"
+    },
+    {
+      "block_id": "page-0801-block-0011",
+      "order": 11,
+      "text": "Interactions between antiretroviral drugs and psychotropics\n",
+      "bbox": [
+        61.889801025390625,
+        490.7052917480469,
+        371.7818908691406,
+        503.74029541015625
+      ],
+      "text_sha256": "84e9e5e7052b9a93a588011269740277c668e1c25fd2902080f12dddf51abc0c"
+    },
+    {
+      "block_id": "page-0801-block-0012",
+      "order": 12,
+      "text": "Pharmacokinetic interactions between antiretroviral drugs and psychotropics occur fre-\nquently and can be clinically significant. Potential interactions should be checked for all \npatients receiving antiretrovirals and psychotropics concomitantly. Drug history for \nchecking drug interactions should include current prescribed medication, alternative/\nherbal treatments, recreational drugs and other non-prescribed medicines.34\n",
+      "bbox": [
+        61.889801025390625,
+        509.55029296875,
+        436.6497802734375,
+        569.2703247070312
+      ],
+      "text_sha256": "3f5870287665b62d6c73c4f1a25c6baa7c7d295eb2f5bda777b5818760c7004d"
+    },
+    {
+      "block_id": "page-0801-block-0013",
+      "order": 13,
+      "text": "Readers are directed to regularly updated online resources for information about indi-\nvidual pharmacokinetic interactions:\n",
+      "bbox": [
+        61.889801025390625,
+        569.55029296875,
+        433.8396911621094,
+        593.2703247070312
+      ],
+      "text_sha256": "98a4d1c7c50e6009687c272e524549511fdf32ff38ee1d18b39b36b999707bee"
+    },
+    {
+      "block_id": "page-0801-block-0014",
+      "order": 14,
+      "text": "■\n■www.hiv-druginteractions.org (also available as an App)\n",
+      "bbox": [
+        61.88970184326172,
+        599.55029296875,
+        314.0997619628906,
+        611.2703247070312
+      ],
+      "text_sha256": "ddc68cfd4a2f267156a977856c48e6bbaa48d9e0e39b8f0e31bc8b627d485eb7"
+    },
+    {
+      "block_id": "page-0801-block-0015",
+      "order": 15,
+      "text": "■\n■www.hivinsite.ucsf.edu\n",
+      "bbox": [
+        61.88970184326172,
+        611.55029296875,
+        170.54978942871094,
+        623.2703247070312
+      ],
+      "text_sha256": "90e64b918fbec2f022de2f08f76287f8f2e2d3e40ce4f4070ab3c6bf5ef88c81"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

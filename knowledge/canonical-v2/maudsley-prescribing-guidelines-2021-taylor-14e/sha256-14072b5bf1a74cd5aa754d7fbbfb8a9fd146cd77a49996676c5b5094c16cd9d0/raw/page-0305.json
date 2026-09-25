@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0305",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 305,
+  "source_page_index": 304,
+  "source_page_display": 305,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "284    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  2\n\t73.\t Wagner KD, et al. A double-blind, randomized, placebo-controlled trial of oxcarbazepine in the treatment of bipolar disorder in children and \nadolescents. Am J Psychiatry 2006; 163:1179–1186.\n\t74.\t Mishory A, et al. Phenytoin as an antimanic anticonvulsant: a controlled study. Am J Psychiatry 2000; 157:463–465.\n\t75.\t Akhondzadeh S, et al. Ritanserin as an adjunct to lithium and haloperidol for the treatment of medication-naive patients with acute mania: \na double blind and placebo controlled trial. BMC Psychiatry 2003; 3:7.\n\t76.\t Palacios J, et al. Tamoxifen for bipolar disorder: systematic review and meta-analysis. J Psychopharmacol 2019; 33:177–184.\n\t77.\t Pigott K, et al. Topiramate for acute affective episodes in bipolar disorder in adults. Cochrane Database Syst Rev 2016.\n\t78.\t Applebaum J, et al. Rapid tryptophan depletion as a treatment for acute mania: a double-blind, pilot-controlled study. Bipolar Disord 2007; \n9:884–887.\n\t79.\t Keck PE, Jr., et al. Ziprasidone in the treatment of acute bipolar mania: a three-week, placebo-controlled, double-blind, randomized trial. Am \nJ Psychiatry 2003; 160:741–748.\n\t80.\t Potkin SG, et al. Ziprasidone in acute bipolar mania: a 21-day randomized, double-blind, placebo-controlled replication trial. J Clin \nPsychopharmacol 2005; 25:301–310.\n\t81.\t Vieta E, et al. Ziprasidone in the treatment of acute mania: a 12-week, placebo-controlled, haloperidol-referenced study. J Psychopharm \n2010; 24:547–558.\n",
+  "raw_text_sha256": "67b73460c26c72c264c713d944d718ce8d32dace0470c217b194ff9229284cc9",
+  "coordinates_sha256": "32c3c142350b0a3f9d02dbe1144e5b08e1e45b4fcd8b0bc9693d822e4fcea50f",
+  "block_sequence_sha256": "bdda4387483d3308f76d92a283a90048883c0a33d6f86885a6779bd17685ed3b",
+  "blocks": [
+    {
+      "block_id": "page-0305-block-0000",
+      "order": 0,
+      "text": "284    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "6e3030c80969abdc60e8ec6fd3f6d6cf426dc69aba9c58d1300fe538f51a344f"
+    },
+    {
+      "block_id": "page-0305-block-0001",
+      "order": 1,
+      "text": "CHAPTER  2\n",
+      "bbox": [
+        19.520000457763672,
+        145.23529052734375,
+        29.0,
+        188.80328369140625
+      ],
+      "text_sha256": "5befcde2fefe074681a51514b484ad31516d952c51183625b5b7b1fb84f30d2c"
+    },
+    {
+      "block_id": "page-0305-block-0002",
+      "order": 2,
+      "text": "\t73.\t Wagner KD, et al. A double-blind, randomized, placebo-controlled trial of oxcarbazepine in the treatment of bipolar disorder in children and \n",
+      "bbox": [
+        61.88999938964844,
+        63.2703857421875,
+        435.56982421875,
+        70.30238342285156
+      ],
+      "text_sha256": "d9ff0693109505d6dfe266619db26264a311dfa018f310220be6ae96b1e72a89"
+    },
+    {
+      "block_id": "page-0305-block-0003",
+      "order": 3,
+      "text": "adolescents. Am J Psychiatry 2006; 163:1179–1186.\n\t74.\t Mishory A, et al. Phenytoin as an antimanic anticonvulsant: a controlled study. Am J Psychiatry 2000; 157:463–465.\n\t75.\t Akhondzadeh S, et al. Ritanserin as an adjunct to lithium and haloperidol for the treatment of medication-naive patients with acute mania: \n",
+      "bbox": [
+        61.895999908447266,
+        72.12638854980469,
+        435.5157165527344,
+        97.30238342285156
+      ],
+      "text_sha256": "07361c5e36b1efb8e5f512120ff8a6204a76b25196c010787105677c6b1c8f62"
+    },
+    {
+      "block_id": "page-0305-block-0004",
+      "order": 4,
+      "text": "a double blind and placebo controlled trial. BMC Psychiatry 2003; 3:7.\n\t76.\t Palacios J, et al. Tamoxifen for bipolar disorder: systematic review and meta-analysis. J Psychopharmacol 2019; 33:177–184.\n\t77.\t Pigott K, et al. Topiramate for acute affective episodes in bipolar disorder in adults. Cochrane Database Syst Rev 2016.\n\t78.\t Applebaum J, et al. Rapid tryptophan depletion as a treatment for acute mania: a double-blind, pilot-controlled study. Bipolar Disord 2007; \n",
+      "bbox": [
+        61.90800094604492,
+        99.12638854980469,
+        435.6180114746094,
+        133.30238342285156
+      ],
+      "text_sha256": "ada358552e80588dca1686dbf0ca6aff9fb90d7a9f422a959b6686cde579d912"
+    },
+    {
+      "block_id": "page-0305-block-0005",
+      "order": 5,
+      "text": "9:884–887.\n\t79.\t Keck PE, Jr., et al. Ziprasidone in the treatment of acute bipolar mania: a three-week, placebo-controlled, double-blind, randomized trial. Am \n",
+      "bbox": [
+        61.92599868774414,
+        135.1263885498047,
+        435.55194091796875,
+        151.30238342285156
+      ],
+      "text_sha256": "21dbe21ff3e479b353be57a86d9731ba47a762fe03e592f8a743260cdb120abb"
+    },
+    {
+      "block_id": "page-0305-block-0006",
+      "order": 6,
+      "text": "J Psychiatry 2003; 160:741–748.\n\t80.\t Potkin SG, et al. Ziprasidone in acute bipolar mania: a 21-day randomized, double-blind, placebo-controlled replication trial. J Clin \n",
+      "bbox": [
+        61.93199920654297,
+        153.1263885498047,
+        435.6000061035156,
+        169.30238342285156
+      ],
+      "text_sha256": "de0370eeb92c1d22029445a2c80256fd2b49dbf7e46cc074380806c92af96963"
+    },
+    {
+      "block_id": "page-0305-block-0007",
+      "order": 7,
+      "text": "Psychopharmacol 2005; 25:301–310.\n\t81.\t Vieta E, et al. Ziprasidone in the treatment of acute mania: a 12-week, placebo-controlled, haloperidol-referenced study. J Psychopharm \n",
+      "bbox": [
+        61.9379997253418,
+        171.1263885498047,
+        435.6059875488281,
+        187.30238342285156
+      ],
+      "text_sha256": "b3ca68a6bd7f9f3c20dd3caea60956934b5cbe134d944806261bbd90cbb9fad3"
+    },
+    {
+      "block_id": "page-0305-block-0008",
+      "order": 8,
+      "text": "2010; 24:547–558.\n",
+      "bbox": [
+        72.94198608398438,
+        189.1263885498047,
+        122.64596557617188,
+        196.30238342285156
+      ],
+      "text_sha256": "efa803502513a47260fca3631cd937f58963bcaca3dce8945f2ba801db9676da"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

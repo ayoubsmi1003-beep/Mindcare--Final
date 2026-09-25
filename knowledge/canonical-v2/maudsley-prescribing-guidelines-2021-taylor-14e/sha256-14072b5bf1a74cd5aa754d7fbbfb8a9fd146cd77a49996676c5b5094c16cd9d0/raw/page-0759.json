@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0759",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 759,
+  "source_page_index": 758,
+  "source_page_display": 759,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "738    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 8\n■\n■Depression is common in chronic kidney disease but evidence for effectiveness of \nantidepressants in this condition is lacking.12,13 In chronic kidney disease starting \nsome antidepressants at a higher versus lower dose reduces mortality risk.14 Depression \nis poorly treated in patients on haemodialysis.15 Non-drug treatment, for example \ncognitive behavioural therapy, exercise or relaxation techniques probably reduce \ndepressive symptoms for adults on dialysis.16 SSRIs are associated with hip fracture \nin patients on haemodialysis (AOR 1.25; 95% CI 1.17, 1.35).17\n■\n■Both schizophrenia and bipolar disorder are associated with an increased risk of \nchronic kidney disease.18,19\n■\n■Antipsychotics (e.g. olanzapine, quetiapine) may be associated with acute kidney \ninjury20 possibly via their effects on blood pressure and urinary retention but studies \nare conflicting.21\n■\n■Mood stabilising anticonvulsants used in bipolar disorder are associated with an \nincreased rate of chronic kidney disease.19\nTable 8.8  Antipsychotic medications in renal impairment\nDrug\nComments\nAmisulpride22–25\nPrimarily renally excreted. 50% excreted unchanged in urine. Limited experience in \nrenal disease. Manufacturer states no data with doses of >50mg but recommends \nfollowing dosing: 50% of dose if GFR 30–60mL/min; 33% of dose if GFR is \n10–30mL/min; no recommendations for GFR <10mL/min so best avoided in \nestablished renal failure.\nAripiprazole22,23,25–29\nLess than 1% of unchanged aripiprazole renally excreted. Manufacturer states no \ndose adjustment required in renal failure as pharmacokinetics are similar in healthy \nand severely renally diseased patients. There is one case report of safe use of oral \naripiprazole 5mg in an 83-year-old man having haemodialysis. Avoid depot \nformulation where possible although there is a case report of aripiprazole 400mg \ndepot use in a 64-year-old man on haemodialysis.\nAsenapine23,25,30\nManufacturer states no dose adjustment required for patients with renal impairment \nbut no experience with use if GFR <15mL/min. A 5mg single dose study in renal \nimpairment suggests that no dose adjustment is needed. No dosage adjustment is \nrecommended in patients with mild (eGFR 60–89mL/min/1.73m2), moderate (eGFR \n30–59mL/min/1.73m2) or severe (eGFR 15–29mL/min/1.73m2) renal impairment.\nChlorpromazine22,23,25,31,32\nLess than 1% excreted unchanged in urine. Manufacturer advises avoiding in renal \ndysfunction. Dosing: GFR 10–50mL/min, dose as in normal renal function; GFR \n<10mL/min, start with a small dose because of an increased risk of anticholinergic, \nsedative and hypotensive side effects. Monitor carefully.\nClozapine23,25,33–37\nOnly trace amounts of unchanged clozapine excreted in urine; however, there are \nrare case reports of interstitial nephritis and acute renal failure. Nocturnal enuresis \nand urinary retention are common side effects. Contraindicated by manufacturer in \nsevere renal disease. Anticholinergic, sedative and hypotensive side effects occur \nmore frequently in patients with renal disease. Dosing: GFR 10–50mL/min as in \nnormal renal function but with caution; GFR <10mL/min start with a low dose and \ntitrate slowly (based on renal expert opinion). Levels are useful to guide dosing. May \ncause and aggravate diabetes, a common cause of renal disease. Case reports exist \nof successful continuation after renal transplantation.38\n",
+  "raw_text_sha256": "3f108b1a8b9c1685f377a12d67375b7e9838dfd8610217cc7055e9ceed495817",
+  "coordinates_sha256": "895e18c39c7fd77b79b8e7b65e5df638f48a6907c2007ace73fceca531b192fb",
+  "block_sequence_sha256": "a5f9cb11480d70ec2a33247beca31b02219442b9a70c1f8cd24db4dff9be1782",
+  "blocks": [
+    {
+      "block_id": "page-0759-block-0000",
+      "order": 0,
+      "text": "738    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "2f8e1822e24733f49ca70b6c981d9be5dc53277b323a725fb244cf6e8d30d144"
+    },
+    {
+      "block_id": "page-0759-block-0001",
+      "order": 1,
+      "text": "CHAPTER 8\n",
+      "bbox": [
+        18.520000457763672,
+        532.3878173828125,
+        28.0,
+        573.7318115234375
+      ],
+      "text_sha256": "5ba3d9fb75ff4f418d4a2e9d517f30966dcfb279c10487eec43c5aa3fd8757a2"
+    },
+    {
+      "block_id": "page-0759-block-0002",
+      "order": 2,
+      "text": "■\n■Depression is common in chronic kidney disease but evidence for effectiveness of \n",
+      "bbox": [
+        61.88990020751953,
+        62.31029510498047,
+        436.70989990234375,
+        74.27029418945312
+      ],
+      "text_sha256": "fcafba7b9a84c2512386ad311686805795cc67cfbee36015e8fab09745e1ea6b"
+    },
+    {
+      "block_id": "page-0759-block-0003",
+      "order": 3,
+      "text": "antidepressants in this condition is lacking.12,13 In chronic kidney disease starting \nsome antidepressants at a higher versus lower dose reduces mortality risk.14 Depression \nis poorly treated in patients on haemodialysis.15 Non-drug treatment, for example \ncognitive behavioural therapy, exercise or relaxation techniques probably reduce \ndepressive symptoms for adults on dialysis.16 SSRIs are associated with hip fracture \nin patients on haemodialysis (AOR 1.25; 95% CI 1.17, 1.35).17\n",
+      "bbox": [
+        70.88827514648438,
+        74.55029296875,
+        436.68243408203125,
+        146.27029418945312
+      ],
+      "text_sha256": "0e26eea6b1c5791c25aac3c802d4dcfc84be4fbec74e87db074d78e736af294c"
+    },
+    {
+      "block_id": "page-0759-block-0004",
+      "order": 4,
+      "text": "■\n■Both schizophrenia and bipolar disorder are associated with an increased risk of \n",
+      "bbox": [
+        61.88990020751953,
+        146.310302734375,
+        436.71002197265625,
+        158.27029418945312
+      ],
+      "text_sha256": "765e5cc82e21c7aa79e9641b0abb35c1fad215b1de41a97f535d6f09e3840f06"
+    },
+    {
+      "block_id": "page-0759-block-0005",
+      "order": 5,
+      "text": "chronic kidney disease.18,19\n",
+      "bbox": [
+        70.88999938964844,
+        158.310302734375,
+        184.64578247070312,
+        170.27029418945312
+      ],
+      "text_sha256": "691062b38abaec4f61033d290c1fee49d088c0d3a932c4e75b2c92d6af07338a"
+    },
+    {
+      "block_id": "page-0759-block-0006",
+      "order": 6,
+      "text": "■\n■Antipsychotics (e.g. olanzapine, quetiapine) may be associated with acute kidney \n",
+      "bbox": [
+        61.88990020751953,
+        170.310302734375,
+        436.6898498535156,
+        182.27029418945312
+      ],
+      "text_sha256": "0f3a7c9af06d41015c1518b2e88baa0980ae6c3ce982a67b698070c10a4bcf75"
+    },
+    {
+      "block_id": "page-0759-block-0007",
+      "order": 7,
+      "text": "injury20 possibly via their effects on blood pressure and urinary retention but studies \nare conflicting.21\n",
+      "bbox": [
+        70.88999938964844,
+        182.310302734375,
+        436.61279296875,
+        206.27029418945312
+      ],
+      "text_sha256": "a608e62ce663dd7535c6085f8600b7f0caeb15e80e7a8307570fb09fd245b99f"
+    },
+    {
+      "block_id": "page-0759-block-0008",
+      "order": 8,
+      "text": "■\n■Mood stabilising anticonvulsants used in bipolar disorder are associated with an \n",
+      "bbox": [
+        61.88990020751953,
+        206.310302734375,
+        436.68011474609375,
+        218.27029418945312
+      ],
+      "text_sha256": "76d320f575744d6b0325e97d33f2c8f1be15faf0842733f3473ad98f56c8fa72"
+    },
+    {
+      "block_id": "page-0759-block-0009",
+      "order": 9,
+      "text": "increased rate of chronic kidney disease.19\n",
+      "bbox": [
+        70.88999938964844,
+        218.310302734375,
+        250.13116455078125,
+        230.27029418945312
+      ],
+      "text_sha256": "81acea8fa5c46ac71ce45772ee708e81120cd1fe1d8e3669fba7dbe61c041bde"
+    },
+    {
+      "block_id": "page-0759-block-0010",
+      "order": 10,
+      "text": "Table 8.8  Antipsychotic medications in renal impairment\n",
+      "bbox": [
+        67.88999938964844,
+        246.97779846191406,
+        250.2749786376953,
+        255.86529541015625
+      ],
+      "text_sha256": "d053a2745c2a073fd775957a2ba6c1634c2adba72d21f8f1c409f253e8fe9790"
+    },
+    {
+      "block_id": "page-0759-block-0011",
+      "order": 11,
+      "text": "Drug\nComments\n",
+      "bbox": [
+        61.88999938964844,
+        266.852783203125,
+        198.38999938964844,
+        275.74029541015625
+      ],
+      "text_sha256": "f0d3aba6cb5c63a8b3ce76553ca73a800f481925284fe7cc72b7ce3c93bfebe6"
+    },
+    {
+      "block_id": "page-0759-block-0012",
+      "order": 12,
+      "text": "Amisulpride22–25\nPrimarily renally excreted. 50% excreted unchanged in urine. Limited experience in \nrenal disease. Manufacturer states no data with doses of >50mg but recommends \nfollowing dosing: 50% of dose if GFR 30–60mL/min; 33% of dose if GFR is \n10–30mL/min; no recommendations for GFR <10mL/min so best avoided in \nestablished renal failure.\n",
+      "bbox": [
+        61.88999938964844,
+        285.1578063964844,
+        426.73504638671875,
+        333.85528564453125
+      ],
+      "text_sha256": "7f43eb0f0e12889118016d54fad61b36b8e20a0fecc3daefb883dfa83d7d2c78"
+    },
+    {
+      "block_id": "page-0759-block-0013",
+      "order": 13,
+      "text": "Aripiprazole22,23,25–29\nLess than 1% of unchanged aripiprazole renally excreted. Manufacturer states no \ndose adjustment required in renal failure as pharmacokinetics are similar in healthy \nand severely renally diseased patients. There is one case report of safe use of oral \naripiprazole 5mg in an 83-year-old man having haemodialysis. Avoid depot \nformulation where possible although there is a case report of aripiprazole 400mg \ndepot use in a 64-year-old man on haemodialysis.\n",
+      "bbox": [
+        61.88999938964844,
+        343.2752990722656,
+        426.4800720214844,
+        401.977783203125
+      ],
+      "text_sha256": "5c4b0b808d7ca5f7ce7d4981e0b5aecac1c12bb6ffed0793afc5a4c97d103b49"
+    },
+    {
+      "block_id": "page-0759-block-0014",
+      "order": 14,
+      "text": "Asenapine23,25,30\nManufacturer states no dose adjustment required for patients with renal impairment \nbut no experience with use if GFR <15mL/min. A 5mg single dose study in renal \nimpairment suggests that no dose adjustment is needed. No dosage adjustment is \nrecommended in patients with mild (eGFR 60–89mL/min/1.73m2), moderate (eGFR \n30–59mL/min/1.73m2) or severe (eGFR 15–29mL/min/1.73m2) renal impairment.\n",
+      "bbox": [
+        61.88999938964844,
+        411.3977966308594,
+        432.4576110839844,
+        460.11529541015625
+      ],
+      "text_sha256": "7559fb0594823f78f300bf3db3ded96bc8d96b0361298b60050e8b671b7af64d"
+    },
+    {
+      "block_id": "page-0759-block-0015",
+      "order": 15,
+      "text": "Chlorpromazine22,23,25,31,32\nLess than 1% excreted unchanged in urine. Manufacturer advises avoiding in renal \ndysfunction. Dosing: GFR 10–50mL/min, dose as in normal renal function; GFR \n<10mL/min, start with a small dose because of an increased risk of anticholinergic, \nsedative and hypotensive side effects. Monitor carefully.\n",
+      "bbox": [
+        61.890716552734375,
+        468.5303039550781,
+        426.7800598144531,
+        507.2327880859375
+      ],
+      "text_sha256": "e40d7c68c11d981f744c8f36ebe45686fd64c7e18eb1d460a8d27f85f5b18d0f"
+    },
+    {
+      "block_id": "page-0759-block-0016",
+      "order": 16,
+      "text": "Clozapine23,25,33–37\nOnly trace amounts of unchanged clozapine excreted in urine; however, there are \nrare case reports of interstitial nephritis and acute renal failure. Nocturnal enuresis \nand urinary retention are common side effects. Contraindicated by manufacturer in \nsevere renal disease. Anticholinergic, sedative and hypotensive side effects occur \nmore frequently in patients with renal disease. Dosing: GFR 10–50mL/min as in \nnormal renal function but with caution; GFR <10mL/min start with a low dose and \ntitrate slowly (based on renal expert opinion). Levels are useful to guide dosing. May \ncause and aggravate diabetes, a common cause of renal disease. Case reports exist \nof successful continuation after renal transplantation.38\n",
+      "bbox": [
+        61.889892578125,
+        515.1527709960938,
+        431.5050048828125,
+        603.8452758789062
+      ],
+      "text_sha256": "e3cdf7986af8b1e293c0dde851f8a1fec9e1a3856bf5c13f4c6a82ba43d8506f"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

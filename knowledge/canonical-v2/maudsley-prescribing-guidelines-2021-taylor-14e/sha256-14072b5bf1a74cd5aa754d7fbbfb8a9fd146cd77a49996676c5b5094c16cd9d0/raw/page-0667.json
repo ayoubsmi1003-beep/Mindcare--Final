@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0667",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 667,
+  "source_page_index": 666,
+  "source_page_display": 667,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "646    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  6\nagitation, overall BPSD), olanzapine (agitation) and aripiprazole (overall BPSD). \nThough commonly used, quetiapine has failed to show effectiveness for BPSD, except \nat higher doses (100–200mg/day) that may not be well tolerated. The CATIE-AD study \ncomparing risperidone, olanzapine and quetiapine with placebo in persons with BPSD \ndemonstrated efficacy for risperidone and olanzapine but a large percentage of partici-\npants discontinued medication due to adverse effects.26\nA 2006 Cochrane review27 of atypical antipsychotics for aggression and psychosis in \nAD concluded that risperidone and olanzapine are useful in diminishing aggression, and \nrisperidone reduces psychotic symptoms. However, the authors concluded that because \nof modest efficacy and significant increase in adverse effects, neither risperidone nor \nolanzapine should be routinely used to treat dementia patients unless there is severe \ndistress or a serious risk of physical harm to those living or working with the patient.\nIncreased mortality with antipsychotics in dementia\nFollowing analysis of published and unpublished data in 2004, warnings were issued in \nthe UK and USA regarding increased mortality in patients with dementia with certain \nSGAs (mainly risperidone and olanzapine).28–30 These warnings have been extended to \ninclude all SGAs as well as conventional antipsychotics,30,31 and a warning about a pos-\nsible risk of cerebrovascular events (CVAEs) has now been added to product labelling \nfor all FGAs and SGAs.\nSome studies suggested that the risk of CVAEs in elderly users of antipsychotics may \nnot be cumulative.32,33 The risk was elevated during the first weeks of treatment but \nthen decreased over time, returning to base level after 3 months. In contrast, a long-\nterm study (24–54 months) deduced that mortality was progressively increased over \ntime for antipsychotic-treated (risperidone and FGAs) patients compared with those \nreceiving placebo.34 At present this is not a widely held view.\nWhether the risk of mortality differs from one antipsychotic to another has been inves-\ntigated in several studies.35–38 In general, haloperidol users had an increased risk of mor-\ntality, whereas quetiapine users had a decreased risk. No clinically meaningful differences \nwere observed for olanzapine, aripiprazole and ziprasidone35 (or valproic acid36). The \neffects were strongest shortly after the start of treatment and remained after adjustment \nfor dose. There was a dose–response relation for all drugs except quetiapine.35 Another \nstudy37 investigated adjusted hazard ratios of death of 14 individual antipsychotics com-\npared with risperidone in new users of antipsychotics. A higher mortality was found for \nhaloperidol, levomepromazine and zuclopenthixol, and to a lesser extent for melperone \ncompared with risperidone. Lower risks were observed for quetiapine, olanzapine, clo-\nzapine and flupentixol. No statistically significant difference was found for amisulpride.\nIn a 2019 network meta-analysis of 17 studies (5,373 patients), no significant differ-\nences were found across measures of effectiveness and safety among aripiprazole, olan-\nzapine, quetiapine and risperidone, although differences were found for some of these \ndrugs and outcomes when compared with placebo.39\nSeveral mechanisms have been postulated for the causes of CVAEs with antipsychotics.40 \nOrthostatic hypotension may impair cerebral perfusion in people with cerebrovascular \ninsufficiency or atherosclerosis. Tachycardia may decrease cerebral perfusion or dislodge \na thrombus in a patient with atrial fibrillation (see section on psychotropics in AF). \n",
+  "raw_text_sha256": "6f71d0b2fd725ce5c1eea71c51406d0d432089aa11360e84a6704c0dfcec1440",
+  "coordinates_sha256": "2f2b6292dc61197a9f969ab5a63c45e659895bd694d94453b5c2810befcbcb57",
+  "block_sequence_sha256": "ac52fe5ba34604eb9cb658e798be5d9e5c63b8d9aa0a29d41ba440067a5ba663",
+  "blocks": [
+    {
+      "block_id": "page-0667-block-0000",
+      "order": 0,
+      "text": "646    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "ae16e02659223ff6d903ad2c97b1fb85f1bc61183fae09ab1b078111b9f0a93e"
+    },
+    {
+      "block_id": "page-0667-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        18.520000457763672,
+        405.35260009765625,
+        28.0,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0667-block-0002",
+      "order": 2,
+      "text": "agitation, overall BPSD), olanzapine (agitation) and aripiprazole (overall BPSD). \nThough commonly used, quetiapine has failed to show effectiveness for BPSD, except \nat higher doses (100–200mg/day) that may not be well tolerated. The CATIE-AD study \ncomparing risperidone, olanzapine and quetiapine with placebo in persons with BPSD \ndemonstrated efficacy for risperidone and olanzapine but a large percentage of partici-\npants discontinued medication due to adverse effects.26\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.6999816894531,
+        134.27029418945312
+      ],
+      "text_sha256": "a63552332bb778ab8bf7665bae58be26d81ac9b7bfbb2d07322704a28bee32ab"
+    },
+    {
+      "block_id": "page-0667-block-0003",
+      "order": 3,
+      "text": "A 2006 Cochrane review27 of atypical antipsychotics for aggression and psychosis in \nAD concluded that risperidone and olanzapine are useful in diminishing aggression, and \nrisperidone reduces psychotic symptoms. However, the authors concluded that because \nof modest efficacy and significant increase in adverse effects, neither risperidone nor \nolanzapine should be routinely used to treat dementia patients unless there is severe \ndistress or a serious risk of physical harm to those living or working with the patient.\n",
+      "bbox": [
+        61.88580322265625,
+        134.55029296875,
+        436.716064453125,
+        206.27029418945312
+      ],
+      "text_sha256": "3b93acfa1b78ef2d6b6c1748c1a5dfd5bfa5f21273805c299cb3d9c0a0f878ef"
+    },
+    {
+      "block_id": "page-0667-block-0004",
+      "order": 4,
+      "text": "Increased mortality with antipsychotics in dementia\n",
+      "bbox": [
+        61.88580322265625,
+        224.64028930664062,
+        305.2657775878906,
+        236.49029541015625
+      ],
+      "text_sha256": "d4279cdbd687f040ea42b4b0d0d7ab8c13a583e0e643ba55306c70a64c3491ee"
+    },
+    {
+      "block_id": "page-0667-block-0005",
+      "order": 5,
+      "text": "Following analysis of published and unpublished data in 2004, warnings were issued in \nthe UK and USA regarding increased mortality in patients with dementia with certain \nSGAs (mainly risperidone and olanzapine).28–30 These warnings have been extended to \ninclude all SGAs as well as conventional antipsychotics,30,31 and a warning about a pos-\nsible risk of cerebrovascular events (CVAEs) has now been added to product labelling \nfor all FGAs and SGAs.\n",
+      "bbox": [
+        61.88580322265625,
+        242.55029296875,
+        436.70574951171875,
+        314.2702941894531
+      ],
+      "text_sha256": "40cd2c0a5569843e33290d5c264fb062a092b9d85b31881417e20eb122b85fe5"
+    },
+    {
+      "block_id": "page-0667-block-0006",
+      "order": 6,
+      "text": "Some studies suggested that the risk of CVAEs in elderly users of antipsychotics may \nnot be cumulative.32,33 The risk was elevated during the first weeks of treatment but \nthen decreased over time, returning to base level after 3 months. In contrast, a long-\nterm study (24–54 months) deduced that mortality was progressively increased over \ntime for antipsychotic-treated (risperidone and FGAs) patients compared with those \nreceiving placebo.34 At present this is not a widely held view.\n",
+      "bbox": [
+        61.889984130859375,
+        314.55029296875,
+        436.6814270019531,
+        386.2702941894531
+      ],
+      "text_sha256": "051869762e63cd5c8ad6bec20106227d7d48ad8943979fd3fa39d4ecc8772270"
+    },
+    {
+      "block_id": "page-0667-block-0007",
+      "order": 7,
+      "text": "Whether the risk of mortality differs from one antipsychotic to another has been inves-\ntigated in several studies.35–38 In general, haloperidol users had an increased risk of mor-\ntality, whereas quetiapine users had a decreased risk. No clinically meaningful differences \nwere observed for olanzapine, aripiprazole and ziprasidone35 (or valproic acid36). The \neffects were strongest shortly after the start of treatment and remained after adjustment \nfor dose. There was a dose–response relation for all drugs except quetiapine.35 Another \nstudy37 investigated adjusted hazard ratios of death of 14 individual antipsychotics com-\npared with risperidone in new users of antipsychotics. A higher mortality was found for \nhaloperidol, levomepromazine and zuclopenthixol, and to a lesser extent for melperone \ncompared with risperidone. Lower risks were observed for quetiapine, olanzapine, clo-\nzapine and flupentixol. No statistically significant difference was found for amisulpride.\n",
+      "bbox": [
+        61.88610076904297,
+        386.55029296875,
+        436.66766357421875,
+        518.2703247070312
+      ],
+      "text_sha256": "5fed89ea512b68a8c8291d667c3271a4f5428dc50aa86b59a3c3258afe6b0972"
+    },
+    {
+      "block_id": "page-0667-block-0008",
+      "order": 8,
+      "text": "In a 2019 network meta-analysis of 17 studies (5,373 patients), no significant differ-\nences were found across measures of effectiveness and safety among aripiprazole, olan-\nzapine, quetiapine and risperidone, although differences were found for some of these \ndrugs and outcomes when compared with placebo.39\n",
+      "bbox": [
+        61.8861083984375,
+        518.55029296875,
+        436.6261291503906,
+        566.2703247070312
+      ],
+      "text_sha256": "835f3f6c6767e29346081aaf524faa1bd8c7a9540ed886815229ccb0b0402365"
+    },
+    {
+      "block_id": "page-0667-block-0009",
+      "order": 9,
+      "text": "Several mechanisms have been postulated for the causes of CVAEs with antipsychotics.40 \nOrthostatic hypotension may impair cerebral perfusion in people with cerebrovascular \ninsufficiency or atherosclerosis. Tachycardia may decrease cerebral perfusion or dislodge \na thrombus in a patient with atrial fibrillation (see section on psychotropics in AF). \n",
+      "bbox": [
+        61.88970947265625,
+        566.55029296875,
+        436.6999816894531,
+        614.2703247070312
+      ],
+      "text_sha256": "70d75a2135714214935209c831f9e147a77abbd0a1a3aecb092e1dbedc6696b4"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

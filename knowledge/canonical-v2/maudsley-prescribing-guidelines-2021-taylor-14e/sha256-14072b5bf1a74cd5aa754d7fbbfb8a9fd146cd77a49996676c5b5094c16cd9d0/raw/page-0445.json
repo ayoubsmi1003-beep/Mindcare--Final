@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0445",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 445,
+  "source_page_index": 444,
+  "source_page_display": 445,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "424    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nof action may be as long as 6 weeks. Women may respond better to SSRIs than men.20 \nThere is some evidence that augmentation with clonazepam leads to a more rapid \nresponse (but not a greater magnitude of response overall).18 The optimal duration of \ntreatment is unknown but should be at least 8 months.21 A large naturalistic study \nshowed convincing evidence of benefit for at least 3 years.22 Less than half are likely to \nremain well after medication is withdrawn.23\nLower starting doses are also required in post-traumatic stress disorder (PTSD), \nalthough high doses (e.g. fluoxetine 60mg) are usually required for full effect. Response \nis usually seen within 8 weeks, but can take up to 12 weeks.23 Treatment should be \ncontinued for at least 6 months and probably longer.11,24,25\nAlthough the doses of SSRIs licensed for the treatment of obsessive compulsive disor-\nder (OCD) are higher than those licensed for the treatment of depression (e.g. fluoxe-\ntine 60mg, paroxetine 40–60mg), lower (standard antidepressant) doses may be \neffective, particularly for maintenance treatment.26 Initial response is usually slower to \nemerge than in depression (can take 10–12 weeks). Dose should be increased to gain \nmaximal benefit. Treatment should continue for at least 1 year.11 The relapse rate in \nthose who continue treatment for 2 years is half that of those who stop treatment after \ninitial response (25–40% vs 80%).27 In most people with OCD, the condition is persis-\ntent and symptom severity fluctuates over time.28 Second-line treatment is usually the \naddition of either risperidone or aripiprazole.\nBody dysmorphic disorder (BDD) should be treated initially with CBT. If symptoms \nare moderate to severe, adding an SSRI may improve outcome.29 Buspirone may use-\nfully augment the SSRI,29 although no RCT has been conducted.\nStandard antidepressant starting doses are well tolerated in social phobia,30,31 and \ndosage titration may benefit some patients but is not always required. Some benefit is \nusually seen within 8 weeks, and treatment should be continued for at least a year and \nprobably longer.31 NICE recommends CBT as first-line treatment for Social Anxiety.32\nAll patients treated with SSRIs should be monitored for the development of akathisia, \nincreased anxiety and the emergence of suicidal ideation; the risk is thought to be great-\nest in those <30 years, those with co-morbid depression and those already known to be \nat higher risk of suicide.29,33\nSSRIs should not be stopped abruptly, as patients with anxiety spectrum disorders are \nparticularly sensitive to discontinuation symptoms (see section on Antidepressant with-\ndrawal symptoms). The dose should be reduced as slowly as tolerated over several months.\nPregabalin\nPregabalin is licensed for the treatment of GAD. Several large RCTs have demonstrated \nits efficacy and tolerability and comparable speed of onset of action to a benzodiaze-\npine.34 The dose of pregabalin in GAD is initially 150mg, increased gradually to maxi-\nmum of 600mg in 2 to 3 divided doses. It is widely misused (often alongside opioids35), \nand there is a significant risk of diversion.36 Pregabalin should not be stopped abruptly \nas it may precipitate a severe withdrawal syndrome that includes seizures.37\nPsychological approaches\nThere is good evidence to support the efficacy of psychological interventions in anxiety \nspectrum disorders.11,38 Examples include exposure therapy in OCD and social phobia. \nInitial drug therapy may be required to help the patient become more receptive to \n",
+  "raw_text_sha256": "9b2db3a0233e9f9646a04aa7c0301a431af553c04170cb69bf691fdc88b5af50",
+  "coordinates_sha256": "e22ce4af9fe2cbec57f6cf6327fc0f708cd65c491fbe12da92c44551066a05b8",
+  "block_sequence_sha256": "a661fb3bda74471218f3275c4909af721c19762eb27df2028a873d0fb8041316",
+  "blocks": [
+    {
+      "block_id": "page-0445-block-0000",
+      "order": 0,
+      "text": "424    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "2df40dcddbf61732a29f95eff0a0f296d6a4df7971f75d23e7f822c87a146bc1"
+    },
+    {
+      "block_id": "page-0445-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0445-block-0002",
+      "order": 2,
+      "text": "of action may be as long as 6 weeks. Women may respond better to SSRIs than men.20 \nThere is some evidence that augmentation with clonazepam leads to a more rapid \nresponse (but not a greater magnitude of response overall).18 The optimal duration of \ntreatment is unknown but should be at least 8 months.21 A large naturalistic study \nshowed convincing evidence of benefit for at least 3 years.22 Less than half are likely to \nremain well after medication is withdrawn.23\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.6700134277344,
+        134.27029418945312
+      ],
+      "text_sha256": "d4a4dcc42d68404465702731cfa8c3f3e0eaed9f1e5f17493e852a18e5ab0668"
+    },
+    {
+      "block_id": "page-0445-block-0003",
+      "order": 3,
+      "text": "Lower starting doses are also required in post-traumatic stress disorder (PTSD), \nalthough high doses (e.g. fluoxetine 60mg) are usually required for full effect. Response \nis usually seen within 8 weeks, but can take up to 12 weeks.23 Treatment should be \ncontinued for at least 6 months and probably longer.11,24,25\n",
+      "bbox": [
+        61.88999938964844,
+        134.310302734375,
+        436.6727600097656,
+        182.27029418945312
+      ],
+      "text_sha256": "e138898d5093ae87a05d3a3baf8bace7ae89c5656c9f21bb6d8ab0fe15dfcb8d"
+    },
+    {
+      "block_id": "page-0445-block-0004",
+      "order": 4,
+      "text": "Although the doses of SSRIs licensed for the treatment of obsessive compulsive disor-\nder (OCD) are higher than those licensed for the treatment of depression (e.g. fluoxe-\ntine 60mg, paroxetine 40–60mg), lower (standard antidepressant) doses may be \neffective, particularly for maintenance treatment.26 Initial response is usually slower to \nemerge than in depression (can take 10–12 weeks). Dose should be increased to gain \nmaximal benefit. Treatment should continue for at least 1 year.11 The relapse rate in \nthose who continue treatment for 2 years is half that of those who stop treatment after \ninitial response (25–40% vs 80%).27 In most people with OCD, the condition is persis-\ntent and symptom severity fluctuates over time.28 Second-line treatment is usually the \naddition of either risperidone or aripiprazole.\n",
+      "bbox": [
+        61.885009765625,
+        182.310302734375,
+        436.7065734863281,
+        302.2702941894531
+      ],
+      "text_sha256": "52f225e4e6a419f33901369624c7797549365a671658b9fb72bb67a4d47eae70"
+    },
+    {
+      "block_id": "page-0445-block-0005",
+      "order": 5,
+      "text": "Body dysmorphic disorder (BDD) should be treated initially with CBT. If symptoms \nare moderate to severe, adding an SSRI may improve outcome.29 Buspirone may use-\nfully augment the SSRI,29 although no RCT has been conducted.\n",
+      "bbox": [
+        61.885589599609375,
+        302.310302734375,
+        436.6582336425781,
+        338.2702941894531
+      ],
+      "text_sha256": "40bf0df046562016eeccea5906fb0cc877519198ceab8e1577f4bd7fdf81a434"
+    },
+    {
+      "block_id": "page-0445-block-0006",
+      "order": 6,
+      "text": "Standard antidepressant starting doses are well tolerated in social phobia,30,31 and \ndosage titration may benefit some patients but is not always required. Some benefit is \nusually seen within 8 weeks, and treatment should be continued for at least a year and \nprobably longer.31 NICE recommends CBT as first-line treatment for Social Anxiety.32\n",
+      "bbox": [
+        61.888275146484375,
+        338.310302734375,
+        436.688232421875,
+        386.2702941894531
+      ],
+      "text_sha256": "de7a0d07e994bf7ba8a058fbdca9f8c036995726c970d234095cf0891cfac5ad"
+    },
+    {
+      "block_id": "page-0445-block-0007",
+      "order": 7,
+      "text": "All patients treated with SSRIs should be monitored for the development of akathisia, \nincreased anxiety and the emergence of suicidal ideation; the risk is thought to be great-\nest in those <30 years, those with co-morbid depression and those already known to be \nat higher risk of suicide.29,33\n",
+      "bbox": [
+        61.88990020751953,
+        386.55029296875,
+        436.68988037109375,
+        434.2702941894531
+      ],
+      "text_sha256": "a8da4be551ebf7e072d06c651dfb767d05e35c14d1b0e1a8507872e3993522d2"
+    },
+    {
+      "block_id": "page-0445-block-0008",
+      "order": 8,
+      "text": "SSRIs should not be stopped abruptly, as patients with anxiety spectrum disorders are \nparticularly sensitive to discontinuation symptoms (see section on Antidepressant with-\ndrawal symptoms). The dose should be reduced as slowly as tolerated over several months.\n",
+      "bbox": [
+        61.88990020751953,
+        434.55029296875,
+        436.6898498535156,
+        470.2702941894531
+      ],
+      "text_sha256": "45614b7ed2157b751c7eb44dece030b575c0a8e45eece4dbbb7a1ba3a59ec51f"
+    },
+    {
+      "block_id": "page-0445-block-0009",
+      "order": 9,
+      "text": "Pregabalin\n",
+      "bbox": [
+        61.88990020751953,
+        487.7052917480469,
+        116.7138900756836,
+        500.74029541015625
+      ],
+      "text_sha256": "77e7b5784be765c4bf2d675199583b03c9e7c9a136769406b32828d8dab66188"
+    },
+    {
+      "block_id": "page-0445-block-0010",
+      "order": 10,
+      "text": "Pregabalin is licensed for the treatment of GAD. Several large RCTs have demonstrated \nits efficacy and tolerability and comparable speed of onset of action to a benzodiaze-\npine.34 The dose of pregabalin in GAD is initially 150mg, increased gradually to maxi-\nmum of 600mg in 2 to 3 divided doses. It is widely misused (often alongside opioids35), \nand there is a significant risk of diversion.36 Pregabalin should not be stopped abruptly \nas it may precipitate a severe withdrawal syndrome that includes seizures.37\n",
+      "bbox": [
+        61.889892578125,
+        506.55029296875,
+        436.6699523925781,
+        578.2703247070312
+      ],
+      "text_sha256": "ca1af81e99e73a85f91f9174eefd48358734dfd1249c00d84a22c4b8fceca10d"
+    },
+    {
+      "block_id": "page-0445-block-0011",
+      "order": 11,
+      "text": "Psychological approaches\n",
+      "bbox": [
+        61.88990020751953,
+        595.705322265625,
+        193.08688354492188,
+        608.7402954101562
+      ],
+      "text_sha256": "f53c43ef21020bee87275f4f6e753cdf574d5dc3e8c7ed5c3ab7b2e626822a6d"
+    },
+    {
+      "block_id": "page-0445-block-0012",
+      "order": 12,
+      "text": "There is good evidence to support the efficacy of psychological interventions in anxiety \nspectrum disorders.11,38 Examples include exposure therapy in OCD and social phobia. \nInitial drug therapy may be required to help the patient become more receptive to \n",
+      "bbox": [
+        61.88700866699219,
+        614.55029296875,
+        436.65704345703125,
+        650.2703247070312
+      ],
+      "text_sha256": "cf3c5182146366072694707883dbd5b1124bb65d9092256ded943e340bde431d"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

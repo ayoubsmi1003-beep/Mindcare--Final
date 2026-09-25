@@ -1,0 +1,359 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0592",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 592,
+  "source_page_index": 591,
+  "source_page_display": 592,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Children and adolescents    571\nCHAPTER 5\n■\n■The use of second-generation antipsychotics24,25 for ADHD is not recommended.24,25 \nThese may reduce hyperactivity in ASD26 but should not be prescribed for this \nindication.\n■\n■Co-morbid psychiatric illness is common in children with ADHD. Stimulants are \noften helpful overall but are unlikely to be appropriate for children who have a psy-\nchotic illness. Problems with substance misuse should be managed in their own right \nalongside ADHD treatment27 and treatments need to be chosen carefully.\n■\n■Combinations of stimulants and atomoxetine have been used, but there are few trials \nand no clear evidence for improved efficacy.28\n■\n■Once stimulant treatment has been established, it is appropriate for repeat prescrip-\ntions to be supplied through general practitioners.1\nADHD in adults\nADHD first diagnosed in adult life is compatible with both ICD-11 and DSM-5. NICE \nguidance regards the first line of treatment as medication, following the same principles \nas for drug treatment in children (see Table 5.6).\n■\n■Around 65% of patients with ADHD continue to meet full criteria or have achieved \nonly partial remission by adulthood.29 It is appropriate to continue treatment started \nin childhood in adults whose symptoms remain disabling.\n■\n■A first-time diagnosis of ADHD in an adult should only be made after a comprehen-\nsive assessment. Whenever possible this should include information from other \ninformants and from adults who knew the patient as a child. It is recommended to \nestablish the symptoms and impairments of ADHD using a validated diagnostic \ninterview assessment such as the Diagnostic Interview for DSM-IV ADHD (DIVA).30\n■\n■The prevalence of substance misuse and antisocial personality disorder are high in \nadults whose ADHD was not recognised in childhood.31 Methylphenidate can be \neffective in this population,32 but caution is appropriate in prescribing and \nmonitoring.\n■\n■For adults with ADHD and drug or alcohol addiction disorders, there should be close \nliaison between the professional treating the ADHD and an addiction specialist.\n■\n■Methylphenidate or lisdexamfetamine are considered first-line choices of medication \nin adults.1\n■\n■Dexamfetamine can be used for adults whose ADHD symptoms are responding to \nlisdexamfetamine but who cannot tolerate the longer effect profile.\n■\n■For atomoxetine, monitoring for symptoms of liver dysfunction and suicidal thinking \nis advised.\n■\n■Atomoxetine, lisdexamfetamine and two modified release formulations of methyl-\nphenidate (Medikinet XL, Ritalin XL) are licensed for first-time use in adults with \nADHD. Concerta XL (another modified-release formulation of methylphenidate) is \nlicensed for continued treatment when initiated before the age of 18 years.\n",
+  "raw_text_sha256": "359cc1759fe85b94fbf38a516a63ecfb159bed79002aba1c947054b0b1a3521d",
+  "coordinates_sha256": "a59c817502844592536499d5a248e6b29047bcf5d76b7467bf502b8766bcf925",
+  "block_sequence_sha256": "e51d87909daf644bc5296dbb4b09c3e9e5e4ddfe124b9edd1a958569f0ce3957",
+  "blocks": [
+    {
+      "block_id": "page-0592-block-0000",
+      "order": 0,
+      "text": "Children and adolescents    571\n",
+      "bbox": [
+        288.94488525390625,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "1eb8f9f145f8c11bfaf87cb560bfb53b306e47ff7b357419d2ee4822e04039c6"
+    },
+    {
+      "block_id": "page-0592-block-0001",
+      "order": 1,
+      "text": "CHAPTER 5\n",
+      "bbox": [
+        454.4096984863281,
+        339.3385009765625,
+        463.88970947265625,
+        380.6824951171875
+      ],
+      "text_sha256": "f4b8b4a0fc64e7b3b74e7336306d0959d0384683e387792724f393162639020a"
+    },
+    {
+      "block_id": "page-0592-block-0002",
+      "order": 2,
+      "text": "■\n■The use of second-generation antipsychotics24,25 for ADHD is not recommended.24,25 \n",
+      "bbox": [
+        47.999900817871094,
+        62.31041717529297,
+        422.7803955078125,
+        74.27041625976562
+      ],
+      "text_sha256": "c4b1a5bcfedcb1898857d86018922fd099a57d10c8029dea14d398095b6b6675"
+    },
+    {
+      "block_id": "page-0592-block-0003",
+      "order": 3,
+      "text": "These may reduce hyperactivity in ASD26 but should not be prescribed for this \nindication.\n",
+      "bbox": [
+        56.99900817871094,
+        74.5504150390625,
+        422.7989501953125,
+        98.27041625976562
+      ],
+      "text_sha256": "16b21698d17f65faf08e8fd85db383be3c3f742a369d9ed9c13b82a6ff711de7"
+    },
+    {
+      "block_id": "page-0592-block-0004",
+      "order": 4,
+      "text": "■\n■Co-morbid psychiatric illness is common in children with ADHD. Stimulants are \n",
+      "bbox": [
+        48.0,
+        98.5504150390625,
+        422.7599182128906,
+        110.27041625976562
+      ],
+      "text_sha256": "3a73511749029404ba28cabd5d5d028d3b1c44ea53e08ebc26c2fb3900265839"
+    },
+    {
+      "block_id": "page-0592-block-0005",
+      "order": 5,
+      "text": "often helpful overall but are unlikely to be appropriate for children who have a psy-\nchotic illness. Problems with substance misuse should be managed in their own right \nalongside ADHD treatment27 and treatments need to be chosen carefully.\n",
+      "bbox": [
+        57.0,
+        110.5504150390625,
+        422.7700500488281,
+        146.27041625976562
+      ],
+      "text_sha256": "388e289842afd6356d9eb82cc35cb58d09e5cf200a7df601a27d798f6641911b"
+    },
+    {
+      "block_id": "page-0592-block-0006",
+      "order": 6,
+      "text": "■\n■Combinations of stimulants and atomoxetine have been used, but there are few trials \n",
+      "bbox": [
+        48.0,
+        146.5504150390625,
+        422.75,
+        158.27041625976562
+      ],
+      "text_sha256": "03144eb915b88d7899920c99caf337397fcfbe374f3e8767d36cfba0165942fe"
+    },
+    {
+      "block_id": "page-0592-block-0007",
+      "order": 7,
+      "text": "and no clear evidence for improved efficacy.28\n",
+      "bbox": [
+        57.0,
+        158.5504150390625,
+        253.12086486816406,
+        170.27041625976562
+      ],
+      "text_sha256": "e7fd073d8d4ded945d3aa2a14cadfd42baed6e85fbf446080e91d2075a37069f"
+    },
+    {
+      "block_id": "page-0592-block-0008",
+      "order": 8,
+      "text": "■\n■Once stimulant treatment has been established, it is appropriate for repeat prescrip-\n",
+      "bbox": [
+        48.0,
+        170.55047607421875,
+        419.9500427246094,
+        182.27047729492188
+      ],
+      "text_sha256": "6a36e8aaa3c136e18ee0cbdbf3e29e13f729afb1edaee63d86c366dc4a2f1692"
+    },
+    {
+      "block_id": "page-0592-block-0009",
+      "order": 9,
+      "text": "tions to be supplied through general practitioners.1\n",
+      "bbox": [
+        57.0,
+        182.55047607421875,
+        275.85968017578125,
+        194.27047729492188
+      ],
+      "text_sha256": "ca88c69fa2424030af85aa0683ce464bb1eddc47d2f05c87122a7b4681dd3443"
+    },
+    {
+      "block_id": "page-0592-block-0010",
+      "order": 10,
+      "text": "ADHD in adults\n",
+      "bbox": [
+        48.0,
+        217.70547485351562,
+        127.44200134277344,
+        230.740478515625
+      ],
+      "text_sha256": "db7f9946c3e854b64d9201b8821311f84357e391d6778697d5529430985b3723"
+    },
+    {
+      "block_id": "page-0592-block-0011",
+      "order": 11,
+      "text": "ADHD first diagnosed in adult life is compatible with both ICD-11 and DSM-5. NICE \nguidance regards the first line of treatment as medication, following the same principles \nas for drug treatment in children (see Table 5.6).\n",
+      "bbox": [
+        48.0,
+        236.55047607421875,
+        422.7899169921875,
+        272.2704772949219
+      ],
+      "text_sha256": "aed0043217b13a387650c5b04e250285a829cb4d838acc747000239f10ed12bc"
+    },
+    {
+      "block_id": "page-0592-block-0012",
+      "order": 12,
+      "text": "■\n■Around 65% of patients with ADHD continue to meet full criteria or have achieved \n",
+      "bbox": [
+        47.999900817871094,
+        278.55047607421875,
+        422.7698669433594,
+        290.2704772949219
+      ],
+      "text_sha256": "86c1502e288beadc4f68edc9639ab9fda306ac3451c51d75e4f9fe3a20d9d815"
+    },
+    {
+      "block_id": "page-0592-block-0013",
+      "order": 13,
+      "text": "only partial remission by adulthood.29 It is appropriate to continue treatment started \nin childhood in adults whose symptoms remain disabling.\n",
+      "bbox": [
+        57.0,
+        290.31048583984375,
+        422.7823791503906,
+        314.2704772949219
+      ],
+      "text_sha256": "f0eb700515f15543118c6e1f43ebe2a7e2b72ad3b9801d3a09478789dd6b5aab"
+    },
+    {
+      "block_id": "page-0592-block-0014",
+      "order": 14,
+      "text": "■\n■A first-time diagnosis of ADHD in an adult should only be made after a comprehen-\n",
+      "bbox": [
+        47.999900817871094,
+        314.55047607421875,
+        419.9899597167969,
+        326.2704772949219
+      ],
+      "text_sha256": "4016d73d43e1c022ed4c7e35cf0532896e7b22e0e6d7d6138e44c367a3df1bc6"
+    },
+    {
+      "block_id": "page-0592-block-0015",
+      "order": 15,
+      "text": "sive assessment. Whenever possible this should include information from other \ninformants and from adults who knew the patient as a child. It is recommended to \nestablish the symptoms and impairments of ADHD using a validated diagnostic \ninterview assessment such as the Diagnostic Interview for DSM-IV ADHD (DIVA).30\n",
+      "bbox": [
+        57.0,
+        326.55047607421875,
+        422.8299255371094,
+        374.2704772949219
+      ],
+      "text_sha256": "a693ec87b3ee7ab8fd5cd23534a95595ac2935b7b384e46500a5d40582a33e4c"
+    },
+    {
+      "block_id": "page-0592-block-0016",
+      "order": 16,
+      "text": "■\n■The prevalence of substance misuse and antisocial personality disorder are high in \n",
+      "bbox": [
+        47.999900817871094,
+        374.55047607421875,
+        422.75,
+        386.2704772949219
+      ],
+      "text_sha256": "ee01b7cfcee53e957e7e8ef9b2d45599882366acb85ea143eede3900a0d879b8"
+    },
+    {
+      "block_id": "page-0592-block-0017",
+      "order": 17,
+      "text": "adults whose ADHD was not recognised in childhood.31 Methylphenidate can be \neffective in this population,32 but caution is appropriate in prescribing and \nmonitoring.\n",
+      "bbox": [
+        56.998809814453125,
+        386.55047607421875,
+        422.788818359375,
+        422.2704772949219
+      ],
+      "text_sha256": "72343fc96bfe0669910e5711d5468548ef36295cef581309cf1f6c8138c32edb"
+    },
+    {
+      "block_id": "page-0592-block-0018",
+      "order": 18,
+      "text": "■\n■For adults with ADHD and drug or alcohol addiction disorders, there should be close \n",
+      "bbox": [
+        47.999900817871094,
+        422.55047607421875,
+        422.77996826171875,
+        434.2704772949219
+      ],
+      "text_sha256": "6334ed4ad8b14b14e641d0e5fca53af9b9b4f75979229aa2f6e82824f3437ae7"
+    },
+    {
+      "block_id": "page-0592-block-0019",
+      "order": 19,
+      "text": "liaison between the professional treating the ADHD and an addiction specialist.\n",
+      "bbox": [
+        57.0,
+        434.55047607421875,
+        400.5899658203125,
+        446.2704772949219
+      ],
+      "text_sha256": "0cee6b8d74e92ae9456c7a533d8e559c3f16f576c7c1c511256ef674641ccbde"
+    },
+    {
+      "block_id": "page-0592-block-0020",
+      "order": 20,
+      "text": "■\n■Methylphenidate or lisdexamfetamine are considered first-line choices of medication \n",
+      "bbox": [
+        47.999900817871094,
+        446.31048583984375,
+        422.7900085449219,
+        458.2704772949219
+      ],
+      "text_sha256": "fd3499b0486ccbadbccd57863c3aca397d7bd0b51c2060fd3b09029207402107"
+    },
+    {
+      "block_id": "page-0592-block-0021",
+      "order": 21,
+      "text": "in adults.1\n",
+      "bbox": [
+        57.0,
+        458.55047607421875,
+        100.26127624511719,
+        470.2704772949219
+      ],
+      "text_sha256": "05de0b96d9c7e24f8a5d3618c1825b09f429d9afa61d05cf010f77bc578f6825"
+    },
+    {
+      "block_id": "page-0592-block-0022",
+      "order": 22,
+      "text": "■\n■Dexamfetamine can be used for adults whose ADHD symptoms are responding to \n",
+      "bbox": [
+        47.999900817871094,
+        470.31048583984375,
+        422.7900695800781,
+        482.2704772949219
+      ],
+      "text_sha256": "94a0cbba0aba7589af1ec314f9a7b3288021bd4bfc7d2d0b1ba249a1a969303a"
+    },
+    {
+      "block_id": "page-0592-block-0023",
+      "order": 23,
+      "text": "lisdexamfetamine but who cannot tolerate the longer effect profile.\n",
+      "bbox": [
+        57.0,
+        482.55047607421875,
+        345.3299560546875,
+        494.2704772949219
+      ],
+      "text_sha256": "da7cac42c1c1d8d6a003b5e4cb68c77056efd706e7f2eb0c1b23cae910e19a0c"
+    },
+    {
+      "block_id": "page-0592-block-0024",
+      "order": 24,
+      "text": "■\n■For atomoxetine, monitoring for symptoms of liver dysfunction and suicidal thinking \n",
+      "bbox": [
+        47.999900817871094,
+        494.31048583984375,
+        422.74993896484375,
+        506.2704772949219
+      ],
+      "text_sha256": "2af6465cbf383d0477c5d4817a394ff4d714b0333fefc6628990917471af416a"
+    },
+    {
+      "block_id": "page-0592-block-0025",
+      "order": 25,
+      "text": "is advised.\n",
+      "bbox": [
+        56.999996185302734,
+        506.55047607421875,
+        101.45999145507812,
+        518.2705078125
+      ],
+      "text_sha256": "9e24a3d12016c16d1dd84c134b32415d6fda1b9c65b0320d5d1bf4edf0a6040e"
+    },
+    {
+      "block_id": "page-0592-block-0026",
+      "order": 26,
+      "text": "■\n■Atomoxetine, lisdexamfetamine and two modified release formulations of methyl-\n",
+      "bbox": [
+        47.999900817871094,
+        518.3104858398438,
+        420.0199279785156,
+        530.2705078125
+      ],
+      "text_sha256": "77a8a8b6242a6edaa110f87a492f574087fbc7d5a8e5a9501d6fc009a0e01218"
+    },
+    {
+      "block_id": "page-0592-block-0027",
+      "order": 27,
+      "text": "phenidate (Medikinet XL, Ritalin XL) are licensed for first-time use in adults with \nADHD. Concerta XL (another modified-release formulation of methylphenidate) is \nlicensed for continued treatment when initiated before the age of 18 years.\n",
+      "bbox": [
+        56.999996185302734,
+        530.3104858398438,
+        422.8199768066406,
+        566.2705078125
+      ],
+      "text_sha256": "aef7025a041a7120503a387bd9d0a508e696b5a959bf582e75d95bcdce5da0cd"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,239 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0364",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 364,
+  "source_page_index": 363,
+  "source_page_display": 364,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    343\nCHAPTER 3\nAntidepressant withdrawal symptoms\nBackground\nMany medications are associated with withdrawal symptoms on discontinuation, includ-\ning antidepressants. The term ‘discontinuation symptoms’ (or syndrome), distinct from \n‘withdrawal’, was coined to describe symptoms on stopping experienced on stopping anti-\ndepressants.1,2 There is a semantic difference between ‘discontinuation’ and ‘withdrawal’ \nsymptoms – the latter implies addiction; the former does not. While antidepressants are \nnot addictive substances (they do not provoke craving, for example), the categorical and \nsemantic differences may be irrelevant to patient experience. Withdrawal symptoms can \nbe explained in the context of ‘receptor rebound’3 – for example, an antidepressant with \npotent anticholinergic side effects may be associated with diarrhoea on discontinuation.\nSigns and symptoms\nAntidepressant withdrawal symptoms may be entirely new or similar to some of the \noriginal symptoms of the illness for which the medication was originally given. \nWithdrawal symptoms can be distinguished from a relapse or reoccurrence of the \nunderlying disorder by their rapid onset (days, rather than weeks, or within 3–5 half-\nlives of the drug4), the rapid response to reintroduction of the antidepressant (generally \nwithin hours, certainly within days), and the presence of somatic and psychological \nsymptoms distinct from the original illness (e.g. brain zaps, dizziness, nausea).1 The \nwide variety of symptoms reported with SSRI and related drugs (e.g. SNRIs and other \nserotonin reuptake inhibitors) is summarised in Figure 3.3. Symptoms reported with \nother antidepressants are summarised in Table 3.8.\nFigure 3.3  Common withdrawal symptoms\nSensory symptoms\nParesthesia\nNumbness\n‘Shock-like’ or ‘electric zap’\nsensations in head or limbs\nRushing noises\nPalinopsia (visual trails)\nHyperacusis\nUnusual taste/smell/visual\nsensations\nGeneral somatic\nsymptoms\nFlu-like symptoms\nLethargy/fatigue\nHeadache\nTremor\nSweating\nAnorexia\nWeakness\nTechycardia\nMuscle aches/pains\nShaking/trembling\nAffective symptoms\nIrritability\nAnxiety/agitation\nLow mood/depression\nTeafulness\nDread\nPanic attacks\nSSRI\nwithdrawal\nsyndrome\nDisequilibrium\nDizziness (most common)\nLight-headedness\nVertigo\nAtaxia\nGait instability\nSleep Disturbance\nInsomnia\nNightmares\nExcessive dreaming\nGastrointestinal Symptoms\nNausea\nVomiting\nDiarrhoea\nAnorexia\nSexual\nGenital hypersensitivity\nPermature ejaculation\nCognitive\nConfusion\nDecreased concentration\nAmnesia\nDepersonalisation\nDe-realisation\n",
+  "raw_text_sha256": "64502188152a620a74f02e84b11d06df1b50f3eccb1466ccdabb26df5863e2c8",
+  "coordinates_sha256": "adf4b332cc4ec345639c89b6a07628a898e86068b59a65e9c5ac5fd5414a5bb2",
+  "block_sequence_sha256": "4e766417846ff85c28780740adae4eb5bc067127d0821394584601743c989166",
+  "blocks": [
+    {
+      "block_id": "page-0364-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    343\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "05558e97b858951ecd809676208ea9da15acff7d2c16a02028507418f68f310b"
+    },
+    {
+      "block_id": "page-0364-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0364-block-0002",
+      "order": 2,
+      "text": "Antidepressant withdrawal symptoms\n",
+      "bbox": [
+        54.999698638916016,
+        66.06546020507812,
+        252.82371520996094,
+        79.1004638671875
+      ],
+      "text_sha256": "05e04a0978a6e48aef1a83529a92787c6f2b87a563594247db8fe2f5d8f37636"
+    },
+    {
+      "block_id": "page-0364-block-0003",
+      "order": 3,
+      "text": "Background\n",
+      "bbox": [
+        48.003700256347656,
+        102.06845092773438,
+        109.52670288085938,
+        115.10345458984375
+      ],
+      "text_sha256": "6dbaeab519ce0852c1a3b25525532198acbfd0cae37032904df6a9ccebc8de16"
+    },
+    {
+      "block_id": "page-0364-block-0004",
+      "order": 4,
+      "text": "Many medications are associated with withdrawal symptoms on discontinuation, includ-\ning antidepressants. The term ‘discontinuation symptoms’ (or syndrome), distinct from \n‘withdrawal’, was coined to describe symptoms on stopping experienced on stopping anti-\ndepressants.1,2 There is a semantic difference between ‘discontinuation’ and ‘withdrawal’ \nsymptoms – the latter implies addiction; the former does not. While antidepressants are \nnot addictive substances (they do not provoke craving, for example), the categorical and \nsemantic differences may be irrelevant to patient experience. Withdrawal symptoms can \nbe explained in the context of ‘receptor rebound’3 – for example, an antidepressant with \npotent anticholinergic side effects may be associated with diarrhoea on discontinuation.\n",
+      "bbox": [
+        47.99650573730469,
+        120.91046142578125,
+        422.7898864746094,
+        228.6304931640625
+      ],
+      "text_sha256": "0ad2ac53771e096e76abf550e43c2c9992f26390969b828aae92c6979194f09c"
+    },
+    {
+      "block_id": "page-0364-block-0005",
+      "order": 5,
+      "text": "Signs and symptoms\n",
+      "bbox": [
+        47.999698638916016,
+        246.06549072265625,
+        154.33670043945312,
+        259.1004943847656
+      ],
+      "text_sha256": "1ca2f0a5b0f0be25a6679dfd963e3457fb041d3ea237fee7fbe65b4d2a1b116e"
+    },
+    {
+      "block_id": "page-0364-block-0006",
+      "order": 6,
+      "text": "Antidepressant withdrawal symptoms may be entirely new or similar to some of the \noriginal symptoms of the illness for which the medication was originally given. \nWithdrawal symptoms can be distinguished from a relapse or reoccurrence of the \nunderlying disorder by their rapid onset (days, rather than weeks, or within 3–5 half-\nlives of the drug4), the rapid response to reintroduction of the antidepressant (generally \nwithin hours, certainly within days), and the presence of somatic and psychological \nsymptoms distinct from the original illness (e.g. brain zaps, dizziness, nausea).1 The \nwide variety of symptoms reported with SSRI and related drugs (e.g. SNRIs and other \nserotonin reuptake inhibitors) is summarised in Figure 3.3. Symptoms reported with \nother antidepressants are summarised in Table 3.8.\n",
+      "bbox": [
+        47.998199462890625,
+        264.9104919433594,
+        422.7996520996094,
+        384.6304931640625
+      ],
+      "text_sha256": "b7ca1d6182d15c4ca7b4254ab052449fd2b554fc8d8d41234fed1a6bbafc7198"
+    },
+    {
+      "block_id": "page-0364-block-0007",
+      "order": 7,
+      "text": "Figure 3.3  Common withdrawal symptoms\n",
+      "bbox": [
+        48.25,
+        635.1414794921875,
+        188.97247314453125,
+        644.0289916992188
+      ],
+      "text_sha256": "5aa3561a4f29fd0f1b7eb0fd7cbf6c3f1821e8e08dd86d7e98f8193bb5ca33f9"
+    },
+    {
+      "block_id": "page-0364-block-0008",
+      "order": 8,
+      "text": "Sensory symptoms\nParesthesia\nNumbness\n‘Shock-like’ or ‘electric zap’\nsensations in head or limbs\nRushing noises\nPalinopsia (visual trails)\nHyperacusis\nUnusual taste/smell/visual\nsensations\n",
+      "bbox": [
+        63.80400085449219,
+        406.4892272949219,
+        142.00885009765625,
+        487.20123291015625
+      ],
+      "text_sha256": "fc112315171fae481ec7ad1d0347618e901181dc1507ba1b1385ae3993f2f3ff"
+    },
+    {
+      "block_id": "page-0364-block-0009",
+      "order": 9,
+      "text": "General somatic\nsymptoms\nFlu-like symptoms\nLethargy/fatigue\nHeadache\nTremor\nSweating\nAnorexia\nWeakness\nTechycardia\nMuscle aches/pains\nShaking/trembling\n",
+      "bbox": [
+        63.19632339477539,
+        508.6203308105469,
+        120.43311309814453,
+        605.2820434570312
+      ],
+      "text_sha256": "606372b5d67037556c4ad5f9b1fe75c4813cd275f547202da1eccf35ea0c591e"
+    },
+    {
+      "block_id": "page-0364-block-0010",
+      "order": 10,
+      "text": "Affective symptoms\nIrritability\nAnxiety/agitation\nLow mood/depression\nTeafulness\nDread\nPanic attacks\n",
+      "bbox": [
+        195.2349395751953,
+        407.0141906738281,
+        258.8619079589844,
+        463.80169677734375
+      ],
+      "text_sha256": "9ba1f70233b00af8f37e393842d469760c9ae5c003919f6fa2594830376399e9"
+    },
+    {
+      "block_id": "page-0364-block-0011",
+      "order": 11,
+      "text": "SSRI\nwithdrawal\n",
+      "bbox": [
+        219.86630249023438,
+        486.92095947265625,
+        255.1275634765625,
+        503.8629455566406
+      ],
+      "text_sha256": "c76d711900d41d75123db50338ef4fa927b324e532b3bb2921d7d39c5b951d09"
+    },
+    {
+      "block_id": "page-0364-block-0012",
+      "order": 12,
+      "text": "syndrome\n",
+      "bbox": [
+        221.19679260253906,
+        503.933837890625,
+        253.80392456054688,
+        512.369384765625
+      ],
+      "text_sha256": "96cd997d94b67b4592e70a99962a4784f5b9a24b4a00f3196e97f26c271a63c2"
+    },
+    {
+      "block_id": "page-0364-block-0013",
+      "order": 13,
+      "text": "Disequilibrium\nDizziness (most common)\nLight-headedness\nVertigo\nAtaxia\nGait instability\n",
+      "bbox": [
+        195.531494140625,
+        554.5429077148438,
+        269.4570007324219,
+        603.3555908203125
+      ],
+      "text_sha256": "68ab4b3fca811c658c5be07a52173722b26853d1ad107525216e4df319ed6dd8"
+    },
+    {
+      "block_id": "page-0364-block-0014",
+      "order": 14,
+      "text": "Sleep Disturbance\nInsomnia\nNightmares\nExcessive dreaming\n",
+      "bbox": [
+        318.78118896484375,
+        406.0447692871094,
+        376.71527099609375,
+        438.90777587890625
+      ],
+      "text_sha256": "f50829f6286a554b3e43bf278404c07ac4b54fa4a629b95a422c18ec9d3cc5bc"
+    },
+    {
+      "block_id": "page-0364-block-0015",
+      "order": 15,
+      "text": "Gastrointestinal Symptoms\nNausea\nVomiting\nDiarrhoea\nAnorexia\n",
+      "bbox": [
+        320.8664855957031,
+        459.8948669433594,
+        404.0415954589844,
+        500.7326965332031
+      ],
+      "text_sha256": "35a2ab814364d4025acf20e4731f4e28c55de8b67f55534d92059bfdffc6b0b8"
+    },
+    {
+      "block_id": "page-0364-block-0016",
+      "order": 16,
+      "text": "Sexual\nGenital hypersensitivity\nPermature ejaculation\n",
+      "bbox": [
+        319.01788330078125,
+        519.3140258789062,
+        385.13323974609375,
+        544.2022094726562
+      ],
+      "text_sha256": "88736500aca321b6e257175c9299d5893505c15e7a5113248c718d003ea6e84e"
+    },
+    {
+      "block_id": "page-0364-block-0017",
+      "order": 17,
+      "text": "Cognitive\nConfusion\nDecreased concentration\nAmnesia\nDepersonalisation\nDe-realisation\n",
+      "bbox": [
+        319.2033996582031,
+        566.6912231445312,
+        391.7345886230469,
+        615.5039672851562
+      ],
+      "text_sha256": "94931aea11932ba942f12f7ffbd46137aef1d59db7e8b5b882966e237372172e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

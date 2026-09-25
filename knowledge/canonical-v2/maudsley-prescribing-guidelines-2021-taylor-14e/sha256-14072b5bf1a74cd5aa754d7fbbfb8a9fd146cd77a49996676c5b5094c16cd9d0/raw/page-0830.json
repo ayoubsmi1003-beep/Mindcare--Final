@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0830",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 830,
+  "source_page_index": 829,
+  "source_page_display": 830,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    809\nCHAPTER 10\nStep\nIntervention\n3\nIf SSRIs are not tolerated or there is no response there are limited data that moclobemide is effective and \nwell tolerated.32,33 There are no published trials on venlafaxine, duloxetine and mirtazapine but these are \nused widely. Mirtazapine may worsen fatigue, at least initially.\n4\nECT could be considered for people who are actively suicidal or severely depressed and at high risk, but it \nmay trigger an exacerbation of MS symptoms, although some studies suggest that no neurological \ndisturbance occurs.34\n5\nOther treatments that have shown some effect in depression in MS are zinc,35 vitamin A36 and co-enzyme \nQ10.37 A small trial supports antidepressant effects of fampridine.38\nAnxiety\nAnxiety affects many people with MS, with a point prevalence of up to 50%39 and \nlifetime incidence of 35–37%.40 Elevated rates in comparison with the general popula-\ntion are seen for generalized anxiety disorder, panic disorder, obsessive compulsive dis-\norder40 and social anxiety. Anxiety appears to be linked to perceived lack of support, \nincreased pain, fatigue, sleep disturbance, depression, alcohol misuse and suicidal ideas. \nThe uncertainty of prognosis in MS is a major cause of anxiety in MS.41 There are no \npublished trials for the drug treatment of anxiety in MS, but SSRIs can be used and in \nnon-responsive cases, venlafaxine might be an option (based on practice in non MS \npatients).\nBenzodiazepines may be used for acute and severe anxiety but only for a maxi-\nmum of four weeks and should not be prescribed in the long term. Buspirone and \nbeta-blockers could also be considered although there is no demonstrated efficacy in \nMS. Pregabalin is also licensed for anxiety and may be useful in this population \ngroup especially where pain relief is required.42,43 People with MS may also respond \nto CBT. Generally treatment is as for non-MS anxiety disorders (see anxiety section, \nChapter 3).\nPseudobulbar affect (PBA)\nUp to 10% of individuals with MS experience pathological laughing or crying (PLC) or \nother incongruence of affect. It is more common in the advanced stages of the disease \nand is associated with cognitive impairment.40 There have been a few open label trials \nrecommending the use of small doses of TCAs, for example, amitriptyline or SSRIs, for \nexample, fluoxetine44,45 in MS. Citalopram,46 nortriptyline47 or sertraline48 have been \ninvestigated in people with post-stroke PLC and shown reasonable efficacy and rapid \nresponse. Valproic acid may be effective.49 The combination of dextromethorphan and \nlow-dose quinidine (DMq) is effective.50 Dextromethorphan plus fluoxetine may show \nsimilar effects.51 In these combinations, dextromethorphan (an analgesic and cough \nsuppressant) is the active ingredient and quinidine/fluoxetine the metabolic inhibitor. \nDMq is FDA-approved as Nuedexta and once held approval in the EU but is not mar-\nketed there.\n(Continued)\n",
+  "raw_text_sha256": "569e67df64145e2ca8128f793a1cd8b6b67ddca706a4a1ebbbd60c329af6d167",
+  "coordinates_sha256": "3277f20d1e771781b758cbcb7eef07df70aa1d719673545ad44cd69b9cfa1354",
+  "block_sequence_sha256": "364f66cfbe65f1f972858e6e6fc4c3d0b27698bf78e8d241d57a88d12700814a",
+  "blocks": [
+    {
+      "block_id": "page-0830-block-0000",
+      "order": 0,
+      "text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    809\n",
+      "bbox": [
+        47.999698638916016,
+        31.395221710205078,
+        419.96697998046875,
+        41.0272216796875
+      ],
+      "text_sha256": "fbc1ca0ef3fd57341c09a9c20f1cb788f196de28580bfb38c3be844218595eb8"
+    },
+    {
+      "block_id": "page-0830-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        454.4096984863281,
+        75.763671875,
+        463.88970947265625,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0830-block-0002",
+      "order": 2,
+      "text": "Step\nIntervention\n",
+      "bbox": [
+        51.99980163574219,
+        87.59297180175781,
+        121.08979797363281,
+        96.48046875
+      ],
+      "text_sha256": "226955917d1a9ae551d54b27d8369810f1ceb1bcd1e1028448b6ed101a4b17c3"
+    },
+    {
+      "block_id": "page-0830-block-0003",
+      "order": 3,
+      "text": "3\nIf SSRIs are not tolerated or there is no response there are limited data that moclobemide is effective and \nwell tolerated.32,33 There are no published trials on venlafaxine, duloxetine and mirtazapine but these are \nused widely. Mirtazapine may worsen fatigue, at least initially.\n",
+      "bbox": [
+        51.99980163574219,
+        105.3979721069336,
+        413.20733642578125,
+        134.10296630859375
+      ],
+      "text_sha256": "19d5b0ea5a3f11da11b6bc9f0f1d478de57a7df4708521c087cb595b7a018e20"
+    },
+    {
+      "block_id": "page-0830-block-0004",
+      "order": 4,
+      "text": "4\nECT could be considered for people who are actively suicidal or severely depressed and at high risk, but it \nmay trigger an exacerbation of MS symptoms, although some studies suggest that no neurological \ndisturbance occurs.34\n",
+      "bbox": [
+        51.999000549316406,
+        143.0204620361328,
+        414.75909423828125,
+        171.72296142578125
+      ],
+      "text_sha256": "922864604fd2f62d4cb413cc814e83a6cf9fd582621307e2625e14b8b17a3f04"
+    },
+    {
+      "block_id": "page-0830-block-0005",
+      "order": 5,
+      "text": "5\nOther treatments that have shown some effect in depression in MS are zinc,35 vitamin A36 and co-enzyme \nQ10.37 A small trial supports antidepressant effects of fampridine.38\n",
+      "bbox": [
+        51.99980163574219,
+        180.6479949951172,
+        415.28118896484375,
+        199.35549926757812
+      ],
+      "text_sha256": "1a2c3a9ba1f2f724f1288d3c6c7da703ecefd2c3f543457f961e982dc08fdc37"
+    },
+    {
+      "block_id": "page-0830-block-0006",
+      "order": 6,
+      "text": "Anxiety\n",
+      "bbox": [
+        47.999698638916016,
+        220.3804931640625,
+        84.67969512939453,
+        232.23049926757812
+      ],
+      "text_sha256": "224ee2848f359d295fe16fc8a0cedfdda50e41633d2390fdebdb99c2addd0fe8"
+    },
+    {
+      "block_id": "page-0830-block-0007",
+      "order": 7,
+      "text": "Anxiety affects many people with MS, with a point prevalence of up to 50%39 and \nlifetime incidence of 35–37%.40 Elevated rates in comparison with the general popula-\ntion are seen for generalized anxiety disorder, panic disorder, obsessive compulsive dis-\norder40 and social anxiety. Anxiety appears to be linked to perceived lack of support, \nincreased pain, fatigue, sleep disturbance, depression, alcohol misuse and suicidal ideas. \nThe uncertainty of prognosis in MS is a major cause of anxiety in MS.41 There are no \npublished trials for the drug treatment of anxiety in MS, but SSRIs can be used and in \nnon-responsive cases, venlafaxine might be an option (based on practice in non MS \npatients).\n",
+      "bbox": [
+        47.999114990234375,
+        238.29049682617188,
+        422.82232666015625,
+        346.010498046875
+      ],
+      "text_sha256": "57ea1d91f224f332381d68f310459ae586b0f4cbd8cb820b0a299b51ced5263e"
+    },
+    {
+      "block_id": "page-0830-block-0008",
+      "order": 8,
+      "text": "Benzodiazepines may be used for acute and severe anxiety but only for a maxi-\nmum of four weeks and should not be prescribed in the long term. Buspirone and \nbeta-blockers could also be considered although there is no demonstrated efficacy in \nMS. Pregabalin is also licensed for anxiety and may be useful in this population \ngroup especially where pain relief is required.42,43 People with MS may also respond \nto CBT. Generally treatment is as for non-MS anxiety disorders (see anxiety section, \nChapter 3).\n",
+      "bbox": [
+        48.00108337402344,
+        346.2904968261719,
+        422.82196044921875,
+        430.010498046875
+      ],
+      "text_sha256": "073581deccd0f3f0f0f24ac92d2923a4bdb2ca756c02224645d06304370ba9ed"
+    },
+    {
+      "block_id": "page-0830-block-0009",
+      "order": 9,
+      "text": "Pseudobulbar affect (PBA)\n",
+      "bbox": [
+        48.00108337402344,
+        448.3804931640625,
+        170.611083984375,
+        460.2304992675781
+      ],
+      "text_sha256": "ff252a75a263684ecd6be5b1840c3eccf4d8fb0219e3d5d8d2f5e247f0fdc6a9"
+    },
+    {
+      "block_id": "page-0830-block-0010",
+      "order": 10,
+      "text": "Up to 10% of individuals with MS experience pathological laughing or crying (PLC) or \nother incongruence of affect. It is more common in the advanced stages of the disease \nand is associated with cognitive impairment.40 There have been a few open label trials \nrecommending the use of small doses of TCAs, for example, amitriptyline or SSRIs, for \nexample, fluoxetine44,45 in MS. Citalopram,46 nortriptyline47 or sertraline48 have been \ninvestigated in people with post-stroke PLC and shown reasonable efficacy and rapid \nresponse. Valproic acid may be effective.49 The combination of dextromethorphan and \nlow-dose quinidine (DMq) is effective.50 Dextromethorphan plus fluoxetine may show \nsimilar effects.51 In these combinations, dextromethorphan (an analgesic and cough \nsuppressant) is the active ingredient and quinidine/fluoxetine the metabolic inhibitor. \nDMq is FDA-approved as Nuedexta and once held approval in the EU but is not mar-\nketed there.\n",
+      "bbox": [
+        47.99560546875,
+        466.2904968261719,
+        422.82183837890625,
+        610.010498046875
+      ],
+      "text_sha256": "0c0c39ab25c513654b816542a55f3e9d5a5a4e465503c4cdc205b1110d03b586"
+    },
+    {
+      "block_id": "page-0830-block-0011",
+      "order": 11,
+      "text": "(Continued)\n",
+      "bbox": [
+        53.99980163574219,
+        70.222900390625,
+        91.5147933959961,
+        78.97540283203125
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

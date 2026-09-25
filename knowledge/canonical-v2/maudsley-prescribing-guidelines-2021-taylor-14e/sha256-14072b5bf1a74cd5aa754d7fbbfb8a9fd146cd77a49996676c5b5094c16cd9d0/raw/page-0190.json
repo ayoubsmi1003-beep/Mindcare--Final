@@ -1,0 +1,215 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0190",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 190,
+  "source_page_index": 189,
+  "source_page_display": 190,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    169\nCHAPTER 1\nContraindications \nProlactin-elevating drugs with high risk should, if possible, be avoided in the following \npatient groups:\n■\n■Patients under 25 years of age (i.e. before peak bone mass)\n■\n■Patients with osteoporosis\n■\n■Patients with a history of hormone-dependent breast cancer\n■\n■Young women\nManagement\nTreatment of hyperprolactinaemia depends more on symptoms and long-term risk than \non the reported plasma prolactin level.\nBelow, we suggest an algorithm for managing antipsychotic-induced hyperprolacti-\nnaemia. If treatment of hyperprolactinaemia is required, switching to an antipsychotic \nwith a lower liability for prolactin elevation is usually the first choice, although switch-\ning always carries a risk of destabilising the illness and relapse.23 An alternative is to \nadd aripiprazole to existing treatment.24 Aripiprazole lowers prolactin levels in a dose-\ndependent manner: 3mg/day is effective but 6mg/day more so. Higher doses appear \nunnecessary.25 Other strategies to reduce long-term risk to bone mineral density should \nalso be discussed, e.g. stopping smoking, increasing weight-bearing exercise, and ensur-\ning adequate calcium and vitamin D3 intake.18,26\nFor patients who need to remain on a prolactin-elevating antipsychotic medication \nand who cannot tolerate aripiprazole, dopamine agonists can be effective.27–29 \nAmantadine, cabergoline and bromocriptine have all been used, but each has, theoreti-\ncally at least, the potential to worsen psychosis (although this has not been reported in \ntrials). A herbal remedy – Peony Glycyrrhiza Decoction – has also been shown to \nimprove prolactin-related symptoms,30,31 but the data are limited. A reduction in prol-\nactin levels was also achieved by taking high daily doses (2.5–3g) of metformin32 in a \nstudy of diabetic women on antipsychotic medication.\nSummary of management\nFirst choice\nAripiprazole 5mg a day\nSecond choice  \n(in no particular order)\nDA agonists – cabergoline, bromocryptine, amantadine\nPeony Glycyrrhiza Decoction\nMetformin 2.5–3g a day\n",
+  "raw_text_sha256": "40e0503200b63aafb9b4471f501420e76e160606be953ab769ce39f7da65db8e",
+  "coordinates_sha256": "6960816603a01a208388b89ba089e0655a545c4b252bf7860e8f226f865fba63",
+  "block_sequence_sha256": "de608d37e7b69682ffcbb22198b6799fe1a872e691dc56286a7c8ed33340f09a",
+  "blocks": [
+    {
+      "block_id": "page-0190-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    169\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "515a482be502e387061bd9ad8c1d80e41a9abd28f76d4c6a03662f6421ed7482"
+    },
+    {
+      "block_id": "page-0190-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0190-block-0002",
+      "order": 2,
+      "text": "Contraindications \n",
+      "bbox": [
+        47.99909973144531,
+        62.31448745727539,
+        142.11508178710938,
+        75.3494873046875
+      ],
+      "text_sha256": "1bb479deaa7dedb987247817dcad023c5d9db0597bdf75332d66d0bc3e39955c"
+    },
+    {
+      "block_id": "page-0190-block-0003",
+      "order": 3,
+      "text": "Prolactin-elevating drugs with high risk should, if possible, be avoided in the following \npatient groups:\n",
+      "bbox": [
+        47.99909973144531,
+        80.91948699951172,
+        422.8090515136719,
+        104.87948608398438
+      ],
+      "text_sha256": "695a8967d60728576231b3acda0166bfdd04a29f00df7eb4b3d0e7b53e529447"
+    },
+    {
+      "block_id": "page-0190-block-0004",
+      "order": 4,
+      "text": "■\n■Patients under 25 years of age (i.e. before peak bone mass)\n",
+      "bbox": [
+        47.999000549316406,
+        112.55944061279297,
+        308.7190856933594,
+        124.51943969726562
+      ],
+      "text_sha256": "4e91b450743ce0487b2d605958e24211a55497b86add508b8de02bc968e3633a"
+    },
+    {
+      "block_id": "page-0190-block-0005",
+      "order": 5,
+      "text": "■\n■Patients with osteoporosis\n",
+      "bbox": [
+        47.999000549316406,
+        124.55944061279297,
+        169.4390869140625,
+        136.51943969726562
+      ],
+      "text_sha256": "c18016f48f738c1119bcdf21e6c27bf418106786b3aeb5615f7a3265c9d37286"
+    },
+    {
+      "block_id": "page-0190-block-0006",
+      "order": 6,
+      "text": "■\n■Patients with a history of hormone-dependent breast cancer\n",
+      "bbox": [
+        47.999000549316406,
+        136.5594482421875,
+        313.88909912109375,
+        148.51943969726562
+      ],
+      "text_sha256": "f8fe583312c28a1e287df248af53c4aa4cb4469f3c93d4fbac9dc1fa3aa5734a"
+    },
+    {
+      "block_id": "page-0190-block-0007",
+      "order": 7,
+      "text": "■\n■Young women\n",
+      "bbox": [
+        47.999000549316406,
+        148.5594482421875,
+        118.9390869140625,
+        160.51943969726562
+      ],
+      "text_sha256": "0284b4f821495dda6c9f03b593bd0238f6cfd12219766111aa30b3c3e176592c"
+    },
+    {
+      "block_id": "page-0190-block-0008",
+      "order": 8,
+      "text": "Management\n",
+      "bbox": [
+        47.99909973144531,
+        180.95443725585938,
+        117.0680923461914,
+        193.98944091796875
+      ],
+      "text_sha256": "b7c8078b02231574c679ff1660f4ee2c4e4b0661ca89cd501152f9404d2324c0"
+    },
+    {
+      "block_id": "page-0190-block-0009",
+      "order": 9,
+      "text": "Treatment of hyperprolactinaemia depends more on symptoms and long-term risk than \non the reported plasma prolactin level.\n",
+      "bbox": [
+        47.99909973144531,
+        199.7994384765625,
+        422.7691955566406,
+        223.51943969726562
+      ],
+      "text_sha256": "183fbeae61596f3404d16cdcc9fac2afab4d162fcb8a291cdb5ceebbda7e7f14"
+    },
+    {
+      "block_id": "page-0190-block-0010",
+      "order": 10,
+      "text": "Below, we suggest an algorithm for managing antipsychotic-induced hyperprolacti-\nnaemia. If treatment of hyperprolactinaemia is required, switching to an antipsychotic \nwith a lower liability for prolactin elevation is usually the first choice, although switch-\ning always carries a risk of destabilising the illness and relapse.23 An alternative is to \nadd aripiprazole to existing treatment.24 Aripiprazole lowers prolactin levels in a dose-\ndependent manner: 3mg/day is effective but 6mg/day more so. Higher doses appear \nunnecessary.25 Other strategies to reduce long-term risk to bone mineral density should \nalso be discussed, e.g. stopping smoking, increasing weight-bearing exercise, and ensur-\ning adequate calcium and vitamin D3 intake.18,26\n",
+      "bbox": [
+        47.99861145019531,
+        223.7994384765625,
+        422.7686462402344,
+        331.5195007324219
+      ],
+      "text_sha256": "0d7b17142bb3363c44296a96f6d7a9eea1554942975e5df651670c2ef13dfa6b"
+    },
+    {
+      "block_id": "page-0190-block-0011",
+      "order": 11,
+      "text": "For patients who need to remain on a prolactin-elevating antipsychotic medication \nand who cannot tolerate aripiprazole, dopamine agonists can be effective.27–29 \nAmantadine, cabergoline and bromocriptine have all been used, but each has, theoreti-\ncally at least, the potential to worsen psychosis (although this has not been reported in \ntrials). A herbal remedy – Peony Glycyrrhiza Decoction – has also been shown to \nimprove prolactin-related symptoms,30,31 but the data are limited. A reduction in prol-\nactin levels was also achieved by taking high daily doses (2.5–3g) of metformin32 in a \nstudy of diabetic women on antipsychotic medication.\n",
+      "bbox": [
+        47.99610900878906,
+        331.79949951171875,
+        422.8095397949219,
+        427.5195007324219
+      ],
+      "text_sha256": "650b0d43e37787d16b2d9eacb2c9c6150181a748e74fa2dbb53028b06a1d9805"
+    },
+    {
+      "block_id": "page-0190-block-0012",
+      "order": 12,
+      "text": "Summary of management\n",
+      "bbox": [
+        47.99909973144531,
+        444.9544982910156,
+        182.48507690429688,
+        457.989501953125
+      ],
+      "text_sha256": "a22dde23a711a59b7599cfb6bc35339d34512bbacfb8198e7647d203d56778e3"
+    },
+    {
+      "block_id": "page-0190-block-0013",
+      "order": 13,
+      "text": "First choice\nAripiprazole 5mg a day\n",
+      "bbox": [
+        89.24929809570312,
+        473.4620056152344,
+        251.92428588867188,
+        482.3495178222656
+      ],
+      "text_sha256": "9ac86bb597b9842abbb5cfeade9ca209caa1cae0e16ee1847260a132ab3eca4e"
+    },
+    {
+      "block_id": "page-0190-block-0014",
+      "order": 14,
+      "text": "Second choice  \n(in no particular order)\n",
+      "bbox": [
+        89.24929809570312,
+        490.48699951171875,
+        160.92678833007812,
+        509.37200927734375
+      ],
+      "text_sha256": "cfb6ee0fc14086b420f5d9e324286e65407ce20bb84e8c4691db5f965aa58228"
+    },
+    {
+      "block_id": "page-0190-block-0015",
+      "order": 15,
+      "text": "DA agonists – cabergoline, bromocryptine, amantadine\nPeony Glycyrrhiza Decoction\nMetformin 2.5–3g a day\n",
+      "bbox": [
+        177.74929809570312,
+        490.6670227050781,
+        353.8944091796875,
+        519.3695068359375
+      ],
+      "text_sha256": "cc1b4f2482c076e79261316e6a145995d61b5f3ad7f4454652a58bee83a3dc1c"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

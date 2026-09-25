@@ -1,0 +1,14 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0883",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 883,
+  "source_page_index": 882,
+  "repaired_text": "862    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  11\nTable 11.6  (Continued)\nInteractions of uncertain aetiology include increased blood alcohol concentrations in \npeople who take verapamil and decreased metabolism of methylphenidate in people \nwho consume alcohol.\nPharmacodynamic interactions2–4\nAlcohol enhances inhibitory neurotransmission at GABAA receptors and reduces excita\ntory neurotransmission at glutamate NMDA receptors (Table 11.7). It also increases \ndopamine release in the mesolimbic pathway and may have some effects on serotonin \nand opiate pathways. Given these actions, alcohol would be expected to cause sedation, \namnesia, ataxia and give rise to feelings of pleasure (and/or worsen psychotic symptoms \nin vulnerable individuals).\nTable 11.7  Pharmacodynamic interactions with alcohol\nEffect of \nalcohol\nEffect exacerbated by\nPotential consequences\nSedation\nOther sedative drugs, e.g.\nAntihistamines\nAntipsychotics\nBaclofen\nBenzodiazepines\nLofexidine\nOpiates\nTizanidine\nTricyclics\nZ-hypnotics\nIncreased CNS depression ranging from \nincreased propensity to be involved in \naccidents through to respiratory depression \nand death\n(Continued)\nSubstrates for enzyme \n(note: this is not an\nexhaustive list)\nEffects in an intoxicated \npatient\nEffects in a chronic, sober \ndrinker\nCYP3A4\nAlprazolam\nAripiprazole\nBenzodiazepines\nCarbamazepine\nClozapine\nDonepezil\nGalantamine\nHaloperidol\nMethadone\nMirtazapine\nQuetiapine\nRisperidone\nSildenafil\nTricyclics\nValproate\nVenlafaxine\n‘Z’ hypnotics\nCompetition between \nalcohol and drug leading to \nreduced rates of metabolism \nof both compounds. \nIncreased plasma levels may \nlead to toxicity\nIncreased rate of drug \nmetabolism potentially leading \nto therapeutic failure\nEnzyme induction can last for \nseveral weeks after alcohol \nconsumption ceases",
+  "repaired_text_sha256": "9adb4a1f011ad617d8ea16046f4b77b39455bf18ce3e886f9561a0db7b450174",
+  "raw_text_sha256": "3c442a7d54ed79ad933cf520ef49cd5bc104542c50bd6c4f61141da9204ac98c",
+  "repair_ids": [
+    "repair-000790"
+  ],
+  "raw_file": "raw/page-0883.json"
+}

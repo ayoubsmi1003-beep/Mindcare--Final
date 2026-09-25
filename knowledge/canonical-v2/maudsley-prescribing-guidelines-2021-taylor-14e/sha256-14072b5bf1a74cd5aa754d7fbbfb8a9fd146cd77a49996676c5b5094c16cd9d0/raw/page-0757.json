@@ -1,0 +1,683 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0757",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 757,
+  "source_page_index": 756,
+  "source_page_display": 757,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "736    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 8\nb)\tChronic Kidney Disease Epidemiology Collaboration (CKD-EPI) formula (replaces the previously used \nModification of Diet in Renal Disease (MDRD) equation)2 although some pathology departments still use MDRD.\n   GFR = 141 × min (Scr/κ, 1)α × max(Scr/κ, 1)–1.209 × 0.993Age × 1.018 [if female] × 1.159 [if Black]\nScr is serum creatinine in mg/dL,\nκ is 0.7 for females and 0.9 for males,\nα is –0.329 for females and –0.411 for males,\nmin indicates the minimum of Scr/κ or 1, and\nmax indicates the maximum of Scr/κ or 1.\n■\n■Online calculator available at https://www.kidney.org/professionals/kdoqi/gfr_calculator.\n■\n■Use Cockroft and Gault for drug dose calculation.\nWhen calculating drug doses use estimated CrCl from the Cockroft and Gault  \nequation.\nDo not use the CKD-EPI or MDRD formulae for dose calculation because most current dose \nrecommendations are based on the creatinine clearance estimations from Cockroft  \nand Gault.\nClassify the stage of renal impairment3\nACR categories (mg/mmol)\nDescription and range\nGFR categories (mL/min/1.73m2)\nDescription and range\nA1\nA2\nA3\nNormal to mildly\nincreased\nModerately increased\nSeverely increased\n<3\n≥90\n60–89\n45–59\n30–44\n15–29\n<15\nNormal and\nhigh\nMild reduction\nrelated to normal\nrange for a young\nadult\nMild–moderate\nreduction\nModerate–severe\nreduction\nSevere reduction\nKidney failure\nG1\nG2\nG3a\nG3b\nG4\nG5\nNo CKD in the\nabsence\nof markers of\nkidney damage\nRefer for specialist assessment\n3–30\nRefer for specialist assessment\nif the person has:\n• a sustained decrease in GFR of 25%\nor more and a change in GFR\ncategory or sustained decrease in\nGFR of 15 mL/min/1.73 m2 or more\nwithin 12 months\n• hypertension that remains poorly\ncontrolled despite the use of at\nleast 4 antihypertensive drugs at\ntherapeutic doses (see also\n‘Hypertension’ NICE clinical\nguideline 127)\n• known or suspected rare or genetic\ncauses of CKD\n• suspected renal artery stenosis\nRefer for specialist\nassessment if the person\nhas any of the criteria\nin A2, or:\n• ACR 70 mg/mmol or more,\nunless known to be caused\nby diabetes and already\nappropriately treated\n• haematuria\nManage in primary care according to recommendations\n(see algorithm C)\n>30\nFigure 8.1  Classification of renal impairment. \nAbbreviations: ACR = albumin creatinine ratio; CKD = chronic kidney disease\n",
+  "raw_text_sha256": "a187281ae2c2bd3517289fd1858f9d2d504b5790aecbe9bf8cfe5298639dae07",
+  "coordinates_sha256": "8acf8bdbf158e6e4714a462a5001c296ef7376d24182cfa76d3cd7b48b0e94a7",
+  "block_sequence_sha256": "26f8bdfb3878e50a2f8388be91e20c39c33f14351ddde53a974695ee49bd204f",
+  "blocks": [
+    {
+      "block_id": "page-0757-block-0000",
+      "order": 0,
+      "text": "736    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "3beb3216057f63b251c687e91f87e06e8136237f02293d05f46f82f5a331fd6b"
+    },
+    {
+      "block_id": "page-0757-block-0001",
+      "order": 1,
+      "text": "CHAPTER 8\n",
+      "bbox": [
+        18.520000457763672,
+        532.3878173828125,
+        28.0,
+        573.7318115234375
+      ],
+      "text_sha256": "5ba3d9fb75ff4f418d4a2e9d517f30966dcfb279c10487eec43c5aa3fd8757a2"
+    },
+    {
+      "block_id": "page-0757-block-0002",
+      "order": 2,
+      "text": "b)\tChronic Kidney Disease Epidemiology Collaboration (CKD-EPI) formula (replaces the previously used \n",
+      "bbox": [
+        61.88999938964844,
+        70.21290588378906,
+        413.46014404296875,
+        79.10040283203125
+      ],
+      "text_sha256": "d1d2bcbfb67cab6a3aa8de28b9a3dcf372475cf7a8c33b972b1dc9dcf4b2dcae"
+    },
+    {
+      "block_id": "page-0757-block-0003",
+      "order": 3,
+      "text": "Modification of Diet in Renal Disease (MDRD) equation)2 although some pathology departments still use MDRD.\n",
+      "bbox": [
+        70.88999938964844,
+        79.39290618896484,
+        427.58203125,
+        88.10040283203125
+      ],
+      "text_sha256": "1fd03dafd2297dec75f2667a717279cd0949b008e6dead3d008db9245a48fc7a"
+    },
+    {
+      "block_id": "page-0757-block-0004",
+      "order": 4,
+      "text": "   GFR = 141 × min (Scr/κ, 1)α × max(Scr/κ, 1)–1.209 × 0.993Age × 1.018 [if female] × 1.159 [if Black]\n",
+      "bbox": [
+        61.88930130004883,
+        100.64790344238281,
+        391.89825439453125,
+        110.42290496826172
+      ],
+      "text_sha256": "151ecd1fcbd4a56337a160c121307d14c0817f067f5f4a20ee7a83824ddce0fd"
+    },
+    {
+      "block_id": "page-0757-block-0005",
+      "order": 5,
+      "text": "Scr is serum creatinine in mg/dL,\n",
+      "bbox": [
+        61.89068603515625,
+        123.3904037475586,
+        162.65980529785156,
+        133.81602478027344
+      ],
+      "text_sha256": "ce2d3a87a8ff6ebfe786cf3f941d576de276acdd0334d9bbfce88f62ccb31343"
+    },
+    {
+      "block_id": "page-0757-block-0006",
+      "order": 6,
+      "text": "κ is 0.7 for females and 0.9 for males,\n",
+      "bbox": [
+        61.889801025390625,
+        138.6479034423828,
+        183.53228759765625,
+        148.42039489746094
+      ],
+      "text_sha256": "1760e4eac2ad92b0a7a43cad4335bf21a6657958905272c1e730790b5ffa70dd"
+    },
+    {
+      "block_id": "page-0757-block-0007",
+      "order": 7,
+      "text": "α is –0.329 for females and –0.411 for males,\n",
+      "bbox": [
+        61.889801025390625,
+        154.64540100097656,
+        208.32728576660156,
+        164.4178924560547
+      ],
+      "text_sha256": "3810ef7211c600d034b9cf0640e0995c9621ba99eec8c9aae5f9370fd57bba50"
+    },
+    {
+      "block_id": "page-0757-block-0008",
+      "order": 8,
+      "text": "min indicates the minimum of Scr/κ or 1, and\n",
+      "bbox": [
+        61.889801025390625,
+        170.65040588378906,
+        204.42611694335938,
+        181.81602478027344
+      ],
+      "text_sha256": "45d8f8207e3a9e7b58412de36bc8a75373a29ea6d0f51662ad4a4af49acdacf0"
+    },
+    {
+      "block_id": "page-0757-block-0009",
+      "order": 9,
+      "text": "max indicates the maximum of Scr/κ or 1.\n",
+      "bbox": [
+        61.88860321044922,
+        186.65040588378906,
+        192.7411346435547,
+        197.81602478027344
+      ],
+      "text_sha256": "5ebdc34d1cd30ec6808fee02ffb34242578473651c5a5c497f7badebdcec880d"
+    },
+    {
+      "block_id": "page-0757-block-0010",
+      "order": 10,
+      "text": "■\n■Online calculator available at https://www.kidney.org/professionals/kdoqi/gfr_calculator.\n",
+      "bbox": [
+        61.88990020751953,
+        200.3928985595703,
+        348.37762451171875,
+        209.10040283203125
+      ],
+      "text_sha256": "5dd208ca59e0dbeea57d3e9d4a8d1b45ae395bc917867de4d7a76b3c8effc287"
+    },
+    {
+      "block_id": "page-0757-block-0011",
+      "order": 11,
+      "text": "■\n■Use Cockroft and Gault for drug dose calculation.\n",
+      "bbox": [
+        61.88990020751953,
+        218.33790588378906,
+        243.07757568359375,
+        227.22540283203125
+      ],
+      "text_sha256": "b37359ada09f658b749ba0727a5100b66f66e14f723ccc8d49a0a903ed76480e"
+    },
+    {
+      "block_id": "page-0757-block-0012",
+      "order": 12,
+      "text": "When calculating drug doses use estimated CrCl from the Cockroft and Gault  \n",
+      "bbox": [
+        109.59149932861328,
+        242.96290588378906,
+        384.36151123046875,
+        251.85040283203125
+      ],
+      "text_sha256": "2eb8a2cf19b8564be7d29ecfc46dd2874607e7f42645953720ce4c778495b4a8"
+    },
+    {
+      "block_id": "page-0757-block-0013",
+      "order": 13,
+      "text": "equation.\n",
+      "bbox": [
+        228.00900268554688,
+        252.9604034423828,
+        261.7665100097656,
+        261.847900390625
+      ],
+      "text_sha256": "9052efa08401d36f401ea6e88f94f0e1d6a44278ec4ddc4c10fd586db9359390"
+    },
+    {
+      "block_id": "page-0757-block-0014",
+      "order": 14,
+      "text": "Do not use the CKD-EPI or MDRD formulae for dose calculation because most current dose \n",
+      "bbox": [
+        85.98150634765625,
+        274.9578857421875,
+        405.87890625,
+        283.84539794921875
+      ],
+      "text_sha256": "5588bb9f8e2add62872aacb5e8828a7cc0dc94590172f977583b4e3a23416eea"
+    },
+    {
+      "block_id": "page-0757-block-0015",
+      "order": 15,
+      "text": "recommendations are based on the creatinine clearance estimations from Cockroft  \n",
+      "bbox": [
+        99.78150939941406,
+        284.95538330078125,
+        394.1640625,
+        293.8428955078125
+      ],
+      "text_sha256": "249a94a6d03d1d1f5f597f405b2caffdac3a0df1bb862690b96207078d5df356"
+    },
+    {
+      "block_id": "page-0757-block-0016",
+      "order": 16,
+      "text": "and Gault.\n",
+      "bbox": [
+        226.5465087890625,
+        294.952880859375,
+        263.22149658203125,
+        303.84039306640625
+      ],
+      "text_sha256": "830e15f4856bb3aa81d01fe15ae6e6ca161dca46bb6402d106f0261d57264d0c"
+    },
+    {
+      "block_id": "page-0757-block-0017",
+      "order": 17,
+      "text": "Classify the stage of renal impairment3\n",
+      "bbox": [
+        61.88999938964844,
+        327.4403991699219,
+        262.08984375,
+        340.47540283203125
+      ],
+      "text_sha256": "625bdd4ae7dd5044daf757948e15a513c91e32f2f460d76855c1b3b827b55de7"
+    },
+    {
+      "block_id": "page-0757-block-0018",
+      "order": 18,
+      "text": "ACR categories (mg/mmol)\n",
+      "bbox": [
+        269.6398010253906,
+        350.872802734375,
+        344.97576904296875,
+        357.9827880859375
+      ],
+      "text_sha256": "b0b723ebd4cedb96203ee5e7f4e4048f181123cd5c0422d4b02b07999fc9aca2"
+    },
+    {
+      "block_id": "page-0757-block-0019",
+      "order": 19,
+      "text": "Description and range\n",
+      "bbox": [
+        276.1377868652344,
+        357.87481689453125,
+        338.47772216796875,
+        364.98480224609375
+      ],
+      "text_sha256": "16ad793092f14fab02b03f65395cbc5b081be2975a7049d9d32fcfc33df3d8bd"
+    },
+    {
+      "block_id": "page-0757-block-0020",
+      "order": 20,
+      "text": "GFR categories (mL/min/1.73m2)\n",
+      "bbox": [
+        65.85120391845703,
+        452.3463134765625,
+        73.77940368652344,
+        542.861328125
+      ],
+      "text_sha256": "19880432d9af3fb8fd62c4794f3cd96a227670213933f3b429c3c5eb1e8261e2"
+    },
+    {
+      "block_id": "page-0757-block-0021",
+      "order": 21,
+      "text": "Description and range\n",
+      "bbox": [
+        73.67050170898438,
+        466.4342956542969,
+        80.78050231933594,
+        528.7742919921875
+      ],
+      "text_sha256": "16ad793092f14fab02b03f65395cbc5b081be2975a7049d9d32fcfc33df3d8bd"
+    },
+    {
+      "block_id": "page-0757-block-0022",
+      "order": 22,
+      "text": "A1\nA2\nA3\n",
+      "bbox": [
+        209.45480346679688,
+        370.7868957519531,
+        395.7488098144531,
+        377.8968811035156
+      ],
+      "text_sha256": "f14c554361b9093a1af4caf87a667e84c5f67034d979425a67bfd94369afcdd5"
+    },
+    {
+      "block_id": "page-0757-block-0023",
+      "order": 23,
+      "text": "Normal to mildly\n",
+      "bbox": [
+        189.61282348632812,
+        383.452880859375,
+        236.9588165283203,
+        390.5628662109375
+      ],
+      "text_sha256": "b1f6f33480fc3303aa29f71335b1ebb37ff0a264a1ab21d73f68cbf87603c7d6"
+    },
+    {
+      "block_id": "page-0757-block-0024",
+      "order": 24,
+      "text": "increased\n",
+      "bbox": [
+        199.95082092285156,
+        390.45489501953125,
+        226.62081909179688,
+        397.56488037109375
+      ],
+      "text_sha256": "dbc41a553ef899268c2433e6ba7ef28eb9e5134e0f11db32143c3d346e80b295"
+    },
+    {
+      "block_id": "page-0757-block-0025",
+      "order": 25,
+      "text": "Moderately increased\nSeverely increased\n",
+      "bbox": [
+        267.39080810546875,
+        383.452880859375,
+        418.0928039550781,
+        390.5628662109375
+      ],
+      "text_sha256": "4f6cf0f3932c57208ee316a0fa74985a5ef82cc10d9930bb4686d5409cdb33f0"
+    },
+    {
+      "block_id": "page-0757-block-0026",
+      "order": 26,
+      "text": "<3\n",
+      "bbox": [
+        209.8148193359375,
+        400.1208801269531,
+        216.75082397460938,
+        407.2308654785156
+      ],
+      "text_sha256": "24c80ab6d36b7ef9579aa40478d468c61bc2a120bf776b15afe0f2c6b2911488"
+    },
+    {
+      "block_id": "page-0757-block-0027",
+      "order": 27,
+      "text": "≥90\n",
+      "bbox": [
+        161.59881591796875,
+        411.8628845214844,
+        171.57081604003906,
+        418.9728698730469
+      ],
+      "text_sha256": "41d316a69948fe33a2de6fabd378b9194bff3d3dee63a297d460371d142be6ed"
+    },
+    {
+      "block_id": "page-0757-block-0028",
+      "order": 28,
+      "text": "60–89\n",
+      "bbox": [
+        161.59881591796875,
+        453.7489013671875,
+        177.94281005859375,
+        460.85888671875
+      ],
+      "text_sha256": "9ed1695fc29d9e02f324b2ce637d94a48a8de68e5dc9fde9d920e3e31918cdf9"
+    },
+    {
+      "block_id": "page-0757-block-0029",
+      "order": 29,
+      "text": "45–59\n",
+      "bbox": [
+        161.59881591796875,
+        485.056884765625,
+        177.94281005859375,
+        492.1668701171875
+      ],
+      "text_sha256": "3fa64dcf50fbc285752970fbeda807242d30ffed7b2fd0018106949b4267049a"
+    },
+    {
+      "block_id": "page-0757-block-0030",
+      "order": 30,
+      "text": "30–44\n",
+      "bbox": [
+        161.59881591796875,
+        518.0748901367188,
+        177.94281005859375,
+        525.1848754882812
+      ],
+      "text_sha256": "992d9a2534e6decb0098ed4d9f348377748ffa750868ba1752613c9b6947c2ae"
+    },
+    {
+      "block_id": "page-0757-block-0031",
+      "order": 31,
+      "text": "15–29\n",
+      "bbox": [
+        161.59881591796875,
+        557.1528930664062,
+        177.94281005859375,
+        564.2628784179688
+      ],
+      "text_sha256": "a66a2691f4f1f24c10a01340b25d9d20302a8efb743854d621e0fb2bd1554088"
+    },
+    {
+      "block_id": "page-0757-block-0032",
+      "order": 32,
+      "text": "<15\n",
+      "bbox": [
+        161.59881591796875,
+        575.806884765625,
+        171.87081909179688,
+        582.9168701171875
+      ],
+      "text_sha256": "d93dcb89a96e1d1426ac31d54149c040d029f374f8cd8297500c961308558c93"
+    },
+    {
+      "block_id": "page-0757-block-0033",
+      "order": 33,
+      "text": "Normal and\nhigh\n",
+      "bbox": [
+        104.02881622314453,
+        411.85687255859375,
+        137.03482055664062,
+        425.9688720703125
+      ],
+      "text_sha256": "9a5dbd5b2bb85fa951209357eefa5bd1877617c6c9c0747bd0aa1afb861a36f5"
+    },
+    {
+      "block_id": "page-0757-block-0034",
+      "order": 34,
+      "text": "Mild reduction\nrelated to normal\nrange for a young\nadult\n",
+      "bbox": [
+        104.02881622314453,
+        454.744873046875,
+        155.04080200195312,
+        482.8608703613281
+      ],
+      "text_sha256": "32b9381e1494e8955d9e26686f016eaec32df5a7083518b2b7041a05ab2aee15"
+    },
+    {
+      "block_id": "page-0757-block-0035",
+      "order": 35,
+      "text": "Mild–moderate\nreduction\n",
+      "bbox": [
+        104.02881622314453,
+        485.0628662109375,
+        147.03680419921875,
+        499.17486572265625
+      ],
+      "text_sha256": "54978a0e85277e8c95ea5176becbf26dce024170961a41ad84c95af62dc927b7"
+    },
+    {
+      "block_id": "page-0757-block-0036",
+      "order": 36,
+      "text": "Moderate–severe\nreduction\n",
+      "bbox": [
+        104.02881622314453,
+        518.0808715820312,
+        153.04281616210938,
+        532.19287109375
+      ],
+      "text_sha256": "c5c3a9e4996b2540d345d8a64b1a15c42ff5626882c419a71f9b6fc9fde833a4"
+    },
+    {
+      "block_id": "page-0757-block-0037",
+      "order": 37,
+      "text": "Severe reduction\n",
+      "bbox": [
+        104.02881622314453,
+        557.1648559570312,
+        151.7108154296875,
+        564.2748413085938
+      ],
+      "text_sha256": "1870ededfca74cbb079d7253bd1779c054388f228291cdf7bef9e9b4d3007d23"
+    },
+    {
+      "block_id": "page-0757-block-0038",
+      "order": 38,
+      "text": "Kidney failure\n",
+      "bbox": [
+        104.02881622314453,
+        575.81884765625,
+        143.7128143310547,
+        582.9288330078125
+      ],
+      "text_sha256": "99ad680dca28625d2e338549078160a2f42cd240211fea75c6446abe194e813c"
+    },
+    {
+      "block_id": "page-0757-block-0039",
+      "order": 39,
+      "text": "G1\n",
+      "bbox": [
+        86.32881164550781,
+        411.8688659667969,
+        93.99681091308594,
+        418.9788513183594
+      ],
+      "text_sha256": "ba0262b7a07e5bed0fd4c17772c079445febdbb58863f397dae21add0b6f84cf"
+    },
+    {
+      "block_id": "page-0757-block-0040",
+      "order": 40,
+      "text": "G2\n",
+      "bbox": [
+        86.32881164550781,
+        453.7548828125,
+        93.99681091308594,
+        460.8648681640625
+      ],
+      "text_sha256": "3dd53a9a2e014da65c77864909833335273dee37312d5030838710904a976f31"
+    },
+    {
+      "block_id": "page-0757-block-0041",
+      "order": 41,
+      "text": "G3a\n",
+      "bbox": [
+        86.32881164550781,
+        485.0628662109375,
+        97.33280944824219,
+        492.1728515625
+      ],
+      "text_sha256": "daf2ca53720ee00127bbf0857d5fa0852fc6f4cfff17e907446d8e817608bbab"
+    },
+    {
+      "block_id": "page-0757-block-0042",
+      "order": 42,
+      "text": "G3b\n",
+      "bbox": [
+        86.32881164550781,
+        518.0808715820312,
+        97.66281127929688,
+        525.1908569335938
+      ],
+      "text_sha256": "f23d0f257a7204268637340ce628a8c3bd9304a11bcf5c00cc7e783469abab2c"
+    },
+    {
+      "block_id": "page-0757-block-0043",
+      "order": 43,
+      "text": "G4\n",
+      "bbox": [
+        86.32881164550781,
+        557.1588745117188,
+        93.99681091308594,
+        564.2688598632812
+      ],
+      "text_sha256": "8a89148e2c13032f177fa9eccbae4d9df3d7849261ac7d08f048f770343988ff"
+    },
+    {
+      "block_id": "page-0757-block-0044",
+      "order": 44,
+      "text": "G5\n",
+      "bbox": [
+        86.32881164550781,
+        575.8128662109375,
+        93.99681091308594,
+        582.9228515625
+      ],
+      "text_sha256": "db85282073deb6da59e02f4bfe96584c55e64ad1eb2a006921a88141820caf7c"
+    },
+    {
+      "block_id": "page-0757-block-0045",
+      "order": 45,
+      "text": "No CKD in the\n",
+      "bbox": [
+        193.9508056640625,
+        431.82489013671875,
+        233.622802734375,
+        438.93487548828125
+      ],
+      "text_sha256": "655eeb47bf6334d2abb4ccf6209fd718b8a9d9b01bf3c1bf7157812bec2b207e"
+    },
+    {
+      "block_id": "page-0757-block-0046",
+      "order": 46,
+      "text": "absence\nof markers of\nkidney damage\n",
+      "bbox": [
+        192.11480712890625,
+        438.826904296875,
+        235.4647979736328,
+        459.94085693359375
+      ],
+      "text_sha256": "7f2249594e0d6e244f15b4de99eac49cc8f6494f811d38f7883a518deb8eebb2"
+    },
+    {
+      "block_id": "page-0757-block-0047",
+      "order": 47,
+      "text": "Refer for specialist assessment\n",
+      "bbox": [
+        264.3008117675781,
+        568.138916015625,
+        350.31085205078125,
+        575.2489013671875
+      ],
+      "text_sha256": "dafdf176153e2594f4b97ecc8e7d09b509de1b8eb9bf703ecae02c83c3bb105f"
+    },
+    {
+      "block_id": "page-0757-block-0048",
+      "order": 48,
+      "text": "3–30\n",
+      "bbox": [
+        291.3968200683594,
+        400.12689208984375,
+        304.4048156738281,
+        407.23687744140625
+      ],
+      "text_sha256": "ac618263b89da26f4028240cdabeccbe946b77216bf10a07cd317b21f4fda67c"
+    },
+    {
+      "block_id": "page-0757-block-0049",
+      "order": 49,
+      "text": "Refer for specialist assessment\nif the person has:\n• a sustained decrease in GFR of 25%\nor more and a change in GFR\ncategory or sustained decrease in\nGFR of 15 mL/min/1.73 m2 or more\nwithin 12 months\n• hypertension that remains poorly\ncontrolled despite the use of at\nleast 4 antihypertensive drugs at\ntherapeutic doses (see also\n‘Hypertension’ NICE clinical\nguideline 127)\n• known or suspected rare or genetic\ncauses of CKD\n• suspected renal artery stenosis\n",
+      "bbox": [
+        250.1708221435547,
+        431.3988952636719,
+        346.5248107910156,
+        551.51318359375
+      ],
+      "text_sha256": "50cb5af559fbc88d0a15fc13d35aa984e28d283a21d1e6714e5d8befd2fd7f4d"
+    },
+    {
+      "block_id": "page-0757-block-0050",
+      "order": 50,
+      "text": "Refer for specialist\nassessment if the person\nhas any of the criteria\nin A2, or:\n• ACR 70 mg/mmol or more,\nunless known to be caused\nby diabetes and already\nappropriately treated\n• haematuria\n",
+      "bbox": [
+        355.02081298828125,
+        431.40521240234375,
+        428.7067565917969,
+        498.52716064453125
+      ],
+      "text_sha256": "4f3c18546a1cb25ba80b249e688c168c26b48ee52f27ae53480de8007888fde2"
+    },
+    {
+      "block_id": "page-0757-block-0051",
+      "order": 51,
+      "text": "Manage in primary care according to recommendations\n",
+      "bbox": [
+        259.2668151855469,
+        414.13720703125,
+        415.2907409667969,
+        421.2471923828125
+      ],
+      "text_sha256": "3b933a4bb7103245ed6834937019eb83a34c8878a0ad19eb30fd7b0f99ec04f4"
+    },
+    {
+      "block_id": "page-0757-block-0052",
+      "order": 52,
+      "text": "(see algorithm C)\n",
+      "bbox": [
+        313.2728271484375,
+        421.33721923828125,
+        361.2787780761719,
+        428.44720458984375
+      ],
+      "text_sha256": "634111a93fbefddd4fdab798a9dcfd13009e58332177401861af0dadbcbbd692"
+    },
+    {
+      "block_id": "page-0757-block-0053",
+      "order": 53,
+      "text": ">30\n",
+      "bbox": [
+        386.79083251953125,
+        400.14520263671875,
+        397.0628356933594,
+        407.25518798828125
+      ],
+      "text_sha256": "a5d1b6669b8afc07d629144dd58286d17cc28b6e23fa2ce46db4816c1fb79c41"
+    },
+    {
+      "block_id": "page-0757-block-0054",
+      "order": 54,
+      "text": "Figure 8.1  Classification of renal impairment. \nAbbreviations: ACR = albumin creatinine ratio; CKD = chronic kidney disease\n",
+      "bbox": [
+        61.973201751708984,
+        593.6414794921875,
+        306.8557434082031,
+        612.5264892578125
+      ],
+      "text_sha256": "4aef62ce395e5c98b8c0763b1bf809c540a2b07ede1a23475daab2e94c92d781"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

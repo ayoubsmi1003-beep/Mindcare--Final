@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0617",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 617,
+  "source_page_index": 616,
+  "source_page_display": 617,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "596    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  5\nRapid tranquillisation (RT) in children and adolescents\nAs in adults, a comprehensive mental state assessment and appropriately implemented \ntreatment plan along with staff skilled in the use of de-escalation techniques and appro-\npriate placement of the patient are key to minimising the need for enforced parenteral \nmedication.\nHealthcare professionals undertaking RT and/or restraint in children and adoles-\ncents should be trained and competent in undertaking these procedures in this popula-\ntion and should be clear about the legal context for any restrictive practices they employ. \nBe particularly cautious when considering high-potency antipsychotic medication (such \nas haloperidol) especially those who have not taken antipsychotic medication before, \nbecause of the increased risk of acute dystonic reactions in this age group.1 Children are \nparticularly prone to acute extrapyramidal effects of psychotropic and physical medi-\ncine drugs.2 NICE recommends using intramuscular lorazepam (and recommends no \nother drug).3 A recent review of practice suggested that lorazepam is effective (at a \nmedian dose of 1mg) and rarely causes oxygen desaturation.4 In severe cases parenteral \nolanzapine and oral aripiprazole have been safely used but more than half of patients \nmay require a second drug to achieve sedation.5\nA wide dose range is given here for medication used in RT. Caution is required, espe-\ncially for younger children, but in older adolescents consider the use of adult doses, \nespecially in those who are not drug naïve and where doses in the lower end of the \nquoted dose range have proved ineffective (see Table 5.7).\nTable 5.7  Recommended drugs for RT if the oral route is refused or has proven ineffective\nMedication\nDose\nOnset of action\nComment\nOlanzapine IM6,7\n2.5–10mg\n15–30 minutes\nPossibly increased risk of respiratory \ndepression when administered with \nbenzodiazepines, particularly if alcohol has \nbeen consumed. Separate administration by \nat least 1 hour\nHaloperidol IM8\n0.025–0.075mg/kg/dose\n(max 2.5mg) IM\nAdolescents >12 years can \nreceive the adult dose\n(2.5–5mg)\n20–30 minutes\nMust have parenteral anticholinergics \npresent in case of laryngeal spasm or other \ndystonia (young people more vulnerable to \nsevere dystonia)\nAdult data suggest co-administration of \npromethazine may reduce EPS risk9\nECG essential\nLorazepam* IM10,11\n<12 years: 0.5–1mg;\n>12 years: 0.5–2mg\n20–40 minutes\nSlower onset of action than midazolam\nOnly treatment recommended by NICE\nFlumazenil is the reversing agent for all \nbenzodiazepines\n(Continued)\n",
+  "raw_text_sha256": "18e88e551c6f2e579332dbba61692a984126e5fdac84fa34391101ad96e25a83",
+  "coordinates_sha256": "1099ebf33da90b35e4876d9871325ad794f6af6607fa7a7ff2ca315e100de855",
+  "block_sequence_sha256": "3a9428e7f8188a38cf81cf664dcca30ad951f04f7cde46ee8a888eaaef8dae4a",
+  "blocks": [
+    {
+      "block_id": "page-0617-block-0000",
+      "order": 0,
+      "text": "596    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "e4f4071a4eccf22fe29159cf65d8fdaf2b44bc6b54ced9f12e0b5f50f7ec4080"
+    },
+    {
+      "block_id": "page-0617-block-0001",
+      "order": 1,
+      "text": "CHAPTER  5\n",
+      "bbox": [
+        18.520000457763672,
+        338.22650146484375,
+        28.0,
+        381.79449462890625
+      ],
+      "text_sha256": "4086e0916f45ec531cc17b8c611334eb2b1ef26051ba536579b8ef3c22c1648d"
+    },
+    {
+      "block_id": "page-0617-block-0002",
+      "order": 2,
+      "text": "Rapid tranquillisation (RT) in children and adolescents\n",
+      "bbox": [
+        68.88999938964844,
+        66.06546020507812,
+        346.5849914550781,
+        79.1004638671875
+      ],
+      "text_sha256": "ed87aaaf57ddddfe9dd4bcbb3bc7f722723cb78e3bc5306a63df323c1da85d29"
+    },
+    {
+      "block_id": "page-0617-block-0003",
+      "order": 3,
+      "text": "As in adults, a comprehensive mental state assessment and appropriately implemented \ntreatment plan along with staff skilled in the use of de-escalation techniques and appro-\npriate placement of the patient are key to minimising the need for enforced parenteral \nmedication.\n",
+      "bbox": [
+        61.88999938964844,
+        84.91046142578125,
+        436.7100524902344,
+        132.63046264648438
+      ],
+      "text_sha256": "c0b03a1f2b7dcbc39a8a1f94600fc94f406e1dc081303c2a76ff23a201e4290d"
+    },
+    {
+      "block_id": "page-0617-block-0004",
+      "order": 4,
+      "text": "Healthcare professionals undertaking RT and/or restraint in children and adoles-\ncents should be trained and competent in undertaking these procedures in this popula-\ntion and should be clear about the legal context for any restrictive practices they employ. \nBe particularly cautious when considering high-potency antipsychotic medication (such \nas haloperidol) especially those who have not taken antipsychotic medication before, \nbecause of the increased risk of acute dystonic reactions in this age group.1 Children are \nparticularly prone to acute extrapyramidal effects of psychotropic and physical medi-\ncine drugs.2 NICE recommends using intramuscular lorazepam (and recommends no \nother drug).3 A recent review of practice suggested that lorazepam is effective (at a \nmedian dose of 1mg) and rarely causes oxygen desaturation.4 In severe cases parenteral \nolanzapine and oral aripiprazole have been safely used but more than half of patients \nmay require a second drug to achieve sedation.5\n",
+      "bbox": [
+        61.88740539550781,
+        132.91046142578125,
+        436.7174072265625,
+        276.6304931640625
+      ],
+      "text_sha256": "5d17d96ffcbdf4cd34f514c6819e41f0850ff7eba4e7b6bb01902208b5562abe"
+    },
+    {
+      "block_id": "page-0617-block-0005",
+      "order": 5,
+      "text": "A wide dose range is given here for medication used in RT. Caution is required, espe-\ncially for younger children, but in older adolescents consider the use of adult doses, \nespecially in those who are not drug naïve and where doses in the lower end of the \nquoted dose range have proved ineffective (see Table 5.7).\n",
+      "bbox": [
+        61.88999938964844,
+        276.9104919433594,
+        436.6999816894531,
+        324.6304931640625
+      ],
+      "text_sha256": "5605e85fda89cedcf984f90e09f9fb0ae750d033e8f71563987dfb04e2fe5212"
+    },
+    {
+      "block_id": "page-0617-block-0006",
+      "order": 6,
+      "text": "Table 5.7  Recommended drugs for RT if the oral route is refused or has proven ineffective\n",
+      "bbox": [
+        67.88999938964844,
+        354.4347839355469,
+        356.6175231933594,
+        363.3222961425781
+      ],
+      "text_sha256": "4650775d3d9e8f19b6f6291dfc6c924494ca072784bab6a01ef8acc5f567fe06"
+    },
+    {
+      "block_id": "page-0617-block-0007",
+      "order": 7,
+      "text": "Medication\nDose\nOnset of action\nComment\n",
+      "bbox": [
+        61.88999938964844,
+        375.0597839355469,
+        322.06500244140625,
+        383.9472961425781
+      ],
+      "text_sha256": "d12c036ed537ba6166e8a719c516cee1919942b3240758f32f713fe9b0b7042e"
+    },
+    {
+      "block_id": "page-0617-block-0008",
+      "order": 8,
+      "text": "Olanzapine IM6,7\n2.5–10mg\n15–30 minutes\nPossibly increased risk of respiratory \ndepression when administered with \nbenzodiazepines, particularly if alcohol has \nbeen consumed. Separate administration by \nat least 1 hour\n",
+      "bbox": [
+        61.89750671386719,
+        392.2648010253906,
+        430.4176330566406,
+        440.9622802734375
+      ],
+      "text_sha256": "932e85f9372284c3311d367441b269a4af0d787927c99dcae262f1642bbaef04"
+    },
+    {
+      "block_id": "page-0617-block-0009",
+      "order": 9,
+      "text": "Haloperidol IM8\n0.025–0.075mg/kg/dose\n(max 2.5mg) IM\n",
+      "bbox": [
+        61.89752197265625,
+        447.2773132324219,
+        209.68499755859375,
+        465.99481201171875
+      ],
+      "text_sha256": "ba161dd504dffc994a41043cc5d323302d2dd24faa834eb7e7dfaccd0fa5c4b6"
+    },
+    {
+      "block_id": "page-0617-block-0010",
+      "order": 10,
+      "text": "Adolescents >12 years can \nreceive the adult dose\n(2.5–5mg)\n",
+      "bbox": [
+        130.88999938964844,
+        473.2848205566406,
+        217.90499877929688,
+        501.9873046875
+      ],
+      "text_sha256": "87292c80cae89422bb04345bc7bd0521e4071b5ba5c4690f7cd053c7220350ca"
+    },
+    {
+      "block_id": "page-0617-block-0011",
+      "order": 11,
+      "text": "20–30 minutes\nMust have parenteral anticholinergics \npresent in case of laryngeal spasm or other \ndystonia (young people more vulnerable to \nsevere dystonia)\n",
+      "bbox": [
+        225.8925018310547,
+        447.2823181152344,
+        426.96014404296875,
+        485.9822998046875
+      ],
+      "text_sha256": "5001f806141a40dbb1db2dfada9f3c412184e87cc5e355917a1b569261709a19"
+    },
+    {
+      "block_id": "page-0617-block-0012",
+      "order": 12,
+      "text": "Adult data suggest co-administration of \npromethazine may reduce EPS risk9\n",
+      "bbox": [
+        287.89501953125,
+        493.2723083496094,
+        417.0826721191406,
+        511.977294921875
+      ],
+      "text_sha256": "3ef2a9b2c86376b6f36102a1f7914910be4b22542c1531a24d1624b012c991a2"
+    },
+    {
+      "block_id": "page-0617-block-0013",
+      "order": 13,
+      "text": "ECG essential\n",
+      "bbox": [
+        287.8900146484375,
+        519.1098022460938,
+        334.9825134277344,
+        527.997314453125
+      ],
+      "text_sha256": "fc998b385938404c4bed719d9aa6baba52601465880e2bf974319bbc0f0c0746"
+    },
+    {
+      "block_id": "page-0617-block-0014",
+      "order": 14,
+      "text": "Lorazepam* IM10,11\n<12 years: 0.5–1mg;\n>12 years: 0.5–2mg\n",
+      "bbox": [
+        61.89251708984375,
+        534.312255859375,
+        197.0775146484375,
+        553.019775390625
+      ],
+      "text_sha256": "da25a85fd45ffa0196a4ae0cc90f5ee3657b4f04960047ace29badb7186d1f11"
+    },
+    {
+      "block_id": "page-0617-block-0015",
+      "order": 15,
+      "text": "20–40 minutes\nSlower onset of action than midazolam\n",
+      "bbox": [
+        225.8925018310547,
+        534.3147583007812,
+        413.32513427734375,
+        543.0222778320312
+      ],
+      "text_sha256": "6668372d138604b1042f63e282e77bce7303d57f5319f8cc2d1bbada923b1265"
+    },
+    {
+      "block_id": "page-0617-block-0016",
+      "order": 16,
+      "text": "Only treatment recommended by NICE\n",
+      "bbox": [
+        287.89501953125,
+        550.312255859375,
+        411.3750305175781,
+        559.019775390625
+      ],
+      "text_sha256": "de02b2682522187cad650954ba35466375a825c10f9762fb525bc93de3f43628"
+    },
+    {
+      "block_id": "page-0617-block-0017",
+      "order": 17,
+      "text": "Flumazenil is the reversing agent for all \nbenzodiazepines\n",
+      "bbox": [
+        287.89501953125,
+        566.3097534179688,
+        414.4275817871094,
+        585.0147705078125
+      ],
+      "text_sha256": "d8b03d50bd1e9692b494ca2d6c634f08b168663210a578e3b57ba1c4b1b02586"
+    },
+    {
+      "block_id": "page-0617-block-0018",
+      "order": 18,
+      "text": "(Continued)\n",
+      "bbox": [
+        397.88250732421875,
+        594.6072998046875,
+        433.8974609375,
+        603.3598022460938
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

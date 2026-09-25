@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0348",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 348,
+  "source_page_index": 347,
+  "source_page_display": 348,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    327\nCHAPTER 3\n\t71.\t National Institute for Clinical Excellence. Depression: the treatment and management of depression in adults. Clinical Guidance [CG90]. \n2009 (last reviewed Dec 2013); https://www.nice.org.uk/guidance/cg90.\n\t72.\t Harrison CL, et al. Tolerability of high-dose venlafaxine in depressed patients. J Psychopharmacology 2004; 18:200–204.\n\t73.\t Fountoulakis KN, et al. Combined oral venlafaxine and intravenous clomipramine-A: successful temporary response in a patient with \nextremely refractory depression. Can J Psychiatry 2004; 49:73–74.\n\t74.\t Siwek M, et al. Zinc supplementation augments efficacy of imipramine in treatment resistant patients: a double blind, placebo-controlled \nstudy. J Affect Disord 2009; 118:187–195.\n\t75.\t Papakostas GI, et al. Ziprasidone augmentation of selective serotonin reuptake inhibitors (SSRIs) for SSRI-resistant major depressive disor-\nder. J Clin Psychiatry 2004; 65:217–221.\n\t76.\t Dunner DL, et al. Efficacy and tolerability of adjunctive ziprasidone in treatment-resistant depression: a randomized, open-label, pilot study. \nJ Clin Psychiatry 2007; 68:1071–1077.\n\t77.\t Papakostas GI, et al. A 12-week, randomized, double-blind, placebo-controlled, sequential parallel comparison trial of ziprasidone as mono-\ntherapy for major depressive disorder. J Clin Psychiatry 2012; 73:1541–1547.\n",
+  "raw_text_sha256": "6e776c10ffe23b12debd30fdd883c5de00ab343b4bd5073646201615e1b3d1c9",
+  "coordinates_sha256": "22196f44c1f7b97a447442aaeee1f7e39b2c6fcd1ead4ecade8b7b3e020e95a2",
+  "block_sequence_sha256": "ade49e4f2a6a72283d23ed8ef9f6d23b3eafbeaee3fd9743897fcdbb358a9aa4",
+  "blocks": [
+    {
+      "block_id": "page-0348-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    327\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "74f63f10dd63e6040471a10511ab9552c41a8e21e040ddb9c4d4bdd15e397b69"
+    },
+    {
+      "block_id": "page-0348-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0348-block-0002",
+      "order": 2,
+      "text": "\t71.\t National Institute for Clinical Excellence. Depression: the treatment and management of depression in adults. Clinical Guidance [CG90]. \n",
+      "bbox": [
+        48.0,
+        63.2703857421875,
+        421.66192626953125,
+        70.30238342285156
+      ],
+      "text_sha256": "4bb991a6e1202892441270d1cf5cb5c25602f73ef500584a28ec80203b2c08ff"
+    },
+    {
+      "block_id": "page-0348-block-0003",
+      "order": 3,
+      "text": "2009 (last reviewed Dec 2013); https://www.nice.org.uk/guidance/cg90.\n\t72.\t Harrison CL, et al. Tolerability of high-dose venlafaxine in depressed patients. J Psychopharmacology 2004; 18:200–204.\n\t73.\t Fountoulakis KN, et al. Combined oral venlafaxine and intravenous clomipramine-A: successful temporary response in a patient with \n",
+      "bbox": [
+        48.00600051879883,
+        72.2703857421875,
+        421.70404052734375,
+        97.30238342285156
+      ],
+      "text_sha256": "53cdf38f3e29979f335f8b5dad6624272083c876df3170989c4dd2fdd10d2060"
+    },
+    {
+      "block_id": "page-0348-block-0004",
+      "order": 4,
+      "text": "extremely refractory depression. Can J Psychiatry 2004; 49:73–74.\n\t74.\t Siwek M, et al. Zinc supplementation augments efficacy of imipramine in treatment resistant patients: a double blind, placebo-controlled \n",
+      "bbox": [
+        48.018001556396484,
+        99.12638854980469,
+        421.7220458984375,
+        115.30238342285156
+      ],
+      "text_sha256": "928d631dad93d47fba9fce594bb8aafe7dbcf73439a0c1c45100a4e81a0cd24b"
+    },
+    {
+      "block_id": "page-0348-block-0005",
+      "order": 5,
+      "text": "study. J Affect Disord 2009; 118:187–195.\n\t75.\t Papakostas GI, et al. Ziprasidone augmentation of selective serotonin reuptake inhibitors (SSRIs) for SSRI-resistant major depressive disor-\n",
+      "bbox": [
+        48.02399826049805,
+        117.12638854980469,
+        420.0299987792969,
+        133.30238342285156
+      ],
+      "text_sha256": "cce851fcb679998ee7138f56bca213206301e2e9ce2aeac8a1cc6611569f5e30"
+    },
+    {
+      "block_id": "page-0348-block-0006",
+      "order": 6,
+      "text": "der. J Clin Psychiatry 2004; 65:217–221.\n\t76.\t Dunner DL, et al. Efficacy and tolerability of adjunctive ziprasidone in treatment-resistant depression: a randomized, open-label, pilot study. \n",
+      "bbox": [
+        48.029998779296875,
+        135.1263885498047,
+        421.70404052734375,
+        151.30238342285156
+      ],
+      "text_sha256": "cc1dfa795661ae81365740d7122ba305f20ff8c6e79a3920d6f3a1e788d896eb"
+    },
+    {
+      "block_id": "page-0348-block-0007",
+      "order": 7,
+      "text": "J Clin Psychiatry 2007; 68:1071–1077.\n\t77.\t Papakostas GI, et al. A 12-week, randomized, double-blind, placebo-controlled, sequential parallel comparison trial of ziprasidone as mono-\n",
+      "bbox": [
+        48.0359992980957,
+        153.1263885498047,
+        420.0721130371094,
+        169.30238342285156
+      ],
+      "text_sha256": "ca0aebe71459e82fb37992a81ed5c7e2ae348ead31b864bbe47f576c2db36ea1"
+    },
+    {
+      "block_id": "page-0348-block-0008",
+      "order": 8,
+      "text": "therapy for major depressive disorder. J Clin Psychiatry 2012; 73:1541–1547.\n",
+      "bbox": [
+        59.03999710083008,
+        171.1263885498047,
+        260.14794921875,
+        178.30238342285156
+      ],
+      "text_sha256": "e9cfbddcf423df303e0f0f331cd0dc17702f39c26fc8ce952dd01a665076184f"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

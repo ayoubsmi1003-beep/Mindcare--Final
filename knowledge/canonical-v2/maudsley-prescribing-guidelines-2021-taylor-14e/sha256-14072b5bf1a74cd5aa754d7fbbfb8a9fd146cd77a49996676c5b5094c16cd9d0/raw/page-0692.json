@@ -1,0 +1,623 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0692",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 692,
+  "source_page_index": 691,
+  "source_page_display": 692,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "CHAPTER  6\nGive medication\nas normal\n(not covert)\nDO NOT GIVE\nDO NOT GIVE\nDO NOT GIVE\nDO NOT GIVE:\nseek alternative\npreparation\nDelay giving.\nConsider second\nopinion or DOLS\nNo\nNo\nNo\n*LPA – covering health and welfare decisions\nYes\nYes\nYes\nYes\nYes\nYes\nYes\nNo\nNo\nNo\nNo\nUSE\nALTERNATIVE\nIs medication\nessential?\nIs there a viable\nalternative?\nDoes the patient\nhave mental\ncapacity?\nIs there a Lasting\nPower of Attorney\n(LPA)*?\nConsider any valid or applicable Advance Directive\nDoes attorney\nagree with\ngiving covert\nmedication?\nIs there agreement\nat ‘Best Interest\n Meeting’?\nHave pharmacy\nconfirmed how to\ngive covertly?\nGive medication covertly\nDocument and\nreview regularly\nUnable to resolve\nReason established\nand resolved\nEstablish why the patient does not want to\ntake medication\nFigure 6.2  Algorithm for determining whether or not to administer medicines covertly\n",
+  "raw_text_sha256": "f2390cdfbb32f932b648d1ccb9058513709bb24fe9312add106aef55441c266a",
+  "coordinates_sha256": "c5af6acfb6090ff6806d8ebac9de7b288c8fb5f4d36ebfe3ca777aa9026c1caf",
+  "block_sequence_sha256": "353a697c5fc2123ddd2829a3dcc2358b271ab81ffe749175b193ce0f91c23bd8",
+  "blocks": [
+    {
+      "block_id": "page-0692-block-0000",
+      "order": 0,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        454.4096984863281,
+        405.35260009765625,
+        463.88970947265625,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0692-block-0001",
+      "order": 1,
+      "text": "Give medication\n",
+      "bbox": [
+        350.1643981933594,
+        134.1511688232422,
+        403.9319763183594,
+        142.8211669921875
+      ],
+      "text_sha256": "b21faca7940693be26e7f6b33608384889b9b8862dbdb5a0b3d0e542c1fdcdef"
+    },
+    {
+      "block_id": "page-0692-block-0002",
+      "order": 2,
+      "text": "as normal\n(not covert)\n",
+      "bbox": [
+        358.0843811035156,
+        143.1511688232422,
+        396.01190185546875,
+        160.8211669921875
+      ],
+      "text_sha256": "7797bb02ed0fa225fb8b668c8192ed4cd489e02f4b0fd734d574d345f37df8b0"
+    },
+    {
+      "block_id": "page-0692-block-0003",
+      "order": 3,
+      "text": "DO NOT GIVE\n",
+      "bbox": [
+        353.2918701171875,
+        181.2586669921875,
+        402.4693298339844,
+        190.1836700439453
+      ],
+      "text_sha256": "01dba450c392cdf83bb79f6f2ab6970840d008b9085c142142aa74166f9b5aa5"
+    },
+    {
+      "block_id": "page-0692-block-0004",
+      "order": 4,
+      "text": "DO NOT GIVE\n",
+      "bbox": [
+        353.2918701171875,
+        297.2761535644531,
+        402.4693298339844,
+        306.2011413574219
+      ],
+      "text_sha256": "01dba450c392cdf83bb79f6f2ab6970840d008b9085c142142aa74166f9b5aa5"
+    },
+    {
+      "block_id": "page-0692-block-0005",
+      "order": 5,
+      "text": "DO NOT GIVE\n",
+      "bbox": [
+        345.71685791015625,
+        437.0236511230469,
+        394.8943176269531,
+        445.9486389160156
+      ],
+      "text_sha256": "01dba450c392cdf83bb79f6f2ab6970840d008b9085c142142aa74166f9b5aa5"
+    },
+    {
+      "block_id": "page-0692-block-0006",
+      "order": 6,
+      "text": "DO NOT GIVE:\nseek alternative\n",
+      "bbox": [
+        346.66937255859375,
+        488.7661437988281,
+        402.949462890625,
+        506.6911315917969
+      ],
+      "text_sha256": "8d1dde9030f52f55d0e320c03c03453b56aa9db05b3ed55326a2677c16b9c95c"
+    },
+    {
+      "block_id": "page-0692-block-0007",
+      "order": 7,
+      "text": "preparation\n",
+      "bbox": [
+        354.1768798828125,
+        506.7661437988281,
+        395.43438720703125,
+        515.691162109375
+      ],
+      "text_sha256": "6442b0acd7a6dc82987b30e35cde07bf83faecb288632c8d1a7cf85eca0036e1"
+    },
+    {
+      "block_id": "page-0692-block-0008",
+      "order": 8,
+      "text": "Delay giving.\nConsider second\nopinion or DOLS\n",
+      "bbox": [
+        164.86187744140625,
+        446.6836242675781,
+        221.1343536376953,
+        473.3536376953125
+      ],
+      "text_sha256": "8b14898a0050a69484d7acc19bd59273dcc01315d31b040b17369971356a2d4f"
+    },
+    {
+      "block_id": "page-0692-block-0009",
+      "order": 9,
+      "text": "No\n",
+      "bbox": [
+        139.71437072753906,
+        436.9936218261719,
+        149.7118682861328,
+        445.9186096191406
+      ],
+      "text_sha256": "31375587f8bedb1f33f6eca3d8cee94ab70845a6dd1a7c7eeb929f4aa7dc10ab"
+    },
+    {
+      "block_id": "page-0692-block-0010",
+      "order": 10,
+      "text": "No\n",
+      "bbox": [
+        381.724365234375,
+        405.17864990234375,
+        391.72186279296875,
+        414.1036376953125
+      ],
+      "text_sha256": "31375587f8bedb1f33f6eca3d8cee94ab70845a6dd1a7c7eeb929f4aa7dc10ab"
+    },
+    {
+      "block_id": "page-0692-block-0011",
+      "order": 11,
+      "text": "No\n",
+      "bbox": [
+        235.286865234375,
+        484.7161560058594,
+        245.28436279296875,
+        493.6411437988281
+      ],
+      "text_sha256": "31375587f8bedb1f33f6eca3d8cee94ab70845a6dd1a7c7eeb929f4aa7dc10ab"
+    },
+    {
+      "block_id": "page-0692-block-0012",
+      "order": 12,
+      "text": "*LPA – covering health and welfare decisions\n",
+      "bbox": [
+        175.046875,
+        593.7811889648438,
+        325.5345153808594,
+        602.451171875
+      ],
+      "text_sha256": "91330eb50943afc8468ede4aac5e671ea6e3248c0d162e4780cd30b7eb0c83ae"
+    },
+    {
+      "block_id": "page-0692-block-0013",
+      "order": 13,
+      "text": "Yes\n",
+      "bbox": [
+        107.36687469482422,
+        526.8211059570312,
+        120.7093734741211,
+        535.7461547851562
+      ],
+      "text_sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    {
+      "block_id": "page-0692-block-0014",
+      "order": 14,
+      "text": "Yes\n",
+      "bbox": [
+        310.474365234375,
+        402.9361572265625,
+        323.81689453125,
+        411.86114501953125
+      ],
+      "text_sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    {
+      "block_id": "page-0692-block-0015",
+      "order": 15,
+      "text": "Yes\n",
+      "bbox": [
+        227.62936401367188,
+        360.5161437988281,
+        240.97186279296875,
+        369.4411315917969
+      ],
+      "text_sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    {
+      "block_id": "page-0692-block-0016",
+      "order": 16,
+      "text": "Yes\n",
+      "bbox": [
+        235.31686401367188,
+        286.5211486816406,
+        248.65936279296875,
+        295.4461364746094
+      ],
+      "text_sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    {
+      "block_id": "page-0692-block-0017",
+      "order": 17,
+      "text": "Yes\n",
+      "bbox": [
+        234.02687072753906,
+        223.85116577148438,
+        247.36936950683594,
+        232.7761688232422
+      ],
+      "text_sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    {
+      "block_id": "page-0692-block-0018",
+      "order": 18,
+      "text": "Yes\n",
+      "bbox": [
+        100.99937438964844,
+        201.11865234375,
+        114.34187316894531,
+        210.0436553955078
+      ],
+      "text_sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    {
+      "block_id": "page-0692-block-0019",
+      "order": 19,
+      "text": "Yes\n",
+      "bbox": [
+        107.359375,
+        567.0211181640625,
+        120.70187377929688,
+        575.9461669921875
+      ],
+      "text_sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    {
+      "block_id": "page-0692-block-0020",
+      "order": 20,
+      "text": "No\n",
+      "bbox": [
+        100.09937286376953,
+        407.8786315917969,
+        110.09687042236328,
+        416.8036193847656
+      ],
+      "text_sha256": "31375587f8bedb1f33f6eca3d8cee94ab70845a6dd1a7c7eeb929f4aa7dc10ab"
+    },
+    {
+      "block_id": "page-0692-block-0021",
+      "order": 21,
+      "text": "No\n",
+      "bbox": [
+        100.09937286376953,
+        331.7536315917969,
+        110.09687042236328,
+        340.6786193847656
+      ],
+      "text_sha256": "31375587f8bedb1f33f6eca3d8cee94ab70845a6dd1a7c7eeb929f4aa7dc10ab"
+    },
+    {
+      "block_id": "page-0692-block-0022",
+      "order": 22,
+      "text": "No\n",
+      "bbox": [
+        103.39187622070312,
+        262.9561462402344,
+        113.38937377929688,
+        271.8811340332031
+      ],
+      "text_sha256": "31375587f8bedb1f33f6eca3d8cee94ab70845a6dd1a7c7eeb929f4aa7dc10ab"
+    },
+    {
+      "block_id": "page-0692-block-0023",
+      "order": 23,
+      "text": "No\n",
+      "bbox": [
+        237.69436645507812,
+        175.37112426757812,
+        247.69186401367188,
+        184.29612731933594
+      ],
+      "text_sha256": "31375587f8bedb1f33f6eca3d8cee94ab70845a6dd1a7c7eeb929f4aa7dc10ab"
+    },
+    {
+      "block_id": "page-0692-block-0024",
+      "order": 24,
+      "text": "USE\nALTERNATIVE\n",
+      "bbox": [
+        350.3068542480469,
+        227.7811279296875,
+        402.8068542480469,
+        245.7061309814453
+      ],
+      "text_sha256": "cee1821c96b8b00a81305e1567e7c5b6a653da0bff99462dc86515a10b94a6dc"
+    },
+    {
+      "block_id": "page-0692-block-0025",
+      "order": 25,
+      "text": "Is medication\n",
+      "bbox": [
+        75.99435424804688,
+        174.12611389160156,
+        120.17684173583984,
+        182.79611206054688
+      ],
+      "text_sha256": "52aff23416a1e2ca114785001a1c12a29682cc5b8204228dc9413d74799192a0"
+    },
+    {
+      "block_id": "page-0692-block-0026",
+      "order": 26,
+      "text": "essential?\n",
+      "bbox": [
+        81.20685577392578,
+        183.12611389160156,
+        114.97184753417969,
+        191.79611206054688
+      ],
+      "text_sha256": "c98cf863349affd34abfef545ec17fdf6001591d309a8e331911d522ab07cc41"
+    },
+    {
+      "block_id": "page-0692-block-0027",
+      "order": 27,
+      "text": "Is there a viable\n",
+      "bbox": [
+        72.24435424804688,
+        232.11610412597656,
+        125.18683624267578,
+        240.78610229492188
+      ],
+      "text_sha256": "28d7eaae895aa6b849a54491a4d9d0bb62e8c4d7ea21020bd57054b9d352ad78"
+    },
+    {
+      "block_id": "page-0692-block-0028",
+      "order": 28,
+      "text": "alternative?\n",
+      "bbox": [
+        79.33185577392578,
+        241.11610412597656,
+        118.0993423461914,
+        249.78610229492188
+      ],
+      "text_sha256": "78be3e4c1c0cc1881ed9f201a503a691b84bf78a053da57381c3836383226f4f"
+    },
+    {
+      "block_id": "page-0692-block-0029",
+      "order": 29,
+      "text": "Does the patient\n",
+      "bbox": [
+        70.57185363769531,
+        295.9035949707031,
+        125.18683624267578,
+        304.5736083984375
+      ],
+      "text_sha256": "6cdea23acf6def3a7d74b1ac74d2f61f00af6e6b8f808c456e3d2ea5000e4ea2"
+    },
+    {
+      "block_id": "page-0692-block-0030",
+      "order": 30,
+      "text": "have mental\n",
+      "bbox": [
+        77.44935607910156,
+        304.9035949707031,
+        118.30184173583984,
+        313.5736083984375
+      ],
+      "text_sha256": "b5ffc5c2d83572c988dad7fbbd8f571694e18498421da54a056f3ccaa86f9722"
+    },
+    {
+      "block_id": "page-0692-block-0031",
+      "order": 31,
+      "text": "capacity?\n",
+      "bbox": [
+        82.03935241699219,
+        313.9035949707031,
+        113.71934509277344,
+        322.5736083984375
+      ],
+      "text_sha256": "15e0054408449cbb41d46a362027459e916bdcf27587d818be78da019c6eceaf"
+    },
+    {
+      "block_id": "page-0692-block-0032",
+      "order": 32,
+      "text": "Is there a Lasting\nPower of Attorney\n",
+      "bbox": [
+        68.87684631347656,
+        368.11358642578125,
+        128.48683166503906,
+        385.7835998535156
+      ],
+      "text_sha256": "cae820c24227e17278932cc5a8bd24b6851485b07ca86d051cb385beca5109c8"
+    },
+    {
+      "block_id": "page-0692-block-0033",
+      "order": 33,
+      "text": "(LPA)*?\n",
+      "bbox": [
+        85.54934692382812,
+        386.11358642578125,
+        111.80684661865234,
+        394.7835998535156
+      ],
+      "text_sha256": "b24cc07113b5f1df9cdeaf28dd00ec8abd9f7ffa3e138a23f3f565e1ad61ed22"
+    },
+    {
+      "block_id": "page-0692-block-0034",
+      "order": 34,
+      "text": "Consider any valid or applicable Advance Directive\n",
+      "bbox": [
+        156.1243438720703,
+        336.4485778808594,
+        324.9344177246094,
+        345.11859130859375
+      ],
+      "text_sha256": "a9c2826908a6768e3a482955ab386e1dccaf6cd2b2465bcce88df4f58fde0f99"
+    },
+    {
+      "block_id": "page-0692-block-0035",
+      "order": 35,
+      "text": "Does attorney\n",
+      "bbox": [
+        350.09686279296875,
+        359.2560729980469,
+        396.784423828125,
+        367.92608642578125
+      ],
+      "text_sha256": "1743b1fe124f79a424b4439e02925b43ad1604504f53b9e8b44157bfff7a2f3a"
+    },
+    {
+      "block_id": "page-0692-block-0036",
+      "order": 36,
+      "text": "agree with\ngiving covert\n",
+      "bbox": [
+        352.3918762207031,
+        368.2560729980469,
+        394.48944091796875,
+        385.92608642578125
+      ],
+      "text_sha256": "325d4f06311fdd11d0175ed787c3d3eb350196e41e9c1aaec6bda09503a7c649"
+    },
+    {
+      "block_id": "page-0692-block-0037",
+      "order": 37,
+      "text": "medication?\n",
+      "bbox": [
+        353.224365234375,
+        386.2560729980469,
+        393.6569519042969,
+        394.92608642578125
+      ],
+      "text_sha256": "63d35bd1d9968977637a70216f0195bcb29dde3f78b67d46c5c3309dc38cefd4"
+    },
+    {
+      "block_id": "page-0692-block-0038",
+      "order": 38,
+      "text": "Is there agreement\n",
+      "bbox": [
+        66.71685791015625,
+        434.1585693359375,
+        129.66433715820312,
+        442.8285827636719
+      ],
+      "text_sha256": "5c9e4d25cfa1919b6dd95d55b3270b876b089b7a422b0c644c689792133bb385"
+    },
+    {
+      "block_id": "page-0692-block-0039",
+      "order": 39,
+      "text": "at ‘Best Interest\n",
+      "bbox": [
+        72.13935852050781,
+        443.1585693359375,
+        124.24934387207031,
+        451.8285827636719
+      ],
+      "text_sha256": "b163c2f800fba25dfa656c6e88498f49791200d06a5cabcdd170f46c77a4cad1"
+    },
+    {
+      "block_id": "page-0692-block-0040",
+      "order": 40,
+      "text": " Meeting’?\n",
+      "bbox": [
+        80.89186096191406,
+        452.1585693359375,
+        115.48934936523438,
+        460.8285827636719
+      ],
+      "text_sha256": "23ebbf9ee71fe1d8fab8c0bc69cad1131ff5d15787d078453c9af66399929a2a"
+    },
+    {
+      "block_id": "page-0692-block-0041",
+      "order": 41,
+      "text": "Have pharmacy\nconfirmed how to\n",
+      "bbox": [
+        71.16436004638672,
+        487.9260559082031,
+        128.26934814453125,
+        505.5960693359375
+      ],
+      "text_sha256": "d0064e78a20c392c29b27fd0eec157c5d6ed848c77eeeeecddc5efab0bfda4fe"
+    },
+    {
+      "block_id": "page-0692-block-0042",
+      "order": 42,
+      "text": "give covertly?\n",
+      "bbox": [
+        76.78936004638672,
+        505.9260559082031,
+        122.63684844970703,
+        514.5960693359375
+      ],
+      "text_sha256": "6f2db00f7e0458f775fac164b36814a0e9113eecdb61f09103e56cb8845e3152"
+    },
+    {
+      "block_id": "page-0692-block-0043",
+      "order": 43,
+      "text": "Give medication covertly\n",
+      "bbox": [
+        61.4593620300293,
+        547.4611206054688,
+        143.1493377685547,
+        556.131103515625
+      ],
+      "text_sha256": "b4a41bfd2edcb82304ad66b555cb4412edcae462ea847759ea7991e4e2488dc7"
+    },
+    {
+      "block_id": "page-0692-block-0044",
+      "order": 44,
+      "text": "Document and\nreview regularly\n",
+      "bbox": [
+        76.85686492919922,
+        586.693603515625,
+        129.36434936523438,
+        604.3635864257812
+      ],
+      "text_sha256": "83115307147504bea131e628540f774f1f747273998789fed81743b2601c3a6f"
+    },
+    {
+      "block_id": "page-0692-block-0045",
+      "order": 45,
+      "text": "Unable to resolve\nReason established\n",
+      "bbox": [
+        69.32019805908203,
+        130.41343688964844,
+        322.5953369140625,
+        143.5609130859375
+      ],
+      "text_sha256": "8cefb5e3ccf1f97905f581919842c50d7b77021601af84a9663eaa7248e4ecb9"
+    },
+    {
+      "block_id": "page-0692-block-0046",
+      "order": 46,
+      "text": "and resolved\n",
+      "bbox": [
+        268.190185546875,
+        139.41343688964844,
+        311.1277770996094,
+        148.08343505859375
+      ],
+      "text_sha256": "96a9bee71ffc4dff92f837a024a087cd3dfc47aa41faa880468d24cbb567c769"
+    },
+    {
+      "block_id": "page-0692-block-0047",
+      "order": 47,
+      "text": "Establish why the patient does not want to\n",
+      "bbox": [
+        136.26260375976562,
+        74.33177185058594,
+        276.34014892578125,
+        83.00177001953125
+      ],
+      "text_sha256": "0d627e35c1babbff33988bb98f95e1ba9e0c64a1fb645163268346ddb05d3f3c"
+    },
+    {
+      "block_id": "page-0692-block-0048",
+      "order": 48,
+      "text": "take medication\n",
+      "bbox": [
+        180.04010009765625,
+        83.33177185058594,
+        232.56259155273438,
+        92.00177001953125
+      ],
+      "text_sha256": "e203c827607ba61e854dfd8d4c8a7889502890ae625609b830b757564d977fce"
+    },
+    {
+      "block_id": "page-0692-block-0049",
+      "order": 49,
+      "text": "Figure 6.2  Algorithm for determining whether or not to administer medicines covertly\n",
+      "bbox": [
+        48.00260925292969,
+        629.354248046875,
+        321.6400146484375,
+        638.2418212890625
+      ],
+      "text_sha256": "e4adefa8f431cc1d3f969b0547bb09df24843c71003c7a55fa418742bf94a7a4"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

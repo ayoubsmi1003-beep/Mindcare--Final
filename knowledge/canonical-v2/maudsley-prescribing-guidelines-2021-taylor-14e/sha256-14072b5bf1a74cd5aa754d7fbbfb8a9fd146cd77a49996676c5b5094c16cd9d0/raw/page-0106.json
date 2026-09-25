@@ -1,0 +1,275 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0106",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 106,
+  "source_page_index": 105,
+  "source_page_display": 106,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    85\nCHAPTER 1\nTable 1.8  Switching to paliperidone palmitate 1-monthly LAI\nSwitching from\nRecommended method of switching\nComments\nNo treatment\nGive the two initiation doses: 150mg IM \ndeltoid on day 1 and 100mg IM deltoid on  \nday 8\nMaintenance dose starts 1 month later\nThe manufacturer recommends a dose of \n75mg monthly for the general adult \npopulation.17 This is approximately \nequivalent to 3mg/day oral risperidone. (see \nTable 1.7). In practice, the modal dose is \n100mg/month18\nMaintenance dose adjustments should be \nmade monthly. However, the full effect of \nthe dose adjustment may not be apparent \nfor several months2\nOral paliperidone/\nrisperidone\nGive the two initiation doses followed by the \nmaintenance dose (See Table 1.7 and prescribe \nequivalent dose)\nOral paliperidone/risperidone \nsupplementation during initiation is not \nnecessary\nOral antipsychotics\nReduce the dose of the oral antipsychotic over \n1–2 weeks following the first injection of \npaliperidone. Give the two initiation doses \nfollowed by the maintenance dose\nDepot antipsychotic\nStart paliperidone (at the maintenance dose) \nwhen the next injection is due.\nNB. No initiation doses are required\nDoses of paliperidone palmitate IM are \ndifficult to predict from the dose of FGA \ndepots. The manufacturer recommends a \ndose of 75mg monthly for the general adult \npopulation but in practice 100mg and \n150mg are more often prescribed.18 If \nswitching from risperidone LAI see Table 1.7 \nand prescribe equivalent dose\nMaintenance dose adjustments should be \nmade monthly. However, the full effect of \nthe dose adjustment may not be apparent \nfor several months2\nAntipsychotic \npolypharmacy with \ndepot\nStart paliperidone (at the maintenance dose) \nwhen the next injection is due.\nNB. No initiation doses are required\nReduce the dose of the oral antipsychotic over \n1–2 weeks following the first injection of \npaliperidone\nAim to treat the patient with paliperidone \npalmitate IM as the sole antipsychotic.\nThe maintenance dose should be governed \nas far as possible by the total dose of oral \nand injectable antipsychotic (see dose \nequivalence table in this chapter)\nWhen initiating paliperidone LAI 3-monthly give the first dose in place of the next \nscheduled dose of paliperidone LAI 1-monthly (±7 days). The dose of paliperidone LAI \n3-monthly should be based on the previous paliperidone LAI 1-monthly dose, see \nTable 1.9. Dose adjustments should not be necessary but may be made at 3-monthly \nintervals thereafter, however, the full response to the new dose may not be apparent for \nseveral months.11\nThe administration process is important for avoiding incomplete administration of \nthe suspension. This requires shaking vigorously the prefilled syringe with the cap and \n",
+  "raw_text_sha256": "d653b2acbb49b57d66c7f4288754b13d9c044e7f130c27173366591d6700ee06",
+  "coordinates_sha256": "f5a6317ab0e58855e3dab082f28eea9055c8c00133b7f17146ff0ca9a19ce79c",
+  "block_sequence_sha256": "143932dc7e80703bd54076e30798fc4bed8e0df14344a124230b28244cb99d35",
+  "blocks": [
+    {
+      "block_id": "page-0106-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    85\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "a338c26b8796d2f7401be7e1436bfc418e5d72595c85572689f54e6cd82a4c0e"
+    },
+    {
+      "block_id": "page-0106-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0106-block-0002",
+      "order": 2,
+      "text": "Table 1.8  Switching to paliperidone palmitate 1-monthly LAI\n",
+      "bbox": [
+        53.99909973144531,
+        70.08692932128906,
+        249.44903564453125,
+        78.97442626953125
+      ],
+      "text_sha256": "783709c817206c5fa8fc0414b83ce003bed0435a988524b107da16734c70392d"
+    },
+    {
+      "block_id": "page-0106-block-0003",
+      "order": 3,
+      "text": "Switching from\nRecommended method of switching\nComments\n",
+      "bbox": [
+        47.99909973144531,
+        90.32191467285156,
+        314.9990539550781,
+        99.20941162109375
+      ],
+      "text_sha256": "e2840bcf083ed477381d07448932708818c7bf2e0d7862d4edfb5b226a392c81"
+    },
+    {
+      "block_id": "page-0106-block-0004",
+      "order": 4,
+      "text": "No treatment\nGive the two initiation doses: 150mg IM \ndeltoid on day 1 and 100mg IM deltoid on  \nday 8\n",
+      "bbox": [
+        47.99909973144531,
+        107.2794418334961,
+        260.5866394042969,
+        135.98193359375
+      ],
+      "text_sha256": "a14b521d26cfd7df83ab57b05c5a7dfabb54a7c4065991fcbd2127e660781021"
+    },
+    {
+      "block_id": "page-0106-block-0005",
+      "order": 5,
+      "text": "Maintenance dose starts 1 month later\n",
+      "bbox": [
+        120.11158752441406,
+        141.2769317626953,
+        243.87657165527344,
+        149.98443603515625
+      ],
+      "text_sha256": "9ef5c8bf6c0fd916ab4d68370c3b4e08973ed37ce28823499b8590d6b40dfec8"
+    },
+    {
+      "block_id": "page-0106-block-0006",
+      "order": 6,
+      "text": "The manufacturer recommends a dose of \n75mg monthly for the general adult \npopulation.17 This is approximately \nequivalent to 3mg/day oral risperidone. (see \nTable 1.7). In practice, the modal dose is \n100mg/month18\n",
+      "bbox": [
+        277.49908447265625,
+        107.2794418334961,
+        419.6108703613281,
+        165.9769287109375
+      ],
+      "text_sha256": "67f56ee31a0de280477187aece2a211b66ea3e5f3354277e2fdc0471b298529c"
+    },
+    {
+      "block_id": "page-0106-block-0007",
+      "order": 7,
+      "text": "Maintenance dose adjustments should be \nmade monthly. However, the full effect of \nthe dose adjustment may not be apparent \nfor several months2\n",
+      "bbox": [
+        277.4989013671875,
+        171.2769317626953,
+        414.0589904785156,
+        209.9769287109375
+      ],
+      "text_sha256": "715594bcb6dacc92700a3b2226536cfb9f2fa0afe46967abaf99f2c2b1a436e7"
+    },
+    {
+      "block_id": "page-0106-block-0008",
+      "order": 8,
+      "text": "Oral paliperidone/\nrisperidone\n",
+      "bbox": [
+        47.99909973144531,
+        216.3019256591797,
+        105.0890884399414,
+        235.00692749023438
+      ],
+      "text_sha256": "6f11d7c9b89643dead1fca92e658874a0228b2978a0f531af512d53b44bd065c"
+    },
+    {
+      "block_id": "page-0106-block-0009",
+      "order": 9,
+      "text": "Give the two initiation doses followed by the \nmaintenance dose (See Table 1.7 and prescribe \nequivalent dose)\n",
+      "bbox": [
+        120.11158752441406,
+        216.3019256591797,
+        271.6791076660156,
+        245.00442504882812
+      ],
+      "text_sha256": "2c175379bac68b1205fbcb20f5ac372e550f8645428ee51aa763965a9460157b"
+    },
+    {
+      "block_id": "page-0106-block-0010",
+      "order": 10,
+      "text": "Oral paliperidone/risperidone \nsupplementation during initiation is not \nnecessary\n",
+      "bbox": [
+        277.49908447265625,
+        216.29441833496094,
+        405.8618469238281,
+        244.99691772460938
+      ],
+      "text_sha256": "67b3ee42915ff0336492a5b03fe83d02bdfc2d49a374f3a4fa443aa91be88ccb"
+    },
+    {
+      "block_id": "page-0106-block-0011",
+      "order": 11,
+      "text": "Oral antipsychotics\nReduce the dose of the oral antipsychotic over \n1–2 weeks following the first injection of \npaliperidone. Give the two initiation doses \nfollowed by the maintenance dose\n",
+      "bbox": [
+        47.99909973144531,
+        251.31190490722656,
+        270.1340637207031,
+        290.01190185546875
+      ],
+      "text_sha256": "82c9cf8ecbdd3e1233030e801326b3073a1d1e459ced033f96b2085fe195d3d8"
+    },
+    {
+      "block_id": "page-0106-block-0012",
+      "order": 12,
+      "text": "Depot antipsychotic\nStart paliperidone (at the maintenance dose) \nwhen the next injection is due.\nNB. No initiation doses are required\n",
+      "bbox": [
+        47.99909210205078,
+        296.326904296875,
+        264.2990417480469,
+        325.0293884277344
+      ],
+      "text_sha256": "3116b62a55ac37674e75b0e427d67bd1fb80a52cc89c323c200551585b44acc6"
+    },
+    {
+      "block_id": "page-0106-block-0013",
+      "order": 13,
+      "text": "Doses of paliperidone palmitate IM are \ndifficult to predict from the dose of FGA \ndepots. The manufacturer recommends a \ndose of 75mg monthly for the general adult \npopulation but in practice 100mg and \n150mg are more often prescribed.18 If \nswitching from risperidone LAI see Table 1.7 \nand prescribe equivalent dose\n",
+      "bbox": [
+        277.49908447265625,
+        296.31939697265625,
+        420.4492492675781,
+        375.0544128417969
+      ],
+      "text_sha256": "6a9eabf87a0b66260ad6f98805c1589934dbad5d933f6c430d68e9df91a2ff9e"
+    },
+    {
+      "block_id": "page-0106-block-0014",
+      "order": 14,
+      "text": "Maintenance dose adjustments should be \nmade monthly. However, the full effect of \nthe dose adjustment may not be apparent \nfor several months2\n",
+      "bbox": [
+        277.5003662109375,
+        380.34942626953125,
+        414.0604553222656,
+        419.0494079589844
+      ],
+      "text_sha256": "715594bcb6dacc92700a3b2226536cfb9f2fa0afe46967abaf99f2c2b1a436e7"
+    },
+    {
+      "block_id": "page-0106-block-0015",
+      "order": 15,
+      "text": "Antipsychotic \npolypharmacy with \ndepot\n",
+      "bbox": [
+        47.99909973144531,
+        425.3769226074219,
+        110.91658782958984,
+        454.07940673828125
+      ],
+      "text_sha256": "5dfba5e1e7ef68d3b48ea94f70a65637b168410fb6b451c2756582ff45e57341"
+    },
+    {
+      "block_id": "page-0106-block-0016",
+      "order": 16,
+      "text": "Start paliperidone (at the maintenance dose) \nwhen the next injection is due.\nNB. No initiation doses are required\nReduce the dose of the oral antipsychotic over \n1–2 weeks following the first injection of \npaliperidone\n",
+      "bbox": [
+        120.11158752441406,
+        425.3694152832031,
+        270.1340637207031,
+        484.06439208984375
+      ],
+      "text_sha256": "fad7c7c90a6031093280cf7345e1096c8a13b1af9b6e026c316c03dd15e36d74"
+    },
+    {
+      "block_id": "page-0106-block-0017",
+      "order": 17,
+      "text": "Aim to treat the patient with paliperidone \npalmitate IM as the sole antipsychotic.\n",
+      "bbox": [
+        277.49908447265625,
+        425.3544006347656,
+        413.2117004394531,
+        444.05938720703125
+      ],
+      "text_sha256": "af15b3aa88db387ca2649c9b0d9c3fcd7c8ebfd94b0d33e24b536a386b73778d"
+    },
+    {
+      "block_id": "page-0106-block-0018",
+      "order": 18,
+      "text": "The maintenance dose should be governed \nas far as possible by the total dose of oral \nand injectable antipsychotic (see dose \nequivalence table in this chapter)\n",
+      "bbox": [
+        277.49908447265625,
+        449.3544006347656,
+        417.2617492675781,
+        488.05438232421875
+      ],
+      "text_sha256": "c5a89d583914f46f024f277f59962cf71a3662faf07f193bed288845d90b0df1"
+    },
+    {
+      "block_id": "page-0106-block-0019",
+      "order": 19,
+      "text": "When initiating paliperidone LAI 3-monthly give the first dose in place of the next \nscheduled dose of paliperidone LAI 1-monthly (±7 days). The dose of paliperidone LAI \n3-monthly should be based on the previous paliperidone LAI 1-monthly dose, see \nTable 1.9. Dose adjustments should not be necessary but may be made at 3-monthly \nintervals thereafter, however, the full response to the new dose may not be apparent for \nseveral months.11\n",
+      "bbox": [
+        47.99909973144531,
+        519.2130126953125,
+        422.8089294433594,
+        590.9330444335938
+      ],
+      "text_sha256": "d3ef180b2ff228c4bf9defb65d28c47b84e0e4de60149043a044d853503c5f87"
+    },
+    {
+      "block_id": "page-0106-block-0020",
+      "order": 20,
+      "text": "The administration process is important for avoiding incomplete administration of \nthe suspension. This requires shaking vigorously the prefilled syringe with the cap and \n",
+      "bbox": [
+        47.99909973144531,
+        591.2130126953125,
+        422.8191223144531,
+        614.9330444335938
+      ],
+      "text_sha256": "ca8ac085928fc6bbdc072fd5b814b0cf00c90e69b3acab4915bc08401f47198c"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

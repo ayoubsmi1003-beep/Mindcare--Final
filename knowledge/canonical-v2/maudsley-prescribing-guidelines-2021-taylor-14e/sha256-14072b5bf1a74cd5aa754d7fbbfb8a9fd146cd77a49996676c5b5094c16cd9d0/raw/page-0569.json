@@ -1,0 +1,311 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0569",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 569,
+  "source_page_index": 568,
+  "source_page_display": 569,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "548    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  5\n■\n■The duration of most medication trials is between 3 and 5 weeks. This should guide \ndecisions about how long to try a single drug in a patient. A complete absence of \nresponse at 1–2 weeks should prompt a switch to another SGA.\n■\n■If non-response, check compliance, measure levels (where possible) and consider \nincreasing dose. Consider concurrent use of SGA and MS.\n■\n■Judicious extrapolation of the evidence from adults7 is required because of the very \nlimited evidence base in youth with BP. This includes treatment duration and \nprophylaxis.5,6,8\n■\n■Maintenance treatment should follow adult guidelines. Consider the use of lithium \nearly in the course of treatment, either by switching to lithium monotherapy prophy-\nlaxis or as an adjunct to a successful acute medication.\nSpecific issues\n■\n■Bipolar depression is a common clinical challenge and its treatment has been studied \nmuch less in youth compared than in adults (see Table 5.2). Antidepressants should be \nused with care and only in presence of an antimanic agent.5 There is limited evidence for \nthe benefit of antidepressants in bipolar depression in adults.9 Because of the dearth of \ntrials in youth, we are compelled to extrapolate from adult studies5 and recommend use \nof the olanzapine/fluoxetine combination or quetiapine as first-line treatment, along with \nlurasidone which is supported by evidence from trials in children aged 10–17.10–12\n■\n■The exact relationship between ADHD and BD is still debated. Some evidence suggests \nthat stimulants in children with ADHD and manic symptoms may be well tolerated13 \nand that they may be safe and effective to use after mood stabilisation.13 Caution and \nexperience with prescribing these drugs are required (see Tables 5.3 and 5.4).\n■\n■The DSM-5 has introduced the new category of Disruptive Mood Dysregulation \nDisorder (DMDD) to capture severely irritable children (who were commonly misdi-\nagnosed as having BD in the United States). There is as yet no established treatment \nfor DMDD; lithium is ineffective,14 but SSRIs and psychological treatment options, \nsuch as parenting interventions, may be considered.15\nOther treatments\n■\n■There is evidence for adults and children that adjunct treatments including psycho-\neducation, CBT and especially family-focused interventions, can enhance treatment \nand reduce depression relapse rates in bipolar disorder.16\n■\n■The use of high-frequency repetitive transcranial magnetic stimulation (rTMS) in \nadolescents with treatment-resistant unipolar depression is only supported by open-\nlabel studies17 and no RCT has been done in youth with either unipolar or bipolar \ndepression. Therefore, its use is still considered experimental. One randomised sham-\ncontrolled study of rTMS in the right prefrontal cortex was ineffective in treating \nacute mania in youth, as an add-on to standard pharmacotherapy (N = 26).18\n■\n■One small trial supports the adjunctive use of melatonin (6mg/day) in adults with \nmania.19 Evidence is not sufficient to recommend the use of melatonin in children but \nit is enough to allow an assumption of safety in this age group during manic episodes.\n",
+  "raw_text_sha256": "136721ccf18330be19a8354af194ac73809329e21e9c21d55dc34b23fd3e95db",
+  "coordinates_sha256": "c1ab5e68d811475d245f8a5d30d0b389af256ddfe16ff1ff10e72eaaf11bb0a6",
+  "block_sequence_sha256": "53f7b15d7ac997938bb2925d5e6c560eb382da086ca1ce66aa6429958585c82f",
+  "blocks": [
+    {
+      "block_id": "page-0569-block-0000",
+      "order": 0,
+      "text": "548    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "22e07922621ba08445cb7675966b83f04fbccffb73efdc6684283c7c6d2132ef"
+    },
+    {
+      "block_id": "page-0569-block-0001",
+      "order": 1,
+      "text": "CHAPTER  5\n",
+      "bbox": [
+        18.520000457763672,
+        338.22650146484375,
+        28.0,
+        381.79449462890625
+      ],
+      "text_sha256": "4086e0916f45ec531cc17b8c611334eb2b1ef26051ba536579b8ef3c22c1648d"
+    },
+    {
+      "block_id": "page-0569-block-0002",
+      "order": 2,
+      "text": "■\n■The duration of most medication trials is between 3 and 5 weeks. This should guide \n",
+      "bbox": [
+        61.88990020751953,
+        62.55029296875,
+        436.63006591796875,
+        74.27029418945312
+      ],
+      "text_sha256": "e108ac11ed4d8561160f70d71eecf9f709396eca813584526a15c8ed734ae66d"
+    },
+    {
+      "block_id": "page-0569-block-0003",
+      "order": 3,
+      "text": "decisions about how long to try a single drug in a patient. A complete absence of \nresponse at 1–2 weeks should prompt a switch to another SGA.\n",
+      "bbox": [
+        70.88999938964844,
+        74.55029296875,
+        436.6298828125,
+        98.27029418945312
+      ],
+      "text_sha256": "dc730669c82fdfb42e3b8c55e0b1a132dca6e8e1d4c8e24433fa4f0bd512a8ed"
+    },
+    {
+      "block_id": "page-0569-block-0004",
+      "order": 4,
+      "text": "■\n■If non-response, check compliance, measure levels (where possible) and consider \n",
+      "bbox": [
+        61.88990020751953,
+        98.55029296875,
+        436.7000427246094,
+        110.27029418945312
+      ],
+      "text_sha256": "5087a63fd97829898443f1ea8af6898a9c7645ab284d59f69edf5c0d23288e54"
+    },
+    {
+      "block_id": "page-0569-block-0005",
+      "order": 5,
+      "text": "increasing dose. Consider concurrent use of SGA and MS.\n",
+      "bbox": [
+        70.88999938964844,
+        110.55029296875,
+        320.5699462890625,
+        122.27029418945312
+      ],
+      "text_sha256": "7ec58a6a17afa66816c7a41e76ff0690ba7698b2471357901c01b0ccd9929817"
+    },
+    {
+      "block_id": "page-0569-block-0006",
+      "order": 6,
+      "text": "■\n■Judicious extrapolation of the evidence from adults7 is required because of the very \n",
+      "bbox": [
+        61.88990020751953,
+        122.55029296875,
+        436.6804504394531,
+        134.27029418945312
+      ],
+      "text_sha256": "a440dd626833e2889710ac02db013732dac2320db52df496c683be4d91f64513"
+    },
+    {
+      "block_id": "page-0569-block-0007",
+      "order": 7,
+      "text": "limited evidence base in youth with BP. This includes treatment duration and \nprophylaxis.5,6,8\n",
+      "bbox": [
+        70.89041137695312,
+        134.55029296875,
+        436.6904296875,
+        158.27029418945312
+      ],
+      "text_sha256": "a02aa70b372282c56578b68c981e03c7fc41be46eb3bc13083a5bbea7196c904"
+    },
+    {
+      "block_id": "page-0569-block-0008",
+      "order": 8,
+      "text": "■\n■Maintenance treatment should follow adult guidelines. Consider the use of lithium \n",
+      "bbox": [
+        61.88999938964844,
+        158.55029296875,
+        436.66998291015625,
+        170.27029418945312
+      ],
+      "text_sha256": "ee405df92222e250788333681d8d13450c82ba9df850b48a291c5ae3c1d46b18"
+    },
+    {
+      "block_id": "page-0569-block-0009",
+      "order": 9,
+      "text": "early in the course of treatment, either by switching to lithium monotherapy prophy-\nlaxis or as an adjunct to a successful acute medication.\n",
+      "bbox": [
+        70.88999938964844,
+        170.55029296875,
+        433.8600158691406,
+        194.27029418945312
+      ],
+      "text_sha256": "14cc532e6f0e2f1a4860c56dcdb5ea9b7874ac24350d5accab00c3ee793c50bc"
+    },
+    {
+      "block_id": "page-0569-block-0010",
+      "order": 10,
+      "text": "Specific issues\n",
+      "bbox": [
+        61.88999938964844,
+        212.64028930664062,
+        128.0,
+        224.49029541015625
+      ],
+      "text_sha256": "08ec43892097d1c1cbb5595df4a8478c23551838fe144d4ac47b07e28636a7c9"
+    },
+    {
+      "block_id": "page-0569-block-0011",
+      "order": 11,
+      "text": "■\n■Bipolar depression is a common clinical challenge and its treatment has been studied \n",
+      "bbox": [
+        61.88999938964844,
+        236.55029296875,
+        436.7198791503906,
+        248.27029418945312
+      ],
+      "text_sha256": "8addd50b01d5fe7343151c84ec9d5f290a8522fe2ababad5c3918bf5dfd5f8e2"
+    },
+    {
+      "block_id": "page-0569-block-0012",
+      "order": 12,
+      "text": "much less in youth compared than in adults (see Table 5.2). Antidepressants should be \nused with care and only in presence of an antimanic agent.5 There is limited evidence for \nthe benefit of antidepressants in bipolar depression in adults.9 Because of the dearth of \ntrials in youth, we are compelled to extrapolate from adult studies5 and recommend use \nof the olanzapine/fluoxetine combination or quetiapine as first-line treatment, along with \nlurasidone which is supported by evidence from trials in children aged 10–17.10–12\n",
+      "bbox": [
+        70.88522338867188,
+        248.55029296875,
+        436.7099304199219,
+        320.2702941894531
+      ],
+      "text_sha256": "6fac13dd1396e12e8762a7a908723c39e32c326748196cf60971dc685d588a17"
+    },
+    {
+      "block_id": "page-0569-block-0013",
+      "order": 13,
+      "text": "■\n■The exact relationship between ADHD and BD is still debated. Some evidence suggests \n",
+      "bbox": [
+        61.88990020751953,
+        320.55029296875,
+        436.67999267578125,
+        332.2702941894531
+      ],
+      "text_sha256": "2956312ecb70f289e2d203befbec41ae54d23522890dc4843f43af98844d1a72"
+    },
+    {
+      "block_id": "page-0569-block-0014",
+      "order": 14,
+      "text": "that stimulants in children with ADHD and manic symptoms may be well tolerated13 \nand that they may be safe and effective to use after mood stabilisation.13 Caution and \nexperience with prescribing these drugs are required (see Tables 5.3 and 5.4).\n",
+      "bbox": [
+        70.8876953125,
+        332.55029296875,
+        436.6697998046875,
+        368.2702941894531
+      ],
+      "text_sha256": "2bef09e697ab34b91c562c912a0707b1b17e79d303bcfc61d026edb610e34aa1"
+    },
+    {
+      "block_id": "page-0569-block-0015",
+      "order": 15,
+      "text": "■\n■The DSM-5 has introduced the new category of Disruptive Mood Dysregulation \n",
+      "bbox": [
+        61.88990020751953,
+        368.55029296875,
+        436.6499328613281,
+        380.2702941894531
+      ],
+      "text_sha256": "feabb6d8997e633bedf0dd29eb485127c88b2edb82be9e66fb48ea769d9ecd5e"
+    },
+    {
+      "block_id": "page-0569-block-0016",
+      "order": 16,
+      "text": "Disorder (DMDD) to capture severely irritable children (who were commonly misdi-\nagnosed as having BD in the United States). There is as yet no established treatment \nfor DMDD; lithium is ineffective,14 but SSRIs and psychological treatment options, \nsuch as parenting interventions, may be considered.15\n",
+      "bbox": [
+        70.88999938964844,
+        380.55029296875,
+        436.7000427246094,
+        428.2702941894531
+      ],
+      "text_sha256": "0e991d1beecbbd6eef90bd3364ecdf9ec013b75625253be7091ffaf4ac124b80"
+    },
+    {
+      "block_id": "page-0569-block-0017",
+      "order": 17,
+      "text": "Other treatments\n",
+      "bbox": [
+        61.88999938964844,
+        451.7052917480469,
+        151.55099487304688,
+        464.74029541015625
+      ],
+      "text_sha256": "7e77c265bfffea415564a52ce9441ff07179bf733344420236bd31615c5e4dc0"
+    },
+    {
+      "block_id": "page-0569-block-0018",
+      "order": 18,
+      "text": "■\n■There is evidence for adults and children that adjunct treatments including psycho-\n",
+      "bbox": [
+        61.88990020751953,
+        476.55029296875,
+        433.8799133300781,
+        488.2702941894531
+      ],
+      "text_sha256": "215a65896e3d77c5d50f12cbb6d0d00e580f2cd0a9384b981b6a63825f9a6de3"
+    },
+    {
+      "block_id": "page-0569-block-0019",
+      "order": 19,
+      "text": "education, CBT and especially family-focused interventions, can enhance treatment \nand reduce depression relapse rates in bipolar disorder.16\n",
+      "bbox": [
+        70.88999938964844,
+        488.55029296875,
+        436.6999206542969,
+        512.2703247070312
+      ],
+      "text_sha256": "7b02d7812209df1e179b7f0b89056e148b118dd17dec1cce1088fa442c7507a0"
+    },
+    {
+      "block_id": "page-0569-block-0020",
+      "order": 20,
+      "text": "■\n■The use of high-frequency repetitive transcranial magnetic stimulation (rTMS) in \n",
+      "bbox": [
+        61.88990020751953,
+        512.55029296875,
+        436.6700134277344,
+        524.2703247070312
+      ],
+      "text_sha256": "8f13d70479140520481117b179d7414733782fcd57baa872968017c22ec62795"
+    },
+    {
+      "block_id": "page-0569-block-0021",
+      "order": 21,
+      "text": "adolescents with treatment-resistant unipolar depression is only supported by open-\nlabel studies17 and no RCT has been done in youth with either unipolar or bipolar \ndepression. Therefore, its use is still considered experimental. One randomised sham-\ncontrolled study of rTMS in the right prefrontal cortex was ineffective in treating \nacute mania in youth, as an add-on to standard pharmacotherapy (N = 26).18\n",
+      "bbox": [
+        70.88999938964844,
+        524.55029296875,
+        436.70013427734375,
+        584.2703247070312
+      ],
+      "text_sha256": "f7952efa12a182b0440c95eb07a7433013ba8bd6d08d655b951a1819e624ebb7"
+    },
+    {
+      "block_id": "page-0569-block-0022",
+      "order": 22,
+      "text": "■\n■One small trial supports the adjunctive use of melatonin (6mg/day) in adults with \n",
+      "bbox": [
+        61.88990020751953,
+        584.55029296875,
+        436.7100524902344,
+        596.2703247070312
+      ],
+      "text_sha256": "5c19b3a7bf67e4bdca94b761180d7b15a2f4b00a2d60213bfecf579619fb4eb7"
+    },
+    {
+      "block_id": "page-0569-block-0023",
+      "order": 23,
+      "text": "mania.19 Evidence is not sufficient to recommend the use of melatonin in children but \nit is enough to allow an assumption of safety in this age group during manic episodes.\n",
+      "bbox": [
+        70.88789367675781,
+        596.55029296875,
+        436.6580505371094,
+        620.2703247070312
+      ],
+      "text_sha256": "da43e81e8ac18e4736ec096e1a5d65b9ddd62eeaef9bf83ee1a13e21e466cf25"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

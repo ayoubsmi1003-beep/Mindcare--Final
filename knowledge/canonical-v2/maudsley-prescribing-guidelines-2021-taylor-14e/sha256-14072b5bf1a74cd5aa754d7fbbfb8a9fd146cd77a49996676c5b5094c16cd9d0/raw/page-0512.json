@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0512",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 512,
+  "source_page_index": 511,
+  "source_page_display": 512,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    491\nCHAPTER 4\nSlow release oral morphine preparations (SROM) preparations have been shown else-\nwhere in Europe to be useful as maintenance therapy in those who fail to tolerate metha-\ndone, again only for prescribing by specialised clinicians.1 A review of studies on SROM \nsuggested that there was insufficient evidence to assess the effectiveness of this treatment.65\nInjectable diamorphine for maintenance prescribing\nThere is compelling evidence supporting the use of injectable diamorphine maintenance \nprescribing for treatment of patients who fail to benefit from first-line OST.66 \nContemporary injectable prescribing differs from the earlier practice of prescribing \nunsupervised injectable opioids in that the patient must:\n■\n■attend in person for their prescribed injectable opioid maintenance treatment – daily \nor more frequently, according to the treatment plan\n■\n■inject their dose under the direct supervision of a competent member of staff\n■\n■be given no take-away injectable medication.\nIn the UK, the prescribing doctor must have a licence from the Home Office to pre-\nscribe diamorphine for opioid dependence. Oral OST is prescribed for days when super-\nvised injectable treatment is not available if the injectable clinic is not available daily. \nThis treatment differs from ‘injecting rooms’, that is, safe places with sterile equipment \nfor people who use IV drugs (usually not in treatment) in that it is part of a holistic pack-\nage of care with adjunctive psychosocial interventions. Although its cost-effectiveness \nhas been demonstrated,67 its implementation has been limited by high set-up costs.\nAt present, clients should only be considered for injectable opioid prescribing in com-\nbination with psychosocial interventions, as part of a wider package of care. It is an \noption in cases where the individual has not responded adequately to oral OST, and in \nan area where it can be supported by the necessary provisions for supervised consump-\ntion.1,68 Patients are generally seen for supervised injection in a specialist facility twice \na day. Doctors caring for patients who are admitted to the acute hospital on diamor-\nphine prescription will need to consult their local policies – ordinarily a documented \nconversation with the prescribing community addiction psychiatrist is sufficient to con-\ntinue the prescription.\nTreatment of opiate dependence on the psychiatric ward\nOpiate overdose can occur in hospital settings. All inpatients with a history of opiate \ndependence should have naloxone prescribed as ‘as necessary’.\nIn the inpatient setting, it is imperative to manage opiate withdrawal in order to \nallow the patient to remain on the ward and engage in interventions tailored to the \nreason for their psychiatric admission. The most effective prevention of opiate with-\ndrawal during an acute psychiatric admission is continuation of their existing OST. In \norder to continue prescribing the same dose of OST, the following needs to be con-\nfirmed independently:\n■\n■Confirmation from addiction services regarding the prescribed dose.\n■\n■Confirmation from the pharmacy where this is dispensed with respect to most recent \nsupervised dose and whether any take-away doses had been given. If the most recent \n",
+  "raw_text_sha256": "679ff90bc547fb355bf13ec3bb1346e715fa855b53560addc9c1ab1a5af8781f",
+  "coordinates_sha256": "2d1bb1df3b9c15569f31ef2fb5e93f9cd9e6098d991bbe3f72c9d191552ef7a4",
+  "block_sequence_sha256": "21e9ecddc19b86cb1871e1d5e9781a35a3d45681a68fabeb935359b056aab70a",
+  "blocks": [
+    {
+      "block_id": "page-0512-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    491\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "80305f2b0b20ed18c5385dc82c52d0095e2e2b81c0570d8604662e871ab301df"
+    },
+    {
+      "block_id": "page-0512-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0512-block-0002",
+      "order": 2,
+      "text": "Slow release oral morphine preparations (SROM) preparations have been shown else-\nwhere in Europe to be useful as maintenance therapy in those who fail to tolerate metha-\ndone, again only for prescribing by specialised clinicians.1 A review of studies on SROM \nsuggested that there was insufficient evidence to assess the effectiveness of this treatment.65\n",
+      "bbox": [
+        47.99530029296875,
+        62.5504150390625,
+        422.8050537109375,
+        110.27041625976562
+      ],
+      "text_sha256": "9e4e098d256f86a11a2d15717e906068e13694e579b94f86ed7cec01dd97b1fd"
+    },
+    {
+      "block_id": "page-0512-block-0003",
+      "order": 3,
+      "text": "Injectable diamorphine for maintenance prescribing\n",
+      "bbox": [
+        48.0,
+        124.70541381835938,
+        315.52001953125,
+        137.74041748046875
+      ],
+      "text_sha256": "53f9124da061b9d724b2621b0d4dc095dbc179f5ce768e87d3232a22441f8903"
+    },
+    {
+      "block_id": "page-0512-block-0004",
+      "order": 4,
+      "text": "There is compelling evidence supporting the use of injectable diamorphine maintenance \nprescribing for treatment of patients who fail to benefit from first-line OST.66 \nContemporary injectable prescribing differs from the earlier practice of prescribing \nunsupervised injectable opioids in that the patient must:\n",
+      "bbox": [
+        48.0,
+        143.5504150390625,
+        422.7803955078125,
+        191.27041625976562
+      ],
+      "text_sha256": "6b9a83f17d8a4885ed85c6097d771fa95fc45fb3bb06644ceaf1df37e8ca10b9"
+    },
+    {
+      "block_id": "page-0512-block-0005",
+      "order": 5,
+      "text": "■\n■attend in person for their prescribed injectable opioid maintenance treatment – daily \n",
+      "bbox": [
+        47.999900817871094,
+        197.55047607421875,
+        422.8199462890625,
+        209.27047729492188
+      ],
+      "text_sha256": "d2b4526e302bbdb4b1f21b08640aa282236b848f05c6e0c91f0db5e8ee24dc23"
+    },
+    {
+      "block_id": "page-0512-block-0006",
+      "order": 6,
+      "text": "or more frequently, according to the treatment plan\n",
+      "bbox": [
+        57.0,
+        209.55047607421875,
+        278.489990234375,
+        221.27047729492188
+      ],
+      "text_sha256": "50ccee58e868690294e39ad4932bc089fe6eb06bbcc04d063e42c0d3ab27824f"
+    },
+    {
+      "block_id": "page-0512-block-0007",
+      "order": 7,
+      "text": "■\n■inject their dose under the direct supervision of a competent member of staff\n",
+      "bbox": [
+        47.999900817871094,
+        221.55047607421875,
+        386.43994140625,
+        233.27047729492188
+      ],
+      "text_sha256": "90102226f955bd424f0da8a9ff1df7d0e03ec2d10725123dda1ec6ac30358f07"
+    },
+    {
+      "block_id": "page-0512-block-0008",
+      "order": 8,
+      "text": "■\n■be given no take-away injectable medication.\n",
+      "bbox": [
+        47.999900817871094,
+        233.55047607421875,
+        250.8999786376953,
+        245.27047729492188
+      ],
+      "text_sha256": "6e05cca63445269b9b425ac4b629acd98163a6730f6811c4409fa7afa435ca2c"
+    },
+    {
+      "block_id": "page-0512-block-0009",
+      "order": 9,
+      "text": "In the UK, the prescribing doctor must have a licence from the Home Office to pre-\nscribe diamorphine for opioid dependence. Oral OST is prescribed for days when super-\nvised injectable treatment is not available if the injectable clinic is not available daily. \nThis treatment differs from ‘injecting rooms’, that is, safe places with sterile equipment \nfor people who use IV drugs (usually not in treatment) in that it is part of a holistic pack-\nage of care with adjunctive psychosocial interventions. Although its cost-effectiveness \nhas been demonstrated,67 its implementation has been limited by high set-up costs.\n",
+      "bbox": [
+        48.0,
+        251.55047607421875,
+        422.83026123046875,
+        335.2704772949219
+      ],
+      "text_sha256": "83b2d6914585b0787fe25e097c0ab884df789db44e4c1ad221d33ccd974c42c7"
+    },
+    {
+      "block_id": "page-0512-block-0010",
+      "order": 10,
+      "text": "At present, clients should only be considered for injectable opioid prescribing in com-\nbination with psychosocial interventions, as part of a wider package of care. It is an \noption in cases where the individual has not responded adequately to oral OST, and in \nan area where it can be supported by the necessary provisions for supervised consump-\ntion.1,68 Patients are generally seen for supervised injection in a specialist facility twice \na day. Doctors caring for patients who are admitted to the acute hospital on diamor-\nphine prescription will need to consult their local policies – ordinarily a documented \nconversation with the prescribing community addiction psychiatrist is sufficient to con-\ntinue the prescription.\n",
+      "bbox": [
+        47.9949951171875,
+        335.55047607421875,
+        422.75494384765625,
+        443.2704772949219
+      ],
+      "text_sha256": "6a5bfaa5b05e0d219316cd59571d926dcbb4e1304dfc0b2705459e133829fb38"
+    },
+    {
+      "block_id": "page-0512-block-0011",
+      "order": 11,
+      "text": "Treatment of opiate dependence on the psychiatric ward\n",
+      "bbox": [
+        48.0,
+        457.7054748535156,
+        341.2159729003906,
+        470.740478515625
+      ],
+      "text_sha256": "430f4b1991104b98878f0c1cca2ed9e06f25b4d1775a0a638fb50f55f3fd73e2"
+    },
+    {
+      "block_id": "page-0512-block-0012",
+      "order": 12,
+      "text": "Opiate overdose can occur in hospital settings. All inpatients with a history of opiate \ndependence should have naloxone prescribed as ‘as necessary’.\n",
+      "bbox": [
+        48.0,
+        476.55047607421875,
+        422.8198547363281,
+        500.2704772949219
+      ],
+      "text_sha256": "19c223c5479998f503cbadccd546a37890381b1b191cb637b5defd0b5006a753"
+    },
+    {
+      "block_id": "page-0512-block-0013",
+      "order": 13,
+      "text": "In the inpatient setting, it is imperative to manage opiate withdrawal in order to \nallow the patient to remain on the ward and engage in interventions tailored to the \nreason for their psychiatric admission. The most effective prevention of opiate with-\ndrawal during an acute psychiatric admission is continuation of their existing OST. In \norder to continue prescribing the same dose of OST, the following needs to be con-\nfirmed independently:\n",
+      "bbox": [
+        48.0,
+        500.55047607421875,
+        422.80987548828125,
+        572.2705078125
+      ],
+      "text_sha256": "241c499b713aa7994c74be6c52c91e85167f92a5082fab1e9572766304554409"
+    },
+    {
+      "block_id": "page-0512-block-0014",
+      "order": 14,
+      "text": "■\n■Confirmation from addiction services regarding the prescribed dose.\n",
+      "bbox": [
+        47.999900817871094,
+        578.5504150390625,
+        350.9200134277344,
+        590.2704467773438
+      ],
+      "text_sha256": "fa70f6ba1494bdab5075d9b0dce5ae8db875c5a97938123c0b3555ffe41e69f4"
+    },
+    {
+      "block_id": "page-0512-block-0015",
+      "order": 15,
+      "text": "■\n■Confirmation from the pharmacy where this is dispensed with respect to most recent \n",
+      "bbox": [
+        47.999900817871094,
+        590.5504150390625,
+        422.7399597167969,
+        602.2704467773438
+      ],
+      "text_sha256": "0b4a18af6474c707ee6c4504acec1108b6d8ee0265b7be9a5f090a97c18b1bd8"
+    },
+    {
+      "block_id": "page-0512-block-0016",
+      "order": 16,
+      "text": "supervised dose and whether any take-away doses had been given. If the most recent \n",
+      "bbox": [
+        57.0,
+        602.5504150390625,
+        422.8099670410156,
+        614.2704467773438
+      ],
+      "text_sha256": "f2fb41f8f3648858c8e63d610880bdc6fa330b132b2d1056269b85646a15e814"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

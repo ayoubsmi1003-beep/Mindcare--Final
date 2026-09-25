@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0161",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 161,
+  "source_page_index": 160,
+  "source_page_display": 161,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "140    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\n\t67.\t Babington PW, et al. Treatment of catatonia with olanzapine and amantadine. Psychosomatics 2007; 48:534–536.\n\t68.\t Bastiampillai T, et al. Catatonia resolution and aripiprazole. Aust N Z J Psychiatry 2008; 42:907.\n\t69.\t Strawn JR, et al. Successful treatment of catatonia with aripiprazole in an adolescent with psychosis. J Child Adolesc Psychopharmacol 2007; \n17:733–735.\n\t70.\t Spiegel DR, et al. A case of schizophrenia with catatonia resistant to lorazepam and olanzapine monotherapy but responsive to combination \ntreatment: is it time to consider using select second-generation antipsychotics earlier in the treatment algorithm for this patient type? Clin \nNeuropharmacol 2019; 42:57–59.\n\t71.\t Cevher Binici N, et al. Response of catatonia to amisulpride and lorazepam in an adolescent with schizophenia. J Child Adolesc \nPsychopharmacol 2018; 28:151–152.\n\t72.\t Grover S, et al. Catatonia in systemic lupus erythematosus: a case report and review of literature. Lupus 2013; 22:634–638.\n\t73.\t Bilbily J, et al. Catatonia secondary to sudden clozapine withdrawal: a case with three repeated episodes and a literature review. Case Rep \nPsychiatry 2017; 2017:2402731.\n\t74.\t Rosebush PI, et al. Catatonia and its treatment. Schizophr Bull 2010; 36:239–242.\n\t75.\t Caroff SN, et al. Movement disorders induced by antipsychotic drugs: implications of the CATIE schizophrenia trial. Neurol Clin 2011; \n29:127–148, viii.\n\t76.\t Funayama M, et al. Catatonic stupor in schizophrenic disorders and subsequent medical complications and mortality. Psychosom Med 2018; \n80:370–376.\n\t77.\t Voros V, et al. [Use of aripiprazole in the treatment of catatonia]. NeuropsychopharmacolHung 2010; 12:373–376.\n\t78.\t Yoshimura B, et al. Is quetiapine suitable for treatment of acute schizophrenia with catatonic stupor? A case series of 39 patients. \nNeuropsychiatr Dis Treat 2013; 9:1565–1571.\n\t79.\t Todorova K. Olanzapine in the treatment of catatonic stupor – two case reports and discussion. Eur Neuropsychopharmacol 2012; 22 Suppl \n2:S326.\n\t80.\t Prakash O, et al. Catatonia and mania in patient with AIDS: treatment with lorazepam and risperidone. Gen Hosp Psychiatry 2012; \n34:321–326.\n\t81.\t Daniels J. Catatonia: clinical aspects and neurobiological correlates. J Neuropsychiatry Clin Neurosci 2009; 21:371–380.\n\t82.\t Obregon DF, et al. Memantine and catatonia: a case report and literature review. J Psychiatr Pract 2011; 17:292–299.\n\t83.\t Hervey WM, et al. Treatment of catatonia with amantadine. Clin Neuropharmacol 2012; 35:86–87.\n\t84.\t Consoli A, et al. Lorazepam, fluoxetine and packing therapy in an adolescent with pervasive developmental disorder and catatonia. J Physiol \nParis 2010; 104:309–314.\n\t85.\t Lewis AL, et al. Malignant catatonia in a patient with bipolar disorder, B12 deficiency, and neuroleptic malignant syndrome: one cause or \nthree? J Psychiatr Pract 2009; 15:415–422.\n\t86.\t Padhy SK, et al. The catatonia conundrum: controversies and contradictions. Asian J Psychiatr 2014; 7:6–9.\n",
+  "raw_text_sha256": "ae63722f5b73ae5dcd1d594addf1cd498cfc07050b57ed1a0b045c64b9f647da",
+  "coordinates_sha256": "ec7dda60d5d4063b1a7815d5e1b6900413429f73edb9d6c54700cda282d66eb4",
+  "block_sequence_sha256": "ee295434a39af4e090fb21d49dc92ed2a83b0ce9edfe184ad367df6c914360db",
+  "blocks": [
+    {
+      "block_id": "page-0161-block-0000",
+      "order": 0,
+      "text": "140    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "dde0641cae92e350b2c9d81e4ec16fbd107f88ed281ed2f17c8fec8105886a48"
+    },
+    {
+      "block_id": "page-0161-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0161-block-0002",
+      "order": 2,
+      "text": "\t67.\t Babington PW, et al. Treatment of catatonia with olanzapine and amantadine. Psychosomatics 2007; 48:534–536.\n\t68.\t Bastiampillai T, et al. Catatonia resolution and aripiprazole. Aust N Z J Psychiatry 2008; 42:907.\n\t69.\t Strawn JR, et al. Successful treatment of catatonia with aripiprazole in an adolescent with psychosis. J Child Adolesc Psychopharmacol 2007; \n",
+      "bbox": [
+        61.88909912109375,
+        63.12541198730469,
+        435.5690612792969,
+        88.30140686035156
+      ],
+      "text_sha256": "56dc71f273cf136d16b0d454d70bb64ce23d02e9ed5088e5fdbe915df70fdc19"
+    },
+    {
+      "block_id": "page-0161-block-0003",
+      "order": 3,
+      "text": "17:733–735.\n\t70.\t Spiegel DR, et al. A case of schizophrenia with catatonia resistant to lorazepam and olanzapine monotherapy but responsive to combination \n",
+      "bbox": [
+        61.90709686279297,
+        90.12541198730469,
+        435.5931091308594,
+        106.30140686035156
+      ],
+      "text_sha256": "c54ebdb048b41f62acc8ab7cd3cd452a3a7c3b4712d0a80aa5df8e173b55bb8c"
+    },
+    {
+      "block_id": "page-0161-block-0004",
+      "order": 4,
+      "text": "treatment: is it time to consider using select second-generation antipsychotics earlier in the treatment algorithm for this patient type? Clin \nNeuropharmacol 2019; 42:57–59.\n\t71.\t Cevher Binici N, et al. Response of catatonia to amisulpride and lorazepam in an adolescent with schizophenia. J Child Adolesc \n",
+      "bbox": [
+        61.91310119628906,
+        108.2694091796875,
+        435.6168518066406,
+        133.30140686035156
+      ],
+      "text_sha256": "1fb19ac63ea16fa72ad0f112cbd61f0f7116c35df1b8698b7209f02110b6b810"
+    },
+    {
+      "block_id": "page-0161-block-0005",
+      "order": 5,
+      "text": "Psychopharmacol 2018; 28:151–152.\n\t72.\t Grover S, et al. Catatonia in systemic lupus erythematosus: a case report and review of literature. Lupus 2013; 22:634–638.\n\t73.\t Bilbily J, et al. Catatonia secondary to sudden clozapine withdrawal: a case with three repeated episodes and a literature review. Case Rep \n",
+      "bbox": [
+        61.919097900390625,
+        135.1254119873047,
+        435.5931091308594,
+        160.30140686035156
+      ],
+      "text_sha256": "52fde5342033c3b4c3c4f037b8429f16bc95b2275ef8a8c4b5e7e480179a9b4c"
+    },
+    {
+      "block_id": "page-0161-block-0006",
+      "order": 6,
+      "text": "Psychiatry 2017; 2017:2402731.\n\t74.\t Rosebush PI, et al. Catatonia and its treatment. Schizophr Bull 2010; 36:239–242.\n\t75.\t Caroff SN, et al. Movement disorders induced by antipsychotic drugs: implications of the CATIE schizophrenia trial. Neurol Clin 2011; \n",
+      "bbox": [
+        61.93109893798828,
+        162.1254119873047,
+        435.6291198730469,
+        187.30140686035156
+      ],
+      "text_sha256": "927ac075abda7ce4cf2cc252dc6be1b87635012482c7e1cd47cb946c399194c7"
+    },
+    {
+      "block_id": "page-0161-block-0007",
+      "order": 7,
+      "text": "29:127–148, viii.\n\t76.\t Funayama M, et al. Catatonic stupor in schizophrenic disorders and subsequent medical complications and mortality. Psychosom Med 2018; \n",
+      "bbox": [
+        61.94309997558594,
+        189.1254119873047,
+        435.5811462402344,
+        205.30140686035156
+      ],
+      "text_sha256": "6bde44e4f2481b8bbeca0c394e3d506c07e2cd09a871bde7c5c6a9f6b895cc3c"
+    },
+    {
+      "block_id": "page-0161-block-0008",
+      "order": 8,
+      "text": "80:370–376.\n\t77.\t Voros V, et al. [Use of aripiprazole in the treatment of catatonia]. NeuropsychopharmacolHung 2010; 12:373–376.\n\t78.\t Yoshimura B, et al. Is quetiapine suitable for treatment of acute schizophrenia with catatonic stupor? A case series of 39 patients. \n",
+      "bbox": [
+        61.9490966796875,
+        207.1254119873047,
+        435.6289367675781,
+        232.30140686035156
+      ],
+      "text_sha256": "4a329027a1099a0eaca2a384e4e872833503903cc999b04212cf29eeb6fea63e"
+    },
+    {
+      "block_id": "page-0161-block-0009",
+      "order": 9,
+      "text": "Neuropsychiatr Dis Treat 2013; 9:1565–1571.\n\t79.\t Todorova K. Olanzapine in the treatment of catatonic stupor – two case reports and discussion. Eur Neuropsychopharmacol 2012; 22 Suppl \n",
+      "bbox": [
+        61.961097717285156,
+        234.1254119873047,
+        435.6651306152344,
+        250.30140686035156
+      ],
+      "text_sha256": "7f9de83abe58d0fa7730eb88de577b1dda88b6813bdb9707b07cfe13d5890c79"
+    },
+    {
+      "block_id": "page-0161-block-0010",
+      "order": 10,
+      "text": "2:S326.\n\t80.\t Prakash O, et al. Catatonia and mania in patient with AIDS: treatment with lorazepam and risperidone. Gen Hosp Psychiatry 2012; \n",
+      "bbox": [
+        61.96710205078125,
+        252.1254119873047,
+        435.6651916503906,
+        268.3014221191406
+      ],
+      "text_sha256": "066b8fd49b9e7e303d73027dd1f020d508d9969b04629e9ec1203e1194d2d68f"
+    },
+    {
+      "block_id": "page-0161-block-0011",
+      "order": 11,
+      "text": "34:321–326.\n\t81.\t Daniels J. Catatonia: clinical aspects and neurobiological correlates. J Neuropsychiatry Clin Neurosci 2009; 21:371–380.\n\t82.\t Obregon DF, et al. Memantine and catatonia: a case report and literature review. J Psychiatr Pract 2011; 17:292–299.\n\t83.\t Hervey WM, et al. Treatment of catatonia with amantadine. Clin Neuropharmacol 2012; 35:86–87.\n\t84.\t Consoli A, et al. Lorazepam, fluoxetine and packing therapy in an adolescent with pervasive developmental disorder and catatonia. J Physiol \n",
+      "bbox": [
+        61.97309875488281,
+        270.1253967285156,
+        435.6769714355469,
+        313.3014221191406
+      ],
+      "text_sha256": "836325d4af89e2275795357aa640c59c436abcee12d2eb7f645dd2cca78fe253"
+    },
+    {
+      "block_id": "page-0161-block-0012",
+      "order": 12,
+      "text": "Paris 2010; 104:309–314.\n\t85.\t Lewis AL, et al. Malignant catatonia in a patient with bipolar disorder, B12 deficiency, and neuroleptic malignant syndrome: one cause or \n",
+      "bbox": [
+        61.997100830078125,
+        315.1253967285156,
+        435.7132873535156,
+        331.3014221191406
+      ],
+      "text_sha256": "8dd3c7394879d75cedf8a61122cfa0fd195a7b001e9dc1dc1f27d3293a732f82"
+    },
+    {
+      "block_id": "page-0161-block-0013",
+      "order": 13,
+      "text": "three? J Psychiatr Pract 2009; 15:415–422.\n\t86.\t Padhy SK, et al. The catatonia conundrum: controversies and contradictions. Asian J Psychiatr 2014; 7:6–9.\n",
+      "bbox": [
+        62.00309753417969,
+        333.1253967285156,
+        351.7851257324219,
+        349.3014221191406
+      ],
+      "text_sha256": "b0a24cd7939d45f4a9c810e5ffae847dc17d515d9d831f0a8d52d76562a1d473"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

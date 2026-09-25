@@ -1,0 +1,311 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0177",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 177,
+  "source_page_index": 176,
+  "source_page_display": 177,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "156    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nyearly testing for diabetes for all patients. In addition, all patients should be asked to \nlook out for and report signs and symptoms of diabetes (fatigue, candida infection, \nthirst polyuria).\nTreatment of antipsychotic-related diabetes\nSwitching to an antipsychotic medication with a lower cardiometabolic risk is often \neffective in reversing changes in glucose tolerance. In this respect, the most compelling \nevidence is for switching to aripiprazole106,107 but also to ziprasidone107 and perhaps \nlurasidone.74 Standard antidiabetic treatments are otherwise recommended.80 \nPioglitazone108 may have particular benefit but note the hepatotoxic potential of this \ndrug. GLP-1 agonists such as liraglutide are increasingly used.109\nTable 1.25  Recommended monitoring for diabetes in patients receiving antipsychotic drug\nRecommended monitoring\nIdeally\nMinimum\nBaseline\nOGTT or FPG\nHbA1C if fasting not possible\nUrine glucose (UG)\nRandom plasma \nglucose (RPG)\nContinuation\nAll drugs: OGTT or FPG + HbA1C at 4–6 months then every \n12 months.\nFor clozapine and olanzapine or if other risk factors present: \nOGTT or FPG after one month, then every 4–6 months.\nFor on-going regular screening, HbA1C is a suitable test. \nNote that this test is not suitable for detecting short-term \nchange.\nUG or RPG every 12 \nmonths, with symptom \nmonitoring\nFPG, fasting plasma glucose; OGTT, oral glucose tolerance tests; RPG, random plasma glucose\nSummary: Antipsychotics – risk of diabetes and impaired glucose tolerance\nHigh risk\nClozapine, olanzapine\nModerate risk\nQuetiapine, risperidone, phenothiazines\nLow risk\nHigh-potency FGAs (e.g. haloperidol)\nMinimal risk\nAripiprazole, amisulpride, asenapine, brexpiprazole, cariprazine, lumateperone, \nlurasidone, ziprasidone\nReferences\n\t 1.\t Schimmelbusch WH, et al. The positive correlation between insulin resistance and duration of hospitalization in untreated schizophrenia. Br \nJ Psychiatry 1971; 118:429–436.\n\t 2.\t Waitzkin L. A survey for unknown diabetics in a mental hospital. I. Men under age fifty. Diabetes 1966; 15:97–104.\n\t 3.\t Kasanin J. The blood sugar curve in mental disease. II. The schizophrenia (dementia praecox) groups. Arch Neurol Psychiatry 1926; \n16:414–419.\n\t 4.\t Braceland FJ, et al. Delayed action of insulin in schizophrenia. Am J Psychiatry 1945; 102:108–110.\n\t 5.\t Kohen D. Diabetes mellitus and schizophrenia: historical perspective. Br J Psychiatry Suppl 2004; 47:S64–S66.\n\t 6.\t Knowler WC, et al. 10-year follow-up of diabetes incidence and weight loss in the Diabetes Prevention Program Outcomes Study. Lancet \n2009; 374:1677–1686.\n",
+  "raw_text_sha256": "3fcc3dd8afacb4280829fcc3af4a374f6c4db3ad19c0b47f7872a799926109ea",
+  "coordinates_sha256": "40d81b4737c567c5446d11817c76ab3d915341cb00fbf73bb1a106ecc1cd3a70",
+  "block_sequence_sha256": "310e682d88b2a7bac8f8db544495e7bc09f7b575f7e42aae68378039fe86f789",
+  "blocks": [
+    {
+      "block_id": "page-0177-block-0000",
+      "order": 0,
+      "text": "156    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "3f8ea3593757901dbd17ebedec0e42791f504de1b2acb67cf969e7e90754d01b"
+    },
+    {
+      "block_id": "page-0177-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0177-block-0002",
+      "order": 2,
+      "text": "yearly testing for diabetes for all patients. In addition, all patients should be asked to \nlook out for and report signs and symptoms of diabetes (fatigue, candida infection, \nthirst polyuria).\n",
+      "bbox": [
+        61.88909912109375,
+        62.54931640625,
+        436.7090759277344,
+        98.26931762695312
+      ],
+      "text_sha256": "65cc8e2c2c4c44959638c9ef505ac05cad883724c03777c598db91d3030b7ae3"
+    },
+    {
+      "block_id": "page-0177-block-0003",
+      "order": 3,
+      "text": "Treatment of antipsychotic-related diabetes\n",
+      "bbox": [
+        61.88909912109375,
+        115.70431518554688,
+        287.2571105957031,
+        128.73931884765625
+      ],
+      "text_sha256": "80d1224dbc89ce5f21421159694d87be364e025e69b8ca2d758f50657aaad35f"
+    },
+    {
+      "block_id": "page-0177-block-0004",
+      "order": 4,
+      "text": "Switching to an antipsychotic medication with a lower cardiometabolic risk is often \neffective in reversing changes in glucose tolerance. In this respect, the most compelling \nevidence is for switching to aripiprazole106,107 but also to ziprasidone107 and perhaps \nlurasidone.74 Standard antidiabetic treatments are otherwise recommended.80 \nPioglitazone108 may have particular benefit but note the hepatotoxic potential of this \ndrug. GLP-1 agonists such as liraglutide are increasingly used.109\n",
+      "bbox": [
+        61.88600158691406,
+        134.54931640625,
+        436.7092590332031,
+        206.26931762695312
+      ],
+      "text_sha256": "63328df4cd988c047aad886a1f9d4d61020af429b5c9b7c26b14afc852411876"
+    },
+    {
+      "block_id": "page-0177-block-0005",
+      "order": 5,
+      "text": "Table 1.25  Recommended monitoring for diabetes in patients receiving antipsychotic drug\n",
+      "bbox": [
+        67.88909912109375,
+        223.97682189941406,
+        358.6416931152344,
+        232.86431884765625
+      ],
+      "text_sha256": "65a878c3bb82cb6848c3bbb30868d7b153e8403c16f9bd18f9a312a3eb7adaa0"
+    },
+    {
+      "block_id": "page-0177-block-0006",
+      "order": 6,
+      "text": "Recommended monitoring\nIdeally\nMinimum\n",
+      "bbox": [
+        61.88909912109375,
+        243.21180725097656,
+        392.6240539550781,
+        252.09930419921875
+      ],
+      "text_sha256": "280b048dac9a1af01ce3234fe00f5fcf0f969cb4381d28aecd3ec6b30e36eb14"
+    },
+    {
+      "block_id": "page-0177-block-0007",
+      "order": 7,
+      "text": "Baseline\nOGTT or FPG\nHbA1C if fasting not possible\n",
+      "bbox": [
+        61.88911437988281,
+        259.9892883300781,
+        254.59385681152344,
+        280.5899658203125
+      ],
+      "text_sha256": "54b7ffe0ff0bd609683a7506351cadc10f8338ce87a25521adab141600b7ec7d"
+    },
+    {
+      "block_id": "page-0177-block-0008",
+      "order": 8,
+      "text": "Urine glucose (UG)\nRandom plasma \nglucose (RPG)\n",
+      "bbox": [
+        358.873779296875,
+        260.1693420410156,
+        418.8888244628906,
+        288.871826171875
+      ],
+      "text_sha256": "3d708a58c39b81fadd90139b11bb259d8de79c4e107b1d3f5945733c0c82b2c9"
+    },
+    {
+      "block_id": "page-0177-block-0009",
+      "order": 9,
+      "text": "Continuation\nAll drugs: OGTT or FPG + HbA1C at 4–6 months then every \n12 months.\n",
+      "bbox": [
+        61.88880920410156,
+        295.0068054199219,
+        353.2702331542969,
+        313.8968200683594
+      ],
+      "text_sha256": "85b7163bea3e946d86aabfe172b502b1a56fabf061fba99171a9f17c4f40015a"
+    },
+    {
+      "block_id": "page-0177-block-0010",
+      "order": 10,
+      "text": "For clozapine and olanzapine or if other risk factors present: \nOGTT or FPG after one month, then every 4–6 months.\n",
+      "bbox": [
+        164.63771057128906,
+        318.18682861328125,
+        353.6975402832031,
+        336.8918151855469
+      ],
+      "text_sha256": "9f74bb9edccf8df5f025d8c012de63cc20261c086118dc2494ff53ecc37e10d1"
+    },
+    {
+      "block_id": "page-0177-block-0011",
+      "order": 11,
+      "text": "For on-going regular screening, HbA1C is a suitable test. \nNote that this test is not suitable for detecting short-term \nchange.\n",
+      "bbox": [
+        164.63771057128906,
+        341.18182373046875,
+        349.6479797363281,
+        369.8943176269531
+      ],
+      "text_sha256": "e1b2ac7cad18f62db9e7fac1c19b0abfb349e4493b6193697a2e2714b24471f6"
+    },
+    {
+      "block_id": "page-0177-block-0012",
+      "order": 12,
+      "text": "UG or RPG every 12 \nmonths, with symptom \nmonitoring\n",
+      "bbox": [
+        358.87286376953125,
+        295.18682861328125,
+        435.1329040527344,
+        323.8893127441406
+      ],
+      "text_sha256": "03f7b9a88c4c753382bb19bedb2b5d8b016ff11af934c9c81654dfed4cfd97ad"
+    },
+    {
+      "block_id": "page-0177-block-0013",
+      "order": 13,
+      "text": "FPG, fasting plasma glucose; OGTT, oral glucose tolerance tests; RPG, random plasma glucose\n",
+      "bbox": [
+        61.88789367675781,
+        380.184326171875,
+        361.09295654296875,
+        388.8918151855469
+      ],
+      "text_sha256": "ffbb87c272e7c492642eda6013a6ad5b1b24a6d66596ba5dab78d1c393c5eaa7"
+    },
+    {
+      "block_id": "page-0177-block-0014",
+      "order": 14,
+      "text": "Summary: Antipsychotics – risk of diabetes and impaired glucose tolerance\n",
+      "bbox": [
+        61.88909912109375,
+        406.73931884765625,
+        433.7220153808594,
+        419.7743225097656
+      ],
+      "text_sha256": "9dabef901b06cb6a37f89eb2e1d9c9e3c5f57a8d4f8568c94bc9b845ff99edf7"
+    },
+    {
+      "block_id": "page-0177-block-0015",
+      "order": 15,
+      "text": "High risk\nClozapine, olanzapine\n",
+      "bbox": [
+        61.88909912109375,
+        435.42681884765625,
+        219.3215789794922,
+        444.1343078613281
+      ],
+      "text_sha256": "70e72069ecf3e57fc88950583c01e8dba121fed60186132fccf8976c0eadeff8"
+    },
+    {
+      "block_id": "page-0177-block-0016",
+      "order": 16,
+      "text": "Moderate risk\nQuetiapine, risperidone, phenothiazines\n",
+      "bbox": [
+        61.88909912109375,
+        452.4518127441406,
+        275.9991149902344,
+        461.1593017578125
+      ],
+      "text_sha256": "142a9269dc6ba08bce70e76b224716dbc69fb6edde45b9b7ddfabe42a43e4d74"
+    },
+    {
+      "block_id": "page-0177-block-0017",
+      "order": 17,
+      "text": "Low risk\nHigh-potency FGAs (e.g. haloperidol)\n",
+      "bbox": [
+        61.88909912109375,
+        467.4743347167969,
+        266.8341979980469,
+        476.18182373046875
+      ],
+      "text_sha256": "36e17b6bb5eefb978a3c503693d76ba29822ed2a96483d571449ec9583a1fad7"
+    },
+    {
+      "block_id": "page-0177-block-0018",
+      "order": 18,
+      "text": "Minimal risk\nAripiprazole, amisulpride, asenapine, brexpiprazole, cariprazine, lumateperone, \nlurasidone, ziprasidone\n",
+      "bbox": [
+        61.88909912109375,
+        482.496826171875,
+        402.8091125488281,
+        501.2018127441406
+      ],
+      "text_sha256": "bea8b6496f5075438e50df3538c4460ae439e78fe9d5f631438370fffc04bb6e"
+    },
+    {
+      "block_id": "page-0177-block-0019",
+      "order": 19,
+      "text": "References\n",
+      "bbox": [
+        61.88909912109375,
+        520.0493774414062,
+        117.923095703125,
+        533.0843505859375
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0177-block-0020",
+      "order": 20,
+      "text": "\t 1.\t Schimmelbusch WH, et al. The positive correlation between insulin resistance and duration of hospitalization in untreated schizophrenia. Br \n",
+      "bbox": [
+        61.88909912109375,
+        538.1703491210938,
+        435.5692443847656,
+        545.2023315429688
+      ],
+      "text_sha256": "5d224a23d26298b43cba152f94f0cf4690a9e31b368ae8313fd3dace7c15b4ad"
+    },
+    {
+      "block_id": "page-0177-block-0021",
+      "order": 21,
+      "text": "J Psychiatry 1971; 118:429–436.\n\t 2.\t Waitzkin L. A survey for unknown diabetics in a mental hospital. I. Men under age fifty. Diabetes 1966; 15:97–104.\n\t 3.\t Kasanin J. The blood sugar curve in mental disease. II. The schizophrenia (dementia praecox) groups. Arch Neurol Psychiatry 1926; \n",
+      "bbox": [
+        61.895103454589844,
+        547.0263671875,
+        435.5272521972656,
+        572.2023315429688
+      ],
+      "text_sha256": "2184ddaf115c5284c16450ff1aff89b38916e7e63f498b60697f1c20b80ae7c5"
+    },
+    {
+      "block_id": "page-0177-block-0022",
+      "order": 22,
+      "text": "16:414–419.\n\t 4.\t Braceland FJ, et al. Delayed action of insulin in schizophrenia. Am J Psychiatry 1945; 102:108–110.\n\t 5.\t Kohen D. Diabetes mellitus and schizophrenia: historical perspective. Br J Psychiatry Suppl 2004; 47:S64–S66.\n\t 6.\t Knowler WC, et al. 10-year follow-up of diabetes incidence and weight loss in the Diabetes Prevention Program Outcomes Study. Lancet \n",
+      "bbox": [
+        61.90709686279297,
+        574.0263671875,
+        435.6169738769531,
+        608.2023315429688
+      ],
+      "text_sha256": "4ad2a24f70c0a5fd21dcfd2df35ce4a37215cc55a3538a3fe626d852c77e645d"
+    },
+    {
+      "block_id": "page-0177-block-0023",
+      "order": 23,
+      "text": "2009; 374:1677–1686.\n",
+      "bbox": [
+        72.923095703125,
+        610.0263671875,
+        132.63507080078125,
+        617.2023315429688
+      ],
+      "text_sha256": "694775321d5b89e362f425c830432f17eb4677ee66123394ead4b85ca423b512"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

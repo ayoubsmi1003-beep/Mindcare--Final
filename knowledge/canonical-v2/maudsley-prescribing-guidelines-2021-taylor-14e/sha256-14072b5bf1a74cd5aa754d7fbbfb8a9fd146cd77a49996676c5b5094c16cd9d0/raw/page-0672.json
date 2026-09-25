@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0672",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 672,
+  "source_page_index": 671,
+  "source_page_display": 672,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Prescribing in older people    651\nCHAPTER  6\nOne RCT of valproate that included an open-label extension found it to be ineffec-\ntive in controlling symptoms. Seven of the 39 patients enrolled died during the 12-week \nextension phase study period, although the deaths could not be attributed to the drug.75 \nA study investigating the optimal dose of valproic acid in dementia found that whilst \nserum levels between 40μg/L and 60μg/L and relatively low doses (7–12mg/kg/day) are \nassociated with improvements in agitation in some patients, similar levels produced no \nsignificant improvements in others and led to substantial side effects.76 A 2009 Cochrane \nreview of valproate for the treatment of agitation in dementia found no evidence of \nefficacy but advocated the need for further research into its use in dementia.77 Valproate \ndoes not delay emergence of agitation in dementia.78 Literature reviews of antiseizure \nmedication in non-cognitive symptoms of dementia found that valproate, oxcarbaze-\npine and lithium showed low or no evidence of efficacy and that more RCTs are needed \nto strengthen the evidence for gabapentin, topiramate and lamotrigine.74\nPreliminary low-grade evidence based on case series and case reviews suggests a pos-\nsible beneﬁt of gabapentin and pregabalin in patients with BPSD in AD. Evidence in \nfrontotemporal dementia is lacking.79 In a small case series, gabapentin reduced aggres-\nsion among seven patients with vascular dementia or mixed vascular/AD, using daily \ndoses ranging from 200mg to 600mg daily. Three of the seven patients were able to dis-\ncontinue antipsychotics after gabapentin initiation; thus, it may be useful in patients with \ncardiac conditions where antipsychotics are inappropriate. Caution should be noted \nabout the use of gabapentin in Lewy body dementia; dramatic worsening of neuropsy-\nchiatric symptoms has been reported after its use to treat behavioural symptoms.80\nAlthough clearly beneficial in some patients, antiseizure medications/mood stabilis-\ners cannot be recommended for routine use in the treatment of the neuropsychiatric \nsymptoms in dementia at present.73\nRecommendation: Limited evidence to support its use – use may be justified where other \ntreatments are contraindicated or ineffective. Valproate is best avoided.\nMelatonin and sleep disturbances in AD\nEvidence regarding the effectiveness of melatonin supplementation on sleep in patients \nwith AD is limited. Six double-blind randomised placebo-controlled trials, mostly of \nlimited sample size have been published. Although it is clear that melatonin has no sig-\nnificant side effects, even at high doses, the results of studies have been equivocal. Some \nstudies showed beneficial effects, mainly improvement of day/night-time sleep ratio and \ndecrease of nocturnal activity whilst other studies failed to demonstrate objective effec-\ntiveness.81 Non-pharmacological management of sleep disturbances using established \nsleep hygiene methods should be the first-line treatment for insomnia in dementia.82\nA 2016 Cochrane review83 of pharmacotherapies for sleep disturbances in dementia \nfound no RCTs of many drugs that are widely prescribed for sleep problems in dementia, \nincluding the benzodiazepine and non-benzodiazepine hypnotics, although there is consid-\nerable uncertainty about the balance of benefits and risks associated with these common \ntreatments. From the studies identified, there was no evidence that melatonin (up to 10mg) \nhelped sleep problems in patients with moderate-to-severe dementia due to AD. There was \n",
+  "raw_text_sha256": "190153311f0605614d76f98489db333f57962f9a2175fc1775528810a026bd62",
+  "coordinates_sha256": "f00aae8236d2b0ce4417825e8778f750739216485c65943cc363e79bdc0f4f05",
+  "block_sequence_sha256": "5945b0a70e194cd78fc3f51b5db3dc53e4ab94ad72fa938627a66d752e0c7f93",
+  "blocks": [
+    {
+      "block_id": "page-0672-block-0000",
+      "order": 0,
+      "text": "Prescribing in older people    651\n",
+      "bbox": [
+        281.576904296875,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "3ee3eb7e5acd0bb7e082969cd6e0c0c4a08f00fcc47f80acab69a99156849568"
+    },
+    {
+      "block_id": "page-0672-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        454.4096984863281,
+        405.35260009765625,
+        463.88970947265625,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0672-block-0002",
+      "order": 2,
+      "text": "One RCT of valproate that included an open-label extension found it to be ineffec-\ntive in controlling symptoms. Seven of the 39 patients enrolled died during the 12-week \nextension phase study period, although the deaths could not be attributed to the drug.75 \nA study investigating the optimal dose of valproic acid in dementia found that whilst \nserum levels between 40μg/L and 60μg/L and relatively low doses (7–12mg/kg/day) are \nassociated with improvements in agitation in some patients, similar levels produced no \nsignificant improvements in others and led to substantial side effects.76 A 2009 Cochrane \nreview of valproate for the treatment of agitation in dementia found no evidence of \nefficacy but advocated the need for further research into its use in dementia.77 Valproate \ndoes not delay emergence of agitation in dementia.78 Literature reviews of antiseizure \nmedication in non-cognitive symptoms of dementia found that valproate, oxcarbaze-\npine and lithium showed low or no evidence of efficacy and that more RCTs are needed \nto strengthen the evidence for gabapentin, topiramate and lamotrigine.74\n",
+      "bbox": [
+        47.995574951171875,
+        62.5504150390625,
+        422.8155517578125,
+        218.27047729492188
+      ],
+      "text_sha256": "33dd12684914bc082d4848ccdb649ef399b169d0bc451cd1b95add39f38dfe7e"
+    },
+    {
+      "block_id": "page-0672-block-0003",
+      "order": 3,
+      "text": "Preliminary low-grade evidence based on case series and case reviews suggests a pos-\nsible beneﬁt of gabapentin and pregabalin in patients with BPSD in AD. Evidence in \nfrontotemporal dementia is lacking.79 In a small case series, gabapentin reduced aggres-\nsion among seven patients with vascular dementia or mixed vascular/AD, using daily \ndoses ranging from 200mg to 600mg daily. Three of the seven patients were able to dis-\ncontinue antipsychotics after gabapentin initiation; thus, it may be useful in patients with \ncardiac conditions where antipsychotics are inappropriate. Caution should be noted \nabout the use of gabapentin in Lewy body dementia; dramatic worsening of neuropsy-\nchiatric symptoms has been reported after its use to treat behavioural symptoms.80\n",
+      "bbox": [
+        48.0,
+        218.55047607421875,
+        422.80413818359375,
+        326.2704772949219
+      ],
+      "text_sha256": "eb3d58723db745eaa673041984ee1ae3b351807d3963788636b25a4ed9221225"
+    },
+    {
+      "block_id": "page-0672-block-0004",
+      "order": 4,
+      "text": "Although clearly beneficial in some patients, antiseizure medications/mood stabilis-\ners cannot be recommended for routine use in the treatment of the neuropsychiatric \nsymptoms in dementia at present.73\n",
+      "bbox": [
+        48.0,
+        326.55047607421875,
+        422.7399597167969,
+        362.2704772949219
+      ],
+      "text_sha256": "0752f998f1eb1ec1d43f18a9802c4c04b88bbc1887e6cebac6298666889c51c1"
+    },
+    {
+      "block_id": "page-0672-block-0005",
+      "order": 5,
+      "text": "Recommendation: Limited evidence to support its use – use may be justified where other \ntreatments are contraindicated or ineffective. Valproate is best avoided.\n",
+      "bbox": [
+        55.5,
+        383.6228942871094,
+        413.52020263671875,
+        403.69140625
+      ],
+      "text_sha256": "b30d94a461c21ae473332c7fd76a9bbdc60b631f4e2d8fbf59df29c6422fbd28"
+    },
+    {
+      "block_id": "page-0672-block-0006",
+      "order": 6,
+      "text": "Melatonin and sleep disturbances in AD\nEvidence regarding the effectiveness of melatonin supplementation on sleep in patients \nwith AD is limited. Six double-blind randomised placebo-controlled trials, mostly of \nlimited sample size have been published. Although it is clear that melatonin has no sig-\nnificant side effects, even at high doses, the results of studies have been equivocal. Some \nstudies showed beneficial effects, mainly improvement of day/night-time sleep ratio and \ndecrease of nocturnal activity whilst other studies failed to demonstrate objective effec-\ntiveness.81 Non-pharmacological management of sleep disturbances using established \nsleep hygiene methods should be the first-line treatment for insomnia in dementia.82\n",
+      "bbox": [
+        47.99580001831055,
+        423.7110900878906,
+        422.8198547363281,
+        530.8736572265625
+      ],
+      "text_sha256": "0ebffe0a2e718c35fe0745c9dbe3426d252f363877cfae6a671a1e513b984913"
+    },
+    {
+      "block_id": "page-0672-block-0007",
+      "order": 7,
+      "text": "A 2016 Cochrane review83 of pharmacotherapies for sleep disturbances in dementia \nfound no RCTs of many drugs that are widely prescribed for sleep problems in dementia, \nincluding the benzodiazepine and non-benzodiazepine hypnotics, although there is consid-\nerable uncertainty about the balance of benefits and risks associated with these common \ntreatments. From the studies identified, there was no evidence that melatonin (up to 10mg) \nhelped sleep problems in patients with moderate-to-severe dementia due to AD. There was \n",
+      "bbox": [
+        47.9989013671875,
+        531.1536254882812,
+        422.8087463378906,
+        602.8736572265625
+      ],
+      "text_sha256": "fdf886f54ffde1bbc2ca4c5daeb5f201cd1be27c436b7022fd1981e169fffdc9"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

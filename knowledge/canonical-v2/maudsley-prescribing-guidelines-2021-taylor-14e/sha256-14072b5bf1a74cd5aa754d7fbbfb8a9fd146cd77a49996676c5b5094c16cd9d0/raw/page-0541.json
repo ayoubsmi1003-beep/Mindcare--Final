@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0541",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 541,
+  "source_page_index": 540,
+  "source_page_display": 541,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "520    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nSynthetic cannabinoid receptor agonists (SCRAs)\nThe clinical importance of SCRAs relates to their acute toxicity (which is potentially life-threaten-\ning), their relationship to psychosis and their propensity to induce dependence. Doctors working in \nEmergency Departments, psychiatric settings and addiction services should be able to recognise \nand manage acute intoxication with synthetic cannabinoids.\nSCRAs are a structurally diverse group of chemicals that act as an agonist at the CB1 \nreceptor. Nomenclature is complex and the vast array of chemical structures is difficult \nto classify.1 New classes of SCRAs frequently emerge.2\nIn the UK, SCRAs were used predominantly by vulnerable groups such as the home-\nless and prisoners. However, recent post-mortem toxicological evidence suggests that a \nmajority of descendants lived in stable accommodation and took SCRAs as part of a \nmore general pattern of polysubstance use.3\nMost commonly, SCRAs are dissolved in alcohol and sprayed on plant material, then \nsmoked. More than one SCRA compound may be present in a single herbal pack and at \nthe time of writing, there are more than 700 street names for SCRAs, the most common \nof which are ‘Spice’ and ‘K2’.4 Many patients may not admit to SCRA use despite their \nrecent use.5 SCRAs are more potent in their action at the CB1 receptor and can be longer \nlasting than tetrahydracannabinol (THC), the main psychoactive ingredient in cannabis. \nThey also have diverse non-CB1 actions, which can influence their clinical effects.6\nAcute intoxication is distinct from and more severe than THC intoxication and is asso-\nciated with physical harms that can be life-threatening.7,8 In the UK, deaths associated \nwith SCRAs are rising, albeit overwhelmingly with polysubstance ingestion3 – in contrast \nwith deaths reported worldwide, where SCRAs are usually the single substance.9\nSCRA deaths in the UK:\n■\n■Occur via sudden collapse with cardiac or respiratory arrest\n■\n■Majority are unwitnessed\n■\n■Majority occur in those without pre-existing physical health problems\n■\n■Over 40% have opioids detected post-mortem\nSCRAs are associated with cardiotoxicity and at least some precipitate QT prolonga-\ntion.10 Therefore, consider offering ECGs to those who use SCRAs, particularly those \nwho are prescribed methadone. A case report exists of successful reversal of SCRA \noverdose with naloxone, which some have hypothesised relates to the interplay between \nopioid and cannabinoid systems.11\nIt is estimated that the risk of requiring emergency treatment is 30 times higher than \nthat associated with the use of cannabis.12 SCRAs can precipitate psychosis that persists \nafter intoxication. Around 15% of users report symptoms of dependence and a with-\ndrawal syndrome similar to cannabis withdrawal.\nAcute SCRA intoxication\nAcute SCRA intoxication needs to be recognised clinically as urine drug testing for \nSCRAs is not possible in the acute setting because of their structural diversity.13 \nLaboratory testing can be helpful but may not give results within a clinically meaningful \n",
+  "raw_text_sha256": "08a1b7ae6d80cc944713015e2955cb8e4b41c13808fc5e88a619303718e0d14c",
+  "coordinates_sha256": "e7b3f5ee672fde7e53a10681ee2c66ddbad985fb896e0bd6d64282d0f244ee47",
+  "block_sequence_sha256": "3956fb7fd6e0e4cf5f84999887d947974ad4d17b491bfd3de74650248e8d96b4",
+  "blocks": [
+    {
+      "block_id": "page-0541-block-0000",
+      "order": 0,
+      "text": "520    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "016a95dbb7e7f7808e76880ef4137bd4ee4eadbaa07f0b3abf9935d8e2792410"
+    },
+    {
+      "block_id": "page-0541-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0541-block-0002",
+      "order": 2,
+      "text": "Synthetic cannabinoid receptor agonists (SCRAs)\n",
+      "bbox": [
+        68.88999938964844,
+        66.06539916992188,
+        319.2609558105469,
+        79.10040283203125
+      ],
+      "text_sha256": "064423f812006d81a5c861e44f32feb0688ade56126f1996b564b3d663d74d59"
+    },
+    {
+      "block_id": "page-0541-block-0003",
+      "order": 3,
+      "text": "The clinical importance of SCRAs relates to their acute toxicity (which is potentially life-threaten-\ning), their relationship to psychosis and their propensity to induce dependence. Doctors working in \nEmergency Departments, psychiatric settings and addiction services should be able to recognise \nand manage acute intoxication with synthetic cannabinoids.\n",
+      "bbox": [
+        69.38999938964844,
+        97.33432006835938,
+        428.5321960449219,
+        137.19073486328125
+      ],
+      "text_sha256": "1043b302b759fc6f77348f4ef7c93a97b0bbeb2a3c5135ac0bd55b3146b102d3"
+    },
+    {
+      "block_id": "page-0541-block-0004",
+      "order": 4,
+      "text": "SCRAs are a structurally diverse group of chemicals that act as an agonist at the CB1 \nreceptor. Nomenclature is complex and the vast array of chemical structures is difficult \nto classify.1 New classes of SCRAs frequently emerge.2\n",
+      "bbox": [
+        61.88999938964844,
+        162.153076171875,
+        436.71002197265625,
+        197.87307739257812
+      ],
+      "text_sha256": "1c8ef8d3cae68904c9fe17763290e8a84cdbfe2cb1d03aa978bd8fa313903574"
+    },
+    {
+      "block_id": "page-0541-block-0005",
+      "order": 5,
+      "text": "In the UK, SCRAs were used predominantly by vulnerable groups such as the home-\nless and prisoners. However, recent post-mortem toxicological evidence suggests that a \nmajority of descendants lived in stable accommodation and took SCRAs as part of a \nmore general pattern of polysubstance use.3\n",
+      "bbox": [
+        61.88999938964844,
+        198.153076171875,
+        436.69000244140625,
+        245.87307739257812
+      ],
+      "text_sha256": "f04fb4e5fbcf014fe329c9f8341ae38e848b796479026c0fb3ad80dada2004f4"
+    },
+    {
+      "block_id": "page-0541-block-0006",
+      "order": 6,
+      "text": "Most commonly, SCRAs are dissolved in alcohol and sprayed on plant material, then \nsmoked. More than one SCRA compound may be present in a single herbal pack and at \nthe time of writing, there are more than 700 street names for SCRAs, the most common \nof which are ‘Spice’ and ‘K2’.4 Many patients may not admit to SCRA use despite their \nrecent use.5 SCRAs are more potent in their action at the CB1 receptor and can be longer \nlasting than tetrahydracannabinol (THC), the main psychoactive ingredient in cannabis. \nThey also have diverse non-CB1 actions, which can influence their clinical effects.6\n",
+      "bbox": [
+        61.885589599609375,
+        246.153076171875,
+        436.70562744140625,
+        329.8730773925781
+      ],
+      "text_sha256": "28bd585118c065d244ab700074b3a9e935aa285ca569b76fb1c04f1507940f87"
+    },
+    {
+      "block_id": "page-0541-block-0007",
+      "order": 7,
+      "text": "Acute intoxication is distinct from and more severe than THC intoxication and is asso-\nciated with physical harms that can be life-threatening.7,8 In the UK, deaths associated \nwith SCRAs are rising, albeit overwhelmingly with polysubstance ingestion3 – in contrast \nwith deaths reported worldwide, where SCRAs are usually the single substance.9\n",
+      "bbox": [
+        61.88652038574219,
+        330.153076171875,
+        436.67645263671875,
+        377.8730773925781
+      ],
+      "text_sha256": "b305593759fcf71765e7a3cd89653a238174d2b69e5fca013673055e19bc540b"
+    },
+    {
+      "block_id": "page-0541-block-0008",
+      "order": 8,
+      "text": "SCRA deaths in the UK:\n",
+      "bbox": [
+        71.88999938964844,
+        378.153076171875,
+        176.3300018310547,
+        389.8730773925781
+      ],
+      "text_sha256": "cb60f40a7ed11808417d9fcafc53c2c30bac8b712c5769d411515bddfce76ee6"
+    },
+    {
+      "block_id": "page-0541-block-0009",
+      "order": 9,
+      "text": "■\n■Occur via sudden collapse with cardiac or respiratory arrest\n",
+      "bbox": [
+        61.88990020751953,
+        396.153076171875,
+        329.2700500488281,
+        407.8730773925781
+      ],
+      "text_sha256": "864691b2f66226693d3947ea21cc7b82f2c2496603b4c0b19948fe9ac72b8c95"
+    },
+    {
+      "block_id": "page-0541-block-0010",
+      "order": 10,
+      "text": "■\n■Majority are unwitnessed\n",
+      "bbox": [
+        61.88990020751953,
+        408.153076171875,
+        180.9099884033203,
+        419.8730773925781
+      ],
+      "text_sha256": "98d4ea4811df119dc4856106102695c81c939d60c13661c44633fc691df55113"
+    },
+    {
+      "block_id": "page-0541-block-0011",
+      "order": 11,
+      "text": "■\n■Majority occur in those without pre-existing physical health problems\n",
+      "bbox": [
+        61.88990020751953,
+        420.153076171875,
+        372.6199951171875,
+        431.8730773925781
+      ],
+      "text_sha256": "431b15b71acebe256c191f78605982886a833071dd1e7cb445b14e12878d77ad"
+    },
+    {
+      "block_id": "page-0541-block-0012",
+      "order": 12,
+      "text": "■\n■Over 40% have opioids detected post-mortem\n",
+      "bbox": [
+        61.88990020751953,
+        432.153076171875,
+        270.3299865722656,
+        443.8730773925781
+      ],
+      "text_sha256": "2a7a328df510f8d7b5d2dfb5245680b9d8a5cf2c6deba7bb74221b63acf0772d"
+    },
+    {
+      "block_id": "page-0541-block-0013",
+      "order": 13,
+      "text": "SCRAs are associated with cardiotoxicity and at least some precipitate QT prolonga-\ntion.10 Therefore, consider offering ECGs to those who use SCRAs, particularly those \nwho are prescribed methadone. A case report exists of successful reversal of SCRA \noverdose with naloxone, which some have hypothesised relates to the interplay between \nopioid and cannabinoid systems.11\n",
+      "bbox": [
+        61.88999938964844,
+        450.153076171875,
+        436.7030334472656,
+        509.8730773925781
+      ],
+      "text_sha256": "027b2aff2dabc414d0c514060245844c0e20778e1cf7f86930459694abef8cfd"
+    },
+    {
+      "block_id": "page-0541-block-0014",
+      "order": 14,
+      "text": "It is estimated that the risk of requiring emergency treatment is 30 times higher than \nthat associated with the use of cannabis.12 SCRAs can precipitate psychosis that persists \nafter intoxication. Around 15% of users report symptoms of dependence and a with-\ndrawal syndrome similar to cannabis withdrawal.\n",
+      "bbox": [
+        61.88679504394531,
+        510.153076171875,
+        436.72003173828125,
+        557.8731079101562
+      ],
+      "text_sha256": "f1bae7f21a253c16598f89b72185b84c9786e5ed807ca41fe6fe0858d98e8166"
+    },
+    {
+      "block_id": "page-0541-block-0015",
+      "order": 15,
+      "text": "Acute SCRA intoxication\n",
+      "bbox": [
+        61.88999938964844,
+        573.30810546875,
+        187.1799774169922,
+        586.3430786132812
+      ],
+      "text_sha256": "5f1aaa0016e845d855cff8c18044e079dc9109aca8823a7eac5891f332f6b8b3"
+    },
+    {
+      "block_id": "page-0541-block-0016",
+      "order": 16,
+      "text": "Acute SCRA intoxication needs to be recognised clinically as urine drug testing for \nSCRAs is not possible in the acute setting because of their structural diversity.13 \nLaboratory testing can be helpful but may not give results within a clinically meaningful \n",
+      "bbox": [
+        61.889801025390625,
+        592.153076171875,
+        436.71990966796875,
+        627.8731079101562
+      ],
+      "text_sha256": "80ee774ca0600fca8294dc4636e0ea424eb716db72bed5c3eb4c989b3d152562"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

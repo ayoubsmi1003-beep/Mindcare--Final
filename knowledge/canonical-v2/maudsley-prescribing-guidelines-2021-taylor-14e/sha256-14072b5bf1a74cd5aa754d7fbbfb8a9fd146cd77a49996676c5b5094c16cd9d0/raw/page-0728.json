@@ -1,0 +1,671 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0728",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 728,
+  "source_page_index": 727,
+  "source_page_display": 728,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug\nInfant plasma \nconcentrations\nRelative infant \ndose (RID)\nReported acute adverse effects in \ninfant\nReported developmental effects in \ninfant\nFluvoxamine4,11,14,46–53\nUndetectable to up to half \nthe maternal plasma level.\n1–2%\nNeonatal jaundice, severe diarrhoea, \nmild vomiting, decreased sleep and \nagitation.\nNone reported\nIn a study of 78 infants of mothers taking \nan SSRI or venlafaxine no difference in \nweight was noted at 6 months compared \nwith the ‘normative’ weight.\nMAOIs54,55\nNo published data available \nat the time of writing.\nIsoniazid = 1.2–\n18%.\nNone reported\nNone reported but not assessed\nMianserin4,56\nNot assessed.\nNot assessed.\nNone reported\nNone reported but not studied\nMirtazapine4,11,57,58\nUndetectable or low. There \nis one case of higher \nmirtazapine plasma levels. \nThe authors suggest there \nmay be a large difference in \nmirtazapine elimination rates \nbetween individual infants.\n0.5–4.4%\nIn a study of 54 infants exposed to \nmirtazapine in utero the incidence of \npoor neonatal adaptation syndrome \nwas significantly diminished in those \nwho were breastfed.\nNo abnormalities reported:\nIn a study of eight infants weights for \nthree were observed to be between the \n10th to 25th percentiles. All three were \nnoted to also have a low birth weight.\nMoclobemide4,59,60\nLow.\n3.4%\nNone reported\nNone reported but not studied\nParoxetine2,4,11,14,23,38,46,61–70\nUndetectable or low.\n0.5–2.8%\nVomiting and irritability which were \nattributed to severe hyponatraemia.\nIn a study of 72 infants adverse \neffects were noted in 9 infants. \nInsomnia, restlessness and constant \ncrying were most commonly \nreported.\nNone reported.\nIn a study of 78 infants of mothers \ntaking an SSRI or venlafaxine no \ndifference in weight was noted at 6 \nmonths compared with the ‘normative’ \nweight.\nBreast-fed infants of 27 women taking \nparoxetine reached the usual \ndevelopmental milestones at 3, 6 and \n12 months, similar to a control group.\nTable 7.3  (Continued)\n(Continued)\n",
+  "raw_text_sha256": "817f03b01ddc47192588931d8040872788df3d0f7a8a213cb6d088a8af0c053e",
+  "coordinates_sha256": "3371e2c2af5dfd0e34348c435697730187c124edb78d65df917e2cd4698cbc86",
+  "block_sequence_sha256": "6ff9f1adcd8fa688398c62d57718fd0420bbdcb6eb7204d48dbef21a368e7d78",
+  "blocks": [
+    {
+      "block_id": "page-0728-block-0000",
+      "order": 0,
+      "text": "Drug\nInfant plasma \n",
+      "bbox": [
+        74.34000396728516,
+        441.7214660644531,
+        93.2249984741211,
+        612.6539916992188
+      ],
+      "text_sha256": "740ab9eb672cde86fd19cae765bab98ff010246377b1aac1269ef7543dd4a3b7"
+    },
+    {
+      "block_id": "page-0728-block-0001",
+      "order": 1,
+      "text": "concentrations\nRelative infant \n",
+      "bbox": [
+        74.34000396728516,
+        334.05145263671875,
+        93.2249984741211,
+        492.1514892578125
+      ],
+      "text_sha256": "bb1205aa23f4c324e61f2d45e2cc5a89247e633799704f1f4a6b66b6effcd299"
+    },
+    {
+      "block_id": "page-0728-block-0002",
+      "order": 2,
+      "text": "dose (RID)\nReported acute adverse effects in \n",
+      "bbox": [
+        74.34000396728516,
+        203.4314422607422,
+        93.2249984741211,
+        387.82647705078125
+      ],
+      "text_sha256": "3177e1242b62d10d9d24ae8b72819a2a6f978aa6260c48d73981167f1f9dad77"
+    },
+    {
+      "block_id": "page-0728-block-0003",
+      "order": 3,
+      "text": "infant\nReported developmental effects in \n",
+      "bbox": [
+        74.34000396728516,
+        67.8989486694336,
+        93.2249984741211,
+        323.32647705078125
+      ],
+      "text_sha256": "5208ea628ac7af2784c52fbd80c2393eb82f42a793d04e9fc000a75672474e8b"
+    },
+    {
+      "block_id": "page-0728-block-0004",
+      "order": 4,
+      "text": "infant\n",
+      "bbox": [
+        84.3375015258789,
+        170.70896911621094,
+        93.2249984741211,
+        191.9639892578125
+      ],
+      "text_sha256": "e7126f01d55795d9d0761c51e3f277a39d4ed441a3504bd0a6901247c19c0069"
+    },
+    {
+      "block_id": "page-0728-block-0005",
+      "order": 5,
+      "text": "Fluvoxamine4,11,14,46–53\nUndetectable to up to half \n",
+      "bbox": [
+        104.64000701904297,
+        405.4689636230469,
+        113.3499984741211,
+        612.6539916992188
+      ],
+      "text_sha256": "0ab49b0e7a9cf40b56705f88b0f1fede59edab8a06824d8dec5f130f86e41488"
+    },
+    {
+      "block_id": "page-0728-block-0006",
+      "order": 6,
+      "text": "the maternal plasma level.\n1–2%\nNeonatal jaundice, severe diarrhoea, \n",
+      "bbox": [
+        104.64250183105469,
+        205.11390686035156,
+        123.34749603271484,
+        492.15399169921875
+      ],
+      "text_sha256": "a3fffe91def9c789e2b09b9de4d36cc57fb48d38e75e3be0df7a96086f0a5cf4"
+    },
+    {
+      "block_id": "page-0728-block-0007",
+      "order": 7,
+      "text": "mild vomiting, decreased sleep and \n",
+      "bbox": [
+        114.63999938964844,
+        208.86387634277344,
+        123.34749603271484,
+        323.3289794921875
+      ],
+      "text_sha256": "00928b70b2ecebb8b569bc194885e5cd4192f93aa1464034158c943d483c7031"
+    },
+    {
+      "block_id": "page-0728-block-0008",
+      "order": 8,
+      "text": "agitation.\n",
+      "bbox": [
+        124.63750457763672,
+        292.908935546875,
+        133.34500122070312,
+        323.3289794921875
+      ],
+      "text_sha256": "54092026d888a142050cd6a2b950df9ab06cdd84168ab304430716b6c7e31175"
+    },
+    {
+      "block_id": "page-0728-block-0009",
+      "order": 9,
+      "text": "None reported\n",
+      "bbox": [
+        104.63500213623047,
+        145.42149353027344,
+        113.34249877929688,
+        191.96649169921875
+      ],
+      "text_sha256": "ee15e2569729659f4e2175a3a0ff5fb3c14f9a74f0c7aac51085138b8bafe0b1"
+    },
+    {
+      "block_id": "page-0728-block-0010",
+      "order": 10,
+      "text": "In a study of 78 infants of mothers taking \n",
+      "bbox": [
+        120.63249969482422,
+        62.778770446777344,
+        129.33999633789062,
+        191.96649169921875
+      ],
+      "text_sha256": "ec369e287b27858fc213845481935953eb16f87b5b08fd0f08afb7e7bdbea907"
+    },
+    {
+      "block_id": "page-0728-block-0011",
+      "order": 11,
+      "text": "an SSRI or venlafaxine no difference in \n",
+      "bbox": [
+        130.62998962402344,
+        73.0538558959961,
+        139.33749389648438,
+        191.96649169921875
+      ],
+      "text_sha256": "dadddfe832da356a46eaff055006515fae687de37fde4d3e49ab9a02d856aba6"
+    },
+    {
+      "block_id": "page-0728-block-0012",
+      "order": 12,
+      "text": "weight was noted at 6 months compared \n",
+      "bbox": [
+        140.6274871826172,
+        62.613792419433594,
+        149.33499145507812,
+        191.96649169921875
+      ],
+      "text_sha256": "96a3fcfb4bb2d90ed2170a04051e2715afcafb16dbc6b134fc97181750cda21b"
+    },
+    {
+      "block_id": "page-0728-block-0013",
+      "order": 13,
+      "text": "with the ‘normative’ weight.\n",
+      "bbox": [
+        150.62498474121094,
+        104.55391693115234,
+        159.33248901367188,
+        191.96649169921875
+      ],
+      "text_sha256": "85dd85571dd985869cc4fcb2bd09803d57aef7e9fe9695cf7e842b9e5f5f5976"
+    },
+    {
+      "block_id": "page-0728-block-0014",
+      "order": 14,
+      "text": "MAOIs54,55\nNo published data available \n",
+      "bbox": [
+        168.7524871826172,
+        402.1315002441406,
+        177.47500610351562,
+        612.656494140625
+      ],
+      "text_sha256": "d11c07f1216effba1043ebac4f237e8c8888463c65256c3be926bae11c77fb75"
+    },
+    {
+      "block_id": "page-0728-block-0015",
+      "order": 15,
+      "text": "at the time of writing.\nIsoniazid = 1.2–\n",
+      "bbox": [
+        168.7675018310547,
+        337.4814147949219,
+        187.47250366210938,
+        492.15399169921875
+      ],
+      "text_sha256": "68d7388ba8c271cbb19370eeb57bd99c67ba50f647690b4dcdb4c9756b56825b"
+    },
+    {
+      "block_id": "page-0728-block-0016",
+      "order": 16,
+      "text": "18%.\nNone reported\nNone reported but not assessed\n",
+      "bbox": [
+        168.7675018310547,
+        90.40159606933594,
+        187.47250366210938,
+        387.8289794921875
+      ],
+      "text_sha256": "5d9fd886f933edf3771bf66acf6876de188e501a5cffd9c281a11225f514c646"
+    },
+    {
+      "block_id": "page-0728-block-0017",
+      "order": 17,
+      "text": "Mianserin4,56\nNot assessed.\nNot assessed.\nNone reported\nNone reported but not studied\n",
+      "bbox": [
+        196.8925018310547,
+        94.15159606933594,
+        205.60000610351562,
+        612.656494140625
+      ],
+      "text_sha256": "92e7dfb463dc778cfee1a4839e1291bf822405b8fe5554b5ad80602d3cb49ad7"
+    },
+    {
+      "block_id": "page-0728-block-0018",
+      "order": 18,
+      "text": "Mirtazapine4,11,57,58\nUndetectable or low. There \n",
+      "bbox": [
+        215.0175018310547,
+        403.51904296875,
+        223.72750854492188,
+        612.656494140625
+      ],
+      "text_sha256": "be92d27ea340bffba94ac40ca323125306a7e6a6e57d5f5623d90de532ef7770"
+    },
+    {
+      "block_id": "page-0728-block-0019",
+      "order": 19,
+      "text": "is one case of higher \n",
+      "bbox": [
+        225.01499938964844,
+        424.218994140625,
+        233.72250366210938,
+        492.15399169921875
+      ],
+      "text_sha256": "cc40bbbd391e5d5a9378dba059423666ed27309fa68c7b23107c5cf26e79affd"
+    },
+    {
+      "block_id": "page-0728-block-0020",
+      "order": 20,
+      "text": "mirtazapine plasma levels. \n",
+      "bbox": [
+        235.0124969482422,
+        406.7440185546875,
+        243.72000122070312,
+        492.15399169921875
+      ],
+      "text_sha256": "01c66289256d4a3224ff6d0e54aef430392029fb310950a6b47b5d9241740347"
+    },
+    {
+      "block_id": "page-0728-block-0021",
+      "order": 21,
+      "text": "The authors suggest there \n",
+      "bbox": [
+        245.00999450683594,
+        406.8489990234375,
+        253.71749877929688,
+        492.15399169921875
+      ],
+      "text_sha256": "991fb2d90fa46e28e4c41ed23d726a3e135f5c054d17cf551aeee3dd47397317"
+    },
+    {
+      "block_id": "page-0728-block-0022",
+      "order": 22,
+      "text": "may be a large difference in \n",
+      "bbox": [
+        255.0074920654297,
+        401.1715087890625,
+        263.7149963378906,
+        492.15399169921875
+      ],
+      "text_sha256": "291cfd7598f2874d29f305e7f1062631222f14e0040b5c21478a389a95f31a27"
+    },
+    {
+      "block_id": "page-0728-block-0023",
+      "order": 23,
+      "text": "mirtazapine elimination rates \n",
+      "bbox": [
+        265.0050048828125,
+        397.7439880371094,
+        273.7124938964844,
+        492.15399169921875
+      ],
+      "text_sha256": "d67d39a7455a27a755e548f8a2d965d6200629e62d454518d6d0f7e842d1792e"
+    },
+    {
+      "block_id": "page-0728-block-0024",
+      "order": 24,
+      "text": "between individual infants.\n",
+      "bbox": [
+        275.00250244140625,
+        405.88897705078125,
+        283.7099914550781,
+        492.15399169921875
+      ],
+      "text_sha256": "8bc4f01a77b8f527318c8b479b70c9125e4b7660edd0be088a2ec481478a21e7"
+    },
+    {
+      "block_id": "page-0728-block-0025",
+      "order": 25,
+      "text": "0.5–4.4%\nIn a study of 54 infants exposed to \n",
+      "bbox": [
+        215.0024871826172,
+        210.3788299560547,
+        223.70999145507812,
+        387.8289794921875
+      ],
+      "text_sha256": "1b4423d40df9e42228ee194bcad2950a66dc6ee4b50eb9ad4679cd3f04f48305"
+    },
+    {
+      "block_id": "page-0728-block-0026",
+      "order": 26,
+      "text": "mirtazapine in utero the incidence of \n",
+      "bbox": [
+        224.95498657226562,
+        204.2814483642578,
+        233.70748901367188,
+        323.3289794921875
+      ],
+      "text_sha256": "354b7333afb0e72f70dbdfd6bf8314aa83e259c7b5c88aad421fde9ce5cea308"
+    },
+    {
+      "block_id": "page-0728-block-0027",
+      "order": 27,
+      "text": "poor neonatal adaptation syndrome \n",
+      "bbox": [
+        234.9974822998047,
+        206.35133361816406,
+        243.70498657226562,
+        323.3289794921875
+      ],
+      "text_sha256": "9a09b35f8367dc02ddf2d33fee7857c0da2a89b24fc868a256772ac31007ee54"
+    },
+    {
+      "block_id": "page-0728-block-0028",
+      "order": 28,
+      "text": "was significantly diminished in those \n",
+      "bbox": [
+        244.99497985839844,
+        204.9788055419922,
+        253.70248413085938,
+        323.3289794921875
+      ],
+      "text_sha256": "2b75615be54ddc9396653e9d27f550f59657cd954656b8b0bd5afa78dbd6deb0"
+    },
+    {
+      "block_id": "page-0728-block-0029",
+      "order": 29,
+      "text": "who were breastfed.\n",
+      "bbox": [
+        254.9924774169922,
+        257.33648681640625,
+        263.6999816894531,
+        323.3289794921875
+      ],
+      "text_sha256": "8f52a9a41e8993055ff78bfe2c0084e20b55aa642d65a7d8aad2ad752183ea7a"
+    },
+    {
+      "block_id": "page-0728-block-0030",
+      "order": 30,
+      "text": "No abnormalities reported:\n",
+      "bbox": [
+        214.99497985839844,
+        106.25667572021484,
+        223.70248413085938,
+        191.96649169921875
+      ],
+      "text_sha256": "5942da611261d112ff257e64e0ceebcffbd30adfe6b7cc80b2e31c494edf9afe"
+    },
+    {
+      "block_id": "page-0728-block-0031",
+      "order": 31,
+      "text": "In a study of eight infants weights for \n",
+      "bbox": [
+        230.9924774169922,
+        69.8591537475586,
+        239.69998168945312,
+        191.96649169921875
+      ],
+      "text_sha256": "a13d41115a1b3fa70ed20b154315688c2d2de624463b0bea77e0abf683f8bf91"
+    },
+    {
+      "block_id": "page-0728-block-0032",
+      "order": 32,
+      "text": "three were observed to be between the \n",
+      "bbox": [
+        240.98997497558594,
+        63.461448669433594,
+        249.69747924804688,
+        191.96649169921875
+      ],
+      "text_sha256": "463ce6aaafb0c3d0aaa8ed2517fd1abf48aa6e5aa8de1c2c4f44ae713bd39408"
+    },
+    {
+      "block_id": "page-0728-block-0033",
+      "order": 33,
+      "text": "10th to 25th percentiles. All three were \nnoted to also have a low birth weight.\n",
+      "bbox": [
+        250.9874725341797,
+        64.01656341552734,
+        269.6924743652344,
+        191.96649169921875
+      ],
+      "text_sha256": "31d5f1720deea194a7c64a449ebf069efd92725a7c39625120b8b01bf5b54bcc"
+    },
+    {
+      "block_id": "page-0728-block-0034",
+      "order": 34,
+      "text": "Moclobemide4,59,60\nLow.\n3.4%\nNone reported\nNone reported but not studied\n",
+      "bbox": [
+        293.10748291015625,
+        94.15159606933594,
+        301.8500061035156,
+        612.656494140625
+      ],
+      "text_sha256": "9c458ab2fc7164850141aa37ff869eb006b2beb6b5fc9dd8f11f8b3cbe523043"
+    },
+    {
+      "block_id": "page-0728-block-0035",
+      "order": 35,
+      "text": "Paroxetine2,4,11,14,23,38,46,61–70\nUndetectable or low.\n0.5–2.8%\nVomiting and irritability which were \n",
+      "bbox": [
+        311.26751708984375,
+        207.6263885498047,
+        319.9775085449219,
+        612.656494140625
+      ],
+      "text_sha256": "a8d900abd0bfbff848a3db88c23bf695d85a01e259e82132e285bd3139b23dea"
+    },
+    {
+      "block_id": "page-0728-block-0036",
+      "order": 36,
+      "text": "attributed to severe hyponatraemia.\n",
+      "bbox": [
+        321.2650146484375,
+        208.87892150878906,
+        329.9725036621094,
+        323.3289794921875
+      ],
+      "text_sha256": "5400b2c180fea60a46dd088e61355e90fa04a835d1f5cbc1515f94bccd45d1ab"
+    },
+    {
+      "block_id": "page-0728-block-0037",
+      "order": 37,
+      "text": "In a study of 72 infants adverse \n",
+      "bbox": [
+        337.26251220703125,
+        221.22389221191406,
+        345.9700012207031,
+        323.3289794921875
+      ],
+      "text_sha256": "b723c57a1ceb288fc41c0a8e1bd9e1d9f871591d382d92b98da5fdb76caf407c"
+    },
+    {
+      "block_id": "page-0728-block-0038",
+      "order": 38,
+      "text": "effects were noted in 9 infants. \n",
+      "bbox": [
+        347.260009765625,
+        221.50144958496094,
+        355.9674987792969,
+        323.3289794921875
+      ],
+      "text_sha256": "f553aa212eb49a356b9d030b7cf5f803d76973191ea1a7f842630610a7b3b403"
+    },
+    {
+      "block_id": "page-0728-block-0039",
+      "order": 39,
+      "text": "Insomnia, restlessness and constant \n",
+      "bbox": [
+        357.25750732421875,
+        208.02381896972656,
+        365.9649963378906,
+        323.3289794921875
+      ],
+      "text_sha256": "a5c3610ce70ed9fbd5b1da368daeea36c73f8688061bfb8f720bcaed1ddc99f8"
+    },
+    {
+      "block_id": "page-0728-block-0040",
+      "order": 40,
+      "text": "crying were most commonly \n",
+      "bbox": [
+        367.2550048828125,
+        230.9664764404297,
+        375.9624938964844,
+        323.3289794921875
+      ],
+      "text_sha256": "3573ebd41cc99b91eff48e40cf2f9d9cce45f6164b4030482bed6c7ece4370d3"
+    },
+    {
+      "block_id": "page-0728-block-0041",
+      "order": 41,
+      "text": "reported.\n",
+      "bbox": [
+        377.25250244140625,
+        293.87646484375,
+        385.9599914550781,
+        323.3289794921875
+      ],
+      "text_sha256": "d15a88170c382811a331d271ffe4280263de718b84f375a082156d898cf013ec"
+    },
+    {
+      "block_id": "page-0728-block-0042",
+      "order": 42,
+      "text": "None reported.\n",
+      "bbox": [
+        311.25250244140625,
+        143.3365020751953,
+        319.9599914550781,
+        191.96649169921875
+      ],
+      "text_sha256": "cf53711182540597a6673376e5a8845af9f30f2c10f30bce4f5f441c2d8dec77"
+    },
+    {
+      "block_id": "page-0728-block-0043",
+      "order": 43,
+      "text": "In a study of 78 infants of mothers \n",
+      "bbox": [
+        327.25,
+        79.02413177490234,
+        335.9574890136719,
+        191.96649169921875
+      ],
+      "text_sha256": "d4711871609fb42fcabf2a619de0ddb4bad38c96658c33d62e663749e73f9ff7"
+    },
+    {
+      "block_id": "page-0728-block-0044",
+      "order": 44,
+      "text": "taking an SSRI or venlafaxine no \n",
+      "bbox": [
+        337.24749755859375,
+        87.3640365600586,
+        345.9549865722656,
+        191.96649169921875
+      ],
+      "text_sha256": "ce2494ceeaef5848b482f1bfdf5d7e67ce94a7edc99723c090860e80dfe4d1a1"
+    },
+    {
+      "block_id": "page-0728-block-0045",
+      "order": 45,
+      "text": "difference in weight was noted at 6 \n",
+      "bbox": [
+        347.2449951171875,
+        75.9640121459961,
+        355.9524841308594,
+        191.96649169921875
+      ],
+      "text_sha256": "a185aae8d7bf777db71e93305acd1413b68ce04af5cf32e496a967371169e859"
+    },
+    {
+      "block_id": "page-0728-block-0046",
+      "order": 46,
+      "text": "months compared with the ‘normative’ \n",
+      "bbox": [
+        357.24249267578125,
+        64.58650970458984,
+        365.9499816894531,
+        191.96649169921875
+      ],
+      "text_sha256": "798d2a2ebd66bfb25a74f10b13f7b6c05cb2ec5d180ea82332944a8a5ff0f6df"
+    },
+    {
+      "block_id": "page-0728-block-0047",
+      "order": 47,
+      "text": "weight.\n",
+      "bbox": [
+        367.239990234375,
+        167.7940216064453,
+        375.9474792480469,
+        191.96649169921875
+      ],
+      "text_sha256": "3569ccef31acfd64937896f43a8ad9180b7aea7695d20eab9d8ceefb5af4fe48"
+    },
+    {
+      "block_id": "page-0728-block-0048",
+      "order": 48,
+      "text": "Breast-fed infants of 27 women taking \n",
+      "bbox": [
+        383.23748779296875,
+        66.2441635131836,
+        391.9449768066406,
+        191.96649169921875
+      ],
+      "text_sha256": "6cb72fe2a4c552f937c4b2dbc0d37bdefa65908bb2892998d33251636af79c11"
+    },
+    {
+      "block_id": "page-0728-block-0049",
+      "order": 49,
+      "text": "paroxetine reached the usual \n",
+      "bbox": [
+        393.2349853515625,
+        97.6390609741211,
+        401.9424743652344,
+        191.96649169921875
+      ],
+      "text_sha256": "fd0e5e4faedc410922c6030dfa2e84706680232735ae95130598ae2ea562c9a5"
+    },
+    {
+      "block_id": "page-0728-block-0050",
+      "order": 50,
+      "text": "developmental milestones at 3, 6 and \n",
+      "bbox": [
+        403.23248291015625,
+        69.8591537475586,
+        411.9399719238281,
+        191.96649169921875
+      ],
+      "text_sha256": "8758fe8917eefd69f96edd0757927a06d23d8050c28f6c91f52d3b13168e00d8"
+    },
+    {
+      "block_id": "page-0728-block-0051",
+      "order": 51,
+      "text": "12 months, similar to a control group.\n",
+      "bbox": [
+        413.22998046875,
+        70.5416488647461,
+        421.9374694824219,
+        191.96649169921875
+      ],
+      "text_sha256": "e2bbc370d26d45ed9e780607513fbe529be22790ae76899cf27aeb078a4a55d9"
+    },
+    {
+      "block_id": "page-0728-block-0052",
+      "order": 52,
+      "text": "Table 7.3  (Continued)\n",
+      "bbox": [
+        53.73749923706055,
+        534.5339965820312,
+        62.625,
+        606.6539916992188
+      ],
+      "text_sha256": "0670877b7147a8e2e130f77db8bb3e9296a072628049a331b5ad9602295f1c55"
+    },
+    {
+      "block_id": "page-0728-block-0053",
+      "order": 53,
+      "text": "(Continued)\n",
+      "bbox": [
+        430.44000244140625,
+        64.3514633178711,
+        439.1925048828125,
+        100.36651611328125
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

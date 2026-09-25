@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0545",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 545,
+  "source_page_index": 544,
+  "source_page_display": 545,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "524    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nDrug-induced acute behavioural disturbance (ABD) in acute \nadmissions\nABD or ‘excited delirium’ is an under-recognised and potentially life-threatening syn-\ndrome of delirium, aggression and dysregulated physiological responses.1 Illicit drugs \nare the most common cause, notably cocaine and new psychoactive stimulants (NPS) \nincluding synthetic cannabinoids (‘spice’) and stimulants such as mephedrone. Substance \nwithdrawal and medical causes of delirium can also produce ABD.2\nThe aim of this section is to draw attention to the approach required for people \nwhose behaviour presents a danger to themselves or others because of the acute effect \nof illicit substances. Neither ‘acute behavioural disturbance’ nor ‘excited delirium’ are \nrecognised diagnoses, both terms are highly controversial, and their use in this section \ndoes not imply that there is an expected course to the conditions and situations poten-\ntially included under these terms. Specifically, physiological deterioration may or may \nnot occur, but such deterioration is not definitively linked to behavioural change result-\ning from acute use of illicit substances or to the use of the substances themselves. Early \nintervention and de-escalation are crucial to effective and safe treatment. Physical \nrestraint should be avoided where possible because of the substantial risk to life pre-\nsented by such procedures in these patients.\nPathophysiology\nDelirium produces disorientation and a ‘fight or flight’ response, and the physical exer-\ntion to ‘escape’ results in hyperthermia and catecholamine release.3 Hyperthermia in \nturn leads to rhabdomyolysis (with raised creatine kinase),4 as well as worsening delir-\nium.5 Excess sympathetic catecholamines prolong the cardiac QT interval and may \n‘stun’ the myocardium.6 Excess muscle activity, raised catecholamines, hyperthermia \nand dehydration contribute to a metabolic acidosis and the production of carbon diox-\nide. This manifests with tachypnoea and may herald pending cardiovascular collapse.\nIdentification\nNo symptoms are pathognomonic, but a prospective study found that the most com-\nmon symptoms were violent behaviour, increased pain tolerance and constant activity.7 \nRapid breathing, a lack of fatigue, hyperpyrexia and tactile hyperthermia are also fre-\nquently reported.8\nManagement\nVerbally de-escalate and try to ensure environmental safety for the individuals and oth-\ners – standard delirium orientation cues may help. Minimise physical contact and be \naware that restraint may exacerbate hyperthermia and catecholamine release, worsen-\ning outcomes.9 Sedation is important to calm aggression and reduce perpetuating heat \n",
+  "raw_text_sha256": "4279fba3284e064a2574f9060e20a32724bc4c78e75ab8bc8162d536eb42ef47",
+  "coordinates_sha256": "78a1ce93cc7b050d19b2d7368705e5d163e3080462f0298683d63576d4adaeeb",
+  "block_sequence_sha256": "0ad3f711474cbc7e41fb74e25760fb00ee8e79e1d411710e0484adead2dcdf4b",
+  "blocks": [
+    {
+      "block_id": "page-0545-block-0000",
+      "order": 0,
+      "text": "524    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "02d8938a514fd6b9550e6fc21615d2a5447a0e6877bbc8168e71e9111b361719"
+    },
+    {
+      "block_id": "page-0545-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0545-block-0002",
+      "order": 2,
+      "text": "Drug-induced acute behavioural disturbance (ABD) in acute \nadmissions\n",
+      "bbox": [
+        68.88999938964844,
+        70.06539916992188,
+        378.7490234375,
+        95.10137939453125
+      ],
+      "text_sha256": "b67dd759fcb381f9943543ff89c00ee5fde947b5671fb0a1287b0b16d0449b15"
+    },
+    {
+      "block_id": "page-0545-block-0003",
+      "order": 3,
+      "text": "ABD or ‘excited delirium’ is an under-recognised and potentially life-threatening syn-\ndrome of delirium, aggression and dysregulated physiological responses.1 Illicit drugs \nare the most common cause, notably cocaine and new psychoactive stimulants (NPS) \nincluding synthetic cannabinoids (‘spice’) and stimulants such as mephedrone. Substance \nwithdrawal and medical causes of delirium can also produce ABD.2\n",
+      "bbox": [
+        61.88999938964844,
+        106.910400390625,
+        436.6846008300781,
+        166.63040161132812
+      ],
+      "text_sha256": "38f9ce867bf3f2c6ccaeb0bc952140cf302409f5581ab69be2941ad3933d8297"
+    },
+    {
+      "block_id": "page-0545-block-0004",
+      "order": 4,
+      "text": "The aim of this section is to draw attention to the approach required for people \nwhose behaviour presents a danger to themselves or others because of the acute effect \nof illicit substances. Neither ‘acute behavioural disturbance’ nor ‘excited delirium’ are \nrecognised diagnoses, both terms are highly controversial, and their use in this section \ndoes not imply that there is an expected course to the conditions and situations poten-\ntially included under these terms. Specifically, physiological deterioration may or may \nnot occur, but such deterioration is not definitively linked to behavioural change result-\ning from acute use of illicit substances or to the use of the substances themselves. Early \nintervention and de-escalation are crucial to effective and safe treatment. Physical \nrestraint should be avoided where possible because of the substantial risk to life pre-\nsented by such procedures in these patients.\n",
+      "bbox": [
+        61.88999938964844,
+        166.910400390625,
+        436.7099609375,
+        298.6304016113281
+      ],
+      "text_sha256": "5ae38504710fc4f5aeac692c1013f45f3342f560dff8df5d5c754f5bef58c333"
+    },
+    {
+      "block_id": "page-0545-block-0005",
+      "order": 5,
+      "text": "Pathophysiology\n",
+      "bbox": [
+        61.88999938964844,
+        316.0653991699219,
+        148.6799774169922,
+        329.10040283203125
+      ],
+      "text_sha256": "1f48aee28fd34954f55f792c100ba735e1dce24a7d500b1c2e267d4d066d32f2"
+    },
+    {
+      "block_id": "page-0545-block-0006",
+      "order": 6,
+      "text": "Delirium produces disorientation and a ‘fight or flight’ response, and the physical exer-\ntion to ‘escape’ results in hyperthermia and catecholamine release.3 Hyperthermia in \nturn leads to rhabdomyolysis (with raised creatine kinase),4 as well as worsening delir-\nium.5 Excess sympathetic catecholamines prolong the cardiac QT interval and may \n‘stun’ the myocardium.6 Excess muscle activity, raised catecholamines, hyperthermia \nand dehydration contribute to a metabolic acidosis and the production of carbon diox-\nide. This manifests with tachypnoea and may herald pending cardiovascular collapse.\n",
+      "bbox": [
+        61.88848876953125,
+        334.910400390625,
+        436.6936950683594,
+        418.6304016113281
+      ],
+      "text_sha256": "abae4f463196b0b0950f2910983fc535ab92d2c24647ea70696680cc8455048d"
+    },
+    {
+      "block_id": "page-0545-block-0007",
+      "order": 7,
+      "text": "Identification\n",
+      "bbox": [
+        61.88999938964844,
+        436.0653991699219,
+        130.958984375,
+        449.10040283203125
+      ],
+      "text_sha256": "ca0d7caa444dabd285d015f37614a5b45352f75ee95046abcc89efe826b56ef3"
+    },
+    {
+      "block_id": "page-0545-block-0008",
+      "order": 8,
+      "text": "No symptoms are pathognomonic, but a prospective study found that the most com-\nmon symptoms were violent behaviour, increased pain tolerance and constant activity.7 \nRapid breathing, a lack of fatigue, hyperpyrexia and tactile hyperthermia are also fre-\nquently reported.8\n",
+      "bbox": [
+        61.88999938964844,
+        454.910400390625,
+        436.6700134277344,
+        502.6304016113281
+      ],
+      "text_sha256": "45ec7423544c821b6c985c68f50d7158e6fae735c36cac6f3d254900e8cae5c8"
+    },
+    {
+      "block_id": "page-0545-block-0009",
+      "order": 9,
+      "text": "Management\n",
+      "bbox": [
+        61.88999938964844,
+        520.0654296875,
+        130.95899963378906,
+        533.1004028320312
+      ],
+      "text_sha256": "b7c8078b02231574c679ff1660f4ee2c4e4b0661ca89cd501152f9404d2324c0"
+    },
+    {
+      "block_id": "page-0545-block-0010",
+      "order": 10,
+      "text": "Verbally de-escalate and try to ensure environmental safety for the individuals and oth-\ners – standard delirium orientation cues may help. Minimise physical contact and be \naware that restraint may exacerbate hyperthermia and catecholamine release, worsen-\ning outcomes.9 Sedation is important to calm aggression and reduce perpetuating heat \n",
+      "bbox": [
+        61.88999938964844,
+        538.910400390625,
+        436.6983337402344,
+        586.6304321289062
+      ],
+      "text_sha256": "2e9089c88697a24ba7121f80f3bbd97cc8162253a4edc434385a1853d5ef1908"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

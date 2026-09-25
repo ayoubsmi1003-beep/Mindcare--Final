@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0689",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 689,
+  "source_page_index": 688,
+  "source_page_display": 689,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "668    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  6\ncapacity to consent would be aware of receiving medication, if they were not deceived \ninto thinking otherwise.7 For example, a patient with moderate dementia who has no \ninsight and does not believe he/she needs to take medication, but will take liquid medi-\ncation if this is mixed with his/her tea without him/her being aware of this. It is this \ngroup to whom the rest of this guidance applies.\nTreatment may be given to people who lack capacity if it has been concluded that \ntreatment is in the patient’s best interests (Section 5 MCA3) and is proportionate to the \nharm to be avoided (Chapter 6.41, MCA Code of Practice6). So, there should be a clear \nexpectation that the patient will benefit from covert administration, and that this will \navoid significant harm (either mental or physical) to the patient or others. The treat-\nment must be necessary to save the patient’s life, to prevent deterioration in health or to \nensure an improvement in physical or mental health.3,6\nCovert administration must be the least restrictive option after trying all other \noptions. A functional assessment should be carried out to try to understand why the \nperson is refusing to take their medicines. Alternative methods of administration (e.g. \nliquid formulation), and trial of different approaches in nursing care (e.g. spending time \nwith the patient to explain about the medicines at the time they are administered or \nchanging the time of administration to a time of day when the patient is more alert or \nless distressed) should also be considered.8\nThe decision to administer medication covertly should not be made by a single indi-\nvidual but should involve discussion with the multidisciplinary team caring for the \npatient and the patient’s relatives or informal carers. It is good practice to hold a ‘Best \nInterests Meeting’. If it were determined at the Best Interests Meeting that the provision \nof covert medication would amount to a deprivation of liberty (where previously there \nwas none), then an application for Deprivation of Liberty Safeguards (DoLS) authorisa-\ntion should be made. Decisions regarding covert administration of medication should \nbe carefully documented in the patient’s medical records with a clear management plan, \nincluding details of how the covert medication plan will be reviewed. This documenta-\ntion must be easily accessible on viewing the person’s records and the decision should \nbe subject to regular review.\nIt is not necessary to have a new Best Interests Meeting each time there is a change in \nmedication. However, when covert medication is first considered, healthcare profes-\nsionals should consider what types of changes in medication may be anticipated in \nfuture and should agree on the thresholds of what changes may require a new Best \nInterests Meeting. This management plan should be recorded in the patient’s notes. If \nsignificant changes that could cause adverse effects are envisaged, then a new Best \nInterests Meeting should be held before these changes are made.\nIn deciding how often capacity assessments should be repeated, clinicians should fol-\nlow the guidance within the Practical Guide to the MCA.5 If there is any evidence that \nthe patient has re-gained capacity, an immediate capacity assessment must be done. \nDecisions in the patient’s best interests can no longer be made, their DoLS authorisation \nwill no longer be valid and covert administration of medication must cease \nimmediately.\nRecent Case Law9,10 has dealt with the relationship between the use of covert medica-\ntion and the need for a DoLS authorisation. Patients are deprived of their liberty when \n",
+  "raw_text_sha256": "312988b1312ae85b0b1339cfebd19ca4912f23e4dce8a30924f7715a74ad815c",
+  "coordinates_sha256": "28af06e89a04f9eebdd2f8de175b7a987cda17ba16dcce350739eca72a799a46",
+  "block_sequence_sha256": "4fcd65f29792fd4b870cf95b96819626ed9d0ba63001a2f71b6c5e99930c26e0",
+  "blocks": [
+    {
+      "block_id": "page-0689-block-0000",
+      "order": 0,
+      "text": "668    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "7f569a4cddd80fdfd7f5dbe9e45b7d4725483af1e594c7e89c98b3b2f5eec540"
+    },
+    {
+      "block_id": "page-0689-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        18.520000457763672,
+        405.35260009765625,
+        28.0,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0689-block-0002",
+      "order": 2,
+      "text": "capacity to consent would be aware of receiving medication, if they were not deceived \ninto thinking otherwise.7 For example, a patient with moderate dementia who has no \ninsight and does not believe he/she needs to take medication, but will take liquid medi-\ncation if this is mixed with his/her tea without him/her being aware of this. It is this \ngroup to whom the rest of this guidance applies.\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.70001220703125,
+        122.27029418945312
+      ],
+      "text_sha256": "2df5aa3d5895d77c7ddb943cb0962b141308470638dd6648cb49e38071db67b9"
+    },
+    {
+      "block_id": "page-0689-block-0003",
+      "order": 3,
+      "text": "Treatment may be given to people who lack capacity if it has been concluded that \ntreatment is in the patient’s best interests (Section 5 MCA3) and is proportionate to the \nharm to be avoided (Chapter 6.41, MCA Code of Practice6). So, there should be a clear \nexpectation that the patient will benefit from covert administration, and that this will \navoid significant harm (either mental or physical) to the patient or others. The treat-\nment must be necessary to save the patient’s life, to prevent deterioration in health or to \nensure an improvement in physical or mental health.3,6\n",
+      "bbox": [
+        61.885009765625,
+        122.55029296875,
+        436.69427490234375,
+        206.27029418945312
+      ],
+      "text_sha256": "02319cfcc6fb6f7e445cdd6ac47c7262af16d27d5b3ae6b4d0b1f465cfd1efea"
+    },
+    {
+      "block_id": "page-0689-block-0004",
+      "order": 4,
+      "text": "Covert administration must be the least restrictive option after trying all other \noptions. A functional assessment should be carried out to try to understand why the \nperson is refusing to take their medicines. Alternative methods of administration (e.g. \nliquid formulation), and trial of different approaches in nursing care (e.g. spending time \nwith the patient to explain about the medicines at the time they are administered or \nchanging the time of administration to a time of day when the patient is more alert or \nless distressed) should also be considered.8\n",
+      "bbox": [
+        61.88999938964844,
+        206.55029296875,
+        436.7198791503906,
+        290.2702941894531
+      ],
+      "text_sha256": "e670aa453ccb56a82b5fb5d85c18186386507713232311f2fe66ba5b634ee67c"
+    },
+    {
+      "block_id": "page-0689-block-0005",
+      "order": 5,
+      "text": "The decision to administer medication covertly should not be made by a single indi-\nvidual but should involve discussion with the multidisciplinary team caring for the \npatient and the patient’s relatives or informal carers. It is good practice to hold a ‘Best \nInterests Meeting’. If it were determined at the Best Interests Meeting that the provision \nof covert medication would amount to a deprivation of liberty (where previously there \nwas none), then an application for Deprivation of Liberty Safeguards (DoLS) authorisa-\ntion should be made. Decisions regarding covert administration of medication should \nbe carefully documented in the patient’s medical records with a clear management plan, \nincluding details of how the covert medication plan will be reviewed. This documenta-\ntion must be easily accessible on viewing the person’s records and the decision should \nbe subject to regular review.\n",
+      "bbox": [
+        61.88999938964844,
+        290.55029296875,
+        436.6999816894531,
+        422.2702941894531
+      ],
+      "text_sha256": "d8aaac23f032b3a0d3057a14d044fb30ced5e03eede4e36c219106304f580750"
+    },
+    {
+      "block_id": "page-0689-block-0006",
+      "order": 6,
+      "text": "It is not necessary to have a new Best Interests Meeting each time there is a change in \nmedication. However, when covert medication is first considered, healthcare profes-\nsionals should consider what types of changes in medication may be anticipated in \nfuture and should agree on the thresholds of what changes may require a new Best \nInterests Meeting. This management plan should be recorded in the patient’s notes. If \nsignificant changes that could cause adverse effects are envisaged, then a new Best \nInterests Meeting should be held before these changes are made.\n",
+      "bbox": [
+        61.88999938964844,
+        422.55029296875,
+        436.7200622558594,
+        506.2702941894531
+      ],
+      "text_sha256": "d72a2515af8a1cf8c67a5641da561ef17d5904029875d1d0b63f6a61ab4aaa2e"
+    },
+    {
+      "block_id": "page-0689-block-0007",
+      "order": 7,
+      "text": "In deciding how often capacity assessments should be repeated, clinicians should fol-\nlow the guidance within the Practical Guide to the MCA.5 If there is any evidence that \nthe patient has re-gained capacity, an immediate capacity assessment must be done. \nDecisions in the patient’s best interests can no longer be made, their DoLS authorisation \nwill no longer be valid and covert administration of medication must cease \nimmediately.\n",
+      "bbox": [
+        61.88670349121094,
+        506.55029296875,
+        436.6466369628906,
+        578.2703247070312
+      ],
+      "text_sha256": "2ad8515b250a54872a7cd7befd363adf8cc1c1e7d9f11762d68b17ac9ff5ea57"
+    },
+    {
+      "block_id": "page-0689-block-0008",
+      "order": 8,
+      "text": "Recent Case Law9,10 has dealt with the relationship between the use of covert medica-\ntion and the need for a DoLS authorisation. Patients are deprived of their liberty when \n",
+      "bbox": [
+        61.889198303222656,
+        578.55029296875,
+        436.609130859375,
+        602.2703247070312
+      ],
+      "text_sha256": "4b1e0fcf35d5efd156f212e5230fe07832e0c50b195e134085a53ae566369458"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

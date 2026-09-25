@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0761",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 761,
+  "source_page_index": 760,
+  "source_page_display": 761,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "740    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 8\nTable 8.9  Antidepressants in renal impairment12\nDrug\nComments\nAgomelatine23\nNegligible renal excretion of unchanged agomelatine. No data on use in renal \ndisease. Manufacturer says pharmacokinetics unchanged in small study of 25mg \ndose in severe renal impairment but cautions use in moderate or severe renal disease. \nNephroprotective effects have been observed in rats.58,59\nAmitriptyline22,23,25,32,40,60–64\n<2% excreted unchanged in urine; no dose adjustment needed in renal failure. Dose \nas in normal renal function but start at a low dose and increase slowly. Monitor \npatient for urinary retention, confusion, sedation and postural hypotension. Has been \nused to treat pain in those with renal disease. Plasma level or ECG monitoring may \nbe useful. Associated with acute kidney injury.\nBrexanolone41,65\nLess than 1% excreted unchanged in urine. Manufacturer states no dosage \nadjustment is recommended in patients with GFR 15–60mL/min; avoid use in patients \nwith GFR <15mL/min because of the potential accumulation of the injection \nsolubilising agent, betadex sulfobutyl ether sodium.\n(Continued)\nTable 8.8  (Continued)\nDrug\nComments\nRisperidone22,23,25,40,50–53\nClearance of risperidone and the active metabolite of risperidone (9-OH-) is reduced \nby 60% in patients with moderate to severe renal disease. Dosing: GFR <50mL/min \n0.5mg twice daily for at least 1 week, then increasing by 0.5mg twice daily to \n1–2mg bd. The manufacturer advises caution when using risperidone in renal \nimpairment. The long-acting injection should only be used after titration with oral \nrisperidone as described above. If 2mg orally is tolerated, 25mg intramuscularly \nevery 2 weeks can be administered. There are two case reports of successful use of \nrisperidone long-acting injection in haemodialysis at a dose of 50mg 2-weekly in one \npatient and 37.5mg then 25mg in an older adult. Another describes the successful \nuse of risperidone in a child with steroid-induced psychosis and nephrotic syndrome.\nSulpiride8,22,23,25,54\nAlmost totally renally excreted, with 95% excreted in urine and faeces as unchanged \nsulpiride. Dosing regimen: GFR 30–60mL/min, give 70% of normal dose; GFR \n10–30mL/min give 50% of normal dose; GFR <10mL/min give 34% of normal dose. \nThere is a case report of renal failure with sulpiride due to diabetic coma and \nrhabdomyolysis. Probably best avoided in renal impairment.\nTrifluoperazine25\nLess than 1% excreted unchanged in the urine. Dose GFR <10–50mL/min as for \nnormal renal function – start with a low dose. Very limited data.\nZiprasidone22,40,55,56\n<1% is renally excreted unchanged. No dose adjustment needed for GFR >10mL/min \nbut care needed with using the injection as it contains a renally eliminated excipient \n(cyclodextrin sodium). Case report of 80mg twice daily dose used in a patient on \nhaemodialysis who then developed agranulocytosis.57\nZuclopenthixol22,23,25\n10–20% of unchanged drug and metabolites excreted unchanged in urine. \nManufacturer cautions use in renal disease as can accumulate. Dosing: 10–50mL/min \ndose as in normal renal function; GFR <10mL/min start with 50% of the dose and titrate \nslowly. Avoid both depot preparations (acetate and decanoate) in renal impairment.\n",
+  "raw_text_sha256": "170a3834bfe1e9af125a8555d53e675d687291a1d9d135e7ae68d704c89305e9",
+  "coordinates_sha256": "ebfc7d8c5ebae820a794543de5934def368907f4906e9f5106f8b25e32592dbb",
+  "block_sequence_sha256": "e702aca2d754a40863d390f04cd71f8205152f66f7667294804c2e6e169d1723",
+  "blocks": [
+    {
+      "block_id": "page-0761-block-0000",
+      "order": 0,
+      "text": "740    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "4727c12c5dfa538a6fe1deb344a890ee1ccce2ea5c6ca73583420583a7c1929c"
+    },
+    {
+      "block_id": "page-0761-block-0001",
+      "order": 1,
+      "text": "CHAPTER 8\n",
+      "bbox": [
+        18.520000457763672,
+        532.3878173828125,
+        28.0,
+        573.7318115234375
+      ],
+      "text_sha256": "5ba3d9fb75ff4f418d4a2e9d517f30966dcfb279c10487eec43c5aa3fd8757a2"
+    },
+    {
+      "block_id": "page-0761-block-0002",
+      "order": 2,
+      "text": "Table 8.9  Antidepressants in renal impairment12\n",
+      "bbox": [
+        67.88999938964844,
+        419.7378845214844,
+        222.51101684570312,
+        428.6253967285156
+      ],
+      "text_sha256": "e7dd21d1140d4a71e6a5e86f06df3a42fafff8f63c376b89b3e3de1a483e9ae8"
+    },
+    {
+      "block_id": "page-0761-block-0003",
+      "order": 3,
+      "text": "Drug\nComments\n",
+      "bbox": [
+        61.88999938964844,
+        439.6128845214844,
+        198.38999938964844,
+        448.5003967285156
+      ],
+      "text_sha256": "f0d3aba6cb5c63a8b3ce76553ca73a800f481925284fe7cc72b7ce3c93bfebe6"
+    },
+    {
+      "block_id": "page-0761-block-0004",
+      "order": 4,
+      "text": "Agomelatine23\nNegligible renal excretion of unchanged agomelatine. No data on use in renal \ndisease. Manufacturer says pharmacokinetics unchanged in small study of 25mg \ndose in severe renal impairment but cautions use in moderate or severe renal disease. \nNephroprotective effects have been observed in rats.58,59\n",
+      "bbox": [
+        61.88999938964844,
+        457.91790771484375,
+        435.382568359375,
+        496.6178894042969
+      ],
+      "text_sha256": "9092f5d9251cb47af1c1735ddad2b4a9d6d1a8b92d5fad8a1939eddfc0e38276"
+    },
+    {
+      "block_id": "page-0761-block-0005",
+      "order": 5,
+      "text": "Amitriptyline22,23,25,32,40,60–64\n<2% excreted unchanged in urine; no dose adjustment needed in renal failure. Dose \nas in normal renal function but start at a low dose and increase slowly. Monitor \npatient for urinary retention, confusion, sedation and postural hypotension. Has been \nused to treat pain in those with renal disease. Plasma level or ECG monitoring may \nbe useful. Associated with acute kidney injury.\n",
+      "bbox": [
+        61.88999938964844,
+        506.0428771972656,
+        435.82525634765625,
+        554.7403564453125
+      ],
+      "text_sha256": "86040d195fa0fd25193cb64e45a6d8a68cdc0d268ed2ad47a09d823e746b39ec"
+    },
+    {
+      "block_id": "page-0761-block-0006",
+      "order": 6,
+      "text": "Brexanolone41,65\nLess than 1% excreted unchanged in urine. Manufacturer states no dosage \nadjustment is recommended in patients with GFR 15–60mL/min; avoid use in patients \nwith GFR <15mL/min because of the potential accumulation of the injection \nsolubilising agent, betadex sulfobutyl ether sodium.\n",
+      "bbox": [
+        61.88999938964844,
+        564.160400390625,
+        435.9676513671875,
+        602.8678588867188
+      ],
+      "text_sha256": "0066ea8090b3e4ba39cd06d4aba1960c730497a4d96777e564e0a25302943254"
+    },
+    {
+      "block_id": "page-0761-block-0007",
+      "order": 7,
+      "text": "(Continued)\n",
+      "bbox": [
+        396.9750061035156,
+        611.3953857421875,
+        433.8899230957031,
+        620.1478881835938
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0761-block-0008",
+      "order": 8,
+      "text": "Table 8.8  (Continued)\n",
+      "bbox": [
+        67.88999938964844,
+        69.83790588378906,
+        140.760009765625,
+        78.72540283203125
+      ],
+      "text_sha256": "c68b21eb241a9f7a5bc6f32d5223f046017181f0cd84da8611583f876a211cca"
+    },
+    {
+      "block_id": "page-0761-block-0009",
+      "order": 9,
+      "text": "Drug\nComments\n",
+      "bbox": [
+        61.88999938964844,
+        90.71290588378906,
+        198.38999938964844,
+        99.60040283203125
+      ],
+      "text_sha256": "f0d3aba6cb5c63a8b3ce76553ca73a800f481925284fe7cc72b7ce3c93bfebe6"
+    },
+    {
+      "block_id": "page-0761-block-0010",
+      "order": 10,
+      "text": "Risperidone22,23,25,40,50–53\nClearance of risperidone and the active metabolite of risperidone (9-OH-) is reduced \nby 60% in patients with moderate to severe renal disease. Dosing: GFR <50mL/min \n0.5mg twice daily for at least 1 week, then increasing by 0.5mg twice daily to \n1–2mg bd. The manufacturer advises caution when using risperidone in renal \nimpairment. The long-acting injection should only be used after titration with oral \nrisperidone as described above. If 2mg orally is tolerated, 25mg intramuscularly \nevery 2 weeks can be administered. There are two case reports of successful use of \nrisperidone long-acting injection in haemodialysis at a dose of 50mg 2-weekly in one \npatient and 37.5mg then 25mg in an older adult. Another describes the successful \nuse of risperidone in a child with steroid-induced psychosis and nephrotic syndrome.\n",
+      "bbox": [
+        61.88999938964844,
+        109.01790618896484,
+        435.7276916503906,
+        207.702880859375
+      ],
+      "text_sha256": "8dbf95424e99b0810b202f96aa093d9c1bbd7c0f115c7985f8578d306fc4ca7a"
+    },
+    {
+      "block_id": "page-0761-block-0011",
+      "order": 11,
+      "text": "Sulpiride8,22,23,25,54\nAlmost totally renally excreted, with 95% excreted in urine and faeces as unchanged \nsulpiride. Dosing regimen: GFR 30–60mL/min, give 70% of normal dose; GFR \n10–30mL/min give 50% of normal dose; GFR <10mL/min give 34% of normal dose. \nThere is a case report of renal failure with sulpiride due to diabetic coma and \nrhabdomyolysis. Probably best avoided in renal impairment.\n",
+      "bbox": [
+        61.88999938964844,
+        217.1228790283203,
+        433.425048828125,
+        265.84039306640625
+      ],
+      "text_sha256": "0e8a785ad2cc44fae92b85af787e003d114ee160d213c43d54da922ad7a04882"
+    },
+    {
+      "block_id": "page-0761-block-0012",
+      "order": 12,
+      "text": "Trifluoperazine25\nLess than 1% excreted unchanged in the urine. Dose GFR <10–50mL/min as for \nnormal renal function – start with a low dose. Very limited data.\n",
+      "bbox": [
+        61.88999938964844,
+        275.2604064941406,
+        417.81011962890625,
+        293.972900390625
+      ],
+      "text_sha256": "468631b47358d04af92e697fe75422665f1aba9ece8ce45cd7683d00c63e6176"
+    },
+    {
+      "block_id": "page-0761-block-0013",
+      "order": 13,
+      "text": "Ziprasidone22,40,55,56\n<1% is renally excreted unchanged. No dose adjustment needed for GFR >10mL/min \nbut care needed with using the injection as it contains a renally eliminated excipient \n(cyclodextrin sodium). Case report of 80mg twice daily dose used in a patient on \nhaemodialysis who then developed agranulocytosis.57\n",
+      "bbox": [
+        61.88999938964844,
+        303.3929138183594,
+        434.670166015625,
+        342.0928955078125
+      ],
+      "text_sha256": "fd1635130b43128d60e6337522e85a9e874d5989e769981f9e7b4a8546d44ab3"
+    },
+    {
+      "block_id": "page-0761-block-0014",
+      "order": 14,
+      "text": "Zuclopenthixol22,23,25\n10–20% of unchanged drug and metabolites excreted unchanged in urine. \nManufacturer cautions use in renal disease as can accumulate. Dosing: 10–50mL/min \ndose as in normal renal function; GFR <10mL/min start with 50% of the dose and titrate \nslowly. Avoid both depot preparations (acetate and decanoate) in renal impairment.\n",
+      "bbox": [
+        61.88999938964844,
+        351.5179138183594,
+        435.9299621582031,
+        390.2178955078125
+      ],
+      "text_sha256": "c59dc49c9ab9f62aa6dc939e5f8ba57770e56091d360f4b7c3aea7f24a3cf0fa"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

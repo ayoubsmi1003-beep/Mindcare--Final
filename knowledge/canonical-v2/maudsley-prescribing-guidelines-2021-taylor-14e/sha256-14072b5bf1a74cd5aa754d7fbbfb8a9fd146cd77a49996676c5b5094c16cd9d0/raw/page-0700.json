@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0700",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 700,
+  "source_page_index": 699,
+  "source_page_display": 700,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\nChapter 7\nPregnancy and breastfeeding\nDrug choice in pregnancy \nA ‘normal’ outcome to pregnancy can never be guaranteed. The spontaneous abortion \nrate in confirmed early pregnancy is 10–20% and the risk of spontaneous major mal-\nformation is 2–3% (approximately 1 in 40 pregnancies).1\nLifestyle factors have an important influence on pregnancy outcome. It is well estab-\nlished that smoking cigarettes, eating a poor diet and drinking alcohol during preg-\nnancy can have adverse consequences for the foetus. Pre-pregnancy obesity increases \nthe risk of neural tube defects (obese women seem to require higher doses of folate \nsupplementation than women who have a BMI in the healthy range2).\nIn addition, psychiatric illness during pregnancy is an independent risk factor for \ncongenital malformations, stillbirths and neonatal deaths.3 Perinatal mental disorders \nare associated with risks for a broad range of negative child outcomes, many of which \ncan persist into late adolescence.4 Affective illness, anxiety disorders, eating disorders \nand other mental disorders increase the risk of preterm delivery.5,6 Note that preterm \ndelivery is also associated with an increased risk of depression, bipolar disorder and \nschizophrenia spectrum disorders in subsequent adult life.7\nThe safety of psychotropics in pregnancy cannot be clearly established because \nrobust, prospective trials are obviously unethical and long-term observational studies \nare obviously challenging to undertake. Individual decisions on psychotropic use in \npregnancy are therefore based on database studies that have many limitations (e.g. \nfailure to control for the effects of illness, smoking, obesity, other medications and other \nconfounders, multiple statistical tests increasing the risk of Type 2 error and exposure \nstatus based on pharmacy data), limited prospective data from teratology information \ncentres, and published case reports which are known to be biased towards selective \nreporting of adverse outcomes. At worst there may be no human data at all, but only \nanimal data from early preclinical studies. With new drugs early reports of adverse \noutcomes may or may not be replicated and a ‘best guess’ assessment must be made of \nthe risks and benefits associated with withdrawal or continuation of drug treatment. \nEven with established drugs, data related to long-term outcomes are rare.\n",
+  "raw_text_sha256": "540efd46d1bdd872bc9ab5d2dd64bba547eb752190d432f955d80ee04858bc2a",
+  "coordinates_sha256": "cc8b83b5b29fcf19e194237a75d7851d073d2bb9971cdd570b362dbcc7c58d1a",
+  "block_sequence_sha256": "44141a54f9cd98694c6a06fc4c2f1679ec2014ef9097821dd83b5ad2af9710c9",
+  "blocks": [
+    {
+      "block_id": "page-0700-block-0000",
+      "order": 0,
+      "text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\n",
+      "bbox": [
+        47.99980163574219,
+        585.1019897460938,
+        348.48388671875,
+        614.4779663085938
+      ],
+      "text_sha256": "c78fcd1eeb2357afb8eb5b97a8c858d68167bd409b9074c0da4e20c032bd5665"
+    },
+    {
+      "block_id": "page-0700-block-0001",
+      "order": 1,
+      "text": "Chapter 7\n",
+      "bbox": [
+        324.43121337890625,
+        59.724403381347656,
+        420.001220703125,
+        82.60040283203125
+      ],
+      "text_sha256": "7d4d4ff89a03de3e50dc3f5d7611e60b9cb79fec310e46b4c7d91b2f17316045"
+    },
+    {
+      "block_id": "page-0700-block-0002",
+      "order": 2,
+      "text": "Pregnancy and breastfeeding\n",
+      "bbox": [
+        117.61250305175781,
+        111.36316680908203,
+        420.00244140625,
+        137.43316650390625
+      ],
+      "text_sha256": "6079930b9b3a226277d6db03fb67f3e1590233d5b22e5f90f863b2386a2fbcba"
+    },
+    {
+      "block_id": "page-0700-block-0003",
+      "order": 3,
+      "text": "Drug choice in pregnancy \n",
+      "bbox": [
+        55.0,
+        209.98199462890625,
+        189.25497436523438,
+        223.01699829101562
+      ],
+      "text_sha256": "47be442696db7f4c95c53104d38f0ae304fe0beb298badaecd1be05b06cf13ae"
+    },
+    {
+      "block_id": "page-0700-block-0004",
+      "order": 4,
+      "text": "A ‘normal’ outcome to pregnancy can never be guaranteed. The spontaneous abortion \nrate in confirmed early pregnancy is 10–20% and the risk of spontaneous major mal-\nformation is 2–3% (approximately 1 in 40 pregnancies).1\n",
+      "bbox": [
+        48.0,
+        228.82699584960938,
+        422.7699890136719,
+        264.5469970703125
+      ],
+      "text_sha256": "c646a6598d3d238f6d91bc692b17fec1e83b1e4fa0b8f4592fc45e0bb9503272"
+    },
+    {
+      "block_id": "page-0700-block-0005",
+      "order": 5,
+      "text": "Lifestyle factors have an important influence on pregnancy outcome. It is well estab-\nlished that smoking cigarettes, eating a poor diet and drinking alcohol during preg-\nnancy can have adverse consequences for the foetus. Pre-pregnancy obesity increases \nthe risk of neural tube defects (obese women seem to require higher doses of folate \nsupplementation than women who have a BMI in the healthy range2).\n",
+      "bbox": [
+        48.0,
+        264.8269958496094,
+        422.7400817871094,
+        324.5469970703125
+      ],
+      "text_sha256": "8518ba3ab1dc085e6223c3eaf5566b329ac76d669100fa0b267514e43fcc9e69"
+    },
+    {
+      "block_id": "page-0700-block-0006",
+      "order": 6,
+      "text": "In addition, psychiatric illness during pregnancy is an independent risk factor for \ncongenital malformations, stillbirths and neonatal deaths.3 Perinatal mental disorders \nare associated with risks for a broad range of negative child outcomes, many of which \ncan persist into late adolescence.4 Affective illness, anxiety disorders, eating disorders \nand other mental disorders increase the risk of preterm delivery.5,6 Note that preterm \ndelivery is also associated with an increased risk of depression, bipolar disorder and \nschizophrenia spectrum disorders in subsequent adult life.7\n",
+      "bbox": [
+        47.999298095703125,
+        324.8269958496094,
+        422.8092041015625,
+        408.5469970703125
+      ],
+      "text_sha256": "7626f4d7ad96c9673dc4c37dcd8b118df4f38e2005b5ccfa18b117129ee86fe3"
+    },
+    {
+      "block_id": "page-0700-block-0007",
+      "order": 7,
+      "text": "The safety of psychotropics in pregnancy cannot be clearly established because \nrobust, prospective trials are obviously unethical and long-term observational studies \nare obviously challenging to undertake. Individual decisions on psychotropic use in \npregnancy are therefore based on database studies that have many limitations (e.g. \nfailure to control for the effects of illness, smoking, obesity, other medications and other \nconfounders, multiple statistical tests increasing the risk of Type 2 error and exposure \nstatus based on pharmacy data), limited prospective data from teratology information \ncentres, and published case reports which are known to be biased towards selective \nreporting of adverse outcomes. At worst there may be no human data at all, but only \nanimal data from early preclinical studies. With new drugs early reports of adverse \noutcomes may or may not be replicated and a ‘best guess’ assessment must be made of \nthe risks and benefits associated with withdrawal or continuation of drug treatment. \nEven with established drugs, data related to long-term outcomes are rare.\n",
+      "bbox": [
+        48.0,
+        408.8269958496094,
+        422.8400573730469,
+        564.5469970703125
+      ],
+      "text_sha256": "9d17a243754bfc161436c8d77efbcc91b17148f4cbd60ea9421e00c866f79109"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

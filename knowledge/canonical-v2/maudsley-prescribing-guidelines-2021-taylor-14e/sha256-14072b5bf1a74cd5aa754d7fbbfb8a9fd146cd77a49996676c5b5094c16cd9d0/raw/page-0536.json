@@ -1,0 +1,479 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0536",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 536,
+  "source_page_index": 535,
+  "source_page_display": 536,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    515\nCHAPTER 4\nInformation Service (NPIS), specifically the NPIS 24-hour telephone service and the \npoisons information database TOXBASE®.\nThe two scenarios with which clinicians should be conversant are unplanned acute \nwithdrawal and planned elective withdrawal in dependent users.\nTable 4.18  Management of acute unplanned withdrawal\nSetting\n■\n■Acute unplanned withdrawal is a medical emergency and should be managed in the \nacute hospital inpatient setting\n■\n■Severe withdrawal may require admission to an intensive care unit\nInitial \npharmacotherapy\n■\n■Initiate diazepam 20mg PO when early withdrawal symptoms are observed\n■\n■Diazepam can be repeated at 30 minutes to 4 hourly intervals until symptoms are con-\ntrolled\n■\n■Most cases of GBL withdrawal require 60–80mg diazepam in the first 24 hours\n■\n■Higher daily dosages of up to 300mg PO diazepam may be necessary\n■\n■If the patient becomes drowsy, withhold diazepam and review diagnosis\n■\n■One-to-one nursing care may assist in managing severe cases\n■\n■Have flumazenil to hand should reversal of effects be required\nAdjunctive \npharmacotherapy\n■\n■Initiate baclofen 10mg PO tds in combination with benzodiazepine withdrawal regimen \nwhere benzodiazepines prove to be inadequate\n■\n■This can be titrated to 20mg PO tds in cases of continued anxiety and agitation\n■\n■In cases of severe withdrawal consider addition of phenobarbital in doses of 150–450mg/\nday IV* (ICU only)\n■\n■In cases where severe withdrawal remains uncontrolled, IV anaesthetic such as propofol* \nmay be required (ICU only). Thiopental* coma has also been used in severe resistant \nwithdrawal8\n*The respiratory depressant effects of phenobarbital, thiopental and propofol cannot be reversed, and facilities for \nmechanical ventilation should be available.\nICU, intensive care unit; IV, intravenous; po, per os (by mouth); tds, ter die sumendum (three times a day).\nTable 4.19  Management of planned elective withdrawal\nSetting\n■\n■All patients undergoing planned withdrawal should be medically supervised\n■\n■Ambulatory community detoxification should only be attempted where there is no his-\ntory of delirium or psychosis. A third party should be at home who is able to monitor \nand support the withdrawal process. There should be the option of transferring the \npatient to an inpatient unit if symptoms are not well controlled\nPre-withdrawal\n■\n■Discuss treatment plan with the patient and person who will be supporting them\n■\n■Encourage the patient to keep a week-long diary of GBL use, including dose frequency \nand quantity\n■\n■Encourage the patient to cease ‘on-top’ drug use such as mephedrone and crystal meth-\namphetamine, prior to elective withdrawal\n■\n■Start baclofen 10mg PO tds 3–7 days before target withdrawal date\n■\n■Encourage patients to reduce GBL dose as much as tolerable either by reducing each \ndose by 0.1mL every 1–2 days or increasing the time period between doses\n",
+  "raw_text_sha256": "ddfcac4df1cdade4e40d2797729a10e3d6b587e2f40d84a2ae97620de77a4fc1",
+  "coordinates_sha256": "802444faaf66e31841603457922b6bd58ad5ded8863d43339922ef362de2b71c",
+  "block_sequence_sha256": "42294022514c14276ab0bb412add065c7ab81790c86327e974bd68ff2d0404bf",
+  "blocks": [
+    {
+      "block_id": "page-0536-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    515\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "b38a5e6071323a6d673b155b4dbad9758ccaf67a73fd67ba3b4046f8278c5abd"
+    },
+    {
+      "block_id": "page-0536-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0536-block-0002",
+      "order": 2,
+      "text": "Information Service (NPIS), specifically the NPIS 24-hour telephone service and the \npoisons information database TOXBASE®.\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.7400207519531,
+        86.27041625976562
+      ],
+      "text_sha256": "4141a70ea6a610f40fcfe88c011352c96fe73643d3af944146826f216558fbdd"
+    },
+    {
+      "block_id": "page-0536-block-0003",
+      "order": 3,
+      "text": "The two scenarios with which clinicians should be conversant are unplanned acute \nwithdrawal and planned elective withdrawal in dependent users.\n",
+      "bbox": [
+        48.00299072265625,
+        86.5504150390625,
+        422.8129577636719,
+        110.27041625976562
+      ],
+      "text_sha256": "574a17cbaa69df3b88b7cfff2a58fadc3b79aed723656c0f0a889e6776125cdf"
+    },
+    {
+      "block_id": "page-0536-block-0004",
+      "order": 4,
+      "text": "Table 4.18  Management of acute unplanned withdrawal\n",
+      "bbox": [
+        54.0005989074707,
+        144.12709045410156,
+        238.22308349609375,
+        153.01458740234375
+      ],
+      "text_sha256": "c33dac2daaf5f11e0186ee9c7311deeb3565683d0177f749459030cd619ea6ac"
+    },
+    {
+      "block_id": "page-0536-block-0005",
+      "order": 5,
+      "text": "Setting\n■\n■Acute unplanned withdrawal is a medical emergency and should be managed in the \n",
+      "bbox": [
+        48.0005989074707,
+        164.00209045410156,
+        405.8132019042969,
+        172.88958740234375
+      ],
+      "text_sha256": "80c0c4fea7b670fd3cf23945d460dec7dff8dc298b06afaef908956d0c48f9b4"
+    },
+    {
+      "block_id": "page-0536-block-0006",
+      "order": 6,
+      "text": "acute hospital inpatient setting\n",
+      "bbox": [
+        134.50059509277344,
+        173.1820831298828,
+        233.2605438232422,
+        181.88958740234375
+      ],
+      "text_sha256": "d655b2f73335a4c13027290af3906beb8ef07e9c398bea618e15a1322d5e659f"
+    },
+    {
+      "block_id": "page-0536-block-0007",
+      "order": 7,
+      "text": "■\n■Severe withdrawal may require admission to an intensive care unit\n",
+      "bbox": [
+        125.50060272216797,
+        183.6820831298828,
+        345.2206726074219,
+        192.38958740234375
+      ],
+      "text_sha256": "f99db8809c3a14e06e11e9c4621a1476024fc47ebd4d6c000984c7f0d3d2ea9c"
+    },
+    {
+      "block_id": "page-0536-block-0008",
+      "order": 8,
+      "text": "Initial \npharmacotherapy\n",
+      "bbox": [
+        48.00309753417969,
+        201.6295928955078,
+        110.51559448242188,
+        220.51458740234375
+      ],
+      "text_sha256": "4e033b45544bb6796d87bc9b39bc74e17bf20da540df6f3fb2d0bfbf8d1f24dc"
+    },
+    {
+      "block_id": "page-0536-block-0009",
+      "order": 9,
+      "text": "■\n■Initiate diazepam 20mg PO when early withdrawal symptoms are observed\n",
+      "bbox": [
+        125.50060272216797,
+        201.8070831298828,
+        373.548095703125,
+        210.51458740234375
+      ],
+      "text_sha256": "e8901aa10e6fc7e48683abf3ddbd6a1125ebf6808f493926368929877b54e841"
+    },
+    {
+      "block_id": "page-0536-block-0010",
+      "order": 10,
+      "text": "■\n■Diazepam can be repeated at 30 minutes to 4 hourly intervals until symptoms are con-\n",
+      "bbox": [
+        125.50060272216797,
+        212.3070831298828,
+        410.5082092285156,
+        221.01458740234375
+      ],
+      "text_sha256": "edb55cb1f37b4e37fa7e507d85659a07c7cadb7698595d9346f2df8d8cdcc5a3"
+    },
+    {
+      "block_id": "page-0536-block-0011",
+      "order": 11,
+      "text": "trolled\n",
+      "bbox": [
+        134.50059509277344,
+        221.3070831298828,
+        154.78057861328125,
+        230.01458740234375
+      ],
+      "text_sha256": "51ef20dd6a56a2851198e6b1dd60f94fc53c64e937d0720460cf9437abfda464"
+    },
+    {
+      "block_id": "page-0536-block-0012",
+      "order": 12,
+      "text": "■\n■Most cases of GBL withdrawal require 60–80mg diazepam in the first 24 hours\n",
+      "bbox": [
+        125.50060272216797,
+        231.8070831298828,
+        386.3657531738281,
+        240.51458740234375
+      ],
+      "text_sha256": "d916642e4d12605c647105e5630cf2c09d02bb2d2bfbf9a5740548d545ca3ebb"
+    },
+    {
+      "block_id": "page-0536-block-0013",
+      "order": 13,
+      "text": "■\n■Higher daily dosages of up to 300mg PO diazepam may be necessary\n",
+      "bbox": [
+        125.50060272216797,
+        242.3070831298828,
+        355.3755798339844,
+        251.01458740234375
+      ],
+      "text_sha256": "6c6f0e3510d1d9a48e90dbf0b4b599cef078245e2bdf5d89878dcedad56b20e4"
+    },
+    {
+      "block_id": "page-0536-block-0014",
+      "order": 14,
+      "text": "■\n■If the patient becomes drowsy, withhold diazepam and review diagnosis\n",
+      "bbox": [
+        125.50060272216797,
+        252.8070831298828,
+        364.4132080078125,
+        261.51458740234375
+      ],
+      "text_sha256": "df393c1ec6412066b2f6cbf38eaa73682244073a241cdc4defc150af3948a997"
+    },
+    {
+      "block_id": "page-0536-block-0015",
+      "order": 15,
+      "text": "■\n■One-to-one nursing care may assist in managing severe cases\n",
+      "bbox": [
+        125.50060272216797,
+        263.3070983886719,
+        329.66558837890625,
+        272.01458740234375
+      ],
+      "text_sha256": "631e29eb0646b0cdd5fdebd7fef09e6692e76a85b2e9b07dce46a023c115c6b6"
+    },
+    {
+      "block_id": "page-0536-block-0016",
+      "order": 16,
+      "text": "■\n■Have flumazenil to hand should reversal of effects be required\n",
+      "bbox": [
+        125.50060272216797,
+        273.8070983886719,
+        332.3205871582031,
+        282.51458740234375
+      ],
+      "text_sha256": "84b3474b617dbb9d30d9dcbb1be97ba0937cb0331a60d5cd9de42a13f8c831ba"
+    },
+    {
+      "block_id": "page-0536-block-0017",
+      "order": 17,
+      "text": "Adjunctive \npharmacotherapy\n",
+      "bbox": [
+        48.00309753417969,
+        291.75457763671875,
+        110.51559448242188,
+        310.63958740234375
+      ],
+      "text_sha256": "20cd804b1b1c1d4cb7e563a10f575eb0a09a7b238736bd9c640b730f8b061671"
+    },
+    {
+      "block_id": "page-0536-block-0018",
+      "order": 18,
+      "text": "■\n■Initiate baclofen 10mg PO tds in combination with benzodiazepine withdrawal regimen \n",
+      "bbox": [
+        125.50060272216797,
+        291.9320983886719,
+        416.0732116699219,
+        300.63958740234375
+      ],
+      "text_sha256": "d2da6583291e7cddbbda1c1ccd6c655eb244cafb66a730f5c6baac39ee983749"
+    },
+    {
+      "block_id": "page-0536-block-0019",
+      "order": 19,
+      "text": "where benzodiazepines prove to be inadequate\n",
+      "bbox": [
+        134.50059509277344,
+        300.9320983886719,
+        285.9331359863281,
+        309.63958740234375
+      ],
+      "text_sha256": "3505c1ec55c81e7803c50e1501bd761f65d8e9c2fd90f3be09da9a13a3936a24"
+    },
+    {
+      "block_id": "page-0536-block-0020",
+      "order": 20,
+      "text": "■\n■This can be titrated to 20mg PO tds in cases of continued anxiety and agitation\n",
+      "bbox": [
+        125.50060272216797,
+        311.4320983886719,
+        387.0406799316406,
+        320.13958740234375
+      ],
+      "text_sha256": "2f8be12cf8d84f1749c4f53b1adcdbb570aa02d427812f79dfca3a40cdc22f3a"
+    },
+    {
+      "block_id": "page-0536-block-0021",
+      "order": 21,
+      "text": "■\n■In cases of severe withdrawal consider addition of phenobarbital in doses of 150–450mg/\n",
+      "bbox": [
+        125.50060272216797,
+        321.9320983886719,
+        420.0033874511719,
+        330.63958740234375
+      ],
+      "text_sha256": "e6800f01e9038b62a6b54f0bb552c13e0d316f25a8e2342c2edb0b3561b5646f"
+    },
+    {
+      "block_id": "page-0536-block-0022",
+      "order": 22,
+      "text": "day IV* (ICU only)\n",
+      "bbox": [
+        134.50059509277344,
+        330.9320983886719,
+        191.59811401367188,
+        339.63958740234375
+      ],
+      "text_sha256": "dc6b24209ba1a7ce4d3914a84460a97cd5c30d767033558f152754db3ff7a240"
+    },
+    {
+      "block_id": "page-0536-block-0023",
+      "order": 23,
+      "text": "■\n■In cases where severe withdrawal remains uncontrolled, IV anaesthetic such as propofol* \n",
+      "bbox": [
+        125.50060272216797,
+        341.4320983886719,
+        420.11578369140625,
+        350.13958740234375
+      ],
+      "text_sha256": "1d2526feff59bcada4d8bde7412432bfb72fb255909218573c9ab15aff04a5d5"
+    },
+    {
+      "block_id": "page-0536-block-0024",
+      "order": 24,
+      "text": "may be required (ICU only). Thiopental* coma has also been used in severe resistant \nwithdrawal8\n",
+      "bbox": [
+        134.50059509277344,
+        350.4320983886719,
+        404.4331970214844,
+        368.13958740234375
+      ],
+      "text_sha256": "842cb9b67a0835a053d83cc0318a25569eafeef706607720f1593a681d5bbd0b"
+    },
+    {
+      "block_id": "page-0536-block-0025",
+      "order": 25,
+      "text": "*The respiratory depressant effects of phenobarbital, thiopental and propofol cannot be reversed, and facilities for \nmechanical ventilation should be available.\nICU, intensive care unit; IV, intravenous; po, per os (by mouth); tds, ter die sumendum (three times a day).\n",
+      "bbox": [
+        48.0005989074707,
+        378.1820983886719,
+        414.878173828125,
+        406.88458251953125
+      ],
+      "text_sha256": "8806cc4c19a250e91f9f8cdafdc1cde46991dd056651e8e451e36c54c2f32fbb"
+    },
+    {
+      "block_id": "page-0536-block-0026",
+      "order": 26,
+      "text": "Table 4.19  Management of planned elective withdrawal\n",
+      "bbox": [
+        54.0,
+        441.1512756347656,
+        236.1224822998047,
+        450.0387878417969
+      ],
+      "text_sha256": "94dc19025a28ad5b2d138916e41f3ce70199ebd7a93d94e63a0055389a9d4847"
+    },
+    {
+      "block_id": "page-0536-block-0027",
+      "order": 27,
+      "text": "Setting\n■\n■All patients undergoing planned withdrawal should be medically supervised\n",
+      "bbox": [
+        48.0,
+        461.0262756347656,
+        376.9960632324219,
+        469.9137878417969
+      ],
+      "text_sha256": "2aacef0eb46082b8359b57cc23c695db852a136575e06e6f6a209d8c579e0252"
+    },
+    {
+      "block_id": "page-0536-block-0028",
+      "order": 28,
+      "text": "■\n■Ambulatory community detoxification should only be attempted where there is no his-\n",
+      "bbox": [
+        126.69100189208984,
+        471.706298828125,
+        411.7060852050781,
+        480.4137878417969
+      ],
+      "text_sha256": "1f15e1d68c9e2e3bc579bbf160b68eba27c5b4f560784a99fa8abeb1b490c36a"
+    },
+    {
+      "block_id": "page-0536-block-0029",
+      "order": 29,
+      "text": "tory of delirium or psychosis. A third party should be at home who is able to monitor \nand support the withdrawal process. There should be the option of transferring the \npatient to an inpatient unit if symptoms are not well controlled\n",
+      "bbox": [
+        135.6909942626953,
+        480.706298828125,
+        408.5260925292969,
+        507.4137878417969
+      ],
+      "text_sha256": "94ad279a1466908125b30dfb41cc55fb8e2b30b0f6207112cc4ec5847ef16a73"
+    },
+    {
+      "block_id": "page-0536-block-0030",
+      "order": 30,
+      "text": "Pre-withdrawal\n■\n■Discuss treatment plan with the patient and person who will be supporting them\n",
+      "bbox": [
+        48.00099182128906,
+        516.6537475585938,
+        393.9461364746094,
+        525.541259765625
+      ],
+      "text_sha256": "d8a61a6544f4859a08544babd53dc5a84524a766d1f01dc3c332e1694dabfa0f"
+    },
+    {
+      "block_id": "page-0536-block-0031",
+      "order": 31,
+      "text": "■\n■Encourage the patient to keep a week-long diary of GBL use, including dose frequency \n",
+      "bbox": [
+        126.69100189208984,
+        527.331298828125,
+        414.7811584472656,
+        536.038818359375
+      ],
+      "text_sha256": "ffa4a9aaea5ad2dc02ea1071af6fb210a15402401859c684b5b70ccdc36da41c"
+    },
+    {
+      "block_id": "page-0536-block-0032",
+      "order": 32,
+      "text": "and quantity\n",
+      "bbox": [
+        135.6909942626953,
+        536.331298828125,
+        176.11598205566406,
+        545.038818359375
+      ],
+      "text_sha256": "b53020f6b52a23356af34da5ad2b08dd16b81da48c9e1c7bd6984296039bd0a6"
+    },
+    {
+      "block_id": "page-0536-block-0033",
+      "order": 33,
+      "text": "■\n■Encourage the patient to cease ‘on-top’ drug use such as mephedrone and crystal meth-\n",
+      "bbox": [
+        126.69100189208984,
+        546.831298828125,
+        418.5310974121094,
+        555.538818359375
+      ],
+      "text_sha256": "aef629e7d02b2ad24a668aa0546bd42ed382c04af0aaaac8556d5b69511e756b"
+    },
+    {
+      "block_id": "page-0536-block-0034",
+      "order": 34,
+      "text": "amphetamine, prior to elective withdrawal\n",
+      "bbox": [
+        135.6909942626953,
+        555.831298828125,
+        271.5234680175781,
+        564.538818359375
+      ],
+      "text_sha256": "437402558df7153cac4d07f31b73ff357491444d1986c78566a68a13ce9a9ac3"
+    },
+    {
+      "block_id": "page-0536-block-0035",
+      "order": 35,
+      "text": "■\n■Start baclofen 10mg PO tds 3–7 days before target withdrawal date\n",
+      "bbox": [
+        126.69100189208984,
+        566.331298828125,
+        352.666015625,
+        575.038818359375
+      ],
+      "text_sha256": "61b8f19f78dd5cc2e2a3bfd4c011d2d24b143fd8a9036ce67d88253ee0820f28"
+    },
+    {
+      "block_id": "page-0536-block-0036",
+      "order": 36,
+      "text": "■\n■Encourage patients to reduce GBL dose as much as tolerable either by reducing each \n",
+      "bbox": [
+        126.69100189208984,
+        576.831298828125,
+        407.9635314941406,
+        585.538818359375
+      ],
+      "text_sha256": "fab287acfa684457cfeb3e12e3a56fe8470dff29d5673eb12db7fae8ec621aa9"
+    },
+    {
+      "block_id": "page-0536-block-0037",
+      "order": 37,
+      "text": "dose by 0.1mL every 1–2 days or increasing the time period between doses\n",
+      "bbox": [
+        135.6909942626953,
+        585.831298828125,
+        375.60113525390625,
+        594.538818359375
+      ],
+      "text_sha256": "f2a6344d63049bb0619d6eba2e2029232b3d77e7332134adc2e5d2d2dbbd216e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,383 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0474",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 474,
+  "source_page_index": 473,
+  "source_page_display": 474,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    453\nCHAPTER 4\nAlcohol dependence\nAlcohol\nWhat is a unit of alcohol?\nIn the UK, one unit of alcohol is 10mL of ethanol or 1L of 1% alcohol. For example, \n250mL of wine, that is, 10% alcohol contains 2.5 units.\nHow much alcohol is too much?\nThe UK Department of Health (DoH) has given the following advice and recommenda-\ntions to minimise the health risks from alcohol consumption:1\n■\n■Not more than 14 units should be consumed per week on a regular basis. This applies \nto both men and women.\n■\n■Harm is minimised when these units are spread across 3 or more days.\n■\n■Heavy single occasion drinking is associated with the risk of harm, injury and \naccidents.\n■\n■The consumption of any volume of alcohol is still associated with a number of ill-\nnesses such as cancers of the throat, mouth and breast.\n■\n■There are no completely safe levels of drinking during pregnancy, and precautionary \navoidance of alcohol is recommended to reduce the risk of harm to the baby.\nAssessment and brief structured intervention\nThe UK NICE guideline on the diagnosis, assessment and management of harmful \ndrinking and alcohol dependence recommends that staff working in services which \nmight encounter problem drinkers should be competent in identifying and assessing \nharmful drinking and alcohol dependence.2 The NICE public health guideline on reduc-\ning harmful drinking3 recommends a session of brief structured advice based on \nFRAMES principles (feedback, responsibility, advice, menu, empathy, self-efficacy) as a \nuseful intervention for everyone at increased risk of alcohol-related problems.\nWhere consumption above recommended levels has been identified, a more detailed \nclinical assessment is required. Depending on the context, this could include the \nfollowing:\n■\n■history of alcohol use, including daily consumption and recent patterns of drinking\n■\n■history of previous episodes of alcohol withdrawal\n■\n■time of the most recent drink\n■\n■collateral history from a family member or carer\n■\n■other drug (illicit and prescribed) use\n■\n■severity of dependence and of withdrawal symptoms\n■\n■coexisting medical and psychiatric problems\n■\n■physical examination, including cognitive function\n■\n■breathalyser: absolute breath alcohol level and whether rising or falling (take at least 20 \nminutes after last drink to avoid falsely high readings from the mouth, and 1 hour later)\n",
+  "raw_text_sha256": "e08c9e5579432f86f41005cc37e34606db3b354bcefb23d60646933cfb030567",
+  "coordinates_sha256": "09d8e250372a80f999e4b4aff4225aa7cf23b88ba62589d2f8b9afef7acc28db",
+  "block_sequence_sha256": "d42e890016f7b84d703cc8117f3127a659bbb612411f2ca4a4198a4870c82cc2",
+  "blocks": [
+    {
+      "block_id": "page-0474-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    453\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "36cce1b3aa9d8b197ac9d05d420f80f950524cb3a3cace7d7114c08d47d8ee51"
+    },
+    {
+      "block_id": "page-0474-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0474-block-0002",
+      "order": 2,
+      "text": "Alcohol dependence\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        160.11598205566406,
+        79.1004638671875
+      ],
+      "text_sha256": "8ef3e2a34ef55da87394f9306e56a674eed4d8bf7674bab85c8265c7468b1731"
+    },
+    {
+      "block_id": "page-0474-block-0003",
+      "order": 3,
+      "text": "Alcohol\n",
+      "bbox": [
+        48.00400161743164,
+        90.06747436523438,
+        87.10900115966797,
+        103.10247802734375
+      ],
+      "text_sha256": "ea607c5a5b871f6582c8881d61eec7d991d381ac1069909f5b165d897b466b47"
+    },
+    {
+      "block_id": "page-0474-block-0004",
+      "order": 4,
+      "text": "What is a unit of alcohol?\n",
+      "bbox": [
+        48.0,
+        109.0004653930664,
+        168.01998901367188,
+        120.8504638671875
+      ],
+      "text_sha256": "2128b6f89647376f92c5d9683856cf246547248d8ba67a1d8f803fdc5687321b"
+    },
+    {
+      "block_id": "page-0474-block-0005",
+      "order": 5,
+      "text": "In the UK, one unit of alcohol is 10mL of ethanol or 1L of 1% alcohol. For example, \n250mL of wine, that is, 10% alcohol contains 2.5 units.\n",
+      "bbox": [
+        48.0,
+        126.91046142578125,
+        422.7699279785156,
+        150.63046264648438
+      ],
+      "text_sha256": "29e3bcf1c63ae6bfcba0724d33554d836298481aeebb96978f019cf7df355804"
+    },
+    {
+      "block_id": "page-0474-block-0006",
+      "order": 6,
+      "text": "How much alcohol is too much?\n",
+      "bbox": [
+        48.0,
+        169.00045776367188,
+        197.44000244140625,
+        180.8504638671875
+      ],
+      "text_sha256": "1b5c1ac3fe3ec778f892c3efc9381b9b48ebf8912dcb8680469812c671fa269b"
+    },
+    {
+      "block_id": "page-0474-block-0007",
+      "order": 7,
+      "text": "The UK Department of Health (DoH) has given the following advice and recommenda-\ntions to minimise the health risks from alcohol consumption:1\n",
+      "bbox": [
+        48.0,
+        186.91046142578125,
+        419.9999084472656,
+        210.63046264648438
+      ],
+      "text_sha256": "c9428b62f7a0ad6202de09dfea7c056219876e62e747152a8ce16b1f6371a326"
+    },
+    {
+      "block_id": "page-0474-block-0008",
+      "order": 8,
+      "text": "■\n■Not more than 14 units should be consumed per week on a regular basis. This applies \n",
+      "bbox": [
+        47.999900817871094,
+        216.91049194335938,
+        422.7900695800781,
+        228.6304931640625
+      ],
+      "text_sha256": "a3fa23e9c53ff74306acc0c9711c37a827bfc66e4b935c3d0b9dea77992a51b9"
+    },
+    {
+      "block_id": "page-0474-block-0009",
+      "order": 9,
+      "text": "to both men and women.\n",
+      "bbox": [
+        57.0,
+        228.91049194335938,
+        165.89999389648438,
+        240.6304931640625
+      ],
+      "text_sha256": "f825d5e84c96d5ff85701067771331963eb79723c59c3993759ee6f9b7a7e893"
+    },
+    {
+      "block_id": "page-0474-block-0010",
+      "order": 10,
+      "text": "■\n■Harm is minimised when these units are spread across 3 or more days.\n",
+      "bbox": [
+        47.999900817871094,
+        240.91049194335938,
+        360.9200744628906,
+        252.6304931640625
+      ],
+      "text_sha256": "db1cd3a85ab898dc3c2534a2d9e54b74a1c48e56d650a94adcbccd4a1f5a71e9"
+    },
+    {
+      "block_id": "page-0474-block-0011",
+      "order": 11,
+      "text": "■\n■Heavy single occasion drinking is associated with the risk of harm, injury and \n",
+      "bbox": [
+        47.999900817871094,
+        252.91049194335938,
+        422.8198547363281,
+        264.6304931640625
+      ],
+      "text_sha256": "21c81e2cba7d2e75ae8b726a33f598dd18a7cd7531e3289c465013d3585c0496"
+    },
+    {
+      "block_id": "page-0474-block-0012",
+      "order": 12,
+      "text": "accidents.\n",
+      "bbox": [
+        57.0,
+        264.9104919433594,
+        99.22000122070312,
+        276.6304931640625
+      ],
+      "text_sha256": "24a2d9363518b2686ca22c21143e87d4e9ef961ad5646c171f2424c86ca27e65"
+    },
+    {
+      "block_id": "page-0474-block-0013",
+      "order": 13,
+      "text": "■\n■The consumption of any volume of alcohol is still associated with a number of ill-\n",
+      "bbox": [
+        47.999900817871094,
+        276.9104919433594,
+        420.03997802734375,
+        288.6304931640625
+      ],
+      "text_sha256": "64d8fc3fc91ef0e4ad7c2fecd20fad3eef95b1fd9faa28ac3409dea25832fc61"
+    },
+    {
+      "block_id": "page-0474-block-0014",
+      "order": 14,
+      "text": "nesses such as cancers of the throat, mouth and breast.\n",
+      "bbox": [
+        57.0,
+        288.9104919433594,
+        292.77001953125,
+        300.6304931640625
+      ],
+      "text_sha256": "9959706a2af9133af43d59370943037747ac4509e135f2def0e0a83c11b3304e"
+    },
+    {
+      "block_id": "page-0474-block-0015",
+      "order": 15,
+      "text": "■\n■There are no completely safe levels of drinking during pregnancy, and precautionary \n",
+      "bbox": [
+        47.999900817871094,
+        300.9104919433594,
+        422.7699890136719,
+        312.6304931640625
+      ],
+      "text_sha256": "c960a65cf87dc2da284a2a018d85ec5c46ea934d4d0dd2d6ca1b0580e5856da5"
+    },
+    {
+      "block_id": "page-0474-block-0016",
+      "order": 16,
+      "text": "avoidance of alcohol is recommended to reduce the risk of harm to the baby.\n",
+      "bbox": [
+        57.0,
+        312.9104919433594,
+        387.7799377441406,
+        324.6304931640625
+      ],
+      "text_sha256": "af2d5c226f8299174ffa4c68533f6430791c26fc35dff03b2a8ff86b23046656"
+    },
+    {
+      "block_id": "page-0474-block-0017",
+      "order": 17,
+      "text": "Assessment and brief structured intervention\n",
+      "bbox": [
+        48.0,
+        349.00048828125,
+        260.79998779296875,
+        360.8504943847656
+      ],
+      "text_sha256": "43c80701e9c152511227a93f36e248701585a2d90ddcaf4ff51989078d2268c5"
+    },
+    {
+      "block_id": "page-0474-block-0018",
+      "order": 18,
+      "text": "The UK NICE guideline on the diagnosis, assessment and management of harmful \ndrinking and alcohol dependence recommends that staff working in services which \nmight encounter problem drinkers should be competent in identifying and assessing \nharmful drinking and alcohol dependence.2 The NICE public health guideline on reduc-\ning harmful drinking3 recommends a session of brief structured advice based on \nFRAMES principles (feedback, responsibility, advice, menu, empathy, self-efficacy) as a \nuseful intervention for everyone at increased risk of alcohol-related problems.\n",
+      "bbox": [
+        48.0,
+        366.9104919433594,
+        422.7913818359375,
+        450.6304931640625
+      ],
+      "text_sha256": "497db02c05fe612a25e9917e0233d8f36f9ba19d18e2146110d8e707f3c9f6e0"
+    },
+    {
+      "block_id": "page-0474-block-0019",
+      "order": 19,
+      "text": "Where consumption above recommended levels has been identified, a more detailed \nclinical assessment is required. Depending on the context, this could include the \nfollowing:\n",
+      "bbox": [
+        48.001502990722656,
+        450.9104919433594,
+        422.8114929199219,
+        486.6304931640625
+      ],
+      "text_sha256": "71ca42a5a0328f24fa4e40362b2d68c7c776aad365b32fdcb2ed703fd0fcda31"
+    },
+    {
+      "block_id": "page-0474-block-0020",
+      "order": 20,
+      "text": "■\n■history of alcohol use, including daily consumption and recent patterns of drinking\n",
+      "bbox": [
+        47.999900817871094,
+        492.9104919433594,
+        414.5199279785156,
+        504.6304931640625
+      ],
+      "text_sha256": "2b2888f8c49de8a45f93c071dae45a1f074da340756fbcfa6e94681bbb938cd1"
+    },
+    {
+      "block_id": "page-0474-block-0021",
+      "order": 21,
+      "text": "■\n■history of previous episodes of alcohol withdrawal\n",
+      "bbox": [
+        47.999900817871094,
+        504.91046142578125,
+        275.40997314453125,
+        516.6304931640625
+      ],
+      "text_sha256": "6f73daf9ef02fd9e02cac2f03f79030ecea5f3d8c6f6cbdc2939773ca2e05e47"
+    },
+    {
+      "block_id": "page-0474-block-0022",
+      "order": 22,
+      "text": "■\n■time of the most recent drink\n",
+      "bbox": [
+        47.999900817871094,
+        516.9104614257812,
+        182.5399932861328,
+        528.6304931640625
+      ],
+      "text_sha256": "a059b55e15e4192bf705c0fb03a5102880f9f6592c7f674bf1fd61dc1bf8475f"
+    },
+    {
+      "block_id": "page-0474-block-0023",
+      "order": 23,
+      "text": "■\n■collateral history from a family member or carer\n",
+      "bbox": [
+        47.999900817871094,
+        528.9104614257812,
+        265.8600158691406,
+        540.6304931640625
+      ],
+      "text_sha256": "f55ca683ca11a552e0c6633014d390b79874cf34736f7aec0b3cc21f54d5bb06"
+    },
+    {
+      "block_id": "page-0474-block-0024",
+      "order": 24,
+      "text": "■\n■other drug (illicit and prescribed) use\n",
+      "bbox": [
+        47.999900817871094,
+        540.9104614257812,
+        216.47998046875,
+        552.6304931640625
+      ],
+      "text_sha256": "fdb05446d4730700f9743a0abf6847e1d3628d8a50f78db6c19f3bb3cd994451"
+    },
+    {
+      "block_id": "page-0474-block-0025",
+      "order": 25,
+      "text": "■\n■severity of dependence and of withdrawal symptoms\n",
+      "bbox": [
+        47.999900817871094,
+        552.9104614257812,
+        283.67999267578125,
+        564.6304931640625
+      ],
+      "text_sha256": "0d2976e1fa33cc52443aa4efd52c74882bae5b6ac760502e6e14e318297b770c"
+    },
+    {
+      "block_id": "page-0474-block-0026",
+      "order": 26,
+      "text": "■\n■coexisting medical and psychiatric problems\n",
+      "bbox": [
+        47.999900817871094,
+        564.9104614257812,
+        247.56996154785156,
+        576.6304931640625
+      ],
+      "text_sha256": "f5c6c94864f777cf2cab8d181cf8ab640e109cf0cd5ba9b25f5a9f48132f4c67"
+    },
+    {
+      "block_id": "page-0474-block-0027",
+      "order": 27,
+      "text": "■\n■physical examination, including cognitive function\n",
+      "bbox": [
+        47.999900817871094,
+        576.9104614257812,
+        274.4599609375,
+        588.6304931640625
+      ],
+      "text_sha256": "ad74400d8809e70b602f0a8c4c3acc9a566cebcca4166552839bc811d49554fe"
+    },
+    {
+      "block_id": "page-0474-block-0028",
+      "order": 28,
+      "text": "■\n■breathalyser: absolute breath alcohol level and whether rising or falling (take at least 20 \n",
+      "bbox": [
+        47.999900817871094,
+        588.9104614257812,
+        422.78009033203125,
+        600.6304931640625
+      ],
+      "text_sha256": "0b378d065e470c97f0d291122deef0d3c2534dfa9662040cf6819db57a656ac5"
+    },
+    {
+      "block_id": "page-0474-block-0029",
+      "order": 29,
+      "text": "minutes after last drink to avoid falsely high readings from the mouth, and 1 hour later)\n",
+      "bbox": [
+        57.0,
+        600.9104614257812,
+        419.94012451171875,
+        612.6304931640625
+      ],
+      "text_sha256": "844a392865f62229758ff4e3aedcd50daed4af86deb8cfc63d9e08ef6f1375df"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

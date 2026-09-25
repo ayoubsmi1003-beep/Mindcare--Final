@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0856",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 856,
+  "source_page_index": 855,
+  "source_page_display": 856,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Pharmacokinetics    835\nCHAPTER 11\nof sampling is known. Many anomalous results are the consequence of changes in \nsample timing.\nA word about target ranges\nIn psychiatry, target ranges for psychotropic drug concentrations should be treated \nwith some caution. Establishing a range of concentrations associated with response is \nmade difficult by the presence in trials of non-responders (who show no response what-\never the blood concentration) and by the presence of placebo responders and spontane-\nous remitters (who respond at any blood concentration). Establishing a target range \nbased on adverse effects is made difficult by the development of tolerance over time. \nThus, most studies aimed at determining target ranges have as much ‘noise’ as ‘signal’ \nand results ultimately represent broad approximations.\nInterestingly, drug concentrations associated with response in clinical practice \nshow a fairly close correlation to published target ranges.3 The lower quartile (25th \npercentile) of drug concentrations is usually close to the lower end of the target \nrange and the upper quartile (75th percentile) is around the value of, but usually \nless than, the upper limit. Broadly speaking, this means that around 25% of patients \nrespond below the target range and up to 25% tolerate blood concentrations above \nthe target range (Table 11.1).\nTable 11.1  Interpreting sample results for drugs with established target ranges\nDrug\nTarget range\nSample \ntiming\nTime to steady \nstate\nComments\nAmisulpride\n200–320µg/L\n20–60µg/L (elderly)\nTrough\n3 days\nSee text.\nAripiprazole\n150–210µg/L\nTrough\n15–16 days\nSee text.\nCarbamazepine4–6\n>7mg/L\nBipolar disorder\nTrough\n2 weeks\nCarbamazepine induces its own \nmetabolism. Time to steady state \ndependent on auto-induction.\nClozapine\n350–600µg/L\nTrough\n2–3 days\nSee text.\nLamotrigine7–9\nNot established but \nsuggest \n2.5–15mg/L\nTrough\n5 days\nAuto-induction \nis thought to \noccur, so time \nto steady state \nmay be longer\nSome debate over utility of \nlamotrigine levels, especially in \nbipolar disorder. In treatment \nresistant unipolar depression, \nplasma levels of above 12.7µmol/L \n(3.3mg/L) are associated with \nresponse.10,11 Toxicity may be \nincreased above 15mg/L but \nnormally well tolerated.\n(Continued)\n",
+  "raw_text_sha256": "807fc4a81403e9bb271fbe6b7b9d726b2d10e70d2a735b17edb9ae9ab43950c1",
+  "coordinates_sha256": "88095062de41e244ea262de1d7f39ae38797cca4674948b230ecbde9724da2f7",
+  "block_sequence_sha256": "13166cce942badf29811132d151cf0cd3528278b78b695ddaefcf5c861c25dd2",
+  "blocks": [
+    {
+      "block_id": "page-0856-block-0000",
+      "order": 0,
+      "text": "Pharmacokinetics    835\n",
+      "bbox": [
+        320.4088134765625,
+        31.395221710205078,
+        420.00079345703125,
+        41.0272216796875
+      ],
+      "text_sha256": "707e4c75e1dc08916ef19efe36f38f5e0ebc6bc01ca22b31f94dd2bdcc5a95fa"
+    },
+    {
+      "block_id": "page-0856-block-0001",
+      "order": 1,
+      "text": "CHAPTER 11\n",
+      "bbox": [
+        454.4096984863281,
+        140.99053955078125,
+        463.88970947265625,
+        186.78250122070312
+      ],
+      "text_sha256": "8577f8a61d9be9d957b7354680b21b61adb6e8c4601aaa9be76ccc79360dc7f3"
+    },
+    {
+      "block_id": "page-0856-block-0002",
+      "order": 2,
+      "text": "of sampling is known. Many anomalous results are the consequence of changes in \nsample timing.\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.7402038574219,
+        86.27041625976562
+      ],
+      "text_sha256": "7aef7c82dfd246999c546136b63ffefd60bc2d9a377e10f920cd274941bfc2b7"
+    },
+    {
+      "block_id": "page-0856-block-0003",
+      "order": 3,
+      "text": "A word about target ranges\n",
+      "bbox": [
+        48.0,
+        103.70541381835938,
+        192.66099548339844,
+        116.74041748046875
+      ],
+      "text_sha256": "86b04cb911c751b8ed2a71859c8c628ef0cba44c8899c7ea49f4483303773a12"
+    },
+    {
+      "block_id": "page-0856-block-0004",
+      "order": 4,
+      "text": "In psychiatry, target ranges for psychotropic drug concentrations should be treated \nwith some caution. Establishing a range of concentrations associated with response is \nmade difficult by the presence in trials of non-responders (who show no response what-\never the blood concentration) and by the presence of placebo responders and spontane-\nous remitters (who respond at any blood concentration). Establishing a target range \nbased on adverse effects is made difficult by the development of tolerance over time. \nThus, most studies aimed at determining target ranges have as much ‘noise’ as ‘signal’ \nand results ultimately represent broad approximations.\n",
+      "bbox": [
+        48.0,
+        122.5504150390625,
+        422.8099060058594,
+        218.27041625976562
+      ],
+      "text_sha256": "aac5e5505ee822248242d0d9a324746558c9949f9960826e38ab6770db8acd81"
+    },
+    {
+      "block_id": "page-0856-block-0005",
+      "order": 5,
+      "text": "Interestingly, drug concentrations associated with response in clinical practice \nshow a fairly close correlation to published target ranges.3 The lower quartile (25th \npercentile) of drug concentrations is usually close to the lower end of the target \nrange and the upper quartile (75th percentile) is around the value of, but usually \nless than, the upper limit. Broadly speaking, this means that around 25% of patients \nrespond below the target range and up to 25% tolerate blood concentrations above \nthe target range (Table 11.1).\n",
+      "bbox": [
+        47.999481201171875,
+        218.5504150390625,
+        422.8297119140625,
+        302.2704772949219
+      ],
+      "text_sha256": "9f2329b54582bc47dc558768e19606f663d4cb7001f2c1d1b1ba86058b6ef73c"
+    },
+    {
+      "block_id": "page-0856-block-0006",
+      "order": 6,
+      "text": "Table 11.1  Interpreting sample results for drugs with established target ranges\n",
+      "bbox": [
+        54.0,
+        330.1414794921875,
+        306.6974792480469,
+        339.02899169921875
+      ],
+      "text_sha256": "e36dedaafd11791fc282d1112079f376060be5c66325bdf38f6d5a738c0d6502"
+    },
+    {
+      "block_id": "page-0856-block-0007",
+      "order": 7,
+      "text": "Drug\nTarget range\n",
+      "bbox": [
+        48.0,
+        366.0164794921875,
+        166.8000030517578,
+        374.90399169921875
+      ],
+      "text_sha256": "990619ac504d6951c1bc24e3d42634629166d037309c125c50c7396f14213cc3"
+    },
+    {
+      "block_id": "page-0856-block-0008",
+      "order": 8,
+      "text": "Sample \ntiming\n",
+      "bbox": [
+        197.58749389648438,
+        356.01898193359375,
+        225.5175018310547,
+        374.90399169921875
+      ],
+      "text_sha256": "454f235668fb42379d5b6ed40084e706e6bde60a533d98912039067743c1ca69"
+    },
+    {
+      "block_id": "page-0856-block-0009",
+      "order": 9,
+      "text": "Time to steady \nstate\nComments\n",
+      "bbox": [
+        241.08749389648438,
+        356.01898193359375,
+        343.5,
+        374.90399169921875
+      ],
+      "text_sha256": "fcee43422fd89afb790a5a4522079e98c7cef353748410218efa230106d01e2d"
+    },
+    {
+      "block_id": "page-0856-block-0010",
+      "order": 10,
+      "text": "Amisulpride\n200–320µg/L\n20–60µg/L (elderly)\nTrough\n3 days\nSee text.\n",
+      "bbox": [
+        48.0,
+        384.14398193359375,
+        333.4949645996094,
+        403.02899169921875
+      ],
+      "text_sha256": "75e1730b14edceeb65091e6bff61f49b08837531583698b30264b5fb7c9c11fc"
+    },
+    {
+      "block_id": "page-0856-block-0011",
+      "order": 11,
+      "text": "Aripiprazole\n150–210µg/L\nTrough\n15–16 days\nSee text.\n",
+      "bbox": [
+        48.0,
+        422.2664794921875,
+        333.4949951171875,
+        431.15399169921875
+      ],
+      "text_sha256": "bc141b38311075b4fee6078e4ccce880d54d3ffee3aff560957ac47acd3c6868"
+    },
+    {
+      "block_id": "page-0856-block-0012",
+      "order": 12,
+      "text": "Carbamazepine4–6\n>7mg/L\nBipolar disorder\n",
+      "bbox": [
+        48.0,
+        440.3914794921875,
+        172.07496643066406,
+        459.2764892578125
+      ],
+      "text_sha256": "1eba32a2618d468e09049d8fceb350cc8188eb29f4411e4385f444d38b5453ef"
+    },
+    {
+      "block_id": "page-0856-block-0013",
+      "order": 13,
+      "text": "Trough\n2 weeks\nCarbamazepine induces its own \nmetabolism. Time to steady state \ndependent on auto-induction.\n",
+      "bbox": [
+        197.58999633789062,
+        440.5715026855469,
+        413.6800231933594,
+        469.27398681640625
+      ],
+      "text_sha256": "0485680bf1c0cc0c20daeb89c044c09832aa158c173a8348c8f1be814e9d9b12"
+    },
+    {
+      "block_id": "page-0856-block-0014",
+      "order": 14,
+      "text": "Clozapine\n350–600µg/L\nTrough\n2–3 days\nSee text.\n",
+      "bbox": [
+        48.00250244140625,
+        478.51397705078125,
+        333.4974670410156,
+        487.4014892578125
+      ],
+      "text_sha256": "8d42b5b3120ada3989b64009c940910caf298f67fffdc807405155e5a9ba79fb"
+    },
+    {
+      "block_id": "page-0856-block-0015",
+      "order": 15,
+      "text": "Lamotrigine7–9\nNot established but \nsuggest \n2.5–15mg/L\n",
+      "bbox": [
+        48.00250244140625,
+        496.6414794921875,
+        186.38497924804688,
+        525.5239868164062
+      ],
+      "text_sha256": "e69c5b82e73fc072dcb4af8a683445c101483701463f279f10b327ac2b252a56"
+    },
+    {
+      "block_id": "page-0856-block-0016",
+      "order": 16,
+      "text": "Trough\n5 days\nAuto-induction \nis thought to \noccur, so time \nto steady state \nmay be longer\n",
+      "bbox": [
+        197.58999633789062,
+        496.8139953613281,
+        291.5200500488281,
+        555.5089721679688
+      ],
+      "text_sha256": "1106dcde9d75df903367a27d43c9007bab303d8ffaa5e0754f9916c54f0688e4"
+    },
+    {
+      "block_id": "page-0856-block-0017",
+      "order": 17,
+      "text": "Some debate over utility of \nlamotrigine levels, especially in \nbipolar disorder. In treatment \nresistant unipolar depression, \nplasma levels of above 12.7µmol/L \n(3.3mg/L) are associated with \nresponse.10,11 Toxicity may be \nincreased above 15mg/L but \nnormally well tolerated.\n",
+      "bbox": [
+        305.9970703125,
+        496.7989807128906,
+        418.1050720214844,
+        585.5239868164062
+      ],
+      "text_sha256": "bb2a8fdc908ee6e141cc59c9cecb5891238cd135eb6c4953b5023b4a02f93e1e"
+    },
+    {
+      "block_id": "page-0856-block-0018",
+      "order": 18,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.9820556640625,
+        594.4865112304688,
+        419.99700927734375,
+        603.239013671875
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

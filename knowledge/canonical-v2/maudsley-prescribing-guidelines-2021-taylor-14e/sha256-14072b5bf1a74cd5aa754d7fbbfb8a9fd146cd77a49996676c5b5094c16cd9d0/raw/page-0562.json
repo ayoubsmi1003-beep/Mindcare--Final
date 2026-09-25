@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0562",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 562,
+  "source_page_index": 561,
+  "source_page_display": 562,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Children and adolescents    541\nCHAPTER 5\nDepression in children and adolescents\nDiagnostic issues\nApproximately 15% of young people experience depression by age 18 and these young \npeople often have significant functional impairment and risk of harm.1 Compared to \ndepressed adults, young people with depression tend to experience more irritability, loss \nof energy, insomnia and weight change, and less anhedonia and concentration prob-\nlems.2 These symptoms can overlap with and appear similar to other disorders, or can be \nminimised and incorrectly attributed to typical teenage development, making diagnosis \nchallenging. Assessments should therefore be undertaken by clinicians who understand \ndevelopmental variations and can accurately identify depression in young people.3\nClinical guidance\nFor mild depression in children and adolescents, the UK National Institute for Health \nand Care Excellence (NICE) guidelines4 and American Academy of Child and Adolescent \nPsychiatry (AACAP) practice parameter3 recommend that supportive care or psycho-\nlogical intervention should be considered as first-line treatment, and that antidepres-\nsant medication should not be prescribed.\nFor moderate to severe depression in young people, these guidelines recommend \noffering psychological therapy, either alone or in combination with antidepressant \nmedication. In addition, the ACAPP practice parameter recommends that antidepres-\nsant medication alone could be considered, particularly if the presentation is severe and \nthe patient is unable to engage in talking therapy, if psychological interventions are not \navailable, or if this is the patient’s and family’s preference.\nThese guidelines relating to antidepressant medications were mainly informed by \nthree large randomised controlled trials, which found evidence for the effectiveness of \nselective serotonin reuptake inhibitors (SSRIs) in treating depression in young people: \nthe Treatment of Adolescents with Depression Study (TADS),5 Treatment of Resistant \nDepression in Adolescents (TORDIA),6 and Adolescent Depression Antidepressants and \nPsychotherapy Trial (ADAPT).7 For example, TADS found a fluoxetine response rate of \n61% over the acute (12-week) phase, which was significantly higher than the placebo \nresponse rate of 35%, giving a number needed to treat (NNT) of 4.5 Subsequent system-\natic reviews and meta-analyses, which include these trials and others, have provided fur-\nther evidence demonstrating that SSRIs are effective and largely acceptable treatments for \ndepression in young people.8,9 Most studies found relatively modest effects, giving an \nNNT of 10 in a meta-analysis,10 possibly because of high placebo response rates.11\nThe current evidence base is unclear about whether SSRI medications alone, psycho-\nlogical therapy alone, or combined treatment is most effective for treating depression in \nchildren and adolescents. TADS found that fluoxetine alone or in combination CBT \nmight accelerate treatment response, and that adding CBT might decrease adverse \neffects including suicidality, so enhancing the safety of fluoxetine.5,12 However, other \nstudies have not replicated this finding,7 and meta-analyses have found only limited \nevidence that combination therapy is more effective than antidepressant medication \nalone for the young people included in the trials.13,14\n",
+  "raw_text_sha256": "64c83da99c2cba9bc8a8b7896f2c7bda1daebbb26f47450ccb5149d2f6fb04eb",
+  "coordinates_sha256": "d239c59eb9faa83ac27f7829e970705e4fb731988f67e979eee4ca29f6d11474",
+  "block_sequence_sha256": "5a834fe50118f768b345af628cfeb1a3e80157e1926d6e9a81b8d2285767ff58",
+  "blocks": [
+    {
+      "block_id": "page-0562-block-0000",
+      "order": 0,
+      "text": "Children and adolescents    541\n",
+      "bbox": [
+        288.94488525390625,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "79bb6e87ecd5d8472539ba2c0c0ecf8a72ee948e55dbd726223f86024251e76b"
+    },
+    {
+      "block_id": "page-0562-block-0001",
+      "order": 1,
+      "text": "CHAPTER 5\n",
+      "bbox": [
+        454.4096984863281,
+        339.3385009765625,
+        463.88970947265625,
+        380.6824951171875
+      ],
+      "text_sha256": "f4b8b4a0fc64e7b3b74e7336306d0959d0384683e387792724f393162639020a"
+    },
+    {
+      "block_id": "page-0562-block-0002",
+      "order": 2,
+      "text": "Depression in children and adolescents\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        255.67295837402344,
+        79.1004638671875
+      ],
+      "text_sha256": "dd8e57702e8f1684e5911b437d74280b0023e291678a6dfff1eacdd51e4b2d3d"
+    },
+    {
+      "block_id": "page-0562-block-0003",
+      "order": 3,
+      "text": "Diagnostic issues\n",
+      "bbox": [
+        48.0,
+        103.0004653930664,
+        127.99000549316406,
+        114.8504638671875
+      ],
+      "text_sha256": "ed02882ffde2b1dd8358e2f6df2344d9a85d1e7925926d20cf8264aedbd29336"
+    },
+    {
+      "block_id": "page-0562-block-0004",
+      "order": 4,
+      "text": "Approximately 15% of young people experience depression by age 18 and these young \npeople often have significant functional impairment and risk of harm.1 Compared to \ndepressed adults, young people with depression tend to experience more irritability, loss \nof energy, insomnia and weight change, and less anhedonia and concentration prob-\nlems.2 These symptoms can overlap with and appear similar to other disorders, or can be \nminimised and incorrectly attributed to typical teenage development, making diagnosis \nchallenging. Assessments should therefore be undertaken by clinicians who understand \ndevelopmental variations and can accurately identify depression in young people.3\n",
+      "bbox": [
+        48.0,
+        120.91046142578125,
+        422.82275390625,
+        216.63046264648438
+      ],
+      "text_sha256": "fcc4a6e71b5b703b864b54aab11e11e7fcb71d5b646debf145639d0d896724ed"
+    },
+    {
+      "block_id": "page-0562-block-0005",
+      "order": 5,
+      "text": "Clinical guidance\n",
+      "bbox": [
+        48.0,
+        234.06549072265625,
+        134.7899932861328,
+        247.10049438476562
+      ],
+      "text_sha256": "26764bf139176e7ef99c6ac39bb0a8237d115cd3d9e65e4744b6c80c8263e5a9"
+    },
+    {
+      "block_id": "page-0562-block-0006",
+      "order": 6,
+      "text": "For mild depression in children and adolescents, the UK National Institute for Health \nand Care Excellence (NICE) guidelines4 and American Academy of Child and Adolescent \nPsychiatry (AACAP) practice parameter3 recommend that supportive care or psycho-\nlogical intervention should be considered as first-line treatment, and that antidepres-\nsant medication should not be prescribed.\n",
+      "bbox": [
+        47.997589111328125,
+        252.91049194335938,
+        422.7798156738281,
+        312.6304931640625
+      ],
+      "text_sha256": "0343be1c6ce947f3e9844035a16737a65b57984892e7c9ee27629557457fa625"
+    },
+    {
+      "block_id": "page-0562-block-0007",
+      "order": 7,
+      "text": "For moderate to severe depression in young people, these guidelines recommend \noffering psychological therapy, either alone or in combination with antidepressant \nmedication. In addition, the ACAPP practice parameter recommends that antidepres-\nsant medication alone could be considered, particularly if the presentation is severe and \nthe patient is unable to engage in talking therapy, if psychological interventions are not \navailable, or if this is the patient’s and family’s preference.\n",
+      "bbox": [
+        48.00048828125,
+        312.9104919433594,
+        422.820556640625,
+        384.6304931640625
+      ],
+      "text_sha256": "ac51c0dae809e48479bf57151819ce7b58c12742601a944b958a60c3fcceb605"
+    },
+    {
+      "block_id": "page-0562-block-0008",
+      "order": 8,
+      "text": "These guidelines relating to antidepressant medications were mainly informed by \nthree large randomised controlled trials, which found evidence for the effectiveness of \nselective serotonin reuptake inhibitors (SSRIs) in treating depression in young people: \nthe Treatment of Adolescents with Depression Study (TADS),5 Treatment of Resistant \nDepression in Adolescents (TORDIA),6 and Adolescent Depression Antidepressants and \nPsychotherapy Trial (ADAPT).7 For example, TADS found a fluoxetine response rate of \n61% over the acute (12-week) phase, which was significantly higher than the placebo \nresponse rate of 35%, giving a number needed to treat (NNT) of 4.5 Subsequent system-\natic reviews and meta-analyses, which include these trials and others, have provided fur-\nther evidence demonstrating that SSRIs are effective and largely acceptable treatments for \ndepression in young people.8,9 Most studies found relatively modest effects, giving an \nNNT of 10 in a meta-analysis,10 possibly because of high placebo response rates.11\n",
+      "bbox": [
+        47.99549865722656,
+        384.9104919433594,
+        422.8104553222656,
+        528.6304931640625
+      ],
+      "text_sha256": "e1fb3de11b00829726ba15da9690b431947b2998b34c33bf2e764c20253bc744"
+    },
+    {
+      "block_id": "page-0562-block-0009",
+      "order": 9,
+      "text": "The current evidence base is unclear about whether SSRI medications alone, psycho-\nlogical therapy alone, or combined treatment is most effective for treating depression in \nchildren and adolescents. TADS found that fluoxetine alone or in combination CBT \nmight accelerate treatment response, and that adding CBT might decrease adverse \neffects including suicidality, so enhancing the safety of fluoxetine.5,12 However, other \nstudies have not replicated this finding,7 and meta-analyses have found only limited \nevidence that combination therapy is more effective than antidepressant medication \nalone for the young people included in the trials.13,14\n",
+      "bbox": [
+        48.0,
+        528.9104614257812,
+        422.8000183105469,
+        624.6304931640625
+      ],
+      "text_sha256": "1c15e55138234f3ce09e247dbd9a61f11bd73b07dcaf6980d15921dee7d238ed"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

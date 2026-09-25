@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0312",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 312,
+  "source_page_index": 311,
+  "source_page_display": 312,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Bipolar disorder    291\nCHAPTER 2\nstatistical significance.98 Another analysis of trials not involving antidepressants109 \n(7307 participants) found a statistical advantage over placebo for olanzapine + fluox-\netine, valproate, quetiapine, lurasidone, olanzapine, aripiprazole and carbamazepine (in \norder of effect size, highest first).\nA 2014 network meta-analysis of 29 studies included 8331 subjects.110 Overall olanzap-\nine + fluoxetine, lurasidone, olanzapine, valproate, SSRIs and quetiapine were ranked high-\nest in terms of effect size and response with olanzapine + fluoxetine ranked first for both. \nThe most recent network meta-analysis included 11,448 participants in 50 studies.111 Drugs \nfound to be more effective than placebo were olanzapine + fluoxetine, olanzapine, val-\nproate, cariprazine, lamotrigine, lurasidone and quetiapine. Interestingly, imipramine and \nfluoxetine were also more effective than placebo (but with wide confidence intervals).\nSummary of drug choice\nThe combination of olanzapine + fluoxetine is probably the most effective treatment \navailable for bipolar depression but its use is constrained by the well known adverse \neffect profile of olanzapine. SSRIs other than fluoxetine may be effective but should \nprobably be avoided unless clear individual benefit is obvious.53 Alternative first-line \nchoices are quetiapine, olanzapine, lurasidone, lamotrigine and valproate. These drugs \ndiffer substantially in adverse effect profile, tolerability and cost, each of which needs \nto be considered when prescribing for an individual. Lithium is also effective but sup-\nporting evidence is relatively weak. Second-line drugs include ketamine and, increas-\ningly, modafinil. Aripiprazole, risperidone, ziprasidone, tricyclics (with the exception of \nimipramine) and MAOIs (with the exception of tranylcypromine) are probably not \neffective and should not be used routinely.110\nTable 2.11  Other possible treatments – seek specialist advice before using\nDrug/regime\nComments\nAripiprazole96–99\nLimited support from open studies as add-on treatment. RCT negative. Possibly not \neffective.95\nCarbamazepine1,13,100\nOccasionally recommended but database is poor and effect modest. May have \nuseful activity when added to other mood stabilisers.\nGabapentin1,101,102\nOpen studies suggest modest effect when added to mood stabilisers or \nantipsychotics. Doses average around 1750mg/day. Anxiolytic effect may account \nfor apparent effect in bipolar depression\nInositol103\nSmall, randomised, pilot study suggests that 12g/day inositol is effective in bipolar \ndepression\nMifepristone104,105\nSome evidence of mood-elevating properties in bipolar depression although this \nwas not replicated in a larger trial. Improved cognitive function in both trials. Dose \nused was 600mg/day.\nModafinil106\nMeta-analysis of five studies of modafinil/armodafinil suggests robust benefit on \nresponse and remission with good tolerability and no evidence of increased risk of \nswitching.\nOmega-3 fatty acids107,108\nOne positive RCT (1g/2g a day) and one negative (6g a day)\n",
+  "raw_text_sha256": "7a3b7840baedbeefff2960ab7536050ae375eb677bef75bb997d58482e23f3f5",
+  "coordinates_sha256": "31255ba89632ba48418257ef18db1f3b9e48d8a83521a0f394cb4269a820eec1",
+  "block_sequence_sha256": "28329caf1dc3778c74a86645ea15f631bfa20d588b96194c5d71e7dcd360286e",
+  "blocks": [
+    {
+      "block_id": "page-0312-block-0000",
+      "order": 0,
+      "text": "Bipolar disorder    291\n",
+      "bbox": [
+        326.5046081542969,
+        31.395221710205078,
+        420.0005798339844,
+        41.0272216796875
+      ],
+      "text_sha256": "28cf2181be093e4a3f4e87ad894c0802106f50a96a443f9fa563c1e254737172"
+    },
+    {
+      "block_id": "page-0312-block-0001",
+      "order": 1,
+      "text": "CHAPTER 2\n",
+      "bbox": [
+        454.4096984863281,
+        146.3472900390625,
+        463.88970947265625,
+        187.6912841796875
+      ],
+      "text_sha256": "5eaa1f2591abe1a1b2f7664fa3de7ff01a032d44ee83fa594c7852135d4287aa"
+    },
+    {
+      "block_id": "page-0312-block-0002",
+      "order": 2,
+      "text": "statistical significance.98 Another analysis of trials not involving antidepressants109 \n(7307 participants) found a statistical advantage over placebo for olanzapine + fluox-\netine, valproate, quetiapine, lurasidone, olanzapine, aripiprazole and carbamazepine (in \norder of effect size, highest first).\n",
+      "bbox": [
+        48.0,
+        327.2139892578125,
+        422.7900085449219,
+        374.9339904785156
+      ],
+      "text_sha256": "dd3968b6808a17ec233ca5b0702ad433a15ca23a9b8b0efe0e28fe0810e56366"
+    },
+    {
+      "block_id": "page-0312-block-0003",
+      "order": 3,
+      "text": "A 2014 network meta-analysis of 29 studies included 8331 subjects.110 Overall olanzap-\nine + fluoxetine, lurasidone, olanzapine, valproate, SSRIs and quetiapine were ranked high-\nest in terms of effect size and response with olanzapine + fluoxetine ranked first for both. \nThe most recent network meta-analysis included 11,448 participants in 50 studies.111 Drugs \nfound to be more effective than placebo were olanzapine + fluoxetine, olanzapine, val-\nproate, cariprazine, lamotrigine, lurasidone and quetiapine. Interestingly, imipramine and \nfluoxetine were also more effective than placebo (but with wide confidence intervals).\n",
+      "bbox": [
+        47.99658203125,
+        375.2139892578125,
+        422.7765808105469,
+        458.9339904785156
+      ],
+      "text_sha256": "b12a4cb02ed4f1d746004c4b0cdc24fd5f7ec9616ab6e6280eeb10760e6d3842"
+    },
+    {
+      "block_id": "page-0312-block-0004",
+      "order": 4,
+      "text": "Summary of drug choice\n",
+      "bbox": [
+        48.0,
+        476.3689880371094,
+        173.90597534179688,
+        489.40399169921875
+      ],
+      "text_sha256": "56fb77f424ed9ee5aba8d142ceb87599dea52aecfe5f4fb54cf206d49386bd99"
+    },
+    {
+      "block_id": "page-0312-block-0005",
+      "order": 5,
+      "text": "The combination of olanzapine + fluoxetine is probably the most effective treatment \navailable for bipolar depression but its use is constrained by the well known adverse \neffect profile of olanzapine. SSRIs other than fluoxetine may be effective but should \nprobably be avoided unless clear individual benefit is obvious.53 Alternative first-line \nchoices are quetiapine, olanzapine, lurasidone, lamotrigine and valproate. These drugs \ndiffer substantially in adverse effect profile, tolerability and cost, each of which needs \nto be considered when prescribing for an individual. Lithium is also effective but sup-\nporting evidence is relatively weak. Second-line drugs include ketamine and, increas-\ningly, modafinil. Aripiprazole, risperidone, ziprasidone, tricyclics (with the exception of \nimipramine) and MAOIs (with the exception of tranylcypromine) are probably not \neffective and should not be used routinely.110\n",
+      "bbox": [
+        48.0,
+        495.2139892578125,
+        422.8099365234375,
+        626.9340209960938
+      ],
+      "text_sha256": "ba45867fec11fae0d09ee1d1ac54a633d9f81dbb9d1e78f67aeccce8ecf23767"
+    },
+    {
+      "block_id": "page-0312-block-0006",
+      "order": 6,
+      "text": "Table 2.11  Other possible treatments – seek specialist advice before using\n",
+      "bbox": [
+        53.99980163574219,
+        70.08790588378906,
+        291.6823425292969,
+        78.97540283203125
+      ],
+      "text_sha256": "fed0e4b8965def6a01153ec484c0ed30ed492256d54d36284c2e712fb62c7336"
+    },
+    {
+      "block_id": "page-0312-block-0007",
+      "order": 7,
+      "text": "Drug/regime\nComments\n",
+      "bbox": [
+        51.99980163574219,
+        87.96290588378906,
+        184.50230407714844,
+        96.85040283203125
+      ],
+      "text_sha256": "7a9329b6103c48a6cb1b9f3e034b2825b42863acc24613b19e0d45b2d61d89fb"
+    },
+    {
+      "block_id": "page-0312-block-0008",
+      "order": 8,
+      "text": "Aripiprazole96–99\nLimited support from open studies as add-on treatment. RCT negative. Possibly not \neffective.95\n",
+      "bbox": [
+        51.99980163574219,
+        103.7654037475586,
+        414.27734375,
+        122.472900390625
+      ],
+      "text_sha256": "16bb9c1a494109601387863ed84c9333f90a940a7b362ebba92c228536a39ba3"
+    },
+    {
+      "block_id": "page-0312-block-0009",
+      "order": 9,
+      "text": "Carbamazepine1,13,100\nOccasionally recommended but database is poor and effect modest. May have \nuseful activity when added to other mood stabilisers.\n",
+      "bbox": [
+        51.99980163574219,
+        129.3928985595703,
+        399.25482177734375,
+        148.097900390625
+      ],
+      "text_sha256": "885a8141a3172a97032f0ce7681393816d8e28eb2de4a643602f6aad681cc20c"
+    },
+    {
+      "block_id": "page-0312-block-0010",
+      "order": 10,
+      "text": "Gabapentin1,101,102\nOpen studies suggest modest effect when added to mood stabilisers or \nantipsychotics. Doses average around 1750mg/day. Anxiolytic effect may account \nfor apparent effect in bipolar depression\n",
+      "bbox": [
+        51.99729919433594,
+        155.0128936767578,
+        408.5622863769531,
+        183.72039794921875
+      ],
+      "text_sha256": "fab338aaf31a45ec6bc786dc3645daea91f07dcb105f005d321d117c0f8ac89a"
+    },
+    {
+      "block_id": "page-0312-block-0011",
+      "order": 11,
+      "text": "Inositol103\nSmall, randomised, pilot study suggests that 12g/day inositol is effective in bipolar \ndepression\n",
+      "bbox": [
+        51.99729919433594,
+        190.63539123535156,
+        410.6549072265625,
+        209.347900390625
+      ],
+      "text_sha256": "8cce9c1711985dfef75aff5e1f9594a98e99a6f99f102dca9de903c8cb2bf30d"
+    },
+    {
+      "block_id": "page-0312-block-0012",
+      "order": 12,
+      "text": "Mifepristone104,105\nSome evidence of mood-elevating properties in bipolar depression although this \nwas not replicated in a larger trial. Improved cognitive function in both trials. Dose \nused was 600mg/day.\n",
+      "bbox": [
+        51.99729919433594,
+        216.2628936767578,
+        411.7574157714844,
+        244.97039794921875
+      ],
+      "text_sha256": "49cf374d5a480817ebafb57bede42f555540b41b968a3ec98262570591e0d5d7"
+    },
+    {
+      "block_id": "page-0312-block-0013",
+      "order": 13,
+      "text": "Modafinil106\nMeta-analysis of five studies of modafinil/armodafinil suggests robust benefit on \nresponse and remission with good tolerability and no evidence of increased risk of \nswitching.\n",
+      "bbox": [
+        51.99729919433594,
+        251.88539123535156,
+        410.8123779296875,
+        280.59539794921875
+      ],
+      "text_sha256": "f13de2698469445f03b2605370d063ec8b2e2763c3af2d1ab5c6bcf531b1f395"
+    },
+    {
+      "block_id": "page-0312-block-0014",
+      "order": 14,
+      "text": "Omega-3 fatty acids107,108\nOne positive RCT (1g/2g a day) and one negative (6g a day)\n",
+      "bbox": [
+        51.99729919433594,
+        287.5104064941406,
+        337.0648498535156,
+        296.22540283203125
+      ],
+      "text_sha256": "dedcb90383cc19e1b66559499182f7cbe714ec7759bd809958460e870df464cc"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

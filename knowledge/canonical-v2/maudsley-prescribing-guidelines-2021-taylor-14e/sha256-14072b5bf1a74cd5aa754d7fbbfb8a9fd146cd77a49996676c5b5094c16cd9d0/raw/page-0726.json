@@ -1,0 +1,563 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0726",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 726,
+  "source_page_index": 725,
+  "source_page_display": 726,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Table 7.3  Antidepressants in breastfeeding\nDrug\nInfant plasma \nconcentrations\nRelative infant \ndose (RID)\nReported acute adverse effects in \ninfant\nReported developmental effects in \ninfant\nAgomelatine3,4\nNot assessed\nNot available\nNone reported but not studied\nNone reported but not studied\nBrexanolone5\nNot assessed\n1–2%\nNone reported but not studied\nNone reported but not studied\nBupropion4,6–13\nUndetectable or low\n0.2–2%\nTwo reports of seizure-like activity in \n6-month olds.\nIn one of the cases the infant \nexperienced sleep disturbance, severe \nemesis and somnolence. The infant \nplasma levels were below the level \nrequired for quantification. The \nmother was also taking escitalopram.\nNone reported but not studied\nCitalopram2,4,11,14–23\nUndetectable to up to 10% \nof maternal plasma levels.\nHigher than for fluvoxamine, \nsertraline, paroxetine and \nescitalopram, but lower than \nfor fluoxetine.\n3–10%\nSleep disturbance (which resolved on \nhalving maternal dose), colic, \ndecreased feeding, and irritability \nand restlessness.\nOne case of irregular breathing, \nsleep disorder and hypo- and \nhypertonia Infant exposed to \ncitalopram in utero. Symptoms \nattributed to withdrawal syndrome \ndespite the mother continuing \ncitalopram postpartum.\nNone reported.\nIn a study of 78 infants of mothers \ntaking an SSRI or venlafaxine no \ndifference in weight was noted at \n6 months compared with the \n‘normative’ weight.\nIn a study of 11 infants normal \nneurodevelopment was observed up to \n1 year. One of the children was unable \nto walk at 1-year, However, neurological \nstatus of the child was deemed normal \n6 months later.\n(Continued)\n",
+  "raw_text_sha256": "b567d0fc096908c04f06bf84b94e2c6e921e5002b6c9cd9acc1558cb59e2dbcf",
+  "coordinates_sha256": "5813c41b9434d4e62d45a13caabe0120c5163cb750b996c599386149aa305d0f",
+  "block_sequence_sha256": "e66564baf616e3fa42502ef6043196c245c94af900ac7d55556f400cf9eaa486",
+  "blocks": [
+    {
+      "block_id": "page-0726-block-0000",
+      "order": 0,
+      "text": "Table 7.3  Antidepressants in breastfeeding\n",
+      "bbox": [
+        53.73749923706055,
+        467.7165222167969,
+        62.625,
+        606.6539916992188
+      ],
+      "text_sha256": "29d01190a364c4d5f50a1adb47142275e71390bd09f27b684c6bde7b34cddd5c"
+    },
+    {
+      "block_id": "page-0726-block-0001",
+      "order": 1,
+      "text": "Drug\nInfant plasma \n",
+      "bbox": [
+        74.36500549316406,
+        441.7214660644531,
+        93.25,
+        612.6539916992188
+      ],
+      "text_sha256": "740ab9eb672cde86fd19cae765bab98ff010246377b1aac1269ef7543dd4a3b7"
+    },
+    {
+      "block_id": "page-0726-block-0002",
+      "order": 2,
+      "text": "concentrations\nRelative infant \n",
+      "bbox": [
+        74.36500549316406,
+        334.05145263671875,
+        93.25,
+        492.1514892578125
+      ],
+      "text_sha256": "bb1205aa23f4c324e61f2d45e2cc5a89247e633799704f1f4a6b66b6effcd299"
+    },
+    {
+      "block_id": "page-0726-block-0003",
+      "order": 3,
+      "text": "dose (RID)\nReported acute adverse effects in \n",
+      "bbox": [
+        74.36500549316406,
+        203.4314422607422,
+        93.25,
+        387.82647705078125
+      ],
+      "text_sha256": "3177e1242b62d10d9d24ae8b72819a2a6f978aa6260c48d73981167f1f9dad77"
+    },
+    {
+      "block_id": "page-0726-block-0004",
+      "order": 4,
+      "text": "infant\nReported developmental effects in \n",
+      "bbox": [
+        74.36500549316406,
+        67.8989486694336,
+        93.25,
+        323.32647705078125
+      ],
+      "text_sha256": "5208ea628ac7af2784c52fbd80c2393eb82f42a793d04e9fc000a75672474e8b"
+    },
+    {
+      "block_id": "page-0726-block-0005",
+      "order": 5,
+      "text": "infant\n",
+      "bbox": [
+        84.36250305175781,
+        170.70896911621094,
+        93.25,
+        191.9639892578125
+      ],
+      "text_sha256": "e7126f01d55795d9d0761c51e3f277a39d4ed441a3504bd0a6901247c19c0069"
+    },
+    {
+      "block_id": "page-0726-block-0006",
+      "order": 6,
+      "text": "Agomelatine3,4\nNot assessed\nNot available\nNone reported but not studied\nNone reported but not studied\n",
+      "bbox": [
+        104.66500091552734,
+        94.15141296386719,
+        113.375,
+        612.6539916992188
+      ],
+      "text_sha256": "71a388097f53c30b224072b5f99126ff19701e5ff16580b8f5190f8146176c7e"
+    },
+    {
+      "block_id": "page-0726-block-0007",
+      "order": 7,
+      "text": "Brexanolone5\nNot assessed\n1–2%\nNone reported but not studied\nNone reported but not studied\n",
+      "bbox": [
+        122.7925033569336,
+        94.15147399902344,
+        131.50250244140625,
+        612.656494140625
+      ],
+      "text_sha256": "d1e25e7ad4c1ad54315487dfbfbf7dfe51f03ca3138f4f307cf27512c2ea43e9"
+    },
+    {
+      "block_id": "page-0726-block-0008",
+      "order": 8,
+      "text": "Bupropion4,6–13\nUndetectable or low\n0.2–2%\nTwo reports of seizure-like activity in \n",
+      "bbox": [
+        140.91749572753906,
+        205.60145568847656,
+        149.62750244140625,
+        612.656494140625
+      ],
+      "text_sha256": "217932e80ed64392ca5a19db60140db2a64e0708ad603a55ebad94e27db4e0cc"
+    },
+    {
+      "block_id": "page-0726-block-0009",
+      "order": 9,
+      "text": "6-month olds.\n",
+      "bbox": [
+        150.9149932861328,
+        278.31390380859375,
+        159.62249755859375,
+        323.3289794921875
+      ],
+      "text_sha256": "81fcb236256243d73e7993c50348a224096f56244e125a11bb53634c6dc355bf"
+    },
+    {
+      "block_id": "page-0726-block-0010",
+      "order": 10,
+      "text": "In one of the cases the infant \n",
+      "bbox": [
+        166.91249084472656,
+        228.3264617919922,
+        175.6199951171875,
+        323.3289794921875
+      ],
+      "text_sha256": "6a26d7d2b118be41af3a1e7047999713529535182ce12b7dac99b042812522a9"
+    },
+    {
+      "block_id": "page-0726-block-0011",
+      "order": 11,
+      "text": "experienced sleep disturbance, severe \n",
+      "bbox": [
+        176.9099884033203,
+        201.9115753173828,
+        185.61749267578125,
+        323.3289794921875
+      ],
+      "text_sha256": "f4db91dbdafc88bf9ac816da7753d4bf725b981eed13520b6393e11b68e56719"
+    },
+    {
+      "block_id": "page-0726-block-0012",
+      "order": 12,
+      "text": "emesis and somnolence. The infant \n",
+      "bbox": [
+        186.90748596191406,
+        209.20152282714844,
+        195.614990234375,
+        323.3289794921875
+      ],
+      "text_sha256": "cb274aecde5e2968c8ff6cfdaa050b55fb3cdf1b04772a3877226ba9130f504f"
+    },
+    {
+      "block_id": "page-0726-block-0013",
+      "order": 13,
+      "text": "plasma levels were below the level \n",
+      "bbox": [
+        196.9049835205078,
+        211.87156677246094,
+        205.61248779296875,
+        323.3289794921875
+      ],
+      "text_sha256": "aad66688b554a29c58d6dc7a2e0b21570538bc6502719e08f6016fdd68e342ea"
+    },
+    {
+      "block_id": "page-0726-block-0014",
+      "order": 14,
+      "text": "required for quantification. The \n",
+      "bbox": [
+        206.90248107910156,
+        221.9664764404297,
+        215.6099853515625,
+        323.3289794921875
+      ],
+      "text_sha256": "dff7c1fbaa6a831cd8b2fe15a6cba647b427aa8ab8945d0cd234c642b2b897c5"
+    },
+    {
+      "block_id": "page-0726-block-0015",
+      "order": 15,
+      "text": "mother was also taking escitalopram.\n",
+      "bbox": [
+        216.8999786376953,
+        204.6790008544922,
+        225.60748291015625,
+        323.3289794921875
+      ],
+      "text_sha256": "090992a9de022d2ef5cd942800cd8aea61284064c7a08aadd65d7699e5768ed8"
+    },
+    {
+      "block_id": "page-0726-block-0016",
+      "order": 16,
+      "text": "None reported but not studied\n",
+      "bbox": [
+        140.90248107910156,
+        94.15159606933594,
+        149.6099853515625,
+        191.96649169921875
+      ],
+      "text_sha256": "fae8af26f09a9d1db418cb13358e682d99fefc63621eb2dbf70b6920c0f098f6"
+    },
+    {
+      "block_id": "page-0726-block-0017",
+      "order": 17,
+      "text": "Citalopram2,4,11,14–23\nUndetectable to up to 10% \n",
+      "bbox": [
+        235.02748107910156,
+        401.7114562988281,
+        243.75,
+        612.656494140625
+      ],
+      "text_sha256": "ae5ee88634b9222c4d098d726e737a417744db79970407215ffc877b663fce3c"
+    },
+    {
+      "block_id": "page-0726-block-0018",
+      "order": 18,
+      "text": "of maternal plasma levels.\n",
+      "bbox": [
+        245.0399932861328,
+        409.10650634765625,
+        253.74749755859375,
+        492.15399169921875
+      ],
+      "text_sha256": "9e69054274146f955c7a66f17333cdf5be0a96f0580a87309eab409fead1d7e6"
+    },
+    {
+      "block_id": "page-0726-block-0019",
+      "order": 19,
+      "text": "Higher than for fluvoxamine, \n",
+      "bbox": [
+        261.0375061035156,
+        397.97650146484375,
+        269.7449951171875,
+        492.15399169921875
+      ],
+      "text_sha256": "794e08d62028cee7ace71ae552b3e7f8e0862a7c1ac0ced3d798f433349e9fb6"
+    },
+    {
+      "block_id": "page-0726-block-0020",
+      "order": 20,
+      "text": "sertraline, paroxetine and \n",
+      "bbox": [
+        271.0350036621094,
+        408.948974609375,
+        279.74249267578125,
+        492.15399169921875
+      ],
+      "text_sha256": "a2a44156ab24c6d771a2f00420c7b029de84a0c261283fba6333991d2d0d46ef"
+    },
+    {
+      "block_id": "page-0726-block-0021",
+      "order": 21,
+      "text": "escitalopram, but lower than \n",
+      "bbox": [
+        281.0325012207031,
+        397.97650146484375,
+        289.739990234375,
+        492.15399169921875
+      ],
+      "text_sha256": "a0b72c88d5d34ee688c6f7f74d659f2613bf49a27f9391412bd942121795a7d2"
+    },
+    {
+      "block_id": "page-0726-block-0022",
+      "order": 22,
+      "text": "for fluoxetine.\n",
+      "bbox": [
+        291.0299987792969,
+        447.1540222167969,
+        299.73748779296875,
+        492.15399169921875
+      ],
+      "text_sha256": "9983b50d29fb48196ae8344fa778a3d4a8d8571a53f225b05dab351a995e7d81"
+    },
+    {
+      "block_id": "page-0726-block-0023",
+      "order": 23,
+      "text": "3–10%\nSleep disturbance (which resolved on \n",
+      "bbox": [
+        235.02748107910156,
+        203.02137756347656,
+        243.7349853515625,
+        387.8289794921875
+      ],
+      "text_sha256": "b99342184ee6dff51fdfedde8e66274ccde4cde8196b4f8309b9866c7b05b727"
+    },
+    {
+      "block_id": "page-0726-block-0024",
+      "order": 24,
+      "text": "halving maternal dose), colic, \n",
+      "bbox": [
+        245.0249786376953,
+        228.1839141845703,
+        253.73248291015625,
+        323.3289794921875
+      ],
+      "text_sha256": "34db54917d66a0aa19972de703958f53512a98ef6b4b56d8b5fad5ee98c35bb4"
+    },
+    {
+      "block_id": "page-0726-block-0025",
+      "order": 25,
+      "text": "decreased feeding, and irritability \n",
+      "bbox": [
+        255.02247619628906,
+        215.1263885498047,
+        263.72998046875,
+        323.3289794921875
+      ],
+      "text_sha256": "2f571fcdf6460289aa1e6e98fff72756c25438400a6253b639406e186046115b"
+    },
+    {
+      "block_id": "page-0726-block-0026",
+      "order": 26,
+      "text": "and restlessness.\n",
+      "bbox": [
+        265.0199890136719,
+        270.5364074707031,
+        273.72747802734375,
+        323.3289794921875
+      ],
+      "text_sha256": "d6ee6fbe54a63130e168a42d1af61e09eb26d3e6696acfa999def1598bdb3b7f"
+    },
+    {
+      "block_id": "page-0726-block-0027",
+      "order": 27,
+      "text": "One case of irregular breathing, \n",
+      "bbox": [
+        281.0174865722656,
+        219.83641052246094,
+        289.7249755859375,
+        323.3289794921875
+      ],
+      "text_sha256": "0a42034aea698e6d37f8e1b5d441ae0267e02eb9920d0864cbfc08ceba1242a2"
+    },
+    {
+      "block_id": "page-0726-block-0028",
+      "order": 28,
+      "text": "sleep disorder and hypo- and \n",
+      "bbox": [
+        291.0149841308594,
+        228.4313507080078,
+        299.72247314453125,
+        323.3289794921875
+      ],
+      "text_sha256": "d58e842bf4c2c996cf870d57722414b39d7d56d2effda0b6a4da02f5ea20dc29"
+    },
+    {
+      "block_id": "page-0726-block-0029",
+      "order": 29,
+      "text": "hypertonia Infant exposed to \n",
+      "bbox": [
+        301.0124816894531,
+        229.1438751220703,
+        309.719970703125,
+        323.3289794921875
+      ],
+      "text_sha256": "0ecfc30a3c896220a523f972ba07e672be48be92b36b662fc2ac2c824e9299a3"
+    },
+    {
+      "block_id": "page-0726-block-0030",
+      "order": 30,
+      "text": "citalopram in utero. Symptoms \n",
+      "bbox": [
+        310.9649658203125,
+        222.9114227294922,
+        319.71746826171875,
+        323.3289794921875
+      ],
+      "text_sha256": "c08a13460fd6fd227038c8c949f9a3b78eac3a72d06eca4e10fcf21cf538da35"
+    },
+    {
+      "block_id": "page-0726-block-0031",
+      "order": 31,
+      "text": "attributed to withdrawal syndrome \n",
+      "bbox": [
+        321.0074768066406,
+        209.7039031982422,
+        329.7149658203125,
+        323.3289794921875
+      ],
+      "text_sha256": "002984d248090f926bec9437cd3646b4cb4f10ca353bd314e7c3fd41aacae23d"
+    },
+    {
+      "block_id": "page-0726-block-0032",
+      "order": 32,
+      "text": "despite the mother continuing \n",
+      "bbox": [
+        331.0049743652344,
+        224.14134216308594,
+        339.71246337890625,
+        323.3289794921875
+      ],
+      "text_sha256": "98706bf7ea2ba7594ba76c0341e0413808b9aa0b51cfbd4914a5d2e8b5e5c6d8"
+    },
+    {
+      "block_id": "page-0726-block-0033",
+      "order": 33,
+      "text": "citalopram postpartum.\n",
+      "bbox": [
+        341.0024719238281,
+        248.3289031982422,
+        349.7099609375,
+        323.3289794921875
+      ],
+      "text_sha256": "4860803da93728767adda98e1c2465ea679109fb5847a048a7fc190d677a685c"
+    },
+    {
+      "block_id": "page-0726-block-0034",
+      "order": 34,
+      "text": "None reported.\n",
+      "bbox": [
+        235.0049591064453,
+        143.3365020751953,
+        243.71246337890625,
+        191.96649169921875
+      ],
+      "text_sha256": "cf53711182540597a6673376e5a8845af9f30f2c10f30bce4f5f441c2d8dec77"
+    },
+    {
+      "block_id": "page-0726-block-0035",
+      "order": 35,
+      "text": "In a study of 78 infants of mothers \n",
+      "bbox": [
+        251.00245666503906,
+        79.02413177490234,
+        259.7099609375,
+        191.96649169921875
+      ],
+      "text_sha256": "d4711871609fb42fcabf2a619de0ddb4bad38c96658c33d62e663749e73f9ff7"
+    },
+    {
+      "block_id": "page-0726-block-0036",
+      "order": 36,
+      "text": "taking an SSRI or venlafaxine no \n",
+      "bbox": [
+        260.9999694824219,
+        87.3640365600586,
+        269.70745849609375,
+        191.96649169921875
+      ],
+      "text_sha256": "ce2494ceeaef5848b482f1bfdf5d7e67ce94a7edc99723c090860e80dfe4d1a1"
+    },
+    {
+      "block_id": "page-0726-block-0037",
+      "order": 37,
+      "text": "difference in weight was noted at \n",
+      "bbox": [
+        270.9974670410156,
+        82.2190170288086,
+        279.7049560546875,
+        191.96649169921875
+      ],
+      "text_sha256": "de8f8b755af0647b0a7c7a9d728c2b26cbe2f1416d1f38e32ec998c14b7ed0f0"
+    },
+    {
+      "block_id": "page-0726-block-0038",
+      "order": 38,
+      "text": "6 months compared with the \n‘normative’ weight.\n",
+      "bbox": [
+        280.9949645996094,
+        96.6640853881836,
+        299.699951171875,
+        191.96649169921875
+      ],
+      "text_sha256": "b856294bae1a507596bc9ea4c38817cc694922f005b3f147b23c8ddf33bd32bd"
+    },
+    {
+      "block_id": "page-0726-block-0039",
+      "order": 39,
+      "text": "In a study of 11 infants normal \n",
+      "bbox": [
+        306.9899597167969,
+        92.4261703491211,
+        315.69744873046875,
+        191.96649169921875
+      ],
+      "text_sha256": "a14cb7028335a72b5e568c3180a29fbb6870b42463d670128145341e76c4c67b"
+    },
+    {
+      "block_id": "page-0726-block-0040",
+      "order": 40,
+      "text": "neurodevelopment was observed up to \n",
+      "bbox": [
+        316.9874572753906,
+        66.00386810302734,
+        325.6949462890625,
+        191.96649169921875
+      ],
+      "text_sha256": "1befd97bcfa8aaa7e31820aa372a25668f41c706d63fcffc1765c20e349abf63"
+    },
+    {
+      "block_id": "page-0726-block-0041",
+      "order": 41,
+      "text": "1 year. One of the children was unable \nto walk at 1-year, However, neurological \n",
+      "bbox": [
+        326.9849548339844,
+        62.554039001464844,
+        345.68994140625,
+        191.96649169921875
+      ],
+      "text_sha256": "3016bd85a7ec4d7df5ab6ec53a7e875c79a72113ba9ae924f94c35546c4335f8"
+    },
+    {
+      "block_id": "page-0726-block-0042",
+      "order": 42,
+      "text": "status of the child was deemed normal \n",
+      "bbox": [
+        346.9799499511719,
+        66.7763900756836,
+        355.68743896484375,
+        191.96649169921875
+      ],
+      "text_sha256": "1fc8ec9075c5cc2c7a5132a38d5c8f62aa5efd36db41b883c0ebc8280b4ac51c"
+    },
+    {
+      "block_id": "page-0726-block-0043",
+      "order": 43,
+      "text": "6 months later.\n",
+      "bbox": [
+        356.9774475097656,
+        144.31886291503906,
+        365.6849365234375,
+        191.96649169921875
+      ],
+      "text_sha256": "4b488bc6ec5ab6210949c8916951bae3f349013735d3f9ab6e861251966886d9"
+    },
+    {
+      "block_id": "page-0726-block-0044",
+      "order": 44,
+      "text": "(Continued)\n",
+      "bbox": [
+        374.8199462890625,
+        64.3539047241211,
+        383.57244873046875,
+        100.36895751953125
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

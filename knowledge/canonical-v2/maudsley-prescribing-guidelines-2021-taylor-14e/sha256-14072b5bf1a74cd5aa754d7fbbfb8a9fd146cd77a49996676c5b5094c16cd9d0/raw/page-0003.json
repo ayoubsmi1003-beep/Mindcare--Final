@@ -1,0 +1,95 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0003",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 3,
+  "source_page_index": 2,
+  "source_page_display": 3,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "The Maudsley Guidelines\nOther books in the Maudsley Prescribing Guidelines series include:\nThe Maudsley Practice Guidelines for Physical Health Conditions in Psychiatry\nDavid Taylor, Fiona Gaughran, Toby Pillinger\nThe Maudsley Guidelines on Advanced Prescribing in Psychosis\nPaul Morrison, David Taylor, Phillip McGuire\n",
+  "raw_text_sha256": "6ea410f0445cc9cd435cac506a9aba686c593139bff91ffff77ebfa54d917199",
+  "coordinates_sha256": "20ddfca296d3536fcccb52164ae1da9108927140e409d8509d4b1a292215a73e",
+  "block_sequence_sha256": "3a07805bf7019c89d0c96b0ca37240647ee026f3b35422d3cee0b516f0b9ed2b",
+  "blocks": [
+    {
+      "block_id": "page-0003-block-0000",
+      "order": 0,
+      "text": "The Maudsley Guidelines\n",
+      "bbox": [
+        61.889801025390625,
+        88.1631851196289,
+        261.02581787109375,
+        107.42718505859375
+      ],
+      "text_sha256": "1bd526e0b1fd0439f0b88f54fe94ceb9f42e0de44c9c76dc374bc461eac0a60c"
+    },
+    {
+      "block_id": "page-0003-block-0001",
+      "order": 1,
+      "text": "Other books in the Maudsley Prescribing Guidelines series include:\n",
+      "bbox": [
+        61.889801025390625,
+        109.87518310546875,
+        292.9057922363281,
+        119.25118255615234
+      ],
+      "text_sha256": "ec86174d9a8830a37366d389fddc8d6251651f929446297ff44fa95b57b9d244"
+    },
+    {
+      "block_id": "page-0003-block-0002",
+      "order": 2,
+      "text": "The Maudsley Practice Guidelines for Physical Health Conditions in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        158.1571807861328,
+        403.66973876953125,
+        169.70718383789062
+      ],
+      "text_sha256": "33d015ba787e79cfc6c021df3c908a6d88bf5e1f85947b68eaed2c26acc9da8a"
+    },
+    {
+      "block_id": "page-0003-block-0003",
+      "order": 3,
+      "text": "David Taylor, Fiona Gaughran, Toby Pillinger\n",
+      "bbox": [
+        61.889801025390625,
+        173.87518310546875,
+        218.85775756835938,
+        183.25119018554688
+      ],
+      "text_sha256": "eb043bcfc3653f36447183a5841581dde817e6fecabd1061a83526bcc440bcfb"
+    },
+    {
+      "block_id": "page-0003-block-0004",
+      "order": 4,
+      "text": "The Maudsley Guidelines on Advanced Prescribing in Psychosis\n",
+      "bbox": [
+        61.889801025390625,
+        200.1571807861328,
+        336.59979248046875,
+        211.70718383789062
+      ],
+      "text_sha256": "31f1eb1ca9dc05004e63ae5edc911ca1d8408e7cdc3e0ecc5d4fdaede55e57c0"
+    },
+    {
+      "block_id": "page-0003-block-0005",
+      "order": 5,
+      "text": "Paul Morrison, David Taylor, Phillip McGuire\n",
+      "bbox": [
+        61.889801025390625,
+        215.87518310546875,
+        220.3777618408203,
+        225.25119018554688
+      ],
+      "text_sha256": "8994cbf7f7058df3b9d484ee29a6d7ea57ecfe09ecf0b9995ce9e6f43cea10c6"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

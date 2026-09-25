@@ -1,0 +1,419 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0085",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 85,
+  "source_page_index": 84,
+  "source_page_display": 85,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "64    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nRemedial measures in rapid tranquillisation  (Continued)\nIrregular or slow (<50/min) pulse \t\n\t\nRefer to specialist medical care immediately.\nFall in blood pressure (>30mmHg \t\n\t\nHave patient lie flat, tilt bed towards head.\northostatic drop or < 50mmHg diastolic)\t\nMonitor closely.\nIncreased temperature \t\n\t\n\t\n\u0007(risk of NMS and perhaps arrhythmia).  \nCheck creatine kinase urgently.\nGuidelines for the use of flumazenil\nIndication for use\t\n\u0007If, after the administration of lorazepam, midazolam or diazepam, \nrespiratory rate falls below 10/min.\nContraindications\t\n\u0007Patients with epilepsy who have been receiving long-term  \nbenzodiazepines.\nCaution\t\nDose should be carefully titrated in hepatic impairment.\nDose and route of\t\nInitial: 200µg intravenously over 15 seconds\nadministration \t\n– if required level of consciousness not achieved after 60 seconds, then,\n\t\nSubsequent dose: 100µg over 15 seconds.\nTime before dose\t\n60 seconds.\ncan be repeated\nMaximum dose\t\n1mg in 24 hours\n\t\n(one initial dose and eight subsequent doses).\nSide-effects\t\n\u0007Patients may become agitated, anxious or fearful on awakening.  \nSeizures may occur in regular benzodiazepine users.\nManagement\t\nSide-effects usually subside.\nMonitoring\n■\n■What to monitor?\t\nRespiratory rate\n■\n■How often?\t\n\u0007Continuously until respiratory rate returns tobaseline level.  \nFlumazenil has a short half-life (much shorter than diazepam) and \nrespiratory function may recover and then deteriorate again.\nNote: If respiratory rate does not return to normal or patient is not alert after initial doses given, \nassume that sedation is due to some other cause.\nReferences\n\t 1.\t Patel MX, et al. Joint BAP NAPICU evidence-based consensus guidelines for the clinical management of acute disturbance: de-escalation and \nrapid tranquillisation. J Psychopharmacology 2018; 32:601–640.\n\t 2.\t Bak M, et al. The pharmacological management of agitated and aggressive behaviour: a systematic review and meta-analysis. Eur Psychiatry \n2019; 57:78–100.\n\t 3.\t Currier GW, et al. Acute treatment of psychotic agitation: a randomized comparison of oral treatment with risperidone and lorazepam versus \nintramuscular treatment with haloperidol and lorazepam. J Clin Psychiatry 2004; 65:386–394.\n\t 4.\t Ganesan S, et al. Effectiveness of quetiapine for the management of aggressive psychosis in the emergency psychiatric setting: a naturalistic \nuncontrolled trial. Int J Psychiatry Clin Pract 2005; 9:199–203.\n\t 5.\t Simpson JR, Jr., et al. Impact of orally disintegrating olanzapine on use of intramuscular antipsychotics, seclusion, and restraint in an acute \ninpatient psychiatric setting. J Clin Psychopharmacol 2006; 26:333–335.\n\t 6.\t Hsu WY, et al. Comparison of intramuscular olanzapine, orally disintegrating olanzapine tablets, oral risperidone solution, and intramuscular \nhaloperidol in the management of acute agitation in an acute care psychiatric ward in Taiwan. J Clin Psychopharmacol 2010; 30:230–234.\n\t 7.\t Pratts M, et al. A single-dose, randomized, double-blind, placebo-controlled trial of sublingual asenapine for acute agitation. Acta Psychiatr \nScand 2014; 130:61–68.\n\t 8.\t Lesem MD, et al. Rapid acute treatment of agitation in individuals with schizophrenia: multicentre, randomised, placebo-controlled study of \ninhaled loxapine. Br J Psychiatry 2011; 198:51–58.\n",
+  "raw_text_sha256": "2e85122a5b0e927ab357b4fd6c39e05e5708b35cd6fb60feb18fec8baf5026db",
+  "coordinates_sha256": "f9e1c6427078ddd1acab4904dd03f69a254e8611e6e450afb059deb724868ce4",
+  "block_sequence_sha256": "8a2341105811f87e4fc7740a289065d9c7b9ae9fb99494a2b421538fb8c418ef",
+  "blocks": [
+    {
+      "block_id": "page-0085-block-0000",
+      "order": 0,
+      "text": "64    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "80e721db7681bc1918939431799ed53d8daabec04f75dfbf6b83edb92874d191"
+    },
+    {
+      "block_id": "page-0085-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0085-block-0002",
+      "order": 2,
+      "text": "Remedial measures in rapid tranquillisation  (Continued)\n",
+      "bbox": [
+        68.38909912109375,
+        69.35193634033203,
+        282.8485412597656,
+        79.8743896484375
+      ],
+      "text_sha256": "c087be702e24a79ee9f691b236b75c084fe8a0d856494592e518c1664d866603"
+    },
+    {
+      "block_id": "page-0085-block-0003",
+      "order": 3,
+      "text": "Irregular or slow (<50/min) pulse \t\n\t\nRefer to specialist medical care immediately.\n",
+      "bbox": [
+        68.88909912109375,
+        91.36942291259766,
+        400.44110107421875,
+        100.84942626953125
+      ],
+      "text_sha256": "dd91ee1b41ecef6f628cba19cbb6f71f7457a2b3ed2786698a16b4967e7e76b7"
+    },
+    {
+      "block_id": "page-0085-block-0004",
+      "order": 4,
+      "text": "Fall in blood pressure (>30mmHg \t\n\t\nHave patient lie flat, tilt bed towards head.\northostatic drop or < 50mmHg diastolic)\t\nMonitor closely.\n",
+      "bbox": [
+        68.88911437988281,
+        104.36942291259766,
+        403.02508544921875,
+        123.84942626953125
+      ],
+      "text_sha256": "d9c4261abcb19b0e13f579ea50ed0477c1a609c668bc139c5caa9af82d3d588d"
+    },
+    {
+      "block_id": "page-0085-block-0005",
+      "order": 5,
+      "text": "Increased temperature \t\n\t\n\t\n\u0007(risk of NMS and perhaps arrhythmia).  \nCheck creatine kinase urgently.\n",
+      "bbox": [
+        68.88911437988281,
+        127.36942291259766,
+        383.1370849609375,
+        146.84942626953125
+      ],
+      "text_sha256": "48a1859022c227bf0e58cc4fe7738f797c697616e7ca37626f2c416301727816"
+    },
+    {
+      "block_id": "page-0085-block-0006",
+      "order": 6,
+      "text": "Guidelines for the use of flumazenil\n",
+      "bbox": [
+        68.88909912109375,
+        160.20191955566406,
+        212.00363159179688,
+        170.2744140625
+      ],
+      "text_sha256": "e154c8cdbac75cbca497541c724a97618dadbec8eebdaa18f7680a3fdd0796f4"
+    },
+    {
+      "block_id": "page-0085-block-0007",
+      "order": 7,
+      "text": "Indication for use\t\n\u0007If, after the administration of lorazepam, midazolam or diazepam, \nrespiratory rate falls below 10/min.\n",
+      "bbox": [
+        68.88909912109375,
+        179.53089904785156,
+        413.1988220214844,
+        199.599365234375
+      ],
+      "text_sha256": "1d61a9aefc9600218e5193118afea5b5afab2421f6004e29e5cf90e82ad1c3d2"
+    },
+    {
+      "block_id": "page-0085-block-0008",
+      "order": 8,
+      "text": "Contraindications\t\n\u0007Patients with epilepsy who have been receiving long-term  \nbenzodiazepines.\n",
+      "bbox": [
+        68.88909912109375,
+        202.9944305419922,
+        372.6571044921875,
+        222.47442626953125
+      ],
+      "text_sha256": "d42aafa47427c96f72bc70efb80e070b4434e181afbeadb89c7568dd2686f98a"
+    },
+    {
+      "block_id": "page-0085-block-0009",
+      "order": 9,
+      "text": "Caution\t\nDose should be carefully titrated in hepatic impairment.\n",
+      "bbox": [
+        68.88909912109375,
+        225.9944305419922,
+        361.089111328125,
+        235.47442626953125
+      ],
+      "text_sha256": "5cf24d82bf57fadfed043386abd187ff7672c559c23192d45294c19753125081"
+    },
+    {
+      "block_id": "page-0085-block-0010",
+      "order": 10,
+      "text": "Dose and route of\t\nInitial: 200µg intravenously over 15 seconds\n",
+      "bbox": [
+        68.88909912109375,
+        238.9944305419922,
+        331.0650634765625,
+        248.47442626953125
+      ],
+      "text_sha256": "7af2d9d5ebc24829ec3ff2d6bd6d59756c025dcfe769b5838b3ccd10a71aecfe"
+    },
+    {
+      "block_id": "page-0085-block-0011",
+      "order": 11,
+      "text": "administration \t\n– if required level of consciousness not achieved after 60 seconds, then,\n",
+      "bbox": [
+        68.88909912109375,
+        251.9944305419922,
+        416.08905029296875,
+        261.47442626953125
+      ],
+      "text_sha256": "66a908b4d1f2fbb6840c99df02830a214b1c9ee1fa7c6810078378e4b8f516ce"
+    },
+    {
+      "block_id": "page-0085-block-0012",
+      "order": 12,
+      "text": "\t\nSubsequent dose: 100µg over 15 seconds.\n",
+      "bbox": [
+        68.88909912109375,
+        264.9944152832031,
+        322.60107421875,
+        274.47442626953125
+      ],
+      "text_sha256": "e4998933151c9cb49ada3a1ce1fed2717a40d7c4cd0cfd0e9fde3b8263faef45"
+    },
+    {
+      "block_id": "page-0085-block-0013",
+      "order": 13,
+      "text": "Time before dose\t\n60 seconds.\n",
+      "bbox": [
+        68.88909912109375,
+        277.9944152832031,
+        212.35308837890625,
+        287.47442626953125
+      ],
+      "text_sha256": "3bc4c8d6e7a60e541d1e74ef20ddf3fcd8977341b69f9f3216a322eb6b8aa749"
+    },
+    {
+      "block_id": "page-0085-block-0014",
+      "order": 14,
+      "text": "can be repeated\n",
+      "bbox": [
+        68.88909912109375,
+        290.9944152832031,
+        129.20909118652344,
+        300.47442626953125
+      ],
+      "text_sha256": "454dfd4cacfe8085b52310ac0cdd36c2110fd8b7fa5cb45c78e2d951af421ead"
+    },
+    {
+      "block_id": "page-0085-block-0015",
+      "order": 15,
+      "text": "Maximum dose\t\n1mg in 24 hours\n",
+      "bbox": [
+        68.88909912109375,
+        303.9944152832031,
+        228.36106872558594,
+        313.47442626953125
+      ],
+      "text_sha256": "546aff786197b639265f59a6633075c0d8e8309fcabf9ebd6f02639746393cfb"
+    },
+    {
+      "block_id": "page-0085-block-0016",
+      "order": 16,
+      "text": "\t\n(one initial dose and eight subsequent doses).\n",
+      "bbox": [
+        68.88909912109375,
+        317.1864318847656,
+        327.50506591796875,
+        326.47442626953125
+      ],
+      "text_sha256": "8011737020857533ebcd22d385129a03473fcc1a54ef2df691991706a39f1a68"
+    },
+    {
+      "block_id": "page-0085-block-0017",
+      "order": 17,
+      "text": "Side-effects\t\n\u0007Patients may become agitated, anxious or fearful on awakening.  \nSeizures may occur in regular benzodiazepine users.\n",
+      "bbox": [
+        68.88909912109375,
+        329.9944152832031,
+        395.92108154296875,
+        349.47442626953125
+      ],
+      "text_sha256": "9eefba3e5011ce07824ebb08f3e07b5d93fd18c30c21534c46d1bc562853aaae"
+    },
+    {
+      "block_id": "page-0085-block-0018",
+      "order": 18,
+      "text": "Management\t\nSide-effects usually subside.\n",
+      "bbox": [
+        68.88909912109375,
+        352.9944152832031,
+        266.4171142578125,
+        362.47442626953125
+      ],
+      "text_sha256": "312aa7807784b96052cf473c3df025ee5dd6fa282cd4e7d8ac4e88819dca3bdb"
+    },
+    {
+      "block_id": "page-0085-block-0019",
+      "order": 19,
+      "text": "Monitoring\n",
+      "bbox": [
+        68.88909912109375,
+        368.9944152832031,
+        111.5531005859375,
+        378.47442626953125
+      ],
+      "text_sha256": "c03a80785732954eec6c21129031ebc8adf5351a6e1969013d8ef9fa84c76471"
+    },
+    {
+      "block_id": "page-0085-block-0020",
+      "order": 20,
+      "text": "■\n■What to monitor?\t\nRespiratory rate\n",
+      "bbox": [
+        68.88899993896484,
+        381.52691650390625,
+        228.55311584472656,
+        391.59942626953125
+      ],
+      "text_sha256": "615cedd1854f309dc321f97a2f01868ac20e0bbbe1d437b534560245102c22e3"
+    },
+    {
+      "block_id": "page-0085-block-0021",
+      "order": 21,
+      "text": "■\n■How often?\t\n\u0007Continuously until respiratory rate returns tobaseline level.  \nFlumazenil has a short half-life (much shorter than diazepam) and \nrespiratory function may recover and then deteriorate again.\n",
+      "bbox": [
+        68.88899993896484,
+        394.52691650390625,
+        397.6898193359375,
+        424.47442626953125
+      ],
+      "text_sha256": "4de4dc6b2ff391e1ccbaf8a24e6db2d677df9c6286a65e234ca8203c6523536d"
+    },
+    {
+      "block_id": "page-0085-block-0022",
+      "order": 22,
+      "text": "Note: If respiratory rate does not return to normal or patient is not alert after initial doses given, \nassume that sedation is due to some other cause.\n",
+      "bbox": [
+        68.88909912109375,
+        431.4619140625,
+        412.3215637207031,
+        450.346923828125
+      ],
+      "text_sha256": "3c0e195c4c618c753a1785bd2914a0f97707ad1d828cba900749bd20c73df9f0"
+    },
+    {
+      "block_id": "page-0085-block-0023",
+      "order": 23,
+      "text": "References\n",
+      "bbox": [
+        61.88909912109375,
+        479.62591552734375,
+        117.923095703125,
+        492.6609191894531
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0085-block-0024",
+      "order": 24,
+      "text": "\t 1.\t Patel MX, et al. Joint BAP NAPICU evidence-based consensus guidelines for the clinical management of acute disturbance: de-escalation and \n",
+      "bbox": [
+        61.88909912109375,
+        497.7469177246094,
+        435.5451965332031,
+        504.7789306640625
+      ],
+      "text_sha256": "5309c5bfc6df362f452f0589e833d7fe4fc56b97e8968453a8f2ca01f9c3a9e8"
+    },
+    {
+      "block_id": "page-0085-block-0025",
+      "order": 25,
+      "text": "rapid tranquillisation. J Psychopharmacology 2018; 32:601–640.\n\t 2.\t Bak M, et al. The pharmacological management of agitated and aggressive behaviour: a systematic review and meta-analysis. Eur Psychiatry \n",
+      "bbox": [
+        61.895103454589844,
+        506.6028747558594,
+        435.5511779785156,
+        522.7788696289062
+      ],
+      "text_sha256": "65016a105a7391c7f045070e116ad1ee77e52d582da0568284073c5ad49242c4"
+    },
+    {
+      "block_id": "page-0085-block-0026",
+      "order": 26,
+      "text": "2019; 57:78–100.\n\t 3.\t Currier GW, et al. Acute treatment of psychotic agitation: a randomized comparison of oral treatment with risperidone and lorazepam versus \n",
+      "bbox": [
+        61.901100158691406,
+        524.6029052734375,
+        435.6051330566406,
+        540.7788696289062
+      ],
+      "text_sha256": "2013716212450eef92e44f4aa5a5ef7e48d07d41191e1dc11b34daacbe3c4d8f"
+    },
+    {
+      "block_id": "page-0085-block-0027",
+      "order": 27,
+      "text": "intramuscular treatment with haloperidol and lorazepam. J Clin Psychiatry 2004; 65:386–394.\n\t 4.\t Ganesan S, et al. Effectiveness of quetiapine for the management of aggressive psychosis in the emergency psychiatric setting: a naturalistic \n",
+      "bbox": [
+        61.90709686279297,
+        542.6029052734375,
+        435.5510559082031,
+        558.7788696289062
+      ],
+      "text_sha256": "9985c1631a85825dd31be7be6616aec76b3eb319706987476ff423a4688ef46f"
+    },
+    {
+      "block_id": "page-0085-block-0028",
+      "order": 28,
+      "text": "uncontrolled trial. Int J Psychiatry Clin Pract 2005; 9:199–203.\n\t 5.\t Simpson JR, Jr., et al. Impact of orally disintegrating olanzapine on use of intramuscular antipsychotics, seclusion, and restraint in an acute \n",
+      "bbox": [
+        61.91310119628906,
+        560.6029052734375,
+        435.6050720214844,
+        576.7788696289062
+      ],
+      "text_sha256": "c8ffdce4e15579dd2c3b93e20e2c2027c0d23bdefc1c7c4e14ecf7fc2fd8f51f"
+    },
+    {
+      "block_id": "page-0085-block-0029",
+      "order": 29,
+      "text": "inpatient psychiatric setting. J Clin Psychopharmacol 2006; 26:333–335.\n\t 6.\t Hsu WY, et al. Comparison of intramuscular olanzapine, orally disintegrating olanzapine tablets, oral risperidone solution, and intramuscular \n",
+      "bbox": [
+        61.919097900390625,
+        578.6029052734375,
+        435.5870666503906,
+        594.7788696289062
+      ],
+      "text_sha256": "79bf88d755ca2efb7d9ac1772f502420d71f8eb4123446b48025fe29a5db41d7"
+    },
+    {
+      "block_id": "page-0085-block-0030",
+      "order": 30,
+      "text": "haloperidol in the management of acute agitation in an acute care psychiatric ward in Taiwan. J Clin Psychopharmacol 2010; 30:230–234.\n\t 7.\t Pratts M, et al. A single-dose, randomized, double-blind, placebo-controlled trial of sublingual asenapine for acute agitation. Acta Psychiatr \n",
+      "bbox": [
+        61.92510223388672,
+        596.6029052734375,
+        435.6228942871094,
+        612.7788696289062
+      ],
+      "text_sha256": "510cf69a8cf5b7d25dcdd821dcba92081d2b0b3582a9f2bbec94842b4e2aca53"
+    },
+    {
+      "block_id": "page-0085-block-0031",
+      "order": 31,
+      "text": "Scand 2014; 130:61–68.\n\t 8.\t Lesem MD, et al. Rapid acute treatment of agitation in individuals with schizophrenia: multicentre, randomised, placebo-controlled study of \n",
+      "bbox": [
+        61.93109893798828,
+        614.6029052734375,
+        435.5631408691406,
+        630.7788696289062
+      ],
+      "text_sha256": "907f86fba02584e585260d94a70d72201bc93f403b5d72fb6892bb47f8c3b5e0"
+    },
+    {
+      "block_id": "page-0085-block-0032",
+      "order": 32,
+      "text": "inhaled loxapine. Br J Psychiatry 2011; 198:51–58.\n",
+      "bbox": [
+        72.93508911132812,
+        632.6029052734375,
+        206.03904724121094,
+        639.7788696289062
+      ],
+      "text_sha256": "d485ec61a9a0ea02b6897ff931a629d1d7401787f8cd2b7f8fda9c650481dc30"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

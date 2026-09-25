@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0570",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 570,
+  "source_page_index": 569,
+  "source_page_display": 570,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Children and adolescents    549\nCHAPTER 5\nTable 5.1  Summary of RCT evidence on medication used in youth with bipolar mania\nMedication\nComments\nLithium\nLithium is cleared relatively quickly in children so twice daily dosing will be required, \nespecially when using liquid or non-modified release preparations.20 One double-blind \nplacebo-controlled randomised trial21 showed significant reductions in substance use and \nclinical ratings after 6 weeks, in 25 adolescents with BD and comorbid substance misuse. In \na double-blind placebo-controlled discontinuation trial (N = 40) over 2 weeks, no significant \ndifference in relapse rates were found between lithium and placebo22\nA later double-blind placebo-controlled study (N = 81), over 8 weeks, demonstrated a \nsignificantly larger change in YMRS score in lithium-treated youth, but with a differentiation \nfrom the placebo group only appearing after 6 weeks of treatment. There was a significant \nincrease in thyrotropin with lithium, but no difference in weight gain23\nLithium and divalproex did not differ in an 18-month maintenance trial in youths (N = 60), \nwho initially stabilised on the combination pharmacotherapy of lithium and divalproex.24 \nHowever, given the compelling evidence for lithium maintenance and prophylaxis in adults, \nwe recommend that clinicians consider its use in adolescents in preference to valproate\nA meta analysis25 found lithium to be ‘clearly inferior’ to risperidone in mania. One small \n6-month study found higher relapse rates in those who discontinued lithium compared \nwith those who continued.26 Another naturalistic 8-month study showed lithium to be \neffective and well tolerated27\nValproate\nIn an RCT (N = 150)28 divalproex ER (titrated to clinical response or 80–125mg/L) did not \nlead to significant differences in mean YMRS compared with placebo at 4 weeks (also see \nrisperidone and quetiapine sections below)\nOxcarbazepine\nA double-blind placebo-controlled study (N = 116) did not show significant differences \nbetween placebo and oxcarbazepine (mean dose 1,515mg/day) in reducing mania rating at \n7 weeks29\nOlanzapine\nA double-blind, placebo-controlled study (N = 161)30 showed olanzapine (5–20mg/day) to \nbe significantly more effective than placebo in YMRS mean score reduction over a period of \n3 weeks. Note the higher weight gain in the treatment group (weight gain was 3.7kg for \nolanzapine versus 0.3kg for placebo) and the associated significantly increased fasting \nglucose, total cholesterol, AST, ALT and uric acid\nRisperidone\nA double-blind, placebo-controlled study (N = 169) showed risperidone (at doses 0.5–2.5 or \n3–6mg) to be significantly more effective than placebo in YMRS mean score reduction in a \n3-week follow up.31 The lower dose seems to lead to same benefits at a lower risk of side \neffects. Sleepiness and fatigue were common in the treatment arms. Note, mean weight \nincrease in treatment groups (0.7kg versus 1.7kg for the low and 1.4 for the high dose arm)\nIn the Treatment of Early Age Mania (TEAM) study, higher response rates (and metabolic side \neffects) occurred with risperidone (mean dose of 2.57mg) versus lithium (mean level of \n1.09mmol/L) and divalproex sodium (mean level of 113.6mg/L).32 A randomised follow-up of \nthis study, showed again the superiority of risperidone as an alternative treatment for \nnon-responders to lithium and divalproex sodium, and as an add-on treatment to partially \nresponders to the two MS.33 However, these results need to be interpreted with caution as the \ndefinition of mania was broad and different to how bipolar disorder is defined by most UK \nclinicians. Similar reasons provoke caution when considering another placebo-controlled \ndouble-blind trial showing significantly better results for risperidone (mean dose 0.5mg) versus \nvalproic acid (mean level 81mg/L) in 3–7 years old children supposedly diagnosed with mania34\n(Continued)\n",
+  "raw_text_sha256": "654109e5689a0aa987f58c25afa39eeba3297252b2c808f8c9cf3522f97a584e",
+  "coordinates_sha256": "563ff6bd6870f76670f614c264724086016ddaf3bd48c6a5fe61a50b2cdd4496",
+  "block_sequence_sha256": "f4063e583cdaa6bc2569f22b1c009c437ae4803551f651b74043813c7f33aa1a",
+  "blocks": [
+    {
+      "block_id": "page-0570-block-0000",
+      "order": 0,
+      "text": "Children and adolescents    549\n",
+      "bbox": [
+        288.94488525390625,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "af7c0a1d263d241f2d9e719bd0da689bc48511dcc4504b039bd2ec9d0d7aebf6"
+    },
+    {
+      "block_id": "page-0570-block-0001",
+      "order": 1,
+      "text": "CHAPTER 5\n",
+      "bbox": [
+        454.4096984863281,
+        339.3385009765625,
+        463.88970947265625,
+        380.6824951171875
+      ],
+      "text_sha256": "f4b8b4a0fc64e7b3b74e7336306d0959d0384683e387792724f393162639020a"
+    },
+    {
+      "block_id": "page-0570-block-0002",
+      "order": 2,
+      "text": "Table 5.1  Summary of RCT evidence on medication used in youth with bipolar mania\n",
+      "bbox": [
+        54.0,
+        70.08827209472656,
+        327.81005859375,
+        78.97576904296875
+      ],
+      "text_sha256": "1f80317431b5de8c220a5f2b0672b668e9e8ec4a188f9d9066f7f5e5e8f65664"
+    },
+    {
+      "block_id": "page-0570-block-0003",
+      "order": 3,
+      "text": "Medication\nComments\n",
+      "bbox": [
+        48.0,
+        90.71327209472656,
+        160.49998474121094,
+        99.60076904296875
+      ],
+      "text_sha256": "35aee83f47070555718b2b25a126fdd48bff57144c738e16c7b958a5157b9767"
+    },
+    {
+      "block_id": "page-0570-block-0004",
+      "order": 4,
+      "text": "Lithium\nLithium is cleared relatively quickly in children so twice daily dosing will be required, \nespecially when using liquid or non-modified release preparations.20 One double-blind \nplacebo-controlled randomised trial21 showed significant reductions in substance use and \nclinical ratings after 6 weeks, in 25 adolescents with BD and comorbid substance misuse. In \na double-blind placebo-controlled discontinuation trial (N = 40) over 2 weeks, no significant \ndifference in relapse rates were found between lithium and placebo22\n",
+      "bbox": [
+        48.0,
+        107.91829681396484,
+        417.8481140136719,
+        166.6182861328125
+      ],
+      "text_sha256": "c6a66627a89514b9c6f786ef6cd5ec501d3b3ff31b866faf54086d2591426e80"
+    },
+    {
+      "block_id": "page-0570-block-0005",
+      "order": 5,
+      "text": "A later double-blind placebo-controlled study (N = 81), over 8 weeks, demonstrated a \nsignificantly larger change in YMRS score in lithium-treated youth, but with a differentiation \nfrom the placebo group only appearing after 6 weeks of treatment. There was a significant \nincrease in thyrotropin with lithium, but no difference in weight gain23\n",
+      "bbox": [
+        122.99970245361328,
+        173.9182891845703,
+        418.05712890625,
+        212.6182861328125
+      ],
+      "text_sha256": "e382b6f3e12d3945e6533d46c73e7399938d9dc98360d4048d7ace7c5234c626"
+    },
+    {
+      "block_id": "page-0570-block-0006",
+      "order": 6,
+      "text": "Lithium and divalproex did not differ in an 18-month maintenance trial in youths (N = 60), \nwho initially stabilised on the combination pharmacotherapy of lithium and divalproex.24 \nHowever, given the compelling evidence for lithium maintenance and prophylaxis in adults, \nwe recommend that clinicians consider its use in adolescents in preference to valproate\n",
+      "bbox": [
+        122.99850463867188,
+        219.873291015625,
+        415.5436706542969,
+        258.62078857421875
+      ],
+      "text_sha256": "fb7f2ba6cdfac772761810aefbb40e0c1c5ce0f2094c5540d9f66d17488cddcc"
+    },
+    {
+      "block_id": "page-0570-block-0007",
+      "order": 7,
+      "text": "A meta analysis25 found lithium to be ‘clearly inferior’ to risperidone in mania. One small \n6-month study found higher relapse rates in those who discontinued lithium compared \nwith those who continued.26 Another naturalistic 8-month study showed lithium to be \neffective and well tolerated27\n",
+      "bbox": [
+        122.99850463867188,
+        265.9107971191406,
+        406.63641357421875,
+        304.623291015625
+      ],
+      "text_sha256": "e760eb27caf68d43ac43f1808a6939ad11e5dfc809252c9dc855bb6826a430fa"
+    },
+    {
+      "block_id": "page-0570-block-0008",
+      "order": 8,
+      "text": "Valproate\nIn an RCT (N = 150)28 divalproex ER (titrated to clinical response or 80–125mg/L) did not \nlead to significant differences in mean YMRS compared with placebo at 4 weeks (also see \nrisperidone and quetiapine sections below)\n",
+      "bbox": [
+        48.0,
+        310.8982849121094,
+        411.2416076660156,
+        339.6457824707031
+      ],
+      "text_sha256": "742e074e9017f6821df9dc438bd10bffe6a0665bf85016d46793bf4506579b54"
+    },
+    {
+      "block_id": "page-0570-block-0009",
+      "order": 9,
+      "text": "Oxcarbazepine\nA double-blind placebo-controlled study (N = 116) did not show significant differences \nbetween placebo and oxcarbazepine (mean dose 1,515mg/day) in reducing mania rating at \n7 weeks29\n",
+      "bbox": [
+        48.00160217285156,
+        345.915771484375,
+        416.6867370605469,
+        374.66326904296875
+      ],
+      "text_sha256": "d124b4c7d55cfe559d42581a85a861479991a0e1d4d97abc196dc10ea93e33f5"
+    },
+    {
+      "block_id": "page-0570-block-0010",
+      "order": 10,
+      "text": "Olanzapine\nA double-blind, placebo-controlled study (N = 161)30 showed olanzapine (5–20mg/day) to \nbe significantly more effective than placebo in YMRS mean score reduction over a period of \n3 weeks. Note the higher weight gain in the treatment group (weight gain was 3.7kg for \nolanzapine versus 0.3kg for placebo) and the associated significantly increased fasting \nglucose, total cholesterol, AST, ALT and uric acid\n",
+      "bbox": [
+        48.0,
+        380.9933166503906,
+        417.33782958984375,
+        429.6907958984375
+      ],
+      "text_sha256": "ab26d24456d568db55a005c505fad479e80a3690963da59750f917b31278491f"
+    },
+    {
+      "block_id": "page-0570-block-0011",
+      "order": 11,
+      "text": "Risperidone\nA double-blind, placebo-controlled study (N = 169) showed risperidone (at doses 0.5–2.5 or \n3–6mg) to be significantly more effective than placebo in YMRS mean score reduction in a \n3-week follow up.31 The lower dose seems to lead to same benefits at a lower risk of side \neffects. Sleepiness and fatigue were common in the treatment arms. Note, mean weight \nincrease in treatment groups (0.7kg versus 1.7kg for the low and 1.4 for the high dose arm)\n",
+      "bbox": [
+        48.00028991699219,
+        436.0058288574219,
+        416.97027587890625,
+        484.72076416015625
+      ],
+      "text_sha256": "2d15a520b41db5ba2105dd102be10dcef72d3c1cd575df9c86f973bd9067cb4a"
+    },
+    {
+      "block_id": "page-0570-block-0012",
+      "order": 12,
+      "text": "In the Treatment of Early Age Mania (TEAM) study, higher response rates (and metabolic side \neffects) occurred with risperidone (mean dose of 2.57mg) versus lithium (mean level of \n1.09mmol/L) and divalproex sodium (mean level of 113.6mg/L).32 A randomised follow-up of \nthis study, showed again the superiority of risperidone as an alternative treatment for \nnon-responders to lithium and divalproex sodium, and as an add-on treatment to partially \nresponders to the two MS.33 However, these results need to be interpreted with caution as the \ndefinition of mania was broad and different to how bipolar disorder is defined by most UK \nclinicians. Similar reasons provoke caution when considering another placebo-controlled \ndouble-blind trial showing significantly better results for risperidone (mean dose 0.5mg) versus \nvalproic acid (mean level 81mg/L) in 3–7 years old children supposedly diagnosed with mania34\n",
+      "bbox": [
+        122.99758911132812,
+        491.96575927734375,
+        416.6914367675781,
+        590.7157592773438
+      ],
+      "text_sha256": "8b513bad3e831789c3d58f1cb11721ab2944d406908a2c3aab1046c769885870"
+    },
+    {
+      "block_id": "page-0570-block-0013",
+      "order": 13,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.9849853515625,
+        605.7409057617188,
+        419.99993896484375,
+        614.493408203125
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

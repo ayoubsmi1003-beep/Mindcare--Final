@@ -1,0 +1,311 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0843",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 843,
+  "source_page_index": 842,
+  "source_page_display": 843,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "822    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\nPsychotropics in bariatric surgery\nPsychiatric illness is relatively common in patients who have undergone bariatric sur-\ngery.1 Over one-third of those seeking bariatric surgery are prescribed psychotropics.2 \nBariatric surgery can be associated with clinically important changes in drug pharma-\ncokinetics, although it is difficult to predict how psychotropics will be affected because \nof interindividual differences and limited data. Current research supports the need for \nclose treatment monitoring and the ongoing monitoring of symptoms after bariatric \nsurgery.3\nSurgical procedures can be classified as:\n■\n■Predominantly restrictive: sleeve gastrectomy and gastric banding\n■\n■Predominantly malabsorptive: biliopancreatic diversion and jejunoileal bypass\n■\n■Mixed restrictive/malabsorptive: Roux-en-Y gastric bypass (RYGB) and gastric \nreduction duodenal switch (GDRS)\nMalabsorptive procedures (including RYGB and GRDS) have a relatively greater \npotential to alter drug absorption. Most data are derived from studies of patients \nundergoing RYGB. It is not clear how these data relate to the consequences of other \nprocedures.\nPharmacokinetic changes following bariatric surgery\nAll procedures may alter the following:\n■\n■Tablet disintegration and dissolution times via changes in gastric pH and mixing\n■\n■Rate of absorption via changes in the gastric emptying rate\n■\n■Drug distribution via loss of adipose tissue (especially lipid soluble drugs) and altered \nprotein binding\n■\n■Drug metabolism owing to improvements in hepatic function after weight loss\n■\n■Drug excretion via changes in renal function after weight loss\nMalabsorptive surgical procedures may further lead to the following:\n■\n■Decreased area for drug absorption (reduced functional intestinal length)\n■\n■Altered lipophilic drug solubilisation (bypassing proximal small intestine bile salts)\n■\n■Reduced intestinal wall drug metabolism via decreased intestinal length\nDrug formulations\nAny drug formulation that prolongs drug disintegration and dissolution can potentially \nimpair drug absorption following bariatric surgery.4 Switching to immediate-release \nformulations before surgery is generally recommended4,5 (based more on expert consen-\nsus rather than any objective data6). Orodispersible and liquid preparations do not go \nthrough a disintegration phase, and may be preferred if reduced absorption from solid \ntablets is suspected.7 Very large tablets (e.g. over 10mm in diameter) should be avoided \nas passage may be impeded by restrictive procedures.\n",
+  "raw_text_sha256": "d995c37bbcfd52be143b8530b761079957e8fb81c0cb0f2ff3c89425d4bf2689",
+  "coordinates_sha256": "10749c45fbca60594690e7c2bbcc91121d5e30b587d2253492e7c6e938c22e72",
+  "block_sequence_sha256": "cf5ab621282078cc7bf08150ce1e7d9592b53cd693f1054182a48770e03a171d",
+  "blocks": [
+    {
+      "block_id": "page-0843-block-0000",
+      "order": 0,
+      "text": "822    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "a7b512f945fe94b1f65a89535db7be704080c8e5e1dac9f5fc606ce0fd4f6b99"
+    },
+    {
+      "block_id": "page-0843-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0843-block-0002",
+      "order": 2,
+      "text": "Psychotropics in bariatric surgery\n",
+      "bbox": [
+        68.88980102539062,
+        66.06539916992188,
+        239.8188018798828,
+        79.10040283203125
+      ],
+      "text_sha256": "f2ee190699768f4151e9c915d6e8e85a714370e5b94b5de80c0bf774181b1b63"
+    },
+    {
+      "block_id": "page-0843-block-0003",
+      "order": 3,
+      "text": "Psychiatric illness is relatively common in patients who have undergone bariatric sur-\ngery.1 Over one-third of those seeking bariatric surgery are prescribed psychotropics.2 \nBariatric surgery can be associated with clinically important changes in drug pharma-\ncokinetics, although it is difficult to predict how psychotropics will be affected because \nof interindividual differences and limited data. Current research supports the need for \nclose treatment monitoring and the ongoing monitoring of symptoms after bariatric \nsurgery.3\n",
+      "bbox": [
+        61.889801025390625,
+        84.910400390625,
+        436.6897277832031,
+        168.63040161132812
+      ],
+      "text_sha256": "7bfb9aa85ca85a8e831950bbfa1ed50d8e5d0d3affac3850d51e81123d985812"
+    },
+    {
+      "block_id": "page-0843-block-0004",
+      "order": 4,
+      "text": "Surgical procedures can be classified as:\n",
+      "bbox": [
+        71.88980102539062,
+        168.910400390625,
+        243.02978515625,
+        180.63040161132812
+      ],
+      "text_sha256": "88bee1760e495f8b9e92d7718a8d734a3658dbf18cf89163b8b37ac50de8c33c"
+    },
+    {
+      "block_id": "page-0843-block-0005",
+      "order": 5,
+      "text": "■\n■Predominantly restrictive: sleeve gastrectomy and gastric banding\n",
+      "bbox": [
+        61.88970184326172,
+        186.67041015625,
+        351.9698181152344,
+        198.63040161132812
+      ],
+      "text_sha256": "0699e3c795c84eb610c097494c2d87577b3684748485dd3f1c54aaa334153ebd"
+    },
+    {
+      "block_id": "page-0843-block-0006",
+      "order": 6,
+      "text": "■\n■Predominantly malabsorptive: biliopancreatic diversion and jejunoileal bypass\n",
+      "bbox": [
+        61.88970184326172,
+        198.67041015625,
+        407.0597839355469,
+        210.63040161132812
+      ],
+      "text_sha256": "ac45e4b82aa4202e8470bfac8ae6a2a396a7d2a1313cb4bf967f878b060f573c"
+    },
+    {
+      "block_id": "page-0843-block-0007",
+      "order": 7,
+      "text": "■\n■Mixed restrictive/malabsorptive: Roux-en-Y gastric bypass (RYGB) and gastric \n",
+      "bbox": [
+        61.88970184326172,
+        210.67041015625,
+        436.64984130859375,
+        222.63040161132812
+      ],
+      "text_sha256": "953b54a772c1975d240326f4ab4661a5cd0418907c95ef42c30b763940609ebe"
+    },
+    {
+      "block_id": "page-0843-block-0008",
+      "order": 8,
+      "text": "reduction duodenal switch (GDRS)\n",
+      "bbox": [
+        70.88980102539062,
+        222.910400390625,
+        222.28977966308594,
+        234.63040161132812
+      ],
+      "text_sha256": "ce2c8d808da0049fe8f0d802faa353c1e6515fa183fc7ceb81c94a76734654e8"
+    },
+    {
+      "block_id": "page-0843-block-0009",
+      "order": 9,
+      "text": "Malabsorptive procedures (including RYGB and GRDS) have a relatively greater \npotential to alter drug absorption. Most data are derived from studies of patients \nundergoing RYGB. It is not clear how these data relate to the consequences of other \nprocedures.\n",
+      "bbox": [
+        61.889801025390625,
+        240.910400390625,
+        436.6997985839844,
+        288.6304016113281
+      ],
+      "text_sha256": "2dd31b32f988978d6d507aec36b66c344ed44c5d25687b4769885f0fb74c3b19"
+    },
+    {
+      "block_id": "page-0843-block-0010",
+      "order": 10,
+      "text": "Pharmacokinetic changes following bariatric surgery\n",
+      "bbox": [
+        61.889801025390625,
+        306.0653991699219,
+        333.270751953125,
+        319.10040283203125
+      ],
+      "text_sha256": "f3bf141c24595458ffa9ff667952ef6e0deb7fde982558dc1541968341967a73"
+    },
+    {
+      "block_id": "page-0843-block-0011",
+      "order": 11,
+      "text": "All procedures may alter the following:\n",
+      "bbox": [
+        61.889801025390625,
+        324.910400390625,
+        230.78977966308594,
+        336.6304016113281
+      ],
+      "text_sha256": "992fbde58ad25ab796a8115f5119d729d8f09775f862c3f68d18b0f1129b7271"
+    },
+    {
+      "block_id": "page-0843-block-0012",
+      "order": 12,
+      "text": "■\n■Tablet disintegration and dissolution times via changes in gastric pH and mixing\n",
+      "bbox": [
+        61.88970184326172,
+        342.910400390625,
+        417.3298034667969,
+        354.6304016113281
+      ],
+      "text_sha256": "3a29433e9931cc1dd0c13f40f3d4d8cabef59117ef1aa193c03fb96006e4eb4b"
+    },
+    {
+      "block_id": "page-0843-block-0013",
+      "order": 13,
+      "text": "■\n■Rate of absorption via changes in the gastric emptying rate\n",
+      "bbox": [
+        61.88970184326172,
+        354.910400390625,
+        324.7997741699219,
+        366.6304016113281
+      ],
+      "text_sha256": "f75e7ce012432bacb5fed47dfc0585eabc90c4868500d1e55c1a3475426fc59c"
+    },
+    {
+      "block_id": "page-0843-block-0014",
+      "order": 14,
+      "text": "■\n■Drug distribution via loss of adipose tissue (especially lipid soluble drugs) and altered \n",
+      "bbox": [
+        61.88970184326172,
+        366.910400390625,
+        436.64971923828125,
+        378.6304016113281
+      ],
+      "text_sha256": "79e46768a7baee7f850d57fe7584e0d943f2a4af083ae1d2fbd1299510086f0a"
+    },
+    {
+      "block_id": "page-0843-block-0015",
+      "order": 15,
+      "text": "protein binding\n",
+      "bbox": [
+        70.88980102539062,
+        378.910400390625,
+        137.58978271484375,
+        390.6304016113281
+      ],
+      "text_sha256": "6f34731facc559dc1aadb50b7ea9fb06c818e4ba390fff507f6c6c5e7c22835a"
+    },
+    {
+      "block_id": "page-0843-block-0016",
+      "order": 16,
+      "text": "■\n■Drug metabolism owing to improvements in hepatic function after weight loss\n",
+      "bbox": [
+        61.88970184326172,
+        390.910400390625,
+        408.12969970703125,
+        402.6304016113281
+      ],
+      "text_sha256": "78e6658f662229b3126c9df827c04c24bdccbd001dc4af85236839921617a1ee"
+    },
+    {
+      "block_id": "page-0843-block-0017",
+      "order": 17,
+      "text": "■\n■Drug excretion via changes in renal function after weight loss\n",
+      "bbox": [
+        61.88970184326172,
+        402.910400390625,
+        335.9397888183594,
+        414.6304016113281
+      ],
+      "text_sha256": "55be0571765ce34e2805f80997dcbda5987998f7dc28e61717498e2ca819b3fd"
+    },
+    {
+      "block_id": "page-0843-block-0018",
+      "order": 18,
+      "text": "Malabsorptive surgical procedures may further lead to the following:\n",
+      "bbox": [
+        71.88980102539062,
+        420.910400390625,
+        369.7197265625,
+        432.6304016113281
+      ],
+      "text_sha256": "67048d30bf79ed0dd22ff0822870c600ca34abbbc4e970edca73a7ec7d2f05d5"
+    },
+    {
+      "block_id": "page-0843-block-0019",
+      "order": 19,
+      "text": "■\n■Decreased area for drug absorption (reduced functional intestinal length)\n",
+      "bbox": [
+        61.88970184326172,
+        438.910400390625,
+        385.3896789550781,
+        450.6304016113281
+      ],
+      "text_sha256": "20acd4ab31452065b81e37f8612c4fc31f5c87597b93c800c3992a143705c1da"
+    },
+    {
+      "block_id": "page-0843-block-0020",
+      "order": 20,
+      "text": "■\n■Altered lipophilic drug solubilisation (bypassing proximal small intestine bile salts)\n",
+      "bbox": [
+        61.88970184326172,
+        450.910400390625,
+        427.6398010253906,
+        462.6304016113281
+      ],
+      "text_sha256": "96d3446dfaabe336c201d2f465c090ded4b1256ea27cb4660fd6b81ee30106b8"
+    },
+    {
+      "block_id": "page-0843-block-0021",
+      "order": 21,
+      "text": "■\n■Reduced intestinal wall drug metabolism via decreased intestinal length\n",
+      "bbox": [
+        61.88970184326172,
+        462.910400390625,
+        378.6897888183594,
+        474.6304016113281
+      ],
+      "text_sha256": "c50379e8b464cc67e20ccd573906677bd037e9d64aa86473bf15f98d7d38fe01"
+    },
+    {
+      "block_id": "page-0843-block-0022",
+      "order": 22,
+      "text": "Drug formulations\n",
+      "bbox": [
+        61.889801025390625,
+        498.0653991699219,
+        157.22679138183594,
+        511.10040283203125
+      ],
+      "text_sha256": "7f4e0ac19db9ad683b27d5911c392d3060cb571252db85c88542ce3af6aae22d"
+    },
+    {
+      "block_id": "page-0843-block-0023",
+      "order": 23,
+      "text": "Any drug formulation that prolongs drug disintegration and dissolution can potentially \nimpair drug absorption following bariatric surgery.4 Switching to immediate-release \nformulations before surgery is generally recommended4,5 (based more on expert consen-\nsus rather than any objective data6). Orodispersible and liquid preparations do not go \nthrough a disintegration phase, and may be preferred if reduced absorption from solid \ntablets is suspected.7 Very large tablets (e.g. over 10mm in diameter) should be avoided \nas passage may be impeded by restrictive procedures.\n",
+      "bbox": [
+        61.886016845703125,
+        516.910400390625,
+        436.69964599609375,
+        600.6304321289062
+      ],
+      "text_sha256": "30f121b6c6e0bc443b5ce046a2b60fb742073a75c46955c5fa3cbe3287f94329"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

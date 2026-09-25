@@ -1,0 +1,467 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0380",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 380,
+  "source_page_index": 379,
+  "source_page_display": 380,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    359\nCHAPTER 3\nClinical use\nRegimens evaluated\nComments\nRecommendations\nMonotherapy or \nadd-on \ntreatment in \nlate-stage \nterminal cancer\nMethylphenidate 5–30mg a \nday41–45\nCase series and open \nprospective studies\nUseful treatment options in those \nexpected to live only for a few \nweeks.\nDexamfetamine 2.5–20mg a \nday46,47\nBeneficial effects \nseen on mood, \nfatigue and pain\nMethylphenidate 20mg/\nday + mirtazapine 30mg/day48\nRCT shows benefit \nfor combination from \nthird day of treatment\nMethylphenidate 20mg/\nday + SSRI49\nRCT failed to show \nbenefit for \ncombination\nModafinil 200mg/day50\nBenefit to depression \nscores only in those \nalso experiencing \nsevere cancer-related \nfatigue\nMonotherapy  \nor add-on \ntreatment for \ndepression in \nthe elderly\nMethylphenidate 1.25–20mg a \nday51–53\nUse supported by \nthree placebo-\ncontrolled studies. \nRapid effect observed \non mood and activity\nRecommended only where \npatients fail to tolerate standard \nantidepressants or where \ncontra-indications apply.\nMethylphenidate \n5–40mg + citalopram \n20–60mg/day54\nOne placebo-\ncontrolled study. \nFaster rate of response \nwith combination \ncompared to \nmonotherapy with \neither drug\nMonitor for increased heart rate \n– significant increase seen in one \ntrial.54\nMonotherapy in \npost-stroke \ndepression\nMethylphenidate 5–40mg a \nday55–58\nVariable support but \nincluding two \nplacebo-controlled \ntrials.55,58 Effect on \nmood evident after a \nfew days\nStandard antidepressants \npreferred. Further investigation \nrequired: stimulants may improve \ncognition and motor function.\nModafinil 100mg/day59\nSingle case report\nMonotherapy in \ndepression \nsecondary to \nmedical illness\nMethylphenidate 5–20mg/day60\nLimited data\nPsychostimulants not appropriate \ntherapy. Standard antidepressant \npreferred.\nDexamfetamine 2.5–30mg/\nday61,62\nMonotherapy in \ndepression and \nfatigue \nassociated with \nHIV\nDexamfetamine 2.5–40mg/\nday63,64\nSupported by one \ngood, controlled \nstudy64\nBeneficial effect on \nmood and fatigue\nPossible treatment option where \nfatigue is not responsive to \nstandard antidepressants.\nMonotherapy in \ndepression in \ntraumatic brain \ninjury\nMethylphenidate 5–20mg/\nday65,66\nImproves depressive \nsymptoms, daytime \nsleepiness and \ncognitive function\nAppears to outperform \nantidepressants for this indication, \nbut data are limited to two studies.\n Table 3.12  (Continued)\n",
+  "raw_text_sha256": "4521f57349322ee9bc5d090e1f4a3c1f93f928dc73d0fb20803bfb9f2736d0e8",
+  "coordinates_sha256": "48e238a4f9669f6c1f31eed6719a0173a7b5ec928d06d782e1294750959a9ece",
+  "block_sequence_sha256": "8171f46b118aaccdca4eadfbdf6db62d460cd1e105311f46abdf9f4ee814bd5c",
+  "blocks": [
+    {
+      "block_id": "page-0380-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    359\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "4f3eacc27a334e5bfa8fbf8982c2a9bb55e30a63d8e22b3272a88b0fff806fe7"
+    },
+    {
+      "block_id": "page-0380-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0380-block-0002",
+      "order": 2,
+      "text": "Clinical use\nRegimens evaluated\nComments\nRecommendations\n",
+      "bbox": [
+        48.0,
+        89.82301330566406,
+        372.8624572753906,
+        98.71051025390625
+      ],
+      "text_sha256": "2dd04c1b1b5d1b0272d637e1a96424c5c9b3534fefe37e2675c71ceee7159b83"
+    },
+    {
+      "block_id": "page-0380-block-0003",
+      "order": 3,
+      "text": "Monotherapy or \nadd-on \ntreatment in \nlate-stage \nterminal cancer\n",
+      "bbox": [
+        48.0,
+        106.60054016113281,
+        108.00749206542969,
+        155.47802734375
+      ],
+      "text_sha256": "ae41e6bb3abe2f8e4f3201d8f2219cfd58b67abb5669eae668131118338c8568"
+    },
+    {
+      "block_id": "page-0380-block-0004",
+      "order": 4,
+      "text": "Methylphenidate 5–30mg a \nday41–45\n",
+      "bbox": [
+        118.5,
+        106.77303314208984,
+        209.35499572753906,
+        125.47802734375
+      ],
+      "text_sha256": "27541637f8036b58b516c2ba83f84926748a08eedb599f0d1c85af004b1837b6"
+    },
+    {
+      "block_id": "page-0380-block-0005",
+      "order": 5,
+      "text": "Case series and open \nprospective studies\n",
+      "bbox": [
+        232.49940490722656,
+        106.7779769897461,
+        302.1069641113281,
+        125.48297119140625
+      ],
+      "text_sha256": "7982d944da98053e8f22a0326f2e2aaa93799d3a14d3fa049042c53236954d3c"
+    },
+    {
+      "block_id": "page-0380-block-0006",
+      "order": 6,
+      "text": "Useful treatment options in those \nexpected to live only for a few \nweeks.\nDexamfetamine 2.5–20mg a \nday46,47\n",
+      "bbox": [
+        118.49940490722656,
+        106.7779769897461,
+        416.9095153808594,
+        150.50299072265625
+      ],
+      "text_sha256": "1573ef7815e06b22c45a1b9a6d34d508196d545d52ae0656f04c4f2ec2773ef5"
+    },
+    {
+      "block_id": "page-0380-block-0007",
+      "order": 7,
+      "text": "Beneficial effects \nseen on mood, \nfatigue and pain\n",
+      "bbox": [
+        232.49940490722656,
+        131.80287170410156,
+        288.1868591308594,
+        160.50537109375
+      ],
+      "text_sha256": "a04cbab4827ec9860a14f76cd3b6889b07895c5b224f1430711c0e44a8e2a135"
+    },
+    {
+      "block_id": "page-0380-block-0008",
+      "order": 8,
+      "text": "Methylphenidate 20mg/\nday + mirtazapine 30mg/day48\n",
+      "bbox": [
+        118.49940490722656,
+        166.8203887939453,
+        214.9506072998047,
+        185.525390625
+      ],
+      "text_sha256": "27a1d0aa31b8aa7afa58b5a0c90b7949fed87e7c097e45d123da5b305ed9da67"
+    },
+    {
+      "block_id": "page-0380-block-0009",
+      "order": 9,
+      "text": "RCT shows benefit \nfor combination from \nthird day of treatment\n",
+      "bbox": [
+        232.49940490722656,
+        166.8279571533203,
+        301.91937255859375,
+        195.53045654296875
+      ],
+      "text_sha256": "212c752837911bdc166049cca8f24424646481d9013be41eb48fe015aad81ac1"
+    },
+    {
+      "block_id": "page-0380-block-0010",
+      "order": 10,
+      "text": "Methylphenidate 20mg/\nday + SSRI49\n",
+      "bbox": [
+        118.49940490722656,
+        201.84544372558594,
+        195.59938049316406,
+        220.55044555664062
+      ],
+      "text_sha256": "97107467af7a065e43a8e7b9950d1a1d86acbd78cd3f2cc7fa13d11ce2405a78"
+    },
+    {
+      "block_id": "page-0380-block-0011",
+      "order": 11,
+      "text": "RCT failed to show \nbenefit for \ncombination\n",
+      "bbox": [
+        232.49940490722656,
+        201.8529815673828,
+        294.2544250488281,
+        230.55548095703125
+      ],
+      "text_sha256": "e52efb1249ed152d91c0cfa2b5b91b3a01def8f0d4be8c5cf20b2084547bbfa4"
+    },
+    {
+      "block_id": "page-0380-block-0012",
+      "order": 12,
+      "text": "Modafinil 200mg/day50\nBenefit to depression \nscores only in those \nalso experiencing \nsevere cancer-related \nfatigue\n",
+      "bbox": [
+        118.49940490722656,
+        236.87046813964844,
+        301.9644470214844,
+        285.5754699707031
+      ],
+      "text_sha256": "fca3b7dee0c0b9a04e865388786f498ecb6134042d11736e07bed0b936337c7c"
+    },
+    {
+      "block_id": "page-0380-block-0013",
+      "order": 13,
+      "text": "Monotherapy  \nor add-on \ntreatment for \ndepression in \nthe elderly\n",
+      "bbox": [
+        47.99940490722656,
+        291.71044921875,
+        100.50689697265625,
+        340.58795166015625
+      ],
+      "text_sha256": "59919d5abd99f62d35bef8a748b59fb96d6ed786edc7915ffcc3a3abcec36a75"
+    },
+    {
+      "block_id": "page-0380-block-0014",
+      "order": 14,
+      "text": "Methylphenidate 1.25–20mg a \nday51–53\n",
+      "bbox": [
+        118.49940490722656,
+        291.8829650878906,
+        219.77938842773438,
+        310.58795166015625
+      ],
+      "text_sha256": "3446f229b6209e54ef1caf0b73dfbecb914081e1980f306aa1072a9833871fcb"
+    },
+    {
+      "block_id": "page-0380-block-0015",
+      "order": 15,
+      "text": "Use supported by \nthree placebo-\ncontrolled studies. \nRapid effect observed \non mood and activity\n",
+      "bbox": [
+        232.49940490722656,
+        291.90301513671875,
+        303.62188720703125,
+        340.6004943847656
+      ],
+      "text_sha256": "625cd8fb5275fb0aece29f472e8fb5d883346168b41604eca947c0c27ce62dc6"
+    },
+    {
+      "block_id": "page-0380-block-0016",
+      "order": 16,
+      "text": "Recommended only where \npatients fail to tolerate standard \nantidepressants or where \ncontra-indications apply.\n",
+      "bbox": [
+        307.8594055175781,
+        291.8955078125,
+        412.3119812011719,
+        330.5954895019531
+      ],
+      "text_sha256": "ae00ac7de48dab14d14d84c3bc98fc30e55f048c15b867e54ec7752974e56696"
+    },
+    {
+      "block_id": "page-0380-block-0017",
+      "order": 17,
+      "text": "Methylphenidate \n5–40mg + citalopram \n20–60mg/day54\n",
+      "bbox": [
+        118.49940490722656,
+        346.9154968261719,
+        189.6743927001953,
+        375.61798095703125
+      ],
+      "text_sha256": "6d780227ba3e5e942ea8ebaff661eec62bbf95bccbe0691ca8bc0d378b10b626"
+    },
+    {
+      "block_id": "page-0380-block-0018",
+      "order": 18,
+      "text": "One placebo-\ncontrolled study. \nFaster rate of response \nwith combination \ncompared to \nmonotherapy with \neither drug\n",
+      "bbox": [
+        232.49940490722656,
+        346.9280090332031,
+        303.9368591308594,
+        415.6204833984375
+      ],
+      "text_sha256": "80850f851e59e085281b841d62ffc086c2339b51d0b32d976c6c50a6d424675a"
+    },
+    {
+      "block_id": "page-0380-block-0019",
+      "order": 19,
+      "text": "Monitor for increased heart rate \n– significant increase seen in one \ntrial.54\n",
+      "bbox": [
+        307.8594055175781,
+        346.9129943847656,
+        414.8244934082031,
+        375.615478515625
+      ],
+      "text_sha256": "f2c3938623c8e7952178651d0ce259557bc2982f82df880a092d760bf3810a06"
+    },
+    {
+      "block_id": "page-0380-block-0020",
+      "order": 20,
+      "text": "Monotherapy in \npost-stroke \ndepression\n",
+      "bbox": [
+        48.0,
+        421.7729797363281,
+        107.17498779296875,
+        450.6554870605469
+      ],
+      "text_sha256": "92a3549a2b41c8b35a8279058a50377630cc7ede3f32b2f0056a637099af36e9"
+    },
+    {
+      "block_id": "page-0380-block-0021",
+      "order": 21,
+      "text": "Methylphenidate 5–40mg a \nday55–58\n",
+      "bbox": [
+        118.5,
+        421.94549560546875,
+        209.35499572753906,
+        440.6504821777344
+      ],
+      "text_sha256": "670b8aa436fa469e698febf78c0af76fc1a7158c0bb4ed07aec3276c7820df19"
+    },
+    {
+      "block_id": "page-0380-block-0022",
+      "order": 22,
+      "text": "Variable support but \nincluding two \nplacebo-controlled \ntrials.55,58 Effect on \nmood evident after a \nfew days\n",
+      "bbox": [
+        232.4963836669922,
+        421.9530029296875,
+        301.6688537597656,
+        480.6554870605469
+      ],
+      "text_sha256": "72a0628a12588563d0aafe3dab39e2fe7c4cd44623df7df8c9edcf1e4a5e42cd"
+    },
+    {
+      "block_id": "page-0380-block-0023",
+      "order": 23,
+      "text": "Standard antidepressants \npreferred. Further investigation \nrequired: stimulants may improve \ncognition and motor function.\n",
+      "bbox": [
+        307.85638427734375,
+        421.94549560546875,
+        416.201416015625,
+        460.6454772949219
+      ],
+      "text_sha256": "cfeecca560ebeed077b161697a46ea1ebec1b649584f6d700ce53be4db12cbb2"
+    },
+    {
+      "block_id": "page-0380-block-0024",
+      "order": 24,
+      "text": "Modafinil 100mg/day59\nSingle case report\n",
+      "bbox": [
+        118.49638366699219,
+        486.9629821777344,
+        289.0343933105469,
+        495.68548583984375
+      ],
+      "text_sha256": "69e10937bd0530b2b4caad61f5c1a46d06cfb96a7590ea304f001c372c0b0576"
+    },
+    {
+      "block_id": "page-0380-block-0025",
+      "order": 25,
+      "text": "Monotherapy in \ndepression \nsecondary to \nmedical illness\n",
+      "bbox": [
+        47.99940490722656,
+        501.82049560546875,
+        107.17439270019531,
+        540.7005004882812
+      ],
+      "text_sha256": "b29abf4021c7f0f860e96cdf87ade453e9addd6683f3652cfa92d33969b175cb"
+    },
+    {
+      "block_id": "page-0380-block-0026",
+      "order": 26,
+      "text": "Methylphenidate 5–20mg/day60\nLimited data\nPsychostimulants not appropriate \ntherapy. Standard antidepressant \npreferred.\nDexamfetamine 2.5–30mg/\nday61,62\n",
+      "bbox": [
+        118.49940490722656,
+        501.9930114746094,
+        416.06951904296875,
+        535.73046875
+      ],
+      "text_sha256": "b7ed374c1b1a976fcea9ec3afc27c7946c73eefb3ae4ee28d12e0b6c1ae6374f"
+    },
+    {
+      "block_id": "page-0380-block-0027",
+      "order": 27,
+      "text": "Monotherapy in \ndepression and \nfatigue \nassociated with \nHIV\n",
+      "bbox": [
+        48.0,
+        546.8479614257812,
+        106.3949966430664,
+        595.7254638671875
+      ],
+      "text_sha256": "d4d3ad170cfb3b7b5e6ef2871835cd97ac7546a930fb154afb51c2ddcea3eb53"
+    },
+    {
+      "block_id": "page-0380-block-0028",
+      "order": 28,
+      "text": "Dexamfetamine 2.5–40mg/\nday63,64\n",
+      "bbox": [
+        118.5,
+        547.0204467773438,
+        206.00999450683594,
+        565.7254638671875
+      ],
+      "text_sha256": "f8860b20b59cdef8664391c584fbdafc7631ce939b47ff3e0a145b8c5c7bd3f8"
+    },
+    {
+      "block_id": "page-0380-block-0029",
+      "order": 29,
+      "text": "Supported by one \ngood, controlled \nstudy64\n",
+      "bbox": [
+        232.49940490722656,
+        547.0279541015625,
+        291.6894226074219,
+        575.73046875
+      ],
+      "text_sha256": "66b385c3e031c22827546a65ca739a34a86b63e5f3548548c41eff102a3383ed"
+    },
+    {
+      "block_id": "page-0380-block-0030",
+      "order": 30,
+      "text": "Beneficial effect on \nmood and fatigue\n",
+      "bbox": [
+        232.49940490722656,
+        577.0279541015625,
+        295.6943664550781,
+        595.7329711914062
+      ],
+      "text_sha256": "a531b7869488a7baf235d336135d2981261a33124f1e5b89010211f04fa59375"
+    },
+    {
+      "block_id": "page-0380-block-0031",
+      "order": 31,
+      "text": "Possible treatment option where \nfatigue is not responsive to \nstandard antidepressants.\n",
+      "bbox": [
+        307.8594055175781,
+        547.0279541015625,
+        413.4369812011719,
+        575.73046875
+      ],
+      "text_sha256": "be71c1ff312da0bc3233f20c143be8d2877825caa323531dc637aa4beeb386f8"
+    },
+    {
+      "block_id": "page-0380-block-0032",
+      "order": 32,
+      "text": "Monotherapy in \ndepression in \ntraumatic brain \ninjury\n",
+      "bbox": [
+        47.999420166015625,
+        601.8679809570312,
+        107.17440795898438,
+        640.7479858398438
+      ],
+      "text_sha256": "fd88737940443226586e56e9a8a58ee5845193aff6d32da1565865f78c0c627c"
+    },
+    {
+      "block_id": "page-0380-block-0033",
+      "order": 33,
+      "text": "Methylphenidate 5–20mg/\nday65,66\n",
+      "bbox": [
+        118.49942016601562,
+        602.0404663085938,
+        203.5194091796875,
+        620.7454833984375
+      ],
+      "text_sha256": "a8dafd4b3b9faee2fb087e7bdbbe624f1557163e9e2d37584393ecbc61d30d43"
+    },
+    {
+      "block_id": "page-0380-block-0034",
+      "order": 34,
+      "text": "Improves depressive \nsymptoms, daytime \nsleepiness and \ncognitive function\n",
+      "bbox": [
+        232.49940490722656,
+        602.0528564453125,
+        297.9444274902344,
+        640.7528686523438
+      ],
+      "text_sha256": "16782f3c5f985616bd8de21c79eb87c901ffa688eadd9f4ab05307c1433b5045"
+    },
+    {
+      "block_id": "page-0380-block-0035",
+      "order": 35,
+      "text": "Appears to outperform \nantidepressants for this indication, \nbut data are limited to two studies.\n",
+      "bbox": [
+        307.8594055175781,
+        602.0453491210938,
+        420.0144348144531,
+        630.7478637695312
+      ],
+      "text_sha256": "f531f2dd50dc8118472e5a9f4dcb28b952ee7bc07213ce6292e4e5c8542989f7"
+    },
+    {
+      "block_id": "page-0380-block-0036",
+      "order": 36,
+      "text": " Table 3.12  (Continued)\n",
+      "bbox": [
+        54.0,
+        70.08790588378906,
+        132.375,
+        78.97540283203125
+      ],
+      "text_sha256": "d092726bbe42391d46bba1708b83accde9389422f9b0c3cdfee3479aef781249"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

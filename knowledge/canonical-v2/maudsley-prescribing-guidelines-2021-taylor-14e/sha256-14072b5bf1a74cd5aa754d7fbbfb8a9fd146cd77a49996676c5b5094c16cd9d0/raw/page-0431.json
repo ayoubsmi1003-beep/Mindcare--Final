@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0431",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 431,
+  "source_page_index": 430,
+  "source_page_display": 431,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "410    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nCaution should be exercised when prescribing serotonergic antidepressants for people \nwith medical conditions such as gout, asthma, COPD, lupus, psoriasis, interferon-\ninduced depression in hepatitis-C patients10 and arthritis, when patients might also be \ntaking corticosteroids, aspirin or NSAIDS.\nGastrointestinal bleeding\nThe use of serotonergic antidepressants is an independent risk factor for bleeding \nevents. A population-based study revealed that SSRIs increase the rate of upper gastro-\nintestinal bleeding (UGIB), with hazard ratio (HR) of 1.97 and lower gastrointestinal \nbleeding (LGIB) (HR 2.96) after adjusting for all relevant risk factors.11 In absolute \nterms, it is likely that SSRIs are responsible for an additional three episodes of bleeding \nin every 1,000 patient years of treatment,7,12,13 but this figure masks large variations in \nrisk. For example, 1 in 85 patients with a history of GI bleed will have a further bleed \nattributable to treatment with an SSRI.14\nOne database study suggests that gastro-protective drugs (PPIs) decrease the risk of \nGI bleeds associated with SSRIs (either alone or in combination with NSAIDs) although \nnot quite to control levels.15 A 2020 study found SSRIs increased risk of GI bleeding in \npeople taking direct-acting anticoagulants for atrial fibrillation and that this risk was \nincreased further in those not prescribed PPIs.16 (Another found no increased risk of \nbleeding for SSRIs prescribed alongside any anticoagulants.17)\nOther database studies have found that patients who take SSRIs are at significantly \nincreased risk of being admitted to hospital with an upper gastrointestinal (GI) bleed \ncompared with age-and-sex matched controls.7,15,18,19 This association holds when age, \ngender, and the effects of other drugs such as aspirin and non-steroidal anti-inflamma-\ntory drugs (NSAIDs) are controlled for.2 In addition to this, a meta-analysis of 22 stud-\nies concluded that current users of SSRIs are 55% more at risk of UGIB compared with \nthose who do not take SSRIs. This risk was significantly and further increased by con-\ncurrent use of antiplatelet drugs or NSAIDs.5\nCo-prescription of low-dose aspirin at least doubles the risk of GI bleeding associ-\nated with SSRIs alone and co-prescription of NSAIDs approximately quadruples risk.20 \nCombined use of SSRIs and NSAIDs greatly increases the use of anti-acid drugs.21 The \nelderly and those with a history of GI bleeding are at greatest risk.14,15,19\nSome early studies found that in patients who take warfarin, SSRIs increase the risk of a \nnon-GI bleed two to three-fold (similar to the effect size of NSAIDs) but did not seem to \nincrease the risk of a GI bleed.22,23 A later study11 showed an increased risk of upper and \nlower GI bleeding in concomitant users of warfarin and serotonergic antidepressant (see \nTable 3.23). This effect does not seem to be associated with any change in INR, making it \ndifficult to identify those at highest risk.23 In keeping with these findings, SSRI use in anti-\ncoagulated patients being treated for acute coronary syndromes may decrease the risk of \nminor cardiac events at the expense of an increased risk of a bleed.24 Thus, the increased risk \nof upper GI bleeds associated with SSRIs may be balanced by a decreased risk of embolic \nevents. One database study failed to find a reduction in the risk of a first myocardial infarc-\ntion in SSRI treated-patients25 while another26 found a reduction in the risk of being admit-\nted to hospital with a first MI in smokers on SSRIs. The effect size in the second study was \nlarge: approximately 1 in 10 hospitalisations was avoided in SSRI-treated patients.26 This is \nsimilar to the effect size of other antiplatelet therapies such as aspirin.27\n",
+  "raw_text_sha256": "9962eec2539f7eabe85198362e6400682571810ce186930bf099b96efb05171f",
+  "coordinates_sha256": "d4200398f37480ce32db320139406850f3384f1b8dec52092bad70e11b46c21c",
+  "block_sequence_sha256": "7b58351efbd2cd47c30cd5a50bdc579cb717140f521f4e8653a6c64f046bb2e6",
+  "blocks": [
+    {
+      "block_id": "page-0431-block-0000",
+      "order": 0,
+      "text": "410    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "7bb6bbc3dcb872c1cf4671fa557cddfc6b8d28eaf4bb91e31bd150afd96c3bb7"
+    },
+    {
+      "block_id": "page-0431-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0431-block-0002",
+      "order": 2,
+      "text": "Caution should be exercised when prescribing serotonergic antidepressants for people \nwith medical conditions such as gout, asthma, COPD, lupus, psoriasis, interferon-\ninduced depression in hepatitis-C patients10 and arthritis, when patients might also be \ntaking corticosteroids, aspirin or NSAIDS.\n",
+      "bbox": [
+        61.88658142089844,
+        62.55029296875,
+        436.6965026855469,
+        110.27029418945312
+      ],
+      "text_sha256": "f33b429851912e7b9e83981741ab725d75583a7e6bfb2fbe61e8f7ca3333da6b"
+    },
+    {
+      "block_id": "page-0431-block-0003",
+      "order": 3,
+      "text": "Gastrointestinal bleeding\n",
+      "bbox": [
+        61.88999938964844,
+        127.70529174804688,
+        192.49295043945312,
+        140.74029541015625
+      ],
+      "text_sha256": "68c273538c7d1587d45072ed574ca224107d596f209effe5cac45e346ff62f4e"
+    },
+    {
+      "block_id": "page-0431-block-0004",
+      "order": 4,
+      "text": "The use of serotonergic antidepressants is an independent risk factor for bleeding \nevents. A population-based study revealed that SSRIs increase the rate of upper gastro-\nintestinal bleeding (UGIB), with hazard ratio (HR) of 1.97 and lower gastrointestinal \nbleeding (LGIB) (HR 2.96) after adjusting for all relevant risk factors.11 In absolute \nterms, it is likely that SSRIs are responsible for an additional three episodes of bleeding \nin every 1,000 patient years of treatment,7,12,13 but this figure masks large variations in \nrisk. For example, 1 in 85 patients with a history of GI bleed will have a further bleed \nattributable to treatment with an SSRI.14\n",
+      "bbox": [
+        61.88670349121094,
+        146.55029296875,
+        436.6986389160156,
+        242.27029418945312
+      ],
+      "text_sha256": "d7880dcf2bccbae54e71767c91aa9e2645cd2ba89db35424e106d2f163154589"
+    },
+    {
+      "block_id": "page-0431-block-0005",
+      "order": 5,
+      "text": "One database study suggests that gastro-protective drugs (PPIs) decrease the risk of \nGI bleeds associated with SSRIs (either alone or in combination with NSAIDs) although \nnot quite to control levels.15 A 2020 study found SSRIs increased risk of GI bleeding in \npeople taking direct-acting anticoagulants for atrial fibrillation and that this risk was \nincreased further in those not prescribed PPIs.16 (Another found no increased risk of \nbleeding for SSRIs prescribed alongside any anticoagulants.17)\n",
+      "bbox": [
+        61.88581085205078,
+        242.55029296875,
+        436.70587158203125,
+        314.2702941894531
+      ],
+      "text_sha256": "76ffd52fab3512d79928f2ca9dfb34cfe02f3bd6b271d83b52f5145d822df679"
+    },
+    {
+      "block_id": "page-0431-block-0006",
+      "order": 6,
+      "text": "Other database studies have found that patients who take SSRIs are at significantly \nincreased risk of being admitted to hospital with an upper gastrointestinal (GI) bleed \ncompared with age-and-sex matched controls.7,15,18,19 This association holds when age, \ngender, and the effects of other drugs such as aspirin and non-steroidal anti-inflamma-\ntory drugs (NSAIDs) are controlled for.2 In addition to this, a meta-analysis of 22 stud-\nies concluded that current users of SSRIs are 55% more at risk of UGIB compared with \nthose who do not take SSRIs. This risk was significantly and further increased by con-\ncurrent use of antiplatelet drugs or NSAIDs.5\n",
+      "bbox": [
+        61.885986328125,
+        314.55029296875,
+        436.6960144042969,
+        410.2702941894531
+      ],
+      "text_sha256": "0ca2ea36c7b173d4fc5db106203de316c496e006e7ea4e68add45fc2aec58816"
+    },
+    {
+      "block_id": "page-0431-block-0007",
+      "order": 7,
+      "text": "Co-prescription of low-dose aspirin at least doubles the risk of GI bleeding associ-\nated with SSRIs alone and co-prescription of NSAIDs approximately quadruples risk.20 \nCombined use of SSRIs and NSAIDs greatly increases the use of anti-acid drugs.21 The \nelderly and those with a history of GI bleeding are at greatest risk.14,15,19\n",
+      "bbox": [
+        61.88848876953125,
+        410.55029296875,
+        436.6700134277344,
+        458.2702941894531
+      ],
+      "text_sha256": "f143bea9a3cb0e565ffa5d4971844733a9a4511fd1dd2fe5f83a037431ee0f88"
+    },
+    {
+      "block_id": "page-0431-block-0008",
+      "order": 8,
+      "text": "Some early studies found that in patients who take warfarin, SSRIs increase the risk of a \nnon-GI bleed two to three-fold (similar to the effect size of NSAIDs) but did not seem to \nincrease the risk of a GI bleed.22,23 A later study11 showed an increased risk of upper and \nlower GI bleeding in concomitant users of warfarin and serotonergic antidepressant (see \nTable 3.23). This effect does not seem to be associated with any change in INR, making it \ndifficult to identify those at highest risk.23 In keeping with these findings, SSRI use in anti-\ncoagulated patients being treated for acute coronary syndromes may decrease the risk of \nminor cardiac events at the expense of an increased risk of a bleed.24 Thus, the increased risk \nof upper GI bleeds associated with SSRIs may be balanced by a decreased risk of embolic \nevents. One database study failed to find a reduction in the risk of a first myocardial infarc-\ntion in SSRI treated-patients25 while another26 found a reduction in the risk of being admit-\nted to hospital with a first MI in smokers on SSRIs. The effect size in the second study was \nlarge: approximately 1 in 10 hospitalisations was avoided in SSRI-treated patients.26 This is \nsimilar to the effect size of other antiplatelet therapies such as aspirin.27\n",
+      "bbox": [
+        61.886383056640625,
+        458.55029296875,
+        436.7261657714844,
+        626.2703247070312
+      ],
+      "text_sha256": "582ec0067e56318ec172d9760b0a00980afb5892f268cf5bf40edb8c54338fdc"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

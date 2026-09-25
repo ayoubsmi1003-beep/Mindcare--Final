@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0493",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 493,
+  "source_page_index": 492,
+  "source_page_display": 493,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "472    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nAlcohol withdrawal delirium – delirium tremens\nDelirium tremens occurs in around 3–5% of those admitted to hospital for alcohol \nwithdrawal, so it is likely to be encountered by those working in psychiatric liaison.1 It \nis an agitated delirium that develops around 72 hours after the last drink. Previous \nseizures or delirium, low potassium, low magnesium, thiamine deficiency and systemic \ndisease predispose to its development, as does under-treated alcohol withdrawal. \nRecognising delirium tremens is important because of its high mortality and because its \ntreatment is different from delirium arising from other causes (larger doses of benzodi-\nazepines, more caution with antipsychotics).\nThis is a prescribing guideline but it bears repeating that delirium tremens is a medi-\ncal emergency and you need to see the patient. The patient should be nursed in a general \nhospital,2 preferably in a high dependency unit1,3 although in practice this can be diffi-\ncult to arrange. Appropriate management requires joint work between psychiatric, \nmedical and nursing teams, to identify and correct contributing physical factors such as \nelectrolyte imbalance, thiamine deficiency and sepsis, while minimising behavioural \ndisturbance via psychosocial measures (side room for a low stimulus environment, 1:1 \nnursing observations, frequent reorientation and reassurance) and pharmacological \ntreatment. ITU outreach or on call should be informed early, and should be directly \ninvolved if the patient is not accepting oral medication and requires parenteral high-\ndose benzodiazepines.\nThe evidence base for treatment of delirium tremens is sparse and is mostly from \nbefore 1979.1,4 Meta-analysis comparing sedative hypnotics (diazepam, pentobarbital \nand paraldehyde) and antipsychotics found a six-fold increased odds of mortality in \npatients treated with neuroleptics.4 More recent studies comparing IV lorazepam with \nor without phenobarbital, or addition of dexmedetomidine,5 were performed in the \nICU environment, so have limited applicability to the general ward setting.\nNICE guideline CG100 (update 2017) recommends nursing in a general hospital and \nuse of lorazepam orally or IV, with little further elaboration.2 The New South Wales guid-\nance from Australia recommends diazepam and is more detailed (see Table 4.7). A recent \nNew England Journal of Medicine (NEJM) review suggests to ‘administer doses of benzo-\ndiazepines, preferably intravenously, in doses high enough to produce a lightly dozing, but \nstill arousable, state, while monitoring vital signs, until delirium abates’ and lists proto-\ncols for use of both lorazepam and diazepam, derived from earlier RCTs1 (see Table 4.7).\nThe following points unite these approaches:\n■\n■Doses of diazepam or lorazepam are given close together in a ‘loading fashion’ with \na maximum of an hour apart.\n■\n■High doses are permitted.\n■\n■Antipsychotics are not used, or are used only after large doses of benzodiazepines \nhave failed.\nThus, available research evidence and more detailed government guidelines advocate \ntreatment of delirium tremens, which differs from ordinarily rapid tranquillisation or \nother delirium protocols. This may need to be communicated explicitly to ITU teams, \nwho may (unwisely) follow a standard rapid tranquillisation protocol with relatively \nlow doses of benzodiazepines, including haloperidol.\n",
+  "raw_text_sha256": "9f4471056c3696e0c8cee207c22a308034b793be3b9ac8494882c8f17fc4cee8",
+  "coordinates_sha256": "7ea08ffdc73bf8897fc34e9541cc017e9e4551ff4caca65f6000a0f95c9dbb4e",
+  "block_sequence_sha256": "9125247ce1013b9f25ac14711f383406f2e0e92b596d99a1616ceaf7a87ded14",
+  "blocks": [
+    {
+      "block_id": "page-0493-block-0000",
+      "order": 0,
+      "text": "472    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "267e2bfe7b2432149efaed4f80d76f501e447ff0acfbda22b6cb9a525b3dc40d"
+    },
+    {
+      "block_id": "page-0493-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0493-block-0002",
+      "order": 2,
+      "text": "Alcohol withdrawal delirium – delirium tremens\n",
+      "bbox": [
+        68.88999938964844,
+        66.06539916992188,
+        316.2469787597656,
+        79.10040283203125
+      ],
+      "text_sha256": "56c42487719e676108879a6ebfa85dbaf4f9e66f0cbf522a2391de89a79544d5"
+    },
+    {
+      "block_id": "page-0493-block-0003",
+      "order": 3,
+      "text": "Delirium tremens occurs in around 3–5% of those admitted to hospital for alcohol \nwithdrawal, so it is likely to be encountered by those working in psychiatric liaison.1 It \nis an agitated delirium that develops around 72 hours after the last drink. Previous \nseizures or delirium, low potassium, low magnesium, thiamine deficiency and systemic \ndisease predispose to its development, as does under-treated alcohol withdrawal. \nRecognising delirium tremens is important because of its high mortality and because its \ntreatment is different from delirium arising from other causes (larger doses of benzodi-\nazepines, more caution with antipsychotics).\n",
+      "bbox": [
+        61.889373779296875,
+        84.910400390625,
+        436.6993713378906,
+        180.63040161132812
+      ],
+      "text_sha256": "aaec0b88ced5e0a25d50cebf56618ca2bd076c1a387d8d013febe6be0cc717ee"
+    },
+    {
+      "block_id": "page-0493-block-0004",
+      "order": 4,
+      "text": "This is a prescribing guideline but it bears repeating that delirium tremens is a medi-\ncal emergency and you need to see the patient. The patient should be nursed in a general \nhospital,2 preferably in a high dependency unit1,3 although in practice this can be diffi-\ncult to arrange. Appropriate management requires joint work between psychiatric, \nmedical and nursing teams, to identify and correct contributing physical factors such as \nelectrolyte imbalance, thiamine deficiency and sepsis, while minimising behavioural \ndisturbance via psychosocial measures (side room for a low stimulus environment, 1:1 \nnursing observations, frequent reorientation and reassurance) and pharmacological \ntreatment. ITU outreach or on call should be informed early, and should be directly \ninvolved if the patient is not accepting oral medication and requires parenteral high-\ndose benzodiazepines.\n",
+      "bbox": [
+        61.889373779296875,
+        180.910400390625,
+        436.6996765136719,
+        312.6304016113281
+      ],
+      "text_sha256": "8cf2295ec60155f338d68d11aa47f2ebebd1c1fef6e1031938c1362d9374c419"
+    },
+    {
+      "block_id": "page-0493-block-0005",
+      "order": 5,
+      "text": "The evidence base for treatment of delirium tremens is sparse and is mostly from \nbefore 1979.1,4 Meta-analysis comparing sedative hypnotics (diazepam, pentobarbital \nand paraldehyde) and antipsychotics found a six-fold increased odds of mortality in \npatients treated with neuroleptics.4 More recent studies comparing IV lorazepam with \nor without phenobarbital, or addition of dexmedetomidine,5 were performed in the \nICU environment, so have limited applicability to the general ward setting.\n",
+      "bbox": [
+        61.8859977722168,
+        312.910400390625,
+        436.71978759765625,
+        384.6304016113281
+      ],
+      "text_sha256": "c25dc801601031568331f304309d98588f2e59e7c83039e5e4e19e73d3ed88b7"
+    },
+    {
+      "block_id": "page-0493-block-0006",
+      "order": 6,
+      "text": "NICE guideline CG100 (update 2017) recommends nursing in a general hospital and \nuse of lorazepam orally or IV, with little further elaboration.2 The New South Wales guid-\nance from Australia recommends diazepam and is more detailed (see Table 4.7). A recent \nNew England Journal of Medicine (NEJM) review suggests to ‘administer doses of benzo-\ndiazepines, preferably intravenously, in doses high enough to produce a lightly dozing, but \nstill arousable, state, while monitoring vital signs, until delirium abates’ and lists proto-\ncols for use of both lorazepam and diazepam, derived from earlier RCTs1 (see Table 4.7).\n",
+      "bbox": [
+        61.88671875,
+        384.910400390625,
+        436.7239685058594,
+        468.6304016113281
+      ],
+      "text_sha256": "fbc402f29f173f66ee66b174ab8aaad95727896a69871484b3cc5c120876d282"
+    },
+    {
+      "block_id": "page-0493-block-0007",
+      "order": 7,
+      "text": "The following points unite these approaches:\n",
+      "bbox": [
+        71.89358520507812,
+        468.910400390625,
+        265.2735595703125,
+        480.6304016113281
+      ],
+      "text_sha256": "d53f656f27519f6d0089ef5684aa7a9202771dfd63405d3d458ff43d4c29eed8"
+    },
+    {
+      "block_id": "page-0493-block-0008",
+      "order": 8,
+      "text": "■\n■Doses of diazepam or lorazepam are given close together in a ‘loading fashion’ with \n",
+      "bbox": [
+        61.88999938964844,
+        486.910400390625,
+        436.7000427246094,
+        498.6304016113281
+      ],
+      "text_sha256": "81f1934b46a8a2e4c173ea00c7f805624f497f9e01bf9a0be641f3df77aa8eab"
+    },
+    {
+      "block_id": "page-0493-block-0009",
+      "order": 9,
+      "text": "a maximum of an hour apart.\n",
+      "bbox": [
+        70.88999938964844,
+        498.910400390625,
+        199.22998046875,
+        510.6304016113281
+      ],
+      "text_sha256": "cab7e7e3ad73d96147bbaad4c933c9e7d6587cd85b18ee90c393de681901ba95"
+    },
+    {
+      "block_id": "page-0493-block-0010",
+      "order": 10,
+      "text": "■\n■High doses are permitted.\n",
+      "bbox": [
+        61.88999938964844,
+        510.910400390625,
+        182.00997924804688,
+        522.6304321289062
+      ],
+      "text_sha256": "79ed7e3046b6a860e7ee375e436fe61dd39c84ee59c3fbb83f0542f855bec04f"
+    },
+    {
+      "block_id": "page-0493-block-0011",
+      "order": 11,
+      "text": "■\n■Antipsychotics are not used, or are used only after large doses of benzodiazepines \n",
+      "bbox": [
+        61.88999938964844,
+        522.910400390625,
+        436.7099609375,
+        534.6304321289062
+      ],
+      "text_sha256": "fe26aa5cfdd02ba1fea92ed7409db4a11dbf852e7eeb53de6f77cbb495c0ca91"
+    },
+    {
+      "block_id": "page-0493-block-0012",
+      "order": 12,
+      "text": "have failed.\n",
+      "bbox": [
+        70.88999938964844,
+        534.910400390625,
+        120.33999633789062,
+        546.6304321289062
+      ],
+      "text_sha256": "aac759ee497bc35b54359f43686682433ff7305f8c28447af6c52d268b4121a7"
+    },
+    {
+      "block_id": "page-0493-block-0013",
+      "order": 13,
+      "text": "Thus, available research evidence and more detailed government guidelines advocate \ntreatment of delirium tremens, which differs from ordinarily rapid tranquillisation or \nother delirium protocols. This may need to be communicated explicitly to ITU teams, \nwho may (unwisely) follow a standard rapid tranquillisation protocol with relatively \nlow doses of benzodiazepines, including haloperidol.\n",
+      "bbox": [
+        61.88999938964844,
+        552.910400390625,
+        436.7100830078125,
+        612.6304321289062
+      ],
+      "text_sha256": "c4f1c526d4462c7444088af7ea96a3b667736b235d485b622ae64bd0757f66dd"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

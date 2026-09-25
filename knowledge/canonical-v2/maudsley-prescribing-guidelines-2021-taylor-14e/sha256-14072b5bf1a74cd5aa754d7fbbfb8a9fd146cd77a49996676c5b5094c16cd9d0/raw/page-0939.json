@@ -1,0 +1,239 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0939",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 939,
+  "source_page_index": 938,
+  "source_page_display": 939,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "918    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 14\nTable 14.4  (Continued)\nDrug\nPsychiatric side effect\nComment\nAntimalarials\nChloroquine, mefloquine\nPsychosis including hallucinations, \npanic attacks, suicidal ideation and \nattempts, anxiety, depression, \nrestlessness, confusion. Abnormal \ndreams/nightmares are common \nwith mefloquine\nSymptoms begin early in treatment. \nPatients should be advised to stop \ntreatment if these develop and seek \nmedical advice. Psychiatric ADRs are \nmore common with mefloquine than \nchloroquine. Reactions can even occur \nafter discontinuation of the drug. \nMefloquine should not be prescribed \nfor patients with an active or a history \nof a psychiatric diagnosis\nAntiparkinsonian treatments\nLevodopa\nVisual hallucinations, depression, \nhypomania, sleep disturbances, \nabnormal dreams, cognitive \nimpairment, agitation, psychosis, \ndelirium\nDopamine agonists\nSedation, psychomotor agitation, \nanxiety, akathisia, sleep \ndisturbances, psychosis, cognitive \nimpairment, delirium, visual \nhallucinations\nThese are associated with more \npsychiatric adverse effects than \nlevodopa\nAmantadine\nDecreased concentration, sleep \ndisturbances, visual hallucinations, \nirritability, anxiety, depression, \neuphoria, fatigue, psychosis, \ndelirium\nSelegiline (MAO-B inhibitor)\nSleep disturbances, agitation, \npsychosis\nPrimary metabolites include \nlevamfetamines\nEntacapone (COMT inhibitor)\nSleep disturbances, hallucinations, \ndelirium\nCardiovascular agents\nβ-Blockers\nFatigue, sedation, sleep \ndisturbances and nightmares, \ncognitive impairment, depression, \nhallucinations, psychosis, delirium\nDisturbances more common with \nlipophilic β-blockers (e.g. propranolol, \nmetoprolol) than with hydrophilic \nβ-blockers (e.g. atenolol, sotalol, \nnadolol). Propranolol most commonly \nassociated with depressive symptoms, \nbut even with this drug, causality has \nnot clearly been established. Reports \nof psychiatric ADRs from numerous \nclinical trials are equivocal.\n",
+  "raw_text_sha256": "9ffed147e4a870e9cc1bf4a51beaaccb321817c083e36ae95451e8389e819244",
+  "coordinates_sha256": "9929fef06c23145fff87cd0e6d4420549bf75b7d3cbb8a4909e1749f5b29394e",
+  "block_sequence_sha256": "f3c7f0953b6e0f48be296af8f31e463fe8c20afa75a8cb63d679ce21acbcc744",
+  "blocks": [
+    {
+      "block_id": "page-0939-block-0000",
+      "order": 0,
+      "text": "918    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "1f7e466a4b0535e526f1ea20c8c0c8f98b36d8641aa9cabe37a787dcd11bc562"
+    },
+    {
+      "block_id": "page-0939-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        18.520000457763672,
+        338.7405090332031,
+        28.0,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0939-block-0002",
+      "order": 2,
+      "text": "Table 14.4  (Continued)\n",
+      "bbox": [
+        67.88970184326172,
+        70.08790588378906,
+        144.17970275878906,
+        78.97540283203125
+      ],
+      "text_sha256": "7d17da805584a2a1f97e0bd5d20373994d4caa4955bd15a6fd65ee7bc7d0251c"
+    },
+    {
+      "block_id": "page-0939-block-0003",
+      "order": 3,
+      "text": "Drug\nPsychiatric side effect\nComment\n",
+      "bbox": [
+        61.889801025390625,
+        90.53968811035156,
+        343.39483642578125,
+        99.42718505859375
+      ],
+      "text_sha256": "9e349db6f15484697169ed1ed9f4f9a823886c66f8e2c04ad5ea86c3d6a8ec83"
+    },
+    {
+      "block_id": "page-0939-block-0004",
+      "order": 4,
+      "text": "Antimalarials\n",
+      "bbox": [
+        61.88981628417969,
+        107.56471252441406,
+        108.56981658935547,
+        116.45220947265625
+      ],
+      "text_sha256": "b8bd818882a71252f0426c5dce74da8a26f1def676fc5eb4e64320976ca726a2"
+    },
+    {
+      "block_id": "page-0939-block-0005",
+      "order": 5,
+      "text": "Chloroquine, mefloquine\nPsychosis including hallucinations, \npanic attacks, suicidal ideation and \nattempts, anxiety, depression, \nrestlessness, confusion. Abnormal \ndreams/nightmares are common \nwith mefloquine\n",
+      "bbox": [
+        61.88981628417969,
+        122.7672348022461,
+        290.4073181152344,
+        181.46221923828125
+      ],
+      "text_sha256": "674d39c65ce92410d86b88f31f645acfd3712cb37650f99e1efa10f15b4ee97d"
+    },
+    {
+      "block_id": "page-0939-block-0006",
+      "order": 6,
+      "text": "Symptoms begin early in treatment. \nPatients should be advised to stop \ntreatment if these develop and seek \nmedical advice. Psychiatric ADRs are \nmore common with mefloquine than \nchloroquine. Reactions can even occur \nafter discontinuation of the drug. \nMefloquine should not be prescribed \nfor patients with an active or a history \nof a psychiatric diagnosis\n",
+      "bbox": [
+        309.2248229980469,
+        122.7522201538086,
+        433.69488525390625,
+        221.43719482421875
+      ],
+      "text_sha256": "e0892d4b9e05f40c7400b5d0824e2af08ced8cd4fe7ca274383359fc0b445cf9"
+    },
+    {
+      "block_id": "page-0939-block-0007",
+      "order": 7,
+      "text": "Antiparkinsonian treatments\n",
+      "bbox": [
+        61.88981628417969,
+        227.5721893310547,
+        163.43978881835938,
+        236.45968627929688
+      ],
+      "text_sha256": "ca13d9ab55d30d74a55513ccf48ae79202f18193cc8a5eb5553c4c3cd70016bf"
+    },
+    {
+      "block_id": "page-0939-block-0008",
+      "order": 8,
+      "text": "Levodopa\nVisual hallucinations, depression, \nhypomania, sleep disturbances, \nabnormal dreams, cognitive \nimpairment, agitation, psychosis, \ndelirium\n",
+      "bbox": [
+        61.88981628417969,
+        242.77467346191406,
+        294.6523132324219,
+        291.47216796875
+      ],
+      "text_sha256": "444ea2ef177cdf7c2947906a739ea49e4e8681cbac242e30ba61c8b1acfe3933"
+    },
+    {
+      "block_id": "page-0939-block-0009",
+      "order": 9,
+      "text": "Dopamine agonists\nSedation, psychomotor agitation, \nanxiety, akathisia, sleep \ndisturbances, psychosis, cognitive \nimpairment, delirium, visual \nhallucinations\n",
+      "bbox": [
+        61.889808654785156,
+        297.78717041015625,
+        296.3248291015625,
+        346.4846496582031
+      ],
+      "text_sha256": "15df3985ef455be90c4253d7f43ef8dc28bd6242f05d4f23590faaec7dab04e5"
+    },
+    {
+      "block_id": "page-0939-block-0010",
+      "order": 10,
+      "text": "These are associated with more \npsychiatric adverse effects than \nlevodopa\n",
+      "bbox": [
+        309.2248229980469,
+        297.7796630859375,
+        411.46484375,
+        326.4821472167969
+      ],
+      "text_sha256": "9857324b894edbd089984aade6d536d478ae0753ed7e73b92d84fbcb37415ce4"
+    },
+    {
+      "block_id": "page-0939-block-0011",
+      "order": 11,
+      "text": "Amantadine\nDecreased concentration, sleep \ndisturbances, visual hallucinations, \nirritability, anxiety, depression, \neuphoria, fatigue, psychosis, \ndelirium\n",
+      "bbox": [
+        61.88981628417969,
+        352.7996520996094,
+        299.24237060546875,
+        401.49713134765625
+      ],
+      "text_sha256": "9d4edebd3548fc1641a75d81f3fbd1312c8e0d3527992142e39ed6b440b2f438"
+    },
+    {
+      "block_id": "page-0939-block-0012",
+      "order": 12,
+      "text": "Selegiline (MAO-B inhibitor)\nSleep disturbances, agitation, \npsychosis\n",
+      "bbox": [
+        61.889808654785156,
+        407.8121337890625,
+        283.4098205566406,
+        426.5171203613281
+      ],
+      "text_sha256": "20072dfde6a54d0309845f8d96091aba3f9e481a5e4a3cc8b4fcc74947c4b7ab"
+    },
+    {
+      "block_id": "page-0939-block-0013",
+      "order": 13,
+      "text": "Primary metabolites include \nlevamfetamines\n",
+      "bbox": [
+        309.2248229980469,
+        407.8121337890625,
+        399.2173767089844,
+        426.5171203613281
+      ],
+      "text_sha256": "5332ace4d2328fb15a164257fea3624e506d5f618c98547a3c320a4b955a4cb6"
+    },
+    {
+      "block_id": "page-0939-block-0014",
+      "order": 14,
+      "text": "Entacapone (COMT inhibitor)\nSleep disturbances, hallucinations, \ndelirium\n",
+      "bbox": [
+        61.88981628417969,
+        432.8321228027344,
+        298.829833984375,
+        451.537109375
+      ],
+      "text_sha256": "e901d3aafc6da99f75521a7aaa4a8c67edad4fe252459bbee066ef230e50926c"
+    },
+    {
+      "block_id": "page-0939-block-0015",
+      "order": 15,
+      "text": "Cardiovascular agents\n",
+      "bbox": [
+        61.889808654785156,
+        457.672119140625,
+        139.2672882080078,
+        466.55963134765625
+      ],
+      "text_sha256": "ae62b438be3c40241fa4a0a2b5b4bdeb2c1e1627036e2a626db95c6507bb99e1"
+    },
+    {
+      "block_id": "page-0939-block-0016",
+      "order": 16,
+      "text": "β-Blockers\nFatigue, sedation, sleep \ndisturbances and nightmares, \ncognitive impairment, depression, \nhallucinations, psychosis, delirium\n",
+      "bbox": [
+        61.889808654785156,
+        471.8546447753906,
+        297.434814453125,
+        511.57464599609375
+      ],
+      "text_sha256": "cca7c0999262997487e1e0d245d97792aa268f8fadcbddaad06d3d7b42e1df0f"
+    },
+    {
+      "block_id": "page-0939-block-0017",
+      "order": 17,
+      "text": "Disturbances more common with \nlipophilic β-blockers (e.g. propranolol, \nmetoprolol) than with hydrophilic \nβ-blockers (e.g. atenolol, sotalol, \nnadolol). Propranolol most commonly \nassociated with depressive symptoms, \nbut even with this drug, causality has \nnot clearly been established. Reports \nof psychiatric ADRs from numerous \nclinical trials are equivocal.\n",
+      "bbox": [
+        309.2248229980469,
+        472.8671569824219,
+        432.014892578125,
+        571.5521240234375
+      ],
+      "text_sha256": "85bb130d2547530277b6977f09c71d8681dd1c20caa124bfa8a9674e28f59ca4"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,407 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0811",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 811,
+  "source_page_index": 810,
+  "source_page_display": 811,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "790    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\nSafety in \nepilepsy\nDrug\nComments\nAntipsychotics\nLow risk \n– good \nchoices\nAmisulpride/\nsulpiride\nConsidered to be safe in PWE.43 Renally excreted, so low risk of \npharmacokinetic interactions with antiseizure medications. Seizures \nuncommon in overdose44\nAripiprazole\nRarely lowers seizure threshold.5 Incidence of seizures similar to placebo in \nRCTs24\nZiprasidone\nHigh potency \nFGAs\nFor example, fluphenazine, haloperidol, trifluoperazine, flupentixol. Low risk \nof lowering the seizure threshold5\nRisperidone\nUnlikely to lower the seizure threshold.5 Incidence of seizures similar to \nplacebo in RCTs.24 Has been recommended for PWE.32,45 Evidence of safety in \na case series of adolescents with epilepsy46\nProbably low \nrisk – use \nwith caution \n(limited \nevidence)\nAsenapine\nSeizure rate similar to placebo in RCTs.47 Data and clinical experience of use \nin PWE is extremely limited\nBrexpiprazole\nCariprazine\nLurasidone\nModerate \nrisk – care \nrequired\nOlanzapine\nOlanzapine and quetiapine both associated with seizures in RCTs.24 However, \nolanzapine causes more EEG abnormalities.44 Overall risk of reducing the \nseizure threshold is considered to be low5 and olanzapine has been \nrecommended by some for PWE.32 Data relating to olanzapine are difficult to \ninterpret. EEG changes are seen in some but not all studies48 and it has been \nreported to be both anticonvulsant49 and proconvulsant.50 Quetiapine has a \nhigh risk of drug interaction in PWE45\nQuetiapine\nHigher risk \n– care \nrequired\nClozapine\nMost epileptogenic antipsychotic.32 However, has been used successfully in \nPWE stable on antiseizure medications without worsening seizures51 and \neven in treatment-resistant epilepsy.52 Note, should not be used with \ncarbamazepine (risk of blood dyscrasias and reduced clozapine levels). \nValproate or lamotrigine are the antiseizure medications of choice\nHigher risk \n– avoid\nLow potency FGAs \n(e.g. \nchlorpromazine)\nBest avoided in PWE.31 Doses of chlorpromazine above 1g/day have a 9% \nincidence of seizures\nLoxapine\nHighest rate of seizures amongst the FGAs53\nDepot \nantipsychotics\nNone of the depot preparations currently available are thought to be \nepileptogenic, however:\n■\n■The kinetics of depots are complex (seizures may be delayed)\n■\n■If seizures do occur, the offending drug may not be easily withdrawn. \nDepots should be used with extreme care\nZotepine\nHas established dose-related pro-convulsive effect44\nTable 10.5  (Continued)\n(Continued)\n",
+  "raw_text_sha256": "0a5dc3c877f2609ef12aff2a52f80eab7fc116eb29f138415d96d4919139eccd",
+  "coordinates_sha256": "1bfb60d7755b4fce9e4458087524c881a408ab9733340c1e0d90f56ea42a8820",
+  "block_sequence_sha256": "8e72e3221d36f36bd5bb9e716fba0f95f24aa0088d2e47f65ec7fec97d93137e",
+  "blocks": [
+    {
+      "block_id": "page-0811-block-0000",
+      "order": 0,
+      "text": "790    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "ab7246f3d5b3f89ec251849b36ce80aadc26491169abe71e79062201701c8b7d"
+    },
+    {
+      "block_id": "page-0811-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0811-block-0002",
+      "order": 2,
+      "text": "Safety in \nepilepsy\nDrug\nComments\n",
+      "bbox": [
+        65.88999938964844,
+        88.87800598144531,
+        221.88999938964844,
+        107.76300048828125
+      ],
+      "text_sha256": "20014f57ffe63ace16346a7bafb63ea03584b896658699da8d178d91483c8d4b"
+    },
+    {
+      "block_id": "page-0811-block-0003",
+      "order": 3,
+      "text": "Antipsychotics\n",
+      "bbox": [
+        65.88999938964844,
+        116.11048889160156,
+        117.12999725341797,
+        124.99798583984375
+      ],
+      "text_sha256": "66a87c9d9c00b8fa993ae9a90f576148dfe50f1c930aed10c7efe7d8254d7496"
+    },
+    {
+      "block_id": "page-0811-block-0004",
+      "order": 4,
+      "text": "Low risk \n– good \nchoices\n",
+      "bbox": [
+        65.88999938964844,
+        133.9154815673828,
+        94.2249984741211,
+        162.61798095703125
+      ],
+      "text_sha256": "b3638e5cd45a0990309560fcc279d22cd1e4810f9e44398e74955c79157eee07"
+    },
+    {
+      "block_id": "page-0811-block-0005",
+      "order": 5,
+      "text": "Amisulpride/\nsulpiride\n",
+      "bbox": [
+        116.19999694824219,
+        133.90797424316406,
+        156.20497131347656,
+        152.61297607421875
+      ],
+      "text_sha256": "d62555e4c4038ee6bbce06cdc9670d48d5e59e244ad4e77a564bda64487cf848"
+    },
+    {
+      "block_id": "page-0811-block-0006",
+      "order": 6,
+      "text": "Considered to be safe in PWE.43 Renally excreted, so low risk of \npharmacokinetic interactions with antiseizure medications. Seizures \nuncommon in overdose44\n",
+      "bbox": [
+        184.38999938964844,
+        133.90797424316406,
+        401.2015075683594,
+        162.620361328125
+      ],
+      "text_sha256": "2115a7a692395fab85465b9f1fd008a9172db8f9575e1cfd1e889ff9ca3185cb"
+    },
+    {
+      "block_id": "page-0811-block-0007",
+      "order": 7,
+      "text": "Aripiprazole\nRarely lowers seizure threshold.5 Incidence of seizures similar to placebo in \nRCTs24\nZiprasidone\n",
+      "bbox": [
+        116.19719696044922,
+        171.54286193847656,
+        422.9651794433594,
+        197.87548828125
+      ],
+      "text_sha256": "7578e37021f35e3d34305f3a7f6c2654eef2bf36ecc90014e13c613e22c994b8"
+    },
+    {
+      "block_id": "page-0811-block-0008",
+      "order": 8,
+      "text": "High potency \nFGAs\n",
+      "bbox": [
+        116.19719696044922,
+        206.79298400878906,
+        160.79220581054688,
+        225.49798583984375
+      ],
+      "text_sha256": "318f87142d2d1487fc980a660995579aab89f2b110c0d39ecd3ab50b5ae35010"
+    },
+    {
+      "block_id": "page-0811-block-0009",
+      "order": 9,
+      "text": "For example, fluphenazine, haloperidol, trifluoperazine, flupentixol. Low risk \nof lowering the seizure threshold5\n",
+      "bbox": [
+        184.38720703125,
+        206.79298400878906,
+        429.412353515625,
+        225.49798583984375
+      ],
+      "text_sha256": "8a7c28ef2fd3cb7188888c4c5d129862a899abae67fa017d3cbe1e6a08679300"
+    },
+    {
+      "block_id": "page-0811-block-0010",
+      "order": 10,
+      "text": "Risperidone\nUnlikely to lower the seizure threshold.5 Incidence of seizures similar to \nplacebo in RCTs.24 Has been recommended for PWE.32,45 Evidence of safety in \na case series of adolescents with epilepsy46\n",
+      "bbox": [
+        116.19719696044922,
+        234.41798400878906,
+        431.760986328125,
+        263.12298583984375
+      ],
+      "text_sha256": "dca3023a49127ed4bd7de591a2050149659a671229ff234783171dada9b35bff"
+    },
+    {
+      "block_id": "page-0811-block-0011",
+      "order": 11,
+      "text": "Probably low \nrisk – use \nwith caution \n(limited \nevidence)\n",
+      "bbox": [
+        65.88999938964844,
+        272.0429992675781,
+        109.09748840332031,
+        320.740478515625
+      ],
+      "text_sha256": "bd5e3b5fc616a7ad66c45070c57c2d2353c76bba4ef1deb92beca7f4903d13ef"
+    },
+    {
+      "block_id": "page-0811-block-0012",
+      "order": 12,
+      "text": "Asenapine\nSeizure rate similar to placebo in RCTs.47 Data and clinical experience of use \nin PWE is extremely limited\nBrexpiprazole\n",
+      "bbox": [
+        116.19999694824219,
+        272.0354919433594,
+        426.63323974609375,
+        298.37548828125
+      ],
+      "text_sha256": "41958837cc57468f416131d6eff34b73556807732e584f985dcd61f81bc1bfaf"
+    },
+    {
+      "block_id": "page-0811-block-0013",
+      "order": 13,
+      "text": "Cariprazine\n",
+      "bbox": [
+        116.20071411132812,
+        307.2929992675781,
+        152.4481964111328,
+        316.00048828125
+      ],
+      "text_sha256": "8e5b8a98bd34854d9f6a2ec681d63e84d1e8943e8769cb380463bb74a35dc90b"
+    },
+    {
+      "block_id": "page-0811-block-0014",
+      "order": 14,
+      "text": "Lurasidone\n",
+      "bbox": [
+        116.20071411132812,
+        324.9179992675781,
+        150.7906951904297,
+        333.62548828125
+      ],
+      "text_sha256": "28b17601847ef40cbdcd0c927811e44e72539352101012ef133563c7fb103f3d"
+    },
+    {
+      "block_id": "page-0811-block-0015",
+      "order": 15,
+      "text": "Moderate \nrisk – care \nrequired\n",
+      "bbox": [
+        65.89071655273438,
+        342.5429992675781,
+        99.918212890625,
+        371.2454833984375
+      ],
+      "text_sha256": "1ad49dea90bea1b02c591827357acdb1a134639455d75147a5fdf252551db404"
+    },
+    {
+      "block_id": "page-0811-block-0016",
+      "order": 16,
+      "text": "Olanzapine\nOlanzapine and quetiapine both associated with seizures in RCTs.24 However, \nolanzapine causes more EEG abnormalities.44 Overall risk of reducing the \nseizure threshold is considered to be low5 and olanzapine has been \nrecommended by some for PWE.32 Data relating to olanzapine are difficult to \ninterpret. EEG changes are seen in some but not all studies48 and it has been \nreported to be both anticonvulsant49 and proconvulsant.50 Quetiapine has a \nhigh risk of drug interaction in PWE45\n",
+      "bbox": [
+        116.20071411132812,
+        342.5354919433594,
+        431.6439514160156,
+        411.24798583984375
+      ],
+      "text_sha256": "ff263c12789ef5f71c30fc22e962d9acbed4c8e0f00ce0ba318c1e04132d141d"
+    },
+    {
+      "block_id": "page-0811-block-0017",
+      "order": 17,
+      "text": "Quetiapine\n",
+      "bbox": [
+        116.19709777832031,
+        360.1679992675781,
+        151.1995849609375,
+        368.87548828125
+      ],
+      "text_sha256": "41327e1285b139254503aaa07065625405b7c29d457a97ba1c2d41cb54c42d3b"
+    },
+    {
+      "block_id": "page-0811-block-0018",
+      "order": 18,
+      "text": "Higher risk \n– care \nrequired\n",
+      "bbox": [
+        65.88710021972656,
+        420.1679992675781,
+        102.14209747314453,
+        448.8704833984375
+      ],
+      "text_sha256": "82c35222b87a4d44b10405e9478c57d8c92c8eb2f74fe52e407b0bdfd1ba73eb"
+    },
+    {
+      "block_id": "page-0811-block-0019",
+      "order": 19,
+      "text": "Clozapine\nMost epileptogenic antipsychotic.32 However, has been used successfully in \nPWE stable on antiseizure medications without worsening seizures51 and \neven in treatment-resistant epilepsy.52 Note, should not be used with \ncarbamazepine (risk of blood dyscrasias and reduced clozapine levels). \nValproate or lamotrigine are the antiseizure medications of choice\n",
+      "bbox": [
+        116.19709777832031,
+        420.1604919433594,
+        424.8481750488281,
+        468.8704833984375
+      ],
+      "text_sha256": "f773950520fd711ec5adacdb262e5561c3190e15f2189fc0f1c79fb05f916c77"
+    },
+    {
+      "block_id": "page-0811-block-0020",
+      "order": 20,
+      "text": "Higher risk \n– avoid\n",
+      "bbox": [
+        65.89089965820312,
+        477.7879943847656,
+        102.1458969116211,
+        496.49298095703125
+      ],
+      "text_sha256": "e0b17c5bd0c990c9d3ced497ab8da6f732ec640660e6692defe955a12463842d"
+    },
+    {
+      "block_id": "page-0811-block-0021",
+      "order": 21,
+      "text": "Low potency FGAs \n(e.g. \nchlorpromazine)\n",
+      "bbox": [
+        116.20089721679688,
+        477.7879943847656,
+        177.8734130859375,
+        506.490478515625
+      ],
+      "text_sha256": "16dea0aa00d86f3c591ed1e282ed7cb49a44e729fe0d2a8882c775181e0928c5"
+    },
+    {
+      "block_id": "page-0811-block-0022",
+      "order": 22,
+      "text": "Best avoided in PWE.31 Doses of chlorpromazine above 1g/day have a 9% \nincidence of seizures\n",
+      "bbox": [
+        184.39089965820312,
+        477.7804870605469,
+        421.2490539550781,
+        496.49798583984375
+      ],
+      "text_sha256": "6a531ba9c1b7b94eec1b65faa041943f01caf26f682c8bbd482360964c580a32"
+    },
+    {
+      "block_id": "page-0811-block-0023",
+      "order": 23,
+      "text": "Loxapine\nHighest rate of seizures amongst the FGAs53\n",
+      "bbox": [
+        116.20149230957031,
+        515.4129638671875,
+        324.9632568359375,
+        524.1204833984375
+      ],
+      "text_sha256": "5c3ded16e7ae26907bd90faeb68d2ecd0f26b34ae7b8a352ea37e7e3b507a879"
+    },
+    {
+      "block_id": "page-0811-block-0024",
+      "order": 24,
+      "text": "Depot \nantipsychotics\n",
+      "bbox": [
+        116.19719696044922,
+        533.04296875,
+        160.7771759033203,
+        551.7479858398438
+      ],
+      "text_sha256": "18bd1dacc774e9766ed7006da13c438af52a9c2a020ef903486a8892de374c9f"
+    },
+    {
+      "block_id": "page-0811-block-0025",
+      "order": 25,
+      "text": "None of the depot preparations currently available are thought to be \nepileptogenic, however:\n",
+      "bbox": [
+        184.38720703125,
+        533.04296875,
+        405.6897888183594,
+        551.7479858398438
+      ],
+      "text_sha256": "751ffa1a9d807a971c9e6567e8130752411423bacc554ec2593ae07fbfcf1ec7"
+    },
+    {
+      "block_id": "page-0811-block-0026",
+      "order": 26,
+      "text": "■\n■The kinetics of depots are complex (seizures may be delayed)\n",
+      "bbox": [
+        184.389892578125,
+        553.04296875,
+        387.3024597167969,
+        561.75048828125
+      ],
+      "text_sha256": "65e3551c4f0a915ac9966caa4b0166877415ee5174630ccc92017618680b778a"
+    },
+    {
+      "block_id": "page-0811-block-0027",
+      "order": 27,
+      "text": "■\n■If seizures do occur, the offending drug may not be easily withdrawn. \n",
+      "bbox": [
+        184.389892578125,
+        563.04296875,
+        417.0550842285156,
+        571.75048828125
+      ],
+      "text_sha256": "a9a9721a1f8b5a67369775bf3b6e6e0df82e412f0c6e6f47f67384ced8ebcb97"
+    },
+    {
+      "block_id": "page-0811-block-0028",
+      "order": 28,
+      "text": "Depots should be used with extreme care\n",
+      "bbox": [
+        193.38999938964844,
+        573.0404663085938,
+        325.6449279785156,
+        581.7479858398438
+      ],
+      "text_sha256": "b0d08e6733fec34f2f59f3182916f8282ca7b6ca4ba5923de451985b0e29c9ff"
+    },
+    {
+      "block_id": "page-0811-block-0029",
+      "order": 29,
+      "text": "Zotepine\nHas established dose-related pro-convulsive effect44\n",
+      "bbox": [
+        116.19999694824219,
+        590.6654663085938,
+        348.0178527832031,
+        599.3729858398438
+      ],
+      "text_sha256": "192313b1a568bf35fa84204332f453ee0f663d25567b809bd1dfd3fc15afd554"
+    },
+    {
+      "block_id": "page-0811-block-0030",
+      "order": 30,
+      "text": "Table 10.5  (Continued)\n",
+      "bbox": [
+        67.88999938964844,
+        70.08790588378906,
+        144.17999267578125,
+        78.97540283203125
+      ],
+      "text_sha256": "6f96aa44cab7a550a602c4a6f190cc85216b9f93ad3df4757bbc96e0499b5302"
+    },
+    {
+      "block_id": "page-0811-block-0031",
+      "order": 31,
+      "text": "(Continued)\n",
+      "bbox": [
+        397.875,
+        610.5904541015625,
+        433.88995361328125,
+        619.3429565429688
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

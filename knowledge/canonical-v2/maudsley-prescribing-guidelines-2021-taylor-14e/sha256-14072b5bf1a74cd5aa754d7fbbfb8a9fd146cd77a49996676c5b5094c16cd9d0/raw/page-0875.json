@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0875",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 875,
+  "source_page_index": 874,
+  "source_page_display": 875,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "854    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  11\nCPY2D6\nSUBSTRATES\nINHIBITORS\nINDUCERS\nAmitriptyline\n‘Amphetamines’\nAtomoxetine\nAripiprazole\nBrexpiprazole\nCariprazine\nChlorpromazine\nCitalopram\nClomipramine\nClozapine*\nDeutetrabenazine\nDonepezil*\nDuloxetine\nEscitalopram\nFluoxetine\nFluvoxamine\nFluphenazine\nGalantamine\nHaloperidol\nIloperidone\nImipramine\nMethadone*\nMianserin\nMirtazapine*\nMoclobemide\nNortriptyline\nOlanzapine\nParoxetine\nPerphenazine\nPimozide*\nQuetiapine*\nRisperidone\nSertraline\nTrazodone*\nTrimipramine\nValbenazine\nVenlafaxine\nVortioxetine\nZuclopenthixol\nAmitriptyline\nAsenapine\nBupropion\nChlorpromazine\nCitalopram*\nClomipramine\nClozapine\nDuloxetine\nEscitalopram\nFluoxetine\nFluphenazine\nFluvoxamine*\nHaloperidol\nLevomepromazine\nMethadone*\nMoclobemide\nParoxetine\nPerphenazine\nReboxetine*\nRisperidone\nSertraline\nVenlafaxine*\nNot known\nCYP2E1\nSUBSTRATES\nINHIBITORS\nINDUCERS\nBupropion\nEthanol\nDisulfiram\nParacetamol\nEthanol\n",
+  "raw_text_sha256": "eac5353f3940e0a1441337098f1488d956bbe89755eedc2e2b24f20f91e83a72",
+  "coordinates_sha256": "0760cbe1091234af4d06187b7a8845ed5603be7731d80afd293aaf6e7ce1896b",
+  "block_sequence_sha256": "89277add54cab0e9ed1d1aa375815aed9452296037c0f8da1896402dddfa6722",
+  "blocks": [
+    {
+      "block_id": "page-0875-block-0000",
+      "order": 0,
+      "text": "854    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "7e1d03c696ebc8d0d72fe5626857ebb2ecf55a6d3c9c9eff5ee62f833b99d12f"
+    },
+    {
+      "block_id": "page-0875-block-0001",
+      "order": 1,
+      "text": "CHAPTER  11\n",
+      "bbox": [
+        18.520000457763672,
+        139.8785400390625,
+        28.0,
+        187.89450073242188
+      ],
+      "text_sha256": "83984f4328940309c03288e26b8edf9834cfa8fef30d3eedac5a4c266fe9aee7"
+    },
+    {
+      "block_id": "page-0875-block-0002",
+      "order": 2,
+      "text": "CPY2D6\n",
+      "bbox": [
+        128.8347930908203,
+        62.31540298461914,
+        169.1827850341797,
+        75.35040283203125
+      ],
+      "text_sha256": "4ad57690f7afda84bc273e238701ce06320ba13d0b557485693032193ed67466"
+    },
+    {
+      "block_id": "page-0875-block-0003",
+      "order": 3,
+      "text": "SUBSTRATES\nINHIBITORS\nINDUCERS\n",
+      "bbox": [
+        128.8347930908203,
+        90.46290588378906,
+        329.4148254394531,
+        99.35040283203125
+      ],
+      "text_sha256": "2aca33d2fae48aff4424d149aa2192c475fc0f30fe30d39d54ea488cfa4c1797"
+    },
+    {
+      "block_id": "page-0875-block-0004",
+      "order": 4,
+      "text": "Amitriptyline\n‘Amphetamines’\nAtomoxetine\nAripiprazole\nBrexpiprazole\nCariprazine\nChlorpromazine\nCitalopram\nClomipramine\nClozapine*\nDeutetrabenazine\nDonepezil*\nDuloxetine\nEscitalopram\nFluoxetine\nFluvoxamine\nFluphenazine\nGalantamine\nHaloperidol\nIloperidone\nImipramine\nMethadone*\nMianserin\nMirtazapine*\nMoclobemide\nNortriptyline\nOlanzapine\nParoxetine\nPerphenazine\nPimozide*\nQuetiapine*\nRisperidone\nSertraline\nTrazodone*\nTrimipramine\nValbenazine\nVenlafaxine\nVortioxetine\nZuclopenthixol\n",
+      "bbox": [
+        128.84230041503906,
+        108.7704086303711,
+        192.19479370117188,
+        497.3828125
+      ],
+      "text_sha256": "2ef7513e69aaaa46e67c831c3dd123b1b51f660b7985aff1e1f99892d5771833"
+    },
+    {
+      "block_id": "page-0875-block-0005",
+      "order": 5,
+      "text": "Amitriptyline\nAsenapine\nBupropion\nChlorpromazine\nCitalopram*\nClomipramine\nClozapine\nDuloxetine\nEscitalopram\nFluoxetine\nFluphenazine\nFluvoxamine*\nHaloperidol\nLevomepromazine\nMethadone*\nMoclobemide\nParoxetine\nPerphenazine\nReboxetine*\nRisperidone\nSertraline\nVenlafaxine*\n",
+      "bbox": [
+        214.21481323242188,
+        108.49281311035156,
+        272.4073181152344,
+        327.3277587890625
+      ],
+      "text_sha256": "77e2e3d31992a395fe345e45b99029440753e30a5e6e00a694b9dd747c2c8dfd"
+    },
+    {
+      "block_id": "page-0875-block-0006",
+      "order": 6,
+      "text": "Not known\n",
+      "bbox": [
+        293.5873107910156,
+        108.6202621459961,
+        329.4373474121094,
+        117.3277587890625
+      ],
+      "text_sha256": "052ee446a3c039c3ee5e15efa16c7508598a4e49a3c1132444f857dbad03e13f"
+    },
+    {
+      "block_id": "page-0875-block-0007",
+      "order": 7,
+      "text": "CYP2E1\n",
+      "bbox": [
+        128.8347930908203,
+        524.0654296875,
+        167.35678100585938,
+        537.1004028320312
+      ],
+      "text_sha256": "3baf7e09478762613260643e7ac569262dc03dff26f6bd40ac0df0cfda3fa316"
+    },
+    {
+      "block_id": "page-0875-block-0008",
+      "order": 8,
+      "text": "SUBSTRATES\nINHIBITORS\nINDUCERS\n",
+      "bbox": [
+        128.8347930908203,
+        552.212890625,
+        329.4148254394531,
+        561.1004028320312
+      ],
+      "text_sha256": "2aca33d2fae48aff4424d149aa2192c475fc0f30fe30d39d54ea488cfa4c1797"
+    },
+    {
+      "block_id": "page-0875-block-0009",
+      "order": 9,
+      "text": "Bupropion\nEthanol\n",
+      "bbox": [
+        128.84230041503906,
+        570.5203857421875,
+        162.05978393554688,
+        589.2254028320312
+      ],
+      "text_sha256": "135ac25de507d5ff619a62af8815e7d0795caac0bef9787a11c5356abbc64dad"
+    },
+    {
+      "block_id": "page-0875-block-0010",
+      "order": 10,
+      "text": "Disulfiram\nParacetamol\n",
+      "bbox": [
+        214.21481323242188,
+        570.3403930664062,
+        253.37229919433594,
+        589.2254028320312
+      ],
+      "text_sha256": "cd108c0f6c7b4ddbf8ad88e54f9e1966802f7effbe797a3f5bb52510adfa7e29"
+    },
+    {
+      "block_id": "page-0875-block-0011",
+      "order": 11,
+      "text": "Ethanol\n",
+      "bbox": [
+        293.5873107910156,
+        570.5203857421875,
+        317.7598571777344,
+        579.2279052734375
+      ],
+      "text_sha256": "90d1baa434a2e0317519c07640816c9523ee8e09fe8e2eeacfb4b87eeb8462ed"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

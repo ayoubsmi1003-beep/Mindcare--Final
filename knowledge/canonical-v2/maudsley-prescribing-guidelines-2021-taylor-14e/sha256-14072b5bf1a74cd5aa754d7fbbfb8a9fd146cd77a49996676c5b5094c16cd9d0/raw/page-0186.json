@@ -1,0 +1,311 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0186",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 186,
+  "source_page_index": 185,
+  "source_page_display": 186,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    165\nCHAPTER 1\nMore recently introduced drugs such as tolvaptan,51 a so-called vaptan (non-peptide \narginine-vasopressin antagonist – also known as aquaretics because they induce a \nhighly hypotonic diuresis52), show promise in the treatment of hyponatraemia of vary-\ning aetiology, including that caused by drug-related SIADH and psychogenic polydip-\nsia.53 Successful use of the carbonic anhydrase inhibitor acetazolamide has also been \nreported,54,55 and there are single case reports of irbesartan56 and propranolol.57 \nTable 1.28  Treatment of hyponatraemia associated with antipsychotic treatment4,6\nCause of \nhyponatraemia\nAntipsychotic drugs \nimplicated\nTreatment\nWater intoxication\n(serum and urine \nosmolality low)\nOnly very speculative \nevidence to support drugs \nas a cause.\nCore part of illness in a \nminority of patients (e.g. \npsychotic polydipsia)\n■\n■Fluid restriction with careful monitoring of serum \nsodium, particularly diurnal variation (Na drops as the \nday progresses). Refer urgently to specialist medical care \nif Na < 125mmol/l. Note that overly rapid correction of \nsodium levels can cause irreversible osmotic demyelination \nsyndrome38\n■\n■Consider treatment with clozapine: shown to increase \nplasma osmolality into the normal range and increase \nurine osmolality (not usually reaching the normal \nrange).39,40 These effects are consistent with reduced fluid \nintake. This effect is not clearly related to improvements in \nmental state41\n■\n■There are both7 positive and negative reports for olanzap-\nine42 and risperidone43 and one positive case report for \nquetiapine.44 Compared with clozapine, the evidence base \nis weak\n■\n■There is no evidence that either reducing or increasing the \ndose of an antipsychotic results in improvements in serum \nsodium in water-intoxicated patients,45 although there is \na suggestion that reducing the number and dose of anti-\npsychotics prescribed may decrease dopamine receptor \nsupersensitivity and drug side effects5\n■\n■There are reports of demeclocycline use,46,47 and it is \nincluded in some practice guidelines for psychogenic poly-\ndipsia.48 However, it exerts its effect by interfering with \nADH and increasing water excretion, which is already at \ncapacity in these patients. Any rationale for its use in the \nabsence of SIADH is therefore debatable (and some cases \nin the literature may have been complicated by undiag-\nnosed SIADH49). A single small RCT showed no benefit50\nSIADH\n(serum osmolality \nlow; urine osmolality \nrelatively high)\nAll antipsychotic drugs\n■\n■If mild, fluid restriction with careful monitoring of \nserum sodium. Refer urgently to specialist medical care if \nNa < 125mmol/L\n■\n■Switching to a different antipsychotic drug. There are \ninsufficient data available to guide choice. Be aware that \ncross-sensitivity may occur (the individual may be predis-\nposed and the choice of drug relatively less important)\n■\n■Consider demeclocycline (see formal prescribing \ninformation for details)\n■\n■Lithium may be effective7 but is a potentially toxic drug – \nhyponatraemia predisposes to lithium toxicity\n",
+  "raw_text_sha256": "2738006e1eb49e057e2c6e7457e3bff79c44a1f22476d84d1dd8bcf82e8b4e5e",
+  "coordinates_sha256": "1293d3e2661267437ad6b1d7147ae4cf193a98a89f03900934094c4d17153f7d",
+  "block_sequence_sha256": "ff91affbaa6d991bc69bb221cf439ac0a11c62c3f43d9839db99c75f618e7a7d",
+  "blocks": [
+    {
+      "block_id": "page-0186-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    165\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "bf77c81cadac51c91bb908164eb41c921024bc2fb3b6600e2e598f2f5cb9c1ba"
+    },
+    {
+      "block_id": "page-0186-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0186-block-0002",
+      "order": 2,
+      "text": "More recently introduced drugs such as tolvaptan,51 a so-called vaptan (non-peptide \narginine-vasopressin antagonist – also known as aquaretics because they induce a \nhighly hypotonic diuresis52), show promise in the treatment of hyponatraemia of vary-\ning aetiology, including that caused by drug-related SIADH and psychogenic polydip-\nsia.53 Successful use of the carbonic anhydrase inhibitor acetazolamide has also been \nreported,54,55 and there are single case reports of irbesartan56 and propranolol.57 \n",
+      "bbox": [
+        47.99420928955078,
+        542.3784790039062,
+        422.8044738769531,
+        614.0985107421875
+      ],
+      "text_sha256": "f08d971bde2b81b2af1e30b9f8fdc3352036b7d58b8649096dbf661bd1eabb4c"
+    },
+    {
+      "block_id": "page-0186-block-0003",
+      "order": 3,
+      "text": "Table 1.28  Treatment of hyponatraemia associated with antipsychotic treatment4,6\n",
+      "bbox": [
+        53.99970245361328,
+        70.08692932128906,
+        318.3002014160156,
+        78.97442626953125
+      ],
+      "text_sha256": "db94e5e32d797b50009a9d72056f3d26d220315d3928edc40a8532cf3846050c"
+    },
+    {
+      "block_id": "page-0186-block-0004",
+      "order": 4,
+      "text": "Cause of \nhyponatraemia\n",
+      "bbox": [
+        47.99980163574219,
+        90.32191467285156,
+        101.76728820800781,
+        109.2069091796875
+      ],
+      "text_sha256": "3b39f1f25b3c2849a91e3c36ba41a6c18533c36b1eb244266d115501c70e7624"
+    },
+    {
+      "block_id": "page-0186-block-0005",
+      "order": 5,
+      "text": "Antipsychotic drugs \nimplicated\nTreatment\n",
+      "bbox": [
+        124.49980163574219,
+        90.32191467285156,
+        259.9573669433594,
+        109.2069091796875
+      ],
+      "text_sha256": "a303d3ad00ff69fbb18590ac85c5c3622bc2ca712691c96530cfde0f1098f66f"
+    },
+    {
+      "block_id": "page-0186-block-0006",
+      "order": 6,
+      "text": "Water intoxication\n(serum and urine \nosmolality low)\n",
+      "bbox": [
+        47.99981689453125,
+        117.5244369506836,
+        106.46231079101562,
+        146.2269287109375
+      ],
+      "text_sha256": "a7a8a793e31c837d601bd85b8b39e5032eb7222131e160be920d5602d5e61b3b"
+    },
+    {
+      "block_id": "page-0186-block-0007",
+      "order": 7,
+      "text": "Only very speculative \nevidence to support drugs \nas a cause.\n",
+      "bbox": [
+        124.49981689453125,
+        117.51692962646484,
+        209.93980407714844,
+        146.21942138671875
+      ],
+      "text_sha256": "243a701c3c61e0ab3cd08f6fa35f880a042d8a251232af4b8b56a54d932e6f9d"
+    },
+    {
+      "block_id": "page-0186-block-0008",
+      "order": 8,
+      "text": "Core part of illness in a \nminority of patients (e.g. \npsychotic polydipsia)\n",
+      "bbox": [
+        124.49981689453125,
+        150.50941467285156,
+        205.34231567382812,
+        179.2119140625
+      ],
+      "text_sha256": "0ad7e84272f2ae805c2832d298c7749f89c18a5373d459d9a7292a9799efaa6e"
+    },
+    {
+      "block_id": "page-0186-block-0009",
+      "order": 9,
+      "text": "■\n■Fluid restriction with careful monitoring of serum \n",
+      "bbox": [
+        224.09910583496094,
+        117.34693908691406,
+        397.8440856933594,
+        126.23443603515625
+      ],
+      "text_sha256": "eda071ff6084ee13fb2f1e64150ab6215ea905875d94f8099a91afbae2224f5a"
+    },
+    {
+      "block_id": "page-0186-block-0010",
+      "order": 10,
+      "text": "sodium, particularly diurnal variation (Na drops as the \nday progresses). Refer urgently to specialist medical care \nif Na < 125mmol/l. Note that overly rapid correction of \nsodium levels can cause irreversible osmotic demyelination \nsyndrome38\n",
+      "bbox": [
+        233.09910583496094,
+        126.52693939208984,
+        421.2967224121094,
+        171.23443603515625
+      ],
+      "text_sha256": "b60bbf7150b50e5ce39611f7649c294ab188ae3912d96cef9673994d936c4b46"
+    },
+    {
+      "block_id": "page-0186-block-0011",
+      "order": 11,
+      "text": "■\n■Consider treatment with clozapine: shown to increase \n",
+      "bbox": [
+        224.09910583496094,
+        171.34693908691406,
+        410.7741394042969,
+        180.23443603515625
+      ],
+      "text_sha256": "653a05bdd498824463dc8f9dabdddc8dcad86d75ae0ccd0214ba4d4ca7b85b47"
+    },
+    {
+      "block_id": "page-0186-block-0012",
+      "order": 12,
+      "text": "plasma osmolality into the normal range and increase \nurine osmolality (not usually reaching the normal \nrange).39,40 These effects are consistent with reduced fluid \nintake. This effect is not clearly related to improvements in \nmental state41\n",
+      "bbox": [
+        233.0964813232422,
+        180.5269317626953,
+        421.4364929199219,
+        225.23443603515625
+      ],
+      "text_sha256": "f5ff5ec00a154e266dbf25111eb17180c49b59444eee755d5cd4ee86745e240a"
+    },
+    {
+      "block_id": "page-0186-block-0013",
+      "order": 13,
+      "text": "■\n■There are both7 positive and negative reports for olanzap-\n",
+      "bbox": [
+        224.09910583496094,
+        225.5269012451172,
+        417.2327880859375,
+        234.23440551757812
+      ],
+      "text_sha256": "ee70a35178d8f2784876ec28d737b6056ac69c9829a859070f19af1f60d792aa"
+    },
+    {
+      "block_id": "page-0186-block-0014",
+      "order": 14,
+      "text": "ine42 and risperidone43 and one positive case report for \nquetiapine.44 Compared with clozapine, the evidence base \nis weak\n■\n■There is no evidence that either reducing or increasing the \n",
+      "bbox": [
+        224.09910583496094,
+        234.5269012451172,
+        421.1935729980469,
+        270.2344055175781
+      ],
+      "text_sha256": "753ce858128113fab1c6599dc8f19af2f454635e17f6ad4c2fe85d916cd35ae2"
+    },
+    {
+      "block_id": "page-0186-block-0015",
+      "order": 15,
+      "text": "dose of an antipsychotic results in improvements in serum \nsodium in water-intoxicated patients,45 although there is \na suggestion that reducing the number and dose of anti-\npsychotics prescribed may decrease dopamine receptor \nsupersensitivity and drug side effects5\n",
+      "bbox": [
+        233.09910583496094,
+        270.52691650390625,
+        419.9317321777344,
+        315.2344055175781
+      ],
+      "text_sha256": "673f8cb692a1604f78b4b747e8f4ebfec589522711503d22dae43f7dbdeee769"
+    },
+    {
+      "block_id": "page-0186-block-0016",
+      "order": 16,
+      "text": "■\n■There are reports of demeclocycline use,46,47 and it is \n",
+      "bbox": [
+        224.09910583496094,
+        315.3468933105469,
+        406.5782165527344,
+        324.2344055175781
+      ],
+      "text_sha256": "01b1c334f22e0b04c3dc413953e106f01da2be6bc39656455558a8804718d9bd"
+    },
+    {
+      "block_id": "page-0186-block-0017",
+      "order": 17,
+      "text": "included in some practice guidelines for psychogenic poly-\ndipsia.48 However, it exerts its effect by interfering with \nADH and increasing water excretion, which is already at \ncapacity in these patients. Any rationale for its use in the \nabsence of SIADH is therefore debatable (and some cases \nin the literature may have been complicated by undiag-\nnosed SIADH49). A single small RCT showed no benefit50\n",
+      "bbox": [
+        233.09571838378906,
+        324.52691650390625,
+        418.95343017578125,
+        387.2344055175781
+      ],
+      "text_sha256": "0d62797e9c8b370333c165db75aedbd46674838115021f78d3030ff9104a1670"
+    },
+    {
+      "block_id": "page-0186-block-0018",
+      "order": 18,
+      "text": "SIADH\n(serum osmolality \nlow; urine osmolality \nrelatively high)\n",
+      "bbox": [
+        47.99980163574219,
+        393.55194091796875,
+        116.33977508544922,
+        432.2519226074219
+      ],
+      "text_sha256": "0fa5ad50392f0702cdb45d91c297e008f5e16c944710d9af7acb10334df822e3"
+    },
+    {
+      "block_id": "page-0186-block-0019",
+      "order": 19,
+      "text": "All antipsychotic drugs\n■\n■If mild, fluid restriction with careful monitoring of \n",
+      "bbox": [
+        124.49980163574219,
+        393.3719177246094,
+        399.5091247558594,
+        402.2594299316406
+      ],
+      "text_sha256": "07518423b19eb3620820ac51473fea6e34acbc0500be2e4f578d14ffc0311c61"
+    },
+    {
+      "block_id": "page-0186-block-0020",
+      "order": 20,
+      "text": "serum sodium. Refer urgently to specialist medical care if \nNa < 125mmol/L\n■\n■Switching to a different antipsychotic drug. There are \n",
+      "bbox": [
+        224.09910583496094,
+        402.55194091796875,
+        420.5014343261719,
+        429.2594299316406
+      ],
+      "text_sha256": "9d3a7753aada20e194634c24553126f5efd73c787e244f5e21ec032f80b7a6b3"
+    },
+    {
+      "block_id": "page-0186-block-0021",
+      "order": 21,
+      "text": "insufficient data available to guide choice. Be aware that \ncross-sensitivity may occur (the individual may be predis-\nposed and the choice of drug relatively less important)\n■\n■Consider demeclocycline (see formal prescribing \n",
+      "bbox": [
+        224.09910583496094,
+        429.55194091796875,
+        415.7691955566406,
+        465.2594299316406
+      ],
+      "text_sha256": "860a212b22589c50143fd38c9b4ee27f10e67e3860ff2961fa5ce5c84982a1c8"
+    },
+    {
+      "block_id": "page-0186-block-0022",
+      "order": 22,
+      "text": "information for details)\n■\n■Lithium may be effective7 but is a potentially toxic drug – \n",
+      "bbox": [
+        224.09910583496094,
+        465.55194091796875,
+        416.6391296386719,
+        483.2593994140625
+      ],
+      "text_sha256": "18a3c153f6ed0f347ba5efaaad8074fb87085829b421855536acfa5ece0a0ccc"
+    },
+    {
+      "block_id": "page-0186-block-0023",
+      "order": 23,
+      "text": "hyponatraemia predisposes to lithium toxicity\n",
+      "bbox": [
+        233.0990753173828,
+        483.5519104003906,
+        377.5492248535156,
+        492.2593994140625
+      ],
+      "text_sha256": "76ae471cc3b07b3b1d19d5830aa190683114616e5dbcd0fb66b7e38c3c6b3ea5"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

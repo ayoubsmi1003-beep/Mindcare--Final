@@ -1,0 +1,275 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0955",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 955,
+  "source_page_index": 954,
+  "source_page_display": 955,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "934    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 14\nAntipsychotic generic name and \nformulation\nSite(s) of administration\nPaliperidone palmitate\nProlonged release suspension for injection \nevery 3 months\nDeltoid muscle administration19\nThe specified needle for administration of Trevicta into the deltoid \nmuscle is determined by the patient’s weight.\n• \u0007For those ≥90kg, the thin wall 1½inch, 22 gauge (0.72mm × \n38.1mm) needle should be used.\n• \u0007For those <90kg, the thin wall 1inch, 22 gauge (0.72mm × \n25.4mm) needle should be used.\nIt should be administered into the centre of the deltoid muscle. \nDeltoid injections should be alternated between the two deltoid \nmuscles.\nGluteal muscle administration19\nThe needle to be used for administration of TREVICTA into the \ngluteal muscle is the thin wall 1½inch, 22 gauge (0.72mm × \n38.1mm) needle regardless of body weight. It should be \nadministered into the upper-outer quadrant of the gluteal muscle. \nGluteal injections should be alternated between the two gluteal \nmuscles.\nRisperidone microspheres\nPowder and vehicle for prolonged-release \nsuspension\nDeep intramuscular deltoid or gluteal injection using the \nappropriate safety needle. For deltoid administration, use the \n1-inch needle alternating injections between the two arms. For \ngluteal administration, use the 2-inch needle alternating injections \nbetween the two buttocks.20\nIntramuscular injections for rapid tranquilisation\nAntipsychotic generic name and \nFormulation\nSite of administration\nAripiprazole\nSolution for injection\nTo enhance absorption and minimise variability, injection into the \ndeltoid or deep within the gluteus maximus muscle, \navoiding adipose regions, is recommended.21\nHaloperidol\nSolution for injection\nIntramuscular administration.22\nPreferably, gluteal muscle is selected when the dosage volume is \nhigh. Deltoid muscle is preferred for low doses of the injection. \nHowever, there is no information on the dosage limit for these \nspecific muscle groups. Choice of site is at the discretion of the \nprescriber, according to the manufacturer.23\nLorazepam\nSolution for injection\nIntramuscular administration.\nCan be administered into the gluteal, deltoid or frontal thigh \narea according to the manufacturer.24\nA 1:1 dilution of Ativan Injection with normal saline or Sterile \nWater for Injection BP is recommended in order to facilitate \nintramuscular administration and absorption.25\nTable 14.7  (Continued)\n",
+  "raw_text_sha256": "af0e319b4b0bbc88e6b410a7005390ac1c3dbb5b51c4cbe03bd3b02322e9bc76",
+  "coordinates_sha256": "ef6335eae6d763e669a50e3e43a206ca19e2b38b1d3123ca0146591e3e4c4e23",
+  "block_sequence_sha256": "d88526da17b5ad42e95d59d9cf56784edbb9eed95e0a8d888008e628e6afa8fb",
+  "blocks": [
+    {
+      "block_id": "page-0955-block-0000",
+      "order": 0,
+      "text": "934    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "982f6bd44af72a43452e5f55fa554b62be497ca978d1427e33d8a853b46c15bf"
+    },
+    {
+      "block_id": "page-0955-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        18.520000457763672,
+        338.7405090332031,
+        28.0,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0955-block-0002",
+      "order": 2,
+      "text": "Antipsychotic generic name and \nformulation\nSite(s) of administration\n",
+      "bbox": [
+        61.89099884033203,
+        89.62471008300781,
+        301.38848876953125,
+        108.50970458984375
+      ],
+      "text_sha256": "d512d42c6da481513c028d4bf88b23bd1acdaed5161cd96bfc6cfdf69d1a0b07"
+    },
+    {
+      "block_id": "page-0955-block-0003",
+      "order": 3,
+      "text": "Paliperidone palmitate\nProlonged release suspension for injection \nevery 3 months\n",
+      "bbox": [
+        61.89100646972656,
+        119.74470520019531,
+        197.90345764160156,
+        148.627197265625
+      ],
+      "text_sha256": "8eaa8f8e0da6612248782d9e9f40e649dbda742aad97b473051917703634c127"
+    },
+    {
+      "block_id": "page-0955-block-0004",
+      "order": 4,
+      "text": "Deltoid muscle administration19\n",
+      "bbox": [
+        216.37600708007812,
+        119.73719787597656,
+        321.23992919921875,
+        128.62469482421875
+      ],
+      "text_sha256": "e0271f27de62d22f7d22d5df8e7e4504b60ad3a9979e26ba4e7741233d51c047"
+    },
+    {
+      "block_id": "page-0955-block-0005",
+      "order": 5,
+      "text": "The specified needle for administration of Trevicta into the deltoid \nmuscle is determined by the patient’s weight.\n• \u0007For those ≥90kg, the thin wall 1½inch, 22 gauge (0.72mm × \n38.1mm) needle should be used.\n• \u0007For those <90kg, the thin wall 1inch, 22 gauge (0.72mm × \n25.4mm) needle should be used.\nIt should be administered into the centre of the deltoid muscle. \nDeltoid injections should be alternated between the two deltoid \nmuscles.\nGluteal muscle administration19\n",
+      "bbox": [
+        216.37408447265625,
+        129.92970275878906,
+        428.4817199707031,
+        228.61468505859375
+      ],
+      "text_sha256": "665965ad65416ac27f6e7b397e741cd7caf3af7a5ac7076762f75c34be9e37e3"
+    },
+    {
+      "block_id": "page-0955-block-0006",
+      "order": 6,
+      "text": "The needle to be used for administration of TREVICTA into the \ngluteal muscle is the thin wall 1½inch, 22 gauge (0.72mm × \n38.1mm) needle regardless of body weight. It should be \nadministered into the upper-outer quadrant of the gluteal muscle. \nGluteal injections should be alternated between the two gluteal \nmuscles.\n",
+      "bbox": [
+        216.37399291992188,
+        229.92967224121094,
+        429.1941223144531,
+        288.6246643066406
+      ],
+      "text_sha256": "fcad4051dad10f0670861891ab46afa199d8409df0d65f4a866b61298be2b8bc"
+    },
+    {
+      "block_id": "page-0955-block-0007",
+      "order": 7,
+      "text": "Risperidone microspheres\nPowder and vehicle for prolonged-release \nsuspension\n",
+      "bbox": [
+        61.88899230957031,
+        294.7596435546875,
+        196.64146423339844,
+        323.64215087890625
+      ],
+      "text_sha256": "9299eaa7154bb99f75103e2a58ae839af16e6a3c449bd0e353503cb3ea357453"
+    },
+    {
+      "block_id": "page-0955-block-0008",
+      "order": 8,
+      "text": "Deep intramuscular deltoid or gluteal injection using the \nappropriate safety needle. For deltoid administration, use the \n1-inch needle alternating injections between the two arms. For \ngluteal administration, use the 2-inch needle alternating injections \nbetween the two buttocks.20\n",
+      "bbox": [
+        216.37399291992188,
+        294.75213623046875,
+        429.8691711425781,
+        343.629638671875
+      ],
+      "text_sha256": "a74bd4dd0ed982c3267adee51574cecc8b0c1174c2c49975373410dd45574e34"
+    },
+    {
+      "block_id": "page-0955-block-0009",
+      "order": 9,
+      "text": "Intramuscular injections for rapid tranquilisation\n",
+      "bbox": [
+        61.89099884033203,
+        352.8996887207031,
+        232.74856567382812,
+        361.7872009277344
+      ],
+      "text_sha256": "e5816fb938237fbcd39ab14be46f6d18b80222c2e0600cbd74f9df6d409bf2ab"
+    },
+    {
+      "block_id": "page-0955-block-0010",
+      "order": 10,
+      "text": "Antipsychotic generic name and \nFormulation\n",
+      "bbox": [
+        61.89099884033203,
+        371.0271911621094,
+        176.9035186767578,
+        389.9122009277344
+      ],
+      "text_sha256": "c74a515510f97dcc317d7b8f2a4b245db414fee1ab4f314991c3e1ca99c4544e"
+    },
+    {
+      "block_id": "page-0955-block-0011",
+      "order": 11,
+      "text": "Site of administration\n",
+      "bbox": [
+        216.37600708007812,
+        371.0271911621094,
+        293.0635070800781,
+        379.9147033691406
+      ],
+      "text_sha256": "f328caa2cab288dccf5068b09b13b6b58cd05fd0e21ce10b9f09855b30cba31b"
+    },
+    {
+      "block_id": "page-0955-block-0012",
+      "order": 12,
+      "text": "Aripiprazole\nSolution for injection\n",
+      "bbox": [
+        61.89100646972656,
+        399.1521911621094,
+        128.5659942626953,
+        418.0372009277344
+      ],
+      "text_sha256": "bc1c99ad8fea5876f0b1439b4de5a44971e2011247cd39752e479054a990d533"
+    },
+    {
+      "block_id": "page-0955-block-0013",
+      "order": 13,
+      "text": "To enhance absorption and minimise variability, injection into the \ndeltoid or deep within the gluteus maximus muscle, \navoiding adipose regions, is recommended.21\n",
+      "bbox": [
+        216.37600708007812,
+        399.33221435546875,
+        425.29620361328125,
+        428.0346984863281
+      ],
+      "text_sha256": "42ddd3a5776c7db12ae04c1ed6a256def88a6b22b33c5599cda76db5f53712f9"
+    },
+    {
+      "block_id": "page-0955-block-0014",
+      "order": 14,
+      "text": "Haloperidol\nSolution for injection\n",
+      "bbox": [
+        61.89099884033203,
+        434.1746826171875,
+        128.56597900390625,
+        453.0596923828125
+      ],
+      "text_sha256": "35dbc554a1bea0e914f7c0185ca65e8629444da2e98e564928b3e5b73d64fce1"
+    },
+    {
+      "block_id": "page-0955-block-0015",
+      "order": 15,
+      "text": "Intramuscular administration.22\n",
+      "bbox": [
+        216.37600708007812,
+        434.3547058105469,
+        314.56494140625,
+        443.06219482421875
+      ],
+      "text_sha256": "b565f7738519fc06775be080cb9a6e7045eca9443987f886cfc2b4ea325215e3"
+    },
+    {
+      "block_id": "page-0955-block-0016",
+      "order": 16,
+      "text": "Preferably, gluteal muscle is selected when the dosage volume is \nhigh. Deltoid muscle is preferred for low doses of the injection. \nHowever, there is no information on the dosage limit for these \nspecific muscle groups. Choice of site is at the discretion of the \nprescriber, according to the manufacturer.23\n",
+      "bbox": [
+        216.3740997314453,
+        444.1746826171875,
+        428.4966735839844,
+        493.05218505859375
+      ],
+      "text_sha256": "c1a1ff51babe44e995518b5282fed05661abeedc86051efb837611e7b22035a8"
+    },
+    {
+      "block_id": "page-0955-block-0017",
+      "order": 17,
+      "text": "Lorazepam\nSolution for injection\n",
+      "bbox": [
+        61.89099884033203,
+        499.1996765136719,
+        128.56597900390625,
+        518.084716796875
+      ],
+      "text_sha256": "e081ec625ceff54705747009e0aa9e37e0e373491f6114ab05ba1af179787980"
+    },
+    {
+      "block_id": "page-0955-block-0018",
+      "order": 18,
+      "text": "Intramuscular administration.\nCan be administered into the gluteal, deltoid or frontal thigh \narea according to the manufacturer.24\n",
+      "bbox": [
+        216.37600708007812,
+        499.37969970703125,
+        424.0734558105469,
+        528.0821533203125
+      ],
+      "text_sha256": "fca164076806cd41f10ea33308404e7d2d5180525fa35c44561c40eaf10f3ef1"
+    },
+    {
+      "block_id": "page-0955-block-0019",
+      "order": 19,
+      "text": "A 1:1 dilution of Ativan Injection with normal saline or Sterile \nWater for Injection BP is recommended in order to facilitate \nintramuscular administration and absorption.25\n",
+      "bbox": [
+        216.37399291992188,
+        529.379638671875,
+        413.9015808105469,
+        558.0821533203125
+      ],
+      "text_sha256": "9fe2c5b5430f2ddf8f191bd278922b89785c867978a5c3bf90f66785a18a6e2f"
+    },
+    {
+      "block_id": "page-0955-block-0020",
+      "order": 20,
+      "text": "Table 14.7  (Continued)\n",
+      "bbox": [
+        67.88970184326172,
+        70.08790588378906,
+        144.17970275878906,
+        78.97540283203125
+      ],
+      "text_sha256": "b911c7f4e765a615a62d09e1132d00a619d484428516bdb00996411660b3405a"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

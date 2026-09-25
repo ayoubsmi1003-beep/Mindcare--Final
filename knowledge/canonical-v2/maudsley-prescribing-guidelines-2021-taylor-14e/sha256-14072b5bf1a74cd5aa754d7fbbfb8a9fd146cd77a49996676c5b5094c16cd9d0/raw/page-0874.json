@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0874",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 874,
+  "source_page_index": 873,
+  "source_page_display": 874,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Pharmacokinetics    853\nCHAPTER 11\nCPY2C8\nSUBSTRATES\nINHIBITORS\nINDUCERS\nZopiclone*\nNot known\nNot known\nCPY2C9\nSUBSTRATES\nINHIBITORS\nINDUCERS\nAgomelatine*\nAmitriptyline\nBupropion*\nFluoxetine*\nLamotrigine\nPhenobarbital\nPhenytoin\nSertraline*\nValproate\nFluoxetine*\nFluvoxamine\nModafinil\nValproate\nCarbamazepine\nSJW\nCPY2C19\nSUBSTRATES\nINHIBITORS\nINDUCERS\nAgomelatine*\nAmitriptyline\nCarbamazepine*\nCitalopram\nClomipramine*\nDiazepam\nEscitalopram\nFluoxetine*\nImipramine*\n?Melatonin\n?Methadone\nMoclobemide\nPhenytoin\nSertraline*\nSuvorexant\nTrimipramine*\nEscitalopram*\nFluvoxamine\nMoclobemide\nModafinil\nTopiramate\nCarbamazepine\nSJW\n",
+  "raw_text_sha256": "6f8612d91dbf5b3f9d4f7967c8a7c8b3d12c7fde8e6e3fbc09d82e71ba0fda65",
+  "coordinates_sha256": "18c4e0f8162a4e93250286a2b79699421eb87f01b89918d2a6d684aad44bb3b0",
+  "block_sequence_sha256": "a3f1043b91cb00e48254fbdc7ba7c33e1c3648b97d852ed494f3678db1dc5392",
+  "blocks": [
+    {
+      "block_id": "page-0874-block-0000",
+      "order": 0,
+      "text": "Pharmacokinetics    853\n",
+      "bbox": [
+        320.4088134765625,
+        31.395221710205078,
+        420.00079345703125,
+        41.0272216796875
+      ],
+      "text_sha256": "b0a145a0aac5a24f7a49bc98acb15d286fa6cb980013e1e6d5c4325276213bb6"
+    },
+    {
+      "block_id": "page-0874-block-0001",
+      "order": 1,
+      "text": "CHAPTER 11\n",
+      "bbox": [
+        454.4096984863281,
+        140.99053955078125,
+        463.88970947265625,
+        186.78250122070312
+      ],
+      "text_sha256": "8577f8a61d9be9d957b7354680b21b61adb6e8c4601aaa9be76ccc79360dc7f3"
+    },
+    {
+      "block_id": "page-0874-block-0002",
+      "order": 2,
+      "text": "CPY2C8\n",
+      "bbox": [
+        114.94490051269531,
+        62.31546401977539,
+        154.07188415527344,
+        75.3504638671875
+      ],
+      "text_sha256": "b7be8854f0a0910a0c1180acefcccecd3cac75f3e2cd34e1dfe8b006fb6868a7"
+    },
+    {
+      "block_id": "page-0874-block-0003",
+      "order": 3,
+      "text": "SUBSTRATES\nINHIBITORS\nINDUCERS\n",
+      "bbox": [
+        114.94490051269531,
+        90.46296691894531,
+        315.5249328613281,
+        99.3504638671875
+      ],
+      "text_sha256": "2aca33d2fae48aff4424d149aa2192c475fc0f30fe30d39d54ea488cfa4c1797"
+    },
+    {
+      "block_id": "page-0874-block-0004",
+      "order": 4,
+      "text": "Zopiclone*\nNot known\nNot known\n",
+      "bbox": [
+        114.95240783691406,
+        108.77046966552734,
+        315.5474548339844,
+        117.47796630859375
+      ],
+      "text_sha256": "58dd231c6c63a438bd4f3601f16c829d9f1f1c0b5a018f22badd7967ec1498b5"
+    },
+    {
+      "block_id": "page-0874-block-0005",
+      "order": 5,
+      "text": "CPY2C9\n",
+      "bbox": [
+        114.94490051269531,
+        144.06546020507812,
+        154.07188415527344,
+        157.1004638671875
+      ],
+      "text_sha256": "2b3097fe7c9f303b23d17dbdb75c5b1248188e0eece7e77925e0058d5bd97cb9"
+    },
+    {
+      "block_id": "page-0874-block-0006",
+      "order": 6,
+      "text": "SUBSTRATES\nINHIBITORS\nINDUCERS\n",
+      "bbox": [
+        114.94490051269531,
+        172.2129669189453,
+        315.5249328613281,
+        181.1004638671875
+      ],
+      "text_sha256": "2aca33d2fae48aff4424d149aa2192c475fc0f30fe30d39d54ea488cfa4c1797"
+    },
+    {
+      "block_id": "page-0874-block-0007",
+      "order": 7,
+      "text": "Agomelatine*\nAmitriptyline\nBupropion*\nFluoxetine*\nLamotrigine\nPhenobarbital\nPhenytoin\nSertraline*\nValproate\n",
+      "bbox": [
+        114.95240783691406,
+        190.5204620361328,
+        159.9598846435547,
+        279.20794677734375
+      ],
+      "text_sha256": "63d8e8dedb41aa3bae0ee63d946b8bad9fe647d0250ed22a3d77f079a5deb3c2"
+    },
+    {
+      "block_id": "page-0874-block-0008",
+      "order": 8,
+      "text": "Fluoxetine*\nFluvoxamine\nModafinil\nValproate\n",
+      "bbox": [
+        200.32492065429688,
+        190.49794006347656,
+        239.90240478515625,
+        229.19793701171875
+      ],
+      "text_sha256": "6f3f90dd6be45c678357171a72733664d1c2094c11357592a0795e979c347af8"
+    },
+    {
+      "block_id": "page-0874-block-0009",
+      "order": 9,
+      "text": "Carbamazepine\nSJW\n",
+      "bbox": [
+        279.6974182128906,
+        190.4904327392578,
+        329.699951171875,
+        209.1954345703125
+      ],
+      "text_sha256": "1ad8b74ae4092b4d37d5ebce30d37bdb0dc7f93dd09b694e69a1c5930d095025"
+    },
+    {
+      "block_id": "page-0874-block-0010",
+      "order": 10,
+      "text": "CPY2C19\n",
+      "bbox": [
+        114.94490051269531,
+        305.81549072265625,
+        160.18788146972656,
+        318.8504943847656
+      ],
+      "text_sha256": "43431cc891dc772c8bef77e1d4ca23d63cb28b5695cabfbd86e92d0035ebc225"
+    },
+    {
+      "block_id": "page-0874-block-0011",
+      "order": 11,
+      "text": "SUBSTRATES\nINHIBITORS\nINDUCERS\n",
+      "bbox": [
+        114.94490051269531,
+        333.9629821777344,
+        315.5249328613281,
+        342.8504943847656
+      ],
+      "text_sha256": "2aca33d2fae48aff4424d149aa2192c475fc0f30fe30d39d54ea488cfa4c1797"
+    },
+    {
+      "block_id": "page-0874-block-0012",
+      "order": 12,
+      "text": "Agomelatine*\nAmitriptyline\nCarbamazepine*\nCitalopram\nClomipramine*\nDiazepam\nEscitalopram\nFluoxetine*\nImipramine*\n?Melatonin\n?Methadone\nMoclobemide\nPhenytoin\nSertraline*\nSuvorexant\nTrimipramine*\n",
+      "bbox": [
+        114.95240783691406,
+        352.2705078125,
+        169.12489318847656,
+        510.9404602050781
+      ],
+      "text_sha256": "af8bc917fe1db7c2446644e23413fe6fa85414d40f8e89425f79c2a35750d46d"
+    },
+    {
+      "block_id": "page-0874-block-0013",
+      "order": 13,
+      "text": "Escitalopram*\nFluvoxamine\nMoclobemide\nModafinil\nTopiramate\n",
+      "bbox": [
+        200.32492065429688,
+        352.23297119140625,
+        244.90489196777344,
+        400.9304504394531
+      ],
+      "text_sha256": "780d74d2e0198d9acd305d28f097434f72a43a701a3f0f703dcee27db98fda58"
+    },
+    {
+      "block_id": "page-0874-block-0014",
+      "order": 14,
+      "text": "Carbamazepine\nSJW\n",
+      "bbox": [
+        279.6974182128906,
+        352.2254638671875,
+        329.699951171875,
+        370.9304504394531
+      ],
+      "text_sha256": "1ad8b74ae4092b4d37d5ebce30d37bdb0dc7f93dd09b694e69a1c5930d095025"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

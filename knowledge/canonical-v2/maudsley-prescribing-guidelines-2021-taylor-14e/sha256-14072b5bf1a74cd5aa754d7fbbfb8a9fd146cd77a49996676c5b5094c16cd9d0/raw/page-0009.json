@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0009",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 9,
+  "source_page_index": 8,
+  "source_page_display": 9,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "viii    Contents\nDrug-induced acute behavioural disturbance (ABD) in acute admissions\b\n524\nInteractions between ‘street drugs’ and prescribed psychotropic drugs\b\n526\nDrugs of misuse – a summary\b\n530\nSubstance misuse in pregnancy\b\n535\nPart 2       Drug treatment of special patient groups\b\n537\nChapter 5   Children and adolescents\b\n539\nPrinciples of prescribing practice in childhood and adolescence\b\n539\nDepression in children and adolescents\b\n541\nBipolar illness in children and adolescents\b\n547\nPsychosis in children and adolescents\b\n554\nAnxiety disorders in children and adolescents\b\n556\nObsessive compulsive disorder (OCD) and body dysmorphic disorder (BDD)  \nin children and adolescents\b\n561\nPost-traumatic stress disorder in children and adolescents\b\n567\nAttention deficit hyperactivity disorder \b\n569\nAutism Spectrum Disorder\b\n578\nTics and Tourette syndrome\b\n587\nMelatonin in the treatment of insomnia in children and adolescents\b\n593\nRapid tranquillisation (RT) in children and adolescents\b\n596\nDoses of commonly used psychotropic drugs in children and adolescents\b\n599\nChapter 6   Prescribing in older people\b\n601\nGeneral principles\b\n601\nDementia\b\n604\nSafer prescribing for physical conditions in dementia\b\n631\nManagement of behavioural and psychological symptoms  \nof dementia (BPSD)\b\n644\nA guide to medication doses of commonly used psychotropics in older adults\b 657\nCovert administration of medicines within food and drink\b\n667\nTreatment of depression in older people\b\n673\nChapter 7   Pregnancy and breastfeeding\b\n679\nDrug choice in pregnancy \b\n679\nWhat to include in discussions with pregnant women\b\n681\nBreastfeeding\b\n702\nChapter 8   Hepatic and renal impairment\b\n723\nHepatic impairment\b\n723\nRenal impairment\b\n735\nPart 3      Prescribing in specialist conditions\b\n755\nChapter 9   Drug treatment of other psychiatric conditions\b\n757\nBorderline personality disorder (BPD)\b\n757\nEating disorders\b\n761\nDelirium\b\n767\n",
+  "raw_text_sha256": "c64b1affe11f3a4654dfca12ea34b30f946c392f4176f984e2af270bc016663b",
+  "coordinates_sha256": "c5edfb4a61b1844af3f7e53a236450eb3eb458c0f9f647ecfab696c2f142840b",
+  "block_sequence_sha256": "9816e7553275d78d3cb439eab1e670f5d5edfe12e7923c06a50dd83f7610d6c7",
+  "blocks": [
+    {
+      "block_id": "page-0009-block-0000",
+      "order": 0,
+      "text": "viii    Contents\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        124.13780212402344,
+        41.0272216796875
+      ],
+      "text_sha256": "d662b80003679eb8f612df3f3433445c86eb54b8e15e235b54ed2c4ae45644ed"
+    },
+    {
+      "block_id": "page-0009-block-0001",
+      "order": 1,
+      "text": "Drug-induced acute behavioural disturbance (ABD) in acute admissions\b\n524\nInteractions between ‘street drugs’ and prescribed psychotropic drugs\b\n526\nDrugs of misuse – a summary\b\n530\nSubstance misuse in pregnancy\b\n535\n",
+      "bbox": [
+        112.88999938964844,
+        62.730316162109375,
+        433.89300537109375,
+        109.26934814453125
+      ],
+      "text_sha256": "9541051310bba9770a181bb5f57e4572fdda1c8b02aaae8e02f6f72bbd20b8e8"
+    },
+    {
+      "block_id": "page-0009-block-0002",
+      "order": 2,
+      "text": "Part 2       Drug treatment of special patient groups\b\n537\n",
+      "bbox": [
+        61.89599609375,
+        122.8052749633789,
+        433.89300537109375,
+        133.4703369140625
+      ],
+      "text_sha256": "39d1d86d2839131955961e7448e40f7a39331d48e4c0f5a0f56f424d15f93d6d"
+    },
+    {
+      "block_id": "page-0009-block-0003",
+      "order": 3,
+      "text": "Chapter 5   Children and adolescents\b\n539\nPrinciples of prescribing practice in childhood and adolescence\b\n539\nDepression in children and adolescents\b\n541\nBipolar illness in children and adolescents\b\n547\nPsychosis in children and adolescents\b\n554\nAnxiety disorders in children and adolescents\b\n556\nObsessive compulsive disorder (OCD) and body dysmorphic disorder (BDD)  \n",
+      "bbox": [
+        61.89599609375,
+        140.80528259277344,
+        433.89300537109375,
+        223.25433349609375
+      ],
+      "text_sha256": "d595370eb804aa7a7225d93312b56e8b5c35393713a09ad0205eeeefd513de5e"
+    },
+    {
+      "block_id": "page-0009-block-0004",
+      "order": 4,
+      "text": "in children and adolescents\b\n561\nPost-traumatic stress disorder in children and adolescents\b\n567\nAttention deficit hyperactivity disorder \b\n569\nAutism Spectrum Disorder\b\n578\nTics and Tourette syndrome\b\n587\nMelatonin in the treatment of insomnia in children and adolescents\b\n593\nRapid tranquillisation (RT) in children and adolescents\b\n596\nDoses of commonly used psychotropic drugs in children and adolescents\b\n599\n",
+      "bbox": [
+        112.88101196289062,
+        224.70327758789062,
+        433.8840026855469,
+        319.2303161621094
+      ],
+      "text_sha256": "01e2d2e128418a8caff32ee26a08e639c7d7a55a298e0c4b71a3dd58f6a769d1"
+    },
+    {
+      "block_id": "page-0009-block-0005",
+      "order": 5,
+      "text": "Chapter 6   Prescribing in older people\b\n601\nGeneral principles\b\n601\nDementia\b\n604\nSafer prescribing for physical conditions in dementia\b\n631\nManagement of behavioural and psychological symptoms  \n",
+      "bbox": [
+        61.886993408203125,
+        332.7662658691406,
+        433.8840026855469,
+        391.2213134765625
+      ],
+      "text_sha256": "794dc68db3eb563ef120ad4834b5cfc14e667772b5d7f33b625125d9ca41771f"
+    },
+    {
+      "block_id": "page-0009-block-0006",
+      "order": 6,
+      "text": "of dementia (BPSD)\b\n644\nA guide to medication doses of commonly used psychotropics in older adults\b 657\nCovert administration of medicines within food and drink\b\n667\nTreatment of depression in older people\b\n673\n",
+      "bbox": [
+        112.87200927734375,
+        392.6702880859375,
+        433.875,
+        439.2093200683594
+      ],
+      "text_sha256": "5ce6e25c0f684fea3aef05969376fceb1b71161ec88a5124ea968ff9f004ba44"
+    },
+    {
+      "block_id": "page-0009-block-0007",
+      "order": 7,
+      "text": "Chapter 7   Pregnancy and breastfeeding\b\n679\nDrug choice in pregnancy \b\n679\nWhat to include in discussions with pregnant women\b\n681\nBreastfeeding\b\n702\n",
+      "bbox": [
+        61.87799072265625,
+        452.7452697753906,
+        433.8750305175781,
+        499.2033386230469
+      ],
+      "text_sha256": "75c1e8229a624a73ff8ab2b7df7d90ebbb1e9fd69a1ef6e297a260790e486722"
+    },
+    {
+      "block_id": "page-0009-block-0008",
+      "order": 8,
+      "text": "Chapter 8   Hepatic and renal impairment\b\n723\nHepatic impairment\b\n723\nRenal impairment\b\n735\n",
+      "bbox": [
+        61.8690185546875,
+        512.7393188476562,
+        433.8659973144531,
+        547.2003173828125
+      ],
+      "text_sha256": "a32878217640956d076321b6451784eedeb3c70ac8ff75a78f99b558f7c676c2"
+    },
+    {
+      "block_id": "page-0009-block-0009",
+      "order": 9,
+      "text": "Part 3      Prescribing in specialist conditions\b\n755\n",
+      "bbox": [
+        61.868988037109375,
+        560.736328125,
+        433.8659973144531,
+        571.4013671875
+      ],
+      "text_sha256": "17ef98529e3c2c2a2af68f0fc687c68bbc6b506ade3857fcf491de49c051b7e5"
+    },
+    {
+      "block_id": "page-0009-block-0010",
+      "order": 10,
+      "text": "Chapter 9   Drug treatment of other psychiatric conditions\b\n757\nBorderline personality disorder (BPD)\b\n757\nEating disorders\b\n761\nDelirium\b\n767\n",
+      "bbox": [
+        61.868988037109375,
+        578.736328125,
+        433.8659973144531,
+        625.1943359375
+      ],
+      "text_sha256": "c403b9082f4f085076e0c2fccf4d5a583043394c137797952086d71ae58e86ca"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

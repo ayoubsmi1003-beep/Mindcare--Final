@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0859",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 859,
+  "source_page_index": 858,
+  "source_page_display": 859,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "838    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  11\nClozapine\nClozapine plasma levels are broadly related to daily dose,44 but there is sufficient vari-\nation to make impossible any precise prediction of plasma level. Plasma levels are gen-\nerally lower in younger patients, males,45 and smokers46 and higher in Asians.47 Much \nlower doses of clozapine are required in East Asians,48,49 Indians50 and Bangladeshis.51 \nThe prevalence of clozapine poor metabolisers is also higher in East Asians.52,53 A series \nof algorithms has been developed for the approximate prediction of clozapine levels \naccording to patient factors and these are strongly recommended.54 Algorithms cannot, \nhowever, account for other influences on clozapine plasma levels, such as changes in \nadherence, inflammation55 and infection.56,57\nThe plasma level threshold for acute response to clozapine has been suggested to be \n200µg/L,58 350µg/L,59–61 370µg/L,62 420 µg/L,63 504µg/L64 and 550µg/L.65 Limited data \nsuggest a level of at least 200µg/L is required to prevent relapse.66 Substantial variation \nin clozapine plasma level may also predict relapse.67 Changes in an individual’s plasma \nclozapine are common with a tendency for concentrations to slightly decrease over \ntime,68 although one study suggests a decrease only in norclozapine concentrations.69\nDespite these somewhat varied estimates of response threshold, plasma levels can be \nuseful in optimising treatment. In those not responding to clozapine, dose should be \nadjusted to give plasma levels in the range 350–600µg/L (a range reflecting a consensus \nof the above findings30). Those not tolerating clozapine may benefit from a reduction to \na dose giving plasma levels in this range. An upper limit to the clozapine target range \nhas not been defined. Any upper limit must take into account two components: the level \nabove which no therapeutic advantage is gained and the level at which toxicity/tolera-\nbility is unacceptable. Plasma levels do seem to predict EEG changes70,71 and seizures \noccur more frequently in patients with levels above 1000µg/L,72 so levels should prob-\nably be kept well below this. Other non-neurological clozapine-related adverse effects \nalso seem to be plasma-level related73 as might be expected. An upper limit has of con-\ncentrations around 600–800µg/L has been proposed.74\nA further consideration is that placing an upper limit on the target range for clozap-\nine levels may discourage potentially worthwhile dose increases within the licensed \ndose range. Before plasma levels were widely used, clozapine was fairly often given in \ndoses up to 900mg/day, with valproate being added when the dose reached 600mg/day. \nIt remains unclear whether using these high doses can benefit patients with plasma \nlevels already above the accepted threshold. Nonetheless, it is prudent to use an anti-\nconvulsant as prophylaxis against seizures and myoclonus when plasma levels are \nabove 600µg/L (a level based more on repeated recommendation than on a clear evi-\ndence-based threshold74) and certainly when levels approach 1000µg/L.\nNorclozapine is the major metabolite of clozapine. The ratio of clozapine to norclo-\nzapine averages 1.25 in populations75 but may differ for individuals. In chronic dosing, \nthe ratio should remain the same for a given patient. A decrease in ratio may suggest \nenzyme induction, an increase suggests enzyme inhibition, a non-trough sample or \nrecent missed doses. However, the time of sampling radically alters the clozapine/nor-\nclozapine ratio as clozapine is relatively high in early samples and norclozapine is high \nin late samples.2 Clozapine metabolism may become saturated at higher doses: the \nratio of clozapine to norclozapine increases with increasing plasma levels, suggesting \n",
+  "raw_text_sha256": "d91c10c7795275acc9ef28a8f8cb9ccd0be0d270173eef56bf7f3d360a47810f",
+  "coordinates_sha256": "7118a1e58f504ca810d3f8135a2628dba1c572646d2b12b6e0176148ea4edcb2",
+  "block_sequence_sha256": "2eb432f60299bf892cb2debc0fd8f5c886dd1489837391b926a831750329b907",
+  "blocks": [
+    {
+      "block_id": "page-0859-block-0000",
+      "order": 0,
+      "text": "838    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "51f0cda80193a81f8c1ca5ad54e8c32f5997a17449fec1de23d6f1f24a0543c5"
+    },
+    {
+      "block_id": "page-0859-block-0001",
+      "order": 1,
+      "text": "CHAPTER  11\n",
+      "bbox": [
+        18.520000457763672,
+        139.8785400390625,
+        28.0,
+        187.89450073242188
+      ],
+      "text_sha256": "83984f4328940309c03288e26b8edf9834cfa8fef30d3eedac5a4c266fe9aee7"
+    },
+    {
+      "block_id": "page-0859-block-0002",
+      "order": 2,
+      "text": "Clozapine\n",
+      "bbox": [
+        61.88999938964844,
+        62.31540298461914,
+        112.62199401855469,
+        75.35040283203125
+      ],
+      "text_sha256": "0bd60b9b2d37cb1923ef72b68316ecf506009979d23dbd051c264f05e5e95770"
+    },
+    {
+      "block_id": "page-0859-block-0003",
+      "order": 3,
+      "text": "Clozapine plasma levels are broadly related to daily dose,44 but there is sufficient vari-\nation to make impossible any precise prediction of plasma level. Plasma levels are gen-\nerally lower in younger patients, males,45 and smokers46 and higher in Asians.47 Much \nlower doses of clozapine are required in East Asians,48,49 Indians50 and Bangladeshis.51 \nThe prevalence of clozapine poor metabolisers is also higher in East Asians.52,53 A series \nof algorithms has been developed for the approximate prediction of clozapine levels \naccording to patient factors and these are strongly recommended.54 Algorithms cannot, \nhowever, account for other influences on clozapine plasma levels, such as changes in \nadherence, inflammation55 and infection.56,57\n",
+      "bbox": [
+        61.885498046875,
+        81.160400390625,
+        436.6755065917969,
+        188.88040161132812
+      ],
+      "text_sha256": "ae02aa41ff399e2b24ffd2d43e9232f2859dbcb4ee0473374e9a5a036e4dee9a"
+    },
+    {
+      "block_id": "page-0859-block-0004",
+      "order": 4,
+      "text": "The plasma level threshold for acute response to clozapine has been suggested to be \n200µg/L,58 350µg/L,59–61 370µg/L,62 420 µg/L,63 504µg/L64 and 550µg/L.65 Limited data \nsuggest a level of at least 200µg/L is required to prevent relapse.66 Substantial variation \nin clozapine plasma level may also predict relapse.67 Changes in an individual’s plasma \nclozapine are common with a tendency for concentrations to slightly decrease over \ntime,68 although one study suggests a decrease only in norclozapine concentrations.69\n",
+      "bbox": [
+        61.88648986816406,
+        189.160400390625,
+        436.6686706542969,
+        260.8804016113281
+      ],
+      "text_sha256": "93b7378255b53885faf3e5bed8c5edff9c5c8812f018a07be15281c0c9d3152b"
+    },
+    {
+      "block_id": "page-0859-block-0005",
+      "order": 5,
+      "text": "Despite these somewhat varied estimates of response threshold, plasma levels can be \nuseful in optimising treatment. In those not responding to clozapine, dose should be \nadjusted to give plasma levels in the range 350–600µg/L (a range reflecting a consensus \nof the above findings30). Those not tolerating clozapine may benefit from a reduction to \na dose giving plasma levels in this range. An upper limit to the clozapine target range \nhas not been defined. Any upper limit must take into account two components: the level \nabove which no therapeutic advantage is gained and the level at which toxicity/tolera-\nbility is unacceptable. Plasma levels do seem to predict EEG changes70,71 and seizures \noccur more frequently in patients with levels above 1000µg/L,72 so levels should prob-\nably be kept well below this. Other non-neurological clozapine-related adverse effects \nalso seem to be plasma-level related73 as might be expected. An upper limit has of con-\ncentrations around 600–800µg/L has been proposed.74\n",
+      "bbox": [
+        61.88720703125,
+        261.160400390625,
+        436.7199401855469,
+        404.8804016113281
+      ],
+      "text_sha256": "b9291115b36aea3162b7b7f0a61fb53b59d25c1b9b1bc4779086910011926b71"
+    },
+    {
+      "block_id": "page-0859-block-0006",
+      "order": 6,
+      "text": "A further consideration is that placing an upper limit on the target range for clozap-\nine levels may discourage potentially worthwhile dose increases within the licensed \ndose range. Before plasma levels were widely used, clozapine was fairly often given in \ndoses up to 900mg/day, with valproate being added when the dose reached 600mg/day. \nIt remains unclear whether using these high doses can benefit patients with plasma \nlevels already above the accepted threshold. Nonetheless, it is prudent to use an anti-\nconvulsant as prophylaxis against seizures and myoclonus when plasma levels are \nabove 600µg/L (a level based more on repeated recommendation than on a clear evi-\ndence-based threshold74) and certainly when levels approach 1000µg/L.\n",
+      "bbox": [
+        61.88990020751953,
+        405.160400390625,
+        436.7099304199219,
+        512.8804321289062
+      ],
+      "text_sha256": "0dd7aeed2287710e6c3c6d65557086a221b7f748caa6b4286b59982ac81ebe4e"
+    },
+    {
+      "block_id": "page-0859-block-0007",
+      "order": 7,
+      "text": "Norclozapine is the major metabolite of clozapine. The ratio of clozapine to norclo-\nzapine averages 1.25 in populations75 but may differ for individuals. In chronic dosing, \nthe ratio should remain the same for a given patient. A decrease in ratio may suggest \nenzyme induction, an increase suggests enzyme inhibition, a non-trough sample or \nrecent missed doses. However, the time of sampling radically alters the clozapine/nor-\nclozapine ratio as clozapine is relatively high in early samples and norclozapine is high \nin late samples.2 Clozapine metabolism may become saturated at higher doses: the \nratio of clozapine to norclozapine increases with increasing plasma levels, suggesting \n",
+      "bbox": [
+        61.888275146484375,
+        513.160400390625,
+        436.7183837890625,
+        608.8804321289062
+      ],
+      "text_sha256": "18b35a9dfa0e65b58d726ccfa291aa18300a8549f9031f66921d497d44eee0c7"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

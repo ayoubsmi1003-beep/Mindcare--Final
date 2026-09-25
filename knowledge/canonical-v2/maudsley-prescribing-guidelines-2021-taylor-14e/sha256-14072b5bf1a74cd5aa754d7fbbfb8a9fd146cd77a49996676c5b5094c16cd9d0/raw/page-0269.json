@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0269",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 269,
+  "source_page_index": 268,
+  "source_page_display": 269,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "248    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  2\nplasma lithium levels rapidly, and monitoring may be problematic if the patient is unco-\noperative. Treatment may be most successful in those without psychotic symptoms or \nevidence of rapid cycling.11\nTreatment of acute mania in patients already on long-term lithium\nBAP guidelines10 suggest that in the event of relapse, an urgent plasma lithium level \nshould be obtained to indicate the level of compliance with lithium therapy and inform \npossible dose adjustment. If lithium level measurement indicates non-compliance, the \nreason should be ascertained. If the lithium level is confirmed to be optimal, but the \ncontrol of mania is inadequate, then adding a dopamine antagonist, dopamine partial \nagonist or valproate is recommended.10\nBipolar depression\nLithium is widely used in bipolar depression but evidence supporting robust efficacy is \nlacking.12,13 Evidence for prevention of depressive episodes is more compelling.\nMaintenance treatment of bipolar disorder\nAim for the highest tolerable lithium plasma level in the range of 0.6–0.8mmol/L10,14 \nwith the option to reduce it to 0.40–0.60mmol/L in case of good response but poor \ntolerance or to increase it to 0.80–1.00mmol/L in case of insufficient response and good \ntolerance. The aim of treatment is complete remission of both manic and depressive \nepisodes.15 Lithium may be the best performing medicine for BD in practice: Hayes et \nal.16 prospectively analysed the progress of 5089 bipolar patients prescribed mono-\ntherapy maintenance treatment: lithium (n = 1505), olanzapine (n = 1366), valproate \n(n = 1173) and quetiapine (n = 1075). It was found that monotherapy failure in 75% \nof each cohort occurred by 2.05 years for lithium monotherapy, 1.13 years for olanzap-\nine monotherapy, 0.98 years for valproate monotherapy and 0.76 years for quetiapine \nmonotherapy.16\nAugmentation of antidepressants in unipolar depression\nApproximately 30–50% of patients fail to respond to trials of first- or second-line anti-\ndepressants, and outcomes from ‘treatment-resistant depression’ are poor.17 Evidence-\nbased guidelines for treating depressive orders with antidepressants, e.g. Cleare et al.,18 \nsuggest that either lithium or quetiapine are agents of first choice for augmenting the \nexisting antidepressant and that lithium augmentation of selective serotonin reuptake \ninhibitors (SSRIs) or venlafaxine is most effective at a lithium plasma level of \n0.6–1.0mmol/L. To help determine which, if either, is the better of these two augment-\ning agents over a follow-up period of 1 year, a head-to-head, parallel group, open-label, \nmulti-site randomised pragmatic trial of lithium versus quetiapine augmentation in \ntreatment-resistant depression is underway and should report in 2021.19 Clinical pre-\ndictors associated with a better outcome in lithium augmentation for treatment-­\nresistant depression include more severe depressive symptomatology, psychomotor \n",
+  "raw_text_sha256": "341d35d225b201357b88a2492dd9e64507d0c1b8c98031076dec5687dddf9f1b",
+  "coordinates_sha256": "67c3c9f522c1ee57793ae31901bb1a28559f969bbb7f45223449af4d146fbfe5",
+  "block_sequence_sha256": "563965d833dd7ab33ebe7f45f5a14a35b4a18bae29353a39de8d4fbf7351918b",
+  "blocks": [
+    {
+      "block_id": "page-0269-block-0000",
+      "order": 0,
+      "text": "248    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "a863c56c770b16b4340529b79c36df8ead28cbb2ab5a75fe97dde2a00bf0eefb"
+    },
+    {
+      "block_id": "page-0269-block-0001",
+      "order": 1,
+      "text": "CHAPTER  2\n",
+      "bbox": [
+        19.520000457763672,
+        145.23529052734375,
+        29.0,
+        188.80328369140625
+      ],
+      "text_sha256": "5befcde2fefe074681a51514b484ad31516d952c51183625b5b7b1fb84f30d2c"
+    },
+    {
+      "block_id": "page-0269-block-0002",
+      "order": 2,
+      "text": "plasma lithium levels rapidly, and monitoring may be problematic if the patient is unco-\noperative. Treatment may be most successful in those without psychotic symptoms or \nevidence of rapid cycling.11\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.6400146484375,
+        98.27029418945312
+      ],
+      "text_sha256": "9cb1b6e86891edcc294c4ad98722781e4f676befb4acc3274e3821ba33fbdc2d"
+    },
+    {
+      "block_id": "page-0269-block-0003",
+      "order": 3,
+      "text": "Treatment of acute mania in patients already on long-term lithium\n",
+      "bbox": [
+        61.88999938964844,
+        116.64029693603516,
+        374.5799255371094,
+        128.49029541015625
+      ],
+      "text_sha256": "138f0cedf694de9d825ed87d4d3b226d7f6bbb1bcf654a40eea588f18ca3a82d"
+    },
+    {
+      "block_id": "page-0269-block-0004",
+      "order": 4,
+      "text": "BAP guidelines10 suggest that in the event of relapse, an urgent plasma lithium level \nshould be obtained to indicate the level of compliance with lithium therapy and inform \npossible dose adjustment. If lithium level measurement indicates non-compliance, the \nreason should be ascertained. If the lithium level is confirmed to be optimal, but the \ncontrol of mania is inadequate, then adding a dopamine antagonist, dopamine partial \nagonist or valproate is recommended.10\n",
+      "bbox": [
+        61.88999938964844,
+        134.55029296875,
+        436.7046203613281,
+        206.27029418945312
+      ],
+      "text_sha256": "6d5de66368659be105edfa4e2a8796d433aff31d09e60077784e762da7358600"
+    },
+    {
+      "block_id": "page-0269-block-0005",
+      "order": 5,
+      "text": "Bipolar depression\n",
+      "bbox": [
+        61.88999938964844,
+        223.70529174804688,
+        157.64498901367188,
+        236.74029541015625
+      ],
+      "text_sha256": "ab6a4809bcb8ca5f52fffdeaccd1c1285bba7da6fcd9ba1a2c6b736b653fd0c2"
+    },
+    {
+      "block_id": "page-0269-block-0006",
+      "order": 6,
+      "text": "Lithium is widely used in bipolar depression but evidence supporting robust efficacy is \nlacking.12,13 Evidence for prevention of depressive episodes is more compelling.\n",
+      "bbox": [
+        61.88999938964844,
+        242.55029296875,
+        436.62994384765625,
+        266.2702941894531
+      ],
+      "text_sha256": "7556bb2108c603bd824945b0214ef1ea0e9a63042f3506092d79d0ab6fc0035d"
+    },
+    {
+      "block_id": "page-0269-block-0007",
+      "order": 7,
+      "text": "Maintenance treatment of bipolar disorder\n",
+      "bbox": [
+        61.886505126953125,
+        284.6402893066406,
+        263.59649658203125,
+        296.49029541015625
+      ],
+      "text_sha256": "d956b5c066c69d41bc661bc52369d6de97754c64b42a0b73e65bd5b249c8fb3f"
+    },
+    {
+      "block_id": "page-0269-block-0008",
+      "order": 8,
+      "text": "Aim for the highest tolerable lithium plasma level in the range of 0.6–0.8mmol/L10,14 \nwith the option to reduce it to 0.40–0.60mmol/L in case of good response but poor \ntolerance or to increase it to 0.80–1.00mmol/L in case of insufficient response and good \ntolerance. The aim of treatment is complete remission of both manic and depressive \nepisodes.15 Lithium may be the best performing medicine for BD in practice: Hayes et \nal.16 prospectively analysed the progress of 5089 bipolar patients prescribed mono-\ntherapy maintenance treatment: lithium (n = 1505), olanzapine (n = 1366), valproate \n(n = 1173) and quetiapine (n = 1075). It was found that monotherapy failure in 75% \nof each cohort occurred by 2.05 years for lithium monotherapy, 1.13 years for olanzap-\nine monotherapy, 0.98 years for valproate monotherapy and 0.76 years for quetiapine \nmonotherapy.16\n",
+      "bbox": [
+        61.886505126953125,
+        302.55029296875,
+        436.7000427246094,
+        434.2702941894531
+      ],
+      "text_sha256": "f776f2432de3e9730cda85cff06f172da55f40299ef0977b33898641910fac04"
+    },
+    {
+      "block_id": "page-0269-block-0009",
+      "order": 9,
+      "text": "Augmentation of antidepressants in unipolar depression\n",
+      "bbox": [
+        61.88999938964844,
+        452.6402893066406,
+        328.0299377441406,
+        464.49029541015625
+      ],
+      "text_sha256": "a77441dc9f0b386cbf8b95bc28f8feff243119e127b9a93156a7b01da97e2a6a"
+    },
+    {
+      "block_id": "page-0269-block-0010",
+      "order": 10,
+      "text": "Approximately 30–50% of patients fail to respond to trials of first- or second-line anti-\ndepressants, and outcomes from ‘treatment-resistant depression’ are poor.17 Evidence-\nbased guidelines for treating depressive orders with antidepressants, e.g. Cleare et al.,18 \nsuggest that either lithium or quetiapine are agents of first choice for augmenting the \nexisting antidepressant and that lithium augmentation of selective serotonin reuptake \ninhibitors (SSRIs) or venlafaxine is most effective at a lithium plasma level of \n0.6–1.0mmol/L. To help determine which, if either, is the better of these two augment-\ning agents over a follow-up period of 1 year, a head-to-head, parallel group, open-label, \nmulti-site randomised pragmatic trial of lithium versus quetiapine augmentation in \ntreatment-resistant depression is underway and should report in 2021.19 Clinical pre-\ndictors associated with a better outcome in lithium augmentation for treatment-­\nresistant depression include more severe depressive symptomatology, psychomotor \n",
+      "bbox": [
+        61.888885498046875,
+        470.55029296875,
+        436.7200927734375,
+        614.2703247070312
+      ],
+      "text_sha256": "9b711e933f61a3f0ea1b70aeeb0d4c09d500f1df85d9d1f04e4a62244d7a8509"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

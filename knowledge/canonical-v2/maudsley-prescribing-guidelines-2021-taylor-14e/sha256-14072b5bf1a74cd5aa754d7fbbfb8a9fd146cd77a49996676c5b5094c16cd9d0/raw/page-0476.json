@@ -1,0 +1,455 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0476",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 476,
+  "source_page_index": 475,
+  "source_page_display": 476,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    455\nCHAPTER 4\nTable 4.1  (Continued)\nSevere alcohol withdrawal – complications\nUsual timing of onset  \nafter the last drink\nOther information\nGeneralised seizures\n12–18 hours\n■\n■May commence  \nbefore blood \nalcohol levels \nreach zero\nManagement\n■\n■The occurrence of a first seizure during medically assisted withdrawal requires investigation to rule out organic \ndisease or idiopathic epilepsy.\n■\n■A meta-analysis of trials assessing the efficacy of drugs preventing alcohol withdrawal seizures demonstrated that \nbenzodiazepines, particularly long-acting preparations such as diazepam, significantly reduced seizures de novo.6,7\n■\n■Long-acting benzodiazepine is recommended as prophylaxis in those with a previous history of seizures.8\n■\n■Some antiseizure medications are as effective as benzodiazepines, with some units recommending carbamazepine \nloading in patients with untreated epilepsy, or where seizures have occurred despite adequate benzodiazepine \nloading.6\n■\n■Phenytoin does not prevent alcohol withdrawal-related seizures when used on its own or in combination with \nbenzodiazepines.9 There is no need to continue antiseizure medications long term when used to prevent seizures \nin alcohol withdrawal.9\nSevere alcohol withdrawal – complications\nUsual timing of onset \nafter the last drink\nOther information  \nand management\nDelirium tremens (see specific section in this chapter)\n■\n■Clouding of consciousness/confusion\n■\n■Vivid hallucinations, particularly in visual and tactile modal-\nities\n■\n■Marked tremor\nOther clinical features also include autonomic hyperactivity \n(tachycardia, hypertension, sweating and fever), paranoid \ndelusions, agitation and insomnia\nProdromal symptoms include night-time insomnia, \nrestlessness, fear and confusion\nRisk factors: Severe alcohol dependence, self-detoxification \nwithout medical input, multiple previous admissions for \nalcohol withdrawal, concurrent medical illness, previous \nhistory of delirium tremens and alcohol withdrawal seizures, \nlow potassium, low magnesium, thiamine deficiency, \ninadequately treated withdrawal\nRecognition is important because treatment is different from \ndelirium arising from other causes. DT needs larger doses \nof benzodiazepines and more caution with \nantipsychotics\n3–4 days\n(72–96 hours)\n■\n■Develops in 3–5% \nof those admitted \nto hospital for \nalcohol withdrawal\n■\n■A medical \nemergency\n■\n■Mortality 10–20% \nif untreated\nManagement\n■\n■This is a medical emergency and requires prompt transfer to a general hospital,9 and preferably to a high depen-\ndency setting.10,11\n■\n■The patient must be seen (see section ‘Delirium tremens’ in this chapter).\n",
+  "raw_text_sha256": "d02ee4cdf3f1302e7172cee2f04fd6608e38258e8b699f0bfc45aa27137404bd",
+  "coordinates_sha256": "a8a238c1a49cf129ad9cd65a95ecf79939c7cee388e50a3c84b12ab495db6414",
+  "block_sequence_sha256": "af0a6cbc4ab775db2b17664089e5d84b909577e43b872257cc67158b8d63d06c",
+  "blocks": [
+    {
+      "block_id": "page-0476-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    455\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "e751e3744a97ba1d1b88940e8c54afae7f6a9340f375ed4845a478ba00510670"
+    },
+    {
+      "block_id": "page-0476-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0476-block-0002",
+      "order": 2,
+      "text": "Table 4.1  (Continued)\n",
+      "bbox": [
+        54.000301361083984,
+        70.08790588378906,
+        126.12029266357422,
+        78.97540283203125
+      ],
+      "text_sha256": "b2146b1d33abcb60102b4ce10ef5f5a01bc0fb6c5778b129907ccb8502e23f39"
+    },
+    {
+      "block_id": "page-0476-block-0003",
+      "order": 3,
+      "text": "Severe alcohol withdrawal – complications\n",
+      "bbox": [
+        52.0,
+        96.96296691894531,
+        202.31503295898438,
+        105.8504638671875
+      ],
+      "text_sha256": "951736c4987e71f61fe6a056a89b7e04c24c641211c887f1094d67e292fe6c58"
+    },
+    {
+      "block_id": "page-0476-block-0004",
+      "order": 4,
+      "text": "Usual timing of onset  \nafter the last drink\nOther information\n",
+      "bbox": [
+        258.25,
+        86.96546936035156,
+        410.5975646972656,
+        105.8504638671875
+      ],
+      "text_sha256": "3834388a332b6fcce6e246d59d238161d85012231f8510dcacb115b06f7ed725"
+    },
+    {
+      "block_id": "page-0476-block-0005",
+      "order": 5,
+      "text": "Generalised seizures\n12–18 hours\n■\n■May commence  \n",
+      "bbox": [
+        52.0,
+        112.76546478271484,
+        409.9974670410156,
+        121.4754638671875
+      ],
+      "text_sha256": "9617f12c21187ea284bb23ad479a74adf50b51884290d9731263864f38b1d869"
+    },
+    {
+      "block_id": "page-0476-block-0006",
+      "order": 6,
+      "text": "before blood \nalcohol levels \nreach zero\n",
+      "bbox": [
+        355.0,
+        121.7679672241211,
+        399.16754150390625,
+        148.4754638671875
+      ],
+      "text_sha256": "92257c5d0e1318c6a1c182021a08bb7f04441915a4f37c12e2a4d32a865a804a"
+    },
+    {
+      "block_id": "page-0476-block-0007",
+      "order": 7,
+      "text": "Management\n",
+      "bbox": [
+        48.00250244140625,
+        157.83546447753906,
+        95.09500122070312,
+        166.72296142578125
+      ],
+      "text_sha256": "b7c8078b02231574c679ff1660f4ee2c4e4b0661ca89cd501152f9404d2324c0"
+    },
+    {
+      "block_id": "page-0476-block-0008",
+      "order": 8,
+      "text": "■\n■The occurrence of a first seizure during medically assisted withdrawal requires investigation to rule out organic \n",
+      "bbox": [
+        47.999900817871094,
+        170.01795959472656,
+        411.0750732421875,
+        178.7254638671875
+      ],
+      "text_sha256": "e5be279ec9f633dfee24405b5b040581f4d38c3e0a17f054a97ee62ec2c5260e"
+    },
+    {
+      "block_id": "page-0476-block-0009",
+      "order": 9,
+      "text": "disease or idiopathic epilepsy.\n■\n■A meta-analysis of trials assessing the efficacy of drugs preventing alcohol withdrawal seizures demonstrated that \n",
+      "bbox": [
+        47.999900817871094,
+        179.01795959472656,
+        421.2076110839844,
+        196.72549438476562
+      ],
+      "text_sha256": "97df4b1b9dba4a0f7d0065b468ceac5499a4dd47001e7de1434736e0851b0127"
+    },
+    {
+      "block_id": "page-0476-block-0010",
+      "order": 10,
+      "text": "benzodiazepines, particularly long-acting preparations such as diazepam, significantly reduced seizures de novo.6,7\n",
+      "bbox": [
+        57.0,
+        196.97299194335938,
+        419.9997863769531,
+        205.72549438476562
+      ],
+      "text_sha256": "d0103db63ba7d19e82f9a4789d41a2228f28e5948b45b2bf345eedd5095b71d6"
+    },
+    {
+      "block_id": "page-0476-block-0011",
+      "order": 11,
+      "text": "■\n■Long-acting benzodiazepine is recommended as prophylaxis in those with a previous history of seizures.8\n",
+      "bbox": [
+        47.999900817871094,
+        206.0179901123047,
+        390.1849365234375,
+        214.72549438476562
+      ],
+      "text_sha256": "e214454dbcc0cde80c25e62a8546f690cd07728aa8ab908d85193ebcae96e19d"
+    },
+    {
+      "block_id": "page-0476-block-0012",
+      "order": 12,
+      "text": "■\n■Some antiseizure medications are as effective as benzodiazepines, with some units recommending carbamazepine \n",
+      "bbox": [
+        47.999900817871094,
+        215.0179901123047,
+        421.125,
+        223.72549438476562
+      ],
+      "text_sha256": "8a4510411d76d24d394378ee585f594129368fa75cb36af500576b79ee309e6b"
+    },
+    {
+      "block_id": "page-0476-block-0013",
+      "order": 13,
+      "text": "loading in patients with untreated epilepsy, or where seizures have occurred despite adequate benzodiazepine \nloading.6\n",
+      "bbox": [
+        57.0,
+        224.0179901123047,
+        408.8099060058594,
+        241.72549438476562
+      ],
+      "text_sha256": "30459b1fd85258408a22841401016754e00ccb917236ec6172708bccaa16dfbf"
+    },
+    {
+      "block_id": "page-0476-block-0014",
+      "order": 14,
+      "text": "■\n■Phenytoin does not prevent alcohol withdrawal-related seizures when used on its own or in combination with \n",
+      "bbox": [
+        47.999900817871094,
+        242.0179901123047,
+        409.17010498046875,
+        250.72549438476562
+      ],
+      "text_sha256": "2f19e7d794ced1f9980b8972fba784b9938e11d6c91a910cb18723ba630272e2"
+    },
+    {
+      "block_id": "page-0476-block-0015",
+      "order": 15,
+      "text": "benzodiazepines.9 There is no need to continue antiseizure medications long term when used to prevent seizures \nin alcohol withdrawal.9\n",
+      "bbox": [
+        57.0,
+        251.0179901123047,
+        418.95819091796875,
+        268.7254943847656
+      ],
+      "text_sha256": "4991d05dec2568f9bea120d9a1c54792f9c3897e9c1c8fdaa6b89b33e24e7a41"
+    },
+    {
+      "block_id": "page-0476-block-0016",
+      "order": 16,
+      "text": "Severe alcohol withdrawal – complications\n",
+      "bbox": [
+        52.0,
+        285.1326904296875,
+        202.31503295898438,
+        294.02020263671875
+      ],
+      "text_sha256": "951736c4987e71f61fe6a056a89b7e04c24c641211c887f1094d67e292fe6c58"
+    },
+    {
+      "block_id": "page-0476-block-0017",
+      "order": 17,
+      "text": "Usual timing of onset \nafter the last drink\n",
+      "bbox": [
+        258.00250244140625,
+        275.13519287109375,
+        335.92742919921875,
+        294.02020263671875
+      ],
+      "text_sha256": "b535981d28503fcaff2bcc3ee389b8fd43b6748edf72efc1d8030774085077ce"
+    },
+    {
+      "block_id": "page-0476-block-0018",
+      "order": 18,
+      "text": "Other information  \nand management\n",
+      "bbox": [
+        346.0,
+        275.13519287109375,
+        414.7674865722656,
+        294.02020263671875
+      ],
+      "text_sha256": "f745c971c578c12149b1b1192948cde88713342c1e0eeaa16a5cd48a69305226"
+    },
+    {
+      "block_id": "page-0476-block-0019",
+      "order": 19,
+      "text": "Delirium tremens (see specific section in this chapter)\n",
+      "bbox": [
+        52.0,
+        300.9352111816406,
+        220.61497497558594,
+        309.6427001953125
+      ],
+      "text_sha256": "d76303e5f20917236de5f02bb7219d7ea29f6b487c1123fee7af3a6c42363c63"
+    },
+    {
+      "block_id": "page-0476-block-0020",
+      "order": 20,
+      "text": "■\n■Clouding of consciousness/confusion\n",
+      "bbox": [
+        51.999900817871094,
+        312.9377136230469,
+        178.9599609375,
+        321.64520263671875
+      ],
+      "text_sha256": "483c8f8176b083d1acd834f14d3122624a1369e2329247bdc7ebb9670f462852"
+    },
+    {
+      "block_id": "page-0476-block-0021",
+      "order": 21,
+      "text": "■\n■Vivid hallucinations, particularly in visual and tactile modal-\n",
+      "bbox": [
+        51.999900817871094,
+        321.9377136230469,
+        248.9574432373047,
+        330.64520263671875
+      ],
+      "text_sha256": "d9dfbbf71ea48120302ab8d4cba28bd94c3d4746b89ecbf24dc4654ecd8e919b"
+    },
+    {
+      "block_id": "page-0476-block-0022",
+      "order": 22,
+      "text": "ities\n■\n■Marked tremor\n",
+      "bbox": [
+        51.999900817871094,
+        330.9377136230469,
+        109.19498443603516,
+        348.64520263671875
+      ],
+      "text_sha256": "f02006f0eac86f37d6d4f9e7d49c6feb47dfa2314c03a023871a1855a440f636"
+    },
+    {
+      "block_id": "page-0476-block-0023",
+      "order": 23,
+      "text": "Other clinical features also include autonomic hyperactivity \n(tachycardia, hypertension, sweating and fever), paranoid \ndelusions, agitation and insomnia\n",
+      "bbox": [
+        52.0,
+        352.9352111816406,
+        241.43496704101562,
+        381.6376953125
+      ],
+      "text_sha256": "cbd3e4b23d0c2a750b62ffa6f21117e4ead1c66a1783da3ca412a9ad2a46333d"
+    },
+    {
+      "block_id": "page-0476-block-0024",
+      "order": 24,
+      "text": "Prodromal symptoms include night-time insomnia, \nrestlessness, fear and confusion\n",
+      "bbox": [
+        52.0,
+        385.9277038574219,
+        214.6599578857422,
+        404.6326904296875
+      ],
+      "text_sha256": "96bf4cbfda8469e2a2f2fc5b95f222d163d106770abcde17cc90beabcf8687bf"
+    },
+    {
+      "block_id": "page-0476-block-0025",
+      "order": 25,
+      "text": "Risk factors: Severe alcohol dependence, self-detoxification \nwithout medical input, multiple previous admissions for \nalcohol withdrawal, concurrent medical illness, previous \nhistory of delirium tremens and alcohol withdrawal seizures, \nlow potassium, low magnesium, thiamine deficiency, \ninadequately treated withdrawal\n",
+      "bbox": [
+        52.0,
+        408.9226989746094,
+        245.9124755859375,
+        467.61767578125
+      ],
+      "text_sha256": "1a128eb9443c3e89570531a28d68bd807d63784171ea69e62ac60949c90e28f0"
+    },
+    {
+      "block_id": "page-0476-block-0026",
+      "order": 26,
+      "text": "Recognition is important because treatment is different from \ndelirium arising from other causes. DT needs larger doses \nof benzodiazepines and more caution with \nantipsychotics\n",
+      "bbox": [
+        52.0,
+        471.9076843261719,
+        247.29998779296875,
+        510.607666015625
+      ],
+      "text_sha256": "e63f25075be161ec1f1033c6c66cf8cc43804440660668beb15892764b31af68"
+    },
+    {
+      "block_id": "page-0476-block-0027",
+      "order": 27,
+      "text": "3–4 days\n(72–96 hours)\n",
+      "bbox": [
+        258.00250244140625,
+        300.9001770019531,
+        302.6125793457031,
+        319.60516357421875
+      ],
+      "text_sha256": "a243c827d21bd7e4b9ea8d2e8fd1769868715b157f1a8c2190cecb40d89c7ef6"
+    },
+    {
+      "block_id": "page-0476-block-0028",
+      "order": 28,
+      "text": "■\n■Develops in 3–5% \n",
+      "bbox": [
+        345.9999084472656,
+        300.9377136230469,
+        415.43505859375,
+        309.64520263671875
+      ],
+      "text_sha256": "132fa0f8ac2cf633645f7e28e8446946df747fd34942861a2b8dd26e19002894"
+    },
+    {
+      "block_id": "page-0476-block-0029",
+      "order": 29,
+      "text": "of those admitted \nto hospital for \nalcohol withdrawal\n■\n■A medical \n",
+      "bbox": [
+        345.9999084472656,
+        309.9377136230469,
+        415.8400573730469,
+        345.64520263671875
+      ],
+      "text_sha256": "fc1ab4093862d592274e57b6c594a77e1bd89d1f92d7fed51caa9ff58f22dc8c"
+    },
+    {
+      "block_id": "page-0476-block-0030",
+      "order": 30,
+      "text": "emergency\n■\n■Mortality 10–20% \n",
+      "bbox": [
+        345.9999084472656,
+        345.9377136230469,
+        415.8400573730469,
+        363.64520263671875
+      ],
+      "text_sha256": "1a11e14b2352eed3b060fa0e08c4c9ec9e2564bea5d20116feb75fe3148d3c9a"
+    },
+    {
+      "block_id": "page-0476-block-0031",
+      "order": 31,
+      "text": "if untreated\n",
+      "bbox": [
+        355.0,
+        363.9377136230469,
+        392.3650207519531,
+        372.64520263671875
+      ],
+      "text_sha256": "5a02e31710201c179cec98c6d7d071a13578e4d7886ff8fc8a50c3a5611ff55e"
+    },
+    {
+      "block_id": "page-0476-block-0032",
+      "order": 32,
+      "text": "Management\n",
+      "bbox": [
+        48.00250244140625,
+        520.0051879882812,
+        95.09500122070312,
+        528.8927001953125
+      ],
+      "text_sha256": "b7c8078b02231574c679ff1660f4ee2c4e4b0661ca89cd501152f9404d2324c0"
+    },
+    {
+      "block_id": "page-0476-block-0033",
+      "order": 33,
+      "text": "■\n■This is a medical emergency and requires prompt transfer to a general hospital,9 and preferably to a high depen-\n",
+      "bbox": [
+        47.999900817871094,
+        532.1876831054688,
+        415.1911926269531,
+        540.8952026367188
+      ],
+      "text_sha256": "76e52b37ce3d6fa463ada68034c478f38c0d427bd4258849f09d1d9592548dea"
+    },
+    {
+      "block_id": "page-0476-block-0034",
+      "order": 34,
+      "text": "dency setting.10,11\n",
+      "bbox": [
+        56.998626708984375,
+        541.1876831054688,
+        112.5268783569336,
+        549.8952026367188
+      ],
+      "text_sha256": "476c197f09b1420745dd63b15814bf9c4772500a972c0f41ca52853b688d9ff9"
+    },
+    {
+      "block_id": "page-0476-block-0035",
+      "order": 35,
+      "text": "■\n■The patient must be seen (see section ‘Delirium tremens’ in this chapter).\n",
+      "bbox": [
+        47.999900817871094,
+        550.0076904296875,
+        297.7350158691406,
+        558.8952026367188
+      ],
+      "text_sha256": "6cc33a59ce5f9cfdcd74ec75ec3fcc97b5bea705579d95a62084b066a8765086"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

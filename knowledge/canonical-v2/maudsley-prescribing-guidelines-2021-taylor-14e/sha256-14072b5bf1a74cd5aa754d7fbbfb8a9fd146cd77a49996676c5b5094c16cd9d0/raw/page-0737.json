@@ -1,0 +1,299 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0737",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 737,
+  "source_page_index": 736,
+  "source_page_display": 737,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "716    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 7\nReport for individual drugs. Table 7.7 does not include this advice (which is often unin-\nformative), but instead uses primary reference sources. It is usually advisable to con-\ntinue the drug prescribed during pregnancy. Switching drugs postpartum for the purpose \nof breastfeeding is usually not sensible. Table 7.7 should be used as a guide when initiat-\ning treatment postpartum.  In each case the previous response (and lack of response) to \ntreatment must be considered.\nReferences\n\t1.\t Schoretsanitis G, et al. Excretion of antipsychotics into the amniotic fluid, umbilical cord blood, and breast milk: a systematic critical review \nand combined analysis. Ther Drug Monit 2020; 42:245–254.\n\t2.\t Weissman AM, et al. Pooled analysis of antidepressant levels in lactating mothers, breast milk, and nursing infants. Am J Psychiatry 2004; \n161:1066–1078.\n\t3.\t Schmidt FM, et al. Agomelatine in breast milk. Int J Neuropsychopharmacol 2013; 16:497–499.\n\t4.\t Hale TW, et al. Medications and mothers’ milk – 18th edition. New York, USA: Springer Publishing Company; 2019.\n\t5.\t Hoffmann E, et al. Brexanolone injection administration to lactating women: breast milk allopregnanolone levels [30J]. Obstet Gynecol \n2019; 133:115S.\n\t6.\t Briggs GG, et al. Excretion of bupropion in breast milk. Ann Pharmacother 1993; 27:431–433.\n\t7.\t Chaudron LH, et al. Bupropion and breastfeeding: a case of a possible infant seizure. J Clin Psychiatry 2004; 65:881–882.\n\t8.\t Nonacs RM, et al. Bupropion SR for the treatment of postpartum depression: a pilot study. Int J Neuropsychopharmacol 2005; \n8:445–449.\n\t9.\t Haas JS, et al. Bupropion in breast milk: an exposure assessment for potential treatment to prevent post-partum tobacco use. Tob Control \n2004; 13:52–56.\n\t10.\t Baab SW, et al. Serum bupropion levels in 2 breastfeeding mother-infant pairs. J Clin Psychiatry 2002; 63:910–911.\n\t11.\t Berle JO, et al. Antidepressant use during breastfeeding. Curr Womens Health Rev 2011; 7:28–34.\n\t12.\t Davis MF, et al. Bupropion levels in breast milk for 4 mother-infant pairs: more answers to lingering questions. J Clin Psychiatry 2009; \n70:297–298.\n\t13.\t Neuman G, et al. Bupropion and escitalopram during lactation. Ann Pharmacother 2014; 48:928–931.\n\t14.\t Burt VK, et al. The use of psychotropic medications during breast-feeding. Am J Psychiatry 2001; 158:1001–1009.\nTable 7.7  Stimulants in breastfeeding\nDrug\nInfant plasma \nconcentration\nEstimated daily \ninfant dose as \nproportion of \nmaternal dose \n(RID)\nAcute adverse \neffects in infant\nDevelopmental \neffects in infant\nAtomoxetine\nNo published data \navailable at the \ntime of writing\nDexamfetamine193\nUndetectable to \n14% of maternal \nplasma level\n2.4–10.6%\nNone reported\nNone reported but \nnot assessed\nLisdexamfetamine\nNo published data \navailable at the \ntime of writing\nMethylphenidate27,194–196\nUndetectable\n0.16–0.7%\nNone reported\nNone reported\nModafinil197,198\nNot reported\n5.3%\nNone reported\nNone reported but \nnot assessed\n",
+  "raw_text_sha256": "957060a9084eab61dde2ebb9999e0bfdbf9b584693166f8d4166743b0dc3a8b3",
+  "coordinates_sha256": "ad26a346aed8f55cbe69bd42af242e6e366188f97d0fd86663bf152fe96ba2de",
+  "block_sequence_sha256": "54a6197c0f2bd72764d118b4a6caeffd7d63784305de645146a2419baba73ee9",
+  "blocks": [
+    {
+      "block_id": "page-0737-block-0000",
+      "order": 0,
+      "text": "716    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "178891abad1b6659b007027d148298081391ada4e44871478569defc87b193de"
+    },
+    {
+      "block_id": "page-0737-block-0001",
+      "order": 1,
+      "text": "CHAPTER 7\n",
+      "bbox": [
+        18.520000457763672,
+        472.7144775390625,
+        28.0,
+        514.0584716796875
+      ],
+      "text_sha256": "6d1a2318236627f2d413db0336034ac4d71cea7172bd0baddf04c66a07292590"
+    },
+    {
+      "block_id": "page-0737-block-0002",
+      "order": 2,
+      "text": "Report for individual drugs. Table 7.7 does not include this advice (which is often unin-\nformative), but instead uses primary reference sources. It is usually advisable to con-\ntinue the drug prescribed during pregnancy. Switching drugs postpartum for the purpose \nof breastfeeding is usually not sensible. Table 7.7 should be used as a guide when initiat-\ning treatment postpartum.  In each case the previous response (and lack of response) to \ntreatment must be considered.\n",
+      "bbox": [
+        61.88999938964844,
+        320.2139892578125,
+        436.679931640625,
+        391.9339904785156
+      ],
+      "text_sha256": "5596747519539444b344718e4fa0e5650981f12012b6f7b3305f35c21d8e3f1f"
+    },
+    {
+      "block_id": "page-0737-block-0003",
+      "order": 3,
+      "text": "References\n",
+      "bbox": [
+        61.88999938964844,
+        409.3689880371094,
+        117.92399597167969,
+        422.40399169921875
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0737-block-0004",
+      "order": 4,
+      "text": "\t1.\t Schoretsanitis G, et al. Excretion of antipsychotics into the amniotic fluid, umbilical cord blood, and breast milk: a systematic critical review \n",
+      "bbox": [
+        68.48999786376953,
+        428.989990234375,
+        435.5461120605469,
+        436.0220031738281
+      ],
+      "text_sha256": "438d10165e7042faa8ab7c6f3880b17a3523ec9c4790ec0e52626c59190e5adc"
+    },
+    {
+      "block_id": "page-0737-block-0005",
+      "order": 5,
+      "text": "and combined analysis. Ther Drug Monit 2020; 42:245–254.\n\t2.\t Weissman AM, et al. Pooled analysis of antidepressant levels in lactating mothers, breast milk, and nursing infants. Am J Psychiatry 2004; \n",
+      "bbox": [
+        68.48999786376953,
+        437.8459777832031,
+        435.6000061035156,
+        454.0220031738281
+      ],
+      "text_sha256": "ee964886b2a831410f8e145d2a07676b314753fd7aad7de6240526e7e72ee866"
+    },
+    {
+      "block_id": "page-0737-block-0006",
+      "order": 6,
+      "text": "161:1066–1078.\n\t3.\t Schmidt FM, et al. Agomelatine in breast milk. Int J Neuropsychopharmacol 2013; 16:497–499.\n\t4.\t Hale TW, et al. Medications and mothers’ milk – 18th edition. New York, USA: Springer Publishing Company; 2019.\n\t5.\t Hoffmann E, et al. Brexanolone injection administration to lactating women: breast milk allopregnanolone levels [30J]. Obstet Gynecol \n",
+      "bbox": [
+        68.48999786376953,
+        455.8459777832031,
+        435.52801513671875,
+        490.0220031738281
+      ],
+      "text_sha256": "691b098613c05475aa734d8d68db2c80f2fb967fb9522ca52b3b009edd93d7a1"
+    },
+    {
+      "block_id": "page-0737-block-0007",
+      "order": 7,
+      "text": "2019; 133:115S.\n\t6.\t Briggs GG, et al. Excretion of bupropion in breast milk. Ann Pharmacother 1993; 27:431–433.\n\t7.\t Chaudron LH, et al. Bupropion and breastfeeding: a case of a possible infant seizure. J Clin Psychiatry 2004; 65:881–882.\n\t8.\t Nonacs RM, et al. Bupropion SR for the treatment of postpartum depression: a pilot study. Int J Neuropsychopharmacol 2005; \n",
+      "bbox": [
+        68.48999786376953,
+        491.8459777832031,
+        435.5880126953125,
+        526.02197265625
+      ],
+      "text_sha256": "208a96c8f53556f7cba6aff296516ed281672b65c28ad7b4d31b528ae6056de3"
+    },
+    {
+      "block_id": "page-0737-block-0008",
+      "order": 8,
+      "text": "8:445–449.\n\t9.\t Haas JS, et al. Bupropion in breast milk: an exposure assessment for potential treatment to prevent post-partum tobacco use. Tob Control \n",
+      "bbox": [
+        68.48999786376953,
+        527.8460083007812,
+        435.5938720703125,
+        544.02197265625
+      ],
+      "text_sha256": "06acc09fc5ce0970144a661f2ed2e834d995276f2f35904ec13866c302d5d227"
+    },
+    {
+      "block_id": "page-0737-block-0009",
+      "order": 9,
+      "text": "2004; 13:52–56.\n\t10.\t Baab SW, et al. Serum bupropion levels in 2 breastfeeding mother-infant pairs. J Clin Psychiatry 2002; 63:910–911.\n\t11.\t Berle JO, et al. Antidepressant use during breastfeeding. Curr Womens Health Rev 2011; 7:28–34.\n\t12.\t Davis MF, et al. Bupropion levels in breast milk for 4 mother-infant pairs: more answers to lingering questions. J Clin Psychiatry 2009; \n",
+      "bbox": [
+        65.19000244140625,
+        545.8460083007812,
+        435.5102233886719,
+        580.02197265625
+      ],
+      "text_sha256": "179a5672c41142fbc2415e10b48822c057e259211ad5ab0c7b376e8594553a03"
+    },
+    {
+      "block_id": "page-0737-block-0010",
+      "order": 10,
+      "text": "70:297–298.\n\t13.\t Neuman G, et al. Bupropion and escitalopram during lactation. Ann Pharmacother 2014; 48:928–931.\n\t14.\t Burt VK, et al. The use of psychotropic medications during breast-feeding. Am J Psychiatry 2001; 158:1001–1009.\n",
+      "bbox": [
+        65.19000244140625,
+        581.8460083007812,
+        372.41400146484375,
+        607.02197265625
+      ],
+      "text_sha256": "05e4d2ca1dce7bb1a625dbfdead40d45012facb2da534d074fffdb153a9144cb"
+    },
+    {
+      "block_id": "page-0737-block-0011",
+      "order": 11,
+      "text": "Table 7.7  Stimulants in breastfeeding\n",
+      "bbox": [
+        67.88999938964844,
+        70.08790588378906,
+        189.44996643066406,
+        78.97540283203125
+      ],
+      "text_sha256": "5807b8dc0b68674b65c2241a36cf9132615a51ef9479ba1793deb4014dda7374"
+    },
+    {
+      "block_id": "page-0737-block-0012",
+      "order": 12,
+      "text": "Drug\n",
+      "bbox": [
+        61.88999938964844,
+        130.71290588378906,
+        79.38749694824219,
+        139.60040283203125
+      ],
+      "text_sha256": "feeef2eabd03bd6219846b6c95a917cef51eff084f3ec2edbb873258f191a35b"
+    },
+    {
+      "block_id": "page-0737-block-0013",
+      "order": 13,
+      "text": "Infant plasma \nconcentration\n",
+      "bbox": [
+        152.3925018310547,
+        120.71540832519531,
+        202.82252502441406,
+        139.60040283203125
+      ],
+      "text_sha256": "29863d92e1f49f275102004b71edc5a8bbfde8bdd0126e334af9bbf28b208d6e"
+    },
+    {
+      "block_id": "page-0737-block-0014",
+      "order": 14,
+      "text": "Estimated daily \ninfant dose as \nproportion of \nmaternal dose \n(RID)\n",
+      "bbox": [
+        224.26499938964844,
+        90.71540832519531,
+        280.5374755859375,
+        139.5928955078125
+      ],
+      "text_sha256": "fb031e4dac3db459ab315a48bfd298fcdfcee2e46f70d9199ffd316bd01e5a80"
+    },
+    {
+      "block_id": "page-0737-block-0015",
+      "order": 15,
+      "text": "Acute adverse \neffects in infant\n",
+      "bbox": [
+        296.13751220703125,
+        120.70790100097656,
+        351.8475036621094,
+        139.5928955078125
+      ],
+      "text_sha256": "381695f352ba7d2d8e830ba953c2b0567a3e7f9e29f1d63502300aba7b0f80ea"
+    },
+    {
+      "block_id": "page-0737-block-0016",
+      "order": 16,
+      "text": "Developmental \neffects in infant\n",
+      "bbox": [
+        368.010009765625,
+        120.70790100097656,
+        423.862548828125,
+        139.5928955078125
+      ],
+      "text_sha256": "194c08362111f67284674d57684c8699b31c40d62c424b7d7bbdca630bbbd725"
+    },
+    {
+      "block_id": "page-0737-block-0017",
+      "order": 17,
+      "text": "Atomoxetine\nNo published data \navailable at the \ntime of writing\n",
+      "bbox": [
+        61.88250732421875,
+        151.0078887939453,
+        212.82749938964844,
+        179.71038818359375
+      ],
+      "text_sha256": "be404b10a26fd5b76f3ea556b192c81ab34579834a5f582f42f48c7ef6ccd9e1"
+    },
+    {
+      "block_id": "page-0737-block-0018",
+      "order": 18,
+      "text": "Dexamfetamine193\nUndetectable to \n14% of maternal \nplasma level\n",
+      "bbox": [
+        61.88250732421875,
+        189.13038635253906,
+        209.614990234375,
+        217.84539794921875
+      ],
+      "text_sha256": "d8f5951ea032e718e5e9f9db5b85e8b3dd79b0cc70fbcde97e09de70473ed24a"
+    },
+    {
+      "block_id": "page-0737-block-0019",
+      "order": 19,
+      "text": "2.4–10.6%\nNone reported\nNone reported but \nnot assessed\n",
+      "bbox": [
+        224.2624969482422,
+        189.13539123535156,
+        429.56011962890625,
+        207.84039306640625
+      ],
+      "text_sha256": "d84890a841437225fc66fc0b975b1f09b5062715919aa669f657b4887b11915e"
+    },
+    {
+      "block_id": "page-0737-block-0020",
+      "order": 20,
+      "text": "Lisdexamfetamine\nNo published data \navailable at the \ntime of writing\n",
+      "bbox": [
+        61.8800048828125,
+        227.2578887939453,
+        212.8249969482422,
+        255.96038818359375
+      ],
+      "text_sha256": "e76931aff54f42c324f55825fd88ffb47be1d18d7b42c8355025435f474513d5"
+    },
+    {
+      "block_id": "page-0737-block-0021",
+      "order": 21,
+      "text": "Methylphenidate27,194–196\nUndetectable\n0.16–0.7%\nNone reported\nNone reported\n",
+      "bbox": [
+        61.8800048828125,
+        265.3804016113281,
+        414.5525817871094,
+        274.10040283203125
+      ],
+      "text_sha256": "1bbdf24b17ff4cb1c45f82690ab30f7fd02da53e84ef8d2acc053d8bae921111"
+    },
+    {
+      "block_id": "page-0737-block-0022",
+      "order": 22,
+      "text": "Modafinil197,198\nNot reported\n5.3%\nNone reported\nNone reported but \nnot assessed\n",
+      "bbox": [
+        61.87999725341797,
+        283.5179138183594,
+        429.56011962890625,
+        302.222900390625
+      ],
+      "text_sha256": "c91059723bf493ce3b6aad5b7a1a0cefcef64db513f99640793fe6b5ceed2e01"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

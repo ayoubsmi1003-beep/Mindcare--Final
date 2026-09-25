@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0369",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 369,
+  "source_page_index": 368,
+  "source_page_display": 369,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "348    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nStopping antidepressants\nApproximately half of patients will experience withdrawal symptoms on reducing or \nstopping their antidepressant.1 For some of these patients the symptoms will be severe \n(possibly up to half)1 and can be long-lasting (for months, or years).1,2 For others they \nmay be mild and self-limiting. Some have identified a separate category of withdrawal, \nknown as post-acute withdrawal syndrome (PAWS), which can last for years and \ninvolve myriad, sometimes debilitating symptoms, but the pathophysiology is poorly \nunderstood.3\nThere are a number of characteristics of antidepressant use that influence the likeli-\nhood of withdrawal effects. Patients who have been on antidepressants for longer peri-\nods and higher doses are more likely to have withdrawal effects.4,5 Antidepressants with \nshort half-lives and cholinergic or noradrenergic effects tend to be associated with more \nsevere withdrawal – venlafaxine, duloxetine and paroxetine are the most often impli-\ncated.6,7 Patients who stop abruptly or rapidly have more withdrawal effects.8–10 There \nare likely to be a range of individual physiological (and psychological) differences, as \nyet poorly understood, which also determine withdrawal severity.11\nTheoretical basis for tapering\nThere is some evidence that tapering slowly can reduce the chance of intolerable with-\ndrawal symptoms, by spreading out symptoms over a longer period.9,10,12 Randomised \nstudies show that tapering for up to 14 days either demonstrated no13 or minimal14 \nimprovement in withdrawal symptom severity over abrupt discontinuation.15 It has \ngenerally been concluded from these studies that longer tapering regimes are required.16,17 \nTapering over months9,10,12 seems to reduce the risk of withdrawal symptoms, but some \npatients take years. Clinical experience suggests that most patients take between 3 \nmonths and 2 years to withdraw in a tolerable manner from long-term antidepressant \ntreatment.\nAlthough reducing by linear amounts (e.g. 50mg, 37.5mg, 25mg, 12.5mg, 0 for ser-\ntraline) seems intuitively reasonable (and practical, through splitting tablets), because \nof the hyperbolic relationship between dose of antidepressant and effect on its principal \ntarget, the serotonin receptor (SERT), (following the law of mass action)18 this is likely \nto produce increasingly severe withdrawal symptoms (Figure 3.4a).11 This is consistent \nwith patient reports that reducing at small doses is the most difficult aspect of the \nprocess.\nIt makes more sense to reduce the drug in such a way that produces an ‘even’ \namount of reduction in effect on target receptors: this entails hyperbolic dose reduc-\ntions (Figure 3.4b). This is most easily approximated by exponential (proportional) \nreductions of dose – for example, reducing by between 10% and 20% of the most \nrecent dose every 2–4 weeks (Table 3.10). The final dose before completely stopping \nwill need to be very small (<1mg) to prevent the reduction to zero being a bigger \n‘drop’ than previously tolerated reductions. This is supported by evidence that taper-\ning down to doses much lower than common therapeutic doses (e.g. 0.5mg for sertra-\nline) improves the chance that people will be able to stop antidepressants,12,19 and \nremain off them.20\n",
+  "raw_text_sha256": "27aac3d21955a4aa9b770b457a8c1400370a617ff524701c803b92f0c9afd90b",
+  "coordinates_sha256": "796dc7c1bef0a7c9c3022ad268366619165ad171fd2375ae04766df99718164f",
+  "block_sequence_sha256": "e46fa79038aa0ecaa1f0f1a71c44ee1cda37d713efd8d59df9e4db406c237883",
+  "blocks": [
+    {
+      "block_id": "page-0369-block-0000",
+      "order": 0,
+      "text": "348    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "adef156a21a89e54595b68392c631efaadf6db64790cbb9a87c8e53cd9383a3e"
+    },
+    {
+      "block_id": "page-0369-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0369-block-0002",
+      "order": 2,
+      "text": "Stopping antidepressants\n",
+      "bbox": [
+        68.88999938964844,
+        66.06539916992188,
+        200.70298767089844,
+        79.10040283203125
+      ],
+      "text_sha256": "1914075b671d19ff88f70108787dd759cec2433a9d771a1e07bdca4b697613b0"
+    },
+    {
+      "block_id": "page-0369-block-0003",
+      "order": 3,
+      "text": "Approximately half of patients will experience withdrawal symptoms on reducing or \nstopping their antidepressant.1 For some of these patients the symptoms will be severe \n(possibly up to half)1 and can be long-lasting (for months, or years).1,2 For others they \nmay be mild and self-limiting. Some have identified a separate category of withdrawal, \nknown as post-acute withdrawal syndrome (PAWS), which can last for years and \ninvolve myriad, sometimes debilitating symptoms, but the pathophysiology is poorly \nunderstood.3\n",
+      "bbox": [
+        61.88629150390625,
+        84.910400390625,
+        436.6963195800781,
+        168.63040161132812
+      ],
+      "text_sha256": "98cbc94185f1912fa6fb02a99c10b48c3de7867dbccc6ee65951b10129c1d441"
+    },
+    {
+      "block_id": "page-0369-block-0004",
+      "order": 4,
+      "text": "There are a number of characteristics of antidepressant use that influence the likeli-\nhood of withdrawal effects. Patients who have been on antidepressants for longer peri-\nods and higher doses are more likely to have withdrawal effects.4,5 Antidepressants with \nshort half-lives and cholinergic or noradrenergic effects tend to be associated with more \nsevere withdrawal – venlafaxine, duloxetine and paroxetine are the most often impli-\ncated.6,7 Patients who stop abruptly or rapidly have more withdrawal effects.8–10 There \nare likely to be a range of individual physiological (and psychological) differences, as \nyet poorly understood, which also determine withdrawal severity.11\n",
+      "bbox": [
+        61.88677978515625,
+        168.910400390625,
+        436.6741638183594,
+        264.6304016113281
+      ],
+      "text_sha256": "e4dfa08ab02c08498c483c09b7a209ec02391b55532d30162385fb21bbb33f4f"
+    },
+    {
+      "block_id": "page-0369-block-0005",
+      "order": 5,
+      "text": "Theoretical basis for tapering\n",
+      "bbox": [
+        61.88999938964844,
+        282.0653991699219,
+        213.28297424316406,
+        295.10040283203125
+      ],
+      "text_sha256": "9b16b7ab1e0d94f18d9fc08bfb5d9fc3ae4fd36c475c06105430e69f7296e830"
+    },
+    {
+      "block_id": "page-0369-block-0006",
+      "order": 6,
+      "text": "There is some evidence that tapering slowly can reduce the chance of intolerable with-\ndrawal symptoms, by spreading out symptoms over a longer period.9,10,12 Randomised \nstudies show that tapering for up to 14 days either demonstrated no13 or minimal14 \nimprovement in withdrawal symptom severity over abrupt discontinuation.15 It has \ngenerally been concluded from these studies that longer tapering regimes are required.16,17 \nTapering over months9,10,12 seems to reduce the risk of withdrawal symptoms, but some \npatients take years. Clinical experience suggests that most patients take between 3 \nmonths and 2 years to withdraw in a tolerable manner from long-term antidepressant \ntreatment.\n",
+      "bbox": [
+        61.886993408203125,
+        300.910400390625,
+        436.6770935058594,
+        408.6304016113281
+      ],
+      "text_sha256": "a961068e97ef86b7c61a378010c756f0a3dc3aeac7629ff1ba3da37bc6e9fdbd"
+    },
+    {
+      "block_id": "page-0369-block-0007",
+      "order": 7,
+      "text": "Although reducing by linear amounts (e.g. 50mg, 37.5mg, 25mg, 12.5mg, 0 for ser-\ntraline) seems intuitively reasonable (and practical, through splitting tablets), because \nof the hyperbolic relationship between dose of antidepressant and effect on its principal \ntarget, the serotonin receptor (SERT), (following the law of mass action)18 this is likely \nto produce increasingly severe withdrawal symptoms (Figure 3.4a).11 This is consistent \nwith patient reports that reducing at small doses is the most difficult aspect of the \nprocess.\n",
+      "bbox": [
+        61.886993408203125,
+        408.910400390625,
+        436.6868896484375,
+        492.6304016113281
+      ],
+      "text_sha256": "c3398754c4d0dab7ec1630263f259e5f8e0b4727653a1395b649e1e73a753b31"
+    },
+    {
+      "block_id": "page-0369-block-0008",
+      "order": 8,
+      "text": "It makes more sense to reduce the drug in such a way that produces an ‘even’ \namount of reduction in effect on target receptors: this entails hyperbolic dose reduc-\ntions (Figure 3.4b). This is most easily approximated by exponential (proportional) \nreductions of dose – for example, reducing by between 10% and 20% of the most \nrecent dose every 2–4 weeks (Table 3.10). The final dose before completely stopping \nwill need to be very small (<1mg) to prevent the reduction to zero being a bigger \n‘drop’ than previously tolerated reductions. This is supported by evidence that taper-\ning down to doses much lower than common therapeutic doses (e.g. 0.5mg for sertra-\nline) improves the chance that people will be able to stop antidepressants,12,19 and \nremain off them.20\n",
+      "bbox": [
+        61.888916015625,
+        492.910400390625,
+        436.7346496582031,
+        612.6304321289062
+      ],
+      "text_sha256": "3093c67da702e4224e4e9f0509c04c14dacde3136899c9876327ea2c872b0803"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

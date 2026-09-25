@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0600",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 600,
+  "source_page_index": 599,
+  "source_page_display": 600,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Children and adolescents    579\nCHAPTER 5\nRestricted repetitive behaviours and interests (RRBI)\nRRBIs are distressing and disruptive to functioning and therefore an important treat-\nment target to improve overall outcomes in ASD.9 Behavioural therapies should be used \nas first line. When RRBIs are severe with significant impact on functioning and/or pose \nrisks to others or self then pharmacotherapy can be considered.\nA Cochrane review (last updated in 2013) found ‘no evidence of effect of SSRIs \non reducing RRBIs in children and emerging evidence of harm’ although there are \ndata that support their use in adults.10 Research with risperidone indicates that it is \neffective in reducing RRBIs in children who have high levels of irritability or aggres-\nsion,11 thus making doubtful any specific efficacy for repetitive behaviours. \nReductions in stereotypical behaviours have also been reported12–15 albeit in studies \nwith methodological limitations.6 A 2020 meta-analysis of studies on a wide range \nof currently available pharmacological agents showed evidence supporting only \nantipsychotic medication16 whereas another recent meta-analysis of nine studies \nfound no evidence for any pharmacological agent in reducing RRBIs.17 Overall, \ngiven the profile of adverse effects of dopamine blocking agents, the recent consen-\nsus guidance from the British Association for Psychopharmacology6 cautions against \ntheir routine use for the treatment of RRBIs. If they are used, they should be pre-\nscribed in small doses and as part of a carefully considered, time-limited and moni-\ntored overall treatment plan.\nSocial and communication impairment\nCurrently, no drug has been consistently shown to improve the core social and com-\nmunication impairments in ASD.7 Risperidone may have a secondary effect through \nimprovement in irritability.18 Analysis of data from two multi-centre trials suggested \nthat risperidone was effective for the treatment of social disability in children with \nASD.19 Glutamatergic drugs and oxytocin are currently the most promising.20 However, \na recent meta-analysis of 12 RCTs suggested that oxytocin had no significant effect on \nsocial communication even though individual RCTs had reported improvements from \noxytocin.21 Larger studies with better methodology are needed.22 Sulforaphane,23 insu-\nlin growth factor 1 (IGF-1)24 await further work to prove their efficacy in modifying \nASD core symptoms, as do glutamatergic agents.25 Acetylcysteine26 is probably not \neffective.\nThere is growing albeit inconsistent evidence for dietary interventions reducing ASD \ncore symptoms.27,28 Targeting the gut microbiome, including probiotic treatment and \nfaecal microbiota transplants as novel and potential therapeutics for ASD conditions \nhas also drawn much interest recently.29 However, there is little evidence to support the \nuse of nutritional supplements or dietary therapies for children with ASD27 or indeed \nany relationship between maternal food intake and child’s diet and the development of \nASD/symptoms severity.28\n",
+  "raw_text_sha256": "3bd70813e7d9ee46a3d93c3629a902d4e299d5765f2de95746d39d67aa3c4d70",
+  "coordinates_sha256": "61446b55021dc4bed6bdfe81e534673e40ee1095bf3dc4dcbaed44b95598d29d",
+  "block_sequence_sha256": "b1417f6ab9ca56992f7889316ce522f08c2c0aa1cb28f3f8661abfd1b9370f13",
+  "blocks": [
+    {
+      "block_id": "page-0600-block-0000",
+      "order": 0,
+      "text": "Children and adolescents    579\n",
+      "bbox": [
+        288.94488525390625,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "d94bcca1462c4a226c1a3f53c074542228a2a579feef169902ff4d777637d157"
+    },
+    {
+      "block_id": "page-0600-block-0001",
+      "order": 1,
+      "text": "CHAPTER 5\n",
+      "bbox": [
+        454.4096984863281,
+        339.3385009765625,
+        463.88970947265625,
+        380.6824951171875
+      ],
+      "text_sha256": "f4b8b4a0fc64e7b3b74e7336306d0959d0384683e387792724f393162639020a"
+    },
+    {
+      "block_id": "page-0600-block-0002",
+      "order": 2,
+      "text": "Restricted repetitive behaviours and interests (RRBI)\n",
+      "bbox": [
+        48.0,
+        62.500465393066406,
+        292.4898986816406,
+        74.3504638671875
+      ],
+      "text_sha256": "70dd4c4e43a8b936b3dda3b44d0319e33674e5fdec136452f968a7ffb97ea954"
+    },
+    {
+      "block_id": "page-0600-block-0003",
+      "order": 3,
+      "text": "RRBIs are distressing and disruptive to functioning and therefore an important treat-\nment target to improve overall outcomes in ASD.9 Behavioural therapies should be used \nas first line. When RRBIs are severe with significant impact on functioning and/or pose \nrisks to others or self then pharmacotherapy can be considered.\n",
+      "bbox": [
+        48.0,
+        80.41046142578125,
+        422.75994873046875,
+        128.13046264648438
+      ],
+      "text_sha256": "425c3037d8cec562475960e8d334fd0b736056ade9b24084093e9dccbf3bc70c"
+    },
+    {
+      "block_id": "page-0600-block-0004",
+      "order": 4,
+      "text": "A Cochrane review (last updated in 2013) found ‘no evidence of effect of SSRIs \non reducing RRBIs in children and emerging evidence of harm’ although there are \ndata that support their use in adults.10 Research with risperidone indicates that it is \neffective in reducing RRBIs in children who have high levels of irritability or aggres-\nsion,11 thus making doubtful any specific efficacy for repetitive behaviours. \nReductions in stereotypical behaviours have also been reported12–15 albeit in studies \nwith methodological limitations.6 A 2020 meta-analysis of studies on a wide range \nof currently available pharmacological agents showed evidence supporting only \nantipsychotic medication16 whereas another recent meta-analysis of nine studies \nfound no evidence for any pharmacological agent in reducing RRBIs.17 Overall, \ngiven the profile of adverse effects of dopamine blocking agents, the recent consen-\nsus guidance from the British Association for Psychopharmacology6 cautions against \ntheir routine use for the treatment of RRBIs. If they are used, they should be pre-\nscribed in small doses and as part of a carefully considered, time-limited and moni-\ntored overall treatment plan.\n",
+      "bbox": [
+        47.996002197265625,
+        128.41046142578125,
+        422.80902099609375,
+        308.1304931640625
+      ],
+      "text_sha256": "5b49df451efbfcc6c38c580df55979b6816a3c0c1f343666948477e453da56af"
+    },
+    {
+      "block_id": "page-0600-block-0005",
+      "order": 5,
+      "text": "Social and communication impairment\n",
+      "bbox": [
+        47.99859619140625,
+        326.50048828125,
+        228.02857971191406,
+        338.3504943847656
+      ],
+      "text_sha256": "c8cf38ffa88234f631f2e0b6093ba02a9fa6f37cfe4aa2e92b154041e235242b"
+    },
+    {
+      "block_id": "page-0600-block-0006",
+      "order": 6,
+      "text": "Currently, no drug has been consistently shown to improve the core social and com-\nmunication impairments in ASD.7 Risperidone may have a secondary effect through \nimprovement in irritability.18 Analysis of data from two multi-centre trials suggested \nthat risperidone was effective for the treatment of social disability in children with \nASD.19 Glutamatergic drugs and oxytocin are currently the most promising.20 However, \na recent meta-analysis of 12 RCTs suggested that oxytocin had no significant effect on \nsocial communication even though individual RCTs had reported improvements from \noxytocin.21 Larger studies with better methodology are needed.22 Sulforaphane,23 insu-\nlin growth factor 1 (IGF-1)24 await further work to prove their efficacy in modifying \nASD core symptoms, as do glutamatergic agents.25 Acetylcysteine26 is probably not \neffective.\n",
+      "bbox": [
+        47.996795654296875,
+        344.4104919433594,
+        422.8067932128906,
+        476.1304931640625
+      ],
+      "text_sha256": "646adf05a8345c9635ebdd78a668158f330e68d253c427dd07a095399a99964f"
+    },
+    {
+      "block_id": "page-0600-block-0007",
+      "order": 7,
+      "text": "There is growing albeit inconsistent evidence for dietary interventions reducing ASD \ncore symptoms.27,28 Targeting the gut microbiome, including probiotic treatment and \nfaecal microbiota transplants as novel and potential therapeutics for ASD conditions \nhas also drawn much interest recently.29 However, there is little evidence to support the \nuse of nutritional supplements or dietary therapies for children with ASD27 or indeed \nany relationship between maternal food intake and child’s diet and the development of \nASD/symptoms severity.28\n",
+      "bbox": [
+        47.995697021484375,
+        476.4104919433594,
+        422.8064270019531,
+        560.1304931640625
+      ],
+      "text_sha256": "04c2f73564d7a466fdfc52357bc931d430c80641013c437e5f62ee5271370196"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

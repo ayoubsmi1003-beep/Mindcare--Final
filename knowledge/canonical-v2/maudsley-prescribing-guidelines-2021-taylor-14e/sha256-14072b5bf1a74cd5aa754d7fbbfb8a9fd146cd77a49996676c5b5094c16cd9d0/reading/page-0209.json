@@ -1,0 +1,12 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0209",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 209,
+  "source_page_index": 208,
+  "repaired_text": "188    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nReference\nNumber \nof studies \nincluded\nRelative  \nRisk vs. no use \nFGAs \n(OR)\nRelative  \nRisk vs. no use \nSGAs \n(OR)\nRelative  \nRisk vs. no use \nAll anti-psychotics \n(OR)\nComments\nDi et al., 20219\n22\n1.83 VTE/PE\n1.75 VTE\n3.79 PE\n2.06 VTE/PE\n1.53 VTE\n3.69 PE\n1.60 VTE/PE\nHighest risk in \nyounger patients \n(<60 years).\nLow potency FGAs \nhighest risk\nLiu et al., 202110\n28\n1.47 VTE/PE\n1.62 VTE/PE\n1.55 VTE\n3.68 PE\n2.01 VTE/PE\nNew users of \nanti-psychotics had \nhigher risk than \ncontinuing patients.\nRisk slightly elevated \nwith higher doses vs \nlow doses\nMechanisms\nSeveral mechanisms have been suggested to explain the association between antipsy-\nchotics and thromboembolism. These proposed mechanisms are outlined in Table 1.33.\nTable 1.33  Proposed mechanisms for antipsychotic-associated venous thromboembolism11–13\nSedation*\nObesity*\nHyperprolactinaemia*\nElevated phospholipid antibodies\nElevated platelet aggregation**\nElevated plasma homocysteine\n*Some evidence that these factors are not the mechanism for antipsychotic-induced thromboembolism.14\n**In vitro data suggest radically different effects on platelet aggregation for different antipsychotics.12\nOutcomes\nIncreased risk of thromboembolism is reflected in numerous published reports of ele-\nvated incidence of pulmonary embolism,15 stroke16 and myocardial infarction.17,18\nSummary\nAntipsychotics are almost certainly associated with a small but important increased \nrisk of venous thromboembolism and associated hazards of pulmonary embolism, \nstroke and myocardial infarction. Risk appears to be greatest during the early part of \ntreatment and in younger people, and is probably dose-related.",
+  "repaired_text_sha256": "802fa4c6e3ffd9ec20180b5ce9b40f5ce3b5ec5370ad3fe0d7f48e8ca180a3b1",
+  "raw_text_sha256": "08c4e8963e444f3901331bb20b1e524364e4361da19826dda2d652cbea84588f",
+  "repair_ids": [],
+  "raw_file": "raw/page-0209.json"
+}

@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0317",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 317,
+  "source_page_index": 316,
+  "source_page_display": 317,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "296    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  2\nProphylaxis in bipolar disorder\nThere is general agreement that successful drug regimens used in acute episodes should be \ncontinued as prophylaxis. To a large extent, therefore, the choice of maintenance treatment \nfor individual patients is dictated by the efficacy and tolerability of acute treatment. Possible \nexceptions include the consideration of withdrawing antipsychotic treatment from a mood \nstabiliser combination after an episode of mania (recommended by some authorities1) and \nthe withdrawal of antidepressants after the successful treatment of an acute episode of \nbipolar depression, assuming a mood stabiliser is continued (recommended by most author-\nities, at least implicitly2). There is some evidence that withdrawing antipsychotics from com-\nbination regimens with lithium or valproate worsens the risk of relapse.3\nResidual mood symptoms after an acute episode are a strong predictor of recur-\nrence.4,5 With respect to monotherapy, most evidence supports the efficacy of lithium6–10 \nin preventing episodes of mania and depression.11 Carbamazepine is somewhat less \neffective,10,12 and the long-term efficacy of valproate is uncertain,8,9,13–15 although it too \nmay protect against relapse both into depression and mania.10,16 Lithium has the advan-\ntage of a proven anti-suicidal effect17–20 but perhaps, relative to other mood stabilisers, \nthe disadvantage of a worsened outcome following abrupt discontinuation21–24 (although \nthe effect of abrupt discontinuation of other drugs may be similar24). Early use of lith-\nium might increase the likelihood of efficacy.25\nThe independent BALANCE study found that valproate as monotherapy was rela-\ntively less effective than lithium or the combination of lithium and valproate,14 casting \ndoubt on its use as a first-line single treatment. Also, a large observational study has \nshown that lithium is much more effective than valproate in preventing relapse to any \ncondition and in preventing rehospitalisation.26 Given this and the fact that valproate is \nnot licensed for prophylaxis, it should be considered a second-line treatment.\nConventional antipsychotics have traditionally been used and are perceived to be \neffective although the objective evidence base is rather weak.27,28 FGA depots probably \nprotect against mania but may worsen depression29 (see section ‘Antipsychotic long \nacting injections in bipolar disorder’). Evidence supports the efficacy of many SGAs \nparticularly olanzapine,9,30 quetiapine,31 aripiprazole32 and risperidone.33 Most studies \nexamine combinations with mood stabilisers and there are few supportive monother-\napy trials: only olanzapine, quetiapine and risperidone monotherapy could be shown to \nout-perform placebo in a 2017 review.34\nOlanzapine, quetiapine and aripiprazole are licensed for prophylaxis and appear to \nprotect against both mania and depression.34 Asenapine may also be effective,35 as may \nziprasidone.36 There is little to choose between individual SGAs.34\nAll antipsychotic + mood stabiliser combinations were more effective than mood \nstabiliser alone in a 2020 meta-analysis of 41 studies and 9821 participants.37 \nAripiprazole  +  valproate was numerically the best maintenance treatment (risk of \nrelapse to any episode) in this analysis. A contemporary meta-analysis of 14 mono-\ntherapy studies found that monotherapy with aripiprazole, olanzapine, lurasidone, ris-\nperidone or quetiapine was more effective than placebo over 6 months or longer.38\nLong-acting aripiprazole has been shown to delay the time to, and reduced the rate \nof recurrence of, manic episodes and was generally safe and well tolerated.39 The use of \nrisperidone LAI is well supported by RCTs40 and naturalistic studies41 (see section \n‘Antipsychotic long acting injections in bipolar disorder’).\n",
+  "raw_text_sha256": "b539e6f1ccf818e9e5d8d242743fc0cdb1d0719b9da285498fd9da8a987cdf8e",
+  "coordinates_sha256": "9e0c80a551d220c0dad535a5af08ffa5a4c30a393917da00ad0f1bf6b5436dd0",
+  "block_sequence_sha256": "bf3204eb889ea6c316f56e10036374c5e8206da75796c4fefca46914ae742818",
+  "blocks": [
+    {
+      "block_id": "page-0317-block-0000",
+      "order": 0,
+      "text": "296    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "ef4383fdda62b4de159b733a0fd66f5509920ffbdb04ec64fe2eb674fcb6e810"
+    },
+    {
+      "block_id": "page-0317-block-0001",
+      "order": 1,
+      "text": "CHAPTER  2\n",
+      "bbox": [
+        19.520000457763672,
+        145.23529052734375,
+        29.0,
+        188.80328369140625
+      ],
+      "text_sha256": "5befcde2fefe074681a51514b484ad31516d952c51183625b5b7b1fb84f30d2c"
+    },
+    {
+      "block_id": "page-0317-block-0002",
+      "order": 2,
+      "text": "Prophylaxis in bipolar disorder\n",
+      "bbox": [
+        68.88999938964844,
+        66.06546020507812,
+        226.8059539794922,
+        79.1004638671875
+      ],
+      "text_sha256": "5455a0ae8b699377f2d3530e54b3f5119e08d17f8d77d3569dc0177b4d7e8ab4"
+    },
+    {
+      "block_id": "page-0317-block-0003",
+      "order": 3,
+      "text": "There is general agreement that successful drug regimens used in acute episodes should be \ncontinued as prophylaxis. To a large extent, therefore, the choice of maintenance treatment \nfor individual patients is dictated by the efficacy and tolerability of acute treatment. Possible \nexceptions include the consideration of withdrawing antipsychotic treatment from a mood \nstabiliser combination after an episode of mania (recommended by some authorities1) and \nthe withdrawal of antidepressants after the successful treatment of an acute episode of \nbipolar depression, assuming a mood stabiliser is continued (recommended by most author-\nities, at least implicitly2). There is some evidence that withdrawing antipsychotics from com-\nbination regimens with lithium or valproate worsens the risk of relapse.3\n",
+      "bbox": [
+        61.88999938964844,
+        84.91046142578125,
+        436.7098693847656,
+        192.63046264648438
+      ],
+      "text_sha256": "1e95b923abf135e3ee2ef38d826c811a02f56a87c5a444b50c9f2296e6a11f42"
+    },
+    {
+      "block_id": "page-0317-block-0004",
+      "order": 4,
+      "text": "Residual mood symptoms after an acute episode are a strong predictor of recur-\nrence.4,5 With respect to monotherapy, most evidence supports the efficacy of lithium6–10 \nin preventing episodes of mania and depression.11 Carbamazepine is somewhat less \neffective,10,12 and the long-term efficacy of valproate is uncertain,8,9,13–15 although it too \nmay protect against relapse both into depression and mania.10,16 Lithium has the advan-\ntage of a proven anti-suicidal effect17–20 but perhaps, relative to other mood stabilisers, \nthe disadvantage of a worsened outcome following abrupt discontinuation21–24 (although \nthe effect of abrupt discontinuation of other drugs may be similar24). Early use of lith-\nium might increase the likelihood of efficacy.25\n",
+      "bbox": [
+        61.885498046875,
+        192.91049194335938,
+        436.67041015625,
+        300.6304931640625
+      ],
+      "text_sha256": "06b5c0dd60e94234ebf2f345fd0ae8cc4e5072f9b740966e8583d85ab0bef383"
+    },
+    {
+      "block_id": "page-0317-block-0005",
+      "order": 5,
+      "text": "The independent BALANCE study found that valproate as monotherapy was rela-\ntively less effective than lithium or the combination of lithium and valproate,14 casting \ndoubt on its use as a first-line single treatment. Also, a large observational study has \nshown that lithium is much more effective than valproate in preventing relapse to any \ncondition and in preventing rehospitalisation.26 Given this and the fact that valproate is \nnot licensed for prophylaxis, it should be considered a second-line treatment.\n",
+      "bbox": [
+        61.88511657714844,
+        300.9104919433594,
+        436.68499755859375,
+        372.6304931640625
+      ],
+      "text_sha256": "1ee466e70f2f78cc7be31eadf29dc06eb827304e4565a4099b13767c3d4b1bf4"
+    },
+    {
+      "block_id": "page-0317-block-0006",
+      "order": 6,
+      "text": "Conventional antipsychotics have traditionally been used and are perceived to be \neffective although the objective evidence base is rather weak.27,28 FGA depots probably \nprotect against mania but may worsen depression29 (see section ‘Antipsychotic long \nacting injections in bipolar disorder’). Evidence supports the efficacy of many SGAs \nparticularly olanzapine,9,30 quetiapine,31 aripiprazole32 and risperidone.33 Most studies \nexamine combinations with mood stabilisers and there are few supportive monother-\napy trials: only olanzapine, quetiapine and risperidone monotherapy could be shown to \nout-perform placebo in a 2017 review.34\n",
+      "bbox": [
+        61.88511657714844,
+        372.9104919433594,
+        436.69970703125,
+        468.6304931640625
+      ],
+      "text_sha256": "b77ca646101ab7a0043c134e50699053e9615176c4c5d6bdb70d4430c6d83553"
+    },
+    {
+      "block_id": "page-0317-block-0007",
+      "order": 7,
+      "text": "Olanzapine, quetiapine and aripiprazole are licensed for prophylaxis and appear to \nprotect against both mania and depression.34 Asenapine may also be effective,35 as may \nziprasidone.36 There is little to choose between individual SGAs.34\n",
+      "bbox": [
+        61.8861083984375,
+        468.9104919433594,
+        436.67608642578125,
+        504.6304931640625
+      ],
+      "text_sha256": "8ff9c3a34b09c88519895f90c3357b6004aa6db128c9ab1eee209428fa1fa501"
+    },
+    {
+      "block_id": "page-0317-block-0008",
+      "order": 8,
+      "text": "All antipsychotic + mood stabiliser combinations were more effective than mood \nstabiliser alone in a 2020 meta-analysis of 41 studies and 9821 participants.37 \nAripiprazole  +  valproate was numerically the best maintenance treatment (risk of \nrelapse to any episode) in this analysis. A contemporary meta-analysis of 14 mono-\ntherapy studies found that monotherapy with aripiprazole, olanzapine, lurasidone, ris-\nperidone or quetiapine was more effective than placebo over 6 months or longer.38\n",
+      "bbox": [
+        61.890098571777344,
+        504.91046142578125,
+        436.6705017089844,
+        576.6304931640625
+      ],
+      "text_sha256": "370bc2169db2720c18392d66e89d1c7ba3e03f0403577090c494a1daa84508f9"
+    },
+    {
+      "block_id": "page-0317-block-0009",
+      "order": 9,
+      "text": "Long-acting aripiprazole has been shown to delay the time to, and reduced the rate \nof recurrence of, manic episodes and was generally safe and well tolerated.39 The use of \nrisperidone LAI is well supported by RCTs40 and naturalistic studies41 (see section \n‘Antipsychotic long acting injections in bipolar disorder’).\n",
+      "bbox": [
+        61.889007568359375,
+        576.9104614257812,
+        436.6800842285156,
+        624.6304931640625
+      ],
+      "text_sha256": "d26f54aba31e17e52e60dc46a9abd42fc44b9c3490ab9809f78e6db1fab8a839"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

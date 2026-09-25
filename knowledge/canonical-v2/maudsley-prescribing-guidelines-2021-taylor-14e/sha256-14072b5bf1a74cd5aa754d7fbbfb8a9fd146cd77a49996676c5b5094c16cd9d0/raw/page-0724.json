@@ -1,0 +1,383 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0724",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 724,
+  "source_page_index": 723,
+  "source_page_display": 724,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Pregnancy and breastfeeding    703\nCHAPTER 7\n■\n■It is usually inappropriate to stop breastfeeding except when the currently prescribed \ndrug is contraindicated in breastfeeding. As treatment of maternal mental illness is \nthe priority, in such cases treatment should not be withheld but the mother should be \nadvised to bottle feed with formula milk.\n■\n■When initiating a drug postpartum it is:\n■\n■important to consider the mother’s previous response to treatment.\n■\n■Best to avoid a psychotropic with high reported infant plasma levels or a high RID.\n■\n■Important to consider the half-lives of the drugs: drugs with a long half-life can \naccumulate in breast milk and infant serum.\n■\n■Neonates and infants do not have the same capacity for drug clearance as adults. \nPremature infants and infants with renal, hepatic, cardiac or neurological impairment \nare at a greater risk from exposure to drugs.\n■\n■Infants should be monitored for any specific adverse effects of the drugs as well as for \nabnormalities in feeding patterns and growth and development.\n■\n■Infant plasma levels should be monitored if adverse effects are noted or toxicity is \nsuspected.\n■\n■Women receiving sedating medication should be strongly advised to not breastfeed in \nbed as they may fall asleep and roll onto the baby, with a potential risk of hypoxia to \nthe baby.\n■\n■Sedation may affect a woman’s ability to interact with their children. Women receiv-\ning sedating drugs should be monitored for this effect.\n■\n■Wherever possible:\n■\n■Use the lowest effective dose.\n■\n■Avoid polypharmacy.\n■\n■Continue the regimen prescribed during pregnancy.\nTable 7.2 provides summary recommendations for drug choice in breast feeding. \nInformation on individual drugs is contained in Tables 7.3–7.7.\nTable 7.2  Summary of recommendations \nIt is usually advisable to continue the drug which has been used during pregnancy. When initiating a drug \npostpartum previous response and tolerability should be considered\nDrug group\nRecommended drugs\nAntidepressants\nWhen initiating an antidepressant postpartum sertraline and mirtazapine may be \nconsidered. Other drugs may be used. See Table 7.3.\nAntipsychotics\nWomen taking clozapine should be advised against breastfeeding and clozapine should be \ncontinued.\nWhen initiating an antipsychotic postpartum olanzapine or quetiapine may be considered. \nOther drugs may be used. See Table 7.4.\nMood stabilisers\nWomen taking lithium should be advised against breastfeeding and lithium should be \ncontinued.\nWhen initiating a mood stabiliser postpartum a mood-stabilising antipsychotic, such as \nolanzapine or quetiapine may be considered. Other drugs may be used. See Table 7.4.\nSedatives\nBest avoided. Use drug with short half-life. Lorazepam may be considered.\n",
+  "raw_text_sha256": "4b1cce057cf70578f1a1fb08df236cece1f87138681f2db2c31d6a8b2fb4c415",
+  "coordinates_sha256": "c7021b2812c4a15c146547c1517c726dc3cbc7e5276c6dd216fa874cd7972eb9",
+  "block_sequence_sha256": "de1cb80a75b8dafc6f551ba85029aeb2fb0ef1822f4877a5ceaed1735fb2417c",
+  "blocks": [
+    {
+      "block_id": "page-0724-block-0000",
+      "order": 0,
+      "text": "Pregnancy and breastfeeding    703\n",
+      "bbox": [
+        271.769287109375,
+        31.395221710205078,
+        420.00048828125,
+        41.0272216796875
+      ],
+      "text_sha256": "c40dbde49ef1da5fe3e1d6eb33fe6613738c0cd40009c8969897a8661709456a"
+    },
+    {
+      "block_id": "page-0724-block-0001",
+      "order": 1,
+      "text": "CHAPTER 7\n",
+      "bbox": [
+        454.4096984863281,
+        472.7144775390625,
+        463.88970947265625,
+        514.0584716796875
+      ],
+      "text_sha256": "6d1a2318236627f2d413db0336034ac4d71cea7172bd0baddf04c66a07292590"
+    },
+    {
+      "block_id": "page-0724-block-0002",
+      "order": 2,
+      "text": "■\n■It is usually inappropriate to stop breastfeeding except when the currently prescribed \n",
+      "bbox": [
+        47.999900817871094,
+        62.5504150390625,
+        422.7500305175781,
+        74.27041625976562
+      ],
+      "text_sha256": "6deb2d2e2b3cce3cb6145fb05d0ad75878f3271eb867f76e8fb6f336b1edaa08"
+    },
+    {
+      "block_id": "page-0724-block-0003",
+      "order": 3,
+      "text": "drug is contraindicated in breastfeeding. As treatment of maternal mental illness is \nthe priority, in such cases treatment should not be withheld but the mother should be \nadvised to bottle feed with formula milk.\n",
+      "bbox": [
+        57.0,
+        74.5504150390625,
+        422.80987548828125,
+        110.27041625976562
+      ],
+      "text_sha256": "1bf52bc2566e2088370ea4878ebd67648ee5af67968a231d58f35a307d926560"
+    },
+    {
+      "block_id": "page-0724-block-0004",
+      "order": 4,
+      "text": "■\n■When initiating a drug postpartum it is:\n",
+      "bbox": [
+        47.999900817871094,
+        110.5504150390625,
+        228.7099609375,
+        122.27041625976562
+      ],
+      "text_sha256": "4763113671c2847a8fbc765b95d38edfc4db0768f434ee1cb5244b21dde86cc1"
+    },
+    {
+      "block_id": "page-0724-block-0005",
+      "order": 5,
+      "text": "■\n■important to consider the mother’s previous response to treatment.\n",
+      "bbox": [
+        57.19490051269531,
+        122.5504150390625,
+        354.15997314453125,
+        134.27041625976562
+      ],
+      "text_sha256": "bba9a3f7c9db457ed7e86451179a9877c6290e84b790831187906b373881fec0"
+    },
+    {
+      "block_id": "page-0724-block-0006",
+      "order": 6,
+      "text": "■\n■Best to avoid a psychotropic with high reported infant plasma levels or a high RID.\n",
+      "bbox": [
+        57.19490051269531,
+        134.5504150390625,
+        420.3499450683594,
+        146.27041625976562
+      ],
+      "text_sha256": "0e307c6c5df6a7a5c31380dd7e9af40e02dd30d69c2d7feec7c1509ad9b5a907"
+    },
+    {
+      "block_id": "page-0724-block-0007",
+      "order": 7,
+      "text": "■\n■Important to consider the half-lives of the drugs: drugs with a long half-life can \n",
+      "bbox": [
+        57.19490051269531,
+        146.5504150390625,
+        422.719970703125,
+        158.27041625976562
+      ],
+      "text_sha256": "36b550a5de2721af0fb210c210d8adf41a4e71c543d64ec9375996217c0b6ee5"
+    },
+    {
+      "block_id": "page-0724-block-0008",
+      "order": 8,
+      "text": "accumulate in breast milk and infant serum.\n",
+      "bbox": [
+        66.0,
+        158.5504150390625,
+        256.0,
+        170.27041625976562
+      ],
+      "text_sha256": "1f987be22df06e6855288a50f1aecd384226fb25cbeb8ddca59429f0373a303f"
+    },
+    {
+      "block_id": "page-0724-block-0009",
+      "order": 9,
+      "text": "■\n■Neonates and infants do not have the same capacity for drug clearance as adults. \n",
+      "bbox": [
+        47.999900817871094,
+        170.55047607421875,
+        422.7699279785156,
+        182.27047729492188
+      ],
+      "text_sha256": "1d5ce1c85beb6cb8fde9686710be73ff76a927a4279a7057e0ae58923d5879b6"
+    },
+    {
+      "block_id": "page-0724-block-0010",
+      "order": 10,
+      "text": "Premature infants and infants with renal, hepatic, cardiac or neurological impairment \nare at a greater risk from exposure to drugs.\n",
+      "bbox": [
+        57.0,
+        182.55047607421875,
+        422.7700500488281,
+        206.27047729492188
+      ],
+      "text_sha256": "7749972333d346359f0df56a3b2fcb7f3103ce53458351b81854c55e47920bb7"
+    },
+    {
+      "block_id": "page-0724-block-0011",
+      "order": 11,
+      "text": "■\n■Infants should be monitored for any specific adverse effects of the drugs as well as for \n",
+      "bbox": [
+        47.999900817871094,
+        206.55047607421875,
+        422.8100891113281,
+        218.27047729492188
+      ],
+      "text_sha256": "9b7a46a49a9f7b4c57ede650632275255baffdc4e9f395b43f2ab78ebfd719f9"
+    },
+    {
+      "block_id": "page-0724-block-0012",
+      "order": 12,
+      "text": "abnormalities in feeding patterns and growth and development.\n",
+      "bbox": [
+        57.0,
+        218.55047607421875,
+        330.9299621582031,
+        230.27047729492188
+      ],
+      "text_sha256": "0cab695d5f3a0982ff4c06eca249843e1e805d4e8950f04dd016da910b46f1ef"
+    },
+    {
+      "block_id": "page-0724-block-0013",
+      "order": 13,
+      "text": "■\n■Infant plasma levels should be monitored if adverse effects are noted or toxicity is \n",
+      "bbox": [
+        47.999900817871094,
+        230.55047607421875,
+        422.80987548828125,
+        242.27047729492188
+      ],
+      "text_sha256": "26c5e0f2a410f6a125540b004fd7cd90ac4d40f84672140a415ae32f56decf75"
+    },
+    {
+      "block_id": "page-0724-block-0014",
+      "order": 14,
+      "text": "suspected.\n",
+      "bbox": [
+        57.0,
+        242.55047607421875,
+        100.88999938964844,
+        254.27047729492188
+      ],
+      "text_sha256": "8084cc65de2f66b88a36c6e55abc51ea65782734433585330402b66ae3b2117f"
+    },
+    {
+      "block_id": "page-0724-block-0015",
+      "order": 15,
+      "text": "■\n■Women receiving sedating medication should be strongly advised to not breastfeed in \n",
+      "bbox": [
+        47.999900817871094,
+        254.55047607421875,
+        422.7900390625,
+        266.2704772949219
+      ],
+      "text_sha256": "6240a8ce4bc2e8628c1ed90e49da7a68d321309d71fd714f43e4e8865ff0e5cc"
+    },
+    {
+      "block_id": "page-0724-block-0016",
+      "order": 16,
+      "text": "bed as they may fall asleep and roll onto the baby, with a potential risk of hypoxia to \nthe baby.\n",
+      "bbox": [
+        57.0,
+        266.55047607421875,
+        422.8399353027344,
+        290.2704772949219
+      ],
+      "text_sha256": "5040fc0c770944f26570a868fe925afe8dc30436753241e31609af18b933dcb3"
+    },
+    {
+      "block_id": "page-0724-block-0017",
+      "order": 17,
+      "text": "■\n■Sedation may affect a woman’s ability to interact with their children. Women receiv-\n",
+      "bbox": [
+        47.999900817871094,
+        290.55047607421875,
+        420.01995849609375,
+        302.2704772949219
+      ],
+      "text_sha256": "d95da702fafecdfeb1ddfd9c9e31006d905c0cb258381085880eb93b1fa9c1b5"
+    },
+    {
+      "block_id": "page-0724-block-0018",
+      "order": 18,
+      "text": "ing sedating drugs should be monitored for this effect.\n",
+      "bbox": [
+        57.0,
+        302.55047607421875,
+        290.37994384765625,
+        314.2704772949219
+      ],
+      "text_sha256": "efda3ce0c20a9542af7891fee5801d3b8f6686ff5ee8c61e520543960dae3037"
+    },
+    {
+      "block_id": "page-0724-block-0019",
+      "order": 19,
+      "text": "■\n■Wherever possible:\n",
+      "bbox": [
+        47.999900817871094,
+        314.55047607421875,
+        138.67999267578125,
+        326.2704772949219
+      ],
+      "text_sha256": "8d437e511540cde8838f3466f4a2b41aaccf091aa9f1889eff41528bf557efb1"
+    },
+    {
+      "block_id": "page-0724-block-0020",
+      "order": 20,
+      "text": "■\n■Use the lowest effective dose.\n",
+      "bbox": [
+        57.19490051269531,
+        332.55047607421875,
+        191.54000854492188,
+        344.2704772949219
+      ],
+      "text_sha256": "dc98b132d5c9be77f66f1a21c80aae95086dcf07107a8d46546ac620b472d994"
+    },
+    {
+      "block_id": "page-0724-block-0021",
+      "order": 21,
+      "text": "■\n■Avoid polypharmacy.\n",
+      "bbox": [
+        57.19490051269531,
+        344.55047607421875,
+        157.6799774169922,
+        356.2704772949219
+      ],
+      "text_sha256": "b67995351937a578cbff33dfd7c049a778f09ee1850195f39640866c626650e1"
+    },
+    {
+      "block_id": "page-0724-block-0022",
+      "order": 22,
+      "text": "■\n■Continue the regimen prescribed during pregnancy.\n",
+      "bbox": [
+        57.19490051269531,
+        356.55047607421875,
+        286.77996826171875,
+        368.2704772949219
+      ],
+      "text_sha256": "5dd7b9d40391f356e3644b2cf6c3bbfe710be34086845d7b550ca813a6b12bcf"
+    },
+    {
+      "block_id": "page-0724-block-0023",
+      "order": 23,
+      "text": "Table 7.2 provides summary recommendations for drug choice in breast feeding. \nInformation on individual drugs is contained in Tables 7.3–7.7.\n",
+      "bbox": [
+        48.0,
+        374.55047607421875,
+        422.75006103515625,
+        398.2704772949219
+      ],
+      "text_sha256": "a3c3a54b9cc8f6c14d5e98b8839a481d1d281131d2e7b787ecea05475556a8fc"
+    },
+    {
+      "block_id": "page-0724-block-0024",
+      "order": 24,
+      "text": "Table 7.2  Summary of recommendations \nIt is usually advisable to continue the drug which has been used during pregnancy. When initiating a drug \npostpartum previous response and tolerability should be considered\n",
+      "bbox": [
+        54.00059509277344,
+        426.462890625,
+        393.26324462890625,
+        455.34539794921875
+      ],
+      "text_sha256": "a97f8d99e5b6046c22512952de41032cce3c81e176930b83d15b03a3c43754d8"
+    },
+    {
+      "block_id": "page-0724-block-0025",
+      "order": 25,
+      "text": "Drug group\nRecommended drugs\n",
+      "bbox": [
+        48.0005989074707,
+        467.087890625,
+        203.3781280517578,
+        475.97540283203125
+      ],
+      "text_sha256": "224a67ccd6abef1ef1448732e728ee2c7aed9a50816cf6aa53380229f039d536"
+    },
+    {
+      "block_id": "page-0724-block-0026",
+      "order": 26,
+      "text": "Antidepressants\nWhen initiating an antidepressant postpartum sertraline and mirtazapine may be \nconsidered. Other drugs may be used. See Table 7.3.\n",
+      "bbox": [
+        48.00060272216797,
+        487.21038818359375,
+        388.68060302734375,
+        506.09539794921875
+      ],
+      "text_sha256": "16a85c2fbd93ebb42097242efb3606d50fd45162bf0b5d2599b3fa60c2232dc5"
+    },
+    {
+      "block_id": "page-0724-block-0027",
+      "order": 27,
+      "text": "Antipsychotics\nWomen taking clozapine should be advised against breastfeeding and clozapine should be \ncontinued.\nWhen initiating an antipsychotic postpartum olanzapine or quetiapine may be considered. \nOther drugs may be used. See Table 7.4.\n",
+      "bbox": [
+        48.00060272216797,
+        515.3353881835938,
+        420.2633056640625,
+        554.2153930664062
+      ],
+      "text_sha256": "9d97574a09d00f4aa6d2c9ecbf1ce9a08e112f295a60213082d463bfc0de0ec3"
+    },
+    {
+      "block_id": "page-0724-block-0028",
+      "order": 28,
+      "text": "Mood stabilisers\nWomen taking lithium should be advised against breastfeeding and lithium should be \ncontinued.\nWhen initiating a mood stabiliser postpartum a mood-stabilising antipsychotic, such as \nolanzapine or quetiapine may be considered. Other drugs may be used. See Table 7.4.\n",
+      "bbox": [
+        48.00060272216797,
+        563.4553833007812,
+        407.5806884765625,
+        602.3353881835938
+      ],
+      "text_sha256": "827ca64a9e4bcf94a5dd3e55602e7f91629718ef513d51499bf45f72da508614"
+    },
+    {
+      "block_id": "page-0724-block-0029",
+      "order": 29,
+      "text": "Sedatives\nBest avoided. Use drug with short half-life. Lorazepam may be considered.\n",
+      "bbox": [
+        48.00060272216797,
+        611.5753784179688,
+        366.6080627441406,
+        620.462890625
+      ],
+      "text_sha256": "b51b037879d3bf6503ad0889c42358125ddd21d25b05b339b73782eec222dba4"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

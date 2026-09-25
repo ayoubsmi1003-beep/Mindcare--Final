@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0316",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 316,
+  "source_page_index": 315,
+  "source_page_display": 316,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Bipolar disorder    295\nCHAPTER 2\n\t 99.\t Cruz N, et al. Efficacy of modern antipsychotics in placebo-controlled trials in bipolar depression: a meta-analysis. Int J \nNeuropsychopharmacol 2010; 13:5–14.\n\t100.\t Dilsaver SC, et al. Treatment of bipolar depression with carbamazepine: results of an open study. Biol Psychiatry 1996; 40:935–937.\n\t101.\t Wang PW, et al. Gabapentin augmentation therapy in bipolar depression. Bipolar Disorders 2002; 4:296–301.\n\t102.\t Ashton H, et al. GABA-ergic drugs: exit stage left, enter stage right. J Psychopharmacol 2003; 17:174–178.\n\t103.\t Chengappa KN, et al. Inositol as an add-on treatment for bipolar depression. Bipolar Disord 2000; 2:47–55.\n\t104.\t Young AH, et al. Improvements in neurocognitive function and mood following adjunctive treatment with mifepristone (RU-486) in bipolar \ndisorder. Neuropsychopharmacology 2004; 29:1538–1545.\n\t105.\t Watson S, et al. A randomized trial to examine the effect of mifepristone on neuropsychological performance and mood in patients with \nbipolar depression. Biol Psychiatry 2012; 72:943–949.\n\t106.\t Nunez NA, et al. Efficacy and tolerability of adjunctive modafinil/armodafinil in bipolar depression: a meta-analysis of randomized con-\ntrolled trials. Bipolar Disord 2020; 22:109–120.\n\t107.\t Frangou S, et al. Efficacy of ethyl-eicosapentaenoic acid in bipolar depression: randomised double-blind placebo-controlled study. Br J \nPsychiatry 2006; 188:46–50.\n\t108.\t Keck PE, Jr., et al. Double-blind, randomized, placebo-controlled trials of ethyl-eicosapentanoate in the treatment of bipolar depression and \nrapid cycling bipolar disorder. Biol Psychiatry 2006; 60:1020–1022.\n\t109.\t Selle V, et al. Treatments for acute bipolar depression: meta-analyses of placebo-controlled, monotherapy trials of anticonvulsants, lithium \nand antipsychotics. Pharmacopsychiatry 2014; 47:43–52.\n\t110.\t Taylor DM, et al. Comparative efficacy and acceptability of drug treatments for bipolar depression: a multiple-treatments meta-analysis. \nActa Psychiatr Scand 2014; 130:452–469.\n\t111.\t Bahji A, et al. Comparative efficacy and tolerability of pharmacological treatments for the treatment of acute bipolar depression: a system-\natic review and network meta-analysis. J Affect Disord 2020; 269:154–184.\n",
+  "raw_text_sha256": "0bcaaea390c9ed8487b9353bd59e8af47ed632b02da72122ec285efeda937dfb",
+  "coordinates_sha256": "d6de4c185da5a757ebde18eb0d0a1c5dec01387b7c1b63ba54856a32c8ef6ad8",
+  "block_sequence_sha256": "fdcc0b592a8478345f38bd5fc16f7a2b0c92116a248dac43fa9d9f0204c9f167",
+  "blocks": [
+    {
+      "block_id": "page-0316-block-0000",
+      "order": 0,
+      "text": "Bipolar disorder    295\n",
+      "bbox": [
+        326.5046081542969,
+        31.395221710205078,
+        420.0005798339844,
+        41.0272216796875
+      ],
+      "text_sha256": "7e2f123a1c5fa15dd926bf4bbc1f910fdf5381321232ed7d5a528a384435b28b"
+    },
+    {
+      "block_id": "page-0316-block-0001",
+      "order": 1,
+      "text": "CHAPTER 2\n",
+      "bbox": [
+        454.4096984863281,
+        146.3472900390625,
+        463.88970947265625,
+        187.6912841796875
+      ],
+      "text_sha256": "5eaa1f2591abe1a1b2f7664fa3de7ff01a032d44ee83fa594c7852135d4287aa"
+    },
+    {
+      "block_id": "page-0316-block-0002",
+      "order": 2,
+      "text": "\t 99.\t Cruz N, et al. Efficacy of modern antipsychotics in placebo-controlled trials in bipolar depression: a meta-analysis. Int J \n",
+      "bbox": [
+        48.0,
+        63.2703857421875,
+        421.6861267089844,
+        70.30238342285156
+      ],
+      "text_sha256": "b2a5c48e5efd7f806197483cf52b75e346772fb7dccd4d383b9efa7634052f5a"
+    },
+    {
+      "block_id": "page-0316-block-0003",
+      "order": 3,
+      "text": "Neuropsychopharmacol 2010; 13:5–14.\n\t100.\t Dilsaver SC, et al. Treatment of bipolar depression with carbamazepine: results of an open study. Biol Psychiatry 1996; 40:935–937.\n\t101.\t Wang PW, et al. Gabapentin augmentation therapy in bipolar depression. Bipolar Disorders 2002; 4:296–301.\n\t102.\t Ashton H, et al. GABA-ergic drugs: exit stage left, enter stage right. J Psychopharmacol 2003; 17:174–178.\n\t103.\t Chengappa KN, et al. Inositol as an add-on treatment for bipolar depression. Bipolar Disord 2000; 2:47–55.\n\t104.\t Young AH, et al. Improvements in neurocognitive function and mood following adjunctive treatment with mifepristone (RU-486) in bipolar \n",
+      "bbox": [
+        48.0,
+        72.12638854980469,
+        421.6498718261719,
+        124.30238342285156
+      ],
+      "text_sha256": "1dec1a54039411b736097bd1f55652ef43a1bc81b2201ecd275eeb6575988b75"
+    },
+    {
+      "block_id": "page-0316-block-0004",
+      "order": 4,
+      "text": "disorder. Neuropsychopharmacology 2004; 29:1538–1545.\n\t105.\t Watson S, et al. A randomized trial to examine the effect of mifepristone on neuropsychological performance and mood in patients with \n",
+      "bbox": [
+        48.0,
+        126.12638854980469,
+        421.6680603027344,
+        142.30238342285156
+      ],
+      "text_sha256": "071b2c75882fe02715282832812e10da75e1128431effdadc23f841d4ffbee08"
+    },
+    {
+      "block_id": "page-0316-block-0005",
+      "order": 5,
+      "text": "bipolar depression. Biol Psychiatry 2012; 72:943–949.\n\t106.\t Nunez NA, et al. Efficacy and tolerability of adjunctive modafinil/armodafinil in bipolar depression: a meta-analysis of randomized con-\n",
+      "bbox": [
+        48.0,
+        144.1263885498047,
+        419.98193359375,
+        160.30238342285156
+      ],
+      "text_sha256": "5fea04b1fc1a3c14b28c074f440caa9a417870f2250affe914c7e765548619c6"
+    },
+    {
+      "block_id": "page-0316-block-0006",
+      "order": 6,
+      "text": "trolled trials. Bipolar Disord 2020; 22:109–120.\n\t107.\t Frangou S, et al. Efficacy of ethyl-eicosapentaenoic acid in bipolar depression: randomised double-blind placebo-controlled study. Br J \n",
+      "bbox": [
+        48.0,
+        162.1263885498047,
+        421.67401123046875,
+        178.30238342285156
+      ],
+      "text_sha256": "ea5e7c5f4eefbdc2af06cf6c3a356470c20356dec7e25437863075ca21f43d09"
+    },
+    {
+      "block_id": "page-0316-block-0007",
+      "order": 7,
+      "text": "Psychiatry 2006; 188:46–50.\n\t108.\t Keck PE, Jr., et al. Double-blind, randomized, placebo-controlled trials of ethyl-eicosapentanoate in the treatment of bipolar depression and \n",
+      "bbox": [
+        48.0,
+        180.1263885498047,
+        421.6920166015625,
+        196.30238342285156
+      ],
+      "text_sha256": "709da16c2108e189786fb842f362ca830ca9def9557c61b9d5e282543075e5cd"
+    },
+    {
+      "block_id": "page-0316-block-0008",
+      "order": 8,
+      "text": "rapid cycling bipolar disorder. Biol Psychiatry 2006; 60:1020–1022.\n\t109.\t Selle V, et al. Treatments for acute bipolar depression: meta-analyses of placebo-controlled, monotherapy trials of anticonvulsants, lithium \n",
+      "bbox": [
+        48.0,
+        198.1263885498047,
+        421.6319885253906,
+        214.30238342285156
+      ],
+      "text_sha256": "d6bf426a44e60b82d037680532d0db5d34dff0facb0992fea4bc7f724a0b6fcb"
+    },
+    {
+      "block_id": "page-0316-block-0009",
+      "order": 9,
+      "text": "and antipsychotics. Pharmacopsychiatry 2014; 47:43–52.\n\t110.\t Taylor DM, et al. Comparative efficacy and acceptability of drug treatments for bipolar depression: a multiple-treatments meta-analysis. \n",
+      "bbox": [
+        48.0,
+        216.1263885498047,
+        421.67999267578125,
+        232.30238342285156
+      ],
+      "text_sha256": "0dff24d5f6d72d02f8c061069bab7d7298af492339d162f872a465913b50dd34"
+    },
+    {
+      "block_id": "page-0316-block-0010",
+      "order": 10,
+      "text": "Acta Psychiatr Scand 2014; 130:452–469.\n\t111.\t Bahji A, et al. Comparative efficacy and tolerability of pharmacological treatments for the treatment of acute bipolar depression: a system-\n",
+      "bbox": [
+        48.0,
+        234.1263885498047,
+        419.9640808105469,
+        250.30238342285156
+      ],
+      "text_sha256": "74a2562a358db2ebe1c711eae5d1082a4bbed734b6fcce6d5022ccda5fc81694"
+    },
+    {
+      "block_id": "page-0316-block-0011",
+      "order": 11,
+      "text": "atic review and network meta-analysis. J Affect Disord 2020; 269:154–184.\n",
+      "bbox": [
+        62.999996185302734,
+        252.1263885498047,
+        259.2659912109375,
+        259.3023986816406
+      ],
+      "text_sha256": "b4ce1398f33f852f19ce76d4efbca1e260bcfe12e9e3ed3e5b50f323b82f86af"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

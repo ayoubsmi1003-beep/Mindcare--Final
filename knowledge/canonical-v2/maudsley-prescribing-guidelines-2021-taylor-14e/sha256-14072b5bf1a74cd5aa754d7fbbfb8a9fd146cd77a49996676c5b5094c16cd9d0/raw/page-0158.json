@@ -1,0 +1,323 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0158",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 158,
+  "source_page_index": 157,
+  "source_page_display": 158,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    137\nCHAPTER 1\ncatatonia-like clinical picture, warranting treatment of the underlying medical condi-\ntion (e.g. lupus72). Antipsychotic medication should be avoided when stupor develops \nduring treatment with antipsychotic medication, if there are clear signs of NMS, and \nwhere muscle rigidity is accompanied by autonomic instability. Where NMS can be \nruled out, and stupor occurs in the context of non-adherence to antipsychotic treat-\nment, early re-establishment of antipsychotic medication is recommended with consid-\neration of adjunctive benzodiazepines. This may be particularly relevant when catatonic \nsymptoms have occurred following discontinuation of clozapine.25,73 Catatonia has also \nbeen reported after withdrawal of long-term benzodiazepine treatment.25\nAlgorithm for treating catatonic stupor74\nStupor in the context of\naffective/conversion disorder\nStupor in the context of psychotic illness\nNMS possible \nNo response after 1–2 days\nNot taking antipsychotics\nmedication \nNo response after 1–2 days\nNo response after\n1–2 days\nExclude or treat underlying physical \nillness \nLorazepam up to 4mg/day*\nStart with 2mg and give a\nfurther 2mg if no effects after\nthree hours.\nUse IM route subsequently \nRule out NMS \nLorazepam**\nhigh dose\n8–24mg/day\nECT***\nConsider SGA****\ne.g. clozapine, olanzapine\nSome authorities recommend\nco-therapy with benzodiazepines\nFollow benzodiazepine/ECT\nprotocol opposite\n* Lorazepam is absorbed sublingually and is tasteless. This route may be preferred in non-cooperative\npatients or those who cannot swallow.\n** Intravenous diazepam or lorazepam may be considered here.\n*** Do not wait to give ECT if there is a signiﬁcant danger to life.\n**** There is considerable uncertainty about the use of antipsychotics in catatonic stupor. Antipsychotics\ncan induce catatonia75 (and risk of NMS in catatonic schizophrenia is much higher compared with\nnon-catatonic schizophrenia76).  An alternative approach is to use antipsychotics either once catatonia has\nresolved or when benzodiazepines or ECT have failed, and there is a clear psychotic illness.74\nNMS ruled out\n",
+  "raw_text_sha256": "6f51df98813415a37455884b6677ccf355c8497a1f1fa8204e7809bf90f92d89",
+  "coordinates_sha256": "0139002c4f2e498100bcd1d977f19a7c7208bd0924c1706c6de07483d21de7ed",
+  "block_sequence_sha256": "8247fb2fdcc48305b590741658108492e612b01f1d03743ac5c564574219f09e",
+  "blocks": [
+    {
+      "block_id": "page-0158-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    137\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "95a545f2df7961ec5b221259460d5794ed783b5dbd31114a4d3bc1b5c8a3eac8"
+    },
+    {
+      "block_id": "page-0158-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0158-block-0002",
+      "order": 2,
+      "text": "catatonia-like clinical picture, warranting treatment of the underlying medical condi-\ntion (e.g. lupus72). Antipsychotic medication should be avoided when stupor develops \nduring treatment with antipsychotic medication, if there are clear signs of NMS, and \nwhere muscle rigidity is accompanied by autonomic instability. Where NMS can be \nruled out, and stupor occurs in the context of non-adherence to antipsychotic treat-\nment, early re-establishment of antipsychotic medication is recommended with consid-\neration of adjunctive benzodiazepines. This may be particularly relevant when catatonic \nsymptoms have occurred following discontinuation of clozapine.25,73 Catatonia has also \nbeen reported after withdrawal of long-term benzodiazepine treatment.25\n",
+      "bbox": [
+        47.99769592285156,
+        62.5494384765625,
+        422.7876892089844,
+        170.26943969726562
+      ],
+      "text_sha256": "cf1157424d25b9c63766616f9064b0488a6e63946f1e837365e0b02bc33cc630"
+    },
+    {
+      "block_id": "page-0158-block-0003",
+      "order": 3,
+      "text": "Algorithm for treating catatonic stupor74\n",
+      "bbox": [
+        47.99909973144531,
+        191.78103637695312,
+        257.2308654785156,
+        204.8160400390625
+      ],
+      "text_sha256": "395476f280b2156a205cf32234c92a7b524be944ba3d602ccda59fc8e0a23cc2"
+    },
+    {
+      "block_id": "page-0158-block-0004",
+      "order": 4,
+      "text": "Stupor in the context of\naffective/conversion disorder\nStupor in the context of psychotic illness\n",
+      "bbox": [
+        68.2844009399414,
+        255.917724609375,
+        397.4520263671875,
+        274.4352111816406
+      ],
+      "text_sha256": "ba35b361f2f610701213804b4a739435d22c452fc9cd4a5002bdd1ab048ca230"
+    },
+    {
+      "block_id": "page-0158-block-0005",
+      "order": 5,
+      "text": "NMS possible \n",
+      "bbox": [
+        212.71939086914062,
+        329.17022705078125,
+        261.4693908691406,
+        338.3877258300781
+      ],
+      "text_sha256": "84786cca263735f0254af2348ae1da64cca032881e4e12ce4a7a1ab09b532143"
+    },
+    {
+      "block_id": "page-0158-block-0006",
+      "order": 6,
+      "text": "No response after 1–2 days\n",
+      "bbox": [
+        114.18440246582031,
+        378.3702392578125,
+        206.71942138671875,
+        387.5877380371094
+      ],
+      "text_sha256": "8bf4db1f2de684bd29020a916d68a872e24e45b501c367026caeba42d8654e0f"
+    },
+    {
+      "block_id": "page-0158-block-0007",
+      "order": 7,
+      "text": "Not taking antipsychotics\n",
+      "bbox": [
+        259.8643798828125,
+        372.3327331542969,
+        344.4794921875,
+        381.55023193359375
+      ],
+      "text_sha256": "8854a8f3bf52e4a0d5563b86c69c064a01838b20acf10b6263a35aab0a22b0ec"
+    },
+    {
+      "block_id": "page-0158-block-0008",
+      "order": 8,
+      "text": "medication \n",
+      "bbox": [
+        305.29937744140625,
+        381.3327331542969,
+        344.4794616699219,
+        390.55023193359375
+      ],
+      "text_sha256": "64b9428639c49b6b2f22d9205e3c7643c17bea36c2fd2b36ccae44622e405d82"
+    },
+    {
+      "block_id": "page-0158-block-0009",
+      "order": 9,
+      "text": "No response after 1–2 days\nNo response after\n",
+      "bbox": [
+        114.18438720703125,
+        447.80670166015625,
+        415.03466796875,
+        457.84771728515625
+      ],
+      "text_sha256": "221d85a19955ae2ae18aac3b3640bd8c93c7d017b3530e6d2184cacdf5a39977"
+    },
+    {
+      "block_id": "page-0158-block-0010",
+      "order": 10,
+      "text": "1–2 days\n",
+      "bbox": [
+        369.80908203125,
+        456.8066101074219,
+        400.23663330078125,
+        466.02410888671875
+      ],
+      "text_sha256": "8abd5ac55dddecc5641786b813981f576e79b7c7def9bb14cea5f662dcedc801"
+    },
+    {
+      "block_id": "page-0158-block-0011",
+      "order": 11,
+      "text": "Exclude or treat underlying physical \n",
+      "bbox": [
+        165.24009704589844,
+        222.33572387695312,
+        287.7751770019531,
+        231.55322265625
+      ],
+      "text_sha256": "60488f7d458f1b1c22e6f0235e9f4dcced46e18469c5f5ce9fb09785ce2beb7d"
+    },
+    {
+      "block_id": "page-0158-block-0012",
+      "order": 12,
+      "text": "illness \n",
+      "bbox": [
+        215.04759216308594,
+        231.33572387695312,
+        237.96759033203125,
+        240.55322265625
+      ],
+      "text_sha256": "b7176a1da3f41e22d2eaa317a02a9b16243fe7fdc0ec234ebdd919a28f47f753"
+    },
+    {
+      "block_id": "page-0158-block-0013",
+      "order": 13,
+      "text": "Lorazepam up to 4mg/day*\n",
+      "bbox": [
+        64.45269775390625,
+        318.1316223144531,
+        156.14772033691406,
+        327.34912109375
+      ],
+      "text_sha256": "1126df109e44192ead2a78f5e00c3953cff88ce1d64d72a098c5a7a37688f8f3"
+    },
+    {
+      "block_id": "page-0158-block-0014",
+      "order": 14,
+      "text": "Start with 2mg and give a\nfurther 2mg if no effects after\n",
+      "bbox": [
+        61.94020080566406,
+        327.1316223144531,
+        158.65274047851562,
+        345.34912109375
+      ],
+      "text_sha256": "4b4b6771e892380629cc341f02d02f39b7f0321afaea4c28bf9551d633ee0043"
+    },
+    {
+      "block_id": "page-0158-block-0015",
+      "order": 15,
+      "text": "three hours.\nUse IM route subsequently \n",
+      "bbox": [
+        64.23519897460938,
+        345.1316223144531,
+        156.35020446777344,
+        363.34912109375
+      ],
+      "text_sha256": "4406ec7fdd8254a119181a611e5b6b995c357fb60943c7ffe24e66e99da202b7"
+    },
+    {
+      "block_id": "page-0158-block-0016",
+      "order": 16,
+      "text": "Rule out NMS \n",
+      "bbox": [
+        326.8870849609375,
+        333.0436096191406,
+        374.8196105957031,
+        342.2611083984375
+      ],
+      "text_sha256": "a186b1872ed2d4294efd5f32040e06cd5b90930569f8e269fc5a4f2a23927577"
+    },
+    {
+      "block_id": "page-0158-block-0017",
+      "order": 17,
+      "text": "Lorazepam**\n",
+      "bbox": [
+        87.50740051269531,
+        407.43560791015625,
+        131.26988220214844,
+        416.6531066894531
+      ],
+      "text_sha256": "f1866ada5047572ff2a4c25dfb48bb5cf0d74f32581c3a779af5282bf8107185"
+    },
+    {
+      "block_id": "page-0158-block-0018",
+      "order": 18,
+      "text": "high dose\n8–24mg/day\n",
+      "bbox": [
+        88.54240417480469,
+        416.43560791015625,
+        130.21990966796875,
+        434.6531066894531
+      ],
+      "text_sha256": "2d59ac317c5bc7b15ef5dc6262ca1ade80bfb73cd8210785d3cc049b26d40906"
+    },
+    {
+      "block_id": "page-0158-block-0019",
+      "order": 19,
+      "text": "ECT***\n",
+      "bbox": [
+        99.35409545898438,
+        483.1442565917969,
+        120.08598327636719,
+        493.3021240234375
+      ],
+      "text_sha256": "042e7f43f9bd65d3aa59f6e0a9e60f7126d90b8d08f005c63e8de5e48235a960"
+    },
+    {
+      "block_id": "page-0158-block-0020",
+      "order": 20,
+      "text": "Consider SGA****\ne.g. clozapine, olanzapine\nSome authorities recommend\nco-therapy with benzodiazepines\n",
+      "bbox": [
+        297.55810546875,
+        403.79071044921875,
+        405.46807861328125,
+        440.0082092285156
+      ],
+      "text_sha256": "cc089405bd057c9b7e0f41dca53b6cfcdd9134a49f6daaf711a30be7f3a93639"
+    },
+    {
+      "block_id": "page-0158-block-0021",
+      "order": 21,
+      "text": "Follow benzodiazepine/ECT\n",
+      "bbox": [
+        304.84808349609375,
+        484.0836181640625,
+        398.2082214355469,
+        493.3011169433594
+      ],
+      "text_sha256": "fffc77de7cf59a817ed0a16c4b79a9dd94946e98cf5fe03d8226b941671bb131"
+    },
+    {
+      "block_id": "page-0158-block-0022",
+      "order": 22,
+      "text": "protocol opposite\n",
+      "bbox": [
+        322.14312744140625,
+        493.0836181640625,
+        380.9131774902344,
+        502.3011169433594
+      ],
+      "text_sha256": "46a55c1876abc7a7f2333558cb32a0a325b0aa44a5c574fc9d0f0284542d6671"
+    },
+    {
+      "block_id": "page-0158-block-0023",
+      "order": 23,
+      "text": "* Lorazepam is absorbed sublingually and is tasteless. This route may be preferred in non-cooperative\npatients or those who cannot swallow.\n** Intravenous diazepam or lorazepam may be considered here.\n*** Do not wait to give ECT if there is a signiﬁcant danger to life.\n**** There is considerable uncertainty about the use of antipsychotics in catatonic stupor. Antipsychotics\ncan induce catatonia75 (and risk of NMS in catatonic schizophrenia is much higher compared with\nnon-catatonic schizophrenia76).  An alternative approach is to use antipsychotics either once catatonia has\nresolved or when benzodiazepines or ECT have failed, and there is a clear psychotic illness.74\n",
+      "bbox": [
+        52.24909973144531,
+        518.8005981445312,
+        409.931396484375,
+        591.0181884765625
+      ],
+      "text_sha256": "14f8cbaa54b9c82951bf00639fc8ebadee2c309b0f1ba24e1bb3c00243f92e1c"
+    },
+    {
+      "block_id": "page-0158-block-0024",
+      "order": 24,
+      "text": "NMS ruled out\n",
+      "bbox": [
+        356.65911865234375,
+        374.1136169433594,
+        404.5841369628906,
+        383.33111572265625
+      ],
+      "text_sha256": "a16c423b117dc59f75fb196502dcbf214bddb0e8f204c63c611bbded01dd4dae"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

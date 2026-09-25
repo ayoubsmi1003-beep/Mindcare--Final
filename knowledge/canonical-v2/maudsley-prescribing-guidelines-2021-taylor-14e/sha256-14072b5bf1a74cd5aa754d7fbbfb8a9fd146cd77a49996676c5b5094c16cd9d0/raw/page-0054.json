@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0054",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 54,
+  "source_page_index": 53,
+  "source_page_display": 54,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    33\nCHAPTER 1\ntreatment of negative symptoms.16–20 Similarly, early analyses found no consistent \nevidence for the superiority of any individual SGA.21 While a meta-analysis of 38 \nRCTs found a statistically significant reduction in negative symptoms with SGAs, the \neffect size did not reach a threshold for ‘minimally detectable clinical improvement \nover time’.22\n■\n■Nevertheless, a meta-analysis23 suggests there are robust data suggesting superior \nefficacy against negative symptoms with certain antipsychotic treatment strategies, \nsuch as amisulpride24–27 and cariprazine,28,29 and that olanzapine and quetiapine may \nbe more effective than risperidone. Augmentation with aripiprazole may also be \neffective.30,31\n■\n■While clozapine remains the only medication with convincing superiority for TRS, \nwhether it has superior efficacy for negative symptoms, at least in the short-term, in \nsuch cases remains uncertain.32–34 One potential confound in studies of clozapine for \nnegative symptoms is that the medication has a low liability for parkinsonian side \neffects, including bradykinesia, which have a phenomenological overlap with nega-\ntive symptoms, particularly the subdomain of expressive deficits.\n■\n■With respect to non-antipsychotic pharmacological interventions, several drugs that \nmodulate glutamate pathways have been directly tested as adjuncts, but this approach \nhas proved disappointing. Metabotropic glutamate 2/3 (mGlu2/3) receptor agonists \nhave not been found to have any clear effect on negative symptoms over placebo.35,36 \nDrugs modulating NMDA receptors in other ways have been tested: for example, \nthere are negative RCTs of glycine,37 d-serine,38 modafinil,39,40 armodafinil,41 and \nbitopertin42,43 augmentation of antipsychotic medication. There is a small preliminary \npositive RCT of pregnenolone.44\n■\n■With respect to decreasing glutamate transmission, there are inconsistent meta-anal-\nysis findings for lamotrigine augmentation of clozapine45,46 and one positive47 and \none negative48 RCT of memantine (the negative study being much larger). There is \nsome suggestion from meta-analyses of relevant studies that adding minocycline, an \nantibiotic and inflammatory drug, may improve negative symptoms, but the total \nsample size remains small.49,50 The BeneMin study was designed to determine whether \nor not adjunctive minocycline, administered early in the course of schizophrenia, \nprotected against the development of negative symptoms over a year, but the findings \ndid not provide any evidence of clinical benefit with such a strategy.51\n■\n■With respect to antidepressant augmentation of an antipsychotic for negative symp-\ntoms, a Cochrane review concluded that this might be an effective strategy for reduc-\ning affective flattening, alogia and avolition,52 although RCT findings for \nantidepressant augmentation of antipsychotic medication have found only inconsist-\nent evidence of modest efficacy.53–56 One meta-analysis of placebo-controlled studies \nin people with established schizophrenia found that adjunctive antidepressant treat-\nment was associated with a limited reduction in negative symptoms, but only with \naugmentation of FGAs.57 Another review of meta-analyses of relevant studies con-\ncluded that the evidence suggested a beneficial effect for some SSRIs, such as \nﬂuvoxamine, citalopram, and the α2 receptor antagonists mirtazapine and mian-\nserin.15 Reboxetine may have useful activity.58\n■\n■Considering glutamate antagonists as adjunctive therapy for negative symptom \nimprovement, there is some limited evidence that topiramate (a noradrenaline \n",
+  "raw_text_sha256": "72835b8086bf1d1b3e6e7f2859e2b7a97ba87f365285f59e5c2c76910c760713",
+  "coordinates_sha256": "323a9c4b29baee8dfd2db2c7a810e988b2bf8ff77c34df25ac624fa51b05a6f7",
+  "block_sequence_sha256": "076ed2cb9a617ee2532468131f5ad50ebaf8e8afa9374d08a4450964db9b580b",
+  "blocks": [
+    {
+      "block_id": "page-0054-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    33\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "bf697c9c1b2cf62aed77ea6373d4920dd81c6ceefb965604398bacbbe85f1896"
+    },
+    {
+      "block_id": "page-0054-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0054-block-0002",
+      "order": 2,
+      "text": "treatment of negative symptoms.16–20 Similarly, early analyses found no consistent \nevidence for the superiority of any individual SGA.21 While a meta-analysis of 38 \nRCTs found a statistically significant reduction in negative symptoms with SGAs, the \neffect size did not reach a threshold for ‘minimally detectable clinical improvement \nover time’.22\n",
+      "bbox": [
+        56.99900817871094,
+        62.54931640625,
+        422.8225402832031,
+        122.26931762695312
+      ],
+      "text_sha256": "6997c753ee7d5654613785b482640db02b3f7163fcdd86eed5201f511ccab1ce"
+    },
+    {
+      "block_id": "page-0054-block-0003",
+      "order": 3,
+      "text": "■\n■Nevertheless, a meta-analysis23 suggests there are robust data suggesting superior \n",
+      "bbox": [
+        47.999000549316406,
+        122.54931640625,
+        422.7964172363281,
+        134.26931762695312
+      ],
+      "text_sha256": "11a9b4a5551e680defa20c1dbdb1d49be0d14af29e71c871f8987ec1d5150238"
+    },
+    {
+      "block_id": "page-0054-block-0004",
+      "order": 4,
+      "text": "efficacy against negative symptoms with certain antipsychotic treatment strategies, \nsuch as amisulpride24–27 and cariprazine,28,29 and that olanzapine and quetiapine may \nbe more effective than risperidone. Augmentation with aripiprazole may also be \neffective.30,31\n",
+      "bbox": [
+        56.996307373046875,
+        134.54931640625,
+        422.7891540527344,
+        182.26931762695312
+      ],
+      "text_sha256": "75cb5245dc5f8331d6d6eed51a376a8d835a29e3997945f8d5dd32971a0b7e1c"
+    },
+    {
+      "block_id": "page-0054-block-0005",
+      "order": 5,
+      "text": "■\n■While clozapine remains the only medication with convincing superiority for TRS, \n",
+      "bbox": [
+        47.999000549316406,
+        182.54931640625,
+        422.7890319824219,
+        194.26931762695312
+      ],
+      "text_sha256": "e5f5dfc13e977a19f8c27d339ab985bcb53065c96c05efa523f715bd1556f081"
+    },
+    {
+      "block_id": "page-0054-block-0006",
+      "order": 6,
+      "text": "whether it has superior efficacy for negative symptoms, at least in the short-term, in \nsuch cases remains uncertain.32–34 One potential confound in studies of clozapine for \nnegative symptoms is that the medication has a low liability for parkinsonian side \neffects, including bradykinesia, which have a phenomenological overlap with nega-\ntive symptoms, particularly the subdomain of expressive deficits.\n",
+      "bbox": [
+        56.995391845703125,
+        194.54931640625,
+        422.7953796386719,
+        254.26931762695312
+      ],
+      "text_sha256": "26486ad5ceb0e9d93e3513accf3ee7c36c26e85bb934e3e9742eb9e0e790d945"
+    },
+    {
+      "block_id": "page-0054-block-0007",
+      "order": 7,
+      "text": "■\n■With respect to non-antipsychotic pharmacological interventions, several drugs that \n",
+      "bbox": [
+        47.999000549316406,
+        254.54931640625,
+        422.7890930175781,
+        266.2693176269531
+      ],
+      "text_sha256": "f62c6c116f1f8033e679b1ae7ab98f57a6e2f828dc5c52f229b85d016a97fbc5"
+    },
+    {
+      "block_id": "page-0054-block-0008",
+      "order": 8,
+      "text": "modulate glutamate pathways have been directly tested as adjuncts, but this approach \nhas proved disappointing. Metabotropic glutamate 2/3 (mGlu2/3) receptor agonists \nhave not been found to have any clear effect on negative symptoms over placebo.35,36 \nDrugs modulating NMDA receptors in other ways have been tested: for example, \nthere are negative RCTs of glycine,37 d-serine,38 modafinil,39,40 armodafinil,41 and \nbitopertin42,43 augmentation of antipsychotic medication. There is a small preliminary \npositive RCT of pregnenolone.44\n",
+      "bbox": [
+        56.99530792236328,
+        266.54931640625,
+        422.8091735839844,
+        350.2693176269531
+      ],
+      "text_sha256": "7f30b21aee48ddc916d2a5400c817e9f5837d547a793d1a36a2af7532d3d5248"
+    },
+    {
+      "block_id": "page-0054-block-0009",
+      "order": 9,
+      "text": "■\n■With respect to decreasing glutamate transmission, there are inconsistent meta-anal-\n",
+      "bbox": [
+        47.999000549316406,
+        350.54931640625,
+        420.0191345214844,
+        362.2693176269531
+      ],
+      "text_sha256": "7c113deb473836cac2d47854578df0ea3b8d78790a7e72650adbe1daf5af3c43"
+    },
+    {
+      "block_id": "page-0054-block-0010",
+      "order": 10,
+      "text": "ysis findings for lamotrigine augmentation of clozapine45,46 and one positive47 and \none negative48 RCT of memantine (the negative study being much larger). There is \nsome suggestion from meta-analyses of relevant studies that adding minocycline, an \nantibiotic and inflammatory drug, may improve negative symptoms, but the total \nsample size remains small.49,50 The BeneMin study was designed to determine whether \nor not adjunctive minocycline, administered early in the course of schizophrenia, \nprotected against the development of negative symptoms over a year, but the findings \ndid not provide any evidence of clinical benefit with such a strategy.51\n",
+      "bbox": [
+        56.995689392089844,
+        362.54931640625,
+        422.8026428222656,
+        458.2693176269531
+      ],
+      "text_sha256": "80461fc2186a9e330c93f27d6e2cdbd9af17bc0ce48722b442f09026a3c64c06"
+    },
+    {
+      "block_id": "page-0054-block-0011",
+      "order": 11,
+      "text": "■\n■With respect to antidepressant augmentation of an antipsychotic for negative symp-\n",
+      "bbox": [
+        47.999000549316406,
+        458.54931640625,
+        419.9689636230469,
+        470.2693176269531
+      ],
+      "text_sha256": "34720029fb7408f746788f695b98feac4439fcf64a181ba27296308380ee763b"
+    },
+    {
+      "block_id": "page-0054-block-0012",
+      "order": 12,
+      "text": "toms, a Cochrane review concluded that this might be an effective strategy for reduc-\ning affective flattening, alogia and avolition,52 although RCT findings for \nantidepressant augmentation of antipsychotic medication have found only inconsist-\nent evidence of modest efficacy.53–56 One meta-analysis of placebo-controlled studies \nin people with established schizophrenia found that adjunctive antidepressant treat-\nment was associated with a limited reduction in negative symptoms, but only with \naugmentation of FGAs.57 Another review of meta-analyses of relevant studies con-\ncluded that the evidence suggested a beneficial effect for some SSRIs, such as \nﬂuvoxamine, citalopram, and the α2 receptor antagonists mirtazapine and mian-\nserin.15 Reboxetine may have useful activity.58\n",
+      "bbox": [
+        56.99909973144531,
+        470.54931640625,
+        422.7916564941406,
+        590.2693481445312
+      ],
+      "text_sha256": "af46763993ef3e11dd152fd9cb7811081a476c5a24a16549558b22d47d5993ad"
+    },
+    {
+      "block_id": "page-0054-block-0013",
+      "order": 13,
+      "text": "■\n■Considering glutamate antagonists as adjunctive therapy for negative symptom \n",
+      "bbox": [
+        47.999000549316406,
+        590.54931640625,
+        422.7489929199219,
+        602.2693481445312
+      ],
+      "text_sha256": "1aee432d43dd7b2814435c36c4fb48775e8dc2854ae7737215ec9021ea7fc392"
+    },
+    {
+      "block_id": "page-0054-block-0014",
+      "order": 14,
+      "text": "improvement, there is some limited evidence that topiramate (a noradrenaline \n",
+      "bbox": [
+        56.99909973144531,
+        602.54931640625,
+        422.7991027832031,
+        614.2693481445312
+      ],
+      "text_sha256": "6827e8c953ae384b4bab6e71dd55dd686c24ce9885096ab4694c52bd5ba0116c"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

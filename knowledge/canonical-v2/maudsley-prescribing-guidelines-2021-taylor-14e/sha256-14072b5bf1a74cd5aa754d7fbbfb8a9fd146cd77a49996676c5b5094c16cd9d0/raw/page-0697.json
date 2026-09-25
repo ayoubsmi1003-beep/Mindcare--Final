@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0697",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 697,
+  "source_page_index": 696,
+  "source_page_display": 697,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "676    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  6\nstroke may also be increased27,28 (see section ‘SSRIs and bleeding’). Older people are \nalso particularly prone to develop hyponatraemia29 with SSRIs (see section \n‘Hyponatraemia’, Chapter 3), as well as postural hypotension and falls (the clinical \nconsequences of which may be increased by SSRI-induced osteopenia;30 TCAs may also \nincrease fracture risk.31\nAgomelatine is effective in older patients, is well tolerated and has not been linked to \nhyponatraemia.32,33 Its use is limited by the need for frequent blood sampling to check \nLFTs. Vortioxetine and duloxetine have also been shown to be effective and reasonably \nwell tolerated in the older person34 but caveats related to SSRIs, above, are relevant \nhere. A general practice database study found that, compared with SSRIs, ‘other antide-\npressants’ (venlafaxine, mirtazapine, etc.) were associated with a greater risk of a num-\nber of potentially serious side effects in the older people (stroke/TIA, fracture, seizures, \nattempted suicide/self-harm) as well as increased all-cause mortality;29 the study was \nobservational and so could not separate the effect of antidepressants from any increased \nrisk inherent in the group of patients treated with these antidepressants. Polysaturated \nfatty acids (fish oils) may be helpful in mild-to-moderate depression (compared with \nplacebo).35\nThe effect of antidepressants on cognition in later life is still debated – some studies \nfound antidepressants to worsen cognitive outcomes,22,36,37 others found no effect.38 The \nchoice of antidepressant may affect the risk; highly anticholinergic medicines are known \nto increase the likelihood of developing dementia.39\nUltimately, choice is determined by the individual clinical circumstances of each \npatient, particularly physical co-morbidity and concomitant medication (both pre-\nscribed and ‘over the counter’; (See section on antidepressant interactions with physical \ndrugs).\nReferences\n\t 1.\t Katona C, et al. Impact of screening old people with physical illness for depression? Lancet 2000; 356:91–92.\n\t 2.\t Lyketsos CG. Depression and diabetes: more on what the relationship might be. Am J Psychiatry 2010; 167:496–497.\n\t 3.\t Gallo JJ, et al. Long term effect of depression care management on mortality in older adults: follow-up of cluster randomized clinical trial in \nprimary care. BMJ 2013; 346:f2570.\n\t 4.\t Cattell H, et al. One hundred cases of suicide in elderly people. Br J Psychiatry 1995; 166:451–457.\n\t 5.\t Ryan J, et al. Late-life depression and mortality: influence of gender and antidepressant use. Br J Psychiatry 2008; 192:12–18.\n\t 6.\t Gutsmiedl K, et al. How well do elderly patients with major depressive disorder respond to antidepressants: a systematic review and single-\ngroup meta-analysis. BMC Psychiatry 2020; 20:102.\n\t 7.\t Cipriani A, et al. Comparative efficacy and acceptability of 21 antidepressant drugs for the acute treatment of adults with major depressive \ndisorder: a systematic review and network meta-analysis. Lancet 2018; 391:1357–1366.\n\t 8.\t Paykel ES, et al. Residual symptoms after partial remission: an important outcome in depression. Psychol Med 1995; 25:1171–1180.\n\t 9.\t Iosifescu DV, et al. Brain white-matter hyperintensities and treatment outcome in major depressive disorder. Br J Psychiatry 2006; \n188:180–185.\n\t10.\t Brown PJ, et al. Biological age, not chronological age, is associated with late-life depression. J Gerontol A Biol Sci Med Sci 2018; \n73:1370–1376.\n\t11.\t Tunvirachaisakul C, et al. Predictors of treatment outcome in depression in later life: A systematic review and meta-analysis. J Affect Disord \n2018; 227:164–182.\n\t12.\t Zilcha-Mano S, et al. Early symptom trajectories as predictors of treatment outcome for citalopram versus placebo. Am J Geriatr Psychiatry \n2017; 25:654–661.\n\t13.\t Mulsant BH, et al. What is the optimal duration of a short-term antidepressant trial when treating geriatric depression? J Clin Psychopharmacol \n2006; 26:113–120.\n\t14.\t Mottram P, et al. Antidepressants for depressed elderly. Cochrane Database Syst Rev 2006; CD003491.\n\t15.\t National Institute for Health and Care Excellence. Depression in adults: recognition and management. Clinical guideline [CG90]. 2009 (Last \nupdated December 2013); https://www.nice.org.uk/Guidance/cg90.\n",
+  "raw_text_sha256": "dc3db2e33f29be93df6e6366268b3a8a1c1c24ff12f46a1c20525d0d0bfc13ee",
+  "coordinates_sha256": "2366da208d6d1915abe76c743d2b384b0607e2e487899d30ca0f4f2ded29f0b4",
+  "block_sequence_sha256": "b49924db55d310a04d3bd65a7dc7f5e68a703b962a79f953a28650f9568ea0a9",
+  "blocks": [
+    {
+      "block_id": "page-0697-block-0000",
+      "order": 0,
+      "text": "676    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "c4f2e222760e9408818464418313caf1afc8600e245be67a2e60f10f15d9a09f"
+    },
+    {
+      "block_id": "page-0697-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        18.520000457763672,
+        405.35260009765625,
+        28.0,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0697-block-0002",
+      "order": 2,
+      "text": "stroke may also be increased27,28 (see section ‘SSRIs and bleeding’). Older people are \nalso particularly prone to develop hyponatraemia29 with SSRIs (see section \n‘Hyponatraemia’, Chapter 3), as well as postural hypotension and falls (the clinical \nconsequences of which may be increased by SSRI-induced osteopenia;30 TCAs may also \nincrease fracture risk.31\n",
+      "bbox": [
+        61.88720703125,
+        62.5504150390625,
+        436.7010803222656,
+        122.27041625976562
+      ],
+      "text_sha256": "91b2cc5c52f6a56a6df3b31ae98cc570d04f7b22b8b8cf6933bc60093f91268e"
+    },
+    {
+      "block_id": "page-0697-block-0003",
+      "order": 3,
+      "text": "Agomelatine is effective in older patients, is well tolerated and has not been linked to \nhyponatraemia.32,33 Its use is limited by the need for frequent blood sampling to check \nLFTs. Vortioxetine and duloxetine have also been shown to be effective and reasonably \nwell tolerated in the older person34 but caveats related to SSRIs, above, are relevant \nhere. A general practice database study found that, compared with SSRIs, ‘other antide-\npressants’ (venlafaxine, mirtazapine, etc.) were associated with a greater risk of a num-\nber of potentially serious side effects in the older people (stroke/TIA, fracture, seizures, \nattempted suicide/self-harm) as well as increased all-cause mortality;29 the study was \nobservational and so could not separate the effect of antidepressants from any increased \nrisk inherent in the group of patients treated with these antidepressants. Polysaturated \nfatty acids (fish oils) may be helpful in mild-to-moderate depression (compared with \nplacebo).35\n",
+      "bbox": [
+        61.886192321777344,
+        122.5504150390625,
+        436.70452880859375,
+        266.2704772949219
+      ],
+      "text_sha256": "b7a03e61d652988be2c0e7714708a8e4ee241718da85b3809a863d9ad1e2a5da"
+    },
+    {
+      "block_id": "page-0697-block-0004",
+      "order": 4,
+      "text": "The effect of antidepressants on cognition in later life is still debated – some studies \nfound antidepressants to worsen cognitive outcomes,22,36,37 others found no effect.38 The \nchoice of antidepressant may affect the risk; highly anticholinergic medicines are known \nto increase the likelihood of developing dementia.39\n",
+      "bbox": [
+        61.88848876953125,
+        266.55047607421875,
+        436.669921875,
+        314.2704772949219
+      ],
+      "text_sha256": "8eaef97dcea12f805f9989cbb7cb2fa95defad4908b57d4b8b190aa5a657fc48"
+    },
+    {
+      "block_id": "page-0697-block-0005",
+      "order": 5,
+      "text": "Ultimately, choice is determined by the individual clinical circumstances of each \npatient, particularly physical co-morbidity and concomitant medication (both pre-\nscribed and ‘over the counter’; (See section on antidepressant interactions with physical \ndrugs).\n",
+      "bbox": [
+        61.88999938964844,
+        314.55047607421875,
+        436.70001220703125,
+        362.2704772949219
+      ],
+      "text_sha256": "180052d6cd55987f81cef1b37cb9cc7183374fe7c61e5833a4e6f4c8bad24c75"
+    },
+    {
+      "block_id": "page-0697-block-0006",
+      "order": 6,
+      "text": "References\n",
+      "bbox": [
+        61.889801025390625,
+        382.2449951171875,
+        117.92379760742188,
+        395.2799987792969
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0697-block-0007",
+      "order": 7,
+      "text": "\t 1.\t Katona C, et al. Impact of screening old people with physical illness for depression? Lancet 2000; 356:91–92.\n\t 2.\t Lyketsos CG. Depression and diabetes: more on what the relationship might be. Am J Psychiatry 2010; 167:496–497.\n\t 3.\t Gallo JJ, et al. Long term effect of depression care management on mortality in older adults: follow-up of cluster randomized clinical trial in \n",
+      "bbox": [
+        61.889801025390625,
+        400.22198486328125,
+        435.5816650390625,
+        425.39801025390625
+      ],
+      "text_sha256": "69e59083cce21738033cfd04e9384659d256b2561ca7a1ef7a1889505efc3d48"
+    },
+    {
+      "block_id": "page-0697-block-0008",
+      "order": 8,
+      "text": "primary care. BMJ 2013; 346:f2570.\n\t 4.\t Cattell H, et al. One hundred cases of suicide in elderly people. Br J Psychiatry 1995; 166:451–457.\n\t 5.\t Ryan J, et al. Late-life depression and mortality: influence of gender and antidepressant use. Br J Psychiatry 2008; 192:12–18.\n\t 6.\t Gutsmiedl K, et al. How well do elderly patients with major depressive disorder respond to antidepressants: a systematic review and single-\n",
+      "bbox": [
+        61.907798767089844,
+        427.22198486328125,
+        433.955810546875,
+        461.39801025390625
+      ],
+      "text_sha256": "8151e2c5b38e7321f6c80bc958509edf854231f93b07742fd5c36c9367bd075b"
+    },
+    {
+      "block_id": "page-0697-block-0009",
+      "order": 9,
+      "text": "group meta-analysis. BMC Psychiatry 2020; 20:102.\n\t 7.\t Cipriani A, et al. Comparative efficacy and acceptability of 21 antidepressant drugs for the acute treatment of adults with major depressive \n",
+      "bbox": [
+        61.92580032348633,
+        463.22198486328125,
+        435.5816650390625,
+        479.39801025390625
+      ],
+      "text_sha256": "d1723071f3947ad2426616036aefdd7e72f7b5ba7bece497b909c9140fd3a320"
+    },
+    {
+      "block_id": "page-0697-block-0010",
+      "order": 10,
+      "text": "disorder: a systematic review and network meta-analysis. Lancet 2018; 391:1357–1366.\n\t 8.\t Paykel ES, et al. Residual symptoms after partial remission: an important outcome in depression. Psychol Med 1995; 25:1171–1180.\n\t 9.\t Iosifescu DV, et al. Brain white-matter hyperintensities and treatment outcome in major depressive disorder. Br J Psychiatry 2006; \n",
+      "bbox": [
+        61.931800842285156,
+        481.3659973144531,
+        435.6058349609375,
+        506.39801025390625
+      ],
+      "text_sha256": "3ac7c84dfbc1843202783cdb8e1e07d4df47ffbb99b74d0bdccb2c2e60386a79"
+    },
+    {
+      "block_id": "page-0697-block-0011",
+      "order": 11,
+      "text": "188:180–185.\n\t10.\t Brown PJ, et al. Biological age, not chronological age, is associated with late-life depression. J Gerontol A Biol Sci Med Sci 2018; \n",
+      "bbox": [
+        61.94380187988281,
+        508.2220153808594,
+        435.6178894042969,
+        524.3980102539062
+      ],
+      "text_sha256": "11837e3a56a15ec9be68290b2f6d7cbce7b082c62b42f00c7a4a1128bd122306"
+    },
+    {
+      "block_id": "page-0697-block-0012",
+      "order": 12,
+      "text": "73:1370–1376.\n\t11.\t Tunvirachaisakul C, et al. Predictors of treatment outcome in depression in later life: A systematic review and meta-analysis. J Affect Disord \n",
+      "bbox": [
+        61.949798583984375,
+        526.2220458984375,
+        435.6357116699219,
+        542.3980102539062
+      ],
+      "text_sha256": "5e477812badff4e3851232b5509b3d6b96c616bbb9ae4ae2e30eb73117064171"
+    },
+    {
+      "block_id": "page-0697-block-0013",
+      "order": 13,
+      "text": "2018; 227:164–182.\n\t12.\t Zilcha-Mano S, et al. Early symptom trajectories as predictors of treatment outcome for citalopram versus placebo. Am J Geriatr Psychiatry \n",
+      "bbox": [
+        61.9557991027832,
+        544.2220458984375,
+        435.6297912597656,
+        560.3980102539062
+      ],
+      "text_sha256": "0efaab93241481a989bca5269659028b29cc112ea629e8ee4c4469d143207796"
+    },
+    {
+      "block_id": "page-0697-block-0014",
+      "order": 14,
+      "text": "2017; 25:654–661.\n\t13.\t Mulsant BH, et al. What is the optimal duration of a short-term antidepressant trial when treating geriatric depression? J Clin Psychopharmacol \n",
+      "bbox": [
+        61.96179962158203,
+        562.2220458984375,
+        435.6478271484375,
+        578.3980102539062
+      ],
+      "text_sha256": "ecd08e0a45a373d721bbc6f1d19d95615b12aaa12500357939a57945eb7e99af"
+    },
+    {
+      "block_id": "page-0697-block-0015",
+      "order": 15,
+      "text": "2006; 26:113–120.\n\t14.\t Mottram P, et al. Antidepressants for depressed elderly. Cochrane Database Syst Rev 2006; CD003491.\n\t15.\t National Institute for Health and Care Excellence. Depression in adults: recognition and management. Clinical guideline [CG90]. 2009 (Last \n",
+      "bbox": [
+        61.96780014038086,
+        580.2220458984375,
+        435.61181640625,
+        605.3980102539062
+      ],
+      "text_sha256": "9ed207cd0533b784e7a048c0fd8196f47226d1ac112a1018211574ae66839de4"
+    },
+    {
+      "block_id": "page-0697-block-0016",
+      "order": 16,
+      "text": "updated December 2013); https://www.nice.org.uk/Guidance/cg90.\n",
+      "bbox": [
+        72.97779846191406,
+        607.3660278320312,
+        246.13177490234375,
+        614.3980102539062
+      ],
+      "text_sha256": "33857be994bbbf1d64fd30b84bd8fbd8e21eb0876a2fd22052de0ffcf4eb5128"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

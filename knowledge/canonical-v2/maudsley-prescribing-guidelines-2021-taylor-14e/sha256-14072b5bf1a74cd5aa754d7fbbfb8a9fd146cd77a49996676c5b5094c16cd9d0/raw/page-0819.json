@@ -1,0 +1,107 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0819",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 819,
+  "source_page_index": 818,
+  "source_page_display": 819,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "798    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\ninformed decisions. There is inevitably an increased onus on the clinician to bear the \nweight of decision-making. The patient’s decision-making capacity, depending on the \nseverity of intellectual impairment, may be improved through appropriate verbal and \nwritten communication. The involvement of carers in this process is generally \nessential.\nPhysical co-morbidity, especially epilepsy: Epilepsy is overrepresented in LD popula-\ntions, becoming more prevalent as severity increases with approximately one-third \nof affected individuals developing a seizure disorder by early adulthood. Special con-\nsideration is needed when considering the use of medications that may lower seizure \nthreshold or interact with drugs used for epilepsy.\nAssessment of care environments: Behavioural and emotional disturbance may some-\ntimes be a reflection of problems or failings in the care environment. Different staff \nin a care home may have different thresholds of tolerance (or make different attribu-\ntions) for these difficulties which can lead to varied reports of their significance and \nimpact. Allowing for a period of prospective assessment and using simple assessment \ntools (e.g. simple ABC or sleep charts) can be very helpful to the clinician in making \njudgements about recommending medication. If medication is used in a care home, \nstaff may need special education in its use and anticipated side effects and, for ‘as \nrequired’ medications, clear guidelines for its use. This may make it difficult to initi-\nate certain treatments in the community.\nAdverse effect sensitivity: It is widely thought that people with LD are especially sensi-\ntive to side effects of psychotropics and more at risk of long-term effects such as the \nmetabolic syndrome. However, we only know of one study that has given support to \nthis view. A cohort study extracting information from a large UK primary care data-\nbase compared the incidence of EPSEs of antipsychotics in adults with LD, with \nadults without LD. The incidence of EPSE was 30% higher in people with LD than \nin those without LD.5 It is good practice to start at lower doses and increase more \nslowly than might be usual in general psychiatric practice. Notable side effects \ninclude worsening of seizures, sedation, extrapyramidal reactions (including with \nrisperidone at normal doses, especially in individuals who already have mobility \nproblems), problems with swallowing (with clozapine and other antipsychotics) and \nworsening of cognitive function with anticholinergic medications (see section on \nprescribing in dementia in Chapter 6).\nPsychological interventions: In the absence of an identifiable mental illness (including \natypical presentations) with clear treatment implications, psychological interven-\ntions such as functional behavioural analysis should be considered as first-line inter-\nvention for all but the most serious or intractable presentations of behavioural \ndisturbance. In studies where it has been possible to infer severity of challenging \nbehaviour treatment response is generally associated with more severe problems at \nbaseline.\n",
+  "raw_text_sha256": "17af4e40653ccb263beb4a31bbfc45d2f95be826681268f48ffde4aa287cb897",
+  "coordinates_sha256": "a4b632fd4a44363fd8e2f25492eaf2d3a10e74168b0baaef79dc41a75b442883",
+  "block_sequence_sha256": "e74214071fad0465098328ebabfa071c3fa93058d0793e456d6f0565ccad2c5f",
+  "blocks": [
+    {
+      "block_id": "page-0819-block-0000",
+      "order": 0,
+      "text": "798    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "58f464729dfb28df2defddea1ecd9d873bf13fe43b7dc977dc98000c3727c846"
+    },
+    {
+      "block_id": "page-0819-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0819-block-0002",
+      "order": 2,
+      "text": "informed decisions. There is inevitably an increased onus on the clinician to bear the \nweight of decision-making. The patient’s decision-making capacity, depending on the \nseverity of intellectual impairment, may be improved through appropriate verbal and \nwritten communication. The involvement of carers in this process is generally \nessential.\nPhysical co-morbidity, especially epilepsy: Epilepsy is overrepresented in LD popula-\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.71014404296875,
+        134.27029418945312
+      ],
+      "text_sha256": "8c3de47c0ef87710b4de310884cdae1da69a5372e6f2fae158ad96504731db32"
+    },
+    {
+      "block_id": "page-0819-block-0003",
+      "order": 3,
+      "text": "tions, becoming more prevalent as severity increases with approximately one-third \nof affected individuals developing a seizure disorder by early adulthood. Special con-\nsideration is needed when considering the use of medications that may lower seizure \nthreshold or interact with drugs used for epilepsy.\nAssessment of care environments: Behavioural and emotional disturbance may some-\n",
+      "bbox": [
+        61.88999938964844,
+        134.55029296875,
+        436.6300048828125,
+        194.27029418945312
+      ],
+      "text_sha256": "575e2660033a81e6da3932e536b8676eb92beec9065f2a488b17e798510dd09c"
+    },
+    {
+      "block_id": "page-0819-block-0004",
+      "order": 4,
+      "text": "times be a reflection of problems or failings in the care environment. Different staff \nin a care home may have different thresholds of tolerance (or make different attribu-\ntions) for these difficulties which can lead to varied reports of their significance and \nimpact. Allowing for a period of prospective assessment and using simple assessment \ntools (e.g. simple ABC or sleep charts) can be very helpful to the clinician in making \njudgements about recommending medication. If medication is used in a care home, \nstaff may need special education in its use and anticipated side effects and, for ‘as \nrequired’ medications, clear guidelines for its use. This may make it difficult to initi-\nate certain treatments in the community.\nAdverse effect sensitivity: It is widely thought that people with LD are especially sensi-\n",
+      "bbox": [
+        61.88999938964844,
+        194.55029296875,
+        436.7099914550781,
+        314.2702941894531
+      ],
+      "text_sha256": "19e40342f641cb3997ad20ef071d89c9fad621c9eb840b17eafee8f718276c32"
+    },
+    {
+      "block_id": "page-0819-block-0005",
+      "order": 5,
+      "text": "tive to side effects of psychotropics and more at risk of long-term effects such as the \nmetabolic syndrome. However, we only know of one study that has given support to \nthis view. A cohort study extracting information from a large UK primary care data-\nbase compared the incidence of EPSEs of antipsychotics in adults with LD, with \nadults without LD. The incidence of EPSE was 30% higher in people with LD than \nin those without LD.5 It is good practice to start at lower doses and increase more \nslowly than might be usual in general psychiatric practice. Notable side effects \ninclude worsening of seizures, sedation, extrapyramidal reactions (including with \nrisperidone at normal doses, especially in individuals who already have mobility \nproblems), problems with swallowing (with clozapine and other antipsychotics) and \nworsening of cognitive function with anticholinergic medications (see section on \nprescribing in dementia in Chapter 6).\nPsychological interventions: In the absence of an identifiable mental illness (including \n",
+      "bbox": [
+        61.885292053222656,
+        314.55029296875,
+        436.7198791503906,
+        470.2702941894531
+      ],
+      "text_sha256": "a3f060993aa43b977100468d365bf5b5045a8e8b77a291451cb3a37c5901bcab"
+    },
+    {
+      "block_id": "page-0819-block-0006",
+      "order": 6,
+      "text": "atypical presentations) with clear treatment implications, psychological interven-\ntions such as functional behavioural analysis should be considered as first-line inter-\nvention for all but the most serious or intractable presentations of behavioural \ndisturbance. In studies where it has been possible to infer severity of challenging \nbehaviour treatment response is generally associated with more severe problems at \nbaseline.\n",
+      "bbox": [
+        73.88528442382812,
+        470.55029296875,
+        436.68524169921875,
+        542.2703247070312
+      ],
+      "text_sha256": "7469de63c9cdb67437117947b779e6067b8103ee86d4ba6de5dd7f5d6a51c047"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,71 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0551",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 551,
+  "source_page_index": 550,
+  "source_page_display": 551,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "530    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nDrugs of misuse – a summary\nUrine testing for illicit drugs is routine on many psychiatric wards and in outpatients \nand doctors’ offices. It is important to be aware of the duration of detection of drugs in \nurine and of other commonly used substances and drugs that can give a false-positive \nresult. Some false positives are unpredictable (i.e. not related to chemical similarity), for \nexample, amisulpride can give a false positive for buprenorphine.1 False positive results \nare most likely with point-of-care immunoassay kits. If a positive result has implica-\ntions for a patient’s liberty, and the patient denies use of substances, a second sample \nshould be sent to the laboratory for definitive testing by liquid chromatography and \nmass spectrometry (LC-MS).\n",
+  "raw_text_sha256": "bdec8ba309d3d19f7db7e770730c1906cbbbb2a76cb7150267b7d7f411adb87e",
+  "coordinates_sha256": "4483b699ba62b6386bedc79f820ae724abec77b2dfbae946be1a0a31f3f35c02",
+  "block_sequence_sha256": "e423cc90c00c59d99716fa5793f563527da39b2db82f9f26382ebbbbf3e2aba4",
+  "blocks": [
+    {
+      "block_id": "page-0551-block-0000",
+      "order": 0,
+      "text": "530    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "b9ecadda94c62ef0d721609daa41bd3521789195c803b9efaffae6cc79dc29f6"
+    },
+    {
+      "block_id": "page-0551-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0551-block-0002",
+      "order": 2,
+      "text": "Drugs of misuse – a summary\n",
+      "bbox": [
+        68.88999938964844,
+        66.06539916992188,
+        220.45899963378906,
+        79.10040283203125
+      ],
+      "text_sha256": "01cf6ebc61777ac1d30789457b9456ce5c00671a20195b6e63df95ed2fa0eb7c"
+    },
+    {
+      "block_id": "page-0551-block-0003",
+      "order": 3,
+      "text": "Urine testing for illicit drugs is routine on many psychiatric wards and in outpatients \nand doctors’ offices. It is important to be aware of the duration of detection of drugs in \nurine and of other commonly used substances and drugs that can give a false-positive \nresult. Some false positives are unpredictable (i.e. not related to chemical similarity), for \nexample, amisulpride can give a false positive for buprenorphine.1 False positive results \nare most likely with point-of-care immunoassay kits. If a positive result has implica-\ntions for a patient’s liberty, and the patient denies use of substances, a second sample \nshould be sent to the laboratory for definitive testing by liquid chromatography and \nmass spectrometry (LC-MS).\n",
+      "bbox": [
+        61.885101318359375,
+        84.910400390625,
+        436.7099914550781,
+        192.63040161132812
+      ],
+      "text_sha256": "a51af2ef0825303e297f9ee9cd25b5491eb2cb0faac8150e6f66c70b4ac6e126"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

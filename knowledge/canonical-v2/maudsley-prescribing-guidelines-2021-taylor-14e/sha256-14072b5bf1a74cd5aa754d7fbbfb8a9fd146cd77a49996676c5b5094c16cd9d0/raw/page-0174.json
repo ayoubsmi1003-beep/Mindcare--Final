@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0174",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 174,
+  "source_page_index": 173,
+  "source_page_display": 174,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    153\nCHAPTER 1\nDiabetes and impaired glucose tolerance\nSchizophrenia\nSchizophrenia is associated with relatively high rates of insulin resistance and \n­diabetes1,2 – an observation that predates the discovery and widespread use of antipsy-\nchotics.3–5 Lifestyle interventions (lower weight, more activity) are effective in preventing \ndiabetes6,7 and should be considered for all people with a diagnosis of schizophrenia.\nAntipsychotics\nThe data relating to diabetes and the use of antipsychotic medication are numerous but \nless than perfect.8–12 The main problem is that while incidence and prevalence studies \nassume full or uniform screening for diabetes, this is unlikely to be occurring in clinical \npractice.8 Many studies do not account for other factors affecting the risk of developing \ndiabetes.11 Small differences between medications are therefore difficult to substantiate \nbut may in any case be ultimately unimportant: risk is probably increased for all those \nwith schizophrenia receiving any antipsychotic medication.\nThe mechanisms involved in the development of antipsychotic-related diabetes are \nunclear, but may include 5HT2A/5HT2C antagonism, increased plasma lipids, weight \ngain and leptin resistance.13 Insulin resistance may occur in the absence of weight gain.14\nFirst-generation antipsychotics\nPhenothiazine derivatives have long been associated with impaired glucose tolerance \nand diabetes.15 Diabetes prevalence was reported to have substantially increased fol-\nlowing the introduction and widespread use of FGA drugs.16 The prevalence of impaired \nglucose tolerance seems to be higher with the aliphatic phenothiazines than with flu-\nphenazine or haloperidol.17 Hyperglycaemia has also been reported with other FGAs, \nsuch as loxapine,18 and other data confirm an association with haloperidol.19 Some \nstudies even suggest that FGAs are no different from SGAs in their propensity to cause \ndiabetes,20,21 whereas others suggest a modest but statistically significant excess inci-\ndence of diabetes with SGAs.22\nSecond-generation antipsychotics\nClozapine\nClozapine is strongly linked to hyperglycaemia, impaired glucose tolerance and diabetic \nketoacidosis.23 The risk of diabetes appears to be higher with clozapine than with other \nSGAs or FGAs, especially in younger patients,24–27 although this is not a consistent \nfinding.28,29\nAs many as a third of patients might develop diabetes after 5 years of clozapine treat-\nment.30 Many cases of diabetes occur in the first 6 months of treatment, some within a \nmonth,31 and some only after many years.29 Death from ketoacidosis has also been \nreported.31 Diabetes associated with clozapine is not necessarily linked to obesity or to \n",
+  "raw_text_sha256": "f672e08e5f3cea38f1daeb8240dc0bef2bdf2658cdb3cfc519683359f549595d",
+  "coordinates_sha256": "ce2cf61957381cfd2d0ba723c8a83e8b69fa819df4523d37a76f3ab0d2aca012",
+  "block_sequence_sha256": "24c74d2bb53fda74e3dfd5f31d82f8857bd78bbabd9032e6eba26413f9c4f546",
+  "blocks": [
+    {
+      "block_id": "page-0174-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    153\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "78b43214d618a3e83e727bcf39201cf77a29c44e1d56f7fa4136aab001a3f223"
+    },
+    {
+      "block_id": "page-0174-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0174-block-0002",
+      "order": 2,
+      "text": "Diabetes and impaired glucose tolerance\n",
+      "bbox": [
+        54.99909973144531,
+        66.06448364257812,
+        265.0660705566406,
+        79.0994873046875
+      ],
+      "text_sha256": "8a5a38e3df459942796e1c5a0707a131b5029e7703a788a04331799d9dfa76a7"
+    },
+    {
+      "block_id": "page-0174-block-0003",
+      "order": 3,
+      "text": "Schizophrenia\n",
+      "bbox": [
+        48.00309753417969,
+        102.06747436523438,
+        120.53709411621094,
+        115.10247802734375
+      ],
+      "text_sha256": "c429990104d2a691dcecca2a42e3a2ae92b1ace371bcbbefcfb51e2f1ad64a03"
+    },
+    {
+      "block_id": "page-0174-block-0004",
+      "order": 4,
+      "text": "Schizophrenia is associated with relatively high rates of insulin resistance and \n­diabetes1,2 – an observation that predates the discovery and widespread use of antipsy-\nchotics.3–5 Lifestyle interventions (lower weight, more activity) are effective in preventing \ndiabetes6,7 and should be considered for all people with a diagnosis of schizophrenia.\n",
+      "bbox": [
+        47.994895935058594,
+        120.90948486328125,
+        422.7793884277344,
+        168.62948608398438
+      ],
+      "text_sha256": "82db32c27b9561bfedd125466447ee497c8380c41a3b20852c6e63d10a6fbb6f"
+    },
+    {
+      "block_id": "page-0174-block-0005",
+      "order": 5,
+      "text": "Antipsychotics\n",
+      "bbox": [
+        47.99909973144531,
+        186.06448364257812,
+        123.15110778808594,
+        199.0994873046875
+      ],
+      "text_sha256": "66a87c9d9c00b8fa993ae9a90f576148dfe50f1c930aed10c7efe7d8254d7496"
+    },
+    {
+      "block_id": "page-0174-block-0006",
+      "order": 6,
+      "text": "The data relating to diabetes and the use of antipsychotic medication are numerous but \nless than perfect.8–12 The main problem is that while incidence and prevalence studies \nassume full or uniform screening for diabetes, this is unlikely to be occurring in clinical \npractice.8 Many studies do not account for other factors affecting the risk of developing \ndiabetes.11 Small differences between medications are therefore difficult to substantiate \nbut may in any case be ultimately unimportant: risk is probably increased for all those \nwith schizophrenia receiving any antipsychotic medication.\n",
+      "bbox": [
+        47.99909973144531,
+        204.90951538085938,
+        422.8331604003906,
+        288.6295166015625
+      ],
+      "text_sha256": "72a3aab55c97e8f5685dce3027185e1bb57af008d1c7c51dc327babb196c6222"
+    },
+    {
+      "block_id": "page-0174-block-0007",
+      "order": 7,
+      "text": "The mechanisms involved in the development of antipsychotic-related diabetes are \nunclear, but may include 5HT2A/5HT2C antagonism, increased plasma lipids, weight \ngain and leptin resistance.13 Insulin resistance may occur in the absence of weight gain.14\n",
+      "bbox": [
+        48.000091552734375,
+        288.9095153808594,
+        422.7814636230469,
+        324.6295166015625
+      ],
+      "text_sha256": "ef83b63bb26f6292e26e1f74c602632548b1dfae0f4cf7a750f6acd78501dfe8"
+    },
+    {
+      "block_id": "page-0174-block-0008",
+      "order": 8,
+      "text": "First-generation antipsychotics\n",
+      "bbox": [
+        47.99909973144531,
+        342.06451416015625,
+        206.8940887451172,
+        355.0995178222656
+      ],
+      "text_sha256": "614eddeacc1cdcf8546bb1f06ac22050181819d3689b21e2869c07984ffa8929"
+    },
+    {
+      "block_id": "page-0174-block-0009",
+      "order": 9,
+      "text": "Phenothiazine derivatives have long been associated with impaired glucose tolerance \nand diabetes.15 Diabetes prevalence was reported to have substantially increased fol-\nlowing the introduction and widespread use of FGA drugs.16 The prevalence of impaired \nglucose tolerance seems to be higher with the aliphatic phenothiazines than with flu-\nphenazine or haloperidol.17 Hyperglycaemia has also been reported with other FGAs, \nsuch as loxapine,18 and other data confirm an association with haloperidol.19 Some \nstudies even suggest that FGAs are no different from SGAs in their propensity to cause \ndiabetes,20,21 whereas others suggest a modest but statistically significant excess inci-\ndence of diabetes with SGAs.22\n",
+      "bbox": [
+        47.995208740234375,
+        360.9095153808594,
+        422.7991027832031,
+        468.6295166015625
+      ],
+      "text_sha256": "4fa87156dc6bccec46d46cc7c2b1cacb4bb8214f6d80f5414521fceceb828b93"
+    },
+    {
+      "block_id": "page-0174-block-0010",
+      "order": 10,
+      "text": "Second-generation antipsychotics\n",
+      "bbox": [
+        47.99909973144531,
+        486.06451416015625,
+        222.17306518554688,
+        499.0995178222656
+      ],
+      "text_sha256": "dac4e204d703c7d610999f46fe70b16b562484f3042a6f00948f6cd057a8f076"
+    },
+    {
+      "block_id": "page-0174-block-0011",
+      "order": 11,
+      "text": "Clozapine\n",
+      "bbox": [
+        47.99909973144531,
+        504.9994812011719,
+        94.11909484863281,
+        516.8494873046875
+      ],
+      "text_sha256": "0bd60b9b2d37cb1923ef72b68316ecf506009979d23dbd051c264f05e5e95770"
+    },
+    {
+      "block_id": "page-0174-block-0012",
+      "order": 12,
+      "text": "Clozapine is strongly linked to hyperglycaemia, impaired glucose tolerance and diabetic \nketoacidosis.23 The risk of diabetes appears to be higher with clozapine than with other \nSGAs or FGAs, especially in younger patients,24–27 although this is not a consistent \nfinding.28,29\n",
+      "bbox": [
+        47.9945068359375,
+        522.9094848632812,
+        422.7814636230469,
+        570.6295166015625
+      ],
+      "text_sha256": "1572db2d7c874f1127fdce2ab478418246c1a08ff3815f3c9f5e92e4c9425acc"
+    },
+    {
+      "block_id": "page-0174-block-0013",
+      "order": 13,
+      "text": "As many as a third of patients might develop diabetes after 5 years of clozapine treat-\nment.30 Many cases of diabetes occur in the first 6 months of treatment, some within a \nmonth,31 and some only after many years.29 Death from ketoacidosis has also been \nreported.31 Diabetes associated with clozapine is not necessarily linked to obesity or to \n",
+      "bbox": [
+        47.99729919433594,
+        570.9094848632812,
+        422.7872619628906,
+        618.6295166015625
+      ],
+      "text_sha256": "e6db7f1d23358a3ee1cc34de42604c97e92725279742b5c8ee46c1e710942035"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

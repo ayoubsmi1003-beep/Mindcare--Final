@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0892",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 892,
+  "source_page_index": 891,
+  "source_page_display": 892,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Other substances    871\nCHAPTER 12\nNicotine\nNicotine is consumed by vaping or tobacco smoking. Less than a quarter of the general \npopulation, 40–50% of those with depression1 and 70–80% of those with schizophrenia, \nuse nicotine.2 Nicotine causes peripheral vasoconstriction, tachycardia and increased \nblood pressure.3 People with schizophrenia who smoke are more likely to develop the \nmetabolic syndrome, compared with those who do not smoke.4 As well as nicotine, \ncigarettes also contain tar (a complex mixture of organic molecules, many carcino-\ngenic), a cause of cancers of the respiratory tract, chronic bronchitis and emphysema.5 \nElectronic cigarettes contain only nicotine (alongside some necessary excipients), which \nhas very limited toxicity and is not thought to be carcinogenic. Vaping is thus preferred \nfor all smokers, albeit with some reservations in regard to quality control of content \nand the so-called re-normalisation of smoking. Vaping is probably not without risk, but \nthis is a complex area beyond the scope of this book.\nNicotine is highly addictive: an effect which may be at least partially genetically \ndetermined.6 People with mental illness are 2–3 times more likely than the general pop-\nulation to develop and maintain nicotine addiction.1 Chronic smoking contributes to \nthe increased morbidity and mortality from respiratory and cardiovascular disease that \nis seen in this patient group. Nicotine also has psychotropic effects. Smoking can affect \nthe metabolism (and therefore the efficacy and toxicity) of drugs prescribed to treat \npsychiatric illness.7 See section on ‘Smoking and psychotropic drugs’ in Chapter 11. \nNicotine use may be a gateway drug to experimenting with other psychoactive \nsubstances.\nPsychotropic effects\nNicotine is highly lipid-soluble and rapidly enters the brain after inhalation. Nicotine \nreceptors are found on dopaminergic cell bodies and stimulation of these receptors \nleads to dopamine release.1 Dopamine release in the limbic system is associated with \npleasure: dopamine is the brain’s ‘reward’ neurotransmitter. Nicotine may be used by \npeople with mental health problems as a form of ‘self-medication’ (e.g. to alleviate the \nnegative symptoms of schizophrenia or antipsychotic-induced dysphoria or for its anxi-\nolytic effect8). Drugs that increase the release of dopamine reduce the craving for nico-\ntine. They may also worsen psychotic illness (see under smoking cessation below). \nNicotine improves concentration and vigilance,1 probably by enhancing the effects of \nglutamate, acetylcholine and serotonin.8\nSchizophrenia\nSeventy to eighty per cent of people with schizophrenia regularly smoke cigarettes2 \n(with increasing numbers switching to vaping9,10) and this increased tendency to smoke \npredates the onset of psychiatric symptoms.11 Smoking might actually be a cause of \nschizophrenia.12 Possible explanations for higher rates of nicotine use are as follows:13 \nsmoking causes dopamine release, leading to feelings of well-being and a reduction in \nnegative symptoms;8 smoking alleviates some of the side effects of antipsychotics such \nas drowsiness and extrapyramidal symptoms (EPS)1 and cognitive slowing;14,15 smoking \n",
+  "raw_text_sha256": "5b2691880d4a209a7fa137783487f91ac3623f5cbdd48f80be0510f2ffba46bb",
+  "coordinates_sha256": "3afdcd654a765f2bd6d0613a202dd74039e668775bb93334af39daefdc5cc4c5",
+  "block_sequence_sha256": "c4979b9325d446db15f98fa87ded58151947c804104bb6a99d210a686d225922",
+  "blocks": [
+    {
+      "block_id": "page-0892-block-0000",
+      "order": 0,
+      "text": "Other substances    871\n",
+      "bbox": [
+        321.96881103515625,
+        31.395221710205078,
+        420.00079345703125,
+        41.0272216796875
+      ],
+      "text_sha256": "c2ef6cf6dd59af999e95e9f841bafa1d8e0a719dd18786b60185f887d8d4f4a0"
+    },
+    {
+      "block_id": "page-0892-block-0001",
+      "order": 1,
+      "text": "CHAPTER 12\n",
+      "bbox": [
+        454.4096984863281,
+        206.75430297851562,
+        463.88970947265625,
+        252.54629516601562
+      ],
+      "text_sha256": "f1eaa35bf02463d3796518e98cd7bcaee85367df0bd183e9c8e123aa82bb6911"
+    },
+    {
+      "block_id": "page-0892-block-0002",
+      "order": 2,
+      "text": "Nicotine\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        97.77899932861328,
+        79.1004638671875
+      ],
+      "text_sha256": "95899a3c0357a59c83893e5e9ded7669ba6db9e70ca4910d1750bd2dcce64ca9"
+    },
+    {
+      "block_id": "page-0892-block-0003",
+      "order": 3,
+      "text": "Nicotine is consumed by vaping or tobacco smoking. Less than a quarter of the general \npopulation, 40–50% of those with depression1 and 70–80% of those with schizophrenia, \nuse nicotine.2 Nicotine causes peripheral vasoconstriction, tachycardia and increased \nblood pressure.3 People with schizophrenia who smoke are more likely to develop the \nmetabolic syndrome, compared with those who do not smoke.4 As well as nicotine, \ncigarettes also contain tar (a complex mixture of organic molecules, many carcino-\ngenic), a cause of cancers of the respiratory tract, chronic bronchitis and emphysema.5 \nElectronic cigarettes contain only nicotine (alongside some necessary excipients), which \nhas very limited toxicity and is not thought to be carcinogenic. Vaping is thus preferred \nfor all smokers, albeit with some reservations in regard to quality control of content \nand the so-called re-normalisation of smoking. Vaping is probably not without risk, but \nthis is a complex area beyond the scope of this book.\n",
+      "bbox": [
+        47.99540710449219,
+        84.91046142578125,
+        422.830322265625,
+        228.63046264648438
+      ],
+      "text_sha256": "b0b27d0ea311e85de44e4a091132435f3a38374ae3a83b448d23dc4b4773c8c4"
+    },
+    {
+      "block_id": "page-0892-block-0004",
+      "order": 4,
+      "text": "Nicotine is highly addictive: an effect which may be at least partially genetically \ndetermined.6 People with mental illness are 2–3 times more likely than the general pop-\nulation to develop and maintain nicotine addiction.1 Chronic smoking contributes to \nthe increased morbidity and mortality from respiratory and cardiovascular disease that \nis seen in this patient group. Nicotine also has psychotropic effects. Smoking can affect \nthe metabolism (and therefore the efficacy and toxicity) of drugs prescribed to treat \npsychiatric illness.7 See section on ‘Smoking and psychotropic drugs’ in Chapter 11. \nNicotine use may be a gateway drug to experimenting with other psychoactive \nsubstances.\n",
+      "bbox": [
+        48.000396728515625,
+        228.91046142578125,
+        422.82470703125,
+        336.6304931640625
+      ],
+      "text_sha256": "3b265d2c16b0eb68aac86cb7e02dbc320563aec031c6f893072a882109459871"
+    },
+    {
+      "block_id": "page-0892-block-0005",
+      "order": 5,
+      "text": "Psychotropic effects\n",
+      "bbox": [
+        48.0,
+        354.06549072265625,
+        150.8830108642578,
+        367.1004943847656
+      ],
+      "text_sha256": "cc4982cb58ebc1872682016095b62b5a4ec74e08c606eca9d69a8618cc2b4ab9"
+    },
+    {
+      "block_id": "page-0892-block-0006",
+      "order": 6,
+      "text": "Nicotine is highly lipid-soluble and rapidly enters the brain after inhalation. Nicotine \nreceptors are found on dopaminergic cell bodies and stimulation of these receptors \nleads to dopamine release.1 Dopamine release in the limbic system is associated with \npleasure: dopamine is the brain’s ‘reward’ neurotransmitter. Nicotine may be used by \npeople with mental health problems as a form of ‘self-medication’ (e.g. to alleviate the \nnegative symptoms of schizophrenia or antipsychotic-induced dysphoria or for its anxi-\nolytic effect8). Drugs that increase the release of dopamine reduce the craving for nico-\ntine. They may also worsen psychotic illness (see under smoking cessation below). \n",
+      "bbox": [
+        47.998497009277344,
+        372.9104919433594,
+        422.8085021972656,
+        468.6304931640625
+      ],
+      "text_sha256": "95f6204a9831f087ae11a6957dc72f30e3ab7052dc99b1f378cf7f6996f6d569"
+    },
+    {
+      "block_id": "page-0892-block-0007",
+      "order": 7,
+      "text": "Nicotine improves concentration and vigilance,1 probably by enhancing the effects of \nglutamate, acetylcholine and serotonin.8\n",
+      "bbox": [
+        48.00248718261719,
+        468.9104919433594,
+        422.79248046875,
+        492.6304931640625
+      ],
+      "text_sha256": "a9d72ba58c12d17b0be97669ec317bfedb052229a47170eb22392e9aa9ce88ea"
+    },
+    {
+      "block_id": "page-0892-block-0008",
+      "order": 8,
+      "text": "Schizophrenia\n",
+      "bbox": [
+        48.0,
+        510.0654602050781,
+        120.53399658203125,
+        523.1004638671875
+      ],
+      "text_sha256": "c429990104d2a691dcecca2a42e3a2ae92b1ace371bcbbefcfb51e2f1ad64a03"
+    },
+    {
+      "block_id": "page-0892-block-0009",
+      "order": 9,
+      "text": "Seventy to eighty per cent of people with schizophrenia regularly smoke cigarettes2 \n(with increasing numbers switching to vaping9,10) and this increased tendency to smoke \npredates the onset of psychiatric symptoms.11 Smoking might actually be a cause of \nschizophrenia.12 Possible explanations for higher rates of nicotine use are as follows:13 \nsmoking causes dopamine release, leading to feelings of well-being and a reduction in \nnegative symptoms;8 smoking alleviates some of the side effects of antipsychotics such \nas drowsiness and extrapyramidal symptoms (EPS)1 and cognitive slowing;14,15 smoking \n",
+      "bbox": [
+        47.9967041015625,
+        528.9104614257812,
+        422.8103942871094,
+        612.6304931640625
+      ],
+      "text_sha256": "ff49d70d0295f50ffe1da921f7e96b5a53147dd1f346a427bfc1712b3c384b48"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,107 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0152",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 152,
+  "source_page_index": 151,
+  "source_page_display": 152,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    131\nCHAPTER 1\nNeuroleptic malignant syndrome\nNeuroleptic malignant syndrome (NMS) is an acute disorder of thermoregulation and \nneuromotor control. It is characterised by muscular rigidity, hyperthermia, altered con-\nsciousness, and autonomic dysfunction, following exposure to antipsychotic medica-\ntion, although there is considerable heterogeneity in the clinical presentation.1–4 \nAlthough widely seen as an acute, severe syndrome, NMS may, in many cases, have few \novert signs and symptoms, and ‘full-blown’ NMS may thus represent the extreme of a \nrange of non-malignant related symptoms.5 Certainly, asymptomatic rises in plasma \ncreatine kinase (CK) are fairly common.6\nNMS occurs as a rare but potentially serious or even fatal adverse effect of antipsy-\nchotics, being medications with dopamine receptor-antagonist properties.1 Risk factors \nfor developing the condition include being male, dehydration, exhaustion and confu-\nsion/agitation.4,7 Young adult males seem to be particularly at risk while the condition \nis most likely to be lethal in older people.4,8\nThe incidence and mortality rate of NMS are difficult to establish and probably vary \nas medication regimens change and recognition of NMS increases. Based on data from \na drug safety programme, from 1993 to 2015, the overall incidence was calculated to \nbe 0.16%.9 A similar study covering the period 2004–201710 reported an incidence of \n0.11%. High-potency FGAs seem to have the highest incidence, while SGAs and low-\npotency FGAs have lower incidences.3,9,11 Nevertheless, most available antipsychotic \nmedications have been reported to be associated with the syndrome,12–19 including more \nrecently introduced SGAs such as ziprasidone,20,21 iloperidone,22 aripiprazole,23–26 pali-\nperidone27 (including paliperidone palmitate28), asenapine29 and risperidone injection.30 \nMortality is probably lower with SGAs than with FGAs,3,31–33 although the clinical \npicture is essentially similar,32 except that rigidity and fever may be less common.3,32 At \nthe time of writing, NMS has yet to be associated with pimavanserin, cariprazine, brex-\npiprazole or lumateperone.34\nNMS is also sometimes seen with other medications, such as antidepressants,35–38 \nvalproate39,40 phenytoin41 and lithium.42 The co-prescription of SSRIs43 or cholinester-\nase inhibitors44,45 with antipsychotic medication may increase the risk of NMS. NMS-\ntype syndromes induced by SGA/SSRI combinations may share their symptoms and \npathogenesis with the serotonin syndrome.46 Benzodiazepines are a recommended \ntreatment for NMS,47 but an association between their use and NMS has been reported, \npossibly confounded by diagnosis or explained by the occurrence of NMS-like symp-\ntoms during benzodiazepine withdrawal.11,48,49 NMS is also occasionally seen in people \ngiven non-psychotropic dopamine antagonists such as metoclopramide (Table 1.19).50\n",
+  "raw_text_sha256": "fdc122326c2c7f94273f42a6660459bd1efa4c44b8666b15211bb4ed9e500da0",
+  "coordinates_sha256": "9567e7e332e12f770f9e881c83432e50017e7a2cb6668733df8797b509801188",
+  "block_sequence_sha256": "e1825ed79483017d57ca9d3b595fc5f774bb6cf8332518dd42db15a78c0d21b8",
+  "blocks": [
+    {
+      "block_id": "page-0152-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    131\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "85fdcf09b3ff838c49667f2ee1789becea5f30eab2c23505b55a4870041a192f"
+    },
+    {
+      "block_id": "page-0152-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0152-block-0002",
+      "order": 2,
+      "text": "Neuroleptic malignant syndrome\n",
+      "bbox": [
+        54.99909973144531,
+        66.06448364257812,
+        224.52008056640625,
+        79.0994873046875
+      ],
+      "text_sha256": "c9e952f78c0953afa4aa32954ef688b9900568e16e575fcbd4c2990f7f531a86"
+    },
+    {
+      "block_id": "page-0152-block-0003",
+      "order": 3,
+      "text": "Neuroleptic malignant syndrome (NMS) is an acute disorder of thermoregulation and \nneuromotor control. It is characterised by muscular rigidity, hyperthermia, altered con-\nsciousness, and autonomic dysfunction, following exposure to antipsychotic medica-\ntion, although there is considerable heterogeneity in the clinical presentation.1–4 \nAlthough widely seen as an acute, severe syndrome, NMS may, in many cases, have few \novert signs and symptoms, and ‘full-blown’ NMS may thus represent the extreme of a \nrange of non-malignant related symptoms.5 Certainly, asymptomatic rises in plasma \ncreatine kinase (CK) are fairly common.6\n",
+      "bbox": [
+        47.99909973144531,
+        84.90948486328125,
+        422.8094177246094,
+        180.62948608398438
+      ],
+      "text_sha256": "efc24e47ee0acef774dbc2fad20be1ab7ba63f313f3ef5bee3531718898b1591"
+    },
+    {
+      "block_id": "page-0152-block-0004",
+      "order": 4,
+      "text": "NMS occurs as a rare but potentially serious or even fatal adverse effect of antipsy-\nchotics, being medications with dopamine receptor-antagonist properties.1 Risk factors \nfor developing the condition include being male, dehydration, exhaustion and confu-\nsion/agitation.4,7 Young adult males seem to be particularly at risk while the condition \nis most likely to be lethal in older people.4,8\n",
+      "bbox": [
+        47.99702453613281,
+        180.90948486328125,
+        422.7870178222656,
+        240.6295166015625
+      ],
+      "text_sha256": "b28700f8998a1707474a3a811009ec4adc1d3c6dcfb4729319d580a26a3f9ff7"
+    },
+    {
+      "block_id": "page-0152-block-0005",
+      "order": 5,
+      "text": "The incidence and mortality rate of NMS are difficult to establish and probably vary \nas medication regimens change and recognition of NMS increases. Based on data from \na drug safety programme, from 1993 to 2015, the overall incidence was calculated to \nbe 0.16%.9 A similar study covering the period 2004–201710 reported an incidence of \n0.11%. High-potency FGAs seem to have the highest incidence, while SGAs and low-\npotency FGAs have lower incidences.3,9,11 Nevertheless, most available antipsychotic \nmedications have been reported to be associated with the syndrome,12–19 including more \nrecently introduced SGAs such as ziprasidone,20,21 iloperidone,22 aripiprazole,23–26 pali-\nperidone27 (including paliperidone palmitate28), asenapine29 and risperidone injection.30 \nMortality is probably lower with SGAs than with FGAs,3,31–33 although the clinical \npicture is essentially similar,32 except that rigidity and fever may be less common.3,32 At \nthe time of writing, NMS has yet to be associated with pimavanserin, cariprazine, brex-\npiprazole or lumateperone.34\n",
+      "bbox": [
+        47.99549865722656,
+        240.90951538085938,
+        422.7991027832031,
+        396.6295166015625
+      ],
+      "text_sha256": "462c83163bd871fc143ec01bdc2bc3eb172b5f08005054f491f86c48e45aa45e"
+    },
+    {
+      "block_id": "page-0152-block-0006",
+      "order": 6,
+      "text": "NMS is also sometimes seen with other medications, such as antidepressants,35–38 \nvalproate39,40 phenytoin41 and lithium.42 The co-prescription of SSRIs43 or cholinester-\nase inhibitors44,45 with antipsychotic medication may increase the risk of NMS. NMS-\ntype syndromes induced by SGA/SSRI combinations may share their symptoms and \npathogenesis with the serotonin syndrome.46 Benzodiazepines are a recommended \ntreatment for NMS,47 but an association between their use and NMS has been reported, \npossibly confounded by diagnosis or explained by the occurrence of NMS-like symp-\ntoms during benzodiazepine withdrawal.11,48,49 NMS is also occasionally seen in people \ngiven non-psychotropic dopamine antagonists such as metoclopramide (Table 1.19).50\n",
+      "bbox": [
+        47.99620056152344,
+        396.9095153808594,
+        422.8167419433594,
+        504.6295166015625
+      ],
+      "text_sha256": "2d2664b0271c0c6aa4d8a9a16a62a7d853caae44a2fdde6ed5977de0f7fc432a"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

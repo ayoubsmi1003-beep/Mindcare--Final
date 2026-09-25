@@ -1,0 +1,479 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0062",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 62,
+  "source_page_index": 61,
+  "source_page_display": 62,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    41\nCHAPTER 1\nRelative adverse effects – a rough guide\nDrug\nSedation\nWeight \ngain\nAkathisia\nParkinsonism\nAnti-\ncholinergic\nHypotension\nProlactin \nelevation\nAmisulpride*\n–\n+\n+\n+\n–\n–\n+++\nAripiprazole\n–\n–\n+\n–\n–\n–\n–\nAsenapine*\n+\n+\n+\n–\n–\n–\n+\nBenperidol*\n+\n+\n+\n+++\n+\n+\n+++\nBrexpiprazole*\n–\n–\n–\n–\n–\n–\n–\nCariprazine*\n–\n–\n+\n–\n–\n–\n–\nChlorpromazine\n+++\n++\n+\n++\n++\n+++\n+++\nClozapine\n+++\n+++\n–\n–\n+++\n+++\n–\nFlupentixol*\n+\n++\n++\n++\n++\n+\n+++\nFluphenazine*\n+\n+\n++\n+++\n+\n+\n+++\nHaloperidol\n+\n+\n+++\n+++\n+\n+\n++\nIloperidone*\n–\n++\n+\n+\n–\n+\n–\nLumateperone*\n++\n–\n–\n–\n–\n–\n–\nLoxapine*\n++\n+\n+\n+++\n+\n++\n+++\nLurasidone\n+\n–\n+\n+\n–\n–\n–\nOlanzapine\n++\n+++\n–\n–\n+\n+\n+\nPaliperidone\n+\n++\n+\n+\n+\n++\n+++\nPerphenazine\n+\n+\n++\n+++\n+\n+\n+++\nPimavanserin*\n-\n-\n-\n-\n-\n-\n-\nPimozide*\n+\n+\n+\n+\n+\n+\n+++\nPipothiazine*\n++\n++\n+\n++\n++\n++\n+++\nPromazine*\n+++\n++\n+\n+\n++\n++\n++\nQuetiapine\n++\n++\n–\n–\n+\n++\n–\nRisperidone\n+\n++\n+\n+\n+\n++\n+++\nSertindole*\n–\n+\n+\n–\n–\n+++\n–\nSulpiride*\n–\n+\n+\n+\n–\n–\n+++\nTrifluoperazine\n+\n+\n+\n+++\n+\n+\n+++\nZiprasidone*\n+\n–\n+\n–\n–\n+\n+\nZuclopenthixol*\n++\n++\n++\n++\n++\n+\n+++\nKey: *Availability varies from country to country; +++ High incidence/severity; ++ Moderate; + Low; – Very low.\nNote: The table notes approximate estimates of relative incidence and/or severity, based on clinical experience, \nmanufacturers’ literature and published research. This is a very rough guide – see individual sections for more precise \nand referenced information.\nOther adverse effects not mentioned in this table do occur. Please see dedicated sections on other adverse effects \nincluded in this book for more information.\n",
+  "raw_text_sha256": "02ac19f7b43492dd03a8626af4e0f7a070e463194e0f79136467bb406298c27f",
+  "coordinates_sha256": "9b376e777dcc4809f00c5afc32f43c9b5d8e8d329b8929363a0cd4e619fa3493",
+  "block_sequence_sha256": "cf12392046e9549e3e43644a8b42b269451c971d7d1fda6590d4253a599b9e03",
+  "blocks": [
+    {
+      "block_id": "page-0062-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    41\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "9ddec9edd91111a9d92ffa79ac6ff4b890535897a744e231c77f982f2bb999e4"
+    },
+    {
+      "block_id": "page-0062-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0062-block-0002",
+      "order": 2,
+      "text": "Relative adverse effects – a rough guide\n",
+      "bbox": [
+        54.99909973144531,
+        66.06442260742188,
+        261.8321533203125,
+        79.09942626953125
+      ],
+      "text_sha256": "ea9f13d98c86f3e0eade8320602dc9e6f0943a684b90d167036d4a80108b1b62"
+    },
+    {
+      "block_id": "page-0062-block-0003",
+      "order": 3,
+      "text": "Drug\nSedation\n",
+      "bbox": [
+        47.99909973144531,
+        104.57191467285156,
+        137.25660705566406,
+        113.45941162109375
+      ],
+      "text_sha256": "0dcba38f07dd9a8a8b2342001d068ddf1e08a141f10e1d44b5759380012c4fc8"
+    },
+    {
+      "block_id": "page-0062-block-0004",
+      "order": 4,
+      "text": "Weight \ngain\nAkathisia\nParkinsonism\n",
+      "bbox": [
+        145.9940948486328,
+        94.57441711425781,
+        269.6615905761719,
+        113.45941162109375
+      ],
+      "text_sha256": "af6ad67eb8bfac8016cb133b7f8bef164cd5f7dfa526df6b95ca5a531631714c"
+    },
+    {
+      "block_id": "page-0062-block-0005",
+      "order": 5,
+      "text": "Anti-\ncholinergic\nHypotension\n",
+      "bbox": [
+        277.986572265625,
+        94.57441711425781,
+        368.9839782714844,
+        113.45941162109375
+      ],
+      "text_sha256": "69b486b06845f9e186cdc0fb3a8515d936e67cba94490859f267838a07715cf5"
+    },
+    {
+      "block_id": "page-0062-block-0006",
+      "order": 6,
+      "text": "Prolactin \nelevation\n",
+      "bbox": [
+        376.986572265625,
+        94.57441711425781,
+        409.9190979003906,
+        113.45941162109375
+      ],
+      "text_sha256": "74c7ea1d24a9115f53489024102d01ad2351deed94e2b3eb8ecbab49b6bd2d8d"
+    },
+    {
+      "block_id": "page-0062-block-0007",
+      "order": 7,
+      "text": "Amisulpride*\n–\n+\n+\n+\n–\n–\n+++\n",
+      "bbox": [
+        47.98408508300781,
+        121.5294418334961,
+        390.4715576171875,
+        130.2369384765625
+      ],
+      "text_sha256": "155b33d12019a230454370842484f65114e5781e7fc91c95b722d7598390f89b"
+    },
+    {
+      "block_id": "page-0062-block-0008",
+      "order": 8,
+      "text": "Aripiprazole\n–\n–\n+\n–\n–\n–\n–\n",
+      "bbox": [
+        47.96907043457031,
+        136.5519561767578,
+        380.70654296875,
+        145.25946044921875
+      ],
+      "text_sha256": "ca1dd647bf4687f9dc46442d14da0a432f8d67a0998be198c2f63942aa5d6537"
+    },
+    {
+      "block_id": "page-0062-block-0009",
+      "order": 9,
+      "text": "Asenapine*\n+\n+\n+\n–\n–\n–\n+\n",
+      "bbox": [
+        47.95405578613281,
+        151.57447814941406,
+        381.4415283203125,
+        160.281982421875
+      ],
+      "text_sha256": "7104d956342c36163138aa1a47e2a78ace204782fe7768ae6a1de003956ef72e"
+    },
+    {
+      "block_id": "page-0062-block-0010",
+      "order": 10,
+      "text": "Benperidol*\n+\n+\n+\n+++\n+\n+\n+++\n",
+      "bbox": [
+        47.93904113769531,
+        166.5970001220703,
+        390.426513671875,
+        175.30450439453125
+      ],
+      "text_sha256": "26dd4a37880d6e63ad3c426292de8f8c6a5d77d79b4dedd40ae9f87de345f5e7"
+    },
+    {
+      "block_id": "page-0062-block-0011",
+      "order": 11,
+      "text": "Brexpiprazole*\n–\n–\n–\n–\n–\n–\n–\n",
+      "bbox": [
+        47.92402648925781,
+        181.61952209472656,
+        380.6614990234375,
+        190.3270263671875
+      ],
+      "text_sha256": "8ddb69413e2fa5296ec0d722d9f67227dfb2f02538d14e46fb8431b4d2cbf507"
+    },
+    {
+      "block_id": "page-0062-block-0012",
+      "order": 12,
+      "text": "Cariprazine*\n–\n–\n+\n–\n–\n–\n–\n",
+      "bbox": [
+        47.90901184082031,
+        196.6420440673828,
+        380.646484375,
+        205.34954833984375
+      ],
+      "text_sha256": "afeae798e7b98c79b82abceaf5b3dc89348eabb89e0aaab4681893efac4f4cbf"
+    },
+    {
+      "block_id": "page-0062-block-0013",
+      "order": 13,
+      "text": "Chlorpromazine\n+++\n++\n+\n++\n++\n+++\n+++\n",
+      "bbox": [
+        47.89399719238281,
+        211.66453552246094,
+        390.3814697265625,
+        220.37203979492188
+      ],
+      "text_sha256": "5d4f3d3894ea47426237be496396a7e72e9b22c9905231b110b89006e0ef4e2f"
+    },
+    {
+      "block_id": "page-0062-block-0014",
+      "order": 14,
+      "text": "Clozapine\n+++\n+++\n–\n–\n+++\n+++\n–\n",
+      "bbox": [
+        47.87898254394531,
+        226.68702697753906,
+        380.616455078125,
+        235.39453125
+      ],
+      "text_sha256": "61555a3bea43f0906430777e6c3f8641883ea02473e5769e84d6b4ec48e44399"
+    },
+    {
+      "block_id": "page-0062-block-0015",
+      "order": 15,
+      "text": "Flupentixol*\n+\n++\n++\n++\n++\n+\n+++\n",
+      "bbox": [
+        47.86396789550781,
+        241.7095184326172,
+        390.3514404296875,
+        250.41702270507812
+      ],
+      "text_sha256": "705f5fb15701c5fcad802d56dd7425d497c37be3fbcedf60579a1464c3591278"
+    },
+    {
+      "block_id": "page-0062-block-0016",
+      "order": 16,
+      "text": "Fluphenazine*\n+\n+\n++\n+++\n+\n+\n+++\n",
+      "bbox": [
+        47.84895324707031,
+        256.7320251464844,
+        390.33642578125,
+        265.43951416015625
+      ],
+      "text_sha256": "0794386bf569973b0f6ef14ed3862386c9083aed5567f6ba4a18e919487498da"
+    },
+    {
+      "block_id": "page-0062-block-0017",
+      "order": 17,
+      "text": "Haloperidol\n+\n+\n+++\n+++\n+\n+\n++\n",
+      "bbox": [
+        47.83393859863281,
+        271.7545166015625,
+        385.8214111328125,
+        280.4620056152344
+      ],
+      "text_sha256": "68eb9554c8931dc9b4bcb3fdc5f5e055cb0b464ee99b94bd71a5e6b68d2a516d"
+    },
+    {
+      "block_id": "page-0062-block-0018",
+      "order": 18,
+      "text": "Iloperidone*\n–\n++\n+\n+\n–\n+\n–\n",
+      "bbox": [
+        47.81892395019531,
+        286.7770080566406,
+        380.556396484375,
+        295.4844970703125
+      ],
+      "text_sha256": "ba85e1fa00fb85fecccb6251ae5fdadf89cc555208ef24bab57bfce6b69f673e"
+    },
+    {
+      "block_id": "page-0062-block-0019",
+      "order": 19,
+      "text": "Lumateperone*\n++\n–\n–\n–\n–\n–\n–\n",
+      "bbox": [
+        47.80390930175781,
+        301.79949951171875,
+        380.5413818359375,
+        310.5069885253906
+      ],
+      "text_sha256": "701d6f88399846eb34396ba1492b434a5878fa3850ecc6199609c6be98b2a631"
+    },
+    {
+      "block_id": "page-0062-block-0020",
+      "order": 20,
+      "text": "Loxapine*\n++\n+\n+\n+++\n+\n++\n+++\n",
+      "bbox": [
+        47.78889465332031,
+        316.8219909667969,
+        390.2763671875,
+        325.52947998046875
+      ],
+      "text_sha256": "d31910ea0b717c0e89fa5890c07b97ab659dd44ddc9de8325d079c3f15cb1b0a"
+    },
+    {
+      "block_id": "page-0062-block-0021",
+      "order": 21,
+      "text": "Lurasidone\n+\n–\n+\n+\n–\n–\n–\n",
+      "bbox": [
+        47.77388000488281,
+        331.844482421875,
+        380.5113525390625,
+        340.5519714355469
+      ],
+      "text_sha256": "7dd1e92ef437f01279c02780646ddb0664fefaad042ea65e2f2ecfea044c0337"
+    },
+    {
+      "block_id": "page-0062-block-0022",
+      "order": 22,
+      "text": "Olanzapine\n++\n+++\n–\n–\n+\n+\n+\n",
+      "bbox": [
+        47.75886535644531,
+        346.8669738769531,
+        381.246337890625,
+        355.574462890625
+      ],
+      "text_sha256": "511be71d3bc4c0ef069112ada0f90fbd1b1a2b6e366c01135763547922644f6d"
+    },
+    {
+      "block_id": "page-0062-block-0023",
+      "order": 23,
+      "text": "Paliperidone\n+\n++\n+\n+\n+\n++\n+++\n",
+      "bbox": [
+        47.74385070800781,
+        361.88946533203125,
+        390.2313232421875,
+        370.5969543457031
+      ],
+      "text_sha256": "1af066706d35aa06b29b86c4c0d492cbc3687bc7d5c122ef380460083e558079"
+    },
+    {
+      "block_id": "page-0062-block-0024",
+      "order": 24,
+      "text": "Perphenazine\n+\n+\n++\n+++\n+\n+\n+++\n",
+      "bbox": [
+        47.72883605957031,
+        376.9119567871094,
+        390.21630859375,
+        385.61944580078125
+      ],
+      "text_sha256": "f73814a3019a56d5bab9782e4c0f60de26a4a147a2e9f0525712161b43229dba"
+    },
+    {
+      "block_id": "page-0062-block-0025",
+      "order": 25,
+      "text": "Pimavanserin*\n-\n-\n-\n-\n-\n-\n-\n",
+      "bbox": [
+        47.71382141113281,
+        391.9344482421875,
+        379.19879150390625,
+        400.6419372558594
+      ],
+      "text_sha256": "eddd0436eef033799a614faaa5327f7a65badf57f715295489388713d71f0c4f"
+    },
+    {
+      "block_id": "page-0062-block-0026",
+      "order": 26,
+      "text": "Pimozide*\n+\n+\n+\n+\n+\n+\n+++\n",
+      "bbox": [
+        47.69880676269531,
+        406.9569396972656,
+        390.186279296875,
+        415.6644287109375
+      ],
+      "text_sha256": "07646903c192caacdff89c4be98b128e2f209e111475cad2b6a4e0e547a761ea"
+    },
+    {
+      "block_id": "page-0062-block-0027",
+      "order": 27,
+      "text": "Pipothiazine*\n++\n++\n+\n++\n++\n++\n+++\n",
+      "bbox": [
+        47.68379211425781,
+        421.97943115234375,
+        390.1712646484375,
+        430.6869201660156
+      ],
+      "text_sha256": "48701f791eb49ba0f03b9bcf7d38429a1cb6a2a35d7dfa0b496e4d795fe78b7a"
+    },
+    {
+      "block_id": "page-0062-block-0028",
+      "order": 28,
+      "text": "Promazine*\n+++\n++\n+\n+\n++\n++\n++\n",
+      "bbox": [
+        47.66877746582031,
+        437.0019226074219,
+        385.65625,
+        445.70941162109375
+      ],
+      "text_sha256": "52b63d14eac32026bdbf5d8810804970063193cfb6610775be2ff93117f5bf6d"
+    },
+    {
+      "block_id": "page-0062-block-0029",
+      "order": 29,
+      "text": "Quetiapine\n++\n++\n–\n–\n+\n++\n–\n",
+      "bbox": [
+        47.65376281738281,
+        452.0244140625,
+        380.3912353515625,
+        460.7319030761719
+      ],
+      "text_sha256": "f7561165f322af1af3546696d15e3aa019584041262ecc6e17b3a6bb9bbc34f8"
+    },
+    {
+      "block_id": "page-0062-block-0030",
+      "order": 30,
+      "text": "Risperidone\n+\n++\n+\n+\n+\n++\n+++\n",
+      "bbox": [
+        47.63874816894531,
+        467.0469055175781,
+        390.126220703125,
+        475.75439453125
+      ],
+      "text_sha256": "ad14dfe58b2b3c9b5afe4388fe790283d8109978d7643abf16922829db9c11e4"
+    },
+    {
+      "block_id": "page-0062-block-0031",
+      "order": 31,
+      "text": "Sertindole*\n–\n+\n+\n–\n–\n+++\n–\n",
+      "bbox": [
+        47.62373352050781,
+        482.0694274902344,
+        380.3612060546875,
+        490.77691650390625
+      ],
+      "text_sha256": "5b9685e765f14f5e6f45fcf41e50c2429344c564e78134fa74a0760e8880c348"
+    },
+    {
+      "block_id": "page-0062-block-0032",
+      "order": 32,
+      "text": "Sulpiride*\n–\n+\n+\n+\n–\n–\n+++\n",
+      "bbox": [
+        47.60871887207031,
+        497.0919494628906,
+        390.09619140625,
+        505.7994384765625
+      ],
+      "text_sha256": "532d02bc50e25bbe37d4c071923b7f39dd7a22602d05eba5a5afe4b300cf0b8a"
+    },
+    {
+      "block_id": "page-0062-block-0033",
+      "order": 33,
+      "text": "Trifluoperazine\n+\n+\n+\n+++\n+\n+\n+++\n",
+      "bbox": [
+        47.59370422363281,
+        512.1143798828125,
+        390.0811767578125,
+        520.8218994140625
+      ],
+      "text_sha256": "68ae9701a4b651971731a635b47d985d03098c3e0c8b3f3c336d7993e17e351b"
+    },
+    {
+      "block_id": "page-0062-block-0034",
+      "order": 34,
+      "text": "Ziprasidone*\n+\n–\n+\n–\n–\n+\n+\n",
+      "bbox": [
+        47.57868957519531,
+        527.1369018554688,
+        381.066162109375,
+        535.8444213867188
+      ],
+      "text_sha256": "05a0e317333ded894ed32f9abd9544b049ecfd6e0a3f31edd07aee771dc55ae6"
+    },
+    {
+      "block_id": "page-0062-block-0035",
+      "order": 35,
+      "text": "Zuclopenthixol*\n++\n++\n++\n++\n++\n+\n+++\n",
+      "bbox": [
+        47.56367492675781,
+        542.159423828125,
+        390.0511474609375,
+        550.866943359375
+      ],
+      "text_sha256": "2a1b2e60d30b774e7c8f374626e502666b6d8e6505cfb87f036bacce23be40f4"
+    },
+    {
+      "block_id": "page-0062-block-0036",
+      "order": 36,
+      "text": "Key: *Availability varies from country to country; +++ High incidence/severity; ++ Moderate; + Low; – Very low.\n",
+      "bbox": [
+        47.54866027832031,
+        560.9769287109375,
+        404.3086242675781,
+        569.8644409179688
+      ],
+      "text_sha256": "a1f06c8a2fbfa2462a5140fa6c1083eed47d749a4d5615af747eb0c346f0737f"
+    },
+    {
+      "block_id": "page-0062-block-0037",
+      "order": 37,
+      "text": "Note: The table notes approximate estimates of relative incidence and/or severity, based on clinical experience, \nmanufacturers’ literature and published research. This is a very rough guide – see individual sections for more precise \nand referenced information.\nOther adverse effects not mentioned in this table do occur. Please see dedicated sections on other adverse effects \nincluded in this book for more information.\n",
+      "bbox": [
+        47.54866027832031,
+        572.9769287109375,
+        421.6487121582031,
+        621.8544311523438
+      ],
+      "text_sha256": "ad335d2f2974757d5778c63f0fede9dcb511834801c846a9e01710388b9c7305"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

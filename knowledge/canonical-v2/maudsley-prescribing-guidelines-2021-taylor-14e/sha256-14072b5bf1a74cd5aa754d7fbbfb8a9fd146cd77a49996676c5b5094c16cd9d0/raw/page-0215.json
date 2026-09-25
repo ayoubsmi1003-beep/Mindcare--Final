@@ -1,0 +1,587 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0215",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 215,
+  "source_page_index": 214,
+  "source_page_display": 215,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "194    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nTable 1.36  Suggested options for augmenting clozapine\nOption\nComment\nAdd amisulpride20–25\n(400–800mg/day)\n■\n■Some evidence and experience suggest amisulpride augmentation may be \nworthwhile. Three small RCTs (the largest of which showed no effect), two of \nwhich found an increased side effect burden, including cardiac side effects.26,27 \nMay allow clozapine dose reduction.28\nAdd aripiprazole18,29–31\n(15–30mg/day)\n■\n■Very limited evidence of therapeutic benefit, although a meta-analysis sug-\ngests some effect.32 Reduces weight and LDL cholesterol.32 Long-acting injec-\ntion has been used33,34\nAdd haloperidol31,35,36\n(2–3mg/day)\n■\n■Modest evidence of benefit\nAdd lamotrigine37–39\n(25–300mg/day)\n■\n■May be useful in partial or non-responders. May reduce alcohol consump-\ntion.40 Several equivocal reports;41–43 some meta-analyses suggest moderate \neffect size44 but this is largely influenced by two outlying studies45\nAdd omega-3 \ntriglycerides46,47\n(2–3g EPA daily)\n■\n■Modest, and somewhat contested evidence to support efficacy in non- or \npartial responders to antipsychotics, including clozapine\nAdd risperidone48,49\n(2–6mg/day)\n■\n■Supported by a randomised, controlled trial but there are also two nega-\ntive RCTs each with minuscule response rates50,51 Small number of reports of \nincreases in clozapine plasma levels. Long acting injection also an option;34,52 \npaliperidone long-acting injection has also been used34,53\nAdd sulpiride54\n(400mg/day)\n■\n■May be useful in partial or non-responders. Supported by a single randomised \ntrial in English and three in Chinese.55 Overall effect modest\nAdd topiramate56–60\n(50–300mg/day)\n■\n■Two positive RCTs, two negative. Can worsen psychosis in some.38,61 Two \nmeta-analyses including hitherto unknown Chinese data45,62 suggested robust \neffect on positive and negative symptoms, substantial weight loss but often \nwith psychomotor slowing and attention difficulties\nAdd sodium valproate45,63\n(400–800mg/day)\n■\n■Pooled effects from five Chinese RCTs45 suggest a benefit to positive symp-\ntoms, although studies are mostly of poor quality. Cochrane suggests benefit \nto adding valproate to antipsychotics in general, especially for excitement and \naggression64\nAdd ziprasidone65–68\n(80–160mg/day)\n■\n■Supported by three RCTs.68,69 Associated with QTc prolongation. Rarely used\nNotes\n■\n■Always consider the use of mood stabilisers and/or antidepressants, especially where mood disturbance is \nthought to contribute to symptoms70–72\n■\n■Other options include adding pimozide, olanzapine or sertindole. None is recommended: pimozide and \nsertindole have important cardiac toxicity, and the addition of olanzapine is poorly supported73 and likely to \nexacerbate metabolic adverse effects. Studies of pimozide74,75 and sertindole76 have shown no effect. One small \nRCT supports the use of ginkgo biloba,77 another two support the use of memantine.78,79 Another study \nsuggests possible benefit of augmentation with acetyl-L-carnitine,80 and a case study reports good outcome \nwith thyroxine.81 A single RCT describes successful use of sodium benzoate.82 Minocycline is probably not \neffective.63,83 Glycine may be effective for positive symptoms, but studies are of poor quality.84 A small case series \n(n = 6) found benefit to adding pimavanserin.85\n",
+  "raw_text_sha256": "72c8060a4ae1618b236fbaef85f4aae3978f62fcfffebb80b8f81564f56c308a",
+  "coordinates_sha256": "8a2770184c6ea75a7856035b40521073b680ac5fdec46cc7837fc797b5a45bcc",
+  "block_sequence_sha256": "fd397451e603025cf7c7ae832dac22693011382039613ee41a3166180adbd908",
+  "blocks": [
+    {
+      "block_id": "page-0215-block-0000",
+      "order": 0,
+      "text": "194    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "c4f045a1508b14642c418a02a2f5db6a0b11267ba71bc4f2b9a1f7fc73bd02ac"
+    },
+    {
+      "block_id": "page-0215-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0215-block-0002",
+      "order": 2,
+      "text": "Table 1.36  Suggested options for augmenting clozapine\n",
+      "bbox": [
+        67.88909912109375,
+        70.08692932128906,
+        250.0341033935547,
+        78.97442626953125
+      ],
+      "text_sha256": "65de3e896cac51932d2d67a229190e0d934455018cafaee4836cd746f89362c3"
+    },
+    {
+      "block_id": "page-0215-block-0003",
+      "order": 3,
+      "text": "Option\nComment\n",
+      "bbox": [
+        61.88909912109375,
+        90.32191467285156,
+        206.0615997314453,
+        99.20941162109375
+      ],
+      "text_sha256": "a68056b65558682dfc58728a058bdefd9eaa03fde45901a4be4b2a661f719b4a"
+    },
+    {
+      "block_id": "page-0215-block-0004",
+      "order": 4,
+      "text": "Add amisulpride20–25\n",
+      "bbox": [
+        61.88909912109375,
+        107.09944152832031,
+        131.72157287597656,
+        115.9869384765625
+      ],
+      "text_sha256": "6fddbaafc519f35094a0a5fdcc061e6172047ef1003d54ce8ece00cf529c3f22"
+    },
+    {
+      "block_id": "page-0215-block-0005",
+      "order": 5,
+      "text": "(400–800mg/day)\n",
+      "bbox": [
+        61.88909912109375,
+        117.27693939208984,
+        118.58159637451172,
+        125.98443603515625
+      ],
+      "text_sha256": "35026ff2b1c6402edf1201c2fb3eb068bd5a60002db83fcfd638f7a74ffa7148"
+    },
+    {
+      "block_id": "page-0215-block-0006",
+      "order": 6,
+      "text": "■\n■Some evidence and experience suggest amisulpride augmentation may be \n",
+      "bbox": [
+        171.8889923095703,
+        107.27693939208984,
+        419.2542419433594,
+        115.98443603515625
+      ],
+      "text_sha256": "e3e721d0657c3c1c7223f658cc5c4b8289f1f5eec94c8c6759ab6ac6d4159f81"
+    },
+    {
+      "block_id": "page-0215-block-0007",
+      "order": 7,
+      "text": "worthwhile. Three small RCTs (the largest of which showed no effect), two of \nwhich found an increased side effect burden, including cardiac side effects.26,27 \nMay allow clozapine dose reduction.28\n",
+      "bbox": [
+        180.88909912109375,
+        116.27693939208984,
+        433.6866760253906,
+        142.98443603515625
+      ],
+      "text_sha256": "f8bb6eca87d3929963ab19df5f8df8eba2e71dc01a3b7d20416facf7219043a0"
+    },
+    {
+      "block_id": "page-0215-block-0008",
+      "order": 8,
+      "text": "Add aripiprazole18,29–31\n",
+      "bbox": [
+        61.88909912109375,
+        149.1219024658203,
+        138.6394500732422,
+        158.0093994140625
+      ],
+      "text_sha256": "827cdf1399f9639a9f0ada1b5fbc760a20eb67f59022cc667deb2b89c1622be0"
+    },
+    {
+      "block_id": "page-0215-block-0009",
+      "order": 9,
+      "text": "(15–30mg/day)\n",
+      "bbox": [
+        61.88909912109375,
+        159.30189514160156,
+        110.24158477783203,
+        168.0093994140625
+      ],
+      "text_sha256": "381f2d9d36c9bc051a9658320b2b8dda63f4a53998c13d02f6ed5c97b8697318"
+    },
+    {
+      "block_id": "page-0215-block-0010",
+      "order": 10,
+      "text": "■\n■Very limited evidence of therapeutic benefit, although a meta-analysis sug-\n",
+      "bbox": [
+        171.8889923095703,
+        149.30189514160156,
+        419.65924072265625,
+        158.0093994140625
+      ],
+      "text_sha256": "0e784dfa0abe2cf9bc3002d8d7be9cefc2ce706aa3f5c704a18e05fa85555740"
+    },
+    {
+      "block_id": "page-0215-block-0011",
+      "order": 11,
+      "text": "gests some effect.32 Reduces weight and LDL cholesterol.32 Long-acting injec-\ntion has been used33,34\n",
+      "bbox": [
+        180.88909912109375,
+        158.30189514160156,
+        426.6142578125,
+        176.0093994140625
+      ],
+      "text_sha256": "7286828c3d8a9c9e68388dfac2e2721ca83aed212c3b69649e7e4ea5833dc24b"
+    },
+    {
+      "block_id": "page-0215-block-0012",
+      "order": 12,
+      "text": "Add haloperidol31,35,36\n",
+      "bbox": [
+        61.88909912109375,
+        182.1469268798828,
+        135.9962615966797,
+        191.034423828125
+      ],
+      "text_sha256": "43b72d6a0108972c78804ecedd0b3075df7beb6d6f65bb9f01bda4e0d181a913"
+    },
+    {
+      "block_id": "page-0215-block-0013",
+      "order": 13,
+      "text": "(2–3mg/day)\n",
+      "bbox": [
+        61.88909912109375,
+        192.32691955566406,
+        101.9015884399414,
+        201.034423828125
+      ],
+      "text_sha256": "77076a21c8ea3aa257299b7959b5046169bbaa657d21cb3be65abb290d44d6f3"
+    },
+    {
+      "block_id": "page-0215-block-0014",
+      "order": 14,
+      "text": "■\n■Modest evidence of benefit\n",
+      "bbox": [
+        171.8889923095703,
+        182.32691955566406,
+        268.4066162109375,
+        191.034423828125
+      ],
+      "text_sha256": "4e97769ad9070cd07554032b4f35adb9c501ceaad505b858cbd9779790a6687c"
+    },
+    {
+      "block_id": "page-0215-block-0015",
+      "order": 15,
+      "text": "Add lamotrigine37–39\n",
+      "bbox": [
+        61.88660430908203,
+        207.17442321777344,
+        131.30917358398438,
+        216.06192016601562
+      ],
+      "text_sha256": "666821abfa06db5f702be2572b65ab033d347e8d6ad455667249b58087da39a0"
+    },
+    {
+      "block_id": "page-0215-block-0016",
+      "order": 16,
+      "text": "(25–300mg/day)\n",
+      "bbox": [
+        61.88909912109375,
+        217.35191345214844,
+        114.4115982055664,
+        226.05941772460938
+      ],
+      "text_sha256": "bbd1618d92bd8d20bdeffa448e52b68df4395740c9d4ee588f9c0cf7b3472afe"
+    },
+    {
+      "block_id": "page-0215-block-0017",
+      "order": 17,
+      "text": "■\n■May be useful in partial or non-responders. May reduce alcohol consump-\n",
+      "bbox": [
+        171.8889923095703,
+        207.35191345214844,
+        416.914306640625,
+        216.05941772460938
+      ],
+      "text_sha256": "e13aa7bec5d3b8f9a60837772e5d2983bc506a0003d931ba019511477f7a6767"
+    },
+    {
+      "block_id": "page-0215-block-0018",
+      "order": 18,
+      "text": "tion.40 Several equivocal reports;41–43 some meta-analyses suggest moderate \neffect size44 but this is largely influenced by two outlying studies45\n",
+      "bbox": [
+        180.88909912109375,
+        216.35191345214844,
+        423.3733825683594,
+        234.05941772460938
+      ],
+      "text_sha256": "959aadd97d772661dd439f13f2a2415aa818faf885715f6ac5c6ee7b7e93aaca"
+    },
+    {
+      "block_id": "page-0215-block-0019",
+      "order": 19,
+      "text": "Add omega-3 \ntriglycerides46,47\n",
+      "bbox": [
+        61.88909912109375,
+        242.19691467285156,
+        116.17098999023438,
+        261.0819091796875
+      ],
+      "text_sha256": "4eb538f6a3f0d0d79aa4c25486f3bc5f5e6266b839b32855eff8f47221a8d40a"
+    },
+    {
+      "block_id": "page-0215-block-0020",
+      "order": 20,
+      "text": "(2–3g EPA daily)\n",
+      "bbox": [
+        61.88909912109375,
+        262.3769226074219,
+        113.0165786743164,
+        271.08441162109375
+      ],
+      "text_sha256": "a0c8653bca1c0bc2e5966e5e03745d014fe6de687d5f7e60250413450400a78e"
+    },
+    {
+      "block_id": "page-0215-block-0021",
+      "order": 21,
+      "text": "■\n■Modest, and somewhat contested evidence to support efficacy in non- or \n",
+      "bbox": [
+        171.8889923095703,
+        242.3769073486328,
+        417.4692077636719,
+        251.08441162109375
+      ],
+      "text_sha256": "1a54cb6d3e312821e241d373652fffc9d2dd10a18918e13b8874712ebd698bce"
+    },
+    {
+      "block_id": "page-0215-block-0022",
+      "order": 22,
+      "text": "partial responders to antipsychotics, including clozapine\n",
+      "bbox": [
+        180.88909912109375,
+        251.3769073486328,
+        358.69171142578125,
+        260.08441162109375
+      ],
+      "text_sha256": "0aabe10074d237c8f4c73187acb253ef8a5304a8bf0b545a76dd510991a304a2"
+    },
+    {
+      "block_id": "page-0215-block-0023",
+      "order": 23,
+      "text": "Add risperidone48,49\n",
+      "bbox": [
+        61.88660430908203,
+        277.2218933105469,
+        129.49838256835938,
+        286.1094055175781
+      ],
+      "text_sha256": "f3da990bddffa9d53c3415fbda11e0f5b8b37dcbcfdc83481ed57e986b422250"
+    },
+    {
+      "block_id": "page-0215-block-0024",
+      "order": 24,
+      "text": "(2–6mg/day)\n",
+      "bbox": [
+        61.88909912109375,
+        287.40191650390625,
+        101.9015884399414,
+        296.1094055175781
+      ],
+      "text_sha256": "84103765e022ef37226cc3f29da8b11cacd5681e815652e975bc8bd8f04e151f"
+    },
+    {
+      "block_id": "page-0215-block-0025",
+      "order": 25,
+      "text": "■\n■Supported by a randomised, controlled trial but there are also two nega-\n",
+      "bbox": [
+        171.8889923095703,
+        277.40191650390625,
+        412.60919189453125,
+        286.1094055175781
+      ],
+      "text_sha256": "edc0e04ee3a943711b704f3baf37bb76c410478c20830055acc427bfdb1ea7cd"
+    },
+    {
+      "block_id": "page-0215-block-0026",
+      "order": 26,
+      "text": "tive RCTs each with minuscule response rates50,51 Small number of reports of \nincreases in clozapine plasma levels. Long acting injection also an option;34,52 \npaliperidone long-acting injection has also been used34,53\n",
+      "bbox": [
+        180.88909912109375,
+        286.40191650390625,
+        426.7261047363281,
+        313.1094055175781
+      ],
+      "text_sha256": "3b981556e7a2fc30232a5eaeb0ad4058015162cbfb1711c12fd824e1284bbfbc"
+    },
+    {
+      "block_id": "page-0215-block-0027",
+      "order": 27,
+      "text": "Add sulpiride54\n",
+      "bbox": [
+        61.88909912109375,
+        319.2469177246094,
+        113.83570861816406,
+        328.1344299316406
+      ],
+      "text_sha256": "a63f44a9ef3c6ec210e348c8642607f2a7b72f6e1f9f6536b4521183e020fc93"
+    },
+    {
+      "block_id": "page-0215-block-0028",
+      "order": 28,
+      "text": "(400mg/day)\n",
+      "bbox": [
+        61.88909912109375,
+        329.42694091796875,
+        102.32158660888672,
+        338.1344299316406
+      ],
+      "text_sha256": "8b55ce764c25aa26c01e69993813e3462dd75f146046247e493a4c460eaa3fcf"
+    },
+    {
+      "block_id": "page-0215-block-0029",
+      "order": 29,
+      "text": "■\n■May be useful in partial or non-responders. Supported by a single randomised \n",
+      "bbox": [
+        171.8889923095703,
+        319.42694091796875,
+        431.6518859863281,
+        328.1344299316406
+      ],
+      "text_sha256": "bace8908b11c164d09383bc94fbfe145fa8e4f813e36d25128ac980f31a5e164"
+    },
+    {
+      "block_id": "page-0215-block-0030",
+      "order": 30,
+      "text": "trial in English and three in Chinese.55 Overall effect modest\n",
+      "bbox": [
+        180.88909912109375,
+        328.42694091796875,
+        370.91009521484375,
+        337.1344299316406
+      ],
+      "text_sha256": "f109e679203ca2f88fa3bfd5e46923ade45d62541478884259abe02351079a85"
+    },
+    {
+      "block_id": "page-0215-block-0031",
+      "order": 31,
+      "text": "Add topiramate56–60\n",
+      "bbox": [
+        61.88758850097656,
+        344.2744140625,
+        129.64418029785156,
+        353.16192626953125
+      ],
+      "text_sha256": "91d7ad54696555d1ade6eb3ef3d3f1b7fe01af34392dd909d0fbbc702dd9c343"
+    },
+    {
+      "block_id": "page-0215-block-0032",
+      "order": 32,
+      "text": "(50–300mg/day)\n",
+      "bbox": [
+        61.88909912109375,
+        354.4519348144531,
+        114.4115982055664,
+        363.159423828125
+      ],
+      "text_sha256": "8ca82a70c64134d6286c0c90d476004bdba7a49715c496a43b50dc5d03d2cfc9"
+    },
+    {
+      "block_id": "page-0215-block-0033",
+      "order": 33,
+      "text": "■\n■Two positive RCTs, two negative. Can worsen psychosis in some.38,61 Two \n",
+      "bbox": [
+        171.8889923095703,
+        344.4519348144531,
+        414.5696105957031,
+        353.159423828125
+      ],
+      "text_sha256": "9c5def3cd8dc5ef76ea4e4a86a2f46c130b5afcb54e22bc3702e7f854a99f14f"
+    },
+    {
+      "block_id": "page-0215-block-0034",
+      "order": 34,
+      "text": "meta-analyses including hitherto unknown Chinese data45,62 suggested robust \neffect on positive and negative symptoms, substantial weight loss but often \nwith psychomotor slowing and attention difficulties\n",
+      "bbox": [
+        180.89210510253906,
+        353.4519348144531,
+        430.9200134277344,
+        380.159423828125
+      ],
+      "text_sha256": "b9dfb420f31fa1fe75d6e00dbb55cc876cf89deb093ea0cce929c6c4dec154ec"
+    },
+    {
+      "block_id": "page-0215-block-0035",
+      "order": 35,
+      "text": "Add sodium valproate45,63\n",
+      "bbox": [
+        61.889930725097656,
+        386.2944030761719,
+        151.03839111328125,
+        395.1819152832031
+      ],
+      "text_sha256": "fdaacc6815901b0695850e27a1d9c880daa995d6b08d71db6713af1b4156298e"
+    },
+    {
+      "block_id": "page-0215-block-0036",
+      "order": 36,
+      "text": "(400–800mg/day)\n",
+      "bbox": [
+        61.88909912109375,
+        396.4769287109375,
+        118.58159637451172,
+        405.1844177246094
+      ],
+      "text_sha256": "35026ff2b1c6402edf1201c2fb3eb068bd5a60002db83fcfd638f7a74ffa7148"
+    },
+    {
+      "block_id": "page-0215-block-0037",
+      "order": 37,
+      "text": "■\n■Pooled effects from five Chinese RCTs45 suggest a benefit to positive symp-\n",
+      "bbox": [
+        171.88909912109375,
+        386.4769287109375,
+        419.2705078125,
+        395.1844177246094
+      ],
+      "text_sha256": "c0a8f4726887ed2cdbbf6f2100a21dd315ccbff9238bee7e0007229d0420bbd6"
+    },
+    {
+      "block_id": "page-0215-block-0038",
+      "order": 38,
+      "text": "toms, although studies are mostly of poor quality. Cochrane suggests benefit \nto adding valproate to antipsychotics in general, especially for excitement and \naggression64\n",
+      "bbox": [
+        180.89039611816406,
+        395.4769287109375,
+        431.1879577636719,
+        422.1844177246094
+      ],
+      "text_sha256": "47c997084a0338e0a3e2df75b1984b36280e114c609ef4d34c4c5bc905035cba"
+    },
+    {
+      "block_id": "page-0215-block-0039",
+      "order": 39,
+      "text": "Add ziprasidone65–68\n",
+      "bbox": [
+        61.88909912109375,
+        428.3218994140625,
+        131.3016815185547,
+        437.20941162109375
+      ],
+      "text_sha256": "f8aa3630993e82f0ae7d945cf65cc7b50a350111e70e30caf4226f223f4eba88"
+    },
+    {
+      "block_id": "page-0215-block-0040",
+      "order": 40,
+      "text": "(80–160mg/day)\n",
+      "bbox": [
+        61.88909912109375,
+        438.5019226074219,
+        114.4115982055664,
+        447.20941162109375
+      ],
+      "text_sha256": "7cf8c071471ca487aa31eef56314fa5ef290997d1cfa3954275344bab0b2df1a"
+    },
+    {
+      "block_id": "page-0215-block-0041",
+      "order": 41,
+      "text": "■\n■Supported by three RCTs.68,69 Associated with QTc prolongation. Rarely used\n",
+      "bbox": [
+        171.88909912109375,
+        428.5019226074219,
+        422.3113098144531,
+        437.20941162109375
+      ],
+      "text_sha256": "cf0858dcda6549f2f82e0dbf3ef83e60b171cdb404406d4588794178fef33b67"
+    },
+    {
+      "block_id": "page-0215-block-0042",
+      "order": 42,
+      "text": "Notes\n",
+      "bbox": [
+        61.891204833984375,
+        457.32440185546875,
+        82.30620574951172,
+        466.2119140625
+      ],
+      "text_sha256": "38732073f309589131fec63f417896537e63d27fc29fcf7c60d5f47379f0887a"
+    },
+    {
+      "block_id": "page-0215-block-0043",
+      "order": 43,
+      "text": "■\n■Always consider the use of mood stabilisers and/or antidepressants, especially where mood disturbance is \n",
+      "bbox": [
+        61.888999938964844,
+        467.5019226074219,
+        409.0116882324219,
+        476.20941162109375
+      ],
+      "text_sha256": "45e6b4d1843446228eeff69f289691cfa02517aeab239a7104105fa607cb6d88"
+    },
+    {
+      "block_id": "page-0215-block-0044",
+      "order": 44,
+      "text": "thought to contribute to symptoms70–72\n",
+      "bbox": [
+        70.88909912109375,
+        477.4994201660156,
+        195.73358154296875,
+        486.2069091796875
+      ],
+      "text_sha256": "75555098d05ddcb2a79fe8c7ac7de0e19f0bbbdccebe669d27a6264969819eb5"
+    },
+    {
+      "block_id": "page-0215-block-0045",
+      "order": 45,
+      "text": "■\n■Other options include adding pimozide, olanzapine or sertindole. None is recommended: pimozide and \n",
+      "bbox": [
+        61.888999938964844,
+        487.3218994140625,
+        413.7591247558594,
+        496.20941162109375
+      ],
+      "text_sha256": "5c56074a39a9291eb1f60c5c8e8d849845b65a6d4bc676484be3dc0db05bb88e"
+    },
+    {
+      "block_id": "page-0215-block-0046",
+      "order": 46,
+      "text": "sertindole have important cardiac toxicity, and the addition of olanzapine is poorly supported73 and likely to \nexacerbate metabolic adverse effects. Studies of pimozide74,75 and sertindole76 have shown no effect. One small \nRCT supports the use of ginkgo biloba,77 another two support the use of memantine.78,79 Another study \nsuggests possible benefit of augmentation with acetyl-L-carnitine,80 and a case study reports good outcome \nwith thyroxine.81 A single RCT describes successful use of sodium benzoate.82 Minocycline is probably not \neffective.63,83 Glycine may be effective for positive symptoms, but studies are of poor quality.84 A small case series \n(n = 6) found benefit to adding pimavanserin.85\n",
+      "bbox": [
+        70.88618469238281,
+        497.4994201660156,
+        434.7627868652344,
+        566.2069091796875
+      ],
+      "text_sha256": "4481f506102d2874113d9f1f7abb9f38aac276c66ce452951e060c6fadf3d4c1"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

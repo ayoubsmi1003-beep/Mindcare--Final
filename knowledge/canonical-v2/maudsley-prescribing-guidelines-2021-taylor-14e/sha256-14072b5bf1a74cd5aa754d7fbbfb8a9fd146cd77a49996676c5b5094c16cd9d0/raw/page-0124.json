@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0124",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 124,
+  "source_page_index": 123,
+  "source_page_display": 124,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    103\nCHAPTER 1\nNeurobiology of withdrawal\nWithdrawal-associated relapse has been attributed to neural adaptations to long-term \nantipsychotic treatment (dopaminergic hypersensitivity) that persist after antipsychotic \ncessation.17 Indeed, molecular imaging studies in schizophrenia have found increased \nD2/D3 receptor availability in those subjects who had been exposed to antipsychotic \nmedication but not in antipsychotic-naïve patients.18 This hypersensitivity to dopamine \nmay render patients more susceptible to psychotic relapse when D2 blockade is dimin-\nished by antipsychotic dose reduction.10,17\nThere are converging lines of evidence that suggest that the neuro-adaptive effects of \nbeing on antipsychotics can persist for months or years after stopping. Dopaminergic \nhypersensitivity in animals persists for the equivalent of a human year after treatment \nis stopped.19,20 Tardive dyskinesia – attributed to dopaminergic hypersensitivity – can \npersist for years after antipsychotic medication has been ceased.21 There is also evidence \nthat patients who have discontinued antipsychotics have increased rates of relapse for \nthree years compared with people maintained on their antipsychotics, after which \nrelapse rates converge,1 suggesting that adaptations may have resolved by this point.\nIt follows that the risk of relapse on cessation of antipsychotics might be minimised \nby more gradual dose tapering because these neuroadaptations would then have time \nto resolve during the tapering process, and the rate of decline of blockade is more mod-\nest. A small analysis found that tapering over three to nine months halves the rate of \nrelapse compared with abrupt discontinuation,16 while tapering over four weeks \nshowed no difference from abrupt discontinuation.1\n Figure 1.1  Antipsychotic withdrawal symptoms\n\u0003adapted from Chouinard et al. (2017)11\nCholinergic withdrawal\nsymptoms\nAgitation, insomnia, anxiety\nor depression\nDizziness, light-headedness,\ntachycardia\nNausea, vomiting, salivation\nDiarrhoea, abdominal cramp\nTremor, parkinsonism,\nrestlessness\nMyalgia, rigidity, paresthesia\nAgitation, fear, hallucinations\nConfusion or disorientation\nHypothermia, sweating\nHistaminergic withdrawal\nsymptoms \nIrritability, insomnia, agitation\nDepressed affect\nLoss of appetite or nausea\nTremulousness, incoordination\nLethargy or amnesia\nDopaminergic withdrawal\nsymptoms - nigrostriatal\nWithdrawal dyskinesia\nParkinsonism\nNeuroleptic malignant\nsyndrome\nAkathisia\nAntipsychotic\nwithdrawal \nDopaminergic withdrawal\nsymptoms – mesolimbic\nor striatal\nAuditory hallucinations\nPersecutory delusions\nOther psychotic symptoms\nSerotonin withdrawal\nsymptoms\nFlu-like symptoms, sweating\nor chills, dizziness,light-\nheadedness or tachycardia\nParathaesia, electric shock\nsensations\nAnxiety, agitation, low mood\nInsomnia, nightmares\nNausea, vomiting, diarrhoea\nConfusion, decreased\nconcentration\nAdrenergic withdrawal\nsymptoms\nHeadache, anxiety or\nagitation\nHypertension, tachycardia,\nangina, palpitations\nRisk of myocardial infarction\nPresyncope, tremulousness\nSweating\n",
+  "raw_text_sha256": "8b58ac9301b4d375cd83b26427c641de9f7298ef76907227624d4ba1e5852271",
+  "coordinates_sha256": "c1a385421770cbe567aaad7e7319009af2a7ccddf472e11fbfadb9681f9fee7d",
+  "block_sequence_sha256": "72d155c785863a95facbcb18cca448adc37a25bb283ab1fa44394d470d26daa0",
+  "blocks": [
+    {
+      "block_id": "page-0124-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    103\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "b0a787342a88536b03938b7c3ebcae6bf47a99b93ca2a7f5e3c52b9e0d240d15"
+    },
+    {
+      "block_id": "page-0124-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0124-block-0002",
+      "order": 2,
+      "text": "Neurobiology of withdrawal\n",
+      "bbox": [
+        47.99909973144531,
+        344.3680114746094,
+        195.71807861328125,
+        357.40301513671875
+      ],
+      "text_sha256": "3b10ef75c6e3b1e7a7497daac3f0bb8ed6618e0b0bd2a9db00a79ff93b6820b5"
+    },
+    {
+      "block_id": "page-0124-block-0003",
+      "order": 3,
+      "text": "Withdrawal-associated relapse has been attributed to neural adaptations to long-term \nantipsychotic treatment (dopaminergic hypersensitivity) that persist after antipsychotic \ncessation.17 Indeed, molecular imaging studies in schizophrenia have found increased \nD2/D3 receptor availability in those subjects who had been exposed to antipsychotic \nmedication but not in antipsychotic-naïve patients.18 This hypersensitivity to dopamine \nmay render patients more susceptible to psychotic relapse when D2 blockade is dimin-\nished by antipsychotic dose reduction.10,17\n",
+      "bbox": [
+        47.99909973144531,
+        363.2130126953125,
+        422.8013610839844,
+        446.9330139160156
+      ],
+      "text_sha256": "4801ff2939ade659fdba8f3b5fb4ed2ad577dd61e6ca8bf0fb409d82280a44ec"
+    },
+    {
+      "block_id": "page-0124-block-0004",
+      "order": 4,
+      "text": "There are converging lines of evidence that suggest that the neuro-adaptive effects of \nbeing on antipsychotics can persist for months or years after stopping. Dopaminergic \nhypersensitivity in animals persists for the equivalent of a human year after treatment \nis stopped.19,20 Tardive dyskinesia – attributed to dopaminergic hypersensitivity – can \npersist for years after antipsychotic medication has been ceased.21 There is also evidence \nthat patients who have discontinued antipsychotics have increased rates of relapse for \nthree years compared with people maintained on their antipsychotics, after which \nrelapse rates converge,1 suggesting that adaptations may have resolved by this point.\n",
+      "bbox": [
+        47.99700164794922,
+        447.2130126953125,
+        422.8101501464844,
+        542.9330444335938
+      ],
+      "text_sha256": "0bdd179c2ba09a15deaffa032ea0abd4af60216653fabea64d74f363a6f11ebc"
+    },
+    {
+      "block_id": "page-0124-block-0005",
+      "order": 5,
+      "text": "It follows that the risk of relapse on cessation of antipsychotics might be minimised \nby more gradual dose tapering because these neuroadaptations would then have time \nto resolve during the tapering process, and the rate of decline of blockade is more mod-\nest. A small analysis found that tapering over three to nine months halves the rate of \nrelapse compared with abrupt discontinuation,16 while tapering over four weeks \nshowed no difference from abrupt discontinuation.1\n",
+      "bbox": [
+        47.99920654296875,
+        543.2130126953125,
+        422.8091125488281,
+        614.9330444335938
+      ],
+      "text_sha256": "81bd5de4cc7919ddd942af68143292defa0b074de914e8dc6a34cb325636b1cb"
+    },
+    {
+      "block_id": "page-0124-block-0006",
+      "order": 6,
+      "text": " Figure 1.1  Antipsychotic withdrawal symptoms\n\u0003adapted from Chouinard et al. (2017)11\n",
+      "bbox": [
+        47.99970245361328,
+        288.4939880371094,
+        201.62966918945312,
+        307.3790283203125
+      ],
+      "text_sha256": "34ec84c287547725f825ea39909a46975274fce2b688ade6835693d626e83691"
+    },
+    {
+      "block_id": "page-0124-block-0007",
+      "order": 7,
+      "text": "Cholinergic withdrawal\nsymptoms\nAgitation, insomnia, anxiety\nor depression\nDizziness, light-headedness,\ntachycardia\nNausea, vomiting, salivation\nDiarrhoea, abdominal cramp\nTremor, parkinsonism,\nrestlessness\nMyalgia, rigidity, paresthesia\nAgitation, fear, hallucinations\nConfusion or disorientation\nHypothermia, sweating\n",
+      "bbox": [
+        65.12930297851562,
+        75.0881576538086,
+        150.82554626464844,
+        189.5337371826172
+      ],
+      "text_sha256": "dbee2bbaf92bd1763606f8576ce4f58c0da2fb1871aa4f72e4bfbb4d5bfdf19d"
+    },
+    {
+      "block_id": "page-0124-block-0008",
+      "order": 8,
+      "text": "Histaminergic withdrawal\nsymptoms \nIrritability, insomnia, agitation\nDepressed affect\nLoss of appetite or nausea\nTremulousness, incoordination\nLethargy or amnesia\n",
+      "bbox": [
+        65.12930297851562,
+        214.35543823242188,
+        153.19805908203125,
+        272.27935791015625
+      ],
+      "text_sha256": "903f2086c34420172406952befdeaf1f9e0f6345452f05385a6df5d860b356f9"
+    },
+    {
+      "block_id": "page-0124-block-0009",
+      "order": 9,
+      "text": "Dopaminergic withdrawal\nsymptoms - nigrostriatal\nWithdrawal dyskinesia\nParkinsonism\nNeuroleptic malignant\nsyndrome\nAkathisia\n",
+      "bbox": [
+        193.94290161132812,
+        75.06819915771484,
+        274.4488220214844,
+        132.9921112060547
+      ],
+      "text_sha256": "9f7ff31b37c238a8003abfeff9b4ea2813a1ce93213dd7f9d950c67b942fa3fd"
+    },
+    {
+      "block_id": "page-0124-block-0010",
+      "order": 10,
+      "text": "Antipsychotic\n",
+      "bbox": [
+        209.4228973388672,
+        166.13282775878906,
+        259.67401123046875,
+        175.1768341064453
+      ],
+      "text_sha256": "9798d9312738a594125f97b1ac1ac507904c635cd9385d89fb967745c31253a6"
+    },
+    {
+      "block_id": "page-0124-block-0011",
+      "order": 11,
+      "text": "withdrawal \n",
+      "bbox": [
+        213.85369873046875,
+        175.63282775878906,
+        255.2432098388672,
+        184.6768341064453
+      ],
+      "text_sha256": "987a3cd10f7859d399f43be734164287dffa0cd44b48e27584167a6957527bf2"
+    },
+    {
+      "block_id": "page-0124-block-0012",
+      "order": 12,
+      "text": "Dopaminergic withdrawal\nsymptoms – mesolimbic\nor striatal\nAuditory hallucinations\nPersecutory delusions\nOther psychotic symptoms\n",
+      "bbox": [
+        193.9449005126953,
+        221.48486328125,
+        274.4508361816406,
+        271.3409118652344
+      ],
+      "text_sha256": "1d0517a4a0c72dc802872a79fbac7dc8cd96369a2eab8cb300aa80c2a5f71902"
+    },
+    {
+      "block_id": "page-0124-block-0013",
+      "order": 13,
+      "text": "Serotonin withdrawal\nsymptoms\nFlu-like symptoms, sweating\nor chills, dizziness,light-\nheadedness or tachycardia\nParathaesia, electric shock\nsensations\nAnxiety, agitation, low mood\nInsomnia, nightmares\nNausea, vomiting, diarrhoea\nConfusion, decreased\nconcentration\n",
+      "bbox": [
+        320.53216552734375,
+        75.08675384521484,
+        404.36761474609375,
+        173.38328552246094
+      ],
+      "text_sha256": "6a7659113e97ed0a6e18602f4e95be2ed489392b9c359e5f0dbba4b8463e26fd"
+    },
+    {
+      "block_id": "page-0124-block-0014",
+      "order": 14,
+      "text": "Adrenergic withdrawal\nsymptoms\nHeadache, anxiety or\nagitation\nHypertension, tachycardia,\nangina, palpitations\nRisk of myocardial infarction\nPresyncope, tremulousness\nSweating\n",
+      "bbox": [
+        320.53216552734375,
+        196.69638061523438,
+        404.36761474609375,
+        270.76934814453125
+      ],
+      "text_sha256": "da675b8b51a22edd22f9d635a158b4f1dd3fb39282ab5fa18feaca9efb8b0d85"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0837",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 837,
+  "source_page_index": 836,
+  "source_page_display": 837,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "816    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\nStep\nIntervention\n7\nTry clozapine. Start at 6.25mg – usual dose 25mg–35mg/day.29,37 Usually safe but NMS has been \nreported43\nMonitor as for clozapine in schizophrenia. Older people are more prone to develop serious blood \ndyscrasia. A case of aplastic anaemia has been reported.44\n8\nConsider ECT.45 Psychotic and motor symptoms usually respond well,46 but the risk of inducing \ndelirium is high,28 particularly in patients with pre-existing cognitive impairment.\nPimavanserin\nPimavanserin is a 5HT2A receptor inverse agonist available in the United States and \nsome other countries. It is effective in PD psychosis but has no dopamine receptor activ-\nity and does not worsen PD movement disorder or seem to increase mortality.47\nPimavanserin and clozapine are the only drugs recommended for PD psychosis.48 A \nrecent network meta-analysis suggested only these two drugs had efficacy in PD while \nhaving minimal effect on motor function.49 Other drugs have doubtful efficacy and are \npoorly tolerated.49,50\nCholinesterase inhibitors in PD\nCholinesterase inhibitors have been shown to improve cognition, delusions and hallu-\ncinations in patients with Lewy body dementia (which has many similarities to PD). \nMotor function may deteriorate.51,52 Improvements in cognitive functioning are mod-\nest.53–55 A Cochrane review and some large RCTs54,56,57 concluded that there is evidence \nthat cholinesterase inhibitors lead to improvements in global functioning, cognition, \nbehavioural disturbance and activities of daily living in PD. Again, motor function may \ndeteriorate57,58 with particular increase in tremor.55 Evidence for memantine is mixed.59,60 \nDiscontinuation of anticholinergic drugs should improve cognition and psychosis – PD \npatients often have a very high anticholinergic burden, often unrelated to treatment of \nPD itself.61\nMany patients with PD use complementary therapies, some of which may be mod-\nestly beneficial – see Zesiewicz et al.62 Caffeine may offer a protective effect against the \ndevelopment of PD and also modestly improve motor function in established \ndisease.63\n(Continued)\n",
+  "raw_text_sha256": "cd21c3166b4dabd884ef0a0f712cab5f390688eae5e817c1a2b015313b3d3b07",
+  "coordinates_sha256": "0a9e0487b6dbe97292a38c9b0c5b59727f70200429ec69ba1c0391d70f668789",
+  "block_sequence_sha256": "d5002c8eb7ad69f0f88f47b3d6b8555aa9a16bd5fe9e70025ab15922348368d5",
+  "blocks": [
+    {
+      "block_id": "page-0837-block-0000",
+      "order": 0,
+      "text": "816    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "b183ef36326dbd838d0caa3499a8bc0e857b574211fe06eb10a536e09bf070a5"
+    },
+    {
+      "block_id": "page-0837-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0837-block-0002",
+      "order": 2,
+      "text": "Step\nIntervention\n",
+      "bbox": [
+        65.88999938964844,
+        88.57289123535156,
+        161.65000915527344,
+        97.46038818359375
+      ],
+      "text_sha256": "226955917d1a9ae551d54b27d8369810f1ceb1bcd1e1028448b6ed101a4b17c3"
+    },
+    {
+      "block_id": "page-0837-block-0003",
+      "order": 3,
+      "text": "7\nTry clozapine. Start at 6.25mg – usual dose 25mg–35mg/day.29,37 Usually safe but NMS has been \nreported43\n",
+      "bbox": [
+        65.88999938964844,
+        106.19789123535156,
+        430.441162109375,
+        125.0828857421875
+      ],
+      "text_sha256": "e75a7041eabe5139d451b20ba42bf6a976866221c4668ede4f0b1522fbaeeb56"
+    },
+    {
+      "block_id": "page-0837-block-0004",
+      "order": 4,
+      "text": "Monitor as for clozapine in schizophrenia. Older people are more prone to develop serious blood \ndyscrasia. A case of aplastic anaemia has been reported.44\n",
+      "bbox": [
+        117.88999938964844,
+        129.3778839111328,
+        428.66766357421875,
+        148.0828857421875
+      ],
+      "text_sha256": "7be0e8d7c2c5357be62e9d5947771ab0c63c88fdd695c2ccbb89eb6aee504857"
+    },
+    {
+      "block_id": "page-0837-block-0005",
+      "order": 5,
+      "text": "8\nConsider ECT.45 Psychotic and motor symptoms usually respond well,46 but the risk of inducing \ndelirium is high,28 particularly in patients with pre-existing cognitive impairment.\n",
+      "bbox": [
+        65.88999938964844,
+        156.82289123535156,
+        422.1220703125,
+        175.71038818359375
+      ],
+      "text_sha256": "7f8ca983e1a2077c659282ee0d5fcfcbfcf761dc48505408f0226d878873fd7b"
+    },
+    {
+      "block_id": "page-0837-block-0006",
+      "order": 6,
+      "text": "Pimavanserin\n",
+      "bbox": [
+        61.88999938964844,
+        195.80038452148438,
+        130.96998596191406,
+        208.83538818359375
+      ],
+      "text_sha256": "b297f98baba781a91a768c96578599133a135ab676cc2426d96fd2dc054acda5"
+    },
+    {
+      "block_id": "page-0837-block-0007",
+      "order": 7,
+      "text": "Pimavanserin is a 5HT2A receptor inverse agonist available in the United States and \nsome other countries. It is effective in PD psychosis but has no dopamine receptor activ-\nity and does not worsen PD movement disorder or seem to increase mortality.47\n",
+      "bbox": [
+        61.88999938964844,
+        214.6453857421875,
+        436.6098327636719,
+        250.36538696289062
+      ],
+      "text_sha256": "5ee18e00cf949a080d2c1b8932efd589bea9e2bf899b564736104f5d3c0a0ab3"
+    },
+    {
+      "block_id": "page-0837-block-0008",
+      "order": 8,
+      "text": "Pimavanserin and clozapine are the only drugs recommended for PD psychosis.48 A \nrecent network meta-analysis suggested only these two drugs had efficacy in PD while \nhaving minimal effect on motor function.49 Other drugs have doubtful efficacy and are \npoorly tolerated.49,50\n",
+      "bbox": [
+        61.88970947265625,
+        250.6453857421875,
+        436.6697082519531,
+        298.3653869628906
+      ],
+      "text_sha256": "4a4ea9f30a8153db64ec46510f199924f569dbb4dc2a1597195dda79ff0e90af"
+    },
+    {
+      "block_id": "page-0837-block-0009",
+      "order": 9,
+      "text": "Cholinesterase inhibitors in PD\n",
+      "bbox": [
+        61.88999938964844,
+        315.8003845214844,
+        220.1909637451172,
+        328.83538818359375
+      ],
+      "text_sha256": "b1e7d361c99b118a1476f96fa350892fdc88bb74f5478607bd08034cfb34efc2"
+    },
+    {
+      "block_id": "page-0837-block-0010",
+      "order": 10,
+      "text": "Cholinesterase inhibitors have been shown to improve cognition, delusions and hallu-\ncinations in patients with Lewy body dementia (which has many similarities to PD). \nMotor function may deteriorate.51,52 Improvements in cognitive functioning are mod-\nest.53–55 A Cochrane review and some large RCTs54,56,57 concluded that there is evidence \nthat cholinesterase inhibitors lead to improvements in global functioning, cognition, \nbehavioural disturbance and activities of daily living in PD. Again, motor function may \ndeteriorate57,58 with particular increase in tremor.55 Evidence for memantine is mixed.59,60 \nDiscontinuation of anticholinergic drugs should improve cognition and psychosis – PD \npatients often have a very high anticholinergic burden, often unrelated to treatment of \nPD itself.61\n",
+      "bbox": [
+        61.889801025390625,
+        334.6453857421875,
+        436.6897277832031,
+        454.3653869628906
+      ],
+      "text_sha256": "949a195c0a4f248dd9fba4f05f07118d8d010903395ceed9c47b4ab92d1f2d1f"
+    },
+    {
+      "block_id": "page-0837-block-0011",
+      "order": 11,
+      "text": "Many patients with PD use complementary therapies, some of which may be mod-\nestly beneficial – see Zesiewicz et al.62 Caffeine may offer a protective effect against the \ndevelopment of PD and also modestly improve motor function in established \ndisease.63\n",
+      "bbox": [
+        61.888702392578125,
+        454.6453857421875,
+        436.64862060546875,
+        502.3653869628906
+      ],
+      "text_sha256": "2aabf826df11513eccd81dadbfa6286357451697e2ec27d20bef4dc9eb8def97"
+    },
+    {
+      "block_id": "page-0837-block-0012",
+      "order": 12,
+      "text": "(Continued)\n",
+      "bbox": [
+        67.88999938964844,
+        70.222900390625,
+        105.40498352050781,
+        78.97540283203125
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

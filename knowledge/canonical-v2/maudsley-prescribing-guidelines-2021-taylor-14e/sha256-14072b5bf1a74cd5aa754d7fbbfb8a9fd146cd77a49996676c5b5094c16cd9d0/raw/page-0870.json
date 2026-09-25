@@ -1,0 +1,263 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0870",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 870,
+  "source_page_index": 869,
+  "source_page_display": 870,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Pharmacokinetics    849\nCHAPTER 11\nActing on clozapine plasma concentration results\nIn most developed countries, clozapine blood concentration monitoring is widely used. \nThe table below gives some general advice about actions that should be taken when \nclozapine levels fall within a certain range. The ranges shown are somewhat arbitrary \nand convenient – the concentration at which a particular patient might respond cannot \nbe known without a trial of clozapine. Most adverse effects are linearly or exponen-\ntially related to dose or plasma level. That is, there is no step-change in risk of seizures, \nfor example, at a particular dose or plasma concentration.1 As a consequence the Table \n11.4 should be considered more an aide to decision-making rather than a rigorous, \nunbending evidence-based instruction. Note also the effect of tolerance to adverse \neffects – many patients have a significant adverse effect burden before therapeutic levels \nare reached,2 reducing over time as tolerance develops.\nTable 11.4  Acting on clozapine plasma concentration results*\nPlasma \nconcentration\nResponse \nstatus\nTolerability \nstatus\nSuggest action\n<350µg/L\nPoor\nPoor\nIncrease dose very slowly to give level of 350µg/L\nPoor\nGood\nIncrease dose to give level of 350µg/L\nGood\nPoor\nMaintain dose. Consider cautious dose reduction if \ntolerability does not improve.\nGood\nGood\nContinue to monitor. No action required.\n350–500µg/L\nPoor\nPoor\nIncrease dose slowly, according to tolerability, to give level \nof >500µg/L. Consider prophylactic anticonvulsant.** If no \nimprovement, consider augmentation.\nPoor\nGood\nIncrease dose slowly, according to tolerability, to give level \nof >500µg/L. Consider prophylactic anticonvulsant.** If no \nimprovement, consider augmentation.\nGood\nPoor\nMaintain dose to see if tolerability improves. Consider \ncautious dose reduction to give plasma level of around \n350µg/L.\nGood\nGood\nContinue to monitor. No action required.\n500–1000µg/L\nPoor\nPoor\nConsider use of prophylactic anticonvulsant.** Consider \naugmentation.\nAttempt dose reduction if augmentation successful.\nPoor\nGood\nConsider use of prophylactic anticonvulsant.** Consider \naugmentation.\nGood\nPoor\nAttempt slow dose reduction to give plasma level of \n350–500µg/L unless there is known non-response at lower \nlevel. If this is the case, maintain dose and consider adding \nanticonvulsant.** Optimise treatment of adverse effects.\nGood\nGood\nConsider use of prophylactic anticonvulsant.** Maintain \ndose if good tolerability continues.\n",
+  "raw_text_sha256": "086e9321b3af6b4495f490c1af0c7ca79b6de141c359ceb3781cd98e7eb1060f",
+  "coordinates_sha256": "0d0212f896adbdd239d658b8c00aa0150273c8d84862fd287d9d5952bdffb612",
+  "block_sequence_sha256": "d68d3fa8e52c46382040fb5cacd07ebb0433ffd92631ae5a7c10a1037c182b13",
+  "blocks": [
+    {
+      "block_id": "page-0870-block-0000",
+      "order": 0,
+      "text": "Pharmacokinetics    849\n",
+      "bbox": [
+        320.4088134765625,
+        31.395221710205078,
+        420.00079345703125,
+        41.0272216796875
+      ],
+      "text_sha256": "d2aecb0cce26a373b48ad471ca0e95413357f32f79bbe5ffe95e7f00ea83798c"
+    },
+    {
+      "block_id": "page-0870-block-0001",
+      "order": 1,
+      "text": "CHAPTER 11\n",
+      "bbox": [
+        454.4096984863281,
+        140.99053955078125,
+        463.88970947265625,
+        186.78250122070312
+      ],
+      "text_sha256": "8577f8a61d9be9d957b7354680b21b61adb6e8c4601aaa9be76ccc79360dc7f3"
+    },
+    {
+      "block_id": "page-0870-block-0002",
+      "order": 2,
+      "text": "Acting on clozapine plasma concentration results\n",
+      "bbox": [
+        55.0,
+        66.06539916992188,
+        308.42901611328125,
+        79.10040283203125
+      ],
+      "text_sha256": "61d49cc7bb1ea189524b0477b8063ae64f23051828a2b20c7ce000975414e9dd"
+    },
+    {
+      "block_id": "page-0870-block-0003",
+      "order": 3,
+      "text": "In most developed countries, clozapine blood concentration monitoring is widely used. \nThe table below gives some general advice about actions that should be taken when \nclozapine levels fall within a certain range. The ranges shown are somewhat arbitrary \nand convenient – the concentration at which a particular patient might respond cannot \nbe known without a trial of clozapine. Most adverse effects are linearly or exponen-\ntially related to dose or plasma level. That is, there is no step-change in risk of seizures, \nfor example, at a particular dose or plasma concentration.1 As a consequence the Table \n11.4 should be considered more an aide to decision-making rather than a rigorous, \nunbending evidence-based instruction. Note also the effect of tolerance to adverse \neffects – many patients have a significant adverse effect burden before therapeutic levels \nare reached,2 reducing over time as tolerance develops.\n",
+      "bbox": [
+        47.99739074707031,
+        84.910400390625,
+        422.8299865722656,
+        216.63040161132812
+      ],
+      "text_sha256": "1ae47254f5709529190478828b0d1219d68e2ac234097785fffebe0b3cb21910"
+    },
+    {
+      "block_id": "page-0870-block-0004",
+      "order": 4,
+      "text": "Table 11.4  Acting on clozapine plasma concentration results*\n",
+      "bbox": [
+        54.00019836425781,
+        233.83580017089844,
+        253.49267578125,
+        242.72329711914062
+      ],
+      "text_sha256": "234047fa656d3ea3fc80b6e571398a7a955da92c7464af8d26cb8cdbcbbb0d27"
+    },
+    {
+      "block_id": "page-0870-block-0005",
+      "order": 5,
+      "text": "Plasma \nconcentration\n",
+      "bbox": [
+        48.00019836425781,
+        253.71080017089844,
+        96.75019836425781,
+        272.5957946777344
+      ],
+      "text_sha256": "fe8a81d387591309b558616323b18fbb17e2a7182edf2667e8e055dd0345e67e"
+    },
+    {
+      "block_id": "page-0870-block-0006",
+      "order": 6,
+      "text": "Response \nstatus\n",
+      "bbox": [
+        119.44519805908203,
+        253.71080017089844,
+        154.86021423339844,
+        272.5957946777344
+      ],
+      "text_sha256": "f1446bd523d0b7e8e7d36b743507408c879eff2a04f365451dddb82008f951a9"
+    },
+    {
+      "block_id": "page-0870-block-0007",
+      "order": 7,
+      "text": "Tolerability \nstatus\nSuggest action\n",
+      "bbox": [
+        176.2501983642578,
+        253.71080017089844,
+        285.1427001953125,
+        272.5957946777344
+      ],
+      "text_sha256": "75d44061b432c9a900d16a8d401b5978cff581f10c3b51d5b102ffeac577ca65"
+    },
+    {
+      "block_id": "page-0870-block-0008",
+      "order": 8,
+      "text": "<350µg/L\nPoor\nPoor\nIncrease dose very slowly to give level of 350µg/L\n",
+      "bbox": [
+        48.00019836425781,
+        281.8357849121094,
+        389.60272216796875,
+        290.7232971191406
+      ],
+      "text_sha256": "01bba06350111adde1609e7ff03a6a002e7abc0c3f770bdf52a3899324c73214"
+    },
+    {
+      "block_id": "page-0870-block-0009",
+      "order": 9,
+      "text": "Poor\nGood\nIncrease dose to give level of 350µg/L\n",
+      "bbox": [
+        119.44520568847656,
+        300.143310546875,
+        352.9427490234375,
+        308.8507995605469
+      ],
+      "text_sha256": "3129f8b3c974c39b91aa19e3b0dc18e87bc2b71534a75425b9b440831387c166"
+    },
+    {
+      "block_id": "page-0870-block-0010",
+      "order": 10,
+      "text": "Good\nPoor\nMaintain dose. Consider cautious dose reduction if \ntolerability does not improve.\n",
+      "bbox": [
+        119.44520568847656,
+        318.27081298828125,
+        397.54534912109375,
+        336.9757995605469
+      ],
+      "text_sha256": "984ff02b5a32b0139cfc938e19156a7f5195e6556ae801930c0a95e84dfb57a7"
+    },
+    {
+      "block_id": "page-0870-block-0011",
+      "order": 11,
+      "text": "Good\nGood\nContinue to monitor. No action required.\n",
+      "bbox": [
+        119.44520568847656,
+        346.39581298828125,
+        363.7952575683594,
+        355.1033020019531
+      ],
+      "text_sha256": "b881a3d9addf4a80f9494a7dafa2bfbebcd608affd1e0ce80132e4f3a14c8584"
+    },
+    {
+      "block_id": "page-0870-block-0012",
+      "order": 12,
+      "text": "350–500µg/L\nPoor\nPoor\nIncrease dose slowly, according to tolerability, to give level \nof >500µg/L. Consider prophylactic anticonvulsant.** If no \nimprovement, consider augmentation.\n",
+      "bbox": [
+        48.000213623046875,
+        364.3432922363281,
+        419.8202209472656,
+        393.2207946777344
+      ],
+      "text_sha256": "cfa800326171742bc12949b5c1c2a9a4e53153abbd0bfe56f34fbf2f3e872e8a"
+    },
+    {
+      "block_id": "page-0870-block-0013",
+      "order": 13,
+      "text": "Poor\nGood\nIncrease dose slowly, according to tolerability, to give level \nof >500µg/L. Consider prophylactic anticonvulsant.** If no \nimprovement, consider augmentation.\n",
+      "bbox": [
+        119.44522094726562,
+        402.64080810546875,
+        419.8202209472656,
+        431.3457946777344
+      ],
+      "text_sha256": "11b3fc53d942805421bf22230ab6b627a77efc5306dfe95d9256a7634036e6ab"
+    },
+    {
+      "block_id": "page-0870-block-0014",
+      "order": 14,
+      "text": "Good\nPoor\nMaintain dose to see if tolerability improves. Consider \ncautious dose reduction to give plasma level of around \n350µg/L.\n",
+      "bbox": [
+        119.44522094726562,
+        440.76580810546875,
+        409.4853210449219,
+        469.4682922363281
+      ],
+      "text_sha256": "7a2ebd4e56a2665904020959b9edd9a8d0cb94d30465641002005910fe0c0e5d"
+    },
+    {
+      "block_id": "page-0870-block-0015",
+      "order": 15,
+      "text": "Good\nGood\nContinue to monitor. No action required.\n",
+      "bbox": [
+        119.44520568847656,
+        478.8883056640625,
+        363.7952575683594,
+        487.5957946777344
+      ],
+      "text_sha256": "b881a3d9addf4a80f9494a7dafa2bfbebcd608affd1e0ce80132e4f3a14c8584"
+    },
+    {
+      "block_id": "page-0870-block-0016",
+      "order": 16,
+      "text": "500–1000µg/L\nPoor\nPoor\nConsider use of prophylactic anticonvulsant.** Consider \naugmentation.\nAttempt dose reduction if augmentation successful.\n",
+      "bbox": [
+        48.000213623046875,
+        496.8357849121094,
+        411.5628356933594,
+        525.71826171875
+      ],
+      "text_sha256": "25bd6f1c98eee6777e7820cb3bdf733667844617469d18c17d47b4b1b51b7e80"
+    },
+    {
+      "block_id": "page-0870-block-0017",
+      "order": 17,
+      "text": "Poor\nGood\nConsider use of prophylactic anticonvulsant.** Consider \naugmentation.\n",
+      "bbox": [
+        119.44529724121094,
+        535.1383056640625,
+        411.5628356933594,
+        553.8458251953125
+      ],
+      "text_sha256": "d7c6b343edc26475c6b1a4bdaa78247ac62dbe09848cc8d46e7389303c18786a"
+    },
+    {
+      "block_id": "page-0870-block-0018",
+      "order": 18,
+      "text": "Good\nPoor\nAttempt slow dose reduction to give plasma level of \n350–500µg/L unless there is known non-response at lower \nlevel. If this is the case, maintain dose and consider adding \nanticonvulsant.** Optimise treatment of adverse effects.\n",
+      "bbox": [
+        119.44529724121094,
+        563.2657470703125,
+        422.032958984375,
+        601.9732666015625
+      ],
+      "text_sha256": "e40417af404def11fe537da0f9863b0e13085cfce1658a8d8c1795e4c48b73a9"
+    },
+    {
+      "block_id": "page-0870-block-0019",
+      "order": 19,
+      "text": "Good\nGood\nConsider use of prophylactic anticonvulsant.** Maintain \ndose if good tolerability continues.\n",
+      "bbox": [
+        119.4451904296875,
+        611.3907470703125,
+        411.5554504394531,
+        630.0957641601562
+      ],
+      "text_sha256": "756f76c2e8cd91218d4a3e2dd21506c0f65e3cee5006a519ad705251ebc9c5df"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

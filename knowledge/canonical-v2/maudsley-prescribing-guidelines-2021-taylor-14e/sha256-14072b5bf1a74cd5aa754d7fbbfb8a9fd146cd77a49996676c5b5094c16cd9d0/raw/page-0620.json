@@ -1,0 +1,335 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0620",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 620,
+  "source_page_index": 619,
+  "source_page_display": 620,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Children and adolescents    599\nCHAPTER 5\nReferences\n\t 1.\t BNF Online. British National Formulary 2020; https://www.medicinescomplete.com/mc/bnf/current.\n\t 2.\t BNFC Online. British National Formulary for Children 2020; https://www.medicinescomplete.com/#/browse/bnfc.\n\t 3.\t GOV.UK Guidance. Valproate use by women and girls 2020; https://www.gov.uk/guidance/valproate-use-by-women-and-girls.\nDoses of commonly used psychotropic drugs in children and \nadolescents\nThe doses of commonly used drugs are presented in Table 5.8.\nTable 5.8  Starting doses of commonly used psychotropic drugs in children and adolescents1,2 *\nDrug\nStarting dose**\nComment\nAntipsychotics\nAripiprazole\n2mg\nAdjust dose according to response and \nadverse effects\nClozapine\n6.25–12.5mg\nUse plasma levels to determine \nmaintenance dose\nOlanzapine\n2.5–5mg\nAdjust dose according to response and \nadverse effects\nQuetiapine\n25mg\nEffective dose usually in the range \n150–200mg daily\nRisperidone\n0.25–2mg\nAdjust dose according to response and \nadverse effects\nAntidepressants\nFluoxetine\n5–10mg/day\nAdjust dose according to response and \nadverse effects\nSertraline\n25–50mg daily\nEffective dose usually in the range \n50–100mg daily\nCitalopram\n10mg daily\nEffective dose 10–40mg (note QT effects)\nOther Drugs\nLithium\n100–200mg/day\nlithium carbonate\nUse plasma levels to determine \nmaintenance dose\nValproate\n10–20mg/kg/day in divided \ndoses\nUse plasma levels to determine \nmaintenance dose. Do not offer valproate \nto girls or young women of child bearing \npotential unless there is a pregnancy \nprevention programme (PPP) in place3\nMelatonin\n2mg at night\nEffective dose 2–10mg\n*We have removed haloperidol, amitriptyline, escitalopram and carbamazepine from this table as none of these are \nrecommended in children.\n**Suggested approximate oral starting doses (see primary literature for doses in individual indications). Lower dose in \nsuggested range is for children weighing less than 25kg.\n",
+  "raw_text_sha256": "1dd9303c587459e7dfb468f1327ee041fc6f487fd220919e09c99f6d9ce2bd34",
+  "coordinates_sha256": "0ad0736cb8f2ce344e9b1ea395f926a2654efa46d8ffadcd45dab0932c29d1ba",
+  "block_sequence_sha256": "d08120bdf58af093225c693330e759b8f32d25516f47c687baf77ca14ce93211",
+  "blocks": [
+    {
+      "block_id": "page-0620-block-0000",
+      "order": 0,
+      "text": "Children and adolescents    599\n",
+      "bbox": [
+        288.94488525390625,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "a9d980251c5775a7af6cd0f71eb9be2f21bf422a2d1485caae59c352169812e9"
+    },
+    {
+      "block_id": "page-0620-block-0001",
+      "order": 1,
+      "text": "CHAPTER 5\n",
+      "bbox": [
+        454.4096984863281,
+        339.3385009765625,
+        463.88970947265625,
+        380.6824951171875
+      ],
+      "text_sha256": "f4b8b4a0fc64e7b3b74e7336306d0959d0384683e387792724f393162639020a"
+    },
+    {
+      "block_id": "page-0620-block-0002",
+      "order": 2,
+      "text": "References\n",
+      "bbox": [
+        48.0,
+        570.8690185546875,
+        104.03400421142578,
+        583.9039916992188
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0620-block-0003",
+      "order": 3,
+      "text": "\t 1.\t BNF Online. British National Formulary 2020; https://www.medicinescomplete.com/mc/bnf/current.\n\t 2.\t BNFC Online. British National Formulary for Children 2020; https://www.medicinescomplete.com/#/browse/bnfc.\n\t 3.\t GOV.UK Guidance. Valproate use by women and girls 2020; https://www.gov.uk/guidance/valproate-use-by-women-and-girls.\n",
+      "bbox": [
+        48.0,
+        588.989990234375,
+        384.47991943359375,
+        614.02197265625
+      ],
+      "text_sha256": "7029724b7321ed16e15a1b3811dab555472dbccc78bc6dd62da2027e45253439"
+    },
+    {
+      "block_id": "page-0620-block-0004",
+      "order": 4,
+      "text": "Doses of commonly used psychotropic drugs in children and \nadolescents\n",
+      "bbox": [
+        55.0,
+        66.06539916992188,
+        368.1040954589844,
+        91.10137939453125
+      ],
+      "text_sha256": "f9bb104efb76ee5f02b5c91d780facc02654bc160a0e4436ff84f9e2647e0769"
+    },
+    {
+      "block_id": "page-0620-block-0005",
+      "order": 5,
+      "text": "The doses of commonly used drugs are presented in Table 5.8.\n",
+      "bbox": [
+        48.0,
+        96.910400390625,
+        316.25,
+        108.63040161132812
+      ],
+      "text_sha256": "2b809b74613ee88869b523ccde7ae2eb3ba05ebdf0a0c3a9fac6a6ffb66b1b14"
+    },
+    {
+      "block_id": "page-0620-block-0006",
+      "order": 6,
+      "text": "Table 5.8  Starting doses of commonly used psychotropic drugs in children and adolescents1,2 *\n",
+      "bbox": [
+        54.0,
+        133.62770080566406,
+        355.32861328125,
+        142.51519775390625
+      ],
+      "text_sha256": "58697811f6a347b481951a891cef98c3d4d6ae43dc69770ad5274cb220a52e83"
+    },
+    {
+      "block_id": "page-0620-block-0007",
+      "order": 7,
+      "text": "Drug\nStarting dose**\nComment\n",
+      "bbox": [
+        48.0,
+        154.00270080566406,
+        314.2799987792969,
+        162.89019775390625
+      ],
+      "text_sha256": "3495d9c2cc2ab4e4a334ede54748c701107ec20d892584343a3ac4d2760fd4e6"
+    },
+    {
+      "block_id": "page-0620-block-0008",
+      "order": 8,
+      "text": "Antipsychotics\n",
+      "bbox": [
+        47.99998474121094,
+        171.02772521972656,
+        99.23998260498047,
+        179.91522216796875
+      ],
+      "text_sha256": "66a87c9d9c00b8fa993ae9a90f576148dfe50f1c930aed10c7efe7d8254d7496"
+    },
+    {
+      "block_id": "page-0620-block-0009",
+      "order": 9,
+      "text": "Aripiprazole\n2mg\nAdjust dose according to response and \nadverse effects\n",
+      "bbox": [
+        47.99998474121094,
+        186.23020935058594,
+        406.13262939453125,
+        204.93521118164062
+      ],
+      "text_sha256": "73d42639d2d1c91c1e03d9db86f6b1b363fde78e02baf54022e47fb5d44e4b01"
+    },
+    {
+      "block_id": "page-0620-block-0010",
+      "order": 10,
+      "text": "Clozapine\n6.25–12.5mg\nUse plasma levels to determine \nmaintenance dose\n",
+      "bbox": [
+        47.99998474121094,
+        211.2501983642578,
+        380.9475402832031,
+        229.9552001953125
+      ],
+      "text_sha256": "932c5bf69199b0f6c1c28b59ddfa0c9308de9d22c054120892bd7dbbc362e41a"
+    },
+    {
+      "block_id": "page-0620-block-0011",
+      "order": 11,
+      "text": "Olanzapine\n2.5–5mg\nAdjust dose according to response and \nadverse effects\n",
+      "bbox": [
+        47.99998474121094,
+        236.2701873779297,
+        406.13262939453125,
+        254.97518920898438
+      ],
+      "text_sha256": "87a684e4f574f63e09f368a81e23fca58e085bbbabbfaea2406b58a1e6310908"
+    },
+    {
+      "block_id": "page-0620-block-0012",
+      "order": 12,
+      "text": "Quetiapine\n25mg\nEffective dose usually in the range \n150–200mg daily\n",
+      "bbox": [
+        47.99998474121094,
+        261.2901916503906,
+        390.8175354003906,
+        279.99517822265625
+      ],
+      "text_sha256": "70b9860e9b8600b1a4d3cd6062edbed99d0bb5b8a2d39595c3c018cb2b594f33"
+    },
+    {
+      "block_id": "page-0620-block-0013",
+      "order": 13,
+      "text": "Risperidone\n0.25–2mg\nAdjust dose according to response and \nadverse effects\n",
+      "bbox": [
+        47.99998474121094,
+        286.3101806640625,
+        406.13262939453125,
+        305.0151672363281
+      ],
+      "text_sha256": "0413b7da911ae002e0cd249143282695039180aa7d752c06a0ba6ba343cc5726"
+    },
+    {
+      "block_id": "page-0620-block-0014",
+      "order": 14,
+      "text": "Antidepressants\n",
+      "bbox": [
+        47.99998474121094,
+        314.2551574707031,
+        104.94747924804688,
+        323.1426696777344
+      ],
+      "text_sha256": "2e12ac14096be234a9b975ce033aebb8d95f8f3ff92503034de89e253e59f21d"
+    },
+    {
+      "block_id": "page-0620-block-0015",
+      "order": 15,
+      "text": "Fluoxetine\n5–10mg/day\nAdjust dose according to response and \nadverse effects\n",
+      "bbox": [
+        47.99998474121094,
+        329.4576721191406,
+        406.13262939453125,
+        348.16265869140625
+      ],
+      "text_sha256": "46b7c35a84d4f8c4db06b8def73a0ef480efd928915e6f86e28e6bd5499fa024"
+    },
+    {
+      "block_id": "page-0620-block-0016",
+      "order": 16,
+      "text": "Sertraline\n25–50mg daily\nEffective dose usually in the range \n50–100mg daily\n",
+      "bbox": [
+        47.99998474121094,
+        354.4776611328125,
+        390.8175354003906,
+        373.1826477050781
+      ],
+      "text_sha256": "dba70cc803794ed5fc1dff3b72cc1746d0842af1bb7c914bdf26b9edb2aca005"
+    },
+    {
+      "block_id": "page-0620-block-0017",
+      "order": 17,
+      "text": "Citalopram\n10mg daily\nEffective dose 10–40mg (note QT effects)\n",
+      "bbox": [
+        47.99998474121094,
+        379.4976501464844,
+        412.3500061035156,
+        388.20513916015625
+      ],
+      "text_sha256": "ff4910ee9b0dab18eccda9851147028365d76f1efa12fa648912d93c58122143"
+    },
+    {
+      "block_id": "page-0620-block-0018",
+      "order": 18,
+      "text": "Other Drugs\n",
+      "bbox": [
+        47.99998474121094,
+        397.44512939453125,
+        91.3349838256836,
+        406.3326416015625
+      ],
+      "text_sha256": "8f020a617efd7e582a770b951aa5d395f3de857492449f0572a7269e1ef958a5"
+    },
+    {
+      "block_id": "page-0620-block-0019",
+      "order": 19,
+      "text": "Lithium\n100–200mg/day\nlithium carbonate\n",
+      "bbox": [
+        47.99998474121094,
+        412.64764404296875,
+        232.25245666503906,
+        431.3526306152344
+      ],
+      "text_sha256": "8b4cee8ae1a486fbc2d7bdb7fb77ef61336b407566948e5170b66a9fcfba074a"
+    },
+    {
+      "block_id": "page-0620-block-0020",
+      "order": 20,
+      "text": "Use plasma levels to determine \nmaintenance dose\n",
+      "bbox": [
+        280.1099853515625,
+        412.64764404296875,
+        380.9475402832031,
+        431.3526306152344
+      ],
+      "text_sha256": "b82a9f14d5786f9a8a777d1882b234facb6a8f7a0b3ec178b7dfad667dfebb18"
+    },
+    {
+      "block_id": "page-0620-block-0021",
+      "order": 21,
+      "text": "Valproate\n10–20mg/kg/day in divided \ndoses\n",
+      "bbox": [
+        47.99998474121094,
+        437.6676330566406,
+        265.1999816894531,
+        456.37261962890625
+      ],
+      "text_sha256": "1672472e6de1fdf2cf4c6d70dcbe87496db7a9015ecff5895e9461ae4bd81000"
+    },
+    {
+      "block_id": "page-0620-block-0022",
+      "order": 22,
+      "text": "Use plasma levels to determine \nmaintenance dose. Do not offer valproate \nto girls or young women of child bearing \npotential unless there is a pregnancy \nprevention programme (PPP) in place3\n",
+      "bbox": [
+        280.1099853515625,
+        437.6676330566406,
+        415.6950378417969,
+        486.3651123046875
+      ],
+      "text_sha256": "914714aa394ff0dec04f4cae4f6937649627c8aa2766713adfcfed11a9586e36"
+    },
+    {
+      "block_id": "page-0620-block-0023",
+      "order": 23,
+      "text": "Melatonin\n2mg at night\nEffective dose 2–10mg\n",
+      "bbox": [
+        48.0,
+        502.7326965332031,
+        352.89752197265625,
+        511.440185546875
+      ],
+      "text_sha256": "6d8ff32d4f7f86a1f05fd385b87ede0b1800a76735228ba0fecac494cdec59d2"
+    },
+    {
+      "block_id": "page-0620-block-0024",
+      "order": 24,
+      "text": "*We have removed haloperidol, amitriptyline, escitalopram and carbamazepine from this table as none of these are \nrecommended in children.\n",
+      "bbox": [
+        48.0,
+        523.482666015625,
+        416.58111572265625,
+        542.1876831054688
+      ],
+      "text_sha256": "7b42af2b719cbeb537d365d83f4e22261cabe4e2bb4bab3ed20a4f4adaf5e684"
+    },
+    {
+      "block_id": "page-0620-block-0025",
+      "order": 25,
+      "text": "**Suggested approximate oral starting doses (see primary literature for doses in individual indications). Lower dose in \nsuggested range is for children weighing less than 25kg.\n",
+      "bbox": [
+        48.0,
+        543.482666015625,
+        420.9773254394531,
+        562.1876831054688
+      ],
+      "text_sha256": "324f6829662d4e504cde272ad7293c30ff8e113a1860cf7b72f5cf25064281bf"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

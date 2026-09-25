@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0855",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 855,
+  "source_page_index": 854,
+  "source_page_display": 855,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "834    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  11\nmislead rather than inform. Always try to take samples as close to the scheduled \ntime as possible. Obviously, if toxicity is suspected, take a sample straightaway, \nignoring any scheduled timings.\nFor trough or ‘pre-dose’ samples, take the blood sample immediately before the \nnext dose is due. Do not, under any circumstances, withhold the next dose for \nmore than 1 or (possibly) 2 hours until the sample is taken. Withholding for \nlonger than this will inevitably give a misleading result (it will give a lower result \nthan that ever seen in the usual, regular dosing), and this may lead to an inappro-\npriate dose increase. Sampling time is less critical with drugs with a long half-life \n(e.g. olanzapine, aripiprazole) but, as an absolute minimum, prescribers should \nalways record the time of sampling and time of last dose. This cannot be empha-\nsised enough.\n■\n■Will the level have any inherent meaning?\nIs there a target range of plasma levels? If so, then plasma levels (from samples \ntaken at the right time) will usefully guide dosing. If there is not an accepted tar-\nget range, plasma levels can only indicate adherence or potential toxicity. However, \nif the sample is being used to check compliance, then bear in mind that a plasma \nlevel of zero indicates only that the drug has not been taken in the past several \ndays. Plasma levels above zero may indicate erratic compliance, full compliance \nor even long-standing non-compliance disguised by recent taking of prescribed \ndoses. Note also that target ranges have their limitations: patients may respond to \nlower levels than the quoted range and tolerate levels above the range; also, ranges \nquoted by different laboratories vary sometimes widely, often without \nexplanation.\n■\n■Is there a clear reason for plasma level determination?\nOnly the following reasons are valid:\n■\n■to confirm compliance (but see above)\n■\n■if toxicity is suspected\n■\n■if a pharmacokinetic drug interaction is suspected\n■\n■if clinical response is difficult to assess directly (and where a target range of plasma \nlevels has been established)\n■\n■if the drug has a narrow therapeutic index and toxicity concerns are considerable.\nInterpreting sample results\nThe basic rule for sample level interpretation is to act upon assay results only in con-\njunction with reliable clinical observation (treat the patient, not the level). For example, \nif a patient is responding adequately to a drug but has a plasma level below the accepted \ntarget range, then the dose should not normally be increased. If a patient has intolerable \nadverse effects but a plasma level within the target range, then a dose decrease may be \nappropriate.\nWhere a plasma level result is substantially different from previous results, a \nrepeat sample is usually advised. Check dose, timing of dose and recent compliance \nbut ensure, in particular, the correct timing of the sample, or at least that the timing \n",
+  "raw_text_sha256": "a7af70bf04298f69bfcdbd306ce1998f2820b6b28c3fd76ddffc15a098907610",
+  "coordinates_sha256": "08efd80bec565d80c799dd94e4cf74daafab736215250899750ac1644f5bbadd",
+  "block_sequence_sha256": "ebca217f4f07dfda282ed059b9f5eed244679fec3c678c1ab64e1effec1681fe",
+  "blocks": [
+    {
+      "block_id": "page-0855-block-0000",
+      "order": 0,
+      "text": "834    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "e6cae437b5b75978c8ac01a59d6db74a3452d94bfba96021198aff065739bf06"
+    },
+    {
+      "block_id": "page-0855-block-0001",
+      "order": 1,
+      "text": "CHAPTER  11\n",
+      "bbox": [
+        18.520000457763672,
+        139.8785400390625,
+        28.0,
+        187.89450073242188
+      ],
+      "text_sha256": "83984f4328940309c03288e26b8edf9834cfa8fef30d3eedac5a4c266fe9aee7"
+    },
+    {
+      "block_id": "page-0855-block-0002",
+      "order": 2,
+      "text": "mislead rather than inform. Always try to take samples as close to the scheduled \ntime as possible. Obviously, if toxicity is suspected, take a sample straightaway, \nignoring any scheduled timings.\n",
+      "bbox": [
+        70.69499969482422,
+        62.55029296875,
+        436.6651306152344,
+        98.27029418945312
+      ],
+      "text_sha256": "11280625e25cb1dd63c6d0119d5b7ba090a66c4a05823a8c378e5222022cb44c"
+    },
+    {
+      "block_id": "page-0855-block-0003",
+      "order": 3,
+      "text": "For trough or ‘pre-dose’ samples, take the blood sample immediately before the \nnext dose is due. Do not, under any circumstances, withhold the next dose for \nmore than 1 or (possibly) 2 hours until the sample is taken. Withholding for \nlonger than this will inevitably give a misleading result (it will give a lower result \nthan that ever seen in the usual, regular dosing), and this may lead to an inappro-\npriate dose increase. Sampling time is less critical with drugs with a long half-life \n(e.g. olanzapine, aripiprazole) but, as an absolute minimum, prescribers should \nalways record the time of sampling and time of last dose. This cannot be empha-\nsised enough.\n",
+      "bbox": [
+        70.69499969482422,
+        98.55029296875,
+        436.68536376953125,
+        206.27029418945312
+      ],
+      "text_sha256": "a557c7785fed0967ed36b245e114d441b68da0105c41fe23af27ddb006c919e8"
+    },
+    {
+      "block_id": "page-0855-block-0004",
+      "order": 4,
+      "text": "■\n■Will the level have any inherent meaning?\n",
+      "bbox": [
+        61.88990020751953,
+        206.310302734375,
+        249.20497131347656,
+        218.27029418945312
+      ],
+      "text_sha256": "5680fb5423ac7913fd776f6cca6d3edad329b409159e198c0cbe265eb05af551"
+    },
+    {
+      "block_id": "page-0855-block-0005",
+      "order": 5,
+      "text": "Is there a target range of plasma levels? If so, then plasma levels (from samples \ntaken at the right time) will usefully guide dosing. If there is not an accepted tar-\nget range, plasma levels can only indicate adherence or potential toxicity. However, \nif the sample is being used to check compliance, then bear in mind that a plasma \nlevel of zero indicates only that the drug has not been taken in the past several \ndays. Plasma levels above zero may indicate erratic compliance, full compliance \nor even long-standing non-compliance disguised by recent taking of prescribed \ndoses. Note also that target ranges have their limitations: patients may respond to \nlower levels than the quoted range and tolerate levels above the range; also, ranges \nquoted by different laboratories vary sometimes widely, often without \nexplanation.\n",
+      "bbox": [
+        70.69499969482422,
+        218.55029296875,
+        436.7052917480469,
+        350.2702941894531
+      ],
+      "text_sha256": "26887238a27ade5859c10ad5f56c11921a28516c39dd661c18e7fadedade8efe"
+    },
+    {
+      "block_id": "page-0855-block-0006",
+      "order": 6,
+      "text": "■\n■Is there a clear reason for plasma level determination?\n",
+      "bbox": [
+        61.88990020751953,
+        350.310302734375,
+        302.9449768066406,
+        362.2702941894531
+      ],
+      "text_sha256": "7a6611d787a61ad725492b296900e5144ec957d227b2d3eebda572d7efc878ff"
+    },
+    {
+      "block_id": "page-0855-block-0007",
+      "order": 7,
+      "text": "Only the following reasons are valid:\n",
+      "bbox": [
+        70.69499969482422,
+        362.55029296875,
+        230.1849822998047,
+        374.2702941894531
+      ],
+      "text_sha256": "0b6f268beff15e3f5abe0ce76d4e39ae7e5a17f13be97843da18b2bc6e9a97fd"
+    },
+    {
+      "block_id": "page-0855-block-0008",
+      "order": 8,
+      "text": "■\n■to confirm compliance (but see above)\n",
+      "bbox": [
+        71.08489990234375,
+        374.55029296875,
+        244.8800048828125,
+        386.2702941894531
+      ],
+      "text_sha256": "19941277a263b554d473e806ff55b06566bf20b9e67606b24905e5fa1ff837d4"
+    },
+    {
+      "block_id": "page-0855-block-0009",
+      "order": 9,
+      "text": "■\n■if toxicity is suspected\n",
+      "bbox": [
+        71.08489990234375,
+        386.55029296875,
+        174.89999389648438,
+        398.2702941894531
+      ],
+      "text_sha256": "4e59805174e7d9298dbc5bba4771f25e9a433e44aaa0b5b0c84ab95c896ff305"
+    },
+    {
+      "block_id": "page-0855-block-0010",
+      "order": 10,
+      "text": "■\n■if a pharmacokinetic drug interaction is suspected\n",
+      "bbox": [
+        71.08489990234375,
+        398.55029296875,
+        294.3599853515625,
+        410.2702941894531
+      ],
+      "text_sha256": "2104e853cd9c031b3ba9fbda637b9734bc8a8c5d96199b29c1a9f45e5e3af896"
+    },
+    {
+      "block_id": "page-0855-block-0011",
+      "order": 11,
+      "text": "■\n■if clinical response is difficult to assess directly (and where a target range of plasma \n",
+      "bbox": [
+        71.08489990234375,
+        410.55029296875,
+        436.70001220703125,
+        422.2702941894531
+      ],
+      "text_sha256": "7aae1bd2ea85d6ecd875a19ebc0cc12ae1f32814e39c51e452ddec179d6464ff"
+    },
+    {
+      "block_id": "page-0855-block-0012",
+      "order": 12,
+      "text": "levels has been established)\n",
+      "bbox": [
+        79.88999938964844,
+        422.55029296875,
+        196.5699920654297,
+        434.2702941894531
+      ],
+      "text_sha256": "747fd76149b5a22b3a8d162b644c0348e575353cd50a1e2c40ec24fcd9831837"
+    },
+    {
+      "block_id": "page-0855-block-0013",
+      "order": 13,
+      "text": "■\n■if the drug has a narrow therapeutic index and toxicity concerns are considerable.\n",
+      "bbox": [
+        71.08489990234375,
+        434.55029296875,
+        432.75,
+        446.2702941894531
+      ],
+      "text_sha256": "8ac592ba1d143f82179b574ec5ebe122ac498f5b5efdaccd16737cf746855140"
+    },
+    {
+      "block_id": "page-0855-block-0014",
+      "order": 14,
+      "text": "Interpreting sample results\n",
+      "bbox": [
+        61.88999938964844,
+        463.7052917480469,
+        200.85299682617188,
+        476.74029541015625
+      ],
+      "text_sha256": "732e3963d50cb6579288710c6208ac0eb7b3bde4731eb8018e0ca8be16f8f51a"
+    },
+    {
+      "block_id": "page-0855-block-0015",
+      "order": 15,
+      "text": "The basic rule for sample level interpretation is to act upon assay results only in con-\njunction with reliable clinical observation (treat the patient, not the level). For example, \nif a patient is responding adequately to a drug but has a plasma level below the accepted \ntarget range, then the dose should not normally be increased. If a patient has intolerable \nadverse effects but a plasma level within the target range, then a dose decrease may be \nappropriate.\n",
+      "bbox": [
+        61.88999938964844,
+        482.55029296875,
+        436.7298583984375,
+        554.2703247070312
+      ],
+      "text_sha256": "9ee0d7dea5a80dcc6304e085b9c9d2e91e9097c6ca9b6826990b3a0faceec4a9"
+    },
+    {
+      "block_id": "page-0855-block-0016",
+      "order": 16,
+      "text": "Where a plasma level result is substantially different from previous results, a \nrepeat sample is usually advised. Check dose, timing of dose and recent compliance \nbut ensure, in particular, the correct timing of the sample, or at least that the timing \n",
+      "bbox": [
+        61.88999938964844,
+        554.55029296875,
+        436.7301330566406,
+        590.2703247070312
+      ],
+      "text_sha256": "59b1ff08fe4db23adbb9d601e0b1a550f0b9114cb07a56c2c1c45281d76ad966"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

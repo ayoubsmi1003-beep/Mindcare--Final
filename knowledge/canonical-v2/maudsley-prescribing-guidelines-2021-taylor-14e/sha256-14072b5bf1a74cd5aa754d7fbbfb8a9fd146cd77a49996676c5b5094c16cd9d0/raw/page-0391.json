@@ -1,0 +1,347 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0391",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 391,
+  "source_page_index": 390,
+  "source_page_display": 391,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "370    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nTable 3.13  (Continued)\nDrug name and \nroute\nDosing information\nManufacturer\nNotes\nIntravenous \nclomipramine\n25mg/2mL injection\nStarting dose is 25mg \ndiluted in 500mL NaCl \n0.9% by slow infusion \nover 90 minutes. \nIncreased to 250–\n300mg in increments of \n25mg/day over 10–14 \ndays54,55\nNovartis\nDefiante\nThe most common reported side \neffects are similar to the oral \nformulation, which included nausea, \nsweating, restlessness, flushing, \ndrowsiness, fatigue, abdominal distress \nand nervousness. ECG monitoring \nrecommended\nAnother report used \nstarting dose of 50mg \nIV per day and titrated \nup to a maximum dose \nof 225mg/day over 5–7 \ndays56\nReduction of symptoms was detected \nafter one week of the first IV dose\nIntravenous \ncitalopram\n40mg/mL injection\nDoses from 20 to 40mg \nin 250mL NaCL 0.9% \nor Glucose 5%\nDoses up to 80mg have \nbeen used for OCD\nRate of infusion is \n20mg per hour\nLundbeck – available in \nsome countries. Not \nlicensed in the UK, can \nbe imported from \nGermany but may take \n3–4 weeks to obtain\nThe most commonly reported side \neffects are nausea, headache, tremor \nand somnolence similar to adverse \neffects of the oral preparation. A case \nof acute hyperkinetic delirium has also \nbeen reported. Used for depression \nand obsessive compulsive disorder. \nECG monitoring recommended\nIntravenous \nescitalopram\n10mg slow infusion \nover 60 minutes\nLundbeck – not \nmarketed anywhere in \nthe world\nStudies to date have only looked at \npharmacokinetic profile. ECG \nmonitoring recommended\nIntravenous \nmirtazapine\n6mg/2mL infusion \nsolution\n15mg/5mL infusion \nsolution\nDose 15mg in Glucose \n5% over 60 minutes\nContact local importer\nThe most common reported side \neffects are nausea, sedation and \ndizziness similar to side effects of the \noral preparation\nIntravenous \ntrazodone57\n25–100mg in 250mL of \nsaline daily for 1 week, \nlasting approximately \n1.5 hours. IV doses \nwere decided according \nto the severity of \ndepressive symptoms\nAvailable only in Italy\nTrazodone showed a significant \nimprovement of symptoms only after \none week of IV treatment and was \nbetter tolerated than clomipramine\nIntramuscular \nflupentixol\ndecanoate \ndepot58\n5–10mg/2 weeks\nLundbeck\nMylan\nIM flupentixol had a mood-elevating \neffect and is well tolerated at these \ndoses. Extrapyramidal effects are rarely \nseen. Side-effects reported include dry \nmouth, dizziness and drowsiness\n",
+  "raw_text_sha256": "75be2e7cc326c42b2bd900090caf1b29c2e9badcff5a17c44b0dd3615c91ea3d",
+  "coordinates_sha256": "1ad2450170fa5bd6eab4ec8846b94f9ffb9ae0299b38305a005d0dca52abc83f",
+  "block_sequence_sha256": "bf6b987eb58b71411794d46efa70ac97bc980e765c936ca35aabaaaf9d7e5198",
+  "blocks": [
+    {
+      "block_id": "page-0391-block-0000",
+      "order": 0,
+      "text": "370    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "4e2317024f1f4359a0e1d2d6873c0a8e71e2c40cb244ebce4364defcaa93c6e6"
+    },
+    {
+      "block_id": "page-0391-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0391-block-0002",
+      "order": 2,
+      "text": "Table 3.13  (Continued)\n",
+      "bbox": [
+        67.88980102539062,
+        70.13117980957031,
+        144.17979431152344,
+        79.0186767578125
+      ],
+      "text_sha256": "260a9da5abf9751a41417685decea828a3ee4b93620af59fc384307c4059b1c5"
+    },
+    {
+      "block_id": "page-0391-block-0003",
+      "order": 3,
+      "text": "Drug name and \nroute\nDosing information\nManufacturer\nNotes\n",
+      "bbox": [
+        61.88999938964844,
+        90.45777893066406,
+        328.3050231933594,
+        109.3427734375
+      ],
+      "text_sha256": "e4e6556ecc022cb7b410e221833fffab31fa8a64d2572fba9e0589857ac015b1"
+    },
+    {
+      "block_id": "page-0391-block-0004",
+      "order": 4,
+      "text": "Intravenous \nclomipramine\n",
+      "bbox": [
+        61.8900146484375,
+        117.6603012084961,
+        105.2175064086914,
+        136.36529541015625
+      ],
+      "text_sha256": "78cc13ae218b21d7f44ce3244b0078d59c161323c5561ded736e9e1ae4eb5709"
+    },
+    {
+      "block_id": "page-0391-block-0005",
+      "order": 5,
+      "text": "25mg/2mL injection\nStarting dose is 25mg \ndiluted in 500mL NaCl \n0.9% by slow infusion \nover 90 minutes. \nIncreased to 250–\n300mg in increments of \n25mg/day over 10–14 \ndays54,55\n",
+      "bbox": [
+        130.32000732421875,
+        117.6603012084961,
+        208.9499969482422,
+        206.3477783203125
+      ],
+      "text_sha256": "8715830035ba884617222e5942d2e3947cae5f7c009f3d7a53397a1ea89d7c78"
+    },
+    {
+      "block_id": "page-0391-block-0006",
+      "order": 6,
+      "text": "Novartis\nDefiante\n",
+      "bbox": [
+        219.3903045654297,
+        117.66280364990234,
+        246.47279357910156,
+        136.3677978515625
+      ],
+      "text_sha256": "d0cc8ef584a8787e4abc2bab06ddb742bd8548f252b6204169e23b93f988f6f2"
+    },
+    {
+      "block_id": "page-0391-block-0007",
+      "order": 7,
+      "text": "The most common reported side \neffects are similar to the oral \nformulation, which included nausea, \nsweating, restlessness, flushing, \ndrowsiness, fatigue, abdominal distress \nand nervousness. ECG monitoring \nrecommended\n",
+      "bbox": [
+        307.89031982421875,
+        117.66280364990234,
+        434.73046875,
+        186.35528564453125
+      ],
+      "text_sha256": "8ff3d9ced77ab0b3d51e959128625e42247dffbe38732b345adc027cf460617b"
+    },
+    {
+      "block_id": "page-0391-block-0008",
+      "order": 8,
+      "text": "Another report used \nstarting dose of 50mg \nIV per day and titrated \nup to a maximum dose \nof 225mg/day over 5–7 \ndays56\n",
+      "bbox": [
+        130.3203125,
+        212.6727752685547,
+        207.42782592773438,
+        271.3677673339844
+      ],
+      "text_sha256": "cd2da85af9eb66c49f2479fdc5e4e5a02dfeeef6533606bec56200239d11409a"
+    },
+    {
+      "block_id": "page-0391-block-0009",
+      "order": 9,
+      "text": "Reduction of symptoms was detected \nafter one week of the first IV dose\n",
+      "bbox": [
+        307.8902893066406,
+        212.6877899169922,
+        429.9903564453125,
+        231.39279174804688
+      ],
+      "text_sha256": "78ee70dfc8618045b308d323dfdd6700ead9b7a28c974e8d3c8a75e5eb52027a"
+    },
+    {
+      "block_id": "page-0391-block-0010",
+      "order": 10,
+      "text": "Intravenous \ncitalopram\n",
+      "bbox": [
+        61.890289306640625,
+        277.7127990722656,
+        101.06278228759766,
+        296.41778564453125
+      ],
+      "text_sha256": "e9e9bcd21f41b40bf2c042d2344c35515a96b4689f0b57b1bcc44e7bd394cc61"
+    },
+    {
+      "block_id": "page-0391-block-0011",
+      "order": 11,
+      "text": "40mg/mL injection\nDoses from 20 to 40mg \nin 250mL NaCL 0.9% \nor Glucose 5%\nDoses up to 80mg have \nbeen used for OCD\nRate of infusion is \n20mg per hour\n",
+      "bbox": [
+        130.32028198242188,
+        277.7127990722656,
+        208.5452880859375,
+        356.40277099609375
+      ],
+      "text_sha256": "1d26c54cdcc919013fc81cc47245c50c4415cae717fc7a540b16b386c00d5980"
+    },
+    {
+      "block_id": "page-0391-block-0012",
+      "order": 12,
+      "text": "Lundbeck – available in \nsome countries. Not \nlicensed in the UK, can \nbe imported from \nGermany but may take \n3–4 weeks to obtain\n",
+      "bbox": [
+        219.39028930664062,
+        277.6977844238281,
+        295.65032958984375,
+        336.39276123046875
+      ],
+      "text_sha256": "19339798b1fff20f1c150ff91dadc95aa21966004f642d7f64fb29e0700341fb"
+    },
+    {
+      "block_id": "page-0391-block-0013",
+      "order": 13,
+      "text": "The most commonly reported side \neffects are nausea, headache, tremor \nand somnolence similar to adverse \neffects of the oral preparation. A case \nof acute hyperkinetic delirium has also \nbeen reported. Used for depression \nand obsessive compulsive disorder. \nECG monitoring recommended\n",
+      "bbox": [
+        307.8902893066406,
+        277.6827697753906,
+        432.4803771972656,
+        356.37274169921875
+      ],
+      "text_sha256": "3bcdd744ba1020075e59c4c5e3055d31bd25fb4f361d6fcb20ac23279ea5142d"
+    },
+    {
+      "block_id": "page-0391-block-0014",
+      "order": 14,
+      "text": "Intravenous \nescitalopram\n",
+      "bbox": [
+        61.890289306640625,
+        362.687744140625,
+        102.30028533935547,
+        381.3927307128906
+      ],
+      "text_sha256": "8932cd2cfa19dfe24ecc3495e9afb6912ab3918366f1fbb2d50da544a6b472d7"
+    },
+    {
+      "block_id": "page-0391-block-0015",
+      "order": 15,
+      "text": "10mg slow infusion \nover 60 minutes\n",
+      "bbox": [
+        130.32028198242188,
+        362.687744140625,
+        195.3452606201172,
+        381.3927307128906
+      ],
+      "text_sha256": "f897a8b6e43d72887915f1a1b8bee6c8994fd196ef03b85f394fdf2f970b87a7"
+    },
+    {
+      "block_id": "page-0391-block-0016",
+      "order": 16,
+      "text": "Lundbeck – not \nmarketed anywhere in \nthe world\n",
+      "bbox": [
+        219.39028930664062,
+        362.687744140625,
+        293.0102844238281,
+        391.3902282714844
+      ],
+      "text_sha256": "e6b41206299fbbb77ba17dd863d114abb446cd15576309d3d2834bbd754d74ff"
+    },
+    {
+      "block_id": "page-0391-block-0017",
+      "order": 17,
+      "text": "Studies to date have only looked at \npharmacokinetic profile. ECG \nmonitoring recommended\n",
+      "bbox": [
+        307.8902893066406,
+        362.68023681640625,
+        422.49786376953125,
+        391.3827209472656
+      ],
+      "text_sha256": "6882bfd53a613a90d88f92d5c78e032ad6b062d2fabb75f1841d5f1b4be8c518"
+    },
+    {
+      "block_id": "page-0391-block-0018",
+      "order": 18,
+      "text": "Intravenous \nmirtazapine\n",
+      "bbox": [
+        61.890289306640625,
+        397.6977233886719,
+        101.06278228759766,
+        416.4027099609375
+      ],
+      "text_sha256": "1391c2aeb9f7abd2548c8517a5b2f2378f8953e5c12c356e06f688027a243db2"
+    },
+    {
+      "block_id": "page-0391-block-0019",
+      "order": 19,
+      "text": "6mg/2mL infusion \nsolution\n15mg/5mL infusion \nsolution\nDose 15mg in Glucose \n5% over 60 minutes\n",
+      "bbox": [
+        130.32028198242188,
+        397.6977233886719,
+        204.51026916503906,
+        456.3927001953125
+      ],
+      "text_sha256": "768eaf1a7af4a86d83facf655abeb7e6e3418446aa953a7fa0589b12f6a23af8"
+    },
+    {
+      "block_id": "page-0391-block-0020",
+      "order": 20,
+      "text": "Contact local importer\nThe most common reported side \neffects are nausea, sedation and \ndizziness similar to side effects of the \noral preparation\n",
+      "bbox": [
+        219.39028930664062,
+        397.6827087402344,
+        428.1678466796875,
+        436.3826904296875
+      ],
+      "text_sha256": "f8fdf043c6fcf8cd43ea28e4cb170adbdf754af77003c9c64513b174ed22f940"
+    },
+    {
+      "block_id": "page-0391-block-0021",
+      "order": 21,
+      "text": "Intravenous \ntrazodone57\n",
+      "bbox": [
+        61.890289306640625,
+        462.7001953125,
+        101.06278228759766,
+        481.4051818847656
+      ],
+      "text_sha256": "be42b5df8809a041875d0dddbecb43b6a5c3e17187d8130ebd65d04c1772abe4"
+    },
+    {
+      "block_id": "page-0391-block-0022",
+      "order": 22,
+      "text": "25–100mg in 250mL of \nsaline daily for 1 week, \nlasting approximately \n1.5 hours. IV doses \nwere decided according \nto the severity of \ndepressive symptoms\n",
+      "bbox": [
+        130.3175048828125,
+        462.7878112792969,
+        208.39251708984375,
+        531.4802856445312
+      ],
+      "text_sha256": "bb5a67b5392ef9cd0c3a39f3ebf46f5a731f3e7b7b3e98cf2d3d1139a01c3407"
+    },
+    {
+      "block_id": "page-0391-block-0023",
+      "order": 23,
+      "text": "Available only in Italy\nTrazodone showed a significant \nimprovement of symptoms only after \none week of IV treatment and was \nbetter tolerated than clomipramine\n",
+      "bbox": [
+        219.38751220703125,
+        462.7727966308594,
+        428.1650390625,
+        501.4727783203125
+      ],
+      "text_sha256": "5c02498ccb83ac9885906703dd4eb2c09c2e55633a85d8f8380251f02a2e85e7"
+    },
+    {
+      "block_id": "page-0391-block-0024",
+      "order": 24,
+      "text": "Intramuscular \nflupentixol\ndecanoate \ndepot58\n",
+      "bbox": [
+        61.88751220703125,
+        537.7877197265625,
+        107.30000305175781,
+        576.48779296875
+      ],
+      "text_sha256": "63426eec6c3981d32963b65f258f5b9d6914903b9f6eef90b8568f2585501dab"
+    },
+    {
+      "block_id": "page-0391-block-0025",
+      "order": 25,
+      "text": "5–10mg/2 weeks\nLundbeck\nMylan\n",
+      "bbox": [
+        130.3175048828125,
+        537.812744140625,
+        250.22750854492188,
+        556.517822265625
+      ],
+      "text_sha256": "8b198a61e789b82a3891111f816d2072c1e45d6708ee0fbc5cf2bf472d3bdda3"
+    },
+    {
+      "block_id": "page-0391-block-0026",
+      "order": 26,
+      "text": "IM flupentixol had a mood-elevating \neffect and is well tolerated at these \ndoses. Extrapyramidal effects are rarely \nseen. Side-effects reported include dry \nmouth, dizziness and drowsiness\n",
+      "bbox": [
+        307.88751220703125,
+        537.812744140625,
+        433.7149658203125,
+        586.51025390625
+      ],
+      "text_sha256": "ce995dfc889db7c7023824e4ec38d5ef3839dff21b9a4022f731b05447dcc65e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

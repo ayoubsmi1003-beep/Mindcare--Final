@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0742",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 742,
+  "source_page_index": 741,
+  "source_page_display": 742,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Pregnancy and breastfeeding    721\nCHAPTER 7\n\t188.\t Kelly LE, et al. Neonatal benzodiazepines exposure during breastfeeding. J Pediatr 2012; 161:448–451.\n\t189.\t Birnbaum CS, et al. Serum concentrations of antidepressants and benzodiazepines in nursing infants: a case series. Pediatrics 1999; 104:e11.\n\t190.\t Darwish M, et al. Rapid disappearance of zaleplon from breast milk after oral administration to lactating women. J Clin Pharmacol 1999; \n39:670–674.\n\t191.\t Pons G, et al. Excretion of psychoactive drugs into breast milk. Pharmacokinetic principles and recommendations. Clin Pharmacokinet \n1994; 27:270–289.\n\t192.\t Matheson I, et al. The excretion of zopiclone into breast milk. Br J Clin Pharmacol 1990; 30:267–271.\n\t193.\t Ilett KF, et al. Transfer of dexamphetamine into breast milk during treatment for attention deficit hyperactivity disorder. Br J Clin Pharmacol \n2007; 63:371–375.\n\t194.\t Hackett LP, et al. Methylphenidate and breast-feeding. Ann Pharmacother 2006; 40:1890–1891.\n\t195.\t Bolea-Alamanac BM, et al. Methylphenidate use in pregnancy and lactation: a systematic review of evidence. Br J Clin Pharmacol 2014; \n77:96–101.\n\t196.\t Marchese M, et al. Is it safe to breastfeed while taking methylphenidate? Can Fam Physician 2015; 61:765–766.\n\t197.\t Aurora S, et al. Evaluating transfer of modafinil into human milk during lactation: a case report. J Clin Sleep Med 2018; 14:2087–2089.\n\t198.\t Calvo-Ferrandiz E, et al. Narcolepsy with cataplexy and pregnancy: a case-control study. J Sleep Res 2018; 27:268–272.\nFurther reading\nNational Institute for Health Care and Excellence. Antenatal and postnatal mental health: clinical management and service guidance. Clinical \nguideline [CG192] 2014 (Last updated February 2020); https://www.nice.org.uk/guidance/cg192\n",
+  "raw_text_sha256": "04714784ac16f4de5e2430683ee1d888b60b182547b734baa51938747851a2bf",
+  "coordinates_sha256": "a5080f632ae33674069439c3f0bd27509b2656b0c08f427009f078cc8476dbaf",
+  "block_sequence_sha256": "e912f57c89fef85e27d5260dce73cef8594ebc4601bc7b611eaedeaaffa86a44",
+  "blocks": [
+    {
+      "block_id": "page-0742-block-0000",
+      "order": 0,
+      "text": "Pregnancy and breastfeeding    721\n",
+      "bbox": [
+        271.769287109375,
+        31.395221710205078,
+        420.00048828125,
+        41.0272216796875
+      ],
+      "text_sha256": "5e5c2d11ec6bc3e75c9175be3446e11a196a2a44c5fe8bb0d9fefe32c1e46d2d"
+    },
+    {
+      "block_id": "page-0742-block-0001",
+      "order": 1,
+      "text": "CHAPTER 7\n",
+      "bbox": [
+        454.4096984863281,
+        472.7144775390625,
+        463.88970947265625,
+        514.0584716796875
+      ],
+      "text_sha256": "6d1a2318236627f2d413db0336034ac4d71cea7172bd0baddf04c66a07292590"
+    },
+    {
+      "block_id": "page-0742-block-0002",
+      "order": 2,
+      "text": "\t188.\t Kelly LE, et al. Neonatal benzodiazepines exposure during breastfeeding. J Pediatr 2012; 161:448–451.\n\t189.\t Birnbaum CS, et al. Serum concentrations of antidepressants and benzodiazepines in nursing infants: a case series. Pediatrics 1999; 104:e11.\n\t190.\t Darwish M, et al. Rapid disappearance of zaleplon from breast milk after oral administration to lactating women. J Clin Pharmacol 1999; \n",
+      "bbox": [
+        48.0,
+        63.12638854980469,
+        421.69195556640625,
+        88.30238342285156
+      ],
+      "text_sha256": "044ebe156e2d5208a6c9bf5a5ba449c85346b56c9df0ad9c1cfbcea8d5c5ecb6"
+    },
+    {
+      "block_id": "page-0742-block-0003",
+      "order": 3,
+      "text": "39:670–674.\n\t191.\t Pons G, et al. Excretion of psychoactive drugs into breast milk. Pharmacokinetic principles and recommendations. Clin Pharmacokinet \n",
+      "bbox": [
+        48.0,
+        90.12638854980469,
+        421.6799621582031,
+        106.30238342285156
+      ],
+      "text_sha256": "cfd39217c9b1b4c3504cc93b483aee9be83afc4d27d80c31c2cfd8778f524fb3"
+    },
+    {
+      "block_id": "page-0742-block-0004",
+      "order": 4,
+      "text": "1994; 27:270–289.\n\t192.\t Matheson I, et al. The excretion of zopiclone into breast milk. Br J Clin Pharmacol 1990; 30:267–271.\n\t193.\t Ilett KF, et al. Transfer of dexamphetamine into breast milk during treatment for attention deficit hyperactivity disorder. Br J Clin Pharmacol \n",
+      "bbox": [
+        48.0,
+        108.12638854980469,
+        421.679931640625,
+        133.30238342285156
+      ],
+      "text_sha256": "07caa4cfa64d48190018089d0634336469686b5f26ced4981afb7758b339f698"
+    },
+    {
+      "block_id": "page-0742-block-0005",
+      "order": 5,
+      "text": "2007; 63:371–375.\n\t194.\t Hackett LP, et al. Methylphenidate and breast-feeding. Ann Pharmacother 2006; 40:1890–1891.\n\t195.\t Bolea-Alamanac BM, et al. Methylphenidate use in pregnancy and lactation: a systematic review of evidence. Br J Clin Pharmacol 2014; \n",
+      "bbox": [
+        48.0,
+        135.1263885498047,
+        421.69793701171875,
+        160.30238342285156
+      ],
+      "text_sha256": "cd5e53de937d42ee7560109d490832c017c5ce44d5cad49ad518c0dfebdf973e"
+    },
+    {
+      "block_id": "page-0742-block-0006",
+      "order": 6,
+      "text": "77:96–101.\n\t196.\t Marchese M, et al. Is it safe to breastfeed while taking methylphenidate? Can Fam Physician 2015; 61:765–766.\n\t197.\t Aurora S, et al. Evaluating transfer of modafinil into human milk during lactation: a case report. J Clin Sleep Med 2018; 14:2087–2089.\n\t198.\t Calvo-Ferrandiz E, et al. Narcolepsy with cataplexy and pregnancy: a case-control study. J Sleep Res 2018; 27:268–272.\n",
+      "bbox": [
+        48.0,
+        162.1263885498047,
+        414.719970703125,
+        196.30238342285156
+      ],
+      "text_sha256": "e8a1682d5062763552d054b3bd0acc756e8837641f3d0cb6adcfa02f282194ed"
+    },
+    {
+      "block_id": "page-0742-block-0007",
+      "order": 7,
+      "text": "Further reading\n",
+      "bbox": [
+        48.000099182128906,
+        214.64938354492188,
+        128.48709106445312,
+        227.68438720703125
+      ],
+      "text_sha256": "97a7eb93e6fca560969f4c10a52d2ef83995974b08b112934e0d108909963303"
+    },
+    {
+      "block_id": "page-0742-block-0008",
+      "order": 8,
+      "text": "National Institute for Health Care and Excellence. Antenatal and postnatal mental health: clinical management and service guidance. Clinical \n",
+      "bbox": [
+        48.000099182128906,
+        234.2703857421875,
+        421.6441955566406,
+        241.30238342285156
+      ],
+      "text_sha256": "44b19e5f22e5c00025a48a3bdeb429067bf31592ee6246ca52a697f45a7daaba"
+    },
+    {
+      "block_id": "page-0742-block-0009",
+      "order": 9,
+      "text": "guideline [CG192] 2014 (Last updated February 2020); https://www.nice.org.uk/guidance/cg192\n",
+      "bbox": [
+        58.99810028076172,
+        243.2703857421875,
+        308.8680419921875,
+        250.30238342285156
+      ],
+      "text_sha256": "2e90f0d9b217c86692637e02b39c9258ba4560d4a709da754467442285ba1d26"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

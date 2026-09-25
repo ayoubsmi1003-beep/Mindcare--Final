@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0800",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 800,
+  "source_page_index": 799,
+  "source_page_display": 800,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    779\nCHAPTER 10\ncitalopram4,14 have lower risk of pharmacokinetic interactions. Further treatment \nfollows standard protocols for depression. A study of escitalopram found no differ-\nence from placebo15 possibly due to a large placebo response. ECG monitoring is \nrecommended when citalopram/escitalopram is co-administered with ARVs that \nprolong the QT interval.5,11 Mirtazapine is effective,16,17 with relatively low risk of \ndrug interactions,18 and may be beneficial in coexisting HIV wasting and depres-\nsion19 or in reducing methamphetamine use among active users.20 ‘Dual action’ \nantidepressants (duloxetine, venlafaxine) were are equally effective to SSRIs for \ndepressive symptoms in PLWH.21 Other agents (bupropion,22 trazodone) are effec-\ntive but their utility is limited by drug interactions and side effects.\nThe side-effect burden of TCAs may limit efficacy and compliance, although their use \nmay be appropriate at times. Constipation and dry mouth are frequently reported in \nPLWH on TCAs.12 MAOIs are not recommended in PLWH.\nInterferon-alpha-induced depression in HIV/HCV co-infected patients\nCitalopram has been shown to be an effective and well-tolerated treatment for emer-\ngent depression;23 however, prophylactic use of citalopram (i.e. before depression \nemerges) cannot be recommended.24\nBipolar affective disorder\nMania in PLWH can be primary (pre-existing bipolar affective disorder) or secondary \n(‘HIV mania’ associated with late-stage HIV infection). PLWH may be more sensitive \nto the side effects of mood stabilisers such as neurotoxicity with lithium,25 especially if \nthey have neurocognitive dysfunction.25,26 Lithium is renally excreted, and so CYP450 \ninteractions are unlikely. However, it can be problematic in renal impairment, often \nseen in PLWH. Lithium and tenofovir disoproxil fumarate (TDF) co-therapy was inves-\ntigated in a randomised placebo controlled trial as both are associated with renal tubu-\nlar toxicity. The incidence of nephrotoxicity was not increased during the 24 weeks of \nthe trial, but we cannot rule out the risk over long term.27 Lithium may be used cau-\ntiously in PLWH for primary bipolar disorder with close monitoring, but avoided in \nadvanced HIV disease.28 Carbamazepine should be avoided because of significant drug \ninteractions with and the risk of blood dyscrasias.28 Valproate can be an alternative in \nPLWH for bipolar disorder. Monitoring is required due to its risk of hepatotoxicity, \nblood dyscrasias, pancreatitis and drug interactions. Valproate use is best avoided with \nother hepatotoxic drugs (e.g. nevirapine, rifampicin).28 Mood-stabilising antipsychotics \nsuch as risperidone, quetiapine and olanzapine are also an option.4\nSecondary mania (‘HIV mania’)\nReports of secondary mania, typically occurring in advanced illness in the context of \nHIV-associated neurocognitive disorders or CNS opportunistic infections,29 have \ndeclined with the widespread use of effective antiretrovirals. The first aim is to identify \nand treat the potential underlying cause (infections, substance misuse, alcohol with-\ndrawal and metabolic abnormalities). Secondary mania may respond to atypical \n",
+  "raw_text_sha256": "12f70503f17f5a8419c92974e9b0bda54a1d63475332c04ff66cdbaea106bd06",
+  "coordinates_sha256": "2df96928e77d1f3438af59fc8a63b49a99402cccd988b21890e2732f6065337f",
+  "block_sequence_sha256": "434b25e50a4d64b31290e0e188e8ef44574289f38500f5d64a21731fe84f4a1f",
+  "blocks": [
+    {
+      "block_id": "page-0800-block-0000",
+      "order": 0,
+      "text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    779\n",
+      "bbox": [
+        47.999698638916016,
+        31.395221710205078,
+        419.96697998046875,
+        41.0272216796875
+      ],
+      "text_sha256": "ef5fec60d873f75c2105348a5ba2682a595cdf341650221274c416e263d14f34"
+    },
+    {
+      "block_id": "page-0800-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        454.4096984863281,
+        75.763671875,
+        463.88970947265625,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0800-block-0002",
+      "order": 2,
+      "text": "citalopram4,14 have lower risk of pharmacokinetic interactions. Further treatment \nfollows standard protocols for depression. A study of escitalopram found no differ-\nence from placebo15 possibly due to a large placebo response. ECG monitoring is \nrecommended when citalopram/escitalopram is co-administered with ARVs that \nprolong the QT interval.5,11 Mirtazapine is effective,16,17 with relatively low risk of \ndrug interactions,18 and may be beneficial in coexisting HIV wasting and depres-\nsion19 or in reducing methamphetamine use among active users.20 ‘Dual action’ \nantidepressants (duloxetine, venlafaxine) were are equally effective to SSRIs for \ndepressive symptoms in PLWH.21 Other agents (bupropion,22 trazodone) are effec-\ntive but their utility is limited by drug interactions and side effects.\n",
+      "bbox": [
+        47.99879455566406,
+        62.5504150390625,
+        422.782470703125,
+        182.27041625976562
+      ],
+      "text_sha256": "df20ac06ff81478abd465e66f8c89d9e3f3313bfab863320cc81af6d40028551"
+    },
+    {
+      "block_id": "page-0800-block-0003",
+      "order": 3,
+      "text": "The side-effect burden of TCAs may limit efficacy and compliance, although their use \nmay be appropriate at times. Constipation and dry mouth are frequently reported in \nPLWH on TCAs.12 MAOIs are not recommended in PLWH.\n",
+      "bbox": [
+        48.001312255859375,
+        182.5504150390625,
+        422.7912902832031,
+        218.27047729492188
+      ],
+      "text_sha256": "f96cf209d85522a7400ffa3b42dd184e2999eda179aa2738d3d629e2914f2ab5"
+    },
+    {
+      "block_id": "page-0800-block-0004",
+      "order": 4,
+      "text": "Interferon-alpha-induced depression in HIV/HCV co-infected patients\n",
+      "bbox": [
+        48.0,
+        235.70547485351562,
+        402.6949768066406,
+        248.740478515625
+      ],
+      "text_sha256": "d53f8bf9c287f75183dd9a9b0d191ae393280bbc7b9be48c476bef5370703dd1"
+    },
+    {
+      "block_id": "page-0800-block-0005",
+      "order": 5,
+      "text": "Citalopram has been shown to be an effective and well-tolerated treatment for emer-\ngent depression;23 however, prophylactic use of citalopram (i.e. before depression \nemerges) cannot be recommended.24\n",
+      "bbox": [
+        47.99669647216797,
+        254.55047607421875,
+        422.7467346191406,
+        290.2704772949219
+      ],
+      "text_sha256": "55d514bade69e939dbc4d04279ba995ed1e0ef99039a2f669c3714e78d6b5d16"
+    },
+    {
+      "block_id": "page-0800-block-0006",
+      "order": 6,
+      "text": "Bipolar affective disorder\n",
+      "bbox": [
+        48.0,
+        307.7054748535156,
+        178.41598510742188,
+        320.740478515625
+      ],
+      "text_sha256": "85d793d0d96b32da8fbd5ffd4408791cd88eb518d20209b4d5896effa63a4198"
+    },
+    {
+      "block_id": "page-0800-block-0007",
+      "order": 7,
+      "text": "Mania in PLWH can be primary (pre-existing bipolar affective disorder) or secondary \n(‘HIV mania’ associated with late-stage HIV infection). PLWH may be more sensitive \nto the side effects of mood stabilisers such as neurotoxicity with lithium,25 especially if \nthey have neurocognitive dysfunction.25,26 Lithium is renally excreted, and so CYP450 \ninteractions are unlikely. However, it can be problematic in renal impairment, often \nseen in PLWH. Lithium and tenofovir disoproxil fumarate (TDF) co-therapy was inves-\ntigated in a randomised placebo controlled trial as both are associated with renal tubu-\nlar toxicity. The incidence of nephrotoxicity was not increased during the 24 weeks of \nthe trial, but we cannot rule out the risk over long term.27 Lithium may be used cau-\ntiously in PLWH for primary bipolar disorder with close monitoring, but avoided in \nadvanced HIV disease.28 Carbamazepine should be avoided because of significant drug \ninteractions with and the risk of blood dyscrasias.28 Valproate can be an alternative in \nPLWH for bipolar disorder. Monitoring is required due to its risk of hepatotoxicity, \nblood dyscrasias, pancreatitis and drug interactions. Valproate use is best avoided with \nother hepatotoxic drugs (e.g. nevirapine, rifampicin).28 Mood-stabilising antipsychotics \nsuch as risperidone, quetiapine and olanzapine are also an option.4\n",
+      "bbox": [
+        47.99560546875,
+        326.55047607421875,
+        422.81756591796875,
+        518.2705078125
+      ],
+      "text_sha256": "280068b0d3f11080fe8748e4795c470feb77a8d178c3175553da4f8c1f874ecd"
+    },
+    {
+      "block_id": "page-0800-block-0008",
+      "order": 8,
+      "text": "Secondary mania (‘HIV mania’)\n",
+      "bbox": [
+        48.0,
+        535.7055053710938,
+        206.32298278808594,
+        548.740478515625
+      ],
+      "text_sha256": "ccde61335361e622ee2e9677a1dcb0ab000b2efb50f80eada6d2b9e87fb08760"
+    },
+    {
+      "block_id": "page-0800-block-0009",
+      "order": 9,
+      "text": "Reports of secondary mania, typically occurring in advanced illness in the context of \nHIV-associated neurocognitive disorders or CNS opportunistic infections,29 have \ndeclined with the widespread use of effective antiretrovirals. The first aim is to identify \nand treat the potential underlying cause (infections, substance misuse, alcohol with-\ndrawal and metabolic abnormalities). Secondary mania may respond to atypical \n",
+      "bbox": [
+        48.0,
+        554.5504760742188,
+        422.8208923339844,
+        614.2705078125
+      ],
+      "text_sha256": "034c9857dfb49777f950072a53abdf4414c076d902480e3dd7c5bfc6669c19b9"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

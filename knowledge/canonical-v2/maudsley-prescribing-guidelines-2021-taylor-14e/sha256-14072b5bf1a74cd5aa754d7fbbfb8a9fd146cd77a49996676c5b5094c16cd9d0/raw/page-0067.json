@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0067",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 67,
+  "source_page_index": 66,
+  "source_page_display": 67,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "46    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nFirst-generation antipsychotics – place in therapy\nNomenclature\nFirst-generation (‘typical’) and second-generation (‘atypical’) antipsychotic medica-\ntions are not categorically differentiated, the medications in both groups being hetero-\ngeneous in terms of pharmacological and side-effect profiles. First-generation \nmedications were introduced before 1990 and tend to be associated with acute EPS, \nhyperprolactinaemia and, in the longer term, tardive dyskinesia (TD). There are expec-\ntations that such adverse effects are less likely or absent with second-generation antip-\nsychotic medications (introduced after 1990), although in practice most show \ndose-related EPS, some induce hyperprolactinaemia (often to a greater extent than with \nFGAs) and all will give rise to TD, albeit at a lower incidence than FGAs. Second-\ngeneration medications tend to be associated with metabolic and cardiac complica-\ntions,1–3 although this is not true of all SGAs and it is true of some FGAs. To complicate \nmatters further, it has been suggested that the therapeutic and adverse effects of FGAs \ncan be separated by careful dosing4 – essentially turning FGAs into SGAs if used in \nsmall enough doses (although there is much evidence to the contrary5–7).\nGiven these observations, it seems unwise and unhelpful to consider so-called FGAs \nand SGAs as distinct groups of drugs. Perhaps the essential difference between the two \ngroups is the size of the therapeutic index in relation to acute EPS. For instance, haloperi-\ndol has an extremely narrow range of doses at which it is effective but does not cause \nextrapyramidal side effects (EPSE) (perhaps 4.0 to 4.5mg/day), whereas olanzapine has a \nwide range of therapeutic doses (5–40mg/day) at which it does not generally cause EPSE.\nThe use of Neuroscience-based Nomenclature (NbN)1,2 (for which there is a free app \nfor iPhone and other devices) obviates the need for classification into an FGA or SGA \nand describes individual drug by their pharmacological activity. The wider use of NbN \nwill undoubtedly improve understanding of individual drug effects and perhaps fore-\nstall future redundant categorisation.\nRole of older antipsychotics\nFGAs still play an important role in schizophrenia. For example, chlorpromazine and \nhaloperidol are frequent choices for PRN (‘when necessary’) medication and depot prepa-\nrations of haloperidol, zuclopenthixol and flupentixol are commonly prescribed. FGAs \ncan offer a valid alternative to SGAs where SGAs are poorly tolerated (usually because of \nmetabolic changes) or where FGAs are preferred by patients themselves. Some FGAs may \nbe less effective than some non-clozapine SGAs (amisulpride, olanzapine and risperidone \nmay be slightly more efficacious3,4), but any differences in therapeutic efficacy seem to be \nmodest. Two large pragmatic studies, CATIE8 and CUtLASS,5 found few important differ-\nences between SGAs and FGAs (mainly perphenazine and sulpiride, respectively).\nThe main drawbacks of FGAs are, inevitably, acute EPS, hyperprolactinaemia and \nTD. Hyperprolactinaemia is probably unavoidable in practice (the dose that achieves \nefficacy is too close to the dose that causes hyperprolactinaemia) and, even when not \nsymptomatic, hyperprolactinaemia may grossly affect hypothalamic function.6 It is also \nassociated with sexual dysfunction,7 but be aware that the autonomic effects of some \n",
+  "raw_text_sha256": "c351e07933957dce6c76a4727d8f91077a1f72afba6f9272f2fc23fc7b81db07",
+  "coordinates_sha256": "abbbc839cdeaa4584057421350c01df6e6a013451f2dce44ad873c109996d782",
+  "block_sequence_sha256": "2399383a68561ea11fb57c685ebd04d299cddd639d6baea0a7d65a590ea4cd61",
+  "blocks": [
+    {
+      "block_id": "page-0067-block-0000",
+      "order": 0,
+      "text": "46    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "62d9691028630a3f64a12f2df75312820a5337dfceb08032204b5e80342f751d"
+    },
+    {
+      "block_id": "page-0067-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0067-block-0002",
+      "order": 2,
+      "text": "First-generation antipsychotics – place in therapy\n",
+      "bbox": [
+        68.88909912109375,
+        66.06442260742188,
+        322.5381774902344,
+        79.09942626953125
+      ],
+      "text_sha256": "36eda56c240d915e8c1df5f28d4c4fe3b5e9398e00e808d64596a090fc6b0ba0"
+    },
+    {
+      "block_id": "page-0067-block-0003",
+      "order": 3,
+      "text": "Nomenclature\n",
+      "bbox": [
+        61.893096923828125,
+        90.06643676757812,
+        134.42709350585938,
+        103.1014404296875
+      ],
+      "text_sha256": "2b35540cf15925573b91cd5e8dc7b148035761104ea2cbee82e80afd31611bb4"
+    },
+    {
+      "block_id": "page-0067-block-0004",
+      "order": 4,
+      "text": "First-generation (‘typical’) and second-generation (‘atypical’) antipsychotic medica-\ntions are not categorically differentiated, the medications in both groups being hetero-\ngeneous in terms of pharmacological and side-effect profiles. First-generation \nmedications were introduced before 1990 and tend to be associated with acute EPS, \nhyperprolactinaemia and, in the longer term, tardive dyskinesia (TD). There are expec-\ntations that such adverse effects are less likely or absent with second-generation antip-\nsychotic medications (introduced after 1990), although in practice most show \ndose-related EPS, some induce hyperprolactinaemia (often to a greater extent than with \nFGAs) and all will give rise to TD, albeit at a lower incidence than FGAs. Second-\ngeneration medications tend to be associated with metabolic and cardiac complica-\ntions,1–3 although this is not true of all SGAs and it is true of some FGAs. To complicate \nmatters further, it has been suggested that the therapeutic and adverse effects of FGAs \ncan be separated by careful dosing4 – essentially turning FGAs into SGAs if used in \nsmall enough doses (although there is much evidence to the contrary5–7).\n",
+      "bbox": [
+        61.88690185546875,
+        108.909423828125,
+        436.7018737792969,
+        276.6294250488281
+      ],
+      "text_sha256": "fb7f1caf1c2e013ac9777055ba2b68536f88ab6ca69be43630c6bdef6630e296"
+    },
+    {
+      "block_id": "page-0067-block-0005",
+      "order": 5,
+      "text": "Given these observations, it seems unwise and unhelpful to consider so-called FGAs \nand SGAs as distinct groups of drugs. Perhaps the essential difference between the two \ngroups is the size of the therapeutic index in relation to acute EPS. For instance, haloperi-\ndol has an extremely narrow range of doses at which it is effective but does not cause \nextrapyramidal side effects (EPSE) (perhaps 4.0 to 4.5mg/day), whereas olanzapine has a \nwide range of therapeutic doses (5–40mg/day) at which it does not generally cause EPSE.\n",
+      "bbox": [
+        61.89402770996094,
+        276.909423828125,
+        436.6943054199219,
+        348.6294250488281
+      ],
+      "text_sha256": "85336fd04f7a2e4e8ff5d3dcb6b19d9e9f4e3e7ec8e86ece8428a288ee875443"
+    },
+    {
+      "block_id": "page-0067-block-0006",
+      "order": 6,
+      "text": "The use of Neuroscience-based Nomenclature (NbN)1,2 (for which there is a free app \nfor iPhone and other devices) obviates the need for classification into an FGA or SGA \nand describes individual drug by their pharmacological activity. The wider use of NbN \nwill undoubtedly improve understanding of individual drug effects and perhaps fore-\nstall future redundant categorisation.\n",
+      "bbox": [
+        61.88999938964844,
+        348.909423828125,
+        436.7099304199219,
+        408.6294250488281
+      ],
+      "text_sha256": "cb7f7421776a29faed8c2d77312e0768b3983c09f27c4fff4a3abf725afc46e6"
+    },
+    {
+      "block_id": "page-0067-block-0007",
+      "order": 7,
+      "text": "Role of older antipsychotics\n",
+      "bbox": [
+        61.88909912109375,
+        426.0644226074219,
+        204.9000701904297,
+        439.09942626953125
+      ],
+      "text_sha256": "2b69297a4e227a9172498a44c21022d61d553bd48024df0c227eb6eeb42645b9"
+    },
+    {
+      "block_id": "page-0067-block-0008",
+      "order": 8,
+      "text": "FGAs still play an important role in schizophrenia. For example, chlorpromazine and \nhaloperidol are frequent choices for PRN (‘when necessary’) medication and depot prepa-\nrations of haloperidol, zuclopenthixol and flupentixol are commonly prescribed. FGAs \ncan offer a valid alternative to SGAs where SGAs are poorly tolerated (usually because of \nmetabolic changes) or where FGAs are preferred by patients themselves. Some FGAs may \nbe less effective than some non-clozapine SGAs (amisulpride, olanzapine and risperidone \nmay be slightly more efficacious3,4), but any differences in therapeutic efficacy seem to be \nmodest. Two large pragmatic studies, CATIE8 and CUtLASS,5 found few important differ-\nences between SGAs and FGAs (mainly perphenazine and sulpiride, respectively).\n",
+      "bbox": [
+        61.884490966796875,
+        444.909423828125,
+        436.7093811035156,
+        552.6294555664062
+      ],
+      "text_sha256": "1b2001064812ec3e484b2b6b6d2f51beb7e5c58d7e82a7d74ada67574b4a7060"
+    },
+    {
+      "block_id": "page-0067-block-0009",
+      "order": 9,
+      "text": "The main drawbacks of FGAs are, inevitably, acute EPS, hyperprolactinaemia and \nTD. Hyperprolactinaemia is probably unavoidable in practice (the dose that achieves \nefficacy is too close to the dose that causes hyperprolactinaemia) and, even when not \nsymptomatic, hyperprolactinaemia may grossly affect hypothalamic function.6 It is also \nassociated with sexual dysfunction,7 but be aware that the autonomic effects of some \n",
+      "bbox": [
+        61.88877868652344,
+        552.909423828125,
+        436.6997985839844,
+        612.6294555664062
+      ],
+      "text_sha256": "a9af1bfe6a31a452fa7adc89803f55a9507462046b63af53898b38f54ed92230"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

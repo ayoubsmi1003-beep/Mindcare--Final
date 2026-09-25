@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0255",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 255,
+  "source_page_index": 254,
+  "source_page_display": 255,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "234    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nrisk factors are addressed (fibre and fluid intake, exercise). Where conventional laxa-\ntives have not been tried in regular and adequate doses, this should be done. However, \nwhen this approach has previously failed, a number of more experimental options are \navailable. Prescribers must familiarise themselves with the literature (at the very least by \nreading the SPC) before using any of these treatments and involvement of gastrointes-\ntinal specialists is encouraged.\nThe prostaglandin E1 analogue lubiprostone was licensed in the UK (it was discontin-\nued in 2018 for commercial reasons) for the treatment of chronic idiopathic constipa-\ntion and associated symptoms in adults, when response to diet and other \nnon-pharmacological measures (e.g. educational measures, physical activity) are inap-\npropriate.42 The recommended dose for the previously licensed indication is 24 micro-\ngrams twice daily for a maximum of 2 weeks duration.42 Lubiprostone has been reported \nto be effective in obviating the need for other laxatives in a clozapine re-challenge fol-\nlowing a severe case of CIGH,43 and is used in some centres for this indication.43\nOrlistat, a drug used to aid weight loss, is also known to have a laxative effect par-\nticularly when a high-fat diet is consumed. It was reported as being successfully used for \nthree patients with severe constipation associated with opioid use (hypomotility-\ninduced constipation).44 A small, randomised placebo-controlled study of orlistat for \nclozapine-induced constipation found a statistically significant favourable difference at \nstudy endpoint (week 16) for the prevalence of constipation, diarrhoea, and normal \nstools for orlistat compared with placebo,45 although 47 of the 54 participants required \nconventional laxatives. Note also that orlistat is known to reduce the absorption of \nsome drugs from the GI tract. It is therefore important to monitor plasma clozapine \nlevels if starting treatment with orlistat. Orlistat may be particularly difficult to use \noutside clinical study settings as without adherence to a strict low fat diet, gastric side \neffects can be unpleasant (specifically, oily rectal leakage).\nBethanechol, a cholinergic agonist, has been described as being effective in reducing \nthe amount of laxatives and enemas required to maintain regular bowel movements for \na patient diagnosed with clozapine-related CIGH.46 Bethanechol, in this case, was used \nat a dose of 10mg TDS. It should only ever be initiated after other options have failed \nand in consultation with a gastroenterologist.46\nPrucalopride is a 5HT4 agonist which increases gut motility, and is licensed for \nchronic constipation where laxatives have failed to provide adequate relief. Case reports \nof successful use for clozapine-induced constipation have been described,47,48 and supe-\nrior efficacy to lactulose for this indication was demonstrated in an open-label study.49\nLinaclotide (licensed in the UK for constipation in irritable bowel syndrome) and \nplecanatide (available in the US for chronic idiopathic constipation) are oral guanylate \ncyclase C agonists. Neither has any published data to date supporting use in antipsy-\nchotic-induced constipation.\nReferences\n\t 1.\t Shirazi A, et al. Prevalence and predictors of clozapine associated constipation: a systematic review and meta-analysis. Int J Molecular Sci \n2016; 17:863.\n\t 2.\t Hibbard KR, et al. Fatalities associated with clozapine-related constipation and bowel obstruction: a literature review and two case reports. \nPsychosomatics 2009; 50:416–419.\n\t 3.\t Rege S, et al. Life-threatening constipation associated with clozapine. Austr Psychiatry 2008; 16:216–219.\n",
+  "raw_text_sha256": "f2e743b944f379fc8e33342c610ed539290fec481d2c30ad58381285dd776c6f",
+  "coordinates_sha256": "cc4bda1d2f471b0a68097cfdc6dddc83c7cf6e61e855986d6185ac800c8d6b86",
+  "block_sequence_sha256": "04413427855082c4bfa33bb5709bf1a3aebd0e78413e89250ccde59a84e59de0",
+  "blocks": [
+    {
+      "block_id": "page-0255-block-0000",
+      "order": 0,
+      "text": "234    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "c3fe1a889a474de8c2876f38a4157ef8cf306b26d347a49bb342f67a9df33bef"
+    },
+    {
+      "block_id": "page-0255-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0255-block-0002",
+      "order": 2,
+      "text": "risk factors are addressed (fibre and fluid intake, exercise). Where conventional laxa-\ntives have not been tried in regular and adequate doses, this should be done. However, \nwhen this approach has previously failed, a number of more experimental options are \navailable. Prescribers must familiarise themselves with the literature (at the very least by \nreading the SPC) before using any of these treatments and involvement of gastrointes-\ntinal specialists is encouraged.\n",
+      "bbox": [
+        61.88909912109375,
+        62.5494384765625,
+        436.6990661621094,
+        134.26943969726562
+      ],
+      "text_sha256": "59c8891590b21fc0a104724733dc1e8906e1b1bae47fd3ca72d105599c823a4f"
+    },
+    {
+      "block_id": "page-0255-block-0003",
+      "order": 3,
+      "text": "The prostaglandin E1 analogue lubiprostone was licensed in the UK (it was discontin-\nued in 2018 for commercial reasons) for the treatment of chronic idiopathic constipa-\ntion and associated symptoms in adults, when response to diet and other \nnon-pharmacological measures (e.g. educational measures, physical activity) are inap-\npropriate.42 The recommended dose for the previously licensed indication is 24 micro-\ngrams twice daily for a maximum of 2 weeks duration.42 Lubiprostone has been reported \nto be effective in obviating the need for other laxatives in a clozapine re-challenge fol-\nlowing a severe case of CIGH,43 and is used in some centres for this indication.43\n",
+      "bbox": [
+        61.88670349121094,
+        134.3094482421875,
+        436.6783142089844,
+        230.26950073242188
+      ],
+      "text_sha256": "c8d0eebb4421d213b822b350f907d25c083031036b84aff6998aa96cc0b2ceb1"
+    },
+    {
+      "block_id": "page-0255-block-0004",
+      "order": 4,
+      "text": "Orlistat, a drug used to aid weight loss, is also known to have a laxative effect par-\nticularly when a high-fat diet is consumed. It was reported as being successfully used for \nthree patients with severe constipation associated with opioid use (hypomotility-\ninduced constipation).44 A small, randomised placebo-controlled study of orlistat for \nclozapine-induced constipation found a statistically significant favourable difference at \nstudy endpoint (week 16) for the prevalence of constipation, diarrhoea, and normal \nstools for orlistat compared with placebo,45 although 47 of the 54 participants required \nconventional laxatives. Note also that orlistat is known to reduce the absorption of \nsome drugs from the GI tract. It is therefore important to monitor plasma clozapine \nlevels if starting treatment with orlistat. Orlistat may be particularly difficult to use \noutside clinical study settings as without adherence to a strict low fat diet, gastric side \neffects can be unpleasant (specifically, oily rectal leakage).\n",
+      "bbox": [
+        61.88690185546875,
+        230.30950927734375,
+        436.7121887207031,
+        374.2695007324219
+      ],
+      "text_sha256": "3f9b1dc69afb7946ab9e784b7c10383c9888ba474e1009b25a015af75c8db343"
+    },
+    {
+      "block_id": "page-0255-block-0005",
+      "order": 5,
+      "text": "Bethanechol, a cholinergic agonist, has been described as being effective in reducing \nthe amount of laxatives and enemas required to maintain regular bowel movements for \na patient diagnosed with clozapine-related CIGH.46 Bethanechol, in this case, was used \nat a dose of 10mg TDS. It should only ever be initiated after other options have failed \nand in consultation with a gastroenterologist.46\n",
+      "bbox": [
+        61.88679504394531,
+        374.30950927734375,
+        436.7123107910156,
+        434.2695007324219
+      ],
+      "text_sha256": "95862a4cb68b2f636e5ae155a8590effc807f4cb9176067d310fcb141802f9ac"
+    },
+    {
+      "block_id": "page-0255-block-0006",
+      "order": 6,
+      "text": "Prucalopride is a 5HT4 agonist which increases gut motility, and is licensed for \nchronic constipation where laxatives have failed to provide adequate relief. Case reports \nof successful use for clozapine-induced constipation have been described,47,48 and supe-\nrior efficacy to lactulose for this indication was demonstrated in an open-label study.49\n",
+      "bbox": [
+        61.88829040527344,
+        434.30950927734375,
+        436.6590270996094,
+        482.2695007324219
+      ],
+      "text_sha256": "af0fab12d633e4500302082ea385f29e96cae9a69e14c80048ee657879d497e5"
+    },
+    {
+      "block_id": "page-0255-block-0007",
+      "order": 7,
+      "text": "Linaclotide (licensed in the UK for constipation in irritable bowel syndrome) and \nplecanatide (available in the US for chronic idiopathic constipation) are oral guanylate \ncyclase C agonists. Neither has any published data to date supporting use in antipsy-\nchotic-induced constipation.\n",
+      "bbox": [
+        61.88909912109375,
+        482.30950927734375,
+        436.6590881347656,
+        530.26953125
+      ],
+      "text_sha256": "8d7102652e03f1bd2a618e6b683bea252bcce39e5c29c51dcbedb0dd76b01060"
+    },
+    {
+      "block_id": "page-0255-block-0008",
+      "order": 8,
+      "text": "References\n",
+      "bbox": [
+        61.88909912109375,
+        547.7045288085938,
+        117.923095703125,
+        560.739501953125
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0255-block-0009",
+      "order": 9,
+      "text": "\t 1.\t Shirazi A, et al. Prevalence and predictors of clozapine associated constipation: a systematic review and meta-analysis. Int J Molecular Sci \n",
+      "bbox": [
+        61.88909912109375,
+        565.8255004882812,
+        435.5271911621094,
+        572.8574829101562
+      ],
+      "text_sha256": "814fd18890253ba3ebd02fc8412117f2993b949548945c2a5b2688523e896ccc"
+    },
+    {
+      "block_id": "page-0255-block-0010",
+      "order": 10,
+      "text": "2016; 17:863.\n\t 2.\t Hibbard KR, et al. Fatalities associated with clozapine-related constipation and bowel obstruction: a literature review and two case reports. \n",
+      "bbox": [
+        61.895103454589844,
+        574.6815185546875,
+        435.5270690917969,
+        590.8574829101562
+      ],
+      "text_sha256": "d3b2d66175a334f3a40f2001e56aeb4b39c6ae8dba119d9e46ba6a9244da1f08"
+    },
+    {
+      "block_id": "page-0255-block-0011",
+      "order": 11,
+      "text": "Psychosomatics 2009; 50:416–419.\n\t 3.\t Rege S, et al. Life-threatening constipation associated with clozapine. Austr Psychiatry 2008; 16:216–219.\n",
+      "bbox": [
+        61.901100158691406,
+        592.6815185546875,
+        347.2250671386719,
+        608.8574829101562
+      ],
+      "text_sha256": "775f31821f11f99c2e7a1eb5b36109c6e23f1c05985403cd29f1e59d38d3d990"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

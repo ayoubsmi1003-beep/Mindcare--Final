@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0328",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 328,
+  "source_page_index": 327,
+  "source_page_display": 328,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    307\nCHAPTER 3\nAntidepressants – general overview\nEffectiveness\nA 2018 comprehensive review found that all antidepressants were more efficacious \nthan placebo in adults with major depressive disorder,1 and a further review found \nequal benefit from antidepressant treatments for mild, moderate or severe major \ndepression.2\nAntidepressants are normally recommended as first-line treatment in patients whose \ndepression is of at least moderate severity, with psychological treatments being used for \nmilder forms. Of the moderate-severe patient group, approximately 20% will recover \nwith no treatment at all, 30% will respond to placebo and 50% will respond to antide-\npressant drug treatment.3 This gives a number needed to treat (NNT) of 3 for antidepres-\nsant over true no-treatment control and an NNT of 5 for antidepressant over placebo. \nNote though that response in clinical trials is generally defined as a 50% reduction in \ndepression rating scale scores, a somewhat arbitrary dichotomy, and that change meas-\nured using continuous scales tends to show a relatively small mean difference between \nactive treatment and placebo (which itself is an effective treatment for depression).\nDrug-placebo differences may have diminished over time largely because of methodo-\nlogical changes.4 It is possible that rating scales obscure the effects of antidepressants to \nsome extent. Hieronymus et al.5 undertook patient-level post-hoc analyses of 18 industry-\nsponsored placebo-controlled trials of paroxetine, citalopram, sertraline or fluoxetine, \nincluding in total 6669 adults with major depression, with the aim being to assess what \nthe outcome would have been if the single item ‘depressed mood’ (rated 0–4) had been \nused as the measure of efficacy. While 18 out of 32 comparisons (56%) failed to separate \nactive drug from placebo at week 6 with respect to reduction in Hamilton Depression \nRating Scale (HDRS)-17 total score, only 3 out of 32 comparisons (9%) were negative \nwhen depressed mood was used as the sole effect parameter. As noted earlier, even when \nwhole depression scales are used, a recent network meta-analysis showed robust superior-\nity for antidepressants over placebo, with amitriptyline being the most efficacious.1\nThe 2019 PANDA trial results support the prescription of selective serotonin reup-\ntake inhibitor (SSRI) antidepressants in a wider group of participants than previously \nthought, including those with mild to moderate symptoms who do not meet diagnostic \ncriteria for depression or generalised anxiety disorder.6\nOnset of Action\nIt is widely held that antidepressants do not exert their effects for 2–4 weeks. This is a \nmyth. All antidepressants show a pattern of response where the rate of improvement is \nhighest during weeks 1–2 and lowest during weeks 4–6. Statistical separation from \nplacebo is seen at 2–4 weeks in single trials (hence the idea of a lag effect) but after only \n1–2 weeks in (statistically more powerful) meta-analyses.7,8 Thus, where large numbers \nof patients are treated and detailed rating scales are used, an antidepressant effect is \nstatistically evident at 1 week. In clinical practice using simple observations, an antide-\npressant effect in an individual is usually seen by 2 weeks.9 It follows that in individuals \nwhere no antidepressant effect is evident after 3–4 weeks’ treatment, a change in dose \n",
+  "raw_text_sha256": "1245feb81e2b40e5e802c93acecac2cc85cb60a751b0e2631595066523d01894",
+  "coordinates_sha256": "bc873335c09ae66813e12294f9a1ec2a6d674f5ab02e323b557823ff58203142",
+  "block_sequence_sha256": "e23b974849a5d7108ef1dc2e932445c22c4ca76a531875b97d7e57b65fa7ddc8",
+  "blocks": [
+    {
+      "block_id": "page-0328-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    307\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "65d5a76cf8ab98aa8a2af78d3beddedcd792440d1c0b66d83933b60063b71d4d"
+    },
+    {
+      "block_id": "page-0328-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0328-block-0002",
+      "order": 2,
+      "text": "Antidepressants – general overview\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        240.62498474121094,
+        79.1004638671875
+      ],
+      "text_sha256": "bd1eea3537de198bf74f29ee8a50c7f5c64e82ee62cab71582e4c93d8fc06d56"
+    },
+    {
+      "block_id": "page-0328-block-0003",
+      "order": 3,
+      "text": "Effectiveness\n",
+      "bbox": [
+        48.00400161743164,
+        90.06747436523438,
+        115.65399932861328,
+        103.10247802734375
+      ],
+      "text_sha256": "b35ce0c6ccf292e7c5da3c5411cad3ec1bcd177ad171c99c71636ae5cd2a70ee"
+    },
+    {
+      "block_id": "page-0328-block-0004",
+      "order": 4,
+      "text": "A 2018 comprehensive review found that all antidepressants were more efficacious \nthan placebo in adults with major depressive disorder,1 and a further review found \nequal benefit from antidepressant treatments for mild, moderate or severe major \ndepression.2\n",
+      "bbox": [
+        47.997314453125,
+        108.91046142578125,
+        422.8100280761719,
+        156.63046264648438
+      ],
+      "text_sha256": "b3ebe41f4a457cf0281dab0fc1e5db84c2956ba263d71fe3eb54a9524ca69250"
+    },
+    {
+      "block_id": "page-0328-block-0005",
+      "order": 5,
+      "text": "Antidepressants are normally recommended as first-line treatment in patients whose \ndepression is of at least moderate severity, with psychological treatments being used for \nmilder forms. Of the moderate-severe patient group, approximately 20% will recover \nwith no treatment at all, 30% will respond to placebo and 50% will respond to antide-\npressant drug treatment.3 This gives a number needed to treat (NNT) of 3 for antidepres-\nsant over true no-treatment control and an NNT of 5 for antidepressant over placebo. \nNote though that response in clinical trials is generally defined as a 50% reduction in \ndepression rating scale scores, a somewhat arbitrary dichotomy, and that change meas-\nured using continuous scales tends to show a relatively small mean difference between \nactive treatment and placebo (which itself is an effective treatment for depression).\n",
+      "bbox": [
+        47.99639892578125,
+        156.91046142578125,
+        422.8100280761719,
+        276.6304931640625
+      ],
+      "text_sha256": "aee2d6914b2ee3ae919ff3594eee9a29d00fc3ec370140c1b314a5876ac467a7"
+    },
+    {
+      "block_id": "page-0328-block-0006",
+      "order": 6,
+      "text": "Drug-placebo differences may have diminished over time largely because of methodo-\nlogical changes.4 It is possible that rating scales obscure the effects of antidepressants to \nsome extent. Hieronymus et al.5 undertook patient-level post-hoc analyses of 18 industry-\nsponsored placebo-controlled trials of paroxetine, citalopram, sertraline or fluoxetine, \nincluding in total 6669 adults with major depression, with the aim being to assess what \nthe outcome would have been if the single item ‘depressed mood’ (rated 0–4) had been \nused as the measure of efficacy. While 18 out of 32 comparisons (56%) failed to separate \nactive drug from placebo at week 6 with respect to reduction in Hamilton Depression \nRating Scale (HDRS)-17 total score, only 3 out of 32 comparisons (9%) were negative \nwhen depressed mood was used as the sole effect parameter. As noted earlier, even when \nwhole depression scales are used, a recent network meta-analysis showed robust superior-\nity for antidepressants over placebo, with amitriptyline being the most efficacious.1\n",
+      "bbox": [
+        47.99639892578125,
+        276.9104919433594,
+        422.8428955078125,
+        420.6304931640625
+      ],
+      "text_sha256": "6a9b108fe151f760a9f1cdb4a9e05f15ad553ce9dc5c15f8cddffaf215908dc7"
+    },
+    {
+      "block_id": "page-0328-block-0007",
+      "order": 7,
+      "text": "The 2019 PANDA trial results support the prescription of selective serotonin reup-\ntake inhibitor (SSRI) antidepressants in a wider group of participants than previously \nthought, including those with mild to moderate symptoms who do not meet diagnostic \ncriteria for depression or generalised anxiety disorder.6\n",
+      "bbox": [
+        48.0,
+        420.9104919433594,
+        422.8199157714844,
+        468.6304931640625
+      ],
+      "text_sha256": "d0d2f3089eb3432fabc3e46ce8268ff4f5cb41f03891da0f85b453eb35a7133e"
+    },
+    {
+      "block_id": "page-0328-block-0008",
+      "order": 8,
+      "text": "Onset of Action\n",
+      "bbox": [
+        48.0,
+        486.06549072265625,
+        129.27899169921875,
+        499.1004943847656
+      ],
+      "text_sha256": "4d17d13e1ae79f47ae70745dfdb7ead6098f305118bbf3a587c7c9031093e895"
+    },
+    {
+      "block_id": "page-0328-block-0009",
+      "order": 9,
+      "text": "It is widely held that antidepressants do not exert their effects for 2–4 weeks. This is a \nmyth. All antidepressants show a pattern of response where the rate of improvement is \nhighest during weeks 1–2 and lowest during weeks 4–6. Statistical separation from \nplacebo is seen at 2–4 weeks in single trials (hence the idea of a lag effect) but after only \n1–2 weeks in (statistically more powerful) meta-analyses.7,8 Thus, where large numbers \nof patients are treated and detailed rating scales are used, an antidepressant effect is \nstatistically evident at 1 week. In clinical practice using simple observations, an antide-\npressant effect in an individual is usually seen by 2 weeks.9 It follows that in individuals \nwhere no antidepressant effect is evident after 3–4 weeks’ treatment, a change in dose \n",
+      "bbox": [
+        48.0,
+        504.91046142578125,
+        422.8234558105469,
+        612.6304931640625
+      ],
+      "text_sha256": "2a60f38bbddff1896a0118c49e771b4cd22dca4044a61eba29e3642c885f2102"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

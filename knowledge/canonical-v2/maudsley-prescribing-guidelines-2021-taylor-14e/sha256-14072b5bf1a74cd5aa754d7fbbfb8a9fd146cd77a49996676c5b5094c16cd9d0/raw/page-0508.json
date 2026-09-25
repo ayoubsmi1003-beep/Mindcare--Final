@@ -1,0 +1,335 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0508",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 508,
+  "source_page_index": 507,
+  "source_page_display": 508,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    487\nCHAPTER 4\nTransferring from methadone to buprenorphine\nThis should usually be under the supervision of a suitably experienced specialist pre-\nscriber. Patients transferring from methadone are at risk of experiencing precipitated \nwithdrawal symptoms that may continue at a milder level for 1–2 weeks. Factors affect-\ning precipitated withdrawal are listed in Table 4.12.\nTable 4.12  Factors affecting risk of precipitated withdrawal with methadone to buprenorphine switch\nFactor\nDiscussion\nRecommended strategy\nDose of methadone\nMore likely with doses of methadone above 30mg. \nGenerally, the higher the dose the more severe the \nprecipitated withdrawal54\nAttempt to transfer from doses \nof methadone <40mg \n(preferably ≤30mg). Transfer \nfrom >60mg should not be \nattempted\nTime between last \nmethadone dose and \nfirst buprenorphine \ndose\nInterval should be at least 24 hours. Increasing the \ninterval reduces the incidence and severity of \nwithdrawal55,56\nCease methadone and delay first \ndose until patient is experiencing \nwithdrawal from methadone\nDose of buprenorphine\nVery low doses of buprenorphine (e.g. 2mg) are \ngenerally inadequate to substitute for methadone. \nHigh first doses of buprenorphine (e.g. 8mg) are \nmore likely to precipitate withdrawal\nFirst dose should generally be \n4mg; review patient 2–3 hours \nlater\nPatient expectancy\nPatients not prepared for precipitated withdrawal \nare more likely to become distressed and confused \nby the effect\nInform patients in advance. Have \ncontingency plan for severe \nsymptoms\nUse of other \nmedications\nSymptomatic medication (e.g. lofexidine) can be \nuseful to relieve symptoms\nPrescribe in accordance to \nmanagement plan\nTransferring from methadone dose <40mg (ideally ≤30mg) to buprenorphine\nMethadone should be ceased abruptly, and the first dose of buprenorphine given at \nleast 24 hours after the last methadone dose. The following conversion rates at the start \nof treatment are recommended but higher doses may be subsequently needed depend-\ning on the clinical presentation:\nLast methadone  \ndose\nDay 1: initial \nbuprenorphine dose\nDay 2: \nbuprenorphine dose\n20–40mg\n4mg\n6–8mg\n10–20mg\n4mg\n4–8mg\n1–10mg\n2mg\n2–4mg\n",
+  "raw_text_sha256": "f1c1410faf8ad5301fe8f6f489ccc02f8779194dbd3008ab87acc0144f3ae842",
+  "coordinates_sha256": "68784ec35ed8b32b38137b162cf37eb9590eac6df98a385aeb5be61915f372a6",
+  "block_sequence_sha256": "fd014c3891e0bd7c2a8dee9f03fd9692949a9c81beee0dbad88f63f61f793b55",
+  "blocks": [
+    {
+      "block_id": "page-0508-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    487\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "c63665881af3a07525eb6602ab02bc73fd81229f065bf1c5fb30b58dd04d440f"
+    },
+    {
+      "block_id": "page-0508-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0508-block-0002",
+      "order": 2,
+      "text": "Transferring from methadone to buprenorphine\n",
+      "bbox": [
+        48.0,
+        62.500465393066406,
+        273.40997314453125,
+        74.3504638671875
+      ],
+      "text_sha256": "826831d30fb14d9c90dcf19831710f1840ab72abed464b2b4fcb1336ca5081b3"
+    },
+    {
+      "block_id": "page-0508-block-0003",
+      "order": 3,
+      "text": "This should usually be under the supervision of a suitably experienced specialist pre-\nscriber. Patients transferring from methadone are at risk of experiencing precipitated \nwithdrawal symptoms that may continue at a milder level for 1–2 weeks. Factors affect-\ning precipitated withdrawal are listed in Table 4.12.\n",
+      "bbox": [
+        48.0,
+        80.41046142578125,
+        422.8100280761719,
+        128.13046264648438
+      ],
+      "text_sha256": "8743c22ffb7257a14a1e783d6a420edbb0145f9077abcc2a56b5d9408ed265e4"
+    },
+    {
+      "block_id": "page-0508-block-0004",
+      "order": 4,
+      "text": "Table 4.12  Factors affecting risk of precipitated withdrawal with methadone to buprenorphine switch\n",
+      "bbox": [
+        54.0,
+        159.0954132080078,
+        380.7301330566406,
+        167.98291015625
+      ],
+      "text_sha256": "77c86df81a231b9f93e33a446d399d86d93cc3cdac042f9e6fed6bee083b4166"
+    },
+    {
+      "block_id": "page-0508-block-0005",
+      "order": 5,
+      "text": "Factor\nDiscussion\nRecommended strategy\n",
+      "bbox": [
+        48.0,
+        178.9703826904297,
+        398.16754150390625,
+        187.85787963867188
+      ],
+      "text_sha256": "6743cdb34a35855266d69cdaf97bb0fbcfc2bd8444460d43ae4f0bec40b72cdf"
+    },
+    {
+      "block_id": "page-0508-block-0006",
+      "order": 6,
+      "text": "Dose of methadone\nMore likely with doses of methadone above 30mg. \nGenerally, the higher the dose the more severe the \nprecipitated withdrawal54\n",
+      "bbox": [
+        48.00750732421875,
+        197.2778778076172,
+        299.0625,
+        225.98037719726562
+      ],
+      "text_sha256": "fa2bedd634e67fedcfdde8a28d01a5089f353bf38c8abac9891c92c1caaba56c"
+    },
+    {
+      "block_id": "page-0508-block-0007",
+      "order": 7,
+      "text": "Attempt to transfer from doses \nof methadone <40mg \n(preferably ≤30mg). Transfer \nfrom >60mg should not be \nattempted\n",
+      "bbox": [
+        314.8150939941406,
+        197.27537536621094,
+        416.3501281738281,
+        245.97286987304688
+      ],
+      "text_sha256": "730243d075eb4c1d0e483c980652f6aecc60469c8a5bf0b5be822821b84a33b0"
+    },
+    {
+      "block_id": "page-0508-block-0008",
+      "order": 8,
+      "text": "Time between last \nmethadone dose and \nfirst buprenorphine \ndose\n",
+      "bbox": [
+        48.002593994140625,
+        255.3928680419922,
+        118.03008270263672,
+        294.0928649902344
+      ],
+      "text_sha256": "ec6589a4147d98a8b1e93c41cb8e7194c72e6c5d8c10da715a3f66f24009e811"
+    },
+    {
+      "block_id": "page-0508-block-0009",
+      "order": 9,
+      "text": "Interval should be at least 24 hours. Increasing the \ninterval reduces the incidence and severity of \nwithdrawal55,56\n",
+      "bbox": [
+        134.15509033203125,
+        255.38536071777344,
+        296.97259521484375,
+        284.0878601074219
+      ],
+      "text_sha256": "cdb7ca2c65cbe8e4b35ccd50772531d780ebb9a37c363f07be741a40670ff4de"
+    },
+    {
+      "block_id": "page-0508-block-0010",
+      "order": 10,
+      "text": "Cease methadone and delay first \ndose until patient is experiencing \nwithdrawal from methadone\n",
+      "bbox": [
+        314.8150939941406,
+        255.40037536621094,
+        421.91522216796875,
+        284.1028747558594
+      ],
+      "text_sha256": "f89729a047f14946380cb668a8823346272e7a915ec8f73411010908009bb56c"
+    },
+    {
+      "block_id": "page-0508-block-0011",
+      "order": 11,
+      "text": "Dose of buprenorphine\nVery low doses of buprenorphine (e.g. 2mg) are \ngenerally inadequate to substitute for methadone. \nHigh first doses of buprenorphine (e.g. 8mg) are \nmore likely to precipitate withdrawal\n",
+      "bbox": [
+        48.002593994140625,
+        303.5203857421875,
+        297.1000671386719,
+        342.2203674316406
+      ],
+      "text_sha256": "7934db4609a3051b7c769161b3c86902c2ce1431412c4441749f630b6c26fda0"
+    },
+    {
+      "block_id": "page-0508-block-0012",
+      "order": 12,
+      "text": "First dose should generally be \n4mg; review patient 2–3 hours \nlater\n",
+      "bbox": [
+        314.8226013183594,
+        303.51287841796875,
+        415.1276550292969,
+        332.2153625488281
+      ],
+      "text_sha256": "14b35a09f89cca3c41154a88c23142fcc1237fdb618f94ec09da321569cff9d8"
+    },
+    {
+      "block_id": "page-0508-block-0013",
+      "order": 13,
+      "text": "Patient expectancy\nPatients not prepared for precipitated withdrawal \nare more likely to become distressed and confused \nby the effect\n",
+      "bbox": [
+        48.010101318359375,
+        351.63287353515625,
+        297.52764892578125,
+        380.3353576660156
+      ],
+      "text_sha256": "395ac8abff1a224ee25acc7affe8f5fd02511109275908b81e8db75367cd8fcb"
+    },
+    {
+      "block_id": "page-0508-block-0014",
+      "order": 14,
+      "text": "Inform patients in advance. Have \ncontingency plan for severe \nsymptoms\n",
+      "bbox": [
+        314.8301086425781,
+        351.6253662109375,
+        421.9226379394531,
+        380.3278503417969
+      ],
+      "text_sha256": "b1d20d677ef213135fd7227dd71f2a2324476e90be28d08dda9604a8f7a963c0"
+    },
+    {
+      "block_id": "page-0508-block-0015",
+      "order": 15,
+      "text": "Use of other \nmedications\n",
+      "bbox": [
+        48.017608642578125,
+        389.74786376953125,
+        89.69509887695312,
+        408.4528503417969
+      ],
+      "text_sha256": "fbe580b4c5b23155c7693a59a0eaad43f8214c840a4277b703304334ce4640bb"
+    },
+    {
+      "block_id": "page-0508-block-0016",
+      "order": 16,
+      "text": "Symptomatic medication (e.g. lofexidine) can be \nuseful to relieve symptoms\n",
+      "bbox": [
+        134.17010498046875,
+        389.74786376953125,
+        290.0125732421875,
+        408.4528503417969
+      ],
+      "text_sha256": "5de6c6d6975ea2176dd8e5c57620d53c3da71cdf6e41d0353874d0bdfa59068f"
+    },
+    {
+      "block_id": "page-0508-block-0017",
+      "order": 17,
+      "text": "Prescribe in accordance to \nmanagement plan\n",
+      "bbox": [
+        314.8376159667969,
+        389.74786376953125,
+        399.985107421875,
+        408.4528503417969
+      ],
+      "text_sha256": "7e24e3feed10e6e56ef73a5a045b2fd6ec40706d13f3aac8d4f25e844ce287bf"
+    },
+    {
+      "block_id": "page-0508-block-0018",
+      "order": 18,
+      "text": "Transferring from methadone dose <40mg (ideally ≤30mg) to buprenorphine\n",
+      "bbox": [
+        48.0,
+        438.015380859375,
+        409.0598449707031,
+        449.8653869628906
+      ],
+      "text_sha256": "e7e0013f9ce153ce39d09096ff5f1c82ca62fbac98e1c660fe4c01982630a892"
+    },
+    {
+      "block_id": "page-0508-block-0019",
+      "order": 19,
+      "text": "Methadone should be ceased abruptly, and the first dose of buprenorphine given at \nleast 24 hours after the last methadone dose. The following conversion rates at the start \nof treatment are recommended but higher doses may be subsequently needed depend-\ning on the clinical presentation:\n",
+      "bbox": [
+        48.0,
+        455.9253845214844,
+        422.8200378417969,
+        503.6453857421875
+      ],
+      "text_sha256": "5196960581e80d1dedc1d04a2071c02c5512d2e45d5a3047404041b01df3f47b"
+    },
+    {
+      "block_id": "page-0508-block-0020",
+      "order": 20,
+      "text": "Last methadone  \ndose\n",
+      "bbox": [
+        116.4999008178711,
+        531.2278442382812,
+        177.34742736816406,
+        550.1129150390625
+      ],
+      "text_sha256": "ce0484953144adb3b5ce75d3b7e7820becb99178f9ace0e3cb97826a37d9f05c"
+    },
+    {
+      "block_id": "page-0508-block-0021",
+      "order": 21,
+      "text": "Day 1: initial \nbuprenorphine dose\n",
+      "bbox": [
+        192.49740600585938,
+        531.2278442382812,
+        264.0324401855469,
+        550.1129150390625
+      ],
+      "text_sha256": "10c6388635f295128bbb48831bdf0606c5570cb44ee0f45ab389b12a569c77b5"
+    },
+    {
+      "block_id": "page-0508-block-0022",
+      "order": 22,
+      "text": "Day 2: \nbuprenorphine dose\n",
+      "bbox": [
+        277.4949035644531,
+        531.2278442382812,
+        349.0298156738281,
+        550.1129150390625
+      ],
+      "text_sha256": "bbe178d376d4c43dc04fc2b46ecfefdfabb81a04c0ddc32fd3f007d925b2b1ad"
+    },
+    {
+      "block_id": "page-0508-block-0023",
+      "order": 23,
+      "text": "20–40mg\n4mg\n6–8mg\n",
+      "bbox": [
+        116.49241638183594,
+        559.5328369140625,
+        299.9949645996094,
+        568.2403564453125
+      ],
+      "text_sha256": "9adca88924bdafbc760fa9e4c7058c34ef5619761479b618b2644c1c2438df2f"
+    },
+    {
+      "block_id": "page-0508-block-0024",
+      "order": 24,
+      "text": "10–20mg\n4mg\n4–8mg\n",
+      "bbox": [
+        116.48493957519531,
+        577.660400390625,
+        299.98748779296875,
+        586.367919921875
+      ],
+      "text_sha256": "0a9fc64ff6bafe38919939295c9794de687d7f986b009bd040b48a1ba42d229f"
+    },
+    {
+      "block_id": "page-0508-block-0025",
+      "order": 25,
+      "text": "1–10mg\n2mg\n2–4mg\n",
+      "bbox": [
+        116.47746276855469,
+        595.787841796875,
+        299.9800109863281,
+        604.495361328125
+      ],
+      "text_sha256": "9935293d1f0d523e3581481af6dc84cb56feca9db8f2a4969a471dfd504efbef"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

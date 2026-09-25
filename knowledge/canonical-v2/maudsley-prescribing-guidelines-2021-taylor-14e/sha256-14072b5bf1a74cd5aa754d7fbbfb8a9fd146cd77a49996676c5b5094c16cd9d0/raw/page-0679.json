@@ -1,0 +1,347 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0679",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 679,
+  "source_page_index": 678,
+  "source_page_display": 679,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "\u0003(Continued )\nDrug\nSpecific indication/\nadditional notes\nStarting dose\nUsual maintenance dose\nMaximum dose in \nelderly\nFluoxetine\nDepression/anxiety disorder\nCaution as long half-life and \ninhibitor of several CYP \nenzymes\n20mg mane\n20mg mane\n40mg mane usually (but \n60mg can be used)\nLofepramine\nDepression\n35mg nocte*\n70mg nocte*\n140mg nocte or in divided \ndoses* (occasionally \n210mg nocte required)\nMirtazapine\nDepression\n7.5mg nocte or usually 15mg nocte*\n15–30mg nocte\n45mg nocte\nSertraline\nDepression/anxiety disorder\n25–50mg mane (25mg can be increased \nto 50mg mane after 1 week)\n50–100mg mane*\n100mg (occasionally up to \n150mg mane)*\nTrazodone\nDepression\n100mg daily in divided doses or as a \nsingle night-time dose4\n100–200mg daily*\n300mg daily4\nAgitation in dementia\nAvoid single doses >100mg\n25mg bd*\n25–100mg daily*\n200mg daily* (in divided \ndoses)\nVenlafaxine\nDepression/anxiety disorder\nMonitor BP on initiation\n37.5mg mane (increased to 75mg XL \nmane after 1 week)*\n75–150mg (XL) mane*\n150mg daily (occasionally \n225mg daily necessary)*\nVortioxetine\nMajor depressive disorder\n5–10mg daily5\n5–20mg daily5\n20mg daily5\nMax for CYP2D6 poor \nmetabolisers: 10mg/day.  \nCo-administration  \nof certain drugs may need \nto be avoided or dosage \nadjustments may be \nnecessary; review drug \ninteractions\n",
+  "raw_text_sha256": "9f7963b8ec9941ac43364845279190ef217bc7f3f75c40f908b445a269a64ebe",
+  "coordinates_sha256": "9efc648a5e3d160754a3a1af86e55191de0beb326e7221396980ec84e76e7f93",
+  "block_sequence_sha256": "b01464b88fbfb2138fe884cdf152033329b063abaf03661d123b4ba4eec2879d",
+  "blocks": [
+    {
+      "block_id": "page-0679-block-0000",
+      "order": 0,
+      "text": "\u0003(Continued )\n",
+      "bbox": [
+        67.62750244140625,
+        568.2014770507812,
+        76.51499938964844,
+        606.6539916992188
+      ],
+      "text_sha256": "90c473996d890d7e46dd3846054d4ca955e156c108a6f427e77cfbf7293d5dd0"
+    },
+    {
+      "block_id": "page-0679-block-0001",
+      "order": 1,
+      "text": "Drug\nSpecific indication/\n",
+      "bbox": [
+        87.5050048828125,
+        451.5464172363281,
+        106.38999938964844,
+        612.6539916992188
+      ],
+      "text_sha256": "7338c07e62114dcf4e9d0f5ece770fcee7a376937071293ac7aace02ecc5062d"
+    },
+    {
+      "block_id": "page-0679-block-0002",
+      "order": 2,
+      "text": "additional notes\nStarting dose\nUsual maintenance dose\nMaximum dose in \n",
+      "bbox": [
+        87.5050048828125,
+        91.1039047241211,
+        106.38999938964844,
+        518.2214965820312
+      ],
+      "text_sha256": "13c3fafaeab8571fbd185c31504620897e8ab350b5c1b8ff75c639fa1d107c47"
+    },
+    {
+      "block_id": "page-0679-block-0003",
+      "order": 3,
+      "text": "elderly\n",
+      "bbox": [
+        97.50250244140625,
+        131.9340057373047,
+        106.38999938964844,
+        156.114013671875
+      ],
+      "text_sha256": "dba6c3b2f5fd2d08af3d9adc6e4b265e9ab203099aab9fd4e0759981423eb3c1"
+    },
+    {
+      "block_id": "page-0679-block-0004",
+      "order": 4,
+      "text": "Fluoxetine\nDepression/anxiety disorder\n",
+      "bbox": [
+        115.81000518798828,
+        430.98907470703125,
+        124.51750183105469,
+        612.6614990234375
+      ],
+      "text_sha256": "884d2f0bcd4b3ccab60aa949c0c3d9c9ae191425af892feb157a63f379089828"
+    },
+    {
+      "block_id": "page-0679-block-0005",
+      "order": 5,
+      "text": "Caution as long half-life and \n",
+      "bbox": [
+        125.80750274658203,
+        425.2890625,
+        134.51499938964844,
+        518.22900390625
+      ],
+      "text_sha256": "bf4a09e6a13dc17b93a289fa139a9a62782d143b5c2304cc51eb455ca41fc6af"
+    },
+    {
+      "block_id": "page-0679-block-0006",
+      "order": 6,
+      "text": "inhibitor of several CYP \n",
+      "bbox": [
+        135.80499267578125,
+        441.5565490722656,
+        144.5124969482422,
+        518.22900390625
+      ],
+      "text_sha256": "8b03617f9ad05ea8868154c0f06a8f17bc920153d7d5542a1fb5c4b4424408d0"
+    },
+    {
+      "block_id": "page-0679-block-0007",
+      "order": 7,
+      "text": "enzymes\n",
+      "bbox": [
+        145.802490234375,
+        490.7340393066406,
+        154.50999450683594,
+        518.22900390625
+      ],
+      "text_sha256": "124b409de171e3642b1771ad4845f15c7f9248252ca48ed0de59073a2e1a88f7"
+    },
+    {
+      "block_id": "page-0679-block-0008",
+      "order": 8,
+      "text": "20mg mane\n20mg mane\n40mg mane usually (but \n60mg can be used)\n",
+      "bbox": [
+        115.80249786376953,
+        76.5166244506836,
+        134.5074920654297,
+        410.634033203125
+      ],
+      "text_sha256": "ac25fd51a229107e963fbb21e652743532f56c12e86f81fe87d17a92f2e25b61"
+    },
+    {
+      "block_id": "page-0679-block-0009",
+      "order": 9,
+      "text": "Lofepramine\nDepression\n35mg nocte*\n70mg nocte*\n140mg nocte or in divided \ndoses* (occasionally \n",
+      "bbox": [
+        163.9224853515625,
+        69.4366683959961,
+        182.6274871826172,
+        612.6690673828125
+      ],
+      "text_sha256": "ecec5d9851337bff986abb44489fc4988dd46c42125aa47b4c4284a7f677c603"
+    },
+    {
+      "block_id": "page-0679-block-0010",
+      "order": 10,
+      "text": "210mg nocte required)\n",
+      "bbox": [
+        183.91748046875,
+        82.6291732788086,
+        192.62498474121094,
+        156.1290283203125
+      ],
+      "text_sha256": "f2d1b641ff0b95215fbab58cd65b0c4fabc19b0ce0ebb2fcbb8f92e0036b2e5d"
+    },
+    {
+      "block_id": "page-0679-block-0011",
+      "order": 11,
+      "text": "Mirtazapine\nDepression\n7.5mg nocte or usually 15mg nocte*\n15–30mg nocte\n45mg nocte\n",
+      "bbox": [
+        202.04498291015625,
+        117.3765869140625,
+        210.7524871826172,
+        612.676513671875
+      ],
+      "text_sha256": "d39233418a3a62c90ba1570f602bb209ec299bf194c1e009422d49547606a728"
+    },
+    {
+      "block_id": "page-0679-block-0012",
+      "order": 12,
+      "text": "Sertraline\nDepression/anxiety disorder\n25–50mg mane (25mg can be increased \nto 50mg mane after 1 week)\n50–100mg mane*\n100mg (occasionally up to \n150mg mane)*\n",
+      "bbox": [
+        220.1724853515625,
+        69.87166595458984,
+        238.8774871826172,
+        612.68408203125
+      ],
+      "text_sha256": "fef0771d2f58f33c76348779f78380eccfab4299123b6f285a617975593b1820"
+    },
+    {
+      "block_id": "page-0679-block-0013",
+      "order": 13,
+      "text": "Trazodone\nDepression\n100mg daily in divided doses or as a \nsingle night-time dose4\n100–200mg daily*\n300mg daily4\n",
+      "bbox": [
+        248.2974853515625,
+        114.08396911621094,
+        267.00250244140625,
+        612.6915283203125
+      ],
+      "text_sha256": "7ac797b1f077c0f137ed77d2c46ec3d97a51fb316578c9726b542329c1924294"
+    },
+    {
+      "block_id": "page-0679-block-0014",
+      "order": 14,
+      "text": "Agitation in dementia\n",
+      "bbox": [
+        276.4325256347656,
+        448.62542724609375,
+        285.1400146484375,
+        518.2178955078125
+      ],
+      "text_sha256": "a9b8da2f1eceb0df6f852dc2f8a27152dabaece428199a29fad13d58a3619df0"
+    },
+    {
+      "block_id": "page-0679-block-0015",
+      "order": 15,
+      "text": "Avoid single doses >100mg\n25mg bd*\n25–100mg daily*\n200mg daily* (in divided \ndoses)\n",
+      "bbox": [
+        276.4325256347656,
+        75.2530746459961,
+        295.13751220703125,
+        518.2178955078125
+      ],
+      "text_sha256": "99f0de2936626774271043f900851e0f5ff2e27e9cd8ae10d7128dd18f43e607"
+    },
+    {
+      "block_id": "page-0679-block-0016",
+      "order": 16,
+      "text": "Venlafaxine\nDepression/anxiety disorder\n",
+      "bbox": [
+        304.5575256347656,
+        430.9854736328125,
+        313.2650146484375,
+        612.657958984375
+      ],
+      "text_sha256": "76ce0d8db762b7176ae928f2d9f78507fa6170eaa4ecce2d7c9ff232487829fa"
+    },
+    {
+      "block_id": "page-0679-block-0017",
+      "order": 17,
+      "text": "Monitor BP on initiation\n37.5mg mane (increased to 75mg XL \nmane after 1 week)*\n75–150mg (XL) mane*\n150mg daily (occasionally \n225mg daily necessary)*\n",
+      "bbox": [
+        304.5575256347656,
+        72.35799407958984,
+        323.26251220703125,
+        518.2254638671875
+      ],
+      "text_sha256": "8e36c00490edc118715faef96d300ac266b9b1552291db88daf1c668b6121ad8"
+    },
+    {
+      "block_id": "page-0679-block-0018",
+      "order": 18,
+      "text": "Vortioxetine\nMajor depressive disorder\n5–10mg daily5\n5–20mg daily5\n20mg daily5\n",
+      "bbox": [
+        332.6825256347656,
+        118.25401306152344,
+        341.3900146484375,
+        612.6654052734375
+      ],
+      "text_sha256": "0a8ede6b9d9007ee550b20c097e560814f74b23386831065e3e01c9054de0125"
+    },
+    {
+      "block_id": "page-0679-block-0019",
+      "order": 19,
+      "text": "Max for CYP2D6 poor \n",
+      "bbox": [
+        342.6825256347656,
+        83.16963958740234,
+        351.3900146484375,
+        156.10711669921875
+      ],
+      "text_sha256": "756a0280993adb36bf1b3efebba99a363dd7b7cdca4014ffabaf0065713f39e4"
+    },
+    {
+      "block_id": "page-0679-block-0020",
+      "order": 20,
+      "text": "metabolisers: 10mg/day.  \n",
+      "bbox": [
+        352.6800231933594,
+        74.28218841552734,
+        361.38751220703125,
+        156.10711669921875
+      ],
+      "text_sha256": "eaa0677ac47e437666014312c0c48bb3c309144c735849bdd444c2f4bb9cfe8b"
+    },
+    {
+      "block_id": "page-0679-block-0021",
+      "order": 21,
+      "text": "Co-administration  \n",
+      "bbox": [
+        362.6775207519531,
+        94.43477630615234,
+        371.385009765625,
+        156.10711669921875
+      ],
+      "text_sha256": "b72e233f5a43cec2b3dae43d5c1f0ad7061d64eab17de90f1052950006160106"
+    },
+    {
+      "block_id": "page-0679-block-0022",
+      "order": 22,
+      "text": "of certain drugs may need \n",
+      "bbox": [
+        372.6750183105469,
+        70.26216888427734,
+        381.38250732421875,
+        156.10711669921875
+      ],
+      "text_sha256": "011a216c6e51e2fc8c92384af5c8e262713beda450f089753397ff745c8a4ab6"
+    },
+    {
+      "block_id": "page-0679-block-0023",
+      "order": 23,
+      "text": "to be avoided or dosage \n",
+      "bbox": [
+        382.6725158691406,
+        76.49471282958984,
+        391.3800048828125,
+        156.10711669921875
+      ],
+      "text_sha256": "2a43839fb53b0e1137fe16c23b5a42b30cf0fb23c2a5e5d0c981458cfb7a4a50"
+    },
+    {
+      "block_id": "page-0679-block-0024",
+      "order": 24,
+      "text": "adjustments may be \n",
+      "bbox": [
+        392.6700134277344,
+        89.8521957397461,
+        401.37750244140625,
+        156.10711669921875
+      ],
+      "text_sha256": "57c69fd5a3ae387d9a2a1d301a6c8010a767c86c11f9269283db47e9e55afc47"
+    },
+    {
+      "block_id": "page-0679-block-0025",
+      "order": 25,
+      "text": "necessary; review drug \n",
+      "bbox": [
+        402.6675109863281,
+        81.65462493896484,
+        411.375,
+        156.10711669921875
+      ],
+      "text_sha256": "a14d4fdd704a9eef5271fecddfbfdb32b3b6ad38ce51d5e44c704b26309843e9"
+    },
+    {
+      "block_id": "page-0679-block-0026",
+      "order": 26,
+      "text": "interactions\n",
+      "bbox": [
+        412.6650085449219,
+        119.0271987915039,
+        421.37249755859375,
+        156.10711669921875
+      ],
+      "text_sha256": "e8919924bc98612df5a57d2e9e773ec3af128b1a1543fbddd3e69b9154b7fe6d"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

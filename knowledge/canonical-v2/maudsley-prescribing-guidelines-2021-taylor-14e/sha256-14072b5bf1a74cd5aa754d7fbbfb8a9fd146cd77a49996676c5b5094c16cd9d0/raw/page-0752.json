@@ -1,0 +1,455 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0752",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 752,
+  "source_page_index": 751,
+  "source_page_display": 752,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Hepatic and renal impairment    731\nCHAPTER 8\nDrug-induced hepatic damage\nHy’s rule, defined as ALT >3 times the upper limit of normal combined with serum bili-\nrubin >2 times the upper limit of normal, is recommended by the FDA to assess the \nhepatotoxicity of new drugs.73\nDrug induced hepatic damage can be due to:\n■\n■Direct dose-related hepatotoxicity (Type 1 ADR). A small number of drugs fall into \nthis category, e.g. paracetamol; alcohol.\n■\n■Hypersensitivity reactions (Type 2 ADR). These can present with rash, fever and \neosinophilia. Almost all drugs have been associated with cases of hepatotoxicity; fre-\nquency varies.\nAlmost any type of liver damage can occur, ranging from mild transient asymptomatic \nincreases in LFTs to fulminant hepatic failure. See tables earlier in this section for details \nof the hepatotoxic potential of individual drugs.\nRisk factors for drug-induced hepatotoxicity include:87\n■\n■Increasing age\n■\n■Female gender\n■\n■Alcohol consumption\n■\n■Co-prescription of enzyme inducing drugs\n■\n■Genetic predisposition\n■\n■Obesity\n■\n■Pre-existing liver disease (small effect)\nWhen interpreting LFTs, remember that:88\n■\n■12% of the healthy adult population have one LFT outside (above or below) the \nnormal reference range.\n■\n■Up to 10% of patients with clinically significant hepatic disease have normal LFTs.\n■\n■Individual LFTs lack specificity for the liver, but >1 abnormal test greatly increases \nthe likelihood of liver pathology.\n■\n■The absolute values of LFTs are a poor indicator of disease severity.\nWhen monitoring LFTs:\n■\n■Ideally LFTs should be measured before treatment starts so that ‘baseline’ values are \navailable.\n■\n■LFT elevations of <2 times the upper limit of the normal reference range are rarely \nclinically significant.\n■\n■Most drug related LFT elevations occur early in treatment (first month) and are tran-\nsient. They may indicate adaptation of the liver to the drug rather than damaged per \nse. Transient LFT elevations may also occur during periods of weight gain.89\n■\n■If LFTs are persistently elevated >3-fold, continuing to rise or accompanied by clini-\ncal symptoms, the suspected drugs should be withdrawn.\n■\n■When tracking change, >20% change in liver enzymes is required to exclude biologi-\ncal or analytical variation.\n",
+  "raw_text_sha256": "ee2d5bf28fe4c109ed5b933a8034eb1898297b7b18b1b3f4250b4c5072b289ec",
+  "coordinates_sha256": "22b6eca59973ceec78942a75cc59b5def4be4db8b9f743405fd50c2f51c1059a",
+  "block_sequence_sha256": "1016c3bd5dea421ea3fe04a9043b33d7134e25f06238d084e7a26644fc522d72",
+  "blocks": [
+    {
+      "block_id": "page-0752-block-0000",
+      "order": 0,
+      "text": "Hepatic and renal impairment    731\n",
+      "bbox": [
+        269.185302734375,
+        31.395221710205078,
+        420.00048828125,
+        41.0272216796875
+      ],
+      "text_sha256": "160094c7ba752c82599d0206b2f1116576e2a096b9da9d8459b3d09672592870"
+    },
+    {
+      "block_id": "page-0752-block-0001",
+      "order": 1,
+      "text": "CHAPTER 8\n",
+      "bbox": [
+        454.4096984863281,
+        532.3878173828125,
+        463.88970947265625,
+        573.7318115234375
+      ],
+      "text_sha256": "5ba3d9fb75ff4f418d4a2e9d517f30966dcfb279c10487eec43c5aa3fd8757a2"
+    },
+    {
+      "block_id": "page-0752-block-0002",
+      "order": 2,
+      "text": "Drug-induced hepatic damage\n",
+      "bbox": [
+        48.0,
+        62.31546401977539,
+        203.8479766845703,
+        75.3504638671875
+      ],
+      "text_sha256": "6a5fde0ac61bda12afa5230b32071bac916614c40f9085c9d2f56dc69b48dd4e"
+    },
+    {
+      "block_id": "page-0752-block-0003",
+      "order": 3,
+      "text": "Hy’s rule, defined as ALT >3 times the upper limit of normal combined with serum bili-\nrubin >2 times the upper limit of normal, is recommended by the FDA to assess the \nhepatotoxicity of new drugs.73\n",
+      "bbox": [
+        48.0,
+        81.16046142578125,
+        422.82000732421875,
+        116.88046264648438
+      ],
+      "text_sha256": "b21c93d6d280abefe6b4b70ce412c85d8fe74a6c2999d06af170a231e3f0165a"
+    },
+    {
+      "block_id": "page-0752-block-0004",
+      "order": 4,
+      "text": "Drug induced hepatic damage can be due to:\n",
+      "bbox": [
+        48.0,
+        123.16046142578125,
+        240.24998474121094,
+        134.88046264648438
+      ],
+      "text_sha256": "1ceed03934af40584bde52931a0a14d29b8639828cc9819f3f0a4163a4493826"
+    },
+    {
+      "block_id": "page-0752-block-0005",
+      "order": 5,
+      "text": "■\n■Direct dose-related hepatotoxicity (Type 1 ADR). A small number of drugs fall into \n",
+      "bbox": [
+        47.999900817871094,
+        141.16046142578125,
+        422.8099365234375,
+        152.88046264648438
+      ],
+      "text_sha256": "4b292e055ea8b71b203d4387f2625e91115e62ce37ab5edae6f9e0dcd44ee2ae"
+    },
+    {
+      "block_id": "page-0752-block-0006",
+      "order": 6,
+      "text": "this category, e.g. paracetamol; alcohol.\n",
+      "bbox": [
+        57.0,
+        153.16046142578125,
+        227.01998901367188,
+        164.88046264648438
+      ],
+      "text_sha256": "1e03023cd701c3b7918b9bde317179b1240c62e3bb9138f822ceaccdcf3650cb"
+    },
+    {
+      "block_id": "page-0752-block-0007",
+      "order": 7,
+      "text": "■\n■Hypersensitivity reactions (Type 2 ADR). These can present with rash, fever and \n",
+      "bbox": [
+        47.999900817871094,
+        165.16046142578125,
+        422.77996826171875,
+        176.88046264648438
+      ],
+      "text_sha256": "0651a7dce3a37fb22bd60ea63110abd647197b42f7eaa472f736054e44d08003"
+    },
+    {
+      "block_id": "page-0752-block-0008",
+      "order": 8,
+      "text": "eosinophilia. Almost all drugs have been associated with cases of hepatotoxicity; fre-\nquency varies.\n",
+      "bbox": [
+        57.0,
+        177.16046142578125,
+        419.98992919921875,
+        200.88046264648438
+      ],
+      "text_sha256": "470834e9700a826bc9538e0cf18f8328e97afd3ad46763f13ec54c97c99468c5"
+    },
+    {
+      "block_id": "page-0752-block-0009",
+      "order": 9,
+      "text": "Almost any type of liver damage can occur, ranging from mild transient asymptomatic \nincreases in LFTs to fulminant hepatic failure. See tables earlier in this section for details \nof the hepatotoxic potential of individual drugs.\n",
+      "bbox": [
+        48.0,
+        207.16046142578125,
+        422.7800598144531,
+        242.88046264648438
+      ],
+      "text_sha256": "162d79f428e88b4b0ef434b89090b7377ab33d87b41d5d9ef979acc3696f3218"
+    },
+    {
+      "block_id": "page-0752-block-0010",
+      "order": 10,
+      "text": "Risk factors for drug-induced hepatotoxicity include:87\n",
+      "bbox": [
+        48.0,
+        249.16046142578125,
+        283.4207763671875,
+        260.8804626464844
+      ],
+      "text_sha256": "844b3d93a7ae3364a77c3c6c2b1384002bee67385daaa93be89094425c0b307d"
+    },
+    {
+      "block_id": "page-0752-block-0011",
+      "order": 11,
+      "text": "■\n■Increasing age\n",
+      "bbox": [
+        47.999900817871094,
+        267.1604919433594,
+        118.0999984741211,
+        278.8804931640625
+      ],
+      "text_sha256": "76d3a7662afea77c18ed2139bea3cd1b5c123432d5e811d80b619135afd8bf56"
+    },
+    {
+      "block_id": "page-0752-block-0012",
+      "order": 12,
+      "text": "■\n■Female gender\n",
+      "bbox": [
+        47.999900817871094,
+        279.1604919433594,
+        119.22000122070312,
+        290.8804931640625
+      ],
+      "text_sha256": "c6918ddd8aced2587de6a1f2a7011c22676ea00430c49d9e892ccccc261ebf5e"
+    },
+    {
+      "block_id": "page-0752-block-0013",
+      "order": 13,
+      "text": "■\n■Alcohol consumption\n",
+      "bbox": [
+        47.999900817871094,
+        291.1604919433594,
+        149.78997802734375,
+        302.8804931640625
+      ],
+      "text_sha256": "c72623c9d8d1433cbe2d2a5522c7b9d36f841cd4a1a0eae7e2ec3e7d7a1117fc"
+    },
+    {
+      "block_id": "page-0752-block-0014",
+      "order": 14,
+      "text": "■\n■Co-prescription of enzyme inducing drugs\n",
+      "bbox": [
+        47.999900817871094,
+        303.1604919433594,
+        238.13998413085938,
+        314.8804931640625
+      ],
+      "text_sha256": "7df78b54bada43bd34b40c10e251c5205e518705c6d4f3c948bb30010269c049"
+    },
+    {
+      "block_id": "page-0752-block-0015",
+      "order": 15,
+      "text": "■\n■Genetic predisposition\n",
+      "bbox": [
+        47.999900817871094,
+        315.1604919433594,
+        153.6899871826172,
+        326.8804931640625
+      ],
+      "text_sha256": "e4a6dcccd9f4b24137fde68969eb8ddaee341f34d4420730c954c1060c397366"
+    },
+    {
+      "block_id": "page-0752-block-0016",
+      "order": 16,
+      "text": "■\n■Obesity\n",
+      "bbox": [
+        47.999900817871094,
+        327.1604919433594,
+        90.33000183105469,
+        338.8804931640625
+      ],
+      "text_sha256": "afdef4fc6de3b02621d8206667407b34bc9fc84377eab5943ef61fbf9ad296d3"
+    },
+    {
+      "block_id": "page-0752-block-0017",
+      "order": 17,
+      "text": "■\n■Pre-existing liver disease (small effect)\n",
+      "bbox": [
+        47.999900817871094,
+        339.1604919433594,
+        220.31002807617188,
+        350.8804931640625
+      ],
+      "text_sha256": "c516c29939e326e83611e5114eb88352bd0eeb4974f1fcf305c5fdfac93225a3"
+    },
+    {
+      "block_id": "page-0752-block-0018",
+      "order": 18,
+      "text": "When interpreting LFTs, remember that:88\n",
+      "bbox": [
+        48.0,
+        357.1604919433594,
+        228.99107360839844,
+        368.8804931640625
+      ],
+      "text_sha256": "95929588e40e6fc729d6beae0714a33b1e18a24089dc6ba623b1ab2b4b79a608"
+    },
+    {
+      "block_id": "page-0752-block-0019",
+      "order": 19,
+      "text": "■\n■12% of the healthy adult population have one LFT outside (above or below) the \n",
+      "bbox": [
+        47.999900817871094,
+        375.1604919433594,
+        422.7999267578125,
+        386.8804931640625
+      ],
+      "text_sha256": "33c9329966005c5bb95fbecffdb7d847dd02186d04d8e5519d853859d5a48b04"
+    },
+    {
+      "block_id": "page-0752-block-0020",
+      "order": 20,
+      "text": "normal reference range.\n",
+      "bbox": [
+        57.0,
+        387.1604919433594,
+        159.2100067138672,
+        398.8804931640625
+      ],
+      "text_sha256": "6cd276d38914fb52b599dd74070afc694c00ac49398b2305239a26d14aff8ee1"
+    },
+    {
+      "block_id": "page-0752-block-0021",
+      "order": 21,
+      "text": "■\n■Up to 10% of patients with clinically significant hepatic disease have normal LFTs.\n",
+      "bbox": [
+        47.999900817871094,
+        399.1604919433594,
+        414.72998046875,
+        410.8804931640625
+      ],
+      "text_sha256": "35d558a4f50c917c663860ed4aea662371304fed5d9bb54ad9d6afb59680e83b"
+    },
+    {
+      "block_id": "page-0752-block-0022",
+      "order": 22,
+      "text": "■\n■Individual LFTs lack specificity for the liver, but >1 abnormal test greatly increases \n",
+      "bbox": [
+        47.999900817871094,
+        411.1604919433594,
+        422.76995849609375,
+        422.8804931640625
+      ],
+      "text_sha256": "394dd264b2e578cd1675a7ad557ec3887e434ae7849bb7e4f9089aa889a2244a"
+    },
+    {
+      "block_id": "page-0752-block-0023",
+      "order": 23,
+      "text": "the likelihood of liver pathology.\n",
+      "bbox": [
+        57.0,
+        423.1604919433594,
+        197.7999725341797,
+        434.8804931640625
+      ],
+      "text_sha256": "c774fe14471854874e1fa84c18556f157c369cc710fe5155c4e24bf41eaa91cd"
+    },
+    {
+      "block_id": "page-0752-block-0024",
+      "order": 24,
+      "text": "■\n■The absolute values of LFTs are a poor indicator of disease severity.\n",
+      "bbox": [
+        47.999900817871094,
+        435.1604919433594,
+        348.8000183105469,
+        446.8804931640625
+      ],
+      "text_sha256": "fed1a876b2c81b3b723b4ccb27242c2cc55858f7fe0453d5c13d10198b5112f6"
+    },
+    {
+      "block_id": "page-0752-block-0025",
+      "order": 25,
+      "text": "When monitoring LFTs:\n",
+      "bbox": [
+        48.0,
+        453.1604919433594,
+        151.79998779296875,
+        464.8804931640625
+      ],
+      "text_sha256": "cf6a676e5cac8b9b37d69b33d1224598ecf6ceca3387d1f1833658d727acea41"
+    },
+    {
+      "block_id": "page-0752-block-0026",
+      "order": 26,
+      "text": "■\n■Ideally LFTs should be measured before treatment starts so that ‘baseline’ values are \n",
+      "bbox": [
+        47.999900817871094,
+        471.1604919433594,
+        422.7999572753906,
+        482.8804931640625
+      ],
+      "text_sha256": "3467073395f35eda7f5fff3ae414747262951e13d402a7ed41ce54d68a3175f9"
+    },
+    {
+      "block_id": "page-0752-block-0027",
+      "order": 27,
+      "text": "available.\n",
+      "bbox": [
+        57.0,
+        483.1604919433594,
+        98.1199951171875,
+        494.8804931640625
+      ],
+      "text_sha256": "cb902e608c58fb468520676a7fc116c66c596d68459ce2fd40791253a2d74f4f"
+    },
+    {
+      "block_id": "page-0752-block-0028",
+      "order": 28,
+      "text": "■\n■LFT elevations of <2 times the upper limit of the normal reference range are rarely \n",
+      "bbox": [
+        47.999900817871094,
+        495.1604919433594,
+        422.7600402832031,
+        506.8804931640625
+      ],
+      "text_sha256": "432737e18fe244da67480c74f2e590dd5af1d205479ea19558bb5151195ce22c"
+    },
+    {
+      "block_id": "page-0752-block-0029",
+      "order": 29,
+      "text": "clinically significant.\n",
+      "bbox": [
+        57.0,
+        507.16046142578125,
+        145.34999084472656,
+        518.8804931640625
+      ],
+      "text_sha256": "333b9611fb959cf82eef4af7f11f03ad5665f1cafec7faaa30adbe7794822b93"
+    },
+    {
+      "block_id": "page-0752-block-0030",
+      "order": 30,
+      "text": "■\n■Most drug related LFT elevations occur early in treatment (first month) and are tran-\n",
+      "bbox": [
+        47.999900817871094,
+        519.1604614257812,
+        419.95001220703125,
+        530.8804931640625
+      ],
+      "text_sha256": "e5d609825d26f2124408c58e9d06d458411fedbdf518e0dfd7e56eb702a06d52"
+    },
+    {
+      "block_id": "page-0752-block-0031",
+      "order": 31,
+      "text": "sient. They may indicate adaptation of the liver to the drug rather than damaged per \nse. Transient LFT elevations may also occur during periods of weight gain.89\n",
+      "bbox": [
+        57.0,
+        531.1604614257812,
+        422.8199157714844,
+        554.8804931640625
+      ],
+      "text_sha256": "22f32db085d7973f8fc167e89c309414b76c305683b143768fd78612010faf4c"
+    },
+    {
+      "block_id": "page-0752-block-0032",
+      "order": 32,
+      "text": "■\n■If LFTs are persistently elevated >3-fold, continuing to rise or accompanied by clini-\n",
+      "bbox": [
+        47.999900817871094,
+        555.1604614257812,
+        420.0299377441406,
+        566.8804931640625
+      ],
+      "text_sha256": "c769492bf5de426053f3f403b2c9199b5a41428a22aa96267cd38ae966bb2b7d"
+    },
+    {
+      "block_id": "page-0752-block-0033",
+      "order": 33,
+      "text": "cal symptoms, the suspected drugs should be withdrawn.\n",
+      "bbox": [
+        57.0,
+        567.1604614257812,
+        302.22998046875,
+        578.8804931640625
+      ],
+      "text_sha256": "a697804dc37560161a9ed6774d880864ede8915e1fa12b94afd42b1841e42af3"
+    },
+    {
+      "block_id": "page-0752-block-0034",
+      "order": 34,
+      "text": "■\n■When tracking change, >20% change in liver enzymes is required to exclude biologi-\n",
+      "bbox": [
+        47.999900817871094,
+        579.1604614257812,
+        420.0199279785156,
+        590.8804931640625
+      ],
+      "text_sha256": "f7a0c3c58eb7fd041501090df643d65385595d73b90762fa8b0a5f694360314e"
+    },
+    {
+      "block_id": "page-0752-block-0035",
+      "order": 35,
+      "text": "cal or analytical variation.\n",
+      "bbox": [
+        57.0,
+        591.1604614257812,
+        170.3599853515625,
+        602.8804931640625
+      ],
+      "text_sha256": "fd353201f2c64ef1db6fdbeca7d54277b17393a89c9288515f083380c0744b1a"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

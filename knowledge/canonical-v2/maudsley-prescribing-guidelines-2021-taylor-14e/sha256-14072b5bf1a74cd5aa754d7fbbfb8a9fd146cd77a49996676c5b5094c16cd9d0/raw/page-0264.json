@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0264",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 264,
+  "source_page_index": 263,
+  "source_page_display": 264,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    243\nCHAPTER 1\nReferences\n\t 1.\t Wesson ML, et al. Continuing clozapine despite neutropenia. Br J Psychiatry 1996; 168:217–220.\n\t 2.\t Cunningham NT, et al. Continuation of clozapine during chemotherapy: a case report and review of literature. Psychosomatics 2014; \n55:673–679.\n\t 3.\t Bareggi C, et al. Clozapine and full-dose concomitant chemoradiation therapy in a schizophrenic patient with nasopharyngeal cancer. Tumori \n2002; 88:59–60.\n\t 4.\t Avnon M, et al. Clozapine, cancer, and schizophrenia. Am J Psychiatry 1993; 150:1562–1563.\n\t 5.\t Hundertmark J, et al. Reintroduction of clozapine after diagnosis of lymphoma. Br J Psychiatry 2001; 178:576.\n\t 6.\t McKenna RC, et al. Clozapine and chemotherapy. Hosp Community Psychiatry 1994; 45:831.\n\t 7.\t Haut FA. Clozapine and chemotherapy. J Drug Devolop Clin Pract 1995; 7:237–239.\n\t 8.\t Rosenstock J. Clozapine therapy during cancer treatment. Am J Psychiatry 2004; 161:175.\n\t 9.\t Lee SY, et al. Combined antitumor chemotherapy in a refractory schizophrenic receiving clozapine. J Korean Neuropsychiatr Assoc 2000; \n39:234–239.\n\t10.\t Usta NG, et al. Clozapine treatment of refractory schizophrenia during essential chemotherapy: a case study and mini review of a clinical \ndilemma. Ther Adv Psychopharmacol 2014; 4:276–281.\n\t11.\t Rosenberg I, et al. Restarting clozapine treatment during ablation chemotherapy and stem cell transplant for Hodgkin’s lymphoma. Am J \nPsychiatry 2007; 164:1438–1439.\n\t12.\t Goulet K, et al. Case report: clozapine given in the context of chemotherapy for lung cancer. Psychooncology 2008; 17:512–516.\n\t13.\t Frieri T, et al. Maintaining clozapine treatment during chemotherapy for non-Hodgkin’s lymphoma. Prog Neuropsychopharmacol Biol \nPsychiatry 2008; 32:1611–1612.\n\t14.\t Sankaranarayanan A, et al. Clozapine, cancer chemotherapy and neutropenia – dilemmas in management. PsychiatrDanub 2013; \n25:419–422.\n\t15.\t De Berardis D, et al. Safety and efficacy of combined clozapine-azathioprine treatment in a case of resistant schizophrenia associated with \nBehcet’s disease: a 2-year follow-up. GenHospPsychiatry 2013; 35:213–211.\n\t16.\t Deodhar JK, et al. Clozapine and cancer treatment: adding to the experience and evidence. Indian J Psychiatry 2014; 56:191–193.\n\t17.\t Monga V, et al. Clozapine and concomitant chemotherapy in a patient with schizophrenia and new onset esophageal cancer. Psychooncology \n2015; 24:971–972.\n\t18.\t Overbeeke MR, et al. Successful clozapine continuation during chemotherapy for the treatment of malignancy: a case report. Int J Clin Pharm \n2016; 38:199–202.\n\t19.\t Whiskey E, et al. Restarting clozapine after neutropenia: evaluating the possibilities and practicalities. CNS Drugs 2007; 21:25–35.\n\t20.\t Silva E, et al. Clozapine rechallenge and initiation despite neutropenia- a practical, step-by-step guide. BMC Psychiatry 2020; 20:279.\n\t21.\t Kolli V, et al. Treating chemotherapy induced agranulocytosis with granulocyte colony-stimulating factors in a patient on clozapine. \nPsychooncology 2013; 22:1674–1675.\n",
+  "raw_text_sha256": "b7f5167b23efd0cfd6ab1916b5384725ba4beda1027e1b23a008f36f50efdc49",
+  "coordinates_sha256": "baca9ffd001706114da8c842760fcfbfa5a387a079cef981ecdd85f70edbba78",
+  "block_sequence_sha256": "848a0af4ee6c6931fc76c62eb91e429637b02ef0360ac1e0061a61c0699b34c7",
+  "blocks": [
+    {
+      "block_id": "page-0264-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    243\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "b02f862e38525d9cb622a673183081f39fc9eb7da23707a138ec5be4ddd5da51"
+    },
+    {
+      "block_id": "page-0264-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0264-block-0002",
+      "order": 2,
+      "text": "References\n",
+      "bbox": [
+        47.99909973144531,
+        62.31442642211914,
+        104.03309631347656,
+        75.34942626953125
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0264-block-0003",
+      "order": 3,
+      "text": "\t 1.\t Wesson ML, et al. Continuing clozapine despite neutropenia. Br J Psychiatry 1996; 168:217–220.\n\t 2.\t Cunningham NT, et al. Continuation of clozapine during chemotherapy: a case report and review of literature. Psychosomatics 2014; \n",
+      "bbox": [
+        47.99909973144531,
+        80.29142761230469,
+        421.6490783691406,
+        96.46742248535156
+      ],
+      "text_sha256": "ff6dd532e99d36400d56acc11e8586bcea03d5b1844592112d0cebb6bf55722f"
+    },
+    {
+      "block_id": "page-0264-block-0004",
+      "order": 4,
+      "text": "55:673–679.\n\t 3.\t Bareggi C, et al. Clozapine and full-dose concomitant chemoradiation therapy in a schizophrenic patient with nasopharyngeal cancer. Tumori \n",
+      "bbox": [
+        48.01110076904297,
+        98.29142761230469,
+        421.6850891113281,
+        114.46742248535156
+      ],
+      "text_sha256": "2530ad8e518dfbefaab87247fdf1e71dd98651960249f0992195d5a2908c3218"
+    },
+    {
+      "block_id": "page-0264-block-0005",
+      "order": 5,
+      "text": "2002; 88:59–60.\n\t 4.\t Avnon M, et al. Clozapine, cancer, and schizophrenia. Am J Psychiatry 1993; 150:1562–1563.\n\t 5.\t Hundertmark J, et al. Reintroduction of clozapine after diagnosis of lymphoma. Br J Psychiatry 2001; 178:576.\n\t 6.\t McKenna RC, et al. Clozapine and chemotherapy. Hosp Community Psychiatry 1994; 45:831.\n\t 7.\t Haut FA. Clozapine and chemotherapy. J Drug Devolop Clin Pract 1995; 7:237–239.\n\t 8.\t Rosenstock J. Clozapine therapy during cancer treatment. Am J Psychiatry 2004; 161:175.\n\t 9.\t Lee SY, et al. Combined antitumor chemotherapy in a refractory schizophrenic receiving clozapine. J Korean Neuropsychiatr Assoc 2000; \n",
+      "bbox": [
+        48.01709747314453,
+        116.29142761230469,
+        421.7153625488281,
+        177.46742248535156
+      ],
+      "text_sha256": "cc71b26ee0a4033915fd20f027637d0df33c4499c6be8a3e1b6aa53ee9e98b84"
+    },
+    {
+      "block_id": "page-0264-block-0006",
+      "order": 6,
+      "text": "39:234–239.\n\t10.\t Usta NG, et al. Clozapine treatment of refractory schizophrenia during essential chemotherapy: a case study and mini review of a clinical \n",
+      "bbox": [
+        48.0531005859375,
+        179.2914276123047,
+        421.6911315917969,
+        195.46742248535156
+      ],
+      "text_sha256": "4eb94ca76d75914c23c33596dbd5d61f7987f912a7adacfecaa7cb59ccb2bbe1"
+    },
+    {
+      "block_id": "page-0264-block-0007",
+      "order": 7,
+      "text": "dilemma. Ther Adv Psychopharmacol 2014; 4:276–281.\n\t11.\t Rosenberg I, et al. Restarting clozapine treatment during ablation chemotherapy and stem cell transplant for Hodgkin’s lymphoma. Am J \n",
+      "bbox": [
+        48.05909729003906,
+        197.2914276123047,
+        421.7270202636719,
+        213.46742248535156
+      ],
+      "text_sha256": "5a41371fe22e01be455cfb9ebedb233c7a492ca7bb86b816968251ffa2768b99"
+    },
+    {
+      "block_id": "page-0264-block-0008",
+      "order": 8,
+      "text": "Psychiatry 2007; 164:1438–1439.\n\t12.\t Goulet K, et al. Case report: clozapine given in the context of chemotherapy for lung cancer. Psychooncology 2008; 17:512–516.\n\t13.\t Frieri T, et al. Maintaining clozapine treatment during chemotherapy for non-Hodgkin’s lymphoma. Prog Neuropsychopharmacol Biol \n",
+      "bbox": [
+        48.065101623535156,
+        215.2914276123047,
+        421.7571716308594,
+        240.46742248535156
+      ],
+      "text_sha256": "f60d8084f63f4a4d9c016772bbecf64af01880744439adf17ae2a2dc9492e207"
+    },
+    {
+      "block_id": "page-0264-block-0009",
+      "order": 9,
+      "text": "Psychiatry 2008; 32:1611–1612.\n\t14.\t Sankaranarayanan A, et al. Clozapine, cancer chemotherapy and neutropenia – dilemmas in management. PsychiatrDanub 2013; \n",
+      "bbox": [
+        48.07710266113281,
+        242.2914276123047,
+        421.7271423339844,
+        258.4674377441406
+      ],
+      "text_sha256": "2d9068dfd3a8e66381e658dbd271d372c640ed5c3ebab36e67a0cf706e196f8f"
+    },
+    {
+      "block_id": "page-0264-block-0010",
+      "order": 10,
+      "text": "25:419–422.\n\t15.\t De Berardis D, et al. Safety and efficacy of combined clozapine-azathioprine treatment in a case of resistant schizophrenia associated with \n",
+      "bbox": [
+        48.083099365234375,
+        260.2914123535156,
+        421.7689514160156,
+        276.4674377441406
+      ],
+      "text_sha256": "62e5f1a82c6a571be132cf576a631baabbe9cdad55a93cd51afec5f3e5340388"
+    },
+    {
+      "block_id": "page-0264-block-0011",
+      "order": 11,
+      "text": "Behcet’s disease: a 2-year follow-up. GenHospPsychiatry 2013; 35:213–211.\n\t16.\t Deodhar JK, et al. Clozapine and cancer treatment: adding to the experience and evidence. Indian J Psychiatry 2014; 56:191–193.\n\t17.\t Monga V, et al. Clozapine and concomitant chemotherapy in a patient with schizophrenia and new onset esophageal cancer. Psychooncology \n",
+      "bbox": [
+        48.08909606933594,
+        278.2914123535156,
+        421.7452087402344,
+        303.4674377441406
+      ],
+      "text_sha256": "0892bc86d417a938092ca532f0cf8e66513617c881d297db654e5b68dad21ba5"
+    },
+    {
+      "block_id": "page-0264-block-0012",
+      "order": 12,
+      "text": "2015; 24:971–972.\n\t18.\t Overbeeke MR, et al. Successful clozapine continuation during chemotherapy for the treatment of malignancy: a case report. Int J Clin Pharm \n",
+      "bbox": [
+        48.101097106933594,
+        305.2914123535156,
+        421.7691345214844,
+        321.4674377441406
+      ],
+      "text_sha256": "6817991405b6885f971b5d7f314858cb97a7b60e2418e6fa418496453c37a0c6"
+    },
+    {
+      "block_id": "page-0264-block-0013",
+      "order": 13,
+      "text": "2016; 38:199–202.\n\t19.\t Whiskey E, et al. Restarting clozapine after neutropenia: evaluating the possibilities and practicalities. CNS Drugs 2007; 21:25–35.\n\t20.\t Silva E, et al. Clozapine rechallenge and initiation despite neutropenia- a practical, step-by-step guide. BMC Psychiatry 2020; 20:279.\n\t21.\t Kolli V, et al. Treating chemotherapy induced agranulocytosis with granulocyte colony-stimulating factors in a patient on clozapine. \n",
+      "bbox": [
+        48.10710144042969,
+        323.2914123535156,
+        421.8231506347656,
+        357.4674377441406
+      ],
+      "text_sha256": "ec6bf60ba3c5bad00a4655636ef5e4f46b00c664cf0a020d314bc42477c4bbe6"
+    },
+    {
+      "block_id": "page-0264-block-0014",
+      "order": 14,
+      "text": "Psychooncology 2013; 22:1674–1675.\n",
+      "bbox": [
+        59.12310028076172,
+        359.2914123535156,
+        158.9990692138672,
+        366.4674377441406
+      ],
+      "text_sha256": "e2358d00faa6f7c22814d05f212f64f2ee2b69d88fc44ab68101a9cf5ae0b9ab"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

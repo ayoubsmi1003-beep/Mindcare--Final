@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0943",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 943,
+  "source_page_index": 942,
+  "source_page_display": 943,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "922    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 14\nFurther reading\nBangert MK, et al. Neurological and psychiatric adverse effects of antimicrobials. CNS Drugs 2019; 33:727–753.\nReferences\n\t 1.\t Rudorfer MV, et al. Assessing Psychiatric Adverse Effects during Clinical Drug Development. Pharmaceut Med 2012; 26:363–394.\n\t 2.\t Smith DA. Psychiatric side effects of non-psychiatric drugs. S DJ Med 1991; 44:291–292.\n\t 3.\t Holvey C, et al. Psychiatric side effects of non-psychiatric drugs. Br J Hosp Med (Lond) 2010; 71:432–436.\n\t 4.\t Gupta A, et al. Adverse psychiatric effects of non-psychotropic medications. BJ Psych Advances 2016; 22:325–334.\n\t 5.\t Huffman JC, et al. Neuropsychiatric consequences of cardiovascular medications. Dialogues Clin Neurosci 2007; 9:29–45.\n\t 6.\t Munjampalli SK, et al. Medicinal-Induced Behavior Disorders. Neurol Clin 2016; 34:133–169.\n\t 7.\t Parker C. Psychiatric effects of drugs for other disorders. Medicine 2016; 44:768–774.\n\t 8.\t Maremmani AG, et al. Substance abuse and psychosis. The Strange Case of Opioids. Eur Rev Med Pharmacol Sci 2014; 18:287–302.\n\t 9.\t Ott BR, et al. Do statins impair cognition? A systematic review and meta-analysis of randomized controlled trials. J Gen Intern Med 2015; \n30:348–358.\n\t10.\t Swiger KJ, et al. Statins, mood, sleep, and physical function: a systematic review. Eur J Clin Pharmacol 2014; 70:1413–1422.\n\t11.\t Tuccori M, et al. Neuropsychiatric adverse events associated with statins: epidemiology, pathophysiology, prevention and management. CNS \nDrugs 2014; 28:249–272.\n\t12.\t Liu M, et al. Neurological and Neuropsychiatric Adverse Effects of Dermatologic Medications. CNS Drugs 2016; 30:1149–1168.\n\t13.\t Huang YC, et al. Isotretinoin treatment for acne and risk of depression: A systematic review and meta-analysis. J Am Acad Dermatol 2017; \n76:1068-1076.e1069.\n\t14.\t Naranjo CA, et al. A method for estimating the probability of adverse drug reactions. Clin Pharmacol Ther 1981; 30:239–245.\n\t15.\t World Health Organisation and Uppsala Monitoring Centre. The use of the WHO-UMC system for standardised case causality assessment. \n2004; http://www.who.int/medicines/areas/quality_safety/safety_efficacy/WHOcausality_assessment.pdf.\n",
+  "raw_text_sha256": "8f5df5a0b9efbe9c28b8fdace1e5ec1620ef823773801707d24ba57dd193e311",
+  "coordinates_sha256": "5b8dd5b3c64324a69acad785fb9039a720b4c3a41a17ad0ca1633d42abd45f4d",
+  "block_sequence_sha256": "2c564465e095b7dbfed7639b1de1ff59b900c60ca0598041164c3c71c535fd71",
+  "blocks": [
+    {
+      "block_id": "page-0943-block-0000",
+      "order": 0,
+      "text": "922    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "e3f239cd8a9c6ec1918cb45440855419450a0041b7dcfa47b5816f40c595196e"
+    },
+    {
+      "block_id": "page-0943-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        18.520000457763672,
+        338.7405090332031,
+        28.0,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0943-block-0002",
+      "order": 2,
+      "text": "Further reading\n",
+      "bbox": [
+        61.89099884033203,
+        263.4646911621094,
+        142.3779754638672,
+        276.49969482421875
+      ],
+      "text_sha256": "97a7eb93e6fca560969f4c10a52d2ef83995974b08b112934e0d108909963303"
+    },
+    {
+      "block_id": "page-0943-block-0003",
+      "order": 3,
+      "text": "Bangert MK, et al. Neurological and psychiatric adverse effects of antimicrobials. CNS Drugs 2019; 33:727–753.\n",
+      "bbox": [
+        61.89099884033203,
+        281.4416809082031,
+        354.613037109375,
+        288.6177062988281
+      ],
+      "text_sha256": "a0c0521ad2123890d384a4aa9afb03a4cd51a8bf3801f57c7e3775487a5a6412"
+    },
+    {
+      "block_id": "page-0943-block-0004",
+      "order": 4,
+      "text": "References\n",
+      "bbox": [
+        61.89099884033203,
+        62.31540298461914,
+        117.92499542236328,
+        75.35040283203125
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0943-block-0005",
+      "order": 5,
+      "text": "\t 1.\t Rudorfer MV, et al. Assessing Psychiatric Adverse Effects during Clinical Drug Development. Pharmaceut Med 2012; 26:363–394.\n\t 2.\t Smith DA. Psychiatric side effects of non-psychiatric drugs. S DJ Med 1991; 44:291–292.\n\t 3.\t Holvey C, et al. Psychiatric side effects of non-psychiatric drugs. Br J Hosp Med (Lond) 2010; 71:432–436.\n\t 4.\t Gupta A, et al. Adverse psychiatric effects of non-psychotropic medications. BJ Psych Advances 2016; 22:325–334.\n\t 5.\t Huffman JC, et al. Neuropsychiatric consequences of cardiovascular medications. Dialogues Clin Neurosci 2007; 9:29–45.\n\t 6.\t Munjampalli SK, et al. Medicinal-Induced Behavior Disorders. Neurol Clin 2016; 34:133–169.\n\t 7.\t Parker C. Psychiatric effects of drugs for other disorders. Medicine 2016; 44:768–774.\n\t 8.\t Maremmani AG, et al. Substance abuse and psychosis. The Strange Case of Opioids. Eur Rev Med Pharmacol Sci 2014; 18:287–302.\n\t 9.\t Ott BR, et al. Do statins impair cognition? A systematic review and meta-analysis of randomized controlled trials. J Gen Intern Med 2015; \n",
+      "bbox": [
+        61.89099884033203,
+        80.29240417480469,
+        435.6430358886719,
+        159.46839904785156
+      ],
+      "text_sha256": "acd4426569a6ff52a4650e8b7232b5e7d7eaf8e9121a1f0ef0dcaa5072f354d6"
+    },
+    {
+      "block_id": "page-0943-block-0006",
+      "order": 6,
+      "text": "30:348–358.\n\t10.\t Swiger KJ, et al. Statins, mood, sleep, and physical function: a systematic review. Eur J Clin Pharmacol 2014; 70:1413–1422.\n\t11.\t Tuccori M, et al. Neuropsychiatric adverse events associated with statins: epidemiology, pathophysiology, prevention and management. CNS \n",
+      "bbox": [
+        61.94499969482422,
+        161.2924041748047,
+        435.6429748535156,
+        186.46839904785156
+      ],
+      "text_sha256": "6d5d10cef459fb80f4d19c92656a395cf92a284c4ed5dc1deed7b63783ac12f2"
+    },
+    {
+      "block_id": "page-0943-block-0007",
+      "order": 7,
+      "text": "Drugs 2014; 28:249–272.\n\t12.\t Liu M, et al. Neurological and Neuropsychiatric Adverse Effects of Dermatologic Medications. CNS Drugs 2016; 30:1149–1168.\n\t13.\t Huang YC, et al. Isotretinoin treatment for acne and risk of depression: A systematic review and meta-analysis. J Am Acad Dermatol 2017; \n",
+      "bbox": [
+        61.957000732421875,
+        188.2924041748047,
+        435.625,
+        213.46839904785156
+      ],
+      "text_sha256": "2105e4450cf3563402074608c7ab1c42719b3d8dfd29f40009c83d2bb18638f8"
+    },
+    {
+      "block_id": "page-0943-block-0008",
+      "order": 8,
+      "text": "76:1068-1076.e1069.\n\t14.\t Naranjo CA, et al. A method for estimating the probability of adverse drug reactions. Clin Pharmacol Ther 1981; 30:239–245.\n\t15.\t World Health Organisation and Uppsala Monitoring Centre. The use of the WHO-UMC system for standardised case causality assessment. \n",
+      "bbox": [
+        61.96900177001953,
+        215.2924041748047,
+        435.63702392578125,
+        240.46839904785156
+      ],
+      "text_sha256": "65d8b481dd5e4fdec08c99b936b487e5c653181eb0b45b98bff629cf96f708f8"
+    },
+    {
+      "block_id": "page-0943-block-0009",
+      "order": 9,
+      "text": "2004; http://www.who.int/medicines/areas/quality_safety/safety_efficacy/WHOcausality_assessment.pdf.\n",
+      "bbox": [
+        72.97899627685547,
+        242.4364013671875,
+        342.7749938964844,
+        249.46839904785156
+      ],
+      "text_sha256": "03be7b8cfc784ab9c9c304c813b0e3a1c5672252f1e31b7cc8c9d0f568541fda"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,35 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0002",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 2,
+  "source_page_index": 1,
+  "source_page_display": 2,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "The Maudsley®  \nPrescribing Guidelines  \nin Psychiatry\n",
+  "raw_text_sha256": "ca340a3fe467f5f43a431a63e00a76b46a38b51c2594db27a7dee9ec6edd6e03",
+  "coordinates_sha256": "3323d44d7cac0f4fc0c187957d58ded601655911c208ef60d0f7e913c67ef816",
+  "block_sequence_sha256": "5185b328a2a628336963e548a93e37e7f6db6280a6266f1c8416f5cb3513d0b6",
+  "blocks": [
+    {
+      "block_id": "page-0002-block-0000",
+      "order": 0,
+      "text": "The Maudsley®  \nPrescribing Guidelines  \nin Psychiatry\n",
+      "bbox": [
+        48.0,
+        89.80818176269531,
+        182.03878784179688,
+        129.05621337890625
+      ],
+      "text_sha256": "ca340a3fe467f5f43a431a63e00a76b46a38b51c2594db27a7dee9ec6edd6e03"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

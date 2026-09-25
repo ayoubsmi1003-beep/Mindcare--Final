@@ -1,0 +1,515 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0847",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 847,
+  "source_page_index": 846,
+  "source_page_display": 847,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "826    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\nGeneral recommendations\nBox 10.4  General recommendations for prescribing in bariatric surgery7\nBefore surgery\n■\n■Do not routinely increase \ndoses; clinically relevant mal-\nabsorption cannot be reliably \npredicted\n■\n■Assess mental state before sur-\ngery and consider measuring \nbaseline drug plasma levels\n■\n■Switch modified-release/enteric \ncoated preparations to immedi-\nate-release tablets or to liquid \npreparations\nAfter surgery (0–6 weeks)\n■\n■Closely monitor for signs \nof adverse effects and drug \nmalabsorption (symptom \nre-emergence, discontinuation \nsymptoms)\n■\n■Regularly monitor drug plasma \nlevels if clinically indicated\n■\n■If malabsorption suspected \nconsider the recommended \nstrategies.\n■\n■If medication toxicity suspected \nwithhold and reassess dose\nAfter surgery (>6 weeks after)\n■\n■Continue regular monitoring \nfor the first year postopera-\ntively, although frequency can \nbe reduced if stable\n■\n■Monitor for an increase in \nadverse effects, especially if \ndoses were increased in the \nacute post-operative period\n■\n■Consider returning to presurgical \ntreatment regimen after 1 year \n(depending on clinical history)\nGeneral management strategies for patients demonstrating signs of reduced bioavailability\n■\n■Consider non-oral routes of administration where available (e.g. depots for patients stable on antipsychotics)\n■\n■Dividing doses may improve malabsorption related to a reduced stomach capacity after surgery\n■\n■Switching modified/prolonged/delayed-release to immediate-release formulations\n■\n■Switching solid tablets to liquid or orodispersible preparations to bypass disintegration phase\n■\n■Switching large tablets to smaller ones\n■\n■In cases where doses have been increased to account for reduced bioavailability, monitor for emergent \nadverse effects as bioavailability may normalise over time.\nPsychotropics with a risk of weight gain after bariatric surgery\nIt is estimated that 10–20% of patients regain a significant amount of weight after bari-\natric surgery.49 There is no information on how psychotropics associated with weight \ngain affect outcomes after surgery, but high-risk drugs should probably be avoided. \nPatients’ individual clinical circumstances should be considered (especially if stable on \ntreatment and at a high risk of relapse) as there is evidence that uncontrolled mental \nillness is a risk factor for weight regain.49\nAlcohol50,51\nGastric bypass surgery is associated with accelerated alcohol absorption, higher maxi-\nmum alcohol concentrations and a longer time to elimination. There is also an increased \nrisk of alcohol misuse disorders after gastric bypass. Data are less clear for sleeve gas-\ntrectomy and there is no evidence that gastric banding leads to any changes.\nWider considerations52\nIn practice, many patients may not require significant changes to drug treatment after \nsurgery. Relapse of symptoms after surgery may not be related to altered drug pharma-\ncokinetics. Although improvements in mental health are to be anticipated, deterioration \ncan also occur due to a range of factors, including unmet weight-loss expectations, poor \ntolerability and dissatisfaction after surgical treatment.\n",
+  "raw_text_sha256": "f2302dc98ee2418099b009a697cfaf5d8c6704208a6cd689501d2eae495cfd6a",
+  "coordinates_sha256": "7149fdade2d7c0ccff6c285bd75850b80c1c6c341b450c764aeaf5eb8d9f8432",
+  "block_sequence_sha256": "84ec72a080d1d69a6488cddf2925a8fdd7d9cafbfc38c9978cf1fdc5f1db073d",
+  "blocks": [
+    {
+      "block_id": "page-0847-block-0000",
+      "order": 0,
+      "text": "826    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "a833adbde0d279ab57ceb3452d5b122ae398593af99600588eb4f61bcf4d0c9a"
+    },
+    {
+      "block_id": "page-0847-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0847-block-0002",
+      "order": 2,
+      "text": "General recommendations\n",
+      "bbox": [
+        61.88999938964844,
+        62.31540298461914,
+        197.99298095703125,
+        75.35040283203125
+      ],
+      "text_sha256": "a92dcdc89d174bf8bcfb9ae2b07ed83fbadd244ef944386fd105bb2d8b34555a"
+    },
+    {
+      "block_id": "page-0847-block-0003",
+      "order": 3,
+      "text": "Box 10.4  General recommendations for prescribing in bariatric surgery7\n",
+      "bbox": [
+        67.88999938964844,
+        89.06629943847656,
+        297.9811096191406,
+        97.95379638671875
+      ],
+      "text_sha256": "ca2f41418ae8cc8b9109723c0e816ab7015ccaa61e2e1e8525842beda2e382e1"
+    },
+    {
+      "block_id": "page-0847-block-0004",
+      "order": 4,
+      "text": "Before surgery\n",
+      "bbox": [
+        68.88999938964844,
+        108.94129943847656,
+        120.84999084472656,
+        117.82879638671875
+      ],
+      "text_sha256": "0fe831bf615179163ff1342141d20ab7c4feab4f4504cb3224956cbb88724be1"
+    },
+    {
+      "block_id": "page-0847-block-0005",
+      "order": 5,
+      "text": "■\n■Do not routinely increase \n",
+      "bbox": [
+        68.88990020751953,
+        119.12129974365234,
+        159.71498107910156,
+        127.82879638671875
+      ],
+      "text_sha256": "908f33bb9c18ac0e4f56a16e0f96ad1a7ce53f9e209085accad536604ad84a0f"
+    },
+    {
+      "block_id": "page-0847-block-0006",
+      "order": 6,
+      "text": "doses; clinically relevant mal-\nabsorption cannot be reliably \npredicted\n",
+      "bbox": [
+        77.88999938964844,
+        129.11878967285156,
+        172.77249145507812,
+        157.8212890625
+      ],
+      "text_sha256": "94638e308f435110da8329b2304fbe51bf3d869ec8ba5cc188d3fed58e52da60"
+    },
+    {
+      "block_id": "page-0847-block-0007",
+      "order": 7,
+      "text": "■\n■Assess mental state before sur-\n",
+      "bbox": [
+        68.88990020751953,
+        159.1212921142578,
+        176.51499938964844,
+        167.82879638671875
+      ],
+      "text_sha256": "aa13f0e7f7699628ed4614d96ffea6b12022f4f48c4cc5454c58854accd5575c"
+    },
+    {
+      "block_id": "page-0847-block-0008",
+      "order": 8,
+      "text": "gery and consider measuring \nbaseline drug plasma levels\n",
+      "bbox": [
+        77.88999938964844,
+        169.11878967285156,
+        172.07498168945312,
+        187.82379150390625
+      ],
+      "text_sha256": "cb8b8c67f5e15f5df21325960af0b7d2bbbe0f6a6a24bdecc8fcd5631349b753"
+    },
+    {
+      "block_id": "page-0847-block-0009",
+      "order": 9,
+      "text": "■\n■Switch modified-release/enteric \n",
+      "bbox": [
+        68.88990020751953,
+        189.1212921142578,
+        179.8374786376953,
+        197.82879638671875
+      ],
+      "text_sha256": "c6c26a9af8e9799093c48bfc9d376e2a7d01b54a7bd32a4a9fb80dc18b569736"
+    },
+    {
+      "block_id": "page-0847-block-0010",
+      "order": 10,
+      "text": "coated preparations to immedi-\nate-release tablets or to liquid \npreparations\n",
+      "bbox": [
+        77.88999938964844,
+        199.11878967285156,
+        178.54742431640625,
+        227.8212890625
+      ],
+      "text_sha256": "8ed3ecb4fd76f77f782ad28bc39505ca5fb9506988e6ff33015efb3266856b7b"
+    },
+    {
+      "block_id": "page-0847-block-0011",
+      "order": 11,
+      "text": "After surgery (0–6 weeks)\n",
+      "bbox": [
+        192.5574951171875,
+        108.93128967285156,
+        283.4125061035156,
+        117.81878662109375
+      ],
+      "text_sha256": "dc252bf896e323008a7a95baa65490c5497bd74525d23da06ba79f8240712a30"
+    },
+    {
+      "block_id": "page-0847-block-0012",
+      "order": 12,
+      "text": "■\n■Closely monitor for signs \n",
+      "bbox": [
+        192.55650329589844,
+        119.12129974365234,
+        282.8191223144531,
+        127.82879638671875
+      ],
+      "text_sha256": "d7dbd45abd1fd8324d75fb22ecdaf515c90544222f327a81555ff5c2ff96b04c"
+    },
+    {
+      "block_id": "page-0847-block-0013",
+      "order": 13,
+      "text": "of adverse effects and drug \nmalabsorption (symptom \nre-emergence, discontinuation \nsymptoms)\n",
+      "bbox": [
+        201.5565948486328,
+        129.11878967285156,
+        301.01416015625,
+        167.81878662109375
+      ],
+      "text_sha256": "58a6098e0b967e2f179d65bc14f8dff4697051f50e8787d1e3105fba35d35d3d"
+    },
+    {
+      "block_id": "page-0847-block-0014",
+      "order": 14,
+      "text": "■\n■Regularly monitor drug plasma \n",
+      "bbox": [
+        192.55650329589844,
+        169.1212921142578,
+        301.9891052246094,
+        177.82879638671875
+      ],
+      "text_sha256": "4f3dcfbd8171598ded11508a4dd8ff96aa069c2b7709f6723b34a8160bef6a6c"
+    },
+    {
+      "block_id": "page-0847-block-0015",
+      "order": 15,
+      "text": "levels if clinically indicated\n",
+      "bbox": [
+        201.5565948486328,
+        179.11878967285156,
+        284.4541015625,
+        187.8262939453125
+      ],
+      "text_sha256": "f1f5e5e5856b63955e0f7b05290c47efab80cc88594b8570402dc309bc8b7442"
+    },
+    {
+      "block_id": "page-0847-block-0016",
+      "order": 16,
+      "text": "■\n■If malabsorption suspected \n",
+      "bbox": [
+        192.55650329589844,
+        189.1212921142578,
+        289.4866027832031,
+        197.82879638671875
+      ],
+      "text_sha256": "e8c6351d5a05dc133ecbb17a078f0c20909b9b4ca9d55fef08f2c67f9a7dd29a"
+    },
+    {
+      "block_id": "page-0847-block-0017",
+      "order": 17,
+      "text": "consider the recommended \nstrategies.\n",
+      "bbox": [
+        201.5565948486328,
+        199.11878967285156,
+        291.0166320800781,
+        217.82379150390625
+      ],
+      "text_sha256": "8feab6708e8a0ef7056276603eef1972410e04a541fcfed8f562a7cf272b2c2a"
+    },
+    {
+      "block_id": "page-0847-block-0018",
+      "order": 18,
+      "text": "■\n■If medication toxicity suspected \n",
+      "bbox": [
+        192.55650329589844,
+        219.1212921142578,
+        303.631591796875,
+        227.82879638671875
+      ],
+      "text_sha256": "68673398143d3d33400ef21dd0b416a3cade180a620ba15f39e77d7fdd9feab9"
+    },
+    {
+      "block_id": "page-0847-block-0019",
+      "order": 19,
+      "text": "withhold and reassess dose\n",
+      "bbox": [
+        201.5565948486328,
+        229.11878967285156,
+        288.5341796875,
+        237.8262939453125
+      ],
+      "text_sha256": "2ca9b1c21c409bd798cfd3102cda6e7643a45a97c61a5fb93f006fc5119a1a11"
+    },
+    {
+      "block_id": "page-0847-block-0020",
+      "order": 20,
+      "text": "After surgery (>6 weeks after)\n",
+      "bbox": [
+        316.2240905761719,
+        108.93879699707031,
+        422.83673095703125,
+        117.8262939453125
+      ],
+      "text_sha256": "ab87bc84512ea2f4401c9e6e776e3a8253239a6855828766566d566fc09a66d3"
+    },
+    {
+      "block_id": "page-0847-block-0021",
+      "order": 21,
+      "text": "■\n■Continue regular monitoring \n",
+      "bbox": [
+        316.2231140136719,
+        119.12129974365234,
+        418.86083984375,
+        127.82879638671875
+      ],
+      "text_sha256": "65601526c88e962170a6cea4c5721c7b9d921f3c5918ff89b6cd13b1b2e94981"
+    },
+    {
+      "block_id": "page-0847-block-0022",
+      "order": 22,
+      "text": "for the first year postopera-\ntively, although frequency can \nbe reduced if stable\n",
+      "bbox": [
+        325.22320556640625,
+        129.11878967285156,
+        422.73822021484375,
+        157.8212890625
+      ],
+      "text_sha256": "df1ba4013b873efa21899d7d1ca8de20d58c0060e2ebc068e0182c444652802f"
+    },
+    {
+      "block_id": "page-0847-block-0023",
+      "order": 23,
+      "text": "■\n■Monitor for an increase in \n",
+      "bbox": [
+        316.2231140136719,
+        159.1212921142578,
+        410.10076904296875,
+        167.82879638671875
+      ],
+      "text_sha256": "6a35048eed07909f01b1849c118373a48339ed25fdad0eccc5441b90522e56a9"
+    },
+    {
+      "block_id": "page-0847-block-0024",
+      "order": 24,
+      "text": "adverse effects, especially if \ndoses were increased in the \nacute post-operative period\n",
+      "bbox": [
+        325.22320556640625,
+        169.11878967285156,
+        415.38824462890625,
+        197.8212890625
+      ],
+      "text_sha256": "a7177927c2ff4dcff76df65661e3661eef84e95d496348fb0726ad630cb057b6"
+    },
+    {
+      "block_id": "page-0847-block-0025",
+      "order": 25,
+      "text": "■\n■Consider returning to presurgical \n",
+      "bbox": [
+        316.2231140136719,
+        199.1212921142578,
+        427.8081359863281,
+        207.82879638671875
+      ],
+      "text_sha256": "16d79ba4be7b644c1f45ddf4bcb50cbbf4b42393bb23d3ac7208a3d533f90bed"
+    },
+    {
+      "block_id": "page-0847-block-0026",
+      "order": 26,
+      "text": "treatment regimen after 1 year \n(depending on clinical history)\n",
+      "bbox": [
+        325.22320556640625,
+        209.11878967285156,
+        421.42572021484375,
+        227.82379150390625
+      ],
+      "text_sha256": "442dafe79ed3e8a5d12a982cdec05eaf7a10b2950310db317fd6801c0bb0fa00"
+    },
+    {
+      "block_id": "page-0847-block-0027",
+      "order": 27,
+      "text": "General management strategies for patients demonstrating signs of reduced bioavailability\n",
+      "bbox": [
+        68.88818359375,
+        247.06129455566406,
+        391.3280944824219,
+        255.94879150390625
+      ],
+      "text_sha256": "74450df5c597921e689bbfce08e23e2ab939fc6343c9d559783420bf477e569d"
+    },
+    {
+      "block_id": "page-0847-block-0028",
+      "order": 28,
+      "text": "■\n■Consider non-oral routes of administration where available (e.g. depots for patients stable on antipsychotics)\n",
+      "bbox": [
+        68.88999938964844,
+        259.2463073730469,
+        424.3450927734375,
+        267.95379638671875
+      ],
+      "text_sha256": "4ab1111c8a5e6d2bcc2b0bf780e24e3b29d3f74be87cc5977ac51fdfbf773de5"
+    },
+    {
+      "block_id": "page-0847-block-0029",
+      "order": 29,
+      "text": "■\n■Dividing doses may improve malabsorption related to a reduced stomach capacity after surgery\n",
+      "bbox": [
+        68.88999938964844,
+        269.2463073730469,
+        380.8299865722656,
+        277.95379638671875
+      ],
+      "text_sha256": "f341edec1a66d184cf7cc1c41dd39db12661ee7675ee98c2dffc38699094efbb"
+    },
+    {
+      "block_id": "page-0847-block-0030",
+      "order": 30,
+      "text": "■\n■Switching modified/prolonged/delayed-release to immediate-release formulations\n",
+      "bbox": [
+        68.88999938964844,
+        279.2463073730469,
+        337.0900573730469,
+        287.95379638671875
+      ],
+      "text_sha256": "725ebfdfd4265ba4f3665e0ecdd9ff5415561a19549b5e1b43cd90147f903cbf"
+    },
+    {
+      "block_id": "page-0847-block-0031",
+      "order": 31,
+      "text": "■\n■Switching solid tablets to liquid or orodispersible preparations to bypass disintegration phase\n",
+      "bbox": [
+        68.88999938964844,
+        289.2463073730469,
+        373.0976257324219,
+        297.95379638671875
+      ],
+      "text_sha256": "7cd84f711f75b5dfc4121f70713ab65b4d19ab5f6b306d368e3d8a23201d8347"
+    },
+    {
+      "block_id": "page-0847-block-0032",
+      "order": 32,
+      "text": "■\n■Switching large tablets to smaller ones\n",
+      "bbox": [
+        68.88999938964844,
+        299.2463073730469,
+        200.81495666503906,
+        307.95379638671875
+      ],
+      "text_sha256": "8dd9b270a3c05f12324d679eff880cb78af874ce451fd8df02aa9304b6ab90d0"
+    },
+    {
+      "block_id": "page-0847-block-0033",
+      "order": 33,
+      "text": "■\n■In cases where doses have been increased to account for reduced bioavailability, monitor for emergent \n",
+      "bbox": [
+        68.88999938964844,
+        309.2463073730469,
+        406.83258056640625,
+        317.95379638671875
+      ],
+      "text_sha256": "947ca6e07bf60ec66aa6f342540f4984d45b77dc56ab91d1643107572cdc1cef"
+    },
+    {
+      "block_id": "page-0847-block-0034",
+      "order": 34,
+      "text": "adverse effects as bioavailability may normalise over time.\n",
+      "bbox": [
+        77.88999938964844,
+        319.2438049316406,
+        261.482421875,
+        327.9512939453125
+      ],
+      "text_sha256": "5b2fd9205f1d15604631c41b7ed346b57ecc4e15c842b8612daaeb13f1e65da8"
+    },
+    {
+      "block_id": "page-0847-block-0035",
+      "order": 35,
+      "text": "Psychotropics with a risk of weight gain after bariatric surgery\n",
+      "bbox": [
+        61.88999938964844,
+        351.7289733886719,
+        355.8400573730469,
+        363.5789794921875
+      ],
+      "text_sha256": "a8b58545ac4b1756e73b5e22cdbfe658439a3c80787f437a0117fe1d4b8469e6"
+    },
+    {
+      "block_id": "page-0847-block-0036",
+      "order": 36,
+      "text": "It is estimated that 10–20% of patients regain a significant amount of weight after bari-\natric surgery.49 There is no information on how psychotropics associated with weight \ngain affect outcomes after surgery, but high-risk drugs should probably be avoided. \nPatients’ individual clinical circumstances should be considered (especially if stable on \ntreatment and at a high risk of relapse) as there is evidence that uncontrolled mental \nillness is a risk factor for weight regain.49\n",
+      "bbox": [
+        61.88999938964844,
+        369.63897705078125,
+        436.714111328125,
+        441.3589782714844
+      ],
+      "text_sha256": "485f7fe982de2756099bee43178cf1b0712a5adf31cb264369335e2ff467e022"
+    },
+    {
+      "block_id": "page-0847-block-0037",
+      "order": 37,
+      "text": "Alcohol50,51\n",
+      "bbox": [
+        61.88999938964844,
+        458.7939758300781,
+        117.03972625732422,
+        471.8289794921875
+      ],
+      "text_sha256": "ff2cff17d7cfaeacd00304de940cf8f324258d0d37db8fa6ba6526fe5c7dc332"
+    },
+    {
+      "block_id": "page-0847-block-0038",
+      "order": 38,
+      "text": "Gastric bypass surgery is associated with accelerated alcohol absorption, higher maxi-\nmum alcohol concentrations and a longer time to elimination. There is also an increased \nrisk of alcohol misuse disorders after gastric bypass. Data are less clear for sleeve gas-\ntrectomy and there is no evidence that gastric banding leads to any changes.\n",
+      "bbox": [
+        61.88999938964844,
+        477.63897705078125,
+        436.7199401855469,
+        525.3590087890625
+      ],
+      "text_sha256": "1ad9f30a1b4764b2f4b05517f933b22cf81d8232ef9deb6561f21af8d0372055"
+    },
+    {
+      "block_id": "page-0847-block-0039",
+      "order": 39,
+      "text": "Wider considerations52\n",
+      "bbox": [
+        61.88999938964844,
+        542.7940063476562,
+        178.41505432128906,
+        555.8289794921875
+      ],
+      "text_sha256": "45a465dc9db8e8f95f675b751e197f3c3438675dabc318c7208976524dde69fc"
+    },
+    {
+      "block_id": "page-0847-block-0040",
+      "order": 40,
+      "text": "In practice, many patients may not require significant changes to drug treatment after \nsurgery. Relapse of symptoms after surgery may not be related to altered drug pharma-\ncokinetics. Although improvements in mental health are to be anticipated, deterioration \ncan also occur due to a range of factors, including unmet weight-loss expectations, poor \ntolerability and dissatisfaction after surgical treatment.\n",
+      "bbox": [
+        61.88999938964844,
+        561.6389770507812,
+        436.7099914550781,
+        621.3590087890625
+      ],
+      "text_sha256": "92a90b351106206085c1dccbaa69acbd70c9bf339856fbd2f42bd9cbce350489"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

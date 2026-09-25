@@ -1,0 +1,215 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0498",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 498,
+  "source_page_index": 497,
+  "source_page_display": 498,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    477\nCHAPTER 4\nTable 4.8  Clinical Opiate Withdrawal Scale (COWS)\nResting pulse rate: ___________beats/minute\nMeasured after patient is sitting or lying for 1 \nminute:\n0 – pulse rate 80 or below\n1 – pulse rate 81–100\n2 – pulse rate 101–120\n4 – pulse rate greater than 120\nGI upset – over last 1/2 hour:\n0 – no GI symptoms\n1 – stomach cramps\n2 – nausea or loose stool\n3 – vomiting or diarrhoea\n5 – multiple episodes of diarrhoea or vomiting\nSweating – Over past 1/2 hour not accounted for \nby room temperature or patient activity:\n0 – no report of chills or flushing\n1 – subjective report of chills or flushing\n2 – flushed or observable moistness on face\n3 – beads of sweat on brow or face\n4 – sweat streaming off face\nTremor – Observation of outstretched hands:\n0 – no tremor\n1 – tremor can be felt, but not observed\n2 – slight tremor observable\n4 – gross tremor or muscle twitching\nRestlessness – Observation during assessment:\n0 – able to sit still\n1 – reports difficulty sitting still, but is able to do so\n3 – frequent shifting or extraneous movements of \nlegs/arms\n5 – unable to sit still for more than a few seconds\nYawning – Observation during assessment:\n0 – no yawning\n1 – yawning once or twice during assessment\n2 – yawning 3 or more times during assessment\n4 – yawning several times/minute\nPupil size:\n0 – pupils pinned or normal size for room light\n1 – pupils possibly larger than normal for room light\n2 – pupils moderately dilated\n5 – pupils so dilated that only the rim of the iris is \nvisible\nAnxiety or irritability:\n0 – none\n1 – patient reports increasing irritability or anxiousness\n2 – patient is obviously irritable or anxious\n4 – patient is so irritable or anxious that participation in the \nassessment is difficult\nBone or joint aches – If patient was having pain \npreviously, only the additional component attributed \nto opiates withdrawal is scored:\n0 – not present\n1 – mild diffuse discomfort\n2 – patient reports severe diffuse aching of joints/\nmuscles\n4 – patient is rubbing joints or muscles and is unable \nto sit still because of discomfort\nGooseflesh skin:\n0 – skin is smooth\n3 – piloerection of skin can be felt or hairs standing up on \narms\n5 – prominent piloerection\nRunny nose or tearing – Not accounted for by \ncold – symptoms or allergies:\n0 – not present\n1 – nasal stuffiness or unusually moist eyes\n2 – nose running or tearing\n4 – nose constantly running or tears streaming \ndown cheeks\nTotal score___________\n(The total score is the sum of all 11 items)\nGI, gastrointestinal. \nScore: 5–12 = mild; 13–24 = moderate; 25–36 = moderately severe; more than 36 = severe withdrawal.\n",
+  "raw_text_sha256": "d7315aee10cbd15d38f0a90da31cf12d32a9b4a4cad306e2fdd00cce55fe084c",
+  "coordinates_sha256": "21f91dd6fce3804404a0f4a934b82d9785054e6e34a6c769cb428d8df2b87eed",
+  "block_sequence_sha256": "0286a946e97c400e8da2d57f8d74c16e88e3fe2fc23ae9c4f1f3d0772a8cad4b",
+  "blocks": [
+    {
+      "block_id": "page-0498-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    477\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "c5487538ab0e43eb6a46253a22a5966a7c8fb0d9cd1deeb60c5406f5e37d87cb"
+    },
+    {
+      "block_id": "page-0498-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0498-block-0002",
+      "order": 2,
+      "text": "Table 4.8  Clinical Opiate Withdrawal Scale (COWS)\n",
+      "bbox": [
+        54.0,
+        70.08790588378906,
+        220.0275115966797,
+        78.97540283203125
+      ],
+      "text_sha256": "caffa5df67fe4f9b1fd21e987ef897ea2416080ff58cbb3454148da270738ad3"
+    },
+    {
+      "block_id": "page-0498-block-0003",
+      "order": 3,
+      "text": "Resting pulse rate: ___________beats/minute\nMeasured after patient is sitting or lying for 1 \nminute:\n0 – pulse rate 80 or below\n1 – pulse rate 81–100\n2 – pulse rate 101–120\n4 – pulse rate greater than 120\n",
+      "bbox": [
+        48.0,
+        89.96290588378906,
+        198.43496704101562,
+        158.83538818359375
+      ],
+      "text_sha256": "7019d28a0eed53527635f80e58327513d90ba7ce2c8d49b043c0c0ebeab66dda"
+    },
+    {
+      "block_id": "page-0498-block-0004",
+      "order": 4,
+      "text": "GI upset – over last 1/2 hour:\n0 – no GI symptoms\n1 – stomach cramps\n2 – nausea or loose stool\n3 – vomiting or diarrhoea\n5 – multiple episodes of diarrhoea or vomiting\n",
+      "bbox": [
+        228.0,
+        89.94789123535156,
+        375.525146484375,
+        148.8228759765625
+      ],
+      "text_sha256": "a6649e8d17b8de6231bc1af7537f5f3b09da7b5e48ddaaa9cbefdb9ace08d9f8"
+    },
+    {
+      "block_id": "page-0498-block-0005",
+      "order": 5,
+      "text": "Sweating – Over past 1/2 hour not accounted for \nby room temperature or patient activity:\n0 – no report of chills or flushing\n1 – subjective report of chills or flushing\n2 – flushed or observable moistness on face\n3 – beads of sweat on brow or face\n4 – sweat streaming off face\n",
+      "bbox": [
+        48.0,
+        168.0603790283203,
+        210.9600067138672,
+        236.932861328125
+      ],
+      "text_sha256": "8bd76da180575b938a86c9ca7a9deffb91e1ae75ce5059427c401d49abf69495"
+    },
+    {
+      "block_id": "page-0498-block-0006",
+      "order": 6,
+      "text": "Tremor – Observation of outstretched hands:\n0 – no tremor\n1 – tremor can be felt, but not observed\n2 – slight tremor observable\n4 – gross tremor or muscle twitching\n",
+      "bbox": [
+        228.0,
+        168.0453643798828,
+        373.5901184082031,
+        216.9228515625
+      ],
+      "text_sha256": "fb9980b42c150ec479ca59bbe57d2305332893812159d8c0771d47a67ee5b4de"
+    },
+    {
+      "block_id": "page-0498-block-0007",
+      "order": 7,
+      "text": "Restlessness – Observation during assessment:\n0 – able to sit still\n1 – reports difficulty sitting still, but is able to do so\n3 – frequent shifting or extraneous movements of \nlegs/arms\n5 – unable to sit still for more than a few seconds\n",
+      "bbox": [
+        48.0,
+        246.15785217285156,
+        211.49996948242188,
+        305.0328369140625
+      ],
+      "text_sha256": "398f08c5ee31a5bd311d6f4e1a2f7cd2b68bde880b0a8640ff4a95d594a1f3fc"
+    },
+    {
+      "block_id": "page-0498-block-0008",
+      "order": 8,
+      "text": "Yawning – Observation during assessment:\n0 – no yawning\n1 – yawning once or twice during assessment\n2 – yawning 3 or more times during assessment\n4 – yawning several times/minute\n",
+      "bbox": [
+        228.0,
+        246.14283752441406,
+        380.8126525878906,
+        295.02032470703125
+      ],
+      "text_sha256": "8b3d3302b8f867da5c34919b77b8a0ba01335a2b781365ac11736b3274beca5a"
+    },
+    {
+      "block_id": "page-0498-block-0009",
+      "order": 9,
+      "text": "Pupil size:\n0 – pupils pinned or normal size for room light\n1 – pupils possibly larger than normal for room light\n2 – pupils moderately dilated\n5 – pupils so dilated that only the rim of the iris is \nvisible\n",
+      "bbox": [
+        48.0,
+        314.2578125,
+        214.14747619628906,
+        373.1328125
+      ],
+      "text_sha256": "f3dfab04207862f556f98465f187c4db8a0d9def6abf98f07c77f5ef8ff393f7"
+    },
+    {
+      "block_id": "page-0498-block-0010",
+      "order": 10,
+      "text": "Anxiety or irritability:\n0 – none\n1 – patient reports increasing irritability or anxiousness\n2 – patient is obviously irritable or anxious\n4 – patient is so irritable or anxious that participation in the \nassessment is difficult\n",
+      "bbox": [
+        228.0,
+        314.2427978515625,
+        419.27264404296875,
+        373.1177978515625
+      ],
+      "text_sha256": "b46e6ddf8639ed7f18e47344de884ca26f84a5b54ff7393717b7cf9d1414655a"
+    },
+    {
+      "block_id": "page-0498-block-0011",
+      "order": 11,
+      "text": "Bone or joint aches – If patient was having pain \npreviously, only the additional component attributed \nto opiates withdrawal is scored:\n0 – not present\n1 – mild diffuse discomfort\n2 – patient reports severe diffuse aching of joints/\nmuscles\n4 – patient is rubbing joints or muscles and is unable \nto sit still because of discomfort\n",
+      "bbox": [
+        48.0,
+        382.3577880859375,
+        218.04747009277344,
+        471.22528076171875
+      ],
+      "text_sha256": "532895e1b6880babed5b47cd9a25649e270e18c2f3615fd4c9eeacedf58b55f0"
+    },
+    {
+      "block_id": "page-0498-block-0012",
+      "order": 12,
+      "text": "Gooseflesh skin:\n0 – skin is smooth\n3 – piloerection of skin can be felt or hairs standing up on \narms\n5 – prominent piloerection\n",
+      "bbox": [
+        228.0,
+        382.33526611328125,
+        414.9976501464844,
+        431.2127685546875
+      ],
+      "text_sha256": "f10413a2d41c811547ce5f3fb2a4899362936d1bd7d3fd5dd79b6f1b3e2bf6c3"
+    },
+    {
+      "block_id": "page-0498-block-0013",
+      "order": 13,
+      "text": "Runny nose or tearing – Not accounted for by \ncold – symptoms or allergies:\n0 – not present\n1 – nasal stuffiness or unusually moist eyes\n2 – nose running or tearing\n4 – nose constantly running or tears streaming \ndown cheeks\n",
+      "bbox": [
+        48.0,
+        480.45025634765625,
+        204.2775115966797,
+        549.32275390625
+      ],
+      "text_sha256": "42dbb3179babb7789c183808e1a6f06034031c67a2035cae54404192e32ca343"
+    },
+    {
+      "block_id": "page-0498-block-0014",
+      "order": 14,
+      "text": "Total score___________\n(The total score is the sum of all 11 items)\n",
+      "bbox": [
+        228.0,
+        480.43524169921875,
+        361.2150573730469,
+        499.32025146484375
+      ],
+      "text_sha256": "1fd710dc9f76726ea9354ef60b643fba4ef8c12e52b5fef4656f72d7072ba713"
+    },
+    {
+      "block_id": "page-0498-block-0015",
+      "order": 15,
+      "text": "GI, gastrointestinal. \nScore: 5–12 = mild; 13–24 = moderate; 25–36 = moderately severe; more than 36 = severe withdrawal.\n",
+      "bbox": [
+        48.0,
+        559.365234375,
+        380.2275085449219,
+        578.0702514648438
+      ],
+      "text_sha256": "3b64167701bb312c0fbcb62738aa8281a2f603eafc346c722a12611f6500eb9d"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

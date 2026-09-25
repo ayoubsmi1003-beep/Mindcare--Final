@@ -1,0 +1,767 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0635",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 635,
+  "source_page_index": 634,
+  "source_page_display": 635,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Table 6.2  Drug–drug interactions8–12,74,75\nDrug\nMetabolism\nPlasma levels \nincreased by\nPlasma levels \ndecreased by\nPharmacodynamic interactions\nDonepezil\n(Aricept®)\nSubstrate at 3A4 \nand 2D6\nKetoconazole \nItraconazole\nErythromycin\nQuinidine\nFluoxetine\nParoxetine\nRifampicin\nPhenytoin\nCarbamazepine\nAlcohol\nAntagonistic with anticholinergic drugs and competitive neuromuscular blockers (e.g. \ntubocurarine). Potential for synergistic activity with cholinomimetics such as depolarising \nneuro-muscular blocking agents (e.g. succinylcholine), cholinergic agonists and \nperipherally acting cholinesterase inhibitors, e.g. neostigmine. Beta blockers, amiodarone \nor calcium channel blockers may have additive effects on cardiac conduction. Caution with \nconcomitant use of drugs known to induce QT prolongation and/or torsade de pointes. \nMovement disorders and neuroleptic malignant syndrome have occurred with concomitant use of \nantipsychotics and cholinesterase inhibitors.\nConcurrent use with seizure lowering agents may result in reduced seizure threshold.\nRivastigmine\n(Exelon®)\nNon-hepatic \nmetabolism\nMetabolic interactions appear unlikely.\nRivastigmine may inhibit the \nbutyrylcholinesterase-mediated \nmetabolism of other substances, e.g. \ncocaine.\nSmoking tobacco increases the clearance \nof rivastigmine\nAntagonistic effects with anticholinergic and competitive neuromuscular blockers (e.g. \ntubocurarine). Potential for synergistic activity with cholinomimetics such as depolarising \nneuro-muscular blocking agents (e.g. succinylcholine) – cholinergic agonists, e.g. \nbethanechol or peripherally acting cholinesterase inhibitors, e.g. neostigmine. Synergistic \neffects on cardiac conduction with beta blockers, amiodarone, calcium channel blockers. \nCaution with concomitant use of drugs known to induce QT prolongation and/or torsade de \npointes. Movement disorders and neuroleptic malignant syndrome have occurred with \nconcomitant use of antipsychotics and cholinesterase inhibitors. Concurrent use with \nmetoclopramide may result in increased risk of extrapyramidal symptoms\nGalantamine\n(Reminyl®)\nSubstrate at 3A4 \nand 2D6\nKetoconazole\nErythromycin\nRitonavir\nQuinidine\nParoxetine\nFluoxetine\nFluvoxamine\nAmitriptyline\nNone known\nAntagonistic effects with anticholinergic and competitive neuromuscular blockers (e.g. \ntubocurarine). Potential for synergistic activity with cholinomimetics such as depolarising \nneuro-muscular blocking agents (e.g. succinylcholine), cholinergic agonists and \nperipherally acting cholinesterase inhibitors, e.g. neostigmine. Possible interaction with \nagents that significantly reduce heart rate, e.g. digoxin, beta blockers, certain calcium-\nchannel blockers and amiodarone. Caution with concomitant use of drugs known to induce QT \nprolongation and/or torsade de pointes (manufacturer recommends ECG in such cases). \nMovement disorders and neuroleptic malignant syndrome have occurred with concomitant use of \nantipsychotics and cholinesterase inhibitors\n",
+  "raw_text_sha256": "14d46d2051c8cb499b5008eb8ca82db87d48ca4c0f1de99771559eda25ba4dbf",
+  "coordinates_sha256": "f633660a95447d714d56519d728dbbb31d44761ad02924aa2b5de4c76b77ddd3",
+  "block_sequence_sha256": "019b23b405d3792d6d642c2ce55d9255df4057c536c1eeaf9d63bca70f33c896",
+  "blocks": [
+    {
+      "block_id": "page-0635-block-0000",
+      "order": 0,
+      "text": "Table 6.2  Drug–drug interactions8–12,74,75\n",
+      "bbox": [
+        87.25240325927734,
+        499.8342590332031,
+        96.13990020751953,
+        629.8359985351562
+      ],
+      "text_sha256": "a3fbeb58847d3b80a014918367d75a7a4e928d7e6c1ee79d2290baefefc29331"
+    },
+    {
+      "block_id": "page-0635-block-0001",
+      "order": 1,
+      "text": "Drug\nMetabolism\nPlasma levels \n",
+      "bbox": [
+        105.1299057006836,
+        472.0635070800781,
+        124.01490020751953,
+        631.8359985351562
+      ],
+      "text_sha256": "6b95c650eba92624c6dd617d77aa98d61162d1c340bb9d1dba099c9250b3f00a"
+    },
+    {
+      "block_id": "page-0635-block-0002",
+      "order": 2,
+      "text": "increased by\nPlasma levels \n",
+      "bbox": [
+        105.1299057006836,
+        413.0610046386719,
+        124.01490020751953,
+        520.8359985351562
+      ],
+      "text_sha256": "3878da008039b209456be845a42435181dd047035adfaf899bdd9956489e5254"
+    },
+    {
+      "block_id": "page-0635-block-0003",
+      "order": 3,
+      "text": "decreased by\nPharmacodynamic interactions\n",
+      "bbox": [
+        115.12740325927734,
+        267.3210144042969,
+        124.01490020751953,
+        461.83349609375
+      ],
+      "text_sha256": "ea5405c0075e204b0faa212fef109efc0c1142459de418c8082652a6ea1e58c3"
+    },
+    {
+      "block_id": "page-0635-block-0004",
+      "order": 4,
+      "text": "Donepezil\n",
+      "bbox": [
+        130.92990112304688,
+        600.1635131835938,
+        139.6374053955078,
+        631.8359985351562
+      ],
+      "text_sha256": "b8e63ef11eafa39765499cf2204f3787a2dfdf981c733d99224248e69a3925cc"
+    },
+    {
+      "block_id": "page-0635-block-0005",
+      "order": 5,
+      "text": "(Aricept®)\nSubstrate at 3A4 \n",
+      "bbox": [
+        130.9348907470703,
+        526.990966796875,
+        149.639892578125,
+        631.8359985351562
+      ],
+      "text_sha256": "709a148e86289b950595a52e40bd950625b809523c3ac0a156434df01717e0b9"
+    },
+    {
+      "block_id": "page-0635-block-0006",
+      "order": 6,
+      "text": "and 2D6\nKetoconazole \n",
+      "bbox": [
+        130.75489807128906,
+        470.823486328125,
+        149.639892578125,
+        582.8359985351562
+      ],
+      "text_sha256": "838d5002a84c82708c4b04333b48981bd24305b58603a07f76064c67f5b08d60"
+    },
+    {
+      "block_id": "page-0635-block-0007",
+      "order": 7,
+      "text": "Itraconazole\n",
+      "bbox": [
+        140.7523956298828,
+        477.490966796875,
+        149.639892578125,
+        520.83349609375
+      ],
+      "text_sha256": "7dc52bc856a40ba1d1859ad83eaeea652b259f3c299267bfb5e74efd26870c37"
+    },
+    {
+      "block_id": "page-0635-block-0008",
+      "order": 8,
+      "text": "Erythromycin\n",
+      "bbox": [
+        150.74989318847656,
+        473.8760070800781,
+        159.63739013671875,
+        520.83349609375
+      ],
+      "text_sha256": "fafff8d57f4b4774e0658137d981836109876d3558da798bb053f099433c3c1b"
+    },
+    {
+      "block_id": "page-0635-block-0009",
+      "order": 9,
+      "text": "Quinidine\n",
+      "bbox": [
+        160.7473907470703,
+        486.2434387207031,
+        169.6348876953125,
+        520.83349609375
+      ],
+      "text_sha256": "c014a04f8b5f7dab1bd64b63c769d55edd2074cb0dc0e3213161a66a095fb203"
+    },
+    {
+      "block_id": "page-0635-block-0010",
+      "order": 10,
+      "text": "Fluoxetine\n",
+      "bbox": [
+        170.74488830566406,
+        483.73846435546875,
+        179.63238525390625,
+        520.83349609375
+      ],
+      "text_sha256": "64bddad39bbb2c09fc17a61e133c76f0a2f9e33970f1f43fb3afcc1af67f1115"
+    },
+    {
+      "block_id": "page-0635-block-0011",
+      "order": 11,
+      "text": "Paroxetine\n",
+      "bbox": [
+        180.7423858642578,
+        483.0334777832031,
+        189.6298828125,
+        520.83349609375
+      ],
+      "text_sha256": "28eaf71fe586c3e724724969847e8fcfc0e9a26141414418cc00098fe6f60303"
+    },
+    {
+      "block_id": "page-0635-block-0012",
+      "order": 12,
+      "text": "Rifampicin\n",
+      "bbox": [
+        130.73988342285156,
+        424.7435302734375,
+        139.62738037109375,
+        461.83099365234375
+      ],
+      "text_sha256": "576bafdd6d0463dc5f4e6c471bc6146862cf9190d351a4c89fd268238c43b610"
+    },
+    {
+      "block_id": "page-0635-block-0013",
+      "order": 13,
+      "text": "Phenytoin\n",
+      "bbox": [
+        140.7373809814453,
+        425.988525390625,
+        149.6248779296875,
+        461.83099365234375
+      ],
+      "text_sha256": "197a76ade0fe9573b3a10e6a1d291cc54e54cd9be662d69600a313110d0092bc"
+    },
+    {
+      "block_id": "page-0635-block-0014",
+      "order": 14,
+      "text": "Carbamazepine\n",
+      "bbox": [
+        150.73487854003906,
+        407.2309875488281,
+        159.62237548828125,
+        461.83099365234375
+      ],
+      "text_sha256": "4dfbcc7868753a38e09b7a63c84ebc448722e70b17b881574105c13f526c2689"
+    },
+    {
+      "block_id": "page-0635-block-0015",
+      "order": 15,
+      "text": "Alcohol\n",
+      "bbox": [
+        160.7323760986328,
+        435.1684875488281,
+        169.619873046875,
+        461.83099365234375
+      ],
+      "text_sha256": "ea607c5a5b871f6582c8881d61eec7d991d381ac1069909f5b165d897b466b47"
+    },
+    {
+      "block_id": "page-0635-block-0016",
+      "order": 16,
+      "text": "Antagonistic with anticholinergic drugs and competitive neuromuscular blockers (e.g. \n",
+      "bbox": [
+        130.7323760986328,
+        80.7558822631836,
+        139.619873046875,
+        375.2510070800781
+      ],
+      "text_sha256": "497c8c24b7fd253e50bd547a78d9b87c10b754e2f170daa6945a6481fd404642"
+    },
+    {
+      "block_id": "page-0635-block-0017",
+      "order": 17,
+      "text": "tubocurarine). Potential for synergistic activity with cholinomimetics such as depolarising \n",
+      "bbox": [
+        140.72987365722656,
+        76.08345794677734,
+        149.61737060546875,
+        375.2510070800781
+      ],
+      "text_sha256": "7f794720b2c110ac9e641f5853bb70cef12ddc0480a2a5faf0f21a162bcb066a"
+    },
+    {
+      "block_id": "page-0635-block-0018",
+      "order": 18,
+      "text": "neuro-muscular blocking agents (e.g. succinylcholine), cholinergic agonists and \n",
+      "bbox": [
+        150.7273712158203,
+        98.69612884521484,
+        159.6148681640625,
+        375.2510070800781
+      ],
+      "text_sha256": "def56a8be8eb287abe5893b9c9ebbc5f4383ca122ecef68012d514e90bb1d861"
+    },
+    {
+      "block_id": "page-0635-block-0019",
+      "order": 19,
+      "text": "peripherally acting cholinesterase inhibitors, e.g. neostigmine. Beta blockers, amiodarone \n",
+      "bbox": [
+        160.72486877441406,
+        58.165916442871094,
+        169.61236572265625,
+        375.2510070800781
+      ],
+      "text_sha256": "a58796d1f92ed07183eac030611b52023d60faaec208829bdb9b946830baf383"
+    },
+    {
+      "block_id": "page-0635-block-0020",
+      "order": 20,
+      "text": "or calcium channel blockers may have additive effects on cardiac conduction. Caution with \n",
+      "bbox": [
+        170.7223663330078,
+        75.07881927490234,
+        179.60986328125,
+        375.25103759765625
+      ],
+      "text_sha256": "b7faa3b3cca9039c5bc35b0151045d87248c3b24450823eae1cc210f26f9a6ea"
+    },
+    {
+      "block_id": "page-0635-block-0021",
+      "order": 21,
+      "text": "concomitant use of drugs known to induce QT prolongation and/or torsade de pointes. \n",
+      "bbox": [
+        180.71986389160156,
+        71.59847259521484,
+        189.60736083984375,
+        375.25103759765625
+      ],
+      "text_sha256": "a638a6febc12c81606402680cf94ce5f17d84ab6469e97e309a3be5f7a898360"
+    },
+    {
+      "block_id": "page-0635-block-0022",
+      "order": 22,
+      "text": "Movement disorders and neuroleptic malignant syndrome have occurred with concomitant use of \n",
+      "bbox": [
+        190.89735412597656,
+        61.585899353027344,
+        199.6048583984375,
+        375.25103759765625
+      ],
+      "text_sha256": "1a39d9b22b7745e94ac256328bf4a70ce3fb98bb835ff79b1ee7a4c2b259e9b4"
+    },
+    {
+      "block_id": "page-0635-block-0023",
+      "order": 23,
+      "text": "antipsychotics and cholinesterase inhibitors.\n",
+      "bbox": [
+        200.71485900878906,
+        230.2384490966797,
+        209.60235595703125,
+        375.25103759765625
+      ],
+      "text_sha256": "e22ca9a68ddf4919167c367dad2569fb99798b3e66b69b9e8cbd071c5076fd08"
+    },
+    {
+      "block_id": "page-0635-block-0024",
+      "order": 24,
+      "text": "Concurrent use with seizure lowering agents may result in reduced seizure threshold.\n",
+      "bbox": [
+        210.7123565673828,
+        94.76619720458984,
+        219.599853515625,
+        375.25103759765625
+      ],
+      "text_sha256": "b23d7a9b9111537c5fb74560ed120b0004d2d34d5549925b7481eafde6cb643d"
+    },
+    {
+      "block_id": "page-0635-block-0025",
+      "order": 25,
+      "text": "Rivastigmine\n",
+      "bbox": [
+        226.5148468017578,
+        591.8360595703125,
+        235.22235107421875,
+        631.83349609375
+      ],
+      "text_sha256": "fec54de58c6ef0caeb8eea433596c8d2e15e438cbd707ad8ca81e635e7d5d3ac"
+    },
+    {
+      "block_id": "page-0635-block-0026",
+      "order": 26,
+      "text": "(Exelon®)\nNon-hepatic \n",
+      "bbox": [
+        226.5598907470703,
+        541.5783081054688,
+        245.264892578125,
+        631.83349609375
+      ],
+      "text_sha256": "3a50fd86c3de21a7f1c888968781c1e80571cc54d7f48c335feb83a76c500d22"
+    },
+    {
+      "block_id": "page-0635-block-0027",
+      "order": 27,
+      "text": "metabolism\nMetabolic interactions appear unlikely.\n",
+      "bbox": [
+        226.5598907470703,
+        398.185791015625,
+        245.264892578125,
+        582.8358154296875
+      ],
+      "text_sha256": "801b0fb2a594eafad5dd2b63401c66225e14e0272157081a33efa21c68e7b778"
+    },
+    {
+      "block_id": "page-0635-block-0028",
+      "order": 28,
+      "text": "Rivastigmine may inhibit the \n",
+      "bbox": [
+        236.55738830566406,
+        428.7483215332031,
+        245.264892578125,
+        520.833251953125
+      ],
+      "text_sha256": "6f3dded39ee9572f47544d8ee4f3b1fe9e06c753711dd8d0857132ca857a5902"
+    },
+    {
+      "block_id": "page-0635-block-0029",
+      "order": 29,
+      "text": "butyrylcholinesterase-mediated \n",
+      "bbox": [
+        246.5548858642578,
+        419.5908203125,
+        255.26239013671875,
+        520.833251953125
+      ],
+      "text_sha256": "0d9dbfcaae46088f0263ea2e76fa275851637a68da1f9289a8bfd86a8e5cb5fc"
+    },
+    {
+      "block_id": "page-0635-block-0030",
+      "order": 30,
+      "text": "metabolism of other substances, e.g. \n",
+      "bbox": [
+        256.5523986816406,
+        400.8108215332031,
+        265.2598876953125,
+        520.833251953125
+      ],
+      "text_sha256": "3ad863252802a2dccff958f46074d50d7bfa4981adda4cf3164beeac46cd4601"
+    },
+    {
+      "block_id": "page-0635-block-0031",
+      "order": 31,
+      "text": "cocaine.\n",
+      "bbox": [
+        266.369873046875,
+        492.4982604980469,
+        275.25738525390625,
+        520.833251953125
+      ],
+      "text_sha256": "66dd66266a6d8567f67bb9a286c8892630e68da9bc1ceccdbdc9ff1500b5eb49"
+    },
+    {
+      "block_id": "page-0635-block-0032",
+      "order": 32,
+      "text": "Smoking tobacco increases the clearance \n",
+      "bbox": [
+        276.36737060546875,
+        385.9682922363281,
+        285.2548828125,
+        520.833251953125
+      ],
+      "text_sha256": "351ee816b31a42ce6c6e3b3d19f71341cd6e042dc4389d472ebb70675fde71f9"
+    },
+    {
+      "block_id": "page-0635-block-0033",
+      "order": 33,
+      "text": "of rivastigmine\n",
+      "bbox": [
+        286.5448913574219,
+        473.75579833984375,
+        295.25238037109375,
+        520.833251953125
+      ],
+      "text_sha256": "8d01293589e43092df089a87e2be6a67a3a89938a21c94b2f1ecad2f5b2825d7"
+    },
+    {
+      "block_id": "page-0635-block-0034",
+      "order": 34,
+      "text": "Antagonistic effects with anticholinergic and competitive neuromuscular blockers (e.g. \n",
+      "bbox": [
+        226.36488342285156,
+        79.6456527709961,
+        235.25238037109375,
+        375.25079345703125
+      ],
+      "text_sha256": "7438ea7710822a3e09b09107811146cd1af545ffc2b42b11f67c995fd0dd4d28"
+    },
+    {
+      "block_id": "page-0635-block-0035",
+      "order": 35,
+      "text": "tubocurarine). Potential for synergistic activity with cholinomimetics such as depolarising \n",
+      "bbox": [
+        236.3623809814453,
+        76.4957504272461,
+        245.2498779296875,
+        375.25079345703125
+      ],
+      "text_sha256": "7f794720b2c110ac9e641f5853bb70cef12ddc0480a2a5faf0f21a162bcb066a"
+    },
+    {
+      "block_id": "page-0635-block-0036",
+      "order": 36,
+      "text": "neuro-muscular blocking agents (e.g. succinylcholine) – cholinergic agonists, e.g. \n",
+      "bbox": [
+        246.35987854003906,
+        94.94576263427734,
+        255.24737548828125,
+        375.25079345703125
+      ],
+      "text_sha256": "0eced657e86419eaa3bd511d686ac7ad3c5f7cd058e50ce4d939a608517d0837"
+    },
+    {
+      "block_id": "page-0635-block-0037",
+      "order": 37,
+      "text": "bethanechol or peripherally acting cholinesterase inhibitors, e.g. neostigmine. Synergistic \n",
+      "bbox": [
+        256.35736083984375,
+        62.283287048339844,
+        265.244873046875,
+        375.25079345703125
+      ],
+      "text_sha256": "68aec96082416811c90603368f2bf4c063782905f79dece74c6cc7285a751573"
+    },
+    {
+      "block_id": "page-0635-block-0038",
+      "order": 38,
+      "text": "effects on cardiac conduction with beta blockers, amiodarone, calcium channel blockers. \n",
+      "bbox": [
+        266.3548583984375,
+        73.94551849365234,
+        275.24237060546875,
+        375.25079345703125
+      ],
+      "text_sha256": "20e2e60080be966d193a07bfc61f226f7e2aba03df8074af9766b74b8535ebf4"
+    },
+    {
+      "block_id": "page-0635-block-0039",
+      "order": 39,
+      "text": "Caution with concomitant use of drugs known to induce QT prolongation and/or torsade de \n",
+      "bbox": [
+        276.35235595703125,
+        58.255638122558594,
+        285.2398681640625,
+        375.25079345703125
+      ],
+      "text_sha256": "b5cb378fe69e9ce4ef27f4bd15b18a11e1a5e50f48eb2594c9134e8f0ad3c932"
+    },
+    {
+      "block_id": "page-0635-block-0040",
+      "order": 40,
+      "text": "pointes. Movement disorders and neuroleptic malignant syndrome have occurred with \n",
+      "bbox": [
+        286.349853515625,
+        94.92317962646484,
+        295.23736572265625,
+        375.25079345703125
+      ],
+      "text_sha256": "35d490a245ec96cef5911cfbf2b4a2f6ad6557d9210c7fcab5f2f2f081931395"
+    },
+    {
+      "block_id": "page-0635-block-0041",
+      "order": 41,
+      "text": "concomitant use of antipsychotics and cholinesterase inhibitors. Concurrent use with \n",
+      "bbox": [
+        296.34735107421875,
+        97.0157699584961,
+        305.23486328125,
+        375.25079345703125
+      ],
+      "text_sha256": "e55ccb8f61a922b742a523fcc00e2031577ff2db8da8fc0e1da72adfdcc666a0"
+    },
+    {
+      "block_id": "page-0635-block-0042",
+      "order": 42,
+      "text": "metoclopramide may result in increased risk of extrapyramidal symptoms\n",
+      "bbox": [
+        306.3448486328125,
+        137.60581970214844,
+        315.23236083984375,
+        375.25079345703125
+      ],
+      "text_sha256": "f49134311aa9cf42f306354812d134f51ea64b3f70b775f1b3f4b6fda07c16a4"
+    },
+    {
+      "block_id": "page-0635-block-0043",
+      "order": 43,
+      "text": "Galantamine\n",
+      "bbox": [
+        322.1473693847656,
+        591.0032958984375,
+        330.8548583984375,
+        631.833251953125
+      ],
+      "text_sha256": "3687cd05a4c3f458a842fc47e01548a40ad92d71fed0aab0f7f63ac134b66bc4"
+    },
+    {
+      "block_id": "page-0635-block-0044",
+      "order": 44,
+      "text": "(Reminyl®)\nSubstrate at 3A4 \n",
+      "bbox": [
+        322.1849060058594,
+        526.990966796875,
+        340.889892578125,
+        631.833251953125
+      ],
+      "text_sha256": "85d0928b5440d90cf7cb999e5e977b3364540fd474a7dc93095bd26525e489c4"
+    },
+    {
+      "block_id": "page-0635-block-0045",
+      "order": 45,
+      "text": "and 2D6\nKetoconazole\n",
+      "bbox": [
+        322.0048828125,
+        472.9084777832031,
+        340.889892578125,
+        582.8359985351562
+      ],
+      "text_sha256": "2bf875be280e938ff7ae4fadc2ac40c4d398f70e6dea86c1a3cab297757726bc"
+    },
+    {
+      "block_id": "page-0635-block-0046",
+      "order": 46,
+      "text": "Erythromycin\n",
+      "bbox": [
+        332.00238037109375,
+        473.8760070800781,
+        340.889892578125,
+        520.83349609375
+      ],
+      "text_sha256": "fafff8d57f4b4774e0658137d981836109876d3558da798bb053f099433c3c1b"
+    },
+    {
+      "block_id": "page-0635-block-0047",
+      "order": 47,
+      "text": "Ritonavir\n",
+      "bbox": [
+        341.9998779296875,
+        488.740966796875,
+        350.88739013671875,
+        520.83349609375
+      ],
+      "text_sha256": "b48701bd42fce33e738d06bac62d353c6b9bfde3003ba04d5f15532bc3ea5f04"
+    },
+    {
+      "block_id": "page-0635-block-0048",
+      "order": 48,
+      "text": "Quinidine\n",
+      "bbox": [
+        351.99737548828125,
+        486.2434387207031,
+        360.8848876953125,
+        520.83349609375
+      ],
+      "text_sha256": "c014a04f8b5f7dab1bd64b63c769d55edd2074cb0dc0e3213161a66a095fb203"
+    },
+    {
+      "block_id": "page-0635-block-0049",
+      "order": 49,
+      "text": "Paroxetine\n",
+      "bbox": [
+        361.994873046875,
+        483.0334777832031,
+        370.88238525390625,
+        520.83349609375
+      ],
+      "text_sha256": "28eaf71fe586c3e724724969847e8fcfc0e9a26141414418cc00098fe6f60303"
+    },
+    {
+      "block_id": "page-0635-block-0050",
+      "order": 50,
+      "text": "Fluoxetine\n",
+      "bbox": [
+        371.99237060546875,
+        483.73846435546875,
+        380.8798828125,
+        520.83349609375
+      ],
+      "text_sha256": "64bddad39bbb2c09fc17a61e133c76f0a2f9e33970f1f43fb3afcc1af67f1115"
+    },
+    {
+      "block_id": "page-0635-block-0051",
+      "order": 51,
+      "text": "Fluvoxamine\n",
+      "bbox": [
+        381.9898681640625,
+        475.8184509277344,
+        390.87738037109375,
+        520.83349609375
+      ],
+      "text_sha256": "69f72b89f6f098b804bdf2fc71e12ac3bef08fa5c2f53639edc98631f4fcfa5e"
+    },
+    {
+      "block_id": "page-0635-block-0052",
+      "order": 52,
+      "text": "Amitriptyline\n",
+      "bbox": [
+        391.98736572265625,
+        474.1534729003906,
+        400.8748779296875,
+        520.83349609375
+      ],
+      "text_sha256": "cc89a0fb490b0dbd987b07bee3d96b1aa2076a5e9de1938409fadb439cf89480"
+    },
+    {
+      "block_id": "page-0635-block-0053",
+      "order": 53,
+      "text": "None known\nAntagonistic effects with anticholinergic and competitive neuromuscular blockers (e.g. \n",
+      "bbox": [
+        321.9898681640625,
+        79.2408676147461,
+        330.87738037109375,
+        454.2559814453125
+      ],
+      "text_sha256": "b5e651012a51a44dc296a4a2ef1bfee3e560343fdafdf4e08d00cbec3cbbdc7c"
+    },
+    {
+      "block_id": "page-0635-block-0054",
+      "order": 54,
+      "text": "tubocurarine). Potential for synergistic activity with cholinomimetics such as depolarising \n",
+      "bbox": [
+        331.98736572265625,
+        76.09090423583984,
+        340.8748779296875,
+        375.25848388671875
+      ],
+      "text_sha256": "7f794720b2c110ac9e641f5853bb70cef12ddc0480a2a5faf0f21a162bcb066a"
+    },
+    {
+      "block_id": "page-0635-block-0055",
+      "order": 55,
+      "text": "neuro-muscular blocking agents (e.g. succinylcholine), cholinergic agonists and \n",
+      "bbox": [
+        341.98486328125,
+        100.78853607177734,
+        350.87237548828125,
+        375.25848388671875
+      ],
+      "text_sha256": "def56a8be8eb287abe5893b9c9ebbc5f4383ca122ecef68012d514e90bb1d861"
+    },
+    {
+      "block_id": "page-0635-block-0056",
+      "order": 56,
+      "text": "peripherally acting cholinesterase inhibitors, e.g. neostigmine. Possible interaction with \n",
+      "bbox": [
+        351.98236083984375,
+        73.9537582397461,
+        360.869873046875,
+        375.25848388671875
+      ],
+      "text_sha256": "18f24a7b81d590896873fd557955daf6dcec8b83b15fcb774cc56c38f1056002"
+    },
+    {
+      "block_id": "page-0635-block-0057",
+      "order": 57,
+      "text": "agents that significantly reduce heart rate, e.g. digoxin, beta blockers, certain calcium-\n",
+      "bbox": [
+        361.9798583984375,
+        87.02581787109375,
+        370.86737060546875,
+        375.25848388671875
+      ],
+      "text_sha256": "86006ff9616766fd25b103d638cb3b0ddbb2187bb465e7fd37b7bddebde429d0"
+    },
+    {
+      "block_id": "page-0635-block-0058",
+      "order": 58,
+      "text": "channel blockers and amiodarone. Caution with concomitant use of drugs known to induce QT \n",
+      "bbox": [
+        371.97735595703125,
+        58.646141052246094,
+        380.8648681640625,
+        375.25848388671875
+      ],
+      "text_sha256": "89bda972ab715f7019c2403debe2b212f634e27e50257e7651faea62484b8144"
+    },
+    {
+      "block_id": "page-0635-block-0059",
+      "order": 59,
+      "text": "prolongation and/or torsade de pointes (manufacturer recommends ECG in such cases). \n",
+      "bbox": [
+        382.1548767089844,
+        93.52083587646484,
+        390.86236572265625,
+        375.25848388671875
+      ],
+      "text_sha256": "aca38df624e526841469adc02c0a07245ba945c1c8ae69d1f0adc94de428114c"
+    },
+    {
+      "block_id": "page-0635-block-0060",
+      "order": 60,
+      "text": "Movement disorders and neuroleptic malignant syndrome have occurred with concomitant use of \n",
+      "bbox": [
+        392.1523742675781,
+        61.593345642089844,
+        400.85986328125,
+        375.25848388671875
+      ],
+      "text_sha256": "1a39d9b22b7745e94ac256328bf4a70ce3fb98bb835ff79b1ee7a4c2b259e9b4"
+    },
+    {
+      "block_id": "page-0635-block-0061",
+      "order": 61,
+      "text": "antipsychotics and cholinesterase inhibitors\n",
+      "bbox": [
+        401.9698486328125,
+        232.33091735839844,
+        410.85736083984375,
+        375.25848388671875
+      ],
+      "text_sha256": "f0ac7dda960de4117ba694c80958ef1f5d279bdfb66e3d449d0777d81c03db61"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

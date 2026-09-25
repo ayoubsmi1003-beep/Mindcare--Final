@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0185",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 185,
+  "source_page_index": 184,
+  "source_page_display": 185,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "164    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nHyponatraemia in psychosis \nHyponatraemia can occur in the context of:\n■\n■Water intoxication where water consumption exceeds the maximal renal clearance \ncapacity. Serum and urine osmolality are low. Cross-sectional studies of chronically \nill, hospitalised, psychiatric patients have found the prevalence of water intoxication \nto be 6–17%.1,2 A longitudinal study found that 10% of severely ill patients with a \ndiagnosis of schizophrenia had episodic hyponatraemia secondary to fluid overload.3 \nThe primary aetiology is poorly understood. It has been postulated that it may be \ndriven, at least in part, by an extreme compensatory response to the anticholinergic \nside-effects of some antipsychotic drugs.4 An alternative theory is that postsynaptic \ndopamine receptor antagonism results in receptor supersensitivity, increased presyn-\naptic dopamine release, and elevated dopamine in the hypothalamus, driving thirst \nand polydipsia.5 The observations that many reported cases occur in patients with \nlong illness histories and treatment with antipsychotics with high D2 receptor affinity, \nand that clozapine can improve polydipsia independent of improvement in psychosis, \nappear to support this suggestion.5\n■\n■Drug-induced syndrome of inappropriate antidiuretic hormone (SIADH) where the \nkidney retains an excessive quantity of solute-free water. Serum osmolality is low and \nurine osmolality relatively high. The prevalence of SIADH has been estimated to be \nas high as 11% in acutely ill psychiatric patients.6 Risk factors for antidepressant-\ninduced SIADH (increasing age, female gender, medical co-morbidity and polyphar-\nmacy) seem to be less relevant in the population of patients treated with antipsychotic \ndrugs.7 SIADH usually develops in the first few weeks of treatment with the offend-\ning drug. Case reports and case series implicate phenothiazines, haloperidol, pimoz-\nide, risperidone, paliperidone, quetiapine, olanzapine, aripiprazole, cariprazine and \nclozapine.7–26 Systematic review27 and case–control studies28,29 suggest a clear increase \nin the risk of hyponatraemia with antipsychotics. Another review30 confirmed that \ndrug-induced hyponatraemia is associated with concentrated urine and suggested \nthat an antipsychotic was five times more likely than water intoxication to be the \ncause of hyponatraemia. Overall, prevalence of antipsychotic-induced hyponatrae-\nmia has been estimated at 0.004%31 and 26.1%32 of patients. It is assumed the true \nfigure has somewhere between these two extremes. Desmopressin use (for clozapine-\ninduced enuresis) can also result in hyponatraemia.33 Other drugs, including antide-\npressants and antiseizure medications (especially carbamazepine34), have also been \nimplicated,35 and the risk may be additive with concomitant prescriptions.36,37\n■\n■Severe hyperlipidaemia and/or hyperglycaemia lead to secondary increases in plasma \nvolume and ‘pseudohyponatraemia’.4 Both are more common in people treated with \nantipsychotic drugs than in the general population and should be excluded as causes.\nMild to moderate hyponatraemia presents as confusion, nausea, headache and lethargy. \nAs the plasma sodium falls, these symptoms become increasingly severe and seizures \nand coma can develop.\nMonitoring of plasma sodium is desirable for all those receiving antipsychotics. Signs \nof confusion or lethargy should provoke through diagnostic analysis, including plasma \nsodium determination and urine osmolality (Table 1.28).\n",
+  "raw_text_sha256": "948c34a554ca82c02956b4c44b537f74b7ac34fff3cd055c6560cebd9fc31577",
+  "coordinates_sha256": "59ae2e00d64322cfb37b02ba82fc2e6feeaeb62bf4aa3a6e9338344bc580bacd",
+  "block_sequence_sha256": "b26030c8d0a31b69134ebed1348260208b0bc966f380309c85f4dc5ec403ab3d",
+  "blocks": [
+    {
+      "block_id": "page-0185-block-0000",
+      "order": 0,
+      "text": "164    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "50981861ee83a0650ab0b89316559f40be2d02635bca7bd7150fc1c1d2191ec2"
+    },
+    {
+      "block_id": "page-0185-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0185-block-0002",
+      "order": 2,
+      "text": "Hyponatraemia in psychosis \n",
+      "bbox": [
+        68.88909912109375,
+        66.06442260742188,
+        216.79507446289062,
+        79.09942626953125
+      ],
+      "text_sha256": "59133d03af90e65228825bf62a8daebea6f6e625dbb5eca022aa5983c11aaca2"
+    },
+    {
+      "block_id": "page-0185-block-0003",
+      "order": 3,
+      "text": "Hyponatraemia can occur in the context of:\n",
+      "bbox": [
+        61.88909912109375,
+        96.909423828125,
+        250.7990264892578,
+        108.62942504882812
+      ],
+      "text_sha256": "43a1212c8d57cd6c4e9159550d58755d5e2b15498655a2e17a7e7079c08dd66e"
+    },
+    {
+      "block_id": "page-0185-block-0004",
+      "order": 4,
+      "text": "■\n■Water intoxication where water consumption exceeds the maximal renal clearance \n",
+      "bbox": [
+        61.888999938964844,
+        114.66942596435547,
+        436.6892395019531,
+        126.62942504882812
+      ],
+      "text_sha256": "991ae310e3812369abc41956de8ef66b1b664a07f1378a906f1eab206f5d46c3"
+    },
+    {
+      "block_id": "page-0185-block-0005",
+      "order": 5,
+      "text": "capacity. Serum and urine osmolality are low. Cross-sectional studies of chronically \nill, hospitalised, psychiatric patients have found the prevalence of water intoxication \nto be 6–17%.1,2 A longitudinal study found that 10% of severely ill patients with a \ndiagnosis of schizophrenia had episodic hyponatraemia secondary to fluid overload.3 \nThe primary aetiology is poorly understood. It has been postulated that it may be \ndriven, at least in part, by an extreme compensatory response to the anticholinergic \nside-effects of some antipsychotic drugs.4 An alternative theory is that postsynaptic \ndopamine receptor antagonism results in receptor supersensitivity, increased presyn-\naptic dopamine release, and elevated dopamine in the hypothalamus, driving thirst \nand polydipsia.5 The observations that many reported cases occur in patients with \nlong illness histories and treatment with antipsychotics with high D2 receptor affinity, \nand that clozapine can improve polydipsia independent of improvement in psychosis, \nappear to support this suggestion.5\n",
+      "bbox": [
+        70.88510131835938,
+        126.909423828125,
+        436.6991271972656,
+        282.6294250488281
+      ],
+      "text_sha256": "c8090a1f5c6f297b0b2872d3c3dc61082265cc47c2ca9a34ff8e7785b5bbf923"
+    },
+    {
+      "block_id": "page-0185-block-0006",
+      "order": 6,
+      "text": "■\n■Drug-induced syndrome of inappropriate antidiuretic hormone (SIADH) where the \n",
+      "bbox": [
+        61.888999938964844,
+        282.66943359375,
+        436.6289367675781,
+        294.6294250488281
+      ],
+      "text_sha256": "b74d6c016ef298645dacfaa4f0c4f8fbdbaf22254745bff7905398ffe3e5c060"
+    },
+    {
+      "block_id": "page-0185-block-0007",
+      "order": 7,
+      "text": "kidney retains an excessive quantity of solute-free water. Serum osmolality is low and \nurine osmolality relatively high. The prevalence of SIADH has been estimated to be \nas high as 11% in acutely ill psychiatric patients.6 Risk factors for antidepressant-\ninduced SIADH (increasing age, female gender, medical co-morbidity and polyphar-\nmacy) seem to be less relevant in the population of patients treated with antipsychotic \ndrugs.7 SIADH usually develops in the first few weeks of treatment with the offend-\ning drug. Case reports and case series implicate phenothiazines, haloperidol, pimoz-\nide, risperidone, paliperidone, quetiapine, olanzapine, aripiprazole, cariprazine and \nclozapine.7–26 Systematic review27 and case–control studies28,29 suggest a clear increase \nin the risk of hyponatraemia with antipsychotics. Another review30 confirmed that \ndrug-induced hyponatraemia is associated with concentrated urine and suggested \nthat an antipsychotic was five times more likely than water intoxication to be the \ncause of hyponatraemia. Overall, prevalence of antipsychotic-induced hyponatrae-\nmia has been estimated at 0.004%31 and 26.1%32 of patients. It is assumed the true \nfigure has somewhere between these two extremes. Desmopressin use (for clozapine-\ninduced enuresis) can also result in hyponatraemia.33 Other drugs, including antide-\npressants and antiseizure medications (especially carbamazepine34), have also been \nimplicated,35 and the risk may be additive with concomitant prescriptions.36,37\n",
+      "bbox": [
+        70.88670349121094,
+        294.909423828125,
+        436.6997375488281,
+        510.6294250488281
+      ],
+      "text_sha256": "e1abd620b2a7cd135485522d93021120d6211e74736dc3de037317797339ba00"
+    },
+    {
+      "block_id": "page-0185-block-0008",
+      "order": 8,
+      "text": "■\n■Severe hyperlipidaemia and/or hyperglycaemia lead to secondary increases in plasma \n",
+      "bbox": [
+        61.888999938964844,
+        510.66943359375,
+        436.6592102050781,
+        522.6294555664062
+      ],
+      "text_sha256": "9ad391752b24a646f7f764326d3f58b12976446794ff42930363d243c13e7333"
+    },
+    {
+      "block_id": "page-0185-block-0009",
+      "order": 9,
+      "text": "volume and ‘pseudohyponatraemia’.4 Both are more common in people treated with \nantipsychotic drugs than in the general population and should be excluded as causes.\n",
+      "bbox": [
+        70.88589477539062,
+        522.909423828125,
+        436.6459045410156,
+        546.6294555664062
+      ],
+      "text_sha256": "d0aebd423fa3bbff56ab9b0976362b5676c34b7c33e4aadaa6c6ab9ede36c5f0"
+    },
+    {
+      "block_id": "page-0185-block-0010",
+      "order": 10,
+      "text": "Mild to moderate hyponatraemia presents as confusion, nausea, headache and lethargy. \nAs the plasma sodium falls, these symptoms become increasingly severe and seizures \nand coma can develop.\n",
+      "bbox": [
+        61.885894775390625,
+        552.909423828125,
+        436.6258850097656,
+        588.6294555664062
+      ],
+      "text_sha256": "66903486200f769b1320040f3b9ddb839faa6e18343bf194cd265796324dca2f"
+    },
+    {
+      "block_id": "page-0185-block-0011",
+      "order": 11,
+      "text": "Monitoring of plasma sodium is desirable for all those receiving antipsychotics. Signs \nof confusion or lethargy should provoke through diagnostic analysis, including plasma \nsodium determination and urine osmolality (Table 1.28).\n",
+      "bbox": [
+        61.885894775390625,
+        588.909423828125,
+        436.6659240722656,
+        624.6294555664062
+      ],
+      "text_sha256": "9dc9ed8f4e2129877e523827eb9c44d0bfd8b0dd24a1fc5c2bec1a2a02eeaaa5"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

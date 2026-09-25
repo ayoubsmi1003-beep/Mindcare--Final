@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0484",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 484,
+  "source_page_index": 483,
+  "source_page_display": 484,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    463\nCHAPTER 4\nRelapse prevention\nThere is no place for the continued use of benzodiazepines beyond treatment of the \nacute alcohol withdrawal syndrome. Acamprosate and supervised disulfiram are \nlicensed for treatment of alcohol dependence in the UK and may be offered in combina-\ntion with psychosocial treatment.2 Treatment should be initiated by a specialist service. \nAfter 12 weeks, transfer of the prescribing to the GP may be appropriate, although \nspecialist care may continue (shared care). Naltrexone is also recommended as an \nadjunct in the treatment of moderate and severe alcohol dependence.2 As it does not \nhave marketing authorisation for the treatment of alcohol dependence in the UK, \ninformed consent should be sought and documented prior to commencing treatment.\nAcamprosate\nAcamprosate is a synthetic taurine analogue that acts as a functional glutamatergic \nN-methyl-d-aspartate antagonist and also increases γ-aminobutyric acid (GABA)-ergic \nfunction. The number needed to treat (NNT) for the maintenance of abstinence has \nbeen calculated as 9–11.9 The treatment effect is most pronounced at 6 months with the \nrisk ratio (compared with placebo) of returning to drinking behaviour dropping to \n0.83, though the effect has been shown to be significant for up to 12 months.2,20,21 \nAcamprosate should be initiated as soon as possible after abstinence has been achieved \n(the BAP consensus guidelines9 recommend that acamprosate should be started ‘during \ndetoxification’ because of its potential neuroprotective effect). NICE2 recommends that \nacamprosate should be continued for up to 6 months with regular (monthly) supervi-\nsion. The SPC recommends that it is given for 1 year.\nAcamprosate is relatively well tolerated; side effects include diarrhoea, abdominal \npain, nausea, vomiting and pruritis.2 It is contraindicated in severe renal or hepatic \nimpairment, thus baseline liver and kidney function tests should be performed before \ncommencing treatment. Acamprosate should be avoided in individuals who are preg-\nnant or breastfeeding.\nAcamprosate: NICE Clinical Guideline 115, 20112,20\nAcamprosate should be offered for relapse prevention in moderately to severely dependent \ndrinkers, in combination with psychosocial treatment. It should be prescribed for up to 6 months, \nor longer for those who perceive benefit and wish to continue taking it. The dose is 1998mg daily \n(666mg three times per day) for individuals over 60kg. For those under 60kg, the dose is 1332mg \ndaily. Treatment should be stopped in those who continue to drink for 4–6 weeks after starting \nthe drug.\nNaltrexone\nOpioid blockade prevents increased dopaminergic activity after the consumption of \nalcohol, thus reducing its rewarding effects. Naltrexone, a non-selective opioid receptor \nantagonist, significantly reduces relapse to heavy drinking.2,22 Although early trials used \na dose of 50mg/day, more recent US studies have used 100mg/day. In the UK, the usual \ndose is 50mg/day with a trial dose of 25mg for 2 days to check for side effects.\n",
+  "raw_text_sha256": "58cbfde6baa9c88b9567589e14d5446f123dc7f38dca0b4920b7b3cec30a1333",
+  "coordinates_sha256": "0fcbab2403b06991c0cdc7e4e36013c5f54e4754f3352a3830ada577bc9fa0b3",
+  "block_sequence_sha256": "39bffec67e1ba2aa57646516d3ad9feec6d97f71e9d3c59942bb202ee3d07922",
+  "blocks": [
+    {
+      "block_id": "page-0484-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    463\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "4484eb23d86c09103eeec8e7bb84c23177869eb593c3cc70c012e15adc9df549"
+    },
+    {
+      "block_id": "page-0484-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0484-block-0002",
+      "order": 2,
+      "text": "Relapse prevention\n",
+      "bbox": [
+        48.0,
+        62.31546401977539,
+        147.4399871826172,
+        75.3504638671875
+      ],
+      "text_sha256": "010448649d8f86c7c128065e887e3ad28f750d848e63deec905513372223b331"
+    },
+    {
+      "block_id": "page-0484-block-0003",
+      "order": 3,
+      "text": "There is no place for the continued use of benzodiazepines beyond treatment of the \nacute alcohol withdrawal syndrome. Acamprosate and supervised disulfiram are \nlicensed for treatment of alcohol dependence in the UK and may be offered in combina-\ntion with psychosocial treatment.2 Treatment should be initiated by a specialist service. \nAfter 12 weeks, transfer of the prescribing to the GP may be appropriate, although \nspecialist care may continue (shared care). Naltrexone is also recommended as an \nadjunct in the treatment of moderate and severe alcohol dependence.2 As it does not \nhave marketing authorisation for the treatment of alcohol dependence in the UK, \ninformed consent should be sought and documented prior to commencing treatment.\n",
+      "bbox": [
+        47.996185302734375,
+        81.16046142578125,
+        422.7998962402344,
+        188.88046264648438
+      ],
+      "text_sha256": "c9503c8c3c426ecd4c2d6cd0cbd2624083b29d2072ba0130efaa282a03db8a7b"
+    },
+    {
+      "block_id": "page-0484-block-0004",
+      "order": 4,
+      "text": "Acamprosate\n",
+      "bbox": [
+        48.002197265625,
+        207.25045776367188,
+        109.67219543457031,
+        219.1004638671875
+      ],
+      "text_sha256": "f3464b7627518b97c9f9bb7751c04f19d7f6945f58d69a95311481e5fe429648"
+    },
+    {
+      "block_id": "page-0484-block-0005",
+      "order": 5,
+      "text": "Acamprosate is a synthetic taurine analogue that acts as a functional glutamatergic \nN-methyl-d-aspartate antagonist and also increases γ-aminobutyric acid (GABA)-ergic \nfunction. The number needed to treat (NNT) for the maintenance of abstinence has \nbeen calculated as 9–11.9 The treatment effect is most pronounced at 6 months with the \nrisk ratio (compared with placebo) of returning to drinking behaviour dropping to \n0.83, though the effect has been shown to be significant for up to 12 months.2,20,21 \nAcamprosate should be initiated as soon as possible after abstinence has been achieved \n(the BAP consensus guidelines9 recommend that acamprosate should be started ‘during \ndetoxification’ because of its potential neuroprotective effect). NICE2 recommends that \nacamprosate should be continued for up to 6 months with regular (monthly) supervi-\nsion. The SPC recommends that it is given for 1 year.\n",
+      "bbox": [
+        47.99690246582031,
+        225.16046142578125,
+        422.8003234863281,
+        356.8804931640625
+      ],
+      "text_sha256": "e06810b1a8b5e29993e1a2b79c017f1474c4b0a35d992e1258c1b109f8dcdd37"
+    },
+    {
+      "block_id": "page-0484-block-0006",
+      "order": 6,
+      "text": "Acamprosate is relatively well tolerated; side effects include diarrhoea, abdominal \npain, nausea, vomiting and pruritis.2 It is contraindicated in severe renal or hepatic \nimpairment, thus baseline liver and kidney function tests should be performed before \ncommencing treatment. Acamprosate should be avoided in individuals who are preg-\nnant or breastfeeding.\n",
+      "bbox": [
+        47.998199462890625,
+        357.1604919433594,
+        422.81072998046875,
+        416.8804931640625
+      ],
+      "text_sha256": "0498122b2fd6c268b522f9e254c05dbc659938b8bb5c3d824f0edd86959f7310"
+    },
+    {
+      "block_id": "page-0484-block-0007",
+      "order": 7,
+      "text": "Acamprosate: NICE Clinical Guideline 115, 20112,20\n",
+      "bbox": [
+        55.5,
+        437.1045837402344,
+        252.04832458496094,
+        447.1770935058594
+      ],
+      "text_sha256": "72bb3eb25381c8d3842def3316229cb5c958dbf046708bf5a5f5400ff1395b78"
+    },
+    {
+      "block_id": "page-0484-block-0008",
+      "order": 8,
+      "text": "Acamprosate should be offered for relapse prevention in moderately to severely dependent \ndrinkers, in combination with psychosocial treatment. It should be prescribed for up to 6 months, \nor longer for those who perceive benefit and wish to continue taking it. The dose is 1998mg daily \n(666mg three times per day) for individuals over 60kg. For those under 60kg, the dose is 1332mg \ndaily. Treatment should be stopped in those who continue to drink for 4–6 weeks after starting \nthe drug.\n",
+      "bbox": [
+        55.5,
+        456.6335754394531,
+        411.97320556640625,
+        516.4821166992188
+      ],
+      "text_sha256": "d15c1cdd192edf5a3a031f70fc000abdb7d9c1d3eeef3112c986ca50013823df"
+    },
+    {
+      "block_id": "page-0484-block-0009",
+      "order": 9,
+      "text": "Naltrexone\n",
+      "bbox": [
+        48.0,
+        537.3040161132812,
+        100.23999786376953,
+        549.1539916992188
+      ],
+      "text_sha256": "363743c921c0646664ecc89d1cbe18c8a8bd8b32c5ec5a14295cce4138b5c054"
+    },
+    {
+      "block_id": "page-0484-block-0010",
+      "order": 10,
+      "text": "Opioid blockade prevents increased dopaminergic activity after the consumption of \nalcohol, thus reducing its rewarding effects. Naltrexone, a non-selective opioid receptor \nantagonist, significantly reduces relapse to heavy drinking.2,22 Although early trials used \na dose of 50mg/day, more recent US studies have used 100mg/day. In the UK, the usual \ndose is 50mg/day with a trial dose of 25mg for 2 days to check for side effects.\n",
+      "bbox": [
+        47.997589111328125,
+        555.2139892578125,
+        422.7775573730469,
+        614.9340209960938
+      ],
+      "text_sha256": "3f2f1f384f3edb7723de77c236dd221a749c2c57e2c8f9f61325a56577d3d8e5"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

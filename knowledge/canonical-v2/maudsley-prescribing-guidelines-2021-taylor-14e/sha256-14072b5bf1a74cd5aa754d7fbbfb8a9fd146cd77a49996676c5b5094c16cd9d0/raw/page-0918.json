@@ -1,0 +1,95 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0918",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 918,
+  "source_page_index": 917,
+  "source_page_display": 918,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\nEnhancing medication adherence\nThe World Health Organisation (WHO) has defined adherence to long-term therapy, as \n‘the extent to which a person’s behaviour – taking medication, following a diet, and/or \nexecuting lifestyle changes, corresponds with agreed recommendations from a health-\ncare provider’.1 Subsequently, in the UK, National Institute for Health and Care \nExcellence (NICE) guidance also defined adherence as ‘the extent to which patient’s \naction matches the agreed recommendation’. Adherence to medication demands col-\nlaboration and agreement between the patient and the prescriber. NICE recommended \nthat, as long as the patient has capacity to consent, their right not to take medication \nshould be respected.2 If the prescriber considers that this decision may lead to an \nadverse outcome, the reasons for the patient’s decision and the prescriber’s concerns \nshould be recorded. In fact, in its guidelines for treatment of schizophrenia, NICE \nemphasised the need for increased research into the effectiveness of psychosocial inter-\nventions in the absence of prescribed antipsychotics.3 However, a meta-analysis4 and \nsystematic review5 of such psychodynamic interventions, which included studies in \nunmedicated patients, confirmed the superiority of treatment with antipsychotics. The \nmost recent systematic review of psychosocial interventions for psychotic patients \n(with no or low-dose antipsychotic) found the effect of such interventions to be equal \nto treatment with antipsychotics.6\nMedication adherence is directly related to better clinical outcome. A 20-year follow-\nup study of 62,250 patients with schizophrenia reported a significantly lower suicide \nmortality during antipsychotic use compared with non-use and when all-cause mortal-\nity was considered, the most beneficial outcome was associated with clozapine intake.7 \nUnsurprisingly, the WHO states, ‘increasing the effectiveness of adherence interventions \nmay have far greater impact on the health of the population than any improvements in \nspecific medical treatments’.1 This is a long way of saying that we don’t need better \ndrugs, we need better adherence.\nMiscellany\nChapter 14\n",
+  "raw_text_sha256": "2c612dcc056bf51fd4232aa111aa6f71a9412c3d81a8619d8afe5556ba2d08a4",
+  "coordinates_sha256": "f32e4353378e074eb1cf82092acc38714c3307720cfe079304786edb449cd216",
+  "block_sequence_sha256": "20453aa5a4d60dba049aa69ab5b90f50621f4e209c1d2211c280733fe5f970f9",
+  "blocks": [
+    {
+      "block_id": "page-0918-block-0000",
+      "order": 0,
+      "text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\n",
+      "bbox": [
+        47.99980163574219,
+        585.1019897460938,
+        348.48388671875,
+        614.4779663085938
+      ],
+      "text_sha256": "c78fcd1eeb2357afb8eb5b97a8c858d68167bd409b9074c0da4e20c032bd5665"
+    },
+    {
+      "block_id": "page-0918-block-0001",
+      "order": 1,
+      "text": "Enhancing medication adherence\n",
+      "bbox": [
+        55.0,
+        206.3245849609375,
+        225.93995666503906,
+        219.35958862304688
+      ],
+      "text_sha256": "a1a8b65fe10043a3a122e5617c4ef4db51905e8a0b4ea2c51adf78f44e75d6ed"
+    },
+    {
+      "block_id": "page-0918-block-0002",
+      "order": 2,
+      "text": "The World Health Organisation (WHO) has defined adherence to long-term therapy, as \n‘the extent to which a person’s behaviour – taking medication, following a diet, and/or \nexecuting lifestyle changes, corresponds with agreed recommendations from a health-\ncare provider’.1 Subsequently, in the UK, National Institute for Health and Care \nExcellence (NICE) guidance also defined adherence as ‘the extent to which patient’s \naction matches the agreed recommendation’. Adherence to medication demands col-\nlaboration and agreement between the patient and the prescriber. NICE recommended \nthat, as long as the patient has capacity to consent, their right not to take medication \nshould be respected.2 If the prescriber considers that this decision may lead to an \nadverse outcome, the reasons for the patient’s decision and the prescriber’s concerns \nshould be recorded. In fact, in its guidelines for treatment of schizophrenia, NICE \nemphasised the need for increased research into the effectiveness of psychosocial inter-\nventions in the absence of prescribed antipsychotics.3 However, a meta-analysis4 and \nsystematic review5 of such psychodynamic interventions, which included studies in \nunmedicated patients, confirmed the superiority of treatment with antipsychotics. The \nmost recent systematic review of psychosocial interventions for psychotic patients \n(with no or low-dose antipsychotic) found the effect of such interventions to be equal \nto treatment with antipsychotics.6\n",
+      "bbox": [
+        48.0,
+        225.16958618164062,
+        422.8209533691406,
+        440.88958740234375
+      ],
+      "text_sha256": "d324af441281790f9f81b75683e188740ba5f81ac783def61dd3967a05efbfe7"
+    },
+    {
+      "block_id": "page-0918-block-0003",
+      "order": 3,
+      "text": "Medication adherence is directly related to better clinical outcome. A 20-year follow-\nup study of 62,250 patients with schizophrenia reported a significantly lower suicide \nmortality during antipsychotic use compared with non-use and when all-cause mortal-\nity was considered, the most beneficial outcome was associated with clozapine intake.7 \nUnsurprisingly, the WHO states, ‘increasing the effectiveness of adherence interventions \nmay have far greater impact on the health of the population than any improvements in \nspecific medical treatments’.1 This is a long way of saying that we don’t need better \ndrugs, we need better adherence.\n",
+      "bbox": [
+        47.998687744140625,
+        441.1695861816406,
+        422.8200378417969,
+        536.8896484375
+      ],
+      "text_sha256": "d101a427a330d0169a7e83774c8c3e3dbd33357ed24e6d3b3fca87864ebebe59"
+    },
+    {
+      "block_id": "page-0918-block-0004",
+      "order": 4,
+      "text": "Miscellany\n",
+      "bbox": [
+        311.2112121582031,
+        111.36316680908203,
+        420.0011901855469,
+        137.43316650390625
+      ],
+      "text_sha256": "54f934d5b02b5885f18fe4ac0d59ea373f374767ad11b7ab7d86c685686e21ea"
+    },
+    {
+      "block_id": "page-0918-block-0005",
+      "order": 5,
+      "text": "Chapter 14\n",
+      "bbox": [
+        312.8031921386719,
+        59.724403381347656,
+        420.0011901855469,
+        82.60040283203125
+      ],
+      "text_sha256": "b54cfafeafecc1aa8a98fe691e658f53ab62f0856cacdea0c42a9611e284c886"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

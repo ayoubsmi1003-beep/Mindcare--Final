@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0957",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 957,
+  "source_page_index": 956,
+  "source_page_display": 957,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "936    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 14\n\t15.\t South London and Maudsley NHS Foundation Trust. Pipotiazine palmitate. 2015. https://www.slam.nhs.uk/media/12994/pipotiazine-­\npalmitate.pdf.\n\t16.\t Turncliff R et al. Relative bioavailability and safety of aripiprazole lauroxil, a novel once-monthly, long-acting injectable atypical antipsy-\nchotic, following deltoid and gluteal administration in adult subjects with schizophrenia. Schizophr Res 2014; 159:404–410.\n\t17.\t Eli Lily and Company Limited. Summary of product characteristics. Zypadhera 210mg powder and solvent for prolonged release suspension \nfor injection. 2020. https://www.medicines.org.uk/emc/product/6429/smpc.\n\t18.\t Janssen-Cilag Ltd. Summary of product characteristics. Xeplion 25mg, 50mg, 75mg, 100mg, and 150mg prolonged-release suspension for \ninjection. 2018. https://www.medicines.org.uk/emc/medicine/31329.\n\t19.\t Janssen-Cilag Ltd. Summary of product characteristics. TREVICTA 175mg, 263mg, 350mg, 525mg prolonged release suspension for injec-\ntion. 2019. https://www.medicines.org.uk/emc/medicine/32050.\n\t20.\t Janssen-Cilag Limited. Summary of product characteristics. RISPERDAL CONSTA 25mg powder and solvent for prolonged-release suspen-\nsion for intramuscular injection. 2018. https://www.medicines.org.uk/emc/medicine/9939.\n\t21.\t Otsuka Pharmaceutical (UK) Ltd. Abilify 7.5mg/ml solution for injection (intramuscular). 2020. https://www.medicines.org.uk/emc/­\nproduct/6239/smpc.\n\t22.\t ADVANZ Pharma. Haloperidol injection BP 5mg/ml. 2017. https://www.medicines.org.uk/emc/product/514.\n\t23.\t Concordia International. Medical information department – verbal and written communication, 2017.\n\t24.\t Pfizer. Medical information department – verbal and written communication, 2017.\n\t25.\t Pfizer Limited. Ativan 4mg/ml solution for injection. 2019. https://www.medicines.org.uk/emc/product/5473/smpc.\n\t26.\t Lilly UK. Medical information department – verbal and written communication, 2017.\n\t27.\t Eli Lilly and Company (NZ) Limited. Zyprexa IM inj New Zealand datasheet. 2019. https://medsafe.govt.nz/Profs/Datasheet/z/\nZyprexaIMinj.pdf.\n\t28.\t Carpenter S et al. Clotiapine for acute psychotic illnesses. Cochrane Database Syst Rev 2004:Cd002304.\n\t29.\t Henry R et al. Evaluation of the effectiveness and acceptability of intramuscular clozapine injection: illustrative case series. Br J Psych Bull \n2020:1–5. 44:239–243\n\t30.\t Casetta C et al. A retrospective study of intramuscular clozapine prescription for treatment initiation and maintenance in treatment-resistant \npsychosis. Br J Psychiatry 2020: 217:506–513\n",
+  "raw_text_sha256": "e562c1cad7fa48102deec3c00978b0db3352671cbecbbb363a67f8daa676d004",
+  "coordinates_sha256": "753409319cce62b00e3c5540a3eacf3bf1a5a22ee2c34d42a235037c59a55133",
+  "block_sequence_sha256": "a096c4460ac5621a94c221fa2d1c449cd4919f7c39583f6f6ba8dee434119fb7",
+  "blocks": [
+    {
+      "block_id": "page-0957-block-0000",
+      "order": 0,
+      "text": "936    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "0d781f8f79e2f720560c5be0813583a213a38a6c947a9aad8724d4a868dec8c6"
+    },
+    {
+      "block_id": "page-0957-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        18.520000457763672,
+        338.7405090332031,
+        28.0,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0957-block-0002",
+      "order": 2,
+      "text": "\t15.\t South London and Maudsley NHS Foundation Trust. Pipotiazine palmitate. 2015. https://www.slam.nhs.uk/media/12994/pipotiazine-­\n",
+      "bbox": [
+        61.89099884033203,
+        63.2703857421875,
+        435.5649719238281,
+        70.30238342285156
+      ],
+      "text_sha256": "a2c74d562f8fd31995ba08d540f09d02ec1e84fdcfa0992da183c1a9db61a89d"
+    },
+    {
+      "block_id": "page-0957-block-0003",
+      "order": 3,
+      "text": "palmitate.pdf.\n\t16.\t Turncliff R et al. Relative bioavailability and safety of aripiprazole lauroxil, a novel once-monthly, long-acting injectable atypical antipsy-\n",
+      "bbox": [
+        61.89699935913086,
+        72.2703857421875,
+        433.908935546875,
+        88.30238342285156
+      ],
+      "text_sha256": "61de2ee52cb13b9a8e726cf987c2c1330d1aed5e06b5a88df24724a8a9069bdb"
+    },
+    {
+      "block_id": "page-0957-block-0004",
+      "order": 4,
+      "text": "chotic, following deltoid and gluteal administration in adult subjects with schizophrenia. Schizophr Res 2014; 159:404–410.\n\t17.\t Eli Lily and Company Limited. Summary of product characteristics. Zypadhera 210mg powder and solvent for prolonged release suspension \n",
+      "bbox": [
+        61.90299987792969,
+        90.12638854980469,
+        435.5350341796875,
+        106.30238342285156
+      ],
+      "text_sha256": "92a5f7bc1e1dc7c328dc06169aa88c9eaf3e1987c1106dd12d5a436616522005"
+    },
+    {
+      "block_id": "page-0957-block-0005",
+      "order": 5,
+      "text": "for injection. 2020. https://www.medicines.org.uk/emc/product/6429/smpc.\n\t18.\t Janssen-Cilag Ltd. Summary of product characteristics. Xeplion 25mg, 50mg, 75mg, 100mg, and 150mg prolonged-release suspension for \n",
+      "bbox": [
+        61.909000396728516,
+        108.2703857421875,
+        435.5531311035156,
+        124.30238342285156
+      ],
+      "text_sha256": "cb514bfec65a2ae9a015a3c939657bf1c1ab881767e93eb25845c863e81af97a"
+    },
+    {
+      "block_id": "page-0957-block-0006",
+      "order": 6,
+      "text": "injection. 2018. https://www.medicines.org.uk/emc/medicine/31329.\n\t19.\t Janssen-Cilag Ltd. Summary of product characteristics. TREVICTA 175mg, 263mg, 350mg, 525mg prolonged release suspension for injec-\n",
+      "bbox": [
+        61.915000915527344,
+        126.2703857421875,
+        433.8971252441406,
+        142.30238342285156
+      ],
+      "text_sha256": "967ceb9310563020d8530f0d641883a5c2313b88a7f8a7a7548120b46786b17d"
+    },
+    {
+      "block_id": "page-0957-block-0007",
+      "order": 7,
+      "text": "tion. 2019. https://www.medicines.org.uk/emc/medicine/32050.\n\t20.\t Janssen-Cilag Limited. Summary of product characteristics. RISPERDAL CONSTA 25mg powder and solvent for prolonged-release suspen-\n",
+      "bbox": [
+        61.92100143432617,
+        144.2703857421875,
+        433.9210205078125,
+        160.30238342285156
+      ],
+      "text_sha256": "6b0e3925c1f07843d22c454fc96970244a6877629b95eb467b5e6d0c5d85f2ad"
+    },
+    {
+      "block_id": "page-0957-block-0008",
+      "order": 8,
+      "text": "sion for intramuscular injection. 2018. https://www.medicines.org.uk/emc/medicine/9939.\n\t21.\t Otsuka Pharmaceutical (UK) Ltd. Abilify 7.5mg/ml solution for injection (intramuscular). 2020. https://www.medicines.org.uk/emc/­\n",
+      "bbox": [
+        61.926998138427734,
+        162.2703857421875,
+        435.5769958496094,
+        178.30238342285156
+      ],
+      "text_sha256": "df0bcf02936e3790a58e373b2cb17fd8289ee9106fc638182578f5d18e6aeaeb"
+    },
+    {
+      "block_id": "page-0957-block-0009",
+      "order": 9,
+      "text": "product/6239/smpc.\n\t22.\t ADVANZ Pharma. Haloperidol injection BP 5mg/ml. 2017. https://www.medicines.org.uk/emc/product/514.\n\t23.\t Concordia International. Medical information department – verbal and written communication, 2017.\n\t24.\t Pfizer. Medical information department – verbal and written communication, 2017.\n\t25.\t Pfizer Limited. Ativan 4mg/ml solution for injection. 2019. https://www.medicines.org.uk/emc/product/5473/smpc.\n\t26.\t Lilly UK. Medical information department – verbal and written communication, 2017.\n\t27.\t Eli Lilly and Company (NZ) Limited. Zyprexa IM inj New Zealand datasheet. 2019. https://medsafe.govt.nz/Profs/Datasheet/z/\n",
+      "bbox": [
+        61.93299865722656,
+        180.2703857421875,
+        433.938720703125,
+        241.30238342285156
+      ],
+      "text_sha256": "e15b000f581fa877c654fd07a89bf7ed6574d5ac8f3a60ebce485e48a63d9f42"
+    },
+    {
+      "block_id": "page-0957-block-0010",
+      "order": 10,
+      "text": "ZyprexaIMinj.pdf.\n\t28.\t Carpenter S et al. Clotiapine for acute psychotic illnesses. Cochrane Database Syst Rev 2004:Cd002304.\n\t29.\t Henry R et al. Evaluation of the effectiveness and acceptability of intramuscular clozapine injection: illustrative case series. Br J Psych Bull \n",
+      "bbox": [
+        61.9630012512207,
+        243.2703857421875,
+        435.6192321777344,
+        268.3023986816406
+      ],
+      "text_sha256": "2ad56a947a53e42566cfa17437c2d6f92b293dcdf6c08d0577454358ffd0d366"
+    },
+    {
+      "block_id": "page-0957-block-0011",
+      "order": 11,
+      "text": "2020:1–5. 44:239–243\n\t30.\t Casetta C et al. A retrospective study of intramuscular clozapine prescription for treatment initiation and maintenance in treatment-resistant \n",
+      "bbox": [
+        61.974998474121094,
+        270.2703857421875,
+        435.66082763671875,
+        286.3023986816406
+      ],
+      "text_sha256": "a7f3aa5d83a3bd170cd0e3ae2841c0e2548d26772406124217f03add45896094"
+    },
+    {
+      "block_id": "page-0957-block-0012",
+      "order": 12,
+      "text": "psychosis. Br J Psychiatry 2020: 217:506–513\n",
+      "bbox": [
+        72.97899627685547,
+        288.2703857421875,
+        192.40896606445312,
+        295.3023986816406
+      ],
+      "text_sha256": "a51ed1efd397d6eeebd5b4c8541ee779a23da0dab27823ad5d087f7670ef8bd2"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

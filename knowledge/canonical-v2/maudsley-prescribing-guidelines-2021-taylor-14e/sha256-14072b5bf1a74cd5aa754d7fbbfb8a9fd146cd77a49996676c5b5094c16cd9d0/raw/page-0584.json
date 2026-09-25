@@ -1,0 +1,299 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0584",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 584,
+  "source_page_index": 583,
+  "source_page_display": 584,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Children and adolescents    563\nCHAPTER 5\npoor insight or find accessing CBT particularly difficult. This very often includes \npatients with learning problems or autism spectrum disorders. Insight in BDD can often \nbe poorer than is seen with OCD. This in turn can affect motivation to engage with \npsychological therapy. Where medication is being used as the only evidence-based treat-\nment, it is essential that this remains under review so that motivation and ability to \nengage with CBT is regularly revisited.\nNICE guidelines for the assessment and treatment of OCD and BDD\nNICE published guidelines in 2005 on the evidence-based treatment options for OCD \nand BDD for young people and adults. NICE recommends a ‘stepped care’ model, with \nincreasing intensity of treatment according to clinical severity and complexity.5 The \nassessment of the severity and impact can be aided by the use of the CY-BOCS or BDD-\nYBOCS questionnaire or other quantitative measures, both at baseline and as a helpful \nmonitoring tool.12\nThe summary treatment algorithm from the NICE guideline is shown in Figure 5.1.\nMild\nfunctional impairment\nModerate or severe\nfunctional impairment\nConsider guided self help support\nand information for family/carers\nIneffective or refused\nIneffective or refused\nConsider an SSRI (with careful monitoring)\nMultidisciplinary review\nConsider either (especially if previous good response to):\nDifferent SSRI\nClomipramine\nSSRI + ongoing CBT (including ERP):\nConsider use in 8–11 year age group\nOffer to 12–18 year age group\nCarefully monitor for adverse events, especially at start of treatment\nOffer CBT (+ERP); involve family/carers\n(individual or group formats)\nFigure 5.1  Treatment options for children and young people with OCD or BDD. CBT = cognitive behaviour therapy; \nERP = exposure and response prevention; SSRI = selective serotonin reuptake inhibitor. (adapted from NICE guidance).5\nReprinted with permission.18\n",
+  "raw_text_sha256": "4820b1b2ccde13873beaef0e6a7ff583faa92dc5c007abf5f51a273b764cabfe",
+  "coordinates_sha256": "02ed1327b836d726d3fac068116d867f555281bfe0da3eed93ba12b83038a064",
+  "block_sequence_sha256": "9eaa9501c47b24a6553f015788c0529a120381466689fd98ac8c4d695ad77e0e",
+  "blocks": [
+    {
+      "block_id": "page-0584-block-0000",
+      "order": 0,
+      "text": "Children and adolescents    563\n",
+      "bbox": [
+        288.94488525390625,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "32509e5e1dbe3d3dbb916b6078baad3f62746839bb97de28ccfb4b09f9fac22b"
+    },
+    {
+      "block_id": "page-0584-block-0001",
+      "order": 1,
+      "text": "CHAPTER 5\n",
+      "bbox": [
+        454.4096984863281,
+        339.3385009765625,
+        463.88970947265625,
+        380.6824951171875
+      ],
+      "text_sha256": "f4b8b4a0fc64e7b3b74e7336306d0959d0384683e387792724f393162639020a"
+    },
+    {
+      "block_id": "page-0584-block-0002",
+      "order": 2,
+      "text": "poor insight or find accessing CBT particularly difficult. This very often includes \npatients with learning problems or autism spectrum disorders. Insight in BDD can often \nbe poorer than is seen with OCD. This in turn can affect motivation to engage with \npsychological therapy. Where medication is being used as the only evidence-based treat-\nment, it is essential that this remains under review so that motivation and ability to \nengage with CBT is regularly revisited.\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.7900085449219,
+        134.27041625976562
+      ],
+      "text_sha256": "145d2d5804fcbf8fc6d7d79ca2a82482752804d104451f9eaafd89eacfb7ad5d"
+    },
+    {
+      "block_id": "page-0584-block-0003",
+      "order": 3,
+      "text": "NICE guidelines for the assessment and treatment of OCD and BDD\n",
+      "bbox": [
+        48.0,
+        148.70541381835938,
+        394.35699462890625,
+        161.74041748046875
+      ],
+      "text_sha256": "29472ffa95ebc4eb0c160cd99ad6cf37e407a41bfedc36890c9274270687998a"
+    },
+    {
+      "block_id": "page-0584-block-0004",
+      "order": 4,
+      "text": "NICE published guidelines in 2005 on the evidence-based treatment options for OCD \nand BDD for young people and adults. NICE recommends a ‘stepped care’ model, with \nincreasing intensity of treatment according to clinical severity and complexity.5 The \nassessment of the severity and impact can be aided by the use of the CY-BOCS or BDD-\nYBOCS questionnaire or other quantitative measures, both at baseline and as a helpful \nmonitoring tool.12\n",
+      "bbox": [
+        47.997314453125,
+        167.5504150390625,
+        422.8099670410156,
+        239.27047729492188
+      ],
+      "text_sha256": "7755eee556888d10f891a81591d02fe96428f6cea925453776fbe835e95f4421"
+    },
+    {
+      "block_id": "page-0584-block-0005",
+      "order": 5,
+      "text": "The summary treatment algorithm from the NICE guideline is shown in Figure 5.1.\n",
+      "bbox": [
+        58.0,
+        239.55047607421875,
+        417.45001220703125,
+        251.27047729492188
+      ],
+      "text_sha256": "323196728b537cf03930236d8bf0a36b7e6cd27ee0cb27caac8c33e91eaa907c"
+    },
+    {
+      "block_id": "page-0584-block-0006",
+      "order": 6,
+      "text": "Mild\nfunctional impairment\n",
+      "bbox": [
+        119.02630615234375,
+        309.96307373046875,
+        190.2987823486328,
+        327.6330871582031
+      ],
+      "text_sha256": "307394084b65cfe2c17cd1a0948f31c943af252b77631826a97b76b2f81bf81c"
+    },
+    {
+      "block_id": "page-0584-block-0007",
+      "order": 7,
+      "text": "Moderate or severe\nfunctional impairment\n",
+      "bbox": [
+        119.02630615234375,
+        355.4955749511719,
+        190.2987823486328,
+        373.16558837890625
+      ],
+      "text_sha256": "16b125a4914f814726ba69c7f40bb2edd3dda294c6613c449fffb39d732c9942"
+    },
+    {
+      "block_id": "page-0584-block-0008",
+      "order": 8,
+      "text": "Consider guided self help support\n",
+      "bbox": [
+        234.67630004882812,
+        309.96307373046875,
+        346.3964538574219,
+        318.6330871582031
+      ],
+      "text_sha256": "53f587976d5a3b3721210f904a642ac72e072fd5f899c7d49fab2deb88366671"
+    },
+    {
+      "block_id": "page-0584-block-0009",
+      "order": 9,
+      "text": "and information for family/carers\n",
+      "bbox": [
+        236.9788055419922,
+        318.96307373046875,
+        344.0938720703125,
+        327.6330871582031
+      ],
+      "text_sha256": "96e6406b316a4371eeb7cca4e7337e1bf09def1003388630783971feb95f2fdc"
+    },
+    {
+      "block_id": "page-0584-block-0010",
+      "order": 10,
+      "text": "Ineffective or refused\n",
+      "bbox": [
+        251.51380920410156,
+        334.0605773925781,
+        321.54888916015625,
+        342.7305908203125
+      ],
+      "text_sha256": "d3bd414c1ff097d712976711632d69fb165bbc51ab10fdb37c8bcc34b7b1dc6f"
+    },
+    {
+      "block_id": "page-0584-block-0011",
+      "order": 11,
+      "text": "Ineffective or refused\n",
+      "bbox": [
+        251.51380920410156,
+        382.1730651855469,
+        321.54888916015625,
+        390.84307861328125
+      ],
+      "text_sha256": "d3bd414c1ff097d712976711632d69fb165bbc51ab10fdb37c8bcc34b7b1dc6f"
+    },
+    {
+      "block_id": "page-0584-block-0012",
+      "order": 12,
+      "text": "Consider an SSRI (with careful monitoring)\n",
+      "bbox": [
+        164.8588104248047,
+        401.2305603027344,
+        306.98388671875,
+        409.90057373046875
+      ],
+      "text_sha256": "e1d3b33765699afb1eaff0ec98021756446ef086eae9342715c0ad0b958dadda"
+    },
+    {
+      "block_id": "page-0584-block-0013",
+      "order": 13,
+      "text": "Multidisciplinary review\n",
+      "bbox": [
+        195.29380798339844,
+        433.3005676269531,
+        271.96630859375,
+        441.9705810546875
+      ],
+      "text_sha256": "f47bc249decfad5d6a2338a7d7c06a8578c53fa87ada7373399c2630a4717bd8"
+    },
+    {
+      "block_id": "page-0584-block-0014",
+      "order": 14,
+      "text": "Consider either (especially if previous good response to):\n",
+      "bbox": [
+        148.71881103515625,
+        534.7380981445312,
+        337.9588928222656,
+        543.4080810546875
+      ],
+      "text_sha256": "26df28208f74896d8e299199f0d9461f6e71e4a0c81b3b038e4d516683e05a82"
+    },
+    {
+      "block_id": "page-0584-block-0015",
+      "order": 15,
+      "text": "Different SSRI\nClomipramine\n",
+      "bbox": [
+        154.3963165283203,
+        544.3380737304688,
+        202.32882690429688,
+        562.6080932617188
+      ],
+      "text_sha256": "98837e2d76c1e02cb9233e0daf107ba2dad9fdbdda825dffcc394c00b5b8742a"
+    },
+    {
+      "block_id": "page-0584-block-0016",
+      "order": 16,
+      "text": "SSRI + ongoing CBT (including ERP):\n",
+      "bbox": [
+        124.77131652832031,
+        468.1680908203125,
+        250.86131286621094,
+        476.8381042480469
+      ],
+      "text_sha256": "fbf0d0c17600edb5f5569ce5d080be6a9855715d61ac4faab8abd0e930039e94"
+    },
+    {
+      "block_id": "page-0584-block-0017",
+      "order": 17,
+      "text": "Consider use in 8–11 year age group\nOffer to 12–18 year age group\n",
+      "bbox": [
+        129.4213104248047,
+        477.7680969238281,
+        252.81878662109375,
+        496.0381164550781
+      ],
+      "text_sha256": "9c67f2ff8db3ecdc14acc7dfb0ba2fff82081b22117ddb29244ec19660375a32"
+    },
+    {
+      "block_id": "page-0584-block-0018",
+      "order": 18,
+      "text": "Carefully monitor for adverse events, especially at start of treatment\n",
+      "bbox": [
+        130.04380798339844,
+        496.9681091308594,
+        349.5387878417969,
+        505.63812255859375
+      ],
+      "text_sha256": "4305bb3d391a337073d472f95ea0980b77c42b367071cb38693b34e75035a398"
+    },
+    {
+      "block_id": "page-0584-block-0019",
+      "order": 19,
+      "text": "Offer CBT (+ERP); involve family/carers\n",
+      "bbox": [
+        229.74600219726562,
+        356.9617919921875,
+        353.6319885253906,
+        365.0538024902344
+      ],
+      "text_sha256": "bac0ac03ae587c24e94565c11e15373894552d240cbfb5fdeb3307e52a5b98d2"
+    },
+    {
+      "block_id": "page-0584-block-0020",
+      "order": 20,
+      "text": "(individual or group formats)\n",
+      "bbox": [
+        248.12100219726562,
+        365.3617858886719,
+        335.2569885253906,
+        373.45379638671875
+      ],
+      "text_sha256": "c8b78379c7abf192e9690034ddb6d237906fc0d6b030c7db412ee12df54396c3"
+    },
+    {
+      "block_id": "page-0584-block-0021",
+      "order": 21,
+      "text": "Figure 5.1  Treatment options for children and young people with OCD or BDD. CBT = cognitive behaviour therapy; \nERP = exposure and response prevention; SSRI = selective serotonin reuptake inhibitor. (adapted from NICE guidance).5\n",
+      "bbox": [
+        48.0,
+        585.6409912109375,
+        417.2231140136719,
+        604.5260009765625
+      ],
+      "text_sha256": "fb40779108cf3ad8927466b13874abe50ae25bc5e34fc596ccbaad208ae74604"
+    },
+    {
+      "block_id": "page-0584-block-0022",
+      "order": 22,
+      "text": "Reprinted with permission.18\n",
+      "bbox": [
+        48.0,
+        605.8214721679688,
+        138.29371643066406,
+        614.5289916992188
+      ],
+      "text_sha256": "aaf1171928c8c07f6b62602a34588a97b9af22000ad63c6cf4595056781182f6"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

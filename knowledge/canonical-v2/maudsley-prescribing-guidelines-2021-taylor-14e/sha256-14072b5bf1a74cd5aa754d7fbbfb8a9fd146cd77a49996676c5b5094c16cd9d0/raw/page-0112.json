@@ -1,0 +1,311 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0112",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 112,
+  "source_page_index": 111,
+  "source_page_display": 112,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    91\nCHAPTER 1\nRisperidone subcutaneous long-acting injection\nRBP-7000 or Perseris is a monthly subcutaneous LAI that is available in 90mg and 120mg \ndosage forms. The lower dose is equivalent to 3mg day oral risperidone and the higher dose \n4mg a day.1\nThe injection is acutely effective at both licensed doses, without the need for oral pre-\ntreatment or oral supplementation.2,3 The 120mg dose was numerically more effective \nthan 90mg at all time points. In the longer term, monthly doses of 120mg are effective \nin maintaining or improving symptom scale scores.4 It has clear theoretical advantages \nover Risperdal Consta, being rapidly active, not requiring oral supplementation and, as \na subcutaneous injection, being more acceptable to patients5 with a low risk of painful \ninjection.6 One disadvantage is that the injection procedure has several steps and both \nthe complexity of preparation and subcutaneous administration are new to psychiatry.6 \nA second potential disadvantage is that doses above the equivalent of 4mg a day may \nnot be given, a fact that may limit clinical utility.7 (In respect to Cmax, Cmin and Cave 3mg/\nday = 90mg/28 days; and 4mg/day = 120mg/28 days1,8). Nonetheless, dopamine recep-\ntor occupancies are broadly consistent with clinical efficacy: at steady state, 90mg gives \noccupancies ranging from approximately 40–80%; 120mg, 60–85%.9\nApproximate equivalent doses (mg)10\nRisperidone oral (daily)\nRisperdal Consta (2-weekly)\nPaliperidone \npalmitate (monthly)\nRBP-7000 (monthly)\n2\n25\n50\nNot available*\n3\n37.5\n75\n90\n4\n50\n100\n120\n6\nNot available\n150\nNot available\n*Laffont et al.11 suggest 90mg is equivalent to 25mg/2-weekly Risperdal Consta\nReferences\n\t 1.\t US Food and Drug Administration. Cross-discipline team leader review. RBP-7000 (risperidone-ATRIGEL) 2018; https://www.accessdata.\nfda.gov/drugsatfda_docs/nda/2018/210655Orig1s000SumR.pdf.\n\t 2.\t Nasser AF, et al. Efficacy, safety, and tolerability of RBP-7000 once-monthly risperidone for the treatment of acute schizophrenia: an 8-week, \nrandomized, double-blind, placebo-controlled, multicenter phase 3 study. J Clin Psychopharmacol 2016; 36:130–140.\n\t 3.\t Le Moigne A, et al. Reanalysis of a phase 3 trial of a monthly extended-release risperidone injection for the treatment of acute schizophrenia. \nJ Clin Psychopharmacol 2021; 41:76–77.\n\t 4.\t Andorn A, et al. Monthly extended-release risperidone (RBP-7000) in the treatment of schizophrenia: results from the phase 3 program. J \nClin Psychopharmacol 2019; 39:428–433.\n\t 5.\t Tchobaniouk LV, et al. Once-monthly subcutaneously administered risperidone in the treatment of schizophrenia: patient considerations. \nPatient Prefer Adherence 2019; 13:2233–2241.\n\t 6.\t Citrome L. Sustained-release risperidone via subcutaneous injection: a systematic review of RBP-7000 (PERSERIS(™)) for the treatment of \nschizophrenia. Clin Schizophr Relat Psychoses 2018; 12:130–141.\n\t 7.\t Clark I, et al. Newer formulations of risperidone: role in the management of psychotic disorders. CNS Drugs 2020; 34:841–852.\n\t 8.\t US Food and Drug Administration. Clinical pharmacology and biopharmaceutics review(s). Perseris 2018; https://www.accessdata.fda.gov/\ndrugsatfda_docs/nda/2018/210655Orig1s000ClinPharmR.pdf.\n\t 9.\t Laffont CM, et al. Population pharmacokinetics and prediction of dopamine D2 receptor occupancy after multiple doses of RBP-7000, a new \nsustained-release formulation of risperidone, in schizophrenia patients on stable oral risperidone treatment. Clin Pharmacokinet 2014; \n53:533–543.\n\t10.\t Karas A, et al. Perseris(TM): a new and long-acting, atypical antipsychotic drug-delivery system. P & T 2019; 44:460–466.\n\t11.\t Laffont CM, et al. Population pharmacokinetic modeling and simulation to guide dose selection for RBP-7000, a new sustained-release for-\nmulation of risperidone. J Clin Pharmacol 2015; 55:93–103.\n",
+  "raw_text_sha256": "3f73c384e81f643ae61a1b0bfde1681df208dd9c988b926d24d20c21f8a24a45",
+  "coordinates_sha256": "c624e04c682fd49960097070d0947bf5110cd77061b070a31e2ed2822f8ab44c",
+  "block_sequence_sha256": "f6ff62437e94746e1efc51214189b6e4b4f40abf5e40bfe45eaed593e7f9183a",
+  "blocks": [
+    {
+      "block_id": "page-0112-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    91\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "4d588c9bc0fbb009df0c0fb0055ba2adb898afb07e7e6b93dd59d2a3a456a011"
+    },
+    {
+      "block_id": "page-0112-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0112-block-0002",
+      "order": 2,
+      "text": "Risperidone subcutaneous long-acting injection\n",
+      "bbox": [
+        54.99919891357422,
+        66.06442260742188,
+        300.05718994140625,
+        79.09942626953125
+      ],
+      "text_sha256": "624470408cf6994ea964c56b0a56c0e97b3024c861426d2d1a53ce84ad44de07"
+    },
+    {
+      "block_id": "page-0112-block-0003",
+      "order": 3,
+      "text": "RBP-7000 or Perseris is a monthly subcutaneous LAI that is available in 90mg and 120mg \ndosage forms. The lower dose is equivalent to 3mg day oral risperidone and the higher dose \n4mg a day.1\n",
+      "bbox": [
+        47.99919891357422,
+        94.909423828125,
+        422.7790832519531,
+        130.62942504882812
+      ],
+      "text_sha256": "8a4ebb43fc4616db2dd36218d535f220871dc486deafeb9ef9e19e0be878a0ae"
+    },
+    {
+      "block_id": "page-0112-block-0004",
+      "order": 4,
+      "text": "The injection is acutely effective at both licensed doses, without the need for oral pre-\ntreatment or oral supplementation.2,3 The 120mg dose was numerically more effective \nthan 90mg at all time points. In the longer term, monthly doses of 120mg are effective \nin maintaining or improving symptom scale scores.4 It has clear theoretical advantages \nover Risperdal Consta, being rapidly active, not requiring oral supplementation and, as \na subcutaneous injection, being more acceptable to patients5 with a low risk of painful \ninjection.6 One disadvantage is that the injection procedure has several steps and both \nthe complexity of preparation and subcutaneous administration are new to psychiatry.6 \nA second potential disadvantage is that doses above the equivalent of 4mg a day may \nnot be given, a fact that may limit clinical utility.7 (In respect to Cmax, Cmin and Cave 3mg/\nday = 90mg/28 days; and 4mg/day = 120mg/28 days1,8). Nonetheless, dopamine recep-\ntor occupancies are broadly consistent with clinical efficacy: at steady state, 90mg gives \noccupancies ranging from approximately 40–80%; 120mg, 60–85%.9\n",
+      "bbox": [
+        47.99497985839844,
+        130.909423828125,
+        422.8003234863281,
+        286.6294250488281
+      ],
+      "text_sha256": "0429f140d72ea4bdaa343f0e5c4644195858cf12c32d570b1c807bd84ef4e792"
+    },
+    {
+      "block_id": "page-0112-block-0005",
+      "order": 5,
+      "text": "Approximate equivalent doses (mg)10\n",
+      "bbox": [
+        47.99919891357422,
+        296.0644226074219,
+        240.12667846679688,
+        309.09942626953125
+      ],
+      "text_sha256": "bdbc487c8ecb3f2992c0e9f6806b8f2ade8388b15c86ed7e8530702715e76244"
+    },
+    {
+      "block_id": "page-0112-block-0006",
+      "order": 6,
+      "text": "Risperidone oral (daily)\nRisperdal Consta (2-weekly)\n",
+      "bbox": [
+        47.99919891357422,
+        334.5718994140625,
+        246.29930114746094,
+        343.45941162109375
+      ],
+      "text_sha256": "0ce14953a15a43d07b55ffe1ea5ded4bc22ccc4e3439051d4dd4ce130924e14e"
+    },
+    {
+      "block_id": "page-0112-block-0007",
+      "order": 7,
+      "text": "Paliperidone \npalmitate (monthly)\nRBP-7000 (monthly)\n",
+      "bbox": [
+        263.24920654296875,
+        324.57440185546875,
+        411.44921875,
+        343.45941162109375
+      ],
+      "text_sha256": "e2606076b8464fc62195d5a941d882f6a7be3d9fcaffd999131cb81da34349e1"
+    },
+    {
+      "block_id": "page-0112-block-0008",
+      "order": 8,
+      "text": "2\n25\n50\nNot available*\n",
+      "bbox": [
+        47.99919128417969,
+        351.5294189453125,
+        387.6892395019531,
+        360.2369079589844
+      ],
+      "text_sha256": "80377ee1f02147bd37eaecd58fbaf57f363c261e576ca59f79e2ec68e05614ee"
+    },
+    {
+      "block_id": "page-0112-block-0009",
+      "order": 9,
+      "text": "3\n37.5\n75\n90\n",
+      "bbox": [
+        47.99919128417969,
+        366.5519104003906,
+        350.6092224121094,
+        375.2593994140625
+      ],
+      "text_sha256": "e8e0131604bb24978c673dcd10dc34617f8760610447bc9ed49caff03bf1b749"
+    },
+    {
+      "block_id": "page-0112-block-0010",
+      "order": 10,
+      "text": "4\n50\n100\n120\n",
+      "bbox": [
+        47.99919128417969,
+        381.57440185546875,
+        354.7792053222656,
+        390.2818908691406
+      ],
+      "text_sha256": "9f36ac66e37c3f95bd9db9d55df4d3bad52e1a5269e8aaada38218e5d7e9bfad"
+    },
+    {
+      "block_id": "page-0112-block-0011",
+      "order": 11,
+      "text": "6\nNot available\n150\nNot available\n",
+      "bbox": [
+        47.99919128417969,
+        396.5968933105469,
+        383.51922607421875,
+        405.30438232421875
+      ],
+      "text_sha256": "daab9ee07511efc695a73e040daa53192bc6df04f606acc75176c5b5ff918e3c"
+    },
+    {
+      "block_id": "page-0112-block-0012",
+      "order": 12,
+      "text": "*Laffont et al.11 suggest 90mg is equivalent to 25mg/2-weekly Risperdal Consta\n",
+      "bbox": [
+        47.99919128417969,
+        415.5943908691406,
+        302.64093017578125,
+        424.3094177246094
+      ],
+      "text_sha256": "acde6d1f1b8c6b1bd8e80360b50a68e9c643793418dec14d9701edb21173f99a"
+    },
+    {
+      "block_id": "page-0112-block-0013",
+      "order": 13,
+      "text": "References\n",
+      "bbox": [
+        47.99919891357422,
+        434.1494140625,
+        104.033203125,
+        447.1844177246094
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0112-block-0014",
+      "order": 14,
+      "text": "\t 1.\t US Food and Drug Administration. Cross-discipline team leader review. RBP-7000 (risperidone-ATRIGEL) 2018; https://www.accessdata.\n",
+      "bbox": [
+        47.99919891357422,
+        452.2704162597656,
+        419.9931335449219,
+        459.30242919921875
+      ],
+      "text_sha256": "a5b1125b974bff6e10f28f93b7ee4788ec68dd88a5456eca2cb7dd1d89926245"
+    },
+    {
+      "block_id": "page-0112-block-0015",
+      "order": 15,
+      "text": "fda.gov/drugsatfda_docs/nda/2018/210655Orig1s000SumR.pdf.\n\t 2.\t Nasser AF, et al. Efficacy, safety, and tolerability of RBP-7000 once-monthly risperidone for the treatment of acute schizophrenia: an 8-week, \n",
+      "bbox": [
+        48.00520324707031,
+        461.2704162597656,
+        421.6492614746094,
+        477.30242919921875
+      ],
+      "text_sha256": "3ee6b1bfd6e62ccf70cb001e7110d5d24491cc7283f21cc71a00e9f22a22b254"
+    },
+    {
+      "block_id": "page-0112-block-0016",
+      "order": 16,
+      "text": "randomized, double-blind, placebo-controlled, multicenter phase 3 study. J Clin Psychopharmacol 2016; 36:130–140.\n\t 3.\t Le Moigne A, et al. Reanalysis of a phase 3 trial of a monthly extended-release risperidone injection for the treatment of acute schizophrenia. \n",
+      "bbox": [
+        48.011199951171875,
+        479.12640380859375,
+        421.7210998535156,
+        495.30242919921875
+      ],
+      "text_sha256": "f6d04240a92149956a2e68c3fd0b325a39e58797e6dbb39a36b8bbd5babba4b2"
+    },
+    {
+      "block_id": "page-0112-block-0017",
+      "order": 17,
+      "text": "J Clin Psychopharmacol 2021; 41:76–77.\n\t 4.\t Andorn A, et al. Monthly extended-release risperidone (RBP-7000) in the treatment of schizophrenia: results from the phase 3 program. J \n",
+      "bbox": [
+        48.01719665527344,
+        497.12640380859375,
+        421.6492004394531,
+        513.3024291992188
+      ],
+      "text_sha256": "8682f1e84b25cd95316f0fec31276e14e7823b33f771a676f1283526d6a44492"
+    },
+    {
+      "block_id": "page-0112-block-0018",
+      "order": 18,
+      "text": "Clin Psychopharmacol 2019; 39:428–433.\n\t 5.\t Tchobaniouk LV, et al. Once-monthly subcutaneously administered risperidone in the treatment of schizophrenia: patient considerations. \n",
+      "bbox": [
+        48.02320098876953,
+        515.12646484375,
+        421.6911315917969,
+        531.3024291992188
+      ],
+      "text_sha256": "7dfbd4e73de37cd30079d5624a5777be0a1baa352f7e2deceb46b32815f3fa75"
+    },
+    {
+      "block_id": "page-0112-block-0019",
+      "order": 19,
+      "text": "Patient Prefer Adherence 2019; 13:2233–2241.\n\t 6.\t Citrome L. Sustained-release risperidone via subcutaneous injection: a systematic review of RBP-7000 (PERSERIS(™)) for the treatment of \n",
+      "bbox": [
+        48.029197692871094,
+        533.12646484375,
+        421.7330627441406,
+        549.3024291992188
+      ],
+      "text_sha256": "5ecfc54957ab3ab9d8f6d6625ac974ae53119b635baa343a57de1971a0452347"
+    },
+    {
+      "block_id": "page-0112-block-0020",
+      "order": 20,
+      "text": "schizophrenia. Clin Schizophr Relat Psychoses 2018; 12:130–141.\n\t 7.\t Clark I, et al. Newer formulations of risperidone: role in the management of psychotic disorders. CNS Drugs 2020; 34:841–852.\n\t 8.\t US Food and Drug Administration. Clinical pharmacology and biopharmaceutics review(s). Perseris 2018; https://www.accessdata.fda.gov/\n",
+      "bbox": [
+        48.03520202636719,
+        551.12646484375,
+        420.0591735839844,
+        576.3024291992188
+      ],
+      "text_sha256": "25e12b83c3a445f65c705e4d6b6b213e1f5df7162e1fc352603315f5f81d4f24"
+    },
+    {
+      "block_id": "page-0112-block-0021",
+      "order": 21,
+      "text": "drugsatfda_docs/nda/2018/210655Orig1s000ClinPharmR.pdf.\n\t 9.\t Laffont CM, et al. Population pharmacokinetics and prediction of dopamine D2 receptor occupancy after multiple doses of RBP-7000, a new \n",
+      "bbox": [
+        48.047203063964844,
+        578.2704467773438,
+        421.6789855957031,
+        594.3024291992188
+      ],
+      "text_sha256": "19a0dda767c3f68a0a98af5ff68c700b01bb7c35620e14a93d5dd58c2a9d45b3"
+    },
+    {
+      "block_id": "page-0112-block-0022",
+      "order": 22,
+      "text": "sustained-release formulation of risperidone, in schizophrenia patients on stable oral risperidone treatment. Clin Pharmacokinet 2014; \n53:533–543.\n\t10.\t Karas A, et al. Perseris(TM): a new and long-acting, atypical antipsychotic drug-delivery system. P & T 2019; 44:460–466.\n\t11.\t Laffont CM, et al. Population pharmacokinetic modeling and simulation to guide dose selection for RBP-7000, a new sustained-release for-\n",
+      "bbox": [
+        48.053199768066406,
+        596.2704467773438,
+        421.6971130371094,
+        630.3024291992188
+      ],
+      "text_sha256": "93601034524542869eca00f5509d6d3b65624775767d95b916185b528d8c4d98"
+    },
+    {
+      "block_id": "page-0112-block-0023",
+      "order": 23,
+      "text": "mulation of risperidone. J Clin Pharmacol 2015; 55:93–103.\n",
+      "bbox": [
+        59.06318664550781,
+        632.12646484375,
+        215.9031524658203,
+        639.3024291992188
+      ],
+      "text_sha256": "43abac5b3ca8cdf0479e5c9b5d4815888415a694d7005f5285c94caa6a1ad463"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

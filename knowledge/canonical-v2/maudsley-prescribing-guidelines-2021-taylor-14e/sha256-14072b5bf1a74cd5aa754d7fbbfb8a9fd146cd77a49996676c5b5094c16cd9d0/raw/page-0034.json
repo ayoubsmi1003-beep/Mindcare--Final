@@ -1,0 +1,299 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0034",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 34,
+  "source_page_index": 33,
+  "source_page_display": 34,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    13\nCHAPTER 1\nDrug\nMaximum dose\nPaliperidone depot\n3-monthly\n525mg every 3 months\nPipotiazine depot\n200mg every 4 weeks\nRisperidone (Janssen)\n50mg every 2 weeks\nZuclopenthixol depot\n600mg/week\nThe following table lists the licensed maximum doses of antipsychotics available out-\nside the EU, according to FDA labelling (as of February 2021)\nDrug\nMaximum dose\nSGAs – oral\nBlonanserin*\n24mg/day oral1 (80mg/day patch2)\nBrexpiprazole\n4mg/day\nIloperidone\n24mg/day\nLumateperone\n42mg/day\nMolindone\n225mg/day\nPimavanserin\n34mg/day\nRBP-7000 (risperidone 1-monthly)\n120mg/month\nZiprasidone\n160mg/day\n*Available only in China, Japan and South Korea at the time of writing.\nReferences\n\t 1.\t Inoue Y, et al. Safety and effectiveness of oral blonanserin for schizophrenia: a review of Japanese post-marketing surveillances. J Pharmacol \nSci 2021; 145:42–51.\n\t 2.\t Nishibe H, et al. Striatal dopamine D2 receptor occupancy induced by daily application of blonanserin transdermal patches: phase 2 study \nin Japanese patients with schizophrenia. Int J Neuropsychopharmacol 2020; 24:108–117.\n",
+  "raw_text_sha256": "ebb9f95d2e6da546801e63b75515944a7cc911200a9797528da1b164f0e13bdd",
+  "coordinates_sha256": "563d46bf12935dd599bffe2ce3a9b15f9c994a7e41d8a1fa85dc2e056feaa010",
+  "block_sequence_sha256": "f456b9cde9456cee05f89cbc9d57b8bbb7fae319e7c1a90932bfa980d5aa3358",
+  "blocks": [
+    {
+      "block_id": "page-0034-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    13\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "094c9ab1f097ad7b0ab69b596735947c860f3b015b9deb4d2917caac9ed332c6"
+    },
+    {
+      "block_id": "page-0034-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0034-block-0002",
+      "order": 2,
+      "text": "Drug\nMaximum dose\n",
+      "bbox": [
+        47.99909973144531,
+        70.57203674316406,
+        234.17160034179688,
+        79.45953369140625
+      ],
+      "text_sha256": "914ed242ceff0373ad4c35270cf9db180aca250b34588b84445fa6f70d5ed130"
+    },
+    {
+      "block_id": "page-0034-block-0003",
+      "order": 3,
+      "text": "Paliperidone depot\n3-monthly\n525mg every 3 months\n",
+      "bbox": [
+        47.99909973144531,
+        88.0245590209961,
+        254.181640625,
+        106.72955322265625
+      ],
+      "text_sha256": "e42f18603a13e978365d5cd7c624c45e9aeeb8e319ac426d70dd594e4bcfa1f1"
+    },
+    {
+      "block_id": "page-0034-block-0004",
+      "order": 4,
+      "text": "Pipotiazine depot\n200mg every 4 weeks\n",
+      "bbox": [
+        47.99909973144531,
+        113.05208587646484,
+        250.0115966796875,
+        121.75958251953125
+      ],
+      "text_sha256": "fd599f71c6e166cf00452842b53fb066e42da5fc3710e80f4f4b995633367691"
+    },
+    {
+      "block_id": "page-0034-block-0005",
+      "order": 5,
+      "text": "Risperidone (Janssen)\n50mg every 2 weeks\n",
+      "bbox": [
+        47.99909973144531,
+        128.07460021972656,
+        245.84158325195312,
+        136.7821044921875
+      ],
+      "text_sha256": "abffd690d1a37ba070adaae68a49096051cb75f7501b27aba9abac93465fffb9"
+    },
+    {
+      "block_id": "page-0034-block-0006",
+      "order": 6,
+      "text": "Zuclopenthixol depot\n600mg/week\n",
+      "bbox": [
+        47.99909973144531,
+        143.0971221923828,
+        222.0966033935547,
+        151.80462646484375
+      ],
+      "text_sha256": "dbc00660b9552a931df0304e32fab9b2f720ee5ddd15a2e1f814bd4c9e26fcc5"
+    },
+    {
+      "block_id": "page-0034-block-0007",
+      "order": 7,
+      "text": "The following table lists the licensed maximum doses of antipsychotics available out-\nside the EU, according to FDA labelling (as of February 2021)\n",
+      "bbox": [
+        47.99909973144531,
+        171.4945068359375,
+        419.9790954589844,
+        195.21450805664062
+      ],
+      "text_sha256": "19e9f18666faa45315bb84b99be0371b6be8ef648187bbad21041ba7ffe9bfd2"
+    },
+    {
+      "block_id": "page-0034-block-0008",
+      "order": 8,
+      "text": "Drug\nMaximum dose\n",
+      "bbox": [
+        47.99909973144531,
+        215.1570281982422,
+        307.2815856933594,
+        224.04452514648438
+      ],
+      "text_sha256": "914ed242ceff0373ad4c35270cf9db180aca250b34588b84445fa6f70d5ed130"
+    },
+    {
+      "block_id": "page-0034-block-0009",
+      "order": 9,
+      "text": "SGAs – oral\n",
+      "bbox": [
+        47.99908447265625,
+        232.18202209472656,
+        88.00408172607422,
+        241.06951904296875
+      ],
+      "text_sha256": "a266c0ebd370b1319fe6db67cb7ddd07b54459bb27855f6c83c25d885e453739"
+    },
+    {
+      "block_id": "page-0034-block-0010",
+      "order": 10,
+      "text": "Blonanserin*\n24mg/day oral1 (80mg/day patch2)\n",
+      "bbox": [
+        47.99908447265625,
+        247.38450622558594,
+        362.5807189941406,
+        256.0945129394531
+      ],
+      "text_sha256": "bc109c4946e83d65327e735a77839b06ad82a12394d134b8e9fb11a57bf3ce54"
+    },
+    {
+      "block_id": "page-0034-block-0011",
+      "order": 11,
+      "text": "Brexpiprazole\n4mg/day\n",
+      "bbox": [
+        48.00071716308594,
+        262.4095153808594,
+        281.0332336425781,
+        271.11700439453125
+      ],
+      "text_sha256": "0f753c78244cf2a7d1c7f0bb92a6981fc8443db6aaadf49fb2adb5207386d83b"
+    },
+    {
+      "block_id": "page-0034-block-0012",
+      "order": 12,
+      "text": "Iloperidone\n24mg/day\n",
+      "bbox": [
+        48.000732421875,
+        277.4320068359375,
+        285.2032775878906,
+        286.1394958496094
+      ],
+      "text_sha256": "f47a631fa69c6daaaf13081739053a664bcba4735220c619ce2e4349fdeba69f"
+    },
+    {
+      "block_id": "page-0034-block-0013",
+      "order": 13,
+      "text": "Lumateperone\n42mg/day\n",
+      "bbox": [
+        48.000732421875,
+        292.4544982910156,
+        285.2032775878906,
+        301.1619873046875
+      ],
+      "text_sha256": "3aa7dd6f2425e1cd79b4f0f2de34a3eea777e116319d934eb15aa6311f25e338"
+    },
+    {
+      "block_id": "page-0034-block-0014",
+      "order": 14,
+      "text": "Molindone\n225mg/day\n",
+      "bbox": [
+        48.000732421875,
+        307.47698974609375,
+        289.3732604980469,
+        316.1844787597656
+      ],
+      "text_sha256": "b52082a4926052b48d775bfe69a78ff9cf677188abb588faa1283d29645af85d"
+    },
+    {
+      "block_id": "page-0034-block-0015",
+      "order": 15,
+      "text": "Pimavanserin\n34mg/day\n",
+      "bbox": [
+        48.000732421875,
+        322.4994812011719,
+        285.2032775878906,
+        331.20697021484375
+      ],
+      "text_sha256": "7c77c687c7bc787aa16b6102e0f7561d3597f75e151f15bcdbc33cf30f5ec402"
+    },
+    {
+      "block_id": "page-0034-block-0016",
+      "order": 16,
+      "text": "RBP-7000 (risperidone 1-monthly)\n120mg/month\n",
+      "bbox": [
+        48.000732421875,
+        337.52197265625,
+        299.3783264160156,
+        346.2294616699219
+      ],
+      "text_sha256": "829691aaeaeab8764b2b775e8ed56af3af333c6604dc6028329c0bbeaf6cc68e"
+    },
+    {
+      "block_id": "page-0034-block-0017",
+      "order": 17,
+      "text": "Ziprasidone\n160mg/day\n",
+      "bbox": [
+        48.000732421875,
+        352.5444641113281,
+        289.3732604980469,
+        361.251953125
+      ],
+      "text_sha256": "7011f679fbe51f490313a0330e911859c519e57d231a7398eb6ea333462b53a6"
+    },
+    {
+      "block_id": "page-0034-block-0018",
+      "order": 18,
+      "text": "*Available only in China, Japan and South Korea at the time of writing.\n",
+      "bbox": [
+        48.000732421875,
+        371.5419616699219,
+        275.6932678222656,
+        380.24945068359375
+      ],
+      "text_sha256": "6724a7e2adbb16c46bbdf9a4eda7c9a14f46d25a9a0d4ad481dde68627da9708"
+    },
+    {
+      "block_id": "page-0034-block-0019",
+      "order": 19,
+      "text": "References\n",
+      "bbox": [
+        47.99909973144531,
+        398.1094970703125,
+        104.03309631347656,
+        411.1445007324219
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0034-block-0020",
+      "order": 20,
+      "text": "\t 1.\t Inoue Y, et al. Safety and effectiveness of oral blonanserin for schizophrenia: a review of Japanese post-marketing surveillances. J Pharmacol \n",
+      "bbox": [
+        47.99909973144531,
+        416.2304992675781,
+        421.6912536621094,
+        423.26251220703125
+      ],
+      "text_sha256": "a7c190bed12d43d3470d6af3d7709675a9a4755db8d48400f307d00002661bd1"
+    },
+    {
+      "block_id": "page-0034-block-0021",
+      "order": 21,
+      "text": "Sci 2021; 145:42–51.\n\t 2.\t Nishibe H, et al. Striatal dopamine D2 receptor occupancy induced by daily application of blonanserin transdermal patches: phase 2 study \n",
+      "bbox": [
+        48.005096435546875,
+        425.08648681640625,
+        421.6969909667969,
+        441.26251220703125
+      ],
+      "text_sha256": "be8aead05ae82f36035f743438b90fbad3656e3d93ff31cc98eebeae62419057"
+    },
+    {
+      "block_id": "page-0034-block-0022",
+      "order": 22,
+      "text": "in Japanese patients with schizophrenia. Int J Neuropsychopharmacol 2020; 24:108–117.\n",
+      "bbox": [
+        59.00910186767578,
+        443.08648681640625,
+        291.1310729980469,
+        450.26251220703125
+      ],
+      "text_sha256": "056fe53619183709b70da2bf2eda07d6c84904fbafbe48da37d18fc8c82d63da"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

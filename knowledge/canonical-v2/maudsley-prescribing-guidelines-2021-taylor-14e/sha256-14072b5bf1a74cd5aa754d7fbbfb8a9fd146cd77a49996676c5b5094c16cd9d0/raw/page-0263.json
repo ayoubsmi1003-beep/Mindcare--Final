@@ -1,0 +1,215 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0263",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 263,
+  "source_page_index": 262,
+  "source_page_display": 263,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "242    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nClozapine and chemotherapy\nThe use of clozapine with agents which cause neutropenia is formally contraindicated. \nMost chemotherapy treatments cause significant bone marrow suppression. When the \nwhite blood cell count drops below 3.0 × 109/L clozapine is usually discontinued; this \nis an important safety precaution outlined in the formal licence/labelling. For many \nregimens it can be predicted that chemotherapy will reduce the white blood cell count \nbelow this level, irrespective of the use of clozapine.\nWhere possible, clozapine should be discontinued before chemotherapy. However, \nthis will place most patients at high risk of relapse or deterioration, which may then \naffect their capacity to consent to chemotherapy. This poses a therapeutic dilemma in \npatients prescribed clozapine and requiring chemotherapy. In practice, many patients, \nperhaps even a majority, continue clozapine during chemotherapy.\nThere are a number of case reports supporting continuing clozapine during chemo-\ntherapy,1–18 but interpretation of this literature should take account of possible publica-\ntion bias.2 Before initiating chemotherapy for a patient receiving clozapine, it is essential \nto put in place a treatment plan that is agreed with all relevant healthcare staff involved \nand, of course, the patient and family members/carers; this will include the oncologist/\nphysician, psychiatrist, pharmacist and the clozapine monitoring service. Plans should \nbe made in advance for the action that should be taken when the white blood count \ndrops below the normally accepted minimum. This plan should cover the frequency of \nhaematological monitoring, increased vigilance regarding the clinical consequences \nof neutropenia/agranulocytosis, if and when clozapine should be stopped, and the place \nof medication such as lithium and granulocyte-colony stimulating factor (G-CSF)19,20 to \ntry and support the maintenance of normal neutrophil counts.\nIn the UK, the clozapine monitoring service will normally ask the psychiatrist to sign \nan ‘unlicensed use’ form and will request additional blood monitoring. Complications \nappear to be rare but there is one case report of neutropenia persisting for 6 months \nafter doxorubicin, radiotherapy and clozapine.8 G-CSF has been used to treat agranu-\nlocytosis associated with chemotherapy and clozapine in combination.9,10,21 Risks of \nlife-threatening blood dyscrasia are probably lowest in those who have received clozap-\nine for longer than a year, in whom clozapine-induced neutropenia would be highly \nunusual.\nSummary\n■\n■If possible, clozapine should be discontinued before starting chemotherapy. However, \nfor most patients, withdrawal is not possible or sensible.\n■\n■The risk of relapse or deterioration of the psychotic illness must be considered before \ndiscontinuing clozapine.\n■\n■If the patient’s mental state deteriorates, they may retract their consent for \nchemotherapy.\n■\n■When clozapine treatment is continued during chemotherapy, a collaborative \napproach between the oncologist, psychiatrist, pharmacy, patient and clozapine mon-\nitoring service is strongly recommended.\n",
+  "raw_text_sha256": "a12f7f12280dccdc91b40a05a0463927fed7d7625a6cadb360492dabf5b00c13",
+  "coordinates_sha256": "3712f87d7641b70b21b5c8cc436925c6673811a0cc421a0df8aa821168e1f3a7",
+  "block_sequence_sha256": "883300affda33c7017272b87b6c9c8911c0d44f1488eeff672a3edaaaab85054",
+  "blocks": [
+    {
+      "block_id": "page-0263-block-0000",
+      "order": 0,
+      "text": "242    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "ff1960e51302c07f8541850b12dcd0d3819f1742f1727ed6156a9dab1a73bd16"
+    },
+    {
+      "block_id": "page-0263-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0263-block-0002",
+      "order": 2,
+      "text": "Clozapine and chemotherapy\n",
+      "bbox": [
+        68.88909912109375,
+        66.06448364257812,
+        219.86404418945312,
+        79.0994873046875
+      ],
+      "text_sha256": "35240e16f8c0ba706bd45942aadac29d68fcc3503109f27624456a882d91ed8e"
+    },
+    {
+      "block_id": "page-0263-block-0003",
+      "order": 3,
+      "text": "The use of clozapine with agents which cause neutropenia is formally contraindicated. \nMost chemotherapy treatments cause significant bone marrow suppression. When the \nwhite blood cell count drops below 3.0 × 109/L clozapine is usually discontinued; this \nis an important safety precaution outlined in the formal licence/labelling. For many \nregimens it can be predicted that chemotherapy will reduce the white blood cell count \nbelow this level, irrespective of the use of clozapine.\n",
+      "bbox": [
+        61.88909912109375,
+        84.90948486328125,
+        436.6817932128906,
+        156.62948608398438
+      ],
+      "text_sha256": "01c4a86d09eff6b899f4b7c01556173d0cacf8e112531ba9a3724b1e2a9c5a1d"
+    },
+    {
+      "block_id": "page-0263-block-0004",
+      "order": 4,
+      "text": "Where possible, clozapine should be discontinued before chemotherapy. However, \nthis will place most patients at high risk of relapse or deterioration, which may then \naffect their capacity to consent to chemotherapy. This poses a therapeutic dilemma in \npatients prescribed clozapine and requiring chemotherapy. In practice, many patients, \nperhaps even a majority, continue clozapine during chemotherapy.\n",
+      "bbox": [
+        61.89179992675781,
+        156.90948486328125,
+        436.7018127441406,
+        216.62948608398438
+      ],
+      "text_sha256": "2a43c0dd562162c216a564efda25de99ef38f4c01e1fb9d8e08cbd3c4d993ef3"
+    },
+    {
+      "block_id": "page-0263-block-0005",
+      "order": 5,
+      "text": "There are a number of case reports supporting continuing clozapine during chemo-\ntherapy,1–18 but interpretation of this literature should take account of possible publica-\ntion bias.2 Before initiating chemotherapy for a patient receiving clozapine, it is essential \nto put in place a treatment plan that is agreed with all relevant healthcare staff involved \nand, of course, the patient and family members/carers; this will include the oncologist/\nphysician, psychiatrist, pharmacist and the clozapine monitoring service. Plans should \nbe made in advance for the action that should be taken when the white blood count \ndrops below the normally accepted minimum. This plan should cover the frequency of \nhaematological monitoring, increased vigilance regarding the clinical consequences \nof neutropenia/agranulocytosis, if and when clozapine should be stopped, and the place \nof medication such as lithium and granulocyte-colony stimulating factor (G-CSF)19,20 to \ntry and support the maintenance of normal neutrophil counts.\n",
+      "bbox": [
+        61.88819885253906,
+        216.90948486328125,
+        436.6989440917969,
+        360.6295166015625
+      ],
+      "text_sha256": "76fdde49bc518e74cf403965d0163e834512e6c73fb2bb60e758bfc8d870d5a7"
+    },
+    {
+      "block_id": "page-0263-block-0006",
+      "order": 6,
+      "text": "In the UK, the clozapine monitoring service will normally ask the psychiatrist to sign \nan ‘unlicensed use’ form and will request additional blood monitoring. Complications \nappear to be rare but there is one case report of neutropenia persisting for 6 months \nafter doxorubicin, radiotherapy and clozapine.8 G-CSF has been used to treat agranu-\nlocytosis associated with chemotherapy and clozapine in combination.9,10,21 Risks of \nlife-threatening blood dyscrasia are probably lowest in those who have received clozap-\nine for longer than a year, in whom clozapine-induced neutropenia would be highly \nunusual.\n",
+      "bbox": [
+        61.88999938964844,
+        360.9095153808594,
+        436.7127990722656,
+        456.6295166015625
+      ],
+      "text_sha256": "7bde580864054238412a195fd05323307e58c0af1bb799fd385de6cf709dd4d0"
+    },
+    {
+      "block_id": "page-0263-block-0007",
+      "order": 7,
+      "text": "Summary\n",
+      "bbox": [
+        61.88909912109375,
+        474.06451416015625,
+        110.79510498046875,
+        487.0995178222656
+      ],
+      "text_sha256": "3cbb36aca330b3bd113955dfbada0adb7a5f95ad9f678bd61f175406c6a37e95"
+    },
+    {
+      "block_id": "page-0263-block-0008",
+      "order": 8,
+      "text": "■\n■If possible, clozapine should be discontinued before starting chemotherapy. However, \n",
+      "bbox": [
+        61.888999938964844,
+        498.9095153808594,
+        436.6891174316406,
+        510.6295166015625
+      ],
+      "text_sha256": "cb4eaf90fb96018d1c72c94c8170eeee209b717da31bf46666f3e30fbca3b420"
+    },
+    {
+      "block_id": "page-0263-block-0009",
+      "order": 9,
+      "text": "for most patients, withdrawal is not possible or sensible.\n",
+      "bbox": [
+        70.88909912109375,
+        510.90948486328125,
+        313.9191589355469,
+        522.6295166015625
+      ],
+      "text_sha256": "9573b0241ddd7fbd92a5309d21769467d753234306e83642bff6b3b39bbae337"
+    },
+    {
+      "block_id": "page-0263-block-0010",
+      "order": 10,
+      "text": "■\n■The risk of relapse or deterioration of the psychotic illness must be considered before \n",
+      "bbox": [
+        61.888999938964844,
+        522.9094848632812,
+        436.6190490722656,
+        534.6295166015625
+      ],
+      "text_sha256": "ec3815611ace4c6a5469b3da623b8f98003a7a65b144661243ec113f0282d72a"
+    },
+    {
+      "block_id": "page-0263-block-0011",
+      "order": 11,
+      "text": "discontinuing clozapine.\n",
+      "bbox": [
+        70.88909912109375,
+        534.9094848632812,
+        175.36907958984375,
+        546.6295166015625
+      ],
+      "text_sha256": "ef67f59692868ec35ca72c971c43fa9b566b762267196a1d164e83d482b22994"
+    },
+    {
+      "block_id": "page-0263-block-0012",
+      "order": 12,
+      "text": "■\n■If the patient’s mental state deteriorates, they may retract their consent for \n",
+      "bbox": [
+        61.888999938964844,
+        546.9094848632812,
+        436.6290588378906,
+        558.6295166015625
+      ],
+      "text_sha256": "50687dc4f25829f37f45b088781638cc3784e7863da36aa729d9de9ae7175057"
+    },
+    {
+      "block_id": "page-0263-block-0013",
+      "order": 13,
+      "text": "chemotherapy.\n",
+      "bbox": [
+        70.88909912109375,
+        558.9094848632812,
+        133.84910583496094,
+        570.6295166015625
+      ],
+      "text_sha256": "51014f618c5ce972fb602f6056fcd9a12315232e7088e17ad9a75bc8aff7942d"
+    },
+    {
+      "block_id": "page-0263-block-0014",
+      "order": 14,
+      "text": "■\n■When clozapine treatment is continued during chemotherapy, a collaborative \n",
+      "bbox": [
+        61.888999938964844,
+        570.9094848632812,
+        436.6490783691406,
+        582.6295166015625
+      ],
+      "text_sha256": "89d58661062960caee22a0f2fdbc25b80fb0544e6aa50c46862de3046385d488"
+    },
+    {
+      "block_id": "page-0263-block-0015",
+      "order": 15,
+      "text": "approach between the oncologist, psychiatrist, pharmacy, patient and clozapine mon-\nitoring service is strongly recommended.\n",
+      "bbox": [
+        70.88909912109375,
+        582.9094848632812,
+        433.8891296386719,
+        606.6295166015625
+      ],
+      "text_sha256": "9b4f3e92ec90c163fef3787aa9637c6f97210141dab230cf052a1491706591a7"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

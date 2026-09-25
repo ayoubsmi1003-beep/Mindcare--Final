@@ -1,0 +1,359 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0212",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 212,
+  "source_page_index": 211,
+  "source_page_display": 212,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    191\nCHAPTER 1\nReferences\n\t 1.\t Stanworth D, Hunt NC, Flanagan RJ. Clozapine – a dangerous drug in a clozapine-naive subject. Forensic Sci Int 2011; 214:e23–e5.\n\t 2.\t Rostami-Hodjegan A, Amin AM, Spencer EP, et al. Influence of dose, cigarette smoking, age, sex, and metabolic activity on plasma clozapine \nconcentrations: a predictive model and nomograms to aid clozapine dose adjustment and to assess compliance in individual patients. J Clin \nPsychopharmacol 2004; 24:70–78.\nTable 1.34  Suggested starting regime for clozapine (in-patients)\nDay\nMorning dose (mg)\nEvening dose (mg)\n1\n–\n12.5\n2\n12.5\n12.5\n3\n25\n25\n4\n25\n25\n5\n25\n50\n6\n25\n50\n7\n50\n50\n8\n50\n75\n9\n75\n75\n10\n75\n100\n11\n100\n100\n12\n100\n125\n13\n125\n125a\n14\n125\n150\n15\n150\n150\n18\n150\n200b\n21\n200\n200\n28\n200\n250c\naTarget dose for female non smokers (250mg/day).\nbTarget dose for male non smokers (350mg/day).\ncTarget dose for female smokers (450mg/day).\n",
+  "raw_text_sha256": "00cff13e3f5a314f70446e20db0089c60867f9998eb54e04c8526edbd2a3b8e7",
+  "coordinates_sha256": "487277290bd1e7f5b41bd8285d42905fbca9da36be91fde295f146b28481ab01",
+  "block_sequence_sha256": "a09f9e161a337092cdce91f935ffad6c34cab1bd5ea924b1d4dc86a270c17eb8",
+  "blocks": [
+    {
+      "block_id": "page-0212-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    191\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "83ed021274e3b4bdedbddd610626ac43a699788b0261da954a4893375b52eae9"
+    },
+    {
+      "block_id": "page-0212-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0212-block-0002",
+      "order": 2,
+      "text": "References\n",
+      "bbox": [
+        47.99909973144531,
+        426.95660400390625,
+        104.03309631347656,
+        439.9916076660156
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0212-block-0003",
+      "order": 3,
+      "text": "\t 1.\t Stanworth D, Hunt NC, Flanagan RJ. Clozapine – a dangerous drug in a clozapine-naive subject. Forensic Sci Int 2011; 214:e23–e5.\n\t 2.\t Rostami-Hodjegan A, Amin AM, Spencer EP, et al. Influence of dose, cigarette smoking, age, sex, and metabolic activity on plasma clozapine \n",
+      "bbox": [
+        47.99909973144531,
+        444.93359375,
+        421.6552429199219,
+        461.109619140625
+      ],
+      "text_sha256": "01535da6674df60493ddb37296ec68627f742b82b67fd3df3c3e66b74a1dcc20"
+    },
+    {
+      "block_id": "page-0212-block-0004",
+      "order": 4,
+      "text": "concentrations: a predictive model and nomograms to aid clozapine dose adjustment and to assess compliance in individual patients. J Clin \nPsychopharmacol 2004; 24:70–78.\n",
+      "bbox": [
+        59.00910186767578,
+        463.0776062011719,
+        421.6612243652344,
+        479.109619140625
+      ],
+      "text_sha256": "308c1ad5d4289e0d30a272ba7ab507b6e23805e839f717386e50c1ec93bfc7ac"
+    },
+    {
+      "block_id": "page-0212-block-0005",
+      "order": 5,
+      "text": "Table 1.34  Suggested starting regime for clozapine (in-patients)\n",
+      "bbox": [
+        53.99970245361328,
+        70.08692932128906,
+        259.7397155761719,
+        78.97442626953125
+      ],
+      "text_sha256": "c9aae46754087578baed04f5c70ebb6cfc52cf9b23ae78746a16dcdefe914738"
+    },
+    {
+      "block_id": "page-0212-block-0006",
+      "order": 6,
+      "text": "Day\nMorning dose (mg)\nEvening dose (mg)\n",
+      "bbox": [
+        47.99970245361328,
+        90.32191467285156,
+        354.817138671875,
+        99.20941162109375
+      ],
+      "text_sha256": "0555a2dc95a1008d8a47d0dc21c7509a5894de3d77315abb5dfb720fa33964d0"
+    },
+    {
+      "block_id": "page-0212-block-0007",
+      "order": 7,
+      "text": "1\n–\n12.5\n",
+      "bbox": [
+        47.99969482421875,
+        107.2794418334961,
+        303.9897155761719,
+        115.9869384765625
+      ],
+      "text_sha256": "20ec9151fb5ec40fa0ef70bd29072c8e75b27d1cac3e9518bdb53fed3ea7be91"
+    },
+    {
+      "block_id": "page-0212-block-0008",
+      "order": 8,
+      "text": "2\n12.5\n12.5\n",
+      "bbox": [
+        47.99969482421875,
+        122.30196380615234,
+        303.9897155761719,
+        131.00946044921875
+      ],
+      "text_sha256": "fd5b2819280e67d54fbe9bcd64891e587ae8ef8df97eb403b9dd4f1bc4b4d3fa"
+    },
+    {
+      "block_id": "page-0212-block-0009",
+      "order": 9,
+      "text": "3\n25\n25\n",
+      "bbox": [
+        47.99969482421875,
+        137.32447814941406,
+        297.7347106933594,
+        146.031982421875
+      ],
+      "text_sha256": "91a56c7760c69f835c14a6e1fa1bb441a415e8c3b196f2f0946f58f8f1a07406"
+    },
+    {
+      "block_id": "page-0212-block-0010",
+      "order": 10,
+      "text": "4\n25\n25\n",
+      "bbox": [
+        47.99969482421875,
+        152.3470001220703,
+        297.7347106933594,
+        161.05450439453125
+      ],
+      "text_sha256": "5b7c8dc57d3ef786a08980428d843efaafbf28cb4b85869632950cc58b0db70d"
+    },
+    {
+      "block_id": "page-0212-block-0011",
+      "order": 11,
+      "text": "5\n25\n50\n",
+      "bbox": [
+        47.99969482421875,
+        167.36952209472656,
+        297.7347106933594,
+        176.0770263671875
+      ],
+      "text_sha256": "4c61d0b7bfb58f454a20f8cb08d4ee1de7330be9a7c0c3dc98a0e01fc2a98812"
+    },
+    {
+      "block_id": "page-0212-block-0012",
+      "order": 12,
+      "text": "6\n25\n50\n",
+      "bbox": [
+        47.99969482421875,
+        182.3920440673828,
+        297.7347106933594,
+        191.09954833984375
+      ],
+      "text_sha256": "76c4bcec6939084ef3e9f43e6d4f76a4ade90dc357a3056e3d77ac8de27ea3ca"
+    },
+    {
+      "block_id": "page-0212-block-0013",
+      "order": 13,
+      "text": "7\n50\n50\n",
+      "bbox": [
+        47.99969482421875,
+        197.41456604003906,
+        297.7347106933594,
+        206.1220703125
+      ],
+      "text_sha256": "c809d0b67d053a1212e2984be25ee4a5475ada08e886d2fdea84d56e48578ede"
+    },
+    {
+      "block_id": "page-0212-block-0014",
+      "order": 14,
+      "text": "8\n50\n75\n",
+      "bbox": [
+        47.99969482421875,
+        212.4370574951172,
+        297.7347106933594,
+        221.14456176757812
+      ],
+      "text_sha256": "b26207200024b0d0b05b2900600da29c91a41cd0f4e6c338eb5c862e99421479"
+    },
+    {
+      "block_id": "page-0212-block-0015",
+      "order": 15,
+      "text": "9\n75\n75\n",
+      "bbox": [
+        47.99969482421875,
+        227.4595489501953,
+        297.7347106933594,
+        236.16705322265625
+      ],
+      "text_sha256": "534445fab61283e072bffc238f7ab3e80981a06e188b89b8931c66d123cb6d66"
+    },
+    {
+      "block_id": "page-0212-block-0016",
+      "order": 16,
+      "text": "10\n75\n100\n",
+      "bbox": [
+        47.99969482421875,
+        242.48204040527344,
+        301.9047546386719,
+        251.18954467773438
+      ],
+      "text_sha256": "d646480bcaacfcdc021922bea29ea8ea6c0e82e0a22587e89a261e73a58799b6"
+    },
+    {
+      "block_id": "page-0212-block-0017",
+      "order": 17,
+      "text": "11\n100\n100\n",
+      "bbox": [
+        47.99969482421875,
+        257.5045471191406,
+        301.9047546386719,
+        266.2120361328125
+      ],
+      "text_sha256": "c1c49c4197487ac80790c504d843301da5c89e550bcc032d6d939707707486b7"
+    },
+    {
+      "block_id": "page-0212-block-0018",
+      "order": 18,
+      "text": "12\n100\n125\n",
+      "bbox": [
+        47.99969482421875,
+        272.52703857421875,
+        301.9047546386719,
+        281.2345275878906
+      ],
+      "text_sha256": "8e00080decdee2ac0e1456e4395239591b7605d9051828b14bb8f51cf5d69f88"
+    },
+    {
+      "block_id": "page-0212-block-0019",
+      "order": 19,
+      "text": "13\n125\n125a\n",
+      "bbox": [
+        47.99969482421875,
+        287.5495300292969,
+        304.0894470214844,
+        296.25701904296875
+      ],
+      "text_sha256": "8b3c56a86345cd979a2478bf4d44e497aee24940c1fe2d2228eeb6de81318592"
+    },
+    {
+      "block_id": "page-0212-block-0020",
+      "order": 20,
+      "text": "14\n125\n150\n",
+      "bbox": [
+        47.99970245361328,
+        302.6019287109375,
+        301.9047546386719,
+        311.3094177246094
+      ],
+      "text_sha256": "e13c36c18767b2c4da094e1b7028efcf7690e0b470f7b08b14c4594a2a1a0c0a"
+    },
+    {
+      "block_id": "page-0212-block-0021",
+      "order": 21,
+      "text": "15\n150\n150\n",
+      "bbox": [
+        47.99969482421875,
+        317.6244201660156,
+        301.9047546386719,
+        326.3319091796875
+      ],
+      "text_sha256": "0c7d485708539e081453d36c98f6eab8576d6340b3a27ec784a26bf2a663edd0"
+    },
+    {
+      "block_id": "page-0212-block-0022",
+      "order": 22,
+      "text": "18\n150\n200b\n",
+      "bbox": [
+        47.99969482421875,
+        332.64691162109375,
+        304.3343200683594,
+        341.3544006347656
+      ],
+      "text_sha256": "300bfecafecfcfe6fcb8d50aaf96bf6419623efda54752773efea617469ae8dc"
+    },
+    {
+      "block_id": "page-0212-block-0023",
+      "order": 23,
+      "text": "21\n200\n200\n",
+      "bbox": [
+        47.99970245361328,
+        347.67694091796875,
+        301.9047546386719,
+        356.3844299316406
+      ],
+      "text_sha256": "f966b6de8e6685af6fafb960d69e9cd94aaf809d24f21a0aea82e4691c836078"
+    },
+    {
+      "block_id": "page-0212-block-0024",
+      "order": 24,
+      "text": "28\n200\n250c\n",
+      "bbox": [
+        47.99969482421875,
+        362.6994323730469,
+        303.8445739746094,
+        371.40692138671875
+      ],
+      "text_sha256": "23814a0829a8b721fee0f6a76bc04d53be71ceeebacce8ffeabb35797892fe3e"
+    },
+    {
+      "block_id": "page-0212-block-0025",
+      "order": 25,
+      "text": "aTarget dose for female non smokers (250mg/day).\n",
+      "bbox": [
+        48.000885009765625,
+        381.7019348144531,
+        209.3885040283203,
+        390.409423828125
+      ],
+      "text_sha256": "ad56d8865a4add632053d838f6a93a85df78ee336120c629f065f08854ad67c9"
+    },
+    {
+      "block_id": "page-0212-block-0026",
+      "order": 26,
+      "text": "bTarget dose for male non smokers (350mg/day).\n",
+      "bbox": [
+        47.99970245361328,
+        391.7019348144531,
+        203.38580322265625,
+        400.409423828125
+      ],
+      "text_sha256": "1c80641cd45c9ebdf3ecc0580604e748d5fe236d3fae0de6fdb59af740345ea8"
+    },
+    {
+      "block_id": "page-0212-block-0027",
+      "order": 27,
+      "text": "cTarget dose for female smokers (450mg/day).\n",
+      "bbox": [
+        47.99970245361328,
+        401.7019348144531,
+        194.54859924316406,
+        410.409423828125
+      ],
+      "text_sha256": "715789bef056f92d307f9a1817eab911aa0027b0500343de651fc3209fe25201"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

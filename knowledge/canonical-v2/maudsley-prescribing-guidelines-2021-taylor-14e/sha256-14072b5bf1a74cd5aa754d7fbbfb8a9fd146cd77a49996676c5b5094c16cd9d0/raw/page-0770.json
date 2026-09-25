@@ -1,0 +1,419 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0770",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 770,
+  "source_page_index": 769,
+  "source_page_display": 770,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Hepatic and renal impairment    749\nCHAPTER 8\nSummary – recommended psychotropics in renal impairment\nWhere renal function declines while on existing drug treatment, rule-out existing drugs \nas a cause of reduced function and continue at a dose suggested in Tables 8.8–8.13. \nWhere new drug treatment is required follow the suggestions below:\nDrug group\nRecommended drugs\nAntipsychotics\n■\n■No agent clearly preferred to another; however, avoid sulpiride and amisulpride\n■\n■avoid highly anticholinergic agents because they can contribute to urinary reten-\ntion\n■\n■first generation antipsychotic – suggest haloperidol 2–6mg a day\n■\n■second generation antipsychotic – suggest olanzapine 5mg a day\nAntidepressants203\n■\n■No agent clearly preferred to another; however, reasonable choices are\n■\n■Sertraline but poor efficacy data in renal disease\n■\n■Citalopram (care QTc prolonging effects and greater risk of sudden death in those \non haemodialysis vs. other SSRIs)\n■\n■Fluoxetine but care long half-life and need for alternate day dosing at lower GFRs\n■\n■CBT where available\nMood stabilisers\n■\n■No agent clearly preferred to another; however, avoid lithium if possible\n■\n■suggest start one the following at a low dose and increase slowly, monitor for \nadverse effects: valproate or lamotrigine\nAnxiolytics and \nhypnotics\n■\n■No agent clearly preferred to another; however, excessive sedation is more likely to \noccur in patients with renal impairment, so monitor all patients carefully\n■\n■lorazepam and zopiclone are suggested as reasonable choices\nAnti-dementia drugs\n■\n■No agent clearly preferred to another, however, rivastigmine is a reasonable \nchoice\nReferences\n\t 1.\t National Institute for Clinical Excellence. 4-year surveillance (2017) – Chronic kidney disease in adults (2014) NICE guideline [CG182]; \nhttps://www.nice.org.uk/guidance/cg182/evidence/appendix-a2-cg182-summary-of-new-evidence-from-surveillance-pdf-4429248447.\n\t 2.\t Levey AS, et al. A new equation to estimate glomerular filtration rate. Ann Intern Med 2009; 150:604–612.\n\t 3.\t National Institute for Health and Care Excellence. Chronic kidney disease in adults: assessment and management. Clinical Guidance 182 \n[CG182] 2015; https://www.nice.org.uk/guidance/cg182.\n\t 4.\t National Institute for Clinical Excellence. Surveillance report 2017 – Chronic kidney disease (stage 4 or 5): management of ­hyperphosphataemia \n(2013) NICE Guideline CG157. Chronic kidney disease in adults: assessment and management (2014) NICE guideline CG182 and Chronic \nkidney disease: managing anaemia (2015) NICE guideline NG8 2017; https://www.nice.org.uk/guidance/cg182/resources/surveillance-report- \n2017-chronic-kidney-disease-stage-4-or-5-management-of-hyperphosphataemia-2013-nice-guideline-cg157-chronic-kidney-disease-in- \nadults-assessment-and-management-2014-nice-guideline–pdf-5740305984709.\n\t 5.\t Tangri N, et al. A predictive model for progression of chronic kidney disease to kidney failure. JAMA 2011; 305:1553–1559.\n\t 6.\t Brater DC. Measurement of renal function during drug development. Br J Clin Pharmacol 2002; 54:87–95.\n\t 7.\t Chinnadurai R, et al. Impact of chronic kidney disease on the drugs eliminated predominantly through a non-renal route: a proof of concept \nstudy with Citalopram. Nephrol Dial Transplant 2019; 34:gfz103.SP268.\n\t 8.\t Toprak O, et al. New-onset type II diabetes mellitus, hyperosmolar non-ketotic coma, rhabdomyolysis and acute renal failure in a patient \ntreated with sulpiride. Nephrol Dial Transplant 2005; 20:662–663.\n\t 9.\t Baumgart U, et al. Olanzapine-induced acute rhabdomyolysis – a case report. Pharmacopsychiatry 2005; 38:36–37.\n\t10.\t Marsh SJ, et al. Rhabdomyolysis and acute renal failure during high-dose haloperidol therapy. Ren Fail 1995; 17:475–478.\n\t11.\t Smith RP, et al. Quetiapine overdose and severe rhabdomyolysis. J Clin Psychopharmacol 2004; 24:343.\n\t12.\t Nagler EV, et al. Antidepressants for depression in stage 3-5 chronic kidney disease: a systematic review of pharmacokinetics, efficacy and \nsafety with recommendations by European Renal Best Practice (ERBP). Nephrol Dial Transplant 2012; 27:3736–3745.\n\t13.\t Palmer SC, et al. Antidepressants for treating depression in adults with end-stage kidney disease treated with dialysis. The Cochrane Database \nof Systematic Reviews 2016:CD004541.\n\t14.\t Dev V, et al. Higher anti-depressant dose and major adverse outcomes in moderate chronic kidney disease: a retrospective population-based \nstudy. BMC Nephrol 2014; 15:79.\n",
+  "raw_text_sha256": "888cd310a568347e6a72b291f5c2adc6425603fce4651f62e4607d944b5e1898",
+  "coordinates_sha256": "48200d971b6ea968f992201666500ac786c2806602432700cdf921b92afbeb01",
+  "block_sequence_sha256": "73b1582b7ba476cb06d0cc74255328fd0df62873c1361ab5c17a505b1081e8fb",
+  "blocks": [
+    {
+      "block_id": "page-0770-block-0000",
+      "order": 0,
+      "text": "Hepatic and renal impairment    749\n",
+      "bbox": [
+        269.185302734375,
+        31.395221710205078,
+        420.00048828125,
+        41.0272216796875
+      ],
+      "text_sha256": "e498975e7c10bac314528a7ff46a58ed9d394bf2f5dd529d341c46600286e1dc"
+    },
+    {
+      "block_id": "page-0770-block-0001",
+      "order": 1,
+      "text": "CHAPTER 8\n",
+      "bbox": [
+        454.4096984863281,
+        532.3878173828125,
+        463.88970947265625,
+        573.7318115234375
+      ],
+      "text_sha256": "5ba3d9fb75ff4f418d4a2e9d517f30966dcfb279c10487eec43c5aa3fd8757a2"
+    },
+    {
+      "block_id": "page-0770-block-0002",
+      "order": 2,
+      "text": "Summary – recommended psychotropics in renal impairment\n",
+      "bbox": [
+        48.0,
+        62.31546401977539,
+        360.9610290527344,
+        75.3504638671875
+      ],
+      "text_sha256": "59b6a169e4d712d2e59803d64389885b75ea33fc1ef5c3442010792640002698"
+    },
+    {
+      "block_id": "page-0770-block-0003",
+      "order": 3,
+      "text": "Where renal function declines while on existing drug treatment, rule-out existing drugs \nas a cause of reduced function and continue at a dose suggested in Tables 8.8–8.13. \nWhere new drug treatment is required follow the suggestions below:\n",
+      "bbox": [
+        48.0,
+        81.16046142578125,
+        422.76995849609375,
+        116.88046264648438
+      ],
+      "text_sha256": "591cd4b29a0df68bbf675928171dc8c635e7a19a9e37c2a57f01ed7ac9bed12f"
+    },
+    {
+      "block_id": "page-0770-block-0004",
+      "order": 4,
+      "text": "Drug group\nRecommended drugs\n",
+      "bbox": [
+        48.0,
+        136.4629669189453,
+        221.1675262451172,
+        145.3504638671875
+      ],
+      "text_sha256": "224a67ccd6abef1ef1448732e728ee2c7aed9a50816cf6aa53380229f039d536"
+    },
+    {
+      "block_id": "page-0770-block-0005",
+      "order": 5,
+      "text": "Antipsychotics\n■\n■No agent clearly preferred to another; however, avoid sulpiride and amisulpride\n",
+      "bbox": [
+        48.0,
+        154.59046936035156,
+        408.8251647949219,
+        163.47796630859375
+      ],
+      "text_sha256": "57c213933aa0cc6f3d7a9c57034ba81855bfc8ae60f0e31ad52dce6d3e4c0f95"
+    },
+    {
+      "block_id": "page-0770-block-0006",
+      "order": 6,
+      "text": "■\n■avoid highly anticholinergic agents because they can contribute to urinary reten-\n",
+      "bbox": [
+        146.99989318847656,
+        163.76795959472656,
+        412.5525207519531,
+        172.4754638671875
+      ],
+      "text_sha256": "bed6ced39979d32497ac6e37148180653611c451dd17877980b000daa316ddfa"
+    },
+    {
+      "block_id": "page-0770-block-0007",
+      "order": 7,
+      "text": "tion\n",
+      "bbox": [
+        156.0,
+        172.76795959472656,
+        168.5024871826172,
+        181.4754638671875
+      ],
+      "text_sha256": "b255e01e581eed652bab9e98cddca3e597f91e7062d86e1deffb4c8df6b8fd62"
+    },
+    {
+      "block_id": "page-0770-block-0008",
+      "order": 8,
+      "text": "■\n■first generation antipsychotic – suggest haloperidol 2–6mg a day\n",
+      "bbox": [
+        146.99989318847656,
+        182.58799743652344,
+        367.28997802734375,
+        191.47549438476562
+      ],
+      "text_sha256": "b968062af9c317ea54f18f186e59c2addefb3172111a2b62698302a9bfa7531f"
+    },
+    {
+      "block_id": "page-0770-block-0009",
+      "order": 9,
+      "text": "■\n■second generation antipsychotic – suggest olanzapine 5mg a day\n",
+      "bbox": [
+        146.99989318847656,
+        192.58799743652344,
+        368.1299743652344,
+        201.47549438476562
+      ],
+      "text_sha256": "10bea1fc66a0c201bac16f1e61d9299050b430560935747a3cd35a84c68e6b71"
+    },
+    {
+      "block_id": "page-0770-block-0010",
+      "order": 10,
+      "text": "Antidepressants203\n■\n■No agent clearly preferred to another; however, reasonable choices are\n",
+      "bbox": [
+        48.0,
+        210.7154998779297,
+        381.8775329589844,
+        219.60299682617188
+      ],
+      "text_sha256": "629cace0d48365fae8bece43261485c1904bd8121fc232883e40d262324e49f2"
+    },
+    {
+      "block_id": "page-0770-block-0011",
+      "order": 11,
+      "text": "■\n■Sertraline but poor efficacy data in renal disease\n",
+      "bbox": [
+        146.99989318847656,
+        219.71299743652344,
+        313.2675476074219,
+        228.60049438476562
+      ],
+      "text_sha256": "bd1d822bbe5676550252d41f0b8b875d9497b87dbfe6c3e5775cd813f98d2fd7"
+    },
+    {
+      "block_id": "page-0770-block-0012",
+      "order": 12,
+      "text": "■\n■Citalopram (care QTc prolonging effects and greater risk of sudden death in those \n",
+      "bbox": [
+        146.99989318847656,
+        228.71299743652344,
+        422.092529296875,
+        237.60049438476562
+      ],
+      "text_sha256": "d781ad0c4a41bcee5eb82c8c18316622725c69423bf904de7e99ad3b19c5bbfc"
+    },
+    {
+      "block_id": "page-0770-block-0013",
+      "order": 13,
+      "text": "on haemodialysis vs. other SSRIs)\n■\n■Fluoxetine but care long half-life and need for alternate day dosing at lower GFRs\n",
+      "bbox": [
+        146.99989318847656,
+        237.8929901123047,
+        418.8075256347656,
+        255.60049438476562
+      ],
+      "text_sha256": "c655ed2d9c66e31ad6e695c6b025613e72327c2970e02ae38493810c29d3d671"
+    },
+    {
+      "block_id": "page-0770-block-0014",
+      "order": 14,
+      "text": "■\n■CBT where available\n",
+      "bbox": [
+        146.99989318847656,
+        255.71299743652344,
+        220.8675079345703,
+        264.6004943847656
+      ],
+      "text_sha256": "077e6df5add452b6805bf70c4bce0db9e54a0da06334671b997802fd556e68a8"
+    },
+    {
+      "block_id": "page-0770-block-0015",
+      "order": 15,
+      "text": "Mood stabilisers\n■\n■No agent clearly preferred to another; however, avoid lithium if possible\n",
+      "bbox": [
+        48.0,
+        273.8404846191406,
+        385.06512451171875,
+        282.7279968261719
+      ],
+      "text_sha256": "88cd351bbf694bdaedb823a91104eeecf844d8a94b12a7989fc58c9bdfae5a76"
+    },
+    {
+      "block_id": "page-0770-block-0016",
+      "order": 16,
+      "text": "■\n■suggest start one the following at a low dose and increase slowly, monitor for \n",
+      "bbox": [
+        146.99989318847656,
+        283.01800537109375,
+        406.4775390625,
+        291.7254943847656
+      ],
+      "text_sha256": "f5815ff2c5f274dfb4816c7f07104b676cb7435b18adafc64ffe5cffd4df1d50"
+    },
+    {
+      "block_id": "page-0770-block-0017",
+      "order": 17,
+      "text": "adverse effects: valproate or lamotrigine\n",
+      "bbox": [
+        156.0,
+        291.8379821777344,
+        292.8375244140625,
+        300.7254943847656
+      ],
+      "text_sha256": "75c3f882267efbcacde80058ef977887600d242f62471cf7381fb0acf27c4479"
+    },
+    {
+      "block_id": "page-0770-block-0018",
+      "order": 18,
+      "text": "Anxiolytics and \nhypnotics\n",
+      "bbox": [
+        48.0,
+        309.9654846191406,
+        104.25749206542969,
+        328.8504943847656
+      ],
+      "text_sha256": "8d3576dc27e9ce16b16a820a2dd288becb86cf7c5f5a3ea7965838089b7cd96a"
+    },
+    {
+      "block_id": "page-0770-block-0019",
+      "order": 19,
+      "text": "■\n■No agent clearly preferred to another; however, excessive sedation is more likely to \n",
+      "bbox": [
+        146.99989318847656,
+        310.14300537109375,
+        422.0025329589844,
+        318.8504943847656
+      ],
+      "text_sha256": "45da771eecd43b976a3d59f8f94f514894293c1cbf00aabaeb18ebb1a25583c4"
+    },
+    {
+      "block_id": "page-0770-block-0020",
+      "order": 20,
+      "text": "occur in patients with renal impairment, so monitor all patients carefully\n■\n■lorazepam and zopiclone are suggested as reasonable choices\n",
+      "bbox": [
+        146.99989318847656,
+        319.14300537109375,
+        385.7325744628906,
+        336.8504943847656
+      ],
+      "text_sha256": "751a9ac64ce9633077b8555d5cd40eb185933ee0ae55e4ac138c081aaca04b05"
+    },
+    {
+      "block_id": "page-0770-block-0021",
+      "order": 21,
+      "text": "Anti-dementia drugs\n■\n■No agent clearly preferred to another, however, rivastigmine is a reasonable \n",
+      "bbox": [
+        48.0,
+        346.0879821777344,
+        404.2575378417969,
+        354.9779968261719
+      ],
+      "text_sha256": "5e61d0655acbd7c38fe301463f8e8743477fb65dc3b9d6de505596c9ba350d07"
+    },
+    {
+      "block_id": "page-0770-block-0022",
+      "order": 22,
+      "text": "choice\n",
+      "bbox": [
+        156.0,
+        355.26800537109375,
+        176.4149932861328,
+        363.9754943847656
+      ],
+      "text_sha256": "0e8802b6ec060b773726b42196e654e0a4c6038e1d380c7e934ac97005edde96"
+    },
+    {
+      "block_id": "page-0770-block-0023",
+      "order": 23,
+      "text": "References\n",
+      "bbox": [
+        48.0,
+        390.56549072265625,
+        104.03400421142578,
+        403.6004943847656
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0770-block-0024",
+      "order": 24,
+      "text": "\t 1.\t National Institute for Clinical Excellence. 4-year surveillance (2017) – Chronic kidney disease in adults (2014) NICE guideline [CG182]; \n",
+      "bbox": [
+        48.0,
+        408.6864929199219,
+        421.6919860839844,
+        415.718505859375
+      ],
+      "text_sha256": "312f62380d967903c3d2daff4f96fbd26b47720254d0b597bf6c56bf5e9c0645"
+    },
+    {
+      "block_id": "page-0770-block-0025",
+      "order": 25,
+      "text": "https://www.nice.org.uk/guidance/cg182/evidence/appendix-a2-cg182-summary-of-new-evidence-from-surveillance-pdf-4429248447.\n\t 2.\t Levey AS, et al. A new equation to estimate glomerular filtration rate. Ann Intern Med 2009; 150:604–612.\n\t 3.\t National Institute for Health and Care Excellence. Chronic kidney disease in adults: assessment and management. Clinical Guidance 182 \n",
+      "bbox": [
+        48.00600051879883,
+        417.6864929199219,
+        421.6500244140625,
+        442.718505859375
+      ],
+      "text_sha256": "1b6e89baf66eec224bd410bbbf7bf6487605da09624b4f8c24c6f7c22ab9598d"
+    },
+    {
+      "block_id": "page-0770-block-0026",
+      "order": 26,
+      "text": "[CG182] 2015; https://www.nice.org.uk/guidance/cg182.\n\t 4.\t National Institute for Clinical Excellence. Surveillance report 2017 – Chronic kidney disease (stage 4 or 5): management of ­hyperphosphataemia \n",
+      "bbox": [
+        48.018001556396484,
+        444.6864929199219,
+        421.6920166015625,
+        460.718505859375
+      ],
+      "text_sha256": "a0eccea5b9e1ce700b0cc754a3002ec4630f177ea4333006f2104a87e4e7938e"
+    },
+    {
+      "block_id": "page-0770-block-0027",
+      "order": 27,
+      "text": "(2013) NICE Guideline CG157. Chronic kidney disease in adults: assessment and management (2014) NICE guideline CG182 and Chronic \nkidney disease: managing anaemia (2015) NICE guideline NG8 2017; https://www.nice.org.uk/guidance/cg182/resources/surveillance-report- \n2017-chronic-kidney-disease-stage-4-or-5-management-of-hyperphosphataemia-2013-nice-guideline-cg157-chronic-kidney-disease-in- \nadults-assessment-and-management-2014-nice-guideline–pdf-5740305984709.\n\t 5.\t Tangri N, et al. A predictive model for progression of chronic kidney disease to kidney failure. JAMA 2011; 305:1553–1559.\n\t 6.\t Brater DC. Measurement of renal function during drug development. Br J Clin Pharmacol 2002; 54:87–95.\n\t 7.\t Chinnadurai R, et al. Impact of chronic kidney disease on the drugs eliminated predominantly through a non-renal route: a proof of concept \n",
+      "bbox": [
+        48.02399826049805,
+        462.6864929199219,
+        421.7278137207031,
+        523.7184448242188
+      ],
+      "text_sha256": "1faa9958895f60bcaae0c9acf2405463a320a1ac9637a1ca99da8c0d158a1047"
+    },
+    {
+      "block_id": "page-0770-block-0028",
+      "order": 28,
+      "text": "study with Citalopram. Nephrol Dial Transplant 2019; 34:gfz103.SP268.\n\t 8.\t Toprak O, et al. New-onset type II diabetes mellitus, hyperosmolar non-ketotic coma, rhabdomyolysis and acute renal failure in a patient \n",
+      "bbox": [
+        48.04199981689453,
+        525.54248046875,
+        421.661865234375,
+        541.7184448242188
+      ],
+      "text_sha256": "ac0faae7c8a3c9421fd0e4dc2545e5857ee03f308d0facbad85402f53eaa5e1b"
+    },
+    {
+      "block_id": "page-0770-block-0029",
+      "order": 29,
+      "text": "treated with sulpiride. Nephrol Dial Transplant 2005; 20:662–663.\n\t 9.\t Baumgart U, et al. Olanzapine-induced acute rhabdomyolysis – a case report. Pharmacopsychiatry 2005; 38:36–37.\n\t10.\t Marsh SJ, et al. Rhabdomyolysis and acute renal failure during high-dose haloperidol therapy. Ren Fail 1995; 17:475–478.\n\t11.\t Smith RP, et al. Quetiapine overdose and severe rhabdomyolysis. J Clin Psychopharmacol 2004; 24:343.\n\t12.\t Nagler EV, et al. Antidepressants for depression in stage 3-5 chronic kidney disease: a systematic review of pharmacokinetics, efficacy and \n",
+      "bbox": [
+        48.04800033569336,
+        543.54248046875,
+        421.74609375,
+        586.7184448242188
+      ],
+      "text_sha256": "3faff97ee53cd2e2de7ea64124af62837fe0bc5e00d6edcb16717086a8ea7a5c"
+    },
+    {
+      "block_id": "page-0770-block-0030",
+      "order": 30,
+      "text": "safety with recommendations by European Renal Best Practice (ERBP). Nephrol Dial Transplant 2012; 27:3736–3745.\n\t13.\t Palmer SC, et al. Antidepressants for treating depression in adults with end-stage kidney disease treated with dialysis. The Cochrane Database \n",
+      "bbox": [
+        48.071998596191406,
+        588.54248046875,
+        421.7760925292969,
+        604.7184448242188
+      ],
+      "text_sha256": "8566b363517be0d338c7a0c3660e0d6b67414599de15772153badc33173c7536"
+    },
+    {
+      "block_id": "page-0770-block-0031",
+      "order": 31,
+      "text": "of Systematic Reviews 2016:CD004541.\n\t14.\t Dev V, et al. Higher anti-depressant dose and major adverse outcomes in moderate chronic kidney disease: a retrospective population-based \n",
+      "bbox": [
+        48.077999114990234,
+        606.6864624023438,
+        421.7879638671875,
+        622.7184448242188
+      ],
+      "text_sha256": "a23149843e3f0078fb520d771478bdcb832eb895ba8c92167bd2d555d4c9bd3d"
+    },
+    {
+      "block_id": "page-0770-block-0032",
+      "order": 32,
+      "text": "study. BMC Nephrol 2014; 15:79.\n",
+      "bbox": [
+        59.082000732421875,
+        624.54248046875,
+        148.01397705078125,
+        631.7184448242188
+      ],
+      "text_sha256": "5735f2a53f0b8f6c7fc99d265752a1c5fd567a3829e352a7596b4cbe9feb043d"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

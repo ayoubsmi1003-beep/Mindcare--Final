@@ -1,0 +1,263 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0301",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 301,
+  "source_page_index": 300,
+  "source_page_display": 301,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "280    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  2\nTable 2.6  Drug treatment of mania - suggested doses\nDrug\nDose\nLithium\n400mg/day, increasing every 3–4 days according to plasma levels. At least one study has used \n800mg as a starting dose32\nValproate\nAs semi-sodium – 250mg three times daily increasing according to tolerability and plasma levels. \nSlow release semi-sodium valproate may also be effective (at 15–30mg/kg)33 but there is one \nfailed study34\nAs sodium valproate slow release – 500mg/day increasing as above\nHigher, ‘loading doses’ have been used, both oral35–37 and intravenous (IV).38,39 Dose is 20–30mg/\nkg/day\nA review of 13 studies suggested ‘IV valproate as a loading therapy is an efficacious, safe and \nwell-tolerated treatment’40\nAripiprazole\n15mg/day increasing up to 30mg/day as required.41 Doses lower than 15mg may not be effective42\nAsenapine\n5mg bd increasing to 10mg bd as required\nCariprazine\n3mg/day increasing up to 12mg a day as required43\nOlanzapine\n10mg/day increasing to 15mg or 20mg as required\nRisperidone\n2mg or 3mg/day increased to 6mg/day as required\nThe use of paliperidone in mania is not well supported44\nQuetiapine\nIR – 100mg/day increasing to 800mg as required. Higher starting doses have been used45\nXL – 300/day increasing to 600mg/day on day 2\nHaloperidol\n5–10mg/day increasing to 15mg if required\nLorazepam22,23\nUp to 4mg/day (some centres use higher doses)\nClonzapam21,23\nUp to 8mg/day\nbd, bis die (twice a day), IR, immediate release, XL, extended release\navailable29 suggest combination treatments ‘tend to work faster’ and that ‘20% more \npatients will respond to combination therapy’ (compared with monotherapy). \nConversely, guidelines from Australia and New Zealand suggest trying an antipsychotic \nfirst and only adding a mood stabiliser ‘if monotherapy does not suffice’.30 In practice, \nthere is often a strong tendency to use combination therapy from the outset.\nThe diagram outlines a treatment strategy for mania and hypomania. These recom-\nmendations are based on the UK NICE guidelines,6 BAP guidelines31 and individual \nreferences cited. Where an antipsychotic is recommended, choose from those licensed \nfor mania/BD, that is, most conventional drugs including aripiprazole, asenapine, olan-\nzapine, risperidone and quetiapine. Suggested doses and alternative treatments are out-\nlined in the tables that follow.\n",
+  "raw_text_sha256": "7c6fbc395781c4f0e87e06f3fbe732e38a37eaf63fe1e3ad7a17588be602b5da",
+  "coordinates_sha256": "9561d0d2b9cec9e56898c53bfebca3b3a75403dd5eaeab9bf204854e22932a0d",
+  "block_sequence_sha256": "6ba0de26c1461c165973242cf2a62a1d5741e2a43309e8224d7c04e5a124d58a",
+  "blocks": [
+    {
+      "block_id": "page-0301-block-0000",
+      "order": 0,
+      "text": "280    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "32282690ec885f68756452b909c1ca1576d7722937ec3170f1ac3221c21a4731"
+    },
+    {
+      "block_id": "page-0301-block-0001",
+      "order": 1,
+      "text": "CHAPTER  2\n",
+      "bbox": [
+        19.520000457763672,
+        145.23529052734375,
+        29.0,
+        188.80328369140625
+      ],
+      "text_sha256": "5befcde2fefe074681a51514b484ad31516d952c51183625b5b7b1fb84f30d2c"
+    },
+    {
+      "block_id": "page-0301-block-0002",
+      "order": 2,
+      "text": "Table 2.6  Drug treatment of mania - suggested doses\n",
+      "bbox": [
+        67.88999938964844,
+        219.29969787597656,
+        241.55247497558594,
+        228.18719482421875
+      ],
+      "text_sha256": "4115048b016e201d253e248bd58f98ea4e2dc4253e2e9f23cb7204dd4d9bbf93"
+    },
+    {
+      "block_id": "page-0301-block-0003",
+      "order": 3,
+      "text": "Drug\nDose\n",
+      "bbox": [
+        64.88999938964844,
+        237.17469787597656,
+        136.3874969482422,
+        246.06219482421875
+      ],
+      "text_sha256": "16d2f46217f05069926dac8be83840ab4e3bf97655ac9a954ebec5797b7f021b"
+    },
+    {
+      "block_id": "page-0301-block-0004",
+      "order": 4,
+      "text": "Lithium\n400mg/day, increasing every 3–4 days according to plasma levels. At least one study has used \n800mg as a starting dose32\n",
+      "bbox": [
+        64.88999938964844,
+        252.97718811035156,
+        419.2351379394531,
+        271.68218994140625
+      ],
+      "text_sha256": "9e326a5a271e0c1369315715dbcbd1d053688cfdbc31e4f14901f8504896c0aa"
+    },
+    {
+      "block_id": "page-0301-block-0005",
+      "order": 5,
+      "text": "Valproate\nAs semi-sodium – 250mg three times daily increasing according to tolerability and plasma levels. \nSlow release semi-sodium valproate may also be effective (at 15–30mg/kg)33 but there is one \nfailed study34\n",
+      "bbox": [
+        64.88999938964844,
+        278.4246826171875,
+        432.255126953125,
+        307.3096923828125
+      ],
+      "text_sha256": "f038812d60c0f64798f28f21e9b68fd8ee786a180bd6f023a9fddc97a98bde22"
+    },
+    {
+      "block_id": "page-0301-block-0006",
+      "order": 6,
+      "text": "As sodium valproate slow release – 500mg/day increasing as above\nHigher, ‘loading doses’ have been used, both oral35–37 and intravenous (IV).38,39 Dose is 20–30mg/\nkg/day\nA review of 13 studies suggested ‘IV valproate as a loading therapy is an efficacious, safe and \nwell-tolerated treatment’40\n",
+      "bbox": [
+        118.88638305664062,
+        308.4246826171875,
+        427.4064636230469,
+        357.3046875
+      ],
+      "text_sha256": "920894f39e6643e344f703979b6a5ff7dba3eec8a2f43d0975e9696a0ab862b8"
+    },
+    {
+      "block_id": "page-0301-block-0007",
+      "order": 7,
+      "text": "Aripiprazole\n15mg/day increasing up to 30mg/day as required.41 Doses lower than 15mg may not be effective42\n",
+      "bbox": [
+        64.88999938964844,
+        364.2297058105469,
+        419.3722839355469,
+        372.93719482421875
+      ],
+      "text_sha256": "707f3f495a8d1ea4cdd07f690fb80629dfcf7615b8c67aaafe5de33cc315c054"
+    },
+    {
+      "block_id": "page-0301-block-0008",
+      "order": 8,
+      "text": "Asenapine\n5mg bd increasing to 10mg bd as required\n",
+      "bbox": [
+        64.89009857177734,
+        379.8547058105469,
+        255.19509887695312,
+        388.56219482421875
+      ],
+      "text_sha256": "d7aef9204bf7a337751e838e4c071fd76f91c3367e1b6a64aa1b71c107f3fcbf"
+    },
+    {
+      "block_id": "page-0301-block-0009",
+      "order": 9,
+      "text": "Cariprazine\n3mg/day increasing up to 12mg a day as required43\n",
+      "bbox": [
+        64.89009857177734,
+        395.4772033691406,
+        282.13623046875,
+        404.1846923828125
+      ],
+      "text_sha256": "7b2bc0bce3f9177d9da4a0932817c6f46a2d8f20c014055614a39dccb19d7d79"
+    },
+    {
+      "block_id": "page-0301-block-0010",
+      "order": 10,
+      "text": "Olanzapine\n10mg/day increasing to 15mg or 20mg as required\n",
+      "bbox": [
+        64.89009857177734,
+        411.1047058105469,
+        281.44512939453125,
+        419.81219482421875
+      ],
+      "text_sha256": "5ce752a6e15f3d7cf06e8b3c1893f081aa1196963e9620ecbaeb8cecdeb370f8"
+    },
+    {
+      "block_id": "page-0301-block-0011",
+      "order": 11,
+      "text": "Risperidone\n2mg or 3mg/day increased to 6mg/day as required\nThe use of paliperidone in mania is not well supported44\n",
+      "bbox": [
+        64.89009857177734,
+        426.7272033691406,
+        297.5482482910156,
+        445.43218994140625
+      ],
+      "text_sha256": "7d74ec675252b75acdff5e150161f9931dc0a69b1e6d3beec6f2b26f4a4d43b6"
+    },
+    {
+      "block_id": "page-0301-block-0012",
+      "order": 12,
+      "text": "Quetiapine\nIR – 100mg/day increasing to 800mg as required. Higher starting doses have been used45\n",
+      "bbox": [
+        64.89009857177734,
+        452.1746826171875,
+        403.42523193359375,
+        461.06219482421875
+      ],
+      "text_sha256": "c06541a453cd087482f35dacc09ffa1628fc34c896541d03a24af24c41f3b7a8"
+    },
+    {
+      "block_id": "page-0301-block-0013",
+      "order": 13,
+      "text": "XL – 300/day increasing to 600mg/day on day 2\n",
+      "bbox": [
+        118.89009857177734,
+        462.1746826171875,
+        272.5576171875,
+        471.06219482421875
+      ],
+      "text_sha256": "86174aca30f93476fcbd03807f1433dfcd576f43daadffcf121768de4fa17c11"
+    },
+    {
+      "block_id": "page-0301-block-0014",
+      "order": 14,
+      "text": "Haloperidol\n5–10mg/day increasing to 15mg if required\n",
+      "bbox": [
+        64.89009857177734,
+        477.9772033691406,
+        257.26507568359375,
+        486.6846923828125
+      ],
+      "text_sha256": "ee967e4f3dffc793ec4f2b0dba7c91e29997fa8b134401144feb89591b7e7dcb"
+    },
+    {
+      "block_id": "page-0301-block-0015",
+      "order": 15,
+      "text": "Lorazepam22,23\nUp to 4mg/day (some centres use higher doses)\n",
+      "bbox": [
+        64.89009857177734,
+        493.5997009277344,
+        270.46514892578125,
+        502.31219482421875
+      ],
+      "text_sha256": "7d741af68faa6204566aa6fd36734318631e01bf903a82932ae8d5893eb3f7dd"
+    },
+    {
+      "block_id": "page-0301-block-0016",
+      "order": 16,
+      "text": "Clonzapam21,23\nUp to 8mg/day\n",
+      "bbox": [
+        64.89009857177734,
+        509.2272033691406,
+        166.82261657714844,
+        517.9371948242188
+      ],
+      "text_sha256": "2e79f0ca9c0223253d4f53b19a20a4c3359cc01a471aed6c0ebbf94610a7f53c"
+    },
+    {
+      "block_id": "page-0301-block-0017",
+      "order": 17,
+      "text": "bd, bis die (twice a day), IR, immediate release, XL, extended release\n",
+      "bbox": [
+        61.890098571777344,
+        527.4771728515625,
+        279.14263916015625,
+        536.1846923828125
+      ],
+      "text_sha256": "027dba8695a88e635ccff35b22b66894c35d6e11704f0c214364b5c390e37b14"
+    },
+    {
+      "block_id": "page-0301-block-0018",
+      "order": 18,
+      "text": "available29 suggest combination treatments ‘tend to work faster’ and that ‘20% more \npatients will respond to combination therapy’ (compared with monotherapy). \nConversely, guidelines from Australia and New Zealand suggest trying an antipsychotic \nfirst and only adding a mood stabiliser ‘if monotherapy does not suffice’.30 In practice, \nthere is often a strong tendency to use combination therapy from the outset.\n",
+      "bbox": [
+        61.885101318359375,
+        62.55029296875,
+        436.6927795410156,
+        122.27029418945312
+      ],
+      "text_sha256": "cf5ddc75ef4b534ffac46166ff01368a6f8db62ed3e20c3a033a50c8866b1e16"
+    },
+    {
+      "block_id": "page-0301-block-0019",
+      "order": 19,
+      "text": "The diagram outlines a treatment strategy for mania and hypomania. These recom-\nmendations are based on the UK NICE guidelines,6 BAP guidelines31 and individual \nreferences cited. Where an antipsychotic is recommended, choose from those licensed \nfor mania/BD, that is, most conventional drugs including aripiprazole, asenapine, olan-\nzapine, risperidone and quetiapine. Suggested doses and alternative treatments are out-\nlined in the tables that follow.\n",
+      "bbox": [
+        61.885101318359375,
+        122.55029296875,
+        436.66650390625,
+        194.27029418945312
+      ],
+      "text_sha256": "e7b733a14324ecdf022c5b89696b51b7ba1a8f101a7a4b138fb14ec7122ade36"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

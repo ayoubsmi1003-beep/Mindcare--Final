@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0707",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 707,
+  "source_page_index": 706,
+  "source_page_display": 707,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "686    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 7\nunreplicated54 and it is not possible to exclude confounding by indication.65 There are \nconflicting data on the issue of the influence of duration of antidepressant use.66,67\nThe effects on early growth and neurodevelopment are poorly studied; the limited data \nthat do exist, are reassuring.68–70 One small study reported abnormal general movements in \nneonates exposed to SSRIs in utero.71 A small increase in the risk of childhood autism has \nalso been suggested72,73 but not confirmed by several large studies74–76 and a meta-analysis \nwhich found that preconception exposure was more consistently associated with autism \nspectrum disorders than any trimester exposure, suggesting confounding by indication.77 \nSSRIs may be associated with a higher risk of poor neonatal adaptation syndrome than \nSNRIs.78 Increased levels of anxiety symptoms have been reported in exposed children.79\nWomen who take antidepressants during pregnancy may be at increased risk of \ndeveloping hypertension,80,81 preeclampsia82 and postpartum haemorrhage.83–85 It has \nbeen suggested that SSRIs may cause the last of these by reducing serotonin mediated \nuterine contraction as well as interfering with hemostasis.86 A subsequent smaller study \ndid not confirm this association; possibly because it was underpowered to do so.87 \nDepression itself may increase the risk of preeclampsia.88\nThere is also some evidence that successful antidepressant use can be beneficial for child \nbehavioural outcomes, for example, a Danish study on antidepressant exposure found that \nadverse outcomes were more likely in depressed women not taking antidepressants.85\nTricyclic antidepressants\n■\n■Foetal exposure to tricyclics (via umbilicus and amniotic fluid) is high.89,90\n■\n■TCAs have been widely used throughout pregnancy without apparent detriment to \nthe foetus.63,91,92\n■\n■A weak association between clomipramine use and cardiovascular defects cannot be \nexcluded93 and the European SPC for Anafranil states: ‘Neonates whose mothers had \ntaken tricyclic antidepressants until delivery have developed dyspnoea, lethargy, colic, \nirritability, hypotension or hypertension, tremor or spasms, during the first few hours \nor days. Studies in animals have shown reproductive toxicity. Anafranil is not recom-\nmended during pregnancy and in women of childbearing potential not using contra-\nception.’ One case of neonatal QT prolongation and Torsades de Pointes has been \nreported following maternal clomipramine use94 and one case of Timothy Syndrome \n1, a disorder characterised by severe QT prolongation in a newborn whose mother \ntook amitriptyline in early pregnancy.95\n■\n■Some authorities recommend the use of nortriptyline and desipramine (not available in \nthe UK) if using tricyclics because these drugs are less anticholinergic and hypotensive \nthan amitriptyline and imipramine (respectively, their tertiary amine parent molecules).\n■\n■TCA use during pregnancy increases the risk of preterm delivery.91,92,96\n■\n■Use of TCAs in the third trimester is well known to produce neonatal withdrawal \neffects; agitation, irritability, seizures, respiratory distress and endocrine and meta-\nbolic disturbances.91 These are usually mild and self-limiting.\n■\n■Little is known of the developmental effects of prenatal exposure to tricyclics, \nalthough one small study detected no adverse consequences.97 Limited data suggest in \nutero exposure to tricyclics has no effects on later development.97,98\n",
+  "raw_text_sha256": "651500d25754a44071ce47dff472d6a4d0d78761f839ebee792ebe52795a4c54",
+  "coordinates_sha256": "7cddf7d4d400147d4975d8058192f4993108a3df5490cf9e9a35aafb41a0a746",
+  "block_sequence_sha256": "4d1d363b294fef4cfc441b630c9c7d21b20a6c58b89d234edbdde832c5b63e5c",
+  "blocks": [
+    {
+      "block_id": "page-0707-block-0000",
+      "order": 0,
+      "text": "686    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "8e5ed03d9f31756a06b0388ccd934b9243004c324d324a5c0a10f45178dfc5b8"
+    },
+    {
+      "block_id": "page-0707-block-0001",
+      "order": 1,
+      "text": "CHAPTER 7\n",
+      "bbox": [
+        18.520000457763672,
+        472.7144775390625,
+        28.0,
+        514.0584716796875
+      ],
+      "text_sha256": "6d1a2318236627f2d413db0336034ac4d71cea7172bd0baddf04c66a07292590"
+    },
+    {
+      "block_id": "page-0707-block-0002",
+      "order": 2,
+      "text": "unreplicated54 and it is not possible to exclude confounding by indication.65 There are \nconflicting data on the issue of the influence of duration of antidepressant use.66,67\n",
+      "bbox": [
+        61.8861083984375,
+        62.55029296875,
+        436.6661376953125,
+        86.27029418945312
+      ],
+      "text_sha256": "c943b034afa3a5a39813306d80a44b2909cf3384b8baa9df4db43000cc167f24"
+    },
+    {
+      "block_id": "page-0707-block-0003",
+      "order": 3,
+      "text": "The effects on early growth and neurodevelopment are poorly studied; the limited data \nthat do exist, are reassuring.68–70 One small study reported abnormal general movements in \nneonates exposed to SSRIs in utero.71 A small increase in the risk of childhood autism has \nalso been suggested72,73 but not confirmed by several large studies74–76 and a meta-analysis \nwhich found that preconception exposure was more consistently associated with autism \nspectrum disorders than any trimester exposure, suggesting confounding by indication.77 \nSSRIs may be associated with a higher risk of poor neonatal adaptation syndrome than \nSNRIs.78 Increased levels of anxiety symptoms have been reported in exposed children.79\n",
+      "bbox": [
+        61.886505126953125,
+        86.55029296875,
+        436.68646240234375,
+        182.27029418945312
+      ],
+      "text_sha256": "0341fe3deb1449453427619a52f2a2ba54c1ac3ee8cc52e26ac2bc1cb192ff52"
+    },
+    {
+      "block_id": "page-0707-block-0004",
+      "order": 4,
+      "text": "Women who take antidepressants during pregnancy may be at increased risk of \ndeveloping hypertension,80,81 preeclampsia82 and postpartum haemorrhage.83–85 It has \nbeen suggested that SSRIs may cause the last of these by reducing serotonin mediated \nuterine contraction as well as interfering with hemostasis.86 A subsequent smaller study \ndid not confirm this association; possibly because it was underpowered to do so.87 \nDepression itself may increase the risk of preeclampsia.88\n",
+      "bbox": [
+        61.88999938964844,
+        182.55029296875,
+        436.700927734375,
+        254.27029418945312
+      ],
+      "text_sha256": "5a0a5fa2bbe66a722381e5e24557b1b87b0f0cab3136ae448d735f049a79001c"
+    },
+    {
+      "block_id": "page-0707-block-0005",
+      "order": 5,
+      "text": "There is also some evidence that successful antidepressant use can be beneficial for child \nbehavioural outcomes, for example, a Danish study on antidepressant exposure found that \nadverse outcomes were more likely in depressed women not taking antidepressants.85\n",
+      "bbox": [
+        61.88999938964844,
+        254.55029296875,
+        436.6300354003906,
+        290.2702941894531
+      ],
+      "text_sha256": "1ed9416611d48a920afc4920b137fcc61c4d756c4b6d45663a064b002c297ddf"
+    },
+    {
+      "block_id": "page-0707-block-0006",
+      "order": 6,
+      "text": "Tricyclic antidepressants\n",
+      "bbox": [
+        61.88999938964844,
+        312.6402893066406,
+        175.0500030517578,
+        324.49029541015625
+      ],
+      "text_sha256": "c13f989491ddaaafebb4b8f9d71639a2c4423ace1e1338ad01e967ffc9bf53a3"
+    },
+    {
+      "block_id": "page-0707-block-0007",
+      "order": 7,
+      "text": "■\n■Foetal exposure to tricyclics (via umbilicus and amniotic fluid) is high.89,90\n",
+      "bbox": [
+        61.88990020751953,
+        336.55029296875,
+        388.87408447265625,
+        348.2702941894531
+      ],
+      "text_sha256": "02d044fc9444e62db6530896b9bc0197cb552ef96182b1f025f2386c07c993d6"
+    },
+    {
+      "block_id": "page-0707-block-0008",
+      "order": 8,
+      "text": "■\n■TCAs have been widely used throughout pregnancy without apparent detriment to \n",
+      "bbox": [
+        61.88990020751953,
+        348.55029296875,
+        436.6799621582031,
+        360.2702941894531
+      ],
+      "text_sha256": "67f7f0fa9a436256957abcd39b639520016ce7697f11878f6d5c829c1dcaf9e7"
+    },
+    {
+      "block_id": "page-0707-block-0009",
+      "order": 9,
+      "text": "the foetus.63,91,92\n",
+      "bbox": [
+        70.88999938964844,
+        360.55029296875,
+        138.57977294921875,
+        372.2702941894531
+      ],
+      "text_sha256": "9b8d1f1a4c72dc0d962cf439680b8017f141484366514644c53b48a104b225b8"
+    },
+    {
+      "block_id": "page-0707-block-0010",
+      "order": 10,
+      "text": "■\n■A weak association between clomipramine use and cardiovascular defects cannot be \n",
+      "bbox": [
+        61.88990020751953,
+        372.55029296875,
+        436.6899108886719,
+        384.2702941894531
+      ],
+      "text_sha256": "a09158550f3b0f4a7de441ec769dd302dd5c96bc3487740342f89de9dec5ff59"
+    },
+    {
+      "block_id": "page-0707-block-0011",
+      "order": 11,
+      "text": "excluded93 and the European SPC for Anafranil states: ‘Neonates whose mothers had \ntaken tricyclic antidepressants until delivery have developed dyspnoea, lethargy, colic, \nirritability, hypotension or hypertension, tremor or spasms, during the first few hours \nor days. Studies in animals have shown reproductive toxicity. Anafranil is not recom-\nmended during pregnancy and in women of childbearing potential not using contra-\nception.’ One case of neonatal QT prolongation and Torsades de Pointes has been \nreported following maternal clomipramine use94 and one case of Timothy Syndrome \n1, a disorder characterised by severe QT prolongation in a newborn whose mother \ntook amitriptyline in early pregnancy.95\n",
+      "bbox": [
+        70.88699340820312,
+        384.55029296875,
+        436.6725158691406,
+        492.2702941894531
+      ],
+      "text_sha256": "631ab61e802113af98ddf1f942ba7fa45d5db8409048e3d13459d52734e10241"
+    },
+    {
+      "block_id": "page-0707-block-0012",
+      "order": 12,
+      "text": "■\n■Some authorities recommend the use of nortriptyline and desipramine (not available in \n",
+      "bbox": [
+        61.88990020751953,
+        492.55029296875,
+        436.71014404296875,
+        504.2702941894531
+      ],
+      "text_sha256": "5001f4fa9af5e9386714411d78555daf3e840dfe40e6c0795e550affc4e48498"
+    },
+    {
+      "block_id": "page-0707-block-0013",
+      "order": 13,
+      "text": "the UK) if using tricyclics because these drugs are less anticholinergic and hypotensive \nthan amitriptyline and imipramine (respectively, their tertiary amine parent molecules).\n",
+      "bbox": [
+        70.88999938964844,
+        504.55029296875,
+        436.62017822265625,
+        528.2703247070312
+      ],
+      "text_sha256": "0f74de8bfabbd56e90ff3e9a1d341a959361216c43a366dc56f2dd280893366c"
+    },
+    {
+      "block_id": "page-0707-block-0014",
+      "order": 14,
+      "text": "■\n■TCA use during pregnancy increases the risk of preterm delivery.91,92,96\n",
+      "bbox": [
+        61.88990020751953,
+        528.55029296875,
+        372.3671569824219,
+        540.2703247070312
+      ],
+      "text_sha256": "95077b02fc885684e714e10138f70d0f08e5265d92c397647d1aae10dbe4defa"
+    },
+    {
+      "block_id": "page-0707-block-0015",
+      "order": 15,
+      "text": "■\n■Use of TCAs in the third trimester is well known to produce neonatal withdrawal \n",
+      "bbox": [
+        61.88990020751953,
+        540.55029296875,
+        436.67999267578125,
+        552.2703247070312
+      ],
+      "text_sha256": "f4938e516772b773faa04aa0ebf01f83e9cdeb9f560b0ffd5952385f334cdbb0"
+    },
+    {
+      "block_id": "page-0707-block-0016",
+      "order": 16,
+      "text": "effects; agitation, irritability, seizures, respiratory distress and endocrine and meta-\nbolic disturbances.91 These are usually mild and self-limiting.\n",
+      "bbox": [
+        70.88999938964844,
+        552.55029296875,
+        433.89996337890625,
+        576.2703247070312
+      ],
+      "text_sha256": "2de7b9044434a32fac301000848c829da4e062dabea0ff0eb5a3504a7f5151bd"
+    },
+    {
+      "block_id": "page-0707-block-0017",
+      "order": 17,
+      "text": "■\n■Little is known of the developmental effects of prenatal exposure to tricyclics, \n",
+      "bbox": [
+        61.88990020751953,
+        576.55029296875,
+        436.699951171875,
+        588.2703247070312
+      ],
+      "text_sha256": "8b9ea9f2a3a40fd8ecf4ce0f4b593d476267677df3d1140bf9770b7540c01bc3"
+    },
+    {
+      "block_id": "page-0707-block-0018",
+      "order": 18,
+      "text": "although one small study detected no adverse consequences.97 Limited data suggest in \nutero exposure to tricyclics has no effects on later development.97,98\n",
+      "bbox": [
+        70.88999938964844,
+        588.55029296875,
+        436.67425537109375,
+        612.2703247070312
+      ],
+      "text_sha256": "6b13f5800587e94729fb25ee6b6bfbeec691a9a193be10a78cf4bd8aaa9b6a28"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

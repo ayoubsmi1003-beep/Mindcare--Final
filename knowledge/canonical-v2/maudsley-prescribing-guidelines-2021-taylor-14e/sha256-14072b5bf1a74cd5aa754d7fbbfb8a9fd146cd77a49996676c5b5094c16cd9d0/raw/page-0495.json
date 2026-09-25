@@ -1,0 +1,239 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0495",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 495,
+  "source_page_index": 494,
+  "source_page_display": 495,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "474    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nOpioid dependence\nPrescribing for opioid dependence\nNote: Treatment of opioid dependence usually requires specialist intervention – generalists who \ndo not have specialist experience should always contact substance misuse services before \nattempting to treat opioid dependence. It is strongly recommended that general adult psychiatrists \ndo not initiate opioid substitute treatment without obtaining advice from specialist services. All \nopioids are respiratory depressants. Prescribed opioids such as methadone and buprenorphine \nhave low lethal doses in drug-naïve individuals, and assessing tolerance is difficult.\nOpioid toxicity can be fatal. Opioid withdrawal is not.\nThat having been said, self-discharge against medical advice from hospital because of intolerable \nopiate withdrawal also carries risks, and non-opiate medications should be used to treat opioid \nwithdrawal until appropriate advice can be sought (see section pertaining to inpatient admission).\nThe pharmacological interventions used for opioid-dependent people in the UK \nrange from harm minimisation measures such as provision of take-home naloxone \n(THN), maintenance treatment with opioid substitution treatment (OST) such as meth-\nadone or buprenorphine and naltrexone for relapse prevention. Pharmacological treat-\nments form an integral part of recovery-orientated care alongside psychosocial \ntreatment. The latter is not considered in this chapter and readers are referred to ‘routes \nto recovery’ and the psychosocial chapter of the ‘Drug abuse and dependence: UK \nguidelines for clinical management’ (or as it is more frequently called the ‘Orange \nGuidelines’) to understand more about these aspects of addiction treatment.1,2\nTreatment of opioid overdose\nOpioid overdose is a preventable cause of death in the opioid-using population. This \nincludes overdose on illicit opioids such as heroin and more recently fentanyl and oxy-\ncodone, and overdose on prescribed opioids such as methadone or buprenorphine.\nOpioid overdose is characterised clinically by:\n■\n■unconsciousness\n■\n■a low respiratory rate (RR < 12)\n■\n■pinpoint pupils\n■\n■cyanosis\n■\n■cold, clammy skin.\nNaloxone is an opioid receptor antagonist that can reverse opioid overdose. It is \navailable in pre-loaded syringes and should be administered intramuscularly after call-\ning an ambulance and an initial round of chest compressions. An initial dose of 400μg \nis recommended, which can be repeated following three cycles of 30 chest compressions \nuntil the ambulance arrives or breathing resumes.3 Higher doses of naloxone may be \nnecessary to displace opioids of high affinity such as buprenorphine or fentanyl.4\nNaloxone 400μg IM/IV should be prescribed ‘as required’ for any inpatient with \nsuspected harmful opioid use or dependence and should be kept in the resuscitation bag \n",
+  "raw_text_sha256": "92139da2ca5ce3163ae5e8936e162d0f0bd5433eddc9ad4a05629ebe19a1cca1",
+  "coordinates_sha256": "a08d2f2beb93075056da008fca92f37fe072c102a3da718a2425b0408c28bda5",
+  "block_sequence_sha256": "9a2abc70db9d4b536de8f437a3965118414d35b769933dffa1fd61347c57b9e3",
+  "blocks": [
+    {
+      "block_id": "page-0495-block-0000",
+      "order": 0,
+      "text": "474    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "8ec85599aab9b7f34699940b261554242acb0ec4534fc7ec76a29531e9d38d78"
+    },
+    {
+      "block_id": "page-0495-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0495-block-0002",
+      "order": 2,
+      "text": "Opioid dependence\n",
+      "bbox": [
+        68.88999938964844,
+        66.06539916992188,
+        169.73797607421875,
+        79.10040283203125
+      ],
+      "text_sha256": "bf543607f97e395ded115983987bc529e7c9a2b30693b368bfa3dc396545799e"
+    },
+    {
+      "block_id": "page-0495-block-0003",
+      "order": 3,
+      "text": "Prescribing for opioid dependence\n",
+      "bbox": [
+        61.89400100708008,
+        90.06741333007812,
+        238.93893432617188,
+        103.1024169921875
+      ],
+      "text_sha256": "5c4910530c3cc8e7aa9c836e81d5d1e5cb201e4828f4bde67fc82d26e856ebdd"
+    },
+    {
+      "block_id": "page-0495-block-0004",
+      "order": 4,
+      "text": "Note: Treatment of opioid dependence usually requires specialist intervention – generalists who \ndo not have specialist experience should always contact substance misuse services before \nattempting to treat opioid dependence. It is strongly recommended that general adult psychiatrists \ndo not initiate opioid substitute treatment without obtaining advice from specialist services. All \nopioids are respiratory depressants. Prescribed opioids such as methadone and buprenorphine \nhave low lethal doses in drug-naïve individuals, and assessing tolerance is difficult.\n",
+      "bbox": [
+        69.38980102539062,
+        117.92786407470703,
+        428.3279113769531,
+        177.980224609375
+      ],
+      "text_sha256": "30ccddd79212d727e58f468b37316b295da82321c0b3842afe710ad2622ea357"
+    },
+    {
+      "block_id": "page-0495-block-0005",
+      "order": 5,
+      "text": "Opioid toxicity can be fatal. Opioid withdrawal is not.\n",
+      "bbox": [
+        151.31280517578125,
+        184.0577392578125,
+        344.4669189453125,
+        193.97723388671875
+      ],
+      "text_sha256": "d789022efd760b5c31a4683d03af4c390bd31174c69b8bd59bcde6f868ee86e4"
+    },
+    {
+      "block_id": "page-0495-block-0006",
+      "order": 6,
+      "text": "That having been said, self-discharge against medical advice from hospital because of intolerable \nopiate withdrawal also carries risks, and non-opiate medications should be used to treat opioid \nwithdrawal until appropriate advice can be sought (see section pertaining to inpatient admission).\n",
+      "bbox": [
+        69.38980865478516,
+        200.10574340820312,
+        422.5224609375,
+        229.96624755859375
+      ],
+      "text_sha256": "d4911f3fae5e1c32cd45e6ecab9986e13837d408fa69cbbbf5b096ac7695750a"
+    },
+    {
+      "block_id": "page-0495-block-0007",
+      "order": 7,
+      "text": "The pharmacological interventions used for opioid-dependent people in the UK \nrange from harm minimisation measures such as provision of take-home naloxone \n(THN), maintenance treatment with opioid substitution treatment (OST) such as meth-\nadone or buprenorphine and naltrexone for relapse prevention. Pharmacological treat-\nments form an integral part of recovery-orientated care alongside psychosocial \ntreatment. The latter is not considered in this chapter and readers are referred to ‘routes \nto recovery’ and the psychosocial chapter of the ‘Drug abuse and dependence: UK \nguidelines for clinical management’ (or as it is more frequently called the ‘Orange \nGuidelines’) to understand more about these aspects of addiction treatment.1,2\n",
+      "bbox": [
+        61.88999938964844,
+        255.20037841796875,
+        436.6900329589844,
+        362.9203796386719
+      ],
+      "text_sha256": "a2c83509330c46b8c64aab1aa94bc40311d950e7803e4d1c58c96c2418e53d2d"
+    },
+    {
+      "block_id": "page-0495-block-0008",
+      "order": 8,
+      "text": "Treatment of opioid overdose\n",
+      "bbox": [
+        61.88999938964844,
+        381.2903747558594,
+        201.73997497558594,
+        393.140380859375
+      ],
+      "text_sha256": "4974d8e6d24cd5c5400cb41eb4cf171af7d77c2def15a6749b86cc5af5306d7b"
+    },
+    {
+      "block_id": "page-0495-block-0009",
+      "order": 9,
+      "text": "Opioid overdose is a preventable cause of death in the opioid-using population. This \nincludes overdose on illicit opioids such as heroin and more recently fentanyl and oxy-\ncodone, and overdose on prescribed opioids such as methadone or buprenorphine.\n",
+      "bbox": [
+        61.88999938964844,
+        399.20037841796875,
+        436.64984130859375,
+        434.9203796386719
+      ],
+      "text_sha256": "3db2c8a5f2d3cdeb8df414cc70337a478413012ef8ba42cc3b4f509170fbed8c"
+    },
+    {
+      "block_id": "page-0495-block-0010",
+      "order": 10,
+      "text": "Opioid overdose is characterised clinically by:\n",
+      "bbox": [
+        71.88999938964844,
+        435.20037841796875,
+        269.7099914550781,
+        446.9203796386719
+      ],
+      "text_sha256": "efbea49c26971aa9b17cafdddece0afcc3b82096c4a8490c4b53f3378e61c67f"
+    },
+    {
+      "block_id": "page-0495-block-0011",
+      "order": 11,
+      "text": "■\n■unconsciousness\n",
+      "bbox": [
+        61.88990020751953,
+        452.96038818359375,
+        141.46998596191406,
+        464.9203796386719
+      ],
+      "text_sha256": "174f85ffe71dde3b2682d83da492dab454b663de9b3a18c25dbf16ccc2526e67"
+    },
+    {
+      "block_id": "page-0495-block-0012",
+      "order": 12,
+      "text": "■\n■a low respiratory rate (RR < 12)\n",
+      "bbox": [
+        61.88990020751953,
+        464.96038818359375,
+        209.5199737548828,
+        476.9203796386719
+      ],
+      "text_sha256": "5507f38582ea5b55c06315756624a03fe59c0980d2bcb7ab21ed39f0ec3827d3"
+    },
+    {
+      "block_id": "page-0495-block-0013",
+      "order": 13,
+      "text": "■\n■pinpoint pupils\n",
+      "bbox": [
+        61.88990020751953,
+        476.96038818359375,
+        136.48997497558594,
+        488.9203796386719
+      ],
+      "text_sha256": "6e4feb6e60c55723775b76adc5c4b293ea7f05ef63ec9695d73b8a8958f9854a"
+    },
+    {
+      "block_id": "page-0495-block-0014",
+      "order": 14,
+      "text": "■\n■cyanosis\n",
+      "bbox": [
+        61.88990020751953,
+        489.20037841796875,
+        107.00999450683594,
+        500.9203796386719
+      ],
+      "text_sha256": "0e1457559b0d56c69be9e3d7194613a64698723b0d2fc3c0948ac34977da722f"
+    },
+    {
+      "block_id": "page-0495-block-0015",
+      "order": 15,
+      "text": "■\n■cold, clammy skin.\n",
+      "bbox": [
+        61.88990020751953,
+        501.20037841796875,
+        151.62998962402344,
+        512.92041015625
+      ],
+      "text_sha256": "5d25a63cdb6077a30e3bfec7711d06f047f4d3f1774133fa566e30f4bb7f299e"
+    },
+    {
+      "block_id": "page-0495-block-0016",
+      "order": 16,
+      "text": "Naloxone is an opioid receptor antagonist that can reverse opioid overdose. It is \navailable in pre-loaded syringes and should be administered intramuscularly after call-\ning an ambulance and an initial round of chest compressions. An initial dose of 400μg \nis recommended, which can be repeated following three cycles of 30 chest compressions \nuntil the ambulance arrives or breathing resumes.3 Higher doses of naloxone may be \nnecessary to displace opioids of high affinity such as buprenorphine or fentanyl.4\n",
+      "bbox": [
+        61.88511657714844,
+        518.9603881835938,
+        436.6800537109375,
+        590.92041015625
+      ],
+      "text_sha256": "de2b5aba38dd68b816a9707a6048f253ad66c0c2e9b8ba4263ce566c4af7051b"
+    },
+    {
+      "block_id": "page-0495-block-0017",
+      "order": 17,
+      "text": "Naloxone 400μg IM/IV should be prescribed ‘as required’ for any inpatient with \nsuspected harmful opioid use or dependence and should be kept in the resuscitation bag \n",
+      "bbox": [
+        61.88999938964844,
+        591.2003784179688,
+        436.64996337890625,
+        614.92041015625
+      ],
+      "text_sha256": "61873e00de11395c4a2e69967f2aaf9f0bd5f9ca9fcb98a52168708ebf60e4c9"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

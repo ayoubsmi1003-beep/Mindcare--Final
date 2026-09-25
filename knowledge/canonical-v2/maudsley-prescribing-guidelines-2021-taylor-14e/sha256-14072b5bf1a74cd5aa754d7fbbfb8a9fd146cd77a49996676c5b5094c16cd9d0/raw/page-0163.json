@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0163",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 163,
+  "source_page_index": 162,
+  "source_page_display": 163,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "142    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nventricular structures (a phenomenon known as dispersion), which in turn allows the \nemergence of early after depolarisations (EADs) which may provoke ventricular \nextrasystole and torsade de pointes. Measures have been developed (QT dispersion \nratio, dispersion transmural repolarisation time) which may better predict \narrhythmia.13\n■\n■There is some controversy over the exact association between QTc and risk of \narrhythmia. Very limited evidence suggests that risk is exponentially related to the \nextent of prolongation beyond normal limits (440ms for men; 470ms for women), \nalthough there are well-known exceptions, which appear to disprove this theory23 \n(some drugs prolong QT without increasing dispersion). Rather stronger evidence \nlinks QTc values over 500ms to a clearly increased risk of arrhythmia.24 QT intervals \nof >650ms may be more likely than not to induce torsades.25 Despite some uncertain-\nties, QTc determination remains an important measure in estimating risk of arrhyth-\nmia and sudden death.\n■\n■Individual components of the QT interval may have particular importance. The time \nfrom the start of the t-wave to t-wave peak has been shown to be an important aspect \nof QT prolongation associated with sudden cardiac deaths;26 t-wave peak to end \ninterval may also be predictive of arrhythmia.13\n■\n■QTc measurements and evaluation are complicated by:\n■\n■difficulty in determining the end of the T wave, particularly where U waves are \npresent (this applies both to manual and self-reading ECG machines).24\n■\n■normal physiological variation in QTc interval: QT varies with gender, time of day, \nfood intake, alcohol intake, menstrual cycle, ECG lead, etc.22,23\n■\n■variation in the extent of drug-induced prolongation of QTc because of changes in \nplasma levels. QTc prolongation is most prominent at peak drug plasma levels and \nleast obvious at trough levels.22,23\nOther ECG changes\nOther reported antipsychotic-induced changes include atrial fibrillation, giant P waves, \nT-wave changes and heart block.23\nQuantifying risk\nDrugs are categorised here according to data available on their effects on the cardiac \nQTc interval (as reported; mostly using Bazett’s correction formula). ‘No-effect’ drugs \nare those with which QTc prolongation has not been reported either at therapeutic \ndoses or in overdose. ‘Low-effect’ drugs are those for which severe QTc prolongation \nhas been reported only following overdose or where only small average increases \n(<10ms) have been observed at clinical doses. ‘Moderate-effect’ drugs are those which \nhave been observed to prolong QTc by >10ms on average when given at normal clinical \ndoses or where ECG monitoring is officially recommended in some circumstances. \n‘High-effect’ drugs are those for which extensive average QTc prolongation (usually \n>20ms at normal clinical doses).\nNote that, as outlined above, effect on QTc may not necessarily equate directly to \nrisk of torsade de pointes or sudden death,27 although this is often assumed. (A good \nexample here is ziprasidone – a drug with a moderate effect on QTc but with minimal \nevidence of cardiac toxicity28). Note also that categorisation is inevitably approximate \n",
+  "raw_text_sha256": "14c5329b3c8c6ec978923a21e9b9154643c3524c6f0b5b2510808b1d4cd212b9",
+  "coordinates_sha256": "d021d1539d6a115441608250baaf885afefa4bedb720c5a1ac5bd65cf078976d",
+  "block_sequence_sha256": "a45a766aedd24780481ca5a05d35482d838c4f87ad8a76a5e948cc85c0550248",
+  "blocks": [
+    {
+      "block_id": "page-0163-block-0000",
+      "order": 0,
+      "text": "142    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "5e655ac45a98ea4335a6340fee76710e853cb1b892be8570a6045fbe3dd2a156"
+    },
+    {
+      "block_id": "page-0163-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0163-block-0002",
+      "order": 2,
+      "text": "ventricular structures (a phenomenon known as dispersion), which in turn allows the \nemergence of early after depolarisations (EADs) which may provoke ventricular \nextrasystole and torsade de pointes. Measures have been developed (QT dispersion \nratio, dispersion transmural repolarisation time) which may better predict \narrhythmia.13\n",
+      "bbox": [
+        70.88909912109375,
+        62.24578857421875,
+        436.6990661621094,
+        121.96578979492188
+      ],
+      "text_sha256": "e8983fea5702c42c117534cad50cde8512d7ffca398a3aa0571ecd78e493c92d"
+    },
+    {
+      "block_id": "page-0163-block-0003",
+      "order": 3,
+      "text": "■\n■There is some controversy over the exact association between QTc and risk of \n",
+      "bbox": [
+        61.888999938964844,
+        122.24578857421875,
+        436.6189880371094,
+        133.96578979492188
+      ],
+      "text_sha256": "daa2e268413431f28bc2a298a67d023d9f0811e5207217b1a32f03be45ec63fa"
+    },
+    {
+      "block_id": "page-0163-block-0004",
+      "order": 4,
+      "text": "arrhythmia. Very limited evidence suggests that risk is exponentially related to the \nextent of prolongation beyond normal limits (440ms for men; 470ms for women), \nalthough there are well-known exceptions, which appear to disprove this theory23 \n(some drugs prolong QT without increasing dispersion). Rather stronger evidence \nlinks QTc values over 500ms to a clearly increased risk of arrhythmia.24 QT intervals \nof >650ms may be more likely than not to induce torsades.25 Despite some uncertain-\nties, QTc determination remains an important measure in estimating risk of arrhyth-\nmia and sudden death.\n",
+      "bbox": [
+        70.88679504394531,
+        134.24578857421875,
+        436.6890563964844,
+        229.96578979492188
+      ],
+      "text_sha256": "2986dcc42d7dbd98be1a97359d554a367144a03206694651cd5634d437b98798"
+    },
+    {
+      "block_id": "page-0163-block-0005",
+      "order": 5,
+      "text": "■\n■Individual components of the QT interval may have particular importance. The time \n",
+      "bbox": [
+        61.888999938964844,
+        230.24591064453125,
+        436.6991271972656,
+        241.96591186523438
+      ],
+      "text_sha256": "5a8e7817df58c828f479094aa325094247324fc1587693a3ae191a477e20e42a"
+    },
+    {
+      "block_id": "page-0163-block-0006",
+      "order": 6,
+      "text": "from the start of the t-wave to t-wave peak has been shown to be an important aspect \nof QT prolongation associated with sudden cardiac deaths;26 t-wave peak to end \ninterval may also be predictive of arrhythmia.13\n",
+      "bbox": [
+        70.88829040527344,
+        242.24591064453125,
+        436.6582336425781,
+        277.9659118652344
+      ],
+      "text_sha256": "3eb6c41be68f722289f66b28a81ad6754b1c3dabf5c63a9ee2a6d7f62236f1ce"
+    },
+    {
+      "block_id": "page-0163-block-0007",
+      "order": 7,
+      "text": "■\n■QTc measurements and evaluation are complicated by:\n",
+      "bbox": [
+        61.888999938964844,
+        278.24591064453125,
+        307.2290954589844,
+        289.9659118652344
+      ],
+      "text_sha256": "de7119ea7017440b8493b0a3fd36423753223a1437377253bf2f63a3e5fb9f7a"
+    },
+    {
+      "block_id": "page-0163-block-0008",
+      "order": 8,
+      "text": "■\n■difficulty in determining the end of the T wave, particularly where U waves are \n",
+      "bbox": [
+        71.08399963378906,
+        290.24591064453125,
+        436.6791076660156,
+        301.9659118652344
+      ],
+      "text_sha256": "41359c5c8868fce68aa96985a4c265a5e92f10d2758ddbb38566d035de053432"
+    },
+    {
+      "block_id": "page-0163-block-0009",
+      "order": 9,
+      "text": "present (this applies both to manual and self-reading ECG machines).24\n",
+      "bbox": [
+        79.88909912109375,
+        302.24591064453125,
+        385.8492736816406,
+        313.9659118652344
+      ],
+      "text_sha256": "bc2917823f397fb964b85f120a3f8b725d8f8c2ef999614b7392024872475b2f"
+    },
+    {
+      "block_id": "page-0163-block-0010",
+      "order": 10,
+      "text": "■\n■normal physiological variation in QTc interval: QT varies with gender, time of day, \n",
+      "bbox": [
+        71.08399963378906,
+        314.24591064453125,
+        436.6390686035156,
+        325.9659118652344
+      ],
+      "text_sha256": "4cf622aee47e694802b44702c99d304d8e9653082865bb700318e84a439ac718"
+    },
+    {
+      "block_id": "page-0163-block-0011",
+      "order": 11,
+      "text": "food intake, alcohol intake, menstrual cycle, ECG lead, etc.22,23\n",
+      "bbox": [
+        79.88909912109375,
+        326.24591064453125,
+        349.1338806152344,
+        337.9659118652344
+      ],
+      "text_sha256": "dca5adab3275be2836a94a43b011fdd748b19984d3d99d2b389a60e3d0739059"
+    },
+    {
+      "block_id": "page-0163-block-0012",
+      "order": 12,
+      "text": "■\n■variation in the extent of drug-induced prolongation of QTc because of changes in \n",
+      "bbox": [
+        71.08399963378906,
+        338.24591064453125,
+        436.6890563964844,
+        349.9659118652344
+      ],
+      "text_sha256": "df0cb71e3ebb8aa50daca4ae81074278383f24cf4a414069651dff413143c24e"
+    },
+    {
+      "block_id": "page-0163-block-0013",
+      "order": 13,
+      "text": "plasma levels. QTc prolongation is most prominent at peak drug plasma levels and \nleast obvious at trough levels.22,23\n",
+      "bbox": [
+        79.88909912109375,
+        350.24591064453125,
+        436.6590270996094,
+        373.9659118652344
+      ],
+      "text_sha256": "080437d8e39e2e6e9f3c753494934e45c508f0a8e3ea188fba1d07e71bde0616"
+    },
+    {
+      "block_id": "page-0163-block-0014",
+      "order": 14,
+      "text": "Other ECG changes\n",
+      "bbox": [
+        61.88909912109375,
+        391.4009094238281,
+        160.9000701904297,
+        404.4359130859375
+      ],
+      "text_sha256": "cbf6ca716f1601e9d0a8610a555dfa40fe6e33b49de5a20ad4b1644cd4edec0e"
+    },
+    {
+      "block_id": "page-0163-block-0015",
+      "order": 15,
+      "text": "Other reported antipsychotic-induced changes include atrial fibrillation, giant P waves, \nT-wave changes and heart block.23\n",
+      "bbox": [
+        61.88909912109375,
+        410.24591064453125,
+        436.6490173339844,
+        433.9659118652344
+      ],
+      "text_sha256": "a897af9eb64432b049c8fea36e6bf448b1ff3f312dd9f7e49bf8b7ebe24bb2a5"
+    },
+    {
+      "block_id": "page-0163-block-0016",
+      "order": 16,
+      "text": "Quantifying risk\n",
+      "bbox": [
+        61.88909912109375,
+        451.4009094238281,
+        145.63209533691406,
+        464.4359130859375
+      ],
+      "text_sha256": "2417bf40b3895b6b721494af461bec02b05102492009429c95272ea9bc60ca6a"
+    },
+    {
+      "block_id": "page-0163-block-0017",
+      "order": 17,
+      "text": "Drugs are categorised here according to data available on their effects on the cardiac \nQTc interval (as reported; mostly using Bazett’s correction formula). ‘No-effect’ drugs \nare those with which QTc prolongation has not been reported either at therapeutic \ndoses or in overdose. ‘Low-effect’ drugs are those for which severe QTc prolongation \nhas been reported only following overdose or where only small average increases \n(<10ms) have been observed at clinical doses. ‘Moderate-effect’ drugs are those which \nhave been observed to prolong QTc by >10ms on average when given at normal clinical \ndoses or where ECG monitoring is officially recommended in some circumstances. \n‘High-effect’ drugs are those for which extensive average QTc prolongation (usually \n>20ms at normal clinical doses).\n",
+      "bbox": [
+        61.88909912109375,
+        470.24591064453125,
+        436.6889953613281,
+        589.9659423828125
+      ],
+      "text_sha256": "beca31f587d0ddf83a0c537516657ae42e29f5ee0bd76d8246e755a82cea0158"
+    },
+    {
+      "block_id": "page-0163-block-0018",
+      "order": 18,
+      "text": "Note that, as outlined above, effect on QTc may not necessarily equate directly to \nrisk of torsade de pointes or sudden death,27 although this is often assumed. (A good \nexample here is ziprasidone – a drug with a moderate effect on QTc but with minimal \nevidence of cardiac toxicity28). Note also that categorisation is inevitably approximate \n",
+      "bbox": [
+        61.88909912109375,
+        590.2459106445312,
+        436.6919250488281,
+        637.9658203125
+      ],
+      "text_sha256": "c26bf4878d34fc3a971d2bfe73cea19044df375fb399ab8f82404abe77484bd7"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

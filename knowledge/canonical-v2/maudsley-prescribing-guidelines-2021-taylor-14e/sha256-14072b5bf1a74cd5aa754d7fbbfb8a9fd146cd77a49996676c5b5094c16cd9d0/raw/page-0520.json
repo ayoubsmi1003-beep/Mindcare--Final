@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0520",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 520,
+  "source_page_index": 519,
+  "source_page_display": 520,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    499\nCHAPTER 4\nSubstitute prescribing during pregnancy\nThis should take place within a multidisciplinary team (including obstetric team, anaes-\nthetists, neonatologists and addiction specialists) delivering a holistic package of care. \nThe body of evidence informing treatment is small.86 Currently, methadone and \nbuprenorphine do not seem to differ in terms of safety. Methadone is associated with \nsuperior treatment retention and buprenorphine with less severe NAS.86 The most \nrecent guidelines therefore suggest allowing the patient to choose either or to remain on \nwhichever they are taking when they become pregnant.1 Suboxone should be avoided \nin pregnancy. Changing from methadone to buprenorphine is not recommended, how-\never, because of the risk of withdrawal for the foetus. Metabolism of methadone may \nincrease during the third trimester requiring split dosing.\nNeonatal abstinence syndrome (NAS)\nThe majority of neonates born to methadone-maintained others will require treatment \nfor NAS.83 NAS is characterised by a variety of signs and symptoms relating to the \nautonomic nervous system, gastrointestinal (GI) tract and respiratory system.84 Infants \nmay have a high-pitched cry, feed hungrily but ineffectively and be excessively wakeful. \nSevere NAS is associated with hypertonicity and seizures, but is uncommon. The NAS \nfollowing methadone treatment usually commences after 48 hours87 but can be delayed \nfor 7–10 days.1 In the case of any mother using drugs or in OST, it is important to have \naccess to skilled neonatal paediatric care to monitor the neonate and treat as required. \nBreastfeeding may reduce the severity of NAS (see below).\nIt is useful to anticipate potential problems for women prescribed opioids during \npregnancy with regard to opioid pain relief: such women should be managed in special-\nist antenatal clinics due to the increased associated risks. Antenatal assessment by \nanaesthetists may be recommended with regard to anticipating any anaesthetic risks, \nany analgesic requirements and problems with venous access.\nBreastfeeding\nWomen prescribed methadone or buprenorphine should be encouraged to breastfeed \neven if they continue to use illicit opioids1 for the following reasons:\n■\n■General health benefits to the mother and the infant\n■\n■Specific benefits in reducing admission length and need for intervention in NAS88\n■\n■Low concentrations of methadone and buprenorphine transferred to infant88\nPatients should be warned to discontinue breastfeeding gradually as abrupt cessation \ncan cause a delayed NAS.88 Patients who take crack cocaine or high doses of benzodi-\nazepines should not breastfeed.1\n",
+  "raw_text_sha256": "e641a428ddef759184498475deda3fc2f4517a53cbf4cb59b6d8d6f421c6d44c",
+  "coordinates_sha256": "e70122644b8cfe825a3b8047b3f3834b2e321cdc9d6bbdee690ad64dc7f95e61",
+  "block_sequence_sha256": "cbf65262ba3f83104ee41e87d7b9e06b0b6ef0b0393c7afa18c50b5cfcb8a9f6",
+  "blocks": [
+    {
+      "block_id": "page-0520-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    499\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "45f523865c889983287b0173bb7921c4500d9e48c04a951d2059406ddeb07197"
+    },
+    {
+      "block_id": "page-0520-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0520-block-0002",
+      "order": 2,
+      "text": "Substitute prescribing during pregnancy\n",
+      "bbox": [
+        48.0,
+        62.500465393066406,
+        237.45999145507812,
+        74.3504638671875
+      ],
+      "text_sha256": "fbdfb35eb1574227fc991b90fd4cf3509333ab586ae82704360caa0c3a643220"
+    },
+    {
+      "block_id": "page-0520-block-0003",
+      "order": 3,
+      "text": "This should take place within a multidisciplinary team (including obstetric team, anaes-\nthetists, neonatologists and addiction specialists) delivering a holistic package of care. \nThe body of evidence informing treatment is small.86 Currently, methadone and \nbuprenorphine do not seem to differ in terms of safety. Methadone is associated with \nsuperior treatment retention and buprenorphine with less severe NAS.86 The most \nrecent guidelines therefore suggest allowing the patient to choose either or to remain on \nwhichever they are taking when they become pregnant.1 Suboxone should be avoided \nin pregnancy. Changing from methadone to buprenorphine is not recommended, how-\never, because of the risk of withdrawal for the foetus. Metabolism of methadone may \nincrease during the third trimester requiring split dosing.\n",
+      "bbox": [
+        47.996612548828125,
+        80.41046142578125,
+        422.8000183105469,
+        200.13046264648438
+      ],
+      "text_sha256": "4a35f5a9dc531ed6fd59ef25bbde3df1d6fd1429350e5ea93b3420a70f9a55c8"
+    },
+    {
+      "block_id": "page-0520-block-0004",
+      "order": 4,
+      "text": "Neonatal abstinence syndrome (NAS)\n",
+      "bbox": [
+        47.99848937988281,
+        218.50045776367188,
+        223.0184783935547,
+        230.3504638671875
+      ],
+      "text_sha256": "8a392dd647a09b195995c4d48b0e197781ba4a715b62ce04af9bee74602c5988"
+    },
+    {
+      "block_id": "page-0520-block-0005",
+      "order": 5,
+      "text": "The majority of neonates born to methadone-maintained others will require treatment \nfor NAS.83 NAS is characterised by a variety of signs and symptoms relating to the \nautonomic nervous system, gastrointestinal (GI) tract and respiratory system.84 Infants \nmay have a high-pitched cry, feed hungrily but ineffectively and be excessively wakeful. \nSevere NAS is associated with hypertonicity and seizures, but is uncommon. The NAS \nfollowing methadone treatment usually commences after 48 hours87 but can be delayed \nfor 7–10 days.1 In the case of any mother using drugs or in OST, it is important to have \naccess to skilled neonatal paediatric care to monitor the neonate and treat as required. \nBreastfeeding may reduce the severity of NAS (see below).\n",
+      "bbox": [
+        47.99690246582031,
+        236.41046142578125,
+        422.8216857910156,
+        344.1304931640625
+      ],
+      "text_sha256": "b4e7f7f35a57d2cd97480274aaef2f934213566821da5c0654ccbabf2a40c071"
+    },
+    {
+      "block_id": "page-0520-block-0006",
+      "order": 6,
+      "text": "It is useful to anticipate potential problems for women prescribed opioids during \npregnancy with regard to opioid pain relief: such women should be managed in special-\nist antenatal clinics due to the increased associated risks. Antenatal assessment by \nanaesthetists may be recommended with regard to anticipating any anaesthetic risks, \nany analgesic requirements and problems with venous access.\n",
+      "bbox": [
+        47.99690246582031,
+        344.4104919433594,
+        422.80694580078125,
+        404.1304931640625
+      ],
+      "text_sha256": "8a27b0b2c0e68d945074f217eec25f5e11dda878d3a664c87758bf5680699db4"
+    },
+    {
+      "block_id": "page-0520-block-0007",
+      "order": 7,
+      "text": "Breastfeeding\n",
+      "bbox": [
+        48.0,
+        421.56549072265625,
+        119.92899322509766,
+        434.6004943847656
+      ],
+      "text_sha256": "3ba86e933f6c8da9bd074b77a46b2f5812bd4f22522f910e0af1cafc48ef71ea"
+    },
+    {
+      "block_id": "page-0520-block-0008",
+      "order": 8,
+      "text": "Women prescribed methadone or buprenorphine should be encouraged to breastfeed \neven if they continue to use illicit opioids1 for the following reasons:\n",
+      "bbox": [
+        48.0,
+        440.4104919433594,
+        422.73992919921875,
+        464.1304931640625
+      ],
+      "text_sha256": "8a8664e2a01974c11b98acffd81040881ffce5182135d8575155502813d3ca82"
+    },
+    {
+      "block_id": "page-0520-block-0009",
+      "order": 9,
+      "text": "■\n■General health benefits to the mother and the infant\n",
+      "bbox": [
+        47.999900817871094,
+        470.4104919433594,
+        281.4599609375,
+        482.1304931640625
+      ],
+      "text_sha256": "04bc676f1e6ce5bff8ee6359f177d1c4b60c66a5ade744b4f915c3f837b31ab3"
+    },
+    {
+      "block_id": "page-0520-block-0010",
+      "order": 10,
+      "text": "■\n■Specific benefits in reducing admission length and need for intervention in NAS88\n",
+      "bbox": [
+        47.999900817871094,
+        482.4104919433594,
+        405.7497863769531,
+        494.1304931640625
+      ],
+      "text_sha256": "a8b19e0f141dd62463d2845386e59d17d1cdff10d817a3b1667079616137b222"
+    },
+    {
+      "block_id": "page-0520-block-0011",
+      "order": 11,
+      "text": "■\n■Low concentrations of methadone and buprenorphine transferred to infant88\n",
+      "bbox": [
+        47.999900817871094,
+        494.4104919433594,
+        386.8799743652344,
+        506.1304931640625
+      ],
+      "text_sha256": "0015de1a78001b2c44cf1acdabd6bda3029da96d6bee1a8193780a320969dc04"
+    },
+    {
+      "block_id": "page-0520-block-0012",
+      "order": 12,
+      "text": "Patients should be warned to discontinue breastfeeding gradually as abrupt cessation \ncan cause a delayed NAS.88 Patients who take crack cocaine or high doses of benzodi-\nazepines should not breastfeed.1\n",
+      "bbox": [
+        48.0,
+        512.4104614257812,
+        422.739990234375,
+        548.1304931640625
+      ],
+      "text_sha256": "269437091efcec0380787625694040b89497ee908123f391ddaa0bf9e8e88e07"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

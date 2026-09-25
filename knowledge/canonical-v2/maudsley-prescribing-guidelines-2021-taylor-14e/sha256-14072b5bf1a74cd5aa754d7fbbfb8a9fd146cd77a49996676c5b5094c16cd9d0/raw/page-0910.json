@@ -1,0 +1,275 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0910",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 910,
+  "source_page_index": 909,
+  "source_page_display": 910,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Psychotropic drugs in special conditions    889\nCHAPTER 13\nPsychotropics and surgery\nThere are few studies of the effects of non-anaesthetic drugs on surgery and the anaes-\nthetic process.1,2 Practice is largely based on theoretical considerations, case reports, \nclinical experience and personal opinion. Any guidance given in this area is therefore \nsomewhat speculative. The decision as to whether or not to continue a drug during \nsurgery and the perioperative period should take into account a number of interacting \nfactors. Some general considerations include the following:\n■\n■Patients are at risk of aspirating their stomach contents during general anaesthesia. \nFor this reason they are usually prevented from eating for at least 6 hours before \nsurgery. However, clear fluids leave the stomach within 2 hours of ingestion and so \nfluids that enable a patient to take routine medication may be allowed up to 2 hours \nbefore surgery.3\n■\n■There are some interactions between drugs used during surgery and routine medica-\ntion that constitute an absolute contra-indication. This is usually managed by the \nanaesthetist through their choice of anaesthetic drugs, but may involve temporary \ncessation of regular medication. Significant interactions between medicines used dur-\ning surgery and psychotropics include the following:\n■\n■Enflurane may precipitate seizures in patients taking tricyclic antidepressants.4–6\n■\n■Pethidine and other serotonergic opioids may precipitate fatal ‘excitatory’ reactions in \npatients taking MAOIs and may cause serotonin syndrome in patients taking SSRIs.4–7\n■\n■Volatile anaesthetics (halothane, enflurane, etc.) prolong QTc8 and should usually \nnot be given to patients on QT-prolonging drugs who have ECG evidence of QT \nprolongation.\nIn addition:\n■\n■Major surgical procedures induce profound physiological changes, which include \nelectrolyte disturbances and the release of cortisol and catecholamines.\n■\n■Postoperatively, surgical stress and some agents used in anaesthesia may lead to \n­gastric or gastrointestinal stasis. Oral absorption of drugs is therefore likely to be \ncompromised.\nTo continue or not to continue?\nFor the most part, psychotropic drugs should be continued during the perioperative \nperiod, assuming agreement of the anaesthetist/anaesthesiologist concerned. Table 13.4 \nprovides some discussion of the merits or otherwise of continuing individual psycho-\ntropics during surgery.\nPsychotropic and other drugs are frequently (albeit accidentally and/or unthinkingly) \nwithheld from preoperative patients simply because they are ‘nil by mouth’.1 Patients \nmay be labelled ‘nil by mouth’ for several reasons, including pre-operative preparation, \nunconsciousness, to rest the gut postoperatively or as a result of the surgery itself. \nPatients may also develop an intolerance to oral medicines at any time during a stay in \nhospital, often because of nausea and vomiting. When it is decided to continue a psy-\nchotropic, this decision needs to be explicitly outlined to medical and nursing staff so \nthat treatment is not unintentionally withheld.\n",
+  "raw_text_sha256": "8e79e0e2ffd4b5a1f90b08f85abf5662d081670cdcd816a6951dd16c6b4503a7",
+  "coordinates_sha256": "27fa669142964a56e33e843e0df8b5226ef65287eb804c683ee9af1c578522ee",
+  "block_sequence_sha256": "52f3bf98026a5b1666c02458a3384b9838a0699039d8e0f5ed66634b9924d277",
+  "blocks": [
+    {
+      "block_id": "page-0910-block-0000",
+      "order": 0,
+      "text": "Psychotropic drugs in special conditions    889\n",
+      "bbox": [
+        227.09710693359375,
+        31.395221710205078,
+        420.0010986328125,
+        41.0272216796875
+      ],
+      "text_sha256": "60a6121613ef1337c717ef5764e5cab05b5da605bdac6c73b35580e99482d350"
+    },
+    {
+      "block_id": "page-0910-block-0001",
+      "order": 1,
+      "text": "CHAPTER 13\n",
+      "bbox": [
+        454.4096984863281,
+        272.95111083984375,
+        463.88970947265625,
+        318.74310302734375
+      ],
+      "text_sha256": "a01ce0756ef6b5d41c48be6624d8bd154fa95cf67cb49768f2593332d3a2ec98"
+    },
+    {
+      "block_id": "page-0910-block-0002",
+      "order": 2,
+      "text": "Psychotropics and surgery\n",
+      "bbox": [
+        55.039398193359375,
+        65.39218139648438,
+        189.89938354492188,
+        78.42718505859375
+      ],
+      "text_sha256": "d2b585b2ed1edfdb95d54f96158b2425886af773868aa3077cdf334afdb6773d"
+    },
+    {
+      "block_id": "page-0910-block-0003",
+      "order": 3,
+      "text": "There are few studies of the effects of non-anaesthetic drugs on surgery and the anaes-\nthetic process.1,2 Practice is largely based on theoretical considerations, case reports, \nclinical experience and personal opinion. Any guidance given in this area is therefore \nsomewhat speculative. The decision as to whether or not to continue a drug during \nsurgery and the perioperative period should take into account a number of interacting \nfactors. Some general considerations include the following:\n",
+      "bbox": [
+        48.039398193359375,
+        84.2371826171875,
+        422.8442077636719,
+        155.95718383789062
+      ],
+      "text_sha256": "abb84d9b38387b4066364d8c7e6aec1d307fd2f4d5eac54062cc6964e0bf85ec"
+    },
+    {
+      "block_id": "page-0910-block-0004",
+      "order": 4,
+      "text": "■\n■Patients are at risk of aspirating their stomach contents during general anaesthesia. \n",
+      "bbox": [
+        48.03929901123047,
+        162.2371826171875,
+        422.7944641113281,
+        173.95718383789062
+      ],
+      "text_sha256": "5bd555f54141267977f733f40904abdbf4b36c0cafb427e4b933dd4a04272455"
+    },
+    {
+      "block_id": "page-0910-block-0005",
+      "order": 5,
+      "text": "For this reason they are usually prevented from eating for at least 6 hours before \nsurgery. However, clear fluids leave the stomach within 2 hours of ingestion and so \nfluids that enable a patient to take routine medication may be allowed up to 2 hours \nbefore surgery.3\n",
+      "bbox": [
+        56.844398498535156,
+        174.2371826171875,
+        422.8744812011719,
+        221.95718383789062
+      ],
+      "text_sha256": "67518502b3aa8c919eeeaec55781e7423536be6e66085ebf90004ba6f228efb2"
+    },
+    {
+      "block_id": "page-0910-block-0006",
+      "order": 6,
+      "text": "■\n■There are some interactions between drugs used during surgery and routine medica-\n",
+      "bbox": [
+        48.03929901123047,
+        222.2371826171875,
+        420.0744934082031,
+        233.95718383789062
+      ],
+      "text_sha256": "6797ae01995cbb3c1606dbe7a66b57bd72e5ba6a4e4d48da197e9aca408f30c9"
+    },
+    {
+      "block_id": "page-0910-block-0007",
+      "order": 7,
+      "text": "tion that constitute an absolute contra-indication. This is usually managed by the \nanaesthetist through their choice of anaesthetic drugs, but may involve temporary \ncessation of regular medication. Significant interactions between medicines used dur-\ning surgery and psychotropics include the following:\n",
+      "bbox": [
+        56.844390869140625,
+        234.2371826171875,
+        422.8144226074219,
+        281.9571838378906
+      ],
+      "text_sha256": "7f2d1a3df854e1737c00e1c4d25d2c889b613e257ac825de7d7f659f97aeb096"
+    },
+    {
+      "block_id": "page-0910-block-0008",
+      "order": 8,
+      "text": "■\n■Enflurane may precipitate seizures in patients taking tricyclic antidepressants.4–6\n",
+      "bbox": [
+        57.23429870605469,
+        282.2371826171875,
+        409.34356689453125,
+        293.9571838378906
+      ],
+      "text_sha256": "985c06ccd974f1cc6ac716efa2dc13780ce02bbe92eaeef7296f28128b4b6925"
+    },
+    {
+      "block_id": "page-0910-block-0009",
+      "order": 9,
+      "text": "■\n■Pethidine and other serotonergic opioids may precipitate fatal ‘excitatory’ reactions in \n",
+      "bbox": [
+        57.23429870605469,
+        294.2371826171875,
+        422.81964111328125,
+        305.9571838378906
+      ],
+      "text_sha256": "257606ee2efff13104a13f60b64492f5083cf329c8119ec669f18962c58f58df"
+    },
+    {
+      "block_id": "page-0910-block-0010",
+      "order": 10,
+      "text": "patients taking MAOIs and may cause serotonin syndrome in patients taking SSRIs.4–7\n",
+      "bbox": [
+        66.03939819335938,
+        306.2371826171875,
+        419.6994934082031,
+        317.9571838378906
+      ],
+      "text_sha256": "7b865d1f640be5e0257e388cf815d956975019d06b9e42c1f9cdf5f66c5c1122"
+    },
+    {
+      "block_id": "page-0910-block-0011",
+      "order": 11,
+      "text": "■\n■Volatile anaesthetics (halothane, enflurane, etc.) prolong QTc8 and should usually \n",
+      "bbox": [
+        57.23429870605469,
+        318.2371826171875,
+        422.82281494140625,
+        329.9571838378906
+      ],
+      "text_sha256": "aafe04f55a4a847b9aa7649c7d724ab767743043bc69dd9b60359ca7420f2de4"
+    },
+    {
+      "block_id": "page-0910-block-0012",
+      "order": 12,
+      "text": "not be given to patients on QT-prolonging drugs who have ECG evidence of QT \nprolongation.\n",
+      "bbox": [
+        66.04281616210938,
+        330.2371826171875,
+        422.8728332519531,
+        353.9571838378906
+      ],
+      "text_sha256": "8662c7417bc1fab3110490a644d2f49709feb45f3065ea140ff7a6d0fdc1cf33"
+    },
+    {
+      "block_id": "page-0910-block-0013",
+      "order": 13,
+      "text": "In addition:\n",
+      "bbox": [
+        48.042816162109375,
+        360.2371826171875,
+        98.61280822753906,
+        371.9571838378906
+      ],
+      "text_sha256": "3a9aefdd02b9072f7ca27581b789119a71eedca0c753bda016cd44bc676f19fd"
+    },
+    {
+      "block_id": "page-0910-block-0014",
+      "order": 14,
+      "text": "■\n■Major surgical procedures induce profound physiological changes, which include \n",
+      "bbox": [
+        48.03929901123047,
+        372.2371826171875,
+        422.8143615722656,
+        383.9571838378906
+      ],
+      "text_sha256": "40f2668a868509f0efceb57a42d49e70e1aff235bc73824d4785f0aca0604435"
+    },
+    {
+      "block_id": "page-0910-block-0015",
+      "order": 15,
+      "text": "electrolyte disturbances and the release of cortisol and catecholamines.\n",
+      "bbox": [
+        56.844398498535156,
+        384.2371826171875,
+        361.3044128417969,
+        395.9571838378906
+      ],
+      "text_sha256": "782edb0591ce6b0211f83ec0710edc2dd15a6925e4cfa2b1ec1d66d0e77691a3"
+    },
+    {
+      "block_id": "page-0910-block-0016",
+      "order": 16,
+      "text": "■\n■Postoperatively, surgical stress and some agents used in anaesthesia may lead to \n",
+      "bbox": [
+        48.03929901123047,
+        396.2371826171875,
+        422.824462890625,
+        407.9571838378906
+      ],
+      "text_sha256": "6c00f505da3836beb9fba42bc766f0487eb4cf3a67973a67cc25272cd4a66866"
+    },
+    {
+      "block_id": "page-0910-block-0017",
+      "order": 17,
+      "text": "­gastric or gastrointestinal stasis. Oral absorption of drugs is therefore likely to be \ncompromised.\n",
+      "bbox": [
+        56.844390869140625,
+        408.2371826171875,
+        422.7743225097656,
+        431.9571838378906
+      ],
+      "text_sha256": "ec394bf43e69ccd9824d1bed510c3283ce09f221f5f986213e072dc6aee4a208"
+    },
+    {
+      "block_id": "page-0910-block-0018",
+      "order": 18,
+      "text": "To continue or not to continue?\n",
+      "bbox": [
+        48.039398193359375,
+        449.3921813964844,
+        210.60836791992188,
+        462.42718505859375
+      ],
+      "text_sha256": "19de463c48ef78da88c26dcdad1b4141c9449c791fe932cc2e02de4dce7eb8a4"
+    },
+    {
+      "block_id": "page-0910-block-0019",
+      "order": 19,
+      "text": "For the most part, psychotropic drugs should be continued during the perioperative \nperiod, assuming agreement of the anaesthetist/anaesthesiologist concerned. Table 13.4 \nprovides some discussion of the merits or otherwise of continuing individual psycho-\ntropics during surgery.\n",
+      "bbox": [
+        48.039398193359375,
+        468.2371826171875,
+        422.8294677734375,
+        515.9572143554688
+      ],
+      "text_sha256": "6874a3e1112aaf891aa36fffdb2c0e2293f2d8a574527714df8d54c9f599b9a9"
+    },
+    {
+      "block_id": "page-0910-block-0020",
+      "order": 20,
+      "text": "Psychotropic and other drugs are frequently (albeit accidentally and/or unthinkingly) \nwithheld from preoperative patients simply because they are ‘nil by mouth’.1 Patients \nmay be labelled ‘nil by mouth’ for several reasons, including pre-operative preparation, \nunconsciousness, to rest the gut postoperatively or as a result of the surgery itself. \nPatients may also develop an intolerance to oral medicines at any time during a stay in \nhospital, often because of nausea and vomiting. When it is decided to continue a psy-\nchotropic, this decision needs to be explicitly outlined to medical and nursing staff so \nthat treatment is not unintentionally withheld.\n",
+      "bbox": [
+        48.039398193359375,
+        516.2371826171875,
+        422.87176513671875,
+        611.9572143554688
+      ],
+      "text_sha256": "3996abec4c6cb20cca4d4fcfd694d8ed1e06d07d43ba2d0c72b6645d315eb36e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

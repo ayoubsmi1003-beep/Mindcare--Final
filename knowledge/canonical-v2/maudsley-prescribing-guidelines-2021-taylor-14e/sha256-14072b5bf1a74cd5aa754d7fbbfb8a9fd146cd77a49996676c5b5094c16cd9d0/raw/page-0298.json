@@ -1,0 +1,647 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0298",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 298,
+  "source_page_index": 297,
+  "source_page_display": 298,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Physical monitoring for people with bipolar disorder1,2\nMonitoring of all patients\nAdditional monitoring of specific drugs\nTest or \nmeasurement\nInitial health \ncheck\nAnnual \ncheck-up\nAntipsychotics\nLithium\nValproate\nCarbamazepine\nThyroid \nfunction\nYes\nYes\nAt start and every 6 months; \nmore often if evidence of change\nLiver function \ntests (LFTs)\nYes\nYes\nEvery 3 months for the first \nyear then annually\nMonthly for the first 3 \nmonths then annually\nRenal function \n(eGFR)\nYes\nYes\nAt start and every 6 months; \nmore often if there is evidence of \ndeterioration or the patient \nstarts taking interacting drugs\nElectrolytes, \nurea and \ncreatinine \n(EUC)\nYes\nYes\nAt start and then every 3–6 \nmonths (include serum calcium)\nMonthly for the first 3 \nmonths then annually\nFull blood \ncount (FBC)\nYes\nYes\nOnly if clinically indicated\nEvery 3 months for the first \nyear then annually\nMonthly for the first 3 \nmonths then annually\nBlood (plasma) \nglucose\nYes\nYes, as part of a \nroutine physical \nhealth check\nAt start and then every 4–6 \nmonths (and at 1 month if \ntaking olanzapine); more often \nif evidence of elevated levels\nLipid profile\nYes\nYes, as part of a \nroutine physical \nhealth check\nAt start and at 3 months; more \noften initially if evidence of \nelevated levels\nBlood pressure \nand pulse\nYes\nYes, as part of a \nroutine physical \nhealth check\nDuring dosage titration if \nantipsychotic prescribed is \nassociated with postural \nhypotension\n(Continued)\n",
+  "raw_text_sha256": "998ab9d964300930a4708e5742efe4d013d4897b688603d210aa27ce30575605",
+  "coordinates_sha256": "10952ab3d6919b0a0ddb506f1d99c5d25e4dbaa4a42fc96cd25868444562761d",
+  "block_sequence_sha256": "41c6c28d2671eea2f3fcb6a66c72cf363e40dd87a1ec80766ea07e6ee3a83eb7",
+  "blocks": [
+    {
+      "block_id": "page-0298-block-0000",
+      "order": 0,
+      "text": "Physical monitoring for people with bipolar disorder1,2\n",
+      "bbox": [
+        49.71500015258789,
+        325.5596008300781,
+        62.75,
+        605.6539916992188
+      ],
+      "text_sha256": "332da6493053983b4c61cd8ef75fc5d56c6ee59232b1d0855ce34539a762bbc9"
+    },
+    {
+      "block_id": "page-0298-block-0001",
+      "order": 1,
+      "text": "Monitoring of all patients\nAdditional monitoring of specific drugs\n",
+      "bbox": [
+        75.86250305175781,
+        294.978515625,
+        84.75,
+        550.31591796875
+      ],
+      "text_sha256": "ef0a28c952061af6689881ad56ed43c3e8b81ae640a767ccdc4a8d1d350a35d2"
+    },
+    {
+      "block_id": "page-0298-block-0002",
+      "order": 2,
+      "text": "Test or \n",
+      "bbox": [
+        91.48500061035156,
+        583.2258911132812,
+        100.37249755859375,
+        608.65087890625
+      ],
+      "text_sha256": "edcd3a70cd5b56a86d73104d8a48a6db6451453dc7715c3a138aaab78c48afcf"
+    },
+    {
+      "block_id": "page-0298-block-0003",
+      "order": 3,
+      "text": "measurement\nInitial health \n",
+      "bbox": [
+        91.48500061035156,
+        503.62835693359375,
+        110.3699951171875,
+        608.65087890625
+      ],
+      "text_sha256": "16b508a6ed222416708a91aeb7c085eb1da3920d507e705fa7216b02c8d0d5b0"
+    },
+    {
+      "block_id": "page-0298-block-0004",
+      "order": 4,
+      "text": "check\nAnnual \n",
+      "bbox": [
+        91.48500061035156,
+        465.8133850097656,
+        110.3699951171875,
+        550.31591796875
+      ],
+      "text_sha256": "fbeb084929af6369e7c76ca7dd807ec2d3efdb85eef01eb0b29fa4457452e936"
+    },
+    {
+      "block_id": "page-0298-block-0005",
+      "order": 5,
+      "text": "check-up\nAntipsychotics\nLithium\nValproate\nCarbamazepine\n",
+      "bbox": [
+        91.48500061035156,
+        59.71085739135742,
+        110.3699951171875,
+        493.3158874511719
+      ],
+      "text_sha256": "ede82b880420ccb1648cdd9d2f3f870b4d3f0c3cd45304f4cb5ef055f51130e0"
+    },
+    {
+      "block_id": "page-0298-block-0006",
+      "order": 6,
+      "text": "Thyroid \n",
+      "bbox": [
+        117.2925033569336,
+        582.9483642578125,
+        126.0,
+        608.65087890625
+      ],
+      "text_sha256": "8444935ba0f1d566828e398a5d907ddd15a15f3918e188abff1503b66922fbd3"
+    },
+    {
+      "block_id": "page-0298-block-0007",
+      "order": 7,
+      "text": "function\nYes\nYes\nAt start and every 6 months; \n",
+      "bbox": [
+        117.2925033569336,
+        229.96836853027344,
+        135.99749755859375,
+        608.65087890625
+      ],
+      "text_sha256": "1d9d8f49a42756e08a62576bbe1eccff365bfdd2e68d984c81856b0a79d07d9b"
+    },
+    {
+      "block_id": "page-0298-block-0008",
+      "order": 8,
+      "text": "more often if evidence of change\n",
+      "bbox": [
+        127.29000091552734,
+        217.30081176757812,
+        135.99749755859375,
+        323.3133850097656
+      ],
+      "text_sha256": "eb3e2d08af38be96640d95a789c0a0d56192978ad91390c0c865011087f75cab"
+    },
+    {
+      "block_id": "page-0298-block-0009",
+      "order": 9,
+      "text": "Liver function \n",
+      "bbox": [
+        142.91249084472656,
+        563.2383422851562,
+        151.6199951171875,
+        608.65087890625
+      ],
+      "text_sha256": "23ec6d68603cb9275505d044eeaf0a0d838be00251c878906a4a1956b917c789"
+    },
+    {
+      "block_id": "page-0298-block-0010",
+      "order": 10,
+      "text": "tests (LFTs)\nYes\nYes\nEvery 3 months for the first \n",
+      "bbox": [
+        142.91249084472656,
+        120.2210922241211,
+        161.61749267578125,
+        608.65087890625
+      ],
+      "text_sha256": "6290d72fba0cb1955cd83b0454aee9c75f0cec51e55cbdb94a52727fccc997d9"
+    },
+    {
+      "block_id": "page-0298-block-0011",
+      "order": 11,
+      "text": "year then annually\nMonthly for the first 3 \n",
+      "bbox": [
+        142.91249084472656,
+        41.388450622558594,
+        161.61749267578125,
+        209.31338500976562
+      ],
+      "text_sha256": "2cf2bb074ada4c467d6f6f3717ec4a02a1566e2a8eac4e3364976fcdc2e28ce5"
+    },
+    {
+      "block_id": "page-0298-block-0012",
+      "order": 12,
+      "text": "months then annually\n",
+      "bbox": [
+        152.9099884033203,
+        44.71101379394531,
+        161.61749267578125,
+        114.31085205078125
+      ],
+      "text_sha256": "5e5a67ef886266bb4324486b8bb6c4f11cff94470f0ad56177775696b46c205f"
+    },
+    {
+      "block_id": "page-0298-block-0013",
+      "order": 13,
+      "text": "Renal function \n",
+      "bbox": [
+        168.53248596191406,
+        560.3058471679688,
+        177.239990234375,
+        608.65087890625
+      ],
+      "text_sha256": "228d32153fca4a02744a33273ef9283c23ab4e2618d69dd6c96f84559374cff0"
+    },
+    {
+      "block_id": "page-0298-block-0014",
+      "order": 14,
+      "text": "(eGFR)\nYes\nYes\nAt start and every 6 months; \n",
+      "bbox": [
+        168.53248596191406,
+        229.96836853027344,
+        187.23748779296875,
+        608.65087890625
+      ],
+      "text_sha256": "945acdeeada50dacd50c206b1da9be8b7c9fec378ec0d426628835ffdee8b440"
+    },
+    {
+      "block_id": "page-0298-block-0015",
+      "order": 15,
+      "text": "more often if there is evidence of \n",
+      "bbox": [
+        178.5299835205078,
+        215.24586486816406,
+        187.23748779296875,
+        323.3133850097656
+      ],
+      "text_sha256": "b4d15bb333a057626cc3830a381d59f84f5352b86468251358405473c80a61ae"
+    },
+    {
+      "block_id": "page-0298-block-0016",
+      "order": 16,
+      "text": "deterioration or the patient \n",
+      "bbox": [
+        188.52748107910156,
+        234.13829040527344,
+        197.2349853515625,
+        323.3133850097656
+      ],
+      "text_sha256": "e798168e86dfec383bab9740509a9be1bb9a5a433fccff98162aaa5145cbb920"
+    },
+    {
+      "block_id": "page-0298-block-0017",
+      "order": 17,
+      "text": "starts taking interacting drugs\n",
+      "bbox": [
+        198.5249786376953,
+        227.8907928466797,
+        207.23248291015625,
+        323.3133850097656
+      ],
+      "text_sha256": "616cc642125b07dbcc5eb019840edecc86c17162acc79b925dc8f6b6bee7928f"
+    },
+    {
+      "block_id": "page-0298-block-0018",
+      "order": 18,
+      "text": "Electrolytes, \n",
+      "bbox": [
+        214.14747619628906,
+        568.7958374023438,
+        222.85498046875,
+        608.65087890625
+      ],
+      "text_sha256": "826a0ff49decf7b8d0f1784e282b46105c9f55d106ba85f5e0a7132955d948de"
+    },
+    {
+      "block_id": "page-0298-block-0019",
+      "order": 19,
+      "text": "urea and \n",
+      "bbox": [
+        224.1449737548828,
+        578.3583374023438,
+        232.85247802734375,
+        608.65087890625
+      ],
+      "text_sha256": "5088078b8bae2b1518edf5dd9e3fe4510fb36521cb7a38b3191465bd4ff96e30"
+    },
+    {
+      "block_id": "page-0298-block-0020",
+      "order": 20,
+      "text": "creatinine \n",
+      "bbox": [
+        234.14247131347656,
+        575.4558715820312,
+        242.8499755859375,
+        608.65087890625
+      ],
+      "text_sha256": "123620ea3665b021624a715603ed653ce77901d7cc5b4f3736f98d15f4de115d"
+    },
+    {
+      "block_id": "page-0298-block-0021",
+      "order": 21,
+      "text": "(EUC)\n",
+      "bbox": [
+        244.1399688720703,
+        590.725830078125,
+        252.84747314453125,
+        608.65087890625
+      ],
+      "text_sha256": "646bf2df90240ea20f7f153da874159f4d32c2f9aba815becf283acb45645ba8"
+    },
+    {
+      "block_id": "page-0298-block-0022",
+      "order": 22,
+      "text": "Yes\nYes\nAt start and then every 3–6 \n",
+      "bbox": [
+        214.1399688720703,
+        233.71836853027344,
+        222.84747314453125,
+        550.31591796875
+      ],
+      "text_sha256": "c3ce7f8474c4757040429314015c72e2b4e30a74cd71c7df60b9dfdfa582274f"
+    },
+    {
+      "block_id": "page-0298-block-0023",
+      "order": 23,
+      "text": "months (include serum calcium)\nMonthly for the first 3 \n",
+      "bbox": [
+        214.1399688720703,
+        41.388450622558594,
+        232.844970703125,
+        323.3133850097656
+      ],
+      "text_sha256": "accddb6186e9c5859366afe89ec289a1cbba938f1a6253423bc65a959aa494f3"
+    },
+    {
+      "block_id": "page-0298-block-0024",
+      "order": 24,
+      "text": "months then annually\n",
+      "bbox": [
+        224.13746643066406,
+        44.71101379394531,
+        232.844970703125,
+        114.31085205078125
+      ],
+      "text_sha256": "5e5a67ef886266bb4324486b8bb6c4f11cff94470f0ad56177775696b46c205f"
+    },
+    {
+      "block_id": "page-0298-block-0025",
+      "order": 25,
+      "text": "Full blood \n",
+      "bbox": [
+        259.7624816894531,
+        575.3058471679688,
+        268.469970703125,
+        608.65087890625
+      ],
+      "text_sha256": "a02015df929e43832eb0e573f12a8c737aa87c507ffc04995c2abcfda0cdce55"
+    },
+    {
+      "block_id": "page-0298-block-0026",
+      "order": 26,
+      "text": "count (FBC)\nYes\nYes\nOnly if clinically indicated\nEvery 3 months for the first \n",
+      "bbox": [
+        259.7624816894531,
+        120.2210922241211,
+        278.46746826171875,
+        608.65087890625
+      ],
+      "text_sha256": "613a765405cd039f668e590077b1fd7224a262dfc8782712fb7d4b804f4d7f89"
+    },
+    {
+      "block_id": "page-0298-block-0027",
+      "order": 27,
+      "text": "year then annually\nMonthly for the first 3 \n",
+      "bbox": [
+        259.7624816894531,
+        41.388450622558594,
+        278.46746826171875,
+        209.31338500976562
+      ],
+      "text_sha256": "2cf2bb074ada4c467d6f6f3717ec4a02a1566e2a8eac4e3364976fcdc2e28ce5"
+    },
+    {
+      "block_id": "page-0298-block-0028",
+      "order": 28,
+      "text": "months then annually\n",
+      "bbox": [
+        269.7599792480469,
+        44.71101379394531,
+        278.46746826171875,
+        114.31085205078125
+      ],
+      "text_sha256": "5e5a67ef886266bb4324486b8bb6c4f11cff94470f0ad56177775696b46c205f"
+    },
+    {
+      "block_id": "page-0298-block-0029",
+      "order": 29,
+      "text": "Blood (plasma) \n",
+      "bbox": [
+        285.3824768066406,
+        559.4658813476562,
+        294.0899658203125,
+        608.65087890625
+      ],
+      "text_sha256": "38f510b7d2225372e0c2fe1ddf38033ec66109043e991628d0817354badcffb0"
+    },
+    {
+      "block_id": "page-0298-block-0030",
+      "order": 30,
+      "text": "glucose\nYes\nYes, as part of a \n",
+      "bbox": [
+        285.3824768066406,
+        440.2458801269531,
+        304.08746337890625,
+        608.65087890625
+      ],
+      "text_sha256": "205faa79014f19c36b5751b49aaa303b93d3e5f9177076d7d80f96ef4b6d4bf8"
+    },
+    {
+      "block_id": "page-0298-block-0031",
+      "order": 31,
+      "text": "routine physical \n",
+      "bbox": [
+        295.3799743652344,
+        441.3634338378906,
+        304.08746337890625,
+        493.3158874511719
+      ],
+      "text_sha256": "f36510ed3b73ad1be07f3e9077da5f87b5f2a762386d6c67cb4ca51097a56cf5"
+    },
+    {
+      "block_id": "page-0298-block-0032",
+      "order": 32,
+      "text": "health check\n",
+      "bbox": [
+        305.3774719238281,
+        452.89837646484375,
+        314.0849609375,
+        493.3158874511719
+      ],
+      "text_sha256": "6c010d9bb704db64426fbfed22d377c4cef01a20868758b6a5bdeea073c98d37"
+    },
+    {
+      "block_id": "page-0298-block-0033",
+      "order": 33,
+      "text": "At start and then every 4–6 \n",
+      "bbox": [
+        285.3749694824219,
+        343.72088623046875,
+        294.08245849609375,
+        433.3158874511719
+      ],
+      "text_sha256": "6191189e68e64f5c4a357269e5246393a86290ece8ee7a1695fd0dc5cceefd48"
+    },
+    {
+      "block_id": "page-0298-block-0034",
+      "order": 34,
+      "text": "months (and at 1 month if \n",
+      "bbox": [
+        295.3724670410156,
+        346.6233215332031,
+        304.0799560546875,
+        433.3158874511719
+      ],
+      "text_sha256": "a3ae015d5f9a15a7cde08b18284752edfd98e91d324f47ec964689ca1d6982bf"
+    },
+    {
+      "block_id": "page-0298-block-0035",
+      "order": 35,
+      "text": "taking olanzapine); more often \n",
+      "bbox": [
+        305.3699645996094,
+        332.59832763671875,
+        314.07745361328125,
+        433.3158874511719
+      ],
+      "text_sha256": "e1bd75db7b655dfe3f1ff6d4348f32939e5da1a0be8e147e5479eb0c5d9f3f6d"
+    },
+    {
+      "block_id": "page-0298-block-0036",
+      "order": 36,
+      "text": "if evidence of elevated levels\n",
+      "bbox": [
+        315.3674621582031,
+        342.4908752441406,
+        324.074951171875,
+        433.3158874511719
+      ],
+      "text_sha256": "81395980debb5dd6960ad3c45e432be1945b4cb9c90111609f5c5a1bbbe1b35c"
+    },
+    {
+      "block_id": "page-0298-block-0037",
+      "order": 37,
+      "text": "Lipid profile\nYes\nYes, as part of a \n",
+      "bbox": [
+        330.9899597167969,
+        440.2458801269531,
+        339.69744873046875,
+        608.65087890625
+      ],
+      "text_sha256": "46ddd60d6d72f83c1ce2ae786891b9e0893ad1bf70c121dc73644b83fa89e8df"
+    },
+    {
+      "block_id": "page-0298-block-0038",
+      "order": 38,
+      "text": "routine physical \n",
+      "bbox": [
+        340.9874572753906,
+        441.3634338378906,
+        349.6949462890625,
+        493.3158874511719
+      ],
+      "text_sha256": "f36510ed3b73ad1be07f3e9077da5f87b5f2a762386d6c67cb4ca51097a56cf5"
+    },
+    {
+      "block_id": "page-0298-block-0039",
+      "order": 39,
+      "text": "health check\n",
+      "bbox": [
+        350.9849548339844,
+        452.89837646484375,
+        359.69244384765625,
+        493.3158874511719
+      ],
+      "text_sha256": "6c010d9bb704db64426fbfed22d377c4cef01a20868758b6a5bdeea073c98d37"
+    },
+    {
+      "block_id": "page-0298-block-0040",
+      "order": 40,
+      "text": "At start and at 3 months; more \n",
+      "bbox": [
+        330.9824523925781,
+        331.765869140625,
+        339.68994140625,
+        433.3158874511719
+      ],
+      "text_sha256": "93951b54ff863675c34b2713e3c87a1fcdaf08cd1677c207967f39dc1174df4e"
+    },
+    {
+      "block_id": "page-0298-block-0041",
+      "order": 41,
+      "text": "often initially if evidence of \n",
+      "bbox": [
+        340.9799499511719,
+        344.98834228515625,
+        349.68743896484375,
+        433.3158874511719
+      ],
+      "text_sha256": "0913ff0a4be8365137cc343667cbe4998ed51a26acd4476149f9f29a802e6bb1"
+    },
+    {
+      "block_id": "page-0298-block-0042",
+      "order": 42,
+      "text": "elevated levels\n",
+      "bbox": [
+        350.9774475097656,
+        387.4908752441406,
+        359.6849365234375,
+        433.3158874511719
+      ],
+      "text_sha256": "298d4b6ee9d43908869013e9d814b9d90f608ca288d818d8fd06e139b555634a"
+    },
+    {
+      "block_id": "page-0298-block-0043",
+      "order": 43,
+      "text": "Blood pressure \n",
+      "bbox": [
+        366.5999450683594,
+        559.7359008789062,
+        375.30743408203125,
+        608.65087890625
+      ],
+      "text_sha256": "eafdbe753675ebb603709d3c1440b9987582a5578d3df1a18bc53eef56530a99"
+    },
+    {
+      "block_id": "page-0298-block-0044",
+      "order": 44,
+      "text": "and pulse\nYes\nYes, as part of a \n",
+      "bbox": [
+        366.5999450683594,
+        440.2458801269531,
+        385.304931640625,
+        608.65087890625
+      ],
+      "text_sha256": "0f9c6540f89894bd9f5d159bc9aab16f3d5333e06f209d9623378be90017f82d"
+    },
+    {
+      "block_id": "page-0298-block-0045",
+      "order": 45,
+      "text": "routine physical \n",
+      "bbox": [
+        376.5974426269531,
+        441.3634338378906,
+        385.304931640625,
+        493.3158874511719
+      ],
+      "text_sha256": "f36510ed3b73ad1be07f3e9077da5f87b5f2a762386d6c67cb4ca51097a56cf5"
+    },
+    {
+      "block_id": "page-0298-block-0046",
+      "order": 46,
+      "text": "health check\n",
+      "bbox": [
+        386.5949401855469,
+        452.89837646484375,
+        395.30242919921875,
+        493.3158874511719
+      ],
+      "text_sha256": "6c010d9bb704db64426fbfed22d377c4cef01a20868758b6a5bdeea073c98d37"
+    },
+    {
+      "block_id": "page-0298-block-0047",
+      "order": 47,
+      "text": "During dosage titration if \n",
+      "bbox": [
+        366.5924377441406,
+        350.80078125,
+        375.2999267578125,
+        433.3158874511719
+      ],
+      "text_sha256": "9e3e7a5733c5f181ef6f65c402bc389f213dfdedaee0130cecb57c5fe6a79ff0"
+    },
+    {
+      "block_id": "page-0298-block-0048",
+      "order": 48,
+      "text": "antipsychotic prescribed is \n",
+      "bbox": [
+        376.5899353027344,
+        348.0333251953125,
+        385.29742431640625,
+        433.3158874511719
+      ],
+      "text_sha256": "f02ae818040ea0178732f704f16003accfeeacbe9461f5995c69a5dae4c477f8"
+    },
+    {
+      "block_id": "page-0298-block-0049",
+      "order": 49,
+      "text": "associated with postural \n",
+      "bbox": [
+        386.5874328613281,
+        354.1383056640625,
+        395.294921875,
+        433.3158874511719
+      ],
+      "text_sha256": "17bfc2ddb7cacd2e3f84a778c784d3e5c581e40cb39ec7601d0ff8bca66c1443"
+    },
+    {
+      "block_id": "page-0298-block-0050",
+      "order": 50,
+      "text": "hypotension\n",
+      "bbox": [
+        396.5849304199219,
+        394.13580322265625,
+        405.29241943359375,
+        433.3158874511719
+      ],
+      "text_sha256": "17838589008c5efbb91c863487012b6f48e44705ee156202a97f82c520175de1"
+    },
+    {
+      "block_id": "page-0298-block-0051",
+      "order": 51,
+      "text": "(Continued)\n",
+      "bbox": [
+        413.0399169921875,
+        33.333457946777344,
+        421.79241943359375,
+        70.848388671875
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

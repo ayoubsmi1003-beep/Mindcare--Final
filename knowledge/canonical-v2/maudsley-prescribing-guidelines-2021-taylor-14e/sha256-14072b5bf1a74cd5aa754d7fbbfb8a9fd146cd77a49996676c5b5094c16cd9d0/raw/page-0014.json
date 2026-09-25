@@ -1,0 +1,71 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0014",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 14,
+  "source_page_index": 13,
+  "source_page_display": 14,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Acknowledgments\nThe following have contributed to the 14th edition of The Maudsley® Prescribing \nGuidelines in Psychiatry.\nAlice Debelle\nAndrea Danese\nAndrew Wilcock\nAnnabel Price\nAnne Connolly\nBruce Clark\nClaire Wilson\nColin Drummond\nDaniel Harwood\nDavid Mirfin\nDeborah Robson\nDelia Bishara\nDerek Tracy\nEbenezer Oloyede\nElizabeth Naomi Smith\nEmily Finch\nEmmert Roberts\nEromona Whiskey\nFrancis Keaney\nFrank Besag\nGabriel Ruane\nGeorgina Boon\nHubertus Himmerich\nIan Osborne\nIrene Guerrini\nIris Rathwell\nIvana Clark\nJames Stone\nJane Marshall\nJanet Treasure\nJemma Theivendran\nJonathan Rogers\nJustin Sauer\nKalliopi Vallianatou\nKwame Peprah\nLouise Howard\nLuke Baker\nLuke Jelen\nMarinos Kyriakopoulos\nMark Horowitz\nMax Henderson\nMike Kelleher\nNicola Funnell\nNicola Kalk\nNilou Nourishad\nOluwakemi Oduniyi\nParamala Santosh\nPaul Gringras\nPaul Moran\nPetrina Douglas-Hall\nSameer Jauhar\nShubhra Mace\nSiobhan Gee\nSotiris Posporelis\nStephanie J Lewis\nStephen Barclay\n",
+  "raw_text_sha256": "d8aeb4906ec28edfa0ecd97c311ecabeedcba8f26ff486bd390cf7fe7d53bc08",
+  "coordinates_sha256": "0644d7a335e18c1b2704ce439971e5db340b7b03d706aaa8256434400615c795",
+  "block_sequence_sha256": "31b026a99c1f914df6a12ea5e7290b1fcf864b940c6e66c3b50067e98f402006",
+  "blocks": [
+    {
+      "block_id": "page-0014-block-0000",
+      "order": 0,
+      "text": "Acknowledgments\n",
+      "bbox": [
+        226.8863983154297,
+        111.36316680908203,
+        420.00238037109375,
+        137.43316650390625
+      ],
+      "text_sha256": "94b675873102c6335d6d2481575a7b3f48c2644a40f9d855c840113de72daeea"
+    },
+    {
+      "block_id": "page-0014-block-0001",
+      "order": 1,
+      "text": "The following have contributed to the 14th edition of The Maudsley® Prescribing \nGuidelines in Psychiatry.\n",
+      "bbox": [
+        48.0,
+        253.527099609375,
+        422.78143310546875,
+        277.2471008300781
+      ],
+      "text_sha256": "3f973e2c6b72b2dc856d24122c44d869d7a3c27e271c1b917f457d16bbb91277"
+    },
+    {
+      "block_id": "page-0014-block-0002",
+      "order": 2,
+      "text": "Alice Debelle\nAndrea Danese\nAndrew Wilcock\nAnnabel Price\nAnne Connolly\nBruce Clark\nClaire Wilson\nColin Drummond\nDaniel Harwood\nDavid Mirfin\nDeborah Robson\nDelia Bishara\nDerek Tracy\nEbenezer Oloyede\nElizabeth Naomi Smith\nEmily Finch\nEmmert Roberts\nEromona Whiskey\nFrancis Keaney\nFrank Besag\nGabriel Ruane\nGeorgina Boon\nHubertus Himmerich\nIan Osborne\nIrene Guerrini\nIris Rathwell\nIvana Clark\nJames Stone\n",
+      "bbox": [
+        48.0,
+        284.4710998535156,
+        138.48599243164062,
+        618.9381713867188
+      ],
+      "text_sha256": "00e101d9026c8ab13fcca5272298d2714ce3a713e727206813add811bf746d30"
+    },
+    {
+      "block_id": "page-0014-block-0003",
+      "order": 3,
+      "text": "Jane Marshall\nJanet Treasure\nJemma Theivendran\nJonathan Rogers\nJustin Sauer\nKalliopi Vallianatou\nKwame Peprah\nLouise Howard\nLuke Baker\nLuke Jelen\nMarinos Kyriakopoulos\nMark Horowitz\nMax Henderson\nMike Kelleher\nNicola Funnell\nNicola Kalk\nNilou Nourishad\nOluwakemi Oduniyi\nParamala Santosh\nPaul Gringras\nPaul Moran\nPetrina Douglas-Hall\nSameer Jauhar\nShubhra Mace\nSiobhan Gee\nSotiris Posporelis\nStephanie J Lewis\nStephen Barclay\n",
+      "bbox": [
+        237.0,
+        284.39013671875,
+        330.04205322265625,
+        618.857177734375
+      ],
+      "text_sha256": "0034d3310fde22810ef03c09b98598b411a4a7447b20911b9d02d65a21e063ae"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0546",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 546,
+  "source_page_index": 545,
+  "source_page_display": 546,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    525\nCHAPTER 4\ngeneration and catecholamine release. There is evidence to support IM use of: benzodi-\nazepines, including diazepam, lorazepam, midazolam;10 antipsychotics, including halo-\nperidol, droperidol, olanzapine and chlorpromazine;10,11, and their combination.12 \nCaution is required because of the risk of neuroleptic malignant syndrome.\nRecord pulse, blood pressure and temperature, where safe to do so. Urinary drug \nscreens typically have limited validity for NPS but many clinical laboratories can iden-\ntify causative compounds. An ECG is unlikely to be viable until individuals have been \nsedated. Full assessment and treatment requires urgent ambulance transfer to an emer-\ngency department (ED).13 Psychiatric nursing might be required to contain and support \nthe individual. In the ED, IM ketamine is the preferred sedative, with a predictable \ndose–response effect at 2–4mg/kg.14 Antipyretics are ineffective cooling agents, and \ncooled IV fluids, water sprays and ice to the whole body may be required.\nOutcomes\nMortality rates are not known with the only source of data available being non-scientific \nobservations15. Physiological deterioration associated with NPS use is sometimes missed \nor not anticipated. Risk of death is related to the duration of hyperthermia and peak \ntemperature reached: temperatures over 42°C usually have very poor outcomes. Body \nmass index >25kg/m2 is associated with worse outcomes. In non-fatal instances, most \ncases are brief, and fully resolve within 48 hours, but longer term cardiac, renal and \nhepatic damage can occur.\nReferences\n\t 1.\t Tracy DK, et al. Acute behavioural disturbance: a physical emergency psychiatrists need to understand. B J Psych Advances 2020:1–10\n\t 2.\t Kennedy DB, et al. Delayed in-custody death involving excited delirium. J Correct Health Care 2018; 24:43–51.\n\t 3.\t Bunai Y, et al. Fatal hyperthermia associated with excited delirium during an arrest. Leg Med (Tokyo) 2008; 10:306–309.\n\t 4.\t Borek HA, et al. Hyperthermia and multiorgan failure after abuse of ‘bath salts’ containing 3,4-methylenedioxypyrovalerone. Ann Emerg \nMed 2012; 60:103–105.\n\t 5.\t Otahbachi M, et al. Excited delirium, restraints, and unexpected death: a review of pathogenesis. Am J Forensic Med Pathol 2010; \n31:107–112.\n\t 6.\t Wittstein IS, et al. Neurohumoral features of myocardial stunning due to sudden emotional stress. N Engl J Med 2005; 352:539–548.\n\t 7.\t Hall CA, et al. Frequency of signs of excited delirium syndrome in subjects undergoing police use of force: descriptive evaluation of a prospec-\ntive, consecutive cohort. J Forensic Leg Med 2013; 20:102–107.\n\t 8.\t Baldwin S, et al. Distinguishing features of excited delirium syndrome in non-fatal use of force encounters. J Forensic Leg Med 2016; \n41:21–27.\n\t 9.\t Stratton SJ, et al. Factors associated with sudden death of individuals requiring restraint for excited delirium. Am J Emerg Med 2001; \n19:187–191.\n\t10.\t Isbister GK, et al. Randomized controlled trial of intramuscular droperidol versus midazolam for violence and acute behavioral disturbance: \nthe DORM study. Ann Emerg Med 2010; 56:392–401 e391.\n\t11.\t Page CB, et al. A prospective study of the safety and effectiveness of droperidol in children for prehospital acute behavioral disturbance. \nPrehosp Emerg Care 2019; 23:519–526.\n\t12.\t O’Connor N, et al. Pharmacological management of acute severe behavioural disturbance: a survey of current protocols. Aust Psychiatry \n2017; 25:395–398.\n\t13.\t Wetli CV, et al. Cocaine-associated agitated delirium and the neuroleptic malignant syndrome. Am J Emerg Med 1996; 14:425–428.\n\t14.\t Li M, et al. Evaluation of ketamine for excited delirium syndrome in the adult emergency department. J Emerg Med 2019.\n\t15.\t Baldwin S, et al. Excited delirium syndrome (ExDS): situational factors and risks to officer safety in non-fatal use of force encounters. Int J \nLaw Psychiatry 2018; 60:26–34.\n",
+  "raw_text_sha256": "be3b6d3312c6adc4af46a89cb789e4953390c5fb4ea7876fb0d56dbc42172b44",
+  "coordinates_sha256": "d26ca77177769f18476ef4014816539fb2c7c29de660836be1a03db85b6c6bc1",
+  "block_sequence_sha256": "855d880c2d854ee68b7b7e9ee747a44fa3322de79a7b248971ec335eb4930c91",
+  "blocks": [
+    {
+      "block_id": "page-0546-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    525\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "c0bcd44647c5677bdcd98999539b05e071ea3b204988f051a789f2fa8224c106"
+    },
+    {
+      "block_id": "page-0546-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0546-block-0002",
+      "order": 2,
+      "text": "generation and catecholamine release. There is evidence to support IM use of: benzodi-\nazepines, including diazepam, lorazepam, midazolam;10 antipsychotics, including halo-\nperidol, droperidol, olanzapine and chlorpromazine;10,11, and their combination.12 \nCaution is required because of the risk of neuroleptic malignant syndrome.\n",
+      "bbox": [
+        47.99690246582031,
+        62.5504150390625,
+        422.7803955078125,
+        110.27041625976562
+      ],
+      "text_sha256": "d1ea0aaf8ded29c2b3c8e14463795c79d1ee5fd56871b49f74ccbe68d4e75e38"
+    },
+    {
+      "block_id": "page-0546-block-0003",
+      "order": 3,
+      "text": "Record pulse, blood pressure and temperature, where safe to do so. Urinary drug \nscreens typically have limited validity for NPS but many clinical laboratories can iden-\ntify causative compounds. An ECG is unlikely to be viable until individuals have been \nsedated. Full assessment and treatment requires urgent ambulance transfer to an emer-\ngency department (ED).13 Psychiatric nursing might be required to contain and support \nthe individual. In the ED, IM ketamine is the preferred sedative, with a predictable \ndose–response effect at 2–4mg/kg.14 Antipyretics are ineffective cooling agents, and \ncooled IV fluids, water sprays and ice to the whole body may be required.\n",
+      "bbox": [
+        48.0,
+        110.5504150390625,
+        422.82037353515625,
+        206.27047729492188
+      ],
+      "text_sha256": "a1470b5465fbbb3a048e60e43d10e9cf63fc037be978a1d7acfca0a9515cddf6"
+    },
+    {
+      "block_id": "page-0546-block-0004",
+      "order": 4,
+      "text": "Outcomes\n",
+      "bbox": [
+        48.0,
+        223.70547485351562,
+        99.94200134277344,
+        236.740478515625
+      ],
+      "text_sha256": "f73c6103c1c41f0b94980e344c77b17245fbf24f1747c925959f3a609b45d74b"
+    },
+    {
+      "block_id": "page-0546-block-0005",
+      "order": 5,
+      "text": "Mortality rates are not known with the only source of data available being non-scientific \nobservations15. Physiological deterioration associated with NPS use is sometimes missed \nor not anticipated. Risk of death is related to the duration of hyperthermia and peak \ntemperature reached: temperatures over 42°C usually have very poor outcomes. Body \nmass index >25kg/m2 is associated with worse outcomes. In non-fatal instances, most \ncases are brief, and fully resolve within 48 hours, but longer term cardiac, renal and \nhepatic damage can occur.\n",
+      "bbox": [
+        47.99580383300781,
+        242.55047607421875,
+        422.8124694824219,
+        326.2704772949219
+      ],
+      "text_sha256": "285e2aef436cb7702ed811369fb6c104c7f8d0bbb89fa0b10cc0c35f8cb4369b"
+    },
+    {
+      "block_id": "page-0546-block-0006",
+      "order": 6,
+      "text": "References\n",
+      "bbox": [
+        48.0,
+        343.7054748535156,
+        104.03400421142578,
+        356.740478515625
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0546-block-0007",
+      "order": 7,
+      "text": "\t 1.\t Tracy DK, et al. Acute behavioural disturbance: a physical emergency psychiatrists need to understand. B J Psych Advances 2020:1–10\n\t 2.\t Kennedy DB, et al. Delayed in-custody death involving excited delirium. J Correct Health Care 2018; 24:43–51.\n\t 3.\t Bunai Y, et al. Fatal hyperthermia associated with excited delirium during an arrest. Leg Med (Tokyo) 2008; 10:306–309.\n\t 4.\t Borek HA, et al. Hyperthermia and multiorgan failure after abuse of ‘bath salts’ containing 3,4-methylenedioxypyrovalerone. Ann Emerg \n",
+      "bbox": [
+        48.0,
+        361.82647705078125,
+        421.67999267578125,
+        395.8584899902344
+      ],
+      "text_sha256": "083c1a1fe819e24956dfddc97257b88cc55e357efea9047b27d4087e493ac3bb"
+    },
+    {
+      "block_id": "page-0546-block-0008",
+      "order": 8,
+      "text": "Med 2012; 60:103–105.\n\t 5.\t Otahbachi M, et al. Excited delirium, restraints, and unexpected death: a review of pathogenesis. Am J Forensic Med Pathol 2010; \n",
+      "bbox": [
+        48.02399826049805,
+        397.6824645996094,
+        421.7160339355469,
+        413.8584899902344
+      ],
+      "text_sha256": "d625205cc282a802a4e88d8d0f0d1d657c148b9b76f2b34c6a5ef18357f4dc82"
+    },
+    {
+      "block_id": "page-0546-block-0009",
+      "order": 9,
+      "text": "31:107–112.\n\t 6.\t Wittstein IS, et al. Neurohumoral features of myocardial stunning due to sudden emotional stress. N Engl J Med 2005; 352:539–548.\n\t 7.\t Hall CA, et al. Frequency of signs of excited delirium syndrome in subjects undergoing police use of force: descriptive evaluation of a prospec-\n",
+      "bbox": [
+        48.029998779296875,
+        415.6824645996094,
+        420.0118713378906,
+        440.8584899902344
+      ],
+      "text_sha256": "99ff2d2c694046b824934a32dc952a989b53f5e8cbbff628edf9ca4b8964c539"
+    },
+    {
+      "block_id": "page-0546-block-0010",
+      "order": 10,
+      "text": "tive, consecutive cohort. J Forensic Leg Med 2013; 20:102–107.\n\t 8.\t Baldwin S, et al. Distinguishing features of excited delirium syndrome in non-fatal use of force encounters. J Forensic Leg Med 2016; \n",
+      "bbox": [
+        48.04199981689453,
+        442.6824645996094,
+        421.751953125,
+        458.8584899902344
+      ],
+      "text_sha256": "e35831d1d6eaac020112377091e5c3dee854cfb97e7dc6d6dc23d56a1f55b786"
+    },
+    {
+      "block_id": "page-0546-block-0011",
+      "order": 11,
+      "text": "41:21–27.\n\t 9.\t Stratton SJ, et al. Factors associated with sudden death of individuals requiring restraint for excited delirium. Am J Emerg Med 2001; \n",
+      "bbox": [
+        48.04800033569336,
+        460.6824645996094,
+        421.7339172363281,
+        476.8584899902344
+      ],
+      "text_sha256": "7354e709033ce5943d3964cb854da9ffaa730882ec04f436a8fcd300d7faeedd"
+    },
+    {
+      "block_id": "page-0546-block-0012",
+      "order": 12,
+      "text": "19:187–191.\n\t10.\t Isbister GK, et al. Randomized controlled trial of intramuscular droperidol versus midazolam for violence and acute behavioral disturbance: \n",
+      "bbox": [
+        48.05400085449219,
+        478.6824645996094,
+        421.74603271484375,
+        494.8584899902344
+      ],
+      "text_sha256": "a0c22dde545ce85f30912a27b4e7416374efa96e6cded5a32224a71902913a6e"
+    },
+    {
+      "block_id": "page-0546-block-0013",
+      "order": 13,
+      "text": "the DORM study. Ann Emerg Med 2010; 56:392–401 e391.\n\t11.\t Page CB, et al. A prospective study of the safety and effectiveness of droperidol in children for prehospital acute behavioral disturbance. \n",
+      "bbox": [
+        48.060001373291016,
+        496.6824645996094,
+        421.7640686035156,
+        512.8584594726562
+      ],
+      "text_sha256": "584bc204a2defb60defecfcd8a3b25d4ccc9077d0a96ec6c54b20faa81abb37f"
+    },
+    {
+      "block_id": "page-0546-block-0014",
+      "order": 14,
+      "text": "Prehosp Emerg Care 2019; 23:519–526.\n\t12.\t O’Connor N, et al. Pharmacological management of acute severe behavioural disturbance: a survey of current protocols. Aust Psychiatry \n",
+      "bbox": [
+        48.066001892089844,
+        514.6824951171875,
+        421.7101745605469,
+        530.8584594726562
+      ],
+      "text_sha256": "a57cbc00138d6e42f793f8dc4094a0a80ac5c4bbed74a881ddce2794dd6cb761"
+    },
+    {
+      "block_id": "page-0546-block-0015",
+      "order": 15,
+      "text": "2017; 25:395–398.\n\t13.\t Wetli CV, et al. Cocaine-associated agitated delirium and the neuroleptic malignant syndrome. Am J Emerg Med 1996; 14:425–428.\n\t14.\t Li M, et al. Evaluation of ketamine for excited delirium syndrome in the adult emergency department. J Emerg Med 2019.\n\t15.\t Baldwin S, et al. Excited delirium syndrome (ExDS): situational factors and risks to officer safety in non-fatal use of force encounters. Int J \n",
+      "bbox": [
+        48.071998596191406,
+        532.6824951171875,
+        421.78192138671875,
+        566.8584594726562
+      ],
+      "text_sha256": "447438845e56f7d57cf1f573c787a83b04ac03bb91df7e537976b6af30bcac28"
+    },
+    {
+      "block_id": "page-0546-block-0016",
+      "order": 16,
+      "text": "Law Psychiatry 2018; 60:26–34.\n",
+      "bbox": [
+        59.0880012512207,
+        568.6824951171875,
+        144.05398559570312,
+        575.8584594726562
+      ],
+      "text_sha256": "06a2b596f1b60fed0fbb1fdaa12373dfb40024171d1923a210cd0822e303d254"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

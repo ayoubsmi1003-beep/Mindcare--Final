@@ -1,0 +1,407 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0887",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 887,
+  "source_page_index": 886,
+  "source_page_display": 887,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "866    The Maudsley Prescribing Guidelines in Psychiatry\nCHAPTER  12\nGeneral effects of caffeine\n■\n■Acute use can increase systolic and diastolic blood pressure (BP) by up to 10mmHg \nfor up to 4 hours.3 Chronic moderate use probably has little effect on BP.8\n■\n■May enhance reinforcing effects of nicotine and possibly other drugs of misuse.4,9\n■\n■Caffeine has de novo psychotropic effects (see Table 12.2), may worsen existing psy-\nchiatric illness and may interact with psychotropic drugs.\n■\n■Caffeine is an antagonist at adenosine A1 and A2A receptors, thus stimulating dopa-\nmine pathways.\nPsychotropic effects of caffeine\nAn established withdrawal syndrome exists. Symptoms include headache, depressed \nmood, anxiety, fatigue, irritability, nausea, dysphoria and craving.10\nPharmacokinetics\n■\n■Absorption\n■\n■Rapid after oral administration, especially in liquid form.\n■\n■Half-life of 2.5–4.5 hours.\n■\n■Metabolism\n■\n■Metabolised by CYP1A2, a hepatic cytochrome enzyme that exhibits genetic poly-\nmorphism, which may partially account for the large inter-individual differences \nthat are seen in the ability to tolerate caffeine.11 Note that CYP1A2 is induced by \nsmoking and inhibited by a number of drugs such as fluvoxamine.\n■\n■This metabolic pathway may become saturated at higher doses.12\n■\n■Interactions (Table 12.3)\n■\n■The potential effects of caffeine on the metabolism of other drugs, as well as the \npotential to induce a caffeine-withdrawal syndrome, should always be considered \nbefore substituting caffeine-free drinks.\n■\n■Caffeine competitively inhibits CYP1A2. Plasma levels of some drugs may be \nreduced if caffeine is withdrawn.\nTable 12.2  Dose and psychotropic effects of caffeine\nDose\nPsychotropic effect\nGenerally\nCentral nervous system stimulation\nIncreased catecholamine release, \nparticularly dopamine5\nLow to moderate dose2,6\nElation\nImpulsivity\nPeacefulness\nLarge doses >600mg/day7\n(Sensitive (non-tolerant) individuals may experience  \neffects at lower doses; tolerance develops in long-term \nusers)\nAnxiety\nInsomnia\nPsychomotor agitation\nExcitement\nRambling speech\nDelirium\nPsychosis\n",
+  "raw_text_sha256": "ab9a796265fa0bcf9290902e21110b74e92daf6352d4a747ad362a4cfb568b78",
+  "coordinates_sha256": "4a978320791e04d20ffd1a7a811486d6ee99e145ed715af3ccd64199337510e0",
+  "block_sequence_sha256": "3c264e7541146bd5d4cef89a8a5a80a0962907ead640793edb1d12c073c8c638",
+  "blocks": [
+    {
+      "block_id": "page-0887-block-0000",
+      "order": 0,
+      "text": "866    The Maudsley Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        296.3137512207031,
+        41.0272216796875
+      ],
+      "text_sha256": "2f66b773a7ceb4636c5cc26eabca1f65f9942c0f9d505610ccbbe5aa0a8345d2"
+    },
+    {
+      "block_id": "page-0887-block-0001",
+      "order": 1,
+      "text": "CHAPTER  12\n",
+      "bbox": [
+        18.520000457763672,
+        205.64230346679688,
+        28.0,
+        253.65829467773438
+      ],
+      "text_sha256": "95dc1db43e22bb418b1d53761b542f43fefb6bd1be50825929587901903f44b3"
+    },
+    {
+      "block_id": "page-0887-block-0002",
+      "order": 2,
+      "text": "General effects of caffeine\n",
+      "bbox": [
+        61.889801025390625,
+        267.1421813964844,
+        198.4217987060547,
+        280.17718505859375
+      ],
+      "text_sha256": "0cb917259508153adf19099369f5474caa8ee6d86d367c61b1358d4b6a580014"
+    },
+    {
+      "block_id": "page-0887-block-0003",
+      "order": 3,
+      "text": "■\n■Acute use can increase systolic and diastolic blood pressure (BP) by up to 10mmHg \n",
+      "bbox": [
+        61.88970184326172,
+        285.9871826171875,
+        436.7046813964844,
+        297.7071838378906
+      ],
+      "text_sha256": "199618273e25f060f73cb2e4d34549efb63995a9d20f2017de90f1ce64fc8ac6"
+    },
+    {
+      "block_id": "page-0887-block-0004",
+      "order": 4,
+      "text": "for up to 4 hours.3 Chronic moderate use probably has little effect on BP.8\n",
+      "bbox": [
+        70.6948013305664,
+        297.9871826171875,
+        388.7348937988281,
+        309.7071838378906
+      ],
+      "text_sha256": "3e4ad7489dc6f494843b0f949cf41ade8f4c4f7a220b01d3b01d8a28a6d97ec2"
+    },
+    {
+      "block_id": "page-0887-block-0005",
+      "order": 5,
+      "text": "■\n■May enhance reinforcing effects of nicotine and possibly other drugs of misuse.4,9\n",
+      "bbox": [
+        61.88970184326172,
+        309.9871826171875,
+        420.5151062011719,
+        321.7071838378906
+      ],
+      "text_sha256": "345dd8d146bfbaf75bccf561622460d974b444be4c4ead205d105b0346257e58"
+    },
+    {
+      "block_id": "page-0887-block-0006",
+      "order": 6,
+      "text": "■\n■Caffeine has de novo psychotropic effects (see Table 12.2), may worsen existing psy-\n",
+      "bbox": [
+        61.88970184326172,
+        321.9871826171875,
+        433.8847961425781,
+        333.7071838378906
+      ],
+      "text_sha256": "916cf5def703542e1219e07680016925c45eb91e08ea6ae7d87cfc18b60fb57b"
+    },
+    {
+      "block_id": "page-0887-block-0007",
+      "order": 7,
+      "text": "chiatric illness and may interact with psychotropic drugs.\n",
+      "bbox": [
+        70.6948013305664,
+        333.9871826171875,
+        317.4048156738281,
+        345.7071838378906
+      ],
+      "text_sha256": "aee10e403debceeb1abfdb5ff1036ce92e17e335bc4dc280aceb51f18cecd1f2"
+    },
+    {
+      "block_id": "page-0887-block-0008",
+      "order": 8,
+      "text": "■\n■Caffeine is an antagonist at adenosine A1 and A2A receptors, thus stimulating dopa-\n",
+      "bbox": [
+        61.88970184326172,
+        345.9871826171875,
+        433.8905944824219,
+        360.0864562988281
+      ],
+      "text_sha256": "032e5abf0a80e70815e08becb1dcded3405307e2643ddaa8fba7fa5fdb91a569"
+    },
+    {
+      "block_id": "page-0887-block-0009",
+      "order": 9,
+      "text": "mine pathways.\n",
+      "bbox": [
+        70.69061279296875,
+        357.9871826171875,
+        138.47059631347656,
+        369.7071838378906
+      ],
+      "text_sha256": "90f2d20ba97c4830b0ea689b52bfb644365c3395babe2771d25461ddcf839978"
+    },
+    {
+      "block_id": "page-0887-block-0010",
+      "order": 10,
+      "text": "Psychotropic effects of caffeine\n",
+      "bbox": [
+        61.889801025390625,
+        384.1421813964844,
+        223.25982666015625,
+        397.17718505859375
+      ],
+      "text_sha256": "19fe9121f450e3b6cd0686313627b932c9328fd02eb5b2f0fdfd169ecad529c5"
+    },
+    {
+      "block_id": "page-0887-block-0011",
+      "order": 11,
+      "text": "An established withdrawal syndrome exists. Symptoms include headache, depressed \nmood, anxiety, fatigue, irritability, nausea, dysphoria and craving.10\n",
+      "bbox": [
+        61.889801025390625,
+        402.9871826171875,
+        436.66986083984375,
+        426.7071838378906
+      ],
+      "text_sha256": "fe6592083f456330e746b444ac80301a576d9862c165ae75b73bd8501c9b86f6"
+    },
+    {
+      "block_id": "page-0887-block-0012",
+      "order": 12,
+      "text": "Pharmacokinetics\n",
+      "bbox": [
+        61.889801025390625,
+        440.1421813964844,
+        151.73779296875,
+        453.17718505859375
+      ],
+      "text_sha256": "dbbf7a46e6117bc0f8028f8d5d0ae2108e545419519ea6266ae809184ff847f8"
+    },
+    {
+      "block_id": "page-0887-block-0013",
+      "order": 13,
+      "text": "■\n■Absorption\n",
+      "bbox": [
+        61.88970184326172,
+        458.7471923828125,
+        119.60478973388672,
+        470.7071838378906
+      ],
+      "text_sha256": "bee7b60774a1431c3e07b6cb0c5d673722dccec9a9e6b5907df0fca6e39c4469"
+    },
+    {
+      "block_id": "page-0887-block-0014",
+      "order": 14,
+      "text": "■\n■Rapid after oral administration, especially in liquid form.\n",
+      "bbox": [
+        71.08470153808594,
+        470.9871826171875,
+        326.789794921875,
+        482.7071838378906
+      ],
+      "text_sha256": "50152ef9dbb8203e90dce3e8848ff12ff84b12d19ed75aaa320afbed94fffa83"
+    },
+    {
+      "block_id": "page-0887-block-0015",
+      "order": 15,
+      "text": "■\n■Half-life of 2.5–4.5 hours.\n",
+      "bbox": [
+        71.08470153808594,
+        482.9871826171875,
+        193.269775390625,
+        494.7071838378906
+      ],
+      "text_sha256": "843cc3cad49c7c61ed0e8e6e33b0c8a4f662191f62227d34cdc2a7e82fe5becb"
+    },
+    {
+      "block_id": "page-0887-block-0016",
+      "order": 16,
+      "text": "■\n■Metabolism\n",
+      "bbox": [
+        61.88970184326172,
+        494.7471923828125,
+        122.36479949951172,
+        506.7071838378906
+      ],
+      "text_sha256": "67bc9b3cb214561553594ebe0ba3f8ee5235627dcfb05cccbf6833b0f4d231cd"
+    },
+    {
+      "block_id": "page-0887-block-0017",
+      "order": 17,
+      "text": "■\n■Metabolised by CYP1A2, a hepatic cytochrome enzyme that exhibits genetic poly-\n",
+      "bbox": [
+        71.08470153808594,
+        506.9871826171875,
+        433.9197692871094,
+        518.7072143554688
+      ],
+      "text_sha256": "c43dcc513ed5b6f7eaf9ac7e9bbbb92c5835779e39efb76b7e8352daaf920a65"
+    },
+    {
+      "block_id": "page-0887-block-0018",
+      "order": 18,
+      "text": "morphism, which may partially account for the large inter-individual differences \nthat are seen in the ability to tolerate caffeine.11 Note that CYP1A2 is induced by \nsmoking and inhibited by a number of drugs such as fluvoxamine.\n",
+      "bbox": [
+        79.88929748535156,
+        518.9871826171875,
+        436.6798095703125,
+        554.7072143554688
+      ],
+      "text_sha256": "5f6646e092f7f0ad6d7aa4f9bcd86b696d517a5a0a20ba35b8d0e5b33653f73d"
+    },
+    {
+      "block_id": "page-0887-block-0019",
+      "order": 19,
+      "text": "■\n■This metabolic pathway may become saturated at higher doses.12\n",
+      "bbox": [
+        71.08470153808594,
+        554.9871826171875,
+        359.7000732421875,
+        566.7072143554688
+      ],
+      "text_sha256": "183ea842cd33327c49b59bfd9f3c9cf6ed54754a0da17baa286c08478cf58ff1"
+    },
+    {
+      "block_id": "page-0887-block-0020",
+      "order": 20,
+      "text": "■\n■Interactions (Table 12.3)\n",
+      "bbox": [
+        61.88970184326172,
+        566.7471923828125,
+        176.76478576660156,
+        578.7072143554688
+      ],
+      "text_sha256": "e5ddb58c55dba5eba916e12bc04b40c8a8c8425497a5c57ce29feba2eb16e6b2"
+    },
+    {
+      "block_id": "page-0887-block-0021",
+      "order": 21,
+      "text": "■\n■The potential effects of caffeine on the metabolism of other drugs, as well as the \n",
+      "bbox": [
+        71.08470153808594,
+        578.9871826171875,
+        436.6799011230469,
+        590.7072143554688
+      ],
+      "text_sha256": "e7b0e74fd99e04f793288c2fac801982640818a1fd54226d534dc6eaea96836f"
+    },
+    {
+      "block_id": "page-0887-block-0022",
+      "order": 22,
+      "text": "potential to induce a caffeine-withdrawal syndrome, should always be considered \nbefore substituting caffeine-free drinks.\n",
+      "bbox": [
+        79.88980102539062,
+        590.9871826171875,
+        436.6297607421875,
+        614.7072143554688
+      ],
+      "text_sha256": "d4c36036979d21ce469e38c3b5900eda4cdb4fd10d55b23952513376b3bf4c4c"
+    },
+    {
+      "block_id": "page-0887-block-0023",
+      "order": 23,
+      "text": "■\n■Caffeine competitively inhibits CYP1A2. Plasma levels of some drugs may be \n",
+      "bbox": [
+        71.08470153808594,
+        614.9871826171875,
+        436.68988037109375,
+        626.7072143554688
+      ],
+      "text_sha256": "d59376cb89b0d2871f29f429162508fb2d569ff6f7d57cc85102ff9a7d98be0e"
+    },
+    {
+      "block_id": "page-0887-block-0024",
+      "order": 24,
+      "text": "reduced if caffeine is withdrawn.\n",
+      "bbox": [
+        79.88980102539062,
+        626.9871826171875,
+        221.01979064941406,
+        638.7072143554688
+      ],
+      "text_sha256": "462ec65c9813330bb7e1e45d8670ecb862e931bc9764bd904908dbf5c6eca77e"
+    },
+    {
+      "block_id": "page-0887-block-0025",
+      "order": 25,
+      "text": "Table 12.2  Dose and psychotropic effects of caffeine\n",
+      "bbox": [
+        89.88980102539062,
+        69.41468811035156,
+        260.34979248046875,
+        78.30218505859375
+      ],
+      "text_sha256": "12706c35ea8077dc6f58fb7cb33462623414ed2f508f67e47aad70d7afa4f27c"
+    },
+    {
+      "block_id": "page-0887-block-0026",
+      "order": 26,
+      "text": "Dose\nPsychotropic effect\n",
+      "bbox": [
+        83.88980102539062,
+        89.64967346191406,
+        357.707275390625,
+        98.53717041015625
+      ],
+      "text_sha256": "7beb6c48c59e161020c75191ec578be81211b0f8106b87b3101db2368db9c6fe"
+    },
+    {
+      "block_id": "page-0887-block-0027",
+      "order": 27,
+      "text": "Generally\nCentral nervous system stimulation\nIncreased catecholamine release, \nparticularly dopamine5\n",
+      "bbox": [
+        83.88980102539062,
+        108.95467376708984,
+        402.5574035644531,
+        137.65716552734375
+      ],
+      "text_sha256": "fc004238c96ac29b6d3076a232a968006e1e31ef79af1ff8d59006865422d5b0"
+    },
+    {
+      "block_id": "page-0887-block-0028",
+      "order": 28,
+      "text": "Low to moderate dose2,6\nElation\nImpulsivity\nPeacefulness\n",
+      "bbox": [
+        83.88980102539062,
+        143.4796905517578,
+        331.3073425292969,
+        172.18218994140625
+      ],
+      "text_sha256": "0af38bd484be7eb690f485664bb0a20969bcbf6ed3b94ccc6a7c0ae9f4974c0c"
+    },
+    {
+      "block_id": "page-0887-block-0029",
+      "order": 29,
+      "text": "Large doses >600mg/day7\n",
+      "bbox": [
+        83.88980102539062,
+        178.00218200683594,
+        166.67530822753906,
+        186.70968627929688
+      ],
+      "text_sha256": "3070b873b1a0c2884f5ecbda3a63eca07da338f17729709b0be1707f247d366f"
+    },
+    {
+      "block_id": "page-0887-block-0030",
+      "order": 30,
+      "text": "(Sensitive (non-tolerant) individuals may experience  \neffects at lower doses; tolerance develops in long-term \nusers)\n",
+      "bbox": [
+        83.88980102539062,
+        191.0046844482422,
+        260.8522644042969,
+        219.70718383789062
+      ],
+      "text_sha256": "4d42e43eccd66f64711474b1216875c57b56a687e82a6d3c6a05359fe517b9be"
+    },
+    {
+      "block_id": "page-0887-block-0031",
+      "order": 31,
+      "text": "Anxiety\nInsomnia\nPsychomotor agitation\nExcitement\nRambling speech\nDelirium\nPsychosis\n",
+      "bbox": [
+        290.8898010253906,
+        177.9996795654297,
+        362.55987548828125,
+        246.69216918945312
+      ],
+      "text_sha256": "4227dd42bebf11d888f383a129f99afb39dc714a2dc89c71fe5b7f9c7445d8a1"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

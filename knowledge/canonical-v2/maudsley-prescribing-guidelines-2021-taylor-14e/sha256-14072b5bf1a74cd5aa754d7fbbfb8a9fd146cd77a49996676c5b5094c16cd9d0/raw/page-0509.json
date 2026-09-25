@@ -1,0 +1,299 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0509",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 509,
+  "source_page_index": 508,
+  "source_page_display": 509,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "488    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nTransferring from methadone 40–60mg dose to buprenorphine\n■\n■The methadone dose should be reduced as far as possible without the patient becom-\ning unstable or chaotic, and then abruptly stopped.\n■\n■The first buprenorphine dose should be delayed until the patient displays clear signs \nof withdrawal, generally 48–96 hours after the last dose of methadone.\n■\n■An initial dose of 2–4mg should be given. The patient should then be reviewed 2–3 \nhours later.\n■\n■If withdrawal has been precipitated, further symptomatic medication can be \nprescribed.\n■\n■If there has been no precipitation or worsening of withdrawal, an additional 2–4mg \nof buprenorphine can be dispensed on the same day.\n■\n■The patient should be reviewed the following day at which point the dose should be \nincreased to between 8mg and 12mg.\nTransferring to buprenorphine from methadone doses >60mg\nSuch transfers should not be attempted in an outpatient setting except in exceptional \ncircumstances by an experienced practitioner. Usually patients would be partially \ndetoxified from methadone and transferred to buprenorphine when the methadone was \nat or below 30mg daily. However, if transfer from higher dose methadone to buprenor-\nphine is required, a referral to a dedicated addiction’s inpatient unit should be consid-\nered where possible.\nTransferring from other prescribed opioids to buprenorphine\nEvidence is accruing in the treatment of prescribed opioid dependence with buprenor-\nphine and it has been found to improve adherence to drug treatment and reduce pre-\nscription opioid abuse.21 In the UK, the Orange Guidelines recommend small divided \ndoses given to establish the dose required for stabilisation.1\nStarting buprenorphine from patient-controlled analgesia\nPatient-controlled analgesia (PCA) is commonly used for management of severe acute \npain. Patients can receive opioids (e.g. morphine or fentanyl) intravenously on demand, \nwithin predetermined limits.57\nFor patients who had been prescribed buprenorphine before being on a PCA, it is \nrecommended that sublingual buprenorphine 0.4mg, four times a day be prescribed \nwhile the patient is still on their PCA as opioid substitution treatment initiation. \nStaggered dosing of buprenorphine is important to avoid the usual peak concentration, \nwhich would increase the risk of precipitated withdrawal.\nOn the first day when the PCA is no longer required (day 1 in Table 4.13), buprenor-\nphine can be increased to 2mg sublingually, twice daily. The following day, the dose can \nbe increased to 4mg, twice daily. By day 3, buprenorphine can be administered once \ndaily at 8mg. Dose adjustments may be necessary if withdrawal symptoms worsen \n",
+  "raw_text_sha256": "48b121adfaa83b2e55979fe91ba938b3db6d2b717df2f4f46572a14b00f97370",
+  "coordinates_sha256": "d08a47957b320e854bb03d1a46127f401d3231ee1af3b3b5a0903e00619e45f5",
+  "block_sequence_sha256": "481cdaab0423ff5f4f45db6fddd1cfc93d9846d681cddbe16ec5d30c72c861f5",
+  "blocks": [
+    {
+      "block_id": "page-0509-block-0000",
+      "order": 0,
+      "text": "488    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "0b5cec9a508ec502fd31279c1bb3883711edf442e287b9e07f3d40b6b09902a5"
+    },
+    {
+      "block_id": "page-0509-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0509-block-0002",
+      "order": 2,
+      "text": "Transferring from methadone 40–60mg dose to buprenorphine\n",
+      "bbox": [
+        61.88999938964844,
+        62.500404357910156,
+        357.31988525390625,
+        74.35040283203125
+      ],
+      "text_sha256": "b7d85697f34c1f056ba7a257a1d304e168634f5460e661d3a20cda19a48395a6"
+    },
+    {
+      "block_id": "page-0509-block-0003",
+      "order": 3,
+      "text": "■\n■The methadone dose should be reduced as far as possible without the patient becom-\n",
+      "bbox": [
+        61.88990020751953,
+        86.410400390625,
+        433.9299621582031,
+        98.13040161132812
+      ],
+      "text_sha256": "5c2fac20099831f51fff0ece63a3f4549b8d4c6501ce4624586f465a9e9ab8af"
+    },
+    {
+      "block_id": "page-0509-block-0004",
+      "order": 4,
+      "text": "ing unstable or chaotic, and then abruptly stopped.\n",
+      "bbox": [
+        70.88999938964844,
+        98.410400390625,
+        291.14996337890625,
+        110.13040161132812
+      ],
+      "text_sha256": "9b5272978aa6b110f2c595cfe22599b8ee8880a58be1d7a44638f5a550183f36"
+    },
+    {
+      "block_id": "page-0509-block-0005",
+      "order": 5,
+      "text": "■\n■The first buprenorphine dose should be delayed until the patient displays clear signs \n",
+      "bbox": [
+        61.88990020751953,
+        110.410400390625,
+        436.6400146484375,
+        122.13040161132812
+      ],
+      "text_sha256": "8d68b9a24335981fbd5e8014c3a8b75ba9222cd16f7ab0e7443a2362815e5453"
+    },
+    {
+      "block_id": "page-0509-block-0006",
+      "order": 6,
+      "text": "of withdrawal, generally 48–96 hours after the last dose of methadone.\n",
+      "bbox": [
+        70.88999938964844,
+        122.410400390625,
+        377.24993896484375,
+        134.13040161132812
+      ],
+      "text_sha256": "ec25e0f30b6f15d82cfa9fc68b26755af52ffecc17f9d506f71498f0d7011bb3"
+    },
+    {
+      "block_id": "page-0509-block-0007",
+      "order": 7,
+      "text": "■\n■An initial dose of 2–4mg should be given. The patient should then be reviewed 2–3 \n",
+      "bbox": [
+        61.88990020751953,
+        134.410400390625,
+        436.6700134277344,
+        146.13040161132812
+      ],
+      "text_sha256": "dd7fb9f97bff1ddbafaeb6010e67f82660ba956d07531d6cfa6a2b187bf74c69"
+    },
+    {
+      "block_id": "page-0509-block-0008",
+      "order": 8,
+      "text": "hours later.\n",
+      "bbox": [
+        70.88999938964844,
+        146.410400390625,
+        119.239990234375,
+        158.13040161132812
+      ],
+      "text_sha256": "e272f40a6418643c72363afd430db16b929efc5def256af711038a616c258862"
+    },
+    {
+      "block_id": "page-0509-block-0009",
+      "order": 9,
+      "text": "■\n■If withdrawal has been precipitated, further symptomatic medication can be \n",
+      "bbox": [
+        61.88990020751953,
+        158.410400390625,
+        436.66998291015625,
+        170.13040161132812
+      ],
+      "text_sha256": "b1781a3b20625f27e311d37f05e58214d111224f4c48486ef8daddede11be802"
+    },
+    {
+      "block_id": "page-0509-block-0010",
+      "order": 10,
+      "text": "prescribed.\n",
+      "bbox": [
+        70.88999938964844,
+        170.410400390625,
+        118.1199951171875,
+        182.13040161132812
+      ],
+      "text_sha256": "5ac5dc423eb003cb07bc8a8982faa845be0c3dee6355aa41405f851f8a05fad4"
+    },
+    {
+      "block_id": "page-0509-block-0011",
+      "order": 11,
+      "text": "■\n■If there has been no precipitation or worsening of withdrawal, an additional 2–4mg \n",
+      "bbox": [
+        61.88990020751953,
+        182.410400390625,
+        436.65985107421875,
+        194.13040161132812
+      ],
+      "text_sha256": "2c6518d21b2c68e169505b1bed4e38ca95b6b1f7a2f989882bc775afa6193904"
+    },
+    {
+      "block_id": "page-0509-block-0012",
+      "order": 12,
+      "text": "of buprenorphine can be dispensed on the same day.\n",
+      "bbox": [
+        70.88999938964844,
+        194.410400390625,
+        296.13995361328125,
+        206.13040161132812
+      ],
+      "text_sha256": "80a2cf102dd5c0d31c4597b23f85af080c71a3c1f45a9181537f1fcc4bf20b08"
+    },
+    {
+      "block_id": "page-0509-block-0013",
+      "order": 13,
+      "text": "■\n■The patient should be reviewed the following day at which point the dose should be \n",
+      "bbox": [
+        61.88990020751953,
+        206.410400390625,
+        436.69989013671875,
+        218.13040161132812
+      ],
+      "text_sha256": "8b26841021039262b13348deeb1fb2f44c2b362a417b83b2d7f00f08b9c2ff1c"
+    },
+    {
+      "block_id": "page-0509-block-0014",
+      "order": 14,
+      "text": "increased to between 8mg and 12mg.\n",
+      "bbox": [
+        70.88999938964844,
+        218.410400390625,
+        231.44998168945312,
+        230.13040161132812
+      ],
+      "text_sha256": "1dc621516f59c22ee0ae7ff0780fa620b775b9d9e3e1e10f6d0d5f40a8e1b7d1"
+    },
+    {
+      "block_id": "page-0509-block-0015",
+      "order": 15,
+      "text": "Transferring to buprenorphine from methadone doses >60mg\n",
+      "bbox": [
+        61.88999938964844,
+        254.50039672851562,
+        351.639892578125,
+        266.35040283203125
+      ],
+      "text_sha256": "3acba9b7c942abed91175b87809482899165b3c1613c2b91aee30e0d304bbcc5"
+    },
+    {
+      "block_id": "page-0509-block-0016",
+      "order": 16,
+      "text": "Such transfers should not be attempted in an outpatient setting except in exceptional \ncircumstances by an experienced practitioner. Usually patients would be partially \ndetoxified from methadone and transferred to buprenorphine when the methadone was \nat or below 30mg daily. However, if transfer from higher dose methadone to buprenor-\nphine is required, a referral to a dedicated addiction’s inpatient unit should be consid-\nered where possible.\n",
+      "bbox": [
+        61.889984130859375,
+        272.410400390625,
+        436.6798400878906,
+        344.1304016113281
+      ],
+      "text_sha256": "96e0412aefb04f9c1156237fc01b7252ffd100bdc298fd66b83aa0c3ac0656cc"
+    },
+    {
+      "block_id": "page-0509-block-0017",
+      "order": 17,
+      "text": "Transferring from other prescribed opioids to buprenorphine\n",
+      "bbox": [
+        61.889984130859375,
+        362.5003967285156,
+        347.8498840332031,
+        374.35040283203125
+      ],
+      "text_sha256": "6fb9ad8cd4bdc514185e8bd2accacc447bae281fd732ed008d11a8a07eb730bf"
+    },
+    {
+      "block_id": "page-0509-block-0018",
+      "order": 18,
+      "text": "Evidence is accruing in the treatment of prescribed opioid dependence with buprenor-\nphine and it has been found to improve adherence to drug treatment and reduce pre-\nscription opioid abuse.21 In the UK, the Orange Guidelines recommend small divided \ndoses given to establish the dose required for stabilisation.1\n",
+      "bbox": [
+        61.88780975341797,
+        380.410400390625,
+        436.6479187011719,
+        428.1304016113281
+      ],
+      "text_sha256": "7ed362ec8df5ebb17e3942cdd172e1d7cea4e7ecb88fdc5cb99f4892afa0d878"
+    },
+    {
+      "block_id": "page-0509-block-0019",
+      "order": 19,
+      "text": "Starting buprenorphine from patient-controlled analgesia\n",
+      "bbox": [
+        61.88999938964844,
+        446.5003967285156,
+        334.169921875,
+        458.35040283203125
+      ],
+      "text_sha256": "75a35a23ac2242c1e910b6c08b544fb8244a5391c9f8b1b5329e8382ae44c706"
+    },
+    {
+      "block_id": "page-0509-block-0020",
+      "order": 20,
+      "text": "Patient-controlled analgesia (PCA) is commonly used for management of severe acute \npain. Patients can receive opioids (e.g. morphine or fentanyl) intravenously on demand, \nwithin predetermined limits.57\n",
+      "bbox": [
+        61.88999938964844,
+        464.410400390625,
+        436.6700134277344,
+        500.1304016113281
+      ],
+      "text_sha256": "14102e83b8b6b015141a22f25fc748feb2b2b846dfd5d03e1a972cdc796c1758"
+    },
+    {
+      "block_id": "page-0509-block-0021",
+      "order": 21,
+      "text": "For patients who had been prescribed buprenorphine before being on a PCA, it is \nrecommended that sublingual buprenorphine 0.4mg, four times a day be prescribed \nwhile the patient is still on their PCA as opioid substitution treatment initiation. \nStaggered dosing of buprenorphine is important to avoid the usual peak concentration, \nwhich would increase the risk of precipitated withdrawal.\n",
+      "bbox": [
+        61.88999938964844,
+        500.410400390625,
+        436.6999206542969,
+        560.1304321289062
+      ],
+      "text_sha256": "20ae53c861ec48d93e69c50145931a32036db8b5c17ed84748b97b43f9b19ba6"
+    },
+    {
+      "block_id": "page-0509-block-0022",
+      "order": 22,
+      "text": "On the first day when the PCA is no longer required (day 1 in Table 4.13), buprenor-\nphine can be increased to 2mg sublingually, twice daily. The following day, the dose can \nbe increased to 4mg, twice daily. By day 3, buprenorphine can be administered once \ndaily at 8mg. Dose adjustments may be necessary if withdrawal symptoms worsen \n",
+      "bbox": [
+        61.889984130859375,
+        560.410400390625,
+        436.6998596191406,
+        608.1304321289062
+      ],
+      "text_sha256": "a1c6eaed9d6d2be62173851b33b9c7257f540bc1a8ed26dcca797a3e704bea8b"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,59 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0007",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 7,
+  "source_page_index": 6,
+  "source_page_display": 7,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "vi    Contents\nNewer long-acting injectable antipsychotic preparations\b\n92\nPenfluridol weekly\b\n95\nElectroconvulsive therapy and psychosis\b\n96\nOmega-3 fatty acid (fish oils) in schizophrenia\b\n99\nStopping antipsychotics\b\n102\nANTIPSYCHOTIC ADVERSE EFFECTS\b\n109\nExtrapyramidal symptoms\b\n109\nAkathisia\b\n114\nTreatment of tardive dyskinesia\b\n117\nAntipsychotic-induced weight gain\b\n123\nTreatment of antipsychotic-induced weight gain\b\n125\nNeuroleptic malignant syndrome\b\n131\nCatatonia\b\n135\nECG changes – QT prolongation\b\n141\nEffect of antipsychotic medications on plasma lipids\b\n149\nDiabetes and impaired glucose tolerance\b\n153\nBlood pressure changes with antipsychotics \b\n160\nHyponatraemia in psychosis \b\n164\nHyperprolactinaemia\b\n168\nSexual dysfunction\b\n172\nPneumonia\b\n181\nSwitching antipsychotics\b\n183\nVenous thromboembolism \b\n187\nREFRACTORY SCHIZOPHRENIA AND CLOZAPINE\b\n190\nClozapine initiation schedule\b\n190\nIntramuscular clozapine\b\n192\nOptimising clozapine treatment\b\n193\nAlternatives to clozapine\b\n198\nRe-starting clozapine after a break in treatment\b\n207\nGuidelines for the initiation of clozapine for patients based in the community\b 208\nCLOZAPINE ADVERSE EFFECTS\b\n212\nClozapine: common adverse effects \b\n212\nClozapine: uncommon or unusual adverse effects\b\n217\nClozapine: serious haematological and cardiovascular adverse effects\b\n222\nClozapine-induced hypersalivation\b\n227\nClozapine-induced gastrointestinal hypomotility (CIGH)\b\n232\nClozapine, neutropenia and lithium\b\n236\nClozapine and chemotherapy\b\n242\nClozapine-genetic testing for clozapine treatment\b\n244\nChapter2    Bipolar disorder\b\n247\nLithium\b\n247\nValproate\b\n257\nCarbamazepine\b\n264\nAntipsychotics in bipolar disorder\b\n269\nAntipsychotic long-acting injections in bipolar disorder\b\n274\nPhysical monitoring for people with bipolar disorder\b\n277\nTreatment of acute mania or hypomania\b\n279\nRapid cycling bipolar affective disorder\b\n285\n",
+  "raw_text_sha256": "cd186224748b026fad024594c2b9835673a5a818a18fe19daab7bba9c6990a8f",
+  "coordinates_sha256": "8caafc0b346282669b6a8de0b344588dd0bf30595c084d70729110771141af8b",
+  "block_sequence_sha256": "31fd54133fd8e863b7f8427c63ea6fb9e822a0088ef822d9cdabcddff0768cae",
+  "blocks": [
+    {
+      "block_id": "page-0007-block-0000",
+      "order": 0,
+      "text": "vi    Contents\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        118.7938003540039,
+        41.0272216796875
+      ],
+      "text_sha256": "61f28e68351c245b05992b9d5440e263de6b84e8a55042583467678d334395b0"
+    },
+    {
+      "block_id": "page-0007-block-0001",
+      "order": 1,
+      "text": "Newer long-acting injectable antipsychotic preparations\b\n92\nPenfluridol weekly\b\n95\nElectroconvulsive therapy and psychosis\b\n96\nOmega-3 fatty acid (fish oils) in schizophrenia\b\n99\nStopping antipsychotics\b\n102\nANTIPSYCHOTIC ADVERSE EFFECTS\b\n109\nExtrapyramidal symptoms\b\n109\nAkathisia\b\n114\nTreatment of tardive dyskinesia\b\n117\nAntipsychotic-induced weight gain\b\n123\nTreatment of antipsychotic-induced weight gain\b\n125\nNeuroleptic malignant syndrome\b\n131\nCatatonia\b\n135\nECG changes – QT prolongation\b\n141\nEffect of antipsychotic medications on plasma lipids\b\n149\nDiabetes and impaired glucose tolerance\b\n153\nBlood pressure changes with antipsychotics \b\n160\nHyponatraemia in psychosis \b\n164\nHyperprolactinaemia\b\n168\nSexual dysfunction\b\n172\nPneumonia\b\n181\nSwitching antipsychotics\b\n183\nVenous thromboembolism \b\n187\nREFRACTORY SCHIZOPHRENIA AND CLOZAPINE\b\n190\nClozapine initiation schedule\b\n190\nIntramuscular clozapine\b\n192\nOptimising clozapine treatment\b\n193\nAlternatives to clozapine\b\n198\nRe-starting clozapine after a break in treatment\b\n207\nGuidelines for the initiation of clozapine for patients based in the community\b 208\nCLOZAPINE ADVERSE EFFECTS\b\n212\nClozapine: common adverse effects \b\n212\nClozapine: uncommon or unusual adverse effects\b\n217\nClozapine: serious haematological and cardiovascular adverse effects\b\n222\nClozapine-induced hypersalivation\b\n227\nClozapine-induced gastrointestinal hypomotility (CIGH)\b\n232\nClozapine, neutropenia and lithium\b\n236\nClozapine and chemotherapy\b\n242\nClozapine-genetic testing for clozapine treatment\b\n244\n",
+      "bbox": [
+        112.77978515625,
+        62.730316162109375,
+        433.89080810546875,
+        529.164306640625
+      ],
+      "text_sha256": "fd0318a169ddc6c0c4fb8c81d60bf0d161f28e3453796bce066b6d0f51f61add"
+    },
+    {
+      "block_id": "page-0007-block-0002",
+      "order": 2,
+      "text": "Chapter2    Bipolar disorder\b\n247\nLithium\b\n247\nValproate\b\n257\nCarbamazepine\b\n264\nAntipsychotics in bipolar disorder\b\n269\nAntipsychotic long-acting injections in bipolar disorder\b\n274\nPhysical monitoring for people with bipolar disorder\b\n277\nTreatment of acute mania or hypomania\b\n279\nRapid cycling bipolar affective disorder\b\n285\n",
+      "bbox": [
+        61.77679443359375,
+        542.7003173828125,
+        433.89080810546875,
+        649.143310546875
+      ],
+      "text_sha256": "a1ec2a4ba9259f11470a3a8b54c1b03aff3468fac5e4c34600d4c1bcb669814a"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

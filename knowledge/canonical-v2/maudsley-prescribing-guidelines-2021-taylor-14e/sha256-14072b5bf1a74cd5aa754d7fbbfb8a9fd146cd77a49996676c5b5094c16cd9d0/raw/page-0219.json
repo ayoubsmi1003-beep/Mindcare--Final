@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0219",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 219,
+  "source_page_index": 218,
+  "source_page_display": 219,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "198    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nAlternatives to clozapine\nClozapine has the strongest evidence for efficacy for schizophrenia that has proved \nrefractory to adequate trials of standard antipsychotic medication. Where treatment \nresistance has been established, clozapine treatment should not be delayed or with-\nheld.1,2 The practice of using successive antipsychotic medications (or the latest) \ninstead of clozapine is widespread but not supported by research. Where clozapine \ncannot be used (because of toxicity or patient refusal to take the medication or comply \nwith the mandatory monitoring tests), other drugs or drug combinations may be tried \n(see Table 1.37) but, in practice, outcome is usually disappointing. Long-term data on \nefficacy and safety/tolerability are generally lacking.\nThe data that are available do not allow any distinction between treatment regimens \nto be drawn, particularly choice of antipsychotic medication,3,4 but it seems wise to use \nsingle drugs before trying multiple drug options. Olanzapine is perhaps most often used \nas antipsychotic monotherapy, usually in dosage above the licensed range. If this fails, \nthen the addition of a second antipsychotic (amisulpride, for example) is a possible next \nstep, although the risk-benefit balance of combined antipsychotic medication regimens \nremains unclear.5 A study of antipsychotic drug treatment after clozapine broadly con-\nfirms these findings, supporting clozapine reintroduction and olanzapine as the most \neffective and safest treatment options in those discontinuing clozapine for undefined \nreasons.6 Amongst unconventional agents, minocycline and ondansetron have the \nadvantage of low toxicity and good tolerability. A depot/LAI antipsychotic preparation \nis an option where the avoidance of covert non-adherence is a clinical priority.\nMany of the treatments listed below are somewhat experimental and some of the \ncompounds difficult to obtain (e.g. glycine, D-serine, sarcosine, etc.). Before using any \nof the regimens outlined, readers should consult the primary literature cited. Particular \ncare should be taken to inform patients where prescribing is off-label and to ensure that \nthey understand the potential adverse effects of the more experimental treatments.\nNon-clozapine treatment of refractory schizophrenia is an area of active research. \nGlutamatergic drugs may hold promise (although bitopertin is inactive7) as may 5HT2A \ninverse agonists.8\nTable 1.37  Alternatives to clozapine\nTreatment\nComments\nAllopurinol 300–600mg/day\n(+ antipsychotic)9–12\nIncreases adenosinergic transmission which may reduce effects of dopamine. \nThree positive RCTs9,10,12\nAmisulpride13\n(up to 1200mg/day)\nSingle, small open study\nAntipsychotic polypharmacy\nVarious antipsychotics in combination have been used. Data are limited, mainly \nin the form of case reports, open and naturalistic studies\nAripiprazole14,15\n(15–30mg/day)\nSingle randomized controlled study indicating moderate effect in patients \nresistant to risperidone or olanzapine (+ others). Higher doses (60mg/day) have \nbeen used16\nAsenapine (+ antipsychotic)17\nTwo case reports\n",
+  "raw_text_sha256": "dc6924faac420b10969a53d241dba4a92932b986906552cc91635c4b66456f10",
+  "coordinates_sha256": "06a4f03d482b095247193ea7bdcddb91e5b18d21051c3cc6fd436a5a6f345b1e",
+  "block_sequence_sha256": "f6bcb87a06a6643ba9bfc4a97a098c683e72b08ad0b50a7e211dbe57d072b98d",
+  "blocks": [
+    {
+      "block_id": "page-0219-block-0000",
+      "order": 0,
+      "text": "198    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "7935e868c0a8dc8b6a1b1d95538909e07efeb5442cbbbd84d2771de6b4db6ff4"
+    },
+    {
+      "block_id": "page-0219-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0219-block-0002",
+      "order": 2,
+      "text": "Alternatives to clozapine\n",
+      "bbox": [
+        68.88909912109375,
+        66.06442260742188,
+        198.0620574951172,
+        79.09942626953125
+      ],
+      "text_sha256": "291a559b01dda99fcffee344ee1defbf82ad7bc8ea934895d540c795aea61340"
+    },
+    {
+      "block_id": "page-0219-block-0003",
+      "order": 3,
+      "text": "Clozapine has the strongest evidence for efficacy for schizophrenia that has proved \nrefractory to adequate trials of standard antipsychotic medication. Where treatment \nresistance has been established, clozapine treatment should not be delayed or with-\nheld.1,2 The practice of using successive antipsychotic medications (or the latest) \ninstead of clozapine is widespread but not supported by research. Where clozapine \ncannot be used (because of toxicity or patient refusal to take the medication or comply \nwith the mandatory monitoring tests), other drugs or drug combinations may be tried \n(see Table 1.37) but, in practice, outcome is usually disappointing. Long-term data on \nefficacy and safety/tolerability are generally lacking.\n",
+      "bbox": [
+        61.88749694824219,
+        84.909423828125,
+        436.6875305175781,
+        192.62942504882812
+      ],
+      "text_sha256": "0c5196bc4b3bf3172eacea5572330b12fc6f970d1abe3847ed7732c161e003bf"
+    },
+    {
+      "block_id": "page-0219-block-0004",
+      "order": 4,
+      "text": "The data that are available do not allow any distinction between treatment regimens \nto be drawn, particularly choice of antipsychotic medication,3,4 but it seems wise to use \nsingle drugs before trying multiple drug options. Olanzapine is perhaps most often used \nas antipsychotic monotherapy, usually in dosage above the licensed range. If this fails, \nthen the addition of a second antipsychotic (amisulpride, for example) is a possible next \nstep, although the risk-benefit balance of combined antipsychotic medication regimens \nremains unclear.5 A study of antipsychotic drug treatment after clozapine broadly con-\nfirms these findings, supporting clozapine reintroduction and olanzapine as the most \neffective and safest treatment options in those discontinuing clozapine for undefined \nreasons.6 Amongst unconventional agents, minocycline and ondansetron have the \nadvantage of low toxicity and good tolerability. A depot/LAI antipsychotic preparation \nis an option where the avoidance of covert non-adherence is a clinical priority.\n",
+      "bbox": [
+        61.88661193847656,
+        192.909423828125,
+        436.6900329589844,
+        336.6294250488281
+      ],
+      "text_sha256": "9f3e48746d7dd8666fa2d9a36283c73e63a2b37b6cfb39759a778934f1d854cb"
+    },
+    {
+      "block_id": "page-0219-block-0005",
+      "order": 5,
+      "text": "Many of the treatments listed below are somewhat experimental and some of the \ncompounds difficult to obtain (e.g. glycine, D-serine, sarcosine, etc.). Before using any \nof the regimens outlined, readers should consult the primary literature cited. Particular \ncare should be taken to inform patients where prescribing is off-label and to ensure that \nthey understand the potential adverse effects of the more experimental treatments.\n",
+      "bbox": [
+        61.89019775390625,
+        336.909423828125,
+        436.7001037597656,
+        396.6294250488281
+      ],
+      "text_sha256": "96d81828a0777ce40e3d1b9801c47fa90e67dc8f723bde3941401eb59367dfce"
+    },
+    {
+      "block_id": "page-0219-block-0006",
+      "order": 6,
+      "text": "Non-clozapine treatment of refractory schizophrenia is an area of active research. \nGlutamatergic drugs may hold promise (although bitopertin is inactive7) as may 5HT2A \ninverse agonists.8\n",
+      "bbox": [
+        61.88911437988281,
+        396.909423828125,
+        436.6703796386719,
+        432.6294250488281
+      ],
+      "text_sha256": "e98dfa08b0e34ebff8baedcf49cb7d9f073dfd78413713cbffed379f9c63a3c5"
+    },
+    {
+      "block_id": "page-0219-block-0007",
+      "order": 7,
+      "text": "Table 1.37  Alternatives to clozapine\n",
+      "bbox": [
+        67.8895034790039,
+        459.559814453125,
+        185.1294708251953,
+        468.44732666015625
+      ],
+      "text_sha256": "4127b83d2b874a2be01e32c18095af1e95302df475f28b654bd54b1b29b5671e"
+    },
+    {
+      "block_id": "page-0219-block-0008",
+      "order": 8,
+      "text": "Treatment\nComments\n",
+      "bbox": [
+        61.889503479003906,
+        476.5848083496094,
+        215.3920135498047,
+        485.4723205566406
+      ],
+      "text_sha256": "8be686e890d313f8295cc060595592f78dd7d0f699de8b9c632f5bd2fa6e517c"
+    },
+    {
+      "block_id": "page-0219-block-0009",
+      "order": 9,
+      "text": "Allopurinol 300–600mg/day\n(+ antipsychotic)9–12\n",
+      "bbox": [
+        61.88951110839844,
+        491.6072998046875,
+        156.08200073242188,
+        510.4923095703125
+      ],
+      "text_sha256": "a9d5ed15de954a873ad314b6f9e9452a4fc98c022cfaed04ede6b2255ebd183f"
+    },
+    {
+      "block_id": "page-0219-block-0010",
+      "order": 10,
+      "text": "Increases adenosinergic transmission which may reduce effects of dopamine. \nThree positive RCTs9,10,12\n",
+      "bbox": [
+        177.88949584960938,
+        491.7898254394531,
+        425.0071105957031,
+        510.49481201171875
+      ],
+      "text_sha256": "1cbe46387429122fcba4c9086eb6478e31c7d262c78953e766471ad717ca4b3e"
+    },
+    {
+      "block_id": "page-0219-block-0011",
+      "order": 11,
+      "text": "Amisulpride13\n",
+      "bbox": [
+        61.889503479003906,
+        516.6348266601562,
+        109.25370788574219,
+        525.5223388671875
+      ],
+      "text_sha256": "532e3e6a2f0145cc94dc17826144201402720ece1d226ee419966b8cf6d9b51d"
+    },
+    {
+      "block_id": "page-0219-block-0012",
+      "order": 12,
+      "text": "(up to 1200mg/day)\n",
+      "bbox": [
+        61.889503479003906,
+        526.8148193359375,
+        125.66948699951172,
+        535.5223388671875
+      ],
+      "text_sha256": "06605c09b120dbd06bde29f6f809077b6d550bae510bad143744558090a15d9e"
+    },
+    {
+      "block_id": "page-0219-block-0013",
+      "order": 13,
+      "text": "Single, small open study\n",
+      "bbox": [
+        177.8920135498047,
+        516.8172607421875,
+        254.9920654296875,
+        525.5247802734375
+      ],
+      "text_sha256": "f1981880e09aab7219bc969014a733c0cdd1a9028f22aaa31fe7f4db615ca026"
+    },
+    {
+      "block_id": "page-0219-block-0014",
+      "order": 14,
+      "text": "Antipsychotic polypharmacy\nVarious antipsychotics in combination have been used. Data are limited, mainly \nin the form of case reports, open and naturalistic studies\n",
+      "bbox": [
+        61.88951110839844,
+        541.664794921875,
+        431.9545593261719,
+        560.5498046875
+      ],
+      "text_sha256": "90c8bdb2b91a2ad635ba1d6220ad1ad83f7d89c6d942c55fa20c40d394cd3cb8"
+    },
+    {
+      "block_id": "page-0219-block-0015",
+      "order": 15,
+      "text": "Aripiprazole14,15\n",
+      "bbox": [
+        61.88951110839844,
+        566.684814453125,
+        116.17158508300781,
+        575.5723266601562
+      ],
+      "text_sha256": "435bf83b413cd7eb4b62aaf0563c899f828f9e86bcd77fed867493c2192781dd"
+    },
+    {
+      "block_id": "page-0219-block-0016",
+      "order": 16,
+      "text": "(15–30mg/day)\n",
+      "bbox": [
+        61.889503479003906,
+        576.8648071289062,
+        110.24199676513672,
+        585.5723266601562
+      ],
+      "text_sha256": "381f2d9d36c9bc051a9658320b2b8dda63f4a53998c13d02f6ed5c97b8697318"
+    },
+    {
+      "block_id": "page-0219-block-0017",
+      "order": 17,
+      "text": "Single randomized controlled study indicating moderate effect in patients \nresistant to risperidone or olanzapine (+ others). Higher doses (60mg/day) have \nbeen used16\n",
+      "bbox": [
+        177.8920135498047,
+        566.8673095703125,
+        431.9021301269531,
+        595.56982421875
+      ],
+      "text_sha256": "e9d684130d59fa0c7304726fcf50bdc35640490d9a3ca7422a8c52a3348eecca"
+    },
+    {
+      "block_id": "page-0219-block-0018",
+      "order": 18,
+      "text": "Asenapine (+ antipsychotic)17\nTwo case reports\n",
+      "bbox": [
+        61.889503479003906,
+        601.7097778320312,
+        231.18450927734375,
+        610.5972900390625
+      ],
+      "text_sha256": "7b214499103eaf687a1e90217c4e50c0e5920b3d260c6debc2dde63233d727c1"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

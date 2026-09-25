@@ -1,0 +1,287 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0803",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 803,
+  "source_page_index": 802,
+  "source_page_display": 803,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "782    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\nAdverse psychiatric effects of antiretroviral drugs\nPsychiatric adverse events have been reported with many antiretroviral drugs, but a \ncausal relationship remains uncertain. Efavirenz has been most commonly implicated, \nand HIV guidelines suggest avoiding its use in patients with psychiatric illness.32,34,39\nTable 10.2 summarises the most important psychiatric adverse effects of antiretrovi-\nral drugs. Note that this is not an exhaustive list; readers are directed to the SPCs/\nproduct labelling for other possible adverse effects. The differential diagnosis of psychi-\natric side effects is covered elsewhere in the Guidelines. Monitoring of people on medi-\ncines with psychiatric side effects would be recommended.\nTable 10.2  Summary of psychiatric adverse drug reactions (ADRs) with antiretroviral drugs.32,39–41\nDrug\nAdverse psychiatric effects/comment\nNucleoside reverse transcriptase inhibitors\nAbacavir\nDepression, anxiety, nightmares, labile mood, mania, psychosis. Very few cases \nreported; in all reported cases, the patient rapidly returned to baseline after \ndiscontinuing drug\nDidanosine\nLethargy, nervousness, anxiety, confusion, sleep disturbance, mood disorders, \npsychosis, mania. Very rare\nEmtricitabine\nConfusion, irritability, insomnia\nZidovudine\nSleep disturbance, vivid dreams, agitation, mania, depression, psychosis, delirium. \nPsychiatric ADRs are usually dose-related. The onset varies widely, from <24 hours to \n7 months\nNon-nucleoside reverse transcriptase inhibitors\nEfavirenz\nSomnolence, insomnia, abnormal dreams, impaired concentration, depression, psychosis, \nand suicidal ideation. Symptoms usually subside or diminish after 2 to 4 weeks. However, \nsubtler, long-term neuropsychiatric effects may occur. Can exacerbate psychiatric \nsymptoms; avoid in patients with a history of psychiatric illness\nEtravirine\nSleep disturbance\nNevirapine\nVisual hallucinations, persecutory delusions, mood changes, nightmares and vivid \ndreams, depression. A small handful of cases have been reported. Onset of symptoms \nwas within the first couple of weeks. Symptoms all resolved on discontinuation of \nnevirapine\nRilpivirine\nDepression, suicidality, sleep disturbances. A similar adverse effect profile to efavirenz \nbut a lower incidence of each event. May exacerbate psychiatric symptoms; consider \navoiding in patients with a history of psychiatric illness\nIntegrase strand transfer inhibitors\nDolutegravir, elvitegravir \nand raltegravir\nDepression and suicidal ideation (symptoms infrequently exacerbated in patients with \npre-existing psychiatric conditions)\nCCR5 Antagonist\nMaraviroc\nDepression, insomnia\n",
+  "raw_text_sha256": "15064f8445db1dd233ed637fc813c912c3ed0fdbd460720ee11c7fcc4290b57f",
+  "coordinates_sha256": "c756ad42ded54fd79ac0142214c9de6e36aca81809ebc4cd85ccdbdd571550c3",
+  "block_sequence_sha256": "9ba99bb542e06cd9d44de7e1ebb2bec3b4c617654f2c3c8440a13d8a645ee6dc",
+  "blocks": [
+    {
+      "block_id": "page-0803-block-0000",
+      "order": 0,
+      "text": "782    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "0262f691ca41ef1c871141697139dce3de431d30f7e106f6d8663412d6ba2c26"
+    },
+    {
+      "block_id": "page-0803-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0803-block-0002",
+      "order": 2,
+      "text": "Adverse psychiatric effects of antiretroviral drugs\n",
+      "bbox": [
+        61.889801025390625,
+        62.31540298461914,
+        317.39788818359375,
+        75.35040283203125
+      ],
+      "text_sha256": "b2168a6cb5303dbe7242d261d3a091315b2cfa6f4d4f292ae6c50836f840c156"
+    },
+    {
+      "block_id": "page-0803-block-0003",
+      "order": 3,
+      "text": "Psychiatric adverse events have been reported with many antiretroviral drugs, but a \ncausal relationship remains uncertain. Efavirenz has been most commonly implicated, \nand HIV guidelines suggest avoiding its use in patients with psychiatric illness.32,34,39\n",
+      "bbox": [
+        61.889801025390625,
+        81.160400390625,
+        436.67974853515625,
+        116.88040161132812
+      ],
+      "text_sha256": "1525c3fa8c03619a8a06a890674bb6a341e6311f18eb6a43365dc18353dd70cc"
+    },
+    {
+      "block_id": "page-0803-block-0004",
+      "order": 4,
+      "text": "Table 10.2 summarises the most important psychiatric adverse effects of antiretrovi-\nral drugs. Note that this is not an exhaustive list; readers are directed to the SPCs/\nproduct labelling for other possible adverse effects. The differential diagnosis of psychi-\natric side effects is covered elsewhere in the Guidelines. Monitoring of people on medi-\ncines with psychiatric side effects would be recommended.\n",
+      "bbox": [
+        61.889801025390625,
+        117.160400390625,
+        433.9197998046875,
+        176.88040161132812
+      ],
+      "text_sha256": "3caa9df65fe1df98a855bebeff6a1fc2d8f7725d0f13f350c49e2420a8b54ace"
+    },
+    {
+      "block_id": "page-0803-block-0005",
+      "order": 5,
+      "text": "Table 10.2  Summary of psychiatric adverse drug reactions (ADRs) with antiretroviral drugs.32,39–41\n",
+      "bbox": [
+        67.88999938964844,
+        223.65650939941406,
+        376.75543212890625,
+        232.54400634765625
+      ],
+      "text_sha256": "b7d2464361171a576d5966b240d441390b73370721f73a36f2d35425ff089fd8"
+    },
+    {
+      "block_id": "page-0803-block-0006",
+      "order": 6,
+      "text": "Drug\nAdverse psychiatric effects/comment\n",
+      "bbox": [
+        65.88999938964844,
+        241.39149475097656,
+        281.2675476074219,
+        250.27899169921875
+      ],
+      "text_sha256": "a34b5de679104540bf7f437281c21691a3d4f592b372fb8e9e0dd362ddff5e8c"
+    },
+    {
+      "block_id": "page-0803-block-0007",
+      "order": 7,
+      "text": "Nucleoside reverse transcriptase inhibitors\n",
+      "bbox": [
+        65.88999938964844,
+        257.01397705078125,
+        215.35752868652344,
+        265.9014892578125
+      ],
+      "text_sha256": "db1c51fd969e80030af6fd5ae956c6ec39ba05569d3bf252c3c445c9ed882a5b"
+    },
+    {
+      "block_id": "page-0803-block-0008",
+      "order": 8,
+      "text": "Abacavir\nDepression, anxiety, nightmares, labile mood, mania, psychosis. Very few cases \nreported; in all reported cases, the patient rapidly returned to baseline after \ndiscontinuing drug\n",
+      "bbox": [
+        65.88999938964844,
+        272.8164978027344,
+        404.21502685546875,
+        301.51898193359375
+      ],
+      "text_sha256": "92b6bced3851dc2f21e963c341931781239fe96753604a9e9d58df188b43dc59"
+    },
+    {
+      "block_id": "page-0803-block-0009",
+      "order": 9,
+      "text": "Didanosine\nLethargy, nervousness, anxiety, confusion, sleep disturbance, mood disorders, \npsychosis, mania. Very rare\n",
+      "bbox": [
+        65.88999938964844,
+        308.4339904785156,
+        399.9252014160156,
+        327.13897705078125
+      ],
+      "text_sha256": "e3b2ab3d984a953d1878a7a4d326e23ae7445248b4afe2b9b4e83e4a6342e1a0"
+    },
+    {
+      "block_id": "page-0803-block-0010",
+      "order": 10,
+      "text": "Emtricitabine\nConfusion, irritability, insomnia\n",
+      "bbox": [
+        65.88999938964844,
+        334.0539855957031,
+        250.2924346923828,
+        342.761474609375
+      ],
+      "text_sha256": "3dfb2f5b6d26ba60debc395f1926a9d43fca0d81bbdb04a98e9a07c2ce0daac4"
+    },
+    {
+      "block_id": "page-0803-block-0011",
+      "order": 11,
+      "text": "Zidovudine\nSleep disturbance, vivid dreams, agitation, mania, depression, psychosis, delirium. \nPsychiatric ADRs are usually dose-related. The onset varies widely, from <24 hours to \n7 months\n",
+      "bbox": [
+        65.88999938964844,
+        349.6764831542969,
+        409.30010986328125,
+        378.37896728515625
+      ],
+      "text_sha256": "833834f27dea0fdfed24a2e160b81217176c100a2ab787fce7ca56fe34e5a8b9"
+    },
+    {
+      "block_id": "page-0803-block-0012",
+      "order": 12,
+      "text": "Non-nucleoside reverse transcriptase inhibitors\n",
+      "bbox": [
+        65.88999938964844,
+        385.11395263671875,
+        231.60250854492188,
+        394.00146484375
+      ],
+      "text_sha256": "a38fe087000e23b5b287a11696e91af6def5aab797d96ad8b5c39f60e4c32625"
+    },
+    {
+      "block_id": "page-0803-block-0013",
+      "order": 13,
+      "text": "Efavirenz\nSomnolence, insomnia, abnormal dreams, impaired concentration, depression, psychosis, \nand suicidal ideation. Symptoms usually subside or diminish after 2 to 4 weeks. However, \nsubtler, long-term neuropsychiatric effects may occur. Can exacerbate psychiatric \nsymptoms; avoid in patients with a history of psychiatric illness\n",
+      "bbox": [
+        65.88999938964844,
+        400.9164733886719,
+        427.622314453125,
+        439.616455078125
+      ],
+      "text_sha256": "4d0753f8f16f2839b07fdd63d0cb833d61aa1e0f811cb6a9124e8d1fa865a165"
+    },
+    {
+      "block_id": "page-0803-block-0014",
+      "order": 14,
+      "text": "Etravirine\nSleep disturbance\n",
+      "bbox": [
+        65.88999938964844,
+        446.5314636230469,
+        207.64747619628906,
+        455.23895263671875
+      ],
+      "text_sha256": "15f316346a72b3ec91c6758db169e98c0e0fe40e996ad48b7ae7caa94395b1e0"
+    },
+    {
+      "block_id": "page-0803-block-0015",
+      "order": 15,
+      "text": "Nevirapine\nVisual hallucinations, persecutory delusions, mood changes, nightmares and vivid \ndreams, depression. A small handful of cases have been reported. Onset of symptoms \nwas within the first couple of weeks. Symptoms all resolved on discontinuation of \nnevirapine\n",
+      "bbox": [
+        65.88999938964844,
+        462.1539611816406,
+        427.2850646972656,
+        500.85394287109375
+      ],
+      "text_sha256": "0a4bb5adda44f140526de81b3204bcecdc5662048d471fb0e87ae4cceb675cbb"
+    },
+    {
+      "block_id": "page-0803-block-0016",
+      "order": 16,
+      "text": "Rilpivirine\nDepression, suicidality, sleep disturbances. A similar adverse effect profile to efavirenz \nbut a lower incidence of each event. May exacerbate psychiatric symptoms; consider \navoiding in patients with a history of psychiatric illness\n",
+      "bbox": [
+        65.88999938964844,
+        507.7689514160156,
+        425.1624450683594,
+        536.471435546875
+      ],
+      "text_sha256": "30d3f327770eed587837bd19143727918321db17db30fbf01cd4c28007bf8ebe"
+    },
+    {
+      "block_id": "page-0803-block-0017",
+      "order": 17,
+      "text": "Integrase strand transfer inhibitors\n",
+      "bbox": [
+        65.88999938964844,
+        543.2064208984375,
+        189.24252319335938,
+        552.0939331054688
+      ],
+      "text_sha256": "4fdcbf78ae3d08428d761e1c92d7447fcbc38bbc054437e971dd278580cfd8dd"
+    },
+    {
+      "block_id": "page-0803-block-0018",
+      "order": 18,
+      "text": "Dolutegravir, elvitegravir \nand raltegravir\n",
+      "bbox": [
+        65.88999938964844,
+        559.0089111328125,
+        145.18748474121094,
+        577.7139282226562
+      ],
+      "text_sha256": "5b52c4731dba7c50fe4e2a4a225690fa4240261e3ba2835c350e41963a14f8cd"
+    },
+    {
+      "block_id": "page-0803-block-0019",
+      "order": 19,
+      "text": "Depression and suicidal ideation (symptoms infrequently exacerbated in patients with \npre-existing psychiatric conditions)\n",
+      "bbox": [
+        151.38999938964844,
+        559.0089111328125,
+        425.3200378417969,
+        577.7139282226562
+      ],
+      "text_sha256": "1582c7c454db84d2ad85029e1ad26da3859033332a763188d06a0020c7e7bf06"
+    },
+    {
+      "block_id": "page-0803-block-0020",
+      "order": 20,
+      "text": "CCR5 Antagonist\n",
+      "bbox": [
+        65.88999938964844,
+        584.4489135742188,
+        125.05747985839844,
+        593.33642578125
+      ],
+      "text_sha256": "dd6d5c726b4ebb849e94c2ef844c1510044fc9c753ce7a633da5994e070dbae1"
+    },
+    {
+      "block_id": "page-0803-block-0021",
+      "order": 21,
+      "text": "Maraviroc\nDepression, insomnia\n",
+      "bbox": [
+        65.88999938964844,
+        600.2514038085938,
+        219.18997192382812,
+        608.9589233398438
+      ],
+      "text_sha256": "a9e815a42e60f8b30f6e51d37e63c3f5e0ec77adf29127be58735598767aa7e1"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

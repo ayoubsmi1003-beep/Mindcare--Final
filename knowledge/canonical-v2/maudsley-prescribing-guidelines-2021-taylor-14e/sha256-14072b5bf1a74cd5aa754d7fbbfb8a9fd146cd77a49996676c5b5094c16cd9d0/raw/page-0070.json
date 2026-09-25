@@ -1,0 +1,467 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0070",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 70,
+  "source_page_index": 69,
+  "source_page_display": 70,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    49\nCHAPTER 1\n■\n■Justify and record reasons for dosages outside the range given in the BNF or SPC.\n■\n■Record the rationale for continuing, changing or stopping medication and the \neffects of such changes.\n■\n■Carry out a trial of medication at optimum dosage for 4–6 weeks (although half of \nthis period is probably sufficient if no effect at all is seen).\n■\n■Monitor and record the following regularly and systematically throughout treatment, \nbut especially during titration:\n■\n■efficacy, including changes in symptoms and behaviour\n■\n■side effects of treatment, taking into account overlap between certain side effects \nand clinical features of schizophrenia, for example, the overlap between akathisia \nand agitation or anxiety\n■\n■adherence\n■\n■weight, weekly for the first 6 weeks, then at 12 weeks, 1 year and annually\n■\n■waist circumference annually\n■\n■pulse and blood pressure at 12 weeks, 1 year and annually\n■\n■fasting blood glucose, HbA1C and blood lipids at 12 weeks, 1 year and annually\n■\n■nutritional status, diet and physical activity.\n■\n■Physical monitoring is to be the responsibility of the secondary care team for one year \nor until the patient is stable.\n■\n■Discuss the use of alcohol, tobacco, prescription and non-prescription medication as \nwell as the use of illicit drugs with the service user and carer if appropriate. Discuss \ntheir potential interactions with the prescribed therapy and psychological \ntreatments.\n■\n■Do not use a loading dose of antipsychotic medication (often referred to as ‘rapid \nneuroleptisation’) (Note that this does not apply to loading doses of depot forms of \nolanzapine and paliperidone).\n■\n■Do not routinely initiate regular combined antipsychotic medication, except for short \nperiods (for example, when changing medication).\n■\n■If prescribing chlorpromazine, warn of its potential to cause skin photosensitivity. \nAdvise using sunscreen if necessary.\n■\n■Consider offering depot/long-acting injectable antipsychotic medication to people \nwith schizophrenia:\n■\n■who would prefer such treatment after an acute episode\n■\n■in patients known to be non-adherent to oral treatment and/or those who prefer \nthis method of administration.\n■\n■Offer clozapine to people with schizophrenia whose illness has not responded ade-\nquately to treatment despite the sequential use of adequate doses of at least two dif-\nferent antipsychotic drugs alongside psychological therapies. The misuse of illicit \nsubstances (including alcohol) and the use of other prescribed medication or physical \nillness should be excluded. At least one of the drugs should be a non-clozapine sec-\nond-generation antipsychotic. (See section Treatment Algorithms for schizophrenia \n– we recommend that one of the drugs should be olanzapine)\n■\n■For people with schizophrenia whose illness has not responded adequately to clozap-\nine at an optimised dose, healthcare professionals should establish prior compliance \nwith optimised antipsychotic treatment (including measuring drug levels) and engage-\nment with psychological treatment before adding a second antipsychotic to augment \n",
+  "raw_text_sha256": "cfffef57cc6e5b509188ebe9526e7f8b22356d2c204b9e6bed50c21bd2cf0848",
+  "coordinates_sha256": "087d7c120b7fbc7bcc344846491400ef406370788ba961a37e57febd802b5e9e",
+  "block_sequence_sha256": "3e7c0afba2e5e684ba9635b9feb6b69774a851a481aac7c4ba0574d82fa56517",
+  "blocks": [
+    {
+      "block_id": "page-0070-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    49\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "bd5efe1ebb827e991cbaac92bbf7423bcdfb41280a6bdd259ca7135dc8f5e321"
+    },
+    {
+      "block_id": "page-0070-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0070-block-0002",
+      "order": 2,
+      "text": "■\n■Justify and record reasons for dosages outside the range given in the BNF or SPC.\n",
+      "bbox": [
+        57.194000244140625,
+        62.5494384765625,
+        417.7590637207031,
+        74.26943969726562
+      ],
+      "text_sha256": "56563e6d3084964dc3fd201b6c154436afaeb89e270897482a32cd8a69a92bf5"
+    },
+    {
+      "block_id": "page-0070-block-0003",
+      "order": 3,
+      "text": "■\n■Record the rationale for continuing, changing or stopping medication and the \n",
+      "bbox": [
+        57.194000244140625,
+        74.5494384765625,
+        422.7889709472656,
+        86.26943969726562
+      ],
+      "text_sha256": "ba120fd93b1b8013116532ea00bf423d513f160a2a55d9669bc67743f3c0407d"
+    },
+    {
+      "block_id": "page-0070-block-0004",
+      "order": 4,
+      "text": "effects of such changes.\n",
+      "bbox": [
+        65.99909973144531,
+        86.5494384765625,
+        166.54910278320312,
+        98.26943969726562
+      ],
+      "text_sha256": "e8b774f44285941d98cd6ac5cc77a3d14938e3b4af98ce27ff26957d4e98da62"
+    },
+    {
+      "block_id": "page-0070-block-0005",
+      "order": 5,
+      "text": "■\n■Carry out a trial of medication at optimum dosage for 4–6 weeks (although half of \n",
+      "bbox": [
+        57.194000244140625,
+        98.5494384765625,
+        422.8289489746094,
+        110.26943969726562
+      ],
+      "text_sha256": "baf2d6225edfc5b8a0ea43ce99a66f25fd8f21435ef4f01178e185d5b2455d25"
+    },
+    {
+      "block_id": "page-0070-block-0006",
+      "order": 6,
+      "text": "this period is probably sufficient if no effect at all is seen).\n",
+      "bbox": [
+        65.99909973144531,
+        110.5494384765625,
+        315.4890441894531,
+        122.26943969726562
+      ],
+      "text_sha256": "a269f506ff932dfc11865d6ac6b59beee16057f614ae19fedfbfaa92c5eda780"
+    },
+    {
+      "block_id": "page-0070-block-0007",
+      "order": 7,
+      "text": "■\n■Monitor and record the following regularly and systematically throughout treatment, \n",
+      "bbox": [
+        47.999000549316406,
+        122.5494384765625,
+        422.7390441894531,
+        134.26943969726562
+      ],
+      "text_sha256": "0e3a2e6f6ba11337bd28ebd1caad1fef52b87dbc397f64cdbeda469d301f5e5d"
+    },
+    {
+      "block_id": "page-0070-block-0008",
+      "order": 8,
+      "text": "but especially during titration:\n",
+      "bbox": [
+        56.99909973144531,
+        134.5494384765625,
+        187.58908081054688,
+        146.26943969726562
+      ],
+      "text_sha256": "a8a0b88e8717ce367ced91879328c284c81d653c940f118549f1db290ac3285d"
+    },
+    {
+      "block_id": "page-0070-block-0009",
+      "order": 9,
+      "text": "■\n■efficacy, including changes in symptoms and behaviour\n",
+      "bbox": [
+        57.194000244140625,
+        146.5494384765625,
+        302.51910400390625,
+        158.26943969726562
+      ],
+      "text_sha256": "b40349d05df6052580fba9f6928e75302ca6a1b03a57f414079860fc5d18e278"
+    },
+    {
+      "block_id": "page-0070-block-0010",
+      "order": 10,
+      "text": "■\n■side effects of treatment, taking into account overlap between certain side effects \n",
+      "bbox": [
+        57.194000244140625,
+        158.5494384765625,
+        422.7590026855469,
+        170.26943969726562
+      ],
+      "text_sha256": "4f146af583d801dfbe1fadb1e6765bb0946910dcd94d6fba8784e13cc69c1ae2"
+    },
+    {
+      "block_id": "page-0070-block-0011",
+      "order": 11,
+      "text": "and clinical features of schizophrenia, for example, the overlap between akathisia \nand agitation or anxiety\n",
+      "bbox": [
+        65.99909973144531,
+        170.5494384765625,
+        422.7989807128906,
+        194.26943969726562
+      ],
+      "text_sha256": "8df82a2efd9c9054efa1e8bfb4f8260e2da397fa7fefdd71ff6a1c3f437ebaef"
+    },
+    {
+      "block_id": "page-0070-block-0012",
+      "order": 12,
+      "text": "■\n■adherence\n",
+      "bbox": [
+        57.194000244140625,
+        194.5494384765625,
+        109.3291015625,
+        206.26943969726562
+      ],
+      "text_sha256": "b15b56d16d52581b168fa4240d66947bfb9b295849829b73d8277e2269dd6bf8"
+    },
+    {
+      "block_id": "page-0070-block-0013",
+      "order": 13,
+      "text": "■\n■weight, weekly for the first 6 weeks, then at 12 weeks, 1 year and annually\n",
+      "bbox": [
+        57.194000244140625,
+        206.54949951171875,
+        387.73907470703125,
+        218.26950073242188
+      ],
+      "text_sha256": "c4c9e95b6e841132b2c380ce78e0cccfa1c3c892fedae1077b9dcc44c6322cba"
+    },
+    {
+      "block_id": "page-0070-block-0014",
+      "order": 14,
+      "text": "■\n■waist circumference annually\n",
+      "bbox": [
+        57.194000244140625,
+        218.54949951171875,
+        191.54908752441406,
+        230.26950073242188
+      ],
+      "text_sha256": "dc7122dac6733af28aa6a614ba310c9e60967c30bbaca6ce99f5eec27ee0df1e"
+    },
+    {
+      "block_id": "page-0070-block-0015",
+      "order": 15,
+      "text": "■\n■pulse and blood pressure at 12 weeks, 1 year and annually\n",
+      "bbox": [
+        57.194000244140625,
+        230.54949951171875,
+        317.9490966796875,
+        242.26950073242188
+      ],
+      "text_sha256": "7bf4d1759710528d8d1e0b63cc24001f2039d2b0fa85b26d313b064f46200e4e"
+    },
+    {
+      "block_id": "page-0070-block-0016",
+      "order": 16,
+      "text": "■\n■fasting blood glucose, HbA1C and blood lipids at 12 weeks, 1 year and annually\n",
+      "bbox": [
+        57.194000244140625,
+        242.54949951171875,
+        408.399169921875,
+        256.648681640625
+      ],
+      "text_sha256": "8ea9c147f8edb96192d010211dd9228eddc837710ba0455253c757c0f7b4a426"
+    },
+    {
+      "block_id": "page-0070-block-0017",
+      "order": 17,
+      "text": "■\n■nutritional status, diet and physical activity.\n",
+      "bbox": [
+        57.194000244140625,
+        254.54949951171875,
+        254.1990509033203,
+        266.2695007324219
+      ],
+      "text_sha256": "85ae30a69e5f5556cac2accde83dbe713efc6fa65e9a2522efced6113d752f6d"
+    },
+    {
+      "block_id": "page-0070-block-0018",
+      "order": 18,
+      "text": "■\n■Physical monitoring is to be the responsibility of the secondary care team for one year \n",
+      "bbox": [
+        47.999000549316406,
+        266.54949951171875,
+        422.8290710449219,
+        278.2695007324219
+      ],
+      "text_sha256": "35c0d587fb729ff6af340fc46f63ddadcc7f152f1da25afb1d55a38d980c6ded"
+    },
+    {
+      "block_id": "page-0070-block-0019",
+      "order": 19,
+      "text": "or until the patient is stable.\n",
+      "bbox": [
+        56.99909973144531,
+        278.54949951171875,
+        178.1390838623047,
+        290.2695007324219
+      ],
+      "text_sha256": "9c52f4f10e742f98bdb745ec43acac701c2b4432b845d2a88b57836544be27a4"
+    },
+    {
+      "block_id": "page-0070-block-0020",
+      "order": 20,
+      "text": "■\n■Discuss the use of alcohol, tobacco, prescription and non-prescription medication as \n",
+      "bbox": [
+        47.999000549316406,
+        290.54949951171875,
+        422.7590637207031,
+        302.2695007324219
+      ],
+      "text_sha256": "6ddae4be53f5eb8cca169fd3e0dfaeb7da41b1a75f90c67b93e85aae40980b2a"
+    },
+    {
+      "block_id": "page-0070-block-0021",
+      "order": 21,
+      "text": "well as the use of illicit drugs with the service user and carer if appropriate. Discuss \ntheir potential interactions with the prescribed therapy and psychological \ntreatments.\n",
+      "bbox": [
+        56.99909973144531,
+        302.54949951171875,
+        422.7591857910156,
+        338.2695007324219
+      ],
+      "text_sha256": "0578c7c3bfed2570b73af84afe98ffbc8aa61190473b2e8e85f192373862bdde"
+    },
+    {
+      "block_id": "page-0070-block-0022",
+      "order": 22,
+      "text": "■\n■Do not use a loading dose of antipsychotic medication (often referred to as ‘rapid \n",
+      "bbox": [
+        47.999000549316406,
+        338.54949951171875,
+        422.8290710449219,
+        350.2695007324219
+      ],
+      "text_sha256": "9ad5c9c363677a7be664fa0fc359ce1f2c75b87cf0b49e1824a860a18003c481"
+    },
+    {
+      "block_id": "page-0070-block-0023",
+      "order": 23,
+      "text": "neuroleptisation’) (Note that this does not apply to loading doses of depot forms of \nolanzapine and paliperidone).\n",
+      "bbox": [
+        56.99909973144531,
+        350.54949951171875,
+        422.8189392089844,
+        374.2695007324219
+      ],
+      "text_sha256": "4a1c815ab4041ac84b143ee6b4d71bb32eb6a043213e037784397f69e2569de6"
+    },
+    {
+      "block_id": "page-0070-block-0024",
+      "order": 24,
+      "text": "■\n■Do not routinely initiate regular combined antipsychotic medication, except for short \n",
+      "bbox": [
+        47.999000549316406,
+        374.54949951171875,
+        422.7389831542969,
+        386.2695007324219
+      ],
+      "text_sha256": "5ab78f3c56316c82431be7da535d0bd3a6f21519be2813b803d661dab56af971"
+    },
+    {
+      "block_id": "page-0070-block-0025",
+      "order": 25,
+      "text": "periods (for example, when changing medication).\n",
+      "bbox": [
+        56.99909973144531,
+        386.54949951171875,
+        273.3190612792969,
+        398.2695007324219
+      ],
+      "text_sha256": "05ab8d60613345a2dce725fccc641cb720552b7d0afe64a1ee9948406510ce79"
+    },
+    {
+      "block_id": "page-0070-block-0026",
+      "order": 26,
+      "text": "■\n■If prescribing chlorpromazine, warn of its potential to cause skin photosensitivity. \n",
+      "bbox": [
+        47.999000549316406,
+        398.54949951171875,
+        422.8190612792969,
+        410.2695007324219
+      ],
+      "text_sha256": "f69ae5faa5b0fa04eef9cc95b1bf7f097721f13a981263cd131bea06980fb757"
+    },
+    {
+      "block_id": "page-0070-block-0027",
+      "order": 27,
+      "text": "Advise using sunscreen if necessary.\n",
+      "bbox": [
+        56.99909973144531,
+        410.54949951171875,
+        209.97909545898438,
+        422.2695007324219
+      ],
+      "text_sha256": "a5ff9280428b5d831f98ba158331bee08f31df494b56da084f06da02a8a3c7bc"
+    },
+    {
+      "block_id": "page-0070-block-0028",
+      "order": 28,
+      "text": "■\n■Consider offering depot/long-acting injectable antipsychotic medication to people \n",
+      "bbox": [
+        47.999000549316406,
+        422.54949951171875,
+        422.7690124511719,
+        434.2695007324219
+      ],
+      "text_sha256": "38ef7fc9a0e15508737b41f9e83dbfd619923cbc87923f3fc53af588d56d228a"
+    },
+    {
+      "block_id": "page-0070-block-0029",
+      "order": 29,
+      "text": "with schizophrenia:\n",
+      "bbox": [
+        56.99909973144531,
+        434.54949951171875,
+        141.46908569335938,
+        446.2695007324219
+      ],
+      "text_sha256": "1859bf10e7f6f6191fe6853b67fbd81b057f8c7dd851e1efa0322e422ba2b057"
+    },
+    {
+      "block_id": "page-0070-block-0030",
+      "order": 30,
+      "text": "■\n■who would prefer such treatment after an acute episode\n",
+      "bbox": [
+        57.194000244140625,
+        446.54949951171875,
+        306.569091796875,
+        458.2695007324219
+      ],
+      "text_sha256": "aa0b5f0ae48ca39bdcad65a7895ea11887dde916f03294ae803146f2db2ee80b"
+    },
+    {
+      "block_id": "page-0070-block-0031",
+      "order": 31,
+      "text": "■\n■in patients known to be non-adherent to oral treatment and/or those who prefer \n",
+      "bbox": [
+        57.194000244140625,
+        458.54949951171875,
+        422.8091125488281,
+        470.2695007324219
+      ],
+      "text_sha256": "3fa1c12457024bf3380ac242b9af4c988050aa87534a063ee26febe3cc95274e"
+    },
+    {
+      "block_id": "page-0070-block-0032",
+      "order": 32,
+      "text": "this method of administration.\n",
+      "bbox": [
+        65.99909973144531,
+        470.54949951171875,
+        197.67906188964844,
+        482.2695007324219
+      ],
+      "text_sha256": "383b318e09351494034d7a0b496f32be9efd06c1fb715788f129054b97987dac"
+    },
+    {
+      "block_id": "page-0070-block-0033",
+      "order": 33,
+      "text": "■\n■Offer clozapine to people with schizophrenia whose illness has not responded ade-\n",
+      "bbox": [
+        47.999000549316406,
+        482.54949951171875,
+        420.0091857910156,
+        494.2695007324219
+      ],
+      "text_sha256": "ab7ef3aa18b5f7da1ee7da61d87214f78e94200b309e040ff0d2b6d97edfcff4"
+    },
+    {
+      "block_id": "page-0070-block-0034",
+      "order": 34,
+      "text": "quately to treatment despite the sequential use of adequate doses of at least two dif-\nferent antipsychotic drugs alongside psychological therapies. The misuse of illicit \nsubstances (including alcohol) and the use of other prescribed medication or physical \nillness should be excluded. At least one of the drugs should be a non-clozapine sec-\nond-generation antipsychotic. (See section Treatment Algorithms for schizophrenia \n– we recommend that one of the drugs should be olanzapine)\n",
+      "bbox": [
+        56.99909973144531,
+        494.54949951171875,
+        422.7991027832031,
+        566.26953125
+      ],
+      "text_sha256": "9d33c88cca45bc6854bbf45adec8607f89a5900586fc8a6561857a270f66cd14"
+    },
+    {
+      "block_id": "page-0070-block-0035",
+      "order": 35,
+      "text": "■\n■For people with schizophrenia whose illness has not responded adequately to clozap-\n",
+      "bbox": [
+        47.999000549316406,
+        566.5494995117188,
+        420.0390319824219,
+        578.26953125
+      ],
+      "text_sha256": "8dc6c500a59d9f04c942adfca19be2418424b0195a4f3490d56f51b207cb56dd"
+    },
+    {
+      "block_id": "page-0070-block-0036",
+      "order": 36,
+      "text": "ine at an optimised dose, healthcare professionals should establish prior compliance \nwith optimised antipsychotic treatment (including measuring drug levels) and engage-\nment with psychological treatment before adding a second antipsychotic to augment \n",
+      "bbox": [
+        56.99909973144531,
+        578.5494995117188,
+        422.7991638183594,
+        614.26953125
+      ],
+      "text_sha256": "ff66df29bf6a0f2f0293c44f4932a843df528b8f06057c247c047c7e0d17dc9e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

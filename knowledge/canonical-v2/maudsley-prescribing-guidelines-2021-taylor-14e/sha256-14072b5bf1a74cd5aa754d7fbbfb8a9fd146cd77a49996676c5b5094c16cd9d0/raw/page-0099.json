@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0099",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 99,
+  "source_page_index": 98,
+  "source_page_display": 99,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "78    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nSwitching to aripiprazole LAI\nSwitching from\nAripiprazole LAI regimen\nOral antipsychotics\nCross taper antipsychotic with oral aripiprazole* over two weeks\nOne-injection start\nStart aripiprazole LAI, continue aripiprazole oral for another two weeks and \nthen stop\nTwo-injection start\nStart aripiprazole LAI as indicated above after two weeks of oral aripiprazole, \nthen stop oral treatment**.\nDepot antipsychotics\n(not risperidone LAI)\nStart oral aripiprazole* on day the last depot injection was due\nOne-injection start\nStart aripiprazole LAI after two weeks and then stop oral aripiprazole two \nweeks later\nTwo-injection start\nStart aripiprazole LAI as indicated above after two weeks of oral aripiprazole, \nthen stop oral treatment**.\nRisperidone LAI\nStart oral aripiprazole* 4–6 weeks after the last risperidone injection\nOne-injection start\nStart aripiprazole LAI two weeks later; discontinue oral aripiprazole two weeks \nafter that\nTwo-injection start\nStart aripiprazole LAI as indicated above after two weeks of oral aripiprazole, \nthen stop oral treatment**.\n*If prior response and tolerability to aripiprazole are known, pre-injection oral aripiprazole may not be strictly \nrequired. However, attainment of effective aripiprazole plasma levels is dependent upon four weeks of oral \nsupplementation for the one-injection start regimen. Similarly, for the two-injection start regimen, the pharmacoki-\nnetic modelling study was based on plasma levels from oral aripiprazole being at steady state on the day of \ninitiation.\n**If oral aripiprazole cannot be given at all (e.g. patient refusal), always use the two-injection starting regimen. This \n800mg dose is likely to afford therapeutic plasma concentrations even in the absence of prior oral treatment.\nOther LAI aripiprazole brands\nAnother long-acting formulation of aripiprazole has been approved by the US Food \nand Drug Administration (FDA) for the treatment of schizophrenia. It is rarely used \noutside the United States. Aripiprazole lauroxil is a pro-drug formulated to be admin-\nistered at monthly, 6-weekly or two-monthly intervals by intramuscular injection into \nthe deltoid or gluteal muscle, depending on the dose.8,9 It is available as four strengths: \n441mg, 662mg, 882mg and 1064mg doses to deliver 300mg, 450mg, 600mg and \n724mg of aripiprazole, respectively (see sections on depot pharmacokinetics and new \nlong-acting injections in this chapter). There is also a special initiation formulation \n(Aristada Initio), which provides effective blood levels within 4 days of injection with-\nout oral supplemention.10\n",
+  "raw_text_sha256": "790aa99a76fee586d2352c1b8e81d207a478dbd2bcaebafaaa288c3966a7b69b",
+  "coordinates_sha256": "4f80fa0911c7bb57038521a5eaee3e4643f5cc9e90369b8e9804712e023273fd",
+  "block_sequence_sha256": "41fc8348e13822258b4bb32acf12e1c5ecbc7f9bbcd6826dc272cd587767ac61",
+  "blocks": [
+    {
+      "block_id": "page-0099-block-0000",
+      "order": 0,
+      "text": "78    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "c0d183c13a8310ca0a7bc5c61f56c3f5aeb4f7a754aecb48b74c212289126324"
+    },
+    {
+      "block_id": "page-0099-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0099-block-0002",
+      "order": 2,
+      "text": "Switching to aripiprazole LAI\n",
+      "bbox": [
+        61.88890075683594,
+        62.31442642211914,
+        211.64285278320312,
+        75.34942626953125
+      ],
+      "text_sha256": "4b1a31eb147c5366f165f37192676c2449b085e0629a7b49918f790ded1d5ea1"
+    },
+    {
+      "block_id": "page-0099-block-0003",
+      "order": 3,
+      "text": "Switching from\nAripiprazole LAI regimen\n",
+      "bbox": [
+        61.88890075683594,
+        90.82191467285156,
+        269.6914367675781,
+        99.70941162109375
+      ],
+      "text_sha256": "10797455b0636f71b09d144e1ccc513348550293a6c9885168e979a1a049bd98"
+    },
+    {
+      "block_id": "page-0099-block-0004",
+      "order": 4,
+      "text": "Oral antipsychotics\nCross taper antipsychotic with oral aripiprazole* over two weeks\n",
+      "bbox": [
+        61.88890075683594,
+        108.02693939208984,
+        388.0189514160156,
+        116.73443603515625
+      ],
+      "text_sha256": "118576edc5cab753c17d58f62cdb8fb78c55351eb28abbacf3f61e8c8831c83b"
+    },
+    {
+      "block_id": "page-0099-block-0005",
+      "order": 5,
+      "text": "One-injection start\nStart aripiprazole LAI, continue aripiprazole oral for another two weeks and \nthen stop\n",
+      "bbox": [
+        181.88890075683594,
+        123.84443664550781,
+        424.8289489746094,
+        152.7269287109375
+      ],
+      "text_sha256": "d6e35af2ffd424358146ff35f694ad629a9efbeec24c647a901d0304bf4eff25"
+    },
+    {
+      "block_id": "page-0099-block-0006",
+      "order": 6,
+      "text": "Two-injection start\nStart aripiprazole LAI as indicated above after two weeks of oral aripiprazole, \nthen stop oral treatment**.\n",
+      "bbox": [
+        181.88890075683594,
+        159.83692932128906,
+        429.3963928222656,
+        188.71942138671875
+      ],
+      "text_sha256": "8559204db27077c5f200828ccc6fed97a31a73522caf629f2258a072aa504ba4"
+    },
+    {
+      "block_id": "page-0099-block-0007",
+      "order": 7,
+      "text": "Depot antipsychotics\n(not risperidone LAI)\n",
+      "bbox": [
+        61.88890075683594,
+        195.03443908691406,
+        128.1438751220703,
+        213.73944091796875
+      ],
+      "text_sha256": "cea2cd481bcc41371134173d7b95dc46ba2b995e5675dfa14e105c7660c570fc"
+    },
+    {
+      "block_id": "page-0099-block-0008",
+      "order": 8,
+      "text": "Start oral aripiprazole* on day the last depot injection was due\n",
+      "bbox": [
+        181.88890075683594,
+        195.03443908691406,
+        382.33404541015625,
+        203.741943359375
+      ],
+      "text_sha256": "1a20c3fd08dad91818811cbd3040fc5e9786f45c345177dd6cf1f50a05646721"
+    },
+    {
+      "block_id": "page-0099-block-0009",
+      "order": 9,
+      "text": "One-injection start\nStart aripiprazole LAI after two weeks and then stop oral aripiprazole two \nweeks later\n",
+      "bbox": [
+        181.88890075683594,
+        210.85194396972656,
+        418.5739440917969,
+        239.73443603515625
+      ],
+      "text_sha256": "ea3aa9deb63f0c816287c228c6c688d80bd62d786d2113cfa79ffb28f2b5cf07"
+    },
+    {
+      "block_id": "page-0099-block-0010",
+      "order": 10,
+      "text": "Two-injection start\nStart aripiprazole LAI as indicated above after two weeks of oral aripiprazole, \nthen stop oral treatment**.\n",
+      "bbox": [
+        181.88890075683594,
+        246.8444366455078,
+        429.3963928222656,
+        275.7269287109375
+      ],
+      "text_sha256": "8559204db27077c5f200828ccc6fed97a31a73522caf629f2258a072aa504ba4"
+    },
+    {
+      "block_id": "page-0099-block-0011",
+      "order": 11,
+      "text": "Risperidone LAI\nStart oral aripiprazole* 4–6 weeks after the last risperidone injection\n",
+      "bbox": [
+        61.88890075683594,
+        282.04193115234375,
+        399.8165588378906,
+        290.7494201660156
+      ],
+      "text_sha256": "963347fb1390c143cd3a64e16ef8be3e6b758e19a57ea266ec999b6c5476d06f"
+    },
+    {
+      "block_id": "page-0099-block-0012",
+      "order": 12,
+      "text": "One-injection start\nStart aripiprazole LAI two weeks later; discontinue oral aripiprazole two weeks \nafter that\n",
+      "bbox": [
+        181.88890075683594,
+        297.8594055175781,
+        433.9864196777344,
+        326.7419128417969
+      ],
+      "text_sha256": "764fd35255e57017f31d568b1506a27a327c617899c0f8b66fea42955241f6d2"
+    },
+    {
+      "block_id": "page-0099-block-0013",
+      "order": 13,
+      "text": "Two-injection start\nStart aripiprazole LAI as indicated above after two weeks of oral aripiprazole, \nthen stop oral treatment**.\n",
+      "bbox": [
+        181.88890075683594,
+        333.8518981933594,
+        429.3963928222656,
+        362.7344055175781
+      ],
+      "text_sha256": "8559204db27077c5f200828ccc6fed97a31a73522caf629f2258a072aa504ba4"
+    },
+    {
+      "block_id": "page-0099-block-0014",
+      "order": 14,
+      "text": "*If prior response and tolerability to aripiprazole are known, pre-injection oral aripiprazole may not be strictly \nrequired. However, attainment of effective aripiprazole plasma levels is dependent upon four weeks of oral \nsupplementation for the one-injection start regimen. Similarly, for the two-injection start regimen, the pharmacoki-\nnetic modelling study was based on plasma levels from oral aripiprazole being at steady state on the day of \ninitiation.\n**If oral aripiprazole cannot be given at all (e.g. patient refusal), always use the two-injection starting regimen. This \n800mg dose is likely to afford therapeutic plasma concentrations even in the absence of prior oral treatment.\n",
+      "bbox": [
+        61.88890075683594,
+        373.0244140625,
+        432.9139709472656,
+        441.7168884277344
+      ],
+      "text_sha256": "385ccf0b55a4baf2b9ad24c64cebbe5f6707d8a500c6802065398e3a33833aae"
+    },
+    {
+      "block_id": "page-0099-block-0015",
+      "order": 15,
+      "text": "Other LAI aripiprazole brands\n",
+      "bbox": [
+        61.88890075683594,
+        459.6244201660156,
+        214.7008514404297,
+        472.659423828125
+      ],
+      "text_sha256": "ae1694d66de354e19e922b40ec2ca670f9f0d93dff435261916966f3d0e6b513"
+    },
+    {
+      "block_id": "page-0099-block-0016",
+      "order": 16,
+      "text": "Another long-acting formulation of aripiprazole has been approved by the US Food \nand Drug Administration (FDA) for the treatment of schizophrenia. It is rarely used \noutside the United States. Aripiprazole lauroxil is a pro-drug formulated to be admin-\nistered at monthly, 6-weekly or two-monthly intervals by intramuscular injection into \nthe deltoid or gluteal muscle, depending on the dose.8,9 It is available as four strengths: \n441mg, 662mg, 882mg and 1064mg doses to deliver 300mg, 450mg, 600mg and \n724mg of aripiprazole, respectively (see sections on depot pharmacokinetics and new \nlong-acting injections in this chapter). There is also a special initiation formulation \n(Aristada Initio), which provides effective blood levels within 4 days of injection with-\nout oral supplemention.10\n",
+      "bbox": [
+        61.88890075683594,
+        478.46942138671875,
+        436.6988830566406,
+        598.189453125
+      ],
+      "text_sha256": "e65b18dc0bf6d34177d7b0ad241d0d6f20c1950c7439cb55382db0b6ff3e7eea"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

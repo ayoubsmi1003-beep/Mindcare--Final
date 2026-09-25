@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0182",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 182,
+  "source_page_index": 181,
+  "source_page_display": 182,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    161\nCHAPTER 1\nAntipsychotics with a high affinity for postsynaptic α1-adrenergic receptors are most \nfrequently implicated. Among the SGAs, the reported incidence is highest with clozapine \n(24%), quetiapine (27%) and iloperidone (19.5%) and lowest with lurasidone (<2%) and \nasenapine (<2%).2 There are limited quantitative data for FGAs, but low-potency pheno-\nthiazines (e.g. chlorpromazine) are considered most likely to cause orthostatic hypoten-\nsion.6 All reported frequencies are somewhat dependent on titration schedules used.\nHypertension\nThere are two ways in which antipsychotic drugs may be associated with the develop-\nment or worsening of hypertension:\n■\n■Slow steady rise in blood pressure over time. This may be linked to weight gain. Being \noverweight increases the risk of developing hypertension. The magnitude of the effect \nhas been modelled using the Framingham data; for every 30 people who gain 4kg, \none will develop hypertension over the next 10 years.7 Note that this is a very modest \nweight gain, the majority of patients treated with some antipsychotics gain more than \nthis, increasing further the risk of developing hypertension.\n■\n■Unpredictable rapid sharp increase in blood pressure on starting a new drug or \nincreasing the dose. Increases in blood pressure occur shortly after starting, ranging \nfrom within hours of the first dose to a month. The information below relates to the \npharmacological mechanism behind this and the antipsychotic drugs that are most \nimplicated.\nPostural hypotension is commonly associated with antipsychotic drugs that are antago-\nnists at postsynaptic α1-adrenergic receptors. Some antipsychotics are also antagonists \nat pre-synaptic α2-adrenergic receptors; this can lead to increased release of norepineph-\nrine and vasoconstriction. As all antipsychotics that are antagonists at α2-receptors are \nalso antagonists at α1 receptors, the end result for any given patient can be difficult to \npredict, but for a very small number the result can be hypertension. Some antipsychot-\nics are more commonly implicated than others, but individual patient factors are \nundoubtedly also important.\nReceptor binding studies have demonstrated that clozapine, olanzapine and risperi-\ndone have the highest affinity for α2-adrenergic receptors,8 so it might be predicted that \nthese drugs would be most likely to cause hypertension. Most case reports implicate \nclozapine,9–17 with some clearly describing normal blood pressure before clozapine was \nTable 1.27  (Continued)\nPharmacological therapies\nfor patients with a compelling \nindication for treatment where \nalternatives are not suitable (e.g. \nclozapine) and management \nstrategies have failed\n■\n■Sodium chloride supplementation has been used to treat antidepressant-\ninduced orthostatic hypotension\n■\n■Fludrocortisone has been used to treat clozapine-induced orthostatic hypo-\ntension where other measures have failed (electrolyte and blood pressure \nmonitoring essential)\n■\n■A single case report describes the use of midodrine (an α1 receptor agonist) \nfor TCA-induced orthostatic hypotension. Of note, midodrine has been \nlinked to acute dystonia when used alongside antipsychotics.5 Other sym-\npathomimetic drugs have also been used to treat orthostatic hypotension, \nthough there is an absence of evidence in the treatment of psychotropic \nrelated cases\n",
+  "raw_text_sha256": "0126c17bf524b748aa3ba422de0335fff76ae5cc54b7ea79f851d1315774094c",
+  "coordinates_sha256": "d0a76c6bdefbedb4ac5f0b4044c41197fcde3776011d786a4f0ab8bca17f9b98",
+  "block_sequence_sha256": "f12b52665e90717048720f72bedcd8837c3606c95d888e3222e147f23dd776c5",
+  "blocks": [
+    {
+      "block_id": "page-0182-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    161\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "8b4991ff8f4c397e174a56af80aa05ee56ac866c0367059c7679e6017d1bcf90"
+    },
+    {
+      "block_id": "page-0182-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0182-block-0002",
+      "order": 2,
+      "text": "Antipsychotics with a high affinity for postsynaptic α1-adrenergic receptors are most \nfrequently implicated. Among the SGAs, the reported incidence is highest with clozapine \n(24%), quetiapine (27%) and iloperidone (19.5%) and lowest with lurasidone (<2%) and \nasenapine (<2%).2 There are limited quantitative data for FGAs, but low-potency pheno-\nthiazines (e.g. chlorpromazine) are considered most likely to cause orthostatic hypoten-\nsion.6 All reported frequencies are somewhat dependent on titration schedules used.\n",
+      "bbox": [
+        48.003692626953125,
+        206.5014190673828,
+        422.7838439941406,
+        278.6714172363281
+      ],
+      "text_sha256": "03449c92b73a245b1d51734ef6b2533a38231877c0624ad123dd6d776a0f15b4"
+    },
+    {
+      "block_id": "page-0182-block-0003",
+      "order": 3,
+      "text": "Hypertension\n",
+      "bbox": [
+        47.99909973144531,
+        296.1064147949219,
+        117.67308807373047,
+        309.14141845703125
+      ],
+      "text_sha256": "bfde75760efffe9d37ab5f849a83635b0e8f40bd76eb5bac1ab9342c994b63eb"
+    },
+    {
+      "block_id": "page-0182-block-0004",
+      "order": 4,
+      "text": "There are two ways in which antipsychotic drugs may be associated with the develop-\nment or worsening of hypertension:\n",
+      "bbox": [
+        47.99909973144531,
+        314.951416015625,
+        419.9989929199219,
+        338.6714172363281
+      ],
+      "text_sha256": "39751158b9d9dc912a234ca6277d9cf9d782876f578d15e6f02d5c93644e28ef"
+    },
+    {
+      "block_id": "page-0182-block-0005",
+      "order": 5,
+      "text": "■\n■Slow steady rise in blood pressure over time. This may be linked to weight gain. Being \n",
+      "bbox": [
+        47.999000549316406,
+        344.71142578125,
+        422.7489929199219,
+        356.6714172363281
+      ],
+      "text_sha256": "169fc4e7028a4e162c5a13dddd9bdf0c9bd87a1e4588e950031bfc9d29e49470"
+    },
+    {
+      "block_id": "page-0182-block-0006",
+      "order": 6,
+      "text": "overweight increases the risk of developing hypertension. The magnitude of the effect \nhas been modelled using the Framingham data; for every 30 people who gain 4kg, \none will develop hypertension over the next 10 years.7 Note that this is a very modest \nweight gain, the majority of patients treated with some antipsychotics gain more than \nthis, increasing further the risk of developing hypertension.\n",
+      "bbox": [
+        56.99909973144531,
+        356.951416015625,
+        422.8030700683594,
+        416.6714172363281
+      ],
+      "text_sha256": "adac1debc08062c58b7db571dc693a087238c05aef331ad6265e2617b2ed4966"
+    },
+    {
+      "block_id": "page-0182-block-0007",
+      "order": 7,
+      "text": "■\n■Unpredictable rapid sharp increase in blood pressure on starting a new drug or \n",
+      "bbox": [
+        47.999000549316406,
+        416.71142578125,
+        422.7690734863281,
+        428.6714172363281
+      ],
+      "text_sha256": "cab3a38c8d741be8e476946982f3f34bc64021e6d25ed0b5366a2e8e6e540ecc"
+    },
+    {
+      "block_id": "page-0182-block-0008",
+      "order": 8,
+      "text": "increasing the dose. Increases in blood pressure occur shortly after starting, ranging \nfrom within hours of the first dose to a month. The information below relates to the \npharmacological mechanism behind this and the antipsychotic drugs that are most \nimplicated.\n",
+      "bbox": [
+        56.99909973144531,
+        428.71142578125,
+        422.8089904785156,
+        476.6714172363281
+      ],
+      "text_sha256": "826a2a44aad74009a52f2d5be1c80036f9f5d22d5dae658cc1ec58f320182140"
+    },
+    {
+      "block_id": "page-0182-block-0009",
+      "order": 9,
+      "text": "Postural hypotension is commonly associated with antipsychotic drugs that are antago-\nnists at postsynaptic α1-adrenergic receptors. Some antipsychotics are also antagonists \nat pre-synaptic α2-adrenergic receptors; this can lead to increased release of norepineph-\nrine and vasoconstriction. As all antipsychotics that are antagonists at α2-receptors are \nalso antagonists at α1 receptors, the end result for any given patient can be difficult to \npredict, but for a very small number the result can be hypertension. Some antipsychot-\nics are more commonly implicated than others, but individual patient factors are \nundoubtedly also important.\n",
+      "bbox": [
+        47.99729919433594,
+        482.951416015625,
+        422.8184509277344,
+        578.6714477539062
+      ],
+      "text_sha256": "bd4f6749cb26974572cdefcfb0a3eca8307d6bbeaf157c4f11f48a269b4910cd"
+    },
+    {
+      "block_id": "page-0182-block-0010",
+      "order": 10,
+      "text": "Receptor binding studies have demonstrated that clozapine, olanzapine and risperi-\ndone have the highest affinity for α2-adrenergic receptors,8 so it might be predicted that \nthese drugs would be most likely to cause hypertension. Most case reports implicate \nclozapine,9–17 with some clearly describing normal blood pressure before clozapine was \n",
+      "bbox": [
+        47.99708557128906,
+        578.951416015625,
+        422.7972106933594,
+        626.6714477539062
+      ],
+      "text_sha256": "e8ab5359d56faa189040a63c3b41179a15c3e72361188618982931eaa673398e"
+    },
+    {
+      "block_id": "page-0182-block-0011",
+      "order": 11,
+      "text": "Table 1.27  (Continued)\n",
+      "bbox": [
+        53.999298095703125,
+        70.08692932128906,
+        130.28929138183594,
+        78.97442626953125
+      ],
+      "text_sha256": "b8c9f9591b283d7ba9734cbb47b75928546199e4b0ebd59114489a992b73daf7"
+    },
+    {
+      "block_id": "page-0182-block-0012",
+      "order": 12,
+      "text": "Pharmacological therapies\nfor patients with a compelling \nindication for treatment where \nalternatives are not suitable (e.g. \nclozapine) and management \nstrategies have failed\n",
+      "bbox": [
+        47.99909973144531,
+        86.73689270019531,
+        154.2591094970703,
+        145.61187744140625
+      ],
+      "text_sha256": "4332f5d0ba567a4b1d8eea4b265a755435ad7309b2c373b4d9cfb86065504bac"
+    },
+    {
+      "block_id": "page-0182-block-0013",
+      "order": 13,
+      "text": "■\n■Sodium chloride supplementation has been used to treat antidepressant-\n",
+      "bbox": [
+        167.24899291992188,
+        86.9168930053711,
+        408.5242919921875,
+        95.6243896484375
+      ],
+      "text_sha256": "ac21aa7f0ae5d8bfb035e75dd422723d7395a9802054fefc12306211a44e81bb"
+    },
+    {
+      "block_id": "page-0182-block-0014",
+      "order": 14,
+      "text": "induced orthostatic hypotension\n■\n■Fludrocortisone has been used to treat clozapine-induced orthostatic hypo-\n",
+      "bbox": [
+        167.24899291992188,
+        95.9168930053711,
+        415.59674072265625,
+        113.6243896484375
+      ],
+      "text_sha256": "ffaf731101270cb6bd342aca3d72dc8565e5d4596ee83bdccb24b207a47e577d"
+    },
+    {
+      "block_id": "page-0182-block-0015",
+      "order": 15,
+      "text": "tension where other measures have failed (electrolyte and blood pressure \nmonitoring essential)\n■\n■A single case report describes the use of midodrine (an α1 receptor agonist) \n",
+      "bbox": [
+        167.24899291992188,
+        113.9168930053711,
+        419.5342712402344,
+        141.4493865966797
+      ],
+      "text_sha256": "eb925054a406edc93505841d46a9e9d34ff46cf29a3f52bf1052798552f10ef9"
+    },
+    {
+      "block_id": "page-0182-block-0016",
+      "order": 16,
+      "text": "for TCA-induced orthostatic hypotension. Of note, midodrine has been \nlinked to acute dystonia when used alongside antipsychotics.5 Other sym-\npathomimetic drugs have also been used to treat orthostatic hypotension, \nthough there is an absence of evidence in the treatment of psychotropic \nrelated cases\n",
+      "bbox": [
+        176.24807739257812,
+        140.91688537597656,
+        414.4857482910156,
+        185.6243896484375
+      ],
+      "text_sha256": "19bc84406fd981b8c50cd7cccfe4d9b883f4ac68f638804d780dfd25f3adf025"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

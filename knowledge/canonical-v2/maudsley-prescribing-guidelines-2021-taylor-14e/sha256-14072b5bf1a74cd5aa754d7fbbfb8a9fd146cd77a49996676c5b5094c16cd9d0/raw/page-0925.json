@@ -1,0 +1,335 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0925",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 925,
+  "source_page_index": 924,
+  "source_page_display": 925,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "904    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 14\n\t28.\t Forbes CA et al. A systematic literature review comparing methods for the measurement of patient persistence and adherence. Curr Med Res \nOpin 2018; 34:1613–1625.\n\t29.\t Anghel LA et al. An overview of the common methods used to measure treatment adherence. Med Pharm Rep 2019; 92:117–122.\n\t30.\t Vieta E et al. Psychiatrists’ perceptions of potential reasons for non- and partial adherence to medication: results of a survey in bipolar \n­disorder from eight European countries. J Affect Disord 2012; 143:125–130.\n\t31.\t Hogan TP et al. A self-report scale predictive of drug compliance in schizophrenics: reliability and discriminative validity. Psychol Med 1983; \n13:177–183.\n\t32.\t O’Donnell C et al. Compliance therapy: a randomised controlled trial in schizophrenia. BMJ 2003; 327:834.\n\t33.\t Weiden P et al. Rating of medication influences (ROMI) scale in schizophrenia. Schizophr Bull 1994; 20:297–310.\n\t34.\t Horne R et al. The beliefs about medicines questionnaire: the development and evaluation of a new method for assessing the cognitive rep-\nresentation of medication. Psychology and Health 1999; 14:1–24.\n\t35.\t Perkins DO. Predictors of noncompliance in patients with schizophrenia. J Clin Psychiatry 2002; 63:1121–1128.\n\t36.\t Barber ND et al. Care homes’ use of medicines study: prevalence, causes and potential harm of medication errors in care homes for older \npeople. Qual Saf Health Care 2009; 18:341–346.\n\t37.\t Leucht C et al. Oral versus depot antipsychotic drugs for schizophrenia–a critical systematic review and meta-analysis of randomised long-\nterm trials. Schizophr Res 2011; 127:83–92.\n\t38.\t Leucht S et al. Antipsychotic drugs versus placebo for relapse prevention in schizophrenia: a systematic review and meta-analysis. Lancet \n2012; 379:2063–2071.\n\t39.\t Gentile S. Discontinuation rates during long-term, second-generation antipsychotic long-acting injection treatment: a systematic review. \nPsychiatry Clin Neurosci 2019; 73:216–230.\n\t40.\t West JC et al. Use of depot antipsychotic medications for medication nonadherence in schizophrenia. Schizophr Bull 2008; 34:995–1001.\n\t41.\t Soares BG et al. Penfluridol for schizophrenia. Cochrane Database Syst Rev 2006:Cd002923.\n\t42.\t Cosgrove L et al. Digital aripiprazole or digital evergreening? A systematic review of the evidence and its dissemination in the scientific litera-\nture and in the media. BMJ Evid Based Med 2019; 24:231–238.\n\t43.\t Priebe S et al. Financial incentives to improve adherence to antipsychotic maintenance medication in non-adherent patients: a cluster ran-\ndomised controlled trial. Health Technol Assess 2016; 20:1–122.\n\t44.\t Noordraven EL et al. Financial incentives for improving adherence to maintenance treatment in patients with psychotic disorders (money for \nmedication): a multicentre, open-label, randomised controlled trial. Lancet Psychiatry 2017; 4:199–207.\n\t45.\t Noordraven EL et al. The effect of financial incentives on patients’ motivation for treatment: results of ‘Money for Medication’, a randomised \ncontrolled trial. BMC Psychiatry 2018; 18:144.\n\t46.\t Hoskins K et al. Acceptability of financial incentives for health-related behavior change: an updated systematic review. Prev Med 2019; \n126:105762.\n",
+  "raw_text_sha256": "629bc00f0616bfd0fd3ad27964abdf528eda1a3cb6c0ed063ea475c22fdf1c38",
+  "coordinates_sha256": "54d5e2efdac1a3e52045cf6797654b70a688e2cafdae6cbc659ddfdd55f937e1",
+  "block_sequence_sha256": "b41e7cb163670836755a738acd4e7fc9275b0804d5bc24f94deb9c484ae13a9a",
+  "blocks": [
+    {
+      "block_id": "page-0925-block-0000",
+      "order": 0,
+      "text": "904    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "d4706d9b6846195791690485d3f74cd255b9b0aaadf3c88989d8bc919313c413"
+    },
+    {
+      "block_id": "page-0925-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        18.520000457763672,
+        338.7405090332031,
+        28.0,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0925-block-0002",
+      "order": 2,
+      "text": "\t28.\t Forbes CA et al. A systematic literature review comparing methods for the measurement of patient persistence and adherence. Curr Med Res \n",
+      "bbox": [
+        61.89099884033203,
+        63.09716796875,
+        435.55914306640625,
+        70.12916564941406
+      ],
+      "text_sha256": "c8923b9a73ee6612079d9be935b8bfa25ead004007035d7e7d641637f3c628f4"
+    },
+    {
+      "block_id": "page-0925-block-0003",
+      "order": 3,
+      "text": "Opin 2018; 34:1613–1625.\n\t29.\t Anghel LA et al. An overview of the common methods used to measure treatment adherence. Med Pharm Rep 2019; 92:117–122.\n\t30.\t Vieta E et al. Psychiatrists’ perceptions of potential reasons for non- and partial adherence to medication: results of a survey in bipolar \n",
+      "bbox": [
+        61.89699935913086,
+        71.95317077636719,
+        435.6069641113281,
+        97.12916564941406
+      ],
+      "text_sha256": "285db2c6471779b0ed00f0f750574d40cdf9a17ee9f8d879a5d188ac612beb6b"
+    },
+    {
+      "block_id": "page-0925-block-0004",
+      "order": 4,
+      "text": "­disorder from eight European countries. J Affect Disord 2012; 143:125–130.\n\t31.\t Hogan TP et al. A self-report scale predictive of drug compliance in schizophrenics: reliability and discriminative validity. Psychol Med 1983; \n",
+      "bbox": [
+        61.909000396728516,
+        98.95317077636719,
+        435.6010437011719,
+        115.12916564941406
+      ],
+      "text_sha256": "cd17b5838b24f7661fcf8273ccbb675096838a31edbbd7a21cababa97dcf20a3"
+    },
+    {
+      "block_id": "page-0925-block-0005",
+      "order": 5,
+      "text": "13:177–183.\n\t32.\t O’Donnell C et al. Compliance therapy: a randomised controlled trial in schizophrenia. BMJ 2003; 327:834.\n\t33.\t Weiden P et al. Rating of medication influences (ROMI) scale in schizophrenia. Schizophr Bull 1994; 20:297–310.\n\t34.\t Horne R et al. The beliefs about medicines questionnaire: the development and evaluation of a new method for assessing the cognitive rep-\n",
+      "bbox": [
+        61.915000915527344,
+        116.95317077636719,
+        433.92108154296875,
+        151.12916564941406
+      ],
+      "text_sha256": "f921a8ba9102514ce017aa255cb981f475deb23b22959ea4c0d92cf6259b78ec"
+    },
+    {
+      "block_id": "page-0925-block-0006",
+      "order": 6,
+      "text": "resentation of medication. Psychology and Health 1999; 14:1–24.\n\t35.\t Perkins DO. Predictors of noncompliance in patients with schizophrenia. J Clin Psychiatry 2002; 63:1121–1128.\n\t36.\t Barber ND et al. Care homes’ use of medicines study: prevalence, causes and potential harm of medication errors in care homes for older \n",
+      "bbox": [
+        61.93299865722656,
+        152.9531707763672,
+        435.649169921875,
+        178.12916564941406
+      ],
+      "text_sha256": "d5e7df747614a67c26b59d4a1f410c94573d1b64e1b633a0b4447a6f33647e26"
+    },
+    {
+      "block_id": "page-0925-block-0007",
+      "order": 7,
+      "text": "people. Qual Saf Health Care 2009; 18:341–346.\n",
+      "bbox": [
+        72.94300079345703,
+        179.9531707763672,
+        200.7669677734375,
+        187.12916564941406
+      ],
+      "text_sha256": "d5151c3af2d16f3abc0bf97f61a0d21442901f2615a1598f66e68c48e7c7f449"
+    },
+    {
+      "block_id": "page-0925-block-0008",
+      "order": 8,
+      "text": "\t37.\t Leucht C et al. Oral versus depot antipsychotic drugs for schizophrenia–a critical systematic review and meta-analysis of randomised long-\n",
+      "bbox": [
+        61.94499969482422,
+        189.09716796875,
+        433.90899658203125,
+        196.1291961669922
+      ],
+      "text_sha256": "df2a670bb04425d51dc9df3bc90cf78af6898c885d622684d4b722c1794041a6"
+    },
+    {
+      "block_id": "page-0925-block-0009",
+      "order": 9,
+      "text": "term trials. Schizophr Res 2011; 127:83–92.\n",
+      "bbox": [
+        72.94900512695312,
+        197.9531707763672,
+        187.3569793701172,
+        205.12916564941406
+      ],
+      "text_sha256": "b49c1a9fdd838c7cfc7f2b5f320b31fd9debb4ef6df11b06750a4e641413f944"
+    },
+    {
+      "block_id": "page-0925-block-0010",
+      "order": 10,
+      "text": "\t38.\t Leucht S et al. Antipsychotic drugs versus placebo for relapse prevention in schizophrenia: a systematic review and meta-analysis. Lancet \n",
+      "bbox": [
+        61.95100021362305,
+        207.09716796875,
+        435.65496826171875,
+        214.1291961669922
+      ],
+      "text_sha256": "15eb25140052c83d9ab4def33f86ff6ac36ea1ea1d982aabf0cdf97470fd8902"
+    },
+    {
+      "block_id": "page-0925-block-0011",
+      "order": 11,
+      "text": "2012; 379:2063–2071.\n",
+      "bbox": [
+        72.95499420166016,
+        215.9531707763672,
+        132.66697692871094,
+        223.12916564941406
+      ],
+      "text_sha256": "28105d214c6294412acd7b5a88f5466e52cafd3e4cac79199d98876f912b8426"
+    },
+    {
+      "block_id": "page-0925-block-0012",
+      "order": 12,
+      "text": "\t39.\t Gentile S. Discontinuation rates during long-term, second-generation antipsychotic long-acting injection treatment: a systematic review. \n",
+      "bbox": [
+        61.957000732421875,
+        225.09716796875,
+        435.6429443359375,
+        232.1291961669922
+      ],
+      "text_sha256": "fdc6d17ddcfb26b846f0bf8775e1c0225055a3b2d35d046cc4468aefaedd1e63"
+    },
+    {
+      "block_id": "page-0925-block-0013",
+      "order": 13,
+      "text": "Psychiatry Clin Neurosci 2019; 73:216–230.\n",
+      "bbox": [
+        72.96099853515625,
+        233.9531707763672,
+        188.9349822998047,
+        241.12916564941406
+      ],
+      "text_sha256": "cb0fa582306e40e1c1da1658317cb064536ae20c2586f3590bd5fcfbb5a9499f"
+    },
+    {
+      "block_id": "page-0925-block-0014",
+      "order": 14,
+      "text": "\t40.\t West JC et al. Use of depot antipsychotic medications for medication nonadherence in schizophrenia. Schizophr Bull 2008; 34:995–1001.\n",
+      "bbox": [
+        61.9630012512207,
+        242.9531707763672,
+        428.0950622558594,
+        250.1291961669922
+      ],
+      "text_sha256": "3c70f7f42fccba0925a2a839e06968eca3d7d806654f1588bbce4cee26bd5924"
+    },
+    {
+      "block_id": "page-0925-block-0015",
+      "order": 15,
+      "text": "\t41.\t Soares BG et al. Penfluridol for schizophrenia. Cochrane Database Syst Rev 2006:Cd002923.\n",
+      "bbox": [
+        61.96900177001953,
+        252.09716796875,
+        314.2509460449219,
+        259.12921142578125
+      ],
+      "text_sha256": "0c236ad2e93c63c1f3bc2d542888b0112d12f5bcd24e60fcc42105f1079b5d41"
+    },
+    {
+      "block_id": "page-0925-block-0016",
+      "order": 16,
+      "text": "\t42.\t Cosgrove L et al. Digital aripiprazole or digital evergreening? A systematic review of the evidence and its dissemination in the scientific litera-\n",
+      "bbox": [
+        61.974998474121094,
+        261.09716796875,
+        433.932861328125,
+        268.12921142578125
+      ],
+      "text_sha256": "b4149fb640e44ed83a0d06dd5183bbfbe05142390bc6ebf71fe1f83b0ffcaccd"
+    },
+    {
+      "block_id": "page-0925-block-0017",
+      "order": 17,
+      "text": "ture and in the media. BMJ Evid Based Med 2019; 24:231–238.\n",
+      "bbox": [
+        72.97900390625,
+        269.9531555175781,
+        238.81295776367188,
+        277.1291809082031
+      ],
+      "text_sha256": "00325e3bf165f863c52cd0d5dab85ebd239d4bd3e4ab02badacbc893e4f6609c"
+    },
+    {
+      "block_id": "page-0925-block-0018",
+      "order": 18,
+      "text": "\t43.\t Priebe S et al. Financial incentives to improve adherence to antipsychotic maintenance medication in non-adherent patients: a cluster ran-\n",
+      "bbox": [
+        61.98099899291992,
+        279.09716796875,
+        433.9570007324219,
+        286.12921142578125
+      ],
+      "text_sha256": "24403128b20b70cc15332043f8af0ee9b009629d6af54464120f0b0a5f918e92"
+    },
+    {
+      "block_id": "page-0925-block-0019",
+      "order": 19,
+      "text": "domised controlled trial. Health Technol Assess 2016; 20:1–122.\n",
+      "bbox": [
+        72.98500061035156,
+        287.9531555175781,
+        240.1869659423828,
+        295.1291809082031
+      ],
+      "text_sha256": "1fbbc208dfa6333e8054214b360859f7b98935c367c548963ab6d4fbb45531f4"
+    },
+    {
+      "block_id": "page-0925-block-0020",
+      "order": 20,
+      "text": "\t44.\t Noordraven EL et al. Financial incentives for improving adherence to maintenance treatment in patients with psychotic disorders (money for \n",
+      "bbox": [
+        61.98699951171875,
+        297.09716796875,
+        435.6728820800781,
+        304.12921142578125
+      ],
+      "text_sha256": "1d39c345893d8cde493b5325c977c15dfbbe0fb74024aaaf264ba10902164ace"
+    },
+    {
+      "block_id": "page-0925-block-0021",
+      "order": 21,
+      "text": "medication): a multicentre, open-label, randomised controlled trial. Lancet Psychiatry 2017; 4:199–207.\n",
+      "bbox": [
+        72.99099731445312,
+        305.9531555175781,
+        342.30096435546875,
+        313.1291809082031
+      ],
+      "text_sha256": "acdb1b4422ea61a2cbca70ecd57fe29066bc1d453318ee1c2432d46520ce1694"
+    },
+    {
+      "block_id": "page-0925-block-0022",
+      "order": 22,
+      "text": "\t45.\t Noordraven EL et al. The effect of financial incentives on patients’ motivation for treatment: results of ‘Money for Medication’, a randomised \n",
+      "bbox": [
+        61.99300003051758,
+        315.09716796875,
+        435.6069030761719,
+        322.12921142578125
+      ],
+      "text_sha256": "ef1fa4d4cd49d9b7eadead62e2581c306627233a8facb3f4317a04a604ade2e1"
+    },
+    {
+      "block_id": "page-0925-block-0023",
+      "order": 23,
+      "text": "controlled trial. BMC Psychiatry 2018; 18:144.\n",
+      "bbox": [
+        72.99699401855469,
+        323.9531555175781,
+        195.74496459960938,
+        331.1291809082031
+      ],
+      "text_sha256": "ac98c8d69d5b548e8a439290a7385e5321fcddac38b4b1a34c71e4281b16ab2e"
+    },
+    {
+      "block_id": "page-0925-block-0024",
+      "order": 24,
+      "text": "\t46.\t Hoskins K et al. Acceptability of financial incentives for health-related behavior change: an updated systematic review. Prev Med 2019; \n",
+      "bbox": [
+        61.999000549316406,
+        333.09716796875,
+        435.70306396484375,
+        340.12921142578125
+      ],
+      "text_sha256": "4c2ebee72eeca8099027690b38b6eee7fa9370a352355923239eaffe2c1271b6"
+    },
+    {
+      "block_id": "page-0925-block-0025",
+      "order": 25,
+      "text": "126:105762.\n",
+      "bbox": [
+        73.00300598144531,
+        341.9531555175781,
+        106.36299133300781,
+        349.1291809082031
+      ],
+      "text_sha256": "6d9808eda5d18e9e922dbf920f9dc08030133db7203768e4692c630e2383cf28"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

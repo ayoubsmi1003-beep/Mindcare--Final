@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0049",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 49,
+  "source_page_index": 48,
+  "source_page_display": 49,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "28    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nHow and when to stop53\nThe decision to stop antipsychotic drugs requires a thorough risk–benefit analysis for \neach patient. Withdrawal of antipsychotic drugs after long-term treatment should be \ngradual and closely monitored. The relapse rate in the first 6 months after abrupt \nwithdrawal is double that seen after gradual withdrawal (defined as slow taper down \nover at least 3 weeks for oral antipsychotics or abrupt withdrawal of depot prepara-\ntions).54 One analysis of incidence of relapse after switch to placebo found time to \nrelapse to be very much longer for 3-monthly paliperidone than for 1-monthly and \noral.55 Overall percentage relapse was also reduced. Abrupt withdrawal of oral treat-\nment may also lead to discontinuation symptoms (e.g. headache, nausea, insomnia) in \nsome patients.56\nThe following factors should be considered:53\n■\n■Is the patient symptom-free, and if so, for how long? Long-standing, non-distressing \nsymptoms which have not previously been responsive to medication may be excluded.\n■\n■What is the severity of adverse-effects (EPS, TD, sedation, obesity, etc.)?\n■\n■What was the previous pattern of illness? Consider the speed of onset, duration and \nseverity of episodes and any danger posed to self and others.\n■\n■Has dosage reduction been attempted before, and, if so, what was the outcome?\n■\n■What are the patient’s current social circumstances? Is it a period of relative stability, \nor are stressful life events anticipated?\n■\n■What is the social cost of relapse (e.g. is the patient the sole breadwinner for a \nfamily)?\n■\n■Is the patient/carer able to monitor symptoms, and, if so, will they seek help?\nAs with first-episode patients, patients, carers and key-workers should be aware of \nthe early signs of relapse and how to access help. Be aware that targeted relapse treat-\nment is much less effective than continuous prophylaxis.10 Those with a history of \naggressive behaviour or serious suicide attempts and those with residual psychotic \nsymptoms should be considered for life-long treatment.\nAlternative views\nWhile it is clear that antipsychotics effectively reduce symptom severity and rates of \nrelapse, a minority view is that antipsychotics might also sensitise patients to psycho-\nsis. The hypothesis is that relapse on withdrawal can be seen as a type of discontinua-\ntion reaction resulting from super-sensitivity of dopamine receptors, although the \nevidence for this remains uncertain.57 This phenomenon might explain better out-\ncomes seen in first-episode patients who receive lower doses of antipsychotics, but it \nalso suggests the possibility that the use of antipsychotics might ultimately worsen \noutcomes. It might also explain the poor outcomes seen with abrupt discontinuation \nof antipsychotics.54 This observation in turn leads some to question the validity of \nlong-term studies in which active and successful treatment is abruptly stopped since \nrebound phenomena and withdrawal reactions may account for at least some of the \nobserved high relapse rates.58\n",
+  "raw_text_sha256": "3debf187b3ce3fd66ecfc047253503b552c3e3f16ea18b342d9005ee30063ed0",
+  "coordinates_sha256": "8cad48c219f811d879235d4bc64a4e3082362389ec4248f47c5d454192152cb1",
+  "block_sequence_sha256": "f5ec4cc66ae0581985de9162bec3a18cfba3a20455db877a7fd529828507ffca",
+  "blocks": [
+    {
+      "block_id": "page-0049-block-0000",
+      "order": 0,
+      "text": "28    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "ed26c44f2aa017ef3aba99bda92b1f7dadb8a54852d74721f07927da44d8877f"
+    },
+    {
+      "block_id": "page-0049-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0049-block-0002",
+      "order": 2,
+      "text": "How and when to stop53\n",
+      "bbox": [
+        61.888397216796875,
+        62.31448745727539,
+        188.19235229492188,
+        75.3494873046875
+      ],
+      "text_sha256": "b61e5e8623b745b8edbfa9743b36e3517f7f9cf10f8c25527d9beebe06893c5b"
+    },
+    {
+      "block_id": "page-0049-block-0003",
+      "order": 3,
+      "text": "The decision to stop antipsychotic drugs requires a thorough risk–benefit analysis for \neach patient. Withdrawal of antipsychotic drugs after long-term treatment should be \ngradual and closely monitored. The relapse rate in the first 6 months after abrupt \nwithdrawal is double that seen after gradual withdrawal (defined as slow taper down \nover at least 3 weeks for oral antipsychotics or abrupt withdrawal of depot prepara-\ntions).54 One analysis of incidence of relapse after switch to placebo found time to \nrelapse to be very much longer for 3-monthly paliperidone than for 1-monthly and \noral.55 Overall percentage relapse was also reduced. Abrupt withdrawal of oral treat-\nment may also lead to discontinuation symptoms (e.g. headache, nausea, insomnia) in \nsome patients.56\n",
+      "bbox": [
+        61.8861083984375,
+        81.15948486328125,
+        436.6982727050781,
+        200.87948608398438
+      ],
+      "text_sha256": "cd0f2164de9af4dbfcd9b3a691612dc377294386c1ee95781d5f252e74f01f8c"
+    },
+    {
+      "block_id": "page-0049-block-0004",
+      "order": 4,
+      "text": "The following factors should be considered:53\n",
+      "bbox": [
+        71.88839721679688,
+        201.15948486328125,
+        267.3096618652344,
+        212.87948608398438
+      ],
+      "text_sha256": "a6cdf618b38faf13fc49c76a85d1a8801549320ee5a990587bace08dc4dd7c7a"
+    },
+    {
+      "block_id": "page-0049-block-0005",
+      "order": 5,
+      "text": "■\n■Is the patient symptom-free, and if so, for how long? Long-standing, non-distressing \n",
+      "bbox": [
+        61.888397216796875,
+        219.15951538085938,
+        436.7083435058594,
+        230.8795166015625
+      ],
+      "text_sha256": "6fc18f20b62e8dd6bfa36c1a8a925246343990de02b6e4302907928931bfff2b"
+    },
+    {
+      "block_id": "page-0049-block-0006",
+      "order": 6,
+      "text": "symptoms which have not previously been responsive to medication may be excluded.\n",
+      "bbox": [
+        70.88839721679688,
+        231.15951538085938,
+        434.2183532714844,
+        242.8795166015625
+      ],
+      "text_sha256": "348240ad962e189f32bf08279dce63c201b687b6eeb894ca3cc023b951216bd9"
+    },
+    {
+      "block_id": "page-0049-block-0007",
+      "order": 7,
+      "text": "■\n■What is the severity of adverse-effects (EPS, TD, sedation, obesity, etc.)?\n",
+      "bbox": [
+        61.888397216796875,
+        243.15951538085938,
+        378.6683349609375,
+        254.8795166015625
+      ],
+      "text_sha256": "fc6e4e2b66a573247bd8d33f0a1b12a1ae36eb64aa23ed451a22eb40c21f9997"
+    },
+    {
+      "block_id": "page-0049-block-0008",
+      "order": 8,
+      "text": "■\n■What was the previous pattern of illness? Consider the speed of onset, duration and \n",
+      "bbox": [
+        61.888397216796875,
+        255.15951538085938,
+        436.7084655761719,
+        266.8795166015625
+      ],
+      "text_sha256": "474ed9c10f582eae26e9eac5ca41878f357d4dda8a075e3e9a2e95ee19df4f15"
+    },
+    {
+      "block_id": "page-0049-block-0009",
+      "order": 9,
+      "text": "severity of episodes and any danger posed to self and others.\n",
+      "bbox": [
+        70.88839721679688,
+        267.1595153808594,
+        331.5083923339844,
+        278.8795166015625
+      ],
+      "text_sha256": "018807f9a7a60fe133a8ec2f63738f607717b8e6a946558c4743b3eb0d9b367f"
+    },
+    {
+      "block_id": "page-0049-block-0010",
+      "order": 10,
+      "text": "■\n■Has dosage reduction been attempted before, and, if so, what was the outcome?\n",
+      "bbox": [
+        61.888397216796875,
+        279.1595153808594,
+        414.808349609375,
+        290.8795166015625
+      ],
+      "text_sha256": "fce7d0256ab7cb7c2dd1d380af24c738cebb44950510edc40eb996af5c19b3b4"
+    },
+    {
+      "block_id": "page-0049-block-0011",
+      "order": 11,
+      "text": "■\n■What are the patient’s current social circumstances? Is it a period of relative stability, \n",
+      "bbox": [
+        61.888397216796875,
+        291.1595153808594,
+        436.6582946777344,
+        302.8795166015625
+      ],
+      "text_sha256": "a4df753570de6bd34a688ede5210347373bddac6fe58764205902c406f682b0f"
+    },
+    {
+      "block_id": "page-0049-block-0012",
+      "order": 12,
+      "text": "or are stressful life events anticipated?\n",
+      "bbox": [
+        70.88839721679688,
+        303.1595153808594,
+        234.7783966064453,
+        314.8795166015625
+      ],
+      "text_sha256": "67724506cef40d6cabdd9defb74c6ac3d2138b8a259b3afbff7934a841b2f6d2"
+    },
+    {
+      "block_id": "page-0049-block-0013",
+      "order": 13,
+      "text": "■\n■What is the social cost of relapse (e.g. is the patient the sole breadwinner for a \n",
+      "bbox": [
+        61.888397216796875,
+        315.1595153808594,
+        436.7183532714844,
+        326.8795166015625
+      ],
+      "text_sha256": "d8a39eb05f0ba6b08f4309a1263982480c05a55c10b2e70fb0e2c0871b8c558d"
+    },
+    {
+      "block_id": "page-0049-block-0014",
+      "order": 14,
+      "text": "family)?\n",
+      "bbox": [
+        70.88839721679688,
+        327.1595153808594,
+        105.868408203125,
+        338.8795166015625
+      ],
+      "text_sha256": "4e1572866db6c49c459f922a54a7a329da6db524cf63bd63fd019aa93afa8080"
+    },
+    {
+      "block_id": "page-0049-block-0015",
+      "order": 15,
+      "text": "■\n■Is the patient/carer able to monitor symptoms, and, if so, will they seek help?\n",
+      "bbox": [
+        61.888397216796875,
+        339.1595153808594,
+        402.0184326171875,
+        350.8795166015625
+      ],
+      "text_sha256": "8770d3ff378d7d74d3f89f3f4d4ade8b6564ac7b8aaa348abd5252c1f7d96e62"
+    },
+    {
+      "block_id": "page-0049-block-0016",
+      "order": 16,
+      "text": "As with first-episode patients, patients, carers and key-workers should be aware of \nthe early signs of relapse and how to access help. Be aware that targeted relapse treat-\nment is much less effective than continuous prophylaxis.10 Those with a history of \naggressive behaviour or serious suicide attempts and those with residual psychotic \nsymptoms should be considered for life-long treatment.\n",
+      "bbox": [
+        61.888397216796875,
+        357.1595153808594,
+        436.6985168457031,
+        416.8795166015625
+      ],
+      "text_sha256": "f40419e837eafc89015e1b859aa03e74bfedddd5f6cc11a4dffc477b92f1fd7d"
+    },
+    {
+      "block_id": "page-0049-block-0017",
+      "order": 17,
+      "text": "Alternative views\n",
+      "bbox": [
+        61.888397216796875,
+        434.31451416015625,
+        153.17739868164062,
+        447.3495178222656
+      ],
+      "text_sha256": "a74dffdc1721b63a1135ea29d40a3b54a5ff5f77d9c457291c27a02b92a78c48"
+    },
+    {
+      "block_id": "page-0049-block-0018",
+      "order": 18,
+      "text": "While it is clear that antipsychotics effectively reduce symptom severity and rates of \nrelapse, a minority view is that antipsychotics might also sensitise patients to psycho-\nsis. The hypothesis is that relapse on withdrawal can be seen as a type of discontinua-\ntion reaction resulting from super-sensitivity of dopamine receptors, although the \nevidence for this remains uncertain.57 This phenomenon might explain better out-\ncomes seen in first-episode patients who receive lower doses of antipsychotics, but it \nalso suggests the possibility that the use of antipsychotics might ultimately worsen \noutcomes. It might also explain the poor outcomes seen with abrupt discontinuation \nof antipsychotics.54 This observation in turn leads some to question the validity of \nlong-term studies in which active and successful treatment is abruptly stopped since \nrebound phenomena and withdrawal reactions may account for at least some of the \nobserved high relapse rates.58\n",
+      "bbox": [
+        61.888397216796875,
+        453.1595153808594,
+        436.7116394042969,
+        596.8795166015625
+      ],
+      "text_sha256": "5bd68ae5f04298a6f0e985e297e2fdc12bfcc86a61edae7f7203407b0c073171"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

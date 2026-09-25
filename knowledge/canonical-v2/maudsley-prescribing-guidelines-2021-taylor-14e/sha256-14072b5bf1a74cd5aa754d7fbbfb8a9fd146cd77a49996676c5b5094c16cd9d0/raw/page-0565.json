@@ -1,0 +1,407 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0565",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 565,
+  "source_page_index": 564,
+  "source_page_display": 565,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "544    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  5\nAfter prescribing\nAcute phase\n■\n■Monitor for adverse effects regularly, for example weekly for the first four weeks. \nChildren and adolescents generally tolerate SSRIs well. Potential adverse effects \ninclude those experienced by adults, described in Chapter 3. Additionally, young peo-\nple taking SSRIs have a small increased risk of suicidality and switch to mania (see \n‘specific issues’ below). Therefore risk of harm, mood, and behaviour should be mon-\nitored closely and addressed.3,4,21,25\n■\n■After four weeks of SSRI treatment at a therapeutic dose, assess response including \ndepression severity using the measures completed at baseline. Most therapeutic effects \nappear by four weeks.9\n■\n■If partial or non-response, consider the possibility of poor treatment adherence, inac-\ncurate diagnosis, comorbidity, or modifiable maintaining factors.\n■\n■If none of these factors explain the continued depressive symptoms and the young \nperson does not have adverse effects, consider increasing the dose. Reassess four \nweekly.3,25\n■\n■If adverse effects develop, consider reducing the dose to the highest tolerated dose.\n■\n■If partial or non-response after eight weeks of the maximum recommended (or high-\nest tolerated) therapeutic dose of an SSRI, consider the medication changes outlined \nabove.\nMaintenance phase\n■\n■Continue medication for 6–12 months after remission to reduce the risk of relapse. \nConsider a longer maintenance phase if depressive episodes were recurrent or \nchronic.3,4,21,25\nBox 5.1  Summary of pharmacotherapy for depression in children and adolescents3,4,21,25\nMedication\nStarting dose\nTherapeutic dose range\nFirst line\nFluoxetine\n(FDA approved for 8 years and \nover)\n10mg/day\n20–60mg/day\nSecond line\nSertraline\nor\nCitalopram*\n25–50mg/day\n5–10mg/day\n50–200mg/day\n10–40mg/day\nThird line\nEscitalopram\n(FDA approved for 12 years and \nover)\n5–10mg/day\n10–20mg/day\nFourth line\nConsider augmentation of antidepressant with second-generation antipsychotic \nor lithium**\nConsider mirtazapine** (where sedation required)\n*Caution advised in cardiac or hepatic disease.\n**No RCTs available in young people (but evidence from adult trials).\n",
+  "raw_text_sha256": "b3c347dd66fdc54b0274557a721fc61f18e49b639b661770f6599acad43f7ab9",
+  "coordinates_sha256": "c079487ca4d071687867009ebc749ea3a82fc86d6f3d70891eb8f7f067f7a486",
+  "block_sequence_sha256": "3d0e30a390fc248a3d8cedb2c957509e639b4b965c0772deac581e1b1559df27",
+  "blocks": [
+    {
+      "block_id": "page-0565-block-0000",
+      "order": 0,
+      "text": "544    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "e8d87a4562db95217eafa9ab4dae9eb364184d62182fd2ee3007cf51fe260f96"
+    },
+    {
+      "block_id": "page-0565-block-0001",
+      "order": 1,
+      "text": "CHAPTER  5\n",
+      "bbox": [
+        18.520000457763672,
+        338.22650146484375,
+        28.0,
+        381.79449462890625
+      ],
+      "text_sha256": "4086e0916f45ec531cc17b8c611334eb2b1ef26051ba536579b8ef3c22c1648d"
+    },
+    {
+      "block_id": "page-0565-block-0002",
+      "order": 2,
+      "text": "After prescribing\n",
+      "bbox": [
+        61.88999938964844,
+        308.3689880371094,
+        149.08697509765625,
+        321.40399169921875
+      ],
+      "text_sha256": "c681666110d1c8b178ef138787205867d82554c7804803ee0dc7929ab2138716"
+    },
+    {
+      "block_id": "page-0565-block-0003",
+      "order": 3,
+      "text": "Acute phase\n",
+      "bbox": [
+        61.88999938964844,
+        327.3039855957031,
+        119.66999816894531,
+        339.15399169921875
+      ],
+      "text_sha256": "b14a49659a66097c05b1728dc9d505c339e5224e0cd27c023a4b903490b81ac4"
+    },
+    {
+      "block_id": "page-0565-block-0004",
+      "order": 4,
+      "text": "■\n■Monitor for adverse effects regularly, for example weekly for the first four weeks. \n",
+      "bbox": [
+        61.88990020751953,
+        345.2139892578125,
+        436.68994140625,
+        356.9339904785156
+      ],
+      "text_sha256": "1ed1d5a76b9b504ea283e890fecb8838d22a7b1e39b52b23cd4c9aeb3395c898"
+    },
+    {
+      "block_id": "page-0565-block-0005",
+      "order": 5,
+      "text": "Children and adolescents generally tolerate SSRIs well. Potential adverse effects \ninclude those experienced by adults, described in Chapter 3. Additionally, young peo-\nple taking SSRIs have a small increased risk of suicidality and switch to mania (see \n‘specific issues’ below). Therefore risk of harm, mood, and behaviour should be mon-\nitored closely and addressed.3,4,21,25\n",
+      "bbox": [
+        70.88999938964844,
+        357.2139892578125,
+        436.6800231933594,
+        416.9339904785156
+      ],
+      "text_sha256": "8f85750328c2beee15a40045f69b4613adaf61548a1f6990fa8c9979d48061ba"
+    },
+    {
+      "block_id": "page-0565-block-0006",
+      "order": 6,
+      "text": "■\n■After four weeks of SSRI treatment at a therapeutic dose, assess response including \n",
+      "bbox": [
+        61.88990020751953,
+        417.2139892578125,
+        436.6401062011719,
+        428.9339904785156
+      ],
+      "text_sha256": "375d0a59d1732fc5fa5445e66c6db8ae7cda98fb8d8864b2aac4b7369ea0105c"
+    },
+    {
+      "block_id": "page-0565-block-0007",
+      "order": 7,
+      "text": "depression severity using the measures completed at baseline. Most therapeutic effects \nappear by four weeks.9\n",
+      "bbox": [
+        70.88999938964844,
+        429.2139892578125,
+        436.68988037109375,
+        452.9339904785156
+      ],
+      "text_sha256": "3a92832581f13825df881cf2ba619af29f09f522bd70fe894af5099f582de999"
+    },
+    {
+      "block_id": "page-0565-block-0008",
+      "order": 8,
+      "text": "■\n■If partial or non-response, consider the possibility of poor treatment adherence, inac-\n",
+      "bbox": [
+        61.88990020751953,
+        453.2139892578125,
+        433.8999938964844,
+        464.9339904785156
+      ],
+      "text_sha256": "efa22fa95af0310917ec5c0dc6fd7a5b3a01dc718194a3c4e929440f967f85ea"
+    },
+    {
+      "block_id": "page-0565-block-0009",
+      "order": 9,
+      "text": "curate diagnosis, comorbidity, or modifiable maintaining factors.\n",
+      "bbox": [
+        70.88999938964844,
+        465.2139892578125,
+        350.3799743652344,
+        476.9339904785156
+      ],
+      "text_sha256": "1519c2530fb492bf78ecc8c97fa75eddb8f4cccea1fa0aa24894dfd0862d91aa"
+    },
+    {
+      "block_id": "page-0565-block-0010",
+      "order": 10,
+      "text": "■\n■If none of these factors explain the continued depressive symptoms and the young \n",
+      "bbox": [
+        61.88990020751953,
+        477.2139892578125,
+        436.6800842285156,
+        488.9339904785156
+      ],
+      "text_sha256": "e89d51a5b9e7990d2cec7a77a347297254405c2adffa390eedf3192efdd4eef8"
+    },
+    {
+      "block_id": "page-0565-block-0011",
+      "order": 11,
+      "text": "person does not have adverse effects, consider increasing the dose. Reassess four \nweekly.3,25\n",
+      "bbox": [
+        70.88999938964844,
+        489.2139892578125,
+        436.6800537109375,
+        512.9340209960938
+      ],
+      "text_sha256": "ad157e978842109da937d996ccdb4119d80ee17f05c845a058fe43a9426faadd"
+    },
+    {
+      "block_id": "page-0565-block-0012",
+      "order": 12,
+      "text": "■\n■If adverse effects develop, consider reducing the dose to the highest tolerated dose.\n",
+      "bbox": [
+        61.88990020751953,
+        513.2139892578125,
+        425.5399475097656,
+        524.9340209960938
+      ],
+      "text_sha256": "c5fe1f1c5f8ba9fcdf02e3e661532d754fa217fb677d30ee3ff85923163c62a5"
+    },
+    {
+      "block_id": "page-0565-block-0013",
+      "order": 13,
+      "text": "■\n■If partial or non-response after eight weeks of the maximum recommended (or high-\n",
+      "bbox": [
+        61.88990020751953,
+        525.2139892578125,
+        433.919921875,
+        536.9340209960938
+      ],
+      "text_sha256": "d9b1ff0c5ed4b7edcc499f8b912c6321a3649bb67a04c69b70a8e2de717e7616"
+    },
+    {
+      "block_id": "page-0565-block-0014",
+      "order": 14,
+      "text": "est tolerated) therapeutic dose of an SSRI, consider the medication changes outlined \nabove.\n",
+      "bbox": [
+        70.88999938964844,
+        537.2139892578125,
+        436.6300048828125,
+        560.9340209960938
+      ],
+      "text_sha256": "c54c0ff38d8f6c6e97cb6cc082805b7ea0173a889dc532663bafa3136cef097a"
+    },
+    {
+      "block_id": "page-0565-block-0015",
+      "order": 15,
+      "text": "Maintenance phase\n",
+      "bbox": [
+        61.88999938964844,
+        567.3040161132812,
+        153.5699920654297,
+        579.1539916992188
+      ],
+      "text_sha256": "e548d74c73ff116f5a3a5b9a2df527e87588add832433d37b3fe9f5fa2ae6225"
+    },
+    {
+      "block_id": "page-0565-block-0016",
+      "order": 16,
+      "text": "■\n■Continue medication for 6–12 months after remission to reduce the risk of relapse. \n",
+      "bbox": [
+        61.88990020751953,
+        585.2139892578125,
+        436.6800842285156,
+        596.9340209960938
+      ],
+      "text_sha256": "5f28b752b0187e2d0bc09531fc778dc451de2d7042969f2d4018dced1c78390d"
+    },
+    {
+      "block_id": "page-0565-block-0017",
+      "order": 17,
+      "text": "Consider a longer maintenance phase if depressive episodes were recurrent or \nchronic.3,4,21,25\n",
+      "bbox": [
+        70.88999938964844,
+        597.2139892578125,
+        436.6401062011719,
+        620.9340209960938
+      ],
+      "text_sha256": "187ff2069264c145d8fb1ec6399ea606d51d4b855b372777c811874b8e20dd22"
+    },
+    {
+      "block_id": "page-0565-block-0018",
+      "order": 18,
+      "text": "Box 5.1  Summary of pharmacotherapy for depression in children and adolescents3,4,21,25\n",
+      "bbox": [
+        69.13999938964844,
+        69.60279083251953,
+        387.5142822265625,
+        79.67529296875
+      ],
+      "text_sha256": "450cab83cce1802b58139c0db03d8a7a7bf4a33962b86696d9eca78773cb59c1"
+    },
+    {
+      "block_id": "page-0565-block-0019",
+      "order": 19,
+      "text": "Medication\nStarting dose\nTherapeutic dose range\n",
+      "bbox": [
+        126.88999938964844,
+        88.67780303955078,
+        419.88519287109375,
+        98.75030517578125
+      ],
+      "text_sha256": "3373903f27f043fa3c13f4a94a62efdb2a93863501c595e37fb9ff1d32d243db"
+    },
+    {
+      "block_id": "page-0565-block-0020",
+      "order": 20,
+      "text": "First line\nFluoxetine\n(FDA approved for 8 years and \nover)\n",
+      "bbox": [
+        68.89450073242188,
+        104.45380401611328,
+        242.01402282714844,
+        134.51824951171875
+      ],
+      "text_sha256": "8fec874291e28c4a915634a133fb9dee17fa32a934365ad66d37c7e9e42ed10d"
+    },
+    {
+      "block_id": "page-0565-block-0021",
+      "order": 21,
+      "text": "10mg/day\n20–60mg/day\n",
+      "bbox": [
+        259.89801025390625,
+        104.64926147460938,
+        375.9741516113281,
+        114.51776123046875
+      ],
+      "text_sha256": "ba8f1208bafdd22a75a10aad6aa41c70af5cacb9f2afed2d11ef6d086643e042"
+    },
+    {
+      "block_id": "page-0565-block-0022",
+      "order": 22,
+      "text": "Second line\nSertraline\nor\nCitalopram*\n",
+      "bbox": [
+        68.90301513671875,
+        140.2217559814453,
+        169.78176879882812,
+        170.28619384765625
+      ],
+      "text_sha256": "b1c66ebe893f37a4e27d7fae343dfce02eb728e6ca32baca9a0dd8abb1374e20"
+    },
+    {
+      "block_id": "page-0565-block-0023",
+      "order": 23,
+      "text": "25–50mg/day\n",
+      "bbox": [
+        259.8900146484375,
+        140.43179321289062,
+        309.9635925292969,
+        150.30029296875
+      ],
+      "text_sha256": "24f9bc1760c0bd9cefec3cfaf4509e97cc591a0be0970e0bb0609b76ef91ebc4"
+    },
+    {
+      "block_id": "page-0565-block-0024",
+      "order": 24,
+      "text": "5–10mg/day\n",
+      "bbox": [
+        259.8900146484375,
+        160.43228149414062,
+        305.2375793457031,
+        170.30078125
+      ],
+      "text_sha256": "55d954bc4a9073f6b4954bbf839ac40c2a31ccbc11caff051b83d21aedab1be9"
+    },
+    {
+      "block_id": "page-0565-block-0025",
+      "order": 25,
+      "text": "50–200mg/day\n",
+      "bbox": [
+        325.89251708984375,
+        140.43179321289062,
+        380.6921081542969,
+        150.30029296875
+      ],
+      "text_sha256": "7383d15bd634231407c2a41b19fe23258928e038981d52e5253038e85ef3623a"
+    },
+    {
+      "block_id": "page-0565-block-0026",
+      "order": 26,
+      "text": "10–40mg/day\n",
+      "bbox": [
+        325.89251708984375,
+        160.43228149414062,
+        375.9660949707031,
+        170.30078125
+      ],
+      "text_sha256": "14fcb78cbfbd1be1f27b7d087576581a60fd1ad57563d52c522fe531e620455f"
+    },
+    {
+      "block_id": "page-0565-block-0027",
+      "order": 27,
+      "text": "Third line\nEscitalopram\n(FDA approved for 12 years and \nover)\n",
+      "bbox": [
+        68.89501953125,
+        176.00428771972656,
+        246.82554626464844,
+        206.06878662109375
+      ],
+      "text_sha256": "2acea9e03fdee4d0179cfed90fe1c75ff58a20f874830e6e5e9538db5dcaad71"
+    },
+    {
+      "block_id": "page-0565-block-0028",
+      "order": 28,
+      "text": "5–10mg/day\n10–20mg/day\n",
+      "bbox": [
+        259.89849853515625,
+        176.19979858398438,
+        375.9746398925781,
+        186.06829833984375
+      ],
+      "text_sha256": "387a0d4f46af789de82e957cf08f6f8739f54abed0aa06eee0778caae7ad41db"
+    },
+    {
+      "block_id": "page-0565-block-0029",
+      "order": 29,
+      "text": "Fourth line\nConsider augmentation of antidepressant with second-generation antipsychotic \nor lithium**\n",
+      "bbox": [
+        68.90350341796875,
+        211.7722930908203,
+        417.692626953125,
+        231.84078979492188
+      ],
+      "text_sha256": "f979042cdf8b9e07627e6d673ee6b493652a0cc6b3ec2babc917a097b3888d1d"
+    },
+    {
+      "block_id": "page-0565-block-0030",
+      "order": 30,
+      "text": "Consider mirtazapine** (where sedation required)\n",
+      "bbox": [
+        126.88999938964844,
+        231.98178100585938,
+        304.3290710449219,
+        241.85028076171875
+      ],
+      "text_sha256": "db0ce4950988573e53c962ff9fb089a579513cd0526889096df440c0921c76d9"
+    },
+    {
+      "block_id": "page-0565-block-0031",
+      "order": 31,
+      "text": "*Caution advised in cardiac or hepatic disease.\n**No RCTs available in young people (but evidence from adult trials).\n",
+      "bbox": [
+        69.14251708984375,
+        250.7327880859375,
+        318.37957763671875,
+        270.5972900390625
+      ],
+      "text_sha256": "77fba1d1140a30e6c16c2528dc76576f8f78916b49b8ce0a7b4cd11b83dae3f5"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

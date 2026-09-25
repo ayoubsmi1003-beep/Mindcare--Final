@@ -1,0 +1,215 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0604",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 604,
+  "source_page_index": 603,
+  "source_page_display": 604,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Children and adolescents    583\nCHAPTER 5\nMelatonin, has been shown in 17 studies to be beneficial in children with ASD.71 A \nmeta-analysis of five studies showed good efficacy with doses ranging from 1mg to \n10mg and treatment lasting from 14 days to over 4 years.72 Melatonin is usually very \nwell tolerated.72,73 One RCT showed that, whilst melatonin improved sleep onset, child’s \nbehaviour during the day did not improve.74\nThere is also evidence that melatonin combined with CBT is superior to melatonin \nonly, CBT only and placebo in reducing symptoms of insomnia.75\nRisperidone may benefit sleep difficulties in those with extreme irritability. In the \nanxious or depressed child, antidepressants may be beneficial. Insomnia due to hypera-\nrousal may benefit from clonidine or clonazepam.76\nAnxiety, OCD and depression\nSSRIs have yet to show specific efficacy in ASD. Recent preliminary data from a randomised \nplacebo-blind clinical trial showed beneficial effects of fluoxetine in reducing OCD symp-\ntoms in children with ASD, although confounding factors precluded firm conclusions.77 In \na recent systematic review,6 although risperidone was reported by several studies to reduce \nOCD and anxiety symptoms in young people with ASD, the primary selection of partici-\npants for high levels of irritability did not allow firm conclusions about specific effects of \nrisperidone on OCD and anxiety. The review concluded that overall, there is little or no \nevidence for treating anxiety or OCD symptoms with risperidone, clomipramine or an \nSSRI. The recent BAP guidance6 is to cautiously follow the existing BAP guidelines for \ntreating anxiety and OCD.78 There are some data on buspirone effectively targeting anxiety \nin ASD79 and propranolol showing positive cognitive effects in ASD.80 However, further \nevaluation is needed. Guidance on doses of fluoxetine can be found in Box 5.4.\nBox 5.4  Use of fluoxetine in children and adolescents\nLiquid fluoxetine: (as hydrochloride) 20mg/5mL\n2.5mg/day a day for 1 week; note that 2.5mg = 0.625mL which is difficult to measure accurately.\nFollow with flexible titration schedule based on weight, tolerability and adverse-effects up to a \nmaximum dose of 0.8mg/kg/day (0.3mg/kg for week 2, 0.5mg/kg/day for week 3, and 0.8mg/kg/\nday subsequently). Reduction may be indicated if adverse effects are problematic.\nAdverse effects\n■\n■Monitor for treatment emergent suicidal behaviour, self-harm and hostility, particularly at the \nbeginning of treatment.\n■\n■Hyponatraemia is also possible – see section in Chapter 3.\nFluoxetine in children and adolescents\nWhen using fluoxetine to treat repetitive behaviours in ASD patients, doses much lower \nthan those used to treat depression are normally required. It is advisable to use a liquid \npreparation and begin at the lowest possible dose, monitoring for adverse effects. A \nsuitable regime is outlined in Box 5.4.\n",
+  "raw_text_sha256": "865e781e9cb5c24e10a09daab926787520f8d5c2ac247713ec3d72b8a3030c7f",
+  "coordinates_sha256": "7105e8d19b3b759afbfbafa71ab5e5737b24daffa3e7e462c26d1f4f2d7acd6f",
+  "block_sequence_sha256": "41d0b56df13c892737e42e9ee23b8a430b865e69260532a4b4173cd419dd341c",
+  "blocks": [
+    {
+      "block_id": "page-0604-block-0000",
+      "order": 0,
+      "text": "Children and adolescents    583\n",
+      "bbox": [
+        288.94488525390625,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "4b9d59077c0fdf1935cc3d4b2a67d949052aac6b4b780a386bdfa25285d558ea"
+    },
+    {
+      "block_id": "page-0604-block-0001",
+      "order": 1,
+      "text": "CHAPTER 5\n",
+      "bbox": [
+        454.4096984863281,
+        339.3385009765625,
+        463.88970947265625,
+        380.6824951171875
+      ],
+      "text_sha256": "f4b8b4a0fc64e7b3b74e7336306d0959d0384683e387792724f393162639020a"
+    },
+    {
+      "block_id": "page-0604-block-0002",
+      "order": 2,
+      "text": "Melatonin, has been shown in 17 studies to be beneficial in children with ASD.71 A \nmeta-analysis of five studies showed good efficacy with doses ranging from 1mg to \n10mg and treatment lasting from 14 days to over 4 years.72 Melatonin is usually very \nwell tolerated.72,73 One RCT showed that, whilst melatonin improved sleep onset, child’s \nbehaviour during the day did not improve.74\n",
+      "bbox": [
+        47.99810791015625,
+        62.31041717529297,
+        422.8128662109375,
+        122.27041625976562
+      ],
+      "text_sha256": "9570315cfee6cdd00574781d3f284b726a4a3dd4a74662bfde694ea9e2e67578"
+    },
+    {
+      "block_id": "page-0604-block-0003",
+      "order": 3,
+      "text": "There is also evidence that melatonin combined with CBT is superior to melatonin \nonly, CBT only and placebo in reducing symptoms of insomnia.75\n",
+      "bbox": [
+        48.0,
+        122.5504150390625,
+        422.7299499511719,
+        146.27041625976562
+      ],
+      "text_sha256": "bcff228ca48fa2dcb96a927b3e28f38d50f8f3681da29699b5da02b8f67e330c"
+    },
+    {
+      "block_id": "page-0604-block-0004",
+      "order": 4,
+      "text": "Risperidone may benefit sleep difficulties in those with extreme irritability. In the \nanxious or depressed child, antidepressants may be beneficial. Insomnia due to hypera-\nrousal may benefit from clonidine or clonazepam.76\n",
+      "bbox": [
+        48.0,
+        146.3104248046875,
+        422.8099365234375,
+        182.27041625976562
+      ],
+      "text_sha256": "9507c60eda5803eb4710cab3addcfa119f03425e4fcd5e727fe303b32a69629c"
+    },
+    {
+      "block_id": "page-0604-block-0005",
+      "order": 5,
+      "text": "Anxiety, OCD and depression\n",
+      "bbox": [
+        48.0,
+        200.64047241210938,
+        185.0599822998047,
+        212.490478515625
+      ],
+      "text_sha256": "92b010792e643a5aeff3b50e5a622a845f1ffbc05a356f3f4fd86fc0ec8228b1"
+    },
+    {
+      "block_id": "page-0604-block-0006",
+      "order": 6,
+      "text": "SSRIs have yet to show specific efficacy in ASD. Recent preliminary data from a randomised \nplacebo-blind clinical trial showed beneficial effects of fluoxetine in reducing OCD symp-\ntoms in children with ASD, although confounding factors precluded firm conclusions.77 In \na recent systematic review,6 although risperidone was reported by several studies to reduce \nOCD and anxiety symptoms in young people with ASD, the primary selection of partici-\npants for high levels of irritability did not allow firm conclusions about specific effects of \nrisperidone on OCD and anxiety. The review concluded that overall, there is little or no \nevidence for treating anxiety or OCD symptoms with risperidone, clomipramine or an \nSSRI. The recent BAP guidance6 is to cautiously follow the existing BAP guidelines for \ntreating anxiety and OCD.78 There are some data on buspirone effectively targeting anxiety \nin ASD79 and propranolol showing positive cognitive effects in ASD.80 However, further \nevaluation is needed. Guidance on doses of fluoxetine can be found in Box 5.4.\n",
+      "bbox": [
+        47.997802734375,
+        218.31048583984375,
+        422.8320007324219,
+        362.2704772949219
+      ],
+      "text_sha256": "e4c1e72e01048250a2464560044b88090fd96787ea6013b5050be73b59f8c4b4"
+    },
+    {
+      "block_id": "page-0604-block-0007",
+      "order": 7,
+      "text": "Box 5.4  Use of fluoxetine in children and adolescents\n",
+      "bbox": [
+        55.5,
+        467.506103515625,
+        253.25250244140625,
+        477.57861328125
+      ],
+      "text_sha256": "23de6c4eacc41c8442fff2c5ac8e9599206465be1f6350a11a1cd8e26cc15bdf"
+    },
+    {
+      "block_id": "page-0604-block-0008",
+      "order": 8,
+      "text": "Liquid fluoxetine: (as hydrochloride) 20mg/5mL\n2.5mg/day a day for 1 week; note that 2.5mg = 0.625mL which is difficult to measure accurately.\n",
+      "bbox": [
+        55.5,
+        487.2091064453125,
+        408.07159423828125,
+        507.277587890625
+      ],
+      "text_sha256": "acd28b4e7e604ac876645d8d3c83c312db32b200a42ff506b80ad11b77380ce4"
+    },
+    {
+      "block_id": "page-0604-block-0009",
+      "order": 9,
+      "text": "Follow with flexible titration schedule based on weight, tolerability and adverse-effects up to a \nmaximum dose of 0.8mg/kg/day (0.3mg/kg for week 2, 0.5mg/kg/day for week 3, and 0.8mg/kg/\nday subsequently). Reduction may be indicated if adverse effects are problematic.\n",
+      "bbox": [
+        55.5,
+        513.4060668945312,
+        408.8368225097656,
+        543.2666015625
+      ],
+      "text_sha256": "5a0391b01dbc3e3725aef8aff80dea874f226b14bd05f9fc03da66c8db587262"
+    },
+    {
+      "block_id": "page-0604-block-0010",
+      "order": 10,
+      "text": "Adverse effects\n",
+      "bbox": [
+        55.5,
+        561.193115234375,
+        117.218505859375,
+        571.265625
+      ],
+      "text_sha256": "2829b5953031aa8e8e992beffdca9c91044830ce03b830653e6ea31d5de93cfc"
+    },
+    {
+      "block_id": "page-0604-block-0011",
+      "order": 11,
+      "text": "■\n■Monitor for treatment emergent suicidal behaviour, self-harm and hostility, particularly at the \n",
+      "bbox": [
+        55.499900817871094,
+        577.2060546875,
+        405.5896301269531,
+        587.278564453125
+      ],
+      "text_sha256": "cb6660a99b81004c8e689faab898cb9414a73b0f06b4f0f71a985b05b8238609"
+    },
+    {
+      "block_id": "page-0604-block-0012",
+      "order": 12,
+      "text": "beginning of treatment.\n",
+      "bbox": [
+        64.0,
+        587.4060668945312,
+        150.75099182128906,
+        597.2745971679688
+      ],
+      "text_sha256": "0e39c80c468e8feb80e698b122a7ead24bfba3ee0741ec3d5f4c6b837b7f048e"
+    },
+    {
+      "block_id": "page-0604-block-0013",
+      "order": 13,
+      "text": "■\n■Hyponatraemia is also possible – see section in Chapter 3.\n",
+      "bbox": [
+        55.499900817871094,
+        597.4100341796875,
+        273.23602294921875,
+        607.278564453125
+      ],
+      "text_sha256": "aaf3d6822becc661ef943b04cc83384bf7425ba58db19f0ae6e80e809333aaec"
+    },
+    {
+      "block_id": "page-0604-block-0014",
+      "order": 14,
+      "text": "Fluoxetine in children and adolescents\n",
+      "bbox": [
+        48.0,
+        378.4220886230469,
+        228.0299835205078,
+        390.2720947265625
+      ],
+      "text_sha256": "e3d97aaae309db24f9755394b2b6e55fbf0601e82618a92b060c1f722f4bb131"
+    },
+    {
+      "block_id": "page-0604-block-0015",
+      "order": 15,
+      "text": "When using fluoxetine to treat repetitive behaviours in ASD patients, doses much lower \nthan those used to treat depression are normally required. It is advisable to use a liquid \npreparation and begin at the lowest possible dose, monitoring for adverse effects. A \nsuitable regime is outlined in Box 5.4.\n",
+      "bbox": [
+        48.0,
+        396.33209228515625,
+        422.8199768066406,
+        444.0520935058594
+      ],
+      "text_sha256": "bf83d73dc2d0c366cbe48fcee881fb43606fbed4d4def7c1d4bff5f6130be08b"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

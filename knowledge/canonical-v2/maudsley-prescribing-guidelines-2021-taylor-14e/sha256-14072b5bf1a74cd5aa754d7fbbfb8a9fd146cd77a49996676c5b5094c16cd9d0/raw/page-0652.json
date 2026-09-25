@@ -1,0 +1,263 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0652",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 652,
+  "source_page_index": 651,
+  "source_page_display": 652,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Prescribing in older people    631\nCHAPTER  6\nSafer prescribing for physical conditions in dementia\nPeople with dementia are more susceptible to cognitive side effects of drugs. Drugs may \naffect cognition through their action on cholinergic, histaminergic or opioid neuro-\ntransmitter pathways or through more complex actions. Medications prescribed for \nphysical disorders may also interact with cognitive-enhancing medication.\nAnticholinergic drugs\nAnticholinergic drugs reduce the efficacy of AChE-Is1 and also cause sedation, cognitive \nimpairment, delirium and falls.2 These effects are more severe in older patients with \ndementia.3 Table 6.4 summarises the Anticholinergic Effect on Cognition (AEC) of \ndrugs commonly prescribed for older adults in the UK.4 Combining several drugs with \nanticholinergic activity increases the anticholinergic burden for an individual. Studies \nhave shown that a high anticholinergic burden total score was associated with a greater \ndecline in MMSE score5 and a higher mortality.5,6\nIt is good practice to keep the anticholinergic burden to a minimum (preferably zero) \nin older people, especially if they have cognitive impairment.\nWhere possible, drugs with no anticholinergic action and an equivalent therapeutic effect \nshould be used. If this is not possible, the prescription of a drug with low anticholinergic \nactivity or high specificity to the site of action (and thus minimal central activity) should be \nencouraged. Anticholinergic drugs that do not cross the blood–brain barrier (BBB) have less \nprofound effects on cognitive function.7 The AEC scale takes all of these factors into account.\nThe following are recommendations for using the AEC scores:4\n■\n■All individual drugs with an AEC score of 2 or 3 in older people presenting with \nsymptoms of cognitive impairment, dementia or delirium should either be:\n■\n■stopped, or\n■\n■switched to an alternative drug with a lower AEC score (preferably 0).\n■\n■In patients who are not receiving any individual drug with AEC score of 2 or 3 but have \na total AEC score of 3 or above 3, a similar patient–clinician review should take place.\n■\n■If withdrawal of drug is deemed appropriate, this should be gradual (where possible) \nto avoid rebound (nausea, sweating, urinary frequency, diarrhoea).\nSafety of physical health medication prescribed in dementia\nAnticholinergic drugs used in urinary incontinence\nOxybutynin easily penetrates the CNS and has consistently been associated with dete-\nrioration in cognitive function. Although studies of tolterodine found no adverse CNS \neffects,8 case reports have described adverse effects, including memory loss, hallucina-\ntions and delirium.9–11 In contrast, darifenacin, an M3-selective receptor antagonist, has \nbeen investigated in healthy older people for its effects on cognitive function and had \nno effects on cognitive tests compared with placebo,12,13 although studies in dementia \nare lacking. Solifenacin may cause impairment of working memory14 although it was \ninvestigated in stroke patients and was found not to affect their short-term cognitive \nperformance.15 While some cases of CNS adverse effects have been reported with \n",
+  "raw_text_sha256": "831ae8ab450acace6a6633ef7ba9a31f6217495a1d70fc2ad60aa604a4f3db6d",
+  "coordinates_sha256": "d04fe1f476cf399bf4d3f4fee6a24bd71e1d45cf167b5e86593dc53de3720dfa",
+  "block_sequence_sha256": "8d8351b73aca94e79116f8d001ebb62b824fbc8853e14c549ba78b5bc359c709",
+  "blocks": [
+    {
+      "block_id": "page-0652-block-0000",
+      "order": 0,
+      "text": "Prescribing in older people    631\n",
+      "bbox": [
+        281.576904296875,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "f7b85a068d7d4fb3646e2f64f351996f7236ccc4dbd2bf987a7545d1b3d70339"
+    },
+    {
+      "block_id": "page-0652-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        454.4096984863281,
+        405.35260009765625,
+        463.88970947265625,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0652-block-0002",
+      "order": 2,
+      "text": "Safer prescribing for physical conditions in dementia\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        326.78802490234375,
+        79.1004638671875
+      ],
+      "text_sha256": "ba6bdc862b57d0cae7292492ee9fe6b3d94778a4f916eb26221e75795fc3b40d"
+    },
+    {
+      "block_id": "page-0652-block-0003",
+      "order": 3,
+      "text": "People with dementia are more susceptible to cognitive side effects of drugs. Drugs may \naffect cognition through their action on cholinergic, histaminergic or opioid neuro-\ntransmitter pathways or through more complex actions. Medications prescribed for \nphysical disorders may also interact with cognitive-enhancing medication.\n",
+      "bbox": [
+        48.0,
+        84.91046142578125,
+        422.8300476074219,
+        132.63046264648438
+      ],
+      "text_sha256": "e7ac1f2915ce76c997106612688f5b8693711d39567fc41334a2e9ca0d943c2e"
+    },
+    {
+      "block_id": "page-0652-block-0004",
+      "order": 4,
+      "text": "Anticholinergic drugs\n",
+      "bbox": [
+        48.0,
+        150.06546020507812,
+        158.60499572753906,
+        163.1004638671875
+      ],
+      "text_sha256": "72b41ee2948ec01d40996c0936948c30e0683595fb0f35b5c37c22862137c7d2"
+    },
+    {
+      "block_id": "page-0652-block-0005",
+      "order": 5,
+      "text": "Anticholinergic drugs reduce the efficacy of AChE-Is1 and also cause sedation, cognitive \nimpairment, delirium and falls.2 These effects are more severe in older patients with \ndementia.3 Table 6.4 summarises the Anticholinergic Effect on Cognition (AEC) of \ndrugs commonly prescribed for older adults in the UK.4 Combining several drugs with \nanticholinergic activity increases the anticholinergic burden for an individual. Studies \nhave shown that a high anticholinergic burden total score was associated with a greater \ndecline in MMSE score5 and a higher mortality.5,6\n",
+      "bbox": [
+        47.99659729003906,
+        168.91046142578125,
+        422.7806396484375,
+        252.6304931640625
+      ],
+      "text_sha256": "9d8f62ea030df699adb4defbf0b41828de1243717873c83763a6183b6f424cab"
+    },
+    {
+      "block_id": "page-0652-block-0006",
+      "order": 6,
+      "text": "It is good practice to keep the anticholinergic burden to a minimum (preferably zero) \nin older people, especially if they have cognitive impairment.\n",
+      "bbox": [
+        48.0,
+        252.91049194335938,
+        422.73992919921875,
+        276.6304931640625
+      ],
+      "text_sha256": "55df1dd499f837ef2f6c0ab8e01d3fb437e66d7f848b2527afcf244ff4075c8c"
+    },
+    {
+      "block_id": "page-0652-block-0007",
+      "order": 7,
+      "text": "Where possible, drugs with no anticholinergic action and an equivalent therapeutic effect \nshould be used. If this is not possible, the prescription of a drug with low anticholinergic \nactivity or high specificity to the site of action (and thus minimal central activity) should be \nencouraged. Anticholinergic drugs that do not cross the blood–brain barrier (BBB) have less \nprofound effects on cognitive function.7 The AEC scale takes all of these factors into account.\n",
+      "bbox": [
+        48.0,
+        276.9104919433594,
+        422.8097229003906,
+        336.6304931640625
+      ],
+      "text_sha256": "106f9a977b992f8ea1b322fc4cf94c4d120c23441ab42b616422de156c63de9c"
+    },
+    {
+      "block_id": "page-0652-block-0008",
+      "order": 8,
+      "text": "The following are recommendations for using the AEC scores:4\n",
+      "bbox": [
+        57.99760437011719,
+        336.9104919433594,
+        329.20867919921875,
+        348.6304931640625
+      ],
+      "text_sha256": "959e6ec124de2fcf9c1479d004a95a8a270753d760d73d49e1cdfa1b30a3f477"
+    },
+    {
+      "block_id": "page-0652-block-0009",
+      "order": 9,
+      "text": "■\n■All individual drugs with an AEC score of 2 or 3 in older people presenting with \n",
+      "bbox": [
+        47.999900817871094,
+        354.9104919433594,
+        422.82977294921875,
+        366.6304931640625
+      ],
+      "text_sha256": "68c4b812825d76326cc120579b5322e8067fc851fac40c51740615a42998f466"
+    },
+    {
+      "block_id": "page-0652-block-0010",
+      "order": 10,
+      "text": "symptoms of cognitive impairment, dementia or delirium should either be:\n",
+      "bbox": [
+        56.999900817871094,
+        366.9104919433594,
+        377.1799011230469,
+        378.6304931640625
+      ],
+      "text_sha256": "47e23c9e23d8c55e8fe2137f8c006c13bf149affc1ddcd9c912e81bb40016f03"
+    },
+    {
+      "block_id": "page-0652-block-0011",
+      "order": 11,
+      "text": "■\n■stopped, or\n",
+      "bbox": [
+        57.19490051269531,
+        378.9104919433594,
+        114.53988647460938,
+        390.6304931640625
+      ],
+      "text_sha256": "eeb91165d67ddf0b1b31bccd949a965bb3fec309f451bed05c4aafd6abe20166"
+    },
+    {
+      "block_id": "page-0652-block-0012",
+      "order": 12,
+      "text": "■\n■switched to an alternative drug with a lower AEC score (preferably 0).\n",
+      "bbox": [
+        57.19490051269531,
+        390.9104919433594,
+        369.5498962402344,
+        402.6304931640625
+      ],
+      "text_sha256": "5ec5a6709e36d9ddee53cb7e79279ab423b2ccda56561d5e0faf77b6ee554cc4"
+    },
+    {
+      "block_id": "page-0652-block-0013",
+      "order": 13,
+      "text": "■\n■In patients who are not receiving any individual drug with AEC score of 2 or 3 but have \n",
+      "bbox": [
+        47.999900817871094,
+        402.9104919433594,
+        422.72003173828125,
+        414.6304931640625
+      ],
+      "text_sha256": "9d1c8b3f548d998ca5cee504dac4481bd9e785c1a74458cdc87809c7a9847cd5"
+    },
+    {
+      "block_id": "page-0652-block-0014",
+      "order": 14,
+      "text": "a total AEC score of 3 or above 3, a similar patient–clinician review should take place.\n",
+      "bbox": [
+        56.999900817871094,
+        414.9104919433594,
+        419.21014404296875,
+        426.6304931640625
+      ],
+      "text_sha256": "d406ebf34c99b416c6a9a1187b1923aad7c83aba35a35b7c8f10f6228e525bbf"
+    },
+    {
+      "block_id": "page-0652-block-0015",
+      "order": 15,
+      "text": "■\n■If withdrawal of drug is deemed appropriate, this should be gradual (where possible) \n",
+      "bbox": [
+        47.999900817871094,
+        426.9104919433594,
+        422.7698669433594,
+        438.6304931640625
+      ],
+      "text_sha256": "0f3878fba36bbd55a68f996426b92c6d9a3693014a24e9d451cb8c822fab989c"
+    },
+    {
+      "block_id": "page-0652-block-0016",
+      "order": 16,
+      "text": "to avoid rebound (nausea, sweating, urinary frequency, diarrhoea).\n",
+      "bbox": [
+        56.999900817871094,
+        438.9104919433594,
+        343.93988037109375,
+        450.6304931640625
+      ],
+      "text_sha256": "08a3fbf4678ab9c1fbd5c8a8cf02e8fa7cc32f7c5ee696237588c7e6ca191998"
+    },
+    {
+      "block_id": "page-0652-block-0017",
+      "order": 17,
+      "text": "Safety of physical health medication prescribed in dementia\n",
+      "bbox": [
+        47.999900817871094,
+        474.06549072265625,
+        357.7159423828125,
+        487.1004943847656
+      ],
+      "text_sha256": "4277c51525a43b585359485b3ba154e139bc2452eb3e8b3991a8f1db7fedd31e"
+    },
+    {
+      "block_id": "page-0652-block-0018",
+      "order": 18,
+      "text": "Anticholinergic drugs used in urinary incontinence\n",
+      "bbox": [
+        47.999900817871094,
+        493.00048828125,
+        284.67987060546875,
+        504.8504943847656
+      ],
+      "text_sha256": "e4b6370dee387acddee2b4638ae89849830e965a91e2da79bbc9a0a02e0adcd7"
+    },
+    {
+      "block_id": "page-0652-block-0019",
+      "order": 19,
+      "text": "Oxybutynin easily penetrates the CNS and has consistently been associated with dete-\nrioration in cognitive function. Although studies of tolterodine found no adverse CNS \neffects,8 case reports have described adverse effects, including memory loss, hallucina-\ntions and delirium.9–11 In contrast, darifenacin, an M3-selective receptor antagonist, has \nbeen investigated in healthy older people for its effects on cognitive function and had \nno effects on cognitive tests compared with placebo,12,13 although studies in dementia \nare lacking. Solifenacin may cause impairment of working memory14 although it was \ninvestigated in stroke patients and was found not to affect their short-term cognitive \nperformance.15 While some cases of CNS adverse effects have been reported with \n",
+      "bbox": [
+        47.999900817871094,
+        510.67047119140625,
+        422.8111267089844,
+        618.6304931640625
+      ],
+      "text_sha256": "af5989f59e021442ff1ec862d6b44535ba47200b1c4aff5b29bd7142a29fac39"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

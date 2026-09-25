@@ -1,0 +1,15 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0464",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 464,
+  "source_page_index": 463,
+  "repaired_text": "Depression and anxiety disorders    443\nCHAPTER 3\nindividual differences some patients may require more or less diazepam to control with-\ndrawal symptoms.\nThe half-lives of benzodiazepines vary greatly. The degree of sedation that they \ninduce also varies, making it difficult to determine exact equivalents. Table 3.28 is an \napproximate guide only. Extra precautions apply in patients with hepatic dysfunction, \nas diazepam and other longer-acting drugs may accumulate to toxic levels.\nPattern of tapering\nThe relationship between dose of benzodiazepine and their effect on their principal \ntarget, the GABA-A receptor, is hyperbolic, with the following implications:\n■\n■Reducing dose by fixed amounts (e.g. 12.5mg in Figure 3.6a) will give rise to increasingly large reductions in GABA-A occupancy.\n■\n■This is consistent with clinical observation that withdrawal symptoms are non-linearly related to dose reduction (e.g. a 1mg reduction of diazepam is tolerable from \n20mg but intolerable from 5mg32).\n■\n■Reducing diazepam dose by 5mg from 50mg will cause a reduction of 2.3 percentage\npoints of GABA-A occupancy, but a 5mg reduction from 5mg will cause a reduction \nof 18.3 percentage points.\nIn order to reduce the dose of benzodiazepine by equal amounts of effect at their \nmajor target, hyperbolically reducing doses are required (Figure 3.6b):\n■\n■This means that the size of dose reductions should be smaller and smaller as the total\ndose gets smaller.\n■\n■In practice, these reductions can be most easily calculated based on a proportion of\nthe most recent dose (an exponential pattern).\n100\n(a)\n(b)\n80\nGABA-A occupancy (%)\n60\n40\n20\n0\n0\n50\nDiazepam dose (mg)\n100\n100\n80\nGABA-A occupancy (%)\n60\n40\n20\n0\n0\n50\nDiazepam dose (mg)\n100\nFigure 3.6  (a) Linear reductions of dose cause increasingly large reductions in effect on GABA-A receptor \noccupancy. (b) Reducing effect on GABA-A receptors by even amounts, requires hyperbolically reducing \ndoses of diazepam. Note how small final doses will be required to be in order to prevent too large a final \n‘step down’. Adapted from Brouillet et al. (199133).",
+  "repaired_text_sha256": "32bd102c1ccf17f912af73ff269989b8f1fb173695841cfa02d5aeb01a3ad370",
+  "raw_text_sha256": "f649afd81ab077fc27e437f41825147b740bf102438732c6c63d42365c03da15",
+  "repair_ids": [
+    "repair-000477",
+    "repair-000478"
+  ],
+  "raw_file": "raw/page-0464.json"
+}

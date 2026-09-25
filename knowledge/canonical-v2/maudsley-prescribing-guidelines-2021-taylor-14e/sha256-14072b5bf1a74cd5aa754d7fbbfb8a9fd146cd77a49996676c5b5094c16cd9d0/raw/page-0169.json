@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0169",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 169,
+  "source_page_index": 168,
+  "source_page_display": 169,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "148    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\n\t64.\t Suzuki Y, et al. Dose-dependent increase in the QTc interval in aripiprazole treatment after risperidone. Prog Neuropsychopharmacol Biol \nPsychiatry 2011; 35:643–644.\n\t65.\t Raschi E, et al. The contribution of national spontaneous reporting systems to detect signals of torsadogenicity: issues emerging from the \nARITMO project. Drug Saf 2016; 39:59–68.\n\t66.\t Belmonte C, et al. Evaluation of the relationship between pharmacokinetics and the safety of aripiprazole and its cardiovascular effects in \nhealthy volunteers. J Clin Psychopharmacol 2016; 36:608–614.\n\t67.\t Germano E, et al. ECG parameters in children and adolescents treated with aripiprazole and risperidone. Prog Neuropsychopharmacol Biol \nPsychiatry 2014; 51:23–27.\n\t68.\t Su KP, et al. Olanzapine-induced QTc prolongation in a patient with Wolff-Parkinson-White syndrome. Schizophr Res 2004; 66:191–192.\n\t69.\t Morissette P, et al. Olanzapine prolongs cardiac repolarization by blocking the rapid component of the delayed rectifier potassium current. \nJournal of Psychopharmacology 2007; 21:735–741.\n\t70.\t Bar KJ, et al. Influence of olanzapine on QT variability and complexity measures of heart rate in patients with schizophrenia. J Clin \nPsychopharmacol 2008; 28:694–698.\n\t71.\t Berling I, et al. Prolonged QT risk assessment in antipsychotic overdose using the qt nomogram. Ann Emerg Med 2015; 66:154–164.\n\t72.\t Jensen KG, et al. Corrected QT changes during antipsychotic treatment of children and adolescents: a systematic review and meta-analysis \nof clinical trials. J Am Acad Child Adolesc Psychiatry 2015; 54:25–36.\n\t73.\t Karz AJ, et al. Effects of aripiprazole on the QTc: a case report. J Clin Psychiatry 2015; 76:1648–1649.\n\t74.\t Friedrich ME, et al. Cardiovascular adverse reactions during antipsychotic treatment: results of AMSP, a drug surveillance program between \n1993 and 2013. Int J Neuropsychopharmacol 2020; 23:67–75.\n\t75.\t Sunovion Pharmaceuticals Inc. Highlights of Prescribing Information: LATUDA (lurasidone hydrochloride) tablets. 2019; http://www.latuda.\ncom/LatudaPrescribingInformation.pdf.\n\t76.\t Potkin SG, et al. Double-blind comparison of the safety and efficacy of lurasidone and ziprasidone in clinically stable outpatients with schizo-\nphrenia or schizoaffective disorder. Schizophr Res 2011; 132:101–107.\n\t77.\t Nakamura M, et al. Lurasidone in the treatment of acute schizophrenia: a double-blind, placebo-controlled trial. J Clin Psychiatry 2009; \n70:829–836.\n\t78.\t Meltzer HY, et al. Lurasidone in the treatment of schizophrenia: a randomized, double-blind, placebo- and olanzapine-controlled study. Am \nJ Psychiatry 2011; 168:957–967.\n\t79.\t Hasnain M, et al. Quetiapine, QTc interval prolongation, and torsade de pointes: a review of case reports. Ther Adv Psychopharmacol 2014; \n4:130–138.\n\t80.\t Hatta K, et al. Prolonged QT interval in acute psychotic patients. Psychiatry Res 2000; 94:279–285.\n\t81.\t Priori SG, et al. Low penetrance in the long-QT syndrome: clinical impact. Circulation 1999; 99:529–533.\n\t82.\t Frassati D, et al. Hidden cardiac lesions and psychotropic drugs as a possible cause of sudden death in psychiatric patients: a report of 14 \ncases and review of the literature. Can J Psychiatry 2004; 49:100–105.\n",
+  "raw_text_sha256": "c00d82e2fdea049e280997080c418534bfadca04d746b4022f9e717516b06cf5",
+  "coordinates_sha256": "8f3bf577e99fe5c9030956875dbfa3ede4dccc455d1a452100358489e09306cd",
+  "block_sequence_sha256": "62772c64ef3f566acd0c2a170294c2447172f77b4d7a0bbac4e3549939dc00a9",
+  "blocks": [
+    {
+      "block_id": "page-0169-block-0000",
+      "order": 0,
+      "text": "148    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "43fbdfce5944b78e9110fe74906b978b7ef5db90a377adebd1a50fce239e23e5"
+    },
+    {
+      "block_id": "page-0169-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0169-block-0002",
+      "order": 2,
+      "text": "\t64.\t Suzuki Y, et al. Dose-dependent increase in the QTc interval in aripiprazole treatment after risperidone. Prog Neuropsychopharmacol Biol \n",
+      "bbox": [
+        61.88909912109375,
+        63.2694091796875,
+        435.5870666503906,
+        70.30140686035156
+      ],
+      "text_sha256": "08647a8c34cf387cbd3f300fc263971780467e589e266964b32e8baf3a9feb61"
+    },
+    {
+      "block_id": "page-0169-block-0003",
+      "order": 3,
+      "text": "Psychiatry 2011; 35:643–644.\n\t65.\t Raschi E, et al. The contribution of national spontaneous reporting systems to detect signals of torsadogenicity: issues emerging from the \n",
+      "bbox": [
+        61.895103454589844,
+        72.12541198730469,
+        435.5812072753906,
+        88.30140686035156
+      ],
+      "text_sha256": "451ab5051b039e71945fc24ff31bb91f483a28b2a94f795bc92ca7aafddcc8fc"
+    },
+    {
+      "block_id": "page-0169-block-0004",
+      "order": 4,
+      "text": "ARITMO project. Drug Saf 2016; 39:59–68.\n\t66.\t Belmonte C, et al. Evaluation of the relationship between pharmacokinetics and the safety of aripiprazole and its cardiovascular effects in \n",
+      "bbox": [
+        61.901100158691406,
+        90.12541198730469,
+        435.5329895019531,
+        106.30140686035156
+      ],
+      "text_sha256": "b7c18d74d0404beda18d9a3b5ba2be26d7c5ca94c277a16868cb3cd53543d1d1"
+    },
+    {
+      "block_id": "page-0169-block-0005",
+      "order": 5,
+      "text": "healthy volunteers. J Clin Psychopharmacol 2016; 36:608–614.\n\t67.\t Germano E, et al. ECG parameters in children and adolescents treated with aripiprazole and risperidone. Prog Neuropsychopharmacol Biol \n",
+      "bbox": [
+        61.90709686279297,
+        108.12541198730469,
+        435.5751037597656,
+        124.30140686035156
+      ],
+      "text_sha256": "8cbc60e16c5f0742a9ac316ca587cd2a29e3fbe2b90c97c8d4ab93514e42a963"
+    },
+    {
+      "block_id": "page-0169-block-0006",
+      "order": 6,
+      "text": "Psychiatry 2014; 51:23–27.\n\t68.\t Su KP, et al. Olanzapine-induced QTc prolongation in a patient with Wolff-Parkinson-White syndrome. Schizophr Res 2004; 66:191–192.\n\t69.\t Morissette P, et al. Olanzapine prolongs cardiac repolarization by blocking the rapid component of the delayed rectifier potassium current. \n",
+      "bbox": [
+        61.91310119628906,
+        126.12541198730469,
+        435.5749816894531,
+        151.30140686035156
+      ],
+      "text_sha256": "370df2f8b5c0bcba82166af2eccc6e0b1d90a923116f78391d5e8b82b4840f26"
+    },
+    {
+      "block_id": "page-0169-block-0007",
+      "order": 7,
+      "text": "Journal of Psychopharmacology 2007; 21:735–741.\n\t70.\t Bar KJ, et al. Influence of olanzapine on QT variability and complexity measures of heart rate in patients with schizophrenia. J Clin \n",
+      "bbox": [
+        61.92510223388672,
+        153.1254119873047,
+        435.5930480957031,
+        169.30140686035156
+      ],
+      "text_sha256": "4a078d0010939b0b13504377d0795b45e2c1890c48e7e5c205808c682e394de8"
+    },
+    {
+      "block_id": "page-0169-block-0008",
+      "order": 8,
+      "text": "Psychopharmacol 2008; 28:694–698.\n\t71.\t Berling I, et al. Prolonged QT risk assessment in antipsychotic overdose using the qt nomogram. Ann Emerg Med 2015; 66:154–164.\n\t72.\t Jensen KG, et al. Corrected QT changes during antipsychotic treatment of children and adolescents: a systematic review and meta-analysis \n",
+      "bbox": [
+        61.93109893798828,
+        171.1254119873047,
+        435.6289367675781,
+        196.30140686035156
+      ],
+      "text_sha256": "321b8a1f420daa8023a91c1425c0ff5da9198a21ebd255020f996d563434c223"
+    },
+    {
+      "block_id": "page-0169-block-0009",
+      "order": 9,
+      "text": "of clinical trials. J Am Acad Child Adolesc Psychiatry 2015; 54:25–36.\n\t73.\t Karz AJ, et al. Effects of aripiprazole on the QTc: a case report. J Clin Psychiatry 2015; 76:1648–1649.\n\t74.\t Friedrich ME, et al. Cardiovascular adverse reactions during antipsychotic treatment: results of AMSP, a drug surveillance program between \n",
+      "bbox": [
+        61.94309997558594,
+        198.1254119873047,
+        435.6231994628906,
+        223.30140686035156
+      ],
+      "text_sha256": "738196879c07f2efba32e236b52c15eac7eda183300fc8d818e705beef1af6d2"
+    },
+    {
+      "block_id": "page-0169-block-0010",
+      "order": 10,
+      "text": "1993 and 2013. Int J Neuropsychopharmacol 2020; 23:67–75.\n\t75.\t Sunovion Pharmaceuticals Inc. Highlights of Prescribing Information: LATUDA (lurasidone hydrochloride) tablets. 2019; http://www.latuda.\n",
+      "bbox": [
+        61.955101013183594,
+        225.1254119873047,
+        433.9370422363281,
+        241.30140686035156
+      ],
+      "text_sha256": "135ea9223d070ba07fbe7c4d6281aacf619367eb213b963801d09244adbc5211"
+    },
+    {
+      "block_id": "page-0169-block-0011",
+      "order": 11,
+      "text": "com/LatudaPrescribingInformation.pdf.\n\t76.\t Potkin SG, et al. Double-blind comparison of the safety and efficacy of lurasidone and ziprasidone in clinically stable outpatients with schizo-\n",
+      "bbox": [
+        61.961097717285156,
+        243.2694091796875,
+        433.9368896484375,
+        259.3014221191406
+      ],
+      "text_sha256": "380aeaf7324e2cb1c370c5ae17250540ea4acf0d670fa4fc7651557c6cc7d5e7"
+    },
+    {
+      "block_id": "page-0169-block-0012",
+      "order": 12,
+      "text": "phrenia or schizoaffective disorder. Schizophr Res 2011; 132:101–107.\n\t77.\t Nakamura M, et al. Lurasidone in the treatment of acute schizophrenia: a double-blind, placebo-controlled trial. J Clin Psychiatry 2009; \n",
+      "bbox": [
+        61.96710205078125,
+        261.1253967285156,
+        435.6230773925781,
+        277.3014221191406
+      ],
+      "text_sha256": "22dd0e2d2af515d6bb849f157a4bec68e1397782bb46e4a7a72ea7c4e3581f88"
+    },
+    {
+      "block_id": "page-0169-block-0013",
+      "order": 13,
+      "text": "70:829–836.\n\t78.\t Meltzer HY, et al. Lurasidone in the treatment of schizophrenia: a randomized, double-blind, placebo- and olanzapine-controlled study. Am \n",
+      "bbox": [
+        61.97309875488281,
+        279.1253967285156,
+        435.6830139160156,
+        295.3014221191406
+      ],
+      "text_sha256": "c69d1cf28d0fc26808e74600dd8009f3ea4f06198cb291b6c9b923da96f42a96"
+    },
+    {
+      "block_id": "page-0169-block-0014",
+      "order": 14,
+      "text": "J Psychiatry 2011; 168:957–967.\n\t79.\t Hasnain M, et al. Quetiapine, QTc interval prolongation, and torsade de pointes: a review of case reports. Ther Adv Psychopharmacol 2014; \n",
+      "bbox": [
+        61.979103088378906,
+        297.1253967285156,
+        435.6050720214844,
+        313.3014221191406
+      ],
+      "text_sha256": "3cc9372e76755eaac4a4f1979c8d6219209f7f985422f2d39b39e457f431d65d"
+    },
+    {
+      "block_id": "page-0169-block-0015",
+      "order": 15,
+      "text": "4:130–138.\n\t80.\t Hatta K, et al. Prolonged QT interval in acute psychotic patients. Psychiatry Res 2000; 94:279–285.\n\t81.\t Priori SG, et al. Low penetrance in the long-QT syndrome: clinical impact. Circulation 1999; 99:529–533.\n\t82.\t Frassati D, et al. Hidden cardiac lesions and psychotropic drugs as a possible cause of sudden death in psychiatric patients: a report of 14 \n",
+      "bbox": [
+        61.98509979248047,
+        315.1253967285156,
+        435.6891174316406,
+        349.3014221191406
+      ],
+      "text_sha256": "7cb7a07f7d522321febbb5085ab2e67f3b98448f6f248efd8f6b8d78a98f987a"
+    },
+    {
+      "block_id": "page-0169-block-0016",
+      "order": 16,
+      "text": "cases and review of the literature. Can J Psychiatry 2004; 49:100–105.\n",
+      "bbox": [
+        73.00109100341797,
+        351.1253967285156,
+        255.7550811767578,
+        358.3014221191406
+      ],
+      "text_sha256": "0168f3a5af3ee2f71ba146d1f93caadf1d3badf4f4ffeefc55c3f72d951f46e4"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

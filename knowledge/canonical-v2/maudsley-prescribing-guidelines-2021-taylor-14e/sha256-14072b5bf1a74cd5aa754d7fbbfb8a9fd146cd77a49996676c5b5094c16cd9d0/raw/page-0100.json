@@ -1,0 +1,215 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0100",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 100,
+  "source_page_index": 99,
+  "source_page_display": 100,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    79\nCHAPTER 1\nReferences\n\t 1.\t Shirley M, et al. Aripiprazole (ABILIFY MAINTENA®): a review of its use as maintenance treatment for adult patients with schizophrenia. \nDrugs 2014; 74:1097–1110.\n\t 2.\t US Food and Drug Administration. Highlights of Prescribing Information. Abilify Maintena (aripiprazole) for extended-release suspension \nfor intramuscular use. 2020; https://www.accessdata.fda.gov/drugsatfda_docs/label/2020/202971s013lbl.pdf.\n\t 3.\t Otsuka Pharmaceuticals (UK) Ltd. Summary of Product Characteristics. Abilify Maintena 400 mg powder and solvent for prolonged-release \nsuspension for injection. 2020; https://www.medicines.org.uk/emc/product/7965/smpc.\n\t 4.\t Mallikaarjun S, et al. Pharmacokinetics, tolerability and safety of aripiprazole once-monthly in adult schizophrenia: an open-label, parallel-\narm, multiple-dose study. Schizophr Res 2013; 150:281–288.\n\t 5.\t Wang Y, et al. The two-injection start of aripiprazole once-monthly provides rapid attainment of therapeutic concentration without the need \nfor 14 day oral Neuropsychopharmacology (ECNP) Congress, 12–15 September 2020, Virtual.\n\t 6.\t Kane JM, et al. Aripiprazole intramuscular depot as maintenance treatment in patients with schizophrenia: a 52-week, multicenter, rand-\nomized, double-blind, placebo-controlled study. J Clin Psychiatry 2012; 73:617–624.\n\t 7.\t Potkin SG, et al. Safety and tolerability of once monthly aripiprazole treatment initiation in adults with schizophrenia stabilized on selected \natypical oral antipsychotics other than aripiprazole. Curr Med Res Opin 2013; 29:1241–1251.\n\t 8.\t Hard ML, et al. Aripiprazole lauroxil: pharmacokinetic profile of this long-acting injectable antipsychotic in persons with schizophrenia. J \nClin Psychopharmacol 2017; 37:289–295.\n\t 9.\t Turncliff R, et al. Relative bioavailability and safety of aripiprazole lauroxil, a novel once-monthly, long-acting injectable atypical antipsy-\nchotic, following deltoid and gluteal administration in adult subjects with schizophrenia. Schizophr Res 2014; 159:404–410.\n\t10.\t Ehret MJ, et al. Aripiprazole Lauroxil NanoCrystal® Dispersion Technology (Aristada Initio®). Clin Schizophr Relat Psychoses 2018; \n12:92–96.\n",
+  "raw_text_sha256": "6773dd60675c7bde5db6442e12ff7b9568faf247ef65aa45c80d85eed897d9f7",
+  "coordinates_sha256": "1d9461b376460622dd985cf7ae66493d580582a7b4120e2f642d752ac7b2e85c",
+  "block_sequence_sha256": "7d8039f1e35dc398a441e2901459be0431652090226a45c3884d73a84534700c",
+  "blocks": [
+    {
+      "block_id": "page-0100-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    79\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "914568ca9b9dd80bcaf0e4386a44e52f0be4246f0d5eb290364c57fbe7a9aa24"
+    },
+    {
+      "block_id": "page-0100-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0100-block-0002",
+      "order": 2,
+      "text": "References\n",
+      "bbox": [
+        47.99909973144531,
+        62.31448745727539,
+        104.03309631347656,
+        75.3494873046875
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0100-block-0003",
+      "order": 3,
+      "text": "\t 1.\t Shirley M, et al. Aripiprazole (ABILIFY MAINTENA®): a review of its use as maintenance treatment for adult patients with schizophrenia. \n",
+      "bbox": [
+        47.99909973144531,
+        80.43548583984375,
+        421.6789245605469,
+        87.46748352050781
+      ],
+      "text_sha256": "5a1120914bad4c034ba99c1bbbc1bc1a0b1533a7cd215bafb311245b2f813e5c"
+    },
+    {
+      "block_id": "page-0100-block-0004",
+      "order": 4,
+      "text": "Drugs 2014; 74:1097–1110.\n\t 2.\t US Food and Drug Administration. Highlights of Prescribing Information. Abilify Maintena (aripiprazole) for extended-release suspension \n",
+      "bbox": [
+        48.005096435546875,
+        89.29148864746094,
+        421.6430358886719,
+        105.46748352050781
+      ],
+      "text_sha256": "8a3bab80b204aa364aa8dc18f5c80d89cf233f3ecdee6f9620859cd580c908f9"
+    },
+    {
+      "block_id": "page-0100-block-0005",
+      "order": 5,
+      "text": "for intramuscular use. 2020; https://www.accessdata.fda.gov/drugsatfda_docs/label/2020/202971s013lbl.pdf.\n\t 3.\t Otsuka Pharmaceuticals (UK) Ltd. Summary of Product Characteristics. Abilify Maintena 400 mg powder and solvent for prolonged-release \n",
+      "bbox": [
+        48.01110076904297,
+        107.43548583984375,
+        421.6969299316406,
+        123.46748352050781
+      ],
+      "text_sha256": "a82d8b16648166f4603cdb66a40940117eec1de7a95e5fbb4e205f181923b09b"
+    },
+    {
+      "block_id": "page-0100-block-0006",
+      "order": 6,
+      "text": "suspension for injection. 2020; https://www.medicines.org.uk/emc/product/7965/smpc.\n\t 4.\t Mallikaarjun S, et al. Pharmacokinetics, tolerability and safety of aripiprazole once-monthly in adult schizophrenia: an open-label, parallel-\n",
+      "bbox": [
+        48.01709747314453,
+        125.43548583984375,
+        420.029052734375,
+        141.4674835205078
+      ],
+      "text_sha256": "6d03f53fa75765df3a6ec6d967a9e057a313f6060c370f81ffd9fedba78e8680"
+    },
+    {
+      "block_id": "page-0100-block-0007",
+      "order": 7,
+      "text": "arm, multiple-dose study. Schizophr Res 2013; 150:281–288.\n\t 5.\t Wang Y, et al. The two-injection start of aripiprazole once-monthly provides rapid attainment of therapeutic concentration without the need \n",
+      "bbox": [
+        48.023101806640625,
+        143.29148864746094,
+        421.7029113769531,
+        159.4674835205078
+      ],
+      "text_sha256": "54ba167c46f608616943d9816c8075524ae6881765acd4083e4657d86dfcc4bf"
+    },
+    {
+      "block_id": "page-0100-block-0008",
+      "order": 8,
+      "text": "for 14 day oral Neuropsychopharmacology (ECNP) Congress, 12–15 September 2020, Virtual.\n\t 6.\t Kane JM, et al. Aripiprazole intramuscular depot as maintenance treatment in patients with schizophrenia: a 52-week, multicenter, rand-\n",
+      "bbox": [
+        48.02909851074219,
+        161.43548583984375,
+        419.99908447265625,
+        177.4674835205078
+      ],
+      "text_sha256": "060c152d3d46fb3df95550b32bd497974da70dc4f5249e6f1b4c195bd6ee2445"
+    },
+    {
+      "block_id": "page-0100-block-0009",
+      "order": 9,
+      "text": "omized, double-blind, placebo-controlled study. J Clin Psychiatry 2012; 73:617–624.\n\t 7.\t Potkin SG, et al. Safety and tolerability of once monthly aripiprazole treatment initiation in adults with schizophrenia stabilized on selected \n",
+      "bbox": [
+        48.03510284423828,
+        179.29148864746094,
+        421.6849060058594,
+        195.4674835205078
+      ],
+      "text_sha256": "86cf7afb9fd1d217d11db27e309abee89d864ab41135425d1001dded32a47fa6"
+    },
+    {
+      "block_id": "page-0100-block-0010",
+      "order": 10,
+      "text": "atypical oral antipsychotics other than aripiprazole. Curr Med Res Opin 2013; 29:1241–1251.\n\t 8.\t Hard ML, et al. Aripiprazole lauroxil: pharmacokinetic profile of this long-acting injectable antipsychotic in persons with schizophrenia. J \n",
+      "bbox": [
+        48.041099548339844,
+        197.29148864746094,
+        421.7330627441406,
+        213.4674835205078
+      ],
+      "text_sha256": "168e7f0903ccfb79e982d615c3a58dd7fbafebfcb3e9c8d477ef422f56976715"
+    },
+    {
+      "block_id": "page-0100-block-0011",
+      "order": 11,
+      "text": "Clin Psychopharmacol 2017; 37:289–295.\n",
+      "bbox": [
+        59.04508972167969,
+        215.29148864746094,
+        169.0250701904297,
+        222.4674835205078
+      ],
+      "text_sha256": "0ff06497ebb7884d283f07ce1b016243519ceacb239f9bcf4f4cdf4b3e59669f"
+    },
+    {
+      "block_id": "page-0100-block-0012",
+      "order": 12,
+      "text": "\t 9.\t Turncliff R, et al. Relative bioavailability and safety of aripiprazole lauroxil, a novel once-monthly, long-acting injectable atypical antipsy-\n",
+      "bbox": [
+        48.047096252441406,
+        224.43548583984375,
+        420.07696533203125,
+        231.46751403808594
+      ],
+      "text_sha256": "80f4ac793c7b7c69991af00c9ea229d560ef748340ba94dde487d7d09d254489"
+    },
+    {
+      "block_id": "page-0100-block-0013",
+      "order": 13,
+      "text": "chotic, following deltoid and gluteal administration in adult subjects with schizophrenia. Schizophr Res 2014; 159:404–410.\n",
+      "bbox": [
+        59.051109313964844,
+        233.29148864746094,
+        380.9811096191406,
+        240.4674835205078
+      ],
+      "text_sha256": "9d41c9246e3a7dd24f6fb96c10c7b6cc4e05a16c13ef3bc470cdabb4e4909e9c"
+    },
+    {
+      "block_id": "page-0100-block-0014",
+      "order": 14,
+      "text": "\t10.\t Ehret MJ, et al. Aripiprazole Lauroxil NanoCrystal® Dispersion Technology (Aristada Initio®). Clin Schizophr Relat Psychoses 2018; \n",
+      "bbox": [
+        48.0531005859375,
+        242.43548583984375,
+        421.7149963378906,
+        249.46751403808594
+      ],
+      "text_sha256": "5fbd5983e2504968e8bcab822b1ce403cd28b58f0310edd527db63a117546c57"
+    },
+    {
+      "block_id": "page-0100-block-0015",
+      "order": 15,
+      "text": "12:92–96.\n",
+      "bbox": [
+        59.057098388671875,
+        251.29148864746094,
+        85.40908813476562,
+        258.4674987792969
+      ],
+      "text_sha256": "61b59251c544b67101fcaee997c8b7259c7ae4615cd076ca2c8afc56c120e674"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

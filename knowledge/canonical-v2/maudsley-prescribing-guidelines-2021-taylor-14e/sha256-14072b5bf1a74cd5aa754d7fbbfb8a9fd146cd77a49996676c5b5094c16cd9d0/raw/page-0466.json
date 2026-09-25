@@ -1,0 +1,323 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0466",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 466,
+  "source_page_index": 465,
+  "source_page_display": 466,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    445\nCHAPTER 3\n■\n■Reductions should be made according to a proportion (e.g. 10%) of the last dose. \nThis means the reductions recommended will become smaller and smaller as the total \ndose is lowered. Most patients will be able to proceed between a rate of about 5–10% \nof their most recent dose per month.\n■\n■After reduction withdrawal symptoms should be monitored for 2–4 weeks, or until \nsymptoms have resolved. Monitoring may take the form of simple measures of symp-\ntoms each day (e.g. out of 10) or using standardised benzodiazepine withdrawal \nscales.\n■\n■Further reduction should be titrated to the tolerability of this experience. If symptoms \nare intolerable, an increase in dose, a period of stabilisation and more gradual reduc-\ntion is needed. Mild, tolerable symptoms mean the reduction can continue to reduce \nat the same rate.\nTroubleshooting\n■\n■If significant withdrawal symptoms emerge at any point, either hold the current dose \nto allow them to resolve, or if intolerable increase to the last dose at which the symp-\ntoms were tolerable, and remain there until symptoms resolve. After stabilisation, \ntapering will need to be more gradual: with reduction in smaller amounts and/or \nlonger periods in between reductions.\n■\n■The experience of distressing withdrawal symptoms does not indicate that a patient \ncannot stop benzodiazepines, but that they will need to taper more slowly, with \nsmaller reductions than they have been undertaking (some need to taper at less than \n5% of the most recent dose per month).\n■\n■At very small doses, liquid formulations may be required, which are available for \ndrugs such as diazepam and lorazepam. Switching to these drugs may therefore be \nuseful; other options include specially compounded liquids. Many patients report \ncutting up fragments of tablets and weighing them or making their own solutions \nfrom crushed tablets, but this approach cannot be recommended.\n■\n■Final doses before completely stopping the drug will need to be very small to avoid a \nlarger reduction in effect on the brain. For example, for a patient reducing diazepam \nat 10% per month, the final dose will need to be 0.25mg.33\nReduction schedules\nA simple guide to diazepam dose reductions:\n■\n■Reduce by 5–10mg/day every 2–4 weeks, down to a daily dose of 50mg\n■\n■Reduce by 2–5mg/day every 2–4 weeks, down to a daily dose of 20mg\n■\n■Reduce by 1–2mg/day every 2–4 weeks, down to a daily dose of 10mg\n■\n■Reduce by 0.5–1mg/day every 2–4 weeks, down to a daily dose of 5mg\n■\n■Reduce by 0.25–0.5mg/day every 2–4 weeks, down to a daily dose of 2.5mg\n■\n■Reduce by 0.1–0.25mg/day every 2–4 weeks until stopped\n",
+  "raw_text_sha256": "f562a997b76dc068c534dbb0f7e0f6c9bd367aeeafe3bd43aa4ed7b0371f8a80",
+  "coordinates_sha256": "7e1835aed82d03838b1ef56e8788985d082eda808750b17ca4fa6c26a810f58e",
+  "block_sequence_sha256": "01ac85c72d3c4f42f11842e79a6e083760061f38fa1eabe33127cfcbd5a6c43c",
+  "blocks": [
+    {
+      "block_id": "page-0466-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    445\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "9065d15854914ed8355e77ebc6ec999902bd1ad05759cf122e93de802e0fe8f0"
+    },
+    {
+      "block_id": "page-0466-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0466-block-0002",
+      "order": 2,
+      "text": "■\n■Reductions should be made according to a proportion (e.g. 10%) of the last dose. \n",
+      "bbox": [
+        47.999900817871094,
+        62.5504150390625,
+        422.78997802734375,
+        74.27041625976562
+      ],
+      "text_sha256": "82a12e854d6b1aadc1c1f3c98fb86e058de52bcc7a18a891dbd1fd02b9e68fc3"
+    },
+    {
+      "block_id": "page-0466-block-0003",
+      "order": 3,
+      "text": "This means the reductions recommended will become smaller and smaller as the total \ndose is lowered. Most patients will be able to proceed between a rate of about 5–10% \nof their most recent dose per month.\n",
+      "bbox": [
+        57.0,
+        74.5504150390625,
+        422.79998779296875,
+        110.27041625976562
+      ],
+      "text_sha256": "21fd49f3780f7cebcd06f4b903eb625044d02f8468e196653d6a2a859759a491"
+    },
+    {
+      "block_id": "page-0466-block-0004",
+      "order": 4,
+      "text": "■\n■After reduction withdrawal symptoms should be monitored for 2–4 weeks, or until \n",
+      "bbox": [
+        47.999900817871094,
+        110.5504150390625,
+        422.75006103515625,
+        122.27041625976562
+      ],
+      "text_sha256": "b92c26533475b816b38ff2ac13f5b83da77acc6130f306b4e8cd5b11ee96da7d"
+    },
+    {
+      "block_id": "page-0466-block-0005",
+      "order": 5,
+      "text": "symptoms have resolved. Monitoring may take the form of simple measures of symp-\ntoms each day (e.g. out of 10) or using standardised benzodiazepine withdrawal \nscales.\n",
+      "bbox": [
+        57.0,
+        122.5504150390625,
+        422.7500305175781,
+        158.27041625976562
+      ],
+      "text_sha256": "d13676b21c0e3bfb6782fc44ec9f97c468329930caa4d70594d38100cf920dea"
+    },
+    {
+      "block_id": "page-0466-block-0006",
+      "order": 6,
+      "text": "■\n■Further reduction should be titrated to the tolerability of this experience. If symptoms \n",
+      "bbox": [
+        47.999900817871094,
+        158.5504150390625,
+        422.7300109863281,
+        170.27041625976562
+      ],
+      "text_sha256": "aecf28885989773eb69cd6e4bb7265915843e2696e9fcf37128c7eedeb8d1705"
+    },
+    {
+      "block_id": "page-0466-block-0007",
+      "order": 7,
+      "text": "are intolerable, an increase in dose, a period of stabilisation and more gradual reduc-\ntion is needed. Mild, tolerable symptoms mean the reduction can continue to reduce \nat the same rate.\n",
+      "bbox": [
+        57.0,
+        170.5504150390625,
+        422.8098449707031,
+        206.27041625976562
+      ],
+      "text_sha256": "37e8237aa3341d7749d8a8242c298be03cf4e8ee22264908186c9f810f70ae9f"
+    },
+    {
+      "block_id": "page-0466-block-0008",
+      "order": 8,
+      "text": "Troubleshooting\n",
+      "bbox": [
+        48.0,
+        229.70547485351562,
+        132.34799194335938,
+        242.740478515625
+      ],
+      "text_sha256": "d0ce6966d20aa887e1e8fd1cda50f21fd3b90ebfb5e8576b2742d3b44bc1a1b8"
+    },
+    {
+      "block_id": "page-0466-block-0009",
+      "order": 9,
+      "text": "■\n■If significant withdrawal symptoms emerge at any point, either hold the current dose \n",
+      "bbox": [
+        47.999900817871094,
+        254.55047607421875,
+        422.8200378417969,
+        266.2704772949219
+      ],
+      "text_sha256": "7332e9b7185c00bbcd53b5596b8f93d233c175a721228f461f90d3798b900682"
+    },
+    {
+      "block_id": "page-0466-block-0010",
+      "order": 10,
+      "text": "to allow them to resolve, or if intolerable increase to the last dose at which the symp-\ntoms were tolerable, and remain there until symptoms resolve. After stabilisation, \ntapering will need to be more gradual: with reduction in smaller amounts and/or \nlonger periods in between reductions.\n",
+      "bbox": [
+        57.0,
+        266.55047607421875,
+        422.78997802734375,
+        314.2704772949219
+      ],
+      "text_sha256": "605ac55586eee3571395203a87df489d51ab7d61af0abf6c1cea610722628d84"
+    },
+    {
+      "block_id": "page-0466-block-0011",
+      "order": 11,
+      "text": "■\n■The experience of distressing withdrawal symptoms does not indicate that a patient \n",
+      "bbox": [
+        47.999900817871094,
+        314.55047607421875,
+        422.77984619140625,
+        326.2704772949219
+      ],
+      "text_sha256": "03235ff95a78655e889687ef980ed241cca02384982ed3d2c74e844530205b6d"
+    },
+    {
+      "block_id": "page-0466-block-0012",
+      "order": 12,
+      "text": "cannot stop benzodiazepines, but that they will need to taper more slowly, with \nsmaller reductions than they have been undertaking (some need to taper at less than \n5% of the most recent dose per month).\n",
+      "bbox": [
+        57.0,
+        326.55047607421875,
+        422.780029296875,
+        362.2704772949219
+      ],
+      "text_sha256": "e6f48825e1d5db3299720bd25f0e013aadb5f97007296c8f2749da9b7f01fb81"
+    },
+    {
+      "block_id": "page-0466-block-0013",
+      "order": 13,
+      "text": "■\n■At very small doses, liquid formulations may be required, which are available for \n",
+      "bbox": [
+        47.999900817871094,
+        362.55047607421875,
+        422.8100280761719,
+        374.2704772949219
+      ],
+      "text_sha256": "4d1a9382d4c79ee1b797559794937043162e9a2e76dd7aaefee262c0ebfd348c"
+    },
+    {
+      "block_id": "page-0466-block-0014",
+      "order": 14,
+      "text": "drugs such as diazepam and lorazepam. Switching to these drugs may therefore be \nuseful; other options include specially compounded liquids. Many patients report \ncutting up fragments of tablets and weighing them or making their own solutions \nfrom crushed tablets, but this approach cannot be recommended.\n",
+      "bbox": [
+        57.0,
+        374.55047607421875,
+        422.75994873046875,
+        422.2704772949219
+      ],
+      "text_sha256": "7113c0d4fe46f0d46df3a65c71d632ae919e12762c61bd1b576d220b729519e4"
+    },
+    {
+      "block_id": "page-0466-block-0015",
+      "order": 15,
+      "text": "■\n■Final doses before completely stopping the drug will need to be very small to avoid a \n",
+      "bbox": [
+        47.999900817871094,
+        422.55047607421875,
+        422.75982666015625,
+        434.2704772949219
+      ],
+      "text_sha256": "4ad54f47f08c1b5063157ef140104f901dccc1d5a042ba78fc1c5f62c0b5d9b2"
+    },
+    {
+      "block_id": "page-0466-block-0016",
+      "order": 16,
+      "text": "larger reduction in effect on the brain. For example, for a patient reducing diazepam \nat 10% per month, the final dose will need to be 0.25mg.33\n",
+      "bbox": [
+        57.0,
+        434.55047607421875,
+        422.719970703125,
+        458.2704772949219
+      ],
+      "text_sha256": "2dd16449256186b148e49d7715dcb0b9b49d9647739000d1101d09471c1ea034"
+    },
+    {
+      "block_id": "page-0466-block-0017",
+      "order": 17,
+      "text": "Reduction schedules\n",
+      "bbox": [
+        48.0,
+        481.7054748535156,
+        153.10499572753906,
+        494.740478515625
+      ],
+      "text_sha256": "68e17ab7b6cda57eab9770e752db9efc14d32b8c4334f88b7ca0064df541402b"
+    },
+    {
+      "block_id": "page-0466-block-0018",
+      "order": 18,
+      "text": "A simple guide to diazepam dose reductions:\n",
+      "bbox": [
+        48.0,
+        500.55047607421875,
+        240.22998046875,
+        512.2705078125
+      ],
+      "text_sha256": "c601808faa451019d1db3d3f35f1f2c7134e29c351985e3a57d5712d9ffe79ac"
+    },
+    {
+      "block_id": "page-0466-block-0019",
+      "order": 19,
+      "text": "■\n■Reduce by 5–10mg/day every 2–4 weeks, down to a daily dose of 50mg\n",
+      "bbox": [
+        55.249900817871094,
+        527.99609375,
+        324.9636535644531,
+        537.8646240234375
+      ],
+      "text_sha256": "929cd0831c3e5e154f7634c912b1088c73fad3cd8630401d21131eb56939d1b1"
+    },
+    {
+      "block_id": "page-0466-block-0020",
+      "order": 20,
+      "text": "■\n■Reduce by 2–5mg/day every 2–4 weeks, down to a daily dose of 20mg\n",
+      "bbox": [
+        55.249900817871094,
+        541.99609375,
+        320.2376403808594,
+        551.8646240234375
+      ],
+      "text_sha256": "8b448089e93613e0ae5e02cb4a02ecb0c647b72b6d56384554653bae47e90241"
+    },
+    {
+      "block_id": "page-0466-block-0021",
+      "order": 21,
+      "text": "■\n■Reduce by 1–2mg/day every 2–4 weeks, down to a daily dose of 10mg\n",
+      "bbox": [
+        55.249900817871094,
+        555.99609375,
+        320.2376403808594,
+        565.8646240234375
+      ],
+      "text_sha256": "5d885192a521d741bd68c2a5a3101d64e19e1bcf13640e548506bba980217b97"
+    },
+    {
+      "block_id": "page-0466-block-0022",
+      "order": 22,
+      "text": "■\n■Reduce by 0.5–1mg/day every 2–4 weeks, down to a daily dose of 5mg\n",
+      "bbox": [
+        55.249900817871094,
+        569.99609375,
+        322.6006164550781,
+        579.8646240234375
+      ],
+      "text_sha256": "12d1a6c43fc0eb61a8585ab3bbf2718666455d697625d101d0e9b8b3ae35525f"
+    },
+    {
+      "block_id": "page-0466-block-0023",
+      "order": 23,
+      "text": "■\n■Reduce by 0.25–0.5mg/day every 2–4 weeks, down to a daily dose of 2.5mg\n",
+      "bbox": [
+        55.249900817871094,
+        583.99609375,
+        341.5046691894531,
+        593.8646240234375
+      ],
+      "text_sha256": "a58adfd147da0083774090b1aaef1f8c6234fc767b6033da417d92a96eec5684"
+    },
+    {
+      "block_id": "page-0466-block-0024",
+      "order": 24,
+      "text": "■\n■Reduce by 0.1–0.25mg/day every 2–4 weeks until stopped\n",
+      "bbox": [
+        55.249900817871094,
+        597.99609375,
+        275.3660888671875,
+        607.8646240234375
+      ],
+      "text_sha256": "4f449c3c8e9524018e3c59e3fb642bfd2c7b31bc8023b0243dfc81d2e729c8ce"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

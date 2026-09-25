@@ -1,0 +1,335 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0810",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 810,
+  "source_page_index": 809,
+  "source_page_display": 810,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    789\nCHAPTER 10\nTable 10.5  Psychotropics in epilepsy\nSafety in \nepilepsy\nDrug\nComments\nAntidepressants\nLow risk \n– good \nchoices\nSSRIs\nRecommended in PWE.14,18 SSRIs may be anticonvulsant at therapeutic \ndoses13 but pro-convulsant in overdose.31 SSRIs with the lowest risk of \ninteractions with antiseizure medications are generally preferred (citalopram/\nescitalopram, followed by sertraline).14,18,32,33 Escitalopram is preferred over \ncitalopram in PWE (lower risk of seizures in overdose).34 Others have low risk \nof seizures (e.g. fluoxetine34) but drug interactions with antiseizure \nmedications should be considered.14,18 Fluoxetine may be less likely to \nprovoke seizures in older people than escitalopram or citalopram.35 Some \nevidence that sertraline is safe and effective in PWE36\nMirtazapine\nRecommended in PWE.18,37 Not known to be proconvulsive24\nDuloxetine\nRecommended for PWE.11,18 Risk of seizures is probably negligible34,35\nProbably low \nrisk – use \nwith caution \n(limited \nevidence)\nAgomelatine\nNot known to be proconvulsive.38 Anticonvulsant in animal models34\nMAOIs\nNot known to be pro-convulsive at therapeutic doses.34 Low risk of seizures \nin overdose17\nMoclobemide\nNot known to be proconvulsive.34 Anticonvulsant in animal models34\nReboxetine\nSmall open label study suggests no problems in PWE39\nVortioxetine\nNot known to be proconvulsive34,40 but no experience in PWE34\nModerate \nrisk – care \nrequired\nLithium\nLow risk of seizures.34 Anticonvulsant in animal models.34 However, limited \ndata showing increases or decreases in seizures frequency in PWE.34 For \nbipolar, consider anticonvulsant mood stabilisers41\nTrazodone\nLimited data suggest some risk of seizures34,42\nVenlafaxine\nEffective in PWE11 and has been recommended18 but mixed evidence on \nseizure risk34\nVilazodone\nLimited data. Seizure exacerbation in a patient with epilepsy has been \nreported34\nHigher risk \n– avoid \n(pro-\nconvulsive at \ntherapeutic \ndoses13)\nAmoxapine\nSeveral reports of seizures at therapeutic doses42\nBupropion\nDose-related risk of seizures (particularly with instant-release formulations).34 \nRisk is less with slow-release formulations at doses under 300mg/day34\nMaprotiline\nSeveral reports of seizures at therapeutic doses42\nTCAs\nMost TCAs are epileptogenic at higher doses (particularly clomipramine and \namitriptyline10,24,42). Doxepin possibly lower risk (one small study in PWE).34 \nSNRIs are preferred over TCAs in PWE17\n(Continued)\n",
+  "raw_text_sha256": "17151754e359866738aa982b3c42d1692204280bbbaa71e71f5beccaeb17577a",
+  "coordinates_sha256": "6ef87422709c069029ff26d0282717cb8d535db42f99e0b4794b52c4ce0df7cb",
+  "block_sequence_sha256": "7d4a0a9d07966fa894e7cd9a73965c6d1ab81190dfc6ad34351666cca1f0c7e5",
+  "blocks": [
+    {
+      "block_id": "page-0810-block-0000",
+      "order": 0,
+      "text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    789\n",
+      "bbox": [
+        47.999698638916016,
+        31.395221710205078,
+        419.96697998046875,
+        41.0272216796875
+      ],
+      "text_sha256": "18a11e07af6436209e1a337557d65ad1ef969613b2dc4ebed1ca5f391deb18f0"
+    },
+    {
+      "block_id": "page-0810-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        454.4096984863281,
+        75.763671875,
+        463.88970947265625,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0810-block-0002",
+      "order": 2,
+      "text": "Table 10.5  Psychotropics in epilepsy\n",
+      "bbox": [
+        54.0,
+        70.08790588378906,
+        170.97747802734375,
+        78.97540283203125
+      ],
+      "text_sha256": "dd771d31d001435d823c86d41adf8b6bb58c48a7342eac3ec1fa30244f672798"
+    },
+    {
+      "block_id": "page-0810-block-0003",
+      "order": 3,
+      "text": "Safety in \nepilepsy\nDrug\nComments\n",
+      "bbox": [
+        52.0,
+        88.82289123535156,
+        208.0,
+        107.7078857421875
+      ],
+      "text_sha256": "20014f57ffe63ace16346a7bafb63ea03584b896658699da8d178d91483c8d4b"
+    },
+    {
+      "block_id": "page-0810-block-0004",
+      "order": 4,
+      "text": "Antidepressants\n",
+      "bbox": [
+        52.0,
+        116.05537414550781,
+        108.94749450683594,
+        124.94287109375
+      ],
+      "text_sha256": "2e12ac14096be234a9b975ce033aebb8d95f8f3ff92503034de89e253e59f21d"
+    },
+    {
+      "block_id": "page-0810-block-0005",
+      "order": 5,
+      "text": "Low risk \n– good \nchoices\n",
+      "bbox": [
+        52.0,
+        133.86036682128906,
+        80.33500671386719,
+        162.5628662109375
+      ],
+      "text_sha256": "b3638e5cd45a0990309560fcc279d22cd1e4810f9e44398e74955c79157eee07"
+    },
+    {
+      "block_id": "page-0810-block-0006",
+      "order": 6,
+      "text": "SSRIs\nRecommended in PWE.14,18 SSRIs may be anticonvulsant at therapeutic \ndoses13 but pro-convulsant in overdose.31 SSRIs with the lowest risk of \ninteractions with antiseizure medications are generally preferred (citalopram/\nescitalopram, followed by sertraline).14,18,32,33 Escitalopram is preferred over \ncitalopram in PWE (lower risk of seizures in overdose).34 Others have low risk \nof seizures (e.g. fluoxetine34) but drug interactions with antiseizure \nmedications should be considered.14,18 Fluoxetine may be less likely to \nprovoke seizures in older people than escitalopram or citalopram.35 Some \nevidence that sertraline is safe and effective in PWE36\n",
+      "bbox": [
+        102.30999755859375,
+        133.8528594970703,
+        416.35772705078125,
+        222.56790161132812
+      ],
+      "text_sha256": "2d8a07543b75207aa67a176536e388cf75c00eb5b49bd3083970d6281ef70e81"
+    },
+    {
+      "block_id": "page-0810-block-0007",
+      "order": 7,
+      "text": "Mirtazapine\nRecommended in PWE.18,37 Not known to be proconvulsive24\n",
+      "bbox": [
+        102.30719757080078,
+        231.48789978027344,
+        362.87335205078125,
+        240.19540405273438
+      ],
+      "text_sha256": "50f8d6c159351b056bf5b5d1bf8c59af4b67577245515c65b9f2ef22a7c1141e"
+    },
+    {
+      "block_id": "page-0810-block-0008",
+      "order": 8,
+      "text": "Duloxetine\nRecommended for PWE.11,18 Risk of seizures is probably negligible34,35\n",
+      "bbox": [
+        102.30719757080078,
+        249.11289978027344,
+        390.0555419921875,
+        257.8204040527344
+      ],
+      "text_sha256": "2df275d8d013410d53f146b11815bd477967e73b157eadc60726f5f9b88a3b48"
+    },
+    {
+      "block_id": "page-0810-block-0009",
+      "order": 9,
+      "text": "Probably low \nrisk – use \nwith caution \n(limited \nevidence)\n",
+      "bbox": [
+        52.0,
+        266.7379150390625,
+        95.20750427246094,
+        315.4353942871094
+      ],
+      "text_sha256": "bd5e3b5fc616a7ad66c45070c57c2d2353c76bba4ef1deb92beca7f4903d13ef"
+    },
+    {
+      "block_id": "page-0810-block-0010",
+      "order": 10,
+      "text": "Agomelatine\nNot known to be proconvulsive.38 Anticonvulsant in animal models34\n",
+      "bbox": [
+        102.30999755859375,
+        266.73040771484375,
+        388.0471496582031,
+        275.4454040527344
+      ],
+      "text_sha256": "6442a3f85aaa7015a2df89389494dbf57139e4354757bebdd670e005da8ae0b1"
+    },
+    {
+      "block_id": "page-0810-block-0011",
+      "order": 11,
+      "text": "MAOIs\nNot known to be pro-convulsive at therapeutic doses.34 Low risk of seizures \nin overdose17\n",
+      "bbox": [
+        102.30719757080078,
+        284.3629150390625,
+        412.6307067871094,
+        303.0679016113281
+      ],
+      "text_sha256": "2c373cfcde6fe227083131d7e34e66e232031c46da99a8ad64089a65325f512e"
+    },
+    {
+      "block_id": "page-0810-block-0012",
+      "order": 12,
+      "text": "Moclobemide\nNot known to be proconvulsive.34 Anticonvulsant in animal models34\n",
+      "bbox": [
+        102.30719757080078,
+        311.9879150390625,
+        388.0471496582031,
+        320.6954040527344
+      ],
+      "text_sha256": "002254cde4f2ec276e4135803a9af88f3992e88b8de93d1a7a92bd2c34bc3189"
+    },
+    {
+      "block_id": "page-0810-block-0013",
+      "order": 13,
+      "text": "Reboxetine\nSmall open label study suggests no problems in PWE39\n",
+      "bbox": [
+        102.30719757080078,
+        329.6129150390625,
+        343.1807556152344,
+        338.3204040527344
+      ],
+      "text_sha256": "ee08dee787b6f6411766611e9adbffccff5b09722f5ce3b99ae6b63ad6ccbbd5"
+    },
+    {
+      "block_id": "page-0810-block-0014",
+      "order": 14,
+      "text": "Vortioxetine\nNot known to be proconvulsive34,40 but no experience in PWE34\n",
+      "bbox": [
+        102.30719757080078,
+        347.2379150390625,
+        370.3731384277344,
+        355.9454040527344
+      ],
+      "text_sha256": "18ff85e18b01797f93e626166f7d7517077d452623562caad388297e825de605"
+    },
+    {
+      "block_id": "page-0810-block-0015",
+      "order": 15,
+      "text": "Moderate \nrisk – care \nrequired\n",
+      "bbox": [
+        52.0,
+        364.8629150390625,
+        86.02749633789062,
+        393.5653991699219
+      ],
+      "text_sha256": "1ad49dea90bea1b02c591827357acdb1a134639455d75147a5fdf252551db404"
+    },
+    {
+      "block_id": "page-0810-block-0016",
+      "order": 16,
+      "text": "Lithium\nLow risk of seizures.34 Anticonvulsant in animal models.34 However, limited \ndata showing increases or decreases in seizures frequency in PWE.34 For \nbipolar, consider anticonvulsant mood stabilisers41\n",
+      "bbox": [
+        102.30999755859375,
+        364.85540771484375,
+        409.8346862792969,
+        393.5679016113281
+      ],
+      "text_sha256": "0710459dd70495156e0e54a9578e340e750c9fa99f6301300b1ff5d1d5f78979"
+    },
+    {
+      "block_id": "page-0810-block-0017",
+      "order": 17,
+      "text": "Trazodone\nLimited data suggest some risk of seizures34,42\n",
+      "bbox": [
+        102.30719757080078,
+        402.4879150390625,
+        315.4785461425781,
+        411.1954040527344
+      ],
+      "text_sha256": "ce2fc4f2d8d38693ed02065f6a4301f4fbfd6ab66c1a83e451a13ad540ac0491"
+    },
+    {
+      "block_id": "page-0810-block-0018",
+      "order": 18,
+      "text": "Venlafaxine\nEffective in PWE11 and has been recommended18 but mixed evidence on \nseizure risk34\n",
+      "bbox": [
+        102.30719757080078,
+        420.1129150390625,
+        401.64593505859375,
+        438.8179016113281
+      ],
+      "text_sha256": "5198a0f9e812efd47bbc5514e68eb65d9b851f82650f313b7c0292222890dda8"
+    },
+    {
+      "block_id": "page-0810-block-0019",
+      "order": 19,
+      "text": "Vilazodone\nLimited data. Seizure exacerbation in a patient with epilepsy has been \nreported34\n",
+      "bbox": [
+        102.30719757080078,
+        447.7378845214844,
+        394.96484375,
+        466.44287109375
+      ],
+      "text_sha256": "806ea65ba00f8c8269f4391a58739828e2a1384d508934677966192b783b223d"
+    },
+    {
+      "block_id": "page-0810-block-0020",
+      "order": 20,
+      "text": "Higher risk \n– avoid \n(pro-\nconvulsive at \ntherapeutic \ndoses13)\n",
+      "bbox": [
+        52.0,
+        475.3628845214844,
+        94.91500854492188,
+        534.0703735351562
+      ],
+      "text_sha256": "23e55ddd6a5446d788425fb5eacc9bf400a3debef9148a1576548862167d2667"
+    },
+    {
+      "block_id": "page-0810-block-0021",
+      "order": 21,
+      "text": "Amoxapine\nSeveral reports of seizures at therapeutic doses42\n",
+      "bbox": [
+        102.30460357666016,
+        475.3603820800781,
+        324.6782531738281,
+        484.06787109375
+      ],
+      "text_sha256": "17d17dc76604d761965a7cf3fb8af3b0106e691ddbccef89512f93741e0e1269"
+    },
+    {
+      "block_id": "page-0810-block-0022",
+      "order": 22,
+      "text": "Bupropion\nDose-related risk of seizures (particularly with instant-release formulations).34 \nRisk is less with slow-release formulations at doses under 300mg/day34\n",
+      "bbox": [
+        102.30719757080078,
+        492.9878845214844,
+        416.61907958984375,
+        511.69287109375
+      ],
+      "text_sha256": "7d23c466028180606212681ef5dc219218befb5399e0f61553d25bdd0d810ea4"
+    },
+    {
+      "block_id": "page-0810-block-0023",
+      "order": 23,
+      "text": "Maprotiline\nSeveral reports of seizures at therapeutic doses42\n",
+      "bbox": [
+        102.30719757080078,
+        520.6128540039062,
+        324.6782531738281,
+        529.3203735351562
+      ],
+      "text_sha256": "24ac4df2e9481bc7cf2e5fa042a02020456f44befa91797c0d436b97647a7084"
+    },
+    {
+      "block_id": "page-0810-block-0024",
+      "order": 24,
+      "text": "TCAs\nMost TCAs are epileptogenic at higher doses (particularly clomipramine and \namitriptyline10,24,42). Doxepin possibly lower risk (one small study in PWE).34 \nSNRIs are preferred over TCAs in PWE17\n",
+      "bbox": [
+        102.30719757080078,
+        538.2378540039062,
+        414.1423034667969,
+        566.94287109375
+      ],
+      "text_sha256": "f31e999afb03302ce85849f192b6098eb59e575384dde99be96618a294929d4f"
+    },
+    {
+      "block_id": "page-0810-block-0025",
+      "order": 25,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.9849853515625,
+        576.6572875976562,
+        419.99993896484375,
+        585.4097900390625
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

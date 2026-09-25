@@ -1,0 +1,263 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0327",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 327,
+  "source_page_index": 326,
+  "source_page_display": 327,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "306    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\n■\n■Antidepressants are recommended for the treatment of moderate to severe depression \nand for dysthymia.\n■\n■When an antidepressant is prescribed, a generic SSRI is recommended.\n■\n■All patients should be informed about the withdrawal (discontinuation) effects of \nantidepressants.\n■\n■For treatment-resistant depression, recommended strategies include augmentation \nwith lithium or an antipsychotic or the addition of a second antidepressant (see sec-\ntions on treatment resistant depression in this chapter).\n■\n■Patients with two prior episodes and functional impairment should be treated for at \nleast 2 years.\n■\n■The use of ECT is supported in severe and treatment-resistant depression.\nAt the time of writing, the new NICE Guidelines are available only in draft form.4 \nBasic principles appear to be the same as in the earlier guideline, but important differ-\nences are proposed for drug choice after first treatment failure (see Drug Treatment in \nDepression section in this chapter). The final guideline is to be published in 2021/2022.\nThis chapter concentrates on the use of antidepressants and offers advice on drug \nchoice, dosing, switching strategies and sequencing of treatments. The near exclusion of \nother non-drug treatment modalities does not imply any lack of confidence in their \nefficacy but simply reflects the need (in a prescribing guideline) to concentrate on med-\nicines-related subjects.\nReferences\n\t 1.\t National Institute for Clinical Excellence. Depression: the treatment and management of depression in adults. Clinical Guidance [CG90]. \n2009 (last reviewed December 2013); https://www.nice.org.uk/guidance/cg90.\n\t 2.\t George MS, et al. Vagus nerve stimulation for the treatment of depression and other neuropsychiatric disorders. Expert Rev Neurother 2007; \n7:63–74.\n\t 3.\t Loo CK, et al. A review of the efficacy of transcranial magnetic stimulation (TMS) treatment for depression, and current and future strategies \nto optimize efficacy. J Affect Disord 2005; 88:255–267.\n\t 4.\t National Institute for Health and Care Excellence. Depression in adults: treatment and management – full guideline (Draft for Consultation). \n2017; https://www.nice.org.uk/guidance/GID-CGWAVE0725/documents/draft-guideline.\n",
+  "raw_text_sha256": "885e6d8f22c577f5d56314edc8afcd3a20db9e5f14744d7b2d582df90dba5572",
+  "coordinates_sha256": "2b8ec2931e9f888dcdac0ca768ea8532078b0d4152fde5261a6a352c712931b2",
+  "block_sequence_sha256": "5a8e9a6a22aee7fd1ae1c14c0023e6f321535cced83fda6a9de2b3b29e634d85",
+  "blocks": [
+    {
+      "block_id": "page-0327-block-0000",
+      "order": 0,
+      "text": "306    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "e3a43c4dc06e2d3ca9e0374777e8b8baece13fa279efeab2e23e17f2291db286"
+    },
+    {
+      "block_id": "page-0327-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0327-block-0002",
+      "order": 2,
+      "text": "■\n■Antidepressants are recommended for the treatment of moderate to severe depression \n",
+      "bbox": [
+        61.88990020751953,
+        62.55029296875,
+        436.7000427246094,
+        74.27029418945312
+      ],
+      "text_sha256": "35ea5b327822bd5822cc3d6398f5ce4096fa920e216fbdcb8e5b6a63667a35b2"
+    },
+    {
+      "block_id": "page-0327-block-0003",
+      "order": 3,
+      "text": "and for dysthymia.\n",
+      "bbox": [
+        70.88999938964844,
+        74.55029296875,
+        152.56997680664062,
+        86.27029418945312
+      ],
+      "text_sha256": "592d6187e0185229d57e52bf469b26e7ae550ed811c0890c288406663e0c9b5b"
+    },
+    {
+      "block_id": "page-0327-block-0004",
+      "order": 4,
+      "text": "■\n■When an antidepressant is prescribed, a generic SSRI is recommended.\n",
+      "bbox": [
+        61.88990020751953,
+        86.55029296875,
+        373.86004638671875,
+        98.27029418945312
+      ],
+      "text_sha256": "d0f8dbe98d4b96819478da721a6bc7aa6f4d7827a72776b0b7d5399610b8a228"
+    },
+    {
+      "block_id": "page-0327-block-0005",
+      "order": 5,
+      "text": "■\n■All patients should be informed about the withdrawal (discontinuation) effects of \n",
+      "bbox": [
+        61.88990020751953,
+        98.55029296875,
+        436.6798400878906,
+        110.27029418945312
+      ],
+      "text_sha256": "26d007daf3781d56460472f3b63a340c9b0efdd95cb9bc2ae90d095342b346bc"
+    },
+    {
+      "block_id": "page-0327-block-0006",
+      "order": 6,
+      "text": "antidepressants.\n",
+      "bbox": [
+        70.88999938964844,
+        110.55029296875,
+        139.7899932861328,
+        122.27029418945312
+      ],
+      "text_sha256": "b88c1f20dbd64de69516323914aab5a1900e9a127c57c38f7ee563a2af300fc2"
+    },
+    {
+      "block_id": "page-0327-block-0007",
+      "order": 7,
+      "text": "■\n■For treatment-resistant depression, recommended strategies include augmentation \n",
+      "bbox": [
+        61.88990020751953,
+        122.55029296875,
+        436.6699523925781,
+        134.27029418945312
+      ],
+      "text_sha256": "106d17b1a4c91317afcb2bf1905f92f858ffad7cc841ccd6eedcb669917e08a6"
+    },
+    {
+      "block_id": "page-0327-block-0008",
+      "order": 8,
+      "text": "with lithium or an antipsychotic or the addition of a second antidepressant (see sec-\ntions on treatment resistant depression in this chapter).\n",
+      "bbox": [
+        70.88999938964844,
+        134.55029296875,
+        433.8498840332031,
+        158.27029418945312
+      ],
+      "text_sha256": "e7934bbaa8ffc34f390622946a639cb188ad8c1080477ff7056346a21e6c74c7"
+    },
+    {
+      "block_id": "page-0327-block-0009",
+      "order": 9,
+      "text": "■\n■Patients with two prior episodes and functional impairment should be treated for at \n",
+      "bbox": [
+        61.88990020751953,
+        158.55029296875,
+        436.64990234375,
+        170.27029418945312
+      ],
+      "text_sha256": "ce2799ddb34ee3c7be2421d148550a9e24b24a5b0d2ad70c3df9d7b622b4df8d"
+    },
+    {
+      "block_id": "page-0327-block-0010",
+      "order": 10,
+      "text": "least 2 years.\n",
+      "bbox": [
+        70.88999938964844,
+        170.55029296875,
+        126.44999694824219,
+        182.27029418945312
+      ],
+      "text_sha256": "50dc909a52f676b555b0fd0a3360d72a6635502d65c96197cd7aa56e044341a9"
+    },
+    {
+      "block_id": "page-0327-block-0011",
+      "order": 11,
+      "text": "■\n■The use of ECT is supported in severe and treatment-resistant depression.\n",
+      "bbox": [
+        61.88990020751953,
+        182.55029296875,
+        388.1300048828125,
+        194.27029418945312
+      ],
+      "text_sha256": "175d8a6efecf8f3afacbd2863c6ae8f94921eb2d3c94e7722f413fc95bc16e6f"
+    },
+    {
+      "block_id": "page-0327-block-0012",
+      "order": 12,
+      "text": "At the time of writing, the new NICE Guidelines are available only in draft form.4 \nBasic principles appear to be the same as in the earlier guideline, but important differ-\nences are proposed for drug choice after first treatment failure (see Drug Treatment in \nDepression section in this chapter). The final guideline is to be published in 2021/2022.\n",
+      "bbox": [
+        61.8900146484375,
+        200.55029296875,
+        436.6700134277344,
+        248.27029418945312
+      ],
+      "text_sha256": "164da495f034f04d06fb642cead2a9ad8dc038c5b427f4391f4455c0643a1f99"
+    },
+    {
+      "block_id": "page-0327-block-0013",
+      "order": 13,
+      "text": "This chapter concentrates on the use of antidepressants and offers advice on drug \nchoice, dosing, switching strategies and sequencing of treatments. The near exclusion of \nother non-drug treatment modalities does not imply any lack of confidence in their \nefficacy but simply reflects the need (in a prescribing guideline) to concentrate on med-\nicines-related subjects.\n",
+      "bbox": [
+        61.8900146484375,
+        248.55029296875,
+        436.6900329589844,
+        308.2702941894531
+      ],
+      "text_sha256": "9978eceaafefdeb99e9c87de136f6261529c5964e1479f330edafca78b8704ff"
+    },
+    {
+      "block_id": "page-0327-block-0014",
+      "order": 14,
+      "text": "References\n",
+      "bbox": [
+        61.88999938964844,
+        325.7052917480469,
+        117.92399597167969,
+        338.74029541015625
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0327-block-0015",
+      "order": 15,
+      "text": "\t 1.\t National Institute for Clinical Excellence. Depression: the treatment and management of depression in adults. Clinical Guidance [CG90]. \n",
+      "bbox": [
+        61.88999938964844,
+        343.8262939453125,
+        435.5519104003906,
+        350.8583068847656
+      ],
+      "text_sha256": "129564b6aa899e72d21e8405c8b2f48b775e229c521a8d7ae2a3b7688add463f"
+    },
+    {
+      "block_id": "page-0327-block-0016",
+      "order": 16,
+      "text": "2009 (last reviewed December 2013); https://www.nice.org.uk/guidance/cg90.\n\t 2.\t George MS, et al. Vagus nerve stimulation for the treatment of depression and other neuropsychiatric disorders. Expert Rev Neurother 2007; \n",
+      "bbox": [
+        61.895999908447266,
+        352.8262939453125,
+        435.5762023925781,
+        368.8583068847656
+      ],
+      "text_sha256": "7539f6d7846f8ad4657c0c2b945434bb768bc16f88b09566e440e7bb1d50f192"
+    },
+    {
+      "block_id": "page-0327-block-0017",
+      "order": 17,
+      "text": "7:63–74.\n\t 3.\t Loo CK, et al. A review of the efficacy of transcranial magnetic stimulation (TMS) treatment for depression, and current and future strategies \n",
+      "bbox": [
+        61.902000427246094,
+        370.6822814941406,
+        435.52203369140625,
+        386.8583068847656
+      ],
+      "text_sha256": "41d8fbd62eb1e772474768fb94535f621a069de855c7db527de30e8e13dbfc0f"
+    },
+    {
+      "block_id": "page-0327-block-0018",
+      "order": 18,
+      "text": "to optimize efficacy. J Affect Disord 2005; 88:255–267.\n\t 4.\t National Institute for Health and Care Excellence. Depression in adults: treatment and management – full guideline (Draft for Consultation). \n",
+      "bbox": [
+        61.90800094604492,
+        388.6822814941406,
+        435.59991455078125,
+        404.8583068847656
+      ],
+      "text_sha256": "4bb19f2cd4c17c9bbb34486f0dbe45f0a62f66bdf2be245b18b548f61ee09cc7"
+    },
+    {
+      "block_id": "page-0327-block-0019",
+      "order": 19,
+      "text": "2017; https://www.nice.org.uk/guidance/GID-CGWAVE0725/documents/draft-guideline.\n",
+      "bbox": [
+        72.91200256347656,
+        406.8262939453125,
+        301.7399597167969,
+        413.8583068847656
+      ],
+      "text_sha256": "1f83c9395dc25c440393ba8ccb9640c9bce8c84f67048f9972104aedb68d6ddd"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

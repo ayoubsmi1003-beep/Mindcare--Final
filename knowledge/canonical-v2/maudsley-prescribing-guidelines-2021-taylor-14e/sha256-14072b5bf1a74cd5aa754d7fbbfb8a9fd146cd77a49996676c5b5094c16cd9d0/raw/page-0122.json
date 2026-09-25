@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0122",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 122,
+  "source_page_index": 121,
+  "source_page_display": 122,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    101\nCHAPTER 1\n\t20.\t Emsley R, et al. A randomized, controlled trial of omega-3 fatty acids plus an antioxidant for relapse prevention after antipsychotic discon-\ntinuation in first-episode schizophrenia. Schizophr Res 2014; 158:230–235.\n\t21.\t Bozzatello P, et al. Polyunsaturated fatty acids: what is their role in treatment of psychiatric disorders? Int J Molecular Sci 2019; 20:5257.\n\t22.\t Hsu MC, et al. Beneficial effects of omega-3 fatty acid supplementation in schizophrenia: possible mechanisms. Lipids Health Dis 2020; \n19:159.\n\t23.\t Firth J, et al. The efficacy and safety of nutrient supplements in the treatment of mental disorders: a meta-review of meta-analyses of rand-\nomized controlled trials. World Psychiatry 2019; 18:308–324.\n\t24.\t Schlögelhofer M, et al. Polyunsaturated fatty acids in emerging psychosis: a safer alternative? Early Interv Psychiatry 2014; 8:199–208.\n\t25.\t Scorza FA, et al. Omega-3 fatty acids and sudden cardiac death in schizophrenia: if not a friend, at least a great colleague. Schizophr Res \n2007; 94:375–376.\n\t26.\t Caniato RN, et al. Effect of omega-3 fatty acids on the lipid profile of patients taking clozapine. Aust N Z J Psychiatry 2006; 40:691–697.\n\t27.\t Emsley R, et al. Safety of the omega-3 fatty acid, eicosapentaenoic acid (EPA) in psychiatric patients: results from a randomized, placebo-\ncontrolled trial. Psychiatry Res 2008; 161:284–291.\n\t28.\t Das UN. Essential fatty acids and their metabolites could function as endogenous HMG-CoA reductase and ACE enzyme inhibitors, anti-\narrhythmic, anti-hypertensive, anti-atherosclerotic, anti-inflammatory, cytoprotective, and cardioprotective molecules. Lipids Health Dis \n2008; 7:37.\n\t29.\t Xu F, et al. Effects of omega-3 fatty acids on metabolic syndrome in patients with schizophrenia: a 12-week randomized placebo-controlled \ntrial. Psychopharmacology 2019; 236:1273–1279.\n\t30.\t Amminger GP, et al. Long-chain omega-3 fatty acids for indicated prevention of psychotic disorders: a randomized, placebo-controlled trial. \nArch Gen Psychiatry 2010; 67:146–154.\n\t31.\t Stafford MR, et al. Early interventions to prevent psychosis: systematic review and meta-analysis. BMJ 2013; 346:f185.\n\t32.\t McGorry PD, et al. Effect of omega-3 polyunsaturated fatty acids in young people at ultrahigh risk for psychotic disorders: the neurapro \nrandomized clinical trial. JAMA Psychiatry 2017; 74:19–27.\n\t33.\t Bosnjak Kuharic D, et al. Interventions for prodromal stage of psychosis. Cochrane Database Syst Rev 2019; CD012236.\n\t34.\t Devoe DJ, et al. Attenuated psychotic symptom interventions in youth at risk of psychosis: a systematic review and meta-analysis. Early Interv \nPsychiatry 2019; 13:3–17.\n\t35.\t Nasir M, et al. Trim the fat: the role of omega-3 fatty acids in psychopharmacology. Ther Adv Psychopharmacol 2019; 9:2045125319869791.\n\t36.\t Cho M, et al. Adjunctive use of anti-inflammatory drugs for schizophrenia: a meta-analytic investigation of randomized controlled trials. \nAust N Z J Psychiatry 2019; 53:742–759.\n",
+  "raw_text_sha256": "e1703317f885e2122aa2d7d4a1c945b5cee86ea12a444278eb2b5d17abb8b02a",
+  "coordinates_sha256": "f08ce8d7787376469a408f003c256e5939e5e3ebdb0c077999a0d61f2910e8ba",
+  "block_sequence_sha256": "a7663161ac85c7aaf6151929be0be145c7d70d3466e236f4a1d4a495c7ff3b2c",
+  "blocks": [
+    {
+      "block_id": "page-0122-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    101\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "dd02deb14ee0e5e9df7c2d1d0d8eb6e6aebf81a015909a77d2d754869c58c0cb"
+    },
+    {
+      "block_id": "page-0122-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0122-block-0002",
+      "order": 2,
+      "text": "\t20.\t Emsley R, et al. A randomized, controlled trial of omega-3 fatty acids plus an antioxidant for relapse prevention after antipsychotic discon-\n",
+      "bbox": [
+        47.99909973144531,
+        63.2694091796875,
+        420.047119140625,
+        70.30140686035156
+      ],
+      "text_sha256": "f738c1fda815c636b88ac15b76edf37f888ff4734c142987b95a094596310f0f"
+    },
+    {
+      "block_id": "page-0122-block-0003",
+      "order": 3,
+      "text": "tinuation in first-episode schizophrenia. Schizophr Res 2014; 158:230–235.\n\t21.\t Bozzatello P, et al. Polyunsaturated fatty acids: what is their role in treatment of psychiatric disorders? Int J Molecular Sci 2019; 20:5257.\n\t22.\t Hsu MC, et al. Beneficial effects of omega-3 fatty acid supplementation in schizophrenia: possible mechanisms. Lipids Health Dis 2020; \n",
+      "bbox": [
+        48.005096435546875,
+        72.12541198730469,
+        421.6730651855469,
+        97.30140686035156
+      ],
+      "text_sha256": "08b1c4b8475d9a6abec3b50b429c76e580800e614ff8e6cb9d4d57d136c103d4"
+    },
+    {
+      "block_id": "page-0122-block-0004",
+      "order": 4,
+      "text": "19:159.\n\t23.\t Firth J, et al. The efficacy and safety of nutrient supplements in the treatment of mental disorders: a meta-review of meta-analyses of rand-\n",
+      "bbox": [
+        48.01709747314453,
+        99.12541198730469,
+        419.96917724609375,
+        115.30140686035156
+      ],
+      "text_sha256": "5ce4a6bd4691200c37c7570f2792384b08126415e8a05fafe4e581ba8e221909"
+    },
+    {
+      "block_id": "page-0122-block-0005",
+      "order": 5,
+      "text": "omized controlled trials. World Psychiatry 2019; 18:308–324.\n\t24.\t Schlögelhofer M, et al. Polyunsaturated fatty acids in emerging psychosis: a safer alternative? Early Interv Psychiatry 2014; 8:199–208.\n\t25.\t Scorza FA, et al. Omega-3 fatty acids and sudden cardiac death in schizophrenia: if not a friend, at least a great colleague. Schizophr Res \n",
+      "bbox": [
+        48.023101806640625,
+        117.12541198730469,
+        421.6792297363281,
+        142.30140686035156
+      ],
+      "text_sha256": "0da1e2d3258274a50fc57b10ef3da8d7929350fc93ef70fa7dd777ff32f79b7c"
+    },
+    {
+      "block_id": "page-0122-block-0006",
+      "order": 6,
+      "text": "2007; 94:375–376.\n\t26.\t Caniato RN, et al. Effect of omega-3 fatty acids on the lipid profile of patients taking clozapine. Aust N Z J Psychiatry 2006; 40:691–697.\n\t27.\t Emsley R, et al. Safety of the omega-3 fatty acid, eicosapentaenoic acid (EPA) in psychiatric patients: results from a randomized, placebo-\n",
+      "bbox": [
+        48.03510284423828,
+        144.1254119873047,
+        420.0889892578125,
+        169.30140686035156
+      ],
+      "text_sha256": "0c14a0dc24ddee5af9aace10dfc62f946548522aba435f602588b34264924e59"
+    },
+    {
+      "block_id": "page-0122-block-0007",
+      "order": 7,
+      "text": "controlled trial. Psychiatry Res 2008; 161:284–291.\n\t28.\t Das UN. Essential fatty acids and their metabolites could function as endogenous HMG-CoA reductase and ACE enzyme inhibitors, anti-\n",
+      "bbox": [
+        48.047096252441406,
+        171.1254119873047,
+        420.02911376953125,
+        187.30140686035156
+      ],
+      "text_sha256": "6773d3d17bb48e44c8de69c43f7a36510dd06201cc036767f6a9d296775e0f08"
+    },
+    {
+      "block_id": "page-0122-block-0008",
+      "order": 8,
+      "text": "arrhythmic, anti-hypertensive, anti-atherosclerotic, anti-inflammatory, cytoprotective, and cardioprotective molecules. Lipids Health Dis \n2008; 7:37.\n\t29.\t Xu F, et al. Effects of omega-3 fatty acids on metabolic syndrome in patients with schizophrenia: a 12-week randomized placebo-controlled \n",
+      "bbox": [
+        48.0531005859375,
+        189.2694091796875,
+        421.7391662597656,
+        214.30140686035156
+      ],
+      "text_sha256": "1972e221409640e133174a05e3ea3cbcd64d54a2e133a2e1d1cc0cad3861b9bb"
+    },
+    {
+      "block_id": "page-0122-block-0009",
+      "order": 9,
+      "text": "trial. Psychopharmacology 2019; 236:1273–1279.\n\t30.\t Amminger GP, et al. Long-chain omega-3 fatty acids for indicated prevention of psychotic disorders: a randomized, placebo-controlled trial. \n",
+      "bbox": [
+        48.05909729003906,
+        216.1254119873047,
+        421.6972351074219,
+        232.30140686035156
+      ],
+      "text_sha256": "dae34c7dfb8c6e9d93e4bc67e151b84ca9dcb4f3490cbb50d46ba4e9df348716"
+    },
+    {
+      "block_id": "page-0122-block-0010",
+      "order": 10,
+      "text": "Arch Gen Psychiatry 2010; 67:146–154.\n\t31.\t Stafford MR, et al. Early interventions to prevent psychosis: systematic review and meta-analysis. BMJ 2013; 346:f185.\n\t32.\t McGorry PD, et al. Effect of omega-3 polyunsaturated fatty acids in young people at ultrahigh risk for psychotic disorders: the neurapro \n",
+      "bbox": [
+        48.065101623535156,
+        234.1254119873047,
+        421.7752990722656,
+        259.3014221191406
+      ],
+      "text_sha256": "d82b2d2136f4b2dec5ac999cd58928cbbd57252867e088ba6f713cf63f42d223"
+    },
+    {
+      "block_id": "page-0122-block-0011",
+      "order": 11,
+      "text": "randomized clinical trial. JAMA Psychiatry 2017; 74:19–27.\n\t33.\t Bosnjak Kuharic D, et al. Interventions for prodromal stage of psychosis. Cochrane Database Syst Rev 2019; CD012236.\n\t34.\t Devoe DJ, et al. Attenuated psychotic symptom interventions in youth at risk of psychosis: a systematic review and meta-analysis. Early Interv \n",
+      "bbox": [
+        48.07710266113281,
+        261.1253967285156,
+        421.7511291503906,
+        286.3014221191406
+      ],
+      "text_sha256": "acf1d7c435fc4e011840784253087a21f41aa76e6c1dd352faf861d922d3758c"
+    },
+    {
+      "block_id": "page-0122-block-0012",
+      "order": 12,
+      "text": "Psychiatry 2019; 13:3–17.\n\t35.\t Nasir M, et al. Trim the fat: the role of omega-3 fatty acids in psychopharmacology. Ther Adv Psychopharmacol 2019; 9:2045125319869791.\n\t36.\t Cho M, et al. Adjunctive use of anti-inflammatory drugs for schizophrenia: a meta-analytic investigation of randomized controlled trials. \n",
+      "bbox": [
+        48.08909606933594,
+        288.1253967285156,
+        421.7930603027344,
+        313.3014221191406
+      ],
+      "text_sha256": "c9d34b0192242e68425cfe66644d42ae811296972dff395fb87b399a424e8ae1"
+    },
+    {
+      "block_id": "page-0122-block-0013",
+      "order": 13,
+      "text": "Aust N Z J Psychiatry 2019; 53:742–759.\n",
+      "bbox": [
+        59.09910583496094,
+        315.1253967285156,
+        167.73507690429688,
+        322.3014221191406
+      ],
+      "text_sha256": "96683c8c16bc43adc903428162d2f71f2ba993cf115375b0859bf7b80709a554"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,83 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0903",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 903,
+  "source_page_index": 902,
+  "source_page_display": 903,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "882    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 13\n\t105.  \u0007Caplehorn JR, et al. Fatal methadone toxicity: signs and circumstances, and the role of benzodiazepines. Aust N Z J Public Health 2002; \n26:358–362.\n\t106.  \u0007Spiller HA, et al. Toxicity from modafinil ingestion. Clin Toxicol (Phila) 2009; 47:153–156.\n\t107.  \u0007Carstairs SD, et al. A retrospective review of supratherapeutic modafinil exposures. J Med Toxicol 2010; 6:307–310.\n\t108.  \u0007Russell J, et al. Retrospective assessment of toxicity following exposure to Orexin pathway modulators modafinil and suvorexant. \nToxicology Communications 2019; 3:33–36.\n\t109.  \u0007Miljevic C, et al. A case of pregabalin intoxication. Psychiatrike = Psychiatriki 2012; 23:162–165.\n\t110.  \u0007Wood DM, et al. Significant pregabalin toxicity managed with supportive care alone. J Med Toxicol 2010; 6:435–437.\n\t111.  \u0007Gock SB, et al. Acute zolpidem overdose–report of two cases. J Anal Toxicol 1999; 23:559–562.\n\t112.  \u0007Garnier R, et al. Acute zolpidem poisoning–analysis of 344 cases. J Toxicol Clin Toxicol 1994; 32:391–404.\n\t113.  \u0007Pounder D, et al. Zopiclone poisoning. J Anal Toxicol 1996; 20:273–274.\n\t114.  \u0007Bramness JG, et al. Fatal overdose of zopiclone in an elderly woman with bronchogenic carcinoma. J Forensic Sci 2001; 46:1247–1249.\n",
+  "raw_text_sha256": "1f15f31710549129866200953e831b4f2709018e9724d3c8258dea82f09837a1",
+  "coordinates_sha256": "accc553b460d39d3b1fa2fe591452e9e2622b975523aa000a2f2cbc833cbda74",
+  "block_sequence_sha256": "b831e8005fb7791406a7b566f1822d777b9e1ae0e50355227199b204a358866a",
+  "blocks": [
+    {
+      "block_id": "page-0903-block-0000",
+      "order": 0,
+      "text": "882    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "7e8c389d364f0af84b549185b1f1c4bbbffe6e979b94da1b51e5e88180d0a733"
+    },
+    {
+      "block_id": "page-0903-block-0001",
+      "order": 1,
+      "text": "CHAPTER 13\n",
+      "bbox": [
+        18.520000457763672,
+        272.95111083984375,
+        28.0,
+        318.74310302734375
+      ],
+      "text_sha256": "a01ce0756ef6b5d41c48be6624d8bd154fa95cf67cb49768f2593332d3a2ec98"
+    },
+    {
+      "block_id": "page-0903-block-0002",
+      "order": 2,
+      "text": "\t105.  \u0007Caplehorn JR, et al. Fatal methadone toxicity: signs and circumstances, and the role of benzodiazepines. Aust N Z J Public Health 2002; \n",
+      "bbox": [
+        61.889801025390625,
+        63.2703857421875,
+        435.5997009277344,
+        70.30238342285156
+      ],
+      "text_sha256": "a9a19eb560ffc48a9895a6ed834648909035f02925e3061c703af66daadd8837"
+    },
+    {
+      "block_id": "page-0903-block-0003",
+      "order": 3,
+      "text": "26:358–362.\n\t106.  \u0007Spiller HA, et al. Toxicity from modafinil ingestion. Clin Toxicol (Phila) 2009; 47:153–156.\n\t107.  \u0007Carstairs SD, et al. A retrospective review of supratherapeutic modafinil exposures. J Med Toxicol 2010; 6:307–310.\n\t108.  \u0007Russell J, et al. Retrospective assessment of toxicity following exposure to Orexin pathway modulators modafinil and suvorexant. \n",
+      "bbox": [
+        61.889801025390625,
+        72.12638854980469,
+        435.5218811035156,
+        106.30238342285156
+      ],
+      "text_sha256": "e4265f35f99ea89aa0dd8d9176828ede23903d8f46aa6d2a50652e7ebffbf5ba"
+    },
+    {
+      "block_id": "page-0903-block-0004",
+      "order": 4,
+      "text": "Toxicology Communications 2019; 3:33–36.\n\t109.  \u0007Miljevic C, et al. A case of pregabalin intoxication. Psychiatrike = Psychiatriki 2012; 23:162–165.\n\t110.  \u0007Wood DM, et al. Significant pregabalin toxicity managed with supportive care alone. J Med Toxicol 2010; 6:435–437.\n\t111.  \u0007Gock SB, et al. Acute zolpidem overdose–report of two cases. J Anal Toxicol 1999; 23:559–562.\n\t112.  \u0007Garnier R, et al. Acute zolpidem poisoning–analysis of 344 cases. J Toxicol Clin Toxicol 1994; 32:391–404.\n\t113.  \u0007Pounder D, et al. Zopiclone poisoning. J Anal Toxicol 1996; 20:273–274.\n\t114.  \u0007Bramness JG, et al. Fatal overdose of zopiclone in an elderly woman with bronchogenic carcinoma. J Forensic Sci 2001; 46:1247–1249.\n",
+      "bbox": [
+        61.889801025390625,
+        108.12638854980469,
+        427.1098327636719,
+        169.30238342285156
+      ],
+      "text_sha256": "ca9fa08faecaf5b57c9096ac4b0b46e69eaf97b2b4bc16ec7b6a741e87471451"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

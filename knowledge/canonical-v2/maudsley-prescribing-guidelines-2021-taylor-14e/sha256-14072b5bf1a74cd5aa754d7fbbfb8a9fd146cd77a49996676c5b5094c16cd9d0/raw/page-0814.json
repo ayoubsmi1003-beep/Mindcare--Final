@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0814",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 814,
+  "source_page_index": 813,
+  "source_page_display": 814,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    793\nCHAPTER 10\n\t56.\t Man KKC, et al. Association between methylphenidate treatment and risk of seizure: a population-based, self-controlled case-series study. \nLancet Child Adolesc Health 2020; 4:435–443.\n\t57.\t Besag F, et al. Psychiatric and behavioural disorders in children with epilepsy (ILAE Task Force report): epilepsy and ADHD. Epileptic Disord \n2016; 18:S8–S15.\n\t58.\t Besag F, et al. Psychiatric and behavioural disorders in children with epilepsy (ILAE Task Force report): when should pharmacotherapy for \npsychiatric/behavioural disorders in children with epilepsy be prescribed? Epileptic Disord 2016; 18:S77–S86.\n\t59.\t Gonzalez-Heydrich J, et al. Comparing stimulant effects in youth with ADHD symptoms and epilepsy. Epilepsy Behav 2014; 36:102–107.\n\t60.\t Schubert R. Attention deficit disorder and epilepsy. Pediatr Neurol 2005; 32:1–10.\n\t61.\t Torres A, et al. Tolerability of atomoxetine for treatment of pediatric attention-deficit/hyperactivity disorder in the context of epilepsy. \nEpilepsy Behav 2011; 20:95–102.\n\t62.\t Williams AE, et al. Epilepsy and attention-deficit hyperactivity disorder: links, risks, and challenges. Neuropsychiatr Dis Treat 2016; \n12:287–296.\nFurther reading\nKanner AM. Management of psychiatric and neurological comorbidities in epilepsy. Nat Rev Neurol 2016; 12:106–116.\nMula M. Epilepsy and psychiatric comorbidities: drug selection. Curr Treat Options Neurol 2017; 19:44.\n",
+  "raw_text_sha256": "b4a103b7e91889f1ee42c5f87a37997d9378ef2391852bebed0febca257d3a0f",
+  "coordinates_sha256": "1180c81820f9ad1383400f14308f2c5412f66cda1d6f79a62e0f50e403b7d220",
+  "block_sequence_sha256": "914c8b5ad1d265035e559295c88c05e268460b6c89e23f5debe32fbc0ccec554",
+  "blocks": [
+    {
+      "block_id": "page-0814-block-0000",
+      "order": 0,
+      "text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    793\n",
+      "bbox": [
+        47.999698638916016,
+        31.395221710205078,
+        419.96697998046875,
+        41.0272216796875
+      ],
+      "text_sha256": "b083c60678a8af39ecc5da55a0e1993988b74900e9a0db52f2ee7672ba02416c"
+    },
+    {
+      "block_id": "page-0814-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        454.4096984863281,
+        75.763671875,
+        463.88970947265625,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0814-block-0002",
+      "order": 2,
+      "text": "\t56.\t Man KKC, et al. Association between methylphenidate treatment and risk of seizure: a population-based, self-controlled case-series study. \n",
+      "bbox": [
+        47.99980163574219,
+        63.2703857421875,
+        421.6978759765625,
+        70.30238342285156
+      ],
+      "text_sha256": "ef028f61f0701dbaeeba67fc1621c5a4256966c607e118aae5d84f07f2e534cc"
+    },
+    {
+      "block_id": "page-0814-block-0003",
+      "order": 3,
+      "text": "Lancet Child Adolesc Health 2020; 4:435–443.\n\t57.\t Besag F, et al. Psychiatric and behavioural disorders in children with epilepsy (ILAE Task Force report): epilepsy and ADHD. Epileptic Disord \n",
+      "bbox": [
+        48.00579833984375,
+        72.12638854980469,
+        421.685791015625,
+        88.30238342285156
+      ],
+      "text_sha256": "92fbdbcf9f0b0c86976e7ccd3a3da64a6a0ae6776df0dbac9c72a71eae68facb"
+    },
+    {
+      "block_id": "page-0814-block-0004",
+      "order": 4,
+      "text": "2016; 18:S8–S15.\n\t58.\t Besag F, et al. Psychiatric and behavioural disorders in children with epilepsy (ILAE Task Force report): when should pharmacotherapy for \n",
+      "bbox": [
+        48.01179885864258,
+        90.12638854980469,
+        421.66778564453125,
+        106.30238342285156
+      ],
+      "text_sha256": "51748be6b36c15773304785df2aae5058d512d3497d0c87df0f85ff7af51b1dc"
+    },
+    {
+      "block_id": "page-0814-block-0005",
+      "order": 5,
+      "text": "psychiatric/behavioural disorders in children with epilepsy be prescribed? Epileptic Disord 2016; 18:S77–S86.\n\t59.\t Gonzalez-Heydrich J, et al. Comparing stimulant effects in youth with ADHD symptoms and epilepsy. Epilepsy Behav 2014; 36:102–107.\n\t60.\t Schubert R. Attention deficit disorder and epilepsy. Pediatr Neurol 2005; 32:1–10.\n\t61.\t Torres A, et al. Tolerability of atomoxetine for treatment of pediatric attention-deficit/hyperactivity disorder in the context of epilepsy. \n",
+      "bbox": [
+        48.017799377441406,
+        108.12638854980469,
+        421.6616516113281,
+        142.30238342285156
+      ],
+      "text_sha256": "ca41681d84ef7c325b7936a89faa0ae02c31cad73781bd23d764bf9fb84f486b"
+    },
+    {
+      "block_id": "page-0814-block-0006",
+      "order": 6,
+      "text": "Epilepsy Behav 2011; 20:95–102.\n\t62.\t Williams AE, et al. Epilepsy and attention-deficit hyperactivity disorder: links, risks, and challenges. Neuropsychiatr Dis Treat 2016; \n",
+      "bbox": [
+        48.03580093383789,
+        144.1263885498047,
+        421.72198486328125,
+        160.30238342285156
+      ],
+      "text_sha256": "b2e596fdce2197094b93f62c0932a735edee5457064e460feb8437c723ed6997"
+    },
+    {
+      "block_id": "page-0814-block-0007",
+      "order": 7,
+      "text": "12:287–296.\n",
+      "bbox": [
+        59.03980255126953,
+        162.1263885498047,
+        92.06378936767578,
+        169.30238342285156
+      ],
+      "text_sha256": "2992c12e49ab9ed384ec3a8ea93826124951636b7725734c58ee9a61631ac595"
+    },
+    {
+      "block_id": "page-0814-block-0008",
+      "order": 8,
+      "text": "Further reading\n",
+      "bbox": [
+        47.99980163574219,
+        187.64938354492188,
+        128.48678588867188,
+        200.68438720703125
+      ],
+      "text_sha256": "97a7eb93e6fca560969f4c10a52d2ef83995974b08b112934e0d108909963303"
+    },
+    {
+      "block_id": "page-0814-block-0009",
+      "order": 9,
+      "text": "Kanner AM. Management of psychiatric and neurological comorbidities in epilepsy. Nat Rev Neurol 2016; 12:106–116.\nMula M. Epilepsy and psychiatric comorbidities: drug selection. Curr Treat Options Neurol 2017; 19:44.\n",
+      "bbox": [
+        47.99980163574219,
+        205.6263885498047,
+        359.1777648925781,
+        221.80238342285156
+      ],
+      "text_sha256": "b697528b1239c499081e1126e12a115fffbb6287aea5634b17025de5e3dd41b8"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

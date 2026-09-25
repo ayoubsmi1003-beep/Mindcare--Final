@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0248",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 248,
+  "source_page_index": 247,
+  "source_page_display": 248,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    227\nCHAPTER 1\nClozapine-induced hypersalivation\nClozapine is well known to be causally associated with hypersalivation (sialorrhoea)1 \nwith excess salivary pooling in the mouth and drooling, particularly at night. The prob-\nlem tends to occur in the early stages of treatment and is probably dose-related. \nHypersalivation has been found to be more common in those prescribed standard doses \nof clozapine rather than low dosage2 and to be associated with elevated plasma clozap-\nine concentrations.3 Clinical observation suggests that hypersalivation reduces some-\nwhat in severity over time (usually several months) but may persist. Clozapine-induced \nhypersalivation is socially embarrassing, has a negative impact on quality of life1 and, \ngiven that it has been implicated as a contributory factor in the development of aspira-\ntion pneumonia, could be potentially life-threatening.4–7 So treatment is a matter of \nsome urgency.\nThe pharmacological basis of clozapine-related hypersalivation remains unclear.8 \nSuggested mechanisms include muscarinic M4 agonism, adrenergic α2 antagonism, and \ninhibition of the swallowing reflex.9,10 The last of these is supported by trials which \nsuggest that saliva production is not increased in clozapine-treated patients,11,12 although \nat least one study has observed marked increases in salivary flow in the first three weeks \nof treatment.13\nWhatever the mechanism, medications that reduce saliva production might be \nexpected to diminish the severity of clozapine-induced sialorrhoea. However, there are \nno medications licensed for this condition, and many of the relevant published studies \nhave limitations that preclude any confident treatment recommendations.14 The evi-\ndence, such as it is, tends to favour anti-muscarinic agents, such as propantheline and \ndiphenhydramine.15,16 Use of antimuscarinic agents should take account of the risk of \ncompounding clozapine’s liability for serious, potentially life-threatening, gastrointesti-\nnal hypomotility.17,18 Table 1.40 describes putative pharmacological treatments that \nhave been examined. Non-drug treatments may be used if appropriate – these include \nchewing gum during the day, elevating pillows and placing a towel on the pillow to \nprevent soaking.8\nTable 1.40  Clozapine-related hypersalivation – summary\nTreatment\nComments\nAmisulpride\n100–400mg/day16,19,20\nSupported by a positive RCT compared with placebo, one other in \nwhich it was compared with moclobemide and numerous case \nstudies.21–25 May allow dose reduction of clozapine\nAmitriptyline\n25–100mg/day26–28\nLimited literature support. Adverse effects may be troublesome. \nWorsens constipation\nAtropine\ngiven sublingually29–33\nor as solution (1mg/10ml) used as a \nmouthwash\nLimited literature support and benefit-risk uncertain. Rarely used. \nProblems with administration have been reported34\n(Continued)\n",
+  "raw_text_sha256": "3c09c5e39de9535724ca2e7fef8f6475e4a3628b80c1a3b40ff3c7ce47a24a70",
+  "coordinates_sha256": "739fc109ed3684f0877daad69ea0c51ce350ad78a3b1c68444155f9d63def51e",
+  "block_sequence_sha256": "961a39f585919411c5d8e8e9e8b345b79fab1986a509c5bb5d408299b79d55e6",
+  "blocks": [
+    {
+      "block_id": "page-0248-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    227\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "5718127683e39442f7dc78099969c6a60cb592220819ab2ce7da94319eab2280"
+    },
+    {
+      "block_id": "page-0248-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0248-block-0002",
+      "order": 2,
+      "text": "Clozapine-induced hypersalivation\n",
+      "bbox": [
+        54.99909973144531,
+        66.06442260742188,
+        233.47402954101562,
+        79.09942626953125
+      ],
+      "text_sha256": "9b2e9904496de5505871f468fd254cabe97ab33c93b16de80611c27710b9ea24"
+    },
+    {
+      "block_id": "page-0248-block-0003",
+      "order": 3,
+      "text": "Clozapine is well known to be causally associated with hypersalivation (sialorrhoea)1 \nwith excess salivary pooling in the mouth and drooling, particularly at night. The prob-\nlem tends to occur in the early stages of treatment and is probably dose-related. \nHypersalivation has been found to be more common in those prescribed standard doses \nof clozapine rather than low dosage2 and to be associated with elevated plasma clozap-\nine concentrations.3 Clinical observation suggests that hypersalivation reduces some-\nwhat in severity over time (usually several months) but may persist. Clozapine-induced \nhypersalivation is socially embarrassing, has a negative impact on quality of life1 and, \ngiven that it has been implicated as a contributory factor in the development of aspira-\ntion pneumonia, could be potentially life-threatening.4–7 So treatment is a matter of \nsome urgency.\n",
+      "bbox": [
+        47.99909973144531,
+        84.909423828125,
+        422.7829895019531,
+        216.62942504882812
+      ],
+      "text_sha256": "65f5f2b6086613c82b2d7fdaa57ac48eed79e2fb17041b6705f789757a2273ad"
+    },
+    {
+      "block_id": "page-0248-block-0004",
+      "order": 4,
+      "text": "The pharmacological basis of clozapine-related hypersalivation remains unclear.8 \nSuggested mechanisms include muscarinic M4 agonism, adrenergic α2 antagonism, and \ninhibition of the swallowing reflex.9,10 The last of these is supported by trials which \nsuggest that saliva production is not increased in clozapine-treated patients,11,12 although \nat least one study has observed marked increases in salivary flow in the first three weeks \nof treatment.13\n",
+      "bbox": [
+        47.99900817871094,
+        216.909423828125,
+        422.7814636230469,
+        288.6294250488281
+      ],
+      "text_sha256": "04fb9e4a70703fffc69d4e82e57d0951b70507c40328159f1c5073cd3d573ffd"
+    },
+    {
+      "block_id": "page-0248-block-0005",
+      "order": 5,
+      "text": "Whatever the mechanism, medications that reduce saliva production might be \nexpected to diminish the severity of clozapine-induced sialorrhoea. However, there are \nno medications licensed for this condition, and many of the relevant published studies \nhave limitations that preclude any confident treatment recommendations.14 The evi-\ndence, such as it is, tends to favour anti-muscarinic agents, such as propantheline and \ndiphenhydramine.15,16 Use of antimuscarinic agents should take account of the risk of \ncompounding clozapine’s liability for serious, potentially life-threatening, gastrointesti-\nnal hypomotility.17,18 Table 1.40 describes putative pharmacological treatments that \nhave been examined. Non-drug treatments may be used if appropriate – these include \nchewing gum during the day, elevating pillows and placing a towel on the pillow to \nprevent soaking.8\n",
+      "bbox": [
+        47.994903564453125,
+        288.909423828125,
+        422.8150329589844,
+        420.6294250488281
+      ],
+      "text_sha256": "cad0053c30daa1923c3b32981ba580bfab394104695ebb81b3b1ebf188445938"
+    },
+    {
+      "block_id": "page-0248-block-0006",
+      "order": 6,
+      "text": "Table 1.40  Clozapine-related hypersalivation – summary\n",
+      "bbox": [
+        53.999298095703125,
+        453.3235168457031,
+        235.5517578125,
+        462.2110290527344
+      ],
+      "text_sha256": "c08e24df44dcf9e47d31ac118310f482c73960396a4640edd07d6ce57f23f56c"
+    },
+    {
+      "block_id": "page-0248-block-0007",
+      "order": 7,
+      "text": "Treatment\nComments\n",
+      "bbox": [
+        47.999298095703125,
+        473.5585021972656,
+        241.49932861328125,
+        482.4460144042969
+      ],
+      "text_sha256": "8be686e890d313f8295cc060595592f78dd7d0f699de8b9c632f5bd2fa6e517c"
+    },
+    {
+      "block_id": "page-0248-block-0008",
+      "order": 8,
+      "text": "Amisulpride\n100–400mg/day16,19,20\nSupported by a positive RCT compared with placebo, one other in \nwhich it was compared with moclobemide and numerous case \nstudies.21–25 May allow dose reduction of clozapine\n",
+      "bbox": [
+        47.999298095703125,
+        490.33599853515625,
+        416.8343811035156,
+        519.2210083007812
+      ],
+      "text_sha256": "128a4aef4022ca92b0cd19fd0c8c01163c0f4a914bee480454b47610c173cf20"
+    },
+    {
+      "block_id": "page-0248-block-0009",
+      "order": 9,
+      "text": "Amitriptyline\n25–100mg/day26–28\nLimited literature support. Adverse effects may be troublesome. \nWorsens constipation\n",
+      "bbox": [
+        47.99969482421875,
+        525.3560180664062,
+        409.0118103027344,
+        544.2435302734375
+      ],
+      "text_sha256": "f50838c3afd2f6f5bdb545d52e2e4e163fea90805d6540c167910fbfbe19f755"
+    },
+    {
+      "block_id": "page-0248-block-0010",
+      "order": 10,
+      "text": "Atropine\ngiven sublingually29–33\n",
+      "bbox": [
+        47.999298095703125,
+        560.3834838867188,
+        116.58657836914062,
+        579.2684936523438
+      ],
+      "text_sha256": "ffa1a0596c3285140959ac6eb1d7704346d9cad76f9877a54e1152948b7ee8a8"
+    },
+    {
+      "block_id": "page-0248-block-0011",
+      "order": 11,
+      "text": "or as solution (1mg/10ml) used as a \nmouthwash\n",
+      "bbox": [
+        47.999298095703125,
+        580.5634765625,
+        163.87429809570312,
+        599.2684936523438
+      ],
+      "text_sha256": "4fa73a377c739524491135b104414a19bace582859664e193be0ed0befaedd25"
+    },
+    {
+      "block_id": "page-0248-block-0012",
+      "order": 12,
+      "text": "Limited literature support and benefit-risk uncertain. Rarely used. \nProblems with administration have been reported34\n",
+      "bbox": [
+        203.99929809570312,
+        560.5609741210938,
+        413.3244323730469,
+        579.2659912109375
+      ],
+      "text_sha256": "b1a4b6e720dc29b3927df5655da51ac339b8a3160b307e05e6b64890cdcb2124"
+    },
+    {
+      "block_id": "page-0248-block-0013",
+      "order": 13,
+      "text": "(Continued)\n",
+      "bbox": [
+        382.484375,
+        606.443603515625,
+        419.9994201660156,
+        615.1961059570312
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

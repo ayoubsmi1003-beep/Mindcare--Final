@@ -1,0 +1,731 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0595",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 595,
+  "source_page_index": 594,
+  "source_page_display": 595,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Medication\nOnset and duration of \naction\nDose\nNotes\nRecommended \nmonitoring/general notes\nRitalin XL (refs SPC, public \nassessment report)\nOnset: 60 minutes\nDuration: 8–12 hours\nDose as for Equasym XL\nConsists of an immediate-release \ncomponent (50% of the dose) \nand a modified-release \ncomponent (50% of the dose\nDexamfetamine \nimmediate release36,46\nOnset: 20–60 minutes\nDuration: 3–6 hours\nInitially 2.5–10mg daily, titrated up in weekly \nincrements of 2.5–5mg, to a maximum of \n20mg daily in divided doses (occasionally up \nto 40mg daily necessary)\nConsidered to be less well \ntolerated than methylphenidate36\nLisdexamfetamine \n(Elvanse)2–4\nOnset: 20–60 minutes\nDuration: 13+ hours\nInitially 20 or 30mg in the morning, titrated \nup to a licensed maximum dose of 70mg \ndaily\nProdrug, gradually hydrolysed to \ndexamfetamine\nCapsules can be opened and \nsprinkled47\nLicensed in adults\nAtomoxetine48,49\nApproximately 4–6 weeks\n(atomoxetine is a \nnoradrenaline reuptake \ninhibitor)\nWhen switching from a stimulant, continue \nstimulant for first 4 weeks of therapy\nFor children <70kg: Initially 0.5mg/kg/day for \n7 days, then increase according to response. \nRecommended maintenance dose 1.2mg/kg/\nday (in single or divided doses) and up to \n1.8mg/kg/day, to a maximum of 120mg daily \nif necessary1\nFor children >70kg: Initially 40mg daily for \n7 days, then increase according to response. \nRecommended maintenance dose 80mg \ndaily\nLess effective than stimulants (see \nmain ADHD text)11,15\nMay be useful where stimulant \ndiversion is a problem50\nLicensed in adults\nBlood pressure51\nPulse\nHeight\nWeight\nMonitor for insomnia, mood \nand appetite change and \nthe development of tics\nMonitor young people and \nadults with ADHD for sexual \ndysfunction (that is, erectile \nand ejaculatory dysfunction) \nas potential adverse effects \nof atomoxetine.\nNot a Controlled Drug\nTable 5.6  (Continued)\n",
+  "raw_text_sha256": "3f78658d1dd01fe0bfbbfc6724145babe51b1f5b1e39690c41b33110569f814e",
+  "coordinates_sha256": "79aa97642b47b7739c53d3a47fdcb1bf77c228e1ec59897f373f846facbc8f26",
+  "block_sequence_sha256": "02781b04c558e3e3f67b08e4df5eccd05e5a636d2a6402eb7bc56a5b1b0b7213",
+  "blocks": [
+    {
+      "block_id": "page-0595-block-0000",
+      "order": 0,
+      "text": "Medication\nOnset and duration of \n",
+      "bbox": [
+        87.7550048828125,
+        445.1489562988281,
+        106.63999938964844,
+        612.6539916992188
+      ],
+      "text_sha256": "249d9116f7aa1909fc82fa6994e689eda576e19d63c364fd211530554ae82935"
+    },
+    {
+      "block_id": "page-0595-block-0001",
+      "order": 1,
+      "text": "action\nDose\nNotes\nRecommended \n",
+      "bbox": [
+        87.7550048828125,
+        105.9089584350586,
+        106.63999938964844,
+        521.0789794921875
+      ],
+      "text_sha256": "5ff48f0fa10de5b92d40969839ca76707d94e8e630a5b46cb7e23298e6458375"
+    },
+    {
+      "block_id": "page-0595-block-0002",
+      "order": 2,
+      "text": "monitoring/general notes\n",
+      "bbox": [
+        97.75250244140625,
+        69.23390197753906,
+        106.63999938964844,
+        160.08148193359375
+      ],
+      "text_sha256": "c7de4acb37fc65c9292e176280624160599bab084cbaf51eaebe094e8ee4194b"
+    },
+    {
+      "block_id": "page-0595-block-0003",
+      "order": 3,
+      "text": "Ritalin XL (refs SPC, public \n",
+      "bbox": [
+        116.06000518798828,
+        527.3715209960938,
+        124.76750183105469,
+        612.6614990234375
+      ],
+      "text_sha256": "65df537f2c7fa609bf5845f417fa90e9c3ee2115439f405ea439768de00214e8"
+    },
+    {
+      "block_id": "page-0595-block-0004",
+      "order": 4,
+      "text": "assessment report)\nOnset: 60 minutes\n",
+      "bbox": [
+        116.06000518798828,
+        462.3240051269531,
+        134.76499938964844,
+        612.6614990234375
+      ],
+      "text_sha256": "9842bb10cdd2fa30ca859ae0479068f1759374425c2211bcb3ae1109e602c847"
+    },
+    {
+      "block_id": "page-0595-block-0005",
+      "order": 5,
+      "text": "Duration: 8–12 hours\nDose as for Equasym XL\nConsists of an immediate-release \n",
+      "bbox": [
+        116.06000518798828,
+        170.71644592285156,
+        134.76499938964844,
+        521.0864868164062
+      ],
+      "text_sha256": "79913242bc3892a0ef12e5c7dab1ca50955554baca4db3ce1c968e418940cb4e"
+    },
+    {
+      "block_id": "page-0595-block-0006",
+      "order": 6,
+      "text": "component (50% of the dose) \n",
+      "bbox": [
+        126.05750274658203,
+        178.88389587402344,
+        134.76499938964844,
+        278.08648681640625
+      ],
+      "text_sha256": "1d9cdaf41fb9b9d7d3787d5d1d08672d5cdb27f9fe925c61cf1c7b73cbc0a32c"
+    },
+    {
+      "block_id": "page-0595-block-0007",
+      "order": 7,
+      "text": "and a modified-release \n",
+      "bbox": [
+        136.05499267578125,
+        203.2139129638672,
+        144.7624969482422,
+        278.08648681640625
+      ],
+      "text_sha256": "e768a6ee69e0c96c758899914270fe72645c9464184a1d668782e26b8d1f0d77"
+    },
+    {
+      "block_id": "page-0595-block-0008",
+      "order": 8,
+      "text": "component (50% of the dose\n",
+      "bbox": [
+        146.052490234375,
+        183.05389404296875,
+        154.75999450683594,
+        278.08648681640625
+      ],
+      "text_sha256": "8fe96a3410bb036dee929ac2f2997cb3133ba50806fbeb6f8e3064de43234d2b"
+    },
+    {
+      "block_id": "page-0595-block-0009",
+      "order": 9,
+      "text": "Dexamfetamine \n",
+      "bbox": [
+        164.0,
+        554.303955078125,
+        172.8874969482422,
+        612.6614990234375
+      ],
+      "text_sha256": "c47ccf0ec49a9ef63c5d31f2dc47eadb473d89d2dff37ac950caf7f737fd3e8a"
+    },
+    {
+      "block_id": "page-0595-block-0010",
+      "order": 10,
+      "text": "immediate release36,46\nOnset: 20–60 minutes\n",
+      "bbox": [
+        164.1824951171875,
+        450.2247009277344,
+        182.88499450683594,
+        612.6614990234375
+      ],
+      "text_sha256": "4b49baf46af3de5b67c5f55f73f31a92e74e6e767f4965977d77c7d3333a8ac1"
+    },
+    {
+      "block_id": "page-0595-block-0011",
+      "order": 11,
+      "text": "Duration: 3–6 hours\nInitially 2.5–10mg daily, titrated up in weekly \n",
+      "bbox": [
+        164.1824951171875,
+        284.00970458984375,
+        182.8874969482422,
+        521.0772094726562
+      ],
+      "text_sha256": "ab4120aee5af9a0e0a4a1765df4dbd61398df6c929b3d88a840d01c0197a208d"
+    },
+    {
+      "block_id": "page-0595-block-0012",
+      "order": 12,
+      "text": "increments of 2.5–5mg, to a maximum of \n",
+      "bbox": [
+        174.17999267578125,
+        293.3621826171875,
+        182.8874969482422,
+        429.07470703125
+      ],
+      "text_sha256": "28ae1e5ff00ed60d39874b0f7812ee5be7d5e6bcf3f36d3a8db6c0a0bc6064c9"
+    },
+    {
+      "block_id": "page-0595-block-0013",
+      "order": 13,
+      "text": "20mg daily in divided doses (occasionally up \nto 40mg daily necessary)\n",
+      "bbox": [
+        184.177490234375,
+        286.1245422363281,
+        202.8824920654297,
+        429.07470703125
+      ],
+      "text_sha256": "58bc560c2874a01bef65e3220c63be2f63e42f179b420d76f2fd89f46dc15050"
+    },
+    {
+      "block_id": "page-0595-block-0014",
+      "order": 14,
+      "text": "Considered to be less well \n",
+      "bbox": [
+        164.17498779296875,
+        192.77210998535156,
+        172.8824920654297,
+        278.07720947265625
+      ],
+      "text_sha256": "25d5ad867a6401900fb36f3ea83467d1a71062cdd2d3880b1c44b80f5a0c82b4"
+    },
+    {
+      "block_id": "page-0595-block-0015",
+      "order": 15,
+      "text": "tolerated than methylphenidate36\n",
+      "bbox": [
+        174.1724853515625,
+        171.9584197998047,
+        182.87998962402344,
+        278.07720947265625
+      ],
+      "text_sha256": "f2698eb9e834f3920d8363aed69f9cf24131d03316f7b676c3c7c2d6382bf413"
+    },
+    {
+      "block_id": "page-0595-block-0016",
+      "order": 16,
+      "text": "Lisdexamfetamine \n",
+      "bbox": [
+        212.12750244140625,
+        545.9639282226562,
+        221.01499938964844,
+        612.6539916992188
+      ],
+      "text_sha256": "6c667af5bfaa614832323d7c842fdeafc19b202ee5e7d3f262304f8f60ef6c20"
+    },
+    {
+      "block_id": "page-0595-block-0017",
+      "order": 17,
+      "text": "(Elvanse)2–4\nOnset: 20–60 minutes\n",
+      "bbox": [
+        212.3074951171875,
+        450.2247009277344,
+        231.0124969482422,
+        612.6539916992188
+      ],
+      "text_sha256": "27258ee7494010f2252cadacd619f76cae79e9080b88784fe194e1e3f738ffe0"
+    },
+    {
+      "block_id": "page-0595-block-0018",
+      "order": 18,
+      "text": "Duration: 13+ hours\nInitially 20 or 30mg in the morning, titrated \n",
+      "bbox": [
+        212.3074951171875,
+        287.6695556640625,
+        231.0124969482422,
+        521.0772094726562
+      ],
+      "text_sha256": "3a8c05e3117086f630fbadf2ead2c5240a2fe65783f11ae0d98cd19cc28c25c3"
+    },
+    {
+      "block_id": "page-0595-block-0019",
+      "order": 19,
+      "text": "up to a licensed maximum dose of 70mg \n",
+      "bbox": [
+        222.30499267578125,
+        296.1296081542969,
+        231.0124969482422,
+        429.07470703125
+      ],
+      "text_sha256": "5ff9d55c8119528afaa2633545d746cc1b0279a41b484a5b6ee2b0c18708cc75"
+    },
+    {
+      "block_id": "page-0595-block-0020",
+      "order": 20,
+      "text": "daily\n",
+      "bbox": [
+        232.302490234375,
+        414.49468994140625,
+        241.00999450683594,
+        429.07470703125
+      ],
+      "text_sha256": "113faf59ebe684f46de26036bd9e1a5f5224842fa6a20cff0b063bcc235a7955"
+    },
+    {
+      "block_id": "page-0595-block-0021",
+      "order": 21,
+      "text": "Prodrug, gradually hydrolysed to \n",
+      "bbox": [
+        212.29998779296875,
+        172.4921417236328,
+        221.0074920654297,
+        278.07720947265625
+      ],
+      "text_sha256": "ca999f079ec8be492ee2a629d07ae6ee6cfd3aafc6a5c51ccde8f445b0a5efa6"
+    },
+    {
+      "block_id": "page-0595-block-0022",
+      "order": 22,
+      "text": "dexamfetamine\n",
+      "bbox": [
+        222.2974853515625,
+        228.502197265625,
+        231.00498962402344,
+        278.07720947265625
+      ],
+      "text_sha256": "d1494ce1204d214d2e790fa0c65fc99e75f571bef3a26cafc5cc203755671a8c"
+    },
+    {
+      "block_id": "page-0595-block-0023",
+      "order": 23,
+      "text": "Capsules can be opened and \n",
+      "bbox": [
+        232.29498291015625,
+        183.8695831298828,
+        241.0024871826172,
+        278.07720947265625
+      ],
+      "text_sha256": "80bacb50359ca46c69bbc8cbb9b2f96074afd9f6de81cfa3facbda6dd3b624c4"
+    },
+    {
+      "block_id": "page-0595-block-0024",
+      "order": 24,
+      "text": "sprinkled47\n",
+      "bbox": [
+        242.29248046875,
+        244.4603729248047,
+        250.99998474121094,
+        278.07720947265625
+      ],
+      "text_sha256": "1c936b4741b8774f1cb99ca38be343021dd24ba6a07239a2da1c5f4cd294148c"
+    },
+    {
+      "block_id": "page-0595-block-0025",
+      "order": 25,
+      "text": "Licensed in adults\n",
+      "bbox": [
+        252.30751037597656,
+        221.8196258544922,
+        261.0150146484375,
+        278.0771789550781
+      ],
+      "text_sha256": "953a97835c4022cf9618c9b9d7ac45b5a63f0f3def9990f569b6301288e57f3d"
+    },
+    {
+      "block_id": "page-0595-block-0026",
+      "order": 26,
+      "text": "Atomoxetine48,49\nApproximately 4–6 weeks\n",
+      "bbox": [
+        270.2550048828125,
+        438.7046813964844,
+        279.14251708984375,
+        612.6522216796875
+      ],
+      "text_sha256": "3063ca1d5eec3a28f4a022217290e4140bf0eafbe2a9adae8517fe82ea19bbfe"
+    },
+    {
+      "block_id": "page-0595-block-0027",
+      "order": 27,
+      "text": "(atomoxetine is a \n",
+      "bbox": [
+        286.4300231933594,
+        464.4071960449219,
+        295.13751220703125,
+        521.0772094726562
+      ],
+      "text_sha256": "d04d49664a9cb50f1327e726f777c8be8253be18b984b04d1dd13d18761512b8"
+    },
+    {
+      "block_id": "page-0595-block-0028",
+      "order": 28,
+      "text": "noradrenaline reuptake \n",
+      "bbox": [
+        296.4275207519531,
+        444.6672058105469,
+        305.135009765625,
+        521.0772094726562
+      ],
+      "text_sha256": "d77cbe4f34347a31524d520d4f8b9b7c72765c14d555afb60ed75b628c3ea3b2"
+    },
+    {
+      "block_id": "page-0595-block-0029",
+      "order": 29,
+      "text": "inhibitor)\n",
+      "bbox": [
+        306.4250183105469,
+        492.3222351074219,
+        315.13250732421875,
+        521.0772094726562
+      ],
+      "text_sha256": "a070cd26e16b8477b35c2d10643a775445007e7c6edf00335f02cadd702c95b9"
+    },
+    {
+      "block_id": "page-0595-block-0030",
+      "order": 30,
+      "text": "When switching from a stimulant, continue \n",
+      "bbox": [
+        270.4250183105469,
+        288.359619140625,
+        279.13250732421875,
+        429.07470703125
+      ],
+      "text_sha256": "ba290870e3cd3ebb1565a17db969d4c830d34efc639407a3e59502137e89423f"
+    },
+    {
+      "block_id": "page-0595-block-0031",
+      "order": 31,
+      "text": "stimulant for first 4 weeks of therapy\n",
+      "bbox": [
+        280.4225158691406,
+        310.7396545410156,
+        289.1300048828125,
+        429.07470703125
+      ],
+      "text_sha256": "d755445acec13187b6e2c854d21bfdcb0fb5ad5fbc57f8e7dca7f647f284c152"
+    },
+    {
+      "block_id": "page-0595-block-0032",
+      "order": 32,
+      "text": "For children <70kg: Initially 0.5mg/kg/day for \n",
+      "bbox": [
+        296.4200134277344,
+        285.0446472167969,
+        305.12750244140625,
+        429.07470703125
+      ],
+      "text_sha256": "4acdc6198e80b3e1a62f336fa05522b942e59bd08e1667324046822012eb426f"
+    },
+    {
+      "block_id": "page-0595-block-0033",
+      "order": 33,
+      "text": "7 days, then increase according to response. \nRecommended maintenance dose 1.2mg/kg/\n",
+      "bbox": [
+        306.4175109863281,
+        287.3697204589844,
+        325.12249755859375,
+        429.07470703125
+      ],
+      "text_sha256": "7e140786a2a05671a1b9aadecd48102d9578d85967a042f40339fca79defa237"
+    },
+    {
+      "block_id": "page-0595-block-0034",
+      "order": 34,
+      "text": "day (in single or divided doses) and up to \n",
+      "bbox": [
+        326.4125061035156,
+        297.9521789550781,
+        335.1199951171875,
+        429.07470703125
+      ],
+      "text_sha256": "e3fad3f23f581d44b0a77fd22bcebae3956acf0c126b61ee54815b83cc71c09e"
+    },
+    {
+      "block_id": "page-0595-block-0035",
+      "order": 35,
+      "text": "1.8mg/kg/day, to a maximum of 120mg daily \nif necessary1\n",
+      "bbox": [
+        336.4100036621094,
+        284.45208740234375,
+        355.114990234375,
+        429.07470703125
+      ],
+      "text_sha256": "d59eb7d0774ee0a3924b181fe996c7c11293abaea070a7636da634ae1b58de30"
+    },
+    {
+      "block_id": "page-0595-block-0036",
+      "order": 36,
+      "text": "For children >70kg: Initially 40mg daily for \n",
+      "bbox": [
+        362.4325256347656,
+        293.39471435546875,
+        371.1400146484375,
+        429.0771789550781
+      ],
+      "text_sha256": "0cbb75573e2d4bd57cbc31891769ee15970f0296b62c8e82e266c0c1ac09f279"
+    },
+    {
+      "block_id": "page-0595-block-0037",
+      "order": 37,
+      "text": "7 days, then increase according to response. \nRecommended maintenance dose 80mg \n",
+      "bbox": [
+        372.4300231933594,
+        287.312255859375,
+        391.135009765625,
+        429.0771789550781
+      ],
+      "text_sha256": "b802d2b3c79e00d43ab7c879e6eb00eb67dd597b2cc607465f49e880108db7e0"
+    },
+    {
+      "block_id": "page-0595-block-0038",
+      "order": 38,
+      "text": "daily\n",
+      "bbox": [
+        392.4250183105469,
+        414.6471862792969,
+        401.13250732421875,
+        429.0771789550781
+      ],
+      "text_sha256": "113faf59ebe684f46de26036bd9e1a5f5224842fa6a20cff0b063bcc235a7955"
+    },
+    {
+      "block_id": "page-0595-block-0039",
+      "order": 39,
+      "text": "Less effective than stimulants (see \n",
+      "bbox": [
+        270.4225158691406,
+        168.2196807861328,
+        279.1300048828125,
+        278.0796813964844
+      ],
+      "text_sha256": "e4e5ff745b17fdb8affe9af75c36575d0a423d6475bd4b40d49c7080aacb86d2"
+    },
+    {
+      "block_id": "page-0595-block-0040",
+      "order": 40,
+      "text": "main ADHD text)11,15\n",
+      "bbox": [
+        280.4200134277344,
+        212.9653778076172,
+        289.12750244140625,
+        278.0796813964844
+      ],
+      "text_sha256": "c79b0ce0f5c956f815f546a492f5dfd1976bcb3a5d3238e4cf390fa8de7802a2"
+    },
+    {
+      "block_id": "page-0595-block-0041",
+      "order": 41,
+      "text": "May be useful where stimulant \n",
+      "bbox": [
+        296.4325256347656,
+        177.36708068847656,
+        305.1400146484375,
+        278.0771789550781
+      ],
+      "text_sha256": "cda74c7e566cca546ce9d81f719f2965ee437f1e05d509deabcf75d51bbd250a"
+    },
+    {
+      "block_id": "page-0595-block-0042",
+      "order": 42,
+      "text": "diversion is a problem50\n",
+      "bbox": [
+        306.4300231933594,
+        203.7583770751953,
+        315.13751220703125,
+        278.0771789550781
+      ],
+      "text_sha256": "480cec2e95cfee6c3bf7a9e84055b609d89f031bdbba755826634b95e29b6f44"
+    },
+    {
+      "block_id": "page-0595-block-0043",
+      "order": 43,
+      "text": "Licensed in adults\n",
+      "bbox": [
+        322.4325256347656,
+        221.8196258544922,
+        331.1400146484375,
+        278.0771789550781
+      ],
+      "text_sha256": "953a97835c4022cf9618c9b9d7ac45b5a63f0f3def9990f569b6301288e57f3d"
+    },
+    {
+      "block_id": "page-0595-block-0044",
+      "order": 44,
+      "text": "Blood pressure51\n",
+      "bbox": [
+        270.4350280761719,
+        108.38517761230469,
+        279.14251708984375,
+        160.07965087890625
+      ],
+      "text_sha256": "ef7874bfe909fa9b9d800f2cc19d7ec8e81a39b0c7e540797fee508dada1fce4"
+    },
+    {
+      "block_id": "page-0595-block-0045",
+      "order": 45,
+      "text": "Pulse\n",
+      "bbox": [
+        280.4325256347656,
+        143.82476806640625,
+        289.1400146484375,
+        160.07720947265625
+      ],
+      "text_sha256": "3594b3914e54552eab34b12edfdd16ed50b8ddcaaa4a42c69751b2eb635a6037"
+    },
+    {
+      "block_id": "page-0595-block-0046",
+      "order": 46,
+      "text": "Height\n",
+      "bbox": [
+        290.4300231933594,
+        138.822265625,
+        299.13751220703125,
+        160.07720947265625
+      ],
+      "text_sha256": "21b45d2adc15011c30feece18207ef9c36795f23c836c761ad34aff35cce1d19"
+    },
+    {
+      "block_id": "page-0595-block-0047",
+      "order": 47,
+      "text": "Weight\n",
+      "bbox": [
+        300.4275207519531,
+        136.8797607421875,
+        309.135009765625,
+        160.07720947265625
+      ],
+      "text_sha256": "547d592597c1f20ae569c40a7a789e74db3c256438994fb1464ebb72f8aa37b7"
+    },
+    {
+      "block_id": "page-0595-block-0048",
+      "order": 48,
+      "text": "Monitor for insomnia, mood \n",
+      "bbox": [
+        316.4250183105469,
+        67.13741302490234,
+        325.13250732421875,
+        160.07720947265625
+      ],
+      "text_sha256": "c3c428c36c0d81426a43610c1a5115755500c4ea829665faeedbd5940312aacd"
+    },
+    {
+      "block_id": "page-0595-block-0049",
+      "order": 49,
+      "text": "and appetite change and \n",
+      "bbox": [
+        326.4225158691406,
+        77.9673080444336,
+        335.1300048828125,
+        160.07720947265625
+      ],
+      "text_sha256": "cba4812d66d2e1fe73cc246df27d8c83bc4b3a7fa47818569ea181cfa8b26fa0"
+    },
+    {
+      "block_id": "page-0595-block-0050",
+      "order": 50,
+      "text": "the development of tics\n",
+      "bbox": [
+        336.4200134277344,
+        84.65726470947266,
+        345.12750244140625,
+        160.07720947265625
+      ],
+      "text_sha256": "81b088a62617392d55aea7e0832005dcb60805ae585592cdd658929bbcb0aca1"
+    },
+    {
+      "block_id": "page-0595-block-0051",
+      "order": 51,
+      "text": "Monitor young people and \n",
+      "bbox": [
+        352.4175109863281,
+        74.36702728271484,
+        361.125,
+        160.07720947265625
+      ],
+      "text_sha256": "7b64cbe5d451019960eb3d65412bb54f63c1352ca3319bc883a7a1ecccd8e34a"
+    },
+    {
+      "block_id": "page-0595-block-0052",
+      "order": 52,
+      "text": "adults with ADHD for sexual \n",
+      "bbox": [
+        362.4150085449219,
+        70.0919418334961,
+        371.12249755859375,
+        160.07720947265625
+      ],
+      "text_sha256": "7399e44dc1d49ce52268e8334156120cb1592a95d29b4a46fa92bae54fe6793b"
+    },
+    {
+      "block_id": "page-0595-block-0053",
+      "order": 53,
+      "text": "dysfunction (that is, erectile \n",
+      "bbox": [
+        372.4125061035156,
+        73.03951263427734,
+        381.1199951171875,
+        160.07720947265625
+      ],
+      "text_sha256": "dbc90080904a1d22bd03d6329229a2891f0d394f83111649f7fcd31a5b7de5a0"
+    },
+    {
+      "block_id": "page-0595-block-0054",
+      "order": 54,
+      "text": "and ejaculatory dysfunction) \n",
+      "bbox": [
+        382.4100036621094,
+        70.61702728271484,
+        391.11749267578125,
+        160.07720947265625
+      ],
+      "text_sha256": "df9eb5a4406d08aef194aee81bae210b34c68a7b3de469b8161823a36cc32960"
+    },
+    {
+      "block_id": "page-0595-block-0055",
+      "order": 55,
+      "text": "as potential adverse effects \n",
+      "bbox": [
+        392.4075012207031,
+        74.09688568115234,
+        401.114990234375,
+        160.07720947265625
+      ],
+      "text_sha256": "6f6d011fec4948e8c1db70626174b7f3da8cdf1b5e52892a0a5af7d4c89ccc36"
+    },
+    {
+      "block_id": "page-0595-block-0056",
+      "order": 56,
+      "text": "of atomoxetine.\n",
+      "bbox": [
+        402.4049987792969,
+        109.5346908569336,
+        411.11248779296875,
+        160.07720947265625
+      ],
+      "text_sha256": "3195478856f0bc0fcf37f45202a4e489722188bbed7d475bd97c4f7ac145da87"
+    },
+    {
+      "block_id": "page-0595-block-0057",
+      "order": 57,
+      "text": "Not a Controlled Drug\n",
+      "bbox": [
+        412.4024963378906,
+        88.93980407714844,
+        421.1099853515625,
+        160.07720947265625
+      ],
+      "text_sha256": "c696ec60f5e61880e5f38cdce35bb8b17d42d33af5279043790ffcb4ade28668"
+    },
+    {
+      "block_id": "page-0595-block-0058",
+      "order": 58,
+      "text": "Table 5.6  (Continued)\n",
+      "bbox": [
+        67.62750244140625,
+        534.5339965820312,
+        76.51499938964844,
+        606.6539916992188
+      ],
+      "text_sha256": "308af4b2ab5a2bcb6709b843b581b3357fd321e73efb500ede69d32b97df89d6"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

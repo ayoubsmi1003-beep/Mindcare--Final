@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0005",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 5,
+  "source_page_index": 4,
+  "source_page_display": 5,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "This edition first published 2021\n© 2021 David M. Taylor\nAll rights reserved. No part of this publication may be reproduced, stored in a retrieval system, or transmitted, in any form \nor by any means, electronic, mechanical, photocopying, recording or otherwise, except as permitted by law. Advice on how \nto obtain permission to reuse material from this title is available at http://www.wiley.com/go/permissions.\nThe right of David M. Taylor, Thomas R. E. Barnes, and Allan H. Young to be identified as the author(s) of this work has \nbeen asserted in accordance with law.\nRegistered Office(s)\nJohn Wiley & Sons, Inc., 111 River Street, Hoboken, NJ 07030, USA\nJohn Wiley & Sons Ltd, The Atrium, Southern Gate, Chichester, West Sussex, PO19 8SQ, UK\nEditorial Office\nThe Atrium, Southern Gate, Chichester, West Sussex, PO19 8SQ, UK\nFor details of our global editorial offices, customer services, and more information about Wiley products visit us at  \nwww.wiley.com.\nWiley also publishes its books in a variety of electronic formats and by print-on-demand. Some content that appears in \nstandard print versions of this book may not be available in other formats.\nLimit of Liability/Disclaimer of Warranty\nThe contents of this work are intended to further general scientific research, understanding, and discussion only and are \nnot intended and should not be relied upon as recommending or promoting scientific method, diagnosis, or treatment by \nphysicians for any particular patient. In view of ongoing research, equipment modifications, changes in governmental \nregulations, and the constant flow of information relating to the use of medicines, equipment, and devices, the reader is \nurged to review and evaluate the information provided in the package insert or instructions for each medicine, equipment, \nor device for, among other things, any changes in the instructions or indication of usage and for added warnings and \nprecautions. While the publisher and authors have used their best efforts in preparing this work, they make no \nrepresentations or warranties with respect to the accuracy or completeness of the contents of this work and specifically \ndisclaim all warranties, including without limitation any implied warranties of merchantability or fitness for a particular \npurpose. No warranty may be created or extended by sales representatives, written sales materials or promotional \nstatements for this work. The fact that an organization, website, or product is referred to in this work as a citation and/or \npotential source of further information does not mean that the publisher and authors endorse the information or services \nthe organization, website, or product may provide or recommendations it may make. This work is sold with the \nunderstanding that the publisher is not engaged in rendering professional services. The advice and strategies contained \nherein may not be suitable for your situation. You should consult with a specialist where appropriate. Further, readers \nshould be aware that websites listed in this work may have changed or disappeared between when this work was written \nand when it is read. Neither the publisher nor authors shall be liable for any loss of profit or any other commercial \ndamages, including but not limited to special, incidental, consequential, or other damages.\nA catalogue record for this book is available from the Library of Congress\nPaperback ISBN: 9781119772224; ePDF ISBN: 9781119772248; epub ISBN: 9781119772231 \nCover design by Wiley\nSet in 10/12pt Sabon by Integra Software Services, Pondicherry, India\n10  9   8  7  6  5  4  3  2  1\n",
+  "raw_text_sha256": "9fe3381691228480ea2c385c3774dd7e4a7565c1e348a4a7cd169d9a4c7145c8",
+  "coordinates_sha256": "35cbd53377fc116111e69c2be9c80c3787e474e695c206913029d564cd208543",
+  "block_sequence_sha256": "85441dd44a28ebcdd3099874cf5edfd5a635ce7ec7eae765cd87ed26597f227e",
+  "blocks": [
+    {
+      "block_id": "page-0005-block-0000",
+      "order": 0,
+      "text": "This edition first published 2021\n© 2021 David M. Taylor\n",
+      "bbox": [
+        61.889801025390625,
+        63.090362548828125,
+        160.7087860107422,
+        80.29637908935547
+      ],
+      "text_sha256": "1138296ecbe391e44a96d945541cd1ea144b587e28bafed64f9063685f3e56df"
+    },
+    {
+      "block_id": "page-0005-block-0001",
+      "order": 1,
+      "text": "All rights reserved. No part of this publication may be reproduced, stored in a retrieval system, or transmitted, in any form \nor by any means, electronic, mechanical, photocopying, recording or otherwise, except as permitted by law. Advice on how \nto obtain permission to reuse material from this title is available at http://www.wiley.com/go/permissions.\n",
+      "bbox": [
+        61.889801025390625,
+        86.09237670898438,
+        433.98199462890625,
+        112.30040740966797
+      ],
+      "text_sha256": "257c7a2736205a6dcea2644868e2c753b50c979996bd55f0f63fad331f64257f"
+    },
+    {
+      "block_id": "page-0005-block-0002",
+      "order": 2,
+      "text": "The right of David M. Taylor, Thomas R. E. Barnes, and Allan H. Young to be identified as the author(s) of this work has \nbeen asserted in accordance with law.\n",
+      "bbox": [
+        61.889801025390625,
+        118.09640502929688,
+        429.1799011230469,
+        135.3024139404297
+      ],
+      "text_sha256": "c51813234f9cb3ff18533e04fd5e7df879f0355bb83a5ed339546b1f2b5c8a0a"
+    },
+    {
+      "block_id": "page-0005-block-0003",
+      "order": 3,
+      "text": "Registered Office(s)\nJohn Wiley & Sons, Inc., 111 River Street, Hoboken, NJ 07030, USA\nJohn Wiley & Sons Ltd, The Atrium, Southern Gate, Chichester, West Sussex, PO19 8SQ, UK\n",
+      "bbox": [
+        61.889801025390625,
+        141.21742248535156,
+        342.36578369140625,
+        167.3064422607422
+      ],
+      "text_sha256": "c3f0b2ff698efe38b876ce642885e3f91609331d30916049175eef4868629a85"
+    },
+    {
+      "block_id": "page-0005-block-0004",
+      "order": 4,
+      "text": "Editorial Office\nThe Atrium, Southern Gate, Chichester, West Sussex, PO19 8SQ, UK\n",
+      "bbox": [
+        61.889801025390625,
+        173.22145080566406,
+        268.5787658691406,
+        190.30845642089844
+      ],
+      "text_sha256": "27214e5ee75a17f9239b2cdb1c4dbcc01441b252d19cc611821d9a74800a7829"
+    },
+    {
+      "block_id": "page-0005-block-0005",
+      "order": 5,
+      "text": "For details of our global editorial offices, customer services, and more information about Wiley products visit us at  \nwww.wiley.com.\n",
+      "bbox": [
+        61.889801025390625,
+        196.10446166992188,
+        411.83392333984375,
+        213.3104705810547
+      ],
+      "text_sha256": "09c7868b1b528e1030d74cd92b915f3f01de3ed5e7cadf999acbbdef8533229e"
+    },
+    {
+      "block_id": "page-0005-block-0006",
+      "order": 6,
+      "text": "Wiley also publishes its books in a variety of electronic formats and by print-on-demand. Some content that appears in \nstandard print versions of this book may not be available in other formats.\n",
+      "bbox": [
+        61.889801025390625,
+        219.10647583007812,
+        422.06787109375,
+        236.31248474121094
+      ],
+      "text_sha256": "e7d4d7d284f9103e20526ac7b1c1b464eb1e38d1f6c8b58f2acd8642c0c679ca"
+    },
+    {
+      "block_id": "page-0005-block-0007",
+      "order": 7,
+      "text": "Limit of Liability/Disclaimer of Warranty\nThe contents of this work are intended to further general scientific research, understanding, and discussion only and are \nnot intended and should not be relied upon as recommending or promoting scientific method, diagnosis, or treatment by \nphysicians for any particular patient. In view of ongoing research, equipment modifications, changes in governmental \nregulations, and the constant flow of information relating to the use of medicines, equipment, and devices, the reader is \nurged to review and evaluate the information provided in the package insert or instructions for each medicine, equipment, \nor device for, among other things, any changes in the instructions or indication of usage and for added warnings and \nprecautions. While the publisher and authors have used their best efforts in preparing this work, they make no \nrepresentations or warranties with respect to the accuracy or completeness of the contents of this work and specifically \ndisclaim all warranties, including without limitation any implied warranties of merchantability or fitness for a particular \npurpose. No warranty may be created or extended by sales representatives, written sales materials or promotional \nstatements for this work. The fact that an organization, website, or product is referred to in this work as a citation and/or \npotential source of further information does not mean that the publisher and authors endorse the information or services \nthe organization, website, or product may provide or recommendations it may make. This work is sold with the \nunderstanding that the publisher is not engaged in rendering professional services. The advice and strategies contained \nherein may not be suitable for your situation. You should consult with a specialist where appropriate. Further, readers \nshould be aware that websites listed in this work may have changed or disappeared between when this work was written \nand when it is read. Neither the publisher nor authors shall be liable for any loss of profit or any other commercial \ndamages, including but not limited to special, incidental, consequential, or other damages.\n",
+      "bbox": [
+        61.889801025390625,
+        242.2274932861328,
+        431.6438903808594,
+        412.3487548828125
+      ],
+      "text_sha256": "44d6899445a2594c1f2657eec2c32062c2acdfe6377a024e0c62cf613dba62fb"
+    },
+    {
+      "block_id": "page-0005-block-0008",
+      "order": 8,
+      "text": "A catalogue record for this book is available from the Library of Congress\n",
+      "bbox": [
+        61.889801025390625,
+        418.26373291015625,
+        285.8477783203125,
+        426.3487548828125
+      ],
+      "text_sha256": "b6b69ffdb59c129b2af17de148dbaaffd19b7c6ac77dc96682934c5eadfcdf8a"
+    },
+    {
+      "block_id": "page-0005-block-0009",
+      "order": 9,
+      "text": "Paperback ISBN: 9781119772224; ePDF ISBN: 9781119772248; epub ISBN: 9781119772231 \n",
+      "bbox": [
+        61.889801025390625,
+        436.1417541503906,
+        351.35382080078125,
+        444.34576416015625
+      ],
+      "text_sha256": "54bb451febe8c50756b77be49ec091ceff0940d8e50b88c8f3b5869d8ffbec92"
+    },
+    {
+      "block_id": "page-0005-block-0010",
+      "order": 10,
+      "text": "Cover design by Wiley\n",
+      "bbox": [
+        61.889801025390625,
+        454.1387634277344,
+        129.57278442382812,
+        462.3427734375
+      ],
+      "text_sha256": "128c6019ed0684a4205f91a3c572044c2f28739bc30c70a40e0c6396922e8877"
+    },
+    {
+      "block_id": "page-0005-block-0011",
+      "order": 11,
+      "text": "Set in 10/12pt Sabon by Integra Software Services, Pondicherry, India\n",
+      "bbox": [
+        61.889801025390625,
+        472.1357727050781,
+        270.7628173828125,
+        480.33978271484375
+      ],
+      "text_sha256": "10a53b97acbfe5a88d647785c9f2087c98ecc1f199861643031a86c91500a5b8"
+    },
+    {
+      "block_id": "page-0005-block-0012",
+      "order": 12,
+      "text": "10  9   8  7  6  5  4  3  2  1\n",
+      "bbox": [
+        61.889801025390625,
+        490.1323547363281,
+        169.64779663085938,
+        498.3367919921875
+      ],
+      "text_sha256": "65f6a0223f7bb7364635da6ef1a5d66347bd7d8417bd0023cf87716893cefd3f"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

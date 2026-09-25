@@ -1,0 +1,107 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0639",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 639,
+  "source_page_index": 638,
+  "source_page_display": 639,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "618    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  6\nOther treatments (where the evidence remains less certain)\nA Cochrane review found that although Ginkgo biloba appears to be safe with no \nexcess side effects compared with placebo, there was no convincing evidence that it \nis efficacious for dementia and cognitive impairment. Many of the trials were too \nsmall and used unsatisfactory methods, and publication bias could not be excluded. \nThe review concluded that ginkgo’s clinical benefit in dementia or cognitive impair-\nment is somewhat inconsistent and unconvincing.81 An overview of systematic \nreviews found that it has potentially beneficial effects when it is administered at \ndoses greater than 200mg/day (usually 240mg/day) for at least 5 months. Given the \nlower quality of the evidence, further rigorously designed, multicentre, large-scale \nRCTs are warranted.82 Several reports have noted that ginkgo may increase the risk \nof bleeding.83 The drug is widely used in Germany but less so elsewhere.\nA Cochrane review of Vitamin E for AD and mild cognitive impairment (MCI) exam-\nined three studies. The authors’ conclusions were that there is no evidence of efficacy of \nvitamin E in prevention or treatment of people with AD or MCI and that further \nresearch is required in order to identify its role in this area.84 However, the TEAM-AD \ntrial, an RCT of vitamin E 2000IU/day in 613 patients with mild-to-moderate AD, \nshowed a 19% decrease in the primary outcome, annual rate of decline in activities of \ndaily living, in the vitamin E arm; the authors note that this was equivalent to a 6-month \ndelay in progression. For secondary outcomes, the increase in caregiving time required \nwas 2 hours higher in the placebo group than in the vitamin E group; there was no \nbenefit on cognition or any of the other secondary outcomes.85 Trials of vitamin E in \nAD have used α-tocopherol at doses much higher than the recommended daily allow-\nance of 22.4IU, which have been associated with adverse effects such as increased risks \nof haemorrhagic stroke, prostate cancer, heart failure and higher mortality. As evidence \nfor the efficacy of vitamin E in AD is limited, its utility must be weighed against these \npotential adverse effects before its recommendation.86\nA Cochrane review found no evidence that folic acid with or without vitamin B12 \nimproves cognitive function of unselected elderly people with or without \ndementia.87 Although, according to data from a recent review, it seems that folic acid \nsupplementation could improve cognitive function by decreasing homocysteine (Hcy), \nvascular care, attenuating inflammatory status, modification of cerebral folic acid defi-\nciency and antioxidant responses, specifically, people with high levels of Hcy have a \nbetter response to folic acid supplementation, which may arise from low serum folate \nconcentration. The optimal dose of folic acid required to possible improvement in cog-\nnitive function is currently unknown.88\nIncrease in serum Hcy is shown to be a potential risk factor for cognitive impairment. \nSome evidence suggests that vitamin B supplementation may reduce cognitive decline \nby lowering the Hcy levels. A recent meta-analysis evaluated the efficacy of folic acid \nalong with vitamin B12 and/or B6 in lowering Hcy, thereby attenuating cognitive \ndecline in elderly patients with AD or dementia. Vitamin B supplementation was effec-\ntive in reducing serum Hcy levels; however, this did not translate into cognitive improve-\nment, indicating that the existing data on vitamin B-induced improvement in cognition \nby lowering Hcy levels are conflicting.89\n",
+  "raw_text_sha256": "6e69550937e0559f2debd3c1652f275e70c8ce7dbe7adc54ef01ec9212b924da",
+  "coordinates_sha256": "ffc02d26acbeb20b4812daf23ac5e193c67fbe5a708c63bd1d8597529d326ea5",
+  "block_sequence_sha256": "ddd0da05b3319554b1e7169e3de52e00caa2a8a479767e1e22f397268c9c2618",
+  "blocks": [
+    {
+      "block_id": "page-0639-block-0000",
+      "order": 0,
+      "text": "618    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "2f90528eb9005a0d82c0a2c7c6972045b4ef96c18f28a4edafc26ab9c15c9b0e"
+    },
+    {
+      "block_id": "page-0639-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        18.520000457763672,
+        405.35260009765625,
+        28.0,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0639-block-0002",
+      "order": 2,
+      "text": "Other treatments (where the evidence remains less certain)\n",
+      "bbox": [
+        61.88999938964844,
+        62.500404357910156,
+        340.8499450683594,
+        74.35040283203125
+      ],
+      "text_sha256": "bf23443bfde661c00037bbdf2f06a9157401e340702ce2ec18d2569ea467759b"
+    },
+    {
+      "block_id": "page-0639-block-0003",
+      "order": 3,
+      "text": "A Cochrane review found that although Ginkgo biloba appears to be safe with no \nexcess side effects compared with placebo, there was no convincing evidence that it \nis efficacious for dementia and cognitive impairment. Many of the trials were too \nsmall and used unsatisfactory methods, and publication bias could not be excluded. \nThe review concluded that ginkgo’s clinical benefit in dementia or cognitive impair-\nment is somewhat inconsistent and unconvincing.81 An overview of systematic \nreviews found that it has potentially beneficial effects when it is administered at \ndoses greater than 200mg/day (usually 240mg/day) for at least 5 months. Given the \nlower quality of the evidence, further rigorously designed, multicentre, large-scale \nRCTs are warranted.82 Several reports have noted that ginkgo may increase the risk \nof bleeding.83 The drug is widely used in Germany but less so elsewhere.\n",
+      "bbox": [
+        61.888092041015625,
+        80.17040252685547,
+        436.71038818359375,
+        212.13040161132812
+      ],
+      "text_sha256": "dabe4f6719a103f17c0b5f34732f93f4f7875095cd2873b72be1feecdaa3a660"
+    },
+    {
+      "block_id": "page-0639-block-0004",
+      "order": 4,
+      "text": "A Cochrane review of Vitamin E for AD and mild cognitive impairment (MCI) exam-\nined three studies. The authors’ conclusions were that there is no evidence of efficacy of \nvitamin E in prevention or treatment of people with AD or MCI and that further \nresearch is required in order to identify its role in this area.84 However, the TEAM-AD \ntrial, an RCT of vitamin E 2000IU/day in 613 patients with mild-to-moderate AD, \nshowed a 19% decrease in the primary outcome, annual rate of decline in activities of \ndaily living, in the vitamin E arm; the authors note that this was equivalent to a 6-month \ndelay in progression. For secondary outcomes, the increase in caregiving time required \nwas 2 hours higher in the placebo group than in the vitamin E group; there was no \nbenefit on cognition or any of the other secondary outcomes.85 Trials of vitamin E in \nAD have used α-tocopherol at doses much higher than the recommended daily allow-\nance of 22.4IU, which have been associated with adverse effects such as increased risks \nof haemorrhagic stroke, prostate cancer, heart failure and higher mortality. As evidence \nfor the efficacy of vitamin E in AD is limited, its utility must be weighed against these \npotential adverse effects before its recommendation.86\n",
+      "bbox": [
+        61.88569641113281,
+        212.17041015625,
+        436.7192077636719,
+        392.1304016113281
+      ],
+      "text_sha256": "640e097dd9f5758a49e767154c18e956f6cda71c58ef63eba0396ab451ebe97d"
+    },
+    {
+      "block_id": "page-0639-block-0005",
+      "order": 5,
+      "text": "A Cochrane review found no evidence that folic acid with or without vitamin B12 \nimproves cognitive function of unselected elderly people with or without \ndementia.87 Although, according to data from a recent review, it seems that folic acid \nsupplementation could improve cognitive function by decreasing homocysteine (Hcy), \nvascular care, attenuating inflammatory status, modification of cerebral folic acid defi-\nciency and antioxidant responses, specifically, people with high levels of Hcy have a \nbetter response to folic acid supplementation, which may arise from low serum folate \nconcentration. The optimal dose of folic acid required to possible improvement in cog-\nnitive function is currently unknown.88\n",
+      "bbox": [
+        61.8900146484375,
+        392.17041015625,
+        436.6897277832031,
+        500.1304016113281
+      ],
+      "text_sha256": "5e2050fbd9a565147bd2da6b9fe5252969b365ba9ca09f2c88be49f5f800fac6"
+    },
+    {
+      "block_id": "page-0639-block-0006",
+      "order": 6,
+      "text": "Increase in serum Hcy is shown to be a potential risk factor for cognitive impairment. \nSome evidence suggests that vitamin B supplementation may reduce cognitive decline \nby lowering the Hcy levels. A recent meta-analysis evaluated the efficacy of folic acid \nalong with vitamin B12 and/or B6 in lowering Hcy, thereby attenuating cognitive \ndecline in elderly patients with AD or dementia. Vitamin B supplementation was effec-\ntive in reducing serum Hcy levels; however, this did not translate into cognitive improve-\nment, indicating that the existing data on vitamin B-induced improvement in cognition \nby lowering Hcy levels are conflicting.89\n",
+      "bbox": [
+        61.88999938964844,
+        500.410400390625,
+        436.7098083496094,
+        596.1304321289062
+      ],
+      "text_sha256": "1e1e4efbd42f74b867eafeee1b32708a3edc34b5e89b397063ba6b7430effcee"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,287 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0949",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 949,
+  "source_page_index": 948,
+  "source_page_display": 949,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "928    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 14\nIf a patient consents to treatment, the RC completes a form T2.\nIf a patient has not given consent or has not got the capacity to consent a second \nopinion appointed doctor (SOAD) is called. The SOAD then completes a form T3.\nA copy of the forms T2 and T3 should be kept with the patient’s medication chart as \nrecommended in paragraph 25.75 of the Code of Practice.1\nCompletion of forms T2 and T3\nThe following should be stated on the forms:\n■\n■The name of the drug or the class of drug\n■\n■If the class of drug is stated, the number of drugs allowed at any one time\n■\n■The route of administration\n■\n■The maximum dosage with reference to BNF guidance\nFor example, antipsychotic, second generation × 1 (oral) within BNF maximum dose \nlimits.\nFor a patient who has capacity and is consenting to treatment and is only willing to \ntake a particular drug it is appropriate for the RC to write the name of the drug instead \nof the name of the class of drug on the T2.\nFor example, olanzapine tablets only (oral) within BNF maximum dose limits.\nPsychotropics not found in the BNF may be written on a T2 or T3 with its indication.\nFor example, melperone tablets (oral) up to a maximum of 25mg daily for the treat-\nment of schizophrenia.\nNon-psychotropics used for the treatment of mental disorder should be included on the \nT2 and T3, for example omega-3 fatty acids (fish oils) in schizophrenia. Antimuscarinics \nused to treat hypersalivation and the extrapyramidal adverse effects of antipsychotics \nshould be included too.\nArranging and preparing for SOAD visits\nThe Code at paragraph 25.51 states: Clinicians should consider seeking a review by a \nspecialist mental health pharmacist before seeking a SOAD certificate, particularly if \nthe patient’s medication regime is complex or unusual.\nStatutory consultees\nSOADs should consult with two people before issuing a T3. One must be a nurse. The \nother must not be a nurse or a doctor. Both must have been involved with the patient’s \ntreatment. These two people are known as statutory consultees. Mental health pharma-\ncists can perform this role where they have been involved in any recent review of a \npatient’s medication.\n",
+  "raw_text_sha256": "b2186297d095d5d7631bbad3129159b98671802e8972eb4584d41ccf1baf7a55",
+  "coordinates_sha256": "4fb07d885fc3920af8a088790f86e878847e227d8b047d4aba6ef60be885ca1c",
+  "block_sequence_sha256": "996033880a133e70dfc72852ce5de39899160edce997cac10cb28397622bacc9",
+  "blocks": [
+    {
+      "block_id": "page-0949-block-0000",
+      "order": 0,
+      "text": "928    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "8305b8e811276083d454e9f4d480461896d26c62465f8023ae0c376d321c95a4"
+    },
+    {
+      "block_id": "page-0949-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        18.520000457763672,
+        338.7405090332031,
+        28.0,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0949-block-0002",
+      "order": 2,
+      "text": "If a patient consents to treatment, the RC completes a form T2.\nIf a patient has not given consent or has not got the capacity to consent a second \nopinion appointed doctor (SOAD) is called. The SOAD then completes a form T3.\n",
+      "bbox": [
+        61.889801025390625,
+        61.63707733154297,
+        436.6798095703125,
+        97.59707641601562
+      ],
+      "text_sha256": "d90f904c46f10e83ffa054010dea9d1cd46246fda20b1827a0c4ff700bbcde4a"
+    },
+    {
+      "block_id": "page-0949-block-0003",
+      "order": 3,
+      "text": "A copy of the forms T2 and T3 should be kept with the patient’s medication chart as \nrecommended in paragraph 25.75 of the Code of Practice.1\n",
+      "bbox": [
+        61.889801025390625,
+        97.8770751953125,
+        436.6196594238281,
+        121.59707641601562
+      ],
+      "text_sha256": "f996b90b4ce4a8da55738f9b216916de57378116610dd3b6929b9d9292fac29d"
+    },
+    {
+      "block_id": "page-0949-block-0004",
+      "order": 4,
+      "text": "Completion of forms T2 and T3\n",
+      "bbox": [
+        61.889801025390625,
+        142.03207397460938,
+        222.03878784179688,
+        155.06707763671875
+      ],
+      "text_sha256": "6be1a713bbd7f01cd5872fa37da77a28c8f6c802a1c15771cc6bc8b6e205bb52"
+    },
+    {
+      "block_id": "page-0949-block-0005",
+      "order": 5,
+      "text": "The following should be stated on the forms:\n",
+      "bbox": [
+        61.889801025390625,
+        160.8770751953125,
+        255.8197784423828,
+        172.59707641601562
+      ],
+      "text_sha256": "9e8a54ef753a172d2fbc4f3cb2815f49dfdafb46e818780759b0b7b86a48ccba"
+    },
+    {
+      "block_id": "page-0949-block-0006",
+      "order": 6,
+      "text": "■\n■The name of the drug or the class of drug\n",
+      "bbox": [
+        61.88970184326172,
+        181.6370849609375,
+        249.60476684570312,
+        193.59707641601562
+      ],
+      "text_sha256": "cca154a2bf2884ba9e7d892307717e72c947c2a0f011d351219d707ebb7fe8a9"
+    },
+    {
+      "block_id": "page-0949-block-0007",
+      "order": 7,
+      "text": "■\n■If the class of drug is stated, the number of drugs allowed at any one time\n",
+      "bbox": [
+        61.88970184326172,
+        193.8770751953125,
+        387.57476806640625,
+        205.59707641601562
+      ],
+      "text_sha256": "ff1775a9e547279e36c2e38e0789e44bab9e557d869bdf0ecd4309b07247d7ed"
+    },
+    {
+      "block_id": "page-0949-block-0008",
+      "order": 8,
+      "text": "■\n■The route of administration\n",
+      "bbox": [
+        61.88970184326172,
+        205.8770751953125,
+        190.70477294921875,
+        217.59707641601562
+      ],
+      "text_sha256": "3359c3369cc42c88f4991defc99be06ef13ab22a2ac877e3c8ab84342e2ee0c1"
+    },
+    {
+      "block_id": "page-0949-block-0009",
+      "order": 9,
+      "text": "■\n■The maximum dosage with reference to BNF guidance\n",
+      "bbox": [
+        61.88970184326172,
+        217.8770751953125,
+        305.6847839355469,
+        229.59707641601562
+      ],
+      "text_sha256": "819470c587fa2883fc8a084a3be3608b6c4fe844d60e366f2a1805dd2ef0cb2b"
+    },
+    {
+      "block_id": "page-0949-block-0010",
+      "order": 10,
+      "text": "For example, antipsychotic, second generation × 1 (oral) within BNF maximum dose \n",
+      "bbox": [
+        61.89480209350586,
+        234.84707641601562,
+        436.65478515625,
+        249.0470733642578
+      ],
+      "text_sha256": "d12d4ba492142c6a9398f469a417396f85c2125ad45e181b345197d611d2291c"
+    },
+    {
+      "block_id": "page-0949-block-0011",
+      "order": 11,
+      "text": "limits.\n",
+      "bbox": [
+        71.89480590820312,
+        247.8770751953125,
+        97.06480407714844,
+        259.5970764160156
+      ],
+      "text_sha256": "243331f5cc08ce6fb642435ab26959d3b9b18b9f9a848d29f5de214298aa9fd3"
+    },
+    {
+      "block_id": "page-0949-block-0012",
+      "order": 12,
+      "text": "For a patient who has capacity and is consenting to treatment and is only willing to \ntake a particular drug it is appropriate for the RC to write the name of the drug instead \nof the name of the class of drug on the T2.\n",
+      "bbox": [
+        61.894805908203125,
+        265.8770751953125,
+        436.62481689453125,
+        301.5970764160156
+      ],
+      "text_sha256": "7526a4d6ccf03f82e93bf54c45aa86f05e42c97166f32f1e9f7d785d9b78d445"
+    },
+    {
+      "block_id": "page-0949-block-0013",
+      "order": 13,
+      "text": "For example, olanzapine tablets only (oral) within BNF maximum dose limits.\n",
+      "bbox": [
+        61.894805908203125,
+        307.8770751953125,
+        398.7547302246094,
+        319.5970764160156
+      ],
+      "text_sha256": "93d0d243b1cf9a4b85372773281318dd979ff9dac160c8065bc9cbf7713a07e7"
+    },
+    {
+      "block_id": "page-0949-block-0014",
+      "order": 14,
+      "text": "Psychotropics not found in the BNF may be written on a T2 or T3 with its indication.\n",
+      "bbox": [
+        61.894805908203125,
+        325.8770751953125,
+        423.5146789550781,
+        337.5970764160156
+      ],
+      "text_sha256": "ff38a0f30d0d619a7615a6ba39464e7f7858dec1b44e4f557c51c6b3427024b2"
+    },
+    {
+      "block_id": "page-0949-block-0015",
+      "order": 15,
+      "text": "For example, melperone tablets (oral) up to a maximum of 25mg daily for the treat-\n",
+      "bbox": [
+        61.894805908203125,
+        344.0470886230469,
+        433.9447326660156,
+        355.5970764160156
+      ],
+      "text_sha256": "2fa21d41e2978d0a11742792c052054df5ac180d6184719b77d86d30967f5506"
+    },
+    {
+      "block_id": "page-0949-block-0016",
+      "order": 16,
+      "text": "ment of schizophrenia.\n",
+      "bbox": [
+        71.89480590820312,
+        355.8770751953125,
+        170.12478637695312,
+        367.5970764160156
+      ],
+      "text_sha256": "2fd81f03eb56ad6b93638f78b59b67180496340ff521fdbd8d427f38d933c71c"
+    },
+    {
+      "block_id": "page-0949-block-0017",
+      "order": 17,
+      "text": "Non-psychotropics used for the treatment of mental disorder should be included on the \nT2 and T3, for example omega-3 fatty acids (fish oils) in schizophrenia. Antimuscarinics \nused to treat hypersalivation and the extrapyramidal adverse effects of antipsychotics \nshould be included too.\n",
+      "bbox": [
+        61.894805908203125,
+        373.8770751953125,
+        436.71490478515625,
+        421.5970764160156
+      ],
+      "text_sha256": "d635fdddc945d157ce47f7fd024825c4169c548fc4d0a9b2fc859ceda351265f"
+    },
+    {
+      "block_id": "page-0949-block-0018",
+      "order": 18,
+      "text": "Arranging and preparing for SOAD visits\n",
+      "bbox": [
+        61.889801025390625,
+        442.0320739746094,
+        271.9457702636719,
+        455.06707763671875
+      ],
+      "text_sha256": "81dd42bd9b2db9bf605015145902ed04fa1f8df50fde7a1e1bbf78b0b05158b1"
+    },
+    {
+      "block_id": "page-0949-block-0019",
+      "order": 19,
+      "text": "The Code at paragraph 25.51 states: Clinicians should consider seeking a review by a \nspecialist mental health pharmacist before seeking a SOAD certificate, particularly if \nthe patient’s medication regime is complex or unusual.\n",
+      "bbox": [
+        61.889801025390625,
+        460.8770751953125,
+        436.6297607421875,
+        496.5970764160156
+      ],
+      "text_sha256": "b6e1ea1d25f9785afb4f845f3502420b1a2c14b5c25c553b6f2f1ec63ed203a0"
+    },
+    {
+      "block_id": "page-0949-block-0020",
+      "order": 20,
+      "text": "Statutory consultees\n",
+      "bbox": [
+        61.889801025390625,
+        517.0321044921875,
+        168.23779296875,
+        530.0670776367188
+      ],
+      "text_sha256": "90628a593ab236d13ea00dc0c3a5c844ce5861f6ea83950e5377c038a5de222d"
+    },
+    {
+      "block_id": "page-0949-block-0021",
+      "order": 21,
+      "text": "SOADs should consult with two people before issuing a T3. One must be a nurse. The \nother must not be a nurse or a doctor. Both must have been involved with the patient’s \ntreatment. These two people are known as statutory consultees. Mental health pharma-\ncists can perform this role where they have been involved in any recent review of a \npatient’s medication.\n",
+      "bbox": [
+        61.889801025390625,
+        535.8770751953125,
+        436.7297668457031,
+        595.5971069335938
+      ],
+      "text_sha256": "97a1899d1a6a05b1f58f0f1cedd8eb88588ed3f607bf0cdbf69cb9787aeacecd"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

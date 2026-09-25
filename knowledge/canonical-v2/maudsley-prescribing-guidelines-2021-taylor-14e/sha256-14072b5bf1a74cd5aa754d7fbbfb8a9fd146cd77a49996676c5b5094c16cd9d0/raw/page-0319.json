@@ -1,0 +1,287 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0319",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 319,
+  "source_page_index": 318,
+  "source_page_display": 319,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "298    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  2\nExtrapolation of currently available data suggests that lithium plus an SGA is prob-\nably the polypharmacy regimen of choice. There are naturalistic data to support com-\nbinations of three treatments; in one study,51 the two best treatments were \nlithium  +  valproate  +  quetiapine followed by lithium  +  valproate  +  olanzapine. \nMonotherapy with antipsychotics can be considered where mood stabilisers are poorly \ntolerated or where adherence cannot be.52\nA meta-analysis of long-term antidepressant treatment found that continued treat-\nment was more likely to induce a switch to mania than prevent a depressive episode.53 \nThe Systematic Treatment Enhancement Program for Bipolar Disorder (STEP-BD) found \nno significant benefit for continuing (compared with discontinuing) an antidepressant \nand worse outcomes in those with rapid cycling illness.54 There is thus essentially no \nstrong support for long-term use of antidepressants in bipolar illness although some \nbipolar patients may relapse into depression when antidepressants are discontinued.24\nSubstance misuse increases the risk of switching into mania.55\nSummary table\nProphylaxis in bipolar disorder\nFirst line: lithium monotherapy\nSecond line: olanzapine, aripiprazole, risperidone or quetiapine in combination with *valproate or lithium\nThird line: alternative antipsychotic (lurasidone, asenapine, ziprasidone) or alternative mood stabiliser \n(carbamazepine, lamotrigine) in combination\nFourth line: antipsychotic with two mood stabilisers\n■\n■Always maintain successful acute treatment regimens (e.g. mood stabiliser + antipsychotic) as prophylaxis\n■\n■Avoid long-term antidepressants if possible\n*Not in women of child-bearing potential.\nReferences\n\t 1.\t Malhi GS, et al. The 2020 Royal Australian and New Zealand College of Psychiatrists Clinical Practice Guidelines for mood disorders: \nbipolar disorder summary. Bipolar Disord 2020; 22:805–821.\n\t 2.\t Yatham LN, et al. Canadian network for mood and anxiety treatments (CANMAT) and International Society for Bipolar Disorders (ISBD) \n2018 guidelines for the management of patients with bipolar disorder. Bipolar Disord 2018; 20:97–170.\n\t 3.\t Kang MG, et al. Lithium vs valproate in the maintenance treatment of bipolar I disorder: a post- hoc analysis of a randomized double-blind \nplacebo-controlled trial. Aust N Z J Psychiatry 2020; 54:298–307.\n\t 4.\t Solomon DA, et al. Longitudinal course of bipolar I disorder: duration of mood episodes. Arch Gen Psychiatry 2010; 67:339–347.\n\t 5.\t Perlis RH, et al. Predictors of recurrence in bipolar disorder: primary outcomes from the Systematic Treatment Enhancement Program for \nBipolar Disorder (STEP-BD). Am J Psychiatry 2006; 163:217–224.\n\t 6.\t Young AH, et al. Lithium in mood disorders: increasing evidence base, declining use? Brit J Psychiatry 2007; 191:474–476.\n\t 7.\t Biel MG, et al. Continuation versus discontinuation of lithium in recurrent bipolar illness: a naturalistic study. Bipolar Disord 2007; \n9:435–442.\n\t 8.\t Bowden CL, et al. A randomized, placebo-controlled 12-month trial of divalproex and lithium in treatment of outpatients with bipolar I \ndisorder. Divalproex Maintenance Study Group. Arch Gen Psychiatry 2000; 57:481–489.\n\t 9.\t Tohen M, et al. Olanzapine versus divalproex sodium for the treatment of acute mania and maintenance of remission: a 47-week study. Am \nJ Psychiatry 2003; 160:1263–1271.\n\t10.\t Goodwin GM, et al. Evidence-based guidelines for treating bipolar disorder: revised third edition recommendations from the British \nAssociation for Psychopharmacology. J Psychopharmacol 2016; 30:495–553.\n\t11.\t Sani G, et al. Treatment of bipolar disorder in a lifetime perspective: is lithium still the best choice? Clin Drug Investig 2017; 37:713–727.\n\t12.\t Hartong EG, et al. Prophylactic efficacy of lithium versus carbamazepine in treatment-naive bipolar patients. J Clin Psychiatry 2003; \n64:144–151.\n",
+  "raw_text_sha256": "8e82524c25568757bc56c34989893beb77bb0323eae09c362dac35f4ee57b693",
+  "coordinates_sha256": "c4c71dd9fcaf863a24cd475b081abce9ac27aadd290d639515fa5bb06b8a1432",
+  "block_sequence_sha256": "97a72cd4379c3e13033acba9fa7a1ebdc049a12732a1645bb62bbfa84a382504",
+  "blocks": [
+    {
+      "block_id": "page-0319-block-0000",
+      "order": 0,
+      "text": "298    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "eac7dfda6dea4fcff1c01efd901d85dca8b4e64c0239030605a968bc4df3add7"
+    },
+    {
+      "block_id": "page-0319-block-0001",
+      "order": 1,
+      "text": "CHAPTER  2\n",
+      "bbox": [
+        19.520000457763672,
+        145.23529052734375,
+        29.0,
+        188.80328369140625
+      ],
+      "text_sha256": "5befcde2fefe074681a51514b484ad31516d952c51183625b5b7b1fb84f30d2c"
+    },
+    {
+      "block_id": "page-0319-block-0002",
+      "order": 2,
+      "text": "Extrapolation of currently available data suggests that lithium plus an SGA is prob-\nably the polypharmacy regimen of choice. There are naturalistic data to support com-\nbinations of three treatments; in one study,51 the two best treatments were \nlithium  +  valproate  +  quetiapine followed by lithium  +  valproate  +  olanzapine. \nMonotherapy with antipsychotics can be considered where mood stabilisers are poorly \ntolerated or where adherence cannot be.52\n",
+      "bbox": [
+        61.88999938964844,
+        62.5504150390625,
+        436.6808166503906,
+        134.27041625976562
+      ],
+      "text_sha256": "c84fbf23660bafc100abdfb889cee9fcc19125b7b6d8837e2c50d52356611e8e"
+    },
+    {
+      "block_id": "page-0319-block-0003",
+      "order": 3,
+      "text": "A meta-analysis of long-term antidepressant treatment found that continued treat-\nment was more likely to induce a switch to mania than prevent a depressive episode.53 \nThe Systematic Treatment Enhancement Program for Bipolar Disorder (STEP-BD) found \nno significant benefit for continuing (compared with discontinuing) an antidepressant \nand worse outcomes in those with rapid cycling illness.54 There is thus essentially no \nstrong support for long-term use of antidepressants in bipolar illness although some \nbipolar patients may relapse into depression when antidepressants are discontinued.24\n",
+      "bbox": [
+        61.88999938964844,
+        134.5504150390625,
+        436.71051025390625,
+        218.27047729492188
+      ],
+      "text_sha256": "ae4ef52cc7ab52b4ad8758710072c097707f3d1c58942f6bb61a098d7effebcd"
+    },
+    {
+      "block_id": "page-0319-block-0004",
+      "order": 4,
+      "text": "Substance misuse increases the risk of switching into mania.55\n",
+      "bbox": [
+        71.88999938964844,
+        218.55047607421875,
+        336.7303771972656,
+        230.27047729492188
+      ],
+      "text_sha256": "ae87f323d7c34632539a87839f83b2ab7d8d42519e8f91beef592b69a307a228"
+    },
+    {
+      "block_id": "page-0319-block-0005",
+      "order": 5,
+      "text": "Summary table\n",
+      "bbox": [
+        67.88999938964844,
+        252.11610412597656,
+        121.2449951171875,
+        261.00360107421875
+      ],
+      "text_sha256": "f297fc763ed3ead271b2b99cb1069fc6d703ee7ea63fe2c9bb92bf70874c6ab8"
+    },
+    {
+      "block_id": "page-0319-block-0006",
+      "order": 6,
+      "text": "Prophylaxis in bipolar disorder\n",
+      "bbox": [
+        65.88999938964844,
+        269.9910888671875,
+        173.55999755859375,
+        278.87860107421875
+      ],
+      "text_sha256": "5455a0ae8b699377f2d3530e54b3f5119e08d17f8d77d3569dc0177b4d7e8ab4"
+    },
+    {
+      "block_id": "page-0319-block-0007",
+      "order": 7,
+      "text": "First line: lithium monotherapy\nSecond line: olanzapine, aripiprazole, risperidone or quetiapine in combination with *valproate or lithium\nThird line: alternative antipsychotic (lurasidone, asenapine, ziprasidone) or alternative mood stabiliser \n(carbamazepine, lamotrigine) in combination\nFourth line: antipsychotic with two mood stabilisers\n",
+      "bbox": [
+        65.88999938964844,
+        287.631103515625,
+        405.3926086425781,
+        336.50860595703125
+      ],
+      "text_sha256": "106d9836ca26a43fcda9c8ce4d11753856232fa1d6e2f48567dccda5a40c9b38"
+    },
+    {
+      "block_id": "page-0319-block-0008",
+      "order": 8,
+      "text": "■\n■Always maintain successful acute treatment regimens (e.g. mood stabiliser + antipsychotic) as prophylaxis\n",
+      "bbox": [
+        65.88990020751953,
+        343.4360046386719,
+        411.0851135253906,
+        352.14349365234375
+      ],
+      "text_sha256": "7dc08ecb3014141757bdcf82da4bbf3c516d5e4b415aecfb4bc7a08690a28cf5"
+    },
+    {
+      "block_id": "page-0319-block-0009",
+      "order": 9,
+      "text": "■\n■Avoid long-term antidepressants if possible\n",
+      "bbox": [
+        65.88990020751953,
+        352.4360046386719,
+        212.1399383544922,
+        361.14349365234375
+      ],
+      "text_sha256": "fa1e1dfd5e43f3ad5198e1fd080f8a29a235a9294fb9f54e4e977726a5ff7358"
+    },
+    {
+      "block_id": "page-0319-block-0010",
+      "order": 10,
+      "text": "*Not in women of child-bearing potential.\n",
+      "bbox": [
+        65.88999938964844,
+        366.4385070800781,
+        200.91993713378906,
+        375.14599609375
+      ],
+      "text_sha256": "b4c49a51367041bda812ef7ec0e11bf8b8cdd2c9a2e024abb709b959e8e7e3d1"
+    },
+    {
+      "block_id": "page-0319-block-0011",
+      "order": 11,
+      "text": "References\n",
+      "bbox": [
+        61.88999938964844,
+        408.3689880371094,
+        117.92399597167969,
+        421.40399169921875
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0319-block-0012",
+      "order": 12,
+      "text": "\t 1.\t Malhi GS, et al. The 2020 Royal Australian and New Zealand College of Psychiatrists Clinical Practice Guidelines for mood disorders: \n",
+      "bbox": [
+        61.88999938964844,
+        426.489990234375,
+        435.5100402832031,
+        433.5220031738281
+      ],
+      "text_sha256": "da59d949ea12b3f167d74a0555c6922a1e841758627dd154242c3f9b39e037a2"
+    },
+    {
+      "block_id": "page-0319-block-0013",
+      "order": 13,
+      "text": "bipolar disorder summary. Bipolar Disord 2020; 22:805–821.\n\t 2.\t Yatham LN, et al. Canadian network for mood and anxiety treatments (CANMAT) and International Society for Bipolar Disorders (ISBD) \n",
+      "bbox": [
+        61.895999908447266,
+        435.3459777832031,
+        435.53997802734375,
+        451.5220031738281
+      ],
+      "text_sha256": "f384dfafd60bd7cba200f81cab25c0b76c96af86ef28f34dab9f426c26eabf52"
+    },
+    {
+      "block_id": "page-0319-block-0014",
+      "order": 14,
+      "text": "2018 guidelines for the management of patients with bipolar disorder. Bipolar Disord 2018; 20:97–170.\n\t 3.\t Kang MG, et al. Lithium vs valproate in the maintenance treatment of bipolar I disorder: a post- hoc analysis of a randomized double-blind \n",
+      "bbox": [
+        61.902000427246094,
+        453.3459777832031,
+        435.51605224609375,
+        469.5220031738281
+      ],
+      "text_sha256": "6695554719343ac9efbc89ea890cdc9358edf99ffee62f608e82dc1cf6260b78"
+    },
+    {
+      "block_id": "page-0319-block-0015",
+      "order": 15,
+      "text": "placebo-controlled trial. Aust N Z J Psychiatry 2020; 54:298–307.\n\t 4.\t Solomon DA, et al. Longitudinal course of bipolar I disorder: duration of mood episodes. Arch Gen Psychiatry 2010; 67:339–347.\n\t 5.\t Perlis RH, et al. Predictors of recurrence in bipolar disorder: primary outcomes from the Systematic Treatment Enhancement Program for \n",
+      "bbox": [
+        61.90800094604492,
+        471.3459777832031,
+        435.56988525390625,
+        496.5220031738281
+      ],
+      "text_sha256": "21ec861f8b614b784054cba6b0b2b09ef831e091e57713eb936404f47858879b"
+    },
+    {
+      "block_id": "page-0319-block-0016",
+      "order": 16,
+      "text": "Bipolar Disorder (STEP-BD). Am J Psychiatry 2006; 163:217–224.\n\t 6.\t Young AH, et al. Lithium in mood disorders: increasing evidence base, declining use? Brit J Psychiatry 2007; 191:474–476.\n\t 7.\t Biel MG, et al. Continuation versus discontinuation of lithium in recurrent bipolar illness: a naturalistic study. Bipolar Disord 2007; \n",
+      "bbox": [
+        61.91999816894531,
+        498.3459777832031,
+        435.5999450683594,
+        523.52197265625
+      ],
+      "text_sha256": "67b7a08cd0a3c81d12ca1a17b2a73a85a95156eaf3f506fa866f975ccbba9349"
+    },
+    {
+      "block_id": "page-0319-block-0017",
+      "order": 17,
+      "text": "9:435–442.\n\t 8.\t Bowden CL, et al. A randomized, placebo-controlled 12-month trial of divalproex and lithium in treatment of outpatients with bipolar I \n",
+      "bbox": [
+        61.93199920654297,
+        525.3460083007812,
+        435.5516662597656,
+        541.52197265625
+      ],
+      "text_sha256": "424a99e4e95e4f70f0a8296cdc6a22dac52f13fb6b6d5835fbfd799c3c64d174"
+    },
+    {
+      "block_id": "page-0319-block-0018",
+      "order": 18,
+      "text": "disorder. Divalproex Maintenance Study Group. Arch Gen Psychiatry 2000; 57:481–489.\n\t 9.\t Tohen M, et al. Olanzapine versus divalproex sodium for the treatment of acute mania and maintenance of remission: a 47-week study. Am \n",
+      "bbox": [
+        61.9379997253418,
+        543.3460083007812,
+        435.61175537109375,
+        559.52197265625
+      ],
+      "text_sha256": "e15fd2cb38f50f0bcbf8080d5f9782422d2285e1c5d99e5c81a2f0948c617409"
+    },
+    {
+      "block_id": "page-0319-block-0019",
+      "order": 19,
+      "text": "J Psychiatry 2003; 160:1263–1271.\n\t10.\t Goodwin GM, et al. Evidence-based guidelines for treating bipolar disorder: revised third edition recommendations from the British \n",
+      "bbox": [
+        61.944000244140625,
+        561.3460083007812,
+        435.6300048828125,
+        577.52197265625
+      ],
+      "text_sha256": "e828200160213c07e4b76ac289342c297d910db1f721df074fed4fb095d7b115"
+    },
+    {
+      "block_id": "page-0319-block-0020",
+      "order": 20,
+      "text": "Association for Psychopharmacology. J Psychopharmacol 2016; 30:495–553.\n\t11.\t Sani G, et al. Treatment of bipolar disorder in a lifetime perspective: is lithium still the best choice? Clin Drug Investig 2017; 37:713–727.\n\t12.\t Hartong EG, et al. Prophylactic efficacy of lithium versus carbamazepine in treatment-naive bipolar patients. J Clin Psychiatry 2003; \n",
+      "bbox": [
+        61.95000076293945,
+        579.3460083007812,
+        435.6480407714844,
+        604.52197265625
+      ],
+      "text_sha256": "226dd08f94a2e112a980e9e6f51cd63646ac697543f3d91fdd6028cfb7f42c9c"
+    },
+    {
+      "block_id": "page-0319-block-0021",
+      "order": 21,
+      "text": "64:144–151.\n",
+      "bbox": [
+        72.95999908447266,
+        606.3460083007812,
+        105.9839859008789,
+        613.52197265625
+      ],
+      "text_sha256": "4965e6a6b23cf3870332b5a36328eda37ae3283a1fa6b99ea106c21aa13a08a8"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

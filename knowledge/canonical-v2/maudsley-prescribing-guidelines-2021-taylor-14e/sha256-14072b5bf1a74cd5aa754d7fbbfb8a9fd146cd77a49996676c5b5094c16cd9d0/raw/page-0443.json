@@ -1,0 +1,407 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0443",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 443,
+  "source_page_index": 442,
+  "source_page_display": 443,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "422    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nTable 3.26  (Continued)\nDrug\nSedation\nPostural \nhypotension§\nCardiac \nconduction \ndisturbance§\nAnticholinergic \neffects\nNausea/\nVomiting\nSexual \ndysfunction§\nSertraline\nVilazodone\n–\n–\n–\n–\n–\n–\n–\n–\n++\n++\n+++\n++\nVortioxetine\n–\n+\n–\n–\n++\n+\nMonoamine \noxidase \ninhibitors \n(MAOIs)\nIsocarboxazid\n+\n++\n+\n++\n+\n+\nPhenelzine\n+\n+\n+\n+\n+\n+\nTranylcypromine\n–\n+\n+\n+\n+\n+\nReversible \ninhibitor of \nmonoamine \noxidase A (RIMA)\nMoclobemide\n–\n–\n–\n–\n+\n+\nKEY:\n+++ High incidence/severity\n++ Moderate\n+ Low– Very low/none\n* Hypertension reported.\n§In some cases, further details can be found in specific sections in this chapter.\n",
+  "raw_text_sha256": "6721221f352b99a4f7dc8f0c8a9c6fcbd85e76e6a8986a4dcca1450d0afe4ea8",
+  "coordinates_sha256": "bfee0fed8b10d77f55e23d88e97242ba04fd2c92445e3f83a1104191d39392b9",
+  "block_sequence_sha256": "ec44151716fb343306c2eb0a84903f94b97ce9fe511f276f5382c733ddab83e7",
+  "blocks": [
+    {
+      "block_id": "page-0443-block-0000",
+      "order": 0,
+      "text": "422    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "9f6f3c46255411818d8004b38cf19a3686f2b95c4c37473049cc1ead061f5b42"
+    },
+    {
+      "block_id": "page-0443-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0443-block-0002",
+      "order": 2,
+      "text": "Table 3.26  (Continued)\n",
+      "bbox": [
+        67.88999938964844,
+        70.08790588378906,
+        144.17999267578125,
+        78.97540283203125
+      ],
+      "text_sha256": "76b6960169e455013bdea4a8f586f95bcaddc3ae69d41d09d9f565359cfad689"
+    },
+    {
+      "block_id": "page-0443-block-0003",
+      "order": 3,
+      "text": "Drug\nSedation\n",
+      "bbox": [
+        61.88999938964844,
+        110.32289123535156,
+        166.65000915527344,
+        119.21038818359375
+      ],
+      "text_sha256": "0dcba38f07dd9a8a8b2342001d068ddf1e08a141f10e1d44b5759380012c4fc8"
+    },
+    {
+      "block_id": "page-0443-block-0004",
+      "order": 4,
+      "text": "Postural \nhypotension§\n",
+      "bbox": [
+        174.38999938964844,
+        100.32539367675781,
+        220.98780822753906,
+        119.21038818359375
+      ],
+      "text_sha256": "a0abf9c958b18b1831dd19d3a948d9fd15f9d3d335f351ad56f4ef0063d55007"
+    },
+    {
+      "block_id": "page-0443-block-0005",
+      "order": 5,
+      "text": "Cardiac \nconduction \ndisturbance§\n",
+      "bbox": [
+        230.38980102539062,
+        90.32289123535156,
+        274.0703125,
+        119.20538330078125
+      ],
+      "text_sha256": "83754037557a3e727d6775503dea63512683ee1b86b0604f1b7234be43359e3b"
+    },
+    {
+      "block_id": "page-0443-block-0006",
+      "order": 6,
+      "text": "Anticholinergic \neffects\n",
+      "bbox": [
+        284.3898010253906,
+        100.32289123535156,
+        339.8072204589844,
+        119.2078857421875
+      ],
+      "text_sha256": "d4dacffb66fb35f5c69578c4127b0fbabc5c641f657f8b82ff4e4f987c0c8ffc"
+    },
+    {
+      "block_id": "page-0443-block-0007",
+      "order": 7,
+      "text": "Nausea/\nVomiting\n",
+      "bbox": [
+        344.3898010253906,
+        100.32289123535156,
+        376.4822692871094,
+        119.2078857421875
+      ],
+      "text_sha256": "b2aee2e678c470ed06f397a8ffc20832e57aedb530620a0e5a444903187c82d8"
+    },
+    {
+      "block_id": "page-0443-block-0008",
+      "order": 8,
+      "text": "Sexual \ndysfunction§\n",
+      "bbox": [
+        388.3923034667969,
+        100.32289123535156,
+        432.48272705078125,
+        119.2078857421875
+      ],
+      "text_sha256": "34b80b1dc252e4a8e40343f67f268dd3b013292aaef0da1b55389ecbf678435a"
+    },
+    {
+      "block_id": "page-0443-block-0009",
+      "order": 9,
+      "text": "Sertraline\n",
+      "bbox": [
+        61.88999938964844,
+        127.77791595458984,
+        91.88249206542969,
+        136.48541259765625
+      ],
+      "text_sha256": "e794413d7e16a519adf3da8d7b86b230e3aac702a1f60e2caa3bd4060113f56b"
+    },
+    {
+      "block_id": "page-0443-block-0010",
+      "order": 10,
+      "text": "Vilazodone\n",
+      "bbox": [
+        61.88999938964844,
+        142.7779083251953,
+        97.35749053955078,
+        151.48541259765625
+      ],
+      "text_sha256": "fcdd391c728b1273cfd8773bc2539b16b31fb89e80ac3a38ab826b5cdb29e649"
+    },
+    {
+      "block_id": "page-0443-block-0011",
+      "order": 11,
+      "text": "–\n",
+      "bbox": [
+        135.38999938964844,
+        127.77791595458984,
+        139.13999938964844,
+        136.48541259765625
+      ],
+      "text_sha256": "200429741da3bc9b3c9c581932bfe0371a6aef05d32a7ee3bf026786a0c26e24"
+    },
+    {
+      "block_id": "page-0443-block-0012",
+      "order": 12,
+      "text": "–\n",
+      "bbox": [
+        135.38999938964844,
+        142.7779083251953,
+        139.13999938964844,
+        151.48541259765625
+      ],
+      "text_sha256": "200429741da3bc9b3c9c581932bfe0371a6aef05d32a7ee3bf026786a0c26e24"
+    },
+    {
+      "block_id": "page-0443-block-0013",
+      "order": 13,
+      "text": "–\n",
+      "bbox": [
+        174.38999938964844,
+        127.77791595458984,
+        178.13999938964844,
+        136.48541259765625
+      ],
+      "text_sha256": "200429741da3bc9b3c9c581932bfe0371a6aef05d32a7ee3bf026786a0c26e24"
+    },
+    {
+      "block_id": "page-0443-block-0014",
+      "order": 14,
+      "text": "–\n",
+      "bbox": [
+        174.38999938964844,
+        142.7779083251953,
+        178.13999938964844,
+        151.48541259765625
+      ],
+      "text_sha256": "200429741da3bc9b3c9c581932bfe0371a6aef05d32a7ee3bf026786a0c26e24"
+    },
+    {
+      "block_id": "page-0443-block-0015",
+      "order": 15,
+      "text": "–\n",
+      "bbox": [
+        230.3925018310547,
+        127.77791595458984,
+        234.1425018310547,
+        136.48541259765625
+      ],
+      "text_sha256": "200429741da3bc9b3c9c581932bfe0371a6aef05d32a7ee3bf026786a0c26e24"
+    },
+    {
+      "block_id": "page-0443-block-0016",
+      "order": 16,
+      "text": "–\n",
+      "bbox": [
+        230.3925018310547,
+        142.7779083251953,
+        234.1425018310547,
+        151.48541259765625
+      ],
+      "text_sha256": "200429741da3bc9b3c9c581932bfe0371a6aef05d32a7ee3bf026786a0c26e24"
+    },
+    {
+      "block_id": "page-0443-block-0017",
+      "order": 17,
+      "text": "–\n",
+      "bbox": [
+        284.39251708984375,
+        127.77791595458984,
+        288.14251708984375,
+        136.48541259765625
+      ],
+      "text_sha256": "200429741da3bc9b3c9c581932bfe0371a6aef05d32a7ee3bf026786a0c26e24"
+    },
+    {
+      "block_id": "page-0443-block-0018",
+      "order": 18,
+      "text": "–\n",
+      "bbox": [
+        284.39251708984375,
+        142.7779083251953,
+        288.14251708984375,
+        151.48541259765625
+      ],
+      "text_sha256": "200429741da3bc9b3c9c581932bfe0371a6aef05d32a7ee3bf026786a0c26e24"
+    },
+    {
+      "block_id": "page-0443-block-0019",
+      "order": 19,
+      "text": "++\n",
+      "bbox": [
+        344.39251708984375,
+        127.77791595458984,
+        353.39251708984375,
+        136.48541259765625
+      ],
+      "text_sha256": "41a4d3bd02c37bb1db04eee4eedb3ab7d28beae1330d1e9f69acd29109099c94"
+    },
+    {
+      "block_id": "page-0443-block-0020",
+      "order": 20,
+      "text": "++\n",
+      "bbox": [
+        344.39251708984375,
+        141.78041076660156,
+        353.39251708984375,
+        150.4879150390625
+      ],
+      "text_sha256": "41a4d3bd02c37bb1db04eee4eedb3ab7d28beae1330d1e9f69acd29109099c94"
+    },
+    {
+      "block_id": "page-0443-block-0021",
+      "order": 21,
+      "text": "+++\n",
+      "bbox": [
+        388.39501953125,
+        127.77791595458984,
+        401.89501953125,
+        136.48541259765625
+      ],
+      "text_sha256": "260b3447b965f5fa23d21a56da400610850bb9abaf4f98e29f921adec5428153"
+    },
+    {
+      "block_id": "page-0443-block-0022",
+      "order": 22,
+      "text": "++\n",
+      "bbox": [
+        388.39501953125,
+        141.78041076660156,
+        397.39501953125,
+        150.4879150390625
+      ],
+      "text_sha256": "41a4d3bd02c37bb1db04eee4eedb3ab7d28beae1330d1e9f69acd29109099c94"
+    },
+    {
+      "block_id": "page-0443-block-0023",
+      "order": 23,
+      "text": "Vortioxetine\n–\n+\n–\n–\n++\n+\n",
+      "bbox": [
+        61.89752197265625,
+        157.8079376220703,
+        392.90252685546875,
+        166.51544189453125
+      ],
+      "text_sha256": "1532f146e9a11544d1cd4dd6b9cb0ef726ce4c0012e9813dcad202cbaeafac54"
+    },
+    {
+      "block_id": "page-0443-block-0024",
+      "order": 24,
+      "text": "Monoamine \noxidase \ninhibitors \n(MAOIs)\n",
+      "bbox": [
+        61.905029296875,
+        172.6504364013672,
+        106.49251556396484,
+        211.53042602539062
+      ],
+      "text_sha256": "c02c3759294fe916ce0baf0edec49b3bfada0f3a6d46be30e6b234c071f66a46"
+    },
+    {
+      "block_id": "page-0443-block-0025",
+      "order": 25,
+      "text": "Isocarboxazid\n+\n++\n+\n++\n+\n+\n",
+      "bbox": [
+        61.905029296875,
+        217.8454132080078,
+        392.9100341796875,
+        226.55291748046875
+      ],
+      "text_sha256": "1f6c71db3678dc25f711de6e1167078af5b5ca3bc97bd33990d849fb3ff62f46"
+    },
+    {
+      "block_id": "page-0443-block-0026",
+      "order": 26,
+      "text": "Phenelzine\n+\n+\n+\n+\n+\n+\n",
+      "bbox": [
+        61.91253662109375,
+        232.86790466308594,
+        392.91754150390625,
+        241.57540893554688
+      ],
+      "text_sha256": "6b6e90886be43e2e88cb88b9886e7ce41b15ec62c3b870f783751f5f403fd45d"
+    },
+    {
+      "block_id": "page-0443-block-0027",
+      "order": 27,
+      "text": "Tranylcypromine\n–\n+\n+\n+\n+\n+\n",
+      "bbox": [
+        61.9200439453125,
+        247.89039611816406,
+        392.925048828125,
+        256.597900390625
+      ],
+      "text_sha256": "fca7b90f9d4c86eba28272f77173ee365ba0a07e68b5463ec01ada03c7f2b770"
+    },
+    {
+      "block_id": "page-0443-block-0028",
+      "order": 28,
+      "text": "Reversible \ninhibitor of \nmonoamine \noxidase A (RIMA)\n",
+      "bbox": [
+        61.92755126953125,
+        262.7328796386719,
+        122.7600326538086,
+        301.6128845214844
+      ],
+      "text_sha256": "e9804bf04c2f6d0062a452e5bacb7d6b23409c1d0ad7962f03ed9bf7623f8e39"
+    },
+    {
+      "block_id": "page-0443-block-0029",
+      "order": 29,
+      "text": "Moclobemide\n–\n–\n–\n–\n+\n+\n",
+      "bbox": [
+        61.92755126953125,
+        307.9278869628906,
+        392.93255615234375,
+        316.6353759765625
+      ],
+      "text_sha256": "6af4fa31226ac889ad88c780e346ebd2e2003fd788477b3e1732db48a6358061"
+    },
+    {
+      "block_id": "page-0443-block-0030",
+      "order": 30,
+      "text": "KEY:\n+++ High incidence/severity\n++ Moderate\n+ Low– Very low/none\n* Hypertension reported.\n",
+      "bbox": [
+        61.93505859375,
+        326.745361328125,
+        150.43504333496094,
+        375.62286376953125
+      ],
+      "text_sha256": "206f0a443dacd8a6d5f8c58b3d2c059a5288fb7e67e63d063bba3e6f9a9eb683"
+    },
+    {
+      "block_id": "page-0443-block-0031",
+      "order": 31,
+      "text": "§In some cases, further details can be found in specific sections in this chapter.\n",
+      "bbox": [
+        61.88999938964844,
+        376.9529113769531,
+        311.1611022949219,
+        385.660400390625
+      ],
+      "text_sha256": "ffc9989c3149c2e46c2cc6ef8096f1e35a7ac10f39071ddf961aab409953c95a"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

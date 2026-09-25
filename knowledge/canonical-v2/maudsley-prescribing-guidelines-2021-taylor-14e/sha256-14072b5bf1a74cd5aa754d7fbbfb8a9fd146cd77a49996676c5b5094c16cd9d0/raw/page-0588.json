@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0588",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 588,
+  "source_page_index": 587,
+  "source_page_display": 588,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Children and adolescents    567\nCHAPTER 5\nPost-traumatic stress disorder in children and adolescents\nDiagnostic issues\nTraumatic events and PTSD are common in young people. One in three children experi-\nences traumatic events1 and about 1 in 13 children develops PTSD before age 18.1 The \nprevalence of PTSD in adolescents can be much higher in at-risk groups, for example \nthose attending emergency departments, in forensic settings, or among refugee/asylum \nseekers. Young people with PTSD are at high risk of self-harm (nearly 50%) and suicide \nattempt (20%) and are often functionally impaired, for example not being in education, \nemployment or education (NEET) (more than 25%).1 Of note, more than three out of \nfour young people with PTSD have comorbid psychiatric diagnoses, most commonly \ndepression, conduct disorder, alcohol dependence or generalised anxiety disorder.1 \nFurthermore, PTSD is not the most common diagnosis in trauma-exposed young people - \ndisorders that are most prevalent in the general population (e.g. depression, conduct \ndisorder and alcohol dependence) are also more prevalent in trauma-exposed young \npeople.1\nA diagnosis of PTSD is based on the triad of intrusive re-experiencing, avoidance of \nstimuli associated with the trauma, and hyper-arousal after trauma exposure. Because \nof the abnormal processing of traumatic memories, young people with PTSD persistent \nre-experiencing of the traumatic event(s) through nightmares or unwanted and distress-\ning memories, which are often experienced as if they were happening in the ‘here and \nnow’ but often in young people do not appear as frank dissociative symptoms or flash-\nbacks. In order to minimise re-experiencing symptoms, young people with PTSD often \ndevelop overt or covert avoidance strategies, keeping themselves busy or distracted or \nstaying away from people or places that remind them of the traumatic event. As a result \nof the above symptoms, young people with PTSD often feel under continued threat and, \ntherefore, display physiological hyper-arousal, appearing alert and vigilant for danger, \nirritable and struggling to concentrate on daily tasks. Because of the varied clinical \nmanifestations, the assessment and treatment of PTSD in children and adolescents \nshould be undertaken by clinicians who have expertise in the clinical presentations seen \nin trauma-exposed children and can appreciate developmental variations in the mani-\nfestation of symptoms.\nClinical guidance\nThe NICE guidelines2 advise that treatment of PTSD in young people should focus on \npsychotherapy with 12-sessions of trauma-focused CBT (TF-CBT) for PTSD resulting \nfrom a single traumatic event or longer for chronic or recurrent events. If TF-CBT is not \neffective or based on the young person’s preference, treatment may also include eye \nmovement desensitization and reprocessing (EMDR).\nBased on the current evidence in the NICE guidelines,2 the American Academy of \nChild & Adolescent Psychiatry3 and the International Society for Traumatic Stress \nStudies (ISTSS),4 pharmacotherapy is not recommended for treatment of PTSD in \nyoung people. The evidence for efficacy of pharmacotherapy (SSRIs and SGAs) in \nadults is also somewhat limited at present.5,6 However, because of the high rates of \n",
+  "raw_text_sha256": "41d70d74778895e467522f4d7a0dae0b3e1b222044f60bd6fa3eea281765331d",
+  "coordinates_sha256": "15b8b696c9c0bb6980ca5bf96a20867a2b4460a3118c6ef69e9af254f4e78613",
+  "block_sequence_sha256": "6272973bcf0171de6e291100479d35a8ae90977f208b551f17bbbf49cfcef40d",
+  "blocks": [
+    {
+      "block_id": "page-0588-block-0000",
+      "order": 0,
+      "text": "Children and adolescents    567\n",
+      "bbox": [
+        288.94488525390625,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "529e9a15a35da0a9bfbd1acf5c4c5c3dd078eea06d38f448433b3d125cd5538d"
+    },
+    {
+      "block_id": "page-0588-block-0001",
+      "order": 1,
+      "text": "CHAPTER 5\n",
+      "bbox": [
+        454.4096984863281,
+        339.3385009765625,
+        463.88970947265625,
+        380.6824951171875
+      ],
+      "text_sha256": "f4b8b4a0fc64e7b3b74e7336306d0959d0384683e387792724f393162639020a"
+    },
+    {
+      "block_id": "page-0588-block-0002",
+      "order": 2,
+      "text": "Post-traumatic stress disorder in children and adolescents\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        351.4280700683594,
+        79.1004638671875
+      ],
+      "text_sha256": "42b911951b5a542ebedac89a647e407ee4fc72f6c175b9c30b99d2cadc481db4"
+    },
+    {
+      "block_id": "page-0588-block-0003",
+      "order": 3,
+      "text": "Diagnostic issues\n",
+      "bbox": [
+        48.00400161743164,
+        87.06448364257812,
+        135.99301147460938,
+        100.0994873046875
+      ],
+      "text_sha256": "ed02882ffde2b1dd8358e2f6df2344d9a85d1e7925926d20cf8264aedbd29336"
+    },
+    {
+      "block_id": "page-0588-block-0004",
+      "order": 4,
+      "text": "Traumatic events and PTSD are common in young people. One in three children experi-\nences traumatic events1 and about 1 in 13 children develops PTSD before age 18.1 The \nprevalence of PTSD in adolescents can be much higher in at-risk groups, for example \nthose attending emergency departments, in forensic settings, or among refugee/asylum \nseekers. Young people with PTSD are at high risk of self-harm (nearly 50%) and suicide \nattempt (20%) and are often functionally impaired, for example not being in education, \nemployment or education (NEET) (more than 25%).1 Of note, more than three out of \nfour young people with PTSD have comorbid psychiatric diagnoses, most commonly \ndepression, conduct disorder, alcohol dependence or generalised anxiety disorder.1 \nFurthermore, PTSD is not the most common diagnosis in trauma-exposed young people - \ndisorders that are most prevalent in the general population (e.g. depression, conduct \ndisorder and alcohol dependence) are also more prevalent in trauma-exposed young \npeople.1\n",
+      "bbox": [
+        47.99652099609375,
+        105.91046142578125,
+        422.810546875,
+        261.6304931640625
+      ],
+      "text_sha256": "e0e6e749f2a1b4ea0bfa3f48ab57f0125c4160770b2d284138a08a5eecda7865"
+    },
+    {
+      "block_id": "page-0588-block-0005",
+      "order": 5,
+      "text": "A diagnosis of PTSD is based on the triad of intrusive re-experiencing, avoidance of \nstimuli associated with the trauma, and hyper-arousal after trauma exposure. Because \nof the abnormal processing of traumatic memories, young people with PTSD persistent \nre-experiencing of the traumatic event(s) through nightmares or unwanted and distress-\ning memories, which are often experienced as if they were happening in the ‘here and \nnow’ but often in young people do not appear as frank dissociative symptoms or flash-\nbacks. In order to minimise re-experiencing symptoms, young people with PTSD often \ndevelop overt or covert avoidance strategies, keeping themselves busy or distracted or \nstaying away from people or places that remind them of the traumatic event. As a result \nof the above symptoms, young people with PTSD often feel under continued threat and, \ntherefore, display physiological hyper-arousal, appearing alert and vigilant for danger, \nirritable and struggling to concentrate on daily tasks. Because of the varied clinical \nmanifestations, the assessment and treatment of PTSD in children and adolescents \nshould be undertaken by clinicians who have expertise in the clinical presentations seen \nin trauma-exposed children and can appreciate developmental variations in the mani-\nfestation of symptoms.\n",
+      "bbox": [
+        48.0,
+        261.9104919433594,
+        422.8199157714844,
+        453.6304931640625
+      ],
+      "text_sha256": "ff6cffee4a36aac3fc168c3902e3c9558f08437f6d5fdff86f589dbc6adadbb4"
+    },
+    {
+      "block_id": "page-0588-block-0006",
+      "order": 6,
+      "text": "Clinical guidance\n",
+      "bbox": [
+        48.0,
+        472.00048828125,
+        126.89999389648438,
+        483.8504943847656
+      ],
+      "text_sha256": "26764bf139176e7ef99c6ac39bb0a8237d115cd3d9e65e4744b6c80c8263e5a9"
+    },
+    {
+      "block_id": "page-0588-block-0007",
+      "order": 7,
+      "text": "The NICE guidelines2 advise that treatment of PTSD in young people should focus on \npsychotherapy with 12-sessions of trauma-focused CBT (TF-CBT) for PTSD resulting \nfrom a single traumatic event or longer for chronic or recurrent events. If TF-CBT is not \neffective or based on the young person’s preference, treatment may also include eye \nmovement desensitization and reprocessing (EMDR).\n",
+      "bbox": [
+        48.0,
+        489.9104919433594,
+        422.79052734375,
+        549.6304931640625
+      ],
+      "text_sha256": "b633982a62035b1e2476efa83340a3f7b2cd57d985afa66ba02df53b70af2146"
+    },
+    {
+      "block_id": "page-0588-block-0008",
+      "order": 8,
+      "text": "Based on the current evidence in the NICE guidelines,2 the American Academy of \nChild & Adolescent Psychiatry3 and the International Society for Traumatic Stress \nStudies (ISTSS),4 pharmacotherapy is not recommended for treatment of PTSD in \nyoung people. The evidence for efficacy of pharmacotherapy (SSRIs and SGAs) in \nadults is also somewhat limited at present.5,6 However, because of the high rates of \n",
+      "bbox": [
+        47.997894287109375,
+        549.9104614257812,
+        422.8078918457031,
+        609.6304931640625
+      ],
+      "text_sha256": "530d63c736a6e5994a9e4f189546a8d26ad3f880240f3cad39b0b56cd11dd430"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,275 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0481",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 481,
+  "source_page_index": 480,
+  "source_page_display": 481,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "460    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nSevere alcohol dependence usually requires inpatient treatment for assisted with-\ndrawal because of the significant risk of life-threatening complications. However, there \nare rare occasions where a pragmatic community approach is required. In such situa-\ntions, the decision to undertake a community-assisted withdrawal must be made clear \nby an experienced clinician, to both patient and carer. Intensive daily monitoring is \nadvised for the first 2–3 days. This may require special arrangements over a weekend.\nPrescribing should not start if the patient is intoxicated. In such circumstances, they should \nbe reviewed at the earliest opportunity when not intoxicated. The dose of benzodiazepine \nmay need to be reduced over a 7–10-day period in this group (occasionally longer if depend-\nence is very severe or there is a history of complications during previous detoxifications).\nSymptom-triggered regimen\nThis should be reserved for managing assisted withdrawal in specialist alcohol inpa-\ntient or residential settings. Regular monitoring is required, e.g. pulse, BP, temperature \nand level of consciousness. Medication is only given when withdrawal symptoms are \nobserved as determined using CIWA-Ar, SAWS or alternative validated measure. \nSymptom-triggered therapy is generally used in patients without a history of complica-\ntions. A typical symptom-triggered regimen would be chlordiazepoxide 20–30mg \nhourly as needed. Note that the total dose given each day would be expected to decrease \nfrom day 2 onwards. It is common for symptom-triggered treatment to last only 24–48 \nhours before switching to an individualised fixed-dose reducing schedule. Occasionally \n(e.g. in DTs), the flexible regime may need to be prolonged beyond the first 24 hours.\nTable 4.5  Severe alcohol dependence: example of a fixed-dose chlordiazepoxide regimen\nTotal daily dose (mg)\nDay 1 (first 24 hours)\n40mg qds + 40mg PRN\n200\nDay 2\n40mg qds\n160\nDay 3\n30mg qds\n120\nDay 4\n25mg qds\n100\nDay 5\n20mg qds\n80\nDay 6\n15mg qds\n60\nDay 7\n10mg qds\n40\nDay 8\n10mg tds\n30\nDay 9\n  5mg qds\n20\nDay 10\n10mg nocte\n10\nnocte, at night; prn, pro re nata (as required); qds, quarter die sumendum (four times a \nday); tds, ter die sumendum (three times a day).\nExample of a symptom-triggered chlordiazepoxide regime2\nDays 1–5 : 20–30mg chlordiazepoxide as needed, up to hourly, based on symptoms.\n",
+  "raw_text_sha256": "6545fdbdd5e556ff6e7819959b625f67192863bb41b6c5fb0534008a1d0707e5",
+  "coordinates_sha256": "3c7670b0d4fc4c3098756caa8b856985bb48938519bcf5c8db230fa887884857",
+  "block_sequence_sha256": "aa6e75cd01d3ca84b6568474cf78a3b23aef775a99560a9d501d67e41b154bb2",
+  "blocks": [
+    {
+      "block_id": "page-0481-block-0000",
+      "order": 0,
+      "text": "460    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "f913216baa6fd38372199c95db2a6056247cf88b23cacfbdc3538f563f80b813"
+    },
+    {
+      "block_id": "page-0481-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0481-block-0002",
+      "order": 2,
+      "text": "Severe alcohol dependence usually requires inpatient treatment for assisted with-\ndrawal because of the significant risk of life-threatening complications. However, there \nare rare occasions where a pragmatic community approach is required. In such situa-\ntions, the decision to undertake a community-assisted withdrawal must be made clear \nby an experienced clinician, to both patient and carer. Intensive daily monitoring is \nadvised for the first 2–3 days. This may require special arrangements over a weekend.\n",
+      "bbox": [
+        61.88990020751953,
+        62.31029510498047,
+        436.699951171875,
+        134.27029418945312
+      ],
+      "text_sha256": "58ddb51e38c87a9a274d5cfcbca16f3456f56f5114b9a8ec0342e87602896db4"
+    },
+    {
+      "block_id": "page-0481-block-0003",
+      "order": 3,
+      "text": "Prescribing should not start if the patient is intoxicated. In such circumstances, they should \nbe reviewed at the earliest opportunity when not intoxicated. The dose of benzodiazepine \nmay need to be reduced over a 7–10-day period in this group (occasionally longer if depend-\nence is very severe or there is a history of complications during previous detoxifications).\n",
+      "bbox": [
+        61.88990020751953,
+        134.55029296875,
+        436.7102355957031,
+        182.27029418945312
+      ],
+      "text_sha256": "41baf6e3c052a40efc221c5ca830c456c5bc6354a757075174d691cd485ddbb9"
+    },
+    {
+      "block_id": "page-0481-block-0004",
+      "order": 4,
+      "text": "Symptom-triggered regimen\n",
+      "bbox": [
+        61.88990020751953,
+        200.64028930664062,
+        196.369873046875,
+        212.49029541015625
+      ],
+      "text_sha256": "3e19c923a9bf412b064437bee7e1094b32a3949023f4a119e31818f9dca3d55c"
+    },
+    {
+      "block_id": "page-0481-block-0005",
+      "order": 5,
+      "text": "This should be reserved for managing assisted withdrawal in specialist alcohol inpa-\ntient or residential settings. Regular monitoring is required, e.g. pulse, BP, temperature \nand level of consciousness. Medication is only given when withdrawal symptoms are \nobserved as determined using CIWA-Ar, SAWS or alternative validated measure. \nSymptom-triggered therapy is generally used in patients without a history of complica-\ntions. A typical symptom-triggered regimen would be chlordiazepoxide 20–30mg \nhourly as needed. Note that the total dose given each day would be expected to decrease \nfrom day 2 onwards. It is common for symptom-triggered treatment to last only 24–48 \nhours before switching to an individualised fixed-dose reducing schedule. Occasionally \n(e.g. in DTs), the flexible regime may need to be prolonged beyond the first 24 hours.\n",
+      "bbox": [
+        61.88990020751953,
+        218.55029296875,
+        436.6699523925781,
+        338.2702941894531
+      ],
+      "text_sha256": "04583ca44067d74aa995a847f82bad8c910d6ee6fb87cd240d49e034598e0e7b"
+    },
+    {
+      "block_id": "page-0481-block-0006",
+      "order": 6,
+      "text": "Table 4.5  Severe alcohol dependence: example of a fixed-dose chlordiazepoxide regimen\n",
+      "bbox": [
+        110.23989868164062,
+        363.7469787597656,
+        383.6899108886719,
+        372.6344909667969
+      ],
+      "text_sha256": "4688e0af06a2be4197df1a0463b14ef68c9cc25f2efeb1483fd5fa21e830b7b0"
+    },
+    {
+      "block_id": "page-0481-block-0007",
+      "order": 7,
+      "text": "Total daily dose (mg)\n",
+      "bbox": [
+        298.2398986816406,
+        381.6219787597656,
+        371.5898742675781,
+        390.5094909667969
+      ],
+      "text_sha256": "9558ca369bca6f4ca8e382fcb6a829f0b0da895960c2d4cd4016dc702bd93dde"
+    },
+    {
+      "block_id": "page-0481-block-0008",
+      "order": 8,
+      "text": "Day 1 (first 24 hours)\n40mg qds + 40mg PRN\n200\n",
+      "bbox": [
+        108.24240112304688,
+        397.42449951171875,
+        311.4849548339844,
+        406.1319885253906
+      ],
+      "text_sha256": "39c54178ee13be1bf82744cfddd0bb4273bcaa2207b7777011b50c5ff20b2de6"
+    },
+    {
+      "block_id": "page-0481-block-0009",
+      "order": 9,
+      "text": "Day 2\n40mg qds\n160\n",
+      "bbox": [
+        108.24240112304688,
+        413.0469970703125,
+        311.4849548339844,
+        421.7544860839844
+      ],
+      "text_sha256": "81ae54b65ca0f3c9573a40d8e243ba4093c91de04f072a9c94e978239db1df3d"
+    },
+    {
+      "block_id": "page-0481-block-0010",
+      "order": 10,
+      "text": "Day 3\n30mg qds\n120\n",
+      "bbox": [
+        108.24241638183594,
+        428.66949462890625,
+        311.4849548339844,
+        437.3769836425781
+      ],
+      "text_sha256": "b41db061dc995b2c0cb08b507a3f9cb2a488865b21d0b239c418f5eeffb00cd1"
+    },
+    {
+      "block_id": "page-0481-block-0011",
+      "order": 11,
+      "text": "Day 4\n25mg qds\n100\n",
+      "bbox": [
+        108.24241638183594,
+        444.2919921875,
+        311.4849548339844,
+        452.9994812011719
+      ],
+      "text_sha256": "4f6e96c0ba1efe188bc2968e823816b814d72344afa2c4076d7628fc346147ca"
+    },
+    {
+      "block_id": "page-0481-block-0012",
+      "order": 12,
+      "text": "Day 5\n20mg qds\n80\n",
+      "bbox": [
+        108.24241638183594,
+        459.91448974609375,
+        311.4849548339844,
+        468.6219787597656
+      ],
+      "text_sha256": "722329e1f1ee105bfae9203e8c80d7fc161997cefd6ee39fe46a223fb959e679"
+    },
+    {
+      "block_id": "page-0481-block-0013",
+      "order": 13,
+      "text": "Day 6\n15mg qds\n60\n",
+      "bbox": [
+        108.242431640625,
+        475.5369873046875,
+        311.4849548339844,
+        484.2444763183594
+      ],
+      "text_sha256": "cd24c444fbaa613d8ce2e1ba568e9d51471ef12a632ce318e89177fb8ad52af9"
+    },
+    {
+      "block_id": "page-0481-block-0014",
+      "order": 14,
+      "text": "Day 7\n10mg qds\n40\n",
+      "bbox": [
+        108.242431640625,
+        491.15948486328125,
+        311.4849548339844,
+        499.8669738769531
+      ],
+      "text_sha256": "f491213d566f7f65e02379af9676d1aa0b1b4033cda516d58ea4442b2db3253e"
+    },
+    {
+      "block_id": "page-0481-block-0015",
+      "order": 15,
+      "text": "Day 8\n10mg tds\n30\n",
+      "bbox": [
+        108.242431640625,
+        506.7820129394531,
+        311.4849548339844,
+        515.489501953125
+      ],
+      "text_sha256": "3fa868152da6c1d1542d61262cb12ff1131ea96ec0d4b2128a6f547a80042e52"
+    },
+    {
+      "block_id": "page-0481-block-0016",
+      "order": 16,
+      "text": "Day 9\n  5mg qds\n20\n",
+      "bbox": [
+        108.242431640625,
+        522.4044189453125,
+        311.48492431640625,
+        531.1119995117188
+      ],
+      "text_sha256": "2cdef8386950d04adff4484da48db5a843af2068f5f81fa879bd921ac230ec0e"
+    },
+    {
+      "block_id": "page-0481-block-0017",
+      "order": 17,
+      "text": "Day 10\n10mg nocte\n10\n",
+      "bbox": [
+        108.24240112304688,
+        538.0269775390625,
+        311.48492431640625,
+        546.7344970703125
+      ],
+      "text_sha256": "1932f0d9d5864122c4a1051619178a996769cef0b3615278dabea69071bf9168"
+    },
+    {
+      "block_id": "page-0481-block-0018",
+      "order": 18,
+      "text": "nocte, at night; prn, pro re nata (as required); qds, quarter die sumendum (four times a \nday); tds, ter die sumendum (three times a day).\n",
+      "bbox": [
+        104.24488830566406,
+        556.2744750976562,
+        384.32501220703125,
+        574.9794921875
+      ],
+      "text_sha256": "381d81597eb34c67bb921bc752fed3c4253162614868ff003cd1821afa013493"
+    },
+    {
+      "block_id": "page-0481-block-0019",
+      "order": 19,
+      "text": "Example of a symptom-triggered chlordiazepoxide regime2\n",
+      "bbox": [
+        61.88999938964844,
+        593.3040161132812,
+        339.6492004394531,
+        605.1539916992188
+      ],
+      "text_sha256": "bc5dc1a8f2a7338b3573615f97e7d4eeb2c9fffbe2888f05804fe562b824e111"
+    },
+    {
+      "block_id": "page-0481-block-0020",
+      "order": 20,
+      "text": "Days 1–5 : 20–30mg chlordiazepoxide as needed, up to hourly, based on symptoms.\n",
+      "bbox": [
+        61.88999938964844,
+        611.2139892578125,
+        423.65997314453125,
+        622.9340209960938
+      ],
+      "text_sha256": "2f400ab5fe6290eb07d401ed99696871ff55b4344a7c49aab4297c152dd8f3ac"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

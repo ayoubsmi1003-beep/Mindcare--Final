@@ -1,0 +1,215 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0528",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 528,
+  "source_page_index": 527,
+  "source_page_display": 528,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    507\nCHAPTER 4\ncan apply to the Medicines and Healthcare Products Regulatory Agency (MHRA) for a \nmedicinal licence. To date, the MHRA has licensed one e-cigarette but the manufacturers \nhave not made this available; this means at the time of writing no e-cigarette can be \n­prescribed in the EU. Public Health England, NHS England and the Care Quality \nCommission support the use of e-cigarettes and vaping devices in mental health inpatient \nsettings.19–21\nClinical effectiveness\nIn the most recent Cochrane review of the effect of e-cigarettes for smoking cessation, \nquit rates were significantly higher for people who used e-cigarettes containing nicotine \ncompared with those who either used an e-cigarette without nicotine (RR 1.71) or NRT \n(RR 1.69).22 Since 2013, they have been the most popular quitting aid in England; it is \nestimated that in 2017, around 50,700 to 69,930 smokers had stopped smoking using \nan e-cigarette, who otherwise would have carried on smoking.23 There is a small evi-\ndence base that they are also effective for helping people with a mental health condition \nreduce smoking.24\nPreparations and dose\nIn Europe, disposable, prefilled cartridges or pods and bottles of e-liquids are labelled \nwith the quantity of nicotine (in mg) present per millilitre (mL), or as the percentage \nweight per volume (0% w/v). Nicotine content ranges from zero (0%) to a maximum \nof 20mg/mL (or 2%). Nicotine salts (as an alternative to e-liquid) have recently become \npopular with e-cigarette users; salts have a lower pH level, enabling a smoother throat-\nhit and for some users, purportedly providing a sensation that is more similar to smok-\ning. Additionally, nicotine salts allow vaporisation at a lower temperature and enable \nhigher nicotine levels to be inhaled,24 which may help with switching from smoking to \nvaping.\nE-cigarettes come in various types and shapes. The following are some types of \ne-cigarettes:\n■\n■one-time disposable products (often referred to as ‘cigalikes’)\n■\n■reusable, rechargeable kits designed with replaceable cartridges or pods\n■\n■reusable, rechargeable kits designed to be refilled with liquid by the user (often \nreferred to as tanks, but there are now also refillable pods available)\n■\n■reusable, rechargeable kits, often referred to as ‘mods’ (modifiables) that allow users \nto customise their product, e.g. by regulating the power delivery from the batteries to \nthe heating element.\nAdverse effects\nMouth, throat irritation, cough, headache and nausea are the most commonly reported \nsymptoms of e-cigarette use, and these subside over time.22 The Royal College of \nPhysicians,4 Public Health England25 and the Committee on Toxicity of Chemicals in \nFood, Consumer Products and the Environment26 advise that regulated e-cigarettes/\nvaping devices are a much less harmful alternative to tobacco smoking for dependent \nsmokers and bystanders. The Royal College of Physicians4 hazard to health arising \n",
+  "raw_text_sha256": "f253584d63c82af9281605815eed5683676d67b1d939f33a8329915a5eccbbe8",
+  "coordinates_sha256": "3361a41b9cff0e70ae08b93f03053ee1c0d5e2837ade377d06b80a14767f8617",
+  "block_sequence_sha256": "aeaf8779b37666f3600989772768070e077782a03dc5be322317537a92c25281",
+  "blocks": [
+    {
+      "block_id": "page-0528-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    507\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "7dc1cbd73e652527c7c9d4b21600815eea215c9f228e608bb7fd6f754e68b0dc"
+    },
+    {
+      "block_id": "page-0528-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0528-block-0002",
+      "order": 2,
+      "text": "can apply to the Medicines and Healthcare Products Regulatory Agency (MHRA) for a \nmedicinal licence. To date, the MHRA has licensed one e-cigarette but the manufacturers \nhave not made this available; this means at the time of writing no e-cigarette can be \n­prescribed in the EU. Public Health England, NHS England and the Care Quality \nCommission support the use of e-cigarettes and vaping devices in mental health inpatient \nsettings.19–21\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.8302001953125,
+        134.27041625976562
+      ],
+      "text_sha256": "2e2595f71d8303320633a51b5cec3699cc7e311e1020709f73d144d0c672217e"
+    },
+    {
+      "block_id": "page-0528-block-0003",
+      "order": 3,
+      "text": "Clinical effectiveness\n",
+      "bbox": [
+        48.0,
+        152.64041137695312,
+        145.61997985839844,
+        164.49041748046875
+      ],
+      "text_sha256": "27e65ab4659ae1e27223e7249a0043dbe89a049f0123cdb57c4ad1cd65d83925"
+    },
+    {
+      "block_id": "page-0528-block-0004",
+      "order": 4,
+      "text": "In the most recent Cochrane review of the effect of e-cigarettes for smoking cessation, \nquit rates were significantly higher for people who used e-cigarettes containing nicotine \ncompared with those who either used an e-cigarette without nicotine (RR 1.71) or NRT \n(RR 1.69).22 Since 2013, they have been the most popular quitting aid in England; it is \nestimated that in 2017, around 50,700 to 69,930 smokers had stopped smoking using \nan e-cigarette, who otherwise would have carried on smoking.23 There is a small evi-\ndence base that they are also effective for helping people with a mental health condition \nreduce smoking.24\n",
+      "bbox": [
+        47.99779510498047,
+        170.5504150390625,
+        422.8099365234375,
+        266.2704772949219
+      ],
+      "text_sha256": "1d9978251c8123e642762e44ae3bd1b1edf116eeeec526ed5715fd967b98308d"
+    },
+    {
+      "block_id": "page-0528-block-0005",
+      "order": 5,
+      "text": "Preparations and dose\n",
+      "bbox": [
+        48.0,
+        284.6404724121094,
+        153.01998901367188,
+        296.490478515625
+      ],
+      "text_sha256": "c4da5d994201bf54a929c952ca0e070b9e72b1b1b1bc1d769d8df641a0b0b5c9"
+    },
+    {
+      "block_id": "page-0528-block-0006",
+      "order": 6,
+      "text": "In Europe, disposable, prefilled cartridges or pods and bottles of e-liquids are labelled \nwith the quantity of nicotine (in mg) present per millilitre (mL), or as the percentage \nweight per volume (0% w/v). Nicotine content ranges from zero (0%) to a maximum \nof 20mg/mL (or 2%). Nicotine salts (as an alternative to e-liquid) have recently become \npopular with e-cigarette users; salts have a lower pH level, enabling a smoother throat-\nhit and for some users, purportedly providing a sensation that is more similar to smok-\ning. Additionally, nicotine salts allow vaporisation at a lower temperature and enable \nhigher nicotine levels to be inhaled,24 which may help with switching from smoking to \nvaping.\n",
+      "bbox": [
+        48.0,
+        302.55047607421875,
+        422.8199768066406,
+        410.2704772949219
+      ],
+      "text_sha256": "c7fb9e3e055b0a0a6654e6e5e7a8f8d181343ca944023634c0c73dc17b57b4a1"
+    },
+    {
+      "block_id": "page-0528-block-0007",
+      "order": 7,
+      "text": "E-cigarettes come in various types and shapes. The following are some types of \ne-cigarettes:\n",
+      "bbox": [
+        48.000091552734375,
+        410.55047607421875,
+        422.74017333984375,
+        434.2704772949219
+      ],
+      "text_sha256": "9a89062f394ff16f3cd8ec1f7d70247b549fcfd5c5b20b285ad770ba0444a367"
+    },
+    {
+      "block_id": "page-0528-block-0008",
+      "order": 8,
+      "text": "■\n■one-time disposable products (often referred to as ‘cigalikes’)\n",
+      "bbox": [
+        47.999900817871094,
+        440.55047607421875,
+        319.0600280761719,
+        452.2704772949219
+      ],
+      "text_sha256": "8f050deecda8315aa809e0ceba5175eacb9635d2bc8f1712e57a7299528f3f7a"
+    },
+    {
+      "block_id": "page-0528-block-0009",
+      "order": 9,
+      "text": "■\n■reusable, rechargeable kits designed with replaceable cartridges or pods\n",
+      "bbox": [
+        47.999900817871094,
+        452.55047607421875,
+        364.46002197265625,
+        464.2704772949219
+      ],
+      "text_sha256": "f5f58277a12596720db6d059ba0ba95a634df02d8e5fe1ac50767b816c2724b1"
+    },
+    {
+      "block_id": "page-0528-block-0010",
+      "order": 10,
+      "text": "■\n■reusable, rechargeable kits designed to be refilled with liquid by the user (often \n",
+      "bbox": [
+        47.999900817871094,
+        464.55047607421875,
+        422.79986572265625,
+        476.2704772949219
+      ],
+      "text_sha256": "b7d538d5af7f64eea410ba54e1ae89b5c9c368d0a4703b02c0c82cba6ebb2dcf"
+    },
+    {
+      "block_id": "page-0528-block-0011",
+      "order": 11,
+      "text": "referred to as tanks, but there are now also refillable pods available)\n",
+      "bbox": [
+        57.0,
+        476.55047607421875,
+        350.5799560546875,
+        488.2704772949219
+      ],
+      "text_sha256": "1a4cf3acd9f205b2a77c394fe91e9099989aca417562016d07b58388f551df03"
+    },
+    {
+      "block_id": "page-0528-block-0012",
+      "order": 12,
+      "text": "■\n■reusable, rechargeable kits, often referred to as ‘mods’ (modifiables) that allow users \n",
+      "bbox": [
+        47.999900817871094,
+        488.55047607421875,
+        422.76995849609375,
+        500.2704772949219
+      ],
+      "text_sha256": "e15cb8e1bf60e43eeb595b21cad09a57574d30d0f61015bd501c8ec1e1393f7e"
+    },
+    {
+      "block_id": "page-0528-block-0013",
+      "order": 13,
+      "text": "to customise their product, e.g. by regulating the power delivery from the batteries to \nthe heating element.\n",
+      "bbox": [
+        57.0,
+        500.55047607421875,
+        422.7800598144531,
+        524.2705078125
+      ],
+      "text_sha256": "681a2bc6937057fbb135e3f0c07949f7f59357b1dece9ea17ca3e6f238022ae4"
+    },
+    {
+      "block_id": "page-0528-block-0014",
+      "order": 14,
+      "text": "Adverse effects\n",
+      "bbox": [
+        48.0,
+        542.6405029296875,
+        120.60999298095703,
+        554.490478515625
+      ],
+      "text_sha256": "2829b5953031aa8e8e992beffdca9c91044830ce03b830653e6ea31d5de93cfc"
+    },
+    {
+      "block_id": "page-0528-block-0015",
+      "order": 15,
+      "text": "Mouth, throat irritation, cough, headache and nausea are the most commonly reported \nsymptoms of e-cigarette use, and these subside over time.22 The Royal College of \nPhysicians,4 Public Health England25 and the Committee on Toxicity of Chemicals in \nFood, Consumer Products and the Environment26 advise that regulated e-cigarettes/\nvaping devices are a much less harmful alternative to tobacco smoking for dependent \nsmokers and bystanders. The Royal College of Physicians4 hazard to health arising \n",
+      "bbox": [
+        47.99749755859375,
+        560.5504760742188,
+        422.7832946777344,
+        632.2704467773438
+      ],
+      "text_sha256": "8cafe18ed789c0b12bd6510ec3f857e1deff3b64ae93261d4dae2ebb388852f1"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

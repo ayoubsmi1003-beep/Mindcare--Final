@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0501",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 501,
+  "source_page_index": 500,
+  "source_page_display": 501,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "480    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nheroin use more than non-opioid-based replacement therapy.11 Higher doses of metha-\ndone (60–100mg/day) are recommended in the DoH guidelines as they have been shown \nto be more effective than lower dosages in retaining patients in treatment and in reduc-\ning illicit heroin and cocaine use. According to the emerging small-scale open-label \nresearch, methadone is of equal efficacy to buprenorphine in reducing prescription opi-\noid abuse in prescription opioid dependence and retaining people in treatment.21 \nMethadone is also associated with a reduction in drug-taking behaviours related to HIV \ntransmission. The 2017 POATS (n = 653) in the US found that buprenorphine–nalox-\none combination was an effective treatment of prescription opioid dependence, when \nthis was prescribed as a maintenance (i.e. ongoing) rather than tapering prescription.22\nPrescribing information: Methadone and buprenorphine are Controlled Drugs with \nhigh dependency potential. Methadone in particular has a low lethal dose. For these \nreasons, there are special documentation requirements, including specifying the patient’s \nname, date of birth and address on prescriptions and writing the daily dose amount and \ntotal amount prescribed in both numbers and words. Instructions such as the require-\nment for consumption to be supervised should also be specified, e.g. ‘Daily Supervised \nConsumption’.\nSupervised daily consumption is recommended for new prescriptions, for a minimum \nof several months.1 If this is not possible, instalment prescriptions for daily dispensing \nand collection should be used. No more than 1 week’s supply should be dispensed at \none time, except in exceptional circumstances.1 During the COVID pandemic, a deci-\nsion was taken by Public Health England that the risk of social contact during directly \nsupervised consumption exceeded the risk of diversion and overdose so dispensing \nregimes were relaxed in most cases. It is currently unclear what the consequences of this \nchange in practice have been and whether this change will persist or revert to old dis-\npensing arrangements.\nMethadone should only be prescribed as a 1mg in 1mL oral solution.1 The patient’s \naddress and date of birth should be on the form, the amount prescribed per day and \ntotal prescribed written in figures and words. Directions for supervision should be writ-\nten clearly. Tablets can be crushed and injected and therefore should not usually be \nprescribed.1,23\nImportant: All patients starting a methadone treatment programme must be informed of the risks \nof toxicity and overdose, and the necessity for safe storage of any take home medication.1,24–26 \nSafe storage is vital, particularly if there are children in the household, as tragic deaths have \noccurred when children have ingested methadone. Prescribers should consider risks to children in \nall assessments and treatment plans of drug using patients.\nIn determining the starting dose for patients using heroin or other opioids not already \non a prescription for methadone, consideration must be given to the potential for opi-\noid toxicity, taking into account:\n■\n■Tolerance to opioids can be affected by a number of factors and significantly influ-\nences an individual’s risk of toxicity.27 Of particular importance in assessing this are \nthe client’s reported current quantity, frequency and route of administration, whilst \n",
+  "raw_text_sha256": "7a96e2e9929500fc1e69f7674b27668900ab6e60bb20ce085fa7f910e9f4195d",
+  "coordinates_sha256": "4f2741e6779ac0339f359859821c5442766c8be0f21d1febb3bb27c3753c2c14",
+  "block_sequence_sha256": "78bcd09c550ec825e561e0f37d108d5b390e37b7e8d6f3202740fe559b672225",
+  "blocks": [
+    {
+      "block_id": "page-0501-block-0000",
+      "order": 0,
+      "text": "480    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "05481af8c28edc4ba595dadd43052b975d1d1ffe8dd5acb58871a0b5126e4889"
+    },
+    {
+      "block_id": "page-0501-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0501-block-0002",
+      "order": 2,
+      "text": "heroin use more than non-opioid-based replacement therapy.11 Higher doses of metha-\ndone (60–100mg/day) are recommended in the DoH guidelines as they have been shown \nto be more effective than lower dosages in retaining patients in treatment and in reduc-\ning illicit heroin and cocaine use. According to the emerging small-scale open-label \nresearch, methadone is of equal efficacy to buprenorphine in reducing prescription opi-\noid abuse in prescription opioid dependence and retaining people in treatment.21 \nMethadone is also associated with a reduction in drug-taking behaviours related to HIV \ntransmission. The 2017 POATS (n = 653) in the US found that buprenorphine–nalox-\none combination was an effective treatment of prescription opioid dependence, when \nthis was prescribed as a maintenance (i.e. ongoing) rather than tapering prescription.22\n",
+      "bbox": [
+        61.889495849609375,
+        62.55029296875,
+        436.6802978515625,
+        182.27029418945312
+      ],
+      "text_sha256": "9d725f8c55dc16a14df7adfe0c3d058ce6dfe3c4c2bc507930c0b305074b5752"
+    },
+    {
+      "block_id": "page-0501-block-0003",
+      "order": 3,
+      "text": "Prescribing information: Methadone and buprenorphine are Controlled Drugs with \nhigh dependency potential. Methadone in particular has a low lethal dose. For these \nreasons, there are special documentation requirements, including specifying the patient’s \nname, date of birth and address on prescriptions and writing the daily dose amount and \ntotal amount prescribed in both numbers and words. Instructions such as the require-\nment for consumption to be supervised should also be specified, e.g. ‘Daily Supervised \nConsumption’.\n",
+      "bbox": [
+        61.88999938964844,
+        182.310302734375,
+        436.7099304199219,
+        266.2702941894531
+      ],
+      "text_sha256": "27d40e8dc100d14a777e09797315d073c1744e015ded51a3d8b71ff0bbcccbef"
+    },
+    {
+      "block_id": "page-0501-block-0004",
+      "order": 4,
+      "text": "Supervised daily consumption is recommended for new prescriptions, for a minimum \nof several months.1 If this is not possible, instalment prescriptions for daily dispensing \nand collection should be used. No more than 1 week’s supply should be dispensed at \none time, except in exceptional circumstances.1 During the COVID pandemic, a deci-\nsion was taken by Public Health England that the risk of social contact during directly \nsupervised consumption exceeded the risk of diversion and overdose so dispensing \nregimes were relaxed in most cases. It is currently unclear what the consequences of this \nchange in practice have been and whether this change will persist or revert to old dis-\npensing arrangements.\n",
+      "bbox": [
+        61.88929748535156,
+        266.55029296875,
+        436.72088623046875,
+        374.2702941894531
+      ],
+      "text_sha256": "914ad2d0c64261debfc6d74a64b0e2f611ece0584beb63de330eec03e615463f"
+    },
+    {
+      "block_id": "page-0501-block-0005",
+      "order": 5,
+      "text": "Methadone should only be prescribed as a 1mg in 1mL oral solution.1 The patient’s \naddress and date of birth should be on the form, the amount prescribed per day and \ntotal prescribed written in figures and words. Directions for supervision should be writ-\nten clearly. Tablets can be crushed and injected and therefore should not usually be \nprescribed.1,23\n",
+      "bbox": [
+        61.88641357421875,
+        374.55029296875,
+        436.7064208984375,
+        434.2702941894531
+      ],
+      "text_sha256": "fc71b5adc5db8e2b75c1bc7bfafdedfe454cf509f2f20f2c34e6c62cbd97f3f4"
+    },
+    {
+      "block_id": "page-0501-block-0006",
+      "order": 6,
+      "text": "Important: All patients starting a methadone treatment programme must be informed of the risks \nof toxicity and overdose, and the necessity for safe storage of any take home medication.1,24–26 \nSafe storage is vital, particularly if there are children in the household, as tragic deaths have \noccurred when children have ingested methadone. Prescribers should consider risks to children in \nall assessments and treatment plans of drug using patients.\n",
+      "bbox": [
+        69.3892822265625,
+        458.65460205078125,
+        425.166259765625,
+        508.5621032714844
+      ],
+      "text_sha256": "fe7836e93f1e7bd97673d1bf1abb89add77842fe2b8f8561820e02e69d673cc4"
+    },
+    {
+      "block_id": "page-0501-block-0007",
+      "order": 7,
+      "text": "In determining the starting dose for patients using heroin or other opioids not already \non a prescription for methadone, consideration must be given to the potential for opi-\noid toxicity, taking into account:\n",
+      "bbox": [
+        61.88999938964844,
+        533.4840087890625,
+        436.66009521484375,
+        569.4440307617188
+      ],
+      "text_sha256": "b2b0bbbe2efd35cb7d2c7d866d968166242bebd51cb6febb322dc2fb22801d04"
+    },
+    {
+      "block_id": "page-0501-block-0008",
+      "order": 8,
+      "text": "■\n■Tolerance to opioids can be affected by a number of factors and significantly influ-\n",
+      "bbox": [
+        61.88990020751953,
+        575.7239990234375,
+        433.9299011230469,
+        587.4440307617188
+      ],
+      "text_sha256": "e1fdf460ce838d2b33bdf8cbd7a938574dc7399df93c5e45f7fee536e311b957"
+    },
+    {
+      "block_id": "page-0501-block-0009",
+      "order": 9,
+      "text": "ences an individual’s risk of toxicity.27 Of particular importance in assessing this are \nthe client’s reported current quantity, frequency and route of administration, whilst \n",
+      "bbox": [
+        70.88999938964844,
+        587.7239990234375,
+        436.6544494628906,
+        611.4440307617188
+      ],
+      "text_sha256": "70f744cc236e090eec878465bac4d8be8d808a1038f674405c10970a8154eebd"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

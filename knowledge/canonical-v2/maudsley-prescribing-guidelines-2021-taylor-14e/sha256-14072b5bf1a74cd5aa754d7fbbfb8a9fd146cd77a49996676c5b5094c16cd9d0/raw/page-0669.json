@@ -1,0 +1,263 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0669",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 669,
+  "source_page_index": 668,
+  "source_page_display": 669,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "648    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  6\nIt is recommended that all patients prescribed antipsychotics should have the following \ntests at baseline, at 3 months and annually:\n1.\t Blood pressure and pulse\n2.\t Weight (ideally also monitor monthly for the first 3 months)\n3.\t Blood tests\na.\t fasting glucose or HbA1c\nb.\turea and electrolytes (U&Es), including eGFR\nc.\t full blood count (FBC)\nd.\tlipids (if possible fasting)\ne.\t liver function tests (LFTs)\nf.\t prolactin levels\n4.\t ECG (repeat at between 4 weeks and 3 months or when clinically indicated)\n■\n■In-patients or physically frail patients may need more frequent physical health \nmonitoring.\n■\n■Review of the antipsychotic drug needs to be done at 4–6 weeks (maybe earlier for in-\npatients), then at 3 months and then every 6 months if physically stable and there are no \nadverse effects. Consider stopping the antipsychotic at each review, where appropriate.\n■\n■It may sometimes be difficult to get the recommended investigations, for example due \nto high levels of patient agitation and resistance, or due to the urgency of the situation. \nIn these cases, a risk benefit analysis should again be carried out, recognising that by not \nhaving the investigations, the risk of prescribing an antipsychotic is even higher and an \nantipsychotic should only be prescribed if the risks of not giving it are even higher still.\nTable 6.7  Reduction or discontinuation regimen for antipsychotic drugs in BPSD – a guide53\nAntipsychotic\nUsual dose range \nin dementia\nSuggested regimen for reduction/discontinuation\n(generally reduce over 2–4 weeks, ideally over 4 weeks if possible)\nAmisulpride\n25–50mg/day\nReduce by 12.5–25mg every 1–2 weeks (depending on dose), then stop\nAripiprazole\n5–15mg/day\nReduce by 5mg every 1–2 weeks (depending on dose), then stop\n(if patient is on 5mg daily, reduce to 2.5mg for 2 weeks; however, note \nthat tablets are not scored and liquid is expensive – contact local \npharmacist for advice)\nHaloperidol\nNot recommended in older people with dementia (except in delirium)\nReduce by 0.25–0.5mg every 1–2 weeks (depending on the dose), then stop\nOlanzapine\n2.5–10mg/day\nReduce by 2.5mg every 1–2 weeks (depending on dose), then stop\nQuetiapine\n12.5–300mg/day\nFor doses 12.5–100mg/day: reduce by 12.5–25mg every 1–2 weeks \n(depending on the dose) and then stop\nFor doses >100mg to 300mg/day: reduce by 25–50mg every 1–2 weeks \n(depending on the dose), then stop\nIf dose is 300mg/day, reduce to 150–200mg/day for 1 week, then by \n50mg per week\nRisperidone\n0.25–2mg/day\nReduce by 0.25–0.5mg every 1–2 weeks (depending on dose), then stop\nFor higher doses, reduce gradually over 4 weeks.\nNB: If serious adverse effects occur, stop antipsychotic drug immediately.\n",
+  "raw_text_sha256": "d8c7b39601070b2e8272eac596c4fabc9c00f5f00237ad5fd846fa2cdeb8d5dd",
+  "coordinates_sha256": "7d73035151797e382d4efb6e6f2457971f7f7b0866a130ce21e8c38e2f505a02",
+  "block_sequence_sha256": "42c06ae25beff770a30cd431a8c5e08b2caa009f9a92cfaf4b7e71c84a100e3b",
+  "blocks": [
+    {
+      "block_id": "page-0669-block-0000",
+      "order": 0,
+      "text": "648    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "2e0addb2f67b04dcc835d79be40763335ee1583a16b66e2975e2c7c87aa2a4e2"
+    },
+    {
+      "block_id": "page-0669-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        18.520000457763672,
+        405.35260009765625,
+        28.0,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0669-block-0002",
+      "order": 2,
+      "text": "It is recommended that all patients prescribed antipsychotics should have the following \ntests at baseline, at 3 months and annually:\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.6299743652344,
+        86.27029418945312
+      ],
+      "text_sha256": "6688181b06900d4277f7c44362362289618efba44e3be4af449f1b10611bf599"
+    },
+    {
+      "block_id": "page-0669-block-0003",
+      "order": 3,
+      "text": "1.\t Blood pressure and pulse\n2.\t Weight (ideally also monitor monthly for the first 3 months)\n3.\t Blood tests\na.\t fasting glucose or HbA1c\nb.\turea and electrolytes (U&Es), including eGFR\nc.\t full blood count (FBC)\nd.\tlipids (if possible fasting)\ne.\t liver function tests (LFTs)\nf.\t prolactin levels\n4.\t ECG (repeat at between 4 weeks and 3 months or when clinically indicated)\n",
+      "bbox": [
+        61.91999816894531,
+        92.55029296875,
+        403.7099609375,
+        212.27029418945312
+      ],
+      "text_sha256": "3c04d41cfe282565f46f407c46f01aa819d80b51a97243548928c94ddda908a2"
+    },
+    {
+      "block_id": "page-0669-block-0004",
+      "order": 4,
+      "text": "■\n■In-patients or physically frail patients may need more frequent physical health \n",
+      "bbox": [
+        61.88990020751953,
+        224.55029296875,
+        436.70001220703125,
+        236.27029418945312
+      ],
+      "text_sha256": "6c7f17726b6d08cc2f00cc771759e8f789eb53fe91e55691f2d45c231a2d84dd"
+    },
+    {
+      "block_id": "page-0669-block-0005",
+      "order": 5,
+      "text": "monitoring.\n",
+      "bbox": [
+        70.88999938964844,
+        236.55029296875,
+        122.0099868774414,
+        248.27029418945312
+      ],
+      "text_sha256": "d8c3b8b52b834f6cd444295265efb219219c34c5ef52b742113e72f4bf10ba37"
+    },
+    {
+      "block_id": "page-0669-block-0006",
+      "order": 6,
+      "text": "■\n■Review of the antipsychotic drug needs to be done at 4–6 weeks (maybe earlier for in-\n",
+      "bbox": [
+        61.88990020751953,
+        248.55029296875,
+        433.8396301269531,
+        260.2702941894531
+      ],
+      "text_sha256": "35e0a7fba0cc9ab7c14978ec8aeeaa408dbeb42c903a85dbf7bd395c4d2fe1f7"
+    },
+    {
+      "block_id": "page-0669-block-0007",
+      "order": 7,
+      "text": "patients), then at 3 months and then every 6 months if physically stable and there are no \nadverse effects. Consider stopping the antipsychotic at each review, where appropriate.\n",
+      "bbox": [
+        70.88999938964844,
+        260.55029296875,
+        436.7096862792969,
+        284.2702941894531
+      ],
+      "text_sha256": "54135157f3d4789c854e6bd7259093db18e6642f334e47993264df9786fd7320"
+    },
+    {
+      "block_id": "page-0669-block-0008",
+      "order": 8,
+      "text": "■\n■It may sometimes be difficult to get the recommended investigations, for example due \n",
+      "bbox": [
+        61.88990020751953,
+        284.55029296875,
+        436.72015380859375,
+        296.2702941894531
+      ],
+      "text_sha256": "9e811066d9dba72cc65ba43b1a0343af9840447119973f6223c41d271863def7"
+    },
+    {
+      "block_id": "page-0669-block-0009",
+      "order": 9,
+      "text": "to high levels of patient agitation and resistance, or due to the urgency of the situation. \nIn these cases, a risk benefit analysis should again be carried out, recognising that by not \nhaving the investigations, the risk of prescribing an antipsychotic is even higher and an \nantipsychotic should only be prescribed if the risks of not giving it are even higher still.\n",
+      "bbox": [
+        70.88999938964844,
+        296.55029296875,
+        436.7203063964844,
+        344.2702941894531
+      ],
+      "text_sha256": "47d3312b535bf14931158428af3718d4140db08d3112912a9835f135322aeeee"
+    },
+    {
+      "block_id": "page-0669-block-0010",
+      "order": 10,
+      "text": "Table 6.7  Reduction or discontinuation regimen for antipsychotic drugs in BPSD – a guide53\n",
+      "bbox": [
+        67.88999938964844,
+        365.75958251953125,
+        361.02703857421875,
+        374.6470947265625
+      ],
+      "text_sha256": "f7805755c3fbbaf1914fa7edc6b428b03c122d1759d957ccac1c395b9ce0c121"
+    },
+    {
+      "block_id": "page-0669-block-0011",
+      "order": 11,
+      "text": "Antipsychotic\nUsual dose range \nin dementia\n",
+      "bbox": [
+        65.88999938964844,
+        383.63458251953125,
+        185.81503295898438,
+        402.51959228515625
+      ],
+      "text_sha256": "cb1087675d239ca4a4bb08d013547c644754035b9e91591678aea288119f2403"
+    },
+    {
+      "block_id": "page-0669-block-0012",
+      "order": 12,
+      "text": "Suggested regimen for reduction/discontinuation\n(generally reduce over 2–4 weeks, ideally over 4 weeks if possible)\n",
+      "bbox": [
+        194.88999938964844,
+        383.63458251953125,
+        429.42254638671875,
+        402.51959228515625
+      ],
+      "text_sha256": "177cb7d9e266a087383eb9e985278d8b95bf4501ddb0bad6fd17dc321039ff86"
+    },
+    {
+      "block_id": "page-0669-block-0013",
+      "order": 13,
+      "text": "Amisulpride\n25–50mg/day\nReduce by 12.5–25mg every 1–2 weeks (depending on dose), then stop\n",
+      "bbox": [
+        65.88999938964844,
+        409.25457763671875,
+        424.5626525878906,
+        418.14208984375
+      ],
+      "text_sha256": "bae9c95a9a554fdb288fc8a6baf8c5cb3ab0e1a805f1808d6ca7c853bc945399"
+    },
+    {
+      "block_id": "page-0669-block-0014",
+      "order": 14,
+      "text": "Aripiprazole\n5–15mg/day\nReduce by 5mg every 1–2 weeks (depending on dose), then stop\n(if patient is on 5mg daily, reduce to 2.5mg for 2 weeks; however, note \nthat tablets are not scored and liquid is expensive – contact local \npharmacist for advice)\n",
+      "bbox": [
+        65.88999938964844,
+        424.8770751953125,
+        424.2624816894531,
+        463.757080078125
+      ],
+      "text_sha256": "de2d0e918cf42bb52e163e8d8330d677c6e11e7c34d56c55ec134b717840c5fa"
+    },
+    {
+      "block_id": "page-0669-block-0015",
+      "order": 15,
+      "text": "Haloperidol\nNot recommended in older people with dementia (except in delirium)\nReduce by 0.25–0.5mg every 1–2 weeks (depending on the dose), then stop\n",
+      "bbox": [
+        65.88999938964844,
+        470.4920654296875,
+        367.15020751953125,
+        489.3770751953125
+      ],
+      "text_sha256": "e560c28c155d143ff8868c5567fb3440f544233bcf5a58b390c8a735bc02a9d4"
+    },
+    {
+      "block_id": "page-0669-block-0016",
+      "order": 16,
+      "text": "Olanzapine\n2.5–10mg/day\nReduce by 2.5mg every 1–2 weeks (depending on dose), then stop\n",
+      "bbox": [
+        65.88999938964844,
+        496.112060546875,
+        408.3026428222656,
+        504.99957275390625
+      ],
+      "text_sha256": "a82e69f3418ef8c9a8b3c77bd752db2deab7afe5518430f1aae5daace840c243"
+    },
+    {
+      "block_id": "page-0669-block-0017",
+      "order": 17,
+      "text": "Quetiapine\n12.5–300mg/day\nFor doses 12.5–100mg/day: reduce by 12.5–25mg every 1–2 weeks \n(depending on the dose) and then stop\nFor doses >100mg to 300mg/day: reduce by 25–50mg every 1–2 weeks \n(depending on the dose), then stop\nIf dose is 300mg/day, reduce to 150–200mg/day for 1 week, then by \n50mg per week\n",
+      "bbox": [
+        65.88999938964844,
+        511.73455810546875,
+        426.8200378417969,
+        570.6095581054688
+      ],
+      "text_sha256": "137b1ce45eadc1ba5c625d7d6439b1a5ddfabbaad285f0f0a1ca0fd48511c0ab"
+    },
+    {
+      "block_id": "page-0669-block-0018",
+      "order": 18,
+      "text": "Risperidone\n0.25–2mg/day\nReduce by 0.25–0.5mg every 1–2 weeks (depending on dose), then stop\n",
+      "bbox": [
+        65.88999938964844,
+        577.3445434570312,
+        426.64764404296875,
+        586.2320556640625
+      ],
+      "text_sha256": "d2bb0a5f1a1c4c8d3f344cb9927f51eaa194ee02d8c82a2e3e528734dc5d1c32"
+    },
+    {
+      "block_id": "page-0669-block-0019",
+      "order": 19,
+      "text": "For higher doses, reduce gradually over 4 weeks.\nNB: If serious adverse effects occur, stop antipsychotic drug immediately.\n",
+      "bbox": [
+        61.89249801635742,
+        595.7720336914062,
+        292.8849792480469,
+        614.47705078125
+      ],
+      "text_sha256": "4e275bbb29ad83acc9fe4ec12c035a37ac0362866603a1f81ace00e47da562c3"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

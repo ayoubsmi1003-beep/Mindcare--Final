@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0602",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 602,
+  "source_page_index": 601,
+  "source_page_display": 602,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Children and adolescents    581\nCHAPTER 5\nThere are reports from controlled studies supporting the use of risperidone or ari-\npiprazole for ADHD symptoms. However, these were not primary outcomes of the \nstudies and therefore need further investigation.\nIrritability (aggression, self-injurious behaviour, severe disruptive behaviours)\nAggression towards others and the self, frequently underlined by irritability, are com-\nmon problems in ASD. Although behavioural and environment approaches should be \nfirst-line treatments, more severe and dangerous behaviours usually necessitate phar-\nmacotherapy.44 Duration of recommended treatment is difficult to derive from pub-\nlished evidence but treatment appears to be beneficial for up to 6–12 months.45 Efforts \nto reduce and possibly discontinue such treatment at the end of this period should be \nstrongly considered.44,45\nSecond-generation antipsychotics are the first-line pharmacological treatment for \nchildren and adolescents with ASD and associated irritability.45–48 Risperidone49,50 and \naripiprazole51 have been reliably shown to help with irritability and associated dis-\nruptive behaviours5 in ASD and have been approved for this use by the US FDA. In a \nmeta-analysis of data from 46 RCTs52 comparing efficacy of risperidone, aripiprazole \nand other compounds with placebo, risperidone and aripiprazole were the most effec-\ntive, with moderate to large effect sizes. Another meta-analysis of short-term (8 weeks) \naripiprazole in the treatment of irritability in ASD children aged 6–17 years53 found \nsimilar results when compared with placebo. The most recent Cochrane review54 \nwhich is an update of the previous one55 concluded that aripiprazole may be benefi-\ncial in managing irritability, hyperactivity and stereotypes in children with ASD. The \nusual recommended clinical dose of aripiprazole for maintenance is between 5 and \n15mg daily.45 The starting dose of aripiprazole is 2mg/day. The dosing of risperidone \nis rather more complicated; FDA recommended dosages for risperidone are outlined \nin Box 5.3.\nDespite their promising efficacy adverse effects such as weight gain and metabolic \nchanges, increased appetite and somnolence (even with aripiprazole) can be problem-\natic.15,56–59 One long-term, placebo discontinuation study found that relapse rates did \nnot differ between those who stayed on aripiprazole versus those randomised to switch \nto only placebo, suggesting that re-evaluation of aripiprazole use after a period of sta-\nbilisation in irritability symptoms is warranted.54 There is only one study that makes a \ndirect head-to-head comparison60 showing similar tolerability and efficacy profiles for \nrisperidone and aripiprazole. Risperidone usually causes hyperprolactinaemia which \nalthough may be asymptomatic, it may have longer term effects therefore necessitating \nclose monitoring whereas aripiprazole does not which makes it a preferred option. \nAripiprazole may on the other hand be ineffective for self-injurious behaviours.6\nThe effectiveness of other SGAs, such as olanzapine,61 quetiapine, ziprasidone and \nclozapine, has not been tested in adequately powered RCTs. Whilst controlled studies \nsupport the use of mood stabilizers, such as lithium62,63 and sodium valproate,64 in the \ntreatment of persistent aggression in children they are not as effective as SGAs for the \ntreatment of irritability in ASD.65 Limited data support the combination of risperidone \nand topiramate being better than risperidone alone.66 Further RCTs are warranted of \nBDNF stimulators such as loxapine and amitriptyline.67\n",
+  "raw_text_sha256": "54f092e1da87a50c7de72c445c233426d217d777888b5244e55fa0ce19a53e31",
+  "coordinates_sha256": "e8904040eef3d565e69df3be2383e96aca7de8afd365b4ac21709787048e0763",
+  "block_sequence_sha256": "059eb0a58952ebf53bbf898d7bae99acb1f4bef96085b306660157ed62bfd1b8",
+  "blocks": [
+    {
+      "block_id": "page-0602-block-0000",
+      "order": 0,
+      "text": "Children and adolescents    581\n",
+      "bbox": [
+        288.94488525390625,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "5bb63c4f44269ff4f400287e40418a6bd50023adccac296bdc314685b5f4aae8"
+    },
+    {
+      "block_id": "page-0602-block-0001",
+      "order": 1,
+      "text": "CHAPTER 5\n",
+      "bbox": [
+        454.4096984863281,
+        339.3385009765625,
+        463.88970947265625,
+        380.6824951171875
+      ],
+      "text_sha256": "f4b8b4a0fc64e7b3b74e7336306d0959d0384683e387792724f393162639020a"
+    },
+    {
+      "block_id": "page-0602-block-0002",
+      "order": 2,
+      "text": "There are reports from controlled studies supporting the use of risperidone or ari-\npiprazole for ADHD symptoms. However, these were not primary outcomes of the \nstudies and therefore need further investigation.\n",
+      "bbox": [
+        48.0,
+        62.31041717529297,
+        422.75994873046875,
+        98.27041625976562
+      ],
+      "text_sha256": "3aebc8250a422e6d9d9fadfafdaea73f655316430cc880ee280e003a1bcf1a08"
+    },
+    {
+      "block_id": "page-0602-block-0003",
+      "order": 3,
+      "text": "Irritability (aggression, self-injurious behaviour, severe disruptive behaviours)\n",
+      "bbox": [
+        48.0,
+        116.64041900634766,
+        413.2698669433594,
+        128.49041748046875
+      ],
+      "text_sha256": "e7b588c897da130e5d327021708a3aad902d7fc9ab9c13d1d57a30a29c6897f7"
+    },
+    {
+      "block_id": "page-0602-block-0004",
+      "order": 4,
+      "text": "Aggression towards others and the self, frequently underlined by irritability, are com-\nmon problems in ASD. Although behavioural and environment approaches should be \nfirst-line treatments, more severe and dangerous behaviours usually necessitate phar-\nmacotherapy.44 Duration of recommended treatment is difficult to derive from pub-\nlished evidence but treatment appears to be beneficial for up to 6–12 months.45 Efforts \nto reduce and possibly discontinue such treatment at the end of this period should be \nstrongly considered.44,45\n",
+      "bbox": [
+        47.999176025390625,
+        134.5504150390625,
+        422.7791748046875,
+        218.27047729492188
+      ],
+      "text_sha256": "b0d107040373f7cfb9dfca29c4826039b405258521088ca304090321e97b1730"
+    },
+    {
+      "block_id": "page-0602-block-0005",
+      "order": 5,
+      "text": "Second-generation antipsychotics are the first-line pharmacological treatment for \nchildren and adolescents with ASD and associated irritability.45–48 Risperidone49,50 and \naripiprazole51 have been reliably shown to help with irritability and associated dis-\nruptive behaviours5 in ASD and have been approved for this use by the US FDA. In a \nmeta-analysis of data from 46 RCTs52 comparing efficacy of risperidone, aripiprazole \nand other compounds with placebo, risperidone and aripiprazole were the most effec-\ntive, with moderate to large effect sizes. Another meta-analysis of short-term (8 weeks) \naripiprazole in the treatment of irritability in ASD children aged 6–17 years53 found \nsimilar results when compared with placebo. The most recent Cochrane review54 \nwhich is an update of the previous one55 concluded that aripiprazole may be benefi-\ncial in managing irritability, hyperactivity and stereotypes in children with ASD. The \nusual recommended clinical dose of aripiprazole for maintenance is between 5 and \n15mg daily.45 The starting dose of aripiprazole is 2mg/day. The dosing of risperidone \nis rather more complicated; FDA recommended dosages for risperidone are outlined \nin Box 5.3.\n",
+      "bbox": [
+        47.99550247192383,
+        218.55047607421875,
+        422.82568359375,
+        398.2704772949219
+      ],
+      "text_sha256": "7fb1b55f3b24de1ba7dd737b5ea4ce33619eab426211a3b3f118139e20e39e54"
+    },
+    {
+      "block_id": "page-0602-block-0006",
+      "order": 6,
+      "text": "Despite their promising efficacy adverse effects such as weight gain and metabolic \nchanges, increased appetite and somnolence (even with aripiprazole) can be problem-\natic.15,56–59 One long-term, placebo discontinuation study found that relapse rates did \nnot differ between those who stayed on aripiprazole versus those randomised to switch \nto only placebo, suggesting that re-evaluation of aripiprazole use after a period of sta-\nbilisation in irritability symptoms is warranted.54 There is only one study that makes a \ndirect head-to-head comparison60 showing similar tolerability and efficacy profiles for \nrisperidone and aripiprazole. Risperidone usually causes hyperprolactinaemia which \nalthough may be asymptomatic, it may have longer term effects therefore necessitating \nclose monitoring whereas aripiprazole does not which makes it a preferred option. \nAripiprazole may on the other hand be ineffective for self-injurious behaviours.6\n",
+      "bbox": [
+        47.99550247192383,
+        398.55047607421875,
+        422.81427001953125,
+        530.2705078125
+      ],
+      "text_sha256": "7b0d9c1f6288b559c6b95a83d44284d06fb0552c69a4df7325ee06fac36f81f2"
+    },
+    {
+      "block_id": "page-0602-block-0007",
+      "order": 7,
+      "text": "The effectiveness of other SGAs, such as olanzapine,61 quetiapine, ziprasidone and \nclozapine, has not been tested in adequately powered RCTs. Whilst controlled studies \nsupport the use of mood stabilizers, such as lithium62,63 and sodium valproate,64 in the \ntreatment of persistent aggression in children they are not as effective as SGAs for the \ntreatment of irritability in ASD.65 Limited data support the combination of risperidone \nand topiramate being better than risperidone alone.66 Further RCTs are warranted of \nBDNF stimulators such as loxapine and amitriptyline.67\n",
+      "bbox": [
+        47.99690246582031,
+        530.3104858398438,
+        422.8076171875,
+        614.2704467773438
+      ],
+      "text_sha256": "09c06e5301f8677134411ca91dda7aeebec97b5366eff78753930c17e0e3d7ee"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0438",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 438,
+  "source_page_index": 437,
+  "source_page_display": 438,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    417\nCHAPTER 3\nSt. John’s Wort\nSt. John’s Wort (SJW) is the popular name for the plant Hypericum perforatum. It con-\ntains a combination of at least 10 different components, including hypericin, hyperforin \nand flavonoids.1 Preparations of SJW are often unstandardised and this has compli-\ncated the interpretation of clinical trials. The active ingredient(s) and mechanism(s) of \naction of SJW are unclear.1 Constituents of SJW may inhibit MAO, inhibit the re-uptake \nof noradrenaline and serotonin, up-regulate serotonin receptors and decrease serotonin \nreceptor expression.1\nSome preparations of SJW have been granted a traditional herbal registration certifi-\ncate;2 note that this is based on traditional use rather than proven efficacy and tolerabil-\nity. SJW is licensed in Germany for the treatment of depression.2\nEvidence for SJW in the treatment of depression\nA number of trials have examined the efficacy of SJW in the treatment of depression. \nThey have been extensively reviewed,3–6 and most authors conclude that SJW is likely \nto be effective in the treatment of mild-to-moderate depression.3,5–7 For example, \nCochrane concludes that SJW is more effective than placebo in the treatment of mild-\nmoderate depression, and is as effective as, and better tolerated than, standard antide-\npressants.4 The supporting evidence is not without several limitations. Studies in \nGerman-speaking countries showed more favourable results than studies elsewhere.4 \nConcerns have also been raised about the inadequate dosing of SSRIs in comparative \nstudies.8,9 In two reanalyses of data from a large negative RCT of SJW, both participant \nand clinician beliefs about treatment assignment were more strongly associated with \nclinical outcomes than the actual treatment received: those who guessed randomisation \nto active treatment fared better than those who guessed randomisation to placebo.10,11 \nEfficacy in severe depression remains uncertain.4–6 There is little evidence for SJW in \npostmenopausal depression12 and in certain pain syndromes.13\nIt should be noted that:\n■\n■The active component of SJW for treating depression has not yet been determined. \nTrials used different preparations of SJW, most of which were standardised according \nto their total content of hypericins. However, evidence suggests that hypericins alone \ndo not treat depression.5\n■\n■Many SJW preparations bought over the internet are sold as unregulated food sup-\nplements and are often of poor quality or adulterated.2 One recent analysis of 47 \ndifferent SJW preparations found that 36% were adulterated with other Hypericum \nspecies, and 19% adulterated with food dyes.2\n■\n■Published studies are generally acute treatment studies. There are only preliminary \ndata to support the effectiveness of SJW in the medium term; longer-term and relapse \nprevention data are lacking.14\nOn balance, SJW should not be prescribed: we lack understanding of what the active \ningredient is or what constitutes a therapeutic dose, and most preparations of SJW are \nunlicensed.\n",
+  "raw_text_sha256": "89e8327311b714e7a4f15b494d19ebdbc27a636f8598ea6e37764e86e5a88be5",
+  "coordinates_sha256": "6fe46950b131807ff5204cc812d92c559e86d3bbb24ddb87dd68008319043330",
+  "block_sequence_sha256": "9b483a66637f2c1f0d4a5660279afda5bfa44d53741ed62ed7a61f5dc1b32400",
+  "blocks": [
+    {
+      "block_id": "page-0438-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    417\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "ac17cc5dcb569a9da6743318f1cccc20b76ad80856474f4a8825f785f56e28c7"
+    },
+    {
+      "block_id": "page-0438-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0438-block-0002",
+      "order": 2,
+      "text": "St. John’s Wort\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        132.22000122070312,
+        79.1004638671875
+      ],
+      "text_sha256": "3acd4a65be766b22bf4403de7675cb10b985f3d61d47a565c73ee277484b49da"
+    },
+    {
+      "block_id": "page-0438-block-0003",
+      "order": 3,
+      "text": "St. John’s Wort (SJW) is the popular name for the plant Hypericum perforatum. It con-\ntains a combination of at least 10 different components, including hypericin, hyperforin \nand flavonoids.1 Preparations of SJW are often unstandardised and this has compli-\ncated the interpretation of clinical trials. The active ingredient(s) and mechanism(s) of \naction of SJW are unclear.1 Constituents of SJW may inhibit MAO, inhibit the re-uptake \nof noradrenaline and serotonin, up-regulate serotonin receptors and decrease serotonin \nreceptor expression.1\n",
+      "bbox": [
+        47.99950408935547,
+        84.91046142578125,
+        422.799560546875,
+        168.63046264648438
+      ],
+      "text_sha256": "a8e410520d4d54ca4336ee98ffa7e944f1f11613f97eb00a990a51f1b8f753d2"
+    },
+    {
+      "block_id": "page-0438-block-0004",
+      "order": 4,
+      "text": "Some preparations of SJW have been granted a traditional herbal registration certifi-\ncate;2 note that this is based on traditional use rather than proven efficacy and tolerabil-\nity. SJW is licensed in Germany for the treatment of depression.2\n",
+      "bbox": [
+        48.0,
+        168.91046142578125,
+        420.00103759765625,
+        204.6304931640625
+      ],
+      "text_sha256": "2f2e7fce284a4072d549a4916db3f2f4fe85622e70f7da3dfece23d54b4274a4"
+    },
+    {
+      "block_id": "page-0438-block-0005",
+      "order": 5,
+      "text": "Evidence for SJW in the treatment of depression\n",
+      "bbox": [
+        48.0,
+        222.06549072265625,
+        297.6120300292969,
+        235.10049438476562
+      ],
+      "text_sha256": "b88de0e3d031391611b907265247448a0fe04a1da037a342ff2dc3a55768b8a9"
+    },
+    {
+      "block_id": "page-0438-block-0006",
+      "order": 6,
+      "text": "A number of trials have examined the efficacy of SJW in the treatment of depression. \nThey have been extensively reviewed,3–6 and most authors conclude that SJW is likely \nto be effective in the treatment of mild-to-moderate depression.3,5–7 For example, \nCochrane concludes that SJW is more effective than placebo in the treatment of mild-\nmoderate depression, and is as effective as, and better tolerated than, standard antide-\npressants.4 The supporting evidence is not without several limitations. Studies in \nGerman-speaking countries showed more favourable results than studies elsewhere.4 \nConcerns have also been raised about the inadequate dosing of SSRIs in comparative \nstudies.8,9 In two reanalyses of data from a large negative RCT of SJW, both participant \nand clinician beliefs about treatment assignment were more strongly associated with \nclinical outcomes than the actual treatment received: those who guessed randomisation \nto active treatment fared better than those who guessed randomisation to placebo.10,11 \nEfficacy in severe depression remains uncertain.4–6 There is little evidence for SJW in \npostmenopausal depression12 and in certain pain syndromes.13\n",
+      "bbox": [
+        47.998077392578125,
+        240.91049194335938,
+        422.8100280761719,
+        408.6304931640625
+      ],
+      "text_sha256": "fb77e651bac35a451f0cbe331d7cd3943234e4e0e826f393131ecda9ddf686a5"
+    },
+    {
+      "block_id": "page-0438-block-0007",
+      "order": 7,
+      "text": "It should be noted that:\n",
+      "bbox": [
+        58.0,
+        408.9104919433594,
+        159.12997436523438,
+        420.6304931640625
+      ],
+      "text_sha256": "539af5b4a4fa8ae160a385b4c043b1b424926092eda4d0930d5029ccbdcca0f6"
+    },
+    {
+      "block_id": "page-0438-block-0008",
+      "order": 8,
+      "text": "■\n■The active component of SJW for treating depression has not yet been determined. \n",
+      "bbox": [
+        47.999900817871094,
+        426.9104919433594,
+        422.77996826171875,
+        438.6304931640625
+      ],
+      "text_sha256": "46ec47d3b3dd48d755de8a763ff12502a4af7f68f1a8e386fbd66d28e273b666"
+    },
+    {
+      "block_id": "page-0438-block-0009",
+      "order": 9,
+      "text": "Trials used different preparations of SJW, most of which were standardised according \nto their total content of hypericins. However, evidence suggests that hypericins alone \ndo not treat depression.5\n",
+      "bbox": [
+        57.0,
+        438.9104919433594,
+        422.78009033203125,
+        474.6304931640625
+      ],
+      "text_sha256": "80813f00a0d8fedb49e3e89e87673b21f3f14cc435085b9a29457495521849c6"
+    },
+    {
+      "block_id": "page-0438-block-0010",
+      "order": 10,
+      "text": "■\n■Many SJW preparations bought over the internet are sold as unregulated food sup-\n",
+      "bbox": [
+        47.999900817871094,
+        474.9104919433594,
+        420.0299072265625,
+        486.6304931640625
+      ],
+      "text_sha256": "adf7bd4b5504a80c3853562002d0b33a92fca4227a98cb22d380b595880092e3"
+    },
+    {
+      "block_id": "page-0438-block-0011",
+      "order": 11,
+      "text": "plements and are often of poor quality or adulterated.2 One recent analysis of 47 \ndifferent SJW preparations found that 36% were adulterated with other Hypericum \nspecies, and 19% adulterated with food dyes.2\n",
+      "bbox": [
+        56.99681091308594,
+        486.9104919433594,
+        422.7967834472656,
+        522.6304931640625
+      ],
+      "text_sha256": "a88a0387c978689a3970b95c61781d8c625442e625361760378bd92d719cff33"
+    },
+    {
+      "block_id": "page-0438-block-0012",
+      "order": 12,
+      "text": "■\n■Published studies are generally acute treatment studies. There are only preliminary \n",
+      "bbox": [
+        47.999900817871094,
+        522.9104614257812,
+        422.760009765625,
+        534.6304931640625
+      ],
+      "text_sha256": "2e3dc3767d56463211eaa10b8713b0f7b1809457cf3501a1a1d22e2990d4ec45"
+    },
+    {
+      "block_id": "page-0438-block-0013",
+      "order": 13,
+      "text": "data to support the effectiveness of SJW in the medium term; longer-term and relapse \nprevention data are lacking.14\n",
+      "bbox": [
+        57.0,
+        534.9104614257812,
+        422.8299865722656,
+        558.6304931640625
+      ],
+      "text_sha256": "6dde74c882dfd33ea99410f80bd619d173c61e285ba0c0313f73a69382ff6386"
+    },
+    {
+      "block_id": "page-0438-block-0014",
+      "order": 14,
+      "text": "On balance, SJW should not be prescribed: we lack understanding of what the active \ningredient is or what constitutes a therapeutic dose, and most preparations of SJW are \nunlicensed.\n",
+      "bbox": [
+        48.0,
+        564.9104614257812,
+        422.7998962402344,
+        600.6304931640625
+      ],
+      "text_sha256": "93e308089799f26d343b5d7469fdbb2c86c6ce9b5938bb8e73ee2e1c8c46d46f"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

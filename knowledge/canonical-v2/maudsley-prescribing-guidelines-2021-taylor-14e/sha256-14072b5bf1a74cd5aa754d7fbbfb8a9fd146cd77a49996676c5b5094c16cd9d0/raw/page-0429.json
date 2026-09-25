@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0429",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 429,
+  "source_page_index": 428,
+  "source_page_display": 429,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "408    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\n\t16.\t Khin NA, et al. Regulatory and scientific issues in studies to evaluate sexual dysfunction in antidepressant drug trials. J Clin Psychiatry 2015; \n76:1060–1063.\n\t17.\t Serretti A, et al. Treatment-emergent sexual dysfunction related to antidepressants: a meta-analysis. J Clin Psychopharmacol 2009; \n29:259–266.\n\t18.\t Chiesa A, et al. Antidepressants and sexual dysfunction: epidemiology, mechanisms and management. J Psychopathology 2010; \n16:104–113.\n\t19.\t Lew-Starowicz M, et al. Impact of psychotropic medications on sexual functioning. Cham: Springer; 2021:353–371.\n\t20.\t Reichenpfader U, et al. Sexual dysfunction associated with second-generation antidepressants in patients with major depressive disorder: \nresults from a systematic review with network meta-analysis. Drug Saf 2014; 37:19–31.\n\t21.\t Wagner G, et al. Efficacy and safety of levomilnacipran, vilazodone and vortioxetine compared with other second-generation antidepressants \nfor major depressive disorder in adults: a systematic review and network meta-analysis. J Affect Disord 2018; 228:1–12.\n\t22.\t Watanabe N, et al. Mirtazapine versus other antidepressive agents for depression. Cochrane Database Syst Rev 2011; CD006528.\n\t23.\t Cleare A, et al. Evidence-based guidelines for treating depressive disorders with antidepressants: a revision of the 2008 British Association for \nPsychopharmacology guidelines. J Psychopharmacology 2015; 29:459–525.\n\t24.\t Montejo AL, et al. Management strategies for antidepressant-related sexual dysfunction: a clinical approach. J Clin Med 2019; 8:1640.\n\t25.\t Jacobsen PL, et al. Treatment-emergent sexual dysfunction in randomized trials of vortioxetine for major depressive disorder or generalized \nanxiety disorder: a pooled analysis. CNS Spectr 2016; 21:367–378.\n\t26.\t Koesters M, et al. Vortioxetine for depression in adults. Cochrane Database Syst Rev 2017; 7:Cd011520.\n\t27.\t Francois D, et al. Antidepressant-induced sexual side effects: incidence, assessment, clinical implications, and management. Psychiatric Ann \n2017; 47:154–160.\n\t28.\t Taylor MJ, et al. Strategies for managing sexual dysfunction induced by antidepressant medication. CochraneDatabaseSystRev 2013; \n5:CD003382.\n\t29.\t Safarinejad MR. The effects of the adjunctive bupropion on male sexual dysfunction induced by a selective serotonin reuptake inhibitor: a \ndouble-blind placebo-controlled and randomized study. BJU Int 2010; 106:840–847.\n\t30.\t Montejo AL, et al. Sexual side-effects of antidepressant and antipsychotic drugs. Curr Opin Psychiatry 2015; 28:418–423.\n\t31.\t Amiaz R, et al. Testosterone gel replacement improves sexual function in depressed men taking serotonergic antidepressants: a randomized, \nplacebo-controlled clinical trial. J Sex Marital Ther 2011; 37:243–254.\n\t32.\t Bitzer J, et al. Female sexual dysfunctions. Cham: Springer; 2021:109–134.\n\t33.\t Clayton AH, et al. Effect of brexpiprazole on prolactin and sexual functioning: an analysis of short- and long-term study data in major \ndepressive disorder. J Clin Psychopharmacol 2020; 40:560–567.\n\t34.\t Freeman MP, et al. Improvement of sexual functioning during treatment of MDD with adjunctive pimavanserin: a secondary analysis. \nDepress Anxiety 2020; 37:485–495.\nFurther reading\nMontejo, A.L., et al. Management strategies for antidepressant-related sexual dysfunction: a clinical approach. Journal of clinical medicine 2019; \n8:1640.\n",
+  "raw_text_sha256": "4d036c9b4dad4c02e0027968ab74e8247322d3c25a145683fe6f4125b3af1a50",
+  "coordinates_sha256": "82dcd16ef98b7de9c28346e9cb1b681799578b3264e260c35537b89b0cf09e5a",
+  "block_sequence_sha256": "8fd1c2e76425fe9ac939fb4ff42c94d327241011d4a9ba1f6659a8cafdac6382",
+  "blocks": [
+    {
+      "block_id": "page-0429-block-0000",
+      "order": 0,
+      "text": "408    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "4c78c347768fb2ee7c9b4685c8ebb4593e1571f8c18fa9a659000d67c65c0688"
+    },
+    {
+      "block_id": "page-0429-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0429-block-0002",
+      "order": 2,
+      "text": "\t16.\t Khin NA, et al. Regulatory and scientific issues in studies to evaluate sexual dysfunction in antidepressant drug trials. J Clin Psychiatry 2015; \n",
+      "bbox": [
+        61.88999938964844,
+        63.2703857421875,
+        435.5401306152344,
+        70.30238342285156
+      ],
+      "text_sha256": "64ef9515cb3b9f35a9b4f616662f78bda9ed11708cbd83daa7d5bac09a78cf7e"
+    },
+    {
+      "block_id": "page-0429-block-0003",
+      "order": 3,
+      "text": "76:1060–1063.\n\t17.\t Serretti A, et al. Treatment-emergent sexual dysfunction related to antidepressants: a meta-analysis. J Clin Psychopharmacol 2009; \n",
+      "bbox": [
+        61.895999908447266,
+        72.12638854980469,
+        435.5341491699219,
+        88.30238342285156
+      ],
+      "text_sha256": "20e5ac5177c59bdb3fbc58bf5bba626cffbc7d509615e291bf2d19ff211d0346"
+    },
+    {
+      "block_id": "page-0429-block-0004",
+      "order": 4,
+      "text": "29:259–266.\n\t18.\t Chiesa A, et al. Antidepressants and sexual dysfunction: epidemiology, mechanisms and management. J Psychopathology 2010; \n",
+      "bbox": [
+        61.902000427246094,
+        90.12638854980469,
+        435.5521240234375,
+        106.30238342285156
+      ],
+      "text_sha256": "6680954ef859c7a735586b2de21c78aca7309462dd59616dc6c4ea2ef8935f49"
+    },
+    {
+      "block_id": "page-0429-block-0005",
+      "order": 5,
+      "text": "16:104–113.\n\t19.\t Lew-Starowicz M, et al. Impact of psychotropic medications on sexual functioning. Cham: Springer; 2021:353–371.\n\t20.\t Reichenpfader U, et al. Sexual dysfunction associated with second-generation antidepressants in patients with major depressive disorder: \n",
+      "bbox": [
+        61.90800094604492,
+        108.12638854980469,
+        435.5701599121094,
+        133.30238342285156
+      ],
+      "text_sha256": "94aec907ad0d7e38a46ae7e0e01dac35173ffa1fe380c3530bda389573925ab7"
+    },
+    {
+      "block_id": "page-0429-block-0006",
+      "order": 6,
+      "text": "results from a systematic review with network meta-analysis. Drug Saf 2014; 37:19–31.\n\t21.\t Wagner G, et al. Efficacy and safety of levomilnacipran, vilazodone and vortioxetine compared with other second-generation antidepressants \n",
+      "bbox": [
+        61.91999816894531,
+        135.1263885498047,
+        435.5760803222656,
+        151.30238342285156
+      ],
+      "text_sha256": "6e90ae737c351199db767acfffb3f1181c3f931002b783751a5728f98b3bf57b"
+    },
+    {
+      "block_id": "page-0429-block-0007",
+      "order": 7,
+      "text": "for major depressive disorder in adults: a systematic review and network meta-analysis. J Affect Disord 2018; 228:1–12.\n\t22.\t Watanabe N, et al. Mirtazapine versus other antidepressive agents for depression. Cochrane Database Syst Rev 2011; CD006528.\n\t23.\t Cleare A, et al. Evidence-based guidelines for treating depressive disorders with antidepressants: a revision of the 2008 British Association for \n",
+      "bbox": [
+        61.92599868774414,
+        153.1263885498047,
+        435.55816650390625,
+        178.30238342285156
+      ],
+      "text_sha256": "0be3a9c83a9678c14d100cf2ad294a8bc7d555bd169bcbd92a4da0a2cb77f1a1"
+    },
+    {
+      "block_id": "page-0429-block-0008",
+      "order": 8,
+      "text": "Psychopharmacology guidelines. J Psychopharmacology 2015; 29:459–525.\n\t24.\t Montejo AL, et al. Management strategies for antidepressant-related sexual dysfunction: a clinical approach. J Clin Med 2019; 8:1640.\n\t25.\t Jacobsen PL, et al. Treatment-emergent sexual dysfunction in randomized trials of vortioxetine for major depressive disorder or generalized \n",
+      "bbox": [
+        61.9379997253418,
+        180.1263885498047,
+        435.59405517578125,
+        205.30238342285156
+      ],
+      "text_sha256": "808d5aaf875f089e79303404ac2624070d9d940acffeeb65839790a27cf8c5f3"
+    },
+    {
+      "block_id": "page-0429-block-0009",
+      "order": 9,
+      "text": "anxiety disorder: a pooled analysis. CNS Spectr 2016; 21:367–378.\n\t26.\t Koesters M, et al. Vortioxetine for depression in adults. Cochrane Database Syst Rev 2017; 7:Cd011520.\n\t27.\t Francois D, et al. Antidepressant-induced sexual side effects: incidence, assessment, clinical implications, and management. Psychiatric Ann \n",
+      "bbox": [
+        61.95000076293945,
+        207.1263885498047,
+        435.5941162109375,
+        232.30238342285156
+      ],
+      "text_sha256": "9bfc1af0811941255eabe31725396a2c049efdcdb4eb0fc77f79f272e3c5e898"
+    },
+    {
+      "block_id": "page-0429-block-0010",
+      "order": 10,
+      "text": "2017; 47:154–160.\n\t28.\t Taylor MJ, et al. Strategies for managing sexual dysfunction induced by antidepressant medication. CochraneDatabaseSystRev 2013; \n",
+      "bbox": [
+        61.96200180053711,
+        234.1263885498047,
+        435.6480407714844,
+        250.30238342285156
+      ],
+      "text_sha256": "cb32168c88c657ecfaaa26f162d7c6cd519270bd080477d78f8e41442f43d63c"
+    },
+    {
+      "block_id": "page-0429-block-0011",
+      "order": 11,
+      "text": "5:CD003382.\n\t29.\t Safarinejad MR. The effects of the adjunctive bupropion on male sexual dysfunction induced by a selective serotonin reuptake inhibitor: a \n",
+      "bbox": [
+        61.96799850463867,
+        252.1263885498047,
+        435.58795166015625,
+        268.3023986816406
+      ],
+      "text_sha256": "19bdaa94488557638439d7fbc7b58b9001ee0710ada664f176223252e6783b24"
+    },
+    {
+      "block_id": "page-0429-block-0012",
+      "order": 12,
+      "text": "double-blind placebo-controlled and randomized study. BJU Int 2010; 106:840–847.\n\t30.\t Montejo AL, et al. Sexual side-effects of antidepressant and antipsychotic drugs. Curr Opin Psychiatry 2015; 28:418–423.\n\t31.\t Amiaz R, et al. Testosterone gel replacement improves sexual function in depressed men taking serotonergic antidepressants: a randomized, \n",
+      "bbox": [
+        61.9739990234375,
+        270.1263732910156,
+        435.6782531738281,
+        295.3023986816406
+      ],
+      "text_sha256": "f1c218b34aa204462d5ef402170c200bcd4a8fa935de734e0fe9d04db8f95cdb"
+    },
+    {
+      "block_id": "page-0429-block-0013",
+      "order": 13,
+      "text": "placebo-controlled clinical trial. J Sex Marital Ther 2011; 37:243–254.\n\t32.\t Bitzer J, et al. Female sexual dysfunctions. Cham: Springer; 2021:109–134.\n\t33.\t Clayton AH, et al. Effect of brexpiprazole on prolactin and sexual functioning: an analysis of short- and long-term study data in major \n",
+      "bbox": [
+        61.986000061035156,
+        297.1263732910156,
+        435.6720275878906,
+        322.3023986816406
+      ],
+      "text_sha256": "fc1d5add64d00c339cbf7f934fa8ad36ae3a1e641694211dd7b21f4b36e10009"
+    },
+    {
+      "block_id": "page-0429-block-0014",
+      "order": 14,
+      "text": "depressive disorder. J Clin Psychopharmacol 2020; 40:560–567.\n\t34.\t Freeman MP, et al. Improvement of sexual functioning during treatment of MDD with adjunctive pimavanserin: a secondary analysis. \n",
+      "bbox": [
+        61.99800109863281,
+        324.1263732910156,
+        435.66607666015625,
+        340.3023986816406
+      ],
+      "text_sha256": "e2737c92f92d73aab4ea7cbf0d3c1f909065f31912a6812709d3c70116de102f"
+    },
+    {
+      "block_id": "page-0429-block-0015",
+      "order": 15,
+      "text": "Depress Anxiety 2020; 37:485–495.\n",
+      "bbox": [
+        73.00199890136719,
+        342.1263732910156,
+        166.81797790527344,
+        349.3023986816406
+      ],
+      "text_sha256": "b7b55231f65034760467122df2670222a992a35f224873aa96463c7b95238f4d"
+    },
+    {
+      "block_id": "page-0429-block-0016",
+      "order": 16,
+      "text": "Further reading\n",
+      "bbox": [
+        61.88999938964844,
+        367.6493835449219,
+        142.37698364257812,
+        380.68438720703125
+      ],
+      "text_sha256": "97a7eb93e6fca560969f4c10a52d2ef83995974b08b112934e0d108909963303"
+    },
+    {
+      "block_id": "page-0429-block-0017",
+      "order": 17,
+      "text": "Montejo, A.L., et al. Management strategies for antidepressant-related sexual dysfunction: a clinical approach. Journal of clinical medicine 2019; \n",
+      "bbox": [
+        61.88999938964844,
+        385.7703857421875,
+        435.58807373046875,
+        392.8023986816406
+      ],
+      "text_sha256": "e85dccbbfb4a3703ce716b24f3aba97676bdbf4878657c04cc7a41e5d3879542"
+    },
+    {
+      "block_id": "page-0429-block-0018",
+      "order": 18,
+      "text": "8:1640.\n",
+      "bbox": [
+        72.88800048828125,
+        394.6263732910156,
+        92.90399169921875,
+        401.8023986816406
+      ],
+      "text_sha256": "f8b6e740a6607b7920057136ccb4ffd967130627e0f65154d8f6be784d1fe32e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

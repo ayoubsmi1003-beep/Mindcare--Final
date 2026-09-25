@@ -1,0 +1,47 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0776",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 776,
+  "source_page_index": 775,
+  "source_page_display": 776,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Part 3 \nPrescribing in specialist conditions\n",
+  "raw_text_sha256": "b087fda337c48485ad399a4ad8d044a0c7bcbbc260b263cd82d6339afbb16b40",
+  "coordinates_sha256": "fbd99fc79ac8f590b220bd8485b4a91eb3cd90feac8fe1ed960c4c155b51078d",
+  "block_sequence_sha256": "dccf4911df6d500d3aeea7cd0b3e61e9b38134d34734afc02b58503b027f6502",
+  "blocks": [
+    {
+      "block_id": "page-0776-block-0000",
+      "order": 0,
+      "text": "Part 3 \n",
+      "bbox": [
+        362.4689025878906,
+        59.724403381347656,
+        425.81488037109375,
+        82.60040283203125
+      ],
+      "text_sha256": "8872ae2c491552caa213318d5e7448453136cf4b9bd2b2c87d7538297ca8c130"
+    },
+    {
+      "block_id": "page-0776-block-0001",
+      "order": 1,
+      "text": "Prescribing in specialist conditions\n",
+      "bbox": [
+        67.16850280761719,
+        111.36316680908203,
+        420.00445556640625,
+        137.43316650390625
+      ],
+      "text_sha256": "87a452f045dd18260cf1c16aa48ca291cf6d661babe90ef166b6559a3111361e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

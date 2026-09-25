@@ -1,0 +1,359 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0030",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 30,
+  "source_page_index": 29,
+  "source_page_display": 30,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    9\nCHAPTER 1\nTable 1.1  Minimum effective dose/day – antipsychotics\nDrug\nFirst episode\nMulti-episode\nFGAs\nChlorpromazine1\n200mg*\n300mg\nHaloperidol2–7\n2mg\n4mg\nSulpiride8\n400mg*\n800mg\nTrifluoperazine9,10\n10mg*\n15mg\nSGAs\nAmisulpride11–16\n300mg*\n400mg*\nAripiprazole7,17–22\n10mg\n10mg\nAsenapine7,22,23\n10mg*\n10mg\nBlonanserin24\nNot known\n8mg\nBrexpiprazole25–27\n2mg*\n4mg\nCariprazine28,29\n1.5mg*\n1.5mg\nIloperidone7,21,22,30\n4mg*\n8mg\nLumateperone31\nNot known\n42mg*\nLurasidone7,32\n40mg HCl/37mg base*\n40mg HCl/37mg base\nOlanzapine4,7,33–35\n5mg\n7.5mg\nPaliperidone22\n3mg*\n3mg\nPimavanserin36–38\nNot known\n34mg**\nQuetiapine39–44\n150mg* (but higher doses often used45)\n300mg\nRisperidone3,7,46–49\n2mg\n4mg\nZiprasidone7,21,50–52\n40mg*\n80mg\n*Estimate – too few data available\n**FDA-approved for Parkinson’s disease psychosis; dose in schizophrenia not known\nMinimum effective doses\nTable 1.1 suggests the minimum dose of antipsychotic likely to be effective in first- or multi-\nepisode schizophrenia. Most patients will respond to the dose suggested, although others \nmay require higher doses. Given the variation in individual response, all doses should be \nconsidered approximate. Primary references are provided where available, but consensus \nopinion has also been used. Only oral treatment with commonly used drugs is covered.\n",
+  "raw_text_sha256": "9e25c60facd27ebf4224237ac4f2eea50e2e25c23f5f2337de5295baa226f63e",
+  "coordinates_sha256": "be32431efb2349bcfd2f979e8f133f94c5e7ba968d1b930381198df75e503ffb",
+  "block_sequence_sha256": "a99b306a1dd9824810a60b315c101a4a628d1ffe3c08c282a2c4ace9c5725bf8",
+  "blocks": [
+    {
+      "block_id": "page-0030-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    9\n",
+      "bbox": [
+        250.6403045654297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "9b2836791a3a018f92023bbc2aeb5b38a1c4a3c236040864be511e8929c6bb40"
+    },
+    {
+      "block_id": "page-0030-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0030-block-0002",
+      "order": 2,
+      "text": "Table 1.1  Minimum effective dose/day – antipsychotics\n",
+      "bbox": [
+        53.99909973144531,
+        166.2368927001953,
+        231.381591796875,
+        175.1243896484375
+      ],
+      "text_sha256": "9ecf68ff15524cd24f72fa0b287590feec28f30447f4f0caed3ed8186c25f9ef"
+    },
+    {
+      "block_id": "page-0030-block-0003",
+      "order": 3,
+      "text": "Drug\nFirst episode\nMulti-episode\n",
+      "bbox": [
+        47.99909973144531,
+        186.47193908691406,
+        355.8590393066406,
+        195.35943603515625
+      ],
+      "text_sha256": "94059c441136b986a52049ddd35d4426befd3799d4e47ecdecd4d7d7695b3226"
+    },
+    {
+      "block_id": "page-0030-block-0004",
+      "order": 4,
+      "text": "FGAs\n",
+      "bbox": [
+        47.99906921386719,
+        203.49696350097656,
+        65.90907287597656,
+        212.38446044921875
+      ],
+      "text_sha256": "4efcf888dd4ef8955efd5a30dc18d37775bea1f0e2b62c7daf8584709f7d0e76"
+    },
+    {
+      "block_id": "page-0030-block-0005",
+      "order": 5,
+      "text": "Chlorpromazine1\n200mg*\n300mg\n",
+      "bbox": [
+        47.99906921386719,
+        218.69944763183594,
+        330.0365295410156,
+        227.409423828125
+      ],
+      "text_sha256": "69b41dda09856a21ff3dfb9d00cef917db153710e3100acd6c8eacb8115fcde0"
+    },
+    {
+      "block_id": "page-0030-block-0006",
+      "order": 6,
+      "text": "Haloperidol2–7\n2mg\n4mg\n",
+      "bbox": [
+        47.99897766113281,
+        233.32691955566406,
+        321.6965026855469,
+        242.034423828125
+      ],
+      "text_sha256": "4ead49ee67ea38cc3cbda94cebefff8b2c2c18e3479c8bc15d3ac27b5b7b2a87"
+    },
+    {
+      "block_id": "page-0030-block-0007",
+      "order": 7,
+      "text": "Sulpiride8\n400mg*\n800mg\n",
+      "bbox": [
+        47.99897766113281,
+        247.95191955566406,
+        330.0365295410156,
+        256.659423828125
+      ],
+      "text_sha256": "4fad2c6833fe9b4c9fac4bb009a7f17f3de17f00433000b51c78f993eb6de664"
+    },
+    {
+      "block_id": "page-0030-block-0008",
+      "order": 8,
+      "text": "Trifluoperazine9,10\n10mg*\n15mg\n",
+      "bbox": [
+        47.99897766113281,
+        262.5769348144531,
+        325.8665466308594,
+        271.284423828125
+      ],
+      "text_sha256": "749ea47cce9a551d12f1733c75fde356a1a43f08072e92ac38083471cea4852c"
+    },
+    {
+      "block_id": "page-0030-block-0009",
+      "order": 9,
+      "text": "SGAs\n",
+      "bbox": [
+        47.99897766113281,
+        277.02191162109375,
+        66.3289794921875,
+        285.909423828125
+      ],
+      "text_sha256": "ba446114feb7258996ee37cebec4abe9e007da9df006897f231eb0c42f29773a"
+    },
+    {
+      "block_id": "page-0030-block-0010",
+      "order": 10,
+      "text": "Amisulpride11–16\n300mg*\n400mg*\n",
+      "bbox": [
+        47.99897766113281,
+        292.22442626953125,
+        334.2065734863281,
+        300.9344177246094
+      ],
+      "text_sha256": "38be9fae9c654a1bb53f0d20fbd89d77e35e934dbb7567fda859238c2f3ed938"
+    },
+    {
+      "block_id": "page-0030-block-0011",
+      "order": 11,
+      "text": "Aripiprazole7,17–22\n10mg\n10mg\n",
+      "bbox": [
+        47.99897766113281,
+        306.8519287109375,
+        325.8665466308594,
+        315.5594177246094
+      ],
+      "text_sha256": "5e0d888aa5d627a78242b98b201fa0b687439f56221e4cf63853b82e1ca374e0"
+    },
+    {
+      "block_id": "page-0030-block-0012",
+      "order": 12,
+      "text": "Asenapine7,22,23\n10mg*\n10mg\n",
+      "bbox": [
+        47.99897766113281,
+        321.4769287109375,
+        325.8665466308594,
+        330.1844177246094
+      ],
+      "text_sha256": "fd603063badcce00ce1c911f36560b963b7ba872fb374e0f212f0c60e3370fad"
+    },
+    {
+      "block_id": "page-0030-block-0013",
+      "order": 13,
+      "text": "Blonanserin24\nNot known\n8mg\n",
+      "bbox": [
+        47.99897766113281,
+        336.1019287109375,
+        321.6965026855469,
+        344.8094177246094
+      ],
+      "text_sha256": "e05def7d181147d2d7ec327b4634d3b561a18dab16eaca435324d62b2fec25a2"
+    },
+    {
+      "block_id": "page-0030-block-0014",
+      "order": 14,
+      "text": "Brexpiprazole25–27\n2mg*\n4mg\n",
+      "bbox": [
+        47.99897766113281,
+        350.7269287109375,
+        321.6965026855469,
+        359.4344177246094
+      ],
+      "text_sha256": "561144a601ad59de5a6e8e89c660ccfe6aef6879aa8372623b9cc4a2d952da20"
+    },
+    {
+      "block_id": "page-0030-block-0015",
+      "order": 15,
+      "text": "Cariprazine28,29\n1.5mg*\n1.5mg\n",
+      "bbox": [
+        47.99897766113281,
+        365.3519287109375,
+        327.9515075683594,
+        374.0594177246094
+      ],
+      "text_sha256": "5d14d4822e7d5bc75fc40a5b0417f30c64d50338d670043ebede48333f370a2e"
+    },
+    {
+      "block_id": "page-0030-block-0016",
+      "order": 16,
+      "text": "Iloperidone7,21,22,30\n4mg*\n8mg\n",
+      "bbox": [
+        47.99897766113281,
+        379.9769287109375,
+        321.6965026855469,
+        388.6844177246094
+      ],
+      "text_sha256": "730b5207ca71c35d494765de0cb7ded5adafdcf0c6100741e0d72634bf40dfce"
+    },
+    {
+      "block_id": "page-0030-block-0017",
+      "order": 17,
+      "text": "Lumateperone31\nNot known\n42mg*\n",
+      "bbox": [
+        47.99897766113281,
+        394.6019287109375,
+        330.0365295410156,
+        403.3094177246094
+      ],
+      "text_sha256": "90f35920db7978984d50f1051bafb9317316172d864f5e164e05109df8b5a7d6"
+    },
+    {
+      "block_id": "page-0030-block-0018",
+      "order": 18,
+      "text": "Lurasidone7,32\n40mg HCl/37mg base*\n40mg HCl/37mg base\n",
+      "bbox": [
+        47.99897766113281,
+        409.2269287109375,
+        377.1365966796875,
+        417.9344177246094
+      ],
+      "text_sha256": "5da0664205d6fdc5757bd813306a710c85fbfe12e62512042a570aa96a172d12"
+    },
+    {
+      "block_id": "page-0030-block-0019",
+      "order": 19,
+      "text": "Olanzapine4,7,33–35\n5mg\n7.5mg\n",
+      "bbox": [
+        47.99897766113281,
+        423.8519287109375,
+        327.9515075683594,
+        432.5594177246094
+      ],
+      "text_sha256": "00af126a6d336d416e30c1600b471671af18da57628b9a5ebf2d82dd2f48edc4"
+    },
+    {
+      "block_id": "page-0030-block-0020",
+      "order": 20,
+      "text": "Paliperidone22\n3mg*\n3mg\n",
+      "bbox": [
+        47.99897766113281,
+        438.4769287109375,
+        321.6965026855469,
+        447.1844177246094
+      ],
+      "text_sha256": "219682641b7fb97e32d531c4d1f8ca865bc24a61402d98e0c06bd7ecb8fa55a6"
+    },
+    {
+      "block_id": "page-0030-block-0021",
+      "order": 21,
+      "text": "Pimavanserin36–38\nNot known\n34mg**\n",
+      "bbox": [
+        47.99897766113281,
+        453.1019287109375,
+        334.2065734863281,
+        461.8094177246094
+      ],
+      "text_sha256": "7d82ba68807932d1f78ee9e004f2dd0570488f62a3ee5453bb3f9bbda4430c11"
+    },
+    {
+      "block_id": "page-0030-block-0022",
+      "order": 22,
+      "text": "Quetiapine39–44\n150mg* (but higher doses often used45)\n300mg\n",
+      "bbox": [
+        47.99897766113281,
+        467.7269287109375,
+        330.0380554199219,
+        476.4344177246094
+      ],
+      "text_sha256": "9af37754dbbc2d19deef32a2bcd27116f23d191266f08cedd07a385eb9c3978a"
+    },
+    {
+      "block_id": "page-0030-block-0023",
+      "order": 23,
+      "text": "Risperidone3,7,46–49\n2mg\n4mg\n",
+      "bbox": [
+        48.000518798828125,
+        482.3519287109375,
+        321.6965026855469,
+        491.0594177246094
+      ],
+      "text_sha256": "2f925a458f352131d2302a19eea4d0c45d350fb7b03c9d8feceac1ff279e3ae6"
+    },
+    {
+      "block_id": "page-0030-block-0024",
+      "order": 24,
+      "text": "Ziprasidone7,21,50–52\n40mg*\n80mg\n",
+      "bbox": [
+        47.99897766113281,
+        496.9769287109375,
+        325.8665466308594,
+        505.6844177246094
+      ],
+      "text_sha256": "21a4fd07a8b41ea167c9a076929a076ba8edc7a7d31b78f9661d3e9d8627af47"
+    },
+    {
+      "block_id": "page-0030-block-0025",
+      "order": 25,
+      "text": "*Estimate – too few data available\n**FDA-approved for Parkinson’s disease psychosis; dose in schizophrenia not known\n",
+      "bbox": [
+        47.99897766113281,
+        515.974365234375,
+        316.9715270996094,
+        534.679443359375
+      ],
+      "text_sha256": "aef5cd3a53eb42216cecdd23aed8fcbae225cc5a1279b0b7a64593762cef5bba"
+    },
+    {
+      "block_id": "page-0030-block-0026",
+      "order": 26,
+      "text": "Minimum effective doses\n",
+      "bbox": [
+        54.998802185058594,
+        66.06442260742188,
+        184.98580932617188,
+        79.09942626953125
+      ],
+      "text_sha256": "e72f72ee02ea724b74e67ee5e026f4df81fc83b43d3d4c0624526e8834e97bbf"
+    },
+    {
+      "block_id": "page-0030-block-0027",
+      "order": 27,
+      "text": "Table 1.1 suggests the minimum dose of antipsychotic likely to be effective in first- or multi-\nepisode schizophrenia. Most patients will respond to the dose suggested, although others \nmay require higher doses. Given the variation in individual response, all doses should be \nconsidered approximate. Primary references are provided where available, but consensus \nopinion has also been used. Only oral treatment with commonly used drugs is covered.\n",
+      "bbox": [
+        47.998802185058594,
+        84.909423828125,
+        422.8086853027344,
+        144.62942504882812
+      ],
+      "text_sha256": "5f5417d7e290e3ec5d54de8c818e8bdcc3bd0631f6f4c53a79c7b1bc18cc6214"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

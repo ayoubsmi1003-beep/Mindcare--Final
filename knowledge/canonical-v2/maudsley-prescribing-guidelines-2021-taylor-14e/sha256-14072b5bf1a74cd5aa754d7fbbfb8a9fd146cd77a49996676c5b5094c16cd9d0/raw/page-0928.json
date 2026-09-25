@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0928",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 928,
+  "source_page_index": 927,
+  "source_page_display": 928,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Miscellany    907\nCHAPTER 14\nBiochemical and haematological effects of psychotropics\nAlmost all psychotropics have haematology or biochemistry-related adverse effects that \nmay be detected using routine blood tests. While many of these changes are idiosyncratic \nand not clinically significant, others, such as the agranulocytosis associated with agents \nsuch as clozapine, will require regular monitoring of the full blood count. In general, \nwhere an agent has a high incidence of biochemical/haematological side-effects or a rare \nbut potentially fatal effect, regular monitoring is required as discussed in other sections.\nFor other agents, laboratory-related side effects are comparatively rare (prevalence \nusually less than 1%), are often reversible upon cessation of the putative offending \nagent and not always clinically significant. It should further be noted that medical co-\nmorbidity, polypharmacy and the effects of non-prescribed agents including substances \nof abuse and alcohol may also influence biochemical and haematological parameters. \nIn some cases, where a clear temporal association between starting the agent and the \nonset of laboratory changes is unclear, then withdrawal and re-challenge with the agent \nin question may be considered. Where there is doubt as to the aetiology and significance \nof the effect, the appropriate source of expert advice should always be consulted.\nTables 14.2 and 14.3 summarise those agents with identified biochemical and hae-\nmatological effects, with information compiled from various sources.1–9 In many cases \nthe evidence for these various effects is limited, with information obtained mostly from \ncase reports, case series and information supplied by manufacturers. For further details \nabout each individual agent, the reader is encouraged to consult the appropriate section \nof the Guidelines as well as other specialist sources, particularly product literature relat-\ning to individual drugs.\nTable 14.2  Summary of biochemical changes associated with psychotropics\nParameter\nReference range10\nAgents reported to raise levels\nAgents reported to \nlower levels\nAlanine \naminotransferase \n(ALT)\nFemales: ≤34U/L \nMales: ≤45U/L \n(may be higher in obese \nsubjects)\nAntipsychotics: asenapine, \nbenperidol, cariprazine, clozapine, \nhaloperidol, loxapine, olanzapine, \nphenothiazines, quetiapine, \nrisperidone/paliperidone\nAntidepressants: agomelatine, \nbupropion, MAOIs, mianserin, \nmirtazapine, SNRIs, SSRIs (especially \nparoxetine and sertraline), TCAs, \ntrazodone, vortioxetine\nAnxiolytics/hypnotics: barbiturates, \nbenzodiazepines, buspirone, \nclomethiazole, promethazine, \nsuvorexant, tasimelteon, zolpidem\nMood stabilisers: carbamazepine, \nlamotrigine, valproate\nOther: alcohol, atomoxetine, \nbeta-blockers, caffeine, cocaine, \ndisulfiram, naltrexone, opioids, \nstimulants (abused)\nVigabatrin\n(Continued)\n",
+  "raw_text_sha256": "81cb068eb8bf44478ff20cff40656249841b75db164f5457fc911a4d37285207",
+  "coordinates_sha256": "101a01ccddf9b60e0a72a483b7dcf19f7b358d39414524231224dab8541a813a",
+  "block_sequence_sha256": "cc1fdfc06b59a6f2e592ee3149ed0bc4e329627ac48bc740b00b3dbe667b9a46",
+  "blocks": [
+    {
+      "block_id": "page-0928-block-0000",
+      "order": 0,
+      "text": "Miscellany    907\n",
+      "bbox": [
+        349.2962951660156,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "7692ca58e09c0f8727c96b8306a861d6b95af5266e317d445c263bf5ac52b2c8"
+    },
+    {
+      "block_id": "page-0928-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        454.4096984863281,
+        338.7405090332031,
+        463.88970947265625,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0928-block-0002",
+      "order": 2,
+      "text": "Biochemical and haematological effects of psychotropics\n",
+      "bbox": [
+        55.039398193359375,
+        66.06546020507812,
+        346.78143310546875,
+        79.1004638671875
+      ],
+      "text_sha256": "81f9fb9fdfc1321b94d6ddc407791d30ee8836bac4227c1212b3a5fe58cc2458"
+    },
+    {
+      "block_id": "page-0928-block-0003",
+      "order": 3,
+      "text": "Almost all psychotropics have haematology or biochemistry-related adverse effects that \nmay be detected using routine blood tests. While many of these changes are idiosyncratic \nand not clinically significant, others, such as the agranulocytosis associated with agents \nsuch as clozapine, will require regular monitoring of the full blood count. In general, \nwhere an agent has a high incidence of biochemical/haematological side-effects or a rare \nbut potentially fatal effect, regular monitoring is required as discussed in other sections.\n",
+      "bbox": [
+        48.039398193359375,
+        84.91046142578125,
+        422.859375,
+        156.63046264648438
+      ],
+      "text_sha256": "2133a98e23105daaf395403b8203f9f6eb62eb7d69b84f4e21efe1c0d1aa055a"
+    },
+    {
+      "block_id": "page-0928-block-0004",
+      "order": 4,
+      "text": "For other agents, laboratory-related side effects are comparatively rare (prevalence \nusually less than 1%), are often reversible upon cessation of the putative offending \nagent and not always clinically significant. It should further be noted that medical co-\nmorbidity, polypharmacy and the effects of non-prescribed agents including substances \nof abuse and alcohol may also influence biochemical and haematological parameters. \nIn some cases, where a clear temporal association between starting the agent and the \nonset of laboratory changes is unclear, then withdrawal and re-challenge with the agent \nin question may be considered. Where there is doubt as to the aetiology and significance \nof the effect, the appropriate source of expert advice should always be consulted.\n",
+      "bbox": [
+        48.039398193359375,
+        156.91046142578125,
+        422.869384765625,
+        264.6304626464844
+      ],
+      "text_sha256": "dda100200282715feffeee5ad84bcf255a0397e3a97219b120abaa4c1975d012"
+    },
+    {
+      "block_id": "page-0928-block-0005",
+      "order": 5,
+      "text": "Tables 14.2 and 14.3 summarise those agents with identified biochemical and hae-\nmatological effects, with information compiled from various sources.1–9 In many cases \nthe evidence for these various effects is limited, with information obtained mostly from \ncase reports, case series and information supplied by manufacturers. For further details \nabout each individual agent, the reader is encouraged to consult the appropriate section \nof the Guidelines as well as other specialist sources, particularly product literature relat-\ning to individual drugs.\n",
+      "bbox": [
+        48.039398193359375,
+        264.91046142578125,
+        422.8297424316406,
+        348.6304931640625
+      ],
+      "text_sha256": "260b5dbe243d0d557a4eb71702bcdb28402ba8e211375c76785c85506a6b9151"
+    },
+    {
+      "block_id": "page-0928-block-0006",
+      "order": 6,
+      "text": "Table 14.2  Summary of biochemical changes associated with psychotropics\n",
+      "bbox": [
+        54.0,
+        367.2969665527344,
+        296.4000244140625,
+        376.1844787597656
+      ],
+      "text_sha256": "6fe0dc96c697a12922a5f0d5716bfeac886318fe4729c5e9fdf67a8ca5a04e7d"
+    },
+    {
+      "block_id": "page-0928-block-0007",
+      "order": 7,
+      "text": "Parameter\nReference range10\nAgents reported to raise levels\nAgents reported to \nlower levels\n",
+      "bbox": [
+        48.0,
+        385.4219665527344,
+        410.4573974609375,
+        404.3069763183594
+      ],
+      "text_sha256": "aa61555c628d7c54f10a422c1400f45d1c140ad78ce30a6f27ae2348bfc3308b"
+    },
+    {
+      "block_id": "page-0928-block-0008",
+      "order": 8,
+      "text": "Alanine \naminotransferase \n(ALT)\n",
+      "bbox": [
+        47.99737548828125,
+        412.1219787597656,
+        105.07987213134766,
+        440.824462890625
+      ],
+      "text_sha256": "bd21bbc3a9061eff36b0ecddfbaf9ef0a04ded257bef273e2d6cf5f772606e41"
+    },
+    {
+      "block_id": "page-0928-block-0009",
+      "order": 9,
+      "text": "Females: ≤34U/L \nMales: ≤45U/L \n(may be higher in obese \nsubjects)\n",
+      "bbox": [
+        121.99987030029297,
+        412.1144714355469,
+        200.77236938476562,
+        450.814453125
+      ],
+      "text_sha256": "3abdc70691dd94e489077134a03c5a7207441e423fbdd444a93a7bca982c837c"
+    },
+    {
+      "block_id": "page-0928-block-0010",
+      "order": 10,
+      "text": "Antipsychotics: asenapine, \nbenperidol, cariprazine, clozapine, \nhaloperidol, loxapine, olanzapine, \nphenothiazines, quetiapine, \nrisperidone/paliperidone\nAntidepressants: agomelatine, \nbupropion, MAOIs, mianserin, \nmirtazapine, SNRIs, SSRIs (especially \nparoxetine and sertraline), TCAs, \ntrazodone, vortioxetine\nAnxiolytics/hypnotics: barbiturates, \nbenzodiazepines, buspirone, \nclomethiazole, promethazine, \nsuvorexant, tasimelteon, zolpidem\nMood stabilisers: carbamazepine, \nlamotrigine, valproate\nOther: alcohol, atomoxetine, \nbeta-blockers, caffeine, cocaine, \ndisulfiram, naltrexone, opioids, \nstimulants (abused)\n",
+      "bbox": [
+        218.7498779296875,
+        411.92694091796875,
+        334.6923522949219,
+        610.7669067382812
+      ],
+      "text_sha256": "c20acd221292365e8107abb4dba438767d02b6a0b7da1dbf72e2053a745cc375"
+    },
+    {
+      "block_id": "page-0928-block-0011",
+      "order": 11,
+      "text": "Vigabatrin\n",
+      "bbox": [
+        340.9998779296875,
+        412.0619201660156,
+        373.9624328613281,
+        420.7694091796875
+      ],
+      "text_sha256": "999ffd73a51506501448cad45f6658e68043152232291a673bc02b7e97a42e4a"
+    },
+    {
+      "block_id": "page-0928-block-0012",
+      "order": 12,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.98236083984375,
+        620.0369262695312,
+        419.997314453125,
+        628.7894287109375
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

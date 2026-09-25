@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0004",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 4,
+  "source_page_index": 3,
+  "source_page_display": 4,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "The Maudsley® \nPrescribing Guidelines \nin Psychiatry\n14th Edition\nDavid M. Taylor, BSc, MSc, PhD, FFRPS, FRPharmS, FRCPEdin, \nFRCPsychHon\nDirector of Pharmacy and Pathology, Maudsley Hospital and  \nProfessor of Psychopharmacology, King’s College, London, UK\nThomas R. E. Barnes, MBBS, MD, FRCPsych, DSc\nEmeritus Professor of Clinical Psychiatry at Imperial College London and  \njoint head of the Prescribing Observatory for Mental Health at the  \nRoyal College of Psychiatrists’ Centre for Quality Improvement, London, UK\nAllan H. Young, MB, ChB, MPhil, PhD, FRCP, FRCPsych\nChair of Mood Disorders and Director of the Centre for Affective Disorders in the  \nDepartment of Psychological Medicine in the Institute of Psychiatry, Psychology and Neuroscience at King’s College, \nLondon, UK\n",
+  "raw_text_sha256": "fed3663c43360db32edd1b561a0b062b69273e819c205371414efd27125861b8",
+  "coordinates_sha256": "3363d861877f2ef756a6b3eed0008ac4bbf1c721b7bd004905a48331a9ba1bc6",
+  "block_sequence_sha256": "01c8a14881271232b3ab3ba5f1d80f001b1926a2cbf610f4d549ccc05808375b",
+  "blocks": [
+    {
+      "block_id": "page-0004-block-0000",
+      "order": 0,
+      "text": "The Maudsley® \nPrescribing Guidelines \nin Psychiatry\n",
+      "bbox": [
+        48.039398193359375,
+        57.557186126708984,
+        404.419677734375,
+        161.65716552734375
+      ],
+      "text_sha256": "1e241bf7d280e3a8a30a6deabf3f3c53127989aed992af8a6f8cac7e41af67cb"
+    },
+    {
+      "block_id": "page-0004-block-0001",
+      "order": 1,
+      "text": "14th Edition\n",
+      "bbox": [
+        48.039398193359375,
+        180.47718811035156,
+        162.5194091796875,
+        204.17718505859375
+      ],
+      "text_sha256": "16bb0a3c3d912bf3dffdc8632afeb875c00188303c431047422b78ab2ebd129c"
+    },
+    {
+      "block_id": "page-0004-block-0002",
+      "order": 2,
+      "text": "David M. Taylor, BSc, MSc, PhD, FFRPS, FRPharmS, FRCPEdin, \n",
+      "bbox": [
+        48.039398193359375,
+        248.9591827392578,
+        405.8260803222656,
+        269.42718505859375
+      ],
+      "text_sha256": "ad46d86efeb04de8fc2ae63e34d406071106b98c8ae18d77dca00e42dfba5533"
+    },
+    {
+      "block_id": "page-0004-block-0003",
+      "order": 3,
+      "text": "FRCPsychHon\n",
+      "bbox": [
+        48.04010009765625,
+        273.6802062988281,
+        110.16970825195312,
+        286.9241943359375
+      ],
+      "text_sha256": "d44d47f73db612b1085a5220563af5750fc6119b21af9053fe3ff02113ca4ae2"
+    },
+    {
+      "block_id": "page-0004-block-0004",
+      "order": 4,
+      "text": "Director of Pharmacy and Pathology, Maudsley Hospital and  \nProfessor of Psychopharmacology, King’s College, London, UK\n",
+      "bbox": [
+        48.039398193359375,
+        289.5691833496094,
+        235.45030212402344,
+        306.77520751953125
+      ],
+      "text_sha256": "8480daea200831d871e3b2e5d75bb0e0d79afc008042e67be8fc3a01658bba5b"
+    },
+    {
+      "block_id": "page-0004-block-0005",
+      "order": 5,
+      "text": "Thomas R. E. Barnes, MBBS, MD, FRCPsych, DSc\n",
+      "bbox": [
+        48.039398193359375,
+        329.9591979980469,
+        359.74774169921875,
+        350.42718505859375
+      ],
+      "text_sha256": "ae9c9e905344b886f288747073157e6ec1ec176d564c9228bb3c398862df7c45"
+    },
+    {
+      "block_id": "page-0004-block-0006",
+      "order": 6,
+      "text": "Emeritus Professor of Clinical Psychiatry at Imperial College London and  \njoint head of the Prescribing Observatory for Mental Health at the  \nRoyal College of Psychiatrists’ Centre for Quality Improvement, London, UK\n",
+      "bbox": [
+        48.039398193359375,
+        351.5691833496094,
+        281.25140380859375,
+        377.7772216796875
+      ],
+      "text_sha256": "1e24c49e483a3b185efa4d3f07be8a0891520de5697fbf42c8fc849640f7ce0e"
+    },
+    {
+      "block_id": "page-0004-block-0007",
+      "order": 7,
+      "text": "Allan H. Young, MB, ChB, MPhil, PhD, FRCP, FRCPsych\n",
+      "bbox": [
+        48.039398193359375,
+        400.9591979980469,
+        375.1032409667969,
+        421.42718505859375
+      ],
+      "text_sha256": "e3a520ee1be412d4be1ef9bd5426acb48bf79949f80c26ae564fd41b9b0233f6"
+    },
+    {
+      "block_id": "page-0004-block-0008",
+      "order": 8,
+      "text": "Chair of Mood Disorders and Director of the Centre for Affective Disorders in the  \nDepartment of Psychological Medicine in the Institute of Psychiatry, Psychology and Neuroscience at King’s College, \nLondon, UK\n",
+      "bbox": [
+        48.039398193359375,
+        422.5691833496094,
+        401.0634765625,
+        448.7771911621094
+      ],
+      "text_sha256": "44897e56882cada966bfb3e50d8dd7e13cc37479d634caea04035abef7cce3a9"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

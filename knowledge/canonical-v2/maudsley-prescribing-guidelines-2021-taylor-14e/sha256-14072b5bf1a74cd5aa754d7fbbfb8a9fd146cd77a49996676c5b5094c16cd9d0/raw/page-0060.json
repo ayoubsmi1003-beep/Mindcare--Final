@@ -1,0 +1,395 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0060",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 60,
+  "source_page_index": 59,
+  "source_page_display": 60,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    39\nCHAPTER 1\nParameter/\ntest\nSuggested \nfrequency\nAction to be taken if \nresults outside  \nreference range\nMedications with \nspecial precautions\nMedications for which \nmonitoring is not \nrequired\nECG19,20\nBaseline and when \ntarget dose is \nreached (ECG \nchanges rare in \npractice21) on \nadmission to \nhospital and before \ndischarge if \nmedication regimen \nchanged.\nDiscuss with/refer to \ncardiologist if \nabnormality detected\nHaloperidol, pimozide, \nsertindole – ECG \nmandatory;\nziprasidone – ECG \nmandatory in some \nsituations\nRisk of sudden cardiac \ndeath increased with \nmost antipsychotic \nmedications.22 Ideally, all \npatients should be \noffered an ECG at least \nyearly\nBlood \npressure\nBaseline; frequently \nduring dose \ntitration and dosage \nchanges to detect \nantipsychotic-\ninduced changes, \nand generally \nmonitor physical \nhealth\nIf severe hypotension or \nhypertension (clozapine) \nobserved, slow rate of \ntitration. Consider \nswitching to another \nantipsychotic if \nsymptomatic postural \nhypotension. Treat \nhypertension in line with \nNICE guidelines\nClozapine, \nchlorpromazine and \nquetiapine most likely \nto be associated with \npostural hypotension\nAmisulpride, aripiprazole, \nbrexpiprazole, \ncariprazine, lurasidone, \ntrifluoperazine, sulpiride\nProlactin\nBaseline, then at 6 \nmonths, then yearly \nto detect \nantipsychotic-\ninduced changes\nSwitch medications if \nhyperprolactinaemia \nconfirmed and \nsymptomatic. Consider \ntests of bone mineral \ndensity (e.g. DEXA \nscanning) for those with \nchronically raised \nprolactin.\nAmisulpride, sulpiride, \nrisperidone and \npaliperidone particularly \nassociated with \nhyperprolactinaemia\nAsenapine, aripiprazole, \nbrexpiprazole, \ncariprazine, clozapine, \nlurasidone, quetiapine, \nolanzapine (<20mg), and \nziprasidone usually do \nnot elevate plasma \nprolactin, but worth \nmeasuring if symptoms \narise\nLiver \nfunction \ntests \n(LFTs)23–25\nBaseline, then yearly \nas part of a routine \nphysical health \ncheck and to detect \nchronic \nantipsychotic-\ninduced changes \n(rare)\nStop suspect medication \nif LFTs indicate hepatitis \n(transaminases × 3 \nnormal) or functional \ndamage (PT/albumin \nchange)\nClozapine and \nchlorpromazine \nassociated with hepatic \nfailure\nAmisulpride, sulpiride\nCreatinine  \nphospho \nkinase (CPK)\nBaseline, then if NMS \nsuspected\nSee the section on NMS\nNMS more likely with \nhigh-potency first-\ngeneration antipsychotic \nmedications\nNone\nOther tests: Patients on clozapine may benefit from an EEG,26,27 as this may help determine the need for anticonvul-\nsant treatment (although interpretation is obviously complex). Those on quetiapine should have thyroid function \ntests yearly, although the risk of abnormality is very small.28,29\nKey: DEXA, dual-energy X-ray absorptiometry; NMS, neuroleptic malignant syndrome; PT, prothrombin time;  \nBMI – body mass index; ECG – electrocardiograph; EEG – electroencephalogram; GFR – glomerular filtration rate; \nIFG – impaired fasting glucose.\nNote: This table is a summary – see individual sections for detail and discussion.\n",
+  "raw_text_sha256": "5b8dc98c0f2171c3def6eba5bb0830a7e3131fe93540f135beae21122d4ff98a",
+  "coordinates_sha256": "6a65f281039c3d4c4d41ffb242dbe4c01e08b2d13f0835441b2f0fb70a44bc70",
+  "block_sequence_sha256": "b4644669a79fb4ff19c091ff1afb8d30906ea8aa3a330af0c51cdd6788ee1bfd",
+  "blocks": [
+    {
+      "block_id": "page-0060-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    39\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "c20a96b11e24ac99b7da030295c3e2970ef6c437b13337130b6b6b8a3837f1f6"
+    },
+    {
+      "block_id": "page-0060-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0060-block-0002",
+      "order": 2,
+      "text": "Parameter/\ntest\n",
+      "bbox": [
+        47.99909973144531,
+        80.57191467285156,
+        87.18660736083984,
+        99.4569091796875
+      ],
+      "text_sha256": "9e03ec94c49aedee0b5540f178297c79ca3f41259fa0e92d15e22d8948b533ca"
+    },
+    {
+      "block_id": "page-0060-block-0003",
+      "order": 3,
+      "text": "Suggested \nfrequency\n",
+      "bbox": [
+        97.10910034179688,
+        80.57191467285156,
+        136.2816162109375,
+        99.4569091796875
+      ],
+      "text_sha256": "2de46ef90528a6bcb77492509047398f9af958c7944c3d3880bd7304164e5601"
+    },
+    {
+      "block_id": "page-0060-block-0004",
+      "order": 4,
+      "text": "Action to be taken if \nresults outside  \nreference range\n",
+      "bbox": [
+        168.11160278320312,
+        70.56690979003906,
+        242.71414184570312,
+        99.44940185546875
+      ],
+      "text_sha256": "2d3eff3c3a7d7a7e4e053eaba98d06061455b8342256502c2e51633fa049cf86"
+    },
+    {
+      "block_id": "page-0060-block-0005",
+      "order": 5,
+      "text": "Medications with \nspecial precautions\n",
+      "bbox": [
+        254.5865936279297,
+        80.56440734863281,
+        321.5390319824219,
+        99.44940185546875
+      ],
+      "text_sha256": "421ec93663dda398f77378dc043fd7b880e199d513bc4ebbc43a3a04791c3412"
+    },
+    {
+      "block_id": "page-0060-block-0006",
+      "order": 6,
+      "text": "Medications for which \nmonitoring is not \nrequired\n",
+      "bbox": [
+        337.589111328125,
+        70.55940246582031,
+        418.4239807128906,
+        99.44189453125
+      ],
+      "text_sha256": "0ca6e6439b9f2e94f302a4d071e3a312f0d6cbf628eafe46bb07c643abecb8e5"
+    },
+    {
+      "block_id": "page-0060-block-0007",
+      "order": 7,
+      "text": "ECG19,20\nBaseline and when \ntarget dose is \nreached (ECG \nchanges rare in \npractice21) on \nadmission to \nhospital and before \ndischarge if \nmedication regimen \nchanged.\n",
+      "bbox": [
+        48.00660705566406,
+        107.33192443847656,
+        162.8110809326172,
+        206.221923828125
+      ],
+      "text_sha256": "fc2924fc7c9b2bb4fcfbd9554cb887b0b36089ccf8a459f7006933c13e620292"
+    },
+    {
+      "block_id": "page-0060-block-0008",
+      "order": 8,
+      "text": "Discuss with/refer to \ncardiologist if \nabnormality detected\n",
+      "bbox": [
+        168.1136016845703,
+        107.5144271850586,
+        236.02606201171875,
+        136.2169189453125
+      ],
+      "text_sha256": "f4100bdc44888b3f9bacf47d6d7b5e923f96fc4131d192b2a2f874e89b421021"
+    },
+    {
+      "block_id": "page-0060-block-0009",
+      "order": 9,
+      "text": "Haloperidol, pimozide, \nsertindole – ECG \nmandatory;\nziprasidone – ECG \nmandatory in some \nsituations\n",
+      "bbox": [
+        254.58860778808594,
+        107.50691986083984,
+        328.7712097167969,
+        166.201904296875
+      ],
+      "text_sha256": "387af854c155b5ce823581bde65b2e37ac3e0be875faf61505f45acfc0ae6ab3"
+    },
+    {
+      "block_id": "page-0060-block-0010",
+      "order": 10,
+      "text": "Risk of sudden cardiac \ndeath increased with \nmost antipsychotic \nmedications.22 Ideally, all \npatients should be \noffered an ECG at least \nyearly\n",
+      "bbox": [
+        337.5831298828125,
+        107.49190521240234,
+        417.5856018066406,
+        176.2269287109375
+      ],
+      "text_sha256": "3e0f645550925d4f55028fae530cb6639dd39efa45aa1111bef734b5642560c2"
+    },
+    {
+      "block_id": "page-0060-block-0011",
+      "order": 11,
+      "text": "Blood \npressure\n",
+      "bbox": [
+        48.00062561035156,
+        212.36192321777344,
+        77.73062133789062,
+        231.24691772460938
+      ],
+      "text_sha256": "ef00024707dd3609e99d5b222c08c6becec5055e4d8b7863a96fc9d7f890aa96"
+    },
+    {
+      "block_id": "page-0060-block-0012",
+      "order": 12,
+      "text": "Baseline; frequently \nduring dose \ntitration and dosage \nchanges to detect \nantipsychotic-\ninduced changes, \nand generally \nmonitor physical \nhealth\n",
+      "bbox": [
+        97.11062622070312,
+        212.5419158935547,
+        163.79310607910156,
+        301.2294006347656
+      ],
+      "text_sha256": "7f45e39cabf62b8a82fc3b5949e484a0d617c6c46808736d35feb68e543855bd"
+    },
+    {
+      "block_id": "page-0060-block-0013",
+      "order": 13,
+      "text": "If severe hypotension or \nhypertension (clozapine) \nobserved, slow rate of \ntitration. Consider \nswitching to another \nantipsychotic if \nsymptomatic postural \nhypotension. Treat \nhypertension in line with \nNICE guidelines\n",
+      "bbox": [
+        168.11312866210938,
+        212.51939392089844,
+        248.96310424804688,
+        311.2043762207031
+      ],
+      "text_sha256": "9b1abfe542a358e05ec24ca3131e6d16651625e877579520200e5d3cbf86bb6c"
+    },
+    {
+      "block_id": "page-0060-block-0014",
+      "order": 14,
+      "text": "Clozapine, \nchlorpromazine and \nquetiapine most likely \nto be associated with \npostural hypotension\n",
+      "bbox": [
+        254.58811950683594,
+        212.4968719482422,
+        326.2582092285156,
+        261.1943664550781
+      ],
+      "text_sha256": "791e159e211a79fcebfd34149141105a434f5e4a63a18e9406055dec70ec4d05"
+    },
+    {
+      "block_id": "page-0060-block-0015",
+      "order": 15,
+      "text": "Amisulpride, aripiprazole, \nbrexpiprazole, \ncariprazine, lurasidone, \ntrifluoperazine, sulpiride\n",
+      "bbox": [
+        337.59063720703125,
+        212.48936462402344,
+        420.9306945800781,
+        251.18936157226562
+      ],
+      "text_sha256": "fcd10df853eda401455e595c4408768b19bd2030164e2f82d559e017a1dadbf5"
+    },
+    {
+      "block_id": "page-0060-block-0016",
+      "order": 16,
+      "text": "Prolactin\nBaseline, then at 6 \nmonths, then yearly \nto detect \nantipsychotic-\ninduced changes\n",
+      "bbox": [
+        48.00813293457031,
+        317.3243408203125,
+        162.54063415527344,
+        366.20184326171875
+      ],
+      "text_sha256": "dbb6ab8faa03878cf29de8b62284ebde22c376900ad7de07d83ababd12d7af3c"
+    },
+    {
+      "block_id": "page-0060-block-0017",
+      "order": 17,
+      "text": "Switch medications if \nhyperprolactinaemia \nconfirmed and \nsymptomatic. Consider \ntests of bone mineral \ndensity (e.g. DEXA \nscanning) for those with \nchronically raised \nprolactin.\n",
+      "bbox": [
+        168.12063598632812,
+        317.4968566894531,
+        247.72564697265625,
+        406.184326171875
+      ],
+      "text_sha256": "21ca9d7331248550c2ab0d51453a8855ba54faed9babf90bcfa7302ef708e9f9"
+    },
+    {
+      "block_id": "page-0060-block-0018",
+      "order": 18,
+      "text": "Amisulpride, sulpiride, \nrisperidone and \npaliperidone particularly \nassociated with \nhyperprolactinaemia\n",
+      "bbox": [
+        254.5956268310547,
+        317.4743347167969,
+        333.3457336425781,
+        366.17181396484375
+      ],
+      "text_sha256": "ba077c187f76dad1f0565e655e72ff86cbc5244d4baed7649ab97987a6b39727"
+    },
+    {
+      "block_id": "page-0060-block-0019",
+      "order": 19,
+      "text": "Asenapine, aripiprazole, \nbrexpiprazole, \ncariprazine, clozapine, \nlurasidone, quetiapine, \nolanzapine (<20mg), and \nziprasidone usually do \nnot elevate plasma \nprolactin, but worth \nmeasuring if symptoms \narise\n",
+      "bbox": [
+        337.59814453125,
+        317.4668273925781,
+        420.0456848144531,
+        416.15179443359375
+      ],
+      "text_sha256": "f3aba614cf13143ab650037d26227ee5ae5e26cdc9dacb63f2e4468eb788b5f9"
+    },
+    {
+      "block_id": "page-0060-block-0020",
+      "order": 20,
+      "text": "Liver \nfunction \ntests \n(LFTs)23–25\n",
+      "bbox": [
+        48.01564025878906,
+        422.2867736816406,
+        79.68063354492188,
+        461.1667785644531
+      ],
+      "text_sha256": "6d071e990e6635755da15a224db23ead70af045ed4b630d4401ebdd31f79e43c"
+    },
+    {
+      "block_id": "page-0060-block-0021",
+      "order": 21,
+      "text": "Baseline, then yearly \nas part of a routine \nphysical health \ncheck and to detect \nchronic \nantipsychotic-\ninduced changes \n(rare)\n",
+      "bbox": [
+        97.10940551757812,
+        422.6019287109375,
+        164.1968994140625,
+        501.2919006347656
+      ],
+      "text_sha256": "e5de80063a2316db83a02e2b536b20a12adb93ac3a5dd2a5d4d530848bc87bea"
+    },
+    {
+      "block_id": "page-0060-block-0022",
+      "order": 22,
+      "text": "Stop suspect medication \nif LFTs indicate hepatitis \n(transaminases × 3 \nnormal) or functional \ndamage (PT/albumin \nchange)\n",
+      "bbox": [
+        168.11190795898438,
+        422.5869140625,
+        248.1219482421875,
+        481.2818908691406
+      ],
+      "text_sha256": "4e2c2b39f935687ba6895ecd9675a68957251232d20ab756a84c68f774eccd0e"
+    },
+    {
+      "block_id": "page-0060-block-0023",
+      "order": 23,
+      "text": "Clozapine and \nchlorpromazine \nassociated with hepatic \nfailure\n",
+      "bbox": [
+        254.58689880371094,
+        422.5718994140625,
+        331.2594299316406,
+        461.2718811035156
+      ],
+      "text_sha256": "50a9dda6ecbfe7c4044301ed2aa2e0a80e08c371f084727135cdc33f493593c7"
+    },
+    {
+      "block_id": "page-0060-block-0024",
+      "order": 24,
+      "text": "Amisulpride, sulpiride\n",
+      "bbox": [
+        337.58941650390625,
+        422.56439208984375,
+        406.34954833984375,
+        431.2718811035156
+      ],
+      "text_sha256": "48d21c6e2c6a72234e147854f14f5eed4566b08a65e5cc89d420000bd2ec88a8"
+    },
+    {
+      "block_id": "page-0060-block-0025",
+      "order": 25,
+      "text": "Creatinine  \nphospho \nkinase (CPK)\n",
+      "bbox": [
+        48.00691223144531,
+        507.411865234375,
+        90.10440063476562,
+        536.2943725585938
+      ],
+      "text_sha256": "4f6bf8c439823fc2e3a4d3af1172ceaff69ebbac9b0664292aa119bc561bfd33"
+    },
+    {
+      "block_id": "page-0060-block-0026",
+      "order": 26,
+      "text": "Baseline, then if NMS \nsuspected\n",
+      "bbox": [
+        97.11691284179688,
+        507.5843811035156,
+        167.54940795898438,
+        526.2893676757812
+      ],
+      "text_sha256": "09d45cf6009687a27dc9744ba019841766a13e4df8cbd9e63890a11bc0ba6f3f"
+    },
+    {
+      "block_id": "page-0060-block-0027",
+      "order": 27,
+      "text": "See the section on NMS\nNMS more likely with \nhigh-potency first-\ngeneration antipsychotic \nmedications\n",
+      "bbox": [
+        168.11941528320312,
+        507.5843811035156,
+        332.6018371582031,
+        546.2843627929688
+      ],
+      "text_sha256": "f4802c4765995689570e138ec9b4b7339a4e7d5a8910068d5d3190c311d6cd52"
+    },
+    {
+      "block_id": "page-0060-block-0028",
+      "order": 28,
+      "text": "None\n",
+      "bbox": [
+        337.596923828125,
+        507.5768737792969,
+        354.689453125,
+        516.2843627929688
+      ],
+      "text_sha256": "af5d8a21858f42808c9bcc17012b77bcc2fd6ab3b071dbd4a05f13f410470541"
+    },
+    {
+      "block_id": "page-0060-block-0029",
+      "order": 29,
+      "text": "Other tests: Patients on clozapine may benefit from an EEG,26,27 as this may help determine the need for anticonvul-\nsant treatment (although interpretation is obviously complex). Those on quetiapine should have thyroid function \ntests yearly, although the risk of abnormality is very small.28,29\n",
+      "bbox": [
+        48.00212097167969,
+        556.3943481445312,
+        417.99969482421875,
+        585.3294067382812
+      ],
+      "text_sha256": "19f0b6d746990b8498a2368adce48e0ca216c95242e8f5b9c6e542bbdd5ab8ba"
+    },
+    {
+      "block_id": "page-0060-block-0030",
+      "order": 30,
+      "text": "Key: DEXA, dual-energy X-ray absorptiometry; NMS, neuroleptic malignant syndrome; PT, prothrombin time;  \nBMI – body mass index; ECG – electrocardiograph; EEG – electroencephalogram; GFR – glomerular filtration rate; \nIFG – impaired fasting glucose.\nNote: This table is a summary – see individual sections for detail and discussion.\n",
+      "bbox": [
+        47.99909973144531,
+        586.4468994140625,
+        410.9541931152344,
+        625.326904296875
+      ],
+      "text_sha256": "5a8590213e9966476d8a454d34f1094756d9fee56b2f7922b1ded4f270884810"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

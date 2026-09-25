@@ -1,0 +1,599 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0636",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 636,
+  "source_page_index": 635,
+  "source_page_display": 636,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Memantine\n(Exiba®)\nPrimarily \nnon-hepatic \nmetabolism\nRenally \neliminated\nCimetidine\nRanitidine\nProcainamide\nQuinidine\nQuinine\nNicotine\nTrimethoprim\nIsolated cases of \nINR increases \nreported with \nconcomitant \nwarfarin (close \nmonitoring of \nprothrombin time \nor INR advisable).\nDrugs that \nalkalinise urine \n(pH ~ 8) may \nreduce renal \nelimination of \nmemantine, e.g. \ncarbonic \nanhydrase \ninhibitors, \nsodium \nbicarbonate\nNone known\n(Possibility of reduced \nserum level of \nhydrochlorothiazide \nwhen co-administered \nwith memantine).\nEffects of L-dopa, dopaminergic agonists, selegiline and anticholinergics may be enhanced.\nEffects of barbiturates and antipsychotics may be reduced.\nAvoid concomitant use with amantadine, ketamine and dextromethorphan – increased risk of \nCNS toxicity. One published case report on possible risk for phenytoin and memantine \ncombination.\nDosage adjustment may be necessary for antispasmodic agents, dantrolene or baclofen when \nadministered with memantine.\nA single case report of myoclonus and confusion when co-administered with co-trimoxazole or \ntrimethoprim\nNB: This list is not exhaustive – caution with other drugs that are also inhibitors or enhancers of CYP 3A4 and 2D6 enzymes.\n",
+  "raw_text_sha256": "121d22606f60cb4d379afe08a67a9010b564c12d3d017d092bd79277afc042bd",
+  "coordinates_sha256": "380fd5a7193cc28c7130b53d14da1c9a4ec6e7e57a877d7b137a042c5cfb2c62",
+  "block_sequence_sha256": "fc89aff450e24b72477a3078796bb6abf2b47c9ffaa455d9b768dbb9fbeb9eaf",
+  "blocks": [
+    {
+      "block_id": "page-0636-block-0000",
+      "order": 0,
+      "text": "Memantine\n",
+      "bbox": [
+        93.47990417480469,
+        595.1685180664062,
+        102.1874008178711,
+        631.8359985351562
+      ],
+      "text_sha256": "7e3dc6e3071bb16b3fbe386ab22fecdbd666d3bc1f74f537f2808c226af7cc02"
+    },
+    {
+      "block_id": "page-0636-block-0001",
+      "order": 1,
+      "text": "(Exiba®)\nPrimarily \n",
+      "bbox": [
+        93.48240661621094,
+        553.6832885742188,
+        112.1874008178711,
+        631.8359985351562
+      ],
+      "text_sha256": "44fe3df97886df826fb3a55fddb45cd8712e50b4a91b6e4c0bfa6d7505b7b727"
+    },
+    {
+      "block_id": "page-0636-block-0002",
+      "order": 2,
+      "text": "non-hepatic \n",
+      "bbox": [
+        103.47990417480469,
+        542.4108276367188,
+        112.1874008178711,
+        582.8358154296875
+      ],
+      "text_sha256": "98d48e8e89918e726050ac6527ac8e8dbc67c0165ed791c3d8da3c161771090e"
+    },
+    {
+      "block_id": "page-0636-block-0003",
+      "order": 3,
+      "text": "metabolism\n",
+      "bbox": [
+        113.47740173339844,
+        545.7557983398438,
+        122.18489837646484,
+        582.8358154296875
+      ],
+      "text_sha256": "2601ac5a65b676b2b6809fcb697098d1344ece64088bbcf626863042455f4340"
+    },
+    {
+      "block_id": "page-0636-block-0004",
+      "order": 4,
+      "text": "Renally \n",
+      "bbox": [
+        123.47490692138672,
+        558.2507934570312,
+        132.18240356445312,
+        582.8358154296875
+      ],
+      "text_sha256": "0602ce7fba6cc3e47213d4a7e72128cd1c39f7c674a0ba157af3bcdacc44cb9d"
+    },
+    {
+      "block_id": "page-0636-block-0005",
+      "order": 5,
+      "text": "eliminated\n",
+      "bbox": [
+        133.47239685058594,
+        549.5057983398438,
+        142.17990112304688,
+        582.8358154296875
+      ],
+      "text_sha256": "8c9f431a18eb4382b3b42f9580c19dd8eceefb031db64826f768d687f442d94f"
+    },
+    {
+      "block_id": "page-0636-block-0006",
+      "order": 6,
+      "text": "Cimetidine\n",
+      "bbox": [
+        93.29490661621094,
+        482.90576171875,
+        102.18240356445312,
+        520.8333129882812
+      ],
+      "text_sha256": "2ebd6477a6542aead9e9c77b9a2c53e26a5d58d0ca99a74600c8232e3ac52ee9"
+    },
+    {
+      "block_id": "page-0636-block-0007",
+      "order": 7,
+      "text": "Ranitidine\n",
+      "bbox": [
+        103.29240417480469,
+        484.9907531738281,
+        112.17990112304688,
+        520.8333129882812
+      ],
+      "text_sha256": "85c37afb92db7a52b6bb0691e27130b4d448502728e866df96b0ed8963e965a0"
+    },
+    {
+      "block_id": "page-0636-block-0008",
+      "order": 8,
+      "text": "Procainamide\n",
+      "bbox": [
+        113.28990173339844,
+        473.4557800292969,
+        122.17739868164062,
+        520.8333129882812
+      ],
+      "text_sha256": "08e2f8d64b6e2a5f0e7a061514738f75a10c045ec0212c30678b2f848fdd3e78"
+    },
+    {
+      "block_id": "page-0636-block-0009",
+      "order": 9,
+      "text": "Quinidine\n",
+      "bbox": [
+        123.28739929199219,
+        486.2432556152344,
+        132.17489624023438,
+        520.8333129882812
+      ],
+      "text_sha256": "c014a04f8b5f7dab1bd64b63c769d55edd2074cb0dc0e3213161a66a095fb203"
+    },
+    {
+      "block_id": "page-0636-block-0010",
+      "order": 10,
+      "text": "Quinine\n",
+      "bbox": [
+        133.28489685058594,
+        492.9107360839844,
+        142.17239379882812,
+        520.8333129882812
+      ],
+      "text_sha256": "82530006d259cbe7191d6943f030d1e32b5e26ccb56c5a79b24ba7c92b5d8e2a"
+    },
+    {
+      "block_id": "page-0636-block-0011",
+      "order": 11,
+      "text": "Nicotine\n",
+      "bbox": [
+        143.2823944091797,
+        491.665771484375,
+        152.16989135742188,
+        520.8333129882812
+      ],
+      "text_sha256": "95899a3c0357a59c83893e5e9ded7669ba6db9e70ca4910d1750bd2dcce64ca9"
+    },
+    {
+      "block_id": "page-0636-block-0012",
+      "order": 12,
+      "text": "Trimethoprim\n",
+      "bbox": [
+        153.27989196777344,
+        473.17828369140625,
+        162.16738891601562,
+        520.8333129882812
+      ],
+      "text_sha256": "cb033fce0c6357b2a2dc01277dc1350d7b79f82df49361fec648498f74bbcd65"
+    },
+    {
+      "block_id": "page-0636-block-0013",
+      "order": 13,
+      "text": "Isolated cases of \n",
+      "bbox": [
+        166.45738220214844,
+        466.66082763671875,
+        175.16488647460938,
+        520.8333129882812
+      ],
+      "text_sha256": "cd265906da695ddfcd23b78045e68296221f4be6c527d9210232892edb8a5832"
+    },
+    {
+      "block_id": "page-0636-block-0014",
+      "order": 14,
+      "text": "INR increases \n",
+      "bbox": [
+        176.4548797607422,
+        477.21331787109375,
+        185.16238403320312,
+        520.8333129882812
+      ],
+      "text_sha256": "9b58ae4e21266c84fa4a057ef2650556d6792c4ad8e5016010f6b950c13cdac8"
+    },
+    {
+      "block_id": "page-0636-block-0015",
+      "order": 15,
+      "text": "reported with \n",
+      "bbox": [
+        186.45237731933594,
+        475.1283264160156,
+        195.15988159179688,
+        520.8333129882812
+      ],
+      "text_sha256": "5b060504aa2598ae24784fde3255a272ee39f5439b4ba55fe30502f68854886b"
+    },
+    {
+      "block_id": "page-0636-block-0016",
+      "order": 16,
+      "text": "concomitant \n",
+      "bbox": [
+        196.4498748779297,
+        478.7508239746094,
+        205.15737915039062,
+        520.8333129882812
+      ],
+      "text_sha256": "b0e817526c00d082d80fa4cb340486d8cf11d40116c54b79fa8334a7b321e6bb"
+    },
+    {
+      "block_id": "page-0636-block-0017",
+      "order": 17,
+      "text": "warfarin (close \n",
+      "bbox": [
+        206.44737243652344,
+        472.08331298828125,
+        215.15487670898438,
+        520.8333129882812
+      ],
+      "text_sha256": "7592cb694cf1340eff413932a52b9cca700273020d5be9fcba957fa1befa5510"
+    },
+    {
+      "block_id": "page-0636-block-0018",
+      "order": 18,
+      "text": "monitoring of \n",
+      "bbox": [
+        216.4448699951172,
+        474.5733337402344,
+        225.15237426757812,
+        520.8333129882812
+      ],
+      "text_sha256": "19a1d7852aded41b60bb36080c978938ea04919e40a9abd0905fb5b6f0e4a138"
+    },
+    {
+      "block_id": "page-0636-block-0019",
+      "order": 19,
+      "text": "prothrombin time \n",
+      "bbox": [
+        226.44236755371094,
+        462.34832763671875,
+        235.14987182617188,
+        520.8333129882812
+      ],
+      "text_sha256": "a477eb6bb6d1f0436eed655f27cacbf86365a126bb1a2b4cc4e5e1b0fe06a86e"
+    },
+    {
+      "block_id": "page-0636-block-0020",
+      "order": 20,
+      "text": "or INR advisable).\n",
+      "bbox": [
+        236.4398651123047,
+        465.8208312988281,
+        245.14736938476562,
+        520.8333129882812
+      ],
+      "text_sha256": "7c8b3fd02d54f35d81f3c0b8f850843fd5abdcd9ad20b1a764b2c4c8e64c50a7"
+    },
+    {
+      "block_id": "page-0636-block-0021",
+      "order": 21,
+      "text": "Drugs that \n",
+      "bbox": [
+        249.43736267089844,
+        484.9908142089844,
+        258.1448669433594,
+        520.8333129882812
+      ],
+      "text_sha256": "06da0a91e4fc0e83dfafc64d546bda2102fc80c56523a5c2c0abf61df5834f45"
+    },
+    {
+      "block_id": "page-0636-block-0022",
+      "order": 22,
+      "text": "alkalinise urine \n",
+      "bbox": [
+        259.43487548828125,
+        471.6633605957031,
+        268.1423645019531,
+        520.8333129882812
+      ],
+      "text_sha256": "16ffded9e0344c1fcf1d17605b3a473db5aec75daea469aafcee1eefd5ba0e16"
+    },
+    {
+      "block_id": "page-0636-block-0023",
+      "order": 23,
+      "text": "(pH ~ 8) may \n",
+      "bbox": [
+        269.432373046875,
+        477.1532897949219,
+        278.1398620605469,
+        520.8333129882812
+      ],
+      "text_sha256": "b29857f3924c0799267466b71c4b43d60ea2b167a6d635f128832c55ff3cebe6"
+    },
+    {
+      "block_id": "page-0636-block-0024",
+      "order": 24,
+      "text": "reduce renal \n",
+      "bbox": [
+        279.42987060546875,
+        479.4333190917969,
+        288.1373596191406,
+        520.8333129882812
+      ],
+      "text_sha256": "6e02bc37a20079651d4a0cb6cc489348b7f1a6d1c91da2882ba0f74fc001d400"
+    },
+    {
+      "block_id": "page-0636-block-0025",
+      "order": 25,
+      "text": "elimination of \n",
+      "bbox": [
+        289.4273681640625,
+        474.5808410644531,
+        298.1348571777344,
+        520.8333129882812
+      ],
+      "text_sha256": "f9a751af7e8610aeda0d3d1570d9e5a0f219e53b86b294f1d37b0bc1a901cd1c"
+    },
+    {
+      "block_id": "page-0636-block-0026",
+      "order": 26,
+      "text": "memantine, e.g. \n",
+      "bbox": [
+        299.42486572265625,
+        466.2408142089844,
+        308.1323547363281,
+        520.8333129882812
+      ],
+      "text_sha256": "2036b92a0864aa878ce170d8d972430b6bb1b0b2cdfd49e7fc06518e2aa0a7f2"
+    },
+    {
+      "block_id": "page-0636-block-0027",
+      "order": 27,
+      "text": "carbonic \n",
+      "bbox": [
+        309.2423400878906,
+        489.1683044433594,
+        318.1298522949219,
+        520.8333129882812
+      ],
+      "text_sha256": "6f8da5f4d17c7d3a9cc27d850aed7bed923e9240c1ade39a26c76b75be8cb286"
+    },
+    {
+      "block_id": "page-0636-block-0028",
+      "order": 28,
+      "text": "anhydrase \n",
+      "bbox": [
+        319.2398376464844,
+        482.07330322265625,
+        328.1273498535156,
+        520.8333129882812
+      ],
+      "text_sha256": "e665b43ca143cd8332a499a26bbaa82e3d8dfb7ff331e457fd827b4ae9808264"
+    },
+    {
+      "block_id": "page-0636-block-0029",
+      "order": 29,
+      "text": "inhibitors, \n",
+      "bbox": [
+        329.2373352050781,
+        482.91326904296875,
+        338.1248474121094,
+        520.8333129882812
+      ],
+      "text_sha256": "34af2de033e23eeda80032a17684eaa05d241f0be322454c5af61bb3079746bd"
+    },
+    {
+      "block_id": "page-0636-block-0030",
+      "order": 30,
+      "text": "sodium \n",
+      "bbox": [
+        339.2348327636719,
+        492.9183044433594,
+        348.1223449707031,
+        520.8333129882812
+      ],
+      "text_sha256": "8b4597fe9db7226fe55e7dcb2250dc46bbfba2646ff2a99336740983c6f74494"
+    },
+    {
+      "block_id": "page-0636-block-0031",
+      "order": 31,
+      "text": "bicarbonate\n",
+      "bbox": [
+        349.2323303222656,
+        478.7432556152344,
+        358.1198425292969,
+        520.8333129882812
+      ],
+      "text_sha256": "7b5bda0f82696d9a9ca65e2d44d4d455376970ca3766d3f75d69a3356958c96e"
+    },
+    {
+      "block_id": "page-0636-block-0032",
+      "order": 32,
+      "text": "None known\n",
+      "bbox": [
+        93.41484832763672,
+        412.9832763671875,
+        102.12234497070312,
+        454.25579833984375
+      ],
+      "text_sha256": "ba6586dc579443d5e17252c96d100bb0bdb30ec0ac15a8dc02e530767503ecc9"
+    },
+    {
+      "block_id": "page-0636-block-0033",
+      "order": 33,
+      "text": "(Possibility of reduced \n",
+      "bbox": [
+        103.41234588623047,
+        383.13330078125,
+        112.11984252929688,
+        454.25579833984375
+      ],
+      "text_sha256": "b2332d00697fb7a7162ca8a549ed6d099efc558d4cc1dae1f3fa358a8850c779"
+    },
+    {
+      "block_id": "page-0636-block-0034",
+      "order": 34,
+      "text": "serum level of \n",
+      "bbox": [
+        113.40984344482422,
+        407.5908203125,
+        122.11734008789062,
+        454.25579833984375
+      ],
+      "text_sha256": "a1e9dd67c9f7d089d4a947432a0f900ad7ccb1c0ad8134ea91af9a30856a10f8"
+    },
+    {
+      "block_id": "page-0636-block-0035",
+      "order": 35,
+      "text": "hydrochlorothiazide \n",
+      "bbox": [
+        123.22734069824219,
+        381.183349609375,
+        132.11483764648438,
+        454.25579833984375
+      ],
+      "text_sha256": "89b3393dcec8dc20f23f9582b9a48ad8a6eddf6b382a59cd29d3a8481e4cc207"
+    },
+    {
+      "block_id": "page-0636-block-0036",
+      "order": 36,
+      "text": "when co-administered \n",
+      "bbox": [
+        133.4048309326172,
+        381.1682434082031,
+        142.11233520507812,
+        454.25579833984375
+      ],
+      "text_sha256": "d5069d872d38802cff9ca55d4c78ab15649c9e651be359b4d97d4314ab66ac48"
+    },
+    {
+      "block_id": "page-0636-block-0037",
+      "order": 37,
+      "text": "with memantine).\n",
+      "bbox": [
+        143.40232849121094,
+        397.5857849121094,
+        152.10983276367188,
+        454.25579833984375
+      ],
+      "text_sha256": "481950cfb50c090359dbd034571e2eeac006097d1e5976d8e314e852f5bfcfc4"
+    },
+    {
+      "block_id": "page-0636-block-0038",
+      "order": 38,
+      "text": "Effects of L-dopa, dopaminergic agonists, selegiline and anticholinergics may be enhanced.\n",
+      "bbox": [
+        93.21983337402344,
+        64.93831634521484,
+        102.10733032226562,
+        375.25830078125
+      ],
+      "text_sha256": "a4df3fa8397c905cadb13eb14dc22416d9a79db7ac1b60711f149f6b9730c41c"
+    },
+    {
+      "block_id": "page-0636-block-0039",
+      "order": 39,
+      "text": "Effects of barbiturates and antipsychotics may be reduced.\n",
+      "bbox": [
+        103.21733093261719,
+        178.42835998535156,
+        112.10482788085938,
+        375.25830078125
+      ],
+      "text_sha256": "81a50e4c852f673a61bf0a31086ef68c54f2e6976b17ff97f7a68ba401adde8c"
+    },
+    {
+      "block_id": "page-0636-block-0040",
+      "order": 40,
+      "text": "Avoid concomitant use with amantadine, ketamine and dextromethorphan – increased risk of \n",
+      "bbox": [
+        113.21482849121094,
+        59.755760192871094,
+        122.10232543945312,
+        375.25830078125
+      ],
+      "text_sha256": "36125707884fb022f58f52b7b91906b83d65e7c0c6a94aad81d5721cd44842c1"
+    },
+    {
+      "block_id": "page-0636-block-0041",
+      "order": 41,
+      "text": "CNS toxicity. One published case report on possible risk for phenytoin and memantine \n",
+      "bbox": [
+        123.21232604980469,
+        94.78816986083984,
+        132.09982299804688,
+        375.25830078125
+      ],
+      "text_sha256": "e10dc5cb3607bbb51a9fbfa93b3a58addbfe7caa510acfac549d24f654a8454a"
+    },
+    {
+      "block_id": "page-0636-block-0042",
+      "order": 42,
+      "text": "combination.\n",
+      "bbox": [
+        133.3898162841797,
+        333.1682434082031,
+        142.09732055664062,
+        375.25830078125
+      ],
+      "text_sha256": "9838871082937bd2d409fbb161609b7a06a7b5ad15955c98ad5e7a25daf5c0b7"
+    },
+    {
+      "block_id": "page-0636-block-0043",
+      "order": 43,
+      "text": "Dosage adjustment may be necessary for antispasmodic agents, dantrolene or baclofen when \n",
+      "bbox": [
+        146.2073211669922,
+        59.928184509277344,
+        155.09481811523438,
+        375.25830078125
+      ],
+      "text_sha256": "74318f76eec16fc95e17a18dad006047e1d042b15919e4a0f8e5f3cd68aaeaa3"
+    },
+    {
+      "block_id": "page-0636-block-0044",
+      "order": 44,
+      "text": "administered with memantine.\n",
+      "bbox": [
+        156.3848114013672,
+        277.4732360839844,
+        165.09231567382812,
+        375.25830078125
+      ],
+      "text_sha256": "44600d0a3344090ae236fa20b4eab720667c8a55a1115d2910f6bcfc090fdee2"
+    },
+    {
+      "block_id": "page-0636-block-0045",
+      "order": 45,
+      "text": "A single case report of myoclonus and confusion when co-administered with co-trimoxazole or \n",
+      "bbox": [
+        166.2023162841797,
+        65.0506820678711,
+        175.08981323242188,
+        375.25830078125
+      ],
+      "text_sha256": "3a4d855c03562b773af2a737ecae701427a82c0a00f5eb5df13a6eeb058c7663"
+    },
+    {
+      "block_id": "page-0636-block-0046",
+      "order": 46,
+      "text": "trimethoprim\n",
+      "bbox": [
+        176.19981384277344,
+        328.165771484375,
+        185.08731079101562,
+        375.25830078125
+      ],
+      "text_sha256": "811a85d41c8a3baaabba3c9997b691098693542bb81ccb315dc4893041666602"
+    },
+    {
+      "block_id": "page-0636-block-0047",
+      "order": 47,
+      "text": "NB: This list is not exhaustive – caution with other drugs that are also inhibitors or enhancers of CYP 3A4 and 2D6 enzymes.\n",
+      "bbox": [
+        380.6273193359375,
+        239.63563537597656,
+        389.3348083496094,
+        635.8382568359375
+      ],
+      "text_sha256": "64bbd3d5bb23c1a2d95e3cc922c26fbff05f786bd6022f73ff593e5ae74c3809"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

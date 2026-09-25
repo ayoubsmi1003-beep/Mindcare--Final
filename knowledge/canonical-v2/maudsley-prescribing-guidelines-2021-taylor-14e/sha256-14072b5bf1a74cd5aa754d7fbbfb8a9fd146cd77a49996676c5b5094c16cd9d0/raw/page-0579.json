@@ -1,0 +1,263 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0579",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 579,
+  "source_page_index": 578,
+  "source_page_display": 579,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "558    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  5\nescitalopram have been approved for treatment of paediatric depression. The US FDA \nissued in 2004 a Black Box warning for concerns related to worsening of depression, \nagitation, and suicidal ideation linked to SSRIs. These concerns were based on a \nreview of studies of adolescents with depression rather than young people with \nanxiety.\n■\n■Serotonin–norepinephrine reuptake inhibitors (SNRIs). Venlafaxine was tested in \ntwo short-term RCTs (n treatment = 294, n control = 311), duloxetine was tested in \none short-term RCT (n treatment = 135, n control = 137), and atomoxetine was \ntested in one short-term RCT. The overall odds ratio of treatment response for SNRIs \nwas 2.4 (95% CI = 1.7–3.6) over placebo.8 However, SNRIs did show statistically \nsignificant effects on improvement in anxiety symptoms over placebo, with mean dif-\nference of 2.5 (95% CI  =0.1–5.1).8 The network meta-analysis mentioned earlier \nfound that SNRIs significantly reduce clinician-reported (but not parent-reported or \nchild-reported) anxiety symptoms.10 SSRIs are more effective and better tolerated8 so \nSNRIs could be considered a third-line treatment for anxiety disorders when two tri-\nals with different SSRIs prove ineffective.\n■\n■The 5HT1A agonist, buspirone has been examined in one short-term RCT (n treat-\nment = 334, n control = 225) and found not to be associated with significant odds \nratio for treatment response (1.3 (95% CI = 0.7–3.4)) or mean improvement in anxi-\nety symptoms (0.8 (95% CI = –3.1 to 4.8)) over placebo.13\n■\n■The alpha2 agonist, guanfacine, was evaluated in one short-term RCT (n treat-\nment = 62, n control = 21) and found to be associated with significant odds ratio for \ntreatment response (5.6 (95% CI = 1.4–26.8)) but not in mean improvement in anxi-\nety symptoms (3.4 (95% CI = –3.2 to 10)) over placebo.14\n■\n■Neither benzodiazepine nor tricyclic antidepressant use is supported by controlled \ntrials in children.8 Benzodiazepine may also lead to paradoxical disinhibition in some \nchildren. Nevertheless, use of longer-acting benzodiazepines is at times considered in \nclinical practice to alleviate disabling anxiety during initial titration of SSRIs and for \nrapid tranquillisation (see Table 5.5).\nAfter prescribing\n■\n■Acute phase\n■\n■Start at lowest available dose\n■\n■Monitor side effects. SSRIs are generally well tolerated during treatment for anxi-\nety disorders in young people. Psychological side effects include worsening of \n­anxiety symptoms, agitation and disinhibition.  Physical side effects including gas-\ntrointestinal symptoms (e.g. nausea, vomiting, dyspepsia, abdominal pain, diar-\nrhoea, constipation), headache, increased motor activity, and insomnia may occur, \noften in mild and transient form.\n■\n■After 1 week of treatment with SSRIs (2 weeks for SNRIs) when the child is compli-\nant with medications and does not manifest more than minimal side effects, titrate \nincrementally with weekly intervals to the minimal therapeutic dose.\n■\n■Monitor side effects (see the list point above) and response (e.g. RCADS, SCARED, \nMASC, CGAS, CGI-I) frequently and systematically.\n",
+  "raw_text_sha256": "4127e5acb1624093feb1e7bd29303bc5f6a6c1a570c6369fba8c7d212dd47fe0",
+  "coordinates_sha256": "01fa730312411e9d3a111b052cdc0f070dfb767b21d506e76bd1a5c1ca4ecdc2",
+  "block_sequence_sha256": "b1330b2fd1b06ffb426dc10580379c6ea72d8d8cedd66609d35a48e0607390db",
+  "blocks": [
+    {
+      "block_id": "page-0579-block-0000",
+      "order": 0,
+      "text": "558    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "3dd5b3ecda05248b5e0a4bcd16101ccdf3e0cc359807fdd77af10fade1172200"
+    },
+    {
+      "block_id": "page-0579-block-0001",
+      "order": 1,
+      "text": "CHAPTER  5\n",
+      "bbox": [
+        18.520000457763672,
+        338.22650146484375,
+        28.0,
+        381.79449462890625
+      ],
+      "text_sha256": "4086e0916f45ec531cc17b8c611334eb2b1ef26051ba536579b8ef3c22c1648d"
+    },
+    {
+      "block_id": "page-0579-block-0002",
+      "order": 2,
+      "text": "escitalopram have been approved for treatment of paediatric depression. The US FDA \nissued in 2004 a Black Box warning for concerns related to worsening of depression, \nagitation, and suicidal ideation linked to SSRIs. These concerns were based on a \nreview of studies of adolescents with depression rather than young people with \nanxiety.\n",
+      "bbox": [
+        70.88999938964844,
+        62.55029296875,
+        436.71002197265625,
+        122.27029418945312
+      ],
+      "text_sha256": "3ab7b323bb69fd8a4dd8484089905aeb1961c02b648951bc5180d88015af354a"
+    },
+    {
+      "block_id": "page-0579-block-0003",
+      "order": 3,
+      "text": "■\n■Serotonin–norepinephrine reuptake inhibitors (SNRIs). Venlafaxine was tested in \n",
+      "bbox": [
+        61.88990020751953,
+        122.31029510498047,
+        436.6799621582031,
+        134.27029418945312
+      ],
+      "text_sha256": "387573b3d60d864193796e33f939cf764a4866a40fc4719ea31474af9dc793e5"
+    },
+    {
+      "block_id": "page-0579-block-0004",
+      "order": 4,
+      "text": "two short-term RCTs (n treatment = 294, n control = 311), duloxetine was tested in \none short-term RCT (n treatment = 135, n control = 137), and atomoxetine was \ntested in one short-term RCT. The overall odds ratio of treatment response for SNRIs \nwas 2.4 (95% CI = 1.7–3.6) over placebo.8 However, SNRIs did show statistically \nsignificant effects on improvement in anxiety symptoms over placebo, with mean dif-\nference of 2.5 (95% CI  =0.1–5.1).8 The network meta-analysis mentioned earlier \nfound that SNRIs significantly reduce clinician-reported (but not parent-reported or \nchild-reported) anxiety symptoms.10 SSRIs are more effective and better tolerated8 so \nSNRIs could be considered a third-line treatment for anxiety disorders when two tri-\nals with different SSRIs prove ineffective.\n",
+      "bbox": [
+        70.88609313964844,
+        134.55029296875,
+        436.6999206542969,
+        254.27029418945312
+      ],
+      "text_sha256": "c6d1e07254f995f9200e5c3ce2da6df73bb722ae7aa7485bb780e00acb9390aa"
+    },
+    {
+      "block_id": "page-0579-block-0005",
+      "order": 5,
+      "text": "■\n■The 5HT1A agonist, buspirone has been examined in one short-term RCT (n treat-\n",
+      "bbox": [
+        61.88990020751953,
+        254.55029296875,
+        433.9217224121094,
+        268.6495361328125
+      ],
+      "text_sha256": "b18ec4c14164b4f482097f5331e90869b0ee6d70bb3aa615414be29a833a9777"
+    },
+    {
+      "block_id": "page-0579-block-0006",
+      "order": 6,
+      "text": "ment = 334, n control = 225) and found not to be associated with significant odds \nratio for treatment response (1.3 (95% CI = 0.7–3.4)) or mean improvement in anxi-\nety symptoms (0.8 (95% CI = –3.1 to 4.8)) over placebo.13\n",
+      "bbox": [
+        70.8917007446289,
+        266.55029296875,
+        436.6115417480469,
+        302.2702941894531
+      ],
+      "text_sha256": "d47b8a756ab5b7f100b4776b52a8ea9a02598ca6552a7171928699b9bda79402"
+    },
+    {
+      "block_id": "page-0579-block-0007",
+      "order": 7,
+      "text": "■\n■The alpha2 agonist, guanfacine, was evaluated in one short-term RCT (n treat-\n",
+      "bbox": [
+        61.88990020751953,
+        302.55029296875,
+        433.8548889160156,
+        316.6495361328125
+      ],
+      "text_sha256": "c3a5fad1f2809cb1a90967e92c990105d0566bb7611261651c5fb1559be625e9"
+    },
+    {
+      "block_id": "page-0579-block-0008",
+      "order": 8,
+      "text": "ment = 62, n control = 21) and found to be associated with significant odds ratio for \ntreatment response (5.6 (95% CI = 1.4–26.8)) but not in mean improvement in anxi-\nety symptoms (3.4 (95% CI = –3.2 to 10)) over placebo.14\n",
+      "bbox": [
+        70.8948974609375,
+        314.55029296875,
+        436.6947326660156,
+        350.2702941894531
+      ],
+      "text_sha256": "6f7ade3bb63cf3757009984ea6aeea8bb29b13c503715a8ac3cd38221d7da0e9"
+    },
+    {
+      "block_id": "page-0579-block-0009",
+      "order": 9,
+      "text": "■\n■Neither benzodiazepine nor tricyclic antidepressant use is supported by controlled \n",
+      "bbox": [
+        61.88990020751953,
+        350.55029296875,
+        436.7001037597656,
+        362.2702941894531
+      ],
+      "text_sha256": "4d567333f800191f4f529ac44fe75514ebe8b838f87400a2cf75e8b49dc11700"
+    },
+    {
+      "block_id": "page-0579-block-0010",
+      "order": 10,
+      "text": "trials in children.8 Benzodiazepine may also lead to paradoxical disinhibition in some \nchildren. Nevertheless, use of longer-acting benzodiazepines is at times considered in \nclinical practice to alleviate disabling anxiety during initial titration of SSRIs and for \nrapid tranquillisation (see Table 5.5).\n",
+      "bbox": [
+        70.88999938964844,
+        362.55029296875,
+        436.7037353515625,
+        410.2702941894531
+      ],
+      "text_sha256": "aec42642f5615de00b92c64c372e95950d925e5375531e0d097157a60b6b3ef0"
+    },
+    {
+      "block_id": "page-0579-block-0011",
+      "order": 11,
+      "text": "After prescribing\n",
+      "bbox": [
+        61.893699645996094,
+        428.6402893066406,
+        141.3437042236328,
+        440.49029541015625
+      ],
+      "text_sha256": "c681666110d1c8b178ef138787205867d82554c7804803ee0dc7929ab2138716"
+    },
+    {
+      "block_id": "page-0579-block-0012",
+      "order": 12,
+      "text": "■\n■Acute phase\n",
+      "bbox": [
+        61.88990020751953,
+        452.55029296875,
+        123.09989929199219,
+        464.2702941894531
+      ],
+      "text_sha256": "36214ba8287a0a2653a9b995468d3d313fe611703a560b407a7048f3f6792b46"
+    },
+    {
+      "block_id": "page-0579-block-0013",
+      "order": 13,
+      "text": "■\n■Start at lowest available dose\n",
+      "bbox": [
+        71.08489990234375,
+        464.55029296875,
+        205.45989990234375,
+        476.2702941894531
+      ],
+      "text_sha256": "9a490952d93a556186ffd48cd1de94e1b7d935bafcf57bad1bca2d5515a7fdc8"
+    },
+    {
+      "block_id": "page-0579-block-0014",
+      "order": 14,
+      "text": "■\n■Monitor side effects. SSRIs are generally well tolerated during treatment for anxi-\n",
+      "bbox": [
+        71.08489990234375,
+        476.55029296875,
+        433.8898620605469,
+        488.2702941894531
+      ],
+      "text_sha256": "fbd48aa663999aadd536bdab36805c3c7400ae7620ed75054a8b82677c76c5dd"
+    },
+    {
+      "block_id": "page-0579-block-0015",
+      "order": 15,
+      "text": "ety disorders in young people. Psychological side effects include worsening of \n­anxiety symptoms, agitation and disinhibition.  Physical side effects including gas-\ntrointestinal symptoms (e.g. nausea, vomiting, dyspepsia, abdominal pain, diar-\nrhoea, constipation), headache, increased motor activity, and insomnia may occur, \noften in mild and transient form.\n",
+      "bbox": [
+        79.889892578125,
+        488.55029296875,
+        436.6598205566406,
+        548.2703247070312
+      ],
+      "text_sha256": "442175506caf3334a9f0f48b25a44124506228c1f52fa08b99a8468d4ca6a69f"
+    },
+    {
+      "block_id": "page-0579-block-0016",
+      "order": 16,
+      "text": "■\n■After 1 week of treatment with SSRIs (2 weeks for SNRIs) when the child is compli-\n",
+      "bbox": [
+        71.08489990234375,
+        548.55029296875,
+        433.8299560546875,
+        560.2703247070312
+      ],
+      "text_sha256": "1b88f084afc0cb39eec4b02222197755ab0f606dee53cd5d45189b70fe9c4d39"
+    },
+    {
+      "block_id": "page-0579-block-0017",
+      "order": 17,
+      "text": "ant with medications and does not manifest more than minimal side effects, titrate \nincrementally with weekly intervals to the minimal therapeutic dose.\n",
+      "bbox": [
+        79.88990020751953,
+        560.55029296875,
+        436.6799011230469,
+        584.2703247070312
+      ],
+      "text_sha256": "0e5b725fd88c86b7e99ef74e18a2f4fe0b6d994083a029b650dda2a8e429f16f"
+    },
+    {
+      "block_id": "page-0579-block-0018",
+      "order": 18,
+      "text": "■\n■Monitor side effects (see the list point above) and response (e.g. RCADS, SCARED, \n",
+      "bbox": [
+        71.08489990234375,
+        584.55029296875,
+        436.679931640625,
+        596.2703247070312
+      ],
+      "text_sha256": "8127a8a0c3879e4f45d56b7645f12a96b6887afc921f28ec90f7f460570a9684"
+    },
+    {
+      "block_id": "page-0579-block-0019",
+      "order": 19,
+      "text": "MASC, CGAS, CGI-I) frequently and systematically.\n",
+      "bbox": [
+        79.88990020751953,
+        596.55029296875,
+        305.39990234375,
+        608.2703247070312
+      ],
+      "text_sha256": "3d5b594087c1e680397fcb4608d5ee596df351fa07e39d314de5f03c6f638c9a"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

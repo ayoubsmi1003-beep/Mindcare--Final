@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0768",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 768,
+  "source_page_index": 767,
+  "source_page_display": 768,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Hepatic and renal impairment    747\nCHAPTER 8\nTable 8.12  Anti-dementia drugs in renal impairment\nDrug\nComments\nDonepezil23,25,186–188\n17% excreted unchanged in urine. Dosing is as in normal renal function for GFR \n<10–50mL/min. Manufacturer states that clearance not affected by renal impairment. \nSingle dose studies find similar pharmacokinetics in moderate and severe renal \nimpairment compared with healthy controls. Has been used at a dose of 3mg/day in \nan elderly patient with Alzheimer’s dementia on dialysis. Single case of \nrhabdomyolysis causing acute renal failure.189\nGalantamine23,25\n18–22% is excreted unchanged in urine. Dose as in normal renal function for GFR \n10–50mL/min and at GFR <10mL/min start at a low dose and increase slowly. \nManufacturer contraindicates use in GFR <10mL/min. Plasma levels may be increased \nin patients with moderate and severe renal impairment.\nMemantine22,23,190\nManufacturers recommend a 10mg dose if GFR 5–29mL/min; 10mg daily for 7 days \nthen increased to 20mg daily if tolerated for GFR >30–49mL/min. Renal tubular \nacidosis, severe urinary tract infections and alkalisation of urine (e.g. by drastic \ndietary changes) can increase plasma levels of memantine. Acute renal failure has \nbeen reported with memantine.\nRivastigmine23,25\n0% excreted unchanged in urine. Dosing advice for GFR <50mL/min start at a low \ndose and gradually increase. Steady state plasma concentrations are not affected by \nrenal function.191\nTable 8.11  (Continued)\nDrug\nComments\nPromethazine22,23,25,32,180\nDose reduction usually not necessary; however, promethazine has a long half-life so \nmonitor for excessive sedative effects in patients with renal impairment. \nManufacturer advises caution in renal impairment. There is a case report of interstitial \nnephritis in a patient who was a poor metaboliser of promethazine.\nTemazepam22,23,25,32\n<2% excreted unchanged in urine. In renal impairment the inactive metabolite can \naccumulate. Monitor for excessive sedative effects. Dosing: GFR 20–50mL/min, dose \nas normal renal function; GFR <20mL/min, dose as in normal renal function but start \nwith 5mg.\nZolpidem22,23,25,154,181\nClearance moderately reduced in renal impairment. No dose adjustment required in \nrenal impairment. Zolpidem 1mg has been used to treat insomnia in patients on \nhaemodialysis. Ongoing RCT of zolpidem to aid sleep in haemodialysis patients with \npruritis.182 Associated with acute pyelonephritis in women.183\nZopiclone22,23,25,184,185\nLess than 5% excreted unchanged in urine. Manufacturer states no accumulation of \nzopiclone in renal impairment but suggests starting at 3.75mg. Dosing: GFR <10mL/\nmin, start with lower dose. Interstitial nephritis reported rarely.\n",
+  "raw_text_sha256": "325f9d8f6f6669c4c0028565795df0a3e8c3919436bbed65eec9e1621fcb4f64",
+  "coordinates_sha256": "26249f2803bab441f9227efbea2c348202249416bf4093400236ac604bee31c3",
+  "block_sequence_sha256": "6026735ca3e9cda15db57d4447cbf8ed5e3d55b5b5cfd75c5945b79ba042cc4f",
+  "blocks": [
+    {
+      "block_id": "page-0768-block-0000",
+      "order": 0,
+      "text": "Hepatic and renal impairment    747\n",
+      "bbox": [
+        269.185302734375,
+        31.395221710205078,
+        420.00048828125,
+        41.0272216796875
+      ],
+      "text_sha256": "de1f0141538936b0c66bc829fb53f0a056f59978dbcd5032a1c1c21b8c0cf496"
+    },
+    {
+      "block_id": "page-0768-block-0001",
+      "order": 1,
+      "text": "CHAPTER 8\n",
+      "bbox": [
+        454.4096984863281,
+        532.3878173828125,
+        463.88970947265625,
+        573.7318115234375
+      ],
+      "text_sha256": "5ba3d9fb75ff4f418d4a2e9d517f30966dcfb279c10487eec43c5aa3fd8757a2"
+    },
+    {
+      "block_id": "page-0768-block-0002",
+      "order": 2,
+      "text": "Table 8.12  Anti-dementia drugs in renal impairment\n",
+      "bbox": [
+        54.0,
+        317.7378845214844,
+        223.06497192382812,
+        326.6253967285156
+      ],
+      "text_sha256": "1a2dff50c65d443af665d1dcf10c67f446df62d1ad942d3e9d2a031c445bd21b"
+    },
+    {
+      "block_id": "page-0768-block-0003",
+      "order": 3,
+      "text": "Drug\nComments\n",
+      "bbox": [
+        48.0,
+        337.6128845214844,
+        184.5,
+        346.5003967285156
+      ],
+      "text_sha256": "f0d3aba6cb5c63a8b3ce76553ca73a800f481925284fe7cc72b7ce3c93bfebe6"
+    },
+    {
+      "block_id": "page-0768-block-0004",
+      "order": 4,
+      "text": "Donepezil23,25,186–188\n17% excreted unchanged in urine. Dosing is as in normal renal function for GFR \n<10–50mL/min. Manufacturer states that clearance not affected by renal impairment. \nSingle dose studies find similar pharmacokinetics in moderate and severe renal \nimpairment compared with healthy controls. Has been used at a dose of 3mg/day in \nan elderly patient with Alzheimer’s dementia on dialysis. Single case of \nrhabdomyolysis causing acute renal failure.189\n",
+      "bbox": [
+        48.0,
+        355.91790771484375,
+        422.0774841308594,
+        414.6128845214844
+      ],
+      "text_sha256": "26092fb1760038855d89666add52c258c28e62051c3017a158cc714e77aa2140"
+    },
+    {
+      "block_id": "page-0768-block-0005",
+      "order": 5,
+      "text": "Galantamine23,25\n18–22% is excreted unchanged in urine. Dose as in normal renal function for GFR \n10–50mL/min and at GFR <10mL/min start at a low dose and increase slowly. \nManufacturer contraindicates use in GFR <10mL/min. Plasma levels may be increased \nin patients with moderate and severe renal impairment.\n",
+      "bbox": [
+        48.0,
+        424.04290771484375,
+        420.4049987792969,
+        462.7428894042969
+      ],
+      "text_sha256": "263ac31196151d8c5182b3db4567c2ae5f034526a0f95ff7201cbce4bf9b14a7"
+    },
+    {
+      "block_id": "page-0768-block-0006",
+      "order": 6,
+      "text": "Memantine22,23,190\nManufacturers recommend a 10mg dose if GFR 5–29mL/min; 10mg daily for 7 days \nthen increased to 20mg daily if tolerated for GFR >30–49mL/min. Renal tubular \nacidosis, severe urinary tract infections and alkalisation of urine (e.g. by drastic \ndietary changes) can increase plasma levels of memantine. Acute renal failure has \nbeen reported with memantine.\n",
+      "bbox": [
+        48.0,
+        472.16290283203125,
+        416.3551025390625,
+        520.8653564453125
+      ],
+      "text_sha256": "0481991b506d5a0ef64ed44c5250ed9d80beface9fe2825abdb31eb5e9d34803"
+    },
+    {
+      "block_id": "page-0768-block-0007",
+      "order": 7,
+      "text": "Rivastigmine23,25\n0% excreted unchanged in urine. Dosing advice for GFR <50mL/min start at a low \ndose and gradually increase. Steady state plasma concentrations are not affected by \nrenal function.191\n",
+      "bbox": [
+        48.0,
+        530.285400390625,
+        416.61749267578125,
+        558.995361328125
+      ],
+      "text_sha256": "ce027222a1d121da5c9677109aad475a13b4de9956467589f4f9d22638d2cdb1"
+    },
+    {
+      "block_id": "page-0768-block-0008",
+      "order": 8,
+      "text": "Table 8.11  (Continued)\n",
+      "bbox": [
+        54.0,
+        70.08790588378906,
+        131.04000854492188,
+        78.97540283203125
+      ],
+      "text_sha256": "c3f52bd634a7f815eaa2df25d5e44a30980a9cfda8c06158d47611977cde610d"
+    },
+    {
+      "block_id": "page-0768-block-0009",
+      "order": 9,
+      "text": "Drug\nComments\n",
+      "bbox": [
+        48.0,
+        89.71296691894531,
+        184.5,
+        98.6004638671875
+      ],
+      "text_sha256": "f0d3aba6cb5c63a8b3ce76553ca73a800f481925284fe7cc72b7ce3c93bfebe6"
+    },
+    {
+      "block_id": "page-0768-block-0010",
+      "order": 10,
+      "text": "Promethazine22,23,25,32,180\nDose reduction usually not necessary; however, promethazine has a long half-life so \nmonitor for excessive sedative effects in patients with renal impairment. \nManufacturer advises caution in renal impairment. There is a case report of interstitial \nnephritis in a patient who was a poor metaboliser of promethazine.\n",
+      "bbox": [
+        48.0,
+        108.0179672241211,
+        421.4625244140625,
+        146.71795654296875
+      ],
+      "text_sha256": "9ae10b52ced3a2227ac5ae2df2f9b7f75b3e107bbe644353424cc0754d448575"
+    },
+    {
+      "block_id": "page-0768-block-0011",
+      "order": 11,
+      "text": "Temazepam22,23,25,32\n<2% excreted unchanged in urine. In renal impairment the inactive metabolite can \naccumulate. Monitor for excessive sedative effects. Dosing: GFR 20–50mL/min, dose \nas normal renal function; GFR <20mL/min, dose as in normal renal function but start \nwith 5mg.\n",
+      "bbox": [
+        48.0,
+        156.13795471191406,
+        418.77008056640625,
+        194.84295654296875
+      ],
+      "text_sha256": "a958567f6aed3feda8f87cb7d676388cce03fb89ddb0af700481631952ad1b46"
+    },
+    {
+      "block_id": "page-0768-block-0012",
+      "order": 12,
+      "text": "Zolpidem22,23,25,154,181\nClearance moderately reduced in renal impairment. No dose adjustment required in \nrenal impairment. Zolpidem 1mg has been used to treat insomnia in patients on \nhaemodialysis. Ongoing RCT of zolpidem to aid sleep in haemodialysis patients with \npruritis.182 Associated with acute pyelonephritis in women.183\n",
+      "bbox": [
+        48.0,
+        204.26295471191406,
+        417.05267333984375,
+        242.97549438476562
+      ],
+      "text_sha256": "e988518cc17b715f8ecaa4d15a150aeb669fcc7ac350b6480434c424566e7412"
+    },
+    {
+      "block_id": "page-0768-block-0013",
+      "order": 13,
+      "text": "Zopiclone22,23,25,184,185\nLess than 5% excreted unchanged in urine. Manufacturer states no accumulation of \nzopiclone in renal impairment but suggests starting at 3.75mg. Dosing: GFR <10mL/\nmin, start with lower dose. Interstitial nephritis reported rarely.\n",
+      "bbox": [
+        48.0,
+        252.3929901123047,
+        418.0201110839844,
+        281.0954895019531
+      ],
+      "text_sha256": "6bbe22f504a8b0a2f75ff76e7d23f85b1674fa36441093e94dbd49122c58e569"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

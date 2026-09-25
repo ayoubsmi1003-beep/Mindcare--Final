@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0783",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 783,
+  "source_page_index": 782,
+  "source_page_display": 783,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "762    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  9\ntherefore used to prevent serious sequelae rather than simply to restore normal levels. \nIf supplements are used, urea and electrolytes, HCO3, Ca, P and Mg need to be moni-\ntored and an ECG needs to be performed.18\nOsteoporosis\nBone loss is a serious complication of anorexia with serious consequences. Hormonal \ntreatment using oestrogen or dehydroepiandrosterone (DHEA) does not have a \npositive impact on bone density and oestrogen is not recommended in children and \nadolescents due to the risk of premature fusion of the bones.4 Antipsychotics that raise \nprolactin levels can further increase the risk of bone loss and osteoporosis. \nBisphosphonates are not generally recommended for women with anorexia nervosa \ndue to the lack of data about both the benefits and also safety. They are not licensed \nfor use in premenopausal girls.\nPsychiatric aspects\nAcute illness: antidepressants\nA Cochrane review found no evidence from four placebo-controlled trials that \n­antidepressants improved weight gain, eating disorder or associated psychopa-\nthology.19 It has been suggested that neurochemical abnormalities in starvation may \npartially explain this non-response.19 Co-prescribing nutritional supplementation \n(including tryptophan) with fluoxetine has not been shown to increase efficacy.20 \nNICE found little evidence to support the use of antidepressants.4 Naturalistic \nstudies suggest an important risk of switch to mania.21 Antidepressants appear to \nhave no role in AN.\nOther psychotropic medicines\nAntipsychotics (e.g. olanzapine), benzodiazepines or antihistamines (e.g. promethazine) \nare often used to reduce the high levels of anxiety associated with anorexia nervosa, but \nthey are not usually recommended for the promotion of weight gain.4 Case reports and \nretrospective studies have suggested that olanzapine may reduce agitation (and possibly \nimprove weight).22,23 One RCT8 showed that 87.5% of patients given olanzapine \nachieved weight restoration (vs. 55.6% on placebo). Quetiapine may improve \npsychological symptoms, but there are few data.10 Only prolactin-sparing antipsy-\nchotics should be considered (i.e. avoid risperidone, amisulpride, sulpiride). Pooled \neffects of antipsychotics on weight are statistically non-existent.13\nMany other medications6 have been investigated in small placebo-controlled trials of \nvarying quality and success, these include zinc,24 naltrexone25 and cyproheptadine.26 \nNone is currently widely used in practice. Relamorelin (a ghrelin agonist),27 oxytocin28 \nand testosterone29 are probably not effective.\n",
+  "raw_text_sha256": "baca5e795e213254f4a5a332eebc0dce6572b278932640f9d77160789c38608c",
+  "coordinates_sha256": "da93a0f44b1b57a263f7e508e35a59b5b207a1cf641daee2c08b5bc87ef2b057",
+  "block_sequence_sha256": "7540116c992692335b233721b843dc719ce5f9567dab170db402c063bdb19921",
+  "blocks": [
+    {
+      "block_id": "page-0783-block-0000",
+      "order": 0,
+      "text": "762    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "3db39848e9e1732ec9296649759a74f48ee0e7ff15082dcea6a7cab3cb4f03f1"
+    },
+    {
+      "block_id": "page-0783-block-0001",
+      "order": 1,
+      "text": "CHAPTER  9\n",
+      "bbox": [
+        18.520000457763672,
+        597.6024780273438,
+        28.0,
+        641.1704711914062
+      ],
+      "text_sha256": "2f213d231c74a11904a8da09025a8eefa6dceb4a2df848af43d9c4d19beb9596"
+    },
+    {
+      "block_id": "page-0783-block-0002",
+      "order": 2,
+      "text": "therefore used to prevent serious sequelae rather than simply to restore normal levels. \nIf supplements are used, urea and electrolytes, HCO3, Ca, P and Mg need to be moni-\ntored and an ECG needs to be performed.18\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.6199645996094,
+        98.27029418945312
+      ],
+      "text_sha256": "3b456117b42a407a14744d9fbaa425890ee840e7e0994cf87892fccac312cc01"
+    },
+    {
+      "block_id": "page-0783-block-0003",
+      "order": 3,
+      "text": "Osteoporosis\n",
+      "bbox": [
+        61.88999938964844,
+        116.64029693603516,
+        123.55000305175781,
+        128.49029541015625
+      ],
+      "text_sha256": "09420a97ae01c3ab91cec9d2b4cf8f3123334c5c60dff9d489ed3f678f1f88f7"
+    },
+    {
+      "block_id": "page-0783-block-0004",
+      "order": 4,
+      "text": "Bone loss is a serious complication of anorexia with serious consequences. Hormonal \ntreatment using oestrogen or dehydroepiandrosterone (DHEA) does not have a \npositive impact on bone density and oestrogen is not recommended in children and \nadolescents due to the risk of premature fusion of the bones.4 Antipsychotics that raise \nprolactin levels can further increase the risk of bone loss and osteoporosis. \nBisphosphonates are not generally recommended for women with anorexia nervosa \ndue to the lack of data about both the benefits and also safety. They are not licensed \nfor use in premenopausal girls.\n",
+      "bbox": [
+        61.88999938964844,
+        134.55029296875,
+        436.7002868652344,
+        230.27029418945312
+      ],
+      "text_sha256": "8ab9cd84e2c7d236d62fed1bed315c00582962141de3ce39b3c2b1c871b2d702"
+    },
+    {
+      "block_id": "page-0783-block-0005",
+      "order": 5,
+      "text": "Psychiatric aspects\n",
+      "bbox": [
+        61.88999938964844,
+        247.70529174804688,
+        157.22698974609375,
+        260.74029541015625
+      ],
+      "text_sha256": "b4f7c13b5ad4b62da31aef918278e7d846261ced61ff76383bd25a1604fc333d"
+    },
+    {
+      "block_id": "page-0783-block-0006",
+      "order": 6,
+      "text": "Acute illness: antidepressants\n",
+      "bbox": [
+        61.88999938964844,
+        266.6402893066406,
+        200.7899932861328,
+        278.49029541015625
+      ],
+      "text_sha256": "bc1f68b9b53a967bde74d05440b2ebe9a920c084782d1b5ec2371ded4f845bf4"
+    },
+    {
+      "block_id": "page-0783-block-0007",
+      "order": 7,
+      "text": "A Cochrane review found no evidence from four placebo-controlled trials that \n­antidepressants improved weight gain, eating disorder or associated psychopa-\nthology.19 It has been suggested that neurochemical abnormalities in starvation may \npartially explain this non-response.19 Co-prescribing nutritional supplementation \n(including tryptophan) with fluoxetine has not been shown to increase efficacy.20 \nNICE found little evidence to support the use of antidepressants.4 Naturalistic \nstudies suggest an important risk of switch to mania.21 Antidepressants appear to \nhave no role in AN.\n",
+      "bbox": [
+        61.88610076904297,
+        284.55029296875,
+        436.677490234375,
+        380.2702941894531
+      ],
+      "text_sha256": "33149c9f54c727d7c50dded0032cf0e72deb696e62ba0de3cb6ee8c38154b10f"
+    },
+    {
+      "block_id": "page-0783-block-0008",
+      "order": 8,
+      "text": "Other psychotropic medicines\n",
+      "bbox": [
+        61.88731384277344,
+        398.6402893066406,
+        201.33731079101562,
+        410.49029541015625
+      ],
+      "text_sha256": "2ab4b5ea793334ce1250708c49630721b96aa4ac1c942b15d13b3c518795b264"
+    },
+    {
+      "block_id": "page-0783-block-0009",
+      "order": 9,
+      "text": "Antipsychotics (e.g. olanzapine), benzodiazepines or antihistamines (e.g. promethazine) \nare often used to reduce the high levels of anxiety associated with anorexia nervosa, but \nthey are not usually recommended for the promotion of weight gain.4 Case reports and \nretrospective studies have suggested that olanzapine may reduce agitation (and possibly \nimprove weight).22,23 One RCT8 showed that 87.5% of patients given olanzapine \nachieved weight restoration (vs. 55.6% on placebo). Quetiapine may improve \npsychological symptoms, but there are few data.10 Only prolactin-sparing antipsy-\nchotics should be considered (i.e. avoid risperidone, amisulpride, sulpiride). Pooled \neffects of antipsychotics on weight are statistically non-existent.13\n",
+      "bbox": [
+        61.88731384277344,
+        416.55029296875,
+        436.6841735839844,
+        524.2703247070312
+      ],
+      "text_sha256": "943315848085f8e780a8079c80c7c2e68aff8710268069ff517b3c40c6d37bcf"
+    },
+    {
+      "block_id": "page-0783-block-0010",
+      "order": 10,
+      "text": "Many other medications6 have been investigated in small placebo-controlled trials of \nvarying quality and success, these include zinc,24 naltrexone25 and cyproheptadine.26 \nNone is currently widely used in practice. Relamorelin (a ghrelin agonist),27 oxytocin28 \nand testosterone29 are probably not effective.\n",
+      "bbox": [
+        61.8900146484375,
+        524.55029296875,
+        436.6700134277344,
+        572.2703247070312
+      ],
+      "text_sha256": "6242685337dcf7033007dd0b3d99d04d3adfda3345f19e93df6dd15745799c1e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

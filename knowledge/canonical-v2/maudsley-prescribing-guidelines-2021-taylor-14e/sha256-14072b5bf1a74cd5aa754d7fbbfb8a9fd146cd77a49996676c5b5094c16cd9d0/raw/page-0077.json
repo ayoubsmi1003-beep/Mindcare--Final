@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0077",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 77,
+  "source_page_index": 76,
+  "source_page_display": 77,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "56    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nAcutely disturbed or violent behaviour\nAcute behavioural disturbance can occur in the context of psychiatric illness, physical \nillness, substance abuse or personality disorder. Psychotic symptoms are common and \nthe patient may be aggressive towards others secondary to persecutory delusions or \nauditory, visual or tactile hallucinations. This section deals with behavioural distur-\nbance in the context of severe mental illness. Excited/agitated delirium caused by illicit \nsubstance misuse is dealt with in Chapter 9.\nThe clinical practice of rapid tranquillisation (RT) is used when appropriate psycho-\nlogical and behavioural approaches have failed to de-escalate acutely disturbed behav-\niour. It is, essentially, a treatment of last resort. Patients who require RT are often too \ndisturbed to give informed consent and therefore participate in randomised controlled \ntrials (RCTs), but with the use of a number of creative methodologies, the evidence base \nwith respect to the efficacy and tolerability of pharmacological strategies has grown \nsubstantially in recent years. A comprehensive and up-to-date consensus guideline has \nbeen published1 and, more recently, a systematic review and meta-analysis.2\nOral/inhaled treatment\nSeveral studies supporting the efficacy of oral SGAs have been conducted.3–6 The level \nof behavioural disturbance exhibited by the patients in these studies was moderate at \nmost, and all subjects accepted oral treatment (this degree of compliance would be \nunusual in clinical practice). Patients recruited to these studies received the SGA as \nantipsychotic monotherapy. The efficacy and safety of adding a second antipsychotic as \na ‘when necessary’ treatment has not been explicitly tested in formal RCTs.\nA single-dose RCT showed sublingual asenapine to be more effective than placebo \nfor acute agitation.7 The efficacy of inhaled loxapine in behavioural disturbance that is \nmoderate in severity is also supported by RCTs8–10 and case series.11,12 The use of this \npreparation requires the co-operation of the patient, and bronchospasm is an estab-\nlished but rare side effect.\nParenteral treatment\nLarge, placebo-controlled RCTs support the efficacy of IM preparations of olanzapine, \nziprasidone and aripiprazole. When considered together, these trials suggested that IM \nolanzapine is more effective than IM haloperidol which in turn is more effective than \nIM aripiprazole, which itself is more effective than ziprasidone.2,13 The level of behav-\nioural disturbance in these studies was moderate at most and differences between treat-\nments small.\nA large observational study supports the efficacy and tolerability of IM olanzapine in \nclinical emergencies (where disturbance was severe).14 A study comparing IM haloperi-\ndol with a combination of IM midazolam and IM haloperidol found the combination \nmore effective than haloperidol alone for controlling agitation in palliative care \npatients.15\nSeveral RCTs have investigated the effectiveness of parenteral medication in ‘real-life’ \nacutely disturbed patients. Overall:\n",
+  "raw_text_sha256": "96a15672ece856a39182b1edd82c2ab3418e425e10b4fa1cb924c971ca363339",
+  "coordinates_sha256": "d9af9091666e3c2bf0838b7d253356762b0d8053a15c32d25b75adcbfca612d5",
+  "block_sequence_sha256": "12ebae998f1f8488738dbd11d40f27ad0b40760c4f41a9c6de189b084a1ea66d",
+  "blocks": [
+    {
+      "block_id": "page-0077-block-0000",
+      "order": 0,
+      "text": "56    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "29774663c9fc4d6633baccf67af4c0cddd4b1f5eb61f24b83436eac30f2fdd1b"
+    },
+    {
+      "block_id": "page-0077-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0077-block-0002",
+      "order": 2,
+      "text": "Acutely disturbed or violent behaviour\n",
+      "bbox": [
+        68.88909912109375,
+        66.06442260742188,
+        269.37506103515625,
+        79.09942626953125
+      ],
+      "text_sha256": "751832cfa331c296eafa900b8e0956fb5c3bcb1c6cf3698a463ce4c9b131cc74"
+    },
+    {
+      "block_id": "page-0077-block-0003",
+      "order": 3,
+      "text": "Acute behavioural disturbance can occur in the context of psychiatric illness, physical \nillness, substance abuse or personality disorder. Psychotic symptoms are common and \nthe patient may be aggressive towards others secondary to persecutory delusions or \nauditory, visual or tactile hallucinations. This section deals with behavioural distur-\nbance in the context of severe mental illness. Excited/agitated delirium caused by illicit \nsubstance misuse is dealt with in Chapter 9.\n",
+      "bbox": [
+        61.88908386230469,
+        84.909423828125,
+        436.6992492675781,
+        156.62942504882812
+      ],
+      "text_sha256": "93b2e1b83849e27f82d6980aaf345cf242e3d5095a0cf5815993f363d2103872"
+    },
+    {
+      "block_id": "page-0077-block-0004",
+      "order": 4,
+      "text": "The clinical practice of rapid tranquillisation (RT) is used when appropriate psycho-\nlogical and behavioural approaches have failed to de-escalate acutely disturbed behav-\niour. It is, essentially, a treatment of last resort. Patients who require RT are often too \ndisturbed to give informed consent and therefore participate in randomised controlled \ntrials (RCTs), but with the use of a number of creative methodologies, the evidence base \nwith respect to the efficacy and tolerability of pharmacological strategies has grown \nsubstantially in recent years. A comprehensive and up-to-date consensus guideline has \nbeen published1 and, more recently, a systematic review and meta-analysis.2\n",
+      "bbox": [
+        61.88908386230469,
+        156.909423828125,
+        436.6990661621094,
+        252.62942504882812
+      ],
+      "text_sha256": "2c6497cd653be0cc1480fb873ccaa030dc69c39c674d4e60ea640a0ce07c267a"
+    },
+    {
+      "block_id": "page-0077-block-0005",
+      "order": 5,
+      "text": "Oral/inhaled treatment\n",
+      "bbox": [
+        61.88909912109375,
+        270.0644226074219,
+        181.5140838623047,
+        283.09942626953125
+      ],
+      "text_sha256": "5f55e66f03cb0a1018eb9128368798d520c1b1784bda4e928de37313971d9000"
+    },
+    {
+      "block_id": "page-0077-block-0006",
+      "order": 6,
+      "text": "Several studies supporting the efficacy of oral SGAs have been conducted.3–6 The level \nof behavioural disturbance exhibited by the patients in these studies was moderate at \nmost, and all subjects accepted oral treatment (this degree of compliance would be \nunusual in clinical practice). Patients recruited to these studies received the SGA as \nantipsychotic monotherapy. The efficacy and safety of adding a second antipsychotic as \na ‘when necessary’ treatment has not been explicitly tested in formal RCTs.\n",
+      "bbox": [
+        61.88529968261719,
+        288.909423828125,
+        436.6951599121094,
+        360.6294250488281
+      ],
+      "text_sha256": "eb8b72c38bd6a74fc0271ff6a5699e7dd8413b11e3c193da2b6b718ef1847db5"
+    },
+    {
+      "block_id": "page-0077-block-0007",
+      "order": 7,
+      "text": "A single-dose RCT showed sublingual asenapine to be more effective than placebo \nfor acute agitation.7 The efficacy of inhaled loxapine in behavioural disturbance that is \nmoderate in severity is also supported by RCTs8–10 and case series.11,12 The use of this \npreparation requires the co-operation of the patient, and bronchospasm is an estab-\nlished but rare side effect.\n",
+      "bbox": [
+        61.88529968261719,
+        360.909423828125,
+        436.6553039550781,
+        420.6294250488281
+      ],
+      "text_sha256": "2df77a193af83ada525431057078b8a8d99fbf8e1b523498cc4b718680e6538e"
+    },
+    {
+      "block_id": "page-0077-block-0008",
+      "order": 8,
+      "text": "Parenteral treatment\n",
+      "bbox": [
+        61.88909912109375,
+        438.0644226074219,
+        169.71112060546875,
+        451.09942626953125
+      ],
+      "text_sha256": "e2e86dd3ef75421747ac2343dbefc67fad2bc86122c5ec35ddb226961f74e481"
+    },
+    {
+      "block_id": "page-0077-block-0009",
+      "order": 9,
+      "text": "Large, placebo-controlled RCTs support the efficacy of IM preparations of olanzapine, \nziprasidone and aripiprazole. When considered together, these trials suggested that IM \nolanzapine is more effective than IM haloperidol which in turn is more effective than \nIM aripiprazole, which itself is more effective than ziprasidone.2,13 The level of behav-\nioural disturbance in these studies was moderate at most and differences between treat-\nments small.\n",
+      "bbox": [
+        61.88697814941406,
+        456.909423828125,
+        436.6792297363281,
+        528.6294555664062
+      ],
+      "text_sha256": "fe1ba4d82115e82b9c3f4581d15c6861d7fc78d459ab55aa8d2c9949e39410ec"
+    },
+    {
+      "block_id": "page-0077-block-0010",
+      "order": 10,
+      "text": "A large observational study supports the efficacy and tolerability of IM olanzapine in \nclinical emergencies (where disturbance was severe).14 A study comparing IM haloperi-\ndol with a combination of IM midazolam and IM haloperidol found the combination \nmore effective than haloperidol alone for controlling agitation in palliative care \npatients.15\n",
+      "bbox": [
+        61.88697814941406,
+        528.909423828125,
+        436.6894226074219,
+        588.6294555664062
+      ],
+      "text_sha256": "0c838e27daaa3056d5b850dab639f01707de33eddcea008313d968f93a4a0d8a"
+    },
+    {
+      "block_id": "page-0077-block-0011",
+      "order": 11,
+      "text": "Several RCTs have investigated the effectiveness of parenteral medication in ‘real-life’ \nacutely disturbed patients. Overall:\n",
+      "bbox": [
+        61.88909912109375,
+        588.909423828125,
+        436.6289978027344,
+        612.6294555664062
+      ],
+      "text_sha256": "7f48ec408e5ce4ae18edb2da804a35ff4fb92b34273727611632f4401c5a3ae2"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

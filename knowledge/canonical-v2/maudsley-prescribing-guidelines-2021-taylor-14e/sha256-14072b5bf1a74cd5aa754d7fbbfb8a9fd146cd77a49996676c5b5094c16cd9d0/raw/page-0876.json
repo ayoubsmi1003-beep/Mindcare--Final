@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0876",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 876,
+  "source_page_index": 875,
+  "source_page_display": 876,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Pharmacokinetics    855\nCHAPTER 11\nCYP3A4\nSUBSTRATES\nINHIBITORS\nINDUCERS\nAlfentanyl\nAlprazolam\nAmitriptyline\nAripiprazole\nBrexpiprazole\nBuprenorphine\nBupropion*\nBuspirone\nCarbamazepine\nCariprazine\nChlorpromazine\nCitalopram\nClomipramine*\nClonazepam\nClozapine*\nDiazepam\nDonepezil\nDosulepin\nEscitalopram*\nFentanyl\nFluoxetine*\nGalantamine\nHaloperidol\nImipramine\nLemborexant\nLurasidone\nMethadone\nMidazolam\nMirtazapine\nModafinil\nNitrazepam\nPerphenazine\nPimavanserin\nPimozide\nQuetiapine\nReboxetine\nRisperidone*\nSertindole\nSertraline*\nSuvorexant\nTrazodone\nTrimipramine*\nValbenazine\nVenlafaxine\nVilazodone\nZaleplon\nZiprasidone\nZolpidem\nZopiclone\nFluoxetine\nFluvoxamine\nParoxetine\nPerphenazine\nReboxetine*\nAsenapine?\nCarbamazepine\nModafinil\nPhenobarbital ‘and \nprobably other \nBarbituates’\nPhenytoin\nSJW\nTopiramate\nReference\n\t 1.\t Schoretsanitis G, et al. TDM in psychiatry and neurology: a comprehensive summary of the consensus guidelines for therapeutic drug moni-\ntoring in neuropsychopharmacology, update 2017; a tool for clinicians. World J Biol Psychiatry 2018; 19:162–174.\n",
+  "raw_text_sha256": "25947162c93d9848933f062a4c2485ac331a1fc9fe50b6c2ac40a9b4759a9c1c",
+  "coordinates_sha256": "55d75283f82eeb859ae3683d51d483570ffb7d942390e2eb7b73a5b14d747428",
+  "block_sequence_sha256": "42ff96ccdd887af4515563baff9c45d266e1976b985203f0f6aa458700187070",
+  "blocks": [
+    {
+      "block_id": "page-0876-block-0000",
+      "order": 0,
+      "text": "Pharmacokinetics    855\n",
+      "bbox": [
+        320.4088134765625,
+        31.395221710205078,
+        420.00079345703125,
+        41.0272216796875
+      ],
+      "text_sha256": "5fd45a89ddf05390499a4423201eb6a4b54a54d2204e4e5a62e0ac53aa952677"
+    },
+    {
+      "block_id": "page-0876-block-0001",
+      "order": 1,
+      "text": "CHAPTER 11\n",
+      "bbox": [
+        454.4096984863281,
+        140.99053955078125,
+        463.88970947265625,
+        186.78250122070312
+      ],
+      "text_sha256": "8577f8a61d9be9d957b7354680b21b61adb6e8c4601aaa9be76ccc79360dc7f3"
+    },
+    {
+      "block_id": "page-0876-block-0002",
+      "order": 2,
+      "text": "CYP3A4\n",
+      "bbox": [
+        114.0,
+        62.31546401977539,
+        154.34799194335938,
+        75.3504638671875
+      ],
+      "text_sha256": "3be42c413641d6129ca02b76b32cfc9590b24562cf25c91d6beb021f664abbac"
+    },
+    {
+      "block_id": "page-0876-block-0003",
+      "order": 3,
+      "text": "SUBSTRATES\nINHIBITORS\nINDUCERS\n",
+      "bbox": [
+        114.94490051269531,
+        90.46296691894531,
+        315.5249328613281,
+        99.3504638671875
+      ],
+      "text_sha256": "2aca33d2fae48aff4424d149aa2192c475fc0f30fe30d39d54ea488cfa4c1797"
+    },
+    {
+      "block_id": "page-0876-block-0004",
+      "order": 4,
+      "text": "Alfentanyl\nAlprazolam\nAmitriptyline\nAripiprazole\nBrexpiprazole\nBuprenorphine\nBupropion*\nBuspirone\nCarbamazepine\nCariprazine\nChlorpromazine\nCitalopram\nClomipramine*\nClonazepam\nClozapine*\nDiazepam\nDonepezil\nDosulepin\nEscitalopram*\nFentanyl\nFluoxetine*\nGalantamine\nHaloperidol\nImipramine\nLemborexant\nLurasidone\nMethadone\nMidazolam\nMirtazapine\nModafinil\nNitrazepam\nPerphenazine\nPimavanserin\nPimozide\nQuetiapine\nReboxetine\nRisperidone*\nSertindole\nSertraline*\nSuvorexant\nTrazodone\nTrimipramine*\nValbenazine\nVenlafaxine\nVilazodone\nZaleplon\nZiprasidone\nZolpidem\nZopiclone\n",
+      "bbox": [
+        114.95240783691406,
+        108.77046966552734,
+        169.5524139404297,
+        597.3578491210938
+      ],
+      "text_sha256": "58c9fe580c6ccc9a18ff11f04bec9a592a195e1ff9fae5168efc4786fe411413"
+    },
+    {
+      "block_id": "page-0876-block-0005",
+      "order": 5,
+      "text": "Fluoxetine\nFluvoxamine\nParoxetine\nPerphenazine\nReboxetine*\n",
+      "bbox": [
+        200.32492065429688,
+        108.47035217285156,
+        243.24740600585938,
+        157.34783935546875
+      ],
+      "text_sha256": "86c0c87a2069da1a2bd29dee2ebf69185cb031d17a9dec0c1305431c2d1f56a0"
+    },
+    {
+      "block_id": "page-0876-block-0006",
+      "order": 6,
+      "text": "Asenapine?\nCarbamazepine\nModafinil\nPhenobarbital ‘and \nprobably other \nBarbituates’\nPhenytoin\nSJW\nTopiramate\n",
+      "bbox": [
+        279.6974182128906,
+        108.46284484863281,
+        347.6399230957031,
+        197.330322265625
+      ],
+      "text_sha256": "6b9e649b2db79b7d9e3719adaefabc0a4f3a9d15bec1e082f6c8128fefe85b66"
+    },
+    {
+      "block_id": "page-0876-block-0007",
+      "order": 7,
+      "text": "Reference\n",
+      "bbox": [
+        48.0,
+        621.0654907226562,
+        99.1500015258789,
+        634.1004638671875
+      ],
+      "text_sha256": "c34c2aa81c280ef95738bc4b6411fddf02630ebeb2b03f0c400ae7054e81421a"
+    },
+    {
+      "block_id": "page-0876-block-0008",
+      "order": 8,
+      "text": "\t 1.\t Schoretsanitis G, et al. TDM in psychiatry and neurology: a comprehensive summary of the consensus guidelines for therapeutic drug moni-\n",
+      "bbox": [
+        48.0,
+        639.1864624023438,
+        420.03594970703125,
+        646.2184448242188
+      ],
+      "text_sha256": "0793e2034b1a2969d93fc2f8b118cca042a6431988324c69ccdd583b302b1622"
+    },
+    {
+      "block_id": "page-0876-block-0009",
+      "order": 9,
+      "text": "toring in neuropsychopharmacology, update 2017; a tool for clinicians. World J Biol Psychiatry 2018; 19:162–174.\n",
+      "bbox": [
+        59.003997802734375,
+        648.04248046875,
+        357.323974609375,
+        655.2184448242188
+      ],
+      "text_sha256": "766f28f43b4d8490ad0d656cda88e161d9a4f27ff79f263ff5d1f8ffd8208f7f"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

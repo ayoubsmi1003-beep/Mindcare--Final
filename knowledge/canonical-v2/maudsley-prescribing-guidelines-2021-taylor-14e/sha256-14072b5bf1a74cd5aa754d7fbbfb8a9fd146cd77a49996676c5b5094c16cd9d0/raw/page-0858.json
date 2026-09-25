@@ -1,0 +1,107 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0858",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 858,
+  "source_page_index": 857,
+  "source_page_display": 858,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Pharmacokinetics    837\nCHAPTER 11\nAmisulpride\nAmisulpride plasma levels are closely related to dose with insufficient variation to make \nroutine plasma level monitoring prudent. Higher levels observed in women25–27 seem to \nhave little significant clinical implication for either therapeutic response or adverse \neffects. A (trough) threshold for clinical response has been suggested to be approxi-\nmately 100µg/L28 and mean levels of 367µg/L27 have been noted in responders in indi-\nvidual studies. Adverse effects (notably EPS) have been observed at mean levels of \n336µg/L,25 377µg/L28 and 395µg/L.26 A plasma level threshold of below 320µg/L has \nbeen found to predict avoidance of EPS.28 One review29 has suggested an approximate \nrange of 200–320µg/L for optimal clinical response and avoidance of adverse effects \nbut a more recent consensus statement30 suggested a target range of 100–320µg/L. \nA dose of 200mg a day is sufficient to give a blood level of 100µg/L31 so this lower \nthreshold is probably too low for a reliable therapeutic effect. In older patients with \npsychosis, studies suggest plasma concentrations of 20–60µg/L may give optimal D2 \noccupancy and clinical response.32,33\nIn practice, only a minority of treated patients have ‘therapeutic’ plasma levels (prob-\nably because of poor adherence34) so plasma monitoring may be of some benefit. \nHowever, amisulpride plasma level monitoring is rarely undertaken and few laborato-\nries offer amisulpride assays. The dose–response relationship is sufficiently robust (in \ntrials, at least) to obviate the need for plasma sampling within the licensed dose range \n(although note that in older patients doses of 50–100mg a day may be sufficient) and \nadverse effects are usually well managed by dose adjustment alone. Plasma level moni-\ntoring is best reserved for those in whom clinical response is poor, adherence is ques-\ntioned or in whom drug interactions or physical illness may make adverse effect more \nlikely.\nAripiprazole\nPlasma level monitoring of aripiprazole is sometimes undertaken in practice. The dose–\nresponse relationship for aripiprazole is well established with a plateau in clinical \nresponse and D2 dopamine occupancy seen in doses above approximately 10mg/day.35 \nPlasma levels of aripiprazole, its metabolite, and the total moiety (parent plus metabo-\nlite) strongly relate linearly to dose, making it possible to predict, with some certainty, \nan approximate plasma level for a given dose.36 Target plasma level ranges for optimal \nclinical response have been suggested as 146–254µg/L37 and 150–300µg/L,38 with \nadverse effects observed above 210µg/L.38 Inter-individual variation in aripiprazole \nplasma levels has been observed but not fully investigated, although gender appears to \nhave little influence.39,40 Age, metabolic enzyme genotype and interacting medications \nseem likely causes of variation.38–41 A putative range between 150µg/L and 210µg/L36 \nhas been suggested as a target for patients taking aripiprazole and these are broadly the \nconcentrations seen in patients receiving depot aripiprazole at 300mg and 400mg \nmonthly.42 Some authorities suggest a lower threshold for clinical effect of 100µg/L30 – \na plasma level usually afforded by an oral dose of 10mg a day.31,43\n",
+  "raw_text_sha256": "77cf295f5acd0a4369b4ee118f2cb85ef2647fff15ad9046f557ab1c27c799ae",
+  "coordinates_sha256": "4e36ebaecb6f3f3ec0d44dbd7516a783c5d169d910ba3fac79ac25920f4a8ae3",
+  "block_sequence_sha256": "8de2276eff64fab9fa15f418692efced28265c42d5e3509a586d972c5ad2152c",
+  "blocks": [
+    {
+      "block_id": "page-0858-block-0000",
+      "order": 0,
+      "text": "Pharmacokinetics    837\n",
+      "bbox": [
+        320.4088134765625,
+        31.395221710205078,
+        420.00079345703125,
+        41.0272216796875
+      ],
+      "text_sha256": "dabad37695dcd5abf1e0c8a782406d4d53638088aa05f21816c66ceb5507f361"
+    },
+    {
+      "block_id": "page-0858-block-0001",
+      "order": 1,
+      "text": "CHAPTER 11\n",
+      "bbox": [
+        454.4096984863281,
+        140.99053955078125,
+        463.88970947265625,
+        186.78250122070312
+      ],
+      "text_sha256": "8577f8a61d9be9d957b7354680b21b61adb6e8c4601aaa9be76ccc79360dc7f3"
+    },
+    {
+      "block_id": "page-0858-block-0002",
+      "order": 2,
+      "text": "Amisulpride\n",
+      "bbox": [
+        48.0,
+        62.31540298461914,
+        110.33699798583984,
+        75.35040283203125
+      ],
+      "text_sha256": "5deca342b34ecdf6a79e9bf6b1df81d905f05e719d7cd76c0e9c5c6410e2bfe6"
+    },
+    {
+      "block_id": "page-0858-block-0003",
+      "order": 3,
+      "text": "Amisulpride plasma levels are closely related to dose with insufficient variation to make \nroutine plasma level monitoring prudent. Higher levels observed in women25–27 seem to \nhave little significant clinical implication for either therapeutic response or adverse \neffects. A (trough) threshold for clinical response has been suggested to be approxi-\nmately 100µg/L28 and mean levels of 367µg/L27 have been noted in responders in indi-\nvidual studies. Adverse effects (notably EPS) have been observed at mean levels of \n336µg/L,25 377µg/L28 and 395µg/L.26 A plasma level threshold of below 320µg/L has \nbeen found to predict avoidance of EPS.28 One review29 has suggested an approximate \nrange of 200–320µg/L for optimal clinical response and avoidance of adverse effects \nbut a more recent consensus statement30 suggested a target range of 100–320µg/L. \nA dose of 200mg a day is sufficient to give a blood level of 100µg/L31 so this lower \nthreshold is probably too low for a reliable therapeutic effect. In older patients with \npsychosis, studies suggest plasma concentrations of 20–60µg/L may give optimal D2 \noccupancy and clinical response.32,33\n",
+      "bbox": [
+        47.99560546875,
+        81.160400390625,
+        422.79559326171875,
+        248.88040161132812
+      ],
+      "text_sha256": "4bfa67c8c574e2e40830e72a9387978004dacc6f6da03698d5043132164846ff"
+    },
+    {
+      "block_id": "page-0858-block-0004",
+      "order": 4,
+      "text": "In practice, only a minority of treated patients have ‘therapeutic’ plasma levels (prob-\nably because of poor adherence34) so plasma monitoring may be of some benefit. \nHowever, amisulpride plasma level monitoring is rarely undertaken and few laborato-\nries offer amisulpride assays. The dose–response relationship is sufficiently robust (in \ntrials, at least) to obviate the need for plasma sampling within the licensed dose range \n(although note that in older patients doses of 50–100mg a day may be sufficient) and \nadverse effects are usually well managed by dose adjustment alone. Plasma level moni-\ntoring is best reserved for those in whom clinical response is poor, adherence is ques-\ntioned or in whom drug interactions or physical illness may make adverse effect more \nlikely.\n",
+      "bbox": [
+        47.99510192871094,
+        249.160400390625,
+        422.8249816894531,
+        368.8804016113281
+      ],
+      "text_sha256": "a13c5c555a19a40df8125b6164f5b536f3a2dc26519b5066bb4790327e689fe9"
+    },
+    {
+      "block_id": "page-0858-block-0005",
+      "order": 5,
+      "text": "Aripiprazole\n",
+      "bbox": [
+        48.0,
+        386.3153991699219,
+        111.5689926147461,
+        399.35040283203125
+      ],
+      "text_sha256": "14519352ede9c2040fd55378fee8da3db552a04445d82486e370b24e73082a30"
+    },
+    {
+      "block_id": "page-0858-block-0006",
+      "order": 6,
+      "text": "Plasma level monitoring of aripiprazole is sometimes undertaken in practice. The dose–\nresponse relationship for aripiprazole is well established with a plateau in clinical \nresponse and D2 dopamine occupancy seen in doses above approximately 10mg/day.35 \nPlasma levels of aripiprazole, its metabolite, and the total moiety (parent plus metabo-\nlite) strongly relate linearly to dose, making it possible to predict, with some certainty, \nan approximate plasma level for a given dose.36 Target plasma level ranges for optimal \nclinical response have been suggested as 146–254µg/L37 and 150–300µg/L,38 with \nadverse effects observed above 210µg/L.38 Inter-individual variation in aripiprazole \nplasma levels has been observed but not fully investigated, although gender appears to \nhave little influence.39,40 Age, metabolic enzyme genotype and interacting medications \nseem likely causes of variation.38–41 A putative range between 150µg/L and 210µg/L36 \nhas been suggested as a target for patients taking aripiprazole and these are broadly the \nconcentrations seen in patients receiving depot aripiprazole at 300mg and 400mg \nmonthly.42 Some authorities suggest a lower threshold for clinical effect of 100µg/L30 – \na plasma level usually afforded by an oral dose of 10mg a day.31,43\n",
+      "bbox": [
+        47.996307373046875,
+        405.160400390625,
+        422.80029296875,
+        584.8804321289062
+      ],
+      "text_sha256": "1a9383b41da2e39ca027ffba8816aaa40f9f92a580ad18c17c59b35791dfd91e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

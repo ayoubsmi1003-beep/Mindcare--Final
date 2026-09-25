@@ -1,0 +1,275 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0055",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 55,
+  "source_page_index": 54,
+  "source_page_display": 55,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "34    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nreuptake inhibitor) may have some efficacy for symptom reduction in schizophrenia \nspectrum disorders, including negative symptoms.59\n■\n■Meta-analyses support the efficacy of augmentation of an antipsychotic with ginkgo \nbiloba60 and a COX-2 inhibitor (albeit with a small effect size),61 while small RCTs \nhave demonstrated some benefit for selegiline,62,63 pramipexole,64 topical testoster-\none,65 ondansetron66 and granisetron.67 The findings from studies of repetitive tran-\nscranial magnetic stimulation (rTMS) are mixed but promising.68–70 The evidence for \ntranscranial direct current stimulation (tDCS) as a treatment for negative symptoms \nis limited and inconclusive.15,71 A large (n = 250) RCT in adults72 and a smaller RCT \nin elderly patients73 each found no benefit for donepezil and there is a further nega-\ntive RCT of galantamine.74\nPatients who misuse psychoactive substances experience fewer negative symptoms \nthan patients who do not.75 But rather than any pharmacological effect, it may be that \nthis association at least partly reflects that those people who develop psychosis in the \ncontext of substance use, specifically cannabis, have fewer neurodevelopmental risk \nfactors and thus better cognitive and social function.76,77\nSummary and recommendations\n(Derived from the BAP schizophrenia guideline 2020,78 Veerman et al. 2017,8 Aleman \net al. 201715 and Remington et al. 201679)\n■\n■There are no well-replicated, large trials, or meta-analyses of trials, with negative symptoms as \nthe primary outcome measure that have yielded convincing evidence for enduring and clinically \nsignificant benefit.\n■\n■Where some improvement has been demonstrated in clinical trials, this may be limited to \nsecondary negative symptoms.\n■\n■Psychotic illness should be identified and treated as early as possible as this may offer some \nprotection against the development of negative symptoms.\n■\n■For any given patient, the antipsychotic medication that provides the best balance between \noverall efficacy and adverse effects should be used at the lowest dose that maintains control of \npositive symptoms.\n■\n■Where negative symptoms persist beyond an acute episode of psychosis:\n■\n■Ensure EPS (specifically bradykinesia) and depression are detected and treated if present, and \nconsider the contribution of the environment to negative symptoms (e.g. institutionalisation, \nlack of stimulation)\n■\n■There is insufficient evidence at present to support a recommendation for any specific \npharmacological treatment for negative symptoms. Nevertheless, a trial of add-on medication \nfor which there is some RCT evidence for efficacy, such as an antidepressant, may be worth \nconsidering in some cases, ensuring that the choice of the augmenting agent is based on \nminimising the potential for compounding side effects through pharmacokinetic or pharma-\ncodynamic drug interactions.\n",
+  "raw_text_sha256": "402c8952a29faa4cec1abf461909e59a91c25013c8f2b25c2e40f688ebbdb304",
+  "coordinates_sha256": "e4241bf6664752960f298e49dfe11a6746be799f15bcff53801eacb15d5f2294",
+  "block_sequence_sha256": "5b8dd036e30a37957f56e5cff2c0fa0c675574ab9112360217421ee289a2f191",
+  "blocks": [
+    {
+      "block_id": "page-0055-block-0000",
+      "order": 0,
+      "text": "34    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "33baac777bc216936e28f6751b3efd02cd8c0c1d2b59135db5a032ce75763018"
+    },
+    {
+      "block_id": "page-0055-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0055-block-0002",
+      "order": 2,
+      "text": "reuptake inhibitor) may have some efficacy for symptom reduction in schizophrenia \nspectrum disorders, including negative symptoms.59\n",
+      "bbox": [
+        70.88839721679688,
+        62.5494384765625,
+        436.6484069824219,
+        86.26943969726562
+      ],
+      "text_sha256": "777db9cf41552f5c81e3b01876edf38afb4f99b08c52af072d13d868fd9bf581"
+    },
+    {
+      "block_id": "page-0055-block-0003",
+      "order": 3,
+      "text": "■\n■Meta-analyses support the efficacy of augmentation of an antipsychotic with ginkgo \n",
+      "bbox": [
+        61.888397216796875,
+        86.5494384765625,
+        436.6882019042969,
+        98.26943969726562
+      ],
+      "text_sha256": "a6aa3c54ac4a3541aa4019c0ae47f3c8ff71e0e4baba6d48331d3330677cdc46"
+    },
+    {
+      "block_id": "page-0055-block-0004",
+      "order": 4,
+      "text": "biloba60 and a COX-2 inhibitor (albeit with a small effect size),61 while small RCTs \nhave demonstrated some benefit for selegiline,62,63 pramipexole,64 topical testoster-\none,65 ondansetron66 and granisetron.67 The findings from studies of repetitive tran-\nscranial magnetic stimulation (rTMS) are mixed but promising.68–70 The evidence for \ntranscranial direct current stimulation (tDCS) as a treatment for negative symptoms \nis limited and inconclusive.15,71 A large (n = 250) RCT in adults72 and a smaller RCT \nin elderly patients73 each found no benefit for donepezil and there is a further nega-\ntive RCT of galantamine.74\n",
+      "bbox": [
+        70.8851089477539,
+        98.5494384765625,
+        436.6769104003906,
+        194.26943969726562
+      ],
+      "text_sha256": "2a7d3e63967091b888bb3acd4626b1c5707ffce49723f3c7cfe6174ca8a36610"
+    },
+    {
+      "block_id": "page-0055-block-0005",
+      "order": 5,
+      "text": "Patients who misuse psychoactive substances experience fewer negative symptoms \nthan patients who do not.75 But rather than any pharmacological effect, it may be that \nthis association at least partly reflects that those people who develop psychosis in the \ncontext of substance use, specifically cannabis, have fewer neurodevelopmental risk \nfactors and thus better cognitive and social function.76,77\n",
+      "bbox": [
+        61.88380432128906,
+        200.5494384765625,
+        436.6938781738281,
+        260.2695007324219
+      ],
+      "text_sha256": "f2fbb95219ddce0d8c7cf8c1c64f44b05d8fcb4d9c99c56a9b9493e3fa624f2b"
+    },
+    {
+      "block_id": "page-0055-block-0006",
+      "order": 6,
+      "text": "Summary and recommendations\n",
+      "bbox": [
+        61.88849639892578,
+        277.7044982910156,
+        229.1654815673828,
+        290.739501953125
+      ],
+      "text_sha256": "a576e641d5c03f3eb8e1e6576f8d5e9954e545468c3b8fdb1f133419301bbb72"
+    },
+    {
+      "block_id": "page-0055-block-0007",
+      "order": 7,
+      "text": "(Derived from the BAP schizophrenia guideline 2020,78 Veerman et al. 2017,8 Aleman \net al. 201715 and Remington et al. 201679)\n",
+      "bbox": [
+        61.88648986816406,
+        296.54949951171875,
+        436.6664733886719,
+        320.2695007324219
+      ],
+      "text_sha256": "dd68de83149d173e19468aa9ccf92d3f107f25d9c3608979cad54fa3a2856d63"
+    },
+    {
+      "block_id": "page-0055-block-0008",
+      "order": 8,
+      "text": "■\n■There are no well-replicated, large trials, or meta-analyses of trials, with negative symptoms as \n",
+      "bbox": [
+        68.88899993896484,
+        338.38092041015625,
+        420.2367248535156,
+        348.2494201660156
+      ],
+      "text_sha256": "1cf7e5ef7199155eab5e6ff459b301d92d47a144401d5ba97c3ff514e7d98b90"
+    },
+    {
+      "block_id": "page-0055-block-0009",
+      "order": 9,
+      "text": "the primary outcome measure that have yielded convincing evidence for enduring and clinically \nsignificant benefit.\n",
+      "bbox": [
+        77.38909912109375,
+        348.3769226074219,
+        423.8662414550781,
+        368.2414245605469
+      ],
+      "text_sha256": "c1a67fd8b04d33693bca7375f282f866485b6dd993a5bd46f411f657c17e6e3d"
+    },
+    {
+      "block_id": "page-0055-block-0010",
+      "order": 10,
+      "text": "■\n■Where some improvement has been demonstrated in clinical trials, this may be limited to \n",
+      "bbox": [
+        68.88899993896484,
+        368.38092041015625,
+        401.5112609863281,
+        378.2494201660156
+      ],
+      "text_sha256": "6573f47c79b39cb76867a29bde2aff25c02a0231e48d6160fc52bf524bccf60b"
+    },
+    {
+      "block_id": "page-0055-block-0011",
+      "order": 11,
+      "text": "secondary negative symptoms.\n",
+      "bbox": [
+        77.38909912109375,
+        378.3769226074219,
+        188.36514282226562,
+        388.24542236328125
+      ],
+      "text_sha256": "de360a984de440619d38ead3faa85c938bcbb73d206d696eee7e301ed65f7039"
+    },
+    {
+      "block_id": "page-0055-block-0012",
+      "order": 12,
+      "text": "■\n■Psychotic illness should be identified and treated as early as possible as this may offer some \n",
+      "bbox": [
+        68.88899993896484,
+        388.38092041015625,
+        409.0931701660156,
+        398.2494201660156
+      ],
+      "text_sha256": "9f854b258c703421c465975cbad89e8932864d29b297e5f233796f1f18454186"
+    },
+    {
+      "block_id": "page-0055-block-0013",
+      "order": 13,
+      "text": "protection against the development of negative symptoms.\n",
+      "bbox": [
+        77.38909912109375,
+        398.3769226074219,
+        291.1726379394531,
+        408.24542236328125
+      ],
+      "text_sha256": "bb6c72ba01d747e6a5333f9e9f24c2b46ca44b876af87ece308d4d66246c8a69"
+    },
+    {
+      "block_id": "page-0055-block-0014",
+      "order": 14,
+      "text": "■\n■For any given patient, the antipsychotic medication that provides the best balance between \n",
+      "bbox": [
+        68.88899993896484,
+        408.38092041015625,
+        409.7137756347656,
+        418.2494201660156
+      ],
+      "text_sha256": "9d301c7b4168c321653f77fa77f9286929f0099979af7074f5b668dfeca3f3f4"
+    },
+    {
+      "block_id": "page-0055-block-0015",
+      "order": 15,
+      "text": "overall efficacy and adverse effects should be used at the lowest dose that maintains control of \npositive symptoms.\n",
+      "bbox": [
+        77.38909912109375,
+        418.3769226074219,
+        423.1013488769531,
+        438.2414245605469
+      ],
+      "text_sha256": "8c172487defc19b01c56331f6e809cc1db410a988a518300fcde46d88e3061eb"
+    },
+    {
+      "block_id": "page-0055-block-0016",
+      "order": 16,
+      "text": "■\n■Where negative symptoms persist beyond an acute episode of psychosis:\n",
+      "bbox": [
+        68.88899993896484,
+        438.38092041015625,
+        340.3027648925781,
+        448.2494201660156
+      ],
+      "text_sha256": "c2a91f0691767b6c41a8ac5445d3321a42c78b73dbaffd0cd08707a8f659241d"
+    },
+    {
+      "block_id": "page-0055-block-0017",
+      "order": 17,
+      "text": "■\n■Ensure EPS (specifically bradykinesia) and depression are detected and treated if present, and \n",
+      "bbox": [
+        77.38899993896484,
+        448.38092041015625,
+        423.2798156738281,
+        458.2494201660156
+      ],
+      "text_sha256": "2f33d75040f05d981dfef4fdd961e4ff001363b10f5fb6bf2697eab31cb27b7a"
+    },
+    {
+      "block_id": "page-0055-block-0018",
+      "order": 18,
+      "text": "consider the contribution of the environment to negative symptoms (e.g. institutionalisation, \nlack of stimulation)\n",
+      "bbox": [
+        85.88909912109375,
+        458.3769226074219,
+        422.9483337402344,
+        478.2414245605469
+      ],
+      "text_sha256": "789564ce93ea874cfe237602b12cc11d6bf1b8c399f7eb4cf90943e063a21a25"
+    },
+    {
+      "block_id": "page-0055-block-0019",
+      "order": 19,
+      "text": "■\n■There is insufficient evidence at present to support a recommendation for any specific \n",
+      "bbox": [
+        77.38899993896484,
+        478.38092041015625,
+        397.9073181152344,
+        488.2494201660156
+      ],
+      "text_sha256": "10a3e09c8c9c4c22684aa60466dcbfc6f128942950439f95758fe5c2078a1953"
+    },
+    {
+      "block_id": "page-0055-block-0020",
+      "order": 20,
+      "text": "pharmacological treatment for negative symptoms. Nevertheless, a trial of add-on medication \nfor which there is some RCT evidence for efficacy, such as an antidepressant, may be worth \nconsidering in some cases, ensuring that the choice of the augmenting agent is based on \nminimising the potential for compounding side effects through pharmacokinetic or pharma-\ncodynamic drug interactions.\n",
+      "bbox": [
+        85.88909912109375,
+        488.3769226074219,
+        426.6882629394531,
+        538.2294311523438
+      ],
+      "text_sha256": "bb25d9a48bdc6e5c97b53ccca40fe9932b624fb1a098637ee23e8e8d6c008352"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

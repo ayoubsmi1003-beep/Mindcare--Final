@@ -1,0 +1,359 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0335",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 335,
+  "source_page_index": 334,
+  "source_page_display": 335,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "314    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nDrug treatment of depression\nThe drug treatment of depression has been summarised in Figure 3.1.\nFigure 3.1  Drug treatment of depression\nDiscuss choice of drug with the patient\nNo effect\nNo effect\nEffective\nEffective\nPoorly tolerated\nPoorly tolerated\nor\nNo effect\nInclude:\nPotential therapeutic effects\nPossible adverse effects\nLikelihood of discontinuation symptoms\nLikely time to respond\n(good therapeutic alliance predicts response\nto medication1)\nSuggest SSRI as ﬁrst choice; mirtazapine if\nsedation required (see notes)\nStart antidepressant\nTitrate (if necessary) to recognised therapeutic\ndose.\nAssess efﬁcacy after 2 weeks (see notes)\nAssess weekly for a\nfurther 1–2 weeks\nContinue for 6–92–4 months\nat full treatment dose\nConsider longer-term treatment\nin recurrent depression2–6\nIf still no response, consider\nincreasing dose (see notes)\nNo effect\nConsider third-choice options – \nmirtazapine9 (if not already used),\nvortioxetine10, agomelatine11\nNo effect\nRefer to suggested treatments for\ntreatment resistant depression\nSwitch to a different\nantidepressant (see notes)\nTitrate to therapeutic dose.\nAssess efﬁcacy over 3–4 weeks\nSwitch to a different \nantidepressant7,8 (see notes)\nTitrate (if necessary) to therapeutic\ndose. Assess over 3–4 weeks,\nincrease dose as necessary\n",
+  "raw_text_sha256": "91c0911053006bf603a591e78a1dc7aa67a156c56283fb915c6fbda6e23e091a",
+  "coordinates_sha256": "567d46613034915a4e14949b3d86e1c641e1cc8a9ad3801ead4e06c243ce71d7",
+  "block_sequence_sha256": "a3b6fea637b5e018185488a2d09c517525aa039e6edc94f74815615024f3e43d",
+  "blocks": [
+    {
+      "block_id": "page-0335-block-0000",
+      "order": 0,
+      "text": "314    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "fd80942f273cfd05808b3882fe6ac9f9e0024d2e1ce2018de3a7a5f7a8fa75e3"
+    },
+    {
+      "block_id": "page-0335-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0335-block-0002",
+      "order": 2,
+      "text": "Drug treatment of depression\n",
+      "bbox": [
+        68.88999938964844,
+        66.06539916992188,
+        222.51597595214844,
+        79.10040283203125
+      ],
+      "text_sha256": "14159b4e21bf32b3e1948606bf91ae76b83477897926e1ae17aafcf03ef0a6c6"
+    },
+    {
+      "block_id": "page-0335-block-0003",
+      "order": 3,
+      "text": "The drug treatment of depression has been summarised in Figure 3.1.\n",
+      "bbox": [
+        61.88999938964844,
+        84.910400390625,
+        360.8200378417969,
+        96.63040161132812
+      ],
+      "text_sha256": "f9a36b30b68b76739fb14d557b1600cee2e6b8b1b84e58fb09f76aff4dc8b397"
+    },
+    {
+      "block_id": "page-0335-block-0004",
+      "order": 4,
+      "text": "Figure 3.1  Drug treatment of depression\n",
+      "bbox": [
+        62.72639846801758,
+        630.6414794921875,
+        195.26638793945312,
+        639.5289916992188
+      ],
+      "text_sha256": "b04211468b78e74f37cd2fb4416d52797e137ff3123db5019ae9f63fdf20dc2a"
+    },
+    {
+      "block_id": "page-0335-block-0005",
+      "order": 5,
+      "text": "Discuss choice of drug with the patient\n",
+      "bbox": [
+        178.2530975341797,
+        122.43807983398438,
+        317.86553955078125,
+        131.3630828857422
+      ],
+      "text_sha256": "bf6b51264152e263cc919dd98c96de5ac3911541134253cf501934cd6ff92d0f"
+    },
+    {
+      "block_id": "page-0335-block-0006",
+      "order": 6,
+      "text": "No effect\n",
+      "bbox": [
+        121.7302017211914,
+        308.2033996582031,
+        152.16522216796875,
+        317.4208984375
+      ],
+      "text_sha256": "2a58d421b17ba457b65c77880603206ec8f5d4e31e9b04c827f3bf736e0f56b0"
+    },
+    {
+      "block_id": "page-0335-block-0007",
+      "order": 7,
+      "text": "No effect\n",
+      "bbox": [
+        102.19270324707031,
+        398.7658996582031,
+        132.62770080566406,
+        407.9833984375
+      ],
+      "text_sha256": "2a58d421b17ba457b65c77880603206ec8f5d4e31e9b04c827f3bf736e0f56b0"
+    },
+    {
+      "block_id": "page-0335-block-0008",
+      "order": 8,
+      "text": "Effective\n",
+      "bbox": [
+        211.35520935058594,
+        308.2033996582031,
+        240.1177215576172,
+        317.4208984375
+      ],
+      "text_sha256": "af90b98bf86de1f246038b135eb6cd7fb7c6a4becb1f29841450551224878d19"
+    },
+    {
+      "block_id": "page-0335-block-0009",
+      "order": 9,
+      "text": "Effective\n",
+      "bbox": [
+        201.67271423339844,
+        396.98089599609375,
+        230.4352264404297,
+        406.1983947753906
+      ],
+      "text_sha256": "af90b98bf86de1f246038b135eb6cd7fb7c6a4becb1f29841450551224878d19"
+    },
+    {
+      "block_id": "page-0335-block-0010",
+      "order": 10,
+      "text": "Poorly tolerated\n",
+      "bbox": [
+        338.1951904296875,
+        308.2033996582031,
+        390.7102355957031,
+        317.4208984375
+      ],
+      "text_sha256": "70575be73e4f0693d60b9546a63a962c691692350e42318eef39ab90662581da"
+    },
+    {
+      "block_id": "page-0335-block-0011",
+      "order": 11,
+      "text": "Poorly tolerated\nor\nNo effect\n",
+      "bbox": [
+        340.3627014160156,
+        397.11590576171875,
+        392.87774658203125,
+        424.3334045410156
+      ],
+      "text_sha256": "8cdace49e425c8e1466f3e2624c589a8d8ca467b7a19145dbaebb062dfddfffd"
+    },
+    {
+      "block_id": "page-0335-block-0012",
+      "order": 12,
+      "text": "Include:\nPotential therapeutic effects\nPossible adverse effects\nLikelihood of discontinuation symptoms\nLikely time to respond\n",
+      "bbox": [
+        172.42269897460938,
+        133.53591918945312,
+        304.5502014160156,
+        176.743408203125
+      ],
+      "text_sha256": "a86e4908b3a527835379656a56b3c3c847873fa0afee54550f5b73cee037ca85"
+    },
+    {
+      "block_id": "page-0335-block-0013",
+      "order": 13,
+      "text": "(good therapeutic alliance predicts response\nto medication1)\n",
+      "bbox": [
+        172.42269897460938,
+        183.02841186523438,
+        323.3077392578125,
+        200.75030517578125
+      ],
+      "text_sha256": "31102785fa24f1851f819d152fbc812709ba64e87c2e5ab0554a816fdb3b8338"
+    },
+    {
+      "block_id": "page-0335-block-0014",
+      "order": 14,
+      "text": "Suggest SSRI as ﬁrst choice; mirtazapine if\nsedation required (see notes)\n",
+      "bbox": [
+        172.42010498046875,
+        207.03530883789062,
+        316.6302185058594,
+        224.9228057861328
+      ],
+      "text_sha256": "44272375eae13ea813f202583fbb6e16b117cba52d94b10581f4b00f5c4e7f4a"
+    },
+    {
+      "block_id": "page-0335-block-0015",
+      "order": 15,
+      "text": "Start antidepressant\nTitrate (if necessary) to recognised therapeutic\ndose.\nAssess efﬁcacy after 2 weeks (see notes)\n",
+      "bbox": [
+        169.16810607910156,
+        256.3879089355469,
+        325.89569091796875,
+        292.38787841796875
+      ],
+      "text_sha256": "9cd6364290cfdacf4a33be69931a4ffc22d4f16ff618eda5dd01431f4b101cc3"
+    },
+    {
+      "block_id": "page-0335-block-0016",
+      "order": 16,
+      "text": "Assess weekly for a\n",
+      "bbox": [
+        88.19599914550781,
+        341.330810546875,
+        159.48350524902344,
+        350.25579833984375
+      ],
+      "text_sha256": "78c83b5fbda43de2edb633b7a1794c25d13d3c4679179a94a77623dac866c306"
+    },
+    {
+      "block_id": "page-0335-block-0017",
+      "order": 17,
+      "text": "further 1–2 weeks\n",
+      "bbox": [
+        92.16349792480469,
+        350.330810546875,
+        155.52349853515625,
+        359.25579833984375
+      ],
+      "text_sha256": "c7227010c5b787f65e1ec125e5dd0faf2be4b12d3f7499f37c9329adb53f0feb"
+    },
+    {
+      "block_id": "page-0335-block-0018",
+      "order": 18,
+      "text": "Continue for 6–92–4 months\n",
+      "bbox": [
+        197.3101043701172,
+        341.2549133300781,
+        294.8265686035156,
+        350.25579833984375
+      ],
+      "text_sha256": "321176919dcd0b8380e77d95889a4a57d5bff57ef30446011d4a8585206d9e55"
+    },
+    {
+      "block_id": "page-0335-block-0019",
+      "order": 19,
+      "text": "at full treatment dose\nConsider longer-term treatment\nin recurrent depression2–6\nIf still no response, consider\nincreasing dose (see notes)\n",
+      "bbox": [
+        79.00509643554688,
+        350.330810546875,
+        298.1265869140625,
+        379.59637451171875
+      ],
+      "text_sha256": "02170c030a2b4f503c0fbcc31960f0a3792ce99528652eedc81160b1bbd52e70"
+    },
+    {
+      "block_id": "page-0335-block-0020",
+      "order": 20,
+      "text": "No effect\n",
+      "bbox": [
+        200.95510864257812,
+        490.9039001464844,
+        231.39012145996094,
+        500.12139892578125
+      ],
+      "text_sha256": "2a58d421b17ba457b65c77880603206ec8f5d4e31e9b04c827f3bf736e0f56b0"
+    },
+    {
+      "block_id": "page-0335-block-0021",
+      "order": 21,
+      "text": "Consider third-choice options – \n",
+      "bbox": [
+        185.6920928955078,
+        521.9828491210938,
+        300.71209716796875,
+        530.9078979492188
+      ],
+      "text_sha256": "751a4a43d9ab24c385a52cdb2b14c56120ddccf2413f2f98d49762f2fa3528eb"
+    },
+    {
+      "block_id": "page-0335-block-0022",
+      "order": 22,
+      "text": "mirtazapine9 (if not already used),\nvortioxetine10, agomelatine11\n",
+      "bbox": [
+        188.17959594726562,
+        532.81640625,
+        301.68463134765625,
+        551.075927734375
+      ],
+      "text_sha256": "84bac6931afb0ab4a050c8a574e158af7c7fe2d604f6b4a5116a11a14428cbd3"
+    },
+    {
+      "block_id": "page-0335-block-0023",
+      "order": 23,
+      "text": "No effect\n",
+      "bbox": [
+        258.6061096191406,
+        561.0803833007812,
+        289.0411376953125,
+        570.2979125976562
+      ],
+      "text_sha256": "2a58d421b17ba457b65c77880603206ec8f5d4e31e9b04c827f3bf736e0f56b0"
+    },
+    {
+      "block_id": "page-0335-block-0024",
+      "order": 24,
+      "text": "Refer to suggested treatments for\ntreatment resistant depression\n",
+      "bbox": [
+        186.68209838867188,
+        591.8683471679688,
+        299.2271728515625,
+        610.0858764648438
+      ],
+      "text_sha256": "2f328ced839bf3e996209a75f8ff35469ee3bde39d408c96528b52729635f6da"
+    },
+    {
+      "block_id": "page-0335-block-0025",
+      "order": 25,
+      "text": "Switch to a different\nantidepressant (see notes)\nTitrate to therapeutic dose.\nAssess efﬁcacy over 3–4 weeks\n",
+      "bbox": [
+        316.17108154296875,
+        341.32989501953125,
+        419.7311706542969,
+        379.4223937988281
+      ],
+      "text_sha256": "61c595af6281a7f2ec1de2481904cc3301db157af01024b85e568811ab193282"
+    },
+    {
+      "block_id": "page-0335-block-0026",
+      "order": 26,
+      "text": "Switch to a different \nantidepressant7,8 (see notes)\n",
+      "bbox": [
+        189.99960327148438,
+        432.2428894042969,
+        290.5941467285156,
+        450.5052795410156
+      ],
+      "text_sha256": "57c1b26a2c34f6c227b0ca0c56d45cad20d6bb8be06544bc72f85df0c074f744"
+    },
+    {
+      "block_id": "page-0335-block-0027",
+      "order": 27,
+      "text": "Titrate (if necessary) to therapeutic\ndose. Assess over 3–4 weeks,\nincrease dose as necessary\n",
+      "bbox": [
+        181.94158935546875,
+        453.1077880859375,
+        298.6566467285156,
+        480.3252868652344
+      ],
+      "text_sha256": "1ddedf9b031c1e076e0033b28c93540d866bb4cd68453adc621c1dff325403fa"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

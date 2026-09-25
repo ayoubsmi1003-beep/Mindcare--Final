@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0469",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 469,
+  "source_page_index": 468,
+  "source_page_display": 469,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "448    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nBenzodiazepines and disinhibition\nUnexpected increases in aggressive or impulsive behaviour secondary to drug treatment \nare usually called disinhibitory or paradoxical reactions. These reactions may include \nacute excitement, hyperactivity, increased anxiety, vivid dreams, sexual disinhibition, \naggression, hostility and rage. Examples of causative agents include amfetamines methyl-\nphenidate, benzodiazepines and alcohol. Paradoxical reactions are an important consid-\neration with benzodiazepines because these drugs are used to sedate and tranquillise – a \nparadoxical reaction is thus the polar opposite of the desired effect. These reactions are \nalso a major problem in general medicine where drugs such as midazolam are widely \nused for conscious sedation. In intensive care medicine, benzodiazepine-related disinhibi-\ntion can be difficult to distinguish from hyperactive delirium.1\nHow common are disinhibitory reactions with benzodiazepines?\nThe incidence of disinhibitory reactions varies widely depending on the population \nstudied (see the next section ‘Who is at risk?’). For example, a meta-analysis of benzo-\ndiazepine RCTs that included many hundreds of patients with a wide range of diagno-\nses reported an incidence of less than 1% (the same as placebo).2 Similarly, an analysis \nof behavioural disinhibition frequency in a psychiatric unit found no difference between \nthose treated with benzodiazepines and those not.3 However, a Norwegian study that \nreported on 415 cases of ‘driving under the influence’, in which flunitrazepam was the \nsole substance implicated, found that 6% of adverse effects could be described as disin-\nhibitory reactions.4 An RCT that recruited patients with panic disorder reported an \nincidence of disinhibition of 13%.5 Authors of case series (often describing use in high-\nrisk patients) reported rates of 10–20%,2 and an RCT that included patients with bor-\nderline personality disorder reported a rate of 58%.6\nDisinhibition is rather problematic to define, and so incident rates are correspond-\ningly difficult to determine. Aggression may be considered to be a disinhibition reaction \nbut not defined as disinhibition per se. Aggression is robustly linked to benzodiazepine \nuse both in the long term and after exposure to a single dose.7,8\nOther GABA agonists, particularly zolpidem, have also been linked to disinhibition \nassociated with somnambulism, automatism, amnesia and mania.9–12\nWho is at risk?\nThose who have learning disability, neurological disorder or CNS degenerative dis-\nease,13 are young (child or adolescent) or elderly,13–16 or have a history of aggression or \npoor impulse control6,17 are at increased risk of experiencing a disinhibitory reaction. \nThe risk is further increased if the benzodiazepine is a high-potency drug, has a short \nhalf-life, is given in a high dose or is administered intravenously (so provoking high and \nrapidly fluctuating plasma levels).13,18–20 Some people may be genetically predisposed to \ndisinhibition reactions.21\nCombinations of risk factors are clearly important: low-risk long-acting benzodiaz-\nepines may cause disinhibition in high-risk populations such as children,16 higher risk, \n",
+  "raw_text_sha256": "3b4e71d31426a4bb2b85887084ecc3c12c5d52e6f6eab74c9c54a20e027eb227",
+  "coordinates_sha256": "147891d38641b2d9aaf02a033f8badfdcc7984a5fdaa3f9eedb6bf03a665162e",
+  "block_sequence_sha256": "1ba73cbe239a3e964c081472fd60bb334417361c02d9fa4d01a01c6dc78d6495",
+  "blocks": [
+    {
+      "block_id": "page-0469-block-0000",
+      "order": 0,
+      "text": "448    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "c2fda2f5f2858ef168826bf05eeab68fb4b5235e4b39ba241cff3dca77106267"
+    },
+    {
+      "block_id": "page-0469-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0469-block-0002",
+      "order": 2,
+      "text": "Benzodiazepines and disinhibition\n",
+      "bbox": [
+        68.88999938964844,
+        66.06539916992188,
+        246.13291931152344,
+        79.10040283203125
+      ],
+      "text_sha256": "1206a4fddf6b831bb931cf83cdb92f86b88163c9e28bd8fb54fd0b7a11ee2a9e"
+    },
+    {
+      "block_id": "page-0469-block-0003",
+      "order": 3,
+      "text": "Unexpected increases in aggressive or impulsive behaviour secondary to drug treatment \nare usually called disinhibitory or paradoxical reactions. These reactions may include \nacute excitement, hyperactivity, increased anxiety, vivid dreams, sexual disinhibition, \naggression, hostility and rage. Examples of causative agents include amfetamines methyl-\nphenidate, benzodiazepines and alcohol. Paradoxical reactions are an important consid-\neration with benzodiazepines because these drugs are used to sedate and tranquillise – a \nparadoxical reaction is thus the polar opposite of the desired effect. These reactions are \nalso a major problem in general medicine where drugs such as midazolam are widely \nused for conscious sedation. In intensive care medicine, benzodiazepine-related disinhibi-\ntion can be difficult to distinguish from hyperactive delirium.1\n",
+      "bbox": [
+        61.88999938964844,
+        84.910400390625,
+        436.7201232910156,
+        204.63040161132812
+      ],
+      "text_sha256": "61e3406624e853a40d639609a58e16f7b8c6d7ab37ecc9772013b78ea484caeb"
+    },
+    {
+      "block_id": "page-0469-block-0004",
+      "order": 4,
+      "text": "How common are disinhibitory reactions with benzodiazepines?\n",
+      "bbox": [
+        61.88999938964844,
+        222.06539916992188,
+        393.9801025390625,
+        235.10040283203125
+      ],
+      "text_sha256": "7a849206c1359ef83cc10919233425ab50dcd6b742f767c12e76ceae4830c2d2"
+    },
+    {
+      "block_id": "page-0469-block-0005",
+      "order": 5,
+      "text": "The incidence of disinhibitory reactions varies widely depending on the population \nstudied (see the next section ‘Who is at risk?’). For example, a meta-analysis of benzo-\ndiazepine RCTs that included many hundreds of patients with a wide range of diagno-\nses reported an incidence of less than 1% (the same as placebo).2 Similarly, an analysis \nof behavioural disinhibition frequency in a psychiatric unit found no difference between \nthose treated with benzodiazepines and those not.3 However, a Norwegian study that \nreported on 415 cases of ‘driving under the influence’, in which flunitrazepam was the \nsole substance implicated, found that 6% of adverse effects could be described as disin-\nhibitory reactions.4 An RCT that recruited patients with panic disorder reported an \nincidence of disinhibition of 13%.5 Authors of case series (often describing use in high-\nrisk patients) reported rates of 10–20%,2 and an RCT that included patients with bor-\nderline personality disorder reported a rate of 58%.6\n",
+      "bbox": [
+        61.885772705078125,
+        240.910400390625,
+        436.707275390625,
+        384.6304016113281
+      ],
+      "text_sha256": "2afb48f90cc3aa00ed165bb641129b0e9a8d00b2e44b9cb9b23f4f4522ebc09f"
+    },
+    {
+      "block_id": "page-0469-block-0006",
+      "order": 6,
+      "text": "Disinhibition is rather problematic to define, and so incident rates are correspond-\ningly difficult to determine. Aggression may be considered to be a disinhibition reaction \nbut not defined as disinhibition per se. Aggression is robustly linked to benzodiazepine \nuse both in the long term and after exposure to a single dose.7,8\n",
+      "bbox": [
+        61.88999938964844,
+        384.910400390625,
+        436.70989990234375,
+        432.6304016113281
+      ],
+      "text_sha256": "4f233d49047dd616503f043e7602bce32cd72cb2b2e7da502315ebeae2e2da50"
+    },
+    {
+      "block_id": "page-0469-block-0007",
+      "order": 7,
+      "text": "Other GABA agonists, particularly zolpidem, have also been linked to disinhibition \nassociated with somnambulism, automatism, amnesia and mania.9–12\n",
+      "bbox": [
+        61.88999938964844,
+        432.910400390625,
+        436.69000244140625,
+        456.6304016113281
+      ],
+      "text_sha256": "0896d6ccc99af8c11e90c93d815d606f31ac4a839fb3e1d6b4d63df1000a5cfa"
+    },
+    {
+      "block_id": "page-0469-block-0008",
+      "order": 8,
+      "text": "Who is at risk?\n",
+      "bbox": [
+        61.88999938964844,
+        474.0653991699219,
+        137.67999267578125,
+        487.10040283203125
+      ],
+      "text_sha256": "5b8bc148237ae86bfe943ac5cf49d89cc970df8f6dab03cde577a582c2a72e20"
+    },
+    {
+      "block_id": "page-0469-block-0009",
+      "order": 9,
+      "text": "Those who have learning disability, neurological disorder or CNS degenerative dis-\nease,13 are young (child or adolescent) or elderly,13–16 or have a history of aggression or \npoor impulse control6,17 are at increased risk of experiencing a disinhibitory reaction. \nThe risk is further increased if the benzodiazepine is a high-potency drug, has a short \nhalf-life, is given in a high dose or is administered intravenously (so provoking high and \nrapidly fluctuating plasma levels).13,18–20 Some people may be genetically predisposed to \ndisinhibition reactions.21\n",
+      "bbox": [
+        61.88580322265625,
+        492.910400390625,
+        436.665771484375,
+        576.6304321289062
+      ],
+      "text_sha256": "a0efca2ba2c5537017723bb4605cfacb995b176481760309d4ccfd8796f89c3e"
+    },
+    {
+      "block_id": "page-0469-block-0010",
+      "order": 10,
+      "text": "Combinations of risk factors are clearly important: low-risk long-acting benzodiaz-\nepines may cause disinhibition in high-risk populations such as children,16 higher risk, \n",
+      "bbox": [
+        61.88999938964844,
+        576.910400390625,
+        436.6704406738281,
+        600.6304321289062
+      ],
+      "text_sha256": "d3d6bf59437086c82cccd0a89446b4e1660b56fc560944e526c5d4638bd3f84a"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

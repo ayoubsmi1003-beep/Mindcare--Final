@@ -1,0 +1,383 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0465",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 465,
+  "source_page_index": 464,
+  "source_page_display": 465,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "444    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\n■\n■Patients often report that 10% reductions (calculated on the last dose, so that they \nbecome increasingly small) every 2–4 weeks are tolerable, although some long-term \nusers may need even slower reductions.\n■\n■Final doses before complete cessation will need to be very small (often much less than \n1mg of diazepam equivalent)\nPractical application of these principles\nBefore tapering\n■\n■All patients should be informed of the risk of withdrawal symptoms on stopping any \nbenzodiazepine, z-drugs or gabapentinoid (high risk for alprazolam and lorazepam).\n■\n■Patient should be warned not to stop benzodiazepines abruptly, because this can \ncause seizures and can be fatal, and may be the method most likely to give rise to \nsevere and long-lasting withdrawal symptoms.\n■\n■Although stopping benzodiazepines can cause unpleasant symptoms, if tapering is \ngradual and careful the process can be tolerable. Reassurance may be required for \nthose that have rapidly tapered in the past.\n■\n■Most patients take months or years to taper. However, rate of reduction should be \ndetermined by what is tolerable for the patient, not externally imposed timetables.\n■\n■Past experience of reducing can help predict symptoms that may arise again on \ntapering.\n■\n■Preparation for benzodiazepine tapering may be required: e.g. lightening work or \nfamily duties or bolstering of non-pharmacological coping skills (including accept-\nance, \nbreathing \nexercises, \nexercise, \nhobbies, \ndiary \nkeeping, \nand \nde-catastrophising).28,34\n■\n■People with insomnia may benefit from adjunctive treatment with melatonin, and \nthose with panic disorder may benefit from CBT during the taper period.24,35,36 \nGradual dose reduction accompanied by psychological interventions (relaxation, \nCBT) is more likely to be successful than supervised dose reduction alone29 or psy-\nchological interventions alone.37\n■\n■Familiarity of the patient and the doctor with the wide variety of withdrawal symp-\ntoms (above) may help to mitigate unnecessary anxiety when symptoms arise. \nWithdrawal symptoms do not indicate that the drug is needed but that taper rate \nshould be slowed.\nThe process of tapering\n■\n■Patients may be broadly risk stratified:\n■\n■For low-risk patients (<6 months use, long half-life benzodiazepine, no experience \nof significant withdrawal symptoms in the past), a test reduction could be made \nof 25%.\n■\n■For high-risk patients (>6 months use, short half-life benzodiazepine, past history \nof withdrawal symptoms) a test reduction of 5–10% could be recommended.\n",
+  "raw_text_sha256": "2a0907af8d95cf3df3c52d744e94f3a9ad6ff5f1c24be82bd6f9bee7f03c4fb9",
+  "coordinates_sha256": "1124a00dca1abbb12bbe58502cd1666edcc3a1697a3884a0843d21173aea121a",
+  "block_sequence_sha256": "805cc3a740cc49edc9a051f6993c7d4f5cf4f45f42c8989356a88938d357479c",
+  "blocks": [
+    {
+      "block_id": "page-0465-block-0000",
+      "order": 0,
+      "text": "444    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "8b844d0ab6ef264b54e4d892c62e55d83915b982dece6f4ed070c5fdb4039263"
+    },
+    {
+      "block_id": "page-0465-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0465-block-0002",
+      "order": 2,
+      "text": "■\n■Patients often report that 10% reductions (calculated on the last dose, so that they \n",
+      "bbox": [
+        61.88990020751953,
+        62.55029296875,
+        436.7099914550781,
+        74.27029418945312
+      ],
+      "text_sha256": "9fdd7db91ff89ed238d0c94b64a8c78d16e021537fa7a6ad79bcdceb2eeaab21"
+    },
+    {
+      "block_id": "page-0465-block-0003",
+      "order": 3,
+      "text": "become increasingly small) every 2–4 weeks are tolerable, although some long-term \nusers may need even slower reductions.\n",
+      "bbox": [
+        70.88999938964844,
+        74.55029296875,
+        436.64007568359375,
+        98.27029418945312
+      ],
+      "text_sha256": "c98866b852197a277da63fb8f9392fac24eacc539516c8dee4b36ee105228814"
+    },
+    {
+      "block_id": "page-0465-block-0004",
+      "order": 4,
+      "text": "■\n■Final doses before complete cessation will need to be very small (often much less than \n",
+      "bbox": [
+        61.88990020751953,
+        98.55029296875,
+        436.7098693847656,
+        110.27029418945312
+      ],
+      "text_sha256": "f362cf4ff35605a8a4f6599192db065421a648af6bd16395a150d23c97f384d6"
+    },
+    {
+      "block_id": "page-0465-block-0005",
+      "order": 5,
+      "text": "1mg of diazepam equivalent)\n",
+      "bbox": [
+        70.88999938964844,
+        110.55029296875,
+        195.8800048828125,
+        122.27029418945312
+      ],
+      "text_sha256": "9bf1925e0ac8f87eb21f2d42ab11cc8b46c30a3d00b080be2e93900cb27b4ec6"
+    },
+    {
+      "block_id": "page-0465-block-0006",
+      "order": 6,
+      "text": "Practical application of these principles\n",
+      "bbox": [
+        61.88999938964844,
+        145.70529174804688,
+        262.98095703125,
+        158.74029541015625
+      ],
+      "text_sha256": "9255aca769ac20dd891984dc78969c86ce0b6f7434f81ae92f15c1c9ade3dd61"
+    },
+    {
+      "block_id": "page-0465-block-0007",
+      "order": 7,
+      "text": "Before tapering\n",
+      "bbox": [
+        61.88999938964844,
+        164.64028930664062,
+        135.79998779296875,
+        176.49029541015625
+      ],
+      "text_sha256": "e70f3244c8da5e71799b01d02a09927819ae4c00ae080449fb992e59cc780114"
+    },
+    {
+      "block_id": "page-0465-block-0008",
+      "order": 8,
+      "text": "■\n■All patients should be informed of the risk of withdrawal symptoms on stopping any \n",
+      "bbox": [
+        61.88990020751953,
+        188.55029296875,
+        436.6999206542969,
+        200.27029418945312
+      ],
+      "text_sha256": "18a394ea7052894eac98f284d93e74217a4e0cf311573011887037797049690d"
+    },
+    {
+      "block_id": "page-0465-block-0009",
+      "order": 9,
+      "text": "benzodiazepine, z-drugs or gabapentinoid (high risk for alprazolam and lorazepam).\n",
+      "bbox": [
+        70.88999938964844,
+        200.55029296875,
+        433.92999267578125,
+        212.27029418945312
+      ],
+      "text_sha256": "ad4409e3c9c9601046faf3d0dba4c6456007aad6f19b7b69ec620291c10ad4d5"
+    },
+    {
+      "block_id": "page-0465-block-0010",
+      "order": 10,
+      "text": "■\n■Patient should be warned not to stop benzodiazepines abruptly, because this can \n",
+      "bbox": [
+        61.88990020751953,
+        212.55029296875,
+        436.62994384765625,
+        224.27029418945312
+      ],
+      "text_sha256": "7cba8a07d69ffde4b329d9bb45a8da27b991dce0ad99dfc9fd749fda62889116"
+    },
+    {
+      "block_id": "page-0465-block-0011",
+      "order": 11,
+      "text": "cause seizures and can be fatal, and may be the method most likely to give rise to \nsevere and long-lasting withdrawal symptoms.\n",
+      "bbox": [
+        70.88999938964844,
+        224.55029296875,
+        436.6799011230469,
+        248.27029418945312
+      ],
+      "text_sha256": "d761aafb38d537ec1a1a844368a3c600ee62d608c677558bbc6daff690e03b7d"
+    },
+    {
+      "block_id": "page-0465-block-0012",
+      "order": 12,
+      "text": "■\n■Although stopping benzodiazepines can cause unpleasant symptoms, if tapering is \n",
+      "bbox": [
+        61.88990020751953,
+        248.55029296875,
+        436.6600646972656,
+        260.2702941894531
+      ],
+      "text_sha256": "ff2f3241ddc887392226c13ebea1aa3e00c2adbc90d1b10512187ca0d6bf7dba"
+    },
+    {
+      "block_id": "page-0465-block-0013",
+      "order": 13,
+      "text": "gradual and careful the process can be tolerable. Reassurance may be required for \nthose that have rapidly tapered in the past.\n",
+      "bbox": [
+        70.88999938964844,
+        260.55029296875,
+        436.68011474609375,
+        284.2702941894531
+      ],
+      "text_sha256": "abf7519f6a3731e5d2db6fa169714b84a1a008c9e8786be8a4ce98701e5087f7"
+    },
+    {
+      "block_id": "page-0465-block-0014",
+      "order": 14,
+      "text": "■\n■Most patients take months or years to taper. However, rate of reduction should be \n",
+      "bbox": [
+        61.88990020751953,
+        284.55029296875,
+        436.6700439453125,
+        296.2702941894531
+      ],
+      "text_sha256": "e42e7880af6f63dd09ed7cc09993e21616eaa398f7126df9e1776b767d8fff33"
+    },
+    {
+      "block_id": "page-0465-block-0015",
+      "order": 15,
+      "text": "determined by what is tolerable for the patient, not externally imposed timetables.\n",
+      "bbox": [
+        70.88999938964844,
+        296.55029296875,
+        424.9799499511719,
+        308.2702941894531
+      ],
+      "text_sha256": "41f7ba6c1be18b5c23ecdfc27b50a7ac0b6668288299daa01e2f80f9940a5160"
+    },
+    {
+      "block_id": "page-0465-block-0016",
+      "order": 16,
+      "text": "■\n■Past experience of reducing can help predict symptoms that may arise again on \n",
+      "bbox": [
+        61.88990020751953,
+        308.55029296875,
+        436.6300354003906,
+        320.2702941894531
+      ],
+      "text_sha256": "2a135346d0cfe18cff433cf8e2cf4816638137666115e85a26376f75ac620e6a"
+    },
+    {
+      "block_id": "page-0465-block-0017",
+      "order": 17,
+      "text": "tapering.\n",
+      "bbox": [
+        70.88999938964844,
+        320.55029296875,
+        109.22999572753906,
+        332.2702941894531
+      ],
+      "text_sha256": "7826f5ab20e4eff505ed922ecf9a4f3b9aa1444863d2a98a27c8c36c94e06687"
+    },
+    {
+      "block_id": "page-0465-block-0018",
+      "order": 18,
+      "text": "■\n■Preparation for benzodiazepine tapering may be required: e.g. lightening work or \n",
+      "bbox": [
+        61.88990020751953,
+        332.55029296875,
+        436.679931640625,
+        344.2702941894531
+      ],
+      "text_sha256": "47ff5cfc4b7f120c4d01c286e6cb828646a04c374f6f7017967ed9897e85106b"
+    },
+    {
+      "block_id": "page-0465-block-0019",
+      "order": 19,
+      "text": "family duties or bolstering of non-pharmacological coping skills (including accept-\nance, \nbreathing \nexercises, \nexercise, \nhobbies, \ndiary \nkeeping, \nand \nde-catastrophising).28,34\n",
+      "bbox": [
+        70.88999938964844,
+        344.55029296875,
+        436.6499938964844,
+        380.2702941894531
+      ],
+      "text_sha256": "80d5db5380e32e74ea6265cbda9847e8b8251847bbcea50983db3bbeb6e6d54d"
+    },
+    {
+      "block_id": "page-0465-block-0020",
+      "order": 20,
+      "text": "■\n■People with insomnia may benefit from adjunctive treatment with melatonin, and \n",
+      "bbox": [
+        61.88990020751953,
+        380.55029296875,
+        436.6699523925781,
+        392.2702941894531
+      ],
+      "text_sha256": "6feff31e0ce33362e1eec05ecbfc88adcfe0b98e6e4ff896d51746e1c73241ad"
+    },
+    {
+      "block_id": "page-0465-block-0021",
+      "order": 21,
+      "text": "those with panic disorder may benefit from CBT during the taper period.24,35,36 \nGradual dose reduction accompanied by psychological interventions (relaxation, \nCBT) is more likely to be successful than supervised dose reduction alone29 or psy-\nchological interventions alone.37\n",
+      "bbox": [
+        70.88931274414062,
+        392.55029296875,
+        436.699951171875,
+        440.2702941894531
+      ],
+      "text_sha256": "cd61710799c76441c823bbf5a83e129762a99306d1ff14ac44a120809e525f1b"
+    },
+    {
+      "block_id": "page-0465-block-0022",
+      "order": 22,
+      "text": "■\n■Familiarity of the patient and the doctor with the wide variety of withdrawal symp-\n",
+      "bbox": [
+        61.88990020751953,
+        440.55029296875,
+        433.83984375,
+        452.2702941894531
+      ],
+      "text_sha256": "8be14354b607a19abb156bfb74115b383cdd9d9b759934f02be34378367792ce"
+    },
+    {
+      "block_id": "page-0465-block-0023",
+      "order": 23,
+      "text": "toms (above) may help to mitigate unnecessary anxiety when symptoms arise. \nWithdrawal symptoms do not indicate that the drug is needed but that taper rate \nshould be slowed.\n",
+      "bbox": [
+        70.88999938964844,
+        452.55029296875,
+        436.719970703125,
+        488.2702941894531
+      ],
+      "text_sha256": "d92c0a8075f9c3648b52fcc2d958fffaa949f846f526d9f1b25fa5a4d6b199ef"
+    },
+    {
+      "block_id": "page-0465-block-0024",
+      "order": 24,
+      "text": "The process of tapering\n",
+      "bbox": [
+        61.88999938964844,
+        506.6402893066406,
+        172.45999145507812,
+        518.4902954101562
+      ],
+      "text_sha256": "f8ca62898201d6272a9686735cbc608d35c4dc6c4fa83a70001236cc80398a1b"
+    },
+    {
+      "block_id": "page-0465-block-0025",
+      "order": 25,
+      "text": "■\n■Patients may be broadly risk stratified:\n",
+      "bbox": [
+        61.88990020751953,
+        530.55029296875,
+        237.57998657226562,
+        542.2703247070312
+      ],
+      "text_sha256": "9c073e84f72a5a256edf65aed414dd0c85366d96fa590db248483c5bbde3286f"
+    },
+    {
+      "block_id": "page-0465-block-0026",
+      "order": 26,
+      "text": "■\n■For low-risk patients (<6 months use, long half-life benzodiazepine, no experience \n",
+      "bbox": [
+        71.08489990234375,
+        542.55029296875,
+        436.63037109375,
+        554.2703247070312
+      ],
+      "text_sha256": "9fad59ea055589349f2203b54a02c48ec36afbde13bcc373f930e620c515b352"
+    },
+    {
+      "block_id": "page-0465-block-0027",
+      "order": 27,
+      "text": "of significant withdrawal symptoms in the past), a test reduction could be made \nof 25%.\n",
+      "bbox": [
+        79.88999938964844,
+        554.55029296875,
+        436.7203674316406,
+        578.2703247070312
+      ],
+      "text_sha256": "edc86574587b9a856682abf295a1d171afb3cddb2e1a13b5e8ca677375a7b53c"
+    },
+    {
+      "block_id": "page-0465-block-0028",
+      "order": 28,
+      "text": "■\n■For high-risk patients (>6 months use, short half-life benzodiazepine, past history \n",
+      "bbox": [
+        71.08489990234375,
+        578.55029296875,
+        436.6799621582031,
+        590.2703247070312
+      ],
+      "text_sha256": "8519684b7a65598b53f0f9a1e389d3ac798ad974bf04fc1111f6c594b3642eba"
+    },
+    {
+      "block_id": "page-0465-block-0029",
+      "order": 29,
+      "text": "of withdrawal symptoms) a test reduction of 5–10% could be recommended.\n",
+      "bbox": [
+        79.88999938964844,
+        590.55029296875,
+        412.1299743652344,
+        602.2703247070312
+      ],
+      "text_sha256": "07600d6f9588197c187f0bc21a04083c973f4bc0ae1a3411ed83443be9a18c47"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

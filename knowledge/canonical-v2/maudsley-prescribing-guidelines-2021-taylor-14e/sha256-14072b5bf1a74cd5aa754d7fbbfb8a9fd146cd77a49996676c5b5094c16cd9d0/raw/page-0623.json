@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0623",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 623,
+  "source_page_index": 622,
+  "source_page_display": 623,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "602    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  6\nHow ageing affects drug therapy (altered pharmacokinetics)7\nAbsorption\nGut motility decreases with age as does secretion of gastric acid. This leads to drugs \nbeing absorbed more slowly, resulting in a slower onset of action. The same amount of \ndrug is absorbed as in a younger adult, but rate of absorption is slower.\nDistribution\nOlder adults have more body fat, less body water and less albumin than younger adults. \nThis leads to an increased volume of distribution and a longer duration of action for \nsome fat-soluble drugs (e.g. diazepam), higher concentrations of some drugs at the site \nof action (e.g. digoxin) and a reduction in the amount of drug bound to albumin \n(increased amounts of active ‘free drug’; e.g. warfarin and phenytoin).\nMetabolism\nThe majority of drugs are hepatically metabolised. Liver size is reduced in the elderly, \nbut in the absence of hepatic disease or significantly reduced hepatic blood flow, there \nis no significant reduction in metabolic capacity. The magnitude of pharmacokinetic \ninteractions is unlikely to be altered but the pharmacodynamic consequences of these \ninteractions may be amplified.\nExcretion\nRenal function declines with age: 35% of function is lost by the age of 65 years and \n50% by the age of 80 years.\nMore functions are lost if there are concurrent medical problems such as heart dis-\nease, diabetes or hypertension. Measurement of serum creatinine or urea can be mis-\nleading in the elderly because muscle mass is reduced, so less creatinine is produced. It \nis particularly important that estimated glomerular filtration rate (eGFR)8 is used as a \nmeasure of renal function in this age group. It is best to assume that all elderly patients \nhave at most two-thirds of normal renal function.\nMost drugs are eventually (after metabolism) excreted by the kidney. A few do not undergo \nbiotransformation first. Lithium and sulpiride are important examples. Drugs primarily \nexcreted via the kidney will accumulate in the elderly, leading to toxicity and adverse effects. \nDosage reduction is likely to be required (see section on renal failure and psychotropics).\nDrug interactions\nSome drugs have a narrow therapeutic index (a small increase in dose can cause toxicity \nand a small reduction in dose can cause a loss of therapeutic action). The most com-\nmonly prescribed ones are digoxin, warfarin, theophylline, phenytoin and lithium. \nChanges in the way these drugs are handled in older people and the greater chance of \ninteraction with other drugs mean that toxicity and therapeutic failure are more likely. \nThese drugs can be used safely but extra care must be taken and blood concentrations \nshould be measured where possible.\n",
+  "raw_text_sha256": "4c3d0128e04f987b6b552ea2ca6a8f80aaba640520608612fb2b814cca40d49c",
+  "coordinates_sha256": "51e6a8f9cafe5c58edd9e81ee58cecbbca5559610187d8960ccf363c04225af4",
+  "block_sequence_sha256": "226f3ca50fab937532a03f0f4163a5dcdbedb68ac52a08c77248f0e5d0ad4c8e",
+  "blocks": [
+    {
+      "block_id": "page-0623-block-0000",
+      "order": 0,
+      "text": "602    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "6ff60e64e65ec7e52b5e4232b22b815ac2eb376eda1154738611d7720877baaf"
+    },
+    {
+      "block_id": "page-0623-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        18.520000457763672,
+        405.35260009765625,
+        28.0,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0623-block-0002",
+      "order": 2,
+      "text": "How ageing affects drug therapy (altered pharmacokinetics)7\n",
+      "bbox": [
+        61.88999938964844,
+        62.31540298461914,
+        377.39044189453125,
+        75.35040283203125
+      ],
+      "text_sha256": "3635fb1c21ec006c3f23524eb386b285a40b5ba62d3f962fbba65a154eafcf26"
+    },
+    {
+      "block_id": "page-0623-block-0003",
+      "order": 3,
+      "text": "Absorption\n",
+      "bbox": [
+        61.88999938964844,
+        81.25040435791016,
+        114.66000366210938,
+        93.10040283203125
+      ],
+      "text_sha256": "8c57373155ff5758e513cbd027ad9e373b734bb6680a7be0dd7fca0dfa8834d6"
+    },
+    {
+      "block_id": "page-0623-block-0004",
+      "order": 4,
+      "text": "Gut motility decreases with age as does secretion of gastric acid. This leads to drugs \nbeing absorbed more slowly, resulting in a slower onset of action. The same amount of \ndrug is absorbed as in a younger adult, but rate of absorption is slower.\n",
+      "bbox": [
+        61.88999938964844,
+        99.160400390625,
+        436.6999206542969,
+        134.88040161132812
+      ],
+      "text_sha256": "a593fe06630001f79f83c53816de49a33867918e73276f0a90c36843c3d58376"
+    },
+    {
+      "block_id": "page-0623-block-0005",
+      "order": 5,
+      "text": "Distribution\n",
+      "bbox": [
+        61.88999938964844,
+        153.25039672851562,
+        118.0,
+        165.10040283203125
+      ],
+      "text_sha256": "bb4aec6a4b6dd3fe8a62278aeb7d2c00e66072fbd4a92396c424ee062adec2e1"
+    },
+    {
+      "block_id": "page-0623-block-0006",
+      "order": 6,
+      "text": "Older adults have more body fat, less body water and less albumin than younger adults. \nThis leads to an increased volume of distribution and a longer duration of action for \nsome fat-soluble drugs (e.g. diazepam), higher concentrations of some drugs at the site \nof action (e.g. digoxin) and a reduction in the amount of drug bound to albumin \n(increased amounts of active ‘free drug’; e.g. warfarin and phenytoin).\n",
+      "bbox": [
+        61.88999938964844,
+        171.160400390625,
+        436.68994140625,
+        230.88040161132812
+      ],
+      "text_sha256": "116e9bb80d7938dbe33486b086774be9661e0ff02dde7a129cd73f69d0abd834"
+    },
+    {
+      "block_id": "page-0623-block-0007",
+      "order": 7,
+      "text": "Metabolism\n",
+      "bbox": [
+        61.88999938964844,
+        249.25039672851562,
+        117.44999694824219,
+        261.10040283203125
+      ],
+      "text_sha256": "553aec7c00b763ffff876aa2d15068131e6cf9dcbdacb488a32ed07023c4efc9"
+    },
+    {
+      "block_id": "page-0623-block-0008",
+      "order": 8,
+      "text": "The majority of drugs are hepatically metabolised. Liver size is reduced in the elderly, \nbut in the absence of hepatic disease or significantly reduced hepatic blood flow, there \nis no significant reduction in metabolic capacity. The magnitude of pharmacokinetic \ninteractions is unlikely to be altered but the pharmacodynamic consequences of these \ninteractions may be amplified.\n",
+      "bbox": [
+        61.88999938964844,
+        267.160400390625,
+        436.7000732421875,
+        326.8804016113281
+      ],
+      "text_sha256": "47e9fcb4baec940403f55cd08b5017adfbdc807a87b4da9e98afe75620ea1e2f"
+    },
+    {
+      "block_id": "page-0623-block-0009",
+      "order": 9,
+      "text": "Excretion\n",
+      "bbox": [
+        61.88999938964844,
+        345.2503967285156,
+        105.78999328613281,
+        357.10040283203125
+      ],
+      "text_sha256": "534d699d9a7933290294df1b0db972450581821dd01cae1f9986116d747ce2f9"
+    },
+    {
+      "block_id": "page-0623-block-0010",
+      "order": 10,
+      "text": "Renal function declines with age: 35% of function is lost by the age of 65 years and \n50% by the age of 80 years.\nMore functions are lost if there are concurrent medical problems such as heart dis-\nease, diabetes or hypertension. Measurement of serum creatinine or urea can be mis-\nleading in the elderly because muscle mass is reduced, so less creatinine is produced. It \nis particularly important that estimated glomerular filtration rate (eGFR)8 is used as a \nmeasure of renal function in this age group. It is best to assume that all elderly patients \nhave at most two-thirds of normal renal function.\n",
+      "bbox": [
+        61.88958740234375,
+        363.160400390625,
+        436.6994934082031,
+        458.8804016113281
+      ],
+      "text_sha256": "40636a012f5852eced0661b37aa511dd6dfee2fb035ead51d9f943bd87dd012b"
+    },
+    {
+      "block_id": "page-0623-block-0011",
+      "order": 11,
+      "text": "Most drugs are eventually (after metabolism) excreted by the kidney. A few do not undergo \nbiotransformation first. Lithium and sulpiride are important examples. Drugs primarily \nexcreted via the kidney will accumulate in the elderly, leading to toxicity and adverse effects. \nDosage reduction is likely to be required (see section on renal failure and psychotropics).\n",
+      "bbox": [
+        61.88958740234375,
+        459.160400390625,
+        436.6594543457031,
+        506.8804016113281
+      ],
+      "text_sha256": "96c0f3ef2c129738638fd9962a40261b302fd5ee1e8d7296a9ccc6b81160d522"
+    },
+    {
+      "block_id": "page-0623-block-0012",
+      "order": 12,
+      "text": "Drug interactions\n",
+      "bbox": [
+        61.88999938964844,
+        524.3154296875,
+        151.72698974609375,
+        537.3504028320312
+      ],
+      "text_sha256": "5186b3517636eb30beb613a4f1459f26e323cf9c4f02370f28a210f501a4f144"
+    },
+    {
+      "block_id": "page-0623-block-0013",
+      "order": 13,
+      "text": "Some drugs have a narrow therapeutic index (a small increase in dose can cause toxicity \nand a small reduction in dose can cause a loss of therapeutic action). The most com-\nmonly prescribed ones are digoxin, warfarin, theophylline, phenytoin and lithium. \nChanges in the way these drugs are handled in older people and the greater chance of \ninteraction with other drugs mean that toxicity and therapeutic failure are more likely. \nThese drugs can be used safely but extra care must be taken and blood concentrations \nshould be measured where possible.\n",
+      "bbox": [
+        61.88999938964844,
+        543.160400390625,
+        436.7199401855469,
+        626.8804321289062
+      ],
+      "text_sha256": "cc4dde8bef8b2f1797e669bc46748015b8b951d19549d8ea8781f66a96138db0"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

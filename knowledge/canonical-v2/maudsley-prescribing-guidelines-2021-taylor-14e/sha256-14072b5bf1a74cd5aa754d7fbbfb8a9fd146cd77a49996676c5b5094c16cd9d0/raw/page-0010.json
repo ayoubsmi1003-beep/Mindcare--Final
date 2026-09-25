@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0010",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 10,
+  "source_page_index": 9,
+  "source_page_display": 10,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Contents    ix\nChapter 10    \u0007Drug treatment of psychiatric symptoms occurring in the  \ncontext of other disorders\b\n777\nGeneral principles of prescribing in HIV\b\n777\nEpilepsy\b\n785\n22q11.2 deletion syndrome\b\n794\nLearning disabilities\b\n797\nHuntington’s disease – pharmacological treatment\b\n803\nMultiple sclerosis\b\n808\nParkinson’s disease\b\n814\nAtrial fibrillation – using psychotropics\b\n819\nRecommendations – psychotropics in AF\b\n820\nPsychotropics in bariatric surgery\b\n822\nPrescribing in patients with psychiatric illness at the end of life\b\n829\nPart 4       Other aspects of psychotropic drug use\b\n831\nChapter 11  Pharmacokinetics\b\n833\nPlasma level monitoring of psychotropic drugs\b\n833\nInterpreting postmortem blood concentrations\b\n847\nActing on clozapine plasma concentration results\b\n849\nPsychotropics and cytochrome (CYP) function\b\n851\nSmoking and psychotropic drugs\b\n856\nDrug interactions with alcohol\b\n860\nChapter 12  Other substances\b\n865\nCaffeine\b\n865\nNicotine\b\n871\nChapter 13  Psychotropic drugs in special conditions\b\n875\nPsychotropics in overdose\b\n875\nDriving and psychotropic medicines\b\n883\nPsychotropics and surgery\b\n889\nChapter 14  Miscellany\b\n897\nEnhancing medication adherence\b\n897\nRe-starting psychotropic medications after a period of non-compliance\b\n905\nBiochemical and haematological effects of psychotropics\b\n907\nSummary of psychiatric side effects of non-psychotropics\b\n917\nPrescribing drugs outside their licensed indications (‘off-label’  \nprescribing or unapproved use of approved drugs)\b\n923\nExamples of acceptable use of drugs outside their product licences/labels\b\n925\nThe Mental Health Act in England and Wales\b\n927\nSite of administration of intramuscular injections\b\n932\nIntravenous formulations in psychiatry\b\n937\nIndex\b\n943\n",
+  "raw_text_sha256": "a111cd0b75bcadd7848694684ea53c4014dbf63cb9cddc3e01ad43fa4d79411a",
+  "coordinates_sha256": "37b07aa5f0f256f96cefedc06d077e15f4927a0777bbdf9181b7f8390390c749",
+  "block_sequence_sha256": "f65eab919195b1ce56fef1e81b97feeafaaccef406cabc6da0597bc0c6293cec",
+  "blocks": [
+    {
+      "block_id": "page-0010-block-0000",
+      "order": 0,
+      "text": "Contents    ix\n",
+      "bbox": [
+        363.0965881347656,
+        31.395221710205078,
+        420.0006103515625,
+        41.0272216796875
+      ],
+      "text_sha256": "958da73ae06c759b9107c53aa91b665e7ec572262462c9053a3bf9ee8dc0830a"
+    },
+    {
+      "block_id": "page-0010-block-0001",
+      "order": 1,
+      "text": "Chapter 10    \u0007Drug treatment of psychiatric symptoms occurring in the  \n",
+      "bbox": [
+        48.0,
+        62.685462951660156,
+        347.5110778808594,
+        73.3504638671875
+      ],
+      "text_sha256": "7e01206ab98253ae81aedae7fc571a7570c1cfa66c973c41b1f3e5b39ee61c69"
+    },
+    {
+      "block_id": "page-0010-block-0002",
+      "order": 2,
+      "text": "context of other disorders\b\n777\nGeneral principles of prescribing in HIV\b\n777\nEpilepsy\b\n785\n22q11.2 deletion syndrome\b\n794\nLearning disabilities\b\n797\nHuntington’s disease – pharmacological treatment\b\n803\nMultiple sclerosis\b\n808\nParkinson’s disease\b\n814\nAtrial fibrillation – using psychotropics\b\n819\nRecommendations – psychotropics in AF\b\n820\nPsychotropics in bariatric surgery\b\n822\nPrescribing in patients with psychiatric illness at the end of life\b\n829\n",
+      "bbox": [
+        102.64799499511719,
+        73.6834487915039,
+        419.99700927734375,
+        216.11749267578125
+      ],
+      "text_sha256": "efbd7c12f6a793384ac6b23a4f7507609c9479fe6783521ea96f148017344fb8"
+    },
+    {
+      "block_id": "page-0010-block-0003",
+      "order": 3,
+      "text": "Part 4       Other aspects of psychotropic drug use\b\n831\n",
+      "bbox": [
+        47.999969482421875,
+        229.6534881591797,
+        419.9969787597656,
+        240.3184814453125
+      ],
+      "text_sha256": "ffed3005f1029d2c79e77a8c60326669285d2250ce67701e3f7075481c2b9663"
+    },
+    {
+      "block_id": "page-0010-block-0004",
+      "order": 4,
+      "text": "Chapter 11  Pharmacokinetics\b\n833\nPlasma level monitoring of psychotropic drugs\b\n833\nInterpreting postmortem blood concentrations\b\n847\nActing on clozapine plasma concentration results\b\n849\nPsychotropics and cytochrome (CYP) function\b\n851\nSmoking and psychotropic drugs\b\n856\nDrug interactions with alcohol\b\n860\n",
+      "bbox": [
+        47.999969482421875,
+        247.6534881591797,
+        419.9969787597656,
+        330.1025085449219
+      ],
+      "text_sha256": "6ddd9fdcbdaa6f39281bcd35e9e077a067394ea9ad34db180948fe04a838a5ff"
+    },
+    {
+      "block_id": "page-0010-block-0005",
+      "order": 5,
+      "text": "Chapter 12  Other substances\b\n865\nCaffeine\b\n865\nNicotine\b\n871\n",
+      "bbox": [
+        47.999969482421875,
+        343.6384582519531,
+        419.99700927734375,
+        378.0994567871094
+      ],
+      "text_sha256": "d2242a5fca5c7cfe042c5197e35014128a7a310111d6a523b7c1019887398d9c"
+    },
+    {
+      "block_id": "page-0010-block-0006",
+      "order": 6,
+      "text": "Chapter 13  Psychotropic drugs in special conditions\b\n875\nPsychotropics in overdose\b\n875\nDriving and psychotropic medicines\b\n883\nPsychotropics and surgery\b\n889\n",
+      "bbox": [
+        48.0,
+        391.63543701171875,
+        419.9969787597656,
+        438.093505859375
+      ],
+      "text_sha256": "eac893661531655f16879ff83f81600ae2ab6974545be845322eed6aacf29522"
+    },
+    {
+      "block_id": "page-0010-block-0007",
+      "order": 7,
+      "text": "Chapter 14  Miscellany\b\n897\nEnhancing medication adherence\b\n897\nRe-starting psychotropic medications after a period of non-compliance\b\n905\nBiochemical and haematological effects of psychotropics\b\n907\nSummary of psychiatric side effects of non-psychotropics\b\n917\nPrescribing drugs outside their licensed indications (‘off-label’  \n",
+      "bbox": [
+        47.999969482421875,
+        451.62945556640625,
+        419.9969787597656,
+        522.0814819335938
+      ],
+      "text_sha256": "8bdbdd2cf023e61d75598b28f488d874d59fb013078c10cb016f6bf57d957507"
+    },
+    {
+      "block_id": "page-0010-block-0008",
+      "order": 8,
+      "text": "prescribing or unapproved use of approved drugs)\b\n923\nExamples of acceptable use of drugs outside their product licences/labels\b\n925\nThe Mental Health Act in England and Wales\b\n927\nSite of administration of intramuscular injections\b\n932\nIntravenous formulations in psychiatry\b\n937\n",
+      "bbox": [
+        102.99896240234375,
+        523.530517578125,
+        419.9969787597656,
+        582.0665283203125
+      ],
+      "text_sha256": "649b2116a6a2ad7ff0ada97eb560e1ad474cf244190979eead1eb6d0b9bd71c5"
+    },
+    {
+      "block_id": "page-0010-block-0009",
+      "order": 9,
+      "text": "Index\b\n943\n",
+      "bbox": [
+        98.99398803710938,
+        595.521484375,
+        419.99700927734375,
+        606.0694580078125
+      ],
+      "text_sha256": "06880a4fd2b9cca38c616fd15d86578e980324cc2a693ca641749daacea449b6"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

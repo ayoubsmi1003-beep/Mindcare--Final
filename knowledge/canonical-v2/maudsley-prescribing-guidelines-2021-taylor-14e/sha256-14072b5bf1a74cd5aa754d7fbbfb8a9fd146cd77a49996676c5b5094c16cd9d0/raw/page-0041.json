@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0041",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 41,
+  "source_page_index": 40,
+  "source_page_display": 41,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "20    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nCombined antipsychotics (antipsychotic polypharmacy)\nIn psychiatric practice, prescriptions for combined antipsychotic medications are com-\nmon1–3 and often long term.4 The medications combined are likely to include LAI antip-\nsychotic preparations,5,6 quetiapine7 and FGAs,8 the last of these perhaps reflecting the \nfrequent use of haloperidol and chlorpromazine as PRN medications.\nPoor response to antipsychotic monotherapy\nNational clinical audits conducted in the UK as part of a Prescribing Observatory for \nMental Health (POMH-UK) quality improvement programme9 found that the most \ncommon reasons recorded for prescribing regular, combined antipsychotic medications \nwere a poor response to antipsychotic monotherapy and a period of crossover while \nswitching from one antipsychotic to another. The use of combined antipsychotic medi-\ncations has been found to be associated with younger patient age, male gender, and \nincreased illness severity, complexity and chronicity, as well as poorer functioning, \ninpatient status and a diagnosis of schizophrenia.2,7,10–12 These associations largely rein-\nforce the notion that antipsychotic polypharmacy is used where schizophrenia has \nproved to be refractory to trials of antipsychotic monotherapy.10,13–15\nNonetheless, there is a lack of robust evidence that the efficacy of combined antipsy-\nchotic medications is superior to treatment with a single antipsychotic.16 A meta-analy-\nsis of 16 RCTs in schizophrenia, comparing augmentation with a second antipsychotic \nwith continued antipsychotic monotherapy, found that combining antipsychotic medi-\ncations lacked double‐blind/high‐quality evidence for overall efficacy.17 Furthermore, in \npatients with schizophrenia, the effects of a change back from antipsychotic polyphar-\nmacy to monotherapy, even when carefully conducted, are uncertain. While the findings \nof two randomised studies suggested that the majority of patients may be successfully \nswitched from antipsychotic polypharmacy to monotherapy without loss of symptom \ncontrol,18,19 another reported greater increases in symptoms after six months in those \nparticipants who had switched to antipsychotic monotherapy,20 although the expecta-\ntion is that such exacerbations can be successfully managed.18\nLong-term antipsychotic treatment\nA non-interventional, population-based study in Hungary, sought to compare the effec-\ntiveness of antipsychotic monotherapy with the use of combined antipsychotic medica-\ntions over a one-year observation period. The investigators concluded that while the \nresults provided evidence for the superiority of monotherapy over polypharmacy for \nSGAs in terms of all-cause treatment discontinuation in schizophrenia, polypharmacy \nwas associated with a lower likelihood of mortality and psychiatric hospitalisations.21 \nSimilarly, a 20-year, observational study in Finland reported on the risk of rehospitali-\nsation in a cohort of 62,250 hospital-treated patients with schizophrenia. To minimise \nselection bias, the investigators used within-individual analyses, with each patient used \nas their own control. The main finding was that antipsychotic combinations, particu-\nlarly those including clozapine and LAI antipsychotic medications, were associated \nwith a slightly lower risk of psychiatric rehospitalisation than monotherapy.22 Although \n",
+  "raw_text_sha256": "5bc2648354a75e053fa396720721588e390795d185ba21ae6c955a2f7424e072",
+  "coordinates_sha256": "724a0b2e44385c73f3b8410cd010cc15ec2c14c1bab5a59c2c1a95fb02fd17f9",
+  "block_sequence_sha256": "11e5417a1dee2a8b4a2957e1d421b4a2c96c176416e7d13b579083b80be05eb1",
+  "blocks": [
+    {
+      "block_id": "page-0041-block-0000",
+      "order": 0,
+      "text": "20    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "07111e368960c2963f10382601ae200e624b768acc6a20dc1042823afb958355"
+    },
+    {
+      "block_id": "page-0041-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0041-block-0002",
+      "order": 2,
+      "text": "Combined antipsychotics (antipsychotic polypharmacy)\n",
+      "bbox": [
+        68.88909912109375,
+        66.06442260742188,
+        353.0631408691406,
+        79.09942626953125
+      ],
+      "text_sha256": "b7a1d94f940ea4b2de3a39a21fd697a8f7d15647fed7e0d44958e3daea8a42cb"
+    },
+    {
+      "block_id": "page-0041-block-0003",
+      "order": 3,
+      "text": "In psychiatric practice, prescriptions for combined antipsychotic medications are com-\nmon1–3 and often long term.4 The medications combined are likely to include LAI antip-\nsychotic preparations,5,6 quetiapine7 and FGAs,8 the last of these perhaps reflecting the \nfrequent use of haloperidol and chlorpromazine as PRN medications.\n",
+      "bbox": [
+        61.88719177246094,
+        84.909423828125,
+        436.6539611816406,
+        132.62942504882812
+      ],
+      "text_sha256": "6b06e1f9c99f9a03afb5f67eb6ac94b137072e50e276e461c172c9a10827f61e"
+    },
+    {
+      "block_id": "page-0041-block-0004",
+      "order": 4,
+      "text": "Poor response to antipsychotic monotherapy\n",
+      "bbox": [
+        61.88909912109375,
+        150.06442260742188,
+        293.9340515136719,
+        163.09942626953125
+      ],
+      "text_sha256": "bc9ad1289cf9caf70359e3d9156b6d63ca699a25b9f17e34a1cb0a501b65f3ab"
+    },
+    {
+      "block_id": "page-0041-block-0005",
+      "order": 5,
+      "text": "National clinical audits conducted in the UK as part of a Prescribing Observatory for \nMental Health (POMH-UK) quality improvement programme9 found that the most \ncommon reasons recorded for prescribing regular, combined antipsychotic medications \nwere a poor response to antipsychotic monotherapy and a period of crossover while \nswitching from one antipsychotic to another. The use of combined antipsychotic medi-\ncations has been found to be associated with younger patient age, male gender, and \nincreased illness severity, complexity and chronicity, as well as poorer functioning, \ninpatient status and a diagnosis of schizophrenia.2,7,10–12 These associations largely rein-\nforce the notion that antipsychotic polypharmacy is used where schizophrenia has \nproved to be refractory to trials of antipsychotic monotherapy.10,13–15\n",
+      "bbox": [
+        61.88670349121094,
+        168.909423828125,
+        436.6967468261719,
+        288.6294250488281
+      ],
+      "text_sha256": "9b61459db1ea76aeb787bbe47ad03b31f949997977549032c645bd64d7c95dc5"
+    },
+    {
+      "block_id": "page-0041-block-0006",
+      "order": 6,
+      "text": "Nonetheless, there is a lack of robust evidence that the efficacy of combined antipsy-\nchotic medications is superior to treatment with a single antipsychotic.16 A meta-analy-\nsis of 16 RCTs in schizophrenia, comparing augmentation with a second antipsychotic \nwith continued antipsychotic monotherapy, found that combining antipsychotic medi-\ncations lacked double‐blind/high‐quality evidence for overall efficacy.17 Furthermore, in \npatients with schizophrenia, the effects of a change back from antipsychotic polyphar-\nmacy to monotherapy, even when carefully conducted, are uncertain. While the findings \nof two randomised studies suggested that the majority of patients may be successfully \nswitched from antipsychotic polypharmacy to monotherapy without loss of symptom \ncontrol,18,19 another reported greater increases in symptoms after six months in those \nparticipants who had switched to antipsychotic monotherapy,20 although the expecta-\ntion is that such exacerbations can be successfully managed.18\n",
+      "bbox": [
+        61.88450622558594,
+        288.909423828125,
+        436.6944274902344,
+        432.6294250488281
+      ],
+      "text_sha256": "a5ea14298728ac0af1248427bc61306ee9ea9989982828cbe786792f026389d7"
+    },
+    {
+      "block_id": "page-0041-block-0007",
+      "order": 7,
+      "text": "Long-term antipsychotic treatment\n",
+      "bbox": [
+        61.88909912109375,
+        450.0644226074219,
+        241.99212646484375,
+        463.09942626953125
+      ],
+      "text_sha256": "900a60402b2217f5e78351ac69d0a181591549993d4f20074c168adc6d1ad59e"
+    },
+    {
+      "block_id": "page-0041-block-0008",
+      "order": 8,
+      "text": "A non-interventional, population-based study in Hungary, sought to compare the effec-\ntiveness of antipsychotic monotherapy with the use of combined antipsychotic medica-\ntions over a one-year observation period. The investigators concluded that while the \nresults provided evidence for the superiority of monotherapy over polypharmacy for \nSGAs in terms of all-cause treatment discontinuation in schizophrenia, polypharmacy \nwas associated with a lower likelihood of mortality and psychiatric hospitalisations.21 \nSimilarly, a 20-year, observational study in Finland reported on the risk of rehospitali-\nsation in a cohort of 62,250 hospital-treated patients with schizophrenia. To minimise \nselection bias, the investigators used within-individual analyses, with each patient used \nas their own control. The main finding was that antipsychotic combinations, particu-\nlarly those including clozapine and LAI antipsychotic medications, were associated \nwith a slightly lower risk of psychiatric rehospitalisation than monotherapy.22 Although \n",
+      "bbox": [
+        61.88880920410156,
+        468.909423828125,
+        436.6791687011719,
+        612.6294555664062
+      ],
+      "text_sha256": "3aa9de2e38bf071070cc11d5cf5757ae434716212e555876162f1576210a50d5"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

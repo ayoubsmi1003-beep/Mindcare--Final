@@ -1,0 +1,443 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0221",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 221,
+  "source_page_index": 220,
+  "source_page_display": 221,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "200    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nTable 1.37  (Continued)\nTreatment\nComments\nMianserin + FGA 30mg/day32\n5HT2 antagonist. One, small positive RCT\nMinocycline 200mg/day\n(+ antipsychotic)41,42\nMay be anti-inflammatory and neuroprotective. One open study (n = 22) and \none RCT (n = 54) suggest good effect on negative and cognitive symptoms. \nAlso one RCT (n = 50) of augmentation of clozapine.43 RCT evidence of \nneuroprotective effect in early psychosis44\nMirtazapine 30mg/day\n(+ antipsychotic)45–47\n5HT2 antagonist. Two RCTs, one negative,46 one positive.45 Effect seems to be \nmainly on positive symptoms\nN-acetylcysteine 2g/day\n(+ antipsychotic)40\nOne RCT suggests small benefits in negative symptoms and rates of akathisia. \nAnother RCT showed benefits in chronic schizophrenia.48 Case study of \nsuccessful use of 600mg a day.49 Large RCT in progress50\nOlanzapine51–56\n5–25mg/day\nSupported by some well-conducted trials but clinical experience disappointing. \nSome patients show moderate response\nOlanzapine57–63\n30–60mg/day\nContradictory findings in the literature but possibly effective. High dose \nolanzapine is not atypical64 and can be poorly tolerated65 with gross metabolic \nchanges63\nOlanzapine + amisulpride66\n(up to 800mg/day)\nSmall open study suggests benefit\nOlanzapine + aripiprazole67\nSingle case report suggests benefit. Probably reduces metabolic toxicity\nOlanzapine + glycine68\n(0.8g/kg/day)\nSmall, double-blind crossover trial suggests clinically relevant improvement in \nnegative symptoms\nOlanzapine + lamotrigine65,69\n(up to 400mg/day)\nReports contradictory and rather unconvincing. Reasonable theoretical basis for \nadding lamotrigine which is usually well tolerated\nOlanzapine + risperidone70\n(various doses)\nSmall study suggests some patients may benefit from combined therapy after \nsequential failure of each drug alone\nOlanzapine + sulpiride71\n(600mg/day)\nSome evidence that this combination improves mood symptoms\nOmega-3-triglycerides72,73\nSuggested efficacy but data very limited\nOndansetron 8mg/day\n(+ antipsychotic)\nA systematic review of RCTs showed improvements in negative symptoms and \ngeneral psychopathology. Effect on cognition inconclusive74\nPaliperidone LAI\nImprovement in endocrine and hepatic parameters and lower antipsychotic \nexposure in a small number of patients switched from clozapine to paliperidone \n3 monthly. No data on clinical outcomes75\n",
+  "raw_text_sha256": "5db0555630667046294ce796495e5dbfb2e4c5f6ab6ef0a165ce4d0191c1a7d8",
+  "coordinates_sha256": "fbd80902a11fe0b809520a30d94f0593179760e64bea515d3440a9ec5d0fddff",
+  "block_sequence_sha256": "ad5507f1b6719412b29bbee888323503d7138214c1388efe558868583be5bfec",
+  "blocks": [
+    {
+      "block_id": "page-0221-block-0000",
+      "order": 0,
+      "text": "200    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "ea342338bc5de6431f22ad8a93f76615b50b413c8118a630bb08702214fe4135"
+    },
+    {
+      "block_id": "page-0221-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0221-block-0002",
+      "order": 2,
+      "text": "Table 1.37  (Continued)\n",
+      "bbox": [
+        67.88870239257812,
+        70.08692932128906,
+        144.17869567871094,
+        78.97442626953125
+      ],
+      "text_sha256": "e0aca385c22b6b6a6107b41fb5b6380b231ef0fd8c28170cf2a7168ad4d38662"
+    },
+    {
+      "block_id": "page-0221-block-0003",
+      "order": 3,
+      "text": "Treatment\nComments\n",
+      "bbox": [
+        61.88890075683594,
+        87.11189270019531,
+        215.3914031982422,
+        95.9993896484375
+      ],
+      "text_sha256": "8be686e890d313f8295cc060595592f78dd7d0f699de8b9c632f5bd2fa6e517c"
+    },
+    {
+      "block_id": "page-0221-block-0004",
+      "order": 4,
+      "text": "Mianserin + FGA 30mg/day32\n5HT2 antagonist. One, small positive RCT\n",
+      "bbox": [
+        61.88890075683594,
+        101.88691711425781,
+        308.262451171875,
+        112.49003601074219
+      ],
+      "text_sha256": "dcfec1d7ae53dcecb574bd0234b6caa8db4af09fa441ed8374308e059fd2e434"
+    },
+    {
+      "block_id": "page-0221-block-0005",
+      "order": 5,
+      "text": "Minocycline 200mg/day\n(+ antipsychotic)41,42\n",
+      "bbox": [
+        61.88740539550781,
+        116.90943908691406,
+        142.31741333007812,
+        135.79443359375
+      ],
+      "text_sha256": "8d6c9df75611ff7823dc0ee3c7b5ab7f96a971cf64b4f29ed7bff4104e32c0a8"
+    },
+    {
+      "block_id": "page-0221-block-0006",
+      "order": 6,
+      "text": "May be anti-inflammatory and neuroprotective. One open study (n = 22) and \none RCT (n = 54) suggest good effect on negative and cognitive symptoms. \nAlso one RCT (n = 50) of augmentation of clozapine.43 RCT evidence of \nneuroprotective effect in early psychosis44\n",
+      "bbox": [
+        177.88890075683594,
+        117.04693603515625,
+        425.9139709472656,
+        155.79693603515625
+      ],
+      "text_sha256": "5238121a8e53436c855911d00f8bf05406011af847d2d22c09888d4e10c2a916"
+    },
+    {
+      "block_id": "page-0221-block-0007",
+      "order": 7,
+      "text": "Mirtazapine 30mg/day\n(+ antipsychotic)45–47\n",
+      "bbox": [
+        61.88890075683594,
+        161.93690490722656,
+        138.576416015625,
+        180.8218994140625
+      ],
+      "text_sha256": "d23024d5e7e0da5a965a0fb4ad70dcf34815da03cbfa9bb039056368bdc957d1"
+    },
+    {
+      "block_id": "page-0221-block-0008",
+      "order": 8,
+      "text": "5HT2 antagonist. Two RCTs, one negative,46 one positive.45 Effect seems to be \nmainly on positive symptoms\n",
+      "bbox": [
+        177.88560485839844,
+        162.1168975830078,
+        425.8880920410156,
+        180.8218994140625
+      ],
+      "text_sha256": "0e782e4055b9da447ac2908e9fe186881a24d445722bef40f18aae0292fc177a"
+    },
+    {
+      "block_id": "page-0221-block-0009",
+      "order": 9,
+      "text": "N-acetylcysteine 2g/day\n(+ antipsychotic)40\n",
+      "bbox": [
+        61.88310241699219,
+        196.96192932128906,
+        143.1531219482422,
+        215.846923828125
+      ],
+      "text_sha256": "a41886f07f89e74eb76666c15d7956c3cf0d2c1a9a6a4d5e2ab6037434f7269a"
+    },
+    {
+      "block_id": "page-0221-block-0010",
+      "order": 10,
+      "text": "One RCT suggests small benefits in negative symptoms and rates of akathisia. \nAnother RCT showed benefits in chronic schizophrenia.48 Case study of \nsuccessful use of 600mg a day.49 Large RCT in progress50\n",
+      "bbox": [
+        177.88890075683594,
+        197.1419219970703,
+        427.9240417480469,
+        225.84942626953125
+      ],
+      "text_sha256": "ae78fed1ebb79b0639bfeba339d15376e20629a3b5c3153f96476720b20c1b8d"
+    },
+    {
+      "block_id": "page-0221-block-0011",
+      "order": 11,
+      "text": "Olanzapine51–56\n",
+      "bbox": [
+        61.88890075683594,
+        231.98692321777344,
+        113.81187438964844,
+        240.87442016601562
+      ],
+      "text_sha256": "c7023381c8f4ae66e1d4eeb343b0f0f6f1c4169894a4735877429e3bcfce3dc7"
+    },
+    {
+      "block_id": "page-0221-block-0012",
+      "order": 12,
+      "text": "5–25mg/day\nSupported by some well-conducted trials but clinical experience disappointing. \nSome patients show moderate response\n",
+      "bbox": [
+        61.88890075683594,
+        232.16941833496094,
+        430.4241027832031,
+        250.87442016601562
+      ],
+      "text_sha256": "d97ce96eea2f4a284a7eec332b73313cb4bdd640a0b9e9df640993825d239b90"
+    },
+    {
+      "block_id": "page-0221-block-0013",
+      "order": 13,
+      "text": "Olanzapine57–63\n",
+      "bbox": [
+        61.88890075683594,
+        267.014404296875,
+        113.81187438964844,
+        275.90191650390625
+      ],
+      "text_sha256": "f15354888f1cbebe91ac9e8051391f2a4aff94733b5ff930fbe69ce642ecdae7"
+    },
+    {
+      "block_id": "page-0221-block-0014",
+      "order": 14,
+      "text": "30–60mg/day\nContradictory findings in the literature but possibly effective. High dose \nolanzapine is not atypical64 and can be poorly tolerated65 with gross metabolic \nchanges63\n",
+      "bbox": [
+        61.88890075683594,
+        267.1944274902344,
+        428.7589416503906,
+        295.89691162109375
+      ],
+      "text_sha256": "7c7a252684a711a4e1a50fc20d0ffc453f2bb3dcb96e60155ba316d4538dcd99"
+    },
+    {
+      "block_id": "page-0221-block-0015",
+      "order": 15,
+      "text": "Olanzapine + amisulpride66\n",
+      "bbox": [
+        61.88890075683594,
+        302.0368957519531,
+        156.69041442871094,
+        310.9244079589844
+      ],
+      "text_sha256": "ff5595fbebfe6916fe44f4b8d5aa8fe7aa9dd92f9c7dbaaf7f3ade7d34a47cf8"
+    },
+    {
+      "block_id": "page-0221-block-0016",
+      "order": 16,
+      "text": "(up to 800mg/day)\n",
+      "bbox": [
+        61.88890075683594,
+        312.2169189453125,
+        121.49889373779297,
+        320.9244079589844
+      ],
+      "text_sha256": "e9be388137ed2de8dd71c501ca4a88089d38060277902ff123c0d19c66633c51"
+    },
+    {
+      "block_id": "page-0221-block-0017",
+      "order": 17,
+      "text": "Small open study suggests benefit\n",
+      "bbox": [
+        177.8914031982422,
+        302.21942138671875,
+        286.66400146484375,
+        310.9269104003906
+      ],
+      "text_sha256": "f431ea6c129c31b1e596745cdd8344d68f2b8429ce7eb8b74eac9b4e21b18854"
+    },
+    {
+      "block_id": "page-0221-block-0018",
+      "order": 18,
+      "text": "Olanzapine + aripiprazole67\nSingle case report suggests benefit. Probably reduces metabolic toxicity\n",
+      "bbox": [
+        61.88890075683594,
+        337.06439208984375,
+        404.5765075683594,
+        345.951904296875
+      ],
+      "text_sha256": "aa3ed96bdf6d404d8e037e84bf4dc64570e6edc6ed02f17d82a097f4181a505f"
+    },
+    {
+      "block_id": "page-0221-block-0019",
+      "order": 19,
+      "text": "Olanzapine + glycine68\n",
+      "bbox": [
+        61.88639831542969,
+        352.0843811035156,
+        140.4381103515625,
+        360.9718933105469
+      ],
+      "text_sha256": "275b86f8425845c8548a69367149bf8962977ae8e42c8f2aedb58e2365c39c3b"
+    },
+    {
+      "block_id": "page-0221-block-0020",
+      "order": 20,
+      "text": "(0.8g/kg/day)\n",
+      "bbox": [
+        61.88890075683594,
+        362.2669372558594,
+        103.99388885498047,
+        370.97442626953125
+      ],
+      "text_sha256": "618ff2cc712c007b0778d607bff150816c61d724e717e6c236ed964c8da34335"
+    },
+    {
+      "block_id": "page-0221-block-0021",
+      "order": 21,
+      "text": "Small, double-blind crossover trial suggests clinically relevant improvement in \nnegative symptoms\n",
+      "bbox": [
+        177.8914031982422,
+        352.2694396972656,
+        424.9865417480469,
+        370.97442626953125
+      ],
+      "text_sha256": "a1a928220ed82df63df7ad69802e8c5662708fce9f3c9cd5033851d1d772fce6"
+    },
+    {
+      "block_id": "page-0221-block-0022",
+      "order": 22,
+      "text": "Olanzapine + lamotrigine65,69\n",
+      "bbox": [
+        61.88890075683594,
+        387.1144104003906,
+        162.35568237304688,
+        396.0019226074219
+      ],
+      "text_sha256": "3bed0544214a72082ebb27ad0ada0a06333d51bd6f579ef9fac49b4760123f59"
+    },
+    {
+      "block_id": "page-0221-block-0023",
+      "order": 23,
+      "text": "(up to 400mg/day)\n",
+      "bbox": [
+        61.88890075683594,
+        397.29193115234375,
+        121.49889373779297,
+        405.9994201660156
+      ],
+      "text_sha256": "932fabb0c28d27dfb0b90b1263ff37730ce9dd42307b93bef1007b3f7a12aded"
+    },
+    {
+      "block_id": "page-0221-block-0024",
+      "order": 24,
+      "text": "Reports contradictory and rather unconvincing. Reasonable theoretical basis for \nadding lamotrigine which is usually well tolerated\n",
+      "bbox": [
+        177.8914031982422,
+        387.29443359375,
+        433.2065734863281,
+        405.9994201660156
+      ],
+      "text_sha256": "838d41fcac7856780c2a082d9772b319dccb32897468dd34240bb9edb7b09ddf"
+    },
+    {
+      "block_id": "page-0221-block-0025",
+      "order": 25,
+      "text": "Olanzapine + risperidone70\n",
+      "bbox": [
+        61.88890075683594,
+        422.139404296875,
+        155.4378204345703,
+        431.02691650390625
+      ],
+      "text_sha256": "fc34bfe3fd0afcf629caebf82ef05317e097eeb2bdaf32969ee2355d263e8abb"
+    },
+    {
+      "block_id": "page-0221-block-0026",
+      "order": 26,
+      "text": "(various doses)\n",
+      "bbox": [
+        61.88890075683594,
+        432.3169250488281,
+        108.56888580322266,
+        441.0244140625
+      ],
+      "text_sha256": "5e02a906114ef21d711b8ca4afbba949e7f29c0280e42a356bb043606f493fd7"
+    },
+    {
+      "block_id": "page-0221-block-0027",
+      "order": 27,
+      "text": "Small study suggests some patients may benefit from combined therapy after \nsequential failure of each drug alone\n",
+      "bbox": [
+        177.8914031982422,
+        422.3194274902344,
+        426.9364929199219,
+        441.0244140625
+      ],
+      "text_sha256": "fec77725bfb712ea0867049b07e0d5a507acf2bed6a1219a56e4d0768208b420"
+    },
+    {
+      "block_id": "page-0221-block-0028",
+      "order": 28,
+      "text": "Olanzapine + sulpiride71\n",
+      "bbox": [
+        61.88890075683594,
+        457.1643981933594,
+        145.85301208496094,
+        466.0519104003906
+      ],
+      "text_sha256": "bc4e02b20eff5ef712c31f31a98dfcdf39b344b2ac2098f7884ad655a16b3694"
+    },
+    {
+      "block_id": "page-0221-block-0029",
+      "order": 29,
+      "text": "(600mg/day)\n",
+      "bbox": [
+        61.88890075683594,
+        467.3419189453125,
+        102.3213882446289,
+        476.0494079589844
+      ],
+      "text_sha256": "52bdc65cf96665369099dbd2d0da13138208d3e892e3618d299a3594781cc3bf"
+    },
+    {
+      "block_id": "page-0221-block-0030",
+      "order": 30,
+      "text": "Some evidence that this combination improves mood symptoms\n",
+      "bbox": [
+        177.8914031982422,
+        457.34442138671875,
+        382.3565368652344,
+        466.0519104003906
+      ],
+      "text_sha256": "a821869a46734ffea02e848b40d86280c193030543df5de4531ef0acb7e62fb3"
+    },
+    {
+      "block_id": "page-0221-block-0031",
+      "order": 31,
+      "text": "Omega-3-triglycerides72,73\nSuggested efficacy but data very limited\n",
+      "bbox": [
+        61.88890075683594,
+        492.18939208984375,
+        305.2463684082031,
+        501.076904296875
+      ],
+      "text_sha256": "327221137683a779dfdbe092d4aef8c253d41107f0f7455cd7140427e1417f6f"
+    },
+    {
+      "block_id": "page-0221-block-0032",
+      "order": 32,
+      "text": "Ondansetron 8mg/day\n(+ antipsychotic)\n",
+      "bbox": [
+        61.88639831542969,
+        507.20941162109375,
+        138.0113983154297,
+        526.0944213867188
+      ],
+      "text_sha256": "2aa33ff7aa18aaf5c6ed78a389531e79838f6972b61e85a99e9d5b52e8955338"
+    },
+    {
+      "block_id": "page-0221-block-0033",
+      "order": 33,
+      "text": "A systematic review of RCTs showed improvements in negative symptoms and \ngeneral psychopathology. Effect on cognition inconclusive74\n",
+      "bbox": [
+        177.88890075683594,
+        507.3894348144531,
+        428.8915100097656,
+        526.0944213867188
+      ],
+      "text_sha256": "c0174461c961b210b64d1e29be57435a8aad47e66e90443827b75703f1d0cfcd"
+    },
+    {
+      "block_id": "page-0221-block-0034",
+      "order": 34,
+      "text": "Paliperidone LAI\nImprovement in endocrine and hepatic parameters and lower antipsychotic \nexposure in a small number of patients switched from clozapine to paliperidone \n3 monthly. No data on clinical outcomes75\n",
+      "bbox": [
+        61.88890075683594,
+        532.2368774414062,
+        434.3240661621094,
+        561.119384765625
+      ],
+      "text_sha256": "40aff28b87d81ca09dbee319e40a9f6686678b0e4f4b8508f8c0e92e81fd19a3"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

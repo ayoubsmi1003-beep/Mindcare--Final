@@ -1,0 +1,371 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0427",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 427,
+  "source_page_index": 426,
+  "source_page_display": 427,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "406    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nTable 3.21  Management of sexual adverse effects\nStrategy\nDetails\n1. Rule out other \npossible causes27\n■\n■Depressive symptoms are associated with impaired sexual functioning. Compare \nsexual functioning on antidepressants with sexual functioning before antidepressants, \nnot before the onset of depressive illness.\n■\n■Consider other possible contributing causes (e.g. alcohol/substance misuse, diabetes, \natherosclerosis, cardiac disease, and central and peripheral nervous system conditions). \nOther medications could be implicated, including both non-psychotropics (e.g. diuretics, \nbeta-blockers) and other psychotropics (summarised elsewhere in the Guidelines).\n2. Switch to a lower risk \nantidepressant23\n■\n■Lower risk antidepressants include agomelatine, bupropion, mirtazapine, vilazodone, \nvortioxetine and moclobemide.12 Of these, agomelatine, bupropion and vortioxetine \nhave the best evidence supporting a more favourable sexual side effect profile.12\nNon-pharmacological \ntreatment strategies\n■\n■Waiting for spontaneous remission: widely used though least effective method.24 \nMay occur in a small number of people (5–10%) but can take up to 4–6 months.12 \nImpractical for many patients, though it might be considered in milder cases.13\n■\n■Dose reduction: can be considered in patients who have achieved full remission on \nan antidepressant.6\n■\n■Drug holidays: intermittently missing one or two doses prior to planned sexual \nactivity may possibly help but risks discontinuation symptoms.12 Not an effective \nstrategy with fluoxetine due to its long half-life.12 Lowering doses to a half for two \nconsecutive days prior to sexual activity could be another possible strategy.24\nTable 3.20  (Continued)\nAntidepressant\nImpact on sexual response\nSexual desire*\nSexual \narousal†\nOrgasm‡\nComments12\nTricyclics\n++\n++\n++\nSD more common with clomipramine (particularly \nanorgasmia), amitriptyline and imipramine. Less \ncommon with secondary amine TCAs \n(desipramine, nortriptyline).\nVenlafaxine\n++\n++\n++\nHigh rates of SD. Isolated case reports of increased \nlibido, orgasm and spontaneous erections.\nVilazodone\n+\n+\n+\nRates of SD possibly lower than citalopram and \nsimilar to placebo in RCTs. However, a clear \nadvantage over other antidepressants remains \nuncertain.21\nVortioxetine\n–\n+\n+\nIncidence of SD reportedly similar to placebo at \ndoses 10mg/day or less;23,25 however, a clear \nadvantage over other antidepressants remains \nuncertain.21,26\nKey: ++, common; +, may occur; –, absent or rare; ?, unknown/insufficient information* \nOr sex drive.\n† Ease of arousal and ability to achieve lubrication or erections.\n‡ Ease of reaching orgasm and orgasm satisfaction.\n(Continued)\n",
+  "raw_text_sha256": "22dd2dd6c6ce4cca61c7939c3f45ac79c78f8387b610a9d2099d6fb1be956546",
+  "coordinates_sha256": "ebd6f7cebb17a5c1887852ee4333498b6cdd44ec8b62a12795c290b1736a32c6",
+  "block_sequence_sha256": "b212728cb517fdf583a57505688248c2ed8aaca366e8d726b1fbc9788cb3501d",
+  "blocks": [
+    {
+      "block_id": "page-0427-block-0000",
+      "order": 0,
+      "text": "406    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "4ec8cdcb2bd6d5aff9fba70c228b15b76ce8b6b15fcd9208afde46975b325e65"
+    },
+    {
+      "block_id": "page-0427-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0427-block-0002",
+      "order": 2,
+      "text": "Table 3.21  Management of sexual adverse effects\n",
+      "bbox": [
+        67.88999938964844,
+        362.4268798828125,
+        229.44749450683594,
+        371.31439208984375
+      ],
+      "text_sha256": "bfa4a2c251de630b3f8ae2d2e76853c6c272ff9ebd38b7716939fd41ba6135f8"
+    },
+    {
+      "block_id": "page-0427-block-0003",
+      "order": 3,
+      "text": "Strategy\nDetails\n",
+      "bbox": [
+        61.88999938964844,
+        382.661865234375,
+        175.3125,
+        391.54937744140625
+      ],
+      "text_sha256": "f0c2431dcf2723a7aa386a48fb727cf8f57770d5d6353607bb26e2dc8a30d78d"
+    },
+    {
+      "block_id": "page-0427-block-0004",
+      "order": 4,
+      "text": "1. Rule out other \npossible causes27\n",
+      "bbox": [
+        61.88999938964844,
+        399.619384765625,
+        118.1624755859375,
+        418.3243713378906
+      ],
+      "text_sha256": "4cce0b2803c5dc0c2b86dd9ce9864b5564c267a75d8af950341d27f1d6776daa"
+    },
+    {
+      "block_id": "page-0427-block-0005",
+      "order": 5,
+      "text": "■\n■Depressive symptoms are associated with impaired sexual functioning. Compare \n",
+      "bbox": [
+        151.1396942138672,
+        399.6169128417969,
+        417.5398864746094,
+        408.32440185546875
+      ],
+      "text_sha256": "f8617581c2096835bcc1c1784a5be823fa964868964e2d877a0cf7631eb57a30"
+    },
+    {
+      "block_id": "page-0427-block-0006",
+      "order": 6,
+      "text": "sexual functioning on antidepressants with sexual functioning before antidepressants, \nnot before the onset of depressive illness.\n■\n■Consider other possible contributing causes (e.g. alcohol/substance misuse, diabetes, \n",
+      "bbox": [
+        151.1396942138672,
+        408.6169128417969,
+        435.6224365234375,
+        435.32440185546875
+      ],
+      "text_sha256": "94a6a46dc8afbe5d04421547370642e82c79c04079dc8146e6a7959505f47c29"
+    },
+    {
+      "block_id": "page-0427-block-0007",
+      "order": 7,
+      "text": "atherosclerosis, cardiac disease, and central and peripheral nervous system conditions). \nOther medications could be implicated, including both non-psychotropics (e.g. diuretics, \nbeta-blockers) and other psychotropics (summarised elsewhere in the Guidelines).\n",
+      "bbox": [
+        160.13980102539062,
+        435.6169128417969,
+        435.4195556640625,
+        462.32440185546875
+      ],
+      "text_sha256": "d611441a99cf631debaa410655de56455a920f2a74ce98aac4b3992d75d3d73f"
+    },
+    {
+      "block_id": "page-0427-block-0008",
+      "order": 8,
+      "text": "2. Switch to a lower risk \nantidepressant23\n",
+      "bbox": [
+        61.889801025390625,
+        468.6394348144531,
+        141.06727600097656,
+        487.34442138671875
+      ],
+      "text_sha256": "d6de396d9dc4578d3fe1e6fc3a5e367649627a1b37f522205d3d255695526f54"
+    },
+    {
+      "block_id": "page-0427-block-0009",
+      "order": 9,
+      "text": "■\n■Lower risk antidepressants include agomelatine, bupropion, mirtazapine, vilazodone, \n",
+      "bbox": [
+        151.1396942138672,
+        468.64190673828125,
+        432.4124450683594,
+        477.3493957519531
+      ],
+      "text_sha256": "dd74b6999a23889788f8066f211f50e89e4e73420b1c9af3f5eb36bd94a84914"
+    },
+    {
+      "block_id": "page-0427-block-0010",
+      "order": 10,
+      "text": "vortioxetine and moclobemide.12 Of these, agomelatine, bupropion and vortioxetine \nhave the best evidence supporting a more favourable sexual side effect profile.12\n",
+      "bbox": [
+        160.13980102539062,
+        477.64190673828125,
+        430.3209533691406,
+        495.3493957519531
+      ],
+      "text_sha256": "aaf2eef6335a02c844da0d6c252684de8f39daa83851bf9bfa72d99072713317"
+    },
+    {
+      "block_id": "page-0427-block-0011",
+      "order": 11,
+      "text": "Non-pharmacological \ntreatment strategies\n",
+      "bbox": [
+        61.88999938964844,
+        501.6669006347656,
+        132.3149871826172,
+        520.3718872070312
+      ],
+      "text_sha256": "69826b925048d523a343cc8fe0d7b0ff81f5ad1f24e2ab2df1670ff236fdc4a5"
+    },
+    {
+      "block_id": "page-0427-block-0012",
+      "order": 12,
+      "text": "■\n■Waiting for spontaneous remission: widely used though least effective method.24 \n",
+      "bbox": [
+        151.1396942138672,
+        501.48687744140625,
+        432.3966979980469,
+        510.3743896484375
+      ],
+      "text_sha256": "75e18a6c9550366e8a6206a1a2b7857f906a2a8c9a05a081bd56696237005e7f"
+    },
+    {
+      "block_id": "page-0427-block-0013",
+      "order": 13,
+      "text": "May occur in a small number of people (5–10%) but can take up to 4–6 months.12 \nImpractical for many patients, though it might be considered in milder cases.13\n",
+      "bbox": [
+        160.13922119140625,
+        510.6669006347656,
+        425.9024963378906,
+        528.3743896484375
+      ],
+      "text_sha256": "58e5b4395ff8c7005a5fbb8fdc05de7bbbc535780f2080f54d1a1100b60e584a"
+    },
+    {
+      "block_id": "page-0427-block-0014",
+      "order": 14,
+      "text": "■\n■Dose reduction: can be considered in patients who have achieved full remission on \n",
+      "bbox": [
+        151.1396942138672,
+        528.4868774414062,
+        430.61248779296875,
+        537.3743896484375
+      ],
+      "text_sha256": "41f5a05a6def89435126b4774a29bddbdf2ea43799574f87562dd6cb4b56fdf9"
+    },
+    {
+      "block_id": "page-0427-block-0015",
+      "order": 15,
+      "text": "an antidepressant.6\n",
+      "bbox": [
+        160.13980102539062,
+        537.6668701171875,
+        221.19801330566406,
+        546.3743896484375
+      ],
+      "text_sha256": "7929694a0db01219bd8d764e4f4dae170020d73485b7b0b8eb231d40f2ab731e"
+    },
+    {
+      "block_id": "page-0427-block-0016",
+      "order": 16,
+      "text": "■\n■Drug holidays: intermittently missing one or two doses prior to planned sexual \n",
+      "bbox": [
+        151.1396942138672,
+        546.4868774414062,
+        417.2624816894531,
+        555.3743896484375
+      ],
+      "text_sha256": "f5de67b5f56e31c269249c7b0b8eacbaf48898288dc94773f6d141a0a9cc25d5"
+    },
+    {
+      "block_id": "page-0427-block-0017",
+      "order": 17,
+      "text": "activity may possibly help but risks discontinuation symptoms.12 Not an effective \nstrategy with fluoxetine due to its long half-life.12 Lowering doses to a half for two \nconsecutive days prior to sexual activity could be another possible strategy.24\n",
+      "bbox": [
+        160.13890075683594,
+        555.6668701171875,
+        425.46014404296875,
+        582.3743896484375
+      ],
+      "text_sha256": "c38b341714b9e88d7ce03a580d0bffcaf7e942506cef860b5bc58feb44226384"
+    },
+    {
+      "block_id": "page-0427-block-0018",
+      "order": 18,
+      "text": "Table 3.20  (Continued)\n",
+      "bbox": [
+        67.88999938964844,
+        70.08790588378906,
+        144.17999267578125,
+        78.97540283203125
+      ],
+      "text_sha256": "96f4a43da2fd2b3b22775ed4cb679512e7e8cb7d35279124d9e047754b17436b"
+    },
+    {
+      "block_id": "page-0427-block-0019",
+      "order": 19,
+      "text": "Antidepressant\n",
+      "bbox": [
+        61.88999938964844,
+        120.14686584472656,
+        115.50749206542969,
+        129.03436279296875
+      ],
+      "text_sha256": "e9c88f85422c4044fad46440e3f9b6fe339020f687ad2dbfd4c97d24402300ca"
+    },
+    {
+      "block_id": "page-0427-block-0020",
+      "order": 20,
+      "text": "Impact on sexual response\n",
+      "bbox": [
+        149.58749389648438,
+        89.91438293457031,
+        242.79754638671875,
+        98.8018798828125
+      ],
+      "text_sha256": "953f41f5cd047bb6853158b0d48926db9f2263ab1f8c587bf6ddb650cd38c3f4"
+    },
+    {
+      "block_id": "page-0427-block-0021",
+      "order": 21,
+      "text": "Sexual desire*\n",
+      "bbox": [
+        127.88999938964844,
+        120.14686584472656,
+        178.61251831054688,
+        129.03436279296875
+      ],
+      "text_sha256": "9216e0605e3765f4f9ccd3492bb9e0269557dc5ab9541f853d53d19639e9ba8c"
+    },
+    {
+      "block_id": "page-0427-block-0022",
+      "order": 22,
+      "text": "Sexual \narousal†\nOrgasm‡\nComments12\n",
+      "bbox": [
+        190.88999938964844,
+        110.14936828613281,
+        312.8620300292969,
+        129.03436279296875
+      ],
+      "text_sha256": "d4d88ef5110ad311c271aac98523ee8a9d82524edd63ae468ec1644dcc44dd67"
+    },
+    {
+      "block_id": "page-0427-block-0023",
+      "order": 23,
+      "text": "Tricyclics\n++\n++\n++\nSD more common with clomipramine (particularly \nanorgasmia), amitriptyline and imipramine. Less \ncommon with secondary amine TCAs \n(desipramine, nortriptyline).\n",
+      "bbox": [
+        61.88999938964844,
+        137.6018829345703,
+        431.1975402832031,
+        176.3018798828125
+      ],
+      "text_sha256": "b03984f894b8f7ec1c0f225b9c45cad78327553a968b89117a26f420ddc6e345"
+    },
+    {
+      "block_id": "page-0427-block-0024",
+      "order": 24,
+      "text": "Venlafaxine\n++\n++\n++\nHigh rates of SD. Isolated case reports of increased \nlibido, orgasm and spontaneous erections.\n",
+      "bbox": [
+        61.88999938964844,
+        182.6168670654297,
+        427.9200134277344,
+        201.32186889648438
+      ],
+      "text_sha256": "56e3ef16994c700f97ed578878df39324ce3aa6511d426e01a32918d66a0edde"
+    },
+    {
+      "block_id": "page-0427-block-0025",
+      "order": 25,
+      "text": "Vilazodone\n+\n+\n+\nRates of SD possibly lower than citalopram and \nsimilar to placebo in RCTs. However, a clear \nadvantage over other antidepressants remains \nuncertain.21\n",
+      "bbox": [
+        61.88999938964844,
+        207.63685607910156,
+        421.68017578125,
+        246.33685302734375
+      ],
+      "text_sha256": "b38522ac655e5a66a069f7a9de71670faef02b7cdf187b4726d7cacbb3eabace"
+    },
+    {
+      "block_id": "page-0427-block-0026",
+      "order": 26,
+      "text": "Vortioxetine\n–\n+\n+\nIncidence of SD reportedly similar to placebo at \ndoses 10mg/day or less;23,25 however, a clear \nadvantage over other antidepressants remains \nuncertain.21,26\n",
+      "bbox": [
+        61.88999938964844,
+        252.67689514160156,
+        423.2925720214844,
+        291.37939453125
+      ],
+      "text_sha256": "baf23ba3b9eeaf65856be67887826bb8a451cfbf2bc38de07220ed9abb35bb59"
+    },
+    {
+      "block_id": "page-0427-block-0027",
+      "order": 27,
+      "text": "Key: ++, common; +, may occur; –, absent or rare; ?, unknown/insufficient information* \nOr sex drive.\n† Ease of arousal and ability to achieve lubrication or erections.\n‡ Ease of reaching orgasm and orgasm satisfaction.\n",
+      "bbox": [
+        61.88999938964844,
+        301.49688720703125,
+        348.5101623535156,
+        340.37689208984375
+      ],
+      "text_sha256": "65bb1f5dbbe4c0fdc87b7af60d1fb7827862d04addfd244841e5fbc96193c92b"
+    },
+    {
+      "block_id": "page-0427-block-0028",
+      "order": 28,
+      "text": "(Continued)\n",
+      "bbox": [
+        396.375,
+        591.6793823242188,
+        433.8900451660156,
+        600.431884765625
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

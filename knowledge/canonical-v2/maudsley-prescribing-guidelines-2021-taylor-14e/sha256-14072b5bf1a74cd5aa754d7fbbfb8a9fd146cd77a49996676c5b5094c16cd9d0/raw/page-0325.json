@@ -1,0 +1,107 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0325",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 325,
+  "source_page_index": 324,
+  "source_page_display": 325,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "304    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  2\n\t16.\t Baldessarini RJ, et al. Illness risk following rapid versus gradual discontinuation of antidepressants. Am J Psychiatry 2010; 167:934–941.\n\t17.\t Baldessarini RJ, et al. Effects of the rate of discontinuing lithium maintenance treatment in bipolar disorders. J Clin Psychiatry 1996; \n57:441–448.\n\t18.\t Biel MG, et al. Continuation versus discontinuation of lithium in recurrent bipolar illness: a naturalistic study. Bipolar Disord 2007; \n9:435–442.\n\t19.\t National Institute for Health and Care Excellence. Bipolar disorder: assessment and management. Clinical Guidance [CG185]. 2014 (Last \nupdated February 2020); https://www.nice.org.uk/guidance/cg185.\n\t20.\t Guy A, et al. Guidance for psychological therapists: enabling conversations with clients taking or withdrawing from prescribed psychiatric \ndrugs. London: APPG for Prescribed Drug Dependence; 2019.\n\t21.\t Reinares M, et al. Psychosocial interventions in bipolar disorder: what, for whom, and when. J Affect Disord 2014; 156:46–55.\n\t22.\t Cappleman R, et al. Managing bipolar moods without medication: a qualitative investigation. J Affect Disord 2015; 174:241–249.\n\t23.\t Miklowitz DJ. Adjunctive psychotherapy for bipolar disorder: state of the evidence. Am J Psychiatry 2008; 165:1408–1419.\n",
+  "raw_text_sha256": "45d099c7a55355006ce684a2c8c6a0a2cdf178bc8bb7ae76a7f61e3a6e37335b",
+  "coordinates_sha256": "1b5cf39cc427693f563a22fc72a3a177c6832c68a36454a77ce1d2d3b632966f",
+  "block_sequence_sha256": "152bb76daf179da21bb3cc348b24498c7790ee304282cbd0c5190d306d50b494",
+  "blocks": [
+    {
+      "block_id": "page-0325-block-0000",
+      "order": 0,
+      "text": "304    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "5e325841fea91ab98948216beac11db4e24b3951f7f0ecd892dfc53979638add"
+    },
+    {
+      "block_id": "page-0325-block-0001",
+      "order": 1,
+      "text": "CHAPTER  2\n",
+      "bbox": [
+        19.520000457763672,
+        145.23529052734375,
+        29.0,
+        188.80328369140625
+      ],
+      "text_sha256": "5befcde2fefe074681a51514b484ad31516d952c51183625b5b7b1fb84f30d2c"
+    },
+    {
+      "block_id": "page-0325-block-0002",
+      "order": 2,
+      "text": "\t16.\t Baldessarini RJ, et al. Illness risk following rapid versus gradual discontinuation of antidepressants. Am J Psychiatry 2010; 167:934–941.\n\t17.\t Baldessarini RJ, et al. Effects of the rate of discontinuing lithium maintenance treatment in bipolar disorders. J Clin Psychiatry 1996; \n",
+      "bbox": [
+        61.88999938964844,
+        63.12638854980469,
+        435.528076171875,
+        79.30238342285156
+      ],
+      "text_sha256": "0fad19b07d35757d58e84f1d7e6d7ff86a18c3497fa99548f4218d138fb3e463"
+    },
+    {
+      "block_id": "page-0325-block-0003",
+      "order": 3,
+      "text": "57:441–448.\n\t18.\t Biel MG, et al. Continuation versus discontinuation of lithium in recurrent bipolar illness: a naturalistic study. Bipolar Disord 2007; \n",
+      "bbox": [
+        61.902000427246094,
+        81.12638854980469,
+        435.5759582519531,
+        97.30238342285156
+      ],
+      "text_sha256": "8c7e52cf55eb68da603c2049e54f99a9269f830b100b0cfe7d43100fa5597c0b"
+    },
+    {
+      "block_id": "page-0325-block-0004",
+      "order": 4,
+      "text": "9:435–442.\n\t19.\t National Institute for Health and Care Excellence. Bipolar disorder: assessment and management. Clinical Guidance [CG185]. 2014 (Last \n",
+      "bbox": [
+        61.90800094604492,
+        99.12638854980469,
+        435.55792236328125,
+        115.30238342285156
+      ],
+      "text_sha256": "19772e7b1eb66ea8e59f461364fe317f6c8b62dd92aaf4c8349bd8af51a08a9c"
+    },
+    {
+      "block_id": "page-0325-block-0005",
+      "order": 5,
+      "text": "updated February 2020); https://www.nice.org.uk/guidance/cg185.\n\t20.\t Guy A, et al. Guidance for psychological therapists: enabling conversations with clients taking or withdrawing from prescribed psychiatric \n",
+      "bbox": [
+        61.91400146484375,
+        117.2703857421875,
+        435.56396484375,
+        133.30238342285156
+      ],
+      "text_sha256": "4df89929a33bb737e90d9bff24241c218fe32efe0d046c0fa6993e5e4e9670df"
+    },
+    {
+      "block_id": "page-0325-block-0006",
+      "order": 6,
+      "text": "drugs. London: APPG for Prescribed Drug Dependence; 2019.\n\t21.\t Reinares M, et al. Psychosocial interventions in bipolar disorder: what, for whom, and when. J Affect Disord 2014; 156:46–55.\n\t22.\t Cappleman R, et al. Managing bipolar moods without medication: a qualitative investigation. J Affect Disord 2015; 174:241–249.\n\t23.\t Miklowitz DJ. Adjunctive psychotherapy for bipolar disorder: state of the evidence. Am J Psychiatry 2008; 165:1408–1419.\n",
+      "bbox": [
+        61.91999816894531,
+        135.2703857421875,
+        410.7899169921875,
+        169.30238342285156
+      ],
+      "text_sha256": "0069513b02092293c7aa069f858fd8557bc1b59fc2ebc3d53ae9e99ed645861e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

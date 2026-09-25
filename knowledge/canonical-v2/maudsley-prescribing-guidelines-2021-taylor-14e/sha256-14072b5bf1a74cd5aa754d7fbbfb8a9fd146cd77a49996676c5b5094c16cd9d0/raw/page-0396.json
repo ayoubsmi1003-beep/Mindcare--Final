@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0396",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 396,
+  "source_page_index": 395,
+  "source_page_display": 396,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    375\nCHAPTER 3\ntwo-thirds, which is approximately equal to halving the absolute risk. A later meta-\nanalysis of 54 studies produced almost exactly the same results: odds of relapse were \nreduced by 65%.12 The risk of relapse is greatest in the first few months after discon-\ntinuation; this holds true irrespective of the duration of prior treatment.13 Benefits per-\nsist at 36 months and beyond and seem to be similar across heterogeneous patient \ngroups (first episode, multiple episode and chronic), although none of the studies \nincluded first-episode patients only. Specific studies in first-episode patients are required \nto confirm that treatment beyond 6–9 months confers additional benefit in this patient \ngroup. Most data are for non-elderly adults.\nAn RCT of maintenance treatment in elderly patients, many of whom were first epi-\nsode, found continuation treatment with antidepressants beneficial over 2 years with a \nsimilar effect size to that seen in adults.14 One small RCT (n = 22) demonstrated benefit \nfrom prophylactic antidepressants in adolescents.15\nMany patients who might benefit from maintenance treatment with antidepressants \ndo not receive them.16 Assuring optimal management of long-term depression vastly \nreduces mortality associated with the condition.17\nA minority view is that the prophylactic effects of antidepressants have been overesti-\nmated because of confounding in maintenance trials – effective drug treatment may be \nabruptly withdrawn, and it is the manner of this withdrawal (not necessarily the with-\ndrawal itself) which increases the risk of relapse.18,19 Thus, at least part of the advantage \nseen for continuation treatment is derived from suboptimal treatment in patients switched \nto placebo. More recent studies employ longer periods (a month or more) of withdrawal \nfrom active treatment,20 but even this may not be long enough to allow complete aboli-\ntion of the negative effects of withdrawal.21 There is also a minority school of thought \nwhich posits that antidepressant may ultimately worsen the conditions they treat.22 Some \nsupport for this theory comes from the observation that response to antidepressant \nreduces in line with the number of antidepressants previously prescribed.23\nOther potential disadvantages of long-term antidepressants include an increased risk \nof GI and cerebral haemorrhage (see section on ‘SSRIs and bleeding’ in this chapter) \nand an additional risk of interaction with co-prescribed drugs likely to increase risk of \nbleeding or hyponatraemia.\nThese observations, alongside awareness that maintenance trials have been con-\nducted largely in those in remission, strongly suggest that antidepressant treatment \nshould be continued only where there is clear evidence of substantial efficacy. This may \nseem like an obvious point but clinical experience suggests that long-term, ineffective or \npartially effective antidepressant treatment is commonplace. The aim treatment should \nbe the achieving and maintenance of remission. Residual symptoms portend poor out-\ncome and higher risk of relapse.24\nNICE recommend that:25\n■\n■Patients who have had two or more episodes of depression in the recent past, and \nwho have experienced significant functional impairment during these episodes, \nshould be advised to continue antidepressants for at least two years.\n■\n■Patients on maintenance treatment should be re-evaluated, taking into account age, \nco-morbid conditions and other risk factors in the decision to continue maintenance \ntreatment beyond two years.\n",
+  "raw_text_sha256": "8a19397bdaa98e06e2a2d74ca979c4dba433717bce1c25cb42a362eecd3b9719",
+  "coordinates_sha256": "d9d04ba57c7d3aed7b5b5704706974284f2781c51df788e223e934a6417c32fa",
+  "block_sequence_sha256": "07520114af3dd23be26ac92da815fe9223b53db738fd12a28aa3f913effe0263",
+  "blocks": [
+    {
+      "block_id": "page-0396-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    375\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "90059201d981cd2cd4127f44d2bd01dfe5ba4bbb75b758306848ae36c8a0fefe"
+    },
+    {
+      "block_id": "page-0396-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0396-block-0002",
+      "order": 2,
+      "text": "two-thirds, which is approximately equal to halving the absolute risk. A later meta-\nanalysis of 54 studies produced almost exactly the same results: odds of relapse were \nreduced by 65%.12 The risk of relapse is greatest in the first few months after discon-\ntinuation; this holds true irrespective of the duration of prior treatment.13 Benefits per-\nsist at 36 months and beyond and seem to be similar across heterogeneous patient \ngroups (first episode, multiple episode and chronic), although none of the studies \nincluded first-episode patients only. Specific studies in first-episode patients are required \nto confirm that treatment beyond 6–9 months confers additional benefit in this patient \ngroup. Most data are for non-elderly adults.\n",
+      "bbox": [
+        47.996002197265625,
+        62.5504150390625,
+        422.81597900390625,
+        170.27041625976562
+      ],
+      "text_sha256": "931338b1f774005bf70636a34c9993f2a849339ed0c7795cd64d5c896a11fc11"
+    },
+    {
+      "block_id": "page-0396-block-0003",
+      "order": 3,
+      "text": "An RCT of maintenance treatment in elderly patients, many of whom were first epi-\nsode, found continuation treatment with antidepressants beneficial over 2 years with a \nsimilar effect size to that seen in adults.14 One small RCT (n = 22) demonstrated benefit \nfrom prophylactic antidepressants in adolescents.15\n",
+      "bbox": [
+        47.996002197265625,
+        170.5504150390625,
+        422.8059997558594,
+        218.27047729492188
+      ],
+      "text_sha256": "b679cd265b3197ffac583700f41e02de9e088ab5d9685c7fafc8d7630468cf30"
+    },
+    {
+      "block_id": "page-0396-block-0004",
+      "order": 4,
+      "text": "Many patients who might benefit from maintenance treatment with antidepressants \ndo not receive them.16 Assuring optimal management of long-term depression vastly \nreduces mortality associated with the condition.17\n",
+      "bbox": [
+        47.99510192871094,
+        218.55047607421875,
+        422.77508544921875,
+        254.27047729492188
+      ],
+      "text_sha256": "570dd43475b49aaa0c4598f799b50e543b178b4d02daf4e2aa2d39633bf7c180"
+    },
+    {
+      "block_id": "page-0396-block-0005",
+      "order": 5,
+      "text": "A minority view is that the prophylactic effects of antidepressants have been overesti-\nmated because of confounding in maintenance trials – effective drug treatment may be \nabruptly withdrawn, and it is the manner of this withdrawal (not necessarily the with-\ndrawal itself) which increases the risk of relapse.18,19 Thus, at least part of the advantage \nseen for continuation treatment is derived from suboptimal treatment in patients switched \nto placebo. More recent studies employ longer periods (a month or more) of withdrawal \nfrom active treatment,20 but even this may not be long enough to allow complete aboli-\ntion of the negative effects of withdrawal.21 There is also a minority school of thought \nwhich posits that antidepressant may ultimately worsen the conditions they treat.22 Some \nsupport for this theory comes from the observation that response to antidepressant \nreduces in line with the number of antidepressants previously prescribed.23\n",
+      "bbox": [
+        47.997772216796875,
+        254.55047607421875,
+        422.83087158203125,
+        386.2704772949219
+      ],
+      "text_sha256": "92901b75edebe366306595337430c643d132f54ef6d182314c49e97483ffc3b7"
+    },
+    {
+      "block_id": "page-0396-block-0006",
+      "order": 6,
+      "text": "Other potential disadvantages of long-term antidepressants include an increased risk \nof GI and cerebral haemorrhage (see section on ‘SSRIs and bleeding’ in this chapter) \nand an additional risk of interaction with co-prescribed drugs likely to increase risk of \nbleeding or hyponatraemia.\n",
+      "bbox": [
+        48.0,
+        386.55047607421875,
+        422.8199462890625,
+        434.2704772949219
+      ],
+      "text_sha256": "43eeef7eec8600089499e4e54e0a3fa15a5898d377557b6ae32bfe074feeff53"
+    },
+    {
+      "block_id": "page-0396-block-0007",
+      "order": 7,
+      "text": "These observations, alongside awareness that maintenance trials have been con-\nducted largely in those in remission, strongly suggest that antidepressant treatment \nshould be continued only where there is clear evidence of substantial efficacy. This may \nseem like an obvious point but clinical experience suggests that long-term, ineffective or \npartially effective antidepressant treatment is commonplace. The aim treatment should \nbe the achieving and maintenance of remission. Residual symptoms portend poor out-\ncome and higher risk of relapse.24\n",
+      "bbox": [
+        48.0,
+        434.55047607421875,
+        422.780029296875,
+        518.2705078125
+      ],
+      "text_sha256": "4a6d17df2092e56c94364be6e18741cd86b3e3657414f93244dd8aa2c5e36b0b"
+    },
+    {
+      "block_id": "page-0396-block-0008",
+      "order": 8,
+      "text": "NICE recommend that:25\n",
+      "bbox": [
+        58.0,
+        518.5504760742188,
+        165.55157470703125,
+        530.2705078125
+      ],
+      "text_sha256": "bb465a5cda60516a8689b77c25478b59556926e3cb8a18032892f13c772b3af3"
+    },
+    {
+      "block_id": "page-0396-block-0009",
+      "order": 9,
+      "text": "■\n■Patients who have had two or more episodes of depression in the recent past, and \n",
+      "bbox": [
+        48.0,
+        536.5504760742188,
+        422.7799377441406,
+        548.2705078125
+      ],
+      "text_sha256": "cec745cff0eba36f0bc8ab87b0eae2d0948fd82bf1865dfaa46281c54e36df2a"
+    },
+    {
+      "block_id": "page-0396-block-0010",
+      "order": 10,
+      "text": "who have experienced significant functional impairment during these episodes, \nshould be advised to continue antidepressants for at least two years.\n",
+      "bbox": [
+        57.0,
+        548.5504760742188,
+        422.7599792480469,
+        572.2705078125
+      ],
+      "text_sha256": "8d89cebbd20adf1e31c94cef6cf87635943deef9a94d6104a81c8ebf6870ed2e"
+    },
+    {
+      "block_id": "page-0396-block-0011",
+      "order": 11,
+      "text": "■\n■Patients on maintenance treatment should be re-evaluated, taking into account age, \n",
+      "bbox": [
+        48.0,
+        572.5504150390625,
+        422.7499694824219,
+        584.2704467773438
+      ],
+      "text_sha256": "719aa62859a42054de20b6bbb56be6d26afe82f6e7aaa08a7cba905389b843af"
+    },
+    {
+      "block_id": "page-0396-block-0012",
+      "order": 12,
+      "text": "co-morbid conditions and other risk factors in the decision to continue maintenance \ntreatment beyond two years.\n",
+      "bbox": [
+        57.0,
+        584.5504150390625,
+        422.72998046875,
+        608.2704467773438
+      ],
+      "text_sha256": "54dd091103bee84c1821d8b0f753e7d55cb0e52d87254d86bf1ce060e11b3fc6"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

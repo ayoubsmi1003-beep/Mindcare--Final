@@ -1,0 +1,14 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0547",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 547,
+  "source_page_index": 546,
+  "repaired_text": "526    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nInteractions between ‘street drugs’ and prescribed psychotropic drugs\nPotential interactions between drugs of misuse and prescribed psychotropics are com-\nmon, not least because of the high rates of psychotropic prescribing in such patients.1 \nInformation on adverse interactions is derived largely from case reports and theoretical \nassumptions and rarely from systematic investigation. A summary of major interactions \ncan be found in Table 4.21.\nIn all patients who misuse street drugs:\n■\n■Infection with hepatitis B and C is common. The associated liver damage may lead to\na reduced ability to metabolise other drugs and increased sensitivity to adverse effects.\n■\n■Infection with HIV is common.2,3 Antiretroviral drugs are involved in pharmacokinetic interactions with a number of prescribed and non-prescribed drugs.4 For exam-\nple, ritonavir can decrease the metabolism of ecstasy and precipitate toxicity, and a \nnumber of antiretrovirals can increase or decrease methadone metabolism.5\n■\n■Prescribed drugs may be used in the same way as illicit drugs (i.e. erratically and not\nas intended). Large quantities of prescribed drugs should not be given to \noutpatients.\n■\n■Additive or synergistic effects of respiratory depressants may play a contributory role\nin deaths from overdose with methadone or other opioid agonists.6 Caution is needed \nin prescribing sedative medicines such as benzodiazepines.",
+  "repaired_text_sha256": "3890a4db19ed75855eeaa713d21981fea8e25ca8b3cb91a535bf85f87f8be8d6",
+  "raw_text_sha256": "7c19f45d1a4c8f848b55a9ea762c0654c70e0b8b2f7786ee9098d7eece4a8b86",
+  "repair_ids": [
+    "repair-000517"
+  ],
+  "raw_file": "raw/page-0547.json"
+}

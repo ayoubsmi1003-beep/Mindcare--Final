@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0575",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 575,
+  "source_page_index": 574,
+  "source_page_display": 575,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "554    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  5\nPsychosis in children and adolescents\nSchizophrenia is rare in children but the incidence increases rapidly in adolescence. A \ndetailed developmental and physical assessment is often needed before the diagnosis is \nmade.1,2 Early-onset schizophrenia-spectrum (EOSS) disorder is often chronic and in \nthe majority of cases requires long-term treatment with antipsychotic medication.3\nThere have been several RCTs of first-generation antipsychotics, many of them using \nvery high doses, and all of them showing high rates of EPSEs and significant sedation.4 \nTreatment-emergent dyskinesias can also be problematic5 even when smaller doses are \nused.6 First-generation antipsychotics (FGAs) should be avoided in children and \nadolescents.\nThere have also been a number of randomised controlled trials of second-generation \nantipsychotics in EOSS disorder. Olanzapine,7–9 risperidone,7,8,10,11 aripiprazole,12,13 que-\ntiapine,13,14 paliperidone,15 asenapine,16 ziprasidone17 and lurasidone18 have all been \nshown to be effective in the treatment of psychosis. There is evidence from a systematic \nreview and network meta-analysis to suggest comparable efficacy for most second-\ngeneration antipsychotics with the exception of ziprasidone (inferior efficacy) and \nasenapine (unclear efficacy).19 Concerns have been raised about the cardiac safety of \nziprasidone20,21 because of its facility for increasing the QT interval. Aripiprazole does \nnot seem to have effect on QT in adolescents.22\nChildren and adolescents are at greater risk than adults for side effects such as \nextrapyramidal symptoms, raised prolactin, sedation (even with aripiprazole13), weight \ngain and metabolic effects.23\nThere is evidence that clozapine is effective in treatment-resistant psychosis in ado-\nlescents, although this population may be more prone to neutropenia and seizures than \nadults.24–27 Based on data obtained from the treatment of younger adults, olanzapine \nshould probably be tried before moving to clozapine28 because there is a palpable \nchance that it will be effective, although clozapine is clearly more effective than olan-\nzapine in adolescents.25,26\nOverall, algorithms for treating psychosis in children and adolescents are the same as \nthose for adult patients (see chapter on schizophrenia). NICE29 recommends oral antip-\nsychotics in conjunction with family interventions and individual CBT. Starting doses \nshould be at the lower end of, or below the adult range.\nWhen prescribing antipsychotics in children and adolescents always measure base-\nline parameters and monitor as per guidance in chapter on schizophrenia. For children \nand adolescents also include waist and hip circumference, assessment of any movement \ndisorders and assessment of nutritional status, diet and level of physical activity.29\n",
+  "raw_text_sha256": "fca41f69bb9f1b33bb470e324df2b6b04d91b0262dcd49e3c52c69f9c5c30c34",
+  "coordinates_sha256": "5db6a2e67db7f13646fabe22a6ac0779d303fad4a6019835e0defc2883d6f22d",
+  "block_sequence_sha256": "1d6bce611fd76826a94c9c544e1f62ea93bb12b099958ef59493c06ddf80485f",
+  "blocks": [
+    {
+      "block_id": "page-0575-block-0000",
+      "order": 0,
+      "text": "554    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "da92462c6807230cecdee6904ded05ac20f190d49c8043f8dd173c041de69cc6"
+    },
+    {
+      "block_id": "page-0575-block-0001",
+      "order": 1,
+      "text": "CHAPTER  5\n",
+      "bbox": [
+        18.520000457763672,
+        338.22650146484375,
+        28.0,
+        381.79449462890625
+      ],
+      "text_sha256": "4086e0916f45ec531cc17b8c611334eb2b1ef26051ba536579b8ef3c22c1648d"
+    },
+    {
+      "block_id": "page-0575-block-0002",
+      "order": 2,
+      "text": "Psychosis in children and adolescents\n",
+      "bbox": [
+        68.88999938964844,
+        66.06539916992188,
+        260.5869445800781,
+        79.10040283203125
+      ],
+      "text_sha256": "2ae9df672061e1b0031183c3888d441515761a1e593fccee4fe3d14305bd3fe7"
+    },
+    {
+      "block_id": "page-0575-block-0003",
+      "order": 3,
+      "text": "Schizophrenia is rare in children but the incidence increases rapidly in adolescence. A \ndetailed developmental and physical assessment is often needed before the diagnosis is \nmade.1,2 Early-onset schizophrenia-spectrum (EOSS) disorder is often chronic and in \nthe majority of cases requires long-term treatment with antipsychotic medication.3\n",
+      "bbox": [
+        61.88999938964844,
+        84.910400390625,
+        436.6998596191406,
+        132.63040161132812
+      ],
+      "text_sha256": "d342df9bc75cfd6132e15d57f0e201c6acb8ecf388fa7d109edd3851a5588c09"
+    },
+    {
+      "block_id": "page-0575-block-0004",
+      "order": 4,
+      "text": "There have been several RCTs of first-generation antipsychotics, many of them using \nvery high doses, and all of them showing high rates of EPSEs and significant sedation.4 \nTreatment-emergent dyskinesias can also be problematic5 even when smaller doses are \nused.6 First-generation antipsychotics (FGAs) should be avoided in children and \nadolescents.\n",
+      "bbox": [
+        61.88999938964844,
+        132.910400390625,
+        436.69000244140625,
+        192.63040161132812
+      ],
+      "text_sha256": "2bb8c9eacf7e39b8335953e94065481a2a27ce024be9505f54b8f3b4f7cfd4b1"
+    },
+    {
+      "block_id": "page-0575-block-0005",
+      "order": 5,
+      "text": "There have also been a number of randomised controlled trials of second-generation \nantipsychotics in EOSS disorder. Olanzapine,7–9 risperidone,7,8,10,11 aripiprazole,12,13 que-\ntiapine,13,14 paliperidone,15 asenapine,16 ziprasidone17 and lurasidone18 have all been \nshown to be effective in the treatment of psychosis. There is evidence from a systematic \nreview and network meta-analysis to suggest comparable efficacy for most second-\ngeneration antipsychotics with the exception of ziprasidone (inferior efficacy) and \nasenapine (unclear efficacy).19 Concerns have been raised about the cardiac safety of \nziprasidone20,21 because of its facility for increasing the QT interval. Aripiprazole does \nnot seem to have effect on QT in adolescents.22\n",
+      "bbox": [
+        61.88609313964844,
+        192.910400390625,
+        436.67266845703125,
+        300.6304016113281
+      ],
+      "text_sha256": "8d19d3971e0adbb0e2b9e03e768b4d5c753f5ecdc3b62ad37f65f1048d3e26be"
+    },
+    {
+      "block_id": "page-0575-block-0006",
+      "order": 6,
+      "text": "Children and adolescents are at greater risk than adults for side effects such as \nextrapyramidal symptoms, raised prolactin, sedation (even with aripiprazole13), weight \ngain and metabolic effects.23\n",
+      "bbox": [
+        61.888916015625,
+        300.910400390625,
+        436.66888427734375,
+        336.6304016113281
+      ],
+      "text_sha256": "a729f7a02b8b9c85d79a581520723172c03ce58bffc2d3e7295b5ed049cb0dce"
+    },
+    {
+      "block_id": "page-0575-block-0007",
+      "order": 7,
+      "text": "There is evidence that clozapine is effective in treatment-resistant psychosis in ado-\nlescents, although this population may be more prone to neutropenia and seizures than \nadults.24–27 Based on data obtained from the treatment of younger adults, olanzapine \nshould probably be tried before moving to clozapine28 because there is a palpable \nchance that it will be effective, although clozapine is clearly more effective than olan-\nzapine in adolescents.25,26\n",
+      "bbox": [
+        61.88868713378906,
+        336.910400390625,
+        436.7006530761719,
+        408.6304016113281
+      ],
+      "text_sha256": "9ed832eba7c9f08d54f67bdf308a90cda3b91d8cdc4a2f68f746c29fbc6379d3"
+    },
+    {
+      "block_id": "page-0575-block-0008",
+      "order": 8,
+      "text": "Overall, algorithms for treating psychosis in children and adolescents are the same as \nthose for adult patients (see chapter on schizophrenia). NICE29 recommends oral antip-\nsychotics in conjunction with family interventions and individual CBT. Starting doses \nshould be at the lower end of, or below the adult range.\n",
+      "bbox": [
+        61.88999938964844,
+        408.910400390625,
+        436.7145080566406,
+        456.6304016113281
+      ],
+      "text_sha256": "72eb3194cecf16aedf4d22cf54c9ee63de9a5deff8271027c00320d70e3dda54"
+    },
+    {
+      "block_id": "page-0575-block-0009",
+      "order": 9,
+      "text": "When prescribing antipsychotics in children and adolescents always measure base-\nline parameters and monitor as per guidance in chapter on schizophrenia. For children \nand adolescents also include waist and hip circumference, assessment of any movement \ndisorders and assessment of nutritional status, diet and level of physical activity.29\n",
+      "bbox": [
+        61.894500732421875,
+        456.910400390625,
+        436.69451904296875,
+        504.6304016113281
+      ],
+      "text_sha256": "3a06c7baaf9341ec16b6f06c0445d9223012977426eb063b718b098a5fbccd44"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

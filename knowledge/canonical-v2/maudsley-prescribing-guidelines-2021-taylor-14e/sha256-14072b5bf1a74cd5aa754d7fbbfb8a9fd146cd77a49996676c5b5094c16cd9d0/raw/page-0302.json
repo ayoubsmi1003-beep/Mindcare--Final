@@ -1,0 +1,527 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0302",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 302,
+  "source_page_index": 301,
+  "source_page_display": 302,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Bipolar disorder    281\nCHAPTER 2\nTable 2.7  Mania – other possible treatments \nAlphabetical order – no preference implied by order in the table. Consult specialist and primary literature before \nusing any treatment listed.\nTreatment\nComments\nAllopurinol\n(300–600mg/day)\nA meta-analysis of five studies of adjunct allopurinol found an effect size of just \nless than 0.346\nCelecoxib\n(400mg/day)47\nSmall RCT (n = 46) suggests benefit when used as adjunct to valproate\nClozapine48–50\nEstablished treatment option for refractory mania/bipolar disorder. Rapid titration \nhas been reported51\nEbselen52\nInhibits inositol monophosphatase (similar to lithium). Preliminary evidence of benefit\nGabapentin53–55\n(up to 2.4g/day)\nProbably only effective by virtue of an anxiolytic effect. Rarely used. Possibly \nuseful as prophylaxis56\nLevetiracetam57,58\n(up to 4000mg/day)\nPossibly effective but controlled studies required. One case of levetiracetam \ncausing mania59\nMemantine60\n(10–30mg/day)\nConflicting evidence61–63\nMelatonin 6mg/day64\nPreliminary evidence of benefit as an adjunct to standard treatment. One small \nnegative study65\nOxcarbazepine66–72\n(around 300–3000mg/day)\nProbably effective acutely and as prophylaxis although one controlled study \nconducted (in youths) was negative73\nPhenytoin74\n(300–400mg/day)\nRarely used. Limited data\nComplex kinetics with narrow therapeutic range\nRitanserin75\n(10mg/day)\nSupported by a single RCT. Well tolerated. May protect against  \nextrapyramidal symptoms (EPS)\nTamoxifen76\n(20–140mg/day)\nPossibly effective. Five small RCTs. Dose–response relationship is unclear. Good \nevidence for efficacy as adjunct and as monotherapy, with large effect size\nTopiramate77\n(up to 300mg/day)\nProbably not effective. Less effective than lithium.2\nTryptophan depletion78\nSupported by a small RCT\nZiprasidone79–81\nSupported by three RCTs. Widely used outside the UK\nReferences\n\t 1.\t Cipriani A, et al. Comparative efficacy and acceptability of antimanic drugs in acute mania: a multiple-treatments meta-analysis. Lancet \n2011; 378:1306–1315.\n\t 2.\t McKnight RF, et al. Lithium for acute mania. Cochrane Database Syst Rev 2019; 6:Cd004048.\n\t 3.\t Jochim J, et al. Valproate for acute mania. Cochrane Database Syst Rev 2019; 10:Cd004052.\n\t 4.\t Mahajan V, et al. Efficacy and safety of asenapine versus olanzapine in combination with divalproex for acute mania: a randomized con-\ntrolled trial. J Clin Psychopharmacol 2019; 39:305–311.\n\t 5.\t Smith LA, et al. Acute bipolar mania: a systematic review and meta-analysis of co-therapy vs. monotherapy. Acta Psychiatr Scand 2007; \n115:12–20.\n",
+  "raw_text_sha256": "f907c75b3d5075f7b7d03b5807af79b2ce198d6a8f57057e65e6a6744ba4b496",
+  "coordinates_sha256": "3d08357911d07b128b2bc511f8f786f01b7c27c1d62f7a2954b0d668c8cc06da",
+  "block_sequence_sha256": "b0dff84ebd0614a5fd4d9e96688e32587fe82385cb465016e3f3f1c43927761d",
+  "blocks": [
+    {
+      "block_id": "page-0302-block-0000",
+      "order": 0,
+      "text": "Bipolar disorder    281\n",
+      "bbox": [
+        326.5046081542969,
+        31.395221710205078,
+        420.0005798339844,
+        41.0272216796875
+      ],
+      "text_sha256": "1c5ccbfe42449f7220073682922e71362136095b45c24c30dbab605a578259cf"
+    },
+    {
+      "block_id": "page-0302-block-0001",
+      "order": 1,
+      "text": "CHAPTER 2\n",
+      "bbox": [
+        454.4096984863281,
+        146.3472900390625,
+        463.88970947265625,
+        187.6912841796875
+      ],
+      "text_sha256": "5eaa1f2591abe1a1b2f7664fa3de7ff01a032d44ee83fa594c7852135d4287aa"
+    },
+    {
+      "block_id": "page-0302-block-0002",
+      "order": 2,
+      "text": "Table 2.7  Mania – other possible treatments \nAlphabetical order – no preference implied by order in the table. Consult specialist and primary literature before \nusing any treatment listed.\n",
+      "bbox": [
+        54.0,
+        67.33796691894531,
+        412.3875732421875,
+        97.2254638671875
+      ],
+      "text_sha256": "2c25f52bd2ce4b83ccc2647453c5046e8249e765b9d3f206d5aeee9ec61f00b7"
+    },
+    {
+      "block_id": "page-0302-block-0003",
+      "order": 3,
+      "text": "Treatment\nComments\n",
+      "bbox": [
+        52.0005989074707,
+        102.88227844238281,
+        192.4980926513672,
+        111.769775390625
+      ],
+      "text_sha256": "8be686e890d313f8295cc060595592f78dd7d0f699de8b9c632f5bd2fa6e517c"
+    },
+    {
+      "block_id": "page-0302-block-0004",
+      "order": 4,
+      "text": "Allopurinol\n(300–600mg/day)\n",
+      "bbox": [
+        52.00059509277344,
+        118.68477630615234,
+        108.69308471679688,
+        137.3897705078125
+      ],
+      "text_sha256": "ef1aa66fd2550c44b8521c6b9f3616b49d1c9ab781861a4defa123b6c0bac4e1"
+    },
+    {
+      "block_id": "page-0302-block-0005",
+      "order": 5,
+      "text": "A meta-analysis of five studies of adjunct allopurinol found an effect size of just \nless than 0.346\n",
+      "bbox": [
+        154.9980926513672,
+        118.68477630615234,
+        411.1382141113281,
+        137.3897705078125
+      ],
+      "text_sha256": "91f6bcac3478d9f411955e1b5f25bf657ca60023c5fb079deb41286dc9905809"
+    },
+    {
+      "block_id": "page-0302-block-0006",
+      "order": 6,
+      "text": "Celecoxib\n(400mg/day)47\n",
+      "bbox": [
+        52.0005989074707,
+        144.31227111816406,
+        97.29511260986328,
+        163.01727294921875
+      ],
+      "text_sha256": "132db1a5864998352c52bdea6d4d3371cd5fe12571a37fc20fb7b230bc511b71"
+    },
+    {
+      "block_id": "page-0302-block-0007",
+      "order": 7,
+      "text": "Small RCT (n = 46) suggests benefit when used as adjunct to valproate\n",
+      "bbox": [
+        155.00059509277344,
+        143.2922821044922,
+        380.7356872558594,
+        153.85977172851562
+      ],
+      "text_sha256": "7173004ac665795edaa2714083925e8f2f427ffdf560d9a881a62eaab4af6516"
+    },
+    {
+      "block_id": "page-0302-block-0008",
+      "order": 8,
+      "text": "Clozapine48–50\nEstablished treatment option for refractory mania/bipolar disorder. Rapid titration \nhas been reported51\n",
+      "bbox": [
+        52.00309753417969,
+        169.93727111816406,
+        415.5881652832031,
+        188.64227294921875
+      ],
+      "text_sha256": "d0c9dbbb8d1fc1ca2b1cabe1a50ff4b496421ab2f57eddc777b912e09f16b412"
+    },
+    {
+      "block_id": "page-0302-block-0009",
+      "order": 9,
+      "text": "Ebselen52\nInhibits inositol monophosphatase (similar to lithium). Preliminary evidence of benefit\n",
+      "bbox": [
+        52.0005989074707,
+        195.5623016357422,
+        413.88568115234375,
+        204.26980590820312
+      ],
+      "text_sha256": "563667d13d63e5b0e4daed69760c4f0b5a5fbd8d8160ccd9fb18ed5595996696"
+    },
+    {
+      "block_id": "page-0302-block-0010",
+      "order": 10,
+      "text": "Gabapentin53–55\n",
+      "bbox": [
+        52.00309753417969,
+        211.18479919433594,
+        101.41847229003906,
+        219.89230346679688
+      ],
+      "text_sha256": "081b4407eb9b722bb849e8595e606479f582f5c12a2e90055c6d8578d80fd333"
+    },
+    {
+      "block_id": "page-0302-block-0011",
+      "order": 11,
+      "text": "(up to 2.4g/day)\n",
+      "bbox": [
+        52.0005989074707,
+        221.1873016357422,
+        103.27809143066406,
+        229.89480590820312
+      ],
+      "text_sha256": "9e380900d6bddddd40d875c6e81aa4f9ef3b56feabfd408a066f0758ffe90387"
+    },
+    {
+      "block_id": "page-0302-block-0012",
+      "order": 12,
+      "text": "Probably only effective by virtue of an anxiolytic effect. Rarely used. Possibly \nuseful as prophylaxis56\n",
+      "bbox": [
+        154.9980926513672,
+        211.18980407714844,
+        398.2005920410156,
+        229.89480590820312
+      ],
+      "text_sha256": "464e638086f20976526e948024867b5ae32879d5209ddef926fbe16318a366a5"
+    },
+    {
+      "block_id": "page-0302-block-0013",
+      "order": 13,
+      "text": "Levetiracetam57,58\n",
+      "bbox": [
+        52.0005989074707,
+        236.8123016357422,
+        107.08487701416016,
+        245.51980590820312
+      ],
+      "text_sha256": "7f1f995dbe3c2b1d7544e2ebba6f7613ed96e7992cf7f94e3c5c349fc430f799"
+    },
+    {
+      "block_id": "page-0302-block-0014",
+      "order": 14,
+      "text": "(up to 4000mg/day)\n",
+      "bbox": [
+        52.0005989074707,
+        246.8123016357422,
+        115.78058624267578,
+        255.51980590820312
+      ],
+      "text_sha256": "9d4b7e27678afaa2d9b70bfc686b38da722dca02e09a14cd81d6222d485b453d"
+    },
+    {
+      "block_id": "page-0302-block-0015",
+      "order": 15,
+      "text": "Possibly effective but controlled studies required. One case of levetiracetam \ncausing mania59\n",
+      "bbox": [
+        154.9980926513672,
+        236.81480407714844,
+        396.9555969238281,
+        255.51980590820312
+      ],
+      "text_sha256": "d0448cae518713785e35901d6587c7edbca7d083a3ecd305fb017bb9d6f20e13"
+    },
+    {
+      "block_id": "page-0302-block-0016",
+      "order": 16,
+      "text": "Memantine60\n",
+      "bbox": [
+        52.0005989074707,
+        262.43731689453125,
+        93.53001403808594,
+        271.1448059082031
+      ],
+      "text_sha256": "40f3d0ac7247257ba3e2df1d3c30f0b20769d923dfa77d674d818efa51f6b2cb"
+    },
+    {
+      "block_id": "page-0302-block-0017",
+      "order": 17,
+      "text": "(10–30mg/day)\n",
+      "bbox": [
+        52.0005989074707,
+        272.43731689453125,
+        100.35308837890625,
+        281.1448059082031
+      ],
+      "text_sha256": "3e313a7bd750953cf4b51fb3db94914f6dd4d47cd727c89e0c751b4be2271e14"
+    },
+    {
+      "block_id": "page-0302-block-0018",
+      "order": 18,
+      "text": "Conflicting evidence61–63\n",
+      "bbox": [
+        154.9980926513672,
+        262.4398193359375,
+        231.91278076171875,
+        271.1473083496094
+      ],
+      "text_sha256": "797b75313aee1e59f7999318bd8cb3bce4a9f490e341a5a9cb50e1e8c960cd3b"
+    },
+    {
+      "block_id": "page-0302-block-0019",
+      "order": 19,
+      "text": "Melatonin 6mg/day64\nPreliminary evidence of benefit as an adjunct to standard treatment. One small \nnegative study65\n",
+      "bbox": [
+        52.0005989074707,
+        288.06231689453125,
+        407.9381408691406,
+        306.7673034667969
+      ],
+      "text_sha256": "3cc1bbba3b0ec76fab54541064e06bc6ba38c7f23f6da6f260c0e4c4b34b4ca0"
+    },
+    {
+      "block_id": "page-0302-block-0020",
+      "order": 20,
+      "text": "Oxcarbazepine66–72\n",
+      "bbox": [
+        52.0005989074707,
+        313.68731689453125,
+        110.98817443847656,
+        322.3948059082031
+      ],
+      "text_sha256": "f5f588b6cf35922f47b11cf1f9a0382e815a7c8e6e5e5d77e78dada4501c6337"
+    },
+    {
+      "block_id": "page-0302-block-0021",
+      "order": 21,
+      "text": "(around 300–3000mg/day)\n",
+      "bbox": [
+        52.0005989074707,
+        323.68731689453125,
+        137.74058532714844,
+        332.3948059082031
+      ],
+      "text_sha256": "cc05ad0f1aa736822c7a9623d028604d96f21b06b87f6fc85c6e3dffcdaf7a74"
+    },
+    {
+      "block_id": "page-0302-block-0022",
+      "order": 22,
+      "text": "Probably effective acutely and as prophylaxis although one controlled study \nconducted (in youths) was negative73\n",
+      "bbox": [
+        154.9980926513672,
+        313.6898193359375,
+        396.9857482910156,
+        332.3948059082031
+      ],
+      "text_sha256": "7df58d555f81b97f6f5dac8648ff46a2a8e00efe01a052ecd86a98f532ce6bc6"
+    },
+    {
+      "block_id": "page-0302-block-0023",
+      "order": 23,
+      "text": "Phenytoin74\n",
+      "bbox": [
+        52.0005989074707,
+        339.31231689453125,
+        88.5350112915039,
+        348.0198059082031
+      ],
+      "text_sha256": "df2adf641cb4ef8966bfa4ca2fbc478d7f0087d0c49a867ccd4b7daa7767f74b"
+    },
+    {
+      "block_id": "page-0302-block-0024",
+      "order": 24,
+      "text": "(300–400mg/day)\n",
+      "bbox": [
+        52.0005989074707,
+        351.31231689453125,
+        108.6930923461914,
+        360.0198059082031
+      ],
+      "text_sha256": "b72099f94286c20df8fa8052bd2e5da4bd92f0e54f5161431a87a5d3ce24468b"
+    },
+    {
+      "block_id": "page-0302-block-0025",
+      "order": 25,
+      "text": "Rarely used. Limited data\nComplex kinetics with narrow therapeutic range\n",
+      "bbox": [
+        154.9980926513672,
+        339.31231689453125,
+        309.0406188964844,
+        358.0173034667969
+      ],
+      "text_sha256": "f1348b3ec3f8fc43ea1ef8260fba6f45cc590bebb4e868e320b11fcb90d65d4d"
+    },
+    {
+      "block_id": "page-0302-block-0026",
+      "order": 26,
+      "text": "Ritanserin75\n",
+      "bbox": [
+        52.00059509277344,
+        366.934814453125,
+        88.11491394042969,
+        375.6423034667969
+      ],
+      "text_sha256": "ce83dea763090875b22315c944a17e8460479c83d4bc1ab561e694a5cee016e6"
+    },
+    {
+      "block_id": "page-0302-block-0027",
+      "order": 27,
+      "text": "(10mg/day)\n",
+      "bbox": [
+        52.0005989074707,
+        376.93731689453125,
+        88.26309967041016,
+        385.6448059082031
+      ],
+      "text_sha256": "40edf1fab690bc54fcff664b0f2234e36433502f1d84a9b39e81d75b97c2cdab"
+    },
+    {
+      "block_id": "page-0302-block-0028",
+      "order": 28,
+      "text": "Supported by a single RCT. Well tolerated. May protect against  \nextrapyramidal symptoms (EPS)\n",
+      "bbox": [
+        154.9980926513672,
+        366.9398193359375,
+        359.3431091308594,
+        385.6448059082031
+      ],
+      "text_sha256": "78387a63aef687ba69b5a36588565e095837014494ddc58960ede8ed555ca25e"
+    },
+    {
+      "block_id": "page-0302-block-0029",
+      "order": 29,
+      "text": "Tamoxifen76\n",
+      "bbox": [
+        52.00059509277344,
+        392.559814453125,
+        89.36001586914062,
+        401.2673034667969
+      ],
+      "text_sha256": "a8cc68fc806aa58ea7b11fd82f2ae6cb0e24f42370f548ffd947921aae9a36d2"
+    },
+    {
+      "block_id": "page-0302-block-0030",
+      "order": 30,
+      "text": "(20–140mg/day)\n",
+      "bbox": [
+        52.0005989074707,
+        402.56231689453125,
+        104.52308654785156,
+        411.2698059082031
+      ],
+      "text_sha256": "13a175a429025be8245d6a6b7311384ca31c67263bfc414af3196bf7237ed593"
+    },
+    {
+      "block_id": "page-0302-block-0031",
+      "order": 31,
+      "text": "Possibly effective. Five small RCTs. Dose–response relationship is unclear. Good \nevidence for efficacy as adjunct and as monotherapy, with large effect size\n",
+      "bbox": [
+        154.9980926513672,
+        392.5648193359375,
+        406.8482666015625,
+        411.2698059082031
+      ],
+      "text_sha256": "c5da01cc376a8b12222b222b5b4005fd98525dd2c93f04934f2c82e83b02fbde"
+    },
+    {
+      "block_id": "page-0302-block-0032",
+      "order": 32,
+      "text": "Topiramate77\n",
+      "bbox": [
+        52.00059509277344,
+        418.184814453125,
+        92.2776107788086,
+        426.8923034667969
+      ],
+      "text_sha256": "ac11b41cc225263ac906ddb570dbb1eef7fe59fa90d509f7ee94ddd3532825ab"
+    },
+    {
+      "block_id": "page-0302-block-0033",
+      "order": 33,
+      "text": "(up to 300mg/day)\n",
+      "bbox": [
+        52.0005989074707,
+        428.18731689453125,
+        111.61058807373047,
+        436.8948059082031
+      ],
+      "text_sha256": "7359380e79527b2dc944c117a77f9dd812f829db9f639b1dd7ad493eba707705"
+    },
+    {
+      "block_id": "page-0302-block-0034",
+      "order": 34,
+      "text": "Probably not effective. Less effective than lithium.2\n",
+      "bbox": [
+        154.9980926513672,
+        418.1898193359375,
+        315.76220703125,
+        426.8973083496094
+      ],
+      "text_sha256": "6477e8f1d4ccf9dcbcbd1bfb9140ce42aa6df89f1e7bce124d38ed18694e6e56"
+    },
+    {
+      "block_id": "page-0302-block-0035",
+      "order": 35,
+      "text": "Tryptophan depletion78\nSupported by a small RCT\n",
+      "bbox": [
+        52.0005989074707,
+        443.8122863769531,
+        237.10308837890625,
+        452.519775390625
+      ],
+      "text_sha256": "a7e8399acd121dea3300a95b9bf6234a0a2e6870039212ac57a6bb9c79794ba0"
+    },
+    {
+      "block_id": "page-0302-block-0036",
+      "order": 36,
+      "text": "Ziprasidone79–81\nSupported by three RCTs. Widely used outside the UK\n",
+      "bbox": [
+        52.00309753417969,
+        459.4347839355469,
+        326.338134765625,
+        468.144775390625
+      ],
+      "text_sha256": "10d5b6186935ab6d9bddd3782fd749d8ca92c8dedab06e50991b6b5285757557"
+    },
+    {
+      "block_id": "page-0302-block-0037",
+      "order": 37,
+      "text": "References\n",
+      "bbox": [
+        48.0,
+        491.6493835449219,
+        104.03400421142578,
+        504.68438720703125
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0302-block-0038",
+      "order": 38,
+      "text": "\t 1.\t Cipriani A, et al. Comparative efficacy and acceptability of antimanic drugs in acute mania: a multiple-treatments meta-analysis. Lancet \n",
+      "bbox": [
+        48.0,
+        509.7703857421875,
+        421.6559753417969,
+        516.8023681640625
+      ],
+      "text_sha256": "c5a48cf3028bf53a405c8b1cf18460da8e0bd5357aa533b64c725cfc35273b9b"
+    },
+    {
+      "block_id": "page-0302-block-0039",
+      "order": 39,
+      "text": "2011; 378:1306–1315.\n\t 2.\t McKnight RF, et al. Lithium for acute mania. Cochrane Database Syst Rev 2019; 6:Cd004048.\n\t 3.\t Jochim J, et al. Valproate for acute mania. Cochrane Database Syst Rev 2019; 10:Cd004052.\n\t 4.\t Mahajan V, et al. Efficacy and safety of asenapine versus olanzapine in combination with divalproex for acute mania: a randomized con-\n",
+      "bbox": [
+        48.00600051879883,
+        518.6264038085938,
+        419.98797607421875,
+        552.8023681640625
+      ],
+      "text_sha256": "d6cb7a41a24a44dbefb410a56966430ad9c596ffb6bda50043f2cf319b9524b8"
+    },
+    {
+      "block_id": "page-0302-block-0040",
+      "order": 40,
+      "text": "trolled trial. J Clin Psychopharmacol 2019; 39:305–311.\n\t 5.\t Smith LA, et al. Acute bipolar mania: a systematic review and meta-analysis of co-therapy vs. monotherapy. Acta Psychiatr Scand 2007; \n",
+      "bbox": [
+        48.02399826049805,
+        554.6264038085938,
+        421.6621398925781,
+        570.8023681640625
+      ],
+      "text_sha256": "3fd738487c104d052a308cf920b9cf7723ee93e1367bbd140c2c6e5217425943"
+    },
+    {
+      "block_id": "page-0302-block-0041",
+      "order": 41,
+      "text": "115:12–20.\n",
+      "bbox": [
+        59.02799606323242,
+        572.6264038085938,
+        88.71598815917969,
+        579.8023681640625
+      ],
+      "text_sha256": "6a11bf7bd6ca3cfb5ae505284c9e717948511fb6d4f3cf9be22253a90ea85fb8"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

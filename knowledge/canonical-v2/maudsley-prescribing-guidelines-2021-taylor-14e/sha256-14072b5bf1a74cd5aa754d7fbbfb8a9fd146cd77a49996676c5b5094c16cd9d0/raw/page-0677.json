@@ -1,0 +1,239 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0677",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 677,
+  "source_page_index": 676,
+  "source_page_display": 677,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "656    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  6\n\t68.\t Chow TW, et al. Potential cognitive enhancing and disease modification effects of SSRIs for Alzheimer’s disease. Neuropsychiatr Dis Treat \n2007; 3:627–636.\n\t69.\t Enache D, et al. Antidepressants and mortality risk in a dementia cohort: data from SveDem, the Swedish Dementia Registry. Acta Psychiatr \nScand 2016; 134:430–440.\n\t70.\t Sommer OH, et al. Effect of oxcarbazepine in the treatment of agitation and aggression in severe dementia. Dement Geriatr Cogn Disord \n2009; 27:155–163.\n\t71.\t Tariot PN, et al. Efficacy and tolerability of carbamazepine for agitation and aggression in dementia. Am J Psychiatry 1998; 155:54–61.\n\t72.\t Lonergan E, et al. Valproate preparations for agitation in dementia. Cochrane Database Syst Rev 2009; CD003945.\n\t73.\t Konovalov S, et al. Anticonvulsants for the treatment of behavioral and psychological symptoms of dementia: a literature review. Int \nPsychogeriatr 2008; 20:293–308.\n\t74.\t Yeh YC, et al. Mood stabilizers for the treatment of behavioral and psychological symptoms of dementia: an update review. Kaohsiung J Med \nSci 2012; 28:185–193.\n\t75.\t Sival RC, et al. Sodium valproate in aggressive behaviour in dementia: a twelve-week open label follow-up study. Int J Geriatr Psychiatry \n2004; 19:305–312.\n\t76.\t Dolder CR, et al. Valproic acid in dementia: does an optimal dose exist? J Pharm Pract 2012; 25:142–150.\n\t77.\t Lonergan E, et al. Valproate preparations for agitation in dementia. Cochrane Database Syst Rev 2009; CD003945.\n\t78.\t Tariot PN, et al. Chronic divalproex sodium to attenuate agitation and clinical progression of Alzheimer disease. Arch Gen Psychiatry 2011; \n68:853–861.\n\t79.\t Supasitthumrong T, et al. Gabapentin and pregabalin to treat aggressivity in dementia: a systematic review and illustrative case report. Br J \nClin Pharmacol 2019; 85:690–703.\n\t80.\t Cooney C, et al. Use of low-dose gabapentin for aggressive behavior in vascular and Mixed Vascular/Alzheimer Dementia. J Neuropsychiatry \nClin Neurosci 2013; 25:120–125.\n\t81.\t Peter-Derex L, et al. Sleep and Alzheimer’s disease. Sleep Med Rev 2015; 19:29–38.\n\t82.\t David R, et al. Non-pharmacologic management of sleep disturbance in Alzheimer’s disease. J Nutr Health Aging 2010; 14:203–206.\n\t83.\t McCleery J, et al. Pharmacotherapies for sleep disturbances in dementia. Cochrane Database Syst Rev 2016; 11:Cd009178.\n\t84.\t Bishara D, et al. Anticholinergic effect on cognition (AEC) of drugs commonly used in older people. Int J Geriatr Psychiatry 2017; \n32:650–656.\n\t85.\t von Gunten A, et al. Efficacy of Ginkgo biloba extract EGb 761(®) in dementia with behavioural and psychological symptoms: A systematic \nreview. World J Biol Psychiatry 2016; 17:622–633.\n\t86.\t Ahmed M, et al. Current agents in development for treating behavioral and psychological symptoms associated with dementia. Drugs Aging \n2019; 36:589–605.\n\t87.\t Herrmann N, et al. Randomized placebo-controlled trial of nabilone for agitation in Alzheimer’s disease. Am J Geriatr Psychiatry 2019; \n27:1161–1173.\n\t88.\t Tampi RR, et al. The place for electroconvulsive therapy in the management of behavioral and psychological symptoms of dementia. \nNeurodegener Dis Manag, 2019. [Epub ahead of print].\n\t89.\t Glass OM, et al. Electroconvulsive therapy (ECT) for treating agitation in dementia (major neurocognitive disorder) – a promising option. \nInt Psychogeriatr 2017; 29:717–726.\n",
+  "raw_text_sha256": "9dcee63a5619e870a4c861ff23cbd8e16879374464f0dbaabf9e78245bb59c51",
+  "coordinates_sha256": "8fe979535110115d58590d2390b42b9b21bb8ab3c15a882deab3172fb448a1db",
+  "block_sequence_sha256": "32419ca9bd2608bd92e708242673dc19ea0547a45dfcd5fa81ea4810ee53e6df",
+  "blocks": [
+    {
+      "block_id": "page-0677-block-0000",
+      "order": 0,
+      "text": "656    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "964d23b5d4f4ac7c0a345f6ae7dfcdc5b835830e9d741b24a9f01eec0b864d2a"
+    },
+    {
+      "block_id": "page-0677-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        18.520000457763672,
+        405.35260009765625,
+        28.0,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0677-block-0002",
+      "order": 2,
+      "text": "\t68.\t Chow TW, et al. Potential cognitive enhancing and disease modification effects of SSRIs for Alzheimer’s disease. Neuropsychiatr Dis Treat \n",
+      "bbox": [
+        61.88999938964844,
+        63.2703857421875,
+        435.58807373046875,
+        70.30238342285156
+      ],
+      "text_sha256": "f4e469a1b56d94da990ab9e89afe7562e2a49afda06aa2242fcd8154dc0e3445"
+    },
+    {
+      "block_id": "page-0677-block-0003",
+      "order": 3,
+      "text": "2007; 3:627–636.\n\t69.\t Enache D, et al. Antidepressants and mortality risk in a dementia cohort: data from SveDem, the Swedish Dementia Registry. Acta Psychiatr \n",
+      "bbox": [
+        61.895999908447266,
+        72.12638854980469,
+        435.57000732421875,
+        88.30238342285156
+      ],
+      "text_sha256": "72d915b648aa85b1b205e0c353199a110d7e92627fa2ea897398ca6ec1c6df15"
+    },
+    {
+      "block_id": "page-0677-block-0004",
+      "order": 4,
+      "text": "Scand 2016; 134:430–440.\n\t70.\t Sommer OH, et al. Effect of oxcarbazepine in the treatment of agitation and aggression in severe dementia. Dement Geriatr Cogn Disord \n",
+      "bbox": [
+        61.902000427246094,
+        90.12638854980469,
+        435.5699768066406,
+        106.30238342285156
+      ],
+      "text_sha256": "8f005e52708ae42e5a89de2355654b088b52b8a604d60fcb3c3072e3c8951dcb"
+    },
+    {
+      "block_id": "page-0677-block-0005",
+      "order": 5,
+      "text": "2009; 27:155–163.\n\t71.\t Tariot PN, et al. Efficacy and tolerability of carbamazepine for agitation and aggression in dementia. Am J Psychiatry 1998; 155:54–61.\n\t72.\t Lonergan E, et al. Valproate preparations for agitation in dementia. Cochrane Database Syst Rev 2009; CD003945.\n\t73.\t Konovalov S, et al. Anticonvulsants for the treatment of behavioral and psychological symptoms of dementia: a literature review. Int \n",
+      "bbox": [
+        61.90800094604492,
+        108.12638854980469,
+        435.612060546875,
+        142.30238342285156
+      ],
+      "text_sha256": "c9b0494dad94d554b029687bcdda81cf99042a67bd2574a5eccb84a87cda5d39"
+    },
+    {
+      "block_id": "page-0677-block-0006",
+      "order": 6,
+      "text": "Psychogeriatr 2008; 20:293–308.\n\t74.\t Yeh YC, et al. Mood stabilizers for the treatment of behavioral and psychological symptoms of dementia: an update review. Kaohsiung J Med \n",
+      "bbox": [
+        61.92599868774414,
+        144.1263885498047,
+        435.6179504394531,
+        160.30238342285156
+      ],
+      "text_sha256": "3ce86b6f155b147fcf135b3187ae9c8f0205486be266db6715ff75b4d07a2f75"
+    },
+    {
+      "block_id": "page-0677-block-0007",
+      "order": 7,
+      "text": "Sci 2012; 28:185–193.\n\t75.\t Sival RC, et al. Sodium valproate in aggressive behaviour in dementia: a twelve-week open label follow-up study. Int J Geriatr Psychiatry \n",
+      "bbox": [
+        61.93199920654297,
+        162.1263885498047,
+        435.5758972167969,
+        178.30238342285156
+      ],
+      "text_sha256": "8102d495b8ba2b2bfbb791ab561ff8506aa166b98aa6b0b407a7fe0842453657"
+    },
+    {
+      "block_id": "page-0677-block-0008",
+      "order": 8,
+      "text": "2004; 19:305–312.\n\t76.\t Dolder CR, et al. Valproic acid in dementia: does an optimal dose exist? J Pharm Pract 2012; 25:142–150.\n\t77.\t Lonergan E, et al. Valproate preparations for agitation in dementia. Cochrane Database Syst Rev 2009; CD003945.\n\t78.\t Tariot PN, et al. Chronic divalproex sodium to attenuate agitation and clinical progression of Alzheimer disease. Arch Gen Psychiatry 2011; \n",
+      "bbox": [
+        61.9379997253418,
+        180.1263885498047,
+        435.6480407714844,
+        214.30238342285156
+      ],
+      "text_sha256": "c0f387aef39b2d99ed66bda0940ca3989690a897913e6ed9e1b03714467361b5"
+    },
+    {
+      "block_id": "page-0677-block-0009",
+      "order": 9,
+      "text": "68:853–861.\n\t79.\t Supasitthumrong T, et al. Gabapentin and pregabalin to treat aggressivity in dementia: a systematic review and illustrative case report. Br J \n",
+      "bbox": [
+        61.95600128173828,
+        216.1263885498047,
+        435.6301574707031,
+        232.30238342285156
+      ],
+      "text_sha256": "c0ebcc009775c5886fb47e31f84cade512e35f61ad615371a734557b14d61bc6"
+    },
+    {
+      "block_id": "page-0677-block-0010",
+      "order": 10,
+      "text": "Clin Pharmacol 2019; 85:690–703.\n\t80.\t Cooney C, et al. Use of low-dose gabapentin for aggressive behavior in vascular and Mixed Vascular/Alzheimer Dementia. J Neuropsychiatry \n",
+      "bbox": [
+        61.96200180053711,
+        234.1263885498047,
+        435.64215087890625,
+        250.30238342285156
+      ],
+      "text_sha256": "f10394aa0d898ee057fa2135df66951a09a9f2217f7400c20fc44a87057cabc7"
+    },
+    {
+      "block_id": "page-0677-block-0011",
+      "order": 11,
+      "text": "Clin Neurosci 2013; 25:120–125.\n\t81.\t Peter-Derex L, et al. Sleep and Alzheimer’s disease. Sleep Med Rev 2015; 19:29–38.\n\t82.\t David R, et al. Non-pharmacologic management of sleep disturbance in Alzheimer’s disease. J Nutr Health Aging 2010; 14:203–206.\n\t83.\t McCleery J, et al. Pharmacotherapies for sleep disturbances in dementia. Cochrane Database Syst Rev 2016; 11:Cd009178.\n\t84.\t Bishara D, et al. Anticholinergic effect on cognition (AEC) of drugs commonly used in older people. Int J Geriatr Psychiatry 2017; \n",
+      "bbox": [
+        61.96799850463867,
+        252.1263885498047,
+        435.6781311035156,
+        295.3023986816406
+      ],
+      "text_sha256": "7050674b045d5c23795cdfc337c3f98763200477104d91d0ce4b69699ba1b531"
+    },
+    {
+      "block_id": "page-0677-block-0012",
+      "order": 12,
+      "text": "32:650–656.\n\t85.\t von Gunten A, et al. Efficacy of Ginkgo biloba extract EGb 761(®) in dementia with behavioural and psychological symptoms: A systematic \n",
+      "bbox": [
+        61.992000579833984,
+        297.1263732910156,
+        435.5768737792969,
+        313.3023986816406
+      ],
+      "text_sha256": "293f89d694d585cc6ed49aad53a72a1dad792c7b880bd3422da074ed9e773e08"
+    },
+    {
+      "block_id": "page-0677-block-0013",
+      "order": 13,
+      "text": "review. World J Biol Psychiatry 2016; 17:622–633.\n\t86.\t Ahmed M, et al. Current agents in development for treating behavioral and psychological symptoms associated with dementia. Drugs Aging \n",
+      "bbox": [
+        61.89080047607422,
+        315.1263732910156,
+        435.5948486328125,
+        331.3023986816406
+      ],
+      "text_sha256": "9094dd57419915bd9cb43d938f83115db1620cf69aae00af66f186d5eb8c638a"
+    },
+    {
+      "block_id": "page-0677-block-0014",
+      "order": 14,
+      "text": "2019; 36:589–605.\n\t87.\t Herrmann N, et al. Randomized placebo-controlled trial of nabilone for agitation in Alzheimer’s disease. Am J Geriatr Psychiatry 2019; \n",
+      "bbox": [
+        61.89680099487305,
+        333.1263732910156,
+        435.58294677734375,
+        349.3023986816406
+      ],
+      "text_sha256": "8577fd3bc58bb461dd3277fa1c584705b8c45e99f7daf3469827cabc498874c1"
+    },
+    {
+      "block_id": "page-0677-block-0015",
+      "order": 15,
+      "text": "27:1161–1173.\n\t88.\t Tampi RR, et al. The place for electroconvulsive therapy in the management of behavioral and psychological symptoms of dementia. \n",
+      "bbox": [
+        61.902801513671875,
+        351.1263732910156,
+        435.5228271484375,
+        367.3023986816406
+      ],
+      "text_sha256": "74de5f5194e8cbb5f7225e7609499b6c964c3723dfe9c8401ede3989f18c4437"
+    },
+    {
+      "block_id": "page-0677-block-0016",
+      "order": 16,
+      "text": "Neurodegener Dis Manag, 2019. [Epub ahead of print].\n\t89.\t Glass OM, et al. Electroconvulsive therapy (ECT) for treating agitation in dementia (major neurocognitive disorder) – a promising option. \n",
+      "bbox": [
+        61.90879821777344,
+        369.2703857421875,
+        435.61871337890625,
+        385.3023986816406
+      ],
+      "text_sha256": "e25f8463605a66e0edc064298a02600695737db516953e4390547916171dc37b"
+    },
+    {
+      "block_id": "page-0677-block-0017",
+      "order": 17,
+      "text": "Int Psychogeriatr 2017; 29:717–726.\n",
+      "bbox": [
+        72.91281127929688,
+        387.1263732910156,
+        168.88279724121094,
+        394.3023986816406
+      ],
+      "text_sha256": "74e2442f14e59d89f662a25e47eff6518088ae31636e03ba15a9fcb8bea36776"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

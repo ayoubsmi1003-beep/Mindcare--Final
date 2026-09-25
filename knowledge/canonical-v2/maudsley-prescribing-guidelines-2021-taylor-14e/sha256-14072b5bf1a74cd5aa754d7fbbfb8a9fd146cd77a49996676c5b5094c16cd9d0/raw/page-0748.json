@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0748",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 748,
+  "source_page_index": 747,
+  "source_page_display": 748,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Hepatic and renal impairment    727\nCHAPTER 8\nTable 8.2  Antidepressants in hepatic impairment\nDrug\nComments\nAgomelatine5,6,38–40\nLiver injury including hepatic failure, liver enzyme increases more than 10× ULN, and \nhepatitis reported, most commonly in first months of treatment and very occasionally \nfatal. Contra-indicated in hepatic impairment, including cirrhosis and liver disease. \nDose-related increase in transaminases reported; perform LFTs at baseline, 3, 6, 12, 24 \nweeks during initiation and at each dose increase, and thereafter where clinically \nindicated. Stop treatment if transaminases rise more than 3× ULN. Use cautiously where \nother risk factors for hepatic disease are present.\nUnder current monitoring restrictions, risk of liver injury is no higher than for other \nantidepressants.41,42\nBrexanolone6,19\nNo dose adjustment required in hepatic impairment. Does not appear to be hepatotoxic, \nalthough experience is limited.\nDuloxetine5,6,43–47\nHepatically metabolised. Clearance markedly reduced even in mild impairment. Reports \nof hepatocellular injury (liver enzyme increases more than 10× ULN) and, less commonly, \njaundice. Hepatic failure, sometimes fatal, has been reported. Contra-indicated in hepatic \nimpairment.\nFluoxetine5,6,48–52\nExtensively hepatically metabolised with a long half-life (further increased in hepatic \ninsufficiency). Kinetic studies demonstrate accumulation in compensated cirrhosis. \nAlthough dosage reduction (of at least 50%) or alternate day dosing are recommended, \nit would take many weeks to reach steady-state serum levels, making fluoxetine complex \nto use. Asymptomatic increases in LFTs found in 0.5% of healthy adults. Rare cases of \nhepatitis reported.\nLevomilnacipran, \nmilnacipran6,19\nNo dose adjustment required in hepatic impairment, although the manufacturers of \nmilnacipran recommend avoiding in chronic liver disease, alcohol use or severe \ndysfunction. Increased liver enzymes have been reported, and hepatitis with milnacipran; \ndiscontinue use if jaundice or liver dysfunction occurs.\nMAOIs5,6,53\nRare cases of fatal hepatic necrosis, hepatotoxicity and jaundice with phenelzine, rarely \nhepatitis with tranylcypromine and one isolated case of fatal hepatotoxicity with \nmoclobemide. Doses of moclobemide should be reduced to half or one third in hepatic \nimpairment, or the dosing interval increased. Transdermal selegiline has not been \nassociated with liver injury.54 Non-selective MAOIs are contraindicated in patients with \nhepatic impairment.\nMirtazapine5,6,55\nHepatically metabolised and sedative. 50% dose reduction recommended based on \nkinetic data, Mild, asymptomatic increases in LFTs seen in healthy adults (ALT >3 times \nthe upper limit of normal in 2%). Few cases of cholestatic and hepatocellular damage \nreported. Has been used safely in patients with primary biliary cholangitis.56\nOther SSRIs5,6,47,52,57–64\nAll are hepatically metabolised and accumulate on chronic dosing. Dosage reduction \n(including reduction of maximum dose by 50%65 and/or reduced dosing frequency) may \nbe required (see individual SPCs for details). Raised LFTs and rare cases of hepatitis, \nincluding chronic active hepatitis, have been reported with paroxetine. Sertraline and \nfluvoxamine have also been associated with hepatitis. Citalopram, escitalopram and \nparoxetine have minimal effects on hepatic enzymes and may be the SSRIs of choice \nalthough occasional hepatotoxicity has been reported. Paroxetine is used by some \nspecialised liver units with few apparent problems. Sertraline and paroxetine are used in \nthe management of cholestatic pruritus.66 Be aware of increased risk of bleeding.\n(Continued)\n",
+  "raw_text_sha256": "8affe41d284d768ce0efcbfb0a2a1e48858d37246386b44cf8001505eb0968f9",
+  "coordinates_sha256": "b607dd59262f3aa4fc205bd3317226a1e91dcb2feeaba8613dd978d33e667e8d",
+  "block_sequence_sha256": "f836ea18439feb864e3e7be966912935c09d646b5b8b9f82266701e4bd73e815",
+  "blocks": [
+    {
+      "block_id": "page-0748-block-0000",
+      "order": 0,
+      "text": "Hepatic and renal impairment    727\n",
+      "bbox": [
+        269.185302734375,
+        31.395221710205078,
+        420.00048828125,
+        41.0272216796875
+      ],
+      "text_sha256": "df0304ed8ff22a5fc0c1997a7a93507557f574f62686a736d7b2706ae50d19d3"
+    },
+    {
+      "block_id": "page-0748-block-0001",
+      "order": 1,
+      "text": "CHAPTER 8\n",
+      "bbox": [
+        454.4096984863281,
+        532.3878173828125,
+        463.88970947265625,
+        573.7318115234375
+      ],
+      "text_sha256": "5ba3d9fb75ff4f418d4a2e9d517f30966dcfb279c10487eec43c5aa3fd8757a2"
+    },
+    {
+      "block_id": "page-0748-block-0002",
+      "order": 2,
+      "text": "Table 8.2  Antidepressants in hepatic impairment\n",
+      "bbox": [
+        54.0,
+        70.08790588378906,
+        211.3949737548828,
+        78.97540283203125
+      ],
+      "text_sha256": "49d20cda5484a05bf2439e131658ccd1d1d600bad1dbe73720e04fe6c34c7841"
+    },
+    {
+      "block_id": "page-0748-block-0003",
+      "order": 3,
+      "text": "Drug\nComments\n",
+      "bbox": [
+        48.0,
+        89.96290588378906,
+        171.50250244140625,
+        98.85040283203125
+      ],
+      "text_sha256": "f0d3aba6cb5c63a8b3ce76553ca73a800f481925284fe7cc72b7ce3c93bfebe6"
+    },
+    {
+      "block_id": "page-0748-block-0004",
+      "order": 4,
+      "text": "Agomelatine5,6,38–40\nLiver injury including hepatic failure, liver enzyme increases more than 10× ULN, and \nhepatitis reported, most commonly in first months of treatment and very occasionally \nfatal. Contra-indicated in hepatic impairment, including cirrhosis and liver disease. \nDose-related increase in transaminases reported; perform LFTs at baseline, 3, 6, 12, 24 \nweeks during initiation and at each dose increase, and thereafter where clinically \nindicated. Stop treatment if transaminases rise more than 3× ULN. Use cautiously where \nother risk factors for hepatic disease are present.\nUnder current monitoring restrictions, risk of liver injury is no higher than for other \nantidepressants.41,42\n",
+      "bbox": [
+        48.0,
+        108.26790618896484,
+        416.8699951171875,
+        196.95538330078125
+      ],
+      "text_sha256": "36f0345ff0c466454b54316c992adcd2c9159743dfbd4113675a030718cbe58f"
+    },
+    {
+      "block_id": "page-0748-block-0005",
+      "order": 5,
+      "text": "Brexanolone6,19\nNo dose adjustment required in hepatic impairment. Does not appear to be hepatotoxic, \nalthough experience is limited.\n",
+      "bbox": [
+        48.0,
+        206.3928985595703,
+        418.37005615234375,
+        225.097900390625
+      ],
+      "text_sha256": "0df0e7aa3f832c275ce2c7961a5e39bf6638faaf60ecaeb504b9a07167e41d6b"
+    },
+    {
+      "block_id": "page-0748-block-0006",
+      "order": 6,
+      "text": "Duloxetine5,6,43–47\nHepatically metabolised. Clearance markedly reduced even in mild impairment. Reports \nof hepatocellular injury (liver enzyme increases more than 10× ULN) and, less commonly, \njaundice. Hepatic failure, sometimes fatal, has been reported. Contra-indicated in hepatic \nimpairment.\n",
+      "bbox": [
+        47.99749755859375,
+        234.5178985595703,
+        421.2575988769531,
+        273.2178955078125
+      ],
+      "text_sha256": "af486bed282e97fa02b75b45d44c9c9ef6f82bf197cc6e1f7196e4cf618d4feb"
+    },
+    {
+      "block_id": "page-0748-block-0007",
+      "order": 7,
+      "text": "Fluoxetine5,6,48–52\nExtensively hepatically metabolised with a long half-life (further increased in hepatic \ninsufficiency). Kinetic studies demonstrate accumulation in compensated cirrhosis. \nAlthough dosage reduction (of at least 50%) or alternate day dosing are recommended, \nit would take many weeks to reach steady-state serum levels, making fluoxetine complex \nto use. Asymptomatic increases in LFTs found in 0.5% of healthy adults. Rare cases of \nhepatitis reported.\n",
+      "bbox": [
+        47.99749755859375,
+        282.6379089355469,
+        419.705078125,
+        341.337890625
+      ],
+      "text_sha256": "e9242a7794196e1ecf50db559918f695e97d4d281b91d3b4972bb5a8d205e761"
+    },
+    {
+      "block_id": "page-0748-block-0008",
+      "order": 8,
+      "text": "Levomilnacipran, \nmilnacipran6,19\n",
+      "bbox": [
+        47.99749755859375,
+        350.7579040527344,
+        103.82749938964844,
+        369.462890625
+      ],
+      "text_sha256": "0d2851f3110de2b527b0f692b97f8e5e202dfce16c71bd52ae71c8f4ae17e423"
+    },
+    {
+      "block_id": "page-0748-block-0009",
+      "order": 9,
+      "text": "No dose adjustment required in hepatic impairment, although the manufacturers of \nmilnacipran recommend avoiding in chronic liver disease, alcohol use or severe \ndysfunction. Increased liver enzymes have been reported, and hepatitis with milnacipran; \ndiscontinue use if jaundice or liver dysfunction occurs.\n",
+      "bbox": [
+        134.0,
+        350.7679138183594,
+        419.1725769042969,
+        389.4678955078125
+      ],
+      "text_sha256": "cfd2d948a314a4bc49eb32dbdf103f88c9d6209d17d43d8b0d9f52d19d2a589a"
+    },
+    {
+      "block_id": "page-0748-block-0010",
+      "order": 10,
+      "text": "MAOIs5,6,53\nRare cases of fatal hepatic necrosis, hepatotoxicity and jaundice with phenelzine, rarely \nhepatitis with tranylcypromine and one isolated case of fatal hepatotoxicity with \nmoclobemide. Doses of moclobemide should be reduced to half or one third in hepatic \nimpairment, or the dosing interval increased. Transdermal selegiline has not been \nassociated with liver injury.54 Non-selective MAOIs are contraindicated in patients with \nhepatic impairment.\n",
+      "bbox": [
+        47.99749755859375,
+        398.8879089355469,
+        413.79510498046875,
+        457.597900390625
+      ],
+      "text_sha256": "1bc4cdd8fd9b169f1d53e2e8a9661e6c836ce3aa7331f964e91d0ad478421d3c"
+    },
+    {
+      "block_id": "page-0748-block-0011",
+      "order": 11,
+      "text": "Mirtazapine5,6,55\nHepatically metabolised and sedative. 50% dose reduction recommended based on \nkinetic data, Mild, asymptomatic increases in LFTs seen in healthy adults (ALT >3 times \nthe upper limit of normal in 2%). Few cases of cholestatic and hepatocellular damage \nreported. Has been used safely in patients with primary biliary cholangitis.56\n",
+      "bbox": [
+        47.998291015625,
+        467.0179138183594,
+        410.1875305175781,
+        505.7178955078125
+      ],
+      "text_sha256": "fe6dfec6b0a9f91a30723b2e18372f152fe6f35df1028853a1a06b00cffc7717"
+    },
+    {
+      "block_id": "page-0748-block-0012",
+      "order": 12,
+      "text": "Other SSRIs5,6,47,52,57–64\nAll are hepatically metabolised and accumulate on chronic dosing. Dosage reduction \n(including reduction of maximum dose by 50%65 and/or reduced dosing frequency) may \nbe required (see individual SPCs for details). Raised LFTs and rare cases of hepatitis, \nincluding chronic active hepatitis, have been reported with paroxetine. Sertraline and \nfluvoxamine have also been associated with hepatitis. Citalopram, escitalopram and \nparoxetine have minimal effects on hepatic enzymes and may be the SSRIs of choice \nalthough occasional hepatotoxicity has been reported. Paroxetine is used by some \nspecialised liver units with few apparent problems. Sertraline and paroxetine are used in \nthe management of cholestatic pruritus.66 Be aware of increased risk of bleeding.\n",
+      "bbox": [
+        48.0,
+        515.1428833007812,
+        416.8482360839844,
+        603.8504028320312
+      ],
+      "text_sha256": "d20595dcc00e408ddc3a40bf58c713039e545ee8d199637f450b586ed3363fb0"
+    },
+    {
+      "block_id": "page-0748-block-0013",
+      "order": 13,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.1658020019531,
+        612.67041015625,
+        420.0807189941406,
+        621.4229125976562
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

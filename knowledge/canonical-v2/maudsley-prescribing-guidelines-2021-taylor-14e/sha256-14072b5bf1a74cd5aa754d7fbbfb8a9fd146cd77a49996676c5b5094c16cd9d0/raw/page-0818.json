@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0818",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 818,
+  "source_page_index": 817,
+  "source_page_display": 818,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    797\nCHAPTER 10\nLearning disabilities\nGeneral considerations1\nPrescribing psychotropic medications for people with learning disabilities (LD) is a \nchallenging and controversial area of psychiatric practice.2,3 There are concerns that \npsychotropic drugs of all kinds (antipsychotics, antidepressants, benzodiazepines (both \nregular and as required) and antiepileptics as mood stabilisers) are overprescribed with \npoor review and assessment of their benefit. The learning disabilities field is notable in \nhaving only a small therapeutics research base of its own, with particular ethical and \npractical considerations regarding how emotional and behavioural disturbances are \nclassified and treated. Although prescribing for individuals with mild or borderline \nintellectual impairment may be undertaken by mainstream mental health services, the \nassessment and treatment of behavioural and emotional disorders in people with more \nmarked (or, as in the case of autism, atypical) patterns of significant cognitive impair-\nment should be undertaken in the first instance by, or at least in consultation with, \nspecialist clinicians.\nThe term ‘dual diagnosis’ in this context refers to the co-occurrence of an identifiable \npsychiatric disorder (mental illness, personality disorder) and LD. ‘Diagnostic over-\nshadowing’ is the misattribution of emotional or behavioural problems to LD itself \nrather than a co-morbid condition. LD is an important risk factor for all psychiatric \ndisorders (including dementia, particularly for individuals with Down syndrome).4 \nWhere it is possible to diagnose a mental illness using conventional or modified criteria, \nthe drug treatment in the first instance should, in general, be similar to that in the popu-\nlation at large. Most treatment guidelines are increasingly stating their intended appli-\ncability to people with LD in this regard.\nMental illness may present in unusual ways in LD, for example, depression as self-\ninjurious behaviour, persecutory ideation as complaints of being ‘picked on’. Conversely, \nbehaviours such as self-talk may be normal in some individuals but mistakenly identi-\nfied as a disorder such as psychosis. In general, diagnosis becomes increasingly complex \nwith increasing severity of disability and associated communication impairment.\nCo-morbid autistic spectrum disorder has special assessment considerations and in \nits own right is an important risk factor for psychiatric disorder, in particular anxiety \nand depression, bipolar spectrum disorder, severe obsessional behaviour, anger disor-\nders and psychosis-like episodes that may not meet criteria for schizophrenia but none-\ntheless require treatment. Autistic traits are common amongst patients using LD \nservices. Guidance on the treatment of mental health problems in autism can be found \nin Chapter 5.\nKey practice areas\nCapacity and consent: It is uncommon for patients in LD services (who often represent \na sub-population of those identified with special educational needs in childhood) to \nhave sufficient understanding of their treatment in order to be able to take truly \n",
+  "raw_text_sha256": "0a0df33bec1e25e9d51af55e4c32b23c4aab891591f8406508c1f67f5af0becd",
+  "coordinates_sha256": "be22414a8ff21df602e5238c0e0eb35b8424571d76f695e7ce9f92ab42136983",
+  "block_sequence_sha256": "fd81049db81abaefbd106bb0025cc4ae1bbbbb6a7cbd14f272fd7a27c5ec2361",
+  "blocks": [
+    {
+      "block_id": "page-0818-block-0000",
+      "order": 0,
+      "text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    797\n",
+      "bbox": [
+        47.999698638916016,
+        31.395221710205078,
+        419.96697998046875,
+        41.0272216796875
+      ],
+      "text_sha256": "6dce9c66f6e79f560b3bff508ee2ae6c56d849c0cfc4b92b1aa7dd14b815c192"
+    },
+    {
+      "block_id": "page-0818-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        454.4096984863281,
+        75.763671875,
+        463.88970947265625,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0818-block-0002",
+      "order": 2,
+      "text": "Learning disabilities\n",
+      "bbox": [
+        55.0,
+        66.00680541992188,
+        158.49899291992188,
+        79.04180908203125
+      ],
+      "text_sha256": "ee71bceb675bfd6792e3f7bea16f36a3e507b10ced35361bc77ea543af0032a3"
+    },
+    {
+      "block_id": "page-0818-block-0003",
+      "order": 3,
+      "text": "General considerations1\n",
+      "bbox": [
+        48.00400161743164,
+        90.00881958007812,
+        170.1332244873047,
+        103.0438232421875
+      ],
+      "text_sha256": "b10f2e71b71044b52cd6d1207bf1059658e9762e5216328ba4d35ed88acbddd1"
+    },
+    {
+      "block_id": "page-0818-block-0004",
+      "order": 4,
+      "text": "Prescribing psychotropic medications for people with learning disabilities (LD) is a \nchallenging and controversial area of psychiatric practice.2,3 There are concerns that \npsychotropic drugs of all kinds (antipsychotics, antidepressants, benzodiazepines (both \nregular and as required) and antiepileptics as mood stabilisers) are overprescribed with \npoor review and assessment of their benefit. The learning disabilities field is notable in \nhaving only a small therapeutics research base of its own, with particular ethical and \npractical considerations regarding how emotional and behavioural disturbances are \nclassified and treated. Although prescribing for individuals with mild or borderline \nintellectual impairment may be undertaken by mainstream mental health services, the \nassessment and treatment of behavioural and emotional disorders in people with more \nmarked (or, as in the case of autism, atypical) patterns of significant cognitive impair-\nment should be undertaken in the first instance by, or at least in consultation with, \nspecialist clinicians.\n",
+      "bbox": [
+        47.997222900390625,
+        108.851806640625,
+        422.8172607421875,
+        264.5718078613281
+      ],
+      "text_sha256": "51a4255e5eef2beca9261e9565944bb421d6130e150633e6f8f4fffb0b4a5957"
+    },
+    {
+      "block_id": "page-0818-block-0005",
+      "order": 5,
+      "text": "The term ‘dual diagnosis’ in this context refers to the co-occurrence of an identifiable \npsychiatric disorder (mental illness, personality disorder) and LD. ‘Diagnostic over-\nshadowing’ is the misattribution of emotional or behavioural problems to LD itself \nrather than a co-morbid condition. LD is an important risk factor for all psychiatric \ndisorders (including dementia, particularly for individuals with Down syndrome).4 \nWhere it is possible to diagnose a mental illness using conventional or modified criteria, \nthe drug treatment in the first instance should, in general, be similar to that in the popu-\nlation at large. Most treatment guidelines are increasingly stating their intended appli-\ncability to people with LD in this regard.\n",
+      "bbox": [
+        47.997222900390625,
+        264.851806640625,
+        422.8172302246094,
+        372.57177734375
+      ],
+      "text_sha256": "d3782752e4feb1c1caba22bb4ad7ac1a77a6f3c1b6d6dbf23dcbadf11a8d1a10"
+    },
+    {
+      "block_id": "page-0818-block-0006",
+      "order": 6,
+      "text": "Mental illness may present in unusual ways in LD, for example, depression as self-\ninjurious behaviour, persecutory ideation as complaints of being ‘picked on’. Conversely, \nbehaviours such as self-talk may be normal in some individuals but mistakenly identi-\nfied as a disorder such as psychosis. In general, diagnosis becomes increasingly complex \nwith increasing severity of disability and associated communication impairment.\n",
+      "bbox": [
+        47.99969482421875,
+        372.8517761230469,
+        422.7996826171875,
+        432.57177734375
+      ],
+      "text_sha256": "74bdf3ed4f992443fafd46214c9f0100c0c0abb50a6b3db8004322bca775cc12"
+    },
+    {
+      "block_id": "page-0818-block-0007",
+      "order": 7,
+      "text": "Co-morbid autistic spectrum disorder has special assessment considerations and in \nits own right is an important risk factor for psychiatric disorder, in particular anxiety \nand depression, bipolar spectrum disorder, severe obsessional behaviour, anger disor-\nders and psychosis-like episodes that may not meet criteria for schizophrenia but none-\ntheless require treatment. Autistic traits are common amongst patients using LD \nservices. Guidance on the treatment of mental health problems in autism can be found \nin Chapter 5.\n",
+      "bbox": [
+        47.99969482421875,
+        432.8517761230469,
+        422.8096923828125,
+        516.57177734375
+      ],
+      "text_sha256": "ce545f9c624e0ee35e16fefee11884e53b97b066942be00c316559067fbb32ae"
+    },
+    {
+      "block_id": "page-0818-block-0008",
+      "order": 8,
+      "text": "Key practice areas\n",
+      "bbox": [
+        48.0,
+        534.0068359375,
+        141.33499145507812,
+        547.0418090820312
+      ],
+      "text_sha256": "ba3ef60e80db491970944d28a25f327293f8b1836fc3fbc60e8af6083eb9ce82"
+    },
+    {
+      "block_id": "page-0818-block-0009",
+      "order": 9,
+      "text": "Capacity and consent: It is uncommon for patients in LD services (who often represent \n",
+      "bbox": [
+        48.0,
+        552.61181640625,
+        422.750244140625,
+        564.5718383789062
+      ],
+      "text_sha256": "70d4f44d03736a3d8fdc8afb8b84bfa7f2c4cee89fbf49eba214ecf3fc8174c9"
+    },
+    {
+      "block_id": "page-0818-block-0010",
+      "order": 10,
+      "text": "a sub-population of those identified with special educational needs in childhood) to \nhave sufficient understanding of their treatment in order to be able to take truly \n",
+      "bbox": [
+        60.0,
+        564.851806640625,
+        422.7702331542969,
+        588.5718383789062
+      ],
+      "text_sha256": "0afb5a3b52d34dc620c475913a02b39b1c9e2dab03438112f8898b688cc5c36b"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

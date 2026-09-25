@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0052",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 52,
+  "source_page_index": 51,
+  "source_page_display": 52,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    31\nCHAPTER 1\n\t54.\t Viguera AC, et al. Clinical risk following abrupt and gradual withdrawal of maintenance neuroleptic treatment. Arch Gen Psychiatry 1997; \n54:49–55.\n\t55.\t Weiden PJ, et al. Does half-life matter after antipsychotic discontinuation? A relapse comparison in schizophrenia with 3 different formula-\ntions of paliperidone. J Clin Psychiatry 2017; 78:e813–e820.\n\t56.\t Chouinard G, et al. Withdrawal symptoms after long-term treatment with low-potency neuroleptics. J Clin Psychiatry 1984; 45:500–502.\n\t57.\t Yin J, et al. Antipsychotic induced dopamine supersensitivity psychosis: a comprehensive review. Curr Neuropharmacol 2017; 15:174–183.\n\t58.\t Cohen D, et al. Discontinuing psychotropic drugs from participants in randomized controlled trials: a systematic review. Psychother \nPsychosom 2019; 88:96–104.\n\t59.\t Chouinard G, et al. Neuroleptic-induced supersensitivity psychosis: clinical and pharmacologic characteristics. Am J Psychiatry 1980; \n137:16–21.\n\t60.\t Kirkpatrick B, et al. The concept of supersensitivity psychosis. J Nerv Ment Dis 1992; 180:265–270.\n\t61.\t Chaffin DS. Phenothiazine-induced acute psychotic reaction: the ‘psychotoxicity’ of a drug. Am J Psychiatry 1964; 121:26–32.\n\t62.\t Lu ML, et al. Metoclopramide-induced supersensitivity psychosis. Ann Pharmacother 2002; 36:1387–1390.\n\t63.\t Roy-Desruisseaux J, et al. Domperidone-induced tardive dyskinesia and withdrawal psychosis in an elderly woman with dementia. Ann \nPharmacother 2011; 45:e51.\n\t64.\t Huhtaniska S, et al. Long-term antipsychotic use and brain changes in schizophrenia – a systematic review and meta-analysis. Human \nPsychopharmacology 2017; 32:e2574.\n",
+  "raw_text_sha256": "7736fea33b5a00496729518b9e5469ae58ecd582cf84dfbf51db8e8197bec9fd",
+  "coordinates_sha256": "f0ae3b4fc8b8a528d06e2e20da9aab6a2aff15008ee0c48b87cce5d826fc625d",
+  "block_sequence_sha256": "8b1ca0461c014cfd479cb230628ca62681c3565d362a06f91324a453a51bb19b",
+  "blocks": [
+    {
+      "block_id": "page-0052-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    31\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "d5ad7a3a7a64a04a57cc2a09f7a19ae3eb2ba3b85efa58bfb0057d8270bc280d"
+    },
+    {
+      "block_id": "page-0052-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0052-block-0002",
+      "order": 2,
+      "text": "\t54.\t Viguera AC, et al. Clinical risk following abrupt and gradual withdrawal of maintenance neuroleptic treatment. Arch Gen Psychiatry 1997; \n",
+      "bbox": [
+        47.99909973144531,
+        63.2694091796875,
+        421.6790466308594,
+        70.30140686035156
+      ],
+      "text_sha256": "e1b577e9408339cb78981879f1bc3d018dbd2a9f420380b4faa82c4e7ae90ceb"
+    },
+    {
+      "block_id": "page-0052-block-0003",
+      "order": 3,
+      "text": "54:49–55.\n\t55.\t Weiden PJ, et al. Does half-life matter after antipsychotic discontinuation? A relapse comparison in schizophrenia with 3 different formula-\n",
+      "bbox": [
+        48.005096435546875,
+        72.12541198730469,
+        419.95703125,
+        88.30140686035156
+      ],
+      "text_sha256": "359b0c39cc632d7901abbbb83131b5181a8e830c805cb81e5a31863e017a602f"
+    },
+    {
+      "block_id": "page-0052-block-0004",
+      "order": 4,
+      "text": "tions of paliperidone. J Clin Psychiatry 2017; 78:e813–e820.\n\t56.\t Chouinard G, et al. Withdrawal symptoms after long-term treatment with low-potency neuroleptics. J Clin Psychiatry 1984; 45:500–502.\n\t57.\t Yin J, et al. Antipsychotic induced dopamine supersensitivity psychosis: a comprehensive review. Curr Neuropharmacol 2017; 15:174–183.\n\t58.\t Cohen D, et al. Discontinuing psychotropic drugs from participants in randomized controlled trials: a systematic review. Psychother \n",
+      "bbox": [
+        48.01110076904297,
+        90.12541198730469,
+        421.6730651855469,
+        124.30140686035156
+      ],
+      "text_sha256": "a3c4140f77654f1b2de9b6cc1a8e545ec783fcd9efa9930bda2ada6103eb3dcf"
+    },
+    {
+      "block_id": "page-0052-block-0005",
+      "order": 5,
+      "text": "Psychosom 2019; 88:96–104.\n\t59.\t Chouinard G, et al. Neuroleptic-induced supersensitivity psychosis: clinical and pharmacologic characteristics. Am J Psychiatry 1980; \n",
+      "bbox": [
+        48.02909851074219,
+        126.12541198730469,
+        421.7030944824219,
+        142.30140686035156
+      ],
+      "text_sha256": "0ad4324fce02d21226708381512f34a97aca19680953a01d2b5c306449b3503e"
+    },
+    {
+      "block_id": "page-0052-block-0006",
+      "order": 6,
+      "text": "137:16–21.\n\t60.\t Kirkpatrick B, et al. The concept of supersensitivity psychosis. J Nerv Ment Dis 1992; 180:265–270.\n\t61.\t Chaffin DS. Phenothiazine-induced acute psychotic reaction: the ‘psychotoxicity’ of a drug. Am J Psychiatry 1964; 121:26–32.\n\t62.\t Lu ML, et al. Metoclopramide-induced supersensitivity psychosis. Ann Pharmacother 2002; 36:1387–1390.\n\t63.\t Roy-Desruisseaux J, et al. Domperidone-induced tardive dyskinesia and withdrawal psychosis in an elderly woman with dementia. Ann \n",
+      "bbox": [
+        48.03510284423828,
+        144.1254119873047,
+        421.6971740722656,
+        187.30140686035156
+      ],
+      "text_sha256": "796117e2bd5436bef12b7794cf9869bd6a65a3e107a39e85d42eb99bc2da6bc3"
+    },
+    {
+      "block_id": "page-0052-block-0007",
+      "order": 7,
+      "text": "Pharmacother 2011; 45:e51.\n\t64.\t Huhtaniska S, et al. Long-term antipsychotic use and brain changes in schizophrenia – a systematic review and meta-analysis. Human \n",
+      "bbox": [
+        48.05909729003906,
+        189.1254119873047,
+        421.7690734863281,
+        205.30140686035156
+      ],
+      "text_sha256": "2161a6f4cbd6d573e1668e9c38e3b45d990afd68325600884365c485c208ec9d"
+    },
+    {
+      "block_id": "page-0052-block-0008",
+      "order": 8,
+      "text": "Psychopharmacology 2017; 32:e2574.\n",
+      "bbox": [
+        59.06309509277344,
+        207.1254119873047,
+        158.59107971191406,
+        214.30140686035156
+      ],
+      "text_sha256": "67d57674bd3a851e4075b2bea5944ee82544eab09fc373c2b7ddcdd81a895171"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

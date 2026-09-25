@@ -1,0 +1,14 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0844",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 844,
+  "source_page_index": 843,
+  "repaired_text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    823\nCHAPTER 10\nDrugs\nAntidepressants\nTable 10.10  Antidepressants in bariatric surgery\nDrug\nSpecific evidence and considerations\nSSRIs8–13\n■\n■Evidence demonstrates that plasma levels may be significantly reduced following RYGB\n■\n■Malabsorption has been implicated in cases of discontinuation symptoms and loss of efficacy\nSNRIs10,14\n■\n■Duloxetine levels 42% lower after RYGB compared with matched controls\n■\n■The absorption of venlafaxine MR capsules seems not to be altered by RYGB15\nMirtazapine16,17\n■\n■Increased appetite and weight gain are possible\n■\n■Has been used successfully for non-mechanical vomiting after RYGB\nTCAs18,19\n■\n■Single case report suggests therapeutic plasma levels can be achieved within usual dose\nrange after RYGB\n■\n■Plasma levels may be increased after significant weight loss; consider monitoring levels and\nreducing dose\nGeneral summary\n■\n■Antidepressants are the best studied psychotropics in the bariatric population. Current evidence suggests that\nantidepressant absorption is reduced after surgery (though studies are mostly limited to SSRIs after RYGB).\n■\n■Signs of reduced absorption may include the rapid development of discontinuation symptoms and later loss\nof efficacy.\n■\n■Patients require close monitoring as those at risk of reduced absorption cannot be reliably predicted.\n■\n■The risk of gastric bleeds with bariatric surgery will probably be increased by serotonergic antidepressants\nAntipsychotics\nTable 10.11  Antipsychotics in bariatric surgery\nDrug\nSpecific evidence and considerations\nAsenapine20\n■\n■Primarily absorbed via oral mucosa; problems after bariatric surgery are not expected\n■\n■One case report of successful use after RYGB\nCariprazine\n■\n■No data available on absorption after bariatric surgery; follow general recommendations.\nClozapine21–23\n■\n■Two case reports of relapse after RYGB24\n■\n■Take drug plasma levels before surgery and regularly monitor after\n■\n■Constipation is common after surgery; the manufacturer recommends close monitoring and\nactive treatment\n■\n■Check smoking status (quitting before surgery is encouraged); adjust dose accordingly\nHaloperidol25\n■\n■Single case report suggests levels after RYGB are similar to those generally reported in the\nliterature\n(Continued)",
+  "repaired_text_sha256": "575d8528771ac12ecba53ec88c9ff072d816f9458e03e53ba5d49a8730c97a13",
+  "raw_text_sha256": "7f61657e15e708704dd203127f1e293e785f748e0ca7f8bd537b61a833b62621",
+  "repair_ids": [
+    "repair-000756"
+  ],
+  "raw_file": "raw/page-0844.json"
+}

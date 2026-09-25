@@ -1,0 +1,239 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0496",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 496,
+  "source_page_index": 495,
+  "source_page_display": 496,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    475\nCHAPTER 4\non the ward. Anyone can give naloxone to prevent an overdose death. Patients dis-\ncharged from inpatient wards should be warned about loss of tolerance and they and \ntheir family members provided with naloxone training and THN.1 A summary of what \nto do in case of opioid overdose is captured in Figure 4.1, and training in THN covers \nthese actions.\nCall 999 and ask for an ambulance\nGive basic life support –30 chest compressions\nand 2 rescue breaths\nGive 400 μg naloxone injection into outer thigh or\nupper arm muscle\nGive 3 cycles of basic life support (30 chest\ncompressions and 2 rescue breaths) if possible\nRepeat giving naloxone and 3 cycles of life support\nuntil ambulance arrives or patient is breathing\nnormally\nFigure 4.1  Flowchart for naloxone administration (adapted from WHO3).\nIntranasal naloxone\nRecently, concentrated intranasal (IN) naloxone has been developed as an alternative to \nIM naloxone.5 Alternatives to injectable naloxone have been developed for THN because \nlaypersons or bystanders may have difficulty administering injections because of fear or \nlack of knowledge of injecting procedures, and because of the risk of needle stick injury.6\nThe peak plasma concentration (Cmax) of 1mg, 2mg and 4mg IN naloxone exceeds \nthat of 400 μg IM naloxone7 but time to attainment of peak concentrations (Tmax) is \ndelayed relative to IM administration (15–30 minutes vs 10 minutes). With respect to \ntime to onset of action, 2mg IN is equivalent to 400 μg IM. IN administration results \nin more persistent naloxone plasma levels than IM or IV routes.7\nOpioid substitution treatment (OST)\nThe mainstay of pharmacological management of opioid dependence is OST. OST can \nbe prescribed for detoxification, that is, at a dose to control withdrawal symptoms fol-\nlowed by progressive reduction and discontinuation. Alternatively, OST can be \n",
+  "raw_text_sha256": "19e664da965e6f5e56b536dc14262d91ffb6145090012e4137cacb301a0bf031",
+  "coordinates_sha256": "fcd91c743693f65f5da165b11dbb5252375d7b17f235e2904d3271fc58a82fc8",
+  "block_sequence_sha256": "243417bb828b32ff4cb0bb504f279a8ff80124195a379fce4d7eb282558a010b",
+  "blocks": [
+    {
+      "block_id": "page-0496-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    475\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "bcba64d1706bfa0a8dc830073122e7412229e51f99793a1a8b7e5bd96f491a8b"
+    },
+    {
+      "block_id": "page-0496-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0496-block-0002",
+      "order": 2,
+      "text": "on the ward. Anyone can give naloxone to prevent an overdose death. Patients dis-\ncharged from inpatient wards should be warned about loss of tolerance and they and \ntheir family members provided with naloxone training and THN.1 A summary of what \nto do in case of opioid overdose is captured in Figure 4.1, and training in THN covers \nthese actions.\n",
+      "bbox": [
+        47.9971923828125,
+        62.5504150390625,
+        422.8200378417969,
+        122.27041625976562
+      ],
+      "text_sha256": "af7137eb125e707e5863f1120d72c5ba2c405b7bd9302d137c629937e583ba48"
+    },
+    {
+      "block_id": "page-0496-block-0003",
+      "order": 3,
+      "text": "Call 999 and ask for an ambulance\n",
+      "bbox": [
+        177.07640075683594,
+        145.2855682373047,
+        292.96649169921875,
+        153.95556640625
+      ],
+      "text_sha256": "9861a8b8b9fe1978bce6d2c523e83458ab4f7a13881a1da5c4cca3d3b43d310c"
+    },
+    {
+      "block_id": "page-0496-block-0004",
+      "order": 4,
+      "text": "Give basic life support –30 chest compressions\n",
+      "bbox": [
+        158.95640563964844,
+        186.03306579589844,
+        314.7239685058594,
+        194.70306396484375
+      ],
+      "text_sha256": "77fa41fcc77debc60e141783b16b361f6391d5e57e6a9bf6dac3d4dc60c670b3"
+    },
+    {
+      "block_id": "page-0496-block-0005",
+      "order": 5,
+      "text": "and 2 rescue breaths\n",
+      "bbox": [
+        201.6164093017578,
+        195.03306579589844,
+        272.0714416503906,
+        203.70306396484375
+      ],
+      "text_sha256": "314eb92be806125b7de636c1bb5df928333a06695d24aa018bce572f74a77f6e"
+    },
+    {
+      "block_id": "page-0496-block-0006",
+      "order": 6,
+      "text": "Give 400 μg naloxone injection into outer thigh or\n",
+      "bbox": [
+        152.6789093017578,
+        237.3030548095703,
+        315.8489685058594,
+        245.97305297851562
+      ],
+      "text_sha256": "4142111100ccce666467aefd0bd19d0624178467f502b6298839427b576c5acc"
+    },
+    {
+      "block_id": "page-0496-block-0007",
+      "order": 7,
+      "text": "upper arm muscle\n",
+      "bbox": [
+        204.25640869140625,
+        246.3030548095703,
+        264.27142333984375,
+        254.97305297851562
+      ],
+      "text_sha256": "93d1cbd2018c9cb8d2fc83a99e85a672e7f9b07c105271b0f1a78601d35a463c"
+    },
+    {
+      "block_id": "page-0496-block-0008",
+      "order": 8,
+      "text": "Give 3 cycles of basic life support (30 chest\ncompressions and 2 rescue breaths) if possible\n",
+      "bbox": [
+        157.17141723632812,
+        287.748046875,
+        313.89898681640625,
+        305.4180603027344
+      ],
+      "text_sha256": "4a3938b4bf0a34e0288f61931383253d2202d42b34ce54d6f1288ac90c0e3650"
+    },
+    {
+      "block_id": "page-0496-block-0009",
+      "order": 9,
+      "text": "Repeat giving naloxone and 3 cycles of life support\n",
+      "bbox": [
+        151.74142456054688,
+        338.7780456542969,
+        320.99395751953125,
+        347.44805908203125
+      ],
+      "text_sha256": "b7be2cbeede9e1e8d4b7fb0ac01649e14caaad1f26d4c0e62a2f91492a06383b"
+    },
+    {
+      "block_id": "page-0496-block-0010",
+      "order": 10,
+      "text": "until ambulance arrives or patient is breathing\n",
+      "bbox": [
+        160.71142578125,
+        347.7780456542969,
+        312.02398681640625,
+        356.44805908203125
+      ],
+      "text_sha256": "6d89112631a20e3bfedad77bfbaae2390c68e49be0b42f636326f8f5ecabc03b"
+    },
+    {
+      "block_id": "page-0496-block-0011",
+      "order": 11,
+      "text": "normally\n",
+      "bbox": [
+        222.19642639160156,
+        356.7780456542969,
+        250.53140258789062,
+        365.44805908203125
+      ],
+      "text_sha256": "cde70d419958e0d93b5d4005cf390bc48cdd9d19abca8176f6c486b5b66992d6"
+    },
+    {
+      "block_id": "page-0496-block-0012",
+      "order": 12,
+      "text": "Figure 4.1  Flowchart for naloxone administration (adapted from WHO3).\n",
+      "bbox": [
+        48.0,
+        385.4109802246094,
+        281.85638427734375,
+        394.2984924316406
+      ],
+      "text_sha256": "e6e0907b44ae2c49f89ab9b5a39ace99a13065d0aa096bd88ac4c995340f0705"
+    },
+    {
+      "block_id": "page-0496-block-0013",
+      "order": 13,
+      "text": "Intranasal naloxone\n",
+      "bbox": [
+        48.0,
+        414.6346740722656,
+        141.3599853515625,
+        426.48468017578125
+      ],
+      "text_sha256": "27a00497ad6cad4ca0e96596c3b8cf55cde283487f9ff3085882089144a6f31b"
+    },
+    {
+      "block_id": "page-0496-block-0014",
+      "order": 14,
+      "text": "Recently, concentrated intranasal (IN) naloxone has been developed as an alternative to \nIM naloxone.5 Alternatives to injectable naloxone have been developed for THN because \nlaypersons or bystanders may have difficulty administering injections because of fear or \nlack of knowledge of injecting procedures, and because of the risk of needle stick injury.6\n",
+      "bbox": [
+        48.0,
+        432.544677734375,
+        422.82330322265625,
+        480.2646789550781
+      ],
+      "text_sha256": "34ee41474905d69090ef6ebcf7899d8c9306dcd261161f1218d912f21a725dd0"
+    },
+    {
+      "block_id": "page-0496-block-0015",
+      "order": 15,
+      "text": "The peak plasma concentration (Cmax) of 1mg, 2mg and 4mg IN naloxone exceeds \nthat of 400 μg IM naloxone7 but time to attainment of peak concentrations (Tmax) is \ndelayed relative to IM administration (15–30 minutes vs 10 minutes). With respect to \ntime to onset of action, 2mg IN is equivalent to 400 μg IM. IN administration results \nin more persistent naloxone plasma levels than IM or IV routes.7\n",
+      "bbox": [
+        48.00030517578125,
+        480.544677734375,
+        422.82025146484375,
+        540.2647094726562
+      ],
+      "text_sha256": "f3be9f8105d947d81cec092ee1fd469bcd91bb89b0876b192cddbfb08de259db"
+    },
+    {
+      "block_id": "page-0496-block-0016",
+      "order": 16,
+      "text": "Opioid substitution treatment (OST)\n",
+      "bbox": [
+        48.0,
+        558.6347045898438,
+        217.46998596191406,
+        570.4846801757812
+      ],
+      "text_sha256": "1310e453156adc97079e2db6c3882a16843a4c129d72a08234ad09043b8ec524"
+    },
+    {
+      "block_id": "page-0496-block-0017",
+      "order": 17,
+      "text": "The mainstay of pharmacological management of opioid dependence is OST. OST can \nbe prescribed for detoxification, that is, at a dose to control withdrawal symptoms fol-\nlowed by progressive reduction and discontinuation. Alternatively, OST can be \n",
+      "bbox": [
+        48.0,
+        576.544677734375,
+        422.7599182128906,
+        612.2647094726562
+      ],
+      "text_sha256": "cfdcd71ac2403cf35c2a99b09c25a52592d7391fa172131da0b3f394c0c16761"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

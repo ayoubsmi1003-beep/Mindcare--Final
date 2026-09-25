@@ -1,0 +1,1307 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0552",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 552,
+  "source_page_index": 551,
+  "source_page_display": 552,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Table 4.22  Basic summary of drugs of misuse\nDrug\nPhysical signs/\nsymptoms of \nintoxication\nMost common \nmental state \nchanges2\nWithdrawal \nsymptoms\nDuration of \nwithdrawal\nDuration of \ndetection in \nthe urine3,4\nOther substances that give a \npositive urine test result5–7\nAmfetamine type \nstimulants8\nTachycardia, \nincreased BP, \nanorexia, tremor, \nrestlessness\nVisual/tactile/\nolfactory auditory \nhallucinations, \nparanoia, elation\nFatigue, hunger, \ndepression, \nirritability, craving, \nsocial withdrawal\nPeaks 7–34 \nhours; lasts \nmaximum of \n5 days\nDepends on \nhalf-life, mostly \n48–72 hours\nCough and decongestant \npreparations, bupropion, \nchloroquine, chlorpromazine, \nlabetalol, promethazine, ranitidine, \nselegiline, large quantities of \ntyramine, tranylcypromine, \ntrazodone and many others\nDesvenlafaxine may give a positive \nresult for phencyclidine9\nGHB/GBL\nDrowsiness, coma, \ndisinhibition\nSociability, \nconfidence\nTremor, tachycardia, \nparanoia, delirium, \npsychosis, visual/\ntactile/olfactory/\nauditory \nhallucinations\n3–4 days\nDifficult to \ndetect, not \nroutinely \nscreened for\nNot known\nUsually (and reliably) measured by \nLC-MS10\nBenzodiazepines\nSedation, \ndisinhibition\nRelaxation, visual \nhallucinations, \ndisorientation, sleep \ndisturbance\nAnxiety, insomnia, \ndelirium, seizures, \nvisual/tactile/\nolfactory auditory \nhallucinations, \npsychosis\nUsually \nshort-lived but \nmay last \nweeks to \nmonths\nUp to 28 days: \ndepending on \nhalf-life of drug \ntaken\nNefopam, sertraline, zopiclone, \nefavirenz\nCannabis11–17\nTachycardia, lack of \nco-ordination, red \neyes, postural \nhypotension\nElation, psychosis, \nperceptual \ndistortions, \ndisturbance of \nmemory/judgement, \ntwofold increase in \nrisk of developing \nschizophrenia\nRestlessness, \nirritability, insomnia, \nanxiety\nUncertain\nProbably less \nthan 1 month \n(longer in \nheavy users)\nSingle use: 3 \ndays; chronic \nheavy use: up to \n30 days\nPassive ‘smoking’ of cannabis\nEfavirenz, ibuprofen, naproxen\n(Continued )\n",
+  "raw_text_sha256": "6c76b08983c1eeb3c0cd525431a3af9286df274348e3cda6080764c8d5710465",
+  "coordinates_sha256": "0815fe836955a5939174982d337ce8aa3b5f7930c59f1f4913c09fe38655d848",
+  "block_sequence_sha256": "6a3afc3f5d55a21841f8bef4ceb965f028440afcfadbb8d87f4f1e5e5e59f07d",
+  "blocks": [
+    {
+      "block_id": "page-0552-block-0000",
+      "order": 0,
+      "text": "Table 4.22  Basic summary of drugs of misuse\n",
+      "bbox": [
+        53.73749923706055,
+        459.53399658203125,
+        62.625,
+        606.6539916992188
+      ],
+      "text_sha256": "76dae3ce4f27792c0de4b63155cd952fe2d2585f78a0f9f1c5ce38c9b75b534a"
+    },
+    {
+      "block_id": "page-0552-block-0001",
+      "order": 1,
+      "text": "Drug\n",
+      "bbox": [
+        93.61250305175781,
+        595.156494140625,
+        102.5,
+        612.6539916992188
+      ],
+      "text_sha256": "feeef2eabd03bd6219846b6c95a917cef51eff084f3ec2edbb873258f191a35b"
+    },
+    {
+      "block_id": "page-0552-block-0002",
+      "order": 2,
+      "text": "Physical signs/\n",
+      "bbox": [
+        73.61000061035156,
+        482.4914245605469,
+        82.49749755859375,
+        533.3264770507812
+      ],
+      "text_sha256": "d8cf15e4e6737ba3141f5bd6da97021ad083484b272c5c80f66cbb91a00ed429"
+    },
+    {
+      "block_id": "page-0552-block-0003",
+      "order": 3,
+      "text": "symptoms of \n",
+      "bbox": [
+        83.60749816894531,
+        485.40899658203125,
+        92.4949951171875,
+        533.3264770507812
+      ],
+      "text_sha256": "c134c73cafe11326aaf3191b2b020c017ff933f957b0c2d3ad19f4cae003354f"
+    },
+    {
+      "block_id": "page-0552-block-0004",
+      "order": 4,
+      "text": "intoxication\n",
+      "bbox": [
+        93.60499572753906,
+        491.2364807128906,
+        102.49249267578125,
+        533.3264770507812
+      ],
+      "text_sha256": "9ab650e026afe3a88f89a931608cbeedad01c4b0a0e7aaf8e25250c73e690640"
+    },
+    {
+      "block_id": "page-0552-block-0005",
+      "order": 5,
+      "text": "Most common \n",
+      "bbox": [
+        73.60249328613281,
+        402.0840148925781,
+        82.489990234375,
+        454.57647705078125
+      ],
+      "text_sha256": "067a6367ef51762c65995c6b13d39e4683548057b292051b6cf63534c7242619"
+    },
+    {
+      "block_id": "page-0552-block-0006",
+      "order": 6,
+      "text": "mental state \n",
+      "bbox": [
+        83.59999084472656,
+        408.3089904785156,
+        92.48748779296875,
+        454.57647705078125
+      ],
+      "text_sha256": "2ed57ab5e363da60159f7f19ebb176e46738925bfd1f53e6de3573e6020fae5d"
+    },
+    {
+      "block_id": "page-0552-block-0007",
+      "order": 7,
+      "text": "changes2\nWithdrawal \n",
+      "bbox": [
+        83.61250305175781,
+        333.6053771972656,
+        102.4849853515625,
+        454.57647705078125
+      ],
+      "text_sha256": "d33b9d98f8e7d5021e690d786ba035c7435fff6f7ad26c16390819df9adf0e56"
+    },
+    {
+      "block_id": "page-0552-block-0008",
+      "order": 8,
+      "text": "symptoms\nDuration of \n",
+      "bbox": [
+        83.61250305175781,
+        255.6578826904297,
+        102.49749755859375,
+        377.3678894042969
+      ],
+      "text_sha256": "6a9ef553cea423e8b22a4816957e0e89d0bd96b29a0473b73a85817405386f85"
+    },
+    {
+      "block_id": "page-0552-block-0009",
+      "order": 9,
+      "text": "withdrawal\n",
+      "bbox": [
+        93.61000061035156,
+        257.7353515625,
+        102.49749755859375,
+        298.58038330078125
+      ],
+      "text_sha256": "6787c288561ac849be04a129dee285be8644546d5b97b230c2097a174c35c65e"
+    },
+    {
+      "block_id": "page-0552-block-0010",
+      "order": 10,
+      "text": "Duration of \n",
+      "bbox": [
+        73.60749816894531,
+        197.3003692626953,
+        82.4949951171875,
+        240.22286987304688
+      ],
+      "text_sha256": "73d9900161b6ee83f236b1be9c6a5f9fdf52b924db6514ff105c96cd57f6ce86"
+    },
+    {
+      "block_id": "page-0552-block-0011",
+      "order": 11,
+      "text": "detection in \n",
+      "bbox": [
+        83.60499572753906,
+        196.0478973388672,
+        92.49249267578125,
+        240.22286987304688
+      ],
+      "text_sha256": "3609e60660d947e5c6f156be286922d904588b53fc40f9690cf4e1238a5fa1c6"
+    },
+    {
+      "block_id": "page-0552-block-0012",
+      "order": 12,
+      "text": "the urine3,4\nOther substances that give a \n",
+      "bbox": [
+        83.61250305175781,
+        72.2223129272461,
+        102.489990234375,
+        240.22286987304688
+      ],
+      "text_sha256": "989935eb1dfc1623b3f2d07dc055a23108e0f4e6598b4568de70721d056609b7"
+    },
+    {
+      "block_id": "page-0552-block-0013",
+      "order": 13,
+      "text": "positive urine test result5–7\n",
+      "bbox": [
+        93.61000061035156,
+        82.39494323730469,
+        102.49749755859375,
+        175.159912109375
+      ],
+      "text_sha256": "e450d470dc771a9471e0632bc0fcb1fd5b0620599835ff4958fe58869bbd8136"
+    },
+    {
+      "block_id": "page-0552-block-0014",
+      "order": 14,
+      "text": "Amfetamine type \n",
+      "bbox": [
+        111.73750305175781,
+        548.8815307617188,
+        120.625,
+        612.6541137695312
+      ],
+      "text_sha256": "0b03a193316dd563f7dae5415eaf8e2df1ddb477ae775cf719f583cf9b667f99"
+    },
+    {
+      "block_id": "page-0552-block-0015",
+      "order": 15,
+      "text": "stimulants8\nTachycardia, \n",
+      "bbox": [
+        111.9175033569336,
+        492.6322937011719,
+        130.62249755859375,
+        612.6541137695312
+      ],
+      "text_sha256": "5a7a7cb7ab0fd05dee95f114ec47bd62ed9e5682fb4269cfc7cafcb92eaae293"
+    },
+    {
+      "block_id": "page-0552-block-0016",
+      "order": 16,
+      "text": "increased BP, \n",
+      "bbox": [
+        121.91500091552734,
+        490.4347839355469,
+        130.62249755859375,
+        533.3272705078125
+      ],
+      "text_sha256": "343fb8db364509868cb0cf4283ffd375f0dcab1f10251cc00d14a21f889ad652"
+    },
+    {
+      "block_id": "page-0552-block-0017",
+      "order": 17,
+      "text": "anorexia, tremor, \n",
+      "bbox": [
+        131.91249084472656,
+        477.2048034667969,
+        140.6199951171875,
+        533.3272705078125
+      ],
+      "text_sha256": "45381407e3ab15a36f1dbbc2c4a2dd3e1a1ba8ec85bae09bcd64afa46d73325b"
+    },
+    {
+      "block_id": "page-0552-block-0018",
+      "order": 18,
+      "text": "restlessness\n",
+      "bbox": [
+        141.9099884033203,
+        496.7947998046875,
+        150.61749267578125,
+        533.3272705078125
+      ],
+      "text_sha256": "8c8e432d7ba15e655ae96a170c4afa0b1ed2d5a4be9f8fd4705858cde575c61c"
+    },
+    {
+      "block_id": "page-0552-block-0019",
+      "order": 19,
+      "text": "Visual/tactile/\n",
+      "bbox": [
+        111.90999603271484,
+        412.4573059082031,
+        120.61749267578125,
+        454.5772705078125
+      ],
+      "text_sha256": "db29a2a37cb8e2725bdaeac386228117d7e2c4d95e4b122e4dc19772a1f1053e"
+    },
+    {
+      "block_id": "page-0552-block-0020",
+      "order": 20,
+      "text": "olfactory auditory \n",
+      "bbox": [
+        121.9074935913086,
+        396.2497863769531,
+        130.614990234375,
+        454.5772705078125
+      ],
+      "text_sha256": "22fdcc5862b2a8a840592ea3801334d425f49112763238e0c228b2693463d660"
+    },
+    {
+      "block_id": "page-0552-block-0021",
+      "order": 21,
+      "text": "hallucinations, \n",
+      "bbox": [
+        131.9049835205078,
+        406.6522521972656,
+        140.61248779296875,
+        454.5772705078125
+      ],
+      "text_sha256": "007635945692f50de528db1f7efecc24c1612c3e09358fe0c3e401a9315b370e"
+    },
+    {
+      "block_id": "page-0552-block-0022",
+      "order": 22,
+      "text": "paranoia, elation\n",
+      "bbox": [
+        141.90248107910156,
+        400.8172607421875,
+        150.6099853515625,
+        454.5772705078125
+      ],
+      "text_sha256": "d1a683610800623d6cc65823e671d3b3619e659665b06d10e51fad090826855f"
+    },
+    {
+      "block_id": "page-0552-block-0023",
+      "order": 23,
+      "text": "Fatigue, hunger, \n",
+      "bbox": [
+        111.9024887084961,
+        323.4547424316406,
+        120.6099853515625,
+        377.3647766113281
+      ],
+      "text_sha256": "f02dae15246ece23c8fb80c4b799e287bada1b173c46b5cbf54ca6c85a89643c"
+    },
+    {
+      "block_id": "page-0552-block-0024",
+      "order": 24,
+      "text": "depression, \n",
+      "bbox": [
+        121.89998626708984,
+        339.1522216796875,
+        130.60748291015625,
+        377.3647766113281
+      ],
+      "text_sha256": "14fe52f0bc9dea26d57eaf84dab265371b0c7a11b61788aaf3f3f0c04cc550cc"
+    },
+    {
+      "block_id": "page-0552-block-0025",
+      "order": 25,
+      "text": "irritability, craving, \n",
+      "bbox": [
+        131.89747619628906,
+        317.2372741699219,
+        140.60498046875,
+        377.3647766113281
+      ],
+      "text_sha256": "d8aa234b606ecaff08a7df66b56f9a57c38d297cf68bca226efe257b6f29ac52"
+    },
+    {
+      "block_id": "page-0552-block-0026",
+      "order": 26,
+      "text": "social withdrawal\n",
+      "bbox": [
+        141.8949737548828,
+        321.9472351074219,
+        150.60247802734375,
+        377.3647766113281
+      ],
+      "text_sha256": "3d1fe3f6f536150e4ce2a411e5f1f113ed5e89088d4e972c4cec91accc51b453"
+    },
+    {
+      "block_id": "page-0552-block-0027",
+      "order": 27,
+      "text": "Peaks 7–34 \n",
+      "bbox": [
+        111.89498138427734,
+        260.229736328125,
+        120.60247802734375,
+        298.5772705078125
+      ],
+      "text_sha256": "ef8f2713dc0dfaa341046005abfcc4ff487b52d79ed9824e2f04ef7859a42102"
+    },
+    {
+      "block_id": "page-0552-block-0028",
+      "order": 28,
+      "text": "hours; lasts \n",
+      "bbox": [
+        121.8924789428711,
+        260.64971923828125,
+        130.5999755859375,
+        298.5772705078125
+      ],
+      "text_sha256": "f66c9691d83aac07533ee7fc411a3a7bed1c138097a5f556dfe6506b2dbda19b"
+    },
+    {
+      "block_id": "page-0552-block-0029",
+      "order": 29,
+      "text": "maximum of \n",
+      "bbox": [
+        131.8899688720703,
+        256.082275390625,
+        140.59747314453125,
+        298.5772705078125
+      ],
+      "text_sha256": "960986c24c2e28b0e2ec025a055aca442a80d6edb81b9534e1aeb6f84324f4ec"
+    },
+    {
+      "block_id": "page-0552-block-0030",
+      "order": 30,
+      "text": "5 days\n",
+      "bbox": [
+        141.88746643066406,
+        278.1547546386719,
+        150.594970703125,
+        298.5772705078125
+      ],
+      "text_sha256": "62911987391272d941a5b71a178c008e6428c68b91b2d0ec4b9fcbad23cd38a2"
+    },
+    {
+      "block_id": "page-0552-block-0031",
+      "order": 31,
+      "text": "Depends on \n",
+      "bbox": [
+        111.8874740600586,
+        199.77967834472656,
+        120.594970703125,
+        240.21975708007812
+      ],
+      "text_sha256": "d4249dc74a6945d84730b01f1950c62ca46e943018d83c14988000bd78f613b9"
+    },
+    {
+      "block_id": "page-0552-block-0032",
+      "order": 32,
+      "text": "half-life, mostly \n",
+      "bbox": [
+        121.88497161865234,
+        188.97972106933594,
+        130.59246826171875,
+        240.21975708007812
+      ],
+      "text_sha256": "32dc612722a8773f43569af8736ac1fe35cb0293cbf773ec52106e6a54a866ee"
+    },
+    {
+      "block_id": "page-0552-block-0033",
+      "order": 33,
+      "text": "48–72 hours\n",
+      "bbox": [
+        131.88246154785156,
+        199.77967834472656,
+        140.5899658203125,
+        240.21975708007812
+      ],
+      "text_sha256": "8b8b26c659ebddb0e6b03efef5ff2e9564b2b6b75455e6d68ee371b992e237b9"
+    },
+    {
+      "block_id": "page-0552-block-0034",
+      "order": 34,
+      "text": "Cough and decongestant \n",
+      "bbox": [
+        111.87996673583984,
+        93.6847152709961,
+        120.58746337890625,
+        175.16473388671875
+      ],
+      "text_sha256": "864897c8c80b5bf263803954347594aa9a952d93cb6db507989b6ee1d06616f0"
+    },
+    {
+      "block_id": "page-0552-block-0035",
+      "order": 35,
+      "text": "preparations, bupropion, \n",
+      "bbox": [
+        121.8774642944336,
+        95.80721282958984,
+        130.5849609375,
+        175.16473388671875
+      ],
+      "text_sha256": "1ae82fa624ebcaa4de528cd3c5383bef391c8fbfa28eff292ceebd3313c7e07c"
+    },
+    {
+      "block_id": "page-0552-block-0036",
+      "order": 36,
+      "text": "chloroquine, chlorpromazine, \n",
+      "bbox": [
+        131.8749542236328,
+        82.01473236083984,
+        140.58245849609375,
+        175.16473388671875
+      ],
+      "text_sha256": "7bc99383ab8a2b792cf6f6283e0a9a09085d1679d87413c4cab8fab017e9b194"
+    },
+    {
+      "block_id": "page-0552-block-0037",
+      "order": 37,
+      "text": "labetalol, promethazine, ranitidine, \n",
+      "bbox": [
+        141.87245178222656,
+        64.68990325927734,
+        150.5799560546875,
+        175.16473388671875
+      ],
+      "text_sha256": "b4a8383a4f27d185fa2bc6082808daf1791cad9bc4a609347543d740236ff9ae"
+    },
+    {
+      "block_id": "page-0552-block-0038",
+      "order": 38,
+      "text": "selegiline, large quantities of \n",
+      "bbox": [
+        151.8699493408203,
+        84.5197982788086,
+        160.57745361328125,
+        175.16473388671875
+      ],
+      "text_sha256": "e1dad5b505ec4eba146ae28420aa2641aab46ce7fb70e037ca294e1467a8464b"
+    },
+    {
+      "block_id": "page-0552-block-0039",
+      "order": 39,
+      "text": "tyramine, tranylcypromine, \n",
+      "bbox": [
+        161.86744689941406,
+        90.06246185302734,
+        170.574951171875,
+        175.16473388671875
+      ],
+      "text_sha256": "efee1aa4770c162494e775c9c4f865b95badd38b5d022ce5bf2a6fb420123d7a"
+    },
+    {
+      "block_id": "page-0552-block-0040",
+      "order": 40,
+      "text": "trazodone and many others\n",
+      "bbox": [
+        171.8649444580078,
+        88.97489166259766,
+        180.57244873046875,
+        175.16473388671875
+      ],
+      "text_sha256": "6e3a7167b402df24a8be6bc4f162d5066a0c0f95911f96e901ffa3e0b0e3e0c8"
+    },
+    {
+      "block_id": "page-0552-block-0041",
+      "order": 41,
+      "text": "Desvenlafaxine may give a positive \n",
+      "bbox": [
+        184.86244201660156,
+        63.084800720214844,
+        193.5699462890625,
+        175.16473388671875
+      ],
+      "text_sha256": "7c25c7b9045c288d03a21646b3615b222652c4f185633a2606190f77ba078317"
+    },
+    {
+      "block_id": "page-0552-block-0042",
+      "order": 42,
+      "text": "result for phencyclidine9\n",
+      "bbox": [
+        194.8599395751953,
+        98.69737243652344,
+        203.56744384765625,
+        175.16473388671875
+      ],
+      "text_sha256": "9361f28b957e3abd7ece19bd31a9e86525700cce71c65dd71eec921469ecc5d0"
+    },
+    {
+      "block_id": "page-0552-block-0043",
+      "order": 43,
+      "text": "GHB/GBL\nDrowsiness, coma, \n",
+      "bbox": [
+        212.8625030517578,
+        471.7815856933594,
+        221.75,
+        612.6541137695312
+      ],
+      "text_sha256": "d788c499987dec229de430a93a9c254baedc55d247b91eb04acb189abfd3a1d0"
+    },
+    {
+      "block_id": "page-0552-block-0044",
+      "order": 44,
+      "text": "disinhibition\nSociability, \n",
+      "bbox": [
+        213.04249572753906,
+        419.4391174316406,
+        231.74749755859375,
+        533.3265991210938
+      ],
+      "text_sha256": "00eed93dc539f73f52dcf84bd0c5a3f4f9f296fa174a917ea58aaa987af86dcf"
+    },
+    {
+      "block_id": "page-0552-block-0045",
+      "order": 45,
+      "text": "confidence\nTremor, tachycardia, \n",
+      "bbox": [
+        213.04249572753906,
+        311.52166748046875,
+        231.74749755859375,
+        454.57659912109375
+      ],
+      "text_sha256": "37407d7e8059aa8fa4e0cd5cc328a4b63ecf326a79ec645b08fd643c0b6ad1d3"
+    },
+    {
+      "block_id": "page-0552-block-0046",
+      "order": 46,
+      "text": "paranoia, delirium, \n",
+      "bbox": [
+        223.0399932861328,
+        315.27154541015625,
+        231.74749755859375,
+        377.3641052246094
+      ],
+      "text_sha256": "7521d6cea781c478582bd1f9f65d87e6386d0df51f06f338a1abe3e1a25353b0"
+    },
+    {
+      "block_id": "page-0552-block-0047",
+      "order": 47,
+      "text": "psychosis, visual/\n",
+      "bbox": [
+        233.03749084472656,
+        324.0240478515625,
+        241.7449951171875,
+        377.3641052246094
+      ],
+      "text_sha256": "162f57b72eac0d6718cac64fc21409f17f5b0a63ac8abf8d5765e63fa1ce02a3"
+    },
+    {
+      "block_id": "page-0552-block-0048",
+      "order": 48,
+      "text": "tactile/olfactory/\n",
+      "bbox": [
+        243.0349884033203,
+        326.1316223144531,
+        251.74249267578125,
+        377.3641052246094
+      ],
+      "text_sha256": "5eace3deb2cee5e57af968798b3a0e1f5476da8c176e82696db5a9dc7b55cec6"
+    },
+    {
+      "block_id": "page-0552-block-0049",
+      "order": 49,
+      "text": "auditory \n",
+      "bbox": [
+        253.03248596191406,
+        349.0290832519531,
+        261.739990234375,
+        377.3641052246094
+      ],
+      "text_sha256": "c3c4c2d25312705e12493a095af20e9aa96b1e1230816ea8fa93cbf7d0fddd23"
+    },
+    {
+      "block_id": "page-0552-block-0050",
+      "order": 50,
+      "text": "hallucinations\n",
+      "bbox": [
+        263.0299987792969,
+        333.6090087890625,
+        271.73748779296875,
+        377.3641052246094
+      ],
+      "text_sha256": "1cfcbddb8d1fb9b1c23c603ebb8d2914f17e403eb52f6860c8b3bb0735b28bc6"
+    },
+    {
+      "block_id": "page-0552-block-0051",
+      "order": 51,
+      "text": "3–4 days\nDifficult to \n",
+      "bbox": [
+        213.02748107910156,
+        204.5265350341797,
+        221.7349853515625,
+        298.57659912109375
+      ],
+      "text_sha256": "80365c223d6e1ce9e220fb90357432adc7917b2fd354c0395a1302088527a22a"
+    },
+    {
+      "block_id": "page-0552-block-0052",
+      "order": 52,
+      "text": "detect, not \n",
+      "bbox": [
+        223.0249786376953,
+        203.13157653808594,
+        231.73248291015625,
+        240.21908569335938
+      ],
+      "text_sha256": "6842f16e24dcfcf319f1bfc2d119eba542ec103d6b6100945dc8213447687f43"
+    },
+    {
+      "block_id": "page-0552-block-0053",
+      "order": 53,
+      "text": "routinely \n",
+      "bbox": [
+        233.02247619628906,
+        210.3540496826172,
+        241.72998046875,
+        240.21908569335938
+      ],
+      "text_sha256": "70da789f2c5986994d108ebbc420804e747cf9dad0e28a650bc2edcca5c0d2ea"
+    },
+    {
+      "block_id": "page-0552-block-0054",
+      "order": 54,
+      "text": "screened for\n",
+      "bbox": [
+        243.0199737548828,
+        200.76907348632812,
+        251.72747802734375,
+        240.21908569335938
+      ],
+      "text_sha256": "47c8903253b5b776735617b44c17ecbba8822b1517714220a0cc9aacb3c2944c"
+    },
+    {
+      "block_id": "page-0552-block-0055",
+      "order": 55,
+      "text": "Not known\n",
+      "bbox": [
+        213.0199737548828,
+        139.31407165527344,
+        221.72747802734375,
+        175.1640625
+      ],
+      "text_sha256": "052ee446a3c039c3ee5e15efa16c7508598a4e49a3c1132444f857dbad03e13f"
+    },
+    {
+      "block_id": "page-0552-block-0056",
+      "order": 56,
+      "text": "Usually (and reliably) measured by \n",
+      "bbox": [
+        223.01747131347656,
+        65.0041732788086,
+        231.7249755859375,
+        175.1640625
+      ],
+      "text_sha256": "adc909f5a6096a84b87139abe1150a7142ed8f5aa74734e942153d56cf2defb0"
+    },
+    {
+      "block_id": "page-0552-block-0057",
+      "order": 57,
+      "text": "LC-MS10\n",
+      "bbox": [
+        233.0149688720703,
+        149.0505828857422,
+        241.72247314453125,
+        175.1640625
+      ],
+      "text_sha256": "16c426ff12554621d3155f3ff484072cca905b483581134030687918d32e557b"
+    },
+    {
+      "block_id": "page-0552-block-0058",
+      "order": 58,
+      "text": "Benzodiazepines\nSedation, \n",
+      "bbox": [
+        280.98748779296875,
+        501.2341003417969,
+        289.875,
+        612.6541137695312
+      ],
+      "text_sha256": "2b2c7d58ad7967382b03d8217a8c3a6b493bc14dfbecae00a54d3ec0aaba7123"
+    },
+    {
+      "block_id": "page-0552-block-0059",
+      "order": 59,
+      "text": "disinhibition\nRelaxation, visual \n",
+      "bbox": [
+        281.1675109863281,
+        397.9065856933594,
+        299.87249755859375,
+        533.3265991210938
+      ],
+      "text_sha256": "696fee28e3f30222bc69331eece82f9089af7f16b273745d1eb5e6f459404b0e"
+    },
+    {
+      "block_id": "page-0552-block-0060",
+      "order": 60,
+      "text": "hallucinations, \n",
+      "bbox": [
+        291.1650085449219,
+        406.6515808105469,
+        299.87249755859375,
+        454.57659912109375
+      ],
+      "text_sha256": "007635945692f50de528db1f7efecc24c1612c3e09358fe0c3e401a9315b370e"
+    },
+    {
+      "block_id": "page-0552-block-0061",
+      "order": 61,
+      "text": "disorientation, sleep \n",
+      "bbox": [
+        301.1625061035156,
+        388.3140869140625,
+        309.8699951171875,
+        454.57659912109375
+      ],
+      "text_sha256": "74f91557f6861f2e040aab7b6b099ea1563fa3c04b6dfa104d35fcda6832c12f"
+    },
+    {
+      "block_id": "page-0552-block-0062",
+      "order": 62,
+      "text": "disturbance\n",
+      "bbox": [
+        311.1600036621094,
+        417.4891052246094,
+        319.86749267578125,
+        454.57659912109375
+      ],
+      "text_sha256": "f1d226996434227c4df0d653ce3b01afb3821fe263b11b0e299e4bbc80c73758"
+    },
+    {
+      "block_id": "page-0552-block-0063",
+      "order": 63,
+      "text": "Anxiety, insomnia, \n",
+      "bbox": [
+        281.1600036621094,
+        317.2140808105469,
+        289.86749267578125,
+        377.3641052246094
+      ],
+      "text_sha256": "f9b0cfb564e580a86fc31fb027cedd1d9fc1dd7d68af1ce36f417173f1e73ad1"
+    },
+    {
+      "block_id": "page-0552-block-0064",
+      "order": 64,
+      "text": "delirium, seizures, \n",
+      "bbox": [
+        291.1575012207031,
+        318.3315734863281,
+        299.864990234375,
+        377.3641052246094
+      ],
+      "text_sha256": "dde530ff136a5bc4f896846a49ce7c74047acee17430d29989a82199d1bf5ed6"
+    },
+    {
+      "block_id": "page-0552-block-0065",
+      "order": 65,
+      "text": "visual/tactile/\n",
+      "bbox": [
+        301.1549987792969,
+        336.5415954589844,
+        309.86248779296875,
+        377.3641052246094
+      ],
+      "text_sha256": "6ead23b3db6e1d21fae1d58b677922458d176c8808d63e4c08b3d8e999beb966"
+    },
+    {
+      "block_id": "page-0552-block-0066",
+      "order": 66,
+      "text": "olfactory auditory \n",
+      "bbox": [
+        311.1524963378906,
+        319.0365905761719,
+        319.8599853515625,
+        377.3641052246094
+      ],
+      "text_sha256": "22fdcc5862b2a8a840592ea3801334d425f49112763238e0c228b2693463d660"
+    },
+    {
+      "block_id": "page-0552-block-0067",
+      "order": 67,
+      "text": "hallucinations, \n",
+      "bbox": [
+        321.1499938964844,
+        329.43902587890625,
+        329.85748291015625,
+        377.3641052246094
+      ],
+      "text_sha256": "007635945692f50de528db1f7efecc24c1612c3e09358fe0c3e401a9315b370e"
+    },
+    {
+      "block_id": "page-0552-block-0068",
+      "order": 68,
+      "text": "psychosis\n",
+      "bbox": [
+        331.1474914550781,
+        347.77655029296875,
+        339.85498046875,
+        377.3641052246094
+      ],
+      "text_sha256": "ffd1727b7242894380fa4d673c2f1fc0a6af622e5bf785317dfe941670e20fa6"
+    },
+    {
+      "block_id": "page-0552-block-0069",
+      "order": 69,
+      "text": "Usually \n",
+      "bbox": [
+        281.1449890136719,
+        273.9915771484375,
+        289.85247802734375,
+        298.57659912109375
+      ],
+      "text_sha256": "94b3c821865ed97612709e2925a6e5be1def8c2b76e886609a975d8427770f8d"
+    },
+    {
+      "block_id": "page-0552-block-0070",
+      "order": 70,
+      "text": "short-lived but \n",
+      "bbox": [
+        291.1424865722656,
+        250.23902893066406,
+        299.8499755859375,
+        298.57659912109375
+      ],
+      "text_sha256": "3a5003cff4784b16da7567d1f1062ba97c4aa39443892d378b0f36497b0ed5cf"
+    },
+    {
+      "block_id": "page-0552-block-0071",
+      "order": 71,
+      "text": "may last \n",
+      "bbox": [
+        301.1399841308594,
+        270.2491149902344,
+        309.84747314453125,
+        298.57659912109375
+      ],
+      "text_sha256": "8f5fd0d85ce5b19e64a475ba955ec4faa7830cd9e25f91c94992e8449c22dff7"
+    },
+    {
+      "block_id": "page-0552-block-0072",
+      "order": 72,
+      "text": "weeks to \n",
+      "bbox": [
+        311.1374816894531,
+        267.7366027832031,
+        319.844970703125,
+        298.57659912109375
+      ],
+      "text_sha256": "3a7d461e8ef250d184b219590d6652553bba13e4ab517d256a7be2cdb1052081"
+    },
+    {
+      "block_id": "page-0552-block-0073",
+      "order": 73,
+      "text": "months\n",
+      "bbox": [
+        321.1349792480469,
+        274.404052734375,
+        329.84246826171875,
+        298.57659912109375
+      ],
+      "text_sha256": "8612aafa9e9ee39bd62b8219d292354ec73ccdaf23170052b992845005138170"
+    },
+    {
+      "block_id": "page-0552-block-0074",
+      "order": 74,
+      "text": "Up to 28 days: \n",
+      "bbox": [
+        281.1374816894531,
+        191.44654846191406,
+        289.844970703125,
+        240.21908569335938
+      ],
+      "text_sha256": "c0e5841f989a1160294808848a7acc8bea997949d583519ca464045bfa617053"
+    },
+    {
+      "block_id": "page-0552-block-0075",
+      "order": 75,
+      "text": "depending on \n",
+      "bbox": [
+        291.1349792480469,
+        193.5239715576172,
+        299.84246826171875,
+        240.21908569335938
+      ],
+      "text_sha256": "b2dc9fbc4c1b76e52f626d297042428f1a521ac5664a72aeae2eea184d7b605f"
+    },
+    {
+      "block_id": "page-0552-block-0076",
+      "order": 76,
+      "text": "half-life of drug \n",
+      "bbox": [
+        301.1324768066406,
+        188.1315155029297,
+        309.8399658203125,
+        240.21908569335938
+      ],
+      "text_sha256": "259758791393147b5ea8df2985c79f5caf3d3203f0adf8bbf8d37931c95462b6"
+    },
+    {
+      "block_id": "page-0552-block-0077",
+      "order": 77,
+      "text": "taken\n",
+      "bbox": [
+        311.1299743652344,
+        222.3015899658203,
+        319.83746337890625,
+        240.21908569335938
+      ],
+      "text_sha256": "4303891a71a3c14c63b4f6028a00290fce12985431efa2d3c3e660a431d21e48"
+    },
+    {
+      "block_id": "page-0552-block-0078",
+      "order": 78,
+      "text": "Nefopam, sertraline, zopiclone, \n",
+      "bbox": [
+        281.1299743652344,
+        73.48665618896484,
+        289.83746337890625,
+        175.1640625
+      ],
+      "text_sha256": "3cd66bbd299ac1c8079bd42ecbd1d169a53476c465325dec95cef409aaf7dc9a"
+    },
+    {
+      "block_id": "page-0552-block-0079",
+      "order": 79,
+      "text": "efavirenz\n",
+      "bbox": [
+        291.1274719238281,
+        146.55909729003906,
+        299.8349609375,
+        175.1640625
+      ],
+      "text_sha256": "53a9559a17bf065973adea9b99436c7dbb9bca124f316ca0607d377db6604850"
+    },
+    {
+      "block_id": "page-0552-block-0080",
+      "order": 80,
+      "text": "Cannabis11–17\nTachycardia, lack of \n",
+      "bbox": [
+        349.07244873046875,
+        469.2997741699219,
+        358.0,
+        612.6615600585938
+      ],
+      "text_sha256": "415b8eb91e084aae7b795d4f4af047ee809dade22ca7045b543408eb6410f41f"
+    },
+    {
+      "block_id": "page-0552-block-0081",
+      "order": 81,
+      "text": "co-ordination, red \n",
+      "bbox": [
+        359.2900085449219,
+        474.0022888183594,
+        367.99749755859375,
+        533.3272705078125
+      ],
+      "text_sha256": "8f4ecd60364e593d22d7883a9a8f4a5af0ec4b4fbc2c1bcb318458d8713efd98"
+    },
+    {
+      "block_id": "page-0552-block-0082",
+      "order": 82,
+      "text": "eyes, postural \n",
+      "bbox": [
+        369.2875061035156,
+        487.4873046875,
+        377.9949951171875,
+        533.3272705078125
+      ],
+      "text_sha256": "df0095d0585f8619621f74d2217490f99ed5673308c4b3494897a714f396c0e6"
+    },
+    {
+      "block_id": "page-0552-block-0083",
+      "order": 83,
+      "text": "hypotension\n",
+      "bbox": [
+        379.2850036621094,
+        494.1473083496094,
+        387.99249267578125,
+        533.3272705078125
+      ],
+      "text_sha256": "17838589008c5efbb91c863487012b6f48e44705ee156202a97f82c520175de1"
+    },
+    {
+      "block_id": "page-0552-block-0084",
+      "order": 84,
+      "text": "Elation, psychosis, \n",
+      "bbox": [
+        349.2850036621094,
+        394.9822692871094,
+        357.99249267578125,
+        454.5772705078125
+      ],
+      "text_sha256": "5cc462a155b55eb9c20816fb939fc557da950ea75252a77ee185e8e005e044c8"
+    },
+    {
+      "block_id": "page-0552-block-0085",
+      "order": 85,
+      "text": "perceptual \n",
+      "bbox": [
+        359.2825012207031,
+        418.87725830078125,
+        367.989990234375,
+        454.5772705078125
+      ],
+      "text_sha256": "ecf800f2a37ffbd2acdaa126cb9713bd30bb633ed8df707a8c9ccbd1ff217df5"
+    },
+    {
+      "block_id": "page-0552-block-0086",
+      "order": 86,
+      "text": "distortions, \n",
+      "bbox": [
+        369.2799987792969,
+        417.06976318359375,
+        377.98748779296875,
+        454.5772705078125
+      ],
+      "text_sha256": "6887af85d1c655738d605a1d86e5324bbe56b4e9a7d71ba3857f54761b008464"
+    },
+    {
+      "block_id": "page-0552-block-0087",
+      "order": 87,
+      "text": "disturbance of \n",
+      "bbox": [
+        379.2774963378906,
+        406.6523132324219,
+        387.9849853515625,
+        454.5772705078125
+      ],
+      "text_sha256": "7ababcae3ed2513597686b320f47fcefd03885cb9c7f90b622faf2781c9c0e27"
+    },
+    {
+      "block_id": "page-0552-block-0088",
+      "order": 88,
+      "text": "memory/judgement, \n",
+      "bbox": [
+        389.2749938964844,
+        387.4897766113281,
+        397.98248291015625,
+        454.5772705078125
+      ],
+      "text_sha256": "670320fd57dd7ab0c37020257089bca75abd49b2a62486d4ac1db269fbc6d8af"
+    },
+    {
+      "block_id": "page-0552-block-0089",
+      "order": 89,
+      "text": "twofold increase in \n",
+      "bbox": [
+        399.2724914550781,
+        391.7872619628906,
+        407.97998046875,
+        454.5772705078125
+      ],
+      "text_sha256": "af0656aa0f4a23a6c0bdd8c5955b21234fa719d7e0049f9d0e3e595da3d2acb6"
+    },
+    {
+      "block_id": "page-0552-block-0090",
+      "order": 90,
+      "text": "risk of developing \n",
+      "bbox": [
+        409.2699890136719,
+        395.8147277832031,
+        417.97747802734375,
+        454.5772705078125
+      ],
+      "text_sha256": "2433f9d73d38dbc581ac215317dd6fbb0f47705801b8cee2ca0ed5afb533cb8c"
+    },
+    {
+      "block_id": "page-0552-block-0091",
+      "order": 91,
+      "text": "schizophrenia\n",
+      "bbox": [
+        419.2674865722656,
+        410.9572448730469,
+        427.9749755859375,
+        454.5772705078125
+      ],
+      "text_sha256": "ce50cff78959901f1c245d78a4f2d2c7005320fd8015c1236bfd66e33f7b7b53"
+    },
+    {
+      "block_id": "page-0552-block-0092",
+      "order": 92,
+      "text": "Restlessness, \n",
+      "bbox": [
+        349.2699890136719,
+        334.8547058105469,
+        357.97747802734375,
+        377.3647766113281
+      ],
+      "text_sha256": "91aed8fe9b70d67052ff097577e30132f234853789b68d8594f53e169a14a2a0"
+    },
+    {
+      "block_id": "page-0552-block-0093",
+      "order": 93,
+      "text": "irritability, insomnia, \n",
+      "bbox": [
+        359.2674865722656,
+        311.39471435546875,
+        367.9749755859375,
+        377.3647766113281
+      ],
+      "text_sha256": "103008e33e516b12537b06e11a38bd0bf1ba62327919669623a4a046c2a53fcf"
+    },
+    {
+      "block_id": "page-0552-block-0094",
+      "order": 94,
+      "text": "anxiety\n",
+      "bbox": [
+        369.2649841308594,
+        354.8722839355469,
+        377.97247314453125,
+        377.3647766113281
+      ],
+      "text_sha256": "4c175adbe15cbebdfa55e6d1767d69cf8b4effe956c96f44330c39a7d1a117c2"
+    },
+    {
+      "block_id": "page-0552-block-0095",
+      "order": 95,
+      "text": "Uncertain\n",
+      "bbox": [
+        349.2624816894531,
+        267.7447509765625,
+        357.969970703125,
+        298.5772705078125
+      ],
+      "text_sha256": "e27a1064f860fb87e18cbf6b2a487045ac98b13d3b0b97eec176e7c2489fab2a"
+    },
+    {
+      "block_id": "page-0552-block-0096",
+      "order": 96,
+      "text": "Probably less \n",
+      "bbox": [
+        359.2599792480469,
+        255.7897186279297,
+        367.96746826171875,
+        298.5772705078125
+      ],
+      "text_sha256": "48dc071edf02442ae71dc901972389d567cd49e335280cd82276119c1c8b85f3"
+    },
+    {
+      "block_id": "page-0552-block-0097",
+      "order": 97,
+      "text": "than 1 month \n",
+      "bbox": [
+        369.2574768066406,
+        252.30970764160156,
+        377.9649658203125,
+        298.5772705078125
+      ],
+      "text_sha256": "00901738c3d8f4189f97c00544ec3d2f6e71c7fa2a76bee52052cb9de070b756"
+    },
+    {
+      "block_id": "page-0552-block-0098",
+      "order": 98,
+      "text": "(longer in \n",
+      "bbox": [
+        379.2549743652344,
+        266.0647277832031,
+        387.96246337890625,
+        298.5772705078125
+      ],
+      "text_sha256": "4b847ecc3e7fd6aaa309cbfb6ae20482c2936990a2655e2b989604945aca3897"
+    },
+    {
+      "block_id": "page-0552-block-0099",
+      "order": 99,
+      "text": "heavy users)\n",
+      "bbox": [
+        389.2524719238281,
+        259.82476806640625,
+        397.9599609375,
+        298.5772705078125
+      ],
+      "text_sha256": "9ec76a73c0ce327a7e543fcede0bcc390d830e861dc0a113f547b45c09e914d8"
+    },
+    {
+      "block_id": "page-0552-block-0100",
+      "order": 100,
+      "text": "Single use: 3 \n",
+      "bbox": [
+        349.2549743652344,
+        197.7021942138672,
+        357.96246337890625,
+        240.21975708007812
+      ],
+      "text_sha256": "7928a66184abaf7b617061eb7d6e1f04f66657dadfbcabe9100292e4bf7cde58"
+    },
+    {
+      "block_id": "page-0552-block-0101",
+      "order": 101,
+      "text": "days; chronic \n",
+      "bbox": [
+        359.2524719238281,
+        196.59974670410156,
+        367.9599609375,
+        240.21975708007812
+      ],
+      "text_sha256": "5af20bf5127fe2aa488a923142e1102f791d193c1c3e5d11c2e835b5e0655fab"
+    },
+    {
+      "block_id": "page-0552-block-0102",
+      "order": 102,
+      "text": "heavy use: up to \n",
+      "bbox": [
+        369.2499694824219,
+        185.61973571777344,
+        377.95745849609375,
+        240.21975708007812
+      ],
+      "text_sha256": "32f12975d44c35de3c8e3f4a09d1eed7fa16c7066978931a18eab1443eb325fc"
+    },
+    {
+      "block_id": "page-0552-block-0103",
+      "order": 103,
+      "text": "30 days\n",
+      "bbox": [
+        379.2474670410156,
+        215.6272430419922,
+        387.9549560546875,
+        240.21975708007812
+      ],
+      "text_sha256": "afc85fe257903b22a88c10cd9cf2eb0ef8b671b6da96f3410eb7c7f4a271e167"
+    },
+    {
+      "block_id": "page-0552-block-0104",
+      "order": 104,
+      "text": "Passive ‘smoking’ of cannabis\n",
+      "bbox": [
+        349.2474670410156,
+        80.9798355102539,
+        357.9549560546875,
+        175.16473388671875
+      ],
+      "text_sha256": "e1fc79535fd63bf6ada6fd025ccf54491f35228e8dab0a7ed2e1ef94f3074669"
+    },
+    {
+      "block_id": "page-0552-block-0105",
+      "order": 105,
+      "text": "Efavirenz, ibuprofen, naproxen\n",
+      "bbox": [
+        359.2449645996094,
+        77.22233581542969,
+        367.95245361328125,
+        175.16473388671875
+      ],
+      "text_sha256": "4d8cf5f1a16930db7588551e36123efd76d14427f2cc4fd92c0e6fa5b68221f9"
+    },
+    {
+      "block_id": "page-0552-block-0106",
+      "order": 106,
+      "text": "(Continued )\n",
+      "bbox": [
+        440.2057189941406,
+        64.4209976196289,
+        450.1252136230469,
+        108.00048828125
+      ],
+      "text_sha256": "bce697aea57d29db5fb5b1502b4089967f75fcf44428590b90e07d43fc71640b"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

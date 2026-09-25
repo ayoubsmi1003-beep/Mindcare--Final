@@ -1,0 +1,215 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0218",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 218,
+  "source_page_index": 217,
+  "source_page_display": 218,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    197\nCHAPTER 1\n\t70.\t Citrome L. Schizophrenia and valproate. Psychopharmacol Bull 2003; 37 Suppl 2:74–88.\n\t71.\t Tranulis C, et al. Somatic augmentation strategies in clozapine resistance–what facts? Clin Neuropharmacol 2006; 29:34–44.\n\t72.\t Suzuki T, et al. Augmentation of atypical antipsychotics with valproic acid. An open-label study for most difficult patients with schizophrenia. \nHuman Psychopharmacology 2009; 24:628–638.\n\t73.\t Gupta S, et al. Olanzapine augmentation of clozapine. Ann Clin Psychiatry 1998; 10:113–115.\n\t74.\t Friedman JI, et al. Pimozide augmentation of clozapine inpatients with schizophrenia and schizoaffective disorder unresponsive to clozapine \nmonotherapy. Neuropsychopharmacology 2011; 36:1289–1295.\n\t75.\t Gunduz-Bruce H, et al. Efficacy of pimozide augmentation for clozapine partial responders with schizophrenia. Schizophr Res 2013; \n143:344–347.\n\t76.\t Nielsen J, et al. Augmenting clozapine with sertindole: a double-blind, randomized, placebo-controlled study. J Clin Psychopharmacol 2012; \n32:173–178.\n\t77.\t Doruk A, et al. A placebo-controlled study of extract of ginkgo biloba added to clozapine in patients with treatment-resistant schizophrenia. \nInt Clin Psychopharmacol 2008; 23:223–227.\n\t78.\t De Lucena D, et al. Improvement of negative and positive symptoms in treatment-refractory schizophrenia: a double-blind, randomized, \nplacebo-controlled trial with memantine as add-on therapy to clozapine. J Clin Psychiatry 2009; 70:1416–1423.\n\t79.\t Veerman SR, et al. Adjunctive memantine in clozapine-treated refractory schizophrenia: an open-label 1-year extension study. Psychol Med \n2017; 47:363–375.\n\t80.\t Bruno A, et al. Acetyl-L-carnitine augmentation of clozapine in partial-responder schizophrenia: a 12-week, open-label uncontrolled prelimi-\nnary study. Clin Neuropharmacol 2016; 39:277–280.\n\t81.\t Seddigh R, et al. Levothyroxine augmentation in clozapine resistant schizophrenia: a case report and review. Case Rep Psychiatry 2015; \n2015:678040.\n\t82.\t Lin CH, et al. Sodium benzoate, a D-Amino acid oxidase inhibitor, added to clozapine for the treatment of schizophrenia: a randomized, \ndouble-blind, placebo-controlled trial. Biol Psychiatry 2018; 84:422–432.\n\t83.\t Kelly DL, et al. Adjunctive minocycline in clozapine-treated schizophrenia patients with persistent symptoms. J Clin Psychopharmacol 2015; \n35:374–381.\n\t84.\t Correll CU, et al. Efficacy of 42 pharmacologic cotreatment strategies added to antipsychotic monotherapy in schizophrenia: systematic \noverview and quality appraisal of the meta-analytic evidence. JAMA Psychiatry 2017; 74:675–684.\n\t85.\t Nasrallah HA, et al. Successful treatment of clozapine-nonresponsive refractory hallucinations and delusions with pimavanserin, a serotonin \n5HT-2A receptor inverse agonist. Schizophr Res 2019; 208:217–220.\n",
+  "raw_text_sha256": "5a7c0349b91ac050219db0043f2d8cf641470c2562fd216735c137b25e175fbb",
+  "coordinates_sha256": "7658bd4f485f8a236730cd028c59039f2ff773560d5c654f327ba81e084145ec",
+  "block_sequence_sha256": "894d38490ea00f628863d6a3197b2c7de288841443ccfae1be1f0d3ad89cd96b",
+  "blocks": [
+    {
+      "block_id": "page-0218-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    197\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "9cfcf8a1a8be8b2e97099a3a2bbe4ba86bb777683a3a6f37a8da16156c538a0e"
+    },
+    {
+      "block_id": "page-0218-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0218-block-0002",
+      "order": 2,
+      "text": "\t70.\t Citrome L. Schizophrenia and valproate. Psychopharmacol Bull 2003; 37 Suppl 2:74–88.\n\t71.\t Tranulis C, et al. Somatic augmentation strategies in clozapine resistance–what facts? Clin Neuropharmacol 2006; 29:34–44.\n\t72.\t Suzuki T, et al. Augmentation of atypical antipsychotics with valproic acid. An open-label study for most difficult patients with schizophrenia. \n",
+      "bbox": [
+        47.99909973144531,
+        63.12541198730469,
+        421.7091369628906,
+        88.30140686035156
+      ],
+      "text_sha256": "a0102e929d33f980fa71947392b250ccd4abd5d1544bfcea8a34f395b6d77640"
+    },
+    {
+      "block_id": "page-0218-block-0003",
+      "order": 3,
+      "text": "Human Psychopharmacology 2009; 24:628–638.\n\t73.\t Gupta S, et al. Olanzapine augmentation of clozapine. Ann Clin Psychiatry 1998; 10:113–115.\n\t74.\t Friedman JI, et al. Pimozide augmentation of clozapine inpatients with schizophrenia and schizoaffective disorder unresponsive to clozapine \n",
+      "bbox": [
+        48.01709747314453,
+        90.12541198730469,
+        421.7270812988281,
+        115.30140686035156
+      ],
+      "text_sha256": "5db77c87fe5823dff27c47f5339560fd678c3e83ff646315cb6c351a80fec7c0"
+    },
+    {
+      "block_id": "page-0218-block-0004",
+      "order": 4,
+      "text": "monotherapy. Neuropsychopharmacology 2011; 36:1289–1295.\n\t75.\t Gunduz-Bruce H, et al. Efficacy of pimozide augmentation for clozapine partial responders with schizophrenia. Schizophr Res 2013; \n",
+      "bbox": [
+        48.02909851074219,
+        117.12541198730469,
+        421.6972961425781,
+        133.30140686035156
+      ],
+      "text_sha256": "c37acaa7e6d8c2c0676f4e5dd5280a1b9a82ce1165481201651d2c9e6d30ca99"
+    },
+    {
+      "block_id": "page-0218-block-0005",
+      "order": 5,
+      "text": "143:344–347.\n\t76.\t Nielsen J, et al. Augmenting clozapine with sertindole: a double-blind, randomized, placebo-controlled study. J Clin Psychopharmacol 2012; \n",
+      "bbox": [
+        48.03510284423828,
+        135.1254119873047,
+        421.7271423339844,
+        151.30140686035156
+      ],
+      "text_sha256": "95505f80feb7f864189680bf8e0612dac090fcca6507d1e541cd74b00f619e4e"
+    },
+    {
+      "block_id": "page-0218-block-0006",
+      "order": 6,
+      "text": "32:173–178.\n\t77.\t Doruk A, et al. A placebo-controlled study of extract of ginkgo biloba added to clozapine in patients with treatment-resistant schizophrenia. \n",
+      "bbox": [
+        48.041099548339844,
+        153.1254119873047,
+        421.7390441894531,
+        169.30140686035156
+      ],
+      "text_sha256": "cfda4812102c7f8b05dedac361f0c1dbd2f140640fcf006ccdf9344a51d4b232"
+    },
+    {
+      "block_id": "page-0218-block-0007",
+      "order": 7,
+      "text": "Int Clin Psychopharmacol 2008; 23:223–227.\n\t78.\t De Lucena D, et al. Improvement of negative and positive symptoms in treatment-refractory schizophrenia: a double-blind, randomized, \n",
+      "bbox": [
+        48.047096252441406,
+        171.1254119873047,
+        421.7271423339844,
+        187.30140686035156
+      ],
+      "text_sha256": "1666a5b75fbffca8b577a3e71a857358cf2e75c44332716d13005e800d51a3f2"
+    },
+    {
+      "block_id": "page-0218-block-0008",
+      "order": 8,
+      "text": "placebo-controlled trial with memantine as add-on therapy to clozapine. J Clin Psychiatry 2009; 70:1416–1423.\n\t79.\t Veerman SR, et al. Adjunctive memantine in clozapine-treated refractory schizophrenia: an open-label 1-year extension study. Psychol Med \n",
+      "bbox": [
+        48.0531005859375,
+        189.1254119873047,
+        421.7572326660156,
+        205.30140686035156
+      ],
+      "text_sha256": "7c1875f1d38b9b6b7fe3ac0d698d6fba1c079ba9bef4ba4133a14da81d7b57a6"
+    },
+    {
+      "block_id": "page-0218-block-0009",
+      "order": 9,
+      "text": "2017; 47:363–375.\n\t80.\t Bruno A, et al. Acetyl-L-carnitine augmentation of clozapine in partial-responder schizophrenia: a 12-week, open-label uncontrolled prelimi-\n",
+      "bbox": [
+        48.05909729003906,
+        207.1254119873047,
+        420.0469970703125,
+        223.30140686035156
+      ],
+      "text_sha256": "d36ae911de03cc16bfef992cd5a68d704c6d26c1c340fa5c433567a81679fc85"
+    },
+    {
+      "block_id": "page-0218-block-0010",
+      "order": 10,
+      "text": "nary study. Clin Neuropharmacol 2016; 39:277–280.\n\t81.\t Seddigh R, et al. Levothyroxine augmentation in clozapine resistant schizophrenia: a case report and review. Case Rep Psychiatry 2015; \n",
+      "bbox": [
+        48.065101623535156,
+        225.1254119873047,
+        421.7571716308594,
+        241.30140686035156
+      ],
+      "text_sha256": "df714e529b63c7b4368f0a7392717d8ba9a754f60b07673c70587652dc873dcb"
+    },
+    {
+      "block_id": "page-0218-block-0011",
+      "order": 11,
+      "text": "2015:678040.\n\t82.\t Lin CH, et al. Sodium benzoate, a D-Amino acid oxidase inhibitor, added to clozapine for the treatment of schizophrenia: a randomized, \n",
+      "bbox": [
+        48.07109832763672,
+        243.1254119873047,
+        421.7512512207031,
+        259.3014221191406
+      ],
+      "text_sha256": "b96ff285eaa0f5dd526a320e30180b0378a78da0afd15754c085eaccdc50f578"
+    },
+    {
+      "block_id": "page-0218-block-0012",
+      "order": 12,
+      "text": "double-blind, placebo-controlled trial. Biol Psychiatry 2018; 84:422–432.\n\t83.\t Kelly DL, et al. Adjunctive minocycline in clozapine-treated schizophrenia patients with persistent symptoms. J Clin Psychopharmacol 2015; \n",
+      "bbox": [
+        48.07710266113281,
+        261.1253967285156,
+        421.7152404785156,
+        277.3014221191406
+      ],
+      "text_sha256": "b208cf8200e2dd67b0707436a44ae46dfdd7be85eef108c0607fb55f7a8e427e"
+    },
+    {
+      "block_id": "page-0218-block-0013",
+      "order": 13,
+      "text": "35:374–381.\n\t84.\t Correll CU, et al. Efficacy of 42 pharmacologic cotreatment strategies added to antipsychotic monotherapy in schizophrenia: systematic \n",
+      "bbox": [
+        48.083099365234375,
+        279.1253967285156,
+        421.7331848144531,
+        295.3014221191406
+      ],
+      "text_sha256": "9b0da3dafe28bb31789f3f2e57c10eaf83f32fb437c4105547c4aeb845b8dad8"
+    },
+    {
+      "block_id": "page-0218-block-0014",
+      "order": 14,
+      "text": "overview and quality appraisal of the meta-analytic evidence. JAMA Psychiatry 2017; 74:675–684.\n\t85.\t Nasrallah HA, et al. Successful treatment of clozapine-nonresponsive refractory hallucinations and delusions with pimavanserin, a serotonin \n",
+      "bbox": [
+        48.08909606933594,
+        297.1253967285156,
+        421.7511291503906,
+        313.3014221191406
+      ],
+      "text_sha256": "130eda2ff4abd7559278a5a413b42aad3224d1d3e4e783e33e7b6313d54903ed"
+    },
+    {
+      "block_id": "page-0218-block-0015",
+      "order": 15,
+      "text": "5HT-2A receptor inverse agonist. Schizophr Res 2019; 208:217–220.\n",
+      "bbox": [
+        59.099090576171875,
+        315.1253967285156,
+        237.89906311035156,
+        322.3014221191406
+      ],
+      "text_sha256": "21c7551ea84549c1b2a6026632f7093ad20d2ab893de50fcb3d03e30193f1635"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

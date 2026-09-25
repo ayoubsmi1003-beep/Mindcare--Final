@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0073",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 73,
+  "source_page_index": 72,
+  "source_page_display": 73,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "52    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\na clear signal for a greater risk of side effects (EPS and raised plasma prolactin). The \nfindings of these studies are in accord with older studies involving fixed doses of halo-\nperidol,6 where 8mg/day is clearly the dose above which no additional benefit is seen.7\nNonetheless, it is important to keep in mind that these doses are extracted from group \nevidence where patients are assigned to different doses, which is a different situation from \nthe clinical one where the prescriber considers increasing the dose only in those patients \nwhose illnesses have failed to respond to the initial dosage regimen. Kinon et al.8 exam-\nined patients who failed to respond to the (then) standard dose of fluphenazine (20mg) \nand tested three strategies: increasing the dose to 80mg, switching to haloperidol or \nwatchful waiting (on the original dose). All three strategies proved to be equivalent in \nterms of efficacy. These findings provide little supportive evidence at a group level (as \nopposed to an individual level) for treatment beyond the recommended dose range. Such \nRCT evidence is corroborated by the clinical practice norms – Hermes and colleagues \nexamined the CATIE data to identify clinical factors that predicted a prescriber’s decision \nto increase the dose and found that decisions for dose change (within the therapeutic \nranges) were only weakly associated with clinical measures.9 More recently, a trial of \nlurasidone10 in adult patients with schizophrenia showed that following a lack of response \nafter two weeks on lurasidone 80mg/d, a dose increase to 160mg/d was associated with \nsignificant symptom improvement compared with continuing on lurasidone 80mg/d. \nHowever, this result may not be generalisable to other antipsychotic medications.\nA 2018 Cochrane systematic review of relevant studies concluded that there was no \ngood-quality evidence that for illness not responding to initial antipsychotic treatment, \nthere was any difference between increasing the antipsychotic dose and continuing \nantipsychotic treatment at the same dose.11\nPlasma level variations\nGroup level evidence cannot completely determine individual treatment decisions. \nThere are significant inter-individual variations in plasma drug levels in patients treated \nwith antipsychotic medication. One can often encounter a patient who, when receiving \nmedication at the higher end of the dose range (say 6mg of risperidone or 20mg of \nolanzapine), would have plasma drug levels that are well below the range expected for \n2mg risperidone or 10mg of olanzapine, and these levels may not reach the threshold \nfor response. In such patients, a rational case could be made for increasing the dose, \nprovided the patient is informed, and the side effects are tolerable, to bring the plasma \nlevels to the optimal range for the particular medication. More details on plasma levels \nand their interpretation are provided in Chapter 11. However, what are the treatment \npossibilities when a lack of therapeutic response is encountered despite the patient’s \nadherence to their medication regimen, the prescription of a dosage at the top of the \nrecommended range, and apparently sufficient plasma levels?\nTreatment choices\nThere are essentially three options here, a trial of clozapine, switch to another antipsy-\nchotic medication or add another (non-clozapine) antipsychotic medication. If the \npatient meets the criteria for clozapine treatment, this is undoubtedly the preferred \noption. Yet, in a clinical audit of community (not inpatient) practice in the UK, covering \n",
+  "raw_text_sha256": "6cec14b49ab116c5510100b6bd8472fc3888e5dd39fdaa70d04943ceea600a6e",
+  "coordinates_sha256": "0fa85648de575265aaec6221883a100ed69f8b74adc575b3761f3124b3e52553",
+  "block_sequence_sha256": "c2997d7888cd78a50cb86adb3f3156071b51912c249a5709ba4e48e5df78d93c",
+  "blocks": [
+    {
+      "block_id": "page-0073-block-0000",
+      "order": 0,
+      "text": "52    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "ed0956ea8d590404e56f197fef517a392679ec52999fa955190c9fae6f70d9af"
+    },
+    {
+      "block_id": "page-0073-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0073-block-0002",
+      "order": 2,
+      "text": "a clear signal for a greater risk of side effects (EPS and raised plasma prolactin). The \nfindings of these studies are in accord with older studies involving fixed doses of halo-\nperidol,6 where 8mg/day is clearly the dose above which no additional benefit is seen.7\n",
+      "bbox": [
+        61.88909912109375,
+        62.54931640625,
+        436.6391296386719,
+        98.26931762695312
+      ],
+      "text_sha256": "aefb08d30c9c69b048b887fa4a9bac049f550b1e4ad31c3699fcbc583f5b5ebd"
+    },
+    {
+      "block_id": "page-0073-block-0003",
+      "order": 3,
+      "text": "Nonetheless, it is important to keep in mind that these doses are extracted from group \nevidence where patients are assigned to different doses, which is a different situation from \nthe clinical one where the prescriber considers increasing the dose only in those patients \nwhose illnesses have failed to respond to the initial dosage regimen. Kinon et al.8 exam-\nined patients who failed to respond to the (then) standard dose of fluphenazine (20mg) \nand tested three strategies: increasing the dose to 80mg, switching to haloperidol or \nwatchful waiting (on the original dose). All three strategies proved to be equivalent in \nterms of efficacy. These findings provide little supportive evidence at a group level (as \nopposed to an individual level) for treatment beyond the recommended dose range. Such \nRCT evidence is corroborated by the clinical practice norms – Hermes and colleagues \nexamined the CATIE data to identify clinical factors that predicted a prescriber’s decision \nto increase the dose and found that decisions for dose change (within the therapeutic \nranges) were only weakly associated with clinical measures.9 More recently, a trial of \nlurasidone10 in adult patients with schizophrenia showed that following a lack of response \nafter two weeks on lurasidone 80mg/d, a dose increase to 160mg/d was associated with \nsignificant symptom improvement compared with continuing on lurasidone 80mg/d. \nHowever, this result may not be generalisable to other antipsychotic medications.\n",
+      "bbox": [
+        61.885101318359375,
+        98.54931640625,
+        436.7178649902344,
+        302.2693176269531
+      ],
+      "text_sha256": "fc25e54428e28c0357a91d7c55e3de3be275868ad6a1e09ecf1265e3487c1aff"
+    },
+    {
+      "block_id": "page-0073-block-0004",
+      "order": 4,
+      "text": "A 2018 Cochrane systematic review of relevant studies concluded that there was no \ngood-quality evidence that for illness not responding to initial antipsychotic treatment, \nthere was any difference between increasing the antipsychotic dose and continuing \nantipsychotic treatment at the same dose.11\n",
+      "bbox": [
+        61.885101318359375,
+        302.54931640625,
+        436.6949768066406,
+        350.2693176269531
+      ],
+      "text_sha256": "7d6cb99a20ed3961947af0edba0e5980e2df2c90c3e2237c12ee93de577e76df"
+    },
+    {
+      "block_id": "page-0073-block-0005",
+      "order": 5,
+      "text": "Plasma level variations\n",
+      "bbox": [
+        61.88909912109375,
+        368.6393127441406,
+        169.15907287597656,
+        380.48931884765625
+      ],
+      "text_sha256": "cad2412e3ceb9a0f7834123a38ae06392a045df63a1708cdc060e9a62d236f51"
+    },
+    {
+      "block_id": "page-0073-block-0006",
+      "order": 6,
+      "text": "Group level evidence cannot completely determine individual treatment decisions. \nThere are significant inter-individual variations in plasma drug levels in patients treated \nwith antipsychotic medication. One can often encounter a patient who, when receiving \nmedication at the higher end of the dose range (say 6mg of risperidone or 20mg of \nolanzapine), would have plasma drug levels that are well below the range expected for \n2mg risperidone or 10mg of olanzapine, and these levels may not reach the threshold \nfor response. In such patients, a rational case could be made for increasing the dose, \nprovided the patient is informed, and the side effects are tolerable, to bring the plasma \nlevels to the optimal range for the particular medication. More details on plasma levels \nand their interpretation are provided in Chapter 11. However, what are the treatment \npossibilities when a lack of therapeutic response is encountered despite the patient’s \nadherence to their medication regimen, the prescription of a dosage at the top of the \nrecommended range, and apparently sufficient plasma levels?\n",
+      "bbox": [
+        61.88909912109375,
+        386.54931640625,
+        436.7091369628906,
+        542.2693481445312
+      ],
+      "text_sha256": "3ceeb8e5d0a15b6992e242b1531353b496cd203e428f4d2eebe9f2d816990da4"
+    },
+    {
+      "block_id": "page-0073-block-0007",
+      "order": 7,
+      "text": "Treatment choices\n",
+      "bbox": [
+        61.88909912109375,
+        559.704345703125,
+        154.8060760498047,
+        572.7393188476562
+      ],
+      "text_sha256": "01145dd3fc1270f783757da699662ab10af3b25981fe755f8578d98cc4bab6c0"
+    },
+    {
+      "block_id": "page-0073-block-0008",
+      "order": 8,
+      "text": "There are essentially three options here, a trial of clozapine, switch to another antipsy-\nchotic medication or add another (non-clozapine) antipsychotic medication. If the \npatient meets the criteria for clozapine treatment, this is undoubtedly the preferred \noption. Yet, in a clinical audit of community (not inpatient) practice in the UK, covering \n",
+      "bbox": [
+        61.88909912109375,
+        578.54931640625,
+        436.6891174316406,
+        626.2693481445312
+      ],
+      "text_sha256": "0721cf293a48d5f41540a417fe5e09b1766c3730620d1b42691455880f096bb9"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

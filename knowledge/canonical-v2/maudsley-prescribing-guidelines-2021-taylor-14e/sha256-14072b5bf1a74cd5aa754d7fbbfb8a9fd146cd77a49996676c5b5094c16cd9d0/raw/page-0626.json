@@ -1,0 +1,815 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0626",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 626,
+  "source_page_index": 625,
+  "source_page_display": 626,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Table 6.1  Characteristics of cognitive enhancers7–14\nCharacteristic\nDonepezil\nRivastigmine\nGalantamine\nMemantine\nPrimary mechanism\nAChE-I (selective + reversible)\nAChE-I  \n(reversible, non-competitive inhibitor)\nAChE-I  \n(competitive + reversible)\nGlutamate receptor \nantagonist\nOther mechanism\nNone\nBuChE-I\nNicotine receptor agonist\n5-HT3 receptor \nantagonist\nStarting dose\n5mg daily\n1.5mg bd (oral) \n(or 4.6mg/24 hours patch)\n8mg XL daily  \n(or 4mg bd solution)\n(instant release tablets have been \ndiscontinued in some countries)\n5mg daily\nUsual treatment dose \n(and max dose)\n10mg daily\n3–6mg bd (oral) or  \n9.5mg/24 hours patch\n16–24mg XL daily  \n(or 8–12mg bd solution)\n20mg daily or  \n(10mg bd)\nRecommended \nminimum interval \nbetween dose \nincreases\n4 weeks (increase by 5mg daily)\n2 weeks for oral  \n(increase by 1.5mg twice a day)\n4 weeks for patch  \n(increase to 9.5mg/24 hours)\n(can consider increase to 13.3mg/24 hours \nafter 6 months if tolerated and meaningful \ncognitive/functional decline occurs on \n9.5mg/24 hours)\n4 weeks \n(increase by 8mg XL daily or by \n4mg bd for solution)\n1 week  \n(increase by 5mg \nweekly)\nAdverse effects7–13\n*Very common: \n≥1/10\nand\ncommon: ≥1/100\nDiarrhoea*, nausea*, headache*, \ncommon cold, anorexia, \nhallucinations, agitation, aggressive \nbehaviour, abnormal dreams and \nnightmares, syncope, dizziness, \ninsomnia, vomiting, abdominal \ndisturbance, rash, pruritus, muscle \ncramps, urinary incontinence, \nfatigue, pain\nAnorexia*, dizziness*, nausea*, vomiting*\ndiarrhoea*, decreased appetite, \nnightmares, agitation, confusion, anxiety, \nheadache, somnolence, tremor, abdominal \npain and dyspepsia, sweating, fatigue and \nasthenia, malaise, weight loss (frequency \nof adverse effects with the patch may \ndiffer from capsules)\nNausea*, vomiting*, decreased \nappetite, hallucination, depression, \nsyncope, dizziness; tremor, \nheadache, somnolence, lethargy, \nbradycardia, hypertension, \nabdominal pain and discomfort, \ndiarrhoea, dyspepsia, muscle \nspasms, fatigue, asthenia, malaise, \nweight loss, fall\nDrug hypersensitivity, \nsomnolence, dizziness, \nbalance disorders, \nhypertension, \ndyspnoea, \nconstipation, elevated \nliver function test, \nheadache\n(Continued )\n",
+  "raw_text_sha256": "688180ecb31536e68c6fc03281c344094d0ee3a559543fe022687c588779559b",
+  "coordinates_sha256": "d759185691ac587f55baed7814e139c3bced995f19fafdf59c33352ec0ed7c5e",
+  "block_sequence_sha256": "0fb41d3882cf6448394cd0e9d7f76cd00b6c9f27c571dfc3ce8e1202c0560dac",
+  "blocks": [
+    {
+      "block_id": "page-0626-block-0000",
+      "order": 0,
+      "text": "Table 6.1  Characteristics of cognitive enhancers7–14\n",
+      "bbox": [
+        69.9249038696289,
+        442.1587219238281,
+        78.8124008178711,
+        606.6539916992188
+      ],
+      "text_sha256": "40371378cf3877fc2faf6d95c9dbd8e34f6382267a72a734911f987c749345bd"
+    },
+    {
+      "block_id": "page-0626-block-0001",
+      "order": 1,
+      "text": "Characteristic\nDonepezil\nRivastigmine\nGalantamine\nMemantine\n",
+      "bbox": [
+        87.7999038696289,
+        101.42649841308594,
+        96.6874008178711,
+        609.1539916992188
+      ],
+      "text_sha256": "de8185e13d69e1263e3334c5b08faa0a6462fa3e06edc7834be68e89427abf2f"
+    },
+    {
+      "block_id": "page-0626-block-0002",
+      "order": 2,
+      "text": "Primary mechanism\nAChE-I (selective + reversible)\nAChE-I  \n",
+      "bbox": [
+        103.60240173339844,
+        381.23651123046875,
+        112.30989837646484,
+        609.146484375
+      ],
+      "text_sha256": "6a9bafe18b57c702e555725b19b643ee94c582de7b73d8e60edd68e462fd5d4e"
+    },
+    {
+      "block_id": "page-0626-block-0003",
+      "order": 3,
+      "text": "(reversible, non-competitive inhibitor)\nAChE-I  \n",
+      "bbox": [
+        103.60240173339844,
+        236.41148376464844,
+        122.3073959350586,
+        407.4939880371094
+      ],
+      "text_sha256": "c9916eda08030c54e578e6e2bbddac74d95338be80bfed67c74c9507512b2379"
+    },
+    {
+      "block_id": "page-0626-block-0004",
+      "order": 4,
+      "text": "(competitive + reversible)\nGlutamate receptor \n",
+      "bbox": [
+        103.60240173339844,
+        77.4040756225586,
+        122.3073959350586,
+        262.66900634765625
+      ],
+      "text_sha256": "f66984c5697a46fc76a55d796d006499dac721033bcdcb7af48f1c5d76fc095f"
+    },
+    {
+      "block_id": "page-0626-block-0005",
+      "order": 5,
+      "text": "antagonist\n",
+      "bbox": [
+        113.59989929199219,
+        108.08660888671875,
+        122.3073959350586,
+        141.843994140625
+      ],
+      "text_sha256": "4051aa5ff3f3228ab218ea51caa3a3dec759c3639ae8f07398429fec07a4436a"
+    },
+    {
+      "block_id": "page-0626-block-0006",
+      "order": 6,
+      "text": "Other mechanism\nNone\nBuChE-I\nNicotine receptor agonist\n5-HT3 receptor \nantagonist\n",
+      "bbox": [
+        129.22239685058594,
+        91.54903411865234,
+        147.92739868164062,
+        609.1389770507812
+      ],
+      "text_sha256": "5b3417e0ab89dd15ee0ebd1eebec499089c72c5b5314602c422dc4ffb9cbcd92"
+    },
+    {
+      "block_id": "page-0626-block-0007",
+      "order": 7,
+      "text": "Starting dose\n5mg daily\n1.5mg bd (oral) \n(or 4.6mg/24 hours patch)\n8mg XL daily  \n(or 4mg bd solution)\n",
+      "bbox": [
+        154.84239196777344,
+        197.20887756347656,
+        173.54739379882812,
+        609.1314697265625
+      ],
+      "text_sha256": "1f0350388b472d912d908ef7075b544dc6e83d680df767d3efaad1d5cc698177"
+    },
+    {
+      "block_id": "page-0626-block-0008",
+      "order": 8,
+      "text": "(instant release tablets have been \n",
+      "bbox": [
+        174.83738708496094,
+        154.4439239501953,
+        183.54489135742188,
+        262.65399169921875
+      ],
+      "text_sha256": "51985b6b301109382a96f22a68ffb1161ef69feb665fd921f8f508c34bd6831e"
+    },
+    {
+      "block_id": "page-0626-block-0009",
+      "order": 9,
+      "text": "discontinued in some countries)\n",
+      "bbox": [
+        184.8348846435547,
+        161.3814239501953,
+        193.54238891601562,
+        262.65399169921875
+      ],
+      "text_sha256": "6865c82d243fbdc952d027a672c197f53077d5b4fb381fc49c4d1c00ec70fd60"
+    },
+    {
+      "block_id": "page-0626-block-0010",
+      "order": 10,
+      "text": "5mg daily\n",
+      "bbox": [
+        154.8348846435547,
+        110.57655334472656,
+        163.54238891601562,
+        141.8289794921875
+      ],
+      "text_sha256": "7299e97b9be45ef96bf956e98ee36e725b361456356c65adedfa418a243ea13a"
+    },
+    {
+      "block_id": "page-0626-block-0011",
+      "order": 11,
+      "text": "Usual treatment dose \n",
+      "bbox": [
+        200.45738220214844,
+        538.8339233398438,
+        209.16488647460938,
+        609.1239624023438
+      ],
+      "text_sha256": "a4edc34441e9e3fd5e335ffc4a68cb8f7818426b58fe58829388fb3be2530e7a"
+    },
+    {
+      "block_id": "page-0626-block-0012",
+      "order": 12,
+      "text": "(and max dose)\n10mg daily\n3–6mg bd (oral) or  \n9.5mg/24 hours patch\n16–24mg XL daily  \n(or 8–12mg bd solution)\n20mg daily or  \n(10mg bd)\n",
+      "bbox": [
+        200.45738220214844,
+        93.47652435302734,
+        219.16238403320312,
+        609.1239624023438
+      ],
+      "text_sha256": "ef2bfb16e60ad0a4db6fb28dcb8f531da8fd86430dea98e32e08afac58b9a2f6"
+    },
+    {
+      "block_id": "page-0626-block-0013",
+      "order": 13,
+      "text": "Recommended \n",
+      "bbox": [
+        226.07737731933594,
+        559.1064453125,
+        234.78488159179688,
+        609.116455078125
+      ],
+      "text_sha256": "339f183cbe5e42afc74862fb880d6b90444638984fc257ca4546dcfdd4606930"
+    },
+    {
+      "block_id": "page-0626-block-0014",
+      "order": 14,
+      "text": "minimum interval \n",
+      "bbox": [
+        236.0748748779297,
+        551.2089233398438,
+        244.78237915039062,
+        609.116455078125
+      ],
+      "text_sha256": "d04074145a22bb0813083ec3503efc3b6b8856abda4859a8452de5d360ddccb1"
+    },
+    {
+      "block_id": "page-0626-block-0015",
+      "order": 15,
+      "text": "between dose \n",
+      "bbox": [
+        246.07237243652344,
+        562.0164184570312,
+        254.77987670898438,
+        609.116455078125
+      ],
+      "text_sha256": "40d4fcc0b6879413ca2babab4c7644950caefacb5e3fb6b2b7da4edbb37bc94b"
+    },
+    {
+      "block_id": "page-0626-block-0016",
+      "order": 16,
+      "text": "increases\n",
+      "bbox": [
+        256.06988525390625,
+        580.5039672851562,
+        264.7773742675781,
+        609.116455078125
+      ],
+      "text_sha256": "998c31f498b2bdf3825dc8ce0635f197857e6e8cd243153dd55b6ccab8bc509c"
+    },
+    {
+      "block_id": "page-0626-block-0017",
+      "order": 17,
+      "text": "4 weeks (increase by 5mg daily)\n2 weeks for oral  \n(increase by 1.5mg twice a day)\n",
+      "bbox": [
+        226.0698699951172,
+        306.7539978027344,
+        244.77487182617188,
+        531.2889404296875
+      ],
+      "text_sha256": "3f4a373bda6eb4c6c4b2abd69ce3e8913f42bcf19b3a494eb81c2462fe2c81b5"
+    },
+    {
+      "block_id": "page-0626-block-0018",
+      "order": 18,
+      "text": "4 weeks for patch  \n(increase to 9.5mg/24 hours)\n",
+      "bbox": [
+        246.0648651123047,
+        315.48388671875,
+        264.7698669433594,
+        407.4639587402344
+      ],
+      "text_sha256": "7dcc64783259942a3c21a2ed94fe8de8541700cb2c8e45e94c41d2fe2df99027"
+    },
+    {
+      "block_id": "page-0626-block-0019",
+      "order": 19,
+      "text": "(can consider increase to 13.3mg/24 hours \n",
+      "bbox": [
+        266.05987548828125,
+        269.2238464355469,
+        274.7673645019531,
+        407.4639587402344
+      ],
+      "text_sha256": "59af73672be99cc72487135a740de97da1f97b2006cf65b221a4cb3417dbedc5"
+    },
+    {
+      "block_id": "page-0626-block-0020",
+      "order": 20,
+      "text": "after 6 months if tolerated and meaningful \n",
+      "bbox": [
+        276.057373046875,
+        268.2788391113281,
+        284.7648620605469,
+        407.4639587402344
+      ],
+      "text_sha256": "0fbd171fe2e0dbf2dea8652062089c4cc4fefa9244aa4b9245fc61258441e4cd"
+    },
+    {
+      "block_id": "page-0626-block-0021",
+      "order": 21,
+      "text": "cognitive/functional decline occurs on \n",
+      "bbox": [
+        286.05487060546875,
+        284.95135498046875,
+        294.7623596191406,
+        407.4639587402344
+      ],
+      "text_sha256": "e65b567e988a9d93086b921308f9391d3296383e0a827a1dde2b2624a0c28e60"
+    },
+    {
+      "block_id": "page-0626-block-0022",
+      "order": 22,
+      "text": "9.5mg/24 hours)\n",
+      "bbox": [
+        296.0523681640625,
+        354.10137939453125,
+        304.7598571777344,
+        407.4639587402344
+      ],
+      "text_sha256": "83a3a20c0762466bf61e7b47cb9979263f2a874889714b005d3b392a6e6d7606"
+    },
+    {
+      "block_id": "page-0626-block-0023",
+      "order": 23,
+      "text": "4 weeks \n(increase by 8mg XL daily or by \n",
+      "bbox": [
+        226.0548553466797,
+        161.51649475097656,
+        244.75985717773438,
+        262.63897705078125
+      ],
+      "text_sha256": "889c7358dba2dba81d2ce705eabb3adfbb5df12a79a9609177bdf994f350bd79"
+    },
+    {
+      "block_id": "page-0626-block-0024",
+      "order": 24,
+      "text": "4mg bd for solution)\n",
+      "bbox": [
+        246.0498504638672,
+        196.78135681152344,
+        254.75735473632812,
+        262.63897705078125
+      ],
+      "text_sha256": "1fa708fa4ac2502b3c65dcbba164205e157d329c41819f146a456fb13567f86b"
+    },
+    {
+      "block_id": "page-0626-block-0025",
+      "order": 25,
+      "text": "1 week  \n(increase by 5mg \n",
+      "bbox": [
+        226.04734802246094,
+        85.69149017333984,
+        244.75234985351562,
+        141.81396484375
+      ],
+      "text_sha256": "f636eab20927ea84ae63605ecba7940e488da5df8297dd18877dc9e56c6c6f7e"
+    },
+    {
+      "block_id": "page-0626-block-0026",
+      "order": 26,
+      "text": "weekly)\n",
+      "bbox": [
+        246.04234313964844,
+        117.6489486694336,
+        254.74984741210938,
+        141.81396484375
+      ],
+      "text_sha256": "41f3d83518da29f141ea0a12c20db800e946739d5629d31f1181037650ea8d89"
+    },
+    {
+      "block_id": "page-0626-block-0027",
+      "order": 27,
+      "text": "Adverse effects7–13\n",
+      "bbox": [
+        311.6673583984375,
+        551.0675659179688,
+        320.3748474121094,
+        609.1089477539062
+      ],
+      "text_sha256": "21ab6c87934e5a7c5ba03713e5056eaa81eaec5d807fbc52ba12af283703265c"
+    },
+    {
+      "block_id": "page-0626-block-0028",
+      "order": 28,
+      "text": "*Very common: \n≥1/10\n",
+      "bbox": [
+        321.72991943359375,
+        556.646484375,
+        340.4349060058594,
+        609.1539916992188
+      ],
+      "text_sha256": "1ee854437e0700dd27c222d287d2eb47b785011efaa1302a09efa37a602a15c5"
+    },
+    {
+      "block_id": "page-0626-block-0029",
+      "order": 29,
+      "text": "and\n",
+      "bbox": [
+        341.72491455078125,
+        597.0640258789062,
+        350.4324035644531,
+        609.1539916992188
+      ],
+      "text_sha256": "4e37fb97801e7191b06352e73dfaeb67563fbfec03d120e130c2246b8002bb53"
+    },
+    {
+      "block_id": "page-0626-block-0030",
+      "order": 30,
+      "text": "common: ≥1/100\n",
+      "bbox": [
+        351.722412109375,
+        553.6390380859375,
+        360.4299011230469,
+        609.1539916992188
+      ],
+      "text_sha256": "c0b7e2132aeddfad368287a99ffbad8f4e15712a0fd45dd66bc3d5b32dcb7c25"
+    },
+    {
+      "block_id": "page-0626-block-0031",
+      "order": 31,
+      "text": "Diarrhoea*, nausea*, headache*, \n",
+      "bbox": [
+        311.72491455078125,
+        421.70648193359375,
+        320.4324035644531,
+        531.3264770507812
+      ],
+      "text_sha256": "f9a41b4ca9b56dddf3522ede8ac5798a560942a8b8b2310d479fc18a7172ae57"
+    },
+    {
+      "block_id": "page-0626-block-0032",
+      "order": 32,
+      "text": "common cold, anorexia, \n",
+      "bbox": [
+        321.722412109375,
+        452.28399658203125,
+        330.4299011230469,
+        531.3264770507812
+      ],
+      "text_sha256": "346bb4767bcce1b9a9930e47d4e403d28fe821af73d1b0e808b86fe5b0310b54"
+    },
+    {
+      "block_id": "page-0626-block-0033",
+      "order": 33,
+      "text": "hallucinations, agitation, aggressive \n",
+      "bbox": [
+        331.71990966796875,
+        416.0290222167969,
+        340.4273986816406,
+        531.3264770507812
+      ],
+      "text_sha256": "e9e2519cad189ade37aa21a099791bc3944a7fae7a938869b8d2e2f2ce6a4cfe"
+    },
+    {
+      "block_id": "page-0626-block-0034",
+      "order": 34,
+      "text": "behaviour, abnormal dreams and \n",
+      "bbox": [
+        341.7174072265625,
+        424.21148681640625,
+        350.4248962402344,
+        531.3264770507812
+      ],
+      "text_sha256": "4e80407637b3192143a5c79d6714e37c7df7137c399f5da39260afc99b1c4893"
+    },
+    {
+      "block_id": "page-0626-block-0035",
+      "order": 35,
+      "text": "nightmares, syncope, dizziness, \n",
+      "bbox": [
+        351.71490478515625,
+        429.364013671875,
+        360.4223937988281,
+        531.3264770507812
+      ],
+      "text_sha256": "611250e194456d5591860d718728ddec8166e5a0ad55f0e2085720f87b350137"
+    },
+    {
+      "block_id": "page-0626-block-0036",
+      "order": 36,
+      "text": "insomnia, vomiting, abdominal \n",
+      "bbox": [
+        361.71240234375,
+        430.4740295410156,
+        370.4198913574219,
+        531.3264770507812
+      ],
+      "text_sha256": "65354fb4b7e7d38c1eebd997f7b422ffdd75e26fc3d048b59772fbab746eacf2"
+    },
+    {
+      "block_id": "page-0626-block-0037",
+      "order": 37,
+      "text": "disturbance, rash, pruritus, muscle \n",
+      "bbox": [
+        371.70989990234375,
+        419.6440124511719,
+        380.4173889160156,
+        531.3264770507812
+      ],
+      "text_sha256": "a4dcdc15517ea235cfadaaae743f9009ab2f71e5c2a1d64f8352edefb74267bf"
+    },
+    {
+      "block_id": "page-0626-block-0038",
+      "order": 38,
+      "text": "cramps, urinary incontinence, \n",
+      "bbox": [
+        381.7073974609375,
+        435.0715026855469,
+        390.4148864746094,
+        531.3264770507812
+      ],
+      "text_sha256": "44fdc1a3ceab40b0b1f6cb68b72779eb4e3dce415ed6969bff31faa27dc96faa"
+    },
+    {
+      "block_id": "page-0626-block-0039",
+      "order": 39,
+      "text": "fatigue, pain\n",
+      "bbox": [
+        391.70489501953125,
+        490.9014892578125,
+        400.4123840332031,
+        531.3264770507812
+      ],
+      "text_sha256": "0a2d59d19c657714f70d0bf03d14335c3eb3d949ab27b9713c2980d4b0510107"
+    },
+    {
+      "block_id": "page-0626-block-0040",
+      "order": 40,
+      "text": "Anorexia*, dizziness*, nausea*, vomiting*\n",
+      "bbox": [
+        311.702392578125,
+        271.77386474609375,
+        320.4098815917969,
+        407.5014953613281
+      ],
+      "text_sha256": "bb53c16e7ab345af1a30a49dd267f0dfce675165f09cd6970f492cb8dd703f81"
+    },
+    {
+      "block_id": "page-0626-block-0041",
+      "order": 41,
+      "text": "diarrhoea*, decreased appetite, \n",
+      "bbox": [
+        321.69989013671875,
+        304.28643798828125,
+        330.4073791503906,
+        407.5014953613281
+      ],
+      "text_sha256": "25ec18b01d0850c1cb0f1688a13afd24560b552f2c0bdd72bfa12b08652d49bf"
+    },
+    {
+      "block_id": "page-0626-block-0042",
+      "order": 42,
+      "text": "nightmares, agitation, confusion, anxiety, \n",
+      "bbox": [
+        331.6973876953125,
+        273.7239074707031,
+        340.4048767089844,
+        407.5014953613281
+      ],
+      "text_sha256": "53993b9516dbeff02af7c214d7cd7c20173ea7fae68a1d7f105267f54e015897"
+    },
+    {
+      "block_id": "page-0626-block-0043",
+      "order": 43,
+      "text": "headache, somnolence, tremor, abdominal \n",
+      "bbox": [
+        341.69488525390625,
+        269.1339111328125,
+        350.4023742675781,
+        407.5014953613281
+      ],
+      "text_sha256": "0fd2a377dc1992ced3231f8f21f16f75cf0733b0b0331110535fedba8453610f"
+    },
+    {
+      "block_id": "page-0626-block-0044",
+      "order": 44,
+      "text": "pain and dyspepsia, sweating, fatigue and \n",
+      "bbox": [
+        351.6923828125,
+        270.7913513183594,
+        360.3998718261719,
+        407.5014953613281
+      ],
+      "text_sha256": "502a63e47948ff382e4125b1477b20e540d807d3d18fc32e8dcd9d4bbe19d7e9"
+    },
+    {
+      "block_id": "page-0626-block-0045",
+      "order": 45,
+      "text": "asthenia, malaise, weight loss (frequency \n",
+      "bbox": [
+        361.68988037109375,
+        275.1189270019531,
+        370.3973693847656,
+        407.5014953613281
+      ],
+      "text_sha256": "4f3fd7e406841ef7e6e7d7f6dabef3c5da4b527d65ab51a19d96864e1f80a37a"
+    },
+    {
+      "block_id": "page-0626-block-0046",
+      "order": 46,
+      "text": "of adverse effects with the patch may \n",
+      "bbox": [
+        371.6873779296875,
+        285.1390380859375,
+        380.3948669433594,
+        407.5014953613281
+      ],
+      "text_sha256": "379b53780790624ce6572d50e5281bd6f31d326b985263d7a4e5908daf4be472"
+    },
+    {
+      "block_id": "page-0626-block-0047",
+      "order": 47,
+      "text": "differ from capsules)\n",
+      "bbox": [
+        381.68487548828125,
+        342.3564758300781,
+        390.3923645019531,
+        407.5014953613281
+      ],
+      "text_sha256": "7779f4a05ab456dcaa65a3d032e24ec186da30f4d1a01603d8817542b23b6271"
+    },
+    {
+      "block_id": "page-0626-block-0048",
+      "order": 48,
+      "text": "Nausea*, vomiting*, decreased \n",
+      "bbox": [
+        311.6873779296875,
+        160.7064971923828,
+        320.3948669433594,
+        262.676513671875
+      ],
+      "text_sha256": "635ac65fe0760679378df66f208b87be60f2c2675571c8d1290cb70a644571cc"
+    },
+    {
+      "block_id": "page-0626-block-0049",
+      "order": 49,
+      "text": "appetite, hallucination, depression, \n",
+      "bbox": [
+        321.68487548828125,
+        149.03651428222656,
+        330.3923645019531,
+        262.676513671875
+      ],
+      "text_sha256": "2f76a220456b6adcb988e5ca2273ace9a09da71987c95e23364ed8d2afab1ef0"
+    },
+    {
+      "block_id": "page-0626-block-0050",
+      "order": 50,
+      "text": "syncope, dizziness; tremor, \n",
+      "bbox": [
+        331.682373046875,
+        175.5789337158203,
+        340.3898620605469,
+        262.676513671875
+      ],
+      "text_sha256": "5bb286dbc8fbabb8e6b3a8e9bce139b43fc6ecb3997fea8e4b0af81e2790755e"
+    },
+    {
+      "block_id": "page-0626-block-0051",
+      "order": 51,
+      "text": "headache, somnolence, lethargy, \n",
+      "bbox": [
+        341.67987060546875,
+        155.84645080566406,
+        350.3873596191406,
+        262.676513671875
+      ],
+      "text_sha256": "cc3a1864db889cefb7e1443e43dc960f3556c34e3120d6908f6bccd28b1bdefc"
+    },
+    {
+      "block_id": "page-0626-block-0052",
+      "order": 52,
+      "text": "bradycardia, hypertension, \n",
+      "bbox": [
+        351.6773681640625,
+        176.13392639160156,
+        360.3848571777344,
+        262.676513671875
+      ],
+      "text_sha256": "5f9d68a022d89bbf63b9b6a790d8af7d247027f2760f01aa6228e4272d55c52b"
+    },
+    {
+      "block_id": "page-0626-block-0053",
+      "order": 53,
+      "text": "abdominal pain and discomfort, \n",
+      "bbox": [
+        361.67486572265625,
+        158.48634338378906,
+        370.3823547363281,
+        262.676513671875
+      ],
+      "text_sha256": "b13b405ec1fb5cd472163345e4cfef28c032394af4f95581dce662611c15ae73"
+    },
+    {
+      "block_id": "page-0626-block-0054",
+      "order": 54,
+      "text": "diarrhoea, dyspepsia, muscle \n",
+      "bbox": [
+        371.67236328125,
+        168.9114532470703,
+        380.3798522949219,
+        262.676513671875
+      ],
+      "text_sha256": "5e89d7f346df7a9099fd32086186c405c0593a7276cee7649786ce69b66422ae"
+    },
+    {
+      "block_id": "page-0626-block-0055",
+      "order": 55,
+      "text": "spasms, fatigue, asthenia, malaise, \n",
+      "bbox": [
+        381.66986083984375,
+        150.1614532470703,
+        390.3773498535156,
+        262.676513671875
+      ],
+      "text_sha256": "8f1815921355839f70eb91ffdbd221e9c3de907e5c9cf9e86d26c23013fd85f2"
+    },
+    {
+      "block_id": "page-0626-block-0056",
+      "order": 56,
+      "text": "weight loss, fall\n",
+      "bbox": [
+        391.6673583984375,
+        213.0864715576172,
+        400.3748474121094,
+        262.676513671875
+      ],
+      "text_sha256": "07723c3056bef0373ae45dcf6513299a34cecbd15fd1cd64f1ac41aecfba4f6f"
+    },
+    {
+      "block_id": "page-0626-block-0057",
+      "order": 57,
+      "text": "Drug hypersensitivity, \n",
+      "bbox": [
+        311.66485595703125,
+        72.12410736083984,
+        320.3723449707031,
+        141.85150146484375
+      ],
+      "text_sha256": "ba6ee36e997a683662051c45572685b8d6d97809e092ae69f2c14a7ca92d74b5"
+    },
+    {
+      "block_id": "page-0626-block-0058",
+      "order": 58,
+      "text": "somnolence, dizziness, \n",
+      "bbox": [
+        321.662353515625,
+        67.2566146850586,
+        330.3698425292969,
+        141.85150146484375
+      ],
+      "text_sha256": "013ebee7ef7624b5a07c9a67252cfde4735df213a3dd800c69a43f7f6caf20fe"
+    },
+    {
+      "block_id": "page-0626-block-0059",
+      "order": 59,
+      "text": "balance disorders, \n",
+      "bbox": [
+        331.65985107421875,
+        82.3916244506836,
+        340.3673400878906,
+        141.85150146484375
+      ],
+      "text_sha256": "f2f4c9d5579dcbaaa8313ae99a4149750df456532b0a9061b80a10c296365316"
+    },
+    {
+      "block_id": "page-0626-block-0060",
+      "order": 60,
+      "text": "hypertension, \n",
+      "bbox": [
+        341.6573486328125,
+        96.4240951538086,
+        350.3648376464844,
+        141.85150146484375
+      ],
+      "text_sha256": "9d9bb75a9656fcca164bf3961950a9e43516ea7943b44f1028435021ea33ab67"
+    },
+    {
+      "block_id": "page-0626-block-0061",
+      "order": 61,
+      "text": "dyspnoea, \n",
+      "bbox": [
+        351.65484619140625,
+        107.2540512084961,
+        360.3623352050781,
+        141.85150146484375
+      ],
+      "text_sha256": "4560624e50b1b2493b1fb01a019e7ec8ea3425f676700f1b38a2c5597ab83ccb"
+    },
+    {
+      "block_id": "page-0626-block-0062",
+      "order": 62,
+      "text": "constipation, elevated \n",
+      "bbox": [
+        361.65234375,
+        69.7616195678711,
+        370.3598327636719,
+        141.85150146484375
+      ],
+      "text_sha256": "8b6d2ac120f1bc735478298a9ecd348360790ab9f26c892064ea2d3434d1acc5"
+    },
+    {
+      "block_id": "page-0626-block-0063",
+      "order": 63,
+      "text": "liver function test, \n",
+      "bbox": [
+        371.64984130859375,
+        82.27156829833984,
+        380.3573303222656,
+        141.85150146484375
+      ],
+      "text_sha256": "b1150c98cdf5f1bd926f5f0dedfb939ac1d45790cfa1221c65dfb847cd5826fe"
+    },
+    {
+      "block_id": "page-0626-block-0064",
+      "order": 64,
+      "text": "headache\n",
+      "bbox": [
+        381.6473388671875,
+        111.01153564453125,
+        390.3548278808594,
+        141.85150146484375
+      ],
+      "text_sha256": "cd7af11b6425b2dd519e96a221429b3baf0bc5308012268e4a99005733c5dd7e"
+    },
+    {
+      "block_id": "page-0626-block-0065",
+      "order": 65,
+      "text": "(Continued )\n",
+      "bbox": [
+        405.4748229980469,
+        64.34651947021484,
+        414.2274169921875,
+        102.79901123046875
+      ],
+      "text_sha256": "bce697aea57d29db5fb5b1502b4089967f75fcf44428590b90e07d43fc71640b"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

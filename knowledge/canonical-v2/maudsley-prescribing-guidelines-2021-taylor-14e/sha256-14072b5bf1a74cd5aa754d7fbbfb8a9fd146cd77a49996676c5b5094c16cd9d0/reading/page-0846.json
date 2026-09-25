@@ -1,0 +1,17 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0846",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 846,
+  "source_page_index": 845,
+  "repaired_text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    825\nCHAPTER 10\nLithium around the time of bariatric surgery\nThe continued use of lithium throughout the perioperative phases of bariatric surgery requires \nparticularly close monitoring. The following guidance is based on available case reports and expert \nopinion:40\n■\n■Monitor lithium plasma levels weekly in during pre-operative phase and for 6 weeks post-surgery (as fluid intake gradually increases), 2-weekly for 6 months and monthly thereafter. Resume \nusual lithium monitoring 1 year post-bariatric surgery.\n■\n■If plasma levels increase by >25% or approach 1.2mmol/L, consider decreasing lithium dose.\n■\n■Withhold lithium if signs of toxicity are present and review dose.\n■\n■Monitor mental state periodically, using formal rating scales if possible.\n■\n■Encourage patient to drink 2.5–3 litres of fluid per day in the pre-operative phase (including\nliquid meal replacement).\nOther drugs\nTable 10.13  Miscellaneous agents in bariatric surgery\nDrug\nSummary of evidence and considerations\nBenzodiazepines42–45\n■\n■Bioavailability probably unaffected, shorter time to peak concentration\nMethadone46\n■\n■Substantial increase in bioavailability after sleeve gastrectomy in one case report, possibly related increased rate of gastric emptying; consider plasma level and QT monitoring\nMethylphenidate47,48\n■\n■Conflicting limited data; one case report of reduced treatment efficacy after RYGB\nthat resolved after switching to transdermal patch suggesting reduced oral bioavail-\nability; another reports signs of toxicity\nFBC, full blood count; LFT, liver function test; RYGB, Roux-en-Y gastric bypass.\nGeneral summary\n■\n■The literature on mood stabilisers after bariatric surgery is limited to a few case reports; the use of lithium\nrequires particular care owing to its narrow therapeutic index.\n■\n■The absorption of oral contraceptives may be reduced after bariatric surgery.41 In patients prescribed teratogenic mood stabilisers, non-oral methods of contraception are recommended.\nValproate7,34\n■\n■Single case report suggests that absorption may be significantly reduced after malabsorptive procedures; no data on restrictive procedures\n■\n■Dose reductions may be necessary after weight loss (plasma levels related to bodyweight)\n■\n■Switch to liquid preparation before surgery or if malabsorption suspected on controlled\nrelease/enteric coated tablets\n■\n■Baseline plasma valproate levels, FBC and LFTs with ongoing monitoring recommended\n■\n■Monitor for clinical signs of poor tolerability, possibly occurring at normal plasma levels\nTable 10.12  (Continued)\nDrug\nSummary of evidence and considerations",
+  "repaired_text_sha256": "539e100d26696b134584d14d590c1bf487fcdccf7cc49eadcaaefdafbbb13141",
+  "raw_text_sha256": "826b5b311e86462ff8ba602e7e9729d2a558b136bbcb97ed59027f4243593074",
+  "repair_ids": [
+    "repair-000760",
+    "repair-000761",
+    "repair-000762",
+    "repair-000763"
+  ],
+  "raw_file": "raw/page-0846.json"
+}

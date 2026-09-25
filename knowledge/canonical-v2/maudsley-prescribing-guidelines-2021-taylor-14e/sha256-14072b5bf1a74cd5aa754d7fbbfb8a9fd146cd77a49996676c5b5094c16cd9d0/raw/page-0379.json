@@ -1,0 +1,371 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0379",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 379,
+  "source_page_index": 378,
+  "source_page_display": 379,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "358    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nTable 3.12  (Continued)\nClinical use\nRegimens evaluated\nComments\nRecommendations\nAdjunctive \ntreatment of \ndepression with \nfatigue and \nhypersomnia\nSSRI + modafinil 200mg/day18,19\nBeneficial effect only \non hypersomnia. \nModafinil may induce \nsuicidal ideation\nPossible effect on fatigue, but \nweak evidence base. An option \nwhere fatigue is prominent and \notherwise unresponsive.\nSSRI + methylphenidate \n10–40mg/day20\nClear effect on fatigue \nin hospice patients\nAdjunctive \ntherapy in \ntreatment \nresistant \ndepression\nSSRI + modafinil 100–400mg a \nday7,21–26\nEffect mainly on \nfatigue and daytime \nsleepiness. \nMeta-analysis of 10 \ntrials suggested \nclinically significant \nimprovement in \ndepressive symptoms7\nData limited. Modafinil may be \nuseful for fatigue27 and \ncognition.28\nMAOI + dexamfetamine \n7.5–40mg a day29 or \nlisdexamfetamine 50mg/day30\nSupport from single \ncase series and one \ncase report\nStimulants an option in refractory \nillness but other options better \nsupported.\nOne naturalistic study suggests \nmethylphenidate may reduce \nself-harm or suicide attempts.31\nMethylphenidate or \ndexamfetamine ± \nantidepressant32\nLarge case series \n(n = 50) suggests \nbenefit in the \nmajority\nLisdexamfetamine 20–70mg/\nday + antidepressant7,17,33\nTwo meta-analyses \nfound a small, \nnon-significant effect \non depressive \nsymptoms compared \nto placebo\nAdjunctive \ntreatment in \nbipolar \ndepression34,35\nMood stabiliser and/or \nantidepressants + modafinil \n100–200mg/day36\nSignificantly superior \nto placebo\nPossible treatment option where \nother standard treatments fail. \nMeta-analysis of trials referenced \nhere found stimulants well \ntolerated and an overall benefit \nversus placebo.37\nNo evidence of treatment-\nemergent mania.34,37,38\nMood stabiliser + armodafinil \n150–200mg/day38\nSuperior to placebo \non some measures\nMood \nstabiliser + methylphenidate \n10–40mgday39\nMixed results, mainly \npositive\nMood stabiliser and/or \nantipsychotic + lisdexamfetamine \n20–70mg/day40\nGreater rates of \nimprovement \ncompared to placebo \non patient-rated \nmeasures\n",
+  "raw_text_sha256": "a9685c31885b8a4fb9e564e37d8844a7f7526f4e50eb816480a298984900e85c",
+  "coordinates_sha256": "addf12f03c6f5958984c0c9b67de8787b5f1b70d8f777ee94f482ba4afaf275e",
+  "block_sequence_sha256": "209e423355f7ed4b0fec3f6657ff988031f9891a551c88f782c28f2e45d99763",
+  "blocks": [
+    {
+      "block_id": "page-0379-block-0000",
+      "order": 0,
+      "text": "358    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "b82542209a9ba7f04407ac24133859d3e1bcf0ec948de6319f0d43bc84fbfbcc"
+    },
+    {
+      "block_id": "page-0379-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0379-block-0002",
+      "order": 2,
+      "text": "Table 3.12  (Continued)\n",
+      "bbox": [
+        67.88999938964844,
+        70.08790588378906,
+        144.17999267578125,
+        78.97540283203125
+      ],
+      "text_sha256": "31cb67ec948ebe5adf456721c5b45f4637d7e88e41f2c58858deda361fbe0e7d"
+    },
+    {
+      "block_id": "page-0379-block-0003",
+      "order": 3,
+      "text": "Clinical use\nRegimens evaluated\nComments\nRecommendations\n",
+      "bbox": [
+        61.88999938964844,
+        89.82289123535156,
+        386.7524719238281,
+        98.71038818359375
+      ],
+      "text_sha256": "2dd04c1b1b5d1b0272d637e1a96424c5c9b3534fefe37e2675c71ceee7159b83"
+    },
+    {
+      "block_id": "page-0379-block-0004",
+      "order": 4,
+      "text": "Adjunctive \ntreatment of \ndepression with \nfatigue and \nhypersomnia\n",
+      "bbox": [
+        61.8900146484375,
+        107.09541320800781,
+        120.51000213623047,
+        155.972900390625
+      ],
+      "text_sha256": "1c72b7f71cbbbf5bad45471acb99936f45b180a1abf72e3cf06c7aed9cd0f556"
+    },
+    {
+      "block_id": "page-0379-block-0005",
+      "order": 5,
+      "text": "SSRI + modafinil 200mg/day18,19\nBeneficial effect only \non hypersomnia. \nModafinil may induce \nsuicidal ideation\n",
+      "bbox": [
+        132.3900146484375,
+        107.26790618896484,
+        317.6469421386719,
+        145.9779052734375
+      ],
+      "text_sha256": "26aec027698042759846b1f66f6413ba11b8a0741abf8d846014ba6ef2d12d55"
+    },
+    {
+      "block_id": "page-0379-block-0006",
+      "order": 6,
+      "text": "Possible effect on fatigue, but \nweak evidence base. An option \nwhere fatigue is prominent and \notherwise unresponsive.\n",
+      "bbox": [
+        321.7493896484375,
+        107.2704086303711,
+        424.4169616699219,
+        145.97039794921875
+      ],
+      "text_sha256": "f84a0021f2a8926345c12eaae958d308ba4038ddf668823c1c85f66678f2f6b0"
+    },
+    {
+      "block_id": "page-0379-block-0007",
+      "order": 7,
+      "text": "SSRI + methylphenidate \n10–40mg/day20\nClear effect on fatigue \nin hospice patients\n",
+      "bbox": [
+        132.38938903808594,
+        152.28541564941406,
+        317.83447265625,
+        171.00787353515625
+      ],
+      "text_sha256": "a78159f76db03b10a38f711d4cac9f55e2d7bb966b75c27db0465dc1ad770816"
+    },
+    {
+      "block_id": "page-0379-block-0008",
+      "order": 8,
+      "text": "Adjunctive \ntherapy in \ntreatment \nresistant \ndepression\n",
+      "bbox": [
+        61.889404296875,
+        177.1428680419922,
+        101.89439392089844,
+        226.02035522460938
+      ],
+      "text_sha256": "1c3b6e8e45eca46edbb4f2aa1a2dd9f34fcd0829778afa45704787615151e488"
+    },
+    {
+      "block_id": "page-0379-block-0009",
+      "order": 9,
+      "text": "SSRI + modafinil 100–400mg a \nday7,21–26\n",
+      "bbox": [
+        132.389404296875,
+        177.3153533935547,
+        233.58688354492188,
+        196.02035522460938
+      ],
+      "text_sha256": "e06b7e59368c96a845d07cc105eab0351d8f2d80526c4522e7110aa60b02fefc"
+    },
+    {
+      "block_id": "page-0379-block-0010",
+      "order": 10,
+      "text": "Effect mainly on \nfatigue and daytime \nsleepiness. \nMeta-analysis of 10 \ntrials suggested \nclinically significant \nimprovement in \ndepressive symptoms7\n",
+      "bbox": [
+        246.389404296875,
+        177.32789611816406,
+        315.47222900390625,
+        256.01788330078125
+      ],
+      "text_sha256": "fc1b95b4b58684b00080fc63512390e37217a5167a2b2f4ea408c56ba3aed061"
+    },
+    {
+      "block_id": "page-0379-block-0011",
+      "order": 11,
+      "text": "Data limited. Modafinil may be \nuseful for fatigue27 and \ncognition.28\n",
+      "bbox": [
+        321.7496032714844,
+        177.32789611816406,
+        422.587158203125,
+        206.03289794921875
+      ],
+      "text_sha256": "017d55c9b32e5672488b2ec856a8bbcb933c08e65b3f952e7e68f0805d0c6759"
+    },
+    {
+      "block_id": "page-0379-block-0012",
+      "order": 12,
+      "text": "MAOI + dexamfetamine \n7.5–40mg a day29 or \nlisdexamfetamine 50mg/day30\n",
+      "bbox": [
+        132.38929748535156,
+        262.3529052734375,
+        227.2506103515625,
+        291.0578918457031
+      ],
+      "text_sha256": "a91126f561b8ffdb817114b6833e1a77ae132ed2b38bd4a5696516ae2fe60107"
+    },
+    {
+      "block_id": "page-0379-block-0013",
+      "order": 13,
+      "text": "Support from single \ncase series and one \ncase report\n",
+      "bbox": [
+        246.38929748535156,
+        262.3529052734375,
+        311.6843566894531,
+        291.0553894042969
+      ],
+      "text_sha256": "781d3537843c93b2f469925dba0eaa59cc50ca7dc850b02a832a8d9a11d74362"
+    },
+    {
+      "block_id": "page-0379-block-0014",
+      "order": 14,
+      "text": "Stimulants an option in refractory \nillness but other options better \nsupported.\nOne naturalistic study suggests \nmethylphenidate may reduce \nself-harm or suicide attempts.31\n",
+      "bbox": [
+        321.7492980957031,
+        262.34539794921875,
+        430.78436279296875,
+        321.0403747558594
+      ],
+      "text_sha256": "8f1d4f9697afb588e692b229e6d095b01dded8d0e44f101dfc1bb332c81480e6"
+    },
+    {
+      "block_id": "page-0379-block-0015",
+      "order": 15,
+      "text": "Methylphenidate or \ndexamfetamine ± \nantidepressant32\n",
+      "bbox": [
+        132.38929748535156,
+        297.3778991699219,
+        197.39927673339844,
+        326.08038330078125
+      ],
+      "text_sha256": "ba191059531009b8d6e34120c09da6e78250e909b2ab2a5408d02a4d41c4f0a2"
+    },
+    {
+      "block_id": "page-0379-block-0016",
+      "order": 16,
+      "text": "Large case series \n(n = 50) suggests \nbenefit in the \nmajority\n",
+      "bbox": [
+        246.38929748535156,
+        297.3778991699219,
+        303.41937255859375,
+        336.077880859375
+      ],
+      "text_sha256": "e971cd94fd673e67fce5f50bbeeffe546f8bef8d5727fd61b4776fc5e7ea3da4"
+    },
+    {
+      "block_id": "page-0379-block-0017",
+      "order": 17,
+      "text": "Lisdexamfetamine 20–70mg/\nday + antidepressant7,17,33\n",
+      "bbox": [
+        132.38929748535156,
+        342.39288330078125,
+        224.89427185058594,
+        361.0978698730469
+      ],
+      "text_sha256": "21751f6d0a31a7d3ff35ec0ed99bea088f86f685f7256dfd97b88b97ef16df6d"
+    },
+    {
+      "block_id": "page-0379-block-0018",
+      "order": 18,
+      "text": "Two meta-analyses \nfound a small, \nnon-significant effect \non depressive \nsymptoms compared \nto placebo\n",
+      "bbox": [
+        246.38929748535156,
+        342.40289306640625,
+        312.94427490234375,
+        401.0978698730469
+      ],
+      "text_sha256": "580c8404867bfd79649b736a354b1d0529f01ca15df7b55242df318dcc5592ba"
+    },
+    {
+      "block_id": "page-0379-block-0019",
+      "order": 19,
+      "text": "Adjunctive \ntreatment in \nbipolar \ndepression34,35\n",
+      "bbox": [
+        61.88929748535156,
+        407.23284912109375,
+        111.0269775390625,
+        446.11285400390625
+      ],
+      "text_sha256": "fe6f653753b011b5adcee002a9eabd1bfbb78476aca02cb174b3c3ca3c2b414f"
+    },
+    {
+      "block_id": "page-0379-block-0020",
+      "order": 20,
+      "text": "Mood stabiliser and/or \nantidepressants + modafinil \n100–200mg/day36\n",
+      "bbox": [
+        132.38929748535156,
+        407.42791748046875,
+        221.4292755126953,
+        436.1304016113281
+      ],
+      "text_sha256": "11acf7930381763875c068422cbcd1a4b740a8ca7e72ed2af05ab1134548e8db"
+    },
+    {
+      "block_id": "page-0379-block-0021",
+      "order": 21,
+      "text": "Significantly superior \nto placebo\n",
+      "bbox": [
+        246.38929748535156,
+        407.42791748046875,
+        314.7218322753906,
+        426.1329040527344
+      ],
+      "text_sha256": "2e98c313ed239c76a9e23adc837aac6af3402f44fbb3fbc32ffb097bcbdfe9a2"
+    },
+    {
+      "block_id": "page-0379-block-0022",
+      "order": 22,
+      "text": "Possible treatment option where \nother standard treatments fail. \nMeta-analysis of trials referenced \nhere found stimulants well \ntolerated and an overall benefit \nversus placebo.37\n",
+      "bbox": [
+        321.7492980957031,
+        407.42791748046875,
+        428.9693298339844,
+        466.1228942871094
+      ],
+      "text_sha256": "33eadb65b28fb2acd7d9b8d207b494a68542ae64726c7227de617695c5049458"
+    },
+    {
+      "block_id": "page-0379-block-0023",
+      "order": 23,
+      "text": "No evidence of treatment-\nemergent mania.34,37,38\n",
+      "bbox": [
+        321.7496032714844,
+        467.4278869628906,
+        405.77960205078125,
+        486.13287353515625
+      ],
+      "text_sha256": "6fde5c048ea9a2dc668ac102ac4e3e50277f257e1ae3819c6f4d01d969e6fb42"
+    },
+    {
+      "block_id": "page-0379-block-0024",
+      "order": 24,
+      "text": "Mood stabiliser + armodafinil \n150–200mg/day38\nSuperior to placebo \non some measures\n",
+      "bbox": [
+        132.38929748535156,
+        442.4529113769531,
+        310.9868469238281,
+        461.15789794921875
+      ],
+      "text_sha256": "f4dc1142957c802c2fa1dca1492669f955867d12ad7d5c188b49961c23dfd40c"
+    },
+    {
+      "block_id": "page-0379-block-0025",
+      "order": 25,
+      "text": "Mood \nstabiliser + methylphenidate \n10–40mgday39\n",
+      "bbox": [
+        132.38929748535156,
+        467.472900390625,
+        224.39175415039062,
+        496.1753845214844
+      ],
+      "text_sha256": "ef19a88098e172a715c033e9c88f8c7714b82a5d1f58bbe20f24db1afeee85b7"
+    },
+    {
+      "block_id": "page-0379-block-0026",
+      "order": 26,
+      "text": "Mixed results, mainly \npositive\n",
+      "bbox": [
+        246.38929748535156,
+        467.4779052734375,
+        315.4193115234375,
+        486.1828918457031
+      ],
+      "text_sha256": "3279b1401c043ea5da4e77592f5740265e5b39548f582966a649e50931d2ceac"
+    },
+    {
+      "block_id": "page-0379-block-0027",
+      "order": 27,
+      "text": "Mood stabiliser and/or \nantipsychotic + lisdexamfetamine \n20–70mg/day40\n",
+      "bbox": [
+        132.38929748535156,
+        502.5028991699219,
+        240.62925720214844,
+        531.2053833007812
+      ],
+      "text_sha256": "3e1996cd0cc1608de25e89b74e5eec1251a26a256698f5133b7e789c3e92fcee"
+    },
+    {
+      "block_id": "page-0379-block-0028",
+      "order": 28,
+      "text": "Greater rates of \nimprovement \ncompared to placebo \non patient-rated \nmeasures\n",
+      "bbox": [
+        246.38929748535156,
+        502.5028991699219,
+        314.6466979980469,
+        551.2003784179688
+      ],
+      "text_sha256": "80d9b97d4e8cff5fd4e948aebfa2c75eb5c0bc772c7734c02dfc93f462e5edc5"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

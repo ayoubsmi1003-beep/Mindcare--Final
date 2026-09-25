@@ -1,0 +1,395 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0148",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 148,
+  "source_page_index": 147,
+  "source_page_display": 148,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    127\nCHAPTER 1\nTable 1.18  (Continued)\nDrug\nComments\nMetformin2,32,53,54\n(500–2000mg/day)\nNow a substantial database (in non-diabetic patients) supporting the use of \nmetformin in both reducing and reversing weight gain caused by antipsychotics \n(mainly olanzapine). Beneficial effects on other metabolic parameters. Some negative \nstudies, but clear and significant effect in meta-analyses. One positive RCT55 and \nextension study56 in children and adolescents with ASD published since then. Ideal for \nthose with weight gain and diabetes or polycystic ovary syndrome. Note that \nmetformin treatment increases the risk of vitamin B12 deficiency57\nMelatonin58–60\n(up to 5mg at night)\nOne small RCT showing attenuation of olanzapine-induced weight gain. Other \nstudies show negative results. Effect, if any, is small\nMethylcellulose\n(1,500mg ac)\nOld-fashioned and rather unpalatable preparation. No data in drug-induced weight \ngain but once fairly widely used. Also acts as a bulk-forming laxative, so may be \nsuitable for clozapine-related weight gain\nModafinil61,62\n(up to 300mg/day)\nLimited positive data and one negative RCT for clozapine-induced weight gain. Not \nrecommended\nNaltrexone63,64\n(25–50mg/day)\nSome positive results but evidence is limited to two small pilot RCTs. Not recommended\nOrlistat65–70\n(120mg tds ac/pc)\nReliable effect in obesity, especially when combined with calorie restriction. Few \npublished data in medication-induced weight gain but widely used in practice with \nsome success. In trials for clozapine or olanzapine-induced weight gain effect was only \nseen for men.69,70 When used without calorie restriction in psychiatric patients, the \neffects are very limited. Failure to adhere to a low-fat diet will result in fatty diarrhoea \nand possible malabsorption of orally administered medication. Overall, a good choice \nfor clozapine-induced weight gain where it reduces both weight and the incidence of \nconstipation71\nReboxetine15\n(4–8mg daily)\nAttenuates olanzapine-induced weight gain. Reverses some metabolic changes.72 \nEffective when combined with betahistine\nTopiramate32,54,73,74\n(Up to 300mg daily)\nReliably reduces weight even when medication-induced. Meta-analyses of RCTs suggest \na greater effect for prevention rather than treatment. Problems may arise because of \ntopiramate’s propensity for causing sedation, confusion and cognitive impairment. May \nhave antipsychotic properties\nZonisamide75\n(100–600mg/day)\nAntiepileptic drug with weight reducing properties. A RCT of 150mg a day showed \nsignificant weight reduction in people receiving SGAs. Another RCT (up to 600mg/day) \nshows attenuated olanzapine-induced weight gain. Sedation, diarrhoea and cognitive \nimpairment are the most common problems. Not recommended\nac, ante cibum (before meals); ASD, autism spectrum disorders. bd, bis in die (twice a day); pc, post cibum (after \nmeals); tds, ter die sumendum (three times a day)\n",
+  "raw_text_sha256": "833021a946deae506759eca11bddaa7744c04ad8498392caaed0658d5583b9ea",
+  "coordinates_sha256": "29815a231725f4bb66f42efb6983a91f1c7d3840472516d9dac21fed878d4896",
+  "block_sequence_sha256": "392818d46b882e374dfec96480db923a0a3c8844c0e50a4e42736e6f050587b5",
+  "blocks": [
+    {
+      "block_id": "page-0148-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    127\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "4c361583b5a2878c6c217b682bafb832dfa07dd33812b58e32337dafb78edd6e"
+    },
+    {
+      "block_id": "page-0148-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0148-block-0002",
+      "order": 2,
+      "text": "Table 1.18  (Continued)\n",
+      "bbox": [
+        53.99919891357422,
+        70.08692932128906,
+        130.2891845703125,
+        78.97442626953125
+      ],
+      "text_sha256": "ca46247bb863bbc1e179debe228dbce892f4dd559cd42dda9d876e4fb9f15b01"
+    },
+    {
+      "block_id": "page-0148-block-0003",
+      "order": 3,
+      "text": "Drug\nComments\n",
+      "bbox": [
+        47.99909973144531,
+        89.79084777832031,
+        177.99659729003906,
+        98.6783447265625
+      ],
+      "text_sha256": "f0d3aba6cb5c63a8b3ce76553ca73a800f481925284fe7cc72b7ce3c93bfebe6"
+    },
+    {
+      "block_id": "page-0148-block-0004",
+      "order": 4,
+      "text": "Metformin2,32,53,54\n",
+      "bbox": [
+        47.99909973144531,
+        106.74837493896484,
+        102.82562255859375,
+        115.45587158203125
+      ],
+      "text_sha256": "ea04e42294425d7e47275320a4622a64c2c8571dd38911d2efdf873bc088db92"
+    },
+    {
+      "block_id": "page-0148-block-0005",
+      "order": 5,
+      "text": "(500–2000mg/day)\n",
+      "bbox": [
+        47.99909973144531,
+        116.74581146240234,
+        108.86157989501953,
+        125.45330810546875
+      ],
+      "text_sha256": "55414de4215df2a52b6835f9546e1ba761b8ad0861faf5b1d11057e128838106"
+    },
+    {
+      "block_id": "page-0148-block-0006",
+      "order": 6,
+      "text": "Now a substantial database (in non-diabetic patients) supporting the use of \nmetformin in both reducing and reversing weight gain caused by antipsychotics \n(mainly olanzapine). Beneficial effects on other metabolic parameters. Some negative \nstudies, but clear and significant effect in meta-analyses. One positive RCT55 and \nextension study56 in children and adolescents with ASD published since then. Ideal for \nthose with weight gain and diabetes or polycystic ovary syndrome. Note that \nmetformin treatment increases the risk of vitamin B12 deficiency57\n",
+      "bbox": [
+        140.49659729003906,
+        106.7483139038086,
+        415.7055969238281,
+        177.16893005371094
+      ],
+      "text_sha256": "da7dbe0d1e3f1980a31c47050cf6fcdb578ba95d9f503ac3f9e64e80506b3b5b"
+    },
+    {
+      "block_id": "page-0148-block-0007",
+      "order": 7,
+      "text": "Melatonin58–60\n",
+      "bbox": [
+        47.99909973144531,
+        181.7708282470703,
+        92.41437530517578,
+        190.47833251953125
+      ],
+      "text_sha256": "5bfca3c86280318b95e5ce7a04b5765222f6a1df1ad20b0eaf5124f1725de8d6"
+    },
+    {
+      "block_id": "page-0148-block-0008",
+      "order": 8,
+      "text": "(up to 5mg at night)\n",
+      "bbox": [
+        47.99909973144531,
+        191.7708282470703,
+        113.0240707397461,
+        200.47833251953125
+      ],
+      "text_sha256": "1fa196d9789b64e71f1bd3609a2a28b508d031fb3f2306c41a3f8de7e5f0df13"
+    },
+    {
+      "block_id": "page-0148-block-0009",
+      "order": 9,
+      "text": "One small RCT showing attenuation of olanzapine-induced weight gain. Other \nstudies show negative results. Effect, if any, is small\n",
+      "bbox": [
+        140.49659729003906,
+        181.77333068847656,
+        393.4717712402344,
+        200.47833251953125
+      ],
+      "text_sha256": "caf90df27bfa0b564184ee9c321ef1e001afb5fa917de9fbcee20b3a9934c0c4"
+    },
+    {
+      "block_id": "page-0148-block-0010",
+      "order": 10,
+      "text": "Methylcellulose\n(1,500mg ac)\n",
+      "bbox": [
+        47.99909973144531,
+        218.79331970214844,
+        97.16160583496094,
+        237.49832153320312
+      ],
+      "text_sha256": "0fa57dac8e2628fd40be3052826f5dc4a8b0c92f6d979eb96e4149c9f3097fe1"
+    },
+    {
+      "block_id": "page-0148-block-0011",
+      "order": 11,
+      "text": "Old-fashioned and rather unpalatable preparation. No data in drug-induced weight \ngain but once fairly widely used. Also acts as a bulk-forming laxative, so may be \nsuitable for clozapine-related weight gain\n",
+      "bbox": [
+        140.49659729003906,
+        218.79331970214844,
+        408.3442687988281,
+        247.49581909179688
+      ],
+      "text_sha256": "6fc3bfb2b4ef57c4a0c21b28ff818ea27a8a645aec5fc0304edbfc2bddd3ade5"
+    },
+    {
+      "block_id": "page-0148-block-0012",
+      "order": 12,
+      "text": "Modafinil61,62\n",
+      "bbox": [
+        47.99909973144531,
+        255.8133087158203,
+        89.35858154296875,
+        264.52081298828125
+      ],
+      "text_sha256": "667240cc5f615b1d275c5066f32708d59b07ffa20e51137bb76e399e9ff134b5"
+    },
+    {
+      "block_id": "page-0148-block-0013",
+      "order": 13,
+      "text": "(up to 300mg/day)\n",
+      "bbox": [
+        47.99909973144531,
+        265.8208312988281,
+        107.60907745361328,
+        274.5283203125
+      ],
+      "text_sha256": "7359380e79527b2dc944c117a77f9dd812f829db9f639b1dd7ad493eba707705"
+    },
+    {
+      "block_id": "page-0148-block-0014",
+      "order": 14,
+      "text": "Limited positive data and one negative RCT for clozapine-induced weight gain. Not \nrecommended\n",
+      "bbox": [
+        140.49659729003906,
+        255.8233184814453,
+        408.0442199707031,
+        274.5283203125
+      ],
+      "text_sha256": "dbdf74bc4a5636937450710c1600e0f383541b2edc4d56f38ae1e42fe66346e3"
+    },
+    {
+      "block_id": "page-0148-block-0015",
+      "order": 15,
+      "text": "Naltrexone63,64\n",
+      "bbox": [
+        47.99909973144531,
+        292.84332275390625,
+        93.38627624511719,
+        301.5508117675781
+      ],
+      "text_sha256": "ed0a25fb81421ed10eb4999f5a1bca573b0b257b391bcd5f154742a8f32979f5"
+    },
+    {
+      "block_id": "page-0148-block-0016",
+      "order": 16,
+      "text": "(25–50mg/day)\n",
+      "bbox": [
+        47.99909973144531,
+        302.8458251953125,
+        96.3515853881836,
+        311.5533142089844
+      ],
+      "text_sha256": "95bac39a8bd698ccb1d66462ef0589548902a2af0368b874d589a65f171a0877"
+    },
+    {
+      "block_id": "page-0148-block-0017",
+      "order": 17,
+      "text": "Some positive results but evidence is limited to two small pilot RCTs. Not recommended\n",
+      "bbox": [
+        140.49659729003906,
+        292.84832763671875,
+        419.4217224121094,
+        301.5558166503906
+      ],
+      "text_sha256": "c377192b1b63fd724f57df8520f5f32ac8857eb215f106e92ee45b5c9d260cde"
+    },
+    {
+      "block_id": "page-0148-block-0018",
+      "order": 18,
+      "text": "Orlistat65–70\n",
+      "bbox": [
+        47.99909973144531,
+        329.8758239746094,
+        82.81417846679688,
+        338.58331298828125
+      ],
+      "text_sha256": "540336e2aa6c3539dc870a6524fc7ee8aea3cf1ee22c0d17383333699ddf2c67"
+    },
+    {
+      "block_id": "page-0148-block-0019",
+      "order": 19,
+      "text": "(120mg tds ac/pc)\n",
+      "bbox": [
+        47.99909973144531,
+        339.8708190917969,
+        105.51659393310547,
+        348.57830810546875
+      ],
+      "text_sha256": "f7f9805719a60b19a80fe0b4c9126f7c996f138486fbe21f99c37dc304253fce"
+    },
+    {
+      "block_id": "page-0148-block-0020",
+      "order": 20,
+      "text": "Reliable effect in obesity, especially when combined with calorie restriction. Few \npublished data in medication-induced weight gain but widely used in practice with \nsome success. In trials for clozapine or olanzapine-induced weight gain effect was only \nseen for men.69,70 When used without calorie restriction in psychiatric patients, the \neffects are very limited. Failure to adhere to a low-fat diet will result in fatty diarrhoea \nand possible malabsorption of orally administered medication. Overall, a good choice \nfor clozapine-induced weight gain where it reduces both weight and the incidence of \nconstipation71\n",
+      "bbox": [
+        140.49598693847656,
+        329.8733215332031,
+        419.1441955566406,
+        408.56829833984375
+      ],
+      "text_sha256": "926b075182fce42b6d4242282ef3790358083fcc5cce56e7309f6369e44148d3"
+    },
+    {
+      "block_id": "page-0148-block-0021",
+      "order": 21,
+      "text": "Reboxetine15\n",
+      "bbox": [
+        47.99909973144531,
+        414.89581298828125,
+        88.28351593017578,
+        423.6033020019531
+      ],
+      "text_sha256": "dd137a639c87c94e7d178cb49badf9ff26aa3823449a1d22ee6129817aa75fbd"
+    },
+    {
+      "block_id": "page-0148-block-0022",
+      "order": 22,
+      "text": "(4–8mg daily)\n",
+      "bbox": [
+        47.99909973144531,
+        424.89581298828125,
+        91.34159088134766,
+        433.6033020019531
+      ],
+      "text_sha256": "a3e0749f1cf3f281bceb74342ae554c882fbf02613b45b94020961c1cfa761ef"
+    },
+    {
+      "block_id": "page-0148-block-0023",
+      "order": 23,
+      "text": "Attenuates olanzapine-induced weight gain. Reverses some metabolic changes.72 \nEffective when combined with betahistine\n",
+      "bbox": [
+        140.49659729003906,
+        414.89581298828125,
+        401.2361145019531,
+        433.6007995605469
+      ],
+      "text_sha256": "c5e3ddb9246f66b9853c3cb502d31be0406edeb227b7a10c12d2152c1d52cb7f"
+    },
+    {
+      "block_id": "page-0148-block-0024",
+      "order": 24,
+      "text": "Topiramate32,54,73,74\n",
+      "bbox": [
+        48.00111389160156,
+        451.9158020019531,
+        106.50932312011719,
+        460.623291015625
+      ],
+      "text_sha256": "517b9876f8cc987df51ad1b50ecc6a9fe4aa6af9be51d8a61b0365cf1366af73"
+    },
+    {
+      "block_id": "page-0148-block-0025",
+      "order": 25,
+      "text": "(Up to 300mg daily)\n",
+      "bbox": [
+        47.99909973144531,
+        461.9208068847656,
+        111.77156829833984,
+        470.6282958984375
+      ],
+      "text_sha256": "29761a76a6742b30b3433530b14d83d869b8485b17456284db9a2ae455d0974f"
+    },
+    {
+      "block_id": "page-0148-block-0026",
+      "order": 26,
+      "text": "Reliably reduces weight even when medication-induced. Meta-analyses of RCTs suggest \na greater effect for prevention rather than treatment. Problems may arise because of \ntopiramate’s propensity for causing sedation, confusion and cognitive impairment. May \nhave antipsychotic properties\n",
+      "bbox": [
+        140.49659729003906,
+        451.9233093261719,
+        422.0767517089844,
+        490.623291015625
+      ],
+      "text_sha256": "a63c8c15d4ad047ca07e38c4420e016daa9adbe996d44a44294e3da0cfbe694f"
+    },
+    {
+      "block_id": "page-0148-block-0027",
+      "order": 27,
+      "text": "Zonisamide75\n",
+      "bbox": [
+        47.99909973144531,
+        496.9383239746094,
+        89.11591339111328,
+        505.64581298828125
+      ],
+      "text_sha256": "e1fefbc3b9960fb64161e4f8d269cf86e0255b5bb2118b4b10eb0379a80a0266"
+    },
+    {
+      "block_id": "page-0148-block-0028",
+      "order": 28,
+      "text": "(100–600mg/day)\n",
+      "bbox": [
+        47.99909973144531,
+        506.9458312988281,
+        104.69158172607422,
+        515.6533203125
+      ],
+      "text_sha256": "771a0be771c4702e185d7dbde9257e87684a05a6d1c708ff51e71aae3a137d87"
+    },
+    {
+      "block_id": "page-0148-block-0029",
+      "order": 29,
+      "text": "Antiepileptic drug with weight reducing properties. A RCT of 150mg a day showed \nsignificant weight reduction in people receiving SGAs. Another RCT (up to 600mg/day) \nshows attenuated olanzapine-induced weight gain. Sedation, diarrhoea and cognitive \nimpairment are the most common problems. Not recommended\n",
+      "bbox": [
+        140.49659729003906,
+        496.9483337402344,
+        419.8791809082031,
+        535.6483154296875
+      ],
+      "text_sha256": "880002240bf12ec36ec8dfeac0d06165b7c2cd1f36c681add10b370fa10ecda6"
+    },
+    {
+      "block_id": "page-0148-block-0030",
+      "order": 30,
+      "text": "ac, ante cibum (before meals); ASD, autism spectrum disorders. bd, bis in die (twice a day); pc, post cibum (after \nmeals); tds, ter die sumendum (three times a day)\n",
+      "bbox": [
+        47.99909973144531,
+        545.6907958984375,
+        408.2016296386719,
+        564.3958129882812
+      ],
+      "text_sha256": "3f814441e699ee902f9199e97e73bff09bc57ce3a9592284e55911aa6b6a6508"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

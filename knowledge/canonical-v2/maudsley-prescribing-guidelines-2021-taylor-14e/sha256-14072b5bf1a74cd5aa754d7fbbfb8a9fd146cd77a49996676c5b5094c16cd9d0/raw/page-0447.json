@@ -1,0 +1,443 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0447",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 447,
+  "source_page_index": 446,
+  "source_page_display": 447,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "426    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nBox 3.4  Generalised anxiety disorder\nCrisis management\nDrug\nComment\nBenzodiazepines\nNormally for short-term use only: max. 2–4 weeks although \nsome are of the opinion that risks are overstated42\nFirst-line drug treatment (In order of preference)29\nSSRIs\n(Up to maximum licensed dose)\nMay initially exacerbate symptoms. A lower starting dose is \nrecommended. Fluoxetine and sertraline are preferred options12\nSNRIs14\n(Up to maximum licensed dose)\nMay initially exacerbate symptoms. A lower starting dose is \nrecommended\nPregabalin\n150–600mg/day in divided doses\nResponse may be seen in the first week of treatment.43 \nIncreasingly misused. Significant withdrawal syndrome\nSecond-line drug treatment (Less well tolerated or weaker evidence base, no order of preference)\nAgomelatine44\n10–50mg/day\nAgomelatine has been shown to prevent relapse over a \n6-month period45\nBetablockers\nPropranolol 40–120mg/day in divided doses\nInitiate at 40mg and titrate dose up to effect if needed. Useful \nfor somatic symptoms, particularly tachycardia46\nBuspirone\n15–60mg/day in divided doses\nHas a delayed onset of action, takes up to 6 weeks to show \nequal efficacy with benzodiazepines47\nHydroxyzine\n50–100mg/day in divided doses\nIt is unclear whether hydroxyzine is effective due to an \nanxiolytic effect or a sedative effect48\nQuetiapine\n(MR, 50–300mg)\nRecommended as monotherapy. Probably not effective as \nadjunctive therapy to SSRI/SNRI in treatment resistance49\nTricyclic antidepressants\nClomipramine\n50–250mg/day50–52\nImipramine\n75–200mg/day in divided doses53\nInitiate clomipramine at 10mg/day and increase the dose \ngradually\nInitiate imipramine 25mg every 4 days and when at 100mg can \nincrease in 50mg increments10\nMAOI\nPhenelzine\n45–90mg/day in divided doses54\nFor mixed anxiety and depressive states. Patients need to avoid \nfood high in tyramine\nMirtazapine\n15–30mg nocte55,56\nExperimental\nChamomile\n220–1500mg/day\nTwo RCTs, one positive, one negative using standardised doses \nof chamomile and placebo57\nGingko biloba\n240mg–480mg/day\nOne positive RCT using standardised doses of gingko biloba \nand placebo58\nLavender oil preparation\n80–160mg/day\nOne positive RCT using standardised doses of lavender oil \ncompared to placebo and paroxetine59\nRiluzole\n50–100mg/day doses60\nLiver function monitoring required\nnocte, at night\n",
+  "raw_text_sha256": "e7a368ef1cb8cec8263d05cf15a7a7ae6c97507d80723b4163c864104f39b14b",
+  "coordinates_sha256": "86fb9dd88eae1d1518a4a29ad8dcee9f2628af6eb7fdb5280f8a44b6d74f5a67",
+  "block_sequence_sha256": "a4cf19117ff7f41f9a100dc5a8e0f5f25ac14cee6aee873344f57cee708c1e57",
+  "blocks": [
+    {
+      "block_id": "page-0447-block-0000",
+      "order": 0,
+      "text": "426    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "4bd5a2d0558f0db5ff24299a4c786ee05c5cfb43b12fb81eaae787f007bfe430"
+    },
+    {
+      "block_id": "page-0447-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0447-block-0002",
+      "order": 2,
+      "text": "Box 3.4  Generalised anxiety disorder\n",
+      "bbox": [
+        69.13999938964844,
+        69.32788848876953,
+        204.5279998779297,
+        79.400390625
+      ],
+      "text_sha256": "05321b95448479abfa8d88c21d2ca3f8691bf85441ff9a020d391518f6570e74"
+    },
+    {
+      "block_id": "page-0447-block-0003",
+      "order": 3,
+      "text": "Crisis management\n",
+      "bbox": [
+        69.13999938964844,
+        90.82289123535156,
+        136.23500061035156,
+        99.71038818359375
+      ],
+      "text_sha256": "6a9fffe15d60a5392c2ec08b9c5c8874f8a5bdfd690ea1c1e2b10af2e21d93aa"
+    },
+    {
+      "block_id": "page-0447-block-0004",
+      "order": 4,
+      "text": "Drug\nComment\n",
+      "bbox": [
+        69.13999938964844,
+        111.05787658691406,
+        256.30999755859375,
+        119.94537353515625
+      ],
+      "text_sha256": "5258753e6832c947af674f29dcc36125d4ad33bfaba7a80fda9ddb481d884eec"
+    },
+    {
+      "block_id": "page-0447-block-0005",
+      "order": 5,
+      "text": "Benzodiazepines\nNormally for short-term use only: max. 2–4 weeks although \nsome are of the opinion that risks are overstated42\n",
+      "bbox": [
+        69.13999938964844,
+        128.2628936767578,
+        414.6650695800781,
+        146.9678955078125
+      ],
+      "text_sha256": "1bf4ea7a8e822dc41c49d11b3c4918020ff0616a4493ac0e632824efff82f9bf"
+    },
+    {
+      "block_id": "page-0447-block-0006",
+      "order": 6,
+      "text": "First-line drug treatment (In order of preference)29\n",
+      "bbox": [
+        69.13999938964844,
+        153.1078643798828,
+        236.4058074951172,
+        161.995361328125
+      ],
+      "text_sha256": "44e3afdcbf7c2a06eea2c7ec85ceaaa73a165d799f7850f127b8cfd8d6fffd37"
+    },
+    {
+      "block_id": "page-0447-block-0007",
+      "order": 7,
+      "text": "SSRIs\n(Up to maximum licensed dose)\n",
+      "bbox": [
+        69.13999938964844,
+        168.31288146972656,
+        169.57247924804688,
+        187.01788330078125
+      ],
+      "text_sha256": "fbe5d8ec5e666b5f599d358caa9aba746a3fa798a95d87edcb17c7d3cad241b0"
+    },
+    {
+      "block_id": "page-0447-block-0008",
+      "order": 8,
+      "text": "May initially exacerbate symptoms. A lower starting dose is \nrecommended. Fluoxetine and sertraline are preferred options12\n",
+      "bbox": [
+        222.13999938964844,
+        168.31288146972656,
+        424.3931579589844,
+        187.01788330078125
+      ],
+      "text_sha256": "95f60e21cee24e26dcb98e86728b8ae0305c1641eed6900690f04222c1a3ce30"
+    },
+    {
+      "block_id": "page-0447-block-0009",
+      "order": 9,
+      "text": "SNRIs14\n",
+      "bbox": [
+        69.13999938964844,
+        193.33787536621094,
+        91.50701141357422,
+        202.04537963867188
+      ],
+      "text_sha256": "f35acbab88370405f725ed9ba9fd396f1172e06b8e2120366fb6539098da0bb8"
+    },
+    {
+      "block_id": "page-0447-block-0010",
+      "order": 10,
+      "text": "(Up to maximum licensed dose)\n",
+      "bbox": [
+        69.13999938964844,
+        203.33787536621094,
+        169.57247924804688,
+        212.04537963867188
+      ],
+      "text_sha256": "cf81e2d661147885e06800eeaace11679046f042c19096ec8859857d76a12465"
+    },
+    {
+      "block_id": "page-0447-block-0011",
+      "order": 11,
+      "text": "May initially exacerbate symptoms. A lower starting dose is \nrecommended\n",
+      "bbox": [
+        222.13999938964844,
+        193.3403778076172,
+        412.5574951171875,
+        212.04537963867188
+      ],
+      "text_sha256": "c7c75a1c381d9dc32ac8f6961b10de0fd34fa07a53b2c119ebc2232f74496d5d"
+    },
+    {
+      "block_id": "page-0447-block-0012",
+      "order": 12,
+      "text": "Pregabalin\n150–600mg/day in divided doses\nResponse may be seen in the first week of treatment.43 \nIncreasingly misused. Significant withdrawal syndrome\n",
+      "bbox": [
+        69.13999938964844,
+        218.36036682128906,
+        399.3883972167969,
+        237.06790161132812
+      ],
+      "text_sha256": "c9d4f3437d8114c7532b21fa6bf89082a6cf9b83d31e69464b3de78022c14f12"
+    },
+    {
+      "block_id": "page-0447-block-0013",
+      "order": 13,
+      "text": "Second-line drug treatment (Less well tolerated or weaker evidence base, no order of preference)\n",
+      "bbox": [
+        69.14091491699219,
+        243.20289611816406,
+        388.2283935546875,
+        252.09039306640625
+      ],
+      "text_sha256": "ab9ff3f5cbd1ad5f754afc6f4b64af3b5539ef62558fe3b556e109a322e5c90a"
+    },
+    {
+      "block_id": "page-0447-block-0014",
+      "order": 14,
+      "text": "Agomelatine44\n",
+      "bbox": [
+        69.14091491699219,
+        258.4053955078125,
+        114.83930969238281,
+        267.1128845214844
+      ],
+      "text_sha256": "9acf1dbd038317936bf71ec5fb2289175eef02f7fd48b4865af32e33929a9f78"
+    },
+    {
+      "block_id": "page-0447-block-0015",
+      "order": 15,
+      "text": "10–50mg/day\nAgomelatine has been shown to prevent relapse over a \n6-month period45\n",
+      "bbox": [
+        69.13999938964844,
+        258.4154052734375,
+        400.2425231933594,
+        277.1203918457031
+      ],
+      "text_sha256": "d39ef6200b62bf9e06f9f529d793935f748c0fb69f66b736fb6797cb7d7b8805"
+    },
+    {
+      "block_id": "page-0447-block-0016",
+      "order": 16,
+      "text": "Betablockers\nPropranolol 40–120mg/day in divided doses\n",
+      "bbox": [
+        69.13999938964844,
+        283.25787353515625,
+        209.05245971679688,
+        302.14288330078125
+      ],
+      "text_sha256": "ef0a53bd71950f2419d37c547b63453b3acc389eccfafddc18fe6cccdd9de37a"
+    },
+    {
+      "block_id": "page-0447-block-0017",
+      "order": 17,
+      "text": "Initiate at 40mg and titrate dose up to effect if needed. Useful \nfor somatic symptoms, particularly tachycardia46\n",
+      "bbox": [
+        222.13999938964844,
+        283.4378967285156,
+        423.2825622558594,
+        302.14288330078125
+      ],
+      "text_sha256": "37bfe889721dcb8eb43ef895cf999aa142bf2b766bc3348ca87fb27b0c46dcfb"
+    },
+    {
+      "block_id": "page-0447-block-0018",
+      "order": 18,
+      "text": "Buspirone\n15–60mg/day in divided doses\nHas a delayed onset of action, takes up to 6 weeks to show \nequal efficacy with benzodiazepines47\n",
+      "bbox": [
+        69.13999938964844,
+        308.462890625,
+        414.695068359375,
+        327.1678771972656
+      ],
+      "text_sha256": "5144aabe2392c007425ad1e8ada81208665627ccb71d6a6200a7d4240dd91490"
+    },
+    {
+      "block_id": "page-0447-block-0019",
+      "order": 19,
+      "text": "Hydroxyzine\n50–100mg/day in divided doses\nIt is unclear whether hydroxyzine is effective due to an \nanxiolytic effect or a sedative effect48\n",
+      "bbox": [
+        69.14009857177734,
+        333.4879150390625,
+        397.70758056640625,
+        352.1929016113281
+      ],
+      "text_sha256": "c3bde972a350ff1a45d47de8705a49d889661d434560eabad215c02e6123e849"
+    },
+    {
+      "block_id": "page-0447-block-0020",
+      "order": 20,
+      "text": "Quetiapine\n(MR, 50–300mg)\n",
+      "bbox": [
+        69.14009857177734,
+        358.5129089355469,
+        123.3350830078125,
+        377.2178955078125
+      ],
+      "text_sha256": "309c0059734368bf90db1cc3fd73a057922e049da28639df50fd0dff1083bb47"
+    },
+    {
+      "block_id": "page-0447-block-0021",
+      "order": 21,
+      "text": "Recommended as monotherapy. Probably not effective as \nadjunctive therapy to SSRI/SNRI in treatment resistance49\n",
+      "bbox": [
+        222.14010620117188,
+        358.5129089355469,
+        407.45013427734375,
+        377.2178955078125
+      ],
+      "text_sha256": "8d1324591f62a19e76f12deaba9374f69fbb84fbd91c3c6ec70cc3b4c0d4d322"
+    },
+    {
+      "block_id": "page-0447-block-0022",
+      "order": 22,
+      "text": "Tricyclic antidepressants\nClomipramine\n50–250mg/day50–52\n",
+      "bbox": [
+        69.14009857177734,
+        383.3578796386719,
+        153.74009704589844,
+        412.2403869628906
+      ],
+      "text_sha256": "2cbe37212c91f4776baf968ce4a41094033dd56e4faec80a9c6d5aba80dabfca"
+    },
+    {
+      "block_id": "page-0447-block-0023",
+      "order": 23,
+      "text": "Imipramine\n75–200mg/day in divided doses53\n",
+      "bbox": [
+        69.14009857177734,
+        413.53790283203125,
+        175.28890991210938,
+        432.2428894042969
+      ],
+      "text_sha256": "31f138139dfed9c658adea089d0fda6424c40e40cbe9562f09af6b67c480fb08"
+    },
+    {
+      "block_id": "page-0447-block-0024",
+      "order": 24,
+      "text": "Initiate clomipramine at 10mg/day and increase the dose \ngradually\n",
+      "bbox": [
+        222.14010620117188,
+        383.53790283203125,
+        405.357666015625,
+        402.2428894042969
+      ],
+      "text_sha256": "1324a6e0915012c3023115373dce95e8f3ce79063c92cc3fe0f3cf21092577a6"
+    },
+    {
+      "block_id": "page-0447-block-0025",
+      "order": 25,
+      "text": "Initiate imipramine 25mg every 4 days and when at 100mg can \nincrease in 50mg increments10\n",
+      "bbox": [
+        222.14010620117188,
+        407.53790283203125,
+        426.755126953125,
+        426.2428894042969
+      ],
+      "text_sha256": "71f3ab6da0f61256fba7b594ec3bb8e7b165d13af42d7e3cdc5ba87a55bf7716"
+    },
+    {
+      "block_id": "page-0447-block-0026",
+      "order": 26,
+      "text": "MAOI\nPhenelzine\n45–90mg/day in divided doses54\n",
+      "bbox": [
+        69.14009857177734,
+        438.38287353515625,
+        171.11891174316406,
+        467.265380859375
+      ],
+      "text_sha256": "50ba071b38babbe395863313c11cd87bc985fd7df7d3584c9ceac0c56ce2de47"
+    },
+    {
+      "block_id": "page-0447-block-0027",
+      "order": 27,
+      "text": "For mixed anxiety and depressive states. Patients need to avoid \nfood high in tyramine\n",
+      "bbox": [
+        222.14010620117188,
+        438.5628967285156,
+        424.5201721191406,
+        457.26788330078125
+      ],
+      "text_sha256": "831ad7a0cd81f5a366ebbdc2184a8e7eb43c5840dadbea0c261dd9846f52a506"
+    },
+    {
+      "block_id": "page-0447-block-0028",
+      "order": 28,
+      "text": "Mirtazapine\n15–30mg nocte55,56\n",
+      "bbox": [
+        69.14010620117188,
+        473.587890625,
+        130.92977905273438,
+        492.2928771972656
+      ],
+      "text_sha256": "ad72ef49dc0179214a81391ced373bc643c92fa4919a0512a1e82829da2d9e91"
+    },
+    {
+      "block_id": "page-0447-block-0029",
+      "order": 29,
+      "text": "Experimental\n",
+      "bbox": [
+        69.14009857177734,
+        498.432861328125,
+        115.82759094238281,
+        507.32037353515625
+      ],
+      "text_sha256": "702e2f7671070157a0c2a6eb9d738ac3bfa6e376d61bff37dcfbbc7ca052d904"
+    },
+    {
+      "block_id": "page-0447-block-0030",
+      "order": 30,
+      "text": "Chamomile\n220–1500mg/day\nTwo RCTs, one positive, one negative using standardised doses \nof chamomile and placebo57\n",
+      "bbox": [
+        69.14009857177734,
+        513.6353759765625,
+        423.8303527832031,
+        532.3403930664062
+      ],
+      "text_sha256": "9c8b78b80609a220d8920544be3d838eed5c1dca1b8d23da4a54c74fe0573d0e"
+    },
+    {
+      "block_id": "page-0447-block-0031",
+      "order": 31,
+      "text": "Gingko biloba\n240mg–480mg/day\nOne positive RCT using standardised doses of gingko biloba \nand placebo58\n",
+      "bbox": [
+        69.13999938964844,
+        538.662841796875,
+        414.98773193359375,
+        557.367919921875
+      ],
+      "text_sha256": "e532ff073ed5a89318930756e73c3f3d2d54e833cd65414c75bcd2f0dd6610f3"
+    },
+    {
+      "block_id": "page-0447-block-0032",
+      "order": 32,
+      "text": "Lavender oil preparation\n80–160mg/day\nOne positive RCT using standardised doses of lavender oil \ncompared to placebo and paroxetine59\n",
+      "bbox": [
+        69.13999938964844,
+        563.6878662109375,
+        407.8851623535156,
+        582.3928833007812
+      ],
+      "text_sha256": "5439a3bfa19c0b7d06297eaa2185ae9f8b17d3e17912f2b72f953c2c7088220f"
+    },
+    {
+      "block_id": "page-0447-block-0033",
+      "order": 33,
+      "text": "Riluzole\n50–100mg/day doses60\nLiver function monitoring required\n",
+      "bbox": [
+        69.14009857177734,
+        588.712890625,
+        331.460205078125,
+        607.4179077148438
+      ],
+      "text_sha256": "1cd37a1fcc43a2d638e39bd95846893ca14819f70fccd5869e32c025654e88a1"
+    },
+    {
+      "block_id": "page-0447-block-0034",
+      "order": 34,
+      "text": "nocte, at night\n",
+      "bbox": [
+        61.38999938964844,
+        625.587890625,
+        108.48248291015625,
+        634.29541015625
+      ],
+      "text_sha256": "e993b6b071dcbeb75ec2d99a0a19d0bf2703259a52da00b4d5ced7ebcae1509b"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

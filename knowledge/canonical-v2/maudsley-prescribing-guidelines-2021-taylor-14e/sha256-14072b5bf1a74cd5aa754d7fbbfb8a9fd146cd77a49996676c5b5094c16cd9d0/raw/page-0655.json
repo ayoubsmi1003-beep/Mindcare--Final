@@ -1,0 +1,311 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0655",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 655,
+  "source_page_index": 654,
+  "source_page_display": 655,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Table 6.4  (Continued )\nCalcium – 0\nEntacapone – 0\nLovastatin – 0\nRamipril – NK\nCalcium and Vitamin D – 0\nErythromycin – NK\nLurasidone – 0\nRanitidine – 0\nCandersartan – 0\nExanatide – 0\nMacrogol – 0\nRasagiline – 0\nCaptopril – NK\nEzetimibe – 0\nMagnesium – 0\nReboxetine – 0\nCarbachol – 0\nFelodipine – 0\nMebeverine – 0\nRisedronate – 0\nCarbamazepine – 1\nFentanyl – 1\nMelatonin – 0\nRisperidone – 0\nCarbimazole – NK\nFerrous sulphate – 0\nMeloxicam – 0\nRivaroxaban – NK\nCarbocisteine – 0\nFesoterodine – 0\nMemantine – 0\nRivastigmine – 0\nCarvedilol – NK\nFexofenadine – 0\nMesalazine – 0\nRopinirole – 0\nCefalexin (Cephalexin) – 0\nFinasteride – 0\nMetformin – NK\nRosiglitazone – 0\nCetirizine – 0\nFlavoxate* – NK\nMethocarbamol – NK\nRosuvastatin – NK\nChloral hydrate – NK\nFlecainide – 0\nMethotrexate – NK\nSalbutamol – 0\nChlordiazepoxide – 0\nFlucloxacillin – 0\nMetoclopramide – 0\nChlorphenamine – 2\nFludrocortisone – NK\nMetoprolol – 0\nSalmeterol (inhaler) – 0\nChlorpromazine – 3\nFluoxetine – 1\nMidazolam – 1\nSelegiline – 0\nChlortalidone – NK\nFlupentixol (flupenthixol) – 1\nMinocycline – 0\nSenna – 0\nCimetidine – 0\nFluphenazine – 1\nMirabegron – 0\nSertindole – 1\nCinnarizine – 1\nFluvoxamine – 0\nMirtazapine – 1\nSertraline – 1\nCiprofloxacin – 0\nFolic acid – 0\nMoclobemide – 0\nSildenafil – 0\nCitalopram – 1\nFurosemide – 0\nMorphine – 0\nSimvastatin – 0\nThe AEC scale is available as a regularly updated web-based app. Please visit www.medichec.com. This site has recently been updated to include the identification of \nmedications that are reported to cause dizziness and drowsiness since these adverse effects can add to cognitive impairment and confusion in older people and can \nincrease the risk of falls.\n",
+  "raw_text_sha256": "e3b137b24bd9068713926c4b6fc2d0a56aba108181e7339d083b02e00897f804",
+  "coordinates_sha256": "ac0d28570f58cb8e09b6d2f3181858dc918c18858317981e061a0491df2f680a",
+  "block_sequence_sha256": "9a0a83241ca7af11ed589ab6638357a97532b7ae7a324dad675a2417e2bb85da",
+  "blocks": [
+    {
+      "block_id": "page-0655-block-0000",
+      "order": 0,
+      "text": "Table 6.4  (Continued )\n",
+      "bbox": [
+        72.12750244140625,
+        532.448974609375,
+        81.01499938964844,
+        606.6539916992188
+      ],
+      "text_sha256": "827a714cac66bdf94075144dbbad4a79943d8c2f92d6b1100fec65ef8ae215d3"
+    },
+    {
+      "block_id": "page-0655-block-0001",
+      "order": 1,
+      "text": "Calcium – 0\nEntacapone – 0\nLovastatin – 0\nRamipril – NK\n",
+      "bbox": [
+        88.93230438232422,
+        228.46946716308594,
+        97.63980102539062,
+        608.3670043945312
+      ],
+      "text_sha256": "16c6210dcdedede67a283af625527ce31b1f8c9c8a3b326cbd1cc75139b60f87"
+    },
+    {
+      "block_id": "page-0655-block-0002",
+      "order": 2,
+      "text": "Calcium and Vitamin D – 0\nErythromycin – NK\nLurasidone – 0\nRanitidine – 0\n",
+      "bbox": [
+        104.55480194091797,
+        228.0419464111328,
+        113.26229858398438,
+        608.3670043945312
+      ],
+      "text_sha256": "37ae80bb0fac559038896af7e680c8d59bd53282e8f5980c5fbf93c1b675ba97"
+    },
+    {
+      "block_id": "page-0655-block-0003",
+      "order": 3,
+      "text": "Candersartan – 0\nExanatide – 0\nMacrogol – 0\nRasagiline – 0\n",
+      "bbox": [
+        119.99729919433594,
+        228.0419464111328,
+        128.88479614257812,
+        608.3670043945312
+      ],
+      "text_sha256": "38d84be4a6b63395b75e27c8157d81c8e8088ca776857063a8a1313015d98a94"
+    },
+    {
+      "block_id": "page-0655-block-0004",
+      "order": 4,
+      "text": "Captopril – NK\nEzetimibe – 0\nMagnesium – 0\nReboxetine – 0\n",
+      "bbox": [
+        135.79978942871094,
+        224.29197692871094,
+        144.50729370117188,
+        608.3670043945312
+      ],
+      "text_sha256": "ffcdbfc38ceefac1d12aecd8acf3069ce4a2b1d27d4dc1587e01248f27ff884c"
+    },
+    {
+      "block_id": "page-0655-block-0005",
+      "order": 5,
+      "text": "Carbachol – 0\nFelodipine – 0\nMebeverine – 0\nRisedronate – 0\n",
+      "bbox": [
+        151.24229431152344,
+        222.3419647216797,
+        160.12979125976562,
+        608.3670043945312
+      ],
+      "text_sha256": "e0dd7035b54cde4fdf18c1afa0085badb0a240ff32c4332b9902d91a0a604a4b"
+    },
+    {
+      "block_id": "page-0655-block-0006",
+      "order": 6,
+      "text": "Carbamazepine – 1\nFentanyl – 1\nMelatonin – 0\nRisperidone – 0\n",
+      "bbox": [
+        167.04478454589844,
+        222.6194305419922,
+        175.75228881835938,
+        608.3670043945312
+      ],
+      "text_sha256": "efaa3536e59926a19bdf7b7273a667410915b6a46ef4c943768f6f6f01203e73"
+    },
+    {
+      "block_id": "page-0655-block-0007",
+      "order": 7,
+      "text": "Carbimazole – NK\nFerrous sulphate – 0\nMeloxicam – 0\nRivaroxaban – NK\n",
+      "bbox": [
+        182.6672821044922,
+        215.68199157714844,
+        191.37478637695312,
+        608.3670043945312
+      ],
+      "text_sha256": "ee840873426d48163d2fcc067c3252e20e1b8a11b62f411faa7bc7b72fce2308"
+    },
+    {
+      "block_id": "page-0655-block-0008",
+      "order": 8,
+      "text": "Carbocisteine – 0\nFesoterodine – 0\nMemantine – 0\nRivastigmine – 0\n",
+      "bbox": [
+        198.28977966308594,
+        219.7169647216797,
+        206.99728393554688,
+        608.3670043945312
+      ],
+      "text_sha256": "623da864e45fe6334a6b4b3f06d5f2f4751c47f417de5c9dce211c80673bfd42"
+    },
+    {
+      "block_id": "page-0655-block-0009",
+      "order": 9,
+      "text": "Carvedilol – NK\nFexofenadine – 0\nMesalazine – 0\nRopinirole – 0\n",
+      "bbox": [
+        213.9122772216797,
+        227.75694274902344,
+        222.61978149414062,
+        608.3670043945312
+      ],
+      "text_sha256": "6d47e5aead6ae999d74db784a08aa50daea67cfbda6b08da56a1b552b2c00b0f"
+    },
+    {
+      "block_id": "page-0655-block-0010",
+      "order": 10,
+      "text": "Cefalexin (Cephalexin) – 0\nFinasteride – 0\nMetformin – NK\nRosiglitazone – 0\n",
+      "bbox": [
+        229.53477478027344,
+        217.6244354248047,
+        238.24227905273438,
+        608.3670043945312
+      ],
+      "text_sha256": "edc5ea2c818347e82c88180c0ad1ffb7f1bfbd07a914aae03fcc79690c6a89c3"
+    },
+    {
+      "block_id": "page-0655-block-0011",
+      "order": 11,
+      "text": "Cetirizine – 0\nFlavoxate* – NK\nMethocarbamol – NK\nRosuvastatin – NK\n",
+      "bbox": [
+        245.1572723388672,
+        214.29444885253906,
+        253.86477661132812,
+        608.3670043945312
+      ],
+      "text_sha256": "3d4479b5e63925e52c5025d7bb4e77b4ad8d6409e37d756f0ec71216b1f62324"
+    },
+    {
+      "block_id": "page-0655-block-0012",
+      "order": 12,
+      "text": "Chloral hydrate – NK\nFlecainide – 0\nMethotrexate – NK\nSalbutamol – 0\n",
+      "bbox": [
+        260.5997619628906,
+        223.45945739746094,
+        269.4872741699219,
+        608.3670043945312
+      ],
+      "text_sha256": "0744e9e72579d94c97a0cc05caef64821522d995afb9465f34ec0fad3f57f3fd"
+    },
+    {
+      "block_id": "page-0655-block-0013",
+      "order": 13,
+      "text": "Chlordiazepoxide – 0\nFlucloxacillin – 0\nMetoclopramide – 0\n",
+      "bbox": [
+        276.40228271484375,
+        316.0694274902344,
+        285.1097717285156,
+        608.3670043945312
+      ],
+      "text_sha256": "60e3e515e143fbf497662c4d315802582f19db83f2a927cf2b4cf92067f7f6aa"
+    },
+    {
+      "block_id": "page-0655-block-0014",
+      "order": 14,
+      "text": "Chlorphenamine – 2\nFludrocortisone – NK\nMetoprolol – 0\nSalmeterol (inhaler) – 0\n",
+      "bbox": [
+        292.0247802734375,
+        198.1844940185547,
+        300.7322692871094,
+        608.3670043945312
+      ],
+      "text_sha256": "787e20bd6a0284afbcdbdb8374cd12f03e10ad9821d1df0194089707e2faaa24"
+    },
+    {
+      "block_id": "page-0655-block-0015",
+      "order": 15,
+      "text": "Chlorpromazine – 3\nFluoxetine – 1\nMidazolam – 1\nSelegiline – 0\n",
+      "bbox": [
+        307.64727783203125,
+        229.71446228027344,
+        316.3547668457031,
+        608.3670043945312
+      ],
+      "text_sha256": "db4f6fe1db17718fafe30156701acdaae6606e95405c2d49b9543315a016797e"
+    },
+    {
+      "block_id": "page-0655-block-0016",
+      "order": 16,
+      "text": "Chlortalidone – NK\nFlupentixol (flupenthixol) – 1\nMinocycline – 0\nSenna – 0\n",
+      "bbox": [
+        323.269775390625,
+        240.12449645996094,
+        331.9772644042969,
+        608.3670043945312
+      ],
+      "text_sha256": "3d10e5474111b59cf19a4f038a2ec222ca69190d160177b92145ab1dd5eff77a"
+    },
+    {
+      "block_id": "page-0655-block-0017",
+      "order": 17,
+      "text": "Cimetidine – 0\nFluphenazine – 1\nMirabegron – 0\nSertindole – 1\n",
+      "bbox": [
+        338.89227294921875,
+        227.6294708251953,
+        347.5997619628906,
+        608.3670043945312
+      ],
+      "text_sha256": "c5222da554ee66b50c4ee09ed0152d22d751ce7cd6c4554ee6a88f214bcf86c0"
+    },
+    {
+      "block_id": "page-0655-block-0018",
+      "order": 18,
+      "text": "Cinnarizine – 1\nFluvoxamine – 0\nMirtazapine – 1\nSertraline – 1\n",
+      "bbox": [
+        354.5147705078125,
+        229.7220001220703,
+        363.2222595214844,
+        608.3670043945312
+      ],
+      "text_sha256": "cd41b8bad229f6c4f321200e5b7e4a25b33bcada5c2e55eef9212266c9265584"
+    },
+    {
+      "block_id": "page-0655-block-0019",
+      "order": 19,
+      "text": "Ciprofloxacin – 0\nFolic acid – 0\nMoclobemide – 0\nSildenafil – 0\n",
+      "bbox": [
+        370.13726806640625,
+        230.9669647216797,
+        378.8447570800781,
+        608.3670043945312
+      ],
+      "text_sha256": "e66d7bb62e1fda71f3c04f3c31edeebd5c151cc1bc9cfe8ed2a283722b2af6fa"
+    },
+    {
+      "block_id": "page-0655-block-0020",
+      "order": 20,
+      "text": "Citalopram – 1\nFurosemide – 0\nMorphine – 0\nSimvastatin – 0\n",
+      "bbox": [
+        385.759765625,
+        223.47450256347656,
+        394.4672546386719,
+        608.3670043945312
+      ],
+      "text_sha256": "c6c40d9f46c9b20b057fb57ec610d328eebfd8106ad1861d3447fc76aace2b59"
+    },
+    {
+      "block_id": "page-0655-block-0021",
+      "order": 21,
+      "text": "The AEC scale is available as a regularly updated web-based app. Please visit www.medichec.com. This site has recently been updated to include the identification of \n",
+      "bbox": [
+        404.00726318359375,
+        84.64962005615234,
+        412.7147521972656,
+        612.3720092773438
+      ],
+      "text_sha256": "032c093213c8f8ac7a376c2fc56ea4947e5660c99f07a9bec70d677d3eeb68eb"
+    },
+    {
+      "block_id": "page-0655-block-0022",
+      "order": 22,
+      "text": "medications that are reported to cause dizziness and drowsiness since these adverse effects can add to cognitive impairment and confusion in older people and can \n",
+      "bbox": [
+        414.0047607421875,
+        88.2495346069336,
+        422.7122497558594,
+        612.3720092773438
+      ],
+      "text_sha256": "61252345eb13d9d5f9d67f1b3dddbc5f46e04be966735d180fb5b97e789c80af"
+    },
+    {
+      "block_id": "page-0655-block-0023",
+      "order": 23,
+      "text": "increase the risk of falls.\n",
+      "bbox": [
+        424.00225830078125,
+        535.8419799804688,
+        432.7097473144531,
+        612.3720092773438
+      ],
+      "text_sha256": "df783cc668f5abb57e07f52c54965e80cf822234154829852155d9606782b705"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

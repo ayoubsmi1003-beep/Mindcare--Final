@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0557",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 557,
+  "source_page_index": 556,
+  "source_page_display": 557,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "536    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nMost guidelines3,9 recommend that benzodiazepines be slowly withdrawn using long-\nacting drugs such as diazepam and that inpatient detoxification be considered.\nStimulants\nUse of cocaine and amfetamines is associated with a range of congenital abnormalities \nand both prematurity and low birthweight. There are no effective pharmacological \ninterventions, and detoxification is the primary aim, possibly as an inpatient.4\nReferences\n\t 1.\t Wilson CA, et al. Alcohol, smoking, and other substance use in the perinatal period. BMJ 2020; 369:m1627–m1627.\n\t 2.\t Mayet S, et al. Drugs and pregnancy – outcomes of women engaged with a specialist perinatal outreach addictions service. Drug Alcohol Rev \n2008; 27:497–503.\n\t 3.\t Kaltenbach K, et al. Neonatal abstinence syndrome, pharmacotherapy and developmental outcome. Neurobehav Toxicol Teratol 1986; \n8:353–355.\n\t 4.\t World Health Organisation. WHO guidelines approved by the guidelines review committee. Guidelines for the identification and manage-\nment of substance use and substance use disorders in pregnancy. Geneva. 2014.\n\t 5.\t Cohen A, et al. Substance misuse in pregnancy. Obstetr Gynaecol Reprod Med 2017; 27:316–321.\n\t 6.\t National Institute for Clinical Excellence. Pregnancy and complex social factors: a model for service provision for pregnant women with \ncomplex social factors. Clinical guideline [CG110]. 2010 (last checked August 2018); https://www.nice.org.uk/Guidance/CG110.\n\t 7.\t Winklbaur B, et al. Treating pregnant women dependent on opioids is not the same as treating pregnancy and opioid dependence: a knowl-\nedge synthesis for better treatment for women and neonates. Addiction 2008; 103:1429–1440.\n\t 8.\t Jones HE, et al. Maternal Opioid Treatment: Human Experimental Research (MOTHER)–approach, issues and lessons learned. Addiction \n2012; 107 Suppl 1:28–35.\n\t 9.\t U.S. Department of Health & Human Services. Substance Abuse and Mental Health Services Administration (SAMHSA). 2020; https://www.\nsamhsa.gov.\n\t10.\t McAllister-Williams RH, et al. British Association for Psychopharmacology consensus guidance on the use of psychotropic medication pre-\nconception, in pregnancy and postpartum 2017. J Psychopharmacol 2017; 31:519–552.\n\t11.\t Jansson LM, et al. Perinatal marijuana use and the developing child. JAMA 2018; 320:545–546.\n",
+  "raw_text_sha256": "7fa9bccda65bb544d28e548d302bfbbe48be15487a8b213dac0347d2ed51d510",
+  "coordinates_sha256": "a3834b0bcf2537886316a2452d892da64e5ba70bf64d65c8b44408fe55945fca",
+  "block_sequence_sha256": "3d1eaf056a735cc87ee274e283296848163f6edc9d40741cf4acf88779f29729",
+  "blocks": [
+    {
+      "block_id": "page-0557-block-0000",
+      "order": 0,
+      "text": "536    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "0ce6bf983bc4876fb88b2cd018169e10ac8f15d0d0bdcc9ba48593481e5af36b"
+    },
+    {
+      "block_id": "page-0557-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0557-block-0002",
+      "order": 2,
+      "text": "Most guidelines3,9 recommend that benzodiazepines be slowly withdrawn using long-\nacting drugs such as diazepam and that inpatient detoxification be considered.\n",
+      "bbox": [
+        61.893089294433594,
+        62.5504150390625,
+        433.8930969238281,
+        86.27041625976562
+      ],
+      "text_sha256": "3ce4373e813c4799c3fa040b4cea51a68c6fdb4265907cf798bda96169230eb6"
+    },
+    {
+      "block_id": "page-0557-block-0003",
+      "order": 3,
+      "text": "Stimulants\n",
+      "bbox": [
+        61.88999938964844,
+        103.70541381835938,
+        116.90099334716797,
+        116.74041748046875
+      ],
+      "text_sha256": "13a83d12e0def92a3f1137f69a878adf1022cb88bacc1ab80a92ab34d3e771a4"
+    },
+    {
+      "block_id": "page-0557-block-0004",
+      "order": 4,
+      "text": "Use of cocaine and amfetamines is associated with a range of congenital abnormalities \nand both prematurity and low birthweight. There are no effective pharmacological \ninterventions, and detoxification is the primary aim, possibly as an inpatient.4\n",
+      "bbox": [
+        61.88999938964844,
+        122.5504150390625,
+        436.7099609375,
+        158.27041625976562
+      ],
+      "text_sha256": "4b104cee22ad85054a8e5af0394de417ee90d0eb5c9888ae769d7f5adda98d98"
+    },
+    {
+      "block_id": "page-0557-block-0005",
+      "order": 5,
+      "text": "References\n",
+      "bbox": [
+        61.88999938964844,
+        175.70547485351562,
+        117.92399597167969,
+        188.740478515625
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0557-block-0006",
+      "order": 6,
+      "text": "\t 1.\t Wilson CA, et al. Alcohol, smoking, and other substance use in the perinatal period. BMJ 2020; 369:m1627–m1627.\n\t 2.\t Mayet S, et al. Drugs and pregnancy – outcomes of women engaged with a specialist perinatal outreach addictions service. Drug Alcohol Rev \n",
+      "bbox": [
+        61.88999938964844,
+        193.68247985839844,
+        435.61212158203125,
+        209.8584747314453
+      ],
+      "text_sha256": "df1711977307480926f80c7d5b86a3d3b221e795748302c60aa500c24eae42d2"
+    },
+    {
+      "block_id": "page-0557-block-0007",
+      "order": 7,
+      "text": "2008; 27:497–503.\n\t 3.\t Kaltenbach K, et al. Neonatal abstinence syndrome, pharmacotherapy and developmental outcome. Neurobehav Toxicol Teratol 1986; \n",
+      "bbox": [
+        61.902000427246094,
+        211.68247985839844,
+        435.5700378417969,
+        227.8584747314453
+      ],
+      "text_sha256": "327cae0f22d0ac0562cffde8a0f2be2eb7860dbf74b0edd7e4e72c86b3215fc3"
+    },
+    {
+      "block_id": "page-0557-block-0008",
+      "order": 8,
+      "text": "8:353–355.\n\t 4.\t World Health Organisation. WHO guidelines approved by the guidelines review committee. Guidelines for the identification and manage-\n",
+      "bbox": [
+        61.90800094604492,
+        229.68247985839844,
+        433.9138488769531,
+        245.8584747314453
+      ],
+      "text_sha256": "4d7cde350c7783b90ef56084b349229b2863590bf3b7a25e6ee8c445d90a0e66"
+    },
+    {
+      "block_id": "page-0557-block-0009",
+      "order": 9,
+      "text": "ment of substance use and substance use disorders in pregnancy. Geneva. 2014.\n\t 5.\t Cohen A, et al. Substance misuse in pregnancy. Obstetr Gynaecol Reprod Med 2017; 27:316–321.\n\t 6.\t National Institute for Clinical Excellence. Pregnancy and complex social factors: a model for service provision for pregnant women with \n",
+      "bbox": [
+        61.91400146484375,
+        247.82647705078125,
+        435.60601806640625,
+        272.8584899902344
+      ],
+      "text_sha256": "ee468adc7b965d482e36d92838fc002420a12789191aa5d5718840d5d9b0756b"
+    },
+    {
+      "block_id": "page-0557-block-0010",
+      "order": 10,
+      "text": "complex social factors. Clinical guideline [CG110]. 2010 (last checked August 2018); https://www.nice.org.uk/Guidance/CG110.\n\t 7.\t Winklbaur B, et al. Treating pregnant women dependent on opioids is not the same as treating pregnancy and opioid dependence: a knowl-\n",
+      "bbox": [
+        61.92599868774414,
+        274.82647705078125,
+        433.8900146484375,
+        290.8584899902344
+      ],
+      "text_sha256": "6091e45a715d338c522c7d102296b14844de447913f33e27005c310b18ba66c9"
+    },
+    {
+      "block_id": "page-0557-block-0011",
+      "order": 11,
+      "text": "edge synthesis for better treatment for women and neonates. Addiction 2008; 103:1429–1440.\n\t 8.\t Jones HE, et al. Maternal Opioid Treatment: Human Experimental Research (MOTHER)–approach, issues and lessons learned. Addiction \n",
+      "bbox": [
+        61.93199920654297,
+        292.6824645996094,
+        435.6240539550781,
+        308.8584899902344
+      ],
+      "text_sha256": "6426ce24e5b83ab72d88db0e49fe0656433c1fe969a80fffe8b28a35a6829a40"
+    },
+    {
+      "block_id": "page-0557-block-0012",
+      "order": 12,
+      "text": "2012; 107 Suppl 1:28–35.\n\t 9.\t U.S. Department of Health & Human Services. Substance Abuse and Mental Health Services Administration (SAMHSA). 2020; https://www.\n",
+      "bbox": [
+        61.9379997253418,
+        310.6824645996094,
+        433.9618835449219,
+        326.8584899902344
+      ],
+      "text_sha256": "86b377a8f2ba51b649d5d484d976b2131cc1ace3e80b3ff5a9f685bd742969ea"
+    },
+    {
+      "block_id": "page-0557-block-0013",
+      "order": 13,
+      "text": "samhsa.gov.\n\t10.\t McAllister-Williams RH, et al. British Association for Psychopharmacology consensus guidance on the use of psychotropic medication pre-\n",
+      "bbox": [
+        61.944000244140625,
+        328.82647705078125,
+        433.9078369140625,
+        344.8584899902344
+      ],
+      "text_sha256": "21a61fe100729f479b2d8785fa7102c16ba431e2fdc3cd75ea7bc2a7e24d2a05"
+    },
+    {
+      "block_id": "page-0557-block-0014",
+      "order": 14,
+      "text": "conception, in pregnancy and postpartum 2017. J Psychopharmacol 2017; 31:519–552.\n\t11.\t Jansson LM, et al. Perinatal marijuana use and the developing child. JAMA 2018; 320:545–546.\n",
+      "bbox": [
+        61.95000076293945,
+        346.6824645996094,
+        321.85797119140625,
+        362.8584899902344
+      ],
+      "text_sha256": "5146896a1f2281f8e2ca1239843fc163dc24d9a27f6e8480825b8d0b89600acc"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

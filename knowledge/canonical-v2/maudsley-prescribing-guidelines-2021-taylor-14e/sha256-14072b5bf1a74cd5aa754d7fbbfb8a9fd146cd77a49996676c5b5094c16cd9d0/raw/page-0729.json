@@ -1,0 +1,707 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0729",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 729,
+  "source_page_index": 728,
+  "source_page_display": 729,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug\nInfant plasma \nconcentrations\nRelative infant \ndose (RID)\nReported acute adverse effects in \ninfant\nReported developmental effects in \ninfant\nReboxetine4,11,71\nUndetectable or low.\n1–3%\nNone reported\nIn a study of four infants three reached \nnormal milestones. The fourth had \ndevelopmental problems thought not \nto be related to reboxetine\nSertraline4,11,23,38,65,72–80\nUndetectable or low. There \nis one report of an unusually \nhigh infant serum level (half \nmaternal serum level). The \ninfant was reported to be \n‘clinically thriving’.\n0.5–3%\nSerotonergic overstimulation reported \nin preterm infant also exposed to \nsertraline in utero. Symptoms \nincluded hyperthermia, shivering, \nmyoclonus, tremor, and irritability,  \nhigh pitched crying, decreased \n suckling reflex and reactivity.\nWithdrawal symptoms (agitation, \nrestlessness, insomnia and an enhanced \nstartle reaction) developed in a breastfed \nneonate, after abrupt withdrawal of \nmaternal sertraline. The neonate was \nexposed to sertraline in utero.\nNone reported.\nIn a study of 78 infants of mothers \ntaking an SSRI or venlafaxine no \ndifference in weight was noted at 6 \nmonths compared with the ‘normative’ \nweight.\nTrazodone4,81\nNot assessed.\n2.8%\nNone reported but not assessed.\nNone reported but not assessed.\nTricyclic\nAntidepressants\n(TCAs)4,14,82–90\nUndetectable or low.\nNortriptyline.\nAmitriptyline, \n1–3%.\nClomipramine.\nAdverse effects have not been \nreported in infants exposed to \nnortriptyline, clomipramine, \nimipramine, dosulepin and \ndesipramine through breast milk.\nSevere sedation and poor feeding \nreported with amitriptyline.\nPoor suckling, muscle hypotonia, \ndrowsiness and respiratory \ndepression reported with doxepin.\nNone reported.\nA study of 15 children did not show a \nnegative outcome in regard to cognitive \ndevelopment in breastfed children 3 to \n5 years postpartum.\nTable 7.3  (Continued)\n",
+  "raw_text_sha256": "4847ac15bf126b1990b562d31909abc0b2d0d28faa3f68456a5352fd3812a4f2",
+  "coordinates_sha256": "0aa3445b37c97ad770d91098c815e1010ad40829dce94dadc8c1bf671a13ae29",
+  "block_sequence_sha256": "75dfc64223228c078d266e16ac2c125ef1502ff07a190fb4decc749e3f1034a0",
+  "blocks": [
+    {
+      "block_id": "page-0729-block-0000",
+      "order": 0,
+      "text": "Drug\nInfant plasma \n",
+      "bbox": [
+        88.2300033569336,
+        441.7214660644531,
+        107.11499786376953,
+        612.6539916992188
+      ],
+      "text_sha256": "740ab9eb672cde86fd19cae765bab98ff010246377b1aac1269ef7543dd4a3b7"
+    },
+    {
+      "block_id": "page-0729-block-0001",
+      "order": 1,
+      "text": "concentrations\nRelative infant \n",
+      "bbox": [
+        88.2300033569336,
+        334.05145263671875,
+        107.11499786376953,
+        492.1514892578125
+      ],
+      "text_sha256": "bb1205aa23f4c324e61f2d45e2cc5a89247e633799704f1f4a6b66b6effcd299"
+    },
+    {
+      "block_id": "page-0729-block-0002",
+      "order": 2,
+      "text": "dose (RID)\nReported acute adverse effects in \n",
+      "bbox": [
+        88.2300033569336,
+        203.4314422607422,
+        107.11499786376953,
+        387.82647705078125
+      ],
+      "text_sha256": "3177e1242b62d10d9d24ae8b72819a2a6f978aa6260c48d73981167f1f9dad77"
+    },
+    {
+      "block_id": "page-0729-block-0003",
+      "order": 3,
+      "text": "infant\nReported developmental effects in \n",
+      "bbox": [
+        88.2300033569336,
+        67.8989486694336,
+        107.11499786376953,
+        323.32647705078125
+      ],
+      "text_sha256": "5208ea628ac7af2784c52fbd80c2393eb82f42a793d04e9fc000a75672474e8b"
+    },
+    {
+      "block_id": "page-0729-block-0004",
+      "order": 4,
+      "text": "infant\n",
+      "bbox": [
+        98.22750091552734,
+        170.70896911621094,
+        107.11499786376953,
+        191.9639892578125
+      ],
+      "text_sha256": "e7126f01d55795d9d0761c51e3f277a39d4ed441a3504bd0a6901247c19c0069"
+    },
+    {
+      "block_id": "page-0729-block-0005",
+      "order": 5,
+      "text": "Reboxetine4,11,71\nUndetectable or low.\n1–3%\nNone reported\nIn a study of four infants three reached \n",
+      "bbox": [
+        118.5300064086914,
+        65.13411712646484,
+        127.23999786376953,
+        612.6539916992188
+      ],
+      "text_sha256": "4968a971857d59650b7d3a4c72c9541cc2b5d1250dd5670c9a5f56ea5e27f4e1"
+    },
+    {
+      "block_id": "page-0729-block-0006",
+      "order": 6,
+      "text": "normal milestones. The fourth had \n",
+      "bbox": [
+        128.52999877929688,
+        79.4441146850586,
+        137.2375030517578,
+        191.96649169921875
+      ],
+      "text_sha256": "68259735a517c7f2986d7c5594c38a2053ebf2c7d09f8a1f9181a286c6b8cf1f"
+    },
+    {
+      "block_id": "page-0729-block-0007",
+      "order": 7,
+      "text": "developmental problems thought not \n",
+      "bbox": [
+        138.52749633789062,
+        70.4067611694336,
+        147.23500061035156,
+        191.96649169921875
+      ],
+      "text_sha256": "51c68b3e2f4a897f20722dd12eafcb07cf8f4d492fb75b9db98015f0f2be1089"
+    },
+    {
+      "block_id": "page-0729-block-0008",
+      "order": 8,
+      "text": "to be related to reboxetine\n",
+      "bbox": [
+        148.52499389648438,
+        106.81158447265625,
+        157.2324981689453,
+        191.96649169921875
+      ],
+      "text_sha256": "6bb02557a99d7667eb2faa1f7a99b45274650ba09a890a0ea8918daa7bb3d00a"
+    },
+    {
+      "block_id": "page-0729-block-0009",
+      "order": 9,
+      "text": "Sertraline4,11,23,38,65,72–80\nUndetectable or low. There \n",
+      "bbox": [
+        166.65249633789062,
+        403.51904296875,
+        175.36500549316406,
+        612.656494140625
+      ],
+      "text_sha256": "9fa78c3339238de02d2aa7db7f3ec41999eee185067253de784b7a775d99475d"
+    },
+    {
+      "block_id": "page-0729-block-0010",
+      "order": 10,
+      "text": "is one report of an unusually \n",
+      "bbox": [
+        176.65499877929688,
+        398.9289245605469,
+        185.3625030517578,
+        492.15399169921875
+      ],
+      "text_sha256": "e874f0e43f41321088012b57a1e624fc23bb7a437c3f4f5da5253a8a26337d69"
+    },
+    {
+      "block_id": "page-0729-block-0011",
+      "order": 11,
+      "text": "high infant serum level (half \n",
+      "bbox": [
+        186.65249633789062,
+        400.8940124511719,
+        195.36000061035156,
+        492.15399169921875
+      ],
+      "text_sha256": "7b6686a3a61fd3ea53e2baf19435bd91a535c65fd067238f07cb46485b045b34"
+    },
+    {
+      "block_id": "page-0729-block-0012",
+      "order": 12,
+      "text": "maternal serum level). The \n",
+      "bbox": [
+        196.64999389648438,
+        405.76904296875,
+        205.3574981689453,
+        492.15399169921875
+      ],
+      "text_sha256": "978357013ece75f27b80dee68cd4f76564e676ae5324787c40b393f69e2d8b96"
+    },
+    {
+      "block_id": "page-0729-block-0013",
+      "order": 13,
+      "text": "infant was reported to be \n",
+      "bbox": [
+        206.64749145507812,
+        408.521484375,
+        215.35499572753906,
+        492.15399169921875
+      ],
+      "text_sha256": "4fbbb2b5ae5807f9953f77179ecbef73d094548a753925f95b87c90b43ad7596"
+    },
+    {
+      "block_id": "page-0729-block-0014",
+      "order": 14,
+      "text": "‘clinically thriving’.\n",
+      "bbox": [
+        216.64498901367188,
+        433.4140319824219,
+        225.3524932861328,
+        492.15399169921875
+      ],
+      "text_sha256": "b3c2b349e6c388d0f90d85a152b8892769bf6c549f93961685f760a833259a81"
+    },
+    {
+      "block_id": "page-0729-block-0015",
+      "order": 15,
+      "text": "0.5–3%\nSerotonergic overstimulation reported \n",
+      "bbox": [
+        166.64248657226562,
+        201.8814239501953,
+        175.34999084472656,
+        387.8289794921875
+      ],
+      "text_sha256": "a7a7424bbcef5cd7710045ef813ab0e4215a9721c4437b9887e7168da8728d12"
+    },
+    {
+      "block_id": "page-0729-block-0016",
+      "order": 16,
+      "text": "in preterm infant also exposed to \n",
+      "bbox": [
+        176.63998413085938,
+        216.97142028808594,
+        185.3474884033203,
+        323.3289794921875
+      ],
+      "text_sha256": "7506b2910406efc173fb9d006bf62de11f290ca4f2c864f83e27eb0edfd4a039"
+    },
+    {
+      "block_id": "page-0729-block-0017",
+      "order": 17,
+      "text": "sertraline in utero. Symptoms \n",
+      "bbox": [
+        186.5924835205078,
+        229.3539276123047,
+        195.34498596191406,
+        323.3289794921875
+      ],
+      "text_sha256": "34bacabb6aba051471736e51e40d4612e5f4ba7c0b27235ef1d40e2276a0682d"
+    },
+    {
+      "block_id": "page-0729-block-0018",
+      "order": 18,
+      "text": "included hyperthermia, shivering, \n",
+      "bbox": [
+        196.63497924804688,
+        216.42393493652344,
+        205.3424835205078,
+        323.3289794921875
+      ],
+      "text_sha256": "c426062feedafba4c84c1b87142325871acadec32bb78a0d843ca76b6a19fa36"
+    },
+    {
+      "block_id": "page-0729-block-0019",
+      "order": 19,
+      "text": "myoclonus, tremor, and irritability,  \n",
+      "bbox": [
+        206.63247680664062,
+        212.34397888183594,
+        215.33998107910156,
+        323.3289794921875
+      ],
+      "text_sha256": "2de858be943dcae9b4465a7dc089a876e35db6a6836da30490ad32312efada24"
+    },
+    {
+      "block_id": "page-0729-block-0020",
+      "order": 20,
+      "text": "high pitched crying, decreased \n",
+      "bbox": [
+        216.62997436523438,
+        225.16896057128906,
+        225.3374786376953,
+        323.3289794921875
+      ],
+      "text_sha256": "3c1a3e4a659f6f6e80474d4a1c05563e627cbffe6b087ece6481063338a20048"
+    },
+    {
+      "block_id": "page-0729-block-0021",
+      "order": 21,
+      "text": " suckling reflex and reactivity.\n",
+      "bbox": [
+        226.62747192382812,
+        231.5289764404297,
+        235.33497619628906,
+        323.3289794921875
+      ],
+      "text_sha256": "dbcb644d46fd0b30c23fff02040dd6ea3448a940d4f3d22479872a45b0835bb5"
+    },
+    {
+      "block_id": "page-0729-block-0022",
+      "order": 22,
+      "text": "Withdrawal symptoms (agitation, \n",
+      "bbox": [
+        242.62496948242188,
+        219.76145935058594,
+        251.3324737548828,
+        323.3289794921875
+      ],
+      "text_sha256": "3514cf60456490b7cabeb99e5e65282a72b6061e602af3f6034f00ff454732c3"
+    },
+    {
+      "block_id": "page-0729-block-0023",
+      "order": 23,
+      "text": "restlessness, insomnia and an enhanced \n",
+      "bbox": [
+        252.6224822998047,
+        200.36643981933594,
+        261.3299865722656,
+        323.3289794921875
+      ],
+      "text_sha256": "97872604800c39dffc59073a460d2961cadbab2a7c9049bd32ccd2487edd0634"
+    },
+    {
+      "block_id": "page-0729-block-0024",
+      "order": 24,
+      "text": "startle reaction) developed in a breastfed \n",
+      "bbox": [
+        262.6199951171875,
+        197.85401916503906,
+        271.3274841308594,
+        323.3289794921875
+      ],
+      "text_sha256": "cd21b44f96b604f748d55dc7bf294754796e843cd235e3e992e9093c6fbb5919"
+    },
+    {
+      "block_id": "page-0729-block-0025",
+      "order": 25,
+      "text": "neonate, after abrupt withdrawal of \n",
+      "bbox": [
+        272.61749267578125,
+        211.42149353027344,
+        281.3249816894531,
+        323.3289794921875
+      ],
+      "text_sha256": "3170d784f8a1094de7f0b9ff77832f47a7517e0a9529695f1a0b7e11fdb929c2"
+    },
+    {
+      "block_id": "page-0729-block-0026",
+      "order": 26,
+      "text": "maternal sertraline. The neonate was \n",
+      "bbox": [
+        282.614990234375,
+        208.54151916503906,
+        291.3224792480469,
+        323.3289794921875
+      ],
+      "text_sha256": "433a1f2d7692f8bc8deb45f66a57eae7b45a52fdfd7fed59fdd68500e6b87c8c"
+    },
+    {
+      "block_id": "page-0729-block-0027",
+      "order": 27,
+      "text": "exposed to sertraline in utero.\n",
+      "bbox": [
+        292.5674743652344,
+        232.48899841308594,
+        301.3199768066406,
+        323.3289794921875
+      ],
+      "text_sha256": "e444e544f46db53167552643762066919cc91a891dd5f5c68e29a6523de15fac"
+    },
+    {
+      "block_id": "page-0729-block-0028",
+      "order": 28,
+      "text": "None reported.\n",
+      "bbox": [
+        166.6124725341797,
+        143.3365020751953,
+        175.31997680664062,
+        191.96649169921875
+      ],
+      "text_sha256": "cf53711182540597a6673376e5a8845af9f30f2c10f30bce4f5f441c2d8dec77"
+    },
+    {
+      "block_id": "page-0729-block-0029",
+      "order": 29,
+      "text": "In a study of 78 infants of mothers \n",
+      "bbox": [
+        182.60997009277344,
+        79.02413177490234,
+        191.31747436523438,
+        191.96649169921875
+      ],
+      "text_sha256": "d4711871609fb42fcabf2a619de0ddb4bad38c96658c33d62e663749e73f9ff7"
+    },
+    {
+      "block_id": "page-0729-block-0030",
+      "order": 30,
+      "text": "taking an SSRI or venlafaxine no \n",
+      "bbox": [
+        192.6074676513672,
+        87.3640365600586,
+        201.31497192382812,
+        191.96649169921875
+      ],
+      "text_sha256": "ce2494ceeaef5848b482f1bfdf5d7e67ce94a7edc99723c090860e80dfe4d1a1"
+    },
+    {
+      "block_id": "page-0729-block-0031",
+      "order": 31,
+      "text": "difference in weight was noted at 6 \n",
+      "bbox": [
+        202.60496520996094,
+        75.9640121459961,
+        211.31246948242188,
+        191.96649169921875
+      ],
+      "text_sha256": "a185aae8d7bf777db71e93305acd1413b68ce04af5cf32e496a967371169e859"
+    },
+    {
+      "block_id": "page-0729-block-0032",
+      "order": 32,
+      "text": "months compared with the ‘normative’ \n",
+      "bbox": [
+        212.6024627685547,
+        64.58650970458984,
+        221.30996704101562,
+        191.96649169921875
+      ],
+      "text_sha256": "798d2a2ebd66bfb25a74f10b13f7b6c05cb2ec5d180ea82332944a8a5ff0f6df"
+    },
+    {
+      "block_id": "page-0729-block-0033",
+      "order": 33,
+      "text": "weight.\n",
+      "bbox": [
+        222.59996032714844,
+        167.7940216064453,
+        231.30746459960938,
+        191.96649169921875
+      ],
+      "text_sha256": "3569ccef31acfd64937896f43a8ad9180b7aea7695d20eab9d8ceefb5af4fe48"
+    },
+    {
+      "block_id": "page-0729-block-0034",
+      "order": 34,
+      "text": "Trazodone4,81\nNot assessed.\n2.8%\nNone reported but not assessed.\nNone reported but not assessed.\n",
+      "bbox": [
+        310.7249755859375,
+        88.31649017333984,
+        319.489990234375,
+        612.656494140625
+      ],
+      "text_sha256": "616bdf31d03d0e97be76d9b51bc93942950c32d6b042c367bcebe7b6608bd180"
+    },
+    {
+      "block_id": "page-0729-block-0035",
+      "order": 35,
+      "text": "Tricyclic\n",
+      "bbox": [
+        328.9100036621094,
+        588.783935546875,
+        337.61749267578125,
+        612.656494140625
+      ],
+      "text_sha256": "b03205d06490deb871360bebab967df29dfefe860cc32f344df9cb2ad4e3c9f3"
+    },
+    {
+      "block_id": "page-0729-block-0036",
+      "order": 36,
+      "text": "Antidepressants\n",
+      "bbox": [
+        338.9075012207031,
+        561.948974609375,
+        347.614990234375,
+        612.656494140625
+      ],
+      "text_sha256": "2e12ac14096be234a9b975ce033aebb8d95f8f3ff92503034de89e253e59f21d"
+    },
+    {
+      "block_id": "page-0729-block-0037",
+      "order": 37,
+      "text": "(TCAs)4,14,82–90\n",
+      "bbox": [
+        348.9049987792969,
+        570.1765747070312,
+        357.61248779296875,
+        612.656494140625
+      ],
+      "text_sha256": "51025c90a08bcf6f5fad76cd5143b068dc9dc785edb99563a4d44e45b0ed65e0"
+    },
+    {
+      "block_id": "page-0729-block-0038",
+      "order": 38,
+      "text": "Undetectable or low.\nNortriptyline.\n",
+      "bbox": [
+        328.9075012207031,
+        346.16644287109375,
+        337.614990234375,
+        492.15399169921875
+      ],
+      "text_sha256": "faa168a8581322d2f6119b58d43c41f6b9e6238c210155adcb4cc8976c14b44a"
+    },
+    {
+      "block_id": "page-0729-block-0039",
+      "order": 39,
+      "text": "Amitriptyline, \n",
+      "bbox": [
+        338.9049987792969,
+        342.8364562988281,
+        347.61248779296875,
+        387.8289794921875
+      ],
+      "text_sha256": "2fa3ebd0ba252d656cafc46aea85e9ad5aed617055d8697ad4f8cc840991fca9"
+    },
+    {
+      "block_id": "page-0729-block-0040",
+      "order": 40,
+      "text": "1–3%.\nClomipramine.\n",
+      "bbox": [
+        348.9024963378906,
+        340.7439270019531,
+        367.60748291015625,
+        387.8289794921875
+      ],
+      "text_sha256": "e847b42bf145dd58fc80c76fc4531b89826c6a7d7eb099fbe0863d569a8df1b8"
+    },
+    {
+      "block_id": "page-0729-block-0041",
+      "order": 41,
+      "text": "Adverse effects have not been \n",
+      "bbox": [
+        328.8999938964844,
+        224.70396423339844,
+        337.60748291015625,
+        323.3289794921875
+      ],
+      "text_sha256": "3f8ddd4990dc7dcdf0f0eaabd59934408f279458aa567d42fcc480fdb7d24c3f"
+    },
+    {
+      "block_id": "page-0729-block-0042",
+      "order": 42,
+      "text": "reported in infants exposed to \n",
+      "bbox": [
+        338.8974914550781,
+        225.10887145996094,
+        347.60498046875,
+        323.3289794921875
+      ],
+      "text_sha256": "853d7f8e495e6f775bc2365ce3247771de1fe3ff22ce2919245d1f43c0e711e9"
+    },
+    {
+      "block_id": "page-0729-block-0043",
+      "order": 43,
+      "text": "nortriptyline, clomipramine, \n",
+      "bbox": [
+        348.8949890136719,
+        232.91639709472656,
+        357.60247802734375,
+        323.3289794921875
+      ],
+      "text_sha256": "fd60baefd029c69da38dcdb991a9e9799fb5026d380cc2ba4e2d2140509b254a"
+    },
+    {
+      "block_id": "page-0729-block-0044",
+      "order": 44,
+      "text": "imipramine, dosulepin and \n",
+      "bbox": [
+        358.8924865722656,
+        236.2238311767578,
+        367.5999755859375,
+        323.3289794921875
+      ],
+      "text_sha256": "90e2bb66156e85b782329b0eda52a2721c44dbeff2abea548aa24c92c2b769fc"
+    },
+    {
+      "block_id": "page-0729-block-0045",
+      "order": 45,
+      "text": "desipramine through breast milk.\n",
+      "bbox": [
+        368.8899841308594,
+        217.75135803222656,
+        377.59747314453125,
+        323.3289794921875
+      ],
+      "text_sha256": "20dedbdabfea4c46c235590a9e88911a3c8b553c25090eb3c56b7b30e277e0ec"
+    },
+    {
+      "block_id": "page-0729-block-0046",
+      "order": 46,
+      "text": "Severe sedation and poor feeding \n",
+      "bbox": [
+        384.8874816894531,
+        213.8513641357422,
+        393.594970703125,
+        323.3289794921875
+      ],
+      "text_sha256": "24546ea03faed52adf01a0116a1844daa19c3cc71de469a9b0f3ab8cf33b678a"
+    },
+    {
+      "block_id": "page-0729-block-0047",
+      "order": 47,
+      "text": "reported with amitriptyline.\n",
+      "bbox": [
+        394.8849792480469,
+        235.9689178466797,
+        403.59246826171875,
+        323.3289794921875
+      ],
+      "text_sha256": "5b9f8f20532360d3c36a5036b753b302621bba3fc74e4ee384d3f5d853448bff"
+    },
+    {
+      "block_id": "page-0729-block-0048",
+      "order": 48,
+      "text": "Poor suckling, muscle hypotonia, \n",
+      "bbox": [
+        410.8824768066406,
+        216.2213592529297,
+        419.5899658203125,
+        323.3289794921875
+      ],
+      "text_sha256": "07baccb82df1f58adf6409e5e9b67789d1f500df000d5c31bc2d88ed4738f938"
+    },
+    {
+      "block_id": "page-0729-block-0049",
+      "order": 49,
+      "text": "drowsiness and respiratory \n",
+      "bbox": [
+        420.8799743652344,
+        236.5013885498047,
+        429.58746337890625,
+        323.3289794921875
+      ],
+      "text_sha256": "8155b55c6ac98e14d67e5164f093b0812c42fd791a206a71f8cdd5c3fcf7dc7c"
+    },
+    {
+      "block_id": "page-0729-block-0050",
+      "order": 50,
+      "text": "depression reported with doxepin.\n",
+      "bbox": [
+        430.8774719238281,
+        213.98634338378906,
+        439.5849609375,
+        323.3289794921875
+      ],
+      "text_sha256": "db49433327eadc7f98d8bd2e6c4960bbe4591d7805e50ee30395f5a50d434778"
+    },
+    {
+      "block_id": "page-0729-block-0051",
+      "order": 51,
+      "text": "None reported.\n",
+      "bbox": [
+        328.8774719238281,
+        143.3365020751953,
+        337.5849609375,
+        191.96649169921875
+      ],
+      "text_sha256": "cf53711182540597a6673376e5a8845af9f30f2c10f30bce4f5f441c2d8dec77"
+    },
+    {
+      "block_id": "page-0729-block-0052",
+      "order": 52,
+      "text": "A study of 15 children did not show a \n",
+      "bbox": [
+        344.8749694824219,
+        69.13912200927734,
+        353.58245849609375,
+        191.96649169921875
+      ],
+      "text_sha256": "2a63b555e1bc0d97ae52ffa12f39812cb023182aef5f38b72de22179a7ebaf11"
+    },
+    {
+      "block_id": "page-0729-block-0053",
+      "order": 53,
+      "text": "negative outcome in regard to cognitive \n",
+      "bbox": [
+        354.8724670410156,
+        62.261619567871094,
+        363.5799560546875,
+        191.96649169921875
+      ],
+      "text_sha256": "6987a592ef075a496be99688c9e3152c4329876cad7e8a1c077835f126b9dc81"
+    },
+    {
+      "block_id": "page-0729-block-0054",
+      "order": 54,
+      "text": "development in breastfed children 3 to \n",
+      "bbox": [
+        364.8699645996094,
+        65.9666976928711,
+        373.57745361328125,
+        191.96649169921875
+      ],
+      "text_sha256": "d5fed9e13b755025c8b065c7aebce602e08bf8c319f3566eca419e6586fc907c"
+    },
+    {
+      "block_id": "page-0729-block-0055",
+      "order": 55,
+      "text": "5 years postpartum.\n",
+      "bbox": [
+        374.8674621582031,
+        128.20912170410156,
+        383.574951171875,
+        191.96649169921875
+      ],
+      "text_sha256": "02318ce1c4f9955144ad5a10c496058f202382b953daa4286c26ade76db33427"
+    },
+    {
+      "block_id": "page-0729-block-0056",
+      "order": 56,
+      "text": "Table 7.3  (Continued)\n",
+      "bbox": [
+        67.62750244140625,
+        534.5339965820312,
+        76.51499938964844,
+        606.6539916992188
+      ],
+      "text_sha256": "0670877b7147a8e2e130f77db8bb3e9296a072628049a331b5ad9602295f1c55"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

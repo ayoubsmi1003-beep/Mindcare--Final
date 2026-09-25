@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0356",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 356,
+  "source_page_index": 355,
+  "source_page_display": 356,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    335\nCHAPTER 3\n\t31.\t Birkenhager TK, et al. One-year outcome of psychotic depression after successful electroconvulsive therapy. J ECT 2005; 21:221–226.\n\t32.\t Navarro V, et al. Continuation/maintenance treatment with nortriptyline versus combined nortriptyline and ECT in late-life psychotic depres-\nsion: a two-year randomized study. Am J Geriatr Psychiatry 2008; 16:498–505.\n\t33.\t Belanoff JK, et al. An open label trial of C-1073 (mifepristone) for psychotic major depression. Biol Psychiatry 2002; 52:386–392.\n\t34.\t Rubin RT. Dr. Rubin replies (Letter). Am J Psychiatry 2004; 161:1722.\n\t35.\t Blasey CM, et al. A multisite trial of mifepristone for the treatment of psychotic depression: a site-by-treatment interaction. Contemp Clin \nTrials 2009; 30:284–288.\n\t36.\t Block T, et al. Mifepristone plasma level and glucocorticoid receptor antagonism associated with response in patients with psychotic depres-\nsion. J Clin Psychopharmacol 2017; 37:505–511.\n\t37.\t Huang CC, et al. Adjunctive use of methylphenidate in the treatment of psychotic unipolar depression. Clin Neuropharmacol 2008; \n31:245–247.\n\t38.\t Kajiya T, et al. Effect of lamotrigine in the treatment of bipolar depression with psychotic features: a case report. Ann General Psychiatry \n2017; 16:31.\n\t39.\t Meyer JM, et al. Augmentation of phenelzine with aripiprazole and quetiapine in a treatment-resistant patient with psychotic unipolar \ndepression: case report and literature review. CNS Spectr 2017; 22:391–396.\n\t40.\t Miyaoka T, et al. Minocycline as adjunctive therapy for patients with unipolar psychotic depression: an open-label study. Prog \nNeuropsychopharmacol Biol Psychiatry 2012; 37:222–226.\n\t41.\t Ribeiro CM, et al. The use of ketamine for the treatment of depression in the context of psychotic symptoms: to the editor. Biol Psychiatry \n2016; 79:e65–e66.\n\t42.\t Ajub E, et al. Efficacy of esketamine in the treatment of depression with psychotic features: a case series. Biol Psychiatry 2018; 83:e15–e16.\n",
+  "raw_text_sha256": "17e0035f5edaf8f1f905b8eeb6e63c48a2d18f7fcb3f8111c96cc811e6da4508",
+  "coordinates_sha256": "3c1e06ec6466a2e3524c505d2e19e20a59901f5ef31bb31e551773bbfcdc877d",
+  "block_sequence_sha256": "a72df7a2cd66ccb6c9328ec1ce3b8bcb0f29fb7cc05e99053efbbf0b179f71b0",
+  "blocks": [
+    {
+      "block_id": "page-0356-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    335\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "b90fe971f1d9817efa3e2b8b11f5e7b17c1e74127b25cfc8e3327c57df1df183"
+    },
+    {
+      "block_id": "page-0356-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0356-block-0002",
+      "order": 2,
+      "text": "\t31.\t Birkenhager TK, et al. One-year outcome of psychotic depression after successful electroconvulsive therapy. J ECT 2005; 21:221–226.\n\t32.\t Navarro V, et al. Continuation/maintenance treatment with nortriptyline versus combined nortriptyline and ECT in late-life psychotic depres-\n",
+      "bbox": [
+        48.0,
+        63.12638854980469,
+        420.0,
+        79.30238342285156
+      ],
+      "text_sha256": "8196b21df70ae3cfb13cdac1ffa707bace7a4521651548058fdbb3f4def9f1f5"
+    },
+    {
+      "block_id": "page-0356-block-0003",
+      "order": 3,
+      "text": "sion: a two-year randomized study. Am J Geriatr Psychiatry 2008; 16:498–505.\n\t33.\t Belanoff JK, et al. An open label trial of C-1073 (mifepristone) for psychotic major depression. Biol Psychiatry 2002; 52:386–392.\n\t34.\t Rubin RT. Dr. Rubin replies (Letter). Am J Psychiatry 2004; 161:1722.\n\t35.\t Blasey CM, et al. A multisite trial of mifepristone for the treatment of psychotic depression: a site-by-treatment interaction. Contemp Clin \n",
+      "bbox": [
+        48.012001037597656,
+        81.12638854980469,
+        421.6978759765625,
+        115.30238342285156
+      ],
+      "text_sha256": "e53914ac32c151eaa2e17a39dfe7d0c1c88b07abe9bd8c756a232d836b71b2f5"
+    },
+    {
+      "block_id": "page-0356-block-0004",
+      "order": 4,
+      "text": "Trials 2009; 30:284–288.\n\t36.\t Block T, et al. Mifepristone plasma level and glucocorticoid receptor antagonism associated with response in patients with psychotic depres-\n",
+      "bbox": [
+        48.029998779296875,
+        117.12638854980469,
+        419.9940490722656,
+        133.30238342285156
+      ],
+      "text_sha256": "8a97ac8f58ca030388223c56e50ebdb107830227485faf1114339364407238b4"
+    },
+    {
+      "block_id": "page-0356-block-0005",
+      "order": 5,
+      "text": "sion. J Clin Psychopharmacol 2017; 37:505–511.\n\t37.\t Huang CC, et al. Adjunctive use of methylphenidate in the treatment of psychotic unipolar depression. Clin Neuropharmacol 2008; \n",
+      "bbox": [
+        48.0359992980957,
+        135.1263885498047,
+        421.68603515625,
+        151.30238342285156
+      ],
+      "text_sha256": "290926c50f3f5b8e300b6914cc6043060aa2d1d32b06835936b65a96efcaec49"
+    },
+    {
+      "block_id": "page-0356-block-0006",
+      "order": 6,
+      "text": "31:245–247.\n\t38.\t Kajiya T, et al. Effect of lamotrigine in the treatment of bipolar depression with psychotic features: a case report. Ann General Psychiatry \n",
+      "bbox": [
+        48.04199981689453,
+        153.1263885498047,
+        421.6861267089844,
+        169.30238342285156
+      ],
+      "text_sha256": "97419ecc803ea1ec6404751e6aee1b46e29449a1ceec19c835cd6bcb8c46a92b"
+    },
+    {
+      "block_id": "page-0356-block-0007",
+      "order": 7,
+      "text": "2017; 16:31.\n\t39.\t Meyer JM, et al. Augmentation of phenelzine with aripiprazole and quetiapine in a treatment-resistant patient with psychotic unipolar \n",
+      "bbox": [
+        48.04800033569336,
+        171.1263885498047,
+        421.73388671875,
+        187.30238342285156
+      ],
+      "text_sha256": "ab8e4221ac4dffe6a1565949b8e28b35555dd394c77361339a0f9924b4053f02"
+    },
+    {
+      "block_id": "page-0356-block-0008",
+      "order": 8,
+      "text": "depression: case report and literature review. CNS Spectr 2017; 22:391–396.\n\t40.\t Miyaoka T, et al. Minocycline as adjunctive therapy for patients with unipolar psychotic depression: an open-label study. Prog \n",
+      "bbox": [
+        48.05400085449219,
+        189.1263885498047,
+        421.7160339355469,
+        205.30238342285156
+      ],
+      "text_sha256": "748d388d6fe9976139b5b8f100fe1a13e5cc7a30d968bff0d2f352875c65afcd"
+    },
+    {
+      "block_id": "page-0356-block-0009",
+      "order": 9,
+      "text": "Neuropsychopharmacol Biol Psychiatry 2012; 37:222–226.\n\t41.\t Ribeiro CM, et al. The use of ketamine for the treatment of depression in the context of psychotic symptoms: to the editor. Biol Psychiatry \n",
+      "bbox": [
+        48.060001373291016,
+        207.1263885498047,
+        421.7700500488281,
+        223.30238342285156
+      ],
+      "text_sha256": "d21d72b8d0dd9db21c7d710aabc068511e71d34753b0bfc68e8683d97b2d17ee"
+    },
+    {
+      "block_id": "page-0356-block-0010",
+      "order": 10,
+      "text": "2016; 79:e65–e66.\n\t42.\t Ajub E, et al. Efficacy of esketamine in the treatment of depression with psychotic features: a case series. Biol Psychiatry 2018; 83:e15–e16.\n",
+      "bbox": [
+        48.066001892089844,
+        225.1263885498047,
+        419.3580627441406,
+        241.30238342285156
+      ],
+      "text_sha256": "a515041a584c96e1ffad2ccf4a37e5d3a62c25f9ebd0d60179451de0648e3a37"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

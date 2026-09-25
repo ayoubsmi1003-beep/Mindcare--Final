@@ -1,0 +1,263 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0378",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 378,
+  "source_page_index": 377,
+  "source_page_display": 378,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    357\nCHAPTER 3\nPsychostimulants in depression\nPsychostimulants reduce fatigue, promote wakefulness and are mood-elevating (as dis-\ntinct from antidepressant). Amfetamines have been used as treatments for depression \nsince the 1930s,1 and more recently modafinil has been evaluated as an adjunct to \nstandard antidepressants.2 Amfetamines are now rarely used in depression because of \ntheir propensity for the development of tolerance and dependence. Prolonged use of \nhigh doses is associated with paranoid psychosis.3 Methylphenidate is now more widely \nused but may have similar shortcomings. Modafinil seems not to induce tolerance, \ndependence or psychosis but lacks the marked euphoric effects of amfetamines. \nArmodafinil, the longer acting isomer of modafinil, is available in some countries.\nPsychostimulants differ importantly from standard antidepressants in that their \nmood-elevating effects are usually seen within a few hours, but their antidepressant \naction may be short-lived. Amfetamines and methylphenidate may thus be useful where \na prompt effect is required and where dependence would not be problematic (e.g. in \ndepression associated with terminal illness), although ketamine might also be consid-\nered (if available). Their use might also be justified in severe, prolonged depression \nunresponsive to standard treatments (e.g. in those considered for psychosurgery). \nModafinil might justifiably be used as an adjunct to antidepressants in a wider range of \npatients and as a specific treatment for hypersomnia and fatigue.4\nTable 3.12 outlines support (or the absence of it) for the use of psychostimulants in \nvarious clinical situations. Generally speaking, data relating to stimulants in depression \nare rather poor and inconclusive.5–7 Careful consideration should be given to any use of \nany psychostimulant in depression since their short- and long-term safety have not been \nclearly established. Inclusion of individual drugs in Table 3.11 should not in itself be \nconsidered a recommendation for their use.\nTable 3.12  Stimulants in depression\nClinical use\nRegimens evaluated\nComments\nRecommendations\nMonotherapy in \nuncomplicated \ndepression\nModafinil 100–200mg a day8,9\nCase reports only – \nefficacy unproven\nStandard antidepressants \npreferred. Avoid psychostimulants \nas monotherapy in uncomplicated \ndepression.10 Meta-analysis found \nadjunctive therapy but not \nmonotherapy to be associated \nwith clinically significant \nimprovements.7\nMethylphenidate 20–40mg a \nday11,12\nMinimal efficacy\nDexamphetamine 20mg a day11\nMinimal efficacy\nAdjunctive \ntherapy to \naccelerate or \nimprove \nresponse\nSSRI + methylphenidate  \n10–20mg a day13,14\nNo clear effect on \ntime to response\nPsychostimulants in general not \nrecommended, but modafinil may \nbe useful.\nSSRI + modafinil 400mg/day15\nImproved response \nover SSRI alone\nTricyclic + methylphenidate  \n5–15mg a day16\nSingle open-label trial \nsuggests faster \nresponse\nSSRI or SNRI + lisdexamfetamine \n20–70mg/day17\nNo superiority over \nplacebo\n(Continued)\n",
+  "raw_text_sha256": "9ed0f2a4dddf0d3016c7cc47138867b24bf24e6d98dce02933167194ca9906db",
+  "coordinates_sha256": "332a70fea0de1a7dcec7937f28a72f9e71e4af57a1792064ecdd365b97a781b4",
+  "block_sequence_sha256": "3c1e036de84917a2d8da1809266a93719b98fd8d67e80d6d18611d1e812e3e81",
+  "blocks": [
+    {
+      "block_id": "page-0378-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    357\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "951acbf64d08a428a9831cb3cd5e08c45617ca44132cef430ec2548f888af9b1"
+    },
+    {
+      "block_id": "page-0378-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0378-block-0002",
+      "order": 2,
+      "text": "Psychostimulants in depression\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        216.13897705078125,
+        79.1004638671875
+      ],
+      "text_sha256": "7e8ec4ba882f63290df763dd51045587e3991dabe2dddba9550a3bfca51b2aed"
+    },
+    {
+      "block_id": "page-0378-block-0003",
+      "order": 3,
+      "text": "Psychostimulants reduce fatigue, promote wakefulness and are mood-elevating (as dis-\ntinct from antidepressant). Amfetamines have been used as treatments for depression \nsince the 1930s,1 and more recently modafinil has been evaluated as an adjunct to \nstandard antidepressants.2 Amfetamines are now rarely used in depression because of \ntheir propensity for the development of tolerance and dependence. Prolonged use of \nhigh doses is associated with paranoid psychosis.3 Methylphenidate is now more widely \nused but may have similar shortcomings. Modafinil seems not to induce tolerance, \ndependence or psychosis but lacks the marked euphoric effects of amfetamines. \nArmodafinil, the longer acting isomer of modafinil, is available in some countries.\n",
+      "bbox": [
+        48.0,
+        84.91046142578125,
+        422.8126525878906,
+        192.63046264648438
+      ],
+      "text_sha256": "ace874d8336c9f70e3e33ead08cab68918a862f5e5b36eca2f754bb2191fbe27"
+    },
+    {
+      "block_id": "page-0378-block-0004",
+      "order": 4,
+      "text": "Psychostimulants differ importantly from standard antidepressants in that their \nmood-elevating effects are usually seen within a few hours, but their antidepressant \naction may be short-lived. Amfetamines and methylphenidate may thus be useful where \na prompt effect is required and where dependence would not be problematic (e.g. in \ndepression associated with terminal illness), although ketamine might also be consid-\nered (if available). Their use might also be justified in severe, prolonged depression \nunresponsive to standard treatments (e.g. in those considered for psychosurgery). \nModafinil might justifiably be used as an adjunct to antidepressants in a wider range of \npatients and as a specific treatment for hypersomnia and fatigue.4\n",
+      "bbox": [
+        48.00270080566406,
+        192.91046142578125,
+        422.80267333984375,
+        300.6304626464844
+      ],
+      "text_sha256": "6d5794d564c5ed9ee03c1f0cdf12e4bc1bf6ebe2ea77809e303a35b408a2fee9"
+    },
+    {
+      "block_id": "page-0378-block-0005",
+      "order": 5,
+      "text": "Table 3.12 outlines support (or the absence of it) for the use of psychostimulants in \nvarious clinical situations. Generally speaking, data relating to stimulants in depression \nare rather poor and inconclusive.5–7 Careful consideration should be given to any use of \nany psychostimulant in depression since their short- and long-term safety have not been \nclearly established. Inclusion of individual drugs in Table 3.11 should not in itself be \nconsidered a recommendation for their use.\n",
+      "bbox": [
+        48.0,
+        300.9104919433594,
+        422.8130798339844,
+        372.6304931640625
+      ],
+      "text_sha256": "9f279bf62b75996f28e5765afb02a02ee248124cc3f897e37a1b72cf8de59bca"
+    },
+    {
+      "block_id": "page-0378-block-0006",
+      "order": 6,
+      "text": "Table 3.12  Stimulants in depression\n",
+      "bbox": [
+        54.000701904296875,
+        391.3914794921875,
+        170.15318298339844,
+        400.27899169921875
+      ],
+      "text_sha256": "12907dadb5fc5ae62fd1674929e53481f4ca47c09c2a2c4a7190270de505b5bd"
+    },
+    {
+      "block_id": "page-0378-block-0007",
+      "order": 7,
+      "text": "Clinical use\nRegimens evaluated\nComments\nRecommendations\n",
+      "bbox": [
+        48.0005989074707,
+        411.62646484375,
+        372.8630676269531,
+        420.51397705078125
+      ],
+      "text_sha256": "2dd04c1b1b5d1b0272d637e1a96424c5c9b3534fefe37e2675c71ceee7159b83"
+    },
+    {
+      "block_id": "page-0378-block-0008",
+      "order": 8,
+      "text": "Monotherapy in \nuncomplicated \ndepression\n",
+      "bbox": [
+        48.0006103515625,
+        428.4039611816406,
+        107.17559814453125,
+        457.2864685058594
+      ],
+      "text_sha256": "1bcb30e73022a683683ed1e96e49592ceae15df99b5c40fc7f6d7429912e7779"
+    },
+    {
+      "block_id": "page-0378-block-0009",
+      "order": 9,
+      "text": "Modafinil 100–200mg a day8,9\nCase reports only – \nefficacy unproven\n",
+      "bbox": [
+        118.5006103515625,
+        428.57647705078125,
+        295.71002197265625,
+        447.2864990234375
+      ],
+      "text_sha256": "29747f114438d475cedf928a58ccb8905ff902a8cbc848e415974c1614288caf"
+    },
+    {
+      "block_id": "page-0378-block-0010",
+      "order": 10,
+      "text": "Standard antidepressants \npreferred. Avoid psychostimulants \nas monotherapy in uncomplicated \ndepression.10 Meta-analysis found \nadjunctive therapy but not \nmonotherapy to be associated \nwith clinically significant \nimprovements.7\n",
+      "bbox": [
+        307.8599853515625,
+        428.5815124511719,
+        418.7100830078125,
+        507.27899169921875
+      ],
+      "text_sha256": "b6e4c5cf91b467e00a0018d16acaa3a136c4a9193242459000d725c5f93fc4ff"
+    },
+    {
+      "block_id": "page-0378-block-0011",
+      "order": 11,
+      "text": "Methylphenidate 20–40mg a \nday11,12\n",
+      "bbox": [
+        118.5,
+        453.60650634765625,
+        213.52499389648438,
+        472.3114929199219
+      ],
+      "text_sha256": "af12aa6ac5c5c51cb36b8d4ac0b51c40caade75fde0a1ca229bc10b660db3d5a"
+    },
+    {
+      "block_id": "page-0378-block-0012",
+      "order": 12,
+      "text": "Minimal efficacy\n",
+      "bbox": [
+        232.5,
+        453.60650634765625,
+        284.429931640625,
+        462.3139953613281
+      ],
+      "text_sha256": "fea1d9482d5515927fb4d08728b6ef9ffecdbdb5030360016fa6bdf15afaa22a"
+    },
+    {
+      "block_id": "page-0378-block-0013",
+      "order": 13,
+      "text": "Dexamphetamine 20mg a day11\nMinimal efficacy\n",
+      "bbox": [
+        118.5,
+        478.6315002441406,
+        284.429931640625,
+        487.34149169921875
+      ],
+      "text_sha256": "43f6c14b5b80d738df1c3b70fcf59618419c0ed1b5fcb10d473f706f5d19aa2d"
+    },
+    {
+      "block_id": "page-0378-block-0014",
+      "order": 14,
+      "text": "Adjunctive \ntherapy to \naccelerate or \nimprove \nresponse\n",
+      "bbox": [
+        48.0,
+        513.4240112304688,
+        95.10000610351562,
+        562.301513671875
+      ],
+      "text_sha256": "9cd9a38aaf85175fe4e51e03427f0c55d2abf782b650f28fa0b4764467aec19f"
+    },
+    {
+      "block_id": "page-0378-block-0015",
+      "order": 15,
+      "text": "SSRI + methylphenidate  \n10–20mg a day13,14\nNo clear effect on \ntime to response\n",
+      "bbox": [
+        118.5,
+        513.596435546875,
+        291.532470703125,
+        532.3115234375
+      ],
+      "text_sha256": "64eb28aec26ece271333b5b720837c588634e31c0e4da2ed638031c72202535b"
+    },
+    {
+      "block_id": "page-0378-block-0016",
+      "order": 16,
+      "text": "Psychostimulants in general not \nrecommended, but modafinil may \nbe useful.\nSSRI + modafinil 400mg/day15\nImproved response \nover SSRI alone\n",
+      "bbox": [
+        118.49998474121094,
+        513.6064453125,
+        418.5675354003906,
+        557.3364868164062
+      ],
+      "text_sha256": "cf2c54d068e099ada65bcbc4c99e008ae09fa3fd10a5b79e8f31c094e74dc063"
+    },
+    {
+      "block_id": "page-0378-block-0017",
+      "order": 17,
+      "text": "Tricyclic + methylphenidate  \n5–15mg a day16\nSingle open-label trial \nsuggests faster \nresponse\n",
+      "bbox": [
+        118.5,
+        563.6514892578125,
+        303.7575378417969,
+        592.3590087890625
+      ],
+      "text_sha256": "63828c1550aea92c672e9d3e91eecb4c3d905d417c089950ddde2d696f284beb"
+    },
+    {
+      "block_id": "page-0378-block-0018",
+      "order": 18,
+      "text": "SSRI or SNRI + lisdexamfetamine \n20–70mg/day17\nNo superiority over \nplacebo\n",
+      "bbox": [
+        118.5,
+        598.6739501953125,
+        295.0050048828125,
+        617.386474609375
+      ],
+      "text_sha256": "652ae5f0767e190473d7e2416fc03a998ef5a609d2b413549009e4686a853ad3"
+    },
+    {
+      "block_id": "page-0378-block-0019",
+      "order": 19,
+      "text": "(Continued)\n",
+      "bbox": [
+        382.4849853515625,
+        626.0789794921875,
+        420.0000305175781,
+        634.8314819335938
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

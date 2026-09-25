@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0146",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 146,
+  "source_page_index": 145,
+  "source_page_display": 146,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    125\nCHAPTER 1\nTreatment of antipsychotic-induced weight gain\nWeight gain is an important adverse effect of nearly all antipsychotic medications with \nobvious consequences for self-image, morbidity and mortality. Prevention and treat-\nment are therefore matters of some clinical urgency.\nMonitoring\nPatients starting antipsychotic treatment or changing medication should, as an absolute \nminimum, be weighed and their weight clearly recorded. Ideally, body mass index (BMI) \nand waist circumference should also be recorded.1,2 Early in treatment, monitoring of \nbody weight every week or two is recommended, for at least the first six months.2,3 \nRapid weight gain in early treatment (e.g. an increase of ≥ 5% above baseline after a \nmonth of treatment) strongly predicts long-term weight gain and should prompt con-\nsideration of preventative or remedial measures.4–6 With continuing antipsychotic treat-\nment, annual measurement of body weight is recommended as a minimum.2,3,7\nIn clinical practice, the monitoring of body weight and other metabolic side effects in \npeople on continuing antipsychotic medication is inconsistent and limited, falling short \nof recommended best practice.8–13\nTreatment and prevention\nMost of the relevant literature in this area addresses attempts to reduce body weight \ngained during treatment with medication, although there are now useful data suggest-\ning that early interventions can prevent or mitigate weight gain.14,15\nWhen weight gain occurs, initial options involve switching medications or instituting \nbehavioural programmes (or both). Switching always presents a risk of relapse and \ntreatment discontinuation,16 but there is fairly strong support for switching to aripipra-\nzole,17,18 ziprasidone19–21 or lurasidone22,23 as a method for reversing weight gain. It is \npossible that switching to other antipsychotic medications with a low propensity for \nweight gain can also be beneficial.2,24,25 Another option is adjunctive aripiprazole: \nweight loss has been observed when aripiprazole has been added to antipsychotic medi-\ncations such as clozapine and olanzapine.15,26\nStopping antipsychotic treatment altogether can be associated with weight loss,27,28 \nbut this course of action would not be clinically appropriate for the vast majority of \npeople with multi-episode schizophrenia. Note that, while some switching and augmen-\ntation strategies may minimise further weight gain or facilitate weight loss, the overall \neffect is generally modest and many patients continue to be overweight. Additional \nlifestyle interventions are often required if BMI is to remain within or move towards the \nnormal range.\nA variety of lifestyle interventions has been proposed and evaluated with good \nresults.2,14,29–32 Interventions vary, but they are mainly ‘behavioural lifestyle programmes’ \naimed at improving diet and increasing physical activity. Meta-analyses of RCTs have \nshown a robust effect for both prevention and intervention with these non-pharmaco-\nlogical interventions.14,30\n",
+  "raw_text_sha256": "2fccc5c901a49979fa1323ca8bcd393aef2e158b1250b7b33311411b54377bce",
+  "coordinates_sha256": "9df2fde46a0d3687907e7d4bef66e7d8f38f41dbb5c84929229586e8b1ad2582",
+  "block_sequence_sha256": "dc911ca1f3e5572f5d0841272d34d4e4139f180b5b137f57fdb2888443cdeafe",
+  "blocks": [
+    {
+      "block_id": "page-0146-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    125\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "3057aff4b570bb15b5d9db949aac4b26abb41d1332f7091550fdee816a1f4dbb"
+    },
+    {
+      "block_id": "page-0146-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0146-block-0002",
+      "order": 2,
+      "text": "Treatment of antipsychotic-induced weight gain\n",
+      "bbox": [
+        54.99909973144531,
+        66.06448364257812,
+        303.15911865234375,
+        79.0994873046875
+      ],
+      "text_sha256": "6b9191db4e040bc3ac9a492324dccb9ce2b7371d3deba11e99ccd6bd9539c259"
+    },
+    {
+      "block_id": "page-0146-block-0003",
+      "order": 3,
+      "text": "Weight gain is an important adverse effect of nearly all antipsychotic medications with \nobvious consequences for self-image, morbidity and mortality. Prevention and treat-\nment are therefore matters of some clinical urgency.\n",
+      "bbox": [
+        47.99909973144531,
+        84.90948486328125,
+        422.7991027832031,
+        120.62948608398438
+      ],
+      "text_sha256": "092777a878bbbb8cdedd8a0aed06429c3c2dc74d091ca47d5437b1805b361f8a"
+    },
+    {
+      "block_id": "page-0146-block-0004",
+      "order": 4,
+      "text": "Monitoring\n",
+      "bbox": [
+        47.99909973144531,
+        138.06448364257812,
+        106.66210174560547,
+        151.0994873046875
+      ],
+      "text_sha256": "c03a80785732954eec6c21129031ebc8adf5351a6e1969013d8ef9fa84c76471"
+    },
+    {
+      "block_id": "page-0146-block-0005",
+      "order": 5,
+      "text": "Patients starting antipsychotic treatment or changing medication should, as an absolute \nminimum, be weighed and their weight clearly recorded. Ideally, body mass index (BMI) \nand waist circumference should also be recorded.1,2 Early in treatment, monitoring of \nbody weight every week or two is recommended, for at least the first six months.2,3 \nRapid weight gain in early treatment (e.g. an increase of ≥ 5% above baseline after a \nmonth of treatment) strongly predicts long-term weight gain and should prompt con-\nsideration of preventative or remedial measures.4–6 With continuing antipsychotic treat-\nment, annual measurement of body weight is recommended as a minimum.2,3,7\n",
+      "bbox": [
+        47.99870300292969,
+        156.90948486328125,
+        422.8294982910156,
+        252.6295166015625
+      ],
+      "text_sha256": "ff6270124e24f6dcad6a88bc922f6d0018a976046fac0df66f76cab07ec83c81"
+    },
+    {
+      "block_id": "page-0146-block-0006",
+      "order": 6,
+      "text": "In clinical practice, the monitoring of body weight and other metabolic side effects in \npeople on continuing antipsychotic medication is inconsistent and limited, falling short \nof recommended best practice.8–13\n",
+      "bbox": [
+        47.999000549316406,
+        252.90951538085938,
+        422.8090515136719,
+        288.6295166015625
+      ],
+      "text_sha256": "ac11f515827252ec2ad9a2fd071f99ad76898d4a7b572cf4a3c39acd2b75a705"
+    },
+    {
+      "block_id": "page-0146-block-0007",
+      "order": 7,
+      "text": "Treatment and prevention\n",
+      "bbox": [
+        47.999000549316406,
+        306.06451416015625,
+        182.91395568847656,
+        319.0995178222656
+      ],
+      "text_sha256": "1a34d89f1b9d7d6770b241d233ea308077883e5d493a75b26f603b43b3c2ceb1"
+    },
+    {
+      "block_id": "page-0146-block-0008",
+      "order": 8,
+      "text": "Most of the relevant literature in this area addresses attempts to reduce body weight \ngained during treatment with medication, although there are now useful data suggest-\ning that early interventions can prevent or mitigate weight gain.14,15\n",
+      "bbox": [
+        47.999000549316406,
+        324.9095153808594,
+        422.8089904785156,
+        360.6295166015625
+      ],
+      "text_sha256": "a94d10433897ff590249c0fc8933bf783dca9b0dc83384b00c80e2d4405cfb3c"
+    },
+    {
+      "block_id": "page-0146-block-0009",
+      "order": 9,
+      "text": "When weight gain occurs, initial options involve switching medications or instituting \nbehavioural programmes (or both). Switching always presents a risk of relapse and \ntreatment discontinuation,16 but there is fairly strong support for switching to aripipra-\nzole,17,18 ziprasidone19–21 or lurasidone22,23 as a method for reversing weight gain. It is \npossible that switching to other antipsychotic medications with a low propensity for \nweight gain can also be beneficial.2,24,25 Another option is adjunctive aripiprazole: \nweight loss has been observed when aripiprazole has been added to antipsychotic medi-\ncations such as clozapine and olanzapine.15,26\n",
+      "bbox": [
+        47.99420166015625,
+        360.9095153808594,
+        422.8043518066406,
+        456.6295166015625
+      ],
+      "text_sha256": "a9a4a049eed83cd1c587e5c2c86e49241d797b26b60d8716f084eed9f031da79"
+    },
+    {
+      "block_id": "page-0146-block-0010",
+      "order": 10,
+      "text": "Stopping antipsychotic treatment altogether can be associated with weight loss,27,28 \nbut this course of action would not be clinically appropriate for the vast majority of \npeople with multi-episode schizophrenia. Note that, while some switching and augmen-\ntation strategies may minimise further weight gain or facilitate weight loss, the overall \neffect is generally modest and many patients continue to be overweight. Additional \nlifestyle interventions are often required if BMI is to remain within or move towards the \nnormal range.\n",
+      "bbox": [
+        47.99940490722656,
+        456.9095153808594,
+        422.8293762207031,
+        540.6295166015625
+      ],
+      "text_sha256": "9cb1277a8fa7bbef9dcb2ca85fee400e641e267001e5d9296fb2172c2537510a"
+    },
+    {
+      "block_id": "page-0146-block-0011",
+      "order": 11,
+      "text": "A variety of lifestyle interventions has been proposed and evaluated with good \nresults.2,14,29–32 Interventions vary, but they are mainly ‘behavioural lifestyle programmes’ \naimed at improving diet and increasing physical activity. Meta-analyses of RCTs have \nshown a robust effect for both prevention and intervention with these non-pharmaco-\nlogical interventions.14,30\n",
+      "bbox": [
+        47.99549865722656,
+        540.9094848632812,
+        422.8194274902344,
+        600.6295166015625
+      ],
+      "text_sha256": "c666ceb5df5ab15fd8b0ec339816f7df6a249329317023cf90f12acc706dc46a"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

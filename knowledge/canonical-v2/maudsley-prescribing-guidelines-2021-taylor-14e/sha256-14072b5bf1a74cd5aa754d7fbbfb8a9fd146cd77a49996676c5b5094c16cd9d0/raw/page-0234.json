@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0234",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 234,
+  "source_page_index": 233,
+  "source_page_display": 234,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    213\nCHAPTER 1\n(Continued)\nAdverse effect\nTime course\nAction\nWeight gain\nUsually during the first\nyear of treatment, but may \ncontinue\nDietary counselling is essential. Advice may be \nmore effective if given before weight gain occurs.\nWeight gain is common and often profound (4.5kg \nin the first 10 weeks23). Many treatments \navailable – see the section on treating weight gain\nFever24\nFirst 4 weeks\nClozapine induces inflammatory response \n(increased C-Reactive Protein, interleukin-625 and \neosinophils).25–27 Give paracetamol but check FBC \nfor neutropenia. Reduce rate of dose titration.28 \nThis fever is not usually related to blood \ndyscrasias29 but beware myocarditis, NMS, \npneumonia and other rarer types of inflammatory \norgan damage (see the section on uncommon side \neffects)\nSeizures30\nMay occur at any time31\nRelated to dose, plasma level and rapid dose \nescalation.32 Consider prophylactic, topiramate, \nlamotrigine, gabapentin or valproate* if on high \ndose (≥500mg/day) or with high plasma level \n(≥500mcg/L). Some suggest risk of seizures below \n1300mcg/L (about 1 in 20 people) is not enough to \nsupport primary prophylaxis.33 After a seizure: \nwithhold clozapine for one day; restart at half \nprevious dose; give antiseizure medication**. EEG \nabnormalities are common in those on clozapine34,35\nNausea\nFirst 6 weeks\nMay give anti-emetic. Avoid prochlorperazine and \nmetoclopramide if previous EPS. Avoid domperidone \nif underlying cardiac risk or QTc prolongation. \nOndansetron is a good choice, but it may worsen \nconstipation. One case of nausea and vomiting \nbeing the only presenting symptoms of myocarditis36\nNocturnal enuresis\nMay occur at any time\nTry reducing the dose or manipulating dose \nschedule to avoid periods of deep sedation. Avoid \nfluids before bedtime. Consider scheduled \nnight-time toileting. May resolve spontaneously,37 \nbut may persist for months or years.38 Seems to \naffect 1 in 5 people on clozapine.39 In severe cases, \ndesmopressin nasal spray (10–20mcg nocte) is \nusually effective40 but is not without risk: \nhyponatraemia may result.41 Anticholinergic agents \nmay be effective42 but support for this approach is \nweak and constipation and sedation may worsen. \nEphedrine,43 pseudoephedrine44 and \naripiprazole45,46 have also been used\n",
+  "raw_text_sha256": "de9c69004eb5881464de100ac6fb65588ca184cac347f6b2116ec2899ddcffe4",
+  "coordinates_sha256": "dcd940564055cb9dc57cbd0712cff690f732dd248a4760606631206741e02aaa",
+  "block_sequence_sha256": "bc241548e41ff5dca815ba38dcfecc22a781755c7e08cb89fd0af60e202019b2",
+  "blocks": [
+    {
+      "block_id": "page-0234-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    213\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "c09d37db70bd4a2c9a1d733c3ee878ab6226abbf475aeb87135b209050a440c9"
+    },
+    {
+      "block_id": "page-0234-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0234-block-0002",
+      "order": 2,
+      "text": "(Continued)\n",
+      "bbox": [
+        382.484375,
+        548.9005126953125,
+        419.9994201660156,
+        557.6530151367188
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0234-block-0003",
+      "order": 3,
+      "text": "Adverse effect\nTime course\nAction\n",
+      "bbox": [
+        47.99909973144531,
+        70.57191467285156,
+        278.9165954589844,
+        79.45941162109375
+      ],
+      "text_sha256": "63d6b7bac284f5c59599b2bd5a719496ae3748aa530bf9daa98b83699e272db3"
+    },
+    {
+      "block_id": "page-0234-block-0004",
+      "order": 4,
+      "text": "Weight gain\nUsually during the first\nyear of treatment, but may \ncontinue\n",
+      "bbox": [
+        48.00660705566406,
+        87.77693939208984,
+        222.20162963867188,
+        116.47943115234375
+      ],
+      "text_sha256": "de7f9525217bd2eeb340330c2529613705b4b790a0ed669714d9dd46c230c25c"
+    },
+    {
+      "block_id": "page-0234-block-0005",
+      "order": 5,
+      "text": "Dietary counselling is essential. Advice may be \nmore effective if given before weight gain occurs.\n",
+      "bbox": [
+        256.0115966796875,
+        87.7694320678711,
+        414.3591003417969,
+        106.47442626953125
+      ],
+      "text_sha256": "aae5abb12440a05d90a1e3a89e3e24bdd065cac11efd689cd440467252cddb1e"
+    },
+    {
+      "block_id": "page-0234-block-0006",
+      "order": 6,
+      "text": "Weight gain is common and often profound (4.5kg \nin the first 10 weeks23). Many treatments \navailable – see the section on treating weight gain\n",
+      "bbox": [
+        256.000732421875,
+        110.7644271850586,
+        422.0467834472656,
+        139.48193359375
+      ],
+      "text_sha256": "057f07bced21fc236d1e29ac0327d3c2995c3ffb45f531779fa4e6ec9bc3c2ef"
+    },
+    {
+      "block_id": "page-0234-block-0007",
+      "order": 7,
+      "text": "Fever24\nFirst 4 weeks\nClozapine induces inflammatory response \n(increased C-Reactive Protein, interleukin-625 and \neosinophils).25–27 Give paracetamol but check FBC \nfor neutropenia. Reduce rate of dose titration.28 \nThis fever is not usually related to blood \ndyscrasias29 but beware myocarditis, NMS, \npneumonia and other rarer types of inflammatory \norgan damage (see the section on uncommon side \neffects)\n",
+      "bbox": [
+        48.00321960449219,
+        145.7969512939453,
+        420.2133483886719,
+        234.50189208984375
+      ],
+      "text_sha256": "172c22ded4d58d4b91b3dbfa0da5981687ae7ebb98c5765624b7dd435e4a4071"
+    },
+    {
+      "block_id": "page-0234-block-0008",
+      "order": 8,
+      "text": "Seizures30\nMay occur at any time31\nRelated to dose, plasma level and rapid dose \nescalation.32 Consider prophylactic, topiramate, \nlamotrigine, gabapentin or valproate* if on high \ndose (≥500mg/day) or with high plasma level \n(≥500mcg/L). Some suggest risk of seizures below \n1300mcg/L (about 1 in 20 people) is not enough to \nsupport primary prophylaxis.33 After a seizure: \nwithhold clozapine for one day; restart at half \nprevious dose; give antiseizure medication**. EEG \nabnormalities are common in those on clozapine34,35\n",
+      "bbox": [
+        48.00318908691406,
+        240.81687927246094,
+        420.1684875488281,
+        339.52691650390625
+      ],
+      "text_sha256": "f86c292a08b63fe757dcc78206eb499b448bf8ab808c191b01cf38eff5f2e814"
+    },
+    {
+      "block_id": "page-0234-block-0009",
+      "order": 9,
+      "text": "Nausea\nFirst 6 weeks\nMay give anti-emetic. Avoid prochlorperazine and \nmetoclopramide if previous EPS. Avoid domperidone \nif underlying cardiac risk or QTc prolongation. \nOndansetron is a good choice, but it may worsen \nconstipation. One case of nausea and vomiting \nbeing the only presenting symptoms of myocarditis36\n",
+      "bbox": [
+        47.99909973144531,
+        345.8519287109375,
+        421.7991027832031,
+        404.5469055175781
+      ],
+      "text_sha256": "18cfc6528971177f38fac5cd216ef898869046aff6e4072f40ed60955a86dac2"
+    },
+    {
+      "block_id": "page-0234-block-0010",
+      "order": 10,
+      "text": "Nocturnal enuresis\nMay occur at any time\nTry reducing the dose or manipulating dose \nschedule to avoid periods of deep sedation. Avoid \nfluids before bedtime. Consider scheduled \nnight-time toileting. May resolve spontaneously,37 \nbut may persist for months or years.38 Seems to \naffect 1 in 5 people on clozapine.39 In severe cases, \ndesmopressin nasal spray (10–20mcg nocte) is \nusually effective40 but is not without risk: \nhyponatraemia may result.41 Anticholinergic agents \nmay be effective42 but support for this approach is \nweak and constipation and sedation may worsen. \nEphedrine,43 pseudoephedrine44 and \naripiprazole45,46 have also been used\n",
+      "bbox": [
+        47.99909973144531,
+        410.8769226074219,
+        421.1504821777344,
+        539.5844116210938
+      ],
+      "text_sha256": "4542c1e6708bcf6ddc3eca9d1773dfbb4493d98c3c90aec059d6133f566501a1"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0139",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 139,
+  "source_page_index": 138,
+  "source_page_display": 139,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "118    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nTreatment – additional agents\nGiven that there is insufficient evidence to recommend dose reduction as a treatment \nfor TD, and that switching or withdrawing antipsychotic medication is not always \neffective or advisable, additional agents are often used. A 2020 meta-analysis49 found \nclear benefit only for the three licensed VMAT-2 inhibitors, vitamin E, amantadine and \nvitamin B6 (pyridoxine). Table 1.15 describes the most frequently prescribed add-on \ndrugs for TD.\nTable 1.15  First-choice agents (alphabetical order; no preference implied)\nDrug\nComments\nAmantadine49–52\nRarely used but apparently effective at 100–300mg a day\nBenzodiazepines32,33\nWidely used for TD, but Cochrane review considered that the limited evidence for \nefficacy is inconclusive.53 Intermittent use may be necessary to avoid tolerance to \neffects. Most commonly used are clonazepam 1–4mg/day and diazepam 6–25mg/day, \nwith better supporting evidence for the former36,54\nDeutetrabenazine8,52,55–57\nDeutetrabenazine (VMAT-2 inhibitor) is also effective as a treatment for TD. Licensed \nfor TD in the USA.58 Better supporting evidence than for tetrabenazine. Longer \nhalf-life than tetrabenazine but still needs to be taken twice a day. Low incidence of \npsychiatric and neurological effects. Dose is 12–48mg/day\nGinkgo biloba52,59\nWell tolerated. Cochrane review concluded that while Ginkgo biloba could reduce TD \nsymptoms, the available evidence did not justify its routine use as a treatment.60 A \nmeta-analysis of three Chinese RCTs showed a good effect with 240mg/day61\nPyridoxine62\nSupported by Cochrane63 and a meta-analysis.49\nDose – up to 400mg/day\nTetrabenazine64,65\nOnly licensed treatment for moderate to severe TD in UK. Depression, drowsiness, \nparkinsonism and akathisia may occur.54,66 Dose is 25–200mg/day. Reserpine (similar \nmode of action) also effective but rarely, if ever, used\nValbenazine8,56,60,67–70\nThe evidence supports a favourable benefit-risk ratio for valbenazine (VMAT-2 \ninhibitor) as a treatment for TD. Licensed for TD in the USA.71 A dose of 80mg once \ndaily is effective with a benign cardiovascular profile. Low incidence of depression and \nakathisia\nVitamin E49,72\nNumerous studies but efficacy remains to be conclusively established. Cochrane \nsuggest that there is evidence only for slowing deterioration of TD.8,73 Dose is in the \nrange 400–1600 IU/day\nTreatment – other possible options\nThe large number of proposed treatments for TD undoubtedly reflects the somewhat \nlimited effectiveness of standard remedies, at least before the introduction of valbena-\nzine and deutetrabenazine. Table 1.16 lists some of these putative treatments in alpha-\nbetical order.\n",
+  "raw_text_sha256": "045391748e5a975171207d12894f1ed91d76256da90ae64c0bdf86e6e829f896",
+  "coordinates_sha256": "c830642ff9049f2c913fd23f522ac8b6dfa060547d4a7f5333e729a8daca2f07",
+  "block_sequence_sha256": "20e66a70a3fc9e169357db4a2ebdce5491ed34f80ac4a996a4f4fd8e70d2b13c",
+  "blocks": [
+    {
+      "block_id": "page-0139-block-0000",
+      "order": 0,
+      "text": "118    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "d92827ce2cf1871f8db2224a88ed36033e6f8c724f90999f3eb23f65371d6122"
+    },
+    {
+      "block_id": "page-0139-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0139-block-0002",
+      "order": 2,
+      "text": "Treatment – additional agents\n",
+      "bbox": [
+        61.88909912109375,
+        62.31448745727539,
+        216.56004333496094,
+        75.3494873046875
+      ],
+      "text_sha256": "22906adf538579d0672365eb5bf131368530514b9df273b8a1f3271f7718b90d"
+    },
+    {
+      "block_id": "page-0139-block-0003",
+      "order": 3,
+      "text": "Given that there is insufficient evidence to recommend dose reduction as a treatment \nfor TD, and that switching or withdrawing antipsychotic medication is not always \neffective or advisable, additional agents are often used. A 2020 meta-analysis49 found \nclear benefit only for the three licensed VMAT-2 inhibitors, vitamin E, amantadine and \nvitamin B6 (pyridoxine). Table 1.15 describes the most frequently prescribed add-on \ndrugs for TD.\n",
+      "bbox": [
+        61.88909912109375,
+        81.15948486328125,
+        436.6809997558594,
+        152.87948608398438
+      ],
+      "text_sha256": "136dcc6335f998cf10616532e03828179ee6370ed5e7d209b3d868499e2efa8e"
+    },
+    {
+      "block_id": "page-0139-block-0004",
+      "order": 4,
+      "text": "Table 1.15  First-choice agents (alphabetical order; no preference implied)\n",
+      "bbox": [
+        67.88890075683594,
+        174.2368927001953,
+        303.3514099121094,
+        183.1243896484375
+      ],
+      "text_sha256": "4a16bf6a4952de3954f66bc0718ab0fc855c92f81b8942a2fe3b2c49862295e9"
+    },
+    {
+      "block_id": "page-0139-block-0005",
+      "order": 5,
+      "text": "Drug\nComments\n",
+      "bbox": [
+        61.88890075683594,
+        194.47193908691406,
+        196.4989013671875,
+        203.35943603515625
+      ],
+      "text_sha256": "f0d3aba6cb5c63a8b3ce76553ca73a800f481925284fe7cc72b7ce3c93bfebe6"
+    },
+    {
+      "block_id": "page-0139-block-0006",
+      "order": 6,
+      "text": "Amantadine49–52\nRarely used but apparently effective at 100–300mg a day\n",
+      "bbox": [
+        61.88890075683594,
+        211.4269256591797,
+        341.5340881347656,
+        220.13693237304688
+      ],
+      "text_sha256": "e341893d5a74a8754069f3bbb413605e52dc8a5b96ffdd26c8af117babdea0a2"
+    },
+    {
+      "block_id": "page-0139-block-0007",
+      "order": 7,
+      "text": "Benzodiazepines32,33\nWidely used for TD, but Cochrane review considered that the limited evidence for \nefficacy is inconclusive.53 Intermittent use may be necessary to avoid tolerance to \neffects. Most commonly used are clonazepam 1–4mg/day and diazepam 6–25mg/day, \nwith better supporting evidence for the former36,54\n",
+      "bbox": [
+        61.88909912109375,
+        226.4494171142578,
+        435.9974060058594,
+        265.1544189453125
+      ],
+      "text_sha256": "91c25b276b0f7324aa2dfc996ef9919bbe2fb910759c70b62fc365282e235b3a"
+    },
+    {
+      "block_id": "page-0139-block-0008",
+      "order": 8,
+      "text": "Deutetrabenazine8,52,55–57\nDeutetrabenazine (VMAT-2 inhibitor) is also effective as a treatment for TD. Licensed \nfor TD in the USA.58 Better supporting evidence than for tetrabenazine. Longer \nhalf-life than tetrabenazine but still needs to be taken twice a day. Low incidence of \npsychiatric and neurological effects. Dose is 12–48mg/day\n",
+      "bbox": [
+        61.88890075683594,
+        271.4769287109375,
+        429.7641296386719,
+        310.1794128417969
+      ],
+      "text_sha256": "a0dd40af318e32a1bcd92c41124a26cb1ac3d3b1a55c9ddc54f9472233f5aa35"
+    },
+    {
+      "block_id": "page-0139-block-0009",
+      "order": 9,
+      "text": "Ginkgo biloba52,59\nWell tolerated. Cochrane review concluded that while Ginkgo biloba could reduce TD \nsymptoms, the available evidence did not justify its routine use as a treatment.60 A \nmeta-analysis of three Chinese RCTs showed a good effect with 240mg/day61\n",
+      "bbox": [
+        61.89079284667969,
+        316.4944152832031,
+        434.0542297363281,
+        345.2070007324219
+      ],
+      "text_sha256": "b87cdf61155e18996895fe02844bd3a3220b5458a2a83d6920e89a426857ef9c"
+    },
+    {
+      "block_id": "page-0139-block-0010",
+      "order": 10,
+      "text": "Pyridoxine62\nSupported by Cochrane63 and a meta-analysis.49\n",
+      "bbox": [
+        61.88890075683594,
+        351.52691650390625,
+        311.6648254394531,
+        360.2344055175781
+      ],
+      "text_sha256": "f2f55b88708bfb2ede1289dfc8791d86930c5edcf84f6c980c1632359b975d6e"
+    },
+    {
+      "block_id": "page-0139-block-0011",
+      "order": 11,
+      "text": "Dose – up to 400mg/day\n",
+      "bbox": [
+        158.9990997314453,
+        361.52691650390625,
+        238.19912719726562,
+        370.2344055175781
+      ],
+      "text_sha256": "a5e4f7490b9b15c37790e88b1e6b19ad31f4b20814a6f69a205e89f6669ab391"
+    },
+    {
+      "block_id": "page-0139-block-0012",
+      "order": 12,
+      "text": "Tetrabenazine64,65\nOnly licensed treatment for moderate to severe TD in UK. Depression, drowsiness, \nparkinsonism and akathisia may occur.54,66 Dose is 25–200mg/day. Reserpine (similar \nmode of action) also effective but rarely, if ever, used\n",
+      "bbox": [
+        61.88909912109375,
+        376.5494079589844,
+        428.6054382324219,
+        405.2569274902344
+      ],
+      "text_sha256": "61314fc12b1a32408710bc80235cd526d37eb8ec9b30c0f95209cf3e331448ee"
+    },
+    {
+      "block_id": "page-0139-block-0013",
+      "order": 13,
+      "text": "Valbenazine8,56,60,67–70\nThe evidence supports a favourable benefit-risk ratio for valbenazine (VMAT-2 \ninhibitor) as a treatment for TD. Licensed for TD in the USA.71 A dose of 80mg once \ndaily is effective with a benign cardiovascular profile. Low incidence of depression and \nakathisia\n",
+      "bbox": [
+        61.892791748046875,
+        411.5719299316406,
+        435.5694274902344,
+        450.2794189453125
+      ],
+      "text_sha256": "d4f4ee58ce7d40346ec0e161945814ad85c8075240bcd27970b4fd01ad80785a"
+    },
+    {
+      "block_id": "page-0139-block-0014",
+      "order": 14,
+      "text": "Vitamin E49,72\nNumerous studies but efficacy remains to be conclusively established. Cochrane \nsuggest that there is evidence only for slowing deterioration of TD.8,73 Dose is in the \nrange 400–1600 IU/day\n",
+      "bbox": [
+        61.889312744140625,
+        456.59442138671875,
+        427.8382263183594,
+        485.3069152832031
+      ],
+      "text_sha256": "6e8e97d7df63edf56ab73aa1c9e5f8912d9a9c1791c1b0d82244758cf4762b81"
+    },
+    {
+      "block_id": "page-0139-block-0015",
+      "order": 15,
+      "text": "Treatment – other possible options\n",
+      "bbox": [
+        61.88890075683594,
+        503.6789855957031,
+        241.5958709716797,
+        516.7139892578125
+      ],
+      "text_sha256": "76981f22490f5968d27495b9c3168cd2a7c07666f942c4945ade185250f62f0e"
+    },
+    {
+      "block_id": "page-0139-block-0016",
+      "order": 16,
+      "text": "The large number of proposed treatments for TD undoubtedly reflects the somewhat \nlimited effectiveness of standard remedies, at least before the introduction of valbena-\nzine and deutetrabenazine. Table 1.16 lists some of these putative treatments in alpha-\nbetical order.\n",
+      "bbox": [
+        61.88890075683594,
+        522.5239868164062,
+        436.6788024902344,
+        570.2440185546875
+      ],
+      "text_sha256": "0255f8145536da266f4b74039586a0062aac76f3bcfd438ebd66966f346c354e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

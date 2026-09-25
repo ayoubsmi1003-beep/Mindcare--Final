@@ -1,0 +1,107 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0642",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 642,
+  "source_page_index": 641,
+  "source_page_display": 642,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Prescribing in older people    621\nCHAPTER  6\n(30 studies, including 9,162,509 participants) suggested that the use of statin is \n­significantly associated with a decreased risk of dementia. The overall pooled reduction \nof AD in patients with statin use was risk ratio (RR) 0.69 (95% CI 0.60–0.80, \np < 0.0001), and the overall pooled RR of statin use and vascular dementia risk was RR \n0.93 (95% CI 0.74–1.16, p = 0.54). However, until further evidence is established, clini-\ncians need to make sure that statin use should remain restricted to the treatment of \ncardiovascular disease.107\nA longitudinal prospective study examined the relationship between chocolate con-\nsumption and cognitive decline in an elderly cognitively healthy population. A total of \n531 participants aged ≥65 years with normal MMSE scores were followed for a median \nof 48 months. Dietary habits were evaluated at baseline and the MMSE was used to \nassess global cognitive function at baseline and at follow-up. After adjustment for con-\nfounders, chocolate intake was associated with a lower risk of cognitive decline \n(RR = 0.59, 95%CI 0.38–0.92). This protective effect was observed only among sub-\njects with an average daily consumption of caffeine lower than 75mg.108\nSouvenaid is a medical food for the dietary management of early AD. The mix of \nnutrients in this drink is suggested to have a beneficial effect on cognitive function; \nhowever, health claims for medical foods are not evaluated by government agencies. In \na 24-week trial of 259 patients with mild AD, there was a statistically significant benefit \nin favour of Souvenaid on the primary outcome, a memory composite score, but a \n24-month trial in participants with biomarkers for AD, and episodic memory impair-\nment did not show a benefit on the primary outcome. Although these medical foods are \nlikely to be safe, overall, the evidence for their efficacy in AD is weak.86\nIdalopirdine is a 5-HT6 receptor antagonist. Given that 5-HT6 receptor is expressed \nin areas of the CNS involved with memory and that there is evidence suggesting that \nblocking of these receptors induces ACh release, it has become a promising approach \nthat 5-HT6 antagonism could restore ACh levels in a deteriorated cholinergic system.109 \nA recent systematic review and meta-analysis analysed four RCTs with 2,803 patients \nwith AD. Idalopirdine was not shown to be effective for AD patients and is associated \nwith a risk of elevated liver enzymes and vomiting. Although idalopirdine might be \nmore effective at high doses and in moderate AD subgroups, the effect size is small and \nmay be limited.110\nAnti-inflammatory drugs: A large number of RCTs of anti-inflammatory agents in \nAD have failed to reach primary outcomes. Large-scale studies of non-steroidal anti-\ninflammatory drugs (NSAIDs), including indomethacin, naproxen and rofecoxib in \nAD, have been unsuccessful. RCTs with a range of other anti-inflammatory drugs, \nincluding prednisolone, hydroxychloroquine, simvastatin, atorvastatin, aspirin and \nrosiglitazone, have also shown no clinically significant changes in primary cognitive \noutcomes in patients with AD.22 A 2020 Cochrane review evaluated aspirin and \nother NSAIDs for the prevention of dementia and found no evidence to support the \nuse of low-dose aspirin or other NSAIDs of any class (celecoxib, rofecoxib or nap-\nroxen) for the prevention of dementia. There was, however, evidence of harm, includ-\ning higher rates of death and major bleeding compared to placebo with aspirin, and \nin one of the studies, more people developed dementia in the NSAID group. More \nstomach bleeding and other stomach problems, such as pain, nausea and gastritis, \nwere also reported with NSAIDs.111\n",
+  "raw_text_sha256": "cc991b2474639ab45e7748b0f20e80d185b191a751f2e62a74bfd127d8bc0a4c",
+  "coordinates_sha256": "79f0edf8e2c61981e2fbab3802d3139129cc0665cffe0975f2c1ddd09d6692bf",
+  "block_sequence_sha256": "639f823a599af839c7c1271949a0708c730e37ca2ec800ed4189d2f6eb661620",
+  "blocks": [
+    {
+      "block_id": "page-0642-block-0000",
+      "order": 0,
+      "text": "Prescribing in older people    621\n",
+      "bbox": [
+        281.576904296875,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "a29e3d1595d961655c229c05e8390884fecf94dcba839d4b94755022c1726399"
+    },
+    {
+      "block_id": "page-0642-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        454.4096984863281,
+        405.35260009765625,
+        463.88970947265625,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0642-block-0002",
+      "order": 2,
+      "text": "(30 studies, including 9,162,509 participants) suggested that the use of statin is \n­significantly associated with a decreased risk of dementia. The overall pooled reduction \nof AD in patients with statin use was risk ratio (RR) 0.69 (95% CI 0.60–0.80, \np < 0.0001), and the overall pooled RR of statin use and vascular dementia risk was RR \n0.93 (95% CI 0.74–1.16, p = 0.54). However, until further evidence is established, clini-\ncians need to make sure that statin use should remain restricted to the treatment of \ncardiovascular disease.107\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.8299865722656,
+        146.27041625976562
+      ],
+      "text_sha256": "bfcf3da5473a8c0b44e97cf5a4664677df64f48c52801ae632ac2a951279bea5"
+    },
+    {
+      "block_id": "page-0642-block-0003",
+      "order": 3,
+      "text": "A longitudinal prospective study examined the relationship between chocolate con-\nsumption and cognitive decline in an elderly cognitively healthy population. A total of \n531 participants aged ≥65 years with normal MMSE scores were followed for a median \nof 48 months. Dietary habits were evaluated at baseline and the MMSE was used to \nassess global cognitive function at baseline and at follow-up. After adjustment for con-\nfounders, chocolate intake was associated with a lower risk of cognitive decline \n(RR = 0.59, 95%CI 0.38–0.92). This protective effect was observed only among sub-\njects with an average daily consumption of caffeine lower than 75mg.108\n",
+      "bbox": [
+        48.0,
+        146.3104248046875,
+        422.7898864746094,
+        242.27041625976562
+      ],
+      "text_sha256": "794cd9ca021b6c90e59d7a595121a08c831047840ed2ad52ba20077792ce7178"
+    },
+    {
+      "block_id": "page-0642-block-0004",
+      "order": 4,
+      "text": "Souvenaid is a medical food for the dietary management of early AD. The mix of \nnutrients in this drink is suggested to have a beneficial effect on cognitive function; \nhowever, health claims for medical foods are not evaluated by government agencies. In \na 24-week trial of 259 patients with mild AD, there was a statistically significant benefit \nin favour of Souvenaid on the primary outcome, a memory composite score, but a \n24-month trial in participants with biomarkers for AD, and episodic memory impair-\nment did not show a benefit on the primary outcome. Although these medical foods are \nlikely to be safe, overall, the evidence for their efficacy in AD is weak.86\n",
+      "bbox": [
+        48.0,
+        242.31048583984375,
+        422.8099060058594,
+        338.2704772949219
+      ],
+      "text_sha256": "44068025feac68d0a319ed84ce42eb0456cc8b04d2114214f7ef4039d41ed311"
+    },
+    {
+      "block_id": "page-0642-block-0005",
+      "order": 5,
+      "text": "Idalopirdine is a 5-HT6 receptor antagonist. Given that 5-HT6 receptor is expressed \nin areas of the CNS involved with memory and that there is evidence suggesting that \nblocking of these receptors induces ACh release, it has become a promising approach \nthat 5-HT6 antagonism could restore ACh levels in a deteriorated cholinergic system.109 \nA recent systematic review and meta-analysis analysed four RCTs with 2,803 patients \nwith AD. Idalopirdine was not shown to be effective for AD patients and is associated \nwith a risk of elevated liver enzymes and vomiting. Although idalopirdine might be \nmore effective at high doses and in moderate AD subgroups, the effect size is small and \nmay be limited.110\n",
+      "bbox": [
+        47.999786376953125,
+        338.31048583984375,
+        422.8096618652344,
+        446.2704772949219
+      ],
+      "text_sha256": "60c1a560ef98fc26f959f57daf05a4ef5bbab0bb11d7bbdf0687c7e6ade3249e"
+    },
+    {
+      "block_id": "page-0642-block-0006",
+      "order": 6,
+      "text": "Anti-inflammatory drugs: A large number of RCTs of anti-inflammatory agents in \nAD have failed to reach primary outcomes. Large-scale studies of non-steroidal anti-\ninflammatory drugs (NSAIDs), including indomethacin, naproxen and rofecoxib in \nAD, have been unsuccessful. RCTs with a range of other anti-inflammatory drugs, \nincluding prednisolone, hydroxychloroquine, simvastatin, atorvastatin, aspirin and \nrosiglitazone, have also shown no clinically significant changes in primary cognitive \noutcomes in patients with AD.22 A 2020 Cochrane review evaluated aspirin and \nother NSAIDs for the prevention of dementia and found no evidence to support the \nuse of low-dose aspirin or other NSAIDs of any class (celecoxib, rofecoxib or nap-\nroxen) for the prevention of dementia. There was, however, evidence of harm, includ-\ning higher rates of death and major bleeding compared to placebo with aspirin, and \nin one of the studies, more people developed dementia in the NSAID group. More \nstomach bleeding and other stomach problems, such as pain, nausea and gastritis, \nwere also reported with NSAIDs.111\n",
+      "bbox": [
+        48.0,
+        446.31048583984375,
+        422.8131103515625,
+        614.2705078125
+      ],
+      "text_sha256": "57b3be2394a2769f8e2b9ef2ae85919cb32e3e46cab09ee8f4f3de1e981c46ef"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

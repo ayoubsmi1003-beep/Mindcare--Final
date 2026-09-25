@@ -1,0 +1,83 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0015",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 15,
+  "source_page_index": 14,
+  "source_page_display": 15,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "The main aim of The Guidelines is to provide clinicians with practically useful advice \non the prescribing of psychotropic agents in both commonly and less commonly \nencountered clinical situations. The advice contained in this handbook is based on a \ncombination of literature review, clinical experience and expert contribution. We do not \nclaim that this advice is necessarily ‘correct’ or that it deserves greater prominence than \nthe guidance provided by other professional bodies or special interest groups. We hope, \nhowever, to have provided guidance that helps to assure the safe, effective and eco-\nnomic use of medicines in psychiatry. We hope also to have made clear precisely the \nsources of information used to inform the guidance given. Please note that many of the \nrecommendations provided here go beyond the licensed or labelled indications of many \ndrugs, both in the UK and elsewhere. Note also that, while we have endeavoured to \nmake sure all quoted doses are correct, clinicians should always consult statutory texts \nbefore prescribing. Users of The Guidelines should also bear in mind that the contents \nof this handbook are based on information available to us in March 2021. Much of the \nadvice contained here will become out‐dated as more research is conducted and \npublished.\nNo liability is accepted for any injury, loss or damage, however caused.\nNotes on inclusion of drugs\nThe Guidelines are used in many other countries outside the UK. With this in mind, we \nhave included in this edition those drugs in widespread use throughout the Western \nworld in March 2021. These include drugs not marketed in the UK, such as brexpipra-\nzole, desvenlafaxine, pimavanserin and vilazodone, amongst several others. Many older \ndrugs or those not widely available (e.g. levomepromazine, pericyazine, maprotiline, \nzotepine, oral loxapine, etc.) are either only briefly mentioned or not included on the \nbasis that these drugs are not in widespread use at the time of writing.\nNotes on using The Maudsley® \nPrescribing Guidelines in Psychiatry\n",
+  "raw_text_sha256": "807afdddc485ffc903cf9cd1fc16d9ab08e24f24768922e567e726fa04176ea9",
+  "coordinates_sha256": "8ca6b2869497b0c718b6496c0d6e6e455e6bbcdad838768cd9628f2bc68717e3",
+  "block_sequence_sha256": "d6dccf045266ec6f6651adb61628214882718adaf1d01f8f3c1e7e8b042f17cc",
+  "blocks": [
+    {
+      "block_id": "page-0015-block-0000",
+      "order": 0,
+      "text": "The main aim of The Guidelines is to provide clinicians with practically useful advice \non the prescribing of psychotropic agents in both commonly and less commonly \nencountered clinical situations. The advice contained in this handbook is based on a \ncombination of literature review, clinical experience and expert contribution. We do not \nclaim that this advice is necessarily ‘correct’ or that it deserves greater prominence than \nthe guidance provided by other professional bodies or special interest groups. We hope, \nhowever, to have provided guidance that helps to assure the safe, effective and eco-\nnomic use of medicines in psychiatry. We hope also to have made clear precisely the \nsources of information used to inform the guidance given. Please note that many of the \nrecommendations provided here go beyond the licensed or labelled indications of many \ndrugs, both in the UK and elsewhere. Note also that, while we have endeavoured to \nmake sure all quoted doses are correct, clinicians should always consult statutory texts \nbefore prescribing. Users of The Guidelines should also bear in mind that the contents \nof this handbook are based on information available to us in March 2021. Much of the \nadvice contained here will become out‐dated as more research is conducted and \npublished.\n",
+      "bbox": [
+        61.88999938964844,
+        254.12359619140625,
+        436.70001220703125,
+        445.8435974121094
+      ],
+      "text_sha256": "5053b3b3916cf5b8c36a3cada411dcbb9de1049560a808bb45852fb26f34ed18"
+    },
+    {
+      "block_id": "page-0015-block-0001",
+      "order": 1,
+      "text": "No liability is accepted for any injury, loss or damage, however caused.\n",
+      "bbox": [
+        71.88999938964844,
+        446.12359619140625,
+        378.0700378417969,
+        457.8435974121094
+      ],
+      "text_sha256": "32edc032c62372d8d3814ebebdebf71ed5f61fedef65b3ba0b8ef3d4aeaf543b"
+    },
+    {
+      "block_id": "page-0015-block-0002",
+      "order": 2,
+      "text": "Notes on inclusion of drugs\n",
+      "bbox": [
+        68.88999938964844,
+        487.2785949707031,
+        210.657958984375,
+        500.3135986328125
+      ],
+      "text_sha256": "db19096739dac0465ad9935f1f03f83807a54bc19cbf6d7961843ebbdc2ae71b"
+    },
+    {
+      "block_id": "page-0015-block-0003",
+      "order": 3,
+      "text": "The Guidelines are used in many other countries outside the UK. With this in mind, we \nhave included in this edition those drugs in widespread use throughout the Western \nworld in March 2021. These include drugs not marketed in the UK, such as brexpipra-\nzole, desvenlafaxine, pimavanserin and vilazodone, amongst several others. Many older \ndrugs or those not widely available (e.g. levomepromazine, pericyazine, maprotiline, \nzotepine, oral loxapine, etc.) are either only briefly mentioned or not included on the \nbasis that these drugs are not in widespread use at the time of writing.\n",
+      "bbox": [
+        61.88999938964844,
+        506.12359619140625,
+        436.7099304199219,
+        589.8436279296875
+      ],
+      "text_sha256": "1b59f7b34208d0c4da09124ae9b4bb8e2ff2d45d363b40e59f0a7221a6354258"
+    },
+    {
+      "block_id": "page-0015-block-0004",
+      "order": 4,
+      "text": "Notes on using The Maudsley® \nPrescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        68.38201904296875,
+        111.36316680908203,
+        440.0060119628906,
+        161.4351806640625
+      ],
+      "text_sha256": "592dfe2394afe678e4c6f0abbe228c9aebc484bb0888c355cfeb2ae874781cf0"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

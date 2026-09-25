@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0745",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 745,
+  "source_page_index": 744,
+  "source_page_display": 745,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "724    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 8\n3.\t Be cautious with drugs that are extensively hepatically metabolised (mostly psycho-\ntropic drugs). Lower doses may be required. Exceptions are sulpiride, amisulpride, \nlithium and gabapentin, which all undergo no or minimal hepatic metabolism.\n4.\t Leave longer intervals between dosage increases. Remember that the half-life of \nmost drugs is prolonged in hepatic impairment, so it will take longer for plasma \nlevels to reach steady state.\n5.\t If albumin is reduced, consider the implications for drugs that are highly protein \nbound, and if ascites is present consider the increased volume of distribution for \nwater soluble drugs.\n6.\t Avoid medicines with a long-half life or those that require to be metabolised to \nrender them active (pro-drugs)\n7.\t Always monitor carefully for side-effects, which may be delayed.\n8.\t Avoid drugs that are very sedative because of the risk of precipitating hepatic \nencephalopathy.\n9.\t Avoid drugs that are very constipating because of the risk of precipitating hepatic \nencephalopathy.\n10.\t Avoid drugs that are known to be hepatotoxic in their own right (e.g. MAOIs, \nchlorpromazine).\n11.\t Choose a low-risk drug (see Tables below) and monitor LFTs weekly, at least ini-\ntially. If LFTs deteriorate after a new drug is introduced, consider switching to \nanother drug. Note that cross-hepatotoxicity between drugs is possible, especially \nif they are structurally related.1\nThese rules should always be observed in severe liver disease (low albumin, increased \nclotting time, ascites, jaundice, encephalopathy, etc.). The information described previ-\nously, and on the following pages, should be interpreted in the context of the patient’s \nclinical presentation.\nAntipsychotics in hepatic impairment\nOne-third of patients who are prescribed antipsychotic medication have at least one \nabnormal LFT, and in 4% at least one LFT is elevated 3 times above the upper limit of \nnormal.2 Transaminases are most often affected and this generally occurs within 1–6 \nweeks of treatment initiation.2 Only rarely does clinically significant hepatic damage \nresult.2 The development of metabolic syndrome (obesity, insulin resistance) may be \nlinked to the emergence of non-alcoholic fatty liver disease later in treatment.3,4\nTable 8.1  Antipsychotics in hepatic impairment\nDrug\nComments\nAmisulpride5,6\nPredominantly renally excreted, so dosage reduction should not be necessary as long as \nrenal function is normal. Uncommonly associated with rises in transaminases and \nhepatocellular injury.\nAripiprazole5–8\nExtensively hepatically metabolised. Limited data that hepatic impairment has minimal \neffect on pharmacokinetics. SPC states no dosage reduction required in mild-moderate \nhepatic impairment, but caution required in severe impairment. Small number of \nreports of hepatotoxicity, increased LFTs, hepatitis and jaundice.2,9–11\n",
+  "raw_text_sha256": "4df21e58489f278434342e31742dfb9bc59554b360294289eec49d55297a5610",
+  "coordinates_sha256": "877137a0276f438554aff2203af24d7fe2dbc3bafb802acfabdb78bccc212bbe",
+  "block_sequence_sha256": "0b122a893973aaad22eb3584d9863090c1441aa46500c2f31738d025d669f155",
+  "blocks": [
+    {
+      "block_id": "page-0745-block-0000",
+      "order": 0,
+      "text": "724    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "c0fbb23c34aebb6207ec603f0275f1c12496e037dcc28733b92094ee43057ed4"
+    },
+    {
+      "block_id": "page-0745-block-0001",
+      "order": 1,
+      "text": "CHAPTER 8\n",
+      "bbox": [
+        18.520000457763672,
+        532.3878173828125,
+        28.0,
+        573.7318115234375
+      ],
+      "text_sha256": "5ba3d9fb75ff4f418d4a2e9d517f30966dcfb279c10487eec43c5aa3fd8757a2"
+    },
+    {
+      "block_id": "page-0745-block-0002",
+      "order": 2,
+      "text": "3.\t Be cautious with drugs that are extensively hepatically metabolised (mostly psycho-\ntropic drugs). Lower doses may be required. Exceptions are sulpiride, amisulpride, \nlithium and gabapentin, which all undergo no or minimal hepatic metabolism.\n4.\t Leave longer intervals between dosage increases. Remember that the half-life of \nmost drugs is prolonged in hepatic impairment, so it will take longer for plasma \nlevels to reach steady state.\n5.\t If albumin is reduced, consider the implications for drugs that are highly protein \nbound, and if ascites is present consider the increased volume of distribution for \nwater soluble drugs.\n6.\t Avoid medicines with a long-half life or those that require to be metabolised to \nrender them active (pro-drugs)\n7.\t Always monitor carefully for side-effects, which may be delayed.\n8.\t Avoid drugs that are very sedative because of the risk of precipitating hepatic \nencephalopathy.\n9.\t Avoid drugs that are very constipating because of the risk of precipitating hepatic \nencephalopathy.\n10.\t Avoid drugs that are known to be hepatotoxic in their own right (e.g. MAOIs, \nchlorpromazine).\n11.\t Choose a low-risk drug (see Tables below) and monitor LFTs weekly, at least ini-\ntially. If LFTs deteriorate after a new drug is introduced, consider switching to \nanother drug. Note that cross-hepatotoxicity between drugs is possible, especially \nif they are structurally related.1\n",
+      "bbox": [
+        61.88990020751953,
+        62.31029510498047,
+        436.70989990234375,
+        326.2702941894531
+      ],
+      "text_sha256": "652043e94811d92d65b33bbdedfbb26dae6247b69a0034a0498daffb4e18afe6"
+    },
+    {
+      "block_id": "page-0745-block-0003",
+      "order": 3,
+      "text": "These rules should always be observed in severe liver disease (low albumin, increased \nclotting time, ascites, jaundice, encephalopathy, etc.). The information described previ-\nously, and on the following pages, should be interpreted in the context of the patient’s \nclinical presentation.\n",
+      "bbox": [
+        61.88999938964844,
+        332.55029296875,
+        436.6999206542969,
+        380.2702941894531
+      ],
+      "text_sha256": "5ac91adb595f09f251b3ae3028a1412b311630cd7b86d227b5dc8ac5041a197c"
+    },
+    {
+      "block_id": "page-0745-block-0004",
+      "order": 4,
+      "text": "Antipsychotics in hepatic impairment\n",
+      "bbox": [
+        61.88999938964844,
+        395.7052917480469,
+        253.79598999023438,
+        408.74029541015625
+      ],
+      "text_sha256": "9e889414d734151f818122c57321051f7b8adccccd8799880932c63af90e8243"
+    },
+    {
+      "block_id": "page-0745-block-0005",
+      "order": 5,
+      "text": "One-third of patients who are prescribed antipsychotic medication have at least one \nabnormal LFT, and in 4% at least one LFT is elevated 3 times above the upper limit of \nnormal.2 Transaminases are most often affected and this generally occurs within 1–6 \nweeks of treatment initiation.2 Only rarely does clinically significant hepatic damage \nresult.2 The development of metabolic syndrome (obesity, insulin resistance) may be \nlinked to the emergence of non-alcoholic fatty liver disease later in treatment.3,4\n",
+      "bbox": [
+        61.88999938964844,
+        414.55029296875,
+        436.70989990234375,
+        486.2702941894531
+      ],
+      "text_sha256": "13aa3bdf9146af3b75900d9329aa97dba2291e96d380493e1f35e183d6e6c1d0"
+    },
+    {
+      "block_id": "page-0745-block-0006",
+      "order": 6,
+      "text": "Table 8.1  Antipsychotics in hepatic impairment\n",
+      "bbox": [
+        67.88980102539062,
+        507.72784423828125,
+        220.40975952148438,
+        516.6153564453125
+      ],
+      "text_sha256": "ced04850bf679c7c652c8f151b86419e3112473f51a66e2159e863b9aff5b343"
+    },
+    {
+      "block_id": "page-0745-block-0007",
+      "order": 7,
+      "text": "Drug\nComments\n",
+      "bbox": [
+        61.889801025390625,
+        527.6028442382812,
+        190.102294921875,
+        536.4903564453125
+      ],
+      "text_sha256": "f0d3aba6cb5c63a8b3ce76553ca73a800f481925284fe7cc72b7ce3c93bfebe6"
+    },
+    {
+      "block_id": "page-0745-block-0008",
+      "order": 8,
+      "text": "Amisulpride5,6\nPredominantly renally excreted, so dosage reduction should not be necessary as long as \nrenal function is normal. Uncommonly associated with rises in transaminases and \nhepatocellular injury.\n",
+      "bbox": [
+        61.889793395996094,
+        545.9078369140625,
+        433.3627014160156,
+        574.6103515625
+      ],
+      "text_sha256": "f964130265c15abef662debb9ecdb12eac28e1b82466f19f57730ac3ce9432ac"
+    },
+    {
+      "block_id": "page-0745-block-0009",
+      "order": 9,
+      "text": "Aripiprazole5–8\nExtensively hepatically metabolised. Limited data that hepatic impairment has minimal \neffect on pharmacokinetics. SPC states no dosage reduction required in mild-moderate \nhepatic impairment, but caution required in severe impairment. Small number of \nreports of hepatotoxicity, increased LFTs, hepatitis and jaundice.2,9–11\n",
+      "bbox": [
+        61.88750457763672,
+        584.0303955078125,
+        431.6751708984375,
+        622.73291015625
+      ],
+      "text_sha256": "b2004156ec0561ba1a5d6f273fe37490d634f580a23fc747ede41c902766e21e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0048",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 48,
+  "source_page_index": 47,
+  "source_page_display": 48,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    27\nCHAPTER 1\nDepot preparations may have an advantage over oral in maintenance treatment, \nmost likely because of guaranteed medication delivery (or at least guaranteed aware-\nness of medication delivery). Meta-analyses of clinical trials have shown that the rela-\ntive and absolute risks of relapse with depot maintenance treatment were 30% and \n10% lower, respectively, than with oral treatment.3,36 Long-acting preparations of \nantipsychotics may thus be preferred by both prescribers and patients.\nSummary\n■\n■Relapse rates in patients discontinuing antipsychotics are extremely high.\n■\n■Antipsychotics significantly reduce relapse, re-admission and violence/aggression.\n■\n■Long-acting depot formulations provide the best protection against relapse.\nA large meta-analysis concluded that the risk of relapse with newer antipsychotics is \nsimilar to that associated with older drugs.3 (Note that lack of relapse is not the same \nas good functioning.37) The proportion of multi-episode patients who achieve remission \nis small and may differ between antipsychotic drugs. The CATIE study reported that \nonly 12% of patients treated with olanzapine achieved remission for at least 6 months, \ncompared with 8% treated with quetiapine and 6% with risperidone.38 The advantage \nseen here for olanzapine is consistent with that seen in an acute efficacy network \nmeta-analysis.39\nAdherence to antipsychotic treatment\nAmongst people with schizophrenia, non-adherence with antipsychotic treatment is \nhigh. Only 10 days after discharge from hospital up to 25% are partially or non-adher-\nent, rising to 50% at 1 year and 75% at 2 years.40 Not only does non-adherence increase \nthe risk of relapse, it may also increase the severity of relapse and the duration of hos-\npitalisation.40 The risk of suicide attempts also increases four-fold40.\nDose for prophylaxis\nMany patients probably receive higher doses than necessary (particularly of the older \ndrugs) when acutely psychotic.41,42 In the longer term a balance needs to be made \nbetween effectiveness and adverse effects. Lower doses of the older drugs (8mg halo-\nperidol/day or equivalent) are, when compared with higher doses, associated with \nless severe side effects,43 better subjective state and better community adjustment.44 \nVery low doses increase the risk of psychotic relapse.41,45,46 There are no data to sup-\nport the use of lower than standard doses of the newer drugs as prophylaxis. Doses \nthat are acutely effective should generally be continued as prophylaxis,47,48 although \nan exception to this is prophylaxis after a first episode where very careful dose reduc-\ntion is probably supportable. There is some recent support for dose reduction in \nmulti-episode schizophrenia,49 and there are a number of trials in progress at the time \nof writing.50–52\n",
+  "raw_text_sha256": "732756a52b3421a43be9ddfc1d432bd6bc3caf9f2629d5f0cf0cd7e8ea422f0a",
+  "coordinates_sha256": "edf17a57417e2cc6dbf789cf67beed878ea5e2a876223c9201c7bee83c2eacae",
+  "block_sequence_sha256": "99ecda8f94fa1266eeae62b00ec60d2274f8f2df604a350a3cba3cb423dfaeb2",
+  "blocks": [
+    {
+      "block_id": "page-0048-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    27\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "67c867ac866837ad285c7b886e929ab044efce8f0c709aae9575951b09a948aa"
+    },
+    {
+      "block_id": "page-0048-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0048-block-0002",
+      "order": 2,
+      "text": "Depot preparations may have an advantage over oral in maintenance treatment, \nmost likely because of guaranteed medication delivery (or at least guaranteed aware-\nness of medication delivery). Meta-analyses of clinical trials have shown that the rela-\ntive and absolute risks of relapse with depot maintenance treatment were 30% and \n10% lower, respectively, than with oral treatment.3,36 Long-acting preparations of \nantipsychotics may thus be preferred by both prescribers and patients.\n",
+      "bbox": [
+        47.99909973144531,
+        62.54931640625,
+        422.8190002441406,
+        134.26931762695312
+      ],
+      "text_sha256": "09e842bc35859842fa23cf8f39a949acfead505255c48f171f784ae84984e512"
+    },
+    {
+      "block_id": "page-0048-block-0003",
+      "order": 3,
+      "text": "Summary\n",
+      "bbox": [
+        47.99909973144531,
+        151.70431518554688,
+        96.90509033203125,
+        164.73931884765625
+      ],
+      "text_sha256": "3cbb36aca330b3bd113955dfbada0adb7a5f95ad9f678bd61f175406c6a37e95"
+    },
+    {
+      "block_id": "page-0048-block-0004",
+      "order": 4,
+      "text": "■\n■Relapse rates in patients discontinuing antipsychotics are extremely high.\n",
+      "bbox": [
+        55.499298095703125,
+        176.93612670898438,
+        326.7427673339844,
+        186.80462646484375
+      ],
+      "text_sha256": "a9f29472422cd53f875ca76d2f1601a77fcb7bae5bd145055e4abfbc72af44e7"
+    },
+    {
+      "block_id": "page-0048-block-0005",
+      "order": 5,
+      "text": "■\n■Antipsychotics significantly reduce relapse, re-admission and violence/aggression.\n",
+      "bbox": [
+        55.499298095703125,
+        186.93612670898438,
+        356.6628723144531,
+        196.80462646484375
+      ],
+      "text_sha256": "24492a0d5af7225cbe77768928bbea2dae7a3cb8c85cfd5ca2ec9744ff16e0c2"
+    },
+    {
+      "block_id": "page-0048-block-0006",
+      "order": 6,
+      "text": "■\n■Long-acting depot formulations provide the best protection against relapse.\n",
+      "bbox": [
+        55.499298095703125,
+        196.93612670898438,
+        337.4698791503906,
+        206.80462646484375
+      ],
+      "text_sha256": "1d8910e03dced312d3d1c208de0a780e34f139e4d702abad1ccbdb2ae77fda87"
+    },
+    {
+      "block_id": "page-0048-block-0007",
+      "order": 7,
+      "text": "A large meta-analysis concluded that the risk of relapse with newer antipsychotics is \nsimilar to that associated with older drugs.3 (Note that lack of relapse is not the same \nas good functioning.37) The proportion of multi-episode patients who achieve remission \nis small and may differ between antipsychotic drugs. The CATIE study reported that \nonly 12% of patients treated with olanzapine achieved remission for at least 6 months, \ncompared with 8% treated with quetiapine and 6% with risperidone.38 The advantage \nseen here for olanzapine is consistent with that seen in an acute efficacy network \nmeta-analysis.39\n",
+      "bbox": [
+        47.99909973144531,
+        224.79782104492188,
+        422.8336486816406,
+        320.517822265625
+      ],
+      "text_sha256": "5c7e6f3368692c00785929b05322c205e01fef0555ad1f96556e097bfd159c32"
+    },
+    {
+      "block_id": "page-0048-block-0008",
+      "order": 8,
+      "text": "Adherence to antipsychotic treatment\n",
+      "bbox": [
+        47.99909973144531,
+        337.95281982421875,
+        243.79910278320312,
+        350.9878234863281
+      ],
+      "text_sha256": "74b071834fb823219b64042613774a0d07210cf20c2a084ab8836e40c3bb1947"
+    },
+    {
+      "block_id": "page-0048-block-0009",
+      "order": 9,
+      "text": "Amongst people with schizophrenia, non-adherence with antipsychotic treatment is \nhigh. Only 10 days after discharge from hospital up to 25% are partially or non-adher-\nent, rising to 50% at 1 year and 75% at 2 years.40 Not only does non-adherence increase \nthe risk of relapse, it may also increase the severity of relapse and the duration of hos-\npitalisation.40 The risk of suicide attempts also increases four-fold40.\n",
+      "bbox": [
+        47.99909973144531,
+        356.7978210449219,
+        422.7726745605469,
+        416.517822265625
+      ],
+      "text_sha256": "6e7bb14ef5837df07046a3d0f877a3aef478f3913a6bdc35321abec61ecf39da"
+    },
+    {
+      "block_id": "page-0048-block-0010",
+      "order": 10,
+      "text": "Dose for prophylaxis\n",
+      "bbox": [
+        47.99909973144531,
+        433.95281982421875,
+        155.3700714111328,
+        446.9878234863281
+      ],
+      "text_sha256": "b578838a7c4c741221452a6bc5678257eabccba73e2c744dc59213e3c624ea32"
+    },
+    {
+      "block_id": "page-0048-block-0011",
+      "order": 11,
+      "text": "Many patients probably receive higher doses than necessary (particularly of the older \ndrugs) when acutely psychotic.41,42 In the longer term a balance needs to be made \nbetween effectiveness and adverse effects. Lower doses of the older drugs (8mg halo-\nperidol/day or equivalent) are, when compared with higher doses, associated with \nless severe side effects,43 better subjective state and better community adjustment.44 \nVery low doses increase the risk of psychotic relapse.41,45,46 There are no data to sup-\nport the use of lower than standard doses of the newer drugs as prophylaxis. Doses \nthat are acutely effective should generally be continued as prophylaxis,47,48 although \nan exception to this is prophylaxis after a first episode where very careful dose reduc-\ntion is probably supportable. There is some recent support for dose reduction in \nmulti-episode schizophrenia,49 and there are a number of trials in progress at the time \nof writing.50–52\n",
+      "bbox": [
+        47.99839782714844,
+        452.7978210449219,
+        422.8235778808594,
+        596.517822265625
+      ],
+      "text_sha256": "d8e5f3817c66f921a6ea81eeffe61553a24dc4f1296410790e36bcbc410fd3d7"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

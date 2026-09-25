@@ -1,0 +1,16 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0300",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 300,
+  "source_page_index": 299,
+  "repaired_text": "Bipolar disorder    279\nCHAPTER 2\nTreatment of acute mania or hypomania\nDrug treatment is the mainstay of therapy for mania and hypomania. Both antipsychotics \nand mood stabilisers are effective (although the nomenclature here is unhelpful – most, \npossibly all, antipsychotics are antimanic and most mood stabilisers reduce psychotic \nsymptoms in mania). Sedative and anxiolytic drugs (e.g. benzodiazepines) may add to \nthe effects of these drugs.\nDrug choice is made difficult by the small number of direct comparisons and so no \ndrug can be recommended over another on efficacy grounds. However, a multiple treat-\nments meta-analysis1 (which allows indirect comparison) suggested that olanzapine, \nrisperidone, haloperidol and quetiapine had the best combination of efficacy and \nacceptability. Cochrane suggests olanzapine is more effective than both lithium2 and \nvalproate3 when used as monotherapy. Olanzapine may also be more effective than \nasenapine.4\nThe benefit of antipsychotic–mood stabiliser combinations (compared with mood \nstabiliser alone) is established for those relapsing while on mood stabilisers but less \nclear for those presenting on no treatment.5–9 The most recent international guidelines\nFigure 2.1  Treatment of acute mania or hypomania5–20\nNo\nStop antidepressant treatment\nIs the patient taking antimanic* medication?\nYes\nConsider:\nAn antipsychotic (if symptoms severe or \nbehaviour disturbed)\nOr\nValproate (avoid in women of child-bearing \npotential)\nOr\nLithium (if future adherence likely)\nIf response is inadequate\nCombine antipsychotic and valproate or \nlithium\nAll patients – consider adding short-term\nbenzodiazepine21–23\n(lorazepam or clonazepam)\nIf taking an antipsychotic,\nCheck compliance and dose.  Increase if \nnecessary.  Consider adding lithium or \nvalproate.\nIf taking lithium**, check plasma levels, \nconsider increasing the dose to give levels \n1.0–1.2mmol/L (to treat the acute episode), \nand/or adding an antipsychotic\nIf taking valproate, check plasma \nlevels7,8,24,25  increase dose to give levels up \nto 125mg/L if tolerated.  Consider adding an \nantipsychotic.\nIf taking lithium or valproate and mania is\nsevere check level, add an antipsychotic.5\nIf taking carbamazepine, consider adding \nantipsychotic (higher doses may be needed\nas antipsychotic levels reduced).\nAll patients – consider  adding short-term \nbenzodiazepine21–23\n(lorazepam or clonazepam)\n*In this context, antimanic = antipsychotic or mood stabiliser.\n**Lithium may be somewhat less effective in mixed states26 or substance misuse27 and in those with rapid cycling or exhibiting\npsychotic symptoms.28",
+  "repaired_text_sha256": "24f8920e67bef9a4aedb9ef3ed205736329e4a2497c9abd8b2e157039405c0f5",
+  "raw_text_sha256": "bdc22f77eac7377a5ac04c5b20a8eb9e85cbcb432a19c16a1d721f17a3e8f37c",
+  "repair_ids": [
+    "repair-000299",
+    "repair-000300",
+    "repair-000301"
+  ],
+  "raw_file": "raw/page-0300.json"
+}

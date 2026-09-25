@@ -1,0 +1,383 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0370",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 370,
+  "source_page_index": 369,
+  "source_page_display": 370,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    349\nCHAPTER 3\nPractical application of tapering\nBefore tapering\nAll patients should be informed of the risk of withdrawal symptoms on stopping any \nantidepressant. Some antidepressants, such as paroxetine and venlafaxine, are more \ncommonly associated with severe withdrawal symptoms.\nPatient should be warned not to stop antidepressants abruptly, because this is the \nmethod thought to be most likely to give rise to severe and long-lasting withdrawal \nsymptoms and to an increased risk of relapse.\nAlthough stopping antidepressants can cause some unpleasant symptoms, patients \nshould be told that if they are tapered gradually and carefully that withdrawal symp-\ntoms can be maintained at tolerable levels. As patients may have had negative experi-\nences of too rapid tapering in the past, reassurance may be required.\nIt is difficult to predict the exact period required for an individual to taper off anti-\ndepressant medication, but most long-standing patients take around 3 months and \nsome up to 2 years. This may help to set expectations.\nPatients’ past experience of stopping should be explored as this can be informative \nfor predicting what symptoms may arise again on tapering. Careful consideration of \npast attempts to stop may detect withdrawal symptoms being mis-diagnosed as relapse.\nOften patients will require some preparation for antidepressant tapering. This might \ninclude arrangements for lightening work or family duties or increased focus on non-\npharmacological coping skills (patients have found a wide variety useful including \nacceptance, breathing exercises, exercise, hobbies, diary keeping and de-catastrophis-\ning).21,22 Mindfulness-based cognitive therapy (MB-CT) has evidence that it is helpful in \nthe process of stopping antidepressants.23\nBoth doctors and patients should be aware that patients can experience negative \npsychological and physical symptoms during withdrawal that need not indicate that the \nfull dose of the drug is needed (but may indicate that the taper rate needs to be slowed). \nFamiliarity of the patient and the doctor with the wide variety of withdrawal symptoms \n(Figure 3.4) may help to mitigate unnecessary anxiety when symptoms arise. Patients \nmay require more support during the process, that may be professional or otherwise.22\n100\n(a)\n(b)\n80\nSERT occupancy (%)\n60\n40\n20\n0\n0\n50\nSertraline dose (mg)\n100\n150\n100\n80\nSERT occupancy (%)\n60\n40\n20\n0\n0\n50\nSertraline dose (mg)\n100\n150\nFigure 3.4  (a) Linear reductions of dose cause increasingly large reductions in effect on receptor targets, probably \nassociated with more withdrawal effects. (b) Even reductions of effect at target receptors require hyperbolic dose \nreductions. The final dose before stopping will need to be very small.\n",
+  "raw_text_sha256": "b194ce8ff8ab4809e37a712588d9ac7aea73335ba4a8f73a41bcd5a1444036ae",
+  "coordinates_sha256": "eb04d6574374596814ff3ebf6686070fd1f1b004e6c5dbe152685eec183543f4",
+  "block_sequence_sha256": "c3d4b229142568bdd58b3b5e2ff3b8ed238917f0e66d1ee3c9c1020fe5fe60ca",
+  "blocks": [
+    {
+      "block_id": "page-0370-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    349\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "ebe525136f9c40f9400fa1500ae9bfe64001fc1c1c8dae306267a46675739dd7"
+    },
+    {
+      "block_id": "page-0370-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0370-block-0002",
+      "order": 2,
+      "text": "Practical application of tapering\n",
+      "bbox": [
+        48.0,
+        242.41427612304688,
+        212.427978515625,
+        255.44927978515625
+      ],
+      "text_sha256": "11f8fb86f1388585ea7187202e3c0f259df3a01ca384da118e58df752613b908"
+    },
+    {
+      "block_id": "page-0370-block-0003",
+      "order": 3,
+      "text": "Before tapering\n",
+      "bbox": [
+        48.0,
+        261.3492736816406,
+        121.90998840332031,
+        273.19927978515625
+      ],
+      "text_sha256": "e70f3244c8da5e71799b01d02a09927819ae4c00ae080449fb992e59cc780114"
+    },
+    {
+      "block_id": "page-0370-block-0004",
+      "order": 4,
+      "text": "All patients should be informed of the risk of withdrawal symptoms on stopping any \nantidepressant. Some antidepressants, such as paroxetine and venlafaxine, are more \ncommonly associated with severe withdrawal symptoms.\n",
+      "bbox": [
+        48.0,
+        279.25927734375,
+        422.7800598144531,
+        314.9792785644531
+      ],
+      "text_sha256": "7498b25d69882d55d05a4fde4833cd30474a76b9f8c686df9a4af5b38db070fb"
+    },
+    {
+      "block_id": "page-0370-block-0005",
+      "order": 5,
+      "text": "Patient should be warned not to stop antidepressants abruptly, because this is the \nmethod thought to be most likely to give rise to severe and long-lasting withdrawal \nsymptoms and to an increased risk of relapse.\n",
+      "bbox": [
+        48.0,
+        315.25927734375,
+        422.8199462890625,
+        350.9792785644531
+      ],
+      "text_sha256": "9cd098084a5a3ae4e25b554fd6d59f5f2616f424ffecbabd0bcc30fe19ca6a41"
+    },
+    {
+      "block_id": "page-0370-block-0006",
+      "order": 6,
+      "text": "Although stopping antidepressants can cause some unpleasant symptoms, patients \nshould be told that if they are tapered gradually and carefully that withdrawal symp-\ntoms can be maintained at tolerable levels. As patients may have had negative experi-\nences of too rapid tapering in the past, reassurance may be required.\n",
+      "bbox": [
+        48.0,
+        351.25927734375,
+        422.80999755859375,
+        398.9792785644531
+      ],
+      "text_sha256": "5e92b0edbc96cbf955ec628f94adfcb3638c3a56c48e36c57adff0823f68b2bf"
+    },
+    {
+      "block_id": "page-0370-block-0007",
+      "order": 7,
+      "text": "It is difficult to predict the exact period required for an individual to taper off anti-\ndepressant medication, but most long-standing patients take around 3 months and \nsome up to 2 years. This may help to set expectations.\n",
+      "bbox": [
+        48.0,
+        399.25927734375,
+        422.7498474121094,
+        434.9792785644531
+      ],
+      "text_sha256": "5ee6b4c371cfc5218db583358c0c693d8dd48dcb3b7b2fb723e95aa8731f5002"
+    },
+    {
+      "block_id": "page-0370-block-0008",
+      "order": 8,
+      "text": "Patients’ past experience of stopping should be explored as this can be informative \nfor predicting what symptoms may arise again on tapering. Careful consideration of \npast attempts to stop may detect withdrawal symptoms being mis-diagnosed as relapse.\n",
+      "bbox": [
+        48.0,
+        435.25927734375,
+        422.7998962402344,
+        470.9792785644531
+      ],
+      "text_sha256": "231f3d42a38508ad26c4e07f111ab637f65ed7e0cfb808cf72315d0b72a4a0d8"
+    },
+    {
+      "block_id": "page-0370-block-0009",
+      "order": 9,
+      "text": "Often patients will require some preparation for antidepressant tapering. This might \ninclude arrangements for lightening work or family duties or increased focus on non-\npharmacological coping skills (patients have found a wide variety useful including \nacceptance, breathing exercises, exercise, hobbies, diary keeping and de-catastrophis-\ning).21,22 Mindfulness-based cognitive therapy (MB-CT) has evidence that it is helpful in \nthe process of stopping antidepressants.23\n",
+      "bbox": [
+        47.996498107910156,
+        471.25927734375,
+        422.8100280761719,
+        542.9793090820312
+      ],
+      "text_sha256": "a3ed7b5161a264557b341aa8d8dd3d0e6df3dc4787a88475333ddd13a4918889"
+    },
+    {
+      "block_id": "page-0370-block-0010",
+      "order": 10,
+      "text": "Both doctors and patients should be aware that patients can experience negative \npsychological and physical symptoms during withdrawal that need not indicate that the \nfull dose of the drug is needed (but may indicate that the taper rate needs to be slowed). \nFamiliarity of the patient and the doctor with the wide variety of withdrawal symptoms \n(Figure 3.4) may help to mitigate unnecessary anxiety when symptoms arise. Patients \nmay require more support during the process, that may be professional or otherwise.22\n",
+      "bbox": [
+        48.0,
+        543.25927734375,
+        422.8398742675781,
+        614.9793090820312
+      ],
+      "text_sha256": "2ec5cfffe6761249bb7c7eafd44bf873b5251e828fe64a27a554a1163ad0da42"
+    },
+    {
+      "block_id": "page-0370-block-0011",
+      "order": 11,
+      "text": "100\n(a)\n(b)\n",
+      "bbox": [
+        49.8385009765625,
+        63.405052185058594,
+        249.20875549316406,
+        77.90359497070312
+      ],
+      "text_sha256": "38f0dd5f99099cba52f79b8f61b2f6885c878e8ef9df53157e073c5bf3ef9d68"
+    },
+    {
+      "block_id": "page-0370-block-0012",
+      "order": 12,
+      "text": "80\n",
+      "bbox": [
+        68.79940032958984,
+        88.29073333740234,
+        76.45874786376953,
+        96.25314331054688
+      ],
+      "text_sha256": "95aebc97bc646c67fdcd923a5965b001f3c8a5c4d3a77075112e12a3a311d760"
+    },
+    {
+      "block_id": "page-0370-block-0013",
+      "order": 13,
+      "text": "SERT occupancy (%)\n",
+      "bbox": [
+        55.22376251220703,
+        87.02713012695312,
+        63.18617630004883,
+        152.65509033203125
+      ],
+      "text_sha256": "cc961c1bccf7d7b9d7d62085b40a68ac6e9f49ccc491d39b90e2f60515688451"
+    },
+    {
+      "block_id": "page-0370-block-0014",
+      "order": 14,
+      "text": "60\n",
+      "bbox": [
+        68.79940032958984,
+        106.6395492553711,
+        76.45874786376953,
+        114.60195922851562
+      ],
+      "text_sha256": "95cf32708a31caa478a0e9141103ac567d85e5186e697e7e0c81f75589999e31"
+    },
+    {
+      "block_id": "page-0370-block-0015",
+      "order": 15,
+      "text": "40\n",
+      "bbox": [
+        68.79940032958984,
+        124.9889144897461,
+        76.45874786376953,
+        132.95132446289062
+      ],
+      "text_sha256": "673650f936cb3b0a2f93ce09d81be10748b1b203c19e8176b4eefc1964a0cf3a"
+    },
+    {
+      "block_id": "page-0370-block-0016",
+      "order": 16,
+      "text": "20\n",
+      "bbox": [
+        68.79940032958984,
+        143.33828735351562,
+        76.45874786376953,
+        151.30068969726562
+      ],
+      "text_sha256": "5378796307535df3ec8d8b15a2e2dc5641419c3d3060cfe32238c0fa973f7aa3"
+    },
+    {
+      "block_id": "page-0370-block-0017",
+      "order": 17,
+      "text": "0\n0\n50\n",
+      "bbox": [
+        72.62907409667969,
+        161.68765258789062,
+        138.49806213378906,
+        178.50100708007812
+      ],
+      "text_sha256": "5976ddbd3177ef0dc11c5aea539fb8d6bf43cfd3498bcc6eee367cbb8f62a6d7"
+    },
+    {
+      "block_id": "page-0370-block-0018",
+      "order": 18,
+      "text": "Sertraline dose (mg)\n",
+      "bbox": [
+        129.4818115234375,
+        181.62124633789062,
+        192.1479034423828,
+        189.58364868164062
+      ],
+      "text_sha256": "93de6e99ebc65f8fd0cff6d5b38763331de838a3702d6ad07800dfe2f7611d4c"
+    },
+    {
+      "block_id": "page-0370-block-0019",
+      "order": 19,
+      "text": "100\n150\n",
+      "bbox": [
+        181.33392333984375,
+        170.53860473632812,
+        244.71636962890625,
+        178.50100708007812
+      ],
+      "text_sha256": "e379fc2f64544a453140cc0f22bd591b3cad543c6dc2ba92dd11f723111fee7e"
+    },
+    {
+      "block_id": "page-0370-block-0020",
+      "order": 20,
+      "text": "100\n",
+      "bbox": [
+        257.95550537109375,
+        70.5100326538086,
+        269.0657043457031,
+        78.47244262695312
+      ],
+      "text_sha256": "eea8254c7500ba3de996aa8ad6af399183f04e17d4a8102fde539dbc93a90012"
+    },
+    {
+      "block_id": "page-0370-block-0021",
+      "order": 21,
+      "text": "80\n",
+      "bbox": [
+        261.4063415527344,
+        88.83187103271484,
+        269.0657043457031,
+        96.79428100585938
+      ],
+      "text_sha256": "95aebc97bc646c67fdcd923a5965b001f3c8a5c4d3a77075112e12a3a311d760"
+    },
+    {
+      "block_id": "page-0370-block-0022",
+      "order": 22,
+      "text": "SERT occupancy (%)\n",
+      "bbox": [
+        247.7518768310547,
+        87.53836059570312,
+        255.7142791748047,
+        153.16632080078125
+      ],
+      "text_sha256": "cc961c1bccf7d7b9d7d62085b40a68ac6e9f49ccc491d39b90e2f60515688451"
+    },
+    {
+      "block_id": "page-0370-block-0023",
+      "order": 23,
+      "text": "60\n",
+      "bbox": [
+        261.406494140625,
+        107.1595687866211,
+        269.06585693359375,
+        115.12197875976562
+      ],
+      "text_sha256": "95cf32708a31caa478a0e9141103ac567d85e5186e697e7e0c81f75589999e31"
+    },
+    {
+      "block_id": "page-0370-block-0024",
+      "order": 24,
+      "text": "40\n",
+      "bbox": [
+        261.406494140625,
+        125.48140716552734,
+        269.06585693359375,
+        133.44381713867188
+      ],
+      "text_sha256": "673650f936cb3b0a2f93ce09d81be10748b1b203c19e8176b4eefc1964a0cf3a"
+    },
+    {
+      "block_id": "page-0370-block-0025",
+      "order": 25,
+      "text": "20\n",
+      "bbox": [
+        261.406494140625,
+        143.80325317382812,
+        269.06585693359375,
+        151.76565551757812
+      ],
+      "text_sha256": "5378796307535df3ec8d8b15a2e2dc5641419c3d3060cfe32238c0fa973f7aa3"
+    },
+    {
+      "block_id": "page-0370-block-0026",
+      "order": 26,
+      "text": "0\n0\n50\n",
+      "bbox": [
+        265.2361755371094,
+        162.12509155273438,
+        324.79583740234375,
+        179.06930541992188
+      ],
+      "text_sha256": "5976ddbd3177ef0dc11c5aea539fb8d6bf43cfd3498bcc6eee367cbb8f62a6d7"
+    },
+    {
+      "block_id": "page-0370-block-0027",
+      "order": 27,
+      "text": "Sertraline dose (mg)\n",
+      "bbox": [
+        322.5474853515625,
+        182.0352783203125,
+        385.11029052734375,
+        189.9976806640625
+      ],
+      "text_sha256": "93de6e99ebc65f8fd0cff6d5b38763331de838a3702d6ad07800dfe2f7611d4c"
+    },
+    {
+      "block_id": "page-0370-block-0028",
+      "order": 28,
+      "text": "100\n150\n",
+      "bbox": [
+        361.2974853515625,
+        171.11837768554688,
+        418.3428955078125,
+        179.08078002929688
+      ],
+      "text_sha256": "e379fc2f64544a453140cc0f22bd591b3cad543c6dc2ba92dd11f723111fee7e"
+    },
+    {
+      "block_id": "page-0370-block-0029",
+      "order": 29,
+      "text": "Figure 3.4  (a) Linear reductions of dose cause increasingly large reductions in effect on receptor targets, probably \nassociated with more withdrawal effects. (b) Even reductions of effect at target receptors require hyperbolic dose \nreductions. The final dose before stopping will need to be very small.\n",
+      "bbox": [
+        48.0,
+        198.4289093017578,
+        414.1875305175781,
+        227.3114013671875
+      ],
+      "text_sha256": "82ac5ef6b8544f038e2e938d2c4b80d82027e0029fd3bab723125bc89fb1100a"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

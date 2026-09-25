@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0244",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 244,
+  "source_page_index": 243,
+  "source_page_display": 244,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    223\nCHAPTER 1\noccur in the first 6–8 weeks of starting clozapine treatment (median 3 weeks),30 but \nmay occur at any time.\nCardiomyopathy is usually diagnosed from echocardiography to establish left ven-\ntricular dilatation (resulting in a reduced ejection fraction) and/or hypertrophy. It may \ndevelop following myocarditis (if clozapine is not stopped), but other causative factors \nmay include persistent tachycardia, obesity, diabetes, and previous personal or familial \ncardiac events.28 Most incidence data originate from Australia, and range from 0.02% \nto 5%.24,31 Meta-analysis suggests an event rate of 6 per 1000 patients, with a case \nfatality rate of 7.8%.29 Cardiomyopathy may occur later in treatment than myocarditis \n(median 9 months),30 but as with myocarditis it may occur at any time.\nDespite uncertainty over incidence, patients should be closely monitored for signs of \nmyocarditis, especially in the first few months of treatment.32 Symptoms include hypo-\ntension, tachycardia, fever, flu-like symptoms, fatigue, dyspnoea (with increased res-\npiratory rate) and chest pain.33 Signs include ECG changes (ST depression), enlarged \nheart on radiography/echo and eosinophilia. Many of these symptoms occur in patients \non clozapine not developing myocarditis34 and conversely, their absence does not rule \nout myocarditis.35 Nonetheless, signs of heart failure should provoke immediate cessa-\ntion of clozapine and referral to a cardiologist. Rechallenge has been successfully com-\npleted8,36–41 (the use of beta blockers, ACE inhibitors and mineralocorticoid receptor \nantagonists may help42–44), but recurrence is also possible.45–48 Use of echocardiography, \nmeasurement of CRP and troponin are essential in cases of rechallenge.49–51 Effective \ntreatment of comorbid metabolic syndrome and diabetes may also help.29\nAutopsy findings suggest that fatal myocarditis can occur in the absence of clear car-\ndiac symptoms, although tachycardia and fever are usually present.52 A group from \nMelbourne, Australia, has put forward a monitoring programme which is said to detect \n100% of symptomatic cases of myocarditis53 using measurement of troponin I or T and \nC-reactive protein (See Table 1.39). Echocardiography at baseline, six months and yearly \nthereafter is routine practice in Australia, although the benefit of this monitoring in the \nabsence of other symptoms has been questioned.54 Baseline echocardiography may at \nleast be useful to establish a comparator if concerns arise later, especially in those with \nknown cardiac disease, structural abnormalities, or other cardiac risk factors.55 The \nabsence of resources to provide monitoring beyond routine blood tests (including CRP \nand troponin) and ECG should not be a barrier to prescribing for most patients.27\nFactors that may increase the risk of developing myocarditis include rapid dose \nincreases, concurrent use of sodium valproate, and older age (31% increased risk for \neach additional decade).56 Other psychotropics, including lithium, risperidone, halop-\neridol, chlorpromazine and fluphenazine have also been associated with myocarditis.57 \nIt is probably preferable to avoid concomitant use of other medicines that may contrib-\nute to the risk, but this may be practically difficult. Any pre-existing cardiac disorder, \nprevious cardiac event, use of illicit drugs23 or family history of cardiac disease should \nprovoke extra caution.\nCardiomyopathy should be suspected in any patient showing signs of heart failure, \nwhich should provoke immediate cessation of clozapine and referral. Presentation of \ncardiomyopathy varies somewhat58,59 and is often asymptomatic in the early stages,24 so \nany reported symptoms of palpitations, chest pain, syncope, sweating, decreased exer-\ncise capacity or breathing difficulties should be closely investigated. Successful \n",
+  "raw_text_sha256": "90660a6ff85f8ad3083cfd94144b783bd73d38913a4b9882157f78e7f5186ab9",
+  "coordinates_sha256": "ae6218aab72fe2cac2bea26f8e98bc8cd5270d7bdaefb2242f861d7f5109618a",
+  "block_sequence_sha256": "25c1c1b51438f3be5b606d8d278f401fb4fb40f59616b61b62ca842de28c297d",
+  "blocks": [
+    {
+      "block_id": "page-0244-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    223\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "b6516ed0661ae9cfdacc88284488d2308030f4fd5f0bbbec8f74306b371e3f56"
+    },
+    {
+      "block_id": "page-0244-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0244-block-0002",
+      "order": 2,
+      "text": "occur in the first 6–8 weeks of starting clozapine treatment (median 3 weeks),30 but \nmay occur at any time.\n",
+      "bbox": [
+        47.99528503417969,
+        62.54931640625,
+        422.7752990722656,
+        86.26931762695312
+      ],
+      "text_sha256": "ce7e33dfa28f6b971a9771fdb7f290adf7e457ac4bf65a977836446f98af3ded"
+    },
+    {
+      "block_id": "page-0244-block-0003",
+      "order": 3,
+      "text": "Cardiomyopathy is usually diagnosed from echocardiography to establish left ven-\ntricular dilatation (resulting in a reduced ejection fraction) and/or hypertrophy. It may \ndevelop following myocarditis (if clozapine is not stopped), but other causative factors \nmay include persistent tachycardia, obesity, diabetes, and previous personal or familial \ncardiac events.28 Most incidence data originate from Australia, and range from 0.02% \nto 5%.24,31 Meta-analysis suggests an event rate of 6 per 1000 patients, with a case \nfatality rate of 7.8%.29 Cardiomyopathy may occur later in treatment than myocarditis \n(median 9 months),30 but as with myocarditis it may occur at any time.\n",
+      "bbox": [
+        47.995208740234375,
+        86.54931640625,
+        422.8225402832031,
+        182.26931762695312
+      ],
+      "text_sha256": "899414273ba111eb1ac8f5e6f4ab278d56579e215dd89e02a128b1055eb64c8e"
+    },
+    {
+      "block_id": "page-0244-block-0004",
+      "order": 4,
+      "text": "Despite uncertainty over incidence, patients should be closely monitored for signs of \nmyocarditis, especially in the first few months of treatment.32 Symptoms include hypo-\ntension, tachycardia, fever, flu-like symptoms, fatigue, dyspnoea (with increased res-\npiratory rate) and chest pain.33 Signs include ECG changes (ST depression), enlarged \nheart on radiography/echo and eosinophilia. Many of these symptoms occur in patients \non clozapine not developing myocarditis34 and conversely, their absence does not rule \nout myocarditis.35 Nonetheless, signs of heart failure should provoke immediate cessa-\ntion of clozapine and referral to a cardiologist. Rechallenge has been successfully com-\npleted8,36–41 (the use of beta blockers, ACE inhibitors and mineralocorticoid receptor \nantagonists may help42–44), but recurrence is also possible.45–48 Use of echocardiography, \nmeasurement of CRP and troponin are essential in cases of rechallenge.49–51 Effective \ntreatment of comorbid metabolic syndrome and diabetes may also help.29\n",
+      "bbox": [
+        47.99440002441406,
+        182.54931640625,
+        422.8112487792969,
+        326.2693176269531
+      ],
+      "text_sha256": "94afd03295d807320cd65ba620155e38b31cc8c4d4515007c545df24cefdc2a9"
+    },
+    {
+      "block_id": "page-0244-block-0005",
+      "order": 5,
+      "text": "Autopsy findings suggest that fatal myocarditis can occur in the absence of clear car-\ndiac symptoms, although tachycardia and fever are usually present.52 A group from \nMelbourne, Australia, has put forward a monitoring programme which is said to detect \n100% of symptomatic cases of myocarditis53 using measurement of troponin I or T and \nC-reactive protein (See Table 1.39). Echocardiography at baseline, six months and yearly \nthereafter is routine practice in Australia, although the benefit of this monitoring in the \nabsence of other symptoms has been questioned.54 Baseline echocardiography may at \nleast be useful to establish a comparator if concerns arise later, especially in those with \nknown cardiac disease, structural abnormalities, or other cardiac risk factors.55 The \nabsence of resources to provide monitoring beyond routine blood tests (including CRP \nand troponin) and ECG should not be a barrier to prescribing for most patients.27\n",
+      "bbox": [
+        47.99909973144531,
+        326.54931640625,
+        422.8233947753906,
+        458.2693176269531
+      ],
+      "text_sha256": "4bf0346b2ccb498d3d1188be926d6e63c354a5f21574c99c6f966eff0d56c8bf"
+    },
+    {
+      "block_id": "page-0244-block-0006",
+      "order": 6,
+      "text": "Factors that may increase the risk of developing myocarditis include rapid dose \nincreases, concurrent use of sodium valproate, and older age (31% increased risk for \neach additional decade).56 Other psychotropics, including lithium, risperidone, halop-\neridol, chlorpromazine and fluphenazine have also been associated with myocarditis.57 \nIt is probably preferable to avoid concomitant use of other medicines that may contrib-\nute to the risk, but this may be practically difficult. Any pre-existing cardiac disorder, \nprevious cardiac event, use of illicit drugs23 or family history of cardiac disease should \nprovoke extra caution.\n",
+      "bbox": [
+        47.99510192871094,
+        458.54931640625,
+        422.8091735839844,
+        554.2693481445312
+      ],
+      "text_sha256": "09383eff4c13d0761bc4f2ea1cd83405d7a37c306f40fa89c398f7dc033eac0c"
+    },
+    {
+      "block_id": "page-0244-block-0007",
+      "order": 7,
+      "text": "Cardiomyopathy should be suspected in any patient showing signs of heart failure, \nwhich should provoke immediate cessation of clozapine and referral. Presentation of \ncardiomyopathy varies somewhat58,59 and is often asymptomatic in the early stages,24 so \nany reported symptoms of palpitations, chest pain, syncope, sweating, decreased exer-\ncise capacity or breathing difficulties should be closely investigated. Successful \n",
+      "bbox": [
+        47.99510192871094,
+        554.54931640625,
+        422.8051452636719,
+        614.2693481445312
+      ],
+      "text_sha256": "39ed5992ea77c3ef789200be79cd4b23bcfa47987cc1400ff5cc49c7db502995"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

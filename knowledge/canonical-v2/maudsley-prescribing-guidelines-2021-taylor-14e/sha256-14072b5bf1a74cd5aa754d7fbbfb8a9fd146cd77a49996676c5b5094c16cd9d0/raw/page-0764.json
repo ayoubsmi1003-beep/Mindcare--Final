@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0764",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 764,
+  "source_page_index": 763,
+  "source_page_display": 764,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Hepatic and renal impairment    743\nCHAPTER 8\n(Continued)\nTable 8.9  (Continued)\nDrug\nComments\nNortriptyline22,25,32,40,60,97\n<5% excreted unchanged in urine. If GFR 10–50mL/min, dose as in normal renal \nfunction; if GFR <10mL/min start at a low dose. Plasma level monitoring \nrecommended at doses of >100mg/day, as plasma concentrations of active \nmetabolites are raised in renal impairment. Worsening of GFR in elderly patients has \nalso been reported. Plasma level monitoring can be useful.\nParoxetine22,23,25,32,98–101\nLess than 2% of oral dose is excreted unchanged in the urine. Single-dose studies \nshow increased plasma concentrations of paroxetine when GFR <30mL/min. Dosing \nadvice differs: GFR 30–50mL/min dose as normal renal function; GFR <10–30mL/min \nstart at 10mg/day (other source says start at 20mg) and increase dose according to \nresponse. Paroxetine 10mg daily and psychotherapy have been used successfully to \ntreat depression in patients on chronic haemodialysis. Rarely associated with Fanconi \nsyndrome and acute renal failure.\nPhenelzine22,25\nApproximately 1% excreted unchanged in the urine. No dose adjustment required in \nrenal failure.\nReboxetine22,23,25,102,103\nApproximately 10% of unchanged drug is excreted unchanged in the urine. Dosing: \nGFR <20mL/min, 2mg twice daily, adjusting dose according to response. Half-life is \nprolonged as renal function decreases.\nSertraline22,23,25,32,104–108\n<0.2% of unchanged sertraline excreted in urine. Pharmacokinetics in renal \nimpairment are unchanged in single dose studies but no published data on \nmultiple dosing. Dosing is as for normal renal function. Sertraline has been used \nto treat dialysis-associated hypotension109 and uraemic pruritis; however acute \nrenal failure has been reported so it should be used with caution. Overall, studies \nof sertraline in patients with depression and chronic kidney disease show lack of \nefficacy. The CAST study, an RCT of sertraline (median dose 150mg) versus PBO \nin chronic non-dialysis dependent kidney disease found no significant difference \nin depressive symptoms.108 The ASCEND trial of sertraline versus CBT in patients \non haemodialysis with depression found no significant differences between \nsertraline (to 200mg) and CBT in response and remission rates but QIDS-C \ndepression scores at 12 weeks were lower for sertraline than CBT.110 Another \nsmall RCT (ASSertID study) in patients with depression on haemodialysis reported \nno difference between sertraline and placebo.111 Has been associated with \nserotonin syndrome when used in patents on haemodialysis. Case report of \nneutropenia when used in ESRD.112 May reduce CRP in patients on haemodialysis \nwith depression113 and a high CRP may predict response to sertraline (not \nplacebo) in depression with CKD.114\nTrazodone22,23,25,115\n<5% excreted unchanged in urine but care needed as approximately 70% of active \nmetabolite also excreted. Dosing: GFR 20–50mL/min, dose as normal renal function; \nGFR 10–20mL/min, dose as normal renal function but start with small dose and \nincrease gradually; GFR <10mL/min, start with small doses and increase gradually. \nSerotonin syndrome reported in a patient with chronic kidney disease on trazodone \nand duloxetine.84\n",
+  "raw_text_sha256": "128e9c9150554bf6652b35c4368d321ca17505616a77a5e2aec54bf822f2298f",
+  "coordinates_sha256": "2310ed83a942c5b7b1130ba6949162c1bd4864ddb49f94e8da1ea30d54cf17e9",
+  "block_sequence_sha256": "23b1872cbcaffa50d1dbe4f8d652a13d32c52bc22d5fb54c74d651c836fc6931",
+  "blocks": [
+    {
+      "block_id": "page-0764-block-0000",
+      "order": 0,
+      "text": "Hepatic and renal impairment    743\n",
+      "bbox": [
+        269.185302734375,
+        31.395221710205078,
+        420.00048828125,
+        41.0272216796875
+      ],
+      "text_sha256": "9fe91bb5c1ecabde9a90ec8554ae704e80f8ef3eb90c6cbb3b668ddf9d773a9c"
+    },
+    {
+      "block_id": "page-0764-block-0001",
+      "order": 1,
+      "text": "CHAPTER 8\n",
+      "bbox": [
+        454.4096984863281,
+        532.3878173828125,
+        463.88970947265625,
+        573.7318115234375
+      ],
+      "text_sha256": "5ba3d9fb75ff4f418d4a2e9d517f30966dcfb279c10487eec43c5aa3fd8757a2"
+    },
+    {
+      "block_id": "page-0764-block-0002",
+      "order": 2,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.16668701171875,
+        566.222900390625,
+        420.08160400390625,
+        574.9754028320312
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0764-block-0003",
+      "order": 3,
+      "text": "Table 8.9  (Continued)\n",
+      "bbox": [
+        54.0,
+        70.08790588378906,
+        126.87000274658203,
+        78.97540283203125
+      ],
+      "text_sha256": "79a98c30130756f7d84b977e84494d5c065e0f195846a9ebedc1e5055bf15684"
+    },
+    {
+      "block_id": "page-0764-block-0004",
+      "order": 4,
+      "text": "Drug\nComments\n",
+      "bbox": [
+        48.0,
+        89.96290588378906,
+        184.5,
+        98.85040283203125
+      ],
+      "text_sha256": "f0d3aba6cb5c63a8b3ce76553ca73a800f481925284fe7cc72b7ce3c93bfebe6"
+    },
+    {
+      "block_id": "page-0764-block-0005",
+      "order": 5,
+      "text": "Nortriptyline22,25,32,40,60,97\n<5% excreted unchanged in urine. If GFR 10–50mL/min, dose as in normal renal \nfunction; if GFR <10mL/min start at a low dose. Plasma level monitoring \nrecommended at doses of >100mg/day, as plasma concentrations of active \nmetabolites are raised in renal impairment. Worsening of GFR in elderly patients has \nalso been reported. Plasma level monitoring can be useful.\n",
+      "bbox": [
+        48.0,
+        108.26790618896484,
+        417.03009033203125,
+        156.96539306640625
+      ],
+      "text_sha256": "270ab7fdd8ba4554aa4fec4d7821916dbde7a8cfb9923b86f49d5423491ce791"
+    },
+    {
+      "block_id": "page-0764-block-0006",
+      "order": 6,
+      "text": "Paroxetine22,23,25,32,98–101\nLess than 2% of oral dose is excreted unchanged in the urine. Single-dose studies \nshow increased plasma concentrations of paroxetine when GFR <30mL/min. Dosing \nadvice differs: GFR 30–50mL/min dose as normal renal function; GFR <10–30mL/min \nstart at 10mg/day (other source says start at 20mg) and increase dose according to \nresponse. Paroxetine 10mg daily and psychotherapy have been used successfully to \ntreat depression in patients on chronic haemodialysis. Rarely associated with Fanconi \nsyndrome and acute renal failure.\n",
+      "bbox": [
+        48.0,
+        166.38539123535156,
+        419.1826171875,
+        235.08538818359375
+      ],
+      "text_sha256": "d21a3038a2ea80f941492a8c5e8ae68fc6e5a0310a2f2e792293fe1f539b0e0d"
+    },
+    {
+      "block_id": "page-0764-block-0007",
+      "order": 7,
+      "text": "Phenelzine22,25\nApproximately 1% excreted unchanged in the urine. No dose adjustment required in \nrenal failure.\n",
+      "bbox": [
+        48.0,
+        244.50538635253906,
+        419.43017578125,
+        263.222900390625
+      ],
+      "text_sha256": "966f4429bc342851415273339a9b5c60c0e182a148af163e2bd714ed8242f983"
+    },
+    {
+      "block_id": "page-0764-block-0008",
+      "order": 8,
+      "text": "Reboxetine22,23,25,102,103\nApproximately 10% of unchanged drug is excreted unchanged in the urine. Dosing: \nGFR <20mL/min, 2mg twice daily, adjusting dose according to response. Half-life is \nprolonged as renal function decreases.\n",
+      "bbox": [
+        48.0,
+        272.6429138183594,
+        417.63763427734375,
+        301.34539794921875
+      ],
+      "text_sha256": "60fcdd36bc813804c9e2074877afba5e4ca1d784832842473f5c156e1de0cd98"
+    },
+    {
+      "block_id": "page-0764-block-0009",
+      "order": 9,
+      "text": "Sertraline22,23,25,32,104–108\n<0.2% of unchanged sertraline excreted in urine. Pharmacokinetics in renal \nimpairment are unchanged in single dose studies but no published data on \nmultiple dosing. Dosing is as for normal renal function. Sertraline has been used \nto treat dialysis-associated hypotension109 and uraemic pruritis; however acute \nrenal failure has been reported so it should be used with caution. Overall, studies \nof sertraline in patients with depression and chronic kidney disease show lack of \nefficacy. The CAST study, an RCT of sertraline (median dose 150mg) versus PBO \nin chronic non-dialysis dependent kidney disease found no significant difference \nin depressive symptoms.108 The ASCEND trial of sertraline versus CBT in patients \non haemodialysis with depression found no significant differences between \nsertraline (to 200mg) and CBT in response and remission rates but QIDS-C \ndepression scores at 12 weeks were lower for sertraline than CBT.110 Another \nsmall RCT (ASSertID study) in patients with depression on haemodialysis reported \nno difference between sertraline and placebo.111 Has been associated with \nserotonin syndrome when used in patents on haemodialysis. Case report of \nneutropenia when used in ESRD.112 May reduce CRP in patients on haemodialysis \nwith depression113 and a high CRP may predict response to sertraline (not \nplacebo) in depression with CKD.114\n",
+      "bbox": [
+        48.0,
+        310.7654113769531,
+        419.78399658203125,
+        489.472900390625
+      ],
+      "text_sha256": "1b6d6e3c26d6476aa3bc09b818f39f01eb275fab1ecef2bf245fd3918933f5e9"
+    },
+    {
+      "block_id": "page-0764-block-0010",
+      "order": 10,
+      "text": "Trazodone22,23,25,115\n<5% excreted unchanged in urine but care needed as approximately 70% of active \nmetabolite also excreted. Dosing: GFR 20–50mL/min, dose as normal renal function; \nGFR 10–20mL/min, dose as normal renal function but start with small dose and \nincrease gradually; GFR <10mL/min, start with small doses and increase gradually. \nSerotonin syndrome reported in a patient with chronic kidney disease on trazodone \nand duloxetine.84\n",
+      "bbox": [
+        48.0,
+        498.8929138183594,
+        417.60760498046875,
+        557.587890625
+      ],
+      "text_sha256": "f1790bfa9603fbfd762d6b94db60e5583af650934df4ba281284ba71b9c2d009"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

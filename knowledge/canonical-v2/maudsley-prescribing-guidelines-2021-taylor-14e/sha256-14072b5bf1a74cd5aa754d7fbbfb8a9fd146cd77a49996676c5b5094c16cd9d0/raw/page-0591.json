@@ -1,0 +1,443 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0591",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 591,
+  "source_page_index": 590,
+  "source_page_display": 591,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "570    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  5\nBox 5.2  Summary of NICE guidance for ADHD in children1\n■\n■Drug treatment should only be initiated by a specialist and only after a comprehensive \nassessment of mental and physical health and social influences. In children under 5 years, \nmedication should be initiated after a second specialist opinion from an ADHD service with \nexpertise in managing ADHD in younger children (ideally a tertiary service).\n■\n■An ADHD-focused group parent-training programme should be offered for parents or carers \nof children under 5 years with ADHD. Environmental modifications need to be implemented \nin all cases. If ADHD symptoms are still causing a persistent significant impairment in at least \none domain despite environmental modifications, medication can be offered following a \nbaseline assessment.\n■\n■Methylphenidate, lisdexamfetamine, dexamfetamine, atomoxetine and guanfacine are \nrecommended within their licensed indications.\n■\n■Methylphenidate (either short or long acting) is the first choice of medication.\n■\n■Consider switching to lisdexamfetamine for children aged 5 years and over and young people \nwho have had a 6-week trial of methylphenidate at an adequate dose and not derived \nenough benefit in terms of reduced ADHD symptoms and associated impairment.\n■\n■Consider dexamfetamine for children aged 5 years and over and young people whose ADHD \nsymptoms are responding to lisdexamfetamine but who cannot tolerate the longer effect \nprofile.\n■\n■Offer atomoxetine or guanfacine to children aged 5 years and over and young people if they \ncannot tolerate methylphenidate or lisdexamfetamine or their symptoms have not responded \nto separate 6-week trials of lisdexamfetamine and methylphenidate, having considered \nalternative preparations and adequate doses.\n■\n■Monitoring should include measurement of height and weight (with entry on growth charts) \nand recording of blood pressure and heart rate. An electrocardiogram (ECG) is not needed \nbefore starting stimulants, atomoxetine or guanfacine, unless the person has any of the \nfollowing:\n■\n■history of congenital heart disease or previous cardiac surgery\n■\n■history of sudden death in a first-degree relative under 40 years suggesting a cardiac \ndisease\n■\n■shortness of breath on exertion compared with peers\n■\n■fainting on exertion or in response to fright or noise\n■\n■palpitations that are rapid, regular and start and stop suddenly\n■\n■chest pain suggesting cardiac origin\n■\n■signs of heart failure\n■\n■a murmur heard on cardiac examination\n■\n■blood pressure that is classified as hypertensive for adults\n■\n■a co-existing condition that is being treated with a medicine that may pose an increased \ncardiac risk.\nA cardiology opinion should be sought if any of the above apply.\n■\n■There is some evidence supporting the efficacy of tricyclic antidepressants18,19 but \nthese are not recommended in clinical practice.\n■\n■Bupropion8,20,21 seems to be efficacious and well-tolerated. Modafinil also appears \nto have useful activity in children but not in adults with ADHD.8,22,23 Evidence sup-\nporting the use of these drugs is somewhat limited compared with standard \ntreatments.8\n",
+  "raw_text_sha256": "844d6b7694291473d726cd1388811afc473b584721e293930238394823cab5ae",
+  "coordinates_sha256": "f4b9a36118d4e8471a0d9b00c60101732c0acffebc213e803747660c4eeca0c3",
+  "block_sequence_sha256": "7111db5850fe2b2fd70c9535434e0e7ea89d3d35473593c56619773ad3ead528",
+  "blocks": [
+    {
+      "block_id": "page-0591-block-0000",
+      "order": 0,
+      "text": "570    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "8eb82746234ab286f4d730b3958a595538a27aa2f1e7ad57d1f3770fe207d34e"
+    },
+    {
+      "block_id": "page-0591-block-0001",
+      "order": 1,
+      "text": "CHAPTER  5\n",
+      "bbox": [
+        18.520000457763672,
+        338.22650146484375,
+        28.0,
+        381.79449462890625
+      ],
+      "text_sha256": "4086e0916f45ec531cc17b8c611334eb2b1ef26051ba536579b8ef3c22c1648d"
+    },
+    {
+      "block_id": "page-0591-block-0002",
+      "order": 2,
+      "text": "Box 5.2  Summary of NICE guidance for ADHD in children1\n",
+      "bbox": [
+        69.13999938964844,
+        69.60181427001953,
+        282.3956604003906,
+        79.67431640625
+      ],
+      "text_sha256": "17e11bec3c01ab20ebff2bd6e24ccc3cae0732545367629525f85e7ba639dce7"
+    },
+    {
+      "block_id": "page-0591-block-0003",
+      "order": 3,
+      "text": "■\n■Drug treatment should only be initiated by a specialist and only after a comprehensive \n",
+      "bbox": [
+        69.13999938964844,
+        92.88076782226562,
+        390.924560546875,
+        102.749267578125
+      ],
+      "text_sha256": "571a6152719fdd9958724c362debb82e2431b848a6bbd743a97ddb1c11446783"
+    },
+    {
+      "block_id": "page-0591-block-0004",
+      "order": 4,
+      "text": "assessment of mental and physical health and social influences. In children under 5 years, \nmedication should be initiated after a second specialist opinion from an ADHD service with \nexpertise in managing ADHD in younger children (ideally a tertiary service).\n",
+      "bbox": [
+        77.63999938964844,
+        102.87673950195312,
+        408.56207275390625,
+        132.7371826171875
+      ],
+      "text_sha256": "b46322e73f0a0d361fa9f9063c55e066660816cc9c35ca1b84b1e4650ed6e6e1"
+    },
+    {
+      "block_id": "page-0591-block-0005",
+      "order": 5,
+      "text": "■\n■An ADHD-focused group parent-training programme should be offered for parents or carers \n",
+      "bbox": [
+        69.13999938964844,
+        132.88076782226562,
+        413.3306579589844,
+        142.749267578125
+      ],
+      "text_sha256": "656a68603d702a983e0dd9a258ab6e79e9cd7de027609941a9a7914293bc1a3e"
+    },
+    {
+      "block_id": "page-0591-block-0006",
+      "order": 6,
+      "text": "of children under 5 years with ADHD. Environmental modifications need to be implemented \nin all cases. If ADHD symptoms are still causing a persistent significant impairment in at least \none domain despite environmental modifications, medication can be offered following a \nbaseline assessment.\n",
+      "bbox": [
+        77.63999938964844,
+        142.87673950195312,
+        413.72161865234375,
+        182.73318481445312
+      ],
+      "text_sha256": "51f401652e3fa4328ca086688e27c012551142a63873ee0c6c0e5f67b4a98354"
+    },
+    {
+      "block_id": "page-0591-block-0007",
+      "order": 7,
+      "text": "■\n■Methylphenidate, lisdexamfetamine, dexamfetamine, atomoxetine and guanfacine are \n",
+      "bbox": [
+        69.13999938964844,
+        182.88079833984375,
+        392.4716796875,
+        192.74929809570312
+      ],
+      "text_sha256": "fef055d6e5bafabff3120ed30e856d4182adb3dfd14cdb5dc506ecc468124b42"
+    },
+    {
+      "block_id": "page-0591-block-0008",
+      "order": 8,
+      "text": "recommended within their licensed indications.\n",
+      "bbox": [
+        77.63999938964844,
+        192.87680053710938,
+        248.44749450683594,
+        202.74530029296875
+      ],
+      "text_sha256": "04476003b9adb9a640a38aa72807ab16f94c61944f5e3ac2bdb9d3b86f14f529"
+    },
+    {
+      "block_id": "page-0591-block-0009",
+      "order": 9,
+      "text": "■\n■Methylphenidate (either short or long acting) is the first choice of medication.\n",
+      "bbox": [
+        69.13999938964844,
+        202.88079833984375,
+        358.6416320800781,
+        212.74929809570312
+      ],
+      "text_sha256": "89d27b972fc0f7b93bb853a360831f7c23f2f62bed24d985214ee0f58844a0aa"
+    },
+    {
+      "block_id": "page-0591-block-0010",
+      "order": 10,
+      "text": "■\n■Consider switching to lisdexamfetamine for children aged 5 years and over and young people \n",
+      "bbox": [
+        69.13999938964844,
+        212.88079833984375,
+        418.49871826171875,
+        222.74929809570312
+      ],
+      "text_sha256": "b3611b468791deac68897c75bd1d1bd5a2a7e1ae6d9c159d4b211fa2c850f75a"
+    },
+    {
+      "block_id": "page-0591-block-0011",
+      "order": 11,
+      "text": "who have had a 6-week trial of methylphenidate at an adequate dose and not derived \nenough benefit in terms of reduced ADHD symptoms and associated impairment.\n",
+      "bbox": [
+        77.63999938964844,
+        222.87680053710938,
+        392.6842346191406,
+        242.74130249023438
+      ],
+      "text_sha256": "d274f57b8549e0b97af31dc5faec04fb9fafdff6d328e3aef693596e41f7b238"
+    },
+    {
+      "block_id": "page-0591-block-0012",
+      "order": 12,
+      "text": "■\n■Consider dexamfetamine for children aged 5 years and over and young people whose ADHD \n",
+      "bbox": [
+        69.13999938964844,
+        242.88079833984375,
+        415.6852111816406,
+        252.74929809570312
+      ],
+      "text_sha256": "e6936332eed14891b1549579053fa32ffe245cc488aee767d1d35fbe79259852"
+    },
+    {
+      "block_id": "page-0591-block-0013",
+      "order": 13,
+      "text": "symptoms are responding to lisdexamfetamine but who cannot tolerate the longer effect \nprofile.\n",
+      "bbox": [
+        77.63999938964844,
+        252.87680053710938,
+        402.1022033691406,
+        272.7413024902344
+      ],
+      "text_sha256": "aabcbcfcc2307fa5dd2729675d02d73778032c64b022dc8415fb1f3d5f48f24f"
+    },
+    {
+      "block_id": "page-0591-block-0014",
+      "order": 14,
+      "text": "■\n■Offer atomoxetine or guanfacine to children aged 5 years and over and young people if they \n",
+      "bbox": [
+        69.13999938964844,
+        272.88079833984375,
+        415.03070068359375,
+        282.7492980957031
+      ],
+      "text_sha256": "482f5a92ab181919e7b1ab4aba168c8e452093eb23ba5419daedd47d72ff158b"
+    },
+    {
+      "block_id": "page-0591-block-0015",
+      "order": 15,
+      "text": "cannot tolerate methylphenidate or lisdexamfetamine or their symptoms have not responded \nto separate 6-week trials of lisdexamfetamine and methylphenidate, having considered \nalternative preparations and adequate doses.\n",
+      "bbox": [
+        77.63999938964844,
+        282.8768005371094,
+        416.5691833496094,
+        312.7373046875
+      ],
+      "text_sha256": "11e45d31de64c1f9990a7b46e01d3896e95e05f3df5052ade4c75af47c21698c"
+    },
+    {
+      "block_id": "page-0591-block-0016",
+      "order": 16,
+      "text": "■\n■Monitoring should include measurement of height and weight (with entry on growth charts) \n",
+      "bbox": [
+        69.13999938964844,
+        312.88079833984375,
+        414.5802307128906,
+        322.7492980957031
+      ],
+      "text_sha256": "4633e64f13ffa73525134c276751df52d1eb40495128e2daf29ceefefc13fe96"
+    },
+    {
+      "block_id": "page-0591-block-0017",
+      "order": 17,
+      "text": "and recording of blood pressure and heart rate. An electrocardiogram (ECG) is not needed \nbefore starting stimulants, atomoxetine or guanfacine, unless the person has any of the \nfollowing:\n",
+      "bbox": [
+        77.63999938964844,
+        322.8768005371094,
+        406.8791809082031,
+        352.7373046875
+      ],
+      "text_sha256": "4008850e65723d0bce17d2a3eb8cd1a9bb58f253061a8ce443e4a4f9700590b9"
+    },
+    {
+      "block_id": "page-0591-block-0018",
+      "order": 18,
+      "text": "■\n■history of congenital heart disease or previous cardiac surgery\n",
+      "bbox": [
+        77.63999938964844,
+        352.88079833984375,
+        308.7380065917969,
+        362.7492980957031
+      ],
+      "text_sha256": "c3f51d37a4a8425a31d436d95bd6ddc086dfd1fb3463501d08a282ccedabbe4f"
+    },
+    {
+      "block_id": "page-0591-block-0019",
+      "order": 19,
+      "text": "■\n■history of sudden death in a first-degree relative under 40 years suggesting a cardiac \n",
+      "bbox": [
+        77.63999938964844,
+        362.88079833984375,
+        394.0866394042969,
+        372.7492980957031
+      ],
+      "text_sha256": "5957fef0e65ab6910c886d2aebf381b737bb02ee717e2f5c2278e1256fed6298"
+    },
+    {
+      "block_id": "page-0591-block-0020",
+      "order": 20,
+      "text": "disease\n",
+      "bbox": [
+        86.13999938964844,
+        372.8768005371094,
+        112.11600494384766,
+        382.74530029296875
+      ],
+      "text_sha256": "aa42fa9337d0f9a5fe66df65ba713899192eb1d5729c7644cbb8bc4289e1fd49"
+    },
+    {
+      "block_id": "page-0591-block-0021",
+      "order": 21,
+      "text": "■\n■shortness of breath on exertion compared with peers\n",
+      "bbox": [
+        77.63999938964844,
+        382.88079833984375,
+        278.0615539550781,
+        392.7492980957031
+      ],
+      "text_sha256": "96e185cb2d2a8b74e728163ac53f10c32ccea6d8f70a5d94242153532ab852c4"
+    },
+    {
+      "block_id": "page-0591-block-0022",
+      "order": 22,
+      "text": "■\n■fainting on exertion or in response to fright or noise\n",
+      "bbox": [
+        77.63999938964844,
+        392.88079833984375,
+        273.9730529785156,
+        402.7492980957031
+      ],
+      "text_sha256": "26409ae7702452f594b2cac2a6f9cf3deb677a37ee0d9716f866746ad89de7c3"
+    },
+    {
+      "block_id": "page-0591-block-0023",
+      "order": 23,
+      "text": "■\n■palpitations that are rapid, regular and start and stop suddenly\n",
+      "bbox": [
+        77.63999938964844,
+        402.88079833984375,
+        312.5461120605469,
+        412.7492980957031
+      ],
+      "text_sha256": "167dc70199ad10d102f4516a5b56933e3bc4d7f1568aa90a402db853a84e8494"
+    },
+    {
+      "block_id": "page-0591-block-0024",
+      "order": 24,
+      "text": "■\n■chest pain suggesting cardiac origin\n",
+      "bbox": [
+        77.63999938964844,
+        412.88079833984375,
+        215.3994903564453,
+        422.7492980957031
+      ],
+      "text_sha256": "40f4fb353dfa1d1142115d39813ad2413ec88a34f6a762579111a5706bd4ea49"
+    },
+    {
+      "block_id": "page-0591-block-0025",
+      "order": 25,
+      "text": "■\n■signs of heart failure\n",
+      "bbox": [
+        77.63999938964844,
+        422.88079833984375,
+        160.13250732421875,
+        432.7492980957031
+      ],
+      "text_sha256": "5e2beaac0595c755c61e3d3dbcab9be8ff61661f0ff9b19d6871dbcaa8ca8cf5"
+    },
+    {
+      "block_id": "page-0591-block-0026",
+      "order": 26,
+      "text": "■\n■a murmur heard on cardiac examination\n",
+      "bbox": [
+        77.63999938964844,
+        432.88079833984375,
+        231.28599548339844,
+        442.7492980957031
+      ],
+      "text_sha256": "ba50a940eca6ef9f094209c5d8edaeb86ac7c38f63479efdd416377956262029"
+    },
+    {
+      "block_id": "page-0591-block-0027",
+      "order": 27,
+      "text": "■\n■blood pressure that is classified as hypertensive for adults\n",
+      "bbox": [
+        77.63999938964844,
+        442.88079833984375,
+        292.6900939941406,
+        452.7492980957031
+      ],
+      "text_sha256": "870afcbfe7661408e913c12fe909828c73ee95264ec55930d3ad38fc43a83068"
+    },
+    {
+      "block_id": "page-0591-block-0028",
+      "order": 28,
+      "text": "■\n■a co-existing condition that is being treated with a medicine that may pose an increased \n",
+      "bbox": [
+        77.63999938964844,
+        452.88079833984375,
+        406.98114013671875,
+        462.7492980957031
+      ],
+      "text_sha256": "25c282fb1a2220eea14f0d6b2b536d59f92b98cb0880a9aef8cce1e3886c5712"
+    },
+    {
+      "block_id": "page-0591-block-0029",
+      "order": 29,
+      "text": "cardiac risk.\n",
+      "bbox": [
+        86.13999938964844,
+        462.8768005371094,
+        128.47850036621094,
+        472.74530029296875
+      ],
+      "text_sha256": "89bb153988f97fa2f23348e2c7e304569f02fe0cfa51f4286c938e032e4b6382"
+    },
+    {
+      "block_id": "page-0591-block-0030",
+      "order": 30,
+      "text": "A cardiology opinion should be sought if any of the above apply.\n",
+      "bbox": [
+        69.13999938964844,
+        479.79180908203125,
+        275.4649963378906,
+        488.4992980957031
+      ],
+      "text_sha256": "d6b85164f646833e0bdb83516edde90f2bf003ba70702e146a0da0318cf0658e"
+    },
+    {
+      "block_id": "page-0591-block-0031",
+      "order": 31,
+      "text": "■\n■There is some evidence supporting the efficacy of tricyclic antidepressants18,19 but \n",
+      "bbox": [
+        61.88990020751953,
+        522.9739990234375,
+        436.6690979003906,
+        534.9340209960938
+      ],
+      "text_sha256": "5a7129c714d9ad7f9a7f23c91cc9966701226e3dfb503b6124e237b1e39cc1d1"
+    },
+    {
+      "block_id": "page-0591-block-0032",
+      "order": 32,
+      "text": "these are not recommended in clinical practice.\n",
+      "bbox": [
+        70.88909912109375,
+        535.2139892578125,
+        273.0990905761719,
+        546.9340209960938
+      ],
+      "text_sha256": "b617af0bb0c06547b54eb2bba0df237a85f73349a132182ec3e3ec9dcfcb9c2b"
+    },
+    {
+      "block_id": "page-0591-block-0033",
+      "order": 33,
+      "text": "■\n■Bupropion8,20,21 seems to be efficacious and well-tolerated. Modafinil also appears \n",
+      "bbox": [
+        61.88990020751953,
+        546.9739990234375,
+        436.6858215332031,
+        558.9340209960938
+      ],
+      "text_sha256": "1aae3c7432e5ea89328b3efea168d61f746775a6aeb43edfaa46d06f8470275f"
+    },
+    {
+      "block_id": "page-0591-block-0034",
+      "order": 34,
+      "text": "to have useful activity in children but not in adults with ADHD.8,22,23 Evidence sup-\nporting the use of these drugs is somewhat limited compared with standard \ntreatments.8\n",
+      "bbox": [
+        70.88589477539062,
+        559.2139892578125,
+        436.6364440917969,
+        594.9340209960938
+      ],
+      "text_sha256": "21e69f2a89fef80a360109526f7c0ab09ecf4aedc188933518af317c0e830351"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

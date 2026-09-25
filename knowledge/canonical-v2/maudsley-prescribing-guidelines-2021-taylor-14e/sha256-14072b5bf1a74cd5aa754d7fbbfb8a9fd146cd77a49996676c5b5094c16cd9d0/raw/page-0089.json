@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0089",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 89,
+  "source_page_index": 88,
+  "source_page_display": 89,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "68    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nshould be avoided in patients with a history of serious adverse effects that would war-\nrant immediate discontinuation of the medication, such as neuroleptic malignant syn-\ndrome (NMS). For LAI FGAs, a test dose consisting of a small dose of active drug in \na small volume of oil serves a dual purpose – it is a test of the patient’s sensitivity to \nEPS and of any sensitivity to the base oil. For LAI SGAs, test doses may not be required \n(there is a lower propensity to cause EPS and the aqueous base not known to be aller-\ngenic), although they could be considered appropriate where a patient is suspected of \nbeing non-adherent to oral antipsychotic medication and the LAI preparation will be \nthe first exposure to guaranteed antipsychotic medication delivery. For both LAI \nFGAs and SGAs, prior treatment with the equivalent oral formulation is preferred to \nassess efficacy and tolerability, but it is not always necessary from a pharmacokinetic \nviewpoint. Most SGA depots can be used as sole treatment from the outset, although \nloading doses are usually necessary (e.g. for paliperidone and aripiprazole).\n■\n■Begin with the lowest therapeutic dose\nThere are few data showing clear dose–response effects for FGA LAI antipsychotic \nmedication. There is some information indicating that low doses (within the licensed \nrange) may be at least as effective as higher ones,22–25 but whether the dosages and \nfrequency of injections for LAI antipsychotic medications achieve the optimal bene-\nfit–risk balance seems uncertain.26–28\n■\n■Administer at the longest possible licensed interval\nAll LAI antipsychotic medications can be safely administered at their licensed dosing \nintervals, bearing in mind the maximum recommended single dose. There is no evi-\ndence to suggest that shortening the dose interval improves efficacy. Moreover, the \nintramuscular injection site can be a cause of discomfort and pain, so less frequent \nadministration is desirable. Although some patients are reported to deteriorate in the \ndays before their next injection is due, plasma drug concentrations may continue to \nfall, albeit slowly, for some hours (or even days with some preparations) after each \ninjection. In this context, a patient’s apparent recovery soon after the injection is \ngiven makes no sense. More importantly, at steady state, trough plasma levels (imme-\ndiately pre- and post-dose) are usually substantially above the threshold concentra-\ntion required for therapeutic effect.\n■\n■Adjust doses only after an adequate period of assessment\nAttainment of peak plasma levels, therapeutic effect and steady-state plasma levels \nare all delayed with LAI antipsychotic medications, compared with oral medications. \nDoses may be reduced if adverse effects occur but should only be increased after care-\nful assessment over at least one month, and preferably longer. Note that with most \nLAI antipsychotic preparations, at the start of treatment, plasma drug levels increase \nover several weeks to months without any increase in the dosage. This is due to accu-\nmulation: steady state is only achieved after at least 6–8 weeks. Dose increases during \nthis initial period are therefore illogical and impossible to evaluate properly. With \ncontinued LAI antipsychotic treatment, the monitoring and recording of therapeutic \nefficacy, side effects and any impact on physical health are recommended\n■\n■LAIs are not recommended for those who are antipsychotic-naïve\nTolerability to some LAI antipsychotic medications can be established by using the \noral form of the same drug for two weeks before starting. Good examples here are \nhaloperidol, aripiprazole and paliperidone (using oral risperidone).\n",
+  "raw_text_sha256": "204bfc1afed4d985869032dc010cbd57ef3e02015b5413d43d43fa35ebb4b4cd",
+  "coordinates_sha256": "8c68bb76bb9fae2d0f1592efc2eebe36d1e749626ad504715a073f47bbf5d391",
+  "block_sequence_sha256": "2a8c53fa84272595f53583fd26a6570b6ede3d509a47a6a091ade683e4d14efe",
+  "blocks": [
+    {
+      "block_id": "page-0089-block-0000",
+      "order": 0,
+      "text": "68    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "67bd9d841c92b539b8d8625db98fd8d1cd32c006d4c55b066223a51d549f5d5c"
+    },
+    {
+      "block_id": "page-0089-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0089-block-0002",
+      "order": 2,
+      "text": "should be avoided in patients with a history of serious adverse effects that would war-\nrant immediate discontinuation of the medication, such as neuroleptic malignant syn-\ndrome (NMS). For LAI FGAs, a test dose consisting of a small dose of active drug in \na small volume of oil serves a dual purpose – it is a test of the patient’s sensitivity to \nEPS and of any sensitivity to the base oil. For LAI SGAs, test doses may not be required \n(there is a lower propensity to cause EPS and the aqueous base not known to be aller-\ngenic), although they could be considered appropriate where a patient is suspected of \nbeing non-adherent to oral antipsychotic medication and the LAI preparation will be \nthe first exposure to guaranteed antipsychotic medication delivery. For both LAI \nFGAs and SGAs, prior treatment with the equivalent oral formulation is preferred to \nassess efficacy and tolerability, but it is not always necessary from a pharmacokinetic \nviewpoint. Most SGA depots can be used as sole treatment from the outset, although \nloading doses are usually necessary (e.g. for paliperidone and aripiprazole).\n",
+      "bbox": [
+        70.88909912109375,
+        62.54931640625,
+        436.7190856933594,
+        218.26931762695312
+      ],
+      "text_sha256": "581e3e25b947ca6794b19e7d11793e9f2d720b6a32d6da476e03b3cf898a3386"
+    },
+    {
+      "block_id": "page-0089-block-0003",
+      "order": 3,
+      "text": "■\n■Begin with the lowest therapeutic dose\n",
+      "bbox": [
+        61.888999938964844,
+        218.309326171875,
+        236.79908752441406,
+        230.26931762695312
+      ],
+      "text_sha256": "d778d8e6705b5dc72d8443e8cb41849556fbd5d0c76ae20f65f0370d65fddf1f"
+    },
+    {
+      "block_id": "page-0089-block-0004",
+      "order": 4,
+      "text": "There are few data showing clear dose–response effects for FGA LAI antipsychotic \nmedication. There is some information indicating that low doses (within the licensed \nrange) may be at least as effective as higher ones,22–25 but whether the dosages and \nfrequency of injections for LAI antipsychotic medications achieve the optimal bene-\nfit–risk balance seems uncertain.26–28\n",
+      "bbox": [
+        70.88909912109375,
+        230.54931640625,
+        436.7091369628906,
+        290.2693176269531
+      ],
+      "text_sha256": "bdea70c0f33644b1dd7f34c201f5bdd22a24496051539d41c05a658349422b1a"
+    },
+    {
+      "block_id": "page-0089-block-0005",
+      "order": 5,
+      "text": "■\n■Administer at the longest possible licensed interval\n",
+      "bbox": [
+        61.88909912109375,
+        290.309326171875,
+        288.4591369628906,
+        302.2693176269531
+      ],
+      "text_sha256": "94a43a74e605506e49ee399532c0aa7cb817e119725868f0334d18d3a5b1d164"
+    },
+    {
+      "block_id": "page-0089-block-0006",
+      "order": 6,
+      "text": "All LAI antipsychotic medications can be safely administered at their licensed dosing \nintervals, bearing in mind the maximum recommended single dose. There is no evi-\ndence to suggest that shortening the dose interval improves efficacy. Moreover, the \nintramuscular injection site can be a cause of discomfort and pain, so less frequent \nadministration is desirable. Although some patients are reported to deteriorate in the \ndays before their next injection is due, plasma drug concentrations may continue to \nfall, albeit slowly, for some hours (or even days with some preparations) after each \ninjection. In this context, a patient’s apparent recovery soon after the injection is \ngiven makes no sense. More importantly, at steady state, trough plasma levels (imme-\ndiately pre- and post-dose) are usually substantially above the threshold concentra-\ntion required for therapeutic effect.\n",
+      "bbox": [
+        70.88909912109375,
+        302.54931640625,
+        436.6891784667969,
+        434.2693176269531
+      ],
+      "text_sha256": "e1302b79382afd5691a08446c5f93d2270acbc7fbabf9499ca892f8f1a057b3e"
+    },
+    {
+      "block_id": "page-0089-block-0007",
+      "order": 7,
+      "text": "■\n■Adjust doses only after an adequate period of assessment\n",
+      "bbox": [
+        61.888999938964844,
+        434.309326171875,
+        316.3091125488281,
+        446.2693176269531
+      ],
+      "text_sha256": "15b26c934cbd816997f891f40c2dc950b1c7a5f7d55ab068e541d74ab30bafe6"
+    },
+    {
+      "block_id": "page-0089-block-0008",
+      "order": 8,
+      "text": "Attainment of peak plasma levels, therapeutic effect and steady-state plasma levels \nare all delayed with LAI antipsychotic medications, compared with oral medications. \nDoses may be reduced if adverse effects occur but should only be increased after care-\nful assessment over at least one month, and preferably longer. Note that with most \nLAI antipsychotic preparations, at the start of treatment, plasma drug levels increase \nover several weeks to months without any increase in the dosage. This is due to accu-\nmulation: steady state is only achieved after at least 6–8 weeks. Dose increases during \nthis initial period are therefore illogical and impossible to evaluate properly. With \ncontinued LAI antipsychotic treatment, the monitoring and recording of therapeutic \nefficacy, side effects and any impact on physical health are recommended\n",
+      "bbox": [
+        70.88909912109375,
+        446.54931640625,
+        436.6991271972656,
+        566.2693481445312
+      ],
+      "text_sha256": "3a02ab6c4aa1704b2f36349bb7c3d4248f2bf7062db3cbf1fa06fd7983dec38b"
+    },
+    {
+      "block_id": "page-0089-block-0009",
+      "order": 9,
+      "text": "■\n■LAIs are not recommended for those who are antipsychotic-naïve\n",
+      "bbox": [
+        61.888999938964844,
+        566.309326171875,
+        352.4791259765625,
+        578.2693481445312
+      ],
+      "text_sha256": "586995704229657baec9adcd15fd8e6448dcd8268973dfd0071d16ec2f19afde"
+    },
+    {
+      "block_id": "page-0089-block-0010",
+      "order": 10,
+      "text": "Tolerability to some LAI antipsychotic medications can be established by using the \noral form of the same drug for two weeks before starting. Good examples here are \nhaloperidol, aripiprazole and paliperidone (using oral risperidone).\n",
+      "bbox": [
+        70.88909912109375,
+        578.54931640625,
+        436.7190856933594,
+        614.2693481445312
+      ],
+      "text_sha256": "ccb12e7fb52665f77869a2e05fba13d0274bcbae1d60d3ac6e6641ceea8426d1"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

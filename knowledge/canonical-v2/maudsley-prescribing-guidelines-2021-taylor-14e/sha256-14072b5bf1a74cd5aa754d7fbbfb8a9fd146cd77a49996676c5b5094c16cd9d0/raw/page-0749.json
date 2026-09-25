@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0749",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 749,
+  "source_page_index": 748,
+  "source_page_display": 749,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "728    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 8\nDrug\nComments\nReboxetine5,6,67\n50% reduction in starting dose recommended. Does not seem to be associated with \nhepatotoxicity.\nTricyclics5,6,68\nAll are hepatically metabolised, highly protein bound and will accumulate. They vary in \ntheir propensity to cause sedation and constipation. All are associated with raised LFTs \nand rare cases of hepatitis. Sedative TCAs such as trimipramine, imipramine, dothiepin \n(dosulepin) and amitriptyline are best avoided.\nVenlafaxine/\ndesvenlafaxine5,6,69,70\nDosage reduction of 50% advised in mild and moderate hepatic impairment. Rare cases \nof hepatitis reported.\nVilazodone6\nNo dose adjustment required in hepatic impairment. Does not appear to affect liver \nenzymes and no cases of hepatotoxicity, but data are limited, and all other SSRIs have \nbeen linked to liver toxicity.\nVortioxetine5,71,72\nExtensively metabolised in the liver. Little experience in hepatic impairment, but \npharmacokinetic studies suggest no dose reduction is required. Does not seem to be \nassociated with hepatotoxicity.\nTable 8.2  (Continued)\n(Continued)\nTable 8.3  Mood stabilisers in hepatic impairment\nDrug\nComments\nCarbamazepine5,6,73\nExtensively hepatically metabolised and potent inducer of CYP450 enzymes (this can \ncause modest elevations in gamma-GT and alk phos, which in themselves are not an \nindication for stopping5). In chronic stable disease, caution advised. Avoid use in \nacute liver disease. Reduce starting dose by 50%,6 and titrate up slowly, using \nplasma levels to guide dosage. Stop if LFTs deteriorate. Associated with hepatitis, \ncholangitis, cholestatic and hepatocellular jaundice, and hepatic failure (rare). \nAdverse hepatic effects are most common in the first 2 months of treatment.73 \nHepatocellular damage is often associated with a poor outcome. Vulnerability to \ncarbamazepine-induced hepatic damage may be genetically determined.73\nLamotrigine19\nManufacturers recommend 50% reduction in initial dose, dose escalation and \nmaintenance dose in moderate hepatic impairment and 75% in severe hepatic \nimpairment. Discontinue if lamotrigine-induced rash (which can be serious). Extreme \ncaution advised, particularly in women, children, and if co-prescribed with valproate. \nElevated LFTs and hepatitis reported.\nLithium6\nNot metabolised, so dosage reduction not required as long as renal function is \nnormal. Use serum levels to guide dosage and monitor more frequently if ascites \nstatus changes (volume of distribution will change). Asymptomatic and transient LFT \nabnormalities reported in small proportion of patients on long term therapy.19 One \ncase of ascites and one of hyperbilirubinemia reported over many decades of lithium \nuse worldwide.\nMood stabilisers in hepatic impairment5,6,73\nRecommendations for the use of mood-stabilising medications in hepatic impairment \nare summarised in Table 8.3.\nALT, alanine aminotransferase, ULN, upper limit of normal.\n",
+  "raw_text_sha256": "1c077b283aec5c4a1358714e86b9030a3ba6dca3a26ba6124503553bfe67fd08",
+  "coordinates_sha256": "15b00f37c3d80504c7885d7b209bd806b8c40cdcf86765655cee30737e8b4f27",
+  "block_sequence_sha256": "4e7edb82e3f7924ad43418c3254805ac88809b32cc8dcf5a9355a0e2df68719e",
+  "blocks": [
+    {
+      "block_id": "page-0749-block-0000",
+      "order": 0,
+      "text": "728    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "8fb8c06bc877f61d69df57d41f0b3930922cddcdc38bb495be5a775158d5e05f"
+    },
+    {
+      "block_id": "page-0749-block-0001",
+      "order": 1,
+      "text": "CHAPTER 8\n",
+      "bbox": [
+        18.520000457763672,
+        532.3878173828125,
+        28.0,
+        573.7318115234375
+      ],
+      "text_sha256": "5ba3d9fb75ff4f418d4a2e9d517f30966dcfb279c10487eec43c5aa3fd8757a2"
+    },
+    {
+      "block_id": "page-0749-block-0002",
+      "order": 2,
+      "text": "Drug\nComments\n",
+      "bbox": [
+        61.88999938964844,
+        90.21296691894531,
+        185.3925018310547,
+        99.1004638671875
+      ],
+      "text_sha256": "f0d3aba6cb5c63a8b3ce76553ca73a800f481925284fe7cc72b7ce3c93bfebe6"
+    },
+    {
+      "block_id": "page-0749-block-0003",
+      "order": 3,
+      "text": "Reboxetine5,6,67\n50% reduction in starting dose recommended. Does not seem to be associated with \nhepatotoxicity.\n",
+      "bbox": [
+        61.88999938964844,
+        108.5179672241211,
+        419.3450927734375,
+        127.22296142578125
+      ],
+      "text_sha256": "9b779772141b88a2d65574db41660be1b7c9503be5683438c9d5722d07cb7a25"
+    },
+    {
+      "block_id": "page-0749-block-0004",
+      "order": 4,
+      "text": "Tricyclics5,6,68\nAll are hepatically metabolised, highly protein bound and will accumulate. They vary in \ntheir propensity to cause sedation and constipation. All are associated with raised LFTs \nand rare cases of hepatitis. Sedative TCAs such as trimipramine, imipramine, dothiepin \n(dosulepin) and amitriptyline are best avoided.\n",
+      "bbox": [
+        61.88749694824219,
+        136.64295959472656,
+        425.9825439453125,
+        175.34295654296875
+      ],
+      "text_sha256": "d7141849df58730577510e9985bdac7f055b81ff0bc44bbec10ef4b03393c7e4"
+    },
+    {
+      "block_id": "page-0749-block-0005",
+      "order": 5,
+      "text": "Venlafaxine/\ndesvenlafaxine5,6,69,70\n",
+      "bbox": [
+        61.88749694824219,
+        184.76295471191406,
+        126.7876968383789,
+        203.46795654296875
+      ],
+      "text_sha256": "9571c3b6d1b8fe0ea1d6355b2dc0d05823193e9acfaa238c7420fa46a8c38371"
+    },
+    {
+      "block_id": "page-0749-block-0006",
+      "order": 6,
+      "text": "Dosage reduction of 50% advised in mild and moderate hepatic impairment. Rare cases \nof hepatitis reported.\n",
+      "bbox": [
+        147.88999938964844,
+        184.7679901123047,
+        430.580078125,
+        203.47299194335938
+      ],
+      "text_sha256": "d8fd9b03516477cd04d1fd90333ac57bf93283330ccae5f536f7756a1f9b5e16"
+    },
+    {
+      "block_id": "page-0749-block-0007",
+      "order": 7,
+      "text": "Vilazodone6\nNo dose adjustment required in hepatic impairment. Does not appear to affect liver \nenzymes and no cases of hepatotoxicity, but data are limited, and all other SSRIs have \nbeen linked to liver toxicity.\n",
+      "bbox": [
+        61.88749694824219,
+        212.8929901123047,
+        422.9300231933594,
+        241.59548950195312
+      ],
+      "text_sha256": "adca6c9c95095c608bc42f45fa298138cb4b7d9a69fcbcce59402cc2abd088c3"
+    },
+    {
+      "block_id": "page-0749-block-0008",
+      "order": 8,
+      "text": "Vortioxetine5,71,72\nExtensively metabolised in the liver. Little experience in hepatic impairment, but \npharmacokinetic studies suggest no dose reduction is required. Does not seem to be \nassociated with hepatotoxicity.\n",
+      "bbox": [
+        61.88749694824219,
+        251.01548767089844,
+        419.21759033203125,
+        279.7204895019531
+      ],
+      "text_sha256": "d1dcdca0d9ff64d15df9f57b343672ed2099ca3fe5a17748f032724af8fc9c11"
+    },
+    {
+      "block_id": "page-0749-block-0009",
+      "order": 9,
+      "text": "Table 8.2  (Continued)\n",
+      "bbox": [
+        67.88999938964844,
+        70.08790588378906,
+        140.760009765625,
+        78.97540283203125
+      ],
+      "text_sha256": "edc9626c72a156fb92d3bfecd7f1295d72c76f87248688aec33a4b6d989b51f9"
+    },
+    {
+      "block_id": "page-0749-block-0010",
+      "order": 10,
+      "text": "(Continued)\n",
+      "bbox": [
+        396.9749755859375,
+        633.4503784179688,
+        433.889892578125,
+        642.202880859375
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0749-block-0011",
+      "order": 11,
+      "text": "Table 8.3  Mood stabilisers in hepatic impairment\n",
+      "bbox": [
+        67.88999938964844,
+        371.5804748535156,
+        226.25244140625,
+        380.4679870605469
+      ],
+      "text_sha256": "67da8a1c211337b9884be5715a115861229cb644cb5bcf4f830cc6c1742beec6"
+    },
+    {
+      "block_id": "page-0749-block-0012",
+      "order": 12,
+      "text": "Drug\nComments\n",
+      "bbox": [
+        61.88999938964844,
+        391.4554748535156,
+        198.78750610351562,
+        400.3429870605469
+      ],
+      "text_sha256": "f0d3aba6cb5c63a8b3ce76553ca73a800f481925284fe7cc72b7ce3c93bfebe6"
+    },
+    {
+      "block_id": "page-0749-block-0013",
+      "order": 13,
+      "text": "Carbamazepine5,6,73\nExtensively hepatically metabolised and potent inducer of CYP450 enzymes (this can \ncause modest elevations in gamma-GT and alk phos, which in themselves are not an \nindication for stopping5). In chronic stable disease, caution advised. Avoid use in \nacute liver disease. Reduce starting dose by 50%,6 and titrate up slowly, using \nplasma levels to guide dosage. Stop if LFTs deteriorate. Associated with hepatitis, \ncholangitis, cholestatic and hepatocellular jaundice, and hepatic failure (rare). \nAdverse hepatic effects are most common in the first 2 months of treatment.73 \nHepatocellular damage is often associated with a poor outcome. Vulnerability to \ncarbamazepine-induced hepatic damage may be genetically determined.73\n",
+      "bbox": [
+        61.89000701904297,
+        409.760498046875,
+        432.86505126953125,
+        498.4629821777344
+      ],
+      "text_sha256": "5a456549f31791f004fe3a40e4ec5b4fd60929ceb84b69b08c93c2d7ee61c7df"
+    },
+    {
+      "block_id": "page-0749-block-0014",
+      "order": 14,
+      "text": "Lamotrigine19\nManufacturers recommend 50% reduction in initial dose, dose escalation and \nmaintenance dose in moderate hepatic impairment and 75% in severe hepatic \nimpairment. Discontinue if lamotrigine-induced rash (which can be serious). Extreme \ncaution advised, particularly in women, children, and if co-prescribed with valproate. \nElevated LFTs and hepatitis reported.\n",
+      "bbox": [
+        61.88999938964844,
+        507.8855285644531,
+        432.99249267578125,
+        556.5830078125
+      ],
+      "text_sha256": "0c2a14562e98018b342e226b6e9a7b0ab79df8a034ec16c623962359f576136f"
+    },
+    {
+      "block_id": "page-0749-block-0015",
+      "order": 15,
+      "text": "Lithium6\nNot metabolised, so dosage reduction not required as long as renal function is \nnormal. Use serum levels to guide dosage and monitor more frequently if ascites \nstatus changes (volume of distribution will change). Asymptomatic and transient LFT \nabnormalities reported in small proportion of patients on long term therapy.19 One \ncase of ascites and one of hyperbilirubinemia reported over many decades of lithium \nuse worldwide.\n",
+      "bbox": [
+        61.892494201660156,
+        566.0029296875,
+        432.8499450683594,
+        624.7130126953125
+      ],
+      "text_sha256": "dd05387d1660c1d81331d74396f90ecb63590e6ae12fdc6297896f01910aaaf5"
+    },
+    {
+      "block_id": "page-0749-block-0016",
+      "order": 16,
+      "text": "Mood stabilisers in hepatic impairment5,6,73\n",
+      "bbox": [
+        61.88999938964844,
+        312.8079833984375,
+        281.4119873046875,
+        325.8429870605469
+      ],
+      "text_sha256": "0ee2646c2d7b9f491b6f61919789015b4317fb777a6b406f0baa1b44e28ad202"
+    },
+    {
+      "block_id": "page-0749-block-0017",
+      "order": 17,
+      "text": "Recommendations for the use of mood-stabilising medications in hepatic impairment \nare summarised in Table 8.3.\n",
+      "bbox": [
+        61.88999938964844,
+        331.6529846191406,
+        436.63995361328125,
+        355.37298583984375
+      ],
+      "text_sha256": "88101fdf0a8f0cbb0d65db76e34e215d97dd541190ff2ae38105ae2f87f92ea2"
+    },
+    {
+      "block_id": "page-0749-block-0018",
+      "order": 18,
+      "text": "ALT, alanine aminotransferase, ULN, upper limit of normal.\n",
+      "bbox": [
+        61.88999938964844,
+        288.010498046875,
+        236.33258056640625,
+        296.7179870605469
+      ],
+      "text_sha256": "63a275eefa435df15281169bbe52b50bc4209fedc0b3e6f9aadcb11a163cf173"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

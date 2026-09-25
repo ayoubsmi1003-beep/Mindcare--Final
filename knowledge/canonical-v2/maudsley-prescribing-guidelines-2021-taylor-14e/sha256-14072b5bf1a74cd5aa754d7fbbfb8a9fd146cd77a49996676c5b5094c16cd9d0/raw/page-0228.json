@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0228",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 228,
+  "source_page_index": 227,
+  "source_page_display": 228,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    207\nCHAPTER 1\nRe-starting clozapine after a break in treatment\nPatients prescribed clozapine should be advised to contact their prescriber if they stop \ntaking the medication. This is partly because, if clozapine treatment is stopped abruptly, \nthere is a need to monitor for symptoms of cholinergic rebound, such as nausea, vomit-\ning, diarrhoea, sweating and headache,1,2 as well as the possible emergence of dystonias, \ndyskinesias and catatonic symptoms.3–6 Furthermore, if clozapine treatment is missed \nfor more than 48 hours, re-titration from a 12.5mg dose is required.7,8\nDepending on tolerability, it may be feasible to re-titrate the dose to a therapeutic \nlevel more rapidly than is recommended for initial treatment. While there is some evi-\ndence to suggest that faster titrations may be safe in those patients naïve to clozapine2 \nand those re-starting it,3 there is the risk that titration schedules that are too rapid will \nlead to unnecessary drug discontinuation because of side-effects. More cautious dosage \ntitration will be appropriate for certain patients, such as those who are elderly, people \nwith Parkinson’s disease, and outpatients starting clozapine who are uncertain about \nthe potential benefits of the medication.9,10\nRe-starting clozapine after gaps of various lengths should take account of the need to \nregain antipsychotic activity with clozapine while ensuring safety during titration. A \nkey element is flexibility: the dosage schedule prescribed for a patient will depend upon \nhow previous dosages were tolerated. Examples of slow, fast and ultra-fast titration \nschedules are available,8 but it is probably best to individualise titration according to \npatient tolerability. In broad terms, this means starting with 12.5mg and increasing to \n25mg for the next dose if the initial dose causes no adverse problems with, for example, \nsedation, heart rate or blood pressure. If the 25mg dose is well tolerated then 50mg can \nbe given for the next dose, and so on. Twice daily dosing probably allows an optimum \nrate of titration, but some centres use three times daily dosing. Accumulation effects are \nmore likely with the latter schedule. Where a given dose in the titration schedule is not \ntolerated, the next dose should usually be delayed and not increased (possibly decreased).\nIt is usually better to prescribe a series of single ‘stat’ doses one at a time rather than \nto write up a complete schedule of doses which might then have to be changed.\nReferences\n\t 1.\t Shiovitz TM, et al. Cholinergic rebound and rapid onset psychosis following abrupt clozapine withdrawal. Schizophr Bull 1996; \n22:591–595.\n\t 2.\t Galova A, et al. A case report of cholinergic rebound syndrome following abrupt low-dose clozapine discontinuation in a patient with type I \nbipolar affective disorder. BMC Psychiatry 2019; 19:73.\n\t 3.\t Ahmed S, et al. Clozapine withdrawal-emergent dystonias and dyskinesias: a case series. J Clin Psychiatry 1998; 59:472–477.\n\t 4.\t Shrivastava M, et al. Relapse of tardive dyskinesia due to reduction in clozapine dose. Indian J Pharmacol 2009; 41:201–202.\n\t 5.\t Boazak M, et al. Catatonia due to clozapine withdrawal: a case report and literature review. Psychosomatics 2019; 60:421–427.\n\t 6.\t Lander M, et al. Review of withdrawal catatonia: what does this reveal about clozapine? Trans Psychiatry 2018; 8:139.\n\t 7.\t Mylan Products Ltd. Clozaril 25mg and 100mg tablets. 2020; https://www.medicines.org.uk/emc/medicine/32564.\n\t 8.\t Rubio JM, et al. How and when to use clozapine. Acta Psychiatr Scand 2020; 141:178–189.\n\t 9.\t Gee SH, et al. Patient attitudes to clozapine initiation. Int Clin Psychopharmacol 2017; 32:337–342.\n\t10.\t Schulte PF, et al. Comment on ‘effectiveness and safety of rapid clozapine titration in schizophrenia’. Acta Psychiatr Scand 2014; \n130:69–70.\n",
+  "raw_text_sha256": "385f108758b4b69b885e8c57132771761086df91ef0c63699cddc3fa729785dc",
+  "coordinates_sha256": "464c6e304a71b0d9247f92c51f6a06e148d16ddbd1643792a8621912ac5ed892",
+  "block_sequence_sha256": "8fa613311067185e00385ee782ca8235de46eba983f5c922d7243372d8dd7ba1",
+  "blocks": [
+    {
+      "block_id": "page-0228-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    207\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "0c963e462051df2c20461e14788bed40e6370ac68a2129fa55a3dc2eec8deb9f"
+    },
+    {
+      "block_id": "page-0228-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0228-block-0002",
+      "order": 2,
+      "text": "Re-starting clozapine after a break in treatment\n",
+      "bbox": [
+        54.99909973144531,
+        66.06442260742188,
+        300.9591064453125,
+        79.09942626953125
+      ],
+      "text_sha256": "4d99071ce65f458484da9e16f6be9f55bfd4a2248ff8e49f65854ebdd2a56b27"
+    },
+    {
+      "block_id": "page-0228-block-0003",
+      "order": 3,
+      "text": "Patients prescribed clozapine should be advised to contact their prescriber if they stop \ntaking the medication. This is partly because, if clozapine treatment is stopped abruptly, \nthere is a need to monitor for symptoms of cholinergic rebound, such as nausea, vomit-\ning, diarrhoea, sweating and headache,1,2 as well as the possible emergence of dystonias, \ndyskinesias and catatonic symptoms.3–6 Furthermore, if clozapine treatment is missed \nfor more than 48 hours, re-titration from a 12.5mg dose is required.7,8\n",
+      "bbox": [
+        47.9949951171875,
+        84.909423828125,
+        422.8090515136719,
+        156.62942504882812
+      ],
+      "text_sha256": "9e5bf8710e7b8eb4142a66d9e1ec9c0be6bc977f54afaa3ab664646ac219a772"
+    },
+    {
+      "block_id": "page-0228-block-0004",
+      "order": 4,
+      "text": "Depending on tolerability, it may be feasible to re-titrate the dose to a therapeutic \nlevel more rapidly than is recommended for initial treatment. While there is some evi-\ndence to suggest that faster titrations may be safe in those patients naïve to clozapine2 \nand those re-starting it,3 there is the risk that titration schedules that are too rapid will \nlead to unnecessary drug discontinuation because of side-effects. More cautious dosage \ntitration will be appropriate for certain patients, such as those who are elderly, people \nwith Parkinson’s disease, and outpatients starting clozapine who are uncertain about \nthe potential benefits of the medication.9,10\n",
+      "bbox": [
+        47.99909973144531,
+        156.909423828125,
+        422.8198547363281,
+        252.62942504882812
+      ],
+      "text_sha256": "e788695236427fffb30d96daaf47919305216aacdf95240c1d4200f295df2625"
+    },
+    {
+      "block_id": "page-0228-block-0005",
+      "order": 5,
+      "text": "Re-starting clozapine after gaps of various lengths should take account of the need to \nregain antipsychotic activity with clozapine while ensuring safety during titration. A \nkey element is flexibility: the dosage schedule prescribed for a patient will depend upon \nhow previous dosages were tolerated. Examples of slow, fast and ultra-fast titration \nschedules are available,8 but it is probably best to individualise titration according to \npatient tolerability. In broad terms, this means starting with 12.5mg and increasing to \n25mg for the next dose if the initial dose causes no adverse problems with, for example, \nsedation, heart rate or blood pressure. If the 25mg dose is well tolerated then 50mg can \nbe given for the next dose, and so on. Twice daily dosing probably allows an optimum \nrate of titration, but some centres use three times daily dosing. Accumulation effects are \nmore likely with the latter schedule. Where a given dose in the titration schedule is not \ntolerated, the next dose should usually be delayed and not increased (possibly decreased).\n",
+      "bbox": [
+        47.994789123535156,
+        252.909423828125,
+        422.8247985839844,
+        396.6294250488281
+      ],
+      "text_sha256": "2af7dbe71ad5990c670f6a54b0e93287a48fcb896b644f2cdb5e419f4a1a0b3d"
+    },
+    {
+      "block_id": "page-0228-block-0006",
+      "order": 6,
+      "text": "It is usually better to prescribe a series of single ‘stat’ doses one at a time rather than \nto write up a complete schedule of doses which might then have to be changed.\n",
+      "bbox": [
+        47.994789123535156,
+        396.909423828125,
+        422.7146911621094,
+        420.6294250488281
+      ],
+      "text_sha256": "ca28764348c563669ba84d98ebe587bf8a15a0bd0e706d28776bbb88ee25f84e"
+    },
+    {
+      "block_id": "page-0228-block-0007",
+      "order": 7,
+      "text": "References\n",
+      "bbox": [
+        47.99909973144531,
+        438.0644226074219,
+        104.03309631347656,
+        451.09942626953125
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0228-block-0008",
+      "order": 8,
+      "text": "\t 1.\t Shiovitz TM, et al. Cholinergic rebound and rapid onset psychosis following abrupt clozapine withdrawal. Schizophr Bull 1996; \n",
+      "bbox": [
+        47.99909973144531,
+        456.1854248046875,
+        421.6850891113281,
+        463.2174377441406
+      ],
+      "text_sha256": "e82d427f7fbcc95d79c20c47a3c9301bc50ad2b62c4fe2d0130c55bcf08a7885"
+    },
+    {
+      "block_id": "page-0228-block-0009",
+      "order": 9,
+      "text": "22:591–595.\n\t 2.\t Galova A, et al. A case report of cholinergic rebound syndrome following abrupt low-dose clozapine discontinuation in a patient with type I \n",
+      "bbox": [
+        48.005096435546875,
+        465.0414123535156,
+        421.7271423339844,
+        481.2174377441406
+      ],
+      "text_sha256": "31eea3f30ae8bb5b745688f195f667674123b6a41cc09202857214f32bd8b654"
+    },
+    {
+      "block_id": "page-0228-block-0010",
+      "order": 10,
+      "text": "bipolar affective disorder. BMC Psychiatry 2019; 19:73.\n\t 3.\t Ahmed S, et al. Clozapine withdrawal-emergent dystonias and dyskinesias: a case series. J Clin Psychiatry 1998; 59:472–477.\n\t 4.\t Shrivastava M, et al. Relapse of tardive dyskinesia due to reduction in clozapine dose. Indian J Pharmacol 2009; 41:201–202.\n\t 5.\t Boazak M, et al. Catatonia due to clozapine withdrawal: a case report and literature review. Psychosomatics 2019; 60:421–427.\n\t 6.\t Lander M, et al. Review of withdrawal catatonia: what does this reveal about clozapine? Trans Psychiatry 2018; 8:139.\n\t 7.\t Mylan Products Ltd. Clozaril 25mg and 100mg tablets. 2020; https://www.medicines.org.uk/emc/medicine/32564.\n\t 8.\t Rubio JM, et al. How and when to use clozapine. Acta Psychiatr Scand 2020; 141:178–189.\n\t 9.\t Gee SH, et al. Patient attitudes to clozapine initiation. Int Clin Psychopharmacol 2017; 32:337–342.\n\t10.\t Schulte PF, et al. Comment on ‘effectiveness and safety of rapid clozapine titration in schizophrenia’. Acta Psychiatr Scand 2014; \n",
+      "bbox": [
+        48.01110076904297,
+        483.0414123535156,
+        421.7511901855469,
+        562.2174072265625
+      ],
+      "text_sha256": "a280ca89c00662b0248fc57f8dd31c9bf1083bfb928181a8460ef244e6087a77"
+    },
+    {
+      "block_id": "page-0228-block-0011",
+      "order": 11,
+      "text": "130:69–70.\n",
+      "bbox": [
+        59.057098388671875,
+        564.0414428710938,
+        88.74508666992188,
+        571.2174072265625
+      ],
+      "text_sha256": "24e70dde096b9987a46be66774fa3d3e53e365e5934b70ce43c640039950c900"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

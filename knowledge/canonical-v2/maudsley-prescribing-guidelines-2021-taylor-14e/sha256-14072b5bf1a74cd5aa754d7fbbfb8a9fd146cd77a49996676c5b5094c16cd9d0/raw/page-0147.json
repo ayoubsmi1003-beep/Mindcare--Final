@@ -1,0 +1,371 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0147",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 147,
+  "source_page_index": 146,
+  "source_page_display": 147,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "126    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nPharmacological methods should be considered only where behavioural treatment \nstrategies or switching to a medication with a lower liability for weight gain have failed \nor where obesity presents a clear, immediate physical risk to the patient. Some drug \ntreatment options for antipsychotic-induced weight gain are listed (in alphabetical \norder) in Table 1.18. Some treatments recommended in previous editions (e.g., H2 \nantagonists) have been removed from this table because evidence no longer supports \ntheir use.\nMetformin is now probably considered to be the drug of choice for the prevention \nand treatment of antipsychotic-induced weight gain, although GLP-1 agonists may ulti-\nmately prove more effective and better tolerated. Bariatric surgery may have a role in a \nfew of the rare, severe cases where all else has failed;33 however, the efficacy of bariatric \nsurgery for drug-induced weight gain is not known.2\nTable 1.18  Drug treatment of antipsychotic-induced weight gain (alphabetical order)\nDrug\nComments\nAmantadine34,35\n(100–300mg/day)\nMay attenuate olanzapine-related weight gain. Seems to be well tolerated apart from \ninsomnia and abdominal discomfort. May (theoretically, at least) exacerbate psychosis. \nEvidence base too limited to recommend2\nAlpha-lipoic acid36–38\n(1200mg/day)\nSupplementation may lead to a small, short-term, weight loss. Limited data for \nantipsychotic-induced weight gain. Not recommended\nAripiprazole \naugmentation15,32,39\n(5–15mg/day)\nRCTs show beneficial effects on weight loss and possibly other metabolic parameters \nwhen used as an adjunct to clozapine or olanzapine. Adjunctive use appears to be safe \nand unlikely to worsen psychosis. Recommended as a possible option for weight gain \nassociated with clozapine or olanzapine. Not recommended with other antipsychotic \nmedications\nBetahistine40,41\n(48mg/day)\nMay attenuate olanzapine-induced weight gain. Limited data. Not recommended\nBupropion42,43\n(amfebutamone)\nSeems to be effective in obesity when combined with calorie-restricted diets. Appears \nto not exacerbate psychosis symptoms, at least when used for smoking cessation.44 \nFew data of its effects on drug-induced weight gain. Not recommended\nBupropion + naltrexone \n(Contrave/Mysimba)45\nCombination approved for weight management as an adjunct to diet and exercise. \nNo data in drug-induced weight gain. Not recommended, but should not be ruled \nout\nFluvoxamine46–48\n(50mg/day)\nEarlier conflicting data but one short term RCT shows attenuated clozapine-induced \nweight gain (possibly related to a higher clozapine to norclozapine ratio). \nCo-administration markedly increases clozapine levels, requiring extreme caution. \nEvidence base is too limited to recommend\nLiraglutide49,50\n(3mg/day via \nsubcutaneous injection)\nGLP-1 agonist that was previously approved for type 2 diabetes and more recently \napproved as an anti-obesity agent in non-diabetic patients. Dose for weight loss \n(3mg/day) is higher than the dose used for diabetes (≤1.8mg). Limited data in \ndrug-induced weight gain. One RCT shows significant weight loss in overweight \npre-diabetic patients stable on olanzapine or clozapine.49 Beneficial effects on other \nmetabolic parameters. Well tolerated but can cause GI disturbances. Recommended \noption in pre-diabetic/diabetic patients and clozapine-induced weight gain.\nOther GLP-1 agonists are currently only approved for diabetes and have a more \nlimited dose range. Exenatide LA (a once-weekly GLP-1 agonist) may be effective for \nweight loss in clozapine-treated patients51 but perhaps not with other antipsychotics52\n",
+  "raw_text_sha256": "4cb9a2675dd723562c7ad938a89237063b7bc544f99ba53969b430685050c44f",
+  "coordinates_sha256": "cf37f495e047309d5e16ca8c94c70f71a99f0ab94d554784866e991602c77a2c",
+  "block_sequence_sha256": "3f7cc40a55dfcb9d3270d7a60e8b7746831d433f574b82f3f99e90ea6b298612",
+  "blocks": [
+    {
+      "block_id": "page-0147-block-0000",
+      "order": 0,
+      "text": "126    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "29c2960b5679fb87614a997458c7325c322331a6acf2bcf8eed21e4bf33a8470"
+    },
+    {
+      "block_id": "page-0147-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0147-block-0002",
+      "order": 2,
+      "text": "Pharmacological methods should be considered only where behavioural treatment \nstrategies or switching to a medication with a lower liability for weight gain have failed \nor where obesity presents a clear, immediate physical risk to the patient. Some drug \ntreatment options for antipsychotic-induced weight gain are listed (in alphabetical \norder) in Table 1.18. Some treatments recommended in previous editions (e.g., H2 \nantagonists) have been removed from this table because evidence no longer supports \ntheir use.\n",
+      "bbox": [
+        61.88909912109375,
+        62.54931640625,
+        436.6890563964844,
+        146.26931762695312
+      ],
+      "text_sha256": "03f4fe278878d41c897469ab9b637869116ae26e687ad2be5761cb8c694699d3"
+    },
+    {
+      "block_id": "page-0147-block-0003",
+      "order": 3,
+      "text": "Metformin is now probably considered to be the drug of choice for the prevention \nand treatment of antipsychotic-induced weight gain, although GLP-1 agonists may ulti-\nmately prove more effective and better tolerated. Bariatric surgery may have a role in a \nfew of the rare, severe cases where all else has failed;33 however, the efficacy of bariatric \nsurgery for drug-induced weight gain is not known.2\n",
+      "bbox": [
+        61.88911437988281,
+        146.54931640625,
+        436.6589050292969,
+        206.26931762695312
+      ],
+      "text_sha256": "363b3e61a4c04e5c2943885d2ac2b6c7c82ab1349730956009028f021cc90d6a"
+    },
+    {
+      "block_id": "page-0147-block-0004",
+      "order": 4,
+      "text": "Table 1.18  Drug treatment of antipsychotic-induced weight gain (alphabetical order)\n",
+      "bbox": [
+        67.88909912109375,
+        228.73692321777344,
+        340.1691589355469,
+        237.62442016601562
+      ],
+      "text_sha256": "69d9db950b0ef1fed9312372a122d8d1dd7be5335b4745838c83c61fbe4e763f"
+    },
+    {
+      "block_id": "page-0147-block-0005",
+      "order": 5,
+      "text": "Drug\nComments\n",
+      "bbox": [
+        61.88909912109375,
+        248.97190856933594,
+        191.8865966796875,
+        257.8594055175781
+      ],
+      "text_sha256": "f0d3aba6cb5c63a8b3ce76553ca73a800f481925284fe7cc72b7ce3c93bfebe6"
+    },
+    {
+      "block_id": "page-0147-block-0006",
+      "order": 6,
+      "text": "Amantadine34,35\n",
+      "bbox": [
+        61.88909912109375,
+        265.9294128417969,
+        112.00128173828125,
+        274.63690185546875
+      ],
+      "text_sha256": "b9dbb9a7f620945cb1d818482adc31aa259d8c81ab3a98c91ee4ce33f8e42365"
+    },
+    {
+      "block_id": "page-0147-block-0007",
+      "order": 7,
+      "text": "(100–300mg/day)\n",
+      "bbox": [
+        61.88909912109375,
+        275.92694091796875,
+        118.58159637451172,
+        284.6344299316406
+      ],
+      "text_sha256": "9cf110beeffe8f053c10c62beab85a1f08ae2b5d2183de48863f840fddfa13d7"
+    },
+    {
+      "block_id": "page-0147-block-0008",
+      "order": 8,
+      "text": "May attenuate olanzapine-related weight gain. Seems to be well tolerated apart from \ninsomnia and abdominal discomfort. May (theoretically, at least) exacerbate psychosis. \nEvidence base too limited to recommend2\n",
+      "bbox": [
+        154.3865966796875,
+        265.929443359375,
+        431.0765686035156,
+        294.6319274902344
+      ],
+      "text_sha256": "e6d18e2c1525ad413e2d2871ecc63c0e86426e79deeac2c829a45cc1c4f540ba"
+    },
+    {
+      "block_id": "page-0147-block-0009",
+      "order": 9,
+      "text": "Alpha-lipoic acid36–38\n",
+      "bbox": [
+        61.88909912109375,
+        300.9519348144531,
+        126.7188720703125,
+        309.659423828125
+      ],
+      "text_sha256": "79b352f289ce12ade421e3bc04a72f04b02d2ad9aeb7f784583476726a454e1e"
+    },
+    {
+      "block_id": "page-0147-block-0010",
+      "order": 10,
+      "text": "(1200mg/day)\n",
+      "bbox": [
+        61.88909912109375,
+        310.9519348144531,
+        106.49158477783203,
+        319.659423828125
+      ],
+      "text_sha256": "56fb1dd4902d80487dd0625389a2efbd40ea51cfca80ac221ee8f3ae51ee5bb1"
+    },
+    {
+      "block_id": "page-0147-block-0011",
+      "order": 11,
+      "text": "Supplementation may lead to a small, short-term, weight loss. Limited data for \nantipsychotic-induced weight gain. Not recommended\n",
+      "bbox": [
+        154.3865966796875,
+        300.9544372558594,
+        407.7366027832031,
+        319.659423828125
+      ],
+      "text_sha256": "c776e3789196ebd408d0d220af8828de6ae1659d89ea0a86ef2720c48bee7931"
+    },
+    {
+      "block_id": "page-0147-block-0012",
+      "order": 12,
+      "text": "Aripiprazole \naugmentation15,32,39\n",
+      "bbox": [
+        61.88909912109375,
+        335.97943115234375,
+        123.9140625,
+        354.6844177246094
+      ],
+      "text_sha256": "259a8bcd71baa0dfc39e3234b461b1a0b101cb0026b9b44dea9ba5e6909dc49c"
+    },
+    {
+      "block_id": "page-0147-block-0013",
+      "order": 13,
+      "text": "(5–15mg/day)\n",
+      "bbox": [
+        61.88909912109375,
+        355.9769287109375,
+        106.07158660888672,
+        364.6844177246094
+      ],
+      "text_sha256": "4af41b5d3849c5673d26e4d47d1a1a132ec64c99d3e25a1d189af0e176051d01"
+    },
+    {
+      "block_id": "page-0147-block-0014",
+      "order": 14,
+      "text": "RCTs show beneficial effects on weight loss and possibly other metabolic parameters \nwhen used as an adjunct to clozapine or olanzapine. Adjunctive use appears to be safe \nand unlikely to worsen psychosis. Recommended as a possible option for weight gain \nassociated with clozapine or olanzapine. Not recommended with other antipsychotic \nmedications\n",
+      "bbox": [
+        154.3865966796875,
+        335.97442626953125,
+        434.0392150878906,
+        384.6719055175781
+      ],
+      "text_sha256": "306ef731df1b010191beddb40ca72337be814d2da08f600554569d1ea60683d8"
+    },
+    {
+      "block_id": "page-0147-block-0015",
+      "order": 15,
+      "text": "Betahistine40,41\n",
+      "bbox": [
+        61.88909912109375,
+        390.9869079589844,
+        107.83119201660156,
+        399.69439697265625
+      ],
+      "text_sha256": "0e03623965a55ba0aa1a26e4720fef1bfcce4be2931dc999bf84944e4168ce0f"
+    },
+    {
+      "block_id": "page-0147-block-0016",
+      "order": 16,
+      "text": "(48mg/day)\n",
+      "bbox": [
+        61.88909912109375,
+        401.00201416015625,
+        98.1515884399414,
+        409.7095031738281
+      ],
+      "text_sha256": "b0e2129f8af1028577dade23fed8c0e93bb7d0873dd98fff674f79ea7a1b73b0"
+    },
+    {
+      "block_id": "page-0147-block-0017",
+      "order": 17,
+      "text": "May attenuate olanzapine-induced weight gain. Limited data. Not recommended\n",
+      "bbox": [
+        154.3865966796875,
+        391.0045166015625,
+        413.4516906738281,
+        399.7120056152344
+      ],
+      "text_sha256": "37542a5a19c4b4cb3863762ef9f459a2c0bf479ec3c54bbdb5e5d12b20ccc967"
+    },
+    {
+      "block_id": "page-0147-block-0018",
+      "order": 18,
+      "text": "Bupropion42,43\n",
+      "bbox": [
+        61.88909912109375,
+        426.0295104980469,
+        106.04649353027344,
+        434.73699951171875
+      ],
+      "text_sha256": "eab2eaf208ce86c9a8ea8d678897211f2b0a84f6e48523d8a95422e2920572f2"
+    },
+    {
+      "block_id": "page-0147-block-0019",
+      "order": 19,
+      "text": "(amfebutamone)\n",
+      "bbox": [
+        61.88909912109375,
+        436.02691650390625,
+        115.22908782958984,
+        444.7344055175781
+      ],
+      "text_sha256": "415e7a746104f2dcee4314e369e3c1c0db449c39a3e4f3d1d774c4a30716255f"
+    },
+    {
+      "block_id": "page-0147-block-0020",
+      "order": 20,
+      "text": "Seems to be effective in obesity when combined with calorie-restricted diets. Appears \nto not exacerbate psychosis symptoms, at least when used for smoking cessation.44 \nFew data of its effects on drug-induced weight gain. Not recommended\n",
+      "bbox": [
+        154.3865966796875,
+        426.0294189453125,
+        429.5467224121094,
+        454.7319030761719
+      ],
+      "text_sha256": "d3d0d42b6952f43c7f151546909499995c91c3757a004942373a7d8d2e25418f"
+    },
+    {
+      "block_id": "page-0147-block-0021",
+      "order": 21,
+      "text": "Bupropion + naltrexone \n(Contrave/Mysimba)45\n",
+      "bbox": [
+        61.89079284667969,
+        461.0469055175781,
+        139.47828674316406,
+        479.75189208984375
+      ],
+      "text_sha256": "3c8ac6520999e0fbef4a89d787523984c9444baa3f3e07454b4e74a7ed864a4d"
+    },
+    {
+      "block_id": "page-0147-block-0022",
+      "order": 22,
+      "text": "Combination approved for weight management as an adjunct to diet and exercise. \nNo data in drug-induced weight gain. Not recommended, but should not be ruled \nout\n",
+      "bbox": [
+        154.38890075683594,
+        461.05194091796875,
+        420.8339538574219,
+        489.7544250488281
+      ],
+      "text_sha256": "9b271eae54d9297637339c2a6956d0e18d2a63942808ab884eb038f5c81cc413"
+    },
+    {
+      "block_id": "page-0147-block-0023",
+      "order": 23,
+      "text": "Fluvoxamine46–48\n",
+      "bbox": [
+        61.89140319824219,
+        496.0694274902344,
+        113.37667846679688,
+        504.77691650390625
+      ],
+      "text_sha256": "e748945782489c120ebf5bfa903cf142a708deb5eeebf882dd4bad0e2386d559"
+    },
+    {
+      "block_id": "page-0147-block-0024",
+      "order": 24,
+      "text": "(50mg/day)\n",
+      "bbox": [
+        61.88909912109375,
+        506.0769348144531,
+        98.1515884399414,
+        514.784423828125
+      ],
+      "text_sha256": "d1bc4fd1f679f1faa96221982430d51cb861f196b7a5eea169f1ab9447075ee8"
+    },
+    {
+      "block_id": "page-0147-block-0025",
+      "order": 25,
+      "text": "Earlier conflicting data but one short term RCT shows attenuated clozapine-induced \nweight gain (possibly related to a higher clozapine to norclozapine ratio). \nCo-administration markedly increases clozapine levels, requiring extreme caution. \nEvidence base is too limited to recommend\n",
+      "bbox": [
+        154.3865966796875,
+        496.0794372558594,
+        424.4242248535156,
+        534.7794189453125
+      ],
+      "text_sha256": "0f8734cc0f6013a32d9fcaa886a8f0cd53e55e48b1ace5d8f8448491d11b6557"
+    },
+    {
+      "block_id": "page-0147-block-0026",
+      "order": 26,
+      "text": "Liraglutide49,50\n",
+      "bbox": [
+        61.88909912109375,
+        541.0943603515625,
+        106.15849304199219,
+        549.8018798828125
+      ],
+      "text_sha256": "f7fe461ee1f5489ff34b6b5feebdd56910550746a98cd5625ee4a773c2b18246"
+    },
+    {
+      "block_id": "page-0147-block-0027",
+      "order": 27,
+      "text": "(3mg/day via \nsubcutaneous injection)\n",
+      "bbox": [
+        61.88909912109375,
+        551.1019287109375,
+        137.32408142089844,
+        569.806884765625
+      ],
+      "text_sha256": "741fc164783ccba45fc4f8df2e10e1135b10cbef5842405e290fcfb9f341a2e7"
+    },
+    {
+      "block_id": "page-0147-block-0028",
+      "order": 28,
+      "text": "GLP-1 agonist that was previously approved for type 2 diabetes and more recently \napproved as an anti-obesity agent in non-diabetic patients. Dose for weight loss \n(3mg/day) is higher than the dose used for diabetes (≤1.8mg). Limited data in \ndrug-induced weight gain. One RCT shows significant weight loss in overweight \npre-diabetic patients stable on olanzapine or clozapine.49 Beneficial effects on other \nmetabolic parameters. Well tolerated but can cause GI disturbances. Recommended \noption in pre-diabetic/diabetic patients and clozapine-induced weight gain.\nOther GLP-1 agonists are currently only approved for diabetes and have a more \nlimited dose range. Exenatide LA (a once-weekly GLP-1 agonist) may be effective for \nweight loss in clozapine-treated patients51 but perhaps not with other antipsychotics52\n",
+      "bbox": [
+        154.3865966796875,
+        541.096923828125,
+        427.8889465332031,
+        639.8094482421875
+      ],
+      "text_sha256": "59d63d1cd744898275bac23cc01173c032ff2db9f8296fe5e0ae0f3e30fc2bc0"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

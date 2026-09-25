@@ -1,0 +1,215 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0518",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 518,
+  "source_page_index": 517,
+  "source_page_display": 518,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    497\nCHAPTER 4\nDose of naltrexone\nAn initial dose of 25mg naltrexone should be administered after a suitable opioid-free \ninterval (and naloxone challenge if appropriate). The patient should be monitored for \n4 hours after the first dose for symptoms of opioid withdrawal. Symptomatic medica-\ntion for withdrawal (e.g. lofexidine) should be available for use, if necessary, on the first \nday of naltrexone dosing (withdrawal symptoms may last up to 4–8 hours). Once the \npatient has tolerated this low naltrexone dose, subsequent doses can be increased to \n50mg daily as a maintenance dose.\nNaltrexone is contraindicated in patients with hepatic dysfunction, and LFTs should \nbe monitored during treatment.\nPain control in patients on OST\nAnalgesia for methadone-prescribed patients\nNon-opioid analgesics should be used in preference (e.g. paracetamol, NSAIDs) initially \nwhere appropriate. If opioid analgesia (e.g. codeine, dihydrocodeine and morphine) is \nindicated due to the type and severity of the pain, then this should be titrated accord-\ningly for pain relief in line with usual analgesic protocols.\nIn the case of patients prescribed methadone, if an opioid analgesic is appropriate, a \nnon-methadone opioid may be co-prescribed, i.e. it is not necessary to ‘rationalise’ the \npatient’s entire opioid requirements to one drug.82 Titrating the methadone dose to \nprovide analgesia may be appropriate in certain circumstances but this should only be \ncarried out by experienced specialists.\nAs outlined elsewhere in this chapter, patients taking buprenorphine or naltrexone \nmay be relatively refractory to opioids prescribed for analgesia, although in practice if \na patient on buprenorphine requires treatment for acute pain, an additional opioid may \nbe titrated against response.19 If naltrexone is stopped to allow for the prescribing of \nopioid analgesia, careful monitoring will be required because of the increased risk of \nboth relapse and overdose.35,82\nPatients with a history of substance misuse may also need acute pain management in \nhospital following surgery, trauma or other illness. The primary objectives during the \nImportant points regarding prescribing naltrexone\n■\n■Ensure the client is fully informed of the increased risk of fatal opioid overdose.\n■\n■Following detoxification and any period of abstinence, an individual’s tolerance to opioids will \ndecrease markedly. At such a time, using opioids puts the individual at greatly increased risk of \noverdose.\n■\n■Discontinuation of naltrexone may also be associated with an increase in inadvertent overdose \nfrom illicit opioids, emphasising the need for close monitoring and support of the client at this \ntime.\n",
+  "raw_text_sha256": "8b9118a21a4e74c317a902876007910776b442ef741bc823880d1e0f890a611d",
+  "coordinates_sha256": "77b2beba154828e989c7896f1cbc95199fef11389a6e6b316a1c67057f915973",
+  "block_sequence_sha256": "5ae67359b5ad42992f63a14ddc64ec95206f9fc1222f31c9600a4ec2331b4fba",
+  "blocks": [
+    {
+      "block_id": "page-0518-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    497\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "aa984b7ae29892b8aca581a3ee31fd78ca9e85c42db33c237e10d72cfa2c35ea"
+    },
+    {
+      "block_id": "page-0518-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0518-block-0002",
+      "order": 2,
+      "text": "Dose of naltrexone\n",
+      "bbox": [
+        48.0,
+        190.15048217773438,
+        138.01998901367188,
+        202.00048828125
+      ],
+      "text_sha256": "30b19f700bafed3fa16aab3ae4b2e6e27c0f0f2d302522a543f32259e5e8b63f"
+    },
+    {
+      "block_id": "page-0518-block-0003",
+      "order": 3,
+      "text": "An initial dose of 25mg naltrexone should be administered after a suitable opioid-free \ninterval (and naloxone challenge if appropriate). The patient should be monitored for \n4 hours after the first dose for symptoms of opioid withdrawal. Symptomatic medica-\ntion for withdrawal (e.g. lofexidine) should be available for use, if necessary, on the first \nday of naltrexone dosing (withdrawal symptoms may last up to 4–8 hours). Once the \npatient has tolerated this low naltrexone dose, subsequent doses can be increased to \n50mg daily as a maintenance dose.\nNaltrexone is contraindicated in patients with hepatic dysfunction, and LFTs should \nbe monitored during treatment.\n",
+      "bbox": [
+        48.0,
+        208.06048583984375,
+        422.8199768066406,
+        315.7804870605469
+      ],
+      "text_sha256": "025e83e731060e388bb71e77db8b7c81e931b8373df332e2cb6a75b6665fb82a"
+    },
+    {
+      "block_id": "page-0518-block-0004",
+      "order": 4,
+      "text": "Pain control in patients on OST\n",
+      "bbox": [
+        48.0,
+        333.2154846191406,
+        207.9509735107422,
+        346.25048828125
+      ],
+      "text_sha256": "c68beba0e3533c0de431a9bd29c62a90352b4864361be1fdb6e9c31e629f1fed"
+    },
+    {
+      "block_id": "page-0518-block-0005",
+      "order": 5,
+      "text": "Analgesia for methadone-prescribed patients\n",
+      "bbox": [
+        48.0,
+        352.1504821777344,
+        261.3699951171875,
+        364.00048828125
+      ],
+      "text_sha256": "582d3658f7387d7e7648b02d2ec7e62227f7010160e47bd5868c8d466be93111"
+    },
+    {
+      "block_id": "page-0518-block-0006",
+      "order": 6,
+      "text": "Non-opioid analgesics should be used in preference (e.g. paracetamol, NSAIDs) initially \nwhere appropriate. If opioid analgesia (e.g. codeine, dihydrocodeine and morphine) is \nindicated due to the type and severity of the pain, then this should be titrated accord-\ningly for pain relief in line with usual analgesic protocols.\n",
+      "bbox": [
+        48.0,
+        370.06048583984375,
+        422.8099670410156,
+        417.7804870605469
+      ],
+      "text_sha256": "1b7b57585455be5399cf088d8bb1e2d4006bed96bba2b688585bad99a4ed832f"
+    },
+    {
+      "block_id": "page-0518-block-0007",
+      "order": 7,
+      "text": "In the case of patients prescribed methadone, if an opioid analgesic is appropriate, a \nnon-methadone opioid may be co-prescribed, i.e. it is not necessary to ‘rationalise’ the \npatient’s entire opioid requirements to one drug.82 Titrating the methadone dose to \nprovide analgesia may be appropriate in certain circumstances but this should only be \ncarried out by experienced specialists.\n",
+      "bbox": [
+        47.996795654296875,
+        417.82049560546875,
+        422.7767028808594,
+        477.7804870605469
+      ],
+      "text_sha256": "1ec63aab3e58e4a0e37004e296baa68b07d6c1885d06b173888b477ebf051ff3"
+    },
+    {
+      "block_id": "page-0518-block-0008",
+      "order": 8,
+      "text": "As outlined elsewhere in this chapter, patients taking buprenorphine or naltrexone \nmay be relatively refractory to opioids prescribed for analgesia, although in practice if \na patient on buprenorphine requires treatment for acute pain, an additional opioid may \nbe titrated against response.19 If naltrexone is stopped to allow for the prescribing of \nopioid analgesia, careful monitoring will be required because of the increased risk of \nboth relapse and overdose.35,82\n",
+      "bbox": [
+        47.996795654296875,
+        477.82049560546875,
+        422.81671142578125,
+        549.780517578125
+      ],
+      "text_sha256": "96604078b77eaff1bb242ab861908dc13d5a3bc392f2ea269e4b8b80fdb62453"
+    },
+    {
+      "block_id": "page-0518-block-0009",
+      "order": 9,
+      "text": "Patients with a history of substance misuse may also need acute pain management in \nhospital following surgery, trauma or other illness. The primary objectives during the \n",
+      "bbox": [
+        48.0,
+        550.0604858398438,
+        422.7699279785156,
+        573.780517578125
+      ],
+      "text_sha256": "aa5161ee6e0ab4ef9db562db00383df355c1a9fef63d797bee0a62e16e838425"
+    },
+    {
+      "block_id": "page-0518-block-0010",
+      "order": 10,
+      "text": "Important points regarding prescribing naltrexone\n",
+      "bbox": [
+        55.5,
+        69.57776641845703,
+        256.55902099609375,
+        79.6502685546875
+      ],
+      "text_sha256": "96f6d6a30cc9c84f27572114ab558639cbe5bd2735522e318f6c6f9e19eeb1ad"
+    },
+    {
+      "block_id": "page-0518-block-0011",
+      "order": 11,
+      "text": "■\n■Ensure the client is fully informed of the increased risk of fatal opioid overdose.\n",
+      "bbox": [
+        55.499900817871094,
+        89.10678100585938,
+        349.7361145019531,
+        98.97528076171875
+      ],
+      "text_sha256": "70721ca7c3f3f68308a2afb7d9aab55ea0b257fe0a8a73862779eff583359297"
+    },
+    {
+      "block_id": "page-0518-block-0012",
+      "order": 12,
+      "text": "■\n■Following detoxification and any period of abstinence, an individual’s tolerance to opioids will \n",
+      "bbox": [
+        55.499900817871094,
+        102.10678100585938,
+        404.5356140136719,
+        111.97528076171875
+      ],
+      "text_sha256": "25d32e9abeeaee9122904dd9ce296dc688af9d0e8475f50aa542d12486653538"
+    },
+    {
+      "block_id": "page-0518-block-0013",
+      "order": 13,
+      "text": "decrease markedly. At such a time, using opioids puts the individual at greatly increased risk of \noverdose.\n",
+      "bbox": [
+        64.0,
+        112.10275268554688,
+        407.9950866699219,
+        131.96722412109375
+      ],
+      "text_sha256": "378cdc678c1eb474bb6e9f705cb03511ab70c14fcaf2ed684d4af8dec923fdf2"
+    },
+    {
+      "block_id": "page-0518-block-0014",
+      "order": 14,
+      "text": "■\n■Discontinuation of naltrexone may also be associated with an increase in inadvertent overdose \n",
+      "bbox": [
+        55.499900817871094,
+        132.10678100585938,
+        406.89013671875,
+        141.97528076171875
+      ],
+      "text_sha256": "b08c25a3288584ec2f531976ed506ec5a2202a6a885ff8842daf8a651f4f0e5a"
+    },
+    {
+      "block_id": "page-0518-block-0015",
+      "order": 15,
+      "text": "from illicit opioids, emphasising the need for close monitoring and support of the client at this \ntime.\n",
+      "bbox": [
+        64.0,
+        142.10275268554688,
+        406.73724365234375,
+        161.96722412109375
+      ],
+      "text_sha256": "6a4b4c2c2ed50607f5c103fd248679f4c44c8a79031786744a8852e7e6fc4299"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

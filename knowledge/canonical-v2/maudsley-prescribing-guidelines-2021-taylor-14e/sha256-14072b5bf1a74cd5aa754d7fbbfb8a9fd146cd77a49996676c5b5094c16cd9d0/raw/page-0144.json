@@ -1,0 +1,335 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0144",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 144,
+  "source_page_index": 143,
+  "source_page_display": 144,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    123\nCHAPTER 1\nAntipsychotic-induced weight gain\nWeight gain, a cardiometabolic risk factor, is a common side effect of antipsychotic \nmedication.1 The mechanisms underlying antipsychotic-induced weight gain are not well \nunderstood,2 although factors such as 5HT2C antagonism, H1 antagonism, D2 antago-\nnism, and increased serum leptin (leading to leptin desensitisation)3–5 are commonly \nimplicated. There is no evidence that these medications exert any direct metabolic effect: \nweight gain seems to result from increased food intake and, in some cases, reduced \nenergy expenditure.6,7 The risk of weight gain appears to be related to clinical response8,9 \n(although the association may be too small to be clinically important10), which may have \na genetic basis.11 Weight gain may be more pronounced in antipsychotic-naïve patients \nand during the early stages of the treatment of psychotic illness,12–14 and women may be \nat greater risk than men.15,16\nAlmost all available antipsychotic medications have been associated with weight \ngain,12 although the mean gain in body weight varies substantially between the medica-\ntions. There is also marked inter-individual variation among those treated, with some \nlosing weight, some gaining no weight and some gaining a great deal of weight. Thus, \nknowledge of the mean increase in weight reported for a particular medication may not \nbe a helpful predictor of how much weight an individual might gain. Assessment of the \nrelative liability for weight gain of different antipsychotic medications is based largely \non short term studies. Notwithstanding these limitations, the results of indirect and \ndirect meta-analyses suggest that these medications can be clustered into three groups \nbased on their relative risk of weight gain17 (see Table 1.17).\nTable 1.17  Antipsychotic-induced weight gain18–25\nDrug\nRisk/extent of weight gain\nClozapine\nHigh\nOlanzapine\nChlorpromazine\nModerate\nIloperidone\nSertindole\nQuetiapine\nRisperidone\nPaliperidone\nAmisulpride\nLow\nAsenapine\nBrexpiprazole\nAripiprazole\nCariprazine\nHaloperidol\nLumateperone\nLurasidone\nSulpiride\nTrifluoperazine\nZiprasidone\n",
+  "raw_text_sha256": "d2d8b7ba7f4a18006df198d58dd4105e325f889da6d147ab6880a6b5de09511f",
+  "coordinates_sha256": "3854d7b3f22605157088afff8a8fb336600c1282318e05b713902075e330d675",
+  "block_sequence_sha256": "72f2c8b4ee8f05c5ae1c4b8d547bb8d21d30e4168a29601a329a61a8fef3cf72",
+  "blocks": [
+    {
+      "block_id": "page-0144-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    123\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "bbc8dd43a4b6aac3aae4d79c6da6afa9e26f6ad9198e5a60ce6b9cb203163266"
+    },
+    {
+      "block_id": "page-0144-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0144-block-0002",
+      "order": 2,
+      "text": "Antipsychotic-induced weight gain\n",
+      "bbox": [
+        54.998802185058594,
+        66.06448364257812,
+        235.27777099609375,
+        79.0994873046875
+      ],
+      "text_sha256": "20c276bcc1cd700bfef60a5be62679c5c37671d8e7897236bef07a7b24f207ae"
+    },
+    {
+      "block_id": "page-0144-block-0003",
+      "order": 3,
+      "text": "Weight gain, a cardiometabolic risk factor, is a common side effect of antipsychotic \nmedication.1 The mechanisms underlying antipsychotic-induced weight gain are not well \nunderstood,2 although factors such as 5HT2C antagonism, H1 antagonism, D2 antago-\nnism, and increased serum leptin (leading to leptin desensitisation)3–5 are commonly \nimplicated. There is no evidence that these medications exert any direct metabolic effect: \nweight gain seems to result from increased food intake and, in some cases, reduced \nenergy expenditure.6,7 The risk of weight gain appears to be related to clinical response8,9 \n(although the association may be too small to be clinically important10), which may have \na genetic basis.11 Weight gain may be more pronounced in antipsychotic-naïve patients \nand during the early stages of the treatment of psychotic illness,12–14 and women may be \nat greater risk than men.15,16\n",
+      "bbox": [
+        47.994300842285156,
+        84.90948486328125,
+        422.8334655761719,
+        216.62948608398438
+      ],
+      "text_sha256": "515fa202a630d1ea448ee09a62bd8048053a571e54ae87129b5fc7d2ac5daac7"
+    },
+    {
+      "block_id": "page-0144-block-0004",
+      "order": 4,
+      "text": "Almost all available antipsychotic medications have been associated with weight \ngain,12 although the mean gain in body weight varies substantially between the medica-\ntions. There is also marked inter-individual variation among those treated, with some \nlosing weight, some gaining no weight and some gaining a great deal of weight. Thus, \nknowledge of the mean increase in weight reported for a particular medication may not \nbe a helpful predictor of how much weight an individual might gain. Assessment of the \nrelative liability for weight gain of different antipsychotic medications is based largely \non short term studies. Notwithstanding these limitations, the results of indirect and \ndirect meta-analyses suggest that these medications can be clustered into three groups \nbased on their relative risk of weight gain17 (see Table 1.17).\n",
+      "bbox": [
+        47.998802185058594,
+        216.909423828125,
+        422.8217468261719,
+        336.6294250488281
+      ],
+      "text_sha256": "6b4d9dc06673829df1b6c8d6e29f1d7a87acfd2219d790704f18425dbc383019"
+    },
+    {
+      "block_id": "page-0144-block-0005",
+      "order": 5,
+      "text": "Table 1.17  Antipsychotic-induced weight gain18–25\n",
+      "bbox": [
+        148.49899291992188,
+        351.5636901855469,
+        310.0332336425781,
+        360.4512023925781
+      ],
+      "text_sha256": "c8e2a8bedbf90695b7a2b785ceedbe370f9007f996f0cdbf78a509b7d0b556c1"
+    },
+    {
+      "block_id": "page-0144-block-0006",
+      "order": 6,
+      "text": "Drug\nRisk/extent of weight gain\n",
+      "bbox": [
+        142.49899291992188,
+        371.7987060546875,
+        302.6914978027344,
+        380.68621826171875
+      ],
+      "text_sha256": "fb96b0efb8675921337497c071398f3fda30f6683c9a5b71f8bea5a54ce6ba7d"
+    },
+    {
+      "block_id": "page-0144-block-0007",
+      "order": 7,
+      "text": "Clozapine\nHigh\n",
+      "bbox": [
+        142.49899291992188,
+        388.5762023925781,
+        225.16400146484375,
+        397.4637145996094
+      ],
+      "text_sha256": "30b65aba70b9225811a0af1f72117281ca2ca1f7ab2f894e98c64e135122b142"
+    },
+    {
+      "block_id": "page-0144-block-0008",
+      "order": 8,
+      "text": "Olanzapine\n",
+      "bbox": [
+        142.49899291992188,
+        402.87872314453125,
+        178.33396911621094,
+        411.5862121582031
+      ],
+      "text_sha256": "0d885341cd7a3b92c6209db4205eb93aa8d75701ae5100041f1fc34db3920e8f"
+    },
+    {
+      "block_id": "page-0144-block-0009",
+      "order": 9,
+      "text": "Chlorpromazine\nModerate\n",
+      "bbox": [
+        142.49899291992188,
+        417.72119140625,
+        243.08905029296875,
+        426.60870361328125
+      ],
+      "text_sha256": "c431f60a38076d478498c8f4dd2b82c32bbfbea26b54d2c4bec9051a5d69ae43"
+    },
+    {
+      "block_id": "page-0144-block-0010",
+      "order": 10,
+      "text": "Iloperidone\n",
+      "bbox": [
+        142.49899291992188,
+        432.0237121582031,
+        178.34146118164062,
+        440.731201171875
+      ],
+      "text_sha256": "5c0a4eba4e7d48e3e8ae4b8d464b3a794e2e6bfc622518f491e77c64aad563db"
+    },
+    {
+      "block_id": "page-0144-block-0011",
+      "order": 11,
+      "text": "Sertindole\n",
+      "bbox": [
+        142.49899291992188,
+        446.1462097167969,
+        174.58396911621094,
+        454.85369873046875
+      ],
+      "text_sha256": "6ddf7ec27565af36411ff841edc7af929b4a2dc63acde2bd34c9cab0b4383bf2"
+    },
+    {
+      "block_id": "page-0144-block-0012",
+      "order": 12,
+      "text": "Quetiapine\n",
+      "bbox": [
+        142.49899291992188,
+        460.2687072753906,
+        177.50146484375,
+        468.9761962890625
+      ],
+      "text_sha256": "41327e1285b139254503aaa07065625405b7c29d457a97ba1c2d41cb54c42d3b"
+    },
+    {
+      "block_id": "page-0144-block-0013",
+      "order": 13,
+      "text": "Risperidone\n",
+      "bbox": [
+        142.49899291992188,
+        474.3912048339844,
+        179.59396362304688,
+        483.09869384765625
+      ],
+      "text_sha256": "a57deef574cb1285a2da93e7b14c7d8834b8dfb167369a3c9262f566493ff650"
+    },
+    {
+      "block_id": "page-0144-block-0014",
+      "order": 14,
+      "text": "Paliperidone\n",
+      "bbox": [
+        142.49899291992188,
+        488.5137023925781,
+        181.6714630126953,
+        497.22119140625
+      ],
+      "text_sha256": "19f5b472120764a345c66415a5840cdea1a82d0001fe5c498e88b215cbaa171b"
+    },
+    {
+      "block_id": "page-0144-block-0015",
+      "order": 15,
+      "text": "Amisulpride\nLow\n",
+      "bbox": [
+        142.49899291992188,
+        503.356201171875,
+        223.49899291992188,
+        512.2437133789062
+      ],
+      "text_sha256": "420a6f6b39f8975d2ab925cf841c4fd4dcbc8c90dc583e0d6d8baf3693e55766"
+    },
+    {
+      "block_id": "page-0144-block-0016",
+      "order": 16,
+      "text": "Asenapine\n",
+      "bbox": [
+        142.49899291992188,
+        517.65869140625,
+        175.84397888183594,
+        526.3662109375
+      ],
+      "text_sha256": "1daa08a62165d94ca617e2405d000db4c88a469ca78841e18d6517852265757d"
+    },
+    {
+      "block_id": "page-0144-block-0017",
+      "order": 17,
+      "text": "Brexpiprazole\n",
+      "bbox": [
+        142.49899291992188,
+        531.7811889648438,
+        185.2789764404297,
+        540.4887084960938
+      ],
+      "text_sha256": "a1d5a81b6f2d7def7f77b5e20380e6c797c4174dd12051c44fb721d8c8bab8c5"
+    },
+    {
+      "block_id": "page-0144-block-0018",
+      "order": 18,
+      "text": "Aripiprazole\n",
+      "bbox": [
+        142.49899291992188,
+        545.9036865234375,
+        180.8314666748047,
+        554.6112060546875
+      ],
+      "text_sha256": "14519352ede9c2040fd55378fee8da3db552a04445d82486e370b24e73082a30"
+    },
+    {
+      "block_id": "page-0144-block-0019",
+      "order": 19,
+      "text": "Cariprazine\n",
+      "bbox": [
+        142.49899291992188,
+        560.0261840820312,
+        178.74647521972656,
+        568.7337036132812
+      ],
+      "text_sha256": "8e5b8a98bd34854d9f6a2ec681d63e84d1e8943e8769cb380463bb74a35dc90b"
+    },
+    {
+      "block_id": "page-0144-block-0020",
+      "order": 20,
+      "text": "Haloperidol\n",
+      "bbox": [
+        142.49899291992188,
+        574.148681640625,
+        179.17396545410156,
+        582.856201171875
+      ],
+      "text_sha256": "420bab272600f0024233e0bb85864e6f5aa28874925680d382f7ff4feb375b1e"
+    },
+    {
+      "block_id": "page-0144-block-0021",
+      "order": 21,
+      "text": "Lumateperone\n",
+      "bbox": [
+        142.49899291992188,
+        588.2711791992188,
+        188.61648559570312,
+        596.9786987304688
+      ],
+      "text_sha256": "d18f30221b11701249bd0a8c70367db5d2cbbff407db480cead27e130a6ef998"
+    },
+    {
+      "block_id": "page-0144-block-0022",
+      "order": 22,
+      "text": "Lurasidone\n",
+      "bbox": [
+        142.49899291992188,
+        602.3936767578125,
+        177.08897399902344,
+        611.1011962890625
+      ],
+      "text_sha256": "28b17601847ef40cbdcd0c927811e44e72539352101012ef133563c7fb103f3d"
+    },
+    {
+      "block_id": "page-0144-block-0023",
+      "order": 23,
+      "text": "Sulpiride\n",
+      "bbox": [
+        142.49899291992188,
+        616.5161743164062,
+        170.00146484375,
+        625.2236938476562
+      ],
+      "text_sha256": "f6b861ad38849302713533208bf1a169f54e0a55dcf8e002e6b37c116bafa53f"
+    },
+    {
+      "block_id": "page-0144-block-0024",
+      "order": 24,
+      "text": "Trifluoperazine\n",
+      "bbox": [
+        142.49899291992188,
+        630.638671875,
+        189.30645751953125,
+        639.34619140625
+      ],
+      "text_sha256": "6f99d5ed3bdb6df086c9611a66c79acd9cb10b84f36b35365bb58aa960b48ebe"
+    },
+    {
+      "block_id": "page-0144-block-0025",
+      "order": 25,
+      "text": "Ziprasidone\n",
+      "bbox": [
+        142.49899291992188,
+        644.7611694335938,
+        179.17396545410156,
+        653.4686889648438
+      ],
+      "text_sha256": "352b0f09e734d34201d6d87c2410a74651950d75e2218ee8ed16429bac9cb4d1"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

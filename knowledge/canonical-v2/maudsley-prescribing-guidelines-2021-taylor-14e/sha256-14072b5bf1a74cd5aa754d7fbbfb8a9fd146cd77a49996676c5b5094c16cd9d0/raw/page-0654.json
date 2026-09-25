@@ -1,0 +1,323 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0654",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 654,
+  "source_page_index": 653,
+  "source_page_display": 654,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Aspirin – 0\nDextropropoxyphene – NK\nIrbesartan – NK\nPergolide – 0\nTrifluoperazine – 2\nAtenolol – 0\nDiazepam – 1\nIsocarboxazid – 1\nPerindopril – 0\nTrihexyphenidyl (benzhexol) – 3\nAtomoxetine – 0\nDiclofenac – 0\nIsosorbide dinitrate – 0\nPerphenazine – 1\nTrimethoprim – 0\nAtorvastatin – 0\nDicycloverine (dicyclomine) – 2\nIsosorbide mononitrate – 0\nPethidine – 2\nTrimipramine – 3\nAtropine – 3\nDigoxin – NK\nKetorolac – 0\nPhenelzine – 1\nTrospium – 0\nAtropine eye drops – 1\nDihydrocodeine – NK\nLabetalol – 0\nPhenytoin – NK\nValproate – 0\nAzathioprine – 0\nDiltiazem – 0\nLactulose – 0\nPimozide – 2\nVenlafaxine – 0\nBaclofen – NK\nDimenhydrinate – 2\nLamotrigine – 0\nPirenzepine – 1\nVerapamil – NK\nBeclometasone dipropionate \n(inhaler) – 0\nDiphenhydramine – 2\nLansoprazole – NK\nPravastatin – 0\nVitamin B12 – 0\nBendroflumethiazide – 0\nDipyridamole – 0\nLercanidipine – 0\nPrazosin – 0\nVitamins – 0\nBenzatropine – 3\nDisopyramide – 2\nLevetiracetam – NK\nPrednisolone – 1\nVortioxetine – 0\nBetahistine – 0\nDocusate sodium – 0\nLevodopa – 0\nPregabalin – NK\nWarfarin – 0\nBezafibrate – 0\nDomperidone – 1\nLevomepromazine  \n(methotrimeprazine) – 2\nProchlorperazine – 2\nZiprasidone – 0\nBisacodyl – 0\nDonepezil – 0\nLevothyroxine (Thyroxine) – 0\nProcyclidine – 3\nZolpidem – 0\nBisoprolol – NK\nDothiepin (Dosulepin) – 3\nLiraglutide – 0\nPromazine – 2\nZopiclone – NK\nBromocriptine – 1\nDoxazosin – 0\nLisinopril – 0\nPromethazine – 3\nZotepine – 2\nBudesonide (inhaler) – 0\nDoxepin – 3\nLithium – 1\nPropantheline – 2\nZuclopentixol (zuclopenthixol) – 1\nBumetanide – NK\nDoxycycline – 0\nLofepramine – 3\nPropranolol – 0\nBuprenorphine – 0\nDulaglutide – 0\nLoperamide – 0\nQuetiapine – 2\nBupropion – 0\nDuloxetine – 0\nLoratadine – 0\nQuinidine – 1\nBuspirone – 1\nEnalapril – 0\nLorazepam – 0\nQuinine – 1\nCabergoline – 0\nEnoxaparin – 0\nLosartan – 0\nRabeprazole – 0\n(Continued )\n",
+  "raw_text_sha256": "7188a740364a8505155faf16d5946b2af09be6ca818d10aba5a46f0e494d4b79",
+  "coordinates_sha256": "95a3caa6574dda5f8f801f03b1ef175f929d7af327bc3f3d9beff49dc70a9368",
+  "block_sequence_sha256": "fa8e28f5a18504a55d6c6f19eade0567a76bb44f10604bd27c23396c38e3e9ad",
+  "blocks": [
+    {
+      "block_id": "page-0654-block-0000",
+      "order": 0,
+      "text": "Aspirin – 0\nDextropropoxyphene – NK\nIrbesartan – NK\nPergolide – 0\nTrifluoperazine – 2\n",
+      "bbox": [
+        51.79249954223633,
+        124.34153747558594,
+        60.5,
+        608.6539916992188
+      ],
+      "text_sha256": "8034e816e7df587f845c7956b57f34cebef7bf4c9f8cb944a44031e19f713034"
+    },
+    {
+      "block_id": "page-0654-block-0001",
+      "order": 1,
+      "text": "Atenolol – 0\nDiazepam – 1\nIsocarboxazid – 1\nPerindopril – 0\nTrihexyphenidyl (benzhexol) – 3\n",
+      "bbox": [
+        67.41500091552734,
+        83.50395202636719,
+        76.12249755859375,
+        608.6614990234375
+      ],
+      "text_sha256": "8c6b3b5987827c9ffae7d30f269e9ec8406bdd4dfef87a20f8e1b9acf4a17260"
+    },
+    {
+      "block_id": "page-0654-block-0002",
+      "order": 2,
+      "text": "Atomoxetine – 0\nDiclofenac – 0\nIsosorbide dinitrate – 0\nPerphenazine – 1\nTrimethoprim – 0\n",
+      "bbox": [
+        83.0374984741211,
+        128.5262908935547,
+        91.7449951171875,
+        608.6689453125
+      ],
+      "text_sha256": "edbc453f17deae60c9856c46944679e7b38e76d2a0c0c4c1133178606ec058fa"
+    },
+    {
+      "block_id": "page-0654-block-0003",
+      "order": 3,
+      "text": "Atorvastatin – 0\nDicycloverine (dicyclomine) – 2\nIsosorbide mononitrate – 0\nPethidine – 2\nTrimipramine – 3\n",
+      "bbox": [
+        98.65999603271484,
+        129.78648376464844,
+        107.36749267578125,
+        608.6763916015625
+      ],
+      "text_sha256": "31ee8348699f66444f8ca781b686dc0b688cbd244b6b4ece38f59a0e2fb4964c"
+    },
+    {
+      "block_id": "page-0654-block-0004",
+      "order": 4,
+      "text": "Atropine – 3\nDigoxin – NK\nKetorolac – 0\nPhenelzine – 1\nTrospium – 0\n",
+      "bbox": [
+        114.10249328613281,
+        142.4164276123047,
+        122.989990234375,
+        608.683837890625
+      ],
+      "text_sha256": "7fda272361bc54df85f7ce1f21337980b1bf409d9035144375e0a1cd708c57a6"
+    },
+    {
+      "block_id": "page-0654-block-0005",
+      "order": 5,
+      "text": "Atropine eye drops – 1\nDihydrocodeine – NK\nLabetalol – 0\nPhenytoin – NK\nValproate – 0\n",
+      "bbox": [
+        129.72499084472656,
+        140.06883239746094,
+        138.61248779296875,
+        608.6912841796875
+      ],
+      "text_sha256": "74ea27a0fb23ddf3cf2504fc9e4b4b75088c2627f689e4e4702ec8a7dc5b58ae"
+    },
+    {
+      "block_id": "page-0654-block-0006",
+      "order": 6,
+      "text": "Azathioprine – 0\nDiltiazem – 0\nLactulose – 0\nPimozide – 2\nVenlafaxine – 0\n",
+      "bbox": [
+        145.52748107910156,
+        134.52622985839844,
+        154.2349853515625,
+        608.69873046875
+      ],
+      "text_sha256": "0386c9ea24cfcec498eabe717abe0ed38c3536aceb4a11af4b3e3744eba0bdd2"
+    },
+    {
+      "block_id": "page-0654-block-0007",
+      "order": 7,
+      "text": "Baclofen – NK\nDimenhydrinate – 2\nLamotrigine – 0\nPirenzepine – 1\nVerapamil – NK\n",
+      "bbox": [
+        160.96998596191406,
+        134.1211700439453,
+        169.85748291015625,
+        608.7061767578125
+      ],
+      "text_sha256": "423e8440ee249f8fcf395d89467b3208e79a47f53508173a69c8f6857d050a88"
+    },
+    {
+      "block_id": "page-0654-block-0008",
+      "order": 8,
+      "text": "Beclometasone dipropionate \n",
+      "bbox": [
+        176.77247619628906,
+        515.4961547851562,
+        185.47998046875,
+        608.713623046875
+      ],
+      "text_sha256": "17eab32e8a83f195aa06446cdfa4b2cbf3147d2d00aaeb2323ad0aae8f0a0ff7"
+    },
+    {
+      "block_id": "page-0654-block-0009",
+      "order": 9,
+      "text": "(inhaler) – 0\nDiphenhydramine – 2\nLansoprazole – NK\nPravastatin – 0\nVitamin B12 – 0\n",
+      "bbox": [
+        176.77247619628906,
+        131.99119567871094,
+        195.47747802734375,
+        608.713623046875
+      ],
+      "text_sha256": "5f43e642fff5a474c0216c8e656ba6249d35266f12167b7399efa38b2a0d314a"
+    },
+    {
+      "block_id": "page-0654-block-0010",
+      "order": 10,
+      "text": "Bendroflumethiazide – 0\nDipyridamole – 0\nLercanidipine – 0\nPrazosin – 0\nVitamins – 0\n",
+      "bbox": [
+        202.3999786376953,
+        143.6761932373047,
+        211.10748291015625,
+        608.7210693359375
+      ],
+      "text_sha256": "80aade4c2293c5673dee5e0a6992a7db7e4fd2e5fd2c2f605fdd0510f7706748"
+    },
+    {
+      "block_id": "page-0654-block-0011",
+      "order": 11,
+      "text": "Benzatropine – 3\nDisopyramide – 2\nLevetiracetam – NK\nPrednisolone – 1\nVortioxetine – 0\n",
+      "bbox": [
+        218.02247619628906,
+        132.8910369873047,
+        226.72998046875,
+        608.7286376953125
+      ],
+      "text_sha256": "4d96b743811ddda7071a81f4da6e6ee319cc587865a834e7e58b1b2989840441"
+    },
+    {
+      "block_id": "page-0654-block-0012",
+      "order": 12,
+      "text": "Betahistine – 0\nDocusate sodium – 0\nLevodopa – 0\nPregabalin – NK\nWarfarin – 0\n",
+      "bbox": [
+        233.46498107910156,
+        142.9036102294922,
+        242.35247802734375,
+        608.736083984375
+      ],
+      "text_sha256": "bceae1ae92f880b9475ca4586ea0829a6ae1940a0de4beddeda759ef57f7e3ea"
+    },
+    {
+      "block_id": "page-0654-block-0013",
+      "order": 13,
+      "text": "Bezafibrate – 0\nDomperidone – 1\nLevomepromazine  \n",
+      "bbox": [
+        249.26747131347656,
+        318.6735534667969,
+        257.9749755859375,
+        608.7435302734375
+      ],
+      "text_sha256": "3308eef3f37d91d16f9c80ec484a0bc2639d1c40c27475e03f56058a412ce036"
+    },
+    {
+      "block_id": "page-0654-block-0014",
+      "order": 14,
+      "text": "(methotrimeprazine) – 2\nProchlorperazine – 2\nZiprasidone – 0\n",
+      "bbox": [
+        249.0874786376953,
+        134.1436004638672,
+        267.97247314453125,
+        381.0360412597656
+      ],
+      "text_sha256": "82a76cab55f684f6bfde524102bcc81cfacfc050fd377226dd5430d4043dde6a"
+    },
+    {
+      "block_id": "page-0654-block-0015",
+      "order": 15,
+      "text": "Bisacodyl – 0\nDonepezil – 0\nLevothyroxine (Thyroxine) – 0\nProcyclidine – 3\nZolpidem – 0\n",
+      "bbox": [
+        274.8949890136719,
+        141.65855407714844,
+        283.60247802734375,
+        608.7509765625
+      ],
+      "text_sha256": "df8404ac47d5b1a308951ffc81f2c7d64b160cf78913ac0bce5f2d3968af407e"
+    },
+    {
+      "block_id": "page-0654-block-0016",
+      "order": 16,
+      "text": "Bisoprolol – NK\nDothiepin (Dosulepin) – 3\nLiraglutide – 0\nPromazine – 2\nZopiclone – NK\n",
+      "bbox": [
+        290.5174865722656,
+        134.9984893798828,
+        299.2249755859375,
+        608.7584838867188
+      ],
+      "text_sha256": "f813882cb9b6ea010a625cc8e1e6548fd8e57e58d224a5f8656cf096f81da44e"
+    },
+    {
+      "block_id": "page-0654-block-0017",
+      "order": 17,
+      "text": "Bromocriptine – 1\nDoxazosin – 0\nLisinopril – 0\nPromethazine – 3\nZotepine – 2\n",
+      "bbox": [
+        306.1399841308594,
+        143.3384246826172,
+        314.84747314453125,
+        608.7659912109375
+      ],
+      "text_sha256": "486896a12b1eb0d4dcb993d1bdae98d7ff165cfaad7f3f9c11a95173ab3e60aa"
+    },
+    {
+      "block_id": "page-0654-block-0018",
+      "order": 18,
+      "text": "Budesonide (inhaler) – 0\nDoxepin – 3\nLithium – 1\nPropantheline – 2\nZuclopentixol (zuclopenthixol) – 1\n",
+      "bbox": [
+        321.7624816894531,
+        76.25846862792969,
+        330.469970703125,
+        608.7734375
+      ],
+      "text_sha256": "c77ff49601bf7ec687a1d51f69233f7384d7f7d8910dc712134a8ce9f738b8f3"
+    },
+    {
+      "block_id": "page-0654-block-0019",
+      "order": 19,
+      "text": "Bumetanide – NK\nDoxycycline – 0\nLofepramine – 3\nPropranolol – 0\n",
+      "bbox": [
+        337.3849792480469,
+        223.58839416503906,
+        346.09246826171875,
+        608.7809448242188
+      ],
+      "text_sha256": "12de8e17bcd5fc7e5fb4c9a22173edd504ae33fb4b3838f035ec20ee0ac7f679"
+    },
+    {
+      "block_id": "page-0654-block-0020",
+      "order": 20,
+      "text": "Buprenorphine – 0\nDulaglutide – 0\nLoperamide – 0\nQuetiapine – 2\n",
+      "bbox": [
+        352.82745361328125,
+        224.70591735839844,
+        361.7149658203125,
+        608.7809448242188
+      ],
+      "text_sha256": "3badf239934aa7db049cd87037e53236c33597c81e5f150de5805657ef4252f3"
+    },
+    {
+      "block_id": "page-0654-block-0021",
+      "order": 21,
+      "text": "Bupropion – 0\nDuloxetine – 0\nLoratadine – 0\nQuinidine – 1\n",
+      "bbox": [
+        368.6299743652344,
+        229.2883758544922,
+        377.33746337890625,
+        608.7809448242188
+      ],
+      "text_sha256": "69373182cfbbbb0c78fab5a3fd10c5cc24c9f863c8748a15eea495b22c060405"
+    },
+    {
+      "block_id": "page-0654-block-0022",
+      "order": 22,
+      "text": "Buspirone – 1\nEnalapril – 0\nLorazepam – 0\nQuinine – 1\n",
+      "bbox": [
+        384.07244873046875,
+        235.12339782714844,
+        392.9599609375,
+        608.7809448242188
+      ],
+      "text_sha256": "bcdadb51afcbaedffa3f28c6512a7790657ffa4f558b9ef2e2803e4a14d3ca95"
+    },
+    {
+      "block_id": "page-0654-block-0023",
+      "order": 23,
+      "text": "Cabergoline – 0\nEnoxaparin – 0\nLosartan – 0\nRabeprazole – 0\n",
+      "bbox": [
+        399.6949462890625,
+        220.54344177246094,
+        408.58245849609375,
+        608.7809448242188
+      ],
+      "text_sha256": "02ba3c23e6532f4993de53a84128f4f727937b70d1cfef1795a7c139b38f134a"
+    },
+    {
+      "block_id": "page-0654-block-0024",
+      "order": 24,
+      "text": "(Continued )\n",
+      "bbox": [
+        416.16400146484375,
+        64.3502197265625,
+        425.5,
+        106.5902099609375
+      ],
+      "text_sha256": "44ca67875c70a47ee338ed03c37de37a817851d40ae5d3cf695d5012220c57ce"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

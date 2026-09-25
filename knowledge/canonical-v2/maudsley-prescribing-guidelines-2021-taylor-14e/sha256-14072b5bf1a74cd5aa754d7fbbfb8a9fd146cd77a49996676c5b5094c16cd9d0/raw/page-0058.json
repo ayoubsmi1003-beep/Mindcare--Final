@@ -1,0 +1,215 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0058",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 58,
+  "source_page_index": 57,
+  "source_page_display": 58,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    37\nCHAPTER 1\n\t63.\t Bodkin JA, et al. Double-blind, placebo-controlled, multicenter trial of selegiline augmentation of antipsychotic medication to treat negative \nsymptoms in outpatients with schizophrenia. Am J Psychiatry 2005; 162:388–390.\n\t64.\t Kelleher JP, et al. Pilot randomized, controlled trial of pramipexole to augment antipsychotic treatment. Eur Neuro Psychopharmacol 2012; \n22:415–418.\n\t65.\t Ko YH, et al. Short-term testosterone augmentation in male schizophrenics: a randomized, double-blind, placebo-controlled trial. J Clin \nPsychopharmacol 2008; 28:375–383.\n\t66.\t Zhang ZJ, et al. Beneficial effects of ondansetron as an adjunct to haloperidol for chronic, treatment-resistant schizophrenia: a double-blind, \nrandomized, placebo-controlled study. Schizophr Res 2006; 88:102–110.\n\t67.\t Khodaie-Ardakani MR, et al. Granisetron as an add-on to risperidone for treatment of negative symptoms in patients with stable schizophre-\nnia: randomized double-blind placebo-controlled study. J Psychiatr Res 2013; 47:472–478.\n\t68.\t Shi C, et al. Revisiting the therapeutic effect of rTMS on negative symptoms in schizophrenia: a meta-analysis. Psychiatry Res 2014; \n215:505–513.\n\t69.\t Wobrock T, et al. Left prefrontal high-frequency repetitive transcranial magnetic stimulation for the treatment of schizophrenia with pre-\ndominant negative symptoms: a sham-controlled, randomized multicenter trial. Biol Psychiatry 2015; 77:979–988.\n\t70.\t Wang J, et al. Efficacy towards negative symptoms and safety of repetitive transcranial magnetic stimulation treatment for patients with \nschizophrenia: a systematic review. Shanghai Arch Psychiatry 2017; 29:61–76.\n\t71.\t Mondino M, et al. Transcranial direct current stimulation for the treatment of refractory symptoms of schizophrenia. Current evidence and \nfuture directions. Curr Pharm Des 2015; 21:3373–3383.\n\t72.\t Keefe RSE, et al. Efficacy and safety of donepezil in patients with schizophrenia or schizoaffective disorder: significant placebo/practice effects \nin a 12-week, randomized, double-blind, placebo-controlled trial. Neuro Psycho Pharmacology 2007; 33:1217–1228.\n\t73.\t Mazeh D, et al. Donepezil for negative signs in elderly patients with schizophrenia: an add-on, double-blind, crossover, placebo-controlled \nstudy. Int Psychogeriatr 2006; 18:429–436.\n\t74.\t Conley RR, et al. The effects of galantamine on psychopathology in chronic stable schizophrenia. Clin Neuropharmacol 2009; 32:69–74.\n\t75.\t Potvin S, et al. A meta-analysis of negative symptoms in dual diagnosis schizophrenia. Psychol Med 2006; 36:431–440.\n\t76.\t Arndt S, et al. Comorbidity of substance abuse and schizophrenia: the role of pre-morbid adjustment. Psychol Med 1992; 22:379–388.\n\t77.\t Leeson VC, et al. The effect of cannabis use and cognitive reserve on age at onset and psychosis outcomes in first-episode schizophrenia. \nSchizophr Bull 2012; 38:873–880.\n\t78.\t Barnes TRE, et al. Evidence-based guidelines for the pharmacological treatment of schizophrenia: updated recommendations from the British \nAssociation for Psychopharmacology. J Psychopharmacology 2020; 34:3–78.\n\t79.\t Remington G, et al. Treating negative symptoms in schizophrenia: an update. Curr Treat Options Psychiatry 2016; 3:133–150.\n",
+  "raw_text_sha256": "873715c92f69b1901e31511c55ab4974b0138121d934d1ab90a8a354eb71be15",
+  "coordinates_sha256": "7d78bb578e5f0f35e97a1179ff4ca1e22d6acab983c850fdee1cb3492a421a09",
+  "block_sequence_sha256": "2fa32c278b6b22fcd26cdfa0c250924a19d920e13ffd3b4eafb5556e729f70b7",
+  "blocks": [
+    {
+      "block_id": "page-0058-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    37\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "4a80ec4ca4a63a90d663e42e754c3bbdbce39152316a23630bac1e33d42dadef"
+    },
+    {
+      "block_id": "page-0058-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0058-block-0002",
+      "order": 2,
+      "text": "\t63.\t Bodkin JA, et al. Double-blind, placebo-controlled, multicenter trial of selegiline augmentation of antipsychotic medication to treat negative \n",
+      "bbox": [
+        47.99909973144531,
+        63.2694091796875,
+        421.6367492675781,
+        70.30140686035156
+      ],
+      "text_sha256": "cb6bbdad6d1b8c7332ba14679488bdfd387b0ade1d8fa3d9eed4be10765c8b75"
+    },
+    {
+      "block_id": "page-0058-block-0003",
+      "order": 3,
+      "text": "symptoms in outpatients with schizophrenia. Am J Psychiatry 2005; 162:388–390.\n\t64.\t Kelleher JP, et al. Pilot randomized, controlled trial of pramipexole to augment antipsychotic treatment. Eur Neuro Psychopharmacol 2012; \n",
+      "bbox": [
+        48.005096435546875,
+        72.12541198730469,
+        421.6849670410156,
+        88.30140686035156
+      ],
+      "text_sha256": "f532f060f54ce73b6563557740de3fc05430a32b2caddde9bbea236e9e9cc000"
+    },
+    {
+      "block_id": "page-0058-block-0004",
+      "order": 4,
+      "text": "22:415–418.\n\t65.\t Ko YH, et al. Short-term testosterone augmentation in male schizophrenics: a randomized, double-blind, placebo-controlled trial. J Clin \n",
+      "bbox": [
+        48.01110076904297,
+        90.12541198730469,
+        421.7210388183594,
+        106.30140686035156
+      ],
+      "text_sha256": "c3418121f7dee4fb403de1e695a0e7a17c6026deb7adbca916dd919faa18b8dc"
+    },
+    {
+      "block_id": "page-0058-block-0005",
+      "order": 5,
+      "text": "Psychopharmacol 2008; 28:375–383.\n\t66.\t Zhang ZJ, et al. Beneficial effects of ondansetron as an adjunct to haloperidol for chronic, treatment-resistant schizophrenia: a double-blind, \n",
+      "bbox": [
+        48.01709747314453,
+        108.12541198730469,
+        421.6611022949219,
+        124.30140686035156
+      ],
+      "text_sha256": "2a5c22ac90246cd5ac1fe9732703cc786e5cec56a6f35fe4b663da81e3c1de48"
+    },
+    {
+      "block_id": "page-0058-block-0006",
+      "order": 6,
+      "text": "randomized, placebo-controlled study. Schizophr Res 2006; 88:102–110.\n\t67.\t Khodaie-Ardakani MR, et al. Granisetron as an add-on to risperidone for treatment of negative symptoms in patients with stable schizophre-\n",
+      "bbox": [
+        48.023101806640625,
+        126.12541198730469,
+        419.98687744140625,
+        142.30140686035156
+      ],
+      "text_sha256": "599b8eccbe2d1c48d255009396a2a284b94452f521cd80d25b1a74c05dbf5d0b"
+    },
+    {
+      "block_id": "page-0058-block-0007",
+      "order": 7,
+      "text": "nia: randomized double-blind placebo-controlled study. J Psychiatr Res 2013; 47:472–478.\n\t68.\t Shi C, et al. Revisiting the therapeutic effect of rTMS on negative symptoms in schizophrenia: a meta-analysis. Psychiatry Res 2014; \n",
+      "bbox": [
+        48.02909851074219,
+        144.1254119873047,
+        421.7090759277344,
+        160.30140686035156
+      ],
+      "text_sha256": "253e8f926d943237033d15ee639807e3d637e26482cf668b15b884f0f3d394a5"
+    },
+    {
+      "block_id": "page-0058-block-0008",
+      "order": 8,
+      "text": "215:505–513.\n\t69.\t Wobrock T, et al. Left prefrontal high-frequency repetitive transcranial magnetic stimulation for the treatment of schizophrenia with pre-\n",
+      "bbox": [
+        48.03510284423828,
+        162.1254119873047,
+        420.04705810546875,
+        178.30140686035156
+      ],
+      "text_sha256": "494e661cdce2a24f8cf4462d09702ce3ae54d709bea6ca3151e8e58a0526e4ed"
+    },
+    {
+      "block_id": "page-0058-block-0009",
+      "order": 9,
+      "text": "dominant negative symptoms: a sham-controlled, randomized multicenter trial. Biol Psychiatry 2015; 77:979–988.\n\t70.\t Wang J, et al. Efficacy towards negative symptoms and safety of repetitive transcranial magnetic stimulation treatment for patients with \n",
+      "bbox": [
+        48.041099548339844,
+        180.1254119873047,
+        421.7390441894531,
+        196.30140686035156
+      ],
+      "text_sha256": "0e344c8e0a869a53dfa5b06146408249251c1609be5424101dba69e2ff27940a"
+    },
+    {
+      "block_id": "page-0058-block-0010",
+      "order": 10,
+      "text": "schizophrenia: a systematic review. Shanghai Arch Psychiatry 2017; 29:61–76.\n\t71.\t Mondino M, et al. Transcranial direct current stimulation for the treatment of refractory symptoms of schizophrenia. Current evidence and \n",
+      "bbox": [
+        48.047096252441406,
+        198.1254119873047,
+        421.7450866699219,
+        214.30140686035156
+      ],
+      "text_sha256": "47d284473e2492ea144b46adcf73bfc30bed57369712e97a51664309a606fd4f"
+    },
+    {
+      "block_id": "page-0058-block-0011",
+      "order": 11,
+      "text": "future directions. Curr Pharm Des 2015; 21:3373–3383.\n\t72.\t Keefe RSE, et al. Efficacy and safety of donepezil in patients with schizophrenia or schizoaffective disorder: significant placebo/practice effects \n",
+      "bbox": [
+        48.0531005859375,
+        216.1254119873047,
+        421.7272033691406,
+        232.30140686035156
+      ],
+      "text_sha256": "157af7afea51b53d482cc2256f2ae2ffac72c37b164cf0a3145d004440c4eccd"
+    },
+    {
+      "block_id": "page-0058-block-0012",
+      "order": 12,
+      "text": "in a 12-week, randomized, double-blind, placebo-controlled trial. Neuro Psycho Pharmacology 2007; 33:1217–1228.\n\t73.\t Mazeh D, et al. Donepezil for negative signs in elderly patients with schizophrenia: an add-on, double-blind, crossover, placebo-controlled \n",
+      "bbox": [
+        48.05909729003906,
+        234.1254119873047,
+        421.7152404785156,
+        250.30140686035156
+      ],
+      "text_sha256": "e30376a7fb84458846ca8f4b483672bfa82ddb3b3b1317717cd03c06444385df"
+    },
+    {
+      "block_id": "page-0058-block-0013",
+      "order": 13,
+      "text": "study. Int Psychogeriatr 2006; 18:429–436.\n\t74.\t Conley RR, et al. The effects of galantamine on psychopathology in chronic stable schizophrenia. Clin Neuropharmacol 2009; 32:69–74.\n\t75.\t Potvin S, et al. A meta-analysis of negative symptoms in dual diagnosis schizophrenia. Psychol Med 2006; 36:431–440.\n\t76.\t Arndt S, et al. Comorbidity of substance abuse and schizophrenia: the role of pre-morbid adjustment. Psychol Med 1992; 22:379–388.\n\t77.\t Leeson VC, et al. The effect of cannabis use and cognitive reserve on age at onset and psychosis outcomes in first-episode schizophrenia. \n",
+      "bbox": [
+        48.065101623535156,
+        252.1254119873047,
+        421.7272644042969,
+        295.3014221191406
+      ],
+      "text_sha256": "f37a954529bd4a732a1c170de042daf824b20515df39cd76563a967840006819"
+    },
+    {
+      "block_id": "page-0058-block-0014",
+      "order": 14,
+      "text": "Schizophr Bull 2012; 38:873–880.\n\t78.\t Barnes TRE, et al. Evidence-based guidelines for the pharmacological treatment of schizophrenia: updated recommendations from the British \n",
+      "bbox": [
+        48.08909606933594,
+        297.1253967285156,
+        421.7450866699219,
+        313.3014221191406
+      ],
+      "text_sha256": "0513193d9347addae343f1e1af34948300caf1ca8d3abcd85d9378f547fee4b4"
+    },
+    {
+      "block_id": "page-0058-block-0015",
+      "order": 15,
+      "text": "Association for Psychopharmacology. J Psychopharmacology 2020; 34:3–78.\n\t79.\t Remington G, et al. Treating negative symptoms in schizophrenia: an update. Curr Treat Options Psychiatry 2016; 3:133–150.\n",
+      "bbox": [
+        48.09510040283203,
+        315.1253967285156,
+        386.9151916503906,
+        331.3014221191406
+      ],
+      "text_sha256": "4d87aff29a47a82ecdfccfb0e9a2839338d688a69f584280fda06f7588b27174"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

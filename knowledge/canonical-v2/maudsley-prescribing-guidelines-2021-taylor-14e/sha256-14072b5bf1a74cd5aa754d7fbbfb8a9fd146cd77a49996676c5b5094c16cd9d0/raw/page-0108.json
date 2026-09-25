@@ -1,0 +1,107 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0108",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 108,
+  "source_page_index": 107,
+  "source_page_display": 108,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    87\nCHAPTER 1\nRisperidone long-acting injection\nRisperidone was the first FGA to be made available as a depot, or long-acting, injecta-\nble formulation. Doses of 25–50mg every 2 weeks appear to be as effective as oral doses \nof 2–6mg/day.1 The long-acting injection also seems to be well tolerated – fewer than \n10% of patients experienced EPS, and fewer than 6% withdrew from a long-term trial \nbecause of adverse effects.2 Oral risperidone increases prolactin,3 as does RLAI,4 but \nlevels appear to reduce somewhat following a switch from oral to injectable risperi-\ndone.5–7 Rates of tardive dyskinesia are said to be low.8 There are no direct comparisons \nwith standard depots using randomised controlled designs, but comparisons from \nobservational studies are available and results have been mixed. Switching from FGA \ndepots in stable patients to RLAI has been shown to be less successful than remaining \non the FGA depot;9 in contrast, discontinuation rates were lower with RLAI when \ncompared with FGAs.10\nUncertainty remains over the dose–response relationship for RLAI. Studies randomis-\ning subjects to different fixed doses of RLAI show no differences in response according \nto dose.11 One randomised, fixed-dose yearlong study suggested better outcome for \n50mg every two weeks than with 25mg, although no observed difference reached sta-\ntistical significance.12 Naturalistic studies indicate doses higher than 25mg/2 weeks are \nfrequently used.13,14 One study suggested higher doses were associated with better \noutcome.15,16\nPlasma levels afforded by 25mg/2 weeks seem to be similar to, or even lower than, \nlevels provided by 2mg/day oral risperidone.17,18 One study of TDM samples found \n9.5% of plasma samples from people apparently receiving risperidone LAI contained \nno risperidone or 9OH-risperidone.19 Striatal dopamine D2 occupancies are low (per-\nhaps subtherapeutic) in people receiving 25mg/2  weeks.20,21 So, although fixed-dose \nstudies have not revealed clear advantages for doses above 25mg/2 weeks other indica-\ntors cast doubt on the assumption that 25mg/2 weeks will be adequate for all or even \nmost patients. While this conundrum remains unresolved the need for careful dose titra-\ntion becomes of great importance. This is perhaps most efficiently achieved by establish-\ning the required dose of oral risperidone and converting this dose into the equivalent \ninjection dose. Trials have clearly established that switching from 2mg oral to 25mg \ninjection and 4mg oral to 50mg injection is usually successful2,22,23 (switching from 4mg/\nday to 25mg/2 week increases the risk of relapse24). There remains a question over the \nequivalent dose for 6mg oral: in theory, patients should be switched to 75mg injection, \nbut this dose showed no advantage over lower doses in clinical trials and is in any case \nabove the licensed maximum dose. Nevertheless, an observational study reported suc-\ncessful outcomes in patients treated with doses in excess of 75mg/2  weeks (range \n75–200mg) with continuation rates of 95% after 3  years.25 Paliperidone palmitate \n150mg a month is equivalent to oral risperidone 6mg/day. In fact, for many reasons, \npaliperidone palmitate (9-hydroxyrisperidone) may be preferred to risperidone injec-\ntion (as Risperdal Consta): it acts acutely, can be given monthly, does not require cold \nstorage and has a wider, more useful dose range (see the section on paliperidone LAI).\nRisperidone long-acting injection differs importantly from other depots, and the fol-\nlowing should be noted:\n",
+  "raw_text_sha256": "16afe4edee5fbb34c7c5b39cb1c27fce52c9d00f05c2a0c5d26f204779e50aba",
+  "coordinates_sha256": "725c1eba6d9ca63924cbe208bacbabffeeec63d450cf5dac16dc75a605d688e3",
+  "block_sequence_sha256": "6b95607b75cc7be90c62b97174261b6dac7a1fbcd5e12830462cf77c304cbb0b",
+  "blocks": [
+    {
+      "block_id": "page-0108-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    87\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "403b6dce8012f947f8a98c48818b85ccaa29a975339f631fc1363d1dc5d53c26"
+    },
+    {
+      "block_id": "page-0108-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0108-block-0002",
+      "order": 2,
+      "text": "Risperidone long-acting injection\n",
+      "bbox": [
+        54.99909973144531,
+        66.06448364257812,
+        225.51002502441406,
+        79.0994873046875
+      ],
+      "text_sha256": "bb20c0d09b1a6b1fff573d05a937167faee9cf534a17ab832bf97a7ee31e3c41"
+    },
+    {
+      "block_id": "page-0108-block-0003",
+      "order": 3,
+      "text": "Risperidone was the first FGA to be made available as a depot, or long-acting, injecta-\nble formulation. Doses of 25–50mg every 2 weeks appear to be as effective as oral doses \nof 2–6mg/day.1 The long-acting injection also seems to be well tolerated – fewer than \n10% of patients experienced EPS, and fewer than 6% withdrew from a long-term trial \nbecause of adverse effects.2 Oral risperidone increases prolactin,3 as does RLAI,4 but \nlevels appear to reduce somewhat following a switch from oral to injectable risperi-\ndone.5–7 Rates of tardive dyskinesia are said to be low.8 There are no direct comparisons \nwith standard depots using randomised controlled designs, but comparisons from \nobservational studies are available and results have been mixed. Switching from FGA \ndepots in stable patients to RLAI has been shown to be less successful than remaining \non the FGA depot;9 in contrast, discontinuation rates were lower with RLAI when \ncompared with FGAs.10\n",
+      "bbox": [
+        47.995201110839844,
+        84.90948486328125,
+        422.8104553222656,
+        228.62942504882812
+      ],
+      "text_sha256": "7e34f8729540da27919c2610c287688ae084546b590bbc1a3ae86f6b6098879b"
+    },
+    {
+      "block_id": "page-0108-block-0004",
+      "order": 4,
+      "text": "Uncertainty remains over the dose–response relationship for RLAI. Studies randomis-\ning subjects to different fixed doses of RLAI show no differences in response according \nto dose.11 One randomised, fixed-dose yearlong study suggested better outcome for \n50mg every two weeks than with 25mg, although no observed difference reached sta-\ntistical significance.12 Naturalistic studies indicate doses higher than 25mg/2 weeks are \nfrequently used.13,14 One study suggested higher doses were associated with better \noutcome.15,16\n",
+      "bbox": [
+        47.99909973144531,
+        228.909423828125,
+        422.8117370605469,
+        312.6294250488281
+      ],
+      "text_sha256": "48285dada8621fc8e07a251df95780f777b1b61b20b85b551fd3d2c2f513c5f2"
+    },
+    {
+      "block_id": "page-0108-block-0005",
+      "order": 5,
+      "text": "Plasma levels afforded by 25mg/2 weeks seem to be similar to, or even lower than, \nlevels provided by 2mg/day oral risperidone.17,18 One study of TDM samples found \n9.5% of plasma samples from people apparently receiving risperidone LAI contained \nno risperidone or 9OH-risperidone.19 Striatal dopamine D2 occupancies are low (per-\nhaps subtherapeutic) in people receiving 25mg/2  weeks.20,21 So, although fixed-dose \nstudies have not revealed clear advantages for doses above 25mg/2 weeks other indica-\ntors cast doubt on the assumption that 25mg/2 weeks will be adequate for all or even \nmost patients. While this conundrum remains unresolved the need for careful dose titra-\ntion becomes of great importance. This is perhaps most efficiently achieved by establish-\ning the required dose of oral risperidone and converting this dose into the equivalent \ninjection dose. Trials have clearly established that switching from 2mg oral to 25mg \ninjection and 4mg oral to 50mg injection is usually successful2,22,23 (switching from 4mg/\nday to 25mg/2 week increases the risk of relapse24). There remains a question over the \nequivalent dose for 6mg oral: in theory, patients should be switched to 75mg injection, \nbut this dose showed no advantage over lower doses in clinical trials and is in any case \nabove the licensed maximum dose. Nevertheless, an observational study reported suc-\ncessful outcomes in patients treated with doses in excess of 75mg/2  weeks (range \n75–200mg) with continuation rates of 95% after 3  years.25 Paliperidone palmitate \n150mg a month is equivalent to oral risperidone 6mg/day. In fact, for many reasons, \npaliperidone palmitate (9-hydroxyrisperidone) may be preferred to risperidone injec-\ntion (as Risperdal Consta): it acts acutely, can be given monthly, does not require cold \nstorage and has a wider, more useful dose range (see the section on paliperidone LAI).\n",
+      "bbox": [
+        47.99452209472656,
+        312.909423828125,
+        422.8294372558594,
+        576.6294555664062
+      ],
+      "text_sha256": "4e24283a57a9d93e52c5f479de25c0579c8858c2bdfb6ca27e60106fad371fd7"
+    },
+    {
+      "block_id": "page-0108-block-0006",
+      "order": 6,
+      "text": "Risperidone long-acting injection differs importantly from other depots, and the fol-\nlowing should be noted:\n",
+      "bbox": [
+        47.99971008300781,
+        576.909423828125,
+        419.9597473144531,
+        600.6294555664062
+      ],
+      "text_sha256": "fe68768f3e9ef670ddad118b1172c8cbfee69498b0e612ea4dc9b1b87e2832df"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

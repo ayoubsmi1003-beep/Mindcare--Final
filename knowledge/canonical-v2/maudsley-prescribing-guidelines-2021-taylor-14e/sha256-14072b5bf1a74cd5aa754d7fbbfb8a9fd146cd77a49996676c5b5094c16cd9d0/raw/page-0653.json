@@ -1,0 +1,311 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0653",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 653,
+  "source_page_index": 652,
+  "source_page_display": 653,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Table 6.4  Anticholinergic effect on cognition (AEC) scores4 (updated October 2020)\nAdcal – 0\nClarithromycin – NK\nGabapentin – 0\nNaproxen – 0\nSitagliptin – 0\nAlendronic acid  \n(Alendronate) – 0\nClemastine – 3\nGalantamine – 0\nNifedipine – 0\nSolifenacin – 1\nAlfuzosin – 0\nClomipramine – 3\nGaviscon – 0\nNimodipine – 0\nSotalol – 0\nAlimemazine (trimeprazine) – 3\nClonazepam – NK\nGliclazide – 0\nNitrofurantoin – NK\nSpironolactone – NK\nAllopurinol – NK\nClonidine – NK\nGranisetron – 0\nNortriptyline – 3\nSulphasalazine – 0\nAlprazolam – 0\nClopidogrel – 0\nHaloperidol – 0\nOlanzapine – 2\nSulpiride – 0\nAlverine – 0\nClozapine – 3\nHeparin – 0\nOmeprazole – 0\nTamoxifen – NK\nAmantadine – 2\nCo-beneldopa – 0\nHydrochlorothiazide – 0\nOndansetron – 0\nTamsulosin – 0\nAmiloride – 0\nCo-careldopa – 0\nHydrocodone – NK\nOrlistat – 0\nTemazepam – 1\nAminophylline – 0\nCodeine – NK\nHydrocortisone – NK\nOrphenadrine – 3\nTetracycline – 0\nAmiodarone – 1\nColchicine – NK\nHydroxyzine – 1\nOxcarbazepine – NK\nTheophylline – 0\nAmisulpride – 0\nCo-tenidone – 0\nHyoscine hydrobromide – 3\nOxybutynin – 3\nThiamine – 0\nAmitriptyline – 3\nCyclizine – 1\nHysoscine butylbromide \n(buscopan) – 1\nOxycodone – NK\nTiotropium bromide  \n(inhalation) – 0\nAmlodipine – 0\nCyproheptadine – 3\nIbuprofen – 0\nPaliperidone – 1\nTizanidine – NK\nAmoxicillin – 0\nDabigatran – NK\nIloperidone – 1\nPantoprazole – 0\nTolcapone – 0\nAnastrozole – NK\nDarifenacin – 0\nImipramine – 3\nParacetamol – 0\nTolterodine – 2\nApixaban – NK\nDesipramine – 2\nIndapamide – 0\nParoxetine – 2\nTopiramate – NK\nApomorphine – 0\nDexamethasone – NK\nInsulin – 0\nPenicillin – 0\nTramadol – 0\nAripiprazole – 1\nDexamfetamine \n(dexamphetamine) – 0\nIpratropium bromide – 0\nPeppermint oil – 0\nTrazodone – 0\n",
+  "raw_text_sha256": "56d9c3282762814db2cb9efae1b280cd84e1f5b521b1b2ce62665ccc8475899b",
+  "coordinates_sha256": "0c52553082349aa1de8de92c097806ddf0be9c94d4f326c7f8a3e28b9685d471",
+  "block_sequence_sha256": "c1d312075b3736edab6b6718479c8af36e71972c93eb2f63f2f82193166b65a3",
+  "blocks": [
+    {
+      "block_id": "page-0653-block-0000",
+      "order": 0,
+      "text": "Table 6.4  Anticholinergic effect on cognition (AEC) scores4 (updated October 2020)\n",
+      "bbox": [
+        67.62730407714844,
+        337.75732421875,
+        76.51480102539062,
+        606.6539916992188
+      ],
+      "text_sha256": "5ac731bae7d0f993139fb7cb32bf07d2794326631ce18825db213600b36490ae"
+    },
+    {
+      "block_id": "page-0653-block-0001",
+      "order": 1,
+      "text": "Adcal – 0\nClarithromycin – NK\nGabapentin – 0\nNaproxen – 0\nSitagliptin – 0\n",
+      "bbox": [
+        85.50230407714844,
+        139.4840545654297,
+        94.38980102539062,
+        608.6539916992188
+      ],
+      "text_sha256": "d1a95912d3592fbc27273be6accff631c06530c339b84a7cbe1eea11accbcfa1"
+    },
+    {
+      "block_id": "page-0653-block-0002",
+      "order": 2,
+      "text": "Alendronic acid  \n",
+      "bbox": [
+        101.30480194091797,
+        555.0364379882812,
+        110.01229858398438,
+        608.6614990234375
+      ],
+      "text_sha256": "419d67a2910973589e9422c955e219e92c579a164fadc1284750b55ab7522832"
+    },
+    {
+      "block_id": "page-0653-block-0003",
+      "order": 3,
+      "text": "(Alendronate) – 0\nClemastine – 3\nGalantamine – 0\nNifedipine – 0\nSolifenacin – 1\n",
+      "bbox": [
+        101.30480194091797,
+        136.57395935058594,
+        120.00979614257812,
+        608.6614990234375
+      ],
+      "text_sha256": "cf716f81a3ff14ca4f43875abbfd241ea2a79b59068f84b69101bc1d7855dcac"
+    },
+    {
+      "block_id": "page-0653-block-0004",
+      "order": 4,
+      "text": "Alfuzosin – 0\nClomipramine – 3\nGaviscon – 0\nNimodipine – 0\nSotalol – 0\n",
+      "bbox": [
+        126.93230438232422,
+        149.4963836669922,
+        135.63980102539062,
+        608.6689453125
+      ],
+      "text_sha256": "7aa5a41154011224cdbf40f4690b69b7f0945c1c55ec5ee0d3974c6ce22fa613"
+    },
+    {
+      "block_id": "page-0653-block-0005",
+      "order": 5,
+      "text": "Alimemazine (trimeprazine) – 3\nClonazepam – NK\nGliclazide – 0\nNitrofurantoin – NK\nSpironolactone – NK\n",
+      "bbox": [
+        145.05979919433594,
+        117.9664535522461,
+        153.76730346679688,
+        608.6763916015625
+      ],
+      "text_sha256": "3f57647af615e0454b7de29936851be62399f99a99d7de5067fb5afae7e592f6"
+    },
+    {
+      "block_id": "page-0653-block-0006",
+      "order": 6,
+      "text": "Allopurinol – NK\nClonidine – NK\nGranisetron – 0\nNortriptyline – 3\nSulphasalazine – 0\n",
+      "bbox": [
+        160.6822967529297,
+        124.50645446777344,
+        169.38980102539062,
+        608.6838989257812
+      ],
+      "text_sha256": "01e52dfef5c3663df8acad579033e6b9dd191d00c2f4074f54be3457eb3fbe12"
+    },
+    {
+      "block_id": "page-0653-block-0007",
+      "order": 7,
+      "text": "Alprazolam – 0\nClopidogrel – 0\nHaloperidol – 0\nOlanzapine – 2\nSulpiride – 0\n",
+      "bbox": [
+        176.1248016357422,
+        143.6840057373047,
+        185.01229858398438,
+        608.69140625
+      ],
+      "text_sha256": "d31a742f43d250229c59b58527d08a427a86235aec0dab64f22c4660d2c0888e"
+    },
+    {
+      "block_id": "page-0653-block-0008",
+      "order": 8,
+      "text": "Alverine – 0\nClozapine – 3\nHeparin – 0\nOmeprazole – 0\nTamoxifen – NK\n",
+      "bbox": [
+        191.74729919433594,
+        132.02882385253906,
+        200.63479614257812,
+        608.6988525390625
+      ],
+      "text_sha256": "a73609a9e072f4e12dc700eba8625bbfaed5ceaaf10a7785c02ebe2d42a62e58"
+    },
+    {
+      "block_id": "page-0653-block-0009",
+      "order": 9,
+      "text": "Amantadine – 2\nCo-beneldopa – 0\nHydrochlorothiazide – 0\nOndansetron – 0\nTamsulosin – 0\n",
+      "bbox": [
+        207.54978942871094,
+        136.61131286621094,
+        216.25729370117188,
+        608.706298828125
+      ],
+      "text_sha256": "3547a8dec2b41e872db5173934aa3abf353ac71d56283a6acb7fd2cf38be5691"
+    },
+    {
+      "block_id": "page-0653-block-0010",
+      "order": 10,
+      "text": "Amiloride – 0\nCo-careldopa – 0\nHydrocodone – NK\nOrlistat – 0\nTemazepam – 1\n",
+      "bbox": [
+        223.1722869873047,
+        133.29624938964844,
+        231.87979125976562,
+        608.7138061523438
+      ],
+      "text_sha256": "e7c4c4e2fc2d6a212a4b073a4d72310ce7222d38c9881eedd845b690437deb45"
+    },
+    {
+      "block_id": "page-0653-block-0011",
+      "order": 11,
+      "text": "Aminophylline – 0\nCodeine – NK\nHydrocortisone – NK\nOrphenadrine – 3\nTetracycline – 0\n",
+      "bbox": [
+        238.79478454589844,
+        134.56370544433594,
+        247.50228881835938,
+        608.7213134765625
+      ],
+      "text_sha256": "982e1b89a08d8e3b2875ff24afb0e84d0c47c5db1ce649bcc7555bbe425ff4df"
+    },
+    {
+      "block_id": "page-0653-block-0012",
+      "order": 12,
+      "text": "Amiodarone – 1\nColchicine – NK\nHydroxyzine – 1\nOxcarbazepine – NK\nTheophylline – 0\n",
+      "bbox": [
+        254.4172821044922,
+        130.7988739013672,
+        263.1247863769531,
+        608.728759765625
+      ],
+      "text_sha256": "50e3c1745a3af61a961661cdd088f02e95fb2f664e1c9f36329f4c415696f342"
+    },
+    {
+      "block_id": "page-0653-block-0013",
+      "order": 13,
+      "text": "Amisulpride – 0\nCo-tenidone – 0\nHyoscine hydrobromide – 3\nOxybutynin – 3\nThiamine – 0\n",
+      "bbox": [
+        270.039794921875,
+        142.0637664794922,
+        278.7472839355469,
+        608.7362670898438
+      ],
+      "text_sha256": "fe6f4a2e88b0e1767b796077725867c63aaa12980cb14a1a862041e8e3c431bc"
+    },
+    {
+      "block_id": "page-0653-block-0014",
+      "order": 14,
+      "text": "Amitriptyline – 3\nCyclizine – 1\nHysoscine butylbromide \n",
+      "bbox": [
+        285.66229248046875,
+        303.2461242675781,
+        294.3697814941406,
+        608.7437133789062
+      ],
+      "text_sha256": "886155d58b0c6ab256ff9f9ad89e0de536856a67be9cce36c05def03911ea252"
+    },
+    {
+      "block_id": "page-0653-block-0015",
+      "order": 15,
+      "text": "(buscopan) – 1\nOxycodone – NK\nTiotropium bromide  \n",
+      "bbox": [
+        285.66229248046875,
+        115.4913558959961,
+        304.3672790527344,
+        381.03619384765625
+      ],
+      "text_sha256": "75f3b1ca61fecf33f5d8880d40d26fd62381f0f9d0636b826e0f735d8b4129fb"
+    },
+    {
+      "block_id": "page-0653-block-0016",
+      "order": 16,
+      "text": "(inhalation) – 0\n",
+      "bbox": [
+        295.6597900390625,
+        135.3962860107422,
+        304.3672790527344,
+        183.32870483398438
+      ],
+      "text_sha256": "ad80ac9b8e497ba2b7168c43a70ab90c07abb9110b8f44d22dc9a3122edfaebd"
+    },
+    {
+      "block_id": "page-0653-block-0017",
+      "order": 17,
+      "text": "Amlodipine – 0\nCyproheptadine – 3\nIbuprofen – 0\nPaliperidone – 1\nTizanidine – NK\n",
+      "bbox": [
+        311.1022644042969,
+        133.5661163330078,
+        319.9897766113281,
+        608.751220703125
+      ],
+      "text_sha256": "55f2f4aa788cd627bc16ce7120beb8ae11e3c7b0a199ceebb6823d05fc5ab0ef"
+    },
+    {
+      "block_id": "page-0653-block-0018",
+      "order": 18,
+      "text": "Amoxicillin – 0\nDabigatran – NK\nIloperidone – 1\nPantoprazole – 0\nTolcapone – 0\n",
+      "bbox": [
+        326.7247619628906,
+        139.16111755371094,
+        335.6122741699219,
+        608.7586669921875
+      ],
+      "text_sha256": "f34ee0f22c35c05f7ffe9c29ef2cb38a9ff793440d2736e68d2f2c902c040763"
+    },
+    {
+      "block_id": "page-0653-block-0019",
+      "order": 19,
+      "text": "Anastrozole – NK\nDarifenacin – 0\nImipramine – 3\nParacetamol – 0\nTolterodine – 2\n",
+      "bbox": [
+        342.52728271484375,
+        135.9736785888672,
+        351.2347717285156,
+        608.7661743164062
+      ],
+      "text_sha256": "f696a319fcf80e3a507a1834fc92cae129fca421c4ab7bcc829204f97f1cf938"
+    },
+    {
+      "block_id": "page-0653-block-0020",
+      "order": 20,
+      "text": "Apixaban – NK\nDesipramine – 2\nIndapamide – 0\nParoxetine – 2\nTopiramate – NK\n",
+      "bbox": [
+        358.1497802734375,
+        130.4385528564453,
+        366.8572692871094,
+        608.773681640625
+      ],
+      "text_sha256": "cca2dfb4c0f7831063eb3d322217abe498ea6d422bd6dd46b2c1ac5c1d6ddd2e"
+    },
+    {
+      "block_id": "page-0653-block-0021",
+      "order": 21,
+      "text": "Apomorphine – 0\nDexamethasone – NK\nInsulin – 0\nPenicillin – 0\nTramadol – 0\n",
+      "bbox": [
+        373.77227783203125,
+        141.96604919433594,
+        382.4797668457031,
+        608.7811279296875
+      ],
+      "text_sha256": "795a9385bc9395cd7c747fb0b1bf0a9a12527309db8abf37b7363212cf7d119d"
+    },
+    {
+      "block_id": "page-0653-block-0022",
+      "order": 22,
+      "text": "Aripiprazole – 1\nDexamfetamine \n",
+      "bbox": [
+        389.394775390625,
+        441.4410705566406,
+        398.1022644042969,
+        608.78857421875
+      ],
+      "text_sha256": "21e705828e5623bf9ef480c0cb3cb5d9405732c3255dc77123d378d7223a5001"
+    },
+    {
+      "block_id": "page-0653-block-0023",
+      "order": 23,
+      "text": "(dexamphetamine) – 0\nIpratropium bromide – 0\nPeppermint oil – 0\nTrazodone – 0\n",
+      "bbox": [
+        389.394775390625,
+        138.2158660888672,
+        408.0997619628906,
+        493.93353271484375
+      ],
+      "text_sha256": "1bc14af0e5500fbe3ddd1ec2112928618743bd4b2fa2899563b09c4a0fec325e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

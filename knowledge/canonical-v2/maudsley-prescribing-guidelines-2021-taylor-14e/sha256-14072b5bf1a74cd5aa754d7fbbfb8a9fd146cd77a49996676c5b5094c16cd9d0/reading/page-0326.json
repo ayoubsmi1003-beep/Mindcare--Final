@@ -1,0 +1,14 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0326",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 326,
+  "source_page_index": 325,
+  "repaired_text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\nChapter 3\nDepression and anxiety disorders\nIntroduction to Depression\nDepression is widely recognised as a major public health problem around the world. \nThe mainstay of treatment is the prescription of antidepressants, although psychologi-\ncal treatments have a place as first-line alternative to antidepressants in milder forms of \ndepression.1 Other methods of treating depression (VNS,2 rTMS,3 etc.) are also used \nbut are not widely available.\nThe basic principles of prescribing are described here, along with a summary of NICE \nguidance.\nTable 3.1  Basic principles of prescribing in depression\n■\n■Discuss with the patient choice of drug and utility/availability of other, non-pharmacological treatments.\n■\n■Discuss with the patient likely outcomes, such as gradual relief from depressive symptoms over several weeks.\n■\n■Prescribe a dose of antidepressant (after titration, if necessary) that is likely to be effective.\n■\n■For a single episode, continue treatment for at least 6–9 months after resolution of symptoms (multiple episodes may require longer).\n■\n■Withdraw antidepressants very gradually; always inform patients of the risk and nature of discontinuation symptoms.\nOfficial guidance on the treatment of depression\nNICE guidelines1 – a summary\n■\n■Antidepressants are not recommended as a first-line treatment in recent onset, mild\ndepression – active monitoring, individual guided self-help, CBT or exercise are \npreferred.",
+  "repaired_text_sha256": "e854533c17eea622974e4d5d6564935abcac5051c6cf471ab74911aecb112db2",
+  "raw_text_sha256": "dd6059982219cbfa10b94104195511ca9676d578d14cff6b0c42b2290145d469",
+  "repair_ids": [
+    "repair-000324"
+  ],
+  "raw_file": "raw/page-0326.json"
+}

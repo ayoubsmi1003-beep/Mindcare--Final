@@ -1,0 +1,419 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0449",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 449,
+  "source_page_index": 448,
+  "source_page_display": 449,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "428    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nBox 3.6  Post-traumatic stress disorder (PTSD)\nFirst-line drug treatment\n(In order of preference)\n(NB psychological approaches should be used before drug treatments79,80)\nSSRIs\n(Up to maximum licensed doses)\nParoxetine, sertraline or fluoxetine are the preferred SSRIs81,82\nRecommended by NICE79\nVenlafaxine modified release\n37.5mg–300mg83\nRecommended by NICE79\nSecond-line treatment (Less well tolerated or weak evidence base, no order of preference)\nAntipsychotics\nOlanzapine\n5–20mg\nAntipsychotics may be effective for the intrusion symptoms (flashbacks \nand nightmares) but not the avoidance and hyperarousal symptoms of \nPTSD. Studies done as monotherapy or as adjunctive treatment84\nRisperidone specifically mentioned by NICE79\nRisperidone\n0.5–6mg\nQuetiapine\n50–800mg85\nMirtazapine\n15–45mg/day86\nRecommended by NICE79\nSecond most effective drug in a network meta-analysis87\nMAOI\nPhenelzine\n15–75mg/day88\nRecommended by NICE79\nMost effective drug in a network meta-analysis87\nPrazosin\n2–15mg nocte89\nFor nightmares and sleep disturbances. Initiate at 1mg nocte and \ntitrate dose gradually to reduce the risk of hypotension\nSupported by a systematic review90\nTricyclic antidepressants\nAmitriptyline\n50–300mg/day91\nImipramine\n50–300mg/day\nAmitriptyline is recommended by NICE79\nFor all TCAs start at a low dose and increase dose according to \ntolerability\nBest supporting evidence is for desipramine but this drug is not widely \navailable87\nIV Ketamine92,93\nRapid reduction in symptom severity suggested. Good RCT showing \nacute and chronic efficacy94\nExperimental\nDuloxetine\n60–120mg\nTwo small open studies suggest efficacy. Start at 30mg for one \nweek95,96\nLamotrigine\nup to 500mg/day\nSmall double-blind study in 15 patients97\nPhenytoin\nplasma concentration 10–20ng/ml98\nOpen-label study in 12 patients\nValproate\nup to 2.5g99\nProbably not effective87\nnocte, at night\n",
+  "raw_text_sha256": "933d5f0b79eceefb6d44a20e010d2326f590300b6997e8eafcb25b9e13de80a6",
+  "coordinates_sha256": "aa31313a0500f991e01b6a787f431e6cda645a0464c00e839bd0e8f9df9808db",
+  "block_sequence_sha256": "344248e2b37bc4e3b960becb322c86be644aec7eac73a58cc52f5bb4b5960776",
+  "blocks": [
+    {
+      "block_id": "page-0449-block-0000",
+      "order": 0,
+      "text": "428    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "93b96a1211fec0350955eb7ac07a345c9297e694af7d81798f68bd6d92ae2029"
+    },
+    {
+      "block_id": "page-0449-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0449-block-0002",
+      "order": 2,
+      "text": "Box 3.6  Post-traumatic stress disorder (PTSD)\n",
+      "bbox": [
+        69.13999938964844,
+        69.32788848876953,
+        234.12501525878906,
+        79.400390625
+      ],
+      "text_sha256": "9dc912126ac69f791be364685a3a503394a77ddea33d770bec932551ac906fc2"
+    },
+    {
+      "block_id": "page-0449-block-0003",
+      "order": 3,
+      "text": "First-line drug treatment\n(In order of preference)\n(NB psychological approaches should be used before drug treatments79,80)\n",
+      "bbox": [
+        69.13999938964844,
+        91.21290588378906,
+        303.4806823730469,
+        120.10040283203125
+      ],
+      "text_sha256": "7c36aaf1a40ec2413e9c4c1815b1196b9b2b851e984b8255d160c307b21121f1"
+    },
+    {
+      "block_id": "page-0449-block-0004",
+      "order": 4,
+      "text": "SSRIs\n(Up to maximum licensed doses)\n",
+      "bbox": [
+        69.14320373535156,
+        126.4154281616211,
+        172.49317932128906,
+        145.12042236328125
+      ],
+      "text_sha256": "de9eadd24c6932a4fb56de143672eef30ee4e5f27a6eb88ebc925f671d2ab406"
+    },
+    {
+      "block_id": "page-0449-block-0005",
+      "order": 5,
+      "text": "Paroxetine, sertraline or fluoxetine are the preferred SSRIs81,82\n",
+      "bbox": [
+        199.25320434570312,
+        126.4154281616211,
+        393.39862060546875,
+        135.1229248046875
+      ],
+      "text_sha256": "e1bd5d30a84ae8ce0e6308b9ab7e3a4ac5039ba882bae1fa9dc17508fc8b9d3c"
+    },
+    {
+      "block_id": "page-0449-block-0006",
+      "order": 6,
+      "text": "Recommended by NICE79\n",
+      "bbox": [
+        199.25030517578125,
+        136.41786193847656,
+        279.1268310546875,
+        145.1253662109375
+      ],
+      "text_sha256": "aa92f53d5e62323d9d7d9d9eb24f838434acf0e27963727c918c560b9d6c38ce"
+    },
+    {
+      "block_id": "page-0449-block-0007",
+      "order": 7,
+      "text": "Venlafaxine modified release\n37.5mg–300mg83\nRecommended by NICE79\n",
+      "bbox": [
+        69.13999938964844,
+        151.44288635253906,
+        279.1268310546875,
+        170.14788818359375
+      ],
+      "text_sha256": "cdb451777e432db67ee2a635fa81fff2e253a8570725e920cbb8f58db9978351"
+    },
+    {
+      "block_id": "page-0449-block-0008",
+      "order": 8,
+      "text": "Second-line treatment (Less well tolerated or weak evidence base, no order of preference)\n",
+      "bbox": [
+        69.13999938964844,
+        176.2878875732422,
+        363.22998046875,
+        185.17538452148438
+      ],
+      "text_sha256": "bf973023cc356551656ef6e3e485a742fedd17d15e30dbc8a4aa5a96e2ae151c"
+    },
+    {
+      "block_id": "page-0449-block-0009",
+      "order": 9,
+      "text": "Antipsychotics\nOlanzapine\n5–20mg\n",
+      "bbox": [
+        69.13999938964844,
+        191.3103790283203,
+        120.37999725341797,
+        220.19287109375
+      ],
+      "text_sha256": "8653f71b56c553847ebbfd0e23328359bdda9b53180eb1b7ce11f45c9590a557"
+    },
+    {
+      "block_id": "page-0449-block-0010",
+      "order": 10,
+      "text": "Antipsychotics may be effective for the intrusion symptoms (flashbacks \nand nightmares) but not the avoidance and hyperarousal symptoms of \nPTSD. Studies done as monotherapy or as adjunctive treatment84\n",
+      "bbox": [
+        199.25,
+        191.4828643798828,
+        427.03253173828125,
+        220.18536376953125
+      ],
+      "text_sha256": "d79fa9be908b2f564ca10fe44394677136504becf3e3abe4cd35f8a902012057"
+    },
+    {
+      "block_id": "page-0449-block-0011",
+      "order": 11,
+      "text": "Risperidone specifically mentioned by NICE79\nRisperidone\n0.5–6mg\n",
+      "bbox": [
+        69.14009857177734,
+        221.4928741455078,
+        340.7905578613281,
+        245.222900390625
+      ],
+      "text_sha256": "16ffd8f9aa1586a2ca6fc98494c7a21977488569a106831d7d78708930213c6d"
+    },
+    {
+      "block_id": "page-0449-block-0012",
+      "order": 12,
+      "text": "Quetiapine\n50–800mg85\n",
+      "bbox": [
+        69.14009857177734,
+        251.5378875732422,
+        109.01971435546875,
+        270.2428894042969
+      ],
+      "text_sha256": "09a71a32bd8ab935d834ec1ca7d3d5c2856922388dcde886b6f44e0a6dae1e52"
+    },
+    {
+      "block_id": "page-0449-block-0013",
+      "order": 13,
+      "text": "Mirtazapine\n15–45mg/day86\nRecommended by NICE79\n",
+      "bbox": [
+        69.14009857177734,
+        276.5679016113281,
+        279.1268310546875,
+        295.27288818359375
+      ],
+      "text_sha256": "491d0558bc7049668b306c52764490adf75867dd228cfbaf69b8fbcf06397c58"
+    },
+    {
+      "block_id": "page-0449-block-0014",
+      "order": 14,
+      "text": "Second most effective drug in a network meta-analysis87\n",
+      "bbox": [
+        199.25030517578125,
+        286.5679016113281,
+        378.98065185546875,
+        295.275390625
+      ],
+      "text_sha256": "1d6e86a3a4db308e6ce9dc6c062c460545dcf167f1ad6fef267d0f82e4a4dd1a"
+    },
+    {
+      "block_id": "page-0449-block-0015",
+      "order": 15,
+      "text": "MAOI\nPhenelzine\n15–75mg/day88\n",
+      "bbox": [
+        69.13999938964844,
+        301.4128723144531,
+        118.18451690673828,
+        330.2953796386719
+      ],
+      "text_sha256": "3b0f9f24f2dc820fa858db9a8f35938085d381e8e4b0597d2461522ac7c29d84"
+    },
+    {
+      "block_id": "page-0449-block-0016",
+      "order": 16,
+      "text": "Recommended by NICE79\n",
+      "bbox": [
+        199.25030517578125,
+        301.5928955078125,
+        279.1268310546875,
+        310.3003845214844
+      ],
+      "text_sha256": "aa92f53d5e62323d9d7d9d9eb24f838434acf0e27963727c918c560b9d6c38ce"
+    },
+    {
+      "block_id": "page-0449-block-0017",
+      "order": 17,
+      "text": "Most effective drug in a network meta-analysis87\n",
+      "bbox": [
+        199.25030517578125,
+        311.5928955078125,
+        353.975830078125,
+        320.3003845214844
+      ],
+      "text_sha256": "f6db58878873453754b6c2418cb126d2318818055f054f1a3a22c300dc7683c6"
+    },
+    {
+      "block_id": "page-0449-block-0018",
+      "order": 18,
+      "text": "Prazosin\n2–15mg nocte89\nFor nightmares and sleep disturbances. Initiate at 1mg nocte and \ntitrate dose gradually to reduce the risk of hypotension\nSupported by a systematic review90\n",
+      "bbox": [
+        69.14009857177734,
+        336.6178894042969,
+        408.7329406738281,
+        365.32037353515625
+      ],
+      "text_sha256": "a1b74a87c47f6a3906b4937207fd88213cb207bdc35939ba32e9f41d0f9dd8fa"
+    },
+    {
+      "block_id": "page-0449-block-0019",
+      "order": 19,
+      "text": "Tricyclic antidepressants\nAmitriptyline\n50–300mg/day91\n",
+      "bbox": [
+        69.14009857177734,
+        371.462890625,
+        153.74009704589844,
+        400.34539794921875
+      ],
+      "text_sha256": "790a63db068c2fa680a9fd664131ef82c2ff04a41f910d75f979089a5d3d6021"
+    },
+    {
+      "block_id": "page-0449-block-0020",
+      "order": 20,
+      "text": "Imipramine\n50–300mg/day\n",
+      "bbox": [
+        69.14009857177734,
+        401.6429138183594,
+        117.49258422851562,
+        420.347900390625
+      ],
+      "text_sha256": "142e9426d60c336594c770fcae165182e118b03efcdef0801bb8a6f906265ad7"
+    },
+    {
+      "block_id": "page-0449-block-0021",
+      "order": 21,
+      "text": "Amitriptyline is recommended by NICE79\n",
+      "bbox": [
+        199.25009155273438,
+        371.6429138183594,
+        326.8933410644531,
+        380.35040283203125
+      ],
+      "text_sha256": "2cc036a4dbebf10d93b2a11d8d2bc0299be1304fbd7b3944046843689d70b7dd"
+    },
+    {
+      "block_id": "page-0449-block-0022",
+      "order": 22,
+      "text": "For all TCAs start at a low dose and increase dose according to \ntolerability\nBest supporting evidence is for desipramine but this drug is not widely \navailable87\n",
+      "bbox": [
+        199.25030517578125,
+        381.6429138183594,
+        425.5479431152344,
+        420.3428955078125
+      ],
+      "text_sha256": "e12540df5b8ea620423e5572cfabb09fc5b81808ec9cedc4606ee059f35e5504"
+    },
+    {
+      "block_id": "page-0449-block-0023",
+      "order": 23,
+      "text": "IV Ketamine92,93\nRapid reduction in symptom severity suggested. Good RCT showing \nacute and chronic efficacy94\n",
+      "bbox": [
+        69.14009857177734,
+        426.66790771484375,
+        417.9204406738281,
+        445.3728942871094
+      ],
+      "text_sha256": "f9d102f732c82a513f06a7f0dd1d5265f133f1bc27ca3872eba3fe21772ce8e2"
+    },
+    {
+      "block_id": "page-0449-block-0024",
+      "order": 24,
+      "text": "Experimental\n",
+      "bbox": [
+        69.14009857177734,
+        451.51287841796875,
+        115.82759094238281,
+        460.400390625
+      ],
+      "text_sha256": "702e2f7671070157a0c2a6eb9d738ac3bfa6e376d61bff37dcfbbc7ca052d904"
+    },
+    {
+      "block_id": "page-0449-block-0025",
+      "order": 25,
+      "text": "Duloxetine\n60–120mg\nTwo small open studies suggest efficacy. Start at 30mg for one \nweek95,96\n",
+      "bbox": [
+        69.14009857177734,
+        466.7154235839844,
+        401.0451354980469,
+        485.42041015625
+      ],
+      "text_sha256": "eb91f6db5a64e9580bd0feec8007019e2a4270617a737f8cefea3897f682c10e"
+    },
+    {
+      "block_id": "page-0449-block-0026",
+      "order": 26,
+      "text": "Lamotrigine\nup to 500mg/day\n",
+      "bbox": [
+        69.14009857177734,
+        491.7428894042969,
+        124.580078125,
+        510.4478759765625
+      ],
+      "text_sha256": "2fc9dcdf1ff42a814ff37a6bfb2cc841c17bf26f0f2fa20441dab40c68fd56b2"
+    },
+    {
+      "block_id": "page-0449-block-0027",
+      "order": 27,
+      "text": "Small double-blind study in 15 patients97\n",
+      "bbox": [
+        199.25009155273438,
+        491.7428894042969,
+        328.7236328125,
+        500.45037841796875
+      ],
+      "text_sha256": "3983720fa68e3d91b73815fee3e23683f0e8010bd4ccdef1d440ca607ae8f0bb"
+    },
+    {
+      "block_id": "page-0449-block-0028",
+      "order": 28,
+      "text": "Phenytoin\nplasma concentration 10–20ng/ml98\n",
+      "bbox": [
+        69.14009857177734,
+        516.7678833007812,
+        183.60630798339844,
+        535.472900390625
+      ],
+      "text_sha256": "8955791e331b7a4f59fe37e7450de09a88edd6a065c85f7cb93a7e781470d9e2"
+    },
+    {
+      "block_id": "page-0449-block-0029",
+      "order": 29,
+      "text": "Open-label study in 12 patients\n",
+      "bbox": [
+        199.25030517578125,
+        516.7678833007812,
+        299.2703552246094,
+        525.4754028320312
+      ],
+      "text_sha256": "d105bd54eddd94c242a21f997a9828228cae92398c94f41bdfb7e53838205594"
+    },
+    {
+      "block_id": "page-0449-block-0030",
+      "order": 30,
+      "text": "Valproate\nup to 2.5g99\n",
+      "bbox": [
+        69.14030456542969,
+        541.7953491210938,
+        107.77471160888672,
+        560.5003662109375
+      ],
+      "text_sha256": "c3db1602b892249cdacc930e6f48b59ef7892a6ecc8738d9cefab2264fc9572d"
+    },
+    {
+      "block_id": "page-0449-block-0031",
+      "order": 31,
+      "text": "Probably not effective87\n",
+      "bbox": [
+        199.25030517578125,
+        541.7928466796875,
+        273.4193420410156,
+        550.5003662109375
+      ],
+      "text_sha256": "b20c71427db94f90183698af31366ed9ad842023acacf9b6150260d54d2216ac"
+    },
+    {
+      "block_id": "page-0449-block-0032",
+      "order": 32,
+      "text": "nocte, at night\n",
+      "bbox": [
+        61.63999938964844,
+        579.3775634765625,
+        108.73248291015625,
+        588.0850830078125
+      ],
+      "text_sha256": "e993b6b071dcbeb75ec2d99a0a19d0bf2703259a52da00b4d5ced7ebcae1509b"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

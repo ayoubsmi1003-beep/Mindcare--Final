@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0098",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 98,
+  "source_page_index": 97,
+  "source_page_display": 98,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    77\nCHAPTER 1\nAripiprazole long-acting injection\nAbilify brands\nAripiprazole lacks the prolactin-related and metabolic adverse effects of other SGA \nLAIs and so is a useful alternative to them. Placebo-controlled studies show a good \nacute and longer term effect in the treatment of schizophrenia.1 The FDA has also \napproved Aripiprazole LAI for maintenance monotherapy treatment of bipolar I disor-\nder in adults.2 Oral aripiprazole 10mg/day for 14 days is recommended initially to \nestablish tolerability and response. One of two regimens may be followed for adminis-\ntering the starting dose of aripiprazole LAI.3\nOne-injection start\nOn the day of initiation, administer one injection of 400mg aripiprazole LAI and con-\ntinue treatment with 10mg to 20mg oral aripiprazole per day for 14 consecutive days \n(28 days in total) to maintain therapeutic aripiprazole concentrations during \ninitiation.\nOr\nTwo-injection start\nOn the day of initiation, administer two separate injections of 400mg aripiprazole LAI \nat separate injection sites in two different muscles (separate gluteal, separate deltoid or \ngluteal and deltoid injection sites) along with one 20mg dose of oral aripiprazole. Oral \ntherapy should not continue after this point.\nOne month after the day of initiation, begin a regimen of 400mg each month.\nAfter the one-injection + oral starting regimen, peak plasma levels are seen 7 days \nafter the injection and trough levels at four weeks.4 At steady state, peak plasma levels \nare up to 50% higher than the first dose peak and trough plasma levels only slightly \nbelow the first dose peak.4 Dose adjustments should take this into account. A popula-\ntion pharmacokinetic modelling study indicated that the two-injection start regimen \nwould produce comparable aripiprazole plasma concentrations to the one injection \nstart method.5\nA lower dose of 300mg a month can be used in those not tolerating 400mg. A dose \nof 200mg a month may only be used for those patients receiving particular enzyme \ninhibiting drugs. The incidence of akathisia, insomnia, nausea and restlessness is similar \nto that seen with oral aripiprazole6,7\nThere are no formal recommendations for switching to aripiprazole, but we present \nnext recommendations based on our interpretation of available pharmacokinetic \ndata.\n",
+  "raw_text_sha256": "47732e5c98a793b57a99026aff4d2ddbeeb064920640478d8e18efa0ac816fd0",
+  "coordinates_sha256": "b1419024a426579f7a6f653ac167b361ce67f359fda3cf12a8bdfee7ec3e011f",
+  "block_sequence_sha256": "b0bf775f8e42f4e9a9ad0910980cdcf6de8732374a1ffe294aecaa4b2061a6f7",
+  "blocks": [
+    {
+      "block_id": "page-0098-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    77\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "ded4a04e5f53e7f7189e2a89402ade864ccacc6a9c7304a07dc88e38e55e0693"
+    },
+    {
+      "block_id": "page-0098-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0098-block-0002",
+      "order": 2,
+      "text": "Aripiprazole long-acting injection\n",
+      "bbox": [
+        54.99909973144531,
+        66.06448364257812,
+        227.96302795410156,
+        79.0994873046875
+      ],
+      "text_sha256": "c20628131d778d21227593f6bea2b0f9c6e4218c9017dfeb07b246afc43c7d84"
+    },
+    {
+      "block_id": "page-0098-block-0003",
+      "order": 3,
+      "text": "Abilify brands\n",
+      "bbox": [
+        48.00309753417969,
+        90.06649780273438,
+        120.73507690429688,
+        103.10150146484375
+      ],
+      "text_sha256": "ac4b0d11ebc0a8cb9566ac550ccfcbc642ba9da20bc1d43b0e4d3f45e581919f"
+    },
+    {
+      "block_id": "page-0098-block-0004",
+      "order": 4,
+      "text": "Aripiprazole lacks the prolactin-related and metabolic adverse effects of other SGA \nLAIs and so is a useful alternative to them. Placebo-controlled studies show a good \nacute and longer term effect in the treatment of schizophrenia.1 The FDA has also \napproved Aripiprazole LAI for maintenance monotherapy treatment of bipolar I disor-\nder in adults.2 Oral aripiprazole 10mg/day for 14 days is recommended initially to \nestablish tolerability and response. One of two regimens may be followed for adminis-\ntering the starting dose of aripiprazole LAI.3\n",
+      "bbox": [
+        47.99681091308594,
+        108.90948486328125,
+        422.7990417480469,
+        192.62948608398438
+      ],
+      "text_sha256": "f88ab32fea05d2bf8ae486a6ae8538741bac34237e115411849e3717b1c26c41"
+    },
+    {
+      "block_id": "page-0098-block-0005",
+      "order": 5,
+      "text": "One-injection start\n",
+      "bbox": [
+        47.99909973144531,
+        210.06451416015625,
+        144.56809997558594,
+        223.09951782226562
+      ],
+      "text_sha256": "369eccab32438d482b1ee5507b993df945c197c8ffe90194b5c8a0e2f9808014"
+    },
+    {
+      "block_id": "page-0098-block-0006",
+      "order": 6,
+      "text": "On the day of initiation, administer one injection of 400mg aripiprazole LAI and con-\ntinue treatment with 10mg to 20mg oral aripiprazole per day for 14 consecutive days \n(28 days in total) to maintain therapeutic aripiprazole concentrations during \ninitiation.\n",
+      "bbox": [
+        47.99909973144531,
+        228.90951538085938,
+        422.7691345214844,
+        276.6295166015625
+      ],
+      "text_sha256": "61ad5a2b0fd47f5638eb3f3b239ee36ca78a9bce4a0b6d2883da24f39cb0ff0e"
+    },
+    {
+      "block_id": "page-0098-block-0007",
+      "order": 7,
+      "text": "Or\n",
+      "bbox": [
+        47.99909973144531,
+        284.9095153808594,
+        60.21910095214844,
+        296.6295166015625
+      ],
+      "text_sha256": "e8bba380e8b58ce3b26245d9c8a855eb703aaf7c5cdcb96738eeb3d5f507642c"
+    },
+    {
+      "block_id": "page-0098-block-0008",
+      "order": 8,
+      "text": "Two-injection start\n",
+      "bbox": [
+        47.99909973144531,
+        314.06451416015625,
+        144.56809997558594,
+        327.0995178222656
+      ],
+      "text_sha256": "b6e0b575db29d8bc0bbee6a18b59f78c814f23e71a0892d16c9cc9cc283b5430"
+    },
+    {
+      "block_id": "page-0098-block-0009",
+      "order": 9,
+      "text": "On the day of initiation, administer two separate injections of 400mg aripiprazole LAI \nat separate injection sites in two different muscles (separate gluteal, separate deltoid or \ngluteal and deltoid injection sites) along with one 20mg dose of oral aripiprazole. Oral \ntherapy should not continue after this point.\n",
+      "bbox": [
+        47.99909973144531,
+        332.9095153808594,
+        422.8191223144531,
+        380.6295166015625
+      ],
+      "text_sha256": "cf97811c05704db3194bc347e35acd8ae91aaddb56c9fdd63c38626b438401c8"
+    },
+    {
+      "block_id": "page-0098-block-0010",
+      "order": 10,
+      "text": "One month after the day of initiation, begin a regimen of 400mg each month.\nAfter the one-injection + oral starting regimen, peak plasma levels are seen 7 days \nafter the injection and trough levels at four weeks.4 At steady state, peak plasma levels \nare up to 50% higher than the first dose peak and trough plasma levels only slightly \nbelow the first dose peak.4 Dose adjustments should take this into account. A popula-\ntion pharmacokinetic modelling study indicated that the two-injection start regimen \nwould produce comparable aripiprazole plasma concentrations to the one injection \nstart method.5\n",
+      "bbox": [
+        47.996917724609375,
+        380.9095153808594,
+        422.7882995605469,
+        476.6295166015625
+      ],
+      "text_sha256": "df16d5ab17992d3837453f43f437c21dcaf73f8185c136e5cbaa413ef87e34ae"
+    },
+    {
+      "block_id": "page-0098-block-0011",
+      "order": 11,
+      "text": "A lower dose of 300mg a month can be used in those not tolerating 400mg. A dose \nof 200mg a month may only be used for those patients receiving particular enzyme \ninhibiting drugs. The incidence of akathisia, insomnia, nausea and restlessness is similar \nto that seen with oral aripiprazole6,7\n",
+      "bbox": [
+        47.99909973144531,
+        476.9095153808594,
+        422.8190002441406,
+        524.6295166015625
+      ],
+      "text_sha256": "db64017e20a392d2995a094ed627367fdf26a08879c78f5217499da3437957c3"
+    },
+    {
+      "block_id": "page-0098-block-0012",
+      "order": 12,
+      "text": "There are no formal recommendations for switching to aripiprazole, but we present \nnext recommendations based on our interpretation of available pharmacokinetic \ndata.\n",
+      "bbox": [
+        47.99909973144531,
+        524.9094848632812,
+        422.7990417480469,
+        560.6295166015625
+      ],
+      "text_sha256": "e5c5fc5af421f3768b2612f11485b9eaf3f2a2edda3bd98ca0c9a9cb14abc1d4"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

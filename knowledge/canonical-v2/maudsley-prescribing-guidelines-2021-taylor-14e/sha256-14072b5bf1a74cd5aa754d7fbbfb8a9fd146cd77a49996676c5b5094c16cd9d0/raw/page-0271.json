@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0271",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 271,
+  "source_page_index": 270,
+  "source_page_display": 271,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "250    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  2\nFormulations\nThere is no clinically significant difference in the pharmacokinetics of the two most \nwidely prescribed brands of lithium in the UK: Priadel and Camcolit. The UK manufac-\nturers of Priadel attempted to withdraw the formulation but this is currently under \nreview.33 Other preparations should not be assumed to be bioequivalent and should be \nprescribed by brand.\n■\n■Each of the lithium carbonate 400mg tablets contains 10.8mmol/lithium.\n■\n■Lithium citrate liquid is available in two strengths and should be administered twice daily:\n■\n■5.4mmol/5mL is equivalent to 200mg lithium carbonate.\n■\n■10.8mmol/5mL is equivalent to 400mg lithium carbonate.\nLack of clarity over which liquid preparation is intended when prescribing can lead to \nthe patient receiving a sub-therapeutic or toxic dose.\nAdverse effects\nMost side effects are dose and plasma level related. These include mild gastrointestinal \nupset, fine tremor, polyuria and polydipsia. Polyuria may occur more frequently with \ntwice daily dosing.34,35 Propranolol can be useful in lithium-induced tremor. Some skin \nconditions such as psoriasis and acne can be aggravated by lithium therapy. Lithium \ncan also cause a metallic taste in the mouth, ankle oedema and weight gain.\nLithium can cause a reduction in urinary concentrating capacity – nephrogenic \ndiabetes insipidus – hence the occurrence of thirst and polyuria. This effect is usually \nreversible in the short to medium term but renal effects may be irreversible after long-\nterm treatment (>15 years).36 Lithium treatment can also lead to a reduction in the \nglomerular filtration rate (GFR) although the magnitude of the risk is uncertain.36 \nLithium levels of >0.8mmol/L are associated with a higher risk of renal toxicity, and \nprolonged lithium treatment requires regular monitoring of kidney function.37\nIn the longer term, lithium increases the risk of hypothyroidism;38 in middle-aged \nwomen, the risk may be up to 20%.39 A case has been made for testing thyroid autoan-\ntibodies in this group before starting lithium (to better estimate risk) and for measuring \nthyroid function tests (TFTs) more frequently in the first year of treatment.40 \nHypothyroidism is easily treated with thyroxine. TFTs usually return to normal when \nlithium is discontinued. Lithium also more rarely increases the risk of hyperthyroidism \nand hyperparathyroidism, and some recommend that calcium levels should be moni-\ntored in patients on long-term treatment.41,42 Clinical consequences of chronically \nincreased serum calcium include renal stones, osteoporosis, dyspepsia, hypertension and \nrenal impairment. For a review of the toxicity profile of lithium, see McKnight et al.41\nLithium toxicity\nToxic effects reliably occur at levels >1.5mmol/L and usually consist of gastrointestinal \neffects (increasing anorexia, nausea and diarrhoea) and CNS effects (muscle weakness, \ndrowsiness, confusion, ataxia, course tremor and muscle twitching).43 Above 2mmol/L, \nincreased disorientation and seizures usually occur, which can progress to coma, and \n",
+  "raw_text_sha256": "bcaa1ca9a7e701fbbe79f915c4d217e53ee7c73deeb4429924e833647aa8316f",
+  "coordinates_sha256": "dd7eff5936a42f7b3fdfdbbfb83a60661aa03733e8a3fedad53931149781c012",
+  "block_sequence_sha256": "35268c24982e196e1a276e72f6a003ee3ba2779f9867bc542a6d98e2af59303f",
+  "blocks": [
+    {
+      "block_id": "page-0271-block-0000",
+      "order": 0,
+      "text": "250    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "49f0bd9965fbbc82bc55115317d312e469f2eea204ef13884c2be12c2ce38f8f"
+    },
+    {
+      "block_id": "page-0271-block-0001",
+      "order": 1,
+      "text": "CHAPTER  2\n",
+      "bbox": [
+        19.520000457763672,
+        145.23529052734375,
+        29.0,
+        188.80328369140625
+      ],
+      "text_sha256": "5befcde2fefe074681a51514b484ad31516d952c51183625b5b7b1fb84f30d2c"
+    },
+    {
+      "block_id": "page-0271-block-0002",
+      "order": 2,
+      "text": "Formulations\n",
+      "bbox": [
+        61.88999938964844,
+        62.31540298461914,
+        129.72698974609375,
+        75.35040283203125
+      ],
+      "text_sha256": "e39e33cde5226879be04f66fdc1649de8bcfe4938b0be1e5a6bf29905dd5acbb"
+    },
+    {
+      "block_id": "page-0271-block-0003",
+      "order": 3,
+      "text": "There is no clinically significant difference in the pharmacokinetics of the two most \nwidely prescribed brands of lithium in the UK: Priadel and Camcolit. The UK manufac-\nturers of Priadel attempted to withdraw the formulation but this is currently under \nreview.33 Other preparations should not be assumed to be bioequivalent and should be \nprescribed by brand.\n",
+      "bbox": [
+        61.88999938964844,
+        81.160400390625,
+        436.659912109375,
+        140.88040161132812
+      ],
+      "text_sha256": "dabb86ce5e21e107bd4bc0c309b7485d74e2b103835410b31d1d3cc68c88e94d"
+    },
+    {
+      "block_id": "page-0271-block-0004",
+      "order": 4,
+      "text": "■\n■Each of the lithium carbonate 400mg tablets contains 10.8mmol/lithium.\n",
+      "bbox": [
+        61.88990020751953,
+        147.160400390625,
+        385.90997314453125,
+        158.88040161132812
+      ],
+      "text_sha256": "2128c49302ace8b30e838f4d08d1096103eb6325068c2ac3f5ee84b3ffca6bac"
+    },
+    {
+      "block_id": "page-0271-block-0005",
+      "order": 5,
+      "text": "■\n■Lithium citrate liquid is available in two strengths and should be administered twice daily:\n",
+      "bbox": [
+        61.88990020751953,
+        159.160400390625,
+        433.8599548339844,
+        170.88040161132812
+      ],
+      "text_sha256": "0f2a85d0156ba41f897fdcddcc64ab52ee0b7740a670aee086b8dc3f08f2a24c"
+    },
+    {
+      "block_id": "page-0271-block-0006",
+      "order": 6,
+      "text": "■\n■5.4mmol/5mL is equivalent to 200mg lithium carbonate.\n",
+      "bbox": [
+        71.08489990234375,
+        171.160400390625,
+        324.8999938964844,
+        182.88040161132812
+      ],
+      "text_sha256": "fd83806c392eae11c12e8a5403c1bc64e47d313d2bc3082547a21bbd4a05a17a"
+    },
+    {
+      "block_id": "page-0271-block-0007",
+      "order": 7,
+      "text": "■\n■10.8mmol/5mL is equivalent to 400mg lithium carbonate.\n",
+      "bbox": [
+        71.08489990234375,
+        183.160400390625,
+        330.4599609375,
+        194.88040161132812
+      ],
+      "text_sha256": "dd1c010e938adfce20491648036113f5005ddbe41183775a6925ae582905e83a"
+    },
+    {
+      "block_id": "page-0271-block-0008",
+      "order": 8,
+      "text": "Lack of clarity over which liquid preparation is intended when prescribing can lead to \nthe patient receiving a sub-therapeutic or toxic dose.\n",
+      "bbox": [
+        61.88999938964844,
+        201.160400390625,
+        436.6300354003906,
+        224.88040161132812
+      ],
+      "text_sha256": "5274d1f320064aed3f7348bee62315675d183c2b00c9e777341f88ea5f8adcb4"
+    },
+    {
+      "block_id": "page-0271-block-0009",
+      "order": 9,
+      "text": "Adverse effects\n",
+      "bbox": [
+        61.88999938964844,
+        242.31539916992188,
+        141.76100158691406,
+        255.35040283203125
+      ],
+      "text_sha256": "2829b5953031aa8e8e992beffdca9c91044830ce03b830653e6ea31d5de93cfc"
+    },
+    {
+      "block_id": "page-0271-block-0010",
+      "order": 10,
+      "text": "Most side effects are dose and plasma level related. These include mild gastrointestinal \nupset, fine tremor, polyuria and polydipsia. Polyuria may occur more frequently with \ntwice daily dosing.34,35 Propranolol can be useful in lithium-induced tremor. Some skin \nconditions such as psoriasis and acne can be aggravated by lithium therapy. Lithium \ncan also cause a metallic taste in the mouth, ankle oedema and weight gain.\n",
+      "bbox": [
+        61.88999938964844,
+        261.160400390625,
+        436.7099914550781,
+        320.8804016113281
+      ],
+      "text_sha256": "1c54bec0cdb2b6b85bc9e605a737156fedc4a219cba9f277805c74e50ba64acf"
+    },
+    {
+      "block_id": "page-0271-block-0011",
+      "order": 11,
+      "text": "Lithium can cause a reduction in urinary concentrating capacity – nephrogenic \ndiabetes insipidus – hence the occurrence of thirst and polyuria. This effect is usually \nreversible in the short to medium term but renal effects may be irreversible after long-\nterm treatment (>15 years).36 Lithium treatment can also lead to a reduction in the \nglomerular filtration rate (GFR) although the magnitude of the risk is uncertain.36 \nLithium levels of >0.8mmol/L are associated with a higher risk of renal toxicity, and \nprolonged lithium treatment requires regular monitoring of kidney function.37\n",
+      "bbox": [
+        61.8900146484375,
+        321.160400390625,
+        436.7044372558594,
+        404.8804016113281
+      ],
+      "text_sha256": "a5aee01ad8e0a46caa5381c6c77adc7661b096daf35d4cfea762aa8a1e53d022"
+    },
+    {
+      "block_id": "page-0271-block-0012",
+      "order": 12,
+      "text": "In the longer term, lithium increases the risk of hypothyroidism;38 in middle-aged \nwomen, the risk may be up to 20%.39 A case has been made for testing thyroid autoan-\ntibodies in this group before starting lithium (to better estimate risk) and for measuring \nthyroid function tests (TFTs) more frequently in the first year of treatment.40 \nHypothyroidism is easily treated with thyroxine. TFTs usually return to normal when \nlithium is discontinued. Lithium also more rarely increases the risk of hyperthyroidism \nand hyperparathyroidism, and some recommend that calcium levels should be moni-\ntored in patients on long-term treatment.41,42 Clinical consequences of chronically \nincreased serum calcium include renal stones, osteoporosis, dyspepsia, hypertension and \nrenal impairment. For a review of the toxicity profile of lithium, see McKnight et al.41\n",
+      "bbox": [
+        61.8900146484375,
+        405.160400390625,
+        436.710205078125,
+        524.8804321289062
+      ],
+      "text_sha256": "378a34193966dada7421e63043ec6719a78d32f1940006144bd369cfce2b30fb"
+    },
+    {
+      "block_id": "page-0271-block-0013",
+      "order": 13,
+      "text": "Lithium toxicity\n",
+      "bbox": [
+        61.88999938964844,
+        542.3154296875,
+        142.5749969482422,
+        555.3504028320312
+      ],
+      "text_sha256": "5d40cfea7ed968798cf22888189ac32b401d62cb482c87b50154ed5ef57dd80a"
+    },
+    {
+      "block_id": "page-0271-block-0014",
+      "order": 14,
+      "text": "Toxic effects reliably occur at levels >1.5mmol/L and usually consist of gastrointestinal \neffects (increasing anorexia, nausea and diarrhoea) and CNS effects (muscle weakness, \ndrowsiness, confusion, ataxia, course tremor and muscle twitching).43 Above 2mmol/L, \nincreased disorientation and seizures usually occur, which can progress to coma, and \n",
+      "bbox": [
+        61.88999938964844,
+        561.160400390625,
+        436.71484375,
+        608.8804321289062
+      ],
+      "text_sha256": "ac39db46c7bb6480bc294184b29e698d4965840b99b22ee4e6b19af39f857b25"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0274",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 274,
+  "source_page_index": 273,
+  "source_page_display": 274,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Bipolar disorder    253\nCHAPTER 2\neffect is variable: from no increase to a four-fold increase. The full effect can take sev-\neral weeks to develop. The risk seems to be increased in patients with heart failure, \ndehydration and renal impairment (presumably because of changes in fluid balance/\nhandling). In the elderly, ACE inhibitors increase seven-fold the risk of hospitalisation \ndue to lithium toxicity. ACE inhibitors can also precipitate renal failure, so, if co-pre-\nscribed with lithium, more frequent monitoring of eGFR and plasma lithium is required.\nThe following drugs are ACE inhibitors: captopril, cilazapril, enalapril, fosinopril, \nimidapril, lisinopril, moexipril, perindopril, quinapril, ramipril and trandolapril.\nCare is also required with angiotensin II receptor antagonists: candesartan, eprosar-\ntan, irbesartan, losartan, olmesartan, telmisartan and valsartan.\nDiuretics\nDiuretics can reduce the renal clearance of lithium, the magnitude of this effect being \ngreater with thiazide than loop diuretics. Lithium levels usually rise within 10 days of a \nthiazide diuretic being prescribed; the magnitude of the rise is unpredictable and can \nvary from an increase of 25–400%.\nThe following drugs are thiazide (or related) diuretics: bendroflumethiazide, chlo-\nrthalidone, cyclopenthiazide, indapamide, metolazone and xipamide.\nAlthough there are case reports of lithium toxicity induced by loop diuretics, many \npatients receive this combination of drugs without apparent problems. The risk of an \ninteraction seems to be greatest in the first month after the loop diuretic has been pre-\nscribed, and extra lithium plasma level monitoring during this time is recommended if \nthese drugs are co-prescribed. Loop diuretics can increase sodium loss and subsequent \nre-absorption by the kidney. Patients taking loop diuretics may also have been advised \nto restrict their salt intake; this may contribute to the risk of lithium toxicity in these \nindividuals.\nThe following drugs are loop diuretics: bumetanide, furosemide and torasemide.\nNon-steroidal anti-inflammatory drugs (NSAIDs)\nNSAIDs inhibit the synthesis of renal prostaglandins, thereby reducing renal blood \nflow and possibly increasing renal re-absorption of sodium and therefore lithium. \nThe magnitude of the rise is unpredictable for any given patient; case reports vary \nfrom increases of around 10% to over 400%. The onset of effect also seems to be \nvariable: from a few days to several months. Risk appears to be increased in those \npatients who have impaired renal function, renal artery stenosis or heart failure and \nwho are dehydrated or on a low salt diet. There are a number of case reports of an \ninteraction between lithium and COX-2 inhibitors. NSAIDs do not appear to dimin-\nish the therapeutic effects of lithium63 as has previously been reported.\nNSAIDs (or COX-2 inhibitors) can be combined with lithium but (1) they should be \nprescribed regularly not PRN and (2) more frequent plasma lithium monitoring is \nessential.\nSome NSAIDs can be purchased without a prescription, so it is particularly impor-\ntant that patients are aware of the potential for interaction.\n",
+  "raw_text_sha256": "fe3e8ebde71c839e8db18c95037a0976a9abc5754e8cc5841000f094a10984d6",
+  "coordinates_sha256": "868177b380671229db51d835cdb15f70da27a75358b4eea82a570de2fe58f2af",
+  "block_sequence_sha256": "217af5d467c21582eab14123ecc5cc647c87205c5e52abbd36f77c6fdf64831d",
+  "blocks": [
+    {
+      "block_id": "page-0274-block-0000",
+      "order": 0,
+      "text": "Bipolar disorder    253\n",
+      "bbox": [
+        326.5046081542969,
+        31.395221710205078,
+        420.0005798339844,
+        41.0272216796875
+      ],
+      "text_sha256": "8552ab489000ded0e5cbfc1b7630334d92da0b212140e19b1c508ae817ca79ad"
+    },
+    {
+      "block_id": "page-0274-block-0001",
+      "order": 1,
+      "text": "CHAPTER 2\n",
+      "bbox": [
+        454.4096984863281,
+        146.3472900390625,
+        463.88970947265625,
+        187.6912841796875
+      ],
+      "text_sha256": "5eaa1f2591abe1a1b2f7664fa3de7ff01a032d44ee83fa594c7852135d4287aa"
+    },
+    {
+      "block_id": "page-0274-block-0002",
+      "order": 2,
+      "text": "effect is variable: from no increase to a four-fold increase. The full effect can take sev-\neral weeks to develop. The risk seems to be increased in patients with heart failure, \ndehydration and renal impairment (presumably because of changes in fluid balance/\nhandling). In the elderly, ACE inhibitors increase seven-fold the risk of hospitalisation \ndue to lithium toxicity. ACE inhibitors can also precipitate renal failure, so, if co-pre-\nscribed with lithium, more frequent monitoring of eGFR and plasma lithium is required.\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.7499694824219,
+        134.27041625976562
+      ],
+      "text_sha256": "9a022b0b8baa0a3f11ff4139f68965c34987b2ca6f7e203667702690f191f706"
+    },
+    {
+      "block_id": "page-0274-block-0003",
+      "order": 3,
+      "text": "The following drugs are ACE inhibitors: captopril, cilazapril, enalapril, fosinopril, \nimidapril, lisinopril, moexipril, perindopril, quinapril, ramipril and trandolapril.\n",
+      "bbox": [
+        48.0,
+        134.5504150390625,
+        422.800048828125,
+        158.27041625976562
+      ],
+      "text_sha256": "c48f789373735f776ad36601f5cd430f1e726787540b2a83af6b24801b1889ae"
+    },
+    {
+      "block_id": "page-0274-block-0004",
+      "order": 4,
+      "text": "Care is also required with angiotensin II receptor antagonists: candesartan, eprosar-\ntan, irbesartan, losartan, olmesartan, telmisartan and valsartan.\n",
+      "bbox": [
+        48.0,
+        158.3104248046875,
+        420.0,
+        182.27041625976562
+      ],
+      "text_sha256": "e25e661a334870c96fdfaa992adf8516ac384f59a200cdabe0d68d3d16247d9c"
+    },
+    {
+      "block_id": "page-0274-block-0005",
+      "order": 5,
+      "text": "Diuretics\n",
+      "bbox": [
+        48.0,
+        200.64041137695312,
+        89.11000061035156,
+        212.49041748046875
+      ],
+      "text_sha256": "1c6c03cf2f9bcc4a5d91dc12f482485e5be505b3a10f3588f67780c896cd5db7"
+    },
+    {
+      "block_id": "page-0274-block-0006",
+      "order": 6,
+      "text": "Diuretics can reduce the renal clearance of lithium, the magnitude of this effect being \ngreater with thiazide than loop diuretics. Lithium levels usually rise within 10 days of a \nthiazide diuretic being prescribed; the magnitude of the rise is unpredictable and can \nvary from an increase of 25–400%.\n",
+      "bbox": [
+        48.0,
+        218.5504150390625,
+        422.830078125,
+        266.2704162597656
+      ],
+      "text_sha256": "301e7f2682951900945d3577ec770e57b4e077a3e1146c4d91cfb93e124249c0"
+    },
+    {
+      "block_id": "page-0274-block-0007",
+      "order": 7,
+      "text": "The following drugs are thiazide (or related) diuretics: bendroflumethiazide, chlo-\nrthalidone, cyclopenthiazide, indapamide, metolazone and xipamide.\n",
+      "bbox": [
+        48.0,
+        266.5504150390625,
+        419.9799499511719,
+        290.2704162597656
+      ],
+      "text_sha256": "d03c89b1c325557bfe05d2bd3ed16ba57d35aa387927c13de52c76e0d8ed70e1"
+    },
+    {
+      "block_id": "page-0274-block-0008",
+      "order": 8,
+      "text": "Although there are case reports of lithium toxicity induced by loop diuretics, many \npatients receive this combination of drugs without apparent problems. The risk of an \ninteraction seems to be greatest in the first month after the loop diuretic has been pre-\nscribed, and extra lithium plasma level monitoring during this time is recommended if \nthese drugs are co-prescribed. Loop diuretics can increase sodium loss and subsequent \nre-absorption by the kidney. Patients taking loop diuretics may also have been advised \nto restrict their salt intake; this may contribute to the risk of lithium toxicity in these \nindividuals.\n",
+      "bbox": [
+        48.0,
+        290.4404296875,
+        422.80010986328125,
+        386.2704162597656
+      ],
+      "text_sha256": "020bf697ab87e8a1ef5cfbee912636efeef41659dafc22b704665862d8e312b9"
+    },
+    {
+      "block_id": "page-0274-block-0009",
+      "order": 9,
+      "text": "The following drugs are loop diuretics: bumetanide, furosemide and torasemide.\n",
+      "bbox": [
+        58.0,
+        386.5504150390625,
+        403.78997802734375,
+        398.2704162597656
+      ],
+      "text_sha256": "00d951b99d96537b3929f73432be899767b10a2fa4508bc18c258f34419956bc"
+    },
+    {
+      "block_id": "page-0274-block-0010",
+      "order": 10,
+      "text": "Non-steroidal anti-inflammatory drugs (NSAIDs)\n",
+      "bbox": [
+        48.0,
+        415.7054748535156,
+        295.928955078125,
+        428.740478515625
+      ],
+      "text_sha256": "fc87a4cf022d1234063f65ef385df020b637ed8e569d1546df6e4235c444dabc"
+    },
+    {
+      "block_id": "page-0274-block-0011",
+      "order": 11,
+      "text": "NSAIDs inhibit the synthesis of renal prostaglandins, thereby reducing renal blood \nflow and possibly increasing renal re-absorption of sodium and therefore lithium. \nThe magnitude of the rise is unpredictable for any given patient; case reports vary \nfrom increases of around 10% to over 400%. The onset of effect also seems to be \nvariable: from a few days to several months. Risk appears to be increased in those \npatients who have impaired renal function, renal artery stenosis or heart failure and \nwho are dehydrated or on a low salt diet. There are a number of case reports of an \ninteraction between lithium and COX-2 inhibitors. NSAIDs do not appear to dimin-\nish the therapeutic effects of lithium63 as has previously been reported.\n",
+      "bbox": [
+        48.0,
+        434.55047607421875,
+        422.8402404785156,
+        542.2705078125
+      ],
+      "text_sha256": "523999f50e247c7aa1c1ca20691f657f5c653975fe0d7284cea0e21f27e55c73"
+    },
+    {
+      "block_id": "page-0274-block-0012",
+      "order": 12,
+      "text": "NSAIDs (or COX-2 inhibitors) can be combined with lithium but (1) they should be \nprescribed regularly not PRN and (2) more frequent plasma lithium monitoring is \nessential.\n",
+      "bbox": [
+        47.99749755859375,
+        542.5504760742188,
+        422.7874450683594,
+        578.2705078125
+      ],
+      "text_sha256": "e90cdb3e7951410a296e342303d405c52a864fc2b763a1c0a213054d3df03207"
+    },
+    {
+      "block_id": "page-0274-block-0013",
+      "order": 13,
+      "text": "Some NSAIDs can be purchased without a prescription, so it is particularly impor-\ntant that patients are aware of the potential for interaction.\n",
+      "bbox": [
+        47.99749755859375,
+        578.5504760742188,
+        419.99749755859375,
+        602.2705078125
+      ],
+      "text_sha256": "7bf181ace2ff9373a013e5ff85427c448a9086077520447911d38ff567df1ab7"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

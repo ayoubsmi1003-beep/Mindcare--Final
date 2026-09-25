@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0473",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 473,
+  "source_page_index": 472,
+  "source_page_display": 473,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "452    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\n■\n■neglect of alternative interests\n■\n■persistent use despite harm\nSubstance-use disorders should generally be treated with a combination of psychosocial \nand pharmacological interventions. This chapter concentrates on pharmacological \ninterventions for alcohol, opioids and nicotine use. Treatments for people misusing \nbenzodiazepines, GHB/GBL, stimulants, NPS (including cathinones, synthetic cannabi-\nnoids and phenylethylamines), khat, nitrates, hallucinogens, anabolic steroids are dis-\ncussed briefly. Note that various National Institute for Health and Clinical Excellence \n(NICE) guidelines and technology appraisals, Department of Health Substance Misuse \nGuidelines (the Orange Book)3 and Public Health England2 also provide a comprehen-\nsive overview of treatment approaches, as does a soon-to-be-updated British Association \nfor Psychopharmacology (BAP) consensus guideline.4\nReferences\n\t 1.\t World Health Organisation. International statistical classification of diseases and related health problems. Online version. 2016; http://apps.\nwho.int/classifications/icd10/browse/2016/en.\n\t 2.\t Public Health England. Better care for people with co-occurring mental health and alcohol/drug use conditions. A guide for commissioners \nand service providers. 2017; https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/625809/Co-occurring_mental_\nhealth_and_alcohol_drug_use_conditions.pdf.\n\t 3.\t Department of Health and Social Care. Drug misuse and dependence: UK guidelines on clinical management. 2017; https://www.gov.uk/\ngovernment/publications/drug-misuse-and-dependence-uk-guidelines-on-clinical-management.\n\t 4.\t Lingford-Hughes AR, et al. Evidence-based guidelines for the pharmacological management of substance abuse, harmful use, addiction and \ncomorbidity: recommendations from BAP. J Psychopharmacol 2012; 26:899–952.\n",
+  "raw_text_sha256": "245cb396b37cf0bae73a4b653d9133709834197610bb17eaee91a7dc20976803",
+  "coordinates_sha256": "7e5e8f7526402143390511a5cc7d43e2913521d9303747ca75e192f18bfbc615",
+  "block_sequence_sha256": "6400379dc8d0c9d27d71c6ef9584771889af1ad06bc2db1411f703037cd0f75c",
+  "blocks": [
+    {
+      "block_id": "page-0473-block-0000",
+      "order": 0,
+      "text": "452    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "78955c290c735e4478a001bf55debde0a51532d5df173886f67a2a9eb53664fb"
+    },
+    {
+      "block_id": "page-0473-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0473-block-0002",
+      "order": 2,
+      "text": "■\n■neglect of alternative interests\n",
+      "bbox": [
+        61.88990020751953,
+        62.55029296875,
+        199.2100067138672,
+        74.27029418945312
+      ],
+      "text_sha256": "ea85f84e5c48ded4a5893060ac2c75cd63b61c0e8bbb8b3f2276efb159b57855"
+    },
+    {
+      "block_id": "page-0473-block-0003",
+      "order": 3,
+      "text": "■\n■persistent use despite harm\n",
+      "bbox": [
+        61.88990020751953,
+        74.55029296875,
+        187.0,
+        86.27029418945312
+      ],
+      "text_sha256": "6746eb8a34b3915c120b799e29d9afada278d2ec84a7e97e1d873be7a0d82774"
+    },
+    {
+      "block_id": "page-0473-block-0004",
+      "order": 4,
+      "text": "Substance-use disorders should generally be treated with a combination of psychosocial \nand pharmacological interventions. This chapter concentrates on pharmacological \ninterventions for alcohol, opioids and nicotine use. Treatments for people misusing \nbenzodiazepines, GHB/GBL, stimulants, NPS (including cathinones, synthetic cannabi-\nnoids and phenylethylamines), khat, nitrates, hallucinogens, anabolic steroids are dis-\ncussed briefly. Note that various National Institute for Health and Clinical Excellence \n(NICE) guidelines and technology appraisals, Department of Health Substance Misuse \nGuidelines (the Orange Book)3 and Public Health England2 also provide a comprehen-\nsive overview of treatment approaches, as does a soon-to-be-updated British Association \nfor Psychopharmacology (BAP) consensus guideline.4\n",
+      "bbox": [
+        61.88999938964844,
+        92.55029296875,
+        436.6900329589844,
+        212.27029418945312
+      ],
+      "text_sha256": "025a85b6d8804b4e5cc1cb6306bd378c50347642295627773ce4385a489331b1"
+    },
+    {
+      "block_id": "page-0473-block-0005",
+      "order": 5,
+      "text": "References\n",
+      "bbox": [
+        61.88999938964844,
+        229.70529174804688,
+        117.92399597167969,
+        242.74029541015625
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0473-block-0006",
+      "order": 6,
+      "text": "\t 1.\t World Health Organisation. International statistical classification of diseases and related health problems. Online version. 2016; http://apps.\n",
+      "bbox": [
+        61.88999938964844,
+        247.8262939453125,
+        433.8659362792969,
+        254.85829162597656
+      ],
+      "text_sha256": "c88c275cafb562294e119d1312ee1934d18630908f1e0033ddd4e06eb5ceded8"
+    },
+    {
+      "block_id": "page-0473-block-0007",
+      "order": 7,
+      "text": "who.int/classifications/icd10/browse/2016/en.\n\t 2.\t Public Health England. Better care for people with co-occurring mental health and alcohol/drug use conditions. A guide for commissioners \n",
+      "bbox": [
+        61.895999908447266,
+        256.8262939453125,
+        435.5459899902344,
+        272.8583068847656
+      ],
+      "text_sha256": "537bacf4a30af969fba23ee5ed809b72ab75fe91bae6c38c884b98d81fc72a8c"
+    },
+    {
+      "block_id": "page-0473-block-0008",
+      "order": 8,
+      "text": "and service providers. 2017; https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/625809/Co-occurring_mental_\nhealth_and_alcohol_drug_use_conditions.pdf.\n\t 3.\t Department of Health and Social Care. Drug misuse and dependence: UK guidelines on clinical management. 2017; https://www.gov.uk/\n",
+      "bbox": [
+        61.902000427246094,
+        274.8262939453125,
+        433.9139709472656,
+        299.8583068847656
+      ],
+      "text_sha256": "76da324d6bc23e0165f20ae47b80cc8b682cffc5ea6dd04c612eac24049af648"
+    },
+    {
+      "block_id": "page-0473-block-0009",
+      "order": 9,
+      "text": "government/publications/drug-misuse-and-dependence-uk-guidelines-on-clinical-management.\n\t 4.\t Lingford-Hughes AR, et al. Evidence-based guidelines for the pharmacological management of substance abuse, harmful use, addiction and \n",
+      "bbox": [
+        61.90800094604492,
+        301.8262939453125,
+        435.6119689941406,
+        317.8583068847656
+      ],
+      "text_sha256": "d1ee0e70fee956bc214653b7b87300aa1910111a3b8b45eb362691698c3a496b"
+    },
+    {
+      "block_id": "page-0473-block-0010",
+      "order": 10,
+      "text": "comorbidity: recommendations from BAP. J Psychopharmacol 2012; 26:899–952.\n",
+      "bbox": [
+        72.91200256347656,
+        319.6822814941406,
+        284.8799743652344,
+        326.8583068847656
+      ],
+      "text_sha256": "c22c041756d19b6a386f3d36a65f545bcaed13c9c42a0231bb71bd06a9562de0"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

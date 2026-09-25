@@ -1,0 +1,16 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0568",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 568,
+  "source_page_index": 567,
+  "repaired_text": "Children and adolescents    547\nCHAPTER 5\nBipolar illness in children and adolescents\nClinical guidance\nBefore prescribing\n■\n■Establish clinical diagnosis informed by structured instrument assessment if possible.\nTry to monitor symptom patterns prospectively with mood or sleep diaries. If in \ndoubt, seek specialist advice early on.\n■\n■Explain diagnosis to the patient and family and invest time and effort in psychoeducation. This is likely to improve adherence and there is evidence that it reduces \nrelapse rates, at least in adults.1\n■\n■Measure baseline symptoms of mania (e.g. Young Mania Rating Scale,2 YMRS), depression (e.g. Children’s Depression Rating Scale,3 CDRS) and impairment (e.g. Clinical \nGlobal Impression – BD version4). Use these to set clear and realistic treatment goals.\n■\n■Measure baseline height, weight, waist circumference, pulse, ECG, blood pressure\nand obtain baseline bloods as appropriate (fasting blood glucose, HbA1c, fasting \nlipid profile, full blood count (FBC), urea and electrolytes (U&E), creatine kinase, \nliver function tests (LFTs), prolactin).\nWhat to prescribe?\n■\n■For the treatment of mania and hypomania in youth, NICE guidelines suggest following the same recommendations as adults: second-generation antipsychotics (SGAs) \nmay be used as first-line treatment, and mood stabilisers (MS) can be added after \nfailure of two trials of SGA.5\n■\n■SGAs seem to show greater short-term efficacy (effect size [ES] = 0.65 compared with\nplacebo) than MS (ES  =  0.20 compared with placebo) in youth, according to a \nmeta-analysis.6\n■\n■SGAs seem to produce significantly greater weight gain and somnolence in youth\ncompared with adults,6 although weight gain assessment is made complicated by \nnormal anticipated growth at this time of life.\n■\n■Valproate should be completely avoided in girls.\n■\n■Adherence to lithium and blood level testing may be difficult in adolescents.\n■\n■Overall, we recommend the use of SGAs as first line for the acute treatment of mania\nin children and adolescents (see Table 5.1), similar to recommendations in adults.\nAfter prescribing\n■\n■Assess and measure symptoms on a regular basis to establish effectiveness.\n■\n■Monitor weight and height at each visit and repeat all fasting bloods at 3 months\n(then every 6 months). Offer advice on a healthy lifestyle and exercise.",
+  "repaired_text_sha256": "c2660b3ac3c278aff8dda5e63306d8fdede8278cfe5d0fb02b4287f00feafeac",
+  "raw_text_sha256": "638b775e09af73e70b236cf0199ff007bbb81bc8d62de17e609d64f5207e7eb8",
+  "repair_ids": [
+    "repair-000536",
+    "repair-000537",
+    "repair-000538"
+  ],
+  "raw_file": "raw/page-0568.json"
+}

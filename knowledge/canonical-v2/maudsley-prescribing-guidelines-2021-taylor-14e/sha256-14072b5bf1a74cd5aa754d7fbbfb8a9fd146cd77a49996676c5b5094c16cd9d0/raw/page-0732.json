@@ -1,0 +1,503 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0732",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 732,
+  "source_page_index": 731,
+  "source_page_display": 732,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug\nInfant plasma \nconcentration\nEstimated daily infant \ndose as proportion of \nmaternal dose (RID)\nAcute adverse effects in \ninfant\nDevelopmental effects in infant\nPaliperidone\nNo specific data available. \nSee risperidone.\nPhenothiazines4,14,82,108–110\nVariable\nChlorpromazine = 0.3%\nLethargy.\nDelayed development in three \ninfants exposed to a combination \nof chlorpromazine and haloperidol.\nPimavanserin\nNo published data available \nat the time of writing.\nQuetiapine4,95,125,129–138\nUndetectable\n0.09–0.1%\nExcessive sleep. Mother was \nalso taking mirtazapine and a \nbenzodiazepine.\nIn a small study of quetiapine \naugmentation of maternal \nantidepressant there were two \ncases of mild developmental \ndelays, thought not to be related \nto quetiapine.\nRisperidone4,111,139–143\nRisperidone undetectable.\n9-hydroxyrisperidone – low\nRisperidone = 2.8–9.1%\n9-hydroxyrisperidone = \n3.46–4.7%\nOne case of hypersomnia, poor \nfeeding, and slowing in motor \nmovements. Mother was also \ntaking haloperidol. The effects \nwere noted when haloperidol \ndose was increased.\nNone reported.\nSertindole\nNo published data available \nat the time of writing.\nSulpiride4,144–148\nNot reported.\n2.7–20.7%\nNone reported.\nNone reported but not assessed.\nThioxanthenes4,14,110,149–151\nNot reported.\nZuclopenthixol = 0.4–0.9%\nFlupentixol = 0.7–1.75%\nNone reported.\nNone reported for flupentixol.\nNot assessed for zuclopenthixol.\n(Continued)\nTable 7.4  (Continued)\n",
+  "raw_text_sha256": "fd67bccf3a85c0b5d929d296109a0c27f221b5245f54f2cbcc653daa00c8ed64",
+  "coordinates_sha256": "22dbc11b5e4ffabd934410daabeb532d81ef3a59c408591f5e300482bdedafd5",
+  "block_sequence_sha256": "61e22e3b62bf80cee48bb4806b6d70dcd26312956411e49320a3075e32f6869e",
+  "blocks": [
+    {
+      "block_id": "page-0732-block-0000",
+      "order": 0,
+      "text": "Drug\nInfant plasma \n",
+      "bbox": [
+        84.36500549316406,
+        439.2239685058594,
+        103.25,
+        612.6539916992188
+      ],
+      "text_sha256": "740ab9eb672cde86fd19cae765bab98ff010246377b1aac1269ef7543dd4a3b7"
+    },
+    {
+      "block_id": "page-0732-block-0001",
+      "order": 1,
+      "text": "concentration\n",
+      "bbox": [
+        94.36250305175781,
+        440.90399169921875,
+        103.25,
+        489.65399169921875
+      ],
+      "text_sha256": "5e7b39b8735747a51153dd69c9b4c9de9c17893912aab750c14d6dfcd85b4665"
+    },
+    {
+      "block_id": "page-0732-block-0002",
+      "order": 2,
+      "text": "Estimated daily infant \n",
+      "bbox": [
+        74.36000061035156,
+        309.8489685058594,
+        83.24749755859375,
+        389.46148681640625
+      ],
+      "text_sha256": "2841e2ae24ac2a5a655457c138f0cb23dacf705d1b0e79882dd0fceac11fad57"
+    },
+    {
+      "block_id": "page-0732-block-0003",
+      "order": 3,
+      "text": "dose as proportion of \n",
+      "bbox": [
+        84.35749816894531,
+        311.25909423828125,
+        93.2449951171875,
+        389.46148681640625
+      ],
+      "text_sha256": "21fbe6c96b9b77500331b3393eeb77725f2a895797804d7adb4058055a75758d"
+    },
+    {
+      "block_id": "page-0732-block-0004",
+      "order": 4,
+      "text": "maternal dose (RID)\nAcute adverse effects in \n",
+      "bbox": [
+        84.35749816894531,
+        207.3539581298828,
+        103.24249267578125,
+        389.46148681640625
+      ],
+      "text_sha256": "e1bd3585ae717c1b911d4bf2fdaceab2365a65bd49c19794f6485141ed38afd7"
+    },
+    {
+      "block_id": "page-0732-block-0005",
+      "order": 5,
+      "text": "infant\nDevelopmental effects in infant\n",
+      "bbox": [
+        94.35499572753906,
+        66.36893463134766,
+        103.24249267578125,
+        293.90399169921875
+      ],
+      "text_sha256": "6ca6973910aaf5c340def8cac268e73890761e31bdeb5e80f907abd8e9a63028"
+    },
+    {
+      "block_id": "page-0732-block-0006",
+      "order": 6,
+      "text": "Paliperidone\nNo specific data available. \n",
+      "bbox": [
+        114.6574935913086,
+        405.0689392089844,
+        123.364990234375,
+        612.6539306640625
+      ],
+      "text_sha256": "0b11347e8d8f28cab53af00121ffbe2b2a46b6d572b927c448a6797b8c7d1f3f"
+    },
+    {
+      "block_id": "page-0732-block-0007",
+      "order": 7,
+      "text": "See risperidone.\n",
+      "bbox": [
+        124.65499114990234,
+        438.8114929199219,
+        133.36248779296875,
+        489.6539611816406
+      ],
+      "text_sha256": "f6fa0de95f26377535282549116373de4b73614280b2e2b542dbe256274fda4d"
+    },
+    {
+      "block_id": "page-0732-block-0008",
+      "order": 8,
+      "text": "Phenothiazines4,14,82,108–110\nVariable\nChlorpromazine = 0.3%\nLethargy.\nDelayed development in three \n",
+      "bbox": [
+        142.78248596191406,
+        80.1394271850586,
+        151.5,
+        612.6539306640625
+      ],
+      "text_sha256": "680998c6c91aa0a6ba973c163696e0f7a5ff38a9c42841d85addf0e66ae20af9"
+    },
+    {
+      "block_id": "page-0732-block-0009",
+      "order": 9,
+      "text": "infants exposed to a combination \n",
+      "bbox": [
+        152.7899932861328,
+        69.15950775146484,
+        161.49749755859375,
+        177.93182373046875
+      ],
+      "text_sha256": "2bdf3ff141a93a32133f5906d3bea996ca73b914a59b76531ba1152eb899717a"
+    },
+    {
+      "block_id": "page-0732-block-0010",
+      "order": 10,
+      "text": "of chlorpromazine and haloperidol.\n",
+      "bbox": [
+        162.78749084472656,
+        65.5445785522461,
+        171.4949951171875,
+        177.93182373046875
+      ],
+      "text_sha256": "8c6c7e924e978dc2290664a1f5e5599599781ce927416873ac7ea766f3a58daa"
+    },
+    {
+      "block_id": "page-0732-block-0011",
+      "order": 11,
+      "text": "Pimavanserin\nNo published data available \n",
+      "bbox": [
+        180.9149932861328,
+        399.6318359375,
+        189.62249755859375,
+        612.654296875
+      ],
+      "text_sha256": "14362468df3dbb44a965c53c34f5bbfa63a1ed9f71902ca638d6bfcf63086060"
+    },
+    {
+      "block_id": "page-0732-block-0012",
+      "order": 12,
+      "text": "at the time of writing.\n",
+      "bbox": [
+        190.91249084472656,
+        419.2367858886719,
+        199.6199951171875,
+        489.6543273925781
+      ],
+      "text_sha256": "c2eb2b9e91cf356ae197bef48dea7b6f47ff9bca4462ee8c8e53c77edafc2a6d"
+    },
+    {
+      "block_id": "page-0732-block-0013",
+      "order": 13,
+      "text": "Quetiapine4,95,125,129–138\nUndetectable\n0.09–0.1%\nExcessive sleep. Mother was \n",
+      "bbox": [
+        209.0399932861328,
+        202.2317657470703,
+        217.75,
+        612.654296875
+      ],
+      "text_sha256": "87f082e67791515270ec72f044d186a9edb207a4a7e2b4a64a1eb88ce9e5ce23"
+    },
+    {
+      "block_id": "page-0732-block-0014",
+      "order": 14,
+      "text": "also taking mirtazapine and a \n",
+      "bbox": [
+        219.0399932861328,
+        197.64170837402344,
+        227.74749755859375,
+        293.904296875
+      ],
+      "text_sha256": "747b83439be6d7b8c923d9933e8d98e8e270efb945c89ae19414335867068810"
+    },
+    {
+      "block_id": "page-0732-block-0015",
+      "order": 15,
+      "text": "benzodiazepine.\n",
+      "bbox": [
+        229.03749084472656,
+        241.80921936035156,
+        237.7449951171875,
+        293.904296875
+      ],
+      "text_sha256": "d04dcc08d79457d3308b0f4a44b7685fac342b3f05f43b433efd5522a86868d7"
+    },
+    {
+      "block_id": "page-0732-block-0016",
+      "order": 16,
+      "text": "In a small study of quetiapine \n",
+      "bbox": [
+        209.0349884033203,
+        82.08199310302734,
+        217.74249267578125,
+        177.93182373046875
+      ],
+      "text_sha256": "918f83e5e24569400d99a8ddfb7eb2355de3780420499d37eee43204d692a97f"
+    },
+    {
+      "block_id": "page-0732-block-0017",
+      "order": 17,
+      "text": "augmentation of maternal \n",
+      "bbox": [
+        219.03248596191406,
+        91.5394515991211,
+        227.739990234375,
+        177.93182373046875
+      ],
+      "text_sha256": "e5779fc9081f2309c309f8f47d8a61f8db9b4d644bb4fa640217657d5d027071"
+    },
+    {
+      "block_id": "page-0732-block-0018",
+      "order": 18,
+      "text": "antidepressant there were two \n",
+      "bbox": [
+        229.0299835205078,
+        78.32442474365234,
+        237.73748779296875,
+        177.93182373046875
+      ],
+      "text_sha256": "4843e3187cc513e0928b5bcfbc1d08972229e7e6049623d15f4b131bbe28ed7b"
+    },
+    {
+      "block_id": "page-0732-block-0019",
+      "order": 19,
+      "text": "cases of mild developmental \n",
+      "bbox": [
+        239.02748107910156,
+        85.42696380615234,
+        247.7349853515625,
+        177.93182373046875
+      ],
+      "text_sha256": "9e71a4c58c5ce541c824931399b35734efd0f0338db99689900277e1353e229e"
+    },
+    {
+      "block_id": "page-0732-block-0020",
+      "order": 20,
+      "text": "delays, thought not to be related \n",
+      "bbox": [
+        249.0249786376953,
+        70.5394515991211,
+        257.73248291015625,
+        177.93182373046875
+      ],
+      "text_sha256": "cabc728be34975eea9bd0ba8fc99aafbe7af8fe31cc8abb9f1df6e795b012db5"
+    },
+    {
+      "block_id": "page-0732-block-0021",
+      "order": 21,
+      "text": "to quetiapine.\n",
+      "bbox": [
+        259.0224914550781,
+        133.33692932128906,
+        267.72998046875,
+        177.93182373046875
+      ],
+      "text_sha256": "b4528b87c972afd7e501700cfc4685e188290c366b93bd2652ce83bef2c09e72"
+    },
+    {
+      "block_id": "page-0732-block-0022",
+      "order": 22,
+      "text": "Risperidone4,111,139–143\nRisperidone undetectable.\n",
+      "bbox": [
+        277.1499938964844,
+        406.7193298339844,
+        285.875,
+        612.654296875
+      ],
+      "text_sha256": "436bcbec891a5721683d7918a35a296cf64ad2ef81f0aa130fe3de0443210045"
+    },
+    {
+      "block_id": "page-0732-block-0023",
+      "order": 23,
+      "text": "9-hydroxyrisperidone – low\nRisperidone = 2.8–9.1%\n",
+      "bbox": [
+        277.1675109863281,
+        311.5966796875,
+        295.87249755859375,
+        489.654296875
+      ],
+      "text_sha256": "b13ff77cd47a7b48df032f5d86e955b4e1e33615ff838e5a365f41c75887d4a9"
+    },
+    {
+      "block_id": "page-0732-block-0024",
+      "order": 24,
+      "text": "9-hydroxyrisperidone = \n3.46–4.7%\n",
+      "bbox": [
+        293.1650085449219,
+        313.8392333984375,
+        311.8699951171875,
+        389.4617919921875
+      ],
+      "text_sha256": "df2da04e1457ca266110b19bff102ad0a15605101029b422fe92bd4b52b49521"
+    },
+    {
+      "block_id": "page-0732-block-0025",
+      "order": 25,
+      "text": "One case of hypersomnia, poor \n",
+      "bbox": [
+        277.1600036621094,
+        191.79920959472656,
+        285.86749267578125,
+        293.904296875
+      ],
+      "text_sha256": "cf8909e82ec01f20389f8d1c18fd45766cccaf0305304ad1e9dc00ae6ff95b82"
+    },
+    {
+      "block_id": "page-0732-block-0026",
+      "order": 26,
+      "text": "feeding, and slowing in motor \n",
+      "bbox": [
+        287.1575012207031,
+        195.1216583251953,
+        295.864990234375,
+        293.904296875
+      ],
+      "text_sha256": "55a6fa5360c981e191bdb5e3f9fdb0389816b2629f0aaf4a66eca79a2a300729"
+    },
+    {
+      "block_id": "page-0732-block-0027",
+      "order": 27,
+      "text": "movements. Mother was also \n",
+      "bbox": [
+        297.1549987792969,
+        197.64173889160156,
+        305.86248779296875,
+        293.904296875
+      ],
+      "text_sha256": "1de94755509c626494dfd3271f801de4955cb3ddc875157a72f7fca72b3d7bb4"
+    },
+    {
+      "block_id": "page-0732-block-0028",
+      "order": 28,
+      "text": "taking haloperidol. The effects \n",
+      "bbox": [
+        307.1524963378906,
+        194.8592071533203,
+        315.8599853515625,
+        293.904296875
+      ],
+      "text_sha256": "b45b50e0fcc8121c41d92f0779e3e6f99012a448dd156aac68f0e2d216278969"
+    },
+    {
+      "block_id": "page-0732-block-0029",
+      "order": 29,
+      "text": "were noted when haloperidol \n",
+      "bbox": [
+        317.1499938964844,
+        197.34169006347656,
+        325.85748291015625,
+        293.904296875
+      ],
+      "text_sha256": "778618f7ab408a75a912dbc422a783c7a2c893f6f7d3dd73de3cbd5cb6e831ab"
+    },
+    {
+      "block_id": "page-0732-block-0030",
+      "order": 30,
+      "text": "dose was increased.\n",
+      "bbox": [
+        327.1474914550781,
+        230.2742462158203,
+        335.85498046875,
+        293.904296875
+      ],
+      "text_sha256": "840f179fe4bfb23edb14e718054f5e4e0ec567332e9b427baf39dcd887d5b879"
+    },
+    {
+      "block_id": "page-0732-block-0031",
+      "order": 31,
+      "text": "None reported.\n",
+      "bbox": [
+        277.1449890136719,
+        129.30189514160156,
+        285.85247802734375,
+        177.93182373046875
+      ],
+      "text_sha256": "cf53711182540597a6673376e5a8845af9f30f2c10f30bce4f5f441c2d8dec77"
+    },
+    {
+      "block_id": "page-0732-block-0032",
+      "order": 32,
+      "text": "Sertindole\nNo published data available \n",
+      "bbox": [
+        345.2674865722656,
+        399.6318359375,
+        353.9749755859375,
+        612.654296875
+      ],
+      "text_sha256": "3df1a9dbf385fc3198f691293cc7113b66c48133ca57abeabdfcf60abb773488"
+    },
+    {
+      "block_id": "page-0732-block-0033",
+      "order": 33,
+      "text": "at the time of writing.\n",
+      "bbox": [
+        355.2649841308594,
+        419.2367858886719,
+        363.97247314453125,
+        489.6543273925781
+      ],
+      "text_sha256": "c2eb2b9e91cf356ae197bef48dea7b6f47ff9bca4462ee8c8e53c77edafc2a6d"
+    },
+    {
+      "block_id": "page-0732-block-0034",
+      "order": 34,
+      "text": "Sulpiride4,144–148\nNot reported.\n2.7–20.7%\nNone reported.\nNone reported but not assessed.\n",
+      "bbox": [
+        373.3924865722656,
+        74.2820053100586,
+        382.125,
+        612.654296875
+      ],
+      "text_sha256": "8e174fdc70bba0a01892d761a46c86295f27fb43fbc93d9ef52c3f101142566d"
+    },
+    {
+      "block_id": "page-0732-block-0035",
+      "order": 35,
+      "text": "Thioxanthenes4,14,110,149–151\nNot reported.\nZuclopenthixol = 0.4–0.9%\n",
+      "bbox": [
+        391.5425109863281,
+        305.9042053222656,
+        400.25250244140625,
+        612.654296875
+      ],
+      "text_sha256": "296df658c3ed5014f34b7f514412b184471d8f2268dd01880028849dc79126ab"
+    },
+    {
+      "block_id": "page-0732-block-0036",
+      "order": 36,
+      "text": "Flupentixol = 0.7–1.75%\nNone reported.\nNone reported for flupentixol.\n",
+      "bbox": [
+        391.5425109863281,
+        82.21700286865234,
+        410.24749755859375,
+        389.4617919921875
+      ],
+      "text_sha256": "1f730ed6008938231e8258ca3c9792b533f72a85785bd25b7c95ad85e5387133"
+    },
+    {
+      "block_id": "page-0732-block-0037",
+      "order": 37,
+      "text": "Not assessed for zuclopenthixol.\n",
+      "bbox": [
+        401.5400085449219,
+        75.41451263427734,
+        410.24749755859375,
+        177.93182373046875
+      ],
+      "text_sha256": "0abe0259c06427ad25c90af25e1060512bd5918ff775f81afbbdc54d15ebef58"
+    },
+    {
+      "block_id": "page-0732-block-0038",
+      "order": 38,
+      "text": "(Continued)\n",
+      "bbox": [
+        419.2099914550781,
+        64.3442611694336,
+        427.9624938964844,
+        100.35931396484375
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0732-block-0039",
+      "order": 39,
+      "text": "Table 7.4  (Continued)\n",
+      "bbox": [
+        53.73749923706055,
+        534.5339965820312,
+        62.625,
+        606.6539916992188
+      ],
+      "text_sha256": "0ae4ceed5aad3fa172262ac6861e167bc3f502fe25d9c6e8bf9ac131d2397aa9"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

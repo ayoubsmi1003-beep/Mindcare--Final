@@ -1,0 +1,323 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0127",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 127,
+  "source_page_index": 126,
+  "source_page_display": 127,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "106    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nFinal doses before complete cessation will need to be very small to prevent a large \ndecrease in D2 blockade. This may need to be as small as 1/80th of the original thera-\npeutic dose (e.g. 0.25mg of olanzapine). Delivery of these small doses will require split-\nting tablets or using liquid formulations of the medications.\nExample reducing regimens are presented in Tables 1.11 and 1.12.\nTable 1.11  Reductions of olanzapine dose by 5 percentage \npoints of D2 occupancy at each step\nPeriod\nOlanzapine \ndose (mg)\nD2 \nOccupancy (%)\n1\n20\n81.6\n2\n14\n75\n3\n10.5\n70\n4\n8.4\n65\n5\n6.8\n60\n6\n5.5\n55\n7\n4.5\n50\n8\n3.7\n45\n9\n3\n40\n10\n2.4\n35\n11\n1.9\n30\n12\n1.5\n25\n13\n1.1\n20\n14\n0.8\n15\n15\n0.5\n10\n16\n0.24\n5\n17\n0\n0\n",
+  "raw_text_sha256": "80f30ce2f7ccd4166d8f7607a6d5fa991c1b04775e59a8327c26bf9c8abfa9ad",
+  "coordinates_sha256": "db8c68574b9f4aa0478a716f343bfa75f9f8a38f3dd8929ec78e9ca3dbb3b729",
+  "block_sequence_sha256": "448dc7b1fe683df6bb82dacabce8b1b0fc99d1200a1194f78a42e678693fa9e9",
+  "blocks": [
+    {
+      "block_id": "page-0127-block-0000",
+      "order": 0,
+      "text": "106    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "2ab148425dfd4bc37cf2fd1d33bd9340b8f1cf23ed16a02f0f63e19936b010a9"
+    },
+    {
+      "block_id": "page-0127-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0127-block-0002",
+      "order": 2,
+      "text": "Final doses before complete cessation will need to be very small to prevent a large \ndecrease in D2 blockade. This may need to be as small as 1/80th of the original thera-\npeutic dose (e.g. 0.25mg of olanzapine). Delivery of these small doses will require split-\nting tablets or using liquid formulations of the medications.\n",
+      "bbox": [
+        61.88909912109375,
+        62.54931640625,
+        436.6791687011719,
+        110.26931762695312
+      ],
+      "text_sha256": "8311c3faab01e8089dfb22bf2bcb4f63d83d09ac76d2b746b525a898e4133c73"
+    },
+    {
+      "block_id": "page-0127-block-0003",
+      "order": 3,
+      "text": "Example reducing regimens are presented in Tables 1.11 and 1.12.\n",
+      "bbox": [
+        71.88909912109375,
+        110.54931640625,
+        357.9291076660156,
+        122.26931762695312
+      ],
+      "text_sha256": "9e0d44922d386bf04e1ba89d86b935205520a65bc3e1cfb309e9b14c5c361ba2"
+    },
+    {
+      "block_id": "page-0127-block-0004",
+      "order": 4,
+      "text": "Table 1.11  Reductions of olanzapine dose by 5 percentage \npoints of D2 occupancy at each step\n",
+      "bbox": [
+        142.88890075683594,
+        146.1699981689453,
+        334.9039611816406,
+        165.05499267578125
+      ],
+      "text_sha256": "127e2a8b8bcc73d428395b93aeb3e1f184c9d87145e3fda8edadebb9288e28e3"
+    },
+    {
+      "block_id": "page-0127-block-0005",
+      "order": 5,
+      "text": "Period\n",
+      "bbox": [
+        136.88890075683594,
+        186.40504455566406,
+        159.3964080810547,
+        195.29254150390625
+      ],
+      "text_sha256": "a08251892208518f2b68ba2cded6b746c86feddbfbe4804439b9092dc0fadb44"
+    },
+    {
+      "block_id": "page-0127-block-0006",
+      "order": 6,
+      "text": "Olanzapine \ndose (mg)\n",
+      "bbox": [
+        199.3863983154297,
+        176.4075469970703,
+        241.48391723632812,
+        195.29254150390625
+      ],
+      "text_sha256": "b17e16d685c38f704f970a16d44fbb2b2f635fc4da16d9db2d6a8c1e16defef3"
+    },
+    {
+      "block_id": "page-0127-block-0007",
+      "order": 7,
+      "text": "D2 \nOccupancy (%)\n",
+      "bbox": [
+        284.13641357421875,
+        176.4075469970703,
+        336.62884521484375,
+        195.29254150390625
+      ],
+      "text_sha256": "0834e7a340f45392bd007a920ad864caa6f39ec6da8cfd60ccca8ab84b262743"
+    },
+    {
+      "block_id": "page-0127-block-0008",
+      "order": 8,
+      "text": "1\n20\n81.6\n",
+      "bbox": [
+        144.71888732910156,
+        203.36256408691406,
+        315.3964538574219,
+        212.070068359375
+      ],
+      "text_sha256": "dcd4f7b4eb0bb42ebb421747dc0ace55d3903897d2cd31497ce4a8d056493346"
+    },
+    {
+      "block_id": "page-0127-block-0009",
+      "order": 9,
+      "text": "2\n14\n75\n",
+      "bbox": [
+        144.71890258789062,
+        218.3850555419922,
+        309.1414489746094,
+        227.09255981445312
+      ],
+      "text_sha256": "6a217ea9b34a0b490d9179bf57e3747ecc5754abdaae96b6d33ed8d168f462f4"
+    },
+    {
+      "block_id": "page-0127-block-0010",
+      "order": 10,
+      "text": "3\n10.5\n70\n",
+      "bbox": [
+        144.71890258789062,
+        233.4075469970703,
+        309.1414489746094,
+        242.11505126953125
+      ],
+      "text_sha256": "631dd1b38b5d9aace2a54e88dff834167f492edff7013df723762376c16fd97e"
+    },
+    {
+      "block_id": "page-0127-block-0011",
+      "order": 11,
+      "text": "4\n8.4\n65\n",
+      "bbox": [
+        144.71890258789062,
+        248.43003845214844,
+        309.1414489746094,
+        257.1375427246094
+      ],
+      "text_sha256": "f9d2135f4ed9f275e2ab8bf4fba6f02135ff0cfac21ecb31cbb25a62ad3346cf"
+    },
+    {
+      "block_id": "page-0127-block-0012",
+      "order": 12,
+      "text": "5\n6.8\n60\n",
+      "bbox": [
+        144.71890258789062,
+        263.4525451660156,
+        309.1414489746094,
+        272.1600341796875
+      ],
+      "text_sha256": "fd12910b85e02a2c6fe6c3cc46266b1bb00e4193c3d84c0f2337364cb4498c81"
+    },
+    {
+      "block_id": "page-0127-block-0013",
+      "order": 13,
+      "text": "6\n5.5\n55\n",
+      "bbox": [
+        144.71890258789062,
+        278.47503662109375,
+        309.1414489746094,
+        287.1825256347656
+      ],
+      "text_sha256": "63c885976211b22b38d3a8644ec8719f3c4fed6b7cd39503cf5ce12011269c85"
+    },
+    {
+      "block_id": "page-0127-block-0014",
+      "order": 14,
+      "text": "7\n4.5\n50\n",
+      "bbox": [
+        144.71890258789062,
+        293.4975280761719,
+        309.1414489746094,
+        302.20501708984375
+      ],
+      "text_sha256": "79657319db4ec730fcc970bee13db3216e981f6b69360a165c203df22f4d625d"
+    },
+    {
+      "block_id": "page-0127-block-0015",
+      "order": 15,
+      "text": "8\n3.7\n45\n",
+      "bbox": [
+        144.71890258789062,
+        308.52001953125,
+        309.1414489746094,
+        317.2275085449219
+      ],
+      "text_sha256": "2e0521ed0754b4d6e389f4b5af671f6c8382a32e049f9434471fc354198d267f"
+    },
+    {
+      "block_id": "page-0127-block-0016",
+      "order": 16,
+      "text": "9\n3\n40\n",
+      "bbox": [
+        144.71890258789062,
+        323.5425109863281,
+        309.1414489746094,
+        332.25
+      ],
+      "text_sha256": "a53aa2ca6bf5840e2bdbc9946edaf63646be02695e414cb933ce20bb7bd339c1"
+    },
+    {
+      "block_id": "page-0127-block-0017",
+      "order": 17,
+      "text": "10\n2.4\n35\n",
+      "bbox": [
+        140.5489044189453,
+        338.56500244140625,
+        309.1414489746094,
+        347.2724914550781
+      ],
+      "text_sha256": "2eefcb2e6e7e70ce23f7186d0f1a46ffdbbc6cc1d1e2fc12320ccb5f237d6966"
+    },
+    {
+      "block_id": "page-0127-block-0018",
+      "order": 18,
+      "text": "11\n1.9\n30\n",
+      "bbox": [
+        140.5489044189453,
+        353.5874938964844,
+        309.1414489746094,
+        362.29498291015625
+      ],
+      "text_sha256": "a9f2f5482720001fb62b520b5d7090fd5061217333328db7ec6a76c5eac39184"
+    },
+    {
+      "block_id": "page-0127-block-0019",
+      "order": 19,
+      "text": "12\n1.5\n25\n",
+      "bbox": [
+        140.5489044189453,
+        368.6099853515625,
+        309.1414489746094,
+        377.3174743652344
+      ],
+      "text_sha256": "8ed63edee7f0d9f991eedf67b01f04f2a2750282a07995cfbae6810978fc880b"
+    },
+    {
+      "block_id": "page-0127-block-0020",
+      "order": 20,
+      "text": "13\n1.1\n20\n",
+      "bbox": [
+        140.5489044189453,
+        383.6324768066406,
+        309.1414489746094,
+        392.3399658203125
+      ],
+      "text_sha256": "782cda9e9a3cd7c1de76f73fb3af0fa8ca622a37e382b1f6ae62314358c110ab"
+    },
+    {
+      "block_id": "page-0127-block-0021",
+      "order": 21,
+      "text": "14\n0.8\n15\n",
+      "bbox": [
+        140.5489044189453,
+        398.65496826171875,
+        309.1414489746094,
+        407.3624572753906
+      ],
+      "text_sha256": "6a779e0484c733a4a93e1545d306af69401ad4d3fd6198257736e724505522f0"
+    },
+    {
+      "block_id": "page-0127-block-0022",
+      "order": 22,
+      "text": "15\n0.5\n10\n",
+      "bbox": [
+        140.5489044189453,
+        413.6774597167969,
+        309.1414489746094,
+        422.38494873046875
+      ],
+      "text_sha256": "85859984e3524f391e774e711b6e28f9b37228a4e0b0130b54b7ef2c9bc626dd"
+    },
+    {
+      "block_id": "page-0127-block-0023",
+      "order": 23,
+      "text": "16\n0.24\n5\n",
+      "bbox": [
+        140.5489044189453,
+        428.699951171875,
+        309.1413879394531,
+        437.4074401855469
+      ],
+      "text_sha256": "f310d47e184d6ce8cfd85d78fcb6531bef1ef317526dd50dba3f197d8a58a9d2"
+    },
+    {
+      "block_id": "page-0127-block-0024",
+      "order": 24,
+      "text": "17\n0\n0\n",
+      "bbox": [
+        140.54888916015625,
+        443.7224426269531,
+        309.1413879394531,
+        452.429931640625
+      ],
+      "text_sha256": "dcb466f0948a5b5724682f06fc8918bb62a442d87b95896a176fc4c41bd79dc2"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,1139 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0406",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 406,
+  "source_page_index": 405,
+  "source_page_display": 406,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Table 3.16  (Continued)\nDrug\nHeart rate\nBlood pressure\nQTc\nArrhythmia\nConduction \ndisturbance\nLicensed  \nrestrictions post-MI\nComments\nSertraline41–45\nMinimal effect \non heart rate\nMinimal effect on \nblood pressure\nNo effect on QTc \ninterval at standard \ndoses. Small \nincrease (<10ms) at \n400mg/day.46\nNone\nNone\nDrug of choice post MI \nbut formal labelling \nacknowledges effect on \nQT cautions against use \nin patients with \nadditional risk factors \nfor QTc prolongation\nSafe post MI and in heart \nfailure\nTrazodone26,47,48\nDecrease in \nheart rate more \ncommon, \nalthough \nincrease can also \noccur\nCan cause significant \npostural hypotension\nCan prolong QTc \ninterval\nSeveral case \nreports of \nprolonged QT and \narrhythmia\nUnclear\nContraindicated in \npatients with acute MI\nMay be arrhythmogenic in \npatients with pre-existing \ncardiac disease\nTricyclics26,49–51\nIncrease in heart \nrate\nPostural hypotension\nProlongation of QTc \ninterval and QRS \ninterval\nVentricular \narrhythmia \ncommon in \noverdose. Torsade \nde Pointes \nreported\nSlows cardiac \nconduction \n– blocks cardiac \nNa/K channels\nContraindicated in \npatients with recent MI\nTCAs affect cardiac \ncontractility. Some TCAs \nlinked to ischaemic heart \ndisease and sudden cardiac \ndeath. Avoid in coronary \nartery disease\nVenlafaxine15,52–56\n(assume same for \ndesvenlafaxine)\nMarginally \nincreased\nSome increase in \npostural blood \npressure. At higher \ndoses increase in \nblood pressure\nPossible \nprolongation in \noverdose, but very \nrare\nRare reports of \ncardiac arrhythmia \nin overdose\nRare reports of \nconduction \nabnormalities\nHas not been evaluated \nin post-MI patients. \nCaution advised\nEvidence for \narrhythmogenic potential \nis slim, but avoid in \ncoronary disease\nVilazodone57–59\nIncreased in \noverdose\nIncreased in overdose\nNo effect, even in \noverdose\nNo reports, even \nin overdose\nNo effect\nNo specific \ncontra-indication\nProbably no effect on CV \nfunction in clinical doses\nVortioxetine60–62\nNo effect\nNo effect\nNo effect\nNo effect\nNo effect\nNo specific \ncontra-indication\nTrial data suggest no effect \non QTc or on coagulation \nparameters\n",
+  "raw_text_sha256": "b40860484053d5db12d34f54dcfd281ecdb57983605140e423ab4d2cf2735f88",
+  "coordinates_sha256": "80d84050e2be995621a4ce85a80090d1c54168c16de80f56c7ca553a268447e0",
+  "block_sequence_sha256": "f9b56c6f3ba546de8f99575274012bdb8f3e90ad0a5b12e6b3d98d0727c06745",
+  "blocks": [
+    {
+      "block_id": "page-0406-block-0000",
+      "order": 0,
+      "text": "Table 3.16  (Continued)\n",
+      "bbox": [
+        53.73749923706055,
+        547.2459106445312,
+        62.625,
+        623.535888671875
+      ],
+      "text_sha256": "018c4e5c5af551dd13d1123ec354a3028aa6e288ed7a92c81acf77d760f0ab3f"
+    },
+    {
+      "block_id": "page-0406-block-0001",
+      "order": 1,
+      "text": "Drug\nHeart rate\nBlood pressure\nQTc\nArrhythmia\nConduction \n",
+      "bbox": [
+        73.47500610351562,
+        236.0409698486328,
+        92.36000061035156,
+        629.535888671875
+      ],
+      "text_sha256": "d62435374fee824260b8c7ed09dcb3f0c7b5ad31b403c40584233ab8249167b6"
+    },
+    {
+      "block_id": "page-0406-block-0002",
+      "order": 2,
+      "text": "disturbance\nLicensed  \n",
+      "bbox": [
+        73.47500610351562,
+        187.6059112548828,
+        92.36000061035156,
+        278.535888671875
+      ],
+      "text_sha256": "b0d1d5b3895067f80b7fc4212cbe04b8e7f19f6732ef8942fdb14ae0ad99066f"
+    },
+    {
+      "block_id": "page-0406-block-0003",
+      "order": 3,
+      "text": "restrictions post-MI\nComments\n",
+      "bbox": [
+        83.47250366210938,
+        99.89338684082031,
+        92.36000061035156,
+        221.77587890625
+      ],
+      "text_sha256": "63f111127f5c3124dfe147a9d3ce7e83a9ea8ebf4fca315b879663746a28be0d"
+    },
+    {
+      "block_id": "page-0406-block-0004",
+      "order": 4,
+      "text": "Sertraline41–45\nMinimal effect \n",
+      "bbox": [
+        100.74500274658203,
+        503.8484191894531,
+        109.63500213623047,
+        629.5433349609375
+      ],
+      "text_sha256": "528f7afc219abd563ac0c05a5ba7fcbf91a5ccecd9c7ac06869db97cf1e3c7a2"
+    },
+    {
+      "block_id": "page-0406-block-0005",
+      "order": 5,
+      "text": "on heart rate\nMinimal effect on \n",
+      "bbox": [
+        100.92750549316406,
+        432.4559020996094,
+        119.63249969482422,
+        552.035888671875
+      ],
+      "text_sha256": "f8333f4fff7dcc37a86e360275ff03ff86a7cf978d8096ac5c819e9542689ad4"
+    },
+    {
+      "block_id": "page-0406-block-0006",
+      "order": 6,
+      "text": "blood pressure\nNo effect on QTc \n",
+      "bbox": [
+        100.92750549316406,
+        356.8334045410156,
+        119.63249969482422,
+        491.0683898925781
+      ],
+      "text_sha256": "aef92a397f29f2c0887cd1d65cf204790a7df18204a11ec2a52b587df7e9ea51"
+    },
+    {
+      "block_id": "page-0406-block-0007",
+      "order": 7,
+      "text": "interval at standard \n",
+      "bbox": [
+        110.92500305175781,
+        348.9208679199219,
+        119.63249969482422,
+        412.535888671875
+      ],
+      "text_sha256": "f698633069545244957e5a44784f672427f9c88371f534cb6c02c2216ca77db6"
+    },
+    {
+      "block_id": "page-0406-block-0008",
+      "order": 8,
+      "text": "doses. Small \n",
+      "bbox": [
+        120.92250061035156,
+        371.2783508300781,
+        129.6300048828125,
+        412.535888671875
+      ],
+      "text_sha256": "b8a0c76ffbdc12825eb608143bec12440e4fa9323dc9ad2c0c338a75c193a212"
+    },
+    {
+      "block_id": "page-0406-block-0009",
+      "order": 9,
+      "text": "increase (<10ms) at \n",
+      "bbox": [
+        130.9199981689453,
+        348.16339111328125,
+        139.62750244140625,
+        412.535888671875
+      ],
+      "text_sha256": "4507c95cf263a1328358d8389301bab4c6a62aa68963803ce02d8c92b4dc6674"
+    },
+    {
+      "block_id": "page-0406-block-0010",
+      "order": 10,
+      "text": "400mg/day.46\n",
+      "bbox": [
+        140.91749572753906,
+        370.0162353515625,
+        149.625,
+        412.535888671875
+      ],
+      "text_sha256": "714bcd5c2136eab4c6ca4880ca2780e71181d0f27f578666b698975e9b0bb329"
+    },
+    {
+      "block_id": "page-0406-block-0011",
+      "order": 11,
+      "text": "None\nNone\nDrug of choice post MI \n",
+      "bbox": [
+        100.92750549316406,
+        146.3385772705078,
+        109.63500213623047,
+        343.3560791015625
+      ],
+      "text_sha256": "9674d738ee3215838cd9e962b448182417fcf5a5666bd900fe2ec9762ffb29f3"
+    },
+    {
+      "block_id": "page-0406-block-0012",
+      "order": 12,
+      "text": "but formal labelling \n",
+      "bbox": [
+        110.92500305175781,
+        157.18360900878906,
+        119.63249969482422,
+        221.7735595703125
+      ],
+      "text_sha256": "9d2082b795f3db655dd6ed527cd336871ba9b36e9302e4d42ed8636836cfc272"
+    },
+    {
+      "block_id": "page-0406-block-0013",
+      "order": 13,
+      "text": "acknowledges effect on \n",
+      "bbox": [
+        120.92250061035156,
+        143.56349182128906,
+        129.6300048828125,
+        221.7735595703125
+      ],
+      "text_sha256": "13a9a748e3db3a9391a91e98f1f8b4858e36a8995e99f26c7603c097ed4caa95"
+    },
+    {
+      "block_id": "page-0406-block-0014",
+      "order": 14,
+      "text": "QT cautions against use \n",
+      "bbox": [
+        130.9199981689453,
+        143.84107971191406,
+        139.62750244140625,
+        221.7735595703125
+      ],
+      "text_sha256": "23cbc6665afb187b1b36a31964ed13ae4d473cb4b0eafc4034c611145ece2a5d"
+    },
+    {
+      "block_id": "page-0406-block-0015",
+      "order": 15,
+      "text": "in patients with \n",
+      "bbox": [
+        140.91749572753906,
+        170.09852600097656,
+        149.625,
+        221.7735595703125
+      ],
+      "text_sha256": "511515436554bf85b8c9d859bdce8aeb909da765d79b12edb714a5672451352c"
+    },
+    {
+      "block_id": "page-0406-block-0016",
+      "order": 16,
+      "text": "additional risk factors \n",
+      "bbox": [
+        150.9149932861328,
+        151.35597229003906,
+        159.62249755859375,
+        221.7735595703125
+      ],
+      "text_sha256": "ee982e78ebfd5d1364581616187a7f004316788720b6848a37b3a7ac9e21efb4"
+    },
+    {
+      "block_id": "page-0406-block-0017",
+      "order": 17,
+      "text": "for QTc prolongation\n",
+      "bbox": [
+        160.91249084472656,
+        155.64610290527344,
+        169.6199951171875,
+        221.7735595703125
+      ],
+      "text_sha256": "b2615dda9837d137640e071c8bc756bf57505629f95d53c05c78db2bf3e28839"
+    },
+    {
+      "block_id": "page-0406-block-0018",
+      "order": 18,
+      "text": "Safe post MI and in heart \n",
+      "bbox": [
+        100.9124984741211,
+        54.456138610839844,
+        109.6199951171875,
+        137.39105224609375
+      ],
+      "text_sha256": "6e9193ed67b0ea55f060226b6d9ea8ba7b64aaa5a8ee099100328f62dd9a2f70"
+    },
+    {
+      "block_id": "page-0406-block-0019",
+      "order": 19,
+      "text": "failure\n",
+      "bbox": [
+        110.90999603271484,
+        117.5311279296875,
+        119.61749267578125,
+        137.39105224609375
+      ],
+      "text_sha256": "ec7f201fd20e7bf6820ff7f59ceef35ad1a49f7998e93c2977dd71972aeba06b"
+    },
+    {
+      "block_id": "page-0406-block-0020",
+      "order": 20,
+      "text": "Trazodone26,47,48\nDecrease in \n",
+      "bbox": [
+        175.75498962402344,
+        513.4183959960938,
+        184.66000366210938,
+        629.5410766601562
+      ],
+      "text_sha256": "dca73f4d0f947a25ecdc4c4e904f2ddb27f2d6b0660cf28c641d1356e8d97377"
+    },
+    {
+      "block_id": "page-0406-block-0021",
+      "order": 21,
+      "text": "heart rate more \n",
+      "bbox": [
+        185.9499969482422,
+        500.0909118652344,
+        194.65750122070312,
+        552.035888671875
+      ],
+      "text_sha256": "f175c972e4f759e9d012dfa2bf8710b9118bf348fc5114725fa7df195708632b"
+    },
+    {
+      "block_id": "page-0406-block-0022",
+      "order": 22,
+      "text": "common, \n",
+      "bbox": [
+        195.94749450683594,
+        519.5308837890625,
+        204.65499877929688,
+        552.035888671875
+      ],
+      "text_sha256": "5aef51b24878108fb4d0d15c98a309e540c9bd7148d875f53db3771881f68861"
+    },
+    {
+      "block_id": "page-0406-block-0023",
+      "order": 23,
+      "text": "although \n",
+      "bbox": [
+        205.9449920654297,
+        521.1884155273438,
+        214.65249633789062,
+        552.035888671875
+      ],
+      "text_sha256": "3c2898647f0864c878ec9c435b24d2927f7ff9c827aa2179c015308d4535b06d"
+    },
+    {
+      "block_id": "page-0406-block-0024",
+      "order": 24,
+      "text": "increase can also \n",
+      "bbox": [
+        215.94248962402344,
+        496.3334045410156,
+        224.64999389648438,
+        552.035888671875
+      ],
+      "text_sha256": "c2947f3af894975c6380a476f4b2a4c1ca8eda8a972687ccc8b6ec38410a7f0c"
+    },
+    {
+      "block_id": "page-0406-block-0025",
+      "order": 25,
+      "text": "occur\n",
+      "bbox": [
+        225.9399871826172,
+        534.5383911132812,
+        234.64749145507812,
+        552.035888671875
+      ],
+      "text_sha256": "d1f715222048c9a180ee3ce5aec74d1918559d779e6cc03f9aeaa9a908cb3200"
+    },
+    {
+      "block_id": "page-0406-block-0026",
+      "order": 26,
+      "text": "Can cause significant \n",
+      "bbox": [
+        175.93748474121094,
+        421.4759216308594,
+        184.64498901367188,
+        491.0683898925781
+      ],
+      "text_sha256": "486ad64bec391d1ed1ca3eef78520b95306a6018744f2b47966b5a991e3dfb11"
+    },
+    {
+      "block_id": "page-0406-block-0027",
+      "order": 27,
+      "text": "postural hypotension\nCan prolong QTc \n",
+      "bbox": [
+        175.93748474121094,
+        356.8183288574219,
+        194.64248657226562,
+        491.0683898925781
+      ],
+      "text_sha256": "a69cb7098f72f9d23038b6fb4679a5a56e684d169d630cc517a7e5fce4d3a8da"
+    },
+    {
+      "block_id": "page-0406-block-0028",
+      "order": 28,
+      "text": "interval\nSeveral case \n",
+      "bbox": [
+        175.93748474121094,
+        302.9459228515625,
+        194.64248657226562,
+        412.535888671875
+      ],
+      "text_sha256": "b74c3c7d79014490a9a93a01a594140c5f7c1c02f156ef3d5c6e94a8123fb483"
+    },
+    {
+      "block_id": "page-0406-block-0029",
+      "order": 29,
+      "text": "reports of \n",
+      "bbox": [
+        185.9349822998047,
+        310.15338134765625,
+        194.64248657226562,
+        343.35589599609375
+      ],
+      "text_sha256": "be12df6fa1cb037ecdc4222685d64025b4780ef84cfac767402b3a263f8217f7"
+    },
+    {
+      "block_id": "page-0406-block-0030",
+      "order": 30,
+      "text": "prolonged QT and \n",
+      "bbox": [
+        195.93247985839844,
+        283.0483093261719,
+        204.63998413085938,
+        343.35589599609375
+      ],
+      "text_sha256": "6dd2117b87d87c0cb6dc0c374db7513b81773d7735f4dc1509940e327fc15858"
+    },
+    {
+      "block_id": "page-0406-block-0031",
+      "order": 31,
+      "text": "arrhythmia\n",
+      "bbox": [
+        205.9299774169922,
+        308.7808837890625,
+        214.63748168945312,
+        343.35589599609375
+      ],
+      "text_sha256": "c9211c789f03d434f52eff692979e42b49fc0c05ce16598adef34c31d1740665"
+    },
+    {
+      "block_id": "page-0406-block-0032",
+      "order": 32,
+      "text": "Unclear\nContraindicated in \n",
+      "bbox": [
+        175.9299774169922,
+        160.51332092285156,
+        184.63748168945312,
+        278.53338623046875
+      ],
+      "text_sha256": "8779176703b30919a5be53c2b9f0a3ccfb4b9b8b7a8256876868e2b303dd6491"
+    },
+    {
+      "block_id": "page-0406-block-0033",
+      "order": 33,
+      "text": "patients with acute MI\nMay be arrhythmogenic in \n",
+      "bbox": [
+        175.9299774169922,
+        51.133445739746094,
+        194.63497924804688,
+        221.77337646484375
+      ],
+      "text_sha256": "0d02a24585db69398e75fa732bc92c5d0431335ecd63ff5656dc986ff96dcae3"
+    },
+    {
+      "block_id": "page-0406-block-0034",
+      "order": 34,
+      "text": "patients with pre-existing \n",
+      "bbox": [
+        185.92747497558594,
+        54.606040954589844,
+        194.63497924804688,
+        137.390869140625
+      ],
+      "text_sha256": "606027b1bc8712639f5b42d1e149c4eb4be6c619b86e0e6075312d71a0b71454"
+    },
+    {
+      "block_id": "page-0406-block-0035",
+      "order": 35,
+      "text": "cardiac disease\n",
+      "bbox": [
+        195.9249725341797,
+        90.0284423828125,
+        204.63247680664062,
+        137.390869140625
+      ],
+      "text_sha256": "23328004d8b3521b6ca91004017ddd61ab984844df5dff55f4d6d3ecd7366da6"
+    },
+    {
+      "block_id": "page-0406-block-0036",
+      "order": 36,
+      "text": "Tricyclics26,49–51\nIncrease in heart \n",
+      "bbox": [
+        240.76747131347656,
+        497.5859069824219,
+        249.68499755859375,
+        629.5408935546875
+      ],
+      "text_sha256": "21e8310e99a79fe5a4fee322182818bfe6eb6d5c8afbb3b43da37a9682807fb8"
+    },
+    {
+      "block_id": "page-0406-block-0037",
+      "order": 37,
+      "text": "rate\nPostural hypotension\nProlongation of QTc \n",
+      "bbox": [
+        240.9774932861328,
+        347.2708435058594,
+        259.6824951171875,
+        552.035888671875
+      ],
+      "text_sha256": "fbc8df0ed9ef509247a2fd8ca78e4e4712db3ab407844be15c44b6357bf73297"
+    },
+    {
+      "block_id": "page-0406-block-0038",
+      "order": 38,
+      "text": "interval and QRS \n",
+      "bbox": [
+        250.97499084472656,
+        357.5308532714844,
+        259.6824951171875,
+        412.535888671875
+      ],
+      "text_sha256": "6c6b9a51bc66ca131682c2f0f3329521235517cbf96d18d9a5585c28d5e004d2"
+    },
+    {
+      "block_id": "page-0406-block-0039",
+      "order": 39,
+      "text": "interval\n",
+      "bbox": [
+        260.9725036621094,
+        389.21087646484375,
+        269.67999267578125,
+        412.535888671875
+      ],
+      "text_sha256": "786dbbb7572847aa137dab460169f834c37b24a64d033c06fef25f11daf9a1cc"
+    },
+    {
+      "block_id": "page-0406-block-0040",
+      "order": 40,
+      "text": "Ventricular \n",
+      "bbox": [
+        240.96998596191406,
+        307.1083984375,
+        249.677490234375,
+        343.35589599609375
+      ],
+      "text_sha256": "40a29177a2b9f8f903d2ed34afe140bdf52b1a670b608a6486f15612966e6eb3"
+    },
+    {
+      "block_id": "page-0406-block-0041",
+      "order": 41,
+      "text": "arrhythmia \n",
+      "bbox": [
+        250.9674835205078,
+        306.6958923339844,
+        259.67498779296875,
+        343.35589599609375
+      ],
+      "text_sha256": "783f442678d995aba27dc924f4586753c6755a2cd02840997928d210fd4c5937"
+    },
+    {
+      "block_id": "page-0406-block-0042",
+      "order": 42,
+      "text": "common in \n",
+      "bbox": [
+        260.9649963378906,
+        305.015869140625,
+        269.6724853515625,
+        343.35589599609375
+      ],
+      "text_sha256": "539dc6accbc354a6a52f4625f7240faac1c9395bc5573afa44e0452c1f30d570"
+    },
+    {
+      "block_id": "page-0406-block-0043",
+      "order": 43,
+      "text": "overdose. Torsade \n",
+      "bbox": [
+        270.9624938964844,
+        284.308349609375,
+        279.66998291015625,
+        343.35589599609375
+      ],
+      "text_sha256": "0496eb9568fed75f0e4e2507f1cd565533fe6ad4874cf14aef59b1adf5b3c8ce"
+    },
+    {
+      "block_id": "page-0406-block-0044",
+      "order": 44,
+      "text": "de Pointes \n",
+      "bbox": [
+        280.9599914550781,
+        308.3458557128906,
+        289.66748046875,
+        343.35589599609375
+      ],
+      "text_sha256": "7fa824914c59673e84700dcd3448916e7ae2764523cbc8ac3d67a2d1dbc32c61"
+    },
+    {
+      "block_id": "page-0406-block-0045",
+      "order": 45,
+      "text": "reported\n",
+      "bbox": [
+        290.9574890136719,
+        315.9883728027344,
+        299.66497802734375,
+        343.35589599609375
+      ],
+      "text_sha256": "d57c63781596694b1d41b7826f098f87df72148a2b02e68f183b2fc2c9372c03"
+    },
+    {
+      "block_id": "page-0406-block-0046",
+      "order": 46,
+      "text": "Slows cardiac \n",
+      "bbox": [
+        240.95497131347656,
+        233.6683807373047,
+        249.6624755859375,
+        278.53338623046875
+      ],
+      "text_sha256": "efc89cd2c49e60bce130e9f6ca946c8bdae46ee1fddbe4d0815a4bc60be9af44"
+    },
+    {
+      "block_id": "page-0406-block-0047",
+      "order": 47,
+      "text": "conduction \n",
+      "bbox": [
+        250.9524688720703,
+        240.60581970214844,
+        259.65997314453125,
+        278.53338623046875
+      ],
+      "text_sha256": "6e4cda617f7615e5ba33246d9aebd5f75616165a5b8b47d80b872df9e033c2f8"
+    },
+    {
+      "block_id": "page-0406-block-0048",
+      "order": 48,
+      "text": "– blocks cardiac \n",
+      "bbox": [
+        260.9499816894531,
+        226.1683807373047,
+        269.657470703125,
+        278.53338623046875
+      ],
+      "text_sha256": "58690c0cf852ef5b0b71bb15d1d11607aa04acadc773c8b04a7c96c0a62b7ea7"
+    },
+    {
+      "block_id": "page-0406-block-0049",
+      "order": 49,
+      "text": "Na/K channels\n",
+      "bbox": [
+        270.9474792480469,
+        233.1058807373047,
+        279.65496826171875,
+        278.53338623046875
+      ],
+      "text_sha256": "5fe40c80993dfa35868bcc98aa10bd8631fec4defb49c396b72299c0401b6ef1"
+    },
+    {
+      "block_id": "page-0406-block-0050",
+      "order": 50,
+      "text": "Contraindicated in \n",
+      "bbox": [
+        240.9474639892578,
+        160.51332092285156,
+        249.65496826171875,
+        221.77337646484375
+      ],
+      "text_sha256": "0be213f4d1683b7e419add65c661debb559e6119b52fbf1dc6bf5f7c52676456"
+    },
+    {
+      "block_id": "page-0406-block-0051",
+      "order": 51,
+      "text": "patients with recent MI\nTCAs affect cardiac \n",
+      "bbox": [
+        240.9474639892578,
+        73.9183578491211,
+        259.6524658203125,
+        221.77337646484375
+      ],
+      "text_sha256": "60e4fa28fb4ec609da5c936c9efdb4ac61ea59f70147e2cc6d2586eeb22055bf"
+    },
+    {
+      "block_id": "page-0406-block-0052",
+      "order": 52,
+      "text": "contractility. Some TCAs \n",
+      "bbox": [
+        250.94496154785156,
+        58.085899353027344,
+        259.6524658203125,
+        137.390869140625
+      ],
+      "text_sha256": "565ac561e74c5b28f29439fa01fd13ad4ae828c24961af1d0d00fc71169f57f2"
+    },
+    {
+      "block_id": "page-0406-block-0053",
+      "order": 53,
+      "text": "linked to ischaemic heart \n",
+      "bbox": [
+        260.9424743652344,
+        55.723472595214844,
+        269.64996337890625,
+        137.390869140625
+      ],
+      "text_sha256": "ac815510a6082192e3fa33cf9e80e5942c8c81de1f1e9ca47e11f1cd8c615de4"
+    },
+    {
+      "block_id": "page-0406-block-0054",
+      "order": 54,
+      "text": "disease and sudden cardiac \n",
+      "bbox": [
+        270.9399719238281,
+        48.336021423339844,
+        279.6474609375,
+        137.390869140625
+      ],
+      "text_sha256": "3eb680f57080d54b9e19175d953cf9c2a8bd1b59aa231c0907ff279970dbcc91"
+    },
+    {
+      "block_id": "page-0406-block-0055",
+      "order": 55,
+      "text": "death. Avoid in coronary \n",
+      "bbox": [
+        280.9374694824219,
+        56.810935974121094,
+        289.64495849609375,
+        137.390869140625
+      ],
+      "text_sha256": "b190623de4af4ae36f34bbb341f94e46ed2c3ac6465c925118ef6c12d0d311f2"
+    },
+    {
+      "block_id": "page-0406-block-0056",
+      "order": 56,
+      "text": "artery disease\n",
+      "bbox": [
+        290.9349670410156,
+        94.06341552734375,
+        299.6424560546875,
+        137.390869140625
+      ],
+      "text_sha256": "2e5c5e286f8b5134195a3b65cbb9a96952122b7fa117f5f0aed090a11f38d9b6"
+    },
+    {
+      "block_id": "page-0406-block-0057",
+      "order": 57,
+      "text": "Venlafaxine15,52–56\n",
+      "bbox": [
+        305.7774353027344,
+        569.8551635742188,
+        314.6649475097656,
+        629.5408935546875
+      ],
+      "text_sha256": "0737e81a201d007b126be220033936e3b67cec7f43616d2e2b5f70e45c01e3d6"
+    },
+    {
+      "block_id": "page-0406-block-0058",
+      "order": 58,
+      "text": "(assume same for \n",
+      "bbox": [
+        316.00250244140625,
+        571.6133422851562,
+        324.7099914550781,
+        629.535888671875
+      ],
+      "text_sha256": "7906b1f08796db053cac10bdbcdcd05a7b5c271cd790454215c86d28b59a3537"
+    },
+    {
+      "block_id": "page-0406-block-0059",
+      "order": 59,
+      "text": "desvenlafaxine)\n",
+      "bbox": [
+        325.8199768066406,
+        574.0958862304688,
+        334.7074890136719,
+        629.535888671875
+      ],
+      "text_sha256": "ecff44f37dc18acff8af1b593951d32d4b02e85555f0f615623cd974cbeb255b"
+    },
+    {
+      "block_id": "page-0406-block-0060",
+      "order": 60,
+      "text": "Marginally \n",
+      "bbox": [
+        305.99749755859375,
+        516.6234130859375,
+        314.7049865722656,
+        552.0383911132812
+      ],
+      "text_sha256": "fbf07831c498c1ad1bd0f592cbb5a695f3f4cf207418f81c57485d0f2b891087"
+    },
+    {
+      "block_id": "page-0406-block-0061",
+      "order": 61,
+      "text": "increased\nSome increase in \n",
+      "bbox": [
+        305.99749755859375,
+        435.368408203125,
+        324.7024841308594,
+        552.0383911132812
+      ],
+      "text_sha256": "5b9a8de7a19c4a7a9ef913cb4d90364190d53c6fbe18edab3ab0aa64f2437184"
+    },
+    {
+      "block_id": "page-0406-block-0062",
+      "order": 62,
+      "text": "postural blood \n",
+      "bbox": [
+        315.9949951171875,
+        442.7184143066406,
+        324.7024841308594,
+        491.0708923339844
+      ],
+      "text_sha256": "24dcda1a3c4c710aa5c4eaab4afe3491328ce587354531b8aac16d88b514c259"
+    },
+    {
+      "block_id": "page-0406-block-0063",
+      "order": 63,
+      "text": "pressure. At higher \n",
+      "bbox": [
+        325.99249267578125,
+        428.4084167480469,
+        334.6999816894531,
+        491.0708923339844
+      ],
+      "text_sha256": "e4d6f01b65de0d321ff1353efb90fe80f094f15bce4a92195af451b45e2a2dc2"
+    },
+    {
+      "block_id": "page-0406-block-0064",
+      "order": 64,
+      "text": "doses increase in \n",
+      "bbox": [
+        335.989990234375,
+        435.3609313964844,
+        344.6974792480469,
+        491.0708923339844
+      ],
+      "text_sha256": "6a4425b1ca58572a0151234a1c77422de225825db0760018f82b0208b61fac0c"
+    },
+    {
+      "block_id": "page-0406-block-0065",
+      "order": 65,
+      "text": "blood pressure\n",
+      "bbox": [
+        345.98748779296875,
+        444.24090576171875,
+        354.6949768066406,
+        491.0708923339844
+      ],
+      "text_sha256": "9e9d9bc9c2005edc82eff9239e041c50bac3c636ee820d5e8dfaf56336e26832"
+    },
+    {
+      "block_id": "page-0406-block-0066",
+      "order": 66,
+      "text": "Possible \n",
+      "bbox": [
+        305.989990234375,
+        385.4483337402344,
+        314.6974792480469,
+        412.53839111328125
+      ],
+      "text_sha256": "27451d7c5d0bd890f28fefabf90ac8fcfdc1640673991a9956695d6e5aff6f1d"
+    },
+    {
+      "block_id": "page-0406-block-0067",
+      "order": 67,
+      "text": "prolongation in \n",
+      "bbox": [
+        315.98748779296875,
+        361.4032897949219,
+        324.6949768066406,
+        412.53839111328125
+      ],
+      "text_sha256": "f780e77c3b216c6b553067c1eb1cd2eedf3bf738ab0b9221c5b86f5a29d0333c"
+    },
+    {
+      "block_id": "page-0406-block-0068",
+      "order": 68,
+      "text": "overdose, but very \n",
+      "bbox": [
+        325.9849853515625,
+        351.8334045410156,
+        334.6924743652344,
+        412.53839111328125
+      ],
+      "text_sha256": "b4a0cc0362d462dee233a8c1a834308281ede11acef783b961b9d84c6d32b57a"
+    },
+    {
+      "block_id": "page-0406-block-0069",
+      "order": 69,
+      "text": "rare\n",
+      "bbox": [
+        335.98248291015625,
+        400.17840576171875,
+        344.6899719238281,
+        412.53839111328125
+      ],
+      "text_sha256": "ab418d18d2a7942ed285456e553e0949cb36112dc27709e48d2b1b51d7c171ef"
+    },
+    {
+      "block_id": "page-0406-block-0070",
+      "order": 70,
+      "text": "Rare reports of \n",
+      "bbox": [
+        305.98248291015625,
+        294.03839111328125,
+        314.6899719238281,
+        343.3583984375
+      ],
+      "text_sha256": "41e9128ceee8d3f1d8cac46f8b3d9ee3b994e843db167049930a1f091c4801ca"
+    },
+    {
+      "block_id": "page-0406-block-0071",
+      "order": 71,
+      "text": "cardiac arrhythmia \n",
+      "bbox": [
+        315.97998046875,
+        282.450927734375,
+        324.6874694824219,
+        343.3583984375
+      ],
+      "text_sha256": "0b62e99a737ea7afbcfdf0b681522c7c3fd0e722b3415c7c9235fad820085c54"
+    },
+    {
+      "block_id": "page-0406-block-0072",
+      "order": 72,
+      "text": "in overdose\n",
+      "bbox": [
+        325.97747802734375,
+        306.818359375,
+        334.6849670410156,
+        343.3583984375
+      ],
+      "text_sha256": "b0ac6e2b38f2714d9f1142537cfd62dc773851977f038321dd9dbf9acf9941ba"
+    },
+    {
+      "block_id": "page-0406-block-0073",
+      "order": 73,
+      "text": "Rare reports of \n",
+      "bbox": [
+        305.9749755859375,
+        229.2158660888672,
+        314.6824645996094,
+        278.535888671875
+      ],
+      "text_sha256": "41e9128ceee8d3f1d8cac46f8b3d9ee3b994e843db167049930a1f091c4801ca"
+    },
+    {
+      "block_id": "page-0406-block-0074",
+      "order": 74,
+      "text": "conduction \n",
+      "bbox": [
+        315.97247314453125,
+        240.6083221435547,
+        324.6799621582031,
+        278.535888671875
+      ],
+      "text_sha256": "6e4cda617f7615e5ba33246d9aebd5f75616165a5b8b47d80b872df9e033c2f8"
+    },
+    {
+      "block_id": "page-0406-block-0075",
+      "order": 75,
+      "text": "abnormalities\n",
+      "bbox": [
+        325.969970703125,
+        235.62083435058594,
+        334.6774597167969,
+        278.535888671875
+      ],
+      "text_sha256": "42e7a58f5056e8d12f9f61cc89485cdd04c8d21364ae01768c91b0958fd993e3"
+    },
+    {
+      "block_id": "page-0406-block-0076",
+      "order": 76,
+      "text": "Has not been evaluated \n",
+      "bbox": [
+        305.96746826171875,
+        144.25587463378906,
+        314.6749572753906,
+        221.77587890625
+      ],
+      "text_sha256": "0a70ee24f709a9ec49d6dcd89ef3994c64bd996bbf7f6caeb60736c30c3c61a7"
+    },
+    {
+      "block_id": "page-0406-block-0077",
+      "order": 77,
+      "text": "in post-MI patients. \n",
+      "bbox": [
+        315.9649658203125,
+        157.5983428955078,
+        324.6724548339844,
+        221.77587890625
+      ],
+      "text_sha256": "e3d1b78bdc140deb0bca557272047a6bce624594e6898a7f489b202403d10b1f"
+    },
+    {
+      "block_id": "page-0406-block-0078",
+      "order": 78,
+      "text": "Caution advised\n",
+      "bbox": [
+        325.96246337890625,
+        170.5133514404297,
+        334.6699523925781,
+        221.77587890625
+      ],
+      "text_sha256": "cb3d8209b348d5386c7cde1f5f5f754626756d397bdc925929a389c2d1b9df2c"
+    },
+    {
+      "block_id": "page-0406-block-0079",
+      "order": 79,
+      "text": "Evidence for \n",
+      "bbox": [
+        305.9599609375,
+        96.14339447021484,
+        314.6674499511719,
+        137.39337158203125
+      ],
+      "text_sha256": "c9173808755cc47a7edccae451ee6887ab0f3ae9a45e730a72e73228535b7705"
+    },
+    {
+      "block_id": "page-0406-block-0080",
+      "order": 80,
+      "text": "arrhythmogenic potential \n",
+      "bbox": [
+        315.95745849609375,
+        54.473533630371094,
+        324.6649475097656,
+        137.39337158203125
+      ],
+      "text_sha256": "fb515bd7329048d4c2d574e1600a2a2b9dd8b44b32a6123cb0042782d2ebd8eb"
+    },
+    {
+      "block_id": "page-0406-block-0081",
+      "order": 81,
+      "text": "is slim, but avoid in \n",
+      "bbox": [
+        325.9549560546875,
+        74.0484848022461,
+        334.6624450683594,
+        137.39337158203125
+      ],
+      "text_sha256": "5de9a853986bc2c01c0aa7ad44cdd7068aa0aa4e46bfce7140f1233a7e089cd9"
+    },
+    {
+      "block_id": "page-0406-block-0082",
+      "order": 82,
+      "text": "coronary disease\n",
+      "bbox": [
+        335.95245361328125,
+        84.60845947265625,
+        344.6599426269531,
+        137.39337158203125
+      ],
+      "text_sha256": "952e4de6cc5b9b3b7041b9d97b504a69e15318f1b0fb2f1210312998e74dd53a"
+    },
+    {
+      "block_id": "page-0406-block-0083",
+      "order": 83,
+      "text": "Vilazodone57–59\nIncreased in \n",
+      "bbox": [
+        360.7999267578125,
+        512.1658935546875,
+        369.7349853515625,
+        629.5433959960938
+      ],
+      "text_sha256": "55e5acb552ef19b1286252aaa995b3c417f092a9e24ba59877f00c7ec270a213"
+    },
+    {
+      "block_id": "page-0406-block-0084",
+      "order": 84,
+      "text": "overdose\nIncreased in overdose\nNo effect, even in \n",
+      "bbox": [
+        361.0274963378906,
+        353.9158935546875,
+        379.73248291015625,
+        552.035888671875
+      ],
+      "text_sha256": "c381f0a66ed5be1b69e7d7fb6a8776e135b5f5e03f402d142073a9aa2b17805a"
+    },
+    {
+      "block_id": "page-0406-block-0085",
+      "order": 85,
+      "text": "overdose\nNo reports, even \n",
+      "bbox": [
+        361.0274963378906,
+        288.4783935546875,
+        379.73248291015625,
+        412.535888671875
+      ],
+      "text_sha256": "64fffd3cf7200a2b474dbd34d6c62b346bceb851f73ffcc7a3460dcbce4226af"
+    },
+    {
+      "block_id": "page-0406-block-0086",
+      "order": 86,
+      "text": "in overdose\nNo effect\nNo specific \n",
+      "bbox": [
+        361.0274963378906,
+        185.1058807373047,
+        379.73248291015625,
+        343.35589599609375
+      ],
+      "text_sha256": "644e560554112919f7397540faa6cc7a4488f0902fef077e8c0f1d300ac8e748"
+    },
+    {
+      "block_id": "page-0406-block-0087",
+      "order": 87,
+      "text": "contra-indication\nProbably no effect on CV \n",
+      "bbox": [
+        361.0274963378906,
+        55.145896911621094,
+        379.73248291015625,
+        221.77337646484375
+      ],
+      "text_sha256": "119e306cfa24c6f4037782584ed9973cbf3f31a8cb6a20ddfffec1c18fb95571"
+    },
+    {
+      "block_id": "page-0406-block-0088",
+      "order": 88,
+      "text": "function in clinical doses\n",
+      "bbox": [
+        371.0249938964844,
+        59.46604537963867,
+        379.73248291015625,
+        137.390869140625
+      ],
+      "text_sha256": "d88842e001a3163ddd903671e4ef119a6ef3da46c8f6430f6c14c6e529d56c11"
+    },
+    {
+      "block_id": "page-0406-block-0089",
+      "order": 89,
+      "text": "Vortioxetine60–62\nNo effect\nNo effect\nNo effect\nNo effect\nNo effect\nNo specific \n",
+      "bbox": [
+        385.8674621582031,
+        185.1059112548828,
+        394.760009765625,
+        629.5408935546875
+      ],
+      "text_sha256": "79d64e3e22d4396a7c8d6ccb5aff851806c856f0a53746883303986cfd3153c6"
+    },
+    {
+      "block_id": "page-0406-block-0090",
+      "order": 90,
+      "text": "contra-indication\nTrial data suggest no effect \n",
+      "bbox": [
+        386.0525207519531,
+        49.040977478027344,
+        404.75750732421875,
+        221.77337646484375
+      ],
+      "text_sha256": "7d3299d017f218180a6c13bddde2d731d36fa983706fcc7616379ef944a59974"
+    },
+    {
+      "block_id": "page-0406-block-0091",
+      "order": 91,
+      "text": "on QTc or on coagulation \n",
+      "bbox": [
+        396.0500183105469,
+        54.448509216308594,
+        404.75750732421875,
+        137.390869140625
+      ],
+      "text_sha256": "71070684561ef29ede1750f390c9f75cc38ae063d55fed29799fe1630604ec9e"
+    },
+    {
+      "block_id": "page-0406-block-0092",
+      "order": 92,
+      "text": "parameters\n",
+      "bbox": [
+        406.0475158691406,
+        101.56339263916016,
+        414.7550048828125,
+        137.390869140625
+      ],
+      "text_sha256": "850ae8b18e42644cf9963acf6894ce6125f19b43f9fc07d868582337b305d477"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

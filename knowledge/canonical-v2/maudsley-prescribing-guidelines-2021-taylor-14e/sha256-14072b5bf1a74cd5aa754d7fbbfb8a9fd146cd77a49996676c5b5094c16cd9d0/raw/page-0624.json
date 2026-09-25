@@ -1,0 +1,311 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0624",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 624,
+  "source_page_index": 623,
+  "source_page_display": 624,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Prescribing in older people    603\nCHAPTER  6\nSome drugs inhibit or induce hepatic metabolising enzymes. Important examples \ninclude some SSRIs, erythromycin and carbamazepine. This may lead to the metabolism \nof another drug being altered. Many drug interactions occur through this mechanism. \nDetails of individual interactions and their consequences can be found in the BNF online \nfor individual drugs.9 Most can be predicted by a sound knowledge of pharmacology.\nReducing drug-related risk in older people\nAdherence to the following principles will reduce drug-related morbidity and mortality:\n■\n■Use drugs only when absolutely necessary.\n■\n■Avoid, if possible, drugs that block α1 adrenoceptors, have anticholinergic adverse effects, are \nvery sedative, have a long half-life or are potent inhibitors of hepatic metabolising enzymes.\n■\n■Start with a low dose and increase slowly but do not undertreat. Some drugs still require the full \nadult dose.\n■\n■Try not to treat the adverse effects of one drug with another drug. Find a better-tolerated alternative.\n■\n■Keep therapy simple; that is, once daily administration whenever possible.\nAdministering medicines in foodstuffs10–12\nSometimes patients may refuse treatment with medicines, even when such treatment is \nthought to be in their best interests. In the UK, where the patient has a mental illness or has \ncapacity, the Mental Health Act (MHA) should be used, but if the patient lacks capacity, \nthis option may not be desirable. Medicines should never be administered covertly to \nelderly patients with dementia without a full discussion with the Multi-Disciplinary Team \n(MDT) and the patient’s relatives. The outcome of this discussion should be clearly docu-\nmented in the patient’s clinical notes. Medicines should be administered covertly only if the \nclear and express purpose is to reduce suffering for the patient. (For further information, \nsee section ‘Covert administration of medicines within food and drink’ in this chapter.)\nFor advice on dosing of psychotropics in the elderly, see section ‘A guide to medica-\ntion doses of commonly used psychotropics in older adults’ in this chapter.\nReferences\n\t 1.\t Royal College of Physicians. Medication for older people. Summary and recommendations of a report of a working party of The Royal \nCollege of Physicians. J R Coll Physicians Lond 1997; 31:254–257.\n\t 2.\t Bowie MW, et al. Pharmacodynamics in older adults: a review. Am J Geriatr Pharmacother 2007; 5:263–303.\n\t 3.\t Baldwin R, et al. Management of depression in later life. Adv Psychiatr Treatment 2004; 10:131–139.\n\t 4.\t Munro J, et al. Active monitoring of 12,760 clozapine recipients in the UK and Ireland. Beyond Pharmacovigilance. Br J Psychiatry 1999; \n175:576–580.\n\t 5.\t O’Connor DW, et al. The safety and tolerability of clozapine in aged patients: a retrospective clinical file review. World J Biol Psychiatry 2010; \n11:788–791.\n\t 6.\t Douglas IJ, et al. Exposure to antipsychotics and risk of stroke: self-controlled case series study. BMJ 2008; 337:a1227.\n\t 7.\t Mayersohn M. Special pharmacokinetic considerations in the elderly. In W Evans, J Schentage, J Jusko, eds. Applied pharmacokinetics: \nprinciples of therapeutic drug monitoring. Vancouver, WA: Applied Therapeutics Inc, 1992.\n\t 8.\t Morriss R, et al. Lithium and eGFR: a new routinely available tool for the prevention of chronic kidney disease. Br J Psychiatry 2008; \n193:93–95.\n\t 9.\t National Institute for Health and Care Excellence. British National Formulary (BNF). 2020; https://bnf.nice.org.uk\n\t10.\t Royal College of Psychiatrists. College statement on covert administration of medicines. Psychiatric Bulletin 2004; 28:385–386.\n\t11.\t Haw C, et al. Administration of medicines in food and drink: a study of older inpatients with severe mental illness. Int Psychogeriatr 2010; \n22:409–416.\n\t12.\t Haw C, et al. Covert administration of medication to older adults: a review of the literature and published studies. J Psychiatr Ment Health \nNurs 2010; 17:761–768.\n",
+  "raw_text_sha256": "694624dd9fa748add3d243d1a3410f0f2dc691b9643ad21660f4ed030ec46a22",
+  "coordinates_sha256": "175d53d8e413e3ca0e94e603b469147db1f9e9870edab51bd0805c267209bb1e",
+  "block_sequence_sha256": "82faa7b74a84a4aa479e4587c565bf6be2adf568c3d36aa3dcc65b91e119c511",
+  "blocks": [
+    {
+      "block_id": "page-0624-block-0000",
+      "order": 0,
+      "text": "Prescribing in older people    603\n",
+      "bbox": [
+        281.576904296875,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "53a09eb67e4a87ea5add204ef9c34ca6faf927da1f25d8d4c13a8437fda65fdb"
+    },
+    {
+      "block_id": "page-0624-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        454.4096984863281,
+        405.35260009765625,
+        463.88970947265625,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0624-block-0002",
+      "order": 2,
+      "text": "Some drugs inhibit or induce hepatic metabolising enzymes. Important examples \ninclude some SSRIs, erythromycin and carbamazepine. This may lead to the metabolism \nof another drug being altered. Many drug interactions occur through this mechanism. \nDetails of individual interactions and their consequences can be found in the BNF online \nfor individual drugs.9 Most can be predicted by a sound knowledge of pharmacology.\n",
+      "bbox": [
+        47.999969482421875,
+        62.5504150390625,
+        422.7999267578125,
+        122.27041625976562
+      ],
+      "text_sha256": "503ec4d5fd758cab069560387144d9a6e6634e73ffd3ab51d811209c5637fb9a"
+    },
+    {
+      "block_id": "page-0624-block-0003",
+      "order": 3,
+      "text": "Reducing drug-related risk in older people\n",
+      "bbox": [
+        55.5,
+        145.29261779785156,
+        223.96151733398438,
+        155.3651123046875
+      ],
+      "text_sha256": "e3f7ab66183207e2000ff1ca258114489a0cc0fc603910d18cbf7ed9cd4b610a"
+    },
+    {
+      "block_id": "page-0624-block-0004",
+      "order": 4,
+      "text": "Adherence to the following principles will reduce drug-related morbidity and mortality:\n",
+      "bbox": [
+        55.5,
+        164.82559204101562,
+        369.5665588378906,
+        174.694091796875
+      ],
+      "text_sha256": "b910837125a9d7a8d6e7371fdc87fb5a8479a93cd146f230f8c377d15b4baef9"
+    },
+    {
+      "block_id": "page-0624-block-0005",
+      "order": 5,
+      "text": "■\n■Use drugs only when absolutely necessary.\n",
+      "bbox": [
+        55.499900817871094,
+        177.82159423828125,
+        217.19552612304688,
+        187.69009399414062
+      ],
+      "text_sha256": "025d5ccf8d9b55f67aebef08e395f2a6dfd428dd8a77325c40615dcf8b828898"
+    },
+    {
+      "block_id": "page-0624-block-0006",
+      "order": 6,
+      "text": "■\n■Avoid, if possible, drugs that block α1 adrenoceptors, have anticholinergic adverse effects, are \n",
+      "bbox": [
+        55.499900817871094,
+        186.66558837890625,
+        404.3397521972656,
+        199.6344757080078
+      ],
+      "text_sha256": "70b19ac4baacae192917e134b82d353e73a1d045b663cbce263109153ccc7e90"
+    },
+    {
+      "block_id": "page-0624-block-0007",
+      "order": 7,
+      "text": "very sedative, have a long half-life or are potent inhibitors of hepatic metabolising enzymes.\n",
+      "bbox": [
+        63.99969482421875,
+        197.81759643554688,
+        395.8398132324219,
+        207.68609619140625
+      ],
+      "text_sha256": "4f73590059095643222b34f304c72ef6166d5b604214b0d067db677f2a2d5da8"
+    },
+    {
+      "block_id": "page-0624-block-0008",
+      "order": 8,
+      "text": "■\n■Start with a low dose and increase slowly but do not undertreat. Some drugs still require the full \n",
+      "bbox": [
+        55.499900817871094,
+        207.82159423828125,
+        414.3106689453125,
+        217.69009399414062
+      ],
+      "text_sha256": "177eadbc49caf2187498a41416fbde0e6bd077dff61bf2c9979cfe1281a03de7"
+    },
+    {
+      "block_id": "page-0624-block-0009",
+      "order": 9,
+      "text": "adult dose.\n",
+      "bbox": [
+        64.0,
+        217.81759643554688,
+        104.15399169921875,
+        227.68609619140625
+      ],
+      "text_sha256": "e0e4cbd17137ae60983f8b9ce591aa78c0c1eae05bced054631c9f1a1bd012a2"
+    },
+    {
+      "block_id": "page-0624-block-0010",
+      "order": 10,
+      "text": "■\n■Try not to treat the adverse effects of one drug with another drug. Find a better-tolerated alternative.\n",
+      "bbox": [
+        55.499900817871094,
+        227.82159423828125,
+        412.49981689453125,
+        237.69009399414062
+      ],
+      "text_sha256": "b453d936fd19c741783e713ffda7c7a1362a1c43673c9b663aad769109364900"
+    },
+    {
+      "block_id": "page-0624-block-0011",
+      "order": 11,
+      "text": "■\n■Keep therapy simple; that is, once daily administration whenever possible.\n",
+      "bbox": [
+        55.499900817871094,
+        237.82159423828125,
+        331.3080749511719,
+        247.69009399414062
+      ],
+      "text_sha256": "d7a60924ad803955d5a4f18947ccb3d0eee70c7f6eddae0a147c8ab6d00dc3f3"
+    },
+    {
+      "block_id": "page-0624-block-0012",
+      "order": 12,
+      "text": "Administering medicines in foodstuffs10–12\n",
+      "bbox": [
+        48.0,
+        269.6387023925781,
+        262.6635437011719,
+        282.6737060546875
+      ],
+      "text_sha256": "cebbfc16b34bf0a4a2a8d06d595b8c835f860e3fbafa3cdde9f8b6fc1b2b452a"
+    },
+    {
+      "block_id": "page-0624-block-0013",
+      "order": 13,
+      "text": "Sometimes patients may refuse treatment with medicines, even when such treatment is \nthought to be in their best interests. In the UK, where the patient has a mental illness or has \ncapacity, the Mental Health Act (MHA) should be used, but if the patient lacks capacity, \nthis option may not be desirable. Medicines should never be administered covertly to \nelderly patients with dementia without a full discussion with the Multi-Disciplinary Team \n(MDT) and the patient’s relatives. The outcome of this discussion should be clearly docu-\nmented in the patient’s clinical notes. Medicines should be administered covertly only if the \nclear and express purpose is to reduce suffering for the patient. (For further information, \nsee section ‘Covert administration of medicines within food and drink’ in this chapter.)\n",
+      "bbox": [
+        48.0,
+        288.48370361328125,
+        422.81005859375,
+        396.2037048339844
+      ],
+      "text_sha256": "edaa45697af6e68eb987b9f9267344eb55d5238f40934ad4756014a245c63b10"
+    },
+    {
+      "block_id": "page-0624-block-0014",
+      "order": 14,
+      "text": "For advice on dosing of psychotropics in the elderly, see section ‘A guide to medica-\ntion doses of commonly used psychotropics in older adults’ in this chapter.\n",
+      "bbox": [
+        48.0,
+        396.48370361328125,
+        420.04998779296875,
+        420.2037048339844
+      ],
+      "text_sha256": "bcc020efeb34682720ad353b99db24b4d630e4f8052bb47b5b5e5ae2d755f98e"
+    },
+    {
+      "block_id": "page-0624-block-0015",
+      "order": 15,
+      "text": "References\n",
+      "bbox": [
+        48.0,
+        437.6387023925781,
+        104.03400421142578,
+        450.6737060546875
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0624-block-0016",
+      "order": 16,
+      "text": "\t 1.\t Royal College of Physicians. Medication for older people. Summary and recommendations of a report of a working party of The Royal \n",
+      "bbox": [
+        48.0,
+        455.75970458984375,
+        421.6979675292969,
+        462.7917175292969
+      ],
+      "text_sha256": "b10a03c4c3c70bb2ffae90c52304b528cdeae099d7fd88e8e8c30ddc55ea761c"
+    },
+    {
+      "block_id": "page-0624-block-0017",
+      "order": 17,
+      "text": "College of Physicians. J R Coll Physicians Lond 1997; 31:254–257.\n\t 2.\t Bowie MW, et al. Pharmacodynamics in older adults: a review. Am J Geriatr Pharmacother 2007; 5:263–303.\n\t 3.\t Baldwin R, et al. Management of depression in later life. Adv Psychiatr Treatment 2004; 10:131–139.\n\t 4.\t Munro J, et al. Active monitoring of 12,760 clozapine recipients in the UK and Ireland. Beyond Pharmacovigilance. Br J Psychiatry 1999; \n",
+      "bbox": [
+        48.00600051879883,
+        464.6156921386719,
+        421.6441650390625,
+        498.7917175292969
+      ],
+      "text_sha256": "b95fff56fbd6119fc2cffa91108adb38b81056366f2d060c3062386fc0fafa3b"
+    },
+    {
+      "block_id": "page-0624-block-0018",
+      "order": 18,
+      "text": "175:576–580.\n\t 5.\t O’Connor DW, et al. The safety and tolerability of clozapine in aged patients: a retrospective clinical file review. World J Biol Psychiatry 2010; \n",
+      "bbox": [
+        48.02399826049805,
+        500.6156921386719,
+        421.6438903808594,
+        516.7916870117188
+      ],
+      "text_sha256": "e7311180ee41facf7b75c117dfdbd7354346984da9764df7675d084a173dd668"
+    },
+    {
+      "block_id": "page-0624-block-0019",
+      "order": 19,
+      "text": "11:788–791.\n\t 6.\t Douglas IJ, et al. Exposure to antipsychotics and risk of stroke: self-controlled case series study. BMJ 2008; 337:a1227.\n\t 7.\t Mayersohn M. Special pharmacokinetic considerations in the elderly. In W Evans, J Schentage, J Jusko, eds. Applied pharmacokinetics: \n",
+      "bbox": [
+        48.029998779296875,
+        518.61572265625,
+        421.7099914550781,
+        543.7916870117188
+      ],
+      "text_sha256": "78a61e707ccc9bc66cfe9a772157ab3463c476d789980aa3bedb9fb426357b44"
+    },
+    {
+      "block_id": "page-0624-block-0020",
+      "order": 20,
+      "text": "principles of therapeutic drug monitoring. Vancouver, WA: Applied Therapeutics Inc, 1992.\n\t 8.\t Morriss R, et al. Lithium and eGFR: a new routinely available tool for the prevention of chronic kidney disease. Br J Psychiatry 2008; \n",
+      "bbox": [
+        48.04199981689453,
+        545.7597045898438,
+        421.721923828125,
+        561.7916870117188
+      ],
+      "text_sha256": "41b605d50310857119991f3dc909a38de7a694e384c5b4d1d11cae99352019cb"
+    },
+    {
+      "block_id": "page-0624-block-0021",
+      "order": 21,
+      "text": "193:93–95.\n\t 9.\t National Institute for Health and Care Excellence. British National Formulary (BNF). 2020; https://bnf.nice.org.uk\n\t10.\t Royal College of Psychiatrists. College statement on covert administration of medicines. Psychiatric Bulletin 2004; 28:385–386.\n\t11.\t Haw C, et al. Administration of medicines in food and drink: a study of older inpatients with severe mental illness. Int Psychogeriatr 2010; \n",
+      "bbox": [
+        48.04800033569336,
+        563.61572265625,
+        421.692138671875,
+        597.7916870117188
+      ],
+      "text_sha256": "a910c3682eaeb5603fb973751c10eefb67cdfe7f558bafe0b3920e75428d7369"
+    },
+    {
+      "block_id": "page-0624-block-0022",
+      "order": 22,
+      "text": "22:409–416.\n\t12.\t Haw C, et al. Covert administration of medication to older adults: a review of the literature and published studies. J Psychiatr Ment Health \n",
+      "bbox": [
+        48.066001892089844,
+        599.61572265625,
+        421.7760314941406,
+        615.7916870117188
+      ],
+      "text_sha256": "b74f33f30928d424c0f72815379d4a55931a2c411c5d0352e6ba352b11049ef4"
+    },
+    {
+      "block_id": "page-0624-block-0023",
+      "order": 23,
+      "text": "Nurs 2010; 17:761–768.\n",
+      "bbox": [
+        59.06999969482422,
+        617.61572265625,
+        123.37197875976562,
+        624.7916870117188
+      ],
+      "text_sha256": "95237b9e2911227f8727d175f6ae6eac22c75515594dfacead9f6d5ee37fe9b3"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

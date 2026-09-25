@@ -1,0 +1,371 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0064",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 64,
+  "source_page_index": 63,
+  "source_page_display": 64,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    43\nCHAPTER 1\nRelapse or acute exacerbation of schizophrenia\n(full adherence to medication confirmed)\nNotes\n■\n■First-generation drugs may be slightly less efficacious than some SGAs.13,14 FGAs should probably be reserved \nfor second-line use (or not used at all) because of the possibility of poorer outcome compared with SGAs \nand the higher risk of movement disorder, particularly tardive dyskinesia15,16\n■\n■Choice should be based largely on comparative adverse effect profile and relative toxicity. Patients seem able \nto make informed choices based on these factors,17,18 although in practice they have in the past only very \nrarely been involved in drug choice.19 Allowing patients informed choice seems to improve outcomes.1\n■\n■Where there is prior treatment failure (but not confirmed treatment refractoriness), olanzapine or risperidone \nmay be better options than quetiapine.20 Olanzapine, because of the wealth of evidence suggesting slight \nsuperiority over other antipsychotics, should probably be tried before clozapine unless contra-indicated.21–24 \nNote, however, that one RCT6 found continuing with amisulpride was as effective as switching to \nolanzapine.\n■\n■Before considering clozapine, ensure adherence to prior therapy using depot/LAI formulation or plasma drug \nlevel monitoring of oral treatment. Most non-adherence is undetected in practice,23,25 and apparent \ntreatment resistance may simply be a result of inadequate treatment.26\n■\n■Time to response is increased, and total response decreased in exacerbation of multi-episode schizophrenia27\n■\n■Where there is confirmed treatment resistance (failure to respond to adequate trials of at least two \nantipsychotic medications), evidence supporting the use of clozapine (and only clozapine) is \noverwhelming28,29\nInvestigate social or psychological precipitants\nProvide appropriate support and/or therapy\nContinue usual drug treatment\nAdd short-term sedative\nor\nSwitch to a different, more acceptable antipsychotic\nmedication if appropriate\nDiscuss medication choice with patient and/or carer\nAssess over 6–8 weeks\nSwitch to clozapine\nAcute drug treatment required\nTreatment Algorithm\nTreatment ineffective\n",
+  "raw_text_sha256": "516434b9b934b9e6dbde1a6cb8463851f53ac8662e2f4f0c0d08a43716ee391b",
+  "coordinates_sha256": "9cafacc9f9c3928596e9e9f7588754e08cc49ea5b7b058b967debf3775695806",
+  "block_sequence_sha256": "aaa840be18c416a6ae89602192e5c959b708c8db2baf910856629eb4ed797550",
+  "blocks": [
+    {
+      "block_id": "page-0064-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    43\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "df5b7d1fcdc78be8f30ee8a0c1870a935593fb771385e9e1cc37b46607adba2c"
+    },
+    {
+      "block_id": "page-0064-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0064-block-0002",
+      "order": 2,
+      "text": "Relapse or acute exacerbation of schizophrenia\n",
+      "bbox": [
+        47.99909973144531,
+        62.31442642211914,
+        291.6820983886719,
+        75.34942626953125
+      ],
+      "text_sha256": "5f1abfa349aa74c23fefede03e9d1117c1470c980df368e93e1e090657fa0a5e"
+    },
+    {
+      "block_id": "page-0064-block-0003",
+      "order": 3,
+      "text": "(full adherence to medication confirmed)\n",
+      "bbox": [
+        47.99909973144531,
+        81.159423828125,
+        224.09909057617188,
+        92.87942504882812
+      ],
+      "text_sha256": "3e1f268f36a75f8c2a1bb8ea7d4513be100900c38c200989b1df6e8177320fa1"
+    },
+    {
+      "block_id": "page-0064-block-0004",
+      "order": 4,
+      "text": "Notes\n",
+      "bbox": [
+        54.94409942626953,
+        397.54888916015625,
+        75.35910034179688,
+        406.4364013671875
+      ],
+      "text_sha256": "38732073f309589131fec63f417896537e63d27fc29fcf7c60d5f47379f0887a"
+    },
+    {
+      "block_id": "page-0064-block-0005",
+      "order": 5,
+      "text": "■\n■First-generation drugs may be slightly less efficacious than some SGAs.13,14 FGAs should probably be reserved \n",
+      "bbox": [
+        54.944000244140625,
+        407.7289123535156,
+        413.2662048339844,
+        416.4364013671875
+      ],
+      "text_sha256": "8ee22e59cbd0b3a805c650f0f4cfff01554e2281fb5dc0a1eff5c7884a80c617"
+    },
+    {
+      "block_id": "page-0064-block-0006",
+      "order": 6,
+      "text": "for second-line use (or not used at all) because of the possibility of poorer outcome compared with SGAs \nand the higher risk of movement disorder, particularly tardive dyskinesia15,16\n",
+      "bbox": [
+        63.94612121582031,
+        417.7264099121094,
+        400.8237609863281,
+        436.431396484375
+      ],
+      "text_sha256": "d3d91ff1537b42243d40754648901af51ce9fb0ce9119dc295e1a80c5272a0ce"
+    },
+    {
+      "block_id": "page-0064-block-0007",
+      "order": 7,
+      "text": "■\n■Choice should be based largely on comparative adverse effect profile and relative toxicity. Patients seem able \n",
+      "bbox": [
+        54.944000244140625,
+        437.7289123535156,
+        412.0265808105469,
+        446.4364013671875
+      ],
+      "text_sha256": "d807ddeeb83911c4e1e602bbcf842d8aef2e68f0bb15640837a5429aaa930aee"
+    },
+    {
+      "block_id": "page-0064-block-0008",
+      "order": 8,
+      "text": "to make informed choices based on these factors,17,18 although in practice they have in the past only very \nrarely been involved in drug choice.19 Allowing patients informed choice seems to improve outcomes.1\n",
+      "bbox": [
+        63.94409942626953,
+        447.7264099121094,
+        401.1701354980469,
+        466.4364013671875
+      ],
+      "text_sha256": "bed63399d74f1935d97f63f06416bd56e0833d8570230494f8bb39e75dcd3263"
+    },
+    {
+      "block_id": "page-0064-block-0009",
+      "order": 9,
+      "text": "■\n■Where there is prior treatment failure (but not confirmed treatment refractoriness), olanzapine or risperidone \n",
+      "bbox": [
+        54.944000244140625,
+        467.7289123535156,
+        413.1441955566406,
+        476.4364013671875
+      ],
+      "text_sha256": "3afacc0e5a267c8c1cf1cc5ad67bb1f0a63788ff1a8bead43fd8bfa96d7d86e6"
+    },
+    {
+      "block_id": "page-0064-block-0010",
+      "order": 10,
+      "text": "may be better options than quetiapine.20 Olanzapine, because of the wealth of evidence suggesting slight \nsuperiority over other antipsychotics, should probably be tried before clozapine unless contra-indicated.21–24 \nNote, however, that one RCT6 found continuing with amisulpride was as effective as switching to \nolanzapine.\n",
+      "bbox": [
+        63.94071960449219,
+        477.7264099121094,
+        407.7032165527344,
+        516.4338989257812
+      ],
+      "text_sha256": "cf2cd755f8aa353e8043d4b98554477d6fb71a132bbbaf430def5b5b3dfe46dc"
+    },
+    {
+      "block_id": "page-0064-block-0011",
+      "order": 11,
+      "text": "■\n■Before considering clozapine, ensure adherence to prior therapy using depot/LAI formulation or plasma drug \n",
+      "bbox": [
+        54.944000244140625,
+        517.7288818359375,
+        412.3567810058594,
+        526.4364013671875
+      ],
+      "text_sha256": "4a37b316d911c4f78d56629979cc603a85a01b8a01a9d334b0e63c30b46e87c2"
+    },
+    {
+      "block_id": "page-0064-block-0012",
+      "order": 12,
+      "text": "level monitoring of oral treatment. Most non-adherence is undetected in practice,23,25 and apparent \ntreatment resistance may simply be a result of inadequate treatment.26\n",
+      "bbox": [
+        63.94409942626953,
+        527.7263793945312,
+        382.8463439941406,
+        546.4338989257812
+      ],
+      "text_sha256": "83ec49945834b73343c5af60b4812eac624414e2710ae1df8a97b0d812c06a74"
+    },
+    {
+      "block_id": "page-0064-block-0013",
+      "order": 13,
+      "text": "■\n■Time to response is increased, and total response decreased in exacerbation of multi-episode schizophrenia27\n",
+      "bbox": [
+        54.944000244140625,
+        547.7288818359375,
+        410.0229187011719,
+        556.4364013671875
+      ],
+      "text_sha256": "0596382ba91fb5c312a23eac5e2663f4e981a11293c4c2a1928238205a7470be"
+    },
+    {
+      "block_id": "page-0064-block-0014",
+      "order": 14,
+      "text": "■\n■Where there is confirmed treatment resistance (failure to respond to adequate trials of at least two \n",
+      "bbox": [
+        54.944000244140625,
+        557.7288818359375,
+        380.6466979980469,
+        566.4364013671875
+      ],
+      "text_sha256": "43e7d8fbf5db6f5f14cc0f5bdc6f77736a421c2a6a764038fa4bba5270e33b30"
+    },
+    {
+      "block_id": "page-0064-block-0015",
+      "order": 15,
+      "text": "antipsychotic medications), evidence supporting the use of clozapine (and only clozapine) is \noverwhelming28,29\n",
+      "bbox": [
+        63.94409942626953,
+        567.7263793945312,
+        357.7416687011719,
+        586.431396484375
+      ],
+      "text_sha256": "4efa00b6a259a170fed86bb215bb257b5007f3c73d04cf83360128a9e46791ba"
+    },
+    {
+      "block_id": "page-0064-block-0016",
+      "order": 16,
+      "text": "Investigate social or psychological precipitants\n",
+      "bbox": [
+        161.8896942138672,
+        140.22433471679688,
+        319.44232177734375,
+        149.44183349609375
+      ],
+      "text_sha256": "456ec4560bfed8f0be4f52f38078330157bd0ad42d5a752aad6739deeb308524"
+    },
+    {
+      "block_id": "page-0064-block-0017",
+      "order": 17,
+      "text": "Provide appropriate support and/or therapy\n",
+      "bbox": [
+        167.73219299316406,
+        152.22433471679688,
+        313.5997314453125,
+        161.44183349609375
+      ],
+      "text_sha256": "4e10a85444b6411f458326d151e068eeb024de3bc55dfeb3646548feafcc3a12"
+    },
+    {
+      "block_id": "page-0064-block-0018",
+      "order": 18,
+      "text": "Continue usual drug treatment\n",
+      "bbox": [
+        189.81219482421875,
+        164.22433471679688,
+        291.5197448730469,
+        173.44183349609375
+      ],
+      "text_sha256": "d4e4f59f7e4e951cf561b78cb4a3be11f8d79923a6576311dff591bd238f04fe"
+    },
+    {
+      "block_id": "page-0064-block-0019",
+      "order": 19,
+      "text": "Add short-term sedative\n",
+      "bbox": [
+        200.24029541015625,
+        234.22442626953125,
+        281.0903625488281,
+        243.44192504882812
+      ],
+      "text_sha256": "2d649eec943c19c558c32d9684490f1e9fac8f1a38c21c5c88be5b5f706e9091"
+    },
+    {
+      "block_id": "page-0064-block-0020",
+      "order": 20,
+      "text": "or\n",
+      "bbox": [
+        237.3352813720703,
+        247.221923828125,
+        244.00279235839844,
+        256.4394226074219
+      ],
+      "text_sha256": "a1c74ae37f82d3ee9b65439846c1ae28413a6070182ce475293aefa165d2b65f"
+    },
+    {
+      "block_id": "page-0064-block-0021",
+      "order": 21,
+      "text": "Switch to a different, more acceptable antipsychotic\n",
+      "bbox": [
+        153.5527801513672,
+        260.21942138671875,
+        327.7929382324219,
+        269.4369201660156
+      ],
+      "text_sha256": "6b64f99785890e5c904d8d6a93efbe8ac62a31ad498851191cc008c6e56e1bb4"
+    },
+    {
+      "block_id": "page-0064-block-0022",
+      "order": 22,
+      "text": "medication if appropriate\n",
+      "bbox": [
+        198.5752716064453,
+        269.21942138671875,
+        282.7627868652344,
+        278.4369201660156
+      ],
+      "text_sha256": "cb169c57a54f2badb906f720df2cfcfa613da2d1cd5967547de54931f48dfe26"
+    },
+    {
+      "block_id": "page-0064-block-0023",
+      "order": 23,
+      "text": "Discuss medication choice with patient and/or carer\n",
+      "bbox": [
+        153.5527801513672,
+        282.2169189453125,
+        327.785400390625,
+        291.4344177246094
+      ],
+      "text_sha256": "adc7b48538a9082603fe0404b5780907fa92c0fe8f37fc79697da4565d38ac33"
+    },
+    {
+      "block_id": "page-0064-block-0024",
+      "order": 24,
+      "text": "Assess over 6–8 weeks\n",
+      "bbox": [
+        201.4852752685547,
+        295.21441650390625,
+        279.8453369140625,
+        304.4319152832031
+      ],
+      "text_sha256": "54440cf36f7b97018206f62fd2fac12439262ecb6b0d5d8e1601da46a81759a8"
+    },
+    {
+      "block_id": "page-0064-block-0025",
+      "order": 25,
+      "text": "Switch to clozapine\n",
+      "bbox": [
+        207.32089233398438,
+        365.8625183105469,
+        274.0108947753906,
+        375.08001708984375
+      ],
+      "text_sha256": "6189b14d1f7a7ca4546edc9c58dedbc218273bf0cc7b129959fd0b556201e726"
+    },
+    {
+      "block_id": "page-0064-block-0026",
+      "order": 26,
+      "text": "Acute drug treatment required\n",
+      "bbox": [
+        246.6208953857422,
+        194.52249145507812,
+        354.5483093261719,
+        203.45005798339844
+      ],
+      "text_sha256": "4438ceadd22e46978bb6e6658ab2f4b393c7870da72dca1068b72932534c834c"
+    },
+    {
+      "block_id": "page-0064-block-0027",
+      "order": 27,
+      "text": "Treatment Algorithm\n",
+      "bbox": [
+        197.41319274902344,
+        119.16024017333984,
+        285.9192199707031,
+        129.8702392578125
+      ],
+      "text_sha256": "7df1ee1827c93f8439c7c42898ca6700842b4a3f84fcedf86cfb164cafd0a09a"
+    },
+    {
+      "block_id": "page-0064-block-0028",
+      "order": 28,
+      "text": "Treatment ineffective\n",
+      "bbox": [
+        246.6240997314453,
+        323.5229187011719,
+        322.0591735839844,
+        332.4479064941406
+      ],
+      "text_sha256": "17b424fb96d9e76c1b97b16eb589c6322157e41a6cc7cfe05a985fdc94bd9dad"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

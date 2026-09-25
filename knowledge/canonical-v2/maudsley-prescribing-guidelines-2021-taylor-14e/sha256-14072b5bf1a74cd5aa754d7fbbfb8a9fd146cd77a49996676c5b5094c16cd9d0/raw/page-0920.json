@@ -1,0 +1,527 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0920",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 920,
+  "source_page_index": 919,
+  "source_page_display": 920,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Miscellany    899\nCHAPTER 14\nStrategies for improving adherence\nSystematic reviews suggest that patient-specific interventions are more likely to enhance \nadherence in patients with serious mental disorders.23 In addition, NICE has reviewed \nthe evidence for adherence over a range of health conditions. They conclude that no \nspecific intervention can be recommended for all patients.\nNote that few studies in this area specifically recruited non-adherent patients (the \nrefusal rate in such patients is likely to be high) and the specific barriers to adherence \nare rarely identified. The small effect size seen in many studies may simply be a conse-\nquence of this unfocused approach. Intervention Mapping (IM) framework24 provides \na clear path for recognising determinants of non-adherence and to choose the evidence-\nbased methods in order to change the underlining factors. IM provides a foundation for \ntargeted, patient-centred, and implementable interventions.\nMapping out interventions\nStage 1 – Recognising facilitators of non-adherence.25,26 Some common factors are \nlisted here under each category.\nDeterminants of medication non-adherence\nIntentional non-adherence\nUnintentional \nnon-adherence\nIllness- \nrelated  \nfactors\nTreatment-\nrelated  \nfactors\nClinician- and \norganisational-\nrelated factors\nPatient- \nrelated  \nfactors\nEnvironment-\nrelated  \nfactors\nLack of \nmotivation\nPoor insight\nGrandiose\nDelusions\nCognitive deficit\nThought disorder\nSide effects\nDysfunctional \nbeliefs\nTherapeutic alliance\nLack of follow-ups\nLimited \nconsultation time\nDenial\nInsight\nCo-morbidity\nPhysical \nimpairments/\nbarriers\nFamily’s beliefs\nCultural beliefs\nReligious \nbeliefs\nForgetfulness\nDisorganised \nlifestyle\nStage 2 – Linking determinants of non-adherence to evidence-based \ninterventions27\nAdherence-enhancing interventions\nIntentional non-adherence\nUnintentional non-adherence\nPsychoeducation is the foundation for all adherence \ninterventions, but without behaviour changing components \nit is not overwhelmingly effective. Provides both verbal and \nwritten information.\nMotivational interview for goal-setting.\nSimplifying dose regimen\nPharmacy interventions – Medication-taking aids\n(Continued)\n",
+  "raw_text_sha256": "9c00860bfa3c9f02d1ed78bb1521ac6e80003b830cb4df23867a8704d630f15a",
+  "coordinates_sha256": "102ad7541fdb7b403fd1d4eeddbd3a5003d1e4d03ddf005dbe29763a7d4db0fc",
+  "block_sequence_sha256": "20a8f3ba912f0350aa5e5c301578a6b007476d6e03224e881d8558fa084783fe",
+  "blocks": [
+    {
+      "block_id": "page-0920-block-0000",
+      "order": 0,
+      "text": "Miscellany    899\n",
+      "bbox": [
+        349.2962951660156,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "0485cf383a68affca9b15327b93e56f188aee8aa2c5fedd62b9a55d4b3fa2be1"
+    },
+    {
+      "block_id": "page-0920-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        454.4096984863281,
+        338.7405090332031,
+        463.88970947265625,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0920-block-0002",
+      "order": 2,
+      "text": "Strategies for improving adherence\n",
+      "bbox": [
+        48.03990173339844,
+        61.64218521118164,
+        231.0248565673828,
+        74.67718505859375
+      ],
+      "text_sha256": "7e1ece586d19823d33d2419b6ca58e4dd3a2c4402cecf158deebf0ea577b28a8"
+    },
+    {
+      "block_id": "page-0920-block-0003",
+      "order": 3,
+      "text": "Systematic reviews suggest that patient-specific interventions are more likely to enhance \nadherence in patients with serious mental disorders.23 In addition, NICE has reviewed \nthe evidence for adherence over a range of health conditions. They conclude that no \nspecific intervention can be recommended for all patients.\n",
+      "bbox": [
+        48.03990173339844,
+        80.4871826171875,
+        422.7799987792969,
+        128.20718383789062
+      ],
+      "text_sha256": "f4dcd447347a491fea219b797d0abbd47568d1e516a2da1f797dbab050cb370b"
+    },
+    {
+      "block_id": "page-0920-block-0004",
+      "order": 4,
+      "text": "Note that few studies in this area specifically recruited non-adherent patients (the \nrefusal rate in such patients is likely to be high) and the specific barriers to adherence \nare rarely identified. The small effect size seen in many studies may simply be a conse-\nquence of this unfocused approach. Intervention Mapping (IM) framework24 provides \na clear path for recognising determinants of non-adherence and to choose the evidence-\nbased methods in order to change the underlining factors. IM provides a foundation for \ntargeted, patient-centred, and implementable interventions.\n",
+      "bbox": [
+        48.04290771484375,
+        128.4871826171875,
+        422.8030090332031,
+        212.20718383789062
+      ],
+      "text_sha256": "35a50e954fede14602906148e4e1a49d3b0bae4634c2cf097d990d6cb4477115"
+    },
+    {
+      "block_id": "page-0920-block-0005",
+      "order": 5,
+      "text": "Mapping out interventions\n",
+      "bbox": [
+        48.03990173339844,
+        229.64218139648438,
+        187.3878936767578,
+        242.67718505859375
+      ],
+      "text_sha256": "03d0c8b04b44c0eef507d4015c77e09d0be1cb84f5fdeba96b0b59d4b2772dbf"
+    },
+    {
+      "block_id": "page-0920-block-0006",
+      "order": 6,
+      "text": "Stage 1 – Recognising facilitators of non-adherence.25,26 Some common factors are \nlisted here under each category.\n",
+      "bbox": [
+        48.036102294921875,
+        248.4871826171875,
+        422.7659912109375,
+        272.2071838378906
+      ],
+      "text_sha256": "98d8169b019e3d67026eb1b71ca9164499db3c6dfb89e3fad83b8e54b8618ece"
+    },
+    {
+      "block_id": "page-0920-block-0007",
+      "order": 7,
+      "text": "Determinants of medication non-adherence\n",
+      "bbox": [
+        48.0802001953125,
+        290.8996887207031,
+        201.7177276611328,
+        299.7872009277344
+      ],
+      "text_sha256": "e4303ba051eb9d2f7fca0bbb3f563dc486e92a20c4e4b7d10021830f1d77141a"
+    },
+    {
+      "block_id": "page-0920-block-0008",
+      "order": 8,
+      "text": "Intentional non-adherence\n",
+      "bbox": [
+        48.0802001953125,
+        311.13470458984375,
+        141.71017456054688,
+        320.022216796875
+      ],
+      "text_sha256": "11f1363022fbb780db446572031667c17c1fe4d6d57830c845d99c6211f62a4d"
+    },
+    {
+      "block_id": "page-0920-block-0009",
+      "order": 9,
+      "text": "Unintentional \nnon-adherence\n",
+      "bbox": [
+        359.4652099609375,
+        341.3672180175781,
+        412.25018310546875,
+        360.2522277832031
+      ],
+      "text_sha256": "f187d2044a0b7afa8793e15b3a73fcee94a39336c0a7cb6d4da9d15ed26a0a44"
+    },
+    {
+      "block_id": "page-0920-block-0010",
+      "order": 10,
+      "text": "Illness- \nrelated  \nfactors\n",
+      "bbox": [
+        48.0802001953125,
+        331.3622131347656,
+        77.12770080566406,
+        360.2447204589844
+      ],
+      "text_sha256": "23a2002932b17d4f4d0f7c7136fdace0f5ea8f1dd7ab2d2a74023242d0e822fd"
+    },
+    {
+      "block_id": "page-0920-block-0011",
+      "order": 11,
+      "text": "Treatment-\nrelated  \nfactors\n",
+      "bbox": [
+        111.48519897460938,
+        331.3547058105469,
+        149.84017944335938,
+        360.2372131347656
+      ],
+      "text_sha256": "35e8ea2bb5df84a5b3ada441ffdfdde0c2bb77433e403aee62d742460d18c38b"
+    },
+    {
+      "block_id": "page-0920-block-0012",
+      "order": 12,
+      "text": "Clinician- and \norganisational-\nrelated factors\n",
+      "bbox": [
+        168.5751953125,
+        331.3471984863281,
+        221.91522216796875,
+        360.2297058105469
+      ],
+      "text_sha256": "69ced52cebf3ebf2fb1fdedcbbf393c37269495f82488c9398f3e1f920e112b7"
+    },
+    {
+      "block_id": "page-0920-block-0013",
+      "order": 13,
+      "text": "Patient- \nrelated  \nfactors\n",
+      "bbox": [
+        237.84519958496094,
+        331.3396911621094,
+        267.440185546875,
+        360.2221984863281
+      ],
+      "text_sha256": "1294b9091a88f1c76ab3c73cef2817a68aa06680af1fef9ce29848e73fe7472c"
+    },
+    {
+      "block_id": "page-0920-block-0014",
+      "order": 14,
+      "text": "Environment-\nrelated  \nfactors\n",
+      "bbox": [
+        296.96771240234375,
+        331.3321838378906,
+        344.7577209472656,
+        360.2146911621094
+      ],
+      "text_sha256": "20fd88742411c0f270222d76902ea4087bf32b1270afd21754e395e2d70702c8"
+    },
+    {
+      "block_id": "page-0920-block-0015",
+      "order": 15,
+      "text": "Lack of \nmotivation\n",
+      "bbox": [
+        48.07270812988281,
+        371.62969970703125,
+        82.2352066040039,
+        390.3346862792969
+      ],
+      "text_sha256": "3f1543106813fb764c8948300c792c3ad4ccd0f10677ac13cb60f48ae02ff29a"
+    },
+    {
+      "block_id": "page-0920-block-0016",
+      "order": 16,
+      "text": "Poor insight\n",
+      "bbox": [
+        48.07270812988281,
+        394.62469482421875,
+        86.00021362304688,
+        403.3321838378906
+      ],
+      "text_sha256": "f4b5d2fbecaf27df825a60054967b83f91e1adf14dd1e9abe456a82cde326023"
+    },
+    {
+      "block_id": "page-0920-block-0017",
+      "order": 17,
+      "text": "Grandiose\n",
+      "bbox": [
+        48.07270812988281,
+        407.6221923828125,
+        80.57771301269531,
+        416.3296813964844
+      ],
+      "text_sha256": "29507fbef6044999ce66a6f7ff1d43b13c54ab5c856052929ec2cfa25262fb4e"
+    },
+    {
+      "block_id": "page-0920-block-0018",
+      "order": 18,
+      "text": "Delusions\n",
+      "bbox": [
+        48.07270812988281,
+        420.61968994140625,
+        78.50021362304688,
+        429.3271789550781
+      ],
+      "text_sha256": "afc99fb26684e892857a26505427b1ad9cdbf6a45a73ca98ebf29bf3f050c983"
+    },
+    {
+      "block_id": "page-0920-block-0019",
+      "order": 19,
+      "text": "Cognitive deficit\n",
+      "bbox": [
+        48.07270812988281,
+        433.6171875,
+        100.1527099609375,
+        442.3246765136719
+      ],
+      "text_sha256": "2802e9c7d3f9daa6b43869ef0139a42d59ed4a21ee4d0a2ed242f800931783cb"
+    },
+    {
+      "block_id": "page-0920-block-0020",
+      "order": 20,
+      "text": "Thought disorder\n",
+      "bbox": [
+        48.07270812988281,
+        446.61468505859375,
+        102.95769500732422,
+        455.3221740722656
+      ],
+      "text_sha256": "5415fc382fa93fba4823244fd2c85dc872ce9beff3f2339ff750eda981d16dd1"
+    },
+    {
+      "block_id": "page-0920-block-0021",
+      "order": 21,
+      "text": "Side effects\n",
+      "bbox": [
+        111.47770690917969,
+        371.61468505859375,
+        148.00270080566406,
+        380.3221740722656
+      ],
+      "text_sha256": "8130593994dac0972f1f377b8d9cf1edb4acfe1ad9c8b38fef0a831c332b8513"
+    },
+    {
+      "block_id": "page-0920-block-0022",
+      "order": 22,
+      "text": "Dysfunctional \nbeliefs\n",
+      "bbox": [
+        111.47770690917969,
+        384.6121826171875,
+        156.897705078125,
+        403.3171691894531
+      ],
+      "text_sha256": "6a9cab8a6ea6dd5a102c56f82d4b137e8c4fb0c5caba3e32974b326ed5c923a0"
+    },
+    {
+      "block_id": "page-0920-block-0023",
+      "order": 23,
+      "text": "Therapeutic alliance\n",
+      "bbox": [
+        168.5677032470703,
+        371.607177734375,
+        231.83767700195312,
+        380.3146667480469
+      ],
+      "text_sha256": "9db91c55dee26cdfd1b836ce8d026ba48887414cdc1e75b65ccb9cb37999b408"
+    },
+    {
+      "block_id": "page-0920-block-0024",
+      "order": 24,
+      "text": "Lack of follow-ups\n",
+      "bbox": [
+        168.5677032470703,
+        384.60467529296875,
+        227.32269287109375,
+        393.3121643066406
+      ],
+      "text_sha256": "69fbde91b758bcefc65bcd2685494a3aa3b9d5c1134dc46c3a90cda2481fcee8"
+    },
+    {
+      "block_id": "page-0920-block-0025",
+      "order": 25,
+      "text": "Limited \nconsultation time\n",
+      "bbox": [
+        168.5677032470703,
+        397.6021728515625,
+        223.98516845703125,
+        416.3071594238281
+      ],
+      "text_sha256": "0c651fdfa01add50d941d5f8125a086b130a962a5a5a74ff95451f9ce8c44d93"
+    },
+    {
+      "block_id": "page-0920-block-0026",
+      "order": 26,
+      "text": "Denial\n",
+      "bbox": [
+        237.83770751953125,
+        371.59967041015625,
+        257.8402099609375,
+        380.3071594238281
+      ],
+      "text_sha256": "764891e2150dbf18883b1d9ac78aa196bd714cf839f0d0f0c6b2c22e08f30300"
+    },
+    {
+      "block_id": "page-0920-block-0027",
+      "order": 27,
+      "text": "Insight\n",
+      "bbox": [
+        237.83770751953125,
+        384.59716796875,
+        259.0926818847656,
+        393.3046569824219
+      ],
+      "text_sha256": "d1b83b1f1b4e15c7468c17641b843ea58584004f78306dd189840c225368f7b8"
+    },
+    {
+      "block_id": "page-0920-block-0028",
+      "order": 28,
+      "text": "Co-morbidity\n",
+      "bbox": [
+        237.83770751953125,
+        397.59466552734375,
+        279.92022705078125,
+        406.3021545410156
+      ],
+      "text_sha256": "c47ce6e7f8a1170ab2d8bb6b7ad19281b0802f564661b0a0989615e89ff76ad5"
+    },
+    {
+      "block_id": "page-0920-block-0029",
+      "order": 29,
+      "text": "Physical \nimpairments/\nbarriers\n",
+      "bbox": [
+        237.83770751953125,
+        410.5921630859375,
+        279.5002136230469,
+        439.2946472167969
+      ],
+      "text_sha256": "21c7a7159036d8a46ce81083d9596c95de1a971ad007a784038f6bd86a470b4a"
+    },
+    {
+      "block_id": "page-0920-block-0030",
+      "order": 30,
+      "text": "Family’s beliefs\n",
+      "bbox": [
+        296.960205078125,
+        371.58465576171875,
+        343.61773681640625,
+        380.2921447753906
+      ],
+      "text_sha256": "6d52216cfea14ba9fe3e4ad994c8aa94b99e1dc53115d74c59ead7af01436db0"
+    },
+    {
+      "block_id": "page-0920-block-0031",
+      "order": 31,
+      "text": "Cultural beliefs\n",
+      "bbox": [
+        296.960205078125,
+        384.5821533203125,
+        344.8777770996094,
+        393.2896423339844
+      ],
+      "text_sha256": "4bdc20ae5b286707c770de473f9a413374649943a17665841c7124960c5ecef5"
+    },
+    {
+      "block_id": "page-0920-block-0032",
+      "order": 32,
+      "text": "Religious \nbeliefs\n",
+      "bbox": [
+        296.960205078125,
+        397.57965087890625,
+        327.3877868652344,
+        416.2846374511719
+      ],
+      "text_sha256": "a4d7edab7e39ed4f9f3b65cfb361b09c805ae1324544e5604fbae688a9366149"
+    },
+    {
+      "block_id": "page-0920-block-0033",
+      "order": 33,
+      "text": "Forgetfulness\n",
+      "bbox": [
+        359.45770263671875,
+        371.5771484375,
+        401.96026611328125,
+        380.2846374511719
+      ],
+      "text_sha256": "43c06c8daa664b2a362cb6a87a9f1707fc5fa85e738aba15b43148cb962a5b56"
+    },
+    {
+      "block_id": "page-0920-block-0034",
+      "order": 34,
+      "text": "Disorganised \nlifestyle\n",
+      "bbox": [
+        359.45770263671875,
+        384.57464599609375,
+        402.3877868652344,
+        403.2796325683594
+      ],
+      "text_sha256": "6a391dc0f9ea16db70f85863e698d05495e1fb4bdced083fba7934ff91762911"
+    },
+    {
+      "block_id": "page-0920-block-0035",
+      "order": 35,
+      "text": "Stage 2 – Linking determinants of non-adherence to evidence-based \ninterventions27\n",
+      "bbox": [
+        48.0,
+        467.05218505859375,
+        422.7498474121094,
+        490.9021911621094
+      ],
+      "text_sha256": "11a3cffbf87a6567d2ac667351467a9fbcc817abed4b71db118c007814dc7287"
+    },
+    {
+      "block_id": "page-0920-block-0036",
+      "order": 36,
+      "text": "Adherence-enhancing interventions\n",
+      "bbox": [
+        48.0802001953125,
+        507.01458740234375,
+        174.2076873779297,
+        515.902099609375
+      ],
+      "text_sha256": "72c8ec3aba4af45e44d69e2218c3b3579b27b51651eeba72ba9fc01939a4f74b"
+    },
+    {
+      "block_id": "page-0920-block-0037",
+      "order": 37,
+      "text": "Intentional non-adherence\nUnintentional non-adherence\n",
+      "bbox": [
+        48.0802001953125,
+        527.2495727539062,
+        349.6626281738281,
+        536.1370849609375
+      ],
+      "text_sha256": "6ca400b31914aef2e4ef23683e64d9c1049e955003fde05cf1fad4c35da1c961"
+    },
+    {
+      "block_id": "page-0920-block-0038",
+      "order": 38,
+      "text": "Psychoeducation is the foundation for all adherence \ninterventions, but without behaviour changing components \nit is not overwhelmingly effective. Provides both verbal and \nwritten information.\nMotivational interview for goal-setting.\n",
+      "bbox": [
+        48.0802001953125,
+        547.6270751953125,
+        240.62767028808594,
+        596.5045776367188
+      ],
+      "text_sha256": "a261efe6cde4f5de4b88db18ab27a6c1c2cdc60aaabd9da9422cd24ca3a7091c"
+    },
+    {
+      "block_id": "page-0920-block-0039",
+      "order": 39,
+      "text": "Simplifying dose regimen\n",
+      "bbox": [
+        246.03518676757812,
+        547.799560546875,
+        326.3227844238281,
+        556.507080078125
+      ],
+      "text_sha256": "e5f408cc378c368e22e71181fa168f85b8a09052a0f55747fb427fb029247d37"
+    },
+    {
+      "block_id": "page-0920-block-0040",
+      "order": 40,
+      "text": "Pharmacy interventions – Medication-taking aids\n",
+      "bbox": [
+        246.03518676757812,
+        560.7970581054688,
+        401.0378112792969,
+        569.5045776367188
+      ],
+      "text_sha256": "10b722954d4624c8d75960ba81b0a23bfd617a1e5ce8e1ebd8e3d073e55ef02c"
+    },
+    {
+      "block_id": "page-0920-block-0041",
+      "order": 41,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.982666015625,
+        605.8270874023438,
+        419.99761962890625,
+        614.57958984375
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

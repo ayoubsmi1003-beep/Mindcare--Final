@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0416",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 416,
+  "source_page_index": 415,
+  "source_page_display": 416,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    395\nCHAPTER 3\n■\n■If serum sodium is <125mmol/L, refer urgently to specialist medical care. There is an \nincreased risk of life-threatening symptoms such as seizures, coma and respiratory \narrest. The antidepressant should be discontinued immediately. (Note risk of discon-\ntinuation symptoms which may complicate the clinical picture.) Over rapid correc-\ntion of hyponatraemia may be harmful.19\nRestarting treatment\n■\n■For those who develop hyponatraemia with an SSRI, there are many case reports of \nrecurrent hyponatraemia on rechallenge with the same, or a different SSRI, and rela-\ntively fewer reports of recurrence occurring with an antidepressant from another \nclass.15,17 There are also a handful of case reports of successful rechallenge.1\n■\n■Consider withdrawing other drugs associated with hyponatraemia (risk increases \nexponentially when antidepressants are combined with diuretics3).\n■\n■Prescribe a drug from a different class. Consider noradrenergic drugs such as nortrip-\ntyline and lofepramine, mirtazapine or an MAOI such as moclobemide. Agomelatine \nor bupropion57 might also be considered. Begin with a low dose, increasing slowly, \nand monitor closely. If hyponatraemia recurs and continued antidepressant use is \nessential, consider water restriction and/or careful use of demeclocycline (see BNF).\n■\n■Consider ECT.\nOther prescribed drugs\nCarbamazepine has a well-known association with SIADH.58 Note also that antipsy-\nchotic use has been linked to hyponatraemia59–61 (See in section Hyponatraemia in \nchapter 1). Other commonly prescribed drugs such as thiazide diuretics, opiates, \nNSAIDs, tramadol, cytotoxics, omeprazole and trimethoprim can also cause \nhyponatraemia.2,51,58\n",
+  "raw_text_sha256": "1d54c12e82edb6cf41fb6971f4cb3e077926c6fb1bef7225ec258babae38dba1",
+  "coordinates_sha256": "03dce4d0c4f7db59825dc2dc12e3603b03805362457351cfe8379984a63614b2",
+  "block_sequence_sha256": "2add85f214d7bf6e5d5c2c06df8357a1105faedaef33400fb700157fecb13f74",
+  "blocks": [
+    {
+      "block_id": "page-0416-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    395\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "e4103c0eeff0a8240e8dd63479dab361cfffdaa7eb00e2ecc7685fbbf3d8fa7e"
+    },
+    {
+      "block_id": "page-0416-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0416-block-0002",
+      "order": 2,
+      "text": "■\n■If serum sodium is <125mmol/L, refer urgently to specialist medical care. There is an \n",
+      "bbox": [
+        47.999900817871094,
+        62.5504150390625,
+        422.7801513671875,
+        74.27041625976562
+      ],
+      "text_sha256": "6c37a56347a007ff28e959f249b0889b9fc6327e2f3278cf6e7fec0edfc47da7"
+    },
+    {
+      "block_id": "page-0416-block-0003",
+      "order": 3,
+      "text": "increased risk of life-threatening symptoms such as seizures, coma and respiratory \narrest. The antidepressant should be discontinued immediately. (Note risk of discon-\ntinuation symptoms which may complicate the clinical picture.) Over rapid correc-\ntion of hyponatraemia may be harmful.19\n",
+      "bbox": [
+        57.0,
+        74.5504150390625,
+        422.76007080078125,
+        122.27041625976562
+      ],
+      "text_sha256": "6ea749080fd2b10ec300c76ab7b7eae576e953334bb9928b5fbeeb9a080583b0"
+    },
+    {
+      "block_id": "page-0416-block-0004",
+      "order": 4,
+      "text": "Restarting treatment\n",
+      "bbox": [
+        48.0,
+        145.70541381835938,
+        155.9980010986328,
+        158.74041748046875
+      ],
+      "text_sha256": "045c42156854732b56b028ce24c44181dfcb70fe7ba05cacbc1cb437c478d253"
+    },
+    {
+      "block_id": "page-0416-block-0005",
+      "order": 5,
+      "text": "■\n■For those who develop hyponatraemia with an SSRI, there are many case reports of \n",
+      "bbox": [
+        47.999900817871094,
+        170.55047607421875,
+        422.739990234375,
+        182.27047729492188
+      ],
+      "text_sha256": "dd2b4f49f0aa5c016c861be0c3e1210846f4ad2b31c16db0f2dc6ee2bbe44eb8"
+    },
+    {
+      "block_id": "page-0416-block-0006",
+      "order": 6,
+      "text": "recurrent hyponatraemia on rechallenge with the same, or a different SSRI, and rela-\ntively fewer reports of recurrence occurring with an antidepressant from another \nclass.15,17 There are also a handful of case reports of successful rechallenge.1\n",
+      "bbox": [
+        57.0,
+        182.55047607421875,
+        422.72991943359375,
+        218.27047729492188
+      ],
+      "text_sha256": "3cb374fc57000f173735e85780b44129d474f910f8f7ae390d862b33279e2b90"
+    },
+    {
+      "block_id": "page-0416-block-0007",
+      "order": 7,
+      "text": "■\n■Consider withdrawing other drugs associated with hyponatraemia (risk increases \n",
+      "bbox": [
+        47.999900817871094,
+        218.55047607421875,
+        422.75,
+        230.27047729492188
+      ],
+      "text_sha256": "0720242d9c40a7782e470e2ef6dc9eaa7a1d9ae4e13333f70839e099a1823ea6"
+    },
+    {
+      "block_id": "page-0416-block-0008",
+      "order": 8,
+      "text": "exponentially when antidepressants are combined with diuretics3).\n",
+      "bbox": [
+        57.0,
+        230.55047607421875,
+        342.5088806152344,
+        242.27047729492188
+      ],
+      "text_sha256": "63e7bc19593a448e8bd685c4c9539d05a3254ed667846ac315640d1c288d94b3"
+    },
+    {
+      "block_id": "page-0416-block-0009",
+      "order": 9,
+      "text": "■\n■Prescribe a drug from a different class. Consider noradrenergic drugs such as nortrip-\n",
+      "bbox": [
+        47.999900817871094,
+        242.55047607421875,
+        420.0401306152344,
+        254.27047729492188
+      ],
+      "text_sha256": "e55628b59ae250873a4dd621e36020c0d6ea962976528b56e853fd87e07cb429"
+    },
+    {
+      "block_id": "page-0416-block-0010",
+      "order": 10,
+      "text": "tyline and lofepramine, mirtazapine or an MAOI such as moclobemide. Agomelatine \nor bupropion57 might also be considered. Begin with a low dose, increasing slowly, \nand monitor closely. If hyponatraemia recurs and continued antidepressant use is \nessential, consider water restriction and/or careful use of demeclocycline (see BNF).\n",
+      "bbox": [
+        56.995201110839844,
+        254.55047607421875,
+        422.8199768066406,
+        302.2704772949219
+      ],
+      "text_sha256": "8b72d7ad1c3790ec55b5f2295290e01df346903f82fa9647d62d4e58738a5e53"
+    },
+    {
+      "block_id": "page-0416-block-0011",
+      "order": 11,
+      "text": "■\n■Consider ECT.\n",
+      "bbox": [
+        47.999900817871094,
+        302.55047607421875,
+        120.33999633789062,
+        314.2704772949219
+      ],
+      "text_sha256": "e31a4a78c671b7c910181ff949d59429dd98eb46098919afc98e9f6d354f68c5"
+    },
+    {
+      "block_id": "page-0416-block-0012",
+      "order": 12,
+      "text": "Other prescribed drugs\n",
+      "bbox": [
+        48.0,
+        337.7054748535156,
+        166.97598266601562,
+        350.740478515625
+      ],
+      "text_sha256": "34d2948eaae01f2295bcb018892477fa3fde0fed4878ccd91f75c9e7f935d6f5"
+    },
+    {
+      "block_id": "page-0416-block-0013",
+      "order": 13,
+      "text": "Carbamazepine has a well-known association with SIADH.58 Note also that antipsy-\nchotic use has been linked to hyponatraemia59–61 (See in section Hyponatraemia in \nchapter 1). Other commonly prescribed drugs such as thiazide diuretics, opiates, \nNSAIDs, tramadol, cytotoxics, omeprazole and trimethoprim can also cause \nhyponatraemia.2,51,58\n",
+      "bbox": [
+        48.0,
+        356.55047607421875,
+        422.8223876953125,
+        416.2704772949219
+      ],
+      "text_sha256": "55fe249dd608e4ad32e924d85b2f8bf75c709374a0dd957669deaec70ddbe4e2"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

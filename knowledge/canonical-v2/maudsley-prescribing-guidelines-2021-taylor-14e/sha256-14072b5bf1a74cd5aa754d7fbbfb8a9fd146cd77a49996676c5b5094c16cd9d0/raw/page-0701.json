@@ -1,0 +1,383 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0701",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 701,
+  "source_page_index": 700,
+  "source_page_display": 701,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "680    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 7\nIt is also important to note that pregnancy does not protect against mental illness and \nmay even elevate overall risk if medication is stopped. In late pregnancy and early post-\npartum there is an increased risk of relapse, irrespective of medication use.\nThe patient’s view of risks and benefits have paramount importance and needs to be \ninformed by up to date evidence provided by their clinician. Clinicians should be aware \nof the importance of prescribing medication to women with a severe mental illness. \nPerinatal suicides are notable for being associated with lack of active treatment, specifi-\ncally treatment with psychotropic medication.8\nThis section provides a brief summary of the relevant issues and evidence to date. \nBox 7.1 summarises the general principles of prescribing in pregnancy.\nBox 7.1   General principles of prescribing in pregnancy\nIn all women of child-bearing potential\n■\n■Always discuss the possibility of pregnancy – half of all pregnancies are unplanned.9\n■\n■Avoid using drugs that are contra-indicated during pregnancy in women of reproductive age \n(notably valproate and carbamazepine). If these drugs are prescribed, women should be made \nfully aware of their teratogenic properties even if not planning pregnancy. Consider prescribing \nfolate. Valproate should be reserved for post-menopausal women only. Its use in younger \nwomen should be treatment of last resort.10\nIf mental illness is newly diagnosed in a pregnant woman\n■\n■Try to avoid all drugs in the first trimester (when major organs are being formed) unless benefits \noutweigh risks, that is, if non-drug treatments are not effective/appropriate, and then use an \nestablished drug at the lowest effective dose\nIf a woman taking psychotropic drugs is planning a pregnancy\n■\n■Consideration should be given to discontinuing treatment if the woman is well and at low risk \nof relapse.\n■\n■Discontinuation of treatment for women with SMI and at a high risk of relapse is unwise, but \nconsideration should be given to switching to a low-risk drug. However, be aware that \nswitching drugs may increase the risk of relapse and consider changes in the context of the \nwoman’s illness history and previous response to treatment\nIf a woman taking psychotropic medication discovers that she is pregnant\n■\n■Abrupt discontinuation of treatment post-conception for women with SMI and at a high risk of \nrelapse is unwise; relapse may ultimately be more harmful to the mother and child than \ncontinued, effective drug therapy.\n■\n■Consider remaining with current (effective) medication rather than switching, to minimise the \nrisk of relapse and hence the number of drugs to which the foetus is exposed.\n■\n■Valproate (if prescribed as a mood stabiliser) should be stopped.\nIf the patient smokes (smoking is more common in pregnant women with psychiatric illness11)\n■\n■Smoking has been associated with the greatest proportion of excess risk associated with poor \npregnancy outcomes.12\n■\n■Always encourage switching to nicotine replacement therapy – smoking has numerous adverse \noutcomes, NRT does not.13 Referral to smoking cessation services is mandated by NICE and \nengagement should therefore be encouraged and supported where possible.\n■\n■Stopping smoking can increase plasma levels of certain drugs, for example, clozapine.\n",
+  "raw_text_sha256": "86783e7d3ffb747333aecba9a47e7d847ee11f234cd88dbdd172879beed65367",
+  "coordinates_sha256": "7a681f442e331826356131197e324573319a2f76ff043aa7c05346d0c636df7c",
+  "block_sequence_sha256": "d8e60a251ec535a524a67cf90a6f201864a8f8a3d71c83eca3337205803115c9",
+  "blocks": [
+    {
+      "block_id": "page-0701-block-0000",
+      "order": 0,
+      "text": "680    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "f6f4cb5fc043c10bf943109426dd9237665231045776475a9c359da55c42e52d"
+    },
+    {
+      "block_id": "page-0701-block-0001",
+      "order": 1,
+      "text": "CHAPTER 7\n",
+      "bbox": [
+        18.520000457763672,
+        472.7144775390625,
+        28.0,
+        514.0584716796875
+      ],
+      "text_sha256": "6d1a2318236627f2d413db0336034ac4d71cea7172bd0baddf04c66a07292590"
+    },
+    {
+      "block_id": "page-0701-block-0002",
+      "order": 2,
+      "text": "It is also important to note that pregnancy does not protect against mental illness and \nmay even elevate overall risk if medication is stopped. In late pregnancy and early post-\npartum there is an increased risk of relapse, irrespective of medication use.\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.5999755859375,
+        98.27029418945312
+      ],
+      "text_sha256": "92e08885dc39efeb3bc53bdd01b6ddf5d4f3eb8f651cd3af0f3228f5b04195fc"
+    },
+    {
+      "block_id": "page-0701-block-0003",
+      "order": 3,
+      "text": "The patient’s view of risks and benefits have paramount importance and needs to be \ninformed by up to date evidence provided by their clinician. Clinicians should be aware \nof the importance of prescribing medication to women with a severe mental illness. \nPerinatal suicides are notable for being associated with lack of active treatment, specifi-\ncally treatment with psychotropic medication.8\n",
+      "bbox": [
+        61.88999938964844,
+        98.55029296875,
+        436.68011474609375,
+        158.27029418945312
+      ],
+      "text_sha256": "af6f6640e2fcf53fce2230f691bd1b0169d6ed84b51bf7467580bf3e399a094c"
+    },
+    {
+      "block_id": "page-0701-block-0004",
+      "order": 4,
+      "text": "This section provides a brief summary of the relevant issues and evidence to date. \nBox 7.1 summarises the general principles of prescribing in pregnancy.\n",
+      "bbox": [
+        61.88999938964844,
+        158.55029296875,
+        436.71002197265625,
+        182.27029418945312
+      ],
+      "text_sha256": "9c269765662c1c8530df7add3984b4ce5998eea6952d9f5bc25d74d800421a05"
+    },
+    {
+      "block_id": "page-0701-block-0005",
+      "order": 5,
+      "text": "Box 7.1   General principles of prescribing in pregnancy\n",
+      "bbox": [
+        69.88999938964844,
+        212.9011993408203,
+        271.2549743652344,
+        222.97369384765625
+      ],
+      "text_sha256": "faeee0c9a8cb830de9294082a0b4a35679a18eeb8b7c065455d4ce15daf4f030"
+    },
+    {
+      "block_id": "page-0701-block-0006",
+      "order": 6,
+      "text": "In all women of child-bearing potential\n",
+      "bbox": [
+        69.8899917602539,
+        232.23020935058594,
+        226.2305145263672,
+        242.30270385742188
+      ],
+      "text_sha256": "447f4071c185e8e9e60d99b17d1266e54c98f8582d0ca7da5c3020697186df52"
+    },
+    {
+      "block_id": "page-0701-block-0007",
+      "order": 7,
+      "text": "■\n■Always discuss the possibility of pregnancy – half of all pregnancies are unplanned.9\n",
+      "bbox": [
+        69.88990020751953,
+        248.43020629882812,
+        381.07293701171875,
+        258.2987060546875
+      ],
+      "text_sha256": "6472c35185f836c7e6e2cf3d89e8645f665ad44d1a854fb6178773ae591b07cc"
+    },
+    {
+      "block_id": "page-0701-block-0008",
+      "order": 8,
+      "text": "■\n■Avoid using drugs that are contra-indicated during pregnancy in women of reproductive age \n",
+      "bbox": [
+        69.88990020751953,
+        258.4302062988281,
+        415.3302001953125,
+        268.2987060546875
+      ],
+      "text_sha256": "3958c84f7095a773ae5fb00478c4020d725f13b303d0f289fee1be24244693b1"
+    },
+    {
+      "block_id": "page-0701-block-0009",
+      "order": 9,
+      "text": "(notably valproate and carbamazepine). If these drugs are prescribed, women should be made \nfully aware of their teratogenic properties even if not planning pregnancy. Consider prescribing \nfolate. Valproate should be reserved for post-menopausal women only. Its use in younger \nwomen should be treatment of last resort.10\n",
+      "bbox": [
+        78.38999938964844,
+        268.42620849609375,
+        424.127685546875,
+        308.28271484375
+      ],
+      "text_sha256": "ce75074d280a0636a9b12276efafbb80936f7e724a58c8445487c33d880a242c"
+    },
+    {
+      "block_id": "page-0701-block-0010",
+      "order": 10,
+      "text": "If mental illness is newly diagnosed in a pregnant woman\n",
+      "bbox": [
+        69.88999938964844,
+        314.2261962890625,
+        300.7075500488281,
+        324.2987060546875
+      ],
+      "text_sha256": "1b2ce2220bd645e1ac35327bfe08e9d024526bdec6a8bcebd9f2de51cc21afc8"
+    },
+    {
+      "block_id": "page-0701-block-0011",
+      "order": 11,
+      "text": "■\n■Try to avoid all drugs in the first trimester (when major organs are being formed) unless benefits \n",
+      "bbox": [
+        69.88990020751953,
+        330.4302062988281,
+        427.417236328125,
+        340.2987060546875
+      ],
+      "text_sha256": "b425ef4956943797da991274bd0a2e4147fc74cc48699518702689abef0f3705"
+    },
+    {
+      "block_id": "page-0701-block-0012",
+      "order": 12,
+      "text": "outweigh risks, that is, if non-drug treatments are not effective/appropriate, and then use an \nestablished drug at the lowest effective dose\n",
+      "bbox": [
+        78.38999938964844,
+        340.42620849609375,
+        415.9422607421875,
+        360.29071044921875
+      ],
+      "text_sha256": "e9653f4a9a139a8354aa9e4c37ffcb9b20ba1f249f2806749ea9bd259d6d1338"
+    },
+    {
+      "block_id": "page-0701-block-0013",
+      "order": 13,
+      "text": "If a woman taking psychotropic drugs is planning a pregnancy\n",
+      "bbox": [
+        69.88999938964844,
+        366.2152099609375,
+        318.9486083984375,
+        376.2877197265625
+      ],
+      "text_sha256": "062511af457ee2ed93896377d68bb8e60a93069102531b85bc41c1f111995a5d"
+    },
+    {
+      "block_id": "page-0701-block-0014",
+      "order": 14,
+      "text": "■\n■Consideration should be given to discontinuing treatment if the woman is well and at low risk \n",
+      "bbox": [
+        69.88990020751953,
+        382.4302062988281,
+        421.1441345214844,
+        392.2987060546875
+      ],
+      "text_sha256": "a9d2b5a9b18560b4b714d4c7d2d98d4c51457d1cf6b39e2b628119611ff49bbe"
+    },
+    {
+      "block_id": "page-0701-block-0015",
+      "order": 15,
+      "text": "of relapse.\n",
+      "bbox": [
+        78.38999938964844,
+        392.42620849609375,
+        116.01949310302734,
+        402.2947082519531
+      ],
+      "text_sha256": "698dd405f9b324023bbb3c0a827747f7fd124a11643cc1d8e65b583507eb44b0"
+    },
+    {
+      "block_id": "page-0701-block-0016",
+      "order": 16,
+      "text": "■\n■Discontinuation of treatment for women with SMI and at a high risk of relapse is unwise, but \n",
+      "bbox": [
+        69.88990020751953,
+        402.4302062988281,
+        417.6762390136719,
+        412.2987060546875
+      ],
+      "text_sha256": "b62d77db27ed86c4e4931ed0f21eabf87963b80ddd72a6080e03ab40021f71da"
+    },
+    {
+      "block_id": "page-0701-block-0017",
+      "order": 17,
+      "text": "consideration should be given to switching to a low-risk drug. However, be aware that \nswitching drugs may increase the risk of relapse and consider changes in the context of the \nwoman’s illness history and previous response to treatment\n",
+      "bbox": [
+        78.38999938964844,
+        412.42620849609375,
+        410.5787353515625,
+        442.2867126464844
+      ],
+      "text_sha256": "708248cb6a2d486df96c7c3fd8390b0a05c40fbb07eda5ccad2bd6875d83bf36"
+    },
+    {
+      "block_id": "page-0701-block-0018",
+      "order": 18,
+      "text": "If a woman taking psychotropic medication discovers that she is pregnant\n",
+      "bbox": [
+        69.88999938964844,
+        448.211181640625,
+        364.7635803222656,
+        458.28369140625
+      ],
+      "text_sha256": "ec97eaa0f30f02095d5b933523c5505479413e30ab3925def2d79b1cd5c5c1bb"
+    },
+    {
+      "block_id": "page-0701-block-0019",
+      "order": 19,
+      "text": "■\n■Abrupt discontinuation of treatment post-conception for women with SMI and at a high risk of \n",
+      "bbox": [
+        69.88990020751953,
+        464.4302062988281,
+        425.3857727050781,
+        474.2987060546875
+      ],
+      "text_sha256": "90a90702d56c9741b1291d5db58c45385dd023be0f1836a2629bc331d03c54d0"
+    },
+    {
+      "block_id": "page-0701-block-0020",
+      "order": 20,
+      "text": "relapse is unwise; relapse may ultimately be more harmful to the mother and child than \ncontinued, effective drug therapy.\n",
+      "bbox": [
+        78.38999938964844,
+        474.4261779785156,
+        397.1827697753906,
+        494.29071044921875
+      ],
+      "text_sha256": "d19e8ea0a943b7bcf2b76378138b6846b10e5d3fae33d5675057092bd93c9ef4"
+    },
+    {
+      "block_id": "page-0701-block-0021",
+      "order": 21,
+      "text": "■\n■Consider remaining with current (effective) medication rather than switching, to minimise the \n",
+      "bbox": [
+        69.88990020751953,
+        494.4302062988281,
+        418.8917236328125,
+        504.2987060546875
+      ],
+      "text_sha256": "f94ac45ba2952e8b51014f6ab9c5a34db97dfffe485cd206110398c8a475c3a8"
+    },
+    {
+      "block_id": "page-0701-block-0022",
+      "order": 22,
+      "text": "risk of relapse and hence the number of drugs to which the foetus is exposed.\n",
+      "bbox": [
+        78.38999938964844,
+        504.4261779785156,
+        361.1681213378906,
+        514.294677734375
+      ],
+      "text_sha256": "ba0212ffb63c73e12bc05a7d3d94990866a9b47a5b106e678198ae155a0bf325"
+    },
+    {
+      "block_id": "page-0701-block-0023",
+      "order": 23,
+      "text": "■\n■Valproate (if prescribed as a mood stabiliser) should be stopped.\n",
+      "bbox": [
+        69.88990020751953,
+        514.43017578125,
+        309.5306091308594,
+        524.2987060546875
+      ],
+      "text_sha256": "61c20fcf3a987c44e5dd0b977b6b0e2451db05bfe0351aad0aaf938f67740cdb"
+    },
+    {
+      "block_id": "page-0701-block-0024",
+      "order": 24,
+      "text": "If the patient smokes (smoking is more common in pregnant women with psychiatric illness11)\n",
+      "bbox": [
+        69.88999938964844,
+        530.22314453125,
+        417.03729248046875,
+        540.2987060546875
+      ],
+      "text_sha256": "8bb5bbdc62d4c1b8ba41671cd15505d5dbc0cd30c7cd5d2f9398ee8edad8efa9"
+    },
+    {
+      "block_id": "page-0701-block-0025",
+      "order": 25,
+      "text": "■\n■Smoking has been associated with the greatest proportion of excess risk associated with poor \n",
+      "bbox": [
+        69.88990020751953,
+        546.43017578125,
+        419.087158203125,
+        556.2987060546875
+      ],
+      "text_sha256": "ac1d6f76b304da5340e03209f25050a06068616a036fe2c496db7fd0b9dcb2cf"
+    },
+    {
+      "block_id": "page-0701-block-0026",
+      "order": 26,
+      "text": "pregnancy outcomes.12\n",
+      "bbox": [
+        78.38999938964844,
+        556.4261474609375,
+        161.6749267578125,
+        566.294677734375
+      ],
+      "text_sha256": "93b60faf7f4c0fa20c83084b51dbe54f8ebdf9467fd17af7d443e91595c556f9"
+    },
+    {
+      "block_id": "page-0701-block-0027",
+      "order": 27,
+      "text": "■\n■Always encourage switching to nicotine replacement therapy – smoking has numerous adverse \n",
+      "bbox": [
+        69.88990020751953,
+        566.43017578125,
+        424.27215576171875,
+        576.2987060546875
+      ],
+      "text_sha256": "d0823b91b60fe07fa719cc0bd24b62538ef0381f5853fc123227b159327af548"
+    },
+    {
+      "block_id": "page-0701-block-0028",
+      "order": 28,
+      "text": "outcomes, NRT does not.13 Referral to smoking cessation services is mandated by NICE and \nengagement should therefore be encouraged and supported where possible.\n",
+      "bbox": [
+        78.38999938964844,
+        576.4261474609375,
+        409.37347412109375,
+        596.294677734375
+      ],
+      "text_sha256": "8b8e9a6b52404985e262193c773fc14a7e44fcbe698d27af6f983680c31b7515"
+    },
+    {
+      "block_id": "page-0701-block-0029",
+      "order": 29,
+      "text": "■\n■Stopping smoking can increase plasma levels of certain drugs, for example, clozapine.\n",
+      "bbox": [
+        69.88990020751953,
+        596.43017578125,
+        388.5211181640625,
+        606.2987060546875
+      ],
+      "text_sha256": "70e0344cc8f9f61a882c02862583728ca1dc16b8f0349143d895e82dad56ef3e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

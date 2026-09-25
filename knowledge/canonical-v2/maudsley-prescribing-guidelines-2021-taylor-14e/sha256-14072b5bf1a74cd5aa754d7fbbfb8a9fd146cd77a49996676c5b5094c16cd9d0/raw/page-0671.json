@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0671",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 671,
+  "source_page_index": 670,
+  "source_page_display": 671,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "650    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  6\na positive effect on agitation in dementia; unfortunately, this study also confirmed the \nrisk of QT prolongation with citalopram at this dose. The maximum dose of citalo-\npram in older people is 20mg a day because of the drug’s effect on ­cardiac QT interval. \nAlthough there is less evidence, escitalopram may also be effective in BPSD. The evi-\ndence for efficacy of sertraline is mixed, though its cardiac safety is a strong point.26\nWhilst a previous Cochrane review of trazodone for agitation in dementia66 found \ninsufficient evidence from RCTs to support its use in dementia, in a recent Cochrane \nreview, trazodone 50mg at bedtime was noted to be well tolerated and improved sleep \nfor people with dementia and insomnia. Additionally, trazodone 150–300mg/day was \nfound to be effective in reducing BPSD in frontotemporal dementia. Although mir-\ntazapine plays an important role in treatment of older adults with depression, a recent \npilot study showed no significant therapeutic effect of 15mg mirtazapine on Alzheimer’s \npatients with sleep disorders and in fact found worsening of daytime sleep patterns. \nBupropion has not been studied in controlled trials in dementia.26\nTCAs are best avoided in patients with dementia. They can cause falls, possibly via ortho-\nstatic hypotension, and can worsen cognition due to their anticholinergic adverse effect.67\nFindings suggest that in AD patients treated with cholinesterase inhibitors, SSRIs \nmay exert some degree of protection against the negative effects of depression on cogni-\ntion. To date, literature analysis does not clarify if the combined effect of SSRIs and \nAChE-Is is synergistic, additive or independent.64 In addition, it is still unclear whether \nSSRIs have beneficial effects on cognition in AD patients who are not actively manifest-\ning mood or behavioural problems.68\nWhilst some emerging studies have found that antidepressant use in older people \nmay be associated with an increased risk of dementia, it is important to keep in mind \nthat previous studies have shown that late-life depression is associated with an increased \nrisk for dementia. Hence, any comparisons of antidepressant users with non-depressed \nnon-users are subject to indication bias as the increased dementia risk could be due to \ndepression, and not the medication.\nA Swedish study69 included 20,050 memory clinic patients diagnosed with incident \ndementia and collected data on antidepressant use at the time of dementia diagnosis \nand over the 3-year period before a dementia diagnosis. Use of antidepressant treat-\nment for 3 consecutive years before a dementia diagnosis was associated with a lower \nmortality risk for all dementia disorders and in AD.\nRecommendation: Although evidence is weak, use of antidepressants is justified in \npeople with dementia who have clear symptoms of moderate or severe depression, \nespecially if non-pharmacological approaches have been ineffective.\nMood stabilisers/antiseizure medications\nRCTs of mood stabilisers in non-cognitive symptoms of dementia have been completed for \noxcarbazepine,70 carbamazepine71 and valproate.72 Gabapentin, lamotrigine and topira-\nmate have also been used.73 Of the mood stabilisers, carbamazepine has the most robust \nevidence of efficacy in non-cognitive symptoms.74 However, its serious adverse effects \n(especially Stevens–Johnson syndrome) and its potential for drug interactions limit its use.\n",
+  "raw_text_sha256": "7dd71453bdec85884679f0c73ae0a0fa1587fd14b4a52df105d976f69903c2ec",
+  "coordinates_sha256": "031b9de7a29f9a4bfe0d63edddd40cbe173478a2462a8b7e474dbab13cbc48dc",
+  "block_sequence_sha256": "6b8e93e1a777407ca254cf09d5770cd0ded897c585733ea9bcfeff106dcc1dfb",
+  "blocks": [
+    {
+      "block_id": "page-0671-block-0000",
+      "order": 0,
+      "text": "650    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "ce2bea9f505a3d6cac64c16297415560ee61cb6f500e18dd4eadde2f7d209699"
+    },
+    {
+      "block_id": "page-0671-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        18.520000457763672,
+        405.35260009765625,
+        28.0,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0671-block-0002",
+      "order": 2,
+      "text": "a positive effect on agitation in dementia; unfortunately, this study also confirmed the \nrisk of QT prolongation with citalopram at this dose. The maximum dose of citalo-\npram in older people is 20mg a day because of the drug’s effect on ­cardiac QT interval. \nAlthough there is less evidence, escitalopram may also be effective in BPSD. The evi-\ndence for efficacy of sertraline is mixed, though its cardiac safety is a strong point.26\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.6700134277344,
+        122.27029418945312
+      ],
+      "text_sha256": "891cfa532a7d4ede5834fb3228ca6371ec0ce6efdebe989996dbb6eace6d89dc"
+    },
+    {
+      "block_id": "page-0671-block-0003",
+      "order": 3,
+      "text": "Whilst a previous Cochrane review of trazodone for agitation in dementia66 found \ninsufficient evidence from RCTs to support its use in dementia, in a recent Cochrane \nreview, trazodone 50mg at bedtime was noted to be well tolerated and improved sleep \nfor people with dementia and insomnia. Additionally, trazodone 150–300mg/day was \nfound to be effective in reducing BPSD in frontotemporal dementia. Although mir-\ntazapine plays an important role in treatment of older adults with depression, a recent \npilot study showed no significant therapeutic effect of 15mg mirtazapine on Alzheimer’s \npatients with sleep disorders and in fact found worsening of daytime sleep patterns. \nBupropion has not been studied in controlled trials in dementia.26\n",
+      "bbox": [
+        61.89459228515625,
+        122.31029510498047,
+        436.7146301269531,
+        230.27029418945312
+      ],
+      "text_sha256": "92930ec1e445f237c9916ccade8cb74eef70ec0431217a663600f693667a05c9"
+    },
+    {
+      "block_id": "page-0671-block-0004",
+      "order": 4,
+      "text": "TCAs are best avoided in patients with dementia. They can cause falls, possibly via ortho-\nstatic hypotension, and can worsen cognition due to their anticholinergic adverse effect.67\n",
+      "bbox": [
+        61.88999938964844,
+        230.310302734375,
+        433.8297424316406,
+        254.27029418945312
+      ],
+      "text_sha256": "9cbee33257eb1b2635b80e7d3e94c231732668c2ca7f9a14e128445b542c856d"
+    },
+    {
+      "block_id": "page-0671-block-0005",
+      "order": 5,
+      "text": "Findings suggest that in AD patients treated with cholinesterase inhibitors, SSRIs \nmay exert some degree of protection against the negative effects of depression on cogni-\ntion. To date, literature analysis does not clarify if the combined effect of SSRIs and \nAChE-Is is synergistic, additive or independent.64 In addition, it is still unclear whether \nSSRIs have beneficial effects on cognition in AD patients who are not actively manifest-\ning mood or behavioural problems.68\n",
+      "bbox": [
+        61.88999938964844,
+        254.55029296875,
+        436.6997985839844,
+        326.2702941894531
+      ],
+      "text_sha256": "5460ea40e5f96b354454e50a0db66e43d4f171bf77b8724ee260f8269b992e68"
+    },
+    {
+      "block_id": "page-0671-block-0006",
+      "order": 6,
+      "text": "Whilst some emerging studies have found that antidepressant use in older people \nmay be associated with an increased risk of dementia, it is important to keep in mind \nthat previous studies have shown that late-life depression is associated with an increased \nrisk for dementia. Hence, any comparisons of antidepressant users with non-depressed \nnon-users are subject to indication bias as the increased dementia risk could be due to \ndepression, and not the medication.\n",
+      "bbox": [
+        61.88999938964844,
+        326.55029296875,
+        436.70989990234375,
+        398.2702941894531
+      ],
+      "text_sha256": "213f425555bc6a8b59e5873aea56e961663c8b52e6eda77c60d9eaca074bd2c7"
+    },
+    {
+      "block_id": "page-0671-block-0007",
+      "order": 7,
+      "text": "A Swedish study69 included 20,050 memory clinic patients diagnosed with incident \ndementia and collected data on antidepressant use at the time of dementia diagnosis \nand over the 3-year period before a dementia diagnosis. Use of antidepressant treat-\nment for 3 consecutive years before a dementia diagnosis was associated with a lower \nmortality risk for all dementia disorders and in AD.\n",
+      "bbox": [
+        61.89239501953125,
+        398.55029296875,
+        436.7123718261719,
+        458.2702941894531
+      ],
+      "text_sha256": "5816b279bc780b2300e475d62ed012c8aab91fe3378b9f0be7980b12f45b35c9"
+    },
+    {
+      "block_id": "page-0671-block-0008",
+      "order": 8,
+      "text": "Recommendation: Although evidence is weak, use of antidepressants is justified in \npeople with dementia who have clear symptoms of moderate or severe depression, \nespecially if non-pharmacological approaches have been ineffective.\n",
+      "bbox": [
+        69.38980102539062,
+        480.97796630859375,
+        406.1684265136719,
+        511.04248046875
+      ],
+      "text_sha256": "b4ed160e5930355f9870519743c0e4e9ee7e4ed9ad4f1a0437558ddc4a839923"
+    },
+    {
+      "block_id": "page-0671-block-0009",
+      "order": 9,
+      "text": "Mood stabilisers/antiseizure medications\nRCTs of mood stabilisers in non-cognitive symptoms of dementia have been completed for \noxcarbazepine,70 carbamazepine71 and valproate.72 Gabapentin, lamotrigine and topira-\nmate have also been used.73 Of the mood stabilisers, carbamazepine has the most robust \nevidence of efficacy in non-cognitive symptoms.74 However, its serious adverse effects \n(especially Stevens–Johnson syndrome) and its potential for drug interactions limit its use.\n",
+      "bbox": [
+        61.88860321044922,
+        531.7111206054688,
+        436.7001953125,
+        602.8735961914062
+      ],
+      "text_sha256": "64eb4a72c92225fbbdde8856027fd1a5c5ea3a893213b2382a986397cfbb2270"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

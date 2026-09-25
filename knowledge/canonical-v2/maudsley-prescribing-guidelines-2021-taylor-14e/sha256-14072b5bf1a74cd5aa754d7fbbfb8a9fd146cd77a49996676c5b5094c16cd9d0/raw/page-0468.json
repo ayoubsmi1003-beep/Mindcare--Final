@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0468",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 468,
+  "source_page_index": 467,
+  "source_page_display": 468,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    447\nCHAPTER 3\n\t29.\t Parr JM, et al. Effectiveness of current treatment approaches for benzodiazepine discontinuation: a meta-analysis. Addiction 2009; \n104:13–24.\n\t30.\t Denis C, et al. Pharmacological interventions for benzodiazepine mono-dependence management in outpatient settings. Cochrane Database \nSyst Rev 2006; CD005194.\n\t31.\t Ashton H. Benzodiazepines: how they work & how to withdraw, the Ashton Manual. 2002; http://www.benzo.org.uk/manual/bzcha01.htm.\n\t32.\t Ashton H. Benzodiazepine dependence. Adv Syndrom Psychiatric Drugs 2004; 239–260.\n\t33.\t Brouillet E, et al. In vivo bidirectional modulatory effect of benzodiazepine receptor ligands on GABAergic transmission evaluated by posi-\ntron emission tomography in non-human primates. Brain Res 1991; 557:167–176.\n\t34.\t Inner Compass Initiative Inc. The withdrawal project. 2019; https://withdrawal.theinnercompass.org.\n\t35.\t Voshaar RCO, et al. Strategies for discontinuing long-term benzodiazepine use: meta-analysis. Br J Psychiatry 2006; 189:213–220.\n\t36.\t Fluyau D, et al. Challenges of the pharmacological management of benzodiazepine withdrawal, dependence, and discontinuation. Ther Adv \nPsychopharmacol 2018; 8:147–168.\n\t37.\t Gould RL, et al. Interventions for reducing benzodiazepine use in older people: meta-analysis of randomised controlled trials. Br J Psychiatry \n2014; 204:98–107.\n\t38.\t Pollmann AS, et al. Deprescribing benzodiazepines and Z-drugs in community-dwelling adults: a scoping review. BMC Pharmacol & Toxicol \n2015; 16:19.\n\t39.\t Kales A, et al. Rebound insomnia after only brief and intermittent use of rapidly eliminated benzodiazepines. Clin Pharmacol Ther 1991; \n49:468–476.\n",
+  "raw_text_sha256": "fc6fab64cb056412e4cbe6dddcff0df574118d14794c50a4b8cd07baea900a4c",
+  "coordinates_sha256": "d626623d33fd4fbe9383aa3e46eaadde02a5d6f246582c738928e54808f2370d",
+  "block_sequence_sha256": "081e9f98b99142fb0d6e9f941699bdf6787162e606ed92f2a48ab80ccc448045",
+  "blocks": [
+    {
+      "block_id": "page-0468-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    447\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "68a8f6b5a18873767aa9168c3da86b5aba28e79461d7c11d12a68669c4a9d4d1"
+    },
+    {
+      "block_id": "page-0468-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0468-block-0002",
+      "order": 2,
+      "text": "\t29.\t Parr JM, et al. Effectiveness of current treatment approaches for benzodiazepine discontinuation: a meta-analysis. Addiction 2009; \n",
+      "bbox": [
+        48.0,
+        63.2703857421875,
+        421.66796875,
+        70.30238342285156
+      ],
+      "text_sha256": "f0c311a2bc07e4f8de0652360e5d21be33c2d021fd4013d1eae7ed5ded061312"
+    },
+    {
+      "block_id": "page-0468-block-0003",
+      "order": 3,
+      "text": "104:13–24.\n\t30.\t Denis C, et al. Pharmacological interventions for benzodiazepine mono-dependence management in outpatient settings. Cochrane Database \n",
+      "bbox": [
+        48.00600051879883,
+        72.12638854980469,
+        421.6979064941406,
+        88.30238342285156
+      ],
+      "text_sha256": "dc5621f775cc81f2dbc9b4e788d2854f0e959b48284034dd1edb808756dea659"
+    },
+    {
+      "block_id": "page-0468-block-0004",
+      "order": 4,
+      "text": "Syst Rev 2006; CD005194.\n\t31.\t Ashton H. Benzodiazepines: how they work & how to withdraw, the Ashton Manual. 2002; http://www.benzo.org.uk/manual/bzcha01.htm.\n\t32.\t Ashton H. Benzodiazepine dependence. Adv Syndrom Psychiatric Drugs 2004; 239–260.\n\t33.\t Brouillet E, et al. In vivo bidirectional modulatory effect of benzodiazepine receptor ligands on GABAergic transmission evaluated by posi-\n",
+      "bbox": [
+        48.012001037597656,
+        90.2703857421875,
+        420.24591064453125,
+        124.30238342285156
+      ],
+      "text_sha256": "7b80640dd67c6a96e51fc235d82ed3d4728ae0d34b06a84505c5cfd08638a4f1"
+    },
+    {
+      "block_id": "page-0468-block-0005",
+      "order": 5,
+      "text": "tron emission tomography in non-human primates. Brain Res 1991; 557:167–176.\n\t34.\t Inner Compass Initiative Inc. The withdrawal project. 2019; https://withdrawal.theinnercompass.org.\n\t35.\t Voshaar RCO, et al. Strategies for discontinuing long-term benzodiazepine use: meta-analysis. Br J Psychiatry 2006; 189:213–220.\n\t36.\t Fluyau D, et al. Challenges of the pharmacological management of benzodiazepine withdrawal, dependence, and discontinuation. Ther Adv \n",
+      "bbox": [
+        48.029998779296875,
+        126.12638854980469,
+        421.74603271484375,
+        160.30238342285156
+      ],
+      "text_sha256": "5752043a5e44c064f11c81673f343a0e6b51a4a953aa4bd036f7e2713e40b533"
+    },
+    {
+      "block_id": "page-0468-block-0006",
+      "order": 6,
+      "text": "Psychopharmacol 2018; 8:147–168.\n\t37.\t Gould RL, et al. Interventions for reducing benzodiazepine use in older people: meta-analysis of randomised controlled trials. Br J Psychiatry \n",
+      "bbox": [
+        48.04800033569336,
+        162.1263885498047,
+        421.739990234375,
+        178.30238342285156
+      ],
+      "text_sha256": "06e18807708994b611a07311c6e781baf7935c5c59740e5a77532dde008ee45b"
+    },
+    {
+      "block_id": "page-0468-block-0007",
+      "order": 7,
+      "text": "2014; 204:98–107.\n\t38.\t Pollmann AS, et al. Deprescribing benzodiazepines and Z-drugs in community-dwelling adults: a scoping review. BMC Pharmacol & Toxicol \n",
+      "bbox": [
+        48.05400085449219,
+        180.1263885498047,
+        421.7520446777344,
+        196.30238342285156
+      ],
+      "text_sha256": "ca156ec1ebac1f53c1d06c58f547cbd6306969031bc0699424190defb6c4d955"
+    },
+    {
+      "block_id": "page-0468-block-0008",
+      "order": 8,
+      "text": "2015; 16:19.\n\t39.\t Kales A, et al. Rebound insomnia after only brief and intermittent use of rapidly eliminated benzodiazepines. Clin Pharmacol Ther 1991; \n",
+      "bbox": [
+        48.060001373291016,
+        198.1263885498047,
+        421.75201416015625,
+        214.30238342285156
+      ],
+      "text_sha256": "38dac49cb40d48ccdbf7b89177bc451f42a35634011dc49a4aa5629b46cdd932"
+    },
+    {
+      "block_id": "page-0468-block-0009",
+      "order": 9,
+      "text": "49:468–476.\n",
+      "bbox": [
+        59.063995361328125,
+        216.1263885498047,
+        92.08798217773438,
+        223.30238342285156
+      ],
+      "text_sha256": "7ceb984335a3e2d1d9ee1c480db959004e07c2b46e996f084843d49ddbfdedc5"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

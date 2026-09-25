@@ -1,0 +1,539 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0684",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 684,
+  "source_page_index": 683,
+  "source_page_display": 684,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": " \n \n \n \n \n \n \n \nPaliperidone palmitate \n3-monthly injection\nDose based on renal function:\nBecause elderly patients may \nhave diminished renal function, \nthey are dosed as in mild renal \nimpairment even if tests show \nnormal renal function*\nIf the last dose of 1-monthly \npaliperidone palmitate injectable is:\n50mg\n75mg\n100mg\nInitiate the 3-monthly injection \nat the following doses:\n175mg\n263mg\n350mg\n(There is no equivalent dose for \nthe 25mg dose of 1-monthly \npaliperidone palmitate \ninjection)21\n350mg 3 monthly*\nRisperidone\nLong-acting injection\nMonitor renal function\n25mg every 2 weeks\n25mg every 2 weeks\n25mg every 2 weeks\nConsider 37.5mg every 2 weeks \nin patients treated with oral \nrisperidone doses >4mg/day22\nNB: All antipsychotic drugs contain warnings for increased mortality in elderly patients with dementia.\nDrug\nSpecific indication/Additional \nnotes\nStarting dose\nUsual maintenance dose\nMaximum dose in elderly\nMood stabilisers\nCarbamazepine\nBipolar disorder\nCaution: drug interactions\nCheck LFTs, FBC and U&Es\nConsider checking plasma levels\n50mg bd or 100mg bd*\n200–400mg/day*\n600–800mg/day*\nLamotrigine\nBipolar disorder (titration as in \nyoung adults)\nCheck for interactions and make \nappropriate dose alterations (see \nBNF)\n25mg daily (monotherapy)\nIncrease by 25mg steps every \n14 days\n200mg/day*\n25mg on alternate days (if with \nvalproate)\nIncrease by 25mg steps every \n14 days\n100mg/day*\n50mg daily (if with \ncarbamazepine)\nIncrease by 50mg steps every \n14 days\n100mg bd*\n(Continued)\n",
+  "raw_text_sha256": "d22e90fbd6447e04ab523128ac2aff03dc4bbc0d5831dbae23796b0840b2b840",
+  "coordinates_sha256": "d8bdd58b2b3127dbb9a365883a5efe06dc30839c0fa736d44ab91559f02e3dfc",
+  "block_sequence_sha256": "9261e557e3ddee4d9870f194b9983378ecabe1845282ce986cb89ba081df1869",
+  "blocks": [
+    {
+      "block_id": "page-0684-block-0000",
+      "order": 0,
+      "text": " \n \n \n \n \n \n \n \n",
+      "bbox": [
+        53.86249923706055,
+        108.5940170288086,
+        62.75,
+        495.33148193359375
+      ],
+      "text_sha256": "20b79b9461a156f3ed7f44fb084f3907cf9ba9539e0d77040eeb552faf2dadff"
+    },
+    {
+      "block_id": "page-0684-block-0001",
+      "order": 1,
+      "text": "Paliperidone palmitate \n",
+      "bbox": [
+        81.17000579833984,
+        539.3190307617188,
+        89.87750244140625,
+        612.654052734375
+      ],
+      "text_sha256": "76cdc43089e0f5e257bcf780741d0c53e23d073fb305723a7e255eef8ace4a40"
+    },
+    {
+      "block_id": "page-0684-block-0002",
+      "order": 2,
+      "text": "3-monthly injection\nDose based on renal function:\n",
+      "bbox": [
+        81.17000579833984,
+        426.2715148925781,
+        99.875,
+        612.654052734375
+      ],
+      "text_sha256": "2b92c5dcc35b2ea3d8655e2630cee307de2c789b3baf3a8e8c85e97dcfb5ebaa"
+    },
+    {
+      "block_id": "page-0684-block-0003",
+      "order": 3,
+      "text": "Because elderly patients may \n",
+      "bbox": [
+        91.1675033569336,
+        428.2515869140625,
+        99.875,
+        522.0015258789062
+      ],
+      "text_sha256": "84842732a3056ea51fe7ebd47d5d8110d617951acec397252fc66ec174eb232a"
+    },
+    {
+      "block_id": "page-0684-block-0004",
+      "order": 4,
+      "text": "have diminished renal function, \n",
+      "bbox": [
+        101.16500091552734,
+        419.6189880371094,
+        109.87249755859375,
+        522.0015258789062
+      ],
+      "text_sha256": "961e2239e4aed7ae24c1d5905575336d6badd919c583ee72a33f2ce82369ba91"
+    },
+    {
+      "block_id": "page-0684-block-0005",
+      "order": 5,
+      "text": "they are dosed as in mild renal \n",
+      "bbox": [
+        111.1624984741211,
+        422.6714782714844,
+        119.8699951171875,
+        522.00146484375
+      ],
+      "text_sha256": "3a974228d00acab44717cda841793675d5d804547be778960497b61fbaaad7fa"
+    },
+    {
+      "block_id": "page-0684-block-0006",
+      "order": 6,
+      "text": "impairment even if tests show \n",
+      "bbox": [
+        121.15999603271484,
+        424.08154296875,
+        129.86749267578125,
+        522.00146484375
+      ],
+      "text_sha256": "f29e178f86d76bfe295a0da1ca89f18bf591012daa2a54f74ca249b8dddde81f"
+    },
+    {
+      "block_id": "page-0684-block-0007",
+      "order": 7,
+      "text": "normal renal function*\n",
+      "bbox": [
+        131.15748596191406,
+        448.79400634765625,
+        139.864990234375,
+        522.00146484375
+      ],
+      "text_sha256": "9c85b71bd66b4e1d92e3d5afc56477a7f54c3c34c081e1675f899fbda4a2b2f8"
+    },
+    {
+      "block_id": "page-0684-block-0008",
+      "order": 8,
+      "text": "If the last dose of 1-monthly \n",
+      "bbox": [
+        81.15499114990234,
+        320.3565673828125,
+        89.86248779296875,
+        406.5690002441406
+      ],
+      "text_sha256": "c1a54fe06115e3417307d3cb58bcd0b8bc817155712d56621ab5a8f78b3d47eb"
+    },
+    {
+      "block_id": "page-0684-block-0009",
+      "order": 9,
+      "text": "paliperidone palmitate injectable is:\n",
+      "bbox": [
+        91.1524887084961,
+        301.7490539550781,
+        99.8599853515625,
+        406.5690002441406
+      ],
+      "text_sha256": "56052f134c0b5899947f025601f6f1cbe63f2b8c213676d6b90f15f874abb9a5"
+    },
+    {
+      "block_id": "page-0684-block-0010",
+      "order": 10,
+      "text": "50mg\n75mg\n100mg\n",
+      "bbox": [
+        101.14998626708984,
+        383.6414489746094,
+        129.85247802734375,
+        406.5690002441406
+      ],
+      "text_sha256": "c8f613043294a433c83b2d21679982e0d41806f8ba828b525adbd5de7d3ae71d"
+    },
+    {
+      "block_id": "page-0684-block-0011",
+      "order": 11,
+      "text": "Initiate the 3-monthly injection \n",
+      "bbox": [
+        81.1474838256836,
+        188.1538848876953,
+        89.85498046875,
+        288.5715026855469
+      ],
+      "text_sha256": "49684daa57a1ee23e6c23b3f95578114602d293d0235febc2fc90ff39a91a679"
+    },
+    {
+      "block_id": "page-0684-block-0012",
+      "order": 12,
+      "text": "at the following doses:\n",
+      "bbox": [
+        91.14498138427734,
+        215.63389587402344,
+        99.85247802734375,
+        288.5715026855469
+      ],
+      "text_sha256": "bef749c6289428bd4e6ff134316739c3e557adbc0fa79e5bef391816785d6d7b"
+    },
+    {
+      "block_id": "page-0684-block-0013",
+      "order": 13,
+      "text": "175mg\n263mg\n350mg\n(There is no equivalent dose for \n",
+      "bbox": [
+        101.1424789428711,
+        186.18141174316406,
+        139.84246826171875,
+        288.5715026855469
+      ],
+      "text_sha256": "def0b648b940a61f9fbc2f7e04fd820f9a15b38fe0dba621d69b080175751be6"
+    },
+    {
+      "block_id": "page-0684-block-0014",
+      "order": 14,
+      "text": "the 25mg dose of 1-monthly \n",
+      "bbox": [
+        141.13246154785156,
+        194.37889099121094,
+        149.8399658203125,
+        288.5715026855469
+      ],
+      "text_sha256": "d8f31307b0fae28524a4b67939e3177311a5dee3d4c407213771574af80a140f"
+    },
+    {
+      "block_id": "page-0684-block-0015",
+      "order": 15,
+      "text": "paliperidone palmitate \n",
+      "bbox": [
+        151.1299591064453,
+        214.81639099121094,
+        159.83746337890625,
+        288.5715026855469
+      ],
+      "text_sha256": "d235d5fc6d495e435ea01e9a0572fae4ed78c725e3949302c11e70ef52b5585a"
+    },
+    {
+      "block_id": "page-0684-block-0016",
+      "order": 16,
+      "text": "injection)21\n",
+      "bbox": [
+        161.12745666503906,
+        254.5382537841797,
+        169.8349609375,
+        288.5715026855469
+      ],
+      "text_sha256": "d4b488f6736d3cceb3f922fdd8887e444fabc404270adb3384d4fa79a0987f9c"
+    },
+    {
+      "block_id": "page-0684-block-0017",
+      "order": 17,
+      "text": "350mg 3 monthly*\n",
+      "bbox": [
+        81.1675033569336,
+        111.91307067871094,
+        89.875,
+        173.6004638671875
+      ],
+      "text_sha256": "e5b29229652b1236116a4948d084a3c4907de17318d81b6c483c18147a953886"
+    },
+    {
+      "block_id": "page-0684-block-0018",
+      "order": 18,
+      "text": "Risperidone\n",
+      "bbox": [
+        176.79249572753906,
+        575.5554809570312,
+        185.5,
+        612.6505126953125
+      ],
+      "text_sha256": "a57deef574cb1285a2da93e7b14c7d8834b8dfb167369a3c9262f566493ff650"
+    },
+    {
+      "block_id": "page-0684-block-0019",
+      "order": 19,
+      "text": "Long-acting injection\nMonitor renal function\n25mg every 2 weeks\n25mg every 2 weeks\n25mg every 2 weeks\nConsider 37.5mg every 2 weeks \n",
+      "bbox": [
+        176.79249572753906,
+        68.9905014038086,
+        195.49749755859375,
+        612.6505126953125
+      ],
+      "text_sha256": "05d0c07b69160d6bc727c77893d631ef64bf6ec0d445df6aea93d9b8a60ac481"
+    },
+    {
+      "block_id": "page-0684-block-0020",
+      "order": 20,
+      "text": "in patients treated with oral \n",
+      "bbox": [
+        196.78749084472656,
+        82.89559173583984,
+        205.4949951171875,
+        173.6004638671875
+      ],
+      "text_sha256": "5b2cdc3b4264bbd5be277dc1fbe987662d77b1e5c4d005a7e0d34be937068547"
+    },
+    {
+      "block_id": "page-0684-block-0021",
+      "order": 21,
+      "text": "risperidone doses >4mg/day22\n",
+      "bbox": [
+        206.7849884033203,
+        78.79917907714844,
+        215.49249267578125,
+        173.6004638671875
+      ],
+      "text_sha256": "052afad223e48abfee76a86cc70e1b8b7d1f12df0a39766234bfa14009887e81"
+    },
+    {
+      "block_id": "page-0684-block-0022",
+      "order": 22,
+      "text": "NB: All antipsychotic drugs contain warnings for increased mortality in elderly patients with dementia.\n",
+      "bbox": [
+        224.04249572753906,
+        287.62652587890625,
+        232.75,
+        612.6541137695312
+      ],
+      "text_sha256": "1f98304e62d32e0c78400c200b49551f6f6c48099ef9b30142a850e3c86222bf"
+    },
+    {
+      "block_id": "page-0684-block-0023",
+      "order": 23,
+      "text": "Drug\nSpecific indication/Additional \n",
+      "bbox": [
+        242.7375030517578,
+        416.154052734375,
+        251.625,
+        612.6541137695312
+      ],
+      "text_sha256": "c17c7e44518ab2ee95d7a11ea700b3a689396df9005dc5cf835aff088cdb5f93"
+    },
+    {
+      "block_id": "page-0684-block-0024",
+      "order": 24,
+      "text": "notes\nStarting dose\nUsual maintenance dose\nMaximum dose in elderly\n",
+      "bbox": [
+        242.7375030517578,
+        84.81150817871094,
+        261.62249755859375,
+        522.0015869140625
+      ],
+      "text_sha256": "d017d7fd2e6b27a0a2854089b7c2bd8b8247bb9c0cbcaead450515d1ad7004a8"
+    },
+    {
+      "block_id": "page-0684-block-0025",
+      "order": 25,
+      "text": "Mood stabilisers\n",
+      "bbox": [
+        270.86248779296875,
+        554.7390747070312,
+        279.75,
+        612.6541137695312
+      ],
+      "text_sha256": "61d001a362a627f477cdd6fe3d886ffc769f7772654ccb0cf74d161889f6f764"
+    },
+    {
+      "block_id": "page-0684-block-0026",
+      "order": 26,
+      "text": "Carbamazepine\nBipolar disorder\n",
+      "bbox": [
+        289.1700134277344,
+        472.12664794921875,
+        297.87750244140625,
+        612.6541137695312
+      ],
+      "text_sha256": "b7c952c5ad4967c823cb73424e4378ba94c1084e30f6774eed21633a6cb2d40c"
+    },
+    {
+      "block_id": "page-0684-block-0027",
+      "order": 27,
+      "text": "Caution: drug interactions\n",
+      "bbox": [
+        299.1675109863281,
+        438.234130859375,
+        307.875,
+        522.0015869140625
+      ],
+      "text_sha256": "dfd0f68a1268d7f2286bf34f2b07ac39b7d8d427dab959137663d8bf9c56458e"
+    },
+    {
+      "block_id": "page-0684-block-0028",
+      "order": 28,
+      "text": "Check LFTs, FBC and U&Es\n",
+      "bbox": [
+        309.1650085449219,
+        437.8140563964844,
+        317.87249755859375,
+        522.0015869140625
+      ],
+      "text_sha256": "e9d3de814ea39e4752e30586378f9930c276361eb5a1bb8b56361a6e4cc71d50"
+    },
+    {
+      "block_id": "page-0684-block-0029",
+      "order": 29,
+      "text": "Consider checking plasma levels\n",
+      "bbox": [
+        319.1625061035156,
+        419.49163818359375,
+        327.8699951171875,
+        522.0015869140625
+      ],
+      "text_sha256": "2ac4158a8002638ac8cee5052c78b0f568ab42c7cbbf3f1fa2a67a767a38ec42"
+    },
+    {
+      "block_id": "page-0684-block-0030",
+      "order": 30,
+      "text": "50mg bd or 100mg bd*\n200–400mg/day*\n600–800mg/day*\n",
+      "bbox": [
+        289.1625061035156,
+        117.30924987792969,
+        297.8699951171875,
+        405.9166259765625
+      ],
+      "text_sha256": "97c61ed0d8f30e739beaf3fc46610066aa820d93f5d4c10952daa77290be6e0e"
+    },
+    {
+      "block_id": "page-0684-block-0031",
+      "order": 31,
+      "text": "Lamotrigine\nBipolar disorder (titration as in \n",
+      "bbox": [
+        337.2900085449219,
+        423.7891845703125,
+        345.99749755859375,
+        612.6541748046875
+      ],
+      "text_sha256": "201ab8e2328dcef035804c114b5d21010aea5a4c4aaca1ae4421f0d5669bc072"
+    },
+    {
+      "block_id": "page-0684-block-0032",
+      "order": 32,
+      "text": "young adults)\n",
+      "bbox": [
+        347.2875061035156,
+        478.65167236328125,
+        355.9949951171875,
+        522.0016479492188
+      ],
+      "text_sha256": "ca931e3ae5822fd42d55b875b2f86929bac6f8b1a220f66bb47879b646a89c3d"
+    },
+    {
+      "block_id": "page-0684-block-0033",
+      "order": 33,
+      "text": "Check for interactions and make \n",
+      "bbox": [
+        357.2850036621094,
+        415.8316955566406,
+        365.99249267578125,
+        522.0016479492188
+      ],
+      "text_sha256": "08fd20da063b4af4504c29104f2c424446e89ea52c405d49eb9723348501609c"
+    },
+    {
+      "block_id": "page-0684-block-0034",
+      "order": 34,
+      "text": "appropriate dose alterations (see \n",
+      "bbox": [
+        367.2825012207031,
+        415.8691711425781,
+        375.989990234375,
+        522.0016479492188
+      ],
+      "text_sha256": "85ec3bbbe548f1ac43041a3845405dfded5b90dc86c8d4af9d3bbcfb3c491929"
+    },
+    {
+      "block_id": "page-0684-block-0035",
+      "order": 35,
+      "text": "BNF)\n",
+      "bbox": [
+        377.2799987792969,
+        507.4141540527344,
+        385.98748779296875,
+        522.0016479492188
+      ],
+      "text_sha256": "d1a7c3be476cf8246ed45250627d4b13649962690c64ce2b3fa601666534920f"
+    },
+    {
+      "block_id": "page-0684-block-0036",
+      "order": 36,
+      "text": "25mg daily (monotherapy)\nIncrease by 25mg steps every \n",
+      "bbox": [
+        335.2799987792969,
+        193.6290740966797,
+        343.98748779296875,
+        405.9166564941406
+      ],
+      "text_sha256": "6a9bba953a560c05b070099aafb21d6944a3d8b47b8dca88ae90b2078ae10822"
+    },
+    {
+      "block_id": "page-0684-block-0037",
+      "order": 37,
+      "text": "14 days\n200mg/day*\n",
+      "bbox": [
+        335.2799987792969,
+        133.56919860839844,
+        353.9849853515625,
+        288.9166564941406
+      ],
+      "text_sha256": "cdc7350466a1ac25743cef3a6741434c86d190fe3ed0fc264068910ae56fe0bf"
+    },
+    {
+      "block_id": "page-0684-block-0038",
+      "order": 38,
+      "text": "25mg on alternate days (if with \nvalproate)\nIncrease by 25mg steps every \n",
+      "bbox": [
+        363.4049987792969,
+        193.62913513183594,
+        382.1099853515625,
+        405.9166564941406
+      ],
+      "text_sha256": "91ac78c305ee8966564210cdefcd08539cbfd122bb0433ed3452a92333a8b87e"
+    },
+    {
+      "block_id": "page-0684-block-0039",
+      "order": 39,
+      "text": "14 days\n100mg/day*\n",
+      "bbox": [
+        363.4049987792969,
+        133.56919860839844,
+        382.1099853515625,
+        288.9166564941406
+      ],
+      "text_sha256": "ec5a93b9f766a43ad93200fd83cafd5fe7145f70e350e34e11d930ed15796393"
+    },
+    {
+      "block_id": "page-0684-block-0040",
+      "order": 40,
+      "text": "50mg daily (if with \ncarbamazepine)\nIncrease by 50mg steps every \n",
+      "bbox": [
+        388.0274963378906,
+        193.62913513183594,
+        406.73248291015625,
+        405.9166564941406
+      ],
+      "text_sha256": "3ca8c96c795f9202e7f1838e100d4d416d1f5a29f0ddd31c5f2ec0f8d2989752"
+    },
+    {
+      "block_id": "page-0684-block-0041",
+      "order": 41,
+      "text": "14 days\n100mg bd*\n",
+      "bbox": [
+        388.0274963378906,
+        136.47923278808594,
+        406.73248291015625,
+        288.9166564941406
+      ],
+      "text_sha256": "91a81d7b5745382ef1ebe4a1ddfc3728c8a9a450aaf7abb7f1b0c5f9ec7cddb7"
+    },
+    {
+      "block_id": "page-0684-block-0042",
+      "order": 42,
+      "text": "(Continued)\n",
+      "bbox": [
+        413.10748291015625,
+        64.3515853881836,
+        421.8599853515625,
+        100.36663818359375
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

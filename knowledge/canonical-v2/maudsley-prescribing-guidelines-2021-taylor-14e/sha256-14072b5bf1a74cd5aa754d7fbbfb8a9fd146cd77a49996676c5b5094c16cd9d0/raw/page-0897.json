@@ -1,0 +1,407 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0897",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 897,
+  "source_page_index": 896,
+  "source_page_display": 897,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "876    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 13\nDrug or drug group\nToxicity in \noverdose\nSmallest dose likely  \nto cause death\nSigns and symptoms of overdose\nBupropion3–6\nModerate\nAround 4.5g, although largest \noverdose of 13.5g was not \nfatal.7\nTachycardia, seizures, QRS prolongation, \nQT prolongation, arrhythmia. Agitation \nand toxic psychosis also reported. Fatal \nserotonin syndrome may occur if taken \nwith venlafaxine.8\nDuloxetine9–12\nLow\nUnclear – no deaths from single \noverdose reported but involved in \nnumerous mixed overdose deaths.\nDrowsiness, bradycardia, hypotension. \nMay be asymptomatic.\nLofepramine13,14\nLow\nUnclear. Fatality unlikely if \nlofepramine taken alone.\nSedation, coma, tachycardia, \nhypotension.\nMAOIs13,15–17\n(not moclobemide)\nHigh\nPhenelzine – 400mg\nTranylcypromine – 200mg\nTremor, weakness, confusion, sweating, \ntachycardia, hypertension.\nMianserin18–20\nLow\nUnclear but probably more than \n1000mg.\nFatality unlikely if mianserin \ntaken alone.\nSedation, coma, hypotension, \nhypertension, tachycardia, possible QT \nprolongation.\nMirtazapine3,21–24\nLow\nFatality unlikely in overdose of \nmirtazapine alone. One death \nreported following overdose \nwith 990mg.25\nSedation; even large overdose may be \nasymptomatic. Tachycardia/hypertension \nsometimes seen. Agitation.\nMoclobemide26,27\nLow\nUnclear, but probably more \nthan 8g.\nFatality unlikely if moclobemide \ntaken alone.\nVomiting, sedation, disorientation.\nReboxetine3,28\nLow\nNot known.\nFatality unlikely in overdose of \nreboxetine alone.\nSweating, tachycardia, changes in blood \npressure.\nSSRIs14,29–32\nLow\nUnclear. Probably above 1–2g.\nFatality unlikely if SSRI taken \nalone.\nVomiting, tremor, drowsiness, \ntachycardia, ST depression. Seizures and \nQT prolongation possible. Citalopram \nmost toxic of SSRIs in overdose24,33 \n(coma, seizures, arrhythmia); escitalopram \nis less toxic.34,35\nTrazodone10,36–39\nLow\nUnclear but probably more than \n10g.\nFatality unlikely in overdose of \ntrazodone alone. Mortality rate \nabout 1 in 10,000 exposures.24\nDrowsiness, nausea, hypotension, \ndizziness. Rarely QT prolongation, \narrhythmia.\nTricyclics13,15,16,40 \n(not lofepramine)\nHigh\nAround 500mg.\nDoses over 50mg/kg usually \nfatal.\nSedation, coma, tachycardia, arrhythmia \n(QRS, QT prolongation), hypotension, \nseizures.\nTable 13.1  (Continued)\n",
+  "raw_text_sha256": "cff592b5e1e2ac6dfb7888655fbc2bd4a4e4f385985bd15bf0373a93e37eae2c",
+  "coordinates_sha256": "442a13f2dc597e1f245d3f562815569018c0f4892dc03b2afa51f57c32d530ab",
+  "block_sequence_sha256": "852703c275cf1a5ea167c6804f25f22cdfa6eabd8d5a4d1bb17cb889e5eed8e7",
+  "blocks": [
+    {
+      "block_id": "page-0897-block-0000",
+      "order": 0,
+      "text": "876    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "bdd67fdaf3a84f0ea23c7a5e15cf985fbcf83691faecbaf882bccff9eff64190"
+    },
+    {
+      "block_id": "page-0897-block-0001",
+      "order": 1,
+      "text": "CHAPTER 13\n",
+      "bbox": [
+        18.520000457763672,
+        272.95111083984375,
+        28.0,
+        318.74310302734375
+      ],
+      "text_sha256": "a01ce0756ef6b5d41c48be6624d8bd154fa95cf67cb49768f2593332d3a2ec98"
+    },
+    {
+      "block_id": "page-0897-block-0002",
+      "order": 2,
+      "text": "Drug or drug group\n",
+      "bbox": [
+        61.889801025390625,
+        99.28968811035156,
+        130.91978454589844,
+        108.17718505859375
+      ],
+      "text_sha256": "d528646a4477039c6bdce1cc5da8ca2b45d7d96730efadb8e0e467171afacd39"
+    },
+    {
+      "block_id": "page-0897-block-0003",
+      "order": 3,
+      "text": "Toxicity in \noverdose\n",
+      "bbox": [
+        141.89230346679688,
+        89.29219055175781,
+        179.40733337402344,
+        108.17718505859375
+      ],
+      "text_sha256": "51ebed65665cfe44e710fb62a313d80f26f929956df51247961e3b5d5f90dcd5"
+    },
+    {
+      "block_id": "page-0897-block-0004",
+      "order": 4,
+      "text": "Smallest dose likely  \nto cause death\nSigns and symptoms of overdose\n",
+      "bbox": [
+        184.88980102539062,
+        89.29219055175781,
+        410.4297180175781,
+        108.17718505859375
+      ],
+      "text_sha256": "6209e6f36b542e07025e47df7227bdb6e50dfc25f07e27e2d9a5fe9d6ac1c0f2"
+    },
+    {
+      "block_id": "page-0897-block-0005",
+      "order": 5,
+      "text": "Bupropion3–6\nModerate\nAround 4.5g, although largest \noverdose of 13.5g was not \nfatal.7\n",
+      "bbox": [
+        61.889801025390625,
+        119.34468841552734,
+        283.9623107910156,
+        148.04718017578125
+      ],
+      "text_sha256": "83438ec2c631c5025d6bc8ef1139cfe101d548e0cd8f0d42317caba2f7e12f73"
+    },
+    {
+      "block_id": "page-0897-block-0006",
+      "order": 6,
+      "text": "Tachycardia, seizures, QRS prolongation, \nQT prolongation, arrhythmia. Agitation \nand toxic psychosis also reported. Fatal \nserotonin syndrome may occur if taken \nwith venlafaxine.8\n",
+      "bbox": [
+        293.8898010253906,
+        119.34468841552734,
+        424.3373718261719,
+        168.04217529296875
+      ],
+      "text_sha256": "d3f665fb106dd6612b0a56616d0d8de2fc305d9a6959b62df828af7487765720"
+    },
+    {
+      "block_id": "page-0897-block-0007",
+      "order": 7,
+      "text": "Duloxetine9–12\nLow\nUnclear – no deaths from single \noverdose reported but involved in \nnumerous mixed overdose deaths.\n",
+      "bbox": [
+        61.889801025390625,
+        174.3696746826172,
+        287.8772888183594,
+        203.07217407226562
+      ],
+      "text_sha256": "b0872e42ff67675a3a03d88a5a570cf06128c1323c54b891efb2a446f1713fff"
+    },
+    {
+      "block_id": "page-0897-block-0008",
+      "order": 8,
+      "text": "Drowsiness, bradycardia, hypotension. \nMay be asymptomatic.\n",
+      "bbox": [
+        293.8847961425781,
+        174.36216735839844,
+        418.2273864746094,
+        193.06716918945312
+      ],
+      "text_sha256": "11f87af501da63a89f019b49634a8d43f63e666a306ca59238dbe44e491f4f40"
+    },
+    {
+      "block_id": "page-0897-block-0009",
+      "order": 9,
+      "text": "Lofepramine13,14\nLow\nUnclear. Fatality unlikely if \nlofepramine taken alone.\n",
+      "bbox": [
+        61.887298583984375,
+        209.3871612548828,
+        269.5997619628906,
+        228.09970092773438
+      ],
+      "text_sha256": "4e7c0eae9a49f2d4465a852ed8f9355adbd694d27f2be20ea363089f432ab40f"
+    },
+    {
+      "block_id": "page-0897-block-0010",
+      "order": 10,
+      "text": "Sedation, coma, tachycardia, \nhypotension.\n",
+      "bbox": [
+        293.8847961425781,
+        209.3946990966797,
+        387.9197692871094,
+        228.09970092773438
+      ],
+      "text_sha256": "01b580b6adf1a75133efad6be0f8c46046a353915cc5c654089755e66ef48153"
+    },
+    {
+      "block_id": "page-0897-block-0011",
+      "order": 11,
+      "text": "MAOIs13,15–17\n",
+      "bbox": [
+        61.887298583984375,
+        234.41468811035156,
+        101.54534149169922,
+        243.1221923828125
+      ],
+      "text_sha256": "fda056c4bbaa25cefc81f9a4aa00740b384acb4237f36b1308d9d74eb82c9a13"
+    },
+    {
+      "block_id": "page-0897-block-0012",
+      "order": 12,
+      "text": "(not moclobemide)\n",
+      "bbox": [
+        61.889801025390625,
+        244.41969299316406,
+        122.3172836303711,
+        253.127197265625
+      ],
+      "text_sha256": "1ffe33e8c51c60bed7eca51664d666a56f9af612ee1772b7b697c81c7875ee84"
+    },
+    {
+      "block_id": "page-0897-block-0013",
+      "order": 13,
+      "text": "High\nPhenelzine – 400mg\nTranylcypromine – 200mg\n",
+      "bbox": [
+        141.89230346679688,
+        234.4221954345703,
+        267.4048156738281,
+        253.127197265625
+      ],
+      "text_sha256": "04da8b2a930a2fd5778671d956ce2fb89588d66f2ddf3982d55e896444c7a477"
+    },
+    {
+      "block_id": "page-0897-block-0014",
+      "order": 14,
+      "text": "Tremor, weakness, confusion, sweating, \ntachycardia, hypertension.\n",
+      "bbox": [
+        293.8872985839844,
+        234.4221954345703,
+        422.8198547363281,
+        253.127197265625
+      ],
+      "text_sha256": "6f272fdd3f3a3b01bf810c11542a28056ab27617f7b40d21da22a69c0290a450"
+    },
+    {
+      "block_id": "page-0897-block-0015",
+      "order": 15,
+      "text": "Mianserin18–20\nLow\nUnclear but probably more than \n1000mg.\nFatality unlikely if mianserin \ntaken alone.\n",
+      "bbox": [
+        61.889801025390625,
+        259.44219970703125,
+        289.2198181152344,
+        298.1446838378906
+      ],
+      "text_sha256": "5759cae9913207572a5d82f4b046f3ad04560ec2edca61ab0b7ab2501e6c4f85"
+    },
+    {
+      "block_id": "page-0897-block-0016",
+      "order": 16,
+      "text": "Sedation, coma, hypotension, \nhypertension, tachycardia, possible QT \nprolongation.\n",
+      "bbox": [
+        293.8847961425781,
+        259.43719482421875,
+        418.3473815917969,
+        288.1396789550781
+      ],
+      "text_sha256": "6f477ba86ea164c322061e9411067a16897c94578e771f5d8fb151779cbe307b"
+    },
+    {
+      "block_id": "page-0897-block-0017",
+      "order": 17,
+      "text": "Mirtazapine3,21–24\nLow\nFatality unlikely in overdose of \nmirtazapine alone. One death \nreported following overdose \nwith 990mg.25\n",
+      "bbox": [
+        61.887298583984375,
+        304.4596862792969,
+        283.0848083496094,
+        343.169677734375
+      ],
+      "text_sha256": "c3e1b036fdfdd38e130b70dc9dd5fe8ad6372c1c8586030f7a5b36802b031a18"
+    },
+    {
+      "block_id": "page-0897-block-0018",
+      "order": 18,
+      "text": "Sedation; even large overdose may be \nasymptomatic. Tachycardia/hypertension \nsometimes seen. Agitation.\n",
+      "bbox": [
+        293.8898010253906,
+        304.4696960449219,
+        424.5848388671875,
+        333.17218017578125
+      ],
+      "text_sha256": "953dfaad1dfddbe50b5c05475b2d8814dbe52257fb6e89f714e3e0236a564991"
+    },
+    {
+      "block_id": "page-0897-block-0019",
+      "order": 19,
+      "text": "Moclobemide26,27\nLow\nUnclear, but probably more \nthan 8g.\nFatality unlikely if moclobemide \ntaken alone.\n",
+      "bbox": [
+        61.892303466796875,
+        349.4921875,
+        287.37481689453125,
+        388.1946716308594
+      ],
+      "text_sha256": "527d11127190cc5dd8debdbc56450a8f460f65b98faff0df2f22d32aae659541"
+    },
+    {
+      "block_id": "page-0897-block-0020",
+      "order": 20,
+      "text": "Vomiting, sedation, disorientation.\n",
+      "bbox": [
+        293.8847961425781,
+        349.4871826171875,
+        403.9099426269531,
+        358.1946716308594
+      ],
+      "text_sha256": "8b6a0e7c8dd3c98199f48e0e627471c28ba8802567e7a08d3ba1d1018100c7bb"
+    },
+    {
+      "block_id": "page-0897-block-0021",
+      "order": 21,
+      "text": "Reboxetine3,28\nLow\nNot known.\nFatality unlikely in overdose of \nreboxetine alone.\n",
+      "bbox": [
+        61.887298583984375,
+        394.5096740722656,
+        283.0848083496094,
+        423.2221984863281
+      ],
+      "text_sha256": "2c0296732d2b22143f7ac5b1143df887caaef86b21c87e2e60c5e8e24f5e7ec3"
+    },
+    {
+      "block_id": "page-0897-block-0022",
+      "order": 22,
+      "text": "Sweating, tachycardia, changes in blood \npressure.\n",
+      "bbox": [
+        293.8847961425781,
+        394.51220703125,
+        424.60986328125,
+        413.2171936035156
+      ],
+      "text_sha256": "0e8a4673343b541e588cda1767651d01cf516456cb7b98247a6cc6ead6b9f463"
+    },
+    {
+      "block_id": "page-0897-block-0023",
+      "order": 23,
+      "text": "SSRIs14,29–32\nLow\nUnclear. Probably above 1–2g.\nFatality unlikely if SSRI taken \nalone.\n",
+      "bbox": [
+        61.887298583984375,
+        429.5372009277344,
+        281.5848388671875,
+        458.2471923828125
+      ],
+      "text_sha256": "dc8b179a99129aa3492b2eabf366203e10c49ec9a776db68b4ea11a6307786ae"
+    },
+    {
+      "block_id": "page-0897-block-0024",
+      "order": 24,
+      "text": "Vomiting, tremor, drowsiness, \ntachycardia, ST depression. Seizures and \nQT prolongation possible. Citalopram \nmost toxic of SSRIs in overdose24,33 \n(coma, seizures, arrhythmia); escitalopram \nis less toxic.34,35\n",
+      "bbox": [
+        293.8847961425781,
+        429.5372009277344,
+        429.9810791015625,
+        488.2471923828125
+      ],
+      "text_sha256": "b3004acf30d5394176a858735f552b783f65e43f6837a5ac4ce939ab3b6e09b5"
+    },
+    {
+      "block_id": "page-0897-block-0025",
+      "order": 25,
+      "text": "Trazodone10,36–39\nLow\nUnclear but probably more than \n10g.\nFatality unlikely in overdose of \ntrazodone alone. Mortality rate \nabout 1 in 10,000 exposures.24\n",
+      "bbox": [
+        61.889801025390625,
+        494.5697021484375,
+        289.2198181152344,
+        543.2672119140625
+      ],
+      "text_sha256": "78abf85e262d454f016ad0e1cf50a772d0cd90c74b4521e3f1629e1b35ab5641"
+    },
+    {
+      "block_id": "page-0897-block-0026",
+      "order": 26,
+      "text": "Drowsiness, nausea, hypotension, \ndizziness. Rarely QT prolongation, \narrhythmia.\n",
+      "bbox": [
+        293.8898010253906,
+        494.5697021484375,
+        403.794921875,
+        523.272216796875
+      ],
+      "text_sha256": "1ee9316e29b454ba89d8d6a65d8dd10fa8962a0f6a5ef84e7a7f44f7065490a0"
+    },
+    {
+      "block_id": "page-0897-block-0027",
+      "order": 27,
+      "text": "Tricyclics13,15,16,40 \n",
+      "bbox": [
+        61.892303466796875,
+        549.5896606445312,
+        112.9899673461914,
+        558.2971801757812
+      ],
+      "text_sha256": "7580ff30233fc869edcaedbe04b05c5aee923725b92ff97542f25e39f9cc9b54"
+    },
+    {
+      "block_id": "page-0897-block-0028",
+      "order": 28,
+      "text": "(not lofepramine)\n",
+      "bbox": [
+        61.889801025390625,
+        559.5946655273438,
+        117.31478118896484,
+        568.3021850585938
+      ],
+      "text_sha256": "f5dd9e99f9f4d20b52e1eef4fa3eb92ff69f6418a0208f9061fbba83067a592b"
+    },
+    {
+      "block_id": "page-0897-block-0029",
+      "order": 29,
+      "text": "High\nAround 500mg.\nDoses over 50mg/kg usually \nfatal.\n",
+      "bbox": [
+        141.89230346679688,
+        549.59716796875,
+        276.1648254394531,
+        578.2996826171875
+      ],
+      "text_sha256": "58bc0a05059ad22fd08536d9f6794afe99ce9998ed3dcda99cce0535f41feb7f"
+    },
+    {
+      "block_id": "page-0897-block-0030",
+      "order": 30,
+      "text": "Sedation, coma, tachycardia, arrhythmia \n(QRS, QT prolongation), hypotension, \nseizures.\n",
+      "bbox": [
+        293.8872985839844,
+        549.5896606445312,
+        424.582275390625,
+        578.2921752929688
+      ],
+      "text_sha256": "348fd0fac2c13901d44833d99b5618a785d9c6d8ae39be1dfd48937447c0692f"
+    },
+    {
+      "block_id": "page-0897-block-0031",
+      "order": 31,
+      "text": "Table 13.1  (Continued)\n",
+      "bbox": [
+        67.88980102539062,
+        69.41468811035156,
+        144.17979431152344,
+        78.30218505859375
+      ],
+      "text_sha256": "24029779a5839f9ec78b7b56d6c5134ba1c47fc502bdb061095fdbda9da739f2"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

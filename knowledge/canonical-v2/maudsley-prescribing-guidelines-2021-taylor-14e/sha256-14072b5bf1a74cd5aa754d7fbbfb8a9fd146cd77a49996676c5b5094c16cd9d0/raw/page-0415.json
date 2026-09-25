@@ -1,0 +1,371 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0415",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 415,
+  "source_page_index": 414,
+  "source_page_display": 415,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "394    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nTable 3.17  Summary of risk of hyponatraemia with antidepressants7,14,46–48\nDrug/drug group\nRisk of Na\nLevel of supporting evidence\nSSRIs\nHigh\nStrong\nSNRIs\nHigh\nStrong\nTricyclics\nModerate\nStrong\nMAOIs\nLow\nWeak\nNaSSas (mirtazapine, mianserin)\nLow\nStrong\nBupropion\nLow\nModerate\nAgomelatine\nLow\nWeak\nMonitoring1,14,15,49–53\nAll patients taking antidepressants should be informed of and observed for signs of \nhyponatraemia (dizziness, nausea, lethargy, confusion, cramps, seizures). The risk is \nhighest in the first 2–4 weeks of starting antidepressants and diminishes over time until \nby 3–6 months the risk is the same as for patients who do not take antidepressants.47,48 \nSerum sodium should be determined (at baseline and 2 and 4 weeks, and then \n3-monthly54) for those at high risk of drug-induced hyponatraemia. High-risk factors \nare as follows:\n■\n■Older age\n■\n■Female sex\n■\n■Major surgery\n■\n■History of hyponatraemia or a low baseline sodium concentration\n■\n■Co-therapy with other drugs known to be associated with hyponatraemia (e.g. diu-\nretics, NSAIDs, antipsychotics, carbamazepine, cancer chemotherapy, calcium antag-\nonists, ACE inhibitors and laxatives)\n■\n■Reduced renal function (GFR < 50mL/min)\n■\n■Medical co-morbidity (e.g. hypothyroidism, diabetes, COPD, hypertension, head \ninjury, CCF, CVA, various cancers)\n■\n■Low body weight\nAge is perhaps the most important risk factor, so for older people (especially women) \nmonitoring is essential.15,47,55,56\nTreatment56\nIt may be possible to manage mild hyponatraemia with fluid restriction.50 Some suggest \nincreasing sodium intake,4 although this is likely to be impractical. If symptoms persist, \nthe antidepressant should be discontinued.\n■\n■The normal range for serum sodium is 136–145mmol/L.\n■\n■If serum sodium is >125mmol/L – monitor sodium daily until normal. Symptoms \ninclude headache, nausea, vomiting, muscle cramps, restlessness, lethargy, confusion \nand disorientation. Consider withdrawing the offending antidepressant.\n",
+  "raw_text_sha256": "c736c4b3b012b8f329eaaee0077fa48335b34d2c81ba3215807322c8e7b59a4d",
+  "coordinates_sha256": "e8b83dec58157064f830bef5fa911b43cfd6976c0eb5e58428fd558523f674c8",
+  "block_sequence_sha256": "e78461536eaf1689453caf11618ab0f5aebcfb9b35f1fbab8a5b7a7a0ca3285f",
+  "blocks": [
+    {
+      "block_id": "page-0415-block-0000",
+      "order": 0,
+      "text": "394    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "4d0c86dfb14961c5cdebc9211224529312e42cfcb82aee461c8c95b2c79ba950"
+    },
+    {
+      "block_id": "page-0415-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0415-block-0002",
+      "order": 2,
+      "text": "Table 3.17  Summary of risk of hyponatraemia with antidepressants7,14,46–48\n",
+      "bbox": [
+        67.88999938964844,
+        70.08790588378906,
+        306.5058898925781,
+        78.97540283203125
+      ],
+      "text_sha256": "78dcdfb60c77284aa51155b136406c294e0ee63bac4e3677b6b86596a389a7e2"
+    },
+    {
+      "block_id": "page-0415-block-0003",
+      "order": 3,
+      "text": "Drug/drug group\nRisk of Na\nLevel of supporting evidence\n",
+      "bbox": [
+        61.88999938964844,
+        90.92262268066406,
+        413.1906433105469,
+        99.81011962890625
+      ],
+      "text_sha256": "4b61f6796329ddfeb0650aa7e4c40eacd086e5ade5ce17cf70832d344a38eeac"
+    },
+    {
+      "block_id": "page-0415-block-0004",
+      "order": 4,
+      "text": "SSRIs\nHigh\nStrong\n",
+      "bbox": [
+        61.89068603515625,
+        107.8801498413086,
+        332.2057189941406,
+        116.587646484375
+      ],
+      "text_sha256": "c81a7a6e1c6fbb4baa77d0ca15e2db565ebfaa9dd04bfc9e1a021b0e15dea426"
+    },
+    {
+      "block_id": "page-0415-block-0005",
+      "order": 5,
+      "text": "SNRIs\nHigh\nStrong\n",
+      "bbox": [
+        61.89068603515625,
+        122.90267181396484,
+        332.2057189941406,
+        131.61016845703125
+      ],
+      "text_sha256": "8d823576ed04c4dbba256e2ec5f5e8d7a7399cc515bb9c0229b7a3e0eec9bf78"
+    },
+    {
+      "block_id": "page-0415-block-0006",
+      "order": 6,
+      "text": "Tricyclics\nModerate\nStrong\n",
+      "bbox": [
+        61.89068603515625,
+        137.92518615722656,
+        332.2057189941406,
+        146.6326904296875
+      ],
+      "text_sha256": "8059dd15caec513432de860389e544515b53f6b46683209ff05fdacd2321e0ed"
+    },
+    {
+      "block_id": "page-0415-block-0007",
+      "order": 7,
+      "text": "MAOIs\nLow\nWeak\n",
+      "bbox": [
+        61.89068603515625,
+        152.9477081298828,
+        329.2806701660156,
+        161.65521240234375
+      ],
+      "text_sha256": "1c80ef0cd826cefb547c4b5d4b9c781a7a33bd7bb92829fb557f69047488576d"
+    },
+    {
+      "block_id": "page-0415-block-0008",
+      "order": 8,
+      "text": "NaSSas (mirtazapine, mianserin)\nLow\nStrong\n",
+      "bbox": [
+        61.89068603515625,
+        167.97023010253906,
+        332.2057189941406,
+        176.677734375
+      ],
+      "text_sha256": "cabab29cc71fe1d397b22e89f052ae6bc32f7e3d8e7b5ad004299133989c423a"
+    },
+    {
+      "block_id": "page-0415-block-0009",
+      "order": 9,
+      "text": "Bupropion\nLow\nModerate\n",
+      "bbox": [
+        61.89068603515625,
+        182.9927215576172,
+        342.3382263183594,
+        191.70022583007812
+      ],
+      "text_sha256": "10800be965d53f03f31959eca3da1ef394ce7ebdf915d8e04256335565427a62"
+    },
+    {
+      "block_id": "page-0415-block-0010",
+      "order": 10,
+      "text": "Agomelatine\nLow\nWeak\n",
+      "bbox": [
+        61.89068603515625,
+        198.0152130126953,
+        329.2806701660156,
+        206.72271728515625
+      ],
+      "text_sha256": "d35d1c9c2e7b6e1679dec1e7714459f0c369eb65211a75e20831b31f643df46a"
+    },
+    {
+      "block_id": "page-0415-block-0011",
+      "order": 11,
+      "text": "Monitoring1,14,15,49–53\n",
+      "bbox": [
+        61.88999938964844,
+        231.35317993164062,
+        152.16986083984375,
+        243.20318603515625
+      ],
+      "text_sha256": "5bb3baf37ad4239d3ed1441eef878b3de06aa843df684b95fd4335d1e684524a"
+    },
+    {
+      "block_id": "page-0415-block-0012",
+      "order": 12,
+      "text": "All patients taking antidepressants should be informed of and observed for signs of \nhyponatraemia (dizziness, nausea, lethargy, confusion, cramps, seizures). The risk is \nhighest in the first 2–4 weeks of starting antidepressants and diminishes over time until \nby 3–6 months the risk is the same as for patients who do not take antidepressants.47,48 \nSerum sodium should be determined (at baseline and 2 and 4 weeks, and then \n3-monthly54) for those at high risk of drug-induced hyponatraemia. High-risk factors \nare as follows:\n",
+      "bbox": [
+        61.889801025390625,
+        249.26318359375,
+        436.7096862792969,
+        332.9831848144531
+      ],
+      "text_sha256": "b23114a8a06459c40f7245cb821b0cbfbd532a9e3c51b462aec131a67b18814b"
+    },
+    {
+      "block_id": "page-0415-block-0013",
+      "order": 13,
+      "text": "■\n■Older age\n",
+      "bbox": [
+        61.88990020751953,
+        339.26318359375,
+        113.11000061035156,
+        350.9831848144531
+      ],
+      "text_sha256": "3ef303301d04ce9fef7993863b6f0954ff31ad83ac0bf0011b312fffcd89ce3d"
+    },
+    {
+      "block_id": "page-0415-block-0014",
+      "order": 14,
+      "text": "■\n■Female sex\n",
+      "bbox": [
+        61.88990020751953,
+        351.26318359375,
+        118.11000061035156,
+        362.9831848144531
+      ],
+      "text_sha256": "f856dc5db32e74e8c63f1ba45d47127784679f6883e6956386b70bde3f04ed86"
+    },
+    {
+      "block_id": "page-0415-block-0015",
+      "order": 15,
+      "text": "■\n■Major surgery\n",
+      "bbox": [
+        61.88990020751953,
+        363.26318359375,
+        132.5699920654297,
+        374.9831848144531
+      ],
+      "text_sha256": "5f4150441fdd76faa8f337d00072a3612814652803e56a61c0c4ac0482a86b1f"
+    },
+    {
+      "block_id": "page-0415-block-0016",
+      "order": 16,
+      "text": "■\n■History of hyponatraemia or a low baseline sodium concentration\n",
+      "bbox": [
+        61.88990020751953,
+        375.26318359375,
+        355.949951171875,
+        386.9831848144531
+      ],
+      "text_sha256": "28c886b3ba40237833de97e70cfa79133d3a37404f23cc354eedd95eaa8070f1"
+    },
+    {
+      "block_id": "page-0415-block-0017",
+      "order": 17,
+      "text": "■\n■Co-therapy with other drugs known to be associated with hyponatraemia (e.g. diu-\n",
+      "bbox": [
+        61.88990020751953,
+        387.26318359375,
+        433.8799743652344,
+        398.9831848144531
+      ],
+      "text_sha256": "8529216962dd179901ecdcc5fd2f4d2ba2a4ba5bd11592d2733f0a412ace0adb"
+    },
+    {
+      "block_id": "page-0415-block-0018",
+      "order": 18,
+      "text": "retics, NSAIDs, antipsychotics, carbamazepine, cancer chemotherapy, calcium antag-\nonists, ACE inhibitors and laxatives)\n",
+      "bbox": [
+        70.88999938964844,
+        399.4331970214844,
+        433.8598937988281,
+        422.9831848144531
+      ],
+      "text_sha256": "e4415c853baa5c20daf8edd0495a18a8f54ec9641b1128a2bf07e68f91ec1570"
+    },
+    {
+      "block_id": "page-0415-block-0019",
+      "order": 19,
+      "text": "■\n■Reduced renal function (GFR < 50mL/min)\n",
+      "bbox": [
+        61.88990020751953,
+        423.26318359375,
+        257.5799560546875,
+        434.9831848144531
+      ],
+      "text_sha256": "6fb1040126b2f3a24b31b44cccf85bddcdcc5cb1af04378e7ee85273ca3d6927"
+    },
+    {
+      "block_id": "page-0415-block-0020",
+      "order": 20,
+      "text": "■\n■Medical co-morbidity (e.g. hypothyroidism, diabetes, COPD, hypertension, head \n",
+      "bbox": [
+        61.88990020751953,
+        435.26318359375,
+        436.6699523925781,
+        446.9831848144531
+      ],
+      "text_sha256": "842b469020f5e30cc250115bc8e4cc2d765fa5e99f4fe3a92acd208d57122730"
+    },
+    {
+      "block_id": "page-0415-block-0021",
+      "order": 21,
+      "text": "injury, CCF, CVA, various cancers)\n",
+      "bbox": [
+        70.88999938964844,
+        447.26318359375,
+        219.88998413085938,
+        458.9831848144531
+      ],
+      "text_sha256": "31757fcba9ac6ed291fe4effeb2ae27190e066337f1f90c3af3e36270ed1392a"
+    },
+    {
+      "block_id": "page-0415-block-0022",
+      "order": 22,
+      "text": "■\n■Low body weight\n",
+      "bbox": [
+        61.88990020751953,
+        459.26318359375,
+        146.46998596191406,
+        470.9831848144531
+      ],
+      "text_sha256": "48a0525f8bd0a4ad9c07233492bb30c630aebf45245aa1178c18259949a979f4"
+    },
+    {
+      "block_id": "page-0415-block-0023",
+      "order": 23,
+      "text": "Age is perhaps the most important risk factor, so for older people (especially women) \nmonitoring is essential.15,47,55,56\n",
+      "bbox": [
+        61.88999938964844,
+        477.26318359375,
+        436.7100830078125,
+        500.9831848144531
+      ],
+      "text_sha256": "5517eb5176dc0d24beaaefe34b306547db9b41ec3cf8fc954f988ca14191beda"
+    },
+    {
+      "block_id": "page-0415-block-0024",
+      "order": 24,
+      "text": "Treatment56\n",
+      "bbox": [
+        61.88999938964844,
+        519.3532104492188,
+        116.54265594482422,
+        531.2031860351562
+      ],
+      "text_sha256": "871c49fbe94e70a3eba6451abc8bd4a7e4bc9d8b1c83efb3ae6668f1cee79451"
+    },
+    {
+      "block_id": "page-0415-block-0025",
+      "order": 25,
+      "text": "It may be possible to manage mild hyponatraemia with fluid restriction.50 Some suggest \nincreasing sodium intake,4 although this is likely to be impractical. If symptoms persist, \nthe antidepressant should be discontinued.\n",
+      "bbox": [
+        61.887115478515625,
+        537.26318359375,
+        436.6771240234375,
+        572.9832153320312
+      ],
+      "text_sha256": "a4765abb03e36bc2836fd61220a0d15ab3f0c99fa6651cc0615cf9aa5005bcce"
+    },
+    {
+      "block_id": "page-0415-block-0026",
+      "order": 26,
+      "text": "■\n■The normal range for serum sodium is 136–145mmol/L.\n",
+      "bbox": [
+        61.88990020751953,
+        579.26318359375,
+        314.2399597167969,
+        590.9832153320312
+      ],
+      "text_sha256": "fb7258ad7336d235e96a3c1897773c479faec1afc6bd3f294e3c2d01b2888f09"
+    },
+    {
+      "block_id": "page-0415-block-0027",
+      "order": 27,
+      "text": "■\n■If serum sodium is >125mmol/L – monitor sodium daily until normal. Symptoms \n",
+      "bbox": [
+        61.88990020751953,
+        591.26318359375,
+        436.6699523925781,
+        602.9832153320312
+      ],
+      "text_sha256": "fe9a9ca44854e4472b191dbaebd9a013be147df961d2de00e22ec46f83aa4d96"
+    },
+    {
+      "block_id": "page-0415-block-0028",
+      "order": 28,
+      "text": "include headache, nausea, vomiting, muscle cramps, restlessness, lethargy, confusion \nand disorientation. Consider withdrawing the offending antidepressant.\n",
+      "bbox": [
+        70.88999938964844,
+        603.26318359375,
+        436.6900634765625,
+        626.9832153320312
+      ],
+      "text_sha256": "0c9af76f02d27c6cda43dea6bd2a0931a0c236139bfac51b21594103fd713b10"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

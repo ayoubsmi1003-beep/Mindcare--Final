@@ -1,0 +1,419 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0128",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 128,
+  "source_page_index": 127,
+  "source_page_display": 128,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    107\nCHAPTER 1\nTable 1.13  A summary of potential reduction schedules for olanzapine\nReduce olanzapine by 5–10mg every 2–3 months until reaching 20mg per day, then\nReduce dose by 2.5–5mg every 2–3 months until reaching 10mg per day, then\nReduce dose by 1.25–2.5mg every 2–3 months until reaching 5mg per day, then\nReduce dose by 0.6–1.25mg every 2–3 months until reaching 2.5mg per day, then\nReduce dose by 0.3–0.6mg every 2–3 months until reaching 1.25mg per day, then\nReduce dose by 0.15–0.3mg every 2–3 months until reaching 0.6mg per day, then\nReduce dose by 0.07–0.15mg every 2–3 months until olanzapine is completely stopped.\nThis process should take 12–48 months, depending on how the patient tolerates the reductions.\nTable 1.12  Reductions of olanzapine dose by 2.5 percentage points of D2 occupancy at each step. \nLarger reductions that are ‘evenly spaced’ in terms of effect on D2 occupancy could be achieved by \nfollowing every second or third step of this regimen\nPeriod\nOlanzapine \ndose (mg)\nD2 occupancy (%)\nPeriod\nOlanzapine \ndose (mg)\nD2 occupancy \n(%)\n1\n20\n81.6\n18\n2.7\n37.5\n2\n15.5\n77.5\n19\n2.4\n35\n3\n13.5\n75\n20\n2.2\n32.5\n4\n11.9\n72.5\n21\n1.9\n30\n5\n10.5\n70\n22\n1.7\n27.5\n6\n9.3\n67.5\n23\n1.5\n25\n7\n8.4\n65\n24\n1.3\n22.5\n8\n7.5\n62.5\n25\n1.1\n20\n9\n6.8\n60\n26\n0.95\n17.5\n10\n6.1\n57.5\n27\n0.8\n15\n11\n5.5\n55\n28\n0.65\n12.5\n12\n5\n52.5\n29\n0.5\n10\n13\n4.5\n50\n30\n0.37\n7.5\n14\n4.1\n47.5\n31\n0.24\n5\n15\n3.7\n45\n32\n0.1\n2.5\n16\n3.3\n42.5\n33\n0\n0\n17\n3\n40\n",
+  "raw_text_sha256": "35e2caaabcff822f33d6ec08b102453fa88e00cd7c8b882ad729c3826a595130",
+  "coordinates_sha256": "1d675db5d7a380bf5d8c205a1a7021c3c6fc780922b42e8b3611d03ef2a7dda4",
+  "block_sequence_sha256": "ebeefcd9c24ddc0b8fe9ec6c70034fa1fbd0a8d83bfbc700b7e825ebf5a2872f",
+  "blocks": [
+    {
+      "block_id": "page-0128-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    107\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "650055ebb6997cba1b1fca46f02d4a9a404d8e1e3524f77f591b6b676172ad4e"
+    },
+    {
+      "block_id": "page-0128-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0128-block-0002",
+      "order": 2,
+      "text": "Table 1.13  A summary of potential reduction schedules for olanzapine\n",
+      "bbox": [
+        55.24909973144531,
+        417.7419128417969,
+        312.9862060546875,
+        427.8144226074219
+      ],
+      "text_sha256": "30df93b78b4efa691251e1cc3d938c23f0e4710b3915bb786459bd981c35fe60"
+    },
+    {
+      "block_id": "page-0128-block-0003",
+      "order": 3,
+      "text": "Reduce olanzapine by 5–10mg every 2–3 months until reaching 20mg per day, then\n",
+      "bbox": [
+        55.24909973144531,
+        437.67852783203125,
+        341.10504150390625,
+        447.0145263671875
+      ],
+      "text_sha256": "d042d549e35101722344911e70e0aa480688af8422bcf5af6938dc3806681edc"
+    },
+    {
+      "block_id": "page-0128-block-0004",
+      "order": 4,
+      "text": "Reduce dose by 2.5–5mg every 2–3 months until reaching 10mg per day, then\n",
+      "bbox": [
+        55.24909973144531,
+        450.67852783203125,
+        322.4410400390625,
+        460.0145263671875
+      ],
+      "text_sha256": "4796af19d9a888a23d22347784877248c6849eda09bf116b10584fb7c3b066a6"
+    },
+    {
+      "block_id": "page-0128-block-0005",
+      "order": 5,
+      "text": "Reduce dose by 1.25–2.5mg every 2–3 months until reaching 5mg per day, then\n",
+      "bbox": [
+        55.24909973144531,
+        463.67852783203125,
+        329.113037109375,
+        473.0145263671875
+      ],
+      "text_sha256": "2a694b77343aa0e7c6a2729d8a06736cb0ad6f26e05df1631a771b10cad34e06"
+    },
+    {
+      "block_id": "page-0128-block-0006",
+      "order": 6,
+      "text": "Reduce dose by 0.6–1.25mg every 2–3 months until reaching 2.5mg per day, then\n",
+      "bbox": [
+        55.24909973144531,
+        476.67852783203125,
+        335.7850341796875,
+        486.0145263671875
+      ],
+      "text_sha256": "d68b9ff05c6b630062a0c10a51bbafc98bbd58ed9d70a80635879222bcd1f015"
+    },
+    {
+      "block_id": "page-0128-block-0007",
+      "order": 7,
+      "text": "Reduce dose by 0.3–0.6mg every 2–3 months until reaching 1.25mg per day, then\n",
+      "bbox": [
+        55.24909973144531,
+        489.67852783203125,
+        335.7850341796875,
+        499.0145263671875
+      ],
+      "text_sha256": "a507c2867bb8e95bc7e7f5f9fe4a62ccf7dadc9517efbdf04645bc68eaa5586a"
+    },
+    {
+      "block_id": "page-0128-block-0008",
+      "order": 8,
+      "text": "Reduce dose by 0.15–0.3mg every 2–3 months until reaching 0.6mg per day, then\n",
+      "bbox": [
+        55.24909973144531,
+        502.67852783203125,
+        335.7850341796875,
+        512.0145263671875
+      ],
+      "text_sha256": "fdeb0245080e80fc6e2a555328fdacede9bb3383f91a66cd5a04450a4f47cc0f"
+    },
+    {
+      "block_id": "page-0128-block-0009",
+      "order": 9,
+      "text": "Reduce dose by 0.07–0.15mg every 2–3 months until olanzapine is completely stopped.\n",
+      "bbox": [
+        55.24909973144531,
+        515.5345458984375,
+        362.4410400390625,
+        525.0145263671875
+      ],
+      "text_sha256": "a77308e783c1be1e087b29c297fbd17ee8422b8226580bf8fc173067f109d1c5"
+    },
+    {
+      "block_id": "page-0128-block-0010",
+      "order": 10,
+      "text": "This process should take 12–48 months, depending on how the patient tolerates the reductions.\n",
+      "bbox": [
+        55.24909973144531,
+        531.7265014648438,
+        383.50506591796875,
+        541.0145263671875
+      ],
+      "text_sha256": "56cf8b7662f53e875d311ec068aa844ef0e9fc8a7915d12f6c3b7ad236328a1a"
+    },
+    {
+      "block_id": "page-0128-block-0011",
+      "order": 11,
+      "text": "Table 1.12  Reductions of olanzapine dose by 2.5 percentage points of D2 occupancy at each step. \nLarger reductions that are ‘evenly spaced’ in terms of effect on D2 occupancy could be achieved by \nfollowing every second or third step of this regimen\n",
+      "bbox": [
+        77.49929809570312,
+        70.33692932128906,
+        396.2118225097656,
+        99.21942138671875
+      ],
+      "text_sha256": "9de28bf4106dc19ea7da6fc4666c11bb47ac414974308e7b61f69d230b686258"
+    },
+    {
+      "block_id": "page-0128-block-0012",
+      "order": 12,
+      "text": "Period\n",
+      "bbox": [
+        71.49929809570312,
+        120.57191467285156,
+        94.00679016113281,
+        129.45941162109375
+      ],
+      "text_sha256": "a08251892208518f2b68ba2cded6b746c86feddbfbe4804439b9092dc0fadb44"
+    },
+    {
+      "block_id": "page-0128-block-0013",
+      "order": 13,
+      "text": "Olanzapine \ndose (mg)\nD2 occupancy (%)\nPeriod\n",
+      "bbox": [
+        114.99929809570312,
+        110.57441711425781,
+        265.9818420410156,
+        129.45941162109375
+      ],
+      "text_sha256": "f3a6acf2238d1dc3a259b81b0f1284e0bcce1c6705fc3ecb4b484a2aff970274"
+    },
+    {
+      "block_id": "page-0128-block-0014",
+      "order": 14,
+      "text": "Olanzapine \ndose (mg)\n",
+      "bbox": [
+        284.9942626953125,
+        110.57441711425781,
+        327.0917663574219,
+        129.45941162109375
+      ],
+      "text_sha256": "b17e16d685c38f704f970a16d44fbb2b2f635fc4da16d9db2d6a8c1e16defef3"
+    },
+    {
+      "block_id": "page-0128-block-0015",
+      "order": 15,
+      "text": "D2 occupancy \n(%)\n",
+      "bbox": [
+        339.601806640625,
+        110.57441711425781,
+        390.0167541503906,
+        129.45941162109375
+      ],
+      "text_sha256": "b5ef4b853adf0673ec072485d9e4ba7857e944c544c63dee407ff241701ac121"
+    },
+    {
+      "block_id": "page-0128-block-0016",
+      "order": 16,
+      "text": "1\n20\n81.6\n18\n2.7\n37.5\n",
+      "bbox": [
+        78.48930358886719,
+        137.3494415283203,
+        369.8493347167969,
+        146.2369384765625
+      ],
+      "text_sha256": "0a28be06d0a68f2e68788834890944d4ece343a8473f53e05abc73524f743204"
+    },
+    {
+      "block_id": "page-0128-block-0017",
+      "order": 17,
+      "text": "2\n15.5\n77.5\n19\n2.4\n35\n",
+      "bbox": [
+        78.48182678222656,
+        152.37196350097656,
+        363.5868835449219,
+        161.25946044921875
+      ],
+      "text_sha256": "2c098c9c990d64dc5bf6092503cda1c00f2c08365768a4f49e92f81dd80bf0a1"
+    },
+    {
+      "block_id": "page-0128-block-0018",
+      "order": 18,
+      "text": "3\n13.5\n75\n20\n2.2\n32.5\n",
+      "bbox": [
+        78.47434997558594,
+        167.3944854736328,
+        369.8343811035156,
+        176.281982421875
+      ],
+      "text_sha256": "68dc8a0fbbfbd1c3507dfdae0d61316068b3c2cf65830531b3313eb453d3ee7e"
+    },
+    {
+      "block_id": "page-0128-block-0019",
+      "order": 19,
+      "text": "4\n11.9\n72.5\n21\n1.9\n30\n",
+      "bbox": [
+        78.46687316894531,
+        182.41700744628906,
+        363.5719299316406,
+        191.30450439453125
+      ],
+      "text_sha256": "e64ce2c4b3ca2da2782e216ef69ef2e2edb07df702835a1ddafa460a1cf2bed0"
+    },
+    {
+      "block_id": "page-0128-block-0020",
+      "order": 20,
+      "text": "5\n10.5\n70\n22\n1.7\n27.5\n",
+      "bbox": [
+        78.45939636230469,
+        197.4395294189453,
+        369.8194274902344,
+        206.3270263671875
+      ],
+      "text_sha256": "fffada96baf610e9f343f262cebebcf64782bfbd7986741d39d53b06ff09a7e8"
+    },
+    {
+      "block_id": "page-0128-block-0021",
+      "order": 21,
+      "text": "6\n9.3\n67.5\n23\n1.5\n25\n",
+      "bbox": [
+        81.28691101074219,
+        212.46202087402344,
+        363.5644836425781,
+        221.34951782226562
+      ],
+      "text_sha256": "9c412fda1db2e6512cc92784babe1e83a38f981815a1ede304d2ed35aaaa16e8"
+    },
+    {
+      "block_id": "page-0128-block-0022",
+      "order": 22,
+      "text": "7\n8.4\n65\n24\n1.3\n22.5\n",
+      "bbox": [
+        81.28694152832031,
+        227.48451232910156,
+        369.8194885253906,
+        236.37200927734375
+      ],
+      "text_sha256": "a442d07234ad4624aa9cbdb4da5c7293a57b4525968988474085d84c0a78bc3f"
+    },
+    {
+      "block_id": "page-0128-block-0023",
+      "order": 23,
+      "text": "8\n7.5\n62.5\n25\n1.1\n20\n",
+      "bbox": [
+        81.28694152832031,
+        242.5070037841797,
+        363.5644836425781,
+        251.39450073242188
+      ],
+      "text_sha256": "ff7bfdc708d90e6577e3cd1af16e0f2272e1aa3bbfe66e47e6e7b3d74a6cf73c"
+    },
+    {
+      "block_id": "page-0128-block-0024",
+      "order": 24,
+      "text": "9\n6.8\n60\n26\n0.95\n17.5\n",
+      "bbox": [
+        81.28694152832031,
+        257.52947998046875,
+        369.8194885253906,
+        266.4169921875
+      ],
+      "text_sha256": "962455d97de82be731bed5e1a15383831723180e681d5f7f86f75eb72bf34139"
+    },
+    {
+      "block_id": "page-0128-block-0025",
+      "order": 25,
+      "text": "10\n6.1\n57.5\n27\n0.8\n15\n",
+      "bbox": [
+        77.11692810058594,
+        272.5519714355469,
+        363.5644836425781,
+        281.4394836425781
+      ],
+      "text_sha256": "2548738bead2601568c2b461c4485f172d1f9e235bb317135b18b478f8b92164"
+    },
+    {
+      "block_id": "page-0128-block-0026",
+      "order": 26,
+      "text": "11\n5.5\n55\n28\n0.65\n12.5\n",
+      "bbox": [
+        77.11692810058594,
+        287.574462890625,
+        369.8194885253906,
+        296.46197509765625
+      ],
+      "text_sha256": "b9167676851286fadd763667c197d7b7fcb28f943ae820a663ec0cc21fa52730"
+    },
+    {
+      "block_id": "page-0128-block-0027",
+      "order": 27,
+      "text": "12\n5\n52.5\n29\n0.5\n10\n",
+      "bbox": [
+        77.11692810058594,
+        302.5969543457031,
+        363.5644836425781,
+        311.4844665527344
+      ],
+      "text_sha256": "3c94d1f7b9f302ab4d3fabb66712306555c0d49a7b21e412103b99315cfba7d8"
+    },
+    {
+      "block_id": "page-0128-block-0028",
+      "order": 28,
+      "text": "13\n4.5\n50\n30\n0.37\n7.5\n",
+      "bbox": [
+        77.11692810058594,
+        317.61944580078125,
+        369.8194274902344,
+        326.5069580078125
+      ],
+      "text_sha256": "caff76d497155980c774bb009916cd48bc17edd32fae139709e0356f8b096b7e"
+    },
+    {
+      "block_id": "page-0128-block-0029",
+      "order": 29,
+      "text": "14\n4.1\n47.5\n31\n0.24\n5\n",
+      "bbox": [
+        77.11692810058594,
+        332.6419372558594,
+        363.5644226074219,
+        341.5294494628906
+      ],
+      "text_sha256": "6df99b1558d9adf70ab0616d124785645fa7054b68d07995fd071ca68c769db3"
+    },
+    {
+      "block_id": "page-0128-block-0030",
+      "order": 30,
+      "text": "15\n3.7\n45\n32\n0.1\n2.5\n",
+      "bbox": [
+        77.11692810058594,
+        347.6644287109375,
+        369.8194274902344,
+        356.55194091796875
+      ],
+      "text_sha256": "92c0ddbc490c1e7a01050a23ed116372819ca6b7d7ae88513b47b4f9423e3a38"
+    },
+    {
+      "block_id": "page-0128-block-0031",
+      "order": 31,
+      "text": "16\n3.3\n42.5\n33\n0\n0\n",
+      "bbox": [
+        77.11692810058594,
+        362.6869201660156,
+        363.5644226074219,
+        371.5744323730469
+      ],
+      "text_sha256": "2d142541ba65779c091493570453d9ed883c4447b0ff75e7e7c0739ff836eca7"
+    },
+    {
+      "block_id": "page-0128-block-0032",
+      "order": 32,
+      "text": "17\n3\n40\n",
+      "bbox": [
+        77.11692810058594,
+        377.8894348144531,
+        191.4544219970703,
+        386.596923828125
+      ],
+      "text_sha256": "2382d007f8bf78e7cd45481617b1712f68b8eb5e66fe91cf237b87341ccb94c3"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

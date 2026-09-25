@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0358",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 358,
+  "source_page_index": 357,
+  "source_page_display": 358,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    337\nCHAPTER 3\n■\n■Agomelatine does not seem to be associated with a discontinuation syndrome,6 but \nslow withdrawal when switching is nonetheless recommended. Given agomelatine’s \nmode of action (melatonin agonism; 5HT2C antagonism), it is not expected to miti-\ngate discontinuation reactions of other antidepressants. There is no theoretical basis \nto suggest that pharmacodynamic interactions might occur between agomelatine and \nother co-administered antidepressants, but caution is advised in the absence of useful \ndata. Some pharmacokinetic interactions do occur, and agomelatine should not be \nadministered with fluvoxamine.\n■\n■Serotonin syndrome can occur with a single serotonergic drug at a therapeutic dose \nor more frequently in combination of serotonergic drugs or in overdose. Most severe \ncases of serotonin syndrome involve an MAOI (including moclobemide) plus an \nSSRI.7,8 Caution is advised when switching strategies call for the combining of sero-\ntonergic drugs.\nSerotonin syndrome – symptoms11\nIncreasing severity\nSeverity\nSymptoms\nMild\nInsomnia, anxiety, nausea, diarrhoea,\nhypertension, tachycardia, hyper-reﬂexia\nModerate\nAgitation, myoclonus, tremor, mydriasis,\nﬂushing, diaphoresis, low fever (<38.5°C)\nSevere\nSevere hyperthermia, confusion, rigidity,\nrespiratory failure, coma, death\nThe advice given in Table 3.7 should be treated with caution and patients should be \nvery carefully monitored when switching.\n",
+  "raw_text_sha256": "a24f3a2cbb2f9534dc133c4d10c1a52f79374d71fbd49ea99b4020f4e0883f29",
+  "coordinates_sha256": "12fb6b2f1fc7ea8095d4b52609ede9961ba6e245169a4fb5910f604c75e5146b",
+  "block_sequence_sha256": "2531f356cb9d04bc4ec9ae54bce8247ce0f7541d24a2a5b3b030f2fa6f7da02a",
+  "blocks": [
+    {
+      "block_id": "page-0358-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    337\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "4e7e0eb34d0a0ab77db5623fd01297c024bc998c5da659c879c063bffa1ed84f"
+    },
+    {
+      "block_id": "page-0358-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0358-block-0002",
+      "order": 2,
+      "text": "■\n■Agomelatine does not seem to be associated with a discontinuation syndrome,6 but \n",
+      "bbox": [
+        47.999900817871094,
+        62.5504150390625,
+        422.7793884277344,
+        74.27041625976562
+      ],
+      "text_sha256": "718cc1a916c23b479ee7eef9d404b68482718298aefcfac35ce7af22bb518d9c"
+    },
+    {
+      "block_id": "page-0358-block-0003",
+      "order": 3,
+      "text": "slow withdrawal when switching is nonetheless recommended. Given agomelatine’s \nmode of action (melatonin agonism; 5HT2C antagonism), it is not expected to miti-\ngate discontinuation reactions of other antidepressants. There is no theoretical basis \nto suggest that pharmacodynamic interactions might occur between agomelatine and \nother co-administered antidepressants, but caution is advised in the absence of useful \ndata. Some pharmacokinetic interactions do occur, and agomelatine should not be \nadministered with fluvoxamine.\n",
+      "bbox": [
+        56.9962158203125,
+        74.5504150390625,
+        422.8061828613281,
+        158.27041625976562
+      ],
+      "text_sha256": "1d6f320281b1fd3bbce040c8b946d879746fd7e80a3538ebd4cf494d3ff84ebc"
+    },
+    {
+      "block_id": "page-0358-block-0004",
+      "order": 4,
+      "text": "■\n■Serotonin syndrome can occur with a single serotonergic drug at a therapeutic dose \n",
+      "bbox": [
+        47.999900817871094,
+        158.5504150390625,
+        422.8099365234375,
+        170.27041625976562
+      ],
+      "text_sha256": "df97d304f10204a1deccfbf050ec0ba3c95e0ef4f5b95d38031cf04ec0afffde"
+    },
+    {
+      "block_id": "page-0358-block-0005",
+      "order": 5,
+      "text": "or more frequently in combination of serotonergic drugs or in overdose. Most severe \ncases of serotonin syndrome involve an MAOI (including moclobemide) plus an \nSSRI.7,8 Caution is advised when switching strategies call for the combining of sero-\ntonergic drugs.\n",
+      "bbox": [
+        57.0,
+        170.5504150390625,
+        422.78997802734375,
+        218.27047729492188
+      ],
+      "text_sha256": "b2f9e7884f08640c6a81d5a33e43e5034f722003407ba48f275b28f52fd04645"
+    },
+    {
+      "block_id": "page-0358-block-0006",
+      "order": 6,
+      "text": "Serotonin syndrome – symptoms11\n",
+      "bbox": [
+        48.00340270996094,
+        232.64047241210938,
+        208.94126892089844,
+        244.490478515625
+      ],
+      "text_sha256": "8414a3f33196f0a1ed436f274a1c921db4fdf127d552e56bbeccc2b377243675"
+    },
+    {
+      "block_id": "page-0358-block-0007",
+      "order": 7,
+      "text": "Increasing severity\n",
+      "bbox": [
+        108.24549865722656,
+        257.80548095703125,
+        172.13800048828125,
+        267.0229797363281
+      ],
+      "text_sha256": "68cc12e32613a4a8cd11917a1c54ab2c449b56b3895dccf77b93bd938fe3e3c6"
+    },
+    {
+      "block_id": "page-0358-block-0008",
+      "order": 8,
+      "text": "Severity\nSymptoms\n",
+      "bbox": [
+        173.0904998779297,
+        278.12298583984375,
+        247.99301147460938,
+        287.3404846191406
+      ],
+      "text_sha256": "2e02a5ff2f5c3a1bd7d07d839dd69d549a7ada17b4962d97b928e35e767a9286"
+    },
+    {
+      "block_id": "page-0358-block-0009",
+      "order": 9,
+      "text": "Mild\nInsomnia, anxiety, nausea, diarrhoea,\nhypertension, tachycardia, hyper-reﬂexia\n",
+      "bbox": [
+        173.0904998779297,
+        294.74298095703125,
+        350.6680603027344,
+        312.9604797363281
+      ],
+      "text_sha256": "ff9ee1fcbfda8fe60976ba618928ac0a0035ee4d9617d76a3ecd0c67691b58f9"
+    },
+    {
+      "block_id": "page-0358-block-0010",
+      "order": 10,
+      "text": "Moderate\nAgitation, myoclonus, tremor, mydriasis,\nﬂushing, diaphoresis, low fever (<38.5°C)\n",
+      "bbox": [
+        173.0904998779297,
+        320.36297607421875,
+        352.3855895996094,
+        338.5804748535156
+      ],
+      "text_sha256": "697d32d33757fe473dc6d945455c5b5c9203565ccb58022ad1693b7f612bf02e"
+    },
+    {
+      "block_id": "page-0358-block-0011",
+      "order": 11,
+      "text": "Severe\nSevere hyperthermia, confusion, rigidity,\nrespiratory failure, coma, death\n",
+      "bbox": [
+        173.0904998779297,
+        345.98297119140625,
+        348.60552978515625,
+        364.2004699707031
+      ],
+      "text_sha256": "da2835585925c6c77c3db8c19f9e63459688c076edd0a69ccd753ada4875a0b2"
+    },
+    {
+      "block_id": "page-0358-block-0012",
+      "order": 12,
+      "text": "The advice given in Table 3.7 should be treated with caution and patients should be \nvery carefully monitored when switching.\n",
+      "bbox": [
+        48.0,
+        396.0163879394531,
+        422.7900085449219,
+        419.73638916015625
+      ],
+      "text_sha256": "805b02c3faee0aa808013f489889870ef67a9ba0101ada8f7d80af57a0dd40bf"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

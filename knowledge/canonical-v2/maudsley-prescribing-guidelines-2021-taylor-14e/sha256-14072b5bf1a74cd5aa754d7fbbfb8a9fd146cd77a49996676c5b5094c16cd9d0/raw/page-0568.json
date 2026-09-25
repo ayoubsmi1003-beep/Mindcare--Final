@@ -1,0 +1,359 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0568",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 568,
+  "source_page_index": 567,
+  "source_page_display": 568,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Children and adolescents    547\nCHAPTER 5\nBipolar illness in children and adolescents\nClinical guidance\nBefore prescribing\n■\n■Establish clinical diagnosis informed by structured instrument assessment if possible. \nTry to monitor symptom patterns prospectively with mood or sleep diaries. If in \ndoubt, seek specialist advice early on.\n■\n■Explain diagnosis to the patient and family and invest time and effort in psycho-\neducation. This is likely to improve adherence and there is evidence that it reduces \nrelapse rates, at least in adults.1\n■\n■Measure baseline symptoms of mania (e.g. Young Mania Rating Scale,2 YMRS), depres-\nsion (e.g. Children’s Depression Rating Scale,3 CDRS) and impairment (e.g. Clinical \nGlobal Impression – BD version4). Use these to set clear and realistic treatment goals.\n■\n■Measure baseline height, weight, waist circumference, pulse, ECG, blood pressure \nand obtain baseline bloods as appropriate (fasting blood glucose, HbA1c, fasting \nlipid profile, full blood count (FBC), urea and electrolytes (U&E), creatine kinase, \nliver function tests (LFTs), prolactin).\nWhat to prescribe?\n■\n■For the treatment of mania and hypomania in youth, NICE guidelines suggest follow-\ning the same recommendations as adults: second-generation antipsychotics (SGAs) \nmay be used as first-line treatment, and mood stabilisers (MS) can be added after \nfailure of two trials of SGA.5\n■\n■SGAs seem to show greater short-term efficacy (effect size [ES] = 0.65 compared with \nplacebo) than MS (ES  =  0.20 compared with placebo) in youth, according to a \nmeta-analysis.6\n■\n■SGAs seem to produce significantly greater weight gain and somnolence in youth \ncompared with adults,6 although weight gain assessment is made complicated by \nnormal anticipated growth at this time of life.\n■\n■Valproate should be completely avoided in girls.\n■\n■Adherence to lithium and blood level testing may be difficult in adolescents.\n■\n■Overall, we recommend the use of SGAs as first line for the acute treatment of mania \nin children and adolescents (see Table 5.1), similar to recommendations in adults.\nAfter prescribing\n■\n■Assess and measure symptoms on a regular basis to establish effectiveness.\n■\n■Monitor weight and height at each visit and repeat all fasting bloods at 3 months \n(then every 6 months). Offer advice on a healthy lifestyle and exercise.\n",
+  "raw_text_sha256": "638b775e09af73e70b236cf0199ff007bbb81bc8d62de17e609d64f5207e7eb8",
+  "coordinates_sha256": "70c1aaf54d4f766f7ed34a71841eb61568e9db927d35b40818eefe37e8d90bb3",
+  "block_sequence_sha256": "56ba5e5591214a5981e8254b2035e4997c2c5711c3be4c7ccb68e86ed4786e91",
+  "blocks": [
+    {
+      "block_id": "page-0568-block-0000",
+      "order": 0,
+      "text": "Children and adolescents    547\n",
+      "bbox": [
+        288.94488525390625,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "1e4c93ea5cbc59fc712ea9e1febe5aa09eb917d11b7afcd11bd282f3e1de6497"
+    },
+    {
+      "block_id": "page-0568-block-0001",
+      "order": 1,
+      "text": "CHAPTER 5\n",
+      "bbox": [
+        454.4096984863281,
+        339.3385009765625,
+        463.88970947265625,
+        380.6824951171875
+      ],
+      "text_sha256": "f4b8b4a0fc64e7b3b74e7336306d0959d0384683e387792724f393162639020a"
+    },
+    {
+      "block_id": "page-0568-block-0002",
+      "order": 2,
+      "text": "Bipolar illness in children and adolescents\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        269.93994140625,
+        79.1004638671875
+      ],
+      "text_sha256": "fe291010f256c563f671c287e0c117374200be6ca677f7a7eb7a8620a13d3621"
+    },
+    {
+      "block_id": "page-0568-block-0003",
+      "order": 3,
+      "text": "Clinical guidance\n",
+      "bbox": [
+        48.00400161743164,
+        96.06246948242188,
+        134.7939910888672,
+        109.09747314453125
+      ],
+      "text_sha256": "26764bf139176e7ef99c6ac39bb0a8237d115cd3d9e65e4744b6c80c8263e5a9"
+    },
+    {
+      "block_id": "page-0568-block-0004",
+      "order": 4,
+      "text": "Before prescribing\n",
+      "bbox": [
+        48.0,
+        127.0004653930664,
+        134.1199951171875,
+        138.8504638671875
+      ],
+      "text_sha256": "ed5191c8eb6616a49cb0169f22fb5d44ff3d47a2dd51b206d7f4ac8d1f365a8e"
+    },
+    {
+      "block_id": "page-0568-block-0005",
+      "order": 5,
+      "text": "■\n■Establish clinical diagnosis informed by structured instrument assessment if possible. \n",
+      "bbox": [
+        47.999900817871094,
+        150.91046142578125,
+        422.7500305175781,
+        162.63046264648438
+      ],
+      "text_sha256": "754a6fc9dc0640fc10629c8a4f80bfcc014bfb1346691b6328b42dcb04756f76"
+    },
+    {
+      "block_id": "page-0568-block-0006",
+      "order": 6,
+      "text": "Try to monitor symptom patterns prospectively with mood or sleep diaries. If in \ndoubt, seek specialist advice early on.\n",
+      "bbox": [
+        57.0,
+        162.91046142578125,
+        422.7900695800781,
+        186.63046264648438
+      ],
+      "text_sha256": "ab8976522b623ca1d3c4684e6e54cddf589bc250ae87a143db42373f303441b5"
+    },
+    {
+      "block_id": "page-0568-block-0007",
+      "order": 7,
+      "text": "■\n■Explain diagnosis to the patient and family and invest time and effort in psycho-\n",
+      "bbox": [
+        47.999900817871094,
+        186.91049194335938,
+        419.97991943359375,
+        198.6304931640625
+      ],
+      "text_sha256": "3610880946e5c1f06496b547b8bb0e0bcb91f3a0068856000144ac3f62d9a70b"
+    },
+    {
+      "block_id": "page-0568-block-0008",
+      "order": 8,
+      "text": "education. This is likely to improve adherence and there is evidence that it reduces \nrelapse rates, at least in adults.1\n",
+      "bbox": [
+        57.0,
+        198.91049194335938,
+        422.7499084472656,
+        222.6304931640625
+      ],
+      "text_sha256": "302b468568333e25929448c775d43634fcb8f6db63b573d5f5369b859ab1675a"
+    },
+    {
+      "block_id": "page-0568-block-0009",
+      "order": 9,
+      "text": "■\n■Measure baseline symptoms of mania (e.g. Young Mania Rating Scale,2 YMRS), depres-\n",
+      "bbox": [
+        47.999900817871094,
+        222.91049194335938,
+        419.9918212890625,
+        234.6304931640625
+      ],
+      "text_sha256": "2a62f1b20cda8bf2469aa71b29c5afa7dec60b7a3cd09abf970e0aa942d6d6d2"
+    },
+    {
+      "block_id": "page-0568-block-0010",
+      "order": 10,
+      "text": "sion (e.g. Children’s Depression Rating Scale,3 CDRS) and impairment (e.g. Clinical \nGlobal Impression – BD version4). Use these to set clear and realistic treatment goals.\n",
+      "bbox": [
+        57.00169372558594,
+        234.91049194335938,
+        422.79156494140625,
+        258.6304931640625
+      ],
+      "text_sha256": "a19616420a51a1f8db3dbdec0a9b282b2e5168043b6512208eaeabdb9e958345"
+    },
+    {
+      "block_id": "page-0568-block-0011",
+      "order": 11,
+      "text": "■\n■Measure baseline height, weight, waist circumference, pulse, ECG, blood pressure \n",
+      "bbox": [
+        47.999900817871094,
+        258.9104919433594,
+        422.8100280761719,
+        270.6304931640625
+      ],
+      "text_sha256": "e0c75d02e884d87c205b6c55adcd3b11aefd66d4aad030d9f9828a9402b71ae4"
+    },
+    {
+      "block_id": "page-0568-block-0012",
+      "order": 12,
+      "text": "and obtain baseline bloods as appropriate (fasting blood glucose, HbA1c, fasting \nlipid profile, full blood count (FBC), urea and electrolytes (U&E), creatine kinase, \nliver function tests (LFTs), prolactin).\n",
+      "bbox": [
+        57.0,
+        270.9104919433594,
+        422.8099365234375,
+        306.6304931640625
+      ],
+      "text_sha256": "6a32c474fff5c891d29964eadf4265a185798d0acba1de17d9a781918305b73c"
+    },
+    {
+      "block_id": "page-0568-block-0013",
+      "order": 13,
+      "text": "What to prescribe?\n",
+      "bbox": [
+        48.0,
+        331.00048828125,
+        136.89999389648438,
+        342.8504943847656
+      ],
+      "text_sha256": "93ecbae729e75cee76d0c215363845ea4606d70719589e8c25a89dfdd740979b"
+    },
+    {
+      "block_id": "page-0568-block-0014",
+      "order": 14,
+      "text": "■\n■For the treatment of mania and hypomania in youth, NICE guidelines suggest follow-\n",
+      "bbox": [
+        47.999900817871094,
+        354.9104919433594,
+        419.9999084472656,
+        366.6304931640625
+      ],
+      "text_sha256": "5b23fb412e9102f261701bde2ce307812e27c8645542dd4a5a50a39c94d64b81"
+    },
+    {
+      "block_id": "page-0568-block-0015",
+      "order": 15,
+      "text": "ing the same recommendations as adults: second-generation antipsychotics (SGAs) \nmay be used as first-line treatment, and mood stabilisers (MS) can be added after \nfailure of two trials of SGA.5\n",
+      "bbox": [
+        57.0,
+        366.9104919433594,
+        422.7799377441406,
+        402.6304931640625
+      ],
+      "text_sha256": "45531344582897eb3b3d6d171524517770f4af73997260b392b20e3b81cfe268"
+    },
+    {
+      "block_id": "page-0568-block-0016",
+      "order": 16,
+      "text": "■\n■SGAs seem to show greater short-term efficacy (effect size [ES] = 0.65 compared with \n",
+      "bbox": [
+        47.999900817871094,
+        402.9104919433594,
+        422.7298583984375,
+        414.6304931640625
+      ],
+      "text_sha256": "9c9b23da7cf08b6e7736ed8793e9917b914d1b59f4e9ee99f74affb461cdcbf4"
+    },
+    {
+      "block_id": "page-0568-block-0017",
+      "order": 17,
+      "text": "placebo) than MS (ES  =  0.20 compared with placebo) in youth, according to a \nmeta-analysis.6\n",
+      "bbox": [
+        57.0,
+        414.9104919433594,
+        422.7499084472656,
+        438.6304931640625
+      ],
+      "text_sha256": "235a8a416683702c66266c448854015e16914b13962d3967ab484acc72e79ceb"
+    },
+    {
+      "block_id": "page-0568-block-0018",
+      "order": 18,
+      "text": "■\n■SGAs seem to produce significantly greater weight gain and somnolence in youth \n",
+      "bbox": [
+        47.999900817871094,
+        438.9104919433594,
+        422.7799377441406,
+        450.6304931640625
+      ],
+      "text_sha256": "3f58e98e115a5457f35424f9dabc83783c7cd250a4faaf339d2ccd6cb3168331"
+    },
+    {
+      "block_id": "page-0568-block-0019",
+      "order": 19,
+      "text": "compared with adults,6 although weight gain assessment is made complicated by \nnormal anticipated growth at this time of life.\n",
+      "bbox": [
+        57.0,
+        450.9104919433594,
+        422.7611083984375,
+        474.6304931640625
+      ],
+      "text_sha256": "6ca675462cd836a78559c02284e778a1fa1923b4bc5b4c2b72e07d3e6f46977d"
+    },
+    {
+      "block_id": "page-0568-block-0020",
+      "order": 20,
+      "text": "■\n■Valproate should be completely avoided in girls.\n",
+      "bbox": [
+        47.999900817871094,
+        474.9104919433594,
+        264.5299987792969,
+        486.6304931640625
+      ],
+      "text_sha256": "8e8d67dab8ad0a5699a24ab9e0bcb578d4e6d99bfd5b1ef71f0c17852463f5da"
+    },
+    {
+      "block_id": "page-0568-block-0021",
+      "order": 21,
+      "text": "■\n■Adherence to lithium and blood level testing may be difficult in adolescents.\n",
+      "bbox": [
+        47.999900817871094,
+        486.9104919433594,
+        384.24993896484375,
+        498.6304931640625
+      ],
+      "text_sha256": "2f17d5a3f97b42dc9c224a8640de53770f1215d16410d0898b208507968278dc"
+    },
+    {
+      "block_id": "page-0568-block-0022",
+      "order": 22,
+      "text": "■\n■Overall, we recommend the use of SGAs as first line for the acute treatment of mania \n",
+      "bbox": [
+        47.999900817871094,
+        498.9104919433594,
+        422.8299255371094,
+        510.6304931640625
+      ],
+      "text_sha256": "04b9bfb7e1b866bce42d149c18b7d46ab22809f2650fd88e06d058d8eaae8ed7"
+    },
+    {
+      "block_id": "page-0568-block-0023",
+      "order": 23,
+      "text": "in children and adolescents (see Table 5.1), similar to recommendations in adults.\n",
+      "bbox": [
+        57.0,
+        510.91046142578125,
+        407.1099853515625,
+        522.6304931640625
+      ],
+      "text_sha256": "05c39c74be8d8d19763cdf0c2a76a839bfeca5ef1e064e7bccf12e446c69b229"
+    },
+    {
+      "block_id": "page-0568-block-0024",
+      "order": 24,
+      "text": "After prescribing\n",
+      "bbox": [
+        48.0,
+        541.00048828125,
+        127.44999694824219,
+        552.8504638671875
+      ],
+      "text_sha256": "c681666110d1c8b178ef138787205867d82554c7804803ee0dc7929ab2138716"
+    },
+    {
+      "block_id": "page-0568-block-0025",
+      "order": 25,
+      "text": "■\n■Assess and measure symptoms on a regular basis to establish effectiveness.\n",
+      "bbox": [
+        47.999900817871094,
+        564.9104614257812,
+        377.5499572753906,
+        576.6304931640625
+      ],
+      "text_sha256": "813e575a5eacbd92f1d8182853ec2ee44d6a6ea0b4d0a587c64575a3a9bf2862"
+    },
+    {
+      "block_id": "page-0568-block-0026",
+      "order": 26,
+      "text": "■\n■Monitor weight and height at each visit and repeat all fasting bloods at 3 months \n",
+      "bbox": [
+        47.999900817871094,
+        576.9104614257812,
+        422.7400207519531,
+        588.6304931640625
+      ],
+      "text_sha256": "d426919a68c9da0685c1761a10aaedbd135dd1f68bfc74ec3d1f9e5affd90dda"
+    },
+    {
+      "block_id": "page-0568-block-0027",
+      "order": 27,
+      "text": "(then every 6 months). Offer advice on a healthy lifestyle and exercise.\n",
+      "bbox": [
+        57.0,
+        588.9104614257812,
+        359.97003173828125,
+        600.6304931640625
+      ],
+      "text_sha256": "e35ffc18fe68ebed8061fdde8e3a53c9f1c414c2fd1d132cd87527ed1ac82743"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

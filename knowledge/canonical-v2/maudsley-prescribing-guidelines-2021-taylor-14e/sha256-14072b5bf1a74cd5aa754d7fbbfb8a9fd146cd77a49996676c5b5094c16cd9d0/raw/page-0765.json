@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0765",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 765,
+  "source_page_index": 764,
+  "source_page_display": 765,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "744    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 8\nTable 8.9  (Continued)\nDrug\nComments\nTrimipramine22,25,32,60,116,117\nNo dose reduction required in renal impairment; however, elevated urea, acute renal \nfailure and interstitial nephritis have been reported. As with all tricyclic \nantidepressants, monitor patient for urinary retention, confusion, sedation and \npostural hypotension as patients with renal impairment are at increased risk of \nhaving these side-effects.\nVenlafaxine22,23,32,118–120\n1–10% is excreted unchanged in the urine (30% as the active metabolite). Clearance \nis decreased and half-life prolonged in renal impairment. Dosing advice differs: GFR \n30–50mL/min, dose as in normal renal function or reduce by 50%; GFR 10–30mL/\nmin reduce dose by 50% and give tablets once daily; GFR <10mL/min, reduce dose \nby 50% and give once daily. Rhabdomyolysis and renal failure have been reported \nrarely with venlafaxine. Has been used to treat peripheral diabetic neuropathy in \nhaemodialysis patients. High doses may cause hypertension.\nVortioxetine23,121\nNegligible amounts are excreted unchanged in urine. Manufacturer advises that no \ndose adjustment is needed in renal impairment and end stage disease but advises \ncaution.\n(Continued)\nTable 8.10  Mood stabilisers in renal impairment\nDrug\nComments\nCarbamazepine22,23,25,122–129\n2–3% of the dose is excreted unchanged in urine. Dose reduction not necessary in \nrenal disease, although cases of renal failure, tubular necrosis and tubulointerstitial \nnephritis have been reported rarely and metabolites may accumulate. Can cause \nStevens-Johnson syndrome and toxic epidermal necrolysis which may result in acute \nrenal failure. Maintenance therapy in bipolar disorder is associated with an increased \nrate of chronic kidney disease.19\nLamotrigine22,23,25,130–134\n<10% of lamotrigine is excreted unchanged in the urine. Single-dose studies in renal \nfailure show pharmacokinetics are little affected: however, inactive metabolites can \naccumulate (effects unknown) and half-life can be prolonged. Renal failure and \ninterstitial nephritis have also been reported. Dosing: GFR <10–50mL/min, use \ncautiously, start with a low dose, increase slowly and monitor closely. One source \nsuggests in GFR <10mL/min use 100mg every other day.\nLithium22,23,25,32,135,136\nLithium is nephrotoxic and contraindicated in severe renal impairment; 95% is \nexcreted unchanged in the urine. Long-term treatment may result in impaired \nrenal function (‘creatinine creep’), permanent changes in kidney histology, \nmicrocysts, oncocytoma and collecting duct renal carcinoma, nephrogenic \ndiabetes insipidus, nephrotic syndrome and both reversible and irreversible kidney \ndamage.137,138 However, shorter studies in younger populations do not show \ndeclining GFR139 or\n",
+  "raw_text_sha256": "4950dd66b949933e259efb7325a04903b7bf7b34bbb24569c6977ea1f841b557",
+  "coordinates_sha256": "1acaa8716152107fb5bb580e276aa405619041ebacc5e440a049ba3b682d0449",
+  "block_sequence_sha256": "52bd2036ec379787746f3004a156efbc0292a5bc649c2ef58b829a458ba15a6c",
+  "blocks": [
+    {
+      "block_id": "page-0765-block-0000",
+      "order": 0,
+      "text": "744    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "ce19ee8ae01fe75f76e4c3cd5fa0362d0159f8c2cc9822a4b552eb3061a90bd2"
+    },
+    {
+      "block_id": "page-0765-block-0001",
+      "order": 1,
+      "text": "CHAPTER 8\n",
+      "bbox": [
+        18.520000457763672,
+        532.3878173828125,
+        28.0,
+        573.7318115234375
+      ],
+      "text_sha256": "5ba3d9fb75ff4f418d4a2e9d517f30966dcfb279c10487eec43c5aa3fd8757a2"
+    },
+    {
+      "block_id": "page-0765-block-0002",
+      "order": 2,
+      "text": "Table 8.9  (Continued)\n",
+      "bbox": [
+        67.88999938964844,
+        70.08790588378906,
+        140.760009765625,
+        78.97540283203125
+      ],
+      "text_sha256": "79a98c30130756f7d84b977e84494d5c065e0f195846a9ebedc1e5055bf15684"
+    },
+    {
+      "block_id": "page-0765-block-0003",
+      "order": 3,
+      "text": "Drug\nComments\n",
+      "bbox": [
+        61.88999938964844,
+        89.46290588378906,
+        198.38999938964844,
+        98.35040283203125
+      ],
+      "text_sha256": "f0d3aba6cb5c63a8b3ce76553ca73a800f481925284fe7cc72b7ce3c93bfebe6"
+    },
+    {
+      "block_id": "page-0765-block-0004",
+      "order": 4,
+      "text": "Trimipramine22,25,32,60,116,117\nNo dose reduction required in renal impairment; however, elevated urea, acute renal \nfailure and interstitial nephritis have been reported. As with all tricyclic \nantidepressants, monitor patient for urinary retention, confusion, sedation and \npostural hypotension as patients with renal impairment are at increased risk of \nhaving these side-effects.\n",
+      "bbox": [
+        61.88999938964844,
+        107.76790618896484,
+        431.9249572753906,
+        156.46539306640625
+      ],
+      "text_sha256": "7b9ba7fc3f5dfb8b36e513dfdddbce5c72a1f10644d8d4462ffa3e62cceb0b82"
+    },
+    {
+      "block_id": "page-0765-block-0005",
+      "order": 5,
+      "text": "Venlafaxine22,23,32,118–120\n1–10% is excreted unchanged in the urine (30% as the active metabolite). Clearance \nis decreased and half-life prolonged in renal impairment. Dosing advice differs: GFR \n30–50mL/min, dose as in normal renal function or reduce by 50%; GFR 10–30mL/\nmin reduce dose by 50% and give tablets once daily; GFR <10mL/min, reduce dose \nby 50% and give once daily. Rhabdomyolysis and renal failure have been reported \nrarely with venlafaxine. Has been used to treat peripheral diabetic neuropathy in \nhaemodialysis patients. High doses may cause hypertension.\n",
+      "bbox": [
+        61.88999938964844,
+        165.88539123535156,
+        434.9625244140625,
+        234.58538818359375
+      ],
+      "text_sha256": "2ed5c6f0190fdd9db8f1d90fa5e34caed0438ccc9b0e4d1b45212b5ee26def5e"
+    },
+    {
+      "block_id": "page-0765-block-0006",
+      "order": 6,
+      "text": "Vortioxetine23,121\nNegligible amounts are excreted unchanged in urine. Manufacturer advises that no \ndose adjustment is needed in renal impairment and end stage disease but advises \ncaution.\n",
+      "bbox": [
+        61.88999938964844,
+        244.00538635253906,
+        427.6126403808594,
+        272.72039794921875
+      ],
+      "text_sha256": "eb64fa00f9695ec8b9544b9d77da3ecfc07cb43635fe53d10fd95792c030682d"
+    },
+    {
+      "block_id": "page-0765-block-0007",
+      "order": 7,
+      "text": "(Continued)\n",
+      "bbox": [
+        395.05499267578125,
+        563.0453491210938,
+        431.96990966796875,
+        571.7978515625
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0765-block-0008",
+      "order": 8,
+      "text": "Table 8.10  Mood stabilisers in renal impairment\n",
+      "bbox": [
+        67.88999938964844,
+        311.2890930175781,
+        222.78746032714844,
+        320.1766052246094
+      ],
+      "text_sha256": "9c88652667673764a1eca607e3c64a39fb4dc86862133db96289f54a7c85773e"
+    },
+    {
+      "block_id": "page-0765-block-0009",
+      "order": 9,
+      "text": "Drug\nComments\n",
+      "bbox": [
+        61.88999938964844,
+        331.1640930175781,
+        198.38999938964844,
+        340.0516052246094
+      ],
+      "text_sha256": "f0d3aba6cb5c63a8b3ce76553ca73a800f481925284fe7cc72b7ce3c93bfebe6"
+    },
+    {
+      "block_id": "page-0765-block-0010",
+      "order": 10,
+      "text": "Carbamazepine22,23,25,122–129\n2–3% of the dose is excreted unchanged in urine. Dose reduction not necessary in \nrenal disease, although cases of renal failure, tubular necrosis and tubulointerstitial \nnephritis have been reported rarely and metabolites may accumulate. Can cause \nStevens-Johnson syndrome and toxic epidermal necrolysis which may result in acute \nrenal failure. Maintenance therapy in bipolar disorder is associated with an increased \nrate of chronic kidney disease.19\n",
+      "bbox": [
+        61.88999938964844,
+        349.4691162109375,
+        432.46514892578125,
+        408.1640930175781
+      ],
+      "text_sha256": "40cb53701737da31c45d9afc276ab4cf119ce3cfeaa56eb260bddf51e0b09144"
+    },
+    {
+      "block_id": "page-0765-block-0011",
+      "order": 11,
+      "text": "Lamotrigine22,23,25,130–134\n<10% of lamotrigine is excreted unchanged in the urine. Single-dose studies in renal \nfailure show pharmacokinetics are little affected: however, inactive metabolites can \naccumulate (effects unknown) and half-life can be prolonged. Renal failure and \ninterstitial nephritis have also been reported. Dosing: GFR <10–50mL/min, use \ncautiously, start with a low dose, increase slowly and monitor closely. One source \nsuggests in GFR <10mL/min use 100mg every other day.\n",
+      "bbox": [
+        61.88999938964844,
+        417.5941162109375,
+        433.5077209472656,
+        476.2890930175781
+      ],
+      "text_sha256": "2539aad36dd6910b2e565f77a37dc9075b849bce7e7a8816d976d273304d8a51"
+    },
+    {
+      "block_id": "page-0765-block-0012",
+      "order": 12,
+      "text": "Lithium22,23,25,32,135,136\nLithium is nephrotoxic and contraindicated in severe renal impairment; 95% is \nexcreted unchanged in the urine. Long-term treatment may result in impaired \nrenal function (‘creatinine creep’), permanent changes in kidney histology, \nmicrocysts, oncocytoma and collecting duct renal carcinoma, nephrogenic \ndiabetes insipidus, nephrotic syndrome and both reversible and irreversible kidney \ndamage.137,138 However, shorter studies in younger populations do not show \ndeclining GFR139 or\n",
+      "bbox": [
+        61.88999938964844,
+        485.7091064453125,
+        435.45751953125,
+        554.4265747070312
+      ],
+      "text_sha256": "bac734fc717ccd41d666aa4014c45ebf590baa09729405cf795d803372aeffd5"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

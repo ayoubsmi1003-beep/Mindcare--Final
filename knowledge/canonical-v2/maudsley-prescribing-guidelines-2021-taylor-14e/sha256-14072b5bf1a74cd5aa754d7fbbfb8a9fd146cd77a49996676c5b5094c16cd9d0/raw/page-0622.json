@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0622",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 622,
+  "source_page_index": 621,
+  "source_page_display": 622,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\nChapter 6\nPrescribing in older people\nGeneral principles\nThe pharmacokinetics and pharmacodynamics of most drugs are altered to an impor-\ntant extent in older people. These changes in drug handling and action must be taken \ninto account if treatment is to be effective and adverse effects minimised. Older people \noften have a number of concurrent illnesses and may require treatment with several \ndrugs. This leads to a greater chance of problems arising because of drug interactions \nand to a higher rate of drug-induced problems, in general.1 It is reasonable to assume \nthat all drugs are more likely to cause adverse effects in older patients than in younger \npatients.\nHow drugs affect the ageing body (altered pharmacodynamics)\nAs we age, control over reflex actions such as blood pressure and temperature regula-\ntion is reduced. Receptors may become more sensitive. This results in an increased \nincidence and severity of adverse effects. For example, drugs that decrease gut motility \nare more likely to cause constipation (e.g. anticholinergics and opioids) and drugs that \naffect blood pressure are more likely to cause falls (e.g. tricyclic antidepressants (TCAs) \nand diuretics). Older people demonstrate an exaggerated response to central nervous \nsystem (CNS)-active drugs such as benzodiazepines and opioids. This is partly due to \nan age-related decline in CNS function and partly due to increased pharmacodynamics \nsensitivity to these drugs.2 Therapeutic response to medication can also be delayed; for \nexample, older adults may take longer to respond to antidepressants than younger \nadults.3\nOlder people may be more prone to develop serious adverse effects such as agranu-\nlocytosis4 and neutropenia5 with clozapine, stroke with antipsychotic drugs6 and bleed-\ning with selective serotonin reuptake inhibitors (SSRIs).\n",
+  "raw_text_sha256": "ce34eea76eaa02a2cffe2fdec16c58fd9b43f82bd1b1037b3b0f5a173fd03cad",
+  "coordinates_sha256": "95cd2e919f9cd40d384dadaaff46da7d7a34f73a5370aa992487505b493fc744",
+  "block_sequence_sha256": "041d3155c5728120932a2f208c2f0a6a471fe1c786db3e04597b1461569268e3",
+  "blocks": [
+    {
+      "block_id": "page-0622-block-0000",
+      "order": 0,
+      "text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\n",
+      "bbox": [
+        47.99980163574219,
+        585.1019897460938,
+        348.48388671875,
+        614.4779663085938
+      ],
+      "text_sha256": "c78fcd1eeb2357afb8eb5b97a8c858d68167bd409b9074c0da4e20c032bd5665"
+    },
+    {
+      "block_id": "page-0622-block-0001",
+      "order": 1,
+      "text": "Chapter 6\n",
+      "bbox": [
+        324.43121337890625,
+        59.724403381347656,
+        420.001220703125,
+        82.60040283203125
+      ],
+      "text_sha256": "fd1e2acbdf4ac668706edfc28e34d69f6875e6510a31117946b6ad011aab5d62"
+    },
+    {
+      "block_id": "page-0622-block-0002",
+      "order": 2,
+      "text": "Prescribing in older people\n",
+      "bbox": [
+        144.12249755859375,
+        111.36316680908203,
+        420.00238037109375,
+        137.43316650390625
+      ],
+      "text_sha256": "3eef47ba46169b4ccf65f27697a94b2adf3ba05d5a3881392423fb06953698b0"
+    },
+    {
+      "block_id": "page-0622-block-0003",
+      "order": 3,
+      "text": "General principles\n",
+      "bbox": [
+        55.0,
+        205.70217895507812,
+        147.90599060058594,
+        218.7371826171875
+      ],
+      "text_sha256": "819bfc247b02775d3db6491c159b39d2b677b007e5f214ad97e46dd74645a62d"
+    },
+    {
+      "block_id": "page-0622-block-0004",
+      "order": 4,
+      "text": "The pharmacokinetics and pharmacodynamics of most drugs are altered to an impor-\ntant extent in older people. These changes in drug handling and action must be taken \ninto account if treatment is to be effective and adverse effects minimised. Older people \noften have a number of concurrent illnesses and may require treatment with several \ndrugs. This leads to a greater chance of problems arising because of drug interactions \nand to a higher rate of drug-induced problems, in general.1 It is reasonable to assume \nthat all drugs are more likely to cause adverse effects in older patients than in younger \npatients.\n",
+      "bbox": [
+        48.0,
+        224.54718017578125,
+        422.8304138183594,
+        320.2671813964844
+      ],
+      "text_sha256": "e10aa3671697f5f858f3139f74434e71c0368d6bb9ed291f025043f154640518"
+    },
+    {
+      "block_id": "page-0622-block-0005",
+      "order": 5,
+      "text": "How drugs affect the ageing body (altered pharmacodynamics)\n",
+      "bbox": [
+        48.0,
+        337.7021789550781,
+        375.20599365234375,
+        350.7371826171875
+      ],
+      "text_sha256": "390347412a71bc493dccbb202689cf42fad3287561cda300ed367579e868c3ce"
+    },
+    {
+      "block_id": "page-0622-block-0006",
+      "order": 6,
+      "text": "As we age, control over reflex actions such as blood pressure and temperature regula-\ntion is reduced. Receptors may become more sensitive. This results in an increased \nincidence and severity of adverse effects. For example, drugs that decrease gut motility \nare more likely to cause constipation (e.g. anticholinergics and opioids) and drugs that \naffect blood pressure are more likely to cause falls (e.g. tricyclic antidepressants (TCAs) \nand diuretics). Older people demonstrate an exaggerated response to central nervous \nsystem (CNS)-active drugs such as benzodiazepines and opioids. This is partly due to \nan age-related decline in CNS function and partly due to increased pharmacodynamics \nsensitivity to these drugs.2 Therapeutic response to medication can also be delayed; for \nexample, older adults may take longer to respond to antidepressants than younger \nadults.3\n",
+      "bbox": [
+        48.0,
+        356.54718017578125,
+        422.81005859375,
+        488.2671813964844
+      ],
+      "text_sha256": "31c7b282cfdcdbd83b733331e5d5ef160db798d51ee32a8a46cce2cb19a3389e"
+    },
+    {
+      "block_id": "page-0622-block-0007",
+      "order": 7,
+      "text": "Older people may be more prone to develop serious adverse effects such as agranu-\nlocytosis4 and neutropenia5 with clozapine, stroke with antipsychotic drugs6 and bleed-\ning with selective serotonin reuptake inhibitors (SSRIs).\n",
+      "bbox": [
+        48.0,
+        488.54718017578125,
+        420.0000305175781,
+        524.2672119140625
+      ],
+      "text_sha256": "9fa3036ac76464d79075a95a0267028e6a1704b6c33f6fcf87839c0840576d17"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

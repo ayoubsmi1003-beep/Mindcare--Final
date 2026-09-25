@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0105",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 105,
+  "source_page_index": 104,
+  "source_page_display": 105,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "84    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nPaliperidone LAI has been compared with haloperidol depot given in a loading dose \nschedule matching that of paliperidone.8 The two formulations were equally effective in \npreventing relapse, but paliperidone increased prolactin to a greater extent and caused \nmore weight gain. Haloperidol caused more akathisia, more acute movement disorder \nand there was a trend for a higher incidence of tardive dyskinesia. The average dose of \nhaloperidol was around 75mg a month; a dose rarely used in practice.\nThere are two studies comparing monthly paliperidone LAI with aripiprazole LAI. \nThe first was a randomised trial that found aripiprazole monthly injection superior in \nthe improvement of quality of life in short term, though the aripiprazole group included \nmore younger patients.9 The second study compared the two LAIs in patients with psy-\nchosis and comorbid substance use disorder (SUD). Improvement in quality of life and \nreduced substance cravings was seen with both LAIs though aripiprazole fared better. \nHowever, there was no clear clinically meaningful superiority for aripiprazole over pali-\nperidone in either of these studies.10\nPaliperidone LAI 3-monthly\nPaliperidone LAI 3-monthly is indicated for patients who are clinically stable on pali-\nperidone LAI 1-monthly (preferably for four months or more) and do not require dose \nadjustment.11 It is recommended that the last two doses of the monthly paliperidone \nremain unchanged before switching to the 3-monthly in order to be certain of the main-\ntenance dose required.1\nPaliperidone LAI 3-monthly is generally well-tolerated, with a tolerability profile \nsimilar to the 1-monthly preparation12–14 and is non-inferior to paliperidone 1-monthly \nin terms of relapse rate.14 In an analysis of predictors for remission, global improvement \nin the CG I-S during monthly paliperidone increased likelihood of remission after \nswitch to 3-monthly paliperidone.15\nFrom a patient’s perspective, advantages included less frequent injections and less focus \non illness with few disadvantages reported in a qualitative study. The switch did not influ-\nence the frequency nor the content of their interaction with health care professionals.16 \nContact with patients should not be reduced because there are fewer antipsychotic \nadministrations.\nTable 1.7  Approximate dose equivalence2,5\nRisperidone oral  \n(mg/day) \n(bioavailability = 70%)6\nPaliperidone oral  \n(mg/day) \n(bioavailability = 28%)7\nRisperidone LAI \n(Consta) \n(mg/2 week)\nPaliperidone palmitate  \n(mg/monthly) \n(bioavailability = 100%)2\n2\n4\n25\n50\n3\n6\n37.5\n75\n4\n9\n50\n100\n6\n12\n-\n150\n",
+  "raw_text_sha256": "c675a57ce7a8d8890d3c54f344c660a2366e4941aa195018c2ea84b6b4247e55",
+  "coordinates_sha256": "6f6d3f6234136d3267df6e3eba90adf6b5d507673d900527e9926b1bc8445938",
+  "block_sequence_sha256": "f1b5bce3a28b243d5dbe42d1e2878ee6bba5b6c8ffdbb14407a8aafd5142ef5a",
+  "blocks": [
+    {
+      "block_id": "page-0105-block-0000",
+      "order": 0,
+      "text": "84    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "7b304dbe1b8c68aa854e3b6dadb0630560c408bd0075062e890045d434df3bfb"
+    },
+    {
+      "block_id": "page-0105-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0105-block-0002",
+      "order": 2,
+      "text": "Paliperidone LAI has been compared with haloperidol depot given in a loading dose \nschedule matching that of paliperidone.8 The two formulations were equally effective in \npreventing relapse, but paliperidone increased prolactin to a greater extent and caused \nmore weight gain. Haloperidol caused more akathisia, more acute movement disorder \nand there was a trend for a higher incidence of tardive dyskinesia. The average dose of \nhaloperidol was around 75mg a month; a dose rarely used in practice.\n",
+      "bbox": [
+        61.88789367675781,
+        230.90802001953125,
+        436.6979675292969,
+        302.6280212402344
+      ],
+      "text_sha256": "326ea85910427c34c1510bef5eea5e63c3f850bae928a0fba442d4de14f95d0a"
+    },
+    {
+      "block_id": "page-0105-block-0003",
+      "order": 3,
+      "text": "There are two studies comparing monthly paliperidone LAI with aripiprazole LAI. \nThe first was a randomised trial that found aripiprazole monthly injection superior in \nthe improvement of quality of life in short term, though the aripiprazole group included \nmore younger patients.9 The second study compared the two LAIs in patients with psy-\nchosis and comorbid substance use disorder (SUD). Improvement in quality of life and \nreduced substance cravings was seen with both LAIs though aripiprazole fared better. \nHowever, there was no clear clinically meaningful superiority for aripiprazole over pali-\nperidone in either of these studies.10\n",
+      "bbox": [
+        61.88789367675781,
+        302.90802001953125,
+        436.6913146972656,
+        398.6280212402344
+      ],
+      "text_sha256": "4e4f505ef934d9332f0778bcfe41fe41e4142ae3c45ce3e6dd4d9c7d3def950c"
+    },
+    {
+      "block_id": "page-0105-block-0004",
+      "order": 4,
+      "text": "Paliperidone LAI 3-monthly\n",
+      "bbox": [
+        61.888999938964844,
+        416.0630187988281,
+        202.47994995117188,
+        429.0980224609375
+      ],
+      "text_sha256": "9c67738f77c63885e9a593c7527b849c018fe6120d50bc6e98cd6e08984f56ee"
+    },
+    {
+      "block_id": "page-0105-block-0005",
+      "order": 5,
+      "text": "Paliperidone LAI 3-monthly is indicated for patients who are clinically stable on pali-\nperidone LAI 1-monthly (preferably for four months or more) and do not require dose \nadjustment.11 It is recommended that the last two doses of the monthly paliperidone \nremain unchanged before switching to the 3-monthly in order to be certain of the main-\ntenance dose required.1\n",
+      "bbox": [
+        61.888999938964844,
+        434.90802001953125,
+        436.7090759277344,
+        494.6280212402344
+      ],
+      "text_sha256": "4f7cc3c4063928f74d0b561415c19af9094ac1b557830e3076c99fc322b79b2f"
+    },
+    {
+      "block_id": "page-0105-block-0006",
+      "order": 6,
+      "text": "Paliperidone LAI 3-monthly is generally well-tolerated, with a tolerability profile \nsimilar to the 1-monthly preparation12–14 and is non-inferior to paliperidone 1-monthly \nin terms of relapse rate.14 In an analysis of predictors for remission, global improvement \nin the CG I-S during monthly paliperidone increased likelihood of remission after \nswitch to 3-monthly paliperidone.15\n",
+      "bbox": [
+        61.88459777832031,
+        494.90802001953125,
+        436.6931457519531,
+        554.6280517578125
+      ],
+      "text_sha256": "d29c060a4bff714a1a916477af1f71ba27f0b3b2d8e7a4a103d925f2edc890e9"
+    },
+    {
+      "block_id": "page-0105-block-0007",
+      "order": 7,
+      "text": "From a patient’s perspective, advantages included less frequent injections and less focus \non illness with few disadvantages reported in a qualitative study. The switch did not influ-\nence the frequency nor the content of their interaction with health care professionals.16 \nContact with patients should not be reduced because there are fewer antipsychotic \nadministrations.\n",
+      "bbox": [
+        61.88899230957031,
+        554.9080200195312,
+        436.7091369628906,
+        614.6280517578125
+      ],
+      "text_sha256": "7eda2a59b38ab2b49f6769de7a6c73289aa327f5a97ff4634b28092ce2e256d2"
+    },
+    {
+      "block_id": "page-0105-block-0008",
+      "order": 8,
+      "text": "Table 1.7  Approximate dose equivalence2,5\n",
+      "bbox": [
+        67.88909912109375,
+        70.08692932128906,
+        206.36337280273438,
+        78.97442626953125
+      ],
+      "text_sha256": "c12127b73d2d66ae6ecb9ad817412197e635b63765dab1e6950ef4ea9ea368b7"
+    },
+    {
+      "block_id": "page-0105-block-0009",
+      "order": 9,
+      "text": "Risperidone oral  \n(mg/day) \n(bioavailability = 70%)6\n",
+      "bbox": [
+        61.88909912109375,
+        90.32191467285156,
+        135.90660095214844,
+        119.20440673828125
+      ],
+      "text_sha256": "986cc384bbd8c5839ba4156dfb8b0c34ae12cefe696ad15b15c5788fa113bddd"
+    },
+    {
+      "block_id": "page-0105-block-0010",
+      "order": 10,
+      "text": "Paliperidone oral  \n(mg/day) \n(bioavailability = 28%)7\n",
+      "bbox": [
+        155.88909912109375,
+        90.32191467285156,
+        229.9066162109375,
+        119.20440673828125
+      ],
+      "text_sha256": "2dc275bf5ceaaf9d6d478a00cb91b23ff5889b9fd1cf1771dbac4566100c45c5"
+    },
+    {
+      "block_id": "page-0105-block-0011",
+      "order": 11,
+      "text": "Risperidone LAI \n(Consta) \n(mg/2 week)\n",
+      "bbox": [
+        249.8891143798828,
+        90.32191467285156,
+        306.9790344238281,
+        119.20440673828125
+      ],
+      "text_sha256": "f1a8c1e7c36a43b6f7d7a6a7658657e6c8211bfe60cdbe4e073de65bce1e6637"
+    },
+    {
+      "block_id": "page-0105-block-0012",
+      "order": 12,
+      "text": "Paliperidone palmitate  \n(mg/monthly) \n(bioavailability = 100%)2\n",
+      "bbox": [
+        320.8916015625,
+        90.31440734863281,
+        405.0941467285156,
+        119.1968994140625
+      ],
+      "text_sha256": "366995f8d6ad84c2a4235bf4c66b7968a0dde474c0f2b2d4e0a349b298d0483a"
+    },
+    {
+      "block_id": "page-0105-block-0013",
+      "order": 13,
+      "text": "2\n4\n25\n50\n",
+      "bbox": [
+        71.71910095214844,
+        129.3769073486328,
+        340.8941345214844,
+        138.08441162109375
+      ],
+      "text_sha256": "ccf7a6d5b625569dd562b5ad40c65eca5ea64e3510661fe59793c68a45853e84"
+    },
+    {
+      "block_id": "page-0105-block-0014",
+      "order": 14,
+      "text": "3\n6\n37.5\n75\n",
+      "bbox": [
+        71.72657775878906,
+        147.0019073486328,
+        340.9016418457031,
+        155.70941162109375
+      ],
+      "text_sha256": "1c834676aabb93523471cdbea558be750b589b77c39ec7353cf65f81379bcfe2"
+    },
+    {
+      "block_id": "page-0105-block-0015",
+      "order": 15,
+      "text": "4\n9\n50\n100\n",
+      "bbox": [
+        71.73408508300781,
+        164.6269073486328,
+        340.9091491699219,
+        173.33441162109375
+      ],
+      "text_sha256": "ef1954628b352f4deb6441baf3806cf0cd8d7115d85bda868bcd643c1a6f6085"
+    },
+    {
+      "block_id": "page-0105-block-0016",
+      "order": 16,
+      "text": "6\n12\n-\n150\n",
+      "bbox": [
+        71.74162292480469,
+        182.2519073486328,
+        340.9166564941406,
+        190.95941162109375
+      ],
+      "text_sha256": "2ed9d38de4ea8dd99f515bca2348b2c8043181dcf43e13966be45a47e5d48c10"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

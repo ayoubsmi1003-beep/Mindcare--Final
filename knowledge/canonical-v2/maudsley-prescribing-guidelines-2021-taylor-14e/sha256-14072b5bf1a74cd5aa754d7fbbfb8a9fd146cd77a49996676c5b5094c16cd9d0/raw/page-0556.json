@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0556",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 556,
+  "source_page_index": 555,
+  "source_page_display": 556,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    535\nCHAPTER 4\nSubstance misuse in pregnancy1\nSubstance misuse during pregnancy has numerous adverse effects. These include low \nbirthweight and prematurity,2 various neonatal withdrawal syndromes and a range of \ndevelopmental, emotional and behavioural problems in offspring.3\nAlcohol\nConsumption of alcohol during pregnancy is well known to have profound conse-\nquences on offspring. Pregnant women who misuse alcohol should be encouraged to \ncease alcohol intake and to have withdrawal symptoms managed with benzodiazepines, \npreferably as inpatients.4\nAcamprosate, disulfiram and naltrexone are not proven to be safe in pregnancy but \ntheir use may be preferred to the higher risk of relapse in untreated individuals (also see \nsection ‘Alcohol dependence’ in this chapter).\nTobacco\nPatients should be encouraged to cease smoking completely as continuing to smoke \nincreases the risk of miscarriage, prematurity and stillbirth.5 Vaping may be preferred \nbut its safety is not established. NICE recommends NRT.6 Bupropion and varenicline \nare not recommended.\nOpioids (see longer pregnancy in section ‘Opioid dependence’ in this chapter).\nUse of opioids during pregnancy may not be directly teratogenic but the risk of NAS \nexceeds 70% in regular users.7\nThe use of prescribed methadone or buprenorphine is preferred to illicit opioid mis-\nuse because it offers the possibility of dose decrease and reduces the harms associated \nwith illicit use. Even when dose decreases are not possible the use of these replacements \nreduces the risk of premature birth.\nMethadone requirements may increase in the third trimester, presumably because of \nan increased volume of distribution. There is mounting evidence that buprenorphine \nuse produces less severe NAS than methadone.8,9\nMost authorities recommend that withdrawal from opiates should not normally be \nattempted in pregnant women.4,10 Women on stable opioid replacement treatment \nshould generally be encouraged to breast feed and to carefully wean off their babies \nafter several weeks.\nCannabis and synthetic cannabinoid receptor agonists \nUse of cannabis during pregnancy is linked to a wide range of adverse outcomes in \npregnancy and in the offspring.11 Abstinence should be encouraged. There are no phar-\nmacological treatments currently available.\nBenzodiazepines\nThe safety of benzodiazepines in pregnancy is not clearly established (see Chapter 7). \nThird trimester use is well known to cause ‘floppy baby syndrome’.\n",
+  "raw_text_sha256": "f20b1867b61f8bd672a52e159e7caa36276004154377adb02228d3bae754c116",
+  "coordinates_sha256": "9c7ba69a8ed5a6bee460d46d1c33c841a2d6cec26ee84f8c5824643d5d5b356c",
+  "block_sequence_sha256": "0cc3b8cb7e6ec489eef4f1ab5af9286a257184345614f2aeb9c6211a9922d0bf",
+  "blocks": [
+    {
+      "block_id": "page-0556-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    535\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "79b632890c9481651721e6e10134a7ea7744db58cc944172ab5e9d94288fa8c1"
+    },
+    {
+      "block_id": "page-0556-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0556-block-0002",
+      "order": 2,
+      "text": "Substance misuse in pregnancy1\n",
+      "bbox": [
+        55.0,
+        66.06539916992188,
+        219.71392822265625,
+        79.10040283203125
+      ],
+      "text_sha256": "7a9bbd0ca7ff1edab5419d7d5509bcc402e3df3924b078185b24abddf88346b8"
+    },
+    {
+      "block_id": "page-0556-block-0003",
+      "order": 3,
+      "text": "Substance misuse during pregnancy has numerous adverse effects. These include low \nbirthweight and prematurity,2 various neonatal withdrawal syndromes and a range of \ndevelopmental, emotional and behavioural problems in offspring.3\n",
+      "bbox": [
+        47.99870300292969,
+        84.910400390625,
+        422.78875732421875,
+        120.63040161132812
+      ],
+      "text_sha256": "f486c362843e30a97ec010761f201774e9898b14a36346947fb3bf5b0fbf29f6"
+    },
+    {
+      "block_id": "page-0556-block-0004",
+      "order": 4,
+      "text": "Alcohol\n",
+      "bbox": [
+        48.0,
+        138.06539916992188,
+        87.10499572753906,
+        151.10040283203125
+      ],
+      "text_sha256": "ea607c5a5b871f6582c8881d61eec7d991d381ac1069909f5b165d897b466b47"
+    },
+    {
+      "block_id": "page-0556-block-0005",
+      "order": 5,
+      "text": "Consumption of alcohol during pregnancy is well known to have profound conse-\nquences on offspring. Pregnant women who misuse alcohol should be encouraged to \ncease alcohol intake and to have withdrawal symptoms managed with benzodiazepines, \npreferably as inpatients.4\n",
+      "bbox": [
+        48.0,
+        156.910400390625,
+        422.7500305175781,
+        204.63040161132812
+      ],
+      "text_sha256": "e9ecfcebe6124e7d42a931023f13cdf6afc528f1ee204fc3755e2be4a82277ec"
+    },
+    {
+      "block_id": "page-0556-block-0006",
+      "order": 6,
+      "text": "Acamprosate, disulfiram and naltrexone are not proven to be safe in pregnancy but \ntheir use may be preferred to the higher risk of relapse in untreated individuals (also see \nsection ‘Alcohol dependence’ in this chapter).\n",
+      "bbox": [
+        48.0,
+        204.910400390625,
+        422.7799072265625,
+        240.63040161132812
+      ],
+      "text_sha256": "720fbd9b93c8cdac26dddd527fa8d6b4068b9ce51753a012be0a3ec7c8b0446f"
+    },
+    {
+      "block_id": "page-0556-block-0007",
+      "order": 7,
+      "text": "Tobacco\n",
+      "bbox": [
+        48.0,
+        258.0653991699219,
+        88.94200134277344,
+        271.10040283203125
+      ],
+      "text_sha256": "afd3e5ff57fc78c860025dccf3394e802ba1e2a2ee3f7fe907412b53c2b0eac8"
+    },
+    {
+      "block_id": "page-0556-block-0008",
+      "order": 8,
+      "text": "Patients should be encouraged to cease smoking completely as continuing to smoke \nincreases the risk of miscarriage, prematurity and stillbirth.5 Vaping may be preferred \nbut its safety is not established. NICE recommends NRT.6 Bupropion and varenicline \nare not recommended.\n",
+      "bbox": [
+        48.0,
+        276.910400390625,
+        422.79998779296875,
+        324.6304016113281
+      ],
+      "text_sha256": "d7a4d981c4fcefe1385d20e682a3bc79c32865c5e932a79be473de1697ae7e8c"
+    },
+    {
+      "block_id": "page-0556-block-0009",
+      "order": 9,
+      "text": "Opioids (see longer pregnancy in section ‘Opioid dependence’ in this chapter).\nUse of opioids during pregnancy may not be directly teratogenic but the risk of NAS \nexceeds 70% in regular users.7\n",
+      "bbox": [
+        48.00471496582031,
+        324.67041015625,
+        422.7645263671875,
+        360.6304016113281
+      ],
+      "text_sha256": "0fc93fc859881a6f7e778da56b1fa385fdf6c551785b4b965c0283e2e54f931b"
+    },
+    {
+      "block_id": "page-0556-block-0010",
+      "order": 10,
+      "text": "The use of prescribed methadone or buprenorphine is preferred to illicit opioid mis-\nuse because it offers the possibility of dose decrease and reduces the harms associated \nwith illicit use. Even when dose decreases are not possible the use of these replacements \nreduces the risk of premature birth.\n",
+      "bbox": [
+        48.0,
+        360.910400390625,
+        422.77001953125,
+        408.6304016113281
+      ],
+      "text_sha256": "cc9098e2e94a7d76bd72295d552120fe98421cfe4fbc9c2681ce4e02c52f7a05"
+    },
+    {
+      "block_id": "page-0556-block-0011",
+      "order": 11,
+      "text": "Methadone requirements may increase in the third trimester, presumably because of \nan increased volume of distribution. There is mounting evidence that buprenorphine \nuse produces less severe NAS than methadone.8,9\n",
+      "bbox": [
+        48.0,
+        408.910400390625,
+        422.81011962890625,
+        444.6304016113281
+      ],
+      "text_sha256": "e994eafc9b27d9134135bb9ecfae4bfd4631085d4aa6ff1b52d7e4e807f25da6"
+    },
+    {
+      "block_id": "page-0556-block-0012",
+      "order": 12,
+      "text": "Most authorities recommend that withdrawal from opiates should not normally be \nattempted in pregnant women.4,10 Women on stable opioid replacement treatment \nshould generally be encouraged to breast feed and to carefully wean off their babies \nafter several weeks.\n",
+      "bbox": [
+        47.996612548828125,
+        444.910400390625,
+        422.800048828125,
+        492.6304016113281
+      ],
+      "text_sha256": "44b48aa954026f6db2f3a21e861cc96126378f0fe43302ea0616a19ac52958be"
+    },
+    {
+      "block_id": "page-0556-block-0013",
+      "order": 13,
+      "text": "Cannabis and synthetic cannabinoid receptor agonists \n",
+      "bbox": [
+        48.0,
+        510.0653991699219,
+        330.1610107421875,
+        523.1004028320312
+      ],
+      "text_sha256": "dc05dd223affdb248b1ba0830d096605059b9e08294c1a47b26703a20ed48378"
+    },
+    {
+      "block_id": "page-0556-block-0014",
+      "order": 14,
+      "text": "Use of cannabis during pregnancy is linked to a wide range of adverse outcomes in \npregnancy and in the offspring.11 Abstinence should be encouraged. There are no phar-\nmacological treatments currently available.\n",
+      "bbox": [
+        48.0,
+        528.910400390625,
+        422.7900390625,
+        564.6304321289062
+      ],
+      "text_sha256": "1b58f02089a44dfc5e8cef533919aafa6f0652ffcec19d2acb447e1c8bda5c22"
+    },
+    {
+      "block_id": "page-0556-block-0015",
+      "order": 15,
+      "text": "Benzodiazepines\n",
+      "bbox": [
+        48.0,
+        582.0654296875,
+        134.7899932861328,
+        595.1004028320312
+      ],
+      "text_sha256": "b2415b7ae654663c88764302a51bd5b9c4cc200adbc533f41662bd096b532f6c"
+    },
+    {
+      "block_id": "page-0556-block-0016",
+      "order": 16,
+      "text": "The safety of benzodiazepines in pregnancy is not clearly established (see Chapter 7). \nThird trimester use is well known to cause ‘floppy baby syndrome’.\n",
+      "bbox": [
+        48.0,
+        600.910400390625,
+        422.7999267578125,
+        624.6304321289062
+      ],
+      "text_sha256": "7283746d8ccfacc5badfcb0e26c9f2686be48c95264199e3ad1e62003886a7d9"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

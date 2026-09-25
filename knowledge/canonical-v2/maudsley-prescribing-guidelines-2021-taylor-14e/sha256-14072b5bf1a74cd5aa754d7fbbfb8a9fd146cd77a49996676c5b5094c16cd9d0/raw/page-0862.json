@@ -1,0 +1,383 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0862",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 862,
+  "source_page_index": 861,
+  "source_page_display": 862,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Pharmacokinetics    841\nCHAPTER 11\nThe target ranges listed in Table 11.2 have somewhat dubious usefulness and, in \nsome cases, merely represent the range of values seen in clinical use. Assays for these \ndrugs are likely to be available only in specialist units.\nAntipsychotics\nTarget range (µg/L)\nAsenapine\n1–5\nBrexpiprazole\n40–140\nCariprazine\n10–20\nChlorpromazine\n30–300\nFlupentixol\n0.5–5 (cis-isomer)\nFluphenazine\n1–10\nHaloperidol\n1–10\nIloperidone\n5–10\nLurasidone\n15–40\nMelperone\n30–100\nSulpiride\n200–1000\nZiprasidone\n50–200\nZuclopenthixol\n4–50\nAntidepressants\nTarget range (µg/L)\nAgomelatine\n7–300\nCitalopram\n50–110\nDesvenlafaxine\n100–400\nDosulepin\n45–100\nDuloxetine\n30–120\nEscitalopram\n15–80\nFluoxetine (+norfluoxetine)\n120–500\nFluvoxamine\n60–230\nLevomilnacipran\n80–120\nMianserin\n15–70\n(Continued)\nTable 11.2  Target ranges for other psychotropics30,91\n",
+  "raw_text_sha256": "19fa051473de4fc7645854156e9a364e5782e16ff705bc13dd2ad098e03fbb5b",
+  "coordinates_sha256": "9e874aad969c5a2eb847202bc9bc3da37965e428fa2f157d339798d45fc73f60",
+  "block_sequence_sha256": "638a6731ffdd5e5c3f9d0a887813726d957c688a73f777c78593bab0f2876591",
+  "blocks": [
+    {
+      "block_id": "page-0862-block-0000",
+      "order": 0,
+      "text": "Pharmacokinetics    841\n",
+      "bbox": [
+        320.4088134765625,
+        31.395221710205078,
+        420.00079345703125,
+        41.0272216796875
+      ],
+      "text_sha256": "5acbc8ae75e79a4968d4ed2f49aef2afe9edbfafc7544f9316f2405eb4ed3737"
+    },
+    {
+      "block_id": "page-0862-block-0001",
+      "order": 1,
+      "text": "CHAPTER 11\n",
+      "bbox": [
+        454.4096984863281,
+        140.99053955078125,
+        463.88970947265625,
+        186.78250122070312
+      ],
+      "text_sha256": "8577f8a61d9be9d957b7354680b21b61adb6e8c4601aaa9be76ccc79360dc7f3"
+    },
+    {
+      "block_id": "page-0862-block-0002",
+      "order": 2,
+      "text": "The target ranges listed in Table 11.2 have somewhat dubious usefulness and, in \nsome cases, merely represent the range of values seen in clinical use. Assays for these \ndrugs are likely to be available only in specialist units.\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.7901306152344,
+        98.27041625976562
+      ],
+      "text_sha256": "8014b2370a13ed6699beab41b9d56e471641e7a527107772a95a7878ae0a9d96"
+    },
+    {
+      "block_id": "page-0862-block-0003",
+      "order": 3,
+      "text": "Antipsychotics\nTarget range (µg/L)\n",
+      "bbox": [
+        106.9999008178711,
+        150.57557678222656,
+        295.5123596191406,
+        159.46307373046875
+      ],
+      "text_sha256": "630d90ebf928cf3d2fb94fd595bfab2786fb945d00c8731dd987dfef9615a5fa"
+    },
+    {
+      "block_id": "page-0862-block-0004",
+      "order": 4,
+      "text": "Asenapine\n1–5\n",
+      "bbox": [
+        106.99990844726562,
+        168.7030792236328,
+        240.08740234375,
+        177.590576171875
+      ],
+      "text_sha256": "019c82fbc71add6b024bfe006cac10adbd2d48c47c1612931573b26b3af82c6c"
+    },
+    {
+      "block_id": "page-0862-block-0005",
+      "order": 5,
+      "text": "Brexpiprazole\n40–140\n",
+      "bbox": [
+        106.99990844726562,
+        186.83058166503906,
+        252.59739685058594,
+        195.71807861328125
+      ],
+      "text_sha256": "276c506fb99a60a21dadbc2cfa5ce5b9ba2f1e01f8b036c1f9d7bb97bd74925e"
+    },
+    {
+      "block_id": "page-0862-block-0006",
+      "order": 6,
+      "text": "Cariprazine\n10–20\n",
+      "bbox": [
+        106.99990844726562,
+        204.9580841064453,
+        248.42739868164062,
+        213.8455810546875
+      ],
+      "text_sha256": "fedcc1494295ce56dc6539bbf0f98d7734f9b59d66774dd043ecbfd9854fcae2"
+    },
+    {
+      "block_id": "page-0862-block-0007",
+      "order": 7,
+      "text": "Chlorpromazine\n30–300\n",
+      "bbox": [
+        106.99990844726562,
+        223.08558654785156,
+        252.59739685058594,
+        231.97308349609375
+      ],
+      "text_sha256": "d502b12848d5562d683588f070f755abb492ffeb5c42db6caa0c3abf52642c66"
+    },
+    {
+      "block_id": "page-0862-block-0008",
+      "order": 8,
+      "text": "Flupentixol\n0.5–5 (cis-isomer)\n",
+      "bbox": [
+        106.99990844726562,
+        241.2130889892578,
+        284.25494384765625,
+        250.1005859375
+      ],
+      "text_sha256": "b3cbdbcc53c14912988aedda9a18b3d7a7c5c70e4de8ed16c86f3e92eb14c151"
+    },
+    {
+      "block_id": "page-0862-block-0009",
+      "order": 9,
+      "text": "Fluphenazine\n1–10\n",
+      "bbox": [
+        106.99990844726562,
+        259.340576171875,
+        244.2574005126953,
+        268.22808837890625
+      ],
+      "text_sha256": "6b790d2cc2f045fb9523db77d9aad082ff4b1c41a0179aeba080a6057163ff00"
+    },
+    {
+      "block_id": "page-0862-block-0010",
+      "order": 10,
+      "text": "Haloperidol\n1–10\n",
+      "bbox": [
+        106.99990844726562,
+        277.46807861328125,
+        244.2574005126953,
+        286.3555908203125
+      ],
+      "text_sha256": "10a3d4acf89af28dd1f59f53d52a3e35c1183551df5af3f0edb84d1680397c52"
+    },
+    {
+      "block_id": "page-0862-block-0011",
+      "order": 11,
+      "text": "Iloperidone\n5–10\n",
+      "bbox": [
+        106.99990844726562,
+        295.5955810546875,
+        244.2574005126953,
+        304.48309326171875
+      ],
+      "text_sha256": "7425add1b219c3c5008ff549ccbe8918a4af6c2ef13aaf3930cb738f6cc0614e"
+    },
+    {
+      "block_id": "page-0862-block-0012",
+      "order": 12,
+      "text": "Lurasidone\n15–40\n",
+      "bbox": [
+        106.99990844726562,
+        313.72308349609375,
+        248.42739868164062,
+        322.610595703125
+      ],
+      "text_sha256": "6ebc4bd17c7df521a52de88cb99afa40d427e6cd94a9a07e01498936c134c03c"
+    },
+    {
+      "block_id": "page-0862-block-0013",
+      "order": 13,
+      "text": "Melperone\n30–100\n",
+      "bbox": [
+        106.99990844726562,
+        331.8505859375,
+        252.59739685058594,
+        340.73809814453125
+      ],
+      "text_sha256": "b14f9df60ac1a48ee3bffad57cbd5a975a0f1396eac7cf5aaa2e058e5b2df185"
+    },
+    {
+      "block_id": "page-0862-block-0014",
+      "order": 14,
+      "text": "Sulpiride\n200–1000\n",
+      "bbox": [
+        106.99990844726562,
+        349.97808837890625,
+        260.9374084472656,
+        358.8656005859375
+      ],
+      "text_sha256": "cd927f7c0c399d45a1c10f5eab9c10ccf5315b9386cfa443f504c08d918cadcb"
+    },
+    {
+      "block_id": "page-0862-block-0015",
+      "order": 15,
+      "text": "Ziprasidone\n50–200\n",
+      "bbox": [
+        106.99990844726562,
+        368.1055908203125,
+        252.59739685058594,
+        376.99310302734375
+      ],
+      "text_sha256": "a04d3f258f82dc74e45de2ded66c4c7f9a973f1f62813b830b90695c9dfc3895"
+    },
+    {
+      "block_id": "page-0862-block-0016",
+      "order": 16,
+      "text": "Zuclopenthixol\n4–50\n",
+      "bbox": [
+        106.99990844726562,
+        386.23309326171875,
+        244.2574005126953,
+        395.12060546875
+      ],
+      "text_sha256": "c406fb68f4e53c9ad1ea10c61e4b1c419953dc96e5708e10fae0c05867f8d4a3"
+    },
+    {
+      "block_id": "page-0862-block-0017",
+      "order": 17,
+      "text": "Antidepressants\nTarget range (µg/L)\n",
+      "bbox": [
+        106.9999008178711,
+        416.8255920410156,
+        295.3173522949219,
+        425.7131042480469
+      ],
+      "text_sha256": "7e4c7211b4cd6eafd262d41a681e1f1ae9d4d76b73bdaeb7e5389a091c2dda49"
+    },
+    {
+      "block_id": "page-0862-block-0018",
+      "order": 18,
+      "text": "Agomelatine\n7–300\n",
+      "bbox": [
+        106.99989318847656,
+        434.9530944824219,
+        248.23239135742188,
+        443.8406066894531
+      ],
+      "text_sha256": "3fa2e8930957cf5e13ed93c71a658899c55e0013421a3ccf285ae2113f12783a"
+    },
+    {
+      "block_id": "page-0862-block-0019",
+      "order": 19,
+      "text": "Citalopram\n50–110\n",
+      "bbox": [
+        106.99989318847656,
+        453.0805969238281,
+        252.4023895263672,
+        461.9681091308594
+      ],
+      "text_sha256": "d9ca66ca8f71b296cea538c1b1018654bc1c4c531079c2e0b5be892cc33b8b36"
+    },
+    {
+      "block_id": "page-0862-block-0020",
+      "order": 20,
+      "text": "Desvenlafaxine\n100–400\n",
+      "bbox": [
+        106.99989318847656,
+        471.2080993652344,
+        256.5723876953125,
+        480.0956115722656
+      ],
+      "text_sha256": "2a1236c677faac0f5ba7a6721ee9fc49d3a32099de0b7098d99405242514ee01"
+    },
+    {
+      "block_id": "page-0862-block-0021",
+      "order": 21,
+      "text": "Dosulepin\n45–100\n",
+      "bbox": [
+        106.99989318847656,
+        489.3356018066406,
+        252.4023895263672,
+        498.2231140136719
+      ],
+      "text_sha256": "f2f0a6c798ecef76cb4ba2d65bba09cdefd28b571429dcbebf150e9715fcd1f0"
+    },
+    {
+      "block_id": "page-0862-block-0022",
+      "order": 22,
+      "text": "Duloxetine\n30–120\n",
+      "bbox": [
+        106.99989318847656,
+        507.46307373046875,
+        252.4023895263672,
+        516.3505859375
+      ],
+      "text_sha256": "05937b317fb62e701e5ac4a09196887908471be0acac5b017587af28f63127dd"
+    },
+    {
+      "block_id": "page-0862-block-0023",
+      "order": 23,
+      "text": "Escitalopram\n15–80\n",
+      "bbox": [
+        106.99989318847656,
+        525.5906372070312,
+        248.23239135742188,
+        534.4781494140625
+      ],
+      "text_sha256": "bcc45b6e4a78396eea00466aef011a2131392a2d29dc1a8b88ca4e5957e8d440"
+    },
+    {
+      "block_id": "page-0862-block-0024",
+      "order": 24,
+      "text": "Fluoxetine (+norfluoxetine)\n120–500\n",
+      "bbox": [
+        106.99989318847656,
+        543.7180786132812,
+        256.5723876953125,
+        552.6055908203125
+      ],
+      "text_sha256": "8dc936ad835ea328c8f4e3a9bcb2c87251e25213fce28f744dcf13ca8ad3e824"
+    },
+    {
+      "block_id": "page-0862-block-0025",
+      "order": 25,
+      "text": "Fluvoxamine\n60–230\n",
+      "bbox": [
+        106.99989318847656,
+        561.8456420898438,
+        252.4023895263672,
+        570.733154296875
+      ],
+      "text_sha256": "6b90288d387c570bbcbedec40d4f552cce734aeeafc79c50aa9b1ee974b73b5e"
+    },
+    {
+      "block_id": "page-0862-block-0026",
+      "order": 26,
+      "text": "Levomilnacipran\n80–120\n",
+      "bbox": [
+        106.99989318847656,
+        579.9730834960938,
+        252.4023895263672,
+        588.860595703125
+      ],
+      "text_sha256": "20a3d06b3473d6e6e0999417ba61485751ecacc622f6de707fa159c300676b57"
+    },
+    {
+      "block_id": "page-0862-block-0027",
+      "order": 27,
+      "text": "Mianserin\n15–70\n",
+      "bbox": [
+        106.99989318847656,
+        598.1006469726562,
+        248.23239135742188,
+        606.9881591796875
+      ],
+      "text_sha256": "e82887a49843c1d12b3930bdee73e6e0f509a8f046e82fbcee3038d3f418491a"
+    },
+    {
+      "block_id": "page-0862-block-0028",
+      "order": 28,
+      "text": "(Continued)\n",
+      "bbox": [
+        324.9873962402344,
+        616.1006469726562,
+        361.0023498535156,
+        624.8531494140625
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0862-block-0029",
+      "order": 29,
+      "text": "Table 11.2  Target ranges for other psychotropics30,91\n",
+      "bbox": [
+        112.9999008178711,
+        130.65077209472656,
+        281.34124755859375,
+        139.53826904296875
+      ],
+      "text_sha256": "e05b2da8b902062500e6045a1d47aca54314b5b63f822fa1ecf48004b81c9c62"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

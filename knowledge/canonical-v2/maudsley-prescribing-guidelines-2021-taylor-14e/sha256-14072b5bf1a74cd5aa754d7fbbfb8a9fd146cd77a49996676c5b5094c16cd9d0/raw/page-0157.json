@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0157",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 157,
+  "source_page_index": 156,
+  "source_page_display": 157,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "136    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nfrequent dosing of zolpidem may provide effective treatment.31,32 IV lorazepam has also \nbeen used to predict response.33\nCatatonia in schizophrenia may be somewhat less likely to respond to benzodiaz-\nepines alone, with a response in 40–50%34 of cases. A double-blind, placebo-controlled, \ncross-over trial with lorazepam up to 6mg per day demonstrated no effect on chronic \ncatatonic symptoms in patients with established schizophrenia,35 similar to the poor \neffect of lorazepam in a non-randomised trial.36 A Cochrane review37 searched for RCTs \nin which people with schizophrenia or other similar SMI had received benzodiazepines \nor another relevant treatment for catatonia. Only one study was eligible, which involved \n17 participants treated with lorazepam or oxazepam: there was no clear difference in \neffect. The authors noted that no data were available for benzodiazepines compared \nwith either placebo or standard care.\nA further complication in schizophrenia is that of differential diagnosis, which \nincludes extrapyramidal side effects and the neuroleptic malignant syndrome (NMS). \nDebate continues regarding the similarities and differences between catatonic stupor in \npsychosis and NMS.38–41 Two terms have been coined – lethal catatonia and malignant \ncatatonia42 to describe stupor, which is accompanied by autonomic instability or hyper-\nthermia. This potentially fatal condition cannot be distinguished from NMS, either \nclinically or by laboratory testing, leading to the suggestion that NMS may be a variant \nform of malignant catatonia.43 However, NMS can probably be ruled out in the absence \nof any prior or recent administration of a dopamine antagonist.\nThe vast majority of evidence published recently as well as over previous decades \nsuggests that prompt ECT remains the most successful treatment for catatonia.33,36,44–60 \nECT-responsive catatonia has been recognised in the context of NMS, delirious mania, \nself-injurious behaviours in autism, and limbic encephalitis.41 While it has been sug-\ngested that response to ECT may be lower in patients with schizophrenia (or in those \nwho have been treated with antipsychotic medication) than in patients with mood dis-\norders,61 ECT is still considered the treatment of choice for catatonic schizophrenia that \nhas failed to respond to an adequate trial of benzodiazepines.62 In malignant catatonia, \nevery effort should be made to maximise the effect of ECT by using liberal stimulus \ndosing to induce well-generalised seizures.63 Physical health needs should be prioritised \nand inpatient medical care obtained when necessary, especially for those showing auto-\nnomic instability and those whose dietary intake cannot be managed in psychiatric \ncare.\nThe use of antipsychotic medication should be carefully considered. Some authors \nrecommend that antipsychotics should be avoided altogether in catatonic patients, \nalthough there are case reports of successful treatment with aripiprazole, risperidone, \nolanzapine, ziprasidone and clozapine.64–69 There is probably most evidence supporting \nclozapine and olanzapine. Combination treatment with benzodiazepines can be effec-\ntive when each fails individually.70,71\nWhen considering using antipsychotic medication take into account the history of a \npatient, their previous diagnosis and previous response to antipsychotic treatment, and \nthe likelihood that non-adherence precipitated stupor. It should be noted that physical \nhealth conditions, as in the examples listed earlier in this section, can present with a \n",
+  "raw_text_sha256": "fb9510967ec72050df1a10a07840ea328932701a6d76a6631ca347d76811e080",
+  "coordinates_sha256": "4ccecaa86472f01b81fa3d77f4623eb901b7bf44c601ebd1e5563a9e39d73515",
+  "block_sequence_sha256": "f544c4eb99e710301f537cbefcd12508cc63fc04d8bfd7a3dd2c7121f0109754",
+  "blocks": [
+    {
+      "block_id": "page-0157-block-0000",
+      "order": 0,
+      "text": "136    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "fda36f7e9479cb1e677146b79c9d6ee78752e4b59e50bd949dff55d419f4f7c6"
+    },
+    {
+      "block_id": "page-0157-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0157-block-0002",
+      "order": 2,
+      "text": "frequent dosing of zolpidem may provide effective treatment.31,32 IV lorazepam has also \nbeen used to predict response.33\n",
+      "bbox": [
+        61.88909912109375,
+        62.54931640625,
+        436.6835021972656,
+        86.26931762695312
+      ],
+      "text_sha256": "5ae1432d570ee5b9aac4214cba473f56e29f888e9b34e836ab03e7b5ea0cb104"
+    },
+    {
+      "block_id": "page-0157-block-0003",
+      "order": 3,
+      "text": "Catatonia in schizophrenia may be somewhat less likely to respond to benzodiaz-\nepines alone, with a response in 40–50%34 of cases. A double-blind, placebo-controlled, \ncross-over trial with lorazepam up to 6mg per day demonstrated no effect on chronic \ncatatonic symptoms in patients with established schizophrenia,35 similar to the poor \neffect of lorazepam in a non-randomised trial.36 A Cochrane review37 searched for RCTs \nin which people with schizophrenia or other similar SMI had received benzodiazepines \nor another relevant treatment for catatonia. Only one study was eligible, which involved \n17 participants treated with lorazepam or oxazepam: there was no clear difference in \neffect. The authors noted that no data were available for benzodiazepines compared \nwith either placebo or standard care.\n",
+      "bbox": [
+        61.88519287109375,
+        86.54931640625,
+        436.7005920410156,
+        206.26931762695312
+      ],
+      "text_sha256": "49238411cff5198836fbafe7177fb0d442771ac84ead1d86d50d21c2eeb2a601"
+    },
+    {
+      "block_id": "page-0157-block-0004",
+      "order": 4,
+      "text": "A further complication in schizophrenia is that of differential diagnosis, which \nincludes extrapyramidal side effects and the neuroleptic malignant syndrome (NMS). \nDebate continues regarding the similarities and differences between catatonic stupor in \npsychosis and NMS.38–41 Two terms have been coined – lethal catatonia and malignant \ncatatonia42 to describe stupor, which is accompanied by autonomic instability or hyper-\nthermia. This potentially fatal condition cannot be distinguished from NMS, either \nclinically or by laboratory testing, leading to the suggestion that NMS may be a variant \nform of malignant catatonia.43 However, NMS can probably be ruled out in the absence \nof any prior or recent administration of a dopamine antagonist.\n",
+      "bbox": [
+        61.88648986816406,
+        206.54931640625,
+        436.6917419433594,
+        314.2693176269531
+      ],
+      "text_sha256": "4916bb5bb76a294282879b9f2a8d32bb423a74bdb8314e9f2285f5a7610844f2"
+    },
+    {
+      "block_id": "page-0157-block-0005",
+      "order": 5,
+      "text": "The vast majority of evidence published recently as well as over previous decades \nsuggests that prompt ECT remains the most successful treatment for catatonia.33,36,44–60 \nECT-responsive catatonia has been recognised in the context of NMS, delirious mania, \nself-injurious behaviours in autism, and limbic encephalitis.41 While it has been sug-\ngested that response to ECT may be lower in patients with schizophrenia (or in those \nwho have been treated with antipsychotic medication) than in patients with mood dis-\norders,61 ECT is still considered the treatment of choice for catatonic schizophrenia that \nhas failed to respond to an adequate trial of benzodiazepines.62 In malignant catatonia, \nevery effort should be made to maximise the effect of ECT by using liberal stimulus \ndosing to induce well-generalised seizures.63 Physical health needs should be prioritised \nand inpatient medical care obtained when necessary, especially for those showing auto-\nnomic instability and those whose dietary intake cannot be managed in psychiatric \ncare.\n",
+      "bbox": [
+        61.886505126953125,
+        314.54931640625,
+        436.7136535644531,
+        470.2693176269531
+      ],
+      "text_sha256": "9c3cef7e105b01d77926e0cfc758c6607842f287dc9a008a43d25d886cc7894d"
+    },
+    {
+      "block_id": "page-0157-block-0006",
+      "order": 6,
+      "text": "The use of antipsychotic medication should be carefully considered. Some authors \nrecommend that antipsychotics should be avoided altogether in catatonic patients, \nalthough there are case reports of successful treatment with aripiprazole, risperidone, \nolanzapine, ziprasidone and clozapine.64–69 There is probably most evidence supporting \nclozapine and olanzapine. Combination treatment with benzodiazepines can be effec-\ntive when each fails individually.70,71\n",
+      "bbox": [
+        61.88951110839844,
+        470.54931640625,
+        436.6902770996094,
+        542.2693481445312
+      ],
+      "text_sha256": "208590d8c575e16085350aa79fd9a9acd8e8083f1785854e9abf535293e38317"
+    },
+    {
+      "block_id": "page-0157-block-0007",
+      "order": 7,
+      "text": "When considering using antipsychotic medication take into account the history of a \npatient, their previous diagnosis and previous response to antipsychotic treatment, and \nthe likelihood that non-adherence precipitated stupor. It should be noted that physical \nhealth conditions, as in the examples listed earlier in this section, can present with a \n",
+      "bbox": [
+        61.88909912109375,
+        542.54931640625,
+        436.6991271972656,
+        590.2693481445312
+      ],
+      "text_sha256": "102d45f8c4ee12bd0938f4160da19fe66ac125820a036218ae150ad6d827d582"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,443 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0475",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 475,
+  "source_page_index": 474,
+  "source_page_display": 475,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "454    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\n■\n■laboratory investigations: full blood count (FBC), urea and electrolytes (U&E), liver \nfunction tests (LFTs), international normalised ratio (INR), prothrombin time (PT) \nand urinary drug screen.\nThe following structured assessment tools are recommended:2\n■\n■The Alcohol Use Disorders Identification Test (AUDIT)4 questionnaire is a 10-item \nquestionnaire which is useful as a screening tool in those identified as being at increas-\ning risk. Questions 1–3 address the quantity of alcohol consumed, 4–6 the signs and \nsymptoms of dependence and 7–10 the behaviours and symptoms associated with \nharmful alcohol use. Each question is scored 0–4, giving a maximum total score of \n40. A score of 8 or more is suggestive of hazardous or harmful alcohol use. Hazardous \ndrinking = consumption of alcohol likely to cause harm. Harmful drinking = con-\nsumption already causing mental or physical health problems.\n■\n■The Severity of Alcohol Dependence Questionnaire (SADQ)5 is a more detailed \n20-item questionnaire with the score on each item ranging from 0 to 3, giving a maxi-\nmum total score of 60.\nSeverity of alcohol dependence\nMild\n=\nSADQ score of 15 or less\nModerate\n=\nSADQ score 15–30\nSevere\n=\nSADQ score >30\nAlcohol withdrawal\nIn alcohol-dependent drinkers, the central nervous system has adjusted to the constant \npresence of alcohol in the body (neuro-adaptation). When the blood alcohol concentra-\ntion (BAC) is suddenly lowered, the brain remains in a hyper-excited state, resulting in \nthe withdrawal syndrome Table (4.1).\nTable 4.1  Manifestations and complications of mild and severe alcohol withdrawal\nMild alcohol withdrawal –  \nmanifestations\nUsual timing of onset after \nthe last drink\nOther information\n■\n■Agitation/anxiety/irritability\n■\n■Tremor of hands, tongue, eyelids\n■\n■Sweating\n■\n■Nausea/vomiting/diarrhoea\n■\n■Fever\n■\n■Tachycardia\n■\n■Systolic hypertension\n■\n■General malaise\nOnset at 3–12 hours\nPeak at 24–48 hours\nDuration up to 14 days\n■\n■Symptoms are non-specific\n■\n■Absence does not exclude  \nwithdrawal\n■\n■May commence before blood \nalcohol levels reach zero\nManagement\nMay be self-limiting, but mitigated with adequate benzodiazepine cover and supportive treatment.\nMonitor vital signs. Use a withdrawal assessment scale.\n*See below for the various benzodiazepine regimes recommended.\n",
+  "raw_text_sha256": "ae0b46ef44e01c80b2b2672163abfda12d1773d0b5cf69a633e0aae3d12cf338",
+  "coordinates_sha256": "1d7a63a4aa5605da4887b21d422bff8db856ceb22c747752938386855bd5b03e",
+  "block_sequence_sha256": "793edc54bb67d4cd3982d27300b0d7209535eab496e7e76f980b047828883524",
+  "blocks": [
+    {
+      "block_id": "page-0475-block-0000",
+      "order": 0,
+      "text": "454    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "97f202039074ffdbb880426f1e3cf74e59d61a2dbde992b7a3d15aa70187442c"
+    },
+    {
+      "block_id": "page-0475-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0475-block-0002",
+      "order": 2,
+      "text": "■\n■laboratory investigations: full blood count (FBC), urea and electrolytes (U&E), liver \n",
+      "bbox": [
+        61.88990020751953,
+        62.55029296875,
+        436.66998291015625,
+        74.27029418945312
+      ],
+      "text_sha256": "8e4be8e056805768672639274908bf42305ac260f13bb32721d90415b07a6384"
+    },
+    {
+      "block_id": "page-0475-block-0003",
+      "order": 3,
+      "text": "function tests (LFTs), international normalised ratio (INR), prothrombin time (PT) \nand urinary drug screen.\n",
+      "bbox": [
+        70.88999938964844,
+        74.55029296875,
+        436.6899108886719,
+        98.27029418945312
+      ],
+      "text_sha256": "d28c3786c5b8be4da93eae65801d1552a530ff576c739d8c56f15684b9c09434"
+    },
+    {
+      "block_id": "page-0475-block-0004",
+      "order": 4,
+      "text": "The following structured assessment tools are recommended:2\n",
+      "bbox": [
+        61.88999938964844,
+        104.55029296875,
+        327.898193359375,
+        116.27029418945312
+      ],
+      "text_sha256": "b79dc3670e6f7b22377de29122268360d79d028ecdc97c06f7421737e6cc17cf"
+    },
+    {
+      "block_id": "page-0475-block-0005",
+      "order": 5,
+      "text": "■\n■The Alcohol Use Disorders Identification Test (AUDIT)4 questionnaire is a 10-item \n",
+      "bbox": [
+        61.88990020751953,
+        122.31029510498047,
+        436.6582336425781,
+        134.27029418945312
+      ],
+      "text_sha256": "ee280d82960ed3270550316ca169b137448953960c497a9a1d74510421b3095b"
+    },
+    {
+      "block_id": "page-0475-block-0006",
+      "order": 6,
+      "text": "questionnaire which is useful as a screening tool in those identified as being at increas-\ning risk. Questions 1–3 address the quantity of alcohol consumed, 4–6 the signs and \nsymptoms of dependence and 7–10 the behaviours and symptoms associated with \nharmful alcohol use. Each question is scored 0–4, giving a maximum total score of \n40. A score of 8 or more is suggestive of hazardous or harmful alcohol use. Hazardous \ndrinking = consumption of alcohol likely to cause harm. Harmful drinking = con-\nsumption already causing mental or physical health problems.\n",
+      "bbox": [
+        70.88819885253906,
+        134.55029296875,
+        436.648193359375,
+        218.27029418945312
+      ],
+      "text_sha256": "8f05b07f8d3588723e294b446f12bfeee81e2ef9277787dadbf24b1268d2e40a"
+    },
+    {
+      "block_id": "page-0475-block-0007",
+      "order": 7,
+      "text": "■\n■The Severity of Alcohol Dependence Questionnaire (SADQ)5 is a more detailed \n",
+      "bbox": [
+        61.88990020751953,
+        218.310302734375,
+        436.6700744628906,
+        230.27029418945312
+      ],
+      "text_sha256": "1ff2cb33eba625dc2f4aebf78f4585564d0ff9f3757d3b8021e833e631de9e2b"
+    },
+    {
+      "block_id": "page-0475-block-0008",
+      "order": 8,
+      "text": "20-item questionnaire with the score on each item ranging from 0 to 3, giving a maxi-\nmum total score of 60.\n",
+      "bbox": [
+        70.89010620117188,
+        230.55029296875,
+        433.90997314453125,
+        254.27029418945312
+      ],
+      "text_sha256": "afd747c8560bfd9ab3ba745af02f5de19aec90b87c264be6f6bfe6e99997567a"
+    },
+    {
+      "block_id": "page-0475-block-0009",
+      "order": 9,
+      "text": "Severity of alcohol dependence\n",
+      "bbox": [
+        179.58799743652344,
+        276.1944885253906,
+        305.235107421875,
+        286.2669982910156
+      ],
+      "text_sha256": "03de8279c11836b82890b10a3137586604aae65c49770c74402390e81fc526f9"
+    },
+    {
+      "block_id": "page-0475-block-0010",
+      "order": 10,
+      "text": "Mild\n=\nSADQ score of 15 or less\n",
+      "bbox": [
+        179.58799743652344,
+        294.1344909667969,
+        310.4330139160156,
+        302.84197998046875
+      ],
+      "text_sha256": "e8d129f5a9a111aaea4fda0f64a67fa5f98cf02730716fe9a56fd77f40ccf331"
+    },
+    {
+      "block_id": "page-0475-block-0011",
+      "order": 11,
+      "text": "Moderate\n=\nSADQ score 15–30\n",
+      "bbox": [
+        179.5804901123047,
+        309.7569885253906,
+        291.675537109375,
+        318.4644775390625
+      ],
+      "text_sha256": "5eeafeafcbcd5bc26afa93f326583763fe7d04096999357ca278b613812725ee"
+    },
+    {
+      "block_id": "page-0475-block-0012",
+      "order": 12,
+      "text": "Severe\n=\nSADQ score >30\n",
+      "bbox": [
+        179.57298278808594,
+        325.3794860839844,
+        284.0780029296875,
+        334.08697509765625
+      ],
+      "text_sha256": "429b64069a1e258d818a2d78178663db3c861cc4983fcdc11547a3b297dbe409"
+    },
+    {
+      "block_id": "page-0475-block-0013",
+      "order": 13,
+      "text": "Alcohol withdrawal\n",
+      "bbox": [
+        61.88999938964844,
+        354.6287841796875,
+        163.95899963378906,
+        367.6637878417969
+      ],
+      "text_sha256": "4c3af5e2c720c986b22a5ed34687a62c6ed74f5b9d0c0c07fb3cd59673ba1086"
+    },
+    {
+      "block_id": "page-0475-block-0014",
+      "order": 14,
+      "text": "In alcohol-dependent drinkers, the central nervous system has adjusted to the constant \npresence of alcohol in the body (neuro-adaptation). When the blood alcohol concentra-\ntion (BAC) is suddenly lowered, the brain remains in a hyper-excited state, resulting in \nthe withdrawal syndrome Table (4.1).\n",
+      "bbox": [
+        61.88999938964844,
+        373.4737854003906,
+        436.6800231933594,
+        421.19378662109375
+      ],
+      "text_sha256": "82349c57566e884429d173f598d3983255bb09ad92d927939d4fd71870e78eac"
+    },
+    {
+      "block_id": "page-0475-block-0015",
+      "order": 15,
+      "text": "Table 4.1  Manifestations and complications of mild and severe alcohol withdrawal\n",
+      "bbox": [
+        67.88999938964844,
+        446.9876708984375,
+        333.217529296875,
+        455.87518310546875
+      ],
+      "text_sha256": "f1c7b62d4ee075402f0fb0bd7d4147b988f49c89e435ca02329002d1881e82a2"
+    },
+    {
+      "block_id": "page-0475-block-0016",
+      "order": 16,
+      "text": "Mild alcohol withdrawal –  \nmanifestations\n",
+      "bbox": [
+        65.88999938964844,
+        464.8626708984375,
+        162.16000366210938,
+        483.7476806640625
+      ],
+      "text_sha256": "f6de8229865be2a5ca3f816b2782b2c2db36a0168373d9431368ac52baf7da4e"
+    },
+    {
+      "block_id": "page-0475-block-0017",
+      "order": 17,
+      "text": "Usual timing of onset after \nthe last drink\nOther information\n",
+      "bbox": [
+        199.8925018310547,
+        464.8626708984375,
+        379.4875183105469,
+        483.7476806640625
+      ],
+      "text_sha256": "07cd25cc031a70c06946941416f757a61d966e6a7dbe6b3c037e5d03d070d9d8"
+    },
+    {
+      "block_id": "page-0475-block-0018",
+      "order": 18,
+      "text": "■\n■Agitation/anxiety/irritability\n",
+      "bbox": [
+        65.88990020751953,
+        490.6676940917969,
+        160.7049560546875,
+        499.37518310546875
+      ],
+      "text_sha256": "ea6889fd5a83ea4bd2ab11d9813d929da269554990f6451dfbe44780cde2f7ad"
+    },
+    {
+      "block_id": "page-0475-block-0019",
+      "order": 19,
+      "text": "■\n■Tremor of hands, tongue, eyelids\n",
+      "bbox": [
+        65.88990020751953,
+        499.6676940917969,
+        179.50747680664062,
+        508.37518310546875
+      ],
+      "text_sha256": "a4793f141ff9c5cb84fee4efe5a88cb4743a78f32fe8fa2a7e70a14fbfcff253"
+    },
+    {
+      "block_id": "page-0475-block-0020",
+      "order": 20,
+      "text": "■\n■Sweating\n",
+      "bbox": [
+        65.88990020751953,
+        508.6676940917969,
+        104.47749328613281,
+        517.3751831054688
+      ],
+      "text_sha256": "edea046897d2950f20b4c9706ec6cea0174b9028da39a1e2090042f24edac38c"
+    },
+    {
+      "block_id": "page-0475-block-0021",
+      "order": 21,
+      "text": "■\n■Nausea/vomiting/diarrhoea\n",
+      "bbox": [
+        65.88990020751953,
+        517.6676635742188,
+        160.7349853515625,
+        526.3751831054688
+      ],
+      "text_sha256": "3af0ad298f451254840ba25d8744bd3ae648579e02912fdbc6e3380549a6a4c4"
+    },
+    {
+      "block_id": "page-0475-block-0022",
+      "order": 22,
+      "text": "■\n■Fever\n",
+      "bbox": [
+        65.88990020751953,
+        526.6676635742188,
+        91.54750061035156,
+        535.3751831054688
+      ],
+      "text_sha256": "5b6ddc9f5188de1398ae90120abc31d6060bb8199039caa07c8756bb68fbc745"
+    },
+    {
+      "block_id": "page-0475-block-0023",
+      "order": 23,
+      "text": "■\n■Tachycardia\n",
+      "bbox": [
+        65.88990020751953,
+        535.6676635742188,
+        111.41500091552734,
+        544.3751831054688
+      ],
+      "text_sha256": "2e6f6c6b87df085ebae95260193d26c0d73d326c11ee34ed526fe20c41cd088c"
+    },
+    {
+      "block_id": "page-0475-block-0024",
+      "order": 24,
+      "text": "■\n■Systolic hypertension\n",
+      "bbox": [
+        65.88990020751953,
+        544.6676635742188,
+        141.55747985839844,
+        553.3751831054688
+      ],
+      "text_sha256": "4030738917cc3b35b007393748d0570f1704a4de566e789c7de8d0f6f68be2fd"
+    },
+    {
+      "block_id": "page-0475-block-0025",
+      "order": 25,
+      "text": "■\n■General malaise\n",
+      "bbox": [
+        65.88990020751953,
+        553.6676635742188,
+        125.71749877929688,
+        562.3751831054688
+      ],
+      "text_sha256": "db549bfcb326c693ae5c725159d7f3e488acaadc1420bc24cc1698ac56be7222"
+    },
+    {
+      "block_id": "page-0475-block-0026",
+      "order": 26,
+      "text": "Onset at 3–12 hours\n",
+      "bbox": [
+        199.8925018310547,
+        490.6676940917969,
+        265.33001708984375,
+        499.37518310546875
+      ],
+      "text_sha256": "6d34b1d3c441e3d214fd60bf4d420e7ef9eb09ea2c8cf4c0e7c434cb92e01288"
+    },
+    {
+      "block_id": "page-0475-block-0027",
+      "order": 27,
+      "text": "Peak at 24–48 hours\n",
+      "bbox": [
+        199.8925018310547,
+        503.6651916503906,
+        265.7500305175781,
+        512.3726806640625
+      ],
+      "text_sha256": "079c044988edea3636b2893ab61832a49107850f4a6569d13636fb78368208a4"
+    },
+    {
+      "block_id": "page-0475-block-0028",
+      "order": 28,
+      "text": "Duration up to 14 days\n",
+      "bbox": [
+        199.8925018310547,
+        516.6626586914062,
+        273.6700134277344,
+        525.3701782226562
+      ],
+      "text_sha256": "f6d08ec93d237bf6649c9093be87720e25978e0aba0afbc14eaf1feb4ab07f59"
+    },
+    {
+      "block_id": "page-0475-block-0029",
+      "order": 29,
+      "text": "■\n■Symptoms are non-specific\n",
+      "bbox": [
+        314.889892578125,
+        490.6676940917969,
+        409.5925598144531,
+        499.37518310546875
+      ],
+      "text_sha256": "ba3bbbd28118c8e2976765a3cc8401c4159c05f9e4e07d08f939458065b4a94c"
+    },
+    {
+      "block_id": "page-0475-block-0030",
+      "order": 30,
+      "text": "■\n■Absence does not exclude  \n",
+      "bbox": [
+        314.889892578125,
+        499.6676940917969,
+        411.4150695800781,
+        508.37518310546875
+      ],
+      "text_sha256": "af70b90276ec0cc2472a6fa6570f84f9a17389b1a3e5968588d0e03bf72ed537"
+    },
+    {
+      "block_id": "page-0475-block-0031",
+      "order": 31,
+      "text": "withdrawal\n■\n■May commence before blood \n",
+      "bbox": [
+        314.889892578125,
+        508.6676940917969,
+        420.0175476074219,
+        526.3751831054688
+      ],
+      "text_sha256": "2b5a93116ba7765283c7a65b4063af321d0061e8779d52a04ce0ed6842cbe506"
+    },
+    {
+      "block_id": "page-0475-block-0032",
+      "order": 32,
+      "text": "alcohol levels reach zero\n",
+      "bbox": [
+        323.8900146484375,
+        526.6676635742188,
+        401.1175231933594,
+        535.3751831054688
+      ],
+      "text_sha256": "e99bf06af0393375e8f56f461e23f1ca776dbd155813736da58b5659574ee7ed"
+    },
+    {
+      "block_id": "page-0475-block-0033",
+      "order": 33,
+      "text": "Management\nMay be self-limiting, but mitigated with adequate benzodiazepine cover and supportive treatment.\nMonitor vital signs. Use a withdrawal assessment scale.\n",
+      "bbox": [
+        61.89251708984375,
+        571.7351684570312,
+        377.2000427246094,
+        600.61767578125
+      ],
+      "text_sha256": "b491758df9841c6895c5186f19714b091eae5c0deb56aad37a48b472d91ba6ce"
+    },
+    {
+      "block_id": "page-0475-block-0034",
+      "order": 34,
+      "text": "*See below for the various benzodiazepine regimes recommended.\n",
+      "bbox": [
+        61.89251708984375,
+        608.9126586914062,
+        276.6549987792969,
+        617.6201782226562
+      ],
+      "text_sha256": "c4593a99aaeae94e6ae4421bb032d6e37e5742923678a833180ae4e8cdc977a6"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

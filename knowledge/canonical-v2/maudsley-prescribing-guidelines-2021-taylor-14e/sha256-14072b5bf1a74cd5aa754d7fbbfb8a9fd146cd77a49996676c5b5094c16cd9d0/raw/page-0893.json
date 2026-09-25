@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0893",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 893,
+  "source_page_index": 892,
+  "source_page_display": 893,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "872    The Maudsley Prescribing Guidelines in Psychiatry\nCHAPTER  12\nserves as a means of structuring the day (a behavioural filler); smoking arises as a result \nof a familial vulnerability16 or smoking may be used as a means of alleviating the deficit \nin auditory gaiting that is found in schizophrenia.17 Nicotine may also improve work-\ning memory and attentional deficits.18–20 Nicotinic receptor agonists may have benefi-\ncial effects on neurocognition,21,22 although none is licensed for this purpose. Note \nthough that cholinergic drugs may exacerbate nicotine dependence.23 A single-photon \nemission computed tomography (SPECT) study has shown that the greater the occu-\npancy of striatal D2 receptors by antipsychotic drugs, the more likely the patient is to \nsmoke.24 This may partly explain the clinical observation that smoking cessation may \nbe more achievable when clozapine (a weak dopamine antagonist) is prescribed in place \nof a conventional antipsychotic. It has been suggested that people with schizophrenia \nfind it particularly difficult to tolerate nicotine withdrawal symptoms7 (although some \ncertainly can quit25). Switching to nicotine replacement therapy or vaping may thus be \na preferred option.26,27 A switch to vaping has been shown to be well tolerated even in \nsevere mental illness.28\nDepression and anxiety\nIn ‘normal’ individuals a moderate consumption of nicotine is associated with pleasure \nand a decrease in anxiety and feelings of anger.29 The mechanism of this anxiolytic \neffect is not understood. People who suffer from anxiety and/or depression are more \nlikely to smoke30,31 and find it more difficult to stop.29,32 Nicotine itself might have anti-\ndepressant activity.33 Nicotine withdrawal can precipitate or exacerbate depression in \nthose with a history of the illness,29 and cigarette smoking may directly increase the risk \nof symptoms of depression.34 In contrast, some studies suggest that stopping smoking \nactually improves depression and anxiety.35,36 These contradictory findings might be \nexplained by the fact that early withdrawal worsens depression whereas successful ces-\nsation improves depression in the longer term. A Cochrane review37 suggests smoking \ncessation is achievable in depressed smokers, but a recent twin study found that depres-\nsion made smoking cessation much less likely.38\nPatients with depression are at increased risk of cardiovascular disease. By directly \ncausing tachycardia and hypertension,3 nicotine may, in theory, exacerbate this problem. \nMore importantly, smoking is a well-known independent risk factor for cardiovascular \ndisease, probably because it hastens atherosclerosis. Vaping, while not carcinogenic, \nprobably does increase risk of cardiovascular disease.39 A recent study suggests nicotine \naddiction and depression severity are independently linked.40\nMovement disorders and Parkinson’s disease\nBy increasing dopaminergic neurotransmission, nicotine provides a protective effect \nagainst both drug-induced EPS and idiopathic Parkinson’s disease. Smokers are less \nlikely to suffer from antipsychotic-induced movement disorders than non-smokers1 and \nuse anticholinergics less often.7 Parkinson’s disease occurs less frequently in smokers \nthan in non-smokers and the onset of clinical symptoms is delayed.1,41 This may reflect \nthe inverse association between Parkinson’s disease and sensation-seeking behavioural \ntraits, rather than a direct effect of nicotine.42\n",
+  "raw_text_sha256": "a9851575388ffc4f512471cf7ca69d2892c27f711f809e146eb9f8dbb8cd7663",
+  "coordinates_sha256": "896887045590ec7bc4f4d62a696f83f5d45d2d285f54b3bcc0ba80d4bb5957c1",
+  "block_sequence_sha256": "bb82da5fd72863b6d0287f37e5eb657b3bbbc215d03f6670aa87dff1592592de",
+  "blocks": [
+    {
+      "block_id": "page-0893-block-0000",
+      "order": 0,
+      "text": "872    The Maudsley Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        296.3137512207031,
+        41.0272216796875
+      ],
+      "text_sha256": "5b20ca8b267f43646c022393f567d405e623df70f5427520dcf7f63b91db5929"
+    },
+    {
+      "block_id": "page-0893-block-0001",
+      "order": 1,
+      "text": "CHAPTER  12\n",
+      "bbox": [
+        18.520000457763672,
+        205.64230346679688,
+        28.0,
+        253.65829467773438
+      ],
+      "text_sha256": "95dc1db43e22bb418b1d53761b542f43fefb6bd1be50825929587901903f44b3"
+    },
+    {
+      "block_id": "page-0893-block-0002",
+      "order": 2,
+      "text": "serves as a means of structuring the day (a behavioural filler); smoking arises as a result \nof a familial vulnerability16 or smoking may be used as a means of alleviating the deficit \nin auditory gaiting that is found in schizophrenia.17 Nicotine may also improve work-\ning memory and attentional deficits.18–20 Nicotinic receptor agonists may have benefi-\ncial effects on neurocognition,21,22 although none is licensed for this purpose. Note \nthough that cholinergic drugs may exacerbate nicotine dependence.23 A single-photon \nemission computed tomography (SPECT) study has shown that the greater the occu-\npancy of striatal D2 receptors by antipsychotic drugs, the more likely the patient is to \nsmoke.24 This may partly explain the clinical observation that smoking cessation may \nbe more achievable when clozapine (a weak dopamine antagonist) is prescribed in place \nof a conventional antipsychotic. It has been suggested that people with schizophrenia \nfind it particularly difficult to tolerate nicotine withdrawal symptoms7 (although some \ncertainly can quit25). Switching to nicotine replacement therapy or vaping may thus be \na preferred option.26,27 A switch to vaping has been shown to be well tolerated even in \nsevere mental illness.28\n",
+      "bbox": [
+        61.887290954589844,
+        62.55029296875,
+        436.6972351074219,
+        242.27029418945312
+      ],
+      "text_sha256": "d87057004e66e901e312a6b84e5eedea4fd90d9c51384616f75924bb089768ff"
+    },
+    {
+      "block_id": "page-0893-block-0003",
+      "order": 3,
+      "text": "Depression and anxiety\n",
+      "bbox": [
+        61.88999938964844,
+        259.7052917480469,
+        183.32997131347656,
+        272.74029541015625
+      ],
+      "text_sha256": "48732b8525044a8285564645dc5ed871ff190fa948796ac85b61eb75680e3add"
+    },
+    {
+      "block_id": "page-0893-block-0004",
+      "order": 4,
+      "text": "In ‘normal’ individuals a moderate consumption of nicotine is associated with pleasure \nand a decrease in anxiety and feelings of anger.29 The mechanism of this anxiolytic \neffect is not understood. People who suffer from anxiety and/or depression are more \nlikely to smoke30,31 and find it more difficult to stop.29,32 Nicotine itself might have anti-\ndepressant activity.33 Nicotine withdrawal can precipitate or exacerbate depression in \nthose with a history of the illness,29 and cigarette smoking may directly increase the risk \nof symptoms of depression.34 In contrast, some studies suggest that stopping smoking \nactually improves depression and anxiety.35,36 These contradictory findings might be \nexplained by the fact that early withdrawal worsens depression whereas successful ces-\nsation improves depression in the longer term. A Cochrane review37 suggests smoking \ncessation is achievable in depressed smokers, but a recent twin study found that depres-\nsion made smoking cessation much less likely.38\n",
+      "bbox": [
+        61.887290954589844,
+        278.55029296875,
+        436.69287109375,
+        422.2702941894531
+      ],
+      "text_sha256": "ea26fa685704e7868c3bd7ee8e9d965db5a5e8dfe0aeb3e26f529b82cfab3de6"
+    },
+    {
+      "block_id": "page-0893-block-0005",
+      "order": 5,
+      "text": "Patients with depression are at increased risk of cardiovascular disease. By directly \ncausing tachycardia and hypertension,3 nicotine may, in theory, exacerbate this problem. \nMore importantly, smoking is a well-known independent risk factor for cardiovascular \ndisease, probably because it hastens atherosclerosis. Vaping, while not carcinogenic, \nprobably does increase risk of cardiovascular disease.39 A recent study suggests nicotine \naddiction and depression severity are independently linked.40\n",
+      "bbox": [
+        61.88670349121094,
+        422.55029296875,
+        436.69378662109375,
+        494.2702941894531
+      ],
+      "text_sha256": "d8c19e2fb27b07156c8dae77456caf219b31aa0e9d21a38b2fcb72308269e6b2"
+    },
+    {
+      "block_id": "page-0893-block-0006",
+      "order": 6,
+      "text": "Movement disorders and Parkinson’s disease\n",
+      "bbox": [
+        61.890098571777344,
+        511.7052917480469,
+        293.132080078125,
+        524.7402954101562
+      ],
+      "text_sha256": "a16583851f4260841dc9cc321ea8c6cde8e6f95e795203d9bfe5b5252499a572"
+    },
+    {
+      "block_id": "page-0893-block-0007",
+      "order": 7,
+      "text": "By increasing dopaminergic neurotransmission, nicotine provides a protective effect \nagainst both drug-induced EPS and idiopathic Parkinson’s disease. Smokers are less \nlikely to suffer from antipsychotic-induced movement disorders than non-smokers1 and \nuse anticholinergics less often.7 Parkinson’s disease occurs less frequently in smokers \nthan in non-smokers and the onset of clinical symptoms is delayed.1,41 This may reflect \nthe inverse association between Parkinson’s disease and sensation-seeking behavioural \ntraits, rather than a direct effect of nicotine.42\n",
+      "bbox": [
+        61.889801025390625,
+        530.55029296875,
+        436.71014404296875,
+        614.2703247070312
+      ],
+      "text_sha256": "5ce2cf99398a703099a737c3a421a4f76e608ffb196296d2dd56cdd3ff30290f"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

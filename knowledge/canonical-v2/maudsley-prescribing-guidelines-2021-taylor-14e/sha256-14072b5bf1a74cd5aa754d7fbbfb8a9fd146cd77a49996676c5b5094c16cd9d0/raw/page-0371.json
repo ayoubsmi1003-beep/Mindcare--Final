@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0371",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 371,
+  "source_page_index": 370,
+  "source_page_display": 371,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "350    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nThe process of tapering\nPatients may be broadly risk-stratified:\nFor low-risk patients (<6 months use, long half-life antidepressant, no experience of \nsignificant withdrawal symptoms in the past), a test reduction could be made (of 25%).\nFor high-risk patients (>6 months use, short half-life antidepressant, past history of \nwithdrawal symptoms), a test reduction of 5–10% should be recommended.\nWithdrawal symptoms should be monitored for 2–4 weeks for all patients, or until \nsymptoms have resolved. Monitoring may take the form of simple measures of symp-\ntoms each day (e.g. out of 10) or using standardised measurement such as the DESS.24\nFurther reductions should be titrated against the tolerability of this experience. If the \ninitial reduction was tolerable and withdrawal symptoms absent or have resolved by \nthe end of this monitoring period, continue reducing dose by the same proportion (note \nthis is worked out on the last dose used) and the same rate. See example regimens in \nTable 3.10. If symptoms were intolerable, then the taper should proceed at a slower \nrate; if severe, this may require re-instatement of the previous dose, a period of stabili-\nsation and then a more cautious reduction schedule.\nTroubleshooting\nIf withdrawal symptoms become intolerable at any point, either hold the current dose \nfor longer to allow them to resolve, or if very unpleasant, increase to the last dose at \nwhich the symptoms were tolerable, and remain there until symptoms resolve. After \nstabilisation, tapering will need to be more gradual, with reduction in smaller amounts \nand/or longer periods in between reductions. Some patients find that they cannot reduce \nat more than 5% of the last dose a month.\nIt is important to remember that if a patient experiences distressing withdrawal \nsymptoms, it does not indicate that they cannot stop antidepressants, but that they will \nneed to taper more slowly, with smaller reductions than they have been undertaking.\nOwing to long half-life of fluoxetine, withdrawal symptoms can be delayed by weeks, \nand so careful attention should be paid to this. As the withdrawal period is spread out \nover a longer period, larger reductions of fluoxetine may be relatively tolerable.11 \nFluoxetine dose can also be reduced by decreasing the frequency of dosing (e.g. 20mg a \nday for 6 days a week, then 20mg a day for 5 days a week, and so on).\nUnfortunately, current tablet formulations of antidepressants do not permit pharma-\ncologically informed tapering regimens, and so patients will require liquid formulations \nof their antidepressant (or access to Dutch tapering strips).19 For those antidepressants \nthat do not come in liquid formulations, liquid will have to be compounded or patients \ncan be switched to medications with liquid formulations. Many patients report cutting \nup fragments of tablets and weighing them or making their own solutions from crushed \ntablets, but this approach cannot be recommended.\nFinal doses before completely stopping the drug may need to be very small to avoid \na larger reduction in effect on transmitter systems. For many drugs, the final dose will \nneed to be much less than 1mg. For example, for a patient reducing sertraline at 10% \nper month, the final dose will need to be 0.1mg to bring about the same reduction in \neffect on serotonin transporter inhibition as previous reductions.11\n",
+  "raw_text_sha256": "9b268f0b5276f5f634d42c6dbdc44d8d7b61896136729f7d0280965bede2e29c",
+  "coordinates_sha256": "db95d9b5f76aea0edf4402356eb03564f8f8367b897ea1b348e2c5b584eda1d9",
+  "block_sequence_sha256": "ad07a9f4b2286ae7d4d8b30fc3782f946c786fae77d320c199fccd91de380822",
+  "blocks": [
+    {
+      "block_id": "page-0371-block-0000",
+      "order": 0,
+      "text": "350    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "9017cc707d0536c9a4cf1609d1f1645c37da9cc8a4154c5910d95e3f251a5323"
+    },
+    {
+      "block_id": "page-0371-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0371-block-0002",
+      "order": 2,
+      "text": "The process of tapering\n",
+      "bbox": [
+        61.88999938964844,
+        62.500404357910156,
+        172.45999145507812,
+        74.35040283203125
+      ],
+      "text_sha256": "f8ca62898201d6272a9686735cbc608d35c4dc6c4fa83a70001236cc80398a1b"
+    },
+    {
+      "block_id": "page-0371-block-0003",
+      "order": 3,
+      "text": "Patients may be broadly risk-stratified:\n",
+      "bbox": [
+        61.88999938964844,
+        80.410400390625,
+        229.12997436523438,
+        92.13040161132812
+      ],
+      "text_sha256": "63658b4a2691c63fe68f205ccb8dba4421235bcd92d340a8b672f4074ee4cdc2"
+    },
+    {
+      "block_id": "page-0371-block-0004",
+      "order": 4,
+      "text": "For low-risk patients (<6 months use, long half-life antidepressant, no experience of \nsignificant withdrawal symptoms in the past), a test reduction could be made (of 25%).\n",
+      "bbox": [
+        61.88999938964844,
+        92.410400390625,
+        436.6700134277344,
+        116.13040161132812
+      ],
+      "text_sha256": "f875b3ca176b1e63d175291588a2d64e15a54b61892bf059526e167c814313ab"
+    },
+    {
+      "block_id": "page-0371-block-0005",
+      "order": 5,
+      "text": "For high-risk patients (>6 months use, short half-life antidepressant, past history of \nwithdrawal symptoms), a test reduction of 5–10% should be recommended.\n",
+      "bbox": [
+        61.88999938964844,
+        116.410400390625,
+        436.6499938964844,
+        140.13040161132812
+      ],
+      "text_sha256": "7ba61ee93c8cbdf7ed6af2cc15a92db1ac1244aedcc236cc1dd82a36edd89dd9"
+    },
+    {
+      "block_id": "page-0371-block-0006",
+      "order": 6,
+      "text": "Withdrawal symptoms should be monitored for 2–4 weeks for all patients, or until \nsymptoms have resolved. Monitoring may take the form of simple measures of symp-\ntoms each day (e.g. out of 10) or using standardised measurement such as the DESS.24\n",
+      "bbox": [
+        61.88999938964844,
+        140.410400390625,
+        436.6999816894531,
+        176.13040161132812
+      ],
+      "text_sha256": "d937946400074c727e7b4db538b4d19ea6e2b7245c0af4bf21a1a55d52c5657e"
+    },
+    {
+      "block_id": "page-0371-block-0007",
+      "order": 7,
+      "text": "Further reductions should be titrated against the tolerability of this experience. If the \ninitial reduction was tolerable and withdrawal symptoms absent or have resolved by \nthe end of this monitoring period, continue reducing dose by the same proportion (note \nthis is worked out on the last dose used) and the same rate. See example regimens in \nTable 3.10. If symptoms were intolerable, then the taper should proceed at a slower \nrate; if severe, this may require re-instatement of the previous dose, a period of stabili-\nsation and then a more cautious reduction schedule.\n",
+      "bbox": [
+        61.88999938964844,
+        176.410400390625,
+        436.7101135253906,
+        260.1304016113281
+      ],
+      "text_sha256": "7a5abf130c3def1b2446e15e5337212c47817ca05325647e845329f5b480cfc0"
+    },
+    {
+      "block_id": "page-0371-block-0008",
+      "order": 8,
+      "text": "Troubleshooting\n",
+      "bbox": [
+        61.88999938964844,
+        278.5003967285156,
+        138.92999267578125,
+        290.35040283203125
+      ],
+      "text_sha256": "d0ce6966d20aa887e1e8fd1cda50f21fd3b90ebfb5e8576b2742d3b44bc1a1b8"
+    },
+    {
+      "block_id": "page-0371-block-0009",
+      "order": 9,
+      "text": "If withdrawal symptoms become intolerable at any point, either hold the current dose \nfor longer to allow them to resolve, or if very unpleasant, increase to the last dose at \nwhich the symptoms were tolerable, and remain there until symptoms resolve. After \nstabilisation, tapering will need to be more gradual, with reduction in smaller amounts \nand/or longer periods in between reductions. Some patients find that they cannot reduce \nat more than 5% of the last dose a month.\n",
+      "bbox": [
+        61.88999938964844,
+        296.410400390625,
+        436.6899108886719,
+        368.1304016113281
+      ],
+      "text_sha256": "8b8f78c1e634f2ab9dc8f56ddd46f946f6c14a3de7412697f52223ba85249572"
+    },
+    {
+      "block_id": "page-0371-block-0010",
+      "order": 10,
+      "text": "It is important to remember that if a patient experiences distressing withdrawal \nsymptoms, it does not indicate that they cannot stop antidepressants, but that they will \nneed to taper more slowly, with smaller reductions than they have been undertaking.\n",
+      "bbox": [
+        61.88999938964844,
+        368.410400390625,
+        436.6800842285156,
+        404.1304016113281
+      ],
+      "text_sha256": "b98d2ce8392559e0c1d0b0ee9740f40c56fcfec9e7140860db8d7ac8329a43b0"
+    },
+    {
+      "block_id": "page-0371-block-0011",
+      "order": 11,
+      "text": "Owing to long half-life of fluoxetine, withdrawal symptoms can be delayed by weeks, \nand so careful attention should be paid to this. As the withdrawal period is spread out \nover a longer period, larger reductions of fluoxetine may be relatively tolerable.11 \nFluoxetine dose can also be reduced by decreasing the frequency of dosing (e.g. 20mg a \nday for 6 days a week, then 20mg a day for 5 days a week, and so on).\n",
+      "bbox": [
+        61.88999938964844,
+        404.410400390625,
+        436.7100524902344,
+        464.1304016113281
+      ],
+      "text_sha256": "2a626a4a8700cde698e3d7137611ca8fcf2638049803e759b4b34c90d0529533"
+    },
+    {
+      "block_id": "page-0371-block-0012",
+      "order": 12,
+      "text": "Unfortunately, current tablet formulations of antidepressants do not permit pharma-\ncologically informed tapering regimens, and so patients will require liquid formulations \nof their antidepressant (or access to Dutch tapering strips).19 For those antidepressants \nthat do not come in liquid formulations, liquid will have to be compounded or patients \ncan be switched to medications with liquid formulations. Many patients report cutting \nup fragments of tablets and weighing them or making their own solutions from crushed \ntablets, but this approach cannot be recommended.\n",
+      "bbox": [
+        61.888214111328125,
+        464.410400390625,
+        436.69818115234375,
+        548.1304321289062
+      ],
+      "text_sha256": "7bff6457f8818f0cbb31a52490952f2522564253bc882158f476ee0fa13ab6a5"
+    },
+    {
+      "block_id": "page-0371-block-0013",
+      "order": 13,
+      "text": "Final doses before completely stopping the drug may need to be very small to avoid \na larger reduction in effect on transmitter systems. For many drugs, the final dose will \nneed to be much less than 1mg. For example, for a patient reducing sertraline at 10% \nper month, the final dose will need to be 0.1mg to bring about the same reduction in \neffect on serotonin transporter inhibition as previous reductions.11\n",
+      "bbox": [
+        61.888214111328125,
+        548.410400390625,
+        436.7281494140625,
+        608.1304321289062
+      ],
+      "text_sha256": "c6e4b7bfca0cdb687cc398d2197d30729978fa9bd93b373c48e1500f3cc06905"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

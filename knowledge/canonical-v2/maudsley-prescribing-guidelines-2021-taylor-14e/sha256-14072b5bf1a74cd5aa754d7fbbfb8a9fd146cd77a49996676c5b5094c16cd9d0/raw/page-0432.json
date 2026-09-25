@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0432",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 432,
+  "source_page_index": 431,
+  "source_page_display": 432,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    411\nCHAPTER 3\nMany studies do not state changes in absolute risk of intestinal bleeding, and some \nof those that do fail to provide denominator details (i.e. duration of treatment). Ideally, \nrisk should be defined as the number of additional cases per 1,000 patient years. Table \n3.23 shows approximate absolute risks (without a denominator) derived from a single \nstudy11 and personal communication.28\nRisk decreases to the same level as controls in past users of SSRIs indicating that \nbleeding is likely to be associated with treatment itself rather than some inherent char-\nacteristic of the patients being treated.7 It also means that the effect of SSRIs disappears \nafter their withdrawal.\nThe excess risk of bleeding is not confined to upper GI bleeds (see Table 3.23). The \nrisk of lower GI bleeds may also be increased29 and an increased risk of uterine bleeding \n(see later) has also been reported.12\nIntracranial/intracerebral Haemorrhage (ICH)\nThere is a clear association between the use of SSRIs and ICH, and risk is further \nincreased by concomitant use of NSAIDs and anticoagulants.\nElevated risk of ICH has been observed across all classes of antidepressants with \nserotonergic activity. In a cohort study of 1,363,990 users of antidepressants,6 the over-\nall rate of ICH was 3.8 per 10,000 patient years. Current use of SSRI increased the risk \nof ICH (RR 1.17) compared with TCA with an absolute adjusted rate difference of 6.7 \nper 100,000 persons per year. Amongst the SSRI group the risk of ICH was 25% greater \nin those who used strong inhibitors of serotonin reuptake system in comparison to \nusers of weak inhibitors (see Table 3.24). This correlates to an absolute adjusted rate \ndifference of 9.5 events per 100,000 persons per year. Overall risk was highest during \nthe first 30 days of use. A 2018 meta-analysis of 12 studies confirmed an increased risk \nof ICH for SSRIs (Odds Ratios from 0.8 to 2.42), with an indication that stronger reup-\ntake inhibitors had a greater effect.30 Since then, one study reported no increased risk \nof ICH with SSRIs either alone or alongside anticoagulants,31 whereas another32 found \nthat SSRIs increased risk of recurrence of ICH by 31%.\nOne database study33also identified an increased risk of ICH in those who have been \ntaking SSRIs alone or in combination with NSAIDs. This and other studies providing \ndata on absolute risk are summarised in Table 3.24.\nTable 3.24 gives estimates of absolute risk of ICH derived from 3 studies.\nTable 3.23  Approximate absolute risk of GI bleeding with concomitant use of SSRIs28\nDrug\nAbsolute risk of \nUGIB*\nAbsolute risk of \nLGIB**\nAspirin + SSRI\n6%\n3%\nWarfarin + SSRI\n4%\n3%\nNSAID + SSRI\n3%\n1%\nSSRI alone\n2%\n1%\n*Upper gastrointestinal bleeding \n**Lower gastrointestinal bleeding\nPercentage figures rounded to nearest integer\n",
+  "raw_text_sha256": "fd0759d7897e7cacf41ed7231711db645dd0e3a229d0641087db4b04487ccf7b",
+  "coordinates_sha256": "990d5bece81b9f0c95cc439094226fe22b71f37933a6526adf3eed4ca0fa2eaa",
+  "block_sequence_sha256": "9cb525ed7eface7b0e7d7ef253796f4a027a51dbd541af8f4f7dd793612ce4f8",
+  "blocks": [
+    {
+      "block_id": "page-0432-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    411\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "eb7ca876b113800174af3a2f940056a74d21228b9f22f76770de24ed35c6c196"
+    },
+    {
+      "block_id": "page-0432-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0432-block-0002",
+      "order": 2,
+      "text": "Many studies do not state changes in absolute risk of intestinal bleeding, and some \nof those that do fail to provide denominator details (i.e. duration of treatment). Ideally, \nrisk should be defined as the number of additional cases per 1,000 patient years. Table \n3.23 shows approximate absolute risks (without a denominator) derived from a single \nstudy11 and personal communication.28\n",
+      "bbox": [
+        48.0,
+        229.06039428710938,
+        422.7498779296875,
+        288.7803955078125
+      ],
+      "text_sha256": "5119123aadc58cd4db5a8a732900e07bf3876dc38b6305fb08cbeaf53fb672ed"
+    },
+    {
+      "block_id": "page-0432-block-0003",
+      "order": 3,
+      "text": "Risk decreases to the same level as controls in past users of SSRIs indicating that \nbleeding is likely to be associated with treatment itself rather than some inherent char-\nacteristic of the patients being treated.7 It also means that the effect of SSRIs disappears \nafter their withdrawal.\n",
+      "bbox": [
+        47.99919128417969,
+        289.0603942871094,
+        422.8091125488281,
+        336.7803955078125
+      ],
+      "text_sha256": "41c4aceefd657154f4ac6d4dd7c2e7964f37c1f31c8994246288502e5281b9dc"
+    },
+    {
+      "block_id": "page-0432-block-0004",
+      "order": 4,
+      "text": "The excess risk of bleeding is not confined to upper GI bleeds (see Table 3.23). The \nrisk of lower GI bleeds may also be increased29 and an increased risk of uterine bleeding \n(see later) has also been reported.12\n",
+      "bbox": [
+        47.99919128417969,
+        337.0603942871094,
+        422.7908630371094,
+        372.7803955078125
+      ],
+      "text_sha256": "b0d9abe816adb32de659b4e90cce02a971a7f807238dd2f86009f1c7550b7ce3"
+    },
+    {
+      "block_id": "page-0432-block-0005",
+      "order": 5,
+      "text": "Intracranial/intracerebral Haemorrhage (ICH)\n",
+      "bbox": [
+        48.0,
+        390.21539306640625,
+        278.85699462890625,
+        403.2503967285156
+      ],
+      "text_sha256": "15736534c706fd56bbf970a753c747e90e7938140ca4d2f1fc4d7cd877cc7aca"
+    },
+    {
+      "block_id": "page-0432-block-0006",
+      "order": 6,
+      "text": "There is a clear association between the use of SSRIs and ICH, and risk is further \nincreased by concomitant use of NSAIDs and anticoagulants.\n",
+      "bbox": [
+        48.0,
+        409.0603942871094,
+        422.84002685546875,
+        432.7803955078125
+      ],
+      "text_sha256": "6518c83f2bb0ee5f9b10535b06374e408e34785706ecf37e05bcf628ad4d1eb7"
+    },
+    {
+      "block_id": "page-0432-block-0007",
+      "order": 7,
+      "text": "Elevated risk of ICH has been observed across all classes of antidepressants with \nserotonergic activity. In a cohort study of 1,363,990 users of antidepressants,6 the over-\nall rate of ICH was 3.8 per 10,000 patient years. Current use of SSRI increased the risk \nof ICH (RR 1.17) compared with TCA with an absolute adjusted rate difference of 6.7 \nper 100,000 persons per year. Amongst the SSRI group the risk of ICH was 25% greater \nin those who used strong inhibitors of serotonin reuptake system in comparison to \nusers of weak inhibitors (see Table 3.24). This correlates to an absolute adjusted rate \ndifference of 9.5 events per 100,000 persons per year. Overall risk was highest during \nthe first 30 days of use. A 2018 meta-analysis of 12 studies confirmed an increased risk \nof ICH for SSRIs (Odds Ratios from 0.8 to 2.42), with an indication that stronger reup-\ntake inhibitors had a greater effect.30 Since then, one study reported no increased risk \nof ICH with SSRIs either alone or alongside anticoagulants,31 whereas another32 found \nthat SSRIs increased risk of recurrence of ICH by 31%.\n",
+      "bbox": [
+        48.0,
+        433.0603942871094,
+        422.79412841796875,
+        588.7803955078125
+      ],
+      "text_sha256": "47c30a764c6b067dbf9af30b86a4a1117579642c2bf8bc34001187d734a6d5b8"
+    },
+    {
+      "block_id": "page-0432-block-0008",
+      "order": 8,
+      "text": "One database study33also identified an increased risk of ICH in those who have been \ntaking SSRIs alone or in combination with NSAIDs. This and other studies providing \ndata on absolute risk are summarised in Table 3.24.\n",
+      "bbox": [
+        48.00389862060547,
+        589.0603637695312,
+        422.7939453125,
+        624.7803955078125
+      ],
+      "text_sha256": "0a3af5b50e5ae56a92dc14a05ea9c84aa3deb17eb4dfee9b47548972d021d371"
+    },
+    {
+      "block_id": "page-0432-block-0009",
+      "order": 9,
+      "text": "Table 3.24 gives estimates of absolute risk of ICH derived from 3 studies.\n",
+      "bbox": [
+        58.00389862060547,
+        625.0603637695312,
+        374.3938903808594,
+        636.7803955078125
+      ],
+      "text_sha256": "b2384f07ee7a87dbdf0fd772076ddad0889ea24b77773483f1d28a66c15b5446"
+    },
+    {
+      "block_id": "page-0432-block-0010",
+      "order": 10,
+      "text": "Table 3.23  Approximate absolute risk of GI bleeding with concomitant use of SSRIs28\n",
+      "bbox": [
+        88.0,
+        70.08790588378906,
+        360.69964599609375,
+        78.97540283203125
+      ],
+      "text_sha256": "2578750b88fd549784c117d3d8c368bd7c1268d0b4147a7cd7ceddc7fb7e1096"
+    },
+    {
+      "block_id": "page-0432-block-0011",
+      "order": 11,
+      "text": "Drug\n",
+      "bbox": [
+        82.0,
+        100.32289123535156,
+        99.49749755859375,
+        109.21038818359375
+      ],
+      "text_sha256": "feeef2eabd03bd6219846b6c95a917cef51eff084f3ec2edbb873258f191a35b"
+    },
+    {
+      "block_id": "page-0432-block-0012",
+      "order": 12,
+      "text": "Absolute risk of \nUGIB*\n",
+      "bbox": [
+        218.5,
+        90.32539367675781,
+        276.4224853515625,
+        109.21038818359375
+      ],
+      "text_sha256": "6f7d9d291effc247ce8a880a8f7819de543341a697c5be73fcb5e4892c326b0d"
+    },
+    {
+      "block_id": "page-0432-block-0013",
+      "order": 13,
+      "text": "Absolute risk of \nLGIB**\n",
+      "bbox": [
+        300.25,
+        90.32539367675781,
+        358.1724548339844,
+        109.21038818359375
+      ],
+      "text_sha256": "cf9fda1d041b3d17f2a3e326500a612a80564a856a3e39a93b0e12dc2248ec89"
+    },
+    {
+      "block_id": "page-0432-block-0014",
+      "order": 14,
+      "text": "Aspirin + SSRI\n6%\n3%\n",
+      "bbox": [
+        82.0,
+        117.2804183959961,
+        311.9200134277344,
+        125.9879150390625
+      ],
+      "text_sha256": "2d2dc7d2760abed1d7f3ff46e4d7b81c133908ad744cb4495a3c79488d658dc0"
+    },
+    {
+      "block_id": "page-0432-block-0015",
+      "order": 15,
+      "text": "Warfarin + SSRI\n4%\n3%\n",
+      "bbox": [
+        82.0,
+        132.3029327392578,
+        311.9200134277344,
+        141.01043701171875
+      ],
+      "text_sha256": "70b360c896265a42ddabdbffba923a38408b22d98c675a29f6893656625f1718"
+    },
+    {
+      "block_id": "page-0432-block-0016",
+      "order": 16,
+      "text": "NSAID + SSRI\n3%\n1%\n",
+      "bbox": [
+        82.0,
+        147.32545471191406,
+        311.9200134277344,
+        156.032958984375
+      ],
+      "text_sha256": "247e54fd6ebc2b7e465a9b84746c38bf22e7c0ca8e1176bdd0ae47fe5a7a8da9"
+    },
+    {
+      "block_id": "page-0432-block-0017",
+      "order": 17,
+      "text": "SSRI alone\n2%\n1%\n",
+      "bbox": [
+        82.0,
+        162.3479766845703,
+        311.9200134277344,
+        171.05548095703125
+      ],
+      "text_sha256": "ddb7d71a6398a2b64f9b13a8281f57242c35ce13e934d9689279fd380bda3a4d"
+    },
+    {
+      "block_id": "page-0432-block-0018",
+      "order": 18,
+      "text": "*Upper gastrointestinal bleeding \n**Lower gastrointestinal bleeding\nPercentage figures rounded to nearest integer\n",
+      "bbox": [
+        82.0,
+        181.34547424316406,
+        228.5649871826172,
+        210.0479736328125
+      ],
+      "text_sha256": "44b5b7d69f21b540ee1efc1a14a8ac0658293b9fa03c5e5b4f05d160bbfcaf14"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

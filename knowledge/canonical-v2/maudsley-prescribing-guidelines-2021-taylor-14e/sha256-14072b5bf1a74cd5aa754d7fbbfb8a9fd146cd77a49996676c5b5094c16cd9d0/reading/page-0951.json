@@ -1,0 +1,14 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0951",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 951,
+  "source_page_index": 950,
+  "repaired_text": "930    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 14\nThe patient needs to fail on only one of the four points above to be deemed not to \nhave capacity. Capacity may change over time so reassessment is important. A person \nmay lack capacity about one decision but not about another.\nSection 62 urgent treatment\nIf after three months medication is needed urgently to treat a patient’s mental disorder \nand it is not covered by a T2 or T3, S62 may be applied.\nThe Code of Practice 25.38 states\nThis applies only if the treatment in question is immediately necessary to:\n■\n■save the patient’s life;\n■\n■prevent a serious deterioration of the patient’s condition, and the treatment does\nnot have unfavourable physical or psychological consequences which cannot be \nreversed;\n■\n■alleviate serious suffering by the patient, and the treatment does not have unfavourable physical or psychological consequences which cannot be reversed and \ndoes not entail significant physical hazard; or\n■\n■prevent patients behaving violently or being a danger to themselves or others, and\nthe treatment represents the minimum interference necessary for that purpose, \ndoes not have unfavourable physical or psychological consequences which cannot \nbe reversed and does not entail significant physical hazard.\nEach Trust should design a form for the clinician in charge of treatment (usually the \nconsultant) to state what the treatment is, why it is immediately necessary and the \nlength of treatment.\nSection 132 duty of managers of hospitals to give information to \ndetained patients\nWith regards to S132 and consent to treatment the code of practice 4.20 states\nPatients must be told what the Act says about treatment for their mental disorder. In \nparticular they must be told:\n■\n■the circumstances (if any) in which they can be treated without their consent – and\nthe circumstances in which they have the right to refuse treatment;\n■\n■the role of second opinion appointed doctors (SOADs) and the circumstances in\nwhich they may be involved; and\n■\n■(where relevant) the rules on electro-convulsive therapy (ECT) and medication\nadministered as part of ECT.",
+  "repaired_text_sha256": "3fc3780dbca2b1dbd37c9d326e4e495f5f92005a98b87b61ea2ba49f9cbdb915",
+  "raw_text_sha256": "8f39ce0d12897e8f547f21b9d123e47bb4cc830476b12292aa565cd45fbda621",
+  "repair_ids": [
+    "repair-000824"
+  ],
+  "raw_file": "raw/page-0951.json"
+}

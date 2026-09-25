@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0079",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 79,
+  "source_page_index": 78,
+  "source_page_display": 79,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "58    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nbecome available again (its initial withdrawal was voluntary, so reintroduction is not \nprohibited).\nIn a meta-analysis that examined the tolerability of IM antipsychotics when used for \nthe treatment of agitation, the incidence of acute dystonia with haloperidol was reported \nto be 5%, with SGAs performing considerably better.34 Acute EPS may adversely affect \nlonger-term compliance.35 In addition, the formal prescribing information in most \ncountries for haloperidol calls for a pre-treatment ECG36,37 and recommends that con-\ncomitant antipsychotics are not prescribed. The mean increase in QTc after 10mg IM \nhaloperidol can be up to 15ms, but the range is wide.38\nNote that promethazine may inhibit the metabolism of haloperidol;39 a pharmacoki-\nnetic interaction that is potentially clinically significant given the potential of haloperi-\ndol to prolong QTc. While this is unlikely to be problematic if a single dose is \nadministered, repeat dosing may confer risk.\nDroperidol is also associated with QT changes (the reason for its past withdrawal). \nIn an observational study set in hospital emergency departments, of the 1009 patients \nadministered parenteral droperidol only 13 patients (1.28%) had an abnormal QT \nrecorded after dose administration. In 7 of these cases another contributory factor was \nidentified. There were no cases of torsades de pointes.26 In all RT studies of IM droperi-\ndol, the overall rate of QT > 500ms was less than 2%.2\nIntravenous treatment is now rarely used in RT but where benefits are thought to \noutweigh risks it may be considered as a last resort. A small study comparing high dose \nIV haloperidol with IV diazepam found both drugs to be effective at 24 hours.40 Two \nlarge observational studies have examined the safety of IV olanzapine when used in the \nemergency department. The indications for its use varied: agitation being the most com-\nmon. In one study,41 in the group treated for agitation (n = 265), over a third of patients \nrequired an additional sedative dose after the initial IV olanzapine dose. Hypoxia was \nreported in 17.7% of cases and supplemental oxygen was used in 20.4% cases. Six \npatients required intubation (two of these because of olanzapine treatment). In the \nother study,42 IV olanzapine (n = 295) was compared with IM olanzapine (n = 489). \nAdditional doses were not required for 81% of patients in the IV group and 84% of \npatients in the IM group. Respiratory depression was more commonly observed in the \ngroup receiving IV olanzapine. Five patients in the IM group and two in the IV group \nrequired intubation.\nIn an acute psychiatric setting, high dose sedation (defined as a dose of more than \n10mg of haloperidol, droperidol or midazolam) was not more effective than lower doses \nbut was associated with more adverse effects (hypotension and oxygen desaturation).43 \nConsistent with this, a small RCT supports the efficacy of low dose haloperidol, although \nboth efficacy and tolerability were superior when midazolam was co-prescribed.44 These \ndata broadly support the use of standard doses in clinical emergencies, but the need for \nfurther physical restraint after lower doses needs to be considered.\nA small observational study supports the effectiveness of buccal midazolam in a \nPICU setting.45 Parenteral administration of midazolam, particularly in higher doses, \nmay cause over-sedation accompanied by respiratory depression.46 Lorazepam IM is an \nestablished treatment and TREC 220 supports its efficacy, although combining all results \nfrom the TREC studies suggests midazolam 7.5–15mg is probably more effective. A \nCochrane review of benzodiazepines for psychosis-induced aggression and agitation \n",
+  "raw_text_sha256": "d58ae73ac33b644c0b9da1656f1a218bd9f249bb75b7f9ad21e090cdd3b30796",
+  "coordinates_sha256": "24ad8fd3a965ff406bcf0812e1dc289a4d7f77991579985e26f16effab583d52",
+  "block_sequence_sha256": "854ed1e43233419cdc18786a83d3a4f2af6dcc3c714db557109546c9730c59b2",
+  "blocks": [
+    {
+      "block_id": "page-0079-block-0000",
+      "order": 0,
+      "text": "58    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "1d50300a4048c818dc0e6620d0f201674f2bbdced5f9edb029e3af4d7bab8aaf"
+    },
+    {
+      "block_id": "page-0079-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0079-block-0002",
+      "order": 2,
+      "text": "become available again (its initial withdrawal was voluntary, so reintroduction is not \nprohibited).\n",
+      "bbox": [
+        61.88909912109375,
+        62.54931640625,
+        436.6290588378906,
+        86.26931762695312
+      ],
+      "text_sha256": "344e32b0837f4a94d79ecd908b4bfa2d3a55b334d4999f5aa8374911b20096cf"
+    },
+    {
+      "block_id": "page-0079-block-0003",
+      "order": 3,
+      "text": "In a meta-analysis that examined the tolerability of IM antipsychotics when used for \nthe treatment of agitation, the incidence of acute dystonia with haloperidol was reported \nto be 5%, with SGAs performing considerably better.34 Acute EPS may adversely affect \nlonger-term compliance.35 In addition, the formal prescribing information in most \ncountries for haloperidol calls for a pre-treatment ECG36,37 and recommends that con-\ncomitant antipsychotics are not prescribed. The mean increase in QTc after 10mg IM \nhaloperidol can be up to 15ms, but the range is wide.38\n",
+      "bbox": [
+        61.88630676269531,
+        86.54931640625,
+        436.6986389160156,
+        170.26931762695312
+      ],
+      "text_sha256": "7c12895633f12a630ee4dcbbf4d064eb143c4f7c48d77d025c20ffc0a9465729"
+    },
+    {
+      "block_id": "page-0079-block-0004",
+      "order": 4,
+      "text": "Note that promethazine may inhibit the metabolism of haloperidol;39 a pharmacoki-\nnetic interaction that is potentially clinically significant given the potential of haloperi-\ndol to prolong QTc. While this is unlikely to be problematic if a single dose is \nadministered, repeat dosing may confer risk.\n",
+      "bbox": [
+        61.89152526855469,
+        170.54931640625,
+        436.7115783691406,
+        218.26931762695312
+      ],
+      "text_sha256": "d38ed6bb3a5841efcee4670356ef6f0b976b4bf584155deaa19111e6ebea2be1"
+    },
+    {
+      "block_id": "page-0079-block-0005",
+      "order": 5,
+      "text": "Droperidol is also associated with QT changes (the reason for its past withdrawal). \nIn an observational study set in hospital emergency departments, of the 1009 patients \nadministered parenteral droperidol only 13 patients (1.28%) had an abnormal QT \nrecorded after dose administration. In 7 of these cases another contributory factor was \nidentified. There were no cases of torsades de pointes.26 In all RT studies of IM droperi-\ndol, the overall rate of QT > 500ms was less than 2%.2\n",
+      "bbox": [
+        61.88868713378906,
+        218.54931640625,
+        436.7116394042969,
+        290.2693176269531
+      ],
+      "text_sha256": "d87d7496b959d7af1c6b6e95018182f3052b57a7e53a4a48cd84f5ca90824786"
+    },
+    {
+      "block_id": "page-0079-block-0006",
+      "order": 6,
+      "text": "Intravenous treatment is now rarely used in RT but where benefits are thought to \noutweigh risks it may be considered as a last resort. A small study comparing high dose \nIV haloperidol with IV diazepam found both drugs to be effective at 24 hours.40 Two \nlarge observational studies have examined the safety of IV olanzapine when used in the \nemergency department. The indications for its use varied: agitation being the most com-\nmon. In one study,41 in the group treated for agitation (n = 265), over a third of patients \nrequired an additional sedative dose after the initial IV olanzapine dose. Hypoxia was \nreported in 17.7% of cases and supplemental oxygen was used in 20.4% cases. Six \npatients required intubation (two of these because of olanzapine treatment). In the \nother study,42 IV olanzapine (n = 295) was compared with IM olanzapine (n = 489). \nAdditional doses were not required for 81% of patients in the IV group and 84% of \npatients in the IM group. Respiratory depression was more commonly observed in the \ngroup receiving IV olanzapine. Five patients in the IM group and two in the IV group \nrequired intubation.\n",
+      "bbox": [
+        61.88909912109375,
+        290.54931640625,
+        436.7003479003906,
+        458.2693176269531
+      ],
+      "text_sha256": "1fe5d7862a85865e54a5ee520d26401878b30cd26b431798885cdfc2c9c5541f"
+    },
+    {
+      "block_id": "page-0079-block-0007",
+      "order": 7,
+      "text": "In an acute psychiatric setting, high dose sedation (defined as a dose of more than \n10mg of haloperidol, droperidol or midazolam) was not more effective than lower doses \nbut was associated with more adverse effects (hypotension and oxygen desaturation).43 \nConsistent with this, a small RCT supports the efficacy of low dose haloperidol, although \nboth efficacy and tolerability were superior when midazolam was co-prescribed.44 These \ndata broadly support the use of standard doses in clinical emergencies, but the need for \nfurther physical restraint after lower doses needs to be considered.\n",
+      "bbox": [
+        61.88911437988281,
+        458.54931640625,
+        436.7191467285156,
+        542.2693481445312
+      ],
+      "text_sha256": "b1601841b21ead730e0a6a2ba057ea672e8f93893448ea2a48e903927f9f9bc1"
+    },
+    {
+      "block_id": "page-0079-block-0008",
+      "order": 8,
+      "text": "A small observational study supports the effectiveness of buccal midazolam in a \nPICU setting.45 Parenteral administration of midazolam, particularly in higher doses, \nmay cause over-sedation accompanied by respiratory depression.46 Lorazepam IM is an \nestablished treatment and TREC 220 supports its efficacy, although combining all results \nfrom the TREC studies suggests midazolam 7.5–15mg is probably more effective. A \nCochrane review of benzodiazepines for psychosis-induced aggression and agitation \n",
+      "bbox": [
+        61.88569641113281,
+        542.54931640625,
+        436.6896057128906,
+        614.2693481445312
+      ],
+      "text_sha256": "514004d010b8a4e1ab003d05a04e9f9562a0232336c3664fdcfce9b55c1ef4dd"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

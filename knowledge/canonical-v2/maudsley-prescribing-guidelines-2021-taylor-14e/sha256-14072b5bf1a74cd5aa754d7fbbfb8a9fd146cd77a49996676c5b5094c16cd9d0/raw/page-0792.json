@@ -1,0 +1,443 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0792",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 792,
+  "source_page_index": 791,
+  "source_page_display": 792,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of other psychiatric conditions     771\nCHAPTER 9\nDrug\nDose\nAdverse effects\nNotes\nRisperidone19,55,56,60–65\nOral 0.5mg bd \nwith additional \ndoses every 4 \nhourly as \nneeded\nUsual maximum \n4mg/day\nThe most commonly \nreported side effects \nare hypotension and \nEPSE\nIncreased risk of \nstroke in patients with \ndementia\nA trial comparing risperidone with \nolanzapine showed that both were \nequally effective in reducing delirium \nsymptoms but the response to \nrisperidone was poorer in the older \nage group (>70 years)56\nQuetiapine19,41,66–72\nOral  \n12.5–50mg bd\nThis may be \nincreased every \n12 hours to \n200mg daily if \nit is well \ntolerated\nSedation and postural \nhypotension are the \nmost common \nreported side effects\nIncreased risk of \nstroke in patients with \ndementia\nThere are an increasing number of \ntrials demonstrating safety and efficacy \nof low dose quetiapine compared with \nhaloperidol both in and outside the \nmedical ICU. Now first choice agent in \nmany units\nZiprasidone73\nIM 10mg every \n2 hourly\nUsual maximum \n40mg/day\nQT prolongation\nIncreased risk of \nstroke in patients with \ndementia\nVery limited evidence\nBenzodiazepines\nLorazepam1,5,7\nOral/IM\n0.25–1mg every \n2–4 hourly as \nneeded.\nUsual maximum \n3mg in 24 \nhours\nIV use is usually \nreserved for \nemergencies\nMore likely than \nantipsychotics to \ncause respiratory \ndepression, over-\nsedation and \nparadoxical excitement\nAssociated with \nprolongation and \nworsening of delirium \nsymptoms\nUsed in alcohol or sedative/hypnotic \nwithdrawal, Parkinson’s disease and \nneuroleptic malignant syndrome\nOtherwise – avoid\nDiazepam74\nStarting oral \ndose of \n5–10mg\nIn the elderly a \nstarting dose of \n2mg is \nrecommended\nMuch longer half-life \nthan lorazepam\nAssociated with \nprolongation and \nworsening of delirium \nsymptoms\nUsed in alcohol or sedative/hypnotic \nwithdrawal, Parkinson’s disease and \nneuroleptic malignant syndrome\nOtherwise – avoid\nTable 9.1 (Continued)\n(Continued)\n",
+  "raw_text_sha256": "0520699e33606e5d2328c88ed142b6c28e397a0bdf852acfbe23be727db4fc30",
+  "coordinates_sha256": "adf84d2ad55bf76b5547deba058bd074bc9baa863fad21331325faea8df9046b",
+  "block_sequence_sha256": "2188010621d3f05b03418f58e54c846d757f7517758e9cf5930837dbf55b6f37",
+  "blocks": [
+    {
+      "block_id": "page-0792-block-0000",
+      "order": 0,
+      "text": "Drug treatment of other psychiatric conditions     771\n",
+      "bbox": [
+        196.0341033935547,
+        31.395221710205078,
+        420.0020751953125,
+        41.0272216796875
+      ],
+      "text_sha256": "6e3b95f51186ed7500da5a8b926934f048b9bd8b0fa74db58da7328804c48078"
+    },
+    {
+      "block_id": "page-0792-block-0001",
+      "order": 1,
+      "text": "CHAPTER 9\n",
+      "bbox": [
+        454.4096984863281,
+        598.7144775390625,
+        463.88970947265625,
+        640.0584716796875
+      ],
+      "text_sha256": "a82498383e032e8013503b8de1dd71e97ad0ce75549c664143d6c75c10c3a855"
+    },
+    {
+      "block_id": "page-0792-block-0002",
+      "order": 2,
+      "text": "Drug\nDose\nAdverse effects\nNotes\n",
+      "bbox": [
+        48.0,
+        90.32289123535156,
+        314.5274963378906,
+        99.21038818359375
+      ],
+      "text_sha256": "60a78b8cd9dc096a6d60f46505aaad1abcc6d57d3170f46fec2c4ebda10c2e70"
+    },
+    {
+      "block_id": "page-0792-block-0003",
+      "order": 3,
+      "text": "Risperidone19,55,56,60–65\nOral 0.5mg bd \nwith additional \ndoses every 4 \nhourly as \nneeded\n",
+      "bbox": [
+        47.99998474121094,
+        110.6253890991211,
+        196.00978088378906,
+        159.32537841796875
+      ],
+      "text_sha256": "f0c7f1abb0e234b86644a0cb224bbe5ca0c441aae6cd299d141f822fe2e6357d"
+    },
+    {
+      "block_id": "page-0792-block-0004",
+      "order": 4,
+      "text": "Usual maximum \n4mg/day\n",
+      "bbox": [
+        145.9998016357422,
+        163.61537170410156,
+        199.33229064941406,
+        182.32037353515625
+      ],
+      "text_sha256": "468f2793018caccdabfd40950f5fc915b6f1b7736487eb5eaaa18969f13f7a4f"
+    },
+    {
+      "block_id": "page-0792-block-0005",
+      "order": 5,
+      "text": "The most commonly \nreported side effects \nare hypotension and \nEPSE\n",
+      "bbox": [
+        209.4947967529297,
+        110.61287689208984,
+        276.88232421875,
+        149.3128662109375
+      ],
+      "text_sha256": "a1cbe9a9b06d8af5779981ff7ed6513f343d35671454acdebec1e69029b222e0"
+    },
+    {
+      "block_id": "page-0792-block-0006",
+      "order": 6,
+      "text": "Increased risk of \nstroke in patients with \ndementia\n",
+      "bbox": [
+        209.4947967529297,
+        153.6028594970703,
+        282.7023010253906,
+        182.30535888671875
+      ],
+      "text_sha256": "1a8d3eadea495a323c0fb5f8eb56fea52cab13ab6385a498f80f077e00a35076"
+    },
+    {
+      "block_id": "page-0792-block-0007",
+      "order": 7,
+      "text": "A trial comparing risperidone with \nolanzapine showed that both were \nequally effective in reducing delirium \nsymptoms but the response to \nrisperidone was poorer in the older \nage group (>70 years)56\n",
+      "bbox": [
+        294.10980224609375,
+        110.59786224365234,
+        413.41986083984375,
+        169.2928466796875
+      ],
+      "text_sha256": "8aac8a0dca211c6160a0c11b02c7bc52794cca3aee6bcf79a4f2f8ccbb8359b9"
+    },
+    {
+      "block_id": "page-0792-block-0008",
+      "order": 8,
+      "text": "Quetiapine19,41,66–72\nOral  \n12.5–50mg bd\n",
+      "bbox": [
+        48.0,
+        191.7528839111328,
+        193.5272979736328,
+        210.4578857421875
+      ],
+      "text_sha256": "6cecf5fe6b01f241e1ef6b51f346ba17de5f5b073ca2cc813b795d887410de3a"
+    },
+    {
+      "block_id": "page-0792-block-0009",
+      "order": 9,
+      "text": "This may be \nincreased every \n12 hours to \n200mg daily if \nit is well \ntolerated\n",
+      "bbox": [
+        145.9998016357422,
+        214.7478790283203,
+        196.6923065185547,
+        273.44287109375
+      ],
+      "text_sha256": "2ed41fcda317fe021281ff70e03a17eee8435f5cc2b3f88f77b4716cfd4fa758"
+    },
+    {
+      "block_id": "page-0792-block-0010",
+      "order": 10,
+      "text": "Sedation and postural \nhypotension are the \nmost common \nreported side effects\n",
+      "bbox": [
+        209.4947967529297,
+        191.7378692626953,
+        281.5998229980469,
+        230.4378662109375
+      ],
+      "text_sha256": "1e8e8f49754c3546e6d263359578f0396cb9cc1ae7d76aec996cb5f551f3a6d0"
+    },
+    {
+      "block_id": "page-0792-block-0011",
+      "order": 11,
+      "text": "Increased risk of \nstroke in patients with \ndementia\n",
+      "bbox": [
+        209.4947967529297,
+        234.7278594970703,
+        282.7023010253906,
+        263.43035888671875
+      ],
+      "text_sha256": "1a8d3eadea495a323c0fb5f8eb56fea52cab13ab6385a498f80f077e00a35076"
+    },
+    {
+      "block_id": "page-0792-block-0012",
+      "order": 12,
+      "text": "There are an increasing number of \ntrials demonstrating safety and efficacy \nof low dose quetiapine compared with \nhaloperidol both in and outside the \nmedical ICU. Now first choice agent in \nmany units\n",
+      "bbox": [
+        294.10980224609375,
+        191.7228546142578,
+        421.0473327636719,
+        250.4178466796875
+      ],
+      "text_sha256": "68538674a67cf00c0a9affb4123a2aa8b23ba9c33f795cf9a6a85e0646dbff54"
+    },
+    {
+      "block_id": "page-0792-block-0013",
+      "order": 13,
+      "text": "Ziprasidone73\nIM 10mg every \n2 hourly\n",
+      "bbox": [
+        47.997314453125,
+        282.8328552246094,
+        196.00230407714844,
+        301.5828857421875
+      ],
+      "text_sha256": "c47f136a3cfce6af770d25d2d74c8f4549ab27c26ce915049b98d9e0c0a7f5b0"
+    },
+    {
+      "block_id": "page-0792-block-0014",
+      "order": 14,
+      "text": "Usual maximum \n40mg/day\n",
+      "bbox": [
+        145.9998016357422,
+        305.8728942871094,
+        199.33229064941406,
+        324.577880859375
+      ],
+      "text_sha256": "6a69813b4066fdf496842220ddf9ed6146f6513008c5985d8b8eeb52e114d48d"
+    },
+    {
+      "block_id": "page-0792-block-0015",
+      "order": 15,
+      "text": "QT prolongation\n",
+      "bbox": [
+        209.4947967529297,
+        282.8703918457031,
+        261.8747863769531,
+        291.577880859375
+      ],
+      "text_sha256": "c9e0e12ae9cb8645f003ca0d42710d5d6a7637f989c81755466421fa0bbb33d3"
+    },
+    {
+      "block_id": "page-0792-block-0016",
+      "order": 16,
+      "text": "Increased risk of \nstroke in patients with \ndementia\n",
+      "bbox": [
+        209.4947967529297,
+        295.8678894042969,
+        282.7023010253906,
+        324.57037353515625
+      ],
+      "text_sha256": "1a8d3eadea495a323c0fb5f8eb56fea52cab13ab6385a498f80f077e00a35076"
+    },
+    {
+      "block_id": "page-0792-block-0017",
+      "order": 17,
+      "text": "Very limited evidence\n",
+      "bbox": [
+        294.10980224609375,
+        282.8628845214844,
+        361.602294921875,
+        291.57037353515625
+      ],
+      "text_sha256": "86c6a413e33f936b28735421cd34d6d3d7a920c0523f61bc3323f623bdf37133"
+    },
+    {
+      "block_id": "page-0792-block-0018",
+      "order": 18,
+      "text": "Benzodiazepines\n",
+      "bbox": [
+        47.997314453125,
+        333.91534423828125,
+        107.17230224609375,
+        342.8028564453125
+      ],
+      "text_sha256": "b2415b7ae654663c88764302a51bd5b9c4cc200adbc533f41662bd096b532f6c"
+    },
+    {
+      "block_id": "page-0792-block-0019",
+      "order": 19,
+      "text": "Lorazepam1,5,7\nOral/IM\n",
+      "bbox": [
+        47.997314453125,
+        354.2178649902344,
+        169.74478149414062,
+        362.9454040527344
+      ],
+      "text_sha256": "bfd8fb79eb32c2595344d7c4db0d3b0e0db9b1bf689fc5cd82d0fbdf35a715be"
+    },
+    {
+      "block_id": "page-0792-block-0020",
+      "order": 20,
+      "text": "0.25–1mg every \n2–4 hourly as \nneeded.\n",
+      "bbox": [
+        145.9998016357422,
+        367.23541259765625,
+        199.57980346679688,
+        395.9378967285156
+      ],
+      "text_sha256": "65830fafef49b0547be588ba01cc6ffbd52638dafbdcaa8cdf1526356a3295a5"
+    },
+    {
+      "block_id": "page-0792-block-0021",
+      "order": 21,
+      "text": "Usual maximum \n3mg in 24 \nhours\n",
+      "bbox": [
+        145.9998016357422,
+        400.2279052734375,
+        199.33229064941406,
+        428.9303894042969
+      ],
+      "text_sha256": "19febcdf7148df164940d8d8a12efec2c6651292768cb1737fc21c300ab9ec7a"
+    },
+    {
+      "block_id": "page-0792-block-0022",
+      "order": 22,
+      "text": "IV use is usually \nreserved for \nemergencies\n",
+      "bbox": [
+        145.9998016357422,
+        433.22039794921875,
+        197.67478942871094,
+        461.9228820800781
+      ],
+      "text_sha256": "21174594bade01e318cdbe4ab369a0c4dcd0202d572bb9a1b32305499941850d"
+    },
+    {
+      "block_id": "page-0792-block-0023",
+      "order": 23,
+      "text": "More likely than \nantipsychotics to \ncause respiratory \ndepression, over-\nsedation and \nparadoxical excitement\n",
+      "bbox": [
+        209.4947967529297,
+        354.21539306640625,
+        282.10980224609375,
+        412.9103698730469
+      ],
+      "text_sha256": "a2991a00ead015242144e580f3313d76e9c045c2068752400848e212f8dd6d74"
+    },
+    {
+      "block_id": "page-0792-block-0024",
+      "order": 24,
+      "text": "Associated with \nprolongation and \nworsening of delirium \nsymptoms\n",
+      "bbox": [
+        209.4947967529297,
+        417.20037841796875,
+        281.5923156738281,
+        455.9003601074219
+      ],
+      "text_sha256": "6d51d61affb3370cae53b59aabc8d511cd7c92aa269351ec4a63643bf5a07026"
+    },
+    {
+      "block_id": "page-0792-block-0025",
+      "order": 25,
+      "text": "Used in alcohol or sedative/hypnotic \nwithdrawal, Parkinson’s disease and \nneuroleptic malignant syndrome\n",
+      "bbox": [
+        294.10980224609375,
+        354.19287109375,
+        411.21490478515625,
+        382.8953552246094
+      ],
+      "text_sha256": "33b3d0ef0c52582243f65c34e5748a6e191dd17ccfbedc8a62c6e72cb0ca22ae"
+    },
+    {
+      "block_id": "page-0792-block-0026",
+      "order": 26,
+      "text": "Otherwise – avoid\n",
+      "bbox": [
+        294.10980224609375,
+        387.18536376953125,
+        351.6123352050781,
+        395.8928527832031
+      ],
+      "text_sha256": "56fbc3c7f07b0484125f722fa7662549e73c371c4ca564640118f9574b95c8e3"
+    },
+    {
+      "block_id": "page-0792-block-0027",
+      "order": 27,
+      "text": "Diazepam74\nStarting oral \ndose of \n5–10mg\n",
+      "bbox": [
+        47.997314453125,
+        471.3128662109375,
+        187.24978637695312,
+        500.06536865234375
+      ],
+      "text_sha256": "e143bbebd9633d9b2d5c9ebf169bdca111bffe4c08ba2d3f90513ed628f306ed"
+    },
+    {
+      "block_id": "page-0792-block-0028",
+      "order": 28,
+      "text": "In the elderly a \nstarting dose of \n2mg is \nrecommended\n",
+      "bbox": [
+        145.9998016357422,
+        504.3553771972656,
+        198.09478759765625,
+        543.0553588867188
+      ],
+      "text_sha256": "c6801491b2ede1b0ac5971d996fe019b432293de3bc68fd21fccdf4187a74e44"
+    },
+    {
+      "block_id": "page-0792-block-0029",
+      "order": 29,
+      "text": "Much longer half-life \nthan lorazepam\n",
+      "bbox": [
+        209.4947967529297,
+        471.3478698730469,
+        278.66729736328125,
+        490.0528564453125
+      ],
+      "text_sha256": "ef4ebea15b849446a83ab9f6e405ce6efc62523c8ee0d5fa3ff5daa2e1643b62"
+    },
+    {
+      "block_id": "page-0792-block-0030",
+      "order": 30,
+      "text": "Associated with \nprolongation and \nworsening of delirium \nsymptoms\n",
+      "bbox": [
+        209.4947967529297,
+        494.3428649902344,
+        281.5923156738281,
+        533.0428466796875
+      ],
+      "text_sha256": "6d51d61affb3370cae53b59aabc8d511cd7c92aa269351ec4a63643bf5a07026"
+    },
+    {
+      "block_id": "page-0792-block-0031",
+      "order": 31,
+      "text": "Used in alcohol or sedative/hypnotic \nwithdrawal, Parkinson’s disease and \nneuroleptic malignant syndrome\n",
+      "bbox": [
+        294.10980224609375,
+        471.3328552246094,
+        411.21490478515625,
+        500.03533935546875
+      ],
+      "text_sha256": "33b3d0ef0c52582243f65c34e5748a6e191dd17ccfbedc8a62c6e72cb0ca22ae"
+    },
+    {
+      "block_id": "page-0792-block-0032",
+      "order": 32,
+      "text": "Otherwise – avoid\n",
+      "bbox": [
+        294.10980224609375,
+        504.3253479003906,
+        351.6123352050781,
+        513.0328369140625
+      ],
+      "text_sha256": "56fbc3c7f07b0484125f722fa7662549e73c371c4ca564640118f9574b95c8e3"
+    },
+    {
+      "block_id": "page-0792-block-0033",
+      "order": 33,
+      "text": "Table 9.1 (Continued)\n",
+      "bbox": [
+        54.0,
+        70.08796691894531,
+        124.4549789428711,
+        78.9754638671875
+      ],
+      "text_sha256": "5d8881270f655c47a62e4b8f943924c6e2e0e3cb091d43a0eacabaa7642993bd"
+    },
+    {
+      "block_id": "page-0792-block-0034",
+      "order": 34,
+      "text": "(Continued)\n",
+      "bbox": [
+        382.1700134277344,
+        551.7754516601562,
+        419.0849304199219,
+        560.5279541015625
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

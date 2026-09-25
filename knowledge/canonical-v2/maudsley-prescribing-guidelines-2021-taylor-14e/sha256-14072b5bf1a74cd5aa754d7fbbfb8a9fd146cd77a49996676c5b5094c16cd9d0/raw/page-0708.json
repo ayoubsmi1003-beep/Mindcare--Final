@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0708",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 708,
+  "source_page_index": 707,
+  "source_page_display": 708,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Pregnancy and breastfeeding    687\nCHAPTER 7\nSelective serotonin reuptake inhibitors\n■\n■Sertraline appears to result in the least placental exposure.99\n■\n■SSRIs appear not to be major teratogens,63,67,91,100 with most data supporting the safety \nof fluoxetine.97,101–104 Note though that one study revealed a slight overall increase in \nrate of malformation with SSRIs.105,106 Database and case–control studies have \nreported an association between SSRIs and anencephaly, craniosynostosis, ompha-\nlocele, clubfoot and increased umbilical cord length107 in the newborn.108–110 A popula-\ntion study which aimed to examine the risk of specific birth defects with individual \nantidepressants reported an elevated risk for specific SSRIs and non-heart defects.111 \nHowever, the study only partially accounted for the underlying condition.111\n■\n■Paroxetine has been specifically associated with cardiac malformations112–114 particu-\nlarly after high dose (>25mg/day), first trimester exposure.115 However some studies \nhave failed to replicate this finding for paroxetine,91,116 and have implicated other \nSSRIs.117–119 A higher risk of some cardiac birth defects has been reported to be associ-\nated with paroxetine and fluoxetine compared with other SSRIs.120 Other studies \nhave found no association between any SSRI and an increased risk of cardiac septal \ndefects109,121,122 and other heart defects.111,123–126 Note that one database study reported \nthat foetal alcohol disorders were 10 times more common in those exposed to SSRIs \nin utero than controls,127 and that alcohol use during pregnancy (which may be used \nas self-medication for depression) is associated with an increased risk of cardiac \ndefects in the foetus.93\n■\n■SSRIs have also been associated with decreased gestational age128 (usually a few days \nwhich is of questionable clinical significance129), spontaneous abortion130 gestational \nhypertension and pre-eclampsia,131 decreased birth weight (mean 175g)101,102,132 and \nsuboptimal foetal growth.133 It is possible that these effects are primarily associated \nwith maternal depression rather than specifically with antidepressant treatment.129 \nThe longer the duration of in utero exposure, the greater the chance of low birth \nweight and respiratory distress.66 Three groups of symptoms are seen in neonates \nexposed to antidepressants in late pregnancy; those associated with serotonergic tox-\nicity, those associated with antidepressant discontinuation symptoms and those \nrelated to early birth.134 Neonatal discontinuation syndrome may be associated with \nprematurity.135 Third-trimester exposure to sertraline has been associated with \nreduced early APGAR scores.101 Third-trimester use of paroxetine may give rise to \nneonatal complications, presumably related to abrupt withdrawal.136,137 Other SSRIs \nhave similar, possibly less severe effects.137,138 Body temperature instability, poor feed-\ning, respiratory distress, cardiac rhythm disturbance, lethargy, muscle tone anomalies, \njitteriness, jerky movements and seizures have been reported.93 A case of transient \nneonatal long QT syndrome has been reported after in utero exposure to \nparoxetine.139\n■\n■Data relating to neurodevelopmental outcome of foetal exposure to SSRIs are less \nthan conclusive.97,98,140–143 Depression itself may have more obvious adverse effects on \ndevelopment.97 Maternal SSRI use has been associated with autism spectrum disor-\nders.144–146 However, large studies have either failed to show this association after \naccounting for maternal illness74–76 or have found it to be no longer significant.147,148 \nAuthors of a study which reported a small increased risk of ADHD in children whose \n",
+  "raw_text_sha256": "c7b5e2c1bf73617afa02e9aa67a9af14d63763dc3eb695e042b41c3c8b148063",
+  "coordinates_sha256": "1c58efc89d4a59c511893f81fec3803acc14357c6e5c36dcb88959957a34af02",
+  "block_sequence_sha256": "de12dee20b710abe11650e21847d572d3aaab96168615fab0f26bff79b2e1a18",
+  "blocks": [
+    {
+      "block_id": "page-0708-block-0000",
+      "order": 0,
+      "text": "Pregnancy and breastfeeding    687\n",
+      "bbox": [
+        271.769287109375,
+        31.395221710205078,
+        420.00048828125,
+        41.0272216796875
+      ],
+      "text_sha256": "03cf39551ed29629c22c2bec38bb684f059293cc15711d221edc118c9f38c549"
+    },
+    {
+      "block_id": "page-0708-block-0001",
+      "order": 1,
+      "text": "CHAPTER 7\n",
+      "bbox": [
+        454.4096984863281,
+        472.7144775390625,
+        463.88970947265625,
+        514.0584716796875
+      ],
+      "text_sha256": "6d1a2318236627f2d413db0336034ac4d71cea7172bd0baddf04c66a07292590"
+    },
+    {
+      "block_id": "page-0708-block-0002",
+      "order": 2,
+      "text": "Selective serotonin reuptake inhibitors\n",
+      "bbox": [
+        48.0,
+        62.500465393066406,
+        230.2699737548828,
+        74.3504638671875
+      ],
+      "text_sha256": "94a05625ceb088dfd3f3a0d6b837eb9ad0997e8f1935e31916d7fa2fb61baa72"
+    },
+    {
+      "block_id": "page-0708-block-0003",
+      "order": 3,
+      "text": "■\n■Sertraline appears to result in the least placental exposure.99\n",
+      "bbox": [
+        47.999900817871094,
+        86.41046142578125,
+        314.6302795410156,
+        98.13046264648438
+      ],
+      "text_sha256": "70fee498767c9f08886b0389c3f7eb186f2b2becf00ad2c188cc6454cb479f8d"
+    },
+    {
+      "block_id": "page-0708-block-0004",
+      "order": 4,
+      "text": "■\n■SSRIs appear not to be major teratogens,63,67,91,100 with most data supporting the safety \n",
+      "bbox": [
+        47.999900817871094,
+        98.41046142578125,
+        422.7829284667969,
+        110.13046264648438
+      ],
+      "text_sha256": "1ac9666befb66b5e9dfa10d5f31583773d3fb2b548a2b511cba92d51013b5cf0"
+    },
+    {
+      "block_id": "page-0708-block-0005",
+      "order": 5,
+      "text": "of fluoxetine.97,101–104 Note though that one study revealed a slight overall increase in \nrate of malformation with SSRIs.105,106 Database and case–control studies have \nreported an association between SSRIs and anencephaly, craniosynostosis, ompha-\nlocele, clubfoot and increased umbilical cord length107 in the newborn.108–110 A popula-\ntion study which aimed to examine the risk of specific birth defects with individual \nantidepressants reported an elevated risk for specific SSRIs and non-heart defects.111 \nHowever, the study only partially accounted for the underlying condition.111\n",
+      "bbox": [
+        56.99749755859375,
+        110.41046142578125,
+        422.78778076171875,
+        194.13040161132812
+      ],
+      "text_sha256": "6665c1a2cdb3e9e9736c5112ead0fbbcad1ab2e5cb43b2d2d534081daf297152"
+    },
+    {
+      "block_id": "page-0708-block-0006",
+      "order": 6,
+      "text": "■\n■Paroxetine has been specifically associated with cardiac malformations112–114 particu-\n",
+      "bbox": [
+        48.0,
+        194.410400390625,
+        420.0020751953125,
+        206.13040161132812
+      ],
+      "text_sha256": "801cb40d8de728fdc6dd54cff96cd009523c87d97c5c18b53f63f4a6f5871079"
+    },
+    {
+      "block_id": "page-0708-block-0007",
+      "order": 7,
+      "text": "larly after high dose (>25mg/day), first trimester exposure.115 However some studies \nhave failed to replicate this finding for paroxetine,91,116 and have implicated other \nSSRIs.117–119 A higher risk of some cardiac birth defects has been reported to be associ-\nated with paroxetine and fluoxetine compared with other SSRIs.120 Other studies \nhave found no association between any SSRI and an increased risk of cardiac septal \ndefects109,121,122 and other heart defects.111,123–126 Note that one database study reported \nthat foetal alcohol disorders were 10 times more common in those exposed to SSRIs \nin utero than controls,127 and that alcohol use during pregnancy (which may be used \nas self-medication for depression) is associated with an increased risk of cardiac \ndefects in the foetus.93\n",
+      "bbox": [
+        56.997802734375,
+        206.410400390625,
+        422.8277587890625,
+        326.1304016113281
+      ],
+      "text_sha256": "988d5504fb59e26f01c8d1c40f473daf225c7cf5a33c32e5a8ba2f094e148422"
+    },
+    {
+      "block_id": "page-0708-block-0008",
+      "order": 8,
+      "text": "■\n■SSRIs have also been associated with decreased gestational age128 (usually a few days \n",
+      "bbox": [
+        47.999900817871094,
+        326.410400390625,
+        422.7645263671875,
+        338.1304016113281
+      ],
+      "text_sha256": "889789092a3e5fc1eb2cddde6f0bb498a81744ab6737049d18f56d78952d300a"
+    },
+    {
+      "block_id": "page-0708-block-0009",
+      "order": 9,
+      "text": "which is of questionable clinical significance129), spontaneous abortion130 gestational \nhypertension and pre-eclampsia,131 decreased birth weight (mean 175g)101,102,132 and \nsuboptimal foetal growth.133 It is possible that these effects are primarily associated \nwith maternal depression rather than specifically with antidepressant treatment.129 \nThe longer the duration of in utero exposure, the greater the chance of low birth \nweight and respiratory distress.66 Three groups of symptoms are seen in neonates \nexposed to antidepressants in late pregnancy; those associated with serotonergic tox-\nicity, those associated with antidepressant discontinuation symptoms and those \nrelated to early birth.134 Neonatal discontinuation syndrome may be associated with \nprematurity.135 Third-trimester exposure to sertraline has been associated with \nreduced early APGAR scores.101 Third-trimester use of paroxetine may give rise to \nneonatal complications, presumably related to abrupt withdrawal.136,137 Other SSRIs \nhave similar, possibly less severe effects.137,138 Body temperature instability, poor feed-\ning, respiratory distress, cardiac rhythm disturbance, lethargy, muscle tone anomalies, \njitteriness, jerky movements and seizures have been reported.93 A case of transient \nneonatal long QT syndrome has been reported after in utero exposure to \nparoxetine.139\n",
+      "bbox": [
+        56.9962158203125,
+        338.410400390625,
+        422.803955078125,
+        542.1304321289062
+      ],
+      "text_sha256": "855218219fb4239317e03d4bce6dc57ca4a04de0372b2243bfcc100d2482d65d"
+    },
+    {
+      "block_id": "page-0708-block-0010",
+      "order": 10,
+      "text": "■\n■Data relating to neurodevelopmental outcome of foetal exposure to SSRIs are less \n",
+      "bbox": [
+        47.999900817871094,
+        542.410400390625,
+        422.7900695800781,
+        554.1304321289062
+      ],
+      "text_sha256": "ae57e348aa796185273ac7065cfb4b05dc316adc42dfa62c072648fe76521b7f"
+    },
+    {
+      "block_id": "page-0708-block-0011",
+      "order": 11,
+      "text": "than conclusive.97,98,140–143 Depression itself may have more obvious adverse effects on \ndevelopment.97 Maternal SSRI use has been associated with autism spectrum disor-\nders.144–146 However, large studies have either failed to show this association after \naccounting for maternal illness74–76 or have found it to be no longer significant.147,148 \nAuthors of a study which reported a small increased risk of ADHD in children whose \n",
+      "bbox": [
+        57.0,
+        554.410400390625,
+        422.79351806640625,
+        614.1304321289062
+      ],
+      "text_sha256": "db4b544a8016584a4c702242948b2c6f7eec9929d8410d34c19bbf86e843dafb"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

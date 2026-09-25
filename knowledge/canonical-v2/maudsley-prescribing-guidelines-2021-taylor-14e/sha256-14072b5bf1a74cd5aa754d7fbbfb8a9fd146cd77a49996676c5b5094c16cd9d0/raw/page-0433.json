@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0433",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 433,
+  "source_page_index": 432,
+  "source_page_display": 433,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "412    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nGynaecologic and obstetrical haemorrhage\nA multicentre cross-sectional study35 found an association between the use of antide-\npressants and menstruation disorders (unusual or excess bleeding, irregular menstrua-\ntion, menorrhagia, etc.). This study found that the prevalence of menstrual disorder in \nthe study group who were taking SSRIs, venlafaxine or mirtazapine combined with \nSSRIs or mirtazapine was significantly higher (24.6%) than the control group (12.2%) \nwho did not take any antidepressants.\nAbnormal vaginal bleeding\nCases of abnormal vaginal bleeding associated with SSRIs have been reported in a \nyoung woman,36 a postmenopausal woman37 and in a preadolescent girl aged 11.38\nPost-partum haemorrhage (PPH)\nWhilst one study39 could not find an increased risk of post-partum haemorrhage with \nthe use of SSRI or non-SSRI antidepressants, a large cohort study40 found an associa-\ntion between PPH and all classes of antidepressants with a number needed to harm of \n80 for current users of SSRIs and 97 for those on other antidepressants. One hospital-\nbased cohort study41found an absolute risk of PPH of 18% and an absolute risk of \npostpartum anaemia of 12.8% after a non-surgical vaginal delivery in women who \nwere current users of SSRIs. The absolute risk of both PPH and postpartum anaemia \nfor those without any exposure to antidepressants was 8.7%. The blood loss during \ndelivery was also higher for those who had SSRI exposure (484mL) compared with \nthose who did not take antidepressants (398mL). The length of hospital stay was also \nsignificantly increased for those who had been taking an SSRI. The most recent popula-\ntion study42 identified that the use of serotonergic medications was associated with 1.5 \ntimes increased risk of PPH compared with those who did not take any psychoactive \nmedications. This study highlighted that women who have been taking other psychoac-\ntive medications such as antipsychotics and mood stabilisers were three times more at \nrisk of PPH compared to mothers who did not take any medications, suggesting that \nthe occurrence of PPH might not be entirely due to serotonergic activity and that fur-\nther research is needed to investigate other mechanisms.\nTable 3.24  Absolute risk of intracranial haemorrhage with SSRI with or without anticoagulant or NSAIDs\nStudy\nRisk with SSRI alone\nRisk with SSRI + NSAID\nRisk with \nantidepressant + anticoagulant\nShin et al 201533\n1 in 632*(0.16%)\n1 in 175*(0.57%)\n–\nRenoux et al 20176\n1 in 450** (0.22%)\n–\n1 in 260** (0.38%)\nSmoller et al 200934\n1 in 240*** (0.42%)\n–\n–\n*within 30 days of taking antidepressant\n**Incident users (no time limit)\n***Annual risk (older patients)\n",
+  "raw_text_sha256": "a0fd5c93fbe8231f74ac7429fed0826df53135bbd0a7412d4450154d61488eb0",
+  "coordinates_sha256": "6d7299078d926aaa866c0b758e2af646d8a4eba9b503a59aa336784d661e33ef",
+  "block_sequence_sha256": "7247f17c6c39ae20ff328fd1fbf0b3965b424012647725b74ca8e5056de59f7a",
+  "blocks": [
+    {
+      "block_id": "page-0433-block-0000",
+      "order": 0,
+      "text": "412    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "f84b81a0c6cb22c4e2ec13a6654855864b93ad2c6f98a662d06b9f3ad833e755"
+    },
+    {
+      "block_id": "page-0433-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0433-block-0002",
+      "order": 2,
+      "text": "Gynaecologic and obstetrical haemorrhage\n",
+      "bbox": [
+        61.88999938964844,
+        212.36898803710938,
+        283.7599792480469,
+        225.40399169921875
+      ],
+      "text_sha256": "3cbfb60e031cdf679851cf928690444f5ca435f48c3c90e4117e69c1a3cfa8e3"
+    },
+    {
+      "block_id": "page-0433-block-0003",
+      "order": 3,
+      "text": "A multicentre cross-sectional study35 found an association between the use of antide-\npressants and menstruation disorders (unusual or excess bleeding, irregular menstrua-\ntion, menorrhagia, etc.). This study found that the prevalence of menstrual disorder in \nthe study group who were taking SSRIs, venlafaxine or mirtazapine combined with \nSSRIs or mirtazapine was significantly higher (24.6%) than the control group (12.2%) \nwho did not take any antidepressants.\n",
+      "bbox": [
+        61.88999938964844,
+        231.2139892578125,
+        436.7138366699219,
+        302.9339904785156
+      ],
+      "text_sha256": "d8edae2f0db2bcd2464745325969b2c6932e707f8181570b4e2179df4c97a9f1"
+    },
+    {
+      "block_id": "page-0433-block-0004",
+      "order": 4,
+      "text": "Abnormal vaginal bleeding\n",
+      "bbox": [
+        61.88999938964844,
+        320.3689880371094,
+        202.48094177246094,
+        333.40399169921875
+      ],
+      "text_sha256": "bcc32621e06362f37c688de35b42669110a7e1952e4e44c435750d980e372788"
+    },
+    {
+      "block_id": "page-0433-block-0005",
+      "order": 5,
+      "text": "Cases of abnormal vaginal bleeding associated with SSRIs have been reported in a \nyoung woman,36 a postmenopausal woman37 and in a preadolescent girl aged 11.38\n",
+      "bbox": [
+        61.88999938964844,
+        339.2139892578125,
+        436.6498718261719,
+        362.9339904785156
+      ],
+      "text_sha256": "2113caa472adffa84b3691a4a564dc19e1c8fe14b0d338f291ec045a8c8f058e"
+    },
+    {
+      "block_id": "page-0433-block-0006",
+      "order": 6,
+      "text": "Post-partum haemorrhage (PPH)\n",
+      "bbox": [
+        61.88999938964844,
+        380.3689880371094,
+        228.74896240234375,
+        393.40399169921875
+      ],
+      "text_sha256": "d3701eed55a013c91e1829786c52a7f4ba2a427efc5bc2de6dfb3aa23421af56"
+    },
+    {
+      "block_id": "page-0433-block-0007",
+      "order": 7,
+      "text": "Whilst one study39 could not find an increased risk of post-partum haemorrhage with \nthe use of SSRI or non-SSRI antidepressants, a large cohort study40 found an associa-\ntion between PPH and all classes of antidepressants with a number needed to harm of \n80 for current users of SSRIs and 97 for those on other antidepressants. One hospital-\nbased cohort study41found an absolute risk of PPH of 18% and an absolute risk of \npostpartum anaemia of 12.8% after a non-surgical vaginal delivery in women who \nwere current users of SSRIs. The absolute risk of both PPH and postpartum anaemia \nfor those without any exposure to antidepressants was 8.7%. The blood loss during \ndelivery was also higher for those who had SSRI exposure (484mL) compared with \nthose who did not take antidepressants (398mL). The length of hospital stay was also \nsignificantly increased for those who had been taking an SSRI. The most recent popula-\ntion study42 identified that the use of serotonergic medications was associated with 1.5 \ntimes increased risk of PPH compared with those who did not take any psychoactive \nmedications. This study highlighted that women who have been taking other psychoac-\ntive medications such as antipsychotics and mood stabilisers were three times more at \nrisk of PPH compared to mothers who did not take any medications, suggesting that \nthe occurrence of PPH might not be entirely due to serotonergic activity and that fur-\nther research is needed to investigate other mechanisms.\n",
+      "bbox": [
+        61.88580322265625,
+        399.2139892578125,
+        436.71844482421875,
+        614.9340209960938
+      ],
+      "text_sha256": "a9de8bef3be3a970fcafae446478b84832aefd01835249798417194871408d10"
+    },
+    {
+      "block_id": "page-0433-block-0008",
+      "order": 8,
+      "text": "Table 3.24  Absolute risk of intracranial haemorrhage with SSRI with or without anticoagulant or NSAIDs\n",
+      "bbox": [
+        67.88999938964844,
+        70.08790588378906,
+        396.142333984375,
+        78.97540283203125
+      ],
+      "text_sha256": "b8832206c8be9337a0db070040d6e07b1f4bb40bc5ac40d27f77da642ce6c97e"
+    },
+    {
+      "block_id": "page-0433-block-0009",
+      "order": 9,
+      "text": "Study\nRisk with SSRI alone\nRisk with SSRI + NSAID\n",
+      "bbox": [
+        61.88999938964844,
+        100.32289123535156,
+        307.6575622558594,
+        109.21038818359375
+      ],
+      "text_sha256": "e053f20f26c684a8b3df831638adaebd465281d87dcd4c110b0dc911f7012ce1"
+    },
+    {
+      "block_id": "page-0433-block-0010",
+      "order": 10,
+      "text": "Risk with \nantidepressant + anticoagulant\n",
+      "bbox": [
+        322.2825012207031,
+        90.32539367675781,
+        432.08245849609375,
+        109.21038818359375
+      ],
+      "text_sha256": "6cac112de9a4df0503dae114b688f8ef85358c76fbef8c0b6e0cc9b5fbf719ab"
+    },
+    {
+      "block_id": "page-0433-block-0011",
+      "order": 11,
+      "text": "Shin et al 201533\n1 in 632*(0.16%)\n1 in 175*(0.57%)\n–\n",
+      "bbox": [
+        61.889984130859375,
+        117.27791595458984,
+        326.0347900390625,
+        125.9879150390625
+      ],
+      "text_sha256": "e3c7c50a6e49a8ca27082827439395c17ada511e59fbf00b38e3b36b45573a65"
+    },
+    {
+      "block_id": "page-0433-block-0012",
+      "order": 12,
+      "text": "Renoux et al 20176\n1 in 450** (0.22%)\n–\n1 in 260** (0.38%)\n",
+      "bbox": [
+        61.89227294921875,
+        132.30043029785156,
+        385.6598815917969,
+        141.0103759765625
+      ],
+      "text_sha256": "184576d79c9bf42034e1ccfc2bb58cadf6ccc850195715da10c755e250c2de6d"
+    },
+    {
+      "block_id": "page-0433-block-0013",
+      "order": 13,
+      "text": "Smoller et al 200934\n1 in 240*** (0.42%)\n–\n–\n",
+      "bbox": [
+        61.89227294921875,
+        147.3253936767578,
+        326.0347900390625,
+        156.035400390625
+      ],
+      "text_sha256": "0690baa69e268b37532a979eb51430151b64cf6d4e1c30be21b2bda88d7a4510"
+    },
+    {
+      "block_id": "page-0433-block-0014",
+      "order": 14,
+      "text": "*within 30 days of taking antidepressant\n**Incident users (no time limit)\n***Annual risk (older patients)\n",
+      "bbox": [
+        61.89227294921875,
+        166.3253936767578,
+        192.20472717285156,
+        195.02789306640625
+      ],
+      "text_sha256": "d303a6ee35cbe169aa7fd649321e0ed553c7647089ebce98ea56b780872b2099"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

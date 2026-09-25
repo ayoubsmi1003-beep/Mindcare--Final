@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0782",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 782,
+  "source_page_index": 781,
+  "source_page_display": 782,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of other psychiatric conditions     761\nCHAPTER 9\nEating disorders\nThe incidence of eating disorders continues to increase.1 Lifetime risk of any eating disorder \nis 8.4% in women and 2.2% in men.2 Other psychiatric conditions (particularly anxiety, \ndepression and obsessive-compulsive disorder) often coexist with eating disorders, and this \nmay in part explain the benefit sometimes seen with medication. Any medicine prescribed \nshould be accompanied by close monitoring to check for possible adverse reactions.\nAnorexia nervosa (AN)\nGeneral guidance\nDrugs have limited activity in anorexia nervosa (AN), and none is currently licensed for \nthis condition.3 Prompt weight restoration to a safe weight, family therapy and struc-\ntured psychotherapy are the main interventions.4,5 The aim of (physical) treatment is to \nimprove nutritional health through re-feeding with very limited evidence to support the \nuse of any pharmacological interventions other than those prescribed to correct meta-\nbolic deficiencies. Medicines may be used to treat co-morbid conditions,4 but have a \nvery limited role in weight restoration.6\nOlanzapine is the only drug suggested to have any effect on weight restoration in \nanorexia nervosa.7–9 Early data for quetiapine were encouraging10 but were not repli-\ncated in a later RCT.11 Overall, the body of evidence for pharmacotherapy is said to be \n‘unsatisfactory’12 and a meta-analysis found no significant effect over placebo.13 A net-\nwork meta-analysis is planned14 but is yet to be completed. The most recent and largest \nreview of trials and meta-analyses15 concluded that ‘no psychotropic medication has \nproved efficacious’.\nDronabinol, a synthetic cannabinoid agonist, may induce slight weight gain16 but is \nnot recommended and adverse effects (dysphoria) are common.17\nHealthcare professionals should be aware of the risk of medicines that prolong the \nQT interval. All patients with a diagnosis of anorexia nervosa should have an alert \nplaced in their prescribing record noting that they are at increased risk of arrhythmias \nsecondary to electrolyte disturbances and potential cardiac complications associated \nwith inadequate nutrition. ECG monitoring should be undertaken if the prescription of \nany medicine that may compromise cardiac functioning is essential.4\nPhysical aspects\nVitamins and minerals\nTreatment with a multivitamin/multimineral supplement in oral form is recommended \nduring both inpatient and outpatient weight restoration.4\nElectrolytes\nElectrolyte disturbances (e.g. hypokalaemia) may develop slowly over time and may be \nasymptomatic and resolve with re-feeding. Hypophosphataemia may also be precipi-\ntated by re-feeding. Rapid correction may be hazardous. Oral supplementation is \n",
+  "raw_text_sha256": "3884ef5d6d445ff9ae77c8292c7c687486a0d282bcce5d1d80e61b5400ed6ff3",
+  "coordinates_sha256": "7f3113124a8afdb38096ff99c7c7eb4d5e54d671b3591e969872efcdaef2aa75",
+  "block_sequence_sha256": "d9464e763ad42a635ee744028943732dcc99e512fdf1a1e78adbf43616e3bcb4",
+  "blocks": [
+    {
+      "block_id": "page-0782-block-0000",
+      "order": 0,
+      "text": "Drug treatment of other psychiatric conditions     761\n",
+      "bbox": [
+        196.0341033935547,
+        31.395221710205078,
+        420.0020751953125,
+        41.0272216796875
+      ],
+      "text_sha256": "782e7cb09dfa8c5b6b403463f9a7f4e7aa89ec04a0b6fc107ea368285be75c90"
+    },
+    {
+      "block_id": "page-0782-block-0001",
+      "order": 1,
+      "text": "CHAPTER 9\n",
+      "bbox": [
+        454.4096984863281,
+        598.7144775390625,
+        463.88970947265625,
+        640.0584716796875
+      ],
+      "text_sha256": "a82498383e032e8013503b8de1dd71e97ad0ce75549c664143d6c75c10c3a855"
+    },
+    {
+      "block_id": "page-0782-block-0002",
+      "order": 2,
+      "text": "Eating disorders\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        138.5340118408203,
+        79.1004638671875
+      ],
+      "text_sha256": "72a284669b1ec96e678ee279ae077a3394274ad46af0160b976ec7bd2290cf73"
+    },
+    {
+      "block_id": "page-0782-block-0003",
+      "order": 3,
+      "text": "The incidence of eating disorders continues to increase.1 Lifetime risk of any eating disorder \nis 8.4% in women and 2.2% in men.2 Other psychiatric conditions (particularly anxiety, \ndepression and obsessive-compulsive disorder) often coexist with eating disorders, and this \nmay in part explain the benefit sometimes seen with medication. Any medicine prescribed \nshould be accompanied by close monitoring to check for possible adverse reactions.\n",
+      "bbox": [
+        48.0,
+        84.91046142578125,
+        422.81292724609375,
+        144.63046264648438
+      ],
+      "text_sha256": "dc5422069e404663c44cfbc6db150701c8f2ade6e06cb2bba99fd90007b98f11"
+    },
+    {
+      "block_id": "page-0782-block-0004",
+      "order": 4,
+      "text": "Anorexia nervosa (AN)\n",
+      "bbox": [
+        48.0,
+        162.06546020507812,
+        165.1499786376953,
+        175.1004638671875
+      ],
+      "text_sha256": "5fd885ba73431365d31a6792f936fe242ec248d7246dd09d0a4ce5cb3efadd9b"
+    },
+    {
+      "block_id": "page-0782-block-0005",
+      "order": 5,
+      "text": "General guidance\n",
+      "bbox": [
+        48.0,
+        181.00048828125,
+        130.239990234375,
+        192.85049438476562
+      ],
+      "text_sha256": "565e0b1a62f470886735e75d547df9f4bed5744f234c998a05c78d3c71d23b54"
+    },
+    {
+      "block_id": "page-0782-block-0006",
+      "order": 6,
+      "text": "Drugs have limited activity in anorexia nervosa (AN), and none is currently licensed for \nthis condition.3 Prompt weight restoration to a safe weight, family therapy and struc-\ntured psychotherapy are the main interventions.4,5 The aim of (physical) treatment is to \nimprove nutritional health through re-feeding with very limited evidence to support the \nuse of any pharmacological interventions other than those prescribed to correct meta-\nbolic deficiencies. Medicines may be used to treat co-morbid conditions,4 but have a \nvery limited role in weight restoration.6\n",
+      "bbox": [
+        48.0,
+        198.91049194335938,
+        422.78167724609375,
+        282.6304931640625
+      ],
+      "text_sha256": "762a7b6a69065eda8a6cde2737e548303ecf19cf157f66918a78ed65de77805a"
+    },
+    {
+      "block_id": "page-0782-block-0007",
+      "order": 7,
+      "text": "Olanzapine is the only drug suggested to have any effect on weight restoration in \nanorexia nervosa.7–9 Early data for quetiapine were encouraging10 but were not repli-\ncated in a later RCT.11 Overall, the body of evidence for pharmacotherapy is said to be \n‘unsatisfactory’12 and a meta-analysis found no significant effect over placebo.13 A net-\nwork meta-analysis is planned14 but is yet to be completed. The most recent and largest \nreview of trials and meta-analyses15 concluded that ‘no psychotropic medication has \nproved efficacious’.\n",
+      "bbox": [
+        47.995697021484375,
+        282.9104919433594,
+        422.80419921875,
+        366.6304931640625
+      ],
+      "text_sha256": "cb5d38048a9ba366ac895a68952e5a5901867918aa062ab71e43a4d5e7c46e52"
+    },
+    {
+      "block_id": "page-0782-block-0008",
+      "order": 8,
+      "text": "Dronabinol, a synthetic cannabinoid agonist, may induce slight weight gain16 but is \nnot recommended and adverse effects (dysphoria) are common.17\n",
+      "bbox": [
+        47.9962158203125,
+        366.9104919433594,
+        422.7861633300781,
+        390.6304931640625
+      ],
+      "text_sha256": "167b20f9e70b978ec4259a73368976b2ef8452a425972fe191c44422dcc928a5"
+    },
+    {
+      "block_id": "page-0782-block-0009",
+      "order": 9,
+      "text": "Healthcare professionals should be aware of the risk of medicines that prolong the \nQT interval. All patients with a diagnosis of anorexia nervosa should have an alert \nplaced in their prescribing record noting that they are at increased risk of arrhythmias \nsecondary to electrolyte disturbances and potential cardiac complications associated \nwith inadequate nutrition. ECG monitoring should be undertaken if the prescription of \nany medicine that may compromise cardiac functioning is essential.4\n",
+      "bbox": [
+        48.0,
+        390.9104919433594,
+        422.8000183105469,
+        462.6304931640625
+      ],
+      "text_sha256": "bdefc19e234bcab5bf0d4ebbfc923b4860cc19197c1daa4a01827ac728149507"
+    },
+    {
+      "block_id": "page-0782-block-0010",
+      "order": 10,
+      "text": "Physical aspects\n",
+      "bbox": [
+        48.0,
+        480.06549072265625,
+        129.89500427246094,
+        493.1004943847656
+      ],
+      "text_sha256": "16cc3a8180b40e21fe925b5016975b9f8d3b7d1e1572074a1949cd41eb4f88cc"
+    },
+    {
+      "block_id": "page-0782-block-0011",
+      "order": 11,
+      "text": "Vitamins and minerals\n",
+      "bbox": [
+        48.0,
+        499.00048828125,
+        152.46998596191406,
+        510.8504943847656
+      ],
+      "text_sha256": "14f9db1d49099360b1a9e8e4ae8a6e4525c5234333e6c9c8445c0838c8208e8e"
+    },
+    {
+      "block_id": "page-0782-block-0012",
+      "order": 12,
+      "text": "Treatment with a multivitamin/multimineral supplement in oral form is recommended \nduring both inpatient and outpatient weight restoration.4\n",
+      "bbox": [
+        48.0,
+        516.9104614257812,
+        422.79998779296875,
+        540.6304931640625
+      ],
+      "text_sha256": "6330cfcf4eeeae3e96eb0e0295401cc1742a44bf8dd98ec3ac7db68093d042d9"
+    },
+    {
+      "block_id": "page-0782-block-0013",
+      "order": 13,
+      "text": "Electrolytes\n",
+      "bbox": [
+        48.0,
+        559.00048828125,
+        102.45999908447266,
+        570.8504638671875
+      ],
+      "text_sha256": "ac9ef0883ed8d2bd79449c89d9e903715f97d544f171125fb53d5d8e15e8b8fb"
+    },
+    {
+      "block_id": "page-0782-block-0014",
+      "order": 14,
+      "text": "Electrolyte disturbances (e.g. hypokalaemia) may develop slowly over time and may be \nasymptomatic and resolve with re-feeding. Hypophosphataemia may also be precipi-\ntated by re-feeding. Rapid correction may be hazardous. Oral supplementation is \n",
+      "bbox": [
+        48.0,
+        576.9104614257812,
+        422.8099670410156,
+        612.6304931640625
+      ],
+      "text_sha256": "ff3251ea121808af23036d8dca72b288865cbb46f846a348e0a7f69a74592f9e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

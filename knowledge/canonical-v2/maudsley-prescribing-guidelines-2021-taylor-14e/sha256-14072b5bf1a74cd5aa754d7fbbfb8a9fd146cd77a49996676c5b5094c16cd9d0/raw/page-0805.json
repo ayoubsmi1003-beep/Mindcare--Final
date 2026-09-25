@@ -1,0 +1,107 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0805",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 805,
+  "source_page_index": 804,
+  "source_page_display": 805,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "784    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\n\t36.\t Ambrosius B, et al. Antineuroinflammatory drugs in HIV-associated neurocognitive disorders as potential therapy. Neurol Neuroimmunol \nNeuroinflamm 2019; 6:e551.\n\t37.\t Sacktor N, et al. Paroxetine and fluconazole therapy for HIV-associated neurocognitive impairment: results from a double-blind, placebo-\ncontrolled trial. J Neurovirol 2018; 24:16–27.\n\t38.\t Panel on Antiretroviral Guidelines for Adults and Adolescents. Guidelines for the Use of Antiretroviral Agents in Adults and Adolescents \nLiving with HIV. Department of Health and Human Services. 2019;  https://clinicalinfo.hiv.gov/en.\n\t39.\t European AIDS Clinical Society. Guidelines Version 9.0 October 2017.  http://www.eacsociety.org/files/guidelines_9.0-english.pdf.\n\t40.\t World Health Organisation. Consolidated guidelines on the use of antiretroviral drugs for treating and preventing HIV infection. \nRecommendations for a public health approach - Second edition. 2016; http://www.who.int/hiv/pub/arv/arv-2016/en/.\n41.\t Parker C. Psychiatric effects of drugs for other disorders. Medicine 2016; 44:768–774.\n",
+  "raw_text_sha256": "18e01106e6b3a520357a3f0e229d8d3d43ca431c5dbdb410f99a54ab04d293b5",
+  "coordinates_sha256": "92b8a32a984ce90682b2285109df487df94466f8fd551c6232a7a24e5e501ace",
+  "block_sequence_sha256": "11ba47f4d4ef4466064953dbb1df2706fa277e57f534ecf6cff85f76de3b0c97",
+  "blocks": [
+    {
+      "block_id": "page-0805-block-0000",
+      "order": 0,
+      "text": "784    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "78f09627867a41f6c7331230f99c94fb2be51f354b5b334d28298cdfc4ba5aa4"
+    },
+    {
+      "block_id": "page-0805-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0805-block-0002",
+      "order": 2,
+      "text": "\t36.\t Ambrosius B, et al. Antineuroinflammatory drugs in HIV-associated neurocognitive disorders as potential therapy. Neurol Neuroimmunol \n",
+      "bbox": [
+        61.889801025390625,
+        63.2703857421875,
+        435.5697326660156,
+        70.30238342285156
+      ],
+      "text_sha256": "f87496ee1cf240f588e579722f901edc5e47bb893b0b937af034b9d071b5be84"
+    },
+    {
+      "block_id": "page-0805-block-0003",
+      "order": 3,
+      "text": "Neuroinflamm 2019; 6:e551.\n\t37.\t Sacktor N, et al. Paroxetine and fluconazole therapy for HIV-associated neurocognitive impairment: results from a double-blind, placebo-\n",
+      "bbox": [
+        61.89580154418945,
+        72.12638854980469,
+        433.9138488769531,
+        88.30238342285156
+      ],
+      "text_sha256": "bd27ba4e831a8e58d83ec69d56f3360a47300923833598fb5a660a28f8cb490a"
+    },
+    {
+      "block_id": "page-0805-block-0004",
+      "order": 4,
+      "text": "controlled trial. J Neurovirol 2018; 24:16–27.\n\t38.\t Panel on Antiretroviral Guidelines for Adults and Adolescents. Guidelines for the Use of Antiretroviral Agents in Adults and Adolescents \n",
+      "bbox": [
+        61.901798248291016,
+        90.2703857421875,
+        435.5697937011719,
+        106.30238342285156
+      ],
+      "text_sha256": "699bbb7a45f481e12a45941a7a4f80971ace0528eb1b903882f4b9b8190e34b7"
+    },
+    {
+      "block_id": "page-0805-block-0005",
+      "order": 5,
+      "text": "Living with HIV. Department of Health and Human Services. 2019;  https://clinicalinfo.hiv.gov/en.\n\t39.\t European AIDS Clinical Society. Guidelines Version 9.0 October 2017.  http://www.eacsociety.org/files/guidelines_9.0-english.pdf.\n\t40.\t World Health Organisation. Consolidated guidelines on the use of antiretroviral drugs for treating and preventing HIV infection. \n",
+      "bbox": [
+        61.907798767089844,
+        108.2703857421875,
+        435.5517272949219,
+        133.30238342285156
+      ],
+      "text_sha256": "69e2b1d0e7420e3228a0069cac596e7844fdb1a3410e9409a10d77125cf1d6ca"
+    },
+    {
+      "block_id": "page-0805-block-0006",
+      "order": 6,
+      "text": "Recommendations for a public health approach - Second edition. 2016; http://www.who.int/hiv/pub/arv/arv-2016/en/.\n41.\t Parker C. Psychiatric effects of drugs for other disorders. Medicine 2016; 44:768–774.\n",
+      "bbox": [
+        61.9197998046875,
+        135.2703857421875,
+        377.9037170410156,
+        151.30238342285156
+      ],
+      "text_sha256": "2f102f6fb439bf051d04dae9cb61abccc7f0dee8c0b9a48afc2b508d49867741"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

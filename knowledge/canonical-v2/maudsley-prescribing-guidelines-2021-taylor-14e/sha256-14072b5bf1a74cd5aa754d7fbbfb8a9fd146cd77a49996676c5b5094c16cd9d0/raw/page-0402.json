@@ -1,0 +1,395 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0402",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 402,
+  "source_page_index": 401,
+  "source_page_display": 402,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    381\nCHAPTER 3\nTable 3.15  Pharmacokinetic interactions – a brief summary of important interactions3,15\nCYP1A2\nCYP2B6\nCYP2C9\nCYP2C19\nCYP2D6\nCYP3A4/5/7\nGenetic \npolymorphism\nUltra-rapid \nmetabolisers \npossible\n2–10% of total \nhepatic CYP \ncontent16\n5–10% of \nCaucasians \npoor \nmetabolisers\n~20% of Asians \nand 3–5% \nCaucasians are \npoor metabolisers\n3–5% of \nCaucasians poor \nmetabolisers\n60% p450 \ncontent\nInduced by:\nInduced by:\nInduced by:\nInduced by:\nInduced by:\nInduced by:\nCarbamazepine\nCharcoal cooking\nTobacco smoke\nOmeprazole\nPhenobarbital\nPhenytoin\nCarbamazepine\nEfavirenz\nLopinavir\nRifampicin\nRitonavir\nPhenytoin\nRifampicin\nApalutamide\nRifampicin\nEnzalutamide\nArtemisinin\nEfavirenz\nCarbamazepine\nPhenytoin\nCarbamazepine\nPhenytoin\nPrednisolone\nRifampicin\nInhibited by:\nInhibited by:\nInhibited by:\nInhibited by:\nInhibited by:\nInhibited by:\nCimetidine\nCiprofloxacin\nErythromycin\nFluvoxamine\nClopidogrel\nTiclopidine\nVoriconazole\nCimetidine\nFluoxetine\nFluvoxamine\nMoclobemide\nSertraline\nFluconazole\nFluoxetine\nFluvoxamine\nEsomeprazole\nMoclobemide\nOmeprazole\nVoriconazole\nArmodafinil\nEtravirine\nIsoniazid\nModafinil\nCimetidine\nChlorpromazine\nBupropion\nDuloxetine\nFluoxetine\nFluphenazine\nHaloperidol\nParoxetine\nSertraline\nTricyclics\nErythromycin\nFluoxetine\nFluvoxamine\nGrapefruit Juice\nKetoconazole\nNorfluoxetine\nParoxetine\nSertraline\nTricyclics\nMetabolises:\nMetabolises:\nMetabolises:\nMetabolises:\nMetabolises:\nMetabolises:\nAgomelatine\nBenzodiazepines\nCaffeine\nClozapine\nDuloxetine\nHaloperidol\nMirtazapine\nOlanzapine\nRamelteon\nTheophylline\nTizanidine\nTricyclics\nWarfarin\nBupropion\nMethadone\nTramadol\nAgomelatine\nBupropion\nCitalopram\nDiazepam\nOmeprazole\nPhenytoin\nTricyclics\nWarfarin\nCitalopram\nDiazepam\nMoclobemide\nClozapine\nCodeine\nDonepezil\nDuloxetine\nHaloperidol\nPhenothiazines\nRisperidone\nTamoxifen\nTricyclics\nTramadol\nTrazodone\nVenlafaxine\nVortioxetine\nCalcium \nBlockers\nCarbamazepine\nClozapine\nDonepezil\nErythromycin\nGalantamine\nMethadone\nLevomilnacipran\nMirtazapine\nReboxetine\nRisperidone\nStatins\nTricyclics\nValproate\nVenlafaxine\nVilazodone\nVortioxetine\nZ-hypnotics\n",
+  "raw_text_sha256": "2a274ec4155b47369935bba7e8aad80e55a7ac83bf864eac1c4090226919b066",
+  "coordinates_sha256": "d4b8c67faaa2117f2163f32db3bd751b2311dc72eaad129abde73b843d3a8ac0",
+  "block_sequence_sha256": "5b8b56e0438b4e11ce71e7c8fb5fdfffaa31ee58ed93a71d02ec5abd7b2eb5d6",
+  "blocks": [
+    {
+      "block_id": "page-0402-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    381\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "38ee9a635e80d3a90673609ee98561f95196c21f1552a9341df6dec03b468475"
+    },
+    {
+      "block_id": "page-0402-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0402-block-0002",
+      "order": 2,
+      "text": "Table 3.15  Pharmacokinetic interactions – a brief summary of important interactions3,15\n",
+      "bbox": [
+        53.999698638916016,
+        70.08790588378906,
+        334.1855163574219,
+        78.97540283203125
+      ],
+      "text_sha256": "409d803a8ac9ac64bef10dca6bb7ca0942a45aa329aceaf171fd430bfbfb6e67"
+    },
+    {
+      "block_id": "page-0402-block-0003",
+      "order": 3,
+      "text": "CYP1A2\nCYP2B6\nCYP2C9\nCYP2C19\nCYP2D6\nCYP3A4/5/7\n",
+      "bbox": [
+        47.999698638916016,
+        90.32289123535156,
+        406.769775390625,
+        99.21038818359375
+      ],
+      "text_sha256": "12b4c4a19cc375b7f309e63e421efdbfd989076966e34ef7d5c00e26c0c05caf"
+    },
+    {
+      "block_id": "page-0402-block-0004",
+      "order": 4,
+      "text": "Genetic \npolymorphism\nUltra-rapid \nmetabolisers \npossible\n",
+      "bbox": [
+        47.99967956542969,
+        107.2804183959961,
+        93.419677734375,
+        155.9779052734375
+      ],
+      "text_sha256": "97988b7e23786dfac53104fc8a9af86f3a2cfc5cb2baf17c4a0d50d407f75f92"
+    },
+    {
+      "block_id": "page-0402-block-0005",
+      "order": 5,
+      "text": "2–10% of total \nhepatic CYP \ncontent16\n",
+      "bbox": [
+        116.24967956542969,
+        107.27291107177734,
+        167.51217651367188,
+        135.97540283203125
+      ],
+      "text_sha256": "cc5d6983cf75ea3a2bab57d88b1b0f88b1ad16599b9fcb9d708d7bb78a87c6de"
+    },
+    {
+      "block_id": "page-0402-block-0006",
+      "order": 6,
+      "text": "5–10% of \nCaucasians \npoor \nmetabolisers\n",
+      "bbox": [
+        179.0363006591797,
+        107.27791595458984,
+        219.0337677001953,
+        145.9779052734375
+      ],
+      "text_sha256": "df1e67d5e6fa4f3c3f144a125bb5f85722ed25dd169002f273feee5cb45f203c"
+    },
+    {
+      "block_id": "page-0402-block-0007",
+      "order": 7,
+      "text": "~20% of Asians \nand 3–5% \nCaucasians are \npoor metabolisers\n",
+      "bbox": [
+        233.24630737304688,
+        107.2704086303711,
+        290.2463684082031,
+        145.97039794921875
+      ],
+      "text_sha256": "7cca080e5164a994d72d7c5d2f7f1cb2e3e8f5887a8727a3c53cd44a94c0b3c7"
+    },
+    {
+      "block_id": "page-0402-block-0008",
+      "order": 8,
+      "text": "3–5% of \nCaucasians poor \nmetabolisers\n",
+      "bbox": [
+        302.2463073730469,
+        107.26290130615234,
+        356.83135986328125,
+        135.96539306640625
+      ],
+      "text_sha256": "cf1dbac313a51a2a784fa4cdde403c80f61ae42f8d01ef3eecf1c158a94d173c"
+    },
+    {
+      "block_id": "page-0402-block-0009",
+      "order": 9,
+      "text": "60% p450 \ncontent\n",
+      "bbox": [
+        366.7463073730469,
+        107.2553939819336,
+        403.4363708496094,
+        125.96038818359375
+      ],
+      "text_sha256": "0e8ef7ee8b2f124a1248a65b55db8ea7acee129c936c0f9df4f652f22a5e4024"
+    },
+    {
+      "block_id": "page-0402-block-0010",
+      "order": 10,
+      "text": "Induced by:\nInduced by:\nInduced by:\nInduced by:\nInduced by:\nInduced by:\n",
+      "bbox": [
+        47.996307373046875,
+        162.23040771484375,
+        403.84136962890625,
+        170.98291015625
+      ],
+      "text_sha256": "115486ef70563ee713fa0bb1d886520117929d0ecd24bec0735618db2a8ba6ea"
+    },
+    {
+      "block_id": "page-0402-block-0011",
+      "order": 11,
+      "text": "Carbamazepine\nCharcoal cooking\nTobacco smoke\nOmeprazole\nPhenobarbital\nPhenytoin\n",
+      "bbox": [
+        47.996307373046875,
+        177.2978973388672,
+        103.70630645751953,
+        235.99288940429688
+      ],
+      "text_sha256": "a723aee48e6cba47849fe009dbb2b5eba16ab46f6bd295333e3c9b1f3909e129"
+    },
+    {
+      "block_id": "page-0402-block-0012",
+      "order": 12,
+      "text": "Carbamazepine\nEfavirenz\nLopinavir\nRifampicin\nRitonavir\n",
+      "bbox": [
+        116.24630737304688,
+        177.2828826904297,
+        166.24879455566406,
+        225.98037719726562
+      ],
+      "text_sha256": "cdf741bd07b0dceb0d74a004490b39b82499e16f43b54381fd7f12fba46548ec"
+    },
+    {
+      "block_id": "page-0402-block-0013",
+      "order": 13,
+      "text": "Phenytoin\nRifampicin\n",
+      "bbox": [
+        179.0363006591797,
+        177.27537536621094,
+        212.36627197265625,
+        195.98037719726562
+      ],
+      "text_sha256": "38ee6ebdf8737d18425045b15fdf93378ac1065ac3148b40fae4f780f329869f"
+    },
+    {
+      "block_id": "page-0402-block-0014",
+      "order": 14,
+      "text": "Apalutamide\nRifampicin\nEnzalutamide\nArtemisinin\nEfavirenz\n",
+      "bbox": [
+        233.24630737304688,
+        177.27537536621094,
+        276.16131591796875,
+        225.97286987304688
+      ],
+      "text_sha256": "92accb30daa6199540286c08d2f534c9ce69d0676863f349705b1de4d54bbcc2"
+    },
+    {
+      "block_id": "page-0402-block-0015",
+      "order": 15,
+      "text": "Carbamazepine\nPhenytoin\n",
+      "bbox": [
+        302.2463073730469,
+        177.2678680419922,
+        352.24884033203125,
+        195.97286987304688
+      ],
+      "text_sha256": "fca1ee68c5ede7a971b98b99246b3475418fe1126989886fbfd957f2682ea956"
+    },
+    {
+      "block_id": "page-0402-block-0016",
+      "order": 16,
+      "text": "Carbamazepine\nPhenytoin\nPrednisolone\nRifampicin\n",
+      "bbox": [
+        366.7463073730469,
+        177.2678680419922,
+        416.74884033203125,
+        215.96786499023438
+      ],
+      "text_sha256": "4f180925c7352ce23370cccd31d92b6c3f882ec8fbda0e01108b9e0fdd884a86"
+    },
+    {
+      "block_id": "page-0402-block-0017",
+      "order": 17,
+      "text": "Inhibited by:\nInhibited by:\nInhibited by:\nInhibited by:\nInhibited by:\nInhibited by:\n",
+      "bbox": [
+        47.996307373046875,
+        242.2403564453125,
+        406.3388977050781,
+        250.99285888671875
+      ],
+      "text_sha256": "d783087f4d217c8a33c90cb67d8b98abdecb0270593104f93db5d1e96773df15"
+    },
+    {
+      "block_id": "page-0402-block-0018",
+      "order": 18,
+      "text": "Cimetidine\nCiprofloxacin\nErythromycin\nFluvoxamine\n",
+      "bbox": [
+        47.996307373046875,
+        257.307861328125,
+        89.94381713867188,
+        296.0078430175781
+      ],
+      "text_sha256": "d7b3bd9104ed85853e1c561c2b297626e9b2109476b98bfdde68ae952f8a613a"
+    },
+    {
+      "block_id": "page-0402-block-0019",
+      "order": 19,
+      "text": "Clopidogrel\nTiclopidine\nVoriconazole\n",
+      "bbox": [
+        116.24630737304688,
+        257.30035400390625,
+        157.0837860107422,
+        286.0028381347656
+      ],
+      "text_sha256": "d5fa30d76406e8eacf79a4bc1d6bdfc93a9b10a24f94e92dc4a4f65e181ccf45"
+    },
+    {
+      "block_id": "page-0402-block-0020",
+      "order": 20,
+      "text": "Cimetidine\nFluoxetine\nFluvoxamine\nMoclobemide\nSertraline\n",
+      "bbox": [
+        179.0363006591797,
+        257.2928466796875,
+        222.79127502441406,
+        305.9903259277344
+      ],
+      "text_sha256": "66ddb097920acd403128829c337c4357c889b262eb0f4a97ef096c6eae497142"
+    },
+    {
+      "block_id": "page-0402-block-0021",
+      "order": 21,
+      "text": "Fluconazole\nFluoxetine\nFluvoxamine\nEsomeprazole\nMoclobemide\nOmeprazole\nVoriconazole\nArmodafinil\nEtravirine\nIsoniazid\nModafinil\nCimetidine\n",
+      "bbox": [
+        233.24630737304688,
+        257.28533935546875,
+        277.413818359375,
+        375.9653015136719
+      ],
+      "text_sha256": "10eeaa28e4aaaa91da2e0b179a5656c6da8a48cb1112f60057755e38505f704c"
+    },
+    {
+      "block_id": "page-0402-block-0022",
+      "order": 22,
+      "text": "Chlorpromazine\nBupropion\nDuloxetine\nFluoxetine\nFluphenazine\nHaloperidol\nParoxetine\nSertraline\nTricyclics\n",
+      "bbox": [
+        302.2463073730469,
+        257.25531005859375,
+        353.3663635253906,
+        345.9427795410156
+      ],
+      "text_sha256": "26e98e3a9556cb28d2fe41ad205a722a5b170a8fb9b46cc4b338c74d8f5c165b"
+    },
+    {
+      "block_id": "page-0402-block-0023",
+      "order": 23,
+      "text": "Erythromycin\nFluoxetine\nFluvoxamine\nGrapefruit Juice\nKetoconazole\nNorfluoxetine\nParoxetine\nSertraline\nTricyclics\n",
+      "bbox": [
+        366.7463073730469,
+        257.2327880859375,
+        417.1538391113281,
+        345.9202575683594
+      ],
+      "text_sha256": "8e072817005c6f13c258265e568efd4b1bb929d80f66af945af03bc62906ff3f"
+    },
+    {
+      "block_id": "page-0402-block-0024",
+      "order": 24,
+      "text": "Metabolises:\nMetabolises:\nMetabolises:\nMetabolises:\nMetabolises:\nMetabolises:\n",
+      "bbox": [
+        47.996307373046875,
+        382.19024658203125,
+        406.7514343261719,
+        390.9427490234375
+      ],
+      "text_sha256": "4d26beab14f06f7080db98e26639941224389318db46c302920ea95b213ea23c"
+    },
+    {
+      "block_id": "page-0402-block-0025",
+      "order": 25,
+      "text": "Agomelatine\nBenzodiazepines\nCaffeine\nClozapine\nDuloxetine\nHaloperidol\nMirtazapine\nOlanzapine\nRamelteon\nTheophylline\nTizanidine\nTricyclics\nWarfarin\n",
+      "bbox": [
+        47.996307373046875,
+        397.25775146484375,
+        100.92381286621094,
+        525.9351806640625
+      ],
+      "text_sha256": "3b704ad1f41dd11996a51f6dce0e8f0b2e00ff35857fa9e5cfaee72aeff5bcf2"
+    },
+    {
+      "block_id": "page-0402-block-0026",
+      "order": 26,
+      "text": "Bupropion\nMethadone\nTramadol\n",
+      "bbox": [
+        116.24630737304688,
+        397.22772216796875,
+        153.34130859375,
+        425.9302062988281
+      ],
+      "text_sha256": "0b26410586db218c019446b5cf6d67f24a6c5d6e4aca49dfcc151015cd032554"
+    },
+    {
+      "block_id": "page-0402-block-0027",
+      "order": 27,
+      "text": "Agomelatine\nBupropion\nCitalopram\nDiazepam\nOmeprazole\nPhenytoin\nTricyclics\nWarfarin\n",
+      "bbox": [
+        179.0363006591797,
+        397.22021484375,
+        219.873779296875,
+        475.9101867675781
+      ],
+      "text_sha256": "f3385268be36810c278139720e212d3c543ff594fc39d0f247b35be9d6b474a8"
+    },
+    {
+      "block_id": "page-0402-block-0028",
+      "order": 28,
+      "text": "Citalopram\nDiazepam\nMoclobemide\n",
+      "bbox": [
+        233.24630737304688,
+        397.2052001953125,
+        277.0013122558594,
+        425.9076843261719
+      ],
+      "text_sha256": "6918eace63af2a3edeb445c31b925208e005e63aeaa58703cc2d90428ef55518"
+    },
+    {
+      "block_id": "page-0402-block-0029",
+      "order": 29,
+      "text": "Clozapine\nCodeine\nDonepezil\nDuloxetine\nHaloperidol\nPhenothiazines\nRisperidone\nTamoxifen\nTricyclics\nTramadol\nTrazodone\nVenlafaxine\nVortioxetine\n",
+      "bbox": [
+        302.2463073730469,
+        397.19769287109375,
+        350.17138671875,
+        525.8751220703125
+      ],
+      "text_sha256": "a40020780d53ec226b9a72cb45fc81c28289062a3c1e949dbf4a677f67dc8e8f"
+    },
+    {
+      "block_id": "page-0402-block-0030",
+      "order": 30,
+      "text": "Calcium \nBlockers\nCarbamazepine\nClozapine\nDonepezil\nErythromycin\nGalantamine\nMethadone\nLevomilnacipran\nMirtazapine\nReboxetine\nRisperidone\nStatins\nTricyclics\nValproate\nVenlafaxine\nVilazodone\nVortioxetine\nZ-hypnotics\n",
+      "bbox": [
+        366.7463073730469,
+        397.16766357421875,
+        418.4063415527344,
+        585.830078125
+      ],
+      "text_sha256": "04e7603e27877e6697f750e65e2cfdfb59f33a6db34d2feebf8537e6254411fd"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0829",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 829,
+  "source_page_index": 828,
+  "source_page_display": 829,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "808    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\nMultiple sclerosis\nMultiple sclerosis (MS) is a common cause of neurological disability affecting approxi-\nmately 85,000 people in the United Kingdom with the onset usually between 20 and \n50 years of age. Individuals with MS experience a variety of psychiatric and neurological \ndisorders such as depression, anxiety, pathological laughter and crying (pseudobulbar affect, \nPBA), mania and euphoria, psychosis/bipolar disorder, fatigue and cognitive impairment. \nPsychiatric disorders result from the psychological impact of MS diagnosis and its progno-\nsis, perceived lack of social support or unhelpful coping styles,1 increased stress,2 iatrogenic \neffects of treatments commonly used with MS,3,4 or damage to neuronal pathways.3\nDepression\nIn people with MS, depression is common with a point prevalence of 14–31%5,6 and life-\ntime prevalence of up to 50%.7,8 Suicide rates are 2–7.5 times higher than the general popu-\nlation.9 Depression is often associated with fatigue and pain, though the relationship \ndirection is unclear. Overlapping symptoms of depression, PBA and MS can complicate \ndiagnosis and so co-operation between neurologists and psychiatrists is essential to ensure \noptimal treatment for individuals with MS. Depression in MS may result from structural \nchanges in the brain and, as such, it may differ fundamentally from non-MS depression.10\nThe role of interferon-beta in the aetiology of MS depression is unclear, but it is now \nthought that depression occurs no more frequently in people treated with interferon-\nbeta.11–13 Standard care for initiation of interferon-beta should include assessment for \ndepression and, for those with a past history of depressive illness, prophylactic treatment \nwith an antidepressant.3 The same applies to those disease-modifying biological treat-\nments that are associated with depression (daclizumab, alemtuzumab, natalizumab, etc.).4\nRecommendations for treatment\nDepression in MS\nStep\nIntervention\n1\nScreen for depression with PHQ-9 HADS/BDI14/CES-D.15 Exclude and treat any organic causes. Consider iatrogenic \neffects of medications as potential cause of depression. Ensure there is no past history of mania or bipolar \ndisorder. People with mild depression should be considered for cognitive behaviour therapy16 or self-help.17\n2\nSSRIs should be first-line treatment3,15,18,19 because of their relatively benign side-effect profile\nSertraline was as effective as CBT in one trial,20 but paroxetine was found to be no more effective than \nplacebo in another study.21 Fluoxetine was effective in MS-related depression in a small case series.22 \nBecause of reduced tolerability of side effects in this patient group, medications should be titrated from an \ninitial half dose. Many MS patients are prescribed low-dose TCAs for pain/bladder disturbance and so SSRIs \nshould be used with caution and patients should be observed for serotonin syndrome. For those with \nco-morbid pain consideration should be given to treating with an SNRI such as duloxetine23 or venlafaxine.24 \nOne RCT of desipramine showed it was more effective than placebo, but tricyclics in general are often \npoorly tolerated.25 In 2011, Cochrane was not convinced by the studies cited here,26 but there is little reason \nto suppose that antidepressants are any less effective in depression associated with physical illness.27 CBT is \nthe most appropriate psychological intervention with best efficacy in comparison to supportive therapy or \nusual care, and should be used in conjunction with medication for those who are moderately severely \ndepressed.20,28,29 Mindfulness training may also help.30 Omega-3 fatty acids are ineffective.31\n(Continued)\n",
+  "raw_text_sha256": "20aaf4be590a33794e765410d2372d7e31a997d2f68e5e5577b45b548c04f2bd",
+  "coordinates_sha256": "ec597c8cf8f0e28081969007a8504e66a822046e0a45bc74472b7819412e9ed0",
+  "block_sequence_sha256": "545fee3130c0de0ac238b2d73e2b155c1bd55cc8fd7d6b5cb795ddfc2bb15cb4",
+  "blocks": [
+    {
+      "block_id": "page-0829-block-0000",
+      "order": 0,
+      "text": "808    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "d7e300ebdb2667607126cdff5b8634a542d18ee100dab9c11523682b24d693e9"
+    },
+    {
+      "block_id": "page-0829-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0829-block-0002",
+      "order": 2,
+      "text": "Multiple sclerosis\n",
+      "bbox": [
+        68.88929748535156,
+        66.06539916992188,
+        157.9123077392578,
+        79.10040283203125
+      ],
+      "text_sha256": "3041c5f850991b0c8426d174f645a8baecda5fe9f60fa6542727ef40442d125e"
+    },
+    {
+      "block_id": "page-0829-block-0003",
+      "order": 3,
+      "text": "Multiple sclerosis (MS) is a common cause of neurological disability affecting approxi-\nmately 85,000 people in the United Kingdom with the onset usually between 20 and \n50 years of age. Individuals with MS experience a variety of psychiatric and neurological \ndisorders such as depression, anxiety, pathological laughter and crying (pseudobulbar affect, \nPBA), mania and euphoria, psychosis/bipolar disorder, fatigue and cognitive impairment. \nPsychiatric disorders result from the psychological impact of MS diagnosis and its progno-\nsis, perceived lack of social support or unhelpful coping styles,1 increased stress,2 iatrogenic \neffects of treatments commonly used with MS,3,4 or damage to neuronal pathways.3\n",
+      "bbox": [
+        61.886322021484375,
+        84.910400390625,
+        436.6991271972656,
+        180.63040161132812
+      ],
+      "text_sha256": "8278fc94c600699ed7a332c649fc4a0010bbe5fddc597648013e42582fec737a"
+    },
+    {
+      "block_id": "page-0829-block-0004",
+      "order": 4,
+      "text": "Depression\n",
+      "bbox": [
+        61.889400482177734,
+        198.06539916992188,
+        119.1333999633789,
+        211.10040283203125
+      ],
+      "text_sha256": "ce671d3d1ab8a2414473ed7cde1062546ccf670ea792bc40a6968a2aa033a858"
+    },
+    {
+      "block_id": "page-0829-block-0005",
+      "order": 5,
+      "text": "In people with MS, depression is common with a point prevalence of 14–31%5,6 and life-\ntime prevalence of up to 50%.7,8 Suicide rates are 2–7.5 times higher than the general popu-\nlation.9 Depression is often associated with fatigue and pain, though the relationship \ndirection is unclear. Overlapping symptoms of depression, PBA and MS can complicate \ndiagnosis and so co-operation between neurologists and psychiatrists is essential to ensure \noptimal treatment for individuals with MS. Depression in MS may result from structural \nchanges in the brain and, as such, it may differ fundamentally from non-MS depression.10\n",
+      "bbox": [
+        61.885498046875,
+        216.910400390625,
+        436.6940002441406,
+        300.6304016113281
+      ],
+      "text_sha256": "e9cb6a2b289256f60401da3ed9867fb08752e22370d749a112db4c1d8f5bc83f"
+    },
+    {
+      "block_id": "page-0829-block-0006",
+      "order": 6,
+      "text": "The role of interferon-beta in the aetiology of MS depression is unclear, but it is now \nthought that depression occurs no more frequently in people treated with interferon-\nbeta.11–13 Standard care for initiation of interferon-beta should include assessment for \ndepression and, for those with a past history of depressive illness, prophylactic treatment \nwith an antidepressant.3 The same applies to those disease-modifying biological treat-\nments that are associated with depression (daclizumab, alemtuzumab, natalizumab, etc.).4\n",
+      "bbox": [
+        61.88529968261719,
+        300.910400390625,
+        436.6697998046875,
+        372.6304016113281
+      ],
+      "text_sha256": "620976b61d66d8e29fb174953175ee5552a2038824694c3dc37f6c7b9bc4d5f5"
+    },
+    {
+      "block_id": "page-0829-block-0007",
+      "order": 7,
+      "text": "Recommendations for treatment\n",
+      "bbox": [
+        61.889400482177734,
+        390.0653991699219,
+        230.38742065429688,
+        403.10040283203125
+      ],
+      "text_sha256": "08eddfefc511ec278ffb881a62d8bcd2a7be873ba3d65e96f58c416d7a523349"
+    },
+    {
+      "block_id": "page-0829-block-0008",
+      "order": 8,
+      "text": "Depression in MS\n",
+      "bbox": [
+        61.889400482177734,
+        409.0003967285156,
+        143.5594024658203,
+        420.85040283203125
+      ],
+      "text_sha256": "7ff6748198908075de5bc35b7d6dd932db60f790f92a05bab9d4d82e854962cb"
+    },
+    {
+      "block_id": "page-0829-block-0009",
+      "order": 9,
+      "text": "Step\nIntervention\n",
+      "bbox": [
+        65.88939666748047,
+        433.0728759765625,
+        134.97940063476562,
+        441.96038818359375
+      ],
+      "text_sha256": "226955917d1a9ae551d54b27d8369810f1ceb1bcd1e1028448b6ed101a4b17c3"
+    },
+    {
+      "block_id": "page-0829-block-0010",
+      "order": 10,
+      "text": "1\nScreen for depression with PHQ-9 HADS/BDI14/CES-D.15 Exclude and treat any organic causes. Consider iatrogenic \neffects of medications as potential cause of depression. Ensure there is no past history of mania or bipolar \ndisorder. People with mild depression should be considered for cognitive behaviour therapy16 or self-help.17\n",
+      "bbox": [
+        65.88939666748047,
+        450.8778991699219,
+        431.6747741699219,
+        479.58538818359375
+      ],
+      "text_sha256": "c36cf91e638994c94ab2f638c5b5b6c25dcd3da29a903e16053e54f41f5ac4a7"
+    },
+    {
+      "block_id": "page-0829-block-0011",
+      "order": 11,
+      "text": "2\nSSRIs should be first-line treatment3,15,18,19 because of their relatively benign side-effect profile\nSertraline was as effective as CBT in one trial,20 but paroxetine was found to be no more effective than \nplacebo in another study.21 Fluoxetine was effective in MS-related depression in a small case series.22 \nBecause of reduced tolerability of side effects in this patient group, medications should be titrated from an \ninitial half dose. Many MS patients are prescribed low-dose TCAs for pain/bladder disturbance and so SSRIs \nshould be used with caution and patients should be observed for serotonin syndrome. For those with \nco-morbid pain consideration should be given to treating with an SNRI such as duloxetine23 or venlafaxine.24 \nOne RCT of desipramine showed it was more effective than placebo, but tricyclics in general are often \npoorly tolerated.25 In 2011, Cochrane was not convinced by the studies cited here,26 but there is little reason \nto suppose that antidepressants are any less effective in depression associated with physical illness.27 CBT is \nthe most appropriate psychological intervention with best efficacy in comparison to supportive therapy or \nusual care, and should be used in conjunction with medication for those who are moderately severely \ndepressed.20,28,29 Mindfulness training may also help.30 Omega-3 fatty acids are ineffective.31\n",
+      "bbox": [
+        65.88939666748047,
+        488.5028991699219,
+        431.987548828125,
+        617.2103881835938
+      ],
+      "text_sha256": "a0c5bfd8ab2d10b42d979c8931239ebfef8e92e7d3248f863b547c4fafdd253f"
+    },
+    {
+      "block_id": "page-0829-block-0012",
+      "order": 12,
+      "text": "(Continued)\n",
+      "bbox": [
+        397.375,
+        629.7407836914062,
+        433.38995361328125,
+        638.4932861328125
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

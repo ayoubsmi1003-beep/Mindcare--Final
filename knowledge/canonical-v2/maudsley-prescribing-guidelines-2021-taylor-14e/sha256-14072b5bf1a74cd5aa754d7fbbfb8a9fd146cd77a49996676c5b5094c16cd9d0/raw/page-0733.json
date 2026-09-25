@@ -1,0 +1,599 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0733",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 733,
+  "source_page_index": 732,
+  "source_page_display": 733,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug\nInfant plasma \nconcentration\nEstimated daily infant \ndose as proportion of \nmaternal dose (RID)\nAcute adverse effects in \ninfant\nDevelopmental effects in infant\nZiprasidone4,22,110,152\nNot reported.\n0.07–1.2%\nNone reported.\nNone reported.\nIloperidone\nNo published data available \nat the time of writing.\n*A proportion of the drug detected may have been due to placental transfer following in utero exposure.\nTable 7.4  (Continued)\nTable 7.5  Mood stabilisers in breastfeeding\nDrug\nInfant plasma \nconcentration\nEstimated daily infant \ndose as proportion of \nmaternal dose (RID)\nAcute adverse effects in infant\nDevelopmental effects in infant\nCarbamazepine4,14,153–163\nGenerally low although \none report of an infant \nplasma level within adult \ntherapeutic range.\n1.1–7.3%\nAdverse effects have not been \nreported for a number of infants.\nOne case of cholestatic hepatitis, one \nof transient hepatic dysfunction with \nhyperbilirubinaemia and elevated \nGGT. The adverse effects in the first \ncase resolved after discontinuation of \nbreastfeeding and the second \nresolved despite continued feeding.\nOne case of seizure-like activity, \ndrowsiness, irritability and high-\npitched crying. Mother was taking \nmultiple agents.\nNone reported.\nA prospective study of children of women \nwith epilepsy found no adverse \ndevelopment at ages 6–36 months. The \nstudy assessed outcomes in children \nexposed to anticonvulsants in utero who \nwere subsequently breastfed compared \nwith those who were not.\nA study of 199 infants exposed to \nantiepileptic medications in utero and \nthrough breast milk failed to show a \ndifference in IQ between breastfed and \nnon-breastfed infants at the age of 3 years.\n(Continued)\n",
+  "raw_text_sha256": "32c3eccc7707eaa7d9e79c09fc68e625b6627bdec53940746ccd2b2c8e47c56b",
+  "coordinates_sha256": "73f1013232a922b8be19b40333b9f832b130abb015b360f8ff0dd14bfeced57b",
+  "block_sequence_sha256": "99031118209cc76efcefcd93afdd7fbc02a046a17e7a676078b77be941f1c7f1",
+  "blocks": [
+    {
+      "block_id": "page-0733-block-0000",
+      "order": 0,
+      "text": "Drug\nInfant plasma \n",
+      "bbox": [
+        98.2300033569336,
+        439.2239685058594,
+        117.11499786376953,
+        612.6539916992188
+      ],
+      "text_sha256": "740ab9eb672cde86fd19cae765bab98ff010246377b1aac1269ef7543dd4a3b7"
+    },
+    {
+      "block_id": "page-0733-block-0001",
+      "order": 1,
+      "text": "concentration\n",
+      "bbox": [
+        108.22750091552734,
+        440.90399169921875,
+        117.11499786376953,
+        489.65399169921875
+      ],
+      "text_sha256": "5e7b39b8735747a51153dd69c9b4c9de9c17893912aab750c14d6dfcd85b4665"
+    },
+    {
+      "block_id": "page-0733-block-0002",
+      "order": 2,
+      "text": "Estimated daily infant \n",
+      "bbox": [
+        88.2249984741211,
+        309.8489685058594,
+        97.11249542236328,
+        389.46148681640625
+      ],
+      "text_sha256": "2841e2ae24ac2a5a655457c138f0cb23dacf705d1b0e79882dd0fceac11fad57"
+    },
+    {
+      "block_id": "page-0733-block-0003",
+      "order": 3,
+      "text": "dose as proportion of \n",
+      "bbox": [
+        98.22249603271484,
+        311.25909423828125,
+        107.10999298095703,
+        389.46148681640625
+      ],
+      "text_sha256": "21fbe6c96b9b77500331b3393eeb77725f2a895797804d7adb4058055a75758d"
+    },
+    {
+      "block_id": "page-0733-block-0004",
+      "order": 4,
+      "text": "maternal dose (RID)\nAcute adverse effects in \n",
+      "bbox": [
+        98.22249603271484,
+        207.3539581298828,
+        117.10749053955078,
+        389.46148681640625
+      ],
+      "text_sha256": "e1bd3585ae717c1b911d4bf2fdaceab2365a65bd49c19794f6485141ed38afd7"
+    },
+    {
+      "block_id": "page-0733-block-0005",
+      "order": 5,
+      "text": "infant\nDevelopmental effects in infant\n",
+      "bbox": [
+        108.2199935913086,
+        66.36893463134766,
+        117.10749053955078,
+        293.90399169921875
+      ],
+      "text_sha256": "6ca6973910aaf5c340def8cac268e73890761e31bdeb5e80f907abd8e9a63028"
+    },
+    {
+      "block_id": "page-0733-block-0006",
+      "order": 6,
+      "text": "Ziprasidone4,22,110,152\nNot reported.\n0.07–1.2%\nNone reported.\nNone reported.\n",
+      "bbox": [
+        128.52249145507812,
+        129.30189514160156,
+        137.24000549316406,
+        612.6539306640625
+      ],
+      "text_sha256": "275a8ac6f3ea864d0cca006c28ef52fcc209e1b393867ac4d9fd1d4046a4d6de"
+    },
+    {
+      "block_id": "page-0733-block-0007",
+      "order": 7,
+      "text": "Iloperidone\nNo published data available \n",
+      "bbox": [
+        146.66000366210938,
+        399.6318359375,
+        155.3675079345703,
+        612.654296875
+      ],
+      "text_sha256": "e1bf8aa20baf84912a2ac1b01f6d0256e94c0c63b7b843af168ecab7193a476b"
+    },
+    {
+      "block_id": "page-0733-block-0008",
+      "order": 8,
+      "text": "at the time of writing.\n",
+      "bbox": [
+        156.65750122070312,
+        419.2367858886719,
+        165.36500549316406,
+        489.6543273925781
+      ],
+      "text_sha256": "c2eb2b9e91cf356ae197bef48dea7b6f47ff9bca4462ee8c8e53c77edafc2a6d"
+    },
+    {
+      "block_id": "page-0733-block-0009",
+      "order": 9,
+      "text": "*A proportion of the drug detected may have been due to placental transfer following in utero exposure.\n",
+      "bbox": [
+        175.40750122070312,
+        276.32421875,
+        184.11500549316406,
+        612.654296875
+      ],
+      "text_sha256": "6d0e9d36bccabbdd1d83eb7654bb3c18e6280b8ea7118d80ddb66349c87ef5e7"
+    },
+    {
+      "block_id": "page-0733-block-0010",
+      "order": 10,
+      "text": "Table 7.4  (Continued)\n",
+      "bbox": [
+        67.62750244140625,
+        534.5339965820312,
+        76.51499938964844,
+        606.6539916992188
+      ],
+      "text_sha256": "0ae4ceed5aad3fa172262ac6861e167bc3f502fe25d9c6e8bf9ac131d2397aa9"
+    },
+    {
+      "block_id": "page-0733-block-0011",
+      "order": 11,
+      "text": "Table 7.5  Mood stabilisers in breastfeeding\n",
+      "bbox": [
+        204.8614959716797,
+        466.7489929199219,
+        213.74899291992188,
+        606.6539916992188
+      ],
+      "text_sha256": "e0a23d84b815ebcf5da699c15095dd5c021c784144b3891e66480fc7b6714627"
+    },
+    {
+      "block_id": "page-0733-block-0012",
+      "order": 12,
+      "text": "Drug\nInfant plasma \n",
+      "bbox": [
+        235.48899841308594,
+        467.896484375,
+        254.37399291992188,
+        612.6539916992188
+      ],
+      "text_sha256": "740ab9eb672cde86fd19cae765bab98ff010246377b1aac1269ef7543dd4a3b7"
+    },
+    {
+      "block_id": "page-0733-block-0013",
+      "order": 13,
+      "text": "concentration\n",
+      "bbox": [
+        245.4864959716797,
+        469.5765075683594,
+        254.37399291992188,
+        518.3264770507812
+      ],
+      "text_sha256": "5e7b39b8735747a51153dd69c9b4c9de9c17893912aab750c14d6dfcd85b4665"
+    },
+    {
+      "block_id": "page-0733-block-0014",
+      "order": 14,
+      "text": "Estimated daily infant \n",
+      "bbox": [
+        225.48399353027344,
+        347.2139587402344,
+        234.37149047851562,
+        426.82647705078125
+      ],
+      "text_sha256": "2841e2ae24ac2a5a655457c138f0cb23dacf705d1b0e79882dd0fceac11fad57"
+    },
+    {
+      "block_id": "page-0733-block-0015",
+      "order": 15,
+      "text": "dose as proportion of \n",
+      "bbox": [
+        235.4814910888672,
+        348.62408447265625,
+        244.36898803710938,
+        426.82647705078125
+      ],
+      "text_sha256": "21fbe6c96b9b77500331b3393eeb77725f2a895797804d7adb4058055a75758d"
+    },
+    {
+      "block_id": "page-0733-block-0016",
+      "order": 16,
+      "text": "maternal dose (RID)\nAcute adverse effects in infant\nDevelopmental effects in infant\n",
+      "bbox": [
+        245.47898864746094,
+        90.26383209228516,
+        254.36648559570312,
+        426.82647705078125
+      ],
+      "text_sha256": "babc94d37b7b1d50500dae91cbc091d8e93d9a66d69e0bbdd11d06f634a2d571"
+    },
+    {
+      "block_id": "page-0733-block-0017",
+      "order": 17,
+      "text": "Carbamazepine4,14,153–163\nGenerally low although \n",
+      "bbox": [
+        265.781494140625,
+        441.6472473144531,
+        274.4989929199219,
+        612.6539916992188
+      ],
+      "text_sha256": "bd103a0d55e414179af7a621b4b922e4f332663ff80fb9398974a89b1656d179"
+    },
+    {
+      "block_id": "page-0733-block-0018",
+      "order": 18,
+      "text": "one report of an infant \n",
+      "bbox": [
+        275.78900146484375,
+        443.0271911621094,
+        284.4964904785156,
+        518.3272094726562
+      ],
+      "text_sha256": "0f33654f36b18655b5f9c23e8ba99219283ea6c28bbe3ac45347c09a7f7df0d6"
+    },
+    {
+      "block_id": "page-0733-block-0019",
+      "order": 19,
+      "text": "plasma level within adult \n",
+      "bbox": [
+        285.7864990234375,
+        437.0722351074219,
+        294.4939880371094,
+        518.3272094726562
+      ],
+      "text_sha256": "87ed1fc64dca1f9111af6e5644bf92266d27d94439289dd0158ed2d521f96f01"
+    },
+    {
+      "block_id": "page-0733-block-0020",
+      "order": 20,
+      "text": "therapeutic range.\n",
+      "bbox": [
+        295.78399658203125,
+        459.5722351074219,
+        304.4914855957031,
+        518.3272094726562
+      ],
+      "text_sha256": "a07fcbd9886dc3e5e973eb5b667997c66ff9f2361bbdd2ea11f236bb3d305585"
+    },
+    {
+      "block_id": "page-0733-block-0021",
+      "order": 21,
+      "text": "1.1–7.3%\nAdverse effects have not been \n",
+      "bbox": [
+        265.78399658203125,
+        237.37718200683594,
+        274.4914855957031,
+        426.82720947265625
+      ],
+      "text_sha256": "e215b30f9a958a2f6ccfd08e9a424771238eca09646aad1c0cdbcc4a3066a5ae"
+    },
+    {
+      "block_id": "page-0733-block-0022",
+      "order": 22,
+      "text": "reported for a number of infants.\n",
+      "bbox": [
+        275.781494140625,
+        229.86961364746094,
+        284.4889831542969,
+        336.002197265625
+      ],
+      "text_sha256": "43588f29b8f299c632b2fdb4ca01baa97cdfa1865e5aaefe606c9b85326b6d9d"
+    },
+    {
+      "block_id": "page-0733-block-0023",
+      "order": 23,
+      "text": "One case of cholestatic hepatitis, one \n",
+      "bbox": [
+        291.77899169921875,
+        214.7421112060547,
+        300.4864807128906,
+        336.002197265625
+      ],
+      "text_sha256": "d10f4e457d4eab0eb3d24c9fea2ff5604d7bc8cb7a01f7c7ee469a740e02e599"
+    },
+    {
+      "block_id": "page-0733-block-0024",
+      "order": 24,
+      "text": "of transient hepatic dysfunction with \n",
+      "bbox": [
+        301.7764892578125,
+        216.40708923339844,
+        310.4839782714844,
+        336.002197265625
+      ],
+      "text_sha256": "8a4c73b250c181fdacc60c9388b50d0a7626348726160722243370f4270dee32"
+    },
+    {
+      "block_id": "page-0733-block-0025",
+      "order": 25,
+      "text": "hyperbilirubinaemia and elevated \n",
+      "bbox": [
+        311.77398681640625,
+        228.0770721435547,
+        320.4814758300781,
+        336.002197265625
+      ],
+      "text_sha256": "8f76939e2f0db67228d97ce74e30f08695b2575a7309229525f02383a1d62c0e"
+    },
+    {
+      "block_id": "page-0733-block-0026",
+      "order": 26,
+      "text": "GGT. The adverse effects in the first \n",
+      "bbox": [
+        321.771484375,
+        220.3071746826172,
+        330.4789733886719,
+        336.002197265625
+      ],
+      "text_sha256": "c98191cf22ec3cc1ccc2abac8c4cde01dee75f1f6aa4d46e30bd61e129b58de8"
+    },
+    {
+      "block_id": "page-0733-block-0027",
+      "order": 27,
+      "text": "case resolved after discontinuation of \n",
+      "bbox": [
+        331.76898193359375,
+        214.87709045410156,
+        340.4764709472656,
+        336.002197265625
+      ],
+      "text_sha256": "53875bff9b2ef5fc5dbbb7c52f5b662bdac4b5ba6c3e4d16ed7e45a77d7ad465"
+    },
+    {
+      "block_id": "page-0733-block-0028",
+      "order": 28,
+      "text": "breastfeeding and the second \n",
+      "bbox": [
+        341.7664794921875,
+        239.02708435058594,
+        350.4739685058594,
+        336.002197265625
+      ],
+      "text_sha256": "459c1f56632e20280a6eeba4578b287b7d9eb77fb65c91b5277a6b04ff1f4edf"
+    },
+    {
+      "block_id": "page-0733-block-0029",
+      "order": 29,
+      "text": "resolved despite continued feeding.\n",
+      "bbox": [
+        351.76397705078125,
+        222.36204528808594,
+        360.4714660644531,
+        336.002197265625
+      ],
+      "text_sha256": "fd4fff5fb49446efb316bdea347c183400cf809ae74ac52e84089ab82cd14501"
+    },
+    {
+      "block_id": "page-0733-block-0030",
+      "order": 30,
+      "text": "One case of seizure-like activity, \n",
+      "bbox": [
+        367.761474609375,
+        233.09471130371094,
+        376.4689636230469,
+        336.002197265625
+      ],
+      "text_sha256": "7cc9d30802637d0c56633a3181e2d56d37573418585507df5aa723b6f6045f01"
+    },
+    {
+      "block_id": "page-0733-block-0031",
+      "order": 31,
+      "text": "drowsiness, irritability and high-\n",
+      "bbox": [
+        377.75897216796875,
+        234.45956420898438,
+        386.4664611816406,
+        336.002197265625
+      ],
+      "text_sha256": "ddf1d694d130ea3a441a4df99ee3b9fe9b9a81c24611c88472dc25df0324e27e"
+    },
+    {
+      "block_id": "page-0733-block-0032",
+      "order": 32,
+      "text": "pitched crying. Mother was taking \n",
+      "bbox": [
+        387.7564697265625,
+        224.3196258544922,
+        396.4639587402344,
+        336.002197265625
+      ],
+      "text_sha256": "dfb0a2c476cc78d578e40c352fbca43aac37abc157cb908f9b702a3411b3b2ef"
+    },
+    {
+      "block_id": "page-0733-block-0033",
+      "order": 33,
+      "text": "multiple agents.\n",
+      "bbox": [
+        397.75396728515625,
+        284.74713134765625,
+        406.4614562988281,
+        336.002197265625
+      ],
+      "text_sha256": "3d9262f3c80ecdb211407250e9d91a03f47ff7401811687ea40b4eaf64bfdade"
+    },
+    {
+      "block_id": "page-0733-block-0034",
+      "order": 34,
+      "text": "None reported.\n",
+      "bbox": [
+        265.75396728515625,
+        153.1972198486328,
+        274.4614562988281,
+        201.82720947265625
+      ],
+      "text_sha256": "cf53711182540597a6673376e5a8845af9f30f2c10f30bce4f5f441c2d8dec77"
+    },
+    {
+      "block_id": "page-0733-block-0035",
+      "order": 35,
+      "text": "A prospective study of children of women \n",
+      "bbox": [
+        281.75146484375,
+        66.24227142333984,
+        290.4589538574219,
+        201.82720947265625
+      ],
+      "text_sha256": "6bd672e9f46bfc1cf5e27fda4bb162ecdf2760d4be9a131dd74b6a489f14e670"
+    },
+    {
+      "block_id": "page-0733-block-0036",
+      "order": 36,
+      "text": "with epilepsy found no adverse \n",
+      "bbox": [
+        291.74896240234375,
+        100.13484954833984,
+        300.4564514160156,
+        201.82720947265625
+      ],
+      "text_sha256": "c8306787e516a9326a90f624431312e34aef5bb3d3805a36366b686aa74a80f5"
+    },
+    {
+      "block_id": "page-0733-block-0037",
+      "order": 37,
+      "text": "development at ages 6–36 months. The \n",
+      "bbox": [
+        301.7464599609375,
+        72.6247787475586,
+        310.4539489746094,
+        201.82720947265625
+      ],
+      "text_sha256": "6c0e41516cc17f600f4645febafe5d18476806bb122212290a6d473f451c2896"
+    },
+    {
+      "block_id": "page-0733-block-0038",
+      "order": 38,
+      "text": "study assessed outcomes in children \n",
+      "bbox": [
+        311.74395751953125,
+        84.85738372802734,
+        320.4514465332031,
+        201.82720947265625
+      ],
+      "text_sha256": "306d15e4abe81a686001ad0880651400a8bf253cc5d63d553558d4f8bd6cbc73"
+    },
+    {
+      "block_id": "page-0733-block-0039",
+      "order": 39,
+      "text": "exposed to anticonvulsants in utero who \n",
+      "bbox": [
+        321.741455078125,
+        70.2623519897461,
+        330.4489440917969,
+        201.82720947265625
+      ],
+      "text_sha256": "5295508e7eba172d870e0da654b4b2d3eda3322e8562f80521dd3cef74ec53e7"
+    },
+    {
+      "block_id": "page-0733-block-0040",
+      "order": 40,
+      "text": "were subsequently breastfed compared \n",
+      "bbox": [
+        331.73895263671875,
+        74.2973861694336,
+        340.4464416503906,
+        201.82720947265625
+      ],
+      "text_sha256": "37a1fb2378550de5cfefe5d0f2be897f3d1e99a9623fa2237f1b4cbe58c13a94"
+    },
+    {
+      "block_id": "page-0733-block-0041",
+      "order": 41,
+      "text": "with those who were not.\n",
+      "bbox": [
+        341.7364501953125,
+        119.01973724365234,
+        350.4439392089844,
+        201.82720947265625
+      ],
+      "text_sha256": "037c7172c495654ebd7e0a9a88fdf077d32b8a8ad7620f59d4addf6fdaa0123a"
+    },
+    {
+      "block_id": "page-0733-block-0042",
+      "order": 42,
+      "text": "A study of 199 infants exposed to \n",
+      "bbox": [
+        357.73394775390625,
+        96.17464447021484,
+        366.4414367675781,
+        201.82720947265625
+      ],
+      "text_sha256": "1a120807ccfc73e0cb856c8fe7b304b6bac9d0d9fa702e1e4213793d683b7273"
+    },
+    {
+      "block_id": "page-0733-block-0043",
+      "order": 43,
+      "text": "antiepileptic medications in utero and \n",
+      "bbox": [
+        367.7314453125,
+        84.9996566772461,
+        376.4389343261719,
+        201.82720947265625
+      ],
+      "text_sha256": "d07d85b3a4bdf4aea5bda84b5e1907587dc0c04c53a9a99099554f0b022726b7"
+    },
+    {
+      "block_id": "page-0733-block-0044",
+      "order": 44,
+      "text": "through breast milk failed to show a \n",
+      "bbox": [
+        377.72894287109375,
+        88.98983001708984,
+        386.4364318847656,
+        201.82720947265625
+      ],
+      "text_sha256": "b4de211e8bd05001de6e122949feef5e3f59d635694c2ce08d1184f684415083"
+    },
+    {
+      "block_id": "page-0733-block-0045",
+      "order": 45,
+      "text": "difference in IQ between breastfed and \n",
+      "bbox": [
+        387.7264404296875,
+        80.26729583740234,
+        396.4339294433594,
+        201.82720947265625
+      ],
+      "text_sha256": "2a880692a2a4d31fd404e954a01e1218eb33cce675b80e16b3d5f485e2015010"
+    },
+    {
+      "block_id": "page-0733-block-0046",
+      "order": 46,
+      "text": "non-breastfed infants at the age of 3 years.\n",
+      "bbox": [
+        397.72393798828125,
+        69.6400375366211,
+        406.4314270019531,
+        201.82720947265625
+      ],
+      "text_sha256": "d4af0ca6b3ddd953cb03973458bae21797ba3fda70c1a5580eeac2e05197db48"
+    },
+    {
+      "block_id": "page-0733-block-0047",
+      "order": 47,
+      "text": "(Continued)\n",
+      "bbox": [
+        415.52142333984375,
+        64.44966888427734,
+        424.27392578125,
+        100.4647216796875
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0941",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 941,
+  "source_page_index": 940,
+  "source_page_display": 941,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "920    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 14\nTable 14.4  (Continued)\nDrug\nPsychiatric side effect\nComment\nInterferon-α and interferon-β\nDepression, loss of efficacy of \npreviously effective antidepressants, \nsuicidal ideation, delirium, \nnon-specific psychiatric symptoms. \nRare case reports of psychosis and \nmania with interferon-α\nPsychiatric ADRs are relatively unlikely \nwith interferon-β but much more \nwidely reported with interferon-α. \nInterferon-α-associated depression \nresponds to antidepressants, use of \nwhich can be preventive. Novel \ndiagnostic biomarkers have been \ninvestigated to predict which patients \nare likely to develop interferon-α-\nassociated psychiatric ADRs\nIsotretinoin12\nDepression, suicidal ideation, \npsychosis\nSporadic reports of psychiatric ADRs \nbut a causal link between isotretinoin \ntherapy and depression, anxiety, \nmood changes, or suicidal ideation/\nsuicide has not been established. \nMoreover, a recent systematic review \nfound that the treatment of acne \nimproves depressive symptoms.13 \nRare, idiosyncratic reactions cannot \nbe ruled out; if they occur the drug \nshould be discontinued. Risk is no \nhigher in those with prior suicide \nattempts and is not dose or treatment \nduration related\nDifferential diagnosis of psychiatric side effects\nA wide range of confounding factors complicate the diagnosis (and perhaps also the \nrecognition) of psychiatric side effects. For example, physical illness, co-prescribed \nmedication, non-prescribed agents, pre-existing mental illness may all influence the \nclinical presentation and outcome. Factors determining the probability of a causal rela-\ntionship between drugs and psychiatric side-effects are shown in Box 14.1. To further \nsupport clinical decision-making, the Naranjo scale can be used to assess the likelihood \nof any adverse reaction being drug-related (Table 14.5). Although cessation of the \nimplicated non-psychotropic might be indicated in some cases; such decisions require \nindividual considerations beyond the scope of this book.\n",
+  "raw_text_sha256": "3ab7531cceebf4e6a78b727b88936ab4c02a61d7223caab2ed74f388cda8712d",
+  "coordinates_sha256": "2aabe51830a5290cebec05ebe4b9116291d2a577c97ea8a64dd3ba3b56e6b1f3",
+  "block_sequence_sha256": "184ab5beb16fa13d41b6ccecc7d529254ddb1b4d1d4e2e9b428b5ede0587d643",
+  "blocks": [
+    {
+      "block_id": "page-0941-block-0000",
+      "order": 0,
+      "text": "920    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "3adde294b80ea9e23313683ecdb21a67f682cf3f64b2e922b5ef993f68fec5ee"
+    },
+    {
+      "block_id": "page-0941-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        18.520000457763672,
+        338.7405090332031,
+        28.0,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0941-block-0002",
+      "order": 2,
+      "text": "Table 14.4  (Continued)\n",
+      "bbox": [
+        67.88970184326172,
+        70.08790588378906,
+        144.17970275878906,
+        78.97540283203125
+      ],
+      "text_sha256": "7d17da805584a2a1f97e0bd5d20373994d4caa4955bd15a6fd65ee7bc7d0251c"
+    },
+    {
+      "block_id": "page-0941-block-0003",
+      "order": 3,
+      "text": "Drug\nPsychiatric side effect\nComment\n",
+      "bbox": [
+        61.889801025390625,
+        90.28968811035156,
+        343.39483642578125,
+        99.17718505859375
+      ],
+      "text_sha256": "9e349db6f15484697169ed1ed9f4f9a823886c66f8e2c04ad5ea86c3d6a8ec83"
+    },
+    {
+      "block_id": "page-0941-block-0004",
+      "order": 4,
+      "text": "Interferon-α and interferon-β\nDepression, loss of efficacy of \npreviously effective antidepressants, \nsuicidal ideation, delirium, \nnon-specific psychiatric symptoms. \nRare case reports of psychosis and \nmania with interferon-α\n",
+      "bbox": [
+        61.88981628417969,
+        106.4747085571289,
+        303.3073425292969,
+        167.11219787597656
+      ],
+      "text_sha256": "81fcfc368cbef04b1bec9e7b893319b02b9fe0e0b535e5f36c5633d154871147"
+    },
+    {
+      "block_id": "page-0941-block-0005",
+      "order": 5,
+      "text": "Psychiatric ADRs are relatively unlikely \nwith interferon-β but much more \nwidely reported with interferon-α. \nInterferon-α-associated depression \nresponds to antidepressants, use of \nwhich can be preventive. Novel \ndiagnostic biomarkers have been \ninvestigated to predict which patients \nare likely to develop interferon-α-\nassociated psychiatric ADRs\n",
+      "bbox": [
+        309.2248229980469,
+        107.47969818115234,
+        431.43731689453125,
+        206.1646728515625
+      ],
+      "text_sha256": "501687f46e438c8bf5dbe67d1e1c830b9157e87c42cf3e033d3e5dce90d02900"
+    },
+    {
+      "block_id": "page-0941-block-0006",
+      "order": 6,
+      "text": "Isotretinoin12\nDepression, suicidal ideation, \npsychosis\n",
+      "bbox": [
+        61.88981628417969,
+        212.4796600341797,
+        282.02630615234375,
+        231.22470092773438
+      ],
+      "text_sha256": "52f2475ddb1a3de5b2799f5f37872ee49fe17af8337fb851c4798a19500e3b1e"
+    },
+    {
+      "block_id": "page-0941-block-0007",
+      "order": 7,
+      "text": "Sporadic reports of psychiatric ADRs \nbut a causal link between isotretinoin \ntherapy and depression, anxiety, \nmood changes, or suicidal ideation/\nsuicide has not been established. \nMoreover, a recent systematic review \nfound that the treatment of acne \nimproves depressive symptoms.13 \nRare, idiosyncratic reactions cannot \nbe ruled out; if they occur the drug \nshould be discontinued. Risk is no \nhigher in those with prior suicide \nattempts and is not dose or treatment \nduration related\n",
+      "bbox": [
+        309.2213134765625,
+        212.5196990966797,
+        435.55279541015625,
+        351.2121887207031
+      ],
+      "text_sha256": "73c6a993a4be837326932edec230dd591c3b8db8b3cdc0824ceb00059d8ee418"
+    },
+    {
+      "block_id": "page-0941-block-0008",
+      "order": 8,
+      "text": "Differential diagnosis of psychiatric side effects\n",
+      "bbox": [
+        61.88970184326172,
+        371.06719970703125,
+        306.38665771484375,
+        384.1022033691406
+      ],
+      "text_sha256": "07a5e94ba4e0f588f9c64133f98b443c1e50d85f4a384aa93a470efb992afef7"
+    },
+    {
+      "block_id": "page-0941-block-0009",
+      "order": 9,
+      "text": "A wide range of confounding factors complicate the diagnosis (and perhaps also the \nrecognition) of psychiatric side effects. For example, physical illness, co-prescribed \nmedication, non-prescribed agents, pre-existing mental illness may all influence the \nclinical presentation and outcome. Factors determining the probability of a causal rela-\ntionship between drugs and psychiatric side-effects are shown in Box 14.1. To further \nsupport clinical decision-making, the Naranjo scale can be used to assess the likelihood \nof any adverse reaction being drug-related (Table 14.5). Although cessation of the \nimplicated non-psychotropic might be indicated in some cases; such decisions require \nindividual considerations beyond the scope of this book.\n",
+      "bbox": [
+        61.88970184326172,
+        389.9122009277344,
+        436.6997985839844,
+        497.6322021484375
+      ],
+      "text_sha256": "fce4936a8213951209f9bac03bb734abe689fc03470f5be15f1549026f0ef764"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

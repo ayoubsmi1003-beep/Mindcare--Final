@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0012",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 12,
+  "source_page_index": 11,
+  "source_page_display": 12,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Preface\nThis 14th edition of The Guidelines has been written under extraordinary ­circumstances: \nthe coronavirus pandemic. This global phenomenon has radically altered the lives and \nworking practices of billions of people, and most of us are now familiar, either person-\nally or vicariously, with the experience of the serious physical illness that is associated \nwith COVID-19.\nThose working in healthcare have been particularly grievously affected, caring for \nthose made ill by the disease while risking infection themselves. In this environment, the \nwriting of a book has an extremely low priority, if any at all. It is in this context that I \ngive boundless and sincere thanks to all those who have contributed to this edition of \nThe Guidelines under such challenging conditions.\nOf course, mental health problems have not gone away during the pandemic, and the \noptimal treatment of mental illness remains a vital imperative. This objective will be all the \nmore critical as we come to deal with the mental health consequences of the pandemic.\nThis edition of The Guidelines has been thoroughly updated to include influential \nresearch published since 2017 and all major psychotropic drugs introduced since that \ntime. This edition is also somewhat expanded by the inclusion of new sections on such \nsubjects as the management of agitated delirium, psychotropics at the end of life, intra-\nvenous psychotropic formulations, intramuscular clozapine and weekly oral penfluri-\ndol. As with previous editions, the 14th edition is written with the intention of having \nworldwide utility, but it retains its mild emphasis on UK practice.\nI would like to pay special tribute to Siobhan Gee for her numerous meticulously \nprepared contributions on the use of clozapine, Mark Horowitz for his evidence-based \nand patient-centred guidance on discontinuation of psychotropics, Delia Bishara for \nher near single-handed production of the chapter on older adults, and Ian Osborne for \nhis contributions on an exceptionally varied range of subjects. Emily Finch deserves \nparticular recognition for organising the writing of the chapter on addictions for the \nlast ten editions of The Guidelines. Lastly, I would like to thank my assistant Ivana \nClark for managing the production of this edition with patience and an unparalleled \nattention to detail.\nDavid M.Taylor\nLondon\nMarch 2021\n",
+  "raw_text_sha256": "390dfa222315c16a2c7944f5c23c6391396f3203a8435d948c23504dd30e090b",
+  "coordinates_sha256": "1b67d8b245f06533ef032c65aecd18ff9b0100fb85eeeab0a8d61073f8fb9194",
+  "block_sequence_sha256": "75a4155f67b4c8960bbaf19b8659747b73a384560346f4efcda042d5a392794a",
+  "blocks": [
+    {
+      "block_id": "page-0012-block-0000",
+      "order": 0,
+      "text": "Preface\n",
+      "bbox": [
+        344.5845031738281,
+        111.36316680908203,
+        420.0005187988281,
+        137.43316650390625
+      ],
+      "text_sha256": "67fc8d669db562e9778fd9128725aa852a349d856b0655d82c3aa052428f1016"
+    },
+    {
+      "block_id": "page-0012-block-0001",
+      "order": 1,
+      "text": "This 14th edition of The Guidelines has been written under extraordinary ­circumstances: \nthe coronavirus pandemic. This global phenomenon has radically altered the lives and \nworking practices of billions of people, and most of us are now familiar, either person-\nally or vicariously, with the experience of the serious physical illness that is associated \nwith COVID-19.\n",
+      "bbox": [
+        48.0,
+        225.91690063476562,
+        422.8200378417969,
+        285.63690185546875
+      ],
+      "text_sha256": "c7c2febdca06fa78f3cd9041d873bb4b0884acdebb56ae013ed5647bbb1a344b"
+    },
+    {
+      "block_id": "page-0012-block-0002",
+      "order": 2,
+      "text": "Those working in healthcare have been particularly grievously affected, caring for \nthose made ill by the disease while risking infection themselves. In this environment, the \nwriting of a book has an extremely low priority, if any at all. It is in this context that I \ngive boundless and sincere thanks to all those who have contributed to this edition of \nThe Guidelines under such challenging conditions.\n",
+      "bbox": [
+        48.00000762939453,
+        285.9169006347656,
+        422.7599792480469,
+        345.63690185546875
+      ],
+      "text_sha256": "3d54ddb6118b8ba0fefd226dac319eac751e47200fba866515d5d41e1c1cb529"
+    },
+    {
+      "block_id": "page-0012-block-0003",
+      "order": 3,
+      "text": "Of course, mental health problems have not gone away during the pandemic, and the \noptimal treatment of mental illness remains a vital imperative. This objective will be all the \nmore critical as we come to deal with the mental health consequences of the pandemic.\n",
+      "bbox": [
+        48.00000762939453,
+        345.9169006347656,
+        422.7898254394531,
+        381.63690185546875
+      ],
+      "text_sha256": "41e3352f5bd12e166dd9d6733bcbe4f688001fa01ac7940f12b2d9bfa47aa63e"
+    },
+    {
+      "block_id": "page-0012-block-0004",
+      "order": 4,
+      "text": "This edition of The Guidelines has been thoroughly updated to include influential \nresearch published since 2017 and all major psychotropic drugs introduced since that \ntime. This edition is also somewhat expanded by the inclusion of new sections on such \nsubjects as the management of agitated delirium, psychotropics at the end of life, intra-\nvenous psychotropic formulations, intramuscular clozapine and weekly oral penfluri-\ndol. As with previous editions, the 14th edition is written with the intention of having \nworldwide utility, but it retains its mild emphasis on UK practice.\n",
+      "bbox": [
+        48.00000762939453,
+        381.9169006347656,
+        422.7899169921875,
+        465.63690185546875
+      ],
+      "text_sha256": "d984a0e0ec2624625bf4fa420e63499f3e98bb9fac4c1ce9309bb8100345a631"
+    },
+    {
+      "block_id": "page-0012-block-0005",
+      "order": 5,
+      "text": "I would like to pay special tribute to Siobhan Gee for her numerous meticulously \nprepared contributions on the use of clozapine, Mark Horowitz for his evidence-based \nand patient-centred guidance on discontinuation of psychotropics, Delia Bishara for \nher near single-handed production of the chapter on older adults, and Ian Osborne for \nhis contributions on an exceptionally varied range of subjects. Emily Finch deserves \nparticular recognition for organising the writing of the chapter on addictions for the \nlast ten editions of The Guidelines. Lastly, I would like to thank my assistant Ivana \nClark for managing the production of this edition with patience and an unparalleled \nattention to detail.\n",
+      "bbox": [
+        48.00000762939453,
+        465.9169006347656,
+        422.8199768066406,
+        573.636962890625
+      ],
+      "text_sha256": "a6440a388fdd97bd75d31d03ff92f66f28b56e90c157c2dff40d8337c655a1d3"
+    },
+    {
+      "block_id": "page-0012-block-0006",
+      "order": 6,
+      "text": "David M.Taylor\n",
+      "bbox": [
+        350.3500061035156,
+        574.0869140625,
+        420.0000305175781,
+        585.636962890625
+      ],
+      "text_sha256": "09c33f2ff6fe6af56beb123f125a09e60b98df82dafd558c2bfc731af73966a8"
+    },
+    {
+      "block_id": "page-0012-block-0007",
+      "order": 7,
+      "text": "London\nMarch 2021\n",
+      "bbox": [
+        366.7699890136719,
+        586.0869140625,
+        420.0,
+        609.636962890625
+      ],
+      "text_sha256": "d9c31397b5afbe46f7e9312c31c94e1f4d7c0683ba980f9806b09cb5d0caa469"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

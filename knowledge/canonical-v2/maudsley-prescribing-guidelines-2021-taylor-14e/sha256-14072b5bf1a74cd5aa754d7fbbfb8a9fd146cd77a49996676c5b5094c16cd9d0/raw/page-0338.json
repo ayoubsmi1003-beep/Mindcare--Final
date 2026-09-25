@@ -1,0 +1,419 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0338",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 338,
+  "source_page_index": 337,
+  "source_page_display": 338,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    317\nCHAPTER 3\nManagement of treatment-resistant depression – first choice\nResistant depression is difficult to treat successfully, and outcomes are often poor,1–3 \nespecially if evidence-based protocols are not followed.4 Treatment-resistant depression \nis not a uniform entity but a complex spectrum of severity which can be graded5 and in \nwhich outcome is closely linked to grading.6 A significant minority of apparently resist-\nant unipolar depression may in fact be bipolar depression7,8 which is often unresponsive \nto standard antidepressants9,10 (see section on ‘Bipolar depression’ in Chapter 2). \nRecently there has been a move to characterise treatment-resistant depression as ‘diffi-\ncult-to-treat’ depression on the basis that the former description implies that depression \ntreatments are normally effective and that non-response is therefore somehow abnor-\nmal.11 Others suggest abandoning treatment-resistant depression as a diagnosis (again \nproposing ‘difficult-to-treat’ depression) because it propels clinicians to try more and \nmore drugs in increasingly complex regimens rather than managing expectations of \nrecovery to a more realistic level.12\nManagement of treatment-resistant depression has been informed by the STAR*D \nprogramme (Sequenced Treatment Alternatives to Relieve Depression). This was a \npragmatic effectiveness study which used remission of symptoms as its main outcome. \nAt stage 1,13 2,786 subjects received citalopram (mean dose 41.8mg/day) for 14 weeks; \nFigure 3.2  Remission rates in STAR*D\nn = 2,876\nOut-patients with major depression\nSwitch\nn = 727\nFailed\nFailed\nAugment\nn = 565\nCitalopram\n28%\nVenlafaxine\n24.8%\nAdd bupropion\n29.7%\nAdd buspirone\n30.1%\nSertraline\n17.6%\nBupropion\n21.3%\nvs\nvs\nvs\nSwitch\nn = 235\nAugment\nn = 142\nvs\nvs\nFailed\nn = 58\nn = 51\nvs\nAdd T3\n24.7%\nNortriptyline\n19.8%\nMirtazapine\n12.3%\nAdd lithium\n15.9%\nTranylcypromine\n6.9%\nMirtazapine + venlafaxine\n13.7%\n",
+  "raw_text_sha256": "5e3f7309baf69dac32c1283a2454d0ee5fb5837edc3f2d26e1f6640f1b9ea634",
+  "coordinates_sha256": "e709196d5aae0d5ddba262964aa457f546f3c30731989adf67587b3ccbb0c8e5",
+  "block_sequence_sha256": "fb77f7cc1e1090aee301029524adf1083ebbe21172f188fb34535d6899736b2e",
+  "blocks": [
+    {
+      "block_id": "page-0338-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    317\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "b95d297b69d688f4c4580b8f2e7b80cb80635c7bde7ae26360ac7019bc6ac3a1"
+    },
+    {
+      "block_id": "page-0338-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0338-block-0002",
+      "order": 2,
+      "text": "Management of treatment-resistant depression – first choice\n",
+      "bbox": [
+        54.999698638916016,
+        66.06539916992188,
+        367.9498291015625,
+        79.10040283203125
+      ],
+      "text_sha256": "4eaaa02f05cb4a585d87a831cafb1955ff59e2d0a0a7ad4a8b96b9dba5f085c7"
+    },
+    {
+      "block_id": "page-0338-block-0003",
+      "order": 3,
+      "text": "Resistant depression is difficult to treat successfully, and outcomes are often poor,1–3 \nespecially if evidence-based protocols are not followed.4 Treatment-resistant depression \nis not a uniform entity but a complex spectrum of severity which can be graded5 and in \nwhich outcome is closely linked to grading.6 A significant minority of apparently resist-\nant unipolar depression may in fact be bipolar depression7,8 which is often unresponsive \nto standard antidepressants9,10 (see section on ‘Bipolar depression’ in Chapter 2). \nRecently there has been a move to characterise treatment-resistant depression as ‘diffi-\ncult-to-treat’ depression on the basis that the former description implies that depression \ntreatments are normally effective and that non-response is therefore somehow abnor-\nmal.11 Others suggest abandoning treatment-resistant depression as a diagnosis (again \nproposing ‘difficult-to-treat’ depression) because it propels clinicians to try more and \nmore drugs in increasingly complex regimens rather than managing expectations of \nrecovery to a more realistic level.12\n",
+      "bbox": [
+        47.99847412109375,
+        84.910400390625,
+        422.79229736328125,
+        240.63040161132812
+      ],
+      "text_sha256": "49a304b5138f12048c55fa2bd07390ab9847b868dc04112748bdcbd4b7a260ad"
+    },
+    {
+      "block_id": "page-0338-block-0004",
+      "order": 4,
+      "text": "Management of treatment-resistant depression has been informed by the STAR*D \nprogramme (Sequenced Treatment Alternatives to Relieve Depression). This was a \npragmatic effectiveness study which used remission of symptoms as its main outcome. \nAt stage 1,13 2,786 subjects received citalopram (mean dose 41.8mg/day) for 14 weeks; \n",
+      "bbox": [
+        47.99959945678711,
+        240.910400390625,
+        422.8096618652344,
+        288.6304016113281
+      ],
+      "text_sha256": "007684c2fb93dcecd6ac53dc7ad04c8cf2084885ea8976d06cdfeedd94636687"
+    },
+    {
+      "block_id": "page-0338-block-0005",
+      "order": 5,
+      "text": "Figure 3.2  Remission rates in STAR*D\n",
+      "bbox": [
+        48.25,
+        610.9378662109375,
+        170.97250366210938,
+        619.8253784179688
+      ],
+      "text_sha256": "65821ae6a84c5bc47a4850632208a2e4972d668b24b29576346a81684257ed09"
+    },
+    {
+      "block_id": "page-0338-block-0006",
+      "order": 6,
+      "text": "n = 2,876\nOut-patients with major depression\n",
+      "bbox": [
+        180.43690490722656,
+        315.097900390625,
+        297.5494384765625,
+        334.5653991699219
+      ],
+      "text_sha256": "2f05f9f226fd60ee3027ca790e6b69f45502142c079e82d29e24151e4da4a8b3"
+    },
+    {
+      "block_id": "page-0338-block-0007",
+      "order": 7,
+      "text": "Switch\nn = 727\nFailed\n",
+      "bbox": [
+        138.8194122314453,
+        368.3078918457031,
+        264.6094055175781,
+        386.6978759765625
+      ],
+      "text_sha256": "c4d94de1f1eb7e38a6b53e096db93e86f01b9993659bc8fd0a173dddb360ecb1"
+    },
+    {
+      "block_id": "page-0338-block-0008",
+      "order": 8,
+      "text": "Failed\n",
+      "bbox": [
+        246.90191650390625,
+        458.6678771972656,
+        267.3244323730469,
+        467.8853759765625
+      ],
+      "text_sha256": "17cda257f89911e91580428928349f979e90a6eb6f83ce309f2dfb6bf9e4f729"
+    },
+    {
+      "block_id": "page-0338-block-0009",
+      "order": 9,
+      "text": "Augment\n",
+      "bbox": [
+        333.8644104003906,
+        368.1429138183594,
+        364.29193115234375,
+        377.36041259765625
+      ],
+      "text_sha256": "49e44b8d724841775d729dc59095e03c609246773855cfd1b4c1d5137be37f1d"
+    },
+    {
+      "block_id": "page-0338-block-0010",
+      "order": 10,
+      "text": "n = 565\n",
+      "bbox": [
+        336.1744079589844,
+        377.1429138183594,
+        361.9744567871094,
+        386.53289794921875
+      ],
+      "text_sha256": "6d7531ee67b9bc0724f15b265774048cb1f26b5b804d270dbaba120fdcbee7b6"
+    },
+    {
+      "block_id": "page-0338-block-0011",
+      "order": 11,
+      "text": "Citalopram\n",
+      "bbox": [
+        220.20590209960938,
+        348.2516784667969,
+        256.8733825683594,
+        357.46917724609375
+      ],
+      "text_sha256": "28f45fc97a87766660ddc4f81555dfa9fd487a070b3fb31e7a38f7ab07657c81"
+    },
+    {
+      "block_id": "page-0338-block-0012",
+      "order": 12,
+      "text": "28%\n",
+      "bbox": [
+        231.03590393066406,
+        357.2516784667969,
+        246.04339599609375,
+        366.46917724609375
+      ],
+      "text_sha256": "dffccaf8dd8719cab8bf334c7794f825be4869426cf5480e9b9e3aa07bad7dba"
+    },
+    {
+      "block_id": "page-0338-block-0013",
+      "order": 13,
+      "text": "Venlafaxine\n",
+      "bbox": [
+        129.23500061035156,
+        409.52978515625,
+        168.0024871826172,
+        418.7472839355469
+      ],
+      "text_sha256": "4d2f3cff6ef05df77ee354976bc8a6c9a42199b3cd129446b095a498758414a4"
+    },
+    {
+      "block_id": "page-0338-block-0014",
+      "order": 14,
+      "text": "24.8%\nAdd bupropion\n",
+      "bbox": [
+        137.70249938964844,
+        409.6459045410156,
+        336.2524108886719,
+        427.7472839355469
+      ],
+      "text_sha256": "5a74f9767ff8659080b1522cee58636fa848653c1e55b3a4a962edc872f0df28"
+    },
+    {
+      "block_id": "page-0338-block-0015",
+      "order": 15,
+      "text": "29.7%\nAdd buspirone\n",
+      "bbox": [
+        298.7524108886719,
+        410.1459045410156,
+        410.9649353027344,
+        427.8634033203125
+      ],
+      "text_sha256": "4f10d36aec8b0c085d8ff91d2c7b51ddcd13664a33b6fe663d8fdebff9272d90"
+    },
+    {
+      "block_id": "page-0338-block-0016",
+      "order": 16,
+      "text": "30.1%\nSertraline\n",
+      "bbox": [
+        211.08389282226562,
+        409.6459045410156,
+        397.31494140625,
+        427.86090087890625
+      ],
+      "text_sha256": "2a677cf9ce7e2e3fcd904f6c043e22d56d2afa64dc2068101471e3f0891f4c92"
+    },
+    {
+      "block_id": "page-0338-block-0017",
+      "order": 17,
+      "text": "17.6%\nBupropion\n",
+      "bbox": [
+        61.54010009765625,
+        409.52978515625,
+        236.29888916015625,
+        427.8634033203125
+      ],
+      "text_sha256": "ace0c3884792dbad2dc771bb4a88379fdba4e2b5128c409597d7a54074f88bd5"
+    },
+    {
+      "block_id": "page-0338-block-0018",
+      "order": 18,
+      "text": "21.3%\nvs\nvs\nvs\n",
+      "bbox": [
+        67.17259979248047,
+        413.72979736328125,
+        353.4700927734375,
+        427.7472839355469
+      ],
+      "text_sha256": "635a877e52fd197af3f07898ce57b46e8f81f76261354cc93291792d8a0ba2a4"
+    },
+    {
+      "block_id": "page-0338-block-0019",
+      "order": 19,
+      "text": "Switch\nn = 235\n",
+      "bbox": [
+        137.87509155273438,
+        453.0072937011719,
+        163.6750946044922,
+        471.39727783203125
+      ],
+      "text_sha256": "06f65f35a3a6d4f27cd489fdf6a1f0fbf05829882271a01a51aaf1d5c907d5dd"
+    },
+    {
+      "block_id": "page-0338-block-0020",
+      "order": 20,
+      "text": "Augment\n",
+      "bbox": [
+        296.05010986328125,
+        453.0072937011719,
+        326.4776306152344,
+        462.22479248046875
+      ],
+      "text_sha256": "49e44b8d724841775d729dc59095e03c609246773855cfd1b4c1d5137be37f1d"
+    },
+    {
+      "block_id": "page-0338-block-0021",
+      "order": 21,
+      "text": "n = 142\n",
+      "bbox": [
+        298.360107421875,
+        462.0072937011719,
+        324.16015625,
+        471.39727783203125
+      ],
+      "text_sha256": "a1720fe267cc349f518fed4bf711223a26cd39a6c1684722b674fcaced7176a8"
+    },
+    {
+      "block_id": "page-0338-block-0022",
+      "order": 22,
+      "text": "vs\nvs\n",
+      "bbox": [
+        139.64512634277344,
+        500.2947998046875,
+        312.9626159667969,
+        509.5122985839844
+      ],
+      "text_sha256": "1c6c3f5cb72c3d061ef56a7d140818ed46178516143f77e43ec9a53511726f9c"
+    },
+    {
+      "block_id": "page-0338-block-0023",
+      "order": 23,
+      "text": "Failed\nn = 58\nn = 51\n",
+      "bbox": [
+        173.29762268066406,
+        540.40478515625,
+        279.8201599121094,
+        549.7947998046875
+      ],
+      "text_sha256": "9024d6fe613db7217eb8d63ccbac693e630daa602b8f47dd6d98e0a8b7ccded7"
+    },
+    {
+      "block_id": "page-0338-block-0024",
+      "order": 24,
+      "text": "vs\n",
+      "bbox": [
+        219.77511596679688,
+        580.417236328125,
+        227.27511596679688,
+        589.634765625
+      ],
+      "text_sha256": "ac2f02d1d7348c8ff309a218ffc62b891e905cde2d014173d33e386dc24c379a"
+    },
+    {
+      "block_id": "page-0338-block-0025",
+      "order": 25,
+      "text": "Add T3\n",
+      "bbox": [
+        340.5779113769531,
+        493.7358093261719,
+        364.05792236328125,
+        502.95330810546875
+      ],
+      "text_sha256": "34f1e75f5f7128bd3648ae49567ab68adde16f1798d7dba4dbf934964642a2a2"
+    },
+    {
+      "block_id": "page-0338-block-0026",
+      "order": 26,
+      "text": "24.7%\nNortriptyline\n",
+      "bbox": [
+        164.13189697265625,
+        493.8337707519531,
+        362.4624328613281,
+        511.95330810546875
+      ],
+      "text_sha256": "cc966a3ac3c69b270ef9ad8fdb3f2974b745be66b02e46f2baeeac30430b9fdb"
+    },
+    {
+      "block_id": "page-0338-block-0027",
+      "order": 27,
+      "text": "19.8%\nMirtazapine\n",
+      "bbox": [
+        86.85260009765625,
+        494.0268859863281,
+        194.13189697265625,
+        512.05126953125
+      ],
+      "text_sha256": "cf919fc6e46907cc6117349fcc133a98b675fd12727c69c585be52afbc2fea43"
+    },
+    {
+      "block_id": "page-0338-block-0028",
+      "order": 28,
+      "text": "12.3%\nAdd lithium\n",
+      "bbox": [
+        94.75759887695312,
+        493.7358093261719,
+        285.5849304199219,
+        512.244384765625
+      ],
+      "text_sha256": "23d5cefbb5063c01dc494ad65a768f7e4a0210b14cfd8b3e3f59c5a17ab157ba"
+    },
+    {
+      "block_id": "page-0338-block-0029",
+      "order": 29,
+      "text": "15.9%\n",
+      "bbox": [
+        256.2449035644531,
+        502.8332824707031,
+        277.5074462890625,
+        512.05078125
+      ],
+      "text_sha256": "d4c0976dbeb17c291ae3518ea5958e9395e9147fecac21c3b4ad58d85333b533"
+    },
+    {
+      "block_id": "page-0338-block-0030",
+      "order": 30,
+      "text": "Tranylcypromine\n",
+      "bbox": [
+        136.64219665527344,
+        574.4478759765625,
+        192.48716735839844,
+        583.6654052734375
+      ],
+      "text_sha256": "57bb369bd9acab12a61b8148d41b4d2696591ae2923ac61542b51e2f77d3bd19"
+    },
+    {
+      "block_id": "page-0338-block-0031",
+      "order": 31,
+      "text": "6.9%\nMirtazapine + venlafaxine\n",
+      "bbox": [
+        157.43218994140625,
+        573.7987670898438,
+        321.0404052734375,
+        592.6654052734375
+      ],
+      "text_sha256": "e17d2eeeb54aa3870d2a2f1d769f0ed3182b1d5075768233b634fa7e73421ca9"
+    },
+    {
+      "block_id": "page-0338-block-0032",
+      "order": 32,
+      "text": "13.7%\n",
+      "bbox": [
+        267.7904052734375,
+        582.7987670898438,
+        289.0529479980469,
+        592.0162963867188
+      ],
+      "text_sha256": "c55fad8cdcad58b32716a3bfeace35bccc6b27dde887122bf2ed0fd605b0537b"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

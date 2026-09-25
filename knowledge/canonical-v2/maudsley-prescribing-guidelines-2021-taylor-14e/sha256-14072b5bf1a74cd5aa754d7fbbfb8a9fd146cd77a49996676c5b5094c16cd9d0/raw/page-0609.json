@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0609",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 609,
+  "source_page_index": 608,
+  "source_page_display": 609,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "588    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  5\nAdrenergic α2 agonists\nClonidine has been shown in open studies to reduce the severity and frequency of tics \nbut in one study this effect did not seem to be convincingly larger than placebo.10 Other \nstudies have shown more substantial reductions in tics.11–14 Therapeutic doses of cloni-\ndine are in the order or 3–5µg/kg, and the dose should be built up gradually. A trans-\ndermal patch has also shown effectiveness.15 Main side-effects are sedation, postural \nhypotension and depression. Patients and their families should be informed not to stop \nclonidine suddenly because of the risk of rebound hypertension. Guanfacine has also \nbeen shown to be effective in the treatment of tics16,17 and would merit a therapeutic \ntrial in specific individuals (e.g. those with comorbid ADHD).\nAntipsychotics\nAdverse effects of antipsychotics may outweigh beneficial effects in the treatment of tics \nand so it is recommended that clonidine or guanfacine are always tried first. \nAntipsychotics may, however, be more effective than adrenergic α2 agonists in alleviat-\ning tics in some individuals.\nA number of first-generation antipsychotics have been used in TS.18 In a Cochrane \nreview, pimozide demonstrated robust efficacy in a meta-analysis of 6 trials.19 In these \ntrials, pimozide was compared with haloperidol (one trial), placebo (one trial), halop-\neridol and placebo (two trials) and risperidone (two trials) and was found to be more \neffective than placebo, as effective as risperidone and slightly less effective than halop-\neridol in reducing tics. It was associated with fewer adverse reactions compared with \nhaloperidol but did not differ from risperidone in that respect. ECG monitoring is \nessential for pimozide and haloperidol. Haloperidol is often poorly tolerated. Given \ntheir side effect profile, most authors recommend the use of second-generation rather \nthan first-generation antipsychotics in the treatment of TS.18\nMore recent studies suggest that aripiprazole is an effective and well-tolerated treat-\nment of children with TS (and also tics20). A 10-week multicentre double-blind ran-\ndomised placebo-controlled trial (N = 61) demonstrated the efficacy of aripiprazole in tic \nreduction in TS. Treatment was associated with significantly decreased serum prolactin \nconcentration, increased mean body weight (by 1.6kg), body mass index, and waist cir-\ncumference.21 Aripiprazole was also found to be effective in another randomized, dou-\nble-blind, placebo-controlled trial (N = 133) comparing low-dose aripiprazole (5mg/day \nif <50kg; 10mg/day if ≥50kg), high-dose aripiprazole (10mg/day if <50kg; 20mg/day \nif ≥50kg), or placebo for 8 weeks.22 At week 8, tics as measured by the Yale Global Tic \nSeverity Scale Total Tic Score were reduced in both the high dose group (−9.9; 95% \nCI: −13.8 to −5.9) and the low dose group (−6.3; 95% CI: −10.2 to −2.3) with 69% \n(29/42) of patients in the low-dose and 74% (26/35) in the high-dose group being very \nmuch improved or much improved compared with 38% (16/42) in the placebo group. \nSurprisingly, a higher proportion of children in the low dose group (18.2%) compared to \nthe high dose group (9.3%) and placebo group (9.1%) gained clinically significant \nweight (≥7%) which may have been related to a lower average baseline weight in this \ngroup by >3kg compared to the other two groups. Several case series also support the use \nof aripiprazole.23–26 A study evaluating the metabolic side effects of aripiprazole (N = 25) \n",
+  "raw_text_sha256": "8a105761619d3215851dff701345b06ab839957af4acbd35fe2f05521f0a4a36",
+  "coordinates_sha256": "ad4fc9c1d53f925a8686c0b00b56637e5325e5e0ce4ca02c734501683cab9e53",
+  "block_sequence_sha256": "84c5740c20524bc95cfeeb2a7f88ed8486e24a00315ef9aafe5529485d7ee1c0",
+  "blocks": [
+    {
+      "block_id": "page-0609-block-0000",
+      "order": 0,
+      "text": "588    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "3ef40790a6d3079f72c2c3791c67dd741829b61f13cb9965c613e7cd6913bd48"
+    },
+    {
+      "block_id": "page-0609-block-0001",
+      "order": 1,
+      "text": "CHAPTER  5\n",
+      "bbox": [
+        18.520000457763672,
+        338.22650146484375,
+        28.0,
+        381.79449462890625
+      ],
+      "text_sha256": "4086e0916f45ec531cc17b8c611334eb2b1ef26051ba536579b8ef3c22c1648d"
+    },
+    {
+      "block_id": "page-0609-block-0002",
+      "order": 2,
+      "text": "Adrenergic α2 agonists\n",
+      "bbox": [
+        61.88999938964844,
+        61.380401611328125,
+        169.86000061035156,
+        76.12039947509766
+      ],
+      "text_sha256": "9c6e105bb36ca3efa8d6c814fc0ee8aafa3cbf82a85afdcee8814ac7247d15a8"
+    },
+    {
+      "block_id": "page-0609-block-0003",
+      "order": 3,
+      "text": "Clonidine has been shown in open studies to reduce the severity and frequency of tics \nbut in one study this effect did not seem to be convincingly larger than placebo.10 Other \nstudies have shown more substantial reductions in tics.11–14 Therapeutic doses of cloni-\ndine are in the order or 3–5µg/kg, and the dose should be built up gradually. A trans-\ndermal patch has also shown effectiveness.15 Main side-effects are sedation, postural \nhypotension and depression. Patients and their families should be informed not to stop \nclonidine suddenly because of the risk of rebound hypertension. Guanfacine has also \nbeen shown to be effective in the treatment of tics16,17 and would merit a therapeutic \ntrial in specific individuals (e.g. those with comorbid ADHD).\n",
+      "bbox": [
+        61.88630676269531,
+        80.17040252685547,
+        436.68988037109375,
+        188.13040161132812
+      ],
+      "text_sha256": "6f39fe8c9439450c916fe30be6b2ab522d5ef8c70be22eacf53798b34b2211eb"
+    },
+    {
+      "block_id": "page-0609-block-0004",
+      "order": 4,
+      "text": "Antipsychotics\n",
+      "bbox": [
+        61.88922119140625,
+        206.50039672851562,
+        130.209228515625,
+        218.35040283203125
+      ],
+      "text_sha256": "66a87c9d9c00b8fa993ae9a90f576148dfe50f1c930aed10c7efe7d8254d7496"
+    },
+    {
+      "block_id": "page-0609-block-0005",
+      "order": 5,
+      "text": "Adverse effects of antipsychotics may outweigh beneficial effects in the treatment of tics \nand so it is recommended that clonidine or guanfacine are always tried first. \nAntipsychotics may, however, be more effective than adrenergic α2 agonists in alleviat-\ning tics in some individuals.\n",
+      "bbox": [
+        61.88922119140625,
+        224.410400390625,
+        436.7091979980469,
+        272.1304016113281
+      ],
+      "text_sha256": "c9bdcd5c351f8c00f6258f0c8d95fe32b29806bef10221ac1e9d8c969bc12323"
+    },
+    {
+      "block_id": "page-0609-block-0006",
+      "order": 6,
+      "text": "A number of first-generation antipsychotics have been used in TS.18 In a Cochrane \nreview, pimozide demonstrated robust efficacy in a meta-analysis of 6 trials.19 In these \ntrials, pimozide was compared with haloperidol (one trial), placebo (one trial), halop-\neridol and placebo (two trials) and risperidone (two trials) and was found to be more \neffective than placebo, as effective as risperidone and slightly less effective than halop-\neridol in reducing tics. It was associated with fewer adverse reactions compared with \nhaloperidol but did not differ from risperidone in that respect. ECG monitoring is \nessential for pimozide and haloperidol. Haloperidol is often poorly tolerated. Given \ntheir side effect profile, most authors recommend the use of second-generation rather \nthan first-generation antipsychotics in the treatment of TS.18\n",
+      "bbox": [
+        61.88720703125,
+        272.410400390625,
+        436.7071838378906,
+        392.1304016113281
+      ],
+      "text_sha256": "4cf8adb7c7c0f9d6f000b18d3ecdeb33330b1ace8b958b9a52f0d6470bd05c5e"
+    },
+    {
+      "block_id": "page-0609-block-0007",
+      "order": 7,
+      "text": "More recent studies suggest that aripiprazole is an effective and well-tolerated treat-\nment of children with TS (and also tics20). A 10-week multicentre double-blind ran-\ndomised placebo-controlled trial (N = 61) demonstrated the efficacy of aripiprazole in tic \nreduction in TS. Treatment was associated with significantly decreased serum prolactin \nconcentration, increased mean body weight (by 1.6kg), body mass index, and waist cir-\ncumference.21 Aripiprazole was also found to be effective in another randomized, dou-\nble-blind, placebo-controlled trial (N = 133) comparing low-dose aripiprazole (5mg/day \nif <50kg; 10mg/day if ≥50kg), high-dose aripiprazole (10mg/day if <50kg; 20mg/day \nif ≥50kg), or placebo for 8 weeks.22 At week 8, tics as measured by the Yale Global Tic \nSeverity Scale Total Tic Score were reduced in both the high dose group (−9.9; 95% \nCI: −13.8 to −5.9) and the low dose group (−6.3; 95% CI: −10.2 to −2.3) with 69% \n(29/42) of patients in the low-dose and 74% (26/35) in the high-dose group being very \nmuch improved or much improved compared with 38% (16/42) in the placebo group. \nSurprisingly, a higher proportion of children in the low dose group (18.2%) compared to \nthe high dose group (9.3%) and placebo group (9.1%) gained clinically significant \nweight (≥7%) which may have been related to a lower average baseline weight in this \ngroup by >3kg compared to the other two groups. Several case series also support the use \nof aripiprazole.23–26 A study evaluating the metabolic side effects of aripiprazole (N = 25) \n",
+      "bbox": [
+        61.88580322265625,
+        392.17041015625,
+        436.7318420410156,
+        608.1304321289062
+      ],
+      "text_sha256": "978038f2c958c39d0c9566dd40df8d51c0da619e5b9008ee02478421adcbdaa9"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

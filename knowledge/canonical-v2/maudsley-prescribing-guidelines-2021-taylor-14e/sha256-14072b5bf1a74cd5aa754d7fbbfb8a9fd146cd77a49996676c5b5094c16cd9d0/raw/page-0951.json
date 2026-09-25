@@ -1,0 +1,311 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0951",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 951,
+  "source_page_index": 950,
+  "source_page_display": 951,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "930    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 14\nThe patient needs to fail on only one of the four points above to be deemed not to \nhave capacity. Capacity may change over time so reassessment is important. A person \nmay lack capacity about one decision but not about another.\nSection 62 urgent treatment\nIf after three months medication is needed urgently to treat a patient’s mental disorder \nand it is not covered by a T2 or T3, S62 may be applied.\nThe Code of Practice 25.38 states\nThis applies only if the treatment in question is immediately necessary to:\n■\n■save the patient’s life;\n■\n■prevent a serious deterioration of the patient’s condition, and the treatment does \nnot have unfavourable physical or psychological consequences which cannot be \nreversed;\n■\n■alleviate serious suffering by the patient, and the treatment does not have unfa-\nvourable physical or psychological consequences which cannot be reversed and \ndoes not entail significant physical hazard; or\n■\n■prevent patients behaving violently or being a danger to themselves or others, and \nthe treatment represents the minimum interference necessary for that purpose, \ndoes not have unfavourable physical or psychological consequences which cannot \nbe reversed and does not entail significant physical hazard.\nEach Trust should design a form for the clinician in charge of treatment (usually the \nconsultant) to state what the treatment is, why it is immediately necessary and the \nlength of treatment.\nSection 132 duty of managers of hospitals to give information to \ndetained patients\nWith regards to S132 and consent to treatment the code of practice 4.20 states\nPatients must be told what the Act says about treatment for their mental disorder. In \nparticular they must be told:\n■\n■the circumstances (if any) in which they can be treated without their consent – and \nthe circumstances in which they have the right to refuse treatment;\n■\n■the role of second opinion appointed doctors (SOADs) and the circumstances in \nwhich they may be involved; and\n■\n■(where relevant) the rules on electro-convulsive therapy (ECT) and medication \nadministered as part of ECT.\n",
+  "raw_text_sha256": "8f39ce0d12897e8f547f21b9d123e47bb4cc830476b12292aa565cd45fbda621",
+  "coordinates_sha256": "1ef44b1c1d1f0c94b4247a36a14b69465236f56114785bb85ac2aef1e18f27bb",
+  "block_sequence_sha256": "ce88ef9cf8966a034cdc13a4cd01c2549cb68be13ea3cf4e7d14b1c27dac792f",
+  "blocks": [
+    {
+      "block_id": "page-0951-block-0000",
+      "order": 0,
+      "text": "930    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "8508c6e924b58bf31b49e230aef18f63b0b4eb5062d1793cced0f2743a3c858c"
+    },
+    {
+      "block_id": "page-0951-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        18.520000457763672,
+        338.7405090332031,
+        28.0,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0951-block-0002",
+      "order": 2,
+      "text": "The patient needs to fail on only one of the four points above to be deemed not to \nhave capacity. Capacity may change over time so reassessment is important. A person \nmay lack capacity about one decision but not about another.\n",
+      "bbox": [
+        61.889801025390625,
+        61.8770751953125,
+        436.61993408203125,
+        97.59707641601562
+      ],
+      "text_sha256": "64d441dcc4ed4a83a743bc571bdf1e6e36bbb446178d02064105aee7f9298c56"
+    },
+    {
+      "block_id": "page-0951-block-0003",
+      "order": 3,
+      "text": "Section 62 urgent treatment\n",
+      "bbox": [
+        61.889801025390625,
+        115.03207397460938,
+        207.79380798339844,
+        128.06707763671875
+      ],
+      "text_sha256": "2e9a3f4c27d4e0a0f846fede02b91f0b1118858665f11c28b4c9398766c77a68"
+    },
+    {
+      "block_id": "page-0951-block-0004",
+      "order": 4,
+      "text": "If after three months medication is needed urgently to treat a patient’s mental disorder \nand it is not covered by a T2 or T3, S62 may be applied.\n",
+      "bbox": [
+        61.889801025390625,
+        133.8770751953125,
+        436.6597900390625,
+        157.59707641601562
+      ],
+      "text_sha256": "e51bcf1d871de374571f4681d925fa551cca5d28a15b7e2397ab66f69d227b55"
+    },
+    {
+      "block_id": "page-0951-block-0005",
+      "order": 5,
+      "text": "The Code of Practice 25.38 states\n",
+      "bbox": [
+        71.88980102539062,
+        157.8770751953125,
+        216.89979553222656,
+        169.59707641601562
+      ],
+      "text_sha256": "3fdc7b7a3e99444864f174ad250ac59a7abcc2468facc8e2b651244790f61810"
+    },
+    {
+      "block_id": "page-0951-block-0006",
+      "order": 6,
+      "text": "This applies only if the treatment in question is immediately necessary to:\n",
+      "bbox": [
+        74.38980102539062,
+        181.8770751953125,
+        390.50982666015625,
+        193.59707641601562
+      ],
+      "text_sha256": "2ab81c7475d79322c5c9ed8a4f625c9a719ea48642d0e0c73b3deac94ffb9bb0"
+    },
+    {
+      "block_id": "page-0951-block-0007",
+      "order": 7,
+      "text": "■\n■save the patient’s life;\n",
+      "bbox": [
+        74.08470153808594,
+        202.8770751953125,
+        174.92979431152344,
+        214.59707641601562
+      ],
+      "text_sha256": "a06c7d7ea86fab2146b7d0b67f4b988c26d2b2b9be69ed38443af8ade2bad3dc"
+    },
+    {
+      "block_id": "page-0951-block-0008",
+      "order": 8,
+      "text": "■\n■prevent a serious deterioration of the patient’s condition, and the treatment does \n",
+      "bbox": [
+        74.08470153808594,
+        214.8770751953125,
+        436.66973876953125,
+        226.59707641601562
+      ],
+      "text_sha256": "591ef58cefbc96f2e156cfb8e2e7dcc3065011750ed0bce854114d058385d07c"
+    },
+    {
+      "block_id": "page-0951-block-0009",
+      "order": 9,
+      "text": "not have unfavourable physical or psychological consequences which cannot be \nreversed;\n",
+      "bbox": [
+        82.88980102539062,
+        226.8770751953125,
+        436.63970947265625,
+        250.59707641601562
+      ],
+      "text_sha256": "858bff29c9c55c329b0332b4b6eaa903ba1128877fc22cb54841e09a8ff1fa7b"
+    },
+    {
+      "block_id": "page-0951-block-0010",
+      "order": 10,
+      "text": "■\n■alleviate serious suffering by the patient, and the treatment does not have unfa-\n",
+      "bbox": [
+        74.08470153808594,
+        250.8770751953125,
+        433.8597717285156,
+        262.5970764160156
+      ],
+      "text_sha256": "4e2df3a794ffa1b7089250a0a916298ae92acc2526e14ee1b5d1756627960389"
+    },
+    {
+      "block_id": "page-0951-block-0011",
+      "order": 11,
+      "text": "vourable physical or psychological consequences which cannot be reversed and \ndoes not entail significant physical hazard; or\n",
+      "bbox": [
+        82.88980102539062,
+        262.8770751953125,
+        436.6597595214844,
+        286.5970764160156
+      ],
+      "text_sha256": "cfe44d64438f45aeb6f41b6559652de2ab061a002a7a6e3418e1ddab8f7025ca"
+    },
+    {
+      "block_id": "page-0951-block-0012",
+      "order": 12,
+      "text": "■\n■prevent patients behaving violently or being a danger to themselves or others, and \n",
+      "bbox": [
+        74.08470153808594,
+        286.8770751953125,
+        436.6998596191406,
+        298.5970764160156
+      ],
+      "text_sha256": "f34150f966c5ca8649a4ad987e8b306024f00ac0bd327bd9ff999fb02cb6240e"
+    },
+    {
+      "block_id": "page-0951-block-0013",
+      "order": 13,
+      "text": "the treatment represents the minimum interference necessary for that purpose, \ndoes not have unfavourable physical or psychological consequences which cannot \nbe reversed and does not entail significant physical hazard.\n",
+      "bbox": [
+        82.88980102539062,
+        298.8770751953125,
+        436.679931640625,
+        334.5970764160156
+      ],
+      "text_sha256": "959bc692f4c163def994f5eddfb0995529e1f0948e7174fed8a4fc7e7934f1a1"
+    },
+    {
+      "block_id": "page-0951-block-0014",
+      "order": 14,
+      "text": "Each Trust should design a form for the clinician in charge of treatment (usually the \nconsultant) to state what the treatment is, why it is immediately necessary and the \nlength of treatment.\n",
+      "bbox": [
+        61.889801025390625,
+        340.8770751953125,
+        436.6996765136719,
+        376.5970764160156
+      ],
+      "text_sha256": "086c945634c910b1e403028c68cd1a510aa5b90f5fc3d97e75f14e053bf2e136"
+    },
+    {
+      "block_id": "page-0951-block-0015",
+      "order": 15,
+      "text": "Section 132 duty of managers of hospitals to give information to \ndetained patients\n",
+      "bbox": [
+        61.889801025390625,
+        394.0320739746094,
+        400.52490234375,
+        419.0680847167969
+      ],
+      "text_sha256": "78388cd9a7a5ca7fda310f50ba04a4dcdf85f9b957e2cd368162158629a054db"
+    },
+    {
+      "block_id": "page-0951-block-0016",
+      "order": 16,
+      "text": "With regards to S132 and consent to treatment the code of practice 4.20 states\n",
+      "bbox": [
+        61.889801025390625,
+        424.8770751953125,
+        400.6297302246094,
+        436.5970764160156
+      ],
+      "text_sha256": "355ecab2c58a340884aec5f4b08a8ee0da91d50268e9689943d5f520239b86f6"
+    },
+    {
+      "block_id": "page-0951-block-0017",
+      "order": 17,
+      "text": "Patients must be told what the Act says about treatment for their mental disorder. In \nparticular they must be told:\n",
+      "bbox": [
+        74.38980102539062,
+        448.8770751953125,
+        436.6697998046875,
+        472.5970764160156
+      ],
+      "text_sha256": "08223deccbb9494e72776d525a14fb4bcdea5a8bd9e4af8c27fc1073b1fc1db1"
+    },
+    {
+      "block_id": "page-0951-block-0018",
+      "order": 18,
+      "text": "■\n■the circumstances (if any) in which they can be treated without their consent – and \n",
+      "bbox": [
+        74.08470153808594,
+        481.8770751953125,
+        436.6297912597656,
+        493.5970764160156
+      ],
+      "text_sha256": "53c8dbff541b5b1b8c5d321a76d2d66a04c8e36af6df5ace6fcad15715cb1ed7"
+    },
+    {
+      "block_id": "page-0951-block-0019",
+      "order": 19,
+      "text": "the circumstances in which they have the right to refuse treatment;\n",
+      "bbox": [
+        82.88980102539062,
+        493.8770751953125,
+        369.5397644042969,
+        505.5970764160156
+      ],
+      "text_sha256": "495bc7ba86d70c1ca5218ee53c936c95ad1156e847a0c0546cf349f0831df07a"
+    },
+    {
+      "block_id": "page-0951-block-0020",
+      "order": 20,
+      "text": "■\n■the role of second opinion appointed doctors (SOADs) and the circumstances in \n",
+      "bbox": [
+        74.08470153808594,
+        505.8770751953125,
+        436.65985107421875,
+        517.5971069335938
+      ],
+      "text_sha256": "0e7797e164cde66233eb19455a68144c31410d41a5408fdd814cfcea36ab9476"
+    },
+    {
+      "block_id": "page-0951-block-0021",
+      "order": 21,
+      "text": "which they may be involved; and\n",
+      "bbox": [
+        82.88980102539062,
+        517.8770751953125,
+        225.1397705078125,
+        529.5971069335938
+      ],
+      "text_sha256": "22601f45cce98eeccdc0af1fac8b73143d064992500fb204804d2709ea566183"
+    },
+    {
+      "block_id": "page-0951-block-0022",
+      "order": 22,
+      "text": "■\n■(where relevant) the rules on electro-convulsive therapy (ECT) and medication \n",
+      "bbox": [
+        74.08470153808594,
+        529.8770751953125,
+        436.6797790527344,
+        541.5971069335938
+      ],
+      "text_sha256": "72a4d8040fe08e11600a43d8957b1592b384115a39eb827cd5e2ecd984b99d27"
+    },
+    {
+      "block_id": "page-0951-block-0023",
+      "order": 23,
+      "text": "administered as part of ECT.\n",
+      "bbox": [
+        82.88980102539062,
+        541.8770751953125,
+        206.77980041503906,
+        553.5971069335938
+      ],
+      "text_sha256": "ebfece00ea475b014c5ee51e87df02a82f1564224044019d888aaec23f67b964"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

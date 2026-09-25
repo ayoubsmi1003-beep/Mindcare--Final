@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0201",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 201,
+  "source_page_index": 200,
+  "source_page_display": 201,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "180    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\n\t98.\t Michelson D, et al. Mirtazapine, yohimbine or olanzapine augmentation therapy for serotonin reuptake-associated female sexual dysfunc-\ntion: a randomized, placebo controlled trial. J Psychiatr Res 2002; 36:147–152.\n\t99.\t Woodrum ST, et al. Management of SSRI-induced sexual dysfunction. Ann Pharmacother 1998; 32:1209–1215.\n\t100.\t Kingsberg SA, et al. Bremelanotide for the treatment of hypoactive sexual desire disorder: two randomized phase 3 trials. Obstet Gynecol \n2019; 134:899–908.\n\t101.\t Allen K, et al. Management of antipsychotic-related sexual dysfunction: systematic review. J Sex Med 2019; 16:1978–1987.\n\t102.\t Basson R, et al. Women’s sexual dysfunction associated with psychiatric disorders and their treatment. Womens Health 2018; \n14:1745506518762664.\nFurther Reading\nClayton AH, et al. Sexual dysfunction due to psychotropic medications. Psychiatr Clin North Am 2016; 39:427–463.\n",
+  "raw_text_sha256": "0a29203bfc0a839bff4656ee1c7e0a1e94803212967a716dce6f435720cfc43d",
+  "coordinates_sha256": "92d74b604f1516f65687688f02da192652a9ee1e2e029a5f51d23dd3403d2d3c",
+  "block_sequence_sha256": "e4094260ea6368f57157312e3c60edd6bf85d98dd6d6a376eb134c278f5e60bf",
+  "blocks": [
+    {
+      "block_id": "page-0201-block-0000",
+      "order": 0,
+      "text": "180    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "38d02b79f5dc9b0673dbfd55711bde8174411377ec05545a1792059594874c0d"
+    },
+    {
+      "block_id": "page-0201-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0201-block-0002",
+      "order": 2,
+      "text": "\t98.\t Michelson D, et al. Mirtazapine, yohimbine or olanzapine augmentation therapy for serotonin reuptake-associated female sexual dysfunc-\n",
+      "bbox": [
+        61.88909912109375,
+        63.2694091796875,
+        433.86505126953125,
+        70.30140686035156
+      ],
+      "text_sha256": "3817ed5bff7e11d61069b17d2ec6af401d148e27ee964d824c8df51a9d18a37a"
+    },
+    {
+      "block_id": "page-0201-block-0003",
+      "order": 3,
+      "text": "tion: a randomized, placebo controlled trial. J Psychiatr Res 2002; 36:147–152.\n\t99.\t Woodrum ST, et al. Management of SSRI-induced sexual dysfunction. Ann Pharmacother 1998; 32:1209–1215.\n\t100.\t Kingsberg SA, et al. Bremelanotide for the treatment of hypoactive sexual desire disorder: two randomized phase 3 trials. Obstet Gynecol \n",
+      "bbox": [
+        61.895103454589844,
+        72.12541198730469,
+        435.5451965332031,
+        97.30140686035156
+      ],
+      "text_sha256": "19b4bcd29e4dc8821564038e198544fa47a7d6db25df06e2f2d130b9d024e0a6"
+    },
+    {
+      "block_id": "page-0201-block-0004",
+      "order": 4,
+      "text": "2019; 134:899–908.\n\t101.\t Allen K, et al. Management of antipsychotic-related sexual dysfunction: systematic review. J Sex Med 2019; 16:1978–1987.\n\t102.\t Basson R, et al. Women’s sexual dysfunction associated with psychiatric disorders and their treatment. Womens Health 2018; \n",
+      "bbox": [
+        61.901100158691406,
+        99.12541198730469,
+        435.5331115722656,
+        124.30140686035156
+      ],
+      "text_sha256": "24b8e9585580165212de3918a1f3b49559b72503fbc91f1110446bfa79d2b6a1"
+    },
+    {
+      "block_id": "page-0201-block-0005",
+      "order": 5,
+      "text": "14:1745506518762664.\n",
+      "bbox": [
+        77.90309143066406,
+        126.12541198730469,
+        141.2870635986328,
+        133.30140686035156
+      ],
+      "text_sha256": "a655b9ab4dfde55c89f776596c8f7f8e91f1392ecc2701324b3d7dc16921c9ad"
+    },
+    {
+      "block_id": "page-0201-block-0006",
+      "order": 6,
+      "text": "Further Reading\n",
+      "bbox": [
+        61.88909912109375,
+        151.64840698242188,
+        145.0160675048828,
+        164.68341064453125
+      ],
+      "text_sha256": "d1df9c0aaf8c5823dba30780bfcb50ebc443ac029feaebfac51c7d96010317a5"
+    },
+    {
+      "block_id": "page-0201-block-0007",
+      "order": 7,
+      "text": "Clayton AH, et al. Sexual dysfunction due to psychotropic medications. Psychiatr Clin North Am 2016; 39:427–463.\n",
+      "bbox": [
+        61.88909912109375,
+        169.6254119873047,
+        364.7870788574219,
+        176.80140686035156
+      ],
+      "text_sha256": "68998b550aac09772417a9a5efd165afd5491e26488be2acb561c413735036a3"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,311 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0035",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 35,
+  "source_page_index": 34,
+  "source_page_display": 35,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "14    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nEquivalent doses\nKnowledge of equivalent dosages is useful when switching between FGAs. Estimates of \n‘neuroleptic’ or ‘chlorpromazine’ equivalence, in milligrams a day, between these medi-\ncations are based on clinical experience, expert panel opinion (using various methods) \nand any dopamine binding studies available.\nTable 1.2 provides approximate equivalent doses for FGAs.1–4 The values given should \nbe seen as a rough guide when switching from one FGA to another and are no substitute \nfor clinical titration of the new medication dose against adverse effects and response.\nEquivalent doses of SGAs may be less clinically relevant as these medications tend to \nhave better defined, evidence-based licensed dose ranges. There are several different \nways of calculating equivalence based on, for example, defined daily dose,5 minimum \neffective dose6,7 and average dose.8 These methods give different estimates of equiva-\nlence. A very rough guide to equivalent SGA daily dosages is given in the Table 1.3.3,4,7–9 \nThere is considerable disagreement about exact equivalencies, even amongst the refer-\nences cited here. Clozapine is not included because this has a distinct initial titration \nschedule and a high dose-plasma level variability and because it probably has a differ-\nent mechanism of action.\nComparing potencies of FGAs with SGAs introduces yet more uncertainty with \nrespect to dose equivalence. Very approximately, 100mg chlorpromazine is equivalent \nto 1.5mg risperidone.3\nTable 1.2  Equivalent doses of first generation antipsychotics\nDrug\nEquivalent dose (consensus)\nRange of values in literature\nChlorpromazine\n100mg/day\nReference\nFlupentixol\n3mg/day\n2–3mg/day\nFlupentixol depot\n10mg/week\n10–20mg/week\nFluphenazine\n2mg/day\n1–5mg/day\nFluphenazine depot\n5mg/week\n1–12.5mg/week\nHaloperidol\n2mg/day\n1.5–5mg/day\nHaloperidol depot\n15mg/week\n5–25mg/week\nPericyazine\n10mg/day\n10mg/day\nPerphenazine\n10mg/day\n5–10mg/day\nPimozide\n2mg/day\n1.33–2mg/day\nPipotiazine depot\n10mg/week\n10–12.5mg/week\nSulpiride\n200mg/day\n133–300mg/day\nTrifluoperazine\n5mg/day\n2.5–5mg/day\nZuclopenthixol\n25mg/day\n25–60mg/day\nZuclopenthixol depot\n100mg/week\n40–100mg/week\n",
+  "raw_text_sha256": "3f9b53a889faad1d88cd90b0da001a19b4cdc995d82d84a1405f6943e60d91e5",
+  "coordinates_sha256": "f674b2542bdc373bbbfa77e72aefd906df1c290efd69bc1138d4ef25f861e90b",
+  "block_sequence_sha256": "245abe41bb2a869db04060185e4da9406abb63e8e7f8f7e649e47cbf5a811076",
+  "blocks": [
+    {
+      "block_id": "page-0035-block-0000",
+      "order": 0,
+      "text": "14    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "52c087782fc1b84e2d2bbbc7617fa795e62e77a3accf931bbe94214b0fc375b9"
+    },
+    {
+      "block_id": "page-0035-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0035-block-0002",
+      "order": 2,
+      "text": "Equivalent doses\n",
+      "bbox": [
+        68.88909912109375,
+        66.06442260742188,
+        156.29507446289062,
+        79.09942626953125
+      ],
+      "text_sha256": "fff75fb15d5533e183a5614701b4073c3139ce81505e428f82cdb383a0a78beb"
+    },
+    {
+      "block_id": "page-0035-block-0003",
+      "order": 3,
+      "text": "Knowledge of equivalent dosages is useful when switching between FGAs. Estimates of \n‘neuroleptic’ or ‘chlorpromazine’ equivalence, in milligrams a day, between these medi-\ncations are based on clinical experience, expert panel opinion (using various methods) \nand any dopamine binding studies available.\n",
+      "bbox": [
+        61.88909912109375,
+        84.909423828125,
+        436.7090759277344,
+        132.62942504882812
+      ],
+      "text_sha256": "dac8cd6ba6ef341b8211ce2fcb888f6b9a84432ad1acabc6cbe25b421dc3ef26"
+    },
+    {
+      "block_id": "page-0035-block-0004",
+      "order": 4,
+      "text": "Table 1.2 provides approximate equivalent doses for FGAs.1–4 The values given should \nbe seen as a rough guide when switching from one FGA to another and are no substitute \nfor clinical titration of the new medication dose against adverse effects and response.\n",
+      "bbox": [
+        61.88890075683594,
+        132.909423828125,
+        436.6690979003906,
+        168.62942504882812
+      ],
+      "text_sha256": "c4288ebf5bda00036f3609f4d426aa095e8cb14e862798d4e3201bee9b1fa5a6"
+    },
+    {
+      "block_id": "page-0035-block-0005",
+      "order": 5,
+      "text": "Equivalent doses of SGAs may be less clinically relevant as these medications tend to \nhave better defined, evidence-based licensed dose ranges. There are several different \nways of calculating equivalence based on, for example, defined daily dose,5 minimum \neffective dose6,7 and average dose.8 These methods give different estimates of equiva-\nlence. A very rough guide to equivalent SGA daily dosages is given in the Table 1.3.3,4,7–9 \nThere is considerable disagreement about exact equivalencies, even amongst the refer-\nences cited here. Clozapine is not included because this has a distinct initial titration \nschedule and a high dose-plasma level variability and because it probably has a differ-\nent mechanism of action.\n",
+      "bbox": [
+        61.88679504394531,
+        168.909423828125,
+        436.6731262207031,
+        276.6294250488281
+      ],
+      "text_sha256": "d618b4de64ee3b38e30fe8a16c6cb4b6b59174db9d9c7fa3fce4f86a8ed10d33"
+    },
+    {
+      "block_id": "page-0035-block-0006",
+      "order": 6,
+      "text": "Comparing potencies of FGAs with SGAs introduces yet more uncertainty with \nrespect to dose equivalence. Very approximately, 100mg chlorpromazine is equivalent \nto 1.5mg risperidone.3\n",
+      "bbox": [
+        61.88911437988281,
+        276.909423828125,
+        436.6590881347656,
+        312.6294250488281
+      ],
+      "text_sha256": "45642be1168e9e1763d3e4e145f60e3e1b3d78d4ca0f9af90bb48a6d6cf0377f"
+    },
+    {
+      "block_id": "page-0035-block-0007",
+      "order": 7,
+      "text": "Table 1.2  Equivalent doses of first generation antipsychotics\n",
+      "bbox": [
+        67.8895034790039,
+        351.5636901855469,
+        261.6820373535156,
+        360.4512023925781
+      ],
+      "text_sha256": "dced9e1a87546a9f96a7987a24a360693c16a6b56537f61830af9a9df17dd674"
+    },
+    {
+      "block_id": "page-0035-block-0008",
+      "order": 8,
+      "text": "Drug\nEquivalent dose (consensus)\nRange of values in literature\n",
+      "bbox": [
+        61.889503479003906,
+        371.7987060546875,
+        403.7920227050781,
+        380.68621826171875
+      ],
+      "text_sha256": "9833192a9010569be1dd56e7d4c114509df1ce3bb427273b0bc8bb3ae7307d6e"
+    },
+    {
+      "block_id": "page-0035-block-0009",
+      "order": 9,
+      "text": "Chlorpromazine\n100mg/day\nReference\n",
+      "bbox": [
+        61.8895263671875,
+        388.7562255859375,
+        335.42205810546875,
+        397.4637145996094
+      ],
+      "text_sha256": "6eede873d620e5a677993c627d6eaafdce4ddeec639ededd38fdbda524db0103"
+    },
+    {
+      "block_id": "page-0035-block-0010",
+      "order": 10,
+      "text": "Flupentixol\n3mg/day\n2–3mg/day\n",
+      "bbox": [
+        61.889556884765625,
+        403.7787170410156,
+        339.7345886230469,
+        412.4862060546875
+      ],
+      "text_sha256": "989815ffe7643b7b254db72b4e20ef5bc3a3bcc922ab653c67972832c5a240e8"
+    },
+    {
+      "block_id": "page-0035-block-0011",
+      "order": 11,
+      "text": "Flupentixol depot\n10mg/week\n10–20mg/week\n",
+      "bbox": [
+        61.889556884765625,
+        418.80120849609375,
+        353.90960693359375,
+        427.5086975097656
+      ],
+      "text_sha256": "520638aa8becf0564311dd9d1b73e31f2dea8a6b5d43df0883a9c1d98d9efa69"
+    },
+    {
+      "block_id": "page-0035-block-0012",
+      "order": 12,
+      "text": "Fluphenazine\n2mg/day\n1–5mg/day\n",
+      "bbox": [
+        61.889556884765625,
+        433.8236999511719,
+        339.7345886230469,
+        442.53118896484375
+      ],
+      "text_sha256": "9c8f3cb76272bb1388d370d6aa8d87bf7871c6e25f023ee3cd166a21cbc7cfb8"
+    },
+    {
+      "block_id": "page-0035-block-0013",
+      "order": 13,
+      "text": "Fluphenazine depot\n5mg/week\n1–12.5mg/week\n",
+      "bbox": [
+        61.889556884765625,
+        448.84619140625,
+        355.99456787109375,
+        457.5536804199219
+      ],
+      "text_sha256": "d8c89fa0ad371226e4493efb6bf006d15820903e3c9dfec5792cc5ccae846e56"
+    },
+    {
+      "block_id": "page-0035-block-0014",
+      "order": 14,
+      "text": "Haloperidol\n2mg/day\n1.5–5mg/day\n",
+      "bbox": [
+        61.889556884765625,
+        463.8686828613281,
+        345.9895935058594,
+        472.576171875
+      ],
+      "text_sha256": "f1d58b15a61e2d9c960cf04e13f446fd1cac8e5ed6788d6b9e9e8dcefecfd728"
+    },
+    {
+      "block_id": "page-0035-block-0015",
+      "order": 15,
+      "text": "Haloperidol depot\n15mg/week\n5–25mg/week\n",
+      "bbox": [
+        61.889556884765625,
+        478.8912048339844,
+        349.73956298828125,
+        487.59869384765625
+      ],
+      "text_sha256": "c81eceeb5e84bf651bc8dc74a34e6bc273a2558fc21ceef17dfe1cfb855b0077"
+    },
+    {
+      "block_id": "page-0035-block-0016",
+      "order": 16,
+      "text": "Pericyazine\n10mg/day\n10mg/day\n",
+      "bbox": [
+        61.889556884765625,
+        493.9137268066406,
+        335.9845886230469,
+        502.6212158203125
+      ],
+      "text_sha256": "619954c44c7b41f273db9e76c05c778101aac551968f0dde1a33915568d1e723"
+    },
+    {
+      "block_id": "page-0035-block-0017",
+      "order": 17,
+      "text": "Perphenazine\n10mg/day\n5–10mg/day\n",
+      "bbox": [
+        61.889556884765625,
+        508.9361877441406,
+        343.9045715332031,
+        517.6436767578125
+      ],
+      "text_sha256": "022d96cab70b4734d7e6568d99823c4c95b9dea08432f2778678e038688f5630"
+    },
+    {
+      "block_id": "page-0035-block-0018",
+      "order": 18,
+      "text": "Pimozide\n2mg/day\n1.33–2mg/day\n",
+      "bbox": [
+        61.889556884765625,
+        523.9586791992188,
+        350.1595764160156,
+        532.6661987304688
+      ],
+      "text_sha256": "b3a3cc14e2ef944ece19bd5107aacfff2e1188f0f233f47a239be4232bd3ffea"
+    },
+    {
+      "block_id": "page-0035-block-0019",
+      "order": 19,
+      "text": "Pipotiazine depot\n10mg/week\n10–12.5mg/week\n",
+      "bbox": [
+        61.889556884765625,
+        538.981201171875,
+        360.16461181640625,
+        547.688720703125
+      ],
+      "text_sha256": "2414348d611f4a46a7368b02bbddee208784eb722b18e303edf0dff242873937"
+    },
+    {
+      "block_id": "page-0035-block-0020",
+      "order": 20,
+      "text": "Sulpiride\n200mg/day\n133–300mg/day\n",
+      "bbox": [
+        61.889556884765625,
+        554.0037231445312,
+        356.4146423339844,
+        562.7112426757812
+      ],
+      "text_sha256": "fc75759d71d42210a682b1bbc7c07caa035276e8dc3e7910a047efeed61babe7"
+    },
+    {
+      "block_id": "page-0035-block-0021",
+      "order": 21,
+      "text": "Trifluoperazine\n5mg/day\n2.5–5mg/day\n",
+      "bbox": [
+        61.889556884765625,
+        569.0262451171875,
+        345.9895935058594,
+        577.7337646484375
+      ],
+      "text_sha256": "451fa08cd9783d851d9cf2a5141d29b214f2025fee4be1f59cc6d7d44df95622"
+    },
+    {
+      "block_id": "page-0035-block-0022",
+      "order": 22,
+      "text": "Zuclopenthixol\n25mg/day\n25–60mg/day\n",
+      "bbox": [
+        61.889556884765625,
+        584.0487060546875,
+        348.0746154785156,
+        592.7562255859375
+      ],
+      "text_sha256": "b180e455e365dfba7500ec583e6b1fb5ed5879fea11a15687f1cac30fefee46b"
+    },
+    {
+      "block_id": "page-0035-block-0023",
+      "order": 23,
+      "text": "Zuclopenthixol depot\n100mg/week\n40–100mg/week\n",
+      "bbox": [
+        61.889556884765625,
+        599.0712280273438,
+        358.07958984375,
+        607.7787475585938
+      ],
+      "text_sha256": "589056b75c0ab51b125ab010c73c72159b795ff4ff39d9720b69239db3973a0d"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,275 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0104",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 104,
+  "source_page_index": 103,
+  "source_page_display": 104,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    83\nCHAPTER 1\nPaliperidone palmitate long-acting injection\nPaliperidone (9-hydroxyrisperidone) is the major active metabolite of risperidone. \nPaliperidone palmitate is the ester prodrug of paliperidone available as a monthly and \na 3-monthly long-acting injection. The ester is hydrolysed by esterases in the muscle to \npaliperidone and which is then absorbed into the systemic circulation.1\nPaliperidone LAI 1-monthly\nAfter the recommended initial loading dose, active paliperidone plasma levels are seen \nwithin a few days, and so co-administration of oral paliperidone or risperidone during \ninitiation is not required from a pharmacokinetic viewpoint.2 Dosing consists of two \ninitiation doses (deltoid) followed by monthly maintenance doses (deltoid or gluteal). \nAfter administration of a single IM dose to the deltoid muscle, on average 28% higher \npeak concentration is observed compared with IM injection to the gluteal muscle.2 \nThus, the two deltoid muscle injections on days 1 and 8 help to quickly attain therapeu-\ntic drug concentration (Table 1.6). Improvement in psychotic symptoms has been \nobserved as early as day 4.2\nTable 1.6  Paliperidone dose and administration information2\nDose\nRoute\nInitiation\nDay 1\n150mg IM\nDeltoid only\nDay 8 (± 4 days)\n100mg IM\nDeltoid only\nMaintenance\nEvery month (± 7 days) thereafter\n50–150mg IM*\nDeltoid or Gluteal**\n*The maintenance dose is perhaps best judged by consideration of what might be a suitable dose of oral risperi-\ndone and then giving paliperidone palmitate in an equivalent dose (see Table 1.7). Pre-treatment with oral \nrisperidone is helpful in establishing efficacy and tolerability of a given dose.\n**Continuation with deltoid injections for the first 6 months may be considered in some patients who switch from \nhigher doses of oral paliperidone or risperidone.2\nThe second initiation dose may be given four days before or after day 8 (after the first \ninitiation dose on day one).2 The manufacturer recommends that patients may be given \nmaintenance doses up to 7 days before or after the monthly time point.2 This flexibility \nshould help minimise the number of missed doses. See manufacturer’s information for \nfull recommendations regarding missed doses.2\nPoints to note\n■\n■No test dose is required for paliperidone palmitate (but patients should (ideally) be cur-\nrently stabilised on or have previously responded to oral paliperidone or risperidone).\n■\n■The median time to maximum plasma concentrations Tmax is 13 days.2\n■\n■Patients receiving fewer than 12 injections a year have an increased risk of relapse – \ncorrect dosing is critical to the effectiveness of paliperidone monthly.3,4\n",
+  "raw_text_sha256": "1b012d042d61c2a8dccf862b41c852ce7a899ddd43357e7549fb596d8577add9",
+  "coordinates_sha256": "371be2d1af9f94836f72c9960d17305cc4da9c5a0ff403f9aac6ef444962b3b9",
+  "block_sequence_sha256": "8dc51b9ef47a8e4be5614961d99baea9f5cb905129f86e213a23398b79974d02",
+  "blocks": [
+    {
+      "block_id": "page-0104-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    83\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "fcfa9e1f4229017142d31395ce24345ba70685c6edb573fadd66fd76fa95f747"
+    },
+    {
+      "block_id": "page-0104-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0104-block-0002",
+      "order": 2,
+      "text": "Paliperidone palmitate long-acting injection\n",
+      "bbox": [
+        54.99909973144531,
+        66.06448364257812,
+        281.775146484375,
+        79.0994873046875
+      ],
+      "text_sha256": "d252f51c0ad57a55374346e2a71facc8272d7d2c4658717a03c8ae22e647bf26"
+    },
+    {
+      "block_id": "page-0104-block-0003",
+      "order": 3,
+      "text": "Paliperidone (9-hydroxyrisperidone) is the major active metabolite of risperidone. \nPaliperidone palmitate is the ester prodrug of paliperidone available as a monthly and \na 3-monthly long-acting injection. The ester is hydrolysed by esterases in the muscle to \npaliperidone and which is then absorbed into the systemic circulation.1\n",
+      "bbox": [
+        47.99909973144531,
+        84.90948486328125,
+        422.7790832519531,
+        132.62948608398438
+      ],
+      "text_sha256": "b0c2b8763c94c113d83c896f535df09aacc1d6557fc0d5e1fe7ee139fcb2775b"
+    },
+    {
+      "block_id": "page-0104-block-0004",
+      "order": 4,
+      "text": "Paliperidone LAI 1-monthly\n",
+      "bbox": [
+        47.99909973144531,
+        150.06448364257812,
+        188.59005737304688,
+        163.0994873046875
+      ],
+      "text_sha256": "e87619f13370322473c0afb13ea2bfb98ab23a9a69412bbe6b1f27d58ac37c07"
+    },
+    {
+      "block_id": "page-0104-block-0005",
+      "order": 5,
+      "text": "After the recommended initial loading dose, active paliperidone plasma levels are seen \nwithin a few days, and so co-administration of oral paliperidone or risperidone during \ninitiation is not required from a pharmacokinetic viewpoint.2 Dosing consists of two \ninitiation doses (deltoid) followed by monthly maintenance doses (deltoid or gluteal). \nAfter administration of a single IM dose to the deltoid muscle, on average 28% higher \npeak concentration is observed compared with IM injection to the gluteal muscle.2 \nThus, the two deltoid muscle injections on days 1 and 8 help to quickly attain therapeu-\ntic drug concentration (Table 1.6). Improvement in psychotic symptoms has been \nobserved as early as day 4.2\n",
+      "bbox": [
+        47.99687194824219,
+        168.90948486328125,
+        422.7994689941406,
+        276.6295166015625
+      ],
+      "text_sha256": "69c0996e697423adbf5814522b7f7f66c82e869794a53d6432f2b52f98dd3549"
+    },
+    {
+      "block_id": "page-0104-block-0006",
+      "order": 6,
+      "text": "Table 1.6  Paliperidone dose and administration information2\n",
+      "bbox": [
+        53.99909973144531,
+        296.02239990234375,
+        248.97601318359375,
+        304.909912109375
+      ],
+      "text_sha256": "58df4685d96ae2e28e0d6711d593576064849047937442bc4ff7cea18f8b823f"
+    },
+    {
+      "block_id": "page-0104-block-0007",
+      "order": 7,
+      "text": "Dose\nRoute\n",
+      "bbox": [
+        171.99899291992188,
+        316.2574157714844,
+        316.8315124511719,
+        325.1449279785156
+      ],
+      "text_sha256": "81c3b0ea68de522297df0855fc43ef45e374951eab894ed9c82e5622d4d134b4"
+    },
+    {
+      "block_id": "page-0104-block-0008",
+      "order": 8,
+      "text": "Initiation\n",
+      "bbox": [
+        47.99400329589844,
+        333.034912109375,
+        80.08649444580078,
+        341.92242431640625
+      ],
+      "text_sha256": "1480e89d2d37b5ae2b4cef121587b82c7e24bba896b9a58948f7d8091f4b1aec"
+    },
+    {
+      "block_id": "page-0104-block-0009",
+      "order": 9,
+      "text": "Day 1\n150mg IM\nDeltoid only\n",
+      "bbox": [
+        47.99400329589844,
+        348.2374267578125,
+        334.3290710449219,
+        356.9449157714844
+      ],
+      "text_sha256": "928e31ed8ee9a02a1068a5f37abfd2da51a4bb113c7caa292e7c3e528f33311b"
+    },
+    {
+      "block_id": "page-0104-block-0010",
+      "order": 10,
+      "text": "Day 8 (± 4 days)\n100mg IM\nDeltoid only\n",
+      "bbox": [
+        47.98649597167969,
+        363.2599182128906,
+        334.3215637207031,
+        371.9674072265625
+      ],
+      "text_sha256": "05fa7b36a271902f39161ccc991c91138b4e4ce2680e140f84d23d30d5425b72"
+    },
+    {
+      "block_id": "page-0104-block-0011",
+      "order": 11,
+      "text": "Maintenance\n",
+      "bbox": [
+        47.97898864746094,
+        378.1023864746094,
+        93.81897735595703,
+        386.9898986816406
+      ],
+      "text_sha256": "245496722c77b035921bdab558c16a0fb4cd3c619e21d32b387265c51b86637f"
+    },
+    {
+      "block_id": "page-0104-block-0012",
+      "order": 12,
+      "text": "Every month (± 7 days) thereafter\n50–150mg IM*\nDeltoid or Gluteal**\n",
+      "bbox": [
+        47.97898864746094,
+        393.3049011230469,
+        360.9841003417969,
+        402.01239013671875
+      ],
+      "text_sha256": "5165e73fe4380eb29e1a9291a85b22f7144f9ccc52897ad37c18dfded1ff2ff7"
+    },
+    {
+      "block_id": "page-0104-block-0013",
+      "order": 13,
+      "text": "*The maintenance dose is perhaps best judged by consideration of what might be a suitable dose of oral risperi-\ndone and then giving paliperidone palmitate in an equivalent dose (see Table 1.7). Pre-treatment with oral \nrisperidone is helpful in establishing efficacy and tolerability of a given dose.\n**Continuation with deltoid injections for the first 6 months may be considered in some patients who switch from \nhigher doses of oral paliperidone or risperidone.2\n",
+      "bbox": [
+        47.97151184082031,
+        412.3023986816406,
+        416.1015930175781,
+        460.9998779296875
+      ],
+      "text_sha256": "27e2a5d562cda4159b6b177d8603d4bb6bc4ace6c651eb07fdc586f58cb813f8"
+    },
+    {
+      "block_id": "page-0104-block-0014",
+      "order": 14,
+      "text": "The second initiation dose may be given four days before or after day 8 (after the first \ninitiation dose on day one).2 The manufacturer recommends that patients may be given \nmaintenance doses up to 7 days before or after the monthly time point.2 This flexibility \nshould help minimise the number of missed doses. See manufacturer’s information for \nfull recommendations regarding missed doses.2\n",
+      "bbox": [
+        47.99620056152344,
+        473.73480224609375,
+        422.8190612792969,
+        533.454833984375
+      ],
+      "text_sha256": "176c94375915eb5b75c663256feaec9378abdc174cfbc420c6db8dc957e3794c"
+    },
+    {
+      "block_id": "page-0104-block-0015",
+      "order": 15,
+      "text": "Points to note\n",
+      "bbox": [
+        47.99909973144531,
+        550.8898315429688,
+        120.73109436035156,
+        563.9248046875
+      ],
+      "text_sha256": "ce8c9d59ec0c8924756a275e1816009f4ec3f5bc903cb5b3bf3e0622e9ebe0ef"
+    },
+    {
+      "block_id": "page-0104-block-0016",
+      "order": 16,
+      "text": "■\n■No test dose is required for paliperidone palmitate (but patients should (ideally) be cur-\n",
+      "bbox": [
+        47.999000549316406,
+        575.7348022460938,
+        419.9990539550781,
+        587.454833984375
+      ],
+      "text_sha256": "be78a4fbee10f4e71e70cbd3f246f752d86649df632c3bd64deb3de5a8a2c4a4"
+    },
+    {
+      "block_id": "page-0104-block-0017",
+      "order": 17,
+      "text": "rently stabilised on or have previously responded to oral paliperidone or risperidone).\n",
+      "bbox": [
+        56.99909973144531,
+        587.7348022460938,
+        417.4189147949219,
+        599.454833984375
+      ],
+      "text_sha256": "44217807f95988df15a8d9c1e880a8270c8f61fd0ab48ad780aa881748652923"
+    },
+    {
+      "block_id": "page-0104-block-0018",
+      "order": 18,
+      "text": "■\n■The median time to maximum plasma concentrations Tmax is 13 days.2\n",
+      "bbox": [
+        47.999000549316406,
+        599.7348022460938,
+        359.5647888183594,
+        613.8340454101562
+      ],
+      "text_sha256": "41e5ab62a3fd01314766844f690d0a3ed3e8fe0e7e4e469cfae08e8c43ab9ff3"
+    },
+    {
+      "block_id": "page-0104-block-0019",
+      "order": 19,
+      "text": "■\n■Patients receiving fewer than 12 injections a year have an increased risk of relapse – \n",
+      "bbox": [
+        47.99909973144531,
+        611.7348022460938,
+        422.7693176269531,
+        623.454833984375
+      ],
+      "text_sha256": "ebfb96eb35101ab97747863b2de5f48e41a6e7e94b876727e1d125e81a62bc68"
+    },
+    {
+      "block_id": "page-0104-block-0020",
+      "order": 20,
+      "text": "correct dosing is critical to the effectiveness of paliperidone monthly.3,4\n",
+      "bbox": [
+        56.99909973144531,
+        623.7348022460938,
+        360.8694152832031,
+        635.454833984375
+      ],
+      "text_sha256": "648d95244c05d1661ae6f31c6d59f56657c3aa3cc2d120c9eeb76b668019a621"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

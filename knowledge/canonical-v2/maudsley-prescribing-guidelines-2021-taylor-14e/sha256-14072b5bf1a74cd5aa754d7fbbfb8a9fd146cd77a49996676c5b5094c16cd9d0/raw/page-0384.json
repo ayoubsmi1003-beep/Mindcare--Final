@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0384",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 384,
+  "source_page_index": 383,
+  "source_page_display": 384,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    363\nCHAPTER 3\nweak54 – see section on ‘SSRIs and Bleeding’ in this chapter). Other side effects may also \nbe problematic – specifically falls, bone fractures and epileptic seizures.30–32\nAntidepressants are clearly effective in post-stroke depression,42,55 and treatment \nshould not usually be withheld (even though Cochrane is rather lukewarm about the \nbenefits of antidepressants29). Inadequate treatment of depression increases the risk of \nstroke.14,56 Two multiple-treatments meta-analyses suggested that paroxetine might be \nthe drug of choice when considering both efficacy and tolerability post-stroke, although \nsmall sample sizes and a lack of high-quality studies in this area limit the strength of \nthis recommendation57,58 (each analysis included only one paroxetine trial, whereas a \nmeta-analysis of four trials of paroxetine found no benefit59). A recent large multiple \ntreatments meta-analysis of 51 trials ranked mirtazapine first for response rate, fol-\nlowed by venlafaxine and escitalopram, although the studies were limited to Chinese \npatients and so may lack generalisability.60\nBox 3.2  Post-stroke depression – recommended drugs\nSSRIs*\nNortriptyline\n* Caution is clearly required if the index stroke was known to be haemorrhagic because \nSSRIs increase the risk of de novo haemorrhagic stroke (although absolute risk is low), \nespecially when combined with warfarin or other anti-platelet drugs.61,62 If patient is \ntaking warfarin, suggest citalopram or escitalopram (probably lowest interaction \npotential63) and use the lowest effective dose.49 Little is known of the pharmacokinetic \ninteraction potential with direct-acting oral anticoagulants (DOACs). Citalopram or \nescitalopram may again be preferred as neither drug affects enzymes associated with \nDOAC metabolism.64\nWhere SSRIs are given in any anticoagulated or aspirin-treated patient, consideration \nshould be given to the prescription of a proton-pump inhibitor for gastric protection. \nNortriptyline, which does not appear to increase risk of bleeding, is an alternative.\nReferences\n\t 1.\t Wium-Andersen MK, et al. An attempt to explain the bidirectional association between ischaemic heart disease, stroke and depression: a \ncohort and meta-analytic approach. Br J Psychiatry 2020; 217:434–441.\n\t 2.\t Pan A, et al. Depression and risk of stroke morbidity and mortality: a meta-analysis and systematic review. JAMA 2011; 306:1241–1249.\n\t 3.\t Pequignot R, et al. Depressive symptoms, antidepressants and disability and future coronary heart disease and stroke events in older adults: \nthe Three City Study. Eur J Epidemiol 2013; 28:249–256.\n\t 4.\t Li CT, et al. Major depressive disorder and stroke risks: a 9-year follow-up population-based, matched cohort study. PLoS One 2012; \n7:e46818.\n\t 5.\t Gainotti G, et al. Relation between depression after stroke, antidepressant therapy, and functional recovery. J Neurol Neurosurg Psychiatry \n2001; 71:258–261.\n\t 6.\t Hayee MA, et al. Depression after stroke-analysis of 297 stroke patients. Bangladesh Med Res Counc Bull 2001; 27:96–102.\n\t 7.\t Paolucci S, et al. Post-stroke depression, antidepressant treatment and rehabilitation results. A case-control study. Cerebrovasc Dis 2001; \n12:264–271.\n\t 8.\t Xu XM, et al. Efficacy and feasibility of antidepressant treatment in patients with post-stroke depression. Medicine (Baltimore) 2016; \n95:e5349.\n",
+  "raw_text_sha256": "9c0046cb570832ba15022dcccf43cadfb407efebbaf0d76e03bd9601e87fd4fa",
+  "coordinates_sha256": "bd3d1f2d519be9b38bcd1b509dae68ecfca5faa7f9e4d55350135b2644e75ca8",
+  "block_sequence_sha256": "8cf9be59b476608b8cea4357c6131404546c4d243b3d63806646c647af09b5b3",
+  "blocks": [
+    {
+      "block_id": "page-0384-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    363\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "2dd086f523b0cbcb682eb701396d8647025380ead625004b1a93f6674c9896fd"
+    },
+    {
+      "block_id": "page-0384-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0384-block-0002",
+      "order": 2,
+      "text": "weak54 – see section on ‘SSRIs and Bleeding’ in this chapter). Other side effects may also \nbe problematic – specifically falls, bone fractures and epileptic seizures.30–32\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.75274658203125,
+        86.27041625976562
+      ],
+      "text_sha256": "305123c5c155777e36d5c2eef1a8bbb87cdc9841719f620845a90fb14ffe7c60"
+    },
+    {
+      "block_id": "page-0384-block-0003",
+      "order": 3,
+      "text": "Antidepressants are clearly effective in post-stroke depression,42,55 and treatment \nshould not usually be withheld (even though Cochrane is rather lukewarm about the \nbenefits of antidepressants29). Inadequate treatment of depression increases the risk of \nstroke.14,56 Two multiple-treatments meta-analyses suggested that paroxetine might be \nthe drug of choice when considering both efficacy and tolerability post-stroke, although \nsmall sample sizes and a lack of high-quality studies in this area limit the strength of \nthis recommendation57,58 (each analysis included only one paroxetine trial, whereas a \nmeta-analysis of four trials of paroxetine found no benefit59). A recent large multiple \ntreatments meta-analysis of 51 trials ranked mirtazapine first for response rate, fol-\nlowed by venlafaxine and escitalopram, although the studies were limited to Chinese \npatients and so may lack generalisability.60\n",
+      "bbox": [
+        47.9962043762207,
+        86.5504150390625,
+        422.80322265625,
+        218.27047729492188
+      ],
+      "text_sha256": "66f439d2c521f75e0faf6d8a40d95839e3ac3284b0679464ce1287ba87741498"
+    },
+    {
+      "block_id": "page-0384-block-0004",
+      "order": 4,
+      "text": "Box 3.2  Post-stroke depression – recommended drugs\n",
+      "bbox": [
+        55.25,
+        248.8518829345703,
+        253.64002990722656,
+        258.92437744140625
+      ],
+      "text_sha256": "79a39b3bfd659a00a3361b9716d3a544b345fd1f816fcab639ea7aabbd217ff3"
+    },
+    {
+      "block_id": "page-0384-block-0005",
+      "order": 5,
+      "text": "SSRIs*\n",
+      "bbox": [
+        221.24649047851562,
+        274.1733703613281,
+        246.75498962402344,
+        284.2458801269531
+      ],
+      "text_sha256": "7bec7616e8119907fc6a8e5cd809b13e6601b94da2d98f8f4fb49f24eeb0c718"
+    },
+    {
+      "block_id": "page-0384-block-0006",
+      "order": 6,
+      "text": "Nortriptyline\n",
+      "bbox": [
+        208.25848388671875,
+        290.1703796386719,
+        259.7430114746094,
+        300.2428894042969
+      ],
+      "text_sha256": "43da1e78ff22d1728b876f90eb81e78b796ce23540e88914b98aa0df70af1de2"
+    },
+    {
+      "block_id": "page-0384-block-0007",
+      "order": 7,
+      "text": "* Caution is clearly required if the index stroke was known to be haemorrhagic because \nSSRIs increase the risk of de novo haemorrhagic stroke (although absolute risk is low), \nespecially when combined with warfarin or other anti-platelet drugs.61,62 If patient is \ntaking warfarin, suggest citalopram or escitalopram (probably lowest interaction \npotential63) and use the lowest effective dose.49 Little is known of the pharmacokinetic \ninteraction potential with direct-acting oral anticoagulants (DOACs). Citalopram or \nescitalopram may again be preferred as neither drug affects enzymes associated with \nDOAC metabolism.64\n",
+      "bbox": [
+        47.99749755859375,
+        311.70208740234375,
+        422.820068359375,
+        407.4220886230469
+      ],
+      "text_sha256": "d2485e26f59656e3fa64adc798581389820f663866b1b7743489c78671fb11b4"
+    },
+    {
+      "block_id": "page-0384-block-0008",
+      "order": 8,
+      "text": "Where SSRIs are given in any anticoagulated or aspirin-treated patient, consideration \nshould be given to the prescription of a proton-pump inhibitor for gastric protection. \nNortriptyline, which does not appear to increase risk of bleeding, is an alternative.\n",
+      "bbox": [
+        48.0,
+        422.70208740234375,
+        422.8199768066406,
+        458.4220886230469
+      ],
+      "text_sha256": "4ebeece0795f01ed60b2cd68d3c73656add236259d792c43dd1142bec7d31090"
+    },
+    {
+      "block_id": "page-0384-block-0009",
+      "order": 9,
+      "text": "References\n",
+      "bbox": [
+        48.0,
+        475.8570861816406,
+        104.03400421142578,
+        488.89208984375
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0384-block-0010",
+      "order": 10,
+      "text": "\t 1.\t Wium-Andersen MK, et al. An attempt to explain the bidirectional association between ischaemic heart disease, stroke and depression: a \n",
+      "bbox": [
+        48.0,
+        495.47808837890625,
+        421.68017578125,
+        502.5101013183594
+      ],
+      "text_sha256": "4ffb833c604828e9b7bb315c6d30918bc31780aa63b3a5eb8932215db43d8896"
+    },
+    {
+      "block_id": "page-0384-block-0011",
+      "order": 11,
+      "text": "cohort and meta-analytic approach. Br J Psychiatry 2020; 217:434–441.\n\t 2.\t Pan A, et al. Depression and risk of stroke morbidity and mortality: a meta-analysis and systematic review. JAMA 2011; 306:1241–1249.\n\t 3.\t Pequignot R, et al. Depressive symptoms, antidepressants and disability and future coronary heart disease and stroke events in older adults: \n",
+      "bbox": [
+        48.00600051879883,
+        504.3340759277344,
+        421.6681213378906,
+        529.5100708007812
+      ],
+      "text_sha256": "d1a727eabd72399868a472f1dfdef58c94ab3d372418577cab2bea91efcd367d"
+    },
+    {
+      "block_id": "page-0384-block-0012",
+      "order": 12,
+      "text": "the Three City Study. Eur J Epidemiol 2013; 28:249–256.\n\t 4.\t Li CT, et al. Major depressive disorder and stroke risks: a 9-year follow-up population-based, matched cohort study. PLoS One 2012; \n",
+      "bbox": [
+        48.018001556396484,
+        531.3341064453125,
+        421.721923828125,
+        547.5100708007812
+      ],
+      "text_sha256": "dc17922cbbe280b0b237433ba36e49ea60209df11ca1b6a68efe54f4730f62b0"
+    },
+    {
+      "block_id": "page-0384-block-0013",
+      "order": 13,
+      "text": "7:e46818.\n\t 5.\t Gainotti G, et al. Relation between depression after stroke, antidepressant therapy, and functional recovery. J Neurol Neurosurg Psychiatry \n",
+      "bbox": [
+        48.02399826049805,
+        549.3341064453125,
+        421.72216796875,
+        565.5100708007812
+      ],
+      "text_sha256": "d6296ad193af51bcaf83bdfb67614e85c67d6d3fc5445c8f2cc7c78fb1280f14"
+    },
+    {
+      "block_id": "page-0384-block-0014",
+      "order": 14,
+      "text": "2001; 71:258–261.\n\t 6.\t Hayee MA, et al. Depression after stroke-analysis of 297 stroke patients. Bangladesh Med Res Counc Bull 2001; 27:96–102.\n\t 7.\t Paolucci S, et al. Post-stroke depression, antidepressant treatment and rehabilitation results. A case-control study. Cerebrovasc Dis 2001; \n",
+      "bbox": [
+        48.029998779296875,
+        567.3341064453125,
+        421.69805908203125,
+        592.5100708007812
+      ],
+      "text_sha256": "5981639522cf3122fa9aabc070bf06ee8bc4a0d3b91f4bf77933af21566c1f6b"
+    },
+    {
+      "block_id": "page-0384-block-0015",
+      "order": 15,
+      "text": "12:264–271.\n\t 8.\t Xu XM, et al. Efficacy and feasibility of antidepressant treatment in patients with post-stroke depression. Medicine (Baltimore) 2016; \n",
+      "bbox": [
+        48.04199981689453,
+        594.3341064453125,
+        421.697998046875,
+        610.5100708007812
+      ],
+      "text_sha256": "3834ad19cc8c2be01a6f287caf9cd86161d67ee402e9feb521c26cb3f80fe701"
+    },
+    {
+      "block_id": "page-0384-block-0016",
+      "order": 16,
+      "text": "95:e5349.\n",
+      "bbox": [
+        59.04600143432617,
+        612.3341064453125,
+        85.06199645996094,
+        619.5100708007812
+      ],
+      "text_sha256": "f0305a956e6ee4c9a89461bc0ae1825de7175c4f96d91639e035596197c60cbe"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

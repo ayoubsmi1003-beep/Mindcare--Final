@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0189",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 189,
+  "source_page_index": 188,
+  "source_page_display": 189,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "168    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nHyperprolactinaemia is often superficially asymptomatic (i.e. the patient does not \nspontaneously report problems), and there is some evidence that hyperprolactinaemia \ndoes not affect subjective quality of life.12 Nonetheless, persistent elevation of plasma \nprolactin is associated with suppression of the hypothalamic-pituitary-gonadal axis.13 \nSymptoms of this include sexual dysfunction14 (but note that other pharmacological \nactivities also give rise to sexual dysfunction15), menstrual disturbances,4,16 breast \ngrowth and galactorrhoea,16 and may include delusions of pregnancy.17 Long-term \nadverse consequences are reductions in bone mineral density,18,19 and a possible increase \nin the risk of breast cancer.20\nProlactin can also be raised because of stress, pregnancy and lactation, seizures, renal \nimpairment and other medical conditions,7,21,22 including prolactinoma. When measur-\ning prolactin, the sample should be taken early in the morning and stress during \nvenepuncture should be minimised.22\nHyperprolactinaemia\nDopamine inhibits prolactin release, and so dopamine antagonists can be expected to \nincrease prolactin plasma levels. The degree of prolactin elevation is probably dose-\nrelated,1 and for most antipsychotic medications the threshold activity (D2 occupancy) \nfor increased prolactin is very close to that of therapeutic efficacy.2 Genetic differences \nmay also play a part.3 Table 1.29 groups individual antipsychotics according to their \neffect on prolactin concentrations.\nTable 1.29  Effects of antipsychotic medication on prolactin concentration4–11\nProlactin-sparing (prolactin \nincrease very rare)\nProlactin–elevating (low risk \nminor changes only)\nProlactin-elevating (high risk; \nmajor changes)\nAripiprazole\nLurasidone\nAmisulpride\nAsenapine\nOlanzapine\nPaliperidone\nBrexpiprazole\nZiprasidone\nRisperidone\nCariprazine\nSulpiride\nClozapine\nFGAs\nIloperidone\nLumateperone\nPimavanserin\nQuetiapine\n",
+  "raw_text_sha256": "77b66f161f89aac87a4f6085cf0ef4a9b0ad764d1af0185928cdf68b7d458f73",
+  "coordinates_sha256": "7e472fa00a341dc980806bc58a713cd430c86c0dd167c579e98b5b20331553ff",
+  "block_sequence_sha256": "ed54bf078cde50bb806d9c76c4d4a53af005f397844ba82551e47a5b0dcd9833",
+  "blocks": [
+    {
+      "block_id": "page-0189-block-0000",
+      "order": 0,
+      "text": "168    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "7fee8753a5cfd02b0e84a9efc5ba9c067f4e84628c7fd907fb549a5d3bfe2f9e"
+    },
+    {
+      "block_id": "page-0189-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0189-block-0002",
+      "order": 2,
+      "text": "Hyperprolactinaemia is often superficially asymptomatic (i.e. the patient does not \nspontaneously report problems), and there is some evidence that hyperprolactinaemia \ndoes not affect subjective quality of life.12 Nonetheless, persistent elevation of plasma \nprolactin is associated with suppression of the hypothalamic-pituitary-gonadal axis.13 \nSymptoms of this include sexual dysfunction14 (but note that other pharmacological \nactivities also give rise to sexual dysfunction15), menstrual disturbances,4,16 breast \ngrowth and galactorrhoea,16 and may include delusions of pregnancy.17 Long-term \nadverse consequences are reductions in bone mineral density,18,19 and a possible increase \nin the risk of breast cancer.20\n",
+      "bbox": [
+        61.88450622558594,
+        397.05950927734375,
+        436.6890563964844,
+        504.7795104980469
+      ],
+      "text_sha256": "375df7b5cc84194f1da58244545af662115a1e65446154730bc92f858461c979"
+    },
+    {
+      "block_id": "page-0189-block-0003",
+      "order": 3,
+      "text": "Prolactin can also be raised because of stress, pregnancy and lactation, seizures, renal \nimpairment and other medical conditions,7,21,22 including prolactinoma. When measur-\ning prolactin, the sample should be taken early in the morning and stress during \nvenepuncture should be minimised.22\n",
+      "bbox": [
+        61.88909912109375,
+        505.05950927734375,
+        436.6532287597656,
+        552.779541015625
+      ],
+      "text_sha256": "acb582748a46bea35d7e30bad16869da86b41246f2d4023bae5d20bcca34d3da"
+    },
+    {
+      "block_id": "page-0189-block-0004",
+      "order": 4,
+      "text": "Hyperprolactinaemia\n",
+      "bbox": [
+        68.88909912109375,
+        66.06442260742188,
+        176.88710021972656,
+        79.09942626953125
+      ],
+      "text_sha256": "458a7c35a75b86c258dd75e09b10ba450e26a17358898c812a9f7afecc3cd8f8"
+    },
+    {
+      "block_id": "page-0189-block-0005",
+      "order": 5,
+      "text": "Dopamine inhibits prolactin release, and so dopamine antagonists can be expected to \nincrease prolactin plasma levels. The degree of prolactin elevation is probably dose-\nrelated,1 and for most antipsychotic medications the threshold activity (D2 occupancy) \nfor increased prolactin is very close to that of therapeutic efficacy.2 Genetic differences \nmay also play a part.3 Table 1.29 groups individual antipsychotics according to their \neffect on prolactin concentrations.\n",
+      "bbox": [
+        61.88450622558594,
+        84.909423828125,
+        436.6783142089844,
+        156.62942504882812
+      ],
+      "text_sha256": "7d24b6c34f258e174e1a7ffcfe9936a3ec97221ac82633f9f4fde91e9754bb97"
+    },
+    {
+      "block_id": "page-0189-block-0006",
+      "order": 6,
+      "text": "Table 1.29  Effects of antipsychotic medication on prolactin concentration4–11\n",
+      "bbox": [
+        67.88909912109375,
+        189.2851104736328,
+        313.7885437011719,
+        198.172607421875
+      ],
+      "text_sha256": "bd06e8f0807008b3cb49e19bc283b4b9f6b3484f876949cc4a2640dfce6d1c40"
+    },
+    {
+      "block_id": "page-0189-block-0007",
+      "order": 7,
+      "text": "Prolactin-sparing (prolactin \nincrease very rare)\n",
+      "bbox": [
+        61.88909912109375,
+        209.52012634277344,
+        159.12664794921875,
+        228.40512084960938
+      ],
+      "text_sha256": "d57118e84898cf6cff530b16ad22b05bd42bd0c2b0f85b301a71d34daa54a5e9"
+    },
+    {
+      "block_id": "page-0189-block-0008",
+      "order": 8,
+      "text": "Prolactin–elevating (low risk \nminor changes only)\n",
+      "bbox": [
+        191.8865966796875,
+        209.52012634277344,
+        293.8641052246094,
+        228.40512084960938
+      ],
+      "text_sha256": "343595df232fed809e64590813b372dbc25434d66ef02b7a04c35afdec142ed8"
+    },
+    {
+      "block_id": "page-0189-block-0009",
+      "order": 9,
+      "text": "Prolactin-elevating (high risk; \nmajor changes)\n",
+      "bbox": [
+        315.88409423828125,
+        209.52012634277344,
+        421.1915588378906,
+        228.40512084960938
+      ],
+      "text_sha256": "ff7675a6359637afa156cafe575f0786f4acdc562220573b98d6da0fb4b2015d"
+    },
+    {
+      "block_id": "page-0189-block-0010",
+      "order": 10,
+      "text": "Aripiprazole\nLurasidone\nAmisulpride\n",
+      "bbox": [
+        61.88160705566406,
+        236.47511291503906,
+        353.79669189453125,
+        245.1826171875
+      ],
+      "text_sha256": "082aa9c0ab0674b728c9b6dc63963938f113e79738e875976a8342bbb3db5ee4"
+    },
+    {
+      "block_id": "page-0189-block-0011",
+      "order": 11,
+      "text": "Asenapine\nOlanzapine\nPaliperidone\n",
+      "bbox": [
+        61.87409973144531,
+        251.4976043701172,
+        355.04168701171875,
+        260.2051086425781
+      ],
+      "text_sha256": "d713b2af541265662b3355deb24bd9a31718578c987a9574cfa726ba8b4489b7"
+    },
+    {
+      "block_id": "page-0189-block-0012",
+      "order": 12,
+      "text": "Brexpiprazole\nZiprasidone\nRisperidone\n",
+      "bbox": [
+        61.86659240722656,
+        266.5201110839844,
+        352.9566650390625,
+        275.22760009765625
+      ],
+      "text_sha256": "f77fb354cc0e8fbf9c267131e059d5b9a2bd9b11f589201f00b6e23109b85827"
+    },
+    {
+      "block_id": "page-0189-block-0013",
+      "order": 13,
+      "text": "Cariprazine\nSulpiride\n",
+      "bbox": [
+        61.85908508300781,
+        281.5426025390625,
+        343.3641357421875,
+        290.2500915527344
+      ],
+      "text_sha256": "593714c0a76b5c508322f3111699852ce390ea88f1a5d5d1c4bf9d3b9d7e3525"
+    },
+    {
+      "block_id": "page-0189-block-0014",
+      "order": 14,
+      "text": "Clozapine\nFGAs\n",
+      "bbox": [
+        61.85908508300781,
+        296.5650939941406,
+        332.5265808105469,
+        305.2725830078125
+      ],
+      "text_sha256": "a069b5e4fc636585871b808527cbae50de79c7a6491d9e536c59de47edbaba60"
+    },
+    {
+      "block_id": "page-0189-block-0015",
+      "order": 15,
+      "text": "Iloperidone\n",
+      "bbox": [
+        61.85908508300781,
+        311.58758544921875,
+        97.70157623291016,
+        320.2950744628906
+      ],
+      "text_sha256": "5c0a4eba4e7d48e3e8ae4b8d464b3a794e2e6bfc622518f491e77c64aad563db"
+    },
+    {
+      "block_id": "page-0189-block-0016",
+      "order": 16,
+      "text": "Lumateperone\n",
+      "bbox": [
+        61.85908508300781,
+        326.6100769042969,
+        107.97657775878906,
+        335.31756591796875
+      ],
+      "text_sha256": "d18f30221b11701249bd0a8c70367db5d2cbbff407db480cead27e130a6ef998"
+    },
+    {
+      "block_id": "page-0189-block-0017",
+      "order": 17,
+      "text": "Pimavanserin\n",
+      "bbox": [
+        61.85908508300781,
+        341.632568359375,
+        103.52157592773438,
+        350.3400573730469
+      ],
+      "text_sha256": "b297f98baba781a91a768c96578599133a135ab676cc2426d96fd2dc054acda5"
+    },
+    {
+      "block_id": "page-0189-block-0018",
+      "order": 18,
+      "text": "Quetiapine\n",
+      "bbox": [
+        61.85908508300781,
+        356.6550598144531,
+        96.86157989501953,
+        365.362548828125
+      ],
+      "text_sha256": "41327e1285b139254503aaa07065625405b7c29d457a97ba1c2d41cb54c42d3b"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

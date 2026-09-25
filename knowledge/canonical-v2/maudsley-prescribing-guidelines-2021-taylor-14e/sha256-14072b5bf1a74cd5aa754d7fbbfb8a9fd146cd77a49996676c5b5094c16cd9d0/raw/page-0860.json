@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0860",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 860,
+  "source_page_index": 859,
+  "source_page_display": 860,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Pharmacokinetics    839\nCHAPTER 11\nsaturation.76–78 The effect of fluvoxamine also suggests that metabolism via CYP1A2 to \nnorclozapine can be overwhelmed.79 A recent systematic review concluded that knowl-\nedge of clozapine/norclozapine ratio had no clinical utility.80\nOlanzapine\nPlasma levels of olanzapine are linearly related to daily dose,81 but there is substantial \nvariation,82 with higher levels seen in women,64 non-smokers83 and those on enzyme \ninhibiting drugs.83,84 With once-daily dosing, the threshold level for response in schizo-\nphrenia has been suggested to be 9.3µg/L (trough sample),85 23.2µg/L (12-hour post-\ndose sample)64 and 23µg/L at a mean of 13.5 hours post-dose.86 There is evidence to \nsuggest that levels greater than around 40µg/L (12-hour sampling) produce no further \ntherapeutic benefit than lower levels.87 Severe toxicity is uncommon but may be associ-\nated with levels above 100µg/L, and death is occasionally seen at levels above 160µg/\nL88 (albeit when other drugs or physical factors are relevant). A target range for \n­therapeutic use of 20–40µg/L (12-hour post-dose sample) has been proposed89 for \nschizophrenia; the range for mania is probably similar.90 This target range has recently \nbeen widened to 20–80µg/L91,92 but the reasons for this are not clear.\nNotably, significant weight gain seems most likely to occur in those with plasma \nlevels above 20µg/L.93 Constipation, dry mouth and tachycardia also seem to be plasma \nlevel-related.94\nIn practice, the dose of olanzapine should be largely governed by response and toler-\nability. However, a survey of UK sample assay results suggested that around 20% of \npatients on 20mg a day will have sub-therapeutic plasma levels and more than 40% \nhave levels above 40µg/L.95 Plasma level determinations might then be useful for those \nsuspected of non-adherence, those showing poor tolerability or those not responding to \nthe maximum licensed dose. Where there is poor response and plasma levels are below \n20µg/L, dose may then be adjusted to give 12-hour plasma levels of 20–40µg/L, where \nthere is good response and poor tolerability, the dose should be tentatively reduced to \ngive plasma levels below 40µg/L. Changes in dose give proportionate changes in plasma \nlevels.96 A case might be made to increase the dose to give blood levels in the range \n40–80µg/L but only where no other options remain.\nQuetiapine\nDose of quetiapine is weakly related to trough plasma samples.97 Mean levels reported \nwithin the dose range 150–800mg/day range from 27µg/L to 387µg/L,98–103 although \nthe highest and lowest levels are not necessarily found at the lowest and highest doses. \nAge, gender and co-medication may contribute to the significant inter-individual vari-\nance observed in TDM studies, with female gender,103,104 older age102,103 and CYP3A4 \ninhibiting drugs98,102,103 likely to increase quetiapine concentration. Reports of these \neffects are conflicting104 and not sufficient to support the routine use of plasma level \nmonitoring based on these factors alone. Despite the substantial variation in plasma \nlevels at each dose, there is insufficient evidence to suggest a target therapeutic range to \naim for (although a target range of 100–500µg/L has been proposed105) thus plasma \nlevel monitoring is likely to have little value. Moreover, the metabolites of quetiapine \n",
+  "raw_text_sha256": "166108a136a856fb325d4297b6c988ef8325a3c96949514b66ce7b60bc254b3f",
+  "coordinates_sha256": "f276ac7efe9438be58910948800310c6eba8c431dd200fdf77dae38409878f4e",
+  "block_sequence_sha256": "d44cb253ad7ea29440ebffd86d57ba588c21668b6fc9926a337261127d3108e3",
+  "blocks": [
+    {
+      "block_id": "page-0860-block-0000",
+      "order": 0,
+      "text": "Pharmacokinetics    839\n",
+      "bbox": [
+        320.4088134765625,
+        31.395221710205078,
+        420.00079345703125,
+        41.0272216796875
+      ],
+      "text_sha256": "d85e20f393c967131f0d7e016e8938fe0b97a9a669fe56faff99bfca29f82f99"
+    },
+    {
+      "block_id": "page-0860-block-0001",
+      "order": 1,
+      "text": "CHAPTER 11\n",
+      "bbox": [
+        454.4096984863281,
+        140.99053955078125,
+        463.88970947265625,
+        186.78250122070312
+      ],
+      "text_sha256": "8577f8a61d9be9d957b7354680b21b61adb6e8c4601aaa9be76ccc79360dc7f3"
+    },
+    {
+      "block_id": "page-0860-block-0002",
+      "order": 2,
+      "text": "saturation.76–78 The effect of fluvoxamine also suggests that metabolism via CYP1A2 to \nnorclozapine can be overwhelmed.79 A recent systematic review concluded that knowl-\nedge of clozapine/norclozapine ratio had no clinical utility.80\n",
+      "bbox": [
+        47.99778747558594,
+        62.5504150390625,
+        422.79058837890625,
+        98.27041625976562
+      ],
+      "text_sha256": "6c170865fa232f8a428eccc508cae61f9c88ec45a73d61b5f5cbc0bfee472950"
+    },
+    {
+      "block_id": "page-0860-block-0003",
+      "order": 3,
+      "text": "Olanzapine\n",
+      "bbox": [
+        48.0,
+        113.70541381835938,
+        106.68498992919922,
+        126.74041748046875
+      ],
+      "text_sha256": "0d885341cd7a3b92c6209db4205eb93aa8d75701ae5100041f1fc34db3920e8f"
+    },
+    {
+      "block_id": "page-0860-block-0004",
+      "order": 4,
+      "text": "Plasma levels of olanzapine are linearly related to daily dose,81 but there is substantial \nvariation,82 with higher levels seen in women,64 non-smokers83 and those on enzyme \ninhibiting drugs.83,84 With once-daily dosing, the threshold level for response in schizo-\nphrenia has been suggested to be 9.3µg/L (trough sample),85 23.2µg/L (12-hour post-\ndose sample)64 and 23µg/L at a mean of 13.5 hours post-dose.86 There is evidence to \nsuggest that levels greater than around 40µg/L (12-hour sampling) produce no further \ntherapeutic benefit than lower levels.87 Severe toxicity is uncommon but may be associ-\nated with levels above 100µg/L, and death is occasionally seen at levels above 160µg/\nL88 (albeit when other drugs or physical factors are relevant). A target range for \n­therapeutic use of 20–40µg/L (12-hour post-dose sample) has been proposed89 for \nschizophrenia; the range for mania is probably similar.90 This target range has recently \nbeen widened to 20–80µg/L91,92 but the reasons for this are not clear.\n",
+      "bbox": [
+        47.99690246582031,
+        132.5504150390625,
+        422.822998046875,
+        276.2704772949219
+      ],
+      "text_sha256": "596140de8538676099a6408838bf717f57102da2c452f30f70965d8592fb176f"
+    },
+    {
+      "block_id": "page-0860-block-0005",
+      "order": 5,
+      "text": "Notably, significant weight gain seems most likely to occur in those with plasma \nlevels above 20µg/L.93 Constipation, dry mouth and tachycardia also seem to be plasma \nlevel-related.94\n",
+      "bbox": [
+        47.995697021484375,
+        276.55047607421875,
+        422.78228759765625,
+        312.2704772949219
+      ],
+      "text_sha256": "86f2470b1ea86943e202bdfad67a33c5dd7722e7a6c6adc3552594b59c70137e"
+    },
+    {
+      "block_id": "page-0860-block-0006",
+      "order": 6,
+      "text": "In practice, the dose of olanzapine should be largely governed by response and toler-\nability. However, a survey of UK sample assay results suggested that around 20% of \npatients on 20mg a day will have sub-therapeutic plasma levels and more than 40% \nhave levels above 40µg/L.95 Plasma level determinations might then be useful for those \nsuspected of non-adherence, those showing poor tolerability or those not responding to \nthe maximum licensed dose. Where there is poor response and plasma levels are below \n20µg/L, dose may then be adjusted to give 12-hour plasma levels of 20–40µg/L, where \nthere is good response and poor tolerability, the dose should be tentatively reduced to \ngive plasma levels below 40µg/L. Changes in dose give proportionate changes in plasma \nlevels.96 A case might be made to increase the dose to give blood levels in the range \n40–80µg/L but only where no other options remain.\n",
+      "bbox": [
+        48.0,
+        312.55047607421875,
+        422.8348388671875,
+        444.2704772949219
+      ],
+      "text_sha256": "9aa2775f0aed1ba8355a98c8781a52e51abf1c7114756f35e9116db63dcefd23"
+    },
+    {
+      "block_id": "page-0860-block-0007",
+      "order": 7,
+      "text": "Quetiapine\n",
+      "bbox": [
+        48.0,
+        461.7054748535156,
+        105.4639892578125,
+        474.740478515625
+      ],
+      "text_sha256": "41327e1285b139254503aaa07065625405b7c29d457a97ba1c2d41cb54c42d3b"
+    },
+    {
+      "block_id": "page-0860-block-0008",
+      "order": 8,
+      "text": "Dose of quetiapine is weakly related to trough plasma samples.97 Mean levels reported \nwithin the dose range 150–800mg/day range from 27µg/L to 387µg/L,98–103 although \nthe highest and lowest levels are not necessarily found at the lowest and highest doses. \nAge, gender and co-medication may contribute to the significant inter-individual vari-\nance observed in TDM studies, with female gender,103,104 older age102,103 and CYP3A4 \ninhibiting drugs98,102,103 likely to increase quetiapine concentration. Reports of these \neffects are conflicting104 and not sufficient to support the routine use of plasma level \nmonitoring based on these factors alone. Despite the substantial variation in plasma \nlevels at each dose, there is insufficient evidence to suggest a target therapeutic range to \naim for (although a target range of 100–500µg/L has been proposed105) thus plasma \nlevel monitoring is likely to have little value. Moreover, the metabolites of quetiapine \n",
+      "bbox": [
+        47.99519348144531,
+        480.55047607421875,
+        422.8105773925781,
+        612.2704467773438
+      ],
+      "text_sha256": "9e8e3c213cf3d1462248f957c305e97c1367d42cdf4c06455a559c93f59d3dea"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

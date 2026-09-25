@@ -1,0 +1,14 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0744",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 744,
+  "source_page_index": 743,
+  "repaired_text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\nChapter 8\nHepatic and renal impairment\nHepatic impairment\nPatients with hepatic impairment may have:\n■\n■Reduced capacity to metabolise biological waste products, dietary proteins and foreign substances, such as drugs. Clinical consequences include hepatic encephalopathy \nand increased dose-related side-effects from drugs.\n■\n■Reduced ability to synthesise plasma proteins and vitamin K-dependent clotting factors.\nClinical consequences include hypoalbuminaemia, leading in extreme cases to ascites. \nIncreased toxicity from highly protein-bound drugs should be anticipated. There is also \nan increased risk of bleeding from gastro-irritant drugs and perhaps with SSRIs.\n■\n■Reduced hepatic blood flow. Clinical consequences include oesophageal varices and\nelevated plasma levels of drugs subject to first-pass metabolism.\nGeneral principles\nLiver function tests (LFTs) are a poor marker of hepatic metabolising capacity, as the \nhepatic reserve is large. Note that many patients with chronic liver disease are asymp-\ntomatic or have fluctuating clinical symptoms. Always consider the clinical presenta-\ntion rather than adhere to rigid rules involving LFTs.\nThere are few clinical studies relating to the use of psychotropic drugs in people with \nhepatic disease. The following principles should be adhered to:\n1.\t Prescribe as few drugs as possible.\n2.\t Use lower starting doses, particularly of drugs that are highly protein bound. TCAs, \nSSRIs (except citalopram), trazodone and antipsychotics may have increased free \nplasma levels, at least initially. This will not be reflected in measured (total) plasma \nlevels. Use lower doses of drugs known to be subject to extensive first-pass metabo-\nlism. Examples include TCAs and haloperidol.",
+  "repaired_text_sha256": "7843f878b0021fbd73ba58052dd017fc42583911383312f9fa1b283657d32131",
+  "raw_text_sha256": "e056ff012cb2b94f1e587f8710897e4cb765844a0880a733414a7ef40dc64949",
+  "repair_ids": [
+    "repair-000677"
+  ],
+  "raw_file": "raw/page-0744.json"
+}

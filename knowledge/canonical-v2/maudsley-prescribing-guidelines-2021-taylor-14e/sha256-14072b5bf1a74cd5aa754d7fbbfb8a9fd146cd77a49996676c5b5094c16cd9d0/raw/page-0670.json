@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0670",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 670,
+  "source_page_index": 669,
+  "source_page_display": 670,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Prescribing in older people    649\nCHAPTER  6\nThe Halting Antipsychotic Use in Long-Term Care study was a single-arm longitudinal \nstudy conducted in Australian long-term care facilities among patients taking antipsy-\nchotics, 98.5% of whom had dementia. Of the 93 patients who completed the study, 69 \n(74%) had antipsychotics successfully de-prescribed without re-initiation or experiencing \nincrease in BPSD. Here, the de-prescribing protocol followed Australian guidelines: a dose \nreduction of 50% every 2 weeks and ceasing after 2 weeks on the minimum dose, with-\ndrawing one antipsychotic at a time, with risperidone (if prescribed) withdrawn last.54\nOther pharmacological agents in BPSD\nCognitive enhancers\nAChE-Is and memantine have only a mild effect on BPSD. According to a meta-analysis, the \neffect of AChE-I on BPSD is statistically significant; however, the clinical benefit remains \nunclear.55 Overall, studies suggest cholinesterase inhibitors are more effective for depres-\nsion, dysphoria, apathy and anxiety symptoms than for agitation or aggression. Memantine \nhas been shown to improve agitation, aggression and delusions. Because the benefit of \ncognitive enhancers may not be seen until 3–6 months after initiation, these medications \nwill not have clinical utility in acute treatment of BPSD. However, since clinicians prescribe \ncholinesterase inhibitors and memantine to help slow cognitive decline, eventually these \nmedications may also assist with reducing distressing behaviours.56\nRecommendation: Use of AChE-Is or memantine can be justified in situations described \nabove and may be worth considering if a patient is not on one of these drugs and they \nfall within the licenced indications. Effect is modest at best.\nBenzodiazepines\nBenzodiazepines57,58 are widely used but their use is poorly supported. Benzodiazepines \nhave been associated with cognitive decline,57 risk of dementia,59 risk of pneumonia,60 \nincrease in all-cause mortality61 and may contribute to increased frequency of falls and \nhip fractures58,62 in older people.\nRecommendation: Avoid benzodiazepines other than for emergency sedation.\nAntidepressants\nSubstantial evidence suggests that depression is both a risk factor and consequence of AD. \nThe prevalence of depression and AD co-morbidity is estimated to be 30–50%.63 Two \npotential mechanisms by which antidepressants affect cognition in depression have been \npostulated: a direct effect caused by the pharmacological action of the drugs on specific \nneurotransmitters and a secondary effect caused by improvement of depression.64\nThe evidence for efficacy of antidepressants in BPSD is mixed and limited showing \nthat antidepressants are most helpful for treating agitation and less so for depression, \napathy, anxiety or psychosis in dementia.26 Citalopram has the strongest evidence for \nefficacy in agitation with the CitAD trial,65 showing that 30mg of citalopram daily had \n",
+  "raw_text_sha256": "68650919f3d90dfef0db2c178bee9db2025ce900515e27e096c03d4c01428ebf",
+  "coordinates_sha256": "b4a6346d9182430226463b43ce25f5cc0bec735395422f6b932167298044ada5",
+  "block_sequence_sha256": "87c7ca2e21f259603f5839eb065e8f91cb37f7182559efad88de74b47690f7aa",
+  "blocks": [
+    {
+      "block_id": "page-0670-block-0000",
+      "order": 0,
+      "text": "Prescribing in older people    649\n",
+      "bbox": [
+        281.576904296875,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "502c1fa19ed5901b5352359cec9a6cf77b6ccbc68004180dbed1d79e7811b8cc"
+    },
+    {
+      "block_id": "page-0670-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        454.4096984863281,
+        405.35260009765625,
+        463.88970947265625,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0670-block-0002",
+      "order": 2,
+      "text": "The Halting Antipsychotic Use in Long-Term Care study was a single-arm longitudinal \nstudy conducted in Australian long-term care facilities among patients taking antipsy-\nchotics, 98.5% of whom had dementia. Of the 93 patients who completed the study, 69 \n(74%) had antipsychotics successfully de-prescribed without re-initiation or experiencing \nincrease in BPSD. Here, the de-prescribing protocol followed Australian guidelines: a dose \nreduction of 50% every 2 weeks and ceasing after 2 weeks on the minimum dose, with-\ndrawing one antipsychotic at a time, with risperidone (if prescribed) withdrawn last.54\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.810302734375,
+        146.27041625976562
+      ],
+      "text_sha256": "49bf5189147622e90efeebd060b467ae2865f251e1a1830eed6ca33dc0f66ed4"
+    },
+    {
+      "block_id": "page-0670-block-0003",
+      "order": 3,
+      "text": "Other pharmacological agents in BPSD\n",
+      "bbox": [
+        48.0,
+        164.64041137695312,
+        228.58998107910156,
+        176.49041748046875
+      ],
+      "text_sha256": "6747888d1810a0bdcbd1416daddc1fac1baa49d4f9f1e4998dccd93c0f305e25"
+    },
+    {
+      "block_id": "page-0670-block-0004",
+      "order": 4,
+      "text": "Cognitive enhancers\nAChE-Is and memantine have only a mild effect on BPSD. According to a meta-analysis, the \neffect of AChE-I on BPSD is statistically significant; however, the clinical benefit remains \nunclear.55 Overall, studies suggest cholinesterase inhibitors are more effective for depres-\nsion, dysphoria, apathy and anxiety symptoms than for agitation or aggression. Memantine \nhas been shown to improve agitation, aggression and delusions. Because the benefit of \ncognitive enhancers may not be seen until 3–6 months after initiation, these medications \nwill not have clinical utility in acute treatment of BPSD. However, since clinicians prescribe \ncholinesterase inhibitors and memantine to help slow cognitive decline, eventually these \nmedications may also assist with reducing distressing behaviours.56\n",
+      "bbox": [
+        47.9994010925293,
+        183.10797119140625,
+        422.8092346191406,
+        302.2704772949219
+      ],
+      "text_sha256": "1657de0ab18c5becfd45716f4bcbdb1fa816c68a2f1249396f6414a078f2e5b3"
+    },
+    {
+      "block_id": "page-0670-block-0005",
+      "order": 5,
+      "text": "Recommendation: Use of AChE-Is or memantine can be justified in situations described \nabove and may be worth considering if a patient is not on one of these drugs and they \nfall within the licenced indications. Effect is modest at best.\n",
+      "bbox": [
+        52.5,
+        318.0174865722656,
+        402.9637451171875,
+        348.0820007324219
+      ],
+      "text_sha256": "b6a945085b5a47c7ef1155aaa92765461818366a8de069813ba2247ccd67e335"
+    },
+    {
+      "block_id": "page-0670-block-0006",
+      "order": 6,
+      "text": "Benzodiazepines\nBenzodiazepines57,58 are widely used but their use is poorly supported. Benzodiazepines \nhave been associated with cognitive decline,57 risk of dementia,59 risk of pneumonia,60 \nincrease in all-cause mortality61 and may contribute to increased frequency of falls and \nhip fractures58,62 in older people.\n",
+      "bbox": [
+        47.995704650878906,
+        371.30718994140625,
+        422.8042297363281,
+        430.4696960449219
+      ],
+      "text_sha256": "d3ce0610dfa7c6b7dc895fad5d50ac61ba50b2e8404a9896c858f8e38cece1b8"
+    },
+    {
+      "block_id": "page-0670-block-0007",
+      "order": 7,
+      "text": "Recommendation: Avoid benzodiazepines other than for emergency sedation.\n",
+      "bbox": [
+        52.499698638916016,
+        446.216796875,
+        364.3818054199219,
+        456.289306640625
+      ],
+      "text_sha256": "7570b4338f0740c00e99a0e1dc08ef1ca2c98b07a47deefe8e4778c84e670a5b"
+    },
+    {
+      "block_id": "page-0670-block-0008",
+      "order": 8,
+      "text": "Antidepressants\nSubstantial evidence suggests that depression is both a risk factor and consequence of AD. \nThe prevalence of depression and AD co-morbidity is estimated to be 30–50%.63 Two \npotential mechanisms by which antidepressants affect cognition in depression have been \npostulated: a direct effect caused by the pharmacological action of the drugs on specific \nneurotransmitters and a secondary effect caused by improvement of depression.64\n",
+      "bbox": [
+        48.0,
+        480.771484375,
+        422.7834167480469,
+        551.9340209960938
+      ],
+      "text_sha256": "be361c103a4ca1f1a602107198636cb3446d44d458886d1cf248ce04a115c739"
+    },
+    {
+      "block_id": "page-0670-block-0009",
+      "order": 9,
+      "text": "The evidence for efficacy of antidepressants in BPSD is mixed and limited showing \nthat antidepressants are most helpful for treating agitation and less so for depression, \napathy, anxiety or psychosis in dementia.26 Citalopram has the strongest evidence for \nefficacy in agitation with the CitAD trial,65 showing that 30mg of citalopram daily had \n",
+      "bbox": [
+        47.99629211425781,
+        552.2139892578125,
+        422.77630615234375,
+        599.9340209960938
+      ],
+      "text_sha256": "43956dd3dba6f02f61285d679e2e53830b1e0ab10d387f281971dea34295685b"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

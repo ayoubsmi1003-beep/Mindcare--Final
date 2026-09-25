@@ -1,0 +1,59 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0019",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 19,
+  "source_page_index": 18,
+  "source_page_display": 19,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "xviii    List of abbreviations\nERK\t\n\u0007extracellular signal‐regulated \nkinase\nERP\t\n\u0007exposure and response \nprevention\nES\t\neffect size\nESR\t\nerythrocyte sedimentation rate\nFAST\t\nfunctional assessment staging\nFBC\t\nfull blood count\nFDA\t\n\u0007Food and Drug Administration \n(USA)\nFGA\t\nfirst‐generation antipsychotic\nFPG\t\nfasting plasma glucose\nFTI\t\nFatal Toxicity Index\nGABA\t\nγ‐aminobutyric acid\nGAD\t\ngeneralised anxiety disorder\nGASS\t\n\u0007Glasgow Antipsychotic \nSide‐effect Scale\nGBL\t\ngamma-butyrolactone\nG‐CSF\t\n\u0007granulocyte colony‐stimulating \nfactor\nGFR\t\nglomerular filtration rate\nGGT\t\nγ‐glutamyl transferase\nGHB\t\nγ‐hydroxybutyrate\nGI\t\ngastrointestinal\nGM‐CSF\t\n\u0007granulocyte‐macrophage \ncolony-stimulating factor\nGSK3\t\nglycogen synthase kinase 3\nHADS\t\n\u0007Hospital Anxiety and \nDepression Scale\nHAMA\t\nHamilton Anxiety Rating Scale\nHAND\t\n\u0007HIV‐associated neurocognitive \ndisorders\nHD\t\nHuntington’s disease\nHDL\t\nhigh‐density lipoprotein\nHDRS\t\n\u0007Hamilton Depression Rating Scale\nHIV\t\nhuman immunodeficiency virus\n5‐HMT\t\n5‐hydroxy‐methyl‐tolterodine\nHPA\t\nhypothalamic‐pituitary‐adrenal\nHR\t\nhazard ratio\nIADL\t\n\u0007instrumental activities of daily \nliving\nICD\t\n\u0007International Classification of \nDiseases\nICH\t\nintracerebral haemorrhage\nIFG\t\nimpaired fasting glucose\nIG\t\nintra‐gastric\nIJ\t\nintra‐jejunal\nIM\t\nintramuscular\nIMCA\t\n\u0007independent mental capacity \nadvocate\nIMHP\t\nintramuscular high potency\nINR\t\ninternational normalised ratio\nIR\t\nimmediate release\nIV\t\nintravenous\nIVHP\t\nintravenous high potency\nKiddie‐SADS\t\n\u0007Kiddie‐Schedule for Affective \nDisorders and Schizophrenia\nLAI\t\nlong‐acting injection\nLD\t\nlearning disability\nLDL\t\nlow‐density lipoprotein\nLFTs\t\nliver function tests\nLGIB\t\nlower gastrointestinal bleeding\nLSD\t\nlysergic acid diethylamide\nMADRS\t\n\u0007Montgomery‐Asberg Depression \nRating Scale \nmane\t\nmorning\nMAOI\t\nmonoamine oxidase inhibitor\nMARS\t\n\u0007Medication Adherence Rating \nScale\nMASC\t\n\u0007Multidimensional Anxiety Scale \nfor Children\nMCA\t\nMental Capacity Act\nMCI\t\nmild cognitive impairment\nMDA\t\n\u00073,4‐methylenedioxyam- \nphetamine\nMDMA\t\n\u00073,4‐methylenedioxymetham- \nphetamine\nMDRD\t\n\u0007Modification of Diet in Renal \nDisease\nMHRA\t\n\u0007Medicines and Healthcare \nProducts Regulatory Agency\nMI\t\nmyocardial infarction\nMMSE\t\nMini Mental State Examination\nMR\t\nmodified release\nMS\t\n\u0007mood stabilisers/multiple \nsclerosis\nNAS\t\nneonatal abstinence syndrome\nNICE\t\n\u0007National Institute for Health \nand Care Excellence\nNMDA\t\nN‐methyl‐D‐aspartate\nNMS\t\nneuroleptic malignant syndrome\nNNH\t\nnumber needed to harm\nNNT\t\n\u0007number needed to treat \nnocte\t\nat night\n",
+  "raw_text_sha256": "f223a2dd84595fc96f7939de32e21baaf6139d33f625aff4d67d08b0f8236de1",
+  "coordinates_sha256": "0d42bf598d75f817b2538af251858a906cf79bcf14068fe2d3f6048f0864ca00",
+  "block_sequence_sha256": "163f782585f8e657b72dd15a145d334465d35d6ed977ffcba83204d431600e93",
+  "blocks": [
+    {
+      "block_id": "page-0019-block-0000",
+      "order": 0,
+      "text": "xviii    List of abbreviations\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        177.36978149414062,
+        41.0272216796875
+      ],
+      "text_sha256": "8b2a2c8a19b6dbce468bd5ca712338b54176c759fc035ad34f24ee678a7091d3"
+    },
+    {
+      "block_id": "page-0019-block-0001",
+      "order": 1,
+      "text": "ERK\t\n\u0007extracellular signal‐regulated \nkinase\nERP\t\n\u0007exposure and response \nprevention\nES\t\neffect size\nESR\t\nerythrocyte sedimentation rate\nFAST\t\nfunctional assessment staging\nFBC\t\nfull blood count\nFDA\t\n\u0007Food and Drug Administration \n(USA)\nFGA\t\nfirst‐generation antipsychotic\nFPG\t\nfasting plasma glucose\nFTI\t\nFatal Toxicity Index\nGABA\t\nγ‐aminobutyric acid\nGAD\t\ngeneralised anxiety disorder\nGASS\t\n\u0007Glasgow Antipsychotic \nSide‐effect Scale\nGBL\t\ngamma-butyrolactone\nG‐CSF\t\n\u0007granulocyte colony‐stimulating \nfactor\nGFR\t\nglomerular filtration rate\nGGT\t\nγ‐glutamyl transferase\nGHB\t\nγ‐hydroxybutyrate\nGI\t\ngastrointestinal\nGM‐CSF\t\n\u0007granulocyte‐macrophage \ncolony-stimulating factor\nGSK3\t\nglycogen synthase kinase 3\nHADS\t\n\u0007Hospital Anxiety and \nDepression Scale\nHAMA\t\nHamilton Anxiety Rating Scale\nHAND\t\n\u0007HIV‐associated neurocognitive \ndisorders\nHD\t\nHuntington’s disease\nHDL\t\nhigh‐density lipoprotein\nHDRS\t\n\u0007Hamilton Depression Rating Scale\nHIV\t\nhuman immunodeficiency virus\n5‐HMT\t\n5‐hydroxy‐methyl‐tolterodine\nHPA\t\nhypothalamic‐pituitary‐adrenal\nHR\t\nhazard ratio\nIADL\t\n\u0007instrumental activities of daily \nliving\nICD\t\n\u0007International Classification of \nDiseases\nICH\t\nintracerebral haemorrhage\nIFG\t\nimpaired fasting glucose\nIG\t\nintra‐gastric\nIJ\t\nintra‐jejunal\n",
+      "bbox": [
+        61.889991760253906,
+        62.865318298339844,
+        241.88031005859375,
+        590.1723022460938
+      ],
+      "text_sha256": "a37fc47cc415ae30874e31e3ac057dd011e9668909cc556d79c2c5e89b17fe5b"
+    },
+    {
+      "block_id": "page-0019-block-0002",
+      "order": 2,
+      "text": "IM\t\nintramuscular\nIMCA\t\n\u0007independent mental capacity \nadvocate\nIMHP\t\nintramuscular high potency\nINR\t\ninternational normalised ratio\nIR\t\nimmediate release\nIV\t\nintravenous\nIVHP\t\nintravenous high potency\nKiddie‐SADS\t\n\u0007Kiddie‐Schedule for Affective \nDisorders and Schizophrenia\nLAI\t\nlong‐acting injection\nLD\t\nlearning disability\nLDL\t\nlow‐density lipoprotein\nLFTs\t\nliver function tests\nLGIB\t\nlower gastrointestinal bleeding\nLSD\t\nlysergic acid diethylamide\nMADRS\t\n\u0007Montgomery‐Asberg Depression \nRating Scale \nmane\t\nmorning\nMAOI\t\nmonoamine oxidase inhibitor\nMARS\t\n\u0007Medication Adherence Rating \nScale\nMASC\t\n\u0007Multidimensional Anxiety Scale \nfor Children\nMCA\t\nMental Capacity Act\nMCI\t\nmild cognitive impairment\nMDA\t\n\u00073,4‐methylenedioxyam- \nphetamine\nMDMA\t\n\u00073,4‐methylenedioxymetham- \nphetamine\nMDRD\t\n\u0007Modification of Diet in Renal \nDisease\nMHRA\t\n\u0007Medicines and Healthcare \nProducts Regulatory Agency\nMI\t\nmyocardial infarction\nMMSE\t\nMini Mental State Examination\nMR\t\nmodified release\nMS\t\n\u0007mood stabilisers/multiple \nsclerosis\nNAS\t\nneonatal abstinence syndrome\nNICE\t\n\u0007National Institute for Health \nand Care Excellence\nNMDA\t\nN‐methyl‐D‐aspartate\nNMS\t\nneuroleptic malignant syndrome\nNNH\t\nnumber needed to harm\nNNT\t\n\u0007number needed to treat \nnocte\t\nat night\n",
+      "bbox": [
+        253.89218139648438,
+        63.005577087402344,
+        435.13653564453125,
+        590.3125610351562
+      ],
+      "text_sha256": "15998bd8f8bb19ba4fd1b29d49355b60a4f8ba754dab9b627673e7d374557599"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0459",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 459,
+  "source_page_index": 458,
+  "source_page_display": 459,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "438    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\n(short-half-life drugs still increase the risk30). Benzodiazepines often cause anterograde \namnesia and can adversely affect driving performance.31,32 Benzodiazepines can also \ncause disinhibition (see the section on disinhibition in this chapter). Benzodiazepines \nhave been linked to aggressive behaviour, though the association is modest, and possi-\nbly related to dose and personality factors.33\nEpidemiologic research has linked benzodiazepine prescribing to serious medical \nconditions including dementia, infections and cancer.34–36 However, a causal relation-\nship has not been established, and evidence is conflicting.35 Also, although benzodiaz-\nepine use has been associated with dementia,37 the absence of a dose-response association \nargues against a causal link.38 All studies in this area are confounded by the failure to \ninclude illicit use of benzodiazepines.\nRespiratory depression is rare with oral therapy but is possible when parenteral \nroutes are used. Buccal and intranasal administration may also cause respiratory \ndepression.39,40 The use of the specific benzodiazepine antagonist flumazenil is effective \nin reversing respiratory depression but is not without risk (e.g. convulsions, particularly \nin mixed overdoses with TCAs), so selective use is recommended.41 Flumazenil has a \nmuch shorter half-life than many benzodiazepines, making close observation of the \npatient essential for several hours after administration.\nIV injections can be painful and lead to thrombophlebitis, because of the low water \nsolubility of benzodiazepines, and therefore it is necessary to use solvents in the prepa-\nration of injectable forms. Diazepam is available in emulsion form (Diazemuls in the \nUK) to overcome these problems.\nDrug interactions\nBenzodiazepines do not induce microsomal enzymes and so do not frequently precipitate \npharmacokinetic interactions with any other drugs. Most benzodiazepines are metabolised \nby CYP3A4, which is inhibited by erythromycin, several SSRIs and ketoconazole. It is \ntheoretically possible that co-administration of these drugs will result in higher serum \nlevels of benzodiazepines. Pharmacodynamic interactions (usually increased sedation) \ncan occur. Benzodiazepines are associated with an important interaction with methadone \nand should be used with caution in patients prescribed clozapine (increased risk of cardio-\npulmonary depression) and not at all with intramuscular olanzapine.\nReferences\n\t 1.\t Demyttenaere K, et al. Clinical factors influencing the prescription of antidepressants and benzodiazepines: results from the European study \nof the epidemiology of mental disorders (ESEMeD). J Affect Disord 2008; 110:84–93.\n\t 2.\t Maust DT, et al. Benzodiazepine use and misuse among adults in the United States. Psychiatr Serv 2019; 70:97–106.\n\t 3.\t Hirschtritt ME, et al. Balancing the risks and benefits of benzodiazepines. JAMA 2021; 325:347–348.\n\t 4.\t Baldwin DS, et al. Evidence-based pharmacological treatment of anxiety disorders, post-traumatic stress disorder and obsessive-compulsive \ndisorder: a revision of the 2005 guidelines from the British Association for Psychopharmacology. JPsychopharmacol 2014; 28:403–439.\n\t 5.\t Kurko TA, et al. Long-term use of benzodiazepines: definitions, prevalence and usage patterns – a systematic review of register-based studies. \nEur Psychiatry 2015; 30:1037–1047.\n\t 6.\t National Institute for Health and Clinical Excellence. Generalised anxiety disorder and panic disorder in adults: management. Clinical \nGuideline [CG113] 2011 (last updated July 2019); https://www.nice.org.uk/guidance/cg113.\n\t 7.\t Williams T, et al. Pharmacotherapy for social anxiety disorder (SAnD). Cochrane Database Syst Rev 2017; 10:Cd001206.\n\t 8.\t Perna G, et al. Long-term pharmacological treatments of anxiety disorders: an updated systematic review. Curr Psychiatry Rep 2016; 18:23.\n",
+  "raw_text_sha256": "0adec1c949d49659849b92e1e062a962bef8d358ff3aca2681813e1a22351943",
+  "coordinates_sha256": "60620eed6853dc04ec1cc4c5530881d2a0aa66dcd7dbee9a5ea55f1995fae8d4",
+  "block_sequence_sha256": "6698d38f1836d87f2eba8855de92bd305427dec32ba096e5e647bd217655ee70",
+  "blocks": [
+    {
+      "block_id": "page-0459-block-0000",
+      "order": 0,
+      "text": "438    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "256f8bcbdabd5b4846314a3e46c9c408b7e70658eb86021872048c3099ad0ea5"
+    },
+    {
+      "block_id": "page-0459-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0459-block-0002",
+      "order": 2,
+      "text": "(short-half-life drugs still increase the risk30). Benzodiazepines often cause anterograde \namnesia and can adversely affect driving performance.31,32 Benzodiazepines can also \ncause disinhibition (see the section on disinhibition in this chapter). Benzodiazepines \nhave been linked to aggressive behaviour, though the association is modest, and possi-\nbly related to dose and personality factors.33\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.6849060058594,
+        122.27029418945312
+      ],
+      "text_sha256": "2b151d63e2bf53362e7da3fb8f13a52e826329da7084bec105959550d6d1ad2b"
+    },
+    {
+      "block_id": "page-0459-block-0003",
+      "order": 3,
+      "text": "Epidemiologic research has linked benzodiazepine prescribing to serious medical \nconditions including dementia, infections and cancer.34–36 However, a causal relation-\nship has not been established, and evidence is conflicting.35 Also, although benzodiaz-\nepine use has been associated with dementia,37 the absence of a dose-response association \nargues against a causal link.38 All studies in this area are confounded by the failure to \ninclude illicit use of benzodiazepines.\n",
+      "bbox": [
+        61.888916015625,
+        122.55029296875,
+        436.6814880371094,
+        194.27029418945312
+      ],
+      "text_sha256": "5b81e53ddc173f919a0bb1f4e9b43e7def3c5758124e18804aaa3e7eb3e87d02"
+    },
+    {
+      "block_id": "page-0459-block-0004",
+      "order": 4,
+      "text": "Respiratory depression is rare with oral therapy but is possible when parenteral \nroutes are used. Buccal and intranasal administration may also cause respiratory \ndepression.39,40 The use of the specific benzodiazepine antagonist flumazenil is effective \nin reversing respiratory depression but is not without risk (e.g. convulsions, particularly \nin mixed overdoses with TCAs), so selective use is recommended.41 Flumazenil has a \nmuch shorter half-life than many benzodiazepines, making close observation of the \npatient essential for several hours after administration.\n",
+      "bbox": [
+        61.88599395751953,
+        194.55029296875,
+        436.70782470703125,
+        278.2702941894531
+      ],
+      "text_sha256": "cf98a92e9ac7ab47bb659fb0a44f984bad182321b313578daf69fdfd606ff2b5"
+    },
+    {
+      "block_id": "page-0459-block-0005",
+      "order": 5,
+      "text": "IV injections can be painful and lead to thrombophlebitis, because of the low water \nsolubility of benzodiazepines, and therefore it is necessary to use solvents in the prepa-\nration of injectable forms. Diazepam is available in emulsion form (Diazemuls in the \nUK) to overcome these problems.\n",
+      "bbox": [
+        61.88787841796875,
+        278.55029296875,
+        436.7078552246094,
+        326.2702941894531
+      ],
+      "text_sha256": "2b51a480267c18854802393c11b5efa7647727aebfc39985217cf9f4b6e4e4c7"
+    },
+    {
+      "block_id": "page-0459-block-0006",
+      "order": 6,
+      "text": "Drug interactions\n",
+      "bbox": [
+        61.88999938964844,
+        343.7052917480469,
+        151.72698974609375,
+        356.74029541015625
+      ],
+      "text_sha256": "5186b3517636eb30beb613a4f1459f26e323cf9c4f02370f28a210f501a4f144"
+    },
+    {
+      "block_id": "page-0459-block-0007",
+      "order": 7,
+      "text": "Benzodiazepines do not induce microsomal enzymes and so do not frequently precipitate \npharmacokinetic interactions with any other drugs. Most benzodiazepines are metabolised \nby CYP3A4, which is inhibited by erythromycin, several SSRIs and ketoconazole. It is \ntheoretically possible that co-administration of these drugs will result in higher serum \nlevels of benzodiazepines. Pharmacodynamic interactions (usually increased sedation) \ncan occur. Benzodiazepines are associated with an important interaction with methadone \nand should be used with caution in patients prescribed clozapine (increased risk of cardio-\npulmonary depression) and not at all with intramuscular olanzapine.\n",
+      "bbox": [
+        61.88999938964844,
+        362.55029296875,
+        436.68994140625,
+        458.2702941894531
+      ],
+      "text_sha256": "ebef6d4d86602b008e1f04f314dad8b2d3c0844e273748fe13c63b2d043d8790"
+    },
+    {
+      "block_id": "page-0459-block-0008",
+      "order": 8,
+      "text": "References\n",
+      "bbox": [
+        61.88999938964844,
+        475.7052917480469,
+        117.92399597167969,
+        488.74029541015625
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0459-block-0009",
+      "order": 9,
+      "text": "\t 1.\t Demyttenaere K, et al. Clinical factors influencing the prescription of antidepressants and benzodiazepines: results from the European study \n",
+      "bbox": [
+        61.88999938964844,
+        493.8262939453125,
+        435.5940856933594,
+        500.8583068847656
+      ],
+      "text_sha256": "ebfb42d4ee337e73738295fc732ebee91261e37ebb15e7748091a927d7d77a0c"
+    },
+    {
+      "block_id": "page-0459-block-0010",
+      "order": 10,
+      "text": "of the epidemiology of mental disorders (ESEMeD). J Affect Disord 2008; 110:84–93.\n\t 2.\t Maust DT, et al. Benzodiazepine use and misuse among adults in the United States. Psychiatr Serv 2019; 70:97–106.\n\t 3.\t Hirschtritt ME, et al. Balancing the risks and benefits of benzodiazepines. JAMA 2021; 325:347–348.\n\t 4.\t Baldwin DS, et al. Evidence-based pharmacological treatment of anxiety disorders, post-traumatic stress disorder and obsessive-compulsive \n",
+      "bbox": [
+        61.895999908447266,
+        502.6822814941406,
+        435.54608154296875,
+        536.8582763671875
+      ],
+      "text_sha256": "a263563081962e3041c984b34d4523a54a2a7331f082d1cfad924e8d6f07df39"
+    },
+    {
+      "block_id": "page-0459-block-0011",
+      "order": 11,
+      "text": "disorder: a revision of the 2005 guidelines from the British Association for Psychopharmacology. JPsychopharmacol 2014; 28:403–439.\n\t 5.\t Kurko TA, et al. Long-term use of benzodiazepines: definitions, prevalence and usage patterns – a systematic review of register-based studies. \n",
+      "bbox": [
+        61.91400146484375,
+        538.6823120117188,
+        435.5461730957031,
+        554.8582763671875
+      ],
+      "text_sha256": "3100294cb0deee241763376f80f81d3118f86b632475bef03f730b9653b2ac23"
+    },
+    {
+      "block_id": "page-0459-block-0012",
+      "order": 12,
+      "text": "Eur Psychiatry 2015; 30:1037–1047.\n\t 6.\t National Institute for Health and Clinical Excellence. Generalised anxiety disorder and panic disorder in adults: management. Clinical \n",
+      "bbox": [
+        61.91999816894531,
+        556.6823120117188,
+        435.5519104003906,
+        572.8582763671875
+      ],
+      "text_sha256": "eadc78984e918c605df0e4ed1572dc41ed0eb2cd40bd460a88f7e1c9747ba7c7"
+    },
+    {
+      "block_id": "page-0459-block-0013",
+      "order": 13,
+      "text": "Guideline [CG113] 2011 (last updated July 2019); https://www.nice.org.uk/guidance/cg113.\n\t 7.\t Williams T, et al. Pharmacotherapy for social anxiety disorder (SAnD). Cochrane Database Syst Rev 2017; 10:Cd001206.\n\t 8.\t Perna G, et al. Long-term pharmacological treatments of anxiety disorders: an updated systematic review. Curr Psychiatry Rep 2016; 18:23.\n",
+      "bbox": [
+        61.92599868774414,
+        574.8262939453125,
+        434.1540222167969,
+        599.8582763671875
+      ],
+      "text_sha256": "e1d604822ff865a68fdb5a1329221b90a6d196a933d710a0eb813149d22c8273"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

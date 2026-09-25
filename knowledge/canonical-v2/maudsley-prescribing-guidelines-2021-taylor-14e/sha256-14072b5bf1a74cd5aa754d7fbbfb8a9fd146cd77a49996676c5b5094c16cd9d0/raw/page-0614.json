@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0614",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 614,
+  "source_page_index": 613,
+  "source_page_display": 614,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Children and adolescents    593\nCHAPTER 5\nMelatonin in the treatment of insomnia in children and adolescents\nInsomnia is a common symptom in childhood. Underlying causes may be behavioural \n(inappropriate sleep associations or bedtime resistance), physiological (delayed sleep \nphase syndrome) or related to underlying mood disorders (anxiety, depression and \nbipolar disorder). All forms of insomnia are more common in children with learning \ndifficulties, autism, ADHD and sensory impairments (particularly visual). Although \nbehavioural interventions should be the primary intervention and have a robust evi-\ndence base, exogenous melatonin is now the ‘first-line’ medication prescribed for child-\nhood insomnia.1\nMelatonin is a hormone that is produced by the pineal gland in a circadian manner. \nThe evening rise in melatonin, enabled by darkness, precedes the onset of natural sleep \nby about 2 hours.2 Melatonin is involved in the induction of sleep and in synchronisa-\ntion of the circadian system.\nThere is a wide variety of unlicensed fast-release, slow-release and liquid prepara-\ntions of melatonin. Many products rely on food-grade rather than pharmaceutical \ngrade melatonin and some are expensive. A prolonged-release formulation of mela-\ntonin (Circadin) was licensed in the UK in April 2008 as a short term treatment of \ninsomnia in patients over 55 years of age. Many children are unable to swallow these \ntablets, and although they can be crushed (and become immediate release) the Product \nLicence limited children’s access to a pharmaceutical-grade prolonged release prepa-\nration. However, in the UK, a prolonged-release melatonin minitablet ‘Slenyto’ mim-\nicking the endogenous release profile of the hormone at night has now been licensed \nfor children with autism. It was evaluated in a phase III multicentre randomized, \nplacebo-controlled study of children with autism. The study began with a 13-week \ndouble-blind treatment period followed by an extended open-label period with con-\ntinued efficacy and safety monitoring. Results included clinically significant improve-\nment in caregivers’ diary-reported sleep initiation and maintenance (sleep latency, \ntotal sleep time, longest sleep period).3 Effects were maintained in the long-term \nperiod. The medication was well tolerated and no unexpected safety issues were \nreported. The study was the only ‘Class 1’ rated study in a recent Practice Guideline \npublication on the treatment for insomnia and disrupted sleep behaviour in children \nand adolescents with ASD by the American Academy of Neurology.4 Secondary out-\ncomes showed improvements in child’s social functioning and behaviour, and caregiv-\ners’ well-being.\nLack of any ‘head to head’ studies means that there are still no good data on whether, \nor when, immediate-release melatonin preparations should be used. There are addition-\nally a number of melatonin analogues already produced, or in development5 although \nthey are virtually never used in the paediatric population. There is no evidence from \nequivalence studies of any superiority over melatonin itself.\nEfficacy\nA meta-analysis that included adult and paediatric studies of melatonin used for the \ntreatment of primary sleep disorders demonstrated that melatonin decreases sleep \n",
+  "raw_text_sha256": "10298df7c0f09adb36499d0e0edca49ccda2ac2567fa04646461ea3b20ead8dc",
+  "coordinates_sha256": "60028ab28c1059b237986995484b3a89ebddb668fff8ac84a5e8fe9bf846cc35",
+  "block_sequence_sha256": "594fee6c81e491c7025d8287cd133df961581024899a0451a9878092baf370ac",
+  "blocks": [
+    {
+      "block_id": "page-0614-block-0000",
+      "order": 0,
+      "text": "Children and adolescents    593\n",
+      "bbox": [
+        288.94488525390625,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "7205603b8d192b24bff1c6648aabc2e790409826c396ccf63b00d2c7c759dc8a"
+    },
+    {
+      "block_id": "page-0614-block-0001",
+      "order": 1,
+      "text": "CHAPTER 5\n",
+      "bbox": [
+        454.4096984863281,
+        339.3385009765625,
+        463.88970947265625,
+        380.6824951171875
+      ],
+      "text_sha256": "f4b8b4a0fc64e7b3b74e7336306d0959d0384683e387792724f393162639020a"
+    },
+    {
+      "block_id": "page-0614-block-0002",
+      "order": 2,
+      "text": "Melatonin in the treatment of insomnia in children and adolescents\n",
+      "bbox": [
+        55.0,
+        66.06539916992188,
+        403.6121520996094,
+        79.10040283203125
+      ],
+      "text_sha256": "a2f448c73310d08cd7dd792bce6f7e2171561a1a163f6e93635f623a25f0f2f5"
+    },
+    {
+      "block_id": "page-0614-block-0003",
+      "order": 3,
+      "text": "Insomnia is a common symptom in childhood. Underlying causes may be behavioural \n(inappropriate sleep associations or bedtime resistance), physiological (delayed sleep \nphase syndrome) or related to underlying mood disorders (anxiety, depression and \nbipolar disorder). All forms of insomnia are more common in children with learning \ndifficulties, autism, ADHD and sensory impairments (particularly visual). Although \nbehavioural interventions should be the primary intervention and have a robust evi-\ndence base, exogenous melatonin is now the ‘first-line’ medication prescribed for child-\nhood insomnia.1\n",
+      "bbox": [
+        48.0,
+        84.910400390625,
+        422.79998779296875,
+        180.63040161132812
+      ],
+      "text_sha256": "2d6fc73a82fe4c4282257ba93b9df2c562d9049f3036021f93bdc240e0fae8f1"
+    },
+    {
+      "block_id": "page-0614-block-0004",
+      "order": 4,
+      "text": "Melatonin is a hormone that is produced by the pineal gland in a circadian manner. \nThe evening rise in melatonin, enabled by darkness, precedes the onset of natural sleep \nby about 2 hours.2 Melatonin is involved in the induction of sleep and in synchronisa-\ntion of the circadian system.\n",
+      "bbox": [
+        47.99920654296875,
+        180.910400390625,
+        422.7800598144531,
+        228.63040161132812
+      ],
+      "text_sha256": "237b08a624f50ae5e764b97e1855e91b59be830bc9583769cf44ec32e88d8d02"
+    },
+    {
+      "block_id": "page-0614-block-0005",
+      "order": 5,
+      "text": "There is a wide variety of unlicensed fast-release, slow-release and liquid prepara-\ntions of melatonin. Many products rely on food-grade rather than pharmaceutical \ngrade melatonin and some are expensive. A prolonged-release formulation of mela-\ntonin (Circadin) was licensed in the UK in April 2008 as a short term treatment of \ninsomnia in patients over 55 years of age. Many children are unable to swallow these \ntablets, and although they can be crushed (and become immediate release) the Product \nLicence limited children’s access to a pharmaceutical-grade prolonged release prepa-\nration. However, in the UK, a prolonged-release melatonin minitablet ‘Slenyto’ mim-\nicking the endogenous release profile of the hormone at night has now been licensed \nfor children with autism. It was evaluated in a phase III multicentre randomized, \nplacebo-controlled study of children with autism. The study began with a 13-week \ndouble-blind treatment period followed by an extended open-label period with con-\ntinued efficacy and safety monitoring. Results included clinically significant improve-\nment in caregivers’ diary-reported sleep initiation and maintenance (sleep latency, \ntotal sleep time, longest sleep period).3 Effects were maintained in the long-term \nperiod. The medication was well tolerated and no unexpected safety issues were \nreported. The study was the only ‘Class 1’ rated study in a recent Practice Guideline \npublication on the treatment for insomnia and disrupted sleep behaviour in children \nand adolescents with ASD by the American Academy of Neurology.4 Secondary out-\ncomes showed improvements in child’s social functioning and behaviour, and caregiv-\ners’ well-being.\n",
+      "bbox": [
+        47.99920654296875,
+        228.910400390625,
+        422.8094177246094,
+        480.6304016113281
+      ],
+      "text_sha256": "fb45109f8fef060f10e68c5190fb24fd87de43ae73d35afc038d3bb2b1502701"
+    },
+    {
+      "block_id": "page-0614-block-0006",
+      "order": 6,
+      "text": "Lack of any ‘head to head’ studies means that there are still no good data on whether, \nor when, immediate-release melatonin preparations should be used. There are addition-\nally a number of melatonin analogues already produced, or in development5 although \nthey are virtually never used in the paediatric population. There is no evidence from \nequivalence studies of any superiority over melatonin itself.\n",
+      "bbox": [
+        48.000701904296875,
+        480.910400390625,
+        422.8116760253906,
+        540.6304321289062
+      ],
+      "text_sha256": "6cc1745567187113248251a5bc91a048f8e0a796eb3ee9b057f071517457d173"
+    },
+    {
+      "block_id": "page-0614-block-0007",
+      "order": 7,
+      "text": "Efficacy\n",
+      "bbox": [
+        48.0,
+        558.0654296875,
+        87.53399658203125,
+        571.1004028320312
+      ],
+      "text_sha256": "fd0f6274a15f85c4b60cc02f2025a16ad19dbfa9e2f61bbe3387a211025ac564"
+    },
+    {
+      "block_id": "page-0614-block-0008",
+      "order": 8,
+      "text": "A meta-analysis that included adult and paediatric studies of melatonin used for the \ntreatment of primary sleep disorders demonstrated that melatonin decreases sleep \n",
+      "bbox": [
+        48.0,
+        576.910400390625,
+        422.8102722167969,
+        600.6304321289062
+      ],
+      "text_sha256": "86cf66f7e5563251234b33399917e57a279c8e9a077b8e596c28673a7ef5f954"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

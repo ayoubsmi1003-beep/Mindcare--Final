@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0532",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 532,
+  "source_page_index": 531,
+  "source_page_display": 532,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    511\nCHAPTER 4\nPharmacological treatment of dependence on stimulants\nThe most commonly misused stimulants are cocaine (as hydrochloride or free base) \namfetamine sulphate and methamphetamine hydrochloride. These drugs are usually \ninsufflated (snorted, e.g. cocaine HCl and amfetamine SO4), smoked (cocaine base) or \ninjected. Use, misuse and dependence of stimulants are relatively common in most of the \nworld. They can be taken on their own or with other drugs such as a combination of \nheroin and crack cocaine, powder cocaine and alcohol, or methamphetamine and GBL.1\nA wide variety of pharmacological agents have been assessed in the treatment of \nstimulant misuse and dependence. Although some have shown early promise, none has \nbeen found so far to show proven benefit.2,3 Stimulant use for many will be self-limiting \nwithout treatment beyond the provision of harm minimisation advice and psychoeduca-\ntion. For those that are used in combination with alcohol, heroin or GBL, effective treat-\nment of the co-occurring dependency may deliver reductions in stimulant use. For those \nthat are dependent on stimulants, research suggests that approaches that incorporate \ncontingency management have been shown to have the greatest benefit. For many the \nroute to abstinence is through mutual aid and peer support such as Cocaine Anonymous, \nCrystal Meth Anonymous or Rational Recovery. Further information on the effective \ntreatment of cocaine dependence can be found in the UK clinical guidelines.1\nCocaine\nDetoxification\nSymptoms of withdrawal include depressed mood, agitation and insomnia. These are \nusually self-limiting. It should be noted that given cocaine’s short half-life and the binge \nnature of cocaine use, many patients essentially detoxify themselves regularly with no \npharmacological therapy. Symptomatic relief such as the short-term use of hypnotics \nmay be helpful in some, but these agents may become agents of dependence themselves \nfor some patients.1\nSubstitution treatment\nThere is little evidence for substitution therapy for the treatment of cocaine misuse and \nit should not usually be prescribed.1–3\nAmfetamines\nA wide variety of amfetamines are misused, including ‘street’ amfetamine, metham-\nphetamine and pharmaceutical dexamfetamine. Any drug in this class is likely to have \nmisuse potential.\nDetoxification\nA withdrawal syndrome is common in those who are dependent. Treatment should \nfocus on symptomatic relief, although many symptoms of amfetamine withdrawal \n(low mood, listlessness, fatigue, etc.) are short-lived and may not be amenable to \n",
+  "raw_text_sha256": "3eabb06a8e6d6c69838005148d70e7742e9812015329cd5528991ccff00129cc",
+  "coordinates_sha256": "ae99c9d4de0daf6b237e89770469da24ee0c55bb363a9d7ee32f9c2a32c3c94a",
+  "block_sequence_sha256": "8fefae6fe8c99a90e73a42260a0ec9474962658a2af75d65c660b4e774ab4d1b",
+  "blocks": [
+    {
+      "block_id": "page-0532-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    511\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "dff663de6c722706d54bf5acced861e5e183c209ae08019acf9e187b87f56541"
+    },
+    {
+      "block_id": "page-0532-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0532-block-0002",
+      "order": 2,
+      "text": "Pharmacological treatment of dependence on stimulants\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        347.57806396484375,
+        79.1004638671875
+      ],
+      "text_sha256": "dd8b02da35d62e4aeb5caad786db4aaf551710e80a9a3493f0b6e04254fef168"
+    },
+    {
+      "block_id": "page-0532-block-0003",
+      "order": 3,
+      "text": "The most commonly misused stimulants are cocaine (as hydrochloride or free base) \namfetamine sulphate and methamphetamine hydrochloride. These drugs are usually \ninsufflated (snorted, e.g. cocaine HCl and amfetamine SO4), smoked (cocaine base) or \ninjected. Use, misuse and dependence of stimulants are relatively common in most of the \nworld. They can be taken on their own or with other drugs such as a combination of \nheroin and crack cocaine, powder cocaine and alcohol, or methamphetamine and GBL.1\n",
+      "bbox": [
+        47.99591064453125,
+        84.91046142578125,
+        422.789794921875,
+        156.63046264648438
+      ],
+      "text_sha256": "33329345ebecb53f4602e2eb77ee427acf8c4abd6156bc9eb85d1ac2d7a8aa10"
+    },
+    {
+      "block_id": "page-0532-block-0004",
+      "order": 4,
+      "text": "A wide variety of pharmacological agents have been assessed in the treatment of \nstimulant misuse and dependence. Although some have shown early promise, none has \nbeen found so far to show proven benefit.2,3 Stimulant use for many will be self-limiting \nwithout treatment beyond the provision of harm minimisation advice and psychoeduca-\ntion. For those that are used in combination with alcohol, heroin or GBL, effective treat-\nment of the co-occurring dependency may deliver reductions in stimulant use. For those \nthat are dependent on stimulants, research suggests that approaches that incorporate \ncontingency management have been shown to have the greatest benefit. For many the \nroute to abstinence is through mutual aid and peer support such as Cocaine Anonymous, \nCrystal Meth Anonymous or Rational Recovery. Further information on the effective \ntreatment of cocaine dependence can be found in the UK clinical guidelines.1\n",
+      "bbox": [
+        47.997100830078125,
+        156.91046142578125,
+        422.8198547363281,
+        288.6304931640625
+      ],
+      "text_sha256": "a0a24f243876badc65312bd5b49cf348710a73642aec1837be9282b1a7521876"
+    },
+    {
+      "block_id": "page-0532-block-0005",
+      "order": 5,
+      "text": "Cocaine\n",
+      "bbox": [
+        48.0,
+        306.06549072265625,
+        88.33699798583984,
+        319.1004943847656
+      ],
+      "text_sha256": "6512a64c054e68f48ee6ace2156e707ce9da7cd036a8d4c6097e4417e7772ff0"
+    },
+    {
+      "block_id": "page-0532-block-0006",
+      "order": 6,
+      "text": "Detoxification\n",
+      "bbox": [
+        48.0,
+        325.00048828125,
+        114.68000030517578,
+        336.8504943847656
+      ],
+      "text_sha256": "e53f826881656802c6b9e80005b181b0e09f8115449ff52a110f8f411438a16c"
+    },
+    {
+      "block_id": "page-0532-block-0007",
+      "order": 7,
+      "text": "Symptoms of withdrawal include depressed mood, agitation and insomnia. These are \nusually self-limiting. It should be noted that given cocaine’s short half-life and the binge \nnature of cocaine use, many patients essentially detoxify themselves regularly with no \npharmacological therapy. Symptomatic relief such as the short-term use of hypnotics \nmay be helpful in some, but these agents may become agents of dependence themselves \nfor some patients.1\n",
+      "bbox": [
+        48.0,
+        342.9104919433594,
+        422.8300476074219,
+        414.6304931640625
+      ],
+      "text_sha256": "77f562dc801d865fd9603e673aadcb43f89ccfb4a202385b3ed9704838048e92"
+    },
+    {
+      "block_id": "page-0532-block-0008",
+      "order": 8,
+      "text": "Substitution treatment\n",
+      "bbox": [
+        48.0,
+        433.00048828125,
+        155.79998779296875,
+        444.8504943847656
+      ],
+      "text_sha256": "51b9b728f91dd63ef6328cd235045a725bb24ae41c1032e0b589ded9d982c75f"
+    },
+    {
+      "block_id": "page-0532-block-0009",
+      "order": 9,
+      "text": "There is little evidence for substitution therapy for the treatment of cocaine misuse and \nit should not usually be prescribed.1–3\n",
+      "bbox": [
+        48.0,
+        450.9104919433594,
+        422.75994873046875,
+        474.6304931640625
+      ],
+      "text_sha256": "9d855c8a76d4bff5129a1a944e161a2a2dbd8df5c8560f4b43138f77bcefc42f"
+    },
+    {
+      "block_id": "page-0532-block-0010",
+      "order": 10,
+      "text": "Amfetamines\n",
+      "bbox": [
+        48.0,
+        492.06549072265625,
+        117.0689926147461,
+        505.1004943847656
+      ],
+      "text_sha256": "8d9047c63a04dfaf28d51074bc26b88fcf56a7ee9ea602c9cd21824026c1833f"
+    },
+    {
+      "block_id": "page-0532-block-0011",
+      "order": 11,
+      "text": "A wide variety of amfetamines are misused, including ‘street’ amfetamine, metham-\nphetamine and pharmaceutical dexamfetamine. Any drug in this class is likely to have \nmisuse potential.\n",
+      "bbox": [
+        48.0,
+        510.91046142578125,
+        422.81011962890625,
+        546.6304931640625
+      ],
+      "text_sha256": "2fc8d3fc70b96a06e98026ec67cafdc77de45b85d950b45b74f89b937d50b0d6"
+    },
+    {
+      "block_id": "page-0532-block-0012",
+      "order": 12,
+      "text": "Detoxification\n",
+      "bbox": [
+        48.0,
+        565.00048828125,
+        114.68000030517578,
+        576.8504638671875
+      ],
+      "text_sha256": "e53f826881656802c6b9e80005b181b0e09f8115449ff52a110f8f411438a16c"
+    },
+    {
+      "block_id": "page-0532-block-0013",
+      "order": 13,
+      "text": "A withdrawal syndrome is common in those who are dependent. Treatment should \nfocus on symptomatic relief, although many symptoms of amfetamine withdrawal \n(low mood, listlessness, fatigue, etc.) are short-lived and may not be amenable to \n",
+      "bbox": [
+        48.0,
+        582.9104614257812,
+        422.8099365234375,
+        618.6304931640625
+      ],
+      "text_sha256": "95cffd6581dda686f6ea8b66d851f8cfa34d9de9edfa6dec9523e00825b82898"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

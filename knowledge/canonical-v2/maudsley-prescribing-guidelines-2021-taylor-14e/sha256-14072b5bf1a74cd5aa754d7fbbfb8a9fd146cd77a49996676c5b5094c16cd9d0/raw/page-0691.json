@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0691",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 691,
+  "source_page_index": 690,
+  "source_page_display": 691,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "670    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  6\n■\n■Those attending the meeting should ascertain whether the patient has made an \nAdvance Decision refusing a particular medication or treatment which can be used to \nguide decision-making.\n■\n■The Best Interests Meeting should consider whether a formal legal procedure such as \nthe MHA or DoLS is appropriate. Discussion of the indications and use of this legis-\nlation in the context of covert medication is outside the scope of this guidance but \nspecialist psychiatric and/or legal opinion should be sought in individual circum-\nstances if necessary.\n■\n■Medication should not be administered covertly until a Best Interests Meeting has \nbeen held. If the situation is urgent it is acceptable for a less formal discussion to \noccur between carer/nursing staff, prescriber and family/advocate in order to make \nan urgent decision, but a formal meeting should be arranged as soon as possible.\n■\n■After the meeting, there should be clear documentation of the outcome of the \nmeeting. If the decision is to use covert administration of medication, a check \nshould be made with the pharmacy to determine whether the properties of the \nmedications are likely to be affected by crushing and/or being mixed with food or \ndrink. The medication chart should be amended to describe how the medication \nis to be administered.\n■\n■When the medication is administered in foodstuffs, it is the responsibility of the dis-\npensing nurse to ensure that the medication is taken. This can be facilitated by direct \nobservation or by nominating another member of the clinical team to observe the \npatient taking the medication.\n■\n■A plan should be made to review on a regular basis the need for continued covert \nadministration of medicines.\nAdditional information\n■\n■For patients in Care Homes, the NICE Guidelines – Managing medicines in care \nhomes – March 2014 should be referred to.12,13 The basic principles of this NICE \nguidance are the same as this policy. Mental health practitioners have a duty to \ninform the Care Home manager if they suspect the correct procedures are not being \nfollowed as regards covert medication, and to discuss with their team leader possible \nsafeguarding referral if the home manager does not act on their advice. The role of \nmental health teams supporting care homes is to support the care homes and pre-\nscriber (usually GP) in carrying out this guidance. For patients with complex mental \nhealth needs, it may be appropriate that they attend or contribute to the Best Interests \nMeeting. However, it should be the prescriber (usually the GP), care home staff and \ncare home pharmacist who manage the process.\n■\n■There are no specific restrictions to state that relatives or other informal carers can-\nnot give medication covertly and in certain cases it may be acceptable as long as they \nhave been advised to do so by a health professional (e.g. GP), and all standards of the \npolicy have been met.\n",
+  "raw_text_sha256": "f473ba07f4e65b8a1c856d425da29d894c719b06e70a8869cf883790f82f7029",
+  "coordinates_sha256": "bf84fbe5712fa04bf138f26e56c20c6416ed6b07201ff6b7ce81b6509eb3d102",
+  "block_sequence_sha256": "d8ce8832db03028e0bc7c483739d63ac8065fb11d1f4c0023ba24877993779d7",
+  "blocks": [
+    {
+      "block_id": "page-0691-block-0000",
+      "order": 0,
+      "text": "670    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "bf262563cbc3dd5dd88afd340285a2999623e4f3b2cce8d93e170322273e1bc5"
+    },
+    {
+      "block_id": "page-0691-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        18.520000457763672,
+        405.35260009765625,
+        28.0,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0691-block-0002",
+      "order": 2,
+      "text": "■\n■Those attending the meeting should ascertain whether the patient has made an \n",
+      "bbox": [
+        61.88990020751953,
+        62.55029296875,
+        436.659912109375,
+        74.27029418945312
+      ],
+      "text_sha256": "e74154b34090bb9e208d6691a6305bbb294fe596e2778a2d1a207d56a423d265"
+    },
+    {
+      "block_id": "page-0691-block-0003",
+      "order": 3,
+      "text": "Advance Decision refusing a particular medication or treatment which can be used to \nguide decision-making.\n",
+      "bbox": [
+        70.88999938964844,
+        74.55029296875,
+        436.6700134277344,
+        98.27029418945312
+      ],
+      "text_sha256": "043d4345cd512c325ad786839f925566778173c199ca5f6f62181dcf6d7d81ca"
+    },
+    {
+      "block_id": "page-0691-block-0004",
+      "order": 4,
+      "text": "■\n■The Best Interests Meeting should consider whether a formal legal procedure such as \n",
+      "bbox": [
+        61.88990020751953,
+        98.55029296875,
+        436.64996337890625,
+        110.27029418945312
+      ],
+      "text_sha256": "e3a47c067748f35af2824804b6be856307b05fff0e95b39457cee5ab1fa477d4"
+    },
+    {
+      "block_id": "page-0691-block-0005",
+      "order": 5,
+      "text": "the MHA or DoLS is appropriate. Discussion of the indications and use of this legis-\nlation in the context of covert medication is outside the scope of this guidance but \nspecialist psychiatric and/or legal opinion should be sought in individual circum-\nstances if necessary.\n",
+      "bbox": [
+        70.88999938964844,
+        110.55029296875,
+        436.7200012207031,
+        158.27029418945312
+      ],
+      "text_sha256": "14f304a60e84ed63b8b7e576b98ddaa11a375d4b251e1a52a3009b55fc02326c"
+    },
+    {
+      "block_id": "page-0691-block-0006",
+      "order": 6,
+      "text": "■\n■Medication should not be administered covertly until a Best Interests Meeting has \n",
+      "bbox": [
+        61.88990020751953,
+        158.55029296875,
+        436.70001220703125,
+        170.27029418945312
+      ],
+      "text_sha256": "95b7804ea8ce735fdac687e737cd826109c3c4035cc38383e347322af30f19d5"
+    },
+    {
+      "block_id": "page-0691-block-0007",
+      "order": 7,
+      "text": "been held. If the situation is urgent it is acceptable for a less formal discussion to \noccur between carer/nursing staff, prescriber and family/advocate in order to make \nan urgent decision, but a formal meeting should be arranged as soon as possible.\n",
+      "bbox": [
+        70.88999938964844,
+        170.55029296875,
+        436.6900634765625,
+        206.27029418945312
+      ],
+      "text_sha256": "ead99d07dc9094fe343df46e0c64e56bdda8b736b5c3a4f5cc534823a2908e14"
+    },
+    {
+      "block_id": "page-0691-block-0008",
+      "order": 8,
+      "text": "■\n■After the meeting, there should be clear documentation of the outcome of the \n",
+      "bbox": [
+        61.88990020751953,
+        206.55029296875,
+        436.62017822265625,
+        218.27029418945312
+      ],
+      "text_sha256": "15d88d2e47f748b871a3a5a2c3f024fad2d2f443899226a003d61c9657921cf7"
+    },
+    {
+      "block_id": "page-0691-block-0009",
+      "order": 9,
+      "text": "meeting. If the decision is to use covert administration of medication, a check \nshould be made with the pharmacy to determine whether the properties of the \nmedications are likely to be affected by crushing and/or being mixed with food or \ndrink. The medication chart should be amended to describe how the medication \nis to be administered.\n",
+      "bbox": [
+        70.88999938964844,
+        218.55029296875,
+        436.7203369140625,
+        278.2702941894531
+      ],
+      "text_sha256": "2af610d7fa987bef0424da64ccc1c87342b0e68a92164c47130f9e4b0782767e"
+    },
+    {
+      "block_id": "page-0691-block-0010",
+      "order": 10,
+      "text": "■\n■When the medication is administered in foodstuffs, it is the responsibility of the dis-\n",
+      "bbox": [
+        61.88990020751953,
+        278.55029296875,
+        433.8999938964844,
+        290.2702941894531
+      ],
+      "text_sha256": "306e9a0388c77ea4b49400e7a04b5e62b9f5fb4288fd794542a3524fcdbc5b5b"
+    },
+    {
+      "block_id": "page-0691-block-0011",
+      "order": 11,
+      "text": "pensing nurse to ensure that the medication is taken. This can be facilitated by direct \nobservation or by nominating another member of the clinical team to observe the \npatient taking the medication.\n",
+      "bbox": [
+        70.88999938964844,
+        290.55029296875,
+        436.71002197265625,
+        326.2702941894531
+      ],
+      "text_sha256": "756a8e3519deda2bee5cf306e363d9fa1b820a952e47eb1729d345db496183cd"
+    },
+    {
+      "block_id": "page-0691-block-0012",
+      "order": 12,
+      "text": "■\n■A plan should be made to review on a regular basis the need for continued covert \n",
+      "bbox": [
+        61.88990020751953,
+        326.55029296875,
+        436.6598815917969,
+        338.2702941894531
+      ],
+      "text_sha256": "e4c1023a0cce2442963eeafd87588d3686d69b4a09a4e7c7229bc38a7a1325c8"
+    },
+    {
+      "block_id": "page-0691-block-0013",
+      "order": 13,
+      "text": "administration of medicines.\n",
+      "bbox": [
+        70.88999938964844,
+        338.55029296875,
+        193.6699981689453,
+        350.2702941894531
+      ],
+      "text_sha256": "3625910fc8a715f251cdc1f6a1e0dd8cb4e9f7f5fcc5c9a07d0bceeed6e4af64"
+    },
+    {
+      "block_id": "page-0691-block-0014",
+      "order": 14,
+      "text": "Additional information\n",
+      "bbox": [
+        61.88999938964844,
+        372.6402893066406,
+        170.239990234375,
+        384.49029541015625
+      ],
+      "text_sha256": "2016196b59fcfb549c349fb92a10ccace9d60ca444ac43ca7e4973144f190cc0"
+    },
+    {
+      "block_id": "page-0691-block-0015",
+      "order": 15,
+      "text": "■\n■For patients in Care Homes, the NICE Guidelines – Managing medicines in care \n",
+      "bbox": [
+        61.88990020751953,
+        396.55029296875,
+        436.65008544921875,
+        408.2702941894531
+      ],
+      "text_sha256": "467a280c41f141028d77a43edaedfac00bb66c1a318734303c7d4fd9085c107f"
+    },
+    {
+      "block_id": "page-0691-block-0016",
+      "order": 16,
+      "text": "homes – March 2014 should be referred to.12,13 The basic principles of this NICE \nguidance are the same as this policy. Mental health practitioners have a duty to \ninform the Care Home manager if they suspect the correct procedures are not being \nfollowed as regards covert medication, and to discuss with their team leader possible \nsafeguarding referral if the home manager does not act on their advice. The role of \nmental health teams supporting care homes is to support the care homes and pre-\nscriber (usually GP) in carrying out this guidance. For patients with complex mental \nhealth needs, it may be appropriate that they attend or contribute to the Best Interests \nMeeting. However, it should be the prescriber (usually the GP), care home staff and \ncare home pharmacist who manage the process.\n",
+      "bbox": [
+        70.88920593261719,
+        408.55029296875,
+        436.7091064453125,
+        528.2703247070312
+      ],
+      "text_sha256": "96335df7c6b3eca06010fe45ed43000ea23142664e643c207d9e9f95860e70ae"
+    },
+    {
+      "block_id": "page-0691-block-0017",
+      "order": 17,
+      "text": "■\n■There are no specific restrictions to state that relatives or other informal carers can-\n",
+      "bbox": [
+        61.88990020751953,
+        528.55029296875,
+        433.8800964355469,
+        540.2703247070312
+      ],
+      "text_sha256": "ab25cf54c71a6e71a184e42eabfa519f4207391d7dd8012aff201ade43bbd121"
+    },
+    {
+      "block_id": "page-0691-block-0018",
+      "order": 18,
+      "text": "not give medication covertly and in certain cases it may be acceptable as long as they \nhave been advised to do so by a health professional (e.g. GP), and all standards of the \npolicy have been met.\n",
+      "bbox": [
+        70.88999938964844,
+        540.55029296875,
+        436.6899108886719,
+        576.2703247070312
+      ],
+      "text_sha256": "9f4789589db5f5cd6e14ad164802a079a7f24a52d4c7428cd336e4bd926a6a20"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

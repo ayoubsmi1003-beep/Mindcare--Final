@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0884",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 884,
+  "source_page_index": 883,
+  "source_page_display": 884,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Pharmacokinetics    863\nCHAPTER 11\nTable 11.7  (Continued)\nAlcohol can cause or worsen psychotic symptoms by increasing dopamine release in \nmesolimbic pathways. The effect of antipsychotic drugs may be competitively antago-\nnised, rendering them less effective (Table 11.8).\nElectrolyte disturbances secondary to alcohol-related dehydration can be exacer-\nbated by other drugs that cause electrolyte disturbances such as diuretics.\nNote that heavy alcohol consumption can lead to hypoglycaemia in people with dia-\nbetes who take insulin or oral hypoglycaemics. Theoretically there is an increased risk \nof lactic acidosis in patients who take metformin with alcohol. Alcohol can also increase \nblood pressure.\nChronic drinkers are particularly susceptible to the GI irritant effects of aspirin and \nNSAIDs.\nNB:\nIn the presence of pharmacokinetic interactions, pharmacodynamic interactions will be \nmore marked. For example, in a chronic heavy drinker who is sober, enzyme induction \nwill increase the metabolism of diazepam which may lead to increased levels of anxiety \n(treatment failure). If the same patient becomes intoxicated with alcohol, the metabo-\nlism of diazepam will be greatly reduced as it will have to compete with alcohol for the \nmetabolic capacity of CYP3A4. Plasma levels of alcohol and diazepam will rise (toxic-\nity). As both alcohol and diazepam are sedative (via GABAA affinity), loss of conscious-\nness and respiratory depression may occur.\nEffect of \nalcohol\nEffect exacerbated by\nPotential consequences\nAmnesia\nOther amnesic drugs, e.g.\nBarbiturates\nBenzodiazepines\nZ-hypnotics\nIncreased amnesic effects ranging from mild \nmemory loss to total amnesia. Usually \nanterograde amnesia: loss of memory of \nevents after the effects of alcohol begin\nAtaxia\nACE inhibitors\nß-blockers\nCa channel blockers\nNitrates\nAdrenergic alpha receptor antagonists, e.g.\nClozapine\nRisperidone\nTricyclics\nIncreased unsteadiness and falls\n",
+  "raw_text_sha256": "35ef456823d834d2b7782fee7f765742c6dd10af088306026b2ddc0bc82d7d03",
+  "coordinates_sha256": "2ba51698e04817c69a518a0f2b2ee392c5bbe6996bae51d88192049eedd5b8cd",
+  "block_sequence_sha256": "1800b48da102eed809bb9e1dd2f12648efb07d63282deb77c2a5e4a63f86bea0",
+  "blocks": [
+    {
+      "block_id": "page-0884-block-0000",
+      "order": 0,
+      "text": "Pharmacokinetics    863\n",
+      "bbox": [
+        320.4088134765625,
+        31.395221710205078,
+        420.00079345703125,
+        41.0272216796875
+      ],
+      "text_sha256": "2c0e7a73c4f4e1ed623a88f250facddcc656bb2868423ae4589918bd518d466a"
+    },
+    {
+      "block_id": "page-0884-block-0001",
+      "order": 1,
+      "text": "CHAPTER 11\n",
+      "bbox": [
+        454.4096984863281,
+        140.99053955078125,
+        463.88970947265625,
+        186.78250122070312
+      ],
+      "text_sha256": "8577f8a61d9be9d957b7354680b21b61adb6e8c4601aaa9be76ccc79360dc7f3"
+    },
+    {
+      "block_id": "page-0884-block-0002",
+      "order": 2,
+      "text": "Table 11.7  (Continued)\n",
+      "bbox": [
+        53.99980163574219,
+        70.08790588378906,
+        130.289794921875,
+        78.97540283203125
+      ],
+      "text_sha256": "ed42aa31fae7da444dda5812c0b106f6f7e93805854d22b29e934599abc9b88a"
+    },
+    {
+      "block_id": "page-0884-block-0003",
+      "order": 3,
+      "text": "Alcohol can cause or worsen psychotic symptoms by increasing dopamine release in \nmesolimbic pathways. The effect of antipsychotic drugs may be competitively antago-\nnised, rendering them less effective (Table 11.8).\n",
+      "bbox": [
+        48.25,
+        283.5704040527344,
+        423.06005859375,
+        319.2904052734375
+      ],
+      "text_sha256": "46546484fe5b8fab271452c8e946496bec094fcb1bf36e5ac4e149c452d82415"
+    },
+    {
+      "block_id": "page-0884-block-0004",
+      "order": 4,
+      "text": "Electrolyte disturbances secondary to alcohol-related dehydration can be exacer-\nbated by other drugs that cause electrolyte disturbances such as diuretics.\n",
+      "bbox": [
+        48.25,
+        319.5704040527344,
+        420.25,
+        343.2904052734375
+      ],
+      "text_sha256": "f68e44315f73ab78803032bf7c11cc20617618a39d8361de6271d7a4b457e0a7"
+    },
+    {
+      "block_id": "page-0884-block-0005",
+      "order": 5,
+      "text": "Note that heavy alcohol consumption can lead to hypoglycaemia in people with dia-\nbetes who take insulin or oral hypoglycaemics. Theoretically there is an increased risk \nof lactic acidosis in patients who take metformin with alcohol. Alcohol can also increase \nblood pressure.\n",
+      "bbox": [
+        48.25,
+        343.5704040527344,
+        423.0000305175781,
+        391.2904052734375
+      ],
+      "text_sha256": "a5389975d195850bc6dfa6ec7c94926c6a5e7bd7a63059b705b877afb45d5301"
+    },
+    {
+      "block_id": "page-0884-block-0006",
+      "order": 6,
+      "text": "Chronic drinkers are particularly susceptible to the GI irritant effects of aspirin and \nNSAIDs.\n",
+      "bbox": [
+        48.25,
+        391.5704040527344,
+        423.0498962402344,
+        415.2904052734375
+      ],
+      "text_sha256": "c2146d077d2fe4ce0607b8e8d324783f29698d0132d7cce60339d72b182b9dd7"
+    },
+    {
+      "block_id": "page-0884-block-0007",
+      "order": 7,
+      "text": "NB:\nIn the presence of pharmacokinetic interactions, pharmacodynamic interactions will be \nmore marked. For example, in a chronic heavy drinker who is sober, enzyme induction \nwill increase the metabolism of diazepam which may lead to increased levels of anxiety \n(treatment failure). If the same patient becomes intoxicated with alcohol, the metabo-\nlism of diazepam will be greatly reduced as it will have to compete with alcohol for the \nmetabolic capacity of CYP3A4. Plasma levels of alcohol and diazepam will rise (toxic-\nity). As both alcohol and diazepam are sedative (via GABAA affinity), loss of conscious-\nness and respiratory depression may occur.\n",
+      "bbox": [
+        48.248016357421875,
+        427.3304138183594,
+        423.0400085449219,
+        535.2904052734375
+      ],
+      "text_sha256": "89fed52eab61a24057c75c0664a4ece434a94241ad38b624e380900d2cb99fff"
+    },
+    {
+      "block_id": "page-0884-block-0008",
+      "order": 8,
+      "text": "Effect of \nalcohol\nEffect exacerbated by\nPotential consequences\n",
+      "bbox": [
+        48.0,
+        89.91297912597656,
+        353.94744873046875,
+        108.7979736328125
+      ],
+      "text_sha256": "7060607bb5108a556a128ac0c0aa149777ef8242c604f83107dee876a2fa9df4"
+    },
+    {
+      "block_id": "page-0884-block-0009",
+      "order": 9,
+      "text": "Amnesia\nOther amnesic drugs, e.g.\nBarbiturates\nBenzodiazepines\nZ-hypnotics\n",
+      "bbox": [
+        48.0,
+        118.03797912597656,
+        199.39500427246094,
+        156.91796875
+      ],
+      "text_sha256": "468f14c317fbf3c9618e60377ffd18630d4d95aeded6f0b4d3eb3cee8de1f4ac"
+    },
+    {
+      "block_id": "page-0884-block-0010",
+      "order": 10,
+      "text": "Increased amnesic effects ranging from mild \nmemory loss to total amnesia. Usually \nanterograde amnesia: loss of memory of \nevents after the effects of alcohol begin\n",
+      "bbox": [
+        271.44000244140625,
+        118.2104721069336,
+        414.3675537109375,
+        156.91046142578125
+      ],
+      "text_sha256": "ccbd9e273d58a77e79b0900601bf4bfab156d05cd0ec8ce0bc68825b86d36215"
+    },
+    {
+      "block_id": "page-0884-block-0011",
+      "order": 11,
+      "text": "Ataxia\nACE inhibitors\nß-blockers\nCa channel blockers\nNitrates\n",
+      "bbox": [
+        48.0,
+        166.1504669189453,
+        181.05747985839844,
+        205.03045654296875
+      ],
+      "text_sha256": "93a74cafe2f0671793b834d9e5edb36da9fa0a6ef2db6db72dd9e6f58e622d1e"
+    },
+    {
+      "block_id": "page-0884-block-0012",
+      "order": 12,
+      "text": "Adrenergic alpha receptor antagonists, e.g.\nClozapine\nRisperidone\nTricyclics\n",
+      "bbox": [
+        116.87999725341797,
+        212.32044982910156,
+        254.97000122070312,
+        251.02044677734375
+      ],
+      "text_sha256": "59a70c1edab577001812002577af9abfd8fcc473a81695103e46fd71f0844b6f"
+    },
+    {
+      "block_id": "page-0884-block-0013",
+      "order": 13,
+      "text": "Increased unsteadiness and falls\n",
+      "bbox": [
+        271.44000244140625,
+        166.31544494628906,
+        372.9901428222656,
+        175.02294921875
+      ],
+      "text_sha256": "f56d3b58b14398759de8a1910906ecbe1ce791c6991b66f054526f124e2f5df2"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

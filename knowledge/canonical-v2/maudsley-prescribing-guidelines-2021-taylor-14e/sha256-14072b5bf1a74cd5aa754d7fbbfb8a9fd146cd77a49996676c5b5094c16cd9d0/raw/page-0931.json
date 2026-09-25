@@ -1,0 +1,275 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0931",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 931,
+  "source_page_index": 930,
+  "source_page_display": 931,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "910    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 14\nParameter\nReference range10\nAgents reported to raise levels\nAgents reported to \nlower levels\nCreatine Kinase\nFemales: 25–200U/L \nMales: 40–320U/L \n(range for Caucasians; may \nbe higher in other ethnic \ngroups)\nBremelanotide, brexpiprazole, \ncariprazine, clonidine, clozapine \n(when associated with seizures), \ncocaine, dexamfetamine, \ndonepezil, olanzapine, pregabalin; \nalso associated with agents causing \nNMS and SIADH; agents \nadministered intramuscularly\nNone known\nCreatinine\nFemales: 55–100μmol/L \nMales: 60–120μmol/L\nClozapine, lithium, lurasidone, \nthioridazine, valproate, medications \nassociated with rhabdomyolysis \n(benzodiazepines, dexamfetamine, \npregabalin, thioridazine); also \nassociated with agents causing \nrenal impairment, NMS and SIADH\nNone known\nFerritin\nFemales: 15–150μg/L \nMales: 30–400μg/L \n(increases with age)\nAlcohol (acutely and in alcoholic \nliver disease)\nNone known\nGamma-glutamyl \ntransferase (GGT)\nFemales: ≤38 U/L \nMales: ≤55 U/L \n(limits two-fold higher in \npersons of African ancestry)\nAntidepressants: mirtazapine, \nSSRIs (paroxetine and sertraline \nimplicated), TCAs, trazodone, \nvenlafaxine\nAntiseizure medications/mood \nstabilisers: carbamazepine, \nlamotrigine, phenytoin, \nphenobarbitone, valproate\nAntipsychotics: benperidol, \nchlorpromazine, clozapine, \nfluphenazine, haloperidol, \nolanzapine, quetiapine\nOther: alcohol, barbiturates, \nclomethiazole, dexamfetamine, \nmodafinil, tobacco smoking\nNone known\nGlucose\nFasting: 2.8–6.1mmol/L \nRandom: <11.1mmol/L\nAntidepressants: MAOIs*, SSRIs/\nSNRIs*, TCAs*\nAntipsychotics: chlorpromazine, \nclozapine, haloperidol*, \nolanzapine*, quetiapine and others\nSubstances of abuse: \namfetamine, methadone, opioids\nOther: Baclofen, beta-blockers*, \nbupropion*, caffeine* (in \ndiabetics), clonidine, donepezil, \ngabapentin, galantamine, lithium*, \nnicotine, sympathomimetics, \nthyroid agents, valbenazine\nAlcohol; rarely with \nduloxetine, \nhaloperidol, \npregabalin, TCAs\nMedications associated \nwith metabolic \nsyndrome may result in \nraised or decreased \nglucose levels\nHbA1c\n20–39mmol/mol\nLithium, MAOIs, SSRIs\nTable 14.2  (Continued)\n",
+  "raw_text_sha256": "ccae6e64ed6c9ea4425d95fd474af8e26b6f3c60ac578bb9913afa1082deb38b",
+  "coordinates_sha256": "02422f2d28eb14d8b64da74d79e37ac8ee88a447f77b4263c3ccc2c42e47fb52",
+  "block_sequence_sha256": "791ebefa3e4f7ae85dfafea8e719025cf39acc91933bd0b0173d0e165749ff76",
+  "blocks": [
+    {
+      "block_id": "page-0931-block-0000",
+      "order": 0,
+      "text": "910    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "a108fdf81fbab2819e96c44a62871f5aa16b3cb63e771f3d2e42d5d41708002b"
+    },
+    {
+      "block_id": "page-0931-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        18.520000457763672,
+        338.7405090332031,
+        28.0,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0931-block-0002",
+      "order": 2,
+      "text": "Parameter\nReference range10\nAgents reported to raise levels\nAgents reported to \nlower levels\n",
+      "bbox": [
+        61.889801025390625,
+        90.36488342285156,
+        424.34716796875,
+        109.2498779296875
+      ],
+      "text_sha256": "aa61555c628d7c54f10a422c1400f45d1c140ad78ce30a6f27ae2348bfc3308b"
+    },
+    {
+      "block_id": "page-0931-block-0003",
+      "order": 3,
+      "text": "Creatine Kinase\nFemales: 25–200U/L \nMales: 40–320U/L \n(range for Caucasians; may \nbe higher in other ethnic \ngroups)\n",
+      "bbox": [
+        61.887176513671875,
+        117.06490325927734,
+        224.65219116210938,
+        165.76239013671875
+      ],
+      "text_sha256": "13a1066a0a9447eb6f6ceb89d6da9aeaae4d111690a95a4da1bb6059d0d1dc6d"
+    },
+    {
+      "block_id": "page-0931-block-0004",
+      "order": 4,
+      "text": "Bremelanotide, brexpiprazole, \ncariprazine, clonidine, clozapine \n(when associated with seizures), \ncocaine, dexamfetamine, \ndonepezil, olanzapine, pregabalin; \nalso associated with agents causing \nNMS and SIADH; agents \nadministered intramuscularly\n",
+      "bbox": [
+        232.63967895507812,
+        117.0573959350586,
+        348.0797424316406,
+        195.74737548828125
+      ],
+      "text_sha256": "c39b68050b6461a3626ddceae1de6e2ebab08898e887f911641675c95b29bee2"
+    },
+    {
+      "block_id": "page-0931-block-0005",
+      "order": 5,
+      "text": "None known\n",
+      "bbox": [
+        354.8896789550781,
+        117.0423812866211,
+        396.1622314453125,
+        125.7498779296875
+      ],
+      "text_sha256": "ba6586dc579443d5e17252c96d100bb0bdb30ec0ac15a8dc02e530767503ecc9"
+    },
+    {
+      "block_id": "page-0931-block-0006",
+      "order": 6,
+      "text": "Creatinine\nFemales: 55–100μmol/L \nMales: 60–120μmol/L\n",
+      "bbox": [
+        61.887176513671875,
+        202.0698699951172,
+        213.82217407226562,
+        220.77487182617188
+      ],
+      "text_sha256": "ea319ed72f59febc9e5be776759830b05dde62bca7588ff85ca62e8cc748dd17"
+    },
+    {
+      "block_id": "page-0931-block-0007",
+      "order": 7,
+      "text": "Clozapine, lithium, lurasidone, \nthioridazine, valproate, medications \nassociated with rhabdomyolysis \n(benzodiazepines, dexamfetamine, \npregabalin, thioridazine); also \nassociated with agents causing \nrenal impairment, NMS and SIADH\n",
+      "bbox": [
+        232.63967895507812,
+        202.0698699951172,
+        348.3421936035156,
+        270.7623596191406
+      ],
+      "text_sha256": "0ec5fb7df9324e75ddf6f7ee348ab7bf518a2c35fa7aa8756e9ccfb13b67f25f"
+    },
+    {
+      "block_id": "page-0931-block-0008",
+      "order": 8,
+      "text": "None known\n",
+      "bbox": [
+        354.8896789550781,
+        202.0548553466797,
+        396.1622314453125,
+        210.76235961914062
+      ],
+      "text_sha256": "ba6586dc579443d5e17252c96d100bb0bdb30ec0ac15a8dc02e530767503ecc9"
+    },
+    {
+      "block_id": "page-0931-block-0009",
+      "order": 9,
+      "text": "Ferritin\nFemales: 15–150μg/L \nMales: 30–400μg/L \n(increases with age)\n",
+      "bbox": [
+        61.887176513671875,
+        277.0773620605469,
+        205.90968322753906,
+        305.77984619140625
+      ],
+      "text_sha256": "db1b275fd33896e6910c2cb5e2fda98af07ac10d6cf8e8e41aecf463c9c0f742"
+    },
+    {
+      "block_id": "page-0931-block-0010",
+      "order": 10,
+      "text": "Alcohol (acutely and in alcoholic \nliver disease)\n",
+      "bbox": [
+        232.63967895507812,
+        277.0698547363281,
+        337.6546936035156,
+        295.77484130859375
+      ],
+      "text_sha256": "5e42f1c58f72ec8f7e34854b3d50c82e6fbe20ac02738daa8820eaa9327b37ef"
+    },
+    {
+      "block_id": "page-0931-block-0011",
+      "order": 11,
+      "text": "None known\n",
+      "bbox": [
+        354.8896789550781,
+        277.0698547363281,
+        396.1622314453125,
+        285.77734375
+      ],
+      "text_sha256": "ba6586dc579443d5e17252c96d100bb0bdb30ec0ac15a8dc02e530767503ecc9"
+    },
+    {
+      "block_id": "page-0931-block-0012",
+      "order": 12,
+      "text": "Gamma-glutamyl \ntransferase (GGT)\n",
+      "bbox": [
+        61.887176513671875,
+        312.0948486328125,
+        119.37466430664062,
+        330.7998352050781
+      ],
+      "text_sha256": "5380d7f21256a5101d0fff5a2e6d8a48808e4b8fae267312674057ddb3cc9273"
+    },
+    {
+      "block_id": "page-0931-block-0013",
+      "order": 13,
+      "text": "Females: ≤38 U/L \nMales: ≤55 U/L \n(limits two-fold higher in \npersons of African ancestry)\n",
+      "bbox": [
+        135.88967895507812,
+        312.0948486328125,
+        224.64466857910156,
+        350.7948303222656
+      ],
+      "text_sha256": "6687be62cf8a60fb1d6e04da5347a70719a1f6d31eef81d5aaba3d7bde65a22f"
+    },
+    {
+      "block_id": "page-0931-block-0014",
+      "order": 14,
+      "text": "Antidepressants: mirtazapine, \nSSRIs (paroxetine and sertraline \nimplicated), TCAs, trazodone, \nvenlafaxine\nAntiseizure medications/mood \nstabilisers: carbamazepine, \nlamotrigine, phenytoin, \nphenobarbitone, valproate\nAntipsychotics: benperidol, \nchlorpromazine, clozapine, \nfluphenazine, haloperidol, \nolanzapine, quetiapine\nOther: alcohol, barbiturates, \nclomethiazole, dexamfetamine, \nmodafinil, tobacco smoking\n",
+      "bbox": [
+        232.63967895507812,
+        311.9073181152344,
+        337.0472106933594,
+        460.7597961425781
+      ],
+      "text_sha256": "1a1d8689e464a15583b6ae998f1c7609a664d262658b27e985d467c7a093f833"
+    },
+    {
+      "block_id": "page-0931-block-0015",
+      "order": 15,
+      "text": "None known\n",
+      "bbox": [
+        354.8896789550781,
+        312.0498046875,
+        396.1622314453125,
+        320.7572937011719
+      ],
+      "text_sha256": "ba6586dc579443d5e17252c96d100bb0bdb30ec0ac15a8dc02e530767503ecc9"
+    },
+    {
+      "block_id": "page-0931-block-0016",
+      "order": 16,
+      "text": "Glucose\nFasting: 2.8–6.1mmol/L \nRandom: <11.1mmol/L\n",
+      "bbox": [
+        61.887176513671875,
+        467.0747985839844,
+        212.98968505859375,
+        485.77978515625
+      ],
+      "text_sha256": "da5b54c89afb509bf8dda91d538c4b5853ebbf421d4630d4ca7c8375965023f3"
+    },
+    {
+      "block_id": "page-0931-block-0017",
+      "order": 17,
+      "text": "Antidepressants: MAOIs*, SSRIs/\nSNRIs*, TCAs*\nAntipsychotics: chlorpromazine, \nclozapine, haloperidol*, \nolanzapine*, quetiapine and others\nSubstances of abuse: \namfetamine, methadone, opioids\nOther: Baclofen, beta-blockers*, \nbupropion*, caffeine* (in \ndiabetics), clonidine, donepezil, \ngabapentin, galantamine, lithium*, \nnicotine, sympathomimetics, \nthyroid agents, valbenazine\n",
+      "bbox": [
+        232.63967895507812,
+        466.894775390625,
+        347.24725341796875,
+        595.7522583007812
+      ],
+      "text_sha256": "c9958515ce891b9443dd1cff96a37aa19df0a20c5a7bc3ef88adcd0f293e5dce"
+    },
+    {
+      "block_id": "page-0931-block-0018",
+      "order": 18,
+      "text": "Alcohol; rarely with \nduloxetine, \nhaloperidol, \npregabalin, TCAs\nMedications associated \nwith metabolic \nsyndrome may result in \nraised or decreased \nglucose levels\n",
+      "bbox": [
+        354.8896789550781,
+        467.0447692871094,
+        430.8721923828125,
+        555.7322387695312
+      ],
+      "text_sha256": "c1fc248d3dad9973cd8974ba39e2a241c4254391c32de7acebb714d92cef1d10"
+    },
+    {
+      "block_id": "page-0931-block-0019",
+      "order": 19,
+      "text": "HbA1c\n20–39mmol/mol\nLithium, MAOIs, SSRIs\n",
+      "bbox": [
+        61.887176513671875,
+        562.0472412109375,
+        424.8948669433594,
+        572.6180419921875
+      ],
+      "text_sha256": "a30d2db4723c0c0d4bbb8c01e24e2c768f883620785a4cb128f38b7de938554e"
+    },
+    {
+      "block_id": "page-0931-block-0020",
+      "order": 20,
+      "text": "Table 14.2  (Continued)\n",
+      "bbox": [
+        67.88970184326172,
+        70.08790588378906,
+        144.17970275878906,
+        78.97540283203125
+      ],
+      "text_sha256": "8bd13b41fda1b6770466837f45163f93b570ec912d9c083e8b068ddb8e61d0bd"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

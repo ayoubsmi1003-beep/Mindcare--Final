@@ -1,0 +1,12 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0430",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 430,
+  "source_page_index": 429,
+  "repaired_text": "Depression and anxiety disorders    409\nCHAPTER 3\nSSRIs and bleeding\nSerotonin is released from platelets in response to vascular injury, promoting vasocon-\nstriction and morphological changes in platelets that lead to aggregation.1 SSRIs inhibit \nthe serotonin transporter which is responsible for the uptake of serotonin into platelets. \nThis depletion of platelet serotonin leads to a reduced ability to form clots and a sub-\nsequent increase in the risk of bleeding. Broadly speaking, the relative risk of any bleed-\ning event compared with no use of SSRI/SNRI is around 1.4, with the absolute risk \nbeing between around 0.5% and 6%2 (depending on numerous factors, but especially \nthe duration of treatment).\nSSRIs may also increase gastric acid secretion and therefore may be indirectly irritant \nto the gastric mucosa,3 increasing the risk of peptic ulcer.4 The risk of abnormal bleed-\ning of any kind with SSRIs is highest during the first 30 days of treatment.5,6 Effect on \nbleeding is probably, but not definitely, related to the affinity of individual SSRIs for the \nserotonin transporter (Table 3.22).7,8\nTable 3.22  Antidepressants and degree of serotonin reuptake inhibition6,9\nDegree of serotonin reuptake \ninhibition\nAntidepressant (SSRI)\nStrong inhibition\nSertraline, paroxetine, fluoxetine, duloxetine, clomipramine\nIntermediate inhibition\nCitalopram, escitalopram, fluvoxamine, vilazodone, vortioxetine, \nvenlafaxine\nAmitriptyline, imipramine\nWeak or no inhibition\nAgomelatine, dosulepin, doxepin, lofepramine, mirtazapine, \nmoclobemide, nortriptyline, reboxetine, mianserin\nRisk factors for bleeding with SSRIs\n■\n■Age, particularly those over 65\n■\n■Alcohol misuse\n■\n■Coronary artery disease\n■\n■Drug misuse\n■\n■Hypertension\n■\n■History of GI bleed\n■\n■History of stroke\n■\n■History of major bleeding\n■\n■Liver disease\n■\n■Labile INR\n■\n■Medication predisposing to bleeding\n■\n■Peptic ulcer\n■\n■Renal disease\n■\n■Smoking",
+  "repaired_text_sha256": "692cc289088410f96077386c4091d26f85c9eebd671630b8609ec757d5b13a40",
+  "raw_text_sha256": "4f9424481089ffc08c254f50ad68b4954c2dec155d13821127db44fcc229978c",
+  "repair_ids": [],
+  "raw_file": "raw/page-0430.json"
+}

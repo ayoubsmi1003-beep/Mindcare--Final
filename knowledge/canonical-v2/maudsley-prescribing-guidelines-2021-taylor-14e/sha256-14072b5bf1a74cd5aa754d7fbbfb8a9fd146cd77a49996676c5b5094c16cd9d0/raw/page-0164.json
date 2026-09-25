@@ -1,0 +1,215 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0164",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 164,
+  "source_page_index": 163,
+  "source_page_display": 164,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    143\nCHAPTER 1\nTable 1.21  Effects of antipsychotics on QTC13,22,23,32–61.\nNo effect\nBrexpiprazole*\nCariprazine*\nLurasidone\nLumateperone*\nLow effect\nAripiprazole**\nAsenapine\nClozapine\nFlupentixol\nFluphenazine\nPerphenazine\nProchlorperazine\nOlanzapine***\nPaliperidone\nRisperidone\nSulpiride\nModerate effect\nAmisulpride****\nChlorpromazine\nHaloperidol\nIloperidone\nLevomepromazine\nMelperone\nPimavanserin\nQuetiapine\nZiprasidone\nHigh effect\nAny intravenous antipsychotic\nPimozide\nSertindole\nAny drug or combination of drugs used in doses exceeding \nrecommended maximum\nUnknown effect\nLoxapine\nPipotiazine\nTrifluoperazine\nZuclopenthixol\n*Limited clinical experience (association with QT prolongation may emerge).\n**One case of torsades de pointes (TDP) reported,62 two cases of QT prolongation63,64 and an association with TDP \nfound in database study.65 Healthy volunteer data suggest aripiprazole causes QTc prolongation of around 8ms.66 \nAripiprazole may increase QT dispersion.67\n***Isolated cases of QTc prolongation37,68 and has effects on cardiac ion channel, IKr,\n69 other data suggest no effect \non QTC.\n23,35,36,70\n****TDP common in overdose,25,71 strong association with TDP in clinical doses.65\ngiven the problems associated with QTc measurements. Lastly, keep in mind that differ-\nences in the effects of different antipsychotics on the QT interval rarely reach statistical \nsignificance, even in meta-analyses (Table 1.21).29\nOutside these guidelines, readers are directed to the RISQ-PATH study,30 which pro-\nvides a scoring system for the prediction of QT prolongation (to above normal ranges) \nin any patient. RISQ-PATH has a 98% negative predictive value, so allowing a reduc-\ntion in monitoring in low-risk patients. The RISQ-PATH method uses CredibleMeds \ncategorisation for drug effects on QT – this, too, is recommeded.31\nAripiprazole remains in the low effect group having previously been firmly placed in \n‘no effect’. Data are rather contradictory, with most studies showing a decrease in QTc \nassociated with aripiprazole use52 even in children and adolescents.72 However, later \ndata62,63,65,66,73 cast doubt on assumptions of cardiac safety. Interestingly, a 2020 paper \nanalysing reports of events in > 400,000 inpatients over 20 years found aripiprazole \nhad the lowest rate of cardiac events (0.06%) of all antipsychotics.74\nLurasidone remains in the ‘no effect’ group,52 although one study mentioned in the \nUS labelling75 reports a QT lengthening of 7.5mg in people receiving 120mg (111mg) a \nday. Those receiving 600mg (555mg) daily showed a lower change (+4.6ms). These \n",
+  "raw_text_sha256": "f1132180efa03de77c36b0ddc03b72bea895b9f971ccdf307deb56765a0aaa6a",
+  "coordinates_sha256": "1fe1c7c1c9d6a8e7e835ff4ea42fa1f70d0ba351873757169cd5675546a4ed61",
+  "block_sequence_sha256": "ae85c3e173c27888b78bfd3512416d1469c21401a459a538e1c29b70613782c3",
+  "blocks": [
+    {
+      "block_id": "page-0164-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    143\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "0aaec94b2e649e80a586d89b6f2054382126114a15f8c87c9dbffc66eeeffca3"
+    },
+    {
+      "block_id": "page-0164-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0164-block-0002",
+      "order": 2,
+      "text": "Table 1.21  Effects of antipsychotics on QTC13,22,23,32–61.\n",
+      "bbox": [
+        53.99909973144531,
+        179.7368927001953,
+        227.33218383789062,
+        188.6243896484375
+      ],
+      "text_sha256": "6a36b338c46cb19062231a8e5b294c519d394576ea0c866df0e59aab82416816"
+    },
+    {
+      "block_id": "page-0164-block-0003",
+      "order": 3,
+      "text": "No effect\nBrexpiprazole*\nCariprazine*\nLurasidone\nLumateperone*\n",
+      "bbox": [
+        47.99909973144531,
+        198.8618927001953,
+        98.28658294677734,
+        247.7393798828125
+      ],
+      "text_sha256": "3ec240840fedb5b580a45073e28e28a137367a017aa93b8474eda397f03e412b"
+    },
+    {
+      "block_id": "page-0164-block-0004",
+      "order": 4,
+      "text": "Low effect\nAripiprazole**\nAsenapine\nClozapine\nFlupentixol\nFluphenazine\nPerphenazine\nProchlorperazine\nOlanzapine***\nPaliperidone\nRisperidone\nSulpiride\n",
+      "bbox": [
+        47.99909973144531,
+        254.84938049316406,
+        101.19659423828125,
+        373.7093505859375
+      ],
+      "text_sha256": "28872fc2d115038a1cbd6929fc573c6a63d035cd14dcd774eb7b282a81d99dd4"
+    },
+    {
+      "block_id": "page-0164-block-0005",
+      "order": 5,
+      "text": "Moderate effect\nAmisulpride****\nChlorpromazine\nHaloperidol\nIloperidone\nLevomepromazine\nMelperone\nPimavanserin\nQuetiapine\nZiprasidone\n",
+      "bbox": [
+        221.9990997314453,
+        198.82435607910156,
+        280.19158935546875,
+        297.6893310546875
+      ],
+      "text_sha256": "1016d9fd78ec55bc9d02f3c8ef795bce13840ee165ce0afa4fb019868c81533d"
+    },
+    {
+      "block_id": "page-0164-block-0006",
+      "order": 6,
+      "text": "High effect\nAny intravenous antipsychotic\nPimozide\nSertindole\nAny drug or combination of drugs used in doses exceeding \nrecommended maximum\n",
+      "bbox": [
+        221.9990997314453,
+        304.79931640625,
+        412.4768371582031,
+        363.67431640625
+      ],
+      "text_sha256": "37bcf8c250caf897eab905d2795d75f9a7af9eb2a54bd69ea76fd34958d5c6d9"
+    },
+    {
+      "block_id": "page-0164-block-0007",
+      "order": 7,
+      "text": "Unknown effect\nLoxapine\nPipotiazine\nTrifluoperazine\nZuclopenthixol\n",
+      "bbox": [
+        221.9990997314453,
+        370.7843017578125,
+        278.9541320800781,
+        419.66180419921875
+      ],
+      "text_sha256": "2f7c4d95c5431f7c265d69b9b51b8684f78e64270d363e568646f1f02b8a2dee"
+    },
+    {
+      "block_id": "page-0164-block-0008",
+      "order": 8,
+      "text": "*Limited clinical experience (association with QT prolongation may emerge).\n**One case of torsades de pointes (TDP) reported,62 two cases of QT prolongation63,64 and an association with TDP \nfound in database study.65 Healthy volunteer data suggest aripiprazole causes QTc prolongation of around 8ms.66 \nAripiprazole may increase QT dispersion.67\n",
+      "bbox": [
+        47.99684143066406,
+        429.9518127441406,
+        415.2868957519531,
+        468.7469177246094
+      ],
+      "text_sha256": "2fc2e563c44b50eebde87ad3b8a99f7f7848713a3e1cb6facc6222428eff704f"
+    },
+    {
+      "block_id": "page-0164-block-0009",
+      "order": 9,
+      "text": "***Isolated cases of QTc prolongation37,68 and has effects on cardiac ion channel, IKr,\n69 other data suggest no effect \non QTC.\n",
+      "bbox": [
+        47.99909973144531,
+        470.04193115234375,
+        415.3522644042969,
+        490.4650573730469
+      ],
+      "text_sha256": "d2add170b87912c49d8474629158e8f4c34fce8d8c87228e11e274a5d6156d45"
+    },
+    {
+      "block_id": "page-0164-block-0010",
+      "order": 10,
+      "text": "23,35,36,70\n",
+      "bbox": [
+        71.72090911865234,
+        480.39520263671875,
+        94.81642150878906,
+        485.4716796875
+      ],
+      "text_sha256": "7217c659f6e5106d61ea824bdb3c59cf4c4d42344afd7eef8a4f0e8e61861cc3"
+    },
+    {
+      "block_id": "page-0164-block-0011",
+      "order": 11,
+      "text": "****TDP common in overdose,25,71 strong association with TDP in clinical doses.65\n",
+      "bbox": [
+        47.99909973144531,
+        490.04193115234375,
+        307.7512512207031,
+        498.7494201660156
+      ],
+      "text_sha256": "733c862018b06edad4e353f32d7235211028ecabef673fd20efa1a506a395938"
+    },
+    {
+      "block_id": "page-0164-block-0012",
+      "order": 12,
+      "text": "given the problems associated with QTc measurements. Lastly, keep in mind that differ-\nences in the effects of different antipsychotics on the QT interval rarely reach statistical \nsignificance, even in meta-analyses (Table 1.21).29\n",
+      "bbox": [
+        47.99909973144531,
+        62.54931640625,
+        422.8191833496094,
+        98.26931762695312
+      ],
+      "text_sha256": "4f2aa389513e2d2379c207d8aa2a90c4be8201f51ad8927dd2d6aae8aab3cbe1"
+    },
+    {
+      "block_id": "page-0164-block-0013",
+      "order": 13,
+      "text": "Outside these guidelines, readers are directed to the RISQ-PATH study,30 which pro-\nvides a scoring system for the prediction of QT prolongation (to above normal ranges) \nin any patient. RISQ-PATH has a 98% negative predictive value, so allowing a reduc-\ntion in monitoring in low-risk patients. The RISQ-PATH method uses CredibleMeds \ncategorisation for drug effects on QT – this, too, is recommeded.31\n",
+      "bbox": [
+        48.00401306152344,
+        98.54931640625,
+        422.8340148925781,
+        158.26931762695312
+      ],
+      "text_sha256": "03397aedbf5a6cdc3800fe29cbc3e36604b82769b13e12634aadee4419150b54"
+    },
+    {
+      "block_id": "page-0164-block-0014",
+      "order": 14,
+      "text": "Aripiprazole remains in the low effect group having previously been firmly placed in \n‘no effect’. Data are rather contradictory, with most studies showing a decrease in QTc \nassociated with aripiprazole use52 even in children and adolescents.72 However, later \ndata62,63,65,66,73 cast doubt on assumptions of cardiac safety. Interestingly, a 2020 paper \nanalysing reports of events in > 400,000 inpatients over 20 years found aripiprazole \nhad the lowest rate of cardiac events (0.06%) of all antipsychotics.74\n",
+      "bbox": [
+        47.996612548828125,
+        520.73681640625,
+        422.7992248535156,
+        592.4568481445312
+      ],
+      "text_sha256": "9bcfb56e6d996646348c368eaecbfe35ff459ed9cb8163f411f014ea777bb56e"
+    },
+    {
+      "block_id": "page-0164-block-0015",
+      "order": 15,
+      "text": "Lurasidone remains in the ‘no effect’ group,52 although one study mentioned in the \nUS labelling75 reports a QT lengthening of 7.5mg in people receiving 120mg (111mg) a \nday. Those receiving 600mg (555mg) daily showed a lower change (+4.6ms). These \n",
+      "bbox": [
+        47.995208740234375,
+        592.73681640625,
+        422.8216247558594,
+        628.4568481445312
+      ],
+      "text_sha256": "be6ce441237bf504b1f44f2c05b172a2f54db134325b1202fa499d55ed8985d9"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

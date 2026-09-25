@@ -1,0 +1,299 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0365",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 365,
+  "source_page_index": 364,
+  "source_page_display": 365,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "344    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nIncidence and severity\nAntidepressant discontinuation symptoms occur in many patients: incidence rates from \n14 studies that examined antidepressant withdrawal ranged from 27% to 86%, with a \nweighted average of 56%.5 Though reported incidence rates vary widely between stud-\nies of differing drugs and methodologies (9% to 77% for fluoxetine, and from 42% to \n100% with paroxetine5), symptoms are seen to some extent with all antidepressants, \nwith the possible exception of agomelatine.4\nTime Course\nThe onset and severity of symptoms are related to the half-life of the antidepressant. \nShort half-life antidepressants like paroxetine and venlafaxine produce symptoms \nwithin a day or two, whereas symptoms with fluoxetine can be delayed by 2–6 weeks.1 \nSymptoms can vary in duration, form and intensity and occur in any combination. \nWhilst they can be mild and self-limiting, there is substantial variation in between indi-\nviduals, and for some symptoms can last much longer than previously reported.6 The \nperception of symptom severity is probably made worse by the absence of forewarnings. \nSome symptoms are more likely with individual drugs (see Table 3.9). Symptoms can be \nquantified using the Discontinuation–Emergent Signs and Symptoms (DESS) scale.7\nTable 3.9  Symptoms reported with other (non-SSRI) antidepressants\nAntidepressant type\nSymptoms\nAgomelatine\nSeems to be associated with a very low, if any, risk of discontinuation symptoms4\nBupropion\nUncommon, but case reports have described anxiety, headache, insomnia, \nirritability, and myalgias;8,9 single case report of acute dystonia10\nMAOIs*\nCommon: agitation, irritability, ataxia, movement disorders, insomnia, somnolence, \nvivid dreams, cognitive impairment, slowed speech, pressured speech; \nOccasionally: Hallucinations, paranoid delusions\nRIMAs: Flu like symptoms reported with moclobemide11\nTable 3.8  Factors influencing the incidence and severity of antidepressant withdrawal symptoms\nPharmacological factors\n– Pharmacokinetics\n– Drug half life\n– Pharmacodynamics\n– Receptor affinities\nTreatment factors\n– Duration of treatment\n– Dose\n– Method of tapering\nPatient specific factors\n– \u0007Prior experience and \nanticipation effects\n■\n■Drug half-lives – correlate with the severity and onset of symptoms. Symptoms \ntypically more severe with shorter half-life drugs (e.g. venlafaxine, paroxetine)\n■\n■Other pharmacokinetic factors: non-linear pharmacokinetics\n■\n■Receptor affinities: higher affinity for the serotonin transporter may confer \nhigher risk of withdrawal symptoms\n(Continued)\n",
+  "raw_text_sha256": "7730887baea431eff6f0b79f47d95725efb7838f130a598a5a37b82d37af73a4",
+  "coordinates_sha256": "81c590a6cd8daac76fbc9feb47f2943b2fa6a446f6899917e69e5afeaed3434e",
+  "block_sequence_sha256": "82e33f5cdcc107ed58d58b550a37d1435a3f14a2a5e26d9bd0dec7b6e5a36aaa",
+  "blocks": [
+    {
+      "block_id": "page-0365-block-0000",
+      "order": 0,
+      "text": "344    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "2059fa3c9aafd8d0be953cff82490e7b3740fc4d25881e02d5421229211f71af"
+    },
+    {
+      "block_id": "page-0365-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0365-block-0002",
+      "order": 2,
+      "text": "Incidence and severity\n",
+      "bbox": [
+        61.88999938964844,
+        237.22137451171875,
+        176.80699157714844,
+        250.25637817382812
+      ],
+      "text_sha256": "bbeb78d182345403a50720278dae35f9c2f486b7bcb4dabb0aca083def6ec6b0"
+    },
+    {
+      "block_id": "page-0365-block-0003",
+      "order": 3,
+      "text": "Antidepressant discontinuation symptoms occur in many patients: incidence rates from \n14 studies that examined antidepressant withdrawal ranged from 27% to 86%, with a \nweighted average of 56%.5 Though reported incidence rates vary widely between stud-\nies of differing drugs and methodologies (9% to 77% for fluoxetine, and from 42% to \n100% with paroxetine5), symptoms are seen to some extent with all antidepressants, \nwith the possible exception of agomelatine.4\n",
+      "bbox": [
+        61.88999938964844,
+        256.0663757324219,
+        436.6800537109375,
+        327.786376953125
+      ],
+      "text_sha256": "a507c394fae13603fda7535fa57ea4f45a638222d0eb19002c80f554e721ff8d"
+    },
+    {
+      "block_id": "page-0365-block-0004",
+      "order": 4,
+      "text": "Time Course\n",
+      "bbox": [
+        61.88999938964844,
+        345.22137451171875,
+        125.45899200439453,
+        358.2563781738281
+      ],
+      "text_sha256": "290432a098a702ab6cc84a4006fb7a6c423f18ed42d0546aef5f91e8c8f650a8"
+    },
+    {
+      "block_id": "page-0365-block-0005",
+      "order": 5,
+      "text": "The onset and severity of symptoms are related to the half-life of the antidepressant. \nShort half-life antidepressants like paroxetine and venlafaxine produce symptoms \nwithin a day or two, whereas symptoms with fluoxetine can be delayed by 2–6 weeks.1 \nSymptoms can vary in duration, form and intensity and occur in any combination. \nWhilst they can be mild and self-limiting, there is substantial variation in between indi-\nviduals, and for some symptoms can last much longer than previously reported.6 The \nperception of symptom severity is probably made worse by the absence of forewarnings. \nSome symptoms are more likely with individual drugs (see Table 3.9). Symptoms can be \nquantified using the Discontinuation–Emergent Signs and Symptoms (DESS) scale.7\n",
+      "bbox": [
+        61.88999938964844,
+        364.0663757324219,
+        436.6719055175781,
+        471.786376953125
+      ],
+      "text_sha256": "024d286f887bf5e47510fc135b2a6cec9795fc740108e2522a28184e6f79a5d3"
+    },
+    {
+      "block_id": "page-0365-block-0006",
+      "order": 6,
+      "text": "Table 3.9  Symptoms reported with other (non-SSRI) antidepressants\n",
+      "bbox": [
+        67.88980102539062,
+        492.23797607421875,
+        286.83734130859375,
+        501.12548828125
+      ],
+      "text_sha256": "95c74347fb91dfba53bc66ee6b004288677041fd6b17f2e3344b3bfe9a5ba8ce"
+    },
+    {
+      "block_id": "page-0365-block-0007",
+      "order": 7,
+      "text": "Antidepressant type\nSymptoms\n",
+      "bbox": [
+        61.889801025390625,
+        512.4729614257812,
+        205.477294921875,
+        521.3604736328125
+      ],
+      "text_sha256": "22924008fb9bdcb78601df33a16b7f8572e9232dbbfa07620240cd5861010dc1"
+    },
+    {
+      "block_id": "page-0365-block-0008",
+      "order": 8,
+      "text": "Agomelatine\nSeems to be associated with a very low, if any, risk of discontinuation symptoms4\n",
+      "bbox": [
+        61.889801025390625,
+        529.677978515625,
+        425.99041748046875,
+        538.385498046875
+      ],
+      "text_sha256": "9a0e1d77e3b09cab1314d5a62e97136d6c8aacd56ffd508da59aa769f8f5dec2"
+    },
+    {
+      "block_id": "page-0365-block-0009",
+      "order": 9,
+      "text": "Bupropion\nUncommon, but case reports have described anxiety, headache, insomnia, \nirritability, and myalgias;8,9 single case report of acute dystonia10\n",
+      "bbox": [
+        61.88970184326172,
+        544.7030029296875,
+        406.769775390625,
+        563.4105224609375
+      ],
+      "text_sha256": "85f159e80bd4383ef0fafcefc5dba65480fab4d0855bc1138386ac64111cbf50"
+    },
+    {
+      "block_id": "page-0365-block-0010",
+      "order": 10,
+      "text": "MAOIs*\nCommon: agitation, irritability, ataxia, movement disorders, insomnia, somnolence, \nvivid dreams, cognitive impairment, slowed speech, pressured speech; \nOccasionally: Hallucinations, paranoid delusions\nRIMAs: Flu like symptoms reported with moclobemide11\n",
+      "bbox": [
+        61.889801025390625,
+        569.7279052734375,
+        435.5023498535156,
+        608.4278564453125
+      ],
+      "text_sha256": "3edda93211559237c4da3ff8c30ca44d3a235cedd2686238e0a5499d82a9d9d0"
+    },
+    {
+      "block_id": "page-0365-block-0011",
+      "order": 11,
+      "text": "Table 3.8  Factors influencing the incidence and severity of antidepressant withdrawal symptoms\n",
+      "bbox": [
+        67.88980102539062,
+        70.08790588378906,
+        376.96484375,
+        78.97540283203125
+      ],
+      "text_sha256": "c4c55904cce08aaa2cff17e18c74b45317f4e223016eed4af122ca824e989000"
+    },
+    {
+      "block_id": "page-0365-block-0012",
+      "order": 12,
+      "text": "Pharmacological factors\n",
+      "bbox": [
+        67.88980102539062,
+        90.50289154052734,
+        143.71478271484375,
+        99.21038818359375
+      ],
+      "text_sha256": "783cc4dbe99c26a3aa0f56d3eb47c814a4f25b4b7241958fe9f65c58411cf7d1"
+    },
+    {
+      "block_id": "page-0365-block-0013",
+      "order": 13,
+      "text": "– Pharmacokinetics\n– Drug half life\n– Pharmacodynamics\n– Receptor affinities\nTreatment factors\n",
+      "bbox": [
+        67.88980102539062,
+        100.5003890991211,
+        146.96978759765625,
+        149.1978759765625
+      ],
+      "text_sha256": "03fd27e4b198e88245a7e114daaff9af0ca4d22f3f269815ff7c2d1331a64eb3"
+    },
+    {
+      "block_id": "page-0365-block-0014",
+      "order": 14,
+      "text": "– Duration of treatment\n– Dose\n– Method of tapering\nPatient specific factors\n",
+      "bbox": [
+        67.88980102539062,
+        150.4878692626953,
+        156.0072784423828,
+        189.1878662109375
+      ],
+      "text_sha256": "92e8af8a2e70676e9fff557eaba19adb4f64e5f4d909d03b2d65d12e98ce45a8"
+    },
+    {
+      "block_id": "page-0365-block-0015",
+      "order": 15,
+      "text": "– \u0007Prior experience and \n",
+      "bbox": [
+        79.88980102539062,
+        190.4778594970703,
+        152.8123016357422,
+        199.18539428710938
+      ],
+      "text_sha256": "2c8fee980245e43b91ab5c1c0af6e48fb517e19852a74038c634236afb7bfeda"
+    },
+    {
+      "block_id": "page-0365-block-0016",
+      "order": 16,
+      "text": "anticipation effects\n",
+      "bbox": [
+        85.72480010986328,
+        200.4753875732422,
+        146.414794921875,
+        209.18289184570312
+      ],
+      "text_sha256": "a0221eea3a3d00f7448ff67bee739ea0403b77ff0fbaca678e385bbf2aedaf37"
+    },
+    {
+      "block_id": "page-0365-block-0017",
+      "order": 17,
+      "text": "■\n■Drug half-lives – correlate with the severity and onset of symptoms. Symptoms \n",
+      "bbox": [
+        174.0131072998047,
+        90.50289154052734,
+        435.8006286621094,
+        99.21038818359375
+      ],
+      "text_sha256": "ffe97136d9dc8d2d14e30a3ff3325a07729009e36dfdcd95c434f523f09f3034"
+    },
+    {
+      "block_id": "page-0365-block-0018",
+      "order": 18,
+      "text": "typically more severe with shorter half-life drugs (e.g. venlafaxine, paroxetine)\n",
+      "bbox": [
+        183.0131072998047,
+        99.50289154052734,
+        430.1081848144531,
+        108.21038818359375
+      ],
+      "text_sha256": "55e7b7535356e31f5c6f935e4ec0f7dd3ac967bc77bc9cf1e4b3920193fcf3fd"
+    },
+    {
+      "block_id": "page-0365-block-0019",
+      "order": 19,
+      "text": "■\n■Other pharmacokinetic factors: non-linear pharmacokinetics\n",
+      "bbox": [
+        174.0131072998047,
+        112.50289154052734,
+        374.6756591796875,
+        121.21038818359375
+      ],
+      "text_sha256": "7834c4bd883fd4c1b706eb41394ea93541f5db68ccb2fbed2a2b39303078f3a1"
+    },
+    {
+      "block_id": "page-0365-block-0020",
+      "order": 20,
+      "text": "■\n■Receptor affinities: higher affinity for the serotonin transporter may confer \n",
+      "bbox": [
+        174.0131072998047,
+        125.50289154052734,
+        422.21063232421875,
+        134.21038818359375
+      ],
+      "text_sha256": "fa55334dbbde6084ec261d8218869d38fc6e9828057df5b6262da1a2b45cc6ef"
+    },
+    {
+      "block_id": "page-0365-block-0021",
+      "order": 21,
+      "text": "higher risk of withdrawal symptoms\n",
+      "bbox": [
+        183.0131072998047,
+        135.50038146972656,
+        297.6056213378906,
+        144.2078857421875
+      ],
+      "text_sha256": "92bdd20a758bdb174aeb6b1fbca48a674865bf5981dadfec6c901d0844ffdc5c"
+    },
+    {
+      "block_id": "page-0365-block-0022",
+      "order": 22,
+      "text": "(Continued)\n",
+      "bbox": [
+        396.37310791015625,
+        616.8953857421875,
+        433.8881530761719,
+        625.6478881835938
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

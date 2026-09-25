@@ -1,0 +1,383 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0159",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 159,
+  "source_page_index": 158,
+  "source_page_display": 159,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "138    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nReferences\n\t 1.\t Morrison JR. Catatonia. Retarded and excited types. Arch Gen Psychiatry 1973; 28:39–41.\n\t 2.\t Walther S, et al. Structure and neural mechanisms of catatonia. Lancet Psychiatry 2019; 6:610–619.\n\t 3.\t Takacs R, et al. Catatonia in affective disorders. Curr Psychiatry Rev 2013; 9:101–105.\n\t 4.\t Mangas MCC, et al. P-167 – catatonia in bipolar disorder. Eur Psychiatry 2012; 27 Suppl 1:1.\n\t 5.\t Huang YC, et al. Rapid relief of catatonia in mood disorder by lorazepam and diazepam. Biomed J 2013; 36:35–39.\n\t 6.\t Vasudev K, et al. What works for delirious catatonic mania? BMJ Case Rep 2010; 2010.\n\t 7.\t Neuhut R, et al. Resolution of catatonia after treatment with stimulant medication in a patient with bipolar disorder. Psychosomatics 2012; \n53:482–484.\n\t 8.\t Ghaffarinejad AR, et al. Periodic catatonia. Challenging diagnosis for psychiatrists. Neurosciences 2012; 17:156–158.\n\t 9.\t Oldham MA, et al. Alcohol and sedative-hypnotic withdrawal catatonia: two case reports, systematic literature review, and suggestion of a \npotential relationship with alcohol withdrawal delirium. Psychosomatics 2016; 57:246–255.\n\t10.\t Banerjee D. Etizolam withdrawal catatonia: the first case report. Asian J Psychiatr 2018; 37:32–33.\n\t11.\t Fink M. Rediscovering catatonia: the biography of a treatable syndrome. Acta Psychiatr Scand Suppl 2013; 1–47.\n\t12.\t Bartolommei N, et al. Catatonia: a critical review and therapeutic recommendation. J Psychopathology 2012; 18:234–246.\n\t13.\t Lee J. Dissociative catatonia: dissociative-catatonic reactions, clinical presentations and responses to benzodiazepines. Aust N Z J Psychiatry \n2011; 45:A42.\n\t14.\t Suzuki K, et al. Hysteria presenting as a prodrome to catatonic stupor in a depressive patient resolved with electroconvulsive therapy. J ECT \n2006; 22:276.\n\t15.\t Alwaki A, et al. Catatonia: an elusive diagnosis. Neurology 2013; 80 Suppl 1:P05.127.\n\t16.\t Dhadphale M. Eye gaze diagnostic sign in hysterical stupor. Lancet 1980; 2:374–375.\n\t17.\t Gomez J. Hysterical stupor and death. Br J Psychiatry 1980; 136:105–106.\n\t18.\t Petrides G, et al. Synergism of lorazepam and electroconvulsive therapy in the treatment of catatonia. Biol Psychiatry 1997; 42:375–381.\n\t19.\t Mazzone L, et al. Catatonia in patients with autism: prevalence and management. CNS Drugs 2014; 28:205–215.\nTable 1.20  Medications other than \nbenzodiazepines reported as treatments for \ncatatonia/stupor\nListed in alphabetical order – no ranking or \njudgement is implied by the order\nAntipsychotic medications64–69,77–80\n■\n■Aripiprazole\n■\n■Clozapine\n■\n■Olanzapine\n■\n■Risperidone\n■\n■Ziprasidone\nExperimental treatments* 6,7,31,32,53,81–86\n■\n■Amantadine\n■\n■Amitriptyline\n■\n■Carbamazepine\n■\n■Fluoxetine\n■\n■Fluvoxamine\n■\n■Lithium\n■\n■Memantine\n■\n■Methylphenidate\n■\n■Mirtazapine\n■\n■Tramadol\n■\n■Valproate\n■\n■Zolpidem\n*Always read the primary literature before \nusing any of the medications listed in this \nsection.\n",
+  "raw_text_sha256": "33cab1a152ab8fc37a77369396f17d9c12e0709e4db15ac8f06156342ecc1926",
+  "coordinates_sha256": "4be87d9a604a9ed15f0d8c19b5137e7ba08e883689726c023922015d217246aa",
+  "block_sequence_sha256": "571ca3e7f6b6d2c531602397d63ec3386ee66bd926404bbb2dc5d4f86308605c",
+  "blocks": [
+    {
+      "block_id": "page-0159-block-0000",
+      "order": 0,
+      "text": "138    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "1f8c9acbfa5d08868aeb077a38636fa08e15e0f9fa06021c2430537257734d8f"
+    },
+    {
+      "block_id": "page-0159-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0159-block-0002",
+      "order": 2,
+      "text": "References\n",
+      "bbox": [
+        61.88909912109375,
+        377.5648193359375,
+        117.923095703125,
+        390.5998229980469
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0159-block-0003",
+      "order": 3,
+      "text": "\t 1.\t Morrison JR. Catatonia. Retarded and excited types. Arch Gen Psychiatry 1973; 28:39–41.\n\t 2.\t Walther S, et al. Structure and neural mechanisms of catatonia. Lancet Psychiatry 2019; 6:610–619.\n\t 3.\t Takacs R, et al. Catatonia in affective disorders. Curr Psychiatry Rev 2013; 9:101–105.\n\t 4.\t Mangas MCC, et al. P-167 – catatonia in bipolar disorder. Eur Psychiatry 2012; 27 Suppl 1:1.\n\t 5.\t Huang YC, et al. Rapid relief of catatonia in mood disorder by lorazepam and diazepam. Biomed J 2013; 36:35–39.\n\t 6.\t Vasudev K, et al. What works for delirious catatonic mania? BMJ Case Rep 2010; 2010.\n\t 7.\t Neuhut R, et al. Resolution of catatonia after treatment with stimulant medication in a patient with bipolar disorder. Psychosomatics 2012; \n",
+      "bbox": [
+        61.88909912109375,
+        395.54180908203125,
+        435.5751037597656,
+        456.71783447265625
+      ],
+      "text_sha256": "c2ba084f7e7dc28cde57349b92ee5d582168da965a986bf915c47030e4d319e6"
+    },
+    {
+      "block_id": "page-0159-block-0004",
+      "order": 4,
+      "text": "53:482–484.\n\t 8.\t Ghaffarinejad AR, et al. Periodic catatonia. Challenging diagnosis for psychiatrists. Neurosciences 2012; 17:156–158.\n\t 9.\t Oldham MA, et al. Alcohol and sedative-hypnotic withdrawal catatonia: two case reports, systematic literature review, and suggestion of a \n",
+      "bbox": [
+        61.93109893798828,
+        458.54180908203125,
+        435.5569763183594,
+        483.71783447265625
+      ],
+      "text_sha256": "729ee05de977f5587f367a6668b7437e3de7323ff88231000774658c957d29f5"
+    },
+    {
+      "block_id": "page-0159-block-0005",
+      "order": 5,
+      "text": "potential relationship with alcohol withdrawal delirium. Psychosomatics 2016; 57:246–255.\n\t10.\t Banerjee D. Etizolam withdrawal catatonia: the first case report. Asian J Psychiatr 2018; 37:32–33.\n\t11.\t Fink M. Rediscovering catatonia: the biography of a treatable syndrome. Acta Psychiatr Scand Suppl 2013; 1–47.\n\t12.\t Bartolommei N, et al. Catatonia: a critical review and therapeutic recommendation. J Psychopathology 2012; 18:234–246.\n\t13.\t Lee J. Dissociative catatonia: dissociative-catatonic reactions, clinical presentations and responses to benzodiazepines. Aust N Z J Psychiatry \n",
+      "bbox": [
+        61.94309997558594,
+        485.54180908203125,
+        435.6230773925781,
+        528.7178344726562
+      ],
+      "text_sha256": "d55e29ba26b7ca8aadf5426c7c550f09643083a5efd9b0b65f6e032e3d5aa731"
+    },
+    {
+      "block_id": "page-0159-block-0006",
+      "order": 6,
+      "text": "2011; 45:A42.\n\t14.\t Suzuki K, et al. Hysteria presenting as a prodrome to catatonic stupor in a depressive patient resolved with electroconvulsive therapy. J ECT \n",
+      "bbox": [
+        61.96710205078125,
+        530.5418701171875,
+        435.6831970214844,
+        546.7178344726562
+      ],
+      "text_sha256": "e47ee45b4b694523afb73ab2fe819077396403c5e9f54b047b959ee08d4f6a54"
+    },
+    {
+      "block_id": "page-0159-block-0007",
+      "order": 7,
+      "text": "2006; 22:276.\n\t15.\t Alwaki A, et al. Catatonia: an elusive diagnosis. Neurology 2013; 80 Suppl 1:P05.127.\n\t16.\t Dhadphale M. Eye gaze diagnostic sign in hysterical stupor. Lancet 1980; 2:374–375.\n\t17.\t Gomez J. Hysterical stupor and death. Br J Psychiatry 1980; 136:105–106.\n\t18.\t Petrides G, et al. Synergism of lorazepam and electroconvulsive therapy in the treatment of catatonia. Biol Psychiatry 1997; 42:375–381.\n\t19.\t Mazzone L, et al. Catatonia in patients with autism: prevalence and management. CNS Drugs 2014; 28:205–215.\n",
+      "bbox": [
+        61.97309875488281,
+        548.5418701171875,
+        426.9771423339844,
+        600.7178344726562
+      ],
+      "text_sha256": "030975fc3c1cf30c2c57e7c09667fa79efed4b79fd6c5306a4a979ca5383a206"
+    },
+    {
+      "block_id": "page-0159-block-0008",
+      "order": 8,
+      "text": "Table 1.20  Medications other than \nbenzodiazepines reported as treatments for \ncatatonia/stupor\n",
+      "bbox": [
+        172.6942901611328,
+        69.33692932128906,
+        313.6867980957031,
+        98.21942138671875
+      ],
+      "text_sha256": "d3df6388e72cd5c0f00fcb46d0f406823d0a518e716070288d1072021e8f1444"
+    },
+    {
+      "block_id": "page-0159-block-0009",
+      "order": 9,
+      "text": "Listed in alphabetical order – no ranking or \njudgement is implied by the order\n",
+      "bbox": [
+        166.69430541992188,
+        106.5418930053711,
+        305.7518005371094,
+        125.24688720703125
+      ],
+      "text_sha256": "e179480ad48c6c4ee52904357e2f38f8b9fe47dbe32639676ee0d8362adcf8b0"
+    },
+    {
+      "block_id": "page-0159-block-0010",
+      "order": 10,
+      "text": "Antipsychotic medications64–69,77–80\n",
+      "bbox": [
+        166.69430541992188,
+        131.56190490722656,
+        275.0624084472656,
+        140.2694091796875
+      ],
+      "text_sha256": "a849a000889fec064b3564cd8b1ea5c97975a555b22ed42a547645271fc1979f"
+    },
+    {
+      "block_id": "page-0159-block-0011",
+      "order": 11,
+      "text": "■\n■Aripiprazole\n",
+      "bbox": [
+        166.69430541992188,
+        146.59193420410156,
+        214.0267791748047,
+        155.2994384765625
+      ],
+      "text_sha256": "5520a6f07d7e2a14f87ffb301ff8f0c47b409ea7561b897aaf719e5714d2b153"
+    },
+    {
+      "block_id": "page-0159-block-0012",
+      "order": 12,
+      "text": "■\n■Clozapine\n",
+      "bbox": [
+        166.69430541992188,
+        155.59193420410156,
+        207.36679077148438,
+        164.2994384765625
+      ],
+      "text_sha256": "0349110f92c63dedffb00fbcdcd55c885058af8cf1f352c09daf5213b8dab750"
+    },
+    {
+      "block_id": "page-0159-block-0013",
+      "order": 13,
+      "text": "■\n■Olanzapine\n",
+      "bbox": [
+        166.69430541992188,
+        164.59193420410156,
+        211.52928161621094,
+        173.2994384765625
+      ],
+      "text_sha256": "615698368fb1b80842bfac60d5cd2f09193f42da9993c0c177fe605b5ad4e3ca"
+    },
+    {
+      "block_id": "page-0159-block-0014",
+      "order": 14,
+      "text": "■\n■Risperidone\n",
+      "bbox": [
+        166.69430541992188,
+        173.59193420410156,
+        212.78927612304688,
+        182.2994384765625
+      ],
+      "text_sha256": "e5e6e063cd2ca349273598cbdb970278d567878a9bc363b905247ab15b6f2634"
+    },
+    {
+      "block_id": "page-0159-block-0015",
+      "order": 15,
+      "text": "■\n■Ziprasidone\n",
+      "bbox": [
+        166.69430541992188,
+        182.59193420410156,
+        212.36927795410156,
+        191.2994384765625
+      ],
+      "text_sha256": "46ee652ae5817fd0788920290f95fcd09b81010f2d092a7142a1c4892fd38f86"
+    },
+    {
+      "block_id": "page-0159-block-0016",
+      "order": 16,
+      "text": "Experimental treatments* 6,7,31,32,53,81–86\n",
+      "bbox": [
+        166.69430541992188,
+        197.6144561767578,
+        286.4145202636719,
+        206.32440185546875
+      ],
+      "text_sha256": "82ef0ffc11fb6e457d2d7d1b0fc3fc764ef932f91d56ad8dff0a5736acec69af"
+    },
+    {
+      "block_id": "page-0159-block-0017",
+      "order": 17,
+      "text": "■\n■Amantadine\n",
+      "bbox": [
+        166.69430541992188,
+        212.6419219970703,
+        214.86688232421875,
+        221.34942626953125
+      ],
+      "text_sha256": "03806ac4cfeb521555f932be3a264a22eb484804dc91c5d00ee840e00a39d4d9"
+    },
+    {
+      "block_id": "page-0159-block-0018",
+      "order": 18,
+      "text": "■\n■Amitriptyline\n",
+      "bbox": [
+        166.69430541992188,
+        221.6419219970703,
+        216.51686096191406,
+        230.34942626953125
+      ],
+      "text_sha256": "fbfd8b689a8d9ebd5efdeeb906ea61a694b8cd86a25df801f52e64f68819df47"
+    },
+    {
+      "block_id": "page-0159-block-0019",
+      "order": 19,
+      "text": "■\n■Carbamazepine\n",
+      "bbox": [
+        166.69430541992188,
+        230.6419219970703,
+        225.69688415527344,
+        239.34942626953125
+      ],
+      "text_sha256": "1692bef4064c1abf3e9857171b8d13642bc30663d25f446d715167697240edba"
+    },
+    {
+      "block_id": "page-0159-block-0020",
+      "order": 20,
+      "text": "■\n■Fluoxetine\n",
+      "bbox": [
+        166.69430541992188,
+        239.6419219970703,
+        208.19187927246094,
+        248.34942626953125
+      ],
+      "text_sha256": "7548ba555b48f15a5406a5f631da71073f6b4fcf2cbd90562feddfb0ef44119d"
+    },
+    {
+      "block_id": "page-0159-block-0021",
+      "order": 21,
+      "text": "■\n■Fluvoxamine\n",
+      "bbox": [
+        166.69430541992188,
+        248.6419219970703,
+        215.27188110351562,
+        257.34942626953125
+      ],
+      "text_sha256": "aa4ac74426efe61ae9b8e827838f6f49ad130e8fc571b7300458b8e23883f522"
+    },
+    {
+      "block_id": "page-0159-block-0022",
+      "order": 22,
+      "text": "■\n■Lithium\n",
+      "bbox": [
+        166.69430541992188,
+        257.6419372558594,
+        199.4393768310547,
+        266.34942626953125
+      ],
+      "text_sha256": "6652eed04b597bc8d4118498eaabcba4e97a1d552d8128c5d9d06c96bdbcf5ab"
+    },
+    {
+      "block_id": "page-0159-block-0023",
+      "order": 23,
+      "text": "■\n■Memantine\n",
+      "bbox": [
+        166.69430541992188,
+        266.6419372558594,
+        212.36187744140625,
+        275.34942626953125
+      ],
+      "text_sha256": "0e3127d0f65772a820f60cf7a7523e701988afa20048f8aefc29faeef419481e"
+    },
+    {
+      "block_id": "page-0159-block-0024",
+      "order": 24,
+      "text": "■\n■Methylphenidate\n",
+      "bbox": [
+        166.69430541992188,
+        275.6419372558594,
+        229.8668670654297,
+        284.34942626953125
+      ],
+      "text_sha256": "fc3304e32f21b6a4a1e2046426fbf7744bfba2c53da5811efcd3f9bea0a3814e"
+    },
+    {
+      "block_id": "page-0159-block-0025",
+      "order": 25,
+      "text": "■\n■Mirtazapine\n",
+      "bbox": [
+        166.69430541992188,
+        284.6419372558594,
+        213.60687255859375,
+        293.34942626953125
+      ],
+      "text_sha256": "f95d9b70b460fd44261903705b10cf585b9477d7829e91615c9cfca54f0dff58"
+    },
+    {
+      "block_id": "page-0159-block-0026",
+      "order": 26,
+      "text": "■\n■Tramadol\n",
+      "bbox": [
+        166.69430541992188,
+        293.6419372558594,
+        205.00437927246094,
+        302.34942626953125
+      ],
+      "text_sha256": "62dead17b46462dd5ccd1dfc72b3327271192a9e405a2b5fb8d68724f13f4c7c"
+    },
+    {
+      "block_id": "page-0159-block-0027",
+      "order": 27,
+      "text": "■\n■Valproate\n",
+      "bbox": [
+        166.69430541992188,
+        302.6419372558594,
+        205.97938537597656,
+        311.34942626953125
+      ],
+      "text_sha256": "e63e0dede31727bf3de6ee2647f367af614de78ab248107db98b2674e0b27d78"
+    },
+    {
+      "block_id": "page-0159-block-0028",
+      "order": 28,
+      "text": "■\n■Zolpidem\n",
+      "bbox": [
+        166.69430541992188,
+        311.6419372558594,
+        205.28187561035156,
+        320.34942626953125
+      ],
+      "text_sha256": "344bffaba28367cf3ef6be0e42b287bf7fcf8898a05210ac836eec7d46489cf6"
+    },
+    {
+      "block_id": "page-0159-block-0029",
+      "order": 29,
+      "text": "*Always read the primary literature before \nusing any of the medications listed in this \nsection.\n",
+      "bbox": [
+        166.69439697265625,
+        330.6394348144531,
+        303.7868957519531,
+        359.3419189453125
+      ],
+      "text_sha256": "dfaec4c042994e5c7654de1b6f3c0484beadc6f43c59f69d7529749a342d6416"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

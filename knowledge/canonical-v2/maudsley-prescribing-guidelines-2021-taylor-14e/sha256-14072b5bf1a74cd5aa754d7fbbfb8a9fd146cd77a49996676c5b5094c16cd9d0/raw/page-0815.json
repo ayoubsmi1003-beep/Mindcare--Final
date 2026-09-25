@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0815",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 815,
+  "source_page_index": 814,
+  "source_page_display": 815,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "794    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\n22q11.2 deletion syndrome\nClinical features\nThe commonest autosomal deletion, 22q11.2 Deletion Syndrome (22q11.2DS), is a \nmultisystem disorder with a heterogeneous presentation which varies greatly in severity \nbetween affected individuals.1 Prevalence is estimated to range from 1 per 3000 to 5000 \nbirths.1 The syndrome has been known by many names (including velocardiofacial, \nDiGeorge or Shprintzen syndrome), in part due to its broad phenotypic range of clinical \nfeatures (see Box 10.2).\nBox 10.2  Clinical features of 22q11.2DS1\n■\n■Cardiovascular abnormalities including tetralogy of Fallot\n■\n■Immunodeficiency and autoimmune disease\n■\n■Endocrine abnormalities including hypoparathyroidism\n■\n■Palatal abnormalities\n■\n■Genitourinary abnormalities including renal agenesis\n■\n■Behavioural phenotypes\n■\n■Developmental delays and learning disabilities\n■\n■Psychiatric disorders\n■\n■Gastrointestinal abnormalities including constipation\n■\n■Skeletal abnormalities\nPsychiatric disorders in people with 22q11.2DS\nAround 60% of people with 22q11.2DS are estimated to meet the diagnostic criteria \nfor some type of psychiatric disorder at some point during their lives.2 Children with \n22q11.2DS have an elevated prevalence of anxiety, ADHD and autism spectrum disor-\nders.1 Anxiety disorders are profoundly increased in adults.1 Schizophrenia is diagnosed \nin approximately 25% of individuals with 22q11.2DS.1\nFew studies have evaluated the safety and efficacy of psychotropics in people with \n22q11.2DS. However, standard pharmacological (and non-pharmacological) treat-\nments for ADHD, anxiety, mood disorders and schizophrenia appear to be effective and \ntreatment protocols used in the general population should be followed.1,3 Although \nmost psychotropics are thought to be safe in people with 22q11.2DS, consideration \nshould be given to medical comorbidities (e.g. cardiovascular disorders), a potentially \nincreased risk of seizures2 and movement disorders.1 Endocrine abnormalities (e.g. \nhypoparathyroidism and hypothyroidism) should be corrected before starting psycho-\ntropics because they can mimic psychiatric symptoms and complicate treatment with \npsychotropics.2,3 Current evidence and opinion on the treatment of psychiatric disor-\nders in people with 22q11.2DS is summarised in Table 10.6.\n",
+  "raw_text_sha256": "53976ad6e9ace7e457a65561ec1553ad7450df1a8a31058bd1a974fed41fef38",
+  "coordinates_sha256": "95354dc4289733c7f22612cc3b498223bf512f6c1f5e8f60203271fda9cc6e2a",
+  "block_sequence_sha256": "ecccac2c98475c5c7c19371b415751d698e9451fdc646cbc4af86eb5ced39992",
+  "blocks": [
+    {
+      "block_id": "page-0815-block-0000",
+      "order": 0,
+      "text": "794    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "ac2171c0068454e0c8e67db6ecffeb2c4e1d067ed626021c260c6868771b11cb"
+    },
+    {
+      "block_id": "page-0815-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0815-block-0002",
+      "order": 2,
+      "text": "22q11.2 deletion syndrome\n",
+      "bbox": [
+        68.88999938964844,
+        66.06546020507812,
+        209.29396057128906,
+        79.1004638671875
+      ],
+      "text_sha256": "76697c73b9046972de6cefb613e5f2d504383b354d238979a87c7fcce6096776"
+    },
+    {
+      "block_id": "page-0815-block-0003",
+      "order": 3,
+      "text": "Clinical features\n",
+      "bbox": [
+        61.89400100708008,
+        102.06845092773438,
+        144.21798706054688,
+        115.10345458984375
+      ],
+      "text_sha256": "9f2f08aa5f1fcbb645cb67d8ea3b220afa5475b3a3ee26d9cd089229b5884c50"
+    },
+    {
+      "block_id": "page-0815-block-0004",
+      "order": 4,
+      "text": "The commonest autosomal deletion, 22q11.2 Deletion Syndrome (22q11.2DS), is a \nmultisystem disorder with a heterogeneous presentation which varies greatly in severity \nbetween affected individuals.1 Prevalence is estimated to range from 1 per 3000 to 5000 \nbirths.1 The syndrome has been known by many names (including velocardiofacial, \nDiGeorge or Shprintzen syndrome), in part due to its broad phenotypic range of clinical \nfeatures (see Box 10.2).\n",
+      "bbox": [
+        61.88829803466797,
+        120.91046142578125,
+        436.7099609375,
+        192.63046264648438
+      ],
+      "text_sha256": "e87425a3657055767a43a55ee610541a01af0232a71c1577a2437bf5547d9a48"
+    },
+    {
+      "block_id": "page-0815-block-0005",
+      "order": 5,
+      "text": "Box 10.2  Clinical features of 22q11.2DS1\n",
+      "bbox": [
+        67.88999938964844,
+        226.91099548339844,
+        201.47250366210938,
+        235.79849243164062
+      ],
+      "text_sha256": "0d389d7be84e666780b5fdab36da4e586d873d5b097e8a3bb7d9c64fa40dc2e2"
+    },
+    {
+      "block_id": "page-0815-block-0006",
+      "order": 6,
+      "text": "■\n■Cardiovascular abnormalities including tetralogy of Fallot\n■\n■Immunodeficiency and autoimmune disease\n",
+      "bbox": [
+        65.88990020751953,
+        245.98097229003906,
+        417.3276672363281,
+        254.6884765625
+      ],
+      "text_sha256": "d3d10c5249db1e91ddd2482e1f81db0656a31814251b339886ba81383b40e524"
+    },
+    {
+      "block_id": "page-0815-block-0007",
+      "order": 7,
+      "text": "■\n■Endocrine abnormalities including hypoparathyroidism\n■\n■Palatal abnormalities\n",
+      "bbox": [
+        65.88990020751953,
+        261.62091064453125,
+        342.71759033203125,
+        270.3283996582031
+      ],
+      "text_sha256": "6f3e55aac8493ed16d02c2c74579ec920146708f92a6b6559d476583e100a299"
+    },
+    {
+      "block_id": "page-0815-block-0008",
+      "order": 8,
+      "text": "■\n■Genitourinary abnormalities including renal agenesis\n■\n■Behavioural phenotypes\n",
+      "bbox": [
+        65.88990020751953,
+        277.26080322265625,
+        353.1576232910156,
+        285.9682922363281
+      ],
+      "text_sha256": "9c962d0e265303d5cef687df0cae136f4bc1d4c279e3db7c952c421416d29344"
+    },
+    {
+      "block_id": "page-0815-block-0009",
+      "order": 9,
+      "text": "■\n■Developmental delays and learning disabilities\n■\n■Psychiatric disorders\n",
+      "bbox": [
+        65.88990020751953,
+        292.90069580078125,
+        340.49755859375,
+        301.6081848144531
+      ],
+      "text_sha256": "ea1270bb7e6ed3a482862f036df52f4ab1ceaa40a8d9175e0687e564abf4ff9d"
+    },
+    {
+      "block_id": "page-0815-block-0010",
+      "order": 10,
+      "text": "■\n■Gastrointestinal abnormalities including constipation\n■\n■Skeletal abnormalities\n",
+      "bbox": [
+        65.88990020751953,
+        308.54058837890625,
+        346.46759033203125,
+        317.2480773925781
+      ],
+      "text_sha256": "fb0b63da67b76c25a824f56b609deb15355ed3fdd906ffa1a4e57fd88ff4f00f"
+    },
+    {
+      "block_id": "page-0815-block-0011",
+      "order": 11,
+      "text": "Psychiatric disorders in people with 22q11.2DS\n",
+      "bbox": [
+        61.88999938964844,
+        353.0638732910156,
+        302.5259704589844,
+        366.098876953125
+      ],
+      "text_sha256": "84280546faa1e27b0545725adbf55cfd941ef147c9eb934401283ebc935013c9"
+    },
+    {
+      "block_id": "page-0815-block-0012",
+      "order": 12,
+      "text": "Around 60% of people with 22q11.2DS are estimated to meet the diagnostic criteria \nfor some type of psychiatric disorder at some point during their lives.2 Children with \n22q11.2DS have an elevated prevalence of anxiety, ADHD and autism spectrum disor-\nders.1 Anxiety disorders are profoundly increased in adults.1 Schizophrenia is diagnosed \nin approximately 25% of individuals with 22q11.2DS.1\n",
+      "bbox": [
+        61.88970947265625,
+        371.90887451171875,
+        436.6797180175781,
+        431.6288757324219
+      ],
+      "text_sha256": "f098507ab71d7799f1e4555e28c9a66294ca6fdc690702821fa12fcafdf8f259"
+    },
+    {
+      "block_id": "page-0815-block-0013",
+      "order": 13,
+      "text": "Few studies have evaluated the safety and efficacy of psychotropics in people with \n22q11.2DS. However, standard pharmacological (and non-pharmacological) treat-\nments for ADHD, anxiety, mood disorders and schizophrenia appear to be effective and \ntreatment protocols used in the general population should be followed.1,3 Although \nmost psychotropics are thought to be safe in people with 22q11.2DS, consideration \nshould be given to medical comorbidities (e.g. cardiovascular disorders), a potentially \nincreased risk of seizures2 and movement disorders.1 Endocrine abnormalities (e.g. \nhypoparathyroidism and hypothyroidism) should be corrected before starting psycho-\ntropics because they can mimic psychiatric symptoms and complicate treatment with \npsychotropics.2,3 Current evidence and opinion on the treatment of psychiatric disor-\nders in people with 22q11.2DS is summarised in Table 10.6.\n",
+      "bbox": [
+        61.886016845703125,
+        431.90887451171875,
+        436.6999816894531,
+        563.62890625
+      ],
+      "text_sha256": "71db97be5dec8ce49cc5fb645dd6428a1d785e4cad4a9b91afa2f44ed82e0aae"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

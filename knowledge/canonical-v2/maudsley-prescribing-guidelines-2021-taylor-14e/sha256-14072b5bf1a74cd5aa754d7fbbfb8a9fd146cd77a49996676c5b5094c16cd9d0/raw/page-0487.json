@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0487",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 487,
+  "source_page_index": 486,
+  "source_page_display": 487,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "466    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nBaclofen\nBaclofen is a GABA-B agonist that does not have a licence for use in alcohol depend-\nence but is nevertheless used by some clinicians. A recent meta-analysis failed to find \npositive effects for baclofen and did not support its use as a first-line treatment for \nalcohol-use disorders.28 Baclofen was associated with higher rates of adverse effects, \nincluding depression, vertigo, somnolence, numbness and muscle rigidity.\nAntiseizure medications\nThere is currently insufficient evidence to support the clinical use of antiseizure medica-\ntions in the treatment of alcohol dependence, although a significant association has \nbeen found for fewer drinks per drinking day and lower average heavy drinking com-\npared with placebo.29 Most research has been carried out on topiramate. There have \nbeen fewer studies on gabapentin30 valproate and levetiracetam.\nPregnancy and alcohol use\nEvidence indicates that alcohol consumption during pregnancy may cause harm to the \nfoetus. The DoH advises that women should not drink any alcohol at all during preg-\nnancy.1 Drinking even 1–2 units/day during pregnancy can increase the risk of having a \npre-term, low birthweight or small for gestational age baby. NICE guidelines changed \nin December 2018 to refer to the CMO guidelines.\nFor alcohol-dependent pregnant women who have withdrawal symptoms, pharmaco-\nlogical cover for detoxification should be offered, ideally in an inpatient setting. The timing \nof detoxification in relation to the trimester of pregnancy should be risk assessed against \ncontinued alcohol consumption and risks to the foetus.9 Chlordiazepoxide has been sug-\ngested as being unlikely to pose a substantial risk; however, dose-dependent malformations \nhave been observed.9 The UK Teratology Information Service31 provides national advice \nfor healthcare professionals and likes to follow up on pregnancies that require alcohol \ndetoxification. Specialist advice should always be sought (see also section ‘Pregnancy’ in \nChapter 7). No relapse prevention medication has been evaluated in pregnancy.9\nChildren and adolescents\nChildren and young people (10–17 years) should be assessed as outlined in NICE \nClinical Guideline 115, 2011.2\nDisulfiram: NICE Clinical Guideline 115, 20112\nDisulfiram should be considered in combination with a psychological intervention for patients who \nwish to achieve abstinence, but for whom acamprosate or naltrexone is not suitable. Treatment \nshould be started at least 24 hours after the last drink and should be overseen by a family member \nor a carer. Monitoring is recommended every 2 weeks for the first 2 months, then monthly for the \nfollowing 4 months. Medical monitoring should be continued at 6 monthly intervals after the first \n6 months. Patients must not consume any alcohol while taking disulfiram.\n",
+  "raw_text_sha256": "502e6117ea8df78368e487b63fc16457923614f25142c42e132de8a6877018b4",
+  "coordinates_sha256": "81d8560b7739028136df375f811e1b30396b0f114ef311557fdafdadb09d4a7a",
+  "block_sequence_sha256": "8d08fff937ee0b4dadb9d9cabe6f14d53a4624256d2d6897aab0063561459ad2",
+  "blocks": [
+    {
+      "block_id": "page-0487-block-0000",
+      "order": 0,
+      "text": "466    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "afe2c3893c65d4ac51ef7cc1a65511c41649ace85b3cc0a61efbd97b1175f11c"
+    },
+    {
+      "block_id": "page-0487-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0487-block-0002",
+      "order": 2,
+      "text": "Baclofen\n",
+      "bbox": [
+        61.889801025390625,
+        177.150390625,
+        102.44979858398438,
+        189.00039672851562
+      ],
+      "text_sha256": "b507cce324e882c43e78e703eebd6aaf4eeb48f67f0ee02977042caaed8c3167"
+    },
+    {
+      "block_id": "page-0487-block-0003",
+      "order": 3,
+      "text": "Baclofen is a GABA-B agonist that does not have a licence for use in alcohol depend-\nence but is nevertheless used by some clinicians. A recent meta-analysis failed to find \npositive effects for baclofen and did not support its use as a first-line treatment for \nalcohol-use disorders.28 Baclofen was associated with higher rates of adverse effects, \nincluding depression, vertigo, somnolence, numbness and muscle rigidity.\n",
+      "bbox": [
+        61.88690185546875,
+        195.06039428710938,
+        436.6998291015625,
+        254.7803955078125
+      ],
+      "text_sha256": "fb116e99a214aba09446c5deed84e4187c3e7f247cc5fa341ec9746fbf424991"
+    },
+    {
+      "block_id": "page-0487-block-0004",
+      "order": 4,
+      "text": "Antiseizure medications\n",
+      "bbox": [
+        61.88690185546875,
+        273.150390625,
+        174.67689514160156,
+        285.0003967285156
+      ],
+      "text_sha256": "e974b2720513643113295b3a80ff1e5f60ee3546f4fe4c7b130a2d925d29d6a0"
+    },
+    {
+      "block_id": "page-0487-block-0005",
+      "order": 5,
+      "text": "There is currently insufficient evidence to support the clinical use of antiseizure medica-\ntions in the treatment of alcohol dependence, although a significant association has \nbeen found for fewer drinks per drinking day and lower average heavy drinking com-\npared with placebo.29 Most research has been carried out on topiramate. There have \nbeen fewer studies on gabapentin30 valproate and levetiracetam.\n",
+      "bbox": [
+        61.88690185546875,
+        291.0603942871094,
+        436.673828125,
+        350.7803955078125
+      ],
+      "text_sha256": "19b4136584fd3448578edd2c55512cc0c54ef603bbc934add9ed07d17cf3faed"
+    },
+    {
+      "block_id": "page-0487-block-0006",
+      "order": 6,
+      "text": "Pregnancy and alcohol use\n",
+      "bbox": [
+        61.889801025390625,
+        368.21539306640625,
+        199.2137451171875,
+        381.2503967285156
+      ],
+      "text_sha256": "aacc2bba8f778a647f52d66758ab01c571bcd4a9531d5fdfefde7497ce398491"
+    },
+    {
+      "block_id": "page-0487-block-0007",
+      "order": 7,
+      "text": "Evidence indicates that alcohol consumption during pregnancy may cause harm to the \nfoetus. The DoH advises that women should not drink any alcohol at all during preg-\nnancy.1 Drinking even 1–2 units/day during pregnancy can increase the risk of having a \npre-term, low birthweight or small for gestational age baby. NICE guidelines changed \nin December 2018 to refer to the CMO guidelines.\n",
+      "bbox": [
+        61.889801025390625,
+        387.0603942871094,
+        436.6997375488281,
+        446.7803955078125
+      ],
+      "text_sha256": "c706a1bdfa7a642952e727a149a925514e4f824c8ed5ce4661fbed1a54ac740b"
+    },
+    {
+      "block_id": "page-0487-block-0008",
+      "order": 8,
+      "text": "For alcohol-dependent pregnant women who have withdrawal symptoms, pharmaco-\nlogical cover for detoxification should be offered, ideally in an inpatient setting. The timing \nof detoxification in relation to the trimester of pregnancy should be risk assessed against \ncontinued alcohol consumption and risks to the foetus.9 Chlordiazepoxide has been sug-\ngested as being unlikely to pose a substantial risk; however, dose-dependent malformations \nhave been observed.9 The UK Teratology Information Service31 provides national advice \nfor healthcare professionals and likes to follow up on pregnancies that require alcohol \ndetoxification. Specialist advice should always be sought (see also section ‘Pregnancy’ in \nChapter 7). No relapse prevention medication has been evaluated in pregnancy.9\n",
+      "bbox": [
+        61.88800048828125,
+        447.0603942871094,
+        436.6910705566406,
+        554.7803955078125
+      ],
+      "text_sha256": "b82dbecd85d9f99798c0fbf1f43074fedb5462e09c8b136d67a73414691146f9"
+    },
+    {
+      "block_id": "page-0487-block-0009",
+      "order": 9,
+      "text": "Children and adolescents\n",
+      "bbox": [
+        61.889801025390625,
+        572.2153930664062,
+        191.2607879638672,
+        585.2503662109375
+      ],
+      "text_sha256": "8f0137cd7c4627883cbed2e0a332e43a0dc1fc38e075f9486695226a9b0ceca2"
+    },
+    {
+      "block_id": "page-0487-block-0010",
+      "order": 10,
+      "text": "Children and young people (10–17 years) should be assessed as outlined in NICE \nClinical Guideline 115, 2011.2\n",
+      "bbox": [
+        61.889801025390625,
+        591.0603637695312,
+        436.61968994140625,
+        614.7803955078125
+      ],
+      "text_sha256": "7dd9d1e2942b81bde8657c392912e5dd25b3752a8000af81f9a6ef7d0caa793a"
+    },
+    {
+      "block_id": "page-0487-block-0011",
+      "order": 11,
+      "text": "Disulfiram: NICE Clinical Guideline 115, 20112\n",
+      "bbox": [
+        68.88999938964844,
+        69.57776641845703,
+        247.3727569580078,
+        79.6502685546875
+      ],
+      "text_sha256": "8ad08df8bd90fac0223eeb08ff969c77a6cde5c8e9b8e2b1597a757b2bf1a1e3"
+    },
+    {
+      "block_id": "page-0487-block-0012",
+      "order": 12,
+      "text": "Disulfiram should be considered in combination with a psychological intervention for patients who \nwish to achieve abstinence, but for whom acamprosate or naltrexone is not suitable. Treatment \nshould be started at least 24 hours after the last drink and should be overseen by a family member \nor a carer. Monitoring is recommended every 2 weeks for the first 2 months, then monthly for the \nfollowing 4 months. Medical monitoring should be continued at 6 monthly intervals after the first \n6 months. Patients must not consume any alcohol while taking disulfiram.\n",
+      "bbox": [
+        68.88999938964844,
+        89.10678100585938,
+        428.3127136230469,
+        148.95513916015625
+      ],
+      "text_sha256": "a09fe899414b3a2efd5b40e6156a4581ecc3d3efd05254e86955cb16729dcdb4"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

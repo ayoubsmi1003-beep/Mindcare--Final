@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0308",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 308,
+  "source_page_index": 307,
+  "source_page_display": 308,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Bipolar disorder    287\nCHAPTER 2\n\t30.\t Pazzaglia PJ, et al. Preliminary controlled trial of nimodipine in ultra-rapid cycling affective dysregulation. Psychiatry Res 1993; \n49:257–272.\n\t31.\t Goldberg JF, et al. Effectiveness of quetiapine in rapid cycling bipolar disorder: a preliminary study. J Affect Disord 2008; 105:305–310.\n\t32.\t Vieta E, et al. Quetiapine monotherapy in the treatment of patients with bipolar I or II depression and a rapid-cycling disease course: a ran-\ndomized, double-blind, placebo-controlled study. Bipolar Disord 2007; 9:413–425.\n\t33.\t Langosch JM, et al. Efficacy of quetiapine monotherapy in rapid-cycling bipolar disorder in comparison with sodium valproate. J Clin \nPsychopharmacol 2008; 28:555–560.\n\t34.\t Vieta E, et al. Quetiapine in the treatment of rapid cycling bipolar disorder. Bipolar Disord 2002; 4:335–340.\n\t35.\t Jacobsen FM. Risperidone in the treatment of affective illness and obsessive-compulsive disorder. J Clin Psychiatry 1995; 56:423–429.\n\t36.\t Bobo WV, et al. A randomized open comparison of long-acting injectable risperidone and treatment as usual for prevention of relapse, rehos-\npitalization, and urgent care referral in community-treated patients with rapid cycling bipolar disorder. Clin Neuropharmacol 2011; \n34:224–233.\n\t37.\t Vieta E, et al. Treatment of refractory rapid cycling bipolar disorder with risperidone. J Clin Psychopharmacol 1998; 18:172–174.\n\t38.\t Extein IL. High doses of levothyroxine for refractory rapid cycling. Am J Psychiatry 2000; 157:1704–1705.\n\t39.\t Walshaw PD, et al. Adjunctive thyroid hormone treatment in rapid cycling bipolar disorder: a double-blind placebo-controlled trial of levo-\nthyroxine (L-T(4)) and triiodothyronine (T(3)). Bipolar Disord 2018; 20:594–603.\n\t40.\t Qureshi MM, et al. The chimera of circular insanity and the labours of Thyreoidea. Bipolar Disord 2019; 21:794–796.\n\t41.\t Chen CK, et al. Combination treatment of clozapine and topiramate in resistant rapid-cycling bipolar disorder. Clin Neuropharmacol 2005; \n28:136–138.\n\t42.\t Delgado A, et al. Clozapine in bipolar disorder: a systematic review and meta-analysis. J Psychiatr Res 2020; 125:21–27.\n\t43.\t Kılınçel O, et al. The role of clozapine as a mood regulator in the treatment of rapid cycling bipolar affective disorder. Turk J Psychiatry 2019; \n30:268–271.\n\t44.\t Hui TP, et al. A systematic review and meta-analysis of clinical predictors of lithium response in bipolar disorder. Acta Psychiatr Scand 2019; \n140:94–115.\n\t45.\t Montlahuc C, et al. Response to lithium in patients with bipolar disorder: what are psychiatrists’ experiences and practices compared to lit-\nerature review? Pharmacopsychiatry 2019; 52:70–77.\n\t46.\t Koukopoulos A, et al. Duration and stability of the rapid-cycling course: a long-term personal follow-up of 109 patients. J Affect Disord \n2003; 73:75–85.\n\t47.\t Carvalho AF, et al. Rapid cycling in bipolar disorder: a systematic review. J Clin Psychiatry 2014; 75:e578–e586.\n",
+  "raw_text_sha256": "81d62da9414a09c935d4f8508e1461ec068111b38c54a138100ca54ad3d88dac",
+  "coordinates_sha256": "93a981cac720a48e9c62a1a3a304fc2e264a071ad9d4d14082749685f2a1aa8e",
+  "block_sequence_sha256": "4d9f370d6957a18fc3b3c559a708dbc15d86ddcee81309c870b0aad41c272eeb",
+  "blocks": [
+    {
+      "block_id": "page-0308-block-0000",
+      "order": 0,
+      "text": "Bipolar disorder    287\n",
+      "bbox": [
+        326.5046081542969,
+        31.395221710205078,
+        420.0005798339844,
+        41.0272216796875
+      ],
+      "text_sha256": "560dbe709ee23915a83cb95d855af5365f5ac3e78169e874a9972f9d6c42d499"
+    },
+    {
+      "block_id": "page-0308-block-0001",
+      "order": 1,
+      "text": "CHAPTER 2\n",
+      "bbox": [
+        454.4096984863281,
+        146.3472900390625,
+        463.88970947265625,
+        187.6912841796875
+      ],
+      "text_sha256": "5eaa1f2591abe1a1b2f7664fa3de7ff01a032d44ee83fa594c7852135d4287aa"
+    },
+    {
+      "block_id": "page-0308-block-0002",
+      "order": 2,
+      "text": "\t30.\t Pazzaglia PJ, et al. Preliminary controlled trial of nimodipine in ultra-rapid cycling affective dysregulation. Psychiatry Res 1993; \n",
+      "bbox": [
+        48.0,
+        63.2703857421875,
+        421.7099304199219,
+        70.30238342285156
+      ],
+      "text_sha256": "d3cdf3a61a7ab79c0c6884ee5d1d65f57c60cdae14d14581c768a016ec9c1698"
+    },
+    {
+      "block_id": "page-0308-block-0003",
+      "order": 3,
+      "text": "49:257–272.\n\t31.\t Goldberg JF, et al. Effectiveness of quetiapine in rapid cycling bipolar disorder: a preliminary study. J Affect Disord 2008; 105:305–310.\n\t32.\t Vieta E, et al. Quetiapine monotherapy in the treatment of patients with bipolar I or II depression and a rapid-cycling disease course: a ran-\n",
+      "bbox": [
+        48.00600051879883,
+        72.12638854980469,
+        420.00604248046875,
+        97.30238342285156
+      ],
+      "text_sha256": "80a5cb328e06f312b3eedb79fc68d6c5e67c8c482742601c6b5eea824255ece0"
+    },
+    {
+      "block_id": "page-0308-block-0004",
+      "order": 4,
+      "text": "domized, double-blind, placebo-controlled study. Bipolar Disord 2007; 9:413–425.\n\t33.\t Langosch JM, et al. Efficacy of quetiapine monotherapy in rapid-cycling bipolar disorder in comparison with sodium valproate. J Clin \n",
+      "bbox": [
+        48.018001556396484,
+        99.12638854980469,
+        421.69207763671875,
+        115.30238342285156
+      ],
+      "text_sha256": "1284c89a3d5eb75cefcbde19fee9455fa49c66649b5a984d478e564d4bb1e19c"
+    },
+    {
+      "block_id": "page-0308-block-0005",
+      "order": 5,
+      "text": "Psychopharmacol 2008; 28:555–560.\n\t34.\t Vieta E, et al. Quetiapine in the treatment of rapid cycling bipolar disorder. Bipolar Disord 2002; 4:335–340.\n\t35.\t Jacobsen FM. Risperidone in the treatment of affective illness and obsessive-compulsive disorder. J Clin Psychiatry 1995; 56:423–429.\n\t36.\t Bobo WV, et al. A randomized open comparison of long-acting injectable risperidone and treatment as usual for prevention of relapse, rehos-\n",
+      "bbox": [
+        48.02399826049805,
+        117.12638854980469,
+        420.0299072265625,
+        151.30238342285156
+      ],
+      "text_sha256": "0cff0c4c92d6618595d2723eadd15a97e544afce5d8f52e348b10694f94a1cbd"
+    },
+    {
+      "block_id": "page-0308-block-0006",
+      "order": 6,
+      "text": "pitalization, and urgent care referral in community-treated patients with rapid cycling bipolar disorder. Clin Neuropharmacol 2011; \n34:224–233.\n\t37.\t Vieta E, et al. Treatment of refractory rapid cycling bipolar disorder with risperidone. J Clin Psychopharmacol 1998; 18:172–174.\n\t38.\t Extein IL. High doses of levothyroxine for refractory rapid cycling. Am J Psychiatry 2000; 157:1704–1705.\n\t39.\t Walshaw PD, et al. Adjunctive thyroid hormone treatment in rapid cycling bipolar disorder: a double-blind placebo-controlled trial of levo-\n",
+      "bbox": [
+        48.04199981689453,
+        153.2703857421875,
+        421.7341613769531,
+        196.30238342285156
+      ],
+      "text_sha256": "598a75c312fe3c32d61e0c78725268c2a5949e0cb4114fa16e938d73f91bd874"
+    },
+    {
+      "block_id": "page-0308-block-0007",
+      "order": 7,
+      "text": "thyroxine (L-T(4)) and triiodothyronine (T(3)). Bipolar Disord 2018; 20:594–603.\n\t40.\t Qureshi MM, et al. The chimera of circular insanity and the labours of Thyreoidea. Bipolar Disord 2019; 21:794–796.\n\t41.\t Chen CK, et al. Combination treatment of clozapine and topiramate in resistant rapid-cycling bipolar disorder. Clin Neuropharmacol 2005; \n",
+      "bbox": [
+        48.060001373291016,
+        198.1263885498047,
+        421.72808837890625,
+        223.30238342285156
+      ],
+      "text_sha256": "ca11d497dccb0e363d576c4b9c2c0c6f74f94c31d6696278fb29b7bbae5fd5e2"
+    },
+    {
+      "block_id": "page-0308-block-0008",
+      "order": 8,
+      "text": "28:136–138.\n\t42.\t Delgado A, et al. Clozapine in bipolar disorder: a systematic review and meta-analysis. J Psychiatr Res 2020; 125:21–27.\n\t43.\t Kılınçel O, et al. The role of clozapine as a mood regulator in the treatment of rapid cycling bipolar affective disorder. Turk J Psychiatry 2019; \n",
+      "bbox": [
+        48.071998596191406,
+        225.1263885498047,
+        421.7701416015625,
+        250.30238342285156
+      ],
+      "text_sha256": "7264de8304c160473bfcd76aacd1fe7ecdfbe2f66d822c967912120272b4bd68"
+    },
+    {
+      "block_id": "page-0308-block-0009",
+      "order": 9,
+      "text": "30:268–271.\n\t44.\t Hui TP, et al. A systematic review and meta-analysis of clinical predictors of lithium response in bipolar disorder. Acta Psychiatr Scand 2019; \n",
+      "bbox": [
+        48.08399963378906,
+        252.1263885498047,
+        421.70416259765625,
+        268.3023986816406
+      ],
+      "text_sha256": "0a68bb72d766c7ab33d746b9e9bd0965049fdfa86e44ede06cc40dca8fb436b1"
+    },
+    {
+      "block_id": "page-0308-block-0010",
+      "order": 10,
+      "text": "140:94–115.\n\t45.\t Montlahuc C, et al. Response to lithium in patients with bipolar disorder: what are psychiatrists’ experiences and practices compared to lit-\n",
+      "bbox": [
+        48.09000015258789,
+        270.1263732910156,
+        420.0721130371094,
+        286.3023986816406
+      ],
+      "text_sha256": "2eb2086ca2b0bd49d42cb04a15f2bbd5338ef92c524f086aaa97d752504575dd"
+    },
+    {
+      "block_id": "page-0308-block-0011",
+      "order": 11,
+      "text": "erature review? Pharmacopsychiatry 2019; 52:70–77.\n\t46.\t Koukopoulos A, et al. Duration and stability of the rapid-cycling course: a long-term personal follow-up of 109 patients. J Affect Disord \n",
+      "bbox": [
+        48.09600067138672,
+        288.1263732910156,
+        421.80596923828125,
+        304.3023986816406
+      ],
+      "text_sha256": "5b4d009ae2aee9e7200690e78e6aea12822ea046381d711f4e68d0fdf994b5a8"
+    },
+    {
+      "block_id": "page-0308-block-0012",
+      "order": 12,
+      "text": "2003; 73:75–85.\n\t47.\t Carvalho AF, et al. Rapid cycling in bipolar disorder: a systematic review. J Clin Psychiatry 2014; 75:e578–e586.\n",
+      "bbox": [
+        48.10200119018555,
+        306.1263732910156,
+        350.2319641113281,
+        322.3023986816406
+      ],
+      "text_sha256": "d8294c8b7c18c20378b9006924021a5930dbce8125bb155b0a18f39acdee12b7"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

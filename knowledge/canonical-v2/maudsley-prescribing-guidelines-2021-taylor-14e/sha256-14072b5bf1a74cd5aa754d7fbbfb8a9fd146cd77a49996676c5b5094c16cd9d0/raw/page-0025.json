@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0025",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 25,
+  "source_page_index": 24,
+  "source_page_display": 25,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "4    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nliability for EPS. Others show dose-related effects, although, unlike with typical drugs, \ntherapeutic activity can usually be achieved without EPS. This is possibly the real dis-\ntinction between typical and atypical drugs: the ease with which a dose can be chosen \n(within the licensed dosage range), which is effective but does not cause EPS (e.g. com-\npare haloperidol with olanzapine).\nThe typical/atypical dichotomy does not lend itself well to classification of antipsy-\nchotics in the middle ground of EPS liability. Thioridazine was widely described as \natypical in the 1980s but is a ‘conventional’ phenothiazine. Sulpiride was marketed as \natypical but is often classified as typical. Risperidone, at its maximum dose of 16mg/\nday (10mg in the USA), is just about as ‘typical’ as a drug can be. Alongside these dif-\nficulties is the fact that there is nothing either pharmacologically or chemically which \nclearly binds these so-called atypicals together as a group, save perhaps a general but \nnot universal finding of preference for D2 receptors outside the striatum. Nor are atypi-\ncals characterised by improved efficacy over older drugs (clozapine and one or two \nothers excepted) or the absence of hyperprolactinaemia (which is usually worse with \nrisperidone, paliperidone and amisulpride than with typical drugs). Lastly, some more \nrecently introduced agents (e.g. pimavanserin) have antipsychotic activity and do not \ncause EPS but have almost nothing in common with other atypicals in respect to chem-\nistry, pharmacology or adverse effect profile.\nIn an attempt to get around some of these problems, typicals and atypicals were re-\nclassified as first- or second-generation antipsychotics (FGA/SGA). All drugs introduced \nsince 1990 are classified as SGAs (i.e. all atypicals), but the new nomenclature dispenses \nwith any connotations regarding atypically, whatever atypicality may mean. However, \nthe FGA/SGA classification remains problematic because neither group is defined by \nanything other than time of introduction – hardly the most sophisticated pharmaco-\nlogical classification system. Perhaps more importantly, date of introduction is often \nwildly distant from date of first synthesis. Clozapine is one of the oldest antipsychotics \n(synthesised in 1959), while olanzapine is hardly in its first flush of youth, having first \nbeen patented in 1971. These two drugs are of course SGAs – apparently the most \nmodern of antipsychotics.\nIn this edition of The Guidelines, we conserve the FGA/SGA distinction more because \nof convention than some scientific basis. Also, we feel that most people know which \ndrugs belong to each group – it thus serves as a useful shorthand. However, it is clearly \nmore sensible to consider the properties of individual antipsychotics when choosing \ndrugs to prescribe or in discussions with patients and carers. With this in mind, the use \nof Neuroscience-based Nomenclature (NbN)1 – a naming system that reflects pharma-\ncological activity – is strongly recommended.\nChoosing an antipsychotic\nThe NICE guideline for medicines adherence2 recommends that patients should be as \ninvolved as possible in decisions about the choice of medicines that are prescribed for \nthem, and that clinicians should be aware that illness beliefs and beliefs about medi-\ncines influence adherence. Consistent with this general advice that covers all of health-\ncare, the NICE guideline for schizophrenia emphasises the importance of patient choice \nrather than specifically recommending a class or individual antipsychotic as first-line \ntreatment.3\n",
+  "raw_text_sha256": "96755bf91e89f82224d7fb8d492014bb7277da0e38f88b3fc2aa1a56ed5f1600",
+  "coordinates_sha256": "a64e3e7b877aebbb0fc3f2dc3ba5b9f5203943cd886e4ef11b92854ddb56d7a5",
+  "block_sequence_sha256": "7ea9b07994c8d6912ff809805458223452c483c23003742a37c826e5d39534a2",
+  "blocks": [
+    {
+      "block_id": "page-0025-block-0000",
+      "order": 0,
+      "text": "4    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        290.2515869140625,
+        41.0262451171875
+      ],
+      "text_sha256": "56f81585fa443c72735f840dc3375829334401abb24b09e8db273478da6928e0"
+    },
+    {
+      "block_id": "page-0025-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0025-block-0002",
+      "order": 2,
+      "text": "liability for EPS. Others show dose-related effects, although, unlike with typical drugs, \ntherapeutic activity can usually be achieved without EPS. This is possibly the real dis-\ntinction between typical and atypical drugs: the ease with which a dose can be chosen \n(within the licensed dosage range), which is effective but does not cause EPS (e.g. com-\npare haloperidol with olanzapine).\n",
+      "bbox": [
+        61.88909912109375,
+        62.54931640625,
+        436.7089538574219,
+        122.26931762695312
+      ],
+      "text_sha256": "98ab8f593d8f772d0b18ce3edf49e56cfee8515a025954b2f2a02dbab3a25188"
+    },
+    {
+      "block_id": "page-0025-block-0003",
+      "order": 3,
+      "text": "The typical/atypical dichotomy does not lend itself well to classification of antipsy-\nchotics in the middle ground of EPS liability. Thioridazine was widely described as \natypical in the 1980s but is a ‘conventional’ phenothiazine. Sulpiride was marketed as \natypical but is often classified as typical. Risperidone, at its maximum dose of 16mg/\nday (10mg in the USA), is just about as ‘typical’ as a drug can be. Alongside these dif-\nficulties is the fact that there is nothing either pharmacologically or chemically which \nclearly binds these so-called atypicals together as a group, save perhaps a general but \nnot universal finding of preference for D2 receptors outside the striatum. Nor are atypi-\ncals characterised by improved efficacy over older drugs (clozapine and one or two \nothers excepted) or the absence of hyperprolactinaemia (which is usually worse with \nrisperidone, paliperidone and amisulpride than with typical drugs). Lastly, some more \nrecently introduced agents (e.g. pimavanserin) have antipsychotic activity and do not \ncause EPS but have almost nothing in common with other atypicals in respect to chem-\nistry, pharmacology or adverse effect profile.\n",
+      "bbox": [
+        61.88909912109375,
+        122.54931640625,
+        436.6991882324219,
+        290.2693176269531
+      ],
+      "text_sha256": "ef48c725bdfd5d266f060d11a9c6500a357c67334095b08902f7e5c8c11bacba"
+    },
+    {
+      "block_id": "page-0025-block-0004",
+      "order": 4,
+      "text": "In an attempt to get around some of these problems, typicals and atypicals were re-\nclassified as first- or second-generation antipsychotics (FGA/SGA). All drugs introduced \nsince 1990 are classified as SGAs (i.e. all atypicals), but the new nomenclature dispenses \nwith any connotations regarding atypically, whatever atypicality may mean. However, \nthe FGA/SGA classification remains problematic because neither group is defined by \nanything other than time of introduction – hardly the most sophisticated pharmaco-\nlogical classification system. Perhaps more importantly, date of introduction is often \nwildly distant from date of first synthesis. Clozapine is one of the oldest antipsychotics \n(synthesised in 1959), while olanzapine is hardly in its first flush of youth, having first \nbeen patented in 1971. These two drugs are of course SGAs – apparently the most \nmodern of antipsychotics.\n",
+      "bbox": [
+        61.88909912109375,
+        290.54931640625,
+        436.7088928222656,
+        422.2693176269531
+      ],
+      "text_sha256": "d1f598769e5c0d95be5dfa3594d5a72d760ef4d841954ee8ae8bca750ec1b351"
+    },
+    {
+      "block_id": "page-0025-block-0005",
+      "order": 5,
+      "text": "In this edition of The Guidelines, we conserve the FGA/SGA distinction more because \nof convention than some scientific basis. Also, we feel that most people know which \ndrugs belong to each group – it thus serves as a useful shorthand. However, it is clearly \nmore sensible to consider the properties of individual antipsychotics when choosing \ndrugs to prescribe or in discussions with patients and carers. With this in mind, the use \nof Neuroscience-based Nomenclature (NbN)1 – a naming system that reflects pharma-\ncological activity – is strongly recommended.\n",
+      "bbox": [
+        61.88909912109375,
+        422.54931640625,
+        436.7192687988281,
+        506.2693176269531
+      ],
+      "text_sha256": "8d8bba8efdcd459e088157dcefbac0a9eb08f115a1cc708feac4c3e138c7982f"
+    },
+    {
+      "block_id": "page-0025-block-0006",
+      "order": 6,
+      "text": "Choosing an antipsychotic\n",
+      "bbox": [
+        61.89289855957031,
+        524.6393432617188,
+        185.222900390625,
+        536.4893188476562
+      ],
+      "text_sha256": "b76914d59773993388946632d6f3106b470f09bf6c04fb23e72f91b921fa610f"
+    },
+    {
+      "block_id": "page-0025-block-0007",
+      "order": 7,
+      "text": "The NICE guideline for medicines adherence2 recommends that patients should be as \ninvolved as possible in decisions about the choice of medicines that are prescribed for \nthem, and that clinicians should be aware that illness beliefs and beliefs about medi-\ncines influence adherence. Consistent with this general advice that covers all of health-\ncare, the NICE guideline for schizophrenia emphasises the importance of patient choice \nrather than specifically recommending a class or individual antipsychotic as first-line \ntreatment.3\n",
+      "bbox": [
+        61.89201354980469,
+        542.54931640625,
+        436.6820983886719,
+        626.2693481445312
+      ],
+      "text_sha256": "38275610ae80c9b806a005fbe4197122afa455d00fd0729d7aaeae32bf433720"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

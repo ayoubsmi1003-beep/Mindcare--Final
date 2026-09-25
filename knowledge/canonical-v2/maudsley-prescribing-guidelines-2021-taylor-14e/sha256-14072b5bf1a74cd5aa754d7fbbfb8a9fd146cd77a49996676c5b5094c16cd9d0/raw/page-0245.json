@@ -1,0 +1,347 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0245",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 245,
+  "source_page_index": 244,
+  "source_page_display": 245,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "224    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nrechallenge with rigorous cardiac monitoring (including ECHO) and instigation of \ndisease-modifying cardiac medications may be possible.44,60,61\nNote also that, despite an overall reduction in mortality, younger patients may have \nan increased risk of sudden death,62 perhaps because of clozapine-induced ECG \nchanges.63 The overall picture remains very unclear but caution is required. There may, \nof course, be similar problems with other antipsychotics.57,64,65\nSummary\n■\n■Overall mortality is lower for those on clozapine than in schizophrenia as a whole.\n■\n■Risk of fatal agranulocytosis is less than 1 in 8000 during standard monitoring.\n■\n■Risk of fatal pulmonary embolism is estimated to be around 1 in 4500 patients \ntreated.\n■\n■Risk of fatal myocarditis or cardiomyopathy may be as high as 1 in 1000 patients.\n■\n■Careful monitoring is essential during clozapine treatment, particularly during the \nfirst 3 months (see box).\nTable 1.39  Suggested monitoring for myocarditis52,53,66,67\nBaseline\nPulse, blood pressure, temperature, respiratory rate\nFull blood count (FBC)\nC-reactive protein (CRP)\nTroponin\nEchocardiography (if available)\nElectrocardiogram (ECG)\nDaily, if possible\nPulse, blood pressure, temperature, respiratory rate\nAsk about: chest pain, fever, cough, shortness of \nbreath, exercise capacity\nOn days 7, 14, 21, and 28\nCRP\nTroponin\nFBC\nECG if possible\nIf CRP > 100mg/L or troponin > twice upper limit of normal\nStop clozapine; repeat echo\nIf fever + tachycardia + raised CRP or troponin (but not as \nabove)\nDaily CRP and troponin measures\n",
+  "raw_text_sha256": "fd21f3cbdb73cfcf1ffa236e39f0e3f6a59de128bfc1fcd69cc9cdc222670fd4",
+  "coordinates_sha256": "739e0cc3bb544516f066b6c1841bd759389152a61a8137cbbb90f56632b5ca63",
+  "block_sequence_sha256": "98b325923ad0f2a30f42b4f2ea2fe16ad03d4eda24a4e200e4dd1f6ed1d61e6d",
+  "blocks": [
+    {
+      "block_id": "page-0245-block-0000",
+      "order": 0,
+      "text": "224    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "a595a407d5db273180827d991febce44e923ee70786417800edcbeaea2a9c988"
+    },
+    {
+      "block_id": "page-0245-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0245-block-0002",
+      "order": 2,
+      "text": "rechallenge with rigorous cardiac monitoring (including ECHO) and instigation of \ndisease-modifying cardiac medications may be possible.44,60,61\n",
+      "bbox": [
+        61.88909912109375,
+        62.5494384765625,
+        436.6889953613281,
+        86.26943969726562
+      ],
+      "text_sha256": "14a3ce4f2ae2a232371116f74bb7fd991f0c8e345981813f4cfaa83b2f1ff69c"
+    },
+    {
+      "block_id": "page-0245-block-0003",
+      "order": 3,
+      "text": "Note also that, despite an overall reduction in mortality, younger patients may have \nan increased risk of sudden death,62 perhaps because of clozapine-induced ECG \nchanges.63 The overall picture remains very unclear but caution is required. There may, \nof course, be similar problems with other antipsychotics.57,64,65\n",
+      "bbox": [
+        61.88612365722656,
+        86.5494384765625,
+        436.6760559082031,
+        134.26943969726562
+      ],
+      "text_sha256": "737434d4256b6d3cea30ddca11baa2208642fb86eba78273812be9ea0ad10988"
+    },
+    {
+      "block_id": "page-0245-block-0004",
+      "order": 4,
+      "text": "Summary\n",
+      "bbox": [
+        61.88909912109375,
+        151.70443725585938,
+        110.79510498046875,
+        164.73944091796875
+      ],
+      "text_sha256": "3cbb36aca330b3bd113955dfbada0adb7a5f95ad9f678bd61f175406c6a37e95"
+    },
+    {
+      "block_id": "page-0245-block-0005",
+      "order": 5,
+      "text": "■\n■Overall mortality is lower for those on clozapine than in schizophrenia as a whole.\n",
+      "bbox": [
+        61.888999938964844,
+        176.5494384765625,
+        427.6390686035156,
+        188.26943969726562
+      ],
+      "text_sha256": "f3c650acd353bb3111bc0aa16322c9c6a9d5c5a2f613ad252c76272480f57e51"
+    },
+    {
+      "block_id": "page-0245-block-0006",
+      "order": 6,
+      "text": "■\n■Risk of fatal agranulocytosis is less than 1 in 8000 during standard monitoring.\n",
+      "bbox": [
+        61.888999938964844,
+        188.5494384765625,
+        413.7890319824219,
+        200.26943969726562
+      ],
+      "text_sha256": "23e0ec643d157e608ea770394969a6f9984ce8f0a2823857358d2a679439cb0a"
+    },
+    {
+      "block_id": "page-0245-block-0007",
+      "order": 7,
+      "text": "■\n■Risk of fatal pulmonary embolism is estimated to be around 1 in 4500 patients \n",
+      "bbox": [
+        61.888999938964844,
+        200.5494384765625,
+        436.6390075683594,
+        212.26943969726562
+      ],
+      "text_sha256": "347a10fc760033d8a6a939de468b8190e9ab2b250880171bc6060ac8443df71e"
+    },
+    {
+      "block_id": "page-0245-block-0008",
+      "order": 8,
+      "text": "treated.\n",
+      "bbox": [
+        70.88909912109375,
+        212.5494384765625,
+        103.65910339355469,
+        224.26943969726562
+      ],
+      "text_sha256": "060f528d71c3b757f5f8ab2e7a438032fb7d5041b8862906dc923922446e4f6a"
+    },
+    {
+      "block_id": "page-0245-block-0009",
+      "order": 9,
+      "text": "■\n■Risk of fatal myocarditis or cardiomyopathy may be as high as 1 in 1000 patients.\n",
+      "bbox": [
+        61.888999938964844,
+        224.54949951171875,
+        425.9590148925781,
+        236.26950073242188
+      ],
+      "text_sha256": "60a4c95abdd5ab73d28bd92ad62313607088aaa8c32f287f94960feae887f8c7"
+    },
+    {
+      "block_id": "page-0245-block-0010",
+      "order": 10,
+      "text": "■\n■Careful monitoring is essential during clozapine treatment, particularly during the \n",
+      "bbox": [
+        61.888999938964844,
+        236.54949951171875,
+        436.6689758300781,
+        248.26950073242188
+      ],
+      "text_sha256": "bfac6e6c7770bea2a1804a745588c42be1531f5263b0dadac46609a05b8732c8"
+    },
+    {
+      "block_id": "page-0245-block-0011",
+      "order": 11,
+      "text": "first 3 months (see box).\n",
+      "bbox": [
+        70.88909912109375,
+        248.54949951171875,
+        175.89907836914062,
+        260.2695007324219
+      ],
+      "text_sha256": "2a9492498b5dfe51f866a4056ddf1213f901c92ae36bb301ec26a965542adf47"
+    },
+    {
+      "block_id": "page-0245-block-0012",
+      "order": 12,
+      "text": "Table 1.39  Suggested monitoring for myocarditis52,53,66,67\n",
+      "bbox": [
+        67.88909912109375,
+        280.97698974609375,
+        250.05078125,
+        289.864501953125
+      ],
+      "text_sha256": "e697253bd0d40d8a9cde1d304a104e68f32bb1235b667579036497474898939c"
+    },
+    {
+      "block_id": "page-0245-block-0013",
+      "order": 13,
+      "text": "Baseline\nPulse, blood pressure, temperature, respiratory rate\nFull blood count (FBC)\n",
+      "bbox": [
+        61.88909912109375,
+        298.1820373535156,
+        431.1141357421875,
+        316.88702392578125
+      ],
+      "text_sha256": "55d64025bc74d0e3562d1a0f0655f6bc8adf3c9b8bd955fcf540b5f3eedf9d2b"
+    },
+    {
+      "block_id": "page-0245-block-0014",
+      "order": 14,
+      "text": "C-reactive protein (CRP)\n",
+      "bbox": [
+        267.8916015625,
+        321.1770324707031,
+        343.8740539550781,
+        329.884521484375
+      ],
+      "text_sha256": "ed12e7df92b060b147fe3cd0223cf500248eb3a9de212ccb7367209f2068fee4"
+    },
+    {
+      "block_id": "page-0245-block-0015",
+      "order": 15,
+      "text": "Troponin\n",
+      "bbox": [
+        267.8916015625,
+        334.1745300292969,
+        295.8291320800781,
+        342.88201904296875
+      ],
+      "text_sha256": "58250202d39a385f98f9e33d41d9fbb4fd953661aeaa984f6e1e3dbcd543988d"
+    },
+    {
+      "block_id": "page-0245-block-0016",
+      "order": 16,
+      "text": "Echocardiography (if available)\n",
+      "bbox": [
+        267.8916015625,
+        347.1720275878906,
+        364.8441467285156,
+        355.8795166015625
+      ],
+      "text_sha256": "e595ad38ca9ecb9edce339fcc78461137643d5b8c38c04eb530fc9395aed2d6c"
+    },
+    {
+      "block_id": "page-0245-block-0017",
+      "order": 17,
+      "text": "Electrocardiogram (ECG)\n",
+      "bbox": [
+        267.8916015625,
+        360.1695251464844,
+        345.9515686035156,
+        368.87701416015625
+      ],
+      "text_sha256": "ff7f6ca218a94079303d4abb3e0070553d5c4061ff5db0dc3484ce14c2aa703b"
+    },
+    {
+      "block_id": "page-0245-block-0018",
+      "order": 18,
+      "text": "Daily, if possible\nPulse, blood pressure, temperature, respiratory rate\n",
+      "bbox": [
+        61.88909912109375,
+        375.1920166015625,
+        431.1141357421875,
+        383.8995056152344
+      ],
+      "text_sha256": "e361b1dfe41de724f3062bf1bd9ccffced5e8079ce97224d1ab2080414d66f76"
+    },
+    {
+      "block_id": "page-0245-block-0019",
+      "order": 19,
+      "text": "Ask about: chest pain, fever, cough, shortness of \nbreath, exercise capacity\n",
+      "bbox": [
+        267.8916015625,
+        388.18951416015625,
+        425.5791931152344,
+        406.8945007324219
+      ],
+      "text_sha256": "d3a0b331026dab5182b633c52460305d3e34ddf40b242bc1969821723bf0cc7f"
+    },
+    {
+      "block_id": "page-0245-block-0020",
+      "order": 20,
+      "text": "On days 7, 14, 21, and 28\nCRP\n",
+      "bbox": [
+        61.88909912109375,
+        413.2095031738281,
+        280.8140869140625,
+        421.9169921875
+      ],
+      "text_sha256": "005e451ca774ef124290eea3035af6523462468d5c6c62179aaca0123f24ac12"
+    },
+    {
+      "block_id": "page-0245-block-0021",
+      "order": 21,
+      "text": "Troponin\n",
+      "bbox": [
+        267.8916015625,
+        426.2070007324219,
+        295.8291320800781,
+        434.91448974609375
+      ],
+      "text_sha256": "58250202d39a385f98f9e33d41d9fbb4fd953661aeaa984f6e1e3dbcd543988d"
+    },
+    {
+      "block_id": "page-0245-block-0022",
+      "order": 22,
+      "text": "FBC\n",
+      "bbox": [
+        267.8916015625,
+        439.2044982910156,
+        280.39410400390625,
+        447.9119873046875
+      ],
+      "text_sha256": "2849412b2db011eb2a9026fbc847e544475949f3f17524d8628fd83207dd3ea5"
+    },
+    {
+      "block_id": "page-0245-block-0023",
+      "order": 23,
+      "text": "ECG if possible\n",
+      "bbox": [
+        267.8916015625,
+        452.2019958496094,
+        315.816650390625,
+        460.90948486328125
+      ],
+      "text_sha256": "2d0af09fafa53b43f34225feb908d0dcdcdeeb0b6513907587ea733d1ff042fa"
+    },
+    {
+      "block_id": "page-0245-block-0024",
+      "order": 24,
+      "text": "If CRP > 100mg/L or troponin > twice upper limit of normal\nStop clozapine; repeat echo\n",
+      "bbox": [
+        61.88909912109375,
+        467.2245178222656,
+        356.5191345214844,
+        475.9320068359375
+      ],
+      "text_sha256": "2d35065acfe05c8b72bfe39c0a16866e3e7c73ea23b46eac3170139efcd80989"
+    },
+    {
+      "block_id": "page-0245-block-0025",
+      "order": 25,
+      "text": "If fever + tachycardia + raised CRP or troponin (but not as \nabove)\n",
+      "bbox": [
+        61.88909912109375,
+        482.24700927734375,
+        248.14413452148438,
+        500.9519958496094
+      ],
+      "text_sha256": "c61ad3a16a8bb7ab817db7d8ffb9f53a728e42243c5f481d56a404804d0a8fd6"
+    },
+    {
+      "block_id": "page-0245-block-0026",
+      "order": 26,
+      "text": "Daily CRP and troponin measures\n",
+      "bbox": [
+        267.8916015625,
+        482.24700927734375,
+        373.8966979980469,
+        490.9544982910156
+      ],
+      "text_sha256": "6eef29170f4cb4f6a84b84665bfea2745a88faaafce81436ecd4d2daea6c4857"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

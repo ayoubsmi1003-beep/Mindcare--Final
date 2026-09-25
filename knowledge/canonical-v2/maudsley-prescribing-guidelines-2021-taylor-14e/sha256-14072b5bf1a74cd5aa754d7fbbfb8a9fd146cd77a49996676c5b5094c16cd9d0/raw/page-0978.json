@@ -1,0 +1,47 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0978",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 978,
+  "source_page_index": 977,
+  "source_page_display": 978,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "WILEY END USER LICENSE AGREEMENT\nGo to www.wiley.com/go/eula to access Wiley’s ebook EULA.\n",
+  "raw_text_sha256": "2476bd5ef25462256ab7cb9d0871818cda778943decc5fe40e9814cccb6bdbca",
+  "coordinates_sha256": "1d7d85d6e13c38831bd47e86fafd0ed22c49a82c9b4e8a1d5569952014636f8d",
+  "block_sequence_sha256": "0cac1f553e4fc098c0b0070351cefeceb8c05b70b49003edccaf65850bfa68d5",
+  "blocks": [
+    {
+      "block_id": "page-0978-block-0000",
+      "order": 0,
+      "text": "WILEY END USER LICENSE AGREEMENT\n",
+      "bbox": [
+        44.36429977416992,
+        28.544208526611328,
+        437.484375,
+        57.146209716796875
+      ],
+      "text_sha256": "340aeadec0bea617522922121825f047ade67fdce49a1607a683049553fe4d14"
+    },
+    {
+      "block_id": "page-0978-block-0001",
+      "order": 1,
+      "text": "Go to www.wiley.com/go/eula to access Wiley’s ebook EULA.\n",
+      "bbox": [
+        36.0,
+        60.36820983886719,
+        404.49609375,
+        77.8402099609375
+      ],
+      "text_sha256": "f3259b08b71d2dda403b6f53788359dc7f787e606f1ef32f0344e1437675dd45"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

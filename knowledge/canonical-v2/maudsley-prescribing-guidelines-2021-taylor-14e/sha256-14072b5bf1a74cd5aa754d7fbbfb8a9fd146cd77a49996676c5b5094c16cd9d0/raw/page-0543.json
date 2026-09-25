@@ -1,0 +1,335 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0543",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 543,
+  "source_page_index": 542,
+  "source_page_display": 543,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "522    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nManagement of SCRA-related psychosis\nPsychotic symptoms are common aspects of SCRA intoxication and can outlast the \nacute intoxication phase in 30%.16\nSCRA-associated psychosis:\n■\n■has more prominent positive symptoms than cannabis-related psychosis\n■\n■has less prominent negative symptoms than cannabis-related psychosis\n■\n■is less likely to have manic features\n■\n■is commonly associated with suicidal thinking\n■\n■psychiatric admission may be necessary to manage behavioural disturbance\n■\n■requires higher doses of antipsychotic than cannabis-related psychosis (mean dose \nequivalent to 11mg haloperidol, whereas in cannabis users mean dose was 6mg/day \nand those without either co-morbidity 3mg/day)17\n■\n■requires longer treatment than cannabis-related psychosis.\nFor the treatment of acute behavioural disturbance (ABD) caused by SCRAs, see sec-\ntion ‘Acute Behavioural Disturbance (ABD) in acute admissions’ in this chapter.\nManagement of SCRA dependence and withdrawal\nSCRA dependence is reported in case studies and surveys and may be expected to occur \nat higher rates than dependence on cannabis given the higher potency of SCRA. Generic \npsychosocial addiction treatment approaches to SCRA dependence using motivational \ninterviewing techniques and drug diaries with the aim to cut down slowly are recom-\nmended. Advising patients to switch to cannabis as a lower potency (and hence less \nharmful) alternative should be undertaken with caution given reports that cannabis \ndoes not alleviate SCRA withdrawal18 and with the patient having a full understanding \nof the legal implications – possession of cannabis is an offence, whereas possession of \nmost SCRAs is not.\nPatients with months of daily use experience a physiological withdrawal syndrome, \nlasting several days, including the following:\n■\n■Disturbed sleep\n■\n■Strange dreams\n■\n■Restlessness\n■\n■Anxiety\n■\n■Craving\n■\n■Shivering\n■\n■Muscle twitching\n■\n■Increased heart rate and blood pressure\nTreatment with benzodiazepines has been reported both to be effective and ineffec-\ntive. Low-dose quetiapine (50mg) was effective in the case of benzodiazepine failure.19\n",
+  "raw_text_sha256": "0fa3ea2acc30e3853bc448078cfec065b9616f65190c4f6b37155f13c0578a67",
+  "coordinates_sha256": "2dfb1197ba86ea7c464300d67941eb82e9c7137a307eb8e0b758ecd1d70ea236",
+  "block_sequence_sha256": "3c54f76e17488359e312beb56e4173c20a303687df7fdcfc2ea5bfa8615af39e",
+  "blocks": [
+    {
+      "block_id": "page-0543-block-0000",
+      "order": 0,
+      "text": "522    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "b5d65c9ffaa380685be69f62bf58c30eb320c6fa487094c1208e2dcacd8c027e"
+    },
+    {
+      "block_id": "page-0543-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0543-block-0002",
+      "order": 2,
+      "text": "Management of SCRA-related psychosis\n",
+      "bbox": [
+        61.88999938964844,
+        62.31540298461914,
+        267.6559753417969,
+        75.35040283203125
+      ],
+      "text_sha256": "11d29b3e03b0cf8291e55d4207ccf96c4cfc0d5f6f24b79bf84af739d42ce0ec"
+    },
+    {
+      "block_id": "page-0543-block-0003",
+      "order": 3,
+      "text": "Psychotic symptoms are common aspects of SCRA intoxication and can outlast the \nacute intoxication phase in 30%.16\n",
+      "bbox": [
+        61.88999938964844,
+        81.160400390625,
+        436.6398620605469,
+        104.88040161132812
+      ],
+      "text_sha256": "bf9897e373db507eb4024a7225fec754d6d13a6e1605072be3575bb60041214f"
+    },
+    {
+      "block_id": "page-0543-block-0004",
+      "order": 4,
+      "text": "SCRA-associated psychosis:\n",
+      "bbox": [
+        71.88999938964844,
+        105.160400390625,
+        191.88998413085938,
+        116.88040161132812
+      ],
+      "text_sha256": "ed3a1591d3b226b893e10ae57b949034a8fb9c4869b0f3176533e5e60d98ceee"
+    },
+    {
+      "block_id": "page-0543-block-0005",
+      "order": 5,
+      "text": "■\n■has more prominent positive symptoms than cannabis-related psychosis\n",
+      "bbox": [
+        61.88990020751953,
+        123.160400390625,
+        379.8000183105469,
+        134.88040161132812
+      ],
+      "text_sha256": "f7ee469f2b0ddd0a20f3ab375bcabd8e2d8c953ef13cef8c479bcea100278f29"
+    },
+    {
+      "block_id": "page-0543-block-0006",
+      "order": 6,
+      "text": "■\n■has less prominent negative symptoms than cannabis-related psychosis\n",
+      "bbox": [
+        61.88990020751953,
+        135.160400390625,
+        374.79998779296875,
+        146.88040161132812
+      ],
+      "text_sha256": "22644d7a3b43d18927a0ce5833080c8ddea8d7bbf65d58acaba8accd4dd5578a"
+    },
+    {
+      "block_id": "page-0543-block-0007",
+      "order": 7,
+      "text": "■\n■is less likely to have manic features\n",
+      "bbox": [
+        61.88990020751953,
+        147.160400390625,
+        221.44998168945312,
+        158.88040161132812
+      ],
+      "text_sha256": "03564fcf99df383a4360aa7d93cfb42b611e7610f2b49cdadd589b14c1b42dc2"
+    },
+    {
+      "block_id": "page-0543-block-0008",
+      "order": 8,
+      "text": "■\n■is commonly associated with suicidal thinking\n",
+      "bbox": [
+        61.88990020751953,
+        159.160400390625,
+        269.2599792480469,
+        170.88040161132812
+      ],
+      "text_sha256": "c529c77107c9b18b63d094cd2d469e49cd7f017689be625411ae7af8bdf35ac0"
+    },
+    {
+      "block_id": "page-0543-block-0009",
+      "order": 9,
+      "text": "■\n■psychiatric admission may be necessary to manage behavioural disturbance\n",
+      "bbox": [
+        61.88990020751953,
+        171.160400390625,
+        395.3600158691406,
+        182.88040161132812
+      ],
+      "text_sha256": "96131faf9d79142a87cc988e445efdb01328eb9df286f9b341f407013fec57cd"
+    },
+    {
+      "block_id": "page-0543-block-0010",
+      "order": 10,
+      "text": "■\n■requires higher doses of antipsychotic than cannabis-related psychosis (mean dose \n",
+      "bbox": [
+        61.88990020751953,
+        183.160400390625,
+        436.6800537109375,
+        194.88040161132812
+      ],
+      "text_sha256": "d53b2b00994f04512a169e495c723122391d1a72178a5b93a187efdf40cc0579"
+    },
+    {
+      "block_id": "page-0543-block-0011",
+      "order": 11,
+      "text": "equivalent to 11mg haloperidol, whereas in cannabis users mean dose was 6mg/day \nand those without either co-morbidity 3mg/day)17\n",
+      "bbox": [
+        70.88999938964844,
+        195.160400390625,
+        436.66998291015625,
+        218.88040161132812
+      ],
+      "text_sha256": "b695d84afaa6baab7cbab64abb59aeb758c4ecc8de34b633b6e53e0d51e94f6e"
+    },
+    {
+      "block_id": "page-0543-block-0012",
+      "order": 12,
+      "text": "■\n■requires longer treatment than cannabis-related psychosis.\n",
+      "bbox": [
+        61.88990020751953,
+        219.160400390625,
+        321.47003173828125,
+        230.88040161132812
+      ],
+      "text_sha256": "c16f8cc480accd85b90de1dc0bbe6e628752a41828ff0bb81bcfabecf7dc2802"
+    },
+    {
+      "block_id": "page-0543-block-0013",
+      "order": 13,
+      "text": "For the treatment of acute behavioural disturbance (ABD) caused by SCRAs, see sec-\ntion ‘Acute Behavioural Disturbance (ABD) in acute admissions’ in this chapter.\n",
+      "bbox": [
+        61.88999938964844,
+        237.160400390625,
+        433.8499450683594,
+        260.8804016113281
+      ],
+      "text_sha256": "a43bba59fba8df7f4a79828089219cfdee837a6e11277d480f8c035abe518873"
+    },
+    {
+      "block_id": "page-0543-block-0014",
+      "order": 14,
+      "text": "Management of SCRA dependence and withdrawal\n",
+      "bbox": [
+        61.88999938964844,
+        278.3153991699219,
+        327.16595458984375,
+        291.35040283203125
+      ],
+      "text_sha256": "3eb0dc9387cee0b449d94d925eafac80ff5277a8893eb4f1b4326c8b87c582a4"
+    },
+    {
+      "block_id": "page-0543-block-0015",
+      "order": 15,
+      "text": "SCRA dependence is reported in case studies and surveys and may be expected to occur \nat higher rates than dependence on cannabis given the higher potency of SCRA. Generic \npsychosocial addiction treatment approaches to SCRA dependence using motivational \ninterviewing techniques and drug diaries with the aim to cut down slowly are recom-\nmended. Advising patients to switch to cannabis as a lower potency (and hence less \nharmful) alternative should be undertaken with caution given reports that cannabis \ndoes not alleviate SCRA withdrawal18 and with the patient having a full understanding \nof the legal implications – possession of cannabis is an offence, whereas possession of \nmost SCRAs is not.\n",
+      "bbox": [
+        61.88999938964844,
+        297.160400390625,
+        436.7115783691406,
+        404.8804016113281
+      ],
+      "text_sha256": "f8c8ba6f08101d1e935eb9d05675ddfdbd365071e8e1371620f8d9d08fe01bae"
+    },
+    {
+      "block_id": "page-0543-block-0016",
+      "order": 16,
+      "text": "Patients with months of daily use experience a physiological withdrawal syndrome, \nlasting several days, including the following:\n",
+      "bbox": [
+        61.89149475097656,
+        405.160400390625,
+        436.6614685058594,
+        428.8804016113281
+      ],
+      "text_sha256": "ec805d2478bb3549b764be25f3b6be01699de62ee25c7020252eee40d10de38b"
+    },
+    {
+      "block_id": "page-0543-block-0017",
+      "order": 17,
+      "text": "■\n■Disturbed sleep\n",
+      "bbox": [
+        61.88990020751953,
+        435.160400390625,
+        137.5699920654297,
+        446.8804016113281
+      ],
+      "text_sha256": "ceaf581662982b5596b40d39d59382b409bbf065802f42fd785e52c74e8e8b57"
+    },
+    {
+      "block_id": "page-0543-block-0018",
+      "order": 18,
+      "text": "■\n■Strange dreams\n",
+      "bbox": [
+        61.88990020751953,
+        447.160400390625,
+        136.99000549316406,
+        458.8804016113281
+      ],
+      "text_sha256": "c52093dc08f8e948c8c3b7a85be0a9e647172d3dfa604ea5fc2a687953570921"
+    },
+    {
+      "block_id": "page-0543-block-0019",
+      "order": 19,
+      "text": "■\n■Restlessness\n",
+      "bbox": [
+        61.88990020751953,
+        459.160400390625,
+        122.55000305175781,
+        470.8804016113281
+      ],
+      "text_sha256": "0d753d16959ab32a1a493719c3bb4bdcd127dd4f6b05cb6b0f0de268b930ab36"
+    },
+    {
+      "block_id": "page-0543-block-0020",
+      "order": 20,
+      "text": "■\n■Anxiety\n",
+      "bbox": [
+        61.88990020751953,
+        471.160400390625,
+        104.7699966430664,
+        482.8804016113281
+      ],
+      "text_sha256": "b6f8fe85b4aef1a6be3138773b4f7902cc5c2600882c751e961916ee2752bf47"
+    },
+    {
+      "block_id": "page-0543-block-0021",
+      "order": 21,
+      "text": "■\n■Craving\n",
+      "bbox": [
+        61.88990020751953,
+        483.160400390625,
+        105.33999633789062,
+        494.8804016113281
+      ],
+      "text_sha256": "9d6ca0cbe35c0f5398e2d459a380d13eb4cec6b7ae3991ff08edc30afb519d5a"
+    },
+    {
+      "block_id": "page-0543-block-0022",
+      "order": 22,
+      "text": "■\n■Shivering\n",
+      "bbox": [
+        61.88990020751953,
+        495.160400390625,
+        110.89999389648438,
+        506.8804016113281
+      ],
+      "text_sha256": "ec610451be38256a1f6cb8c465e763d806dedef2f07a319ceed4a4a85d242113"
+    },
+    {
+      "block_id": "page-0543-block-0023",
+      "order": 23,
+      "text": "■\n■Muscle twitching\n",
+      "bbox": [
+        61.88990020751953,
+        507.160400390625,
+        145.33999633789062,
+        518.8804321289062
+      ],
+      "text_sha256": "b946bd3d2765d5853fff787070245c50c6701240bc64760ae69051e942a2dff3"
+    },
+    {
+      "block_id": "page-0543-block-0024",
+      "order": 24,
+      "text": "■\n■Increased heart rate and blood pressure\n",
+      "bbox": [
+        61.88990020751953,
+        519.160400390625,
+        240.90997314453125,
+        530.8804321289062
+      ],
+      "text_sha256": "83ba0f31a88474fd03e97e2adb0578308350196ae28942893019f9bce933d36b"
+    },
+    {
+      "block_id": "page-0543-block-0025",
+      "order": 25,
+      "text": "Treatment with benzodiazepines has been reported both to be effective and ineffec-\ntive. Low-dose quetiapine (50mg) was effective in the case of benzodiazepine failure.19\n",
+      "bbox": [
+        61.88999938964844,
+        537.160400390625,
+        433.93988037109375,
+        560.8804321289062
+      ],
+      "text_sha256": "e755aa1a93355ae07eb0a75a9203d73bc9f8b9feee0c090b7caa17fc9044fe38"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

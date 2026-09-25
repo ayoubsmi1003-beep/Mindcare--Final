@@ -1,0 +1,239 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0872",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 872,
+  "source_page_index": 871,
+  "source_page_display": 872,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Pharmacokinetics    851\nCHAPTER 11\nPsychotropics and cytochrome (CYP) function\nInformation on the effect of drugs on cytochrome function helps predict or confirm \nsuspected interactions which may not have been uncovered in regulatory trials or in \nclinical use (sometimes called prediction from ‘first principles’). Using ‘first principles’ \nessentially means understanding and interpreting pharmacokinetic information and \nanticipating the net effect of combining two or more drugs in vivo.\nIn addition to the effect of co-administered drugs on CYP function, genetic polymor-\nphism associated with some enzyme pathways (e.g. 2D6, 2C9, 2C19 enzymes) may also \naccount for inter-individual variations in metabolism of certain drugs.\nThe effects of polymorphism and pharmacokinetic interaction are difficult to predict \nbecause some drugs are metabolised by more than one enzyme and an alternative \npathway(s) may compensate if other enzyme pathways are inhibited.\nThe function of CYPs is not the only consideration. P-glycoprotein (P-gp) is a drug \ntransporter protein found in the gut wall. P-gp can eject (active process) drugs that dif-\nfuse (passive process) across the gut wall. P-gp is also found in testes and in the blood \nbrain barrier. Drugs that inhibit P-gp are anticipated to increase the uptake of other \ndrugs (that are substrates for P-gp) and drugs that induce P-gp are anticipated to reduce \nthe uptake of drugs (that are substrates for P-gp). Many drugs that are substrates for \nCYP3A4 have also been found to be substrates for P-gp.\nUDP-glucuronosyl transferase (UGT) has been identified as an enzyme that is respon-\nsible for phase II (conjugation) reactions. Valproate is a potent inhibitor of UGT, hence \nits interaction with lamotrigine, a drug which is primarily metabolised by UGT. UGT \nenzymes are also involved in the metabolism of lumateperone, olanzapine, topiramate \nand trifluoperazine.\nIn the table below:\nDrugs highlighted in bold indicate:\n■\n■predominant metabolic enzyme pathway or\n■\n■predominant enzyme activity (inhibition or induction)\nDrugs annotated with * indicate:\n■\n■known to be a minor metabolic enzyme pathway or activity (i.e. not demonstrated to \nbe clinically significant)\nDrugs in normal font (not bold and without *) indicate:\n■\n■metabolic enzyme pathway(s) or activity where significance is unclear or unknown\nNB Information on CYP function derived from individual SPCs and US Labelling \n(accessed August 2020) and from a recent systematic review.1\nThe tables do not include details of the effects of non-psychotropics on CYP \nfunction.\n",
+  "raw_text_sha256": "7c01d3184aff2621f6b9ef6d96b192365eaf64a6b5db01a5f0dcc1be781b8b82",
+  "coordinates_sha256": "8154d51856fe17e137e6d49c052d64deb2e4e823d5a0b4fda9aa7f15f0af2594",
+  "block_sequence_sha256": "39cebbd2cb3215d529d821c91c5a05baaf5e4926e428dd80fba45af0846d77ed",
+  "blocks": [
+    {
+      "block_id": "page-0872-block-0000",
+      "order": 0,
+      "text": "Pharmacokinetics    851\n",
+      "bbox": [
+        320.4088134765625,
+        31.395221710205078,
+        420.00079345703125,
+        41.0272216796875
+      ],
+      "text_sha256": "ca7883cb66eb3a75e96c2074542a89491dd2081b4ac699adc46d0a2c018b2952"
+    },
+    {
+      "block_id": "page-0872-block-0001",
+      "order": 1,
+      "text": "CHAPTER 11\n",
+      "bbox": [
+        454.4096984863281,
+        140.99053955078125,
+        463.88970947265625,
+        186.78250122070312
+      ],
+      "text_sha256": "8577f8a61d9be9d957b7354680b21b61adb6e8c4601aaa9be76ccc79360dc7f3"
+    },
+    {
+      "block_id": "page-0872-block-0002",
+      "order": 2,
+      "text": "Psychotropics and cytochrome (CYP) function\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        288.0459899902344,
+        79.1004638671875
+      ],
+      "text_sha256": "0666c2f7ce25d1643b8c99b0976a5e82bc2ded519ebce2be2860a497b386438e"
+    },
+    {
+      "block_id": "page-0872-block-0003",
+      "order": 3,
+      "text": "Information on the effect of drugs on cytochrome function helps predict or confirm \nsuspected interactions which may not have been uncovered in regulatory trials or in \nclinical use (sometimes called prediction from ‘first principles’). Using ‘first principles’ \nessentially means understanding and interpreting pharmacokinetic information and \nanticipating the net effect of combining two or more drugs in vivo.\n",
+      "bbox": [
+        48.0,
+        84.91046142578125,
+        422.8000793457031,
+        144.63046264648438
+      ],
+      "text_sha256": "edca3d646748fe75bdbff81623f120033c080fb6ea8b3cf02f7c7b375997557d"
+    },
+    {
+      "block_id": "page-0872-block-0004",
+      "order": 4,
+      "text": "In addition to the effect of co-administered drugs on CYP function, genetic polymor-\nphism associated with some enzyme pathways (e.g. 2D6, 2C9, 2C19 enzymes) may also \naccount for inter-individual variations in metabolism of certain drugs.\n",
+      "bbox": [
+        48.0,
+        144.91046142578125,
+        422.7300109863281,
+        180.63046264648438
+      ],
+      "text_sha256": "2dd1712be6b429a42a9e42d003b0014dbbfc7e2e69da1b46441c5b44e78e365f"
+    },
+    {
+      "block_id": "page-0872-block-0005",
+      "order": 5,
+      "text": "The effects of polymorphism and pharmacokinetic interaction are difficult to predict \nbecause some drugs are metabolised by more than one enzyme and an alternative \npathway(s) may compensate if other enzyme pathways are inhibited.\n",
+      "bbox": [
+        48.0,
+        180.91046142578125,
+        422.7398986816406,
+        216.63046264648438
+      ],
+      "text_sha256": "38a6a78ed0475285e61f6e4a1d8eef4cbb554f53e6c4d410806904936ad6360c"
+    },
+    {
+      "block_id": "page-0872-block-0006",
+      "order": 6,
+      "text": "The function of CYPs is not the only consideration. P-glycoprotein (P-gp) is a drug \ntransporter protein found in the gut wall. P-gp can eject (active process) drugs that dif-\nfuse (passive process) across the gut wall. P-gp is also found in testes and in the blood \nbrain barrier. Drugs that inhibit P-gp are anticipated to increase the uptake of other \ndrugs (that are substrates for P-gp) and drugs that induce P-gp are anticipated to reduce \nthe uptake of drugs (that are substrates for P-gp). Many drugs that are substrates for \nCYP3A4 have also been found to be substrates for P-gp.\n",
+      "bbox": [
+        48.0,
+        216.91046142578125,
+        422.75994873046875,
+        300.6304626464844
+      ],
+      "text_sha256": "ed763a994b984886a8d170d2834c811cc4cd3def491bf8074888f3b8fb1808ec"
+    },
+    {
+      "block_id": "page-0872-block-0007",
+      "order": 7,
+      "text": "UDP-glucuronosyl transferase (UGT) has been identified as an enzyme that is respon-\nsible for phase II (conjugation) reactions. Valproate is a potent inhibitor of UGT, hence \nits interaction with lamotrigine, a drug which is primarily metabolised by UGT. UGT \nenzymes are also involved in the metabolism of lumateperone, olanzapine, topiramate \nand trifluoperazine.\n",
+      "bbox": [
+        48.0,
+        300.91046142578125,
+        422.7500305175781,
+        360.6304626464844
+      ],
+      "text_sha256": "a6bbbdd1267c9ab19f75bde54570585e303334ee803ea497b8eb58b8bce37396"
+    },
+    {
+      "block_id": "page-0872-block-0008",
+      "order": 8,
+      "text": "In the table below:\nDrugs highlighted in bold indicate:\n",
+      "bbox": [
+        48.0,
+        370.91046142578125,
+        198.05996704101562,
+        394.6304626464844
+      ],
+      "text_sha256": "907afaa979d6fbce70161b8d4298fe0b270faf2584541d96341ebe152ee351ab"
+    },
+    {
+      "block_id": "page-0872-block-0009",
+      "order": 9,
+      "text": "■\n■predominant metabolic enzyme pathway or\n",
+      "bbox": [
+        47.999900817871094,
+        400.9104919433594,
+        244.57498168945312,
+        412.6304931640625
+      ],
+      "text_sha256": "408cf45dc2b82ac9188756818f817baf94db6803f285509fb4a7c63006f3e291"
+    },
+    {
+      "block_id": "page-0872-block-0010",
+      "order": 10,
+      "text": "■\n■predominant enzyme activity (inhibition or induction)\n",
+      "bbox": [
+        47.999900817871094,
+        412.9104919433594,
+        289.6149597167969,
+        424.6304931640625
+      ],
+      "text_sha256": "849dc21956f55311e7c0c5ad24a027a5fb52d78cb62b32ff197eda5f462757c8"
+    },
+    {
+      "block_id": "page-0872-block-0011",
+      "order": 11,
+      "text": "Drugs annotated with * indicate:\n",
+      "bbox": [
+        48.005001068115234,
+        430.9104919433594,
+        190.26498413085938,
+        442.6304931640625
+      ],
+      "text_sha256": "832bf9ce95d0606eb9075d664d44f1d79cd87dc2211d7931a3bb50c502fa503f"
+    },
+    {
+      "block_id": "page-0872-block-0012",
+      "order": 12,
+      "text": "■\n■known to be a minor metabolic enzyme pathway or activity (i.e. not demonstrated to \n",
+      "bbox": [
+        47.999900817871094,
+        448.9104919433594,
+        422.8149108886719,
+        460.6304931640625
+      ],
+      "text_sha256": "bab8580d02ef90f878d22afe41d56919b38ea0cac86527d61a6f3163a0d1edbe"
+    },
+    {
+      "block_id": "page-0872-block-0013",
+      "order": 13,
+      "text": "be clinically significant)\n",
+      "bbox": [
+        56.80500030517578,
+        460.9104919433594,
+        158.48500061035156,
+        472.6304931640625
+      ],
+      "text_sha256": "54132c0d3804199d9681b66ad70c9389b4b02548a62f20b3180eea59c5166e48"
+    },
+    {
+      "block_id": "page-0872-block-0014",
+      "order": 14,
+      "text": "Drugs in normal font (not bold and without *) indicate:\n",
+      "bbox": [
+        48.005001068115234,
+        478.9104919433594,
+        289.1949462890625,
+        490.6304931640625
+      ],
+      "text_sha256": "ae8ec2cef8fbec5676653f2738af65866123ef2265ecc16ad1fb20bed3ef6f0b"
+    },
+    {
+      "block_id": "page-0872-block-0015",
+      "order": 15,
+      "text": "■\n■metabolic enzyme pathway(s) or activity where significance is unclear or unknown\n",
+      "bbox": [
+        47.999900817871094,
+        496.9104919433594,
+        412.94500732421875,
+        508.6304931640625
+      ],
+      "text_sha256": "cf7fd0ca015e7fd312ac5b21ac1d2987ff692561b132f5c0ab44911d46cc19aa"
+    },
+    {
+      "block_id": "page-0872-block-0016",
+      "order": 16,
+      "text": "NB Information on CYP function derived from individual SPCs and US Labelling \n(accessed August 2020) and from a recent systematic review.1\n",
+      "bbox": [
+        48.005001068115234,
+        515.0804443359375,
+        422.8149719238281,
+        538.6304931640625
+      ],
+      "text_sha256": "6e5a0754066e14206b5be0ab78bec4c50739c37f4d91f8eac33fcd316f8d4bcf"
+    },
+    {
+      "block_id": "page-0872-block-0017",
+      "order": 17,
+      "text": "The tables do not include details of the effects of non-psychotropics on CYP \nfunction.\n",
+      "bbox": [
+        48.0,
+        548.9104614257812,
+        422.7998962402344,
+        572.6304931640625
+      ],
+      "text_sha256": "761925bef7899331063a1d403b4531557cb52feebc0aaaecd007b7afcc289f25"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

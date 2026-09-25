@@ -1,0 +1,311 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0282",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 282,
+  "source_page_index": 281,
+  "source_page_display": 282,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Bipolar disorder    261\nCHAPTER 2\nValproate is hepatically metabolised; drugs that inhibit CYP enzymes can increase \nvalproate levels (e.g. erythromycin, fluoxetine and cimetidine). Valproate can increase \nthe plasma levels of some drugs by inhibition of glucuronidation. Examples include \ntricyclic antidepressant (TCAs; particularly clomipramine58), lamotrigine,59 quetia-\npine,60 warfarin61 and phenobarbital. Valproate may also significantly lower plasma \nolanzapine concentrations; the mechanism is unknown.62\nPharmacodynamic interactions also occur. The anticonvulsant effect of valproate is \nantagonised by drugs that lower the seizure threshold (e.g. antipsychotics). Weight gain \ncan be exacerbated by other drugs such as clozapine and olanzapine.\nTable 2.3  Valproate – prescribing and monitoring\nIndications\nMania, hypomania, bipolar depression and prophylaxis of bipolar affective disorder. May \nreduce aggression in a range of psychiatric disorders (data weak).\nNote that sodium valproate is licensed only for epilepsy and semi-sodium valproate only \nfor acute mania.\nPre-valproate \nworkup\nFBC and LFTs. Baseline measure of weight desirable\nPrescribing\nTitrate dose upwards against response and side effects. Loading doses can be used and \nare generally well tolerated.\nNote that CR sodium valproate (Epilim Chrono9) can be given once daily. All other \nformulations must be administered at least twice daily.\nPlasma levels can be used to assure adequate dosing and treatment compliance. Blood \nshould be taken immediately before the next dose.\nMonitoring\nFBC and LFTs if clinically indicated\nWeight (or BMI)\nStopping\nReduce slowly over at least 1 month\nReferences\n\t 1.\t Rosenberg G. The mechanisms of action of valproate in neuropsychiatric disorders: can we see the forest for the trees? Cell Mol Life Sci 2007; \n64:2090–2103.\n\t 2.\t Kuendgen A, et al. Valproic acid for the treatment of myeloid malignancies. Cancer 2007; 110:943–954.\n\t 3.\t Atmaca A, et al. Valproic acid (VPA) in patients with refractory advanced cancer: a dose escalating phase I clinical trial. Br J Cancer 2007; \n97:177–182.\n\t 4.\t Hallas J, et al. Cancer risk in long-term users of valproate: a population-based case-control study. Cancer Epidemiol Biomarkers Prev 2009; \n18:1714–1719.\n\t 5.\t Gervain J, et al. Valproate reopens critical-period learning of absolute pitch. Front Syst Neurosci 2013; 7:1–11.\n\t 6.\t Fisher C, et al. Sodium valproate or valproate semisodium: is there a difference in the treatment of bipolar disorder? Psychiatric Bull 2003; \n27:446–448.\n\t 7.\t Iqbal SU, et al. Divalproex sodium vs. valproic acid: drug utilization patterns, persistence rates and predictors of hospitalization among VA \npatients diagnosed with bipolar disorder. J Clin Pharm Ther 2007; 32:625–632.\n\t 8.\t Wassef AA, et al. Lower effectiveness of divalproex versus valproic acid in a prospective, quasi-experimental clinical trial involving 9,260 \npsychiatric admissions. Am J Psychiatry 2005; 162:330–339.\n\t 9.\t Sanofi. Summary of product characteristics. Epilim Chrono 500mg. 2020; https://www.medicines.org.uk/emc/medicine/6779.\n\t10.\t Bowden CL, et al. Efficacy of divalproex vs lithium and placebo in the treatment of mania. The Depakote Mania Study Group. JAMA 1994; \n271:918–924.\n",
+  "raw_text_sha256": "537b5c5bab73efee1ea1482ecb216e4a71ca318007abbaaeaec828f011352267",
+  "coordinates_sha256": "3d8f4e8307df3b2d105e8860d916ffa98b5ce6b2dae929148a328d5aeaa1fe7c",
+  "block_sequence_sha256": "a454ed536b5366213f4d5baff392d344b22e2f3116caa151a3acc0d469ec15a8",
+  "blocks": [
+    {
+      "block_id": "page-0282-block-0000",
+      "order": 0,
+      "text": "Bipolar disorder    261\n",
+      "bbox": [
+        326.5046081542969,
+        31.395221710205078,
+        420.0005798339844,
+        41.0272216796875
+      ],
+      "text_sha256": "b5bead6257622739a4d952ab65b53bc31f5ad5f7a734d7dc5f61d430c04d7eff"
+    },
+    {
+      "block_id": "page-0282-block-0001",
+      "order": 1,
+      "text": "CHAPTER 2\n",
+      "bbox": [
+        454.4096984863281,
+        146.3472900390625,
+        463.88970947265625,
+        187.6912841796875
+      ],
+      "text_sha256": "5eaa1f2591abe1a1b2f7664fa3de7ff01a032d44ee83fa594c7852135d4287aa"
+    },
+    {
+      "block_id": "page-0282-block-0002",
+      "order": 2,
+      "text": "Valproate is hepatically metabolised; drugs that inhibit CYP enzymes can increase \nvalproate levels (e.g. erythromycin, fluoxetine and cimetidine). Valproate can increase \nthe plasma levels of some drugs by inhibition of glucuronidation. Examples include \ntricyclic antidepressant (TCAs; particularly clomipramine58), lamotrigine,59 quetia-\npine,60 warfarin61 and phenobarbital. Valproate may also significantly lower plasma \nolanzapine concentrations; the mechanism is unknown.62\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.8028259277344,
+        134.27041625976562
+      ],
+      "text_sha256": "78092c764065e7b6004e2983d15fa71cbb1457c7d8e5bb65f5ff33f0dac1ac5a"
+    },
+    {
+      "block_id": "page-0282-block-0003",
+      "order": 3,
+      "text": "Pharmacodynamic interactions also occur. The anticonvulsant effect of valproate is \nantagonised by drugs that lower the seizure threshold (e.g. antipsychotics). Weight gain \ncan be exacerbated by other drugs such as clozapine and olanzapine.\n",
+      "bbox": [
+        48.0,
+        134.5504150390625,
+        422.8099365234375,
+        170.27041625976562
+      ],
+      "text_sha256": "3bed52d47aa9f050c5df690e6118dfcd6cf3389e8f471af7fcc30ec9d827f74a"
+    },
+    {
+      "block_id": "page-0282-block-0004",
+      "order": 4,
+      "text": "Table 2.3  Valproate – prescribing and monitoring\n",
+      "bbox": [
+        54.0,
+        204.97059631347656,
+        213.35995483398438,
+        213.85809326171875
+      ],
+      "text_sha256": "c6daffb0f6c3bc6e947dbde71860d793f054495f5ce6806375c979e724675582"
+    },
+    {
+      "block_id": "page-0282-block-0005",
+      "order": 5,
+      "text": "Indications\nMania, hypomania, bipolar depression and prophylaxis of bipolar affective disorder. May \nreduce aggression in a range of psychiatric disorders (data weak).\n",
+      "bbox": [
+        52.0,
+        223.0255889892578,
+        410.98004150390625,
+        241.7305908203125
+      ],
+      "text_sha256": "a7c2e0383c01f0d2b5b7233a255e402d5b880e151ffb2446732665b2998334a4"
+    },
+    {
+      "block_id": "page-0282-block-0006",
+      "order": 6,
+      "text": "Note that sodium valproate is licensed only for epilepsy and semi-sodium valproate only \nfor acute mania.\n",
+      "bbox": [
+        127.99750518798828,
+        246.0205841064453,
+        409.4275817871094,
+        264.7255859375
+      ],
+      "text_sha256": "866d43870ea9141a3e27cacaabde68a50dd153aea3f2ae8368021fcf6e8c51a6"
+    },
+    {
+      "block_id": "page-0282-block-0007",
+      "order": 7,
+      "text": "Pre-valproate \nworkup\n",
+      "bbox": [
+        52.0,
+        271.6405944824219,
+        95.8899917602539,
+        290.3455810546875
+      ],
+      "text_sha256": "a38bb50943b3717ac0308129d852ad4015aa2aa97faccdae8f4dc73ee7dccbd1"
+    },
+    {
+      "block_id": "page-0282-block-0008",
+      "order": 8,
+      "text": "FBC and LFTs. Baseline measure of weight desirable\n",
+      "bbox": [
+        127.99750518798828,
+        271.6405944824219,
+        291.6400451660156,
+        280.34808349609375
+      ],
+      "text_sha256": "569bb16bf35710d52529bc6c2c5dddcfdee3c122de97a6f9d2092f5bda4a230c"
+    },
+    {
+      "block_id": "page-0282-block-0009",
+      "order": 9,
+      "text": "Prescribing\nTitrate dose upwards against response and side effects. Loading doses can be used and \nare generally well tolerated.\n",
+      "bbox": [
+        52.0,
+        297.2680969238281,
+        408.6850891113281,
+        315.97308349609375
+      ],
+      "text_sha256": "4545e517c307615580b8267ff0b98cb791276d4d129022984d9bd7a4b8fbf5fa"
+    },
+    {
+      "block_id": "page-0282-block-0010",
+      "order": 10,
+      "text": "Note that CR sodium valproate (Epilim Chrono9) can be given once daily. All other \nformulations must be administered at least twice daily.\n",
+      "bbox": [
+        127.99750518798828,
+        320.2630920410156,
+        390.3572082519531,
+        338.9805908203125
+      ],
+      "text_sha256": "e1facf121ce435ae4f2e33981a7d150d0a20d52219d29e1745a0d14ee663da60"
+    },
+    {
+      "block_id": "page-0282-block-0011",
+      "order": 11,
+      "text": "Plasma levels can be used to assure adequate dosing and treatment compliance. Blood \nshould be taken immediately before the next dose.\n",
+      "bbox": [
+        127.99969482421875,
+        343.2705993652344,
+        406.5348205566406,
+        361.9755859375
+      ],
+      "text_sha256": "a43ebd971c0747cbaa4aae8d85fb018e0072620befdd21c5ce24d30ef6accfe3"
+    },
+    {
+      "block_id": "page-0282-block-0012",
+      "order": 12,
+      "text": "Monitoring\nFBC and LFTs if clinically indicated\n",
+      "bbox": [
+        52.00218963623047,
+        368.8905944824219,
+        235.07716369628906,
+        377.59808349609375
+      ],
+      "text_sha256": "0d334de949931ec7c634a958e85c6f05d34128adba1d9588a07ed1f28d97a370"
+    },
+    {
+      "block_id": "page-0282-block-0013",
+      "order": 13,
+      "text": "Weight (or BMI)\n",
+      "bbox": [
+        127.99969482421875,
+        381.8880920410156,
+        178.7071990966797,
+        390.5955810546875
+      ],
+      "text_sha256": "0bea7e6b4b0f781040492e415b51c7aa8e1edd320e61413f47b239175639e15f"
+    },
+    {
+      "block_id": "page-0282-block-0014",
+      "order": 14,
+      "text": "Stopping\nReduce slowly over at least 1 month\n",
+      "bbox": [
+        52.00218963623047,
+        397.5105895996094,
+        243.43218994140625,
+        406.21807861328125
+      ],
+      "text_sha256": "7c08663e61df31206a426a7d7c5b82d1112e7a1cca7d12d9c8793de528f52b1c"
+    },
+    {
+      "block_id": "page-0282-block-0015",
+      "order": 15,
+      "text": "References\n",
+      "bbox": [
+        48.0,
+        426.8153991699219,
+        104.03400421142578,
+        439.85040283203125
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0282-block-0016",
+      "order": 16,
+      "text": "\t 1.\t Rosenberg G. The mechanisms of action of valproate in neuropsychiatric disorders: can we see the forest for the trees? Cell Mol Life Sci 2007; \n",
+      "bbox": [
+        48.0,
+        444.9364013671875,
+        421.6981506347656,
+        451.9684143066406
+      ],
+      "text_sha256": "1bec0af1ae65cac981a322acab97bf7b173617fb0a4f4444d5541681aa211a30"
+    },
+    {
+      "block_id": "page-0282-block-0017",
+      "order": 17,
+      "text": "64:2090–2103.\n\t 2.\t Kuendgen A, et al. Valproic acid for the treatment of myeloid malignancies. Cancer 2007; 110:943–954.\n\t 3.\t Atmaca A, et al. Valproic acid (VPA) in patients with refractory advanced cancer: a dose escalating phase I clinical trial. Br J Cancer 2007; \n",
+      "bbox": [
+        48.00600051879883,
+        453.7923889160156,
+        421.6740417480469,
+        478.9684143066406
+      ],
+      "text_sha256": "a8a9ea9ff1691f1ea10879eb35dae8b6ffbecb2ed4222726e199a2e0d6988954"
+    },
+    {
+      "block_id": "page-0282-block-0018",
+      "order": 18,
+      "text": "97:177–182.\n\t 4.\t Hallas J, et al. Cancer risk in long-term users of valproate: a population-based case-control study. Cancer Epidemiol Biomarkers Prev 2009; \n",
+      "bbox": [
+        48.018001556396484,
+        480.7923889160156,
+        421.6739807128906,
+        496.9684143066406
+      ],
+      "text_sha256": "b66d86f5d74feec8f02ded8e4977481af12c2aa0053cfc702011ecdc45d3e301"
+    },
+    {
+      "block_id": "page-0282-block-0019",
+      "order": 19,
+      "text": "18:1714–1719.\n\t 5.\t Gervain J, et al. Valproate reopens critical-period learning of absolute pitch. Front Syst Neurosci 2013; 7:1–11.\n\t 6.\t Fisher C, et al. Sodium valproate or valproate semisodium: is there a difference in the treatment of bipolar disorder? Psychiatric Bull 2003; \n",
+      "bbox": [
+        48.02399826049805,
+        498.7923889160156,
+        421.7159423828125,
+        523.9683837890625
+      ],
+      "text_sha256": "51f3e4e72e79c7b10a09da74cfe4d4fa420546b6da0ea493169a8521d12addaf"
+    },
+    {
+      "block_id": "page-0282-block-0020",
+      "order": 20,
+      "text": "27:446–448.\n\t 7.\t Iqbal SU, et al. Divalproex sodium vs. valproic acid: drug utilization patterns, persistence rates and predictors of hospitalization among VA \n",
+      "bbox": [
+        48.0359992980957,
+        525.7924194335938,
+        421.6681213378906,
+        541.9683837890625
+      ],
+      "text_sha256": "f0ec18e61e4e5c0a842b5e31694cf93e699f0ace9ef063106bc0807e3fdf3d35"
+    },
+    {
+      "block_id": "page-0282-block-0021",
+      "order": 21,
+      "text": "patients diagnosed with bipolar disorder. J Clin Pharm Ther 2007; 32:625–632.\n\t 8.\t Wassef AA, et al. Lower effectiveness of divalproex versus valproic acid in a prospective, quasi-experimental clinical trial involving 9,260 \n",
+      "bbox": [
+        48.04199981689453,
+        543.7924194335938,
+        421.7101135253906,
+        559.9683837890625
+      ],
+      "text_sha256": "c83b5a55b332b217d13d32d8b876fab45db3f37cb01f674605553111a4ac7702"
+    },
+    {
+      "block_id": "page-0282-block-0022",
+      "order": 22,
+      "text": "psychiatric admissions. Am J Psychiatry 2005; 162:330–339.\n\t 9.\t Sanofi. Summary of product characteristics. Epilim Chrono 500mg. 2020; https://www.medicines.org.uk/emc/medicine/6779.\n\t10.\t Bowden CL, et al. Efficacy of divalproex vs lithium and placebo in the treatment of mania. The Depakote Mania Study Group. JAMA 1994; \n",
+      "bbox": [
+        48.04800033569336,
+        561.7924194335938,
+        421.7039489746094,
+        586.9683837890625
+      ],
+      "text_sha256": "5fb93aed9a98e89dbd30389b5d220e25f82219ef30a16351d57a7a4ade3877c8"
+    },
+    {
+      "block_id": "page-0282-block-0023",
+      "order": 23,
+      "text": "271:918–924.\n",
+      "bbox": [
+        59.05799865722656,
+        588.7924194335938,
+        95.41798400878906,
+        595.9683837890625
+      ],
+      "text_sha256": "55c02250fefbb0a82367fcb87fa5a7a6f196660710e9127c846f0217246819b2"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

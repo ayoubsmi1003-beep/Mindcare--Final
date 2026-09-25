@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0311",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 311,
+  "source_page_index": 310,
+  "source_page_display": 311,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "290    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  2\nDrug/regime\nComments\nOlanzapine ±  \nfluoxetine13,29,55–58\nThis combination (Symbyax®) is more effective than both placebo and \nolanzapine alone in treating bipolar depression. The dose is 6mg/day and 25mg/\nday or 12mg/day and 50mg/day (so presumably 5/20mg and 10/40mg are \neffective). May be more effective than lamotrigine. Reasonable evidence of \nprophylactic effect. Recommended as first-line treatment by NICE.9\nOlanzapine alone is effective when compared with placebo,59 but the \ncombination with fluoxetine is more effective. (This is possibly the strongest \nevidence for a beneficial effect for an antidepressant in bipolar depression.)\nQuetiapine60–64\nFive large RCTs have demonstrated clear efficacy for doses of 300mg and \n600mg daily (as monotherapy) in bipolar I and bipolar II depression. A later \nstudy in Chinese patients demonstrated the efficacy of 300mg/day65 in bipolar I \ndepression. May be superior to both lithium and paroxetine.\nQuetiapine also prevents relapse into depression and mania66,67 and so is one of \nthe treatments of choice in bipolar depression. It appears not to be associated \nwith switching to mania.\nValproate1,13,68–72\nLimited evidence of efficacy as monotherapy but recommended in some \nguidelines. Several very small RCTs but many negative, however, meta-analyses \ndo support antidepressant efficacy.71 Probably protects against depressive \nrelapse but database is small.\nTable 2.10  Alternative treatments – refer to primary literature before using\nDrug/regime\nComments\nAntidepressants73–81\n‘Unopposed’ antidepressants (i.e. without mood stabiliser protection) are generally to \nbe avoided in bipolar depression because of the risk of switching and inducing rapid \ncycling. There is also evidence that they are relatively less effective (perhaps not \neffective at all) in bipolar depression than in unipolar depression although dose may \nbe critical.47 Short-term use of fluoxetine, venlafaxine and moclobemide seems \nreasonably effective and safe even as monotherapy. A meta-analysis suggested a \nlarge effect size for tranylcypromine in the absence of any risk of switching.82 Overall, \nhowever, unopposed antidepressant treatment should be avoided, especially in \nbipolar I disorder.53\nCariprazine83\nOne RCT suggests that cariprazine at 1.5mg/day is effective in bipolar I depression. A \nsecond, larger study showed 1.5mg/day and 3mg/day to be effective.84 The most \nrecent study84 found benefit for 1.5mg/day but not 3mg/day.\nKetamine85–88\nIV dose of 0.5mg/kg is effective in refractory bipolar depression. Very high response \nrate. Dissociative symptoms common but brief. Now accepted as standard treatment \nfor refractory bipolar depression.89,90 IV racemate is possibly more effective than \nintranasal esketamine.91 Switching to mania is a potential problem92 although \nprobably a remote risk.\nPramipexole93,94\nTwo small placebo-controlled trials suggest useful efficacy in bipolar depression. \nEffective dose averages around 1.7mg/day. Both studies used pramipexole as an \nadjunct to the existing mood stabiliser treatment. Neither study detected an increased \nrisk of switching to mania/hypomania (a theoretical consideration) but data are \ninsufficient to exclude this possibility. A meta-analysis of studies showed a robust \neffect on response but not remission.95\n",
+  "raw_text_sha256": "9ad8a7370d679bce8346dcfaae8f64f2ae3beed28a1da23e84a17677a66822a3",
+  "coordinates_sha256": "e7d6789a9096b31bf0f36f55349bc0b3296a33f22153f8aad5943b1d1a156588",
+  "block_sequence_sha256": "3cbbd79c00692479b01346c8cf9bf5d3bba8c0293b531156917610e6ff7d5acf",
+  "blocks": [
+    {
+      "block_id": "page-0311-block-0000",
+      "order": 0,
+      "text": "290    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "dd4d6447ecde60c428d968f0652f525485dbd02cd961e146a6d1063a94ee18cb"
+    },
+    {
+      "block_id": "page-0311-block-0001",
+      "order": 1,
+      "text": "CHAPTER  2\n",
+      "bbox": [
+        19.520000457763672,
+        145.23529052734375,
+        29.0,
+        188.80328369140625
+      ],
+      "text_sha256": "5befcde2fefe074681a51514b484ad31516d952c51183625b5b7b1fb84f30d2c"
+    },
+    {
+      "block_id": "page-0311-block-0002",
+      "order": 2,
+      "text": "Drug/regime\nComments\n",
+      "bbox": [
+        65.88999938964844,
+        68.21290588378906,
+        209.38751220703125,
+        77.10040283203125
+      ],
+      "text_sha256": "7a9329b6103c48a6cb1b9f3e034b2825b42863acc24613b19e0d45b2d61d89fb"
+    },
+    {
+      "block_id": "page-0311-block-0003",
+      "order": 3,
+      "text": "Olanzapine ±  \nfluoxetine13,29,55–58\n",
+      "bbox": [
+        65.89000701904297,
+        84.0154037475586,
+        121.6207046508789,
+        102.72039794921875
+      ],
+      "text_sha256": "535e1ffe3d17628ce0379c2cd4baae5704f0a3f6b31bf2e5b59c4eeb1833a0ca"
+    },
+    {
+      "block_id": "page-0311-block-0004",
+      "order": 4,
+      "text": "This combination (Symbyax®) is more effective than both placebo and \nolanzapine alone in treating bipolar depression. The dose is 6mg/day and 25mg/\nday or 12mg/day and 50mg/day (so presumably 5/20mg and 10/40mg are \neffective). May be more effective than lamotrigine. Reasonable evidence of \nprophylactic effect. Recommended as first-line treatment by NICE.9\n",
+      "bbox": [
+        171.88999938964844,
+        84.01790618896484,
+        427.949462890625,
+        132.71539306640625
+      ],
+      "text_sha256": "5fb8d90418245592e148ed3bf1300b31f989efd3719f0ad9d45c987f3612133d"
+    },
+    {
+      "block_id": "page-0311-block-0005",
+      "order": 5,
+      "text": "Olanzapine alone is effective when compared with placebo,59 but the \ncombination with fluoxetine is more effective. (This is possibly the strongest \nevidence for a beneficial effect for an antidepressant in bipolar depression.)\n",
+      "bbox": [
+        171.88999938964844,
+        137.0178985595703,
+        414.83782958984375,
+        165.72039794921875
+      ],
+      "text_sha256": "37dbf589d0f77329d87d65eeff10eb621289475e62e19df8422db235d427a759"
+    },
+    {
+      "block_id": "page-0311-block-0006",
+      "order": 6,
+      "text": "Quetiapine60–64\nFive large RCTs have demonstrated clear efficacy for doses of 300mg and \n600mg daily (as monotherapy) in bipolar I and bipolar II depression. A later \nstudy in Chinese patients demonstrated the efficacy of 300mg/day65 in bipolar I \ndepression. May be superior to both lithium and paroxetine.\n",
+      "bbox": [
+        65.89278411865234,
+        172.63539123535156,
+        427.0700378417969,
+        211.347900390625
+      ],
+      "text_sha256": "938590c98180cc32d4e08aea8a81b13949ddff23330a0978db9ca674acfcd347"
+    },
+    {
+      "block_id": "page-0311-block-0007",
+      "order": 7,
+      "text": "Quetiapine also prevents relapse into depression and mania66,67 and so is one of \nthe treatments of choice in bipolar depression. It appears not to be associated \nwith switching to mania.\n",
+      "bbox": [
+        171.88999938964844,
+        215.6378936767578,
+        427.4858703613281,
+        244.34539794921875
+      ],
+      "text_sha256": "a38b8d30053ccbd6ac2f70a9d68335223439a6472664c673eb2c94401b8f7501"
+    },
+    {
+      "block_id": "page-0311-block-0008",
+      "order": 8,
+      "text": "Valproate1,13,68–72\nLimited evidence of efficacy as monotherapy but recommended in some \nguidelines. Several very small RCTs but many negative, however, meta-analyses \ndo support antidepressant efficacy.71 Probably protects against depressive \nrelapse but database is small.\n",
+      "bbox": [
+        65.89580535888672,
+        251.26039123535156,
+        424.9625244140625,
+        289.972900390625
+      ],
+      "text_sha256": "e0506402f0738e1d7d93412d1d2627e814e098ed9038f14f6c92cc384f242cd8"
+    },
+    {
+      "block_id": "page-0311-block-0009",
+      "order": 9,
+      "text": "Table 2.10  Alternative treatments – refer to primary literature before using\n",
+      "bbox": [
+        67.88999938964844,
+        319.28118896484375,
+        308.3250427246094,
+        328.168701171875
+      ],
+      "text_sha256": "6388e50a4db8fabe8fff89744baf1912926a461c5f60af4e1d9b0b271bd6b527"
+    },
+    {
+      "block_id": "page-0311-block-0010",
+      "order": 10,
+      "text": "Drug/regime\nComments\n",
+      "bbox": [
+        65.88999938964844,
+        337.15618896484375,
+        193.38999938964844,
+        346.043701171875
+      ],
+      "text_sha256": "7a9329b6103c48a6cb1b9f3e034b2825b42863acc24613b19e0d45b2d61d89fb"
+    },
+    {
+      "block_id": "page-0311-block-0011",
+      "order": 11,
+      "text": "Antidepressants73–81\n‘Unopposed’ antidepressants (i.e. without mood stabiliser protection) are generally to \nbe avoided in bipolar depression because of the risk of switching and inducing rapid \ncycling. There is also evidence that they are relatively less effective (perhaps not \neffective at all) in bipolar depression than in unipolar depression although dose may \nbe critical.47 Short-term use of fluoxetine, venlafaxine and moclobemide seems \nreasonably effective and safe even as monotherapy. A meta-analysis suggested a \nlarge effect size for tranylcypromine in the absence of any risk of switching.82 Overall, \nhowever, unopposed antidepressant treatment should be avoided, especially in \nbipolar I disorder.53\n",
+      "bbox": [
+        65.88999938964844,
+        352.9587097167969,
+        430.1275939941406,
+        441.6636962890625
+      ],
+      "text_sha256": "03c11d9cbc9d8477704b9e608cf5a27b9c2a2ae24141ae09ba0ca8688c95de32"
+    },
+    {
+      "block_id": "page-0311-block-0012",
+      "order": 12,
+      "text": "Cariprazine83\nOne RCT suggests that cariprazine at 1.5mg/day is effective in bipolar I depression. A \nsecond, larger study showed 1.5mg/day and 3mg/day to be effective.84 The most \nrecent study84 found benefit for 1.5mg/day but not 3mg/day.\n",
+      "bbox": [
+        65.88999938964844,
+        448.5862121582031,
+        428.99505615234375,
+        477.293701171875
+      ],
+      "text_sha256": "84cc6bf90ea8fab73916be0188f46f1b2546088bbd14966140545c5f44ea4386"
+    },
+    {
+      "block_id": "page-0311-block-0013",
+      "order": 13,
+      "text": "Ketamine85–88\nIV dose of 0.5mg/kg is effective in refractory bipolar depression. Very high response \nrate. Dissociative symptoms common but brief. Now accepted as standard treatment \nfor refractory bipolar depression.89,90 IV racemate is possibly more effective than \nintranasal esketamine.91 Switching to mania is a potential problem92 although \nprobably a remote risk.\n",
+      "bbox": [
+        65.89179992675781,
+        484.2087097167969,
+        428.13250732421875,
+        532.9161987304688
+      ],
+      "text_sha256": "d44878ef18902c113ecc26021be052fe3b0b141cf546999783df6b5d74599f96"
+    },
+    {
+      "block_id": "page-0311-block-0014",
+      "order": 14,
+      "text": "Pramipexole93,94\nTwo small placebo-controlled trials suggest useful efficacy in bipolar depression. \nEffective dose averages around 1.7mg/day. Both studies used pramipexole as an \nadjunct to the existing mood stabiliser treatment. Neither study detected an increased \nrisk of switching to mania/hypomania (a theoretical consideration) but data are \ninsufficient to exclude this possibility. A meta-analysis of studies showed a robust \neffect on response but not remission.95\n",
+      "bbox": [
+        65.89228820800781,
+        539.8311767578125,
+        431.8900451660156,
+        598.5311889648438
+      ],
+      "text_sha256": "86e6ddf3b57d925c64f04cdf3fd6895d14a59f3fb1b2f2636c29bb6678b594c3"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

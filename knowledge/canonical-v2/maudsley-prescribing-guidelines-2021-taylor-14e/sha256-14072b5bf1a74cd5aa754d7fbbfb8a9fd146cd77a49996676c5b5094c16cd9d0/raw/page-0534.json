@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0534",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 534,
+  "source_page_index": 533,
+  "source_page_display": 534,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    513\nCHAPTER 4\npolysubstance-use pattern is prevalent. There is symptomatic overlap between stimu-\nlant intoxication – autonomic hyperactivity, agitation, hallucinations – and GBL with-\ndrawal delirium. The latter requires higher doses of benzodiazepines and more \nprolonged treatment (see section ‘GHB and GBL dependence’, later in the chapter).\nAs stated earlier, in the emergency setting, simple sedation with benzodiazepines for \nagitation is often sufficient initially. If antipsychotics are indicated, the four-fold \nincreased odds of developing extra-pyramidal side effects in patients who use metham-\nphetamine should be borne in mind.7 Agents with a low propensity to cause EPSEs \nshould be used and there is evidence for efficacy of olanzapine. Aripiprazole may be \npreferred for rapid tranquillisation as olanzapine and benzodiazepines should not be \nco-administered. Haloperidol should not be used. Early and ongoing review regarding \ncontinuation is important, as for most patients symptoms resolve within 2 or 3 weeks \nand there is no evidence to support the benefit of prophylactic prescription of antipsy-\nchotics in methamphetamine-related psychosis.8\nStimulant-associated depression\nAnhedonia for some patients can be profound in early abstinence from stimulants. For \nmany, such low mood will resolve with duration of abstinence and supportive psycho-\nsocial interventions.1 For those in whom it endures psychological treatments are effec-\ntive9 but may be difficult for addiction patients to access because of institutional \nbarriers.\nAntidepressants have primarily been evaluated as treatment for the substance depend-\nence itself, with depression as a secondary outcome. There is some evidence, primarily \nregarding the tricyclic antidepressants, for a reduction in depressive symptoms;10 how-\never, tricyclic antidepressants are not recommended in those with co-morbid substance \nmisuse because of their cardiotoxicity.11 There is no evidence to support the use of \nSSRIs, and indeed these are associated with significant interactions with stimulants1 \nand increased disengagement.9\nReferences\n\t 1.\t Department of Health and Social Care. Drug misuse and dependence: UK guidelines on clinical management. 2017; https://www.gov.uk/\ngovernment/publications/drug-misuse-and-dependence-uk-guidelines-on-clinical-management.\n\t 2.\t Siefried KJ, et al. Pharmacological treatment of methamphetamine/amphetamine dependence: a systematic review. CNS Drugs 2020; 1–29.\n\t 3.\t Ronsley C, et al. Treatment of stimulant use disorder: a systematic review of reviews. PloS One 2020; 15:e0234809.\n\t 4.\t Arunogiri S, et al. A systematic review of risk factors for methamphetamine-associated psychosis. Aust N Z J Psychiatry 2018; 52:514–529.\n\t 5.\t Isoardi KZ, et al. Methamphetamine presentations to an emergency department: management and complications. Emerg Med Aust 2019; \n31:593–599.\n\t 6.\t Voce A, et al. A systematic review of the symptom profile and course of methamphetamine-associated psychosis: substance use and misuse. \nSubst Use Misuse 2019; 54:549–559.\n\t 7.\t Temmingh HS, et al. Methamphetamine use and antipsychotic-related extrapyramidal side-effects in patients with psychotic disorders. J Dual \nDiag 2020; 16:208–217.\n\t 8.\t Shoptaw SJ, et al. Treatment for amphetamine psychosis. Cochrane Database Syst Rev 2009; CD003026.\n\t 9.\t Farrell M, et al. Responding to global stimulant use: challenges and opportunities. The Lancet 2019; 394:1652–1667.\n\t10.\t Pani PP, et al. Antidepressants for cocaine dependence and problematic cocaine use. Cochrane Database Syst Rev 2011.\n\t11.\t Lingford-Hughes AR, et al. BAP updated guidelines: evidence-based guidelines for the pharmacological management of substance abuse, \nharmful use, addiction and comorbidity: recommendations from BAP. J Psychopharmacol 2012; 26:899–952.\n",
+  "raw_text_sha256": "d672779b42b943b8afa4ee768131ce4aebf32890144650a6921cec0a57d118e2",
+  "coordinates_sha256": "98d76e3274fd716c639d6569ae90f831c1ff00d2bcacbbc5145b130c9f716450",
+  "block_sequence_sha256": "01fced7064d7258d0115844fb81b231101e25d890c2b98dbf72345d0f5bb8566",
+  "blocks": [
+    {
+      "block_id": "page-0534-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    513\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "45b97a3cbd619a3a5cb50dae2f3e8b6a5546f4c0c86adc7f7cedf4b0d2b7ef7c"
+    },
+    {
+      "block_id": "page-0534-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0534-block-0002",
+      "order": 2,
+      "text": "polysubstance-use pattern is prevalent. There is symptomatic overlap between stimu-\nlant intoxication – autonomic hyperactivity, agitation, hallucinations – and GBL with-\ndrawal delirium. The latter requires higher doses of benzodiazepines and more \nprolonged treatment (see section ‘GHB and GBL dependence’, later in the chapter).\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.8200378417969,
+        110.27041625976562
+      ],
+      "text_sha256": "24228ee2f16fbbdebfcf7347167fae6f41434946af96d938da61e6757f769245"
+    },
+    {
+      "block_id": "page-0534-block-0003",
+      "order": 3,
+      "text": "As stated earlier, in the emergency setting, simple sedation with benzodiazepines for \nagitation is often sufficient initially. If antipsychotics are indicated, the four-fold \nincreased odds of developing extra-pyramidal side effects in patients who use metham-\nphetamine should be borne in mind.7 Agents with a low propensity to cause EPSEs \nshould be used and there is evidence for efficacy of olanzapine. Aripiprazole may be \npreferred for rapid tranquillisation as olanzapine and benzodiazepines should not be \nco-administered. Haloperidol should not be used. Early and ongoing review regarding \ncontinuation is important, as for most patients symptoms resolve within 2 or 3 weeks \nand there is no evidence to support the benefit of prophylactic prescription of antipsy-\nchotics in methamphetamine-related psychosis.8\n",
+      "bbox": [
+        48.0,
+        110.5504150390625,
+        422.8123779296875,
+        230.27041625976562
+      ],
+      "text_sha256": "f7fa382b3ade42244b7e025a9409abb81112d3cd8dede1f1c029b157dd315e3a"
+    },
+    {
+      "block_id": "page-0534-block-0004",
+      "order": 4,
+      "text": "Stimulant-associated depression\n",
+      "bbox": [
+        48.0,
+        247.70547485351562,
+        214.6499786376953,
+        260.740478515625
+      ],
+      "text_sha256": "edd5ffeb3354aedddd4b22b50ab50754deee23c9f710ad9e95c455a02c6ada16"
+    },
+    {
+      "block_id": "page-0534-block-0005",
+      "order": 5,
+      "text": "Anhedonia for some patients can be profound in early abstinence from stimulants. For \nmany, such low mood will resolve with duration of abstinence and supportive psycho-\nsocial interventions.1 For those in whom it endures psychological treatments are effec-\ntive9 but may be difficult for addiction patients to access because of institutional \nbarriers.\n",
+      "bbox": [
+        47.997291564941406,
+        266.55047607421875,
+        422.8011474609375,
+        326.2704772949219
+      ],
+      "text_sha256": "4001013ebbd1f3070876ba17e3632a9243a2ad82b60538fe627b3119ab55043e"
+    },
+    {
+      "block_id": "page-0534-block-0006",
+      "order": 6,
+      "text": "Antidepressants have primarily been evaluated as treatment for the substance depend-\nence itself, with depression as a secondary outcome. There is some evidence, primarily \nregarding the tricyclic antidepressants, for a reduction in depressive symptoms;10 how-\never, tricyclic antidepressants are not recommended in those with co-morbid substance \nmisuse because of their cardiotoxicity.11 There is no evidence to support the use of \nSSRIs, and indeed these are associated with significant interactions with stimulants1 \nand increased disengagement.9\n",
+      "bbox": [
+        47.995361328125,
+        326.55047607421875,
+        422.8213195800781,
+        410.2704772949219
+      ],
+      "text_sha256": "2e7cbe73615e69faf49314f0dac9f936495e033ae09f1d6e7642c7bd26fb93a0"
+    },
+    {
+      "block_id": "page-0534-block-0007",
+      "order": 7,
+      "text": "References\n",
+      "bbox": [
+        48.0,
+        427.7054748535156,
+        104.03400421142578,
+        440.740478515625
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0534-block-0008",
+      "order": 8,
+      "text": "\t 1.\t Department of Health and Social Care. Drug misuse and dependence: UK guidelines on clinical management. 2017; https://www.gov.uk/\n",
+      "bbox": [
+        48.0,
+        445.82647705078125,
+        420.0119934082031,
+        452.8584899902344
+      ],
+      "text_sha256": "775d98bfc973c5315ad47dd481fc6538cfad3c1251c6866548cf5b7ca11d7cf7"
+    },
+    {
+      "block_id": "page-0534-block-0009",
+      "order": 9,
+      "text": "government/publications/drug-misuse-and-dependence-uk-guidelines-on-clinical-management.\n\t 2.\t Siefried KJ, et al. Pharmacological treatment of methamphetamine/amphetamine dependence: a systematic review. CNS Drugs 2020; 1–29.\n\t 3.\t Ronsley C, et al. Treatment of stimulant use disorder: a systematic review of reviews. PloS One 2020; 15:e0234809.\n\t 4.\t Arunogiri S, et al. A systematic review of risk factors for methamphetamine-associated psychosis. Aust N Z J Psychiatry 2018; 52:514–529.\n\t 5.\t Isoardi KZ, et al. Methamphetamine presentations to an emergency department: management and complications. Emerg Med Aust 2019; \n",
+      "bbox": [
+        48.00600051879883,
+        454.82647705078125,
+        421.69805908203125,
+        497.8584899902344
+      ],
+      "text_sha256": "02a432d0dae300e9558498d98cff8692a3244c7e4c033a7b629e0aa57d185e2e"
+    },
+    {
+      "block_id": "page-0534-block-0010",
+      "order": 10,
+      "text": "31:593–599.\n\t 6.\t Voce A, et al. A systematic review of the symptom profile and course of methamphetamine-associated psychosis: substance use and misuse. \n",
+      "bbox": [
+        48.029998779296875,
+        499.6824645996094,
+        421.68011474609375,
+        515.8584594726562
+      ],
+      "text_sha256": "d25b4cd8beb7402876f8e0a0ffd5843cce2b05be7297e323290b1a376aae59fc"
+    },
+    {
+      "block_id": "page-0534-block-0011",
+      "order": 11,
+      "text": "Subst Use Misuse 2019; 54:549–559.\n\t 7.\t Temmingh HS, et al. Methamphetamine use and antipsychotic-related extrapyramidal side-effects in patients with psychotic disorders. J Dual \n",
+      "bbox": [
+        48.0359992980957,
+        517.6824951171875,
+        421.74005126953125,
+        533.8584594726562
+      ],
+      "text_sha256": "0e717e2f9384a8b12fe392e5f11befd35a8dbbb218b9d3f72d047cad502c8255"
+    },
+    {
+      "block_id": "page-0534-block-0012",
+      "order": 12,
+      "text": "Diag 2020; 16:208–217.\n\t 8.\t Shoptaw SJ, et al. Treatment for amphetamine psychosis. Cochrane Database Syst Rev 2009; CD003026.\n\t 9.\t Farrell M, et al. Responding to global stimulant use: challenges and opportunities. The Lancet 2019; 394:1652–1667.\n\t10.\t Pani PP, et al. Antidepressants for cocaine dependence and problematic cocaine use. Cochrane Database Syst Rev 2011.\n\t11.\t Lingford-Hughes AR, et al. BAP updated guidelines: evidence-based guidelines for the pharmacological management of substance abuse, \n",
+      "bbox": [
+        48.04199981689453,
+        535.6824951171875,
+        421.69189453125,
+        578.8584594726562
+      ],
+      "text_sha256": "cd1598d8a05101db0af5289c0b9da668489378cb72caf67030c6e5c3969d9bd4"
+    },
+    {
+      "block_id": "page-0534-block-0013",
+      "order": 13,
+      "text": "harmful use, addiction and comorbidity: recommendations from BAP. J Psychopharmacol 2012; 26:899–952.\n",
+      "bbox": [
+        59.06399917602539,
+        580.6824951171875,
+        342.1619567871094,
+        587.8584594726562
+      ],
+      "text_sha256": "89e3ad2e70fd3abc1f2dc7a47cbaa94b0cf31947b664c190b3ac43aa1ed76b07"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

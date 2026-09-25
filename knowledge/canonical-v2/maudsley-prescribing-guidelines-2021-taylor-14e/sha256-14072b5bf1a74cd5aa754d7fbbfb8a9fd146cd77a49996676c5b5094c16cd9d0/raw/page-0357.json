@@ -1,0 +1,287 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0357",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 357,
+  "source_page_index": 356,
+  "source_page_display": 357,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "336    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nSwitching antidepressants\nGeneral guidelines\n■\n■When changing from one antidepressant to another, abrupt withdrawal should be \navoided unless there has been a serious adverse event. Cross-tapering is preferred, in \nwhich the dose of the ineffective or poorly tolerated drug is slowly reduced while the \nnew drug is slowly introduced.\nExample\nWeek1\nWeek 2\nWeek 3\nWeek 4\nWithdrawing\ncitalopram\n40mg OD\n20mg OD\n10mg OD\n5mg\n2.5mg\nIntroducing\nmirtazapine\nNil\n15mg OD\n30mg OD\n30mg OD\n45mg OD\n(if required)\nOD, omnie die, once a day\n■\n■The speed of cross-tapering is best judged by monitoring patient tolerability. Few \nstudies have been done, so caution is required. Extended periods may be necessary to \nmitigate withdrawal symptoms.\n■\n■Note that the co-administration of some antidepressants, even when cross-tapering, \nis absolutely contraindicated. In other cases, theoretical risks or lack of experience \npreclude recommending cross-tapering.\n■\n■The switching strategy depends not only on the reason for switching – inadequate or \nnon-response, poor tolerability or adverse effects—but also on the pharmacokinetic \nand pharmacodynamic properties of the antidepressants involved.1–3\n■\n■In some cases, cross-tapering may not be necessary. An example is when switching \nfrom one SSRI to another: their effects are so similar that administration of the sec-\nond drug is likely to ameliorate withdrawal effects of the first. In fact, the use of \nfluoxetine has been advocated as an abrupt switch treatment for SSRI discontinua-\ntion symptoms.4 Abrupt cessation may also be acceptable when switching to a drug \nwith a similar, but not identicial, mode of action.5 Thus, in some cases, abruptly stop-\nping one antidepressant and starting another antidepressant at the usual dose may \nnot only be well tolerated, but may also reduce the risk and severity of discontinua-\ntion symptoms.\n■\n■Potential dangers of simultaneously administering two antidepressants include phar-\nmacodynamic interactions (serotonin syndrome, hypotension, drowsiness; depending \non the drugs involved) and pharmacokinetic interactions (e.g. elevation of tricyclic \nplasma levels by some SSRIs).\n",
+  "raw_text_sha256": "ed8ed0aa97463997bf6917d71f6e6702dc37e386c93e49fc886e0c083e3578da",
+  "coordinates_sha256": "6a7917eeaa6f2656f6e0126b9a4fd7de69e8f4b9407c88f20f3dcfcd41070723",
+  "block_sequence_sha256": "5f67dad94fd0a9431607cbd5cff5e5e9f42b84c6d9da3e804acdf6a82a64e27e",
+  "blocks": [
+    {
+      "block_id": "page-0357-block-0000",
+      "order": 0,
+      "text": "336    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "cb5665f9f35df6e0effe4c40ee7ef8e490d1f5a24a117fff03bae7fef6b30c90"
+    },
+    {
+      "block_id": "page-0357-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0357-block-0002",
+      "order": 2,
+      "text": "Switching antidepressants\n",
+      "bbox": [
+        68.88999938964844,
+        66.06546020507812,
+        204.98199462890625,
+        79.1004638671875
+      ],
+      "text_sha256": "983ff8ba29812cafc51fbfb08a7814d40c7031a2838426f47111ace842725653"
+    },
+    {
+      "block_id": "page-0357-block-0003",
+      "order": 3,
+      "text": "General guidelines\n",
+      "bbox": [
+        61.89400100708008,
+        96.06246948242188,
+        158.47396850585938,
+        109.09747314453125
+      ],
+      "text_sha256": "38532637440023bcbfa3940b238b1f69c64181420cb31a947180e7836a79a082"
+    },
+    {
+      "block_id": "page-0357-block-0004",
+      "order": 4,
+      "text": "■\n■When changing from one antidepressant to another, abrupt withdrawal should be \n",
+      "bbox": [
+        61.88990020751953,
+        114.91046142578125,
+        436.6298828125,
+        126.63046264648438
+      ],
+      "text_sha256": "cf96d440f5661411bf7f0ff13a31329957b864374d7c901d2addc052f6b7b984"
+    },
+    {
+      "block_id": "page-0357-block-0005",
+      "order": 5,
+      "text": "avoided unless there has been a serious adverse event. Cross-tapering is preferred, in \nwhich the dose of the ineffective or poorly tolerated drug is slowly reduced while the \nnew drug is slowly introduced.\n",
+      "bbox": [
+        70.88999938964844,
+        126.91046142578125,
+        436.64007568359375,
+        162.63046264648438
+      ],
+      "text_sha256": "98dcddd489432700cd111846632ac17b77d6f9a0056ef3607880acc00ec091d4"
+    },
+    {
+      "block_id": "page-0357-block-0006",
+      "order": 6,
+      "text": "Example\nWeek1\nWeek 2\nWeek 3\nWeek 4\n",
+      "bbox": [
+        70.88999938964844,
+        182.57298278808594,
+        404.29510498046875,
+        191.46047973632812
+      ],
+      "text_sha256": "a390130adb4894c7a2535997583277b253c6de38de0343af18b6b083adb80a10"
+    },
+    {
+      "block_id": "page-0357-block-0007",
+      "order": 7,
+      "text": "Withdrawing\ncitalopram\n",
+      "bbox": [
+        70.88999938964844,
+        199.77796936035156,
+        112.739990234375,
+        218.48297119140625
+      ],
+      "text_sha256": "0029106f29eaed9f0391bc08fd3016dda876df4065b5a9ccab3753d48db0b46e"
+    },
+    {
+      "block_id": "page-0357-block-0008",
+      "order": 8,
+      "text": "40mg OD\n20mg OD\n10mg OD\n5mg\n2.5mg\n",
+      "bbox": [
+        135.1875,
+        199.77796936035156,
+        399.00750732421875,
+        208.4854736328125
+      ],
+      "text_sha256": "0f14db4dd67ccd23908a39cefb09a6be7371f5a207b5473fcf5c00b52f651d92"
+    },
+    {
+      "block_id": "page-0357-block-0009",
+      "order": 9,
+      "text": "Introducing\nmirtazapine\n",
+      "bbox": [
+        70.88995361328125,
+        224.8054656982422,
+        108.3824462890625,
+        243.51046752929688
+      ],
+      "text_sha256": "6a56298911f1bf5df20f032d91e7fecee338d1117fc6a5922351c42b9bc088a4"
+    },
+    {
+      "block_id": "page-0357-block-0010",
+      "order": 10,
+      "text": "Nil\n15mg OD\n30mg OD\n30mg OD\n45mg OD\n(if required)\n",
+      "bbox": [
+        135.1874542236328,
+        224.8054656982422,
+        414.98248291015625,
+        243.51046752929688
+      ],
+      "text_sha256": "b74b7d86a15ba5664b1a107f5043b00cf0f8140915ae3bda41651022acf679a7"
+    },
+    {
+      "block_id": "page-0357-block-0011",
+      "order": 11,
+      "text": "OD, omnie die, once a day\n",
+      "bbox": [
+        70.88995361328125,
+        251.8054656982422,
+        155.9099578857422,
+        260.5129699707031
+      ],
+      "text_sha256": "fd1feef47f796e0a9c3b5cfe3de0e4b83e970e17364878584b4676e2bace3369"
+    },
+    {
+      "block_id": "page-0357-block-0012",
+      "order": 12,
+      "text": "■\n■The speed of cross-tapering is best judged by monitoring patient tolerability. Few \n",
+      "bbox": [
+        61.88990020751953,
+        267.19549560546875,
+        436.63995361328125,
+        278.9154968261719
+      ],
+      "text_sha256": "f180b707570ff931186674b7bdccb420784b8240d6baf5bb2f1c6abb20011484"
+    },
+    {
+      "block_id": "page-0357-block-0013",
+      "order": 13,
+      "text": "studies have been done, so caution is required. Extended periods may be necessary to \nmitigate withdrawal symptoms.\n",
+      "bbox": [
+        70.88999938964844,
+        279.19549560546875,
+        436.6799621582031,
+        302.9154968261719
+      ],
+      "text_sha256": "ea4579ff7ace3e1d36fd756424ca5e475dc878c3dd13571d5d8e21732e444df9"
+    },
+    {
+      "block_id": "page-0357-block-0014",
+      "order": 14,
+      "text": "■\n■Note that the co-administration of some antidepressants, even when cross-tapering, \n",
+      "bbox": [
+        61.88990020751953,
+        303.19549560546875,
+        436.64007568359375,
+        314.9154968261719
+      ],
+      "text_sha256": "17f0495760b1b86ed8b8e93e23cfba59c3e5e873871e9fb35f73d5c7f920c45b"
+    },
+    {
+      "block_id": "page-0357-block-0015",
+      "order": 15,
+      "text": "is absolutely contraindicated. In other cases, theoretical risks or lack of experience \npreclude recommending cross-tapering.\n",
+      "bbox": [
+        70.88999938964844,
+        315.19549560546875,
+        436.6600036621094,
+        338.9154968261719
+      ],
+      "text_sha256": "166009dd227d987db7bf116092a5bdd342497ab3f9ca89f9273cec496fe449f4"
+    },
+    {
+      "block_id": "page-0357-block-0016",
+      "order": 16,
+      "text": "■\n■The switching strategy depends not only on the reason for switching – inadequate or \n",
+      "bbox": [
+        61.88990020751953,
+        339.19549560546875,
+        436.6400146484375,
+        350.9154968261719
+      ],
+      "text_sha256": "2137490d8d2777a48bd6714f76d939b6e0741f0df20febd50f56926f53c4ee92"
+    },
+    {
+      "block_id": "page-0357-block-0017",
+      "order": 17,
+      "text": "non-response, poor tolerability or adverse effects—but also on the pharmacokinetic \nand pharmacodynamic properties of the antidepressants involved.1–3\n",
+      "bbox": [
+        70.88999938964844,
+        351.19549560546875,
+        436.68988037109375,
+        374.9154968261719
+      ],
+      "text_sha256": "89b7d343bafafa5d063c34cdc062411bbb5d31a4d5ab395389adb81f0cd92e15"
+    },
+    {
+      "block_id": "page-0357-block-0018",
+      "order": 18,
+      "text": "■\n■In some cases, cross-tapering may not be necessary. An example is when switching \n",
+      "bbox": [
+        61.88990020751953,
+        375.19549560546875,
+        436.6700439453125,
+        386.9154968261719
+      ],
+      "text_sha256": "43d2fc253c33dbb68ebfffd91809215981485a89a0805b6ddbeb25f44f9fa3c4"
+    },
+    {
+      "block_id": "page-0357-block-0019",
+      "order": 19,
+      "text": "from one SSRI to another: their effects are so similar that administration of the sec-\nond drug is likely to ameliorate withdrawal effects of the first. In fact, the use of \nfluoxetine has been advocated as an abrupt switch treatment for SSRI discontinua-\ntion symptoms.4 Abrupt cessation may also be acceptable when switching to a drug \nwith a similar, but not identicial, mode of action.5 Thus, in some cases, abruptly stop-\nping one antidepressant and starting another antidepressant at the usual dose may \nnot only be well tolerated, but may also reduce the risk and severity of discontinua-\ntion symptoms.\n",
+      "bbox": [
+        70.88911437988281,
+        387.19549560546875,
+        436.65985107421875,
+        482.9154968261719
+      ],
+      "text_sha256": "cd672b4ecb239c386efb46c505836b48db3fef634e8d84d5238dca7f73f125be"
+    },
+    {
+      "block_id": "page-0357-block-0020",
+      "order": 20,
+      "text": "■\n■Potential dangers of simultaneously administering two antidepressants include phar-\n",
+      "bbox": [
+        61.88990020751953,
+        483.19549560546875,
+        433.8899841308594,
+        494.9154968261719
+      ],
+      "text_sha256": "c9b40529e48c03ec31eb9d2a5b529265526e9223556811879f8ca9bc8b820163"
+    },
+    {
+      "block_id": "page-0357-block-0021",
+      "order": 21,
+      "text": "macodynamic interactions (serotonin syndrome, hypotension, drowsiness; depending \non the drugs involved) and pharmacokinetic interactions (e.g. elevation of tricyclic \nplasma levels by some SSRIs).\n",
+      "bbox": [
+        70.8900146484375,
+        495.19549560546875,
+        436.6500244140625,
+        530.91552734375
+      ],
+      "text_sha256": "19ac0e5f6c25179d51fe1d9a9da2620c41edf0961f02d41db8137e00c1652fdc"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

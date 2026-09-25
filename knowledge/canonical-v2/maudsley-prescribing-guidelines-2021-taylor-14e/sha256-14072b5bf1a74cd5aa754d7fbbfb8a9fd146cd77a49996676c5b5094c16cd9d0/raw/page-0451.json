@@ -1,0 +1,371 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0451",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 451,
+  "source_page_index": 450,
+  "source_page_display": 451,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "430    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nPregabalin\n75–225mg/day added to sertraline\nOne small positive RCT121\nRiluzole\n50mg bd added to existing drug \ntreatment122\nVariable results in early trials110\nAnti-androgen – Triptorelin\n3.75mg IM every 4 weeks added to \nexisting drug treatment123\nOpen label study done in six men\ni.v. treatment\nClomipramine IV124\nKetamine IV125,126\nQuicker onset of action suggested compared to oral treatments. \nOne clomipramine study suggests clomipramine IV efficacy after \nfailure with oral clomipramine\nKetamine – developing evidence base110\nOnce weekly morphine\n15–45mg added to existing drug \ntreatment127\nSmall study involving 23 treatment-resistant patients. Positive \neffects were transient.\nBox 3.8  Social phobia (social anxiety disorder)\nFirst-line drug treatment128 (In order of preference)\nSSRIs\n(Up to maximum licensed dose)\nIf no response to the first SSRI, try an alternative SSRI\nSupporting meta-analyses for fluvoxamine129 and citalopram130\nEmerging data for vilazodone131\nVenlafaxine modified release\n75–225mg/day\nSecond-line drug treatment (Less well tolerated or weaker evidence base, no order of preference)\nOlanzapine\n5–20mg132\nFew studies with antipsychotics. Most evidence with olanzapine\nAtenolol\n25–100mg/day\nReduces autonomic symptoms in performance situations132\nBenzodiazepines\nClonazepam\n0.3–6mg/day132\nSertraline plus clonazepam\nup to 3mg/day133\nBenzodiazepines are helpful on PRN basis. Most evidence for treatment \nwith clonazepam and bromazepam\nSwitching an SSRI to venlafaxine no more effective than adding clonazepam \nto SSRI133\nGabapentin\n900–3600mg/day132\nLevetiracetam\n300–3000mg/day in divided \ndoses134\nBox 3.7  (Continued)\n(Continued)\nbd, bis die (twice a day); CBT (cognitive behavioural therapy)\n",
+  "raw_text_sha256": "906d7f6691eaa233831b10d4313e32947d2082424f7da7378c7091f0daadd34c",
+  "coordinates_sha256": "b92b34e8c70447707754b45bf1506f8b3d18e5badb14c889af8252939ac0b626",
+  "block_sequence_sha256": "6d72714058e57a7424163e3325fcbba37ad62199aa43a1a56a100634327dc5b1",
+  "blocks": [
+    {
+      "block_id": "page-0451-block-0000",
+      "order": 0,
+      "text": "430    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "80a4b0bb1eb427d0e1ea7a1f4bb08b1f37d584b71f5f9444d0af9dd3c15be6cd"
+    },
+    {
+      "block_id": "page-0451-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0451-block-0002",
+      "order": 2,
+      "text": "Pregabalin\n75–225mg/day added to sertraline\nOne small positive RCT121\n",
+      "bbox": [
+        68.88999938964844,
+        90.63191986083984,
+        291.2148742675781,
+        109.3369140625
+      ],
+      "text_sha256": "3cd6393a8ae84aea52339a7e955b0a860d76b304eb4974dece6fc7b04e3d58d4"
+    },
+    {
+      "block_id": "page-0451-block-0003",
+      "order": 3,
+      "text": "Riluzole\n50mg bd added to existing drug \ntreatment122\n",
+      "bbox": [
+        68.88999938964844,
+        115.6568832397461,
+        174.34747314453125,
+        144.359375
+      ],
+      "text_sha256": "a5312944b867446ee829144f08024a7ffd96004999ac425cf1d645670e111479"
+    },
+    {
+      "block_id": "page-0451-block-0004",
+      "order": 4,
+      "text": "Variable results in early trials110\n",
+      "bbox": [
+        211.0,
+        115.6568832397461,
+        308.14935302734375,
+        124.3643798828125
+      ],
+      "text_sha256": "2596bc8794157ead47b39af75cac097414fb6d0eecbc644445d1e0df516896d3"
+    },
+    {
+      "block_id": "page-0451-block-0005",
+      "order": 5,
+      "text": "Anti-androgen – Triptorelin\n3.75mg IM every 4 weeks added to \nexisting drug treatment123\n",
+      "bbox": [
+        68.88999938964844,
+        150.68190002441406,
+        184.33750915527344,
+        179.3843994140625
+      ],
+      "text_sha256": "d43fc3a1e52bd6172a668e45c331ff9111071e6bcc3eda2306719826c42a0013"
+    },
+    {
+      "block_id": "page-0451-block-0006",
+      "order": 6,
+      "text": "Open label study done in six men\n",
+      "bbox": [
+        211.0,
+        150.68190002441406,
+        317.2750244140625,
+        159.389404296875
+      ],
+      "text_sha256": "cac8e0fd26f66ceb6b46f79b5d72d23ac61617ae82afaceb1d8e11ff3ca24b41"
+    },
+    {
+      "block_id": "page-0451-block-0007",
+      "order": 7,
+      "text": "i.v. treatment\nClomipramine IV124\n",
+      "bbox": [
+        68.88999938964844,
+        185.70689392089844,
+        129.51502990722656,
+        204.41189575195312
+      ],
+      "text_sha256": "2ae232df043f1231f0b53cc388116719d96748b140a4d37f61baa38a7ba0d21d"
+    },
+    {
+      "block_id": "page-0451-block-0008",
+      "order": 8,
+      "text": "Ketamine IV125,126\n",
+      "bbox": [
+        68.88999938964844,
+        208.70689392089844,
+        123.43669128417969,
+        217.41439819335938
+      ],
+      "text_sha256": "eefd189b21ea4d4cac835c77a69ddef1970afa18243a8eb0206a238dd195f9a7"
+    },
+    {
+      "block_id": "page-0451-block-0009",
+      "order": 9,
+      "text": "Quicker onset of action suggested compared to oral treatments. \nOne clomipramine study suggests clomipramine IV efficacy after \nfailure with oral clomipramine\nKetamine – developing evidence base110\n",
+      "bbox": [
+        211.0,
+        185.70689392089844,
+        417.8350524902344,
+        224.40689086914062
+      ],
+      "text_sha256": "82967195e64a6c086372bdc26c97edc3fe026d391fa3222d2c0bb8aa298128e9"
+    },
+    {
+      "block_id": "page-0451-block-0010",
+      "order": 10,
+      "text": "Once weekly morphine\n15–45mg added to existing drug \ntreatment127\n",
+      "bbox": [
+        68.88999938964844,
+        230.7318878173828,
+        176.01246643066406,
+        259.43438720703125
+      ],
+      "text_sha256": "986266443d8857a89746ae4eea646e1d7832f379f54cea68a89cad8297af4e92"
+    },
+    {
+      "block_id": "page-0451-block-0011",
+      "order": 11,
+      "text": "Small study involving 23 treatment-resistant patients. Positive \neffects were transient.\n",
+      "bbox": [
+        211.0,
+        230.7318878173828,
+        408.2275695800781,
+        249.4368896484375
+      ],
+      "text_sha256": "d10ff905be4db4add7a743b176192bbfaa0b48429152899e0bfbb8d5dd06d3b0"
+    },
+    {
+      "block_id": "page-0451-block-0012",
+      "order": 12,
+      "text": "Box 3.8  Social phobia (social anxiety disorder)\n",
+      "bbox": [
+        69.13999938964844,
+        309.3814697265625,
+        237.12551879882812,
+        319.4539794921875
+      ],
+      "text_sha256": "a177e221d2cb7e61533dedf8b23f5e9598fc4b7719d7b5a2d45d4a5683968a36"
+    },
+    {
+      "block_id": "page-0451-block-0013",
+      "order": 13,
+      "text": "First-line drug treatment128 (In order of preference)\n",
+      "bbox": [
+        69.13999938964844,
+        335.6664733886719,
+        238.83743286132812,
+        344.5539855957031
+      ],
+      "text_sha256": "495486b0d3e39031d0527fa7b89eb42faa45744391794fb0e178d9c0ac5c92d7"
+    },
+    {
+      "block_id": "page-0451-block-0014",
+      "order": 14,
+      "text": "SSRIs\n(Up to maximum licensed dose)\n",
+      "bbox": [
+        69.14240264892578,
+        350.8689880371094,
+        169.57489013671875,
+        369.573974609375
+      ],
+      "text_sha256": "fbe5d8ec5e666b5f599d358caa9aba746a3fa798a95d87edcb17c7d3cad241b0"
+    },
+    {
+      "block_id": "page-0451-block-0015",
+      "order": 15,
+      "text": "If no response to the first SSRI, try an alternative SSRI\nSupporting meta-analyses for fluvoxamine129 and citalopram130\n",
+      "bbox": [
+        184.139892578125,
+        350.8689880371094,
+        383.3145751953125,
+        369.5789794921875
+      ],
+      "text_sha256": "1601ddbd4d5759b30cba2ca613ecbb606c5b8bda799f6a89ec0c1ba1c72452e1"
+    },
+    {
+      "block_id": "page-0451-block-0016",
+      "order": 16,
+      "text": "Emerging data for vilazodone131\n",
+      "bbox": [
+        184.14010620117188,
+        370.8714904785156,
+        285.6099548339844,
+        379.5789794921875
+      ],
+      "text_sha256": "5a8d0ded1cca4358b08b5e8f8971787f95b64a75382b18dd69a87837b4c5bfea"
+    },
+    {
+      "block_id": "page-0451-block-0017",
+      "order": 17,
+      "text": "Venlafaxine modified release\n75–225mg/day\n",
+      "bbox": [
+        69.13999938964844,
+        385.8965148925781,
+        160.25747680664062,
+        404.60150146484375
+      ],
+      "text_sha256": "f3fcdb2e60e3ab26d200351a997d27e93465837ecaa359a6764b392d9adaae13"
+    },
+    {
+      "block_id": "page-0451-block-0018",
+      "order": 18,
+      "text": "Second-line drug treatment (Less well tolerated or weaker evidence base, no order of preference)\n",
+      "bbox": [
+        69.13999938964844,
+        410.7364807128906,
+        388.22747802734375,
+        419.6239929199219
+      ],
+      "text_sha256": "ab9ff3f5cbd1ad5f754afc6f4b64af3b5539ef62558fe3b556e109a322e5c90a"
+    },
+    {
+      "block_id": "page-0451-block-0019",
+      "order": 19,
+      "text": "Olanzapine\n5–20mg132\nFew studies with antipsychotics. Most evidence with olanzapine\n",
+      "bbox": [
+        69.13999938964844,
+        425.9389953613281,
+        387.49505615234375,
+        444.64398193359375
+      ],
+      "text_sha256": "7688dd3e026bdc0fef25444705d6316a9cefc5d461919b9a44b636a3192d050e"
+    },
+    {
+      "block_id": "page-0451-block-0020",
+      "order": 20,
+      "text": "Atenolol\n25–100mg/day\nReduces autonomic symptoms in performance situations132\n",
+      "bbox": [
+        69.14250183105469,
+        450.9739990234375,
+        371.8663635253906,
+        469.6789855957031
+      ],
+      "text_sha256": "40d3b2b74ab548ed4ff3fd0d9e7ca2792c2173c5c43503b83e61d6778c15f6df"
+    },
+    {
+      "block_id": "page-0451-block-0021",
+      "order": 21,
+      "text": "Benzodiazepines\nClonazepam\n0.3–6mg/day132\n",
+      "bbox": [
+        69.13999938964844,
+        475.9964904785156,
+        122.06749725341797,
+        504.698974609375
+      ],
+      "text_sha256": "91c1dcfd0839d430ff9c58b0033e88a786a37ab635efd94f78d32c9da0f15851"
+    },
+    {
+      "block_id": "page-0451-block-0022",
+      "order": 22,
+      "text": "Sertraline plus clonazepam\nup to 3mg/day133\n",
+      "bbox": [
+        69.13999938964844,
+        505.9964904785156,
+        154.5574951171875,
+        524.7014770507812
+      ],
+      "text_sha256": "3a70a784c13afcd1172c504e9ef525549e68cf27e652f3098455ef0195159544"
+    },
+    {
+      "block_id": "page-0451-block-0023",
+      "order": 23,
+      "text": "Benzodiazepines are helpful on PRN basis. Most evidence for treatment \nwith clonazepam and bromazepam\nSwitching an SSRI to venlafaxine no more effective than adding clonazepam \nto SSRI133\n",
+      "bbox": [
+        184.13999938964844,
+        475.9964904785156,
+        428.8950500488281,
+        514.6964721679688
+      ],
+      "text_sha256": "416eed35181f5833d2d3df2cce65572620f176928eea4ccaf46e26e331f00f40"
+    },
+    {
+      "block_id": "page-0451-block-0024",
+      "order": 24,
+      "text": "Gabapentin\n900–3600mg/day132\n",
+      "bbox": [
+        69.13999938964844,
+        531.021484375,
+        133.12562561035156,
+        549.7265014648438
+      ],
+      "text_sha256": "0945b18c4e8b62918cb7c45e7d12240a647519cb3a4f7554c9457c4d8801fe2e"
+    },
+    {
+      "block_id": "page-0451-block-0025",
+      "order": 25,
+      "text": "Levetiracetam\n300–3000mg/day in divided \ndoses134\n",
+      "bbox": [
+        69.13999938964844,
+        556.0465087890625,
+        160.84246826171875,
+        584.7490234375
+      ],
+      "text_sha256": "e5c5a0aee1c735d8a2518ca4a1139b30332bf9c4c01c967e4fc85b5caedace2e"
+    },
+    {
+      "block_id": "page-0451-block-0026",
+      "order": 26,
+      "text": "Box 3.7  (Continued)\n",
+      "bbox": [
+        69.13980102539062,
+        72.32801055908203,
+        145.1977996826172,
+        82.4005126953125
+      ],
+      "text_sha256": "93e22be0a95407366c2431cc65b8b8955762d08ac415f3a8c95f8e946c92d1ce"
+    },
+    {
+      "block_id": "page-0451-block-0027",
+      "order": 27,
+      "text": "(Continued)\n",
+      "bbox": [
+        392.875,
+        593.382568359375,
+        428.88995361328125,
+        602.1350708007812
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0451-block-0028",
+      "order": 28,
+      "text": "bd, bis die (twice a day); CBT (cognitive behavioural therapy)\n",
+      "bbox": [
+        61.892486572265625,
+        280.985107421875,
+        254.84498596191406,
+        289.6925964355469
+      ],
+      "text_sha256": "c5870784f33729b632709f3f33bd58f13e402cd1caf85670018216b5721d4fe9"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

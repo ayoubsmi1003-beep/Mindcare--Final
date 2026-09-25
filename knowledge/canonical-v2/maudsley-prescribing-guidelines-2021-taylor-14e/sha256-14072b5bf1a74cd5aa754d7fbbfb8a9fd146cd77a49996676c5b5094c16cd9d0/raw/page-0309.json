@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0309",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 309,
+  "source_page_index": 308,
+  "source_page_display": 309,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "288    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  2\nBipolar depression\nBipolar depression shares the same diagnostic criteria for a major depressive episode in \nmajor depressive disorder but episodes may differ in severity, time course, liability to \nrecurrence and response to drug treatment. Episodes of bipolar depression are, com-\npared with unipolar depression, more rapid in onset, more frequent, more severe, \nshorter and more likely to involve delusions and reverse neuro-vegetative symptoms \nsuch as hyperphagia and hypersomnia.1–3 Around 15% of people with bipolar depres-\nsion commit suicide,4 a statistic that reflects the severity and frequency of depressive \nepisodes. Bipolar depression affords greater socio-economic burden than either mania \nor unipolar major depression5 and comprises the majority of symptomatic illness in \nbipolar affective disorder with respect to time.6,7\nThe drug treatment of bipolar depression is somewhat controversial for two reasons. \nFirst, there are few well-conducted RCTs specifically in bipolar depression, and second, \nthe condition entails consideration of the long-term outcome rather than only the dis-\ncrete depressive episode response.8 We have some knowledge of the therapeutic effects \nof drugs in bipolar depressive episodes but more limited awareness of the therapeutic \nor deleterious effects of drugs in the longer term.\nIn the UK, NICE recommends the initial use of fluoxetine combined with olanzapine \nor quetiapine on its own (assuming an antipsychotic is not already prescribed).9 \nLamotrigine is considered to be a second-line treatment. BAP guidelines10 have lamo-\ntrigine as a first-line option, albeit with the caveat that a mood stabiliser or antipsy-\nchotic will be needed to protect against mania in the longer term. Lurasidone is also a \nfirst-line option in the BAP guidelines.\nMore recent consensus guidelines are broadly but not precisely in agreement. The \nCanadian Network for Mood and Anxiety Treatments (CANMAT)/International \nSociety for Bipolar Disorders (ISBD) guidelines recommend quetiapine, lurasidone \n(with or without a mood stabiliser), lamotrigine and lithium as first-line treatments.11 \nThe 2020 RANZCP guidelines suggest lithium, lamotrigine and valproate (in that \norder) as first-line agents, and quetiapine, lurasidone and cariprazine (again, in that \norder) as second-line treatments.12\nTables 2.9–2.11 give some broad guidance on treatment options in bipolar \ndepression.\nMeta-analysis in bipolar depression\nMeta-analytic studies in bipolar depression are constrained by the variety of methods \nused to assess efficacy. This means that many scientifically robust studies cannot be \nincluded in some meta-analyses because their parameters (outcomes, duration, etc.) are \nnot shared with other studies and so cannot be compared with them. Early lithium \nstudies are an important example – their short duration and cross-over design precludes \ntheir inclusion in meta-analysis. BAP guidelines are somewhat dismissive (perhaps cor-\nrectly) of network meta-analyses because outcome is heavily influenced by inclusion \ncriteria and because findings often contradict direct comparisons.10\nA meta-analysis of five trials (906 participants) revealed that antidepressants were no \nbetter than placebo with respect to response or remission, although results approached \n",
+  "raw_text_sha256": "e1cd20fc49780585a5e8fcfcf549c2093d117a8851b105a95a8b128684cdee1f",
+  "coordinates_sha256": "f1bb821323fd5037fa28c1d23522c1d2e6953d3da1ff95b53a6b593dee58ac66",
+  "block_sequence_sha256": "17975820f9c8967f3c9445c9e98bdb308e0411ce321bfe3bba02a39665d9c066",
+  "blocks": [
+    {
+      "block_id": "page-0309-block-0000",
+      "order": 0,
+      "text": "288    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "a088f1b769812bf25fb7f41b0987f354287efaa7249d1cd41bc6dc9403c85ba2"
+    },
+    {
+      "block_id": "page-0309-block-0001",
+      "order": 1,
+      "text": "CHAPTER  2\n",
+      "bbox": [
+        19.520000457763672,
+        145.23529052734375,
+        29.0,
+        188.80328369140625
+      ],
+      "text_sha256": "5befcde2fefe074681a51514b484ad31516d952c51183625b5b7b1fb84f30d2c"
+    },
+    {
+      "block_id": "page-0309-block-0002",
+      "order": 2,
+      "text": "Bipolar depression\n",
+      "bbox": [
+        68.88999938964844,
+        66.06546020507812,
+        164.64498901367188,
+        79.1004638671875
+      ],
+      "text_sha256": "ab6a4809bcb8ca5f52fffdeaccd1c1285bba7da6fcd9ba1a2c6b736b653fd0c2"
+    },
+    {
+      "block_id": "page-0309-block-0003",
+      "order": 3,
+      "text": "Bipolar depression shares the same diagnostic criteria for a major depressive episode in \nmajor depressive disorder but episodes may differ in severity, time course, liability to \nrecurrence and response to drug treatment. Episodes of bipolar depression are, com-\npared with unipolar depression, more rapid in onset, more frequent, more severe, \nshorter and more likely to involve delusions and reverse neuro-vegetative symptoms \nsuch as hyperphagia and hypersomnia.1–3 Around 15% of people with bipolar depres-\nsion commit suicide,4 a statistic that reflects the severity and frequency of depressive \nepisodes. Bipolar depression affords greater socio-economic burden than either mania \nor unipolar major depression5 and comprises the majority of symptomatic illness in \nbipolar affective disorder with respect to time.6,7\n",
+      "bbox": [
+        61.88770294189453,
+        84.91046142578125,
+        436.70025634765625,
+        204.6304931640625
+      ],
+      "text_sha256": "9e013ce533edaa4be18f8b51e8087859bc69e5070c50dac8de122c88793524ba"
+    },
+    {
+      "block_id": "page-0309-block-0004",
+      "order": 4,
+      "text": "The drug treatment of bipolar depression is somewhat controversial for two reasons. \nFirst, there are few well-conducted RCTs specifically in bipolar depression, and second, \nthe condition entails consideration of the long-term outcome rather than only the dis-\ncrete depressive episode response.8 We have some knowledge of the therapeutic effects \nof drugs in bipolar depressive episodes but more limited awareness of the therapeutic \nor deleterious effects of drugs in the longer term.\n",
+      "bbox": [
+        61.88999938964844,
+        204.91049194335938,
+        436.70001220703125,
+        276.6304931640625
+      ],
+      "text_sha256": "afea134a7088941af8defa94743a5b9ed4dedaafa5a5e484a09942e78010cf00"
+    },
+    {
+      "block_id": "page-0309-block-0005",
+      "order": 5,
+      "text": "In the UK, NICE recommends the initial use of fluoxetine combined with olanzapine \nor quetiapine on its own (assuming an antipsychotic is not already prescribed).9 \nLamotrigine is considered to be a second-line treatment. BAP guidelines10 have lamo-\ntrigine as a first-line option, albeit with the caveat that a mood stabiliser or antipsy-\nchotic will be needed to protect against mania in the longer term. Lurasidone is also a \nfirst-line option in the BAP guidelines.\n",
+      "bbox": [
+        61.88970947265625,
+        276.9104919433594,
+        436.67041015625,
+        348.6304931640625
+      ],
+      "text_sha256": "e09518c5632502f62961cd8254c383b4340a7fed602fb971e0fad383d28eac5b"
+    },
+    {
+      "block_id": "page-0309-block-0006",
+      "order": 6,
+      "text": "More recent consensus guidelines are broadly but not precisely in agreement. The \nCanadian Network for Mood and Anxiety Treatments (CANMAT)/International \nSociety for Bipolar Disorders (ISBD) guidelines recommend quetiapine, lurasidone \n(with or without a mood stabiliser), lamotrigine and lithium as first-line treatments.11 \nThe 2020 RANZCP guidelines suggest lithium, lamotrigine and valproate (in that \norder) as first-line agents, and quetiapine, lurasidone and cariprazine (again, in that \norder) as second-line treatments.12\n",
+      "bbox": [
+        61.88970947265625,
+        348.9104919433594,
+        436.6896667480469,
+        432.6304931640625
+      ],
+      "text_sha256": "4bec5e0004e3cd83efce8c432f5900730c4f81266a324205967ce0994ffe4ca1"
+    },
+    {
+      "block_id": "page-0309-block-0007",
+      "order": 7,
+      "text": "Tables 2.9–2.11 give some broad guidance on treatment options in bipolar \ndepression.\n",
+      "bbox": [
+        61.88999938964844,
+        432.9104919433594,
+        436.70989990234375,
+        456.6304931640625
+      ],
+      "text_sha256": "6f5df7b1fc6b5af1b113f1f653137381ed8f7a2834f879a9793a3b22a4e67b98"
+    },
+    {
+      "block_id": "page-0309-block-0008",
+      "order": 8,
+      "text": "Meta-analysis in bipolar depression\n",
+      "bbox": [
+        61.88999938964844,
+        474.06549072265625,
+        245.0509490966797,
+        487.1004943847656
+      ],
+      "text_sha256": "c9e3bf459ad6f0f9249e4a195b52577164dbbdcbce82ff5e2e490f54151f4366"
+    },
+    {
+      "block_id": "page-0309-block-0009",
+      "order": 9,
+      "text": "Meta-analytic studies in bipolar depression are constrained by the variety of methods \nused to assess efficacy. This means that many scientifically robust studies cannot be \nincluded in some meta-analyses because their parameters (outcomes, duration, etc.) are \nnot shared with other studies and so cannot be compared with them. Early lithium \nstudies are an important example – their short duration and cross-over design precludes \ntheir inclusion in meta-analysis. BAP guidelines are somewhat dismissive (perhaps cor-\nrectly) of network meta-analyses because outcome is heavily influenced by inclusion \ncriteria and because findings often contradict direct comparisons.10\n",
+      "bbox": [
+        61.889984130859375,
+        492.9104919433594,
+        436.7199401855469,
+        588.6304931640625
+      ],
+      "text_sha256": "7d8ef0107e36553638329c0a0008a10aa3029a511f0836a25277d03eb8131189"
+    },
+    {
+      "block_id": "page-0309-block-0010",
+      "order": 10,
+      "text": "A meta-analysis of five trials (906 participants) revealed that antidepressants were no \nbetter than placebo with respect to response or remission, although results approached \n",
+      "bbox": [
+        61.88999938964844,
+        588.9104614257812,
+        436.69000244140625,
+        612.6304931640625
+      ],
+      "text_sha256": "149cf5ce4320e7fb3be68de7b9b30739d8301982de36c38438c5a9e5cc64614b"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

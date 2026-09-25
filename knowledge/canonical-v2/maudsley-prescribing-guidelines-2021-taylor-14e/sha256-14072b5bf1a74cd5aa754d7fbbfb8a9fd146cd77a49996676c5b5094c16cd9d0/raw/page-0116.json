@@ -1,0 +1,275 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0116",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 116,
+  "source_page_index": 115,
+  "source_page_display": 116,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    95\nCHAPTER 1\nPenfluridol weekly\nPenfluridol is a diphenylbutylpiperidine FGA, which remains available in some coun-\ntries such as India and can be imported to other countries. It is similar in efficacy and \ntolerability to other FGAs.1\nPenfluridol is unusual in having a very long plasma half-life – at least 60 hours.2 After \noral administration, peak levels are reached within 12 hours and drug can still be \ndetected 168 hours after a single oral dose.3 Its long duration of action seems to be a \nresult of rapid distribution into fat tissue, which acts as a drug reservoir.4 This property \nallows penfluridol to be used as a once-weekly oral therapy for supervised ingestion – \nan alternative to long-acting injectable antipsychotics.\nSeveral trials have examined the use of once-weekly oral penfluridol, usually in doses \nranging from 5mg to 160mg per week.1 When given in this manner it is at least as effec-\ntive as depot FGAs5,6 and is better tolerated overall.1 Although dose–response relation-\nships remain unclear, a weekly dose of 30mg is adequately effective7 and a dose of \n120mg a day (i.e. a total of 840mg a week) has been used in at least one trial.8\nAdverse effects include acute EPS, increased prolactin and tardive dyskinesia, as \nmight be expected. It is usually not sedative. Like pimozide (another diphenylbutylpi-\nperidine), penfluridol appears to prolong the QT interval.9 Penfluridol is a cytotoxic \nagent which may have anticancer properties.10\nSummary\n■\n■Penfluridol can be given orally once a week.\n■\n■Supervised weekly administration is at least as effective as long-acting injections.\n■\n■The usual dose is 20–40mg a week.\n■\n■Adverse effects are those common to FGAs and include QT prolongation.\n■\n■Sedation is minimal.\nIn practice, penfluridol is usually started at a dose of 20mg, and this dose is increased \nto a maximum of 40mg after assessment. Steady-state levels are effectively reached after \n2–3 weeks. Monitoring includes investigations into renal and hepatic function, changes \nin cardiometabolic parameter such as lipids, blood glucose, echocardiogram, and gen-\neral adverse effect screening.\nReferences\n\t 1.\t Soares BG, et al. Penfluridol for schizophrenia. Cochrane Database Syst Rev 2006; CD002923.\n\t 2.\t Janssen PA, et al. The pharmacology of penfluridol (R 16341) a new potent and orally long-acting neuroleptic drug. Eur J Pharmacol 1970; \n11:139–154.\n\t 3.\t Cooper SF, et al. Penfluridol steady-state kinetics in psychiatric patients. Clin Pharmacol Ther 1975; 18:325–329.\n\t 4.\t Migdalof BH, et al. Penfluridol: a neuroleptic drug designed for long duration of action. Drug Metab Rev 1979; 9:281–299.\n\t 5.\t Iqbal MJ, et al. A long term comparative trial of penfluridol and fluphenazine decanoate in schizophrenic outpatients. J Clin Psychiatry 1978; \n39:375–379.\n\t 6.\t Quitkin F, et al. Long-acting oral vs injectable antipsychotic drugs in schizophrenics: a one-year double-blind comparison in multiple episode \nschizophrenics. Arch Gen Psychiatry 1978; 35:889–892.\n\t 7.\t Van Praag HM, et al. Controlled trial of penfluridol in acute psychosis. Br Med J 1971; 4:710–713.\n\t 8.\t Shopsin B, et al. Penfluridol: an open phase III study in acute newly admitted hospitalized schizophrenic patients. Psychopharmacology 1977; \n55:157–164.\n\t 9.\t Bhattacharyya R, et al. Resurgence of penfluridol: merits and demerits. East J Psychiatry 2015; 18:23–29.\n\t10.\t Ashraf-Uz-Zaman M, et al. Analogs of penfluridol as chemotherapeutic agents with reduced central nervous system activity. Bioorg Med \nChem Lett 2018; 28:3652–3657.\n",
+  "raw_text_sha256": "fe1b2777936d9da7ff1dad6e5c1d6ac434a04c4ba98b433c1f83f4ca5ef784cd",
+  "coordinates_sha256": "67123b35a508d35118ded38005c6dab7b23ed0cc51178fdc6ebf1a782f44760c",
+  "block_sequence_sha256": "d80f57c4682d0403b83eb08521cb94440ce4682baa84b5029f4f5f4e5b97f2d5",
+  "blocks": [
+    {
+      "block_id": "page-0116-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    95\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "4ae958c2d72686688e160ad78bc309a408421763c7b2ef2fee19abfbc798d72d"
+    },
+    {
+      "block_id": "page-0116-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0116-block-0002",
+      "order": 2,
+      "text": "Penfluridol weekly\n",
+      "bbox": [
+        54.99909973144531,
+        66.06448364257812,
+        152.20606994628906,
+        79.0994873046875
+      ],
+      "text_sha256": "2c856764d28f445f790802b52147f8d780bedb47dd33477ffa4019b5bc1cbca3"
+    },
+    {
+      "block_id": "page-0116-block-0003",
+      "order": 3,
+      "text": "Penfluridol is a diphenylbutylpiperidine FGA, which remains available in some coun-\ntries such as India and can be imported to other countries. It is similar in efficacy and \ntolerability to other FGAs.1\n",
+      "bbox": [
+        47.99909973144531,
+        84.90948486328125,
+        422.7190856933594,
+        120.62948608398438
+      ],
+      "text_sha256": "ade213467e5a10a2095c51562e1386d8d177cdff3629f42bbbd0c392336f307f"
+    },
+    {
+      "block_id": "page-0116-block-0004",
+      "order": 4,
+      "text": "Penfluridol is unusual in having a very long plasma half-life – at least 60 hours.2 After \noral administration, peak levels are reached within 12 hours and drug can still be \ndetected 168 hours after a single oral dose.3 Its long duration of action seems to be a \nresult of rapid distribution into fat tissue, which acts as a drug reservoir.4 This property \nallows penfluridol to be used as a once-weekly oral therapy for supervised ingestion – \nan alternative to long-acting injectable antipsychotics.\n",
+      "bbox": [
+        47.99836730957031,
+        120.90948486328125,
+        422.7826232910156,
+        192.62948608398438
+      ],
+      "text_sha256": "47ecbbee74241064b3cee7af00c19cbbff039dbbc9499eb5885302b81ea79e6f"
+    },
+    {
+      "block_id": "page-0116-block-0005",
+      "order": 5,
+      "text": "Several trials have examined the use of once-weekly oral penfluridol, usually in doses \nranging from 5mg to 160mg per week.1 When given in this manner it is at least as effec-\ntive as depot FGAs5,6 and is better tolerated overall.1 Although dose–response relation-\nships remain unclear, a weekly dose of 30mg is adequately effective7 and a dose of \n120mg a day (i.e. a total of 840mg a week) has been used in at least one trial.8\n",
+      "bbox": [
+        47.99488830566406,
+        192.90948486328125,
+        422.8126525878906,
+        252.62942504882812
+      ],
+      "text_sha256": "c1309ac4e93815b70a9ab2677c0de6ad2543c8b83f75c017ff45de38e406228a"
+    },
+    {
+      "block_id": "page-0116-block-0006",
+      "order": 6,
+      "text": "Adverse effects include acute EPS, increased prolactin and tardive dyskinesia, as \nmight be expected. It is usually not sedative. Like pimozide (another diphenylbutylpi-\nperidine), penfluridol appears to prolong the QT interval.9 Penfluridol is a cytotoxic \nagent which may have anticancer properties.10\n",
+      "bbox": [
+        47.99909973144531,
+        252.909423828125,
+        422.7724914550781,
+        300.6294250488281
+      ],
+      "text_sha256": "534b4489d5f573c008935c96618bbb69ebfdce60b1232709bb7ea36706fe55fd"
+    },
+    {
+      "block_id": "page-0116-block-0007",
+      "order": 7,
+      "text": "Summary\n",
+      "bbox": [
+        47.99909973144531,
+        318.0644226074219,
+        96.90509033203125,
+        331.09942626953125
+      ],
+      "text_sha256": "3cbb36aca330b3bd113955dfbada0adb7a5f95ad9f678bd61f175406c6a37e95"
+    },
+    {
+      "block_id": "page-0116-block-0008",
+      "order": 8,
+      "text": "■\n■Penfluridol can be given orally once a week.\n",
+      "bbox": [
+        47.999000549316406,
+        342.909423828125,
+        247.04908752441406,
+        354.6294250488281
+      ],
+      "text_sha256": "3a26263117597a22fccad3d253243b0585f3a1449c49db8b00a11eba117dd11a"
+    },
+    {
+      "block_id": "page-0116-block-0009",
+      "order": 9,
+      "text": "■\n■Supervised weekly administration is at least as effective as long-acting injections.\n",
+      "bbox": [
+        47.999000549316406,
+        354.909423828125,
+        404.2490539550781,
+        366.6294250488281
+      ],
+      "text_sha256": "ed93a4207dff46cc9575b991bf62a40589d6308773f3651ae8f2e9023f8ad7bc"
+    },
+    {
+      "block_id": "page-0116-block-0010",
+      "order": 10,
+      "text": "■\n■The usual dose is 20–40mg a week.\n",
+      "bbox": [
+        47.999000549316406,
+        366.909423828125,
+        209.80906677246094,
+        378.6294250488281
+      ],
+      "text_sha256": "29c17745038e516617d448db4b3128c8d556def2b08d93b8f713213c40791d6e"
+    },
+    {
+      "block_id": "page-0116-block-0011",
+      "order": 11,
+      "text": "■\n■Adverse effects are those common to FGAs and include QT prolongation.\n",
+      "bbox": [
+        47.999000549316406,
+        378.909423828125,
+        374.7890319824219,
+        390.6294250488281
+      ],
+      "text_sha256": "0829cf1ee7281c42efc00b15df87127100c10f54b4a9500e6844f1f0dae8bde9"
+    },
+    {
+      "block_id": "page-0116-block-0012",
+      "order": 12,
+      "text": "■\n■Sedation is minimal.\n",
+      "bbox": [
+        47.999000549316406,
+        390.909423828125,
+        144.7790985107422,
+        402.6294250488281
+      ],
+      "text_sha256": "d7feea8bbf475f8623d8e0be77ddde854c0a65e8cf2c7f1790d73994e4a732b0"
+    },
+    {
+      "block_id": "page-0116-block-0013",
+      "order": 13,
+      "text": "In practice, penfluridol is usually started at a dose of 20mg, and this dose is increased \nto a maximum of 40mg after assessment. Steady-state levels are effectively reached after \n2–3 weeks. Monitoring includes investigations into renal and hepatic function, changes \nin cardiometabolic parameter such as lipids, blood glucose, echocardiogram, and gen-\neral adverse effect screening.\n",
+      "bbox": [
+        47.99909973144531,
+        408.909423828125,
+        422.7989807128906,
+        468.6294250488281
+      ],
+      "text_sha256": "ad177d613fdb2e6e3c06f115b9fed96f8d3e1426dd3d30c8d897e0f1f9e785c2"
+    },
+    {
+      "block_id": "page-0116-block-0014",
+      "order": 14,
+      "text": "References\n",
+      "bbox": [
+        47.99909973144531,
+        486.0644226074219,
+        104.03309631347656,
+        499.09942626953125
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0116-block-0015",
+      "order": 15,
+      "text": "\t 1.\t Soares BG, et al. Penfluridol for schizophrenia. Cochrane Database Syst Rev 2006; CD002923.\n\t 2.\t Janssen PA, et al. The pharmacology of penfluridol (R 16341) a new potent and orally long-acting neuroleptic drug. Eur J Pharmacol 1970; \n",
+      "bbox": [
+        47.99909973144531,
+        504.1854248046875,
+        421.6371765136719,
+        520.2174072265625
+      ],
+      "text_sha256": "e51ef5d6c6a4839528218c763141aa6d66d58706233448bf4fc82696213cd46c"
+    },
+    {
+      "block_id": "page-0116-block-0016",
+      "order": 16,
+      "text": "11:139–154.\n\t 3.\t Cooper SF, et al. Penfluridol steady-state kinetics in psychiatric patients. Clin Pharmacol Ther 1975; 18:325–329.\n\t 4.\t Migdalof BH, et al. Penfluridol: a neuroleptic drug designed for long duration of action. Drug Metab Rev 1979; 9:281–299.\n\t 5.\t Iqbal MJ, et al. A long term comparative trial of penfluridol and fluphenazine decanoate in schizophrenic outpatients. J Clin Psychiatry 1978; \n",
+      "bbox": [
+        48.01110076904297,
+        522.0414428710938,
+        421.7330627441406,
+        556.2174072265625
+      ],
+      "text_sha256": "0165927e18beb31d87c36c199e24efd2c5f1fa42ab3e55387e81a12eca3c445e"
+    },
+    {
+      "block_id": "page-0116-block-0017",
+      "order": 17,
+      "text": "39:375–379.\n\t 6.\t Quitkin F, et al. Long-acting oral vs injectable antipsychotic drugs in schizophrenics: a one-year double-blind comparison in multiple episode \n",
+      "bbox": [
+        48.02909851074219,
+        558.0414428710938,
+        421.6612243652344,
+        574.2174072265625
+      ],
+      "text_sha256": "b3616c62896baf7871f0a3677e5ce3c23cb4c6a4952ccc3faac2bf32a11f7e44"
+    },
+    {
+      "block_id": "page-0116-block-0018",
+      "order": 18,
+      "text": "schizophrenics. Arch Gen Psychiatry 1978; 35:889–892.\n\t 7.\t Van Praag HM, et al. Controlled trial of penfluridol in acute psychosis. Br Med J 1971; 4:710–713.\n\t 8.\t Shopsin B, et al. Penfluridol: an open phase III study in acute newly admitted hospitalized schizophrenic patients. Psychopharmacology 1977; \n",
+      "bbox": [
+        48.03510284423828,
+        576.0414428710938,
+        421.7391052246094,
+        601.2174072265625
+      ],
+      "text_sha256": "43b3b07c9b61c1c53b288ab9e01a437119ee614913f6a679be265c6935aff3e6"
+    },
+    {
+      "block_id": "page-0116-block-0019",
+      "order": 19,
+      "text": "55:157–164.\n\t 9.\t Bhattacharyya R, et al. Resurgence of penfluridol: merits and demerits. East J Psychiatry 2015; 18:23–29.\n\t10.\t Ashraf-Uz-Zaman M, et al. Analogs of penfluridol as chemotherapeutic agents with reduced central nervous system activity. Bioorg Med \n",
+      "bbox": [
+        48.047096252441406,
+        603.0414428710938,
+        421.7570495605469,
+        628.2174072265625
+      ],
+      "text_sha256": "7962dfc3432c02b6f556561fa061c96fc564462a70f4b989b18c0c2ebbc99791"
+    },
+    {
+      "block_id": "page-0116-block-0020",
+      "order": 20,
+      "text": "Chem Lett 2018; 28:3652–3657.\n",
+      "bbox": [
+        59.057098388671875,
+        630.0414428710938,
+        144.76107788085938,
+        637.2174072265625
+      ],
+      "text_sha256": "6d9d1fa204b822761ee578475e457761d9c767589a46c18467a09ea3fa5ea0d0"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

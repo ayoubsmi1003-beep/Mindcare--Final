@@ -1,0 +1,59 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0020",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 20,
+  "source_page_index": 19,
+  "source_page_display": 20,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "List of abbreviations    xix\nNPI\t\nneuropsychiatric inventory\nNRT\t\nnicotine replacement therapy\nNSAID\t\n\u0007non‐steroidal anti‐inflammatory \ndrug\nNVC\t\nneurovascular coupling\nOCD\t\nobsessive compulsive disorder\nod\t\nomni die (once a day)\nOD\t\noverdose\nOGTT\t\noral glucose tolerance test\nOOWS\t\n\u0007Objective Opiate Withdrawal \nScale\nOST\t\nopioid substitution treatment\nPANDAS\t\n\u0007Paediatric Autoimmune \nNeuropsychiatric Disorder \nAssociated with Streptococcus\nPANS\t\n\u0007Paediatric Acute‐onset \nNeuropsychiatric Syndrome\nPANSS\t\n\u0007Positive and Negative Syndrome \nScale\nPBA\t\npseudobulbar affect\nPCP\t\nphencyclidine\nPD\t\nParkinson’s disease\nPDD\t\n\u0007pervasive developmental \ndisorders\nPDD‐NOS\t\n\u0007pervasive developmental \ndisorders not otherwise specified\nP‐gp\t\nP‐glycoprotein\nPHQ‐9\t\nPatient Health Questionnaire‐9\nPICU\t\npsychiatric intensive care unit\nPLC\t\npathological laughter and crying\nPLWH\t\npeople living with HIV\nPMR\t\npost‐mortem redistribution\npo\t\nper os (by mouth)\nPOMH‐UK\t\n\u0007Prescribing Observatory for \nMental Health\nPPH\t\npost‐partum haemorrhage\nPPI\t\nproton pump inhibitor\nprn\t\npro re nata (as required)\nPT\t\nprothrombin time\nPTSD\t\npost‐traumatic stress disorder\nPWE\t\npeople with epilepsy\nqds\t\n\u0007quarter die sumendum (four \ntimes a day)\nQTc\t\n\u0007QT interval adjusted for heart \nrate\nRC\t\nresponsible clinician\nRCADS\t\n\u0007Revised Children’s Anxiety and \nDepression Scale\nRCT\t\nrandomised controlled trial\nRID\t\nrelative infant dose\nRIMA\t\n\u0007reversible inhibitor of monoam-\nine oxidase A\nRLAI\t\nrisperidone long‐acting injection\nROMI\t\n\u0007Rating of Medication Influences \nscale\nRPG\t\nrandom plasma glucose\nRR\t\nrelative risk\nRRBI\t\n\u0007restricted repetitive behaviours \nand interests\nRT\t\nrapid tranquillisation\nRTA\t\nroad traffic accident\nrTMS\t\n\u0007repetitive transcranial magnetic \nstimulation\nRUPP\t\n\u0007Research Units on Paediatric \nPsychopharmacology\nRYGB\t\nRoux‐en‐Y gastric bypass\nSADQ\t\n\u0007Severity of Alcohol Dependence \nQuestionnaire\nSAWS\t\nShort Alcohol Withdrawal Scale\nSCARED\t\n\u0007Screen for Child Anxiety and \nRelated Emotional Disorders\nSCIRS\t\n\u0007Severe Cognitive Impairment \nRating Scale\nSCRA\t\n\u0007synthetic cannabinoid receptor \nagonist\nSGA\t\n\u0007second‐generation \nantipsychotics\nSIADH\t\n\u0007syndrome of inappropriate \nantidiuretic hormone\nSIB\t\nsevere impairment battery\nSJW\t\nSt. John’s wort\nSLE\t\nsystemic lupus erythematosus\nSNRI\t\n\u0007serotonin–noradrenaline \nreuptake inhibitor\nSOAD\t\n\u0007second opinion appointed \ndoctor\nSPC\t\n\u0007summary of product \ncharacteristics\nSPECT\t\n\u0007single photon emission \ncomputed tomography\nSROM\t\nslow release oral morphine\nSS\t\nsteady state\n",
+  "raw_text_sha256": "c3a384c237cf4886df2af006c8a28ba17de8521f5b8025688dfdc48f388ed5b7",
+  "coordinates_sha256": "fdde8cb6f3f4e7badab01f27193af982e39bc06aaff79ac219286683ec09a36f",
+  "block_sequence_sha256": "c0f67b3d036754a058e4ac59d8a3ca593906a72a6aa33e0a19b46092e249db6a",
+  "blocks": [
+    {
+      "block_id": "page-0020-block-0000",
+      "order": 0,
+      "text": "List of abbreviations    xix\n",
+      "bbox": [
+        309.8648986816406,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "116be55d6286409171bcadb1c0405ca93f0a2a03142edd3ec2b765f140abacdb"
+    },
+    {
+      "block_id": "page-0020-block-0001",
+      "order": 1,
+      "text": "NPI\t\nneuropsychiatric inventory\nNRT\t\nnicotine replacement therapy\nNSAID\t\n\u0007non‐steroidal anti‐inflammatory \ndrug\nNVC\t\nneurovascular coupling\nOCD\t\nobsessive compulsive disorder\nod\t\nomni die (once a day)\nOD\t\noverdose\nOGTT\t\noral glucose tolerance test\nOOWS\t\n\u0007Objective Opiate Withdrawal \nScale\nOST\t\nopioid substitution treatment\nPANDAS\t\n\u0007Paediatric Autoimmune \nNeuropsychiatric Disorder \nAssociated with Streptococcus\nPANS\t\n\u0007Paediatric Acute‐onset \nNeuropsychiatric Syndrome\nPANSS\t\n\u0007Positive and Negative Syndrome \nScale\nPBA\t\npseudobulbar affect\nPCP\t\nphencyclidine\nPD\t\nParkinson’s disease\nPDD\t\n\u0007pervasive developmental \ndisorders\nPDD‐NOS\t\n\u0007pervasive developmental \ndisorders not otherwise specified\nP‐gp\t\nP‐glycoprotein\nPHQ‐9\t\nPatient Health Questionnaire‐9\nPICU\t\npsychiatric intensive care unit\nPLC\t\npathological laughter and crying\nPLWH\t\npeople living with HIV\nPMR\t\npost‐mortem redistribution\npo\t\nper os (by mouth)\nPOMH‐UK\t\n\u0007Prescribing Observatory for \nMental Health\nPPH\t\npost‐partum haemorrhage\nPPI\t\nproton pump inhibitor\nprn\t\npro re nata (as required)\nPT\t\nprothrombin time\nPTSD\t\npost‐traumatic stress disorder\nPWE\t\npeople with epilepsy\nqds\t\n\u0007quarter die sumendum (four \ntimes a day)\nQTc\t\n\u0007QT interval adjusted for heart \nrate\nRC\t\nresponsible clinician\n",
+      "bbox": [
+        47.99939727783203,
+        62.865379333496094,
+        228.33616638183594,
+        578.9193725585938
+      ],
+      "text_sha256": "1152933d45083688bd17102be9505d1dc5389d559b7d3812c3d4718db4ab5bf0"
+    },
+    {
+      "block_id": "page-0020-block-0002",
+      "order": 2,
+      "text": "RCADS\t\n\u0007Revised Children’s Anxiety and \nDepression Scale\nRCT\t\nrandomised controlled trial\nRID\t\nrelative infant dose\nRIMA\t\n\u0007reversible inhibitor of monoam-\nine oxidase A\nRLAI\t\nrisperidone long‐acting injection\nROMI\t\n\u0007Rating of Medication Influences \nscale\nRPG\t\nrandom plasma glucose\nRR\t\nrelative risk\nRRBI\t\n\u0007restricted repetitive behaviours \nand interests\nRT\t\nrapid tranquillisation\nRTA\t\nroad traffic accident\nrTMS\t\n\u0007repetitive transcranial magnetic \nstimulation\nRUPP\t\n\u0007Research Units on Paediatric \nPsychopharmacology\nRYGB\t\nRoux‐en‐Y gastric bypass\nSADQ\t\n\u0007Severity of Alcohol Dependence \nQuestionnaire\nSAWS\t\nShort Alcohol Withdrawal Scale\nSCARED\t\n\u0007Screen for Child Anxiety and \nRelated Emotional Disorders\nSCIRS\t\n\u0007Severe Cognitive Impairment \nRating Scale\nSCRA\t\n\u0007synthetic cannabinoid receptor \nagonist\nSGA\t\n\u0007second‐generation \nantipsychotics\nSIADH\t\n\u0007syndrome of inappropriate \nantidiuretic hormone\nSIB\t\nsevere impairment battery\nSJW\t\nSt. John’s wort\nSLE\t\nsystemic lupus erythematosus\nSNRI\t\n\u0007serotonin–noradrenaline \nreuptake inhibitor\nSOAD\t\n\u0007second opinion appointed \ndoctor\nSPC\t\n\u0007summary of product \ncharacteristics\nSPECT\t\n\u0007single photon emission \ncomputed tomography\nSROM\t\nslow release oral morphine\nSS\t\nsteady state\n",
+      "bbox": [
+        239.99334716796875,
+        62.997398376464844,
+        419.86810302734375,
+        579.0513916015625
+      ],
+      "text_sha256": "70ba3fc91597c2ede96ed002dbd0b327de06f242aca57fd136d48ae1baeadb4c"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

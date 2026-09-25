@@ -1,0 +1,287 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0798",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 798,
+  "source_page_index": 797,
+  "source_page_display": 798,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\nChapter 10\nDrug treatment of psychiatric \nsymptoms occurring in the context \nof other disorders\nGeneral principles of prescribing in HIV\nPeople living with HIV (PLWH) may experience symptoms of mental illness due to a \nvariety of factors (see Box 10.1). In practice, several of these factors may coexist within \nan individual.\nBox 10.1  Factors contributing to the development of psychiatric symptoms in people living with HIV1\n■\n■Primary (or pre-existing) psychiatric disorders\n■\n■Neurobiological changes caused by HIV in the central nervous system (CNS)\n■\n■Other infections or CNS tumours\n■\n■Antiretroviral drugs and other medical treatments (see Drugs for HIV‘in this section)\n■\n■Alcohol or substance misuse\n■\n■Adverse psychosocial factors (e.g. stigma)\n■\n■Awareness of a chronic disease requiring strict adherence to medication\nWhen prescribing psychotropics, the following principles should be adhered to:\n■\n■Start with a low dose and titrate according to tolerability and response.\n■\n■Select the simplest dosing regimen possible. (Remember that the patient’s drug regi-\nmen is likely to be complex already.)\n■\n■Select an agent with the fewest side effects. Drug interactions, medical comorbidities \nand any ongoing substance misuse must be considered.\n■\n■Ensure that management is conducted in close cooperation with the HIV specialists \nand the rest of the multidisciplinary team.\n",
+  "raw_text_sha256": "1bd4b5b95262111fa23f7f94e4b9164c3d62c21760bb651187261d6787e1be9f",
+  "coordinates_sha256": "c1bece3d43047b9a9fe17431b04602f764c811dc547c2774350bc7fbb798e9ae",
+  "block_sequence_sha256": "05bc34444d2b9a570ff4a4a3fea5471610ffcf5080eb28d95c075458e071573d",
+  "blocks": [
+    {
+      "block_id": "page-0798-block-0000",
+      "order": 0,
+      "text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\n",
+      "bbox": [
+        47.99980163574219,
+        585.1019897460938,
+        348.48388671875,
+        614.4779663085938
+      ],
+      "text_sha256": "c78fcd1eeb2357afb8eb5b97a8c858d68167bd409b9074c0da4e20c032bd5665"
+    },
+    {
+      "block_id": "page-0798-block-0001",
+      "order": 1,
+      "text": "Chapter 10\n",
+      "bbox": [
+        312.8031921386719,
+        59.724403381347656,
+        420.0011901855469,
+        82.60040283203125
+      ],
+      "text_sha256": "bd54169a33f3d09c33337c1123a0c30f63b653b568da767cda4e052142e50932"
+    },
+    {
+      "block_id": "page-0798-block-0002",
+      "order": 2,
+      "text": "Drug treatment of psychiatric \nsymptoms occurring in the context \n",
+      "bbox": [
+        60.65570068359375,
+        111.36316680908203,
+        426.11968994140625,
+        161.4351806640625
+      ],
+      "text_sha256": "1d691c2c76709debc612112fd1ddf8e2e4991f4efb85ed67fad0f8f1360f594e"
+    },
+    {
+      "block_id": "page-0798-block-0003",
+      "order": 3,
+      "text": "of other disorders\n",
+      "bbox": [
+        234.6096954345703,
+        159.3671875,
+        420.0036926269531,
+        185.43719482421875
+      ],
+      "text_sha256": "6a707aa1102ab886bab9687ac768c51ba1e7000feed1698c3cf251853996953c"
+    },
+    {
+      "block_id": "page-0798-block-0004",
+      "order": 4,
+      "text": "General principles of prescribing in HIV\n",
+      "bbox": [
+        55.5,
+        234.77447509765625,
+        256.9979553222656,
+        247.80947875976562
+      ],
+      "text_sha256": "cee1734a8061accf255a43154cee5587014faf259e4ed122feff6f3e3f586084"
+    },
+    {
+      "block_id": "page-0798-block-0005",
+      "order": 5,
+      "text": "People living with HIV (PLWH) may experience symptoms of mental illness due to a \nvariety of factors (see Box 10.1). In practice, several of these factors may coexist within \nan individual.\n",
+      "bbox": [
+        48.5,
+        253.61947631835938,
+        423.2900085449219,
+        289.3394775390625
+      ],
+      "text_sha256": "aa19ec980432f9f1e0f451672883758a305bb2cb6070837f6a9f8b2278dbcadf"
+    },
+    {
+      "block_id": "page-0798-block-0006",
+      "order": 6,
+      "text": "Box 10.1  Factors contributing to the development of psychiatric symptoms in people living with HIV1\n",
+      "bbox": [
+        55.5,
+        323.19549560546875,
+        405.7136535644531,
+        333.26800537109375
+      ],
+      "text_sha256": "48a4585acbce49a7c54ffd49ee511c765b149870de8e4bb2eacc9a0d220c27e8"
+    },
+    {
+      "block_id": "page-0798-block-0007",
+      "order": 7,
+      "text": "■\n■Primary (or pre-existing) psychiatric disorders\n",
+      "bbox": [
+        55.499900817871094,
+        342.7244873046875,
+        224.70950317382812,
+        352.5929870605469
+      ],
+      "text_sha256": "8768a9ca7351652a9a786e1693f22cbb2539a5ff33f6c58bd9faf3cb2114fc36"
+    },
+    {
+      "block_id": "page-0798-block-0008",
+      "order": 8,
+      "text": "■\n■Neurobiological changes caused by HIV in the central nervous system (CNS)\n",
+      "bbox": [
+        55.499900817871094,
+        352.7244873046875,
+        336.36553955078125,
+        362.5929870605469
+      ],
+      "text_sha256": "a851d2a88184d8882fdb5c83503a952c6a120213b66678ba9784ba77c83ad883"
+    },
+    {
+      "block_id": "page-0798-block-0009",
+      "order": 9,
+      "text": "■\n■Other infections or CNS tumours\n",
+      "bbox": [
+        55.499900817871094,
+        362.7244873046875,
+        182.541015625,
+        372.5929870605469
+      ],
+      "text_sha256": "5b777d06f47300e1c7c90a2ae4b7dfc8e355197bdbdff526472872fad0c0630e"
+    },
+    {
+      "block_id": "page-0798-block-0010",
+      "order": 10,
+      "text": "■\n■Antiretroviral drugs and other medical treatments (see Drugs for HIV‘in this section)\n",
+      "bbox": [
+        55.499900817871094,
+        372.7244873046875,
+        365.316650390625,
+        382.5929870605469
+      ],
+      "text_sha256": "50d8736a03e2097b9207baa39ed4de19837295b75713275bb102d63d49f18a11"
+    },
+    {
+      "block_id": "page-0798-block-0011",
+      "order": 11,
+      "text": "■\n■Alcohol or substance misuse\n",
+      "bbox": [
+        55.499900817871094,
+        382.7244873046875,
+        166.49301147460938,
+        392.5929870605469
+      ],
+      "text_sha256": "bd443ea182345d069777ffe65a6cc1cf4fa2b3bda68afb6313da75422e503b24"
+    },
+    {
+      "block_id": "page-0798-block-0012",
+      "order": 12,
+      "text": "■\n■Adverse psychosocial factors (e.g. stigma)\n",
+      "bbox": [
+        55.499900817871094,
+        392.7244873046875,
+        214.17807006835938,
+        402.5929870605469
+      ],
+      "text_sha256": "bd119ce55a6e0182b34a63d0d261c3038eb4ac4d9a7459eb8f019f51ef9295c6"
+    },
+    {
+      "block_id": "page-0798-block-0013",
+      "order": 13,
+      "text": "■\n■Awareness of a chronic disease requiring strict adherence to medication\n",
+      "bbox": [
+        55.499900817871094,
+        402.7244873046875,
+        323.4541015625,
+        412.5929870605469
+      ],
+      "text_sha256": "60398a9e8d9aa218ad18b6a0f330c0cff4766569f748004ed16be35a5ab9029e"
+    },
+    {
+      "block_id": "page-0798-block-0014",
+      "order": 14,
+      "text": "When prescribing psychotropics, the following principles should be adhered to:\n",
+      "bbox": [
+        48.25040054321289,
+        449.86968994140625,
+        389.660400390625,
+        461.5896911621094
+      ],
+      "text_sha256": "28de919bb58c49ce57e3a2f5934195427fcd240191ba89f4308a4258f29ac721"
+    },
+    {
+      "block_id": "page-0798-block-0015",
+      "order": 15,
+      "text": "■\n■Start with a low dose and titrate according to tolerability and response.\n",
+      "bbox": [
+        48.250301361083984,
+        467.86968994140625,
+        365.10040283203125,
+        479.5896911621094
+      ],
+      "text_sha256": "9c4cedcf2667e75062cf2a46d1833f245c12abdaa9f7b37a938de8c6164da77e"
+    },
+    {
+      "block_id": "page-0798-block-0016",
+      "order": 16,
+      "text": "■\n■Select the simplest dosing regimen possible. (Remember that the patient’s drug regi-\n",
+      "bbox": [
+        48.250301361083984,
+        479.86968994140625,
+        420.5202941894531,
+        491.5896911621094
+      ],
+      "text_sha256": "59b7bc6579e7f6a53ad58cc5e7a814ec234dce98d8f3db59bfe5d48b862cfb90"
+    },
+    {
+      "block_id": "page-0798-block-0017",
+      "order": 17,
+      "text": "men is likely to be complex already.)\n",
+      "bbox": [
+        57.25040054321289,
+        491.86968994140625,
+        214.67039489746094,
+        503.5896911621094
+      ],
+      "text_sha256": "190f3290b16e21c172ace2a901ab25999277cc57453bfdf5e1b46c0e5895a748"
+    },
+    {
+      "block_id": "page-0798-block-0018",
+      "order": 18,
+      "text": "■\n■Select an agent with the fewest side effects. Drug interactions, medical comorbidities \n",
+      "bbox": [
+        48.250301361083984,
+        503.86968994140625,
+        423.2704162597656,
+        515.5897216796875
+      ],
+      "text_sha256": "397611761bf724bd8c05f399f0f4cda54aabc717b96993039402cc757e049e4d"
+    },
+    {
+      "block_id": "page-0798-block-0019",
+      "order": 19,
+      "text": "and any ongoing substance misuse must be considered.\n",
+      "bbox": [
+        57.25040054321289,
+        515.8696899414062,
+        293.96038818359375,
+        527.5897216796875
+      ],
+      "text_sha256": "e0fea58022fa1bed528dc5262661e30eb48bae914c063c4027a54c49d96c276f"
+    },
+    {
+      "block_id": "page-0798-block-0020",
+      "order": 20,
+      "text": "■\n■Ensure that management is conducted in close cooperation with the HIV specialists \n",
+      "bbox": [
+        48.250301361083984,
+        527.8696899414062,
+        423.2404479980469,
+        539.5897216796875
+      ],
+      "text_sha256": "8d5f53622ecb4c6305a9e254eb81970d524ea428b0ae13d0b6865912e793b70a"
+    },
+    {
+      "block_id": "page-0798-block-0021",
+      "order": 21,
+      "text": "and the rest of the multidisciplinary team.\n",
+      "bbox": [
+        57.25040054321289,
+        539.8696899414062,
+        237.81039428710938,
+        551.5897216796875
+      ],
+      "text_sha256": "978f6647d7b042f7ca63889cd555197bef6ef9c4777eb06c326600619ca5d61b"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

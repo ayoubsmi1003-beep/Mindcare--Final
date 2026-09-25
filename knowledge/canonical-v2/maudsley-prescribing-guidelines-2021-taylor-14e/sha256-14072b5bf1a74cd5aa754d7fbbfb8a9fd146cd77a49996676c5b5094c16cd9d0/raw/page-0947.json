@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0947",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 947,
+  "source_page_index": 946,
+  "source_page_display": 947,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "926    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 14\n\t 5.\t British and Irish Legal Information Institute. Montgomery (Appellant) v Lanarkshire Health Board (Respondent) (Scotland) 2015; http://\nwww.bailii.org/uk/cases/UKSC/2015/11.html.\n\t 6.\t General Medical Council. Good practice in prescribing and managing medicines and devices 2013; https://www.gmc-uk.org/guidance/ \nethical_guidance/14316.asp.\n\t 7.\t Buckman Co. v. Plaintiffs’ Legal Comm. 531 U.S. 341 2001; https://www.law.cornell.edu/supct/html/98-1768.ZO.html.\n\t 8.\t FindLaw. Off-label use promotion is protected free speech 2012; https://blogs.findlaw.com/second_circuit/2012/12/off-label-use-promotion-\nis-protected-free-speech.html.\n\t 9.\t Vijay A, et al. Patterns and predictors of off-label prescription of psychiatric drugs. PLoS One 2018; 13:e0198363.\n\t10.\t Epstein RS, et al. The many sides of off-label prescribing. ClinPharmacolTher 2012; 91:755–758.\n\t11.\t Wong J, et al. Off-label indications for antidepressants in primary care: descriptive study of prescriptions from an indication based electronic \nprescribing system. BMJ 2017; 356:j603.\n\t12.\t Royal College of Psychiatrists. College Report 142. Use of licensed medicines for unlicensed applications in psychiatric practice 2007; http://\nwww.rcpsych.ac.uk/publications/collegereports/cr/cr142.aspx.\n\t13.\t Royal College of Psychiatrists Psychopharmacology Committee. Use of licensed medicines for unlicensed applications in psychiatric practice. \n2nd edition. College Report CR210 2017; http://www.rcpsych.ac.uk/files/pdfversion/CR210.pdf.\nFurther reading\nFrank B, et al. Psychotropic medications and informed consent: a review. Ann Clin Psychiatry 2008; 20:87–95. General Medical Council. Good \npractice in prescribing and managing medicines and devices. 2013. http://www.gmc-uk.org/guidance/ethical_guidance/14316.asp.\nSharma, et al. BAP position statement: off-label prescribing of psychotropic medication to children and adolescents. J Psychopharmacol 2016; \n30:416–421.\n",
+  "raw_text_sha256": "d11bff4a14290ab7caf54f4a2368d13e341a70854d0bf504f98ea2a44cf7d5ad",
+  "coordinates_sha256": "57c378e0c0a7410cc54139af02f1d71959692a7d9dfeec19747525d578580db8",
+  "block_sequence_sha256": "644b2f011145234d57d420bb67a589e01ab2bcd6b448e40a528c4746b54b1801",
+  "blocks": [
+    {
+      "block_id": "page-0947-block-0000",
+      "order": 0,
+      "text": "926    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "4921572d53a7bac33e093d6d74cdbcdebe85b3b294e5dbfc6f52ee1d59da0833"
+    },
+    {
+      "block_id": "page-0947-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        18.520000457763672,
+        338.7405090332031,
+        28.0,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0947-block-0002",
+      "order": 2,
+      "text": "\t 5.\t British and Irish Legal Information Institute. Montgomery (Appellant) v Lanarkshire Health Board (Respondent) (Scotland) 2015; http://\n",
+      "bbox": [
+        61.889801025390625,
+        63.2703857421875,
+        433.90777587890625,
+        70.30238342285156
+      ],
+      "text_sha256": "ae5f964646d9d10dce52f1e964f7e4b2622ddd2cd093533a6ddb1bb45b36e6bc"
+    },
+    {
+      "block_id": "page-0947-block-0003",
+      "order": 3,
+      "text": "www.bailii.org/uk/cases/UKSC/2015/11.html.\n\t 6.\t General Medical Council. Good practice in prescribing and managing medicines and devices 2013; https://www.gmc-uk.org/guidance/ \n",
+      "bbox": [
+        61.89580154418945,
+        72.2703857421875,
+        435.5817565917969,
+        88.30238342285156
+      ],
+      "text_sha256": "185297c34a94b42aa826a7791280377142756e095468b3882b9af0296df59d84"
+    },
+    {
+      "block_id": "page-0947-block-0004",
+      "order": 4,
+      "text": "ethical_guidance/14316.asp.\n\t 7.\t Buckman Co. v. Plaintiffs’ Legal Comm. 531 U.S. 341 2001; https://www.law.cornell.edu/supct/html/98-1768.ZO.html.\n\t 8.\t FindLaw. Off-label use promotion is protected free speech 2012; https://blogs.findlaw.com/second_circuit/2012/12/off-label-use-promotion-\n",
+      "bbox": [
+        61.901798248291016,
+        90.2703857421875,
+        433.92572021484375,
+        115.30238342285156
+      ],
+      "text_sha256": "f97a9605e414b9b6256167f1b2ccb443e3f5cd8e63a564ba69d69abe48d136c6"
+    },
+    {
+      "block_id": "page-0947-block-0005",
+      "order": 5,
+      "text": "is-protected-free-speech.html.\n\t 9.\t Vijay A, et al. Patterns and predictors of off-label prescription of psychiatric drugs. PLoS One 2018; 13:e0198363.\n\t10.\t Epstein RS, et al. The many sides of off-label prescribing. ClinPharmacolTher 2012; 91:755–758.\n\t11.\t Wong J, et al. Off-label indications for antidepressants in primary care: descriptive study of prescriptions from an indication based electronic \n",
+      "bbox": [
+        61.91379928588867,
+        117.2703857421875,
+        435.60589599609375,
+        151.30238342285156
+      ],
+      "text_sha256": "e041711490697c9cd2c0e4b830bb3fc981562a592f80ae2c66065ee40431321e"
+    },
+    {
+      "block_id": "page-0947-block-0006",
+      "order": 6,
+      "text": "prescribing system. BMJ 2017; 356:j603.\n\t12.\t Royal College of Psychiatrists. College Report 142. Use of licensed medicines for unlicensed applications in psychiatric practice 2007; http://\n",
+      "bbox": [
+        61.931800842285156,
+        153.1263885498047,
+        433.9378356933594,
+        169.30238342285156
+      ],
+      "text_sha256": "b328fe92ceff931c9a2874298c3450aa56cce24a0279fa65674b711afa133eb9"
+    },
+    {
+      "block_id": "page-0947-block-0007",
+      "order": 7,
+      "text": "www.rcpsych.ac.uk/publications/collegereports/cr/cr142.aspx.\n\t13.\t Royal College of Psychiatrists Psychopharmacology Committee. Use of licensed medicines for unlicensed applications in psychiatric practice. \n",
+      "bbox": [
+        61.937801361083984,
+        171.2703857421875,
+        435.6059265136719,
+        187.30238342285156
+      ],
+      "text_sha256": "9bb0d1b79144bde7548041ec59da49c61aa3636de9f2ca26f66ce6f13507ce6c"
+    },
+    {
+      "block_id": "page-0947-block-0008",
+      "order": 8,
+      "text": "2nd edition. College Report CR210 2017; http://www.rcpsych.ac.uk/files/pdfversion/CR210.pdf.\n",
+      "bbox": [
+        72.94180297851562,
+        189.2703857421875,
+        322.9137878417969,
+        196.30238342285156
+      ],
+      "text_sha256": "efebce7b3b99d5a141da890494e127def14766a613ce15b1a57219dfe3effa5e"
+    },
+    {
+      "block_id": "page-0947-block-0009",
+      "order": 9,
+      "text": "Further reading\n",
+      "bbox": [
+        61.89099884033203,
+        214.6453857421875,
+        142.3779754638672,
+        227.68038940429688
+      ],
+      "text_sha256": "97a7eb93e6fca560969f4c10a52d2ef83995974b08b112934e0d108909963303"
+    },
+    {
+      "block_id": "page-0947-block-0010",
+      "order": 10,
+      "text": "Frank B, et al. Psychotropic medications and informed consent: a review. Ann Clin Psychiatry 2008; 20:87–95. General Medical Council. Good \n",
+      "bbox": [
+        61.89099884033203,
+        232.6223907470703,
+        435.51702880859375,
+        239.7983856201172
+      ],
+      "text_sha256": "9be283c020b40848cd10c346a20c9812789bb409bf082fbc14688da2942a63b8"
+    },
+    {
+      "block_id": "page-0947-block-0011",
+      "order": 11,
+      "text": "practice in prescribing and managing medicines and devices. 2013. http://www.gmc-uk.org/guidance/ethical_guidance/14316.asp.\nSharma, et al. BAP position statement: off-label prescribing of psychotropic medication to children and adolescents. J Psychopharmacol 2016; \n",
+      "bbox": [
+        61.89099884033203,
+        241.76638793945312,
+        435.54107666015625,
+        257.79840087890625
+      ],
+      "text_sha256": "ac6746d7f273ed3a23f0964200d3900d9efb2e702aba8807643537eb2b84cd6c"
+    },
+    {
+      "block_id": "page-0947-block-0012",
+      "order": 12,
+      "text": "30:416–421.\n",
+      "bbox": [
+        72.88899993896484,
+        259.62237548828125,
+        105.9129867553711,
+        266.79840087890625
+      ],
+      "text_sha256": "b7ee9200059dcd6e82b7e0533e6d524a728273f4ba2ff48a03f8dc8c33d7691d"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

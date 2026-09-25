@@ -1,0 +1,443 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0222",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 222,
+  "source_page_index": 221,
+  "source_page_display": 222,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    201\nCHAPTER 1\nTable 1.37  (Continued)\n(Continued)\nTreatment\nComments\nPimavanserin  \n(+ antipsychotics)\nClinical improvement with pimavanserin alone or as adjunct to clozapine or \nother antipsychotics in 10 patients, six of whom had failed to respond to \nclozapine76\nPropentofylline +  \nrisperidone77\n(900mg + 6mg/day)\nOne RCT suggests some activity against positive symptoms\nQuetiapine78–81\nVery limited evidence and clinical experience not encouraging. High doses \n(>1200mg/day) have been used but are no more effective82\nQuetiapine + amisulpride83\nSingle naturalistic observation of 19 patients suggested useful benefit. Doses \naveraged 700mg quetiapine and 950mg amisulpride\nQuetiapine + haloperidol84\nTwo case reports\nRaloxifene 60–120mg/day  \n(+ antipsychotic)85\nSelective oestrogen receptor modulator; may offer benefits of estradiol without \nlong-term risks. One case report85 in postmenopausal treatment-resistant \nschizophrenia. Data in non-treatment resistance are rather conflicting, with two \noverlapping positive trials86,87 and one negative trial.88 One positive RCT in \nrefractory women.89 Evidence in men is lacking\nRiluzole 100mg/\nday + risperidone up to 6mg/\nday90\nGlutamate modulating agent. One RCT demonstrated improvement in negative \nsymptoms\nRisperidone91–93\n4–8mg/day\nDoubtful efficacy in true treatment-refractory schizophrenia but some \nsupporting evidence. May also be tried in combination with glycine68 or \nlamotrigine60 or indeed with other atypicals94\nRisperidone LAI 50/100mg \n2/5295\nOne RCT showing good response for both doses in refractory schizophrenia. \nPlasma levels for 100mg dose similar to 6–8mg/day oral risperidone.\nRitanserin + risperidone\n(12mg + 6mg/day)96\n5HT2A/2C antagonist. One RCT suggests small effect on negative symptoms\nSarcosine (2g/day)97,98\n(+ antipsychotic)\nEnhances glycine action. Supported by two RCTs\nSertindole99\n(12–24mg/day)\nOne large RCT (conducted in 1996–8 but published in 2011) suggested good \neffect and equivalence to risperidone. Around half of subjects responded. \nAnother RCT100 showed no effect at all when added to clozapine.\nLittle experience in practice\nTopiramate (300mg/day)\n(+ antipsychotic)101\nSmall effect shown in single RCT. Induces weight loss. Cognitive adverse effects \nlikely\nTranscranial magnetic \nstimulation102–104\nConflicting results\nUrsodeoxycholic acid105\nSingle case report\nValproate106\nDoubtful effect but may be useful where there is a clear affective component\nYokukansan (+ antipsychotic)107\nJapanese herbal medicine, partial agonist at D2 and 5HT1A, antagonist at 5HT2A \nand glutamate receptors. Potential small benefit in excitement/hostility \nsymptoms.\n",
+  "raw_text_sha256": "7f2c300150b7fb22e83ec8ece5c4f018d952c97e2627a8db2b26281b6158fb3c",
+  "coordinates_sha256": "fcb8c9e64b0b467479ab3e09716cdc4ced9af22314a5e4aca08909a6431d1e28",
+  "block_sequence_sha256": "aebc3431d22b5f7992d09a430c720be4254a52d37824814fb5987958b6ac160f",
+  "blocks": [
+    {
+      "block_id": "page-0222-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    201\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "ff3abad6061e1142efa46addd2a68477773c10e80765abb4b9ae9f1f0df34abd"
+    },
+    {
+      "block_id": "page-0222-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0222-block-0002",
+      "order": 2,
+      "text": "Table 1.37  (Continued)\n",
+      "bbox": [
+        53.99870300292969,
+        70.08692932128906,
+        130.28868103027344,
+        78.97442626953125
+      ],
+      "text_sha256": "e0aca385c22b6b6a6107b41fb5b6380b231ef0fd8c28170cf2a7168ad4d38662"
+    },
+    {
+      "block_id": "page-0222-block-0003",
+      "order": 3,
+      "text": "(Continued)\n",
+      "bbox": [
+        382.48370361328125,
+        600.471923828125,
+        419.9987487792969,
+        609.2244262695312
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0222-block-0004",
+      "order": 4,
+      "text": "Treatment\nComments\n",
+      "bbox": [
+        47.99909973144531,
+        86.96199035644531,
+        201.50160217285156,
+        95.8494873046875
+      ],
+      "text_sha256": "8be686e890d313f8295cc060595592f78dd7d0f699de8b9c632f5bd2fa6e517c"
+    },
+    {
+      "block_id": "page-0222-block-0005",
+      "order": 5,
+      "text": "Pimavanserin  \n(+ antipsychotics)\n",
+      "bbox": [
+        47.99909973144531,
+        101.73701477050781,
+        109.5740966796875,
+        120.62200927734375
+      ],
+      "text_sha256": "5c4084f7ed8d074d0606ca23dd82cc88ce0c5b3deee85e825167b8ad0c3dc189"
+    },
+    {
+      "block_id": "page-0222-block-0006",
+      "order": 6,
+      "text": "Clinical improvement with pimavanserin alone or as adjunct to clozapine or \nother antipsychotics in 10 patients, six of whom had failed to respond to \nclozapine76\n",
+      "bbox": [
+        164.00160217285156,
+        101.9170150756836,
+        406.3866882324219,
+        130.6195068359375
+      ],
+      "text_sha256": "89eead3a4a047076afd5180267e2fab6a388a7e8f5182763292d2929a357d5af"
+    },
+    {
+      "block_id": "page-0222-block-0007",
+      "order": 7,
+      "text": "Propentofylline +  \nrisperidone77\n",
+      "bbox": [
+        47.99909973144531,
+        136.7620391845703,
+        113.2190933227539,
+        155.64703369140625
+      ],
+      "text_sha256": "fd8eecf9e395b5a8f255deb1f531613831af0f3bc976c65d89188b44a04ea49c"
+    },
+    {
+      "block_id": "page-0222-block-0008",
+      "order": 8,
+      "text": "(900mg + 6mg/day)\n",
+      "bbox": [
+        47.99909973144531,
+        156.94203186035156,
+        111.68909454345703,
+        165.6495361328125
+      ],
+      "text_sha256": "4ae1bb99d9cd2ff68550b5faff81870488a054ff826e503d2e8452cd81374b27"
+    },
+    {
+      "block_id": "page-0222-block-0009",
+      "order": 9,
+      "text": "One RCT suggests some activity against positive symptoms\n",
+      "bbox": [
+        164.00160217285156,
+        136.9395294189453,
+        351.0966491699219,
+        145.64703369140625
+      ],
+      "text_sha256": "c493acb9191ffde13f9bfc8c6bd3600e97350f8d621e4a2da7a4b035c9886cd4"
+    },
+    {
+      "block_id": "page-0222-block-0010",
+      "order": 10,
+      "text": "Quetiapine78–81\nVery limited evidence and clinical experience not encouraging. High doses \n(>1200mg/day) have been used but are no more effective82\n",
+      "bbox": [
+        47.99909973144531,
+        171.78456115722656,
+        401.5317077636719,
+        190.67193603515625
+      ],
+      "text_sha256": "7270657754339a701d9e4ed3e663e9fa29af212fcd5d4d8bce47bd9c902a73e0"
+    },
+    {
+      "block_id": "page-0222-block-0011",
+      "order": 11,
+      "text": "Quetiapine + amisulpride83\nSingle naturalistic observation of 19 patients suggested useful benefit. Doses \naveraged 700mg quetiapine and 950mg amisulpride\n",
+      "bbox": [
+        47.99909973144531,
+        196.81190490722656,
+        411.1318054199219,
+        215.6968994140625
+      ],
+      "text_sha256": "ea2e6355ebf1746a6dc709c99403fe40adf627b7c9ab2016f82820521587f119"
+    },
+    {
+      "block_id": "page-0222-block-0012",
+      "order": 12,
+      "text": "Quetiapine + haloperidol84\nTwo case reports\n",
+      "bbox": [
+        47.99659729003906,
+        221.83189392089844,
+        217.2941131591797,
+        230.72442626953125
+      ],
+      "text_sha256": "9f5e0217a55ab0dfc4aeff8f7e13ce6a85d28db055521dab107c43c3c3a6e4d3"
+    },
+    {
+      "block_id": "page-0222-block-0013",
+      "order": 13,
+      "text": "Raloxifene 60–120mg/day  \n(+ antipsychotic)85\n",
+      "bbox": [
+        47.99659729003906,
+        236.8594207763672,
+        140.1190948486328,
+        255.74441528320312
+      ],
+      "text_sha256": "37209794808aa668440a257f8b75b3be195d327910efe6146b6ff1cc5ba821de"
+    },
+    {
+      "block_id": "page-0222-block-0014",
+      "order": 14,
+      "text": "Selective oestrogen receptor modulator; may offer benefits of estradiol without \nlong-term risks. One case report85 in postmenopausal treatment-resistant \nschizophrenia. Data in non-treatment resistance are rather conflicting, with two \noverlapping positive trials86,87 and one negative trial.88 One positive RCT in \nrefractory women.89 Evidence in men is lacking\n",
+      "bbox": [
+        163.99681091308594,
+        237.0419158935547,
+        420.1402282714844,
+        285.7494201660156
+      ],
+      "text_sha256": "58ba23171e6e665e87787be74e83fa858139bd96554bdabb7d56f533f7f0cdc5"
+    },
+    {
+      "block_id": "page-0222-block-0015",
+      "order": 15,
+      "text": "Riluzole 100mg/\nday + risperidone up to 6mg/\nday90\n",
+      "bbox": [
+        47.99827575683594,
+        291.8843994140625,
+        145.85829162597656,
+        320.76690673828125
+      ],
+      "text_sha256": "64a3b5576a5d17c7b4dec864adc272364db8d938f802c23bbe777d1805b53bfa"
+    },
+    {
+      "block_id": "page-0222-block-0016",
+      "order": 16,
+      "text": "Glutamate modulating agent. One RCT demonstrated improvement in negative \nsymptoms\n",
+      "bbox": [
+        163.9990997314453,
+        292.0670166015625,
+        419.7267150878906,
+        310.7720031738281
+      ],
+      "text_sha256": "d6f7ef22e41deee7ed31bf01efd2d45835e4dea9b6d4b9560f9780a4142847f4"
+    },
+    {
+      "block_id": "page-0222-block-0017",
+      "order": 17,
+      "text": "Risperidone91–93\n",
+      "bbox": [
+        47.99659729003906,
+        326.9119873046875,
+        101.57937622070312,
+        335.79949951171875
+      ],
+      "text_sha256": "6b10df81c332801dccfa56d7d4558932aa57b2a5010dc22b2e6c9dbf51499ad7"
+    },
+    {
+      "block_id": "page-0222-block-0018",
+      "order": 18,
+      "text": "4–8mg/day\nDoubtful efficacy in true treatment-refractory schizophrenia but some \nsupporting evidence. May also be tried in combination with glycine68 or \nlamotrigine60 or indeed with other atypicals94\n",
+      "bbox": [
+        47.99909973144531,
+        327.09454345703125,
+        393.8962097167969,
+        355.7995300292969
+      ],
+      "text_sha256": "3fc8bff079d1ba6837ce5df259a11e36d8718f753f1b3237b86a8e0740655e56"
+    },
+    {
+      "block_id": "page-0222-block-0019",
+      "order": 19,
+      "text": "Risperidone LAI 50/100mg \n2/5295\nOne RCT showing good response for both doses in refractory schizophrenia. \nPlasma levels for 100mg dose similar to 6–8mg/day oral risperidone.\n",
+      "bbox": [
+        47.99909973144531,
+        361.9368896484375,
+        409.4967346191406,
+        380.8218994140625
+      ],
+      "text_sha256": "65b49b8093f187aa20773271c768a46f0f93e310a8f99a335ca1c6d49216ddc3"
+    },
+    {
+      "block_id": "page-0222-block-0020",
+      "order": 20,
+      "text": "Ritanserin + risperidone\n(12mg + 6mg/day)96\n",
+      "bbox": [
+        47.99659729003906,
+        386.9568786621094,
+        132.0941162109375,
+        405.8418884277344
+      ],
+      "text_sha256": "363c2ac3734e57367825e03645cad86db94f9fae918366cb6af9c5870bf92c42"
+    },
+    {
+      "block_id": "page-0222-block-0021",
+      "order": 21,
+      "text": "5HT2A/2C antagonist. One RCT suggests small effect on negative symptoms\n",
+      "bbox": [
+        163.9990997314453,
+        387.1419372558594,
+        399.5597839355469,
+        397.5650634765625
+      ],
+      "text_sha256": "7b142c500e1b8e445cbbb2fe5b513ec0dc2503fdada5f8401cfc51418bb793ae"
+    },
+    {
+      "block_id": "page-0222-block-0022",
+      "order": 22,
+      "text": "Sarcosine (2g/day)97,98\n",
+      "bbox": [
+        47.99720764160156,
+        411.9894104003906,
+        120.07109069824219,
+        420.8769226074219
+      ],
+      "text_sha256": "93eae4a518cf6d403a8727210822e4e576c4fb98611b266c1c5b5aec82a5aa71"
+    },
+    {
+      "block_id": "page-0222-block-0023",
+      "order": 23,
+      "text": "(+ antipsychotic)\n",
+      "bbox": [
+        47.99909973144531,
+        421.9869079589844,
+        106.24409484863281,
+        430.8744201660156
+      ],
+      "text_sha256": "c01aedbd031788d634e45a3ab24e6b67bd075a11f6dd2055bb08b370478898cc"
+    },
+    {
+      "block_id": "page-0222-block-0024",
+      "order": 24,
+      "text": "Enhances glycine action. Supported by two RCTs\n",
+      "bbox": [
+        164.00160217285156,
+        412.16943359375,
+        318.6216735839844,
+        420.8769226074219
+      ],
+      "text_sha256": "2aab8d0b99d9791b4768576c997abcd99f023a58045f21bef6c580085184887e"
+    },
+    {
+      "block_id": "page-0222-block-0025",
+      "order": 25,
+      "text": "Sertindole99\n",
+      "bbox": [
+        47.99909973144531,
+        437.01690673828125,
+        89.1235122680664,
+        445.9044189453125
+      ],
+      "text_sha256": "278f4fd9380db106619c25efcf3f4312dad5d3a7b9a01fefd5ddab502d93b78d"
+    },
+    {
+      "block_id": "page-0222-block-0026",
+      "order": 26,
+      "text": "(12–24mg/day)\n",
+      "bbox": [
+        47.99909973144531,
+        447.1920166015625,
+        96.3515853881836,
+        455.8995056152344
+      ],
+      "text_sha256": "a95fcb3d2abec5cd3091fa95bc13767ec3b86a69f32118152e9bd91ada43486e"
+    },
+    {
+      "block_id": "page-0222-block-0027",
+      "order": 27,
+      "text": "One large RCT (conducted in 1996–8 but published in 2011) suggested good \neffect and equivalence to risperidone. Around half of subjects responded. \nAnother RCT100 showed no effect at all when added to clozapine.\nLittle experience in practice\n",
+      "bbox": [
+        164.00160217285156,
+        437.19451904296875,
+        412.8669738769531,
+        475.8970031738281
+      ],
+      "text_sha256": "14964b5d88a9830c08bc2dbc9cd0375d38293ccf263beef221ce2fb50a4a613e"
+    },
+    {
+      "block_id": "page-0222-block-0028",
+      "order": 28,
+      "text": "Topiramate (300mg/day)\n(+ antipsychotic)101\n",
+      "bbox": [
+        47.99971008300781,
+        482.031982421875,
+        130.11721801757812,
+        500.9169921875
+      ],
+      "text_sha256": "78586b3f3cbb935d6459cf3101ee9de3c2a9215f2cbc01a68d28a1375dd3af39"
+    },
+    {
+      "block_id": "page-0222-block-0029",
+      "order": 29,
+      "text": "Small effect shown in single RCT. Induces weight loss. Cognitive adverse effects \nlikely\n",
+      "bbox": [
+        163.9990997314453,
+        482.2170104980469,
+        419.5992736816406,
+        500.9219970703125
+      ],
+      "text_sha256": "60be168144831eaeb05e63351518a5d2141e44142b47dde308c41dae3a9bdb2e"
+    },
+    {
+      "block_id": "page-0222-block-0030",
+      "order": 30,
+      "text": "Transcranial magnetic \nstimulation102–104\n",
+      "bbox": [
+        47.99659729003906,
+        507.0570068359375,
+        126.4916000366211,
+        525.9420166015625
+      ],
+      "text_sha256": "fbc0dc19006fcf250a0aa75e95cab0fbb7893ffc683f824418b3c16d91c07eeb"
+    },
+    {
+      "block_id": "page-0222-block-0031",
+      "order": 31,
+      "text": "Conflicting results\n",
+      "bbox": [
+        163.9990997314453,
+        507.2419128417969,
+        221.36656188964844,
+        515.9494018554688
+      ],
+      "text_sha256": "fda6a08720ca5432596bc7facc53f4b91d17b04fd988086eec7a209fd4f453fc"
+    },
+    {
+      "block_id": "page-0222-block-0032",
+      "order": 32,
+      "text": "Ursodeoxycholic acid105\nSingle case report\n",
+      "bbox": [
+        47.99659729003906,
+        532.0894165039062,
+        220.53408813476562,
+        540.9769287109375
+      ],
+      "text_sha256": "3cd9e6c70ddd444215b9bd3bcd416d04729fe3ab72d7bc9df62b6589cc5fe0f6"
+    },
+    {
+      "block_id": "page-0222-block-0033",
+      "order": 33,
+      "text": "Valproate106\nDoubtful effect but may be useful where there is a clear affective component\n",
+      "bbox": [
+        47.99659729003906,
+        547.1094360351562,
+        410.13409423828125,
+        555.9993896484375
+      ],
+      "text_sha256": "09f49dfe372124498842456736a1da166bab98524947ce8d772c0205f81a874e"
+    },
+    {
+      "block_id": "page-0222-block-0034",
+      "order": 34,
+      "text": "Yokukansan (+ antipsychotic)107\nJapanese herbal medicine, partial agonist at D2 and 5HT1A, antagonist at 5HT2A \nand glutamate receptors. Potential small benefit in excitement/hostility \nsymptoms.\n",
+      "bbox": [
+        47.99659729003906,
+        562.1343994140625,
+        416.3432922363281,
+        591.01953125
+      ],
+      "text_sha256": "65e387116b16ebe886c344f121ce3c694ceb286548af4f90fea3c56cc57df68a"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

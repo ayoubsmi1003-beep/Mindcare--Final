@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0628",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 628,
+  "source_page_index": 627,
+  "source_page_display": 628,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Prescribing in older people    607\nCHAPTER  6\nEfficacy of cognitive enhancers used in dementia\nCurrently, no treatment exists to modify or reverse disease progression in dementia. \nTherapeutic interventions are therefore targeted at specific symptoms or improving or \nslowing the decline in cognitive function. AChE-Is may provide some modest cognitive, \nfunctional and global benefits in mild-to-moderate AD.15\nThe three AChE-Is seem to have broadly similar clinical effects, as measured with the \nMini Mental State Examination (MMSE), a 30-point basic evaluation of cognitive func-\ntion and the Alzheimer’s Disease Assessment Scale – cognitive subscale (ADAS-cog), a \n70-point evaluation largely of cognitive dysfunction. Estimates of the number needed to \ntreat (NNT) (for an improvement of >4 points ADAS-cog) range from 4 to 12.16\nMemantine\nAn analysis of memantine studies found NNT ranged from 3 to 817 for improved cogni-\ntive function. A Cochrane review of memantine concluded that it had a small beneficial \neffect at 6 months in moderate-to-severe AD. In patients with mild-to-moderate demen-\ntia, the small beneficial effect on cognition was not clinically detectable in those with \nvascular dementia and barely detectable in those with AD.17\nA 2020 study18 investigated the ‘real-world’ effectiveness of cholinesterase inhibitors \nand memantine. The study found that in general, the initial decline in MMSE and \nMontreal Cognitive Assessment scores occurs approximately 2 years before medication \nis initiated. Medication prescription stabilises cognitive performance for the ensuing \n2–5 months. The effect is enhanced in more cognitively impaired cases at the point of \nmedication prescription and attenuated in those taking antipsychotics. Importantly, \npatients who are switched at least once tended to continue to decline at their pre-med-\nication rate, thus apparently not benefiting from pharmacological interventions. \nOverall, 68% of individuals responded to treatment with a period of cognitive stabilisa-\ntion before continuing their decline at the pre-treatment rate.\nSwitching between drugs used in dementia\nThe benefits of treatment with AChE-Is are rapidly lost when drug administration is \ninterrupted19 and may not be fully regained when drug treatment is re-initiated.20 Poor \ntolerability with one agent does not rule out good tolerability with another.21 The \nrecently revised British Association for Psychopharmacology Guidelines for Dementia \nconfirm that previous comparative trials have failed to consistently demonstrate any \nsignificant differences in efficacy between the three AChE-Is, the main differences found \nbeing in frequency and type of adverse events. As a result, their recommendation that a \nsignificant proportion of patients (up to 50%) appear to both tolerate and benefit from \nswitching between AChE-Is if they cannot tolerate one remains valid.22\nSeveral cases of discontinuation syndrome upon stopping donepezil have been pub-\nlished,23,24 suggesting that a gradual withdrawal should be carried out where possible. \nHowever, a study comparing abrupt versus stepwise switching from donepezil to \nmemantine found no clinically relevant differences in adverse effects despite patients in \nthe abrupt group experiencing more frequent adverse effects than the stepwise \n",
+  "raw_text_sha256": "de0ca9add37380375e8c69bea373c21d881c0b8d86d3800d9914c0f971795414",
+  "coordinates_sha256": "76e9f2d1d256081dea3be50834c277cfa8a13d2e35c611a1f40e12bfc12d1885",
+  "block_sequence_sha256": "83fb4bb3a63bf6fa986130a853dcb2c1819047727b056a96125409f4a222d9e7",
+  "blocks": [
+    {
+      "block_id": "page-0628-block-0000",
+      "order": 0,
+      "text": "Prescribing in older people    607\n",
+      "bbox": [
+        281.576904296875,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "a38c36439f5c0cb21b01678efd6164d82b2328b9e51655b54fc78de5559e59b0"
+    },
+    {
+      "block_id": "page-0628-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        454.4096984863281,
+        405.35260009765625,
+        463.88970947265625,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0628-block-0002",
+      "order": 2,
+      "text": "Efficacy of cognitive enhancers used in dementia\n",
+      "bbox": [
+        48.0,
+        62.31546401977539,
+        300.2409362792969,
+        75.3504638671875
+      ],
+      "text_sha256": "8889db882aee4a8440fd48918d5375c6e2938733f853c6c68aa7036c0640611f"
+    },
+    {
+      "block_id": "page-0628-block-0003",
+      "order": 3,
+      "text": "Currently, no treatment exists to modify or reverse disease progression in dementia. \nTherapeutic interventions are therefore targeted at specific symptoms or improving or \nslowing the decline in cognitive function. AChE-Is may provide some modest cognitive, \nfunctional and global benefits in mild-to-moderate AD.15\n",
+      "bbox": [
+        48.0,
+        81.16046142578125,
+        422.7901306152344,
+        128.88046264648438
+      ],
+      "text_sha256": "1abca93d8376f02fff68ef2e6fa0e5647452544a803a0c25d2c1653c2dfeca98"
+    },
+    {
+      "block_id": "page-0628-block-0004",
+      "order": 4,
+      "text": "The three AChE-Is seem to have broadly similar clinical effects, as measured with the \nMini Mental State Examination (MMSE), a 30-point basic evaluation of cognitive func-\ntion and the Alzheimer’s Disease Assessment Scale – cognitive subscale (ADAS-cog), a \n70-point evaluation largely of cognitive dysfunction. Estimates of the number needed to \ntreat (NNT) (for an improvement of >4 points ADAS-cog) range from 4 to 12.16\n",
+      "bbox": [
+        48.0,
+        129.16046142578125,
+        422.79986572265625,
+        188.88046264648438
+      ],
+      "text_sha256": "9c3a4c867006b233fde2efc5d8f8e093e02f049bc0c0f1d4c11d225ea56d2cc1"
+    },
+    {
+      "block_id": "page-0628-block-0005",
+      "order": 5,
+      "text": "Memantine\n",
+      "bbox": [
+        48.0,
+        207.25048828125,
+        101.9000015258789,
+        219.10049438476562
+      ],
+      "text_sha256": "7e3dc6e3071bb16b3fbe386ab22fecdbd666d3bc1f74f537f2808c226af7cc02"
+    },
+    {
+      "block_id": "page-0628-block-0006",
+      "order": 6,
+      "text": "An analysis of memantine studies found NNT ranged from 3 to 817 for improved cogni-\ntive function. A Cochrane review of memantine concluded that it had a small beneficial \neffect at 6 months in moderate-to-severe AD. In patients with mild-to-moderate demen-\ntia, the small beneficial effect on cognition was not clinically detectable in those with \nvascular dementia and barely detectable in those with AD.17\n",
+      "bbox": [
+        48.0,
+        225.16049194335938,
+        422.8132019042969,
+        284.8804931640625
+      ],
+      "text_sha256": "58bc3421505f9b8596c68e433daf19d67277a3810d960c119c76919e79238f46"
+    },
+    {
+      "block_id": "page-0628-block-0007",
+      "order": 7,
+      "text": "A 2020 study18 investigated the ‘real-world’ effectiveness of cholinesterase inhibitors \nand memantine. The study found that in general, the initial decline in MMSE and \nMontreal Cognitive Assessment scores occurs approximately 2 years before medication \nis initiated. Medication prescription stabilises cognitive performance for the ensuing \n2–5 months. The effect is enhanced in more cognitively impaired cases at the point of \nmedication prescription and attenuated in those taking antipsychotics. Importantly, \npatients who are switched at least once tended to continue to decline at their pre-med-\nication rate, thus apparently not benefiting from pharmacological interventions. \nOverall, 68% of individuals responded to treatment with a period of cognitive stabilisa-\ntion before continuing their decline at the pre-treatment rate.\n",
+      "bbox": [
+        48.00299835205078,
+        285.1604919433594,
+        422.8129577636719,
+        404.8804931640625
+      ],
+      "text_sha256": "87a5295a5a8503e72c533ffd68d0f6e0747d3144df7ac7f25a72852a47b12a9d"
+    },
+    {
+      "block_id": "page-0628-block-0008",
+      "order": 8,
+      "text": "Switching between drugs used in dementia\n",
+      "bbox": [
+        48.0,
+        422.31549072265625,
+        272.9279479980469,
+        435.3504943847656
+      ],
+      "text_sha256": "2bd6bebf88da348e861ff5bea090c2a61a2acf8eb3aa48b523e56f81feae4c95"
+    },
+    {
+      "block_id": "page-0628-block-0009",
+      "order": 9,
+      "text": "The benefits of treatment with AChE-Is are rapidly lost when drug administration is \ninterrupted19 and may not be fully regained when drug treatment is re-initiated.20 Poor \ntolerability with one agent does not rule out good tolerability with another.21 The \nrecently revised British Association for Psychopharmacology Guidelines for Dementia \nconfirm that previous comparative trials have failed to consistently demonstrate any \nsignificant differences in efficacy between the three AChE-Is, the main differences found \nbeing in frequency and type of adverse events. As a result, their recommendation that a \nsignificant proportion of patients (up to 50%) appear to both tolerate and benefit from \nswitching between AChE-Is if they cannot tolerate one remains valid.22\n",
+      "bbox": [
+        48.0,
+        441.1604919433594,
+        422.8146057128906,
+        548.8804931640625
+      ],
+      "text_sha256": "062bd75ad0701dd39889925a7d7643c648ed900397867b23df8fd3a5da1662e2"
+    },
+    {
+      "block_id": "page-0628-block-0010",
+      "order": 10,
+      "text": "Several cases of discontinuation syndrome upon stopping donepezil have been pub-\nlished,23,24 suggesting that a gradual withdrawal should be carried out where possible. \nHowever, a study comparing abrupt versus stepwise switching from donepezil to \nmemantine found no clinically relevant differences in adverse effects despite patients in \nthe abrupt group experiencing more frequent adverse effects than the stepwise \n",
+      "bbox": [
+        47.99640655517578,
+        549.1604614257812,
+        422.79632568359375,
+        608.8804931640625
+      ],
+      "text_sha256": "ce979392ea8afb7d65913b9a6fdbee4da956badeb9ad2d954c7fcde90b6e4d87"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

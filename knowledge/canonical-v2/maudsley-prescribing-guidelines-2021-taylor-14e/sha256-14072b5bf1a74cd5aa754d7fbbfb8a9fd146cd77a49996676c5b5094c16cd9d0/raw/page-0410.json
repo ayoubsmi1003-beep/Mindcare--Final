@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0410",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 410,
+  "source_page_index": 409,
+  "source_page_display": 410,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    389\nCHAPTER 3\nAntidepressant-induced arrhythmia\nDepression confers an increased risk of cardiovascular disease1 and sudden cardiac \ndeath2 perhaps because of platelet activation,3 decreased heart rate variability,4 reduced \nphysical activity,5 an association with an increased risk of diabetes and/or other factors.\nTricyclic antidepressants (TCAs) have established arrhythmogenic activity which \narises as a result of potent blockade of cardiac sodium channels and variable activity at \npotassium channels.6 ECG changes produced include PR, QRS and QT prolongation \nand the Brugada syndrome.7 Normal clinical use of nortriptyline has been associated in \none study with an increased risk of cardiac arrest,8 although a large cohort study did \nnot confirm this finding.9 Lofepramine, for reasons unknown, seems to lack the over-\ndose arrhythmogenicity of other TCAs, despite its major metabolite, desipramine, being \na potent potassium channel blocker.10 Oddly, in one study,11 clinical use of lofepramine \nwas associated with an increased risk of myocardial infarction, whereas other antide-\npressants were not. In patients taking tricyclics, ECG monitoring is a more meaningful \nand useful measure of toxicity than plasma level monitoring.\nThere is limited evidence that venlafaxine is a sodium channel antagonist12 and a \nweak antagonist at hERG potassium channels. Arrhythmia is a rare occurrence even \nafter massive overdose,13–16 and ECG changes no more common than with SSRIs.17 No \nECG changes are seen in therapeutic dosing,18 and sudden cardiac death in clinical use \nis no more common than with fluoxetine or citalopram.9,19 Desvenlafaxine does not \nappear to prolong QT even in overdose.20\nMoclobemide,21 citalopram,22,23 escitalopram,24 bupropion (amfebutamone),25 trazo-\ndone26,27 and sertraline,28 amongst others,1 have been reported to prolong the QTc inter-\nval in overdose, but the clinical consequences of this are uncertain. Sertraline prolongs \nQT by 5–10ms at 400mg a day,29 but QT changes are not usually seen with most SSRIs \nat normal clinical doses.30,31 Nonetheless, an association between SSRIs (as a group) \nand QT changes in normal dosing can be shown,32 but this seems largely to be driven \nby the effects of citalopram and escitalopram.33 The effect is dose-related33 but mod-\nest.32 Neither a large database study9 nor a large cohort study34 found any association \nbetween citalopram treatment and arrhythmia or cardiac mortality in routine clinical \npractice; in fact, higher doses of citalopram (>40mg) were associated with fewer adverse \noutcomes than were lower doses.34 A large study found no excess risk of cardiac arrest \nand sudden death for citalopram or escitalopram,35 but a more recent Taiwanese study \nshowed a small increase in mortality with these drugs.36\nVortioxetine seems to have no effect on QT,37–39 similarly, agomelatine has no effect, \neven at supratherapeutic doses.40 Vilazodone has no effect on cardiac conduction.41 \nLevomilnacipran42 and milnacipran43 probably have no effect on QT, at least at thera-\npeutic doses.\nUse in at-risk patients\nThere is clear evidence for the safety of sertraline44 and mirtazapine45 (and to a lesser \nextent, citalopram,45 fluoxetine46 and bupropion47) in subjects at risk of arrhythmia due \nto recent myocardial infarction. One trial found that SSRIs and trazodone decrease the \nrisk of MI,48 another suggested no effect in either direction for any antidepressant.49 \n",
+  "raw_text_sha256": "85d63f5aa2f1a9937df7323631d8e1f33bfaa36aa68abfdb3315c693495aae53",
+  "coordinates_sha256": "723f0e30aeccb0a7afa914ca0b7feef70ff589d211c2aee892a93fbde237c183",
+  "block_sequence_sha256": "855b385ea1bec7c819387d264021e433539ddc110710fe8a9bac7515053929f1",
+  "blocks": [
+    {
+      "block_id": "page-0410-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    389\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "d31c44ef2f70d2f19c611a145b9455c59824e09a671d7c3bf583df938f27cc4e"
+    },
+    {
+      "block_id": "page-0410-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0410-block-0002",
+      "order": 2,
+      "text": "Antidepressant-induced arrhythmia\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        238.76597595214844,
+        79.1004638671875
+      ],
+      "text_sha256": "b25cfbf411843f34486044a31a65c14f16aa0ca4397246d79c280a38bc3dfc41"
+    },
+    {
+      "block_id": "page-0410-block-0003",
+      "order": 3,
+      "text": "Depression confers an increased risk of cardiovascular disease1 and sudden cardiac \ndeath2 perhaps because of platelet activation,3 decreased heart rate variability,4 reduced \nphysical activity,5 an association with an increased risk of diabetes and/or other factors.\n",
+      "bbox": [
+        47.998504638671875,
+        84.91046142578125,
+        422.77850341796875,
+        120.63046264648438
+      ],
+      "text_sha256": "b208e0bb235c924bd5676227dd07ddb62934a146fbb828e1a1cd2d468b31d946"
+    },
+    {
+      "block_id": "page-0410-block-0004",
+      "order": 4,
+      "text": "Tricyclic antidepressants (TCAs) have established arrhythmogenic activity which \narises as a result of potent blockade of cardiac sodium channels and variable activity at \npotassium channels.6 ECG changes produced include PR, QRS and QT prolongation \nand the Brugada syndrome.7 Normal clinical use of nortriptyline has been associated in \none study with an increased risk of cardiac arrest,8 although a large cohort study did \nnot confirm this finding.9 Lofepramine, for reasons unknown, seems to lack the over-\ndose arrhythmogenicity of other TCAs, despite its major metabolite, desipramine, being \na potent potassium channel blocker.10 Oddly, in one study,11 clinical use of lofepramine \nwas associated with an increased risk of myocardial infarction, whereas other antide-\npressants were not. In patients taking tricyclics, ECG monitoring is a more meaningful \nand useful measure of toxicity than plasma level monitoring.\n",
+      "bbox": [
+        47.99599838256836,
+        120.67046356201172,
+        422.8085632324219,
+        252.6304931640625
+      ],
+      "text_sha256": "94028bc52a837a733533d6e3793c515ab82cf61f3b3fc4640e7b50aa868f7441"
+    },
+    {
+      "block_id": "page-0410-block-0005",
+      "order": 5,
+      "text": "There is limited evidence that venlafaxine is a sodium channel antagonist12 and a \nweak antagonist at hERG potassium channels. Arrhythmia is a rare occurrence even \nafter massive overdose,13–16 and ECG changes no more common than with SSRIs.17 No \nECG changes are seen in therapeutic dosing,18 and sudden cardiac death in clinical use \nis no more common than with fluoxetine or citalopram.9,19 Desvenlafaxine does not \nappear to prolong QT even in overdose.20\n",
+      "bbox": [
+        47.995391845703125,
+        252.67050170898438,
+        422.78717041015625,
+        324.6304931640625
+      ],
+      "text_sha256": "7c4d50d7cfe5ebb33cfe46e9ac6e1ad5e85c4d43ba7b59de88e6e8b5df6c5fb8"
+    },
+    {
+      "block_id": "page-0410-block-0006",
+      "order": 6,
+      "text": "Moclobemide,21 citalopram,22,23 escitalopram,24 bupropion (amfebutamone),25 trazo-\ndone26,27 and sertraline,28 amongst others,1 have been reported to prolong the QTc inter-\nval in overdose, but the clinical consequences of this are uncertain. Sertraline prolongs \nQT by 5–10ms at 400mg a day,29 but QT changes are not usually seen with most SSRIs \nat normal clinical doses.30,31 Nonetheless, an association between SSRIs (as a group) \nand QT changes in normal dosing can be shown,32 but this seems largely to be driven \nby the effects of citalopram and escitalopram.33 The effect is dose-related33 but mod-\nest.32 Neither a large database study9 nor a large cohort study34 found any association \nbetween citalopram treatment and arrhythmia or cardiac mortality in routine clinical \npractice; in fact, higher doses of citalopram (>40mg) were associated with fewer adverse \noutcomes than were lower doses.34 A large study found no excess risk of cardiac arrest \nand sudden death for citalopram or escitalopram,35 but a more recent Taiwanese study \nshowed a small increase in mortality with these drugs.36\n",
+      "bbox": [
+        47.9971923828125,
+        324.6705017089844,
+        422.79937744140625,
+        480.6304931640625
+      ],
+      "text_sha256": "f84604ff4c36c78f436666a4db4523c6579d04326524753685a432f269daf72b"
+    },
+    {
+      "block_id": "page-0410-block-0007",
+      "order": 7,
+      "text": "Vortioxetine seems to have no effect on QT,37–39 similarly, agomelatine has no effect, \neven at supratherapeutic doses.40 Vilazodone has no effect on cardiac conduction.41 \nLevomilnacipran42 and milnacipran43 probably have no effect on QT, at least at thera-\npeutic doses.\n",
+      "bbox": [
+        47.99627685546875,
+        480.6705017089844,
+        422.7803955078125,
+        528.6304931640625
+      ],
+      "text_sha256": "8fb8d9524d5439bab6b105b1bde101f784ec998204671f8f71583b860f4fab4e"
+    },
+    {
+      "block_id": "page-0410-block-0008",
+      "order": 8,
+      "text": "Use in at-risk patients\n",
+      "bbox": [
+        48.0,
+        546.0654907226562,
+        160.46400451660156,
+        559.1004638671875
+      ],
+      "text_sha256": "06b3a0577ffe237f02ea7b2970d599a8840b0d119d1fe72c627bd0c91d6a28fb"
+    },
+    {
+      "block_id": "page-0410-block-0009",
+      "order": 9,
+      "text": "There is clear evidence for the safety of sertraline44 and mirtazapine45 (and to a lesser \nextent, citalopram,45 fluoxetine46 and bupropion47) in subjects at risk of arrhythmia due \nto recent myocardial infarction. One trial found that SSRIs and trazodone decrease the \nrisk of MI,48 another suggested no effect in either direction for any antidepressant.49 \n",
+      "bbox": [
+        47.995697021484375,
+        564.9104614257812,
+        422.79571533203125,
+        612.6304931640625
+      ],
+      "text_sha256": "8fbcc50eb6a41459a4f00d1a3f445aafa235d537c36b704757147b0f2045af2f"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0120",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 120,
+  "source_page_index": 119,
+  "source_page_display": 120,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    99\nCHAPTER 1\nOmega-3 fatty acid (fish oils) in schizophrenia\nFish oils contain the omega-3 fatty acids, eicosapentaenoic acid (EPA) and docosahex-\naenoic acid (DHA) – also known as polyunsaturated fatty acids or PUFAs. These com-\npounds are thought to be involved in maintaining neuronal membrane structure, in the \nmodulation of membrane proteins and in the production of prostaglandins and leukot-\nrienes.1 High dietary intake of PUFAs may protect against psychosis,2 and antipsychotic \ntreatment seems to normalise PUFA deficits.3 Animal models suggest a protective effect \nfor PUFAs.4 They have been suggested as treatments for a variety of psychiatric ill-\nnesses;5,6 in schizophrenia, case reports,7–10 case series11 and prospective trials originally \nsuggested useful efficacy.12–16\nTreatment\nA meta-analysis of these RCTs17 concluded that EPA has ‘no beneficial effect in estab-\nlished schizophrenia’ because the estimate of effect size (0.242) was not statistically \nsignificant. Since then, an RCT comprising 71 patients with first-episode schizophrenia \ngiven 2.2g EPA + DHA daily for 6 months showed a reduction in symptom severity for \npatients in the active arm, finding an NNT of 4 to produce a 50% reduction in symp-\ntoms measured by PANSS.18 However, a further RCT of 97 subjects in acute psychosis \nshowed no advantage for EPA 2g daily19 and a relapse prevention study of EPA \n2g + DHA 1g a day failed to demonstrate any value for PUFAs over placebo (relapse \nrate was 90% with PUFAs, 75% with placebo).20 The limitations affecting the pub-\nlished data in this area (small sample sizes, heterogeneity of diagnosis and stage of ill-\nness, differences in intervention combinations and doses) mean that overall findings \nremain at best inconclusive.21,22 Meta-review of published meta-analyses finds no evi-\ndence for the use of PUFAs in the treatment of schizophrenia.23\nOn balance, evidence now suggests that EPA (2–3g daily) is unlikely to be a worth-\nwhile option in schizophrenia when added to standard treatment. Set against doubts \nover efficacy are the facts that fish oils are relatively cheap, well tolerated24 (mild GI \nsymptoms may occur) and benefit physical health.1,25–29\nPrevention\nA study of 700mg EPA + 480mg DHA in adolescents and young adults at high risk of \npsychosis showed that such treatment greatly reduced emergence of psychotic symp-\ntoms compared with placebo30 (although a review described this study as ‘very low \nquality evidence’31). Since the publication of this single-site study, the large, multi-site \nNEURAPRO trial32 gave adult patients at high risk of psychosis 840mg EPA + 560mg \nDHA for 6 months, and failed to find any evidence of efficacy either for reduction in \ntransition to psychosis, or improvement in symptoms. Cochrane concluded that \nomega-3 fatty acids ‘may’ prevent transition to psychosis in the prodromal phase, but \nthat the evidence is of low quality and this conclusion unconfirmed.33\n",
+  "raw_text_sha256": "e7b4225dadfde0b9ea9a98205affbf877273ec291cb9fa1ec91c9463460f4f27",
+  "coordinates_sha256": "188fff2dd160922a5175fecf1f59024b294ae40a16676eafcf7785463a292b89",
+  "block_sequence_sha256": "0f7307b7feb488764c931283ad6716cb2fb9869f321a0b3483e7199f74f9a021",
+  "blocks": [
+    {
+      "block_id": "page-0120-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    99\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "49ba52506ab4b24fba6c5309bf429a4d0d50ff94063065427ce30c9c22b52210"
+    },
+    {
+      "block_id": "page-0120-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0120-block-0002",
+      "order": 2,
+      "text": "Omega-3 fatty acid (fish oils) in schizophrenia\n",
+      "bbox": [
+        54.99909973144531,
+        66.06448364257812,
+        291.3341369628906,
+        79.0994873046875
+      ],
+      "text_sha256": "0719b0d5ee1832807ede24f3dc078ebad167ac9d5136470c46f59a92c57f3988"
+    },
+    {
+      "block_id": "page-0120-block-0003",
+      "order": 3,
+      "text": "Fish oils contain the omega-3 fatty acids, eicosapentaenoic acid (EPA) and docosahex-\naenoic acid (DHA) – also known as polyunsaturated fatty acids or PUFAs. These com-\npounds are thought to be involved in maintaining neuronal membrane structure, in the \nmodulation of membrane proteins and in the production of prostaglandins and leukot-\nrienes.1 High dietary intake of PUFAs may protect against psychosis,2 and antipsychotic \ntreatment seems to normalise PUFA deficits.3 Animal models suggest a protective effect \nfor PUFAs.4 They have been suggested as treatments for a variety of psychiatric ill-\nnesses;5,6 in schizophrenia, case reports,7–10 case series11 and prospective trials originally \nsuggested useful efficacy.12–16\n",
+      "bbox": [
+        47.99720764160156,
+        84.90948486328125,
+        422.8013000488281,
+        192.62948608398438
+      ],
+      "text_sha256": "df46fa30974cbca5c2982628818a53f9ae68b200f78bf4b5f396adc58c8341c3"
+    },
+    {
+      "block_id": "page-0120-block-0004",
+      "order": 4,
+      "text": "Treatment\n",
+      "bbox": [
+        47.99909973144531,
+        210.06451416015625,
+        100.59008026123047,
+        223.09951782226562
+      ],
+      "text_sha256": "26ff2b6ac3686cb4604132c5bd8d8a30634d8bb51bc1750a64262783515413c9"
+    },
+    {
+      "block_id": "page-0120-block-0005",
+      "order": 5,
+      "text": "A meta-analysis of these RCTs17 concluded that EPA has ‘no beneficial effect in estab-\nlished schizophrenia’ because the estimate of effect size (0.242) was not statistically \nsignificant. Since then, an RCT comprising 71 patients with first-episode schizophrenia \ngiven 2.2g EPA + DHA daily for 6 months showed a reduction in symptom severity for \npatients in the active arm, finding an NNT of 4 to produce a 50% reduction in symp-\ntoms measured by PANSS.18 However, a further RCT of 97 subjects in acute psychosis \nshowed no advantage for EPA 2g daily19 and a relapse prevention study of EPA \n2g + DHA 1g a day failed to demonstrate any value for PUFAs over placebo (relapse \nrate was 90% with PUFAs, 75% with placebo).20 The limitations affecting the pub-\nlished data in this area (small sample sizes, heterogeneity of diagnosis and stage of ill-\nness, differences in intervention combinations and doses) mean that overall findings \nremain at best inconclusive.21,22 Meta-review of published meta-analyses finds no evi-\ndence for the use of PUFAs in the treatment of schizophrenia.23\n",
+      "bbox": [
+        47.99591064453125,
+        228.90951538085938,
+        422.8340759277344,
+        384.6295166015625
+      ],
+      "text_sha256": "e4649b243257775c00b98e9f7b018049db7f9caf0bd3aa8e98edfd2791d075e1"
+    },
+    {
+      "block_id": "page-0120-block-0006",
+      "order": 6,
+      "text": "On balance, evidence now suggests that EPA (2–3g daily) is unlikely to be a worth-\nwhile option in schizophrenia when added to standard treatment. Set against doubts \nover efficacy are the facts that fish oils are relatively cheap, well tolerated24 (mild GI \nsymptoms may occur) and benefit physical health.1,25–29\n",
+      "bbox": [
+        47.99909973144531,
+        384.9095153808594,
+        422.7810974121094,
+        432.6295166015625
+      ],
+      "text_sha256": "a6367ca081052ca3b20b1dc6623b233480955f351df957d3e8142fe6266bb7af"
+    },
+    {
+      "block_id": "page-0120-block-0007",
+      "order": 7,
+      "text": "Prevention\n",
+      "bbox": [
+        47.99909973144531,
+        450.06451416015625,
+        104.0440902709961,
+        463.0995178222656
+      ],
+      "text_sha256": "7a79e4c8da111e17963675c48d9aa992c004faff3f872c7c1dac5637e5fc5780"
+    },
+    {
+      "block_id": "page-0120-block-0008",
+      "order": 8,
+      "text": "A study of 700mg EPA + 480mg DHA in adolescents and young adults at high risk of \npsychosis showed that such treatment greatly reduced emergence of psychotic symp-\ntoms compared with placebo30 (although a review described this study as ‘very low \nquality evidence’31). Since the publication of this single-site study, the large, multi-site \nNEURAPRO trial32 gave adult patients at high risk of psychosis 840mg EPA + 560mg \nDHA for 6 months, and failed to find any evidence of efficacy either for reduction in \ntransition to psychosis, or improvement in symptoms. Cochrane concluded that \nomega-3 fatty acids ‘may’ prevent transition to psychosis in the prodromal phase, but \nthat the evidence is of low quality and this conclusion unconfirmed.33\n",
+      "bbox": [
+        47.99909973144531,
+        468.9095153808594,
+        422.8104553222656,
+        576.6295166015625
+      ],
+      "text_sha256": "a648f6f8d3f96aeea9f9b96cc4ae9f961e5a4f4e066af23f4d5bd2a935f24908"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0547",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 547,
+  "source_page_index": 546,
+  "source_page_display": 547,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "526    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nInteractions between ‘street drugs’ and prescribed psychotropic drugs\nPotential interactions between drugs of misuse and prescribed psychotropics are com-\nmon, not least because of the high rates of psychotropic prescribing in such patients.1 \nInformation on adverse interactions is derived largely from case reports and theoretical \nassumptions and rarely from systematic investigation. A summary of major interactions \ncan be found in Table 4.21.\nIn all patients who misuse street drugs:\n■\n■Infection with hepatitis B and C is common. The associated liver damage may lead to \na reduced ability to metabolise other drugs and increased sensitivity to adverse effects.\n■\n■Infection with HIV is common.2,3 Antiretroviral drugs are involved in pharmacoki-\nnetic interactions with a number of prescribed and non-prescribed drugs.4 For exam-\nple, ritonavir can decrease the metabolism of ecstasy and precipitate toxicity, and a \nnumber of antiretrovirals can increase or decrease methadone metabolism.5\n■\n■Prescribed drugs may be used in the same way as illicit drugs (i.e. erratically and not \nas intended). Large quantities of prescribed drugs should not be given to \noutpatients.\n■\n■Additive or synergistic effects of respiratory depressants may play a contributory role \nin deaths from overdose with methadone or other opioid agonists.6 Caution is needed \nin prescribing sedative medicines such as benzodiazepines.\n",
+  "raw_text_sha256": "7c19f45d1a4c8f848b55a9ea762c0654c70e0b8b2f7786ee9098d7eece4a8b86",
+  "coordinates_sha256": "483e182b22aec8a85f820dcac8191b661c79e89aff751b351d7c04fd8eaf742c",
+  "block_sequence_sha256": "77d2e657bfe7a3a53f91e5247da8e5662fd8c2f5000227996ce7a94f939ce3ea",
+  "blocks": [
+    {
+      "block_id": "page-0547-block-0000",
+      "order": 0,
+      "text": "526    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "3507a907d5c5a897438c58cf5a75f7bab780fbea19cbdd4a425010d384fd617f"
+    },
+    {
+      "block_id": "page-0547-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0547-block-0002",
+      "order": 2,
+      "text": "Interactions between ‘street drugs’ and prescribed psychotropic drugs\n",
+      "bbox": [
+        68.88999938964844,
+        66.06539916992188,
+        430.713134765625,
+        79.10040283203125
+      ],
+      "text_sha256": "e67cc6ba2d27e9974dfce8213b49f0b84cc274bb662d55a34d193b2124ce1c12"
+    },
+    {
+      "block_id": "page-0547-block-0003",
+      "order": 3,
+      "text": "Potential interactions between drugs of misuse and prescribed psychotropics are com-\nmon, not least because of the high rates of psychotropic prescribing in such patients.1 \nInformation on adverse interactions is derived largely from case reports and theoretical \nassumptions and rarely from systematic investigation. A summary of major interactions \ncan be found in Table 4.21.\n",
+      "bbox": [
+        61.88999938964844,
+        84.910400390625,
+        436.69000244140625,
+        144.63040161132812
+      ],
+      "text_sha256": "ab31c9226fbe793a0cfe4708e0ef2fc9f70607d2cd23161e79429aa5f4ba06c3"
+    },
+    {
+      "block_id": "page-0547-block-0004",
+      "order": 4,
+      "text": "In all patients who misuse street drugs:\n",
+      "bbox": [
+        71.8900146484375,
+        147.910400390625,
+        239.67999267578125,
+        159.63040161132812
+      ],
+      "text_sha256": "8d470ad290632e7f253ecd23853cf2f99336a463ec5419b6166e9d9b6730fe6d"
+    },
+    {
+      "block_id": "page-0547-block-0005",
+      "order": 5,
+      "text": "■\n■Infection with hepatitis B and C is common. The associated liver damage may lead to \n",
+      "bbox": [
+        61.88990020751953,
+        165.910400390625,
+        436.6399841308594,
+        177.63040161132812
+      ],
+      "text_sha256": "956df938e17b12a9e6ff66ae74caf11dfa75f11ff846a5a2cd9d8eb9f62a049f"
+    },
+    {
+      "block_id": "page-0547-block-0006",
+      "order": 6,
+      "text": "a reduced ability to metabolise other drugs and increased sensitivity to adverse effects.\n",
+      "bbox": [
+        70.88999938964844,
+        177.910400390625,
+        434.23004150390625,
+        189.63040161132812
+      ],
+      "text_sha256": "c21e02471d1cfcc514db06383b60ef09ee774542228d663279418abe9e76ee59"
+    },
+    {
+      "block_id": "page-0547-block-0007",
+      "order": 7,
+      "text": "■\n■Infection with HIV is common.2,3 Antiretroviral drugs are involved in pharmacoki-\n",
+      "bbox": [
+        61.88990020751953,
+        189.910400390625,
+        433.8859558105469,
+        201.63040161132812
+      ],
+      "text_sha256": "b1bacb83c22b8ff765281cb972942bfdff1d9f2543abf5340f959084dfcc4718"
+    },
+    {
+      "block_id": "page-0547-block-0008",
+      "order": 8,
+      "text": "netic interactions with a number of prescribed and non-prescribed drugs.4 For exam-\nple, ritonavir can decrease the metabolism of ecstasy and precipitate toxicity, and a \nnumber of antiretrovirals can increase or decrease methadone metabolism.5\n",
+      "bbox": [
+        70.88589477539062,
+        201.910400390625,
+        436.71002197265625,
+        237.63040161132812
+      ],
+      "text_sha256": "91ced95cc1802bf9a376fe8cdbeba3f3683ff9f330a0c83c8408ec71e9c5e26b"
+    },
+    {
+      "block_id": "page-0547-block-0009",
+      "order": 9,
+      "text": "■\n■Prescribed drugs may be used in the same way as illicit drugs (i.e. erratically and not \n",
+      "bbox": [
+        61.88990020751953,
+        237.910400390625,
+        436.6899719238281,
+        249.63040161132812
+      ],
+      "text_sha256": "4c37b54ee2c1cef74d2c740010994bb82d3030efcfc9dca3fb582a50ad91095d"
+    },
+    {
+      "block_id": "page-0547-block-0010",
+      "order": 10,
+      "text": "as intended). Large quantities of prescribed drugs should not be given to \noutpatients.\n",
+      "bbox": [
+        70.88999938964844,
+        249.910400390625,
+        436.6400146484375,
+        273.6304016113281
+      ],
+      "text_sha256": "e5c64aed897ecea0897ce31452c1dbff8e3c61fbfd7ca5fdd7d83d072fb96969"
+    },
+    {
+      "block_id": "page-0547-block-0011",
+      "order": 11,
+      "text": "■\n■Additive or synergistic effects of respiratory depressants may play a contributory role \n",
+      "bbox": [
+        61.88990020751953,
+        273.910400390625,
+        436.62994384765625,
+        285.6304016113281
+      ],
+      "text_sha256": "749daebb370f6bd3b420cc88afdd077cb2e5911ad6d007abe5ddeac30a549b32"
+    },
+    {
+      "block_id": "page-0547-block-0012",
+      "order": 12,
+      "text": "in deaths from overdose with methadone or other opioid agonists.6 Caution is needed \nin prescribing sedative medicines such as benzodiazepines.\n",
+      "bbox": [
+        70.88999938964844,
+        285.910400390625,
+        436.67041015625,
+        309.6304016113281
+      ],
+      "text_sha256": "2df0254edfb5c8893278646d76e40d16ece2da82646846a3753cd79dc87e87d8"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

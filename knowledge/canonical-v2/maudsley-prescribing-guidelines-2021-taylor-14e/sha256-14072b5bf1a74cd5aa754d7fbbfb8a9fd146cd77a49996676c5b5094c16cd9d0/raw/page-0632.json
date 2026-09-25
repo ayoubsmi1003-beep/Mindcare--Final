@@ -1,0 +1,239 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0632",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 632,
+  "source_page_index": 631,
+  "source_page_display": 632,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Prescribing in older people    611\nCHAPTER  6\ncompared with placebo (1.5% vs 0.5%, respectively).55 Although no specific cause \nof death was dominant, half of the deaths reported were due to cardiovascular dis-\norders. As a result, the FDA issued a warning restricting galantamine in patients \nwith MCI. The relevance to AD remains unclear.56 A Cochrane review of pooled \ndata from RCTs of the AChE-Is revealed that there was a significantly higher inci-\ndence of syncope amongst the AChE-I groups compared with the placebo groups \n(3.43% vs 1.87%). A population-based study using a case–time–control design \nexamined health records for 1.4 million older adults in Ontario and found that \ntreatment with AChE-Is was associated with a doubled risk of hospitalisation for \nbradycardia. (The drugs were resumed at discharge in over half the cases suggesting \nthat cardiovascular toxicity of AChE-Is is underappreciated by clinicians.57) It seems \nthat patients with Lewy body dementia are more susceptible to the bradyarrhyth-\nmic adverse effects of these drugs, owing to the autonomic insufficiency associated \nwith the disease.58 A similar study found that hospital visits for syncope were also \nmore frequent in people receiving AChE-Is than in controls: 31.5 vs 18.6 events per \n1000 person-years (adjusted hazard ratio 1.76).59\n* Routine pulse checks should be carried out\nat baseline, at monthly intervals during\ntitration and at 6 monthly intervals thereafter\n© 2007 by The Royal College of Psychiatrists\nSymptomatic\n(e.g. syncope,\n‘funny turns’)\nAsymptomatic\nAsymptomatic\nUnder 50 bpm\n50 – 60 bpm\nPulse Check*\nRemains asymptomatic\n• Start/continue drug\n• Review pulse and\nsymptoms after \n1 week\n• Withold/stop drug\nand seek GP or\nspecialist review for\nunderlying cause\n• If cause is found to\nbe unrelated to\ndrug, or a\npacemaker is fitted\nconsider retrial of\ndrug\n• Continue drug\n• Pulse check 1 week\nafter any increase\nin drug dose\n• Start/continue drug\n• Carry out routine\npulse checks\n• Withhold/stop drug\nand seek GP or\nspecialist review for\nunderlying cause\n• If cause is found to\nbe unrelated to the\ndrug, or a pacemaker\nis fitted, consider\nretrial of drug\nOver 60 bpm\nFigure 6.1  Suggested guidelines for managing cardiovascular risk prior to and during treatment with AChEIs in \nAD53,54. \nbpm, heartbeats per minute; the ‘drug’ means the chosen AChE inhibitors.\nReproduced with permission\n",
+  "raw_text_sha256": "19fdd0eefbb5c1f448a2ce8097309dedb39c21e8cf89cf5005b7031b20aff2c6",
+  "coordinates_sha256": "30265f12c295dfdc1bfad1e5aaa3801071609d880956e09c1c5c8854c7c689ae",
+  "block_sequence_sha256": "907e3cb20d513eb92000bba0baba1a3364eacc6a06b4d3c17999a60f9516e206",
+  "blocks": [
+    {
+      "block_id": "page-0632-block-0000",
+      "order": 0,
+      "text": "Prescribing in older people    611\n",
+      "bbox": [
+        281.576904296875,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "72dfb727ce0c28de3e0a72fb78897a49e4ee7f4118c192cb0e738cc746b9a645"
+    },
+    {
+      "block_id": "page-0632-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        454.4096984863281,
+        405.35260009765625,
+        463.88970947265625,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0632-block-0002",
+      "order": 2,
+      "text": "compared with placebo (1.5% vs 0.5%, respectively).55 Although no specific cause \nof death was dominant, half of the deaths reported were due to cardiovascular dis-\norders. As a result, the FDA issued a warning restricting galantamine in patients \nwith MCI. The relevance to AD remains unclear.56 A Cochrane review of pooled \ndata from RCTs of the AChE-Is revealed that there was a significantly higher inci-\ndence of syncope amongst the AChE-I groups compared with the placebo groups \n(3.43% vs 1.87%). A population-based study using a case–time–control design \nexamined health records for 1.4 million older adults in Ontario and found that \ntreatment with AChE-Is was associated with a doubled risk of hospitalisation for \nbradycardia. (The drugs were resumed at discharge in over half the cases suggesting \nthat cardiovascular toxicity of AChE-Is is underappreciated by clinicians.57) It seems \nthat patients with Lewy body dementia are more susceptible to the bradyarrhyth-\nmic adverse effects of these drugs, owing to the autonomic insufficiency associated \nwith the disease.58 A similar study found that hospital visits for syncope were also \nmore frequent in people receiving AChE-Is than in controls: 31.5 vs 18.6 events per \n1000 person-years (adjusted hazard ratio 1.76).59\n",
+      "bbox": [
+        47.995704650878906,
+        428.5503845214844,
+        422.80859375,
+        620.2704467773438
+      ],
+      "text_sha256": "a078d4865eb7721011cb27619fed4e47048053061380a23b3724de997eb0deec"
+    },
+    {
+      "block_id": "page-0632-block-0003",
+      "order": 3,
+      "text": "* Routine pulse checks should be carried out\nat baseline, at monthly intervals during\ntitration and at 6 monthly intervals thereafter\n",
+      "bbox": [
+        283.0556945800781,
+        312.0741882324219,
+        411.6714782714844,
+        335.18817138671875
+      ],
+      "text_sha256": "a2f8c218cda27905eb09497d48ad51a738cd6d3aab23b7d32f4083e3664a4d33"
+    },
+    {
+      "block_id": "page-0632-block-0004",
+      "order": 4,
+      "text": "© 2007 by The Royal College of Psychiatrists\n",
+      "bbox": [
+        272.41571044921875,
+        344.90570068359375,
+        412.96173095703125,
+        352.9977111816406
+      ],
+      "text_sha256": "4d04b1aee5fd8f2a5ecd0ef901ced6d08eed0bd42916d1856e3e8d0b54868d7e"
+    },
+    {
+      "block_id": "page-0632-block-0005",
+      "order": 5,
+      "text": "Symptomatic\n(e.g. syncope,\n",
+      "bbox": [
+        262.99920654296875,
+        158.0107879638672,
+        310.10675048828125,
+        175.6807861328125
+      ],
+      "text_sha256": "2903bb496a48ef6669492043e0851fea9d286055880a143cca285358469e3fb9"
+    },
+    {
+      "block_id": "page-0632-block-0006",
+      "order": 6,
+      "text": "‘funny turns’)\n",
+      "bbox": [
+        265.0917053222656,
+        176.0107879638672,
+        308.0217590332031,
+        184.6807861328125
+      ],
+      "text_sha256": "43fed90fe5ca29ec6ce385713140bc0028d8fb444afa903b3984e86d085c8fee"
+    },
+    {
+      "block_id": "page-0632-block-0007",
+      "order": 7,
+      "text": "Asymptomatic\nAsymptomatic\n",
+      "bbox": [
+        161.68170166015625,
+        166.4633026123047,
+        396.58172607421875,
+        175.80078125
+      ],
+      "text_sha256": "1794ec59b217f3de9e23df4ce0ca050b840e4f5d2300665d7bc69a8142e87f11"
+    },
+    {
+      "block_id": "page-0632-block-0008",
+      "order": 8,
+      "text": "Under 50 bpm\n50 – 60 bpm\n",
+      "bbox": [
+        162.02670288085938,
+        103.76329040527344,
+        305.8392639160156,
+        112.43328857421875
+      ],
+      "text_sha256": "557de18dc398394555eeee64874a53282b3617b2056fca0d0e3602affb07c0cd"
+    },
+    {
+      "block_id": "page-0632-block-0009",
+      "order": 9,
+      "text": "Pulse Check*\n",
+      "bbox": [
+        260.53369140625,
+        71.85641479492188,
+        308.0537414550781,
+        80.78141021728516
+      ],
+      "text_sha256": "05c577d7c665f94be2eb6260850cc1a614c5425ff6df614baefc3689433bbd88"
+    },
+    {
+      "block_id": "page-0632-block-0010",
+      "order": 10,
+      "text": "Remains asymptomatic\n",
+      "bbox": [
+        147.7864990234375,
+        278.28668212890625,
+        220.52346801757812,
+        286.3786926269531
+      ],
+      "text_sha256": "410fa0db1837c43fff0d3a607b4bc9f9a9a5e2457511d0cb240d50e413533e5c"
+    },
+    {
+      "block_id": "page-0632-block-0011",
+      "order": 11,
+      "text": "• Start/continue drug\n• Review pulse and\nsymptoms after \n1 week\n",
+      "bbox": [
+        149.79629516601562,
+        210.2231903076172,
+        220.34130859375,
+        245.8931884765625
+      ],
+      "text_sha256": "ecad753ddf51cce9bbd2d42b4c732dbcad168fdcb04cb69983b129a3176d8bfa"
+    },
+    {
+      "block_id": "page-0632-block-0012",
+      "order": 12,
+      "text": "• Withold/stop drug\nand seek GP or\nspecialist review for\nunderlying cause\n• If cause is found to\nbe unrelated to\ndrug, or a\npacemaker is fitted\nconsider retrial of\ndrug\n",
+      "bbox": [
+        58.50629806518555,
+        159.7856903076172,
+        131.11378479003906,
+        249.4556884765625
+      ],
+      "text_sha256": "c8960704a29a4ad21ec2e13d3db734a7ce432a1ebba59efc08a6c6922dcdb543"
+    },
+    {
+      "block_id": "page-0632-block-0013",
+      "order": 13,
+      "text": "• Continue drug\n• Pulse check 1 week\nafter any increase\nin drug dose\n",
+      "bbox": [
+        148.76129150390625,
+        314.1956787109375,
+        220.30377197265625,
+        349.8656921386719
+      ],
+      "text_sha256": "a31332c3b194d5663128cd5dfedf26e94249eac0cee06cb164fee68ed27dd56a"
+    },
+    {
+      "block_id": "page-0632-block-0014",
+      "order": 14,
+      "text": "• Start/continue drug\n• Carry out routine\npulse checks\n",
+      "bbox": [
+        339.34381103515625,
+        213.2081756591797,
+        409.8888854980469,
+        239.878173828125
+      ],
+      "text_sha256": "d76fd15b29573523889092315745f5ea21f21f2e424d9a12e4aad59e2e5d5353"
+    },
+    {
+      "block_id": "page-0632-block-0015",
+      "order": 15,
+      "text": "• Withhold/stop drug\nand seek GP or\nspecialist review for\nunderlying cause\n• If cause is found to\nbe unrelated to the\ndrug, or a pacemaker\nis fitted, consider\nretrial of drug\n",
+      "bbox": [
+        237.6663055419922,
+        207.10316467285156,
+        316.1238708496094,
+        287.7731628417969
+      ],
+      "text_sha256": "ec84b29725673150e312092222e73236c20b039ab1456f35cda564d161f958cb"
+    },
+    {
+      "block_id": "page-0632-block-0016",
+      "order": 16,
+      "text": "Over 60 bpm\n",
+      "bbox": [
+        351.35882568359375,
+        103.75315856933594,
+        394.7088623046875,
+        112.42315673828125
+      ],
+      "text_sha256": "5166cc6a22bb210087482fc8e26343b0885976b040d9aa99f3a30933e1606ba9"
+    },
+    {
+      "block_id": "page-0632-block-0017",
+      "order": 17,
+      "text": "Figure 6.1  Suggested guidelines for managing cardiovascular risk prior to and during treatment with AChEIs in \nAD53,54. \nbpm, heartbeats per minute; the ‘drug’ means the chosen AChE inhibitors.\nReproduced with permission\n",
+      "bbox": [
+        47.99700164794922,
+        367.5506286621094,
+        406.4163818359375,
+        406.31640625
+      ],
+      "text_sha256": "644cc87a88af84d42998fcc85e12779047a4ce23b4ba2304e6e42e24e80184af"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,12 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0657",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 657,
+  "source_page_index": 656,
+  "repaired_text": "Table 6.5  Physicochemical properties of anticholinergic drugs in urinary incontinence14,25 (adapted with permission26)\nDrug\nMuscarinic receptor\n(M3:M1 affinity ratio)\nPolarity\nLipophilicity\nMolecular\nweight (kDa)\nP-gp\nsubstrate\nTheoretical ability to\ncross BBB\nEffect on\ncognition\nDarifenacin\nMainly M3 (9.3:1)\nNeutral\nHigh\n507.5  \n(relatively large)\nYes\nHigh\n(but bladder selective and\nP-gp\nsubstrate)\n–\nFesoterodine\nNon-selective\nNeutral\nVery low\n411.6\nYes\nVery low\n–\nOxybutynin\nNon-selective\nNeutral\nModerate\n357 (relatively \nsmall)\nNo\nModerate/high\n+++\nSolifenacin\nMainly M3 (2.5:1)\nNeutral\nModerate\n480.6\nNo\nModerate\n–/+\nTolterodine\nNon-selective\nNeutral\nLow\n475.6\nNo\nLow\n+\nTrospium chloride\nNon-selective\nPositively\ncharged\nNot lipophilic\n428\nYes\nAlmost none\n–\n– represents no reports of adverse effects on cognition.\n+ represents some adverse effects on cognition reported.\n+++ represents consistent reports of adverse effects on cognition.",
+  "repaired_text_sha256": "71afeabd3861be275dac4c962e1fff5fc2a9ba921c1e6a46faadaf04336ea8e6",
+  "raw_text_sha256": "12ca6279be7f7551eb9fcdff43554089971d1f26045d3d345430e6153f8cea44",
+  "repair_ids": [],
+  "raw_file": "raw/page-0657.json"
+}

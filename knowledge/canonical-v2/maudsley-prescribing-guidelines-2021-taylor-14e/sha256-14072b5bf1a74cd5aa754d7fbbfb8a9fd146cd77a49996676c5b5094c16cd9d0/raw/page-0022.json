@@ -1,0 +1,59 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0022",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 22,
+  "source_page_index": 21,
+  "source_page_display": 22,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of major \n psychiatric conditions\nPart 1  \n",
+  "raw_text_sha256": "7a8e3f310d2130f6aafa7366aefd941852f23e075fec8a73870a657f402851d9",
+  "coordinates_sha256": "e568258ee3ddff80151e1f11a871749e8be0edef364016a6ef340193cd0048f5",
+  "block_sequence_sha256": "13e45599c3d7dbb6ccb7aac3f3eeeeca6b133f9b30e4e7e659dc6a9c9739b1d0",
+  "blocks": [
+    {
+      "block_id": "page-0022-block-0000",
+      "order": 0,
+      "text": "Drug treatment of major \n",
+      "bbox": [
+        164.8905029296875,
+        111.36316680908203,
+        426.1185302734375,
+        137.43316650390625
+      ],
+      "text_sha256": "d20e84e4259cb644c33c4ca70bb599edbf1b88047ac61fc0fb3fe49163e0b87c"
+    },
+    {
+      "block_id": "page-0022-block-0001",
+      "order": 1,
+      "text": " psychiatric conditions\n",
+      "bbox": [
+        190.2344970703125,
+        135.36517333984375,
+        420.0024719238281,
+        161.4351806640625
+      ],
+      "text_sha256": "79691ee6e59d7c0805aeb039f95c9d70d7514c618485978aa99f2f1ea6c51ac8"
+    },
+    {
+      "block_id": "page-0022-block-0002",
+      "order": 2,
+      "text": "Part 1  \n",
+      "bbox": [
+        362.4689025878906,
+        59.724403381347656,
+        425.8149108886719,
+        82.60040283203125
+      ],
+      "text_sha256": "63025e8977548b4918a7eea542e5a43b7e4afc6ea9cb4a8186ab1da963390027"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

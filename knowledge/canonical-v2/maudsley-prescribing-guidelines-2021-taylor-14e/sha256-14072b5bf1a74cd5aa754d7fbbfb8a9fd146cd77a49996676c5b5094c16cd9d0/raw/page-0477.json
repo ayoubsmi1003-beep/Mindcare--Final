@@ -1,0 +1,407 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0477",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 477,
+  "source_page_index": 476,
+  "source_page_display": 477,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "456    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nPharmacologically assisted withdrawal (alcohol detoxification)\nAlcohol withdrawal is associated with significant morbidity and mortality when \nimproperly managed.\nPharmacologically assisted withdrawal is likely to be needed when:\n■\n■regular consumption of >15 units/day\n■\n■AUDIT score >20\n■\n■there is a history of significant withdrawal symptoms.\nSymptom scales can be helpful in determining the amount of pharmacological support \nrequired to manage withdrawal symptoms. The Clinical Institute Withdrawal Assessment \nof Alcohol Scale Revised (CIWA-Ar; Figure 4.1)12 and Short Alcohol Withdrawal Scale \n(SAWS; Table 4.2)13 are both 10-item scales that can be completed in around 5 minutes. \nThe CIWA-Ar is an objective scale and the SAWS is a self-complete tool. A CIWA-Ar \nscore >10 or a SAWS score >12 should prompt assisted withdrawal.\nCommunity detoxification is usually possible when:\n■\n■There is a supervising carer, ideally 24 hours a day throughout the duration of detoxi-\nfication process.\n■\n■The treatment plan has been agreed with the patient, their carer and their general \npractitioners (GP).\n■\n■A contingency plan has been agreed with the patient, their carer and their GP.\n■\n■The patient is able to pick up medication daily and be reviewed by professionals regu-\nlarly throughout the process.\n■\n■Outpatient/community-based programmes including psychosocial support are available.\nCommunity detoxification should be stopped if the patient resumes drinking or fails to \nengage with the agreed treatment plan.\nInpatient detoxification is likely to be required if:\n■\n■Regular consumption is >30 units/day.\n■\n■SADQ >30 (severe dependence).\n■\n■There is a history of seizures or delirium tremens.\n■\n■The patient is very young or old.\n■\n■There is current benzodiazepine use in combination with alcohol.\n■\n■Substances other than alcohol are also being misused/abused.\n■\n■There is co-morbid mental or physical illness, learning disability or cognitive \nimpairment.\n■\n■The patient is pregnant.\n■\n■The patient is homeless or has no social support.\n■\n■There is a history of failed community detoxification.\nIn certain situations, there may be a clinical justification for undertaking a community \ndetoxification in the above patients (Table 4.3); however, the reasons must be clear and \nthe decision is made by an experienced clinician.\n",
+  "raw_text_sha256": "96b43809dc026a79ba886c13006168c32acd15325be7d0aefc10dc8af83454cc",
+  "coordinates_sha256": "69c9396f69efe737693703d4ad031be37d9c798b3efc62b6dd684475ea8ca43d",
+  "block_sequence_sha256": "5db7ccda10e5c1d2c2dfc660f6e89a6e6867e015f1fb389e0ca3b05df76e58fa",
+  "blocks": [
+    {
+      "block_id": "page-0477-block-0000",
+      "order": 0,
+      "text": "456    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "f801579972880a01730afd2a6b902ceea5db7a4458d62dcb428c7441dc790b99"
+    },
+    {
+      "block_id": "page-0477-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0477-block-0002",
+      "order": 2,
+      "text": "Pharmacologically assisted withdrawal (alcohol detoxification)\n",
+      "bbox": [
+        61.889801025390625,
+        62.500404357910156,
+        355.8297119140625,
+        74.35040283203125
+      ],
+      "text_sha256": "a71614a235adb23b02b0a26aa1cb3c81ea1c5148e56f1e8ec172ec9047f21c08"
+    },
+    {
+      "block_id": "page-0477-block-0003",
+      "order": 3,
+      "text": "Alcohol withdrawal is associated with significant morbidity and mortality when \nimproperly managed.\n",
+      "bbox": [
+        61.889801025390625,
+        80.410400390625,
+        436.63970947265625,
+        104.13040161132812
+      ],
+      "text_sha256": "263de309b5e2a61a913fce14a2bfac66524ea57ba19ee275bc505f8f0f847882"
+    },
+    {
+      "block_id": "page-0477-block-0004",
+      "order": 4,
+      "text": "Pharmacologically assisted withdrawal is likely to be needed when:\n",
+      "bbox": [
+        61.889801025390625,
+        116.96790313720703,
+        363.33441162109375,
+        128.22540283203125
+      ],
+      "text_sha256": "df6eac32669e63d6fef9e2c8430532e1e95c865001cade3eddbe3839a4394fdc"
+    },
+    {
+      "block_id": "page-0477-block-0005",
+      "order": 5,
+      "text": "■\n■regular consumption of >15 units/day\n",
+      "bbox": [
+        61.88970184326172,
+        134.410400390625,
+        233.71975708007812,
+        146.13040161132812
+      ],
+      "text_sha256": "a1996531fbdb4a023289477ad22e6033851697e6b6c82182219f59431cedb116"
+    },
+    {
+      "block_id": "page-0477-block-0006",
+      "order": 6,
+      "text": "■\n■AUDIT score >20\n",
+      "bbox": [
+        61.88970184326172,
+        146.410400390625,
+        147.16978454589844,
+        158.13040161132812
+      ],
+      "text_sha256": "79e0e912cad5420142e319fc6a0c8debb479ef0112479625e841077f19011e79"
+    },
+    {
+      "block_id": "page-0477-block-0007",
+      "order": 7,
+      "text": "■\n■there is a history of significant withdrawal symptoms.\n",
+      "bbox": [
+        61.88970184326172,
+        158.410400390625,
+        303.1398010253906,
+        170.13040161132812
+      ],
+      "text_sha256": "4f228dd51a8abd029096a4a122c7da11d3c8878ad0e7b9a533252aa1d42cb5d4"
+    },
+    {
+      "block_id": "page-0477-block-0008",
+      "order": 8,
+      "text": "Symptom scales can be helpful in determining the amount of pharmacological support \nrequired to manage withdrawal symptoms. The Clinical Institute Withdrawal Assessment \nof Alcohol Scale Revised (CIWA-Ar; Figure 4.1)12 and Short Alcohol Withdrawal Scale \n(SAWS; Table 4.2)13 are both 10-item scales that can be completed in around 5 minutes. \nThe CIWA-Ar is an objective scale and the SAWS is a self-complete tool. A CIWA-Ar \nscore >10 or a SAWS score >12 should prompt assisted withdrawal.\n",
+      "bbox": [
+        61.887115478515625,
+        176.17041015625,
+        436.7210693359375,
+        248.13040161132812
+      ],
+      "text_sha256": "f6c6c60aec99205cdf31a9a3f7d3b8c1775a98f7b6b0df3ae01f797e66dc36d4"
+    },
+    {
+      "block_id": "page-0477-block-0009",
+      "order": 9,
+      "text": "Community detoxification is usually possible when:\n",
+      "bbox": [
+        61.889801025390625,
+        260.9678955078125,
+        292.0368957519531,
+        272.22540283203125
+      ],
+      "text_sha256": "e12f845cb9750835f8597e2534ac1d53b27ce8793076ef7ac3c9bf97acbec842"
+    },
+    {
+      "block_id": "page-0477-block-0010",
+      "order": 10,
+      "text": "■\n■There is a supervising carer, ideally 24 hours a day throughout the duration of detoxi-\n",
+      "bbox": [
+        61.88970184326172,
+        278.410400390625,
+        433.9097595214844,
+        290.1304016113281
+      ],
+      "text_sha256": "8bdfb86c532710d1aff945c02ee28ba545cb3fe32f12a706fc89bcece2b366c0"
+    },
+    {
+      "block_id": "page-0477-block-0011",
+      "order": 11,
+      "text": "fication process.\n",
+      "bbox": [
+        70.88980102539062,
+        290.410400390625,
+        140.89979553222656,
+        302.1304016113281
+      ],
+      "text_sha256": "987bb57559733c499200f5a3d20a7eaf1667d51c79896ae07fa4a09137fd5636"
+    },
+    {
+      "block_id": "page-0477-block-0012",
+      "order": 12,
+      "text": "■\n■The treatment plan has been agreed with the patient, their carer and their general \n",
+      "bbox": [
+        61.88970184326172,
+        302.410400390625,
+        436.6097106933594,
+        314.1304016113281
+      ],
+      "text_sha256": "115a7bf2c5bc95e47de641d822001f93f2a3edd4528c090ec2257d0bca867561"
+    },
+    {
+      "block_id": "page-0477-block-0013",
+      "order": 13,
+      "text": "practitioners (GP).\n",
+      "bbox": [
+        70.88980102539062,
+        314.410400390625,
+        150.89979553222656,
+        326.1304016113281
+      ],
+      "text_sha256": "b3f3193fb90c511d246b957da68cd15ac66b9540990dd32dac99f6cc634efa18"
+    },
+    {
+      "block_id": "page-0477-block-0014",
+      "order": 14,
+      "text": "■\n■A contingency plan has been agreed with the patient, their carer and their GP.\n",
+      "bbox": [
+        61.88970184326172,
+        326.410400390625,
+        405.3897705078125,
+        338.1304016113281
+      ],
+      "text_sha256": "359f0d573154406747d4f2c5ac86468f628c295d36d1c9f875b92bb16d47e735"
+    },
+    {
+      "block_id": "page-0477-block-0015",
+      "order": 15,
+      "text": "■\n■The patient is able to pick up medication daily and be reviewed by professionals regu-\n",
+      "bbox": [
+        61.88970184326172,
+        338.410400390625,
+        433.84979248046875,
+        350.1304016113281
+      ],
+      "text_sha256": "7cb831cb8e28fdecf391f68d41f3bef73c8acb39e5337f4126b5ec04e5647597"
+    },
+    {
+      "block_id": "page-0477-block-0016",
+      "order": 16,
+      "text": "larly throughout the process.\n",
+      "bbox": [
+        70.88980102539062,
+        350.410400390625,
+        195.36978149414062,
+        362.1304016113281
+      ],
+      "text_sha256": "fbf9616f5dca35f86757dbbdbba9825a733d18dd9db5b472e04d5105280e0707"
+    },
+    {
+      "block_id": "page-0477-block-0017",
+      "order": 17,
+      "text": "■\n■Outpatient/community-based programmes including psychosocial support are available.\n",
+      "bbox": [
+        61.88970184326172,
+        362.410400390625,
+        433.969482421875,
+        374.1304016113281
+      ],
+      "text_sha256": "eb0b692929e5f14a50f71105cd92b5e776e1dc1a448b421f2833a6df6f721621"
+    },
+    {
+      "block_id": "page-0477-block-0018",
+      "order": 18,
+      "text": "Community detoxification should be stopped if the patient resumes drinking or fails to \nengage with the agreed treatment plan.\n",
+      "bbox": [
+        61.889801025390625,
+        380.410400390625,
+        436.6597900390625,
+        404.1304016113281
+      ],
+      "text_sha256": "c362f1984fc4ec5d7e31c4df59752fb83fc794bcda040a1da769dcaf5a7e3564"
+    },
+    {
+      "block_id": "page-0477-block-0019",
+      "order": 19,
+      "text": "Inpatient detoxification is likely to be required if:\n",
+      "bbox": [
+        61.889801025390625,
+        416.9678955078125,
+        281.1783752441406,
+        428.22540283203125
+      ],
+      "text_sha256": "83bfbfd47dd162fcbf894824dceba837e40983e0968ef437f3c2a2fd3da6e843"
+    },
+    {
+      "block_id": "page-0477-block-0020",
+      "order": 20,
+      "text": "■\n■Regular consumption is >30 units/day.\n",
+      "bbox": [
+        61.88970184326172,
+        434.410400390625,
+        236.6897735595703,
+        446.1304016113281
+      ],
+      "text_sha256": "64e35c1dd3ed430c6f0523d9342a8ef18da29de8fba4f57b9327d5fddbb92e17"
+    },
+    {
+      "block_id": "page-0477-block-0021",
+      "order": 21,
+      "text": "■\n■SADQ >30 (severe dependence).\n",
+      "bbox": [
+        61.88970184326172,
+        446.410400390625,
+        209.4698028564453,
+        458.1304016113281
+      ],
+      "text_sha256": "aa3076737c7ec2c6996f2a2d05b028fbab3ee3ed38c323ce0ea20f1d5252a198"
+    },
+    {
+      "block_id": "page-0477-block-0022",
+      "order": 22,
+      "text": "■\n■There is a history of seizures or delirium tremens.\n",
+      "bbox": [
+        61.88970184326172,
+        458.410400390625,
+        284.22979736328125,
+        470.1304016113281
+      ],
+      "text_sha256": "fa76a9f5e3892388aa779a678639dbe4badbbc0e4a48ffe60058dde7a362ff8d"
+    },
+    {
+      "block_id": "page-0477-block-0023",
+      "order": 23,
+      "text": "■\n■The patient is very young or old.\n",
+      "bbox": [
+        61.88970184326172,
+        470.410400390625,
+        212.03977966308594,
+        482.1304016113281
+      ],
+      "text_sha256": "722992d05c0039e34b94540c2db1562e69759f6154398d8e544e6c8ffa8a7a0a"
+    },
+    {
+      "block_id": "page-0477-block-0024",
+      "order": 24,
+      "text": "■\n■There is current benzodiazepine use in combination with alcohol.\n",
+      "bbox": [
+        61.88970184326172,
+        482.410400390625,
+        352.6097412109375,
+        494.1304016113281
+      ],
+      "text_sha256": "3add5814ead979e9a8051bd3e5890a870acbc51048ab21fbe9bb9f4fff25c20c"
+    },
+    {
+      "block_id": "page-0477-block-0025",
+      "order": 25,
+      "text": "■\n■Substances other than alcohol are also being misused/abused.\n",
+      "bbox": [
+        61.88970184326172,
+        494.410400390625,
+        334.8398132324219,
+        506.1304016113281
+      ],
+      "text_sha256": "f6c844fc0045db74a02f30cbe1af9621d1bbfc812706fb7d5be6dfbd98da45ef"
+    },
+    {
+      "block_id": "page-0477-block-0026",
+      "order": 26,
+      "text": "■\n■There is co-morbid mental or physical illness, learning disability or cognitive \n",
+      "bbox": [
+        61.88970184326172,
+        506.410400390625,
+        436.6597595214844,
+        518.1304321289062
+      ],
+      "text_sha256": "4c7ac2ef0abde344b3f3d8aced6259c38516c7ba36801fe5fb892112b41d6cf3"
+    },
+    {
+      "block_id": "page-0477-block-0027",
+      "order": 27,
+      "text": "impairment.\n",
+      "bbox": [
+        70.88980102539062,
+        518.410400390625,
+        123.64979553222656,
+        530.1304321289062
+      ],
+      "text_sha256": "461a5aede4633d66eda1202deeb842cfcfa564299d7e29e2ae57b3241e529143"
+    },
+    {
+      "block_id": "page-0477-block-0028",
+      "order": 28,
+      "text": "■\n■The patient is pregnant.\n",
+      "bbox": [
+        61.88970184326172,
+        530.410400390625,
+        173.67979431152344,
+        542.1304321289062
+      ],
+      "text_sha256": "f11212d92a868cced0ad1894282af6de8910333d7942eb64f7d47cf01b0f119d"
+    },
+    {
+      "block_id": "page-0477-block-0029",
+      "order": 29,
+      "text": "■\n■The patient is homeless or has no social support.\n",
+      "bbox": [
+        61.88970184326172,
+        542.410400390625,
+        280.93975830078125,
+        554.1304321289062
+      ],
+      "text_sha256": "9dec1aaf4ed55e9c96f28060d983c9e83bf01d1395fac6d51bf4aa1ea752701c"
+    },
+    {
+      "block_id": "page-0477-block-0030",
+      "order": 30,
+      "text": "■\n■There is a history of failed community detoxification.\n",
+      "bbox": [
+        61.88970184326172,
+        554.410400390625,
+        301.4597473144531,
+        566.1304321289062
+      ],
+      "text_sha256": "10f72260caa7d825c8a5836abaeadc8589a145cd99facf2f774c961b2a23661d"
+    },
+    {
+      "block_id": "page-0477-block-0031",
+      "order": 31,
+      "text": "In certain situations, there may be a clinical justification for undertaking a community \ndetoxification in the above patients (Table 4.3); however, the reasons must be clear and \nthe decision is made by an experienced clinician.\n",
+      "bbox": [
+        61.889801025390625,
+        572.410400390625,
+        436.7096862792969,
+        608.1304321289062
+      ],
+      "text_sha256": "240506731c445f3440d58ba055a23760dc39f3a92c08651bf717cba19d1deecb"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

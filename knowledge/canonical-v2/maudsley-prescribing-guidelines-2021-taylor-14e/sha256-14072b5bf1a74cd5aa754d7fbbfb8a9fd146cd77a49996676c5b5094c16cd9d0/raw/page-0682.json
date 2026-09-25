@@ -1,0 +1,443 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0682",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 682,
+  "source_page_index": 681,
+  "source_page_display": 682,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": " \n \n \n \n \n \n \n \nRisperidone\nPsychosis\n0.5mg bd (0.25–0.5mg daily in \nsome cases)12\n1–2.5mg daily11\n4mg daily\nLate onset psychosis\n0.5mg daily*\n1mg daily*\n2mg daily* (optimal dose is 1mg \ndaily)\nAgitation/psychosis in dementia\n0.25mg daily* or bd\n0.5mg bd\n2mg daily (optimal dose is 1mg \ndaily)12\nHaloperidol\nPsychosis\n0.25–0.5mg daily11\n1–3.5mg daily11\nCaution >3.5mg- assess tolerability \nand ECG\nMax 5mg/day (oral)\nMax 5mg/day (IM)\nDoses >5mg/day should only be \nconsidered in patients who have \ntolerated higher doses and after \nreassessment of the patient’s \nindividual benefit–risk profile\nAgitation\nAvoid in older adults (except in \ndelirium) owing to the risk of \nQTc prolongation\n0.25–0.5mg daily*\n0.5–1.5mg daily or bd\nNB: All antipsychotic drugs contain warnings for increased mortality in elderly patients with dementia.\nDrug\nSpecific indication/additional \nnotes\nStarting dose\nUsual maintenance dose\nMaximum dose in elderly\nLong-acting conventional antipsychotic drugs\nFlupentixol decanoate\nTest dose: 5–10mg\nAfter at least 7 days of test \ndose: 10–20mg every 2–4 \nweeks*\nDose increased gradually \naccording to response and \ntolerability in steps of 5–10mg \nevery 2 weeks*\n40mg every 2 weeks* (extend \nfrequency to every 3–4 weeks if \nEPS develops)\n(occasionally up to 50 or 60mg \nevery 2 weeks* may be used if \ntolerated)\n(Continued)\n",
+  "raw_text_sha256": "c51c8e62fb7e4f8572867d9792af09a0d36f9cbbdf9f78077ed8bdbbd2858598",
+  "coordinates_sha256": "75f47ade11f71cfd8afebae334f3743959db9218d6a08bb45ff0ab9b87a9b19e",
+  "block_sequence_sha256": "a31e357970aee9d2cc9d7d86ac8315976ed3733fff412afb470454ba9d7ca830",
+  "blocks": [
+    {
+      "block_id": "page-0682-block-0000",
+      "order": 0,
+      "text": " \n \n \n \n \n \n \n \n",
+      "bbox": [
+        53.86249923706055,
+        111.25643157958984,
+        62.75,
+        495.968994140625
+      ],
+      "text_sha256": "20b79b9461a156f3ed7f44fb084f3907cf9ba9539e0d77040eeb552faf2dadff"
+    },
+    {
+      "block_id": "page-0682-block-0001",
+      "order": 1,
+      "text": "Risperidone\nPsychosis\n0.5mg bd (0.25–0.5mg daily in \nsome cases)12\n1–2.5mg daily11\n4mg daily\n",
+      "bbox": [
+        82.1675033569336,
+        145.0127716064453,
+        100.87249755859375,
+        612.6539306640625
+      ],
+      "text_sha256": "7ea2798c7dd52b4f9fe2aa4a10ac54c113724fe7e35589c94765db51ea0e515f"
+    },
+    {
+      "block_id": "page-0682-block-0002",
+      "order": 2,
+      "text": "Late onset psychosis\n0.5mg daily*\n1mg daily*\n2mg daily* (optimal dose is 1mg \ndaily)\n",
+      "bbox": [
+        110.2925033569336,
+        69.9903793334961,
+        128.99749755859375,
+        522.6376953125
+      ],
+      "text_sha256": "5a9f4d6a28b9cd7b1c0ba660a2840e465537843981ec4ca3ffc54e06f822668c"
+    },
+    {
+      "block_id": "page-0682-block-0003",
+      "order": 3,
+      "text": "Agitation/psychosis in dementia\n0.25mg daily* or bd\n0.5mg bd\n2mg daily (optimal dose is 1mg \ndaily)12\n",
+      "bbox": [
+        138.41749572753906,
+        74.16036224365234,
+        157.12249755859375,
+        522.6376953125
+      ],
+      "text_sha256": "d6e451b6cf1521fa9c1b0b822a68280215cc1fd34d2d1a72213aa35042b1d347"
+    },
+    {
+      "block_id": "page-0682-block-0004",
+      "order": 4,
+      "text": "Haloperidol\nPsychosis\n0.25–0.5mg daily11\n1–3.5mg daily11\nCaution >3.5mg- assess tolerability \n",
+      "bbox": [
+        166.54249572753906,
+        62.258018493652344,
+        175.25,
+        612.6539916992188
+      ],
+      "text_sha256": "b768fecd7d9dbb4fdda0b2fdf584a8930b2bcc6dc04d34caf32b24ef02692dc3"
+    },
+    {
+      "block_id": "page-0682-block-0005",
+      "order": 5,
+      "text": "and ECG\n",
+      "bbox": [
+        176.5399932861328,
+        147.92271423339844,
+        185.24749755859375,
+        176.26519775390625
+      ],
+      "text_sha256": "9fda984854aaff1441e80ee2274fe46f607530aa2961023d15b29b2c2ac58388"
+    },
+    {
+      "block_id": "page-0682-block-0006",
+      "order": 6,
+      "text": "Max 5mg/day (oral)\n",
+      "bbox": [
+        186.53749084472656,
+        114.17269134521484,
+        195.2449951171875,
+        176.26519775390625
+      ],
+      "text_sha256": "9ca6d651df8d220bf4c5d4914f26be790039fa6dd21a120299a5f23b8a4f64ca"
+    },
+    {
+      "block_id": "page-0682-block-0007",
+      "order": 7,
+      "text": "Max 5mg/day (IM)\n",
+      "bbox": [
+        196.5349884033203,
+        117.92269134521484,
+        205.24249267578125,
+        176.26519775390625
+      ],
+      "text_sha256": "38116b8e96e6c84e750c43c7d805234eb51ade401bca4454d4b7d09a2393eaac"
+    },
+    {
+      "block_id": "page-0682-block-0008",
+      "order": 8,
+      "text": "Doses >5mg/day should only be \n",
+      "bbox": [
+        206.53248596191406,
+        72.1428451538086,
+        215.239990234375,
+        176.26519775390625
+      ],
+      "text_sha256": "96048c34a86ba7d97bf018996cd42617d9635df0653f03fe12e9c77b7a168458"
+    },
+    {
+      "block_id": "page-0682-block-0009",
+      "order": 9,
+      "text": "considered in patients who have \n",
+      "bbox": [
+        216.5299835205078,
+        70.95784759521484,
+        225.23748779296875,
+        176.26519775390625
+      ],
+      "text_sha256": "56d4753aaf67b0536188cf120311ad539d79e8c6ed4546736beddceb7ff87b9a"
+    },
+    {
+      "block_id": "page-0682-block-0010",
+      "order": 10,
+      "text": "tolerated higher doses and after \n",
+      "bbox": [
+        226.52748107910156,
+        71.6628646850586,
+        235.2349853515625,
+        176.26519775390625
+      ],
+      "text_sha256": "0714fc371d7c8ee8bbe69947ae9d13bf6b1dd6f2c77853a9053086cbbc8579ab"
+    },
+    {
+      "block_id": "page-0682-block-0011",
+      "order": 11,
+      "text": "reassessment of the patient’s \n",
+      "bbox": [
+        236.5249786376953,
+        82.22286224365234,
+        245.23248291015625,
+        176.26519775390625
+      ],
+      "text_sha256": "356eb62749336f8be82adda0845257b7ea039200240328c827b98c1e5b646134"
+    },
+    {
+      "block_id": "page-0682-block-0012",
+      "order": 12,
+      "text": "individual benefit–risk profile\n",
+      "bbox": [
+        246.52247619628906,
+        84.31549072265625,
+        255.22998046875,
+        176.26519775390625
+      ],
+      "text_sha256": "bfa4acfaed0fb3689036c26111e829441237f7a12777b0ff4d81a38761518bfa"
+    },
+    {
+      "block_id": "page-0682-block-0013",
+      "order": 13,
+      "text": "Agitation\n",
+      "bbox": [
+        184.64747619628906,
+        493.0502014160156,
+        193.35498046875,
+        522.6376953125
+      ],
+      "text_sha256": "08c2dd29c8269cd6ea26c09c316365d252dbb575f2e1035e0c00424d5f63a65c"
+    },
+    {
+      "block_id": "page-0682-block-0014",
+      "order": 14,
+      "text": "Avoid in older adults (except in \n",
+      "bbox": [
+        194.6449737548828,
+        421.9201965332031,
+        203.35247802734375,
+        522.6376953125
+      ],
+      "text_sha256": "7a81fa2bfee4a6b3918cfec553cc0d2b1dcfeec812c5e13d85536d321a93fb09"
+    },
+    {
+      "block_id": "page-0682-block-0015",
+      "order": 15,
+      "text": "delirium) owing to the risk of \n",
+      "bbox": [
+        204.64247131347656,
+        427.6202087402344,
+        213.3499755859375,
+        522.6376953125
+      ],
+      "text_sha256": "d792b08bb34e8b15865a82e283d52c259f897f12459df6cc1cd25192c400e418"
+    },
+    {
+      "block_id": "page-0682-block-0016",
+      "order": 16,
+      "text": "QTc prolongation\n",
+      "bbox": [
+        214.6399688720703,
+        467.7602233886719,
+        223.34747314453125,
+        522.6376953125
+      ],
+      "text_sha256": "e56a356565247e3dc9f61954150fe2c952ea911825620f7c3b45353e520a687a"
+    },
+    {
+      "block_id": "page-0682-block-0017",
+      "order": 17,
+      "text": "0.25–0.5mg daily*\n0.5–1.5mg daily or bd\n",
+      "bbox": [
+        184.6399688720703,
+        217.4251251220703,
+        193.34747314453125,
+        406.2001953125
+      ],
+      "text_sha256": "ba1b4df4a4c4d650ef2063a0ebd1f882226197c054d51d650b6e530ff8cb8fd1"
+    },
+    {
+      "block_id": "page-0682-block-0018",
+      "order": 18,
+      "text": "NB: All antipsychotic drugs contain warnings for increased mortality in elderly patients with dementia.\n",
+      "bbox": [
+        265.2649841308594,
+        287.6251220703125,
+        273.97247314453125,
+        612.6527099609375
+      ],
+      "text_sha256": "1f98304e62d32e0c78400c200b49551f6f6c48099ef9b30142a850e3c86222bf"
+    },
+    {
+      "block_id": "page-0682-block-0019",
+      "order": 19,
+      "text": "Drug\nSpecific indication/additional \n",
+      "bbox": [
+        295.98748779296875,
+        417.3989562988281,
+        304.875,
+        612.6539916992188
+      ],
+      "text_sha256": "24f208c01b320a880057a7db859ef0394c24559575428d3392d29ed72c3b2942"
+    },
+    {
+      "block_id": "page-0682-block-0020",
+      "order": 20,
+      "text": "notes\nStarting dose\nUsual maintenance dose\nMaximum dose in elderly\n",
+      "bbox": [
+        295.98748779296875,
+        84.41386413574219,
+        314.87249755859375,
+        522.00146484375
+      ],
+      "text_sha256": "d017d7fd2e6b27a0a2854089b7c2bd8b8247bb9c0cbcaead450515d1ad7004a8"
+    },
+    {
+      "block_id": "page-0682-block-0021",
+      "order": 21,
+      "text": "Long-acting conventional antipsychotic drugs\n",
+      "bbox": [
+        324.11248779296875,
+        451.8164367675781,
+        333.0,
+        612.6539916992188
+      ],
+      "text_sha256": "b0fcad62105fb20e1ba00542f1a5e3f6ebd525ffde13779cf4fa1eb9742d9151"
+    },
+    {
+      "block_id": "page-0682-block-0022",
+      "order": 22,
+      "text": "Flupentixol decanoate\nTest dose: 5–10mg\nAfter at least 7 days of test \n",
+      "bbox": [
+        342.4200134277344,
+        200.23646545410156,
+        351.12750244140625,
+        612.6539916992188
+      ],
+      "text_sha256": "8e8345085bf4455187f465c6c8e0d6229c0a9d0c9aae50e7501fce1c51ae3942"
+    },
+    {
+      "block_id": "page-0682-block-0023",
+      "order": 23,
+      "text": "dose: 10–20mg every 2–4 \n",
+      "bbox": [
+        352.4175109863281,
+        203.5438995361328,
+        361.125,
+        288.57147216796875
+      ],
+      "text_sha256": "eb15ecf9e36b66aa56d276b5f844a2d13fe2e47dab91775f818a3b449785c4d0"
+    },
+    {
+      "block_id": "page-0682-block-0024",
+      "order": 24,
+      "text": "weeks*\n",
+      "bbox": [
+        362.4150085449219,
+        264.3989562988281,
+        371.12249755859375,
+        288.57147216796875
+      ],
+      "text_sha256": "42a7c5847bf44b1786673e2a70a021e966d200f9d7f5fe58728d30b32b9d488f"
+    },
+    {
+      "block_id": "page-0682-block-0025",
+      "order": 25,
+      "text": "Dose increased gradually \n",
+      "bbox": [
+        372.4125061035156,
+        207.4438934326172,
+        381.1199951171875,
+        288.57147216796875
+      ],
+      "text_sha256": "5bbb4742366b92bb28b601f6b4604b576bfe4257ad487d7244b5cf4cff20a164"
+    },
+    {
+      "block_id": "page-0682-block-0026",
+      "order": 26,
+      "text": "according to response and \n",
+      "bbox": [
+        382.4100036621094,
+        202.1488800048828,
+        391.11749267578125,
+        288.57147216796875
+      ],
+      "text_sha256": "7bfc8aecac77fc2c90f446d730691bfd8a4ec0bddbc3f6791fc59e770cf61775"
+    },
+    {
+      "block_id": "page-0682-block-0027",
+      "order": 27,
+      "text": "tolerability in steps of 5–10mg \n",
+      "bbox": [
+        392.4075012207031,
+        189.39134216308594,
+        401.114990234375,
+        288.57147216796875
+      ],
+      "text_sha256": "54e9ddab8c968e724da6c9cba700cf6a778ec1019fe326b465473585adb85986"
+    },
+    {
+      "block_id": "page-0682-block-0028",
+      "order": 28,
+      "text": "every 2 weeks*\n",
+      "bbox": [
+        402.4049987792969,
+        239.40150451660156,
+        411.11248779296875,
+        288.57147216796875
+      ],
+      "text_sha256": "a36f0bcd4e2bfd1ba786e49d7c575b0df4dd3025906df23fefe156f86cfe0ece"
+    },
+    {
+      "block_id": "page-0682-block-0029",
+      "order": 29,
+      "text": "40mg every 2 weeks* (extend \nfrequency to every 3–4 weeks if \n",
+      "bbox": [
+        342.4049987792969,
+        69.9839096069336,
+        361.1099853515625,
+        173.60394287109375
+      ],
+      "text_sha256": "2b32d78f82140e45919d827987f546a262bc3626eb92962c3d78443ccce01361"
+    },
+    {
+      "block_id": "page-0682-block-0030",
+      "order": 30,
+      "text": "EPS develops)\n",
+      "bbox": [
+        362.3999938964844,
+        130.26148986816406,
+        371.10748291015625,
+        173.60394287109375
+      ],
+      "text_sha256": "20999b3f76b268c567aefd1fbe73db34070567df58caf9c93d9cf4466f82168d"
+    },
+    {
+      "block_id": "page-0682-block-0031",
+      "order": 31,
+      "text": "(occasionally up to 50 or 60mg \n",
+      "bbox": [
+        372.3974914550781,
+        72.32405853271484,
+        381.10498046875,
+        173.60394287109375
+      ],
+      "text_sha256": "0114e22e5817c76f099b919a5f402b315b0d48123d4aa773cbfcde87382114b3"
+    },
+    {
+      "block_id": "page-0682-block-0032",
+      "order": 32,
+      "text": "every 2 weeks* may be used if \n",
+      "bbox": [
+        382.3949890136719,
+        73.59139251708984,
+        391.10247802734375,
+        173.60394287109375
+      ],
+      "text_sha256": "95dd4f1dec69507f62893910691515dd2bc5fc502843cdb97fd1faadcb1ccc11"
+    },
+    {
+      "block_id": "page-0682-block-0033",
+      "order": 33,
+      "text": "tolerated)\n",
+      "bbox": [
+        392.3924865722656,
+        142.77149963378906,
+        401.0999755859375,
+        173.60394287109375
+      ],
+      "text_sha256": "1da5c4a036d89dcaf92c62bd399257bd80f18b25d2aa8c8669d3f4952e09509b"
+    },
+    {
+      "block_id": "page-0682-block-0034",
+      "order": 34,
+      "text": "(Continued)\n",
+      "bbox": [
+        416.594970703125,
+        64.35140228271484,
+        425.34747314453125,
+        100.366455078125
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

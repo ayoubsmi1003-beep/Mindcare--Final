@@ -1,0 +1,299 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0871",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 871,
+  "source_page_index": 870,
+  "source_page_display": 871,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "850    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  11\nPlasma \nconcentration\nResponse \nstatus\nTolerability \nstatus\nSuggest action\n>1000µg/L\nPoor\nPoor\nAdd anticonvulsant. Attempt augmentation. Reduce dose \nto give level of <1000µg/L.\nConsider abandoning clozapine treatment.\nPoor\nGood\nAdd anticonvulsant. Attempt augmentation.\nIf augmentation successful, reduce dose to give level \n<1000µg/L. If unsuccessful, consider abandoning \nclozapine treatment\nGood\nPoor\nAdd anticonvulsant. Attempt slow dose reduction to give \nplasma level <1000µg/L.\nGood\nGood\nAdd anticonvulsant. Monitor closely; attempt dose \nreduction only if tolerability declines.\nNotes\nPoor response\t\n\u0007No response or unsatisfactory response to clozapine. For example, not sufficiently well to be \ndischarged. \nGood response\t\n\u0007Obvious positive changes related to use of clozapine. Patient likely to be suitable for discharge \nto either supported or unsupported care in the community.\nPoor tolerability\t\n\u0007Dose constrained by adverse effects such as tachycardia, sedation, hypersalivation, hypotension \n(see Chapter 1 for suggestions of treatment for adverse effects).\nGood tolerability\t\nPatient tolerates treatment well and there are no signs of serious toxicity.\nAugmentation\t\nAdding another antipsychotic or mood stabiliser (see Chapter 1).\n■\n■In all situations, ensure adequate treatment for clozapine-induced constipation. Constipation is dose-related. \nEnsure regular bowel movements and record bowel function. Stimulant laxatives such as senna are required (see \nChapter 1).\n■\n■Seizures are dose- and plasma level-dependent. Suitable anticonvulsants are valproate, lamotrigine, and rarely, \ntopiramate. Use lamotrigine if response poor; valproate if affective symptoms present (see Chapter 2). Note that \nuse of valproate increases risk of neutropenia with clozapine.3\n* This table applies to results for patients on a stable clozapine dose with confirmed good adherence.\n** Anticonvulsants should be used in patients whose plasma level exceeds 600µg/L, unless EEG is normal, and in those \nwith lower plasma levels who suffer clozapine-induced seizures.\n(Continued)\nReferences\n\t 1.\t Varma S, et al. Clozapine-related EEG changes and seizures: dose and plasma-level relationships. Ther Adv Psychopharmacol 2011; \n1:47–66.\n\t 2.\t Yusufi B, et al. Prevalence and nature of side effects during clozapine maintenance treatment and the relationship with clozapine dose and \nplasma concentration. Int Clin Psychopharmacol 2007; 22:238–243.\n\t 3.\t Malik S, et al. Sodium valproate and clozapine induced neutropenia: A case control study using register data. Schizophr Res 2018; \n195:267–273.\n",
+  "raw_text_sha256": "58e5ea61275bc8b90ee6ac2f08608b4ca81abe18f767b15e363179570a6b3fbf",
+  "coordinates_sha256": "a4f5ac6a9bb4f881df5c8e5c0aa8eae11dc249f953c10a51efc018b7d850aaac",
+  "block_sequence_sha256": "a3a778986be67a414e858e6f0a38d5764ae57956f488737283c8ee2586136fc7",
+  "blocks": [
+    {
+      "block_id": "page-0871-block-0000",
+      "order": 0,
+      "text": "850    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "d1d19f89c276ff9f864f788459a9eca83b5c0cbba4edcf2939e44a8d6488632d"
+    },
+    {
+      "block_id": "page-0871-block-0001",
+      "order": 1,
+      "text": "CHAPTER  11\n",
+      "bbox": [
+        18.520000457763672,
+        139.8785400390625,
+        28.0,
+        187.89450073242188
+      ],
+      "text_sha256": "83984f4328940309c03288e26b8edf9834cfa8fef30d3eedac5a4c266fe9aee7"
+    },
+    {
+      "block_id": "page-0871-block-0002",
+      "order": 2,
+      "text": "Plasma \nconcentration\n",
+      "bbox": [
+        61.88999938964844,
+        82.21290588378906,
+        110.6399917602539,
+        101.097900390625
+      ],
+      "text_sha256": "fe8a81d387591309b558616323b18fbb17e2a7182edf2667e8e055dd0345e67e"
+    },
+    {
+      "block_id": "page-0871-block-0003",
+      "order": 3,
+      "text": "Response \nstatus\n",
+      "bbox": [
+        133.33499145507812,
+        82.21290588378906,
+        168.75001525878906,
+        101.097900390625
+      ],
+      "text_sha256": "f1446bd523d0b7e8e7d36b743507408c879eff2a04f365451dddb82008f951a9"
+    },
+    {
+      "block_id": "page-0871-block-0004",
+      "order": 4,
+      "text": "Tolerability \nstatus\nSuggest action\n",
+      "bbox": [
+        190.13998413085938,
+        82.21290588378906,
+        299.0324401855469,
+        101.097900390625
+      ],
+      "text_sha256": "75d44061b432c9a900d16a8d401b5978cff581f10c3b51d5b102ffeac577ca65"
+    },
+    {
+      "block_id": "page-0871-block-0005",
+      "order": 5,
+      "text": ">1000µg/L\nPoor\nPoor\nAdd anticonvulsant. Attempt augmentation. Reduce dose \nto give level of <1000µg/L.\nConsider abandoning clozapine treatment.\n",
+      "bbox": [
+        61.889984130859375,
+        110.33790588378906,
+        433.2376403808594,
+        139.22039794921875
+      ],
+      "text_sha256": "4b5f188868a1d5c24c3e4b12385d66529f0ed80db2b63e95082bac912291540d"
+    },
+    {
+      "block_id": "page-0871-block-0006",
+      "order": 6,
+      "text": "Poor\nGood\nAdd anticonvulsant. Attempt augmentation.\nIf augmentation successful, reduce dose to give level \n<1000µg/L. If unsuccessful, consider abandoning \nclozapine treatment\n",
+      "bbox": [
+        133.33497619628906,
+        158.6378936767578,
+        416.82757568359375,
+        197.337890625
+      ],
+      "text_sha256": "48a657713f2e19850e8189d99624a1d22f6d2a8cd3e232ae502ed58a09629991"
+    },
+    {
+      "block_id": "page-0871-block-0007",
+      "order": 7,
+      "text": "Good\nPoor\nAdd anticonvulsant. Attempt slow dose reduction to give \nplasma level <1000µg/L.\n",
+      "bbox": [
+        133.33497619628906,
+        216.75538635253906,
+        431.43011474609375,
+        235.46038818359375
+      ],
+      "text_sha256": "a26f8c3fb2b9542087c820db5a503edeffecb9b7b77523563e17db5bb4e65014"
+    },
+    {
+      "block_id": "page-0871-block-0008",
+      "order": 8,
+      "text": "Good\nGood\nAdd anticonvulsant. Monitor closely; attempt dose \nreduction only if tolerability declines.\n",
+      "bbox": [
+        133.33497619628906,
+        244.88038635253906,
+        410.3026123046875,
+        263.58538818359375
+      ],
+      "text_sha256": "1758b34b2350c55c0cbcaa6877e7134e0a1fa2971e56992699ddf36b675fccc2"
+    },
+    {
+      "block_id": "page-0871-block-0009",
+      "order": 9,
+      "text": "Notes\n",
+      "bbox": [
+        61.889984130859375,
+        282.4478759765625,
+        82.30498504638672,
+        291.33538818359375
+      ],
+      "text_sha256": "38732073f309589131fec63f417896537e63d27fc29fcf7c60d5f47379f0887a"
+    },
+    {
+      "block_id": "page-0871-block-0010",
+      "order": 10,
+      "text": "Poor response\t\n\u0007No response or unsatisfactory response to clozapine. For example, not sufficiently well to be \ndischarged. \nGood response\t\n\u0007Obvious positive changes related to use of clozapine. Patient likely to be suitable for discharge \nto either supported or unsupported care in the community.\nPoor tolerability\t\n\u0007Dose constrained by adverse effects such as tachycardia, sedation, hypersalivation, hypotension \n(see Chapter 1 for suggestions of treatment for adverse effects).\nGood tolerability\t\nPatient tolerates treatment well and there are no signs of serious toxicity.\nAugmentation\t\nAdding another antipsychotic or mood stabiliser (see Chapter 1).\n",
+      "bbox": [
+        61.889984130859375,
+        295.44537353515625,
+        436.0050354003906,
+        374.3153991699219
+      ],
+      "text_sha256": "dd35a300d05dd793df74eaf62034913af38f90cbd7f850379a0960e95798d0f5"
+    },
+    {
+      "block_id": "page-0871-block-0011",
+      "order": 11,
+      "text": "■\n■In all situations, ensure adequate treatment for clozapine-induced constipation. Constipation is dose-related. \n",
+      "bbox": [
+        61.88990020751953,
+        385.6429138183594,
+        419.2876892089844,
+        394.35040283203125
+      ],
+      "text_sha256": "6b53a74deb3af1ae12972a3b08250b5f50318598bad0da1816f89a4773112b80"
+    },
+    {
+      "block_id": "page-0871-block-0012",
+      "order": 12,
+      "text": "Ensure regular bowel movements and record bowel function. Stimulant laxatives such as senna are required (see \nChapter 1).\n",
+      "bbox": [
+        70.88999938964844,
+        395.6404113769531,
+        430.8300476074219,
+        414.34539794921875
+      ],
+      "text_sha256": "9a1bf41157215c752f4be3669e06c9165e8ddcd7bb2cef430cdec9a502004aee"
+    },
+    {
+      "block_id": "page-0871-block-0013",
+      "order": 13,
+      "text": "■\n■Seizures are dose- and plasma level-dependent. Suitable anticonvulsants are valproate, lamotrigine, and rarely, \n",
+      "bbox": [
+        61.88990020751953,
+        415.6429138183594,
+        424.1400146484375,
+        424.35040283203125
+      ],
+      "text_sha256": "413ceb8639780ab68f7d24360593382c863ea8bf96ada5cda68e73fa95250d31"
+    },
+    {
+      "block_id": "page-0871-block-0014",
+      "order": 14,
+      "text": "topiramate. Use lamotrigine if response poor; valproate if affective symptoms present (see Chapter 2). Note that \nuse of valproate increases risk of neutropenia with clozapine.3\n",
+      "bbox": [
+        70.88999938964844,
+        425.6404113769531,
+        430.37994384765625,
+        444.34539794921875
+      ],
+      "text_sha256": "c94a1d2674f52ad2a1479840e7a13bae6764552bd59e2b90434d9a3bbde27aa8"
+    },
+    {
+      "block_id": "page-0871-block-0015",
+      "order": 15,
+      "text": "* This table applies to results for patients on a stable clozapine dose with confirmed good adherence.\n",
+      "bbox": [
+        61.89140319824219,
+        455.6429138183594,
+        384.2149658203125,
+        464.35040283203125
+      ],
+      "text_sha256": "3fc7935a3ded8ac5edd201ffdb75f5172279834d577c14ed9c0de34f7d05957f"
+    },
+    {
+      "block_id": "page-0871-block-0016",
+      "order": 16,
+      "text": "** Anticonvulsants should be used in patients whose plasma level exceeds 600µg/L, unless EEG is normal, and in those \nwith lower plasma levels who suffer clozapine-induced seizures.\n",
+      "bbox": [
+        61.88850021362305,
+        465.6429138183594,
+        435.9510192871094,
+        484.347900390625
+      ],
+      "text_sha256": "c7ec870a95a352a297bc6a45cf97f11200b5e679b59888b5abaf27d5b52d326b"
+    },
+    {
+      "block_id": "page-0871-block-0017",
+      "order": 17,
+      "text": "(Continued)\n",
+      "bbox": [
+        62.000999450683594,
+        63.110355377197266,
+        98.0160140991211,
+        71.86285400390625
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0871-block-0018",
+      "order": 18,
+      "text": "References\n",
+      "bbox": [
+        61.88930130004883,
+        508.8689880371094,
+        117.92329406738281,
+        521.9039916992188
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0871-block-0019",
+      "order": 19,
+      "text": "\t 1.\t Varma S, et al. Clozapine-related EEG changes and seizures: dose and plasma-level relationships. Ther Adv Psychopharmacol 2011; \n",
+      "bbox": [
+        61.88930130004883,
+        526.989990234375,
+        435.5933837890625,
+        534.02197265625
+      ],
+      "text_sha256": "9bbd0ab84de3f4e081b0851d0cf7e6fad320c7a0fd2530922ff53db09b4ef7fb"
+    },
+    {
+      "block_id": "page-0871-block-0020",
+      "order": 20,
+      "text": "1:47–66.\n\t 2.\t Yusufi B, et al. Prevalence and nature of side effects during clozapine maintenance treatment and the relationship with clozapine dose and \n",
+      "bbox": [
+        61.895301818847656,
+        535.8460083007812,
+        435.587158203125,
+        552.02197265625
+      ],
+      "text_sha256": "1c016d8bbeddb7c12ddb3b5ed551348f2085764d57005aab05c04fffc82e5320"
+    },
+    {
+      "block_id": "page-0871-block-0021",
+      "order": 21,
+      "text": "plasma concentration. Int Clin Psychopharmacol 2007; 22:238–243.\n\t 3.\t Malik S, et al. Sodium valproate and clozapine induced neutropenia: A case control study using register data. Schizophr Res 2018; \n",
+      "bbox": [
+        61.90129852294922,
+        553.8460083007812,
+        435.533447265625,
+        570.02197265625
+      ],
+      "text_sha256": "24d38f0d966f9ff615f7fd2fa64a492740b2bda02a054a9886176addf08b1549"
+    },
+    {
+      "block_id": "page-0871-block-0022",
+      "order": 22,
+      "text": "195:267–273.\n",
+      "bbox": [
+        72.90530395507812,
+        571.8460083007812,
+        109.26528930664062,
+        579.02197265625
+      ],
+      "text_sha256": "bcb9df8385f0adfbf1c1b4fc0e69bf30834710c1460e8462a7a086246d14c29c"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

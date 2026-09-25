@@ -1,0 +1,323 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0756",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 756,
+  "source_page_index": 755,
+  "source_page_display": 756,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Hepatic and renal impairment    735\nCHAPTER 8\nRenal impairment\nUsing drugs in patients with renal impairment needs careful consideration. This is \npartly because some drugs are nephrotoxic but principally because the pharmacokinet-\nics (absorption, distribution, metabolism, excretion) of drugs are altered in renal impair-\nment. In particular, patients with renal impairment have a reduced capacity to excrete \ndrugs and their metabolites.\nPrescribing in renal impairment – general principles\n■\n■Estimate the excretory capacity of the kidney by calculating the glomerular filtration \nrate (GFR). GFR is assessed by measurement of:\n■\n■An ideal filtration marker, for example inulin or EDTA (this gives an accurate esti-\nmate but expensive and invasive)\n■\n■Serum creatinine – an easy and cheap method but an approximation of function \neven after necessary adjustments\n■\n■Cystatin C protein – a more expensive test than creatinine but more accurate\n■\n■Check proteinuria by measuring urinary albumin and calculate albumin/creatinine \nratio. This is because proteinuria is a significant risk factor for progression to end-\nstage renal disease.1\n■\n■Use equations which take into account other factors to improve the precision of GFR \ndetermination using serum creatinine and cystatin C (see equations below). Note that \nthese estimates are still less than perfect when compared with directly measured \nGFR.2,3 CKD-EPI is more accurate than MDRD and is now preferred:\na)\tCockroft and Gault equation*\nCrCl (mL/min) = F (140 – age (in years)) × ideal body weight (kg))\nSerum creatinine (μmol/L)\nF = 1.23 (men) and 1.04 (women)\nIdeal body weight should be used for patients at extremes of body weight or else the result of the \ncalculation is a poor estimate.\nFor men, ideal body weight (kg) = 50kg + 2.3kg per inch over 5 feet\nFor women, ideal body weight (kg) = 45.5kg + 2.3kg per inch over 5 feet\n■\n■Online calculator available at https://www.nuh.nhs.uk/staff-area/antibiotics/creatinine-clearance-calculator.\n* This equation is not accurate if plasma creatinine is unstable (e.g. acute renal failure), in obesity, in pregnant women, children or \nin diseases causing production of abnormal amounts of creatinine and has only been validated in White patients. Creatinine \nclearance is not the same as GFR and is relatively less representative of GFR in severe renal failure.\n",
+  "raw_text_sha256": "33ce5e59787194756bcaab2afb4f054fafcdc974a443ddd542e4dd331f1c5bbd",
+  "coordinates_sha256": "021ad8ee75e7c8e41789c94cf1b7902ce2d16a3b2f6947d34689403cfc3a91a8",
+  "block_sequence_sha256": "03a562f103c3cd079a9f7bf0aecce5cdd6cac7f5de7bc17789cd6fe06b6c1868",
+  "blocks": [
+    {
+      "block_id": "page-0756-block-0000",
+      "order": 0,
+      "text": "Hepatic and renal impairment    735\n",
+      "bbox": [
+        269.185302734375,
+        31.395221710205078,
+        420.00048828125,
+        41.0272216796875
+      ],
+      "text_sha256": "4e53de70d41ece87761ad4e9eeaae1632d4c13fa4e0df6786a924a0f6e65f0a3"
+    },
+    {
+      "block_id": "page-0756-block-0001",
+      "order": 1,
+      "text": "CHAPTER 8\n",
+      "bbox": [
+        454.4096984863281,
+        532.3878173828125,
+        463.88970947265625,
+        573.7318115234375
+      ],
+      "text_sha256": "5ba3d9fb75ff4f418d4a2e9d517f30966dcfb279c10487eec43c5aa3fd8757a2"
+    },
+    {
+      "block_id": "page-0756-block-0002",
+      "order": 2,
+      "text": "Renal impairment\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        146.69598388671875,
+        79.1004638671875
+      ],
+      "text_sha256": "bc221c14486ced61eadc73702879123a377148486a118fd0a4c2be0cbca6c434"
+    },
+    {
+      "block_id": "page-0756-block-0003",
+      "order": 3,
+      "text": "Using drugs in patients with renal impairment needs careful consideration. This is \npartly because some drugs are nephrotoxic but principally because the pharmacokinet-\nics (absorption, distribution, metabolism, excretion) of drugs are altered in renal impair-\nment. In particular, patients with renal impairment have a reduced capacity to excrete \ndrugs and their metabolites.\n",
+      "bbox": [
+        48.0,
+        84.91046142578125,
+        422.7799377441406,
+        144.63046264648438
+      ],
+      "text_sha256": "cdb268f35ccd80e6c9d5d62d09fad0bba544ca3c479d69ae36c2c9181e2504c1"
+    },
+    {
+      "block_id": "page-0756-block-0004",
+      "order": 4,
+      "text": "Prescribing in renal impairment – general principles\n",
+      "bbox": [
+        48.0,
+        162.06546020507812,
+        312.8910827636719,
+        175.1004638671875
+      ],
+      "text_sha256": "d08817aaa1f81855fc685a09249cfae8efd716ed56f4078c643e26530255d456"
+    },
+    {
+      "block_id": "page-0756-block-0005",
+      "order": 5,
+      "text": "■\n■Estimate the excretory capacity of the kidney by calculating the glomerular filtration \n",
+      "bbox": [
+        47.999900817871094,
+        186.67050170898438,
+        422.739990234375,
+        198.73049926757812
+      ],
+      "text_sha256": "08e65a23df43e971e16d8c4c80ea659ccd2c76dcdbc8ea2262468fd52cf9cae1"
+    },
+    {
+      "block_id": "page-0756-block-0006",
+      "order": 6,
+      "text": "rate (GFR). GFR is assessed by measurement of:\n",
+      "bbox": [
+        57.0,
+        198.91049194335938,
+        264.41998291015625,
+        210.6304931640625
+      ],
+      "text_sha256": "17e1dd02a0404205c5f620ea1d535e3b2034e1eb582317a155fdbbe35efc44d1"
+    },
+    {
+      "block_id": "page-0756-block-0007",
+      "order": 7,
+      "text": "■\n■An ideal filtration marker, for example inulin or EDTA (this gives an accurate esti-\n",
+      "bbox": [
+        57.19490051269531,
+        210.91049194335938,
+        419.93994140625,
+        222.6304931640625
+      ],
+      "text_sha256": "3ff8ce356c8dbb85c6356d7c2e3bc20855ad7384848cadd030b4c3617f529d80"
+    },
+    {
+      "block_id": "page-0756-block-0008",
+      "order": 8,
+      "text": "mate but expensive and invasive)\n",
+      "bbox": [
+        66.0,
+        222.91049194335938,
+        208.22999572753906,
+        234.6304931640625
+      ],
+      "text_sha256": "b21a9bbcce02add89f9f74b93e0c6837d9ea49bedf7dd21977488bc6eea55c81"
+    },
+    {
+      "block_id": "page-0756-block-0009",
+      "order": 9,
+      "text": "■\n■Serum creatinine – an easy and cheap method but an approximation of function \n",
+      "bbox": [
+        57.19490051269531,
+        234.91049194335938,
+        422.7999267578125,
+        246.6304931640625
+      ],
+      "text_sha256": "3374adb38abfd93ca17e4983d53f12d51e02c2190cbe7402218879559b801613"
+    },
+    {
+      "block_id": "page-0756-block-0010",
+      "order": 10,
+      "text": "even after necessary adjustments\n",
+      "bbox": [
+        66.0,
+        246.91049194335938,
+        205.98001098632812,
+        258.6304931640625
+      ],
+      "text_sha256": "dcb5e582435a52dca9ad781c5fbf996b62b10cf828366c7c677347c7d77350de"
+    },
+    {
+      "block_id": "page-0756-block-0011",
+      "order": 11,
+      "text": "■\n■Cystatin C protein – a more expensive test than creatinine but more accurate\n",
+      "bbox": [
+        57.19490051269531,
+        258.9104919433594,
+        397.1099853515625,
+        270.6304931640625
+      ],
+      "text_sha256": "ddc2f78e3dd77c0b93583fcd49973b4ce1c3b38e51748bc5f6e0e1b5cbbcf602"
+    },
+    {
+      "block_id": "page-0756-block-0012",
+      "order": 12,
+      "text": "■\n■Check proteinuria by measuring urinary albumin and calculate albumin/creatinine \n",
+      "bbox": [
+        47.999900817871094,
+        276.6705017089844,
+        422.7599182128906,
+        288.6304931640625
+      ],
+      "text_sha256": "29d334e716751fc2ac999277540a9cc4ac9e1f5873c69fd720f4b58175dc10ed"
+    },
+    {
+      "block_id": "page-0756-block-0013",
+      "order": 13,
+      "text": "ratio. This is because proteinuria is a significant risk factor for progression to end-\nstage renal disease.1\n",
+      "bbox": [
+        57.0,
+        288.9104919433594,
+        419.9800109863281,
+        312.6304931640625
+      ],
+      "text_sha256": "e6cc84985d22b9928d5d0e138c72743390d8c2373f41b91875c1fbc2729549b7"
+    },
+    {
+      "block_id": "page-0756-block-0014",
+      "order": 14,
+      "text": "■\n■Use equations which take into account other factors to improve the precision of GFR \n",
+      "bbox": [
+        47.999900817871094,
+        318.6705017089844,
+        422.7200012207031,
+        330.6304931640625
+      ],
+      "text_sha256": "fcf12e4c454d964f8dceb0aa25df00bdb150a0557c1184933a89615a727e3f70"
+    },
+    {
+      "block_id": "page-0756-block-0015",
+      "order": 15,
+      "text": "determination using serum creatinine and cystatin C (see equations below). Note that \nthese estimates are still less than perfect when compared with directly measured \nGFR.2,3 CKD-EPI is more accurate than MDRD and is now preferred:\n",
+      "bbox": [
+        57.0,
+        330.9104919433594,
+        422.8099365234375,
+        366.6304931640625
+      ],
+      "text_sha256": "87d3bfcacd0a55bee561349f4fe6d465dd759e18c91e27ef194b5afb143841d6"
+    },
+    {
+      "block_id": "page-0756-block-0016",
+      "order": 16,
+      "text": "a)\tCockroft and Gault equation*\n",
+      "bbox": [
+        48.0,
+        398.2278747558594,
+        161.46751403808594,
+        407.1153869628906
+      ],
+      "text_sha256": "40ba5849a6afa34cff368a04503d83aa98f8258950c4f8fc921935f09ac0955a"
+    },
+    {
+      "block_id": "page-0756-block-0017",
+      "order": 17,
+      "text": "CrCl (mL/min) = F (140 – age (in years)) × ideal body weight (kg))\n",
+      "bbox": [
+        127.51589965820312,
+        416.53289794921875,
+        334.4859924316406,
+        425.2403869628906
+      ],
+      "text_sha256": "dc213506486f52f52050ad2b660d26ceef1ed2e509699c2adcb3f13bfbada89c"
+    },
+    {
+      "block_id": "page-0756-block-0018",
+      "order": 18,
+      "text": "Serum creatinine (μmol/L)\n",
+      "bbox": [
+        190.23089599609375,
+        428.53289794921875,
+        271.7633972167969,
+        437.2403869628906
+      ],
+      "text_sha256": "c55fa6ca956a7c6c9d6948af6da9f28735fad6f43c85ba1c086e98f203e6177a"
+    },
+    {
+      "block_id": "page-0756-block-0019",
+      "order": 19,
+      "text": "F = 1.23 (men) and 1.04 (women)\n",
+      "bbox": [
+        47.99339294433594,
+        446.660400390625,
+        156.2933807373047,
+        455.3678894042969
+      ],
+      "text_sha256": "aba715f5046bbaba572f1546d5207a9fc47b26e15ee956e85d2328e2f4b969cc"
+    },
+    {
+      "block_id": "page-0756-block-0020",
+      "order": 20,
+      "text": "Ideal body weight should be used for patients at extremes of body weight or else the result of the \ncalculation is a poor estimate.\n",
+      "bbox": [
+        47.99339294433594,
+        459.515380859375,
+        393.5033874511719,
+        478.3628845214844
+      ],
+      "text_sha256": "e36fc1f32b0169dabc3947bdca4902bc60c271704581fb4b07b18ec32a4ebe1f"
+    },
+    {
+      "block_id": "page-0756-block-0021",
+      "order": 21,
+      "text": "For men, ideal body weight (kg) = 50kg + 2.3kg per inch over 5 feet\n",
+      "bbox": [
+        47.99339294433594,
+        482.65289306640625,
+        266.220947265625,
+        491.3603820800781
+      ],
+      "text_sha256": "dd0ad9a5fa1102930e0333c2bdf1d806ad58534d7cecf5d80d90dd42ad76b525"
+    },
+    {
+      "block_id": "page-0756-block-0022",
+      "order": 22,
+      "text": "For women, ideal body weight (kg) = 45.5kg + 2.3kg per inch over 5 feet\n",
+      "bbox": [
+        47.99339294433594,
+        495.650390625,
+        282.4809265136719,
+        504.3578796386719
+      ],
+      "text_sha256": "a07bbd1824edbb0a0868a8fa14c61f30785b51e7a24772bce4551458dc834043"
+    },
+    {
+      "block_id": "page-0756-block-0023",
+      "order": 23,
+      "text": "■\n■Online calculator available at https://www.nuh.nhs.uk/staff-area/antibiotics/creatinine-clearance-calculator.\n",
+      "bbox": [
+        47.999900817871094,
+        508.6578674316406,
+        394.0450744628906,
+        517.3653564453125
+      ],
+      "text_sha256": "2e0f05d3649b56fddcbb196987d39dbeb74c8c3393a9f18eb43ec5626020e461"
+    },
+    {
+      "block_id": "page-0756-block-0024",
+      "order": 24,
+      "text": "* This equation is not accurate if plasma creatinine is unstable (e.g. acute renal failure), in obesity, in pregnant women, children or \nin diseases causing production of abnormal amounts of creatinine and has only been validated in White patients. Creatinine \nclearance is not the same as GFR and is relatively less representative of GFR in severe renal failure.\n",
+      "bbox": [
+        48.0,
+        526.94384765625,
+        409.4327087402344,
+        552.495361328125
+      ],
+      "text_sha256": "c2576afb70d8990c1092e28fb5b34fd5a664311deae4b19c3e4c4bb9f2cc6202"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0515",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 515,
+  "source_page_index": 514,
+  "source_page_display": 515,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "494    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nprescribing medication licensed for co-morbid psychiatric disorders that is sedating, \nbecause of the increased risk of respiratory depression, e.g. pregabalin, which is associ-\nated with overdose death.39 Pregabalin and olanzapine also appear to have an abuse \nliability in the opioid-dependent population.70,71 Patients with opiate dependence suffer \ndisproportionately from depression – about half of those entering treatment will meet \ncriteria for depression. They may require 20–50% higher doses of methadone than \nnon-depressed patients to stabilise72 but stabilisation may precipitate remission in a \nmajority of cases.73 There is limited clinical trial evidence of low-to-moderate quality \nregarding antidepressant use in opioid dependence which suggests that it is of limited \nbenefit for either mood or drug use.69,73 Positive studies have largely been those using \nmedication with mixed pharmacology such as tricyclic antidepressants;74 however, \nTCAs are not recommended in people with co-morbid substance misuse because of \ntheir cardiotoxicity.75 The recommended approach to treatment of depression based on \nthe evidence includes stabilising the patient on OST first, then if depression persists try-\ning an SSRI because of their relative safety, but considering mixed pharmacology anti-\ndepressants as a second line should the patient fail to respond.74 Sertraline is the drug \nof choice in methadone-treated patients as it has limited interaction potential.\nOpioid detoxification and reduction regimes\nOpioid maintenance can be continued for a few weeks to almost indefinitely, depending \non the clinical need. Some patients are keen to detoxify after short periods of stability \nand other patients may decide to detoxify after longer periods on maintenance prescrip-\ntions. All detoxification programmes should be part of a care programme. Given the \nrisk of serious fatal overdose after detoxification, services providing such treatment \nshould educate the patient about these risks and supply and train them with naloxone \nand overdose training for emergency use.\nRegarding the length of detoxification, the NICE guidelines state that ‘dose reduction \ncan take place over anything from a few days to several months, with a higher initial \nstabilisation dose taking longer to taper’, and indicate that ‘up to 3 months is typical for \nmethadone reduction, while buprenorphine reductions are typically carried out over 14 \ndays to a few weeks’.76 In practice, a detoxification in the community may extend over \na longer period, if this facilitates the client’s comfort during the process, compliance \nwith the care plan, continued abstinence from illicit use during detoxification and sub-\nsequent abstinence following detoxification.\nDetoxification in an inpatient setting, the NICE guidelines indicate, may take place \nover a shorter time than in the community (suggesting 14–21 days for methadone and \n7–14 days for buprenorphine) ‘as the supportive environment helps a service user to \ntolerate emerging withdrawal symptoms’.77 As in the community, a stabilisation on the \ndose of a substitute opioid is first achieved, followed by gradual dose reduction, with \nadditive medications judiciously prescribed for withdrawal symptoms if and as needed.\nDetoxification carries a recognised risk of relapse and indeed fatal overdose. \nTherefore, if a patient is being detoxified there needs to be adequate aftercare in place, \nsuch as a rehabilitation programme and community support. For patients having emer-\ngency psychiatric or medical admissions, detoxification is not usually indicated unless \nwith the support of specialist services and aftercare arrangements are in place.\n",
+  "raw_text_sha256": "9d369eff08d24fc77104abaf6e79c142793a92b4e2791a83b3b2856ee20312bd",
+  "coordinates_sha256": "c6827285dc84ab43dc5beea547049cbcb43e44f4e3f630af4bf5904b28befe82",
+  "block_sequence_sha256": "f623df39a5f80b6f5964af5480de53657c9c9aab4104f1bdfcbcdb028f27dead",
+  "blocks": [
+    {
+      "block_id": "page-0515-block-0000",
+      "order": 0,
+      "text": "494    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "269b6340e18273c8d9004d09e1de93ecf1dbf84fa87b84705d734cb0cf0e50f4"
+    },
+    {
+      "block_id": "page-0515-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0515-block-0002",
+      "order": 2,
+      "text": "prescribing medication licensed for co-morbid psychiatric disorders that is sedating, \nbecause of the increased risk of respiratory depression, e.g. pregabalin, which is associ-\nated with overdose death.39 Pregabalin and olanzapine also appear to have an abuse \nliability in the opioid-dependent population.70,71 Patients with opiate dependence suffer \ndisproportionately from depression – about half of those entering treatment will meet \ncriteria for depression. They may require 20–50% higher doses of methadone than \nnon-depressed patients to stabilise72 but stabilisation may precipitate remission in a \nmajority of cases.73 There is limited clinical trial evidence of low-to-moderate quality \nregarding antidepressant use in opioid dependence which suggests that it is of limited \nbenefit for either mood or drug use.69,73 Positive studies have largely been those using \nmedication with mixed pharmacology such as tricyclic antidepressants;74 however, \nTCAs are not recommended in people with co-morbid substance misuse because of \ntheir cardiotoxicity.75 The recommended approach to treatment of depression based on \nthe evidence includes stabilising the patient on OST first, then if depression persists try-\ning an SSRI because of their relative safety, but considering mixed pharmacology anti-\ndepressants as a second line should the patient fail to respond.74 Sertraline is the drug \nof choice in methadone-treated patients as it has limited interaction potential.\n",
+      "bbox": [
+        61.88679504394531,
+        62.55029296875,
+        436.711669921875,
+        266.2702941894531
+      ],
+      "text_sha256": "668c8ade7809459042f467357950c733635402ece51a6ead32d3898e8a409b33"
+    },
+    {
+      "block_id": "page-0515-block-0003",
+      "order": 3,
+      "text": "Opioid detoxification and reduction regimes\n",
+      "bbox": [
+        61.88999938964844,
+        283.7052917480469,
+        290.70098876953125,
+        296.74029541015625
+      ],
+      "text_sha256": "21afcaccf6897111f2e2caa9f58834cf290889ca6c383450164fbd9cedd7f17f"
+    },
+    {
+      "block_id": "page-0515-block-0004",
+      "order": 4,
+      "text": "Opioid maintenance can be continued for a few weeks to almost indefinitely, depending \non the clinical need. Some patients are keen to detoxify after short periods of stability \nand other patients may decide to detoxify after longer periods on maintenance prescrip-\ntions. All detoxification programmes should be part of a care programme. Given the \nrisk of serious fatal overdose after detoxification, services providing such treatment \nshould educate the patient about these risks and supply and train them with naloxone \nand overdose training for emergency use.\n",
+      "bbox": [
+        61.88999938964844,
+        302.55029296875,
+        436.7099304199219,
+        386.2702941894531
+      ],
+      "text_sha256": "4b86cd5951c25f128608a5196ca3db6a0843ae242b6f7cc0b3c8e46f329b0f8c"
+    },
+    {
+      "block_id": "page-0515-block-0005",
+      "order": 5,
+      "text": "Regarding the length of detoxification, the NICE guidelines state that ‘dose reduction \ncan take place over anything from a few days to several months, with a higher initial \nstabilisation dose taking longer to taper’, and indicate that ‘up to 3 months is typical for \nmethadone reduction, while buprenorphine reductions are typically carried out over 14 \ndays to a few weeks’.76 In practice, a detoxification in the community may extend over \na longer period, if this facilitates the client’s comfort during the process, compliance \nwith the care plan, continued abstinence from illicit use during detoxification and sub-\nsequent abstinence following detoxification.\n",
+      "bbox": [
+        61.88941192626953,
+        386.55029296875,
+        436.71990966796875,
+        482.2702941894531
+      ],
+      "text_sha256": "ee3c5eab8ff1af4f3204ba6518a7c8686c80be9f9aa1729b0342f6c881fc73f0"
+    },
+    {
+      "block_id": "page-0515-block-0006",
+      "order": 6,
+      "text": "Detoxification in an inpatient setting, the NICE guidelines indicate, may take place \nover a shorter time than in the community (suggesting 14–21 days for methadone and \n7–14 days for buprenorphine) ‘as the supportive environment helps a service user to \ntolerate emerging withdrawal symptoms’.77 As in the community, a stabilisation on the \ndose of a substitute opioid is first achieved, followed by gradual dose reduction, with \nadditive medications judiciously prescribed for withdrawal symptoms if and as needed.\n",
+      "bbox": [
+        61.88749694824219,
+        482.55029296875,
+        436.6893005371094,
+        554.2703247070312
+      ],
+      "text_sha256": "a16131a4026466be826f33da8685ce7f50070a09fd51db89c0be894c5db59a30"
+    },
+    {
+      "block_id": "page-0515-block-0007",
+      "order": 7,
+      "text": "Detoxification carries a recognised risk of relapse and indeed fatal overdose. \nTherefore, if a patient is being detoxified there needs to be adequate aftercare in place, \nsuch as a rehabilitation programme and community support. For patients having emer-\ngency psychiatric or medical admissions, detoxification is not usually indicated unless \nwith the support of specialist services and aftercare arrangements are in place.\n",
+      "bbox": [
+        61.887481689453125,
+        554.55029296875,
+        436.6974792480469,
+        614.2703247070312
+      ],
+      "text_sha256": "a9d61e77da79735c6d8124758bbf45ee4646b89cf07974fbf238606539959236"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

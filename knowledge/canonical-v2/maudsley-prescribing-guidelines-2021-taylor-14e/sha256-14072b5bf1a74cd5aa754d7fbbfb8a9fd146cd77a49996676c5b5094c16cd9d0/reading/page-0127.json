@@ -1,0 +1,12 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0127",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 127,
+  "source_page_index": 126,
+  "repaired_text": "106    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nFinal doses before complete cessation will need to be very small to prevent a large \ndecrease in D2 blockade. This may need to be as small as 1/80th of the original thera-\npeutic dose (e.g. 0.25mg of olanzapine). Delivery of these small doses will require split-\nting tablets or using liquid formulations of the medications.\nExample reducing regimens are presented in Tables 1.11 and 1.12.\nTable 1.11  Reductions of olanzapine dose by 5 percentage \npoints of D2 occupancy at each step\nPeriod\nOlanzapine \ndose (mg)\nD2 \nOccupancy (%)\n1\n20\n81.6\n2\n14\n75\n3\n10.5\n70\n4\n8.4\n65\n5\n6.8\n60\n6\n5.5\n55\n7\n4.5\n50\n8\n3.7\n45\n9\n3\n40\n10\n2.4\n35\n11\n1.9\n30\n12\n1.5\n25\n13\n1.1\n20\n14\n0.8\n15\n15\n0.5\n10\n16\n0.24\n5\n17\n0\n0",
+  "repaired_text_sha256": "d0916fa3b691d62b739eb17846784ee58d1f7b65f6ad506cdccc8c4965d1e274",
+  "raw_text_sha256": "80f30ce2f7ccd4166d8f7607a6d5fa991c1b04775e59a8327c26bf9c8abfa9ad",
+  "repair_ids": [],
+  "raw_file": "raw/page-0127.json"
+}

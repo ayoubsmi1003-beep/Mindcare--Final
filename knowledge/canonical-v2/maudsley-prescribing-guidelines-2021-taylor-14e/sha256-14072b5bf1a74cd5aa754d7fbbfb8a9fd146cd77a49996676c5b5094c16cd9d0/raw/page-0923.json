@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0923",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 923,
+  "source_page_index": 922,
+  "source_page_display": 923,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "902    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 14\nMedication-taking aids\n‘Compliance aids’ that contain compartments that accommodate up to four doses of \nmultiple medicines each day may be helpful in patients who are clearly motivated to take \nmedication but find this difficult because of disorganisation or cognitive deficits. It should \nbe noted that only 10% of non-adherent patients say that they simply forgot to take \nmedication35 and that medication-taking aids are not a substitute for lack of insight or \nlack of motivation to take medication. Some medicines are unstable when removed from \nblister packaging and placed in a compliance aid. These include oro-dispersible formula-\ntions which are often prescribed for non-adherent patients. In addition, medication-tak-\ning aids are labour-intensive (expensive) to fill, it can be difficult to change prescriptions \nat short notice and the process of filling of these devices is particularly error-prone.36\nDepot/long-acting antipsychotics\nMeta-analyses of clinical trials have shown that the relative and absolute risks of \nrelapse with depot maintenance treatment were 30% and 10% lower, respectively, \nthan with oral treatment.37,38 NICE recommends that depots are an option in patients \nwho are known to be non-adherent to oral treatment and/or those who prefer this \nmethod of administration.3 However, it is worthy of mentioning that switching a non-\nadherent patient from oral antipsychotics to a long-acting injectable formulation does \nnot address the determinants of non-adherence in that person. This has been high-\nlighted by a recent systematic review which reported a rate of discontinuation of above \n50% in those who had been prescribed second-generation depots.39 The prescribing of \nlong-acting antipsychotics does not ‘cure’ non-adherence, but it does prevent sudden \ncessation of medication and its consequences (all depots provide a slow decline in \nplasma levels) and it provides certainty about the level of adherence (the injection is \neither given or it is not).\nDepots are probably underused, for example, an US study found that depot prepara-\ntions were prescribed for fewer than one in five patients with a recent episode of \nnon-adherence.40\nAn alternative to depots is the use of long-acting oral antipsychotics such as penfluri-\ndol, which can be given weekly.41 Supervised administration obviates the need for injec-\ntions but does not provide the same level of certainty over compliance given the facility \npatients sometimes show for disguising the taking of oral medication.\nIn the USA Abilify MyCite is approved for use. This is a version of aripiprazole with \na transmitting sensor embedded in the formulation which is able to confirm that a tab-\nlet has been taken. Evidence for its effectiveness is slim.42\nFinancial incentives\nThere is evidence from controlled trials in a number of disease areas supporting the \npotential of financial incentives to enhance medication adherence. Paying people to \ntake their medication is extremely controversial, though some clinicians have found \nthis strategy to be effective in improving adherence. The effect could not be main-\ntained in an RCT at 6- and 24-month follow-up after payments were stopped and \n",
+  "raw_text_sha256": "9c0457d2caf409a7ff09724948d0c33e03a5a0e13a5a46ffffe22dba40f20481",
+  "coordinates_sha256": "aee05813bc4890a18a458941837c18967ff5ca64e3c04c6b8185438bd7faabae",
+  "block_sequence_sha256": "c558dfe6419006ef2630e19db88420e2d5630a5f522533f082d29ca74428ce59",
+  "blocks": [
+    {
+      "block_id": "page-0923-block-0000",
+      "order": 0,
+      "text": "902    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "24cd6ae5045d3921db666e3a2f3068a72ae079675394fba0966ac638ad33da00"
+    },
+    {
+      "block_id": "page-0923-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        18.520000457763672,
+        338.7405090332031,
+        28.0,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0923-block-0002",
+      "order": 2,
+      "text": "Medication-taking aids\n",
+      "bbox": [
+        61.89099884033203,
+        61.64218521118164,
+        180.45997619628906,
+        74.67718505859375
+      ],
+      "text_sha256": "ba9d1df83ee9d899425e0081261abd28cf1ee7cf4db3043b60f11434dfafe890"
+    },
+    {
+      "block_id": "page-0923-block-0003",
+      "order": 3,
+      "text": "‘Compliance aids’ that contain compartments that accommodate up to four doses of \nmultiple medicines each day may be helpful in patients who are clearly motivated to take \nmedication but find this difficult because of disorganisation or cognitive deficits. It should \nbe noted that only 10% of non-adherent patients say that they simply forgot to take \nmedication35 and that medication-taking aids are not a substitute for lack of insight or \nlack of motivation to take medication. Some medicines are unstable when removed from \nblister packaging and placed in a compliance aid. These include oro-dispersible formula-\ntions which are often prescribed for non-adherent patients. In addition, medication-tak-\ning aids are labour-intensive (expensive) to fill, it can be difficult to change prescriptions \nat short notice and the process of filling of these devices is particularly error-prone.36\n",
+      "bbox": [
+        61.886802673339844,
+        80.4871826171875,
+        436.70086669921875,
+        200.20718383789062
+      ],
+      "text_sha256": "607701a8c09feee774e03b794534af752c788ca796bf1282830d6ab63f0e2732"
+    },
+    {
+      "block_id": "page-0923-block-0004",
+      "order": 4,
+      "text": "Depot/long-acting antipsychotics\n",
+      "bbox": [
+        61.89099884033203,
+        217.64218139648438,
+        232.99598693847656,
+        230.67718505859375
+      ],
+      "text_sha256": "a0d4214583ff01b83f8d011f3e199e46ddd8c2723bf6d27418f31d156be47c2c"
+    },
+    {
+      "block_id": "page-0923-block-0005",
+      "order": 5,
+      "text": "Meta-analyses of clinical trials have shown that the relative and absolute risks of \nrelapse with depot maintenance treatment were 30% and 10% lower, respectively, \nthan with oral treatment.37,38 NICE recommends that depots are an option in patients \nwho are known to be non-adherent to oral treatment and/or those who prefer this \nmethod of administration.3 However, it is worthy of mentioning that switching a non-\nadherent patient from oral antipsychotics to a long-acting injectable formulation does \nnot address the determinants of non-adherence in that person. This has been high-\nlighted by a recent systematic review which reported a rate of discontinuation of above \n50% in those who had been prescribed second-generation depots.39 The prescribing of \nlong-acting antipsychotics does not ‘cure’ non-adherence, but it does prevent sudden \ncessation of medication and its consequences (all depots provide a slow decline in \nplasma levels) and it provides certainty about the level of adherence (the injection is \neither given or it is not).\n",
+      "bbox": [
+        61.88679504394531,
+        236.4871826171875,
+        436.7108154296875,
+        392.2071838378906
+      ],
+      "text_sha256": "cdbb26b56b554edcbbf53798e53453d587dab11a8abf9796cdc22cf30c4dcdf6"
+    },
+    {
+      "block_id": "page-0923-block-0006",
+      "order": 6,
+      "text": "Depots are probably underused, for example, an US study found that depot prepara-\ntions were prescribed for fewer than one in five patients with a recent episode of \nnon-adherence.40\n",
+      "bbox": [
+        61.89080810546875,
+        392.4871826171875,
+        436.6808166503906,
+        428.2071838378906
+      ],
+      "text_sha256": "de3155f353b9c4ab523f247e823347f6a80bb678887d169682e94359f6b1872e"
+    },
+    {
+      "block_id": "page-0923-block-0007",
+      "order": 7,
+      "text": "An alternative to depots is the use of long-acting oral antipsychotics such as penfluri-\ndol, which can be given weekly.41 Supervised administration obviates the need for injec-\ntions but does not provide the same level of certainty over compliance given the facility \npatients sometimes show for disguising the taking of oral medication.\n",
+      "bbox": [
+        61.89109802246094,
+        428.4871826171875,
+        436.61181640625,
+        476.2071838378906
+      ],
+      "text_sha256": "06d44d4c6809871d0033da12bb4ee9fe5413716a9d5591fd421b64b11245ff5e"
+    },
+    {
+      "block_id": "page-0923-block-0008",
+      "order": 8,
+      "text": "In the USA Abilify MyCite is approved for use. This is a version of aripiprazole with \na transmitting sensor embedded in the formulation which is able to confirm that a tab-\nlet has been taken. Evidence for its effectiveness is slim.42\n",
+      "bbox": [
+        61.89189147949219,
+        476.4871826171875,
+        436.6018981933594,
+        512.2072143554688
+      ],
+      "text_sha256": "091825307e3ced23a5196f696cfb16653e0cb6959fe2619db1117cec16ea2ad3"
+    },
+    {
+      "block_id": "page-0923-block-0009",
+      "order": 9,
+      "text": "Financial incentives\n",
+      "bbox": [
+        61.8911018371582,
+        529.6422119140625,
+        162.13409423828125,
+        542.6771850585938
+      ],
+      "text_sha256": "180b6ae51a481ae39dae799cc017e530df7d96022ddcd4ccf109dcf11d354b67"
+    },
+    {
+      "block_id": "page-0923-block-0010",
+      "order": 10,
+      "text": "There is evidence from controlled trials in a number of disease areas supporting the \npotential of financial incentives to enhance medication adherence. Paying people to \ntake their medication is extremely controversial, though some clinicians have found \nthis strategy to be effective in improving adherence. The effect could not be main-\ntained in an RCT at 6- and 24-month follow-up after payments were stopped and \n",
+      "bbox": [
+        61.8911018371582,
+        548.4871826171875,
+        436.6913757324219,
+        608.2072143554688
+      ],
+      "text_sha256": "16bd76325f12d2f630f173fdfee5b9721ce60c28f3ae1b8f0fa6a705baf7dc46"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

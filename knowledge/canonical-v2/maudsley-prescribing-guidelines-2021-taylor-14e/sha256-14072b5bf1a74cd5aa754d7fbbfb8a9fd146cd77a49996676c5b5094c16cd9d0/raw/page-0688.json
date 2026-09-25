@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0688",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 688,
+  "source_page_index": 687,
+  "source_page_display": 688,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Prescribing in older people    667\nCHAPTER  6\nCovert administration of medicines within food and drink\nThis section deals with covert medication provision within UK law only.\nIn mental health settings it is common for patients to refuse medication. Some patients \nwith cognitive disorders may lack capacity to make an informed choice about whether \nmedication will be beneficial to them or not. In these cases, the clinical team may con-\nsider whether it would be in the patient’s best interests to conceal medication in food or \ndrink. This practice is known as covert administration of medicines. Guidance from the \nRoyal Pharmaceutical Society and Royal College of Nursing,1 and the Royal College of \nPsychiatrists2 has been published in order to protect patients from the unlawful and \ninappropriate administration of medication in this way. In the UK, the legal framework \nfor such interventions is either the Mental Capacity Act (MCA)3 or, more rarely, the \nMHA.4\nAssessment of mental capacity3,5,6\nWhen it applies to the covert administration of medicines, the assessment of capacity \nregarding treatment is primarily a matter for the prescriber, usually a doctor treating \nthe patient,3,5 or less commonly a pharmacist or a nurse prescriber. Nurses and allied \nhealth professionals who are not prescribers will also have to be mindful of their own \ncodes of professional practice and should be satisfied that the doctor’s assessment is \nreasonable. In assessing capacity, the assessment must be made in relation to the par-\nticular treatment proposed. Capacity can vary over time and the assessment should be \nmade at the time of the proposed treatment. The assessment should be documented in \nthe patient’s notes and recorded in the care plan.\nA patient is presumed to have the capacity to make treatment decisions unless he/she \nis felt to have some form of mental illness or disturbance of mind and is unable to do \none or more of the following:\n■\n■understand the information relevant to the decision\n■\n■retain that information\n■\n■use or weigh that information as part of the process of making the decision, or\n■\n■communicate his/her decision (whether by talking, using sign language or any other \nmeans).\nGuidance on covert administration\nIf a patient has the capacity to give a valid refusal to medication and is not detainable \nunder the MHA, their refusal should be respected.\nIf a patient has the capacity to give a valid refusal and is either being treated under \nthe MHA or is legally detainable under the Act, the provisions of the MHA with regard \nto treatment will apply (which are outside the scope of this chapter).\nThe administration of medicines to patients who lack the capacity to consent and \nwho are unable to appreciate that they are taking medication (e.g. unconscious patients) \nshould not need to be carried out covertly. However, some patients who lack the \n",
+  "raw_text_sha256": "d4e55f603f1eb45fe75792c9c59d467e25cea702898f0b47851d400e8b98773f",
+  "coordinates_sha256": "4ef455907860890eac47d6a74c3bded678aa99edee7c96de1eeb68dcc581b454",
+  "block_sequence_sha256": "21c2bb05c6f9b9471ecf39b886000904347908354828cbb683f298e167f663d8",
+  "blocks": [
+    {
+      "block_id": "page-0688-block-0000",
+      "order": 0,
+      "text": "Prescribing in older people    667\n",
+      "bbox": [
+        281.576904296875,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "2b6c0ac90a976f12fbd0ed01673d01c4e23c8f36765d39cac9dd0479580d00af"
+    },
+    {
+      "block_id": "page-0688-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        454.4096984863281,
+        405.35260009765625,
+        463.88970947265625,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0688-block-0002",
+      "order": 2,
+      "text": "Covert administration of medicines within food and drink\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        353.2760925292969,
+        79.1004638671875
+      ],
+      "text_sha256": "41f29bad18dd51eb6a81ec2a94a5095e95dd2a494894a800e9d95a4d35dba1bc"
+    },
+    {
+      "block_id": "page-0688-block-0003",
+      "order": 3,
+      "text": "This section deals with covert medication provision within UK law only.\n",
+      "bbox": [
+        48.0,
+        84.91046142578125,
+        359.36993408203125,
+        96.63046264648438
+      ],
+      "text_sha256": "be6b84f310452f45346d73b63d696343bbd657dc1e3fc2fa86984abe1d612f40"
+    },
+    {
+      "block_id": "page-0688-block-0004",
+      "order": 4,
+      "text": "In mental health settings it is common for patients to refuse medication. Some patients \nwith cognitive disorders may lack capacity to make an informed choice about whether \nmedication will be beneficial to them or not. In these cases, the clinical team may con-\nsider whether it would be in the patient’s best interests to conceal medication in food or \ndrink. This practice is known as covert administration of medicines. Guidance from the \nRoyal Pharmaceutical Society and Royal College of Nursing,1 and the Royal College of \nPsychiatrists2 has been published in order to protect patients from the unlawful and \ninappropriate administration of medication in this way. In the UK, the legal framework \nfor such interventions is either the Mental Capacity Act (MCA)3 or, more rarely, the \nMHA.4\n",
+      "bbox": [
+        48.0,
+        96.91046142578125,
+        422.79290771484375,
+        216.6304931640625
+      ],
+      "text_sha256": "565dbff2dc9c01edac35aea4aacabf60d0a63fbb1c3056e9cd12369d1203d761"
+    },
+    {
+      "block_id": "page-0688-block-0005",
+      "order": 5,
+      "text": "Assessment of mental capacity3,5,6\n",
+      "bbox": [
+        48.0,
+        238.06549072265625,
+        221.16653442382812,
+        251.10049438476562
+      ],
+      "text_sha256": "e0838cf3060755f6bc65328e272918a7e063d2a4a2d258fd2f33b021e85e6a6e"
+    },
+    {
+      "block_id": "page-0688-block-0006",
+      "order": 6,
+      "text": "When it applies to the covert administration of medicines, the assessment of capacity \nregarding treatment is primarily a matter for the prescriber, usually a doctor treating \nthe patient,3,5 or less commonly a pharmacist or a nurse prescriber. Nurses and allied \nhealth professionals who are not prescribers will also have to be mindful of their own \ncodes of professional practice and should be satisfied that the doctor’s assessment is \nreasonable. In assessing capacity, the assessment must be made in relation to the par-\nticular treatment proposed. Capacity can vary over time and the assessment should be \nmade at the time of the proposed treatment. The assessment should be documented in \nthe patient’s notes and recorded in the care plan.\n",
+      "bbox": [
+        48.0,
+        256.9104919433594,
+        422.8200378417969,
+        364.6304931640625
+      ],
+      "text_sha256": "f08e5e057ca0940260f0f80091a4c9a74abab082889e48caa67e6a319ee72159"
+    },
+    {
+      "block_id": "page-0688-block-0007",
+      "order": 7,
+      "text": "A patient is presumed to have the capacity to make treatment decisions unless he/she \nis felt to have some form of mental illness or disturbance of mind and is unable to do \none or more of the following:\n",
+      "bbox": [
+        48.00469970703125,
+        364.9104919433594,
+        422.7846984863281,
+        400.6304931640625
+      ],
+      "text_sha256": "946a7477f47e5bd67b78362123a21f1ab48b7446b741a7ec7470eb57fa69195a"
+    },
+    {
+      "block_id": "page-0688-block-0008",
+      "order": 8,
+      "text": "■\n■understand the information relevant to the decision\n",
+      "bbox": [
+        47.999900817871094,
+        406.9104919433594,
+        278.6999816894531,
+        418.6304931640625
+      ],
+      "text_sha256": "474d5b4c80c64147889dda45f202479f7105ed4a1c815fd60dfd3ef1824bfc69"
+    },
+    {
+      "block_id": "page-0688-block-0009",
+      "order": 9,
+      "text": "■\n■retain that information\n",
+      "bbox": [
+        47.999900817871094,
+        418.9104919433594,
+        156.4499969482422,
+        430.6304931640625
+      ],
+      "text_sha256": "41d080dbd84bc1495c90db6b0d3e2d40a542d5af769cc40af96702987b79112f"
+    },
+    {
+      "block_id": "page-0688-block-0010",
+      "order": 10,
+      "text": "■\n■use or weigh that information as part of the process of making the decision, or\n",
+      "bbox": [
+        47.999900817871094,
+        430.9104919433594,
+        395.58001708984375,
+        442.6304931640625
+      ],
+      "text_sha256": "2980d26a67613f77c441ca57681cd5c49ebc8c49db18e2a37ba044801502b8d9"
+    },
+    {
+      "block_id": "page-0688-block-0011",
+      "order": 11,
+      "text": "■\n■communicate his/her decision (whether by talking, using sign language or any other \n",
+      "bbox": [
+        47.999900817871094,
+        442.9104919433594,
+        422.7799377441406,
+        454.6304931640625
+      ],
+      "text_sha256": "99ceb37fd10bd8121baccf4fdd8fe68c5ca6fff77082f09bebc0361f3eed59b4"
+    },
+    {
+      "block_id": "page-0688-block-0012",
+      "order": 12,
+      "text": "means).\n",
+      "bbox": [
+        57.0,
+        454.9104919433594,
+        90.31999969482422,
+        466.6304931640625
+      ],
+      "text_sha256": "e15d844cbef28d28e05199d0f6e8e0c09fc1c560461e2ac8b5e8d70640480c1d"
+    },
+    {
+      "block_id": "page-0688-block-0013",
+      "order": 13,
+      "text": "Guidance on covert administration\n",
+      "bbox": [
+        48.0,
+        484.06549072265625,
+        227.0800018310547,
+        497.1004943847656
+      ],
+      "text_sha256": "9874d1fe759d0ad4b9dda552204bafeb2cca2cf28243f53efba25895f66144c5"
+    },
+    {
+      "block_id": "page-0688-block-0014",
+      "order": 14,
+      "text": "If a patient has the capacity to give a valid refusal to medication and is not detainable \nunder the MHA, their refusal should be respected.\n",
+      "bbox": [
+        48.0,
+        502.91046142578125,
+        422.7499694824219,
+        526.6304931640625
+      ],
+      "text_sha256": "3a7ddc469d697ac088e8bcf329d20a124d35a295f04f7bf393e87a76e40e8793"
+    },
+    {
+      "block_id": "page-0688-block-0015",
+      "order": 15,
+      "text": "If a patient has the capacity to give a valid refusal and is either being treated under \nthe MHA or is legally detainable under the Act, the provisions of the MHA with regard \nto treatment will apply (which are outside the scope of this chapter).\n",
+      "bbox": [
+        48.0,
+        526.9104614257812,
+        422.7899169921875,
+        562.6304931640625
+      ],
+      "text_sha256": "7aa8adfd569b1e9a6021cc55d6195016d2f24890d1aab89ed5dc5ee39289fff5"
+    },
+    {
+      "block_id": "page-0688-block-0016",
+      "order": 16,
+      "text": "The administration of medicines to patients who lack the capacity to consent and \nwho are unable to appreciate that they are taking medication (e.g. unconscious patients) \nshould not need to be carried out covertly. However, some patients who lack the \n",
+      "bbox": [
+        48.0,
+        562.9104614257812,
+        422.79998779296875,
+        598.6304931640625
+      ],
+      "text_sha256": "89e6b9df02463ccd579a65ba20985512f321243dbcf316fd6b1287081e484ecf"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

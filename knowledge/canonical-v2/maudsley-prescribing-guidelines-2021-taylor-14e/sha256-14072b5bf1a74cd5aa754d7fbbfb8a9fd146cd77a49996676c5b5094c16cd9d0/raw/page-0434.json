@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0434",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 434,
+  "source_page_index": 433,
+  "source_page_display": 434,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    413\nCHAPTER 3\nIn 2021, the UK MHRA issued a warning regarding the use of SSRIs and postpartum \nblood loss.43\nSurgical and post-operative bleeding (see Table 3.25)\nUse of SSRIs in the pre-operative period has been associated with a 20% increase in \ninpatient mortality (absolute risk 1 in 1,000), although patient factors rather than drug \nfactors could not be excluded as the cause.44 One study45 found that patients prescribed \nSSRIs who underwent orthopaedic surgery had an almost four-fold risk of requiring a \nblood transfusion. This equated to one additional patient requiring transfusion for \nevery ten SSRI patients undergoing surgery and was double the risk of patients who \nwere taking NSAIDs alone. It should be noted in this context that treatment with SSRIs \nhas been associated with a 2.4-fold increase in the risk of hip fracture46 and a two-fold \nincrease of fracture in old age.47 (Mirtazapine48 and TCAs46 also increase risk of hip \nfracture.) One recent study recognised the preoperative treatment with SSRIs, other \nantidepressants or antipsychotics as independent risk factors for blood transfusion in \nelective fast-track hip and knee arthroplasty.49\nThe combination of advanced age, SSRI treatment, orthopaedic surgery and NSAIDs \nclearly presents a very high risk. However, there does not seem to be an increased risk \nof bleeding in patients who undergo coronary artery bypass surgery.50\nTable 3.25  Risk of perioperative blood loss and blood transfusion in SSRI users compared with non-SSRI users51\nSurgical Procedure\nNeed for reoperation due to \nbleeding event in users of \nSADs* vs non-users\nNeed for blood product or  \nred blood cell transfusion in \nusers of SADs vs non-users\nIncreased risk of \nmortality in users \nof SADs vs \nnon-users\nCoronary artery \nbypass Graft (CABG)\nOR 1.07 (0.66–1.74)\nOR 1.06 (0.90–1.24)\nOR 1.53 \n(1.15–2.04)\nBreast-cancer \ndirected Surgery\nOR 2.7 (1.6–4.56)\n–\n–\nOrthopaedic surgery\n–\nOR1.61 (0.97–2.68)\nOR 0.83 \n(0.69–1.00)\nMajor surgery\n–\nOR 1.19 (1.15–1.23)\nOR 1.19 \n(1.03–1.37)\n*Serotonergic antidepressants  \nOR, odds ratio\nDuring a 10-year review of women who underwent cosmetic breast surgery proce-\ndures, the use of SSRIs increased the risk of post-operative bleeding by a factor of 4.14 \ncompared with those who did not take SSRIs. The authors emphasised the importance \nof balancing the risks and benefits of stopping antidepressants prior to elective surger-\nies, particularly in psychologically vulnerable patients.52\n",
+  "raw_text_sha256": "1faf577e7c57fd11eacc173ccce5ee819f5ccaaeed3b093a8edbc9acf0d1ab90",
+  "coordinates_sha256": "30e434984312012331b2c7206a0c3f87eb4541698871af8eb15c3bb011d2fd7f",
+  "block_sequence_sha256": "471b2a0d1eb77f9a4ab1a7a1047fa35cded0467f6552743db5b5213c903625f8",
+  "blocks": [
+    {
+      "block_id": "page-0434-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    413\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "de35c9b6c641fe744ce85459a2cc27c407561ae67b9423f54ecc0f40b1b94bfc"
+    },
+    {
+      "block_id": "page-0434-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0434-block-0002",
+      "order": 2,
+      "text": "In 2021, the UK MHRA issued a warning regarding the use of SSRIs and postpartum \nblood loss.43\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.7798767089844,
+        86.27041625976562
+      ],
+      "text_sha256": "472ff86bbc4db4e9c0fffed55114015f57f7cc0c0e3ebc77fc714714005da3da"
+    },
+    {
+      "block_id": "page-0434-block-0003",
+      "order": 3,
+      "text": "Surgical and post-operative bleeding (see Table 3.25)\n",
+      "bbox": [
+        48.0,
+        103.70541381835938,
+        320.6789855957031,
+        116.74041748046875
+      ],
+      "text_sha256": "91735c36d6eced51040cb09adc32016bc35442d9bfe5c6a31a91cc32e726e853"
+    },
+    {
+      "block_id": "page-0434-block-0004",
+      "order": 4,
+      "text": "Use of SSRIs in the pre-operative period has been associated with a 20% increase in \ninpatient mortality (absolute risk 1 in 1,000), although patient factors rather than drug \nfactors could not be excluded as the cause.44 One study45 found that patients prescribed \nSSRIs who underwent orthopaedic surgery had an almost four-fold risk of requiring a \nblood transfusion. This equated to one additional patient requiring transfusion for \nevery ten SSRI patients undergoing surgery and was double the risk of patients who \nwere taking NSAIDs alone. It should be noted in this context that treatment with SSRIs \nhas been associated with a 2.4-fold increase in the risk of hip fracture46 and a two-fold \nincrease of fracture in old age.47 (Mirtazapine48 and TCAs46 also increase risk of hip \nfracture.) One recent study recognised the preoperative treatment with SSRIs, other \nantidepressants or antipsychotics as independent risk factors for blood transfusion in \nelective fast-track hip and knee arthroplasty.49\n",
+      "bbox": [
+        47.995574951171875,
+        122.5504150390625,
+        422.82379150390625,
+        266.2704772949219
+      ],
+      "text_sha256": "7f96ecac4a91b3cb35067a9d8faecbc2b3605849861c5d590127a1166dc481c3"
+    },
+    {
+      "block_id": "page-0434-block-0005",
+      "order": 5,
+      "text": "The combination of advanced age, SSRI treatment, orthopaedic surgery and NSAIDs \nclearly presents a very high risk. However, there does not seem to be an increased risk \nof bleeding in patients who undergo coronary artery bypass surgery.50\n",
+      "bbox": [
+        48.0,
+        266.55047607421875,
+        422.830078125,
+        302.2704772949219
+      ],
+      "text_sha256": "5b9e8b2922ec920b8bf6ea743af51754b4b7a6728ae38616ac8e6cf1420caa58"
+    },
+    {
+      "block_id": "page-0434-block-0006",
+      "order": 6,
+      "text": "Table 3.25  Risk of perioperative blood loss and blood transfusion in SSRI users compared with non-SSRI users51\n",
+      "bbox": [
+        54.000701904296875,
+        327.69036865234375,
+        409.66485595703125,
+        336.577880859375
+      ],
+      "text_sha256": "b49c778508f78863c5b6558d91feb6e4d2c6a868ea352866e8689193c49254fe"
+    },
+    {
+      "block_id": "page-0434-block-0007",
+      "order": 7,
+      "text": "Surgical Procedure\n",
+      "bbox": [
+        48.0005989074707,
+        377.9253845214844,
+        113.16058349609375,
+        386.8128967285156
+      ],
+      "text_sha256": "d3aaabc3ae20bcac4c2a8811f371e8d1fe5c470d6a9a887bb2813d2b0c3f43dd"
+    },
+    {
+      "block_id": "page-0434-block-0008",
+      "order": 8,
+      "text": "Need for reoperation due to \nbleeding event in users of \nSADs* vs non-users\n",
+      "bbox": [
+        129.25559997558594,
+        357.9228820800781,
+        230.81314086914062,
+        386.8053894042969
+      ],
+      "text_sha256": "ab03f4c10221b9029c3cb7c46bf38d4f7c1d2459274131d06596060a74a2b546"
+    },
+    {
+      "block_id": "page-0434-block-0009",
+      "order": 9,
+      "text": "Need for blood product or  \nred blood cell transfusion in \nusers of SADs vs non-users\n",
+      "bbox": [
+        235.59060668945312,
+        357.9153747558594,
+        336.3005065917969,
+        386.7978820800781
+      ],
+      "text_sha256": "380a74811125c5d9a05e6a6b6d58a167e9d446d40ef9aa13915a4ab790d99792"
+    },
+    {
+      "block_id": "page-0434-block-0010",
+      "order": 10,
+      "text": "Increased risk of \nmortality in users \nof SADs vs \nnon-users\n",
+      "bbox": [
+        357.06060791015625,
+        347.9103698730469,
+        420.8255920410156,
+        386.7903747558594
+      ],
+      "text_sha256": "23a5687a29ada5a7df8bf1945e787ca18f85ef3ba820acf9ca4e3fd186e50960"
+    },
+    {
+      "block_id": "page-0434-block-0011",
+      "order": 11,
+      "text": "Coronary artery \nbypass Graft (CABG)\n",
+      "bbox": [
+        48.0006103515625,
+        394.8603820800781,
+        113.8431167602539,
+        413.56536865234375
+      ],
+      "text_sha256": "a753ad3bf6e0ee7ebc81f7ef008aa5d58b40ca34a8c576f8410663c1f586c908"
+    },
+    {
+      "block_id": "page-0434-block-0012",
+      "order": 12,
+      "text": "OR 1.07 (0.66–1.74)\nOR 1.06 (0.90–1.24)\nOR 1.53 \n(1.15–2.04)\n",
+      "bbox": [
+        129.255615234375,
+        394.8603820800781,
+        394.170654296875,
+        413.56536865234375
+      ],
+      "text_sha256": "0cd1d03a8604b1b55a23053bbbd2173f67a85c287870761f1afacc0f3f216e86"
+    },
+    {
+      "block_id": "page-0434-block-0013",
+      "order": 13,
+      "text": "Breast-cancer \ndirected Surgery\n",
+      "bbox": [
+        48.0006103515625,
+        419.88037109375,
+        99.94561004638672,
+        438.5853576660156
+      ],
+      "text_sha256": "fc733dfe1c3810160d08099f080dcd27e0a702712279c11c49c1cc07adb415ff"
+    },
+    {
+      "block_id": "page-0434-block-0014",
+      "order": 14,
+      "text": "OR 2.7 (1.6–4.56)\n–\n–\n",
+      "bbox": [
+        129.255615234375,
+        419.88037109375,
+        360.81060791015625,
+        428.5878601074219
+      ],
+      "text_sha256": "7e08cc54a6cd51fc3146e322bf51baacaca12fb015fce4698f2bf5f98f23b7a4"
+    },
+    {
+      "block_id": "page-0434-block-0015",
+      "order": 15,
+      "text": "Orthopaedic surgery\n–\nOR1.61 (0.97–2.68)\nOR 0.83 \n(0.69–1.00)\n",
+      "bbox": [
+        48.0006103515625,
+        444.9078674316406,
+        394.170654296875,
+        463.61285400390625
+      ],
+      "text_sha256": "25258ed3df6fd4d05bca1499028e21e8fa3fc84f1e0581432754213647f13121"
+    },
+    {
+      "block_id": "page-0434-block-0016",
+      "order": 16,
+      "text": "Major surgery\n–\nOR 1.19 (1.15–1.23)\nOR 1.19 \n(1.03–1.37)\n",
+      "bbox": [
+        48.0006103515625,
+        469.9278869628906,
+        394.170654296875,
+        488.63287353515625
+      ],
+      "text_sha256": "0dc910a6decf1f869e03b0bfcd864be2bb8d173169200c933a620631b53d2069"
+    },
+    {
+      "block_id": "page-0434-block-0017",
+      "order": 17,
+      "text": "*Serotonergic antidepressants  \nOR, odds ratio\n",
+      "bbox": [
+        48.0006103515625,
+        498.9228820800781,
+        148.16310119628906,
+        517.6278686523438
+      ],
+      "text_sha256": "30e09b59c0dcfcfa802b0f18d0b68053353b7b8c9765bffbad931b34c1cd374e"
+    },
+    {
+      "block_id": "page-0434-block-0018",
+      "order": 18,
+      "text": "During a 10-year review of women who underwent cosmetic breast surgery proce-\ndures, the use of SSRIs increased the risk of post-operative bleeding by a factor of 4.14 \ncompared with those who did not take SSRIs. The authors emphasised the importance \nof balancing the risks and benefits of stopping antidepressants prior to elective surger-\nies, particularly in psychologically vulnerable patients.52\n",
+      "bbox": [
+        48.0,
+        526.2003784179688,
+        422.77001953125,
+        585.92041015625
+      ],
+      "text_sha256": "305576a2ac909413ff74212177ef2a667729e9d59ed5cf965a11f3035a4a2070"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,287 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0209",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 209,
+  "source_page_index": 208,
+  "source_page_display": 209,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "188    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nReference\nNumber \nof studies \nincluded\nRelative  \nRisk vs. no use \nFGAs \n(OR)\nRelative  \nRisk vs. no use \nSGAs \n(OR)\nRelative  \nRisk vs. no use \nAll anti-psychotics \n(OR)\nComments\nDi et al., 20219\n22\n1.83 VTE/PE\n1.75 VTE\n3.79 PE\n2.06 VTE/PE\n1.53 VTE\n3.69 PE\n1.60 VTE/PE\nHighest risk in \nyounger patients \n(<60 years).\nLow potency FGAs \nhighest risk\nLiu et al., 202110\n28\n1.47 VTE/PE\n1.62 VTE/PE\n1.55 VTE\n3.68 PE\n2.01 VTE/PE\nNew users of \nanti-psychotics had \nhigher risk than \ncontinuing patients.\nRisk slightly elevated \nwith higher doses vs \nlow doses\nMechanisms\nSeveral mechanisms have been suggested to explain the association between antipsy-\nchotics and thromboembolism. These proposed mechanisms are outlined in Table 1.33.\nTable 1.33  Proposed mechanisms for antipsychotic-associated venous thromboembolism11–13\nSedation*\nObesity*\nHyperprolactinaemia*\nElevated phospholipid antibodies\nElevated platelet aggregation**\nElevated plasma homocysteine\n*Some evidence that these factors are not the mechanism for antipsychotic-induced thromboembolism.14\n**In vitro data suggest radically different effects on platelet aggregation for different antipsychotics.12\nOutcomes\nIncreased risk of thromboembolism is reflected in numerous published reports of ele-\nvated incidence of pulmonary embolism,15 stroke16 and myocardial infarction.17,18\nSummary\nAntipsychotics are almost certainly associated with a small but important increased \nrisk of venous thromboembolism and associated hazards of pulmonary embolism, \nstroke and myocardial infarction. Risk appears to be greatest during the early part of \ntreatment and in younger people, and is probably dose-related.\n",
+  "raw_text_sha256": "08c4e8963e444f3901331bb20b1e524364e4361da19826dda2d652cbea84588f",
+  "coordinates_sha256": "044724e63e1353b8751894243f1aef1b20c06e5e29afba91487e30c11b2080c4",
+  "block_sequence_sha256": "2828722f318163971bc4811898a0e2e59420e9d4720c90617f190f100045ab90",
+  "blocks": [
+    {
+      "block_id": "page-0209-block-0000",
+      "order": 0,
+      "text": "188    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "1cf8945c8b297dd5a85ff3a5ba03121d89efcc2225ecf6ed9a6fc6f3ce5e0373"
+    },
+    {
+      "block_id": "page-0209-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0209-block-0002",
+      "order": 2,
+      "text": "Reference\n",
+      "bbox": [
+        61.88909912109375,
+        100.57191467285156,
+        96.76409149169922,
+        109.45941162109375
+      ],
+      "text_sha256": "c34c2aa81c280ef95738bc4b6411fddf02630ebeb2b03f0c400ae7054e81421a"
+    },
+    {
+      "block_id": "page-0209-block-0003",
+      "order": 3,
+      "text": "Number \nof studies \nincluded\n",
+      "bbox": [
+        122.3916015625,
+        80.56941223144531,
+        159.0591278076172,
+        109.451904296875
+      ],
+      "text_sha256": "fce52cc2093be4994f9fba53cc0faa1d1ada449b6c136f0e0192ecd82aeaa400"
+    },
+    {
+      "block_id": "page-0209-block-0004",
+      "order": 4,
+      "text": "Relative  \nRisk vs. no use \nFGAs \n(OR)\n",
+      "bbox": [
+        165.05909729003906,
+        70.56440734863281,
+        218.39915466308594,
+        109.44439697265625
+      ],
+      "text_sha256": "1086302c8c8401545f7dde0e27797ae84d13240f2f0c9cf4096d7edde2e4a92c"
+    },
+    {
+      "block_id": "page-0209-block-0005",
+      "order": 5,
+      "text": "Relative  \nRisk vs. no use \nSGAs \n(OR)\n",
+      "bbox": [
+        228.5615997314453,
+        70.55690002441406,
+        281.9015197753906,
+        109.4368896484375
+      ],
+      "text_sha256": "8338235bb38114d7e19a561d3dc58b4d17f9ced93f298a5a05d9abfdd096bb82"
+    },
+    {
+      "block_id": "page-0209-block-0006",
+      "order": 6,
+      "text": "Relative  \nRisk vs. no use \nAll anti-psychotics \n(OR)\nComments\n",
+      "bbox": [
+        289.67156982421875,
+        70.54939270019531,
+        403.6716003417969,
+        109.42938232421875
+      ],
+      "text_sha256": "7d3353e9640c96c06d2581dbafd184d1de6d5266cbe80af22e373e1c06e09830"
+    },
+    {
+      "block_id": "page-0209-block-0007",
+      "order": 7,
+      "text": "Di et al., 20219\n22\n1.83 VTE/PE\n1.75 VTE\n3.79 PE\n2.06 VTE/PE\n",
+      "bbox": [
+        61.89659118652344,
+        117.4994125366211,
+        266.90643310546875,
+        146.22943115234375
+      ],
+      "text_sha256": "c6ba5f9143718aaa01158b1009ba62f09b5ae7ddcef4a989164c5abca9125933"
+    },
+    {
+      "block_id": "page-0209-block-0008",
+      "order": 8,
+      "text": "1.53 VTE\n3.69 PE\n1.60 VTE/PE\n",
+      "bbox": [
+        289.66888427734375,
+        117.5194320678711,
+        328.01641845703125,
+        146.221923828125
+      ],
+      "text_sha256": "794bd7005509f0e296886dd1b25e0455b22f2f9f69d2ee1643c017b5d4854c22"
+    },
+    {
+      "block_id": "page-0209-block-0009",
+      "order": 9,
+      "text": "Highest risk in \nyounger patients \n(<60 years).\nLow potency FGAs \nhighest risk\n",
+      "bbox": [
+        366.16888427734375,
+        117.51192474365234,
+        427.8414001464844,
+        166.20941162109375
+      ],
+      "text_sha256": "3c3e014d88254fbf8e5f6249fac9a0b05d2072764bc563105d6380c081a0ae2a"
+    },
+    {
+      "block_id": "page-0209-block-0010",
+      "order": 10,
+      "text": "Liu et al., 202110\n28\n1.47 VTE/PE\n1.62 VTE/PE\n1.55 VTE\n3.68 PE\n2.01 VTE/PE\n",
+      "bbox": [
+        61.89390563964844,
+        172.52442932128906,
+        328.01641845703125,
+        201.25439453125
+      ],
+      "text_sha256": "f12c304e8e873e187c780dffba267e320b24e3f6eb114862f0b2a3ccd0c54018"
+    },
+    {
+      "block_id": "page-0209-block-0011",
+      "order": 11,
+      "text": "New users of \nanti-psychotics had \nhigher risk than \ncontinuing patients.\nRisk slightly elevated \nwith higher doses vs \nlow doses\n",
+      "bbox": [
+        366.16888427734375,
+        172.5443878173828,
+        433.6689758300781,
+        241.23687744140625
+      ],
+      "text_sha256": "9ad8a079681fad066d30f201ff20d950562a5a8afe716420c4510c0d8d2020b3"
+    },
+    {
+      "block_id": "page-0209-block-0012",
+      "order": 12,
+      "text": "Mechanisms\n",
+      "bbox": [
+        61.88909912109375,
+        268.09942626953125,
+        125.43611145019531,
+        281.1344299316406
+      ],
+      "text_sha256": "c690d87d1ad6b160e3872664295da99d78ccb43ecb1e9fb1c305189d812cb6d2"
+    },
+    {
+      "block_id": "page-0209-block-0013",
+      "order": 13,
+      "text": "Several mechanisms have been suggested to explain the association between antipsy-\nchotics and thromboembolism. These proposed mechanisms are outlined in Table 1.33.\n",
+      "bbox": [
+        61.88909912109375,
+        286.9444274902344,
+        434.2790832519531,
+        310.6644287109375
+      ],
+      "text_sha256": "cb4c006390a332750ac9475fb92fe00ad38ed5691a2684abe52242709613c834"
+    },
+    {
+      "block_id": "page-0209-block-0014",
+      "order": 14,
+      "text": "Table 1.33  Proposed mechanisms for antipsychotic-associated venous thromboembolism11–13\n",
+      "bbox": [
+        67.8895034790039,
+        334.23870849609375,
+        364.9924621582031,
+        343.126220703125
+      ],
+      "text_sha256": "063dc12306e414dee0ecbb93c901ae0a9d79f81b0916772b1095baa947f71bbf"
+    },
+    {
+      "block_id": "page-0209-block-0015",
+      "order": 15,
+      "text": "Sedation*\nObesity*\nHyperprolactinaemia*\nElevated phospholipid antibodies\nElevated platelet aggregation**\nElevated plasma homocysteine\n",
+      "bbox": [
+        61.889503479003906,
+        351.4437255859375,
+        166.91944885253906,
+        410.1387023925781
+      ],
+      "text_sha256": "98499190d2c9fa8c1bd614725a8cf53d4b7eac7223bacc38b51b707a10c08f5c"
+    },
+    {
+      "block_id": "page-0209-block-0016",
+      "order": 16,
+      "text": "*Some evidence that these factors are not the mechanism for antipsychotic-induced thromboembolism.14\n",
+      "bbox": [
+        61.889503479003906,
+        420.4287109375,
+        398.1657409667969,
+        429.1361999511719
+      ],
+      "text_sha256": "b6d8db4e64ca5ef5b155eeb506736134460f24e8c6ace08c25e3d9d5786a17fe"
+    },
+    {
+      "block_id": "page-0209-block-0017",
+      "order": 17,
+      "text": "**In vitro data suggest radically different effects on platelet aggregation for different antipsychotics.12\n",
+      "bbox": [
+        61.889503479003906,
+        430.4437255859375,
+        386.6456604003906,
+        439.1512145996094
+      ],
+      "text_sha256": "3332b75d8e1053fb51665e51470e3c01279ca1a44568a106ce45fd671b92a728"
+    },
+    {
+      "block_id": "page-0209-block-0018",
+      "order": 18,
+      "text": "Outcomes\n",
+      "bbox": [
+        61.88909912109375,
+        459.45660400390625,
+        113.83110046386719,
+        472.4916076660156
+      ],
+      "text_sha256": "f73c6103c1c41f0b94980e344c77b17245fbf24f1747c925959f3a609b45d74b"
+    },
+    {
+      "block_id": "page-0209-block-0019",
+      "order": 19,
+      "text": "Increased risk of thromboembolism is reflected in numerous published reports of ele-\nvated incidence of pulmonary embolism,15 stroke16 and myocardial infarction.17,18\n",
+      "bbox": [
+        61.88909912109375,
+        478.3016052246094,
+        433.8490905761719,
+        502.0216064453125
+      ],
+      "text_sha256": "2e93eae2516d3b8ebe0d59f7a1ecaa549fe022d03cc91df28a02e3b604f1b689"
+    },
+    {
+      "block_id": "page-0209-block-0020",
+      "order": 20,
+      "text": "Summary\n",
+      "bbox": [
+        61.88909912109375,
+        519.4566040039062,
+        110.79510498046875,
+        532.4915771484375
+      ],
+      "text_sha256": "3cbb36aca330b3bd113955dfbada0adb7a5f95ad9f678bd61f175406c6a37e95"
+    },
+    {
+      "block_id": "page-0209-block-0021",
+      "order": 21,
+      "text": "Antipsychotics are almost certainly associated with a small but important increased \nrisk of venous thromboembolism and associated hazards of pulmonary embolism, \nstroke and myocardial infarction. Risk appears to be greatest during the early part of \ntreatment and in younger people, and is probably dose-related.\n",
+      "bbox": [
+        61.88909912109375,
+        538.3015747070312,
+        436.6590881347656,
+        586.0216064453125
+      ],
+      "text_sha256": "7179a988c36ebab425eb1df8ddda49583faeceb489276568dc6653c9d171df86"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

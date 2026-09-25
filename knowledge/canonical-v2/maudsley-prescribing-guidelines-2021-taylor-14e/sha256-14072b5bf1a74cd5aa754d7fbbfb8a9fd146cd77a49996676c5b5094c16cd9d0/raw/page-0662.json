@@ -1,0 +1,311 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0662",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 662,
+  "source_page_index": 661,
+  "source_page_display": 662,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Prescribing in older people    641\nCHAPTER  6\nCondition\nDrug class or drug name\nDrugs to avoid in dementia\nRecommended drugs  \nin dementia\nHyperlipidaemia\nStatins\nAll are safe but atorvastatin \nand pravastatin are less likely \nto cross blood–brain barrier\nHypersalivation\nAnticholinergics\nHyoscine hydrobromide\nPirenzepine\nAtropine (sublingually)\nHypertension\nAntihypertensives\nBeta-blockers (avoidance may \nnot always be possible)\nCalcium channel blockers, \nangiotensin-converting \nenzyme inhibitors and \nangiotensin receptor blockers \nmay all improve cognitive \nfunction\nInfections\nAntibiotics\nDelirium reported mostly with quinolone and macrolide antibiotics\nBut given the importance of treating infections, the most \nappropriate antibiotic for the infections should be used\nMyasthenia gravis\nPeripheral \nacetylcholinesterase \ninhibitors, e.g. neostigmine \nand pyridostigmine\nMay add to the cholinergic adverse effects of central \nacetylcholinesterase inhibitors (e.g. donepezil, etc.) in patients \nwith dementia, i.e. increased risk of nausea/vomiting, etc.\nNausea/vomiting\nAntiemetics\nCyclizine\nMetoclopramide\nProchlorperazine\nDomperidone (see main text \nfor restrictions)\nSerotonin 5HT3 receptor \nantagonists\nOther GI \nconditions\nAntispasmodics\nAtropine sulphate\nDicycloverine Hydrochloride\nAlverine, mebeverine, \npeppermint oil\nHyoscine-n-butylbromide\nPropantheline bromide\nPain\nAnalgesics\nPethidine\nPentazocine\nDextropropoxyphene\nCodeine\nTramadol\nMethadone\nParacetamol\nOxycodone\nBuprenorphine\nTopical NSAIDs (where \nappropriate)\nFentanyl patches (caution in opioid-naive patients)\nMorphine (may be indicated in treatment-resistant pain or \npalliative care – use cautiously due to associated cognitive and \nother adverse effects)\nUrinary frequency\nAnticholinergic drugs used \nin overactive bladder\nOxybutynin\nTolterodine\nDarifenacin\nTrospium\nSolifenacin (use if others not \navailable – some reports of \ncognitive adverse effects)\nData for fesoterodine are still lacking – it is non-selective, has \nhigh central anticholinergic activity but theoretically has very \nlow ability to cross the BBB\nUrinary retention\nAlpha-blockers\nNot known to have effects on cognitive function\n",
+  "raw_text_sha256": "1b195cebc6119c696e478c1fdaee3b76f4d255b0e086e76a0004928dbccd42a1",
+  "coordinates_sha256": "a6789c66016298a5fb467895313c4be0f8dc39b6089a7e08d1a6933ed19c0a07",
+  "block_sequence_sha256": "4ed3734c73104a02d0738cdc7c536016e8fc4c3e87e61400e966a86688524c6c",
+  "blocks": [
+    {
+      "block_id": "page-0662-block-0000",
+      "order": 0,
+      "text": "Prescribing in older people    641\n",
+      "bbox": [
+        281.576904296875,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "753bcbf171f90ea6682c2ea020517cd492ac8b8556d0117cedaa20f613307e73"
+    },
+    {
+      "block_id": "page-0662-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        454.4096984863281,
+        405.35260009765625,
+        463.88970947265625,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0662-block-0002",
+      "order": 2,
+      "text": "Condition\nDrug class or drug name\nDrugs to avoid in dementia\n",
+      "bbox": [
+        51.999698638916016,
+        77.53968811035156,
+        312.0021667480469,
+        86.42718505859375
+      ],
+      "text_sha256": "2258414d3f640b5a61341f0e22ccc357ec23f5d1be79ea210cfb10716c41e018"
+    },
+    {
+      "block_id": "page-0662-block-0003",
+      "order": 3,
+      "text": "Recommended drugs  \nin dementia\n",
+      "bbox": [
+        320.00469970703125,
+        67.54219055175781,
+        398.3421325683594,
+        86.42718505859375
+      ],
+      "text_sha256": "728f1d63352b659fc1b76b603ad2f672bd2277c9ffb9aa099091336d86ba603d"
+    },
+    {
+      "block_id": "page-0662-block-0004",
+      "order": 4,
+      "text": "Hyperlipidaemia\nStatins\nAll are safe but atorvastatin \nand pravastatin are less likely \nto cross blood–brain barrier\n",
+      "bbox": [
+        52.0072021484375,
+        93.3421859741211,
+        414.4522399902344,
+        122.044677734375
+      ],
+      "text_sha256": "048e309d1989ef5bb63e83588387b928f9476d9d342172ee412832a2e31c6f8a"
+    },
+    {
+      "block_id": "page-0662-block-0005",
+      "order": 5,
+      "text": "Hypersalivation\nAnticholinergics\nHyoscine hydrobromide\nPirenzepine\nAtropine (sublingually)\n",
+      "bbox": [
+        52.0072021484375,
+        128.9596710205078,
+        391.56231689453125,
+        147.6646728515625
+      ],
+      "text_sha256": "1baeeec9de7564ad3b74c61d33e904621677ef6cc0b46a14df262da9ce9820b9"
+    },
+    {
+      "block_id": "page-0662-block-0006",
+      "order": 6,
+      "text": "Hypertension\nAntihypertensives\nBeta-blockers (avoidance may \nnot always be possible)\n",
+      "bbox": [
+        52.01470947265625,
+        154.5796661376953,
+        312.6846923828125,
+        173.28466796875
+      ],
+      "text_sha256": "fbe4add2f2f00800de03555bc5449741fec3f4c1c6d29074467959eea7040669"
+    },
+    {
+      "block_id": "page-0662-block-0007",
+      "order": 7,
+      "text": "Calcium channel blockers, \nangiotensin-converting \nenzyme inhibitors and \nangiotensin receptor blockers \nmay all improve cognitive \nfunction\n",
+      "bbox": [
+        320.01971435546875,
+        154.5796661376953,
+        416.1473083496094,
+        213.274658203125
+      ],
+      "text_sha256": "f9d40da310cc23a82d2554513cd1b71e276e652c15f0ad49067b60d701ffb4f6"
+    },
+    {
+      "block_id": "page-0662-block-0008",
+      "order": 8,
+      "text": "Infections\nAntibiotics\nDelirium reported mostly with quinolone and macrolide antibiotics\nBut given the importance of treating infections, the most \nappropriate antibiotic for the infections should be used\n",
+      "bbox": [
+        52.022216796875,
+        220.1896514892578,
+        415.4423828125,
+        248.89215087890625
+      ],
+      "text_sha256": "29d7d386fe83ccacc710aefae935cfac4b9ff3212a6b70cfb2e81cfaa2f532cd"
+    },
+    {
+      "block_id": "page-0662-block-0009",
+      "order": 9,
+      "text": "Myasthenia gravis\nPeripheral \nacetylcholinesterase \ninhibitors, e.g. neostigmine \nand pyridostigmine\n",
+      "bbox": [
+        52.022216796875,
+        255.80714416503906,
+        210.10719299316406,
+        294.50714111328125
+      ],
+      "text_sha256": "b3a7eb14119151fb0f9012aa7984d48f8317ac2cb6f0d10e2153327544ef05e8"
+    },
+    {
+      "block_id": "page-0662-block-0010",
+      "order": 10,
+      "text": "May add to the cholinergic adverse effects of central \nacetylcholinesterase inhibitors (e.g. donepezil, etc.) in patients \nwith dementia, i.e. increased risk of nausea/vomiting, etc.\n",
+      "bbox": [
+        216.02471923828125,
+        255.7996368408203,
+        415.62982177734375,
+        284.50213623046875
+      ],
+      "text_sha256": "ad00267c4a9e652f4162ba48ab86db711f764a6669a2e6dd4a3f57755d98d69f"
+    },
+    {
+      "block_id": "page-0662-block-0011",
+      "order": 11,
+      "text": "Nausea/vomiting\nAntiemetics\nCyclizine\nMetoclopramide\nProchlorperazine\n",
+      "bbox": [
+        52.022216796875,
+        301.4221496582031,
+        269.2221984863281,
+        330.1246337890625
+      ],
+      "text_sha256": "b80b8779aeb34407f90bf0921919067c194f6d5fa2aaeb65537c492f43efb41e"
+    },
+    {
+      "block_id": "page-0662-block-0012",
+      "order": 12,
+      "text": "Domperidone (see main text \nfor restrictions)\nSerotonin 5HT3 receptor \nantagonists\n",
+      "bbox": [
+        320.0272216796875,
+        301.4146423339844,
+        412.5397644042969,
+        340.1146240234375
+      ],
+      "text_sha256": "9a5d043fd5b79cf9a255be6024bf76aec122c8d6d2e99069657b30d3a513495d"
+    },
+    {
+      "block_id": "page-0662-block-0013",
+      "order": 13,
+      "text": "Other GI \nconditions\n",
+      "bbox": [
+        52.02972412109375,
+        347.0296325683594,
+        84.95472717285156,
+        365.734619140625
+      ],
+      "text_sha256": "2e2680c324e745d1186ea890b4ff60c3bc0d5d70e447cd14aeb6138c24eaee08"
+    },
+    {
+      "block_id": "page-0662-block-0014",
+      "order": 14,
+      "text": "Antispasmodics\nAtropine sulphate\nDicycloverine Hydrochloride\n",
+      "bbox": [
+        121.02972412109375,
+        347.0296325683594,
+        304.2247314453125,
+        365.734619140625
+      ],
+      "text_sha256": "67015fc53c572a63f0374417e76c5cd99dda7a86ab212cbe3aef15638d4e937c"
+    },
+    {
+      "block_id": "page-0662-block-0015",
+      "order": 15,
+      "text": "Alverine, mebeverine, \npeppermint oil\nHyoscine-n-butylbromide\nPropantheline bromide\n",
+      "bbox": [
+        320.03472900390625,
+        347.0296325683594,
+        399.9023132324219,
+        385.7296142578125
+      ],
+      "text_sha256": "5d2008209ab7a0482ca2343a705c71c7c1b59075120bfc834f012e683cdb43a9"
+    },
+    {
+      "block_id": "page-0662-block-0016",
+      "order": 16,
+      "text": "Pain\nAnalgesics\nPethidine\nPentazocine\nDextropropoxyphene\nCodeine\nTramadol\nMethadone\n",
+      "bbox": [
+        52.0372314453125,
+        392.6446228027344,
+        282.86474609375,
+        451.339599609375
+      ],
+      "text_sha256": "0fd9f7b34510d5dedc227c7fe7b1da2c3c6f6c8fa7d7fb9456c941bbbcf35938"
+    },
+    {
+      "block_id": "page-0662-block-0017",
+      "order": 17,
+      "text": "Paracetamol\nOxycodone\nBuprenorphine\nTopical NSAIDs (where \nappropriate)\n",
+      "bbox": [
+        320.042236328125,
+        392.6296081542969,
+        393.25726318359375,
+        441.32708740234375
+      ],
+      "text_sha256": "24670092a5fa605e50027b60f0ea12ce4f1ae18c3bf1e1f49fb9356d924aa62b"
+    },
+    {
+      "block_id": "page-0662-block-0018",
+      "order": 18,
+      "text": "Fentanyl patches (caution in opioid-naive patients)\nMorphine (may be indicated in treatment-resistant pain or \npalliative care – use cautiously due to associated cognitive and \nother adverse effects)\n",
+      "bbox": [
+        216.03973388671875,
+        458.2471008300781,
+        416.7548522949219,
+        496.94708251953125
+      ],
+      "text_sha256": "31a6ca89a5729ad1608243b06661927ca7d13dfa1f7bbc8fc4e61633c0ea1faa"
+    },
+    {
+      "block_id": "page-0662-block-0019",
+      "order": 19,
+      "text": "Urinary frequency\nAnticholinergic drugs used \nin overactive bladder\n",
+      "bbox": [
+        52.0372314453125,
+        503.8620910644531,
+        208.14219665527344,
+        522.5670776367188
+      ],
+      "text_sha256": "1fc435575a613d476c23874ba9f5bbb896033c70ff09b3b97161be8862ce79cc"
+    },
+    {
+      "block_id": "page-0662-block-0020",
+      "order": 20,
+      "text": "Oxybutynin\nTolterodine\n",
+      "bbox": [
+        216.03973388671875,
+        503.8620910644531,
+        252.28721618652344,
+        522.5670776367188
+      ],
+      "text_sha256": "46f6e42300a0b8214c31d457ccc4ba9f1802a4f62e81012018447e0a67e6bdca"
+    },
+    {
+      "block_id": "page-0662-block-0021",
+      "order": 21,
+      "text": "Darifenacin\nTrospium\nSolifenacin (use if others not \navailable – some reports of \ncognitive adverse effects)\n",
+      "bbox": [
+        320.042236328125,
+        503.8620910644531,
+        412.9748229980469,
+        552.5595703125
+      ],
+      "text_sha256": "5fde4073d1d7d95abaffb52d9039df40bd99ae8191c57143417d5feb99bf314d"
+    },
+    {
+      "block_id": "page-0662-block-0022",
+      "order": 22,
+      "text": "Data for fesoterodine are still lacking – it is non-selective, has \nhigh central anticholinergic activity but theoretically has very \nlow ability to cross the BBB\n",
+      "bbox": [
+        216.03973388671875,
+        559.4745483398438,
+        412.8623352050781,
+        588.1770629882812
+      ],
+      "text_sha256": "59e6702d3f5ae19759b2d4f12e829543c984eec820c7ac898cfaeb684c1a972c"
+    },
+    {
+      "block_id": "page-0662-block-0023",
+      "order": 23,
+      "text": "Urinary retention\nAlpha-blockers\nNot known to have effects on cognitive function\n",
+      "bbox": [
+        52.0372314453125,
+        595.092041015625,
+        370.9298095703125,
+        603.799560546875
+      ],
+      "text_sha256": "3125a95e762a4bf463f38f312a0685e31d047ee80c0c15b43ce099896c3baacc"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

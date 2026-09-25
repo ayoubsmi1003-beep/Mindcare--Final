@@ -1,0 +1,383 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0231",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 231,
+  "source_page_index": 230,
+  "source_page_display": 231,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "210    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nDay\nDay of the \nweek\nMorning  \ndose (mg)\nEvening  \ndose (mg)\nMonitoring\nPercentage dose \nof previous \nantipsychotic\n14\nSunday\n25\n37.5\nNo routine monitoring unless \nclinically indicated\n15\nMonday\n37.5\n37.5\nA\n50*\n16\nTuesday\n37.5\n37.5\nNot seen unless problems\n17\nWednesday\n37.5\n50\nA\n18\nThursday\n37.5\n50\nNot seen unless problems\n19\nFriday\n50\n50\nA, B, FBC\n20\nSaturday\n50\n50\nNo routine monitoring unless \nclinically indicated\n21\nSunday\n50\n50\nNo routine monitoring unless \nclinically indicated\n22\nMonday\n50\n75\nA\n25*\n23\nTuesday\n50\n75\nNot seen unless problems\n24\nWednesday\n75\n75\nA\n25\nThursday\n75\n75\nNot seen unless problems\n26\nFriday\n75\n100\nA, B, FBC\n27\nSaturday\n75\n100\nNo routine monitoring unless \nclinically indicated\n28\nSunday\n75\n100\nNo routine monitoring unless \nclinically indicated\nFurther increments should be 25–50mg/day (generally 25mg/day) until target dose is reached (use plasma levels). \nBeware sudden increase in plasma levels due to saturation of first-pass metabolism (watch for increase in sedation/\nother side-effects).\nNote:\nA. \u0007Pulse, postural BP, temperature should be taken before the dose and, ideally, between 30 minutes and 6 hours \nafter the dose. Enquire about side effects.\nB. \u0007Mental state, weight, review and actively manage side-effects (e.g. behavioural advice, slow clozapine titration or \nreduce dose of other antipsychotic, start adjunctive treatments- see the section on clozapine side-effects). \nConsider troponin, CRP, beta-natriuretic peptide.\n* May need to be adjusted depending on side effects and mental state.\nTable 1.38  (Continued)\nAdverse effects\nSedation, hypersalivation and hypotension are common at the start of treatment. These \neffects can usually be managed (see the section on common adverse effects) but require \nparticular attention in community titration. Consider regular systematic assessment of \nside effects using a recognised scale such as the Glasgow Antipsychotic Side-effects \nScale for Clozapine GASS-C.\nThe formal carer (usually the Community Psychiatric Nurse) should inform the pre-\nscriber if:\n",
+  "raw_text_sha256": "90e5608e827ec8217bd24c3cff6bbbd121c48efb506aca79044ffa25ff3785ef",
+  "coordinates_sha256": "7af9b9daacddb40a03346f541c7ce20e7a3592c713229a0fb3fd760c07b62023",
+  "block_sequence_sha256": "2a420a57fc922aa2c30e8ee0155dc7b01a32907a5600d197d434a1d3f1d62ca1",
+  "blocks": [
+    {
+      "block_id": "page-0231-block-0000",
+      "order": 0,
+      "text": "210    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "ccce4063b84cfcaca07e474b03f488345c7987bedab587d3c2b51955542244f5"
+    },
+    {
+      "block_id": "page-0231-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0231-block-0002",
+      "order": 2,
+      "text": "Day\n",
+      "bbox": [
+        61.88909912109375,
+        111.26124572753906,
+        75.64409637451172,
+        120.14874267578125
+      ],
+      "text_sha256": "ab71403ac34fd4d56f0eccdd8d0414492629e64b1e98131853234957f36a7145"
+    },
+    {
+      "block_id": "page-0231-block-0003",
+      "order": 3,
+      "text": "Day of the \nweek\n",
+      "bbox": [
+        97.88909912109375,
+        101.26374816894531,
+        137.06910705566406,
+        120.14874267578125
+      ],
+      "text_sha256": "6985b4d2dd239a1e2a1edb8580e2ca006271ecafaa5bb81c084d40045e6260a2"
+    },
+    {
+      "block_id": "page-0231-block-0004",
+      "order": 4,
+      "text": "Morning  \ndose (mg)\n",
+      "bbox": [
+        150.61410522460938,
+        101.26374816894531,
+        185.60911560058594,
+        120.14874267578125
+      ],
+      "text_sha256": "21a96001c07a328baa84d9202b347d692070ecce4d983830f77838427ef13772"
+    },
+    {
+      "block_id": "page-0231-block-0005",
+      "order": 5,
+      "text": "Evening  \ndose (mg)\nMonitoring\n",
+      "bbox": [
+        208.67910766601562,
+        101.26374816894531,
+        305.6765441894531,
+        120.14874267578125
+      ],
+      "text_sha256": "0e44cb9bd2ac553825d1fb569db361e49e797e424699b904f42299bf9b36f769"
+    },
+    {
+      "block_id": "page-0231-block-0006",
+      "order": 6,
+      "text": "Percentage dose \nof previous \nantipsychotic\n",
+      "bbox": [
+        375.68157958984375,
+        91.25874328613281,
+        435.5616149902344,
+        120.1412353515625
+      ],
+      "text_sha256": "860c297990e099e8b31d2ad23bce5b92c00417de1cadea2c60e98fb23f2feca0"
+    },
+    {
+      "block_id": "page-0231-block-0007",
+      "order": 7,
+      "text": "14\nSunday\n25\n37.5\nNo routine monitoring unless \nclinically indicated\n",
+      "bbox": [
+        61.88908386230469,
+        128.2112579345703,
+        360.9892272949219,
+        146.916259765625
+      ],
+      "text_sha256": "feb7c07cadf80d706500db66fb3d29584baa84dc17f6088f843443ca50205425"
+    },
+    {
+      "block_id": "page-0231-block-0008",
+      "order": 8,
+      "text": "15\nMonday\n37.5\n37.5\nA\n50*\n",
+      "bbox": [
+        61.88908386230469,
+        153.2312774658203,
+        388.1916198730469,
+        161.93878173828125
+      ],
+      "text_sha256": "7b029609e29008a7ea349f52883efb40ae75cd5d97b372cd4b071a2ed150c101"
+    },
+    {
+      "block_id": "page-0231-block-0009",
+      "order": 9,
+      "text": "16\nTuesday\n37.5\n37.5\nNot seen unless problems\n",
+      "bbox": [
+        61.88908386230469,
+        168.25379943847656,
+        347.2342224121094,
+        176.9613037109375
+      ],
+      "text_sha256": "5311358b2a099f04864451a6f3dce81e7cebacb789da552beb809ed0296338b2"
+    },
+    {
+      "block_id": "page-0231-block-0010",
+      "order": 10,
+      "text": "17\nWednesday\n37.5\n50\nA\n",
+      "bbox": [
+        61.88908386230469,
+        183.2763214111328,
+        270.68157958984375,
+        191.98382568359375
+      ],
+      "text_sha256": "4fd32ca4aef83c0875783e4d771c88bbcf136d483b83da1f95fa7634782b82f4"
+    },
+    {
+      "block_id": "page-0231-block-0011",
+      "order": 11,
+      "text": "18\nThursday\n37.5\n50\nNot seen unless problems\n",
+      "bbox": [
+        61.88908386230469,
+        198.29884338378906,
+        347.2342224121094,
+        207.00634765625
+      ],
+      "text_sha256": "60f4ed171e14399e9d941e403ab5df9fce9f100c09ec4d7d1e8b5393782df993"
+    },
+    {
+      "block_id": "page-0231-block-0012",
+      "order": 12,
+      "text": "19\nFriday\n50\n50\nA, B, FBC\n",
+      "bbox": [
+        61.88908386230469,
+        213.3213348388672,
+        295.694091796875,
+        222.02883911132812
+      ],
+      "text_sha256": "38839bdd901ea88af31ec771c7a8b9432f76ffa6816fe7600027c95a396491bb"
+    },
+    {
+      "block_id": "page-0231-block-0013",
+      "order": 13,
+      "text": "20\nSaturday\n50\n50\nNo routine monitoring unless \nclinically indicated\n",
+      "bbox": [
+        61.88908386230469,
+        228.3438262939453,
+        360.9892272949219,
+        247.048828125
+      ],
+      "text_sha256": "72d89ffc1888e036cad3ea4466beca4a2d47c67de39bc8f5794e06e4bea3406c"
+    },
+    {
+      "block_id": "page-0231-block-0014",
+      "order": 14,
+      "text": "21\nSunday\n50\n50\nNo routine monitoring unless \nclinically indicated\n",
+      "bbox": [
+        61.88908386230469,
+        253.3638153076172,
+        360.9892272949219,
+        272.0688171386719
+      ],
+      "text_sha256": "fb7daed85dfdc0cb58b9310e0b8c83240d32edb8142ca34fd808ae233953bf81"
+    },
+    {
+      "block_id": "page-0231-block-0015",
+      "order": 15,
+      "text": "22\nMonday\n50\n75\nA\n25*\n",
+      "bbox": [
+        61.88908386230469,
+        278.3838195800781,
+        388.1916198730469,
+        287.09130859375
+      ],
+      "text_sha256": "adcfe87fb27ae841e54ebf85c0495beca234a5a6be5bb2c62e4cacedb1122c2e"
+    },
+    {
+      "block_id": "page-0231-block-0016",
+      "order": 16,
+      "text": "23\nTuesday\n50\n75\nNot seen unless problems\n",
+      "bbox": [
+        61.88908386230469,
+        293.40631103515625,
+        345.3365783691406,
+        302.1138000488281
+      ],
+      "text_sha256": "e2ae6053693be7f74027adf0d502325d9f19a510e691c15e7ab4d7fdc5d974ad"
+    },
+    {
+      "block_id": "page-0231-block-0017",
+      "order": 17,
+      "text": "24\nWednesday\n75\n75\nA\n",
+      "bbox": [
+        61.88908386230469,
+        308.4288024902344,
+        270.68157958984375,
+        317.13629150390625
+      ],
+      "text_sha256": "d02aa138011e954dc0cb964f3adbaa98b1aeb5e4c0224a25965c100869b6ed13"
+    },
+    {
+      "block_id": "page-0231-block-0018",
+      "order": 18,
+      "text": "25\nThursday\n75\n75\nNot seen unless problems\n",
+      "bbox": [
+        61.88908386230469,
+        323.4512939453125,
+        347.2342224121094,
+        332.1587829589844
+      ],
+      "text_sha256": "225710e1216e2a510efcc90041982fbc760f059a890acd468d58a2e2fe58c797"
+    },
+    {
+      "block_id": "page-0231-block-0019",
+      "order": 19,
+      "text": "26\nFriday\n75\n100\nA, B, FBC\n",
+      "bbox": [
+        61.88908386230469,
+        338.4737854003906,
+        295.694091796875,
+        347.1812744140625
+      ],
+      "text_sha256": "6450d5d533932b06b348cf82bbd5a6960f2dd259454c04f7e104b3e19f198c00"
+    },
+    {
+      "block_id": "page-0231-block-0020",
+      "order": 20,
+      "text": "27\nSaturday\n75\n100\nNo routine monitoring unless \nclinically indicated\n",
+      "bbox": [
+        61.88908386230469,
+        353.49627685546875,
+        360.9892272949219,
+        372.2012634277344
+      ],
+      "text_sha256": "727c621544f6094d35604d7ddb14ff4287227a532b2fdee6060774cf7dd376c3"
+    },
+    {
+      "block_id": "page-0231-block-0021",
+      "order": 21,
+      "text": "28\nSunday\n75\n100\nNo routine monitoring unless \nclinically indicated\n",
+      "bbox": [
+        61.88908386230469,
+        378.5162658691406,
+        360.9892272949219,
+        397.22125244140625
+      ],
+      "text_sha256": "34ada8905a8aeb97117c09dcd3ffad669e03f5670cae6f94ccfac8256fe3011f"
+    },
+    {
+      "block_id": "page-0231-block-0022",
+      "order": 22,
+      "text": "Further increments should be 25–50mg/day (generally 25mg/day) until target dose is reached (use plasma levels). \nBeware sudden increase in plasma levels due to saturation of first-pass metabolism (watch for increase in sedation/\nother side-effects).\n",
+      "bbox": [
+        61.88908386230469,
+        403.5362548828125,
+        427.6565856933594,
+        432.2387390136719
+      ],
+      "text_sha256": "6b3a097ee2e0b8950ed2dded3a565731d5d921c6f82eaeeb2a1a48a76589828b"
+    },
+    {
+      "block_id": "page-0231-block-0023",
+      "order": 23,
+      "text": "Note:\nA. \u0007Pulse, postural BP, temperature should be taken before the dose and, ideally, between 30 minutes and 6 hours \n",
+      "bbox": [
+        61.88908386230469,
+        442.52874755859375,
+        425.7217712402344,
+        461.2337341308594
+      ],
+      "text_sha256": "016525b7db96c7381bd10fd2ccfdd8c39418c33a2fa5e20ef5cf609b7851d38e"
+    },
+    {
+      "block_id": "page-0231-block-0024",
+      "order": 24,
+      "text": "after the dose. Enquire about side effects.\nB. \u0007Mental state, weight, review and actively manage side-effects (e.g. behavioural advice, slow clozapine titration or \n",
+      "bbox": [
+        61.88909912109375,
+        462.52374267578125,
+        433.7242126464844,
+        481.2287292480469
+      ],
+      "text_sha256": "235bf1fc8ddae6cafbd0ca47243f1d77b999e545b2effb9fe27c600b42dff409"
+    },
+    {
+      "block_id": "page-0231-block-0025",
+      "order": 25,
+      "text": "reduce dose of other antipsychotic, start adjunctive treatments- see the section on clozapine side-effects). \nConsider troponin, CRP, beta-natriuretic peptide.\n* May need to be adjusted depending on side effects and mental state.\n",
+      "bbox": [
+        61.88909912109375,
+        482.5187072753906,
+        409.0041198730469,
+        511.22125244140625
+      ],
+      "text_sha256": "a31ce38205074858c27642495c22b685470b6ccd4d860eb9e2e4de00b0bd63e2"
+    },
+    {
+      "block_id": "page-0231-block-0026",
+      "order": 26,
+      "text": "Table 1.38  (Continued)\n",
+      "bbox": [
+        67.88870239257812,
+        70.08692932128906,
+        144.17869567871094,
+        78.97442626953125
+      ],
+      "text_sha256": "6689872488c7a8ff6fae207818ce523bc23e082807f44d80d02d022b6c59381c"
+    },
+    {
+      "block_id": "page-0231-block-0027",
+      "order": 27,
+      "text": "Adverse effects\n",
+      "bbox": [
+        61.888702392578125,
+        522.3424682617188,
+        141.7597198486328,
+        535.37744140625
+      ],
+      "text_sha256": "2829b5953031aa8e8e992beffdca9c91044830ce03b830653e6ea31d5de93cfc"
+    },
+    {
+      "block_id": "page-0231-block-0028",
+      "order": 28,
+      "text": "Sedation, hypersalivation and hypotension are common at the start of treatment. These \neffects can usually be managed (see the section on common adverse effects) but require \nparticular attention in community titration. Consider regular systematic assessment of \nside effects using a recognised scale such as the Glasgow Antipsychotic Side-effects \nScale for Clozapine GASS-C.\n",
+      "bbox": [
+        61.888702392578125,
+        541.1874389648438,
+        436.7086486816406,
+        600.907470703125
+      ],
+      "text_sha256": "561b89b9630d52ef311f93c8a3cea88a530ffbe6e68fce5c0b9d1c6c7669f278"
+    },
+    {
+      "block_id": "page-0231-block-0029",
+      "order": 29,
+      "text": "The formal carer (usually the Community Psychiatric Nurse) should inform the pre-\nscriber if:\n",
+      "bbox": [
+        61.888702392578125,
+        601.1874389648438,
+        433.8886413574219,
+        624.907470703125
+      ],
+      "text_sha256": "a9d7935603abac744667a9a0bd3774137c474f7670dfe77384dbda3cdc10e7c6"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

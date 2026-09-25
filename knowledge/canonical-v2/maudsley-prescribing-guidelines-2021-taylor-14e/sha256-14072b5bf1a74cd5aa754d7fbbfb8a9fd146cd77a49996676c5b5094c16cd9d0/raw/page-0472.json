@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0472",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 472,
+  "source_page_index": 471,
+  "source_page_display": 472,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\nChapter 4\nAddictions and substance misuse\nIntroduction\nMental and behavioural problems due to psychoactive substance use are common. The \nWorld Health Organisation (WHO) in the International Classification of Diseases 10 \n(ICD-10)1 identifies acute intoxication, harmful use, dependence syndrome, withdrawal \nstate, withdrawal state with delirium, psychotic disorder, amnesic syndrome, residual \nand late-onset psychotic disorder, other mental and behavioural disorders and unspeci-\nfied mental and behavioural disorders as substance-related disorders. A wide range of \npsychoactive substances may be problematic, including alcohol, opioids, benzodiaz-\nepines, gamma-hydroxybutyrate (GHB)/gamma-butyrolactone (GBL), stimulants, new \npsychoactive substance (NPS) (including cathinones, synthetic cannabinoids and phe-\nnylethylamines), khat, nitrates, hallucinogens, anabolic steroids and tobacco.\nSubstance misuse is frequently seen in people with severe mental illness (so-called \ndual diagnosis) and personality disorder. In many adult psychiatry settings, dual diag-\nnosis is the norm rather than the exception. In many parts of the world, substance \nmisuse services may be provided separately from general psychiatric services. The model \nof care in most addiction services means that patients who are not motivated to engage \nwill not be assertively treated and followed up. Dual diagnosis teams are not universally \navailable, resulting in sub-optimal treatment of substance misuse for many patients \nwith mental illness.2\nAccording to ICD-10, dependence syndrome is ‘a cluster of physiological, behav-\nioural and cognitive phenomena in which the use of a substance or a class of substances \ntakes on a much higher priority for a given individual than other behaviours that once \nhad greater value’. A definite diagnosis of dependence should only be made if at least \nthree of the following have been present together in the previous year:\n■\n■compulsion to take substance\n■\n■difficulties controlling substance-taking behaviour\n■\n■physiological withdrawal state\n■\n■evidence of tolerance\n",
+  "raw_text_sha256": "86b7e3c01bba533a1bb1b7d929b42dd0ff6ef5c256d74b953319e18aa8f03c8d",
+  "coordinates_sha256": "02c0557231903b2b5de597501d85d9318e77c30bd3f75efe0b29a222b7d1fe60",
+  "block_sequence_sha256": "401ec14ba1accea0c42de595251adf893e431ecc3f4de6cb6efdd149ff2851e9",
+  "blocks": [
+    {
+      "block_id": "page-0472-block-0000",
+      "order": 0,
+      "text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\n",
+      "bbox": [
+        47.99980163574219,
+        585.1019897460938,
+        348.48388671875,
+        614.4779663085938
+      ],
+      "text_sha256": "c78fcd1eeb2357afb8eb5b97a8c858d68167bd409b9074c0da4e20c032bd5665"
+    },
+    {
+      "block_id": "page-0472-block-0001",
+      "order": 1,
+      "text": "Chapter 4\n",
+      "bbox": [
+        324.43121337890625,
+        59.724403381347656,
+        420.001220703125,
+        82.60040283203125
+      ],
+      "text_sha256": "bed122b93c896f06e3d234a35991caa425ad917e5e734af1f6d7b8fd53837ac9"
+    },
+    {
+      "block_id": "page-0472-block-0002",
+      "order": 2,
+      "text": "Addictions and substance misuse\n",
+      "bbox": [
+        79.02690124511719,
+        111.36316680908203,
+        420.0048828125,
+        137.43316650390625
+      ],
+      "text_sha256": "98b7b064013ea3f25820f7c5db9faac4508fb04b7efda4d8f3b2b0df0e4d487e"
+    },
+    {
+      "block_id": "page-0472-block-0003",
+      "order": 3,
+      "text": "Introduction\n",
+      "bbox": [
+        55.0,
+        205.70217895507812,
+        118.96500396728516,
+        218.7371826171875
+      ],
+      "text_sha256": "3fa53fc0dab8ef96d05d8fd4c7e41b490182803725c67b86a531e09effc5fa77"
+    },
+    {
+      "block_id": "page-0472-block-0004",
+      "order": 4,
+      "text": "Mental and behavioural problems due to psychoactive substance use are common. The \nWorld Health Organisation (WHO) in the International Classification of Diseases 10 \n(ICD-10)1 identifies acute intoxication, harmful use, dependence syndrome, withdrawal \nstate, withdrawal state with delirium, psychotic disorder, amnesic syndrome, residual \nand late-onset psychotic disorder, other mental and behavioural disorders and unspeci-\nfied mental and behavioural disorders as substance-related disorders. A wide range of \npsychoactive substances may be problematic, including alcohol, opioids, benzodiaz-\nepines, gamma-hydroxybutyrate (GHB)/gamma-butyrolactone (GBL), stimulants, new \npsychoactive substance (NPS) (including cathinones, synthetic cannabinoids and phe-\nnylethylamines), khat, nitrates, hallucinogens, anabolic steroids and tobacco.\n",
+      "bbox": [
+        48.0,
+        224.54718017578125,
+        422.8099670410156,
+        344.2671813964844
+      ],
+      "text_sha256": "494433768b10c29876adca3c445c6018fbd2bfe5dbb862af549c072fd5435f4f"
+    },
+    {
+      "block_id": "page-0472-block-0005",
+      "order": 5,
+      "text": "Substance misuse is frequently seen in people with severe mental illness (so-called \ndual diagnosis) and personality disorder. In many adult psychiatry settings, dual diag-\nnosis is the norm rather than the exception. In many parts of the world, substance \nmisuse services may be provided separately from general psychiatric services. The model \nof care in most addiction services means that patients who are not motivated to engage \nwill not be assertively treated and followed up. Dual diagnosis teams are not universally \navailable, resulting in sub-optimal treatment of substance misuse for many patients \nwith mental illness.2\n",
+      "bbox": [
+        48.00089645385742,
+        344.54718017578125,
+        422.8008728027344,
+        440.2671813964844
+      ],
+      "text_sha256": "8f4ed7f3aa285b397fe19d319fd3b1a2104a14692e2ec9c61947d70bb92d49d4"
+    },
+    {
+      "block_id": "page-0472-block-0006",
+      "order": 6,
+      "text": "According to ICD-10, dependence syndrome is ‘a cluster of physiological, behav-\nioural and cognitive phenomena in which the use of a substance or a class of substances \ntakes on a much higher priority for a given individual than other behaviours that once \nhad greater value’. A definite diagnosis of dependence should only be made if at least \nthree of the following have been present together in the previous year:\n",
+      "bbox": [
+        48.0,
+        440.54730224609375,
+        422.82989501953125,
+        500.2673034667969
+      ],
+      "text_sha256": "6e38fbbf8e716ecebd874fe33283e1026fbf0ddde495d8b36207231d900403c4"
+    },
+    {
+      "block_id": "page-0472-block-0007",
+      "order": 7,
+      "text": "■\n■compulsion to take substance\n",
+      "bbox": [
+        47.999900817871094,
+        506.54730224609375,
+        184.23997497558594,
+        518.267333984375
+      ],
+      "text_sha256": "0f7abf93f9aef1102423890d2d41c95f0bdb2d181f2123ca811df7c89cec05b6"
+    },
+    {
+      "block_id": "page-0472-block-0008",
+      "order": 8,
+      "text": "■\n■difficulties controlling substance-taking behaviour\n",
+      "bbox": [
+        47.999900817871094,
+        518.5473022460938,
+        273.1600036621094,
+        530.267333984375
+      ],
+      "text_sha256": "f95731eaed4fba7041359c550ead0e8c2c0357831d9b6dcdeb35fa42f631c695"
+    },
+    {
+      "block_id": "page-0472-block-0009",
+      "order": 9,
+      "text": "■\n■physiological withdrawal state\n",
+      "bbox": [
+        47.999900817871094,
+        530.5473022460938,
+        188.69998168945312,
+        542.267333984375
+      ],
+      "text_sha256": "29e12c9d99eacf57791b2405325a057aa9918d93a8335d52c09c4b86359a7f46"
+    },
+    {
+      "block_id": "page-0472-block-0010",
+      "order": 10,
+      "text": "■\n■evidence of tolerance\n",
+      "bbox": [
+        47.999900817871094,
+        542.5473022460938,
+        147.5500030517578,
+        554.267333984375
+      ],
+      "text_sha256": "de3c4e28cdd533b6a31bad4bcc28c24d72686cea26f28df677254f784baa55bb"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

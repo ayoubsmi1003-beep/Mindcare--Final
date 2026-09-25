@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0349",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 349,
+  "source_page_index": 348,
+  "source_page_display": 349,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "328    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nKetamine\nBackground\nOver the last two decades, ketamine, an uncompetitive N-Methyl-D-Aspartate (NMDA) \nreceptor antagonist and dissociative anaesthetic, has emerged as a novel and effective \nrapid-acting antidepressant. In 2000, Berman and colleagues reported findings from a \nlandmark RCT, administering a single subanaesthetic dose of intravenous (IV) keta-\nmine (0.5mg/kg over 40 minutes) to individuals with major depressive disorder (MDD).1 \nKetamine produced a significant antidepressant effect within hours after the infusion \nthat increased progressively up to 3 days after administration. This finding has since \nbeen replicated in several trials in both unipolar and bipolar depression (including \ntreatment-resistant individuals).2–6\nKetamine is a racemic mixture that is composed of equal amounts of the two enanti-\nomers (S)-ketamine and (R)-ketamine (esketamine and arketamine), with esketamine \nbinding more potently to the NMDA receptor. Although ketamine currently remains an \noff-label treatment for treatment-resistant depression (TRD), an esketamine nasal spray \n(SpravatoTM) has been developed and approved for use in TRD (in conjunction with an \noral antidepressant) in Europe and the United States.\nMechanism\nAt present, the precise mechanisms of action for the rapid antidepressant effects of \nketamine and esketamine are not clear, but it has been proposed that these effects are \nmediated via blockade of NMDA receptors on γ-amynobutyric acid (GABA)ergic \ninterneurons that normally act to suppress glutamate release from glutamatergic neu-\nrons.7 This disinhibition results in an acute cortical glutamate surge, activation of post-\nsynaptic α-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid (AMPA) receptors, \nwith downstream effects on synaptogenesis and neuroplastic pathways.7\nRoute\nThe optimal method for administering ketamine for TRD is not fully established; how-\never, there are now approved dosing guidelines for intranasal esketamine (Table 3.6). IV \nketamine (0.5mg/kg over 40 minutes) is the gold standard for off-label ketamine admin-\nistration, with the best supporting evidence for efficacy. Other routes of administration \nhave also been proposed including subcutaneous (SC), intramuscular (IM), oral and \nsublingual (SL), although further research is needed to qualify the relative efficacy and \nsafety of these routes, as well as the optimal dosing regime in each case. Each route has \nits own advantages and challenges in terms of bioavailability, duration of effect, practi-\ncality and patient comfort. While no fixed dosing strategy for ketamine has been estab-\nlished across the different routes and doses tested, in Table 3.6 we provide a summary \nof dosing recommendations, considering available evidence and clinical experience.\n",
+  "raw_text_sha256": "3e6321f9586aa8ee0abc40b8ce0f53b8282c2c46f5eb70a4b6f401bd7c6c8df5",
+  "coordinates_sha256": "ce09a85a75853128270f41a90a3429246ba0cd5dc9bdb2c410704b5c86763d8b",
+  "block_sequence_sha256": "bfd2bff24b641c0b58708931ab1d1646c3969993ca82b15509ea320d7aac6139",
+  "blocks": [
+    {
+      "block_id": "page-0349-block-0000",
+      "order": 0,
+      "text": "328    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "b76228748521f7ea45cf62298157ba9818fd320bd4dbbc9c870ad65ab8f2b9db"
+    },
+    {
+      "block_id": "page-0349-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0349-block-0002",
+      "order": 2,
+      "text": "Ketamine\n",
+      "bbox": [
+        68.88999938964844,
+        66.06539916992188,
+        118.4119873046875,
+        79.10040283203125
+      ],
+      "text_sha256": "cfe2393bcb8c4478857acbf0181ef92b3a0ecde4492f9db2946b2bfc791c5740"
+    },
+    {
+      "block_id": "page-0349-block-0003",
+      "order": 3,
+      "text": "Background\n",
+      "bbox": [
+        61.89400100708008,
+        90.06741333007812,
+        123.41699981689453,
+        103.1024169921875
+      ],
+      "text_sha256": "6dbaeab519ce0852c1a3b25525532198acbfd0cae37032904df6a9ccebc8de16"
+    },
+    {
+      "block_id": "page-0349-block-0004",
+      "order": 4,
+      "text": "Over the last two decades, ketamine, an uncompetitive N-Methyl-D-Aspartate (NMDA) \nreceptor antagonist and dissociative anaesthetic, has emerged as a novel and effective \nrapid-acting antidepressant. In 2000, Berman and colleagues reported findings from a \nlandmark RCT, administering a single subanaesthetic dose of intravenous (IV) keta-\nmine (0.5mg/kg over 40 minutes) to individuals with major depressive disorder (MDD).1 \nKetamine produced a significant antidepressant effect within hours after the infusion \nthat increased progressively up to 3 days after administration. This finding has since \nbeen replicated in several trials in both unipolar and bipolar depression (including \ntreatment-resistant individuals).2–6\n",
+      "bbox": [
+        61.88999938964844,
+        108.910400390625,
+        436.6999816894531,
+        216.63040161132812
+      ],
+      "text_sha256": "0d06102b4acd17ef01534aaa098fbd6b6cc2a067861e8f08d278c2dcbdd447e4"
+    },
+    {
+      "block_id": "page-0349-block-0005",
+      "order": 5,
+      "text": "Ketamine is a racemic mixture that is composed of equal amounts of the two enanti-\nomers (S)-ketamine and (R)-ketamine (esketamine and arketamine), with esketamine \nbinding more potently to the NMDA receptor. Although ketamine currently remains an \noff-label treatment for treatment-resistant depression (TRD), an esketamine nasal spray \n(SpravatoTM) has been developed and approved for use in TRD (in conjunction with an \noral antidepressant) in Europe and the United States.\n",
+      "bbox": [
+        61.88999938964844,
+        216.910400390625,
+        436.7099609375,
+        288.6304016113281
+      ],
+      "text_sha256": "c571605ac0b08d4ac2961c5bac65b84e04f0f92244315fd2b451b24d71c07656"
+    },
+    {
+      "block_id": "page-0349-block-0006",
+      "order": 6,
+      "text": "Mechanism\n",
+      "bbox": [
+        61.88999938964844,
+        306.0653991699219,
+        120.5530014038086,
+        319.10040283203125
+      ],
+      "text_sha256": "a913900b4674db4c2822c5f8d07b3eb97904aaa0efdb8a74198a2429e1c3878c"
+    },
+    {
+      "block_id": "page-0349-block-0007",
+      "order": 7,
+      "text": "At present, the precise mechanisms of action for the rapid antidepressant effects of \nketamine and esketamine are not clear, but it has been proposed that these effects are \nmediated via blockade of NMDA receptors on γ-amynobutyric acid (GABA)ergic \ninterneurons that normally act to suppress glutamate release from glutamatergic neu-\nrons.7 This disinhibition results in an acute cortical glutamate surge, activation of post-\nsynaptic α-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid (AMPA) receptors, \nwith downstream effects on synaptogenesis and neuroplastic pathways.7\n",
+      "bbox": [
+        61.88999938964844,
+        324.910400390625,
+        436.71002197265625,
+        408.6304016113281
+      ],
+      "text_sha256": "462c5103aefb68f6cd7c45270daceefe794f2754dad6ba736afd54c3dc893a28"
+    },
+    {
+      "block_id": "page-0349-block-0008",
+      "order": 8,
+      "text": "Route\n",
+      "bbox": [
+        61.88999938964844,
+        426.0653991699219,
+        92.447998046875,
+        439.10040283203125
+      ],
+      "text_sha256": "1f18c31a8a32745e8dc9295d9af5f983b9f8c67b04843a0a3888aa178c7e821d"
+    },
+    {
+      "block_id": "page-0349-block-0009",
+      "order": 9,
+      "text": "The optimal method for administering ketamine for TRD is not fully established; how-\never, there are now approved dosing guidelines for intranasal esketamine (Table 3.6). IV \nketamine (0.5mg/kg over 40 minutes) is the gold standard for off-label ketamine admin-\nistration, with the best supporting evidence for efficacy. Other routes of administration \nhave also been proposed including subcutaneous (SC), intramuscular (IM), oral and \nsublingual (SL), although further research is needed to qualify the relative efficacy and \nsafety of these routes, as well as the optimal dosing regime in each case. Each route has \nits own advantages and challenges in terms of bioavailability, duration of effect, practi-\ncality and patient comfort. While no fixed dosing strategy for ketamine has been estab-\nlished across the different routes and doses tested, in Table 3.6 we provide a summary \nof dosing recommendations, considering available evidence and clinical experience.\n",
+      "bbox": [
+        61.88999938964844,
+        444.910400390625,
+        436.64996337890625,
+        576.6304321289062
+      ],
+      "text_sha256": "e5d1cbd2fbca40928b042b3b6fcf6cd7b67bb1bb598b325a31c75f08e629ad25"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

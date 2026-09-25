@@ -1,0 +1,575 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0114",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 114,
+  "source_page_index": 113,
+  "source_page_display": 114,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug\nTrade name Formulation\nDosing \ninterval\nSite(s) of \nadministration\nDosing \ninformation\nPre-mixing \nrequired\nPre-treatment \nwith oral \ntherapy \nessential*\nPre-treatment \nwith oral \ntherapy \ndesirable**\nRegulatory \nstatus\nAdditional information\nRisperidone \nextended \nrelease for SC \ninjection \n(TV-46000)\nN/A\nSuspension\n1- and \n2- monthly12\nSub-cutaneous  \ninjection\n2 dose \nregimens \n(TV-46000-A \n& \nTV-46000-B)  \nbeing \ninvestigated13\nNo12\nNo13\nYes13\nPhase 3 study \nin progress13\nPhase 3 results are awaited in 202012\nRisperidone\nRisperidone \nISM  \nor Doria\nSuspension14\n1-monthly14\nIntra-muscular  \ninjection into the \ngluteal or deltoid \nmuscle15\n75mg/100mg\nYes\nNo16\nYes\nPhase 3 study \ncompleted\nAwaiting \nEMA approval \n202017\nDoes not require loading doses or oral \nsupplementation/3-day trial of oral \nrisperidone (2mg/day) to check for \nhypersensitivity in risperidone naïve \npatients18\n*LAI tested only in the presence of pre/post-treatment with oral therapy\n**Best practice in order to establish efficacy and tolerability\n",
+  "raw_text_sha256": "90f1c031402ef6d91ec204704a367015fa1c213669bab2ba6a58cbbb74b98a50",
+  "coordinates_sha256": "b2b529eadc9c68583796cfc71c9ceeca6dea5800fd3c5086a582ed65f9866973",
+  "block_sequence_sha256": "cb0f8ea959d26af74dae41d90af5edbd3a232344a7e138c880062034961825e9",
+  "blocks": [
+    {
+      "block_id": "page-0114-block-0000",
+      "order": 0,
+      "text": "Drug\nTrade name Formulation\nDosing \n",
+      "bbox": [
+        140.8343048095703,
+        480.4905090332031,
+        159.71929931640625,
+        652.6530151367188
+      ],
+      "text_sha256": "91b7c3aaaf5a97c70f408a3de96be6cff84a051c83c84754230c947d0129f666"
+    },
+    {
+      "block_id": "page-0114-block-0001",
+      "order": 1,
+      "text": "interval\nSite(s) of \n",
+      "bbox": [
+        140.8343048095703,
+        431.0655212402344,
+        159.71929931640625,
+        507.15301513671875
+      ],
+      "text_sha256": "3b807b544b6f5a11bbf03708e2475b091761732e04bd65719dfb655ca4f49808"
+    },
+    {
+      "block_id": "page-0114-block-0002",
+      "order": 2,
+      "text": "administration\nDosing \n",
+      "bbox": [
+        140.8343048095703,
+        377.7405700683594,
+        159.71929931640625,
+        464.40301513671875
+      ],
+      "text_sha256": "7abd46b6efd926c97713377a5c0768c7a78fac7494d959969dcfe107496513ad"
+    },
+    {
+      "block_id": "page-0114-block-0003",
+      "order": 3,
+      "text": "information\nPre-mixing \n",
+      "bbox": [
+        140.8343048095703,
+        317.2755126953125,
+        159.71929931640625,
+        404.40301513671875
+      ],
+      "text_sha256": "cb259a82a8dea17b99d3fc23ee2704dc1af0215061381858be0fb8b571f42fb7"
+    },
+    {
+      "block_id": "page-0114-block-0004",
+      "order": 4,
+      "text": "required\n",
+      "bbox": [
+        150.83180236816406,
+        327.41552734375,
+        159.71929931640625,
+        357.15301513671875
+      ],
+      "text_sha256": "a5b0a56fd8d2fcf82092fb779244729989674b90787530cbf7946f4d00da53a6"
+    },
+    {
+      "block_id": "page-0114-block-0005",
+      "order": 5,
+      "text": "Pre-treatment \n",
+      "bbox": [
+        120.83180236816406,
+        262.2629089355469,
+        129.71929931640625,
+        313.26300048828125
+      ],
+      "text_sha256": "1acb0807d348d7aab5f1a4b381969b57518a30e49cd3b268dd0968a967c2b3bb"
+    },
+    {
+      "block_id": "page-0114-block-0006",
+      "order": 6,
+      "text": "with oral \n",
+      "bbox": [
+        130.8292999267578,
+        279.08551025390625,
+        139.716796875,
+        313.26300048828125
+      ],
+      "text_sha256": "84d73db5cda150d41be0319c4d5134ff087da8ea7d8251296daaec8727f34ce5"
+    },
+    {
+      "block_id": "page-0114-block-0007",
+      "order": 7,
+      "text": "therapy \n",
+      "bbox": [
+        140.82679748535156,
+        283.66796875,
+        149.71429443359375,
+        313.26300048828125
+      ],
+      "text_sha256": "04ab2b3df87cd713a0ce5259c40bebdf5483908ed4943f0c59f069ffc74227c9"
+    },
+    {
+      "block_id": "page-0114-block-0008",
+      "order": 8,
+      "text": "essential*\n",
+      "bbox": [
+        150.8242950439453,
+        278.25299072265625,
+        159.7117919921875,
+        313.26300048828125
+      ],
+      "text_sha256": "1cdb4f32e7f3ae1ced125d74651e644931aa65714f93e4c9c8d0be3b89a8da3c"
+    },
+    {
+      "block_id": "page-0114-block-0009",
+      "order": 9,
+      "text": "Pre-treatment \n",
+      "bbox": [
+        120.82429504394531,
+        209.4029083251953,
+        129.7117919921875,
+        260.40301513671875
+      ],
+      "text_sha256": "1acb0807d348d7aab5f1a4b381969b57518a30e49cd3b268dd0968a967c2b3bb"
+    },
+    {
+      "block_id": "page-0114-block-0010",
+      "order": 10,
+      "text": "with oral \n",
+      "bbox": [
+        130.82179260253906,
+        226.2255096435547,
+        139.70928955078125,
+        260.40301513671875
+      ],
+      "text_sha256": "84d73db5cda150d41be0319c4d5134ff087da8ea7d8251296daaec8727f34ce5"
+    },
+    {
+      "block_id": "page-0114-block-0011",
+      "order": 11,
+      "text": "therapy \n",
+      "bbox": [
+        140.8192901611328,
+        230.80796813964844,
+        149.706787109375,
+        260.40301513671875
+      ],
+      "text_sha256": "04ab2b3df87cd713a0ce5259c40bebdf5483908ed4943f0c59f069ffc74227c9"
+    },
+    {
+      "block_id": "page-0114-block-0012",
+      "order": 12,
+      "text": "desirable**\nRegulatory \n",
+      "bbox": [
+        140.8192901611328,
+        165.55799865722656,
+        159.70428466796875,
+        260.40301513671875
+      ],
+      "text_sha256": "04d60e8454b3ff7b370b4a83bb30abed44ea404abcde9ce8a84e338a7d2a7fb7"
+    },
+    {
+      "block_id": "page-0114-block-0013",
+      "order": 13,
+      "text": "status\nAdditional information\n",
+      "bbox": [
+        150.81678771972656,
+        71.1404037475586,
+        159.70428466796875,
+        206.40301513671875
+      ],
+      "text_sha256": "4f4a438ce2f0a16bdaa476bc192409473523ebd9e77beaf3996b4950bba3ae60"
+    },
+    {
+      "block_id": "page-0114-block-0014",
+      "order": 14,
+      "text": "Risperidone \n",
+      "bbox": [
+        167.86729431152344,
+        616.0850219726562,
+        175.99429321289062,
+        652.6530151367188
+      ],
+      "text_sha256": "7b6ddc3925c29871a8936b5073f4c1706d01d35e7f72cf1469c139cb3c678212"
+    },
+    {
+      "block_id": "page-0114-block-0015",
+      "order": 15,
+      "text": "extended \n",
+      "bbox": [
+        177.87030029296875,
+        623.092041015625,
+        185.99729919433594,
+        652.6530151367188
+      ],
+      "text_sha256": "74274199932d19f0fc3412eaa9a57f813ff48cde5c8178821c0ee4a14f8ab4d3"
+    },
+    {
+      "block_id": "page-0114-block-0016",
+      "order": 16,
+      "text": "release for SC \n",
+      "bbox": [
+        187.87330627441406,
+        609.6100463867188,
+        196.00030517578125,
+        652.6530151367188
+      ],
+      "text_sha256": "8a217a6bd5253660654d35148f51703018fe43df27a9f24bebcb5ea337143901"
+    },
+    {
+      "block_id": "page-0114-block-0017",
+      "order": 17,
+      "text": "injection \n",
+      "bbox": [
+        197.87631225585938,
+        625.4300537109375,
+        206.00331115722656,
+        652.6530151367188
+      ],
+      "text_sha256": "2a5f48f080e96de6bb734e3630a56060f62c61ccd6ed6a2bec049178fcbfa772"
+    },
+    {
+      "block_id": "page-0114-block-0018",
+      "order": 18,
+      "text": "(TV-46000)\n",
+      "bbox": [
+        207.8793182373047,
+        619.5780639648438,
+        216.00631713867188,
+        652.6530151367188
+      ],
+      "text_sha256": "c02cfc393839f6ab224e68768518b7dcf0e35564550ddc665e768b5d2753b945"
+    },
+    {
+      "block_id": "page-0114-block-0019",
+      "order": 19,
+      "text": "N/A\nSuspension\n1- and \n2- monthly12\nSub-cutaneous  \n",
+      "bbox": [
+        167.86729431152344,
+        416.166015625,
+        186.01132202148438,
+        605.4030151367188
+      ],
+      "text_sha256": "247c17416b5610ced358aabbc4641426be56a3edc26144abf1bf5ae19a8c7b26"
+    },
+    {
+      "block_id": "page-0114-block-0020",
+      "order": 20,
+      "text": "injection\n2 dose \nregimens \n",
+      "bbox": [
+        167.86729431152344,
+        375.363037109375,
+        185.99729919433594,
+        464.40301513671875
+      ],
+      "text_sha256": "74e9d726fe11eb7da2357d47e5929530e65044b4ea30c6f8b4182f66ffc61ba5"
+    },
+    {
+      "block_id": "page-0114-block-0021",
+      "order": 21,
+      "text": "(TV-46000-A \n",
+      "bbox": [
+        187.87330627441406,
+        364.33099365234375,
+        196.00030517578125,
+        404.406005859375
+      ],
+      "text_sha256": "61baf2d379333b70621fb0dea2364f40804baf327bca0c9776e63dce1ee1748c"
+    },
+    {
+      "block_id": "page-0114-block-0022",
+      "order": 22,
+      "text": "& \n",
+      "bbox": [
+        197.87631225585938,
+        397.7909851074219,
+        206.00331115722656,
+        404.406005859375
+      ],
+      "text_sha256": "e11a3faca07c06db3145a87963130485f2a5454595e3b98a9a009c8158545df8"
+    },
+    {
+      "block_id": "page-0114-block-0023",
+      "order": 23,
+      "text": "TV-46000-B)  \n",
+      "bbox": [
+        207.8793182373047,
+        363.1619873046875,
+        216.00631713867188,
+        404.406005859375
+      ],
+      "text_sha256": "a57c86926251f1e54e6807addef257c2942a17252ca3549a8b345b7ea3722cc5"
+    },
+    {
+      "block_id": "page-0114-block-0024",
+      "order": 24,
+      "text": "being \n",
+      "bbox": [
+        217.88232421875,
+        385.7300109863281,
+        226.0093231201172,
+        404.406005859375
+      ],
+      "text_sha256": "8bbcb49e734016757ffe0e7c1bdb797815c3b6a18eaacbdc0fe70d20ecd4bcf2"
+    },
+    {
+      "block_id": "page-0114-block-0025",
+      "order": 25,
+      "text": "investigated13\n",
+      "bbox": [
+        227.88531494140625,
+        364.08831787109375,
+        236.01231384277344,
+        404.406005859375
+      ],
+      "text_sha256": "d0a20abd06cb6da83d7fdeb81784469b46de76676ad2ecc781e38cc31d813acc"
+    },
+    {
+      "block_id": "page-0114-block-0026",
+      "order": 26,
+      "text": "No12\nNo13\nYes13\nPhase 3 study \n",
+      "bbox": [
+        167.86729431152344,
+        163.61192321777344,
+        175.99429321289062,
+        357.15301513671875
+      ],
+      "text_sha256": "96724d6472a40641e2b5291e54f33195c0081df4b85272921b0fef9b988d550f"
+    },
+    {
+      "block_id": "page-0114-block-0027",
+      "order": 27,
+      "text": "in progress13\nPhase 3 results are awaited in 202012\n",
+      "bbox": [
+        167.86729431152344,
+        48.31214141845703,
+        185.99729919433594,
+        206.40301513671875
+      ],
+      "text_sha256": "f5b793b9cd67749daa1cd1ff946cef2eec1d2e8cef0fa3192674222e3a1baef6"
+    },
+    {
+      "block_id": "page-0114-block-0028",
+      "order": 28,
+      "text": "Risperidone\nRisperidone \n",
+      "bbox": [
+        242.51739501953125,
+        568.8350219726562,
+        250.64439392089844,
+        652.6530151367188
+      ],
+      "text_sha256": "49f94ec331e77ed88bbcafc19f6cd59544c8dcf47db296509f269f2d377092bd"
+    },
+    {
+      "block_id": "page-0114-block-0029",
+      "order": 29,
+      "text": "ISM  \n",
+      "bbox": [
+        252.52040100097656,
+        590.2340087890625,
+        260.64739990234375,
+        605.4030151367188
+      ],
+      "text_sha256": "5043270f5d53fee0497a5c82e25406634b3f31ca9980f6bfb30ecd8d35857e1c"
+    },
+    {
+      "block_id": "page-0114-block-0030",
+      "order": 30,
+      "text": "or Doria\n",
+      "bbox": [
+        262.52337646484375,
+        581.2880249023438,
+        270.650390625,
+        605.4030151367188
+      ],
+      "text_sha256": "7f99000c70985c9a05e51ca5657bb943321bf7c6787879402495d1ff67299c15"
+    },
+    {
+      "block_id": "page-0114-block-0031",
+      "order": 31,
+      "text": "Suspension14\n1-monthly14\nIntra-muscular  \n",
+      "bbox": [
+        242.51739501953125,
+        417.7410583496094,
+        250.65138244628906,
+        558.9019775390625
+      ],
+      "text_sha256": "b3f80b0213435eb913c423aa3c0551e5391e307d220f9aa57d46cfa88a065a0f"
+    },
+    {
+      "block_id": "page-0114-block-0032",
+      "order": 32,
+      "text": "injection into the \n",
+      "bbox": [
+        252.52040100097656,
+        411.89605712890625,
+        260.64739990234375,
+        464.40301513671875
+      ],
+      "text_sha256": "05756ac917faec962f0d1cf700514ffedcd9ca96968f749a318d9fa5ae91c2f4"
+    },
+    {
+      "block_id": "page-0114-block-0033",
+      "order": 33,
+      "text": "gluteal or deltoid \n",
+      "bbox": [
+        262.52337646484375,
+        411.5040588378906,
+        270.650390625,
+        464.40301513671875
+      ],
+      "text_sha256": "21dd7a87c534d51ba7eea8f53c96ec073cb390453c54ed65f2148072088307f3"
+    },
+    {
+      "block_id": "page-0114-block-0034",
+      "order": 34,
+      "text": "muscle15\n",
+      "bbox": [
+        272.5263671875,
+        439.2572326660156,
+        280.65338134765625,
+        464.40301513671875
+      ],
+      "text_sha256": "5dd1ba7ff3448444934c7c397e5f727282b544d5c72b44bdea74290b14cd15d2"
+    },
+    {
+      "block_id": "page-0114-block-0035",
+      "order": 35,
+      "text": "75mg/100mg\nYes\nNo16\nYes\nPhase 3 study \n",
+      "bbox": [
+        242.51739501953125,
+        163.6138153076172,
+        250.64439392089844,
+        404.4029235839844
+      ],
+      "text_sha256": "2a694d3d937af47ea17b875beaf96dff43f337df39031638a7346393703f50c9"
+    },
+    {
+      "block_id": "page-0114-block-0036",
+      "order": 36,
+      "text": "completed\n",
+      "bbox": [
+        252.52040100097656,
+        174.90487670898438,
+        260.64739990234375,
+        206.4049072265625
+      ],
+      "text_sha256": "d3be030801b90ea8057d3997d9845c7f850cc7b784450645d5ec2811cc927d7a"
+    },
+    {
+      "block_id": "page-0114-block-0037",
+      "order": 37,
+      "text": "Awaiting \n",
+      "bbox": [
+        262.52337646484375,
+        177.74681091308594,
+        270.650390625,
+        206.4049072265625
+      ],
+      "text_sha256": "647bde275c85f7921a474beff100ff6b9d78ac63b764c313bbf77a64059cd5a9"
+    },
+    {
+      "block_id": "page-0114-block-0038",
+      "order": 38,
+      "text": "EMA approval \n",
+      "bbox": [
+        272.5263671875,
+        162.5778045654297,
+        280.65338134765625,
+        206.4049072265625
+      ],
+      "text_sha256": "4f88d80959328946d9b60effb01e7190a1c93c45de397493b903b1fc9d6d2baf"
+    },
+    {
+      "block_id": "page-0114-block-0039",
+      "order": 39,
+      "text": "202017\n",
+      "bbox": [
+        282.52935791015625,
+        186.29681396484375,
+        290.6563720703125,
+        206.4049072265625
+      ],
+      "text_sha256": "7c4be036854369d75ff9050ed41fe4a5bebb3ca6290f355d153e5a5636756d1b"
+    },
+    {
+      "block_id": "page-0114-block-0040",
+      "order": 40,
+      "text": "Does not require loading doses or oral \n",
+      "bbox": [
+        242.51739501953125,
+        42.72715759277344,
+        250.64439392089844,
+        158.402587890625
+      ],
+      "text_sha256": "368ae673d65f984ddb3a16a35646a80b6ab97490988870376bc5eb7ed39919b9"
+    },
+    {
+      "block_id": "page-0114-block-0041",
+      "order": 41,
+      "text": "supplementation/3-day trial of oral \n",
+      "bbox": [
+        252.52040100097656,
+        53.00334167480469,
+        260.64739990234375,
+        158.402587890625
+      ],
+      "text_sha256": "b0b8aef0f7fe2ea5fe77d4ccf3f42bffd722d2b923a6577d8449bc660114f7fa"
+    },
+    {
+      "block_id": "page-0114-block-0042",
+      "order": 42,
+      "text": "risperidone (2mg/day) to check for \n",
+      "bbox": [
+        262.52337646484375,
+        53.77348327636719,
+        270.650390625,
+        158.402587890625
+      ],
+      "text_sha256": "5e84f99021659e0214245b2114a177f003f2ac180e5f8289cce75acbe69f12bc"
+    },
+    {
+      "block_id": "page-0114-block-0043",
+      "order": 43,
+      "text": "hypersensitivity in risperidone naïve \n",
+      "bbox": [
+        272.5263671875,
+        51.45634460449219,
+        280.65338134765625,
+        158.402587890625
+      ],
+      "text_sha256": "bb9620d638fc71acdb2e43c15a07b200508d4c508391ba8caf9734422e4a4aa3"
+    },
+    {
+      "block_id": "page-0114-block-0044",
+      "order": 44,
+      "text": "patients18\n",
+      "bbox": [
+        282.52935791015625,
+        130.141845703125,
+        290.6563720703125,
+        158.402587890625
+      ],
+      "text_sha256": "c213dc71fccce3710cdc9f90194d387b45aef75aea3539192669141271939e61"
+    },
+    {
+      "block_id": "page-0114-block-0045",
+      "order": 45,
+      "text": "*LAI tested only in the presence of pre/post-treatment with oral therapy\n**Best practice in order to establish efficacy and tolerability\n",
+      "bbox": [
+        301.0619201660156,
+        423.0403747558594,
+        319.76690673828125,
+        652.6528930664062
+      ],
+      "text_sha256": "1a5da8b04a9598ab5aecf6fec06b8a11af9c0e9e3e5d3e343ef458a88de57146"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

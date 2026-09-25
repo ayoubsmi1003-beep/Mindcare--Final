@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0658",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 658,
+  "source_page_index": 657,
+  "source_page_display": 658,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Prescribing in older people    637\nCHAPTER  6\ncognitive-enhancing action.27 These drugs carry cardiovascular warnings and should be \nused cautiously in patients with cardiac co-morbidities or taking concomitant \narrhythmogenic drugs or drugs known to prolong QT interval. Granisetron can be \nadministered once daily, which is preferable in elderly patients with memory problems \nor swallowing difficulties. Granisetron is metabolised exclusively via a single CYP fam-\nily (CYP3A4), and thus has a lower propensity for drug interactions.28 All 5HT3 antag-\nonists cause constipation.\nAntispasmodics\nHyoscine hydrobromide (scopolamine) is a centrally acting anticholinergic which is \nlipophilic and penetrates the BBB easily. It impairs memory, speed of processing and \nattention. Older patients suffer these symptoms at lower doses and are more vulnerable \nto confusion and hallucinations.29 People with AD have experienced clinically signifi-\ncant cognitive impairment at lower doses compared with healthy, age-matched con-\ntrols.3 The effect that hyoscine has on cognition is so significant that it is used in trials \nto produce memory deficits similar to those seen in dementia (the scopolamine chal-\nlenge test).30 There is rarely a good reason to use this drug in people with dementia.\nHyoscine butylbromide (Buscopan) exerts topical spasmolytic action on the smooth \nmuscle of the GI tract. Hyoscine butylbromide is not thought to enter the CNS, so cen-\ntral anticholinergic adverse effects are extremely rare.31\nAlverine, mebeverine and peppermint oil are relaxants of intestinal smooth muscle \nand do not have an effect on cognition.\nBronchodilators\nBeta-agonists\nIn patients with coexisting Parkinson’s disease or essential tremor, tremor induced by \nbeta-agonists may result in misdiagnosis and over-treatment of Parkinson’s disease.32 \nTremor is a common adverse effect of cholinesterase inhibitors, so caution should be \nexercised when used with beta-agonists.\nAnticholinergic bronchodilators\nInhaled anticholinergic drugs have few systemic side effects compared with oral medica-\ntion.32 A randomised, double-blind placebo-controlled comparison of ipratropium and \ntheophylline treatment was unable to detect a negative effect with either drug on the \npsychometric test performance of older patients. This suggests that treatment with inhaled \nipratropium is not associated with significant cognitive impairment in older people.33\nTheophylline\nAs with cholinesterase inhibitors, nausea and vomiting are common adverse effects of \ntheophylline. Neurological effects such as headaches, anxiety, behavioural disturbances, \ndepression and seizures can occur in 50% of patients on theophylline. Although sei-\nzures are rare, they are much more likely in older people. Theophylline does not cause \nsignificant cognitive impairment.33\n",
+  "raw_text_sha256": "71ebd4e4f50309d38feaf2de23b1e1b08e0e00a32b4de0db89db58f592ed80f4",
+  "coordinates_sha256": "ac10d9620817c34525a3ab328fa88ad2919dbee121523048784ed4f8acf9bb4c",
+  "block_sequence_sha256": "5decc95ab48a160ddda72c2674c6384e25af77a7ca455ea06d31ae5d2c0161c8",
+  "blocks": [
+    {
+      "block_id": "page-0658-block-0000",
+      "order": 0,
+      "text": "Prescribing in older people    637\n",
+      "bbox": [
+        281.576904296875,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "70486915ebb0dd2649e14a1f8e4146794b8d10321fa2812013a591f2352a5844"
+    },
+    {
+      "block_id": "page-0658-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        454.4096984863281,
+        405.35260009765625,
+        463.88970947265625,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0658-block-0002",
+      "order": 2,
+      "text": "cognitive-enhancing action.27 These drugs carry cardiovascular warnings and should be \nused cautiously in patients with cardiac co-morbidities or taking concomitant \narrhythmogenic drugs or drugs known to prolong QT interval. Granisetron can be \nadministered once daily, which is preferable in elderly patients with memory problems \nor swallowing difficulties. Granisetron is metabolised exclusively via a single CYP fam-\nily (CYP3A4), and thus has a lower propensity for drug interactions.28 All 5HT3 antag-\nonists cause constipation.\n",
+      "bbox": [
+        47.99609375,
+        62.5504150390625,
+        422.8185729980469,
+        146.27041625976562
+      ],
+      "text_sha256": "d2fb730107f600236c1a0bd6dc03a50cdf8440c58e88ee75445645cbb0c6a02e"
+    },
+    {
+      "block_id": "page-0658-block-0003",
+      "order": 3,
+      "text": "Antispasmodics\nHyoscine hydrobromide (scopolamine) is a centrally acting anticholinergic which is \nlipophilic and penetrates the BBB easily. It impairs memory, speed of processing and \nattention. Older patients suffer these symptoms at lower doses and are more vulnerable \nto confusion and hallucinations.29 People with AD have experienced clinically signifi-\ncant cognitive impairment at lower doses compared with healthy, age-matched con-\ntrols.3 The effect that hyoscine has on cognition is so significant that it is used in trials \nto produce memory deficits similar to those seen in dementia (the scopolamine chal-\nlenge test).30 There is rarely a good reason to use this drug in people with dementia.\n",
+      "bbox": [
+        48.0,
+        159.10791015625,
+        422.8099365234375,
+        266.2704772949219
+      ],
+      "text_sha256": "1f9223b11fc0d4c697c927c5db5d882a02a2f23b6c9367eb138d80fa7855e820"
+    },
+    {
+      "block_id": "page-0658-block-0004",
+      "order": 4,
+      "text": "Hyoscine butylbromide (Buscopan) exerts topical spasmolytic action on the smooth \nmuscle of the GI tract. Hyoscine butylbromide is not thought to enter the CNS, so cen-\ntral anticholinergic adverse effects are extremely rare.31\n",
+      "bbox": [
+        48.002201080322266,
+        266.31048583984375,
+        422.79217529296875,
+        302.2704772949219
+      ],
+      "text_sha256": "c4a3ffc86b6fbdc28ccbf8dcea1fb5b4c5ca8d5ffcd32a84e7527d1175c8e6d7"
+    },
+    {
+      "block_id": "page-0658-block-0005",
+      "order": 5,
+      "text": "Alverine, mebeverine and peppermint oil are relaxants of intestinal smooth muscle \nand do not have an effect on cognition.\n",
+      "bbox": [
+        48.0,
+        302.31048583984375,
+        422.7799377441406,
+        326.2704772949219
+      ],
+      "text_sha256": "a97d7238d1bc54347df88dfa8375baf4f616dc8889889b39d953a9faa697d07c"
+    },
+    {
+      "block_id": "page-0658-block-0006",
+      "order": 6,
+      "text": "Bronchodilators\n",
+      "bbox": [
+        48.0,
+        344.6404724121094,
+        122.44000244140625,
+        356.490478515625
+      ],
+      "text_sha256": "c244b33d01ac038c84d1972d93570f8f70792c0af205ef96764c98875c0ab4c1"
+    },
+    {
+      "block_id": "page-0658-block-0007",
+      "order": 7,
+      "text": "Beta-agonists\nIn patients with coexisting Parkinson’s disease or essential tremor, tremor induced by \nbeta-agonists may result in misdiagnosis and over-treatment of Parkinson’s disease.32 \nTremor is a common adverse effect of cholinesterase inhibitors, so caution should be \nexercised when used with beta-agonists.\n",
+      "bbox": [
+        48.0,
+        363.10797119140625,
+        422.8104553222656,
+        422.2704772949219
+      ],
+      "text_sha256": "ad6dceb2906552727397f12bc46491fe1522451f4a55853407ed863e8c4ef5ac"
+    },
+    {
+      "block_id": "page-0658-block-0008",
+      "order": 8,
+      "text": "Anticholinergic bronchodilators\nInhaled anticholinergic drugs have few systemic side effects compared with oral medica-\ntion.32 A randomised, double-blind placebo-controlled comparison of ipratropium and \ntheophylline treatment was unable to detect a negative effect with either drug on the \npsychometric test performance of older patients. This suggests that treatment with inhaled \nipratropium is not associated with significant cognitive impairment in older people.33\n",
+      "bbox": [
+        47.99629592895508,
+        435.10797119140625,
+        422.7661437988281,
+        506.2704772949219
+      ],
+      "text_sha256": "a1717d7f6bed4eefc0c92c6b06d38c353ce3008252fcf358e4443169704077a1"
+    },
+    {
+      "block_id": "page-0658-block-0009",
+      "order": 9,
+      "text": "Theophylline\nAs with cholinesterase inhibitors, nausea and vomiting are common adverse effects of \ntheophylline. Neurological effects such as headaches, anxiety, behavioural disturbances, \ndepression and seizures can occur in 50% of patients on theophylline. Although sei-\nzures are rare, they are much more likely in older people. Theophylline does not cause \nsignificant cognitive impairment.33\n",
+      "bbox": [
+        48.0,
+        519.1079711914062,
+        422.7900390625,
+        590.2705078125
+      ],
+      "text_sha256": "2ef9120390f110c10d553d5a74267d3dd601ae9eec3dfe493b762e6c66ec98bc"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0936",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 936,
+  "source_page_index": 935,
+  "source_page_display": 936,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Miscellany    915\nCHAPTER 14\nTable 14.3  (Continued)\n(Continued)\nParameter\nReference range\nAgents reported to raise \nlevels\nAgents reported to lower \nlevels\nPlatelets\n150–450 × 109/L\nLamotrigine, lithium†\nAlcohol, barbiturates, \nbeta-blockers, \nbenzodiazepines, bupropion, \nbuspirone, carbamazepine, \nchlordiazepoxide, \nchlorpromazine, \nclonazepam, clonidine, \nclozapine†, cocaine, \ndiazepam, donepezil, \nduloxetine, fluoxetine, \nfluphenazine, lamotrigine, \nmeprobamate, methadone, \nmethylphenidate, \nmirtazapine, naltrexone, \nnitrous oxide, olanzapine, \npirenzepine, promethazine, \nquetiapine, risperidone/\npaliperidone, rivastigmine, \nsertraline, TCAs, \ntranylcypromine, trazodone, \ntrifluoperazine, valproate, \nvenlafaxine, ziprasidone; \nmay also be a feature of \ndrugs causing \nhypersensitivity syndrome\nAgents associated with \nimpaired platelet \naggregation: \nchlordiazepoxide, \ncitalopram, diazepam, \nfluoxetine, fluvoxamine, \nparoxetine, piracetam, \nsertraline, valproate\nProthrombin time \n(PT)/international \nnormalised ratio (INR)\nPT: 10–13 seconds \nINR: 0.8–1.2\nChloral hydrate, disulfiram, \nfluoxetine, fluvoxamine, \nmirtazapine, valproate; also \nagents interacting with \nwarfarin\nBarbiturates, \ncarbamazepine, phenytoin, \ntiotixene\nRed blood count\nMales: 4.5–6.5 × 1012/L \nFemales: 3.8–5.8 × 1012/L\nLithium, testosterone\nBuprenorphine, \ncarbamazepine, \nchlordiazepoxide, \nchlorpromazine, donepezil, \nhaloperidol, meprobamate, \nphenytoin, quetiapine, \ntrifluoperazine\n",
+  "raw_text_sha256": "f0ebda2d46c7ffaf7532d1ae9203d9cc85805a25613a1bc84752ed38f2f89bc8",
+  "coordinates_sha256": "3dd642c35b54c641c3009959268bd43700ad9861b40fce71f59f3da4ba1e2548",
+  "block_sequence_sha256": "f748a221f0f6f2b0d8aa6fb8f89fd560e29e331459d0fc5d7346702b754f6570",
+  "blocks": [
+    {
+      "block_id": "page-0936-block-0000",
+      "order": 0,
+      "text": "Miscellany    915\n",
+      "bbox": [
+        349.2962951660156,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "436d3520211aad8e7088139ddc6c637e5728709a65a6510e21f565197920cf74"
+    },
+    {
+      "block_id": "page-0936-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        454.4096984863281,
+        338.7405090332031,
+        463.88970947265625,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0936-block-0002",
+      "order": 2,
+      "text": "Table 14.3  (Continued)\n",
+      "bbox": [
+        54.0,
+        70.08790588378906,
+        130.2899932861328,
+        78.97540283203125
+      ],
+      "text_sha256": "7231225c9e8b14058598bb982db0899de80655e21e54ec16db99d31c9d795d7b"
+    },
+    {
+      "block_id": "page-0936-block-0003",
+      "order": 3,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.9849853515625,
+        587.992919921875,
+        419.99993896484375,
+        596.7454223632812
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0936-block-0004",
+      "order": 4,
+      "text": "Parameter\nReference range\nAgents reported to raise \nlevels\n",
+      "bbox": [
+        48.039398193359375,
+        89.28968811035156,
+        306.9693908691406,
+        108.1746826171875
+      ],
+      "text_sha256": "2d8396b50a0166fb5174838b85b12dbab30e8d3f13f6168449e65c27a04464a6"
+    },
+    {
+      "block_id": "page-0936-block-0005",
+      "order": 5,
+      "text": "Agents reported to lower \nlevels\n",
+      "bbox": [
+        324.00189208984375,
+        89.28968811035156,
+        415.9668884277344,
+        108.1746826171875
+      ],
+      "text_sha256": "fb27f96225e0cbd9a32bd98053962899f0febd02bfe697fd98d1c326340a4999"
+    },
+    {
+      "block_id": "page-0936-block-0006",
+      "order": 6,
+      "text": "Platelets\n150–450 × 109/L\nLamotrigine, lithium†\nAlcohol, barbiturates, \nbeta-blockers, \nbenzodiazepines, bupropion, \nbuspirone, carbamazepine, \nchlordiazepoxide, \nchlorpromazine, \nclonazepam, clonidine, \nclozapine†, cocaine, \ndiazepam, donepezil, \nduloxetine, fluoxetine, \nfluphenazine, lamotrigine, \nmeprobamate, methadone, \nmethylphenidate, \nmirtazapine, naltrexone, \nnitrous oxide, olanzapine, \npirenzepine, promethazine, \nquetiapine, risperidone/\npaliperidone, rivastigmine, \nsertraline, TCAs, \ntranylcypromine, trazodone, \ntrifluoperazine, valproate, \nvenlafaxine, ziprasidone; \nmay also be a feature of \ndrugs causing \nhypersensitivity syndrome\n",
+      "bbox": [
+        48.039398193359375,
+        115.98970794677734,
+        418.1251525878906,
+        364.6596374511719
+      ],
+      "text_sha256": "1f3a6bbb09c2901ff084447d7f1cda943fd05a7e7a214491e806c4183eae2ab0"
+    },
+    {
+      "block_id": "page-0936-block-0007",
+      "order": 7,
+      "text": "Agents associated with \nimpaired platelet \naggregation: \nchlordiazepoxide, \ncitalopram, diazepam, \nfluoxetine, fluvoxamine, \nparoxetine, piracetam, \nsertraline, valproate\n",
+      "bbox": [
+        324.0006103515625,
+        369.7746276855469,
+        408.1730651855469,
+        448.6446228027344
+      ],
+      "text_sha256": "4c19ea914dff27c0b1be3186f952ed17cc7f7da35a06f9576007b09f2568df76"
+    },
+    {
+      "block_id": "page-0936-block-0008",
+      "order": 8,
+      "text": "Prothrombin time \n(PT)/international \nnormalised ratio (INR)\n",
+      "bbox": [
+        48.038116455078125,
+        454.9596252441406,
+        116.7981185913086,
+        483.662109375
+      ],
+      "text_sha256": "7f468781d568efedcc30c5d68a7960777aa6c7486c415e6394e8d2156576a42c"
+    },
+    {
+      "block_id": "page-0936-block-0009",
+      "order": 9,
+      "text": "PT: 10–13 seconds \nINR: 0.8–1.2\n",
+      "bbox": [
+        126.00061798095703,
+        454.9521179199219,
+        186.8631134033203,
+        473.6571044921875
+      ],
+      "text_sha256": "1024ea122299ee0d06a625506e5e2fb017aacb99d3c374d51a1e5cc7c87c5db1"
+    },
+    {
+      "block_id": "page-0936-block-0010",
+      "order": 10,
+      "text": "Chloral hydrate, disulfiram, \nfluoxetine, fluvoxamine, \nmirtazapine, valproate; also \nagents interacting with \nwarfarin\n",
+      "bbox": [
+        218.75311279296875,
+        454.9521179199219,
+        308.61810302734375,
+        503.64959716796875
+      ],
+      "text_sha256": "2db230da3626795213d4e2789ca06c82c2ea2ecc4255056929f3210601164c4a"
+    },
+    {
+      "block_id": "page-0936-block-0011",
+      "order": 11,
+      "text": "Barbiturates, \ncarbamazepine, phenytoin, \ntiotixene\n",
+      "bbox": [
+        324.0006103515625,
+        454.9446105957031,
+        412.7631530761719,
+        483.6470947265625
+      ],
+      "text_sha256": "1d6cf25e617d4fbd11243cc1e11b8e575d484f055cf3851f78a133a955cc0705"
+    },
+    {
+      "block_id": "page-0936-block-0012",
+      "order": 12,
+      "text": "Red blood count\nMales: 4.5–6.5 × 1012/L \nFemales: 3.8–5.8 × 1012/L\n",
+      "bbox": [
+        48.038116455078125,
+        509.9646301269531,
+        207.46670532226562,
+        528.752197265625
+      ],
+      "text_sha256": "c1dbe3b856e3fce4d05baea58788ca2ae188798023b94da311ce0843139628c1"
+    },
+    {
+      "block_id": "page-0936-block-0013",
+      "order": 13,
+      "text": "Lithium, testosterone\nBuprenorphine, \ncarbamazepine, \nchlordiazepoxide, \nchlorpromazine, donepezil, \nhaloperidol, meprobamate, \nphenytoin, quetiapine, \ntrifluoperazine\n",
+      "bbox": [
+        218.7467041015625,
+        510.0472106933594,
+        413.0417785644531,
+        578.7396850585938
+      ],
+      "text_sha256": "b4de49b55f33f5cc3fb6f9c1272f4b0be66dac9a8151a90fb65cb8ad1f1dee61"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

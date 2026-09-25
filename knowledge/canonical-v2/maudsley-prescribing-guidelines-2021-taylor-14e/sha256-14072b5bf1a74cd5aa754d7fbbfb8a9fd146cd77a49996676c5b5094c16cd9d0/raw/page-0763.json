@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0763",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 763,
+  "source_page_index": 762,
+  "source_page_display": 763,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "742    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 8\nDrug\nComments\nEscitalopram22,25,75,85–87\n8% excreted unchanged in urine. The manufacturer states dosage adjustment is not \nnecessary in patients with mild or moderate renal impairment but caution is advised \nif GFR <30mL/min, so start with a low dose and increase slowly. A case study of \nreversible renal tubular defects and another of renal failure have been reported with \nescitalopram. One study says effective versus placebo in end stage renal disease. Use \nof escitalopram (or citalopram) is associated with a higher risk of sudden cardiac \ndeath versus other SSRIs (fluoxetine, fluvoxamine, paroxetine, sertraline) when used \nin patients on haemodialysis (adjusted hazard ratio, 1.18; 95% CI 1.05, 1.31).\nFluoxetine13,22,23,25,32,40,88–91\n2.5–5% of fluoxetine and 10% of the active metabolite norfluoxetine are excreted \nunchanged in the urine. Dosing: GFR 20–50mL/min dose as normal renal function; GFR \n<20mL/min use a low dose or on alternate days and increase according to response. \nPlasma levels after 2 months treatment with 20mg (in patients on dialysis with GFR \n<10mL/min) are similar to those with normal renal function. Efficacy studies of fluoxetine \nin depression and renal disease are conflicting. One small placebo controlled study of \nfluoxetine in patients on chronic dialysis found no significant differences in depression \nscores between the two groups after 8 weeks of treatment. Another found fluoxetine \neffective. A case series (n = 4) of once-weekly fluoxetine 90mg or 180mg use in depressed \npatients on haemodialysis describes efficacious use with better tolerability at 90mg dose.\nFluvoxamine22,25,32,40,63\n2% is excreted unchanged in urine. Little information on its use in renal impairment. \nManufacturer cautions in renal impairment. Dosing: GFR 10–50mL/min dose as for \nnormal renal function; GFR <10mL/min dose as for normal renal function but start on \na low dose and titrate slowly. Acute renal failure has been reported. Variations in \nalbumin levels might affect serum concentrations of fluvoxamine in haemodialysis.\nImipramine22,23,25,32,60\n<5% excreted unchanged in the urine. No specific dose adjustment necessary in \nrenal impairment (GFR <10–50mL/min). Monitor patient for urinary retention, \nconfusion, sedation and postural hypotension. Renal impairment with imipramine \nhas been reported and manufacturer advises caution in severe renal impairment. \nRenal damage reported rarely.\nLofepramine22,23,25,92\nThere is little information about the use of lofepramine in renal impairment. Less \nthan 5% is excreted unchanged in the urine. Dosing: GFR 10–50mL/min dose as in \nnormal renal function; GFR <10mL/min start with a small dose and titrate slowly. \nManufacturer contraindicates in severe renal impairment. As with imipramine, \ndesipramine is the major metabolite.\nMirtazapine22,23,25,93\n75% excreted unchanged in the urine. Clearance is reduced by 30% in patients with \na GFR of 11–39mL/min and by 50% in patients with a GFR <10mL/min. Dosing \nadvice: GFR 10–50mL/min dose as for normal renal function; GFR <10mL/min start at \na low dose and monitor closely. Mirtazapine has been used to treat pruritis caused by \nrenal failure and appetite loss in patients on dialysis.94 Rarely associated with kidney \ncalculus formation.\nMoclobemide22,23,25,95,96\n<1% of parent drug excreted unchanged in the urine. However, an active metabolite \nwas found to be raised in patients with renal impairment but was not thought to \naffect dosing. The manufacturer advises that dose adjustments are not required in \nrenal impairment. Dosing: GFR <10–50mL/min dose as in normal renal function.\nTable 8.9  (Continued)\n(Continued)\n",
+  "raw_text_sha256": "b8c65c64e311b73c19322c418d55be73b5cbb7c9c9504c7e69c83c108f30ebee",
+  "coordinates_sha256": "831cfaaec254a0988776e0f4e6f18b9eea3b374745b7dc357d88fd960e70fe9c",
+  "block_sequence_sha256": "ce558eaeff65e8185088b7b617a3d9cf69708651ff37d330f18f569b67d330dd",
+  "blocks": [
+    {
+      "block_id": "page-0763-block-0000",
+      "order": 0,
+      "text": "742    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "70b21bc95a7358e3c9a6212e5fb72b280c46eb1fc2d5bb46dddb36f8e32e523b"
+    },
+    {
+      "block_id": "page-0763-block-0001",
+      "order": 1,
+      "text": "CHAPTER 8\n",
+      "bbox": [
+        18.520000457763672,
+        532.3878173828125,
+        28.0,
+        573.7318115234375
+      ],
+      "text_sha256": "5ba3d9fb75ff4f418d4a2e9d517f30966dcfb279c10487eec43c5aa3fd8757a2"
+    },
+    {
+      "block_id": "page-0763-block-0002",
+      "order": 2,
+      "text": "Drug\nComments\n",
+      "bbox": [
+        61.88999938964844,
+        89.90852355957031,
+        198.38999938964844,
+        98.7960205078125
+      ],
+      "text_sha256": "f0d3aba6cb5c63a8b3ce76553ca73a800f481925284fe7cc72b7ce3c93bfebe6"
+    },
+    {
+      "block_id": "page-0763-block-0003",
+      "order": 3,
+      "text": "Escitalopram22,25,75,85–87\n8% excreted unchanged in urine. The manufacturer states dosage adjustment is not \nnecessary in patients with mild or moderate renal impairment but caution is advised \nif GFR <30mL/min, so start with a low dose and increase slowly. A case study of \nreversible renal tubular defects and another of renal failure have been reported with \nescitalopram. One study says effective versus placebo in end stage renal disease. Use \nof escitalopram (or citalopram) is associated with a higher risk of sudden cardiac \ndeath versus other SSRIs (fluoxetine, fluvoxamine, paroxetine, sertraline) when used \nin patients on haemodialysis (adjusted hazard ratio, 1.18; 95% CI 1.05, 1.31).\n",
+      "bbox": [
+        61.88999938964844,
+        108.2135238647461,
+        432.7275695800781,
+        186.90350341796875
+      ],
+      "text_sha256": "7bb8cb20f4acd51c48d79a2bdd694cf475f12ee81a4c203928172f74ae447509"
+    },
+    {
+      "block_id": "page-0763-block-0004",
+      "order": 4,
+      "text": "Fluoxetine13,22,23,25,32,40,88–91\n2.5–5% of fluoxetine and 10% of the active metabolite norfluoxetine are excreted \nunchanged in the urine. Dosing: GFR 20–50mL/min dose as normal renal function; GFR \n<20mL/min use a low dose or on alternate days and increase according to response. \nPlasma levels after 2 months treatment with 20mg (in patients on dialysis with GFR \n<10mL/min) are similar to those with normal renal function. Efficacy studies of fluoxetine \nin depression and renal disease are conflicting. One small placebo controlled study of \nfluoxetine in patients on chronic dialysis found no significant differences in depression \nscores between the two groups after 8 weeks of treatment. Another found fluoxetine \neffective. A case series (n = 4) of once-weekly fluoxetine 90mg or 180mg use in depressed \npatients on haemodialysis describes efficacious use with better tolerability at 90mg dose.\n",
+      "bbox": [
+        61.88999938964844,
+        196.32350158691406,
+        435.75018310546875,
+        295.0234680175781
+      ],
+      "text_sha256": "c64c7803611683fa814a73424494d1d59c11efab49b5901c59b5209a170b988d"
+    },
+    {
+      "block_id": "page-0763-block-0005",
+      "order": 5,
+      "text": "Fluvoxamine22,25,32,40,63\n2% is excreted unchanged in urine. Little information on its use in renal impairment. \nManufacturer cautions in renal impairment. Dosing: GFR 10–50mL/min dose as for \nnormal renal function; GFR <10mL/min dose as for normal renal function but start on \na low dose and titrate slowly. Acute renal failure has been reported. Variations in \nalbumin levels might affect serum concentrations of fluvoxamine in haemodialysis.\n",
+      "bbox": [
+        61.8900146484375,
+        304.4434814453125,
+        435.5776062011719,
+        353.1609802246094
+      ],
+      "text_sha256": "13372111b4230d8452aa53ee4efd70cf44c49501541a2fec03350b93b96cddfd"
+    },
+    {
+      "block_id": "page-0763-block-0006",
+      "order": 6,
+      "text": "Imipramine22,23,25,32,60\n<5% excreted unchanged in the urine. No specific dose adjustment necessary in \nrenal impairment (GFR <10–50mL/min). Monitor patient for urinary retention, \nconfusion, sedation and postural hypotension. Renal impairment with imipramine \nhas been reported and manufacturer advises caution in severe renal impairment. \nRenal damage reported rarely.\n",
+      "bbox": [
+        61.88999938964844,
+        362.58099365234375,
+        423.442626953125,
+        411.2859802246094
+      ],
+      "text_sha256": "507249e289f21cca21ec9b24c02c7b928ffe2d946a562d994a461a05c33b9e1b"
+    },
+    {
+      "block_id": "page-0763-block-0007",
+      "order": 7,
+      "text": "Lofepramine22,23,25,92\nThere is little information about the use of lofepramine in renal impairment. Less \nthan 5% is excreted unchanged in the urine. Dosing: GFR 10–50mL/min dose as in \nnormal renal function; GFR <10mL/min start with a small dose and titrate slowly. \nManufacturer contraindicates in severe renal impairment. As with imipramine, \ndesipramine is the major metabolite.\n",
+      "bbox": [
+        61.88999938964844,
+        420.70599365234375,
+        427.0801696777344,
+        469.4109802246094
+      ],
+      "text_sha256": "894fa418020355f1400f89bf82e19c796d71b4c86e42d9a75c4333b43a4a5139"
+    },
+    {
+      "block_id": "page-0763-block-0008",
+      "order": 8,
+      "text": "Mirtazapine22,23,25,93\n75% excreted unchanged in the urine. Clearance is reduced by 30% in patients with \na GFR of 11–39mL/min and by 50% in patients with a GFR <10mL/min. Dosing \nadvice: GFR 10–50mL/min dose as for normal renal function; GFR <10mL/min start at \na low dose and monitor closely. Mirtazapine has been used to treat pruritis caused by \nrenal failure and appetite loss in patients on dialysis.94 Rarely associated with kidney \ncalculus formation.\n",
+      "bbox": [
+        61.88999938964844,
+        478.83099365234375,
+        435.1125793457031,
+        537.54345703125
+      ],
+      "text_sha256": "de4b56978ed63f08612f2920ffd17898f060782d81dc599f14dda3c65227cc1a"
+    },
+    {
+      "block_id": "page-0763-block-0009",
+      "order": 9,
+      "text": "Moclobemide22,23,25,95,96\n<1% of parent drug excreted unchanged in the urine. However, an active metabolite \nwas found to be raised in patients with renal impairment but was not thought to \naffect dosing. The manufacturer advises that dose adjustments are not required in \nrenal impairment. Dosing: GFR <10–50mL/min dose as in normal renal function.\n",
+      "bbox": [
+        61.89031982421875,
+        546.9635009765625,
+        434.0550842285156,
+        585.6634521484375
+      ],
+      "text_sha256": "40f75edcbce7e756d05bcb6dc357e5a4aebbf22ff8e9b8445749f72756ae915c"
+    },
+    {
+      "block_id": "page-0763-block-0010",
+      "order": 10,
+      "text": "Table 8.9  (Continued)\n",
+      "bbox": [
+        67.88999938964844,
+        70.08790588378906,
+        140.760009765625,
+        78.97540283203125
+      ],
+      "text_sha256": "79a98c30130756f7d84b977e84494d5c065e0f195846a9ebedc1e5055bf15684"
+    },
+    {
+      "block_id": "page-0763-block-0011",
+      "order": 11,
+      "text": "(Continued)\n",
+      "bbox": [
+        396.9749755859375,
+        594.2929077148438,
+        433.889892578125,
+        603.04541015625
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

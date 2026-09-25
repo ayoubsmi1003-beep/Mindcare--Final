@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0403",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 403,
+  "source_page_index": 402,
+  "source_page_display": 403,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "382    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nOverall\nAvoid/minimise problems by:\n■\n■where antidepressant polypharmacy is used, select drugs that are safer to use together \nand monitor carefully for side effects when the second antidepressant is initiated\n■\n■avoiding the co-prescription of other drugs with a similar pharmacology but not \nmarketed as antidepressants (e.g. atomoxetine, bupropion)\nReferences\n\t 1.\t Cashman JR. Human flavin-containing monooxygenase: substrate specificity and role in drug metabolism. Curr Drug Metabol 2000; \n1:181–191.\n\t 2.\t Anderson GD. A mechanistic approach to antiepileptic drug interactions. Ann Pharmacother 1998; 32:554–563.\n\t 3.\t Kelly CM, et al. Selective serotonin reuptake inhibitors and breast cancer mortality in women receiving tamoxifen: a population based cohort \nstudy. BMJ 2010; 340:c693.\n\t 4.\t Devane CL. Antidepressant-drug interactions are potentially but rarely clinically significant. Neuropsychopharmacology 2006; \n31:1594–1604.\n\t 5.\t Andrade C. Ketamine for depression, 5: potential pharmacokinetic and pharmacodynamic drug interactions. J Clin Psychiatry 2017; \n78:e858–e861.\n\t 6.\t Preskorn SH. Drug-drug interactions (DDIs) in psychiatric practice, part 9: interactions mediated by drug-metabolizing cytochrome P450 \nenzymes. J Psychiatr Pract 2020; 26:126–134.\n\t 7.\t Medicines Complete. Stockley’s drug interactions. 2020; https://www.medicinescomplete.com.\n\t 8.\t Preskorn SH. Drug-drug interactions (DDIs) in psychiatric practice, part 8: relative receptor binding affinity as a way of understanding the \ndifferential pharmacology of currently available antidepressants. J Psychiatr Pract 2020; 26:46–51.\n\t 9.\t BNF Online. British national formulary. 2020; https://www.medicinescomplete.com/mc/bnf/current.\n\t10.\t Gillman PK. Tricyclic antidepressant pharmacology and therapeutic drug interactions updated. Br J Pharmacol 2007; 151:737–748.\n\t11.\t Preskorn SH. Drug-drug interactions (DDIs) in psychiatric practice, part 6: pharmacodynamic considerations. J Psychiatr Pract 2019; \n25:290–297.\n\t12.\t Williams LJ, et al. Selective serotonin reuptake inhibitor use and bone mineral density in women with a history of depression. Int Clin \nPsychopharmacol 2008; 23:84–87.\n\t13.\t Gillman PK. Advances pertaining to the pharmacology and interactions of irreversible nonselective monoamine oxidase inhibitors. J Clin \nPsychopharmacol 2011; 31:66–74.\n\t14.\t Grady MM, et al. Practical guide for prescribing MAOIs: debunking myths and removing barriers. CNS Spectr 2012; 17:2–10.\n\t15.\t Mitchell PB. Drug interactions of clinical significance with selective serotonin reuptake inhibitors. Drug Saf 1997; 17:390–406.\n\t16.\t Hedrich WD, et al. Insights into CYP2B6-mediated drug-drug interactions. Acta Pharm Sin B 2016; 6:413–425.\n",
+  "raw_text_sha256": "01b3777a4c0c4eb44ceeac46960f911161e77eb832674efc9a1c4890d956f020",
+  "coordinates_sha256": "0086a2de0b56dee10e021caf0e510bf5892db9f75948bfe383f445f7ab4e153b",
+  "block_sequence_sha256": "7882cb12206946d94d0b861cd5c7e9825c890180e384b6eaf74dd11472eea2ea",
+  "blocks": [
+    {
+      "block_id": "page-0403-block-0000",
+      "order": 0,
+      "text": "382    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "741218e8f839ec2c13dd6c50deb5849e90c09468dea80588cacdf2f030f2e5f3"
+    },
+    {
+      "block_id": "page-0403-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0403-block-0002",
+      "order": 2,
+      "text": "Overall\n",
+      "bbox": [
+        61.88999938964844,
+        62.500465393066406,
+        95.79998779296875,
+        74.3504638671875
+      ],
+      "text_sha256": "403bd87b1a46a4ba9e2d65dcceb2a43383a4026d2540fc1225b562a30306847e"
+    },
+    {
+      "block_id": "page-0403-block-0003",
+      "order": 3,
+      "text": "Avoid/minimise problems by:\n",
+      "bbox": [
+        61.88999938964844,
+        80.41046142578125,
+        187.8099822998047,
+        92.13046264648438
+      ],
+      "text_sha256": "a6157c6c111ba6aa10e4906304d4bb896ff5aa244c76ac8b2de7bb8f47f3aa19"
+    },
+    {
+      "block_id": "page-0403-block-0004",
+      "order": 4,
+      "text": "■\n■where antidepressant polypharmacy is used, select drugs that are safer to use together \n",
+      "bbox": [
+        61.88990020751953,
+        98.41046142578125,
+        436.7000427246094,
+        110.13046264648438
+      ],
+      "text_sha256": "c2d1f2d667e666d1f6bc1698ede8d0de0d7b71855a98a3e98e2e3f3f4132c64c"
+    },
+    {
+      "block_id": "page-0403-block-0005",
+      "order": 5,
+      "text": "and monitor carefully for side effects when the second antidepressant is initiated\n",
+      "bbox": [
+        70.88999938964844,
+        110.41046142578125,
+        417.03997802734375,
+        122.13046264648438
+      ],
+      "text_sha256": "2aa7b2ad880b44133bf36d509ab7ec8386ac5c34b9aa4ba3a415e053d8b2251c"
+    },
+    {
+      "block_id": "page-0403-block-0006",
+      "order": 6,
+      "text": "■\n■avoiding the co-prescription of other drugs with a similar pharmacology but not \n",
+      "bbox": [
+        61.88990020751953,
+        122.41046142578125,
+        436.68994140625,
+        134.13046264648438
+      ],
+      "text_sha256": "cf596f0142d440649011a24cd262d741547b8c864b213f816a2f5bd9d1c93102"
+    },
+    {
+      "block_id": "page-0403-block-0007",
+      "order": 7,
+      "text": "marketed as antidepressants (e.g. atomoxetine, bupropion)\n",
+      "bbox": [
+        70.88999938964844,
+        134.41046142578125,
+        323.5099792480469,
+        146.13046264648438
+      ],
+      "text_sha256": "bcf6f33c03456655e07446a27add96f567ea98be55fb0d1f0fa223af1440d4a6"
+    },
+    {
+      "block_id": "page-0403-block-0008",
+      "order": 8,
+      "text": "References\n",
+      "bbox": [
+        61.88999938964844,
+        169.56549072265625,
+        117.92399597167969,
+        182.60049438476562
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0403-block-0009",
+      "order": 9,
+      "text": "\t 1.\t Cashman JR. Human flavin-containing monooxygenase: substrate specificity and role in drug metabolism. Curr Drug Metabol 2000; \n",
+      "bbox": [
+        61.88999938964844,
+        187.68649291992188,
+        435.5759582519531,
+        194.71849060058594
+      ],
+      "text_sha256": "324685b02480521340cdf85d99a3c79b254d22e3f85ab175743f901ae82f9c60"
+    },
+    {
+      "block_id": "page-0403-block-0010",
+      "order": 10,
+      "text": "1:181–191.\n\t 2.\t Anderson GD. A mechanistic approach to antiepileptic drug interactions. Ann Pharmacother 1998; 32:554–563.\n\t 3.\t Kelly CM, et al. Selective serotonin reuptake inhibitors and breast cancer mortality in women receiving tamoxifen: a population based cohort \n",
+      "bbox": [
+        61.895999908447266,
+        196.54249572753906,
+        435.61199951171875,
+        221.71849060058594
+      ],
+      "text_sha256": "645d930c84bd67410254e8b465489e8f1e6cb8668c746f5844dcdf56b94b18dd"
+    },
+    {
+      "block_id": "page-0403-block-0011",
+      "order": 11,
+      "text": "study. BMJ 2010; 340:c693.\n\t 4.\t Devane CL. Antidepressant-drug interactions are potentially but rarely clinically significant. Neuropsychopharmacology 2006; \n",
+      "bbox": [
+        61.90800094604492,
+        223.54249572753906,
+        435.58197021484375,
+        239.71849060058594
+      ],
+      "text_sha256": "d2e15212c9e8e568c27f5651e061bce3f85edbef5d0a822905b8ea1e8641d894"
+    },
+    {
+      "block_id": "page-0403-block-0012",
+      "order": 12,
+      "text": "31:1594–1604.\n\t 5.\t Andrade C. Ketamine for depression, 5: potential pharmacokinetic and pharmacodynamic drug interactions. J Clin Psychiatry 2017; \n",
+      "bbox": [
+        61.91400146484375,
+        241.54249572753906,
+        435.6179504394531,
+        257.718505859375
+      ],
+      "text_sha256": "041ff66cfe79721de33c897eee2c8baa8b932edb3a22aad2dd0d6b083a60d23c"
+    },
+    {
+      "block_id": "page-0403-block-0013",
+      "order": 13,
+      "text": "78:e858–e861.\n\t 6.\t Preskorn SH. Drug-drug interactions (DDIs) in psychiatric practice, part 9: interactions mediated by drug-metabolizing cytochrome P450 \n",
+      "bbox": [
+        61.91999816894531,
+        259.54248046875,
+        435.5818786621094,
+        275.718505859375
+      ],
+      "text_sha256": "d16db71161e3644b113386f797bbcf05fdebe9e0923a14568ba79439837df936"
+    },
+    {
+      "block_id": "page-0403-block-0014",
+      "order": 14,
+      "text": "enzymes. J Psychiatr Pract 2020; 26:126–134.\n\t 7.\t Medicines Complete. Stockley’s drug interactions. 2020; https://www.medicinescomplete.com.\n\t 8.\t Preskorn SH. Drug-drug interactions (DDIs) in psychiatric practice, part 8: relative receptor binding affinity as a way of understanding the \n",
+      "bbox": [
+        61.92599868774414,
+        277.54248046875,
+        435.6418151855469,
+        302.718505859375
+      ],
+      "text_sha256": "48d21da008a9a4f6a2eb99fe76ee75ffe0a64fde0db4791a9c0404d05902c65d"
+    },
+    {
+      "block_id": "page-0403-block-0015",
+      "order": 15,
+      "text": "differential pharmacology of currently available antidepressants. J Psychiatr Pract 2020; 26:46–51.\n\t 9.\t BNF Online. British national formulary. 2020; https://www.medicinescomplete.com/mc/bnf/current.\n\t10.\t Gillman PK. Tricyclic antidepressant pharmacology and therapeutic drug interactions updated. Br J Pharmacol 2007; 151:737–748.\n\t11.\t Preskorn SH. Drug-drug interactions (DDIs) in psychiatric practice, part 6: pharmacodynamic considerations. J Psychiatr Pract 2019; \n",
+      "bbox": [
+        61.9379997253418,
+        304.54248046875,
+        435.6300354003906,
+        338.718505859375
+      ],
+      "text_sha256": "74df82ec25500f4bfa853b577de5d2a876fe6690f3a9d2a21fee0919cbe60a4f"
+    },
+    {
+      "block_id": "page-0403-block-0016",
+      "order": 16,
+      "text": "25:290–297.\n\t12.\t Williams LJ, et al. Selective serotonin reuptake inhibitor use and bone mineral density in women with a history of depression. Int Clin \n",
+      "bbox": [
+        61.95600128173828,
+        340.54248046875,
+        435.6239929199219,
+        356.718505859375
+      ],
+      "text_sha256": "59e63cf531c7d24e21fffa1c5efd8f3ebf36cabd87cd3332bbb83f7584b9c9f2"
+    },
+    {
+      "block_id": "page-0403-block-0017",
+      "order": 17,
+      "text": "Psychopharmacol 2008; 23:84–87.\n\t13.\t Gillman PK. Advances pertaining to the pharmacology and interactions of irreversible nonselective monoamine oxidase inhibitors. J Clin \n",
+      "bbox": [
+        61.96200180053711,
+        358.54248046875,
+        435.6060791015625,
+        374.718505859375
+      ],
+      "text_sha256": "fdc04df00ac0b93241113040bf14c6078b6fd4c007350fd05723704b4494ed4f"
+    },
+    {
+      "block_id": "page-0403-block-0018",
+      "order": 18,
+      "text": "Psychopharmacol 2011; 31:66–74.\n\t14.\t Grady MM, et al. Practical guide for prescribing MAOIs: debunking myths and removing barriers. CNS Spectr 2012; 17:2–10.\n\t15.\t Mitchell PB. Drug interactions of clinical significance with selective serotonin reuptake inhibitors. Drug Saf 1997; 17:390–406.\n\t16.\t Hedrich WD, et al. Insights into CYP2B6-mediated drug-drug interactions. Acta Pharm Sin B 2016; 6:413–425.\n",
+      "bbox": [
+        61.96799850463867,
+        376.54248046875,
+        401.6219482421875,
+        410.718505859375
+      ],
+      "text_sha256": "77121eaee1ba349bad525fd02fcdcac1c0cc990c185606903c31d3a4ea9a3158"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

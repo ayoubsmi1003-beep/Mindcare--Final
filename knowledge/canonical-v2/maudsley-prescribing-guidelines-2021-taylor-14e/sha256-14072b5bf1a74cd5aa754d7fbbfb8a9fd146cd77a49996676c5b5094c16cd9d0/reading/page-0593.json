@@ -1,0 +1,14 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0593",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 593,
+  "source_page_index": 592,
+  "repaired_text": "572    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  5\nSummary of NICE guidance for ADHD in adults1\n■\n■Drug treatment should only be initiated by a specialist and only after a comprehensive\nassessment of mental and physical health and social influences.\n■\n■Medication for ADHD should be offered to adults if their ADHD symptoms are still causing a\nsignificant impairment in at least one domain after environmental modifications have been \nimplemented and reviewed.\n■\n■Non-pharmacological options (supportive therapy, CBT, regular reviews) can be considered\ndepending on choice, difficulties with adherence or intolerable side effects. Combination of \nmedication with non-pharmacological options can also be considered in partial response to \nmedication treatment.\n■\n■Methylphenidate or lisdexamfetamine are recommended for use in adults with ADHD as\nfirst-line treatments. Switching between the two could be considered after a 6-week trial of an \nadequate dose with suboptimal response.\n■\n■Dexamfetamine can be used for adults whose ADHD symptoms are responding to lisdexamfetamine but who cannot tolerate the longer effect profile.\n■\n■Atomoxetine could be offered to adults if:\n■\n■they cannot tolerate lisdexamfetamine or methylphenidate or\n■\n■their symptoms have not responded to separate 6-week trials of lisdexamfetamine and\nmethylphenidate, having considered alternative preparations and adequate doses.\n■\n■Monitoring should include measurement of weight, blood pressure and heart rate. A cardiology\nopinion and ECG should be organised as in the case of children and adolescents mentioned \nabove.",
+  "repaired_text_sha256": "070655fc4eb01ce2355966ba909348afc49826110506d568dbc9c41a83637bcb",
+  "raw_text_sha256": "285ea1032e52cfba7a0aa8f531a762db6210efc7581257444ed579ae85ba5060",
+  "repair_ids": [
+    "repair-000564"
+  ],
+  "raw_file": "raw/page-0593.json"
+}

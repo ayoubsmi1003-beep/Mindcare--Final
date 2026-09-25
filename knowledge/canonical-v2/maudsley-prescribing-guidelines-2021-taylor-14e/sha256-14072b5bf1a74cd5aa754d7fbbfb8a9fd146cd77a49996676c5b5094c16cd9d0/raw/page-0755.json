@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0755",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 755,
+  "source_page_index": 754,
+  "source_page_display": 755,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "734    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 8\n\t82.\t SANOFI. Summary of product characteristics. Stilnoct 5mg 10mg film-coated tablets 2019; https://www.medicines.org.uk/emc/­product/4931/\nsmpc.\n\t83.\t SANOFI. Summary of product characteristics. Zimovane 7.5mg and 3.75mg LS film-coated tablets 2019; https://www.medicines.org.uk/emc/\nproduct/2855/smpc.\n\t84.\t Gunja N The clinical and forensic toxicology of Z-drugs. J Med Toxicol 2013; 9:155–162.\n\t85.\t Flynn Pharma Ltd. Summary of product characteristics. Circadin 2mg prolonged-release tablets 2019; https://www.medicines.org.uk/emc/\nproduct/2809/smpc.\n\t86.\t Kärppä M, et al. Long-term efficacy and tolerability of lemborexant compared with placebo in adults with insomnia disorder: results from \nthe phase 3 randomized clinical trial SUNRISE 2. Sleep 2020.\n\t87.\t Grattagliano I, et al. Biochemical mechanisms in drug-induced liver injury: certainties and doubts. World J Gastroenterol 2009; \n15:4865–4876.\n\t88.\t Rosalki SB, et al. Liver function profiles and their interpretation. Br J Hosp Med 1994; 51:181–186.\n\t89.\t Rettenbacher MA, et al. Association between antipsychotic-induced elevation of liver enzymes and weight gain: a prospective study. J Clin \nPsychopharmacol 2006; 26:500–503.\nFurther reading\nTelles-Correia D, et al. Psychotropic drugs and liver disease: A critical review of pharmacokinetics and liver toxicity. WJGPT, 2017; 8:26–37.\n",
+  "raw_text_sha256": "74ee90eba1b69767651d2275a6f8c7338f353f4212da73e515bf901b9639248c",
+  "coordinates_sha256": "3aba0b410c068437ae2f9819cd214e7af61960a565f2298e31e46a9f1e8f05c6",
+  "block_sequence_sha256": "e5b18dfb04565d94fe6ff9e664ea917763cb192a715618ec2b4d6c99035e6409",
+  "blocks": [
+    {
+      "block_id": "page-0755-block-0000",
+      "order": 0,
+      "text": "734    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "840c0da3e287822c3842f108645579645f1bb15f26b7b510b32ab135294e144c"
+    },
+    {
+      "block_id": "page-0755-block-0001",
+      "order": 1,
+      "text": "CHAPTER 8\n",
+      "bbox": [
+        18.520000457763672,
+        532.3878173828125,
+        28.0,
+        573.7318115234375
+      ],
+      "text_sha256": "5ba3d9fb75ff4f418d4a2e9d517f30966dcfb279c10487eec43c5aa3fd8757a2"
+    },
+    {
+      "block_id": "page-0755-block-0002",
+      "order": 2,
+      "text": "\t82.\t SANOFI. Summary of product characteristics. Stilnoct 5mg 10mg film-coated tablets 2019; https://www.medicines.org.uk/emc/­product/4931/\n",
+      "bbox": [
+        61.88999938964844,
+        63.2703857421875,
+        433.89599609375,
+        70.30238342285156
+      ],
+      "text_sha256": "2ec9f44f62446b5e62f3b60a7f9c6a49809639b1d763aa2acdabc34c4e57aaa8"
+    },
+    {
+      "block_id": "page-0755-block-0003",
+      "order": 3,
+      "text": "smpc.\n\t83.\t SANOFI. Summary of product characteristics. Zimovane 7.5mg and 3.75mg LS film-coated tablets 2019; https://www.medicines.org.uk/emc/\n",
+      "bbox": [
+        61.895999908447266,
+        72.2703857421875,
+        433.90185546875,
+        88.30238342285156
+      ],
+      "text_sha256": "0565bf003a3706a49501a4c6e06449bd59b4e74fc0ff82d119287eb98dac2a49"
+    },
+    {
+      "block_id": "page-0755-block-0004",
+      "order": 4,
+      "text": "product/2855/smpc.\n\t84.\t Gunja N The clinical and forensic toxicology of Z-drugs. J Med Toxicol 2013; 9:155–162.\n\t85.\t Flynn Pharma Ltd. Summary of product characteristics. Circadin 2mg prolonged-release tablets 2019; https://www.medicines.org.uk/emc/\n",
+      "bbox": [
+        61.902000427246094,
+        90.2703857421875,
+        433.88397216796875,
+        115.30238342285156
+      ],
+      "text_sha256": "623bc1145ea30fdec70425cb043896653dbabe05ab6bcb5e932092e0d1271ab4"
+    },
+    {
+      "block_id": "page-0755-block-0005",
+      "order": 5,
+      "text": "product/2809/smpc.\n\t86.\t Kärppä M, et al. Long-term efficacy and tolerability of lemborexant compared with placebo in adults with insomnia disorder: results from \n",
+      "bbox": [
+        61.91400146484375,
+        117.2703857421875,
+        435.5939636230469,
+        133.30238342285156
+      ],
+      "text_sha256": "f3d9ebe624060968d7056d9ca9b68ca2eed21498c8a5de0e4fc304480b2ee5e8"
+    },
+    {
+      "block_id": "page-0755-block-0006",
+      "order": 6,
+      "text": "the phase 3 randomized clinical trial SUNRISE 2. Sleep 2020.\n\t87.\t Grattagliano I, et al. Biochemical mechanisms in drug-induced liver injury: certainties and doubts. World J Gastroenterol 2009; \n",
+      "bbox": [
+        61.91999816894531,
+        135.2703857421875,
+        435.58197021484375,
+        151.30238342285156
+      ],
+      "text_sha256": "0a70ece7559178a54a49da60056fde2b9488121429cf8dba737df10fb159cc32"
+    },
+    {
+      "block_id": "page-0755-block-0007",
+      "order": 7,
+      "text": "15:4865–4876.\n\t88.\t Rosalki SB, et al. Liver function profiles and their interpretation. Br J Hosp Med 1994; 51:181–186.\n\t89.\t Rettenbacher MA, et al. Association between antipsychotic-induced elevation of liver enzymes and weight gain: a prospective study. J Clin \n",
+      "bbox": [
+        61.92599868774414,
+        153.1263885498047,
+        435.6180419921875,
+        178.30238342285156
+      ],
+      "text_sha256": "c142b65b6bac2e694f9a4545f8823f5ad6b29406271aa38c53251afc69e593c5"
+    },
+    {
+      "block_id": "page-0755-block-0008",
+      "order": 8,
+      "text": "Psychopharmacol 2006; 26:500–503.\n",
+      "bbox": [
+        72.93599700927734,
+        183.1263885498047,
+        170.2439727783203,
+        190.30238342285156
+      ],
+      "text_sha256": "63b143cbc07fdb70bd7eb1208dadce87e8bf445d0a9fdab6fbd82c02bccca76b"
+    },
+    {
+      "block_id": "page-0755-block-0009",
+      "order": 9,
+      "text": "Further reading\n",
+      "bbox": [
+        61.88999938964844,
+        208.64938354492188,
+        142.37698364257812,
+        221.68438720703125
+      ],
+      "text_sha256": "97a7eb93e6fca560969f4c10a52d2ef83995974b08b112934e0d108909963303"
+    },
+    {
+      "block_id": "page-0755-block-0010",
+      "order": 10,
+      "text": "Telles-Correia D, et al. Psychotropic drugs and liver disease: A critical review of pharmacokinetics and liver toxicity. WJGPT, 2017; 8:26–37.\n",
+      "bbox": [
+        61.88999938964844,
+        228.1263885498047,
+        426.4499816894531,
+        235.30238342285156
+      ],
+      "text_sha256": "c54a73bb84359a1b7b58d825d6e3d00b4b22b8c4ad3705c13637952779fb095b"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,491 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0683",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 683,
+  "source_page_index": 682,
+  "source_page_display": 683,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "\u0003(Continued )\nDrug\nSpecific indication/additional \nnotes\nStarting dose\nUsual maintenance dose\nMaximum dose in elderly\nFluphenazine decanoate\nCaution: high risk of EPSE\nTest dose 6.25mg\nAfter 4–7 days of test dose:\n12.5–25mg every 2–4 weeks\nDose increased gradually \naccording to response and \ntolerability in steps of 12.5mg \nevery 2–4 weeks*\n50mg every 4 weeks*\nHaloperidol decanoate\nRisk of EPSE and QTc \nprolongation\n(No test dose)\n12.5–25mg every 4 weeks\n12.5–25mg every 4 weeks\n50mg every 4 weeks*\nPipotiazine palmitate18\nTest dose\n5–10mg\n25–100mg every 4 weeks\n100mg every 4 weeks*\nZuclopenthixol \ndecanoate\nTest dose:\n25–50mg\nAfter at least 7 days of test \ndose:\n50–200mg every 2–4 weeks*\n200mg every 2 weeks*\nLong-acting atypical antipsychotic drugs\nAripiprazole\nLong-acting injection\nNo formal recommendations are available for dosing in older adults\nHowever, there is no detectable effect of age on pharmacokinetics19\nOlanzapine pamoate20\nHas not been systematically studied in elderly patients (>65 years). Not recommended for treatment in the elderly population unless a well-\ntolerated and effective dose regimen using oral olanzapine has been established. A lower starting dose (150mg/4 weeks) is not routinely indicated \nbut should be considered for those 65 and above when clinical factors warrant. Not recommended to be started in patients >75 years old\nPaliperidone palmitate\nDose based on renal function:\nBecause elderly patients may \nhave diminished renal function, \nthey are dosed as in mild renal \nimpairment even if tests show \nnormal renal function*\nLoading doses:\nDay 1: 100mg\nDay 8: 75mg\n(lower loading doses may be \nappropriate in some)*\n25–100mg monthly*\n100mg monthly*\n",
+  "raw_text_sha256": "a847913183319e31239c38e350225d9ea9650b3bd042a0a29e9eea601dcc4440",
+  "coordinates_sha256": "8bd7f52fe29f16bc86b586a34236831255b458c86a6f01a1d28305cc7eeeffcf",
+  "block_sequence_sha256": "1d311086ea26dcb900512818dabf7bf1afe415b94b1eaa162ad74e332fa65805",
+  "blocks": [
+    {
+      "block_id": "page-0683-block-0000",
+      "order": 0,
+      "text": "\u0003(Continued )\n",
+      "bbox": [
+        67.62750244140625,
+        568.2014770507812,
+        76.51499938964844,
+        606.6539916992188
+      ],
+      "text_sha256": "90c473996d890d7e46dd3846054d4ca955e156c108a6f427e77cfbf7293d5dd0"
+    },
+    {
+      "block_id": "page-0683-block-0001",
+      "order": 1,
+      "text": "Drug\nSpecific indication/additional \n",
+      "bbox": [
+        87.00250244140625,
+        417.3989562988281,
+        95.88999938964844,
+        612.6539916992188
+      ],
+      "text_sha256": "24f208c01b320a880057a7db859ef0394c24559575428d3392d29ed72c3b2942"
+    },
+    {
+      "block_id": "page-0683-block-0002",
+      "order": 2,
+      "text": "notes\nStarting dose\nUsual maintenance dose\nMaximum dose in elderly\n",
+      "bbox": [
+        87.00250244140625,
+        84.41386413574219,
+        105.88749694824219,
+        522.00146484375
+      ],
+      "text_sha256": "d017d7fd2e6b27a0a2854089b7c2bd8b8247bb9c0cbcaead450515d1ad7004a8"
+    },
+    {
+      "block_id": "page-0683-block-0003",
+      "order": 3,
+      "text": "Fluphenazine decanoate\nCaution: high risk of EPSE\nTest dose 6.25mg\nAfter 4–7 days of test dose:\n",
+      "bbox": [
+        115.30750274658203,
+        200.22145080566406,
+        124.01499938964844,
+        612.6539916992188
+      ],
+      "text_sha256": "e02273cf399c897d16c17fdb43f9163e4ba92435012399c45b1f54e671d60117"
+    },
+    {
+      "block_id": "page-0683-block-0004",
+      "order": 4,
+      "text": "12.5–25mg every 2–4 weeks\nDose increased gradually \n",
+      "bbox": [
+        125.30500030517578,
+        196.46397399902344,
+        144.00999450683594,
+        288.5715026855469
+      ],
+      "text_sha256": "3601b70839274134941f7e223f5880b66317582cd4f8410cc4ccf02fdde09fbb"
+    },
+    {
+      "block_id": "page-0683-block-0005",
+      "order": 5,
+      "text": "according to response and \n",
+      "bbox": [
+        145.29998779296875,
+        202.14891052246094,
+        154.0074920654297,
+        288.5715026855469
+      ],
+      "text_sha256": "7bfc8aecac77fc2c90f446d730691bfd8a4ec0bddbc3f6791fc59e770cf61775"
+    },
+    {
+      "block_id": "page-0683-block-0006",
+      "order": 6,
+      "text": "tolerability in steps of 12.5mg \n",
+      "bbox": [
+        155.2974853515625,
+        191.05638122558594,
+        164.00498962402344,
+        288.5715026855469
+      ],
+      "text_sha256": "d4881be922d2d597afe3490eae4f5723f9444093f4d6037aa335a8968af2b22e"
+    },
+    {
+      "block_id": "page-0683-block-0007",
+      "order": 7,
+      "text": "every 2–4 weeks*\n",
+      "bbox": [
+        165.29498291015625,
+        231.4815216064453,
+        174.0024871826172,
+        288.5715026855469
+      ],
+      "text_sha256": "f023b9ebc2fd3b0adf93ce3f6b1b189185d4fe23e34ca463deb64ff48523a5e5"
+    },
+    {
+      "block_id": "page-0683-block-0008",
+      "order": 8,
+      "text": "50mg every 4 weeks*\n",
+      "bbox": [
+        115.29248809814453,
+        103.59147644042969,
+        123.99998474121094,
+        173.60400390625
+      ],
+      "text_sha256": "73df5cb0b47aa7ced0ee342e81c59b5993e70396dfeac299b2f164ab120d2b6c"
+    },
+    {
+      "block_id": "page-0683-block-0009",
+      "order": 9,
+      "text": "Haloperidol decanoate\nRisk of EPSE and QTc \n",
+      "bbox": [
+        183.41497802734375,
+        453.6540222167969,
+        192.1224822998047,
+        612.654052734375
+      ],
+      "text_sha256": "43c36a493ca2402bd194488269db7c129c9b551d85136ef1b52fe36cc754089b"
+    },
+    {
+      "block_id": "page-0683-block-0010",
+      "order": 10,
+      "text": "prolongation\n(No test dose)\n",
+      "bbox": [
+        183.41497802734375,
+        362.3865051269531,
+        202.11997985839844,
+        522.0015258789062
+      ],
+      "text_sha256": "56e98295d249d7d5dc8d07ba0d3d8d0d1d96462ddd6c9a913c94579195bb62f6"
+    },
+    {
+      "block_id": "page-0683-block-0011",
+      "order": 11,
+      "text": "12.5–25mg every 4 weeks\n12.5–25mg every 4 weeks\n50mg every 4 weeks*\n",
+      "bbox": [
+        183.41497802734375,
+        103.59147644042969,
+        202.11997985839844,
+        406.56903076171875
+      ],
+      "text_sha256": "17d82bd47b9107b9be6440f1bbdd17590a76b16f47bb454919d5ddac92b9882d"
+    },
+    {
+      "block_id": "page-0683-block-0012",
+      "order": 12,
+      "text": "Pipotiazine palmitate18\nTest dose\n",
+      "bbox": [
+        211.53997802734375,
+        377.392333984375,
+        220.26499938964844,
+        612.654052734375
+      ],
+      "text_sha256": "3a3caccfda689e7dd738ab449e11704d759c11c399babf95a4bd9b02f0647973"
+    },
+    {
+      "block_id": "page-0683-block-0013",
+      "order": 13,
+      "text": "5–10mg\n25–100mg every 4 weeks\n100mg every 4 weeks*\n",
+      "bbox": [
+        211.5574951171875,
+        99.41984558105469,
+        230.2624969482422,
+        406.5673828125
+      ],
+      "text_sha256": "785867fa82c75b65111e6d33ea06e369f724f3aeaf122cb6d3123392b99a68e1"
+    },
+    {
+      "block_id": "page-0683-block-0014",
+      "order": 14,
+      "text": "Zuclopenthixol \n",
+      "bbox": [
+        249.6800079345703,
+        563.8948364257812,
+        258.38751220703125,
+        612.65234375
+      ],
+      "text_sha256": "598e457c27f7d522448527925b33cbdd6a3f201fc8553e7667ce808911808ecb"
+    },
+    {
+      "block_id": "page-0683-block-0015",
+      "order": 15,
+      "text": "decanoate\nTest dose:\n",
+      "bbox": [
+        249.6800079345703,
+        375.3073425292969,
+        268.385009765625,
+        612.65234375
+      ],
+      "text_sha256": "f9ecc456cb3b03f828b2383a8db74703b35eeccd476f32246ddcddfd04ea15bb"
+    },
+    {
+      "block_id": "page-0683-block-0016",
+      "order": 16,
+      "text": "25–50mg\nAfter at least 7 days of test \n",
+      "bbox": [
+        249.6800079345703,
+        200.23487854003906,
+        268.385009765625,
+        406.5673828125
+      ],
+      "text_sha256": "39ecaf6cd27fd5f41dd274d96a204dc1a3fca237f7b241b085e3270bedd42a64"
+    },
+    {
+      "block_id": "page-0683-block-0017",
+      "order": 17,
+      "text": "dose:\n",
+      "bbox": [
+        259.6775207519531,
+        271.47735595703125,
+        268.385009765625,
+        288.56988525390625
+      ],
+      "text_sha256": "db13c8eaa6fe6c0282ea7fc4c92ae669667f189538f290434ce070fdfe3e2d55"
+    },
+    {
+      "block_id": "page-0683-block-0018",
+      "order": 18,
+      "text": "50–200mg every 2–4 weeks*\n",
+      "bbox": [
+        269.6750183105469,
+        194.37733459472656,
+        278.38250732421875,
+        288.56988525390625
+      ],
+      "text_sha256": "231bd81b23aacc16d93ee234782d7ac2af467a836549e65c9cc4a39b9fe59f2a"
+    },
+    {
+      "block_id": "page-0683-block-0019",
+      "order": 19,
+      "text": "200mg every 2 weeks*\n",
+      "bbox": [
+        249.67250061035156,
+        99.41984558105469,
+        258.3800048828125,
+        173.60235595703125
+      ],
+      "text_sha256": "6a5155494c9f5a9c43de7a1024c0cc8a3c6d1746887a14a22e0e9f2f150ab518"
+    },
+    {
+      "block_id": "page-0683-block-0020",
+      "order": 20,
+      "text": "Long-acting atypical antipsychotic drugs\n",
+      "bbox": [
+        287.614990234375,
+        470.14483642578125,
+        296.50250244140625,
+        612.65234375
+      ],
+      "text_sha256": "15d942dfe0593aebd97674e0619f0785ade5dcb24b87f893e7769fae0ec0226e"
+    },
+    {
+      "block_id": "page-0683-block-0021",
+      "order": 21,
+      "text": "Aripiprazole\n",
+      "bbox": [
+        305.9225158691406,
+        574.3198852539062,
+        314.6300048828125,
+        612.65234375
+      ],
+      "text_sha256": "14519352ede9c2040fd55378fee8da3db552a04445d82486e370b24e73082a30"
+    },
+    {
+      "block_id": "page-0683-block-0022",
+      "order": 22,
+      "text": "Long-acting injection\nNo formal recommendations are available for dosing in older adults\n",
+      "bbox": [
+        305.9225158691406,
+        306.8247375488281,
+        324.62750244140625,
+        612.65234375
+      ],
+      "text_sha256": "4b096d0c796cbe147942ed0079162d4ea0c49ac10af2788f522f6e0ce369f8e2"
+    },
+    {
+      "block_id": "page-0683-block-0023",
+      "order": 23,
+      "text": "However, there is no detectable effect of age on pharmacokinetics19\n",
+      "bbox": [
+        315.9200134277344,
+        305.1676330566406,
+        324.62750244140625,
+        521.9998779296875
+      ],
+      "text_sha256": "de61c08c4756dd9953c333ebb8b3ce1cb608b165554446c7a33bdb5fdb829883"
+    },
+    {
+      "block_id": "page-0683-block-0024",
+      "order": 24,
+      "text": "Olanzapine pamoate20\nHas not been systematically studied in elderly patients (>65 years). Not recommended for treatment in the elderly population unless a well-\n",
+      "bbox": [
+        334.0575256347656,
+        95.5355224609375,
+        342.7650146484375,
+        612.6539916992188
+      ],
+      "text_sha256": "665db80ac68e3c7a4aa0047830e13b7987d4cf1a532ff2030f8bce02dfc14c56"
+    },
+    {
+      "block_id": "page-0683-block-0025",
+      "order": 25,
+      "text": "tolerated and effective dose regimen using oral olanzapine has been established. A lower starting dose (150mg/4 weeks) is not routinely indicated \n",
+      "bbox": [
+        344.0550231933594,
+        70.8380355834961,
+        352.76251220703125,
+        522.0003662109375
+      ],
+      "text_sha256": "3ce796ea614914baf61f4f09faea70e9ac1a2236d7df055f307a38fc1da5a509"
+    },
+    {
+      "block_id": "page-0683-block-0026",
+      "order": 26,
+      "text": "but should be considered for those 65 and above when clinical factors warrant. Not recommended to be started in patients >75 years old\n",
+      "bbox": [
+        354.0525207519531,
+        98.64054870605469,
+        362.760009765625,
+        522.0003662109375
+      ],
+      "text_sha256": "0d2d12cff8b056f0a6137cbb74ad72890ab5eada7efa4268a08cc5c60ac83f00"
+    },
+    {
+      "block_id": "page-0683-block-0027",
+      "order": 27,
+      "text": "Paliperidone palmitate\nDose based on renal function:\n",
+      "bbox": [
+        372.1825256347656,
+        426.2715148925781,
+        380.8900146484375,
+        612.6539916992188
+      ],
+      "text_sha256": "d27bd7fdc69e0d2a94d18722b8df04edb094065b5aa9aeb1228d857647fa6a23"
+    },
+    {
+      "block_id": "page-0683-block-0028",
+      "order": 28,
+      "text": "Because elderly patients may \n",
+      "bbox": [
+        382.1800231933594,
+        428.25152587890625,
+        390.88751220703125,
+        522.00146484375
+      ],
+      "text_sha256": "84842732a3056ea51fe7ebd47d5d8110d617951acec397252fc66ec174eb232a"
+    },
+    {
+      "block_id": "page-0683-block-0029",
+      "order": 29,
+      "text": "have diminished renal function, \n",
+      "bbox": [
+        392.1775207519531,
+        419.6189880371094,
+        400.885009765625,
+        522.00146484375
+      ],
+      "text_sha256": "961e2239e4aed7ae24c1d5905575336d6badd919c583ee72a33f2ce82369ba91"
+    },
+    {
+      "block_id": "page-0683-block-0030",
+      "order": 30,
+      "text": "they are dosed as in mild renal \n",
+      "bbox": [
+        402.1750183105469,
+        422.6714782714844,
+        410.88250732421875,
+        522.00146484375
+      ],
+      "text_sha256": "3a974228d00acab44717cda841793675d5d804547be778960497b61fbaaad7fa"
+    },
+    {
+      "block_id": "page-0683-block-0031",
+      "order": 31,
+      "text": "impairment even if tests show \n",
+      "bbox": [
+        412.1725158691406,
+        424.08154296875,
+        420.8800048828125,
+        522.00146484375
+      ],
+      "text_sha256": "f29e178f86d76bfe295a0da1ca89f18bf591012daa2a54f74ca249b8dddde81f"
+    },
+    {
+      "block_id": "page-0683-block-0032",
+      "order": 32,
+      "text": "normal renal function*\n",
+      "bbox": [
+        422.1700134277344,
+        448.79400634765625,
+        430.87750244140625,
+        522.00146484375
+      ],
+      "text_sha256": "9c85b71bd66b4e1d92e3d5afc56477a7f54c3c34c081e1675f899fbda4a2b2f8"
+    },
+    {
+      "block_id": "page-0683-block-0033",
+      "order": 33,
+      "text": "Loading doses:\n",
+      "bbox": [
+        372.1675109863281,
+        359.0489196777344,
+        380.875,
+        406.5690002441406
+      ],
+      "text_sha256": "fe29b4d449817773bec4d90b217d60542ac5e586ec35d62fc9a3d88a8a5dbfd8"
+    },
+    {
+      "block_id": "page-0683-block-0034",
+      "order": 34,
+      "text": "Day 1: 100mg\n",
+      "bbox": [
+        382.1650085449219,
+        361.13397216796875,
+        390.87249755859375,
+        406.5690002441406
+      ],
+      "text_sha256": "669ba4336d46832087e720979ff3045e7a72e594e21aef89d36c49208c4d42c9"
+    },
+    {
+      "block_id": "page-0683-block-0035",
+      "order": 35,
+      "text": "Day 8: 75mg\n",
+      "bbox": [
+        392.1625061035156,
+        365.3039855957031,
+        400.8699951171875,
+        406.5690002441406
+      ],
+      "text_sha256": "30bc6b5e614918338d01a715c73f209551040ec8c2fe5af20fee57238d4b5d53"
+    },
+    {
+      "block_id": "page-0683-block-0036",
+      "order": 36,
+      "text": "(lower loading doses may be \n",
+      "bbox": [
+        402.1600036621094,
+        313.20892333984375,
+        410.86749267578125,
+        406.5690002441406
+      ],
+      "text_sha256": "e945aba353d835f6c510adfc88c14f8b421bb163d2240a68d34443f2159ee39f"
+    },
+    {
+      "block_id": "page-0683-block-0037",
+      "order": 37,
+      "text": "appropriate in some)*\n",
+      "bbox": [
+        412.1575012207031,
+        336.27142333984375,
+        420.864990234375,
+        406.5690002441406
+      ],
+      "text_sha256": "06a93488d55d14adcbd12b0b727b63bc437e2327dba9ebf15fdc0f94c996550f"
+    },
+    {
+      "block_id": "page-0683-block-0038",
+      "order": 38,
+      "text": "25–100mg monthly*\n100mg monthly*\n",
+      "bbox": [
+        372.1600036621094,
+        118.17161560058594,
+        380.86749267578125,
+        288.5715026855469
+      ],
+      "text_sha256": "e2c1bc85a4a769d762f88816991ca91d0476e957beb538915a5b1590382f10b0"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

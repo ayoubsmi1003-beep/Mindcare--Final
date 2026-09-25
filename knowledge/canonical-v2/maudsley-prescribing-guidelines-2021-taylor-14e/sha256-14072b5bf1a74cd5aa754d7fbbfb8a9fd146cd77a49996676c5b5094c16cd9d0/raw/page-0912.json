@@ -1,0 +1,575 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0912",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 912,
+  "source_page_index": 911,
+  "source_page_display": 912,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Psychotropic drugs in special conditions    891\nCHAPTER 13\nDrug or drug group\nConsiderations\nSafe in surgery?\nAlternative formulations\nAntidepressants \n– SSRIs4–7,15,18–20\n■\n■Danger of serotonin syndrome if \nadministered with pethidine, \nfentanyl, pentazocine or tramadol\n■\n■Occasional seizures reported\n■\n■Cessation may result in withdrawal \nsyndrome and increased risk of \nrelapse\n■\n■Rule-out hyponatraemia in all \nsurgical patients21\n■\n■Various interactions with drugs used \nin surgery including blocking \nconversion of pro-drugs such as \ncodeine and oxycodone\n■\n■Venlafaxine may provoke opioid-\ninduced rigidity\n■\n■Increases risk of perioperative \nbleeding\nProbably, but \navoid other \nserotonergic \nagents\nLiquid escitalopram, \nfluoxetine and paroxetine \nare available in most \ncountries.\nOral disintegrating tablets \nof mirtazapine have been \nused perioperatively (for \nnausea).22\nAntidepressants \n– tricyclics4–6,15,18,20,23\n■\n■α1 blockade may lead to \nhypotension and interfere with \neffects of epinephrine and \nnorepinephrine\n■\n■Care needed with activities that \nincrease sympathetic stimulation \n(e.g. intubation)17\n■\n■Danger of serotonin syndrome \n(clomipramine; amitriptyline) if \nadministered with pethidine, \npentazocine or tramadol\n■\n■Many drugs prolong QT interval so \narrhythmia more likely\n■\n■Most drugs lower seizure threshold\n■\n■May lessen core hypothermia\n■\n■Sympathomimetic agents may give \nexaggerated response\n■\n■Effects persist for several days after \ncessation so will need to be stopped \nsome time before surgery\n■\n■Clomipramine, amitriptyline may \nincrease bleeding risk\n■\n■Analgesic effect may decrease \nopiate requirements\nUnclear, but \nanaesthetic \nagents need to be \ncarefully chosen\nSome authorities \nrecommend slow \ndiscontinuation \nbefore surgery\nLiquid amitriptyline is \navailable. It is acidic and \nmay interact with enteral \nfeeds.\nDosulepin capsules can be \nopened and mixed with \nwater before flushing well. \nThis is preferred to \ncrushing tablets.\nMost tricyclics have potent \nlocal anaesthetic effects – \noral delivery in liquid form \nis likely to cause local \nanaesthesia.\n(Continued)\nTable 13.4  (Continued)\n",
+  "raw_text_sha256": "ffb17fdd3b48e0affaa348bc9c82f26a0bc82dc907b6f81a334df806da75b5ab",
+  "coordinates_sha256": "38b5ec67fe7617e0fb4fd216bd29d6ce2c50d99300f37f6536e0ac06247addb7",
+  "block_sequence_sha256": "c272449c3f1e140f52ac35431b50c5772d08bcc89e554364cbde1f3a916758a6",
+  "blocks": [
+    {
+      "block_id": "page-0912-block-0000",
+      "order": 0,
+      "text": "Psychotropic drugs in special conditions    891\n",
+      "bbox": [
+        227.09710693359375,
+        31.395221710205078,
+        420.0010986328125,
+        41.0272216796875
+      ],
+      "text_sha256": "be2871977111a040b513e1745f4a78c405cf8e26ab561a2e8a5399ad43074a01"
+    },
+    {
+      "block_id": "page-0912-block-0001",
+      "order": 1,
+      "text": "CHAPTER 13\n",
+      "bbox": [
+        454.4096984863281,
+        272.95111083984375,
+        463.88970947265625,
+        318.74310302734375
+      ],
+      "text_sha256": "a01ce0756ef6b5d41c48be6624d8bd154fa95cf67cb49768f2593332d3a2ec98"
+    },
+    {
+      "block_id": "page-0912-block-0002",
+      "order": 2,
+      "text": "Drug or drug group\nConsiderations\nSafe in surgery?\nAlternative formulations\n",
+      "bbox": [
+        48.0,
+        90.21290588378906,
+        413.04010009765625,
+        99.10040283203125
+      ],
+      "text_sha256": "b862460adbeb4f4846bd756587e0731c6e0c846105defcb05cd08407e11ea815"
+    },
+    {
+      "block_id": "page-0912-block-0003",
+      "order": 3,
+      "text": "Antidepressants \n– SSRIs4–7,15,18–20\n",
+      "bbox": [
+        48.00750732421875,
+        105.16793060302734,
+        100.80001068115234,
+        123.8729248046875
+      ],
+      "text_sha256": "ea9d235bbeafcf6ae65c17b76365980eea89f9f338106dd2d0621a805c867b1c"
+    },
+    {
+      "block_id": "page-0912-block-0004",
+      "order": 4,
+      "text": "■\n■Danger of serotonin syndrome if \n",
+      "bbox": [
+        130.20469665527344,
+        105.1678695678711,
+        243.34469604492188,
+        113.8753662109375
+      ],
+      "text_sha256": "ddd6040f00c96fa1cda852ff4899f51d7b48bc8713cf09a631102936cae9731a"
+    },
+    {
+      "block_id": "page-0912-block-0005",
+      "order": 5,
+      "text": "administered with pethidine, \nfentanyl, pentazocine or tramadol\n",
+      "bbox": [
+        137.75970458984375,
+        115.16536712646484,
+        246.09718322753906,
+        133.870361328125
+      ],
+      "text_sha256": "fb0b017b3a42875f38c1af2a4b7957eb30e6fd3fd737d987d5ff4f07961c64fe"
+    },
+    {
+      "block_id": "page-0912-block-0006",
+      "order": 6,
+      "text": "■\n■Occasional seizures reported\n",
+      "bbox": [
+        130.20469665527344,
+        135.16786193847656,
+        228.32217407226562,
+        143.8753662109375
+      ],
+      "text_sha256": "7b8d7d29c61e0d6d249f77b49de8ec972ccc3734ffc1fd0e7be438b768f63142"
+    },
+    {
+      "block_id": "page-0912-block-0007",
+      "order": 7,
+      "text": "■\n■Cessation may result in withdrawal \n",
+      "bbox": [
+        130.20469665527344,
+        145.16786193847656,
+        251.3846893310547,
+        153.8753662109375
+      ],
+      "text_sha256": "622f43e884147664927e6524b0402600d254a97d8a69bb44d24211818c176f69"
+    },
+    {
+      "block_id": "page-0912-block-0008",
+      "order": 8,
+      "text": "syndrome and increased risk of \nrelapse\n",
+      "bbox": [
+        137.75970458984375,
+        155.1653594970703,
+        238.75469970703125,
+        173.870361328125
+      ],
+      "text_sha256": "de6ab76b47020c227b99097fb7a13a9ff2cfc5d302d467600f0cbc89c775cb0f"
+    },
+    {
+      "block_id": "page-0912-block-0009",
+      "order": 9,
+      "text": "■\n■Rule-out hyponatraemia in all \n",
+      "bbox": [
+        130.20469665527344,
+        175.1678924560547,
+        234.0221710205078,
+        183.87539672851562
+      ],
+      "text_sha256": "f76594f07496392d3f92021c79775e4b9b23444f183823dcd8e2562b4bd0a49b"
+    },
+    {
+      "block_id": "page-0912-block-0010",
+      "order": 10,
+      "text": "surgical patients21\n",
+      "bbox": [
+        137.75970458984375,
+        185.16539001464844,
+        194.2886199951172,
+        193.87289428710938
+      ],
+      "text_sha256": "4f207e7d94c1190be87f880fa17f51c735ba21894ecc7e020f963f58fe40bd5e"
+    },
+    {
+      "block_id": "page-0912-block-0011",
+      "order": 11,
+      "text": "■\n■Various interactions with drugs used \n",
+      "bbox": [
+        130.20460510253906,
+        195.1678924560547,
+        255.7046661376953,
+        203.87539672851562
+      ],
+      "text_sha256": "523fa8b59f9b9c9c12c19305c35d1f5f6faa8235a29b39bfde5c0322cc8e29ed"
+    },
+    {
+      "block_id": "page-0912-block-0012",
+      "order": 12,
+      "text": "in surgery including blocking \nconversion of pro-drugs such as \ncodeine and oxycodone\n",
+      "bbox": [
+        137.75970458984375,
+        205.16539001464844,
+        241.40219116210938,
+        233.86788940429688
+      ],
+      "text_sha256": "5b441d449bb7902c0c9f4267d49f17c3ec664636411dfa55c225e718773e7a2a"
+    },
+    {
+      "block_id": "page-0912-block-0013",
+      "order": 13,
+      "text": "■\n■Venlafaxine may provoke opioid-\n",
+      "bbox": [
+        130.20460510253906,
+        235.1678924560547,
+        242.2196807861328,
+        243.87539672851562
+      ],
+      "text_sha256": "75f84df63869d0d10e1d9bd0a400e19056c588cbe8dd45bdfe4f2d6642c12bee"
+    },
+    {
+      "block_id": "page-0912-block-0014",
+      "order": 14,
+      "text": "induced rigidity\n",
+      "bbox": [
+        137.75970458984375,
+        245.16539001464844,
+        186.92967224121094,
+        253.87289428710938
+      ],
+      "text_sha256": "f0c4bc0615d109fa08188b19cfcfb6eaaba38e664c88d0878624233caf018307"
+    },
+    {
+      "block_id": "page-0912-block-0015",
+      "order": 15,
+      "text": "■\n■Increases risk of perioperative \n",
+      "bbox": [
+        130.20460510253906,
+        255.1678924560547,
+        233.87217712402344,
+        263.8753967285156
+      ],
+      "text_sha256": "75a1998604114fa4a4b781fcfafec73644eb38734eb38c288b66897676455621"
+    },
+    {
+      "block_id": "page-0912-block-0016",
+      "order": 16,
+      "text": "bleeding\n",
+      "bbox": [
+        137.75970458984375,
+        265.1654052734375,
+        165.26968383789062,
+        273.8728942871094
+      ],
+      "text_sha256": "31d63708c8ad226e3eaf2b18d11f91c7363252e43daabfcc5a852494f305cc29"
+    },
+    {
+      "block_id": "page-0912-block-0017",
+      "order": 17,
+      "text": "Probably, but \navoid other \nserotonergic \nagents\n",
+      "bbox": [
+        260.5946960449219,
+        105.16793060302734,
+        304.3647155761719,
+        143.867919921875
+      ],
+      "text_sha256": "7af90dacb7dde8b89eaeeb96885de606da555e105665a8ce16b45f2a2fae60ff"
+    },
+    {
+      "block_id": "page-0912-block-0018",
+      "order": 18,
+      "text": "Liquid escitalopram, \nfluoxetine and paroxetine \nare available in most \ncountries.\n",
+      "bbox": [
+        325.7922058105469,
+        105.1604232788086,
+        409.4172668457031,
+        143.86041259765625
+      ],
+      "text_sha256": "7ac042f986d455a89307b0178b5c1099c6d3a3c7050e557d4d15028504f73eff"
+    },
+    {
+      "block_id": "page-0912-block-0019",
+      "order": 19,
+      "text": "Oral disintegrating tablets \nof mirtazapine have been \nused perioperatively (for \nnausea).22\n",
+      "bbox": [
+        325.7922058105469,
+        147.9854278564453,
+        410.3773193359375,
+        186.6854248046875
+      ],
+      "text_sha256": "1e9448e4072fb3f09990461b17d538ce954074d540b6c6e8246a2c424a23057d"
+    },
+    {
+      "block_id": "page-0912-block-0020",
+      "order": 20,
+      "text": "Antidepressants \n– tricyclics4–6,15,18,20,23\n",
+      "bbox": [
+        47.999900817871094,
+        280.1929016113281,
+        111.42092895507812,
+        298.89788818359375
+      ],
+      "text_sha256": "6b88bf1e7af3622db601d202e25d043ce58377af55f022b2601770156fcb87c6"
+    },
+    {
+      "block_id": "page-0912-block-0021",
+      "order": 21,
+      "text": "■\n■α1 blockade may lead to \n",
+      "bbox": [
+        130.20460510253906,
+        279.1728820800781,
+        216.908203125,
+        290.61602783203125
+      ],
+      "text_sha256": "7c502dc5c05a444b8717b40caec07f5139035766b4b82e67396d2d3459f15633"
+    },
+    {
+      "block_id": "page-0912-block-0022",
+      "order": 22,
+      "text": "hypotension and interfere with \neffects of epinephrine and \nnorepinephrine\n",
+      "bbox": [
+        137.7606964111328,
+        290.1903991699219,
+        238.47817993164062,
+        318.89288330078125
+      ],
+      "text_sha256": "7b64fa37adb32b4c9c318d4f02e3f6b5b4297be7eb6b6ac569c48fb7e8923a8c"
+    },
+    {
+      "block_id": "page-0912-block-0023",
+      "order": 23,
+      "text": "■\n■Care needed with activities that \n",
+      "bbox": [
+        130.20460510253906,
+        320.1929016113281,
+        240.9595947265625,
+        328.900390625
+      ],
+      "text_sha256": "a1b8545b4346d2ee260c2051fc22243f37c41d63320be440b472531c3ed33eae"
+    },
+    {
+      "block_id": "page-0912-block-0024",
+      "order": 24,
+      "text": "increase sympathetic stimulation \n(e.g. intubation)17\n",
+      "bbox": [
+        137.7595977783203,
+        330.1903991699219,
+        243.44955444335938,
+        348.8953857421875
+      ],
+      "text_sha256": "c8392444e1c74dbc3948a5a79cadea2ecf2edc0e11032c8b5130eb2ceaf498f5"
+    },
+    {
+      "block_id": "page-0912-block-0025",
+      "order": 25,
+      "text": "■\n■Danger of serotonin syndrome \n",
+      "bbox": [
+        130.20460510253906,
+        350.1929016113281,
+        237.0970916748047,
+        358.900390625
+      ],
+      "text_sha256": "d4d8a19da0520a5bbd5348bc8ed2ae9fab803ac7cd4884f45d2c1cdf3864443c"
+    },
+    {
+      "block_id": "page-0912-block-0026",
+      "order": 26,
+      "text": "(clomipramine; amitriptyline) if \nadministered with pethidine, \npentazocine or tramadol\n",
+      "bbox": [
+        137.7595977783203,
+        360.1903991699219,
+        237.32955932617188,
+        388.89288330078125
+      ],
+      "text_sha256": "6e092023c74f94ab88f90055db3d6a0d89cb55d4ce5b89fa4475077506495736"
+    },
+    {
+      "block_id": "page-0912-block-0027",
+      "order": 27,
+      "text": "■\n■Many drugs prolong QT interval so \n",
+      "bbox": [
+        130.20460510253906,
+        390.1929016113281,
+        250.56707763671875,
+        398.900390625
+      ],
+      "text_sha256": "41b280b74f37da6aaceca3262f09cd377e23f40efd19b6b1b75b3a071651c7bc"
+    },
+    {
+      "block_id": "page-0912-block-0028",
+      "order": 28,
+      "text": "arrhythmia more likely\n",
+      "bbox": [
+        137.7595977783203,
+        400.1903991699219,
+        208.8595733642578,
+        408.89788818359375
+      ],
+      "text_sha256": "ff13e231d5d6e2ceeb322fc8e01a03d7fe878e7a28b959f641d33c35b3ab789e"
+    },
+    {
+      "block_id": "page-0912-block-0029",
+      "order": 29,
+      "text": "■\n■Most drugs lower seizure threshold\n",
+      "bbox": [
+        130.20460510253906,
+        410.1929016113281,
+        250.01206970214844,
+        418.900390625
+      ],
+      "text_sha256": "b4e38c050acf2db9ea3adaf7a583377263d3e683300ba239a68ce2422ac7d6f8"
+    },
+    {
+      "block_id": "page-0912-block-0030",
+      "order": 30,
+      "text": "■\n■May lessen core hypothermia\n",
+      "bbox": [
+        130.20460510253906,
+        420.1929016113281,
+        230.9620819091797,
+        428.900390625
+      ],
+      "text_sha256": "9582a52281ce6488ca66179ad0802e28630fdbeec15e3d04e702d5817cadebd9"
+    },
+    {
+      "block_id": "page-0912-block-0031",
+      "order": 31,
+      "text": "■\n■Sympathomimetic agents may give \n",
+      "bbox": [
+        130.20460510253906,
+        430.1929016113281,
+        251.08457946777344,
+        438.900390625
+      ],
+      "text_sha256": "34ca2fff6ec95f300f104fb53b590b2eda590dc0e22be507bf66a416ab669aab"
+    },
+    {
+      "block_id": "page-0912-block-0032",
+      "order": 32,
+      "text": "exaggerated response\n",
+      "bbox": [
+        137.7595977783203,
+        440.1903991699219,
+        207.6370849609375,
+        448.89788818359375
+      ],
+      "text_sha256": "c10c61c8b7a110c343b0a899dc4db5546f23ffa63502279b7c68801147529565"
+    },
+    {
+      "block_id": "page-0912-block-0033",
+      "order": 33,
+      "text": "■\n■Effects persist for several days after \n",
+      "bbox": [
+        130.20460510253906,
+        450.1929016113281,
+        251.7745819091797,
+        458.900390625
+      ],
+      "text_sha256": "cdf1ac7fb0e66295e875cb1ae1ce4e3cdb50bafff00e3ae398bbe9869462de55"
+    },
+    {
+      "block_id": "page-0912-block-0034",
+      "order": 34,
+      "text": "cessation so will need to be stopped \nsome time before surgery\n",
+      "bbox": [
+        137.7595977783203,
+        460.1903991699219,
+        255.7120819091797,
+        478.8953857421875
+      ],
+      "text_sha256": "262a3bc2cc2cb896885271ca49dea3e0f07326be94de9f02c53b48eb6805c098"
+    },
+    {
+      "block_id": "page-0912-block-0035",
+      "order": 35,
+      "text": "■\n■Clomipramine, amitriptyline may \n",
+      "bbox": [
+        130.20460510253906,
+        480.1929016113281,
+        242.42214965820312,
+        488.900390625
+      ],
+      "text_sha256": "1ca0eaadf71400a32d968684cc1e87ff1c0e8de1d861ccf9cce100decb46f729"
+    },
+    {
+      "block_id": "page-0912-block-0036",
+      "order": 36,
+      "text": "increase bleeding risk\n",
+      "bbox": [
+        137.7595977783203,
+        490.1903991699219,
+        204.86212158203125,
+        498.89788818359375
+      ],
+      "text_sha256": "de6456f0576acfe4181a6cfddce9936b7c5c4c0be63f174b21c755527b9f9774"
+    },
+    {
+      "block_id": "page-0912-block-0037",
+      "order": 37,
+      "text": "■\n■Analgesic effect may decrease \n",
+      "bbox": [
+        130.20460510253906,
+        500.1929016113281,
+        235.81460571289062,
+        508.900390625
+      ],
+      "text_sha256": "69523b56e3f4892cb369ef7b5c80fe8bbf610d2980724718a1000e67885f7059"
+    },
+    {
+      "block_id": "page-0912-block-0038",
+      "order": 38,
+      "text": "opiate requirements\n",
+      "bbox": [
+        137.7595977783203,
+        510.1903991699219,
+        201.65957641601562,
+        518.8978881835938
+      ],
+      "text_sha256": "47ed068ad4d3514c950da8e94b0e94809c03d74aafa60d075113bc5ec21b61e2"
+    },
+    {
+      "block_id": "page-0912-block-0039",
+      "order": 39,
+      "text": "Unclear, but \nanaesthetic \nagents need to be \ncarefully chosen\n",
+      "bbox": [
+        260.5946044921875,
+        280.1878967285156,
+        320.6171569824219,
+        318.88787841796875
+      ],
+      "text_sha256": "fea479a2cff397beb705081366ec9d2dc9eeeae26abb6905f5c65a27b89c0a8e"
+    },
+    {
+      "block_id": "page-0912-block-0040",
+      "order": 40,
+      "text": "Some authorities \nrecommend slow \ndiscontinuation \nbefore surgery\n",
+      "bbox": [
+        260.5946044921875,
+        323.01287841796875,
+        317.54962158203125,
+        361.7128601074219
+      ],
+      "text_sha256": "009fa99839dc3257fda5357cffa6d70cbdb68e989ea31f6bac3dc83ff2b97d11"
+    },
+    {
+      "block_id": "page-0912-block-0041",
+      "order": 41,
+      "text": "Liquid amitriptyline is \navailable. It is acidic and \nmay interact with enteral \nfeeds.\n",
+      "bbox": [
+        325.7921142578125,
+        280.1728820800781,
+        407.8645935058594,
+        318.87286376953125
+      ],
+      "text_sha256": "291ecf4b93e03211e4da9ab75d11403b9ad5fd4f6ac8ef5616647d9c6223b069"
+    },
+    {
+      "block_id": "page-0912-block-0042",
+      "order": 42,
+      "text": "Dosulepin capsules can be \nopened and mixed with \nwater before flushing well. \nThis is preferred to \ncrushing tablets.\n",
+      "bbox": [
+        325.7921142578125,
+        322.99786376953125,
+        413.587158203125,
+        371.6953430175781
+      ],
+      "text_sha256": "ba4b1958ff93ffae33d1602be7eda18acdf06199a85205e7e4a76e5647c01ee4"
+    },
+    {
+      "block_id": "page-0912-block-0043",
+      "order": 43,
+      "text": "Most tricyclics have potent \nlocal anaesthetic effects – \noral delivery in liquid form \nis likely to cause local \nanaesthesia.\n",
+      "bbox": [
+        325.7921142578125,
+        375.8203430175781,
+        412.86712646484375,
+        424.517822265625
+      ],
+      "text_sha256": "1370e554ce604f5d46d44a83f67a0a1290044f880cc9d9e4ab858920936e7d73"
+    },
+    {
+      "block_id": "page-0912-block-0044",
+      "order": 44,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.97711181640625,
+        529.4503173828125,
+        419.9920654296875,
+        538.2028198242188
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0912-block-0045",
+      "order": 45,
+      "text": "Table 13.4  (Continued)\n",
+      "bbox": [
+        54.0,
+        69.41468811035156,
+        130.2899932861328,
+        78.30218505859375
+      ],
+      "text_sha256": "be0f7b93745defa14b8e0813d5391cb4f91c1adbf82144540cdf8c18d5360410"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

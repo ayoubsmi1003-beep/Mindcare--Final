@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0629",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 629,
+  "source_page_index": 628,
+  "source_page_display": 629,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "608    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  6\ndiscontinuation group (46% vs 32%, respectively).25 (For switching to rivastigmine \npatch see under tolerability section)\nFollowing a systematic review of the literature,26 a practical approach to switching \nbetween AChE-Is has been proposed: in the case of intolerance, switching to another \nagent should be done only after complete resolution of side effects following discon-\ntinuation of the initial agent. In the case of lack of efficacy, switching can be done over-\nnight, with a quicker titration scheme thereafter. Switching to another AChE-I is not \nrecommended in individuals who show loss of benefit several years after initiation of \ntherapy.\nOther effects\nAChE-Is may also affect non-cognitive aspects of AD and other dementias. Several \nstudies have investigated their safety and efficacy in managing the non-cognitive symp-\ntoms of dementia. For more information about the management of these symptoms, see \nsection ‘Management of behavioural and psychological symptoms of dementia (BPSD)’.\nDosing and formulations\nFor dosing information, see Table 6.1.\nRivastigmine transdermal patch (9.5mg/24 hours) has been shown to be as effective \nas the highest doses of capsules but with a superior tolerability profile in a 6-month \ndouble-blind, placebo-controlled randomised controlled trial (RCT),27 and confirmed \nin a Chinese study.28 A nasal spray has also been developed.29\nThe FDA has approved a higher daily dose of donepezil sustained release (23mg) for \nmoderate-to-severe AD on the basis of positive phase III trial results. Donepezil, 23mg/\nday is currently marketed in the USA and parts of Asia. In the global phase III study in \npatients with moderate-to-severe AD, donepezil 23mg/day demonstrated significantly \ngreater cognitive benefits than donepezil 10mg/day, with a between-treatment differ-\nence in mean change in the Severe Impairment Battery score of 2.2 points in the overall \nstudy population and 3.1 points in patients with advanced AD. Dose escalation was \nsomewhat challenging, given the increased incidence of gastrointestinal (GI) side effects \nobserved when increasing the dose of donepezil from 10mg to 23mg daily. These side \neffects seldom persist beyond a 1-month period. Using stepwise titration strategies may \naddress these GI side effects and could potentially involve increasing the dose of done-\npezil from 10 to 23mg over a 1–2-month period by taking one 10mg tablet plus one \n5mg tablet once daily for 1 month followed by a 23mg once daily or a 10mg tablet and \n23mg tablet on alternate days. A study in South Korea has been designed to determine \nthe optimal dose escalation strategy for successful titration to 23mg/day.30 Clinical rec-\nommendations emphasise the importance of patient selection (AD severity, tolerability \nof lower doses of donepezil and absence of contraindications), a stepwise titration strat-\negy for dose escalation and appropriate monitoring and counselling of patients and \ncaregivers in the management of patients with AD.30\nMemantine extended release (ER) 28mg once-daily capsule formulation was approved \nin the USA in 2010 is now fairly widely available. Its efficacy was demonstrated in a \nlarge, multinational, phase III trial which showed that the addition of memantine ER to \n",
+  "raw_text_sha256": "d654cc4c0b6a3079a36c207bfba6856f932478c951fb159bf17a832845d4605c",
+  "coordinates_sha256": "84c9e4a8dc4dcea91ec7990c9b3abd1a5f8e445728e38892f346d62e528cdc00",
+  "block_sequence_sha256": "d69aa5e5e93f814e4ead68635c357320d7a3d5a51632b92e3b089305d9c869d2",
+  "blocks": [
+    {
+      "block_id": "page-0629-block-0000",
+      "order": 0,
+      "text": "608    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "50ee9cfb245ff81fdfca1ebaada0e579e305baf5ae188f6f3ef3fdc3144ee11d"
+    },
+    {
+      "block_id": "page-0629-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        18.520000457763672,
+        405.35260009765625,
+        28.0,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0629-block-0002",
+      "order": 2,
+      "text": "discontinuation group (46% vs 32%, respectively).25 (For switching to rivastigmine \npatch see under tolerability section)\n",
+      "bbox": [
+        61.885711669921875,
+        62.55029296875,
+        436.6757507324219,
+        86.27029418945312
+      ],
+      "text_sha256": "54aa25d117e2a15b7e3810a7381efb8e8a89f128c1f68dd56bc9486389ef7c58"
+    },
+    {
+      "block_id": "page-0629-block-0003",
+      "order": 3,
+      "text": "Following a systematic review of the literature,26 a practical approach to switching \nbetween AChE-Is has been proposed: in the case of intolerance, switching to another \nagent should be done only after complete resolution of side effects following discon-\ntinuation of the initial agent. In the case of lack of efficacy, switching can be done over-\nnight, with a quicker titration scheme thereafter. Switching to another AChE-I is not \nrecommended in individuals who show loss of benefit several years after initiation of \ntherapy.\n",
+      "bbox": [
+        61.889984130859375,
+        86.55029296875,
+        436.6800231933594,
+        170.27029418945312
+      ],
+      "text_sha256": "57acb0c15a9a990d0e9b3ba76902d8c286b39368d349aebea084d9b1ff6459f8"
+    },
+    {
+      "block_id": "page-0629-block-0004",
+      "order": 4,
+      "text": "Other effects\n",
+      "bbox": [
+        61.889984130859375,
+        188.64028930664062,
+        123.38997650146484,
+        200.49029541015625
+      ],
+      "text_sha256": "cd03958a07172e8c163a4b27902be1215625c8b4598b44e95812775f37b6d319"
+    },
+    {
+      "block_id": "page-0629-block-0005",
+      "order": 5,
+      "text": "AChE-Is may also affect non-cognitive aspects of AD and other dementias. Several \nstudies have investigated their safety and efficacy in managing the non-cognitive symp-\ntoms of dementia. For more information about the management of these symptoms, see \nsection ‘Management of behavioural and psychological symptoms of dementia (BPSD)’.\n",
+      "bbox": [
+        61.889984130859375,
+        206.55029296875,
+        436.6800231933594,
+        254.27029418945312
+      ],
+      "text_sha256": "73e515914286e289501a68bf04425ff2754eb26b43846596aa92a71ea6d2057b"
+    },
+    {
+      "block_id": "page-0629-block-0006",
+      "order": 6,
+      "text": "Dosing and formulations\n",
+      "bbox": [
+        61.889984130859375,
+        272.6402893066406,
+        178.5599822998047,
+        284.49029541015625
+      ],
+      "text_sha256": "11060c371f12eb71aeb45c9152699d25a6df159dff088e1e715b17e8624ff8ce"
+    },
+    {
+      "block_id": "page-0629-block-0007",
+      "order": 7,
+      "text": "For dosing information, see Table 6.1.\n",
+      "bbox": [
+        61.889984130859375,
+        290.55029296875,
+        225.8999786376953,
+        302.2702941894531
+      ],
+      "text_sha256": "0d2d9d4c227894e22a45df2cd81bd6631ed3a5069fd88e34430d5585f1bda1c5"
+    },
+    {
+      "block_id": "page-0629-block-0008",
+      "order": 8,
+      "text": "Rivastigmine transdermal patch (9.5mg/24 hours) has been shown to be as effective \nas the highest doses of capsules but with a superior tolerability profile in a 6-month \ndouble-blind, placebo-controlled randomised controlled trial (RCT),27 and confirmed \nin a Chinese study.28 A nasal spray has also been developed.29\n",
+      "bbox": [
+        61.889984130859375,
+        302.310302734375,
+        436.6733703613281,
+        350.2702941894531
+      ],
+      "text_sha256": "717dc62fccfdd2de6addf96d9634c63f90eb00ca8208851375cdefead90b9cc8"
+    },
+    {
+      "block_id": "page-0629-block-0009",
+      "order": 9,
+      "text": "The FDA has approved a higher daily dose of donepezil sustained release (23mg) for \nmoderate-to-severe AD on the basis of positive phase III trial results. Donepezil, 23mg/\nday is currently marketed in the USA and parts of Asia. In the global phase III study in \npatients with moderate-to-severe AD, donepezil 23mg/day demonstrated significantly \ngreater cognitive benefits than donepezil 10mg/day, with a between-treatment differ-\nence in mean change in the Severe Impairment Battery score of 2.2 points in the overall \nstudy population and 3.1 points in patients with advanced AD. Dose escalation was \nsomewhat challenging, given the increased incidence of gastrointestinal (GI) side effects \nobserved when increasing the dose of donepezil from 10mg to 23mg daily. These side \neffects seldom persist beyond a 1-month period. Using stepwise titration strategies may \naddress these GI side effects and could potentially involve increasing the dose of done-\npezil from 10 to 23mg over a 1–2-month period by taking one 10mg tablet plus one \n5mg tablet once daily for 1 month followed by a 23mg once daily or a 10mg tablet and \n23mg tablet on alternate days. A study in South Korea has been designed to determine \nthe optimal dose escalation strategy for successful titration to 23mg/day.30 Clinical rec-\nommendations emphasise the importance of patient selection (AD severity, tolerability \nof lower doses of donepezil and absence of contraindications), a stepwise titration strat-\negy for dose escalation and appropriate monitoring and counselling of patients and \ncaregivers in the management of patients with AD.30\n",
+      "bbox": [
+        61.887908935546875,
+        350.310302734375,
+        436.7200012207031,
+        578.2703247070312
+      ],
+      "text_sha256": "6c1ff5c83b835b6099b618324d213e7b98a0da394fd9dd02acd933c0923111f7"
+    },
+    {
+      "block_id": "page-0629-block-0010",
+      "order": 10,
+      "text": "Memantine extended release (ER) 28mg once-daily capsule formulation was approved \nin the USA in 2010 is now fairly widely available. Its efficacy was demonstrated in a \nlarge, multinational, phase III trial which showed that the addition of memantine ER to \n",
+      "bbox": [
+        61.88999938964844,
+        578.310302734375,
+        436.67999267578125,
+        614.2703247070312
+      ],
+      "text_sha256": "273914f2ca0e139404cb309511d3758962a49f6882189af18917beb7b367498f"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

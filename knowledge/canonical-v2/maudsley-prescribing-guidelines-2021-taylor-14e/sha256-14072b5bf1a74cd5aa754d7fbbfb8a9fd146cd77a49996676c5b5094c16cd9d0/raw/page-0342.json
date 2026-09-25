@@ -1,0 +1,611 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0342",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 342,
+  "source_page_index": 341,
+  "source_page_display": 342,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    321\nCHAPTER 3\nManagement of treatment-resistant depression – second choice\nTable 3.4  Second choice: less commonly used, variably supported by published evaluations  \n(no preference implied by order)\nTreatment\nAdvantages\nDisadvantages\nAdd ketamine (0.5mg/kg \nIV over 40 minutes)1\nIntranasal esketamine \n(licensed in most \ncountries) dose is \n28–84mg2\nSee section on ketamine \npreparations in this \nchapter\n■\n■Very rapid response (within hours) – \nincluding effects on suicidality3,4\n■\n■High remission rate\n■\n■Some evidence of maintained \nresponse if repeated doses given\n■\n■Usually well tolerated at this sub-\nanaesthetic dose\n■\n■IV needs to be administered in hospital \nenvironment\n■\n■Cognitive effects (confusion, dissocia-\ntion) and other psychiatric symptoms5\n■\n■Associated with transient increases in \nBP, tachycardia and arrhythmias. Pre-\ntreatment ECG required with IV form.6\n■\n■Adverse effects may have been \n­underestimated7\n■\n■Repeated treatment may be necessary \nto maintain effect\nAdd lamotrigine (100mg, \n200mg and 400mg a day \nhave been used)8\n■\n■Reasonably well researched\n■\n■Quite widely used\n■\n■Probably best tolerated augmentation \nstrategy9\n■\n■Slow titration\n■\n■Risk of rash\n■\n■Appropriate dosing unclear\nECT10–12\n■\n■Well established\n■\n■Effective\n■\n■Well supported in the literature\n■\n■Poor reputation in public domain\n■\n■Necessitates general anaesthetic\n■\n■Needs specialist referral\n■\n■Usually reserved for last-line treatment \nor if rapid response needed\n■\n■Usually combined with other \ntreatments\nAdd tri-iodothyronine\n(20–50µg/day)\nHigher doses have been \nsafely used13–19\n■\n■Usually well tolerated\n■\n■Reasonable literature support\n■\n■May be effective in bipolar depression\n■\n■Clinical and biochemical TFT \n­monitoring required\n■\n■Usually needs specialist referral\n■\n■Some negative studies\n■\n■No advantage over antidepressant \nalone in non-refractory illness20\n",
+  "raw_text_sha256": "8e78abed7e5c7de94219576c168bf9be9a1663521757f1874332892ba8c9ea9e",
+  "coordinates_sha256": "f85faacfe11eeff1ff375c1d7742464b41def4d16e38e4f1001a91fa08af8b91",
+  "block_sequence_sha256": "3673eb8ad68e380678dc061396cbb1bea48bd18f1e0b0064e8039181e177a6eb",
+  "blocks": [
+    {
+      "block_id": "page-0342-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    321\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "77bbfb920be0cf776fb7df690906177c4309ebfa84d95193d243f8aaafce5afc"
+    },
+    {
+      "block_id": "page-0342-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0342-block-0002",
+      "order": 2,
+      "text": "Management of treatment-resistant depression – second choice\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        383.2181701660156,
+        79.1004638671875
+      ],
+      "text_sha256": "c2e24c9cb7a5f631e4f3691ecc9452b8ef428b221c14ca8d4d989010575ce6cf"
+    },
+    {
+      "block_id": "page-0342-block-0003",
+      "order": 3,
+      "text": "Table 3.4  Second choice: less commonly used, variably supported by published evaluations  \n(no preference implied by order)\n",
+      "bbox": [
+        54.0005989074707,
+        102.33638000488281,
+        349.90557861328125,
+        121.22137451171875
+      ],
+      "text_sha256": "4eb373a949b8df3819c971940de98dce888e9e164b674a778a4abd432bf9042f"
+    },
+    {
+      "block_id": "page-0342-block-0004",
+      "order": 4,
+      "text": "Treatment\nAdvantages\nDisadvantages\n",
+      "bbox": [
+        48.000701904296875,
+        132.5713653564453,
+        338.5882263183594,
+        141.4588623046875
+      ],
+      "text_sha256": "1ff6849f9e4ad0351924a5532df48ac182cec3eb3b0a57ea3af8e9f08491bc58"
+    },
+    {
+      "block_id": "page-0342-block-0005",
+      "order": 5,
+      "text": "Add ketamine (0.5mg/kg \nIV over 40 minutes)1\n",
+      "bbox": [
+        48.00071716308594,
+        149.34889221191406,
+        133.4632110595703,
+        168.23388671875
+      ],
+      "text_sha256": "04db8c6910a6c690bb27bcdc0b332324104f8e7d5d219427469de4bfd9856608"
+    },
+    {
+      "block_id": "page-0342-block-0006",
+      "order": 6,
+      "text": "Intranasal esketamine \n(licensed in most \ncountries) dose is \n28–84mg2\n",
+      "bbox": [
+        48.000701904296875,
+        172.3463897705078,
+        123.43570709228516,
+        211.22637939453125
+      ],
+      "text_sha256": "f7007cb8994f2f86af8fc11364afccdb7b31126a0e1fb23bcc33e0904cb6c883"
+    },
+    {
+      "block_id": "page-0342-block-0007",
+      "order": 7,
+      "text": "See section on ketamine \npreparations in this \nchapter\n",
+      "bbox": [
+        48.000701904296875,
+        215.52638244628906,
+        128.0106964111328,
+        244.2288818359375
+      ],
+      "text_sha256": "1ef4f705b6d0677866944bd599fbfa884f420a59ffdcf213051474dcbae6c2e0"
+    },
+    {
+      "block_id": "page-0342-block-0008",
+      "order": 8,
+      "text": "■\n■Very rapid response (within hours) – \n",
+      "bbox": [
+        143.49989318847656,
+        149.52638244628906,
+        269.0649719238281,
+        158.23388671875
+      ],
+      "text_sha256": "8e71aa5c3773b63ecd60bf6c89915761540a7b293339c440619938ecfe965679"
+    },
+    {
+      "block_id": "page-0342-block-0009",
+      "order": 9,
+      "text": "including effects on suicidality3,4\n",
+      "bbox": [
+        152.5,
+        158.52638244628906,
+        254.2761688232422,
+        167.23388671875
+      ],
+      "text_sha256": "44671db9ea6a3cd2835ad19f7313f6440703c263096417d0c6ebd215f05fd217"
+    },
+    {
+      "block_id": "page-0342-block-0010",
+      "order": 10,
+      "text": "■\n■High remission rate\n",
+      "bbox": [
+        143.49989318847656,
+        167.52638244628906,
+        214.0374755859375,
+        176.23388671875
+      ],
+      "text_sha256": "e7545969434e321959d4f76e687538538bbcaedaa28cee95e8c33d26a5b3588d"
+    },
+    {
+      "block_id": "page-0342-block-0011",
+      "order": 11,
+      "text": "■\n■Some evidence of maintained \n",
+      "bbox": [
+        143.49989318847656,
+        176.52638244628906,
+        249.17498779296875,
+        185.23388671875
+      ],
+      "text_sha256": "75ffc1215b04f2fbc536e1cb847620882d72ce3e2d2035fc3f14f5bdf74b908f"
+    },
+    {
+      "block_id": "page-0342-block-0012",
+      "order": 12,
+      "text": "response if repeated doses given\n■\n■Usually well tolerated at this sub-\n",
+      "bbox": [
+        143.49989318847656,
+        185.52638244628906,
+        258.3399658203125,
+        203.23388671875
+      ],
+      "text_sha256": "32cbcf63532ba9920de913a62c6f1e64dcbaf8c1e3e98cedb51c8edd8c4620c0"
+    },
+    {
+      "block_id": "page-0342-block-0013",
+      "order": 13,
+      "text": "anaesthetic dose\n",
+      "bbox": [
+        152.5,
+        203.52638244628906,
+        205.83998107910156,
+        212.23388671875
+      ],
+      "text_sha256": "5ed51bf585165ef56e2382b0d13f0219eb999acf67e505419ab4e274f893881c"
+    },
+    {
+      "block_id": "page-0342-block-0014",
+      "order": 14,
+      "text": "■\n■IV needs to be administered in hospital \n",
+      "bbox": [
+        286.91461181640625,
+        149.52638244628906,
+        422.0572509765625,
+        158.23388671875
+      ],
+      "text_sha256": "3c802673a625fd242b51cc47db92b5e770999cb50e74a9d40eebfd3937376067"
+    },
+    {
+      "block_id": "page-0342-block-0015",
+      "order": 15,
+      "text": "environment\n■\n■Cognitive effects (confusion, dissocia-\n",
+      "bbox": [
+        286.91461181640625,
+        158.52638244628906,
+        415.9222106933594,
+        176.23388671875
+      ],
+      "text_sha256": "be6dd24f4bbbbddbd19b6f39d0ee53cd9e212203fc3aa687e51da5571831f5c7"
+    },
+    {
+      "block_id": "page-0342-block-0016",
+      "order": 16,
+      "text": "tion) and other psychiatric symptoms5\n",
+      "bbox": [
+        295.91461181640625,
+        176.52638244628906,
+        415.9967346191406,
+        185.23388671875
+      ],
+      "text_sha256": "88819c66f7a1352cf9756e0bbb4e62e0f9898eeffbfaf650aff7e6dfc0efa5c3"
+    },
+    {
+      "block_id": "page-0342-block-0017",
+      "order": 17,
+      "text": "■\n■Associated with transient increases in \n",
+      "bbox": [
+        286.91461181640625,
+        185.52638244628906,
+        417.0397033691406,
+        194.23388671875
+      ],
+      "text_sha256": "ff6805bd91c9fcddd1ced010c707289b6b3c38c7242c6b638a3099551ff9617d"
+    },
+    {
+      "block_id": "page-0342-block-0018",
+      "order": 18,
+      "text": "BP, tachycardia and arrhythmias. Pre-\ntreatment ECG required with IV form.6\n",
+      "bbox": [
+        295.91461181640625,
+        194.52638244628906,
+        418.772216796875,
+        212.23388671875
+      ],
+      "text_sha256": "3490c7385a68bc6afe591790db8fd79e590c5df387f0acb06cda4bca8d41f3ec"
+    },
+    {
+      "block_id": "page-0342-block-0019",
+      "order": 19,
+      "text": "■\n■Adverse effects may have been \n",
+      "bbox": [
+        286.91461181640625,
+        212.52638244628906,
+        397.0296630859375,
+        221.23388671875
+      ],
+      "text_sha256": "505769579c0d16eb85e7349c138eae22d25166b51a2583a471799abd1069b1e6"
+    },
+    {
+      "block_id": "page-0342-block-0020",
+      "order": 20,
+      "text": "­underestimated7\n",
+      "bbox": [
+        295.9147033691406,
+        221.52638244628906,
+        348.2129211425781,
+        230.23388671875
+      ],
+      "text_sha256": "59becdd270ce5f1dd26a0c50d34e60dce5ebb813d02c96999de0cac581eaa6aa"
+    },
+    {
+      "block_id": "page-0342-block-0021",
+      "order": 21,
+      "text": "■\n■Repeated treatment may be necessary \n",
+      "bbox": [
+        286.91461181640625,
+        230.52638244628906,
+        419.5296936035156,
+        239.23388671875
+      ],
+      "text_sha256": "688257cc52185db1753abcb8692edfa595a0d6b882320f3c6a6af1701c9dd820"
+    },
+    {
+      "block_id": "page-0342-block-0022",
+      "order": 22,
+      "text": "to maintain effect\n",
+      "bbox": [
+        295.9147033691406,
+        239.52638244628906,
+        352.8547058105469,
+        248.23388671875
+      ],
+      "text_sha256": "d5e974fcac561322510af07660a2e2ce357b56b5cac598b30356f2ca461482d3"
+    },
+    {
+      "block_id": "page-0342-block-0023",
+      "order": 23,
+      "text": "Add lamotrigine (100mg, \n200mg and 400mg a day \nhave been used)8\n",
+      "bbox": [
+        48.002197265625,
+        254.36888122558594,
+        132.90223693847656,
+        283.2513732910156
+      ],
+      "text_sha256": "be0016673185fb8c468753b11a294164291f2a60056119339f9bfa891f6baed5"
+    },
+    {
+      "block_id": "page-0342-block-0024",
+      "order": 24,
+      "text": "■\n■Reasonably well researched\n",
+      "bbox": [
+        143.5,
+        254.55137634277344,
+        239.739990234375,
+        263.2588806152344
+      ],
+      "text_sha256": "f50ced7b4de46d01b80c138f1de110212112eb9398373d21255da516e8dfd4a1"
+    },
+    {
+      "block_id": "page-0342-block-0025",
+      "order": 25,
+      "text": "■\n■Quite widely used\n",
+      "bbox": [
+        143.5,
+        263.5513916015625,
+        209.58998107910156,
+        272.2588806152344
+      ],
+      "text_sha256": "e1f239e79a262d10aab60d3c3037663b9b67974cc457cb6988ac62b676584e01"
+    },
+    {
+      "block_id": "page-0342-block-0026",
+      "order": 26,
+      "text": "■\n■Probably best tolerated augmentation \n",
+      "bbox": [
+        143.5,
+        272.5513916015625,
+        275.2975158691406,
+        281.2588806152344
+      ],
+      "text_sha256": "961512a0090681f233108872f6e790599e767900795f6a518f88aed9d082be85"
+    },
+    {
+      "block_id": "page-0342-block-0027",
+      "order": 27,
+      "text": "strategy9\n",
+      "bbox": [
+        152.5,
+        281.5513916015625,
+        180.34080505371094,
+        290.2588806152344
+      ],
+      "text_sha256": "461ab0b399fc7cd2c83fa5cb5a62d856236416c518062f046847821254db02b6"
+    },
+    {
+      "block_id": "page-0342-block-0028",
+      "order": 28,
+      "text": "■\n■Slow titration\n",
+      "bbox": [
+        286.91461181640625,
+        254.55137634277344,
+        338.8297424316406,
+        263.2588806152344
+      ],
+      "text_sha256": "8b0ade3717fd43ee7d96393f224b69801817527ae607b64671a5c9428b6d69d9"
+    },
+    {
+      "block_id": "page-0342-block-0029",
+      "order": 29,
+      "text": "■\n■Risk of rash\n",
+      "bbox": [
+        286.91461181640625,
+        263.5513916015625,
+        332.5897521972656,
+        272.2588806152344
+      ],
+      "text_sha256": "6c2ec7a6adafc0425aae16dcffaa9198c9abe0c0b9979196a6a521871fa223b6"
+    },
+    {
+      "block_id": "page-0342-block-0030",
+      "order": 30,
+      "text": "■\n■Appropriate dosing unclear\n",
+      "bbox": [
+        286.91461181640625,
+        272.5513916015625,
+        382.88482666015625,
+        281.2588806152344
+      ],
+      "text_sha256": "8fc351e482c986bf781be8a424818bba017e9a403ba92ef489d06e0cff37bbb0"
+    },
+    {
+      "block_id": "page-0342-block-0031",
+      "order": 31,
+      "text": "ECT10–12\n■\n■Well established\n",
+      "bbox": [
+        48.002197265625,
+        296.39385986328125,
+        204.032470703125,
+        305.2839050292969
+      ],
+      "text_sha256": "7da5acab5db701ebf31357c7ba85a8b2c2910270074b2cfdad36a7a287701c1e"
+    },
+    {
+      "block_id": "page-0342-block-0032",
+      "order": 32,
+      "text": "■\n■Effective\n",
+      "bbox": [
+        143.5,
+        305.576416015625,
+        179.4324951171875,
+        314.2839050292969
+      ],
+      "text_sha256": "bbd90757b3788bdfc46812b519a7707958d67caaab8ff87f14c105b2bceca478"
+    },
+    {
+      "block_id": "page-0342-block-0033",
+      "order": 33,
+      "text": "■\n■Well supported in the literature\n",
+      "bbox": [
+        143.5,
+        314.576416015625,
+        252.23497009277344,
+        323.2839050292969
+      ],
+      "text_sha256": "994935e46161dbdbfc79db693efea18ee55ffcb7e621aa876c5cc7ca5c071834"
+    },
+    {
+      "block_id": "page-0342-block-0034",
+      "order": 34,
+      "text": "■\n■Poor reputation in public domain\n",
+      "bbox": [
+        286.91461181640625,
+        296.576416015625,
+        401.22235107421875,
+        305.2839050292969
+      ],
+      "text_sha256": "e3333b63f2366330c122b5644038a171891662835e10bcb445205b855e1758dd"
+    },
+    {
+      "block_id": "page-0342-block-0035",
+      "order": 35,
+      "text": "■\n■Necessitates general anaesthetic\n",
+      "bbox": [
+        286.91461181640625,
+        305.576416015625,
+        398.82977294921875,
+        314.2839050292969
+      ],
+      "text_sha256": "10fbfcca7608c465640a7e68e134d6c5645a1981527401708845a33b06f1f3d4"
+    },
+    {
+      "block_id": "page-0342-block-0036",
+      "order": 36,
+      "text": "■\n■Needs specialist referral\n",
+      "bbox": [
+        286.91461181640625,
+        314.576416015625,
+        370.7722473144531,
+        323.2839050292969
+      ],
+      "text_sha256": "cb82a8612413d9a2065f73bed53562795fedee8e2fd6a73a7c4096a79958216d"
+    },
+    {
+      "block_id": "page-0342-block-0037",
+      "order": 37,
+      "text": "■\n■Usually reserved for last-line treatment \n",
+      "bbox": [
+        286.91461181640625,
+        323.576416015625,
+        420.6322326660156,
+        332.2839050292969
+      ],
+      "text_sha256": "6c627aa2c54ba93a6d89568febca9b8dce0f4d8de3e47c9aa53a7d3c79e75fd9"
+    },
+    {
+      "block_id": "page-0342-block-0038",
+      "order": 38,
+      "text": "or if rapid response needed\n■\n■Usually combined with other \n",
+      "bbox": [
+        286.91461181640625,
+        332.576416015625,
+        389.6797790527344,
+        350.2839050292969
+      ],
+      "text_sha256": "86814aa7529c3e98a7cf16e5ebb12e17ff1b3038773bbb5f0a0fbc0805cb94ce"
+    },
+    {
+      "block_id": "page-0342-block-0039",
+      "order": 39,
+      "text": "treatments\n",
+      "bbox": [
+        295.9147033691406,
+        350.576416015625,
+        330.3547058105469,
+        359.2839050292969
+      ],
+      "text_sha256": "a4a96b647b896ddc0440f3185ac722d391acf60f99bdabcbf1a844a6767e4b96"
+    },
+    {
+      "block_id": "page-0342-block-0040",
+      "order": 40,
+      "text": "Add tri-iodothyronine\n(20–50µg/day)\nHigher doses have been \nsafely used13–19\n",
+      "bbox": [
+        48.002197265625,
+        365.41888427734375,
+        126.36219787597656,
+        404.29888916015625
+      ],
+      "text_sha256": "efa141311256665c9ecc1b06cc17b93a0fcb9376eaabadf3669c05960a211651"
+    },
+    {
+      "block_id": "page-0342-block-0041",
+      "order": 41,
+      "text": "■\n■Usually well tolerated\n",
+      "bbox": [
+        143.5,
+        365.6014099121094,
+        220.8324737548828,
+        374.30889892578125
+      ],
+      "text_sha256": "572de43600576c5281fdd89078b08aa9adf685806e1d16790b3df14374fbaa05"
+    },
+    {
+      "block_id": "page-0342-block-0042",
+      "order": 42,
+      "text": "■\n■Reasonable literature support\n",
+      "bbox": [
+        143.5,
+        374.6014099121094,
+        246.1299591064453,
+        383.30889892578125
+      ],
+      "text_sha256": "4c389f97d83c5e95b2b92b876ec947e676d49523c5459dfa575a7220266c9fb5"
+    },
+    {
+      "block_id": "page-0342-block-0043",
+      "order": 43,
+      "text": "■\n■May be effective in bipolar depression\n",
+      "bbox": [
+        143.5,
+        383.6014099121094,
+        273.49005126953125,
+        392.30889892578125
+      ],
+      "text_sha256": "d77dc4f0891b99c5b0887441d364706535e456a26b4ed566a612069eb03b7de7"
+    },
+    {
+      "block_id": "page-0342-block-0044",
+      "order": 44,
+      "text": "■\n■Clinical and biochemical TFT \n",
+      "bbox": [
+        286.91461181640625,
+        365.6014099121094,
+        387.999755859375,
+        374.30889892578125
+      ],
+      "text_sha256": "0c51d5f471336fe6c2924201df6e2305f06d0ca9d127ee4affe969a5fce886fa"
+    },
+    {
+      "block_id": "page-0342-block-0045",
+      "order": 45,
+      "text": "­monitoring required\n■\n■Usually needs specialist referral\n",
+      "bbox": [
+        286.91461181640625,
+        374.6014099121094,
+        394.5247802734375,
+        392.30889892578125
+      ],
+      "text_sha256": "cbd769da08543cbb2c9333e23ee70c7d9b9ec52891d3db3986fd2f749a503079"
+    },
+    {
+      "block_id": "page-0342-block-0046",
+      "order": 46,
+      "text": "■\n■Some negative studies\n",
+      "bbox": [
+        286.91461181640625,
+        392.6014099121094,
+        367.1722717285156,
+        401.30889892578125
+      ],
+      "text_sha256": "4b857dec65daa3f77a093c7bb6f3c841ecb5b9641ff821f2405ab4e42b24412f"
+    },
+    {
+      "block_id": "page-0342-block-0047",
+      "order": 47,
+      "text": "■\n■No advantage over antidepressant \n",
+      "bbox": [
+        286.91461181640625,
+        401.6014099121094,
+        407.0497741699219,
+        410.30889892578125
+      ],
+      "text_sha256": "d0fcdfce50fddbec8ccfeb3031597dceca8fd741e24072b031c1da23f67c4f4e"
+    },
+    {
+      "block_id": "page-0342-block-0048",
+      "order": 48,
+      "text": "alone in non-refractory illness20\n",
+      "bbox": [
+        295.9147033691406,
+        410.6014099121094,
+        394.8106384277344,
+        419.30889892578125
+      ],
+      "text_sha256": "ba17069cc6bd626f41d621a7d61f542cc27051eaca1311216866bc82f1290b46"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

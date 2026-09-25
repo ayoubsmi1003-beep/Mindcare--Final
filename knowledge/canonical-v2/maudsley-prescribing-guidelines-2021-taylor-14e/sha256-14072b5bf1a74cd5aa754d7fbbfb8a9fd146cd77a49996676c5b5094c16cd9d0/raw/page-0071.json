@@ -1,0 +1,95 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0071",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 71,
+  "source_page_index": 70,
+  "source_page_display": 71,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "50    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\ntreatment with clozapine. An adequate trial of such an augmentation may need to be \nup to 8–10 weeks (some data suggest 6 weeks may be enough4). Choose a drug that \ndoes not compound the common side effects of clozapine.\nReferences\n\t 1.\t National Institute for Health and Care Excellence. Psychosis and schizophrenia in adults: prevention and management. Clinical Guidance \n[CG178]. 2014 (last checked March 2019); https://www.nice.org.uk/guidance/cg178.\n\t 2.\t Olofinjana B, et al. Antipsychotic drugs – information and choice: a patient survey. Psychiatric Bull 2005;29:369–371.\n\t 3.\t Whiskey E, et al. Evaluation of an antipsychotic information sheet for patients. Int J Psychiatry Clin Pract 2005;9:264–270.\n\t 4.\t Taylor D, et al. Augmentation of clozapine with a second antipsychotic. A meta analysis. Acta Psychiatr Scand 2012;125:15–24.\n",
+  "raw_text_sha256": "b6ca9c901af0e53a70ca42a5cd674be44eff86a8b0b929802d44c8752a5cee5b",
+  "coordinates_sha256": "03e023ca5b88a10cc23bf32d9293a8d7dfef40a13a6c69aea8a9368cb93fb4e0",
+  "block_sequence_sha256": "d381e22d9dddc81a1a1bc4bd3a8eef78beab1ea5e86b3015b20bba7b4a4229a4",
+  "blocks": [
+    {
+      "block_id": "page-0071-block-0000",
+      "order": 0,
+      "text": "50    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "301c4ccd259574540376c5e1f564446e172d7e92697e89b777f02faaee905fb3"
+    },
+    {
+      "block_id": "page-0071-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0071-block-0002",
+      "order": 2,
+      "text": "treatment with clozapine. An adequate trial of such an augmentation may need to be \nup to 8–10 weeks (some data suggest 6 weeks may be enough4). Choose a drug that \ndoes not compound the common side effects of clozapine.\n",
+      "bbox": [
+        70.88909912109375,
+        62.54931640625,
+        436.6692810058594,
+        98.26931762695312
+      ],
+      "text_sha256": "e4e5af908f83eafcd3bc62c3e01ffc1f2bc223ab31fa10bc0afcd9def9f8814f"
+    },
+    {
+      "block_id": "page-0071-block-0003",
+      "order": 3,
+      "text": "References\n",
+      "bbox": [
+        61.88909912109375,
+        121.70431518554688,
+        117.923095703125,
+        134.73931884765625
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0071-block-0004",
+      "order": 4,
+      "text": "\t 1.\t National Institute for Health and Care Excellence. Psychosis and schizophrenia in adults: prevention and management. Clinical Guidance \n",
+      "bbox": [
+        61.88909912109375,
+        139.8253173828125,
+        435.5930480957031,
+        146.85731506347656
+      ],
+      "text_sha256": "aadbbeab802bf1a217c532933bcd13e3cfa981a6281641d9d85afcacc67108bd"
+    },
+    {
+      "block_id": "page-0071-block-0005",
+      "order": 5,
+      "text": "[CG178]. 2014 (last checked March 2019); https://www.nice.org.uk/guidance/cg178.\n\t 2.\t Olofinjana B, et al. Antipsychotic drugs – information and choice: a patient survey. Psychiatric Bull 2005;29:369–371.\n\t 3.\t Whiskey E, et al. Evaluation of an antipsychotic information sheet for patients. Int J Psychiatry Clin Pract 2005;9:264–270.\n\t 4.\t Taylor D, et al. Augmentation of clozapine with a second antipsychotic. A meta analysis. Acta Psychiatr Scand 2012;125:15–24.\n",
+      "bbox": [
+        61.895103454589844,
+        148.8253173828125,
+        403.7090759277344,
+        182.85731506347656
+      ],
+      "text_sha256": "d9ddec9e1c20a124f50afc65c725374fc64fa7fb78067ec8ac3e8f0e3753724c"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

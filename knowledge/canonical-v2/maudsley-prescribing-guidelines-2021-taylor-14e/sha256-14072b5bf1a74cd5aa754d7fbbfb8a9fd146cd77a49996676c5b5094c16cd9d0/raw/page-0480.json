@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0480",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 480,
+  "source_page_index": 479,
+  "source_page_display": 480,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    459\nCHAPTER 4\ntreatment for the prophylaxis and/or treatment of Wernicke–Korsakoff syndrome and \nother vitamin-related neuropsychiatric conditions.\nIn the UK, chlordiazepoxide is the benzodiazepine used for most patients in most \ncentres as it is considered to have a relatively low dependence-forming potential. Some \ncentres use diazepam. A short-acting benzodiazepine such as oxazepam or lorazepam \nmay be used in individuals with impaired liver function.\nThere are three types of assisted withdrawal regimens: fixed-dose reduction (the \nmost common in non-specialist settings), variable-dose reduction (usually results in less \nbenzodiazepine being administered but best reserved for settings where staff have spe-\ncialist skills in managing alcohol withdrawal) and finally front-loading (infrequently \nused, and reserved for severe alcohol withdrawal).2,9 Assisted withdrawal regimens \nshould never be started if BAC is very high or is still rising. Monitor patients for overse-\ndation/respiratory depression.\nFixed-dose reduction regimen\nFixed-dose regimens use can be used in community or non-specialist inpatient/residen-\ntial settings for uncomplicated patients. Patients should be started on a dose of benzo-\ndiazepine selected after an assessment of the severity of alcohol dependence (clinical \nhistory, number of units per drinking day and score on the SADQ. With respect to \nchlordiazepoxide, a general rule of thumb is that the starting dose can be estimated \nfrom current alcohol consumption. For example, if 20 units/day are being consumed, \nthe starting dose should be 20mg four times a day. The dose is then tapered to zero over \n5–10 days. Alcohol withdrawal symptoms should be monitored using a validated \ninstrument such as the CIWA-Ar12 or the SAWS.13\nMild alcohol dependence usually requires very small doses of chlordiazepoxide or \nelse may be managed without medication.\nFor moderate alcohol dependence, a typical regime might be 10–20mg chlordiaze-\npoxide 4 times a day, reducing gradually over 5–7 days. Note that 5–7 days’ treatment \nis adequate and longer treatment is rarely helpful or necessary. It is advisable to moni-\ntor withdrawal and BAC daily before providing the day’s medication. This may mean \nthat community pharmacologically assisted alcohol withdrawals should start on a \nMonday and last for 5 days.\nTable 4.4  Moderate alcohol dependence: example of a \nfixed-dose chlordiazepoxide treatment regimen.\nTotal daily dose (mg)\nDay 1\n20mg qds\n80\nDay 2\n15mg qds\n60\nDay 3\n10mg qds\n40\nDay 4\n5mg qds\n20\nDay 5\n5mg bd\n10\nbd, bis die (twice a day); qds, quarter die sumendum (four times a day).\n",
+  "raw_text_sha256": "f4966391627acaeb3e102047ae717c42a26926175da851ff295ec89e44b51565",
+  "coordinates_sha256": "06538f85c5354683cec8686501f54b8d96431b7f32400d423ed6750b8bf14d42",
+  "block_sequence_sha256": "bd7c9bf7998c76fad21e5c511ab9143a4e9706e650d5cb265e00df7d657ca38e",
+  "blocks": [
+    {
+      "block_id": "page-0480-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    459\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "5f0663df97be6c7586aa6618fcd6b713ee22efd31f251bb24e988d099f260d14"
+    },
+    {
+      "block_id": "page-0480-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0480-block-0002",
+      "order": 2,
+      "text": "treatment for the prophylaxis and/or treatment of Wernicke–Korsakoff syndrome and \nother vitamin-related neuropsychiatric conditions.\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.77001953125,
+        86.27041625976562
+      ],
+      "text_sha256": "cdbe691f760ba5f71fa6c998c28df73b987db021e08baba7e10da264a7dda3c6"
+    },
+    {
+      "block_id": "page-0480-block-0003",
+      "order": 3,
+      "text": "In the UK, chlordiazepoxide is the benzodiazepine used for most patients in most \ncentres as it is considered to have a relatively low dependence-forming potential. Some \ncentres use diazepam. A short-acting benzodiazepine such as oxazepam or lorazepam \nmay be used in individuals with impaired liver function.\n",
+      "bbox": [
+        48.0,
+        86.5504150390625,
+        422.760009765625,
+        134.27041625976562
+      ],
+      "text_sha256": "68c37a153c1c0452406a16b719ecd2feeb703fbb7482bc5f9615d70d201a0175"
+    },
+    {
+      "block_id": "page-0480-block-0004",
+      "order": 4,
+      "text": "There are three types of assisted withdrawal regimens: fixed-dose reduction (the \nmost common in non-specialist settings), variable-dose reduction (usually results in less \nbenzodiazepine being administered but best reserved for settings where staff have spe-\ncialist skills in managing alcohol withdrawal) and finally front-loading (infrequently \nused, and reserved for severe alcohol withdrawal).2,9 Assisted withdrawal regimens \nshould never be started if BAC is very high or is still rising. Monitor patients for overse-\ndation/respiratory depression.\n",
+      "bbox": [
+        48.0,
+        134.3104248046875,
+        422.8099365234375,
+        218.27047729492188
+      ],
+      "text_sha256": "347c64b1a2fc51f8f114c5dcbf5eda8b3eba715c33bd3d7edd2959403d88781e"
+    },
+    {
+      "block_id": "page-0480-block-0005",
+      "order": 5,
+      "text": "Fixed-dose reduction regimen\n",
+      "bbox": [
+        48.00489807128906,
+        236.64047241210938,
+        188.5848846435547,
+        248.490478515625
+      ],
+      "text_sha256": "b122fed278acb141adf961da220dabc6a32e3f25be4fd6163f98d8d19fefffbd"
+    },
+    {
+      "block_id": "page-0480-block-0006",
+      "order": 6,
+      "text": "Fixed-dose regimens use can be used in community or non-specialist inpatient/residen-\ntial settings for uncomplicated patients. Patients should be started on a dose of benzo-\ndiazepine selected after an assessment of the severity of alcohol dependence (clinical \nhistory, number of units per drinking day and score on the SADQ. With respect to \nchlordiazepoxide, a general rule of thumb is that the starting dose can be estimated \nfrom current alcohol consumption. For example, if 20 units/day are being consumed, \nthe starting dose should be 20mg four times a day. The dose is then tapered to zero over \n5–10 days. Alcohol withdrawal symptoms should be monitored using a validated \ninstrument such as the CIWA-Ar12 or the SAWS.13\n",
+      "bbox": [
+        48.00489807128906,
+        254.55047607421875,
+        422.8247985839844,
+        362.2704772949219
+      ],
+      "text_sha256": "456f38581ad3be82253f7c7a419590af66ab8f0e6d338428c62dfdc879c138df"
+    },
+    {
+      "block_id": "page-0480-block-0007",
+      "order": 7,
+      "text": "Mild alcohol dependence usually requires very small doses of chlordiazepoxide or \nelse may be managed without medication.\n",
+      "bbox": [
+        47.999996185302734,
+        362.31048583984375,
+        422.7900390625,
+        386.2704772949219
+      ],
+      "text_sha256": "325cb296cc8c1724134c6cce2339c108fdf1b4d5e34e5f8610da0ed3c7cfeb92"
+    },
+    {
+      "block_id": "page-0480-block-0008",
+      "order": 8,
+      "text": "For moderate alcohol dependence, a typical regime might be 10–20mg chlordiaze-\npoxide 4 times a day, reducing gradually over 5–7 days. Note that 5–7 days’ treatment \nis adequate and longer treatment is rarely helpful or necessary. It is advisable to moni-\ntor withdrawal and BAC daily before providing the day’s medication. This may mean \nthat community pharmacologically assisted alcohol withdrawals should start on a \nMonday and last for 5 days.\n",
+      "bbox": [
+        47.99998474121094,
+        386.31048583984375,
+        422.78997802734375,
+        458.2704772949219
+      ],
+      "text_sha256": "74b1246ea0d858a0bd24bd03b204d8fad5d6777cd798d4117b02f78ef77cc57a"
+    },
+    {
+      "block_id": "page-0480-block-0009",
+      "order": 9,
+      "text": "Table 4.4  Moderate alcohol dependence: example of a \nfixed-dose chlordiazepoxide treatment regimen.\n",
+      "bbox": [
+        133.50900268554688,
+        488.41876220703125,
+        313.1414489746094,
+        507.30377197265625
+      ],
+      "text_sha256": "d39ef3035089f3bc26ea06d112fc7e1ae1ef27adadaaea83ed95ca155cb668a6"
+    },
+    {
+      "block_id": "page-0480-block-0010",
+      "order": 10,
+      "text": "Total daily dose (mg)\n",
+      "bbox": [
+        255.49070739746094,
+        516.2937622070312,
+        328.8406677246094,
+        525.1812744140625
+      ],
+      "text_sha256": "9558ca369bca6f4ca8e382fcb6a829f0b0da895960c2d4cd4016dc702bd93dde"
+    },
+    {
+      "block_id": "page-0480-block-0011",
+      "order": 11,
+      "text": "Day 1\n20mg qds\n80\n",
+      "bbox": [
+        131.50820922851562,
+        532.0962524414062,
+        263.8307189941406,
+        540.8037719726562
+      ],
+      "text_sha256": "45cedab71e95008f4a20604e996b17c472e9607d3b796cd7b43d42dfb04f7a8d"
+    },
+    {
+      "block_id": "page-0480-block-0012",
+      "order": 12,
+      "text": "Day 2\n15mg qds\n60\n",
+      "bbox": [
+        131.50820922851562,
+        547.71875,
+        263.8307189941406,
+        556.42626953125
+      ],
+      "text_sha256": "522a8964aa67675826b41b03d04ba3673d9587272a729ad1f153829b7ef9ecd7"
+    },
+    {
+      "block_id": "page-0480-block-0013",
+      "order": 13,
+      "text": "Day 3\n10mg qds\n40\n",
+      "bbox": [
+        131.50820922851562,
+        563.3412475585938,
+        263.8307189941406,
+        572.0487670898438
+      ],
+      "text_sha256": "cb50249c69b0197243d15b257562d348975beee84ee6c7b52dfe55427aef92a1"
+    },
+    {
+      "block_id": "page-0480-block-0014",
+      "order": 14,
+      "text": "Day 4\n5mg qds\n20\n",
+      "bbox": [
+        131.50820922851562,
+        578.9637451171875,
+        263.8307189941406,
+        587.6712646484375
+      ],
+      "text_sha256": "793dc264a76deba23c03ac2aeb69a288f9bd59d0c0c3848065987737295b1a69"
+    },
+    {
+      "block_id": "page-0480-block-0015",
+      "order": 15,
+      "text": "Day 5\n5mg bd\n10\n",
+      "bbox": [
+        131.50820922851562,
+        594.5862426757812,
+        263.83074951171875,
+        603.2937622070312
+      ],
+      "text_sha256": "c5db631d375828ac07501f234a2a64c34c01a191ce7c38770f42d3c62a203764"
+    },
+    {
+      "block_id": "page-0480-block-0016",
+      "order": 16,
+      "text": "bd, bis die (twice a day); qds, quarter die sumendum (four times a day).\n",
+      "bbox": [
+        127.51072692871094,
+        612.833740234375,
+        340.03814697265625,
+        621.541259765625
+      ],
+      "text_sha256": "c7f938b7543dcf22c53d9367cc4e3e6a3488e399595f0c62607cde1dd2cb18d7"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

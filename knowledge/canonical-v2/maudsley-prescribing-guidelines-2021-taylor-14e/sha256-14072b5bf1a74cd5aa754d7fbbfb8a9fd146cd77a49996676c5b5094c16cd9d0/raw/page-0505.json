@@ -1,0 +1,455 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0505",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 505,
+  "source_page_index": 504,
+  "source_page_display": 505,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "484    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nTable 4.10  Recommended ECG monitoring\nBorderline \nprolonged \nQTc\nAction\nProlonged \nQTc\nAction\nVery \nprolonged \nQTc\nAction\nFemales\n≥470ms\n■\n■Repeat ECG\n■\n■Electrolytes\n■\n■Try to modify \nQT risk factors, \ne.g. cocaine \nuse, spice use, \nmethadone \ndose, psycho-\ntropic medica-\ntions\n■\n■Regular ECG \nuntil normal\n≥500 ms\n■\n■Repeat ECG\n■\n■Electrolytes\n■\n■Try to modify QT \nrisk factors\n■\n■Seek cardiology \nand addiction \nspecialist advice\n■\n■Reduce metha-\ndone dose\n■\n■If persistent \nQTc despite \nreduction, plan \nswitch to bu-\nprenorphine\n■\n■Regular ECGs \nuntil normal\n≥550 ms\n■\n■Urgent cardiology \nand addiction  \nspecialist advice\n■\n■Repeat ECG\n■\n■Electrolytes\n■\n■Try to modify QT \nrisk factors\n■\n■Reduce meth-\nadone and \nre-evaluate \nwithin the week. \nPlan switch to \nbuprenorphine in \ninpatient setting\nMales\n≥440ms\nadherence in prescription opioid-dependent patients.21 There is no significant difference \nbetween buprenorphine and methadone in terms of completion of detoxification treat-\nment, but withdrawal symptoms may resolve more quickly with buprenorphine.52\nSublingual buprenorphine\nThe most commonly prescribed form of buprenorphine is absorbed via the sublingual \nroute. Each tablet takes approximately 5–10 minutes to disintegrate and be absorbed. \nIt is effective in treating opioid dependence because:\n■\n■It alleviates/prevents opioid withdrawal and craving.\n■\n■It reduces the effects of additional opioid use because of its high receptor affinity – \nwhat patients refer to as a ‘blocking’ effect.16–18\n■\n■It is long-acting allowing daily (or less frequent) dosing. The duration of action is \nrelated to the buprenorphine dose administered: low doses (e.g. 2mg) exert effects for \nup to 12 hours; higher doses (e.g. 16–32mg) exert effects for as long as 48–72 hours, \nallowing thrice weekly dosing.\nProlonged-release buprenorphine injection\nA prolonged-release subcutaneous buprenorphine injection (trade name ‘Buvidal’ in the \nUK and EU, Sublocade and others in the US) is licenced in the UK in weekly and \nmonthly injectable form (Table 4.11). Certain patients may have a preference for and/\nor benefit from a weekly or monthly depot, for example, those with work or study \n",
+  "raw_text_sha256": "ddf2ebf42183b671c31b4bc37bc279a92fd0b9ddff551345c8bddceec01848e1",
+  "coordinates_sha256": "fbee127d94d1da94a76584a4d86b32613f74ed4f6420c43fe3aec82c9e40b184",
+  "block_sequence_sha256": "2b20d44c94d51276e01fab870754595c4a5de3152f3ff43229b1573ab50ebb59",
+  "blocks": [
+    {
+      "block_id": "page-0505-block-0000",
+      "order": 0,
+      "text": "484    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "44bb5056d4bfc3a30ba7bc98cf2c713ca4a510b484725b0211b86af33a5e5e0d"
+    },
+    {
+      "block_id": "page-0505-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0505-block-0002",
+      "order": 2,
+      "text": "Table 4.10  Recommended ECG monitoring\n",
+      "bbox": [
+        67.88999938964844,
+        70.08790588378906,
+        208.3499755859375,
+        78.97540283203125
+      ],
+      "text_sha256": "d462a864dbae88ec58acf5d004a5de2ebfeaa968136fc93927a8da788e1a025d"
+    },
+    {
+      "block_id": "page-0505-block-0003",
+      "order": 3,
+      "text": "Borderline \nprolonged \nQTc\nAction\n",
+      "bbox": [
+        100.88980102539062,
+        89.96290588378906,
+        171.16481018066406,
+        118.84539794921875
+      ],
+      "text_sha256": "9de4b191c0327edb627c1bac6256a8fb19a4d1263ac459dcad5b6d4a04061243"
+    },
+    {
+      "block_id": "page-0505-block-0004",
+      "order": 4,
+      "text": "Prolonged \nQTc\nAction\n",
+      "bbox": [
+        209.63980102539062,
+        99.96040344238281,
+        275.5497741699219,
+        118.84539794921875
+      ],
+      "text_sha256": "40d8081b15b41b274a1567416db3423694b5e0ff854759ce005f08a5ad329c93"
+    },
+    {
+      "block_id": "page-0505-block-0005",
+      "order": 5,
+      "text": "Very \nprolonged \nQTc\nAction\n",
+      "bbox": [
+        320.6398010253906,
+        89.95539855957031,
+        385.5522766113281,
+        118.837890625
+      ],
+      "text_sha256": "f202625e06b29c5c891b9c87abaf563099e57ce0e3918e8d0e66398e88be55a8"
+    },
+    {
+      "block_id": "page-0505-block-0006",
+      "order": 6,
+      "text": "Females\n≥470ms\n■\n■Repeat ECG\n",
+      "bbox": [
+        63.892303466796875,
+        128.07789611816406,
+        195.58999633789062,
+        136.97540283203125
+      ],
+      "text_sha256": "7318b40f797018af9f89d87143a86620e9d6a64a88af5b86d6a20cef5fa6b412"
+    },
+    {
+      "block_id": "page-0505-block-0007",
+      "order": 7,
+      "text": "■\n■Electrolytes\n",
+      "bbox": [
+        148.24989318847656,
+        137.2678985595703,
+        192.9349822998047,
+        145.97540283203125
+      ],
+      "text_sha256": "fdb2478b0fdc49731ad1b01c78492f8a4751ce19984aab470ca100db1e174724"
+    },
+    {
+      "block_id": "page-0505-block-0008",
+      "order": 8,
+      "text": "■\n■Try to modify \n",
+      "bbox": [
+        148.24989318847656,
+        146.2678985595703,
+        201.13999938964844,
+        154.97540283203125
+      ],
+      "text_sha256": "0eded07ab4f6339be00f06db35fa5774ca89412a4f304058aa29351e9a574011"
+    },
+    {
+      "block_id": "page-0505-block-0009",
+      "order": 9,
+      "text": "QT risk factors, \ne.g. cocaine \nuse, spice use, \nmethadone \ndose, psycho-\ntropic medica-\ntions\n■\n■Regular ECG \n",
+      "bbox": [
+        148.24989318847656,
+        155.2678985595703,
+        207.2449951171875,
+        226.97540283203125
+      ],
+      "text_sha256": "b26b08837176a3ba31d3e1e48fe2adb1abe896adc838e455904955c7e795502e"
+    },
+    {
+      "block_id": "page-0505-block-0010",
+      "order": 10,
+      "text": "until normal\n",
+      "bbox": [
+        157.25,
+        227.2678985595703,
+        196.00247192382812,
+        235.97540283203125
+      ],
+      "text_sha256": "48efa755783762c6f54904ed3a3547bfc9aea8580a8fe4d6dea793bd3eb8be7c"
+    },
+    {
+      "block_id": "page-0505-block-0011",
+      "order": 11,
+      "text": "≥500 ms\n■\n■Repeat ECG\n",
+      "bbox": [
+        209.6374969482422,
+        128.2678985595703,
+        299.9798278808594,
+        136.97540283203125
+      ],
+      "text_sha256": "3e0718c7cd00c8b8cf1cf9e9ea773b79bdf16104dc0287f2b9ce7e8da849cd11"
+    },
+    {
+      "block_id": "page-0505-block-0012",
+      "order": 12,
+      "text": "■\n■Electrolytes\n",
+      "bbox": [
+        252.6396942138672,
+        137.2678985595703,
+        297.3247985839844,
+        145.97540283203125
+      ],
+      "text_sha256": "fdb2478b0fdc49731ad1b01c78492f8a4751ce19984aab470ca100db1e174724"
+    },
+    {
+      "block_id": "page-0505-block-0013",
+      "order": 13,
+      "text": "■\n■Try to modify QT \n",
+      "bbox": [
+        252.6396942138672,
+        146.2678985595703,
+        316.77978515625,
+        154.97540283203125
+      ],
+      "text_sha256": "0417c085cacc8e9fbcf6d54d3ed759845035629987b6b5595dcb7e70cdad4644"
+    },
+    {
+      "block_id": "page-0505-block-0014",
+      "order": 14,
+      "text": "risk factors\n■\n■Seek cardiology \n",
+      "bbox": [
+        252.6396942138672,
+        155.2678985595703,
+        313.5923156738281,
+        172.97540283203125
+      ],
+      "text_sha256": "e899c119476fdf86fb8699bbf69f4f54d7e0887a3238e8ec48020b01c7a4644e"
+    },
+    {
+      "block_id": "page-0505-block-0015",
+      "order": 15,
+      "text": "and addiction \nspecialist advice\n■\n■Reduce metha-\n",
+      "bbox": [
+        252.6396942138672,
+        173.2678985595703,
+        312.0473327636719,
+        199.97540283203125
+      ],
+      "text_sha256": "38e4ad5911433faa8945dbd7e9d4ec4ef5740855ced87738da48dbd8196b73ee"
+    },
+    {
+      "block_id": "page-0505-block-0016",
+      "order": 16,
+      "text": "done dose\n■\n■If persistent \n",
+      "bbox": [
+        252.6396942138672,
+        200.2678985595703,
+        300.8048400878906,
+        217.97540283203125
+      ],
+      "text_sha256": "45a9313959bec94ace001d3ac329928a2c490d2c614f6248c7ba1134a71d90c0"
+    },
+    {
+      "block_id": "page-0505-block-0017",
+      "order": 17,
+      "text": "QTc despite \nreduction, plan \nswitch to bu-\nprenorphine\n■\n■Regular ECGs \n",
+      "bbox": [
+        252.6396942138672,
+        218.2678985595703,
+        311.9348449707031,
+        262.97540283203125
+      ],
+      "text_sha256": "c4a40360631252af6be942265bf8cc1876a0ee7d02f2f22c5ba87ad0963e43c7"
+    },
+    {
+      "block_id": "page-0505-block-0018",
+      "order": 18,
+      "text": "until normal\n",
+      "bbox": [
+        261.6398010253906,
+        263.2679138183594,
+        300.3923645019531,
+        271.97540283203125
+      ],
+      "text_sha256": "48efa755783762c6f54904ed3a3547bfc9aea8580a8fe4d6dea793bd3eb8be7c"
+    },
+    {
+      "block_id": "page-0505-block-0019",
+      "order": 19,
+      "text": "≥550 ms\n■\n■Urgent cardiology \n",
+      "bbox": [
+        320.6423034667969,
+        128.2678985595703,
+        430.6798400878906,
+        136.97540283203125
+      ],
+      "text_sha256": "e3ea65176a8cd05e1c4ff0b9f4e332d9da33f03ff465a6a842bda1dd980073e6"
+    },
+    {
+      "block_id": "page-0505-block-0020",
+      "order": 20,
+      "text": "and addiction  \nspecialist advice\n■\n■Repeat ECG\n",
+      "bbox": [
+        362.63970947265625,
+        137.2678985595703,
+        422.0473327636719,
+        163.97540283203125
+      ],
+      "text_sha256": "e1cb995ddcad203f00c09d703c6a45488c9bf8dddb483cf6eeff2e8ca54e8268"
+    },
+    {
+      "block_id": "page-0505-block-0021",
+      "order": 21,
+      "text": "■\n■Electrolytes\n",
+      "bbox": [
+        362.63970947265625,
+        164.2678985595703,
+        407.3247985839844,
+        172.97540283203125
+      ],
+      "text_sha256": "fdb2478b0fdc49731ad1b01c78492f8a4751ce19984aab470ca100db1e174724"
+    },
+    {
+      "block_id": "page-0505-block-0022",
+      "order": 22,
+      "text": "■\n■Try to modify QT \n",
+      "bbox": [
+        362.63970947265625,
+        173.2678985595703,
+        426.77978515625,
+        181.97540283203125
+      ],
+      "text_sha256": "0417c085cacc8e9fbcf6d54d3ed759845035629987b6b5595dcb7e70cdad4644"
+    },
+    {
+      "block_id": "page-0505-block-0023",
+      "order": 23,
+      "text": "risk factors\n■\n■Reduce meth-\n",
+      "bbox": [
+        362.63970947265625,
+        182.2678985595703,
+        416.2273254394531,
+        199.97540283203125
+      ],
+      "text_sha256": "fa9205f71ac8ff8cb22ff2fb961671b93a0daa24ca6e75c4c6dd70a0c8569f47"
+    },
+    {
+      "block_id": "page-0505-block-0024",
+      "order": 24,
+      "text": "adone and \nre-evaluate \nwithin the week. \nPlan switch to \nbuprenorphine in \ninpatient setting\n",
+      "bbox": [
+        371.6398010253906,
+        200.2678985595703,
+        429.0299072265625,
+        253.97540283203125
+      ],
+      "text_sha256": "be66f734257fdc51e7e738bee2318926a1a8af57cc38f6431d99ee69af676fa4"
+    },
+    {
+      "block_id": "page-0505-block-0025",
+      "order": 25,
+      "text": "Males\n≥440ms\n",
+      "bbox": [
+        63.892303466796875,
+        146.2154083251953,
+        126.80979919433594,
+        155.1029052734375
+      ],
+      "text_sha256": "eadd3d30673d949385eb2b2d88f6b15bd7ef262daeb74e95347e030432c70302"
+    },
+    {
+      "block_id": "page-0505-block-0026",
+      "order": 26,
+      "text": "adherence in prescription opioid-dependent patients.21 There is no significant difference \nbetween buprenorphine and methadone in terms of completion of detoxification treat-\nment, but withdrawal symptoms may resolve more quickly with buprenorphine.52\n",
+      "bbox": [
+        61.8876953125,
+        302.7632751464844,
+        436.687744140625,
+        338.4832763671875
+      ],
+      "text_sha256": "ea72ed298b53505ffcad3c4ca057bbbca9f82d57f4a675d8a8fc4e6451720b10"
+    },
+    {
+      "block_id": "page-0505-block-0027",
+      "order": 27,
+      "text": "Sublingual buprenorphine\n",
+      "bbox": [
+        61.88999938964844,
+        356.853271484375,
+        185.239990234375,
+        368.7032775878906
+      ],
+      "text_sha256": "4563809e9076334b39bdca1c1f93366a11c645c754f1790f285a009a4d21e1c6"
+    },
+    {
+      "block_id": "page-0505-block-0028",
+      "order": 28,
+      "text": "The most commonly prescribed form of buprenorphine is absorbed via the sublingual \nroute. Each tablet takes approximately 5–10 minutes to disintegrate and be absorbed. \nIt is effective in treating opioid dependence because:\n",
+      "bbox": [
+        61.88999938964844,
+        374.7632751464844,
+        436.6999816894531,
+        410.4832763671875
+      ],
+      "text_sha256": "3ec1fc2e992357fa6a20faf350e6de277958f4a1f8256056cba5ad0ca144eb64"
+    },
+    {
+      "block_id": "page-0505-block-0029",
+      "order": 29,
+      "text": "■\n■It alleviates/prevents opioid withdrawal and craving.\n",
+      "bbox": [
+        61.88990020751953,
+        416.7632751464844,
+        297.6000061035156,
+        428.4832763671875
+      ],
+      "text_sha256": "d87106850d3244aa2d7afbfeec7e4db343b7588e283993d3db9df8c29b3ed214"
+    },
+    {
+      "block_id": "page-0505-block-0030",
+      "order": 30,
+      "text": "■\n■It reduces the effects of additional opioid use because of its high receptor affinity – \n",
+      "bbox": [
+        61.88990020751953,
+        428.7633056640625,
+        436.679931640625,
+        440.4833068847656
+      ],
+      "text_sha256": "47967e2ae10707d1805c39527867f10b97db7149743fa4c162f4f45b7eedd7d5"
+    },
+    {
+      "block_id": "page-0505-block-0031",
+      "order": 31,
+      "text": "what patients refer to as a ‘blocking’ effect.16–18\n",
+      "bbox": [
+        70.88999938964844,
+        440.7633056640625,
+        272.70904541015625,
+        452.4833068847656
+      ],
+      "text_sha256": "401e412eee08acab94678089982d50c51b8f07157005348b53dd59972830aa26"
+    },
+    {
+      "block_id": "page-0505-block-0032",
+      "order": 32,
+      "text": "■\n■It is long-acting allowing daily (or less frequent) dosing. The duration of action is \n",
+      "bbox": [
+        61.88999938964844,
+        452.7633056640625,
+        436.699951171875,
+        464.4833068847656
+      ],
+      "text_sha256": "609c02b2b7ebb494d0fc428bff0c7cfc594e034d5affbde6327c250448d83b46"
+    },
+    {
+      "block_id": "page-0505-block-0033",
+      "order": 33,
+      "text": "related to the buprenorphine dose administered: low doses (e.g. 2mg) exert effects for \nup to 12 hours; higher doses (e.g. 16–32mg) exert effects for as long as 48–72 hours, \nallowing thrice weekly dosing.\n",
+      "bbox": [
+        70.88999938964844,
+        464.7633056640625,
+        436.6399230957031,
+        500.4833068847656
+      ],
+      "text_sha256": "0826c4b4a15f68e17829682dd6299426ba67b872a47de296b9b4475ad9e3cd19"
+    },
+    {
+      "block_id": "page-0505-block-0034",
+      "order": 34,
+      "text": "Prolonged-release buprenorphine injection\n",
+      "bbox": [
+        61.88999938964844,
+        518.8533325195312,
+        264.14996337890625,
+        530.7033081054688
+      ],
+      "text_sha256": "2282a63bbcdbe6b8e7b1d0898d76bd34c541403d69f41583bfa63b07de3dda03"
+    },
+    {
+      "block_id": "page-0505-block-0035",
+      "order": 35,
+      "text": "A prolonged-release subcutaneous buprenorphine injection (trade name ‘Buvidal’ in the \nUK and EU, Sublocade and others in the US) is licenced in the UK in weekly and \nmonthly injectable form (Table 4.11). Certain patients may have a preference for and/\nor benefit from a weekly or monthly depot, for example, those with work or study \n",
+      "bbox": [
+        61.88999938964844,
+        536.7633056640625,
+        436.69989013671875,
+        584.4833374023438
+      ],
+      "text_sha256": "ee47e71e503aacb4a9ef1f5a7b8168e9f112c08b43226bc9a5f109cfa5eec7aa"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,395 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0890",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 890,
+  "source_page_index": 889,
+  "source_page_display": 890,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Other substances    869\nCHAPTER 12\nAnxiety disorders\n■\n■Caffeine increases vigilance, decreases reaction times, increases sleep latency and \nworsens sleep quality – effects that may be more marked in poor metabolisers.\n■\n■May precipitate or worsen generalised anxiety and panic attacks;40 vulnerability to \nthese effects may be genetically determined.9\n■\n■Effects are so marked that caffeine intoxication should always be considered when \npatients complain of anxiety symptoms or insomnia.\n■\n■Symptoms may diminish considerably or even abate completely if caffeine is avoided.41\n■\n■Patients with panic disorder consume much more caffeine than controls,42 but the \nreasons for this are not clear.\nOther disorders\nWeak evidence supports the benefit of caffeine in attention deficit hyperactivity disor-\nder (ADHD)43 and that high caffeine consumption may protect against late-life cogni-\ntive decline.44\nSummary\nCaffeine:\n■\n■is present in high quantities in coffee and some soft drinks, particularly energy drinks.\n■\n■may worsen psychosis and anxiety. Young people may be particularly vulnerable.\n■\n■inhibits clozapine metabolism.\n■\n■may induce intoxication which is characterised by psychomotor agitation and ram-\nbling speech.\n■\n■may be associated with toxicity when co-administered with CYP1A2 inhibitors such \nas fluvoxamine.\n■\n■can enhance the reinforcing effects of nicotine and possibly other drugs of abuse.\nReferences\n\t 1.\t Rihs M, et al. Caffeine consumption in hospitalized psychiatric patients. Eur Arch Psychiatry Clin Neurosci 1996; 246:83–92.\n\t 2.\t Clementz GL, et al. Psychotropic effects of caffeine. Am Fam Physician 1988; 37:167–172.\n\t 3.\t Ogawa N, et al. Clinical importance of caffeine dependence and abuse. Psychiatry Clin Neurosci 2007; 61:263–268.\n\t 4.\t Pharmaceutical Press. Martindale: the complete drug reference (online). 2020. https://www.medicinescomplete.com/.\n\t 5.\t Adolfo AB, et al. Effects of smoking cues on caffeine urges in heavy smokers and caffeine consumers with and without schizophrenia. \nSchizophr Res 2009; 107:192–197.\n\t 6.\t Grant JE, et al. Caffeine’s influence on gambling behavior and other types of impulsivity. Addict Behav 2018; 76:156–160.\n\t 7.\t Sawynok J. Pharmacological rationale for the clinical use of caffeine. Drugs 1995; 49:37–50.\n\t 8.\t O’Keefe JH, et al. Effects of habitual coffee consumption on cardiometabolic disease, cardiovascular health, and all-cause mortality. \nJAmCollCardiol 2013; 62:1043–1051.\n\t 9.\t Bergin JE, et al. Common psychiatric disorders and caffeine use, tolerance, and withdrawal: an examination of shared genetic and environ-\nmental effects. TwinResHumGenet 2012; 15:473–482.\n\t10.\t Silverman K, et al. Withdrawal syndrome after the double-blind cessation of caffeine consumption. N Engl J Med 1992; 327:1109–1114.\n\t11.\t Butler MA, et al. Determination of CYP1A2 and NAT2 phenotypes in human populations by analysis of caffeine urinary metabolites. \nPharmacogenetics 1992; 2:116–127.\n\t12.\t Kaplan GB, et al. Dose-dependent pharmacokinetics and psychomotor effects of caffeine in humans. J Clin Pharmacol 1997; 37:693–703.\n\t13.\t Medicines Complete. Stockley’s drug interactions. 2020. https://www.medicinescomplete.com/.\n\t14.\t Baethge C, et al. Coffee and cigarette use: association with suicidal acts in 352 Sardinian bipolar disorder patients. Bipolar Disorders 2009; \n11:494–503.\n",
+  "raw_text_sha256": "16c0d3606e4d7c8d22f81f93ed60fe63df3a919644c74836b79e05671fa63412",
+  "coordinates_sha256": "f320346e42c8bbd93f195faf4f89800f856fe3fb2cd0c1e41ac448596d1feeb7",
+  "block_sequence_sha256": "b604945135f98da668073dbb7766fe9a5ee9399b01c2d11a8c3f8a9a60469ede",
+  "blocks": [
+    {
+      "block_id": "page-0890-block-0000",
+      "order": 0,
+      "text": "Other substances    869\n",
+      "bbox": [
+        321.96881103515625,
+        31.395221710205078,
+        420.00079345703125,
+        41.0272216796875
+      ],
+      "text_sha256": "455c964a1b015199899407548a59936a2d1958f9b20a59f48fc68b23fc8c3e33"
+    },
+    {
+      "block_id": "page-0890-block-0001",
+      "order": 1,
+      "text": "CHAPTER 12\n",
+      "bbox": [
+        454.4096984863281,
+        206.75430297851562,
+        463.88970947265625,
+        252.54629516601562
+      ],
+      "text_sha256": "f1eaa35bf02463d3796518e98cd7bcaee85367df0bd183e9c8e123aa82bb6911"
+    },
+    {
+      "block_id": "page-0890-block-0002",
+      "order": 2,
+      "text": "Anxiety disorders\n",
+      "bbox": [
+        48.039398193359375,
+        62.31546401977539,
+        138.910400390625,
+        75.3504638671875
+      ],
+      "text_sha256": "fd05e79fb8723aa267e9f3fadaf725edd302e6eace869cdcb84acfdb73cfecd0"
+    },
+    {
+      "block_id": "page-0890-block-0003",
+      "order": 3,
+      "text": "■\n■Caffeine increases vigilance, decreases reaction times, increases sleep latency and \n",
+      "bbox": [
+        48.03929901123047,
+        81.16046142578125,
+        422.81451416015625,
+        92.88046264648438
+      ],
+      "text_sha256": "e84b0ceda3af3da8ad749f322680457672528dfb043bf6b1bf7a9bcf16c86f84"
+    },
+    {
+      "block_id": "page-0890-block-0004",
+      "order": 4,
+      "text": "worsens sleep quality – effects that may be more marked in poor metabolisers.\n",
+      "bbox": [
+        56.844398498535156,
+        93.16046142578125,
+        394.6244812011719,
+        104.88046264648438
+      ],
+      "text_sha256": "1d10015736e58666f027e7f22fd665d68c9c1c3293c164fc45868465f32d019a"
+    },
+    {
+      "block_id": "page-0890-block-0005",
+      "order": 5,
+      "text": "■\n■May precipitate or worsen generalised anxiety and panic attacks;40 vulnerability to \n",
+      "bbox": [
+        48.03929901123047,
+        105.16046142578125,
+        422.8190612792969,
+        116.88046264648438
+      ],
+      "text_sha256": "1b5e1a73d74887831592954e5e3c98f78980ca33ea4debf3eb9884ff7a41e2a6"
+    },
+    {
+      "block_id": "page-0890-block-0006",
+      "order": 6,
+      "text": "these effects may be genetically determined.9\n",
+      "bbox": [
+        56.849090576171875,
+        117.16046142578125,
+        247.81307983398438,
+        128.88046264648438
+      ],
+      "text_sha256": "a03e7cf9b15d8b412be14015ff8c19caa254055f14e74843d4dcaab3ba14aaf8"
+    },
+    {
+      "block_id": "page-0890-block-0007",
+      "order": 7,
+      "text": "■\n■Effects are so marked that caffeine intoxication should always be considered when \n",
+      "bbox": [
+        48.03929901123047,
+        129.16046142578125,
+        422.814453125,
+        140.88046264648438
+      ],
+      "text_sha256": "a6854963e61d91241ed83341482d58a80e7bbf3c4ccdaf69bfcf5bb3c85f5069"
+    },
+    {
+      "block_id": "page-0890-block-0008",
+      "order": 8,
+      "text": "patients complain of anxiety symptoms or insomnia.\n",
+      "bbox": [
+        56.844398498535156,
+        141.16046142578125,
+        283.5243835449219,
+        152.88046264648438
+      ],
+      "text_sha256": "264afa83002921f3956c7fed9df3ab40debf458664b762af0fe163a3a3c2b25b"
+    },
+    {
+      "block_id": "page-0890-block-0009",
+      "order": 9,
+      "text": "■\n■Symptoms may diminish considerably or even abate completely if caffeine is avoided.41\n",
+      "bbox": [
+        48.03929901123047,
+        153.16046142578125,
+        420.039794921875,
+        164.88046264648438
+      ],
+      "text_sha256": "5d7464e580c27a2d40948cf603398918009daffcf1ea1f2ee59f46dcbcfa172f"
+    },
+    {
+      "block_id": "page-0890-block-0010",
+      "order": 10,
+      "text": "■\n■Patients with panic disorder consume much more caffeine than controls,42 but the \n",
+      "bbox": [
+        48.03929901123047,
+        165.16046142578125,
+        422.81524658203125,
+        176.88046264648438
+      ],
+      "text_sha256": "28cca7caeaded4912364c65afd91983a48ddcf7a43c2be7bcf0bc1d85b8b1bdd"
+    },
+    {
+      "block_id": "page-0890-block-0011",
+      "order": 11,
+      "text": "reasons for this are not clear.\n",
+      "bbox": [
+        56.845306396484375,
+        177.16046142578125,
+        181.31529235839844,
+        188.88046264648438
+      ],
+      "text_sha256": "4edc8975e33767ad52b01ddf8b72fd6e9f6a1f272ab2ce59734c368e68593a97"
+    },
+    {
+      "block_id": "page-0890-block-0012",
+      "order": 12,
+      "text": "Other disorders\n",
+      "bbox": [
+        48.039398193359375,
+        212.31549072265625,
+        128.51539611816406,
+        225.35049438476562
+      ],
+      "text_sha256": "7957cc9d6730ab5d7be202c5f6b56bf68033adc990bf1a729a1428de99cc3dce"
+    },
+    {
+      "block_id": "page-0890-block-0013",
+      "order": 13,
+      "text": "Weak evidence supports the benefit of caffeine in attention deficit hyperactivity disor-\nder (ADHD)43 and that high caffeine consumption may protect against late-life cogni-\ntive decline.44\n",
+      "bbox": [
+        48.039398193359375,
+        231.16049194335938,
+        420.0508728027344,
+        266.8804931640625
+      ],
+      "text_sha256": "624a08f126bfbcdd5fa3330cc1cef59a9307eba6d93090cba43dc79c97aba1ec"
+    },
+    {
+      "block_id": "page-0890-block-0014",
+      "order": 14,
+      "text": "Summary\n",
+      "bbox": [
+        48.039398193359375,
+        284.31549072265625,
+        96.94539642333984,
+        297.3504943847656
+      ],
+      "text_sha256": "3cbb36aca330b3bd113955dfbada0adb7a5f95ad9f678bd61f175406c6a37e95"
+    },
+    {
+      "block_id": "page-0890-block-0015",
+      "order": 15,
+      "text": "Caffeine:\n",
+      "bbox": [
+        48.039398193359375,
+        303.1604919433594,
+        86.91940307617188,
+        314.8804931640625
+      ],
+      "text_sha256": "0cf2f5b42738b4b64d7a09adb36ba87a0263429e899905c50b060e99d698f6c8"
+    },
+    {
+      "block_id": "page-0890-block-0016",
+      "order": 16,
+      "text": "■\n■is present in high quantities in coffee and some soft drinks, particularly energy drinks.\n",
+      "bbox": [
+        48.03929901123047,
+        321.1604919433594,
+        420.45440673828125,
+        332.8804931640625
+      ],
+      "text_sha256": "ae6297ce2dc57dac3cfbbc9a1f3ff137ab091b14271145029a696e7db8f200d0"
+    },
+    {
+      "block_id": "page-0890-block-0017",
+      "order": 17,
+      "text": "■\n■may worsen psychosis and anxiety. Young people may be particularly vulnerable.\n",
+      "bbox": [
+        48.03929901123047,
+        333.1604919433594,
+        406.06439208984375,
+        344.8804931640625
+      ],
+      "text_sha256": "d312dfd1bd5b028325dee14db1e88064fa497b9b60fc5bec7cb6db0fff83720d"
+    },
+    {
+      "block_id": "page-0890-block-0018",
+      "order": 18,
+      "text": "■\n■inhibits clozapine metabolism.\n",
+      "bbox": [
+        48.03929901123047,
+        345.1604919433594,
+        187.96438598632812,
+        356.8804931640625
+      ],
+      "text_sha256": "30ba29c33f71f826da70c446c479ae41b512063b4e0919ab1edb8e61f8f2edcf"
+    },
+    {
+      "block_id": "page-0890-block-0019",
+      "order": 19,
+      "text": "■\n■may induce intoxication which is characterised by psychomotor agitation and ram-\n",
+      "bbox": [
+        48.03929901123047,
+        357.1604919433594,
+        420.0244140625,
+        368.8804931640625
+      ],
+      "text_sha256": "fed55e763cd1126f5e90dffc873be8e52d66a2d1d3e8996f986ac7e5e4324d7d"
+    },
+    {
+      "block_id": "page-0890-block-0020",
+      "order": 20,
+      "text": "bling speech.\n",
+      "bbox": [
+        56.844398498535156,
+        369.1604919433594,
+        112.41439819335938,
+        380.8804931640625
+      ],
+      "text_sha256": "62b879676c974a252d1757549cd5cffa54a1ca467d692060fb9c6bae18af8de2"
+    },
+    {
+      "block_id": "page-0890-block-0021",
+      "order": 21,
+      "text": "■\n■may be associated with toxicity when co-administered with CYP1A2 inhibitors such \n",
+      "bbox": [
+        48.03929901123047,
+        381.1604919433594,
+        422.8044128417969,
+        392.8804931640625
+      ],
+      "text_sha256": "e2d40d4d6102c102af445599f91b8a271fca92262361a3d8d7cf11f36b38061d"
+    },
+    {
+      "block_id": "page-0890-block-0022",
+      "order": 22,
+      "text": "as fluvoxamine.\n",
+      "bbox": [
+        56.844398498535156,
+        393.1604919433594,
+        125.18438720703125,
+        404.8804931640625
+      ],
+      "text_sha256": "b4b7fdffb045b7ee9f3f606aac9fdca76ca6a11ab64ec4d512d915f2c642e342"
+    },
+    {
+      "block_id": "page-0890-block-0023",
+      "order": 23,
+      "text": "■\n■can enhance the reinforcing effects of nicotine and possibly other drugs of abuse.\n",
+      "bbox": [
+        48.03929901123047,
+        405.1604919433594,
+        405.24444580078125,
+        416.8804931640625
+      ],
+      "text_sha256": "c60be55be5252abbf01cec6cca23c60331be6e18d55ec8f4ce10cb0a794ec1dc"
+    },
+    {
+      "block_id": "page-0890-block-0024",
+      "order": 24,
+      "text": "References\n",
+      "bbox": [
+        48.039398193359375,
+        440.31549072265625,
+        104.07340240478516,
+        453.3504943847656
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0890-block-0025",
+      "order": 25,
+      "text": "\t 1.\t Rihs M, et al. Caffeine consumption in hospitalized psychiatric patients. Eur Arch Psychiatry Clin Neurosci 1996; 246:83–92.\n\t 2.\t Clementz GL, et al. Psychotropic effects of caffeine. Am Fam Physician 1988; 37:167–172.\n\t 3.\t Ogawa N, et al. Clinical importance of caffeine dependence and abuse. Psychiatry Clin Neurosci 2007; 61:263–268.\n\t 4.\t Pharmaceutical Press. Martindale: the complete drug reference (online). 2020. https://www.medicinescomplete.com/.\n\t 5.\t Adolfo AB, et al. Effects of smoking cues on caffeine urges in heavy smokers and caffeine consumers with and without schizophrenia. \n",
+      "bbox": [
+        48.039398193359375,
+        458.29248046875,
+        421.7674865722656,
+        501.468505859375
+      ],
+      "text_sha256": "003568861a74ee1d95943265d39a38d80ec5eb3af6487cdd7356e471b1746ccf"
+    },
+    {
+      "block_id": "page-0890-block-0026",
+      "order": 26,
+      "text": "Schizophr Res 2009; 107:192–197.\n\t 6.\t Grant JE, et al. Caffeine’s influence on gambling behavior and other types of impulsivity. Addict Behav 2018; 76:156–160.\n\t 7.\t Sawynok J. Pharmacological rationale for the clinical use of caffeine. Drugs 1995; 49:37–50.\n\t 8.\t O’Keefe JH, et al. Effects of habitual coffee consumption on cardiometabolic disease, cardiovascular health, and all-cause mortality. \n",
+      "bbox": [
+        48.069400787353516,
+        503.29248046875,
+        421.72540283203125,
+        537.4684448242188
+      ],
+      "text_sha256": "dec2d10e69a7803930bf4d3c3b60c4a4f07cff5993712e8a5def497e7323f492"
+    },
+    {
+      "block_id": "page-0890-block-0027",
+      "order": 27,
+      "text": "JAmCollCardiol 2013; 62:1043–1051.\n\t 9.\t Bergin JE, et al. Common psychiatric disorders and caffeine use, tolerance, and withdrawal: an examination of shared genetic and environ-\n",
+      "bbox": [
+        48.087398529052734,
+        539.29248046875,
+        420.0992736816406,
+        555.4684448242188
+      ],
+      "text_sha256": "4222f95730541c7f8da1e0ab66a5fcca336ac3a4d05aaac4fd71319e9ab6f15f"
+    },
+    {
+      "block_id": "page-0890-block-0028",
+      "order": 28,
+      "text": "mental effects. TwinResHumGenet 2012; 15:473–482.\n\t10.\t Silverman K, et al. Withdrawal syndrome after the double-blind cessation of caffeine consumption. N Engl J Med 1992; 327:1109–1114.\n\t11.\t Butler MA, et al. Determination of CYP1A2 and NAT2 phenotypes in human populations by analysis of caffeine urinary metabolites. \n",
+      "bbox": [
+        48.09339904785156,
+        557.29248046875,
+        421.7253723144531,
+        582.4684448242188
+      ],
+      "text_sha256": "de0eb060108ea18af161cdafdf1b4bc17d5e75957695c9772730ef764e9adfda"
+    },
+    {
+      "block_id": "page-0890-block-0029",
+      "order": 29,
+      "text": "Pharmacogenetics 1992; 2:116–127.\n\t12.\t Kaplan GB, et al. Dose-dependent pharmacokinetics and psychomotor effects of caffeine in humans. J Clin Pharmacol 1997; 37:693–703.\n\t13.\t Medicines Complete. Stockley’s drug interactions. 2020. https://www.medicinescomplete.com/.\n\t14.\t Baethge C, et al. Coffee and cigarette use: association with suicidal acts in 352 Sardinian bipolar disorder patients. Bipolar Disorders 2009; \n",
+      "bbox": [
+        48.10540008544922,
+        584.29248046875,
+        421.779541015625,
+        618.4684448242188
+      ],
+      "text_sha256": "1bd0c3a14c62aeeb209a705b63e27b2dd2481895537eb7bc2ad260f80a820a04"
+    },
+    {
+      "block_id": "page-0890-block-0030",
+      "order": 30,
+      "text": "11:494–503.\n",
+      "bbox": [
+        59.121395111083984,
+        620.29248046875,
+        92.1453857421875,
+        627.4684448242188
+      ],
+      "text_sha256": "f835b20fb35d1003f5a565e3b686c913ae15233c3e5a3fb374c13899f603bc7c"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

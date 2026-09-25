@@ -1,0 +1,239 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0709",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 709,
+  "source_page_index": 708,
+  "source_page_display": 709,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "688    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 7\nfathers used an SSRI before conception proposed this may be due to the underlying \nindications related to SSRI use.149\n■\n■Poorer cognitive and gross motor development150 and problems with speech and lan-\nguage,151–153 behaviour154,155 and fine motor control and have been reported156 but it is \nnot clear whether or not this is due to confounding.\n■\n■Exposure to selective serotonin reuptake inhibitors or serotonin norepinephrine \nreuptake inhibitors during pregnancy is associated with an increased risk for persis-\ntent pulmonary hypertension of the newborn. The risk with sertraline may be lower \nthan with other SSRIs.157 The absolute risk appears to be small and more modest than \npreviously estimated158 and may exist only in late pregnancy exposure.159\n■\n■An association between SSRIs and an increased the risk of postpartum haemorrhage \nhas been reported.84,160 However, SSRIs have also been shown not to significantly \nincrease the risk of blood loss at delivery.161 Obstetricians and midwives need to be \naware of this possible increase in risk and monitor for blood loss after labour.\nOther antidepressants\n■\n■Duloxetine is unlikely to be a major teratogen. A large cohort study using propensity \nscores and several sensitivity analyses found that use in pregnancy may be associated \nwith a small increase in the risk of postpartum hemorrhage.162 No specific risks were \nidentified with duloxetine in a study that prospectively followed 233 women through \npregnancy and delivery.163 However, a case of suspected withdrawal syndrome, \nrequiring hospitalisation has been reported.164\n■\n■Rather more scarce data suggest the absence of teratogenic potential with moclobe-\nmide165 and reboxetine.166 Venlafaxine has been associated with cardiac defects, anen-\ncephaly and cleft palate,167 neonatal withdrawal and poor neonatal adaptation \nsyndrome102 and PPH.162 However, newer data suggests that first trimester use appears \nnot be associated with an increased risk of major congenital malformations.168 Second \ntrimester exposure to venlafaxine has been associated with babies being born small \nfor gestational age.169 An observational study of 281 venlafaxine exposed pregnan-\ncies did not find conclusive evidence that venlafaxine increases the risk of adverse \npregnancy or foetal outcomes.170 A population study which aimed to examine the risk \nof specific birth defects with individual antidepressants reported venlafaxine use to \nbe associated with a higher risk. However, the study only partially accounted for the \nunderlying condition.111 Trazodone, bupropion (amfebutamone) and mirtazapine \nhave few data supporting their safety.102,171,172 Data suggest that both bupropion and \nmirtazapine are not associated with malformations but, like SSRIs, may be linked to \nan increased rate of spontaneous abortion.173–175 First trimester exposure to bupro-\npion may be associated with a slightly elevated risk of ventricular septal defects.176 \nBupropion exposure in-utero has been associated with an increased risk of ADHD in \nyoung children.177,178\n■\n■MAOIs should be avoided in pregnancy because of a suspected increased risk of con-\ngenital malformations and because of the risk of hypertensive crisis.179\n■\n■There is no evidence to suggest that ECT causes harm to either the mother or foetus \nduring pregnancy180 although general anaesthesia is of course not without risks. \n",
+  "raw_text_sha256": "8f06b13c8d7910217ac0324908f2fda1997ab5a04541124283597ac11810b781",
+  "coordinates_sha256": "82fb1d873c79fc5aa77af8e29223bbc352dbe26b49eb2ae5e261347c47bef3b1",
+  "block_sequence_sha256": "127b0514d8d0f162f5e7c345d0862439531e6297adceb9a15f21365c7115d0e8",
+  "blocks": [
+    {
+      "block_id": "page-0709-block-0000",
+      "order": 0,
+      "text": "688    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "912275869dfbf55861b9518957091313076013e94c43c863c0ac178c119da7a8"
+    },
+    {
+      "block_id": "page-0709-block-0001",
+      "order": 1,
+      "text": "CHAPTER 7\n",
+      "bbox": [
+        18.520000457763672,
+        472.7144775390625,
+        28.0,
+        514.0584716796875
+      ],
+      "text_sha256": "6d1a2318236627f2d413db0336034ac4d71cea7172bd0baddf04c66a07292590"
+    },
+    {
+      "block_id": "page-0709-block-0002",
+      "order": 2,
+      "text": "fathers used an SSRI before conception proposed this may be due to the underlying \nindications related to SSRI use.149\n",
+      "bbox": [
+        70.88999938964844,
+        62.55029296875,
+        436.6098327636719,
+        86.27029418945312
+      ],
+      "text_sha256": "a4ca253d6bdb0de889097735a398254ae0c2f467a6afb606ab2129b8d31e3a54"
+    },
+    {
+      "block_id": "page-0709-block-0003",
+      "order": 3,
+      "text": "■\n■Poorer cognitive and gross motor development150 and problems with speech and lan-\n",
+      "bbox": [
+        61.88990020751953,
+        86.55029296875,
+        433.90277099609375,
+        98.27029418945312
+      ],
+      "text_sha256": "a9dc434e84aeb112968e8db53532a6e9f7fa4ab6336bd8edcae9e0a7f16bcc58"
+    },
+    {
+      "block_id": "page-0709-block-0004",
+      "order": 4,
+      "text": "guage,151–153 behaviour154,155 and fine motor control and have been reported156 but it is \nnot clear whether or not this is due to confounding.\n",
+      "bbox": [
+        70.88900756835938,
+        98.55029296875,
+        436.6689453125,
+        122.27029418945312
+      ],
+      "text_sha256": "3311c56cb2a2d757d3da74c5d30315d4dd449d43bd501081ea8ba44b6ec2b925"
+    },
+    {
+      "block_id": "page-0709-block-0005",
+      "order": 5,
+      "text": "■\n■Exposure to selective serotonin reuptake inhibitors or serotonin norepinephrine \n",
+      "bbox": [
+        61.88990020751953,
+        122.55029296875,
+        436.6499938964844,
+        134.27029418945312
+      ],
+      "text_sha256": "bd55d5b9d918a3e491e6cdaf214dd7ae16a85f123f2d11d03eec0de996bd7567"
+    },
+    {
+      "block_id": "page-0709-block-0006",
+      "order": 6,
+      "text": "reuptake inhibitors during pregnancy is associated with an increased risk for persis-\ntent pulmonary hypertension of the newborn. The risk with sertraline may be lower \nthan with other SSRIs.157 The absolute risk appears to be small and more modest than \npreviously estimated158 and may exist only in late pregnancy exposure.159\n",
+      "bbox": [
+        70.88619995117188,
+        134.55029296875,
+        436.626220703125,
+        182.27029418945312
+      ],
+      "text_sha256": "cea22ba72ec6c9f83ef74050ee84d7f26f350ede31d1f8f175db6109f16102fe"
+    },
+    {
+      "block_id": "page-0709-block-0007",
+      "order": 7,
+      "text": "■\n■An association between SSRIs and an increased the risk of postpartum haemorrhage \n",
+      "bbox": [
+        61.88990020751953,
+        182.55029296875,
+        436.6899719238281,
+        194.27029418945312
+      ],
+      "text_sha256": "f4c590948957ead894a91b9685df5b0700a800cf49ceb653477a9d60ff543e84"
+    },
+    {
+      "block_id": "page-0709-block-0008",
+      "order": 8,
+      "text": "has been reported.84,160 However, SSRIs have also been shown not to significantly \nincrease the risk of blood loss at delivery.161 Obstetricians and midwives need to be \naware of this possible increase in risk and monitor for blood loss after labour.\n",
+      "bbox": [
+        70.88677978515625,
+        194.55029296875,
+        436.6888122558594,
+        230.27029418945312
+      ],
+      "text_sha256": "af4d5a45d84c978c5a439dca3f613ec2e2097a5f705158eb8681ce3d8e08b68d"
+    },
+    {
+      "block_id": "page-0709-block-0009",
+      "order": 9,
+      "text": "Other antidepressants\n",
+      "bbox": [
+        61.88677978515625,
+        254.64028930664062,
+        166.34677124023438,
+        266.49029541015625
+      ],
+      "text_sha256": "9e58e142bdb6fab27cfefbdc23490ba6b17c47d1397cea2aaf82144c1dfc0407"
+    },
+    {
+      "block_id": "page-0709-block-0010",
+      "order": 10,
+      "text": "■\n■Duloxetine is unlikely to be a major teratogen. A large cohort study using propensity \n",
+      "bbox": [
+        61.88990020751953,
+        278.55029296875,
+        436.64996337890625,
+        290.2702941894531
+      ],
+      "text_sha256": "e2d7bb2bbd71ea5575b014458351224a64298558784424045d85ccdb80a8e41c"
+    },
+    {
+      "block_id": "page-0709-block-0011",
+      "order": 11,
+      "text": "scores and several sensitivity analyses found that use in pregnancy may be associated \nwith a small increase in the risk of postpartum hemorrhage.162 No specific risks were \nidentified with duloxetine in a study that prospectively followed 233 women through \npregnancy and delivery.163 However, a case of suspected withdrawal syndrome, \nrequiring hospitalisation has been reported.164\n",
+      "bbox": [
+        70.88990020751953,
+        290.55029296875,
+        436.69989013671875,
+        350.2702941894531
+      ],
+      "text_sha256": "9449484a71bdf6d5d6fd97c7f23201b0476b3921607029896848d344620fd057"
+    },
+    {
+      "block_id": "page-0709-block-0012",
+      "order": 12,
+      "text": "■\n■Rather more scarce data suggest the absence of teratogenic potential with moclobe-\n",
+      "bbox": [
+        61.88990020751953,
+        350.55029296875,
+        433.8398132324219,
+        362.2702941894531
+      ],
+      "text_sha256": "8fb2133ec9f4a7b5220a8ca74c938c5d6617056e8ee5c44ae154381aa127ea41"
+    },
+    {
+      "block_id": "page-0709-block-0013",
+      "order": 13,
+      "text": "mide165 and reboxetine.166 Venlafaxine has been associated with cardiac defects, anen-\ncephaly and cleft palate,167 neonatal withdrawal and poor neonatal adaptation \nsyndrome102 and PPH.162 However, newer data suggests that first trimester use appears \nnot be associated with an increased risk of major congenital malformations.168 Second \ntrimester exposure to venlafaxine has been associated with babies being born small \nfor gestational age.169 An observational study of 281 venlafaxine exposed pregnan-\ncies did not find conclusive evidence that venlafaxine increases the risk of adverse \npregnancy or foetal outcomes.170 A population study which aimed to examine the risk \nof specific birth defects with individual antidepressants reported venlafaxine use to \nbe associated with a higher risk. However, the study only partially accounted for the \nunderlying condition.111 Trazodone, bupropion (amfebutamone) and mirtazapine \nhave few data supporting their safety.102,171,172 Data suggest that both bupropion and \nmirtazapine are not associated with malformations but, like SSRIs, may be linked to \nan increased rate of spontaneous abortion.173–175 First trimester exposure to bupro-\npion may be associated with a slightly elevated risk of ventricular septal defects.176 \nBupropion exposure in-utero has been associated with an increased risk of ADHD in \nyoung children.177,178\n",
+      "bbox": [
+        70.88510131835938,
+        362.55029296875,
+        436.7132873535156,
+        566.2703247070312
+      ],
+      "text_sha256": "caa52f750ecead5c3c865dbdf7bb7625f591c3645697e717debd05f2d72e5022"
+    },
+    {
+      "block_id": "page-0709-block-0014",
+      "order": 14,
+      "text": "■\n■MAOIs should be avoided in pregnancy because of a suspected increased risk of con-\n",
+      "bbox": [
+        61.88990020751953,
+        566.310302734375,
+        433.8599548339844,
+        578.2703247070312
+      ],
+      "text_sha256": "365b79e2c47d593d2de58acf907070eae692c3c6fa83365ca3921607793e556e"
+    },
+    {
+      "block_id": "page-0709-block-0015",
+      "order": 15,
+      "text": "genital malformations and because of the risk of hypertensive crisis.179\n",
+      "bbox": [
+        70.88999938964844,
+        578.55029296875,
+        372.8614501953125,
+        590.2703247070312
+      ],
+      "text_sha256": "3927de9bee71923c30bfa4f744b7d939af97c7d72f2481fe9b467761b23b1aae"
+    },
+    {
+      "block_id": "page-0709-block-0016",
+      "order": 16,
+      "text": "■\n■There is no evidence to suggest that ECT causes harm to either the mother or foetus \n",
+      "bbox": [
+        61.88990020751953,
+        590.310302734375,
+        436.63995361328125,
+        602.2703247070312
+      ],
+      "text_sha256": "25f13d4141bcaaaf36feea6f5f593a672fa877ebdc47ec20d7061da2107001c2"
+    },
+    {
+      "block_id": "page-0709-block-0017",
+      "order": 17,
+      "text": "during pregnancy180 although general anaesthesia is of course not without risks. \n",
+      "bbox": [
+        70.88999938964844,
+        602.55029296875,
+        436.65576171875,
+        614.2703247070312
+      ],
+      "text_sha256": "a5758bff58154a99d73a762153c0d70e5e23b9455c65f62d10a3cfc4bbde81e5"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

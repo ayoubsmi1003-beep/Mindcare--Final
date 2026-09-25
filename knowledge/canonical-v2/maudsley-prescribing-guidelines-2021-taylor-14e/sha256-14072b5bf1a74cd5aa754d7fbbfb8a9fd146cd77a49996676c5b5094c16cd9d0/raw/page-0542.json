@@ -1,0 +1,239 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0542",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 542,
+  "source_page_index": 541,
+  "source_page_display": 542,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    521\nCHAPTER 4\ntimeframe. Features of SCRA intoxication are detailed on Table 4.20 and are based on \ncase series of presentations to emergency units.5,7,8,14 Presentations and incidence of par-\nticular symptoms vary widely, which may reflect their chemical diversity. The most com-\nmon features appear to be agitation, nausea and tachycardia. Intoxication is usually \nshort-lived with 78% resolving within 8 hours.5 A psychotic episode is commonly pre-\ncipitated – 41% of presentations of acutely intoxicated patients to A&E were associated \nwith psychotic symptoms.14\nTable 4.20  Features of acute SCRA intoxication\nSystem affected\nCardiovascular system\nTachycardia\nHypertension\nBradycardia\nHypotension\nChest pain – can precipitate myocardial ischaemia\nCardiac arrest\nGastrointestinal system and \nabdominal organs\nNausea\nVomiting – often profuse\nAbdominal pain\nHepatotoxicity\nAcute renal injury – acute tubular necrosis and acute interstitial nephritis\nNervous system\nAgitation\nAnxiety\nAggression\nConfusion\nPsychotic symptoms – can persist after intoxication\nSeizures\nComa\nCatatonia with posturing\nOther\nConjunctival injection\nRhabdomyolysis\nManagement of acute SCRA intoxication\n■\n■Patients should be cared for in an appropriate setting\n■\n■ECG cardiac monitoring to detect ischaemia and arrhythmias\n■\n■Blood tests – blood gas, U&Es, creatine kinase and LFTs\n■\n■Supportive treatment with benzodiazepines\n■\n■IV fluids, supplemental oxygen and anti-emetics\n■\n■Rarely antipsychotics or anaesthesia.\nReassuringly, neither antipsychotic nor benzodiazepine use in SCRA intoxication has \nbeen associated with adverse cardiovascular effects and antipsychotics have not been \nassociated with increased incidence of seizures.15\n",
+  "raw_text_sha256": "d5af0e21c2c51f59b55bbad6136c63b2eba004b6e860ded681e14cd451459f24",
+  "coordinates_sha256": "4ce6f362c23faa4445fc715fd8173d6c45f6659a87a2328b3176a55726643015",
+  "block_sequence_sha256": "8b61b2c8f3b590f9e2f5474b13e23beaea6f43d04cec78406e32ae4cfde38524",
+  "blocks": [
+    {
+      "block_id": "page-0542-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    521\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "826514de1d4009df11aa234bd1037e14a17e2a88b69b153e35edcdadb7b5bbc5"
+    },
+    {
+      "block_id": "page-0542-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0542-block-0002",
+      "order": 2,
+      "text": "timeframe. Features of SCRA intoxication are detailed on Table 4.20 and are based on \ncase series of presentations to emergency units.5,7,8,14 Presentations and incidence of par-\nticular symptoms vary widely, which may reflect their chemical diversity. The most com-\nmon features appear to be agitation, nausea and tachycardia. Intoxication is usually \nshort-lived with 78% resolving within 8 hours.5 A psychotic episode is commonly pre-\ncipitated – 41% of presentations of acutely intoxicated patients to A&E were associated \nwith psychotic symptoms.14\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.830078125,
+        146.27041625976562
+      ],
+      "text_sha256": "2b467117876e2a63111e15745adce7a802d3fb38b7c3cbfc0eb828f9f7b33d46"
+    },
+    {
+      "block_id": "page-0542-block-0003",
+      "order": 3,
+      "text": "Table 4.20  Features of acute SCRA intoxication\n",
+      "bbox": [
+        54.0,
+        179.76429748535156,
+        206.81248474121094,
+        188.65179443359375
+      ],
+      "text_sha256": "a69a2d8bd6aa45ebe96a55ce659e5cb7203a04a82f55328afd34cfbcaf15ae66"
+    },
+    {
+      "block_id": "page-0542-block-0004",
+      "order": 4,
+      "text": "System affected\n",
+      "bbox": [
+        48.0,
+        199.63929748535156,
+        104.55001068115234,
+        208.52679443359375
+      ],
+      "text_sha256": "a8315b2c04ca0aaa39acb04d55eb08ee286118782476034c51dacb6ee9a3b9af"
+    },
+    {
+      "block_id": "page-0542-block-0005",
+      "order": 5,
+      "text": "Cardiovascular system\nTachycardia\nHypertension\nBradycardia\nHypotension\nChest pain – can precipitate myocardial ischaemia\nCardiac arrest\n",
+      "bbox": [
+        48.0,
+        219.95680236816406,
+        331.0050048828125,
+        278.65179443359375
+      ],
+      "text_sha256": "3bb457d4e255758427e1706a2a75eec99e6f4db331ddf80b1ae0c558723c7636"
+    },
+    {
+      "block_id": "page-0542-block-0006",
+      "order": 6,
+      "text": "Gastrointestinal system and \nabdominal organs\n",
+      "bbox": [
+        48.0,
+        288.0718078613281,
+        137.86500549316406,
+        306.77679443359375
+      ],
+      "text_sha256": "72e53775487be670594935b236261e031f99c929f6be47426de5c137c632a423"
+    },
+    {
+      "block_id": "page-0542-block-0007",
+      "order": 7,
+      "text": "Nausea\nVomiting – often profuse\nAbdominal pain\nHepatotoxicity\nAcute renal injury – acute tubular necrosis and acute interstitial nephritis\n",
+      "bbox": [
+        172.11000061035156,
+        288.0718078613281,
+        402.68267822265625,
+        336.769287109375
+      ],
+      "text_sha256": "448ddb68239fd890c481a8de70ee22bd693c9d1bc21d0177f8236b17528ce202"
+    },
+    {
+      "block_id": "page-0542-block-0008",
+      "order": 8,
+      "text": "Nervous system\nAgitation\nAnxiety\nAggression\nConfusion\nPsychotic symptoms – can persist after intoxication\nSeizures\nComa\nCatatonia with posturing\n",
+      "bbox": [
+        48.0,
+        346.1893005371094,
+        333.7650451660156,
+        424.8792724609375
+      ],
+      "text_sha256": "2c167b73089074317a05ae039c5c42c19b6303e7111b18e01d74df6df5b960e7"
+    },
+    {
+      "block_id": "page-0542-block-0009",
+      "order": 9,
+      "text": "Other\nConjunctival injection\nRhabdomyolysis\n",
+      "bbox": [
+        48.0,
+        434.2992858886719,
+        240.86245727539062,
+        453.0042724609375
+      ],
+      "text_sha256": "75ca5e340cc35ddb360249170943f07bbb9d66834413ebd488cb4ead6119c3a4"
+    },
+    {
+      "block_id": "page-0542-block-0010",
+      "order": 10,
+      "text": "Management of acute SCRA intoxication\n",
+      "bbox": [
+        48.0,
+        487.4181823730469,
+        257.6489562988281,
+        500.45318603515625
+      ],
+      "text_sha256": "b4e14c509c79881b72195ef2ecdfb44f33ed48baa8f09393378b91dc33173aaf"
+    },
+    {
+      "block_id": "page-0542-block-0011",
+      "order": 11,
+      "text": "■\n■Patients should be cared for in an appropriate setting\n",
+      "bbox": [
+        47.999900817871094,
+        512.26318359375,
+        285.949951171875,
+        523.9832153320312
+      ],
+      "text_sha256": "7a4293d3594d408cb27377e08f64456892cfb1895215e05f64afbad5173b9d90"
+    },
+    {
+      "block_id": "page-0542-block-0012",
+      "order": 12,
+      "text": "■\n■ECG cardiac monitoring to detect ischaemia and arrhythmias\n",
+      "bbox": [
+        47.999900817871094,
+        524.26318359375,
+        322.0000305175781,
+        535.9832153320312
+      ],
+      "text_sha256": "18e5104d2c6dfbfa6deb44aada62a65f6427929db6acdc879c72fa50155c60f0"
+    },
+    {
+      "block_id": "page-0542-block-0013",
+      "order": 13,
+      "text": "■\n■Blood tests – blood gas, U&Es, creatine kinase and LFTs\n",
+      "bbox": [
+        47.999900817871094,
+        536.26318359375,
+        300.64996337890625,
+        547.9832153320312
+      ],
+      "text_sha256": "c3f4084c0ff6d667f6826c2f1c68651654e7f475240a4c8f5a13c513d20cc8e2"
+    },
+    {
+      "block_id": "page-0542-block-0014",
+      "order": 14,
+      "text": "■\n■Supportive treatment with benzodiazepines\n",
+      "bbox": [
+        47.999900817871094,
+        548.26318359375,
+        243.11997985839844,
+        559.9832153320312
+      ],
+      "text_sha256": "1e609ad9ef016f8d7e925e07a4ffa6dfad94b222cc3d3b00dc79b1f805ef8cb3"
+    },
+    {
+      "block_id": "page-0542-block-0015",
+      "order": 15,
+      "text": "■\n■IV fluids, supplemental oxygen and anti-emetics\n",
+      "bbox": [
+        47.999900817871094,
+        560.26318359375,
+        263.8599853515625,
+        571.9832153320312
+      ],
+      "text_sha256": "9ccdac3c70b1a64f411e87c2498036a1cca1931743229ebe9ccad030997cad4f"
+    },
+    {
+      "block_id": "page-0542-block-0016",
+      "order": 16,
+      "text": "■\n■Rarely antipsychotics or anaesthesia.\n",
+      "bbox": [
+        47.999900817871094,
+        572.26318359375,
+        215.9099884033203,
+        583.9832153320312
+      ],
+      "text_sha256": "4050bd71876dec1cb37446eb5861eed84167ff52cdf35ea7f7c30ad58f80940a"
+    },
+    {
+      "block_id": "page-0542-block-0017",
+      "order": 17,
+      "text": "Reassuringly, neither antipsychotic nor benzodiazepine use in SCRA intoxication has \nbeen associated with adverse cardiovascular effects and antipsychotics have not been \nassociated with increased incidence of seizures.15\n",
+      "bbox": [
+        48.0,
+        590.26318359375,
+        422.80999755859375,
+        625.9832153320312
+      ],
+      "text_sha256": "7457ffd633a0f9338b9ccd1d96904c261c0aa15f96c2efc609c28167c0d509c4"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

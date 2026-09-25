@@ -1,0 +1,323 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0537",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 537,
+  "source_page_index": 536,
+  "source_page_display": 537,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "516    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nWithdrawal\n■\n■On day 1 of planned ambulatory withdrawal, ask the patient to attend having used no \nGBL for a minimum of 2 hours, and advise to dispose of their remaining supplies of GBL\n■\n■Advise patients who will need to stay at the clinic for up to 4 hours on day 1 that they \ncannot drive motor vehicles during withdrawal, and should not drink alcohol or take \nother sedatives during withdrawal\n■\n■Increase baclofen to 20mg PO tds\n■\n■Initiate benzodiazepine treatment once signs and symptoms of withdrawal develop – \ntachycardia, sweaty palms, fine tremor, anxiety. Start diazepam 20mg, review after 2 \nhours and monitor for anxiety/sedation/respiratory depression. Repeat up to 20mg PO \ndiazepam if indicated\n■\n■Once 6 hours have passed since the last GBL usage, the patient may be given up to a \nfurther 40mg diazepam, and then seen on the following 2 days\n■\n■At each daily visit, review diazepam dosage and titrate to symptoms. Diazepam is seldom \nneeded beyond 7 days. Typical initial daily doses of diazepam are around 40–60mg/day\nPost-withdrawal\n■\n■Continue baclofen 20mg PO tds following benzodiazepine withdrawal reducing over \n4–6 weeks. One of the few trials in this area successfully used 45–60mg a day for 3 \nmonths9\n■\n■After withdrawal, persisting anxiety and insomnia are common, and there is a high \nrisk of relapse. Before initiating elective withdrawal management, a plan should be in \nplace to monitor and support patients for a minimum of 4 weeks to minimise the risk of \nrelapse\npo, per os (by mouth); tds, ter die sumendum (three times a day).\nReferences\n\t 1.\t Kamal RM, et al. Pharmacological treatment in gamma-hydroxybutyrate (GHB) and gamma-butyrolactone (GBL) Dependence: detoxifica-\ntion and relapse prevention. CNS Drugs 2017; 31:51–64.\n\t 2.\t Bell J, et al. Gamma-butyrolactone (GBL) dependence and withdrawal. Addiction 2011; 106:442–447.\n\t 3.\t Novel Psychoactive Treatment UK Network (NEPTUNE). Guidance on the clinical management of acute and chronic harms of club drugs \nand novel psychoactive substances. 2015; http://neptune-clinical-guidance.co.uk/wp-content/uploads/2015/03/NEPTUNE-Guidance-\nMarch-2015.pdf.\n\t 4.\t LeTourneau JL, et al. Baclofen and gamma-hydroxybutyrate withdrawal. Neurocrit Care 2008; 8:430–433.\n\t 5.\t Floyd CN, et al. Baclofen in gamma-hydroxybutyrate withdrawal: patterns of use and online availability. Eur J Clin Pharmacol 2018; \n74:349–356.\n\t 6.\t Dijkstra BA, et al. Detoxification with titration and tapering in gamma-hydroxybutyrate (GHB) dependent patients: the Dutch GHB monitor \nproject. Drug Alcohol Depend 2017; 170:164–173.\n\t 7.\t Beurmanjer H, et al. Tapering with pharmaceutical GHB or benzodiazepines for detoxification in GHB-dependent patients: a matched-sub-\nject observational study of treatment-as-usual in Belgium and the Netherlands. CNS Drugs 2020; 34:651–659.\n\t 8.\t Vos CF, et al. Successful treatment of severe, treatment resistant GHB withdrawal through thiopental-coma. Subst Abus 2020; 1–6.\n\t 9.\t Beurmanjer H, et al. Baclofen to prevent relapse in gamma-hydroxybutyrate (GHB)-dependent patients: a multicentre, open-label, non-ran-\ndomized, controlled trial. CNS Drugs 2018; 32:437–442.\n",
+  "raw_text_sha256": "5290060763a6821a742364ec994ad692d45deca736f1d692ee03547467a8201c",
+  "coordinates_sha256": "f869522763052c5957b7ecb8f86367a36bac960665349935a36cd12dc47ad71c",
+  "block_sequence_sha256": "724c61d401482aaf2678f52dfc289309c399ad7cc57c812b002ce8657f581775",
+  "blocks": [
+    {
+      "block_id": "page-0537-block-0000",
+      "order": 0,
+      "text": "516    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "fb56d4bdd73192f45afe4e7ab5becef416e41ff0fa973d9cd1f3d334039bcf23"
+    },
+    {
+      "block_id": "page-0537-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0537-block-0002",
+      "order": 2,
+      "text": "Withdrawal\n■\n■On day 1 of planned ambulatory withdrawal, ask the patient to attend having used no \n",
+      "bbox": [
+        61.88999938964844,
+        70.21290588378906,
+        427.9812316894531,
+        79.10040283203125
+      ],
+      "text_sha256": "236fbd6361ef6bb65317b59aa05d51739ac5a73f8d37026bf382bc40df3b5e2a"
+    },
+    {
+      "block_id": "page-0537-block-0003",
+      "order": 3,
+      "text": "GBL for a minimum of 2 hours, and advise to dispose of their remaining supplies of GBL\n",
+      "bbox": [
+        149.5811004638672,
+        79.39290618896484,
+        430.3363037109375,
+        88.10040283203125
+      ],
+      "text_sha256": "edc63b388d47a744f14a1ee7e9bb0a680902f0831784574eb6e2a4857dc6ef54"
+    },
+    {
+      "block_id": "page-0537-block-0004",
+      "order": 4,
+      "text": "■\n■Advise patients who will need to stay at the clinic for up to 4 hours on day 1 that they \n",
+      "bbox": [
+        140.58099365234375,
+        89.89290618896484,
+        426.72113037109375,
+        98.60040283203125
+      ],
+      "text_sha256": "bd2e927f86efd75fa974e185b749a34762a483a3416c6f8e1a45a9d6b893e67b"
+    },
+    {
+      "block_id": "page-0537-block-0005",
+      "order": 5,
+      "text": "cannot drive motor vehicles during withdrawal, and should not drink alcohol or take \nother sedatives during withdrawal\n",
+      "bbox": [
+        149.5811004638672,
+        98.89290618896484,
+        420.88623046875,
+        116.60040283203125
+      ],
+      "text_sha256": "203049faf1817c7b1b95464d17a36654e1bda49ab63ae67b1cad6d4d1a6e24bf"
+    },
+    {
+      "block_id": "page-0537-block-0006",
+      "order": 6,
+      "text": "■\n■Increase baclofen to 20mg PO tds\n",
+      "bbox": [
+        140.58099365234375,
+        118.39290618896484,
+        257.37860107421875,
+        127.10040283203125
+      ],
+      "text_sha256": "f40deb8f8c1755ae6dd4d9d4e711fecb68492cc112534d6eac17574aac9d5583"
+    },
+    {
+      "block_id": "page-0537-block-0007",
+      "order": 7,
+      "text": "■\n■Initiate benzodiazepine treatment once signs and symptoms of withdrawal develop – \n",
+      "bbox": [
+        140.58099365234375,
+        128.8928985595703,
+        422.8136901855469,
+        137.60040283203125
+      ],
+      "text_sha256": "d3b6bc6578dd095076d2289df617a4ea1fec6fda091868e8cdba6ed83bdf6bd3"
+    },
+    {
+      "block_id": "page-0537-block-0008",
+      "order": 8,
+      "text": "tachycardia, sweaty palms, fine tremor, anxiety. Start diazepam 20mg, review after 2 \nhours and monitor for anxiety/sedation/respiratory depression. Repeat up to 20mg PO \ndiazepam if indicated\n",
+      "bbox": [
+        149.5811004638672,
+        137.8928985595703,
+        425.6187438964844,
+        164.60040283203125
+      ],
+      "text_sha256": "5257383f816e0adbfaf42564c47e7a75f4aa8c767a4087731f60dcbbbfc34ab2"
+    },
+    {
+      "block_id": "page-0537-block-0009",
+      "order": 9,
+      "text": "■\n■Once 6 hours have passed since the last GBL usage, the patient may be given up to a \n",
+      "bbox": [
+        140.58099365234375,
+        166.3928985595703,
+        423.3911437988281,
+        175.10040283203125
+      ],
+      "text_sha256": "baf46736b290e60f53272afffe11164f5a3031823eef722284b57e2be39c139b"
+    },
+    {
+      "block_id": "page-0537-block-0010",
+      "order": 10,
+      "text": "further 40mg diazepam, and then seen on the following 2 days\n■\n■At each daily visit, review diazepam dosage and titrate to symptoms. Diazepam is seldom \n",
+      "bbox": [
+        140.58099365234375,
+        175.3928985595703,
+        435.9310302734375,
+        193.10040283203125
+      ],
+      "text_sha256": "8c0b4e2bd39eae1f4dae48eef1d07716120ba4f649aa53d8b426e9fd851b1724"
+    },
+    {
+      "block_id": "page-0537-block-0011",
+      "order": 11,
+      "text": "needed beyond 7 days. Typical initial daily doses of diazepam are around 40–60mg/day\n",
+      "bbox": [
+        149.5811004638672,
+        193.3928985595703,
+        427.2912292480469,
+        202.10040283203125
+      ],
+      "text_sha256": "8d60aa345da996bde11a316c776920c0f83118cec66ae8ea7b2e739800eca992"
+    },
+    {
+      "block_id": "page-0537-block-0012",
+      "order": 12,
+      "text": "Post-withdrawal\n■\n■Continue baclofen 20mg PO tds following benzodiazepine withdrawal reducing over \n",
+      "bbox": [
+        61.89109802246094,
+        211.3404083251953,
+        422.4237365722656,
+        220.2279052734375
+      ],
+      "text_sha256": "cd52c8b8fe3490d358737199612f459483e0cfed92f0c3b8beee4cc686291675"
+    },
+    {
+      "block_id": "page-0537-block-0013",
+      "order": 13,
+      "text": "4–6 weeks. One of the few trials in this area successfully used 45–60mg a day for 3 \nmonths9\n",
+      "bbox": [
+        149.5811004638672,
+        220.5178985595703,
+        418.2462158203125,
+        238.22540283203125
+      ],
+      "text_sha256": "a69f08e005e6695178b40be091f412b18f37a8cb939b25d4cf5652f952d732bf"
+    },
+    {
+      "block_id": "page-0537-block-0014",
+      "order": 14,
+      "text": "■\n■After withdrawal, persisting anxiety and insomnia are common, and there is a high \n",
+      "bbox": [
+        140.58099365234375,
+        238.5178985595703,
+        416.0186462402344,
+        247.22540283203125
+      ],
+      "text_sha256": "748431dedd5a9951dde2d20c0973c6bd824fe0e36028c64afeeb80c3a7ed8c66"
+    },
+    {
+      "block_id": "page-0537-block-0015",
+      "order": 15,
+      "text": "risk of relapse. Before initiating elective withdrawal management, a plan should be in \nplace to monitor and support patients for a minimum of 4 weeks to minimise the risk of \nrelapse\n",
+      "bbox": [
+        149.5811004638672,
+        247.5178985595703,
+        432.95367431640625,
+        274.22540283203125
+      ],
+      "text_sha256": "4e1437b356b5cb1de90774a311538326af1a51f62d2d80035220eaa471670022"
+    },
+    {
+      "block_id": "page-0537-block-0016",
+      "order": 16,
+      "text": "po, per os (by mouth); tds, ter die sumendum (three times a day).\n",
+      "bbox": [
+        61.89109802246094,
+        284.2679138183594,
+        270.55609130859375,
+        292.97540283203125
+      ],
+      "text_sha256": "9bf9353c972d6e496483d11139bc39f6e6c343f589170ecb907ddc3e6a5b6b5a"
+    },
+    {
+      "block_id": "page-0537-block-0017",
+      "order": 17,
+      "text": "References\n",
+      "bbox": [
+        61.88999938964844,
+        310.8153991699219,
+        117.92399597167969,
+        323.85040283203125
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0537-block-0018",
+      "order": 18,
+      "text": "\t 1.\t Kamal RM, et al. Pharmacological treatment in gamma-hydroxybutyrate (GHB) and gamma-butyrolactone (GBL) Dependence: detoxifica-\n",
+      "bbox": [
+        61.88999938964844,
+        328.9364013671875,
+        433.88983154296875,
+        335.9684143066406
+      ],
+      "text_sha256": "3ddd720b3104230607a7d0c88059bf346e89f36d9ffe3bffd53f113e20f9e91f"
+    },
+    {
+      "block_id": "page-0537-block-0019",
+      "order": 19,
+      "text": "tion and relapse prevention. CNS Drugs 2017; 31:51–64.\n\t 2.\t Bell J, et al. Gamma-butyrolactone (GBL) dependence and withdrawal. Addiction 2011; 106:442–447.\n\t 3.\t Novel Psychoactive Treatment UK Network (NEPTUNE). Guidance on the clinical management of acute and chronic harms of club drugs \n",
+      "bbox": [
+        61.895999908447266,
+        337.7923889160156,
+        435.6060791015625,
+        362.9684143066406
+      ],
+      "text_sha256": "e52332f2ea65c8f008fcc9ed80b570c5c07e21e9f9a419f8d352b7a57327bd1c"
+    },
+    {
+      "block_id": "page-0537-block-0020",
+      "order": 20,
+      "text": "and novel psychoactive substances. 2015; http://neptune-clinical-guidance.co.uk/wp-content/uploads/2015/03/NEPTUNE-Guidance-\nMarch-2015.pdf.\n\t 4.\t LeTourneau JL, et al. Baclofen and gamma-hydroxybutyrate withdrawal. Neurocrit Care 2008; 8:430–433.\n\t 5.\t Floyd CN, et al. Baclofen in gamma-hydroxybutyrate withdrawal: patterns of use and online availability. Eur J Clin Pharmacol 2018; \n",
+      "bbox": [
+        61.90800094604492,
+        364.9364013671875,
+        435.5580749511719,
+        398.9684143066406
+      ],
+      "text_sha256": "c10a824d5c3bad2e83cfc978c9d831dffbcee89d810069ff3f6318bfb871ba9c"
+    },
+    {
+      "block_id": "page-0537-block-0021",
+      "order": 21,
+      "text": "74:349–356.\n\t 6.\t Dijkstra BA, et al. Detoxification with titration and tapering in gamma-hydroxybutyrate (GHB) dependent patients: the Dutch GHB monitor \n",
+      "bbox": [
+        61.91999816894531,
+        400.7923889160156,
+        435.6238708496094,
+        416.9684143066406
+      ],
+      "text_sha256": "d0ca81893e831aaf0263d0a42ccf6128b8284c1a600422b6ca705300ba17079f"
+    },
+    {
+      "block_id": "page-0537-block-0022",
+      "order": 22,
+      "text": "project. Drug Alcohol Depend 2017; 170:164–173.\n\t 7.\t Beurmanjer H, et al. Tapering with pharmaceutical GHB or benzodiazepines for detoxification in GHB-dependent patients: a matched-sub-\n",
+      "bbox": [
+        61.92599868774414,
+        418.7923889160156,
+        433.8957824707031,
+        434.9684143066406
+      ],
+      "text_sha256": "b68afaef51638c4e16fe4d359afec9520657ca0ab26ea525ada9667debf990ce"
+    },
+    {
+      "block_id": "page-0537-block-0023",
+      "order": 23,
+      "text": "ject observational study of treatment-as-usual in Belgium and the Netherlands. CNS Drugs 2020; 34:651–659.\n\t 8.\t Vos CF, et al. Successful treatment of severe, treatment resistant GHB withdrawal through thiopental-coma. Subst Abus 2020; 1–6.\n\t 9.\t Beurmanjer H, et al. Baclofen to prevent relapse in gamma-hydroxybutyrate (GHB)-dependent patients: a multicentre, open-label, non-ran-\n",
+      "bbox": [
+        61.93199920654297,
+        436.7923889160156,
+        433.9378356933594,
+        461.9684143066406
+      ],
+      "text_sha256": "7ddeaf9b21a488d2614a6c7a670836f3316a8a0968c8aa6ddf159aee0da92cab"
+    },
+    {
+      "block_id": "page-0537-block-0024",
+      "order": 24,
+      "text": "domized, controlled trial. CNS Drugs 2018; 32:437–442.\n",
+      "bbox": [
+        72.94200134277344,
+        463.7923889160156,
+        221.21395874023438,
+        470.9684143066406
+      ],
+      "text_sha256": "b3cc0ce5d6a737007393e2950690e620d4e87666d795a2946a1330a2e73b80dd"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

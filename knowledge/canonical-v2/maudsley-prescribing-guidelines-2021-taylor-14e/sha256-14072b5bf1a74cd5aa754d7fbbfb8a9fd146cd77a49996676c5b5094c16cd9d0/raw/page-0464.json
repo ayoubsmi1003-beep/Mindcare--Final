@@ -1,0 +1,455 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0464",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 464,
+  "source_page_index": 463,
+  "source_page_display": 464,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    443\nCHAPTER 3\nindividual differences some patients may require more or less diazepam to control with-\ndrawal symptoms.\nThe half-lives of benzodiazepines vary greatly. The degree of sedation that they \ninduce also varies, making it difficult to determine exact equivalents. Table 3.28 is an \napproximate guide only. Extra precautions apply in patients with hepatic dysfunction, \nas diazepam and other longer-acting drugs may accumulate to toxic levels.\nPattern of tapering\nThe relationship between dose of benzodiazepine and their effect on their principal \ntarget, the GABA-A receptor, is hyperbolic, with the following implications:\n■\n■Reducing dose by fixed amounts (e.g. 12.5mg in Figure 3.6a) will give rise to increas-\ningly large reductions in GABA-A occupancy.\n■\n■This is consistent with clinical observation that withdrawal symptoms are non-line-\narly related to dose reduction (e.g. a 1mg reduction of diazepam is tolerable from \n20mg but intolerable from 5mg32).\n■\n■Reducing diazepam dose by 5mg from 50mg will cause a reduction of 2.3 percentage \npoints of GABA-A occupancy, but a 5mg reduction from 5mg will cause a reduction \nof 18.3 percentage points.\nIn order to reduce the dose of benzodiazepine by equal amounts of effect at their \nmajor target, hyperbolically reducing doses are required (Figure 3.6b):\n■\n■This means that the size of dose reductions should be smaller and smaller as the total \ndose gets smaller.\n■\n■In practice, these reductions can be most easily calculated based on a proportion of \nthe most recent dose (an exponential pattern).\n100\n(a)\n(b)\n80\nGABA-A occupancy (%)\n60\n40\n20\n0\n0\n50\nDiazepam dose (mg)\n100\n100\n80\nGABA-A occupancy (%)\n60\n40\n20\n0\n0\n50\nDiazepam dose (mg)\n100\nFigure 3.6  (a) Linear reductions of dose cause increasingly large reductions in effect on GABA-A receptor \noccupancy. (b) Reducing effect on GABA-A receptors by even amounts, requires hyperbolically reducing \ndoses of diazepam. Note how small final doses will be required to be in order to prevent too large a final \n‘step down’. Adapted from Brouillet et al. (199133).\n",
+  "raw_text_sha256": "f649afd81ab077fc27e437f41825147b740bf102438732c6c63d42365c03da15",
+  "coordinates_sha256": "90f3cffc39ed3ee74b4754b1adef13af6b44a6e35a1467ee8b198564a8d3a2b3",
+  "block_sequence_sha256": "767b3c5ab4e0320966bf10b6a7627d59d241537b55dcebbca98cbb273167e293",
+  "blocks": [
+    {
+      "block_id": "page-0464-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    443\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "e0c3869b683ccc0b620f15682dabb255ce95a4711068009ffc70b21e7ad4483b"
+    },
+    {
+      "block_id": "page-0464-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0464-block-0002",
+      "order": 2,
+      "text": "individual differences some patients may require more or less diazepam to control with-\ndrawal symptoms.\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        419.989990234375,
+        86.27041625976562
+      ],
+      "text_sha256": "37c8bc32bf56765d26606c7a617365afdeb864b95913061cad3ef144285805f5"
+    },
+    {
+      "block_id": "page-0464-block-0003",
+      "order": 3,
+      "text": "The half-lives of benzodiazepines vary greatly. The degree of sedation that they \ninduce also varies, making it difficult to determine exact equivalents. Table 3.28 is an \napproximate guide only. Extra precautions apply in patients with hepatic dysfunction, \nas diazepam and other longer-acting drugs may accumulate to toxic levels.\n",
+      "bbox": [
+        48.0,
+        86.5504150390625,
+        422.79986572265625,
+        134.27041625976562
+      ],
+      "text_sha256": "dd7d9ee327357578529bac8eabddb4b5a2400520927b108530f3f4d7343dffa3"
+    },
+    {
+      "block_id": "page-0464-block-0004",
+      "order": 4,
+      "text": "Pattern of tapering\n",
+      "bbox": [
+        48.0,
+        151.70541381835938,
+        147.23097229003906,
+        164.74041748046875
+      ],
+      "text_sha256": "1fc97befa69030a6f159e87122371b47d38fc8f4e797577f3b92d1e9b86c7710"
+    },
+    {
+      "block_id": "page-0464-block-0005",
+      "order": 5,
+      "text": "The relationship between dose of benzodiazepine and their effect on their principal \ntarget, the GABA-A receptor, is hyperbolic, with the following implications:\n",
+      "bbox": [
+        48.0,
+        170.55047607421875,
+        422.7998962402344,
+        194.27047729492188
+      ],
+      "text_sha256": "8111cb9f6b8db86c4d64ebd046c2f2c78f4fc15d774be7e23e6b6a253f16580c"
+    },
+    {
+      "block_id": "page-0464-block-0006",
+      "order": 6,
+      "text": "■\n■Reducing dose by fixed amounts (e.g. 12.5mg in Figure 3.6a) will give rise to increas-\n",
+      "bbox": [
+        47.999900817871094,
+        200.55047607421875,
+        420.0098876953125,
+        212.27047729492188
+      ],
+      "text_sha256": "6e2d91e9747ffe88a3aa8e736b456a437cd44e5f1efb1df2c7f0669ca15cc041"
+    },
+    {
+      "block_id": "page-0464-block-0007",
+      "order": 7,
+      "text": "ingly large reductions in GABA-A occupancy.\n",
+      "bbox": [
+        57.0,
+        212.55047607421875,
+        252.75,
+        224.27047729492188
+      ],
+      "text_sha256": "06a5aaf4f1470598dd455094264408d942ae32b07b319138df1e70efcff4a9ba"
+    },
+    {
+      "block_id": "page-0464-block-0008",
+      "order": 8,
+      "text": "■\n■This is consistent with clinical observation that withdrawal symptoms are non-line-\n",
+      "bbox": [
+        47.999900817871094,
+        224.55047607421875,
+        420.0,
+        236.27047729492188
+      ],
+      "text_sha256": "9dc657ab627d0ff5dea03c26113011c63c38d24ac9ec4e3c6b1f6bce91e68642"
+    },
+    {
+      "block_id": "page-0464-block-0009",
+      "order": 9,
+      "text": "arly related to dose reduction (e.g. a 1mg reduction of diazepam is tolerable from \n20mg but intolerable from 5mg32).\n",
+      "bbox": [
+        57.0,
+        236.55047607421875,
+        422.7300109863281,
+        260.2704772949219
+      ],
+      "text_sha256": "8247e774b6691ea508e38cfe4658bc3af6120b8155058dc4d3c51ae270b36651"
+    },
+    {
+      "block_id": "page-0464-block-0010",
+      "order": 10,
+      "text": "■\n■Reducing diazepam dose by 5mg from 50mg will cause a reduction of 2.3 percentage \n",
+      "bbox": [
+        47.999900817871094,
+        260.55047607421875,
+        422.8299865722656,
+        272.2704772949219
+      ],
+      "text_sha256": "2081722982a403419087064fe6528c287857b47de41dbe408f5944347bc2c6c1"
+    },
+    {
+      "block_id": "page-0464-block-0011",
+      "order": 11,
+      "text": "points of GABA-A occupancy, but a 5mg reduction from 5mg will cause a reduction \nof 18.3 percentage points.\n",
+      "bbox": [
+        57.0,
+        272.55047607421875,
+        422.7799377441406,
+        296.2704772949219
+      ],
+      "text_sha256": "b6f873a324a848f71881d71674dea2e0da9e28f59b8537402aa609899dc5b0f2"
+    },
+    {
+      "block_id": "page-0464-block-0012",
+      "order": 12,
+      "text": "In order to reduce the dose of benzodiazepine by equal amounts of effect at their \nmajor target, hyperbolically reducing doses are required (Figure 3.6b):\n",
+      "bbox": [
+        48.0,
+        302.55047607421875,
+        422.71978759765625,
+        326.2704772949219
+      ],
+      "text_sha256": "9b3e30f5ccd2605b6730ff12796c51c812f247e31eba2c637883c9474ec95609"
+    },
+    {
+      "block_id": "page-0464-block-0013",
+      "order": 13,
+      "text": "■\n■This means that the size of dose reductions should be smaller and smaller as the total \n",
+      "bbox": [
+        47.999900817871094,
+        332.55047607421875,
+        422.7300109863281,
+        344.2704772949219
+      ],
+      "text_sha256": "d9122d395fef230c605e6fcbe181af7c05b66b468fcc00a1fd1fc554f30525af"
+    },
+    {
+      "block_id": "page-0464-block-0014",
+      "order": 14,
+      "text": "dose gets smaller.\n",
+      "bbox": [
+        57.0,
+        344.55047607421875,
+        131.44000244140625,
+        356.2704772949219
+      ],
+      "text_sha256": "3cc048818927c5165be4af0d56bb7cbf303cfb1fc7d4653ae1af89ed88c14194"
+    },
+    {
+      "block_id": "page-0464-block-0015",
+      "order": 15,
+      "text": "■\n■In practice, these reductions can be most easily calculated based on a proportion of \n",
+      "bbox": [
+        47.999900817871094,
+        356.55047607421875,
+        422.7300109863281,
+        368.2704772949219
+      ],
+      "text_sha256": "9fcf9b719fe26fe0194ca7ce2f1c23d8e4edb9da99b016419f5ad7ce71f4b950"
+    },
+    {
+      "block_id": "page-0464-block-0016",
+      "order": 16,
+      "text": "the most recent dose (an exponential pattern).\n",
+      "bbox": [
+        57.0,
+        368.55047607421875,
+        255.33999633789062,
+        380.2704772949219
+      ],
+      "text_sha256": "e6070ba20bdc119aac4b0c0ebe98c33aa150845cf2ca8af760dfdac516db7458"
+    },
+    {
+      "block_id": "page-0464-block-0017",
+      "order": 17,
+      "text": "100\n(a)\n(b)\n",
+      "bbox": [
+        48.0005989074707,
+        406.57330322265625,
+        244.58311462402344,
+        420.7862243652344
+      ],
+      "text_sha256": "38f0dd5f99099cba52f79b8f61b2f6885c878e8ef9df53157e073c5bf3ef9d68"
+    },
+    {
+      "block_id": "page-0464-block-0018",
+      "order": 18,
+      "text": "80\n",
+      "bbox": [
+        68.3311996459961,
+        431.95660400390625,
+        75.9849853515625,
+        439.9132385253906
+      ],
+      "text_sha256": "95aebc97bc646c67fdcd923a5965b001f3c8a5c4d3a77075112e12a3a311d760"
+    },
+    {
+      "block_id": "page-0464-block-0019",
+      "order": 19,
+      "text": "GABA-A occupancy (%)\n",
+      "bbox": [
+        53.676116943359375,
+        426.7249755859375,
+        61.63275146484375,
+        499.6492919921875
+      ],
+      "text_sha256": "d91bee0c0537eae22ec595de73529bc63f622dcf624724b6f9f96b5a51e15a6e"
+    },
+    {
+      "block_id": "page-0464-block-0020",
+      "order": 20,
+      "text": "60\n",
+      "bbox": [
+        68.3311996459961,
+        451.0826110839844,
+        75.9849853515625,
+        459.03924560546875
+      ],
+      "text_sha256": "95cf32708a31caa478a0e9141103ac567d85e5186e697e7e0c81f75589999e31"
+    },
+    {
+      "block_id": "page-0464-block-0021",
+      "order": 21,
+      "text": "40\n",
+      "bbox": [
+        68.3311996459961,
+        470.2101745605469,
+        75.9849853515625,
+        478.16680908203125
+      ],
+      "text_sha256": "673650f936cb3b0a2f93ce09d81be10748b1b203c19e8176b4eefc1964a0cf3a"
+    },
+    {
+      "block_id": "page-0464-block-0022",
+      "order": 22,
+      "text": "20\n",
+      "bbox": [
+        68.3311996459961,
+        489.3377380371094,
+        75.9849853515625,
+        497.29437255859375
+      ],
+      "text_sha256": "5378796307535df3ec8d8b15a2e2dc5641419c3d3060cfe32238c0fa973f7aa3"
+    },
+    {
+      "block_id": "page-0464-block-0023",
+      "order": 23,
+      "text": "0\n0\n50\n",
+      "bbox": [
+        72.15808868408203,
+        508.4653015136719,
+        151.40090942382812,
+        525.78271484375
+      ],
+      "text_sha256": "5976ddbd3177ef0dc11c5aea539fb8d6bf43cfd3498bcc6eee367cbb8f62a6d7"
+    },
+    {
+      "block_id": "page-0464-block-0024",
+      "order": 24,
+      "text": "Diazepam dose (mg)\n",
+      "bbox": [
+        122.17780303955078,
+        529.4944458007812,
+        185.9478759765625,
+        537.4510498046875
+      ],
+      "text_sha256": "bc4037ecde07c7454c0a34f465b5538b150811014ba6838cfee179e9dc234a87"
+    },
+    {
+      "block_id": "page-0464-block-0025",
+      "order": 25,
+      "text": "100\n",
+      "bbox": [
+        207.05160522460938,
+        517.8194580078125,
+        218.15371704101562,
+        525.7760620117188
+      ],
+      "text_sha256": "eea8254c7500ba3de996aa8ad6af399183f04e17d4a8102fde539dbc93a90012"
+    },
+    {
+      "block_id": "page-0464-block-0026",
+      "order": 26,
+      "text": "100\n",
+      "bbox": [
+        253.29359436035156,
+        411.33111572265625,
+        264.3957214355469,
+        419.2877502441406
+      ],
+      "text_sha256": "eea8254c7500ba3de996aa8ad6af399183f04e17d4a8102fde539dbc93a90012"
+    },
+    {
+      "block_id": "page-0464-block-0027",
+      "order": 27,
+      "text": "80\n",
+      "bbox": [
+        256.7419128417969,
+        430.6927185058594,
+        264.3957214355469,
+        438.64935302734375
+      ],
+      "text_sha256": "95aebc97bc646c67fdcd923a5965b001f3c8a5c4d3a77075112e12a3a311d760"
+    },
+    {
+      "block_id": "page-0464-block-0028",
+      "order": 28,
+      "text": "GABA-A occupancy (%)\n",
+      "bbox": [
+        241.8196258544922,
+        425.76837158203125,
+        249.7762451171875,
+        498.69268798828125
+      ],
+      "text_sha256": "d91bee0c0537eae22ec595de73529bc63f622dcf624724b6f9f96b5a51e15a6e"
+    },
+    {
+      "block_id": "page-0464-block-0029",
+      "order": 29,
+      "text": "60\n",
+      "bbox": [
+        256.7416076660156,
+        450.0561828613281,
+        264.3954162597656,
+        458.0128173828125
+      ],
+      "text_sha256": "95cf32708a31caa478a0e9141103ac567d85e5186e697e7e0c81f75589999e31"
+    },
+    {
+      "block_id": "page-0464-block-0030",
+      "order": 30,
+      "text": "40\n",
+      "bbox": [
+        256.7416076660156,
+        469.4178161621094,
+        264.3954162597656,
+        477.37445068359375
+      ],
+      "text_sha256": "673650f936cb3b0a2f93ce09d81be10748b1b203c19e8176b4eefc1964a0cf3a"
+    },
+    {
+      "block_id": "page-0464-block-0031",
+      "order": 31,
+      "text": "20\n",
+      "bbox": [
+        256.7416076660156,
+        488.7793884277344,
+        264.3954162597656,
+        496.73602294921875
+      ],
+      "text_sha256": "5378796307535df3ec8d8b15a2e2dc5641419c3d3060cfe32238c0fa973f7aa3"
+    },
+    {
+      "block_id": "page-0464-block-0032",
+      "order": 32,
+      "text": "0\n0\n50\n",
+      "bbox": [
+        260.5685119628906,
+        508.1410217285156,
+        341.015869140625,
+        525.5685424804688
+      ],
+      "text_sha256": "5976ddbd3177ef0dc11c5aea539fb8d6bf43cfd3498bcc6eee367cbb8f62a6d7"
+    },
+    {
+      "block_id": "page-0464-block-0033",
+      "order": 33,
+      "text": "Diazepam dose (mg)\n",
+      "bbox": [
+        311.9035949707031,
+        529.4324340820312,
+        375.6737365722656,
+        537.3890380859375
+      ],
+      "text_sha256": "bc4037ecde07c7454c0a34f465b5538b150811014ba6838cfee179e9dc234a87"
+    },
+    {
+      "block_id": "page-0464-block-0034",
+      "order": 34,
+      "text": "100\n",
+      "bbox": [
+        397.7655944824219,
+        517.6144409179688,
+        408.86773681640625,
+        525.571044921875
+      ],
+      "text_sha256": "eea8254c7500ba3de996aa8ad6af399183f04e17d4a8102fde539dbc93a90012"
+    },
+    {
+      "block_id": "page-0464-block-0035",
+      "order": 35,
+      "text": "Figure 3.6  (a) Linear reductions of dose cause increasingly large reductions in effect on GABA-A receptor \noccupancy. (b) Reducing effect on GABA-A receptors by even amounts, requires hyperbolically reducing \ndoses of diazepam. Note how small final doses will be required to be in order to prevent too large a final \n‘step down’. Adapted from Brouillet et al. (199133).\n",
+      "bbox": [
+        48.00059509277344,
+        545.0652465820312,
+        387.2406005859375,
+        583.9527587890625
+      ],
+      "text_sha256": "d0c6db9a645f7b6e95e4e1d64ab6ed64c5c131e1fdf93c1693561feef7a3a6fd"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

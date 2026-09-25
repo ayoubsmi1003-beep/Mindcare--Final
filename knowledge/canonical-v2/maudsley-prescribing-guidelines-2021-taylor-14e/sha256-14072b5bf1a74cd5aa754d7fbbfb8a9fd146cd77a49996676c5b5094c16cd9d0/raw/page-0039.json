@@ -1,0 +1,395 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0039",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 39,
+  "source_page_index": 38,
+  "source_page_display": 39,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "18    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nProcess\n■\n■Rule out contraindications (ECG abnormalities, hepatic impairment)\n■\n■Consider and minimise any risks posed by concomitant medication (e.g. potential to cause QTc \nprolongation, electrolyte disturbance or pharmacokinetic interactions via CYP inhibition)\n■\n■Document the decision to prescribe high dosage in the clinical notes along with a description of \ntarget symptoms. The use of an appropriate rating scale is advised\n■\n■Adequate time for response should be allowed after each dosage increment before a further \nincrease is made\nPrescribing high-dose antipsychotic medication\nBefore using high doses, ensure that:\n■\n■Sufficient time has been allowed for response (see section on time to response).\n■\n■At least two different antipsychotic medications have been tried sequentially (including, if \npossible, olanzapine).\n■\n■Clozapine has failed or not been tolerated due to agranulocytosis or other serious adverse \neffect. Most other side-effects can be managed. A small proportion of patients may also decline \nto take a clozapine regimen.\n■\n■Medication adherence is not in doubt (use of blood tests, liquids/dispersible tablets, depot/LAI \nantipsychotic preparations, etc).\n■\n■Adjunctive medications such as antidepressants or mood stabilisers are not indicated.\n■\n■Psychological approaches have failed or are not appropriate.\nThe decision to use high doses should:\n■\n■Be made by a senior psychiatrist\n■\n■Involve the multidisciplinary team\n■\n■Be done, if possible, with a patient’s informed consent\nMonitoring\n■\n■Physical monitoring should be carried out as outlined in the section on monitoring\n■\n■All patients on high doses should have regular ECGs (base-line, when steady-state serum levels \nhave been reached after each dosage increment, and then every 6 to 12 months) Additional \nbiochemical/ECG monitoring is advised if drugs that are known to cause electrolyte disturbances \nor QTc prolongation are subsequently co-prescribed\n■\n■Target symptoms should be assessed after 6 weeks and 3 months. If insufficient improvement in \nthese symptoms has occurred, the dose should be decreased to the normal range\n",
+  "raw_text_sha256": "fdd1e83ce82287763a291b1470544ab8cdac373812d021d320e1ebd1c2519544",
+  "coordinates_sha256": "e1f2ea7361573b5485a95f1509175b95f64a8cfca4b1a7bb7873cfaa81923439",
+  "block_sequence_sha256": "273ff27aca863d864399a318e5250ce72cebb6a7c22669f9b77c9d8f9b769776",
+  "blocks": [
+    {
+      "block_id": "page-0039-block-0000",
+      "order": 0,
+      "text": "18    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "41aa2e1666f8bcc2d4a06472542f1ae82cc394e4094d1081e56ff615aa02624c"
+    },
+    {
+      "block_id": "page-0039-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0039-block-0002",
+      "order": 2,
+      "text": "Process\n",
+      "bbox": [
+        68.88909912109375,
+        351.434814453125,
+        103.3291015625,
+        363.2848205566406
+      ],
+      "text_sha256": "d0a3b683141858057e33e9a39e7d98e022c827e4de97bf7054c68b841949710a"
+    },
+    {
+      "block_id": "page-0039-block-0003",
+      "order": 3,
+      "text": "■\n■Rule out contraindications (ECG abnormalities, hepatic impairment)\n",
+      "bbox": [
+        68.88899993896484,
+        369.04132080078125,
+        321.0756530761719,
+        378.9098205566406
+      ],
+      "text_sha256": "5f59afe9cb7d4c2f763325374aef06c3c64f810411ec000c4601115207ff2140"
+    },
+    {
+      "block_id": "page-0039-block-0004",
+      "order": 4,
+      "text": "■\n■Consider and minimise any risks posed by concomitant medication (e.g. potential to cause QTc \n",
+      "bbox": [
+        68.88899993896484,
+        379.04132080078125,
+        421.6902770996094,
+        388.9098205566406
+      ],
+      "text_sha256": "7900e1a86806f86ab39c7d266717f290cb0b59523022584b7e239c6e4c44ea9a"
+    },
+    {
+      "block_id": "page-0039-block-0005",
+      "order": 5,
+      "text": "prolongation, electrolyte disturbance or pharmacokinetic interactions via CYP inhibition)\n",
+      "bbox": [
+        77.38909912109375,
+        389.0373229980469,
+        395.3827209472656,
+        398.90582275390625
+      ],
+      "text_sha256": "c1e86e38f53ecfa12578863f468483041c311168950e6ac182569dde31e51228"
+    },
+    {
+      "block_id": "page-0039-block-0006",
+      "order": 6,
+      "text": "■\n■Document the decision to prescribe high dosage in the clinical notes along with a description of \n",
+      "bbox": [
+        68.88899993896484,
+        399.04132080078125,
+        426.2803649902344,
+        408.9098205566406
+      ],
+      "text_sha256": "ace365c7203884fb40d9398d00109ef8948d4e52e04ebf5a67ba0601191b7e26"
+    },
+    {
+      "block_id": "page-0039-block-0007",
+      "order": 7,
+      "text": "target symptoms. The use of an appropriate rating scale is advised\n",
+      "bbox": [
+        77.38909912109375,
+        409.0373229980469,
+        316.68115234375,
+        418.90582275390625
+      ],
+      "text_sha256": "92c640c8f8b6f6ed9af0b98d6a10a8cd8361f695dd33b1f0d161c6a4cb5637ac"
+    },
+    {
+      "block_id": "page-0039-block-0008",
+      "order": 8,
+      "text": "■\n■Adequate time for response should be allowed after each dosage increment before a further \n",
+      "bbox": [
+        68.88899993896484,
+        419.04132080078125,
+        414.6268615722656,
+        428.9098205566406
+      ],
+      "text_sha256": "49ee2c29560b8f87946cf0d293f16f546d0cc855211523493674df0b58d8c468"
+    },
+    {
+      "block_id": "page-0039-block-0009",
+      "order": 9,
+      "text": "increase is made\n",
+      "bbox": [
+        77.38909912109375,
+        429.0373229980469,
+        136.73611450195312,
+        438.90582275390625
+      ],
+      "text_sha256": "725b4317775cdc6420871612bba41c8ee054a724bcecc09f7926c39808f7732e"
+    },
+    {
+      "block_id": "page-0039-block-0010",
+      "order": 10,
+      "text": "Prescribing high-dose antipsychotic medication\n",
+      "bbox": [
+        61.638702392578125,
+        62.31442642211914,
+        304.67266845703125,
+        75.34942626953125
+      ],
+      "text_sha256": "6cc83cda04e5d05a5dc31dd634c613a2091100ace9919e73d2f9d860c67cbf6f"
+    },
+    {
+      "block_id": "page-0039-block-0011",
+      "order": 11,
+      "text": "Before using high doses, ensure that:\n",
+      "bbox": [
+        68.88890075683594,
+        91.34220123291016,
+        243.9088897705078,
+        103.19219970703125
+      ],
+      "text_sha256": "8515e42b200ebd784396ac78a7eccd5a15a743450819055b1e6bc961269122ff"
+    },
+    {
+      "block_id": "page-0039-block-0012",
+      "order": 12,
+      "text": "■\n■Sufficient time has been allowed for response (see section on time to response).\n",
+      "bbox": [
+        68.88880157470703,
+        108.94869995117188,
+        365.9810485839844,
+        118.81719970703125
+      ],
+      "text_sha256": "de23573471368224a708a09513aa221be249976db4961efaf39a8fbc63365e02"
+    },
+    {
+      "block_id": "page-0039-block-0013",
+      "order": 13,
+      "text": "■\n■At least two different antipsychotic medications have been tried sequentially (including, if \n",
+      "bbox": [
+        68.88880157470703,
+        118.94869995117188,
+        402.9391174316406,
+        128.81719970703125
+      ],
+      "text_sha256": "7c3c0132d9575cae27fbef6aa58fb559b5f93bde530b6fc5c57d747224be6b8c"
+    },
+    {
+      "block_id": "page-0039-block-0014",
+      "order": 14,
+      "text": "possible, olanzapine).\n",
+      "bbox": [
+        77.38890075683594,
+        128.94467163085938,
+        154.85789489746094,
+        138.81317138671875
+      ],
+      "text_sha256": "1e2a965ef998b7cd3066b36803994610aa522a4d53548a58261ecfa5917a9a86"
+    },
+    {
+      "block_id": "page-0039-block-0015",
+      "order": 15,
+      "text": "■\n■Clozapine has failed or not been tolerated due to agranulocytosis or other serious adverse \n",
+      "bbox": [
+        68.88880157470703,
+        138.94869995117188,
+        405.1745910644531,
+        148.81719970703125
+      ],
+      "text_sha256": "efd8c70ab0e1a76bc340e0080392e88305a6290972df6f14e06344ec7f6143d2"
+    },
+    {
+      "block_id": "page-0039-block-0016",
+      "order": 16,
+      "text": "effect. Most other side-effects can be managed. A small proportion of patients may also decline \nto take a clozapine regimen.\n",
+      "bbox": [
+        77.38890075683594,
+        148.94467163085938,
+        426.4076843261719,
+        168.80914306640625
+      ],
+      "text_sha256": "b838d4fb8003bb9bad470c13cc2f85c192e06020de57f9459f38f7784994ec6a"
+    },
+    {
+      "block_id": "page-0039-block-0017",
+      "order": 17,
+      "text": "■\n■Medication adherence is not in doubt (use of blood tests, liquids/dispersible tablets, depot/LAI \n",
+      "bbox": [
+        68.88880157470703,
+        168.94869995117188,
+        418.7405700683594,
+        178.81719970703125
+      ],
+      "text_sha256": "05fd07ac61a656f374b07dd550f46139d6f1990a7b79b2b0560f0df9e1d2b8cd"
+    },
+    {
+      "block_id": "page-0039-block-0018",
+      "order": 18,
+      "text": "antipsychotic preparations, etc).\n",
+      "bbox": [
+        77.38890075683594,
+        178.94467163085938,
+        192.46194458007812,
+        188.81317138671875
+      ],
+      "text_sha256": "9ab83fcb821444c1dd683f57ca8e23062370dc184e36468eb6d525afd95ff522"
+    },
+    {
+      "block_id": "page-0039-block-0019",
+      "order": 19,
+      "text": "■\n■Adjunctive medications such as antidepressants or mood stabilisers are not indicated.\n",
+      "bbox": [
+        68.88880157470703,
+        188.94869995117188,
+        380.0144958496094,
+        198.81719970703125
+      ],
+      "text_sha256": "cf5d1734b304de36270e080dab534423ba5f525471aa25995415d313fa4030a3"
+    },
+    {
+      "block_id": "page-0039-block-0020",
+      "order": 20,
+      "text": "■\n■Psychological approaches have failed or are not appropriate.\n",
+      "bbox": [
+        68.88880157470703,
+        198.94869995117188,
+        295.1250305175781,
+        208.81719970703125
+      ],
+      "text_sha256": "7d18b117d077b82bf8cd77b99d55af2ad62406fdd694fe27c297ed74dba16f89"
+    },
+    {
+      "block_id": "page-0039-block-0021",
+      "order": 21,
+      "text": "The decision to use high doses should:\n",
+      "bbox": [
+        133.8887939453125,
+        255.52761840820312,
+        314.4486389160156,
+        267.37762451171875
+      ],
+      "text_sha256": "d0bca2e9bf2e263f186ba72140b5026a128de493ac61a3e4a90a3e96d8c7b4bd"
+    },
+    {
+      "block_id": "page-0039-block-0022",
+      "order": 22,
+      "text": "■\n■Be made by a senior psychiatrist\n",
+      "bbox": [
+        133.88870239257812,
+        273.1341247558594,
+        258.0907897949219,
+        283.00262451171875
+      ],
+      "text_sha256": "d5e8b06d0b38063af3bd749b842707c12f5845e1d6f42befd346676d619b96c5"
+    },
+    {
+      "block_id": "page-0039-block-0023",
+      "order": 23,
+      "text": "■\n■Involve the multidisciplinary team\n",
+      "bbox": [
+        133.88870239257812,
+        283.1341247558594,
+        262.7912902832031,
+        293.00262451171875
+      ],
+      "text_sha256": "25f61d6be5fb46435a5be9b369c0b67eb6d0724c53277a5d66daad2750354395"
+    },
+    {
+      "block_id": "page-0039-block-0024",
+      "order": 24,
+      "text": "■\n■Be done, if possible, with a patient’s informed consent\n",
+      "bbox": [
+        133.88870239257812,
+        293.1341247558594,
+        338.8834228515625,
+        303.00262451171875
+      ],
+      "text_sha256": "66525b44bb6cb1882ce6f6650c3995ec44b119cdaec785aa2c02311f0223d437"
+    },
+    {
+      "block_id": "page-0039-block-0025",
+      "order": 25,
+      "text": "Monitoring\n",
+      "bbox": [
+        68.88909912109375,
+        485.3995056152344,
+        122.21910095214844,
+        497.24951171875
+      ],
+      "text_sha256": "c03a80785732954eec6c21129031ebc8adf5351a6e1969013d8ef9fa84c76471"
+    },
+    {
+      "block_id": "page-0039-block-0026",
+      "order": 26,
+      "text": "■\n■Physical monitoring should be carried out as outlined in the section on monitoring\n",
+      "bbox": [
+        68.88899993896484,
+        503.0060119628906,
+        374.4813232421875,
+        512.87451171875
+      ],
+      "text_sha256": "d607c0d332d939913f61fbc65a87d929dd1f6e967c9fde265b79b3663ab977cc"
+    },
+    {
+      "block_id": "page-0039-block-0027",
+      "order": 27,
+      "text": "■\n■All patients on high doses should have regular ECGs (base-line, when steady-state serum levels \n",
+      "bbox": [
+        68.88899993896484,
+        513.0059814453125,
+        417.7546691894531,
+        522.87451171875
+      ],
+      "text_sha256": "84638bd84ed85b77adb125d1b68b874ceef11fa716225776ce548ffe3adda69a"
+    },
+    {
+      "block_id": "page-0039-block-0028",
+      "order": 28,
+      "text": "have been reached after each dosage increment, and then every 6 to 12 months) Additional \nbiochemical/ECG monitoring is advised if drugs that are known to cause electrolyte disturbances \nor QTc prolongation are subsequently co-prescribed\n",
+      "bbox": [
+        77.38909912109375,
+        523.001953125,
+        423.1861267089844,
+        552.862548828125
+      ],
+      "text_sha256": "160b28cd20fccf2e5da90ed8a8195741ffef8216f7a2c7c2ab526c573790bf65"
+    },
+    {
+      "block_id": "page-0039-block-0029",
+      "order": 29,
+      "text": "■\n■Target symptoms should be assessed after 6 weeks and 3 months. If insufficient improvement in \n",
+      "bbox": [
+        68.88899993896484,
+        553.0059814453125,
+        427.0538635253906,
+        562.87451171875
+      ],
+      "text_sha256": "5cbf4262a2e4e6aa1679094aeb1438c65e8e2c10471f27f3b26c22459f23dfb0"
+    },
+    {
+      "block_id": "page-0039-block-0030",
+      "order": 30,
+      "text": "these symptoms has occurred, the dose should be decreased to the normal range\n",
+      "bbox": [
+        77.38909912109375,
+        563.001953125,
+        371.8123779296875,
+        572.8704833984375
+      ],
+      "text_sha256": "064e9188267ea8990b0bfb462a17876b09f6ed8929727db00fda6df5f50c8305"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

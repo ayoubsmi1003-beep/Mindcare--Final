@@ -1,0 +1,467 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0888",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 888,
+  "source_page_index": 887,
+  "source_page_display": 888,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Other substances    867\nCHAPTER 12\nCaffeine intoxication\nThe Diagnostic and Statistical Manual of Mental Disorders DSM-V17 defines caffeine \nintoxication as the recent consumption of caffeine, usually in excess of 250mg, accom-\npanied by five or more of the symptoms in Box 12.1.\nIn caffeine intoxication, these symptoms cause significant distress or impairment in \nsocial, occupational or other important areas of functioning and are not due to a gen-\neral medical condition or better accounted for by another mental disorder (e.g. an anxi-\nety disorder).\nTable 12.3  Interacting substance\nInteracting substance\nEffect\nComment\nCYP1A2 inhibitors:\nOestrogens\nCimetidine\nFluvoxamine (may \ndecrease caffeine \nclearance by 80%)13\nDisulfiram\nReduce caffeine clearance\nEffects of caffeine may be prolonged or increased\nAdverse effects may be increased\nMay precipitate caffeine toxicity\nCigarette smoke*\nCYP1A2 inducer – increasing  \ncaffeine metabolism5\nSmokers may require higher doses of caffeine \nto gain desired effects5\nLithium\nHigh doses of caffeine may reduce \nlithium levels\nCaffeine withdrawal may increase lithium \nlevels14\nMAOIs\nMay enhance stimulant CNS effects\nClozapine\nCaffeine may increase clozapine \nplasma concentrations by up to \n60%15\nThought to be via competitive inhibition of \nCYP1A2. Other drugs affected by caffeine-\ninduced inhibition of the enzyme include \nolanzapine, imipramine and clomipramine\nSSRIs\nLarge doses of caffeine may increase \nrisk of serotonin syndrome16\nBenzodiazepines\nCaffeine may act as an antagonist\nReduces the efficacy of benzodiazepines7\n*Vaping has no effect on CYP1A2 function.\nCNS, central nervous system; MAOI, monoamine oxidase inhibitor; SSRI, selective serotonin reuptake inhibitor.\nBox 12.1  Symptoms of caffeine intoxication\n■\n■Restlessness\n■\n■Nervousness\n■\n■Excitement\n■\n■Insomnia\n■\n■Flushed face\n■\n■Diuresis\n■\n■Gastrointestinal disturbance\n■\n■Muscle twitching\n■\n■Rambling flow of thought and speech \n■\n■Tachycardia or cardiac arrhythmia \n■\n■Periods of inexhaustibility\n■\n■Psychomotor agitation\n",
+  "raw_text_sha256": "f2796f1c41bf9e10f825f18a86454d9aaf6cecdd030bfa686f519f6b008c7ee0",
+  "coordinates_sha256": "6e2c6788f197a2e21748719b6f32755bb16cff2a03124426f35fdb3c85f92a99",
+  "block_sequence_sha256": "cea999abb3a2029a7c1ac7d7b400fa13cc0d8834c883b24ce37b439d3de45b7a",
+  "blocks": [
+    {
+      "block_id": "page-0888-block-0000",
+      "order": 0,
+      "text": "Other substances    867\n",
+      "bbox": [
+        321.96881103515625,
+        31.395221710205078,
+        420.00079345703125,
+        41.0272216796875
+      ],
+      "text_sha256": "31af1fe947fcbecf3b0ca4129dec067516991588be0bda4b5de18697065faa18"
+    },
+    {
+      "block_id": "page-0888-block-0001",
+      "order": 1,
+      "text": "CHAPTER 12\n",
+      "bbox": [
+        454.4096984863281,
+        206.75430297851562,
+        463.88970947265625,
+        252.54629516601562
+      ],
+      "text_sha256": "f1eaa35bf02463d3796518e98cd7bcaee85367df0bd183e9c8e123aa82bb6911"
+    },
+    {
+      "block_id": "page-0888-block-0002",
+      "order": 2,
+      "text": "Caffeine intoxication\n",
+      "bbox": [
+        47.999698638916016,
+        387.73358154296875,
+        155.9976806640625,
+        400.7685852050781
+      ],
+      "text_sha256": "0bba426cf5763fc582d8a3b3c84f8b700187bb4596c933730883f630e1cc0346"
+    },
+    {
+      "block_id": "page-0888-block-0003",
+      "order": 3,
+      "text": "The Diagnostic and Statistical Manual of Mental Disorders DSM-V17 defines caffeine \nintoxication as the recent consumption of caffeine, usually in excess of 250mg, accom-\npanied by five or more of the symptoms in Box 12.1.\n",
+      "bbox": [
+        47.998870849609375,
+        406.5785827636719,
+        422.78887939453125,
+        442.298583984375
+      ],
+      "text_sha256": "73929fe6aafba25e9a8ac303bbb6afd257adfdb86ee2e75e5b2fc7a5291f2eb6"
+    },
+    {
+      "block_id": "page-0888-block-0004",
+      "order": 4,
+      "text": "In caffeine intoxication, these symptoms cause significant distress or impairment in \nsocial, occupational or other important areas of functioning and are not due to a gen-\neral medical condition or better accounted for by another mental disorder (e.g. an anxi-\nety disorder).\n",
+      "bbox": [
+        47.998870849609375,
+        442.5785827636719,
+        422.77886962890625,
+        490.298583984375
+      ],
+      "text_sha256": "0944a4104f277224fe29c0d9ec586cab406ad702f8fef3393de0c08674257c1d"
+    },
+    {
+      "block_id": "page-0888-block-0005",
+      "order": 5,
+      "text": "Table 12.3  Interacting substance\n",
+      "bbox": [
+        54.039398193359375,
+        69.41468811035156,
+        160.734375,
+        78.30218505859375
+      ],
+      "text_sha256": "1835a70ca38ec90d8ebaf7b30cfe2fa0aafe7cdee8dd4daf7d080580a4950c35"
+    },
+    {
+      "block_id": "page-0888-block-0006",
+      "order": 6,
+      "text": "Interacting substance\nEffect\nComment\n",
+      "bbox": [
+        48.039398193359375,
+        90.03968811035156,
+        296.9569091796875,
+        98.92718505859375
+      ],
+      "text_sha256": "f2a994a3a850d376231f07bd1acc3c01d0abb597f056a025dfb709ab4e6b2024"
+    },
+    {
+      "block_id": "page-0888-block-0007",
+      "order": 7,
+      "text": "CYP1A2 inhibitors:\n",
+      "bbox": [
+        48.039398193359375,
+        110.3421859741211,
+        108.47439575195312,
+        119.0496826171875
+      ],
+      "text_sha256": "ac8f698f5b98ef532b9776a12b247e07bfbf32b69d164e8b6d7bc36ff8ec30ba"
+    },
+    {
+      "block_id": "page-0888-block-0008",
+      "order": 8,
+      "text": "Oestrogens\nCimetidine\nFluvoxamine (may \ndecrease caffeine \nclearance by 80%)13\n",
+      "bbox": [
+        55.539398193359375,
+        120.33968353271484,
+        119.98851013183594,
+        169.03717041015625
+      ],
+      "text_sha256": "5f6f987a00ac7a1e7a95243acb508ca274dd618d6774f75b1cbf6355b173fe7e"
+    },
+    {
+      "block_id": "page-0888-block-0009",
+      "order": 9,
+      "text": "Disulfiram\n",
+      "bbox": [
+        55.539398193359375,
+        170.3446807861328,
+        87.61689758300781,
+        179.05218505859375
+      ],
+      "text_sha256": "f6ad9520686458140791cc90489bb6668cab3997ac938295e6cf05711f12fb58"
+    },
+    {
+      "block_id": "page-0888-block-0010",
+      "order": 10,
+      "text": "Reduce caffeine clearance\nEffects of caffeine may be prolonged or increased\n",
+      "bbox": [
+        136.78689575195312,
+        110.34468841552734,
+        414.0394592285156,
+        119.05218505859375
+      ],
+      "text_sha256": "1dfdd60e82940a068adfe347331fc1a614122cb0157374227fa5944775ffa4ff"
+    },
+    {
+      "block_id": "page-0888-block-0011",
+      "order": 11,
+      "text": "Adverse effects may be increased\n",
+      "bbox": [
+        262.7868957519531,
+        123.3421859741211,
+        368.7618713378906,
+        132.0496826171875
+      ],
+      "text_sha256": "de01934d9f060c65074bae44c45046216a98f773b12081c258b6a74e42c0ffef"
+    },
+    {
+      "block_id": "page-0888-block-0012",
+      "order": 12,
+      "text": "May precipitate caffeine toxicity\n",
+      "bbox": [
+        262.7868957519531,
+        136.3396759033203,
+        364.1568603515625,
+        145.04718017578125
+      ],
+      "text_sha256": "fe9dc2e036b3ca0bc6645fc21c36a974dd4f63562ea526d4903b1d9a5255ae32"
+    },
+    {
+      "block_id": "page-0888-block-0013",
+      "order": 13,
+      "text": "Cigarette smoke*\nCYP1A2 inducer – increasing  \ncaffeine metabolism5\n",
+      "bbox": [
+        48.039398193359375,
+        185.36717224121094,
+        233.3444061279297,
+        204.07467651367188
+      ],
+      "text_sha256": "5b6c8eb1bb50f5b9fb9a7f4786c61ad1899d42ab9fcca8cfe72359a87a7cc3e7"
+    },
+    {
+      "block_id": "page-0888-block-0014",
+      "order": 14,
+      "text": "Smokers may require higher doses of caffeine \nto gain desired effects5\n",
+      "bbox": [
+        262.7893981933594,
+        185.3696746826172,
+        410.314453125,
+        204.07467651367188
+      ],
+      "text_sha256": "c87aabbbcff061798ff03f9e58f645cda03b8d8a4e651159c8616fe2750ae76c"
+    },
+    {
+      "block_id": "page-0888-block-0015",
+      "order": 15,
+      "text": "Lithium\nHigh doses of caffeine may reduce \nlithium levels\n",
+      "bbox": [
+        48.039398193359375,
+        210.3946990966797,
+        249.0319061279297,
+        229.09970092773438
+      ],
+      "text_sha256": "a5009d6e9195d57b421a554d7b4f162db171712cbd4650a8e3e27b74a6d19a14"
+    },
+    {
+      "block_id": "page-0888-block-0016",
+      "order": 16,
+      "text": "Caffeine withdrawal may increase lithium \nlevels14\n",
+      "bbox": [
+        262.7868957519531,
+        210.3946990966797,
+        397.096923828125,
+        229.09970092773438
+      ],
+      "text_sha256": "c753525a6c0f0c71e3d69406e4786363af5fede38c6ea20eba54b54c2a4580ac"
+    },
+    {
+      "block_id": "page-0888-block-0017",
+      "order": 17,
+      "text": "MAOIs\nMay enhance stimulant CNS effects\n",
+      "bbox": [
+        48.039398193359375,
+        235.41969299316406,
+        250.40438842773438,
+        244.127197265625
+      ],
+      "text_sha256": "55d213b9e6a261212c2c094dde87c1bb2e5c266ca1a4be13b5dd778844493b6e"
+    },
+    {
+      "block_id": "page-0888-block-0018",
+      "order": 18,
+      "text": "Clozapine\nCaffeine may increase clozapine \nplasma concentrations by up to \n60%15\n",
+      "bbox": [
+        48.039398193359375,
+        250.4421844482422,
+        241.09689331054688,
+        279.1446838378906
+      ],
+      "text_sha256": "1bff71f9383efc3b945fa8a557c46544d35f2c516d3d4e549557d23ee4e33b1e"
+    },
+    {
+      "block_id": "page-0888-block-0019",
+      "order": 19,
+      "text": "Thought to be via competitive inhibition of \nCYP1A2. Other drugs affected by caffeine-\ninduced inhibition of the enzyme include \nolanzapine, imipramine and clomipramine\n",
+      "bbox": [
+        262.7893981933594,
+        250.44468688964844,
+        401.5620422363281,
+        289.1446838378906
+      ],
+      "text_sha256": "ffe266bf1eff2b0ca717c4e047180001a5d2e36b49ec343799f4d80977f34290"
+    },
+    {
+      "block_id": "page-0888-block-0020",
+      "order": 20,
+      "text": "SSRIs\nLarge doses of caffeine may increase \nrisk of serotonin syndrome16\n",
+      "bbox": [
+        48.041900634765625,
+        295.4596862792969,
+        255.68690490722656,
+        314.1646728515625
+      ],
+      "text_sha256": "b4c5886cfb10570c5386242828406e05bc84afbd511f7ce8a3883a96a7db6606"
+    },
+    {
+      "block_id": "page-0888-block-0021",
+      "order": 21,
+      "text": "Benzodiazepines\nCaffeine may act as an antagonist\nReduces the efficacy of benzodiazepines7\n",
+      "bbox": [
+        48.039398193359375,
+        320.49468994140625,
+        393.8441162109375,
+        329.2021789550781
+      ],
+      "text_sha256": "67c7f9229d2d09118b0e270f4f1002bc4669cbeb73c219bfc6677afc687eaba4"
+    },
+    {
+      "block_id": "page-0888-block-0022",
+      "order": 22,
+      "text": "*Vaping has no effect on CYP1A2 function.\n",
+      "bbox": [
+        48.04058837890625,
+        340.99468994140625,
+        186.21298217773438,
+        349.7021789550781
+      ],
+      "text_sha256": "6cbbb7343983b910c168fae58178a06f3fe876877bc163a29328b803d2a170d9"
+    },
+    {
+      "block_id": "page-0888-block-0023",
+      "order": 23,
+      "text": "CNS, central nervous system; MAOI, monoamine oxidase inhibitor; SSRI, selective serotonin reuptake inhibitor.\n",
+      "bbox": [
+        48.04050064086914,
+        352.99468994140625,
+        399.20556640625,
+        361.7021789550781
+      ],
+      "text_sha256": "8371c0ec6d34b6151ccc68540dba02c4ad0b2085a317208cbb7bbee82eaf902c"
+    },
+    {
+      "block_id": "page-0888-block-0024",
+      "order": 24,
+      "text": "Box 12.1  Symptoms of caffeine intoxication\n",
+      "bbox": [
+        107.62789916992188,
+        524.5546875,
+        268.9834289550781,
+        534.627197265625
+      ],
+      "text_sha256": "d5fe90cce1ee72f8ae4c2a94fd71400cc12bd13094bee75d329172c16b648b60"
+    },
+    {
+      "block_id": "page-0888-block-0025",
+      "order": 25,
+      "text": "■\n■Restlessness\n",
+      "bbox": [
+        107.62779998779297,
+        544.8336791992188,
+        159.5799102783203,
+        554.7022094726562
+      ],
+      "text_sha256": "0d753d16959ab32a1a493719c3bb4bdcd127dd4f6b05cb6b0f0de268b930ab36"
+    },
+    {
+      "block_id": "page-0888-block-0026",
+      "order": 26,
+      "text": "■\n■Nervousness\n",
+      "bbox": [
+        107.62779998779297,
+        554.8336791992188,
+        160.99940490722656,
+        564.7022094726562
+      ],
+      "text_sha256": "760191d6f2f7d718c34dc2e6e1ac3b887cf9e1187f415999f883ba4dd63c0849"
+    },
+    {
+      "block_id": "page-0888-block-0027",
+      "order": 27,
+      "text": "■\n■Excitement\n",
+      "bbox": [
+        107.62779998779297,
+        564.8336791992188,
+        155.78041076660156,
+        574.7022094726562
+      ],
+      "text_sha256": "278eaf940707f76f9b39f1abc76d92a40d2bf49459aff3b63fd29724e5c5d9c8"
+    },
+    {
+      "block_id": "page-0888-block-0028",
+      "order": 28,
+      "text": "■\n■Insomnia\n",
+      "bbox": [
+        107.62779998779297,
+        574.8336791992188,
+        148.71690368652344,
+        584.7022094726562
+      ],
+      "text_sha256": "dd32734792ca145cff79301d516f489a28d24ca2939cffba178b1a522ebf5586"
+    },
+    {
+      "block_id": "page-0888-block-0029",
+      "order": 29,
+      "text": "■\n■Flushed face\n",
+      "bbox": [
+        107.62779998779297,
+        584.8336791992188,
+        160.99090576171875,
+        594.7022094726562
+      ],
+      "text_sha256": "6eb217127b204e9927f065f0287c496718dd56ccec2c64969f1cd3716a173c9b"
+    },
+    {
+      "block_id": "page-0888-block-0030",
+      "order": 30,
+      "text": "■\n■Diuresis\n",
+      "bbox": [
+        107.62779998779297,
+        594.8336791992188,
+        143.83790588378906,
+        604.7022094726562
+      ],
+      "text_sha256": "f0cf2b5a6fab8972a4dd3edd5f189a31e28ae83bf979712ea72dd97805208634"
+    },
+    {
+      "block_id": "page-0888-block-0031",
+      "order": 31,
+      "text": "■\n■Gastrointestinal disturbance\n",
+      "bbox": [
+        212.12879943847656,
+        544.8336791992188,
+        321.5324401855469,
+        554.7022094726562
+      ],
+      "text_sha256": "eecff108b6da0255ebf7d6657936416670593569fd95ffbf2b06e3675771db07"
+    },
+    {
+      "block_id": "page-0888-block-0032",
+      "order": 32,
+      "text": "■\n■Muscle twitching\n",
+      "bbox": [
+        212.12879943847656,
+        554.8336791992188,
+        282.491943359375,
+        564.7022094726562
+      ],
+      "text_sha256": "b946bd3d2765d5853fff787070245c50c6701240bc64760ae69051e942a2dff3"
+    },
+    {
+      "block_id": "page-0888-block-0033",
+      "order": 33,
+      "text": "■\n■Rambling flow of thought and speech \n",
+      "bbox": [
+        212.12879943847656,
+        564.8336791992188,
+        355.2518310546875,
+        574.7022094726562
+      ],
+      "text_sha256": "3dd9a00d082cfca4469b0f4468b07db1a60336c98a74f39fdd816c4025b37840"
+    },
+    {
+      "block_id": "page-0888-block-0034",
+      "order": 34,
+      "text": "■\n■Tachycardia or cardiac arrhythmia \n",
+      "bbox": [
+        212.12879943847656,
+        574.8336791992188,
+        343.55596923828125,
+        584.7022094726562
+      ],
+      "text_sha256": "a59c83d8db95cebd934c29e2645e9235f3c3f8a51beadbb82c40a2fa3a1d29c1"
+    },
+    {
+      "block_id": "page-0888-block-0035",
+      "order": 35,
+      "text": "■\n■Periods of inexhaustibility\n",
+      "bbox": [
+        212.12879943847656,
+        584.8336791992188,
+        312.2419128417969,
+        594.7022094726562
+      ],
+      "text_sha256": "1554357a9a1c0a0ac141017b39d092cb4bd2339b26a0431d990f1391640b8317"
+    },
+    {
+      "block_id": "page-0888-block-0036",
+      "order": 36,
+      "text": "■\n■Psychomotor agitation\n",
+      "bbox": [
+        212.12879943847656,
+        594.8336791992188,
+        301.85498046875,
+        604.7022094726562
+      ],
+      "text_sha256": "1bbfaa97626da98a6d3650c03cc6d27fcd37317bcad40fde36a669cab5101003"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

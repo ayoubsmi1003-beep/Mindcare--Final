@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0507",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 507,
+  "source_page_index": 506,
+  "source_page_display": 507,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "486    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nGiven the uncertainty regarding dose equivalence, it is prudent not to switch between \nbrands without good cause.\nBuprenorphine starting dose\nThe same principles as for methadone apply when starting treatment with buprenor-\nphine. Doctors operating outside drug services should be aware that buprenorphine \ndoes not show up in standard multiple urine drug testing kits in the way that metha-\ndone, codeine or heroin do. It is commonly tested for using a separate UDS kit which is \nnot usually available outside addiction services. Thus, to confirm use in a timely fash-\nion, confirmation with pharmacy regarding observed consumption and potentially spe-\ncific laboratory testing of a urine sample should be considered. However, of particular \ninterest with buprenorphine is the phenomenon of precipitated withdrawal. Precipitated \nwithdrawal occurs because buprenorphine is a partial agonist with a high receptor \naffinity. If it enters the brain when a full agonist, e.g. methadone or heroin, is still pre-\nsent, it competes for binding at the opioid receptors and replaces the full agonist. \nTherefore, some receptors that were previously fully stimulated become partially stimu-\nlated. The patient experiences this change as opioid withdrawal. If, however, the patient \nis already in withdrawal, they will experience the addition of a partial agonist that \nstimulates the receptors to a limited extent as relief of that withdrawal. Patient educa-\ntion is an important factor in reducing the problems during induction.\nThe first dose of buprenorphine should be administered when the patient is experi-\nencing opioid withdrawal symptoms (a sign that agonist activity is decreasing) so as to \nreduce the risk of precipitated withdrawal. As with methadone, clear evidence of daily \nopioid use (including drug testing) and withdrawal symptoms is mandatory before \ncommencing a prescription for buprenorphine.\nThe initial dose recommendations are as follows:\nPatient in withdrawal and no risk factors\n8mg buprenorphine\nPatient not experiencing withdrawal and no risk factors\n4mg buprenorphine\nPatient has concomitant risk factors (e.g. medical condition, polydrug misuse, low \nor uncertain severity of dependence, on other psychiatric medications)\n2–4mg buprenorphine\nNo more than 8mg buprenorphine should be given on the first day in a non-specialist \nsetting. In some cases 8mg may be sufficient, but this may be increased to 12–16mg the \nfollowing day if there is continuing evidence of withdrawal and no evidence of intoxi-\ncation. The doses can be given in divided doses so that it can be reviewed promptly in \nthe event of any intoxication, although in practice this is difficult in the absence of on-\nsite dispensing. For maintenance, the ‘Orange Guidelines’1 recommend a dose between \n12mg and 24mg a day. If there is concern that doses higher than 16mg may be required, \nspecialist advice should be sought and the dose only increased under advice from addic-\ntion specialists.\nIf patients are on other respiratory sedatives such as benzodiazepines, the lower doses \nshould be used and be monitored for intoxication and respiratory depression.\n",
+  "raw_text_sha256": "8949e3ff57f2cb406ae465afba8c3e51506fa4a45e762dfd3b64fd330df3e01d",
+  "coordinates_sha256": "b3210818dd6db9a27bde94cdd5890b6ac3dcc276ba019e51e6ca969898fe81f9",
+  "block_sequence_sha256": "f418c165e3a7e8576b4bac7f9c4488b1d8b5ee7a0aad2c2393c36c2d7be8aa36",
+  "blocks": [
+    {
+      "block_id": "page-0507-block-0000",
+      "order": 0,
+      "text": "486    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "d84943f4ce781153c68a8c82fe2f31bb2a532910c37353e7297d1c7481b0c687"
+    },
+    {
+      "block_id": "page-0507-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0507-block-0002",
+      "order": 2,
+      "text": "Given the uncertainty regarding dose equivalence, it is prudent not to switch between \nbrands without good cause.\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.6199645996094,
+        86.27029418945312
+      ],
+      "text_sha256": "f38b0b80231499f13a9b0028dc5a9cb5a8e0d2dcb4e8f5fb14dacaf9d38a9c2f"
+    },
+    {
+      "block_id": "page-0507-block-0003",
+      "order": 3,
+      "text": "Buprenorphine starting dose\n",
+      "bbox": [
+        61.88999938964844,
+        104.64029693603516,
+        196.89999389648438,
+        116.49029541015625
+      ],
+      "text_sha256": "0c87669666ee3c9680de3870b971a5e7090ae16f75e0e78069b84f1787ca97bb"
+    },
+    {
+      "block_id": "page-0507-block-0004",
+      "order": 4,
+      "text": "The same principles as for methadone apply when starting treatment with buprenor-\nphine. Doctors operating outside drug services should be aware that buprenorphine \ndoes not show up in standard multiple urine drug testing kits in the way that metha-\ndone, codeine or heroin do. It is commonly tested for using a separate UDS kit which is \nnot usually available outside addiction services. Thus, to confirm use in a timely fash-\nion, confirmation with pharmacy regarding observed consumption and potentially spe-\ncific laboratory testing of a urine sample should be considered. However, of particular \ninterest with buprenorphine is the phenomenon of precipitated withdrawal. Precipitated \nwithdrawal occurs because buprenorphine is a partial agonist with a high receptor \naffinity. If it enters the brain when a full agonist, e.g. methadone or heroin, is still pre-\nsent, it competes for binding at the opioid receptors and replaces the full agonist. \nTherefore, some receptors that were previously fully stimulated become partially stimu-\nlated. The patient experiences this change as opioid withdrawal. If, however, the patient \nis already in withdrawal, they will experience the addition of a partial agonist that \nstimulates the receptors to a limited extent as relief of that withdrawal. Patient educa-\ntion is an important factor in reducing the problems during induction.\n",
+      "bbox": [
+        61.889984130859375,
+        122.55029296875,
+        436.7099914550781,
+        314.2702941894531
+      ],
+      "text_sha256": "0386c5d55f7608a89e6fc0716e735265e7a60b4e7bed9f66830a77c2dcf0408f"
+    },
+    {
+      "block_id": "page-0507-block-0005",
+      "order": 5,
+      "text": "The first dose of buprenorphine should be administered when the patient is experi-\nencing opioid withdrawal symptoms (a sign that agonist activity is decreasing) so as to \nreduce the risk of precipitated withdrawal. As with methadone, clear evidence of daily \nopioid use (including drug testing) and withdrawal symptoms is mandatory before \ncommencing a prescription for buprenorphine.\n",
+      "bbox": [
+        61.889984130859375,
+        314.55029296875,
+        436.6999206542969,
+        374.2702941894531
+      ],
+      "text_sha256": "ab3665d06d3ab762c3e7a07d8097078883a67ac46c479d0b671b20725e6a82ec"
+    },
+    {
+      "block_id": "page-0507-block-0006",
+      "order": 6,
+      "text": "The initial dose recommendations are as follows:\n",
+      "bbox": [
+        71.88998413085938,
+        374.55029296875,
+        283.0199890136719,
+        386.2702941894531
+      ],
+      "text_sha256": "27898e251eccf44f19901e3a634cafbee00011073cc6d98235694acb5bc40202"
+    },
+    {
+      "block_id": "page-0507-block-0007",
+      "order": 7,
+      "text": "Patient in withdrawal and no risk factors\n8mg buprenorphine\n",
+      "bbox": [
+        66.13999938964844,
+        404.0328063964844,
+        410.45013427734375,
+        412.74029541015625
+      ],
+      "text_sha256": "eae4e9b0c4788cfef335e4fd213cc1c89dc2348aa9e7b428c3eee5ef8331c3fb"
+    },
+    {
+      "block_id": "page-0507-block-0008",
+      "order": 8,
+      "text": "Patient not experiencing withdrawal and no risk factors\n4mg buprenorphine\n",
+      "bbox": [
+        66.1400146484375,
+        419.6553039550781,
+        410.45013427734375,
+        428.36279296875
+      ],
+      "text_sha256": "42b922e2f62a1802dd769a533c7480a0cc89ca08c103084f2c9f02f2f99eabb0"
+    },
+    {
+      "block_id": "page-0507-block-0009",
+      "order": 9,
+      "text": "Patient has concomitant risk factors (e.g. medical condition, polydrug misuse, low \nor uncertain severity of dependence, on other psychiatric medications)\n",
+      "bbox": [
+        66.1400146484375,
+        435.6153259277344,
+        329.0900573730469,
+        454.3203125
+      ],
+      "text_sha256": "592eb68a22fac6cc382db20ec7e7fac3a3a60215f0e445508fb3ba5a3884f1a9"
+    },
+    {
+      "block_id": "page-0507-block-0010",
+      "order": 10,
+      "text": "2–4mg buprenorphine\n",
+      "bbox": [
+        346.39251708984375,
+        435.6153259277344,
+        418.3701477050781,
+        444.32281494140625
+      ],
+      "text_sha256": "c6d6c294cfe54b64df1a36a7f693e927fecb2f8b43be8135dea12ffde5f22b48"
+    },
+    {
+      "block_id": "page-0507-block-0011",
+      "order": 11,
+      "text": "No more than 8mg buprenorphine should be given on the first day in a non-specialist \nsetting. In some cases 8mg may be sufficient, but this may be increased to 12–16mg the \nfollowing day if there is continuing evidence of withdrawal and no evidence of intoxi-\ncation. The doses can be given in divided doses so that it can be reviewed promptly in \nthe event of any intoxication, although in practice this is difficult in the absence of on-\nsite dispensing. For maintenance, the ‘Orange Guidelines’1 recommend a dose between \n12mg and 24mg a day. If there is concern that doses higher than 16mg may be required, \nspecialist advice should be sought and the dose only increased under advice from addic-\ntion specialists.\n",
+      "bbox": [
+        61.88671875,
+        473.2566833496094,
+        436.7199401855469,
+        580.9766845703125
+      ],
+      "text_sha256": "235143236d52610a1c02b895401a02f1e6c501fb02e40f9b8effc2d91aa807d1"
+    },
+    {
+      "block_id": "page-0507-block-0012",
+      "order": 12,
+      "text": "If patients are on other respiratory sedatives such as benzodiazepines, the lower doses \nshould be used and be monitored for intoxication and respiratory depression.\n",
+      "bbox": [
+        61.88671875,
+        581.2566528320312,
+        436.6368103027344,
+        604.9766845703125
+      ],
+      "text_sha256": "42249e543f1c84c15dc4cc4d56a198bdbed15ddb76f0da23dc3e59ff09139060"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

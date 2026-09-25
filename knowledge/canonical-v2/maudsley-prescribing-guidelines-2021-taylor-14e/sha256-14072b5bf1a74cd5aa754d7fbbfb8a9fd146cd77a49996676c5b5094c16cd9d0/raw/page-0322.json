@@ -1,0 +1,287 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0322",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 322,
+  "source_page_index": 321,
+  "source_page_display": 322,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Bipolar disorder    301\nCHAPTER 2\nStopping lithium and mood stabilisers\nRationale for stopping\nPatients may ask to stop lithium and other mood stabilisers because of the range of \nadverse effects experienced. In one cohort, 54% of patients discontinued lithium \nmost because of tolerability problems, including diarrhoea (13%), tremor (11%), \npolyuria/polydipsia/diabetes insipidus (9%), creatinine increase (9%) and weight \ngain (7%).1 Alternatively, although lithium and mood stabilisers are useful in con-\ntrolling acute symptoms and preventing relapse, a clinician may judge that the bal-\nance of risks and benefits have shifted over time (e.g. adverse physical effects \naccumulate, alternative coping strategies developed) such that dose reduction or \nstopping may be considered. Other patients may be prescribed mood stabilisers for \nconditions such as personality disorders, for which there is a lack of evidence. \nStopping should be done in a manner that minimises the risk of withdrawal effects \nand relapse (the two key risks).\nWithdrawal effects from lithium and other mood stabilisers\nDiscontinuation of lithium can cause withdrawal effects, including both physical and \npsychological symptoms (see Table 2.12). These withdrawal effects include mood \n­episodes (depression, but more commonly, mania) and are sometimes called ‘rebound’ \neffects.2,3 The risk of relapse in the period following abrupt cessation greatly exceeds \nthe rate of relapse in the untreated disorder.2 For example, a review of studies of lithium \ndiscontinuation in people with BD found that the untreated disorder had a mean cycle \nlength (the average time between episodes) of 11.6 months, whereas the time to a new \nepisode following lithium discontinuation was 1.7 months.2 This represents a seven-\nfold increase in the rate of relapse and suggests that manic and depressive symptoms \nthat occur immediately following lithium withdrawal are largely because of lithium \nwithdrawal.\nRebound effects have been variously thought to be due to the development of dopa-\nminergic hypersensitivity,4 changes in neuronal membranes, cell transport function or \nother neurotransmitter systems during lithium treatment.5 Other mood stabilisers have \nalso been associated with a ‘withdrawal’ syndrome.6\nTable 2.12  Withdrawal effects from lithium3,7,8\nPhysical\nPsychological\n■\n■Tremor\n■\n■Polyuria\n■\n■Muscular weakness\n■\n■Polydipsia\n■\n■Dryness of mouth\n■\n■Anxiety\n■\n■Nervousness\n■\n■Irritability\n■\n■Alertness\n■\n■Sleep disturbances\n■\n■Elated mood/mania\n■\n■Depressed mood\n",
+  "raw_text_sha256": "6a35f6183d8779276d22c26a8eed8847b64f510c0104396af699f63164c4e3a8",
+  "coordinates_sha256": "bec4c3545e3647b9fc4dc99d3dca481e6a4abf7fffb6ee1f85c9e38d3b3d8973",
+  "block_sequence_sha256": "5d4997eb1b161050493d80216a748907dbc31c475c92e0b835ef3ef1f3dc99d6",
+  "blocks": [
+    {
+      "block_id": "page-0322-block-0000",
+      "order": 0,
+      "text": "Bipolar disorder    301\n",
+      "bbox": [
+        326.5046081542969,
+        31.395221710205078,
+        420.0005798339844,
+        41.0272216796875
+      ],
+      "text_sha256": "f31dd70bbda6d339d27162a189ff79f199dc4b0624eecfe74f020f8dd0740bd4"
+    },
+    {
+      "block_id": "page-0322-block-0001",
+      "order": 1,
+      "text": "CHAPTER 2\n",
+      "bbox": [
+        454.4096984863281,
+        146.3472900390625,
+        463.88970947265625,
+        187.6912841796875
+      ],
+      "text_sha256": "5eaa1f2591abe1a1b2f7664fa3de7ff01a032d44ee83fa594c7852135d4287aa"
+    },
+    {
+      "block_id": "page-0322-block-0002",
+      "order": 2,
+      "text": "Stopping lithium and mood stabilisers\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        251.8009796142578,
+        79.1004638671875
+      ],
+      "text_sha256": "c76897f5a21d0cebd499f1af7a8aff53a02a1d240fc9f80e6805a351a843b0ec"
+    },
+    {
+      "block_id": "page-0322-block-0003",
+      "order": 3,
+      "text": "Rationale for stopping\n",
+      "bbox": [
+        48.00400161743164,
+        90.06747436523438,
+        164.13096618652344,
+        103.10247802734375
+      ],
+      "text_sha256": "a24ed16d48552f60a724e5e14cebe3e53039f4be56e9d6d6b53167a40248e6c6"
+    },
+    {
+      "block_id": "page-0322-block-0004",
+      "order": 4,
+      "text": "Patients may ask to stop lithium and other mood stabilisers because of the range of \nadverse effects experienced. In one cohort, 54% of patients discontinued lithium \nmost because of tolerability problems, including diarrhoea (13%), tremor (11%), \npolyuria/polydipsia/diabetes insipidus (9%), creatinine increase (9%) and weight \ngain (7%).1 Alternatively, although lithium and mood stabilisers are useful in con-\ntrolling acute symptoms and preventing relapse, a clinician may judge that the bal-\nance of risks and benefits have shifted over time (e.g. adverse physical effects \naccumulate, alternative coping strategies developed) such that dose reduction or \nstopping may be considered. Other patients may be prescribed mood stabilisers for \nconditions such as personality disorders, for which there is a lack of evidence. \nStopping should be done in a manner that minimises the risk of withdrawal effects \nand relapse (the two key risks).\n",
+      "bbox": [
+        48.0,
+        108.91046142578125,
+        422.8149719238281,
+        252.63046264648438
+      ],
+      "text_sha256": "33666b26fe29292a55f9c0fa6f00aaab7bdb94fc1b0324af98fe2eba1106c1bd"
+    },
+    {
+      "block_id": "page-0322-block-0005",
+      "order": 5,
+      "text": "Withdrawal effects from lithium and other mood stabilisers\n",
+      "bbox": [
+        48.0,
+        270.06549072265625,
+        355.6590576171875,
+        283.1004943847656
+      ],
+      "text_sha256": "d086eb7c234a782590fe483bd999356e977b2c77e000b4728dd1655023845a30"
+    },
+    {
+      "block_id": "page-0322-block-0006",
+      "order": 6,
+      "text": "Discontinuation of lithium can cause withdrawal effects, including both physical and \npsychological symptoms (see Table 2.12). These withdrawal effects include mood \n­episodes (depression, but more commonly, mania) and are sometimes called ‘rebound’ \neffects.2,3 The risk of relapse in the period following abrupt cessation greatly exceeds \nthe rate of relapse in the untreated disorder.2 For example, a review of studies of lithium \ndiscontinuation in people with BD found that the untreated disorder had a mean cycle \nlength (the average time between episodes) of 11.6 months, whereas the time to a new \nepisode following lithium discontinuation was 1.7 months.2 This represents a seven-\nfold increase in the rate of relapse and suggests that manic and depressive symptoms \nthat occur immediately following lithium withdrawal are largely because of lithium \nwithdrawal.\n",
+      "bbox": [
+        47.995086669921875,
+        288.9104919433594,
+        422.8098449707031,
+        420.6304931640625
+      ],
+      "text_sha256": "66fec31e8a31bab2b7c06304aa511dfdf08d99963671a406ca595ce0abc1f2ee"
+    },
+    {
+      "block_id": "page-0322-block-0007",
+      "order": 7,
+      "text": "Rebound effects have been variously thought to be due to the development of dopa-\nminergic hypersensitivity,4 changes in neuronal membranes, cell transport function or \nother neurotransmitter systems during lithium treatment.5 Other mood stabilisers have \nalso been associated with a ‘withdrawal’ syndrome.6\n",
+      "bbox": [
+        47.9967041015625,
+        420.9104919433594,
+        422.80718994140625,
+        468.6304931640625
+      ],
+      "text_sha256": "0e662a8b1773a2d012c5587f3d45722f7ba56338adfc621407dfe53a918b82f7"
+    },
+    {
+      "block_id": "page-0322-block-0008",
+      "order": 8,
+      "text": "Table 2.12  Withdrawal effects from lithium3,7,8\n",
+      "bbox": [
+        54.0,
+        512.8914794921875,
+        204.47544860839844,
+        521.7789916992188
+      ],
+      "text_sha256": "8d37af261e7f4f7d2ed13a2c46d668f84c694b617b88ba084fca64eb7c455738"
+    },
+    {
+      "block_id": "page-0322-block-0009",
+      "order": 9,
+      "text": "Physical\nPsychological\n",
+      "bbox": [
+        52.0,
+        530.7664794921875,
+        285.0849304199219,
+        539.6539916992188
+      ],
+      "text_sha256": "9572bebcef4c7eee26a30f58fa5dca86352b43c59ca8f78a4beaaee5d895a3f6"
+    },
+    {
+      "block_id": "page-0322-block-0010",
+      "order": 10,
+      "text": "■\n■Tremor\n",
+      "bbox": [
+        51.999900817871094,
+        546.5714721679688,
+        83.08748626708984,
+        555.2789916992188
+      ],
+      "text_sha256": "97b081b793af7cfb92957a39788939dc1d63a07f8e668b8662f8f67c40b8798b"
+    },
+    {
+      "block_id": "page-0322-block-0011",
+      "order": 11,
+      "text": "■\n■Polyuria\n",
+      "bbox": [
+        51.999900817871094,
+        555.5714721679688,
+        85.99749755859375,
+        564.2789916992188
+      ],
+      "text_sha256": "62e56bb8b9ba0faecee03c2ad1562893e1e48d6fc4f23bc38f49371f39c349ef"
+    },
+    {
+      "block_id": "page-0322-block-0012",
+      "order": 12,
+      "text": "■\n■Muscular weakness\n",
+      "bbox": [
+        51.999900817871094,
+        564.5714721679688,
+        123.0925064086914,
+        573.2789916992188
+      ],
+      "text_sha256": "5728baff954e80a216e5743a8796aa6b5bb43d24ec3c51bc0665fa9640d333df"
+    },
+    {
+      "block_id": "page-0322-block-0013",
+      "order": 13,
+      "text": "■\n■Polydipsia\n",
+      "bbox": [
+        51.999900817871094,
+        573.5714721679688,
+        92.25250244140625,
+        582.2789916992188
+      ],
+      "text_sha256": "13648fff8d11f657d35244bd262612198778316be2c28c4169698ff91fea5ec6"
+    },
+    {
+      "block_id": "page-0322-block-0014",
+      "order": 14,
+      "text": "■\n■Dryness of mouth\n",
+      "bbox": [
+        51.999900817871094,
+        582.5714721679688,
+        117.677490234375,
+        591.2789916992188
+      ],
+      "text_sha256": "ed4c0832d9a74a4684274e978572d1943297fac2c72f979e764aae9c14fc33bd"
+    },
+    {
+      "block_id": "page-0322-block-0015",
+      "order": 15,
+      "text": "■\n■Anxiety\n",
+      "bbox": [
+        237.9998016357422,
+        546.5714721679688,
+        270.744873046875,
+        555.2789916992188
+      ],
+      "text_sha256": "b6f8fe85b4aef1a6be3138773b4f7902cc5c2600882c751e961916ee2752bf47"
+    },
+    {
+      "block_id": "page-0322-block-0016",
+      "order": 16,
+      "text": "■\n■Nervousness\n",
+      "bbox": [
+        237.9998016357422,
+        555.5714721679688,
+        286.59246826171875,
+        564.2789916992188
+      ],
+      "text_sha256": "760191d6f2f7d718c34dc2e6e1ac3b887cf9e1187f415999f883ba4dd63c0849"
+    },
+    {
+      "block_id": "page-0322-block-0017",
+      "order": 17,
+      "text": "■\n■Irritability\n",
+      "bbox": [
+        237.9998016357422,
+        564.5714721679688,
+        276.5649108886719,
+        573.2789916992188
+      ],
+      "text_sha256": "a8ee27634d9b7995cadd64d97e51ebb448f5747f36419199712a4aa6e61f9d07"
+    },
+    {
+      "block_id": "page-0322-block-0018",
+      "order": 18,
+      "text": "■\n■Alertness\n",
+      "bbox": [
+        237.9998016357422,
+        573.5714721679688,
+        276.16741943359375,
+        582.2789916992188
+      ],
+      "text_sha256": "2a587609d4f260387e1a7cb401e6d080d74e50815aba4f1e50e0785bb2f4cfdd"
+    },
+    {
+      "block_id": "page-0322-block-0019",
+      "order": 19,
+      "text": "■\n■Sleep disturbances\n",
+      "bbox": [
+        237.9998016357422,
+        582.5714721679688,
+        306.1749572753906,
+        591.2789916992188
+      ],
+      "text_sha256": "d324184573982b4f2ecd6719d4fa976b4dc513478a8727d15caa87d567011c9e"
+    },
+    {
+      "block_id": "page-0322-block-0020",
+      "order": 20,
+      "text": "■\n■Elated mood/mania\n",
+      "bbox": [
+        237.9998016357422,
+        591.5714721679688,
+        309.0924377441406,
+        600.2789916992188
+      ],
+      "text_sha256": "13399bed93d3fdd6fba932a88d6f38cced39da7d99bf01a5c88e5a15a1aa9b64"
+    },
+    {
+      "block_id": "page-0322-block-0021",
+      "order": 21,
+      "text": "■\n■Depressed mood\n",
+      "bbox": [
+        237.9998016357422,
+        600.5714721679688,
+        300.6324462890625,
+        609.2789916992188
+      ],
+      "text_sha256": "fb467f0e754789aad2c9e99c2df650f821a882ffc91827c7fb58dd5e79877966"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

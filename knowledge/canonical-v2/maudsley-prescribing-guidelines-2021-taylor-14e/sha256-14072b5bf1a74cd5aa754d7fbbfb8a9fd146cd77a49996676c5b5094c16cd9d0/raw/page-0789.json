@@ -1,0 +1,371 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0789",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 789,
+  "source_page_index": 788,
+  "source_page_display": 789,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "768    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  9\n■\n■Prior cognitive impairment or dementia\n■\n■Older age (>65 years)\n■\n■Multiple co-morbidities\n■\n■Previous history of delirium, stroke, neurological disease, falls or gait disorder\n■\n■Psychoactive drug use\n■\n■Polypharmacy (>4 medications)\n■\n■Anticholinergic drug use\nOutcome\nPatients with delirium have an increased length of hospital stay, increased mortality and \nincreased risk of long term institutional placement.1,5 Hospital mortality rates of \npatients with delirium range from 6% to 18% and are twice that of matched controls.5 \nIn older people, the 1-year mortality rate associated with cases of delirium is 35–40%.7 \nUp to 60% of individuals suffer persistent cognitive impairment following delirium and \nthese patients are also three times more likely to develop dementia.1,5\nManagement\nPreventing delirium is the most effective strategy for reducing its frequency and compli-\ncations.7 Delirium is a medical emergency and the identification and treatment of the \nunderlying cause should be the first aim of management.11\nNon-pharmacological or environmental support strategies should be instituted wher-\never possible. These include coordinating nursing care, preventing sensory deprivation \nand disorientation, and maintaining competence.5,12 Pharmacological treatment should \nbe directed first at the underlying cause (if known) and then at the relief of specific \nsymptoms of delirium.\nThe common errors in the pharmacological management of delirium are to use antipsy-\nchotic medications in excessive doses, give them too late or to overuse benzodiazepines.4\nGeneral Principles4,5,13–16\n■\n■Keep the use of sedatives and antipsychotics to a minimum\n■\n■Use one drug at a time\n■\n■Tailor doses according to age, body size and degree of agitation\n■\n■Titrate doses to effect\n■\n■Use small doses regularly, rather than large doses less frequently\n■\n■Review at least every 24 hours\n■\n■Increase scheduled doses if regular ‘as needed’ doses are required after the initial 24 \nhours period\n■\n■Maintain at an effective dose and discontinue as soon as the clinical situation allows\n■\n■Ensure that the diagnosis of delirium is documented both in the patients hospital \nnotes and in their primary health record (include in discharge letter or summary)\n■\n■If it has not been possible to discontinue agents prior to discharge, ensure a clear plan \nfor early medication review and follow up in the community is agreed\n",
+  "raw_text_sha256": "ae7beb3c13a5946f0a352d6c416f69874614ba4bacb688fee703b924df700d4f",
+  "coordinates_sha256": "f6ebc865e2ecf16aa63e00bab73c1ba4f23c387996664d4197ff9f0344918890",
+  "block_sequence_sha256": "6aa38129e2f3144ad994221783aa81c77e09e91971048556185e7f084e1b49b1",
+  "blocks": [
+    {
+      "block_id": "page-0789-block-0000",
+      "order": 0,
+      "text": "768    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "851acc5c7ce3f5b5b9a3b883bbac7a6fd5382e8ef02376b15d85fd7954751d02"
+    },
+    {
+      "block_id": "page-0789-block-0001",
+      "order": 1,
+      "text": "CHAPTER  9\n",
+      "bbox": [
+        18.520000457763672,
+        597.6024780273438,
+        28.0,
+        641.1704711914062
+      ],
+      "text_sha256": "2f213d231c74a11904a8da09025a8eefa6dceb4a2df848af43d9c4d19beb9596"
+    },
+    {
+      "block_id": "page-0789-block-0002",
+      "order": 2,
+      "text": "■\n■Prior cognitive impairment or dementia\n",
+      "bbox": [
+        61.88990020751953,
+        62.55029296875,
+        241.4399871826172,
+        74.27029418945312
+      ],
+      "text_sha256": "c0d35eb432f6646dfcef5f641096e8bb3bde3aae851a2c71e8a8d3754b8708e0"
+    },
+    {
+      "block_id": "page-0789-block-0003",
+      "order": 3,
+      "text": "■\n■Older age (>65 years)\n",
+      "bbox": [
+        61.88990020751953,
+        74.55029296875,
+        164.22999572753906,
+        86.27029418945312
+      ],
+      "text_sha256": "b0fb98660fbdf7b4ae2d2750a18da4bb3083304f4cd1ef84c737abd53c8ad42a"
+    },
+    {
+      "block_id": "page-0789-block-0004",
+      "order": 4,
+      "text": "■\n■Multiple co-morbidities\n",
+      "bbox": [
+        61.88990020751953,
+        86.55029296875,
+        173.11997985839844,
+        98.27029418945312
+      ],
+      "text_sha256": "f563e0a325d85638ec81da82b8ed11c049fb4e214f1b400378b601b0cf7728ba"
+    },
+    {
+      "block_id": "page-0789-block-0005",
+      "order": 5,
+      "text": "■\n■Previous history of delirium, stroke, neurological disease, falls or gait disorder\n",
+      "bbox": [
+        61.88990020751953,
+        98.55029296875,
+        406.5400390625,
+        110.27029418945312
+      ],
+      "text_sha256": "96e420a3e697e92f6061f1ea506c1755527df4e64e7c46629262e87a405f5520"
+    },
+    {
+      "block_id": "page-0789-block-0006",
+      "order": 6,
+      "text": "■\n■Psychoactive drug use\n",
+      "bbox": [
+        61.88990020751953,
+        110.55029296875,
+        165.34999084472656,
+        122.27029418945312
+      ],
+      "text_sha256": "9f7afdd93a03173f6a6041b042bfa92b40293d8352cc13891cc8ffc94ef1cb05"
+    },
+    {
+      "block_id": "page-0789-block-0007",
+      "order": 7,
+      "text": "■\n■Polypharmacy (>4 medications)\n",
+      "bbox": [
+        61.88990020751953,
+        122.55029296875,
+        207.5599822998047,
+        134.27029418945312
+      ],
+      "text_sha256": "27332dca5a095b186c5d219867f5b480bbe99785eb78e148a602bdde3e7e5fed"
+    },
+    {
+      "block_id": "page-0789-block-0008",
+      "order": 8,
+      "text": "■\n■Anticholinergic drug use\n",
+      "bbox": [
+        61.88990020751953,
+        134.55029296875,
+        176.45999145507812,
+        146.27029418945312
+      ],
+      "text_sha256": "07c2caac6a0a2555e399652829179fbeb3a1f470a141e60dda129f093bc6ff81"
+    },
+    {
+      "block_id": "page-0789-block-0009",
+      "order": 9,
+      "text": "Outcome\n",
+      "bbox": [
+        61.88999938964844,
+        169.70529174804688,
+        108.947998046875,
+        182.74029541015625
+      ],
+      "text_sha256": "1f5c80eea31994eab660466696c83d22796b2a5a507adb4752e576edd8c02b4a"
+    },
+    {
+      "block_id": "page-0789-block-0010",
+      "order": 10,
+      "text": "Patients with delirium have an increased length of hospital stay, increased mortality and \nincreased risk of long term institutional placement.1,5 Hospital mortality rates of \npatients with delirium range from 6% to 18% and are twice that of matched controls.5 \nIn older people, the 1-year mortality rate associated with cases of delirium is 35–40%.7 \nUp to 60% of individuals suffer persistent cognitive impairment following delirium and \nthese patients are also three times more likely to develop dementia.1,5\n",
+      "bbox": [
+        61.88999938964844,
+        188.55029296875,
+        436.6799011230469,
+        260.2702941894531
+      ],
+      "text_sha256": "b574d92a59dcafe816659d8718288443359bbb25cc13888c86024be73a0b852f"
+    },
+    {
+      "block_id": "page-0789-block-0011",
+      "order": 11,
+      "text": "Management\n",
+      "bbox": [
+        61.88999938964844,
+        277.7052917480469,
+        130.95899963378906,
+        290.74029541015625
+      ],
+      "text_sha256": "b7c8078b02231574c679ff1660f4ee2c4e4b0661ca89cd501152f9404d2324c0"
+    },
+    {
+      "block_id": "page-0789-block-0012",
+      "order": 12,
+      "text": "Preventing delirium is the most effective strategy for reducing its frequency and compli-\ncations.7 Delirium is a medical emergency and the identification and treatment of the \nunderlying cause should be the first aim of management.11\n",
+      "bbox": [
+        61.88999938964844,
+        296.55029296875,
+        436.700927734375,
+        332.2702941894531
+      ],
+      "text_sha256": "36b4095886bc2eff1c3fbe960892c6cdda7ce0251ff4ed8ce7cee147d8d5a162"
+    },
+    {
+      "block_id": "page-0789-block-0013",
+      "order": 13,
+      "text": "Non-pharmacological or environmental support strategies should be instituted wher-\never possible. These include coordinating nursing care, preventing sensory deprivation \nand disorientation, and maintaining competence.5,12 Pharmacological treatment should \nbe directed first at the underlying cause (if known) and then at the relief of specific \nsymptoms of delirium.\n",
+      "bbox": [
+        61.889373779296875,
+        332.55029296875,
+        436.71923828125,
+        392.2702941894531
+      ],
+      "text_sha256": "e7f70cb56b65badde032728921323f74b22531bf4b3d4f15b98746b9e6a0763d"
+    },
+    {
+      "block_id": "page-0789-block-0014",
+      "order": 14,
+      "text": "The common errors in the pharmacological management of delirium are to use antipsy-\nchotic medications in excessive doses, give them too late or to overuse benzodiazepines.4\n",
+      "bbox": [
+        61.889373779296875,
+        392.55029296875,
+        433.8594970703125,
+        416.2702941894531
+      ],
+      "text_sha256": "48a88f572975049119c281bc46911ea30a99394322d37aeeb7c76c69fddd74b7"
+    },
+    {
+      "block_id": "page-0789-block-0015",
+      "order": 15,
+      "text": "General Principles4,5,13–16\n",
+      "bbox": [
+        61.88999938964844,
+        433.7052917480469,
+        182.3559112548828,
+        446.74029541015625
+      ],
+      "text_sha256": "efe0c7847f4e5bfc5b563a34d3854751387230b072f1d90db20597d12f172de8"
+    },
+    {
+      "block_id": "page-0789-block-0016",
+      "order": 16,
+      "text": "■\n■Keep the use of sedatives and antipsychotics to a minimum\n",
+      "bbox": [
+        61.88990020751953,
+        452.55029296875,
+        324.7799987792969,
+        464.2702941894531
+      ],
+      "text_sha256": "9c842480ac806e5f4a1a7700b2a850a58af6872e5babfc8dd7f4488e7da801e1"
+    },
+    {
+      "block_id": "page-0789-block-0017",
+      "order": 17,
+      "text": "■\n■Use one drug at a time\n",
+      "bbox": [
+        61.88990020751953,
+        464.55029296875,
+        168.1099853515625,
+        476.2702941894531
+      ],
+      "text_sha256": "e7845d5a053bbda5f009e818ca0e934316a73535935cb4c9a181c822aa293fb1"
+    },
+    {
+      "block_id": "page-0789-block-0018",
+      "order": 18,
+      "text": "■\n■Tailor doses according to age, body size and degree of agitation\n",
+      "bbox": [
+        61.88990020751953,
+        476.55029296875,
+        344.1599426269531,
+        488.2702941894531
+      ],
+      "text_sha256": "60a7fe10aa8eaf6c181ebf12736cf1aebcfc2ed8ba31d77b9386563067d8bfd3"
+    },
+    {
+      "block_id": "page-0789-block-0019",
+      "order": 19,
+      "text": "■\n■Titrate doses to effect\n",
+      "bbox": [
+        61.88990020751953,
+        488.55029296875,
+        163.83001708984375,
+        500.2702941894531
+      ],
+      "text_sha256": "4a2070103267c097a2b5a18a93ee6d789a4b6e9e1b163f0b66ff02aecba4be6e"
+    },
+    {
+      "block_id": "page-0789-block-0020",
+      "order": 20,
+      "text": "■\n■Use small doses regularly, rather than large doses less frequently\n",
+      "bbox": [
+        61.88990020751953,
+        500.55029296875,
+        346.300048828125,
+        512.2703247070312
+      ],
+      "text_sha256": "2d26686cf3c92ec7c83c08ae098c03e0a55fe38fdb752d0d02fec81077463ec9"
+    },
+    {
+      "block_id": "page-0789-block-0021",
+      "order": 21,
+      "text": "■\n■Review at least every 24 hours\n",
+      "bbox": [
+        61.88990020751953,
+        512.55029296875,
+        202.5699920654297,
+        524.2703247070312
+      ],
+      "text_sha256": "fa109aa14d8aed461efa5b550791068fc12554f2705985f4e5ab530f940054b4"
+    },
+    {
+      "block_id": "page-0789-block-0022",
+      "order": 22,
+      "text": "■\n■Increase scheduled doses if regular ‘as needed’ doses are required after the initial 24 \n",
+      "bbox": [
+        61.88990020751953,
+        524.55029296875,
+        436.6199951171875,
+        536.2703247070312
+      ],
+      "text_sha256": "9186f496f21a5eeb36795cfde1ac2239ce5fe5e6497967d6ca0d534120e24d95"
+    },
+    {
+      "block_id": "page-0789-block-0023",
+      "order": 23,
+      "text": "hours period\n",
+      "bbox": [
+        70.88999938964844,
+        536.55029296875,
+        125.91998291015625,
+        548.2703247070312
+      ],
+      "text_sha256": "1de258be31df1d9ac66789cb88b8a244be1d6d9f7a1ff57d1c3a7febe6e3d7b1"
+    },
+    {
+      "block_id": "page-0789-block-0024",
+      "order": 24,
+      "text": "■\n■Maintain at an effective dose and discontinue as soon as the clinical situation allows\n",
+      "bbox": [
+        61.88990020751953,
+        548.55029296875,
+        433.9200134277344,
+        560.2703247070312
+      ],
+      "text_sha256": "c03ddd071704e20459b8f2fad3bf523bc14822ab9a8ed4eacfecb0d022854b8a"
+    },
+    {
+      "block_id": "page-0789-block-0025",
+      "order": 25,
+      "text": "■\n■Ensure that the diagnosis of delirium is documented both in the patients hospital \n",
+      "bbox": [
+        61.88990020751953,
+        560.55029296875,
+        436.6399230957031,
+        572.2703247070312
+      ],
+      "text_sha256": "a7227ccd8fad3d61b85eac34e93b6d2c3b0a7aff8d85ef33fe05440641658cce"
+    },
+    {
+      "block_id": "page-0789-block-0026",
+      "order": 26,
+      "text": "notes and in their primary health record (include in discharge letter or summary)\n",
+      "bbox": [
+        70.88999938964844,
+        572.55029296875,
+        418.7000427246094,
+        584.2703247070312
+      ],
+      "text_sha256": "1158b7d9c46e158f374c4a4bb24c2b4ff92abb8147285d1eab75f12d089f5d1a"
+    },
+    {
+      "block_id": "page-0789-block-0027",
+      "order": 27,
+      "text": "■\n■If it has not been possible to discontinue agents prior to discharge, ensure a clear plan \n",
+      "bbox": [
+        61.88990020751953,
+        584.55029296875,
+        436.6799621582031,
+        596.2703247070312
+      ],
+      "text_sha256": "709ae7982cec242995bf6a7038ea6675333011b7d0fc43db3cb8dcd6192e126d"
+    },
+    {
+      "block_id": "page-0789-block-0028",
+      "order": 28,
+      "text": "for early medication review and follow up in the community is agreed\n",
+      "bbox": [
+        70.88999938964844,
+        596.55029296875,
+        372.0299987792969,
+        608.2703247070312
+      ],
+      "text_sha256": "a2cb68f5e3c809e2ce32fbb2bb74626e5fe962b9715ef64f736fbab1ad594d70"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

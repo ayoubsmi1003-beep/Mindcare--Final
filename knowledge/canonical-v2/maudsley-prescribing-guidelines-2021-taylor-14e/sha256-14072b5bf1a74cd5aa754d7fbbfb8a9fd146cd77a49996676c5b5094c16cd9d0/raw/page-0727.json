@@ -1,0 +1,611 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0727",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 727,
+  "source_page_index": 726,
+  "source_page_display": 727,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "(Continued)\nDrug\nInfant plasma \nconcentrations\nRelative infant \ndose (RID)\nReported acute adverse effects in \ninfant\nReported developmental effects in \ninfant\nDuloxetine4,11,24–27\n<1% of maternal plasma \nlevels.\n<1%\nDizziness, nausea, fatigue\nNone reported but not assessed\nEscitalopram4,11,13,28–33\nUndetectable or low\n3–8.3%\nNecrotising enterocolitis in 5-day \ninfant (necessitating intensive care \nadmission and intravenous antibiotic \ntreatment).Infant was exposed to \nescitalopram in utero. Symptoms were \nlethargy, decreased oral intake and \nblood in the stools.\nSeizure-like activity, sleep \ndisturbance, severe emesis and \nsomnolence in 6-month old. Mother \nwas also taking bupropion.\nNone reported but not studied\nFluoxetine2,4,11,14,23,34–45\nVariable: can be > 10% of \nmaternal plasma levels. \nHighest reported levels of \nSSRIs.\n1.6–14.6%\nColic, excessive crying, decreased \nsleep, diarrhoea, vomiting, \nsomnolence, decreased feeding, \nhypotonia, moaning, grunting and \nhyperactivity.\nOne case of seizure activity at 3 \nweeks, 4 months and then 5 \nmonths. Mother was also taking \ncarbamazepine.\nOne case of tachypnoea, jitteriness, \nirritability, fever and compensated \nmetabolic acidosis. Infant plasma \nlevels were in the adult therapeutic \nrange. The authors diagnosed \nserotonin syndrome. Mother was \ntaking fluoxetine 60mg.\nNormal weight gain and neurological \ndevelopment has been reported for \nmany infants.\nOne retrospective study found lower \ngrowth curves compared with \nnon-exposed infants.\nOne case of a reduction in platelet \nserotonin.\nTable 7.3  (Continued)\n",
+  "raw_text_sha256": "23b4108a526f1dd21a33bfdb9d4a805e10bbfaa92535683bab7107b7729f86fe",
+  "coordinates_sha256": "59ce77a903797296df791fff2a66a02ec08b83de70b8a57a24fb7989cb315cb5",
+  "block_sequence_sha256": "37d7117acf12b35d322f0594bbee74a50526aaefd951d4a5b21292d3e0aa0151",
+  "blocks": [
+    {
+      "block_id": "page-0727-block-0000",
+      "order": 0,
+      "text": "(Continued)\n",
+      "bbox": [
+        426.9765930175781,
+        64.3501205444336,
+        435.7290954589844,
+        100.36517333984375
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0727-block-0001",
+      "order": 1,
+      "text": "Drug\nInfant plasma \n",
+      "bbox": [
+        65.01640319824219,
+        441.7214660644531,
+        83.90139770507812,
+        612.6539916992188
+      ],
+      "text_sha256": "740ab9eb672cde86fd19cae765bab98ff010246377b1aac1269ef7543dd4a3b7"
+    },
+    {
+      "block_id": "page-0727-block-0002",
+      "order": 2,
+      "text": "concentrations\nRelative infant \n",
+      "bbox": [
+        65.01640319824219,
+        334.05145263671875,
+        83.90139770507812,
+        492.1514892578125
+      ],
+      "text_sha256": "bb1205aa23f4c324e61f2d45e2cc5a89247e633799704f1f4a6b66b6effcd299"
+    },
+    {
+      "block_id": "page-0727-block-0003",
+      "order": 3,
+      "text": "dose (RID)\nReported acute adverse effects in \n",
+      "bbox": [
+        65.01640319824219,
+        203.4314422607422,
+        83.90139770507812,
+        387.82647705078125
+      ],
+      "text_sha256": "3177e1242b62d10d9d24ae8b72819a2a6f978aa6260c48d73981167f1f9dad77"
+    },
+    {
+      "block_id": "page-0727-block-0004",
+      "order": 4,
+      "text": "infant\nReported developmental effects in \n",
+      "bbox": [
+        65.01640319824219,
+        67.8989486694336,
+        83.90139770507812,
+        323.32647705078125
+      ],
+      "text_sha256": "5208ea628ac7af2784c52fbd80c2393eb82f42a793d04e9fc000a75672474e8b"
+    },
+    {
+      "block_id": "page-0727-block-0005",
+      "order": 5,
+      "text": "infant\n",
+      "bbox": [
+        75.01390075683594,
+        170.70896911621094,
+        83.90139770507812,
+        191.9639892578125
+      ],
+      "text_sha256": "e7126f01d55795d9d0761c51e3f277a39d4ed441a3504bd0a6901247c19c0069"
+    },
+    {
+      "block_id": "page-0727-block-0006",
+      "order": 6,
+      "text": "Duloxetine4,11,24–27\n<1% of maternal plasma \n",
+      "bbox": [
+        95.31639862060547,
+        410.01397705078125,
+        104.02639770507812,
+        612.6539916992188
+      ],
+      "text_sha256": "ceec57a651d6eff2211c6c4f00bb5a375b0a99197fc28a240eeaa59892b3eb0d"
+    },
+    {
+      "block_id": "page-0727-block-0007",
+      "order": 7,
+      "text": "levels.\n<1%\nDizziness, nausea, fatigue\nNone reported but not assessed\n",
+      "bbox": [
+        95.31890106201172,
+        90.40159606933594,
+        114.02389526367188,
+        492.15399169921875
+      ],
+      "text_sha256": "5a91e6c8a225f37b0c45bf0b4272372b9a37ce92727abadaca3d150c5ce90420"
+    },
+    {
+      "block_id": "page-0727-block-0008",
+      "order": 8,
+      "text": "Escitalopram4,11,13,28–33\nUndetectable or low\n3–8.3%\nNecrotising enterocolitis in 5-day \n",
+      "bbox": [
+        123.44390106201172,
+        220.8865509033203,
+        132.15139770507812,
+        612.656494140625
+      ],
+      "text_sha256": "bd3602458c9e0bd8cdb6192506c80b8e6859e39d5f28c5d9c1dca5b8a1c5eafd"
+    },
+    {
+      "block_id": "page-0727-block-0009",
+      "order": 9,
+      "text": "infant (necessitating intensive care \n",
+      "bbox": [
+        133.44139099121094,
+        215.9965362548828,
+        142.14889526367188,
+        323.3289794921875
+      ],
+      "text_sha256": "75e90c08e6f3e348fc924cc095947d2ec65a321a28d54765c5e7433502f0dfe7"
+    },
+    {
+      "block_id": "page-0727-block-0010",
+      "order": 10,
+      "text": "admission and intravenous antibiotic \n",
+      "bbox": [
+        143.4388885498047,
+        208.7590789794922,
+        152.14639282226562,
+        323.3289794921875
+      ],
+      "text_sha256": "8d39f0fc4e95d890de8dee9c55cc97a5860184a3081006d8b64283c6ac870adf"
+    },
+    {
+      "block_id": "page-0727-block-0011",
+      "order": 11,
+      "text": "treatment).Infant was exposed to \n",
+      "bbox": [
+        153.43638610839844,
+        218.8390655517578,
+        162.14389038085938,
+        323.3289794921875
+      ],
+      "text_sha256": "26153fd61fd268f58978cddc5cc66d4665f9b05c0eedab58449dc4ee90440939"
+    },
+    {
+      "block_id": "page-0727-block-0012",
+      "order": 12,
+      "text": "escitalopram in utero. Symptoms were \n",
+      "bbox": [
+        163.38888549804688,
+        202.6615447998047,
+        172.14138793945312,
+        323.3289794921875
+      ],
+      "text_sha256": "5d5cbc9a14e165b6e9effd6dcf598d6325dd1a5e636a21fadeb40bee51b21a3f"
+    },
+    {
+      "block_id": "page-0727-block-0013",
+      "order": 13,
+      "text": "lethargy, decreased oral intake and \n",
+      "bbox": [
+        173.43138122558594,
+        214.0540313720703,
+        182.13888549804688,
+        323.3289794921875
+      ],
+      "text_sha256": "fd3d215ee980855266197cb876209e932a5424c5f2617cff325056cb19791cfe"
+    },
+    {
+      "block_id": "page-0727-block-0014",
+      "order": 14,
+      "text": "blood in the stools.\n",
+      "bbox": [
+        183.4288787841797,
+        264.3340759277344,
+        192.13638305664062,
+        323.3289794921875
+      ],
+      "text_sha256": "1fd2986d01d518829582581d01765af7979134687151d67846a3fd73b2fad09b"
+    },
+    {
+      "block_id": "page-0727-block-0015",
+      "order": 15,
+      "text": "Seizure-like activity, sleep \n",
+      "bbox": [
+        199.42637634277344,
+        241.25648498535156,
+        208.13388061523438,
+        323.3289794921875
+      ],
+      "text_sha256": "6a7e2ea9cbffe917e19bc84eeebdeecbf2b38b616feb8eaf00358e2d6545709c"
+    },
+    {
+      "block_id": "page-0727-block-0016",
+      "order": 16,
+      "text": "disturbance, severe emesis and \n",
+      "bbox": [
+        209.4238739013672,
+        222.61891174316406,
+        218.13137817382812,
+        323.3289794921875
+      ],
+      "text_sha256": "259bde2890a299ba7b41220723c454522687ff338c70df24222f1beb2cf1ae8b"
+    },
+    {
+      "block_id": "page-0727-block-0017",
+      "order": 17,
+      "text": "somnolence in 6-month old. Mother \n",
+      "bbox": [
+        219.42137145996094,
+        204.9638214111328,
+        228.12887573242188,
+        323.3289794921875
+      ],
+      "text_sha256": "327a31b432057c603cf22ff33e1552c3089766833841d49c008d211e630f5ee2"
+    },
+    {
+      "block_id": "page-0727-block-0018",
+      "order": 18,
+      "text": "was also taking bupropion.\n",
+      "bbox": [
+        229.4188690185547,
+        236.7638397216797,
+        238.12637329101562,
+        323.3289794921875
+      ],
+      "text_sha256": "be4509f2738a0fb95f1766454590f5730a1db82dfe88058df5d89dec788ab8ac"
+    },
+    {
+      "block_id": "page-0727-block-0019",
+      "order": 19,
+      "text": "None reported but not studied\n",
+      "bbox": [
+        123.42137908935547,
+        94.15159606933594,
+        132.12887573242188,
+        191.96649169921875
+      ],
+      "text_sha256": "fae8af26f09a9d1db418cb13358e682d99fefc63621eb2dbf70b6920c0f098f6"
+    },
+    {
+      "block_id": "page-0727-block-0020",
+      "order": 20,
+      "text": "Fluoxetine2,4,11,14,23,34–45\nVariable: can be > 10% of \n",
+      "bbox": [
+        247.54637145996094,
+        405.9639892578125,
+        256.2763977050781,
+        612.656494140625
+      ],
+      "text_sha256": "de2201ac845a71ee7c54a3a04cfea070caa5aa096e66d0cff1e1a46f1d4f9d10"
+    },
+    {
+      "block_id": "page-0727-block-0021",
+      "order": 21,
+      "text": "maternal plasma levels. \n",
+      "bbox": [
+        257.56640625,
+        415.7740173339844,
+        266.2738952636719,
+        492.15399169921875
+      ],
+      "text_sha256": "607493c440378f40ff26d4dc7018d218211386e0202fb1d4a9e4be8892d5d1df"
+    },
+    {
+      "block_id": "page-0727-block-0022",
+      "order": 22,
+      "text": "Highest reported levels of \n",
+      "bbox": [
+        267.56390380859375,
+        408.52899169921875,
+        276.2713928222656,
+        492.15399169921875
+      ],
+      "text_sha256": "98b4f5172299458f9837732e8d54334e375f8b3a3526f3e208862579f4e35825"
+    },
+    {
+      "block_id": "page-0727-block-0023",
+      "order": 23,
+      "text": "SSRIs.\n",
+      "bbox": [
+        277.5614013671875,
+        473.8164978027344,
+        286.2688903808594,
+        492.15399169921875
+      ],
+      "text_sha256": "3ef01cff741e7639b65c6522b0ec08176c8b0ec610ae52e07b681d5406c92d5d"
+    },
+    {
+      "block_id": "page-0727-block-0024",
+      "order": 24,
+      "text": "1.6–14.6%\nColic, excessive crying, decreased \n",
+      "bbox": [
+        247.56138610839844,
+        215.13392639160156,
+        256.2688903808594,
+        387.8289794921875
+      ],
+      "text_sha256": "ec17f0c29db1e01f589730be3c756e3fedb2ee6b0b4bda2a45fab5eb804b64ba"
+    },
+    {
+      "block_id": "page-0727-block-0025",
+      "order": 25,
+      "text": "sleep, diarrhoea, vomiting, \n",
+      "bbox": [
+        257.55889892578125,
+        236.2313995361328,
+        266.2663879394531,
+        323.3289794921875
+      ],
+      "text_sha256": "8d9c990859b24549a29f8f80c13e1b0bd5f647b178ce61846a91abf337a0f577"
+    },
+    {
+      "block_id": "page-0727-block-0026",
+      "order": 26,
+      "text": "somnolence, decreased feeding, \n",
+      "bbox": [
+        267.556396484375,
+        218.44139099121094,
+        276.2638854980469,
+        323.3289794921875
+      ],
+      "text_sha256": "918a6fe37bc540d31c77bf13104171b9929e95432480d447ccd4415f90fefebe"
+    },
+    {
+      "block_id": "page-0727-block-0027",
+      "order": 27,
+      "text": "hypotonia, moaning, grunting and \n",
+      "bbox": [
+        277.55389404296875,
+        210.78379821777344,
+        286.2613830566406,
+        323.3289794921875
+      ],
+      "text_sha256": "bc719280481fbf600ee78e9dd652edae94541570d5181160abcd33264c1349a2"
+    },
+    {
+      "block_id": "page-0727-block-0028",
+      "order": 28,
+      "text": "hyperactivity.\n",
+      "bbox": [
+        287.5513916015625,
+        281.9515075683594,
+        296.2588806152344,
+        323.3289794921875
+      ],
+      "text_sha256": "e24d36d14f44aca606b8d8a8971e51f85e57a561b403f1aec7ad16e103092259"
+    },
+    {
+      "block_id": "page-0727-block-0029",
+      "order": 29,
+      "text": "One case of seizure activity at 3 \n",
+      "bbox": [
+        303.54888916015625,
+        220.55650329589844,
+        312.2563781738281,
+        323.3289794921875
+      ],
+      "text_sha256": "c51177f7f7ebfd3056b671337878d4b6035e8aef6c594effc362a5e5a1b4ec03"
+    },
+    {
+      "block_id": "page-0727-block-0030",
+      "order": 30,
+      "text": "weeks, 4 months and then 5 \n",
+      "bbox": [
+        313.54638671875,
+        229.54139709472656,
+        322.2538757324219,
+        323.3289794921875
+      ],
+      "text_sha256": "31970f1f4208e3801efe62102cdf588ed66a42b3a8833fb0e740cfae48e50d2a"
+    },
+    {
+      "block_id": "page-0727-block-0031",
+      "order": 31,
+      "text": "months. Mother was also taking \n",
+      "bbox": [
+        323.54388427734375,
+        217.88636779785156,
+        332.2513732910156,
+        323.3289794921875
+      ],
+      "text_sha256": "1a7c51e2fa377ba314a4f89d1b9ffab0ce0e007305d790f4327ea298235484f4"
+    },
+    {
+      "block_id": "page-0727-block-0032",
+      "order": 32,
+      "text": "carbamazepine.\n",
+      "bbox": [
+        333.5413818359375,
+        272.9139709472656,
+        342.2488708496094,
+        323.3289794921875
+      ],
+      "text_sha256": "ec42f51ddc617cd135e022ae6128ddab48bea081591154a393679f3b54cf4ec8"
+    },
+    {
+      "block_id": "page-0727-block-0033",
+      "order": 33,
+      "text": "One case of tachypnoea, jitteriness, \n",
+      "bbox": [
+        349.53887939453125,
+        207.90391540527344,
+        358.2463684082031,
+        323.3289794921875
+      ],
+      "text_sha256": "3f53a7fb4c8f2fe05d9c9854e1d92f47d64f8cc8ee4f7b7f6e6172e32da115b8"
+    },
+    {
+      "block_id": "page-0727-block-0034",
+      "order": 34,
+      "text": "irritability, fever and compensated \n",
+      "bbox": [
+        359.536376953125,
+        213.19142150878906,
+        368.2438659667969,
+        323.3289794921875
+      ],
+      "text_sha256": "3a70a343531c44d7f1eedec89c22fbea5711e8add9f52c6a3866a274a59c13f9"
+    },
+    {
+      "block_id": "page-0727-block-0035",
+      "order": 35,
+      "text": "metabolic acidosis. Infant plasma \n",
+      "bbox": [
+        369.53387451171875,
+        215.82386779785156,
+        378.2413635253906,
+        323.3289794921875
+      ],
+      "text_sha256": "f81693efbf9fba41c37d8080af1b06cadbcb027dd438ce42001ea1314d20b82b"
+    },
+    {
+      "block_id": "page-0727-block-0036",
+      "order": 36,
+      "text": "levels were in the adult therapeutic \n",
+      "bbox": [
+        379.5313720703125,
+        209.2914276123047,
+        388.2388610839844,
+        323.3289794921875
+      ],
+      "text_sha256": "767accfeaae91e7aa4a50c7b24a39cf5ebfdf17f5dfde1105fc0e9d4958207e2"
+    },
+    {
+      "block_id": "page-0727-block-0037",
+      "order": 37,
+      "text": "range. The authors diagnosed \n",
+      "bbox": [
+        389.52886962890625,
+        225.7913360595703,
+        398.2363586425781,
+        323.3289794921875
+      ],
+      "text_sha256": "764d4d9a57b6e163f5067ff70392730d1c60a9c5f3c6548ce077c870eaac7b5b"
+    },
+    {
+      "block_id": "page-0727-block-0038",
+      "order": 38,
+      "text": "serotonin syndrome. Mother was \n",
+      "bbox": [
+        399.5263671875,
+        215.6588897705078,
+        408.2338562011719,
+        323.3289794921875
+      ],
+      "text_sha256": "9c662f1c1a904c7134dcb1aa1e460c25afba374c2868cd570c10985a3c706547"
+    },
+    {
+      "block_id": "page-0727-block-0039",
+      "order": 39,
+      "text": "taking fluoxetine 60mg.\n",
+      "bbox": [
+        409.52386474609375,
+        246.6488800048828,
+        418.2313537597656,
+        323.3289794921875
+      ],
+      "text_sha256": "b22f2f744911ea5569355deb484ede0ead06172e4d6f8e9da666782d9485082c"
+    },
+    {
+      "block_id": "page-0727-block-0040",
+      "order": 40,
+      "text": "Normal weight gain and neurological \n",
+      "bbox": [
+        247.5238494873047,
+        71.2391586303711,
+        256.2313537597656,
+        191.96649169921875
+      ],
+      "text_sha256": "c9b53c4722fe72700863b01b14dbc0de054e94302d6d4a88795dd1a94d872a15"
+    },
+    {
+      "block_id": "page-0727-block-0041",
+      "order": 41,
+      "text": "development has been reported for \n",
+      "bbox": [
+        257.5213623046875,
+        76.6616439819336,
+        266.2288513183594,
+        191.96649169921875
+      ],
+      "text_sha256": "d855137c4401874ee81bd67e35c6d178eeb838a781e825b0cbeb43b0c63cc642"
+    },
+    {
+      "block_id": "page-0727-block-0042",
+      "order": 42,
+      "text": "many infants.\n",
+      "bbox": [
+        267.51885986328125,
+        148.6315460205078,
+        276.2263488769531,
+        191.96649169921875
+      ],
+      "text_sha256": "e8475186621298b292d13c7b8a0d2e4e4f06181f8571ad997755a4558ca671c9"
+    },
+    {
+      "block_id": "page-0727-block-0043",
+      "order": 43,
+      "text": "One retrospective study found lower \n",
+      "bbox": [
+        283.516357421875,
+        73.47408294677734,
+        292.2238464355469,
+        191.96649169921875
+      ],
+      "text_sha256": "6ccba522d15c3fe11dc38bb2368f2c4f5d9d3309404a1837254e53d37593c6bf"
+    },
+    {
+      "block_id": "page-0727-block-0044",
+      "order": 44,
+      "text": "growth curves compared with \n",
+      "bbox": [
+        293.51385498046875,
+        94.3089828491211,
+        302.2213439941406,
+        191.96649169921875
+      ],
+      "text_sha256": "9cc3ec1d4db45f319e03001ce88220ebff6da874d22acc24a07c835901df4f22"
+    },
+    {
+      "block_id": "page-0727-block-0045",
+      "order": 45,
+      "text": "non-exposed infants.\n",
+      "bbox": [
+        303.5113525390625,
+        124.86409759521484,
+        312.2188415527344,
+        191.96649169921875
+      ],
+      "text_sha256": "9fb482bd662a50eac1c46ffd8c4cf35bcbacf6ec97b424272f0ee9f8592eb10f"
+    },
+    {
+      "block_id": "page-0727-block-0046",
+      "order": 46,
+      "text": "One case of a reduction in platelet \n",
+      "bbox": [
+        319.50885009765625,
+        80.00655364990234,
+        328.2163391113281,
+        191.96649169921875
+      ],
+      "text_sha256": "3f987739b77d9c86393631e6d159e99285661743a5746c0b19c5f7ab65a76ea6"
+    },
+    {
+      "block_id": "page-0727-block-0047",
+      "order": 47,
+      "text": "serotonin.\n",
+      "bbox": [
+        329.50634765625,
+        160.00904846191406,
+        338.2138366699219,
+        191.96649169921875
+      ],
+      "text_sha256": "07d844b59a23c498bf13ee2a25f122d7aa804ac1dbe8e162b168d3e9c6b0cce1"
+    },
+    {
+      "block_id": "page-0727-block-0048",
+      "order": 48,
+      "text": "Table 7.3  (Continued)\n",
+      "bbox": [
+        44.38890075683594,
+        534.5339965820312,
+        53.27640151977539,
+        606.6539916992188
+      ],
+      "text_sha256": "0670877b7147a8e2e130f77db8bb3e9296a072628049a331b5ad9602295f1c55"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

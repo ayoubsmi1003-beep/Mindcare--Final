@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0611",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 611,
+  "source_page_index": 610,
+  "source_page_display": 611,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "590    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  5\nCase reports or case series describing positive effects for ondansetron,52 clomiphene53 \ntramadol,54 ketanserin,55 cyproterone,56 levetiracetam,57 pregabalin58 and cannabis59 \nhave been published. A Cochrane Review of cannabinoids concluded that there was \nlittle if any current evidence for efficacy60 and, despite a strong biological rationale for \nuse, their overall efficacy and safety remain largely unknown.61 Many other drugs have \nbeen reported to be effective in single case reports. Patients in these reports all had co-\nmorbid psychiatric illness, making it difficult to determine the effect of these drugs on \nTS alone.\nBotulinum toxin has been used to treat bothersome or painful focal motor tics, par-\nticularly those affecting neck muscles.18 However, a recent Cochrane review expressed \nuncertainty about its place in the treatment of tics owing to the low quality of available \nevidence.62\nThere may be a sub-group of children who develop tics and/or obsessive-compul-\nsive disorder in association with streptococcal or other infections or triggers. This \ngroup has been given (in the case of streptococcus) the acronym PANDAS (Paediatric \nAutoimmune Neuropsychiatric Disorder Associated with Streptococcus)63 or, more \nbroadly, PANS (Paediatric Acute-onset Neuropsychiatric Syndrome).64 This is \nthought to be an autoimmune-mediated effect, and there have been trials of immune-\nmodulatory therapy in these children as well as treatment with antibiotics for active \ninfections and also as preventative treatment. More research in this area is war-\nranted (Figure 5.2).\nEducational and behavioural\ntreatment\nClonidine or guanfacine\nNot fully effective\nNot fully effective\nNot effective* \nPoorly tolerated\nAntipsychotic treatment,\ne.g. aripiprazole or risperidone\nConsider older or more\nexperimental treatments\n(see text)\n*It is extremely rare in practice to get to this point – almost all cases can be\neffectively treated by recommendations above this point.\nFigure 5.2  Summary of recommendations.\n",
+  "raw_text_sha256": "e398dc075e33371ae44b5d3e760cb8f56cc8a278a6edf1b10aa0dba32d1adac6",
+  "coordinates_sha256": "e4a8418508030ac7740b77958a017403ded0f927220a4f56feaf5cc3ac7934d4",
+  "block_sequence_sha256": "8b4cb61e2337848e5f2a08e7ffd37c462af986d3859258e33b163515481ecb60",
+  "blocks": [
+    {
+      "block_id": "page-0611-block-0000",
+      "order": 0,
+      "text": "590    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "d7936a4625b2fe5884f1e6770f285aff4553eb3e1b628f7e32dacc62fc6424ee"
+    },
+    {
+      "block_id": "page-0611-block-0001",
+      "order": 1,
+      "text": "CHAPTER  5\n",
+      "bbox": [
+        18.520000457763672,
+        338.22650146484375,
+        28.0,
+        381.79449462890625
+      ],
+      "text_sha256": "4086e0916f45ec531cc17b8c611334eb2b1ef26051ba536579b8ef3c22c1648d"
+    },
+    {
+      "block_id": "page-0611-block-0002",
+      "order": 2,
+      "text": "Case reports or case series describing positive effects for ondansetron,52 clomiphene53 \ntramadol,54 ketanserin,55 cyproterone,56 levetiracetam,57 pregabalin58 and cannabis59 \nhave been published. A Cochrane Review of cannabinoids concluded that there was \nlittle if any current evidence for efficacy60 and, despite a strong biological rationale for \nuse, their overall efficacy and safety remain largely unknown.61 Many other drugs have \nbeen reported to be effective in single case reports. Patients in these reports all had co-\nmorbid psychiatric illness, making it difficult to determine the effect of these drugs on \nTS alone.\n",
+      "bbox": [
+        61.88859558105469,
+        62.31029510498047,
+        436.6700134277344,
+        158.27029418945312
+      ],
+      "text_sha256": "816998379919d51725a9eb5e436f0d10c07485e59f5dfb1b0f5c735b1c534d3b"
+    },
+    {
+      "block_id": "page-0611-block-0003",
+      "order": 3,
+      "text": "Botulinum toxin has been used to treat bothersome or painful focal motor tics, par-\nticularly those affecting neck muscles.18 However, a recent Cochrane review expressed \nuncertainty about its place in the treatment of tics owing to the low quality of available \nevidence.62\n",
+      "bbox": [
+        61.89149475097656,
+        158.310302734375,
+        436.6513977050781,
+        206.27029418945312
+      ],
+      "text_sha256": "31eea70b98faa7379304dd60f7dafe862706723d4ee200099d67dbe5529a71c1"
+    },
+    {
+      "block_id": "page-0611-block-0004",
+      "order": 4,
+      "text": "There may be a sub-group of children who develop tics and/or obsessive-compul-\nsive disorder in association with streptococcal or other infections or triggers. This \ngroup has been given (in the case of streptococcus) the acronym PANDAS (Paediatric \nAutoimmune Neuropsychiatric Disorder Associated with Streptococcus)63 or, more \nbroadly, PANS (Paediatric Acute-onset Neuropsychiatric Syndrome).64 This is \nthought to be an autoimmune-mediated effect, and there have been trials of immune-\nmodulatory therapy in these children as well as treatment with antibiotics for active \ninfections and also as preventative treatment. More research in this area is war-\nranted (Figure 5.2).\n",
+      "bbox": [
+        61.88999938964844,
+        206.55029296875,
+        436.7002258300781,
+        314.2702941894531
+      ],
+      "text_sha256": "0281af9d1bf2327dfd9cdbc6888ae7d7ef28ad51c61024498644978a8ac8c97e"
+    },
+    {
+      "block_id": "page-0611-block-0005",
+      "order": 5,
+      "text": "Educational and behavioural\n",
+      "bbox": [
+        199.57339477539062,
+        360.07269287109375,
+        294.20849609375,
+        368.7427062988281
+      ],
+      "text_sha256": "a996ded4136a8a982d44e2368b085541e292995c085dddd689f11e010f853fc2"
+    },
+    {
+      "block_id": "page-0611-block-0006",
+      "order": 6,
+      "text": "treatment\n",
+      "bbox": [
+        231.0509033203125,
+        369.07269287109375,
+        262.7309265136719,
+        377.7427062988281
+      ],
+      "text_sha256": "b1ae7797d3d53e4c6b7912905d5ab39726d24c9c19915cff0d2d2e629e755b60"
+    },
+    {
+      "block_id": "page-0611-block-0007",
+      "order": 7,
+      "text": "Clonidine or guanfacine\n",
+      "bbox": [
+        208.5469970703125,
+        412.8534851074219,
+        287.33453369140625,
+        421.52349853515625
+      ],
+      "text_sha256": "2d04856673c7bc7c27e2a9de892609e1a684b150b2a9b7896a52382d7b44bcc0"
+    },
+    {
+      "block_id": "page-0611-block-0008",
+      "order": 8,
+      "text": "Not fully effective\n",
+      "bbox": [
+        254.68699645996094,
+        391.95098876953125,
+        311.7920227050781,
+        400.6210021972656
+      ],
+      "text_sha256": "db518f91725092964839c11253e49f01496d92324106cd5584eb484eae28e5c1"
+    },
+    {
+      "block_id": "page-0611-block-0009",
+      "order": 9,
+      "text": "Not fully effective\n",
+      "bbox": [
+        254.68699645996094,
+        439.4859924316406,
+        311.7920227050781,
+        448.156005859375
+      ],
+      "text_sha256": "db518f91725092964839c11253e49f01496d92324106cd5584eb484eae28e5c1"
+    },
+    {
+      "block_id": "page-0611-block-0010",
+      "order": 10,
+      "text": "Not effective* \n",
+      "bbox": [
+        181.2469940185547,
+        493.4184875488281,
+        227.93450927734375,
+        502.0885009765625
+      ],
+      "text_sha256": "df73dbf50e8b041f243c3db4b3c5c264b4254428298c86680c93ab006f8e7d39"
+    },
+    {
+      "block_id": "page-0611-block-0011",
+      "order": 11,
+      "text": "Poorly tolerated\n",
+      "bbox": [
+        181.2469940185547,
+        438.9759826660156,
+        233.7694854736328,
+        447.64599609375
+      ],
+      "text_sha256": "70575be73e4f0693d60b9546a63a962c691692350e42318eef39ab90662581da"
+    },
+    {
+      "block_id": "page-0611-block-0012",
+      "order": 12,
+      "text": "Antipsychotic treatment,\ne.g. aripiprazole or risperidone\n",
+      "bbox": [
+        196.2467041015625,
+        460.0331726074219,
+        297.5342712402344,
+        477.70318603515625
+      ],
+      "text_sha256": "7129c2f7d95ef188146e08e1dd634cd397f5759b299f1505d01076aa8bbb3c32"
+    },
+    {
+      "block_id": "page-0611-block-0013",
+      "order": 13,
+      "text": "Consider older or more\nexperimental treatments\n",
+      "bbox": [
+        207.9169921875,
+        512.7131958007812,
+        288.3620300292969,
+        530.3831787109375
+      ],
+      "text_sha256": "c02867aa909593197d45a7e81369306aaad5f95e03f8a3a88a68bd760bb7d229"
+    },
+    {
+      "block_id": "page-0611-block-0014",
+      "order": 14,
+      "text": "(see text)\n",
+      "bbox": [
+        232.50949096679688,
+        530.7131958007812,
+        263.7695007324219,
+        539.3831787109375
+      ],
+      "text_sha256": "1177994592d3834d712b9fc93c3c097362cb6cad2b66f6e8ca20e6fa1305c138"
+    },
+    {
+      "block_id": "page-0611-block-0015",
+      "order": 15,
+      "text": "*It is extremely rare in practice to get to this point – almost all cases can be\neffectively treated by recommendations above this point.\n",
+      "bbox": [
+        123.66519927978516,
+        550.8472290039062,
+        372.1029052734375,
+        568.5172119140625
+      ],
+      "text_sha256": "e8ae790780cc39bc98f92f6c702275cef54f48f4a28904eea5b0a0d6fe8d5c2f"
+    },
+    {
+      "block_id": "page-0611-block-0016",
+      "order": 16,
+      "text": "Figure 5.2  Summary of recommendations.\n",
+      "bbox": [
+        61.88999938964844,
+        585.3414916992188,
+        200.38497924804688,
+        594.22900390625
+      ],
+      "text_sha256": "289e5844e17d6ea121fdb9e993f2a1ea2a569cdc317439b89793b68c9e159dfa"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

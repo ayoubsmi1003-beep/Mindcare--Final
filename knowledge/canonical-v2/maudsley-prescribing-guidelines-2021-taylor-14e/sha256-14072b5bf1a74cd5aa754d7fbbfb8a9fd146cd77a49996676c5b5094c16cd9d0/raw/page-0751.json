@@ -1,0 +1,299 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0751",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 751,
+  "source_page_index": 750,
+  "source_page_display": 751,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "730    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 8\nMelatonin6,85\nComplex handling of melatonin in liver impairment: reduced clearance and \nprolonged half-life contribute to higher circulating levels of endogenous melatonin in \ndaytime hours; negative feedback and accumulation of toxic products results in \nreduced endogenous production. Relevance to dosing of exogenous melatonin is \nunclear, although toxicity of melatonin is minimal. Manufacturer recommends \navoiding in liver disease. Rarely associated with changes in LFTs.\nOther psychotropics in hepatic impairment\nTable 8.6 gives a summary of other psychotropics recommended in hepatic impairment.\nTable 8.6  Other psychotropics in hepatic impairment\nBremelanotide6\nNo dose adjustment required in mild to moderate hepatic impairment. Use with caution \nin severe impairment; adverse effects more likely.27 One case of acute hepatitis reported.\nDeutetrabenazine5,19\nNot studied in hepatic impairment, but based on experience with tetrabenazine, use \nis contraindicated. Limited information available but clinically relevant hepatotoxicity \nnot reported. Occasional asymptomatic rises in ALT.\nLemborexant6,27\nNo dose adjustment in mild impairment (risk of increased somnolence), starting and \nmaximum dose of 5mg once nightly in moderate impairment, not recommended in \nsevere impairment. Little experience but hepatotoxicity not reported.86\nPitolisant5,27\nExtensively hepatically metabolised. No dose adjustment in mild impairment. In \nmoderate impairment the half-life is doubled; daily dose can be increased two weeks \nafter initiation, daily maximum 18mg. Contraindicated in severe impairment. Hepatic \nenzyme increases are uncommon.\nSolriamfetol5\nNot metabolised. No known problems in liver impairment, no reports of liver injury.\nValbenazine6,19\nHepatically metabolised pro-drug of alpha-dihydrotetrabenazine. Unlike \ndeutetrabenazine, not contra-indicated in liver disease, but maximum dose of 40mg \nin moderate to severe impairment. Few data, but no reports of clinically relevant liver \ninjury other than a single report of reactivation of pre-existing hepatitis C.\nPsychotropics in hepatic impairment\nTable 8.7 gives an outline of recommended psychotropics in hepatic impairment.\nTable 8.7  Psychotropics in hepatic impairment\nDrug group\nRecommended drugs\nAntipsychotics\nSulpiride/amisulpride: no dosage reduction required if renal function is normal\nPaliperidone: if depot required\nAntidepressants\nParoxetine, sertraline, citalopram, or vortioxetine: start at low dose. Titrate \nslowly (if required) as above.\nMood-stabilisers\nLithium: use plasma levels to guide dosage. Care needed if ascites status changes.\nSedatives\nLorazepam, oxazepam, temazepam: as short half-life with no active metabolites\nUse low doses with caution, as sedative drugs used in severe disease can precipitate \nhepatic encephalopathy\nZopiclone: 3.75mg with care in moderate hepatic impairment\nTable 8.5  (Continued)\n",
+  "raw_text_sha256": "114f48411f71718daa8a7d285c1908a25ecdbaab81173b6dc109a9a869646528",
+  "coordinates_sha256": "dcae2c7cdaa807ae1766f5d67b5853ce118efe7ea47179aa32ecf575ba67217f",
+  "block_sequence_sha256": "7d7a6b32540d1d989ca49fb292bbee22f787e828a605fb473a9c616ae7fd90a3",
+  "blocks": [
+    {
+      "block_id": "page-0751-block-0000",
+      "order": 0,
+      "text": "730    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "b7be88a6becc780531b2fac7d46219f84ae3468782c4426d59f6baca7bf99ab8"
+    },
+    {
+      "block_id": "page-0751-block-0001",
+      "order": 1,
+      "text": "CHAPTER 8\n",
+      "bbox": [
+        18.520000457763672,
+        532.3878173828125,
+        28.0,
+        573.7318115234375
+      ],
+      "text_sha256": "5ba3d9fb75ff4f418d4a2e9d517f30966dcfb279c10487eec43c5aa3fd8757a2"
+    },
+    {
+      "block_id": "page-0751-block-0002",
+      "order": 2,
+      "text": "Melatonin6,85\nComplex handling of melatonin in liver impairment: reduced clearance and \nprolonged half-life contribute to higher circulating levels of endogenous melatonin in \ndaytime hours; negative feedback and accumulation of toxic products results in \nreduced endogenous production. Relevance to dosing of exogenous melatonin is \nunclear, although toxicity of melatonin is minimal. Manufacturer recommends \navoiding in liver disease. Rarely associated with changes in LFTs.\n",
+      "bbox": [
+        61.88999938964844,
+        89.21296691894531,
+        435.2516784667969,
+        148.08795166015625
+      ],
+      "text_sha256": "1d4ce1f05e92efd98cbc74f1d91e4862dc176487aabfd6c1aa8c79e3439405ab"
+    },
+    {
+      "block_id": "page-0751-block-0003",
+      "order": 3,
+      "text": "Other psychotropics in hepatic impairment\n",
+      "bbox": [
+        61.88999938964844,
+        166.19046020507812,
+        282.3299865722656,
+        179.2254638671875
+      ],
+      "text_sha256": "a89cb00d51e988ec551a07ab8391f09d262aff1a3f6be13bc6ec0f1c18b39896"
+    },
+    {
+      "block_id": "page-0751-block-0004",
+      "order": 4,
+      "text": "Table 8.6 gives a summary of other psychotropics recommended in hepatic impairment.\n",
+      "bbox": [
+        61.88999938964844,
+        185.03549194335938,
+        433.35009765625,
+        196.7554931640625
+      ],
+      "text_sha256": "1b379ee5e7cc301224e5152e4f5767415e1830f567d3666459fdcaf6acb87348"
+    },
+    {
+      "block_id": "page-0751-block-0005",
+      "order": 5,
+      "text": "Table 8.6  Other psychotropics in hepatic impairment\n",
+      "bbox": [
+        67.88999938964844,
+        206.46299743652344,
+        238.1924591064453,
+        215.35049438476562
+      ],
+      "text_sha256": "cf61128ebc75e6a9c6656e025047a54c0a529c711d153411af23be992f57547e"
+    },
+    {
+      "block_id": "page-0751-block-0006",
+      "order": 6,
+      "text": "Bremelanotide6\nNo dose adjustment required in mild to moderate hepatic impairment. Use with caution \nin severe impairment; adverse effects more likely.27 One case of acute hepatitis reported.\n",
+      "bbox": [
+        61.88999938964844,
+        225.33799743652344,
+        435.4844055175781,
+        244.22549438476562
+      ],
+      "text_sha256": "186f1b50e401c563e2d597f4b738eacb276929c3096049ae5e7924e1533aea1d"
+    },
+    {
+      "block_id": "page-0751-block-0007",
+      "order": 7,
+      "text": "Deutetrabenazine5,19\nNot studied in hepatic impairment, but based on experience with tetrabenazine, use \nis contraindicated. Limited information available but clinically relevant hepatotoxicity \nnot reported. Occasional asymptomatic rises in ALT.\n",
+      "bbox": [
+        61.893707275390625,
+        251.9654998779297,
+        432.1845703125,
+        280.8454895019531
+      ],
+      "text_sha256": "e427af5eff2d6f48679ae78e45349ea67f4e62dd9baf075aa79178efb396eebb"
+    },
+    {
+      "block_id": "page-0751-block-0008",
+      "order": 8,
+      "text": "Lemborexant6,27\nNo dose adjustment in mild impairment (risk of increased somnolence), starting and \nmaximum dose of 5mg once nightly in moderate impairment, not recommended in \nsevere impairment. Little experience but hepatotoxicity not reported.86\n",
+      "bbox": [
+        61.88700866699219,
+        288.5854797363281,
+        430.7970886230469,
+        317.4704895019531
+      ],
+      "text_sha256": "114fa9eabb57cb9fe706232a174d2857f57ecf82337b43a940e8a55b6c3685af"
+    },
+    {
+      "block_id": "page-0751-block-0009",
+      "order": 9,
+      "text": "Pitolisant5,27\nExtensively hepatically metabolised. No dose adjustment in mild impairment. In \nmoderate impairment the half-life is doubled; daily dose can be increased two weeks \nafter initiation, daily maximum 18mg. Contraindicated in severe impairment. Hepatic \nenzyme increases are uncommon.\n",
+      "bbox": [
+        61.88999938964844,
+        325.2129821777344,
+        434.5395812988281,
+        364.0929870605469
+      ],
+      "text_sha256": "c8deb6b7748223b49ac7a2d79c52296fbc7f5c489d8cdb9065289b1859a9e21f"
+    },
+    {
+      "block_id": "page-0751-block-0010",
+      "order": 10,
+      "text": "Solriamfetol5\nNot metabolised. No known problems in liver impairment, no reports of liver injury.\n",
+      "bbox": [
+        61.88700866699219,
+        371.8329772949219,
+        426.214599609375,
+        380.7254943847656
+      ],
+      "text_sha256": "5a950a1204c9808764c663995c6a57b5522b216a83c349a6e64845ed5d303418"
+    },
+    {
+      "block_id": "page-0751-block-0011",
+      "order": 11,
+      "text": "Valbenazine6,19\nHepatically metabolised pro-drug of alpha-dihydrotetrabenazine. Unlike \ndeutetrabenazine, not contra-indicated in liver disease, but maximum dose of 40mg \nin moderate to severe impairment. Few data, but no reports of clinically relevant liver \ninjury other than a single report of reactivation of pre-existing hepatitis C.\n",
+      "bbox": [
+        61.88700866699219,
+        388.4654846191406,
+        434.23199462890625,
+        427.3429870605469
+      ],
+      "text_sha256": "8d9e255d0449b9a34d258ec5cc943bd5a4144f8e70e4861e01ab20088f265aed"
+    },
+    {
+      "block_id": "page-0751-block-0012",
+      "order": 12,
+      "text": "Psychotropics in hepatic impairment\n",
+      "bbox": [
+        61.88999938964844,
+        445.44049072265625,
+        248.7139892578125,
+        458.4754943847656
+      ],
+      "text_sha256": "03c0a973d2b5c1ef083927ae9a90a65b53c6f3204ac98985ab8e3f7b792361f8"
+    },
+    {
+      "block_id": "page-0751-block-0013",
+      "order": 13,
+      "text": "Table 8.7 gives an outline of recommended psychotropics in hepatic impairment.\n",
+      "bbox": [
+        61.88999938964844,
+        464.2854919433594,
+        409.94000244140625,
+        476.0054931640625
+      ],
+      "text_sha256": "ed32ce9afbb2331144e50133373e9a7a61b15fccbc21de1668e1ffe65fdd3fb7"
+    },
+    {
+      "block_id": "page-0751-block-0014",
+      "order": 14,
+      "text": "Table 8.7  Psychotropics in hepatic impairment\n",
+      "bbox": [
+        67.88999938964844,
+        485.7129821777344,
+        217.3574676513672,
+        494.6004943847656
+      ],
+      "text_sha256": "6393670a364836732d3e2e72a62072f8cdda3668befe6c726faba1c9aeaf5617"
+    },
+    {
+      "block_id": "page-0751-block-0015",
+      "order": 15,
+      "text": "Drug group\nRecommended drugs\n",
+      "bbox": [
+        61.88999938964844,
+        504.5879821777344,
+        235.47752380371094,
+        513.4754638671875
+      ],
+      "text_sha256": "224a67ccd6abef1ef1448732e728ee2c7aed9a50816cf6aa53380229f039d536"
+    },
+    {
+      "block_id": "page-0751-block-0016",
+      "order": 16,
+      "text": "Antipsychotics\nSulpiride/amisulpride: no dosage reduction required if renal function is normal\n",
+      "bbox": [
+        61.88999938964844,
+        521.2155151367188,
+        419.1601867675781,
+        530.10302734375
+      ],
+      "text_sha256": "5ce7a646a27b18af55724bb79fe354ece49341efdc232c48c576b2e6e95ebb90"
+    },
+    {
+      "block_id": "page-0751-block-0017",
+      "order": 17,
+      "text": "Paliperidone: if depot required\n",
+      "bbox": [
+        161.30999755859375,
+        534.2129516601562,
+        263.1525573730469,
+        543.1004638671875
+      ],
+      "text_sha256": "c925fe84f7b1df9ccf48cf5673f170d697a1237069121bc733915af2870ae056"
+    },
+    {
+      "block_id": "page-0751-block-0018",
+      "order": 18,
+      "text": "Antidepressants\nParoxetine, sertraline, citalopram, or vortioxetine: start at low dose. Titrate \nslowly (if required) as above.\n",
+      "bbox": [
+        61.88999938964844,
+        550.8405151367188,
+        419.7600402832031,
+        569.7254638671875
+      ],
+      "text_sha256": "20e342795660ac30e05101c17f64bc4cf776066e2134e3d69f9723f8aa23c3b3"
+    },
+    {
+      "block_id": "page-0751-block-0019",
+      "order": 19,
+      "text": "Mood-stabilisers\nLithium: use plasma levels to guide dosage. Care needed if ascites status changes.\n",
+      "bbox": [
+        61.88999938964844,
+        577.4655151367188,
+        425.8126525878906,
+        586.35302734375
+      ],
+      "text_sha256": "f7129a7c99fca620036492f70505b72334e127dde92e9ce6edd88da400d51ed8"
+    },
+    {
+      "block_id": "page-0751-block-0020",
+      "order": 20,
+      "text": "Sedatives\nLorazepam, oxazepam, temazepam: as short half-life with no active metabolites\nUse low doses with caution, as sedative drugs used in severe disease can precipitate \nhepatic encephalopathy\n",
+      "bbox": [
+        61.88999938964844,
+        594.0929565429688,
+        430.672607421875,
+        622.9754638671875
+      ],
+      "text_sha256": "f256acfe9dbe5bb92cb82fcce248251fb0420427eb48eaf2119535437ce46d80"
+    },
+    {
+      "block_id": "page-0751-block-0021",
+      "order": 21,
+      "text": "Zopiclone: 3.75mg with care in moderate hepatic impairment\n",
+      "bbox": [
+        161.30999755859375,
+        627.0855102539062,
+        361.192626953125,
+        635.9730224609375
+      ],
+      "text_sha256": "e6e453086b26d0b609a60de2c1bb5ce535b82919c89ab730567269d7f272b159"
+    },
+    {
+      "block_id": "page-0751-block-0022",
+      "order": 22,
+      "text": "Table 8.5  (Continued)\n",
+      "bbox": [
+        67.89019775390625,
+        70.08790588378906,
+        140.3852081298828,
+        78.97540283203125
+      ],
+      "text_sha256": "bcd3515e0f28ad24bd12102f312d70c887d25fcb9edcba73b0fe9755ab8f48c4"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,359 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0392",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 392,
+  "source_page_index": 391,
+  "source_page_display": 392,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    371\nCHAPTER 3\nDrug name and \nroute\nDosing information\nManufacturer\nNotes\nTransdermal \nselegiline\n6mg/24 hours, 9mg/24 \nhours, 12mg/24 hours\nStarting dose is 6mg/24 \nhours. Titration to \nhigher doses in \n3mg/24 hours \nincrements at ≥2-week \nintervals, up to a \nmaximum dose of \n12mg/24 hours59\nBristol Myers Squib, \navailable via Alliance \nWholesaler\nThe 6mg/24 hours dose does not \nrequire a tyramine restricted diet\nAt higher doses, although no \nhypertensive crisis reactions have been \nreported, the manufacturer \nrecommends avoiding high tyramine \ncontent food substances\nApplication site reactions and insomnia \nare the most common reported side \neffects\nRectal \namitriptyline\nDoses up to 50mg bd\nSuppositories have \nbeen manufactured by \npharmacies\nCase reports only\nRectal \nclomipramine\nNo detailed information \navailable\nRectal \nimipramine\nNo detailed information \navailable\nRectal doxepin\nNo detailed information \navailable\nCapsules have been \nused rectally\nRectal sertraline\nStarting dose: a 25mg \ntablet was placed inside \nthe rectal chamber \ndaily. This was titrated \nup at 3-day intervals to \na maximal dose of \n100mg on day 10\nTablets have been used \nrectally\nLevels at the 100mg steady-state dose \nrevealed detectable serum levels of \nsertraline, but not the metabolite. The \nlevels fell within the reported range of \nlevels for orally administered sertraline. \nNo adverse effects were recorded\nRectal trazodone\nNo detailed information \navailable\nSuppositories have \nbeen manufactured by \npharmacies\nTrazodone in the rectal formulation has \nbeen used for post-operative or cancer \npain control rather than antidepressant \nactivity\nKetamine\nIV: 0.5mg/kg over 40 \nminutes\nSC: first dose 0.25mg/\nkg bolus (range \n12.5–25mg), standard \ntreatment dose 0.5mg/\nkg bolus (range \n25–50mg)\nSL: 1.5mg/kg\nIV preparation is widely \navailable\nSC ketamine is less likely to cause side \neffects (dissociative symptoms or blood \npressure changes) compared to IV. SL \napparently also well tolerated. \nExperience is increasing with ketamine, \nbut expert advice before commencing \nis recommended\nNote: Availability of all preparations listed varies over time and from country to country.\nbd, bis die (twice a day).\nTable 3.13  (Continued)\n",
+  "raw_text_sha256": "a29487113f5e88887e0fc23423307f4700656f55d615c89dc1ac4a77496c785e",
+  "coordinates_sha256": "8806da86832767deaea3d3680cb566d3fdeaf2b9cadba4302cfb966651e092b4",
+  "block_sequence_sha256": "0cffa7983a5e5278df04055fcdc994468d9505a9c760d0b182f72d1f2535d778",
+  "blocks": [
+    {
+      "block_id": "page-0392-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    371\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "12e28d597a4eeb5cb1e19593644ab30564f1d591b7bf92b529d49d969a915227"
+    },
+    {
+      "block_id": "page-0392-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0392-block-0002",
+      "order": 2,
+      "text": "Drug name and \nroute\nDosing information\nManufacturer\nNotes\n",
+      "bbox": [
+        48.0,
+        90.45777893066406,
+        314.4150085449219,
+        109.3427734375
+      ],
+      "text_sha256": "e4e6556ecc022cb7b410e221833fffab31fa8a64d2572fba9e0589857ac015b1"
+    },
+    {
+      "block_id": "page-0392-block-0003",
+      "order": 3,
+      "text": "Transdermal \nselegiline\n",
+      "bbox": [
+        48.0,
+        117.41280364990234,
+        88.55999755859375,
+        136.1177978515625
+      ],
+      "text_sha256": "5b2ba3eb538584b13f0938bae1133f8ebd39d25bec1dc0092546d54dba4f653d"
+    },
+    {
+      "block_id": "page-0392-block-0004",
+      "order": 4,
+      "text": "6mg/24 hours, 9mg/24 \nhours, 12mg/24 hours\nStarting dose is 6mg/24 \nhours. Titration to \nhigher doses in \n3mg/24 hours \nincrements at ≥2-week \nintervals, up to a \nmaximum dose of \n12mg/24 hours59\n",
+      "bbox": [
+        116.43000030517578,
+        117.41280364990234,
+        194.3699951171875,
+        216.0977783203125
+      ],
+      "text_sha256": "0ff53bc1799d55fa80dfe58ddb32a67b58f9d72254f5e0a54eaca7399d95474d"
+    },
+    {
+      "block_id": "page-0392-block-0005",
+      "order": 5,
+      "text": "Bristol Myers Squib, \navailable via Alliance \nWholesaler\n",
+      "bbox": [
+        205.50030517578125,
+        117.41280364990234,
+        272.9927673339844,
+        146.11529541015625
+      ],
+      "text_sha256": "b3723d5c539a18782d86a7edd33e5df6ce11bcb1e233f6c29a487ebf1b5a0f0a"
+    },
+    {
+      "block_id": "page-0392-block-0006",
+      "order": 6,
+      "text": "The 6mg/24 hours dose does not \nrequire a tyramine restricted diet\nAt higher doses, although no \nhypertensive crisis reactions have been \nreported, the manufacturer \nrecommends avoiding high tyramine \ncontent food substances\nApplication site reactions and insomnia \nare the most common reported side \neffects\n",
+      "bbox": [
+        294.00030517578125,
+        117.4052963256836,
+        420.96795654296875,
+        216.09027099609375
+      ],
+      "text_sha256": "638f0862c90381cf35c45d53c8a6d9d43f3620a372df0a7e83c7efc60679a874"
+    },
+    {
+      "block_id": "page-0392-block-0007",
+      "order": 7,
+      "text": "Rectal \namitriptyline\n",
+      "bbox": [
+        48.00030517578125,
+        222.40525817871094,
+        87.57030487060547,
+        241.11026000976562
+      ],
+      "text_sha256": "e2077f0d8d6a482d00a4c35429d04b37d396cdc44585ed711d757f23d7bdadbb"
+    },
+    {
+      "block_id": "page-0392-block-0008",
+      "order": 8,
+      "text": "Doses up to 50mg bd\nSuppositories have \nbeen manufactured by \npharmacies\n",
+      "bbox": [
+        116.43030548095703,
+        222.40525817871094,
+        279.9602966308594,
+        251.10775756835938
+      ],
+      "text_sha256": "c53d1b6348c52559a9277d3d8b50bb7785eda340132d7bfb6dfa1ef4a815adc1"
+    },
+    {
+      "block_id": "page-0392-block-0009",
+      "order": 9,
+      "text": "Case reports only\n",
+      "bbox": [
+        294.00030517578125,
+        222.3977508544922,
+        349.29034423828125,
+        231.10525512695312
+      ],
+      "text_sha256": "55ef46f1c4334c9f6e86a4b70ec5405c1d4213e52ace02dceadd5670bc50d3a9"
+    },
+    {
+      "block_id": "page-0392-block-0010",
+      "order": 10,
+      "text": "Rectal \nclomipramine\n",
+      "bbox": [
+        48.00030517578125,
+        247.4252471923828,
+        91.32780456542969,
+        266.1302490234375
+      ],
+      "text_sha256": "e44a2673a030f45df3e01a017ae98092f988db7b4aa1a2e2dcf76bf698eea9cb"
+    },
+    {
+      "block_id": "page-0392-block-0011",
+      "order": 11,
+      "text": "No detailed information \navailable\n",
+      "bbox": [
+        116.43030548095703,
+        247.4252471923828,
+        194.7752685546875,
+        266.1302490234375
+      ],
+      "text_sha256": "8b21374406f371dfc4f20e453d95ed2c0866c4ce8edf90dcdfbcc09682c788ac"
+    },
+    {
+      "block_id": "page-0392-block-0012",
+      "order": 12,
+      "text": "Rectal \nimipramine\n",
+      "bbox": [
+        48.00030517578125,
+        272.44525146484375,
+        83.82780456542969,
+        291.1502380371094
+      ],
+      "text_sha256": "acc9165d0e9a886350ad39e15562b7d15e55cb9f7cddd95ecb2fb1f5ade84d5a"
+    },
+    {
+      "block_id": "page-0392-block-0013",
+      "order": 13,
+      "text": "No detailed information \navailable\n",
+      "bbox": [
+        116.43030548095703,
+        272.44525146484375,
+        194.7752685546875,
+        291.1502380371094
+      ],
+      "text_sha256": "8b21374406f371dfc4f20e453d95ed2c0866c4ce8edf90dcdfbcc09682c788ac"
+    },
+    {
+      "block_id": "page-0392-block-0014",
+      "order": 14,
+      "text": "Rectal doxepin\nNo detailed information \navailable\n",
+      "bbox": [
+        48.00030517578125,
+        297.4652404785156,
+        194.7752685546875,
+        316.17022705078125
+      ],
+      "text_sha256": "2c354543400858eb7ea91661c3884391cbab8d67c358de113a02a82c994d8eea"
+    },
+    {
+      "block_id": "page-0392-block-0015",
+      "order": 15,
+      "text": "Capsules have been \nused rectally\n",
+      "bbox": [
+        205.50030517578125,
+        297.4652404785156,
+        270.93780517578125,
+        316.17022705078125
+      ],
+      "text_sha256": "70df88b719c423e0b8da2d4085b4cdc452a83e7c80dd658513e9bed641322ba5"
+    },
+    {
+      "block_id": "page-0392-block-0016",
+      "order": 16,
+      "text": "Rectal sertraline\nStarting dose: a 25mg \ntablet was placed inside \nthe rectal chamber \ndaily. This was titrated \nup at 3-day intervals to \na maximal dose of \n100mg on day 10\n",
+      "bbox": [
+        48.00030517578125,
+        322.4852294921875,
+        194.77529907226562,
+        391.1777038574219
+      ],
+      "text_sha256": "9a3e590dae95ccf2be3efbd9fff6725f99b3c6afec9d09b7c65daa365d7aa3f2"
+    },
+    {
+      "block_id": "page-0392-block-0017",
+      "order": 17,
+      "text": "Tablets have been used \nrectally\n",
+      "bbox": [
+        205.50030517578125,
+        322.47021484375,
+        281.3553466796875,
+        341.1752014160156
+      ],
+      "text_sha256": "511364d0c7d6779f79a11b96f57c4d558d7276e87e42d604c15627b76dd7a009"
+    },
+    {
+      "block_id": "page-0392-block-0018",
+      "order": 18,
+      "text": "Levels at the 100mg steady-state dose \nrevealed detectable serum levels of \nsertraline, but not the metabolite. The \nlevels fell within the reported range of \nlevels for orally administered sertraline. \nNo adverse effects were recorded\n",
+      "bbox": [
+        294.00030517578125,
+        322.47021484375,
+        420.1053771972656,
+        381.1651916503906
+      ],
+      "text_sha256": "25c69f399f0e208763b20b2c936b3cb876d9acd600f7c21071304e3374d50312"
+    },
+    {
+      "block_id": "page-0392-block-0019",
+      "order": 19,
+      "text": "Rectal trazodone\nNo detailed information \navailable\n",
+      "bbox": [
+        48.00030517578125,
+        397.4851989746094,
+        194.7752685546875,
+        416.190185546875
+      ],
+      "text_sha256": "832578eaa4edb271968035a87c061df2959ffd4c22d7beb9dcabd88956d11194"
+    },
+    {
+      "block_id": "page-0392-block-0020",
+      "order": 20,
+      "text": "Suppositories have \nbeen manufactured by \npharmacies\n",
+      "bbox": [
+        205.50030517578125,
+        397.4851989746094,
+        279.9602966308594,
+        426.18768310546875
+      ],
+      "text_sha256": "b1b4a571e0cd6d0fd2d955270f28e4f0438e8038b1154b001f6b064e1ead01a9"
+    },
+    {
+      "block_id": "page-0392-block-0021",
+      "order": 21,
+      "text": "Trazodone in the rectal formulation has \nbeen used for post-operative or cancer \npain control rather than antidepressant \nactivity\n",
+      "bbox": [
+        294.00030517578125,
+        397.4776916503906,
+        421.52288818359375,
+        436.17767333984375
+      ],
+      "text_sha256": "1291748b9a467d71133aa2545be1ee7a6a7c0a743fa25b93cb7ca390ca1a715a"
+    },
+    {
+      "block_id": "page-0392-block-0022",
+      "order": 22,
+      "text": "Ketamine\nIV: 0.5mg/kg over 40 \nminutes\nSC: first dose 0.25mg/\nkg bolus (range \n12.5–25mg), standard \ntreatment dose 0.5mg/\nkg bolus (range \n25–50mg)\nSL: 1.5mg/kg\n",
+      "bbox": [
+        48.00030517578125,
+        442.4927062988281,
+        190.05780029296875,
+        531.18017578125
+      ],
+      "text_sha256": "88170289d4c3b5812eedb0f866eb2b4a098e096181cd9f03ad70320b6a74b4a5"
+    },
+    {
+      "block_id": "page-0392-block-0023",
+      "order": 23,
+      "text": "IV preparation is widely \navailable\n",
+      "bbox": [
+        205.50030517578125,
+        442.4701843261719,
+        282.03778076171875,
+        461.1751708984375
+      ],
+      "text_sha256": "a021c6097c96b4c437c93b1fe599c4b06c0183ea89bb064e07ce18f091b93f0f"
+    },
+    {
+      "block_id": "page-0392-block-0024",
+      "order": 24,
+      "text": "SC ketamine is less likely to cause side \neffects (dissociative symptoms or blood \npressure changes) compared to IV. SL \napparently also well tolerated. \nExperience is increasing with ketamine, \nbut expert advice before commencing \nis recommended\n",
+      "bbox": [
+        294.00030517578125,
+        442.4701843261719,
+        420.952880859375,
+        511.16265869140625
+      ],
+      "text_sha256": "74ee2a5b7953381769b2110a5de17003ff038a7dc63362c2b45326d72a3a7c8e"
+    },
+    {
+      "block_id": "page-0392-block-0025",
+      "order": 25,
+      "text": "Note: Availability of all preparations listed varies over time and from country to country.\n",
+      "bbox": [
+        48.00030517578125,
+        541.4551391601562,
+        326.4902648925781,
+        550.1626586914062
+      ],
+      "text_sha256": "0980e7c5425e61507a5e25970ed764e3c09b9cdd32bf7fe52cc372400f0da6bd"
+    },
+    {
+      "block_id": "page-0392-block-0026",
+      "order": 26,
+      "text": "bd, bis die (twice a day).\n",
+      "bbox": [
+        48.00030517578125,
+        554.45263671875,
+        125.52030181884766,
+        563.16015625
+      ],
+      "text_sha256": "e0c4ea44554c3cd1f9755fe95cafeff835b1034fd0502f0c35c35a07e42d5c48"
+    },
+    {
+      "block_id": "page-0392-block-0027",
+      "order": 27,
+      "text": "Table 3.13  (Continued)\n",
+      "bbox": [
+        54.0,
+        70.13117980957031,
+        130.2899932861328,
+        79.0186767578125
+      ],
+      "text_sha256": "260a9da5abf9751a41417685decea828a3ee4b93620af59fc384307c4059b1c5"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

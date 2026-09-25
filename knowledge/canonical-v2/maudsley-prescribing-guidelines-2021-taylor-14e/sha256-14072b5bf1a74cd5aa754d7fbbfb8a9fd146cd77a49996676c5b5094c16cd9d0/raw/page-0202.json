@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0202",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 202,
+  "source_page_index": 201,
+  "source_page_display": 202,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    181\nCHAPTER 1\nPneumonia\nA 2018 meta-analysis of 14 studies reported that antipsychotic use was associated with \na near doubling of pneumonia incidence compared with no use.1 This same analysis \nfound no difference in incidence of pneumonia between FGAs and SGAs and no increase \nin case fatality rate. A later analysis of spontaneous reporting to the FDA uncovered a \nsignal of greater incidence of reported pneumonia in people prescribed clozapine, olan-\nzapine and multiple antipsychotics (compared with haloperidol).2 A dose-related \nincrease in risk has been reported for clozapine3–5 but also for other antipsychotics6 and \nfor polypharmacy involving FGAs and SGAs4,5,7 and combinations involving a mood \nstabiliser5 have previously been found to be associated with increased risk of pneumo-\nnia. In people with bipolar disorder, the risk with combinations involving all three \nclasses of medication was higher than any other combinations.5\nA study of bipolar patients found that clozapine, olanzapine and haloperidol were \nlinked to increased rates of pneumonia while lithium was protective.5 Another study \nsuggests amisulpride is not linked to pneumonia.4 Clozapine re-exposure was associ-\nated with a greater risk for (recurrent) pneumonia than the risk of baseline pneumonia \nwith initial clozapine treatment in one study.3 Schizophrenia itself seems to afford a \nhigher risk of complications (e.g. admission to intensive care) in people diagnosed with \npneumonia8 though neither diagnosis nor age appears to modify the effect of antipsy-\nchotic use on pneumonia.9 Likewise risk of antipsychotic-associated pneumonia was \nincreased in patients with Alzheimer’s disease and those without.10\nData have emerged recently which to some extent call into question the apparent \ncausal association between antipsychotic use and risk of pneumonia. One study looked \nat the incidence of pneumonia in over 8000 people before and after starting various \nantipsychotics and found no change overall (or for any individual antipsychotic). \nAnother analysis, a case-control study, found that duration of antipsychotic use was \njust one of three factors linked to increased risk of pneumonia (the others being severity \nof illness and comorbidity index).11\nIn this study, duration of antipsychotic treatment could be considered a proxy for \nillness duration. It might also be noted, in the time of COVID, that some antipsychotics \nhave demonstrable antiviral activity.12,13\nThe mechanism by which antipsychotics increase the risk of pneumonia is not known. \nPossibilities include sedation (risk may be highest with drugs that show greatest H1 \nantagonism4,7), dystonia or dyskinesia, dry mouth causing poor bolus transport and so \nincreasing the risk of aspiration (hypersalivation in the case of clozapine), general poor \nphysical health;4 or perhaps some ill-defined effect on immune response.7,14 Nevertheless, \nthe fact that antipsychotics can increase the risk of aspiration pneumonia and not other \npneumonia types offers support to this as a plausible (perhaps sole) mechanism.15 With \nclozapine, pneumonia may also be secondary to constipation.16 Clozapine is also fairly \nstrongly associated with antibody deficiency and greater use of antibiotics.17\nAn increased risk of pneumonia should probably be assumed for all patients taking \nany antipsychotic (but especially clozapine18) for any period. All patients should be very \ncarefully monitored for signs of chest infection and effective treatment started promptly. \nConsideration should be given to using pneumococcal vaccine, although there is no \nevidence to support its benefit in this group of patients. Extra vigilance is required when \n",
+  "raw_text_sha256": "2e632412c22cc50edcb389d932690b9c0984cae661a642c8fe4f25b9958bf518",
+  "coordinates_sha256": "c07230e32cf690cb9af768d9fe2a26ac9f2d0f241121a953ecce7f7f7292f420",
+  "block_sequence_sha256": "16a00c3030adf135acbc7bec29a7926a09c4ae2ad8704b0228bbef72e8cccb2e",
+  "blocks": [
+    {
+      "block_id": "page-0202-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    181\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "cb65237d7fa2fe1a5d3ab89ce0aaa325edb58e01633c79b817082625bebc9954"
+    },
+    {
+      "block_id": "page-0202-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0202-block-0002",
+      "order": 2,
+      "text": "Pneumonia\n",
+      "bbox": [
+        54.99909973144531,
+        66.06448364257812,
+        113.06808471679688,
+        79.0994873046875
+      ],
+      "text_sha256": "eff677fb813a086d3fcadadbf35c3fa8795e59a47a02733f142677bc0e62bfb9"
+    },
+    {
+      "block_id": "page-0202-block-0003",
+      "order": 3,
+      "text": "A 2018 meta-analysis of 14 studies reported that antipsychotic use was associated with \na near doubling of pneumonia incidence compared with no use.1 This same analysis \nfound no difference in incidence of pneumonia between FGAs and SGAs and no increase \nin case fatality rate. A later analysis of spontaneous reporting to the FDA uncovered a \nsignal of greater incidence of reported pneumonia in people prescribed clozapine, olan-\nzapine and multiple antipsychotics (compared with haloperidol).2 A dose-related \nincrease in risk has been reported for clozapine3–5 but also for other antipsychotics6 and \nfor polypharmacy involving FGAs and SGAs4,5,7 and combinations involving a mood \nstabiliser5 have previously been found to be associated with increased risk of pneumo-\nnia. In people with bipolar disorder, the risk with combinations involving all three \nclasses of medication was higher than any other combinations.5\n",
+      "bbox": [
+        47.99449157714844,
+        84.90948486328125,
+        422.7996520996094,
+        216.62948608398438
+      ],
+      "text_sha256": "b5e1991358750f94c11d1366635a41402ad983c2478afa17419d9930c3df63a5"
+    },
+    {
+      "block_id": "page-0202-block-0004",
+      "order": 4,
+      "text": "A study of bipolar patients found that clozapine, olanzapine and haloperidol were \nlinked to increased rates of pneumonia while lithium was protective.5 Another study \nsuggests amisulpride is not linked to pneumonia.4 Clozapine re-exposure was associ-\nated with a greater risk for (recurrent) pneumonia than the risk of baseline pneumonia \nwith initial clozapine treatment in one study.3 Schizophrenia itself seems to afford a \nhigher risk of complications (e.g. admission to intensive care) in people diagnosed with \npneumonia8 though neither diagnosis nor age appears to modify the effect of antipsy-\nchotic use on pneumonia.9 Likewise risk of antipsychotic-associated pneumonia was \nincreased in patients with Alzheimer’s disease and those without.10\n",
+      "bbox": [
+        47.99668884277344,
+        216.909423828125,
+        422.8282165527344,
+        324.6294250488281
+      ],
+      "text_sha256": "a7579822fa6d2f4ad8443d404e687b2bd33f14026b8befb495ef674ef7f4dfc7"
+    },
+    {
+      "block_id": "page-0202-block-0005",
+      "order": 5,
+      "text": "Data have emerged recently which to some extent call into question the apparent \ncausal association between antipsychotic use and risk of pneumonia. One study looked \nat the incidence of pneumonia in over 8000 people before and after starting various \nantipsychotics and found no change overall (or for any individual antipsychotic). \nAnother analysis, a case-control study, found that duration of antipsychotic use was \njust one of three factors linked to increased risk of pneumonia (the others being severity \nof illness and comorbidity index).11\n",
+      "bbox": [
+        47.999000549316406,
+        324.909423828125,
+        422.8088684082031,
+        408.6294250488281
+      ],
+      "text_sha256": "52c1f1d16031a0c695addc1d943aa258d46a55ef9863be20536bf45f68b6e85d"
+    },
+    {
+      "block_id": "page-0202-block-0006",
+      "order": 6,
+      "text": "In this study, duration of antipsychotic treatment could be considered a proxy for \nillness duration. It might also be noted, in the time of COVID, that some antipsychotics \nhave demonstrable antiviral activity.12,13\n",
+      "bbox": [
+        47.999000549316406,
+        408.909423828125,
+        422.8190612792969,
+        444.6294250488281
+      ],
+      "text_sha256": "b2d006ea8fa6556b3ebe287c255b619d2697a9ac48119c5641efcc856809fcea"
+    },
+    {
+      "block_id": "page-0202-block-0007",
+      "order": 7,
+      "text": "The mechanism by which antipsychotics increase the risk of pneumonia is not known. \nPossibilities include sedation (risk may be highest with drugs that show greatest H1 \nantagonism4,7), dystonia or dyskinesia, dry mouth causing poor bolus transport and so \nincreasing the risk of aspiration (hypersalivation in the case of clozapine), general poor \nphysical health;4 or perhaps some ill-defined effect on immune response.7,14 Nevertheless, \nthe fact that antipsychotics can increase the risk of aspiration pneumonia and not other \npneumonia types offers support to this as a plausible (perhaps sole) mechanism.15 With \nclozapine, pneumonia may also be secondary to constipation.16 Clozapine is also fairly \nstrongly associated with antibody deficiency and greater use of antibiotics.17\n",
+      "bbox": [
+        47.999000549316406,
+        444.909423828125,
+        422.8223571777344,
+        552.6294555664062
+      ],
+      "text_sha256": "419dc7feeea6db3296770f08468378bb66ae00a867bf55cbf96c4cfd5f2397fb"
+    },
+    {
+      "block_id": "page-0202-block-0008",
+      "order": 8,
+      "text": "An increased risk of pneumonia should probably be assumed for all patients taking \nany antipsychotic (but especially clozapine18) for any period. All patients should be very \ncarefully monitored for signs of chest infection and effective treatment started promptly. \nConsideration should be given to using pneumococcal vaccine, although there is no \nevidence to support its benefit in this group of patients. Extra vigilance is required when \n",
+      "bbox": [
+        47.999000549316406,
+        552.909423828125,
+        422.8136291503906,
+        612.6294555664062
+      ],
+      "text_sha256": "f8a586b3e8928278af4bf9cc3e54d8291cddf9a8cbe6e6b9bdfe156d0811be32"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

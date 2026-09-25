@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0196",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 196,
+  "source_page_index": 195,
+  "source_page_display": 196,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    175\nCHAPTER 1\nTreatment\nBefore attempting to treat sexual dysfunction, a thorough assessment is essential to \ndetermine the most likely cause. Assuming that physical pathology (diabetes, hyperten-\nsion, cardiovascular disease, etc.) has been excluded or treated (e.g. obesity73), the fol-\nlowing principles apply.\nSpontaneous remission may occasionally occur33 but may take 6 months to become \napparent, if at all,30 and may be more likely related to a reduction in severity of illness, \nrather than tolerance to the antipsychotic itself. When symptoms persist, the most obvi-\nous first step is to decrease the dose or discontinue the offending drug where appropri-\nate. The next step is to switch to a different drug that is less likely to cause the specific \nsexual problem experienced (see Table 1.30). Another option is to add 5–10mg ari-\npiprazole – this can normalise prolactin and improve sexual function.74–77 If this fails or \nis not practicable, ‘antidote’ drugs can be tried: for example, cyproheptadine (a 5HT2 \nantagonist at doses of 4–16mg/day) has been used to treat SSRI-induced sexual dys-\nfunction, but sedation is a common side-effect. There is some evidence that mirtazapine \n(also a 5HT2 antagonist as well as an alpha-2 antagonist) may relieve orgasmic dys-\nfunction in FGA-treated patients.78 Amantadine, bupropion, buspirone, bethanechol \nand yohimbine have all been used with varying degrees of success but have a number \nof unwanted side effects and interactions with other drugs. Given that hyperprolacti-\nnaemia may contribute to sexual dysfunction, selegiline (enhances dopamine activity) \nhas been tested in an RCT. This was negative.79 Testosterone patches have been shown \nto increase libido in women, although be aware that breast cancer risk may be signifi-\ncantly increased (Table 1.32).80,81\nTable 1.31  (Continued)\nDrug\nType of problem\nLumateperone\n■\n■Does not appear to affect prolactin66\n■\n■No sexual side effects reported in (short) clinical trials67\nPimavanserin\n■\n■Does not bind to dopamine receptors,68 therefore has no effect on prolactin\n■\n■May improve sexual function in patients with depression69\nIloperidone\n■\n■Does not usually affect prolactin70\n■\n■Some reports of sexual dysfunction in adverse event reporting databases,71 case reports \nof retrograde ejaculation72\n",
+  "raw_text_sha256": "e8cec8a89c1179b8b5d3f1923bdcabae7a9c349a781d72e57838eea70fbb0e38",
+  "coordinates_sha256": "85dbf8944e6ae5b242acd89e4fa94a4f739fa72260942f0fbcfdd9ba4dd7abb9",
+  "block_sequence_sha256": "96fa6e0586282a4c506c56346d91c63a0fede817f7e8e0628a6481a09da59364",
+  "blocks": [
+    {
+      "block_id": "page-0196-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    175\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "ecfcc7fdc79cff4c4792ad3510e563ffbe5b57fc4db446baa4a1ca4a25ffeda6"
+    },
+    {
+      "block_id": "page-0196-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0196-block-0002",
+      "order": 2,
+      "text": "Treatment\n",
+      "bbox": [
+        47.99909973144531,
+        211.07470703125,
+        100.59008026123047,
+        224.10971069335938
+      ],
+      "text_sha256": "26ff2b6ac3686cb4604132c5bd8d8a30634d8bb51bc1750a64262783515413c9"
+    },
+    {
+      "block_id": "page-0196-block-0003",
+      "order": 3,
+      "text": "Before attempting to treat sexual dysfunction, a thorough assessment is essential to \ndetermine the most likely cause. Assuming that physical pathology (diabetes, hyperten-\nsion, cardiovascular disease, etc.) has been excluded or treated (e.g. obesity73), the fol-\nlowing principles apply.\n",
+      "bbox": [
+        47.99632263183594,
+        229.91970825195312,
+        422.7290344238281,
+        277.63970947265625
+      ],
+      "text_sha256": "a5df6983813f8e363f9db1b306c5f51b3c08301a482b01abc38d7b80bba0d8b7"
+    },
+    {
+      "block_id": "page-0196-block-0004",
+      "order": 4,
+      "text": "Spontaneous remission may occasionally occur33 but may take 6 months to become \napparent, if at all,30 and may be more likely related to a reduction in severity of illness, \nrather than tolerance to the antipsychotic itself. When symptoms persist, the most obvi-\nous first step is to decrease the dose or discontinue the offending drug where appropri-\nate. The next step is to switch to a different drug that is less likely to cause the specific \nsexual problem experienced (see Table 1.30). Another option is to add 5–10mg ari-\npiprazole – this can normalise prolactin and improve sexual function.74–77 If this fails or \nis not practicable, ‘antidote’ drugs can be tried: for example, cyproheptadine (a 5HT2 \nantagonist at doses of 4–16mg/day) has been used to treat SSRI-induced sexual dys-\nfunction, but sedation is a common side-effect. There is some evidence that mirtazapine \n(also a 5HT2 antagonist as well as an alpha-2 antagonist) may relieve orgasmic dys-\nfunction in FGA-treated patients.78 Amantadine, bupropion, buspirone, bethanechol \nand yohimbine have all been used with varying degrees of success but have a number \nof unwanted side effects and interactions with other drugs. Given that hyperprolacti-\nnaemia may contribute to sexual dysfunction, selegiline (enhances dopamine activity) \nhas been tested in an RCT. This was negative.79 Testosterone patches have been shown \nto increase libido in women, although be aware that breast cancer risk may be signifi-\ncantly increased (Table 1.32).80,81\n",
+      "bbox": [
+        47.99479675292969,
+        277.9197082519531,
+        422.8335266113281,
+        493.63970947265625
+      ],
+      "text_sha256": "788fb58e859c1e593e5f01739f703af32e5867151d95ebf772bfb9eccb362228"
+    },
+    {
+      "block_id": "page-0196-block-0005",
+      "order": 5,
+      "text": "Table 1.31  (Continued)\n",
+      "bbox": [
+        53.99909973144531,
+        70.08692932128906,
+        130.28909301757812,
+        78.97442626953125
+      ],
+      "text_sha256": "ce1726751710d855384475f9c1653ac0eb550d6e9a4b8a93802260f1d7a477c4"
+    },
+    {
+      "block_id": "page-0196-block-0006",
+      "order": 6,
+      "text": "Drug\nType of problem\n",
+      "bbox": [
+        47.99909973144531,
+        89.82203674316406,
+        183.38162231445312,
+        98.70953369140625
+      ],
+      "text_sha256": "1422f8062d101de800675b8e20c0c39ca27da3ddc17ff1b2f66e2bae075aee6a"
+    },
+    {
+      "block_id": "page-0196-block-0007",
+      "order": 7,
+      "text": "Lumateperone\n■\n■Does not appear to affect prolactin66\n",
+      "bbox": [
+        47.99909973144531,
+        106.59956359863281,
+        251.68472290039062,
+        115.487060546875
+      ],
+      "text_sha256": "d48ab918fac0c4e959f1e6641f8a24ef94a0ac638086fe63b175a9eec53f113e"
+    },
+    {
+      "block_id": "page-0196-block-0008",
+      "order": 8,
+      "text": "■\n■No sexual side effects reported in (short) clinical trials67\n",
+      "bbox": [
+        125.99839782714844,
+        115.7770004272461,
+        308.7582702636719,
+        124.4844970703125
+      ],
+      "text_sha256": "4c57be6e9d661bdd8bb6b34628a5c640074bbb594df8583b073a8ce04d840bea"
+    },
+    {
+      "block_id": "page-0196-block-0009",
+      "order": 9,
+      "text": "Pimavanserin\n■\n■Does not bind to dopamine receptors,68 therefore has no effect on prolactin\n",
+      "bbox": [
+        47.99909973144531,
+        130.6219024658203,
+        376.7323303222656,
+        139.5093994140625
+      ],
+      "text_sha256": "58fa291ab822ddaf59ca16201cfd67faf88d8bce16cb26fa349972de7d5becbe"
+    },
+    {
+      "block_id": "page-0196-block-0010",
+      "order": 10,
+      "text": "■\n■May improve sexual function in patients with depression69\n",
+      "bbox": [
+        125.99839782714844,
+        139.80189514160156,
+        319.6111145019531,
+        148.5093994140625
+      ],
+      "text_sha256": "f8a3387f578169c7ccbc3e6f381284b6fc832bc83fed10785e2b4927825e7b03"
+    },
+    {
+      "block_id": "page-0196-block-0011",
+      "order": 11,
+      "text": "Iloperidone\n■\n■Does not usually affect prolactin70\n",
+      "bbox": [
+        47.99909973144531,
+        154.64698791503906,
+        242.51193237304688,
+        163.53448486328125
+      ],
+      "text_sha256": "3638108bbdf9176338b99f58b7d3d799b859f183c953fb21c4e0c0fdab2acf0c"
+    },
+    {
+      "block_id": "page-0196-block-0012",
+      "order": 12,
+      "text": "■\n■Some reports of sexual dysfunction in adverse event reporting databases,71 case reports \n",
+      "bbox": [
+        125.99839782714844,
+        163.8269805908203,
+        415.3185119628906,
+        172.53448486328125
+      ],
+      "text_sha256": "92e536a20b0bec6275ca36fc0dfbc7413030538abe55ec08752f1d7f21ad4992"
+    },
+    {
+      "block_id": "page-0196-block-0013",
+      "order": 13,
+      "text": "of retrograde ejaculation72\n",
+      "bbox": [
+        134.99850463867188,
+        172.8269805908203,
+        218.760009765625,
+        181.53448486328125
+      ],
+      "text_sha256": "7896021fec1b9d57561b00d53792148e66b95b404a27b22b779a32cc7618da84"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

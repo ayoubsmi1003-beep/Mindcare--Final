@@ -1,0 +1,12 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0942",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 942,
+  "source_page_index": 941,
+  "repaired_text": "Miscellany    921\nCHAPTER 14\nBox 14.1  Factors determining the probability of a causal relationship between drugs and \npsychiatric side effects4,15\n■\n■Temporal relationship between the drug exposure and the psychiatric side effect\n■\n■Evidence of the specific psychiatric side effects occurring with the suspected drug\n■\n■Plausible pharmacological mechanism for the psychiatric side effect (e.g. dopamine agonists\nand psychosis)\n■\n■Presence of alternative explanations for symptoms (e.g. pre-existing mental illness, de novo\npsychiatric illness, other drugs)\n■\n■Response of symptoms to the withdrawal of the drug\n■\n■Effect of re-challenge with the same drug\nTable 14.5  Adapted Naranjo adverse drug reactions (ADR) probability scale criteria14\nQuestions\nYes\nNo\nNA/unknown\n1. Are there previous conclusive reports on this reaction?\n+1\n0\n0\n2. \u0007Did the ADR appear after the suspected drug was administered?\n+2\n−1\n0\n3. Did the ADR improve when the drug was discontinued?\n+1\n0\n0\n4. Did the ADR appear with re-challenge?\n+2\n−1\n0\n5. Are there alternative causes for the ADR?\n−1\n+2\n0\n6. Did the reaction appear when placebo was given?\n−1\n+1\n0\n7. Was the drug detected in the blood at toxic levels?\n+1\n0\n0\n8. Was the ADR more severe when the dose was increased, or \nless severe when the dose was decreased?\n+1\n0\n0\n9. Did the patient have a similar reaction to the same or similar \ndrugs in any previous exposure?\n+1\n0\n0\n10. Was the ADR confirmed by any objective evidence?\n+1\n0\n0\nProbability score: ≥9 = definite; 5–8 = probable; 1–4 = possible; ≤0 = doubtful",
+  "repaired_text_sha256": "fe54a7c90f353cff13347c1ca86a74e93976d2ca5286d357d84177403c308b05",
+  "raw_text_sha256": "4a9bf8f2d77c296578b4a71a0398b385a94ae401d6ac840e28597f8e69d27481",
+  "repair_ids": [],
+  "raw_file": "raw/page-0942.json"
+}

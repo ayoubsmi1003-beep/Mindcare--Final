@@ -1,0 +1,419 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0960",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 960,
+  "source_page_index": 959,
+  "source_page_display": 960,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Miscellany    939\nCHAPTER 14\nMedication\nIndication\nClass\nDosea\nAdverse Effectsb\nComments\nNitroprusside49\nSchizophrenia\nVasodilator\n0.5μg/kg/hour\nWell tolerated\nProbably not \nefficacious\nOlanzapine20–22,50–52 Acute \ndisturbance\nAtypical \nantipsychotic\n1.25–20mg\nHypoxia, respiratory \ndepression, \nbradycardia\nSafe with appropriate \nmonitoring\nScopolamine53 \n(hyoscine)\nDepression\nAnticholinergic\n4μg/kg\nNo serious adverse \nevents. Drowsiness, \nblurred vision, dry \nmouth, light-\nheadedness and \nreduced blood \npressure were \nreported\nEffective\nTrazodone54\nDepression\nSARI\n25–100mg in \n250mL of saline\nNo serious adverse \nevents. Sedation, \nrash, dizziness\nNo difference \ncompared with IV \nClomipramine\nValproate\nAcute \ndisturbance55\nMood stabiliser\n20mg/kg\nSedation\nAs effective as \nHaloperidol with less \nsevere side effects\nAcute mania56\n500mg\nPossibly faster-acting \nthan haloperidol\naThe range of doses as described in the included studies.\nbAs reported in studies, though not exclusively.\nTable 14.8  (Continued)\nReferences\n\t 1.\t POMH-UK. Topic 16a. Rapid tranquillisation in the context of the pharmacological management of acutely-disturbed behaviour. Royal \nCollege of Psychiatrists, 2017.\n\t 2.\t Patel MX, et al. Joint BAP NAPICU evidence-based consensus guidelines for the clinical management of acute disturbance: de-escalation and \nrapid tranquillisation. Journal of Psychopharmacology 2018; 32:601–640.\n\t 3.\t Hirose S, et al. Intravenous Biperiden in Akathisia: an open pilot study. The International Journal of Psychiatry in Medicine 2000; \n30:185–194.\n\t 4.\t Meltzer-Brody S, et al. Brexanolone injection in post-partum depression: two multicentre, double-blind, randomised, placebo-controlled, \nphase 3 trials. The Lancet 2018; 392:1058–1070.\n\t 5.\t Kanes S, et al. Brexanolone (SAGE-547 injection) in post-partum depression: a randomised controlled trial. The Lancet 2017; \n390:480–489.\n\t 6.\t Pompili M, et al. Response to intravenous antidepressant treatment by suicidal vs. Nonsuicidal Depressed Patients. J Affect Disord 2010; \n122:154–158.\n\t 7.\t Altamura AC, et al. Intravenous augmentative citalopram versus clomipramine in partial/nonresponder depressed patients: a short-term, low \ndose, randomized, placebo-controlled study. Journal of Clinical Psychopharmacology 2008; 28:406–410.\n\t 8.\t Pallanti S, et al. Citalopram intravenous infusion in resistant obsessive-compulsive disorder: an open trial. J Clin Psychiatry 2002; \n63:796–801.\n\t 9.\t Koran LM, et al. Rapid benefit of intravenous pulse loading of clomipramine in obsessive-compulsive disorder. Am J Psychiatry 1997; \n154:396–401.\n\t10.\t Fallon BA, et al. Intravenous clomipramine for obsessive-compulsive disorder refractory to oral clomipramine: a placebo-controlled study. \nArch Gen Psychiatry 1998; 55:918–924.\n\t11.\t Karameh WK, et al. Intravenous clomipramine for treatment-resistant obsessive-compulsive disorder. Int J Neuropsychopharmacol 2015; 19.\n\t12.\t Jakob SM, et al. Dexmedetomidine vs midazolam or propofol for sedation during prolonged mechanical ventilation: two randomized con-\ntrolled trials. Jama 2012; 307:1151–1160.\n",
+  "raw_text_sha256": "3a65a1694e77cabf847660437634c25771146fc8b7143c662ea2cd6dd21e744d",
+  "coordinates_sha256": "f04588b58a98797d942c053575538ff3114efe48eab07bf50e34cbb05127e792",
+  "block_sequence_sha256": "94b751717961b2f074bdfa0b1632a54f6086072f88cec68971fdd50bca009fbc",
+  "blocks": [
+    {
+      "block_id": "page-0960-block-0000",
+      "order": 0,
+      "text": "Miscellany    939\n",
+      "bbox": [
+        349.2962951660156,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "43a59ae167e356de7417fd3c0545dd6555f12010012ff0ecc7f0ba03df8672c6"
+    },
+    {
+      "block_id": "page-0960-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        454.4096984863281,
+        338.7405090332031,
+        463.88970947265625,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0960-block-0002",
+      "order": 2,
+      "text": "Medication\nIndication\nClass\nDosea\nAdverse Effectsb\nComments\n",
+      "bbox": [
+        48.039398193359375,
+        91.28968811035156,
+        387.7477111816406,
+        100.17718505859375
+      ],
+      "text_sha256": "1c3c3f1d5961ee985d648abfb33b9e69eca39c8dbc9281b7e8e278091287bc22"
+    },
+    {
+      "block_id": "page-0960-block-0003",
+      "order": 3,
+      "text": "Nitroprusside49\nSchizophrenia\nVasodilator\n0.5μg/kg/hour\nWell tolerated\nProbably not \nefficacious\n",
+      "bbox": [
+        48.042724609375,
+        108.49471282958984,
+        392.6219482421875,
+        127.19970703125
+      ],
+      "text_sha256": "8ba4b7bb27627e0acfe4a5fdb3aa948dec00e69c754eb69484b17f9dafba5d12"
+    },
+    {
+      "block_id": "page-0960-block-0004",
+      "order": 4,
+      "text": "Olanzapine20–22,50–52 Acute \n",
+      "bbox": [
+        48.041900634765625,
+        131.0221710205078,
+        131.74940490722656,
+        142.2271728515625
+      ],
+      "text_sha256": "1b9633fa2b3272efa0d0b22d4cc355f7bbdf4ef73c2745dc87cf93cdc67fb617"
+    },
+    {
+      "block_id": "page-0960-block-0005",
+      "order": 5,
+      "text": "disturbance\n",
+      "bbox": [
+        110.91439819335938,
+        143.5171661376953,
+        148.00189208984375,
+        152.22467041015625
+      ],
+      "text_sha256": "f1d226996434227c4df0d653ce3b01afb3821fe263b11b0e299e4bbc80c73758"
+    },
+    {
+      "block_id": "page-0960-block-0006",
+      "order": 6,
+      "text": "Atypical \nantipsychotic\n",
+      "bbox": [
+        164.91439819335938,
+        133.51966857910156,
+        206.57687377929688,
+        152.22467041015625
+      ],
+      "text_sha256": "95a6e840d248515ee1cff8dd9b2a44ab68aa60121db5cc9f757f6205bd46bb6a"
+    },
+    {
+      "block_id": "page-0960-block-0007",
+      "order": 7,
+      "text": "1.25–20mg\nHypoxia, respiratory \ndepression, \nbradycardia\n",
+      "bbox": [
+        219.91189575195312,
+        133.51966857910156,
+        347.19439697265625,
+        162.22216796875
+      ],
+      "text_sha256": "56af31a956a8840d893626e0815020219cf2886d38d25a6f8bc070c0f0361bcf"
+    },
+    {
+      "block_id": "page-0960-block-0008",
+      "order": 8,
+      "text": "Safe with appropriate \nmonitoring\n",
+      "bbox": [
+        350.24688720703125,
+        133.5121612548828,
+        421.3694152832031,
+        152.2171630859375
+      ],
+      "text_sha256": "7a750b8e5192063df53e2457c1f9ee5c36af944b11bf19c6ebbd89af103c1e2a"
+    },
+    {
+      "block_id": "page-0960-block-0009",
+      "order": 9,
+      "text": "Scopolamine53 \n(hyoscine)\n",
+      "bbox": [
+        48.041202545166016,
+        168.5371856689453,
+        95.82369995117188,
+        187.24969482421875
+      ],
+      "text_sha256": "84ad9ff7050cc72c2bc8fcb6fbf7db48a941498b554483bba2c0d6c569d9b6ff"
+    },
+    {
+      "block_id": "page-0960-block-0010",
+      "order": 10,
+      "text": "Depression\nAnticholinergic\n4μg/kg\nNo serious adverse \nevents. Drowsiness, \nblurred vision, dry \nmouth, light-\nheadedness and \nreduced blood \npressure were \nreported\n",
+      "bbox": [
+        110.91370391845703,
+        168.54469299316406,
+        346.376220703125,
+        247.23468017578125
+      ],
+      "text_sha256": "972705c5d01f2022c3cbd4e852f8d71912a904c7802d4e189a4c57ad212a4bbc"
+    },
+    {
+      "block_id": "page-0960-block-0011",
+      "order": 11,
+      "text": "Effective\n",
+      "bbox": [
+        350.2462158203125,
+        168.52967834472656,
+        377.1786804199219,
+        177.2371826171875
+      ],
+      "text_sha256": "af90b98bf86de1f246038b135eb6cd7fb7c6a4becb1f29841450551224878d19"
+    },
+    {
+      "block_id": "page-0960-block-0012",
+      "order": 12,
+      "text": "Trazodone54\nDepression\nSARI\n25–100mg in \n250mL of saline\nNo serious adverse \nevents. Sedation, \nrash, dizziness\n",
+      "bbox": [
+        48.041229248046875,
+        253.5571746826172,
+        343.5944519042969,
+        282.2721862792969
+      ],
+      "text_sha256": "6e2c948663dd1e738b0b2008619993d9644d2e717d3436be56788127288220de"
+    },
+    {
+      "block_id": "page-0960-block-0013",
+      "order": 13,
+      "text": "No difference \ncompared with IV \nClomipramine\n",
+      "bbox": [
+        350.24688720703125,
+        253.5621795654297,
+        408.86688232421875,
+        282.2646789550781
+      ],
+      "text_sha256": "b4493a22278bd19e2d5a36d1a43c00c67da19b211822fccdbeb54491c9af9878"
+    },
+    {
+      "block_id": "page-0960-block-0014",
+      "order": 14,
+      "text": "Valproate\nAcute \ndisturbance55\n",
+      "bbox": [
+        48.041900634765625,
+        288.5796813964844,
+        152.86361694335938,
+        307.28466796875
+      ],
+      "text_sha256": "7317902365811711516c03636a8f8098a0b7b226b6394e15d4bcf522536ec94c"
+    },
+    {
+      "block_id": "page-0960-block-0015",
+      "order": 15,
+      "text": "Mood stabiliser\n20mg/kg\nSedation\nAs effective as \nHaloperidol with less \nsevere side effects\n",
+      "bbox": [
+        164.91439819335938,
+        288.5946960449219,
+        418.594482421875,
+        317.29718017578125
+      ],
+      "text_sha256": "19103141b4d8fa4986413491ff3e560e3eed8eeebcf92d428d00e0b8bb5dd982"
+    },
+    {
+      "block_id": "page-0960-block-0016",
+      "order": 16,
+      "text": "Acute mania56\n500mg\nPossibly faster-acting \nthan haloperidol\n",
+      "bbox": [
+        110.91439819335938,
+        323.6121826171875,
+        418.5819396972656,
+        342.3246765136719
+      ],
+      "text_sha256": "cddfec279753ef7a320f9b87892f93ce8567eeb52276ed8dd1eb5db5e063b6b1"
+    },
+    {
+      "block_id": "page-0960-block-0017",
+      "order": 17,
+      "text": "aThe range of doses as described in the included studies.\n",
+      "bbox": [
+        48.039398193359375,
+        351.61968994140625,
+        228.1930694580078,
+        360.3271789550781
+      ],
+      "text_sha256": "4988b16ae08423d392a817a4b5186d6bef2e133a877a272e2bbbe3838c6ee8ff"
+    },
+    {
+      "block_id": "page-0960-block-0018",
+      "order": 18,
+      "text": "bAs reported in studies, though not exclusively.\n",
+      "bbox": [
+        48.039398193359375,
+        361.61968994140625,
+        196.75796508789062,
+        370.3271789550781
+      ],
+      "text_sha256": "380fb481df3472896a478f533d6c5c6cfda9f3cf7e3a37485b39cb51a99335ec"
+    },
+    {
+      "block_id": "page-0960-block-0019",
+      "order": 19,
+      "text": "Table 14.8  (Continued)\n",
+      "bbox": [
+        54.0,
+        70.08790588378906,
+        130.2899932861328,
+        78.97540283203125
+      ],
+      "text_sha256": "8a5de33dc345de7abc415343255bbd54c4c1d94ff98995f2f6977c2cad14fefd"
+    },
+    {
+      "block_id": "page-0960-block-0020",
+      "order": 20,
+      "text": "References\n",
+      "bbox": [
+        48.0,
+        390.8689880371094,
+        104.03400421142578,
+        403.90399169921875
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0960-block-0021",
+      "order": 21,
+      "text": "\t 1.\t POMH-UK. Topic 16a. Rapid tranquillisation in the context of the pharmacological management of acutely-disturbed behaviour. Royal \n",
+      "bbox": [
+        48.0,
+        408.989990234375,
+        421.66192626953125,
+        416.0220031738281
+      ],
+      "text_sha256": "95ebdfad2ba5e99e37ad45710777ed29fdb665a2bf6ccbed20a3dc2d80c03837"
+    },
+    {
+      "block_id": "page-0960-block-0022",
+      "order": 22,
+      "text": "College of Psychiatrists, 2017.\n\t 2.\t Patel MX, et al. Joint BAP NAPICU evidence-based consensus guidelines for the clinical management of acute disturbance: de-escalation and \n",
+      "bbox": [
+        48.00600051879883,
+        417.989990234375,
+        421.6620178222656,
+        434.0220031738281
+      ],
+      "text_sha256": "17d18137f7f69077d9d674b7a25cb86a62999da4a5dedeb0442b3346cc368038"
+    },
+    {
+      "block_id": "page-0960-block-0023",
+      "order": 23,
+      "text": "rapid tranquillisation. Journal of Psychopharmacology 2018; 32:601–640.\n\t 3.\t Hirose S, et al. Intravenous Biperiden in Akathisia: an open pilot study. The International Journal of Psychiatry in Medicine 2000; \n",
+      "bbox": [
+        48.012001037597656,
+        435.8459777832031,
+        421.6921081542969,
+        452.0220031738281
+      ],
+      "text_sha256": "699bdf87fa9df299e817f5f4bebf984f43f19dfbecd8690f91b5632812eb12b4"
+    },
+    {
+      "block_id": "page-0960-block-0024",
+      "order": 24,
+      "text": "30:185–194.\n\t 4.\t Meltzer-Brody S, et al. Brexanolone injection in post-partum depression: two multicentre, double-blind, randomised, placebo-controlled, \n",
+      "bbox": [
+        48.018001556396484,
+        453.8459777832031,
+        421.66802978515625,
+        470.0220031738281
+      ],
+      "text_sha256": "36de6f3ed93db8a0855f97584864b5deb0dc1c20905d183cb1c612c5f6c26821"
+    },
+    {
+      "block_id": "page-0960-block-0025",
+      "order": 25,
+      "text": "phase 3 trials. The Lancet 2018; 392:1058–1070.\n\t 5.\t Kanes S, et al. Brexanolone (SAGE-547 injection) in post-partum depression: a randomised controlled trial. The Lancet 2017; \n",
+      "bbox": [
+        48.02399826049805,
+        471.8459777832031,
+        421.69805908203125,
+        488.0220031738281
+      ],
+      "text_sha256": "e3166e83499a5771075a8e47e05ad6e71f2dfdb451572800182f9422422a60fe"
+    },
+    {
+      "block_id": "page-0960-block-0026",
+      "order": 26,
+      "text": "390:480–489.\n\t 6.\t Pompili M, et al. Response to intravenous antidepressant treatment by suicidal vs. Nonsuicidal Depressed Patients. J Affect Disord 2010; \n",
+      "bbox": [
+        48.029998779296875,
+        489.8459777832031,
+        421.65594482421875,
+        506.0220031738281
+      ],
+      "text_sha256": "f984c8922e4ed7710dedf4bdc9e68ab5d02ba7042d522c9d3be8962c0e7ab4dd"
+    },
+    {
+      "block_id": "page-0960-block-0027",
+      "order": 27,
+      "text": "122:154–158.\n\t 7.\t Altamura AC, et al. Intravenous augmentative citalopram versus clomipramine in partial/nonresponder depressed patients: a short-term, low \n",
+      "bbox": [
+        48.0359992980957,
+        507.8459777832031,
+        421.7099914550781,
+        524.02197265625
+      ],
+      "text_sha256": "59de3717d7deb19ab37631d80d99fd8f6d36fe58f58378e9b4721b6f4d8f021b"
+    },
+    {
+      "block_id": "page-0960-block-0028",
+      "order": 28,
+      "text": "dose, randomized, placebo-controlled study. Journal of Clinical Psychopharmacology 2008; 28:406–410.\n\t 8.\t Pallanti S, et al. Citalopram intravenous infusion in resistant obsessive-compulsive disorder: an open trial. J Clin Psychiatry 2002; \n",
+      "bbox": [
+        48.04199981689453,
+        525.8460083007812,
+        421.7400207519531,
+        542.02197265625
+      ],
+      "text_sha256": "3a1631bfcd0ee090ba30c65a0334cc40792fe11ce632f4c7be88f7df1e3c7dc8"
+    },
+    {
+      "block_id": "page-0960-block-0029",
+      "order": 29,
+      "text": "63:796–801.\n\t 9.\t Koran LM, et al. Rapid benefit of intravenous pulse loading of clomipramine in obsessive-compulsive disorder. Am J Psychiatry 1997; \n",
+      "bbox": [
+        48.04800033569336,
+        543.8460083007812,
+        421.7401428222656,
+        560.02197265625
+      ],
+      "text_sha256": "9bcdc073221ced5279ae9044de49d2e0fa5e2a5b2c594aaec2c0db4e6a113d2f"
+    },
+    {
+      "block_id": "page-0960-block-0030",
+      "order": 30,
+      "text": "154:396–401.\n\t10.\t Fallon BA, et al. Intravenous clomipramine for obsessive-compulsive disorder refractory to oral clomipramine: a placebo-controlled study. \n",
+      "bbox": [
+        48.05400085449219,
+        561.8460083007812,
+        421.7099609375,
+        578.02197265625
+      ],
+      "text_sha256": "6b1f39b0208a7c2a5aacdb190e3f2a8c1daf90de752b1cff0b3a23dbeca204d2"
+    },
+    {
+      "block_id": "page-0960-block-0031",
+      "order": 31,
+      "text": "Arch Gen Psychiatry 1998; 55:918–924.\n\t11.\t Karameh WK, et al. Intravenous clomipramine for treatment-resistant obsessive-compulsive disorder. Int J Neuropsychopharmacol 2015; 19.\n\t12.\t Jakob SM, et al. Dexmedetomidine vs midazolam or propofol for sedation during prolonged mechanical ventilation: two randomized con-\n",
+      "bbox": [
+        48.060001373291016,
+        579.8460083007812,
+        420.2701416015625,
+        605.02197265625
+      ],
+      "text_sha256": "1b52d23d5364b8b0ca9c5aef432645c245dc00045cba8aa1b07a12a66d92ee10"
+    },
+    {
+      "block_id": "page-0960-block-0032",
+      "order": 32,
+      "text": "trolled trials. Jama 2012; 307:1151–1160.\n",
+      "bbox": [
+        59.06999969482422,
+        606.8460083007812,
+        168.2999725341797,
+        614.02197265625
+      ],
+      "text_sha256": "f0325e63ffcbb4f44bccef2dcb11130e421b125247c2f528fff4d06bcb25dedc"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

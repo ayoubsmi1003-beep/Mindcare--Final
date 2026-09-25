@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0386",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 386,
+  "source_page_index": 385,
+  "source_page_display": 386,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    365\nCHAPTER 3\n\t45.\t Douglas I, et al. The use of antidepressants and the risk of haemorrhagic stroke: a nested case control study. Br J Clin Pharmacol 2011; \n71:116–120.\n\t46.\t Trajkova S, et al. Use of antidepressants and risk of incident stroke: a systematic review and meta-analysis. Neuroepidemiology 2019; \n53:142–151.\n\t47.\t Hoirisch-Clapauch S, et al. Antidepressants: bleeding or thrombosis? Thromb Res 2019; 181 Suppl 1:S23–S28.\n\t48.\t Hackam DG, et al. Selective serotonin reuptake inhibitors and brain hemorrhage: a meta-analysis. Neurology 2012; 79:1862–1865.\n\t49.\t Kim JH, et al. Major adverse cardiovascular events in antidepressant users within patients with ischemic heart diseases: a nationwide cohort \nstudy. J Clin Psychopharmacol 2020; 40:475–481.\n\t50.\t He Y, et al. Effect of fluoxetine on three-year recurrence in acute ischemic stroke: a randomized controlled clinical study. Clin Neurol \nNeurosurg 2018; 168:1–6.\n\t51.\t Douros A, et al. Degree of serotonin reuptake inhibition of antidepressants and ischemic risk: a cohort study. Neurology 2019; \n93:e1010–e1020.\n\t52.\t Trifiro G, et al. Risk of ischemic stroke associated with antidepressant drug use in elderly persons. J Clin Psychopharmacol 2010; \n30:252–258.\n\t53.\t Wu CS, et al. Association of cerebrovascular events with antidepressant use: a case-crossover study. Am J Psychiatry 2011; 168:511–521.\n\t54.\t Mortensen JK, et al. Safety of selective serotonin reuptake inhibitor treatment in recovering stroke patients. Exp Opin Drug Saf 2015; \n14:911–919.\n\t55.\t Chen Y, et al. Treatment effects of antidepressants in patients with post-stroke depression: a meta-analysis. Ann Pharmacother 2006; \n40:2115–2122.\n\t56.\t Bangalore S, et al. Cardiovascular hazards of insufficient treatment of depression among patients with known cardiovascular disease: a \npropensity score adjusted analysis. Eur Heart J Qual Care Clin Outcomes 2018; 4:258–266.\n\t57.\t Sun Y, et al. Comparative efficacy and acceptability of antidepressant treatment in poststroke depression: a multiple-treatments meta-analy-\nsis. BMJ Open 2017; 7:e016499.\n\t58.\t Deng L, et al. Interventions for management of post-stroke depression: a Bayesian network meta-analysis of 23 randomized controlled trials. \nSci Rep 2017; 7:16466.\n\t59.\t Li L, et al. Effectiveness of paroxetine for poststroke depression: a meta-analysis. J Stroke Cerebrovasc Dis 2020; 29:104664.\n\t60.\t Li X, et al. Comparative efficacy of nine antidepressants in treating Chinese patients with post-stroke depression: a network meta-analysis. J \nAffect Disord 2020; 266:540–548.\n\t61.\t Jeong HE, et al. Risk of major adverse cardiovascular events associated with concomitant use of antidepressants and non-steroidal anti-\ninflammatory drugs: a retrospective cohort study. CNS Drugs 2020; 34:1063–1074.\n\t62.\t Quinn GR, et al. Effect of selective serotonin reuptake inhibitors on bleeding risk in patients with atrial fibrillation taking warfarin. Am J \nCardiol 2014; 114:583–586.\n\t63.\t Sayal KS, et al. Psychotropic interactions with warfarin. Acta Psychiatr Scand 2000; 102:250–255.\n\t64.\t Fitzgerald JL, et al. Drug interactions of direct-acting oral anticoagulants. Drug Saf 2016; 39:841–845.\nFurther reading\nCastilla-Guerra. Pharmacological management of post-stroke depression. Expert Rev Neurother 2020; 20:157–166.\n",
+  "raw_text_sha256": "90449600eb451f9ace0f19016025af1fa18108959151bba2fa9375d8cf3c8f1a",
+  "coordinates_sha256": "1f07aaa5a5312a6be69146ef6a27d8b9f494141e3e68005494bfd5ea80a6f4f7",
+  "block_sequence_sha256": "0ca9330d8ae1bcc825a60f938e2f66e89659a94b3b8542dd9c0de7a5694f60b8",
+  "blocks": [
+    {
+      "block_id": "page-0386-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    365\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "cf356857d72c448615cb749b1d87ac988e18017a3a3a82cb796a37d76fec32f0"
+    },
+    {
+      "block_id": "page-0386-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0386-block-0002",
+      "order": 2,
+      "text": "\t45.\t Douglas I, et al. The use of antidepressants and the risk of haemorrhagic stroke: a nested case control study. Br J Clin Pharmacol 2011; \n",
+      "bbox": [
+        48.0,
+        63.2703857421875,
+        421.6981201171875,
+        70.30238342285156
+      ],
+      "text_sha256": "5257a839b102e5b4b14455449bb292b49fd3b9668d6d37010c9e88b3383baa98"
+    },
+    {
+      "block_id": "page-0386-block-0003",
+      "order": 3,
+      "text": "71:116–120.\n\t46.\t Trajkova S, et al. Use of antidepressants and risk of incident stroke: a systematic review and meta-analysis. Neuroepidemiology 2019; \n",
+      "bbox": [
+        48.00600051879883,
+        72.12638854980469,
+        421.6440124511719,
+        88.30238342285156
+      ],
+      "text_sha256": "bdd6724b12f8a80a2cd942a2b136bbc8adbd027cf63a33aebeda1e51838a51cd"
+    },
+    {
+      "block_id": "page-0386-block-0004",
+      "order": 4,
+      "text": "53:142–151.\n\t47.\t Hoirisch-Clapauch S, et al. Antidepressants: bleeding or thrombosis? Thromb Res 2019; 181 Suppl 1:S23–S28.\n\t48.\t Hackam DG, et al. Selective serotonin reuptake inhibitors and brain hemorrhage: a meta-analysis. Neurology 2012; 79:1862–1865.\n\t49.\t Kim JH, et al. Major adverse cardiovascular events in antidepressant users within patients with ischemic heart diseases: a nationwide cohort \n",
+      "bbox": [
+        48.012001037597656,
+        90.12638854980469,
+        421.7279357910156,
+        124.30238342285156
+      ],
+      "text_sha256": "810cb32cb6cf3fa50a68c6c9e69fde99e88940579c3fd0ff34d96d2271894b35"
+    },
+    {
+      "block_id": "page-0386-block-0005",
+      "order": 5,
+      "text": "study. J Clin Psychopharmacol 2020; 40:475–481.\n\t50.\t He Y, et al. Effect of fluoxetine on three-year recurrence in acute ischemic stroke: a randomized controlled clinical study. Clin Neurol \n",
+      "bbox": [
+        48.029998779296875,
+        126.12638854980469,
+        421.6981506347656,
+        142.30238342285156
+      ],
+      "text_sha256": "974e6f3ac2be46c04148eb7b20ede479ae27f89b23040f72cbf1054c9a47ddd2"
+    },
+    {
+      "block_id": "page-0386-block-0006",
+      "order": 6,
+      "text": "Neurosurg 2018; 168:1–6.\n\t51.\t Douros A, et al. Degree of serotonin reuptake inhibition of antidepressants and ischemic risk: a cohort study. Neurology 2019; \n",
+      "bbox": [
+        48.0359992980957,
+        144.1263885498047,
+        421.7040100097656,
+        160.30238342285156
+      ],
+      "text_sha256": "ee9ed7e54b439339f0678323be6915b0c0955b049582b0338570e640607ea79a"
+    },
+    {
+      "block_id": "page-0386-block-0007",
+      "order": 7,
+      "text": "93:e1010–e1020.\n\t52.\t Trifiro G, et al. Risk of ischemic stroke associated with antidepressant drug use in elderly persons. J Clin Psychopharmacol 2010; \n",
+      "bbox": [
+        48.04199981689453,
+        162.1263885498047,
+        421.66802978515625,
+        178.30238342285156
+      ],
+      "text_sha256": "039d2b94eb4bbb900124b9e28b9483131d17bf152906f6352ea193087a13cb3c"
+    },
+    {
+      "block_id": "page-0386-block-0008",
+      "order": 8,
+      "text": "30:252–258.\n\t53.\t Wu CS, et al. Association of cerebrovascular events with antidepressant use: a case-crossover study. Am J Psychiatry 2011; 168:511–521.\n\t54.\t Mortensen JK, et al. Safety of selective serotonin reuptake inhibitor treatment in recovering stroke patients. Exp Opin Drug Saf 2015; \n",
+      "bbox": [
+        48.04800033569336,
+        180.1263885498047,
+        421.7040710449219,
+        205.30238342285156
+      ],
+      "text_sha256": "161330b3520902586f0e086f493ce0a7fe45bcf2996dec502810277a34ef9ef0"
+    },
+    {
+      "block_id": "page-0386-block-0009",
+      "order": 9,
+      "text": "14:911–919.\n\t55.\t Chen Y, et al. Treatment effects of antidepressants in patients with post-stroke depression: a meta-analysis. Ann Pharmacother 2006; \n",
+      "bbox": [
+        48.060001373291016,
+        207.1263885498047,
+        421.7040710449219,
+        223.30238342285156
+      ],
+      "text_sha256": "062625ce4e38054daf6c45672bce891025ed7a71d01742b2f4d6f1fab3bb3733"
+    },
+    {
+      "block_id": "page-0386-block-0010",
+      "order": 10,
+      "text": "40:2115–2122.\n\t56.\t Bangalore S, et al. Cardiovascular hazards of insufficient treatment of depression among patients with known cardiovascular disease: a \n",
+      "bbox": [
+        48.066001892089844,
+        225.1263885498047,
+        421.69195556640625,
+        241.30238342285156
+      ],
+      "text_sha256": "2690cafa2f8c51c7e6f4ccd0cc79a23987e334c85f8efdce67a608e5ecfa1def"
+    },
+    {
+      "block_id": "page-0386-block-0011",
+      "order": 11,
+      "text": "propensity score adjusted analysis. Eur Heart J Qual Care Clin Outcomes 2018; 4:258–266.\n\t57.\t Sun Y, et al. Comparative efficacy and acceptability of antidepressant treatment in poststroke depression: a multiple-treatments meta-analy-\n",
+      "bbox": [
+        48.071998596191406,
+        243.1263885498047,
+        420.1019287109375,
+        259.3023986816406
+      ],
+      "text_sha256": "8a5b664a7acf8bfad8205d1832b749f1146b5ee9191e59aae3c395420308457c"
+    },
+    {
+      "block_id": "page-0386-block-0012",
+      "order": 12,
+      "text": "sis. BMJ Open 2017; 7:e016499.\n\t58.\t Deng L, et al. Interventions for management of post-stroke depression: a Bayesian network meta-analysis of 23 randomized controlled trials. \n",
+      "bbox": [
+        48.077999114990234,
+        261.1263732910156,
+        421.7400817871094,
+        277.3023986816406
+      ],
+      "text_sha256": "70d7cfc86e7c3a846e755680c408d78cc60722b1ad16719e86f25f7a1ce631fe"
+    },
+    {
+      "block_id": "page-0386-block-0013",
+      "order": 13,
+      "text": "Sci Rep 2017; 7:16466.\n\t59.\t Li L, et al. Effectiveness of paroxetine for poststroke depression: a meta-analysis. J Stroke Cerebrovasc Dis 2020; 29:104664.\n\t60.\t Li X, et al. Comparative efficacy of nine antidepressants in treating Chinese patients with post-stroke depression: a network meta-analysis. J \n",
+      "bbox": [
+        48.08399963378906,
+        279.1263732910156,
+        421.776123046875,
+        304.3023986816406
+      ],
+      "text_sha256": "1760c3819ef4c4d67f7c3ec4dfc468142836454fa94af2ff35650604a14f3518"
+    },
+    {
+      "block_id": "page-0386-block-0014",
+      "order": 14,
+      "text": "Affect Disord 2020; 266:540–548.\n\t61.\t Jeong HE, et al. Risk of major adverse cardiovascular events associated with concomitant use of antidepressants and non-steroidal anti-\n",
+      "bbox": [
+        48.09600067138672,
+        306.1263732910156,
+        420.0778503417969,
+        322.3023986816406
+      ],
+      "text_sha256": "2965f97d76bdd1e0d35b2e5e2828951638d188e1dc31154f2e620f4fd129da99"
+    },
+    {
+      "block_id": "page-0386-block-0015",
+      "order": 15,
+      "text": "inflammatory drugs: a retrospective cohort study. CNS Drugs 2020; 34:1063–1074.\n\t62.\t Quinn GR, et al. Effect of selective serotonin reuptake inhibitors on bleeding risk in patients with atrial fibrillation taking warfarin. Am J \n",
+      "bbox": [
+        48.10200119018555,
+        324.1263732910156,
+        421.8058776855469,
+        340.3023986816406
+      ],
+      "text_sha256": "5212d5afb3d2a0ef3876547223959daf60ed15e64a042bebedd78a91487b31c5"
+    },
+    {
+      "block_id": "page-0386-block-0016",
+      "order": 16,
+      "text": "Cardiol 2014; 114:583–586.\n\t63.\t Sayal KS, et al. Psychotropic interactions with warfarin. Acta Psychiatr Scand 2000; 102:250–255.\n\t64.\t Fitzgerald JL, et al. Drug interactions of direct-acting oral anticoagulants. Drug Saf 2016; 39:841–845.\n",
+      "bbox": [
+        48.108001708984375,
+        342.1263732910156,
+        325.1939697265625,
+        367.3023986816406
+      ],
+      "text_sha256": "7e2778fc4013235f34f80d208da67d1de9c6fd387ca2e5b3fa260ea23acd2b4a"
+    },
+    {
+      "block_id": "page-0386-block-0017",
+      "order": 17,
+      "text": "Further reading\n",
+      "bbox": [
+        48.0,
+        385.6493835449219,
+        128.4869842529297,
+        398.68438720703125
+      ],
+      "text_sha256": "97a7eb93e6fca560969f4c10a52d2ef83995974b08b112934e0d108909963303"
+    },
+    {
+      "block_id": "page-0386-block-0018",
+      "order": 18,
+      "text": "Castilla-Guerra. Pharmacological management of post-stroke depression. Expert Rev Neurother 2020; 20:157–166.\n",
+      "bbox": [
+        48.0,
+        403.6263732910156,
+        347.93994140625,
+        410.8023986816406
+      ],
+      "text_sha256": "d300ef88d32735762327eeb936e13822a0a4895fe5cdc3be4dc22e2adc6b51d8"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

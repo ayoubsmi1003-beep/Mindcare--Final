@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0211",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 211,
+  "source_page_index": 210,
+  "source_page_display": 211,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "190    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nREFRACTORY SCHIZOPHRENIA AND CLOZAPINE\nClozapine initiation schedule\nClozapine – dosing regimen\nMany of the adverse effects of clozapine are dose-dependent and associated with speed \nof titration. Adverse effects also tend to be more common and severe at the beginning \nof therapy. Standard maintenance doses may even prove fatal in clozapine-naïve sub-\njects.1 To minimise these problems it is important to start treatment at a low dose and \nto increase dosage slowly.\nClozapine should normally be started at a dose of 12.5mg once a day, at night. Blood \npressure should be monitored hourly for 6 hours because of the hypotensive effect of \nclozapine. This monitoring is not usually necessary if the first dose is given at night. On \nday 2, the dose can be increased to 12.5mg twice daily. If the patient is tolerating clo-\nzapine, the dose can be increased by 25–50mg a day, until a dose of 300mg a day is \nreached. This can usually be achieved in 2–3 weeks. Further dosage increases should be \nmade slowly in increments of 50–100mg each week. A plasma level of 350µg/l should \nbe aimed to ensure an adequate trial, but response may occur at lower plasma level. The \naverage (there is substantial variation) dose at which this plasma level is reached varies \naccording to gender and smoking status. The range is approximately 250mg/day (female \nnon-smoker) to 550mg/day (male smoker).2 The total clozapine dose should be divided \n(usually twice daily) and, if sedation is a problem, the larger portion of the dose can be \ngiven at night.\nTable 1.34 is a suggested starting regime for clozapine. This is a cautious regimen – \nmore rapid increases have been used. Slower titration may be necessary where sedation \nor other dose-related side effects are severe, in the elderly, the very young, those who are \nphysically compromised or those who have poorly tolerated other antipsychotics. If the \npatient is not tolerating a particular dose, decrease to one that was previously tolerated. \nIf the adverse effect resolves, increase the dose again but at a slower rate.\nIf, for any reason, a patient misses fewer than 2 days’ clozapine, restart at the dose \nprescribed before the event. Do not administer extra tablets to catch up. If more than 2 \ndays are missed, restart and increase slowly (but at a faster rate than in drug-naïve \npatients). Please see the section on restarting clozapine.\n",
+  "raw_text_sha256": "db72c0c5d8e88ab450f27bfdcc536626a2499768fe296fc4ee97e7c80946ceb3",
+  "coordinates_sha256": "e778d34cb2b2b37a006b5b74affccd9be97eb4df11349b2077ba04d88c4e810e",
+  "block_sequence_sha256": "ad89ee34febad26660330d41d48926f90ad2bb200a5fd3d213a6299f96ac795e",
+  "blocks": [
+    {
+      "block_id": "page-0211-block-0000",
+      "order": 0,
+      "text": "190    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "368aa3477496897e793189d167af5296626c69561d77201e3b64ac403f802558"
+    },
+    {
+      "block_id": "page-0211-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0211-block-0002",
+      "order": 2,
+      "text": "REFRACTORY SCHIZOPHRENIA AND CLOZAPINE\n",
+      "bbox": [
+        68.88909912109375,
+        66.06442260742188,
+        312.3520202636719,
+        79.09942626953125
+      ],
+      "text_sha256": "ad8ec0efce1e6c4780672ea97751e47c2409701c1762f409768463e9eac9f9c6"
+    },
+    {
+      "block_id": "page-0211-block-0003",
+      "order": 3,
+      "text": "Clozapine initiation schedule\n",
+      "bbox": [
+        68.88909912109375,
+        92.06845092773438,
+        218.02703857421875,
+        105.10345458984375
+      ],
+      "text_sha256": "71b375f6e0460481cce935025d91910e4fa232d244704cb7398871fe90754615"
+    },
+    {
+      "block_id": "page-0211-block-0004",
+      "order": 4,
+      "text": "Clozapine – dosing regimen\n",
+      "bbox": [
+        61.88909912109375,
+        116.99942779541016,
+        191.90908813476562,
+        128.84942626953125
+      ],
+      "text_sha256": "a77930f93dfc299a3fd0651009caa4642ea33b1b7bce317a5baaf706c908c749"
+    },
+    {
+      "block_id": "page-0211-block-0005",
+      "order": 5,
+      "text": "Many of the adverse effects of clozapine are dose-dependent and associated with speed \nof titration. Adverse effects also tend to be more common and severe at the beginning \nof therapy. Standard maintenance doses may even prove fatal in clozapine-naïve sub-\njects.1 To minimise these problems it is important to start treatment at a low dose and \nto increase dosage slowly.\n",
+      "bbox": [
+        61.88909912109375,
+        134.909423828125,
+        436.6891174316406,
+        194.62942504882812
+      ],
+      "text_sha256": "3ead8a7e4d47a3255671bed8d69069157e7e4eeb5ec74c937c28ab24062bf02e"
+    },
+    {
+      "block_id": "page-0211-block-0006",
+      "order": 6,
+      "text": "Clozapine should normally be started at a dose of 12.5mg once a day, at night. Blood \npressure should be monitored hourly for 6 hours because of the hypotensive effect of \nclozapine. This monitoring is not usually necessary if the first dose is given at night. On \nday 2, the dose can be increased to 12.5mg twice daily. If the patient is tolerating clo-\nzapine, the dose can be increased by 25–50mg a day, until a dose of 300mg a day is \nreached. This can usually be achieved in 2–3 weeks. Further dosage increases should be \nmade slowly in increments of 50–100mg each week. A plasma level of 350µg/l should \nbe aimed to ensure an adequate trial, but response may occur at lower plasma level. The \naverage (there is substantial variation) dose at which this plasma level is reached varies \naccording to gender and smoking status. The range is approximately 250mg/day (female \nnon-smoker) to 550mg/day (male smoker).2 The total clozapine dose should be divided \n(usually twice daily) and, if sedation is a problem, the larger portion of the dose can be \ngiven at night.\n",
+      "bbox": [
+        61.890098571777344,
+        194.909423828125,
+        436.7299499511719,
+        350.6294250488281
+      ],
+      "text_sha256": "2c68e1bcf6d280988631ab3a9ec645ff712b51a7002ee16c9ded0e9299a9f5e5"
+    },
+    {
+      "block_id": "page-0211-block-0007",
+      "order": 7,
+      "text": "Table 1.34 is a suggested starting regime for clozapine. This is a cautious regimen – \nmore rapid increases have been used. Slower titration may be necessary where sedation \nor other dose-related side effects are severe, in the elderly, the very young, those who are \nphysically compromised or those who have poorly tolerated other antipsychotics. If the \npatient is not tolerating a particular dose, decrease to one that was previously tolerated. \nIf the adverse effect resolves, increase the dose again but at a slower rate.\n",
+      "bbox": [
+        61.89118957519531,
+        350.909423828125,
+        436.6911926269531,
+        422.6294250488281
+      ],
+      "text_sha256": "22065bb445ffa1a38e081255935ff854fd63e95e0ba230a65aff217b4a76fe39"
+    },
+    {
+      "block_id": "page-0211-block-0008",
+      "order": 8,
+      "text": "If, for any reason, a patient misses fewer than 2 days’ clozapine, restart at the dose \nprescribed before the event. Do not administer extra tablets to catch up. If more than 2 \ndays are missed, restart and increase slowly (but at a faster rate than in drug-naïve \npatients). Please see the section on restarting clozapine.\n",
+      "bbox": [
+        61.89118957519531,
+        422.909423828125,
+        436.7010192871094,
+        470.6294250488281
+      ],
+      "text_sha256": "417b4dea1920c7269f8aa66c6bc1461bfb57ece4a6669c52a0b450b1c30a0ab5"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,359 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0397",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 397,
+  "source_page_index": 396,
+  "source_page_display": 397,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "376    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nDose for prophylaxis\nAdults should receive the same dose as used for acute treatment.26 There is some evi-\ndence to support the use of lower doses in elderly patients: dosulepin 75mg/day offers \neffective prophylaxis27 but is now rarely used and is reserved for specialist use. There is \nno evidence to support the use of lower than standard doses of SSRIs.28\nRelapse rates after ECT are similar to those after stopping antidepressants.29 \nAntidepressant prophylaxis will be required, ideally with a different drug from the one \nthat failed to get the patient well in the first instance, although good data in this area \nare lacking.\nLithium also have some efficacy in the prophylaxis of unipolar depression; efficacy \nrelative to antidepressants is unknown.30 However, lithium treatment has been shown \nto be associated with the best outcomes of any treatment for unipolar depression.31 \nNICE recommend that lithium should not be used as the sole prophylactic drug in uni-\npolar depression.25 There is some support for the use of a combination of lithium and \nnortriptyline.32\nMaintenance treatment with lithium protects against suicide.26\nKey points that patients should know\n■\n■A single episode of depression should be treated for 6–9 months after remission.\n■\n■The risk of recurrence of depressive illness is high and increases with each episode.\n■\n■Those who have had multiple episodes may require treatment for many years.\n■\n■The chances of staying well are greatly increased by taking antidepressants.\n■\n■Antidepressants are:\n■\n■effective\n■\n■not addictive (although withdrawal symptoms can be expected)\n■\n■not known to lose their efficacy over time\n■\n■not known to cause new long-term side-effects.\n■\n■Medication needs to be continued at the treatment dose. If side effects are intolerable, \nit may be possible to find a more suitable alternative.\n■\n■If patients decide to stop their medication, this must not be done abruptly, as this may \nlead to unpleasant discontinuation effects (see ‘Antidepressant withdrawal symp-\ntoms’ in this chapter) and confers a higher risk of relapse.33 The medication needs to \nbe reduced slowly under specialist supervision.21\nReferences\n\t 1.\t Cleare A, et al. Evidence-based guidelines for treating depressive disorders with antidepressants: a revision of the 2008 British Association for \nPsychopharmacology guidelines. J Psychopharmacology 2015; 29:459–525.\n\t 2.\t Reimherr FW, et al. Optimal length of continuation therapy in depression: a prospective assessment during long-term fluoxetine treatment. \nAm J Psychiatry 1998; 155:1247–1253.\n\t 3.\t Prien RF, et al. Continuation drug therapy for major depressive episodes: how long should it be maintained? Am J Psychiatry 1986; \n143:18–23.\n\t 4.\t Kim KH, et al. The effects of continuous antidepressant treatment during the first 6months on relapse or recurrence of depression. J Affect \nDisord 2011; 132:121–129.\n\t 5.\t Eaton WW, et al. Population-based study of first onset and chronicity in major depressive disorder. Arch Gen Psychiatry 2008; \n65:513–520.\n",
+  "raw_text_sha256": "690dfc11d80645f20ee1ec043c424a86fd2591c4d4a4d300977783e3dbc49052",
+  "coordinates_sha256": "4c6852403c829ca29775d386f4cef0ce39473c9224779ef516bd186ec976dfce",
+  "block_sequence_sha256": "f67553a77af4a55cec4ff2e5ce869304a2785c72efa943b32a5838fddd700b34",
+  "blocks": [
+    {
+      "block_id": "page-0397-block-0000",
+      "order": 0,
+      "text": "376    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "5da6f521c46071029b9da863efa7add98cb918b14f0f77bb15ee0cdc40d1fbb3"
+    },
+    {
+      "block_id": "page-0397-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0397-block-0002",
+      "order": 2,
+      "text": "Dose for prophylaxis\n",
+      "bbox": [
+        61.88999938964844,
+        62.31540298461914,
+        169.260986328125,
+        75.35040283203125
+      ],
+      "text_sha256": "b578838a7c4c741221452a6bc5678257eabccba73e2c744dc59213e3c624ea32"
+    },
+    {
+      "block_id": "page-0397-block-0003",
+      "order": 3,
+      "text": "Adults should receive the same dose as used for acute treatment.26 There is some evi-\ndence to support the use of lower doses in elderly patients: dosulepin 75mg/day offers \neffective prophylaxis27 but is now rarely used and is reserved for specialist use. There is \nno evidence to support the use of lower than standard doses of SSRIs.28\n",
+      "bbox": [
+        61.88920593261719,
+        81.160400390625,
+        436.7093811035156,
+        128.88040161132812
+      ],
+      "text_sha256": "b853e63a3d9c3d38c23299ce06c48db75a5be376c4959a5baae59a5d9bebade0"
+    },
+    {
+      "block_id": "page-0397-block-0004",
+      "order": 4,
+      "text": "Relapse rates after ECT are similar to those after stopping antidepressants.29 \nAntidepressant prophylaxis will be required, ideally with a different drug from the one \nthat failed to get the patient well in the first instance, although good data in this area \nare lacking.\n",
+      "bbox": [
+        61.8900146484375,
+        129.160400390625,
+        436.7200622558594,
+        176.88040161132812
+      ],
+      "text_sha256": "e67eb2c7c70d6784d04bf698155bfd9c84f904fe9f92e4a2b39e3d45e71fdfdb"
+    },
+    {
+      "block_id": "page-0397-block-0005",
+      "order": 5,
+      "text": "Lithium also have some efficacy in the prophylaxis of unipolar depression; efficacy \nrelative to antidepressants is unknown.30 However, lithium treatment has been shown \nto be associated with the best outcomes of any treatment for unipolar depression.31 \nNICE recommend that lithium should not be used as the sole prophylactic drug in uni-\npolar depression.25 There is some support for the use of a combination of lithium and \nnortriptyline.32\n",
+      "bbox": [
+        61.88560485839844,
+        177.160400390625,
+        436.7086486816406,
+        248.88040161132812
+      ],
+      "text_sha256": "95407b0ab5431eb5b3686127a8365e4943110a6c2c76808cb9c8e12c10cc295d"
+    },
+    {
+      "block_id": "page-0397-block-0006",
+      "order": 6,
+      "text": "Maintenance treatment with lithium protects against suicide.26\n",
+      "bbox": [
+        71.88999938964844,
+        249.160400390625,
+        340.59027099609375,
+        260.8804016113281
+      ],
+      "text_sha256": "b92dd11c332869f0d0cc8425d88b78d16fff7f4f2659361c05092595e5f213fd"
+    },
+    {
+      "block_id": "page-0397-block-0007",
+      "order": 7,
+      "text": "Key points that patients should know\n",
+      "bbox": [
+        61.88999938964844,
+        278.3153991699219,
+        256.86492919921875,
+        291.35040283203125
+      ],
+      "text_sha256": "139b0b9621bf6a2863e07b831fe56ddbcddf3534a5f4101d4791eb973a2dbf81"
+    },
+    {
+      "block_id": "page-0397-block-0008",
+      "order": 8,
+      "text": "■\n■A single episode of depression should be treated for 6–9 months after remission.\n",
+      "bbox": [
+        61.88990020751953,
+        303.160400390625,
+        416.4999694824219,
+        314.8804016113281
+      ],
+      "text_sha256": "57f80d121b5041f1ae54aa05dc1ba4ae14aa15b3d7b98f1fca49504b20d27366"
+    },
+    {
+      "block_id": "page-0397-block-0009",
+      "order": 9,
+      "text": "■\n■The risk of recurrence of depressive illness is high and increases with each episode.\n",
+      "bbox": [
+        61.88990020751953,
+        315.160400390625,
+        426.5100402832031,
+        326.8804016113281
+      ],
+      "text_sha256": "c6d96d9c7fb433415e93295e7828525c86b96977915f8465493390492dab52b3"
+    },
+    {
+      "block_id": "page-0397-block-0010",
+      "order": 10,
+      "text": "■\n■Those who have had multiple episodes may require treatment for many years.\n",
+      "bbox": [
+        61.88990020751953,
+        327.160400390625,
+        406.45001220703125,
+        338.8804016113281
+      ],
+      "text_sha256": "393c605ac2a331454984ee72b74c95cc8d676027fb1bef0396e9b168d07d9fc5"
+    },
+    {
+      "block_id": "page-0397-block-0011",
+      "order": 11,
+      "text": "■\n■The chances of staying well are greatly increased by taking antidepressants.\n",
+      "bbox": [
+        61.88990020751953,
+        339.160400390625,
+        395.3700256347656,
+        350.8804016113281
+      ],
+      "text_sha256": "9871aa0f6919106098aa8f1a43e96dcf91e417b924f8ff2b6855834242b9b50b"
+    },
+    {
+      "block_id": "page-0397-block-0012",
+      "order": 12,
+      "text": "■\n■Antidepressants are:\n",
+      "bbox": [
+        61.88990020751953,
+        351.160400390625,
+        158.11000061035156,
+        362.8804016113281
+      ],
+      "text_sha256": "d19d086dd9bb14c4b6bfd8c9de3d3c373c5632dcce0b6ed187b0702cebdacc62"
+    },
+    {
+      "block_id": "page-0397-block-0013",
+      "order": 13,
+      "text": "■\n■effective\n",
+      "bbox": [
+        71.08489990234375,
+        363.160400390625,
+        115.42001342773438,
+        374.8804016113281
+      ],
+      "text_sha256": "00c7cb089b8ca5fbdb8b10fcc5f9012093a6917a49aca2b9f3380a07aa873335"
+    },
+    {
+      "block_id": "page-0397-block-0014",
+      "order": 14,
+      "text": "■\n■not addictive (although withdrawal symptoms can be expected)\n",
+      "bbox": [
+        71.08489990234375,
+        375.160400390625,
+        353.7999572753906,
+        386.8804016113281
+      ],
+      "text_sha256": "ca79baea207f96d3d9a04909f83a95570e1ea87ec7f9820bbd736eea8886c125"
+    },
+    {
+      "block_id": "page-0397-block-0015",
+      "order": 15,
+      "text": "■\n■not known to lose their efficacy over time\n",
+      "bbox": [
+        71.08489990234375,
+        387.160400390625,
+        259.8999938964844,
+        398.8804016113281
+      ],
+      "text_sha256": "7b006110982a25c1ba8dc420a67ceb0b59ad5ba1cbe301bdca860b5c2a1c6a7b"
+    },
+    {
+      "block_id": "page-0397-block-0016",
+      "order": 16,
+      "text": "■\n■not known to cause new long-term side-effects.\n",
+      "bbox": [
+        71.08489990234375,
+        399.160400390625,
+        283.2299499511719,
+        410.8804016113281
+      ],
+      "text_sha256": "ad398da78d16b08e65235bc4cf34849de37e2a83a586ba13de2bf65a51f6de84"
+    },
+    {
+      "block_id": "page-0397-block-0017",
+      "order": 17,
+      "text": "■\n■Medication needs to be continued at the treatment dose. If side effects are intolerable, \n",
+      "bbox": [
+        61.88990020751953,
+        411.160400390625,
+        436.64996337890625,
+        422.8804016113281
+      ],
+      "text_sha256": "61b9320fcd7f56c8cc1260824fb4ea9ad0435a2a209170cad044d8c64932dff6"
+    },
+    {
+      "block_id": "page-0397-block-0018",
+      "order": 18,
+      "text": "it may be possible to find a more suitable alternative.\n",
+      "bbox": [
+        70.88999938964844,
+        423.160400390625,
+        299.7999572753906,
+        434.8804016113281
+      ],
+      "text_sha256": "c931f20863f97f23605f9da7bd08e0dfb2f4bf3989e59460f94ef37adeca77a8"
+    },
+    {
+      "block_id": "page-0397-block-0019",
+      "order": 19,
+      "text": "■\n■If patients decide to stop their medication, this must not be done abruptly, as this may \n",
+      "bbox": [
+        61.88990020751953,
+        435.160400390625,
+        436.6599426269531,
+        446.8804016113281
+      ],
+      "text_sha256": "acaeea8e3b5beaa3f33948c32ededdfac9170a06dd1e6f6964ef66e795b7943f"
+    },
+    {
+      "block_id": "page-0397-block-0020",
+      "order": 20,
+      "text": "lead to unpleasant discontinuation effects (see ‘Antidepressant withdrawal symp-\ntoms’ in this chapter) and confers a higher risk of relapse.33 The medication needs to \nbe reduced slowly under specialist supervision.21\n",
+      "bbox": [
+        70.88960266113281,
+        447.160400390625,
+        436.6596374511719,
+        482.8804016113281
+      ],
+      "text_sha256": "e8a323da2f77836e02ba0405b175034b53de62c6694b7d6a192623cb422b8c73"
+    },
+    {
+      "block_id": "page-0397-block-0021",
+      "order": 21,
+      "text": "References\n",
+      "bbox": [
+        61.88999938964844,
+        506.3153991699219,
+        117.92399597167969,
+        519.3504028320312
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0397-block-0022",
+      "order": 22,
+      "text": "\t 1.\t Cleare A, et al. Evidence-based guidelines for treating depressive disorders with antidepressants: a revision of the 2008 British Association for \n",
+      "bbox": [
+        61.88999938964844,
+        524.4364013671875,
+        435.51617431640625,
+        531.4683837890625
+      ],
+      "text_sha256": "14cdee9e8544e1f5b4380d2ec772aefa2822c96c54672f0ffa6fdd5663117b10"
+    },
+    {
+      "block_id": "page-0397-block-0023",
+      "order": 23,
+      "text": "Psychopharmacology guidelines. J Psychopharmacology 2015; 29:459–525.\n\t 2.\t Reimherr FW, et al. Optimal length of continuation therapy in depression: a prospective assessment during long-term fluoxetine treatment. \n",
+      "bbox": [
+        61.895999908447266,
+        533.2924194335938,
+        435.575927734375,
+        549.4683837890625
+      ],
+      "text_sha256": "51c064192e09cb96c0136ca960fdcaafdda8d74b46ec5481bef68da59342de51"
+    },
+    {
+      "block_id": "page-0397-block-0024",
+      "order": 24,
+      "text": "Am J Psychiatry 1998; 155:1247–1253.\n\t 3.\t Prien RF, et al. Continuation drug therapy for major depressive episodes: how long should it be maintained? Am J Psychiatry 1986; \n",
+      "bbox": [
+        61.902000427246094,
+        551.2924194335938,
+        435.6180725097656,
+        567.4683837890625
+      ],
+      "text_sha256": "705f8096f50c748efc505ff0f38f42d76a22991e247db82dd2553b1e5879e27c"
+    },
+    {
+      "block_id": "page-0397-block-0025",
+      "order": 25,
+      "text": "143:18–23.\n\t 4.\t Kim KH, et al. The effects of continuous antidepressant treatment during the first 6months on relapse or recurrence of depression. J Affect \n",
+      "bbox": [
+        61.90800094604492,
+        569.2924194335938,
+        435.5999755859375,
+        585.4683837890625
+      ],
+      "text_sha256": "e9b7757c7a0f5a2ea09db39f57a019258f38f72fb17d60176eca0c084b1e4e86"
+    },
+    {
+      "block_id": "page-0397-block-0026",
+      "order": 26,
+      "text": "Disord 2011; 132:121–129.\n\t 5.\t Eaton WW, et al. Population-based study of first onset and chronicity in major depressive disorder. Arch Gen Psychiatry 2008; \n",
+      "bbox": [
+        61.91400146484375,
+        587.2924194335938,
+        435.54620361328125,
+        603.4683837890625
+      ],
+      "text_sha256": "95b5882e98306562c1cef97402b889ec4756c4054ced96075b5073dce449b2b7"
+    },
+    {
+      "block_id": "page-0397-block-0027",
+      "order": 27,
+      "text": "65:513–520.\n",
+      "bbox": [
+        72.91799926757812,
+        605.2924194335938,
+        105.94198608398438,
+        612.4683837890625
+      ],
+      "text_sha256": "beb0ff52c9ef0bfb1bddf583d56bc7e17ecdfe028c62679da98bfd5506404742"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

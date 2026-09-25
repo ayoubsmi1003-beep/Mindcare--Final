@@ -1,0 +1,13 @@
+{
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 560,
+  "source_page_index": 559,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_file": "raw/page-0560.json",
+  "raw_text_sha256": "0c6f41aaef9fcdc3c3ce759f1603ce4c6102f9db090cf76ff99f318f2ddc70d5",
+  "char_count": 2306,
+  "failure_code": null,
+  "extracted_at": "2026-09-25T02:48:37.055053+00:00"
+}

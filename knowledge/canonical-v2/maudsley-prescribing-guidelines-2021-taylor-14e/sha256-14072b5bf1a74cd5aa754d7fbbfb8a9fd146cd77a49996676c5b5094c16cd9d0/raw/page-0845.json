@@ -1,0 +1,539 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0845",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 845,
+  "source_page_index": 844,
+  "source_page_display": 845,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "824    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\nDrug\nSpecific evidence and considerations\nLurasidone\n■\n■Risk of reduced absorption with reduced/inconsistent calorific intake perioperatively; must \nbe taken with food for absorption (350kcal)\n■\n■One case report of relapse following GRDS; significant reduction in bioavailability and peak \nserum concentration26\n■\n■One case report post-RYGB showed significant reduction in plasma concentration with no \nworsening of psychotic symptoms27\n■\n■Consider switching to alternatives before surgery\nOlanzapine28,29\n■\n■Evidence of weight gain post-bariatric surgery26\n■\n■Conflicting information on site of absorption; follow general recommendations\nQuetiapine7,28\n■\n■May be absorbed via the stomach and duodenum; monitor mental state\n■\n■Switching to immediate-release preparation and dividing doses ≥300mg has been recom-\nmended\nRisperidone30\n■\n■Consider switching stable patients to an equivalent dose of paliperidone long acting injection\n■\n■Risperidone LAI has been used successfully when oral treatment was not tolerated after \nbariatric surgery\nZiprasidone31\n■\n■Must be taken with food for absorption (500kcal); risk of reduced absorption with reduced/\ninconsistent calorific intake perioperatively. Consider switching to alternatives before surgery\nGeneral summary\n■\n■Antipsychotics are not well studied in bariatric surgery; data are limited to case reports or theoretical concerns\n■\n■Depot antipsychotics avoid the risk of reduced absorption after surgery. Given the limited data on pharmaco-\nkinetic changes after surgery and interindividual variability, routinely switching to depot antipsychotics before \nsurgery may not be justified.7 However, depot preparations remain an option for those stabilised on treatment \navailable as a depot or in patients demonstrating signs of reduced bioavailability after surgery\n■\n■Bariatric surgery may contribute additional cardiac stressors to patients with QT-prolongation;32 ECG monitor-\ning before surgery is recommended\nMood stabilisers\nTable 10.12  Mood stabilisers in bariatric surgery\nDrug\nSummary of evidence and considerations\nCarbamazepine33\n■\n■Single case report of agranulocytosis possibly related to increased plasma levels after \nsleeve gastrectomy\nLamotrigine28\n■\n■Possibly absorbed from the stomach and proximal small intestine; monitor for loss of \nefficacy\nLithium34–40\n(see below)\n■\n■Cases of lithium toxicity following RYGB and sleeve gastrectomy have been reported\n■\n■Switch an equivalent dose of lithium citrate solution\n■\n■In the preoperative period, plasma levels may be affected by prescribed dietary changes\n■\n■In the postoperative period, plasma levels may be affected by malabsorption (mainly \nabsorbed via small intestine), fluid shifts and weight-loss (lithium clearance increased in \nobesity)\nTable 10.11  (Continued)\n(Continued)\n",
+  "raw_text_sha256": "c30cc5b48a6b7deff3e1ecc39aa68ccf2b92517f84169c0834cc44ca4fee818b",
+  "coordinates_sha256": "f8f57e7b566da255cd1beda77cf76c70de3275b03ad6044f51b4f8504d469eee",
+  "block_sequence_sha256": "0feacec74f1202cc4af847affd84e4bec9d92f7c151df1cf160b6424ebf2d410",
+  "blocks": [
+    {
+      "block_id": "page-0845-block-0000",
+      "order": 0,
+      "text": "824    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "32f81b77a1b65e828a71e89d12b49f339667732961eab20698a87e88ed6cfeff"
+    },
+    {
+      "block_id": "page-0845-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0845-block-0002",
+      "order": 2,
+      "text": "Drug\nSpecific evidence and considerations\n",
+      "bbox": [
+        65.88960266113281,
+        88.57289123535156,
+        254.6571807861328,
+        97.46038818359375
+      ],
+      "text_sha256": "2a071ca2cafd8ec2c50998784776148f60524242b4f9b89a8c95586a89da6381"
+    },
+    {
+      "block_id": "page-0845-block-0003",
+      "order": 3,
+      "text": "Lurasidone\n■\n■Risk of reduced absorption with reduced/inconsistent calorific intake perioperatively; must \n",
+      "bbox": [
+        65.88960266113281,
+        106.19789123535156,
+        423.3996887207031,
+        115.08538818359375
+      ],
+      "text_sha256": "669bf4f1136f6899d7a91bb70592ea0a22650f2d6a3ade63fd7111c8c9ff336d"
+    },
+    {
+      "block_id": "page-0845-block-0004",
+      "order": 4,
+      "text": "be taken with food for absorption (350kcal)\n",
+      "bbox": [
+        134.8896026611328,
+        116.3753890991211,
+        274.9295959472656,
+        125.0828857421875
+      ],
+      "text_sha256": "e1eb0a3a52d4c7229a3351e6857d7d54573b8f1dbc79e17709fa77ed1f689b40"
+    },
+    {
+      "block_id": "page-0845-block-0005",
+      "order": 5,
+      "text": "■\n■One case report of relapse following GRDS; significant reduction in bioavailability and peak \n",
+      "bbox": [
+        125.8895034790039,
+        126.37789154052734,
+        427.0297546386719,
+        135.08538818359375
+      ],
+      "text_sha256": "a629be726b689ca66c473392d0ad24de074a25ca6b4c4e4a8b748f49b0f2c5c3"
+    },
+    {
+      "block_id": "page-0845-block-0006",
+      "order": 6,
+      "text": "serum concentration26\n",
+      "bbox": [
+        134.8896026611328,
+        136.37538146972656,
+        205.5860137939453,
+        145.0828857421875
+      ],
+      "text_sha256": "7ab7f1c610e98eab946f1419a3a50606d8c6c4677de4f4ef02c6a4245f79114e"
+    },
+    {
+      "block_id": "page-0845-block-0007",
+      "order": 7,
+      "text": "■\n■One case report post-RYGB showed significant reduction in plasma concentration with no \n",
+      "bbox": [
+        125.8895034790039,
+        146.3778839111328,
+        423.7447204589844,
+        155.08538818359375
+      ],
+      "text_sha256": "0c8faaabc5a9f563b9519f42f1a325442ec5bdaa9d1c98f00737001275a3412b"
+    },
+    {
+      "block_id": "page-0845-block-0008",
+      "order": 8,
+      "text": "worsening of psychotic symptoms27\n",
+      "bbox": [
+        134.8896026611328,
+        156.37538146972656,
+        248.0954132080078,
+        165.0828857421875
+      ],
+      "text_sha256": "fd3ce98a8fe21e6f94335db496b7669aa0a699cb2346085326acc178b0c63408"
+    },
+    {
+      "block_id": "page-0845-block-0009",
+      "order": 9,
+      "text": "■\n■Consider switching to alternatives before surgery\n",
+      "bbox": [
+        125.8895034790039,
+        166.3778839111328,
+        291.1520690917969,
+        175.08538818359375
+      ],
+      "text_sha256": "b92ab732888549493cad00aa56b28e5dab7ff51ce85eab083262e7399ba08fc3"
+    },
+    {
+      "block_id": "page-0845-block-0010",
+      "order": 10,
+      "text": "Olanzapine28,29\n■\n■Evidence of weight gain post-bariatric surgery26\n",
+      "bbox": [
+        65.88960266113281,
+        183.82289123535156,
+        286.0075378417969,
+        192.71038818359375
+      ],
+      "text_sha256": "5a41a33290dbea43568cb6eabed691d237f2d87ba9eeae84fce6815d546ec6cd"
+    },
+    {
+      "block_id": "page-0845-block-0011",
+      "order": 11,
+      "text": "■\n■Conflicting information on site of absorption; follow general recommendations\n",
+      "bbox": [
+        125.8895034790039,
+        194.0028839111328,
+        387.30218505859375,
+        202.71038818359375
+      ],
+      "text_sha256": "5b99afc30f433864415d9855b42987ff6ef144a63f842d5cd6e7962867a34f9c"
+    },
+    {
+      "block_id": "page-0845-block-0012",
+      "order": 12,
+      "text": "Quetiapine7,28\n■\n■May be absorbed via the stomach and duodenum; monitor mental state\n",
+      "bbox": [
+        65.88960266113281,
+        211.44789123535156,
+        365.3497009277344,
+        220.33538818359375
+      ],
+      "text_sha256": "4e9b99959671b46b95fe0c245f8a69ae2b0faf74f6da638b46eacce6a78b8ac0"
+    },
+    {
+      "block_id": "page-0845-block-0013",
+      "order": 13,
+      "text": "■\n■Switching to immediate-release preparation and dividing doses ≥300mg has been recom-\n",
+      "bbox": [
+        125.8895034790039,
+        221.6278839111328,
+        420.0247802734375,
+        230.33538818359375
+      ],
+      "text_sha256": "f7f53273b56e27fc97ceb99306c7ff7e89788e5870c631181438db22781c310a"
+    },
+    {
+      "block_id": "page-0845-block-0014",
+      "order": 14,
+      "text": "mended\n",
+      "bbox": [
+        134.8896026611328,
+        231.62538146972656,
+        161.1470947265625,
+        240.3328857421875
+      ],
+      "text_sha256": "5f646ee5950aa2ba155b03c645477ebcea1a871a18a05b34ca9ea54fc4238bb2"
+    },
+    {
+      "block_id": "page-0845-block-0015",
+      "order": 15,
+      "text": "Risperidone30\n■\n■Consider switching stable patients to an equivalent dose of paliperidone long acting injection\n",
+      "bbox": [
+        65.88960266113281,
+        249.0703887939453,
+        429.662353515625,
+        257.96038818359375
+      ],
+      "text_sha256": "64cc4a1fe9216685451fe6e9b1eff5b1c468084d5c26ae0856cba7366ce99172"
+    },
+    {
+      "block_id": "page-0845-block-0016",
+      "order": 16,
+      "text": "■\n■Risperidone LAI has been used successfully when oral treatment was not tolerated after \n",
+      "bbox": [
+        125.8895034790039,
+        259.2528991699219,
+        416.0421142578125,
+        267.96038818359375
+      ],
+      "text_sha256": "7a9be27a81cc4312eba60450806c28434df9c83b94c78273abaae2e4d19e5556"
+    },
+    {
+      "block_id": "page-0845-block-0017",
+      "order": 17,
+      "text": "bariatric surgery\n",
+      "bbox": [
+        134.8896026611328,
+        269.2503967285156,
+        186.12957763671875,
+        277.9578857421875
+      ],
+      "text_sha256": "8abbeb167e9598db4252409237c2fd4613018fd6d2e6d3dccff6922936ef4c22"
+    },
+    {
+      "block_id": "page-0845-block-0018",
+      "order": 18,
+      "text": "Ziprasidone31\n■\n■Must be taken with food for absorption (500kcal); risk of reduced absorption with reduced/\n",
+      "bbox": [
+        65.88960266113281,
+        286.69537353515625,
+        427.1947021484375,
+        295.58538818359375
+      ],
+      "text_sha256": "e42f900922a24ab5aff9864e8eaa30842280bbbab21ccb72fb6e383e07fc5e95"
+    },
+    {
+      "block_id": "page-0845-block-0019",
+      "order": 19,
+      "text": "inconsistent calorific intake perioperatively. Consider switching to alternatives before surgery\n",
+      "bbox": [
+        134.8896026611328,
+        296.8753967285156,
+        429.6246643066406,
+        305.5828857421875
+      ],
+      "text_sha256": "9fc309d9f7c9e786216c39f4698b18c92b9a9b5f6455a4a8e5da4aec9cc4970d"
+    },
+    {
+      "block_id": "page-0845-block-0020",
+      "order": 20,
+      "text": "General summary\n",
+      "bbox": [
+        65.88960266113281,
+        314.32037353515625,
+        127.9896011352539,
+        323.2078857421875
+      ],
+      "text_sha256": "9bf043f345aa3ee6d953b168a1cd59f619c6a5102c47bc779300eee69d90bf8a"
+    },
+    {
+      "block_id": "page-0845-block-0021",
+      "order": 21,
+      "text": "■\n■Antipsychotics are not well studied in bariatric surgery; data are limited to case reports or theoretical concerns\n",
+      "bbox": [
+        65.8895034790039,
+        324.5028991699219,
+        425.3271484375,
+        333.21038818359375
+      ],
+      "text_sha256": "cb946f8662bf065fc79bbf9dbd2290edff8166700ced63e5742e92a75a49f655"
+    },
+    {
+      "block_id": "page-0845-block-0022",
+      "order": 22,
+      "text": "■\n■Depot antipsychotics avoid the risk of reduced absorption after surgery. Given the limited data on pharmaco-\n",
+      "bbox": [
+        65.8895034790039,
+        334.5028991699219,
+        422.43212890625,
+        343.21038818359375
+      ],
+      "text_sha256": "e6913c440a2e5b4e936712886dbbb8fb6efc9d4e9dfb5c6c829c9d7d4fbe0c11"
+    },
+    {
+      "block_id": "page-0845-block-0023",
+      "order": 23,
+      "text": "kinetic changes after surgery and interindividual variability, routinely switching to depot antipsychotics before \nsurgery may not be justified.7 However, depot preparations remain an option for those stabilised on treatment \navailable as a depot or in patients demonstrating signs of reduced bioavailability after surgery\n",
+      "bbox": [
+        74.88960266113281,
+        344.5003967285156,
+        427.9523620605469,
+        373.2078857421875
+      ],
+      "text_sha256": "c7d4597ecfebed348896178353defeb2fb5e8639ee2f49037f22cc920b9e0b29"
+    },
+    {
+      "block_id": "page-0845-block-0024",
+      "order": 24,
+      "text": "■\n■Bariatric surgery may contribute additional cardiac stressors to patients with QT-prolongation;32 ECG monitor-\n",
+      "bbox": [
+        65.8895034790039,
+        374.5028991699219,
+        422.9781188964844,
+        383.21038818359375
+      ],
+      "text_sha256": "32f944e68bdc8f6e455deffc362914b20e4e100683b4e9e2a313f4f6effc068a"
+    },
+    {
+      "block_id": "page-0845-block-0025",
+      "order": 25,
+      "text": "ing before surgery is recommended\n",
+      "bbox": [
+        74.88809204101562,
+        384.5003967285156,
+        187.965576171875,
+        393.2078857421875
+      ],
+      "text_sha256": "95940dbc334e1815867915780eb9a9cb5dba49cc1a8d48a679a0057a9931ebd4"
+    },
+    {
+      "block_id": "page-0845-block-0026",
+      "order": 26,
+      "text": "Mood stabilisers\n",
+      "bbox": [
+        61.88959884643555,
+        418.2353820800781,
+        139.10960388183594,
+        430.08538818359375
+      ],
+      "text_sha256": "61d001a362a627f477cdd6fe3d886ffc769f7772654ccb0cf74d161889f6f764"
+    },
+    {
+      "block_id": "page-0845-block-0027",
+      "order": 27,
+      "text": "Table 10.12  Mood stabilisers in bariatric surgery\n",
+      "bbox": [
+        67.88960266113281,
+        438.5728759765625,
+        223.75454711914062,
+        447.46038818359375
+      ],
+      "text_sha256": "678c950e0f8c1dcaffa35678a0fc8e0784d0ae39509f474c3c3d4b81965f1f20"
+    },
+    {
+      "block_id": "page-0845-block-0028",
+      "order": 28,
+      "text": "Drug\nSummary of evidence and considerations\n",
+      "bbox": [
+        65.88960266113281,
+        457.307861328125,
+        280.9146423339844,
+        466.19537353515625
+      ],
+      "text_sha256": "47d7fed9520ca7f9585813edc3d37aba02b7078419841ac7bcc1457474631550"
+    },
+    {
+      "block_id": "page-0845-block-0029",
+      "order": 29,
+      "text": "Carbamazepine33\n■\n■Single case report of agranulocytosis possibly related to increased plasma levels after \n",
+      "bbox": [
+        65.88960266113281,
+        474.932861328125,
+        416.1646728515625,
+        483.82037353515625
+      ],
+      "text_sha256": "3a86879fd48fa5f2e9dd7d73733c48be62681062599eef0571c723c0c08162ed"
+    },
+    {
+      "block_id": "page-0845-block-0030",
+      "order": 30,
+      "text": "sleeve gastrectomy\n",
+      "bbox": [
+        144.8896026611328,
+        487.1128845214844,
+        205.1595916748047,
+        495.82037353515625
+      ],
+      "text_sha256": "057f5071b33db23ceaaa9aa07d036c6b38c4c9673643b4964ea6ef82ada15259"
+    },
+    {
+      "block_id": "page-0845-block-0031",
+      "order": 31,
+      "text": "Lamotrigine28\n■\n■Possibly absorbed from the stomach and proximal small intestine; monitor for loss of \n",
+      "bbox": [
+        65.89210510253906,
+        504.557861328125,
+        416.7347106933594,
+        513.4453735351562
+      ],
+      "text_sha256": "3e59649b735fa2fb5c726f2e020dc3acceb7568afe15e847b33459bda70c9df0"
+    },
+    {
+      "block_id": "page-0845-block-0032",
+      "order": 32,
+      "text": "efficacy\n",
+      "bbox": [
+        144.8896026611328,
+        516.7378540039062,
+        168.912109375,
+        525.4453735351562
+      ],
+      "text_sha256": "9240db07b59dd9152f69d1ecf77ce57bbfb36581bd4147d018b11a73be9e9d89"
+    },
+    {
+      "block_id": "page-0845-block-0033",
+      "order": 33,
+      "text": "Lithium34–40\n",
+      "bbox": [
+        65.89210510253906,
+        534.182861328125,
+        104.46997833251953,
+        543.0703735351562
+      ],
+      "text_sha256": "735aae3d161ecd6295925b5f5588ec1e5cc7bef560ec8d495468a0d4f6480cf1"
+    },
+    {
+      "block_id": "page-0845-block-0034",
+      "order": 34,
+      "text": "(see below)\n",
+      "bbox": [
+        65.88960266113281,
+        544.182861328125,
+        106.72708892822266,
+        553.0703735351562
+      ],
+      "text_sha256": "f57d6aa3b1dac6161a0634cc5e7ed1c0ee05216436fa536d188948a6974b88bc"
+    },
+    {
+      "block_id": "page-0845-block-0035",
+      "order": 35,
+      "text": "■\n■Cases of lithium toxicity following RYGB and sleeve gastrectomy have been reported\n",
+      "bbox": [
+        135.88949584960938,
+        534.3628540039062,
+        414.1246032714844,
+        543.0703735351562
+      ],
+      "text_sha256": "a071eaac8f773df3bec651dbac5764ce728217753e8abbc024750cb1156d1836"
+    },
+    {
+      "block_id": "page-0845-block-0036",
+      "order": 36,
+      "text": "■\n■Switch an equivalent dose of lithium citrate solution\n",
+      "bbox": [
+        135.88949584960938,
+        544.3628540039062,
+        310.73712158203125,
+        553.0703735351562
+      ],
+      "text_sha256": "72bce5f7c93a8f55296deb1c97e03be2c13919e198f105c33998918c1a00a3a8"
+    },
+    {
+      "block_id": "page-0845-block-0037",
+      "order": 37,
+      "text": "■\n■In the preoperative period, plasma levels may be affected by prescribed dietary changes\n",
+      "bbox": [
+        135.88949584960938,
+        554.3628540039062,
+        423.6645812988281,
+        563.0703735351562
+      ],
+      "text_sha256": "281f4b415d99637a467beb9cf1ddcb8c7f46ab17d64332fe1a27bf7414922495"
+    },
+    {
+      "block_id": "page-0845-block-0038",
+      "order": 38,
+      "text": "■\n■In the postoperative period, plasma levels may be affected by malabsorption (mainly \n",
+      "bbox": [
+        135.88949584960938,
+        564.3628540039062,
+        415.1896057128906,
+        573.0703735351562
+      ],
+      "text_sha256": "9244210414bd491d71930287f9bbcf9502bf38092cce71261c1bd8b5e474d6bb"
+    },
+    {
+      "block_id": "page-0845-block-0039",
+      "order": 39,
+      "text": "absorbed via small intestine), fluid shifts and weight-loss (lithium clearance increased in \n",
+      "bbox": [
+        144.8896026611328,
+        574.3603515625,
+        424.7897033691406,
+        583.06787109375
+      ],
+      "text_sha256": "9bdfb7c208580ffb22dc0a725f8f51b19b5689d445c056bd4d4aa8b60d419863"
+    },
+    {
+      "block_id": "page-0845-block-0040",
+      "order": 40,
+      "text": "obesity)\n",
+      "bbox": [
+        144.8896026611328,
+        586.3603515625,
+        169.47459411621094,
+        595.06787109375
+      ],
+      "text_sha256": "c37d11fd68476a1cef8d82febeec0337b30c3568cb62e9eb82b031f37f4a1740"
+    },
+    {
+      "block_id": "page-0845-block-0041",
+      "order": 41,
+      "text": "Table 10.11  (Continued)\n",
+      "bbox": [
+        67.88999938964844,
+        70.08790588378906,
+        148.34999084472656,
+        78.97540283203125
+      ],
+      "text_sha256": "c7d5b13952ed9b38124fb8b45f09e39c1b28e014b2f26e817de6c4369fab195b"
+    },
+    {
+      "block_id": "page-0845-block-0042",
+      "order": 42,
+      "text": "(Continued)\n",
+      "bbox": [
+        397.875,
+        605.4904174804688,
+        433.88995361328125,
+        614.242919921875
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

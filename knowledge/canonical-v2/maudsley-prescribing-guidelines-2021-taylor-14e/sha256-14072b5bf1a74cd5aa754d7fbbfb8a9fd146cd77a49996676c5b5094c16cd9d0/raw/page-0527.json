@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0527",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 527,
+  "source_page_index": 526,
+  "source_page_display": 527,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "506    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nUp until 2016, varenicline carried a black triangle symbol in the UK, indicating addi-\ntional safety monitoring was required for people with a mental health condition. \nHowever, this was removed by the European Medicines Agency following the publica-\ntion of the Evaluating Adverse Events in a Global Smoking Cessation Study (EAGLES) \nstudy; this found that neither varenicline nor bupropion significantly increased the risk \nof neuropsychiatric adverse events (including anxiety, depression, aggression, psychosis \nand suicidal behaviour) when compared with placebo or nicotine patch in patients with \nor without a history of psychiatric disorders.16\nBupropion\nBupropion is an antidepressant with dopaminergic and adrenergic actions and is addi-\ntionally an antagonist at the nicotinic acetylcholine receptor. It is indicated for smokers \nover the age of 18 who are motivated to stop smoking.\nClinical effectiveness\nIn the most recent Cochrane review, the RR of abstinence for bupropion compared with \nplacebo was 1.64.12 Bupropion was of similar efficacy to single-product NRT (RR 0.99), \nand less effective for quitting compared with varenicline (although one trial suggested \nbroad equality in outcome17), and combination NRT.7 In smokers with serious mental ill-\nness, bupropion improved the odds of stopping by 3–4 times compared with placebo.13,14\nPreparations and dose\nPeople who smoke should set a target ‘quit date’ in the first 2 weeks of starting bupro-\npion treatment. Dosage regimens can be found in the treatment algorithm for those \npeople making an attempt to stop smoking at the end of this chapter.\nAdverse effects\nBupropion is contraindicated in those with seizure disorders, eating disorders and alco-\nhol dependence. Clinicians should be cautious of the potential for manic switch in \npatients with bipolar affective disorder (very low risk but can occur18). Common side \neffects include dizziness, taste changes, GI disturbance and insomnia, which can be \nreduced by avoiding a dose close to bedtime. Unlike NRT and varenicline, bupropion \nis known to interact with psychotropic medicines. It is metabolised by the cytochrome \nCYP2B6. Caution is advised when bupropion is co-administered with medicines known \nto induce (e.g. carbamazepine, phenytoin) or inhibit (e.g. valproate) cytochrome metab-\nolism as clinical efficacy may be affected. Bupropion also inhibits the CYP2B6 pathway \nand therefore co-administration with medicines metabolised by this enzyme (e.g. risp-\neridone and haloperidol) should be avoided.\nElectronic cigarettes and vaping\nE-cigarettes are nicotine delivery devices that do not contain tobacco and do not produce \nsmoke. They are regulated under the European Union Tobacco Products Directive (i.e. \nthere are controls on ingredients, packaging and advertising). E-cigarette manufacturers \n",
+  "raw_text_sha256": "912ad696b7313b2d43c6ce0d015f2218e5dbdb3a138b838a58df75252532a9b6",
+  "coordinates_sha256": "911338ba7a38e30eada6b6f6d28bde3b14c252a6eff570524713f0d22fd85602",
+  "block_sequence_sha256": "b97730853c6198b5d2c8600be2ca77b0e28f9ae5a6296c8afd9989e7e6c072e8",
+  "blocks": [
+    {
+      "block_id": "page-0527-block-0000",
+      "order": 0,
+      "text": "506    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "25a9bd485caf674ab96cba58d06ae380a501a3a7c8bc99db8d6bd7c19bf0feb8"
+    },
+    {
+      "block_id": "page-0527-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0527-block-0002",
+      "order": 2,
+      "text": "Up until 2016, varenicline carried a black triangle symbol in the UK, indicating addi-\ntional safety monitoring was required for people with a mental health condition. \nHowever, this was removed by the European Medicines Agency following the publica-\ntion of the Evaluating Adverse Events in a Global Smoking Cessation Study (EAGLES) \nstudy; this found that neither varenicline nor bupropion significantly increased the risk \nof neuropsychiatric adverse events (including anxiety, depression, aggression, psychosis \nand suicidal behaviour) when compared with placebo or nicotine patch in patients with \nor without a history of psychiatric disorders.16\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.7098693847656,
+        158.27029418945312
+      ],
+      "text_sha256": "ab736a54ca8cd778c1170882e11e2d650c9f5c9ed9a060c26ddbdbb18ebc51ec"
+    },
+    {
+      "block_id": "page-0527-block-0003",
+      "order": 3,
+      "text": "Bupropion\n",
+      "bbox": [
+        61.88999938964844,
+        173.70529174804688,
+        116.07600402832031,
+        186.74029541015625
+      ],
+      "text_sha256": "fca5b0642828c70ab4d9317e8ccea840e444939f931828ea4ca12a0a6b2d02fa"
+    },
+    {
+      "block_id": "page-0527-block-0004",
+      "order": 4,
+      "text": "Bupropion is an antidepressant with dopaminergic and adrenergic actions and is addi-\ntionally an antagonist at the nicotinic acetylcholine receptor. It is indicated for smokers \nover the age of 18 who are motivated to stop smoking.\n",
+      "bbox": [
+        61.88999938964844,
+        192.55029296875,
+        436.7000427246094,
+        228.27029418945312
+      ],
+      "text_sha256": "a58854b98dedbc42aece4cf5c020f722e41faab8d04b8954fc27c5240c7b9400"
+    },
+    {
+      "block_id": "page-0527-block-0005",
+      "order": 5,
+      "text": "Clinical effectiveness\n",
+      "bbox": [
+        61.88999938964844,
+        246.64028930664062,
+        159.50999450683594,
+        258.49029541015625
+      ],
+      "text_sha256": "27e65ab4659ae1e27223e7249a0043dbe89a049f0123cdb57c4ad1cd65d83925"
+    },
+    {
+      "block_id": "page-0527-block-0006",
+      "order": 6,
+      "text": "In the most recent Cochrane review, the RR of abstinence for bupropion compared with \nplacebo was 1.64.12 Bupropion was of similar efficacy to single-product NRT (RR 0.99), \nand less effective for quitting compared with varenicline (although one trial suggested \nbroad equality in outcome17), and combination NRT.7 In smokers with serious mental ill-\nness, bupropion improved the odds of stopping by 3–4 times compared with placebo.13,14\n",
+      "bbox": [
+        61.88849639892578,
+        264.55029296875,
+        436.71014404296875,
+        324.2702941894531
+      ],
+      "text_sha256": "c25cda6f055a5b22b008d5b3d205cfd6f0610f9142177e9188975cd8627101a6"
+    },
+    {
+      "block_id": "page-0527-block-0007",
+      "order": 7,
+      "text": "Preparations and dose\n",
+      "bbox": [
+        61.88999938964844,
+        342.6402893066406,
+        166.9099884033203,
+        354.49029541015625
+      ],
+      "text_sha256": "c4da5d994201bf54a929c952ca0e070b9e72b1b1b1bc1d769d8df641a0b0b5c9"
+    },
+    {
+      "block_id": "page-0527-block-0008",
+      "order": 8,
+      "text": "People who smoke should set a target ‘quit date’ in the first 2 weeks of starting bupro-\npion treatment. Dosage regimens can be found in the treatment algorithm for those \npeople making an attempt to stop smoking at the end of this chapter.\n",
+      "bbox": [
+        61.88999938964844,
+        360.55029296875,
+        436.6298828125,
+        396.2702941894531
+      ],
+      "text_sha256": "3cfcd58049453a31114a627614153e8da60385f129d4272bdef355dfb68854ea"
+    },
+    {
+      "block_id": "page-0527-block-0009",
+      "order": 9,
+      "text": "Adverse effects\n",
+      "bbox": [
+        61.88999938964844,
+        414.6402893066406,
+        134.5,
+        426.49029541015625
+      ],
+      "text_sha256": "2829b5953031aa8e8e992beffdca9c91044830ce03b830653e6ea31d5de93cfc"
+    },
+    {
+      "block_id": "page-0527-block-0010",
+      "order": 10,
+      "text": "Bupropion is contraindicated in those with seizure disorders, eating disorders and alco-\nhol dependence. Clinicians should be cautious of the potential for manic switch in \npatients with bipolar affective disorder (very low risk but can occur18). Common side \neffects include dizziness, taste changes, GI disturbance and insomnia, which can be \nreduced by avoiding a dose close to bedtime. Unlike NRT and varenicline, bupropion \nis known to interact with psychotropic medicines. It is metabolised by the cytochrome \nCYP2B6. Caution is advised when bupropion is co-administered with medicines known \nto induce (e.g. carbamazepine, phenytoin) or inhibit (e.g. valproate) cytochrome metab-\nolism as clinical efficacy may be affected. Bupropion also inhibits the CYP2B6 pathway \nand therefore co-administration with medicines metabolised by this enzyme (e.g. risp-\neridone and haloperidol) should be avoided.\n",
+      "bbox": [
+        61.887176513671875,
+        432.55029296875,
+        436.70709228515625,
+        564.2703247070312
+      ],
+      "text_sha256": "c24c91bc1d367443dd8efd3ff40ca377bc23e54136464a013e020afdf252bc9f"
+    },
+    {
+      "block_id": "page-0527-block-0011",
+      "order": 11,
+      "text": "Electronic cigarettes and vaping\n",
+      "bbox": [
+        61.88999938964844,
+        579.705322265625,
+        226.52696228027344,
+        592.7402954101562
+      ],
+      "text_sha256": "206eea932d176bc9e045a20ef82083d67f4bfb86f6b2db031a9f820f05a0ace9"
+    },
+    {
+      "block_id": "page-0527-block-0012",
+      "order": 12,
+      "text": "E-cigarettes are nicotine delivery devices that do not contain tobacco and do not produce \nsmoke. They are regulated under the European Union Tobacco Products Directive (i.e. \nthere are controls on ingredients, packaging and advertising). E-cigarette manufacturers \n",
+      "bbox": [
+        61.88999938964844,
+        598.55029296875,
+        436.70001220703125,
+        634.2703247070312
+      ],
+      "text_sha256": "458b0e56d711cb63d7d0b21bc747114bfb58f042b795c90131456687c3a4d714"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

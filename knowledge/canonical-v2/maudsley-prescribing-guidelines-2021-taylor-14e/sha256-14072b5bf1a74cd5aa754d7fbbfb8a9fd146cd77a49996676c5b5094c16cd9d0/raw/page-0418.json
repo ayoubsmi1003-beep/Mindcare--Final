@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0418",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 418,
+  "source_page_index": 417,
+  "source_page_display": 418,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    397\nCHAPTER 3\n\t42.\t Mazhar F, et al. Association of hyponatraemia and antidepressant drugs: a pharmacovigilance-pharmacodynamic assessment through an \nanalysis of the US food and drug administration adverse event reporting system (FAERS) database. CNS Drugs 2019; 33:581–592.\n\t43.\t Revol R, et al. [Hyponatremia associated with SSRI/NRSI: descriptive and comparative epidemiological study of the incidence rates of the \nnotified cases from the data of the French National Pharmacovigilance Database and the French National Health Insurance]. Encephale \n2018; 44:291–296.\n\t44.\t Kwadijk-de GS, et al. Variation in the CYP2D6 gene is associated with a lower serum sodium concentration in patients on antidepressants. \nBr J Clin Pharmacol 2009; 68:221–225.\n\t45.\t Stedman CA, et al. Cytochrome P450 2D6 genotype does not predict SSRI (fluoxetine or paroxetine) induced hyponatraemia. Human \nPsychopharmacology 2002; 17:187–190.\n\t46.\t Leth-Moller KB, et al. Antidepressants and the risk of hyponatremia: a Danish register-based population study. BMJ Open 2016; 6:e011200.\n\t47.\t Lien YH. Antidepressants and hyponatremia. Am J Med 2018; 131:7–8.\n\t48.\t Farmand S, et al. Differences in associations of antidepressants and hospitalization due to hyponatremia. Am J Med 2018; 131:56–63.\n\t49.\t Jacob S, et al. Hyponatremia associated with selective serotonin-reuptake inhibitors in older adults. Ann Pharmacother 2006; \n40:1618–1622.\n\t50.\t Roxanas M, et al. Venlafaxine hyponatraemia: incidence, mechanism and management. Aust N Z J Psychiatry 2007; 41:411–418.\n\t51.\t Reddy P, et al. Diagnosis and management of hyponatraemia in hospitalised patients. Int J Clin Pract 2009; 63:1494–1508.\n\t52.\t Siegler EL, et al. Risk factors for the development of hyponatremia in psychiatric inpatients. Arch Intern Med 1995; 155:953–957.\n\t53.\t Mannesse CK, et al. Characteristics, prevalence, risk factors, and underlying mechanism of hyponatremia in elderly patients treated with \nantidepressants: a cross-sectional study. Maturitas 2013; 76:357–363.\n\t54.\t Arinzon ZH, et al. Delayed recurrent SIADH associated with SSRIs. Ann Pharmacother 2002; 36:1175–1177.\n\t55.\t Fabian TJ, et al. Paroxetine-induced hyponatremia in the elderly due to the syndrome of inappropriate secretion of antidiuretic hormone \n(SIADH). J Geriatr Psychiatry Neurol 2003; 16:160–164.\n\t56.\t Sharma H, et al. Antidepressant-induced hyponatraemia in the aged. Avoidance and management strategies. Drugs Aging 1996; 8:430–435.\n\t57.\t Varela Piñón M, et al. Selective serotonin reuptake inhibitor-induced hyponatremia: clinical implications and therapeutic alternatives. Clin \nNeuropharmacol 2017; 40:177–179.\n\t58.\t Shepshelovich D, et al. Medication-induced SIADH: distribution and characterization according to medication class. Br J Clin Pharmacol \n2017; 83:1801–1807.\n\t59.\t Ohsawa H, et al. An epidemiological study on hyponatremia in psychiatric patients in mental hospitals in Nara Prefecture. Jpn J Psychiatry \nNeurol 1992; 46:883–889.\n\t60.\t Leadbetter RA, et al. Differential effects of neuroleptic and clozapine on polydipsia and intermittent hyponatremia. J Clin Psychiatry 1994; \n55 Suppl B:110–113.\n\t61.\t Collins A, et al. SIADH induced by two atypical antipsychotics. Int J Geriatr Psychiatry 2000; 15:282–283.\n",
+  "raw_text_sha256": "126846eae1b3be3250b781ec674c5b7f4733f75fc386020945b38f0e90542464",
+  "coordinates_sha256": "cfcc3d8c4bfce6fc1753f1aec89a21025e02d3c541eec22ea269848d8fbb7833",
+  "block_sequence_sha256": "addb03183c22cb7bb347a01d2e4b3c67d08d6395ef9dfd488973f11dac54acf1",
+  "blocks": [
+    {
+      "block_id": "page-0418-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    397\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "2e4f354a2f846bb7b410d79528b02c68db6de492b3bb331e182342219135f856"
+    },
+    {
+      "block_id": "page-0418-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0418-block-0002",
+      "order": 2,
+      "text": "\t42.\t Mazhar F, et al. Association of hyponatraemia and antidepressant drugs: a pharmacovigilance-pharmacodynamic assessment through an \n",
+      "bbox": [
+        48.0,
+        63.2703857421875,
+        421.6739501953125,
+        70.30238342285156
+      ],
+      "text_sha256": "086acdd10a10cbad87d799ab0dc0f3f8207ae6af365284ac153dcdce69e33492"
+    },
+    {
+      "block_id": "page-0418-block-0003",
+      "order": 3,
+      "text": "analysis of the US food and drug administration adverse event reporting system (FAERS) database. CNS Drugs 2019; 33:581–592.\n\t43.\t Revol R, et al. [Hyponatremia associated with SSRI/NRSI: descriptive and comparative epidemiological study of the incidence rates of the \n",
+      "bbox": [
+        48.00600051879883,
+        72.12638854980469,
+        421.69195556640625,
+        88.30238342285156
+      ],
+      "text_sha256": "5512f7fb609bf035859d72b3ed9b30c05db891312b716614164b5bf710187b8b"
+    },
+    {
+      "block_id": "page-0418-block-0004",
+      "order": 4,
+      "text": "notified cases from the data of the French National Pharmacovigilance Database and the French National Health Insurance]. Encephale \n2018; 44:291–296.\n\t44.\t Kwadijk-de GS, et al. Variation in the CYP2D6 gene is associated with a lower serum sodium concentration in patients on antidepressants. \n",
+      "bbox": [
+        48.012001037597656,
+        90.2703857421875,
+        421.72210693359375,
+        115.30238342285156
+      ],
+      "text_sha256": "5b9956aec50dbf097a1a5d8b6255670e13d88fe47e321de14f8c2b8550f8c6e0"
+    },
+    {
+      "block_id": "page-0418-block-0005",
+      "order": 5,
+      "text": "Br J Clin Pharmacol 2009; 68:221–225.\n\t45.\t Stedman CA, et al. Cytochrome P450 2D6 genotype does not predict SSRI (fluoxetine or paroxetine) induced hyponatraemia. Human \n",
+      "bbox": [
+        48.018001556396484,
+        117.12638854980469,
+        421.6979675292969,
+        133.30238342285156
+      ],
+      "text_sha256": "b7ba87f44d3630a42fa11ea4f61bdb5a4a10c285bdd78d74cc3b56482a43b206"
+    },
+    {
+      "block_id": "page-0418-block-0006",
+      "order": 6,
+      "text": "Psychopharmacology 2002; 17:187–190.\n\t46.\t Leth-Moller KB, et al. Antidepressants and the risk of hyponatremia: a Danish register-based population study. BMJ Open 2016; 6:e011200.\n\t47.\t Lien YH. Antidepressants and hyponatremia. Am J Med 2018; 131:7–8.\n\t48.\t Farmand S, et al. Differences in associations of antidepressants and hospitalization due to hyponatremia. Am J Med 2018; 131:56–63.\n\t49.\t Jacob S, et al. Hyponatremia associated with selective serotonin-reuptake inhibitors in older adults. Ann Pharmacother 2006; \n",
+      "bbox": [
+        48.02399826049805,
+        135.1263885498047,
+        421.679931640625,
+        178.30238342285156
+      ],
+      "text_sha256": "724d8a800dd377413cad195c76290ffa66a20a2c1eca4edcd5dd4a9786f3581b"
+    },
+    {
+      "block_id": "page-0418-block-0007",
+      "order": 7,
+      "text": "40:1618–1622.\n\t50.\t Roxanas M, et al. Venlafaxine hyponatraemia: incidence, mechanism and management. Aust N Z J Psychiatry 2007; 41:411–418.\n\t51.\t Reddy P, et al. Diagnosis and management of hyponatraemia in hospitalised patients. Int J Clin Pract 2009; 63:1494–1508.\n\t52.\t Siegler EL, et al. Risk factors for the development of hyponatremia in psychiatric inpatients. Arch Intern Med 1995; 155:953–957.\n\t53.\t Mannesse CK, et al. Characteristics, prevalence, risk factors, and underlying mechanism of hyponatremia in elderly patients treated with \n",
+      "bbox": [
+        48.04199981689453,
+        180.1263885498047,
+        421.7519226074219,
+        223.30238342285156
+      ],
+      "text_sha256": "800134358079b04d08c1a49329ff3f63adae25726eb34f2db1e356d1644eb1d3"
+    },
+    {
+      "block_id": "page-0418-block-0008",
+      "order": 8,
+      "text": "antidepressants: a cross-sectional study. Maturitas 2013; 76:357–363.\n\t54.\t Arinzon ZH, et al. Delayed recurrent SIADH associated with SSRIs. Ann Pharmacother 2002; 36:1175–1177.\n\t55.\t Fabian TJ, et al. Paroxetine-induced hyponatremia in the elderly due to the syndrome of inappropriate secretion of antidiuretic hormone \n",
+      "bbox": [
+        48.066001892089844,
+        225.1263885498047,
+        421.74591064453125,
+        250.30238342285156
+      ],
+      "text_sha256": "8f649ad2d008edd59c94a09132661f176cf7b5e64274601e9df355d425c04688"
+    },
+    {
+      "block_id": "page-0418-block-0009",
+      "order": 9,
+      "text": "(SIADH). J Geriatr Psychiatry Neurol 2003; 16:160–164.\n\t56.\t Sharma H, et al. Antidepressant-induced hyponatraemia in the aged. Avoidance and management strategies. Drugs Aging 1996; 8:430–435.\n\t57.\t Varela Piñón M, et al. Selective serotonin reuptake inhibitor-induced hyponatremia: clinical implications and therapeutic alternatives. Clin \n",
+      "bbox": [
+        48.077999114990234,
+        252.1263885498047,
+        421.781982421875,
+        277.3023986816406
+      ],
+      "text_sha256": "7a62d5833f607b52439223c9a2e5e1415cb4b3962206f0e7a9242b9fee1c82de"
+    },
+    {
+      "block_id": "page-0418-block-0010",
+      "order": 10,
+      "text": "Neuropharmacol 2017; 40:177–179.\n\t58.\t Shepshelovich D, et al. Medication-induced SIADH: distribution and characterization according to medication class. Br J Clin Pharmacol \n",
+      "bbox": [
+        48.09000015258789,
+        279.1263732910156,
+        421.78204345703125,
+        295.3023986816406
+      ],
+      "text_sha256": "2d85e3e579c957293871f79367f0c86c41f2bedde14ca7a374baed575554a5f3"
+    },
+    {
+      "block_id": "page-0418-block-0011",
+      "order": 11,
+      "text": "2017; 83:1801–1807.\n\t59.\t Ohsawa H, et al. An epidemiological study on hyponatremia in psychiatric patients in mental hospitals in Nara Prefecture. Jpn J Psychiatry \n",
+      "bbox": [
+        48.09600067138672,
+        297.1263732910156,
+        421.72796630859375,
+        313.3023986816406
+      ],
+      "text_sha256": "3321b6d8af959cd16197848d605656fcb47404fed8e02239db2e52e8356e1171"
+    },
+    {
+      "block_id": "page-0418-block-0012",
+      "order": 12,
+      "text": "Neurol 1992; 46:883–889.\n\t60.\t Leadbetter RA, et al. Differential effects of neuroleptic and clozapine on polydipsia and intermittent hyponatremia. J Clin Psychiatry 1994; \n",
+      "bbox": [
+        48.10200119018555,
+        315.1263732910156,
+        421.8000183105469,
+        331.3023986816406
+      ],
+      "text_sha256": "43c10cfc3ae1f4ac369fb5e42c2f7b1d6bf31f1ec615b8c0dc7801f1db25811b"
+    },
+    {
+      "block_id": "page-0418-block-0013",
+      "order": 13,
+      "text": "55 Suppl B:110–113.\n\t61.\t Collins A, et al. SIADH induced by two atypical antipsychotics. Int J Geriatr Psychiatry 2000; 15:282–283.\n",
+      "bbox": [
+        48.108001708984375,
+        333.1263732910156,
+        336.8819580078125,
+        349.3023986816406
+      ],
+      "text_sha256": "8b2c17a5ac70bfe7a955a3b87e800418fd8c33ed8cc2f831d15094b6026dfb74"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

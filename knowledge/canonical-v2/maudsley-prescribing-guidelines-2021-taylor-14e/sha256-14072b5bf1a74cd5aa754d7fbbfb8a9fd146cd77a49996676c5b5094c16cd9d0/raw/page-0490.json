@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0490",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 490,
+  "source_page_index": 489,
+  "source_page_display": 490,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    469\nCHAPTER 4\nshown that the combination was associated with better drinking outcomes than lithium \nalone. However, the combination did not confer any extra benefit than lithium alone in \nimproving mood (see BAP consensus 2012).9 Note that, in those who continue to drink, \nelectrolyte imbalance may precipitate lithium toxicity. Lithium is best avoided com-\npletely in binge drinkers.\nNaltrexone should be offered, in the first instance, to help bipolar patients reduce \ntheir alcohol consumption.9 If naltrexone is not effective, then acamprosate should be \noffered. In the event that both naltrexone and acamprosate fail to promote abstinence, \ndisulfiram should be considered, and the risks made known to the patient.\nAnxiety\nAnxiety is commonly observed in alcohol-dependent individuals during intoxication, \nwithdrawal and in the early days of abstinence. Alcohol is typically used to self-medi-\ncate anxiety disorders, particularly social anxiety. In alcohol-dependent individuals \nwho experience anxiety it is often difficult to determine the extent to which the anxiety \nis a symptom of the alcohol-use disorder or whether it is an independent disorder. \nMedically assisted withdrawal and supported abstinence for up to 8 weeks are required \nbefore a full assessment can be made. If a medically assisted withdrawal is not possible, \nthen treatment of the anxiety disorder should still be attempted, following guidelines \nfor the respective anxiety disorder.\nThe use of benzodiazepines is controversial9 because of the increased risk of benzo-\ndiazepine misuse and dependence. Benzodiazepines should only be considered follow-\ning assessment in a specialist addiction service.\nOne meta-analysis suggests that buspirone is effective in reducing symptoms of anxi-\nety, but not alcohol consumption.9,40 Studies have also shown that paroxetine (up to \n60mg/day) was superior to placebo in reducing social anxiety in co-morbid patients: \nalcohol consumption was not affected.9,40\nEither naltrexone or disulfiram, alone or combined, improved drinking outcomes \ncompared with placebo in patients with post-traumatic stress disorder and alcohol \ndependence. Both acamprosate and baclofen have shown benefit in reducing anxiety in \npost hoc analyses of alcohol dependence trials (see BAP consensus for references9). It is \ntherefore important to ensure that these patients are enabled to become abstinent and \nare prescribed relapse prevention medication. Anxiety should then be treated according \nto the appropriate NICE guidelines.\nSchizophrenia\nPatients with schizophrenia who also have an alcohol-use disorder should be assessed \nand alcohol-specific relapse prevention treatment considered, either naltrexone or \nacamprosate. Antipsychotic medication should be optimised,9 and clozapine may be \nconsidered. However, there is insufficient evidence to recommend the use of any one \nantipsychotic medication over another.\n",
+  "raw_text_sha256": "484ea353027366c3702728fdeab9b8a51c9a57e0ca50c9b18bee5a5768b3bbf9",
+  "coordinates_sha256": "bdda0361c14bca43c0bcb546d95195dbac789198a715d9751f3e54f606d623af",
+  "block_sequence_sha256": "b8626bc835c921ece9ec2cf11c8922e9ae00dd42391bb20bb3d28807b87ad214",
+  "blocks": [
+    {
+      "block_id": "page-0490-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    469\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "e49ada1cca7bc1cec8174883b7871ac2ba53413417ecf5b5a7700c9b3db3ed95"
+    },
+    {
+      "block_id": "page-0490-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0490-block-0002",
+      "order": 2,
+      "text": "shown that the combination was associated with better drinking outcomes than lithium \nalone. However, the combination did not confer any extra benefit than lithium alone in \nimproving mood (see BAP consensus 2012).9 Note that, in those who continue to drink, \nelectrolyte imbalance may precipitate lithium toxicity. Lithium is best avoided com-\npletely in binge drinkers.\n",
+      "bbox": [
+        47.9989013671875,
+        62.55029296875,
+        422.798828125,
+        122.27029418945312
+      ],
+      "text_sha256": "bd039b82ce5255a770546ffab1421d0520ec47282456a07695bfa23e425aa520"
+    },
+    {
+      "block_id": "page-0490-block-0003",
+      "order": 3,
+      "text": "Naltrexone should be offered, in the first instance, to help bipolar patients reduce \ntheir alcohol consumption.9 If naltrexone is not effective, then acamprosate should be \noffered. In the event that both naltrexone and acamprosate fail to promote abstinence, \ndisulfiram should be considered, and the risks made known to the patient.\n",
+      "bbox": [
+        47.9989013671875,
+        122.55029296875,
+        422.81890869140625,
+        170.27029418945312
+      ],
+      "text_sha256": "1f62ee2934655d6683972fb4a4a872df29895c3ce0343ae84f8d9cecbd291b89"
+    },
+    {
+      "block_id": "page-0490-block-0004",
+      "order": 4,
+      "text": "Anxiety\n",
+      "bbox": [
+        48.0,
+        187.70529174804688,
+        88.34799194335938,
+        200.74029541015625
+      ],
+      "text_sha256": "224ee2848f359d295fe16fc8a0cedfdda50e41633d2390fdebdb99c2addd0fe8"
+    },
+    {
+      "block_id": "page-0490-block-0005",
+      "order": 5,
+      "text": "Anxiety is commonly observed in alcohol-dependent individuals during intoxication, \nwithdrawal and in the early days of abstinence. Alcohol is typically used to self-medi-\ncate anxiety disorders, particularly social anxiety. In alcohol-dependent individuals \nwho experience anxiety it is often difficult to determine the extent to which the anxiety \nis a symptom of the alcohol-use disorder or whether it is an independent disorder. \nMedically assisted withdrawal and supported abstinence for up to 8 weeks are required \nbefore a full assessment can be made. If a medically assisted withdrawal is not possible, \nthen treatment of the anxiety disorder should still be attempted, following guidelines \nfor the respective anxiety disorder.\n",
+      "bbox": [
+        48.0,
+        206.55029296875,
+        422.8100280761719,
+        314.2702941894531
+      ],
+      "text_sha256": "c6d4f8a54ac315745f12733de72626259b984c7eae2e7628a2ba318519440304"
+    },
+    {
+      "block_id": "page-0490-block-0006",
+      "order": 6,
+      "text": "The use of benzodiazepines is controversial9 because of the increased risk of benzo-\ndiazepine misuse and dependence. Benzodiazepines should only be considered follow-\ning assessment in a specialist addiction service.\n",
+      "bbox": [
+        47.996490478515625,
+        314.55029296875,
+        420.0165100097656,
+        350.2702941894531
+      ],
+      "text_sha256": "baafaf009ba2d338f07dc0f7ec6af0243b0e2a64314adcfde6d9e31e9a6069b6"
+    },
+    {
+      "block_id": "page-0490-block-0007",
+      "order": 7,
+      "text": "One meta-analysis suggests that buspirone is effective in reducing symptoms of anxi-\nety, but not alcohol consumption.9,40 Studies have also shown that paroxetine (up to \n60mg/day) was superior to placebo in reducing social anxiety in co-morbid patients: \nalcohol consumption was not affected.9,40\n",
+      "bbox": [
+        47.996490478515625,
+        350.55029296875,
+        422.77337646484375,
+        398.2702941894531
+      ],
+      "text_sha256": "f736e823ec8352af28ef9e8a37eb34834fe2148ecaf3293e0884eaaff3f064e7"
+    },
+    {
+      "block_id": "page-0490-block-0008",
+      "order": 8,
+      "text": "Either naltrexone or disulfiram, alone or combined, improved drinking outcomes \ncompared with placebo in patients with post-traumatic stress disorder and alcohol \ndependence. Both acamprosate and baclofen have shown benefit in reducing anxiety in \npost hoc analyses of alcohol dependence trials (see BAP consensus for references9). It is \ntherefore important to ensure that these patients are enabled to become abstinent and \nare prescribed relapse prevention medication. Anxiety should then be treated according \nto the appropriate NICE guidelines.\n",
+      "bbox": [
+        48.0,
+        398.55029296875,
+        422.8032531738281,
+        482.2702941894531
+      ],
+      "text_sha256": "13a0df78af2194c95fe832faa8a66a0a36adadd216c2ca1bf4ab1dd95a25b86c"
+    },
+    {
+      "block_id": "page-0490-block-0009",
+      "order": 9,
+      "text": "Schizophrenia\n",
+      "bbox": [
+        48.00323486328125,
+        503.6402893066406,
+        114.12322998046875,
+        515.4902954101562
+      ],
+      "text_sha256": "c429990104d2a691dcecca2a42e3a2ae92b1ace371bcbbefcfb51e2f1ad64a03"
+    },
+    {
+      "block_id": "page-0490-block-0010",
+      "order": 10,
+      "text": "Patients with schizophrenia who also have an alcohol-use disorder should be assessed \nand alcohol-specific relapse prevention treatment considered, either naltrexone or \nacamprosate. Antipsychotic medication should be optimised,9 and clozapine may be \nconsidered. However, there is insufficient evidence to recommend the use of any one \nantipsychotic medication over another.\n",
+      "bbox": [
+        48.00323486328125,
+        521.55029296875,
+        422.80462646484375,
+        581.2703247070312
+      ],
+      "text_sha256": "fd61ba0fc8756d981b7f067f9268755368fe924b055524fd0181af64144ab01d"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

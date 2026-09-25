@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0784",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 784,
+  "source_page_index": 783,
+  "source_page_display": 784,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of other psychiatric conditions     763\nCHAPTER 9\nRelapse prevention\nThere is evidence from one small trial that fluoxetine may be useful in improving out-\ncome and preventing relapse of patients with anorexia nervosa after weight restora-\ntion.30 Other studies have found no benefit.19,31 SSRIs can, albeit very rarely, elevate \nprolactin.\nCo-morbid disorders\nAntidepressants are often used to treat co-morbid major depression and \nobsessive-compulsive disorder. However, caution should be used as these conditions \nmay resolve with weight gain alone.4 As weight loss is a frequent side effect of bupro-\npion, this antidepressant is contraindicated for the treatment of co-morbid depression \nin AN.32 Mania and psychosis occurring in the context of AN are probably best treated \nwith olanzapine, and bipolar depression with olanzapine + fluoxetine.32\nBulimia nervosa and binge eating disorder\nPsychological interventions should be considered first line for bulimia.33 Adults with \nbulimia nervosa and binge eating disorder (BED) may be offered a trial of an \nantidepressant. SSRIs (specifically fluoxetine34–36) are the ADs of first choice. The effec-\ntive dose of fluoxetine is 60mg daily.37 Patients should be informed that this can reduce \nthe frequency of binge eating and purging but long-term effects are unknown.4 Early \nresponse (at 3 weeks) is a strong predictor of response overall.38\nAntidepressants may be used for the treatment of bulimia nervosa in adolescents, but \nthey are not licensed for this age group, and there is little evidence for this practice. \nThey should not be considered as a first line treatment in adolescent bulimia nervosa.4\nThere is some reasonable evidence that topiramate reduces frequency of binge-eat-\ning39 (although it is often poorly tolerated) and rather limited evidence for the useful-\nness of bupropion,40 duloxetine,41 lamotrigine,42,43 zonisamide,44,45 acamprosate46 and \nsodium oxybate.47 Systematic reviews48,49 confirm the modest efficacy of SSRIs and \nalso suggest benefit for lisdexamfetamine (based on a high quality RCT50). \nLisdexamfetamine is approved for BED in USA.51 Some limited evidence supports the \nuse of a slow release combination of phentermine and topiramate.52,53 The noradrena-\nline/dopamine reuptake inhibitor dasotraline may also be effective54 but its development \nceased in 2020.\nCo-morbid depression\nDepression is a frequent co-morbidity in BN and BED. Citalopram has been shown to \nbe more effective than fluoxetine for depressive symptoms in BN patients; as weight \ngain is a frequent side effect of mirtazapine, this antidepressant should be avoided or \nused with caution for the treatment of co-morbid depression in BED.32\n",
+  "raw_text_sha256": "37d80c62e708700bd15d31821b497ca5506b62f4be2287463f43d8e90b1f60fd",
+  "coordinates_sha256": "e68f0d7f708195747511b1ba73be7fc51d8c0f44bc30fb1427cbfdc01076d00a",
+  "block_sequence_sha256": "a6d73de0ebf3ed0b832c110269d2705b3d590073f63685c9ed880d4c2cd6b0fb",
+  "blocks": [
+    {
+      "block_id": "page-0784-block-0000",
+      "order": 0,
+      "text": "Drug treatment of other psychiatric conditions     763\n",
+      "bbox": [
+        196.0341033935547,
+        31.395221710205078,
+        420.0020751953125,
+        41.0272216796875
+      ],
+      "text_sha256": "acc9cc692bb482da04005a2b0d883c1554ecf573ce8b1a15186b81d403846437"
+    },
+    {
+      "block_id": "page-0784-block-0001",
+      "order": 1,
+      "text": "CHAPTER 9\n",
+      "bbox": [
+        454.4096984863281,
+        598.7144775390625,
+        463.88970947265625,
+        640.0584716796875
+      ],
+      "text_sha256": "a82498383e032e8013503b8de1dd71e97ad0ce75549c664143d6c75c10c3a855"
+    },
+    {
+      "block_id": "page-0784-block-0002",
+      "order": 2,
+      "text": "Relapse prevention\n",
+      "bbox": [
+        48.0,
+        62.500465393066406,
+        138.57998657226562,
+        74.3504638671875
+      ],
+      "text_sha256": "010448649d8f86c7c128065e887e3ad28f750d848e63deec905513372223b331"
+    },
+    {
+      "block_id": "page-0784-block-0003",
+      "order": 3,
+      "text": "There is evidence from one small trial that fluoxetine may be useful in improving out-\ncome and preventing relapse of patients with anorexia nervosa after weight restora-\ntion.30 Other studies have found no benefit.19,31 SSRIs can, albeit very rarely, elevate \nprolactin.\n",
+      "bbox": [
+        48.0,
+        80.41046142578125,
+        422.7850341796875,
+        128.13046264648438
+      ],
+      "text_sha256": "4a3d1f5f850b23403f94791e14ac8e3f5049bdca35ec4e3811717c8e63eb64bb"
+    },
+    {
+      "block_id": "page-0784-block-0004",
+      "order": 4,
+      "text": "Co-morbid disorders\n",
+      "bbox": [
+        48.004913330078125,
+        146.50045776367188,
+        144.1149139404297,
+        158.3504638671875
+      ],
+      "text_sha256": "3e950bcfee39d3c11392f629e4cf648ae622c03d8d3e99999dc06cdab21d8858"
+    },
+    {
+      "block_id": "page-0784-block-0005",
+      "order": 5,
+      "text": "Antidepressants are often used to treat co-morbid major depression and \nobsessive-compulsive disorder. However, caution should be used as these conditions \nmay resolve with weight gain alone.4 As weight loss is a frequent side effect of bupro-\npion, this antidepressant is contraindicated for the treatment of co-morbid depression \nin AN.32 Mania and psychosis occurring in the context of AN are probably best treated \nwith olanzapine, and bipolar depression with olanzapine + fluoxetine.32\n",
+      "bbox": [
+        48.001502990722656,
+        164.41046142578125,
+        422.80499267578125,
+        236.1304931640625
+      ],
+      "text_sha256": "299ab124eb9ec723a0f51f245183bd42bac24a6d043d5fd4edec47afc00be139"
+    },
+    {
+      "block_id": "page-0784-block-0006",
+      "order": 6,
+      "text": "Bulimia nervosa and binge eating disorder\n",
+      "bbox": [
+        48.0,
+        254.50048828125,
+        247.48997497558594,
+        266.3504943847656
+      ],
+      "text_sha256": "ddff7eb98d04fa7a531c70f88db334c2997cde2eeb78c1c1af891947a6da3c78"
+    },
+    {
+      "block_id": "page-0784-block-0007",
+      "order": 7,
+      "text": "Psychological interventions should be considered first line for bulimia.33 Adults with \nbulimia nervosa and binge eating disorder (BED) may be offered a trial of an \nantidepressant. SSRIs (specifically fluoxetine34–36) are the ADs of first choice. The effec-\ntive dose of fluoxetine is 60mg daily.37 Patients should be informed that this can reduce \nthe frequency of binge eating and purging but long-term effects are unknown.4 Early \nresponse (at 3 weeks) is a strong predictor of response overall.38\n",
+      "bbox": [
+        47.99620056152344,
+        272.4104919433594,
+        422.782470703125,
+        344.1304931640625
+      ],
+      "text_sha256": "a82e3436ab90da56476c3f474f6cedd766e54da158197f98af0ad388466d9934"
+    },
+    {
+      "block_id": "page-0784-block-0008",
+      "order": 8,
+      "text": "Antidepressants may be used for the treatment of bulimia nervosa in adolescents, but \nthey are not licensed for this age group, and there is little evidence for this practice. \nThey should not be considered as a first line treatment in adolescent bulimia nervosa.4\n",
+      "bbox": [
+        48.0,
+        344.4104919433594,
+        422.8199768066406,
+        380.1304931640625
+      ],
+      "text_sha256": "a81bcc8adf20b5e6281e8ad7de2c54e6487b1b8412bfeaf24b47cc33fbba0b20"
+    },
+    {
+      "block_id": "page-0784-block-0009",
+      "order": 9,
+      "text": "There is some reasonable evidence that topiramate reduces frequency of binge-eat-\ning39 (although it is often poorly tolerated) and rather limited evidence for the useful-\nness of bupropion,40 duloxetine,41 lamotrigine,42,43 zonisamide,44,45 acamprosate46 and \nsodium oxybate.47 Systematic reviews48,49 confirm the modest efficacy of SSRIs and \nalso suggest benefit for lisdexamfetamine (based on a high quality RCT50). \nLisdexamfetamine is approved for BED in USA.51 Some limited evidence supports the \nuse of a slow release combination of phentermine and topiramate.52,53 The noradrena-\nline/dopamine reuptake inhibitor dasotraline may also be effective54 but its development \nceased in 2020.\n",
+      "bbox": [
+        47.99531555175781,
+        380.4104919433594,
+        422.7952575683594,
+        488.1304931640625
+      ],
+      "text_sha256": "4bcbf8d0853a5902552a771fdfa39717685c0ce6a4f32ac07a75561f7491b8cf"
+    },
+    {
+      "block_id": "page-0784-block-0010",
+      "order": 10,
+      "text": "Co-morbid depression\n",
+      "bbox": [
+        47.9989013671875,
+        506.5004577636719,
+        151.88890075683594,
+        518.3504638671875
+      ],
+      "text_sha256": "f689f7543e37e6c1f1f35e11b0ba20bc0e5bb035c1d69305ab410eea3a880f95"
+    },
+    {
+      "block_id": "page-0784-block-0011",
+      "order": 11,
+      "text": "Depression is a frequent co-morbidity in BN and BED. Citalopram has been shown to \nbe more effective than fluoxetine for depressive symptoms in BN patients; as weight \ngain is a frequent side effect of mirtazapine, this antidepressant should be avoided or \nused with caution for the treatment of co-morbid depression in BED.32\n",
+      "bbox": [
+        47.9989013671875,
+        524.4104614257812,
+        422.82879638671875,
+        572.1304931640625
+      ],
+      "text_sha256": "92ba76fa654330a912d27d981f4b2099b5a4c96531db7f758ea21b8b9d1ccecf"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

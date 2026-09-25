@@ -1,0 +1,275 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0166",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 166,
+  "source_page_index": 165,
+  "source_page_display": 166,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    145\nCHAPTER 1\nConsider measuring QTc within a week of achieving a therapeutic dose of a newly \nprescribed antipsychotic that is associated with a moderate or high risk of QTc prolon-\ngation or of newly prescribed combined antipsychotics (Table 1.24).\nMetabolic inhibition\nThe effect of drugs on the QTc interval is usually plasma level-dependent. Drug interac-\ntions are therefore important, especially when metabolic inhibition results in increased \nplasma levels of the drug affecting QTc. Commonly used metabolic inhibitors include \nfluvoxamine, fluoxetine, paroxetine and valproate.\nTable 1.23  Non-psychotropics associated with QT prolongation \n(see Crediblemeds.org for latest information)\nAntibiotics\nErythromycin\nClarithromycin\nAmpicillin\nCo-trimoxazole\nPentamidine\n(some four quinolones affect QTc –  \nsee manufacturers’ literature)\nAntiarrhythmics\nQuinidine\nDisopyramide\nProcainamide\nSotalol\nAmiodarone\nBretylium\nAntimalarials\nChloroquine\nMefloquine\nQuinine\nOthers\nAmantadine\nCyclosporin\nDiphenhydramine\nHydroxyzine\nMethadone\nNicardipine\nTamoxifen\nNote: β2 agonists and sympathomimetics may provoke torsade de \npointes in patients with prolonged QTc.\nTable 1.24  Management of QT prolongation in patients receiving antipsychotic drugs\nQTc\nAction\nRefer to cardiologist\n<440ms (men) or <470ms (women)\nNone unless abnormal T-wave morphology\nConsider if in doubt\n>440ms (men) or > 470ms \n(women) but < 500ms\nConsider reducing dose or switching to drug \nof lower effect; repeat ECG\nConsider\n>500ms\nRepeat ECG. Stop suspected causative drug(s) \nand switch to drug of lower effect\nImmediately\nAbnormal T-wave morphology\nReview treatment. Consider reducing dose or \nswitching to drug of lower effect\nImmediately\n",
+  "raw_text_sha256": "86a16c26e344e5b3696f473f958a8d3227de94ca3f18e8cdca62f82ffdc4070f",
+  "coordinates_sha256": "edb64ca1e9f7597d491fdca38a2a8d36ab2205be4401d9c5af7e0a228a61e121",
+  "block_sequence_sha256": "3778e96539f887b53b97ffdaefd56a6c64fca2a06d019e3bf06618936df7f8db",
+  "blocks": [
+    {
+      "block_id": "page-0166-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    145\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "af320221d95ede648f9daf00df3c78e322f1d3e8be7f6e1eef4511126b7cdc53"
+    },
+    {
+      "block_id": "page-0166-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0166-block-0002",
+      "order": 2,
+      "text": "Consider measuring QTc within a week of achieving a therapeutic dose of a newly \nprescribed antipsychotic that is associated with a moderate or high risk of QTc prolon-\ngation or of newly prescribed combined antipsychotics (Table 1.24).\n",
+      "bbox": [
+        47.998802185058594,
+        322.0876159667969,
+        422.7986755371094,
+        357.8076171875
+      ],
+      "text_sha256": "c4bb7b13b62fc57d42a853e924543934b87bd699f48d62dc035cc922e4ad954e"
+    },
+    {
+      "block_id": "page-0166-block-0003",
+      "order": 3,
+      "text": "Metabolic inhibition\n",
+      "bbox": [
+        47.998802185058594,
+        375.24261474609375,
+        152.509765625,
+        388.2776184082031
+      ],
+      "text_sha256": "95aa8a19f3d7c4be2bcb59ee5443bdca4302b680f47cfbbcc5092482c037cb12"
+    },
+    {
+      "block_id": "page-0166-block-0004",
+      "order": 4,
+      "text": "The effect of drugs on the QTc interval is usually plasma level-dependent. Drug interac-\ntions are therefore important, especially when metabolic inhibition results in increased \nplasma levels of the drug affecting QTc. Commonly used metabolic inhibitors include \nfluvoxamine, fluoxetine, paroxetine and valproate.\n",
+      "bbox": [
+        47.998802185058594,
+        394.0876159667969,
+        422.7788391113281,
+        441.8076171875
+      ],
+      "text_sha256": "6b51b7dc63a85d81c0fa35edd5043c3f67413b9ea72f2d4c32cca594b45d1363"
+    },
+    {
+      "block_id": "page-0166-block-0005",
+      "order": 5,
+      "text": "Table 1.23  Non-psychotropics associated with QT prolongation \n(see Crediblemeds.org for latest information)\n",
+      "bbox": [
+        134.0963897705078,
+        72.33692932128906,
+        339.7165222167969,
+        91.221923828125
+      ],
+      "text_sha256": "9582e2a6bccab696a4ee4af74a2a1cd8ae833de0bc07bd33a2f6f5026964c11c"
+    },
+    {
+      "block_id": "page-0166-block-0006",
+      "order": 6,
+      "text": "Antibiotics\nErythromycin\nClarithromycin\nAmpicillin\nCo-trimoxazole\nPentamidine\n(some four quinolones affect QTc –  \nsee manufacturers’ literature)\n",
+      "bbox": [
+        128.09649658203125,
+        101.46192932128906,
+        243.81396484375,
+        180.3319091796875
+      ],
+      "text_sha256": "a4ed18bab4719ec246d006f3b0dbea515feb8b93082c802001927fbc21706fff"
+    },
+    {
+      "block_id": "page-0166-block-0007",
+      "order": 7,
+      "text": "Antiarrhythmics\nQuinidine\nDisopyramide\nProcainamide\nSotalol\nAmiodarone\nBretylium\n",
+      "bbox": [
+        254.4040069580078,
+        101.44691467285156,
+        311.0740051269531,
+        170.31939697265625
+      ],
+      "text_sha256": "27e013d3f4cf728dae1054254e6e386d043c5673efd08f252c9ee205d1292ef9"
+    },
+    {
+      "block_id": "page-0166-block-0008",
+      "order": 8,
+      "text": "Antimalarials\nChloroquine\nMefloquine\nQuinine\n",
+      "bbox": [
+        128.0965118408203,
+        186.4594268798828,
+        174.77651977539062,
+        225.33941650390625
+      ],
+      "text_sha256": "77ede950902fe8ade553adbd4ed27103be5c5d4e6c162e8889feaceaf456d22e"
+    },
+    {
+      "block_id": "page-0166-block-0009",
+      "order": 9,
+      "text": "Others\nAmantadine\nCyclosporin\nDiphenhydramine\nHydroxyzine\nMethadone\nNicardipine\nTamoxifen\n",
+      "bbox": [
+        254.4040069580078,
+        186.45191955566406,
+        311.08160400390625,
+        265.3218994140625
+      ],
+      "text_sha256": "078109dd240b7d8f60663f206b51937c08cb535a3a7f2086f4c481dcbff5bde2"
+    },
+    {
+      "block_id": "page-0166-block-0010",
+      "order": 10,
+      "text": "Note: β2 agonists and sympathomimetics may provoke torsade de \npointes in patients with prolonged QTc.\n",
+      "bbox": [
+        128.0965118408203,
+        285.0318908691406,
+        340.9098205566406,
+        304.3719177246094
+      ],
+      "text_sha256": "90646ae94ab228ccde7d81541f570ec6434f0c0020858eae0617d2d20604d72f"
+    },
+    {
+      "block_id": "page-0166-block-0011",
+      "order": 11,
+      "text": "Table 1.24  Management of QT prolongation in patients receiving antipsychotic drugs\n",
+      "bbox": [
+        53.99970245361328,
+        466.7680969238281,
+        328.3722229003906,
+        475.6556091308594
+      ],
+      "text_sha256": "807a92e92254043104988b12dc05cf75cc03b998bb51aac0a52edf34ce64f1e6"
+    },
+    {
+      "block_id": "page-0166-block-0012",
+      "order": 12,
+      "text": "QTc\nAction\nRefer to cardiologist\n",
+      "bbox": [
+        47.99970245361328,
+        487.00311279296875,
+        393.6521301269531,
+        495.890625
+      ],
+      "text_sha256": "016a7f563fb96b402d727edd3919f4a6d4ec8b6d69cf0911b55f7745d7927c99"
+    },
+    {
+      "block_id": "page-0166-block-0013",
+      "order": 13,
+      "text": "<440ms (men) or <470ms (women)\nNone unless abnormal T-wave morphology\nConsider if in doubt\n",
+      "bbox": [
+        47.99967956542969,
+        503.9606018066406,
+        385.88232421875,
+        512.6680908203125
+      ],
+      "text_sha256": "63ef07a6d764a5feddfac6935f81b9ea9ba338793db5507af9c5c3df05688fae"
+    },
+    {
+      "block_id": "page-0166-block-0014",
+      "order": 14,
+      "text": ">440ms (men) or > 470ms \n(women) but < 500ms\n",
+      "bbox": [
+        47.99967956542969,
+        518.9830932617188,
+        135.77967834472656,
+        537.6881103515625
+      ],
+      "text_sha256": "3e7b7afb2729419bb183897f76b58c4530ee49a39441bffa2df3d0cdde76acee"
+    },
+    {
+      "block_id": "page-0166-block-0015",
+      "order": 15,
+      "text": "Consider reducing dose or switching to drug \nof lower effect; repeat ECG\n",
+      "bbox": [
+        168.50218200683594,
+        518.9830932617188,
+        312.9972839355469,
+        537.6881103515625
+      ],
+      "text_sha256": "4d3c2655bbc2aa67b447599cada4445c831522b04afe17066066aca508904d57"
+    },
+    {
+      "block_id": "page-0166-block-0016",
+      "order": 16,
+      "text": "Consider\n",
+      "bbox": [
+        322.10968017578125,
+        518.9830932617188,
+        350.4522705078125,
+        527.6906127929688
+      ],
+      "text_sha256": "1394e16a4b64a2d2018b091c17c9a24a75ce40b2fadc2524ad352c1920d23d19"
+    },
+    {
+      "block_id": "page-0166-block-0017",
+      "order": 17,
+      "text": ">500ms\nRepeat ECG. Stop suspected causative drug(s) \nand switch to drug of lower effect\n",
+      "bbox": [
+        47.99967956542969,
+        544.0106201171875,
+        316.8672180175781,
+        562.715576171875
+      ],
+      "text_sha256": "b6119968e0bccf9b9609b810a0377405eea860d58f816d464dfb8dcca9c32d34"
+    },
+    {
+      "block_id": "page-0166-block-0018",
+      "order": 18,
+      "text": "Immediately\n",
+      "bbox": [
+        322.10968017578125,
+        544.0106201171875,
+        360.8471984863281,
+        552.7181396484375
+      ],
+      "text_sha256": "6d8664fa1e44588817ad6ddefe4506d845b8e7c54230cf146e7b2228977c6e82"
+    },
+    {
+      "block_id": "page-0166-block-0019",
+      "order": 19,
+      "text": "Abnormal T-wave morphology\nReview treatment. Consider reducing dose or \nswitching to drug of lower effect\n",
+      "bbox": [
+        47.99967956542969,
+        569.0380859375,
+        314.9247741699219,
+        587.7431030273438
+      ],
+      "text_sha256": "fac0870d71e139edb3ff9343bb501ac384acff8c8c40d435de496e914c97c7a0"
+    },
+    {
+      "block_id": "page-0166-block-0020",
+      "order": 20,
+      "text": "Immediately\n",
+      "bbox": [
+        322.10968017578125,
+        569.0380859375,
+        360.8471984863281,
+        577.74560546875
+      ],
+      "text_sha256": "6d8664fa1e44588817ad6ddefe4506d845b8e7c54230cf146e7b2228977c6e82"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

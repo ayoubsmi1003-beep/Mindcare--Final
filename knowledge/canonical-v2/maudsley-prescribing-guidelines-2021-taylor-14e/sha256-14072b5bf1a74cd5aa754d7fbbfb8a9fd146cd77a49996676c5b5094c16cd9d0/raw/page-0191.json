@@ -1,0 +1,311 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0191",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 191,
+  "source_page_index": 190,
+  "source_page_display": 191,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "170    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nFigure 1.3  Management of antipsychotic-induced hyperprolactinaemia33.\nFor all patients, measure plasma prolactin level at baseline\nAdd adjunctive aripiprazole*\nAt 3 months:\n- Ask about prolactin-related symptoms\n- If hyperprolactinaemia suspected or patient is prescribed a\n prolactin-elevating antipsychotic. Obtain plasma prolactin level\nProlactin concentration interpretation\nNormal \nWomen \n0–25ng/ml \n(~0–530mIU/L)  \n \nMen \n0–20ng/ml \n(~0–424mIU/L) \nElevated \n \n25–118ng/ml \n(530–2500mIU/L) Systematically assess prolactin-\n \n \n \n \nrelated side effects\n \n \n \n \nDiscuss clinical consequences of\n \n \n \n \nprolonged raised prolactin levels\nHighly elevated  \n>118ng/ml \n>2500mIU/L \nRefer for tests to rule out prolactinoma\nElevated\nSymptomatic\nSuccessful\nNot appropriate/not successful\nSwitch not appropriate\nNot tolerated\nElevated\nAsymptomatic\n*May not normalize prolactin levels in amisulpride-induced hyperprolactinaemia34.\nDiscuss clinical implications of the test\nresults with the patient and take a joint\ndecision on whether to continue current\ntreatment with annual monitoring or\nswitch to another antipsychotic\nSwitch to an antipsychotic with\na lower liability for plasma\nprolactin elevation\nConsider slowly reducing dose of\nprolactin-raising drug and aim for\naripiprazole as sole treatment\nOnly if this strategy fails or is\nconsidered clinically inappropriate\nlong-term combined antipsychotics\nshould be considered\nConsider treatment with\ndopamine agonists or metformin\nor Peony-Glycyrrhiza Decoction\n",
+  "raw_text_sha256": "ab55e240d9faa29ecc9fa8d82c75036fcb497185faaea64bdd6ea12c421472e9",
+  "coordinates_sha256": "78e92a42769171aab6558686dd41b98b2f7d18d263455761e4a3bdeaa3d66c90",
+  "block_sequence_sha256": "ee44efb0beca8a225485ccaf131cdb26c9914210506601a7bb8d6adbb5099da5",
+  "blocks": [
+    {
+      "block_id": "page-0191-block-0000",
+      "order": 0,
+      "text": "170    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "26e60679736f7b0e2d6b044578ebb1f2ca8422e364860ee1486e4feb2edb4ea3"
+    },
+    {
+      "block_id": "page-0191-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0191-block-0002",
+      "order": 2,
+      "text": "Figure 1.3  Management of antipsychotic-induced hyperprolactinaemia33.\n",
+      "bbox": [
+        62.72669982910156,
+        601.8233032226562,
+        298.1741638183594,
+        610.7108154296875
+      ],
+      "text_sha256": "175410cda48575c7a94dfc4958c4768fc42c9bf3a441fd3b94073645250f4916"
+    },
+    {
+      "block_id": "page-0191-block-0003",
+      "order": 3,
+      "text": "For all patients, measure plasma prolactin level at baseline\n",
+      "bbox": [
+        150.89100646972656,
+        79.12673950195312,
+        347.6236877441406,
+        88.34423828125
+      ],
+      "text_sha256": "752c48f8e5548923f4cf8b038b9ec3d6ad6a27a2a7ea5f67b1d437385ee291c5"
+    },
+    {
+      "block_id": "page-0191-block-0004",
+      "order": 4,
+      "text": "Add adjunctive aripiprazole*\n",
+      "bbox": [
+        200.53799438476562,
+        446.14642333984375,
+        295.9756164550781,
+        455.3639221191406
+      ],
+      "text_sha256": "d5d6cebf731eed66beb0bf450c666a9dc278c0fe2d9f7dbb884af85c021d66f1"
+    },
+    {
+      "block_id": "page-0191-block-0005",
+      "order": 5,
+      "text": "At 3 months:\n",
+      "bbox": [
+        141.06629943847656,
+        130.79861450195312,
+        183.17132568359375,
+        140.01611328125
+      ],
+      "text_sha256": "386a3cc32a7b40be0209b82ea4bed3c5ed8ff1c8e9cfe76b0b84e46a2bb90e7d"
+    },
+    {
+      "block_id": "page-0191-block-0006",
+      "order": 6,
+      "text": "- Ask about prolactin-related symptoms\n",
+      "bbox": [
+        141.06629943847656,
+        143.79611206054688,
+        275.0762939453125,
+        153.01361083984375
+      ],
+      "text_sha256": "a13c4c7f8603b627f6cfe5b7f1075d2488dc8efda8c850e4933f853366b0f96c"
+    },
+    {
+      "block_id": "page-0191-block-0007",
+      "order": 7,
+      "text": "- If hyperprolactinaemia suspected or patient is prescribed a\n prolactin-elevating antipsychotic. Obtain plasma prolactin level\n",
+      "bbox": [
+        141.06629943847656,
+        156.79360961914062,
+        358.4538879394531,
+        175.0111083984375
+      ],
+      "text_sha256": "d3471dc6ac5a76f892e9eb539680224a3e38384999c1cd62bca0acb30cfdec11"
+    },
+    {
+      "block_id": "page-0191-block-0008",
+      "order": 8,
+      "text": "Prolactin concentration interpretation\n",
+      "bbox": [
+        77.81719970703125,
+        214.9404296875,
+        201.20718383789062,
+        224.15792846679688
+      ],
+      "text_sha256": "3a39cfda8d76469c73f8fb32fc8382ae911726564a08899e3afa28969cfe56bd"
+    },
+    {
+      "block_id": "page-0191-block-0009",
+      "order": 9,
+      "text": "Normal \nWomen \n0–25ng/ml \n(~0–530mIU/L)  \n",
+      "bbox": [
+        77.81719970703125,
+        227.93792724609375,
+        282.9872741699219,
+        237.15542602539062
+      ],
+      "text_sha256": "4c570ea95b0b1c4bf02e23b1f1a3eeab9d9d9152cdadb3095c4f5475bd4cf568"
+    },
+    {
+      "block_id": "page-0191-block-0010",
+      "order": 10,
+      "text": " \nMen \n0–20ng/ml \n(~0–424mIU/L) \n",
+      "bbox": [
+        77.82469940185547,
+        240.9354248046875,
+        280.9022521972656,
+        250.15292358398438
+      ],
+      "text_sha256": "056068b3d575b112f5811c3a0215300f04ede802946f503a47172c2227163d46"
+    },
+    {
+      "block_id": "page-0191-block-0011",
+      "order": 11,
+      "text": "Elevated \n \n25–118ng/ml \n(530–2500mIU/L) Systematically assess prolactin-\n \n \n \n \nrelated side effects\n \n \n \n \nDiscuss clinical consequences of\n \n \n \n \nprolonged raised prolactin levels\n",
+      "bbox": [
+        77.8096923828125,
+        253.93292236328125,
+        405.7998962402344,
+        292.1529235839844
+      ],
+      "text_sha256": "27a1e1fb6d194d6b19472123ba933d47c07b7a38d98e0564498129e308c6e495"
+    },
+    {
+      "block_id": "page-0191-block-0012",
+      "order": 12,
+      "text": "Highly elevated  \n>118ng/ml \n>2500mIU/L \nRefer for tests to rule out prolactinoma\n",
+      "bbox": [
+        77.80218505859375,
+        295.93292236328125,
+        417.2297058105469,
+        305.1504211425781
+      ],
+      "text_sha256": "c4924acaf91d01ee86838bd6593ab8ebf8ba8f4621343d0cfc9111e288429bc6"
+    },
+    {
+      "block_id": "page-0191-block-0013",
+      "order": 13,
+      "text": "Elevated\nSymptomatic\n",
+      "bbox": [
+        95.5950927734375,
+        321.3334045410156,
+        177.56260681152344,
+        330.5509033203125
+      ],
+      "text_sha256": "e26b21653a1a96882161fb873b5730a8f338a319c148763781de918b0ceecf7e"
+    },
+    {
+      "block_id": "page-0191-block-0014",
+      "order": 14,
+      "text": "Successful\n",
+      "bbox": [
+        122.61009216308594,
+        466.0384216308594,
+        159.29258728027344,
+        475.25592041015625
+      ],
+      "text_sha256": "71327e222b64c1b9e1e63b9f58420203ce2967956875e01c37ca6c33e458ba5b"
+    },
+    {
+      "block_id": "page-0191-block-0015",
+      "order": 15,
+      "text": "Not appropriate/not successful\nSwitch not appropriate\n",
+      "bbox": [
+        84.45008850097656,
+        420.13092041015625,
+        363.3976135253906,
+        429.3484191894531
+      ],
+      "text_sha256": "431c93c56bbf8aa8857dc27962cf269087ef75562707010c513056469d61b0a8"
+    },
+    {
+      "block_id": "page-0191-block-0016",
+      "order": 16,
+      "text": "Not tolerated\n",
+      "bbox": [
+        323.47509765625,
+        466.0384216308594,
+        366.8251037597656,
+        475.25592041015625
+      ],
+      "text_sha256": "4accb3c2852c326f7681595dbc0d4a966f9549a3b45d529076f6b196b2665087"
+    },
+    {
+      "block_id": "page-0191-block-0017",
+      "order": 17,
+      "text": "Elevated\nAsymptomatic\n",
+      "bbox": [
+        314.0269775390625,
+        321.3334045410156,
+        400.1645202636719,
+        330.5509033203125
+      ],
+      "text_sha256": "99f451fa1863b75430677ef4ae35d958d9bf330e4fd6f2eb7c5e10d555155719"
+    },
+    {
+      "block_id": "page-0191-block-0018",
+      "order": 18,
+      "text": "*May not normalize prolactin levels in amisulpride-induced hyperprolactinaemia34.\n",
+      "bbox": [
+        72.3479995727539,
+        576.3989868164062,
+        347.4150085449219,
+        586.5570068359375
+      ],
+      "text_sha256": "e353ae7305b7211634ed8745cb21eacd1ba8c1d0db87e993e1367c6ffdf62ed0"
+    },
+    {
+      "block_id": "page-0191-block-0019",
+      "order": 19,
+      "text": "Discuss clinical implications of the test\nresults with the patient and take a joint\ndecision on whether to continue current\ntreatment with annual monitoring or\nswitch to another antipsychotic\n",
+      "bbox": [
+        285.3330078125,
+        351.8664245605469,
+        417.9032287597656,
+        397.08392333984375
+      ],
+      "text_sha256": "72cbb6c924036c891b6706e0601afbfae151e4cb3af751ed1ef052306a6b04ea"
+    },
+    {
+      "block_id": "page-0191-block-0020",
+      "order": 20,
+      "text": "Switch to an antipsychotic with\na lower liability for plasma\nprolactin elevation\n",
+      "bbox": [
+        76.57049560546875,
+        351.8664245605469,
+        179.53050231933594,
+        379.08392333984375
+      ],
+      "text_sha256": "e1685f98294f2be60d53988bef21f9816332d90d00a66a35677887bcfd153be9"
+    },
+    {
+      "block_id": "page-0191-block-0021",
+      "order": 21,
+      "text": "Consider slowly reducing dose of\nprolactin-raising drug and aim for\naripiprazole as sole treatment\n",
+      "bbox": [
+        77.822998046875,
+        499.9839172363281,
+        189.9329833984375,
+        527.201416015625
+      ],
+      "text_sha256": "0ccf84eed23a981a548cd25f8350b0ebe1fb998fb86c33d6fe8a8781b3bc71a0"
+    },
+    {
+      "block_id": "page-0191-block-0022",
+      "order": 22,
+      "text": "Only if this strategy fails or is\nconsidered clinically inappropriate\nlong-term combined antipsychotics\nshould be considered\n",
+      "bbox": [
+        77.822998046875,
+        532.98388671875,
+        196.18798828125,
+        569.201416015625
+      ],
+      "text_sha256": "50c6b3b218d0f4e8144c2b6ec6fc027352fdaebe7c440012a72787131ce4152e"
+    },
+    {
+      "block_id": "page-0191-block-0023",
+      "order": 23,
+      "text": "Consider treatment with\ndopamine agonists or metformin\nor Peony-Glycyrrhiza Decoction\n",
+      "bbox": [
+        289.7879638671875,
+        502.7889404296875,
+        394.8855285644531,
+        530.0064697265625
+      ],
+      "text_sha256": "768d9cd1aa30cde1ea4800b168773e5e25cb115bbfd8f394e7404d393602280d"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

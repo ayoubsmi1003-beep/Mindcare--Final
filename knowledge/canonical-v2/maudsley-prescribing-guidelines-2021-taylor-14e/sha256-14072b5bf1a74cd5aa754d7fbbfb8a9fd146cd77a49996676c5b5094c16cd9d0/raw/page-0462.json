@@ -1,0 +1,503 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0462",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 462,
+  "source_page_index": 461,
+  "source_page_display": 462,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    441\nCHAPTER 3\nThe majority of people who are dependent on these classes of drugs have not obtained \nthem illegally, but are taking them as prescribed by their physician (so-called ‘iatrogenic \ndependence’).\nLong-term use of benzodiazepines is associated with a number of problems (Table \n3.27), which patients may be unaware of and only appreciate after stopping.16 Long-\nterm z-drug use is associated with similar risks.17 Gabapentinoids have been linked to \nincreased risk of suicide, unintentional overdose, road traffic accidents, and head and \nbody injuries,18 suggesting limitation of their long-term use may also be prudent.\nWithdrawal symptoms\nStopping these medications is often difficult (Table 3.28). One study found that 90% of \npatients experience withdrawal symptoms on stopping, with 32% of people on long \nhalf-life benzodiazepines and 42% of people on short half-life benzodiazepines unable \nto cease their medication because of withdrawal symptoms.19 Short-acting drugs such \nas lorazepam are associated with more severe problems on withdrawal than longer-\nacting drugs such as diazepam.20,21 As the drugs are ineffective for anxiety and insomnia \nin the long-term, symptoms which arise on stopping are likely to be withdrawal symp-\ntoms as opposed to relapse (though symptoms can be similar).22 Mental state often \nimproves after withdrawal symptoms abate.23\nTo avoid or reduce the severity of these problems, good practice dictates that benzo-\ndiazepines (and z-drugs) should not be prescribed as hypnotics or anxiolytics for longer \nthan 4 weeks. Intermittent use (i.e. not every day) at the lowest possible dose is also \nprudent. This may also apply to gabapentinoids.\nTable 3.28  Withdrawal effects from benzodiazepines24,25.\nPhysical\nPsychological\n■\n■Stiffness\n■\n■Fatigue and weakness\n■\n■GI disturbance\n■\n■Paraesthesia\n■\n■Flu-like symptoms\n■\n■Visual disturbances\n■\n■Sensory hypersensitivity\n■\n■Convulsions*\n■\n■Cognitive impairment\n■\n■Impaired memory\n■\n■Tremor\n■\n■Dizziness\n■\n■Muscle spasms/cramps\n■\n■Chest pain\n■\n■Hypertension\n■\n■Tachycardia\n■\n■Photophobia\n■\n■Confusion, delirium*\n■\n■Anxiety/insomnia\n■\n■Terror/panic attacks\n■\n■Nightmares\n■\n■Depersonalisation/derealisation\n■\n■Delusions and hallucinations\n■\n■Depression\n■\n■Psychosis*\n■\n■Mood instability\n■\n■Paranoia\n■\n■Obsessive-compulsive symptoms\n■\n■Suicidal ideation\n■\n■Mania\n*Usually only from very rapid withdrawal.\n",
+  "raw_text_sha256": "c1c83210503affa6bb75f9eacfab7e3057f37e84d747142255914b58d8cd2f0d",
+  "coordinates_sha256": "a9fa31bc7a184c28ac20fc85d288514f4affe45aeb283eaa4b80c3d2074a33e8",
+  "block_sequence_sha256": "5461f4db61cbe152a4217d71dc47b9004a95518ea959eb6787b145f4d2dcf837",
+  "blocks": [
+    {
+      "block_id": "page-0462-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    441\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "83e4f42737e210efc89733f28f752eddc6b80af38dc132aee7bde6aab406a74c"
+    },
+    {
+      "block_id": "page-0462-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0462-block-0002",
+      "order": 2,
+      "text": "The majority of people who are dependent on these classes of drugs have not obtained \nthem illegally, but are taking them as prescribed by their physician (so-called ‘iatrogenic \ndependence’).\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.7599182128906,
+        98.27041625976562
+      ],
+      "text_sha256": "14d67c7b6c724fcbf74bd3feb653bf91adc12426137fa0da2dda04b3363838fd"
+    },
+    {
+      "block_id": "page-0462-block-0003",
+      "order": 3,
+      "text": "Long-term use of benzodiazepines is associated with a number of problems (Table \n3.27), which patients may be unaware of and only appreciate after stopping.16 Long-\nterm z-drug use is associated with similar risks.17 Gabapentinoids have been linked to \nincreased risk of suicide, unintentional overdose, road traffic accidents, and head and \nbody injuries,18 suggesting limitation of their long-term use may also be prudent.\n",
+      "bbox": [
+        47.9971923828125,
+        98.5504150390625,
+        422.82281494140625,
+        158.27041625976562
+      ],
+      "text_sha256": "399dbf98a469a12e4f62b7bd43dc0c0a277b2889b1198043ab3b932c6d19a9e7"
+    },
+    {
+      "block_id": "page-0462-block-0004",
+      "order": 4,
+      "text": "Withdrawal symptoms\n",
+      "bbox": [
+        48.0,
+        175.70547485351562,
+        165.34799194335938,
+        188.740478515625
+      ],
+      "text_sha256": "afad1d620f4f5ecd35780f5827fe98f2efa07a986f37763547777d30c99b3fff"
+    },
+    {
+      "block_id": "page-0462-block-0005",
+      "order": 5,
+      "text": "Stopping these medications is often difficult (Table 3.28). One study found that 90% of \npatients experience withdrawal symptoms on stopping, with 32% of people on long \nhalf-life benzodiazepines and 42% of people on short half-life benzodiazepines unable \nto cease their medication because of withdrawal symptoms.19 Short-acting drugs such \nas lorazepam are associated with more severe problems on withdrawal than longer-\nacting drugs such as diazepam.20,21 As the drugs are ineffective for anxiety and insomnia \nin the long-term, symptoms which arise on stopping are likely to be withdrawal symp-\ntoms as opposed to relapse (though symptoms can be similar).22 Mental state often \nimproves after withdrawal symptoms abate.23\n",
+      "bbox": [
+        47.9984130859375,
+        194.55047607421875,
+        422.7983703613281,
+        302.2704772949219
+      ],
+      "text_sha256": "5d26d9520539598d3dcc601b79fdae415bebfb9954f75dc5a6ad71899a6a97c7"
+    },
+    {
+      "block_id": "page-0462-block-0006",
+      "order": 6,
+      "text": "To avoid or reduce the severity of these problems, good practice dictates that benzo-\ndiazepines (and z-drugs) should not be prescribed as hypnotics or anxiolytics for longer \nthan 4 weeks. Intermittent use (i.e. not every day) at the lowest possible dose is also \nprudent. This may also apply to gabapentinoids.\n",
+      "bbox": [
+        48.0,
+        302.55047607421875,
+        422.77996826171875,
+        350.2704772949219
+      ],
+      "text_sha256": "7a6d54de05326c0b4cb042c7770ccc4a5306ad85ec34d6520ce25aba043bd808"
+    },
+    {
+      "block_id": "page-0462-block-0007",
+      "order": 7,
+      "text": "Table 3.28  Withdrawal effects from benzodiazepines24,25.\n",
+      "bbox": [
+        116.24970245361328,
+        378.59149169921875,
+        300.0036926269531,
+        387.47900390625
+      ],
+      "text_sha256": "5338c66a5559418eb51c3e9c13a37d77c8e7043d3a0da9242fe87908730faffe"
+    },
+    {
+      "block_id": "page-0462-block-0008",
+      "order": 8,
+      "text": "Physical\nPsychological\n",
+      "bbox": [
+        116.24970245361328,
+        398.82647705078125,
+        292.3346252441406,
+        407.7139892578125
+      ],
+      "text_sha256": "9572bebcef4c7eee26a30f58fa5dca86352b43c59ca8f78a4beaaee5d895a3f6"
+    },
+    {
+      "block_id": "page-0462-block-0009",
+      "order": 9,
+      "text": "■\n■Stiffness\n",
+      "bbox": [
+        110.24970245361328,
+        415.781494140625,
+        145.77719116210938,
+        424.4889831542969
+      ],
+      "text_sha256": "e99762dd6cff9d0deebb20ce3eaa9284208c97273c8cdf56eca1004c0ec86c9c"
+    },
+    {
+      "block_id": "page-0462-block-0010",
+      "order": 10,
+      "text": "■\n■Fatigue and weakness\n",
+      "bbox": [
+        110.24970245361328,
+        424.781494140625,
+        189.6822052001953,
+        433.4889831542969
+      ],
+      "text_sha256": "d5ce79acbb1ce9007c5e89c8b9ee17c92200df1d36c414992cc966c7640b4a0c"
+    },
+    {
+      "block_id": "page-0462-block-0011",
+      "order": 11,
+      "text": "■\n■GI disturbance\n",
+      "bbox": [
+        110.24970245361328,
+        433.7815246582031,
+        165.50218200683594,
+        442.489013671875
+      ],
+      "text_sha256": "dab86a5c4bceaafbc136a941c847396e7e5cfac16d07d13f9c3a8cef1e0afd02"
+    },
+    {
+      "block_id": "page-0462-block-0012",
+      "order": 12,
+      "text": "■\n■Paraesthesia\n",
+      "bbox": [
+        110.24970245361328,
+        442.7815246582031,
+        158.41468811035156,
+        451.489013671875
+      ],
+      "text_sha256": "a937a09f2deee58dcee85f7a068c4cf3dd2c247c1590bf7220df2276fac406fe"
+    },
+    {
+      "block_id": "page-0462-block-0013",
+      "order": 13,
+      "text": "■\n■Flu-like symptoms\n",
+      "bbox": [
+        110.24970245361328,
+        451.7815246582031,
+        176.32467651367188,
+        460.489013671875
+      ],
+      "text_sha256": "e4dc770bb17cc5f24d9fb85b850e42a0be0fea1c9835e055129a8e8713f25749"
+    },
+    {
+      "block_id": "page-0462-block-0014",
+      "order": 14,
+      "text": "■\n■Visual disturbances\n",
+      "bbox": [
+        110.24970245361328,
+        460.7815246582031,
+        180.13467407226562,
+        469.489013671875
+      ],
+      "text_sha256": "ace6ad6544ff27c179bb04ae9153329aac76c2805e9937ca326ac9646e046521"
+    },
+    {
+      "block_id": "page-0462-block-0015",
+      "order": 15,
+      "text": "■\n■Sensory hypersensitivity\n",
+      "bbox": [
+        110.24970245361328,
+        469.7815246582031,
+        194.24217224121094,
+        478.489013671875
+      ],
+      "text_sha256": "65675533b9cc85f9cfc15a9e5fc06c367839fb8d2b4160ff9f85d59ac185f4ef"
+    },
+    {
+      "block_id": "page-0462-block-0016",
+      "order": 16,
+      "text": "■\n■Convulsions*\n",
+      "bbox": [
+        110.24970245361328,
+        478.7815246582031,
+        161.76718139648438,
+        487.489013671875
+      ],
+      "text_sha256": "16d319bc4948234714c0779a704db39a09353c27a3561d45704c0fb5e25944fb"
+    },
+    {
+      "block_id": "page-0462-block-0017",
+      "order": 17,
+      "text": "■\n■Cognitive impairment\n",
+      "bbox": [
+        110.24970245361328,
+        487.7815246582031,
+        188.4146728515625,
+        496.489013671875
+      ],
+      "text_sha256": "c81084ee23a15f1064a007fcb9628da4a133496b94a232d53f84424cfc393155"
+    },
+    {
+      "block_id": "page-0462-block-0018",
+      "order": 18,
+      "text": "■\n■Impaired memory\n",
+      "bbox": [
+        110.24970245361328,
+        496.7815246582031,
+        175.35719299316406,
+        505.489013671875
+      ],
+      "text_sha256": "c9a47cf18401cb585fa0d34bbd4d4c4bf7a1676d486d4d068ce1566a6a7e576d"
+    },
+    {
+      "block_id": "page-0462-block-0019",
+      "order": 19,
+      "text": "■\n■Tremor\n",
+      "bbox": [
+        110.24970245361328,
+        505.7815246582031,
+        141.33718872070312,
+        514.489013671875
+      ],
+      "text_sha256": "97b081b793af7cfb92957a39788939dc1d63a07f8e668b8662f8f67c40b8798b"
+    },
+    {
+      "block_id": "page-0462-block-0020",
+      "order": 20,
+      "text": "■\n■Dizziness\n",
+      "bbox": [
+        110.24970245361328,
+        514.781494140625,
+        147.9971923828125,
+        523.489013671875
+      ],
+      "text_sha256": "7bdc64e91503173a423f8d817bcb5398ebdd4a69a585b54e2857f0dbb28e2b67"
+    },
+    {
+      "block_id": "page-0462-block-0021",
+      "order": 21,
+      "text": "■\n■Muscle spasms/cramps\n",
+      "bbox": [
+        110.24970245361328,
+        523.781494140625,
+        191.75218200683594,
+        532.489013671875
+      ],
+      "text_sha256": "850674eb5e3e04a266646342f4b5055fb3e2ef3246e1ac411f4dea8c575d04ac"
+    },
+    {
+      "block_id": "page-0462-block-0022",
+      "order": 22,
+      "text": "■\n■Chest pain\n",
+      "bbox": [
+        110.24970245361328,
+        532.781494140625,
+        153.4272003173828,
+        541.489013671875
+      ],
+      "text_sha256": "530c88c47531aaf7d1ef158398ee638a883307555c297d9ed567c8fea16902e1"
+    },
+    {
+      "block_id": "page-0462-block-0023",
+      "order": 23,
+      "text": "■\n■Hypertension\n",
+      "bbox": [
+        110.24970245361328,
+        541.781494140625,
+        161.33969116210938,
+        550.489013671875
+      ],
+      "text_sha256": "9aa99d8ac3a5c7f038e546f1141ed2aadb76d3795340799e671b14d0d6e47836"
+    },
+    {
+      "block_id": "page-0462-block-0024",
+      "order": 24,
+      "text": "■\n■Tachycardia\n",
+      "bbox": [
+        110.24970245361328,
+        550.781494140625,
+        155.7747039794922,
+        559.489013671875
+      ],
+      "text_sha256": "2e6f6c6b87df085ebae95260193d26c0d73d326c11ee34ed526fe20c41cd088c"
+    },
+    {
+      "block_id": "page-0462-block-0025",
+      "order": 25,
+      "text": "■\n■Photophobia\n",
+      "bbox": [
+        110.24970245361328,
+        559.781494140625,
+        160.10218811035156,
+        568.489013671875
+      ],
+      "text_sha256": "74faf4561aeedd5afec265f92d1d859c95154e59b134ea42a25f07890dff396f"
+    },
+    {
+      "block_id": "page-0462-block-0026",
+      "order": 26,
+      "text": "■\n■Confusion, delirium*\n",
+      "bbox": [
+        110.24970245361328,
+        569.781494140625,
+        186.3521728515625,
+        578.489013671875
+      ],
+      "text_sha256": "5d64595c0a14aa3b6b13a36d8082db9837ea1476fdbbc827beb7cbf7640bd1a6"
+    },
+    {
+      "block_id": "page-0462-block-0027",
+      "order": 27,
+      "text": "■\n■Anxiety/insomnia\n",
+      "bbox": [
+        245.24969482421875,
+        415.781494140625,
+        308.8347473144531,
+        424.4889831542969
+      ],
+      "text_sha256": "cd803f7c6931d043e80643bc762091dc977124b438d042b6a33ff14dc8676ece"
+    },
+    {
+      "block_id": "page-0462-block-0028",
+      "order": 28,
+      "text": "■\n■Terror/panic attacks\n",
+      "bbox": [
+        245.24969482421875,
+        424.781494140625,
+        316.19219970703125,
+        433.4889831542969
+      ],
+      "text_sha256": "4a1aa7ecb215ad4c872fb106d3fa3f90b29672042afba623f7916ba20714ed26"
+    },
+    {
+      "block_id": "page-0462-block-0029",
+      "order": 29,
+      "text": "■\n■Nightmares\n",
+      "bbox": [
+        245.24969482421875,
+        433.7815246582031,
+        290.7822265625,
+        442.489013671875
+      ],
+      "text_sha256": "56bd7235e65eaee5454cd3cb4a2ff013b42abe53ed9bde77036289e225ba69e1"
+    },
+    {
+      "block_id": "page-0462-block-0030",
+      "order": 30,
+      "text": "■\n■Depersonalisation/derealisation\n",
+      "bbox": [
+        245.24969482421875,
+        442.7815246582031,
+        353.29486083984375,
+        451.489013671875
+      ],
+      "text_sha256": "d541de47dfc11d824da75ca8b08c4882ebaac9d375df8b250febcd6e49a849f7"
+    },
+    {
+      "block_id": "page-0462-block-0031",
+      "order": 31,
+      "text": "■\n■Delusions and hallucinations\n",
+      "bbox": [
+        245.24969482421875,
+        451.7815246582031,
+        344.6923828125,
+        460.489013671875
+      ],
+      "text_sha256": "45094a53ae31258a40739376d3b5a60e2ebcf655fea9dd07ff3b0d50528044e2"
+    },
+    {
+      "block_id": "page-0462-block-0032",
+      "order": 32,
+      "text": "■\n■Depression\n",
+      "bbox": [
+        245.24969482421875,
+        460.7815246582031,
+        289.124755859375,
+        469.489013671875
+      ],
+      "text_sha256": "dd2463a4ffb0d4c59931c63a9b80f031faf03b68610d079df9155cfa62e1d2ec"
+    },
+    {
+      "block_id": "page-0462-block-0033",
+      "order": 33,
+      "text": "■\n■Psychosis*\n",
+      "bbox": [
+        245.24969482421875,
+        469.7815246582031,
+        287.5872497558594,
+        478.489013671875
+      ],
+      "text_sha256": "de896f7101cc41c62581578c0a0cd69cafdeb3f22fce257f6c0157e514e4b6e4"
+    },
+    {
+      "block_id": "page-0462-block-0034",
+      "order": 34,
+      "text": "■\n■Mood instability\n",
+      "bbox": [
+        245.24969482421875,
+        478.7815246582031,
+        305.5047912597656,
+        487.489013671875
+      ],
+      "text_sha256": "f97e099cb195a92d02d32836a0dacd174c533d63fa5f7dff89c23a3b0860fe2d"
+    },
+    {
+      "block_id": "page-0462-block-0035",
+      "order": 35,
+      "text": "■\n■Paranoia\n",
+      "bbox": [
+        245.24969482421875,
+        487.7815246582031,
+        281.7522277832031,
+        496.489013671875
+      ],
+      "text_sha256": "47549f306e1048d8ad8d3e67c08ee2fc1d4114a58568fe524535418863b75776"
+    },
+    {
+      "block_id": "page-0462-block-0036",
+      "order": 36,
+      "text": "■\n■Obsessive-compulsive symptoms\n",
+      "bbox": [
+        245.24969482421875,
+        496.7815246582031,
+        357.5773010253906,
+        505.489013671875
+      ],
+      "text_sha256": "64dec853f1308723727189084dee44ced0c2d2b35a487c57ac33bfdbee182c67"
+    },
+    {
+      "block_id": "page-0462-block-0037",
+      "order": 37,
+      "text": "■\n■Suicidal ideation\n",
+      "bbox": [
+        245.24969482421875,
+        505.7815246582031,
+        306.3372802734375,
+        514.489013671875
+      ],
+      "text_sha256": "c898ca4059004b959cac08766e497f66f57a662471c94ec827c08cee8bb7d64c"
+    },
+    {
+      "block_id": "page-0462-block-0038",
+      "order": 38,
+      "text": "■\n■Mania\n",
+      "bbox": [
+        245.24969482421875,
+        514.781494140625,
+        274.2522277832031,
+        523.489013671875
+      ],
+      "text_sha256": "e42dd70142d0d87392ce1d8985a47822cdc4e0c0d860e60ac83f6224fa31f348"
+    },
+    {
+      "block_id": "page-0462-block-0039",
+      "order": 39,
+      "text": "*Usually only from very rapid withdrawal.\n",
+      "bbox": [
+        110.24969482421875,
+        588.7839965820312,
+        243.03720092773438,
+        597.4915161132812
+      ],
+      "text_sha256": "ffdabea695baaedfebfd1573288a80daf3a6a02c183ed164a0e8778003eab520"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

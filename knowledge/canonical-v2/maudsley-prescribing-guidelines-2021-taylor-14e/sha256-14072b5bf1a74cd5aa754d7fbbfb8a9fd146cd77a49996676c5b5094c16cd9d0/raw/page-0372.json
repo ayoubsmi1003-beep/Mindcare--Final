@@ -1,0 +1,311 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0372",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 372,
+  "source_page_index": 371,
+  "source_page_display": 372,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    351\nCHAPTER 3\nBox 3.1  A simplified guide to tapering sertraline according to an exponential pattern. The range \nof reductions provided is equivalent to about 10–20% dose reductions at each step. Some \npatients may require smaller reductions, and others may tolerate larger reductions at a faster rate\n■\n■Reduce dose by 12.5–25mg every 2–4 weeks until reaching 50mg per day\n■\n■Reduce by 2–5mg every 2–4 weeks until reaching 15mg per day, then\n■\n■Reduce by 1–2mg every 2–4 weeks until reaching 9mg per day, then\n■\n■Reduce by 0.4–1mg every 2–4 weeks until reaching 4mg per day, then\n■\n■Reduce by 0.2–0.4mg every 2–4 weeks until reaching 2mg per day, then\n■\n■Reduce by 0.1–0.25mg every 2–4 weeks until completely stopped.\nThis process normally takes between 3 months and 2 years but in some people can require longer \nperiods.\nTable 3.10  An example reduction schedule for sertraline consisting of 20% reductions (based on the last dose) \neach period. \nMany patients reduce with even greater number of steps than this – as little as 5–10% of the most recent dose \nevery month. \n*2–4 weeks may be tolerable; others might require longer. The reduction from 0.25mg to 0mg will be equivalent to \nthe size of the previous reductions (20% reductions are approximately equal to 3 percentage point reductions of \nserotonin transporter inhibition)\nPeriod*\nDose (mg)\nPeriod\nDose (mg)\nPeriod\nDose (mg)\n1\n200\n12\n17\n23\n1.5\n2\n160\n13\n14\n24\n1.2\n3\n128\n14\n11\n25\n0.9\n4\n102\n15\n9\n26\n0.75\n5\n82\n16\n7\n27\n0.6\n6\n66\n17\n5.5\n28\n0.5\n7\n52\n18\n4.5\n29\n0.4\n8\n42\n19\n3.6\n30\n0.3\n9\n34\n20\n2.9\n31\n0.25\n10\n27\n21\n2.3\n32\n0\n11\n21\n22\n1.8\n",
+  "raw_text_sha256": "1a44d233a54047f8913c554c77501fb775b8759fe672ae0ceac789ff21d470be",
+  "coordinates_sha256": "dc834e0aa7b22a3ff3e1d600806bcb7204ca1d84aa55c59792950c380a7dc549",
+  "block_sequence_sha256": "66f89a47f5435486322de98dd977bf5d8cbc4bf95e0b65bee4ca42fa0b4361e1",
+  "blocks": [
+    {
+      "block_id": "page-0372-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    351\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "e75fc21eebb894a8fe2afe6e3bb3df1f41515e901a50909d8a3496743abb977f"
+    },
+    {
+      "block_id": "page-0372-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0372-block-0002",
+      "order": 2,
+      "text": "Box 3.1  A simplified guide to tapering sertraline according to an exponential pattern. The range \nof reductions provided is equivalent to about 10–20% dose reductions at each step. Some \npatients may require smaller reductions, and others may tolerate larger reductions at a faster rate\n",
+      "bbox": [
+        55.25,
+        69.32801055908203,
+        407.5922546386719,
+        103.404541015625
+      ],
+      "text_sha256": "b08c8f7807d79e0f167f2a62272edb66e2ff7f19c6b6fa0604936d02cb62932f"
+    },
+    {
+      "block_id": "page-0372-block-0003",
+      "order": 3,
+      "text": "■\n■Reduce dose by 12.5–25mg every 2–4 weeks until reaching 50mg per day\n",
+      "bbox": [
+        55.249900817871094,
+        118.85696411132812,
+        331.8911437988281,
+        128.7254638671875
+      ],
+      "text_sha256": "09d19e5e1f608e2a36973a08cf96626d1c2095a297ab597440b32011b65b6d5d"
+    },
+    {
+      "block_id": "page-0372-block-0004",
+      "order": 4,
+      "text": "■\n■Reduce by 2–5mg every 2–4 weeks until reaching 15mg per day, then\n",
+      "bbox": [
+        55.249900817871094,
+        132.85696411132812,
+        316.4551086425781,
+        142.7254638671875
+      ],
+      "text_sha256": "2ec79924fde45dfaeabdc2935794b73b0b98b71c2bf9b547f2f98a032dbc79fd"
+    },
+    {
+      "block_id": "page-0372-block-0005",
+      "order": 5,
+      "text": "■\n■Reduce by 1–2mg every 2–4 weeks until reaching 9mg per day, then\n",
+      "bbox": [
+        55.249900817871094,
+        146.85696411132812,
+        311.7290954589844,
+        156.7254638671875
+      ],
+      "text_sha256": "5487d9fa3cc6b2d9b0e9dd67d72c118ca5ab2d39bf19e04f3877215f4b77dd5b"
+    },
+    {
+      "block_id": "page-0372-block-0006",
+      "order": 6,
+      "text": "■\n■Reduce by 0.4–1mg every 2–4 weeks until reaching 4mg per day, then\n",
+      "bbox": [
+        55.249900817871094,
+        160.85696411132812,
+        318.818115234375,
+        170.7254638671875
+      ],
+      "text_sha256": "9bd441e3f8055a494183b0b9356c494b79e099163e7e9003d50b4ce2e0058f9e"
+    },
+    {
+      "block_id": "page-0372-block-0007",
+      "order": 7,
+      "text": "■\n■Reduce by 0.2–0.4mg every 2–4 weeks until reaching 2mg per day, then\n",
+      "bbox": [
+        55.249900817871094,
+        174.85699462890625,
+        325.9071350097656,
+        184.72549438476562
+      ],
+      "text_sha256": "25f6877f8f8268f245d08625236ed36611597aa8fd348762dbe55cd9d8d7aa1b"
+    },
+    {
+      "block_id": "page-0372-block-0008",
+      "order": 8,
+      "text": "■\n■Reduce by 0.1–0.25mg every 2–4 weeks until completely stopped.\n",
+      "bbox": [
+        55.249900817871094,
+        188.85699462890625,
+        304.1640625,
+        198.72549438476562
+      ],
+      "text_sha256": "92b87d783cc20d1fdd476658a91f219ccae32c82cc4f8a665a57045eca9d9e43"
+    },
+    {
+      "block_id": "page-0372-block-0009",
+      "order": 9,
+      "text": "This process normally takes between 3 months and 2 years but in some people can require longer \nperiods.\n",
+      "bbox": [
+        55.25,
+        204.85400390625,
+        410.9242248535156,
+        224.718505859375
+      ],
+      "text_sha256": "5da4b3e1f537e85a24bdc1dfdb9c4f27c47ca41dc8c9a196bcb8de0ebbd53bcd"
+    },
+    {
+      "block_id": "page-0372-block-0010",
+      "order": 10,
+      "text": "Table 3.10  An example reduction schedule for sertraline consisting of 20% reductions (based on the last dose) \neach period. \n",
+      "bbox": [
+        54.250701904296875,
+        254.98789978027344,
+        411.57330322265625,
+        273.8728942871094
+      ],
+      "text_sha256": "b31de76be9c7b382684459235778a1e456d2cb3f0621bf5739938e8d5e4f3fae"
+    },
+    {
+      "block_id": "page-0372-block-0011",
+      "order": 11,
+      "text": "Many patients reduce with even greater number of steps than this – as little as 5–10% of the most recent dose \nevery month. \n*2–4 weeks may be tolerable; others might require longer. The reduction from 0.25mg to 0mg will be equivalent to \nthe size of the previous reductions (20% reductions are approximately equal to 3 percentage point reductions of \nserotonin transporter inhibition)\n",
+      "bbox": [
+        48.00320053100586,
+        470.2904052734375,
+        419.7633056640625,
+        518.9879150390625
+      ],
+      "text_sha256": "e0a7e5b5334ae30e14203d86019b9e16773812f43de03cb014e7e2b6773dd164"
+    },
+    {
+      "block_id": "page-0372-block-0012",
+      "order": 12,
+      "text": "Period*\nDose (mg)\nPeriod\nDose (mg)\nPeriod\nDose (mg)\n",
+      "bbox": [
+        50.0,
+        284.4728698730469,
+        407.6374816894531,
+        293.3603820800781
+      ],
+      "text_sha256": "79a16a4e6b9104071a5f660cd13f4558257cdea9c41aae4cea54ea752a47181a"
+    },
+    {
+      "block_id": "page-0372-block-0013",
+      "order": 13,
+      "text": "1\n200\n12\n17\n23\n1.5\n",
+      "bbox": [
+        57.822509765625,
+        301.4303894042969,
+        397.0625305175781,
+        310.13787841796875
+      ],
+      "text_sha256": "3455bf7e8a8b3608b7dcf62be5c57194a40c92955490afb95b5e4c24a491343f"
+    },
+    {
+      "block_id": "page-0372-block-0014",
+      "order": 14,
+      "text": "2\n160\n13\n14\n24\n1.2\n",
+      "bbox": [
+        57.822509765625,
+        316.452880859375,
+        397.0625305175781,
+        325.1603698730469
+      ],
+      "text_sha256": "a1900619bcf1599dbc55e0d11cf2e1bd32cf76b630665b4a83c5baaee5e2f774"
+    },
+    {
+      "block_id": "page-0372-block-0015",
+      "order": 15,
+      "text": "3\n128\n14\n11\n25\n0.9\n",
+      "bbox": [
+        57.822509765625,
+        331.4753723144531,
+        397.0625305175781,
+        340.182861328125
+      ],
+      "text_sha256": "1df0e8ce92a2f045e82f978d614161e505a3a9ce8a7bfc6587679d36a211f26b"
+    },
+    {
+      "block_id": "page-0372-block-0016",
+      "order": 16,
+      "text": "4\n102\n15\n9\n26\n0.75\n",
+      "bbox": [
+        57.822509765625,
+        346.49786376953125,
+        401.2325134277344,
+        355.2053527832031
+      ],
+      "text_sha256": "d76fb93a4cfc42c9f5899a38fe380b1f21aaed6b72ef85683ce1a7ec95be962f"
+    },
+    {
+      "block_id": "page-0372-block-0017",
+      "order": 17,
+      "text": "5\n82\n16\n7\n27\n0.6\n",
+      "bbox": [
+        57.822479248046875,
+        361.5203552246094,
+        397.0625,
+        370.22784423828125
+      ],
+      "text_sha256": "84b011426a9d039c28a14983a075fb4707b31ce752db5eda107a55753e9839ac"
+    },
+    {
+      "block_id": "page-0372-block-0018",
+      "order": 18,
+      "text": "6\n66\n17\n5.5\n28\n0.5\n",
+      "bbox": [
+        57.822479248046875,
+        376.5428466796875,
+        397.0625,
+        385.2503356933594
+      ],
+      "text_sha256": "3bb3adb4acee9c5fa94e4057ac72b78e7f804bf6f794c17300ddcabf44bfd72b"
+    },
+    {
+      "block_id": "page-0372-block-0019",
+      "order": 19,
+      "text": "7\n52\n18\n4.5\n29\n0.4\n",
+      "bbox": [
+        57.822479248046875,
+        391.5653381347656,
+        397.0625,
+        400.2728271484375
+      ],
+      "text_sha256": "50b4633ae4511416cd951518da99775b5ab92f3dc93fcd91417a55dd72b31587"
+    },
+    {
+      "block_id": "page-0372-block-0020",
+      "order": 20,
+      "text": "8\n42\n19\n3.6\n30\n0.3\n",
+      "bbox": [
+        57.822479248046875,
+        406.58782958984375,
+        397.0625,
+        415.2953186035156
+      ],
+      "text_sha256": "2a3fc31a069e29eabe229d6c88859ea9b5545a632c6df2d347699832ff005054"
+    },
+    {
+      "block_id": "page-0372-block-0021",
+      "order": 21,
+      "text": "9\n34\n20\n2.9\n31\n0.25\n",
+      "bbox": [
+        57.822479248046875,
+        421.6103210449219,
+        401.2325134277344,
+        430.31781005859375
+      ],
+      "text_sha256": "a0dd4ea0792eec9b39a30b8cce23091cfa9ac8823749acdd9c91d92538960776"
+    },
+    {
+      "block_id": "page-0372-block-0022",
+      "order": 22,
+      "text": "10\n27\n21\n2.3\n32\n0\n",
+      "bbox": [
+        54.987457275390625,
+        436.6328430175781,
+        390.7999267578125,
+        445.34033203125
+      ],
+      "text_sha256": "3c8486730182d3b26eab92aaaba3d9b6abe0e12b5b928889ffc288586d0ff69d"
+    },
+    {
+      "block_id": "page-0372-block-0023",
+      "order": 23,
+      "text": "11\n21\n22\n1.8\n",
+      "bbox": [
+        54.979888916015625,
+        451.65533447265625,
+        271.7748718261719,
+        460.3628234863281
+      ],
+      "text_sha256": "3a6732dca081d7847a5da1a5b51eaca9ca6077281ffb1b2302a06c95bb36ba5f"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

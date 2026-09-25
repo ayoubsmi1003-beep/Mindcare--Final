@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0633",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 633,
+  "source_page_index": 632,
+  "source_page_display": 633,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "612    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  6\nThe manufacturers of all three agents therefore advise that the drugs should be \nused with caution in patients with cardiovascular disease or in those taking concur-\nrent medicines that reduce heart rate, e.g. digoxin or beta blockers. Although a pre-\ntreatment mandatory electrocardiogram (ECG) has been suggested,56 a review of \npublished evidence showed that the incidence of cardiovascular side effects is low \nand that serious adverse effects are rare. In addition, the value of pre-treatment \nscreening and routine ECGs is questionable and is not currently recommended by \nNICE. However, in patients with a history of cardiovascular disease or who are \nprescribed concomitant negative chronotropic drugs with AChE-Is, an ECG is \nadvised. (See Yorkshire and the Humber Clinical Networks Guidelines – The \nAssessment of Cardiac Status Before Prescribing Acetyl Cholinesterase Inhibitors \nfor Dementia 2016.53)\nIn a study of 204 elderly patients with AD, each had their ECG and blood pressure \nassessed before and after starting AChE-I therapy. It was noted that none of the AChE-Is \nwas associated with increased negative chronotropic, arrhythmogenic or hypotensive \neffects and therefore a preferred drug could not be established with regard to vago-\ntonic effects.60 Similarly, a Danish retrospective cohort study61 found no substantial \ndifferences in the risk of myocardial infarction (MI) or heart failure between partici-\npants on donepezil and those using the other AChE-Is. Memantine was in fact associ-\nated with greatest risk of all-cause mortality, although sicker individuals were selected \nfor memantine therapy. A Swedish cohort study62 found that AChE-Is were associated \nwith a 35% reduced risk of MI or death in patients with AD. These associations were \nstronger with increasing doses of AChE-Is. RCTs are required in order to confirm find-\nings from this observational study, but they fit well with other observations of reduced \nmortality.\nA review of the cardiovascular effects of dementia drugs63 found that although such \nevents with AChE-Is are very uncommon, there was evidence that they are associated \nwith small but significant increase in the risk of syncope and bradycardia. There are \nalso a few reports that they may occasionally be associated with QT prolongation and \ntorsades de pointes.\nMemantine\nAlthough little is known about the cardiovascular effects of memantine, there have been \nreports of bradycardia and reduced cardiovascular survival associated with its use.63\nAn analysis of pooled prospective data for memantine revealed that the most fre-\nquently reported adverse effects in placebo-controlled trials included agitation (7.5% \nmemantine vs 12% placebo), falls (6.8% vs 7.1%), dizziness (6.3% vs 5.7%), acciden-\ntal injury (6.0% vs 7.2%), influenza-like symptoms (6.0% vs 5.8%), headache (5.2% \nvs 3.7%) and diarrhoea (5.0% vs 5.6%).64\nAn analysis of the French Pharmacovigilance Database compared adverse effects \nreported with donepezil with memantine. The most frequent ADRs with donepezil \nalone and memantine alone were, respectively, bradycardia (10% vs 7%), weakness \n(5% vs 6%) and convulsions (4% vs 3%). Although it is well known that donepezil is \noften associated with bradycardia and memantine associated with seizures, this analysis \nsuggests that memantine can also induce bradycardia and donepezil seizures, thus \n",
+  "raw_text_sha256": "bf7be5d2f242366a84024bfe646d49553d0cf3ecb7b26eb9de0d1cfe3677b5d2",
+  "coordinates_sha256": "ae6282f59920f1d4bceb9d5142aed1b92607a926feca2114e004581ca82f4085",
+  "block_sequence_sha256": "e24ae969f4edf70934c25f9f72230ea3bcaf987304fb7dcce6f76bd1fa91839a",
+  "blocks": [
+    {
+      "block_id": "page-0633-block-0000",
+      "order": 0,
+      "text": "612    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "f720f58062d674e9b9e311a3b94678d1b7d15960dece5480fdcd9ba4ba2c7096"
+    },
+    {
+      "block_id": "page-0633-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        18.520000457763672,
+        405.35260009765625,
+        28.0,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0633-block-0002",
+      "order": 2,
+      "text": "The manufacturers of all three agents therefore advise that the drugs should be \nused with caution in patients with cardiovascular disease or in those taking concur-\nrent medicines that reduce heart rate, e.g. digoxin or beta blockers. Although a pre-\ntreatment mandatory electrocardiogram (ECG) has been suggested,56 a review of \npublished evidence showed that the incidence of cardiovascular side effects is low \nand that serious adverse effects are rare. In addition, the value of pre-treatment \nscreening and routine ECGs is questionable and is not currently recommended by \nNICE. However, in patients with a history of cardiovascular disease or who are \nprescribed concomitant negative chronotropic drugs with AChE-Is, an ECG is \nadvised. (See Yorkshire and the Humber Clinical Networks Guidelines – The \nAssessment of Cardiac Status Before Prescribing Acetyl Cholinesterase Inhibitors \nfor Dementia 2016.53)\n",
+      "bbox": [
+        61.889984130859375,
+        62.55029296875,
+        436.721435546875,
+        206.27029418945312
+      ],
+      "text_sha256": "4c1c07dcde854e3b1f8b5c0d59262d9f431f733bab852461179501cae27dc804"
+    },
+    {
+      "block_id": "page-0633-block-0003",
+      "order": 3,
+      "text": "In a study of 204 elderly patients with AD, each had their ECG and blood pressure \nassessed before and after starting AChE-I therapy. It was noted that none of the AChE-Is \nwas associated with increased negative chronotropic, arrhythmogenic or hypotensive \neffects and therefore a preferred drug could not be established with regard to vago-\ntonic effects.60 Similarly, a Danish retrospective cohort study61 found no substantial \ndifferences in the risk of myocardial infarction (MI) or heart failure between partici-\npants on donepezil and those using the other AChE-Is. Memantine was in fact associ-\nated with greatest risk of all-cause mortality, although sicker individuals were selected \nfor memantine therapy. A Swedish cohort study62 found that AChE-Is were associated \nwith a 35% reduced risk of MI or death in patients with AD. These associations were \nstronger with increasing doses of AChE-Is. RCTs are required in order to confirm find-\nings from this observational study, but they fit well with other observations of reduced \nmortality.\n",
+      "bbox": [
+        61.885498046875,
+        206.55029296875,
+        436.7126770019531,
+        362.2702941894531
+      ],
+      "text_sha256": "b0db4ea7adc95207a38ad72fa1503dd20fb98cedfdd33ac856cdcf9e64278799"
+    },
+    {
+      "block_id": "page-0633-block-0004",
+      "order": 4,
+      "text": "A review of the cardiovascular effects of dementia drugs63 found that although such \nevents with AChE-Is are very uncommon, there was evidence that they are associated \nwith small but significant increase in the risk of syncope and bradycardia. There are \nalso a few reports that they may occasionally be associated with QT prolongation and \ntorsades de pointes.\n",
+      "bbox": [
+        61.8870849609375,
+        362.55029296875,
+        436.7071838378906,
+        422.2702941894531
+      ],
+      "text_sha256": "c97235b9bafb86bc423ff584bdecf4264ad4a7280991a91924d47e4fb7db16f7"
+    },
+    {
+      "block_id": "page-0633-block-0005",
+      "order": 5,
+      "text": "Memantine\n",
+      "bbox": [
+        61.8870849609375,
+        440.6402893066406,
+        115.78707885742188,
+        452.49029541015625
+      ],
+      "text_sha256": "7e3dc6e3071bb16b3fbe386ab22fecdbd666d3bc1f74f537f2808c226af7cc02"
+    },
+    {
+      "block_id": "page-0633-block-0006",
+      "order": 6,
+      "text": "Although little is known about the cardiovascular effects of memantine, there have been \nreports of bradycardia and reduced cardiovascular survival associated with its use.63\n",
+      "bbox": [
+        61.8870849609375,
+        458.55029296875,
+        436.6368713378906,
+        482.2702941894531
+      ],
+      "text_sha256": "00b0d04fd7bcb106f6b9cd947a812b5f7236d5fb6e946c647e4c236151c1eff8"
+    },
+    {
+      "block_id": "page-0633-block-0007",
+      "order": 7,
+      "text": "An analysis of pooled prospective data for memantine revealed that the most fre-\nquently reported adverse effects in placebo-controlled trials included agitation (7.5% \nmemantine vs 12% placebo), falls (6.8% vs 7.1%), dizziness (6.3% vs 5.7%), acciden-\ntal injury (6.0% vs 7.2%), influenza-like symptoms (6.0% vs 5.8%), headache (5.2% \nvs 3.7%) and diarrhoea (5.0% vs 5.6%).64\n",
+      "bbox": [
+        61.88999938964844,
+        482.310302734375,
+        436.68988037109375,
+        542.2703247070312
+      ],
+      "text_sha256": "8b5231d3155c79280c03172a65cd4fefc1dae2a18459cc4ccf840e232d73cf07"
+    },
+    {
+      "block_id": "page-0633-block-0008",
+      "order": 8,
+      "text": "An analysis of the French Pharmacovigilance Database compared adverse effects \nreported with donepezil with memantine. The most frequent ADRs with donepezil \nalone and memantine alone were, respectively, bradycardia (10% vs 7%), weakness \n(5% vs 6%) and convulsions (4% vs 3%). Although it is well known that donepezil is \noften associated with bradycardia and memantine associated with seizures, this analysis \nsuggests that memantine can also induce bradycardia and donepezil seizures, thus \n",
+      "bbox": [
+        61.890098571777344,
+        542.55029296875,
+        436.710205078125,
+        614.2703247070312
+      ],
+      "text_sha256": "735f53027686d6a4b75b25a9362f51c84a182b886bda6cd5de76bce74ae6fdd0"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

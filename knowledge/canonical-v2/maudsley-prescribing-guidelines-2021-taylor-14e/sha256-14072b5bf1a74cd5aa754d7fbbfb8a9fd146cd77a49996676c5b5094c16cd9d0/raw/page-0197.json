@@ -1,0 +1,467 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0197",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 197,
+  "source_page_index": 196,
+  "source_page_display": 197,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "176    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nTable 1.32  Remedial treatments for psychotropic-induced sexual dysfunction\nDrug\nPharmacology\nPotential treatment for\nSide effects\nAlprostadil1,13\nProstaglandin\nErectile dysfunction\nPain, fibrosis, \nhypotension, priapism\nAmantadine1,82\nDopamine agonist\nProlactin-induced reduction in \ndesire and arousal (dopamine \nincreases libido and facilitates \nejaculation)\nReturn of psychotic \nsymptoms, GI effects,\nnervousness, insomnia, \nrash\nBethanechol83\nCholinergic or \ncholinergic potentiation \nof adrenergic\nneurotransmission\nAnticholinergic induced arousal \nproblems and anorgasmia (from \nTCAs, antipsychotics, etc.)\nNausea and vomiting, \ncolic, bradycardia, \nblurred vision, \nsweating\nBromocriptine11\nDopamine agonist\nProlactin-induced reduction in \ndesire and arousal\nReturn of psychotic \nsymptoms, GI effects\nBupropion84,85\nNoradrenaline and \ndopamine\nreuptake inhibitor\nSSRI-induced sexual dysfunction \n(evidence poor)\nConcentration \nproblems, reduced \nsleep, tremor\nBuspirone86\n5HT1a partial agonist\nSSRI-induced sexual dysfunction,\nparticularly decreased libido and \nanorgasmia\nNausea, dizziness, \nheadache\nCyproheptadine1,86,87\n5HT2 antagonist\nSexual dysfunction caused by \nincreased serotonin transmission \n(e.g. SSRIs),\nparticularly anorgasmia\nSedation and fatigue. \nReversal of the \ntherapeutic\neffect of \nantidepressants\nFlibanserin (licensed \nin USA)88\n5-HT1A agonist, 5-HT2A \nantagonist, dopamine \nantagonist\nLack or loss of sexual desire in \npremenopausal women. Appears \nto be safe in women taking \nantidepressants89\nHypotension, syncope, \nsedation, dizziness, \nnausea, dry mouth\nSildenafil13,90–93 \ntadalafil,94 lodenafil,95 \nvardenafil96\nPhosphodiesterase \ninhibitors\nErectile dysfunction of any \naetiology. Anorgasmia in women. \nEffective when prolactin raised\nMild headaches, \ndizziness, nasal \ncongestion\nYohimbine1,13,97–99\nCentral and peripheral \nα2 adrenoceptor \nantagonist\nSSRI-induced sexual dysfunction, \nparticularly erectile dysfunction, \ndecreased libido and anorgasmia \n(evidence poor)\nAnxiety, nausea, fine \ntremor, increased BP, \nsweating, fatigue\nPimavanserin69\nInverse agonist at \n5-HT2A and 5-HT2C\nSexual dysfunction in depression \nwith inadequate response to \nantidepressants. Improvement in \nsexual function independently of \neffect on depression unconfirmed.\nPeripheral oedema, \nnausea, confusion\nBremelanotide100\nMelanocortin receptor \nagonist\nHypoactive sexual desire in \npremenopausal women. No \npublished data on use in patients \nwith psychiatric diagnoses.\nFlushing, nausea, \nheadache\nNote: The use of the drugs listed above should ideally be under the care or supervision of a specialist in sexual \ndysfunction.\n",
+  "raw_text_sha256": "31e769b1d509ab85dbeb72bb4f7833cd2d31429e26e2a95e073d47e2886f5707",
+  "coordinates_sha256": "a6a726c573f52f1d45d632e27c5081fe743864d2e0f6c334fb01e024f125a08c",
+  "block_sequence_sha256": "c08d9a1a5018cc509090e09ef24c8035d7b8c7f6bca0be0ce398ca7a7eb8af1b",
+  "blocks": [
+    {
+      "block_id": "page-0197-block-0000",
+      "order": 0,
+      "text": "176    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "2c7228cc3f579e0c9f22efe24fc39fd95145df4e82948fbc2417c031a4c28d19"
+    },
+    {
+      "block_id": "page-0197-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0197-block-0002",
+      "order": 2,
+      "text": "Table 1.32  Remedial treatments for psychotropic-induced sexual dysfunction\n",
+      "bbox": [
+        67.88909912109375,
+        70.08692932128906,
+        314.7366638183594,
+        78.97442626953125
+      ],
+      "text_sha256": "d659a00cb46c752b2d3606e57e453d46a61af7e6e9a2d22f85a6d857c4a157c5"
+    },
+    {
+      "block_id": "page-0197-block-0003",
+      "order": 3,
+      "text": "Drug\nPharmacology\nPotential treatment for\nSide effects\n",
+      "bbox": [
+        61.88909912109375,
+        90.32191467285156,
+        400.7091369628906,
+        99.20941162109375
+      ],
+      "text_sha256": "3bd32be590387aaf8783f41bb9d7171ad20e4684a1622e63c0de9718bff6ba13"
+    },
+    {
+      "block_id": "page-0197-block-0004",
+      "order": 4,
+      "text": "Alprostadil1,13\nProstaglandin\nErectile dysfunction\nPain, fibrosis, \nhypotension, priapism\n",
+      "bbox": [
+        61.88908386230469,
+        107.09944152832031,
+        430.43170166015625,
+        125.98193359375
+      ],
+      "text_sha256": "850daf604883a56fbd96fbbbaae547b494d30e897081260e809a48aff4971362"
+    },
+    {
+      "block_id": "page-0197-block-0005",
+      "order": 5,
+      "text": "Amantadine1,82\nDopamine agonist\nProlactin-induced reduction in \ndesire and arousal (dopamine \nincreases libido and facilitates \nejaculation)\n",
+      "bbox": [
+        61.88908386230469,
+        132.11695861816406,
+        332.0466613769531,
+        171.00189208984375
+      ],
+      "text_sha256": "180d93f635d90a85619b029a642b86cbaa3cd761835469b7a7555154f48522f1"
+    },
+    {
+      "block_id": "page-0197-block-0006",
+      "order": 6,
+      "text": "Return of psychotic \nsymptoms, GI effects,\nnervousness, insomnia, \nrash\n",
+      "bbox": [
+        359.99908447265625,
+        132.2943878173828,
+        435.8542175292969,
+        170.994384765625
+      ],
+      "text_sha256": "2ccf6791fea6cd0d29dd3c163c4d69561d78b3eef890b89b8e7486b121f103d3"
+    },
+    {
+      "block_id": "page-0197-block-0007",
+      "order": 7,
+      "text": "Bethanechol83\nCholinergic or \ncholinergic potentiation \nof adrenergic\nneurotransmission\n",
+      "bbox": [
+        61.88908386230469,
+        177.12940979003906,
+        225.68154907226562,
+        216.02691650390625
+      ],
+      "text_sha256": "5ae49a8e0ee8a52ee89bffcfc705dd91bce8788cfc99c050598f6f83d3af132f"
+    },
+    {
+      "block_id": "page-0197-block-0008",
+      "order": 8,
+      "text": "Anticholinergic induced arousal \nproblems and anorgasmia (from \nTCAs, antipsychotics, etc.)\n",
+      "bbox": [
+        234.3891143798828,
+        177.3194122314453,
+        338.7217102050781,
+        206.02191162109375
+      ],
+      "text_sha256": "6670c52c37eadcd215f755bff7ba433e5977502a940e304532fd33b686ef0ec5"
+    },
+    {
+      "block_id": "page-0197-block-0009",
+      "order": 9,
+      "text": "Nausea and vomiting, \ncolic, bradycardia, \nblurred vision, \nsweating\n",
+      "bbox": [
+        359.99908447265625,
+        177.31190490722656,
+        431.6841735839844,
+        216.01190185546875
+      ],
+      "text_sha256": "af49450d0cbf971568b24003cdd93751831b0ad6a3ba34d44ea0098458779482"
+    },
+    {
+      "block_id": "page-0197-block-0010",
+      "order": 10,
+      "text": "Bromocriptine11\nDopamine agonist\nProlactin-induced reduction in \ndesire and arousal\n",
+      "bbox": [
+        61.88908386230469,
+        222.1468963623047,
+        332.0466613769531,
+        241.05691528320312
+      ],
+      "text_sha256": "d08c36d271167e4baaa7abfb9cd1e872d89e4a0d7e1642807a68f4a7a07c95b5"
+    },
+    {
+      "block_id": "page-0197-block-0011",
+      "order": 11,
+      "text": "Return of psychotic \nsymptoms, GI effects\n",
+      "bbox": [
+        359.99908447265625,
+        222.35191345214844,
+        426.9366149902344,
+        241.05691528320312
+      ],
+      "text_sha256": "3c3d03f2150dc204ee2b50c3db192b661821a14657ee6804be9469808188d73d"
+    },
+    {
+      "block_id": "page-0197-block-0012",
+      "order": 12,
+      "text": "Bupropion84,85\nNoradrenaline and \ndopamine\nreuptake inhibitor\n",
+      "bbox": [
+        61.88908386230469,
+        247.19190979003906,
+        211.131591796875,
+        276.07940673828125
+      ],
+      "text_sha256": "e011a6c525228c3af21f8bb74384ff1b8619db057491a06d05fa5dc8e2e32ba0"
+    },
+    {
+      "block_id": "page-0197-block-0013",
+      "order": 13,
+      "text": "SSRI-induced sexual dysfunction \n(evidence poor)\n",
+      "bbox": [
+        234.3891143798828,
+        247.36940002441406,
+        338.5717468261719,
+        266.07440185546875
+      ],
+      "text_sha256": "5c42c9526334b2482ddd8c0b9be806615e8cba8aec52b318ac25bd4b848ca720"
+    },
+    {
+      "block_id": "page-0197-block-0014",
+      "order": 14,
+      "text": "Concentration \nproblems, reduced \nsleep, tremor\n",
+      "bbox": [
+        359.99908447265625,
+        247.36940002441406,
+        421.4091491699219,
+        276.0718994140625
+      ],
+      "text_sha256": "a3bed631556492e8e5d763002859b11894a12620488d69626bffa353353fae88"
+    },
+    {
+      "block_id": "page-0197-block-0015",
+      "order": 15,
+      "text": "Buspirone86\n5HT1a partial agonist\nSSRI-induced sexual dysfunction,\nparticularly decreased libido and \nanorgasmia\n",
+      "bbox": [
+        61.88908386230469,
+        282.2068786621094,
+        339.2590026855469,
+        311.1044006347656
+      ],
+      "text_sha256": "1348464331ede0fb34ee4d8495e970a97ee644a132d00bc34d85b1b7be27edfc"
+    },
+    {
+      "block_id": "page-0197-block-0016",
+      "order": 16,
+      "text": "Nausea, dizziness, \nheadache\n",
+      "bbox": [
+        359.99639892578125,
+        282.3944091796875,
+        419.5914001464844,
+        301.0993957519531
+      ],
+      "text_sha256": "585e303383fb4011a7359736433528116fcfdd7a52c11f2eb5d6456d82b53642"
+    },
+    {
+      "block_id": "page-0197-block-0017",
+      "order": 17,
+      "text": "Cyproheptadine1,86,87\n5HT2 antagonist\nSexual dysfunction caused by \nincreased serotonin transmission \n(e.g. SSRIs),\nparticularly anorgasmia\n",
+      "bbox": [
+        61.88636779785156,
+        317.2393798828125,
+        339.9678649902344,
+        356.1269226074219
+      ],
+      "text_sha256": "eb02c190e5d0d330a36ec0a660a71f9e14a7c4b8d3aabed665f89dbc20bbfc50"
+    },
+    {
+      "block_id": "page-0197-block-0018",
+      "order": 18,
+      "text": "Sedation and fatigue. \nReversal of the \ntherapeutic\neffect of \nantidepressants\n",
+      "bbox": [
+        360.00018310546875,
+        317.41943359375,
+        430.8527526855469,
+        366.1169128417969
+      ],
+      "text_sha256": "59ddffff6a66905ee0a509c15398b89569aa3b754ca0a36abcd2ad3525166b59"
+    },
+    {
+      "block_id": "page-0197-block-0019",
+      "order": 19,
+      "text": "Flibanserin (licensed \nin USA)88\n",
+      "bbox": [
+        61.89018249511719,
+        372.25189208984375,
+        135.2327117919922,
+        391.13690185546875
+      ],
+      "text_sha256": "65a38856707589cdb338c572a0138a0016977a86115505d515fd9d0ece456b8d"
+    },
+    {
+      "block_id": "page-0197-block-0020",
+      "order": 20,
+      "text": "5-HT1A agonist, 5-HT2A \nantagonist, dopamine \nantagonist\n",
+      "bbox": [
+        149.99859619140625,
+        372.4519348144531,
+        223.21360778808594,
+        401.1544189453125
+      ],
+      "text_sha256": "481ec905e27961d1d08d259c27eea93564ad7386eb83a885d5d0bee0fc4aa5c5"
+    },
+    {
+      "block_id": "page-0197-block-0021",
+      "order": 21,
+      "text": "Lack or loss of sexual desire in \npremenopausal women. Appears \nto be safe in women taking \nantidepressants89\n",
+      "bbox": [
+        234.3885955810547,
+        372.4444274902344,
+        342.2012023925781,
+        411.1444091796875
+      ],
+      "text_sha256": "9a5afdfc762be018952cb800b01cd63410e5743e6a86df7c48dbddbfe9517aa2"
+    },
+    {
+      "block_id": "page-0197-block-0022",
+      "order": 22,
+      "text": "Hypotension, syncope, \nsedation, dizziness, \nnausea, dry mouth\n",
+      "bbox": [
+        359.99908447265625,
+        372.4519348144531,
+        434.1891784667969,
+        401.1544189453125
+      ],
+      "text_sha256": "4c1d2193c6aef4a5243ee4929c3c1bd7f91585f989bc785734bcdbdd1ebefc89"
+    },
+    {
+      "block_id": "page-0197-block-0023",
+      "order": 23,
+      "text": "Sildenafil13,90–93 \ntadalafil,94 lodenafil,95 \nvardenafil96\n",
+      "bbox": [
+        61.88908386230469,
+        417.2944030761719,
+        140.0841064453125,
+        446.1819152832031
+      ],
+      "text_sha256": "761435ac312f1ca8c11532b88ea37fc5f5c2ab8bd3d9d32cbb650fef1583a935"
+    },
+    {
+      "block_id": "page-0197-block-0024",
+      "order": 24,
+      "text": "Phosphodiesterase \ninhibitors\n",
+      "bbox": [
+        149.9990997314453,
+        417.4769287109375,
+        211.26657104492188,
+        436.1819152832031
+      ],
+      "text_sha256": "5bf7fee5f3d1aa29faccedf22e800bd64e5bf22848bfe7b6f3238ed090e8edff"
+    },
+    {
+      "block_id": "page-0197-block-0025",
+      "order": 25,
+      "text": "Erectile dysfunction of any \naetiology. Anorgasmia in women. \nEffective when prolactin raised\n",
+      "bbox": [
+        234.3891143798828,
+        417.4769287109375,
+        343.7242126464844,
+        446.1794128417969
+      ],
+      "text_sha256": "d7070d36ab05eeb21cc58fab3e80c63ae7366c15d645a1e5d5465ef1fe4ed245"
+    },
+    {
+      "block_id": "page-0197-block-0026",
+      "order": 26,
+      "text": "Mild headaches, \ndizziness, nasal \ncongestion\n",
+      "bbox": [
+        359.99908447265625,
+        417.46942138671875,
+        414.1791687011719,
+        446.1719055175781
+      ],
+      "text_sha256": "222a1723153e95443f65695609c5c463e84ad6a883d0e29368dd676f37d08c03"
+    },
+    {
+      "block_id": "page-0197-block-0027",
+      "order": 27,
+      "text": "Yohimbine1,13,97–99\nCentral and peripheral \nα2 adrenoceptor \nantagonist\n",
+      "bbox": [
+        61.88908386230469,
+        452.306884765625,
+        223.76158142089844,
+        481.2069091796875
+      ],
+      "text_sha256": "4a7cb9d548620a9cfbda20c9050f5e9c5713d921be34cafeff0e11e5be2aef75"
+    },
+    {
+      "block_id": "page-0197-block-0028",
+      "order": 28,
+      "text": "SSRI-induced sexual dysfunction, \nparticularly erectile dysfunction, \ndecreased libido and anorgasmia \n(evidence poor)\n",
+      "bbox": [
+        234.3902130126953,
+        452.4969177246094,
+        341.3628234863281,
+        491.1968994140625
+      ],
+      "text_sha256": "0c67c1cee707568095f83905ea3873d7ec4d01cbc3d8048139a4eae871580dc1"
+    },
+    {
+      "block_id": "page-0197-block-0029",
+      "order": 29,
+      "text": "Anxiety, nausea, fine \ntremor, increased BP, \nsweating, fatigue\n",
+      "bbox": [
+        360.00018310546875,
+        452.4894104003906,
+        428.0702209472656,
+        481.19189453125
+      ],
+      "text_sha256": "280df31ed28a27ccd733c731f0313a44acf607e4c34a8c3db915228465048181"
+    },
+    {
+      "block_id": "page-0197-block-0030",
+      "order": 30,
+      "text": "Pimavanserin69\nInverse agonist at \n5-HT2A and 5-HT2C\n",
+      "bbox": [
+        61.89018249511719,
+        497.3318786621094,
+        207.9215850830078,
+        517.9500732421875
+      ],
+      "text_sha256": "4e4096f08e963c6baf5e7bc418d29ac1a14b49d94270818ea94c4a73e1c2439c"
+    },
+    {
+      "block_id": "page-0197-block-0031",
+      "order": 31,
+      "text": "Sexual dysfunction in depression \nwith inadequate response to \nantidepressants. Improvement in \nsexual function independently of \neffect on depression unconfirmed.\n",
+      "bbox": [
+        234.38890075683594,
+        497.5269470214844,
+        344.1365051269531,
+        546.2244262695312
+      ],
+      "text_sha256": "6fd5c5651be725e7d3171f3b87d56e21c8da80940c29d514eb9e83a5d918dc1b"
+    },
+    {
+      "block_id": "page-0197-block-0032",
+      "order": 32,
+      "text": "Peripheral oedema, \nnausea, confusion\n",
+      "bbox": [
+        359.9989013671875,
+        497.5194396972656,
+        423.7564392089844,
+        516.2244262695312
+      ],
+      "text_sha256": "8d214b2999cdde91031b0f78fffcd4e2abe043a5ac34790036f1553fbb227202"
+    },
+    {
+      "block_id": "page-0197-block-0033",
+      "order": 33,
+      "text": "Bremelanotide100\nMelanocortin receptor \nagonist\n",
+      "bbox": [
+        61.88887023925781,
+        552.3594360351562,
+        223.19908142089844,
+        571.2568969726562
+      ],
+      "text_sha256": "03b6084d3fdba79796ce9d4e1fdfbe7a123c9503201bcd071462b6ae25bb7d12"
+    },
+    {
+      "block_id": "page-0197-block-0034",
+      "order": 34,
+      "text": "Hypoactive sexual desire in \npremenopausal women. No \npublished data on use in patients \nwith psychiatric diagnoses.\n",
+      "bbox": [
+        234.3891143798828,
+        552.5518798828125,
+        342.3442687988281,
+        591.2518920898438
+      ],
+      "text_sha256": "4cc3679b9fb01a3e0aa9566254f5dc5c48cc24c522112fb775ed1cc676dd0eb5"
+    },
+    {
+      "block_id": "page-0197-block-0035",
+      "order": 35,
+      "text": "Flushing, nausea, \nheadache\n",
+      "bbox": [
+        359.99908447265625,
+        552.5443725585938,
+        417.1041564941406,
+        571.2493896484375
+      ],
+      "text_sha256": "487a1c1bfaec4761ebba7f2150c6a6740b145fdeaa15759b8ccc6dc08a721359"
+    },
+    {
+      "block_id": "page-0197-block-0036",
+      "order": 36,
+      "text": "Note: The use of the drugs listed above should ideally be under the care or supervision of a specialist in sexual \ndysfunction.\n",
+      "bbox": [
+        61.88908386230469,
+        601.3618774414062,
+        415.9941711425781,
+        620.2468872070312
+      ],
+      "text_sha256": "9010de03837306f9cad5cd6729eec3bbf8bb43d0c054e2e37a4826f69fe9d1f7"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

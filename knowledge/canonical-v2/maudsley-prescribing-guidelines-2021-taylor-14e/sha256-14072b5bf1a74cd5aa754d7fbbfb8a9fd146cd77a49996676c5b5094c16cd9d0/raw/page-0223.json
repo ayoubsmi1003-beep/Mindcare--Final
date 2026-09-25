@@ -1,0 +1,479 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0223",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 223,
+  "source_page_index": 222,
+  "source_page_display": 223,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "202    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nTreatment\nComments\nZotepine 300mg/day108\nOne study showed that some patients do not deteriorate when switched from \nclozapine.\nZiprasidone 80–160mg/\nday109–111\nTwo good RCTs. One111 suggests superior efficacy to chlorpromazine in \nrefractory schizophrenia; the other109 suggests equivalence to clozapine in \nsubjects with treatment intolerance/resistance. Disappointing results in practice, \nhowever. Supratherapeutic doses offer no advantage.112\nNote: Treatments are listed in alphabetical order: no preference is implied by position in table.\nTable 1.37  (Continued)\nRefractory schizophrenia – alternatives to clozapine: summary\nTreatment\nExamples\nComments\nStrength of evidence\nMonotherapy \nusing non-\nclozapine \nantipsychotics in \nstandard or high \ndoses\nAripiprazole 15–30mg \ndaily\nOlanzapine 25–40mg \ndaily\nEvidence of efficacy for any \nantipsychotic other than clozapine \nin refractory schizophrenia is \nsparse. Some data suggest \nefficacy for olanzapine above \nlicensed doses but at the risk of \nmetabolic adverse effects\nVery weak ±\nNon-clozapine \nantipsychotic \npolypharmacy\nAmisulpride + olanzapine\nQuetiapine + amisulpride\nAripiprazole + olanzapine\nPolypharmacy is common in \nclinical practice. Evidence from \ncontrolled studies limited but \nopen studies and real-world data \nsuggest some effectiveness. \nBurden of adverse effects is \nincreased\nWeak +\nAnti-inflammatory \nagents as adjuncts \nto antipsychotics\nN-acetylcysteine, NSAIDs\nminocycline, oestrogens, \naspirin, omega-3 fatty \nacids\nA heterogeneous group of \nmedicinal agents with \ninflammatory properties have \nbeen tried as adjuncts. Possible \nbenefits in negative and cognitive \nsymptoms but sample sizes have \nbeen small\nVery weak ±\nNMDA receptor \nmodulators as \nadjuncts\nMemantine, glycine, \nD-serine and sarcosine\nRarely used in clinical practice. \nMay have some benefit in \nnegative symptoms\nVery weak ±\nPhysical treatments\nECT, rTMS, tDCS, DBS\nBest evidence for ECT as adjunct \nto clozapine. Others still largely \nexperimental\nModest ++\nAdjunctive \nantidepressants\nMirtazapine, vortioxetine, \nSSRIs\nLimited data available suggests \nsmall benefits in negative and \ncognitive symptoms\nWeak +\nAdjunctive \nantiseizure \nmedications\nLamotrigine, topiramate\nsodium valproate, \ncarbamazepine\nData difficult to interpret including \nclozapine and non-clozapine \nantipsychotics. Modest benefits at \nbest\nWeak +\nPsychological \ntherapies\nCBT\nConflicting findings, effects small\nVery weak ±\n",
+  "raw_text_sha256": "46c397647fcdecd81f81abd6c9731f02f44cc80edd8b1abf3c6bddf878f5d392",
+  "coordinates_sha256": "a548eb81c5fc319457ccbea4483928516dfc1440b806a662bdb7b623e7f7f32c",
+  "block_sequence_sha256": "224eb35e192e6d66ca10e8d28432a5559a85c4148ea2470dfcab8dbe2d03cdb9",
+  "blocks": [
+    {
+      "block_id": "page-0223-block-0000",
+      "order": 0,
+      "text": "202    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "2ed8ba8e124cf38376ae92241228c9fdb418b8ec56c0280a230afbcf979416d8"
+    },
+    {
+      "block_id": "page-0223-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0223-block-0002",
+      "order": 2,
+      "text": "Treatment\nComments\n",
+      "bbox": [
+        61.88909912109375,
+        87.11189270019531,
+        215.3916015625,
+        95.9993896484375
+      ],
+      "text_sha256": "8be686e890d313f8295cc060595592f78dd7d0f699de8b9c632f5bd2fa6e517c"
+    },
+    {
+      "block_id": "page-0223-block-0003",
+      "order": 3,
+      "text": "Zotepine 300mg/day108\nOne study showed that some patients do not deteriorate when switched from \nclozapine.\n",
+      "bbox": [
+        61.88909912109375,
+        101.88691711425781,
+        429.4692077636719,
+        120.77191162109375
+      ],
+      "text_sha256": "3c8405583f7463ecc636d03725cdc5411bcf606e9cac0ee52634b6fa7034b611"
+    },
+    {
+      "block_id": "page-0223-block-0004",
+      "order": 4,
+      "text": "Ziprasidone 80–160mg/\nday109–111\n",
+      "bbox": [
+        61.8865966796875,
+        126.90693664550781,
+        142.3315887451172,
+        145.79193115234375
+      ],
+      "text_sha256": "1338cf177aee78ae67f7d10a80a4db61a1e577692ea552cd0dd488d5183bf3dd"
+    },
+    {
+      "block_id": "page-0223-block-0005",
+      "order": 5,
+      "text": "Two good RCTs. One111 suggests superior efficacy to chlorpromazine in \nrefractory schizophrenia; the other109 suggests equivalence to clozapine in \nsubjects with treatment intolerance/resistance. Disappointing results in practice, \nhowever. Supratherapeutic doses offer no advantage.112\n",
+      "bbox": [
+        177.88909912109375,
+        127.0919418334961,
+        433.7463073730469,
+        165.79443359375
+      ],
+      "text_sha256": "c3919609c770ca636b58aa10ce038f13e22a24d7e11658a27c0fc97aefce45b1"
+    },
+    {
+      "block_id": "page-0223-block-0006",
+      "order": 6,
+      "text": "Note: Treatments are listed in alphabetical order: no preference is implied by position in table.\n",
+      "bbox": [
+        61.88909912109375,
+        176.04693603515625,
+        360.1416931152344,
+        184.7994384765625
+      ],
+      "text_sha256": "75448b6e8e26b9fd5ccd4f481b71c3229dc286228d55ece43c7558501c7717c9"
+    },
+    {
+      "block_id": "page-0223-block-0007",
+      "order": 7,
+      "text": "Table 1.37  (Continued)\n",
+      "bbox": [
+        67.88870239257812,
+        70.08692932128906,
+        144.17869567871094,
+        78.97442626953125
+      ],
+      "text_sha256": "e0aca385c22b6b6a6107b41fb5b6380b231ef0fd8c28170cf2a7168ad4d38662"
+    },
+    {
+      "block_id": "page-0223-block-0008",
+      "order": 8,
+      "text": "Refractory schizophrenia – alternatives to clozapine: summary\n",
+      "bbox": [
+        61.88909912109375,
+        201.96438598632812,
+        382.7921447753906,
+        214.9993896484375
+      ],
+      "text_sha256": "92a394d9158104df7d12d88283461c8e922064cbbbb4ade815a0bfd76e1ba98a"
+    },
+    {
+      "block_id": "page-0223-block-0009",
+      "order": 9,
+      "text": "Treatment\nExamples\nComments\nStrength of evidence\n",
+      "bbox": [
+        61.88909912109375,
+        230.47190856933594,
+        428.0241394042969,
+        239.35940551757812
+      ],
+      "text_sha256": "0941ec334bba184a569be78055b6f90c1f8337b35f9ac3246064526a6a016b92"
+    },
+    {
+      "block_id": "page-0223-block-0010",
+      "order": 10,
+      "text": "Monotherapy \nusing non-\nclozapine \nantipsychotics in \nstandard or high \ndoses\n",
+      "bbox": [
+        61.88911437988281,
+        247.67689514160156,
+        116.77410125732422,
+        306.37188720703125
+      ],
+      "text_sha256": "66bed01360a56c77a632048366ee7b9212c320eca0c0aae6ac4c6e30d8b71be2"
+    },
+    {
+      "block_id": "page-0223-block-0011",
+      "order": 11,
+      "text": "Aripiprazole 15–30mg \ndaily\nOlanzapine 25–40mg \ndaily\n",
+      "bbox": [
+        135.3891143798828,
+        247.66188049316406,
+        208.7390899658203,
+        286.36187744140625
+      ],
+      "text_sha256": "c82473d003d8886c43e76788f067d3c4e8f5594a7813004d7a293d26b307035f"
+    },
+    {
+      "block_id": "page-0223-block-0012",
+      "order": 12,
+      "text": "Evidence of efficacy for any \nantipsychotic other than clozapine \nin refractory schizophrenia is \nsparse. Some data suggest \nefficacy for olanzapine above \nlicensed doses but at the risk of \nmetabolic adverse effects\n",
+      "bbox": [
+        231.71913146972656,
+        247.6543731689453,
+        343.3941955566406,
+        316.34686279296875
+      ],
+      "text_sha256": "b231b158a04ab08549f1d5301c44e08d45f5d4ddca38006b0ad38d3cf0defde2"
+    },
+    {
+      "block_id": "page-0223-block-0013",
+      "order": 13,
+      "text": "Very weak ±\n",
+      "bbox": [
+        354.38916015625,
+        247.6393585205078,
+        393.8916015625,
+        256.34686279296875
+      ],
+      "text_sha256": "b12ef8710d94ecebe73dc9e3c474bb6166367672cccb9ddfacb8b481b09a3a47"
+    },
+    {
+      "block_id": "page-0223-block-0014",
+      "order": 14,
+      "text": "Non-clozapine \nantipsychotic \npolypharmacy\n",
+      "bbox": [
+        61.88914489746094,
+        322.661865234375,
+        109.81414031982422,
+        351.3643493652344
+      ],
+      "text_sha256": "3368954ebe321841d0e03c4a26b756c63337e4fb09b4a9d80e8cf4d2c7949e86"
+    },
+    {
+      "block_id": "page-0223-block-0015",
+      "order": 15,
+      "text": "Amisulpride + olanzapine\nQuetiapine + amisulpride\nAripiprazole + olanzapine\n",
+      "bbox": [
+        135.38914489746094,
+        322.65435791015625,
+        216.9816131591797,
+        351.3568420410156
+      ],
+      "text_sha256": "f671189707a6d6d4f5c378aa0c135d54dd7ac2e330b2f1ddf6138dde9a851dea"
+    },
+    {
+      "block_id": "page-0223-block-0016",
+      "order": 16,
+      "text": "Polypharmacy is common in \nclinical practice. Evidence from \ncontrolled studies limited but \nopen studies and real-world data \nsuggest some effectiveness. \nBurden of adverse effects is \nincreased\n",
+      "bbox": [
+        231.71913146972656,
+        322.6468505859375,
+        339.1117248535156,
+        391.3393249511719
+      ],
+      "text_sha256": "27af5d2e7e258b1f43a9226ae46ca028bc0737b54cd6f8a41a32e772bd581978"
+    },
+    {
+      "block_id": "page-0223-block-0017",
+      "order": 17,
+      "text": "Weak +\n",
+      "bbox": [
+        354.38916015625,
+        322.6318359375,
+        379.16912841796875,
+        331.3393249511719
+      ],
+      "text_sha256": "4751224feccfcb81944a10d7666691f733205d3d8207120f074f6cce3ef95523"
+    },
+    {
+      "block_id": "page-0223-block-0018",
+      "order": 18,
+      "text": "Anti-inflammatory \nagents as adjuncts \nto antipsychotics\n",
+      "bbox": [
+        61.88914489746094,
+        397.6543273925781,
+        122.73662567138672,
+        426.3568115234375
+      ],
+      "text_sha256": "03e4358722105df550a38e6667f49e2a28b2184ddd4295b8b853940f3bbbcca5"
+    },
+    {
+      "block_id": "page-0223-block-0019",
+      "order": 19,
+      "text": "N-acetylcysteine, NSAIDs\nminocycline, oestrogens, \naspirin, omega-3 fatty \nacids\n",
+      "bbox": [
+        135.38914489746094,
+        397.6468200683594,
+        216.0966339111328,
+        436.3468017578125
+      ],
+      "text_sha256": "2e12150913eddbffe53db24e80e65b9c5665f2d2ccb3d20c6a7bb674ca2b3bfa"
+    },
+    {
+      "block_id": "page-0223-block-0020",
+      "order": 20,
+      "text": "A heterogeneous group of \nmedicinal agents with \ninflammatory properties have \nbeen tried as adjuncts. Possible \nbenefits in negative and cognitive \nsymptoms but sample sizes have \nbeen small\n",
+      "bbox": [
+        231.71913146972656,
+        397.6393127441406,
+        341.3167419433594,
+        466.331787109375
+      ],
+      "text_sha256": "042e150bac3079abd50d91f5396aa39cbabdcfb537cc02664b3e1f6a7f922e3b"
+    },
+    {
+      "block_id": "page-0223-block-0021",
+      "order": 21,
+      "text": "Very weak ±\n",
+      "bbox": [
+        354.38916015625,
+        397.6242980957031,
+        393.8916015625,
+        406.331787109375
+      ],
+      "text_sha256": "b12ef8710d94ecebe73dc9e3c474bb6166367672cccb9ddfacb8b481b09a3a47"
+    },
+    {
+      "block_id": "page-0223-block-0022",
+      "order": 22,
+      "text": "NMDA receptor \nmodulators as \nadjuncts\n",
+      "bbox": [
+        61.88914489746094,
+        472.64678955078125,
+        114.26163482666016,
+        501.3492736816406
+      ],
+      "text_sha256": "7782eec7ddf2549a5c3d55629e1b177c94b5377ba6d1a0e3f4d3f49bf3e1b940"
+    },
+    {
+      "block_id": "page-0223-block-0023",
+      "order": 23,
+      "text": "Memantine, glycine, \nD-serine and sarcosine\n",
+      "bbox": [
+        135.38914489746094,
+        472.6392822265625,
+        206.93162536621094,
+        491.3442687988281
+      ],
+      "text_sha256": "c0f603c5ffc532b6f3fb16386e294d4a83751779bed27064af66f8aa4d3f22bd"
+    },
+    {
+      "block_id": "page-0223-block-0024",
+      "order": 24,
+      "text": "Rarely used in clinical practice. \nMay have some benefit in \nnegative symptoms\n",
+      "bbox": [
+        231.71913146972656,
+        472.6392822265625,
+        330.3291320800781,
+        501.3417663574219
+      ],
+      "text_sha256": "1101859ee65f639995b28f37a43fe6c5ac83cb8277e827558206fb3ff36d116b"
+    },
+    {
+      "block_id": "page-0223-block-0025",
+      "order": 25,
+      "text": "Very weak ±\n",
+      "bbox": [
+        354.38916015625,
+        472.63177490234375,
+        393.8916015625,
+        481.3392639160156
+      ],
+      "text_sha256": "b12ef8710d94ecebe73dc9e3c474bb6166367672cccb9ddfacb8b481b09a3a47"
+    },
+    {
+      "block_id": "page-0223-block-0026",
+      "order": 26,
+      "text": "Physical treatments\nECT, rTMS, tDCS, DBS\nBest evidence for ECT as adjunct \nto clozapine. Others still largely \nexperimental\n",
+      "bbox": [
+        61.88914489746094,
+        507.6567687988281,
+        337.5666809082031,
+        536.3592529296875
+      ],
+      "text_sha256": "d1f7348e9877e08e2e92b12c5b5387eb5a3534cf5ee6fda9724b83560d09d228"
+    },
+    {
+      "block_id": "page-0223-block-0027",
+      "order": 27,
+      "text": "Modest ++\n",
+      "bbox": [
+        354.38916015625,
+        507.6492614746094,
+        389.64666748046875,
+        516.3567504882812
+      ],
+      "text_sha256": "efd6627dc83f5a2950accf9cee61a91c5c45f27cf13662d88fe6229c7f7f3cd3"
+    },
+    {
+      "block_id": "page-0223-block-0028",
+      "order": 28,
+      "text": "Adjunctive \nantidepressants\n",
+      "bbox": [
+        61.88914489746094,
+        542.6741943359375,
+        111.34412384033203,
+        561.3792724609375
+      ],
+      "text_sha256": "72d8400c9fb0e6f7eb44a79edbdea96563bcf0e6de5c0bbad5a2361c00126d39"
+    },
+    {
+      "block_id": "page-0223-block-0029",
+      "order": 29,
+      "text": "Mirtazapine, vortioxetine, \nSSRIs\n",
+      "bbox": [
+        135.38914489746094,
+        542.6741943359375,
+        219.13412475585938,
+        561.3792724609375
+      ],
+      "text_sha256": "914a76f70a6dc9cd77a1f41a992b0437057728f5e9226af0c452f5907ad3ecc9"
+    },
+    {
+      "block_id": "page-0223-block-0030",
+      "order": 30,
+      "text": "Limited data available suggests \nsmall benefits in negative and \ncognitive symptoms\n",
+      "bbox": [
+        231.71913146972656,
+        542.6741943359375,
+        332.5567321777344,
+        571.376708984375
+      ],
+      "text_sha256": "d1062ff4acf53d6063678344eb8132d85177e1c21ae20be008dd9f4fd853aca6"
+    },
+    {
+      "block_id": "page-0223-block-0031",
+      "order": 31,
+      "text": "Weak +\n",
+      "bbox": [
+        354.38916015625,
+        542.666748046875,
+        379.16912841796875,
+        551.374267578125
+      ],
+      "text_sha256": "4751224feccfcb81944a10d7666691f733205d3d8207120f074f6cce3ef95523"
+    },
+    {
+      "block_id": "page-0223-block-0032",
+      "order": 32,
+      "text": "Adjunctive \nantiseizure \nmedications\n",
+      "bbox": [
+        61.88914489746094,
+        577.6917114257812,
+        100.22164154052734,
+        606.3942260742188
+      ],
+      "text_sha256": "da583d74ca25836d405f48f62ef970f7f9234e6336f9d36cd5075461c01a7545"
+    },
+    {
+      "block_id": "page-0223-block-0033",
+      "order": 33,
+      "text": "Lamotrigine, topiramate\nsodium valproate, \ncarbamazepine\n",
+      "bbox": [
+        135.38914489746094,
+        577.6842041015625,
+        212.46661376953125,
+        606.38671875
+      ],
+      "text_sha256": "9b822232db1531aee0adaeda18914a2aeaa8395f8e9222edfdf4acc605fd5b22"
+    },
+    {
+      "block_id": "page-0223-block-0034",
+      "order": 34,
+      "text": "Data difficult to interpret including \nclozapine and non-clozapine \nantipsychotics. Modest benefits at \nbest\n",
+      "bbox": [
+        231.71913146972656,
+        577.6766967773438,
+        344.3692321777344,
+        616.376708984375
+      ],
+      "text_sha256": "9cd6aaf940717e5b80b498f956002aa4027e93bb6d24f5546d304d8a4ef24d23"
+    },
+    {
+      "block_id": "page-0223-block-0035",
+      "order": 35,
+      "text": "Weak +\n",
+      "bbox": [
+        354.38916015625,
+        577.669189453125,
+        379.16912841796875,
+        586.376708984375
+      ],
+      "text_sha256": "4751224feccfcb81944a10d7666691f733205d3d8207120f074f6cce3ef95523"
+    },
+    {
+      "block_id": "page-0223-block-0036",
+      "order": 36,
+      "text": "Psychological \ntherapies\n",
+      "bbox": [
+        61.88914489746094,
+        622.6917114257812,
+        106.05663299560547,
+        641.396728515625
+      ],
+      "text_sha256": "3d103e49c920e06c2fc0d356f08693fde163e41717cc0d7b0d61b1fc050226d7"
+    },
+    {
+      "block_id": "page-0223-block-0037",
+      "order": 37,
+      "text": "CBT\nConflicting findings, effects small\nVery weak ±\n",
+      "bbox": [
+        135.38914489746094,
+        622.6917114257812,
+        393.89166259765625,
+        631.3992309570312
+      ],
+      "text_sha256": "37c7c07fdb747a994472733bcaa3169e1f19c2d076554865ded77b87ac4613d4"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

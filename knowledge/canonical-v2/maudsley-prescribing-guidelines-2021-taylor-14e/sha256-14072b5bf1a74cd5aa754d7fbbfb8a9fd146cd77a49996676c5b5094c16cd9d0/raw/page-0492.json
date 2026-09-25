@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0492",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 492,
+  "source_page_index": 491,
+  "source_page_display": 492,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    471\nCHAPTER 4\n\t36.\t Agabio R, et al. Antidepressants for the treatment of people with co-occurring depression and alcohol dependence. Cochrane Database Syst \nRev 2018; 4:Cd008581.\n\t37.\t Stokes PRA, et al. Pharmacological treatment of mood disorders and comorbid addictions: a systematic review and meta-analysis: traitement \npharmacologique des troubles de L’humeur et des Dépendances Comorbides: une Revue Systématique et une Méta-Analyse. Can J Psychiatry \n2020; 65:749–769.\n\t38.\t Pettinati HM, et al. A double-blind, placebo-controlled trial combining sertraline and naltrexone for treating co-occurring depression and \nalcohol dependence. Am J Psychiatry 2010; 167:668–675.\n\t39.\t Adamson SJ, et al. A randomized trial of combined citalopram and naltrexone for nonabstinent outpatients with co-occurring alcohol \ndependence and major depression. J Clin Psychopharmacol 2015; 35:143–149.\n\t40.\t Ipser JC, et al. Pharmacotherapy for anxiety and comorbid alcohol use disorders. Cochrane Database Syst Rev 2015; 1:Cd007505.\nFurther reading\nCheng HY, et al. Treatment interventions to maintain abstinence from alcohol in primary care: systematic review and network meta-analysis. BMJ \n2020; 371:m3934\n",
+  "raw_text_sha256": "37474b190f3ef8139445272cba15ee83a230cce3206c296bd17d4e35d1604ab9",
+  "coordinates_sha256": "dc6c20c7b5573cd62515a59941ade049222d271608a422cef890822e2224bbcf",
+  "block_sequence_sha256": "0574f32f3f08abe6c1b1dd1d047ed74b29c8632643f85e7b676c6012f63d2791",
+  "blocks": [
+    {
+      "block_id": "page-0492-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    471\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "fff62eb47d5068a7068d545215a0671a991f1bc1da38eee27679a2e61f5bccc2"
+    },
+    {
+      "block_id": "page-0492-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0492-block-0002",
+      "order": 2,
+      "text": "\t36.\t Agabio R, et al. Antidepressants for the treatment of people with co-occurring depression and alcohol dependence. Cochrane Database Syst \n",
+      "bbox": [
+        48.0,
+        63.2703857421875,
+        421.6741027832031,
+        70.30238342285156
+      ],
+      "text_sha256": "bac69386cab202f07910f5450c40c191603f7914ce79f20c4c498ef08b9c79f5"
+    },
+    {
+      "block_id": "page-0492-block-0003",
+      "order": 3,
+      "text": "Rev 2018; 4:Cd008581.\n\t37.\t Stokes PRA, et al. Pharmacological treatment of mood disorders and comorbid addictions: a systematic review and meta-analysis: traitement \n",
+      "bbox": [
+        48.00600051879883,
+        72.12638854980469,
+        421.7099914550781,
+        88.30238342285156
+      ],
+      "text_sha256": "c6b0b02f93a335ec58d30c436a8c2a99dc99db1d5390b464c25a721381811431"
+    },
+    {
+      "block_id": "page-0492-block-0004",
+      "order": 4,
+      "text": "pharmacologique des troubles de L’humeur et des Dépendances Comorbides: une Revue Systématique et une Méta-Analyse. Can J Psychiatry \n2020; 65:749–769.\n\t38.\t Pettinati HM, et al. A double-blind, placebo-controlled trial combining sertraline and naltrexone for treating co-occurring depression and \n",
+      "bbox": [
+        48.012001037597656,
+        90.2703857421875,
+        421.69207763671875,
+        115.30238342285156
+      ],
+      "text_sha256": "18107ef9fa519049606280a95b9c4bff216fe5ba1e5471c6f600ecb725935914"
+    },
+    {
+      "block_id": "page-0492-block-0005",
+      "order": 5,
+      "text": "alcohol dependence. Am J Psychiatry 2010; 167:668–675.\n\t39.\t Adamson SJ, et al. A randomized trial of combined citalopram and naltrexone for nonabstinent outpatients with co-occurring alcohol \n",
+      "bbox": [
+        48.018001556396484,
+        117.12638854980469,
+        421.6619873046875,
+        133.30238342285156
+      ],
+      "text_sha256": "1c4758ba236fa6eeaae5eabea599f5f07b4a166bbc589ff068bf01c717c40e03"
+    },
+    {
+      "block_id": "page-0492-block-0006",
+      "order": 6,
+      "text": "dependence and major depression. J Clin Psychopharmacol 2015; 35:143–149.\n\t40.\t Ipser JC, et al. Pharmacotherapy for anxiety and comorbid alcohol use disorders. Cochrane Database Syst Rev 2015; 1:Cd007505.\n",
+      "bbox": [
+        48.02399826049805,
+        135.1263885498047,
+        397.092041015625,
+        151.30238342285156
+      ],
+      "text_sha256": "4fb9384aa8c64e8986e2f66d34bbf82926ee036c9853d283a14b7c9eabfd2d46"
+    },
+    {
+      "block_id": "page-0492-block-0007",
+      "order": 7,
+      "text": "Further reading\n",
+      "bbox": [
+        48.0,
+        173.96469116210938,
+        128.4869842529297,
+        186.99969482421875
+      ],
+      "text_sha256": "97a7eb93e6fca560969f4c10a52d2ef83995974b08b112934e0d108909963303"
+    },
+    {
+      "block_id": "page-0492-block-0008",
+      "order": 8,
+      "text": "Cheng HY, et al. Treatment interventions to maintain abstinence from alcohol in primary care: systematic review and network meta-analysis. BMJ \n2020; 371:m3934\n",
+      "bbox": [
+        48.0,
+        193.585693359375,
+        421.68597412109375,
+        209.74969482421875
+      ],
+      "text_sha256": "3fe69e73eec223b6c87015adecb4e4ef6b4dbdf610c4b537294ab081035d5457"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

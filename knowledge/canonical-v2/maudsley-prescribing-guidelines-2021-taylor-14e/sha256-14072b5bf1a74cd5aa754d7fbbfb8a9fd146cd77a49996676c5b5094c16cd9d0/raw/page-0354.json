@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0354",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 354,
+  "source_page_index": 353,
+  "source_page_display": 354,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    333\nCHAPTER 3\nIn clinical practice, at least until recent years, only a small proportion of patients with \npsychotic depression received an antipsychotic drug,24 perhaps reflecting clinicians’ \nuncertainty regarding the risk–benefit ratio of this treatment strategy and the lack of \nconsensus across published guidelines.25 Under-diagnosis (and hence inadequacy of \ntreatment) of psychotic symptoms in depression is also a significant problem.3,26 \nNonetheless, some antipsychotic drugs such as quetiapine and olanzapine have useful \nantidepressant effects (as well as being antipsychotic) and so there is an empiric basis \n(in addition to the trial outcomes above) for their use as additive agents to antidepres-\nsant treatment.\nLong-term outcome is generally poorer for psychotic than non-psychotic depres-\nsion.27,28 Patients with psychotic depression may also have a poorer response to com-\nbined pharmacological and psychological treatment than those with non-psychotic \ndepression.29 People with psychotic depression are much more likely than those with \nnon-psychotic depression to attempt and complete suicide.30\nPsychotic depression is one of the indications for ECT. Not only is ECT effective, it \nmay also be more protective against relapse in psychotic depression than in non-psy-\nchotic depression.31 One small RCT demonstrated superiority of maintenance ECT plus \nnortriptyline over nortriptyline alone at 2 years.32\nAnother approach is that based on antiglucocorticoid strategies, since HPA axis \nhyperactivity is more common in psychotic depression. One small open study found \nrapid effects of the glucocorticoid receptor antagonist mifepristone,33 although these \nfindings have been criticised.34 Response may be related to mifepristone plasma levels \n(>1800ng/mL).35 Another analysis suggested a plasma concentration of above 1637ng/\nmL was robustly associated with response,36 albeit in a trial stopped early because of \nlack of efficacy of mifepristone.\nThere is an anecdotal report of the successful use of methylphenidate in a patient \nwho did not respond to robust doses of an antidepressant and antipsychotic com-\nbined.37 Other case reports describe successful outcome with lamotrigine38 and a com-\nbination of phenelzine, aripiprazole and quetiapine.39 Minocycline has also shown \ngood effect, albeit in an open study.40\nKetamine may also be effective in psychotic depression. One report41 describes suc-\ncessful use of intravenous ketamine (0.5mg/kg) in two patients unresponsive to stand-\nard treatments (one of the two patients had a diagnosis of schizoaffective disorder). \nAnother42 outlines rapid response to esketamine (0.5mg/kg) given intravenously or sub-\ncutaneously) in four patients, two of whom had a primary diagnosis of unipolar \ndepression.\nThere is no specific indication for other therapies or augmentation strategies in psy-\nchotic depression over and above that for resistant depression or psychosis described \nelsewhere.\nSummary\n■\n■TCAs are probably drugs of first choice in psychotic depression.\n■\n■SSRIs/SNRIs are a second-line alternative when TCAs are poorly tolerated.\n■\n■Augmentation of an antidepressant with olanzapine or quetiapine is recommended.\n■\n■The optimum dose and duration of antipsychotic augmentation are unknown.\n",
+  "raw_text_sha256": "9fdbca39a13cb18244f96103c4292150cf49c5d79c325dc4edac7d6cc9f6c149",
+  "coordinates_sha256": "5a76ee8fce9180e62e24e72f78efe10cabc80bf92c66d396fc4a6e003d806464",
+  "block_sequence_sha256": "d48078aaab3781d93bfa9326ad7f857f04998d1057de1c68217c225abf135c77",
+  "blocks": [
+    {
+      "block_id": "page-0354-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    333\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "d7c6b0d1455e9ff3a4d94bbeb069fcc02cd429836b317cfc98b967335c8a22fe"
+    },
+    {
+      "block_id": "page-0354-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0354-block-0002",
+      "order": 2,
+      "text": "In clinical practice, at least until recent years, only a small proportion of patients with \npsychotic depression received an antipsychotic drug,24 perhaps reflecting clinicians’ \nuncertainty regarding the risk–benefit ratio of this treatment strategy and the lack of \nconsensus across published guidelines.25 Under-diagnosis (and hence inadequacy of \ntreatment) of psychotic symptoms in depression is also a significant problem.3,26 \nNonetheless, some antipsychotic drugs such as quetiapine and olanzapine have useful \nantidepressant effects (as well as being antipsychotic) and so there is an empiric basis \n(in addition to the trial outcomes above) for their use as additive agents to antidepres-\nsant treatment.\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.80999755859375,
+        170.27041625976562
+      ],
+      "text_sha256": "538f448166b8d32a33ba9ef90332f21e7f347ef4771e90e465ba0c90f54881e0"
+    },
+    {
+      "block_id": "page-0354-block-0003",
+      "order": 3,
+      "text": "Long-term outcome is generally poorer for psychotic than non-psychotic depres-\nsion.27,28 Patients with psychotic depression may also have a poorer response to com-\nbined pharmacological and psychological treatment than those with non-psychotic \ndepression.29 People with psychotic depression are much more likely than those with \nnon-psychotic depression to attempt and complete suicide.30\n",
+      "bbox": [
+        47.99650192260742,
+        170.5504150390625,
+        422.8023681640625,
+        230.27047729492188
+      ],
+      "text_sha256": "f464ccfed7c00a831af60ef106289d4dc7532d208c226763d60f17ce32aafd3b"
+    },
+    {
+      "block_id": "page-0354-block-0004",
+      "order": 4,
+      "text": "Psychotic depression is one of the indications for ECT. Not only is ECT effective, it \nmay also be more protective against relapse in psychotic depression than in non-psy-\nchotic depression.31 One small RCT demonstrated superiority of maintenance ECT plus \nnortriptyline over nortriptyline alone at 2 years.32\n",
+      "bbox": [
+        47.99620056152344,
+        230.55047607421875,
+        422.7598876953125,
+        278.2704772949219
+      ],
+      "text_sha256": "608d8d64d88a11a459cae3648a0aa1d1f407334dbbf9401554e867b27c44746d"
+    },
+    {
+      "block_id": "page-0354-block-0005",
+      "order": 5,
+      "text": "Another approach is that based on antiglucocorticoid strategies, since HPA axis \nhyperactivity is more common in psychotic depression. One small open study found \nrapid effects of the glucocorticoid receptor antagonist mifepristone,33 although these \nfindings have been criticised.34 Response may be related to mifepristone plasma levels \n(>1800ng/mL).35 Another analysis suggested a plasma concentration of above 1637ng/\nmL was robustly associated with response,36 albeit in a trial stopped early because of \nlack of efficacy of mifepristone.\n",
+      "bbox": [
+        47.996185302734375,
+        278.55047607421875,
+        422.8099365234375,
+        362.2704772949219
+      ],
+      "text_sha256": "798f3f86b45c6e2e640c89dd675d11205c9657fbd9ee1ca4a622676c1055df1b"
+    },
+    {
+      "block_id": "page-0354-block-0006",
+      "order": 6,
+      "text": "There is an anecdotal report of the successful use of methylphenidate in a patient \nwho did not respond to robust doses of an antidepressant and antipsychotic com-\nbined.37 Other case reports describe successful outcome with lamotrigine38 and a com-\nbination of phenelzine, aripiprazole and quetiapine.39 Minocycline has also shown \ngood effect, albeit in an open study.40\n",
+      "bbox": [
+        47.99681091308594,
+        362.55047607421875,
+        422.8299865722656,
+        422.2704772949219
+      ],
+      "text_sha256": "f20c6f24fcd34627bf30ca12677843950ea9d3b62075e2808fd23a356b015b9f"
+    },
+    {
+      "block_id": "page-0354-block-0007",
+      "order": 7,
+      "text": "Ketamine may also be effective in psychotic depression. One report41 describes suc-\ncessful use of intravenous ketamine (0.5mg/kg) in two patients unresponsive to stand-\nard treatments (one of the two patients had a diagnosis of schizoaffective disorder). \nAnother42 outlines rapid response to esketamine (0.5mg/kg) given intravenously or sub-\ncutaneously) in four patients, two of whom had a primary diagnosis of unipolar \ndepression.\n",
+      "bbox": [
+        48.00201416015625,
+        422.55047607421875,
+        422.7525939941406,
+        494.2704772949219
+      ],
+      "text_sha256": "b13abb2040d5beab128e63d83fb9d16486335d2795338cd8617f4451223d1ef5"
+    },
+    {
+      "block_id": "page-0354-block-0008",
+      "order": 8,
+      "text": "There is no specific indication for other therapies or augmentation strategies in psy-\nchotic depression over and above that for resistant depression or psychosis described \nelsewhere.\n",
+      "bbox": [
+        48.002601623535156,
+        494.55047607421875,
+        422.8027038574219,
+        530.2705078125
+      ],
+      "text_sha256": "a11c29ae0dfa2c6db4f975da3113f6ee5c550074df828b65c4ef35981155c368"
+    },
+    {
+      "block_id": "page-0354-block-0009",
+      "order": 9,
+      "text": "Summary\n",
+      "bbox": [
+        48.0,
+        547.7055053710938,
+        96.90599822998047,
+        560.740478515625
+      ],
+      "text_sha256": "3cbb36aca330b3bd113955dfbada0adb7a5f95ad9f678bd61f175406c6a37e95"
+    },
+    {
+      "block_id": "page-0354-block-0010",
+      "order": 10,
+      "text": "■\n■TCAs are probably drugs of first choice in psychotic depression.\n",
+      "bbox": [
+        47.999900817871094,
+        566.3104858398438,
+        333.4700012207031,
+        578.2705078125
+      ],
+      "text_sha256": "4e78f5a84f8c7329c73e94368208aa7461b11d94bec5ac0210cbd5b05781851f"
+    },
+    {
+      "block_id": "page-0354-block-0011",
+      "order": 11,
+      "text": "■\n■SSRIs/SNRIs are a second-line alternative when TCAs are poorly tolerated.\n",
+      "bbox": [
+        47.999900817871094,
+        578.3104248046875,
+        380.35003662109375,
+        590.2704467773438
+      ],
+      "text_sha256": "4046a7d507795b0dd272ffd2a7d0fa7d3e893ecd37121467e5fa5d3542c8c94a"
+    },
+    {
+      "block_id": "page-0354-block-0012",
+      "order": 12,
+      "text": "■\n■Augmentation of an antidepressant with olanzapine or quetiapine is recommended.\n",
+      "bbox": [
+        47.999900817871094,
+        590.3104248046875,
+        415.7199401855469,
+        602.2704467773438
+      ],
+      "text_sha256": "88e03debe9ad9a9f0491be79f8fa628879b2fc6e1aa735ba70b0c5233eb8c967"
+    },
+    {
+      "block_id": "page-0354-block-0013",
+      "order": 13,
+      "text": "■\n■The optimum dose and duration of antipsychotic augmentation are unknown.\n",
+      "bbox": [
+        47.999900817871094,
+        602.3104248046875,
+        393.659912109375,
+        614.2704467773438
+      ],
+      "text_sha256": "7d1bd1240ce22949cf2432d0909a472f469384bea5a0400eacd1f81103fa4e1e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,359 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0713",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 713,
+  "source_page_index": 712,
+  "source_page_display": 713,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "692    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 7\nBox 7.4  Recommendations – bipolar disorder in pregnancy\n■\n■For women who have had a long period without relapse, the possibility of switching to a safer \ndrug (antipsychotic) or withdrawing treatment completely before conception and for at least the \nfirst trimester should be considered.\n■\n■The risk of relapse both pre- and postpartum is very high if medication is discontinued \nabruptly.\n■\n■No mood stabiliser is clearly safe. NICE recommends the use of mood stabilising antipsychotics \nas a preferable alternative to continuation with a mood stabiliser.\n■\n■Women with severe illness or who are known to relapse quickly after discontinuation of a \nmood stabiliser should be advised to continue their medication following discussion of \nthe risks.\n■\n■NICE recommends that if lithium is considered essential in a woman planning pregnancy the \nwoman be informed of the risk of foetal heart malformations when lithium is taken in the first \ntrimester and the risk of toxicity in the baby if lithium is continued during breastfeeding. Lithium \nplasma levels should be monitored more frequently throughout pregnancy and the postnatal \nperiod and lithium should be stopped during active labour. Women prescribed lithium should \nundergo appropriate monitoring of the foetus in liaison with foetal medicine obstetric services \nto screen for Ebstein’s anomaly.\n■\n■NICE advises against the use of valproate in pregnancy. Valproate should be discontinued \nbefore a woman becomes pregnant. Women taking valproate who are planning a preg-\nnancy should be advised to gradually stop the drug because of the high risk of foetal \nmalformations and adverse neurodevelopment outcomes after any exposure in pregnancy. If \nvalproate is the only drug that works for a particular woman, and this is seen as the only \noption for her during pregnancy, then she needs to be given a clear briefing of the risks and \nto sign a consent form confirming that she understands the risk of malformations and \ndevelopmental delays.\n■\n■NICE advises discussing the possibility of stopping carbamazepine if a woman is planning a \npregnancy or becomes pregnant. If carbamazepine is used, prophylactic vitamin K should be \nadministered to the mother and neonate after delivery.\n■\n■NICE advises if a woman is taking lamotrigine to check lamotrigine levels frequently during \npregnancy and into the postnatal period because they vary substantially at these times.\n■\n■In acute mania in pregnancy use an antipsychotic and if ineffective consider ECT.\n■\n■In bipolar depression during pregnancy use CBT for moderate depression and an SSRI for more \nsevere depression. Lamotrigine is also an option.\nSedatives\nAnxiety disorders and insomnia are commonly seen in pregnancy.222 Preferred treat-\nments are CBT and sleep-hygiene measures, respectively.\n■\n■First-trimester exposure to benzodiazepines has been associated with an increased \nrisk of oral clefts in newborns,223 although subsequent studies have failed to confirm \nthis association.224–226 A recent meta-analysis concluded that first trimester exposure \nis not associated with an increased risk of major malformations.227 However, benzo-\ndiazepine use in pregnancy may be a marker for cardiac and total malformation \nrisk.228\n■\n■Benzodiazepines have been associated with pylorostenosis and alimentary tract atre-\nsia.224 A large Swedish cohort study (n = 1,406 women who took a benzodiazepine \n",
+  "raw_text_sha256": "c1e2ea487e698fd4d2d19c59da66341c7b5defb63bd9064a42c297c828f2fd3c",
+  "coordinates_sha256": "378a994b3b3628e0ad696b930de0cd8315bc17377983a2dc622937ea612ab1eb",
+  "block_sequence_sha256": "7e2b9c7af8435bfbe867ad1544b843f6dffc4f3af05ad3e4161b049ca7dcaba4",
+  "blocks": [
+    {
+      "block_id": "page-0713-block-0000",
+      "order": 0,
+      "text": "692    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "ea9ef38970cbd28e328339f3b6d19ae1c983b239199678b9cd768d2a35da08f5"
+    },
+    {
+      "block_id": "page-0713-block-0001",
+      "order": 1,
+      "text": "CHAPTER 7\n",
+      "bbox": [
+        18.520000457763672,
+        472.7144775390625,
+        28.0,
+        514.0584716796875
+      ],
+      "text_sha256": "6d1a2318236627f2d413db0336034ac4d71cea7172bd0baddf04c66a07292590"
+    },
+    {
+      "block_id": "page-0713-block-0002",
+      "order": 2,
+      "text": "Box 7.4  Recommendations – bipolar disorder in pregnancy\n",
+      "bbox": [
+        69.13999938964844,
+        69.62781524658203,
+        288.46551513671875,
+        79.7003173828125
+      ],
+      "text_sha256": "4fb986c601b04be2280cfae7b50c322ef16dba35febe04ec9c4d4a9a11d2f445"
+    },
+    {
+      "block_id": "page-0713-block-0003",
+      "order": 3,
+      "text": "■\n■For women who have had a long period without relapse, the possibility of switching to a safer \n",
+      "bbox": [
+        69.13990020751953,
+        95.15676879882812,
+        420.8700866699219,
+        105.0252685546875
+      ],
+      "text_sha256": "3dbc705b798c2123f2909cdd65b8c6e1fd7b3adfc5533ee0d84477dc4f8819ff"
+    },
+    {
+      "block_id": "page-0713-block-0004",
+      "order": 4,
+      "text": "drug (antipsychotic) or withdrawing treatment completely before conception and for at least the \nfirst trimester should be considered.\n",
+      "bbox": [
+        77.63999938964844,
+        105.15274047851562,
+        428.69873046875,
+        125.0172119140625
+      ],
+      "text_sha256": "b3d5ecbc428bef52b684cd964f9ce3671913e4ef6b4c7e35609b07ad6d316154"
+    },
+    {
+      "block_id": "page-0713-block-0005",
+      "order": 5,
+      "text": "■\n■The risk of relapse both pre- and postpartum is very high if medication is discontinued \n",
+      "bbox": [
+        69.13990020751953,
+        125.15676879882812,
+        405.56146240234375,
+        135.0252685546875
+      ],
+      "text_sha256": "e28cd2dc949ef6438a2c26d822bff3dafee7b0445461f07f3480435d6a3574a3"
+    },
+    {
+      "block_id": "page-0713-block-0006",
+      "order": 6,
+      "text": "abruptly.\n",
+      "bbox": [
+        77.63999938964844,
+        135.15274047851562,
+        110.33101654052734,
+        145.021240234375
+      ],
+      "text_sha256": "7603d6a40a814cf7c52db9a5e1baa061d6d5eb99b8d8e0ef53162a63640c4647"
+    },
+    {
+      "block_id": "page-0713-block-0007",
+      "order": 7,
+      "text": "■\n■No mood stabiliser is clearly safe. NICE recommends the use of mood stabilising antipsychotics \n",
+      "bbox": [
+        69.13990020751953,
+        145.15676879882812,
+        421.30364990234375,
+        155.0252685546875
+      ],
+      "text_sha256": "1539d41304deaf0515010af014e05fd1325e43554c580da5eae74c9183417799"
+    },
+    {
+      "block_id": "page-0713-block-0008",
+      "order": 8,
+      "text": "as a preferable alternative to continuation with a mood stabiliser.\n",
+      "bbox": [
+        77.63999938964844,
+        155.15274047851562,
+        312.988037109375,
+        165.021240234375
+      ],
+      "text_sha256": "436867cb7cbbdd68c7d9c573abfac819ad2ed63b00719eab3a435841ed73fa7b"
+    },
+    {
+      "block_id": "page-0713-block-0009",
+      "order": 9,
+      "text": "■\n■Women with severe illness or who are known to relapse quickly after discontinuation of a \n",
+      "bbox": [
+        69.13990020751953,
+        165.15676879882812,
+        418.64300537109375,
+        175.0252685546875
+      ],
+      "text_sha256": "619927fde823185bc3e02da5e52b9a57c7a2ee40b0d0837f9e5ad28b8daa553e"
+    },
+    {
+      "block_id": "page-0713-block-0010",
+      "order": 10,
+      "text": "mood stabiliser should be advised to continue their medication following discussion of \nthe risks.\n",
+      "bbox": [
+        77.63999938964844,
+        175.15277099609375,
+        406.657958984375,
+        195.01727294921875
+      ],
+      "text_sha256": "1e4e32f620dc6d37523b7d7b5c9f9431aacf2303f5c3203c89a49ddbf9711fa9"
+    },
+    {
+      "block_id": "page-0713-block-0011",
+      "order": 11,
+      "text": "■\n■NICE recommends that if lithium is considered essential in a woman planning pregnancy the \n",
+      "bbox": [
+        69.13990020751953,
+        195.15679931640625,
+        413.4582214355469,
+        205.02529907226562
+      ],
+      "text_sha256": "6b1fcd0839bd7598aa7d3c1243d67875eadb312847823c52b816315c88a26fb5"
+    },
+    {
+      "block_id": "page-0713-block-0012",
+      "order": 12,
+      "text": "woman be informed of the risk of foetal heart malformations when lithium is taken in the first \ntrimester and the risk of toxicity in the baby if lithium is continued during breastfeeding. Lithium \nplasma levels should be monitored more frequently throughout pregnancy and the postnatal \nperiod and lithium should be stopped during active labour. Women prescribed lithium should \nundergo appropriate monitoring of the foetus in liaison with foetal medicine obstetric services \nto screen for Ebstein’s anomaly.\n",
+      "bbox": [
+        77.63999938964844,
+        205.15280151367188,
+        427.89971923828125,
+        265.0013122558594
+      ],
+      "text_sha256": "15ead4fd2c5a33c04c7617a3111494ee578c64a296fbfab480a1cabd8bbd5223"
+    },
+    {
+      "block_id": "page-0713-block-0013",
+      "order": 13,
+      "text": "■\n■NICE advises against the use of valproate in pregnancy. Valproate should be discontinued \n",
+      "bbox": [
+        69.13990020751953,
+        265.15679931640625,
+        416.6284484863281,
+        275.0252990722656
+      ],
+      "text_sha256": "3d30e18acf08317e2f4250e6aeac231e7ffae0ba24c506391fa79633f12e11e4"
+    },
+    {
+      "block_id": "page-0713-block-0014",
+      "order": 14,
+      "text": "before a woman becomes pregnant. Women taking valproate who are planning a preg-\nnancy should be advised to gradually stop the drug because of the high risk of foetal \nmalformations and adverse neurodevelopment outcomes after any exposure in pregnancy. If \nvalproate is the only drug that works for a particular woman, and this is seen as the only \noption for her during pregnancy, then she needs to be given a clear briefing of the risks and \nto sign a consent form confirming that she understands the risk of malformations and \ndevelopmental delays.\n",
+      "bbox": [
+        77.63999938964844,
+        275.1528015136719,
+        428.22235107421875,
+        344.997314453125
+      ],
+      "text_sha256": "da9fb783e7da22dc0b5ee03f0e3e03219b8f96579cc9bb2dd8949dcd9060d5db"
+    },
+    {
+      "block_id": "page-0713-block-0015",
+      "order": 15,
+      "text": "■\n■NICE advises discussing the possibility of stopping carbamazepine if a woman is planning a \n",
+      "bbox": [
+        69.13990020751953,
+        345.15679931640625,
+        408.2646484375,
+        355.0252990722656
+      ],
+      "text_sha256": "8eb6aa386d88dcced37be26888ab87cfc7cf261884015e2eb54ab67412f3ffc4"
+    },
+    {
+      "block_id": "page-0713-block-0016",
+      "order": 16,
+      "text": "pregnancy or becomes pregnant. If carbamazepine is used, prophylactic vitamin K should be \nadministered to the mother and neonate after delivery.\n",
+      "bbox": [
+        77.63999938964844,
+        355.1528015136719,
+        413.44964599609375,
+        375.0173034667969
+      ],
+      "text_sha256": "fc93e2cebe70a811dac4864098012b84816824e1effc95811d97fdb65f5b82d3"
+    },
+    {
+      "block_id": "page-0713-block-0017",
+      "order": 17,
+      "text": "■\n■NICE advises if a woman is taking lamotrigine to check lamotrigine levels frequently during \n",
+      "bbox": [
+        69.13990020751953,
+        375.15679931640625,
+        408.06915283203125,
+        385.0252990722656
+      ],
+      "text_sha256": "b614485b47844f9a2ba427d3915c577ad5d6f63a9be2432bfcbc56c92e42dd9b"
+    },
+    {
+      "block_id": "page-0713-block-0018",
+      "order": 18,
+      "text": "pregnancy and into the postnatal period because they vary substantially at these times.\n",
+      "bbox": [
+        77.63999938964844,
+        385.1528015136719,
+        392.0210266113281,
+        395.02130126953125
+      ],
+      "text_sha256": "e0be597006afe203ba3cf5285c68ba5e314c8d10b402c7d13671e0a55faebd67"
+    },
+    {
+      "block_id": "page-0713-block-0019",
+      "order": 19,
+      "text": "■\n■In acute mania in pregnancy use an antipsychotic and if ineffective consider ECT.\n",
+      "bbox": [
+        69.13990020751953,
+        395.15679931640625,
+        368.7225341796875,
+        405.0252990722656
+      ],
+      "text_sha256": "7d66991f1db45c807e309241853a8a8d89c4965b51fb8e29b2d6445a58b7279e"
+    },
+    {
+      "block_id": "page-0713-block-0020",
+      "order": 20,
+      "text": "■\n■In bipolar depression during pregnancy use CBT for moderate depression and an SSRI for more \n",
+      "bbox": [
+        69.13990020751953,
+        405.15679931640625,
+        422.3152160644531,
+        415.0252990722656
+      ],
+      "text_sha256": "85364b494a064c085284a5ed9ce82929198d9238dc09b41bc4986a9df28c712c"
+    },
+    {
+      "block_id": "page-0713-block-0021",
+      "order": 21,
+      "text": "severe depression. Lamotrigine is also an option.\n",
+      "bbox": [
+        77.63999938964844,
+        415.1528015136719,
+        252.56150817871094,
+        425.02130126953125
+      ],
+      "text_sha256": "35cc7547b9de951eb4377f293cecd73cdb5a76f214d53123d93c8694cc244804"
+    },
+    {
+      "block_id": "page-0713-block-0022",
+      "order": 22,
+      "text": "Sedatives\n",
+      "bbox": [
+        61.88999938964844,
+        454.95538330078125,
+        111.4119873046875,
+        467.9903869628906
+      ],
+      "text_sha256": "f7074824a832fcee4ddd58d82e6d9f8df9ae7a79df06cc429bcb0ed11d9034cc"
+    },
+    {
+      "block_id": "page-0713-block-0023",
+      "order": 23,
+      "text": "Anxiety disorders and insomnia are commonly seen in pregnancy.222 Preferred treat-\nments are CBT and sleep-hygiene measures, respectively.\n",
+      "bbox": [
+        61.88922119140625,
+        473.8003845214844,
+        433.89923095703125,
+        497.5203857421875
+      ],
+      "text_sha256": "067aa88cf6a00f6643d79a036ee24638de2e6f88aebda17678f39a5e65441572"
+    },
+    {
+      "block_id": "page-0713-block-0024",
+      "order": 24,
+      "text": "■\n■First-trimester exposure to benzodiazepines has been associated with an increased \n",
+      "bbox": [
+        61.88990020751953,
+        503.56036376953125,
+        436.6500549316406,
+        515.5203857421875
+      ],
+      "text_sha256": "31751571430ff4e6c768b4886826e94fe0e1f902ca5f9225294e55cd53877742"
+    },
+    {
+      "block_id": "page-0713-block-0025",
+      "order": 25,
+      "text": "risk of oral clefts in newborns,223 although subsequent studies have failed to confirm \nthis association.224–226 A recent meta-analysis concluded that first trimester exposure \nis not associated with an increased risk of major malformations.227 However, benzo-\ndiazepine use in pregnancy may be a marker for cardiac and total malformation \nrisk.228\n",
+      "bbox": [
+        70.88970947265625,
+        515.8003540039062,
+        436.6910095214844,
+        575.5203857421875
+      ],
+      "text_sha256": "f620ab9c42a2e5db1a4f45df54729b537ed8a7169f4f0039785476f2ffb85548"
+    },
+    {
+      "block_id": "page-0713-block-0026",
+      "order": 26,
+      "text": "■\n■Benzodiazepines have been associated with pylorostenosis and alimentary tract atre-\n",
+      "bbox": [
+        61.88990020751953,
+        575.8004150390625,
+        433.8799743652344,
+        587.5204467773438
+      ],
+      "text_sha256": "67281c7ab06a23e68702f00ec657c88d0586497a959f13ddbb756e399b75dc85"
+    },
+    {
+      "block_id": "page-0713-block-0027",
+      "order": 27,
+      "text": "sia.224 A large Swedish cohort study (n = 1,406 women who took a benzodiazepine \n",
+      "bbox": [
+        70.88999938964844,
+        587.8004150390625,
+        436.6742248535156,
+        599.5204467773438
+      ],
+      "text_sha256": "969ad68d37d62e5977987e9b91333467f249cf4f61b9b9aaf7d6f0580e112059"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

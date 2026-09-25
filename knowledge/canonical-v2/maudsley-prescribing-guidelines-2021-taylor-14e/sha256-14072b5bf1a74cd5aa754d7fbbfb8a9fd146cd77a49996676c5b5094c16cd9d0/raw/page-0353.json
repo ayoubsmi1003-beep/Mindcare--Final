@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0353",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 353,
+  "source_page_index": 352,
+  "source_page_display": 353,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "332    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nPsychotic depression\nAlthough psychotic symptoms can occur across the whole spectrum of depression \nseverity,1 those patients who have psychotic symptoms are generally more severely \nunwell than those who do not have psychotic symptoms.2 Despite this, psychotic \ndepression is an under-identified disorder3 and may have a life-time risk of up to 1%.4 \nCombined treatment with an antidepressant and antipsychotic is often recommended \nfirst line,5 but until fairly recently the data underpinning this practice has been weak.6,7\nWhen given in adequate doses, TCAs are probably more effective than newer antide-\npressants in the treatment of psychotic depression.6,8,9 Prior failure to respond to previ-\nous adequate treatment predicts a reduced chance of response to subsequent \ntreatment.10\nThere are few studies of newer antidepressants and atypical antipsychotics, either \nalone or in combination, specifically for psychotic depression. One large RCT showed \nresponse rates of 64% for combined olanzapine and fluoxetine compared to 35% for \nolanzapine alone and 28% for placebo.11 Another, the study of pharmacotherapy of \npsychotic depression (STOP-PD) study, showed a remission rate of 42% with olanzap-\nine plus sertraline compared with 24% with olanzapine alone.12 There was no antide-\npressant alone group in either study. Small open studies have found quetiapine,13 \naripiprazole14 and amisulpride15 augmentation of an antidepressant to be effective and \nrelatively well tolerated, but again there were no data available for antidepressant treat-\nment alone. One RCT (n = 122)9 found venlafaxine plus quetiapine to be more effective \nthan venlafaxine alone but not more effective than imipramine alone. These findings \ncould be interpreted as supporting the increased efficacy of a TCA over venlafaxine and \nsupporting combined antidepressant-antipsychotic treatment over an antidepressant \ndrug alone.\nA review of all combination studies concluded that an antipsychotic + antidepressant \nwas superior to either alone (four of nine studies showed some advantage for combina-\ntion16). A meta-analysis concluded that a combination of an antipsychotic and an anti-\ndepressant is more effective than either an antipsychotic alone (NNT 5) or an \nantidepressant alone (NNT 7).17 NICE18 recommends that consideration should be \ngiven to augmenting an antidepressant with an antipsychotic in the treatment of an \nacute episode of psychotic depression. Cochrane is in agreement but with reservations \nregarding the number and quality of trials.19 Note that these data relate to acute \ntreatment.\nVirtually nothing is known of the optimum duration of treatment with a combina-\ntion of an antidepressant and antipsychotic. NICE recommends augmentation of an \nantidepressant with an antipsychotic in non-psychotic depression that does not respond \nadequately to an antidepressant alone and state that if one agent is to be stopped during \nthe maintenance phase it should usually be the augmenting agent. In psychotic depres-\nsion, there is evidence from the continuation phase of the STOP-PD study that with-\ndrawal of olanzapine from sertraline co-therapy worsens outcome in the longer term.20,21 \nThis is perhaps sufficient evidence to suggest continuing co-therapy after resolution of \nthe acute illness, but there is no consensus on this question.22 An important considera-\ntion is the substantial weight gain seen in younger people allocated olanzapine in the \nSTOP-PD study.23\n",
+  "raw_text_sha256": "3d8536d1d27e94419656b98f7aa512d261028eefcf7cbbfa638617cbd25e51c3",
+  "coordinates_sha256": "ef97af4142203c66a48ccb83de312af79e69996d0800c893dca83fae2dc9ddd1",
+  "block_sequence_sha256": "26f90e510fd31859f57119084368594bd73daec287c5a4b3353cc1b4fe5a5c27",
+  "blocks": [
+    {
+      "block_id": "page-0353-block-0000",
+      "order": 0,
+      "text": "332    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "c7ee156cb7e2c19741bc06e00f3e3076debb2c3968758c30f5139a1f25d49795"
+    },
+    {
+      "block_id": "page-0353-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0353-block-0002",
+      "order": 2,
+      "text": "Psychotic depression\n",
+      "bbox": [
+        68.88999938964844,
+        66.06539916992188,
+        175.6339874267578,
+        79.10040283203125
+      ],
+      "text_sha256": "e0c544a0b9955399bd096a655f8b69fbb9484c04fdb53851e1821dde00ac0401"
+    },
+    {
+      "block_id": "page-0353-block-0003",
+      "order": 3,
+      "text": "Although psychotic symptoms can occur across the whole spectrum of depression \nseverity,1 those patients who have psychotic symptoms are generally more severely \nunwell than those who do not have psychotic symptoms.2 Despite this, psychotic \ndepression is an under-identified disorder3 and may have a life-time risk of up to 1%.4 \nCombined treatment with an antidepressant and antipsychotic is often recommended \nfirst line,5 but until fairly recently the data underpinning this practice has been weak.6,7\n",
+      "bbox": [
+        61.886077880859375,
+        84.910400390625,
+        436.6760559082031,
+        156.63040161132812
+      ],
+      "text_sha256": "4893ed09ab18cce338942b0250c908875f035f314191ccdb037e7e5caee5f10a"
+    },
+    {
+      "block_id": "page-0353-block-0004",
+      "order": 4,
+      "text": "When given in adequate doses, TCAs are probably more effective than newer antide-\npressants in the treatment of psychotic depression.6,8,9 Prior failure to respond to previ-\nous adequate treatment predicts a reduced chance of response to subsequent \ntreatment.10\n",
+      "bbox": [
+        61.88999938964844,
+        156.910400390625,
+        436.6321105957031,
+        204.63040161132812
+      ],
+      "text_sha256": "e032085f17f179e809922b6d55a503855106c8358bf3a164e71d4c7fd6e4f6df"
+    },
+    {
+      "block_id": "page-0353-block-0005",
+      "order": 5,
+      "text": "There are few studies of newer antidepressants and atypical antipsychotics, either \nalone or in combination, specifically for psychotic depression. One large RCT showed \nresponse rates of 64% for combined olanzapine and fluoxetine compared to 35% for \nolanzapine alone and 28% for placebo.11 Another, the study of pharmacotherapy of \npsychotic depression (STOP-PD) study, showed a remission rate of 42% with olanzap-\nine plus sertraline compared with 24% with olanzapine alone.12 There was no antide-\npressant alone group in either study. Small open studies have found quetiapine,13 \naripiprazole14 and amisulpride15 augmentation of an antidepressant to be effective and \nrelatively well tolerated, but again there were no data available for antidepressant treat-\nment alone. One RCT (n = 122)9 found venlafaxine plus quetiapine to be more effective \nthan venlafaxine alone but not more effective than imipramine alone. These findings \ncould be interpreted as supporting the increased efficacy of a TCA over venlafaxine and \nsupporting combined antidepressant-antipsychotic treatment over an antidepressant \ndrug alone.\n",
+      "bbox": [
+        61.88800048828125,
+        204.910400390625,
+        436.6999816894531,
+        372.6304016113281
+      ],
+      "text_sha256": "33ad85de7ae5443c34851b845702a111fea113114e7dc9d4d6de1ca9f5775ae4"
+    },
+    {
+      "block_id": "page-0353-block-0006",
+      "order": 6,
+      "text": "A review of all combination studies concluded that an antipsychotic + antidepressant \nwas superior to either alone (four of nine studies showed some advantage for combina-\ntion16). A meta-analysis concluded that a combination of an antipsychotic and an anti-\ndepressant is more effective than either an antipsychotic alone (NNT 5) or an \nantidepressant alone (NNT 7).17 NICE18 recommends that consideration should be \ngiven to augmenting an antidepressant with an antipsychotic in the treatment of an \nacute episode of psychotic depression. Cochrane is in agreement but with reservations \nregarding the number and quality of trials.19 Note that these data relate to acute \ntreatment.\n",
+      "bbox": [
+        61.88531494140625,
+        372.910400390625,
+        436.6953125,
+        480.6304016113281
+      ],
+      "text_sha256": "b23c58b630c59ce6bc3d57b0ff88c0ba6ffee8eff6791a8938b2558ed4da2f42"
+    },
+    {
+      "block_id": "page-0353-block-0007",
+      "order": 7,
+      "text": "Virtually nothing is known of the optimum duration of treatment with a combina-\ntion of an antidepressant and antipsychotic. NICE recommends augmentation of an \nantidepressant with an antipsychotic in non-psychotic depression that does not respond \nadequately to an antidepressant alone and state that if one agent is to be stopped during \nthe maintenance phase it should usually be the augmenting agent. In psychotic depres-\nsion, there is evidence from the continuation phase of the STOP-PD study that with-\ndrawal of olanzapine from sertraline co-therapy worsens outcome in the longer term.20,21 \nThis is perhaps sufficient evidence to suggest continuing co-therapy after resolution of \nthe acute illness, but there is no consensus on this question.22 An important considera-\ntion is the substantial weight gain seen in younger people allocated olanzapine in the \nSTOP-PD study.23\n",
+      "bbox": [
+        61.88710021972656,
+        480.910400390625,
+        436.7099914550781,
+        612.6304321289062
+      ],
+      "text_sha256": "2cb7485e3cb44e0b203d9b48d25512da9d8eee691048e106a3a852da263222c1"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

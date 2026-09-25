@@ -1,0 +1,15 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0477",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 477,
+  "source_page_index": 476,
+  "repaired_text": "456    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nPharmacologically assisted withdrawal (alcohol detoxification)\nAlcohol withdrawal is associated with significant morbidity and mortality when \nimproperly managed.\nPharmacologically assisted withdrawal is likely to be needed when:\n■\n■regular consumption of >15 units/day\n■\n■AUDIT score >20\n■\n■there is a history of significant withdrawal symptoms.\nSymptom scales can be helpful in determining the amount of pharmacological support \nrequired to manage withdrawal symptoms. The Clinical Institute Withdrawal Assessment \nof Alcohol Scale Revised (CIWA-Ar; Figure 4.1)12 and Short Alcohol Withdrawal Scale \n(SAWS; Table 4.2)13 are both 10-item scales that can be completed in around 5 minutes. \nThe CIWA-Ar is an objective scale and the SAWS is a self-complete tool. A CIWA-Ar \nscore >10 or a SAWS score >12 should prompt assisted withdrawal.\nCommunity detoxification is usually possible when:\n■\n■There is a supervising carer, ideally 24 hours a day throughout the duration of detoxification process.\n■\n■The treatment plan has been agreed with the patient, their carer and their general\npractitioners (GP).\n■\n■A contingency plan has been agreed with the patient, their carer and their GP.\n■\n■The patient is able to pick up medication daily and be reviewed by professionals regularly throughout the process.\n■\n■Outpatient/community-based programmes including psychosocial support are available.\nCommunity detoxification should be stopped if the patient resumes drinking or fails to \nengage with the agreed treatment plan.\nInpatient detoxification is likely to be required if:\n■\n■Regular consumption is >30 units/day.\n■\n■SADQ >30 (severe dependence).\n■\n■There is a history of seizures or delirium tremens.\n■\n■The patient is very young or old.\n■\n■There is current benzodiazepine use in combination with alcohol.\n■\n■Substances other than alcohol are also being misused/abused.\n■\n■There is co-morbid mental or physical illness, learning disability or cognitive\nimpairment.\n■\n■The patient is pregnant.\n■\n■The patient is homeless or has no social support.\n■\n■There is a history of failed community detoxification.\nIn certain situations, there may be a clinical justification for undertaking a community \ndetoxification in the above patients (Table 4.3); however, the reasons must be clear and \nthe decision is made by an experienced clinician.",
+  "repaired_text_sha256": "692c745b095139cbcefbb0454a9bb470516aa05cd2f464d4f6abca97595a79ce",
+  "raw_text_sha256": "96b43809dc026a79ba886c13006168c32acd15325be7d0aefc10dc8af83454cc",
+  "repair_ids": [
+    "repair-000486",
+    "repair-000487"
+  ],
+  "raw_file": "raw/page-0477.json"
+}

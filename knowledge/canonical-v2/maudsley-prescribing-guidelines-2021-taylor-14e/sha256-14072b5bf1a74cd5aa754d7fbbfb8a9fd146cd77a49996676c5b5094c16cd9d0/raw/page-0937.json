@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0937",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 937,
+  "source_page_index": 936,
+  "source_page_display": 937,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "916    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 14\nTable 14.3  (Continued)\nParameter\nReference range\nAgents reported to raise \nlevels\nAgents reported to lower \nlevels\nRed cell distribution \nwidth\n11.5–14.5%\nAgents associated with \nanaemia e.g.: carbamazepine, \nchlordiazepoxide, citalopram, \nclonazepam, diazepam, \nlamotrigine, memantine, \nmirtazapine, sertraline, \ntranylcypromine, trazodone, \nvalproate, venlafaxine\nNone known\nReticulocyte count\n0.5–2.5% \n(or 50–100 × 109/L)\nNone known\nCarbamazepine, \nchlordiazepoxide, \nchlorpromazine, \nmeprobamate, phenytoin, \ntrifluoperazine\nAgents associated with \npure red cell aplasia: \ncarbamazepine, clozapine, \nvalproate\n*Previous reports of eosinophilia-myalgia syndrome may have been due to a contaminant from a single \nmanufacturer.\n†May raise or lower levels.\n‡Note that in rare cases clozapine has been associated with a ‘morning pseudo-neutropenia’ with lower levels of \ncirculating neutrophil levels. As neutrophil counts may show circadian rhythms, repeating the FBC at a later time of \nday may be instructive.\nReferences\n\t 1.\t BMJ Group and Pharmaceutical Press. British National Formulary 2020; https://www.medicinescomplete.com.\n\t 2.\t Aronson J. Meyler Side Effects of Drugs: the International Encyclopedia of Adverse Drug Reactions and Interactions. Elsevier Science; 2015.\n\t 3.\t Foster R. Clinical Laboratory Investigation and Psychiatry. A Practical Handbook. New York: Informa 2008.\n\t 4.\t Oyesanmi O, et al. Hematologic side effects of psychotropics. Psychosomatics 1999; 40: 414–421.\n\t 5.\t Stubner S, et al. Blood dyscrasias induced by psychotropic drugs. Pharmacopsychiatry 2004; 37 Suppl 1:S70-S78.\n\t 6.\t Pharmaceutical Press. Martindale: the Complete Drug Reference (online) 2020; https://www.medicinescomplete.com.\n\t 7.\t LiverTox: clinical and Research Information on Drug-Induced Liver Injury. Bethesda (MD): National Institute of Diabetes and Digestive and \nKidney Diseases 2012; https://www.ncbi.nlm.nih.gov/books/NBK547852.\n\t 8.\t Medicines Complete. AHFS Drug Information 2020; https://www.medicinescomplete.com/mc/ahfs/current.\n\t 9.\t U.S. Food & Drug Administration. Drugs@FDA: FDA-Approved Drugs 2020; https://www.accessdata.fda.gov/scripts/cder/daf.\n\t10.\t Association for Clinical Biochemistry and Laboratory Medicine. Analyte Monographs Alongside the National Library of Medicine Catalogue \n2020; http://www.acb.org.uk/whatwedo/science/amalc.aspx.\n",
+  "raw_text_sha256": "da575a44624fbdc9840bc5facad5b05775acfccdbd78326a328c6795160eeded",
+  "coordinates_sha256": "7d9071678715c26dc4799ec04f178ac93bddfff0221f3c7be9d798337e4e1c75",
+  "block_sequence_sha256": "2d6809ea38386bd5af954a0df8ed66f159e6194af1fb969d148b427bb2f088c9",
+  "blocks": [
+    {
+      "block_id": "page-0937-block-0000",
+      "order": 0,
+      "text": "916    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "0573151c5ad57a6613de1b33989142dd4af3105204ec2ccde3a86427844ebfa5"
+    },
+    {
+      "block_id": "page-0937-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        18.520000457763672,
+        338.7405090332031,
+        28.0,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0937-block-0002",
+      "order": 2,
+      "text": "Table 14.3  (Continued)\n",
+      "bbox": [
+        67.88970184326172,
+        70.08790588378906,
+        144.17970275878906,
+        78.97540283203125
+      ],
+      "text_sha256": "7231225c9e8b14058598bb982db0899de80655e21e54ec16db99d31c9d795d7b"
+    },
+    {
+      "block_id": "page-0937-block-0003",
+      "order": 3,
+      "text": "Parameter\nReference range\nAgents reported to raise \nlevels\n",
+      "bbox": [
+        61.889801025390625,
+        90.28968811035156,
+        320.8197937011719,
+        109.1746826171875
+      ],
+      "text_sha256": "2d8396b50a0166fb5174838b85b12dbab30e8d3f13f6168449e65c27a04464a6"
+    },
+    {
+      "block_id": "page-0937-block-0004",
+      "order": 4,
+      "text": "Agents reported to lower \nlevels\n",
+      "bbox": [
+        337.852294921875,
+        90.28968811035156,
+        429.8172912597656,
+        109.1746826171875
+      ],
+      "text_sha256": "fb27f96225e0cbd9a32bd98053962899f0febd02bfe697fd98d1c326340a4999"
+    },
+    {
+      "block_id": "page-0937-block-0005",
+      "order": 5,
+      "text": "Red cell distribution \nwidth\n",
+      "bbox": [
+        61.889801025390625,
+        116.98970794677734,
+        126.89978790283203,
+        135.6947021484375
+      ],
+      "text_sha256": "619cf725b98b0ad4284aa4931345a7faa01381082c42c222af162047a846c8df"
+    },
+    {
+      "block_id": "page-0937-block-0006",
+      "order": 6,
+      "text": "11.5–14.5%\nAgents associated with \nanaemia e.g.: carbamazepine, \nchlordiazepoxide, citalopram, \nclonazepam, diazepam, \nlamotrigine, memantine, \nmirtazapine, sertraline, \ntranylcypromine, trazodone, \nvalproate, venlafaxine\n",
+      "bbox": [
+        139.852294921875,
+        116.98970794677734,
+        330.5322570800781,
+        195.6796875
+      ],
+      "text_sha256": "da18815c85b65da0c3b48ced87642b3c12bfbaa7b0aa801da44b5c77ac39c3b4"
+    },
+    {
+      "block_id": "page-0937-block-0007",
+      "order": 7,
+      "text": "None known\n",
+      "bbox": [
+        337.852294921875,
+        116.97469329833984,
+        379.1248474121094,
+        125.68218994140625
+      ],
+      "text_sha256": "ba6586dc579443d5e17252c96d100bb0bdb30ec0ac15a8dc02e530767503ecc9"
+    },
+    {
+      "block_id": "page-0937-block-0008",
+      "order": 8,
+      "text": "Reticulocyte count\n0.5–2.5% \n(or 50–100 × 109/L)\n",
+      "bbox": [
+        61.889801025390625,
+        202.00218200683594,
+        202.22882080078125,
+        220.72720336914062
+      ],
+      "text_sha256": "60449f69cbd5b325765944e852e7651c7b2bf966a44b2e97403299d4d32b938f"
+    },
+    {
+      "block_id": "page-0937-block-0009",
+      "order": 9,
+      "text": "None known\nCarbamazepine, \nchlordiazepoxide, \nchlorpromazine, \nmeprobamate, phenytoin, \ntrifluoperazine\nAgents associated with \npure red cell aplasia: \ncarbamazepine, clozapine, \nvalproate\n",
+      "bbox": [
+        232.6038055419922,
+        202.02220153808594,
+        424.5213317871094,
+        290.7096862792969
+      ],
+      "text_sha256": "3e19fdaaa278d334d61cf3bf743062488f4b40b145dba8138ef76dd8c4895272"
+    },
+    {
+      "block_id": "page-0937-block-0010",
+      "order": 10,
+      "text": "*Previous reports of eosinophilia-myalgia syndrome may have been due to a contaminant from a single \nmanufacturer.\n",
+      "bbox": [
+        61.888824462890625,
+        297.99969482421875,
+        393.058837890625,
+        316.7046813964844
+      ],
+      "text_sha256": "76094bbec8a75a423c705dd3f438b5eff7a0f9c772524f37d1ec98b42afd4971"
+    },
+    {
+      "block_id": "page-0937-block-0011",
+      "order": 11,
+      "text": "†May raise or lower levels.\n",
+      "bbox": [
+        61.889801025390625,
+        318.01971435546875,
+        144.73590087890625,
+        326.7272033691406
+      ],
+      "text_sha256": "c2761874f116ba6d408167cd9224b4de7c4f1ce0ae76a08d8faafb81c26c8836"
+    },
+    {
+      "block_id": "page-0937-block-0012",
+      "order": 12,
+      "text": "‡Note that in rare cases clozapine has been associated with a ‘morning pseudo-neutropenia’ with lower levels of \ncirculating neutrophil levels. As neutrophil counts may show circadian rhythms, repeating the FBC at a later time of \nday may be instructive.\n",
+      "bbox": [
+        61.889801025390625,
+        328.01971435546875,
+        430.83087158203125,
+        356.7221984863281
+      ],
+      "text_sha256": "aca4b2a6b7c91059f1cfab5771fb870dcd84cb408bb335f4d7ee3fc75e178984"
+    },
+    {
+      "block_id": "page-0937-block-0013",
+      "order": 13,
+      "text": "References\n",
+      "bbox": [
+        61.889801025390625,
+        374.56719970703125,
+        117.92379760742188,
+        387.6022033691406
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0937-block-0014",
+      "order": 14,
+      "text": "\t 1.\t BMJ Group and Pharmaceutical Press. British National Formulary 2020; https://www.medicinescomplete.com.\n\t 2.\t Aronson J. Meyler Side Effects of Drugs: the International Encyclopedia of Adverse Drug Reactions and Interactions. Elsevier Science; 2015.\n\t 3.\t Foster R. Clinical Laboratory Investigation and Psychiatry. A Practical Handbook. New York: Informa 2008.\n\t 4.\t Oyesanmi O, et al. Hematologic side effects of psychotropics. Psychosomatics 1999; 40: 414–421.\n\t 5.\t Stubner S, et al. Blood dyscrasias induced by psychotropic drugs. Pharmacopsychiatry 2004; 37 Suppl 1:S70-S78.\n\t 6.\t Pharmaceutical Press. Martindale: the Complete Drug Reference (online) 2020; https://www.medicinescomplete.com.\n\t 7.\t LiverTox: clinical and Research Information on Drug-Induced Liver Injury. Bethesda (MD): National Institute of Diabetes and Digestive and \n",
+      "bbox": [
+        61.889801025390625,
+        392.6882019042969,
+        435.551513671875,
+        453.72021484375
+      ],
+      "text_sha256": "2b7eec7138551d2c308fa4cc7d84cf8ac9a6f033f5029ee9d0bb79b910f0cd7c"
+    },
+    {
+      "block_id": "page-0937-block-0015",
+      "order": 15,
+      "text": "Kidney Diseases 2012; https://www.ncbi.nlm.nih.gov/books/NBK547852.\n\t 8.\t Medicines Complete. AHFS Drug Information 2020; https://www.medicinescomplete.com/mc/ahfs/current.\n\t 9.\t U.S. Food & Drug Administration. Drugs@FDA: FDA-Approved Drugs 2020; https://www.accessdata.fda.gov/scripts/cder/daf.\n\t10.\t Association for Clinical Biochemistry and Laboratory Medicine. Analyte Monographs Alongside the National Library of Medicine Catalogue \n",
+      "bbox": [
+        61.931800842285156,
+        455.6882019042969,
+        435.58770751953125,
+        489.72021484375
+      ],
+      "text_sha256": "313044f2aea5bf44474a7690d20c640e3b1f917738c2bf93669ad8bc3c675bea"
+    },
+    {
+      "block_id": "page-0937-block-0016",
+      "order": 16,
+      "text": "2020; http://www.acb.org.uk/whatwedo/science/amalc.aspx.\n",
+      "bbox": [
+        72.94779968261719,
+        491.6882019042969,
+        228.7677764892578,
+        498.72021484375
+      ],
+      "text_sha256": "a3491476ed5900848c014839c562c4bb466f7e5870f6dbf7e34d89db01d30eeb"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

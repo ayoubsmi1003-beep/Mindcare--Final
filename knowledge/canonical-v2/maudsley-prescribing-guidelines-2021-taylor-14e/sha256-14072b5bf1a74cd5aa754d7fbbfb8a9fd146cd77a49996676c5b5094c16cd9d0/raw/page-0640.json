@@ -1,0 +1,107 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0640",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 640,
+  "source_page_index": 639,
+  "source_page_display": 640,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Prescribing in older people    619\nCHAPTER  6\nA Cochrane review of Omega-3 fatty acids for the treatment of dementia included \nthree trials that investigated 632 people with mild-to-moderate AD. The review found \nthat taking omega-3 PUFA supplements for 6 months had no effect on cognition (learning \nand understanding), everyday functioning, quality of life or mental health. It also had no \neffect on ratings of the overall severity of the illness. The trials did not report side effects \nvery well, but none of the studies described significant harmful effects on health.90\nA prospective open-label study of ginseng in AD measured cognitive performance in \n97 patients randomly assigned ginseng or placebo for 12 weeks and then 12 weeks after \nthe ginseng had been discontinued. After ginseng treatment, the cognitive subscales of \nADAS and MMSE scores began to show improvement continued up to 12 weeks but \nscores declined to levels of the control group following discontinuation of ginseng.91 A \nrecent systematic review and meta-analysis, including four RCTs involving 259 partici-\npants, showed that the effects of ginseng on AD remain unproven. The main limitations \nof the available studies were small sample sizes, poor methodological qualities and no \nplacebo controls. Larger, well-designed studies are needed to test the effect of ginseng \non AD in the future.92\nDimebon (also known as latrepirdine), a non-selective antihistamine previously \napproved in Russia but later discontinued for commercial reasons, has been assessed \nfor safety, tolerability and efficacy in the treatment of patients with mild-to-moderate \nAD. It acts as a weak inhibitor of BuChE and AChE, weakly blocks the NMDA-receptor \nsignalling pathway and inhibits the mitochondrial permeability transition pore opening.93  \nA recent Cochrane review concluded that there was no beneficial effect of dimebon on \ncognition and function in mild-to-moderate AD, though there appeared to be modest \nbenefit for behaviour.94\nNatural hirudin, isolated from salivary gland of medicinal leech, is a direct thrombin \ninhibitor and has been used for many years in China. A small 20-week open-label RCT \nof 84 patients receiving donepezil or donepezil plus hirudin (3g/day) found that patients \non the combination showed significant decrease in ADAS-Cog scores and significant \nincrease in ADL scores when compared with donepezil alone. However, haemorrhage \nand hypersensitivity reactions were more common in the combination group compared \nwith donepezil group (11.9% and 7.1% vs 2.4% and 2.4%, respectively).95 The poten-\ntial haemorrhagic effects of hirudin need further exploration before it can be consid-\nered for clinical use.\nHuperzine A, an alkaloid isolated from the Chinese herb Huperzia serrata, is a potent, \nhighly selective, reversible AChE-I used for treating AD since 1994 in China and availa-\nble as a nutraceutical in the USA. A meta-analysis found that huperzine A 300–500μg \ndaily for 8–24 weeks in AD led to significant improvements in MMSE (mean change 3.5) \nand ADL with effect size shown to increase over treatment time. Most adverse effects \nwere cholinergic in nature and no serious adverse effects occurred.96 A later meta-anal-\nysis produced similarly positive, if uncertain, results.97 A Cochrane review of huperzine \nA in vascular dementia, however, found no convincing evidence for its value in vascular \ndementia.98 Similarly, a Cochrane review of huperzine A for MCI concluded that the \ncurrent evidence is insufficient for this indication as no eligible trials were identified at \nthe time.99 However, in a recent network meta-analysis, huperzine A achieved good \nefficacy in the mild and moderate cognitive function decline groups.100\n",
+  "raw_text_sha256": "eea804aa67a1e8e900590393982caf4655cf6cbe94686f7beed22c5ffaa6bc9d",
+  "coordinates_sha256": "d6ec2da546d30ebbd8e25a3ff45694b8cd474a70ab1ff0d3d8587d5fb741b89d",
+  "block_sequence_sha256": "a28b8764e6d8d9e5edb85e3ed06a4cccd4a1b9eeaf099c80610217c5b2455a37",
+  "blocks": [
+    {
+      "block_id": "page-0640-block-0000",
+      "order": 0,
+      "text": "Prescribing in older people    619\n",
+      "bbox": [
+        281.576904296875,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "3eb4a6f13abbdfef35b0295d8620feb87f45bcf61b24fb009aff94933206e0d1"
+    },
+    {
+      "block_id": "page-0640-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        454.4096984863281,
+        405.35260009765625,
+        463.88970947265625,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0640-block-0002",
+      "order": 2,
+      "text": "A Cochrane review of Omega-3 fatty acids for the treatment of dementia included \nthree trials that investigated 632 people with mild-to-moderate AD. The review found \nthat taking omega-3 PUFA supplements for 6 months had no effect on cognition (learning \nand understanding), everyday functioning, quality of life or mental health. It also had no \neffect on ratings of the overall severity of the illness. The trials did not report side effects \nvery well, but none of the studies described significant harmful effects on health.90\n",
+      "bbox": [
+        48.0,
+        62.31041717529297,
+        422.8199462890625,
+        134.27041625976562
+      ],
+      "text_sha256": "e3445ebf8622a2becde7c7d8f8241219dd9a25bc1524538392ebced42e37d61e"
+    },
+    {
+      "block_id": "page-0640-block-0003",
+      "order": 3,
+      "text": "A prospective open-label study of ginseng in AD measured cognitive performance in \n97 patients randomly assigned ginseng or placebo for 12 weeks and then 12 weeks after \nthe ginseng had been discontinued. After ginseng treatment, the cognitive subscales of \nADAS and MMSE scores began to show improvement continued up to 12 weeks but \nscores declined to levels of the control group following discontinuation of ginseng.91 A \nrecent systematic review and meta-analysis, including four RCTs involving 259 partici-\npants, showed that the effects of ginseng on AD remain unproven. The main limitations \nof the available studies were small sample sizes, poor methodological qualities and no \nplacebo controls. Larger, well-designed studies are needed to test the effect of ginseng \non AD in the future.92\n",
+      "bbox": [
+        48.0,
+        134.3104248046875,
+        422.8101806640625,
+        254.27047729492188
+      ],
+      "text_sha256": "93edece86eaa4748c176d8f8b33f3670277ed9c4ef0bfbdb14b8ceb287e515cc"
+    },
+    {
+      "block_id": "page-0640-block-0004",
+      "order": 4,
+      "text": "Dimebon (also known as latrepirdine), a non-selective antihistamine previously \napproved in Russia but later discontinued for commercial reasons, has been assessed \nfor safety, tolerability and efficacy in the treatment of patients with mild-to-moderate \nAD. It acts as a weak inhibitor of BuChE and AChE, weakly blocks the NMDA-receptor \nsignalling pathway and inhibits the mitochondrial permeability transition pore opening.93  \nA recent Cochrane review concluded that there was no beneficial effect of dimebon on \ncognition and function in mild-to-moderate AD, though there appeared to be modest \nbenefit for behaviour.94\n",
+      "bbox": [
+        48.0,
+        254.31048583984375,
+        424.48040771484375,
+        350.2704772949219
+      ],
+      "text_sha256": "e119fa43f2241b3d0b21b6775f8a3d5e5e3f1d393a477597914c756e2ebe5bd7"
+    },
+    {
+      "block_id": "page-0640-block-0005",
+      "order": 5,
+      "text": "Natural hirudin, isolated from salivary gland of medicinal leech, is a direct thrombin \ninhibitor and has been used for many years in China. A small 20-week open-label RCT \nof 84 patients receiving donepezil or donepezil plus hirudin (3g/day) found that patients \non the combination showed significant decrease in ADAS-Cog scores and significant \nincrease in ADL scores when compared with donepezil alone. However, haemorrhage \nand hypersensitivity reactions were more common in the combination group compared \nwith donepezil group (11.9% and 7.1% vs 2.4% and 2.4%, respectively).95 The poten-\ntial haemorrhagic effects of hirudin need further exploration before it can be consid-\nered for clinical use.\n",
+      "bbox": [
+        48.0,
+        350.31048583984375,
+        422.82000732421875,
+        458.2704772949219
+      ],
+      "text_sha256": "f2231e7b630cde9bf70d8af17662a0632f6a0534cbd042449923cabfc55221b5"
+    },
+    {
+      "block_id": "page-0640-block-0006",
+      "order": 6,
+      "text": "Huperzine A, an alkaloid isolated from the Chinese herb Huperzia serrata, is a potent, \nhighly selective, reversible AChE-I used for treating AD since 1994 in China and availa-\nble as a nutraceutical in the USA. A meta-analysis found that huperzine A 300–500μg \ndaily for 8–24 weeks in AD led to significant improvements in MMSE (mean change 3.5) \nand ADL with effect size shown to increase over treatment time. Most adverse effects \nwere cholinergic in nature and no serious adverse effects occurred.96 A later meta-anal-\nysis produced similarly positive, if uncertain, results.97 A Cochrane review of huperzine \nA in vascular dementia, however, found no convincing evidence for its value in vascular \ndementia.98 Similarly, a Cochrane review of huperzine A for MCI concluded that the \ncurrent evidence is insufficient for this indication as no eligible trials were identified at \nthe time.99 However, in a recent network meta-analysis, huperzine A achieved good \nefficacy in the mild and moderate cognitive function decline groups.100\n",
+      "bbox": [
+        47.99578857421875,
+        458.31048583984375,
+        422.7914733886719,
+        602.2704467773438
+      ],
+      "text_sha256": "fd6d69eca604935fb286f13aa4c979cd06fc2a7e9e259d5c9ba3f7116c4f7002"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

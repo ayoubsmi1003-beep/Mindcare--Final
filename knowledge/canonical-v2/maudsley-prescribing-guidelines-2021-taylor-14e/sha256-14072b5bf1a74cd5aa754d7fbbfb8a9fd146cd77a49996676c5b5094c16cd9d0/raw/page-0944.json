@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0944",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 944,
+  "source_page_index": 943,
+  "source_page_display": 944,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Miscellany    923\nCHAPTER 14\nPrescribing drugs outside their licensed indications (‘off-label’ \nprescribing or unapproved use of approved drugs)\nA Product Licence (PL) is granted when regulatory authorities are satisfied that the \ndrug in question has proven efficacy in the treatment of a specified disorder, along with \nan acceptable side-effect profile, relative to the severity of the disorder being treated \nand other available treatments. Licensed indications are preparation-specific, outlined \nin the Summary of Product Characteristics (SPC), and may be different for branded and \ngeneric formulations of the same drug.1 In the US, product ‘labelling’ has a similar legal \nstatus to EU licensing.\nThe decision of a manufacturer to seek a PL for a given indication is essentially a \ncommercial one; potential sales are balanced against the cost of conducting the neces-\nsary clinical trials. It therefore follows that drugs may be effective outside their licensed \nindications for different disease states, age ranges, doses and durations. The absence of \na formal PL or labelling may simply reflect the absence of controlled trials supporting \nthe drug’s efficacy in these areas. In other cases (e.g. sertraline or quetiapine in GAD) \nthere is sufficient evidence but a licence has not been sought by the manufacturer. \nImportantly, however, it is also possible that trials have been conducted but given nega-\ntive or equivocal results. Clinicians often assume that drugs with a similar mode of \naction will be similarly effective for a given indication, and in many cases this may be \ntrue. For example, the efficacy of aripiprazole, olanzapine, quetiapine and risperidone \nin reducing behavioural and psychological symptoms (BPSD) in people with dementia \nis similar,2 yet in the EU, only risperidone is licensed for this indication.\nPrescribing a drug within its licence or labelling does not guarantee that the patient \nwill come to no harm. Likewise, prescribing outside a licence does not mean that the \nrisk-benefit ratio is automatically adverse. In the BPSD example given above, risperi-\ndone is not clearly better tolerated than other antipsychotics.2 Prescribing outside a \nlicence, usually called ‘off-label’, does confer extra responsibilities on prescribers, who \nwill be expected to be able to show that they acted in accordance with a respected body \nof medical opinion (the Bolam test)3 and that their action was capable of withstanding \nlogical analysis (the Bolitho test).4 Both have effectively been superseded, or at least \nclarified, by the Montgomery vs Lanarkshire Health Board appeal case decision5 which \nstated:\nAn adult person of sound mind is entitled to decide which, if any, of the available \nforms of treatment to undergo, and her consent must be obtained before treatment \ninterfering with her bodily integrity is undertaken. The doctor is therefore under a duty \nto take reasonable care to ensure that the patient is aware of any material risks involved \nin any recommended treatment, and of any reasonable alternative or variant treat-\nments. The test of materiality is whether, in the circumstances of the particular case, a \nreasonable person in the patient’s position would be likely to attach significant to the \nrisk, or the doctor is or should reasonable be aware that the particular patient would be \nlikely to attach significance to it.\nThus, in the UK at least, the prescriber has a duty to make a patient aware of any \nmaterial risks associated with the prescribing of any medicines and to outline \nalternatives.\n",
+  "raw_text_sha256": "95e8a383f0eb083970513ed9c29763c107e60c5874da3773a6b20cf09141d1a8",
+  "coordinates_sha256": "2a59cc3e7233aef4c08f874ee22d9e8a05831f7ffb753511c5452a768e578d97",
+  "block_sequence_sha256": "11cbf2e2751499cdf832863e2d1567cc0ca7e76c0fee84f61c3a3dc214c508b3",
+  "blocks": [
+    {
+      "block_id": "page-0944-block-0000",
+      "order": 0,
+      "text": "Miscellany    923\n",
+      "bbox": [
+        349.2962951660156,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "c5fdd05684ab59ae4a3bc257f15884c7dc1959dca197405b937d9e37384f6014"
+    },
+    {
+      "block_id": "page-0944-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        454.4096984863281,
+        338.7405090332031,
+        463.88970947265625,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0944-block-0002",
+      "order": 2,
+      "text": "Prescribing drugs outside their licensed indications (‘off-label’ \nprescribing or unapproved use of approved drugs)\n",
+      "bbox": [
+        55.039398193359375,
+        65.14218139648438,
+        376.7345275878906,
+        90.17816162109375
+      ],
+      "text_sha256": "dba45004c0b3d7e7c5b60d9c0293d7f4d07cac23e57c73cebe868832bda1fe6d"
+    },
+    {
+      "block_id": "page-0944-block-0003",
+      "order": 3,
+      "text": "A Product Licence (PL) is granted when regulatory authorities are satisfied that the \ndrug in question has proven efficacy in the treatment of a specified disorder, along with \nan acceptable side-effect profile, relative to the severity of the disorder being treated \nand other available treatments. Licensed indications are preparation-specific, outlined \nin the Summary of Product Characteristics (SPC), and may be different for branded and \ngeneric formulations of the same drug.1 In the US, product ‘labelling’ has a similar legal \nstatus to EU licensing.\n",
+      "bbox": [
+        48.039398193359375,
+        97.4871826171875,
+        422.84942626953125,
+        181.20718383789062
+      ],
+      "text_sha256": "201ce10d7285afff6216335c9783a0ed2a8d9dad713e45b8ad19c446cfff91fd"
+    },
+    {
+      "block_id": "page-0944-block-0004",
+      "order": 4,
+      "text": "The decision of a manufacturer to seek a PL for a given indication is essentially a \ncommercial one; potential sales are balanced against the cost of conducting the neces-\nsary clinical trials. It therefore follows that drugs may be effective outside their licensed \nindications for different disease states, age ranges, doses and durations. The absence of \na formal PL or labelling may simply reflect the absence of controlled trials supporting \nthe drug’s efficacy in these areas. In other cases (e.g. sertraline or quetiapine in GAD) \nthere is sufficient evidence but a licence has not been sought by the manufacturer. \nImportantly, however, it is also possible that trials have been conducted but given nega-\ntive or equivocal results. Clinicians often assume that drugs with a similar mode of \naction will be similarly effective for a given indication, and in many cases this may be \ntrue. For example, the efficacy of aripiprazole, olanzapine, quetiapine and risperidone \nin reducing behavioural and psychological symptoms (BPSD) in people with dementia \nis similar,2 yet in the EU, only risperidone is licensed for this indication.\n",
+      "bbox": [
+        48.039794921875,
+        181.4871826171875,
+        422.8698425292969,
+        337.2071838378906
+      ],
+      "text_sha256": "b707cb45de824b863e658a2a9d454b077a925c5a4afb0a8fe35ab4bb102f77eb"
+    },
+    {
+      "block_id": "page-0944-block-0005",
+      "order": 5,
+      "text": "Prescribing a drug within its licence or labelling does not guarantee that the patient \nwill come to no harm. Likewise, prescribing outside a licence does not mean that the \nrisk-benefit ratio is automatically adverse. In the BPSD example given above, risperi-\ndone is not clearly better tolerated than other antipsychotics.2 Prescribing outside a \nlicence, usually called ‘off-label’, does confer extra responsibilities on prescribers, who \nwill be expected to be able to show that they acted in accordance with a respected body \nof medical opinion (the Bolam test)3 and that their action was capable of withstanding \nlogical analysis (the Bolitho test).4 Both have effectively been superseded, or at least \nclarified, by the Montgomery vs Lanarkshire Health Board appeal case decision5 which \nstated:\n",
+      "bbox": [
+        48.0369873046875,
+        337.4871826171875,
+        422.8703918457031,
+        457.2071838378906
+      ],
+      "text_sha256": "ab1ac871c9cd15d31d2b52f3117a85cd44b9c880df13f0411de2a07762d3971c"
+    },
+    {
+      "block_id": "page-0944-block-0006",
+      "order": 6,
+      "text": "An adult person of sound mind is entitled to decide which, if any, of the available \nforms of treatment to undergo, and her consent must be obtained before treatment \ninterfering with her bodily integrity is undertaken. The doctor is therefore under a duty \nto take reasonable care to ensure that the patient is aware of any material risks involved \nin any recommended treatment, and of any reasonable alternative or variant treat-\nments. The test of materiality is whether, in the circumstances of the particular case, a \nreasonable person in the patient’s position would be likely to attach significant to the \nrisk, or the doctor is or should reasonable be aware that the particular patient would be \nlikely to attach significance to it.\n",
+      "bbox": [
+        48.0369873046875,
+        457.6571960449219,
+        422.8668518066406,
+        565.2072143554688
+      ],
+      "text_sha256": "7fd5438b2fd82efadad2d4fd18608310afd97e995390aa2ab763d6b7d3289cde"
+    },
+    {
+      "block_id": "page-0944-block-0007",
+      "order": 7,
+      "text": "Thus, in the UK at least, the prescriber has a duty to make a patient aware of any \nmaterial risks associated with the prescribing of any medicines and to outline \nalternatives.\n",
+      "bbox": [
+        48.0369873046875,
+        565.4871826171875,
+        422.7968444824219,
+        601.2072143554688
+      ],
+      "text_sha256": "40f3717f13ce08115fd4110a2669e2d0c91bea43f14f662113872f9f227b5663"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

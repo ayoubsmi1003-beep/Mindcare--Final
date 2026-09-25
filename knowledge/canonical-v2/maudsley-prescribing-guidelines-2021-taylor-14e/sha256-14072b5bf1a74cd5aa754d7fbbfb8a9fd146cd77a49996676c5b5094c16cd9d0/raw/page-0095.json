@@ -1,0 +1,107 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0095",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 95,
+  "source_page_index": 94,
+  "source_page_display": 95,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "74    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nManagement of patients on long-term depots/LAIs\nAll patients receiving long-term treatment with antipsychotic medication should be seen \nby their responsible psychiatrist at least once a year (ideally more frequently) in order to \nreview their treatment and progress. A systematic assessment of tolerability and safety \nshould constitute part of this review. The assessment of adverse effects should include EPS \n(principally parkinsonism, akathisia, and tardive dyskinesia). Assessment of tardive dyski-\nnesia can be recorded by scoring the Abnormal Involuntary Movement Scale (AIMS).1,2 \nWhile some study findings have suggested that LAI antipsychotic medication may be \nmore likely to be associated with tardive dyskinesia than oral antipsychotic medication, \nthis remains uncertain:3–5 when using the same antipsychotic medication, the risk of tar-\ndive dyskinesia does not appear to be different between the LAI and oral formulations.6,7\nFor most people with multi-episode schizophrenia, long-term antipsychotic treat-\nment, even lifelong treatment, may be necessary. Overall, for those with stable illnesses, \nit has been proposed that the dosage of continuing antipsychotic treatment should be \nat least 50% of the standard daily dosage, as reduction below this level is associated \nwith a greater risk of relapse.8 Thus, long-term follow-up is essential when antipsy-\nchotic dosage is decreased, particularly to very low doses, as such reduction is associ-\nated with a greater risk of treatment failure, hospitalisation and relapse,9 which may \nonly become evident over the longer term.\nHowever, with the long-term treatment of patients with stable illness with LAI antip-\nsychotic formulations, dose reduction may be considered on the basis that patients \noften receive supratherapeutic doses. In trials, haloperidol decanoate is optimally effec-\ntive at 75mg every four weeks,9,10 paliperidone palmitate at 50mg a month.11 Doses as \nlow as these are almost unheard of in practice. Furthermore, the threshold level of \nstriatal dopamine D2 receptor occupancy required for relapse prevention may be lower \nthan that for the treatment of an acute episode.12–14 Nevertheless, for people with schiz-\nophrenia, reduction below the standard dosage seems to be clearly associated with a \ngreater risk of relapse, particularly in the longer term. A study comparing fluphenazine \ndecanoate at a low (5mg every two weeks) or standard (25mg every two weeks) dosage \nfound no difference in outcome at one year but a substantial disadvantage for the lower \ndose at two years (relapse in 69% and 36%, respectively).15 However, in the same study, \nthe facility to increase the dose when symptoms emerged removed the advantage for the \nhigher dose. Another trial comparing low-dose fluphenazine decanoate (1.25–5mg \nevery two weeks) with standard dosage (12.5 to 50mg every 2 weeks) also found the \nlow-dose to be clearly inferior, with cumulative one-year relapse rates of 56% and 7%, \nrespectively.16 Similarly, an RCT comparison of four, fixed, monthly doses (25mg, 50mg, \n100mg or 200mg) of LAI haloperidol medication over a year17 found that the standard \n200mg dose was associated with the lowest rate of relapse and symptomatic exacerba-\ntion (15%), compared with the 100mg (23%) or 50mg (25%) doses (although not \nstatistically significant), but only a minimally increased risk of adverse effects.\nThere is no simple formula for deciding when or whether to reduce the dose of con-\ntinuing antipsychotic treatment, and so a risk/benefit analysis must be carried out for \nevery patient. Many patients, it should be noted, prefer to receive LAI antipsychotic \npreparations.7,18\n",
+  "raw_text_sha256": "63e0d425cd09bca93d71b58954feef39615022380c896accca4d6a65cce7cdcd",
+  "coordinates_sha256": "1434b3bac70f0de9074b37afd063ca4cba91a71d81c3cde7e902152e5f56d5df",
+  "block_sequence_sha256": "e9a21ff9ccb82312255fe9109f49de2ce6bcf4c0bd1ac146ec1fd3028ca07e13",
+  "blocks": [
+    {
+      "block_id": "page-0095-block-0000",
+      "order": 0,
+      "text": "74    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "dfc3c0907403179d367e448eb4f6ccf753307c03437ded5c7487439de7ae0a7f"
+    },
+    {
+      "block_id": "page-0095-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0095-block-0002",
+      "order": 2,
+      "text": "Management of patients on long-term depots/LAIs\n",
+      "bbox": [
+        68.88890075683594,
+        66.06448364257812,
+        332.3058776855469,
+        79.0994873046875
+      ],
+      "text_sha256": "79ab962d682fc2532f54bd2be39eb7f8969f9896b9e89f1f716da1bdb9dab33a"
+    },
+    {
+      "block_id": "page-0095-block-0003",
+      "order": 3,
+      "text": "All patients receiving long-term treatment with antipsychotic medication should be seen \nby their responsible psychiatrist at least once a year (ideally more frequently) in order to \nreview their treatment and progress. A systematic assessment of tolerability and safety \nshould constitute part of this review. The assessment of adverse effects should include EPS \n(principally parkinsonism, akathisia, and tardive dyskinesia). Assessment of tardive dyski-\nnesia can be recorded by scoring the Abnormal Involuntary Movement Scale (AIMS).1,2 \nWhile some study findings have suggested that LAI antipsychotic medication may be \nmore likely to be associated with tardive dyskinesia than oral antipsychotic medication, \nthis remains uncertain:3–5 when using the same antipsychotic medication, the risk of tar-\ndive dyskinesia does not appear to be different between the LAI and oral formulations.6,7\n",
+      "bbox": [
+        61.88887023925781,
+        84.90948486328125,
+        436.6988830566406,
+        204.62948608398438
+      ],
+      "text_sha256": "daec184be5b3ca1bf6ec781f69ad9913ac54aaf6db5f2c524e9dcde3a2595de8"
+    },
+    {
+      "block_id": "page-0095-block-0004",
+      "order": 4,
+      "text": "For most people with multi-episode schizophrenia, long-term antipsychotic treat-\nment, even lifelong treatment, may be necessary. Overall, for those with stable illnesses, \nit has been proposed that the dosage of continuing antipsychotic treatment should be \nat least 50% of the standard daily dosage, as reduction below this level is associated \nwith a greater risk of relapse.8 Thus, long-term follow-up is essential when antipsy-\nchotic dosage is decreased, particularly to very low doses, as such reduction is associ-\nated with a greater risk of treatment failure, hospitalisation and relapse,9 which may \nonly become evident over the longer term.\n",
+      "bbox": [
+        61.88432312011719,
+        204.90951538085938,
+        436.6888122558594,
+        300.6295166015625
+      ],
+      "text_sha256": "2785404a585dfd14e7381e0fa87bebfd7da7933d2569c3fbe1e18ead21955fdc"
+    },
+    {
+      "block_id": "page-0095-block-0005",
+      "order": 5,
+      "text": "However, with the long-term treatment of patients with stable illness with LAI antip-\nsychotic formulations, dose reduction may be considered on the basis that patients \noften receive supratherapeutic doses. In trials, haloperidol decanoate is optimally effec-\ntive at 75mg every four weeks,9,10 paliperidone palmitate at 50mg a month.11 Doses as \nlow as these are almost unheard of in practice. Furthermore, the threshold level of \nstriatal dopamine D2 receptor occupancy required for relapse prevention may be lower \nthan that for the treatment of an acute episode.12–14 Nevertheless, for people with schiz-\nophrenia, reduction below the standard dosage seems to be clearly associated with a \ngreater risk of relapse, particularly in the longer term. A study comparing fluphenazine \ndecanoate at a low (5mg every two weeks) or standard (25mg every two weeks) dosage \nfound no difference in outcome at one year but a substantial disadvantage for the lower \ndose at two years (relapse in 69% and 36%, respectively).15 However, in the same study, \nthe facility to increase the dose when symptoms emerged removed the advantage for the \nhigher dose. Another trial comparing low-dose fluphenazine decanoate (1.25–5mg \nevery two weeks) with standard dosage (12.5 to 50mg every 2 weeks) also found the \nlow-dose to be clearly inferior, with cumulative one-year relapse rates of 56% and 7%, \nrespectively.16 Similarly, an RCT comparison of four, fixed, monthly doses (25mg, 50mg, \n100mg or 200mg) of LAI haloperidol medication over a year17 found that the standard \n200mg dose was associated with the lowest rate of relapse and symptomatic exacerba-\ntion (15%), compared with the 100mg (23%) or 50mg (25%) doses (although not \nstatistically significant), but only a minimally increased risk of adverse effects.\n",
+      "bbox": [
+        61.88432312011719,
+        300.9095153808594,
+        436.7220764160156,
+        552.6295166015625
+      ],
+      "text_sha256": "8dc24d2338fd58ef740f6a21d4272dbf183a1f199d755f607cdeb577c9a94993"
+    },
+    {
+      "block_id": "page-0095-block-0006",
+      "order": 6,
+      "text": "There is no simple formula for deciding when or whether to reduce the dose of con-\ntinuing antipsychotic treatment, and so a risk/benefit analysis must be carried out for \nevery patient. Many patients, it should be noted, prefer to receive LAI antipsychotic \npreparations.7,18\n",
+      "bbox": [
+        61.88771057128906,
+        552.9094848632812,
+        436.6876525878906,
+        600.6295166015625
+      ],
+      "text_sha256": "c38aa57cab88ce17f5a599f34522bfaa9cd6f30798eeb6e296eb51af7a4e6dd7"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

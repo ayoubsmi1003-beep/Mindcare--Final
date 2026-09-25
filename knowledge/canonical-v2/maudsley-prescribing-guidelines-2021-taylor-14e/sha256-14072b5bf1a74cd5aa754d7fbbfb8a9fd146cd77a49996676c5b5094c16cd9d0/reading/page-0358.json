@@ -1,0 +1,15 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0358",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 358,
+  "source_page_index": 357,
+  "repaired_text": "Depression and anxiety disorders    337\nCHAPTER 3\n■\n■Agomelatine does not seem to be associated with a discontinuation syndrome,6 but\nslow withdrawal when switching is nonetheless recommended. Given agomelatine’s \nmode of action (melatonin agonism; 5HT2C antagonism), it is not expected to miti-\ngate discontinuation reactions of other antidepressants. There is no theoretical basis \nto suggest that pharmacodynamic interactions might occur between agomelatine and \nother co-administered antidepressants, but caution is advised in the absence of useful \ndata. Some pharmacokinetic interactions do occur, and agomelatine should not be \nadministered with fluvoxamine.\n■\n■Serotonin syndrome can occur with a single serotonergic drug at a therapeutic dose\nor more frequently in combination of serotonergic drugs or in overdose. Most severe \ncases of serotonin syndrome involve an MAOI (including moclobemide) plus an \nSSRI.7,8 Caution is advised when switching strategies call for the combining of sero-\ntonergic drugs.\nSerotonin syndrome – symptoms11\nIncreasing severity\nSeverity\nSymptoms\nMild\nInsomnia, anxiety, nausea, diarrhoea,\nhypertension, tachycardia, hyper-reflexia\nModerate\nAgitation, myoclonus, tremor, mydriasis,\nflushing, diaphoresis, low fever (<38.5°C)\nSevere\nSevere hyperthermia, confusion, rigidity,\nrespiratory failure, coma, death\nThe advice given in Table 3.7 should be treated with caution and patients should be \nvery carefully monitored when switching.",
+  "repaired_text_sha256": "bf4d4a321412dc91009c0635ae91e5994d585f6447692f5fc4d7cb9b1128307d",
+  "raw_text_sha256": "a24f3a2cbb2f9534dc133c4d10c1a52f79374d71fbd49ea99b4020f4e0883f29",
+  "repair_ids": [
+    "repair-000392",
+    "repair-000393"
+  ],
+  "raw_file": "raw/page-0358.json"
+}

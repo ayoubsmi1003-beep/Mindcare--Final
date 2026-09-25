@@ -1,0 +1,359 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0603",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 603,
+  "source_page_index": 602,
+  "source_page_display": 603,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "582    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  5\nBox 5.3  FDA Guidance for risperidone dosing in children and adolescents68\nDoses of Risperidone in Paediatric Patients with Autism Spectrum Disorders (by total mg/day)\nWeight \ncategories\nDays 1–3\nDays 4–18\nIncrements if dose increases \nare needed\nDose range\n<20kg*\n0.25mg\n0.5mg\n+0.25mg\nat ≥2 week intervals\n0.5mg–3mg**\n≥20kg\n0.5mg\n1.0mg\n+0.5mg\nat ≥2 week intervals\n1.0mg–3mg***\n*Caution should be exercised for children <15kg – no dosing data available\n**Therapeutic effect plateaus at 1mg/day\n***Those weighing >45kg may require higher doses – therapeutic effect plateaus at 3mg\nGeneral considerations\n■\n■Risperidone can be administered once daily or twice daily.\n■\n■Patients experiencing somnolence may benefit from taking the whole daily dose at bedtime.\n■\n■Once sufficient clinical response has been achieved and maintained, consideration may be given \nto gradually lowering the dose to achieve the optimal balance of efficacy and safety.\n■\n■There is insufficient evidence from controlled trials to indicate how long treatment should continue.\nAdverse effects\nWeight gain, somnolence and hyperglycaemia require monitoring, and the long-term safety of \nrisperidone in children and adolescents with ASD remains to be fully determined\nUsing benzodiazepines (BZ) to manage irritability and aggression in ASD is not recom-\nmended. However, it may be necessary to manage acute aggression with a BZ. The pos-\nsibility of behavioural disinhibition which may worsen aggression must be born in mind.\nRecent guidance from BAP does not recommend the use of minocycline, arbaclofen \nor amantadine for irritability before better evidence from randomised double-blind \ncontrolled trials is available.6\nSleep disturbance\nChildren with ASD have significant sleep problems69 with sleep-onset insomnia, sleep-mainte-\nnance insomnia and irregularities of the sleep–wake cycle being the typical problems encoun-\ntered. It is essential to understand the aetiology of the sleep problem before embarking on a \ncourse of treatment. Abnormalities in the melatonin system have received some attention.70\nUse of risperidone in children and adolescents\nRisperidone is indicated for the treatment of irritability associated with autistic disor-\nder in children (aged 5 and over) and adolescents in the UK/EU and the United States\nThe dosage of risperidone should be individualised according to the response of the \npatient.\n",
+  "raw_text_sha256": "25e92f9a0dbae69ab8ebf4c5ca5b138c0595bcdfce104f792828e8fa2897d75b",
+  "coordinates_sha256": "c913c04e6404ad2c355c85e678c4471f5c65def657f142bb56bde8fc1b8eaff5",
+  "block_sequence_sha256": "6e4e0a45f6d028bf5ee5bab03cd8cb7c86d2eb7d4f963d3ca45bd2c6b697495d",
+  "blocks": [
+    {
+      "block_id": "page-0603-block-0000",
+      "order": 0,
+      "text": "582    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "bb59f5d7a52041e36b6ef1f89ec9da853e096fad8a4bf55998e7a8075ed3197e"
+    },
+    {
+      "block_id": "page-0603-block-0001",
+      "order": 1,
+      "text": "CHAPTER  5\n",
+      "bbox": [
+        18.520000457763672,
+        338.22650146484375,
+        28.0,
+        381.79449462890625
+      ],
+      "text_sha256": "4086e0916f45ec531cc17b8c611334eb2b1ef26051ba536579b8ef3c22c1648d"
+    },
+    {
+      "block_id": "page-0603-block-0002",
+      "order": 2,
+      "text": "Box 5.3  FDA Guidance for risperidone dosing in children and adolescents68\n",
+      "bbox": [
+        69.13999938964844,
+        144.84986877441406,
+        342.31280517578125,
+        154.92236328125
+      ],
+      "text_sha256": "f53bdc2463ba7aa640bd0a6b59222164e31c7b2450dca25128b3b1cfc54f78b6"
+    },
+    {
+      "block_id": "page-0603-block-0003",
+      "order": 3,
+      "text": "Doses of Risperidone in Paediatric Patients with Autism Spectrum Disorders (by total mg/day)\n",
+      "bbox": [
+        69.13999938964844,
+        164.5498809814453,
+        426.0295715332031,
+        174.62237548828125
+      ],
+      "text_sha256": "0f7c6e0954144a54b8e6970888984159f22fb4c6bc7c712c3ade6d7955696e3e"
+    },
+    {
+      "block_id": "page-0603-block-0004",
+      "order": 4,
+      "text": "Weight \ncategories\nDays 1–3\nDays 4–18\n",
+      "bbox": [
+        69.13999938964844,
+        190.6099090576172,
+        226.64749145507812,
+        209.49490356445312
+      ],
+      "text_sha256": "913a914dc7429f40d3909c85522717ffda6d9069eedbe0813f229070f778d4e5"
+    },
+    {
+      "block_id": "page-0603-block-0005",
+      "order": 5,
+      "text": "Increments if dose increases \nare needed\nDose range\n",
+      "bbox": [
+        250.8874969482422,
+        190.6099090576172,
+        408.0050048828125,
+        209.49490356445312
+      ],
+      "text_sha256": "61bf1fd881f9a345802692358c39bf947d05b93a91979171608ff067bcdc5441"
+    },
+    {
+      "block_id": "page-0603-block-0006",
+      "order": 6,
+      "text": "<20kg*\n0.25mg\n0.5mg\n+0.25mg\nat ≥2 week intervals\n",
+      "bbox": [
+        69.1400146484375,
+        215.8098907470703,
+        315.13250732421875,
+        234.514892578125
+      ],
+      "text_sha256": "660ccef416572d0dcf8b1b39923f3c0f8a089088506c034dc993df4d5a759fc2"
+    },
+    {
+      "block_id": "page-0603-block-0007",
+      "order": 7,
+      "text": "0.5mg–3mg**\n",
+      "bbox": [
+        368.0,
+        215.8098907470703,
+        415.52008056640625,
+        224.51739501953125
+      ],
+      "text_sha256": "60a1b3dc98bd7e49e3f48dfd370427fcf7e5151ea9c8796eaad405947561dbcc"
+    },
+    {
+      "block_id": "page-0603-block-0008",
+      "order": 8,
+      "text": "≥20kg\n0.5mg\n1.0mg\n+0.5mg\nat ≥2 week intervals\n",
+      "bbox": [
+        69.1400146484375,
+        240.83738708496094,
+        315.13250732421875,
+        259.5423889160156
+      ],
+      "text_sha256": "a2e4c5ca071414ecce3d0b97cf8fe9eefe446a3d6cf6ee5c1a691dbe327eae0f"
+    },
+    {
+      "block_id": "page-0603-block-0009",
+      "order": 9,
+      "text": "1.0mg–3mg***\n",
+      "bbox": [
+        368.0,
+        240.83738708496094,
+        419.6900939941406,
+        249.54489135742188
+      ],
+      "text_sha256": "b23ccbac6bb92dfc7c136ea5dd8960173666e78aecb9a177020871273c9c2f81"
+    },
+    {
+      "block_id": "page-0603-block-0010",
+      "order": 10,
+      "text": "*Caution should be exercised for children <15kg – no dosing data available\n",
+      "bbox": [
+        69.13999938964844,
+        269.83990478515625,
+        308.3611145019531,
+        278.5473937988281
+      ],
+      "text_sha256": "a9c4a154c926a574f25998cb66da49865d72d37be0076173b93da11dc18b78be"
+    },
+    {
+      "block_id": "page-0603-block-0011",
+      "order": 11,
+      "text": "**Therapeutic effect plateaus at 1mg/day\n",
+      "bbox": [
+        69.13999938964844,
+        279.83990478515625,
+        198.8696746826172,
+        288.5473937988281
+      ],
+      "text_sha256": "824827549903f35071d47e0e22579d43e3fcb1d0f8bdc22b910b4310bb5ba8d7"
+    },
+    {
+      "block_id": "page-0603-block-0012",
+      "order": 12,
+      "text": "***Those weighing >45kg may require higher doses – therapeutic effect plateaus at 3mg\n",
+      "bbox": [
+        69.13999938964844,
+        289.83990478515625,
+        350.1607971191406,
+        298.5473937988281
+      ],
+      "text_sha256": "9386e0b38727001f12fce947544596e8b1c87dfe36a3c0d37947851b7daa6dc7"
+    },
+    {
+      "block_id": "page-0603-block-0013",
+      "order": 13,
+      "text": "General considerations\n",
+      "bbox": [
+        69.13999938964844,
+        316.7248840332031,
+        160.76148986816406,
+        326.7973937988281
+      ],
+      "text_sha256": "520d1fae6046db73075b54ce06270ee39531e5c75196d979951c66d07ed5369c"
+    },
+    {
+      "block_id": "page-0603-block-0014",
+      "order": 14,
+      "text": "■\n■Risperidone can be administered once daily or twice daily.\n",
+      "bbox": [
+        69.13990020751953,
+        332.92889404296875,
+        285.92401123046875,
+        342.7973937988281
+      ],
+      "text_sha256": "b73f082b42d12e5bfaebd80ff25e375db418ab5f4fb48ba67d913fb25eefb9ac"
+    },
+    {
+      "block_id": "page-0603-block-0015",
+      "order": 15,
+      "text": "■\n■Patients experiencing somnolence may benefit from taking the whole daily dose at bedtime.\n",
+      "bbox": [
+        69.13990020751953,
+        342.92889404296875,
+        410.908203125,
+        352.7973937988281
+      ],
+      "text_sha256": "d1e1328c8deef32db57cdb571b20c002c5b9647828e0ab612e904591e24ee2a3"
+    },
+    {
+      "block_id": "page-0603-block-0016",
+      "order": 16,
+      "text": "■\n■Once sufficient clinical response has been achieved and maintained, consideration may be given \n",
+      "bbox": [
+        69.13990020751953,
+        352.92889404296875,
+        426.8201904296875,
+        362.7973937988281
+      ],
+      "text_sha256": "06a01abb4ddff27d565224c05028d509c0d220ebec70cab5aa0e83fb0ee9f042"
+    },
+    {
+      "block_id": "page-0603-block-0017",
+      "order": 17,
+      "text": "to gradually lowering the dose to achieve the optimal balance of efficacy and safety.\n",
+      "bbox": [
+        77.63999938964844,
+        362.9248962402344,
+        382.2545471191406,
+        372.79339599609375
+      ],
+      "text_sha256": "0c877bf644efc53658bc19ba4a92f7f013e7ac2fd4390d70cb953370eeee4dee"
+    },
+    {
+      "block_id": "page-0603-block-0018",
+      "order": 18,
+      "text": "■\n■There is insufficient evidence from controlled trials to indicate how long treatment should continue.\n",
+      "bbox": [
+        69.13990020751953,
+        372.92889404296875,
+        426.16558837890625,
+        382.7973937988281
+      ],
+      "text_sha256": "0bbf142c14a34b8b0687d9d3ca36e9cc31a3376eb6e584de1712e18bb1c7d7ce"
+    },
+    {
+      "block_id": "page-0603-block-0019",
+      "order": 19,
+      "text": "Adverse effects\n",
+      "bbox": [
+        69.13999938964844,
+        400.723876953125,
+        130.85850524902344,
+        410.79638671875
+      ],
+      "text_sha256": "2829b5953031aa8e8e992beffdca9c91044830ce03b830653e6ea31d5de93cfc"
+    },
+    {
+      "block_id": "page-0603-block-0020",
+      "order": 20,
+      "text": "Weight gain, somnolence and hyperglycaemia require monitoring, and the long-term safety of \nrisperidone in children and adolescents with ASD remains to be fully determined\n",
+      "bbox": [
+        69.13999938964844,
+        416.9248962402344,
+        412.9737243652344,
+        436.7893981933594
+      ],
+      "text_sha256": "81f28f9f9bdaa47f67e0d343aa9648165267395e9a56901a92dfe9e879c50dfb"
+    },
+    {
+      "block_id": "page-0603-block-0021",
+      "order": 21,
+      "text": "Using benzodiazepines (BZ) to manage irritability and aggression in ASD is not recom-\nmended. However, it may be necessary to manage acute aggression with a BZ. The pos-\nsibility of behavioural disinhibition which may worsen aggression must be born in mind.\n",
+      "bbox": [
+        61.88999557495117,
+        453.62750244140625,
+        433.91015625,
+        489.5874938964844
+      ],
+      "text_sha256": "8c89748c10b5d9b3d392e3524e65d90cf8d502368d559ac5343b3dfceb14eb31"
+    },
+    {
+      "block_id": "page-0603-block-0022",
+      "order": 22,
+      "text": "Recent guidance from BAP does not recommend the use of minocycline, arbaclofen \nor amantadine for irritability before better evidence from randomised double-blind \ncontrolled trials is available.6\n",
+      "bbox": [
+        61.8900146484375,
+        489.62750244140625,
+        436.7000732421875,
+        525.5875244140625
+      ],
+      "text_sha256": "9dac877cc454543b8f2baf19fc7561d0e91f108a0c2f7952d609336a132fb12c"
+    },
+    {
+      "block_id": "page-0603-block-0023",
+      "order": 23,
+      "text": "Sleep disturbance\n",
+      "bbox": [
+        61.88999938964844,
+        543.95751953125,
+        145.239990234375,
+        555.8074951171875
+      ],
+      "text_sha256": "34d21fc1d1b4d31dc6112b61dc2d6e08e001db41677d04e2239553a3fa7d7135"
+    },
+    {
+      "block_id": "page-0603-block-0024",
+      "order": 24,
+      "text": "Children with ASD have significant sleep problems69 with sleep-onset insomnia, sleep-mainte-\nnance insomnia and irregularities of the sleep–wake cycle being the typical problems encoun-\ntered. It is essential to understand the aetiology of the sleep problem before embarking on a \ncourse of treatment. Abnormalities in the melatonin system have received some attention.70\n",
+      "bbox": [
+        61.88999938964844,
+        561.8674926757812,
+        436.733642578125,
+        609.5875244140625
+      ],
+      "text_sha256": "e57b882e99d510e6e651fccf8b33dfcaf1a38e360159d2fa7fb83172410cfdb8"
+    },
+    {
+      "block_id": "page-0603-block-0025",
+      "order": 25,
+      "text": "Use of risperidone in children and adolescents\n",
+      "bbox": [
+        61.88999938964844,
+        62.500404357910156,
+        278.5799865722656,
+        74.35040283203125
+      ],
+      "text_sha256": "5649b837e3aa8fa461eb02600b1405e6d4df0d81122d3faba167239a4ee611bc"
+    },
+    {
+      "block_id": "page-0603-block-0026",
+      "order": 26,
+      "text": "Risperidone is indicated for the treatment of irritability associated with autistic disor-\nder in children (aged 5 and over) and adolescents in the UK/EU and the United States\n",
+      "bbox": [
+        61.889984130859375,
+        80.410400390625,
+        433.8899841308594,
+        104.13040161132812
+      ],
+      "text_sha256": "0a2b1ccb866cda532709789baff09e50c213e1f0e202378e59a8c29718ae38e0"
+    },
+    {
+      "block_id": "page-0603-block-0027",
+      "order": 27,
+      "text": "The dosage of risperidone should be individualised according to the response of the \npatient.\n",
+      "bbox": [
+        61.889984130859375,
+        104.410400390625,
+        436.6199951171875,
+        128.13040161132812
+      ],
+      "text_sha256": "3a55e3bf81a7bc5255be0dccaf2b91706c7d7b1ab9ac1de4ebb7604915de5b8f"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

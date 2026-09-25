@@ -1,0 +1,59 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0016",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 16,
+  "source_page_index": 15,
+  "source_page_display": 16,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Notes on using The Maudsley® Prescribing Guidelines in Psychiatry    xv\nContributors’ Conflict of Interest\nMost of the contributors to The Guidelines have received funding from pharmaceutical \nmanufacturers for research, consultancy or lectures. Readers should be aware that these \nrelationships inevitably colour opinions on such matters as drug selection or preference. \nWe cannot, therefore, guarantee that the guidance provided here is free of indirect influ-\nence of the pharmaceutical industry but hope to have mitigated this risk by providing \ncopious literature support for statements made. As regards direct influence, no pharma-\nceutical company has been allowed to view or comment on any drafts or proofs of The \nGuidelines, and none has made any request for the inclusion or omission of any topic, \nadvice or guidance. To this extent, The Guidelines have been written independent of the \npharmaceutical industry.\n",
+  "raw_text_sha256": "a025de149cbd82c5d63fd2d88e10f58a4e8ac9ed4390d1add92757f137c7058d",
+  "coordinates_sha256": "ed34b53a1e19dc3bdfef6af5455a8160755f8a86aed8484d32351f8804bebc32",
+  "block_sequence_sha256": "6eae5ac3fba79ade2e86ec7859df49f2dcffabd1346737e90db87abed9d86618",
+  "blocks": [
+    {
+      "block_id": "page-0016-block-0000",
+      "order": 0,
+      "text": "Notes on using The Maudsley® Prescribing Guidelines in Psychiatry    xv\n",
+      "bbox": [
+        119.37030029296875,
+        31.395221710205078,
+        420.0014953613281,
+        41.0272216796875
+      ],
+      "text_sha256": "c205ce705eae7923aeafe3181725e969d131fe69ed23d49f65339b6252722210"
+    },
+    {
+      "block_id": "page-0016-block-0001",
+      "order": 1,
+      "text": "Contributors’ Conflict of Interest\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        222.87100219726562,
+        79.1004638671875
+      ],
+      "text_sha256": "f660eec8a8ac66c43d2277590cb749f4c8f6744c726f98341d0a8b175deeca37"
+    },
+    {
+      "block_id": "page-0016-block-0002",
+      "order": 2,
+      "text": "Most of the contributors to The Guidelines have received funding from pharmaceutical \nmanufacturers for research, consultancy or lectures. Readers should be aware that these \nrelationships inevitably colour opinions on such matters as drug selection or preference. \nWe cannot, therefore, guarantee that the guidance provided here is free of indirect influ-\nence of the pharmaceutical industry but hope to have mitigated this risk by providing \ncopious literature support for statements made. As regards direct influence, no pharma-\nceutical company has been allowed to view or comment on any drafts or proofs of The \nGuidelines, and none has made any request for the inclusion or omission of any topic, \nadvice or guidance. To this extent, The Guidelines have been written independent of the \npharmaceutical industry.\n",
+      "bbox": [
+        48.0,
+        84.91046142578125,
+        422.8299255371094,
+        204.63046264648438
+      ],
+      "text_sha256": "645a585bb1f7a348dc0a01500b3bed98c5dce42f68629b5e21b057cd537adfd3"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

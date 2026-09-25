@@ -1,0 +1,215 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0668",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 668,
+  "source_page_index": 667,
+  "source_page_display": 668,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Prescribing in older people    647\nCHAPTER  6\nFollowing an episode of orthostatic hypotension, there could be a rebound excess of \ncatecholamines with vasoconstriction, thus aggravating cerebral insufficiency. In addi-\ntion, hyperprolactinaemia could in theory accelerate atherosclerosis, and sedation \nmight cause dehydration and haemoconcentration.40 A study32 suggests affinity for M1, \nand alpha-2 receptors predict effects on stroke.\nRisperidone clinical trial data were recently examined to look for individual patient \ncharacteristics associated with CVAEs and death and for treatment-emergent risk fac-\ntors.41 Baseline complications of depression and delusions were associated with a lower \nrelative risk of CVAEs in risperidone-treated patients. For mortality, the only significant \nbaseline predictor in patients treated with risperidone was depression which was asso-\nciated with a lower relative risk. The relative risk of death was higher in risperidone-\ntaking patients treated with anti-inflammatory medications.\nBoth typical42 and atypical antipsychotics43 may also hasten cognitive decline in \ndementia, although there is some evidence to rebut this.44–46\nRecommendation: Use of risperidone (licensed for persistent aggression in AD) and \nolanzapine may be justified in some cases of severe aggression and/or psychosis. Effect is \nmodest at best. When prescribed, regular review is recommended.\nClinical information for antipsychotic use in dementia\nAntipsychotics should not be used routinely to treat agitation and aggression in people \nwith dementia.47\nRisperidone (and haloperidol) are the only drugs licensed in the UK for the man-\nagement of non-cognitive symptoms associated with dementia. Due to the serious \nadverse effects of haloperidol, risperidone is the agent of choice. It is specifically \nindicated for short-term treatment (up to 6 weeks) of persistent aggression in patients \nwith moderate-to-severe AD unresponsive to non-pharmacological approaches and \nwhen there is a risk of harm to self or others.48 Risperidone is licensed up to 1mg \ntwice a day,49 although optimal dose in dementia has been found to be 500μg twice a \nday (1mg daily).50\nAlternative antipsychotic drugs may be used (off-licence) if risperidone is contraindi-\ncated or not tolerated. Olanzapine has some positive efficacy data for reducing aggres-\nsion in dementia27 (work is underway, investigating the efficacy and tolerability of \namisulpride in dementia),51,52 and quetiapine (although not as effective as risperidone and \nolanzapine) may be considered in patients with Parkinson’s disease, or Lewy body demen-\ntia (at very small doses) because of its low propensity for causing movement disorders.\nOnly prescribe antipsychotics after:\n■\n■careful risk assessment, balancing the cerebrovascular risk (taking into account \nhypertension, diabetes, smoking, atrial fibrillation and previous stroke);\n■\n■discussion of possible risks and benefits with carer (and patient if she/he has \ncapacity);\n■\n■clear documentation of the above.47\n",
+  "raw_text_sha256": "4be8a814eba7872ac29b01cb04f7feeb3f1d2d3a59e8d904dd85c5acd9730e8b",
+  "coordinates_sha256": "8dbf001f8753c7038c4d835c3cc366cc6ac8cddd517e4773a4131a164f815798",
+  "block_sequence_sha256": "677e62738ae92fdada519b349b4ad74c70b6e787f472701b39166f968ff40b61",
+  "blocks": [
+    {
+      "block_id": "page-0668-block-0000",
+      "order": 0,
+      "text": "Prescribing in older people    647\n",
+      "bbox": [
+        281.576904296875,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "8b7387cef2041c6db35b81fe5ce178b6c83e2430c9b251c883665236b367a235"
+    },
+    {
+      "block_id": "page-0668-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        454.4096984863281,
+        405.35260009765625,
+        463.88970947265625,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0668-block-0002",
+      "order": 2,
+      "text": "Following an episode of orthostatic hypotension, there could be a rebound excess of \ncatecholamines with vasoconstriction, thus aggravating cerebral insufficiency. In addi-\ntion, hyperprolactinaemia could in theory accelerate atherosclerosis, and sedation \nmight cause dehydration and haemoconcentration.40 A study32 suggests affinity for M1, \nand alpha-2 receptors predict effects on stroke.\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.800048828125,
+        122.27041625976562
+      ],
+      "text_sha256": "c32152022bfbfe92f2daba33ca80b1d145528dcfad8d170c1147154c1c88f9f1"
+    },
+    {
+      "block_id": "page-0668-block-0003",
+      "order": 3,
+      "text": "Risperidone clinical trial data were recently examined to look for individual patient \ncharacteristics associated with CVAEs and death and for treatment-emergent risk fac-\ntors.41 Baseline complications of depression and delusions were associated with a lower \nrelative risk of CVAEs in risperidone-treated patients. For mortality, the only significant \nbaseline predictor in patients treated with risperidone was depression which was asso-\nciated with a lower relative risk. The relative risk of death was higher in risperidone-\ntaking patients treated with anti-inflammatory medications.\n",
+      "bbox": [
+        48.00030517578125,
+        122.5504150390625,
+        422.812744140625,
+        206.27041625976562
+      ],
+      "text_sha256": "ad21b61c9562429df494c86248726548435c84bcafa088418d61b5373fe82158"
+    },
+    {
+      "block_id": "page-0668-block-0004",
+      "order": 4,
+      "text": "Both typical42 and atypical antipsychotics43 may also hasten cognitive decline in \ndementia, although there is some evidence to rebut this.44–46\n",
+      "bbox": [
+        48.00349426269531,
+        206.5504150390625,
+        422.7835388183594,
+        230.27047729492188
+      ],
+      "text_sha256": "63b83e506df0109532b658ccf925575f81ea3514edb964111cb40fd261249913"
+    },
+    {
+      "block_id": "page-0668-block-0005",
+      "order": 5,
+      "text": "Recommendation: Use of risperidone (licensed for persistent aggression in AD) and \nolanzapine may be justified in some cases of severe aggression and/or psychosis. Effect is \nmodest at best. When prescribed, regular review is recommended.\n",
+      "bbox": [
+        55.5,
+        249.9279022216797,
+        414.7696533203125,
+        279.9924011230469
+      ],
+      "text_sha256": "6fe6846709311caea9915881f420a725b88cd0dd947c5fde3961c13b3797158c"
+    },
+    {
+      "block_id": "page-0668-block-0006",
+      "order": 6,
+      "text": "Clinical information for antipsychotic use in dementia\n",
+      "bbox": [
+        48.0,
+        312.140380859375,
+        299.7099914550781,
+        323.9903869628906
+      ],
+      "text_sha256": "092beae3d7436b44c754cd3559f7e467994e59a71dcb7e2f331966447dacd5c1"
+    },
+    {
+      "block_id": "page-0668-block-0007",
+      "order": 7,
+      "text": "Antipsychotics should not be used routinely to treat agitation and aggression in people \nwith dementia.47\n",
+      "bbox": [
+        48.0,
+        329.8103942871094,
+        422.72998046875,
+        353.7703857421875
+      ],
+      "text_sha256": "65003e1254c3b613488d8ad64dc3e62bfd3fc6a05a92a1c98b8f1b75016c422b"
+    },
+    {
+      "block_id": "page-0668-block-0008",
+      "order": 8,
+      "text": "Risperidone (and haloperidol) are the only drugs licensed in the UK for the man-\nagement of non-cognitive symptoms associated with dementia. Due to the serious \nadverse effects of haloperidol, risperidone is the agent of choice. It is specifically \nindicated for short-term treatment (up to 6 weeks) of persistent aggression in patients \nwith moderate-to-severe AD unresponsive to non-pharmacological approaches and \nwhen there is a risk of harm to self or others.48 Risperidone is licensed up to 1mg \ntwice a day,49 although optimal dose in dementia has been found to be 500μg twice a \nday (1mg daily).50\n",
+      "bbox": [
+        48.0,
+        354.0503845214844,
+        422.83184814453125,
+        449.7703857421875
+      ],
+      "text_sha256": "335343131c889af0db78a059ff651fa4faa34cbb270ef01686156058332880d3"
+    },
+    {
+      "block_id": "page-0668-block-0009",
+      "order": 9,
+      "text": "Alternative antipsychotic drugs may be used (off-licence) if risperidone is contraindi-\ncated or not tolerated. Olanzapine has some positive efficacy data for reducing aggres-\nsion in dementia27 (work is underway, investigating the efficacy and tolerability of \namisulpride in dementia),51,52 and quetiapine (although not as effective as risperidone and \nolanzapine) may be considered in patients with Parkinson’s disease, or Lewy body demen-\ntia (at very small doses) because of its low propensity for causing movement disorders.\n",
+      "bbox": [
+        48.0,
+        450.0503845214844,
+        422.8028259277344,
+        521.7703857421875
+      ],
+      "text_sha256": "e334bb5d5482e1a01bfd7beea16d7543155e293d775a41a8ca2d1080612ad792"
+    },
+    {
+      "block_id": "page-0668-block-0010",
+      "order": 10,
+      "text": "Only prescribe antipsychotics after:\n",
+      "bbox": [
+        58.00299072265625,
+        522.0503540039062,
+        210.79298400878906,
+        533.7703857421875
+      ],
+      "text_sha256": "9f0a28ea5a4b81d0f808f5d4bfdd41a8cb197cb310cef9cff32c2b95e175bab9"
+    },
+    {
+      "block_id": "page-0668-block-0011",
+      "order": 11,
+      "text": "■\n■careful risk assessment, balancing the cerebrovascular risk (taking into account \n",
+      "bbox": [
+        47.999900817871094,
+        540.0503540039062,
+        422.77996826171875,
+        551.7703857421875
+      ],
+      "text_sha256": "6a76f81f3d08fff3da5103498b1ba08f70ca969fc60aa252698011d0eaa0627c"
+    },
+    {
+      "block_id": "page-0668-block-0012",
+      "order": 12,
+      "text": "hypertension, diabetes, smoking, atrial fibrillation and previous stroke);\n",
+      "bbox": [
+        57.0,
+        552.0503540039062,
+        365.4199523925781,
+        563.7703857421875
+      ],
+      "text_sha256": "98f063b364cd758fa26f6b0423a8f4ae8760ef0d456db65ea600189541b3f80a"
+    },
+    {
+      "block_id": "page-0668-block-0013",
+      "order": 13,
+      "text": "■\n■discussion of possible risks and benefits with carer (and patient if she/he has \n",
+      "bbox": [
+        47.999900817871094,
+        564.0504150390625,
+        422.80987548828125,
+        575.7704467773438
+      ],
+      "text_sha256": "b45ecd07f8b376e0990d452f4cd4c7f1a8318ccda2679f83be7793679b1961dd"
+    },
+    {
+      "block_id": "page-0668-block-0014",
+      "order": 14,
+      "text": "capacity);\n",
+      "bbox": [
+        57.0,
+        576.0504150390625,
+        98.66000366210938,
+        587.7704467773438
+      ],
+      "text_sha256": "7f3086839cabd76ee32cfc73bf6c2e1d73de1a17f179b5a308237818649f20e9"
+    },
+    {
+      "block_id": "page-0668-block-0015",
+      "order": 15,
+      "text": "■\n■clear documentation of the above.47\n",
+      "bbox": [
+        47.999900817871094,
+        588.0504150390625,
+        210.7114715576172,
+        599.7704467773438
+      ],
+      "text_sha256": "2efccbd1eea9fd239b2e5e996d9b7cb921fad8759e20f873b5d13811dbc7d032"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

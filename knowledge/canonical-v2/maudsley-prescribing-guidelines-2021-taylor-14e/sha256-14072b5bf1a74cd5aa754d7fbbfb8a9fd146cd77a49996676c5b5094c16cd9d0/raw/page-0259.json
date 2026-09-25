@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0259",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 259,
+  "source_page_index": 258,
+  "source_page_display": 259,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "238    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nDistinguishing between true clozapine toxicity and neutropenia unrelated to clozap-\nine is not possible with certainty but some factors are important. Consultation with a \nhaematologist is advisable regarding BEN and to exclude any other co-prescribed medi-\ncation that may be responsible. The use of iatrogenic agents to elevate WCC in patients \nwith clear prior clozapine-induced neutropenia (i.e. certainty that clozapine was the \ncause) is not recommended. Lithium or other medicines should only be used to elevate \nWCC where it is strongly felt that prior neutropenic episodes were unrelated to clozap-\nine. Patients who have had a previous episode of agranulocytosis that is attributable to \nclozapine should not be re-challenged.\nLithium\nLithium increases the neutrophil count and total WCC both acutely and chronically. \nThe magnitude of this effect is poorly quantified, but a mean neutrophil count of 11.9 × \n109/L has been reported in lithium-treated patients and a mean rise in neutrophil count \nof 2 × 109/L was seen in clozapine-treated patients after the addition of lithium. This \neffect does not seem to be clearly dose-related, although a minimum lithium serum level \nof 0.4mmol/L may be required. The mechanism is not completely understood.20\nLithium has been used to increase the WCC in patients who have developed neutro-\npenia whilst taking clozapine, allowing clozapine treatment to continue. Several case \nreports in adults21–25 and in children26,27 have been published. Almost all patients had \nserum lithium levels of > 0.6mmol/L. In a case series (n = 25) of patients who had \nstopped clozapine because of a blood dyscrasia and were rechallenged in the presence \nof lithium, only one developed a subsequent dyscrasia.28 If considering lithium, discuss \nwith the medical advisor at the relevant monitoring service to determine the optimum \npharmacological strategy for the particular patient.\nLithium does not seem to protect against true clozapine-induced agranulocytosis: \nOne case of fatal agranulocytosis has occurred with this combination25 and a second \ncase of agranulocytosis has been reported where the bone marrow was resistant to \ntreatment with granulocyte colony stimulating factor (G-CSF).29\nGranulocyte-colony stimulating factor (G-CSF)\nThe use of G-CSF to facilitate uninterrupted clozapine therapy in patients with previ-\nous neutropenia is a strategy that is attracting increasing interest, but is somewhat \ncontroversial. There are both successful30–32 and unsuccessful32,33 case reports of patients \nreceiving regular long-term G-CSF to enable clozapine therapy. As well as the com-\nmonly reported side effects of bone pain34 and neutrophil dysplasia,35 the administra-\ntion of G-CSF in the face of a low or declining neutrophil count may mask an impending \nneutropenia or agranulocytosis, leading to dire consequences. The long term safety of \nG-CSF has not been determined; bone density and spleen size should probably be \nmonitored.\n‘When required’ G-CSF, to be administered if neutrophils drop below a defined \nthreshold, may allow rechallenge with clozapine of patients in whom lithium is \n",
+  "raw_text_sha256": "c45b7de6e966f15824d53a40e2a93ee3e206be74b2be6b1f9c95cb7cdc92b89f",
+  "coordinates_sha256": "f46e62ca828191587b6d5e95e9bd73809b4e8e9ffca30f465b2ae91a7c7f974f",
+  "block_sequence_sha256": "9c5dc8f5b4ba630619e4cabf33a98be10ab5453fe7a4632a06ac152d8e774632",
+  "blocks": [
+    {
+      "block_id": "page-0259-block-0000",
+      "order": 0,
+      "text": "238    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "961f8372ed646c065b84050b53fc3112187a5d26145447c1ebf58acb34ef6145"
+    },
+    {
+      "block_id": "page-0259-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0259-block-0002",
+      "order": 2,
+      "text": "Distinguishing between true clozapine toxicity and neutropenia unrelated to clozap-\nine is not possible with certainty but some factors are important. Consultation with a \nhaematologist is advisable regarding BEN and to exclude any other co-prescribed medi-\ncation that may be responsible. The use of iatrogenic agents to elevate WCC in patients \nwith clear prior clozapine-induced neutropenia (i.e. certainty that clozapine was the \ncause) is not recommended. Lithium or other medicines should only be used to elevate \nWCC where it is strongly felt that prior neutropenic episodes were unrelated to clozap-\nine. Patients who have had a previous episode of agranulocytosis that is attributable to \nclozapine should not be re-challenged.\n",
+      "bbox": [
+        61.88909912109375,
+        62.5494384765625,
+        436.7089538574219,
+        170.26943969726562
+      ],
+      "text_sha256": "e39ff7c6e431fc5c43305055b7ba747cc4059b7decb3daf92ace44a5d532a342"
+    },
+    {
+      "block_id": "page-0259-block-0003",
+      "order": 3,
+      "text": "Lithium\n",
+      "bbox": [
+        61.88909912109375,
+        187.70443725585938,
+        101.00509643554688,
+        200.73944091796875
+      ],
+      "text_sha256": "4b3fa0d998941b086da02bea9d4933fcdb1d8d7699758dff916b0ea211843213"
+    },
+    {
+      "block_id": "page-0259-block-0004",
+      "order": 4,
+      "text": "Lithium increases the neutrophil count and total WCC both acutely and chronically. \nThe magnitude of this effect is poorly quantified, but a mean neutrophil count of 11.9 × \n109/L has been reported in lithium-treated patients and a mean rise in neutrophil count \nof 2 × 109/L was seen in clozapine-treated patients after the addition of lithium. This \neffect does not seem to be clearly dose-related, although a minimum lithium serum level \nof 0.4mmol/L may be required. The mechanism is not completely understood.20\n",
+      "bbox": [
+        61.885894775390625,
+        206.54949951171875,
+        436.6490173339844,
+        278.2695007324219
+      ],
+      "text_sha256": "71463f1af8fc7f75f4d4c0a1ce56542720fb6c25029330a8bfb71a0f521558e8"
+    },
+    {
+      "block_id": "page-0259-block-0005",
+      "order": 5,
+      "text": "Lithium has been used to increase the WCC in patients who have developed neutro-\npenia whilst taking clozapine, allowing clozapine treatment to continue. Several case \nreports in adults21–25 and in children26,27 have been published. Almost all patients had \nserum lithium levels of > 0.6mmol/L. In a case series (n = 25) of patients who had \nstopped clozapine because of a blood dyscrasia and were rechallenged in the presence \nof lithium, only one developed a subsequent dyscrasia.28 If considering lithium, discuss \nwith the medical advisor at the relevant monitoring service to determine the optimum \npharmacological strategy for the particular patient.\n",
+      "bbox": [
+        61.88508605957031,
+        278.54949951171875,
+        436.6851501464844,
+        374.2695007324219
+      ],
+      "text_sha256": "c5138554d79e832d73f4865978ee718bd526045eb43ef9979197ec754f6b1aaf"
+    },
+    {
+      "block_id": "page-0259-block-0006",
+      "order": 6,
+      "text": "Lithium does not seem to protect against true clozapine-induced agranulocytosis: \nOne case of fatal agranulocytosis has occurred with this combination25 and a second \ncase of agranulocytosis has been reported where the bone marrow was resistant to \ntreatment with granulocyte colony stimulating factor (G-CSF).29\n",
+      "bbox": [
+        61.88508605957031,
+        374.54949951171875,
+        436.6822814941406,
+        422.2695007324219
+      ],
+      "text_sha256": "ed3836dc92e8c8de0f7629ee43687bb87a50ed60850a70fc00868cf46de5eaa1"
+    },
+    {
+      "block_id": "page-0259-block-0007",
+      "order": 7,
+      "text": "Granulocyte-colony stimulating factor (G-CSF)\n",
+      "bbox": [
+        61.88909912109375,
+        439.7044982910156,
+        298.4000549316406,
+        452.739501953125
+      ],
+      "text_sha256": "e3f27b5c98504641d57edc397661cb9174053cfe5a315e7168fc59af9e44f170"
+    },
+    {
+      "block_id": "page-0259-block-0008",
+      "order": 8,
+      "text": "The use of G-CSF to facilitate uninterrupted clozapine therapy in patients with previ-\nous neutropenia is a strategy that is attracting increasing interest, but is somewhat \ncontroversial. There are both successful30–32 and unsuccessful32,33 case reports of patients \nreceiving regular long-term G-CSF to enable clozapine therapy. As well as the com-\nmonly reported side effects of bone pain34 and neutrophil dysplasia,35 the administra-\ntion of G-CSF in the face of a low or declining neutrophil count may mask an impending \nneutropenia or agranulocytosis, leading to dire consequences. The long term safety of \nG-CSF has not been determined; bone density and spleen size should probably be \nmonitored.\n",
+      "bbox": [
+        61.88511657714844,
+        458.54949951171875,
+        436.7150573730469,
+        566.26953125
+      ],
+      "text_sha256": "6474058b59b4f4ad00678e2c657da43438af752b2f924a6269746ba358271560"
+    },
+    {
+      "block_id": "page-0259-block-0009",
+      "order": 9,
+      "text": "‘When required’ G-CSF, to be administered if neutrophils drop below a defined \nthreshold, may allow rechallenge with clozapine of patients in whom lithium is \n",
+      "bbox": [
+        61.88511657714844,
+        566.5494995117188,
+        436.6949768066406,
+        590.26953125
+      ],
+      "text_sha256": "a04c27b7a746f14a49ab53e16cfb78a204bd6370c61da914a0f450d378be85fd"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

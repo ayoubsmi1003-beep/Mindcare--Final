@@ -1,0 +1,275 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0657",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 657,
+  "source_page_index": 656,
+  "source_page_display": 657,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Table 6.5  Physicochemical properties of anticholinergic drugs in urinary incontinence14,25 (adapted with permission26)\nDrug\nMuscarinic receptor\n(M3:M1 affinity ratio)\nPolarity\nLipophilicity\nMolecular \nweight (kDa)\nP-gp \nsubstrate\nTheoretical ability to \ncross BBB\nEffect on \ncognition\nDarifenacin\nMainly M3 (9.3:1)\nNeutral\nHigh\n507.5  \n(relatively large)\nYes\nHigh  \n(but bladder selective and \nP-gp  \nsubstrate)\n–\nFesoterodine\nNon-selective\nNeutral\nVery low\n411.6\nYes\nVery low\n–\nOxybutynin\nNon-selective\nNeutral\nModerate\n357 (relatively \nsmall)\nNo\nModerate/high\n+++\nSolifenacin\nMainly M3 (2.5:1)\nNeutral\nModerate\n480.6\nNo\nModerate\n–/+\nTolterodine\nNon-selective\nNeutral\nLow\n475.6\nNo\nLow\n+\nTrospium chloride\nNon-selective\nPositively \ncharged\nNot lipophilic\n428\nYes\nAlmost none\n–\n– represents no reports of adverse effects on cognition.\n+ represents some adverse effects on cognition reported.\n+++ represents consistent reports of adverse effects on cognition.\n",
+  "raw_text_sha256": "12ca6279be7f7551eb9fcdff43554089971d1f26045d3d345430e6153f8cea44",
+  "coordinates_sha256": "2a7ed54a1c42e0c5e288376ca6e5973b853985705d2db5903ea93c4fe615f20b",
+  "block_sequence_sha256": "2bba2346ed64e645163140d9e92d1b6f0074026a04b9f3a2ab834e10ac4286d9",
+  "blocks": [
+    {
+      "block_id": "page-0657-block-0000",
+      "order": 0,
+      "text": "Table 6.5  Physicochemical properties of anticholinergic drugs in urinary incontinence14,25 (adapted with permission26)\n",
+      "bbox": [
+        152.3148956298828,
+        233.1323699951172,
+        161.202392578125,
+        606.3504028320312
+      ],
+      "text_sha256": "81bee1c8c1dad5819930a11802b4da3220105e6038f195bec098095574cd73c4"
+    },
+    {
+      "block_id": "page-0657-block-0001",
+      "order": 1,
+      "text": "Drug\nMuscarinic receptor\n",
+      "bbox": [
+        170.19239807128906,
+        460.9678649902344,
+        189.077392578125,
+        608.3504028320312
+      ],
+      "text_sha256": "c71496aa6cf9b3a6c4bc827adb78586173ff992d655719517b30611c905cd817"
+    },
+    {
+      "block_id": "page-0657-block-0002",
+      "order": 2,
+      "text": "(M3:M1 affinity ratio)\nPolarity\nLipophilicity\nMolecular \n",
+      "bbox": [
+        170.19239807128906,
+        311.4029235839844,
+        189.077392578125,
+        529.9979248046875
+      ],
+      "text_sha256": "66b3c5e93b38adb0ecf9c95bf9facd15e42472cff94babe9ce05d55f7a7d8929"
+    },
+    {
+      "block_id": "page-0657-block-0003",
+      "order": 3,
+      "text": "weight (kDa)\nP-gp \n",
+      "bbox": [
+        170.19239807128906,
+        270.3179016113281,
+        189.077392578125,
+        348.4903869628906
+      ],
+      "text_sha256": "e2aab4edfad0292fefaf9b10fc81a432244b31e1ef60a7022b544929af7b365b"
+    },
+    {
+      "block_id": "page-0657-block-0004",
+      "order": 4,
+      "text": "substrate\nTheoretical ability to \n",
+      "bbox": [
+        170.19239807128906,
+        157.09034729003906,
+        189.077392578125,
+        288.2353820800781
+      ],
+      "text_sha256": "eb7709481ae0c56a43745d67005dbc496b13526741980d289b445b2c7f83be53"
+    },
+    {
+      "block_id": "page-0657-block-0005",
+      "order": 5,
+      "text": "cross BBB\nEffect on \n",
+      "bbox": [
+        170.19239807128906,
+        98.3653793334961,
+        189.077392578125,
+        231.98538208007812
+      ],
+      "text_sha256": "a5bbaf6a68b6eb8dc7556974fde2ef595950d91c17f0a838fbdcb7f86a4a4e08"
+    },
+    {
+      "block_id": "page-0657-block-0006",
+      "order": 6,
+      "text": "cognition\n",
+      "bbox": [
+        180.1898956298828,
+        98.6577377319336,
+        189.077392578125,
+        131.98785400390625
+      ],
+      "text_sha256": "0760350f24ba3e6199a1652be284a2919336c59fc35cefba1dd11a0a0228855a"
+    },
+    {
+      "block_id": "page-0657-block-0007",
+      "order": 7,
+      "text": "Darifenacin\nMainly M3 (9.3:1)\nNeutral\nHigh\n507.5  \n(relatively large)\nYes\nHigh  \n",
+      "bbox": [
+        195.81239318847656,
+        212.8097686767578,
+        214.69989013671875,
+        608.350341796875
+      ],
+      "text_sha256": "624e4d3edcd4d6af3b65d86e93a4c88b38b6eb6c497259852ab7aade5757f2c1"
+    },
+    {
+      "block_id": "page-0657-block-0008",
+      "order": 8,
+      "text": "(but bladder selective and \n",
+      "bbox": [
+        205.9923858642578,
+        147.8072052001953,
+        214.69989013671875,
+        231.9873046875
+      ],
+      "text_sha256": "bed8611197b7ff8af7ec44bca5560faa4f5223a3f1074e4a82df9cfcf496043c"
+    },
+    {
+      "block_id": "page-0657-block-0009",
+      "order": 9,
+      "text": "P-gp  \n",
+      "bbox": [
+        215.98988342285156,
+        213.2297821044922,
+        224.6973876953125,
+        231.9873046875
+      ],
+      "text_sha256": "ed7eb28a275c53e982ff58450c5d7dd6e9821b8ea19b0403a5092d1d93913d44"
+    },
+    {
+      "block_id": "page-0657-block-0010",
+      "order": 10,
+      "text": "substrate)\n",
+      "bbox": [
+        225.9873809814453,
+        200.73475646972656,
+        234.69488525390625,
+        231.9873046875
+      ],
+      "text_sha256": "493a103baf51b3818f962ba523ff0ac94fb1a870c68894192f732defbfbf0529"
+    },
+    {
+      "block_id": "page-0657-block-0011",
+      "order": 11,
+      "text": "–\n",
+      "bbox": [
+        195.9873809814453,
+        128.23980712890625,
+        204.69488525390625,
+        131.98980712890625
+      ],
+      "text_sha256": "200429741da3bc9b3c9c581932bfe0371a6aef05d32a7ee3bf026786a0c26e24"
+    },
+    {
+      "block_id": "page-0657-block-0012",
+      "order": 12,
+      "text": "Fesoterodine\nNon-selective\nNeutral\nVery low\n411.6\nYes\nVery low\n–\n",
+      "bbox": [
+        241.4298858642578,
+        128.23980712890625,
+        250.3173828125,
+        608.352294921875
+      ],
+      "text_sha256": "59a97215f24cae950d2d50eadebf0bda73a30b0964463649bc91f4a310102bfc"
+    },
+    {
+      "block_id": "page-0657-block-0013",
+      "order": 13,
+      "text": "Oxybutynin\nNon-selective\nNeutral\nModerate\n357 (relatively \nsmall)\nNo\nModerate/high\n+++\n",
+      "bbox": [
+        257.0523681640625,
+        118.48980712890625,
+        275.9373779296875,
+        608.352294921875
+      ],
+      "text_sha256": "b0994e1136847e6801b797e4ca60016514cbbecbda0859294c6ff22c2a0f3df2"
+    },
+    {
+      "block_id": "page-0657-block-0014",
+      "order": 14,
+      "text": "Solifenacin\nMainly M3 (2.5:1)\nNeutral\nModerate\n480.6\nNo\nModerate\n–/+\n",
+      "bbox": [
+        282.67987060546875,
+        121.65478515625,
+        293.29302978515625,
+        608.352294921875
+      ],
+      "text_sha256": "1f3faef4c59c71d2d4446f8005d367e19077b23b08227ae17564a8620284874e"
+    },
+    {
+      "block_id": "page-0657-block-0015",
+      "order": 15,
+      "text": "Tolterodine\nNon-selective\nNeutral\nLow\n475.6\nNo\nLow\n+\n",
+      "bbox": [
+        298.3123779296875,
+        127.48980712890625,
+        307.19989013671875,
+        608.352294921875
+      ],
+      "text_sha256": "45ccb2b12dcd7f3f35868a7f9f348dc0a09714abec2eba56f9e020b026339d53"
+    },
+    {
+      "block_id": "page-0657-block-0016",
+      "order": 16,
+      "text": "Trospium chloride\nNon-selective\nPositively \n",
+      "bbox": [
+        313.93487548828125,
+        409.1748046875,
+        322.8223876953125,
+        608.352294921875
+      ],
+      "text_sha256": "9bf3c25ce6ae487460117bbf1089d5846a35ab73debe51757f47d98e1d900d53"
+    },
+    {
+      "block_id": "page-0657-block-0017",
+      "order": 17,
+      "text": "charged\nNot lipophilic\n428\nYes\nAlmost none\n–\n",
+      "bbox": [
+        314.1148986816406,
+        128.23980712890625,
+        332.81988525390625,
+        439.99981689453125
+      ],
+      "text_sha256": "dcea45834e128504db476f1b464222ce193e6d1669ffff1fcd8b658d6d5b8db9"
+    },
+    {
+      "block_id": "page-0657-block-0018",
+      "order": 18,
+      "text": "– represents no reports of adverse effects on cognition.\n",
+      "bbox": [
+        342.1873779296875,
+        436.19732666015625,
+        351.07489013671875,
+        612.3497924804688
+      ],
+      "text_sha256": "03c698a36d566aab7d3e73702780e190443c7af7da24ff6b27bf0fbc837aa91d"
+    },
+    {
+      "block_id": "page-0657-block-0019",
+      "order": 19,
+      "text": "+ represents some adverse effects on cognition reported.\n",
+      "bbox": [
+        352.18487548828125,
+        430.4523010253906,
+        361.0723876953125,
+        612.3497924804688
+      ],
+      "text_sha256": "ef957037e31cbbb6cd06e909a819505cf78f39e690adafe1b233656624c941c8"
+    },
+    {
+      "block_id": "page-0657-block-0020",
+      "order": 20,
+      "text": "+++ represents consistent reports of adverse effects on cognition.\n",
+      "bbox": [
+        362.182373046875,
+        402.7022705078125,
+        371.06988525390625,
+        612.3497924804688
+      ],
+      "text_sha256": "33a9717afd9c18d6f6fa3c2d7553fdb7bb4f2615fb59f413a479e432d6b894df"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

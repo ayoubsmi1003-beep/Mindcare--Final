@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0435",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 435,
+  "source_page_index": 434,
+  "source_page_display": 435,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "414    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nA review of 13 studies found an increased odds ratio (1.21–4.14) of perioperative \nbleeding with SSRIs.53 One study noted an increased risk of bleeding in women under-\ngoing breast surgery,54 and the authors suggest withholding SSRIs for 2 weeks prior to \nsuch planned surgery. Others conclude that there is insufficient evidence to support \nroutine discontinuation of SSRIs prior to surgery and call for RCTs to be conducted in \nthis area of care.55 Venlafaxine may have similar effects,53 but duloxetine may not affect \nbleeding risk.56\nAlternatives to SSRIs/SNRIs\nNon-SSRI antidepressants such as mirtazapine and bupropion have been suggested as \nsafer alternatives to SSRIs and SNRIs.57 Preliminary studies suggest mirtazapine, bupro-\npion and nortriptyline have minimal effects on measurable clotting mechanisms.58 \nHowever, there is little evidence that these drugs are safer, and one meta-analysis found \nan increased risk of UGI bleeding with mirtazapine (vs. no treatment) and no difference \nin bleeding risk between mirtazapine or bupropion and SSRIs.59\nOverall\nSerotonergic antidepressants increase the risk of various types of bleeding. Evidence is \nstrongest for SSRIs, and it is likely that risk of bleeding is related to affinity for the sero-\ntonin transporter. SSRIs increase the risk of GI bleeding, haemorrhagic stroke, periop-\nerative bleeding, postpartum haemorrhage and uterine bleeding. Their effect is \nexacerbated by co-prescription with aspirin, anticoagulants and NSAIDs. In most cases, \nthe use of SSRIs increases the risk of an event by a clinically meaningful extent, but \nespecially when co-prescribed with other drugs which affect clotting.\nSummary\n■\n■SSRIs increase the risk of GI, uterine, cerebral and perioperative bleeding.\n■\n■Risk is increased still further in those also receiving aspirin, NSAIDs or oral \nanticoagulants.\n■\n■Try to avoid SSRIs/SNRIs in patients receiving NSAIDs, aspirin or oral anticoagu-\nlants or in those with a history of cerebral or GI bleeds.\n■\n■Safer alternatives have not been definitively identified, but noradrenergic antidepres-\nsants (nortriptyline, bupropion) may be preferred.\n■\n■If SSRI/SNRI use cannot be avoided, monitor closely and prescribe gastro-protective \nproton pump inhibitors.\n■\n■Limited evidence suggests risks may be lower with less potent serotonin re-uptake \ninhibitors.\n",
+  "raw_text_sha256": "aa7c8ebd8bb8d80e5cf08e53aa10068fc8636f56dffd40b19567d56a597ba0e8",
+  "coordinates_sha256": "878390eb4c2a80b156c350b59c4960ba8a17e8a2958511786adf288b23d6e94b",
+  "block_sequence_sha256": "b641973a09c76826a24f62978aa8b2e85279068caa4f1bf7e8bbd9b155a6c400",
+  "blocks": [
+    {
+      "block_id": "page-0435-block-0000",
+      "order": 0,
+      "text": "414    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "a28271124d5872e12c5ae8d5ba1a74b679c3d276c1936863ae6d543532a455dd"
+    },
+    {
+      "block_id": "page-0435-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0435-block-0002",
+      "order": 2,
+      "text": "A review of 13 studies found an increased odds ratio (1.21–4.14) of perioperative \nbleeding with SSRIs.53 One study noted an increased risk of bleeding in women under-\ngoing breast surgery,54 and the authors suggest withholding SSRIs for 2 weeks prior to \nsuch planned surgery. Others conclude that there is insufficient evidence to support \nroutine discontinuation of SSRIs prior to surgery and call for RCTs to be conducted in \nthis area of care.55 Venlafaxine may have similar effects,53 but duloxetine may not affect \nbleeding risk.56\n",
+      "bbox": [
+        61.885986328125,
+        62.55029296875,
+        436.68365478515625,
+        146.27029418945312
+      ],
+      "text_sha256": "5108bd4bd0e0139dc990c8906b4a14ddf8086339c9947c4f9588bc264e71ac87"
+    },
+    {
+      "block_id": "page-0435-block-0003",
+      "order": 3,
+      "text": "Alternatives to SSRIs/SNRIs\n",
+      "bbox": [
+        61.88999938964844,
+        163.70529174804688,
+        202.06297302246094,
+        176.74029541015625
+      ],
+      "text_sha256": "6fc9e3c95673b09ab9da0c5a3733cf7ef52182e76a7c12368a918e6bd1fd3808"
+    },
+    {
+      "block_id": "page-0435-block-0004",
+      "order": 4,
+      "text": "Non-SSRI antidepressants such as mirtazapine and bupropion have been suggested as \nsafer alternatives to SSRIs and SNRIs.57 Preliminary studies suggest mirtazapine, bupro-\npion and nortriptyline have minimal effects on measurable clotting mechanisms.58 \nHowever, there is little evidence that these drugs are safer, and one meta-analysis found \nan increased risk of UGI bleeding with mirtazapine (vs. no treatment) and no difference \nin bleeding risk between mirtazapine or bupropion and SSRIs.59\n",
+      "bbox": [
+        61.88999938964844,
+        182.55029296875,
+        436.6700134277344,
+        254.27029418945312
+      ],
+      "text_sha256": "c2f480450b6772d2a0d2d2f31bead0232804fc440d3b2e9cca2d2fd4c85d7470"
+    },
+    {
+      "block_id": "page-0435-block-0005",
+      "order": 5,
+      "text": "Overall\n",
+      "bbox": [
+        61.88999938964844,
+        271.7052917480469,
+        99.19098663330078,
+        284.74029541015625
+      ],
+      "text_sha256": "403bd87b1a46a4ba9e2d65dcceb2a43383a4026d2540fc1225b562a30306847e"
+    },
+    {
+      "block_id": "page-0435-block-0006",
+      "order": 6,
+      "text": "Serotonergic antidepressants increase the risk of various types of bleeding. Evidence is \nstrongest for SSRIs, and it is likely that risk of bleeding is related to affinity for the sero-\ntonin transporter. SSRIs increase the risk of GI bleeding, haemorrhagic stroke, periop-\nerative bleeding, postpartum haemorrhage and uterine bleeding. Their effect is \nexacerbated by co-prescription with aspirin, anticoagulants and NSAIDs. In most cases, \nthe use of SSRIs increases the risk of an event by a clinically meaningful extent, but \nespecially when co-prescribed with other drugs which affect clotting.\n",
+      "bbox": [
+        61.88999938964844,
+        290.55029296875,
+        436.6699523925781,
+        374.2702941894531
+      ],
+      "text_sha256": "a2a398a606eb41719b187e5231c702465f84c4b86db3308853c01263782d5d94"
+    },
+    {
+      "block_id": "page-0435-block-0007",
+      "order": 7,
+      "text": "Summary\n",
+      "bbox": [
+        61.88999938964844,
+        391.7052917480469,
+        110.79598999023438,
+        404.74029541015625
+      ],
+      "text_sha256": "3cbb36aca330b3bd113955dfbada0adb7a5f95ad9f678bd61f175406c6a37e95"
+    },
+    {
+      "block_id": "page-0435-block-0008",
+      "order": 8,
+      "text": "■\n■SSRIs increase the risk of GI, uterine, cerebral and perioperative bleeding.\n",
+      "bbox": [
+        61.88990020751953,
+        416.55029296875,
+        387.9500427246094,
+        428.2702941894531
+      ],
+      "text_sha256": "016470cf82a6cd8c6f3dda50226f1aeae3f4774187858bdf2e16aad7a9600b1f"
+    },
+    {
+      "block_id": "page-0435-block-0009",
+      "order": 9,
+      "text": "■\n■Risk is increased still further in those also receiving aspirin, NSAIDs or oral \n",
+      "bbox": [
+        61.88990020751953,
+        428.55029296875,
+        436.64007568359375,
+        440.2702941894531
+      ],
+      "text_sha256": "e1b0f59830b1b07d910cf6e6343050c667a77f7626bfdcdbfd5b17f6095c77e0"
+    },
+    {
+      "block_id": "page-0435-block-0010",
+      "order": 10,
+      "text": "anticoagulants.\n",
+      "bbox": [
+        70.88999938964844,
+        440.55029296875,
+        136.45999145507812,
+        452.2702941894531
+      ],
+      "text_sha256": "97de686a29c5ce92fc0dc8a5b0391546a8363deb722c0c1099af3871a88952b8"
+    },
+    {
+      "block_id": "page-0435-block-0011",
+      "order": 11,
+      "text": "■\n■Try to avoid SSRIs/SNRIs in patients receiving NSAIDs, aspirin or oral anticoagu-\n",
+      "bbox": [
+        61.88990020751953,
+        452.55029296875,
+        433.90997314453125,
+        464.2702941894531
+      ],
+      "text_sha256": "e49d20bf87e3d4ececb69c77afc6df12fdd3ea099e3fc0e1d9d774f4d01f5cc8"
+    },
+    {
+      "block_id": "page-0435-block-0012",
+      "order": 12,
+      "text": "lants or in those with a history of cerebral or GI bleeds.\n",
+      "bbox": [
+        70.88999938964844,
+        464.55029296875,
+        310.3900146484375,
+        476.2702941894531
+      ],
+      "text_sha256": "1d16f3f78804c4b9da7c9ff352ed90fefd69d6555cae8879cb8fdfff89edb2a0"
+    },
+    {
+      "block_id": "page-0435-block-0013",
+      "order": 13,
+      "text": "■\n■Safer alternatives have not been definitively identified, but noradrenergic antidepres-\n",
+      "bbox": [
+        61.88990020751953,
+        476.55029296875,
+        433.9100036621094,
+        488.2702941894531
+      ],
+      "text_sha256": "77dd7ab3b472c12b5b01f47a522a32803a65d8706ca329821f1ac0136250edd7"
+    },
+    {
+      "block_id": "page-0435-block-0014",
+      "order": 14,
+      "text": "sants (nortriptyline, bupropion) may be preferred.\n",
+      "bbox": [
+        70.88999938964844,
+        488.55029296875,
+        286.1199645996094,
+        500.2702941894531
+      ],
+      "text_sha256": "fe00f02a010cb3bc7900a60b2be120fab198802111c0a83a20374f66f6b3e597"
+    },
+    {
+      "block_id": "page-0435-block-0015",
+      "order": 15,
+      "text": "■\n■If SSRI/SNRI use cannot be avoided, monitor closely and prescribe gastro-protective \n",
+      "bbox": [
+        61.88990020751953,
+        500.55029296875,
+        436.6300354003906,
+        512.2703247070312
+      ],
+      "text_sha256": "bdd0d45b5d20c77b878e1e805527154f500db7f982999c421c3210d5cc37abee"
+    },
+    {
+      "block_id": "page-0435-block-0016",
+      "order": 16,
+      "text": "proton pump inhibitors.\n",
+      "bbox": [
+        70.88999938964844,
+        512.55029296875,
+        175.37997436523438,
+        524.2703247070312
+      ],
+      "text_sha256": "fb7e7a4a05c03934d956e7f3e3c83f97540205ba95191774e9ab0bf81e383eac"
+    },
+    {
+      "block_id": "page-0435-block-0017",
+      "order": 17,
+      "text": "■\n■Limited evidence suggests risks may be lower with less potent serotonin re-uptake \n",
+      "bbox": [
+        61.88990020751953,
+        524.55029296875,
+        436.70001220703125,
+        536.2703247070312
+      ],
+      "text_sha256": "b9a8a1858639b60e096706ff67f77a0129b06c818af30fb635dfa8ab180a4ac5"
+    },
+    {
+      "block_id": "page-0435-block-0018",
+      "order": 18,
+      "text": "inhibitors.\n",
+      "bbox": [
+        70.88999938964844,
+        536.55029296875,
+        115.3599853515625,
+        548.2703247070312
+      ],
+      "text_sha256": "5a43784ec193c3131bef18e208ebd09db67c588a237e201349e077e5b1ada937"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

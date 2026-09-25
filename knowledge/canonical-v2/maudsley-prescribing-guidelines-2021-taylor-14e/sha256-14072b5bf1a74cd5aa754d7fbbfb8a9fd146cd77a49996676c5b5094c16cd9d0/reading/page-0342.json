@@ -1,0 +1,17 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0342",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 342,
+  "source_page_index": 341,
+  "repaired_text": "Depression and anxiety disorders    321\nCHAPTER 3\nManagement of treatment-resistant depression – second choice\nTable 3.4  Second choice: less commonly used, variably supported by published evaluations  \n(no preference implied by order)\nTreatment\nAdvantages\nDisadvantages\nAdd ketamine (0.5mg/kg \nIV over 40 minutes)1\nIntranasal esketamine \n(licensed in most \ncountries) dose is \n28–84mg2\nSee section on ketamine \npreparations in this \nchapter\n■\n■Very rapid response (within hours) –\nincluding effects on suicidality3,4\n■\n■High remission rate\n■\n■Some evidence of maintained\nresponse if repeated doses given\n■\n■Usually well tolerated at this subanaesthetic dose\n■\n■IV needs to be administered in hospital\nenvironment\n■\n■Cognitive effects (confusion, dissociation) and other psychiatric symptoms5\n■\n■Associated with transient increases in\nBP, tachycardia and arrhythmias. Pre-\ntreatment ECG required with IV form.6\n■\n■Adverse effects may have been\nunderestimated7\n■\n■Repeated treatment may be necessary\nto maintain effect\nAdd lamotrigine (100mg, \n200mg and 400mg a day \nhave been used)8\n■\n■Reasonably well researched\n■\n■Quite widely used\n■\n■Probably best tolerated augmentation\nstrategy9\n■\n■Slow titration\n■\n■Risk of rash\n■\n■Appropriate dosing unclear\nECT10–12\n■\n■Well established\n■\n■Effective\n■\n■Well supported in the literature\n■\n■Poor reputation in public domain\n■\n■Necessitates general anaesthetic\n■\n■Needs specialist referral\n■\n■Usually reserved for last-line treatment\nor if rapid response needed\n■\n■Usually combined with other\ntreatments\nAdd tri-iodothyronine\n(20–50μg/day)\nHigher doses have been \nsafely used13–19\n■\n■Usually well tolerated\n■\n■Reasonable literature support\n■\n■May be effective in bipolar depression\n■\n■Clinical and biochemical TFT\nmonitoring required\n■\n■Usually needs specialist referral\n■\n■Some negative studies\n■\n■No advantage over antidepressant\nalone in non-refractory illness20",
+  "repaired_text_sha256": "90dbfae601544fa1bf5246022a952f744859ad003eac68807ca7dd30a14653c1",
+  "raw_text_sha256": "8e78abed7e5c7de94219576c168bf9be9a1663521757f1874332892ba8c9ea9e",
+  "repair_ids": [
+    "repair-000352",
+    "repair-000353",
+    "repair-000354",
+    "repair-000355"
+  ],
+  "raw_file": "raw/page-0342.json"
+}

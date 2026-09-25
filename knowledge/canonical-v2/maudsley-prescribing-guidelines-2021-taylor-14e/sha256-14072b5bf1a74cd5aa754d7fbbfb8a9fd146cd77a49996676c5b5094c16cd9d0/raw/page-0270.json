@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0270",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 270,
+  "source_page_index": 269,
+  "source_page_display": 270,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Bipolar disorder    249\nCHAPTER 2\nretardation, significant weight loss, a family history of major depression and a personal \nexperience of more than three episodes.20 Of course, compliance with lithium augmen-\ntation should also be added to this list.\nProphylaxis of unipolar depression\nThe use of lithium for long-term treatment of unipolar depression has recently been \nreviewed.21 Cipriani et al. (2006)22 analysed eight randomised controlled trials (RCTs) \n(n = 475), and found lithium was significantly superior to antidepressants in preventing \nrelapses that required hospitalisation with a relative risk of 0.34. Abou-Saleh et al. \n(2017)23 proposed lithium prophylaxis in unipolar depression if a patient has suffered \ntwo depressive episodes in 5 years; or after one episode if the episode is severe and there \nis a strong suicide risk; with indefinite treatment if there is adherence and adverse \nevents are not problematic, particularly if a bipolar background is suspected.\nOther uses of lithium\nLithium is also used to treat aggressive and self-mutilating behaviour, and recent studies \nhave confirmed benefits24 to both prevent and treat steroid-induced psychosis25 and to \nraise the white blood cell (WBC) count in patients receiving clozapine.26\nLithium and suicide\nIt is estimated that 15% of people with BD eventually take their own life.27 A meta-\nanalysis of clinical trials concluded that lithium reduced the risk of both attempted and \ncompleted suicide by 80% in patients with bipolar illness,28 and large database studies \nhave shown that lithium-treated patients are less likely to complete suicide than patients \ntreated with other mood-stabilising drugs.29\nIn patients with unipolar depression, lithium also seems to protect against suicide \nalthough the mechanism of this protective effect is unknown.28 As noted earlier, environ-\nmental lithium has been reported to be inversely related to suicide at a population levels.8\nPlasma levels\nThe minimum effective plasma level for prophylaxis is 0.4mmol/L, with the optimal \nrange being 0.6–0.8mmol/L.30 Levels above 0.75mmol/L offer additional protection \nonly against manic symptoms,31 so the target range for prophylaxis is effectively \n0.6–0.8mmol/L.14 Changes in plasma levels seem to worsen the risk of relapse.31 The \noptimal plasma level range in patients who have unipolar depression is less clear and \nmuch research remains to be done in this area.21\nChildren and adolescents may require higher plasma levels than adults to ensure that \nan adequate concentration of lithium is present in the central nervous system (CNS).32\nLithium is rapidly absorbed from the gastrointestinal tract but has a long distribution \nphase. Blood samples for plasma lithium level estimations should be taken 10–14 \n(­ideally 12) hours post dose in patients who are prescribed a single daily dose of a \n­prolonged release preparation at bedtime.10\n",
+  "raw_text_sha256": "ba23592645fb14979c86de2efa496cdf6d4dc3eb07a0b977fec24299227ad827",
+  "coordinates_sha256": "5222c72f5d477f3b4c16bfef2e8ec19ffa3bda4f6c03711e6888b19e21fff712",
+  "block_sequence_sha256": "df64c1abf4957b99d4e3db7e9c5cef1a0695440bbf9188f81087665a72d6e706",
+  "blocks": [
+    {
+      "block_id": "page-0270-block-0000",
+      "order": 0,
+      "text": "Bipolar disorder    249\n",
+      "bbox": [
+        326.5046081542969,
+        31.395221710205078,
+        420.0005798339844,
+        41.0272216796875
+      ],
+      "text_sha256": "8e03db67a7b9f00931555007a083bc961d623a2c108f7bec8740c1a14c1de1cf"
+    },
+    {
+      "block_id": "page-0270-block-0001",
+      "order": 1,
+      "text": "CHAPTER 2\n",
+      "bbox": [
+        454.4096984863281,
+        146.3472900390625,
+        463.88970947265625,
+        187.6912841796875
+      ],
+      "text_sha256": "5eaa1f2591abe1a1b2f7664fa3de7ff01a032d44ee83fa594c7852135d4287aa"
+    },
+    {
+      "block_id": "page-0270-block-0002",
+      "order": 2,
+      "text": "retardation, significant weight loss, a family history of major depression and a personal \nexperience of more than three episodes.20 Of course, compliance with lithium augmen-\ntation should also be added to this list.\n",
+      "bbox": [
+        47.99949645996094,
+        62.5504150390625,
+        422.7500305175781,
+        98.27041625976562
+      ],
+      "text_sha256": "265cbf8f051a4d3c3a87bc1141b544b15312980b3a2c9260dfa2205787ee7909"
+    },
+    {
+      "block_id": "page-0270-block-0003",
+      "order": 3,
+      "text": "Prophylaxis of unipolar depression\n",
+      "bbox": [
+        47.99949645996094,
+        116.64041900634766,
+        211.35948181152344,
+        128.49041748046875
+      ],
+      "text_sha256": "ee26d34cd7847a3641409a1cdd56fd8a40368d63f6b59daeb413744757f24910"
+    },
+    {
+      "block_id": "page-0270-block-0004",
+      "order": 4,
+      "text": "The use of lithium for long-term treatment of unipolar depression has recently been \nreviewed.21 Cipriani et al. (2006)22 analysed eight randomised controlled trials (RCTs) \n(n = 475), and found lithium was significantly superior to antidepressants in preventing \nrelapses that required hospitalisation with a relative risk of 0.34. Abou-Saleh et al. \n(2017)23 proposed lithium prophylaxis in unipolar depression if a patient has suffered \ntwo depressive episodes in 5 years; or after one episode if the episode is severe and there \nis a strong suicide risk; with indefinite treatment if there is adherence and adverse \nevents are not problematic, particularly if a bipolar background is suspected.\n",
+      "bbox": [
+        47.99949645996094,
+        134.5504150390625,
+        422.8197937011719,
+        230.27047729492188
+      ],
+      "text_sha256": "30f3eb1feb57d26a08076d5cf4c9eb92885c294d3f83773c96665dd972d4c0d3"
+    },
+    {
+      "block_id": "page-0270-block-0005",
+      "order": 5,
+      "text": "Other uses of lithium\n",
+      "bbox": [
+        48.0027961730957,
+        248.64047241210938,
+        147.46278381347656,
+        260.490478515625
+      ],
+      "text_sha256": "fcae0d5a46054f575fc0b61efacd86eaa24b5192aa1d9ea7b868e5063e9b642c"
+    },
+    {
+      "block_id": "page-0270-block-0006",
+      "order": 6,
+      "text": "Lithium is also used to treat aggressive and self-mutilating behaviour, and recent studies \nhave confirmed benefits24 to both prevent and treat steroid-induced psychosis25 and to \nraise the white blood cell (WBC) count in patients receiving clozapine.26\n",
+      "bbox": [
+        48.000823974609375,
+        266.55047607421875,
+        422.79278564453125,
+        302.2704772949219
+      ],
+      "text_sha256": "427214be3411800d7fcc38fc5d11c45c8f93eff6979c6c4ef20e7b489fe17d6f"
+    },
+    {
+      "block_id": "page-0270-block-0007",
+      "order": 7,
+      "text": "Lithium and suicide\n",
+      "bbox": [
+        48.0,
+        319.7054748535156,
+        148.2319793701172,
+        332.740478515625
+      ],
+      "text_sha256": "b7800bd8a754dde10076511362eb3e7d80cfb65d8c8e289ee7693b03471c2ed4"
+    },
+    {
+      "block_id": "page-0270-block-0008",
+      "order": 8,
+      "text": "It is estimated that 15% of people with BD eventually take their own life.27 A meta-\nanalysis of clinical trials concluded that lithium reduced the risk of both attempted and \ncompleted suicide by 80% in patients with bipolar illness,28 and large database studies \nhave shown that lithium-treated patients are less likely to complete suicide than patients \ntreated with other mood-stabilising drugs.29\n",
+      "bbox": [
+        47.997894287109375,
+        338.55047607421875,
+        422.807861328125,
+        398.2704772949219
+      ],
+      "text_sha256": "25b039a77786448acb5f4e574c5c9eb61ee21971590a5c43d9b03b3388b87c8f"
+    },
+    {
+      "block_id": "page-0270-block-0009",
+      "order": 9,
+      "text": "In patients with unipolar depression, lithium also seems to protect against suicide \nalthough the mechanism of this protective effect is unknown.28 As noted earlier, environ-\nmental lithium has been reported to be inversely related to suicide at a population levels.8\n",
+      "bbox": [
+        48.0,
+        398.55047607421875,
+        422.7999267578125,
+        434.2704772949219
+      ],
+      "text_sha256": "72ebd50ce89e82b2ea6032795edce045b5cd5c097a94c15fdd1d80b256deecf4"
+    },
+    {
+      "block_id": "page-0270-block-0010",
+      "order": 10,
+      "text": "Plasma levels\n",
+      "bbox": [
+        48.0,
+        451.7054748535156,
+        116.47499084472656,
+        464.740478515625
+      ],
+      "text_sha256": "d735fd4163d652a69f53212d30f72a0e87ae474d4b57c76069fc30458803921e"
+    },
+    {
+      "block_id": "page-0270-block-0011",
+      "order": 11,
+      "text": "The minimum effective plasma level for prophylaxis is 0.4mmol/L, with the optimal \nrange being 0.6–0.8mmol/L.30 Levels above 0.75mmol/L offer additional protection \nonly against manic symptoms,31 so the target range for prophylaxis is effectively \n0.6–0.8mmol/L.14 Changes in plasma levels seem to worsen the risk of relapse.31 The \noptimal plasma level range in patients who have unipolar depression is less clear and \nmuch research remains to be done in this area.21\n",
+      "bbox": [
+        47.99720764160156,
+        470.55047607421875,
+        422.797119140625,
+        542.2705078125
+      ],
+      "text_sha256": "cb86417022fd8d467304549cbeeb308ddd8a8f5ae2f96b7b120c8a343ba2f2d0"
+    },
+    {
+      "block_id": "page-0270-block-0012",
+      "order": 12,
+      "text": "Children and adolescents may require higher plasma levels than adults to ensure that \nan adequate concentration of lithium is present in the central nervous system (CNS).32\n",
+      "bbox": [
+        48.0,
+        542.5504760742188,
+        422.7900085449219,
+        566.2705078125
+      ],
+      "text_sha256": "88188c1a80485de5531b4761c7e8a2c6e0d4df86a2dd1566dea4799c4483b560"
+    },
+    {
+      "block_id": "page-0270-block-0013",
+      "order": 13,
+      "text": "Lithium is rapidly absorbed from the gastrointestinal tract but has a long distribution \nphase. Blood samples for plasma lithium level estimations should be taken 10–14 \n(­ideally 12) hours post dose in patients who are prescribed a single daily dose of a \n­prolonged release preparation at bedtime.10\n",
+      "bbox": [
+        48.0,
+        566.5504760742188,
+        422.7999267578125,
+        614.2705078125
+      ],
+      "text_sha256": "3d365db6d50abbcd43b3f2178f2674d3c8f377a58ae13676c614e6374032e862"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,395 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0090",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 90,
+  "source_page_index": 89,
+  "source_page_display": 90,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Table 1.4  Antipsychotic long-acting injections – doses and frequencies15\nDrug\nUK  \nTrade Name\nLicences  \ninjection site\nTest dose  \n(mg)\nDose range (mg/week)\nDosing interval \n(weeks)\nComments\nAripiprazole\n(Abilify Maintena)\nButtock\nNot required**\n300–400mg monthly\nMonthly\nDoes not increase prolactin; oral \nloading required\nFlupentixol decanoate\n(Depixol)\nButtock or thigh\n20\n50mg every 4 weeks to 400mg a week\n2–4\nMaximum licensed dose is high relative \nto other LAIs\nFluphenazine decanoate\n(Modecate)\nGluteal region\n12.5\n12.5mg every 2 weeks to 100mg every  \n2 weeks\n2–5\nHigh EPS\nHaloperidol decanoate\n(Haldol)\nGluteal region\n25*\n50–300mg every 4 weeks\n4\nHigh EPS\nOlanzapine pamoate\n(ZypAdhera)\nGluteal\nNot required**\n150mg every 4 weeks to 300mg every  \n2 weeks\n2–4\nRisk of post-injection syndrome\nPaliperidone palmitate \n(monthly)\n(Xeplion)\nDeltoid or gluteal\nNot required**\n50–150mg monthly\nMonthly\nLoading dose required at treatment \ninitiation\nPaliperidone palmitate \n(3-monthly)\n(Trevicta)\nDeltoid or gluteal\nNot \nrequired***\n175–525mg every 3 months\n3 months\nPipothiazine palmitate\n(Piportil)\nGluteal region\n25\n50–200mg every 4 weeks\n4\n? Lower incidence of EPS (relative to \nother FGAs)\nRisperidone microspheres\n(Risperdal Consta)\nDeltoid or gluteal\nNot required**\n25–50mg every 2 weeks\n2\nDrug release delayed for 2–3 weeks \n– oral therapy required\nZuclopenthixol decanote\n(Clopixol)\nButtock or thigh\n100\n200mg every 3 weeks to 600mg a week\n2–4\n? Slightly better efficacy than LAI FGAs\nNotes:\n■\n■The doses mentioned above are for adults. Check formal labelling for appropriate doses in the elderly.\n■\n■After a test dose, wait 4–10 days then titrate to maintenance dose according to response (see product information for individual drugs).\n■\n■Avoid using shorter dose intervals than those recommended except in exceptional circumstances (e.g. long interval necessitates high volume (>3–4ml?) injection). Maximum licensed single \ndose overrides longer intervals and lower volumes. For example, zuclopenthixol 500mg every week is licensed, whereas 1,000mg every two weeks is not (more than the licensed maximum \nof 600mg is administered). Always check official manufacturer’s information.\n*Test dose not stated by manufacturer.\n**Tolerability and response to the oral preparation should be established before administering the LAI. With respect to paliperidone LAI, oral risperidone can be used for this purpose.\n***May not be started until the completion of 4 months’ treatment with monthly LAI.\n",
+  "raw_text_sha256": "3c6d844c7220a32aed26d6d5ad7919267af84b20a54911a9c608a524e60b97ef",
+  "coordinates_sha256": "0bef8997adbdea66e2eaad49d2aa86c531ce3ef24f1c6fe2e62a6eff8db8c650",
+  "block_sequence_sha256": "e988a100086f5a54f1f5ad05fb08fa43d010f24f7b1828c413a273b818f4681e",
+  "blocks": [
+    {
+      "block_id": "page-0090-block-0000",
+      "order": 0,
+      "text": "Table 1.4  Antipsychotic long-acting injections – doses and frequencies15\n",
+      "bbox": [
+        53.73659896850586,
+        404.5571594238281,
+        62.62409973144531,
+        635.99951171875
+      ],
+      "text_sha256": "eec879608e639491ce35538689ea7499a173f5db1df86a470ed2fbf86dec9d8b"
+    },
+    {
+      "block_id": "page-0090-block-0001",
+      "order": 1,
+      "text": "Drug\nUK  \n",
+      "bbox": [
+        73.97410583496094,
+        539.6619262695312,
+        92.85910034179688,
+        641.9993896484375
+      ],
+      "text_sha256": "99529b26bf2153cfcc8efe00e6bbf0c06bce220913239aff9bb311969e69b0b4"
+    },
+    {
+      "block_id": "page-0090-block-0002",
+      "order": 2,
+      "text": "Trade Name\nLicences  \n",
+      "bbox": [
+        73.97410583496094,
+        448.3344421386719,
+        92.85910034179688,
+        554.2493896484375
+      ],
+      "text_sha256": "815e9f0c76d7e5b45b3842cede6f1b788a12b661f030421b36f91f54c7b61f2b"
+    },
+    {
+      "block_id": "page-0090-block-0003",
+      "order": 3,
+      "text": "injection site\nTest dose  \n",
+      "bbox": [
+        73.97410583496094,
+        381.0744323730469,
+        92.85910034179688,
+        481.2519226074219
+      ],
+      "text_sha256": "cf46ccdbc2116b0251afe9b6b4676aed0c2266b3e2e057e616ae39556f86be6b"
+    },
+    {
+      "block_id": "page-0090-block-0004",
+      "order": 4,
+      "text": "(mg)\nDose range (mg/week)\nDosing interval \n",
+      "bbox": [
+        73.97410583496094,
+        171.4043731689453,
+        92.85910034179688,
+        417.7494201660156
+      ],
+      "text_sha256": "027c1dc3aed422cd81bdd83018633e109d4a0c3799dea1b648ea1150d58a33d4"
+    },
+    {
+      "block_id": "page-0090-block-0005",
+      "order": 5,
+      "text": "(weeks)\nComments\n",
+      "bbox": [
+        83.97160339355469,
+        126.63691711425781,
+        92.85910034179688,
+        227.2493896484375
+      ],
+      "text_sha256": "be9fad98b37b22876b0afa42bbe98de4809435184c94b16c3443e9ead1a108b1"
+    },
+    {
+      "block_id": "page-0090-block-0006",
+      "order": 6,
+      "text": "Aripiprazole\n(Abilify Maintena)\nButtock\nNot required**\n300–400mg monthly\nMonthly\nDoes not increase prolactin; oral \n",
+      "bbox": [
+        100.9291000366211,
+        59.392051696777344,
+        109.6365966796875,
+        641.9993896484375
+      ],
+      "text_sha256": "ec182cf72f2a779fc943f152557388801d0e41b8b84fd6fe769a6a1d949e9f6c"
+    },
+    {
+      "block_id": "page-0090-block-0007",
+      "order": 7,
+      "text": "loading required\n",
+      "bbox": [
+        110.92659759521484,
+        111.89207458496094,
+        119.63409423828125,
+        164.13690185546875
+      ],
+      "text_sha256": "fe96c91fca601cc8cced56d329e257e4ae7ca5b2239fddea587a41fea177f8de"
+    },
+    {
+      "block_id": "page-0090-block-0008",
+      "order": 8,
+      "text": "Flupentixol decanoate\n(Depixol)\nButtock or thigh\n20\n50mg every 4 weeks to 400mg a week\n2–4\nMaximum licensed dose is high relative \n",
+      "bbox": [
+        125.94910430908203,
+        37.597129821777344,
+        134.65660095214844,
+        641.9993896484375
+      ],
+      "text_sha256": "f6ce69a4f2313064b88dc0697e2273227a61e27f91ec2a46198b0ebb17fa4eb8"
+    },
+    {
+      "block_id": "page-0090-block-0009",
+      "order": 9,
+      "text": "to other LAIs\n",
+      "bbox": [
+        135.94659423828125,
+        123.2994155883789,
+        144.6540985107422,
+        164.13690185546875
+      ],
+      "text_sha256": "233a4374ac208d28ad8f628d642503a3d971f3b94d21183a5548f220556723e4"
+    },
+    {
+      "block_id": "page-0090-block-0010",
+      "order": 10,
+      "text": "Fluphenazine decanoate\n(Modecate)\nGluteal region\n12.5\n12.5mg every 2 weeks to 100mg every  \n2 weeks\n2–5\nHigh EPS\n",
+      "bbox": [
+        150.96910095214844,
+        135.79443359375,
+        169.67410278320312,
+        641.9993896484375
+      ],
+      "text_sha256": "26c01eaf82624817ab83cfc8e95001ade06af46ea7faed89b0dd16a432a0f1a3"
+    },
+    {
+      "block_id": "page-0090-block-0011",
+      "order": 11,
+      "text": "Haloperidol decanoate\n(Haldol)\nGluteal region\n25*\n50–300mg every 4 weeks\n4\nHigh EPS\n",
+      "bbox": [
+        175.99659729003906,
+        135.79443359375,
+        184.7041015625,
+        641.9993896484375
+      ],
+      "text_sha256": "f9e2c58846bf5472a208868d1eeee182867524d4319680e24095239571bc6b21"
+    },
+    {
+      "block_id": "page-0090-block-0012",
+      "order": 12,
+      "text": "Olanzapine pamoate\n(ZypAdhera)\nGluteal\nNot required**\n150mg every 4 weeks to 300mg every  \n2 weeks\n2–4\nRisk of post-injection syndrome\n",
+      "bbox": [
+        191.01910400390625,
+        64.2596435546875,
+        209.72410583496094,
+        641.9993896484375
+      ],
+      "text_sha256": "00f22243f3fbdfdb8954ae5f6d9df91f939a9a81445b363a89a258ee1ea07d1f"
+    },
+    {
+      "block_id": "page-0090-block-0013",
+      "order": 13,
+      "text": "Paliperidone palmitate \n",
+      "bbox": [
+        216.04660034179688,
+        568.6643676757812,
+        224.7541046142578,
+        641.9993896484375
+      ],
+      "text_sha256": "76cdc43089e0f5e257bcf780741d0c53e23d073fb305723a7e255eef8ace4a40"
+    },
+    {
+      "block_id": "page-0090-block-0014",
+      "order": 14,
+      "text": "(monthly)\n(Xeplion)\nDeltoid or gluteal\nNot required**\n50–150mg monthly\nMonthly\nLoading dose required at treatment \n",
+      "bbox": [
+        216.04660034179688,
+        49.109580993652344,
+        234.75160217285156,
+        641.9993896484375
+      ],
+      "text_sha256": "40e92961a5d79ef5a07fede1803eb59ee9247e40ceeda5a2b58539652a7aeee1"
+    },
+    {
+      "block_id": "page-0090-block-0015",
+      "order": 15,
+      "text": "initiation\n",
+      "bbox": [
+        226.04409790039062,
+        136.22203063964844,
+        234.75160217285156,
+        164.13690185546875
+      ],
+      "text_sha256": "924770065fbaefca7112be9849a0d295a5c80d0bd69a5f73dad9745701da175c"
+    },
+    {
+      "block_id": "page-0090-block-0016",
+      "order": 16,
+      "text": "Paliperidone palmitate \n",
+      "bbox": [
+        241.06658935546875,
+        568.6643676757812,
+        249.7740936279297,
+        641.9993896484375
+      ],
+      "text_sha256": "76cdc43089e0f5e257bcf780741d0c53e23d073fb305723a7e255eef8ace4a40"
+    },
+    {
+      "block_id": "page-0090-block-0017",
+      "order": 17,
+      "text": "(3-monthly)\n(Trevicta)\nDeltoid or gluteal\nNot \n",
+      "bbox": [
+        241.06658935546875,
+        403.9942932128906,
+        259.7716064453125,
+        641.9993896484375
+      ],
+      "text_sha256": "6c7f76b888f76e15ad56bf4adf6541bb922212b19b2915758de2f768ca1f9771"
+    },
+    {
+      "block_id": "page-0090-block-0018",
+      "order": 18,
+      "text": "required***\n175–525mg every 3 months\n3 months\n",
+      "bbox": [
+        241.06658935546875,
+        196.8219451904297,
+        259.7716064453125,
+        417.7493896484375
+      ],
+      "text_sha256": "5c8693d205861e2b6c42513b78a47711a94cadef421842d31d0bb60c19500872"
+    },
+    {
+      "block_id": "page-0090-block-0019",
+      "order": 19,
+      "text": "Pipothiazine palmitate\n(Piportil)\nGluteal region\n25\n50–200mg every 4 weeks\n4\n? Lower incidence of EPS (relative to \n",
+      "bbox": [
+        266.0940856933594,
+        46.769371032714844,
+        274.80157470703125,
+        641.9993896484375
+      ],
+      "text_sha256": "082c1693ae4e3ed034c567f454def913a1a1c9fb150bb8d4e7e951065599b57a"
+    },
+    {
+      "block_id": "page-0090-block-0020",
+      "order": 20,
+      "text": "other FGAs)\n",
+      "bbox": [
+        276.0915832519531,
+        126.2169418334961,
+        284.799072265625,
+        164.13690185546875
+      ],
+      "text_sha256": "f2bfcef9d7eb7926b00d02e6a473e897eb5f7d71e3befe2ceeb9e38c9152bd5f"
+    },
+    {
+      "block_id": "page-0090-block-0021",
+      "order": 21,
+      "text": "Risperidone microspheres\n(Risperdal Consta)\nDeltoid or gluteal\nNot required**\n25–50mg every 2 weeks\n2\nDrug release delayed for 2–3 weeks \n",
+      "bbox": [
+        291.1141052246094,
+        47.999473571777344,
+        299.82159423828125,
+        641.9993896484375
+      ],
+      "text_sha256": "63831a0386e7ae13eef7ce7469c33751b4d81800da6b8022fc448cfae6ecc0a9"
+    },
+    {
+      "block_id": "page-0090-block-0022",
+      "order": 22,
+      "text": "– oral therapy required\n",
+      "bbox": [
+        301.1116027832031,
+        91.48448181152344,
+        309.819091796875,
+        164.13690185546875
+      ],
+      "text_sha256": "211c9878f95686607e9e9bdc6693c541e880e950d0faedbe4789c847d047a9a6"
+    },
+    {
+      "block_id": "page-0090-block-0023",
+      "order": 23,
+      "text": "Zuclopenthixol decanote\n(Clopixol)\nButtock or thigh\n100\n200mg every 3 weeks to 600mg a week\n2–4\n? Slightly better efficacy than LAI FGAs\n",
+      "bbox": [
+        316.1341247558594,
+        40.53690719604492,
+        326.85906982421875,
+        641.9993896484375
+      ],
+      "text_sha256": "cfdd5283ce9659aabf0b2868b873b63a55daf73c0a125ef7ea640d5de5e6d4fe"
+    },
+    {
+      "block_id": "page-0090-block-0024",
+      "order": 24,
+      "text": "Notes:\n",
+      "bbox": [
+        336.96905517578125,
+        619.4993896484375,
+        345.8565673828125,
+        641.9993896484375
+      ],
+      "text_sha256": "8a744e0671b230269a1dfe76eedb91d25bc2928e1f45faa0c1d28a7ed71a69e9"
+    },
+    {
+      "block_id": "page-0090-block-0025",
+      "order": 25,
+      "text": "■\n■The doses mentioned above are for adults. Check formal labelling for appropriate doses in the elderly.\n",
+      "bbox": [
+        347.1665344238281,
+        311.0692443847656,
+        355.8740234375,
+        641.99951171875
+      ],
+      "text_sha256": "fffee077845c577ce99f889d68748c2bc5fc60c803f6ad2e0896b430772135b5"
+    },
+    {
+      "block_id": "page-0090-block-0026",
+      "order": 26,
+      "text": "■\n■After a test dose, wait 4–10 days then titrate to maintenance dose according to response (see product information for individual drugs).\n",
+      "bbox": [
+        357.1665344238281,
+        202.16163635253906,
+        365.8740234375,
+        641.99951171875
+      ],
+      "text_sha256": "2f37c17d90bb33a1c012b33987cb66cb01585324a719a5dfe88162f1c7db1a1c"
+    },
+    {
+      "block_id": "page-0090-block-0027",
+      "order": 27,
+      "text": "■\n■Avoid using shorter dose intervals than those recommended except in exceptional circumstances (e.g. long interval necessitates high volume (>3–4ml?) injection). Maximum licensed single \n",
+      "bbox": [
+        367.1665344238281,
+        36.839500427246094,
+        375.8740234375,
+        641.99951171875
+      ],
+      "text_sha256": "e7c6992e87c031be336f6091dc0c520f62579c3347703ffc5470846a1e188aea"
+    },
+    {
+      "block_id": "page-0090-block-0028",
+      "order": 28,
+      "text": "dose overrides longer intervals and lower volumes. For example, zuclopenthixol 500mg every week is licensed, whereas 1,000mg every two weeks is not (more than the licensed maximum \n",
+      "bbox": [
+        377.1640319824219,
+        36.194419860839844,
+        385.87152099609375,
+        635.9993896484375
+      ],
+      "text_sha256": "79715b0676dcbb903d84f3fbd7fb56d0c80e94232a531a07070113c6e50dff1b"
+    },
+    {
+      "block_id": "page-0090-block-0029",
+      "order": 29,
+      "text": "of 600mg is administered). Always check official manufacturer’s information.\n",
+      "bbox": [
+        387.1615295410156,
+        390.974365234375,
+        395.8690185546875,
+        635.9993896484375
+      ],
+      "text_sha256": "e4a60b87e520233ee991c50e76cb4f0a451c8e7ee7caef5426698d808fd0a998"
+    },
+    {
+      "block_id": "page-0090-block-0030",
+      "order": 30,
+      "text": "*Test dose not stated by manufacturer.\n**Tolerability and response to the oral preparation should be established before administering the LAI. With respect to paliperidone LAI, oral risperidone can be used for this purpose.\n***May not be started until the completion of 4 months’ treatment with monthly LAI.\n",
+      "bbox": [
+        397.114013671875,
+        61.409446716308594,
+        425.86151123046875,
+        641.9993896484375
+      ],
+      "text_sha256": "d4b88feb8e574484d39d1e66bcdb2ea0e7ad01ad272d2094be6de54e0e8ef70a"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

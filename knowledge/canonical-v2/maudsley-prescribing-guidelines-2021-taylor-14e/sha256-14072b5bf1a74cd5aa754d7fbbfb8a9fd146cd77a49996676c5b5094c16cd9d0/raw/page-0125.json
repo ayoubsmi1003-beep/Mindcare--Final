@@ -1,0 +1,299 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0125",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 125,
+  "source_page_index": 124,
+  "source_page_display": 125,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "104    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nPattern of tapering\nPET imaging demonstrates a hyperbolic relationship between dose of antipsychotic and \nD2 receptor occupancy.22 This hyperbolic relationship applies to other receptor targets \nof antipsychotics as well (including histaminergic, cholinergic and serotonergic recep-\ntors), because it arises from the law of mass action (whereby each additional molecule \nof a drug has incrementally less effect as receptor targets become saturated).23 The \nnature of this relationship is often obscured by the habit of plotting dose–response \ncurves on semi-logarithmic axes.23 A hyperbolic relationship between dose of antipsy-\nchotic and its therapeutic effects (as measured by symptoms scales) has also been \nshown,24 suggesting that clinical response mirrors the neurobiological pattern of effects.\nThis brings into question the rationale for a linear reduction of antipsychotic dose – \nfor example, a reduction from 20 to 15 to 10 to 5 to 0mg of olanzapine. Although this \nregime appears reasonable, the hyperbolic relationship between dose and effect on D2 \nblockade dictates that these linear dose decreases will produce increasingly larger \nreductions of D2 blockade (and the clinical consequences of this) (Figure 1.2A). Indeed, \nthe reduction of dose from 5mg to 0mg will produce a reduction in D2 blockade \n(52.6%) larger than that produced by the reduction from 40 to 5mg of olanzapine \n(37.3%). These increasingly large reductions in D2 blockade may be more likely to \nprovoke relapse.\nLinear or ‘evenly spaced’ reductions in D2 blockade require hyperbolically reducing \ndoses of antipsychotic (Figure 1.2B).25 These hyperbolic reductions are approximated \nby sequential halving of dose: for example, risperidone doses of 20mg, 10mg, 5mg, \n2.5mg, 1.25mg, 0.6mg, 0.3mg, 0mg produce roughly 15 percentage point reductions in \nD2 blockade. This pattern of reduction may be less likely to provoke relapse because it \navoids large increases in dopaminergic signalling. Preliminary support for this notion \ncomes from three studies of gradual antipsychotic reduction: one study achieved a 42% \nreduction in overall antipsychotic dose in 6 months with no increase in relapse;26 in \n100\n(A)\n(B)\n80\n60\n40\nD2 occupancy (%)\n20\n0\n0\n10\n20\nOlanzapine dose (mg)\n30\n40\n50\n100\n80\n60\n40\nD2 occupancy (%)\n20\n0\n0\n10\n20\nOlanzapine dose (mg)\n30\n40\n50\nFigure 1.2  (A) Linear dose reductions of risperidone cause increasingly large reductions in D2 dopaminergic receptor \nblockade. The relationship between dose of risperidone and D2 blockade is derived from the line of best fit from \nmeta-analysis of PET studies.22 (B) Linear reductions of D2 dopaminergic occupancy (in this case, 20% reductions) \ncorrespond to hyperbolically decreasing doses of risperidone. The doses in this case correspond to 6.9mg (80% D2 \noccupancy), 2.0mg (60% D2 occupancy), 0.82mg (40% D2 occupancy) and 0.30mg (20% D2 occupancy). \nApproximations to this regime that correspond to available formulations are given in the text.\n",
+  "raw_text_sha256": "5f9b6cb384f26358e657847ae6242cf1ae79c8644d71ede553cd8b20ff3914e9",
+  "coordinates_sha256": "3377f18739c394c84d7e1a4377bb73fceec6065891e6b5208e9597eeb447c45a",
+  "block_sequence_sha256": "dd65dbee7210399dd8f73047bba8773f8625a61d5cd2d9416ba8587a3ce1c2e8",
+  "blocks": [
+    {
+      "block_id": "page-0125-block-0000",
+      "order": 0,
+      "text": "104    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "f988b252e7c0ea546df17f78a60fc918207ff0bb653037b9e49b5216440e9d99"
+    },
+    {
+      "block_id": "page-0125-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0125-block-0002",
+      "order": 2,
+      "text": "Pattern of tapering\n",
+      "bbox": [
+        61.88909912109375,
+        62.31442642211914,
+        161.1200714111328,
+        75.34942626953125
+      ],
+      "text_sha256": "1fc97befa69030a6f159e87122371b47d38fc8f4e797577f3b92d1e9b86c7710"
+    },
+    {
+      "block_id": "page-0125-block-0003",
+      "order": 3,
+      "text": "PET imaging demonstrates a hyperbolic relationship between dose of antipsychotic and \nD2 receptor occupancy.22 This hyperbolic relationship applies to other receptor targets \nof antipsychotics as well (including histaminergic, cholinergic and serotonergic recep-\ntors), because it arises from the law of mass action (whereby each additional molecule \nof a drug has incrementally less effect as receptor targets become saturated).23 The \nnature of this relationship is often obscured by the habit of plotting dose–response \ncurves on semi-logarithmic axes.23 A hyperbolic relationship between dose of antipsy-\nchotic and its therapeutic effects (as measured by symptoms scales) has also been \nshown,24 suggesting that clinical response mirrors the neurobiological pattern of effects.\n",
+      "bbox": [
+        61.88710021972656,
+        81.159423828125,
+        436.6908264160156,
+        188.87942504882812
+      ],
+      "text_sha256": "9afe79efd199c6df286fb824b9d267f9c93bcf931d39acd1fa893725f89d466d"
+    },
+    {
+      "block_id": "page-0125-block-0004",
+      "order": 4,
+      "text": "This brings into question the rationale for a linear reduction of antipsychotic dose – \nfor example, a reduction from 20 to 15 to 10 to 5 to 0mg of olanzapine. Although this \nregime appears reasonable, the hyperbolic relationship between dose and effect on D2 \nblockade dictates that these linear dose decreases will produce increasingly larger \nreductions of D2 blockade (and the clinical consequences of this) (Figure 1.2A). Indeed, \nthe reduction of dose from 5mg to 0mg will produce a reduction in D2 blockade \n(52.6%) larger than that produced by the reduction from 40 to 5mg of olanzapine \n(37.3%). These increasingly large reductions in D2 blockade may be more likely to \nprovoke relapse.\n",
+      "bbox": [
+        61.89190673828125,
+        189.159423828125,
+        436.6818542480469,
+        296.8794250488281
+      ],
+      "text_sha256": "9f8cd899123f868a9f0f4c7d0b6059668c59af1615f52976e74d89d71f4b22a2"
+    },
+    {
+      "block_id": "page-0125-block-0005",
+      "order": 5,
+      "text": "Linear or ‘evenly spaced’ reductions in D2 blockade require hyperbolically reducing \ndoses of antipsychotic (Figure 1.2B).25 These hyperbolic reductions are approximated \nby sequential halving of dose: for example, risperidone doses of 20mg, 10mg, 5mg, \n2.5mg, 1.25mg, 0.6mg, 0.3mg, 0mg produce roughly 15 percentage point reductions in \nD2 blockade. This pattern of reduction may be less likely to provoke relapse because it \navoids large increases in dopaminergic signalling. Preliminary support for this notion \ncomes from three studies of gradual antipsychotic reduction: one study achieved a 42% \nreduction in overall antipsychotic dose in 6 months with no increase in relapse;26 in \n",
+      "bbox": [
+        61.88859558105469,
+        297.159423828125,
+        436.7087097167969,
+        392.8794250488281
+      ],
+      "text_sha256": "36dbe81114aaa77b081bbbe2d23c4534f43fe4550832ea3539c3c06dfd3a32bd"
+    },
+    {
+      "block_id": "page-0125-block-0006",
+      "order": 6,
+      "text": "100\n(A)\n(B)\n",
+      "bbox": [
+        61.88939666748047,
+        412.2881164550781,
+        259.12139892578125,
+        425.01611328125
+      ],
+      "text_sha256": "def122e351b4bf81156b476b51c32c6aa9efedddf94243cbbabbf04aaa447473"
+    },
+    {
+      "block_id": "page-0125-block-0007",
+      "order": 7,
+      "text": "80\n",
+      "bbox": [
+        78.13150024414062,
+        439.0586242675781,
+        84.80349731445312,
+        446.4326171875
+      ],
+      "text_sha256": "95aebc97bc646c67fdcd923a5965b001f3c8a5c4d3a77075112e12a3a311d760"
+    },
+    {
+      "block_id": "page-0125-block-0008",
+      "order": 8,
+      "text": "60\n",
+      "bbox": [
+        78.13150024414062,
+        460.8926086425781,
+        84.80349731445312,
+        468.2666015625
+      ],
+      "text_sha256": "95cf32708a31caa478a0e9141103ac567d85e5186e697e7e0c81f75589999e31"
+    },
+    {
+      "block_id": "page-0125-block-0009",
+      "order": 9,
+      "text": "40\n",
+      "bbox": [
+        78.13150024414062,
+        482.7265930175781,
+        84.80349731445312,
+        490.1005859375
+      ],
+      "text_sha256": "673650f936cb3b0a2f93ce09d81be10748b1b203c19e8176b4eefc1964a0cf3a"
+    },
+    {
+      "block_id": "page-0125-block-0010",
+      "order": 10,
+      "text": "D2 occupancy (%)\n",
+      "bbox": [
+        68.07340240478516,
+        449.87164306640625,
+        75.44740295410156,
+        500.2236328125
+      ],
+      "text_sha256": "bfc4daed782b1170335a8d2cbaa48158fd3a1ede1dfd9269e487203881838102"
+    },
+    {
+      "block_id": "page-0125-block-0011",
+      "order": 11,
+      "text": "20\n",
+      "bbox": [
+        78.13150024414062,
+        504.5591125488281,
+        84.80349731445312,
+        511.93310546875
+      ],
+      "text_sha256": "5378796307535df3ec8d8b15a2e2dc5641419c3d3060cfe32238c0fa973f7aa3"
+    },
+    {
+      "block_id": "page-0125-block-0012",
+      "order": 12,
+      "text": "0\n0\n10\n20\nOlanzapine dose (mg)\n",
+      "bbox": [
+        81.46749877929688,
+        524.485107421875,
+        197.45709228515625,
+        547.905029296875
+      ],
+      "text_sha256": "4934ddfb46798c15d7dd662218f7f89f3c9054670588d5aaa7d30c1c0886204a"
+    },
+    {
+      "block_id": "page-0125-block-0013",
+      "order": 13,
+      "text": "30\n40\n50\n",
+      "bbox": [
+        179.31430053710938,
+        532.8629760742188,
+        247.2823028564453,
+        540.2369995117188
+      ],
+      "text_sha256": "dc2e8fb6ba116e59dfc77677dbf36ec59ab07dea12f9369e0f20688ea11437d9"
+    },
+    {
+      "block_id": "page-0125-block-0014",
+      "order": 14,
+      "text": "100\n",
+      "bbox": [
+        263.1964111328125,
+        419.1217346191406,
+        273.20440673828125,
+        426.4957275390625
+      ],
+      "text_sha256": "eea8254c7500ba3de996aa8ad6af399183f04e17d4a8102fde539dbc93a90012"
+    },
+    {
+      "block_id": "page-0125-block-0015",
+      "order": 15,
+      "text": "80\n",
+      "bbox": [
+        266.53240966796875,
+        440.0017395019531,
+        273.20440673828125,
+        447.375732421875
+      ],
+      "text_sha256": "95aebc97bc646c67fdcd923a5965b001f3c8a5c4d3a77075112e12a3a311d760"
+    },
+    {
+      "block_id": "page-0125-block-0016",
+      "order": 16,
+      "text": "60\n",
+      "bbox": [
+        266.53240966796875,
+        461.28375244140625,
+        273.20440673828125,
+        468.6577453613281
+      ],
+      "text_sha256": "95cf32708a31caa478a0e9141103ac567d85e5186e697e7e0c81f75589999e31"
+    },
+    {
+      "block_id": "page-0125-block-0017",
+      "order": 17,
+      "text": "40\n",
+      "bbox": [
+        266.53240966796875,
+        482.5657653808594,
+        273.20440673828125,
+        489.93975830078125
+      ],
+      "text_sha256": "673650f936cb3b0a2f93ce09d81be10748b1b203c19e8176b4eefc1964a0cf3a"
+    },
+    {
+      "block_id": "page-0125-block-0018",
+      "order": 18,
+      "text": "D2 occupancy (%)\n",
+      "bbox": [
+        256.3734130859375,
+        449.9765319824219,
+        263.7472839355469,
+        500.32763671875
+      ],
+      "text_sha256": "bfc4daed782b1170335a8d2cbaa48158fd3a1ede1dfd9269e487203881838102"
+    },
+    {
+      "block_id": "page-0125-block-0019",
+      "order": 19,
+      "text": "20\n",
+      "bbox": [
+        266.53240966796875,
+        503.8525085449219,
+        273.20440673828125,
+        511.22650146484375
+      ],
+      "text_sha256": "5378796307535df3ec8d8b15a2e2dc5641419c3d3060cfe32238c0fa973f7aa3"
+    },
+    {
+      "block_id": "page-0125-block-0020",
+      "order": 20,
+      "text": "0\n0\n10\n20\nOlanzapine dose (mg)\n",
+      "bbox": [
+        269.868408203125,
+        523.280517578125,
+        383.45428466796875,
+        546.2965087890625
+      ],
+      "text_sha256": "4934ddfb46798c15d7dd662218f7f89f3c9054670588d5aaa7d30c1c0886204a"
+    },
+    {
+      "block_id": "page-0125-block-0021",
+      "order": 21,
+      "text": "30\n40\n50\n",
+      "bbox": [
+        364.86639404296875,
+        531.4450073242188,
+        431.06829833984375,
+        538.8204956054688
+      ],
+      "text_sha256": "dc2e8fb6ba116e59dfc77677dbf36ec59ab07dea12f9369e0f20688ea11437d9"
+    },
+    {
+      "block_id": "page-0125-block-0022",
+      "order": 22,
+      "text": "Figure 1.2  (A) Linear dose reductions of risperidone cause increasingly large reductions in D2 dopaminergic receptor \nblockade. The relationship between dose of risperidone and D2 blockade is derived from the line of best fit from \nmeta-analysis of PET studies.22 (B) Linear reductions of D2 dopaminergic occupancy (in this case, 20% reductions) \ncorrespond to hyperbolically decreasing doses of risperidone. The doses in this case correspond to 6.9mg (80% D2 \noccupancy), 2.0mg (60% D2 occupancy), 0.82mg (40% D2 occupancy) and 0.30mg (20% D2 occupancy). \nApproximations to this regime that correspond to available formulations are given in the text.\n",
+      "bbox": [
+        61.88710021972656,
+        555.6405029296875,
+        435.3724060058594,
+        614.5255126953125
+      ],
+      "text_sha256": "41fbbbb2b82f8aef8b82ae8859ac832dde9952ce93ef0a3b4275e091f8c4ceec"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

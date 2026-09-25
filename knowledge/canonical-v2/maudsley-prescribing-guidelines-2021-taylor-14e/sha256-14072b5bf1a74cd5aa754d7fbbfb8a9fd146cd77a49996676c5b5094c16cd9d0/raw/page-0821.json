@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0821",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 821,
+  "source_page_index": 820,
+  "source_page_display": 821,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "800    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\nDrug class\nClinical applications\nNotes\nAntiseizure \nmedications33\nAggression and self-injury\nSome uncontrolled studies supporting sodium valproate34 \nin LD populations though evidence is not strong and \nresearch findings contradictory. However, valproate remains \nbest supported of the antiseizure medications for mood \nlability and aggression partly because of positive studies in \nnon-LD groups.35\nLimited studies of lamotrigine, mostly in children, suggest \nno effect, at least in autism and in the absence of affective \ninstability.26\nData for carbamazepine also unconvincing, but it is still \nwidely used.36\nLithium37\nLicensed for the treatment of \nself-injurious behaviour and \naggression\nSome RCT evidence38 for LD but no studies in this \npopulation for many years3 although there has been one \nfairly recent positive RCT for aggression in adolescents \nwithout developmental impairment.39 Experience suggests \ncan be very helpful in individual cases where other \ntreatments have failed and is possibly underused though \nside effects can be problematic.\nPerhaps best considered where there is a sub-syndromal or \nnonspecific ‘affective component’. Some authorities \nsuggest that, on close examination, challenging behaviour \nmay occur in the context of very rapid cycling bipolar \ndisorder in some individuals with severe and profound \nlearning disability and that the diagnosis is easily missed.\nSome RCT evidence that short term use is reasonably well \ntolerated (at 6mg/kg).40\nMethylphenidate\nEffective in ADHD associated \nwith LD\nNICE13 conducted a meta-analysis and found clear benefit \nfor methylphenidate (and risperidone and clonidine) in \nADHD in the context of LD. Insomnia is common.\nNaltrexone41\nHas been used for severe \nself-injurious behaviour42\nEvidence not strong and results are inconsistent. Use may \nstill be an option in severe and intractable cases. One case \nof successful treatment of kleptomania.43 Overall, clinical \nuse has declined of late.44\n",
+  "raw_text_sha256": "256c9dac7639a4b097d00976d9e17df708965ff00f1bc0932c04c8807da940bf",
+  "coordinates_sha256": "7ef271b0775a5deacb8c720ac6bf46b46bb7a9c413c03c85b23e0399a301d960",
+  "block_sequence_sha256": "db9184ba59f1c751a86735eb39270c9014dd8d2dfb75a5edcd6eb5257f82459d",
+  "blocks": [
+    {
+      "block_id": "page-0821-block-0000",
+      "order": 0,
+      "text": "800    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "d411c3a141c05ba88d5436616903bb1475fa22c0377242d507c149b010d7e2fa"
+    },
+    {
+      "block_id": "page-0821-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0821-block-0002",
+      "order": 2,
+      "text": "Drug class\nClinical applications\nNotes\n",
+      "bbox": [
+        61.88999938964844,
+        70.57301330566406,
+        263.3924865722656,
+        79.46051025390625
+      ],
+      "text_sha256": "5b5226743abd3e7e3b81240b88e867eecaf8f5d0ef5af556253236b52952c8d5"
+    },
+    {
+      "block_id": "page-0821-block-0003",
+      "order": 3,
+      "text": "Antiseizure \nmedications33\n",
+      "bbox": [
+        61.88999938964844,
+        90.8755111694336,
+        105.08421325683594,
+        109.58050537109375
+      ],
+      "text_sha256": "7e1ab015ac4d59a56553997750d28c6d6743893f318dbee593f7b899c27282c6"
+    },
+    {
+      "block_id": "page-0821-block-0004",
+      "order": 4,
+      "text": "Aggression and self-injury\nSome uncontrolled studies supporting sodium valproate34 \nin LD populations though evidence is not strong and \nresearch findings contradictory. However, valproate remains \nbest supported of the antiseizure medications for mood \nlability and aggression partly because of positive studies in \nnon-LD groups.35\n",
+      "bbox": [
+        132.0,
+        90.69801330566406,
+        434.8120422363281,
+        149.572998046875
+      ],
+      "text_sha256": "8487572a25007cb5d5a181c766f245390071d00badc698574f1550f526c3c33a"
+    },
+    {
+      "block_id": "page-0821-block-0005",
+      "order": 5,
+      "text": "Limited studies of lamotrigine, mostly in children, suggest \nno effect, at least in autism and in the absence of affective \ninstability.26\n",
+      "bbox": [
+        242.97650146484375,
+        153.69801330566406,
+        433.28912353515625,
+        182.58050537109375
+      ],
+      "text_sha256": "a08eab84618667e0b932aaebbdd6c775e313e43f0fb16a2f6bf75477a532ec37"
+    },
+    {
+      "block_id": "page-0821-block-0006",
+      "order": 6,
+      "text": "Data for carbamazepine also unconvincing, but it is still \nwidely used.36\n",
+      "bbox": [
+        242.97650146484375,
+        186.69798278808594,
+        426.3441467285156,
+        205.58297729492188
+      ],
+      "text_sha256": "7809652da9225d210c510dc8dc0664e6a2176e6e3968a4b0dc9f03a2cb3a8c1a"
+    },
+    {
+      "block_id": "page-0821-block-0007",
+      "order": 7,
+      "text": "Lithium37\nLicensed for the treatment of \nself-injurious behaviour and \naggression\n",
+      "bbox": [
+        61.88999938964844,
+        228.0029754638672,
+        227.27999877929688,
+        256.7054748535156
+      ],
+      "text_sha256": "e8107c1794adb9eb1b892fb0ed182b100a1aa4cb180b98da57dd9d4cf02f49d0"
+    },
+    {
+      "block_id": "page-0821-block-0008",
+      "order": 8,
+      "text": "Some RCT evidence38 for LD but no studies in this \npopulation for many years3 although there has been one \nfairly recent positive RCT for aggression in adolescents \nwithout developmental impairment.39 Experience suggests \ncan be very helpful in individual cases where other \ntreatments have failed and is possibly underused though \nside effects can be problematic.\n",
+      "bbox": [
+        242.9766845703125,
+        227.99546813964844,
+        430.76995849609375,
+        296.7029724121094
+      ],
+      "text_sha256": "4e4268b00c7b902cd35a1266dd323a4cc754739e52fd73990310266176c56a58"
+    },
+    {
+      "block_id": "page-0821-block-0009",
+      "order": 9,
+      "text": "Perhaps best considered where there is a sub-syndromal or \nnonspecific ‘affective component’. Some authorities \nsuggest that, on close examination, challenging behaviour \nmay occur in the context of very rapid cycling bipolar \ndisorder in some individuals with severe and profound \nlearning disability and that the diagnosis is easily missed.\n",
+      "bbox": [
+        242.97740173339844,
+        300.99298095703125,
+        432.4725036621094,
+        359.6879577636719
+      ],
+      "text_sha256": "714f6fcdf1626cc28a5bb40c5526bbd46586d5cf3edc73a7677d4ab702a553d6"
+    },
+    {
+      "block_id": "page-0821-block-0010",
+      "order": 10,
+      "text": "Some RCT evidence that short term use is reasonably well \ntolerated (at 6mg/kg).40\n",
+      "bbox": [
+        242.97740173339844,
+        363.97796630859375,
+        429.1124572753906,
+        382.6829528808594
+      ],
+      "text_sha256": "efca0ddcd1ceeefa354bf36a5d45dffcc7411b9b86c036a9e9ed63cdb734cd2f"
+    },
+    {
+      "block_id": "page-0821-block-0011",
+      "order": 11,
+      "text": "Methylphenidate\nEffective in ADHD associated \nwith LD\n",
+      "bbox": [
+        61.88999938964844,
+        405.12799072265625,
+        226.03500366210938,
+        423.8329772949219
+      ],
+      "text_sha256": "0b60790fb280d938faa3d757f99ba810dd689dc345895a430ca862aaf6729a94"
+    },
+    {
+      "block_id": "page-0821-block-0012",
+      "order": 12,
+      "text": "NICE13 conducted a meta-analysis and found clear benefit \nfor methylphenidate (and risperidone and clonidine) in \nADHD in the context of LD. Insomnia is common.\n",
+      "bbox": [
+        242.97750854492188,
+        405.12799072265625,
+        429.1136169433594,
+        433.8304748535156
+      ],
+      "text_sha256": "c704713c4ac03dd3c1991e5a9b064d1b098caf4b096504b838431bb11752d8cb"
+    },
+    {
+      "block_id": "page-0821-block-0013",
+      "order": 13,
+      "text": "Naltrexone41\nHas been used for severe \nself-injurious behaviour42\n",
+      "bbox": [
+        61.89100646972656,
+        443.25048828125,
+        213.96751403808594,
+        461.9580078125
+      ],
+      "text_sha256": "ec23caee618d9e07d6a474dba95d648a1f639bd388bffff175fef7678a41f9df"
+    },
+    {
+      "block_id": "page-0821-block-0014",
+      "order": 14,
+      "text": "Evidence not strong and results are inconsistent. Use may \nstill be an option in severe and intractable cases. One case \nof successful treatment of kleptomania.43 Overall, clinical \nuse has declined of late.44\n",
+      "bbox": [
+        242.97650146484375,
+        443.2530212402344,
+        430.3640441894531,
+        481.9580078125
+      ],
+      "text_sha256": "d570e2c3a6c0d69b79cfd8a20eb2850c2425271763a04c3b13b2791ef0d22698"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

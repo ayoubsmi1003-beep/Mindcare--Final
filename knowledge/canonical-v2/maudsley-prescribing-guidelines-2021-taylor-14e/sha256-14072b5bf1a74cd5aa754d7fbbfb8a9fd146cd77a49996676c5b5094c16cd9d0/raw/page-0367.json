@@ -1,0 +1,215 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0367",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 367,
+  "source_page_index": 366,
+  "source_page_display": 367,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "346    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nappear until the reduction in the total daily dosage of the antidepressant is (proportion-\nately) substantial. Patients receiving MAOIs may need to be tapered over a longer \nperiod. Tranylcypromine may be particularly difficult to stop.13 At-risk patients (see \nabove) may need a slower taper. Agomelatine can probably be stopped abruptly with-\nout provoking withdrawal symptoms but should be slowly withdrawn as a matter of \nprinciple – all psychotropic drugs should be slowly withdrawn where possible.\nMany people suffer symptoms despite slow withdrawal and even if they have received \nadequate education regarding withdrawal symptoms.7,17 This may be because hyperbolic \ntapering is not employed (see section on ‘Stopping antidepressants’ in this chapter).\nHow to treat14–16,23\nThere are few systematic studies in this area. Treatment is pragmatic. If symptoms are \nmild, reassure the patient that these symptoms are common after discontinuing an anti-\ndepressant and will pass in a few days or weeks. If symptoms are severe, reintroduce the \noriginal antidepressant (or another with a longer half-life from the same class) and \ntaper gradually while monitoring for symptoms.6\nSome evidence supports the use of anticholinergic agents in tricyclic withdrawal24 \nand fluoxetine for symptoms associated with stopping paroxetine,25 sertraline,25 clomi-\npramine26 or venlafaxine27 – fluoxetine, having a longer plasma half-life, seems to be \nassociated with a lower incidence of discontinuation symptoms than other similar \ndrugs.7 The use of alternative classes of medications (e.g. short term of symptomatic use \nof a benzodiazepine) has been suggested for the treatment of anxiety and insomnia.28\nKey points that patients should know\n■\n■Antidepressants are not addictive according to the medical definition of the word. \n(Patients most frequently mentioned reason for a negative opinion on antidepressants \nis addiction,29 and a survey of 1,946 people across the United Kingdom conducted in \n1997 found that 74% thought that antidepressants were addictive.30) Note, however, \nthat the semantic and categorical distinctions between addiction and the withdrawal \nsymptoms seen with antidepressants may be unimportant to patients.\n■\n■Patients should be informed that they may experience withdrawal symptoms (and the \nmost likely symptoms associated with the drug that they are taking) when they stop \ntheir antidepressant.\n■\n■Antidepressants should not generally be stopped abruptly: withdrawal symptoms are \nmore likely and relapse more common.31\n■\n■Discontinuation symptoms can occur after missed or late doses if the antidepressant \nprescribed has a short half-life. A very few patients experience pre-dose discontinuation \nsymptoms which provoke the taking of the antidepressant at an earlier time each day.\n",
+  "raw_text_sha256": "de693b04cad2723968bbae7cec835dd63b85b96a33dc9a4e55174af753bea299",
+  "coordinates_sha256": "0bf9d75f0a018ea93758cc75e49f99447f59960541c35aa891a8c350b8803952",
+  "block_sequence_sha256": "1d7d8c5f294e713412d74c12fb065c4a9fa964eeac6bd353a716f7d3e83c5750",
+  "blocks": [
+    {
+      "block_id": "page-0367-block-0000",
+      "order": 0,
+      "text": "346    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "0c424411e9da8a30f007a5ebd31d0f9ced1052ea916bc697ab8ce148114aee5b"
+    },
+    {
+      "block_id": "page-0367-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0367-block-0002",
+      "order": 2,
+      "text": "appear until the reduction in the total daily dosage of the antidepressant is (proportion-\nately) substantial. Patients receiving MAOIs may need to be tapered over a longer \nperiod. Tranylcypromine may be particularly difficult to stop.13 At-risk patients (see \nabove) may need a slower taper. Agomelatine can probably be stopped abruptly with-\nout provoking withdrawal symptoms but should be slowly withdrawn as a matter of \nprinciple – all psychotropic drugs should be slowly withdrawn where possible.\n",
+      "bbox": [
+        61.886993408203125,
+        62.55029296875,
+        436.69683837890625,
+        134.27029418945312
+      ],
+      "text_sha256": "03a336a107761b3cbe4d3a92b57bd4339518299308d18b83910e2743db5203b5"
+    },
+    {
+      "block_id": "page-0367-block-0003",
+      "order": 3,
+      "text": "Many people suffer symptoms despite slow withdrawal and even if they have received \nadequate education regarding withdrawal symptoms.7,17 This may be because hyperbolic \ntapering is not employed (see section on ‘Stopping antidepressants’ in this chapter).\n",
+      "bbox": [
+        61.886993408203125,
+        134.55029296875,
+        436.6571960449219,
+        170.27029418945312
+      ],
+      "text_sha256": "e1ca5a0e890b1b0282b23a4d7ec1ca2f15d90bf0d5149ba5255c1f28c9e76363"
+    },
+    {
+      "block_id": "page-0367-block-0004",
+      "order": 4,
+      "text": "How to treat14–16,23\n",
+      "bbox": [
+        61.89208984375,
+        188.64028930664062,
+        146.44393920898438,
+        200.49029541015625
+      ],
+      "text_sha256": "dc17308eb0a845dfd00bcc7576564d75e89652911aa081ff340c2e1da089e812"
+    },
+    {
+      "block_id": "page-0367-block-0005",
+      "order": 5,
+      "text": "There are few systematic studies in this area. Treatment is pragmatic. If symptoms are \nmild, reassure the patient that these symptoms are common after discontinuing an anti-\ndepressant and will pass in a few days or weeks. If symptoms are severe, reintroduce the \noriginal antidepressant (or another with a longer half-life from the same class) and \ntaper gradually while monitoring for symptoms.6\n",
+      "bbox": [
+        61.88999938964844,
+        206.55029296875,
+        436.7099304199219,
+        266.2702941894531
+      ],
+      "text_sha256": "6c748f552f3c3d7cf9892427607c44e42d81973daf587047c1bd2cfe221f98b0"
+    },
+    {
+      "block_id": "page-0367-block-0006",
+      "order": 6,
+      "text": "Some evidence supports the use of anticholinergic agents in tricyclic withdrawal24 \nand fluoxetine for symptoms associated with stopping paroxetine,25 sertraline,25 clomi-\npramine26 or venlafaxine27 – fluoxetine, having a longer plasma half-life, seems to be \nassociated with a lower incidence of discontinuation symptoms than other similar \ndrugs.7 The use of alternative classes of medications (e.g. short term of symptomatic use \nof a benzodiazepine) has been suggested for the treatment of anxiety and insomnia.28\n",
+      "bbox": [
+        61.88610076904297,
+        266.55029296875,
+        436.67120361328125,
+        338.2702941894531
+      ],
+      "text_sha256": "bc2cf5bb10f90c863a082c4cfec6e2c4c8bc7f63b53d98831ee3b3d86e25acf1"
+    },
+    {
+      "block_id": "page-0367-block-0007",
+      "order": 7,
+      "text": "Key points that patients should know\n",
+      "bbox": [
+        61.88990020751953,
+        355.7052917480469,
+        256.8648376464844,
+        368.74029541015625
+      ],
+      "text_sha256": "139b0b9621bf6a2863e07b831fe56ddbcddf3534a5f4101d4791eb973a2dbf81"
+    },
+    {
+      "block_id": "page-0367-block-0008",
+      "order": 8,
+      "text": "■\n■Antidepressants are not addictive according to the medical definition of the word. \n",
+      "bbox": [
+        61.88990020751953,
+        380.55029296875,
+        436.6797790527344,
+        392.2702941894531
+      ],
+      "text_sha256": "95a502e0c7152a2565f92258b1885c8884ff89e373022e8402abdb4be7c91106"
+    },
+    {
+      "block_id": "page-0367-block-0009",
+      "order": 9,
+      "text": "(Patients most frequently mentioned reason for a negative opinion on antidepressants \nis addiction,29 and a survey of 1,946 people across the United Kingdom conducted in \n1997 found that 74% thought that antidepressants were addictive.30) Note, however, \nthat the semantic and categorical distinctions between addiction and the withdrawal \nsymptoms seen with antidepressants may be unimportant to patients.\n",
+      "bbox": [
+        70.88990020751953,
+        392.55029296875,
+        436.6998291015625,
+        452.2702941894531
+      ],
+      "text_sha256": "60e68fc0ae47510fd5a8755a58b64752e74edf24563ac12c3b3d4cce59f44ca5"
+    },
+    {
+      "block_id": "page-0367-block-0010",
+      "order": 10,
+      "text": "■\n■Patients should be informed that they may experience withdrawal symptoms (and the \n",
+      "bbox": [
+        61.88990020751953,
+        452.55029296875,
+        436.6298828125,
+        464.2702941894531
+      ],
+      "text_sha256": "4bc9d878fe4da75e42aba522a2e85519dd7d39a69a8037522d25e7e143eb36fa"
+    },
+    {
+      "block_id": "page-0367-block-0011",
+      "order": 11,
+      "text": "most likely symptoms associated with the drug that they are taking) when they stop \ntheir antidepressant.\n",
+      "bbox": [
+        70.88990020751953,
+        464.55029296875,
+        436.7198181152344,
+        488.2702941894531
+      ],
+      "text_sha256": "e831d8eac648c170c7c14cd1adb78fcbffe08d4f3d38bd2d00019dbdd59aa7ee"
+    },
+    {
+      "block_id": "page-0367-block-0012",
+      "order": 12,
+      "text": "■\n■Antidepressants should not generally be stopped abruptly: withdrawal symptoms are \n",
+      "bbox": [
+        61.88990020751953,
+        488.55029296875,
+        436.6799011230469,
+        500.2702941894531
+      ],
+      "text_sha256": "5b38e923e45a849651edc2177ac2ef8f4939eeb00b4a3fbfc772746f5d586e04"
+    },
+    {
+      "block_id": "page-0367-block-0013",
+      "order": 13,
+      "text": "more likely and relapse more common.31\n",
+      "bbox": [
+        70.88990020751953,
+        500.55029296875,
+        245.69107055664062,
+        512.2703247070312
+      ],
+      "text_sha256": "57285c244987b42098abbd47c9e4cd6f48311587ecdd5a0d23485785612f5b15"
+    },
+    {
+      "block_id": "page-0367-block-0014",
+      "order": 14,
+      "text": "■\n■Discontinuation symptoms can occur after missed or late doses if the antidepressant \n",
+      "bbox": [
+        61.88990020751953,
+        512.55029296875,
+        436.6800842285156,
+        524.2703247070312
+      ],
+      "text_sha256": "77cb3b7fbbb3d268a112824505e0c4d059b8f8b62daa14bfa081acbe23861828"
+    },
+    {
+      "block_id": "page-0367-block-0015",
+      "order": 15,
+      "text": "prescribed has a short half-life. A very few patients experience pre-dose discontinuation \nsymptoms which provoke the taking of the antidepressant at an earlier time each day.\n",
+      "bbox": [
+        70.88990020751953,
+        524.55029296875,
+        436.66998291015625,
+        548.2703247070312
+      ],
+      "text_sha256": "d39ce3a23ed388f0c6700dadd4a0c12e60a96872c411cf990d1156d506de2f3f"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

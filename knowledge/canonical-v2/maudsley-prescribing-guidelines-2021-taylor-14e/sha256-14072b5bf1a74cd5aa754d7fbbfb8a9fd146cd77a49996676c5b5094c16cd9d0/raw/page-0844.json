@@ -1,0 +1,479 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0844",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 844,
+  "source_page_index": 843,
+  "source_page_display": 844,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    823\nCHAPTER 10\nDrugs\nAntidepressants\nTable 10.10  Antidepressants in bariatric surgery\nDrug\nSpecific evidence and considerations\nSSRIs8–13\n■\n■Evidence demonstrates that plasma levels may be significantly reduced following RYGB\n■\n■Malabsorption has been implicated in cases of discontinuation symptoms and loss of effi-\ncacy\nSNRIs10,14\n■\n■Duloxetine levels 42% lower after RYGB compared with matched controls\n■\n■The absorption of venlafaxine MR capsules seems not to be altered by RYGB15\nMirtazapine16,17\n■\n■Increased appetite and weight gain are possible\n■\n■Has been used successfully for non-mechanical vomiting after RYGB\nTCAs18,19\n■\n■Single case report suggests therapeutic plasma levels can be achieved within usual dose \nrange after RYGB\n■\n■Plasma levels may be increased after significant weight loss; consider monitoring levels and \nreducing dose\nGeneral summary\n■\n■Antidepressants are the best studied psychotropics in the bariatric population. Current evidence suggests that \nantidepressant absorption is reduced after surgery (though studies are mostly limited to SSRIs after RYGB).\n■\n■Signs of reduced absorption may include the rapid development of discontinuation symptoms and later loss \nof efficacy.\n■\n■Patients require close monitoring as those at risk of reduced absorption cannot be reliably predicted.\n■\n■The risk of gastric bleeds with bariatric surgery will probably be increased by serotonergic antidepressants\nAntipsychotics\nTable 10.11  Antipsychotics in bariatric surgery\nDrug\nSpecific evidence and considerations\nAsenapine20\n■\n■Primarily absorbed via oral mucosa; problems after bariatric surgery are not expected\n■\n■One case report of successful use after RYGB\nCariprazine\n■\n■No data available on absorption after bariatric surgery; follow general recommendations.\nClozapine21–23\n■\n■Two case reports of relapse after RYGB24\n■\n■Take drug plasma levels before surgery and regularly monitor after\n■\n■Constipation is common after surgery; the manufacturer recommends close monitoring and \nactive treatment\n■\n■Check smoking status (quitting before surgery is encouraged); adjust dose accordingly\nHaloperidol25\n■\n■Single case report suggests levels after RYGB are similar to those generally reported in the \nliterature\n(Continued)\n",
+  "raw_text_sha256": "7f61657e15e708704dd203127f1e293e785f748e0ca7f8bd537b61a833b62621",
+  "coordinates_sha256": "523342a850c81544f4f2cbacb2fe8760dd2f9298ddcd25d23cefa60b1a3a48ef",
+  "block_sequence_sha256": "eaab6da7438dbcd6b3fc896e844fd7b8290daae4e9786ddee8ab3b12b207951d",
+  "blocks": [
+    {
+      "block_id": "page-0844-block-0000",
+      "order": 0,
+      "text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    823\n",
+      "bbox": [
+        47.999698638916016,
+        31.395221710205078,
+        419.96697998046875,
+        41.0272216796875
+      ],
+      "text_sha256": "075af99c2685d27e3c50ee504c934d943f48f49403466cc3d4c3434d43340ae6"
+    },
+    {
+      "block_id": "page-0844-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        454.4096984863281,
+        75.763671875,
+        463.88970947265625,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0844-block-0002",
+      "order": 2,
+      "text": "Drugs\n",
+      "bbox": [
+        48.0,
+        62.31546401977539,
+        78.54700469970703,
+        75.3504638671875
+      ],
+      "text_sha256": "d9d48edc2c66d995575a2b5767b0ea2016c37df690623e969744b0f6502c1b1e"
+    },
+    {
+      "block_id": "page-0844-block-0003",
+      "order": 3,
+      "text": "Antidepressants\n",
+      "bbox": [
+        48.0,
+        81.2504653930664,
+        124.11000061035156,
+        93.1004638671875
+      ],
+      "text_sha256": "2e12ac14096be234a9b975ce033aebb8d95f8f3ff92503034de89e253e59f21d"
+    },
+    {
+      "block_id": "page-0844-block-0004",
+      "order": 4,
+      "text": "Table 10.10  Antidepressants in bariatric surgery\n",
+      "bbox": [
+        54.0,
+        111.58796691894531,
+        208.8974609375,
+        120.4754638671875
+      ],
+      "text_sha256": "8635890f4fadc565b7e02261b6183c016c154ab7d8ae9b9da491fac3a7445253"
+    },
+    {
+      "block_id": "page-0844-block-0005",
+      "order": 5,
+      "text": "Drug\nSpecific evidence and considerations\n",
+      "bbox": [
+        52.0,
+        130.7129669189453,
+        240.76756286621094,
+        139.6004638671875
+      ],
+      "text_sha256": "2a071ca2cafd8ec2c50998784776148f60524242b4f9b89a8c95586a89da6381"
+    },
+    {
+      "block_id": "page-0844-block-0006",
+      "order": 6,
+      "text": "SSRIs8–13\n■\n■Evidence demonstrates that plasma levels may be significantly reduced following RYGB\n",
+      "bbox": [
+        52.0,
+        148.51795959472656,
+        398.29010009765625,
+        157.2254638671875
+      ],
+      "text_sha256": "4b7015d33361c0c0b12159a90e38c268346e9142cb237df5b16916a32ddf0852"
+    },
+    {
+      "block_id": "page-0844-block-0007",
+      "order": 7,
+      "text": "■\n■Malabsorption has been implicated in cases of discontinuation symptoms and loss of effi-\n",
+      "bbox": [
+        111.9999008178711,
+        158.51795959472656,
+        405.91766357421875,
+        167.2254638671875
+      ],
+      "text_sha256": "6be6de41e9d51896477b5f77d9b6e165e22d55e88e2a391fdee0ab2086409a79"
+    },
+    {
+      "block_id": "page-0844-block-0008",
+      "order": 8,
+      "text": "cacy\n",
+      "bbox": [
+        121.0,
+        168.5154571533203,
+        134.74000549316406,
+        177.22296142578125
+      ],
+      "text_sha256": "def7747e01969710f4c4a8e0b10d7c78e0d0e48867b7833ce4bdd311e9c30ac3"
+    },
+    {
+      "block_id": "page-0844-block-0009",
+      "order": 9,
+      "text": "SNRIs10,14\n■\n■Duloxetine levels 42% lower after RYGB compared with matched controls\n",
+      "bbox": [
+        52.0,
+        186.1404571533203,
+        357.3175354003906,
+        194.85049438476562
+      ],
+      "text_sha256": "f4cf2268ad6b21a775a38ef61e5f79a77770abe0ddd1475f93b6849daf156033"
+    },
+    {
+      "block_id": "page-0844-block-0010",
+      "order": 10,
+      "text": "■\n■The absorption of venlafaxine MR capsules seems not to be altered by RYGB15\n",
+      "bbox": [
+        111.9999008178711,
+        196.1429901123047,
+        369.4226379394531,
+        204.85049438476562
+      ],
+      "text_sha256": "fb1efad101d42b486abf9c7170df70a7e8dd4915c927637be49a77ce3a6dc919"
+    },
+    {
+      "block_id": "page-0844-block-0011",
+      "order": 11,
+      "text": "Mirtazapine16,17\n■\n■Increased appetite and weight gain are possible\n",
+      "bbox": [
+        52.0,
+        213.7679901123047,
+        272.84503173828125,
+        222.47549438476562
+      ],
+      "text_sha256": "8c4cd673d36e277617588aa2a727a88068d6b33919251eab29827e632b8bcc79"
+    },
+    {
+      "block_id": "page-0844-block-0012",
+      "order": 12,
+      "text": "■\n■Has been used successfully for non-mechanical vomiting after RYGB\n",
+      "bbox": [
+        111.9999008178711,
+        223.7679901123047,
+        338.0050048828125,
+        232.47549438476562
+      ],
+      "text_sha256": "5f19c9cd4f0ab9506d5dd83aa0ce81534dcc0649d9df5ccc31a7374f456f5248"
+    },
+    {
+      "block_id": "page-0844-block-0013",
+      "order": 13,
+      "text": "TCAs18,19\n■\n■Single case report suggests therapeutic plasma levels can be achieved within usual dose \n",
+      "bbox": [
+        52.0,
+        241.3929901123047,
+        402.57257080078125,
+        250.10049438476562
+      ],
+      "text_sha256": "32fb55a29fc9840c373991576853564af1f658c383e13dce6012c03ac708c245"
+    },
+    {
+      "block_id": "page-0844-block-0014",
+      "order": 14,
+      "text": "range after RYGB\n",
+      "bbox": [
+        121.0,
+        251.39048767089844,
+        176.739990234375,
+        260.0979919433594
+      ],
+      "text_sha256": "2983232c1105b73f536818b34e8c5db01e997123a4bb166322a326a55eaea1ec"
+    },
+    {
+      "block_id": "page-0844-block-0015",
+      "order": 15,
+      "text": "■\n■Plasma levels may be increased after significant weight loss; consider monitoring levels and \n",
+      "bbox": [
+        111.9999008178711,
+        261.39300537109375,
+        412.97515869140625,
+        270.1004943847656
+      ],
+      "text_sha256": "dd582ef8fec51af3b4aae1f98b6f3f189f4be4566c2ccbd576a90e93862f21d1"
+    },
+    {
+      "block_id": "page-0844-block-0016",
+      "order": 16,
+      "text": "reducing dose\n",
+      "bbox": [
+        121.0,
+        271.3905029296875,
+        165.87998962402344,
+        280.0979919433594
+      ],
+      "text_sha256": "e26e291c38e6d2988b7ced48933b5746da1c1d6a22d59ba242f4a32cc4dab77d"
+    },
+    {
+      "block_id": "page-0844-block-0017",
+      "order": 17,
+      "text": "General summary\n",
+      "bbox": [
+        52.0,
+        288.8354797363281,
+        114.10000610351562,
+        297.7229919433594
+      ],
+      "text_sha256": "9bf043f345aa3ee6d953b168a1cd59f619c6a5102c47bc779300eee69d90bf8a"
+    },
+    {
+      "block_id": "page-0844-block-0018",
+      "order": 18,
+      "text": "■\n■Antidepressants are the best studied psychotropics in the bariatric population. Current evidence suggests that \n",
+      "bbox": [
+        51.999900817871094,
+        299.01800537109375,
+        412.60009765625,
+        307.7254943847656
+      ],
+      "text_sha256": "99af68c7e30f1791d7c070c4f0dcba7c3512176dbab608dcf9535d27c5f50378"
+    },
+    {
+      "block_id": "page-0844-block-0019",
+      "order": 19,
+      "text": "antidepressant absorption is reduced after surgery (though studies are mostly limited to SSRIs after RYGB).\n",
+      "bbox": [
+        61.0,
+        309.0155029296875,
+        399.70751953125,
+        317.7229919433594
+      ],
+      "text_sha256": "1d3bb15af10914706f54c4050089c59cb997be8a136739f95dcf32769f8e9d45"
+    },
+    {
+      "block_id": "page-0844-block-0020",
+      "order": 20,
+      "text": "■\n■Signs of reduced absorption may include the rapid development of discontinuation symptoms and later loss \n",
+      "bbox": [
+        51.999900817871094,
+        319.01800537109375,
+        406.3451232910156,
+        327.7254943847656
+      ],
+      "text_sha256": "0e978f11dc9454cd0ac2aec051323a4a93de2cc18c25884834735178ba482ae3"
+    },
+    {
+      "block_id": "page-0844-block-0021",
+      "order": 21,
+      "text": "of efficacy.\n",
+      "bbox": [
+        61.0,
+        329.0155029296875,
+        95.16999053955078,
+        337.7229919433594
+      ],
+      "text_sha256": "f5deb457a9610a8935c7901f6c8f0897d37160ae0a04e0a329c1f4ab2f449a6a"
+    },
+    {
+      "block_id": "page-0844-block-0022",
+      "order": 22,
+      "text": "■\n■Patients require close monitoring as those at risk of reduced absorption cannot be reliably predicted.\n",
+      "bbox": [
+        51.999900817871094,
+        339.01800537109375,
+        380.7850646972656,
+        347.7254943847656
+      ],
+      "text_sha256": "d5df002e58a0be7e527482356ac0ebbd72f847d8b178a488484a0c8788fb330d"
+    },
+    {
+      "block_id": "page-0844-block-0023",
+      "order": 23,
+      "text": "■\n■The risk of gastric bleeds with bariatric surgery will probably be increased by serotonergic antidepressants\n",
+      "bbox": [
+        51.999900817871094,
+        349.01800537109375,
+        396.7375793457031,
+        357.7254943847656
+      ],
+      "text_sha256": "b403ace13d4c564fdf2314dbc58ae6a220295ac720b7bf65546ba90512d1feac"
+    },
+    {
+      "block_id": "page-0844-block-0024",
+      "order": 24,
+      "text": "Antipsychotics\n",
+      "bbox": [
+        48.0,
+        389.00048828125,
+        116.32000732421875,
+        400.8504943847656
+      ],
+      "text_sha256": "66a87c9d9c00b8fa993ae9a90f576148dfe50f1c930aed10c7efe7d8254d7496"
+    },
+    {
+      "block_id": "page-0844-block-0025",
+      "order": 25,
+      "text": "Table 10.11  Antipsychotics in bariatric surgery\n",
+      "bbox": [
+        54.0,
+        413.3379821777344,
+        204.02247619628906,
+        422.2254943847656
+      ],
+      "text_sha256": "0c6b7393009f26c31f1a4ae2c3efd52309ccac73505f8372476eb6c2e54a9aab"
+    },
+    {
+      "block_id": "page-0844-block-0026",
+      "order": 26,
+      "text": "Drug\nSpecific evidence and considerations\n",
+      "bbox": [
+        52.0,
+        432.072998046875,
+        240.76756286621094,
+        440.96051025390625
+      ],
+      "text_sha256": "2a071ca2cafd8ec2c50998784776148f60524242b4f9b89a8c95586a89da6381"
+    },
+    {
+      "block_id": "page-0844-block-0027",
+      "order": 27,
+      "text": "Asenapine20\n■\n■Primarily absorbed via oral mucosa; problems after bariatric surgery are not expected\n",
+      "bbox": [
+        52.0,
+        449.697998046875,
+        391.1424560546875,
+        458.58551025390625
+      ],
+      "text_sha256": "fa20b4598f137bab8177a995707ed9eb69e21c6c31eb8a3d559836d3f86874da"
+    },
+    {
+      "block_id": "page-0844-block-0028",
+      "order": 28,
+      "text": "■\n■One case report of successful use after RYGB\n",
+      "bbox": [
+        111.9999008178711,
+        459.8780212402344,
+        264.52752685546875,
+        468.58551025390625
+      ],
+      "text_sha256": "cac3bda6dbf7de1a15d96046118e5fa9943f9f8e56e86ef65f9e7a855d577ac4"
+    },
+    {
+      "block_id": "page-0844-block-0029",
+      "order": 29,
+      "text": "Cariprazine\n■\n■No data available on absorption after bariatric surgery; follow general recommendations.\n",
+      "bbox": [
+        52.0,
+        477.322998046875,
+        404.6425476074219,
+        486.21051025390625
+      ],
+      "text_sha256": "8f01de0f9188194ef0498a3920f5659f862733354b99a3a3ccb68a781a4c7e14"
+    },
+    {
+      "block_id": "page-0844-block-0030",
+      "order": 30,
+      "text": "Clozapine21–23\n■\n■Two case reports of relapse after RYGB24\n",
+      "bbox": [
+        52.0,
+        494.947998046875,
+        249.7613067626953,
+        503.83551025390625
+      ],
+      "text_sha256": "3e6874ecca09d629eada131a23db3c89f36b0e66fd4c5d307b95f92337b8edae"
+    },
+    {
+      "block_id": "page-0844-block-0031",
+      "order": 31,
+      "text": "■\n■Take drug plasma levels before surgery and regularly monitor after\n",
+      "bbox": [
+        111.9999008178711,
+        505.1280212402344,
+        332.4100341796875,
+        513.8355102539062
+      ],
+      "text_sha256": "1063469879812995f7c8b07e63b1c1338d5a3eee023d561d58b28dc03ef93721"
+    },
+    {
+      "block_id": "page-0844-block-0032",
+      "order": 32,
+      "text": "■\n■Constipation is common after surgery; the manufacturer recommends close monitoring and \n",
+      "bbox": [
+        111.9999008178711,
+        515.1279907226562,
+        416.17755126953125,
+        523.8355102539062
+      ],
+      "text_sha256": "3f21eb2357d17240b094025cf1a5d6ae5be8b1467a502e8927055f95168b0e23"
+    },
+    {
+      "block_id": "page-0844-block-0033",
+      "order": 33,
+      "text": "active treatment\n",
+      "bbox": [
+        121.0,
+        525.12548828125,
+        172.92999267578125,
+        533.8330078125
+      ],
+      "text_sha256": "05606ee744d7d8089740fbdf0a1c3fe305bc37ad40641e6ecc5b620453e9639e"
+    },
+    {
+      "block_id": "page-0844-block-0034",
+      "order": 34,
+      "text": "■\n■Check smoking status (quitting before surgery is encouraged); adjust dose accordingly\n",
+      "bbox": [
+        111.9999008178711,
+        535.1279907226562,
+        395.7850646972656,
+        543.8355102539062
+      ],
+      "text_sha256": "302d19fdeefe00f52154b97ed2252c0d44f4d067c87cb49a5ce71c6d74cff514"
+    },
+    {
+      "block_id": "page-0844-block-0035",
+      "order": 35,
+      "text": "Haloperidol25\n■\n■Single case report suggests levels after RYGB are similar to those generally reported in the \n",
+      "bbox": [
+        52.0,
+        552.572998046875,
+        409.27008056640625,
+        561.4605102539062
+      ],
+      "text_sha256": "e82024107f0a24773cbac830812269f297dd92cca3fec3f1278a77db47709b00"
+    },
+    {
+      "block_id": "page-0844-block-0036",
+      "order": 36,
+      "text": "literature\n",
+      "bbox": [
+        121.0,
+        562.75048828125,
+        149.60499572753906,
+        571.4580078125
+      ],
+      "text_sha256": "188f342fb0a0230609070289a53b42484ba2d8767c0d2f77fd95bb290eae14f2"
+    },
+    {
+      "block_id": "page-0844-block-0037",
+      "order": 37,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.98748779296875,
+        584.8829956054688,
+        420.00244140625,
+        593.635498046875
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

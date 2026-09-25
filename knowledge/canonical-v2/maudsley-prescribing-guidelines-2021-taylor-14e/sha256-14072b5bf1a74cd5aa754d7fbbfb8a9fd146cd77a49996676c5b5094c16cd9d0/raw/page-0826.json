@@ -1,0 +1,311 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0826",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 826,
+  "source_page_index": 825,
+  "source_page_display": 826,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    805\nCHAPTER 10\nTable 10.8  Evidence and experience regarding the pharmacological treatment of mental and behavioural \nsymptoms in Huntington’s disease\nSymptoms\nTreatments\nAnxiety\n■\n■Reported 16.7–24% lifetime prevalence in HD.17 There are no RCTs to guide choice; how-\never, olanzapine 5mg/d substantially improved anxiety symptoms in one small open label \npilot study.17 SSRIs and SNRIs have been suggested as first line treatment.4,7 Some guide-\nlines have recommended considering SGAs (quetiapine,7 risperidone or olanzapine) for \nanxiety associated with personality or behavioural disturbances8 or when other treatments \nfail.7 Anxiolytics such as benzodiazepines or buspirone may also be useful.8\nDepression\n■\n■Reported 20–56% lifetime prevalence in HD.17 Treatment is typically required: depression \nis linked to a lower quality of life in HD and increases the risk of suicide.17,18 There are no \nRCTs to guide choice.19 However, most experts agree that depression in HD responds well \nto antidepressants. SSRIs are the preferred first-line treatment.4,7\n■\n■SSRIs: Two controlled trials examined the effects of fluoxetine and citalopram in non-\ndepressed patients with HD. Despite excluding depressed patients, both showed near \nsignificant improvements in depressive symptoms.19 Note that tetrabenazine is metabolised \nby CYP2D6; inhibitors of this enzyme (e.g. fluoxetine, paroxetine) may increase levels.\n■\n■SNRIs: Venlafaxine was effective in an uncontrolled study;19 however, one in five devel-\noped side effects, such as nausea and irritability.17\n■\n■TCAs: Beneficial effects reported in some cases20 but generally their use should be avoided \nor limited. TCAs’ anticholinergic properties may worsen hyperkinesias and cognition.20 Tox-\nicity in overdose may also make them less suitable choices (suicidality is increased in HD17).\n■\n■Others: Mirtazapine was used successfully in a case report of severe depression.4 In a case \nregistry study it was one of the most frequently prescribed treatments for depression in \nHD.17 Lithium produced improvements in suicidality in a small case series19 but experi-\nence is very limited, and tolerability may be poor. MAOIs have been used in earlier case \nstudies;20 a lack of recent experience and important interactions with tetrabenazine make \nthese less suitable. ECT has been suggested in severe cases.7,21,22\nObsessive \ncompulsive \nbehaviours or \npreservation\n■\n■There are no RCTs.23 International consensus supports the use of SSRIs first line;7 use of \nclomipramine is also supported,17 but tolerability may be poor. Case studies document the \nsuccessful use of fluoxetine, paroxetine and sertraline.4 One study of two patients with \npreservation and aggression reported beneficial effects with buspirone.17 For ideational \npreservation, consensus also supports the use of olanzapine or risperidone (particularly if \nassociated with irritability).7\nIrritability or \nagitation24\n■\n■Reported prevalence of 38–73% in HD. Initial management is non-pharmacological \n(e.g. by addressing possible triggers such as pain or akathisia and using behavioural/\npsychological approaches). No medications are approved specifically, but expert consensus \nsupports the use of SSRIs as preferred first-line agents with antipsychotics being the next \nmost favoured alternative monotherapy. Clinical features influence treatment choice. For \nexample, SGAs (e.g. olanzapine, risperidone, quetiapine) may be preferred in the presence \nof chorea, acute irritability, aggression or impulsivity. Benzodiazepines are a popularly \nused adjunctive therapy. Guidelines have also recommended mirtazapine or mianserin \nin patients not benefitting from maximum doses of SSRIs, especially in those with a \ncomorbid sleep disorder. In cases nonresponsive to antidepressants and/or antipsychotics, \nadjunctive mood stabilisers have also been recommended.7\n■\n■Aggressive behaviours: A wide variety of psychotropics have been used with reported \nbeneficial effects (e.g. antipsychotics, lithium, valproate, propranolol, medroxyprogester-\none, SSRIs, buspirone).20,25 Antipsychotics have been used most commonly. The evidence \nbase is too limited to make specific treatment recommendations25 but low-dose antipsy-\nchotics can be considered.4 ECT was helpful in a few case reports agitation refractory to \npharmacotherapy.21\n",
+  "raw_text_sha256": "abce7d1e16d1aa3a1424b954c6e4fa5260504177b31c74014b8f2c00afa098fd",
+  "coordinates_sha256": "deb08e6f0c312c9107e382bd55fe3f37785cc090072cade1b0f6a18d86045611",
+  "block_sequence_sha256": "d2acaedc6020868c686044bae5fdcaf7003637bbc102ee8aa5a39e85c11ce575",
+  "blocks": [
+    {
+      "block_id": "page-0826-block-0000",
+      "order": 0,
+      "text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    805\n",
+      "bbox": [
+        47.999698638916016,
+        31.395221710205078,
+        419.96697998046875,
+        41.0272216796875
+      ],
+      "text_sha256": "77a9d6252a84205cc1df215cf3d96544dee7fa77413f29a80f1223d648a12ce6"
+    },
+    {
+      "block_id": "page-0826-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        454.4096984863281,
+        75.763671875,
+        463.88970947265625,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0826-block-0002",
+      "order": 2,
+      "text": "Table 10.8  Evidence and experience regarding the pharmacological treatment of mental and behavioural \nsymptoms in Huntington’s disease\n",
+      "bbox": [
+        54.0,
+        71.33790588378906,
+        392.81256103515625,
+        90.222900390625
+      ],
+      "text_sha256": "a55ee2089c1840a532be98d558817236a5cbc3a0e76094a7bd55f90ee6dbb6a2"
+    },
+    {
+      "block_id": "page-0826-block-0003",
+      "order": 3,
+      "text": "Symptoms\nTreatments\n",
+      "bbox": [
+        52.0,
+        98.07289123535156,
+        157.59249877929688,
+        106.96038818359375
+      ],
+      "text_sha256": "654602292d5fea1cc0c4fb70478f93352a2864af123a0c08ee99472b416442f3"
+    },
+    {
+      "block_id": "page-0826-block-0004",
+      "order": 4,
+      "text": "Anxiety\n■\n■Reported 16.7–24% lifetime prevalence in HD.17 There are no RCTs to guide choice; how-\n",
+      "bbox": [
+        52.0,
+        115.69789123535156,
+        413.17755126953125,
+        124.58538818359375
+      ],
+      "text_sha256": "968d2b371afb20529264aa12cac8ef006adbc4efdf9e1bb29b470e152e77a44f"
+    },
+    {
+      "block_id": "page-0826-block-0005",
+      "order": 5,
+      "text": "ever, olanzapine 5mg/d substantially improved anxiety symptoms in one small open label \npilot study.17 SSRIs and SNRIs have been suggested as first line treatment.4,7 Some guide-\nlines have recommended considering SGAs (quetiapine,7 risperidone or olanzapine) for \nanxiety associated with personality or behavioural disturbances8 or when other treatments \nfail.7 Anxiolytics such as benzodiazepines or buspirone may also be useful.8\n",
+      "bbox": [
+        127.40251159667969,
+        125.8753890991211,
+        416.8050231933594,
+        174.58538818359375
+      ],
+      "text_sha256": "33271e0121fdc9effc6976e9d05c66a4f366c4ae17e1b4f24896a2a8f2459ec3"
+    },
+    {
+      "block_id": "page-0826-block-0006",
+      "order": 6,
+      "text": "Depression\n■\n■Reported 20–56% lifetime prevalence in HD.17 Treatment is typically required: depression \n",
+      "bbox": [
+        51.999900817871094,
+        183.32289123535156,
+        412.5924377441406,
+        192.21038818359375
+      ],
+      "text_sha256": "7de128255ccc86b5ba63cb760f3503511508fb9add8b285890d2fc113bbda9c9"
+    },
+    {
+      "block_id": "page-0826-block-0007",
+      "order": 7,
+      "text": "is linked to a lower quality of life in HD and increases the risk of suicide.17,18 There are no \nRCTs to guide choice.19 However, most experts agree that depression in HD responds well \nto antidepressants. SSRIs are the preferred first-line treatment.4,7\n",
+      "bbox": [
+        127.40489196777344,
+        193.50038146972656,
+        414.15313720703125,
+        222.2078857421875
+      ],
+      "text_sha256": "2279712e5403ba07f77e146674ae74b9745de6a732a0e8c0cb317de1b9e62072"
+    },
+    {
+      "block_id": "page-0826-block-0008",
+      "order": 8,
+      "text": "■\n■SSRIs: Two controlled trials examined the effects of fluoxetine and citalopram in non-\n",
+      "bbox": [
+        118.40390014648438,
+        223.32289123535156,
+        398.2814636230469,
+        232.21038818359375
+      ],
+      "text_sha256": "39c3e7d2b66f066909e4e0dffd6271da492d2534bce9dd3348f7ad9dc0eea1d4"
+    },
+    {
+      "block_id": "page-0826-block-0009",
+      "order": 9,
+      "text": "depressed patients with HD. Despite excluding depressed patients, both showed near \nsignificant improvements in depressive symptoms.19 Note that tetrabenazine is metabolised \nby CYP2D6; inhibitors of this enzyme (e.g. fluoxetine, paroxetine) may increase levels.\n",
+      "bbox": [
+        127.40061950683594,
+        233.50038146972656,
+        417.5755920410156,
+        262.2078857421875
+      ],
+      "text_sha256": "f25dbc41cd3083e373281ae20492f4df938c0f4767ff66ed2b7b7baed0c20ae8"
+    },
+    {
+      "block_id": "page-0826-block-0010",
+      "order": 10,
+      "text": "■\n■SNRIs: Venlafaxine was effective in an uncontrolled study;19 however, one in five devel-\n",
+      "bbox": [
+        118.40390014648438,
+        263.3228759765625,
+        405.50408935546875,
+        272.21038818359375
+      ],
+      "text_sha256": "74ebc5e9b77f7859cf73d47fd24e60c4199847410332eb5e1be0c86cb0c586c0"
+    },
+    {
+      "block_id": "page-0826-block-0011",
+      "order": 11,
+      "text": "oped side effects, such as nausea and irritability.17\n",
+      "bbox": [
+        127.40408325195312,
+        273.5003967285156,
+        285.62445068359375,
+        282.2078857421875
+      ],
+      "text_sha256": "9b04dc103e04f6d9f55f9b20459b555adb4808a16918bf9b9e0072668b00626b"
+    },
+    {
+      "block_id": "page-0826-block-0012",
+      "order": 12,
+      "text": "■\n■TCAs: Beneficial effects reported in some cases20 but generally their use should be avoided \n",
+      "bbox": [
+        118.40390014648438,
+        283.3228759765625,
+        417.3820495605469,
+        292.21038818359375
+      ],
+      "text_sha256": "fc19b7fda36b05b421bbb2d16f6f737b8319cb76fc50910fa8eda37fcc19446f"
+    },
+    {
+      "block_id": "page-0826-block-0013",
+      "order": 13,
+      "text": "or limited. TCAs’ anticholinergic properties may worsen hyperkinesias and cognition.20 Tox-\nicity in overdose may also make them less suitable choices (suicidality is increased in HD17).\n",
+      "bbox": [
+        127.4005126953125,
+        293.5003967285156,
+        415.8280029296875,
+        312.21038818359375
+      ],
+      "text_sha256": "48134cbc65ed59abb0609363029b186ed117ed8e7183ea7c7f6a03629bea88e8"
+    },
+    {
+      "block_id": "page-0826-block-0014",
+      "order": 14,
+      "text": "■\n■Others: Mirtazapine was used successfully in a case report of severe depression.4 In a case \n",
+      "bbox": [
+        118.40390014648438,
+        313.3228759765625,
+        417.7947998046875,
+        322.21038818359375
+      ],
+      "text_sha256": "08fdef9b6ca51fdbfd1659b987455dc79e9eb63e5f29255230f9d8d0d369968b"
+    },
+    {
+      "block_id": "page-0826-block-0015",
+      "order": 15,
+      "text": "registry study it was one of the most frequently prescribed treatments for depression in \nHD.17 Lithium produced improvements in suicidality in a small case series19 but experi-\nence is very limited, and tolerability may be poor. MAOIs have been used in earlier case \nstudies;20 a lack of recent experience and important interactions with tetrabenazine make \nthese less suitable. ECT has been suggested in severe cases.7,21,22\n",
+      "bbox": [
+        127.40231323242188,
+        323.5003967285156,
+        414.6409912109375,
+        372.2078857421875
+      ],
+      "text_sha256": "3e13616935b9de8fffd01979bbd31c14f0502120cb739419b118b8b0a78c1ec9"
+    },
+    {
+      "block_id": "page-0826-block-0016",
+      "order": 16,
+      "text": "Obsessive \ncompulsive \nbehaviours or \npreservation\n",
+      "bbox": [
+        51.999900817871094,
+        380.9478759765625,
+        102.84239196777344,
+        419.827880859375
+      ],
+      "text_sha256": "6278e21b8352f11f9b868f80b3d52263ead6cd15065aeffe7d563aafe42c7f75"
+    },
+    {
+      "block_id": "page-0826-block-0017",
+      "order": 17,
+      "text": "■\n■There are no RCTs.23 International consensus supports the use of SSRIs first line;7 use of \n",
+      "bbox": [
+        118.40390014648438,
+        381.1278991699219,
+        406.7201232910156,
+        389.83538818359375
+      ],
+      "text_sha256": "dcce9851e59fe1de1fba4c2e3ec62fc1fa74fbac94fdd54a561477969c1b4b73"
+    },
+    {
+      "block_id": "page-0826-block-0018",
+      "order": 18,
+      "text": "clomipramine is also supported,17 but tolerability may be poor. Case studies document the \nsuccessful use of fluoxetine, paroxetine and sertraline.4 One study of two patients with \npreservation and aggression reported beneficial effects with buspirone.17 For ideational \npreservation, consensus also supports the use of olanzapine or risperidone (particularly if \nassociated with irritability).7\n",
+      "bbox": [
+        127.4031982421875,
+        391.1253967285156,
+        416.6200866699219,
+        439.83038330078125
+      ],
+      "text_sha256": "e56f534e1ef48c5debc7654264937fb557f7a111eb0699677ca9d4013aae4932"
+    },
+    {
+      "block_id": "page-0826-block-0019",
+      "order": 19,
+      "text": "Irritability or \nagitation24\n",
+      "bbox": [
+        51.999900817871094,
+        448.5728759765625,
+        98.68739318847656,
+        467.4578857421875
+      ],
+      "text_sha256": "dba9086d6a58577f22de21ed79f80f7c486b1df75af4ad947110ff24f6c2da93"
+    },
+    {
+      "block_id": "page-0826-block-0020",
+      "order": 20,
+      "text": "■\n■Reported prevalence of 38–73% in HD. Initial management is non-pharmacological \n",
+      "bbox": [
+        118.40390014648438,
+        448.7528991699219,
+        395.649169921875,
+        457.46038818359375
+      ],
+      "text_sha256": "39da98d36ae7a99daba05dc09dd6b5e82613cc5ef3c485da964f3abc3c827266"
+    },
+    {
+      "block_id": "page-0826-block-0021",
+      "order": 21,
+      "text": "(e.g. by addressing possible triggers such as pain or akathisia and using behavioural/\npsychological approaches). No medications are approved specifically, but expert consensus \nsupports the use of SSRIs as preferred first-line agents with antipsychotics being the next \nmost favoured alternative monotherapy. Clinical features influence treatment choice. For \nexample, SGAs (e.g. olanzapine, risperidone, quetiapine) may be preferred in the presence \nof chorea, acute irritability, aggression or impulsivity. Benzodiazepines are a popularly \nused adjunctive therapy. Guidelines have also recommended mirtazapine or mianserin \nin patients not benefitting from maximum doses of SSRIs, especially in those with a \ncomorbid sleep disorder. In cases nonresponsive to antidepressants and/or antipsychotics, \nadjunctive mood stabilisers have also been recommended.7\n",
+      "bbox": [
+        127.40399932861328,
+        458.7503967285156,
+        417.4665222167969,
+        557.4353637695312
+      ],
+      "text_sha256": "d38fa8e70595dc1df0203a315f7a7fb3232c4cd8c621d6f0c6e02181b5fb43ab"
+    },
+    {
+      "block_id": "page-0826-block-0022",
+      "order": 22,
+      "text": "■\n■Aggressive behaviours: A wide variety of psychotropics have been used with reported \n",
+      "bbox": [
+        118.40390014648438,
+        558.5728759765625,
+        410.7916259765625,
+        567.4603881835938
+      ],
+      "text_sha256": "74da64d8d7a53834cff6e57f74f556f78407a98a6fdfd76758f707783a2fe2d9"
+    },
+    {
+      "block_id": "page-0826-block-0023",
+      "order": 23,
+      "text": "beneficial effects (e.g. antipsychotics, lithium, valproate, propranolol, medroxyprogester-\none, SSRIs, buspirone).20,25 Antipsychotics have been used most commonly. The evidence \nbase is too limited to make specific treatment recommendations25 but low-dose antipsy-\nchotics can be considered.4 ECT was helpful in a few case reports agitation refractory to \npharmacotherapy.21\n",
+      "bbox": [
+        127.4011001586914,
+        568.7503662109375,
+        411.3286437988281,
+        617.4578857421875
+      ],
+      "text_sha256": "e3002021128fbbe78825bef1900b00a9e0e916208ba6e337eafb50f42ca37054"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

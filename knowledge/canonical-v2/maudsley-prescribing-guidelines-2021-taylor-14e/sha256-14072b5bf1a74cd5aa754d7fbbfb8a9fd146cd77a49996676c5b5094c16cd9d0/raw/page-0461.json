@@ -1,0 +1,611 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0461",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 461,
+  "source_page_index": 460,
+  "source_page_display": 461,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "440    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nBenzodiazepines, z-drugs and gabapentinoids: dependence, \ndetoxification and discontinuation\nIn most developed countries, the use of benzodiazepines or z-drugs is restricted to a \nmaximum 2–4 weeks.1–3 However, long-term use remains common in the United \nKingdom, with 300,000 adults taking either a benzodiazepine or z-drug for more \nthan 12  months.4 Most guidelines, including NICE, recommend that people on \nlong-term benzodiazepines or z-drugs should be advised to stop because tolerance \nto these drugs (which can develop after 2–4 weeks) means that they are not effec-\ntives for insomnia or anxiety over the long term, and because dependence is likely \nto develop, meaning that treatment is continued only to prevent withdrawal symp-\ntoms (Table 3.27).5\nGabapentinoids (GABA analogues), with near identical mode of action to benzodiaz-\nepines, also can cause addiction, physical dependence and withdrawal over the same \ntime period.6–8 In total, 1.5 million people in England are prescribed gabapentinoids,9 \nand the number of prescriptions for these medications has risen seven-fold in the last \n10 years.10\nTable 3.27  Adverse effects of benzodiazepines\nCognitive*11–13\nReactions which can be mistaken for a  \npsychiatric disorder14\n■\n■Deficits in memory\n■\n■Deficits in attention\n■\n■Increased reaction time\n■\n■Motor incoordination\n■\n■Drowsiness\n■\n■Nightmares/intrusive thoughts\n■\n■Impaired judgement\n■\n■Perceptual illusions/hallucinations\n■\n■Agitation\n■\n■Emotional lability\n■\n■Restlessness\n■\n■Inter-dose withdrawal\n■\n■Physical15\n■\n■Motor incoordination/ataxia\n■\n■Dizziness\n■\n■Slurred speech\n■\n■Sensory alterations (tinnitus/strange tastes/par-\naesthesia/numbness/burning)\n■\n■Rash\n■\n■Autonomic dysfunction (tachycardia/bradycardia/\ndiaphoresis/hypotension/hypertension)\n■\n■Emotional15\n■\n■Depression/dysphoria\n■\n■Numbness/emotional anaesthesia\n■\n■Anxiety/phobias/panic\n■\n■Anger/irritability/mood lability\n■\n■Excitement/euphoria\n■\n■Increased morbidity12,13\n■\n■Increased risk of motor vehicle accidents\n■\n■Higher risk of falls (elderly)\n■\n■Delirium (elderly)\n■\n■?Dementia\n■\n■?Cancer\n■\n■?Infections\n■\n■Behavioural15\n■\n■Insomnia\n■\n■Avoidance/agoraphobia\n■\n■Appetite/weight (anorexia, weight gain)\n■\n■Impulsivity/disinhibition\n■\n■Suicidality\n■\n■Aggression\n*Some of these impairments can persist after discontinuation\n",
+  "raw_text_sha256": "020b597ff057d13d575dc61f382e81a28ee3213b4c96219f2741c169b79099d1",
+  "coordinates_sha256": "66ef7c0fb3862980663e308d6a4eabe155d2e2e0f2c4d135caa54469239d0292",
+  "block_sequence_sha256": "0cd42696b9d7ad06cc4c9532b6d54f96201bea9839ac9cbe184a3b535bad9547",
+  "blocks": [
+    {
+      "block_id": "page-0461-block-0000",
+      "order": 0,
+      "text": "440    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "d8a9f26595582f86c4807af307dd115cf3275ec66e6c3462661eeee6d1224197"
+    },
+    {
+      "block_id": "page-0461-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0461-block-0002",
+      "order": 2,
+      "text": "Benzodiazepines, z-drugs and gabapentinoids: dependence, \ndetoxification and discontinuation\n",
+      "bbox": [
+        68.88999938964844,
+        68.06539916992188,
+        381.81805419921875,
+        93.10137939453125
+      ],
+      "text_sha256": "92f8f9a7fc96e679de2f7ee64adc6fcbc711db5162fa4e35eca1b3636f0e71cd"
+    },
+    {
+      "block_id": "page-0461-block-0003",
+      "order": 3,
+      "text": "In most developed countries, the use of benzodiazepines or z-drugs is restricted to a \nmaximum 2–4 weeks.1–3 However, long-term use remains common in the United \nKingdom, with 300,000 adults taking either a benzodiazepine or z-drug for more \nthan 12  months.4 Most guidelines, including NICE, recommend that people on \nlong-term benzodiazepines or z-drugs should be advised to stop because tolerance \nto these drugs (which can develop after 2–4 weeks) means that they are not effec-\ntives for insomnia or anxiety over the long term, and because dependence is likely \nto develop, meaning that treatment is continued only to prevent withdrawal symp-\ntoms (Table 3.27).5\n",
+      "bbox": [
+        61.88999938964844,
+        98.910400390625,
+        436.7142639160156,
+        206.63040161132812
+      ],
+      "text_sha256": "3b0fdd2b8e324667c51a283a4be4ceb33ed82866c10d0336beae6deedd6b683b"
+    },
+    {
+      "block_id": "page-0461-block-0004",
+      "order": 4,
+      "text": "Gabapentinoids (GABA analogues), with near identical mode of action to benzodiaz-\nepines, also can cause addiction, physical dependence and withdrawal over the same \ntime period.6–8 In total, 1.5 million people in England are prescribed gabapentinoids,9 \nand the number of prescriptions for these medications has risen seven-fold in the last \n10 years.10\n",
+      "bbox": [
+        61.88999938964844,
+        206.910400390625,
+        436.6800231933594,
+        266.6304016113281
+      ],
+      "text_sha256": "57d770bfd06d46a071835a4dcf9eb6521e5ddddd1325b85fcc6de79398d3a2e3"
+    },
+    {
+      "block_id": "page-0461-block-0005",
+      "order": 5,
+      "text": "Table 3.27  Adverse effects of benzodiazepines\n",
+      "bbox": [
+        67.88999938964844,
+        301.6808776855469,
+        219.0374755859375,
+        310.5683898925781
+      ],
+      "text_sha256": "3d833c708a5c2bca66102e6d359e07d2c348e1f040c3c8c240ac6f9add2fff1f"
+    },
+    {
+      "block_id": "page-0461-block-0006",
+      "order": 6,
+      "text": "Cognitive*11–13\n",
+      "bbox": [
+        67.88999938964844,
+        331.9158935546875,
+        117.72787475585938,
+        340.80340576171875
+      ],
+      "text_sha256": "abbf1c92a862cee7d926e890ce3a84e3046431b2b5198ac94bfd7953961e0566"
+    },
+    {
+      "block_id": "page-0461-block-0007",
+      "order": 7,
+      "text": "Reactions which can be mistaken for a  \npsychiatric disorder14\n",
+      "bbox": [
+        240.0,
+        321.9158935546875,
+        379.1924133300781,
+        340.8009033203125
+      ],
+      "text_sha256": "f914904069ec45b2c8dac0f551ce3b1dd39a9d878f8033bae0f1a071b44593c5"
+    },
+    {
+      "block_id": "page-0461-block-0008",
+      "order": 8,
+      "text": "■\n■Deficits in memory\n",
+      "bbox": [
+        61.88990020751953,
+        348.87091064453125,
+        130.46998596191406,
+        357.5783996582031
+      ],
+      "text_sha256": "cf4401ee22b9f2d9ff3cd0928afed2ece50898551574b46d67416ff575ba12c5"
+    },
+    {
+      "block_id": "page-0461-block-0009",
+      "order": 9,
+      "text": "■\n■Deficits in attention\n",
+      "bbox": [
+        61.88990020751953,
+        357.87091064453125,
+        133.39498901367188,
+        366.5783996582031
+      ],
+      "text_sha256": "2e9a5ab6c23231bf5bbcd3616511b6c442e9f0c909726802b9d9657bfbb06fc6"
+    },
+    {
+      "block_id": "page-0461-block-0010",
+      "order": 10,
+      "text": "■\n■Increased reaction time\n",
+      "bbox": [
+        61.88990020751953,
+        366.87091064453125,
+        144.7799835205078,
+        375.5783996582031
+      ],
+      "text_sha256": "531c0a97453fccac9e5f17436107247a062b1788a77ef01e98f8ded49f817a53"
+    },
+    {
+      "block_id": "page-0461-block-0011",
+      "order": 11,
+      "text": "■\n■Motor incoordination\n",
+      "bbox": [
+        61.88990020751953,
+        375.87091064453125,
+        139.10247802734375,
+        384.5783996582031
+      ],
+      "text_sha256": "d29788d7fe7216cbdec4da316e219f3b7f5743ddc22323b84161f8c3de9f86ce"
+    },
+    {
+      "block_id": "page-0461-block-0012",
+      "order": 12,
+      "text": "■\n■Drowsiness\n",
+      "bbox": [
+        61.88990020751953,
+        384.87091064453125,
+        106.59750366210938,
+        393.5783996582031
+      ],
+      "text_sha256": "69a29f36fc6e6ee998ae0766ad20afe64547b908d31b57eda37e3d87cf9d14c7"
+    },
+    {
+      "block_id": "page-0461-block-0013",
+      "order": 13,
+      "text": "■\n■Nightmares/intrusive thoughts\n",
+      "bbox": [
+        61.88990020751953,
+        393.87091064453125,
+        167.01747131347656,
+        402.5783996582031
+      ],
+      "text_sha256": "ea44d1df915b472379c860ac18086c384af3bc3c70b1957f47d7d5a146261f60"
+    },
+    {
+      "block_id": "page-0461-block-0014",
+      "order": 14,
+      "text": "■\n■Impaired judgement\n",
+      "bbox": [
+        61.88990020751953,
+        402.87091064453125,
+        135.34498596191406,
+        411.5783996582031
+      ],
+      "text_sha256": "de35c1b3232245c4709dc7dfad2ada6ef759b477b5f391abd18291fc096463cf"
+    },
+    {
+      "block_id": "page-0461-block-0015",
+      "order": 15,
+      "text": "■\n■Perceptual illusions/hallucinations\n",
+      "bbox": [
+        61.88990020751953,
+        411.87091064453125,
+        177.01495361328125,
+        420.5783996582031
+      ],
+      "text_sha256": "57a853227596135cfc044724539239529bfd02a9ae6d90b73cc21e2516c36554"
+    },
+    {
+      "block_id": "page-0461-block-0016",
+      "order": 16,
+      "text": "■\n■Agitation\n",
+      "bbox": [
+        239.99989318847656,
+        348.87091064453125,
+        278.5875549316406,
+        357.5783996582031
+      ],
+      "text_sha256": "9e9ca6a4dacb880f9d4d4f4ac99193f48effc45b1b3114a7fcc5c40252235cde"
+    },
+    {
+      "block_id": "page-0461-block-0017",
+      "order": 17,
+      "text": "■\n■Emotional lability\n",
+      "bbox": [
+        239.99989318847656,
+        357.87091064453125,
+        303.57757568359375,
+        366.5783996582031
+      ],
+      "text_sha256": "930a0f071c55c423baab05ae1ed7909aa65d84e43d592b77a26a6736c5483c16"
+    },
+    {
+      "block_id": "page-0461-block-0018",
+      "order": 18,
+      "text": "■\n■Restlessness\n",
+      "bbox": [
+        239.99989318847656,
+        366.87091064453125,
+        287.3400573730469,
+        375.5783996582031
+      ],
+      "text_sha256": "0d753d16959ab32a1a493719c3bb4bdcd127dd4f6b05cb6b0f0de268b930ab36"
+    },
+    {
+      "block_id": "page-0461-block-0019",
+      "order": 19,
+      "text": "■\n■Inter-dose withdrawal\n",
+      "bbox": [
+        239.99989318847656,
+        375.87091064453125,
+        318.592529296875,
+        384.5783996582031
+      ],
+      "text_sha256": "ead7916ae6abc4bc66cd3fd97cd3216cbae3c135e0b8467da4fb2ae7310a6c57"
+    },
+    {
+      "block_id": "page-0461-block-0020",
+      "order": 20,
+      "text": "■\n■Physical15\n",
+      "bbox": [
+        61.88990020751953,
+        426.71588134765625,
+        103.6744155883789,
+        435.6033935546875
+      ],
+      "text_sha256": "0da84fd723ef9e3158e667c09addebf77c1380a3de29744d0268dea458a49452"
+    },
+    {
+      "block_id": "page-0461-block-0021",
+      "order": 21,
+      "text": "■\n■Motor incoordination/ataxia\n",
+      "bbox": [
+        61.88990020751953,
+        435.8959045410156,
+        159.9299774169922,
+        444.6033935546875
+      ],
+      "text_sha256": "84b821e9d1821809ee502927d4bf09a4ddec2dea3138bb61c883eda69c04915c"
+    },
+    {
+      "block_id": "page-0461-block-0022",
+      "order": 22,
+      "text": "■\n■Dizziness\n",
+      "bbox": [
+        61.88990020751953,
+        444.8959045410156,
+        99.63751220703125,
+        453.6033935546875
+      ],
+      "text_sha256": "7bdc64e91503173a423f8d817bcb5398ebdd4a69a585b54e2857f0dbb28e2b67"
+    },
+    {
+      "block_id": "page-0461-block-0023",
+      "order": 23,
+      "text": "■\n■Slurred speech\n",
+      "bbox": [
+        61.88990020751953,
+        453.8959045410156,
+        117.427490234375,
+        462.6033935546875
+      ],
+      "text_sha256": "2f317060d74a6c260e38839ce34dc01fc4fb1850e27d415f6eff71dca34c0187"
+    },
+    {
+      "block_id": "page-0461-block-0024",
+      "order": 24,
+      "text": "■\n■Sensory alterations (tinnitus/strange tastes/par-\n",
+      "bbox": [
+        61.88990020751953,
+        462.8959045410156,
+        219.65245056152344,
+        471.6033935546875
+      ],
+      "text_sha256": "659d8e7d15d766b7e3475a6fd74ea74f5e1267d5b5102da07b8dd71ad2f4da5e"
+    },
+    {
+      "block_id": "page-0461-block-0025",
+      "order": 25,
+      "text": "aesthesia/numbness/burning)\n■\n■Rash\n",
+      "bbox": [
+        61.88990020751953,
+        471.8959045410156,
+        163.97247314453125,
+        489.6033935546875
+      ],
+      "text_sha256": "01330c1115f914507020d07bbba96aa050ff97024dbb27c61b3c87a4e91fd242"
+    },
+    {
+      "block_id": "page-0461-block-0026",
+      "order": 26,
+      "text": "■\n■Autonomic dysfunction (tachycardia/bradycardia/\n",
+      "bbox": [
+        61.88990020751953,
+        489.8959045410156,
+        226.875,
+        498.6033935546875
+      ],
+      "text_sha256": "61806c129acfba6928f2656ccc22035313fb11fa03c0f8d190203c3fce231b71"
+    },
+    {
+      "block_id": "page-0461-block-0027",
+      "order": 27,
+      "text": "diaphoresis/hypotension/hypertension)\n",
+      "bbox": [
+        70.88999938964844,
+        498.8959045410156,
+        193.2899627685547,
+        507.6033935546875
+      ],
+      "text_sha256": "0a48786df308fb47b440bc1c913a070d2b3894e4ad96a68c21ad9be1cf5e722b"
+    },
+    {
+      "block_id": "page-0461-block-0028",
+      "order": 28,
+      "text": "■\n■Emotional15\n",
+      "bbox": [
+        239.99989318847656,
+        426.71588134765625,
+        289.7044372558594,
+        435.6033935546875
+      ],
+      "text_sha256": "03d7fce27ef6ee79949e40a09b56d9f74d20fa22323e64a19a6748105791ae48"
+    },
+    {
+      "block_id": "page-0461-block-0029",
+      "order": 29,
+      "text": "■\n■Depression/dysphoria\n",
+      "bbox": [
+        239.99989318847656,
+        435.8959045410156,
+        316.80010986328125,
+        444.6033935546875
+      ],
+      "text_sha256": "a8d35d984875fc7058bb899effd74f2dda3c40f27fed3fcbdc34fe511eb7e8c1"
+    },
+    {
+      "block_id": "page-0461-block-0030",
+      "order": 30,
+      "text": "■\n■Numbness/emotional anaesthesia\n",
+      "bbox": [
+        239.99989318847656,
+        444.8959045410156,
+        355.6876525878906,
+        453.6033935546875
+      ],
+      "text_sha256": "400768a849568eb84c75764e01466629a68d4b7a8a292a0c10b308e06ef70a36"
+    },
+    {
+      "block_id": "page-0461-block-0031",
+      "order": 31,
+      "text": "■\n■Anxiety/phobias/panic\n",
+      "bbox": [
+        239.99989318847656,
+        453.8959045410156,
+        319.0125732421875,
+        462.6033935546875
+      ],
+      "text_sha256": "2f250bd5fd3d942bbc8ec02edf80c7549b50c3a664a775e94a1bed1755fed852"
+    },
+    {
+      "block_id": "page-0461-block-0032",
+      "order": 32,
+      "text": "■\n■Anger/irritability/mood lability\n",
+      "bbox": [
+        239.99989318847656,
+        462.8959045410156,
+        343.5751037597656,
+        471.6033935546875
+      ],
+      "text_sha256": "9804eec7a1224b94e1ea367625ba30e3e073bd6ee3dca6f71ea909f18d9709a7"
+    },
+    {
+      "block_id": "page-0461-block-0033",
+      "order": 33,
+      "text": "■\n■Excitement/euphoria\n",
+      "bbox": [
+        239.99989318847656,
+        471.8959045410156,
+        314.4150390625,
+        480.6033935546875
+      ],
+      "text_sha256": "a3242b0d441cfaae9c2f1cae55d34ce2319f0fa53ce9302568f4e8a93e497cda"
+    },
+    {
+      "block_id": "page-0461-block-0034",
+      "order": 34,
+      "text": "■\n■Increased morbidity12,13\n",
+      "bbox": [
+        61.88990020751953,
+        513.7409057617188,
+        151.70668029785156,
+        522.62841796875
+      ],
+      "text_sha256": "c7d2e165e28916d93e184d6bca888d9a9e13e7387da8df66a483cf098ca95bcc"
+    },
+    {
+      "block_id": "page-0461-block-0035",
+      "order": 35,
+      "text": "■\n■Increased risk of motor vehicle accidents\n",
+      "bbox": [
+        61.88990020751953,
+        522.9208984375,
+        199.49996948242188,
+        531.62841796875
+      ],
+      "text_sha256": "0efea300826bbe0523f4b5697cfd75d12b27187d721ae2fa9f8564d8e9047ecc"
+    },
+    {
+      "block_id": "page-0461-block-0036",
+      "order": 36,
+      "text": "■\n■Higher risk of falls (elderly)\n",
+      "bbox": [
+        61.88990020751953,
+        531.9208984375,
+        155.47499084472656,
+        540.62841796875
+      ],
+      "text_sha256": "0af446a2cf51e3507a0a935a38248ac10348937bdbd35f2000abf43daf9f8f11"
+    },
+    {
+      "block_id": "page-0461-block-0037",
+      "order": 37,
+      "text": "■\n■Delirium (elderly)\n",
+      "bbox": [
+        61.88990020751953,
+        540.9208984375,
+        124.63499450683594,
+        549.62841796875
+      ],
+      "text_sha256": "07fb44d627cb1b935938363b49f0cb7c63c35a79caeb383a6a728ecd55a1669d"
+    },
+    {
+      "block_id": "page-0461-block-0038",
+      "order": 38,
+      "text": "■\n■?Dementia\n",
+      "bbox": [
+        61.88990020751953,
+        549.9208984375,
+        105.47249603271484,
+        558.62841796875
+      ],
+      "text_sha256": "fdc3b85103ed055a7ac54b0019468ee6b19538aed0967a5d0dacb10c5d91945d"
+    },
+    {
+      "block_id": "page-0461-block-0039",
+      "order": 39,
+      "text": "■\n■?Cancer\n",
+      "bbox": [
+        61.88990020751953,
+        558.9208984375,
+        97.13999938964844,
+        567.62841796875
+      ],
+      "text_sha256": "f5066c928c43ec309e47eb1137ad5b48cf91145a7f486ceb6598aaf57ab7e052"
+    },
+    {
+      "block_id": "page-0461-block-0040",
+      "order": 40,
+      "text": "■\n■?Infections\n",
+      "bbox": [
+        61.88990020751953,
+        568.9208984375,
+        105.47249603271484,
+        577.62841796875
+      ],
+      "text_sha256": "031f65a906446c6a6fac948a28e6ab45e6cf3ad6ffe5cc30def7f3a113e31010"
+    },
+    {
+      "block_id": "page-0461-block-0041",
+      "order": 41,
+      "text": "■\n■Behavioural15\n",
+      "bbox": [
+        239.99989318847656,
+        513.7409057617188,
+        295.9594421386719,
+        522.62841796875
+      ],
+      "text_sha256": "c26d3399168401a3d9e07f8adf5f9360f089bb6ba81fb892e1eda1d366e4c08a"
+    },
+    {
+      "block_id": "page-0461-block-0042",
+      "order": 42,
+      "text": "■\n■Insomnia\n",
+      "bbox": [
+        239.99989318847656,
+        522.9208984375,
+        277.7550354003906,
+        531.62841796875
+      ],
+      "text_sha256": "dd32734792ca145cff79301d516f489a28d24ca2939cffba178b1a522ebf5586"
+    },
+    {
+      "block_id": "page-0461-block-0043",
+      "order": 43,
+      "text": "■\n■Avoidance/agoraphobia\n",
+      "bbox": [
+        239.99989318847656,
+        531.9208984375,
+        324.7201232910156,
+        540.62841796875
+      ],
+      "text_sha256": "463321bdfbe85da326bcfe594f4acac704edad67a7d2d5879a7b7a5940c21d31"
+    },
+    {
+      "block_id": "page-0461-block-0044",
+      "order": 44,
+      "text": "■\n■Appetite/weight (anorexia, weight gain)\n",
+      "bbox": [
+        239.99989318847656,
+        540.9208984375,
+        375.9750671386719,
+        549.62841796875
+      ],
+      "text_sha256": "947bee54de9d6d5d47949cc6d912440e18426a121b577ee545efe3160369bf1a"
+    },
+    {
+      "block_id": "page-0461-block-0045",
+      "order": 45,
+      "text": "■\n■Impulsivity/disinhibition\n",
+      "bbox": [
+        239.99989318847656,
+        549.9208984375,
+        323.16766357421875,
+        558.62841796875
+      ],
+      "text_sha256": "d3bda5ca2a83f54506f9a638135ef2d68192e6d0a6e97f8ca5092e463de2586b"
+    },
+    {
+      "block_id": "page-0461-block-0046",
+      "order": 46,
+      "text": "■\n■Suicidality\n",
+      "bbox": [
+        239.99989318847656,
+        558.9208984375,
+        280.65753173828125,
+        567.62841796875
+      ],
+      "text_sha256": "4189a66d2d40033965cc57fea84b1cc42ae4f8c49a50cbba74ab40484b3bc2eb"
+    },
+    {
+      "block_id": "page-0461-block-0047",
+      "order": 47,
+      "text": "■\n■Aggression\n",
+      "bbox": [
+        239.99989318847656,
+        567.9208984375,
+        284.2950744628906,
+        576.62841796875
+      ],
+      "text_sha256": "ef158df6726e2464279089511980fff7f6b50ec4be84a3d3a8eac1befda2eb44"
+    },
+    {
+      "block_id": "page-0461-block-0048",
+      "order": 48,
+      "text": "*Some of these impairments can persist after discontinuation\n",
+      "bbox": [
+        61.88999938964844,
+        587.9234008789062,
+        257.7374267578125,
+        596.6309204101562
+      ],
+      "text_sha256": "3df28c4b0641500f461c1655def4b92ac2bc982629ab000dde03a9c7a8352078"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,14 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0260",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 260,
+  "source_page_index": 259,
+  "repaired_text": "Schizophrenia and related psychoses    239\nCHAPTER 1\ninsufficient to prevent ‘dipping’ of WCC below the normal range. Again, this strategy \nrisks masking a severe neutropenia or agranulocytosis. It is also likely to be practically \ndifficult to manage outside a specialist unit, as frequent blood testing (twice to three \ntimes a week) is required, as well as immediate access to medical review and the G-CSF \nitself.\nConsultation with a haematologist and discussion with the medical adviser at the \nclozapine monitoring service is essential before considering the use of G-CSF. A patient’s \nindividual clinical circumstances should be considered. In particular, patients should be \nconsidered to be very high risk for rechallenge with clozapine if the first episode of \ndyscrasia fulfilled any of the following criteria, all of which suggest that the low counts \nare clozapine related:\nFigure 1.4  The use of lithium with clozapine\nTreatment/rechallenge with clozapine\nconsidered desirable\nDiscontinue if possible, other drugs that\nare known to suppress the bone marrow\nRefer to \nhaematologist for \nBEN dx if appropriate\nBaseline U&Es, TFTs, FBC\nBorderline/\nlow WCC\nWCC in right range\nPrescribe lithium 400mg daily Titrate dose\nto achieve a plasma level >0.4mmol/l\n(Higher plasma levels may be appropriate\nfor patients who have an affective\ncomponent to their illness) Repeat WCC\nIf WCC result is in the normal\nrange, start/restart clozapine\nEnsure ongoing monitoring for clozapine and\nlithium (Note that lithium does not protect\nagainst agranulocytosis: if the WCC\ncontinues to fall despite lithium treatment,\nconsideration should be given to\ndiscontinuing clozapine.\nParticular vigilance is required in high-risk\npatients during the first 18 weeks of treatment\nLithium contra-\nindicated or \ninappropriate\nHaematology referral/\nConsultation with\nclozapine registry\nUnlicensed US\nmonitoring \ncriteria\nTreatment\nplan with\nG-CSF",
+  "repaired_text_sha256": "46ecf90a59ddaaa66a030353c9fffb5e3574b15e387ddbb711b1dec19bab59c3",
+  "raw_text_sha256": "cd1ca44755d81985124b785794ff9ae326be07b2810f2bf755f2bebe38461a5c",
+  "repair_ids": [
+    "repair-000259"
+  ],
+  "raw_file": "raw/page-0260.json"
+}

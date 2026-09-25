@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0503",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 503,
+  "source_page_index": 502,
+  "source_page_display": 503,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "482    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\napproximately 5 days after the last dose increase. Once the patient has been stabilised \non an adequate dose, methadone should be prescribed as a single regular daily dose. It \nshould not be prescribed on a ‘when necessary’ basis or at variable dosage. It is good \npractice to supervise consumption for the first few months.\n■\n■Subsequent period\nSubsequent increases of 5–10mg methadone can continue after the first week, but there \nshould be at least a week between each successive increase.1 It may take several weeks to \nreach the therapeutic daily dose of 60–120mg.1 Stabilisation is usually achieved within 6 \nweeks but may take longer. However, it is important to consider that some patients may \nrequire more rapid stabilisation. This would need to be balanced by a high level of super-\nvision and observation, thereby allowing the ability to increase doses more rapidly. A \ntherapeutic dose is one that eliminates opioid withdrawal symptoms and is effective in \nstopping on top of use of heroin, without excess sedation.37 Prescribers should take into \naccount factors that may influence the choice of methadone dose, e.g. co-morbid cocaine \nuse, as cocaine decreases methadone levels, and increased age as lower methadone doses \nappear to be associated with overdose risk in the population aged  >45.28\nMethadone cautions\n■\n■Intoxication \nMethadone should not be given to any patient showing signs of intoxication, especially \ndue to alcohol or other depressant drugs (e.g. benzodiazepines).27,38 Risk of fatal overdose \nis greatly enhanced when methadone is taken concomitantly with alcohol and other res-\npiratory depressant drugs, including benzodiazepines and pregabalin, which can increase \nthe risk of overdose.39,40 Concurrent alcohol and both prescribed and illicit drug con-\nsumption must be borne in mind when considering subsequent prescribing of methadone \ndue to the increased risk of overdose associated with polysubstance misuse.25,31,38,41\n■\n■Severe hepatic/renal dysfunction \nMetabolism and elimination of methadone may be affected in which case the dose or \ndosing interval should be adjusted accordingly against clinical presentation. Because of \nextended plasma half-life, the interval between assessments during initial dosing may \nneed to be extended.\nMethadone overdose\nIn the event of methadone overdose, naloxone should be administered as described in \nthe section ‘Opioid overdose’.\nMethadone and risk of torsades de pointes/QT interval prolongation\nMethadone, either alone or combined with other QT prolonging agents, may increase \nthe likelihood of QT interval prolongation on the electrocardiogram, which is associ-\nated with torsades de pointes and can be fatal.42–44\n",
+  "raw_text_sha256": "ebfbf75860813715d64c493145e4b7070a3bde81767211d847a555ee21bba41e",
+  "coordinates_sha256": "ebff873d7ced0cf79832111321ddb6bc59b885ae03c0c192478f5da4bd338d14",
+  "block_sequence_sha256": "8cd317b06fbd054aede24ec4c5a46bbf82df7f1f05527e9d314cdbb0ab75ef84",
+  "blocks": [
+    {
+      "block_id": "page-0503-block-0000",
+      "order": 0,
+      "text": "482    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "174d75e04008e3a25e150c22b61a01240ea2c7df207885d3e012e2792c3c0967"
+    },
+    {
+      "block_id": "page-0503-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0503-block-0002",
+      "order": 2,
+      "text": "approximately 5 days after the last dose increase. Once the patient has been stabilised \non an adequate dose, methadone should be prescribed as a single regular daily dose. It \nshould not be prescribed on a ‘when necessary’ basis or at variable dosage. It is good \npractice to supervise consumption for the first few months.\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.7200012207031,
+        110.27029418945312
+      ],
+      "text_sha256": "92b28a45392e449ab966c2be94b51b947dfd13f440e44c4f74a06fcb64d57f69"
+    },
+    {
+      "block_id": "page-0503-block-0003",
+      "order": 3,
+      "text": "■\n■Subsequent period\n",
+      "bbox": [
+        61.88990020751953,
+        122.31029510498047,
+        150.3599853515625,
+        134.27029418945312
+      ],
+      "text_sha256": "f204e257648a86232eb9f66fbcc883143da504e67fddd3772a27d353a8dc3aec"
+    },
+    {
+      "block_id": "page-0503-block-0004",
+      "order": 4,
+      "text": "Subsequent increases of 5–10mg methadone can continue after the first week, but there \nshould be at least a week between each successive increase.1 It may take several weeks to \nreach the therapeutic daily dose of 60–120mg.1 Stabilisation is usually achieved within 6 \nweeks but may take longer. However, it is important to consider that some patients may \nrequire more rapid stabilisation. This would need to be balanced by a high level of super-\nvision and observation, thereby allowing the ability to increase doses more rapidly. A \ntherapeutic dose is one that eliminates opioid withdrawal symptoms and is effective in \nstopping on top of use of heroin, without excess sedation.37 Prescribers should take into \naccount factors that may influence the choice of methadone dose, e.g. co-morbid cocaine \nuse, as cocaine decreases methadone levels, and increased age as lower methadone doses \nappear to be associated with overdose risk in the population aged  >45.28\n",
+      "bbox": [
+        61.886077880859375,
+        140.55029296875,
+        436.7160949707031,
+        272.2702941894531
+      ],
+      "text_sha256": "e23da6cc4c961a9dce3843786fe57993d00dd00b7a31f631dd959fa80c5d960e"
+    },
+    {
+      "block_id": "page-0503-block-0005",
+      "order": 5,
+      "text": "Methadone cautions\n",
+      "bbox": [
+        61.88999938964844,
+        290.6402893066406,
+        158.55999755859375,
+        302.49029541015625
+      ],
+      "text_sha256": "ceeca77a9c5bd61224fd760fb3e38acbb29d9278b3b904c84fa40cdbb774011f"
+    },
+    {
+      "block_id": "page-0503-block-0006",
+      "order": 6,
+      "text": "■\n■Intoxication \n",
+      "bbox": [
+        61.88990020751953,
+        308.310302734375,
+        126.27999114990234,
+        320.2702941894531
+      ],
+      "text_sha256": "bbc5e4d468183e67a851ad597711559e6aba30897be880ffcc63c3b0fbbc2802"
+    },
+    {
+      "block_id": "page-0503-block-0007",
+      "order": 7,
+      "text": "Methadone should not be given to any patient showing signs of intoxication, especially \ndue to alcohol or other depressant drugs (e.g. benzodiazepines).27,38 Risk of fatal overdose \nis greatly enhanced when methadone is taken concomitantly with alcohol and other res-\npiratory depressant drugs, including benzodiazepines and pregabalin, which can increase \nthe risk of overdose.39,40 Concurrent alcohol and both prescribed and illicit drug con-\nsumption must be borne in mind when considering subsequent prescribing of methadone \ndue to the increased risk of overdose associated with polysubstance misuse.25,31,38,41\n",
+      "bbox": [
+        61.887725830078125,
+        326.55029296875,
+        436.6576843261719,
+        410.2702941894531
+      ],
+      "text_sha256": "0b40ceb17e3c881fdebb78e62ae29a1a6056e8dc9edc69bbf5cbe051fa9e25cc"
+    },
+    {
+      "block_id": "page-0503-block-0008",
+      "order": 8,
+      "text": "■\n■Severe hepatic/renal dysfunction \n",
+      "bbox": [
+        61.88990020751953,
+        422.310302734375,
+        213.0800018310547,
+        434.2702941894531
+      ],
+      "text_sha256": "121613e4f71c3f86d34126c78c524afd79d3fe3defec235af7a6ea38bb7bac37"
+    },
+    {
+      "block_id": "page-0503-block-0009",
+      "order": 9,
+      "text": "Metabolism and elimination of methadone may be affected in which case the dose or \ndosing interval should be adjusted accordingly against clinical presentation. Because of \nextended plasma half-life, the interval between assessments during initial dosing may \nneed to be extended.\n",
+      "bbox": [
+        61.88999938964844,
+        440.55029296875,
+        436.67999267578125,
+        488.2702941894531
+      ],
+      "text_sha256": "b9b7e40c6085c971ef3789bff0b8a0bca1902385eb580d97dbb64ea00980ea70"
+    },
+    {
+      "block_id": "page-0503-block-0010",
+      "order": 10,
+      "text": "Methadone overdose\nIn the event of methadone overdose, naloxone should be administered as described in \nthe section ‘Opioid overdose’.\n",
+      "bbox": [
+        61.88999938964844,
+        501.1077880859375,
+        436.7101135253906,
+        536.2703247070312
+      ],
+      "text_sha256": "9f1fb3f23ab4501bdd575381e136184e3be693fb3ef2bb9bc726319f290dcd5e"
+    },
+    {
+      "block_id": "page-0503-block-0011",
+      "order": 11,
+      "text": "Methadone and risk of torsades de pointes/QT interval prolongation\nMethadone, either alone or combined with other QT prolonging agents, may increase \nthe likelihood of QT interval prolongation on the electrocardiogram, which is associ-\nated with torsades de pointes and can be fatal.42–44\n",
+      "bbox": [
+        61.88999938964844,
+        549.1077880859375,
+        436.6699523925781,
+        596.2703247070312
+      ],
+      "text_sha256": "3a003137b2de186cb21bde5bb2bb267f026bec81d2aaaa8bdd5f03bf282f8349"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

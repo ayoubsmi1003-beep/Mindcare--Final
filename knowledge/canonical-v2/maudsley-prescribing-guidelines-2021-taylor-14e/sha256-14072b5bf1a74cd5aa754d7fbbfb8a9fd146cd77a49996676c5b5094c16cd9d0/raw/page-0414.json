@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0414",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 414,
+  "source_page_index": 413,
+  "source_page_display": 414,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    393\nCHAPTER 3\nAntidepressant-induced hyponatraemia\nMost antidepressants have been associated with hyponatraemia. The onset is usually \nwithin 30 days of starting treatment (median 11 days).1–3 The effect appears not to be \ndose-related1,4 although some case reports suggest otherwise.5,6 The most likely mecha-\nnism of this adverse effect is the syndrome of inappropriate secretion of antidiuretic \nhormone (SIADH). Risk of hospitalisation with hyponatraemia is elevated from 1 in \n1600 in the general population to 1 in 300 for those on an antidepressant.7 \nHyponatraemia is a potentially serious adverse effect of antidepressants that demands \ncareful monitoring,8 particularly in those patients at greatest risk. Hyponatraemia of all \nseverities is associated with increased mortality.9\nAntidepressants\nNo antidepressant has been definitively shown not to be linked with hyponatraemia, \nand almost all have a reported association.10 It has been suggested that serotonergic \ndrugs are relatively more likely than noradrenergic drugs to cause hyponatraemia,11,12 \nalthough this is disputed.13 One review of the literature suggests SSRIs are more likely \nto cause hyponatraemia than TCAs or mirtazapine,14 and that older women who are \nco-prescribed other medication known to reduce plasma sodium are at the greatest \nrisk.15\nNone of the more recently introduced serotonergic drugs is free of an association \nwith hyponatraemia – cases have been described with mirtazapine16–19 (although the \nreported incidence overall is very low15), escitalopram5,20–22 and duloxetine.4,23–28 \nVortioxetine has also been linked to hyponatraemia,29,30 as has desvenlafaxine31 and \nvilazodone.6 Noradrenergic antidepressants are also clearly linked to hyponatrae-\nmia,32–38 albeit at a lower frequency than with SSRIs. There are notably few reports for \nMAOIs.39,40\nOne French pharmacovigilance database study found an association of hyponatrae-\nmia with agomelatine, contrasting with most other studies.41 Another database study \nusing FDA data found the strongest association between hyponatraemia and antide-\npressants to be for mirtazapine, also in contrast to most other reports,42 and a further \nFrench database study found the greatest risk to be with duloxetine.43 However, extrap-\nolating from incident report databases to estimate relative or absolute risk of hypona-\ntremia is fraught with difficulty. Problems include disproportionate reporting for \nantidepressants for which the side effect is felt to be rare, the inability to adjust for \nconfounding by indication (drugs perceived to be of low risk are more likely to be pre-\nscribed to patients at already at high risk of hyponatraemia), and the impact of con-\ncomitant prescriptions.\nCYP2D6 poor metabolisers may be at increased risk44 of antidepressant-induced \nhyponatraemia, although evidence is somewhat inconsistent (Table 3.17).45\n",
+  "raw_text_sha256": "58db82f606ffff9aeb5b76b7444c0d2b23ff973d154852168f33e69928dbd159",
+  "coordinates_sha256": "c25710666844015fc1b80b9885ce4177bfb41d7dc5b50f78a66197358fd94354",
+  "block_sequence_sha256": "fb01c5fc6ca7bf311bd5e11a3a98819b73779ca4de0a5ac11e4958bf993a3842",
+  "blocks": [
+    {
+      "block_id": "page-0414-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    393\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "d35d4a8a9757d3c884c784c97e5fbbdc05fc9b38622f38c9da6907188aadaf29"
+    },
+    {
+      "block_id": "page-0414-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0414-block-0002",
+      "order": 2,
+      "text": "Antidepressant-induced hyponatraemia\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        260.16094970703125,
+        79.1004638671875
+      ],
+      "text_sha256": "4d769fdccb11c2cf60e1998ad4ac5cb92e0f789231ae68fb4b365d1cccb3bd39"
+    },
+    {
+      "block_id": "page-0414-block-0003",
+      "order": 3,
+      "text": "Most antidepressants have been associated with hyponatraemia. The onset is usually \nwithin 30 days of starting treatment (median 11 days).1–3 The effect appears not to be \ndose-related1,4 although some case reports suggest otherwise.5,6 The most likely mecha-\nnism of this adverse effect is the syndrome of inappropriate secretion of antidiuretic \nhormone (SIADH). Risk of hospitalisation with hyponatraemia is elevated from 1 in \n1600 in the general population to 1 in 300 for those on an antidepressant.7 \nHyponatraemia is a potentially serious adverse effect of antidepressants that demands \ncareful monitoring,8 particularly in those patients at greatest risk. Hyponatraemia of all \nseverities is associated with increased mortality.9\n",
+      "bbox": [
+        47.99859619140625,
+        84.91046142578125,
+        422.79864501953125,
+        192.63046264648438
+      ],
+      "text_sha256": "0b9b9fe72a1bc5897adfde34d271eae8ff7afd4257af51ecbe65f315540732a6"
+    },
+    {
+      "block_id": "page-0414-block-0004",
+      "order": 4,
+      "text": "Antidepressants\n",
+      "bbox": [
+        48.0,
+        210.06549072265625,
+        131.5229949951172,
+        223.10049438476562
+      ],
+      "text_sha256": "2e12ac14096be234a9b975ce033aebb8d95f8f3ff92503034de89e253e59f21d"
+    },
+    {
+      "block_id": "page-0414-block-0005",
+      "order": 5,
+      "text": "No antidepressant has been definitively shown not to be linked with hyponatraemia, \nand almost all have a reported association.10 It has been suggested that serotonergic \ndrugs are relatively more likely than noradrenergic drugs to cause hyponatraemia,11,12 \nalthough this is disputed.13 One review of the literature suggests SSRIs are more likely \nto cause hyponatraemia than TCAs or mirtazapine,14 and that older women who are \nco-prescribed other medication known to reduce plasma sodium are at the greatest \nrisk.15\n",
+      "bbox": [
+        47.99610900878906,
+        228.91049194335938,
+        422.7979736328125,
+        312.6304931640625
+      ],
+      "text_sha256": "9f9d0b41236da49b29e547bd627d384d53da660e73c53ea8f8cb3d798337f691"
+    },
+    {
+      "block_id": "page-0414-block-0006",
+      "order": 6,
+      "text": "None of the more recently introduced serotonergic drugs is free of an association \nwith hyponatraemia – cases have been described with mirtazapine16–19 (although the \nreported incidence overall is very low15), escitalopram5,20–22 and duloxetine.4,23–28 \nVortioxetine has also been linked to hyponatraemia,29,30 as has desvenlafaxine31 and \nvilazodone.6 Noradrenergic antidepressants are also clearly linked to hyponatrae-\nmia,32–38 albeit at a lower frequency than with SSRIs. There are notably few reports for \nMAOIs.39,40\n",
+      "bbox": [
+        48.0,
+        312.9104919433594,
+        422.7900085449219,
+        396.6304931640625
+      ],
+      "text_sha256": "ec721b86a52aad7552978dd11bc8ace5ed0f71467c8faccd44c068f97a0db134"
+    },
+    {
+      "block_id": "page-0414-block-0007",
+      "order": 7,
+      "text": "One French pharmacovigilance database study found an association of hyponatrae-\nmia with agomelatine, contrasting with most other studies.41 Another database study \nusing FDA data found the strongest association between hyponatraemia and antide-\npressants to be for mirtazapine, also in contrast to most other reports,42 and a further \nFrench database study found the greatest risk to be with duloxetine.43 However, extrap-\nolating from incident report databases to estimate relative or absolute risk of hypona-\ntremia is fraught with difficulty. Problems include disproportionate reporting for \nantidepressants for which the side effect is felt to be rare, the inability to adjust for \nconfounding by indication (drugs perceived to be of low risk are more likely to be pre-\nscribed to patients at already at high risk of hyponatraemia), and the impact of con-\ncomitant prescriptions.\n",
+      "bbox": [
+        47.99591064453125,
+        396.9104919433594,
+        422.78704833984375,
+        528.6304931640625
+      ],
+      "text_sha256": "303ac9bd8d33fc216bbfb0c335043df52c6e008dffe8e604b4adf0800d174c6e"
+    },
+    {
+      "block_id": "page-0414-block-0008",
+      "order": 8,
+      "text": "CYP2D6 poor metabolisers may be at increased risk44 of antidepressant-induced \nhyponatraemia, although evidence is somewhat inconsistent (Table 3.17).45\n",
+      "bbox": [
+        48.00250244140625,
+        528.9104614257812,
+        422.7724609375,
+        552.6304931640625
+      ],
+      "text_sha256": "7abbccc6c85e87fec1cd43f87219bcf2d11b1670174223ccb4718115df95f9a0"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

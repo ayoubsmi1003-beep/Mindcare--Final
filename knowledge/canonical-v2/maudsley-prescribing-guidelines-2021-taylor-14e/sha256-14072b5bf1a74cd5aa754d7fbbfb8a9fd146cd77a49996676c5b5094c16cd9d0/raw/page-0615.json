@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0615",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 615,
+  "source_page_index": 614,
+  "source_page_display": 615,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "594    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  5\nonset latency, increases total sleep time and improves overall sleep quality. The effects \nof melatonin on sleep are modest but do not appear to dissipate with continued mela-\ntonin use.6\nAdverse effects\nMany of the children who have received melatonin in RCTs and published case series \nhad developmental problems and/or sensory deficits. The scope for detecting subtle \nadverse effects in this population is limited. Screening for adverse effects was not rou-\ntine in all studies. Early reports included a very small case series cases where mela-\ntonin was been reported to worsen seizures7 and exacerbate asthma8,9 in the short \nterm. Other reported adverse effects include headache, depression, restlessness, confu-\nsion, nausea, tachycardia and pruritis.10,11 In the more recent largest placebo-con-\ntrolled studies to date involving children with learning difficulty, autism and \nepilepsy,12–14 and the most recent minitablet study (PedPRM) there were no excess \nadverse effects in the treatment group over that recorded for placebo, and in particu-\nlar seizures were not worsened. A Cochrane review found no worsening of seizure \nfrequency in patients with epilepsy given melatonin.15 There was no detectable impact \non puberty in a recent paper.16\nDose\nThe cut-off point between physiological and pharmacological doses in children is \nless than 500µg. Physiological doses of melatonin may result in very high receptor \noccupancy. The doses used in RCTs and published case series vary hugely with \nbetween 500µg and 5mg being the most common doses although much lower and \nhigher doses have been used. The optimal dose is unknown and there is no evidence \nto support a direct relationship between dose and response.17 In one large RCT 18% \nof children seemed to respond to a 500µg dose but others seemed to require much \nhigher doses (12mg).14 Increasing doses above 5mg is likely to provoke the direct \nsedative effects on melatonin, rather than its sleep phase-shifting properties. This \nmight be necessary and helpful for some children with severe and bilateral brain \ninjury.\nThe use of salivary melatonin measurements is an expensive but effective way to \nidentify those children with the most delayed sleep phase (likely to have the best \nresponse to exogenous melatonin) and those children who are slow metabolisers of \nmelatonin in whom serum levels accumulate during the daytime (particularly on higher \ndoses) and in whom efficacy will eventually be lost (Figure 5.3).\n",
+  "raw_text_sha256": "523c83062237b88acd15a97dd8dd91cab05a5614323dacfeab0b5c35ee15fa8a",
+  "coordinates_sha256": "8ba17827b889ac6b6986436a862dbf67138eeb18a48d36e7881ce126b1533d83",
+  "block_sequence_sha256": "93da5c207b8af1845893e8ae187ea7498cdf6a75f050f5e77d9aff2291d06445",
+  "blocks": [
+    {
+      "block_id": "page-0615-block-0000",
+      "order": 0,
+      "text": "594    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "c501621141a4e3eb69bda29b7f72de4275bb4deff02f97ec005550d56085ebea"
+    },
+    {
+      "block_id": "page-0615-block-0001",
+      "order": 1,
+      "text": "CHAPTER  5\n",
+      "bbox": [
+        18.520000457763672,
+        338.22650146484375,
+        28.0,
+        381.79449462890625
+      ],
+      "text_sha256": "4086e0916f45ec531cc17b8c611334eb2b1ef26051ba536579b8ef3c22c1648d"
+    },
+    {
+      "block_id": "page-0615-block-0002",
+      "order": 2,
+      "text": "onset latency, increases total sleep time and improves overall sleep quality. The effects \nof melatonin on sleep are modest but do not appear to dissipate with continued mela-\ntonin use.6\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.63031005859375,
+        98.27029418945312
+      ],
+      "text_sha256": "090e70f177734d77e146f0e61927ba5c79b63a315b3b26c52b492bf98d626348"
+    },
+    {
+      "block_id": "page-0615-block-0003",
+      "order": 3,
+      "text": "Adverse effects\n",
+      "bbox": [
+        61.88999938964844,
+        115.70529174804688,
+        141.76100158691406,
+        128.74029541015625
+      ],
+      "text_sha256": "2829b5953031aa8e8e992beffdca9c91044830ce03b830653e6ea31d5de93cfc"
+    },
+    {
+      "block_id": "page-0615-block-0004",
+      "order": 4,
+      "text": "Many of the children who have received melatonin in RCTs and published case series \nhad developmental problems and/or sensory deficits. The scope for detecting subtle \nadverse effects in this population is limited. Screening for adverse effects was not rou-\ntine in all studies. Early reports included a very small case series cases where mela-\ntonin was been reported to worsen seizures7 and exacerbate asthma8,9 in the short \nterm. Other reported adverse effects include headache, depression, restlessness, confu-\nsion, nausea, tachycardia and pruritis.10,11 In the more recent largest placebo-con-\ntrolled studies to date involving children with learning difficulty, autism and \nepilepsy,12–14 and the most recent minitablet study (PedPRM) there were no excess \nadverse effects in the treatment group over that recorded for placebo, and in particu-\nlar seizures were not worsened. A Cochrane review found no worsening of seizure \nfrequency in patients with epilepsy given melatonin.15 There was no detectable impact \non puberty in a recent paper.16\n",
+      "bbox": [
+        61.886322021484375,
+        134.55029296875,
+        436.72369384765625,
+        290.2702941894531
+      ],
+      "text_sha256": "45a6fb0717a664ff5119620e345dc6b04c12d346eedc9ed47801e1e10f10528c"
+    },
+    {
+      "block_id": "page-0615-block-0005",
+      "order": 5,
+      "text": "Dose\n",
+      "bbox": [
+        61.88999938964844,
+        307.7052917480469,
+        87.5530014038086,
+        320.74029541015625
+      ],
+      "text_sha256": "8f502b0261d5a8ef51c237e912e93132996183089ef7cb76c3ffdca073c314ca"
+    },
+    {
+      "block_id": "page-0615-block-0006",
+      "order": 6,
+      "text": "The cut-off point between physiological and pharmacological doses in children is \nless than 500µg. Physiological doses of melatonin may result in very high receptor \noccupancy. The doses used in RCTs and published case series vary hugely with \nbetween 500µg and 5mg being the most common doses although much lower and \nhigher doses have been used. The optimal dose is unknown and there is no evidence \nto support a direct relationship between dose and response.17 In one large RCT 18% \nof children seemed to respond to a 500µg dose but others seemed to require much \nhigher doses (12mg).14 Increasing doses above 5mg is likely to provoke the direct \nsedative effects on melatonin, rather than its sleep phase-shifting properties. This \nmight be necessary and helpful for some children with severe and bilateral brain \ninjury.\n",
+      "bbox": [
+        61.885704040527344,
+        326.55029296875,
+        436.7059020996094,
+        458.2702941894531
+      ],
+      "text_sha256": "0d79e295abf03d0a024d2c1a76508dd814b5d3f4784f3d0f6e713ff5177c49a7"
+    },
+    {
+      "block_id": "page-0615-block-0007",
+      "order": 7,
+      "text": "The use of salivary melatonin measurements is an expensive but effective way to \nidentify those children with the most delayed sleep phase (likely to have the best \nresponse to exogenous melatonin) and those children who are slow metabolisers of \nmelatonin in whom serum levels accumulate during the daytime (particularly on higher \ndoses) and in whom efficacy will eventually be lost (Figure 5.3).\n",
+      "bbox": [
+        61.885704040527344,
+        458.55029296875,
+        436.70574951171875,
+        518.2703247070312
+      ],
+      "text_sha256": "73570c80f2bd7d94b2ee8b0b4ec85c8b7921929f49bfc9ace00283bbcd6205f5"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

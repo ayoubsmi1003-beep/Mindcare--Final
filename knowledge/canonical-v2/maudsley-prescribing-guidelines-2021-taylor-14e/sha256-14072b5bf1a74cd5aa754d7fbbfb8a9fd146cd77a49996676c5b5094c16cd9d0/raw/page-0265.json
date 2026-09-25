@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0265",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 265,
+  "source_page_index": 264,
+  "source_page_display": 265,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "244    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nClozapine-genetic testing for clozapine treatment\nA great number of studies have sought to detect genetic predictors of clozapine out-\ncomes, both therapeutic and adverse. Generally, only small effects have been uncovered \nand clinical utility is limited unless genetic variant effects are mathematically combined. \nSensitivity (the likelihood of accurately predicting a specific outcome) is usually low but \nspecificity (the likelihood of excluding that outcome) is often very high. Numerical \nvalues for these categories can be combined with population incidence data to generate \npositive predictive value (PPV – the % of people who will experience the outcome when \npredicted) and negative predictive value (NPV – the % of people who will not experi-\nence that outcome when it is not predicted).\nResponse\nThree variants have been reliably shown to predict therapeutic outcome with \nclozapine1\nHTR2A rs6313C\t\n\u0007CC carriers less likely to respond than T carriers\n\t\nCC 146/272 response, CT/TT 366/596 response (54% vs 62%)\nHTR2A rs6314\t\nC allele more likely to respond than T allele\n\t\nC allele response 685/1215, T allele 55/127 (56% vs 43%)\nHTR3A rs1062613\t\nC allele less likely to respond than T allele\n\t\nC allele response 528/841, T allele 134/185 (63% vs 72%)\nAgranulocytosis\nFour genetic variants are reliably associated with altered risk of agranulocytosis. Some \nvariants are found only in certain ethnic groups.\nHLA-DQB1\t\n\u0007Sequence variant 6672 G > C (REC 21 G) confers 1,175% \nhigher risk of agranulocytosis than general population.\n\t\nSensitivity 21.5%, specificity 98.4%.2\n\t\nPositive predictive value 5.1%, negative predictive value 99.7%\nHLA-DQB1\t\n\u0007DQB1*0502 allele associated with agranulocytosis in 5/7 \nstudies (eg. Dettling et al,3 Yunis et al4). Effect size variable.\nHLA-B*59:01\t\n\u0007Presence of allele highly predictive of agranulocytosis but is \nrare in East Asian populations and almost absent in Caucasians.\n\t\nSensitivity 31.8%, specificity 95.3%5\n\t\nPPV 6.4%, NPV 99.3%\nHLA DQB1/HLA-B\t\n\u0007Single amino acid changes HLA DQB1 126Q and HLA-B 158 T\n\t\n\u0007Associated with increased risk of agranulocytosis. Overall 39 of \n95 cases had one or both alleles; 175 of 206 controls had neither \nallele.\n\t\n\u0007Sensitivity 41.0%, specificity 85.0%6,7 (36% and 89% figures \ngiven elsewhere8). PPV/NPV not given but can be calculated\n\u0007The HLA-DQB1 variants and the HLA-B variants are in linkage disequilibrium (LD)8 \nand are likely to convey the same association signal. Variants in LD are inherited together\n",
+  "raw_text_sha256": "0b12ec7ac4c0be179ccc9f1f1daeb4122c62307b6c6d80d497dba057d3768d0f",
+  "coordinates_sha256": "916562733f8bb3966c2949f98050b9ccd62d378d703485049cc034b06471ba90",
+  "block_sequence_sha256": "ed9f263e5f7aafb2e3bf61a4617d7e9b0f6f0477a247be18f7e5090de3aed5b9",
+  "blocks": [
+    {
+      "block_id": "page-0265-block-0000",
+      "order": 0,
+      "text": "244    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "b2383c0d9626f0553c31b189e9eeb3bdf6b6c7ae411c54b3f392ef943b87be46"
+    },
+    {
+      "block_id": "page-0265-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0265-block-0002",
+      "order": 2,
+      "text": "Clozapine-genetic testing for clozapine treatment\n",
+      "bbox": [
+        68.88909912109375,
+        66.06448364257812,
+        325.4090576171875,
+        79.0994873046875
+      ],
+      "text_sha256": "b379666218770e64e4eea99ac7c68f699dcb351505743940644fcb21f7c02f9f"
+    },
+    {
+      "block_id": "page-0265-block-0003",
+      "order": 3,
+      "text": "A great number of studies have sought to detect genetic predictors of clozapine out-\ncomes, both therapeutic and adverse. Generally, only small effects have been uncovered \nand clinical utility is limited unless genetic variant effects are mathematically combined. \nSensitivity (the likelihood of accurately predicting a specific outcome) is usually low but \nspecificity (the likelihood of excluding that outcome) is often very high. Numerical \nvalues for these categories can be combined with population incidence data to generate \npositive predictive value (PPV – the % of people who will experience the outcome when \npredicted) and negative predictive value (NPV – the % of people who will not experi-\nence that outcome when it is not predicted).\n",
+      "bbox": [
+        61.88909912109375,
+        84.90948486328125,
+        436.7090148925781,
+        192.62948608398438
+      ],
+      "text_sha256": "1d441ef93df88f8e299fe4f07581174bcd18f9c7f37010ea9ca4c7a2cac52f83"
+    },
+    {
+      "block_id": "page-0265-block-0004",
+      "order": 4,
+      "text": "Response\n",
+      "bbox": [
+        61.88909912109375,
+        206.06451416015625,
+        110.77310180664062,
+        219.09951782226562
+      ],
+      "text_sha256": "19524cb446172954b5334de0cab397112c4f6121de782c43c64393567408de95"
+    },
+    {
+      "block_id": "page-0265-block-0005",
+      "order": 5,
+      "text": "Three variants have been reliably shown to predict therapeutic outcome with \nclozapine1\n",
+      "bbox": [
+        61.88909912109375,
+        224.90951538085938,
+        436.6690368652344,
+        248.6295166015625
+      ],
+      "text_sha256": "9ebb1010f44e86d22090910689e6acef27624814bcc0b26b5b97716685e69508"
+    },
+    {
+      "block_id": "page-0265-block-0006",
+      "order": 6,
+      "text": "HTR2A rs6313C\t\n\u0007CC carriers less likely to respond than T carriers\n\t\nCC 146/272 response, CT/TT 366/596 response (54% vs 62%)\nHTR2A rs6314\t\nC allele more likely to respond than T allele\n\t\nC allele response 685/1215, T allele 55/127 (56% vs 43%)\nHTR3A rs1062613\t\nC allele less likely to respond than T allele\n\t\nC allele response 528/841, T allele 134/185 (63% vs 72%)\n",
+      "bbox": [
+        61.88909912109375,
+        254.66952514648438,
+        433.8890686035156,
+        335.6295166015625
+      ],
+      "text_sha256": "d7e4605388dac96adafecc4baf49c3c6c793cff533f8820f0646b096e5927641"
+    },
+    {
+      "block_id": "page-0265-block-0007",
+      "order": 7,
+      "text": "Agranulocytosis\n",
+      "bbox": [
+        61.88909912109375,
+        348.06451416015625,
+        144.9940948486328,
+        361.0995178222656
+      ],
+      "text_sha256": "cddf6f867766a3d368ff2536c0d4ea73c361106961536602ff72913fa0fe359e"
+    },
+    {
+      "block_id": "page-0265-block-0008",
+      "order": 8,
+      "text": "Four genetic variants are reliably associated with altered risk of agranulocytosis. Some \nvariants are found only in certain ethnic groups.\n",
+      "bbox": [
+        61.88909912109375,
+        366.9095153808594,
+        436.6991271972656,
+        390.6295166015625
+      ],
+      "text_sha256": "891fae51608c5290be2428563c6eb4ebc21a3bc70da7ffa0588905f15bcd6a57"
+    },
+    {
+      "block_id": "page-0265-block-0009",
+      "order": 9,
+      "text": "HLA-DQB1\t\n\u0007Sequence variant 6672 G > C (REC 21 G) confers 1,175% \nhigher risk of agranulocytosis than general population.\n\t\nSensitivity 21.5%, specificity 98.4%.2\n",
+      "bbox": [
+        61.88909912109375,
+        396.6695251464844,
+        436.6991271972656,
+        432.6295166015625
+      ],
+      "text_sha256": "33d03aa1996368852a45036d2f7746144900b5b303e2007624a5df41dec09c62"
+    },
+    {
+      "block_id": "page-0265-block-0010",
+      "order": 10,
+      "text": "\t\nPositive predictive value 5.1%, negative predictive value 99.7%\nHLA-DQB1\t\n\u0007DQB1*0502 allele associated with agranulocytosis in 5/7 \nstudies (eg. Dettling et al,3 Yunis et al4). Effect size variable.\nHLA-B*59:01\t\n\u0007Presence of allele highly predictive of agranulocytosis but is \nrare in East Asian populations and almost absent in Caucasians.\n\t\nSensitivity 31.8%, specificity 95.3%5\n",
+      "bbox": [
+        61.88909912109375,
+        435.9095153808594,
+        436.6490783691406,
+        516.6295166015625
+      ],
+      "text_sha256": "d00f1f93b2cd90e9d8476b4424f91b107c30d05d37f15b56f210899a90c0d62d"
+    },
+    {
+      "block_id": "page-0265-block-0011",
+      "order": 11,
+      "text": "\t\nPPV 6.4%, NPV 99.3%\nHLA DQB1/HLA-B\t\n\u0007Single amino acid changes HLA DQB1 126Q and HLA-B 158 T\n\t\n\u0007Associated with increased risk of agranulocytosis. Overall 39 of \n95 cases had one or both alleles; 175 of 206 controls had neither \nallele.\n\t\n\u0007Sensitivity 41.0%, specificity 85.0%6,7 (36% and 89% figures \ngiven elsewhere8). PPV/NPV not given but can be calculated\n",
+      "bbox": [
+        61.88909912109375,
+        519.9094848632812,
+        436.6990661621094,
+        609.6295166015625
+      ],
+      "text_sha256": "d3afd207f4514c42531e35b52886d21d1fe0190bba71e48ada42fc0adfba8b51"
+    },
+    {
+      "block_id": "page-0265-block-0012",
+      "order": 12,
+      "text": "\u0007The HLA-DQB1 variants and the HLA-B variants are in linkage disequilibrium (LD)8 \nand are likely to convey the same association signal. Variants in LD are inherited together\n",
+      "bbox": [
+        61.88951110839844,
+        615.9094848632812,
+        436.6695251464844,
+        639.6295166015625
+      ],
+      "text_sha256": "0621c300b0afecd37a4192277fe9a9d62928221230829a5747394048167b14f7"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

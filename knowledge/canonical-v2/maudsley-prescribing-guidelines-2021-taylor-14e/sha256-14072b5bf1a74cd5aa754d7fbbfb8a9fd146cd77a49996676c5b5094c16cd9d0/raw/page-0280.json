@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0280",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 280,
+  "source_page_index": 279,
+  "source_page_display": 280,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Bipolar disorder    259\nCHAPTER 2\nPlasma levels\nThe pharmacokinetics of valproate are complex, following a three-compartmental \nmodel and showing protein-binding saturation. Plasma level monitoring is supposedly \nof more limited use than with lithium or carbamazepine.36 There may be a linear asso-\nciation between valproate serum levels and response in acute mania, with serum levels \n<55mg/L being no more effective than placebo and levels >94mg/L being associated \nwith the most robust response,37 although these data are weak.36 Note that this is the \ntop of the reference range (for epilepsy) that is quoted on laboratory forms. Optimal \nserum levels during the maintenance phase are unknown, but are likely to be at least \n50mg/L.38 Achieving therapeutic plasma levels rapidly using a loading dose regimen is \ngenerally well tolerated. Plasma levels can also be used to detect non-compliance or \ntoxicity.\nAdverse effects\nValproate can cause both gastric irritation and hyperammonaemia,39 both of which can \nlead to nausea. Lethargy and confusion can occasionally occur with starting doses \nabove 750mg/day. Weight gain can be significant,40 particularly when valproate is used \nin combination with clozapine. Valproate causes dose-related tremor in up to a quarter \nof patients.41 In the majority of these patients, it is intention/postural tremor that is \nproblematic, but a very small proportion develop parkinsonism associated with cogni-\ntive decline; these symptoms are reversible when valproate is discontinued.42\nHair loss (with curly regrowth) and peripheral oedema can occur, as can thrombocy-\ntopenia, leucopenia, red cell hypoplasia and pancreatitis.43 Valproate can cause hyper-\nandrogenism in women44 and has been linked with the development of polycystic \novaries; the evidence supporting this association is conflicting. Valproate is a major \nhuman teratogen (see section ‘Pregnancy’, Chapter 7). Valproate may very rarely cause \nfulminant hepatic failure. Young children receiving multiple antiseizure medications are \nmost at risk. Any patient with raised liver function tests (LFTs; common in early treat-\nment45) should be evaluated clinically and other markers of hepatic function such as \nalbumin and clotting time should be checked.\nMany side effects of valproate are dose related (peak plasma-level related) and an \nincrease in frequency and severity when the plasma level is >100mg/L. The once daily \nChrono form of sodium valproate does not produce as high peak plasma levels as the \nconventional formulation, and so may be better tolerated.\nValproate and other antiseizure medications have been associated with an increased \nrisk of suicidal behaviour,46 but this finding is not consistent across studies.47 Patients \nwith depression48 or who take another antiseizure medication that increases the risk of \ndeveloping depression may be a subgroup at greater risk.49\nNote that valproate is eliminated mainly through the kidneys, partly in the form of \nketone bodies, and may give a false positive urine test for ketones.\nPre-treatment tests\nBaseline full blood count (FBC), LFTs and weight or BMI are recommended by NICE.\n",
+  "raw_text_sha256": "61bce450d369b886ec70d1a2785748f458b19026f348fa37f892d7212bf00165",
+  "coordinates_sha256": "b23afaeb1658ad257ebb362069912d4aea738571d0d707bc2acc43be1fd41a55",
+  "block_sequence_sha256": "9078e285ac517f5a541f840ce6fdfaeb5f46852883003f1bbbd9ac3f3e2fc76d",
+  "blocks": [
+    {
+      "block_id": "page-0280-block-0000",
+      "order": 0,
+      "text": "Bipolar disorder    259\n",
+      "bbox": [
+        326.5046081542969,
+        31.395221710205078,
+        420.0005798339844,
+        41.0272216796875
+      ],
+      "text_sha256": "1d915b2949b7bbdce7b01c2e390d43e48e33a470a69c3b61884265c58a90c5a2"
+    },
+    {
+      "block_id": "page-0280-block-0001",
+      "order": 1,
+      "text": "CHAPTER 2\n",
+      "bbox": [
+        454.4096984863281,
+        146.3472900390625,
+        463.88970947265625,
+        187.6912841796875
+      ],
+      "text_sha256": "5eaa1f2591abe1a1b2f7664fa3de7ff01a032d44ee83fa594c7852135d4287aa"
+    },
+    {
+      "block_id": "page-0280-block-0002",
+      "order": 2,
+      "text": "Plasma levels\n",
+      "bbox": [
+        48.0,
+        62.31546401977539,
+        116.47499084472656,
+        75.3504638671875
+      ],
+      "text_sha256": "d735fd4163d652a69f53212d30f72a0e87ae474d4b57c76069fc30458803921e"
+    },
+    {
+      "block_id": "page-0280-block-0003",
+      "order": 3,
+      "text": "The pharmacokinetics of valproate are complex, following a three-compartmental \nmodel and showing protein-binding saturation. Plasma level monitoring is supposedly \nof more limited use than with lithium or carbamazepine.36 There may be a linear asso-\nciation between valproate serum levels and response in acute mania, with serum levels \n<55mg/L being no more effective than placebo and levels >94mg/L being associated \nwith the most robust response,37 although these data are weak.36 Note that this is the \ntop of the reference range (for epilepsy) that is quoted on laboratory forms. Optimal \nserum levels during the maintenance phase are unknown, but are likely to be at least \n50mg/L.38 Achieving therapeutic plasma levels rapidly using a loading dose regimen is \ngenerally well tolerated. Plasma levels can also be used to detect non-compliance or \ntoxicity.\n",
+      "bbox": [
+        48.0,
+        81.16046142578125,
+        422.8221130371094,
+        212.8804931640625
+      ],
+      "text_sha256": "07ea6b47d446e78c1d7e939cf7dfd369dbe65eec4b846f1a7c5b3da3aef5d643"
+    },
+    {
+      "block_id": "page-0280-block-0004",
+      "order": 4,
+      "text": "Adverse effects\n",
+      "bbox": [
+        48.0,
+        230.31549072265625,
+        127.8709945678711,
+        243.35049438476562
+      ],
+      "text_sha256": "2829b5953031aa8e8e992beffdca9c91044830ce03b830653e6ea31d5de93cfc"
+    },
+    {
+      "block_id": "page-0280-block-0005",
+      "order": 5,
+      "text": "Valproate can cause both gastric irritation and hyperammonaemia,39 both of which can \nlead to nausea. Lethargy and confusion can occasionally occur with starting doses \nabove 750mg/day. Weight gain can be significant,40 particularly when valproate is used \nin combination with clozapine. Valproate causes dose-related tremor in up to a quarter \nof patients.41 In the majority of these patients, it is intention/postural tremor that is \nproblematic, but a very small proportion develop parkinsonism associated with cogni-\ntive decline; these symptoms are reversible when valproate is discontinued.42\n",
+      "bbox": [
+        47.997196197509766,
+        249.16049194335938,
+        422.77880859375,
+        332.8804931640625
+      ],
+      "text_sha256": "81b8183c718c55357e0c40a7a724f53ccfc8fa068875ab7b8264c044c60e59de"
+    },
+    {
+      "block_id": "page-0280-block-0006",
+      "order": 6,
+      "text": "Hair loss (with curly regrowth) and peripheral oedema can occur, as can thrombocy-\ntopenia, leucopenia, red cell hypoplasia and pancreatitis.43 Valproate can cause hyper-\nandrogenism in women44 and has been linked with the development of polycystic \novaries; the evidence supporting this association is conflicting. Valproate is a major \nhuman teratogen (see section ‘Pregnancy’, Chapter 7). Valproate may very rarely cause \nfulminant hepatic failure. Young children receiving multiple antiseizure medications are \nmost at risk. Any patient with raised liver function tests (LFTs; common in early treat-\nment45) should be evaluated clinically and other markers of hepatic function such as \nalbumin and clotting time should be checked.\n",
+      "bbox": [
+        47.99737548828125,
+        333.1604919433594,
+        422.77764892578125,
+        440.8804931640625
+      ],
+      "text_sha256": "6b996b203e0d71eebca72dec538e2f3e606ab06d9a7dd9044108f57aa8c5ba35"
+    },
+    {
+      "block_id": "page-0280-block-0007",
+      "order": 7,
+      "text": "Many side effects of valproate are dose related (peak plasma-level related) and an \nincrease in frequency and severity when the plasma level is >100mg/L. The once daily \nChrono form of sodium valproate does not produce as high peak plasma levels as the \nconventional formulation, and so may be better tolerated.\n",
+      "bbox": [
+        48.002601623535156,
+        441.1604919433594,
+        422.8325500488281,
+        488.8804931640625
+      ],
+      "text_sha256": "e955bb91dd221f4f3015a920e7bf651dec41f79d9ec11cbcc1e526ab760cc587"
+    },
+    {
+      "block_id": "page-0280-block-0008",
+      "order": 8,
+      "text": "Valproate and other antiseizure medications have been associated with an increased \nrisk of suicidal behaviour,46 but this finding is not consistent across studies.47 Patients \nwith depression48 or who take another antiseizure medication that increases the risk of \ndeveloping depression may be a subgroup at greater risk.49\n",
+      "bbox": [
+        47.995208740234375,
+        489.1604919433594,
+        422.79833984375,
+        536.8804931640625
+      ],
+      "text_sha256": "01e3d3ba12889d8209451f325c8574fa91f4df01d964c9edaff83df9b2e63df1"
+    },
+    {
+      "block_id": "page-0280-block-0009",
+      "order": 9,
+      "text": "Note that valproate is eliminated mainly through the kidneys, partly in the form of \nketone bodies, and may give a false positive urine test for ketones.\n",
+      "bbox": [
+        48.0,
+        537.1604614257812,
+        422.74005126953125,
+        560.8804931640625
+      ],
+      "text_sha256": "4fe88ca0e896ca07e9b50b90ab03b55356fb5f9c463f09beca54594ac0c70b7a"
+    },
+    {
+      "block_id": "page-0280-block-0010",
+      "order": 10,
+      "text": "Pre-treatment tests\n",
+      "bbox": [
+        48.0,
+        578.3154907226562,
+        147.24200439453125,
+        591.3504638671875
+      ],
+      "text_sha256": "a284bcc2f76212b7a21827778e92eea80343b67c93f887728acec58a673cd4e3"
+    },
+    {
+      "block_id": "page-0280-block-0011",
+      "order": 11,
+      "text": "Baseline full blood count (FBC), LFTs and weight or BMI are recommended by NICE.\n",
+      "bbox": [
+        48.0,
+        597.1604614257812,
+        418.6600036621094,
+        608.8804931640625
+      ],
+      "text_sha256": "ce7dc93eddcc72adebc5f8afc99afbc34b14ffa222491fa6c5bf18ea1ae2b1aa"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

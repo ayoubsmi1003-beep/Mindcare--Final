@@ -1,0 +1,299 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0253",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 253,
+  "source_page_index": 252,
+  "source_page_display": 253,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "232    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nClozapine-induced gastrointestinal hypomotility (CIGH)\nConstipation is a common adverse effect of clozapine treatment with a prevalence of \nmore than 30%, three times that is seen with other antipsychotics.1 The mechanism of \naction is not completely understood but is thought to be a combination of the drug’s \nanticholinergic2,3 and antihistaminergic properties,4 which are further complicated by \nantagonism at 5-HT3 receptors.2,3,5 In addition, clozapine-induced sedation can result \nin a sedentary lifestyle,4 which is itself a risk factor for constipation. Clozapine causes \nconstipation by slowing transit time through the gut. Mean transit times are four times \nlonger than normal and 80% of clozapine patients show reduced transit time.6\nClozapine-induced constipation is much more common than blood dyscrasias, and \nmortality rates are also higher.4 When constipation is severe, the case fatality rate is \naround 20–30%.4,7,8 The most recent (and largest) study9 found an incidence of \n37/10,000 cases of severe hypomotility and 7/10,000 constipation-related death. Case \nfatality was 18%. Enhanced monitoring of CIGH is clearly needed to reduce the likeli-\nhood of constipation-related fatality.\nA gastrointestinal history and abdominal examination is recommended prior to \nstarting treatment and if the patient is constipated, clozapine should not be initiated \nuntil this has resolved.8 CIGH is most severe during the first four months of treatment,8 \nbut may occur at any time. Adopting the Rome III criteria10 at routine FBCs might be a \nsuccessful strategy to combat preventable deaths due to CIGH, although even this does \nnot guarantee identification of hypomotility.11\nOpinions differ on the relationship between clozapine dose and constipation, and \nbetween clozapine plasma level and constipation.8,12,13 However, deaths that have \noccurred as a result of CIGH had higher than average daily doses (mean 535mg/day).8,14 \nAt the time of death, median duration of clozapine treatment is 2.5 years.9 Older age, \nmale sex and higher daily doses have been proposed as possible risk factors for death \nbased on case series review (Table 1.41).14\nTable 1.41  Risk factors for developing clozapine-induced constipation8,15–18\nIncreasing age\nFemale sex\nAnticholinergic medication\nHigher clozapine dose/plasma level (consider the effect of interacting drugs or stopping smoking)\nHypercalcaemia\nGastrointestinal disease\nObesity\nDiaphoresis\nLow fibre diet\nPoor bowel habit\nDehydration (exacerbated by hypersalivation)\nDiabetes\nHypothyroidism\nParkinson’s disease\nMultiple sclerosis\n",
+  "raw_text_sha256": "901dc919c61068504fe446f27b091960a2dbe7401ecdd005b600132391e49d7b",
+  "coordinates_sha256": "b8bfde4520443ee49b0714748f9ff3439431cbd8d9dff5bdee5a1248cabcd119",
+  "block_sequence_sha256": "22f2df1874fc774f3064cf1bfbc248af854a3f1342115e20c0c0d2f35dfb5958",
+  "blocks": [
+    {
+      "block_id": "page-0253-block-0000",
+      "order": 0,
+      "text": "232    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "198a319292787c23c79bfa2a87f60ca23943f0b0bdaeab0a981df3eca269399f"
+    },
+    {
+      "block_id": "page-0253-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0253-block-0002",
+      "order": 2,
+      "text": "Clozapine-induced gastrointestinal hypomotility (CIGH)\n",
+      "bbox": [
+        68.88909912109375,
+        66.06448364257812,
+        354.1081237792969,
+        79.0994873046875
+      ],
+      "text_sha256": "536d46ca2d178cbcf2e583b82b048ab1b1753e56680979634ca2cbc9ddd72fe7"
+    },
+    {
+      "block_id": "page-0253-block-0003",
+      "order": 3,
+      "text": "Constipation is a common adverse effect of clozapine treatment with a prevalence of \nmore than 30%, three times that is seen with other antipsychotics.1 The mechanism of \naction is not completely understood but is thought to be a combination of the drug’s \nanticholinergic2,3 and antihistaminergic properties,4 which are further complicated by \nantagonism at 5-HT3 receptors.2,3,5 In addition, clozapine-induced sedation can result \nin a sedentary lifestyle,4 which is itself a risk factor for constipation. Clozapine causes \nconstipation by slowing transit time through the gut. Mean transit times are four times \nlonger than normal and 80% of clozapine patients show reduced transit time.6\n",
+      "bbox": [
+        61.88909912109375,
+        84.90948486328125,
+        436.7196350097656,
+        180.62948608398438
+      ],
+      "text_sha256": "223ba912a2da23f51acb0d8b92143d72cf6b9f40229c5b0b3efda8ad1795998d"
+    },
+    {
+      "block_id": "page-0253-block-0004",
+      "order": 4,
+      "text": "Clozapine-induced constipation is much more common than blood dyscrasias, and \nmortality rates are also higher.4 When constipation is severe, the case fatality rate is \naround 20–30%.4,7,8 The most recent (and largest) study9 found an incidence of \n37/10,000 cases of severe hypomotility and 7/10,000 constipation-related death. Case \nfatality was 18%. Enhanced monitoring of CIGH is clearly needed to reduce the likeli-\nhood of constipation-related fatality.\n",
+      "bbox": [
+        61.88909912109375,
+        180.90948486328125,
+        436.6791687011719,
+        252.62942504882812
+      ],
+      "text_sha256": "d66793d308cc7ae76d3635e871c3b7cc23e57e52dfefb4da002b441c5d3f2ccc"
+    },
+    {
+      "block_id": "page-0253-block-0005",
+      "order": 5,
+      "text": "A gastrointestinal history and abdominal examination is recommended prior to \nstarting treatment and if the patient is constipated, clozapine should not be initiated \nuntil this has resolved.8 CIGH is most severe during the first four months of treatment,8 \nbut may occur at any time. Adopting the Rome III criteria10 at routine FBCs might be a \nsuccessful strategy to combat preventable deaths due to CIGH, although even this does \nnot guarantee identification of hypomotility.11\n",
+      "bbox": [
+        61.88911437988281,
+        252.909423828125,
+        436.6991882324219,
+        324.6294250488281
+      ],
+      "text_sha256": "441024c4372cd8cb7a493614c5f881e56d3931b76775daff401338328f6e84ff"
+    },
+    {
+      "block_id": "page-0253-block-0006",
+      "order": 6,
+      "text": "Opinions differ on the relationship between clozapine dose and constipation, and \nbetween clozapine plasma level and constipation.8,12,13 However, deaths that have \noccurred as a result of CIGH had higher than average daily doses (mean 535mg/day).8,14 \nAt the time of death, median duration of clozapine treatment is 2.5 years.9 Older age, \nmale sex and higher daily doses have been proposed as possible risk factors for death \nbased on case series review (Table 1.41).14\n",
+      "bbox": [
+        61.88499450683594,
+        324.909423828125,
+        436.6695251464844,
+        396.6294250488281
+      ],
+      "text_sha256": "0701bcf0d4554970e21654012dd52d28507249240f9a545d1292552c28ead482"
+    },
+    {
+      "block_id": "page-0253-block-0007",
+      "order": 7,
+      "text": "Table 1.41  Risk factors for developing clozapine-induced constipation8,15–18\n",
+      "bbox": [
+        67.88980102539062,
+        414.5105895996094,
+        308.0771789550781,
+        423.3981018066406
+      ],
+      "text_sha256": "21c04555df8d130b9fbe0bc0dfcfbfb06c752e84ca03462a5b6b41f785b31f2f"
+    },
+    {
+      "block_id": "page-0253-block-0008",
+      "order": 8,
+      "text": "Increasing age\n",
+      "bbox": [
+        61.889801025390625,
+        434.925537109375,
+        107.59480285644531,
+        443.6330261230469
+      ],
+      "text_sha256": "980417e16858e8ab8bb85240e4201707a0bcc275e342a857ab7a35c417cc2aa9"
+    },
+    {
+      "block_id": "page-0253-block-0009",
+      "order": 9,
+      "text": "Female sex\n",
+      "bbox": [
+        61.889801025390625,
+        451.55303955078125,
+        96.46480560302734,
+        460.2605285644531
+      ],
+      "text_sha256": "6f9add6a2f7b86518483c7eea0e7db5d764ee7687da4612b4bd9776e03a497a3"
+    },
+    {
+      "block_id": "page-0253-block-0010",
+      "order": 10,
+      "text": "Anticholinergic medication\n",
+      "bbox": [
+        61.889801025390625,
+        466.17803955078125,
+        147.30726623535156,
+        474.8855285644531
+      ],
+      "text_sha256": "396af6ddd2b9aae921b3e7447f3e26e6c1b1777e1a74bf9acf08477b4cace40d"
+    },
+    {
+      "block_id": "page-0253-block-0011",
+      "order": 11,
+      "text": "Higher clozapine dose/plasma level (consider the effect of interacting drugs or stopping smoking)\n",
+      "bbox": [
+        61.889801025390625,
+        480.80303955078125,
+        371.8049621582031,
+        489.5105285644531
+      ],
+      "text_sha256": "266d408175d639c5f525f65c3dec4f4cb133a35f44d7b3314a367c801346be7c"
+    },
+    {
+      "block_id": "page-0253-block-0012",
+      "order": 12,
+      "text": "Hypercalcaemia\n",
+      "bbox": [
+        61.889801025390625,
+        495.42803955078125,
+        111.74229431152344,
+        504.1355285644531
+      ],
+      "text_sha256": "073f9ff26f8466ada1f41096b27a5bc2e24cd6ecd0e0a1c43379233ab125fec8"
+    },
+    {
+      "block_id": "page-0253-block-0013",
+      "order": 13,
+      "text": "Gastrointestinal disease\n",
+      "bbox": [
+        61.889801025390625,
+        510.0530090332031,
+        136.7547607421875,
+        518.760498046875
+      ],
+      "text_sha256": "910d715940a76d445e66c3118a1480c2255d4d90424e2129ae493c0f0743e189"
+    },
+    {
+      "block_id": "page-0253-block-0014",
+      "order": 14,
+      "text": "Obesity\n",
+      "bbox": [
+        61.889801025390625,
+        524.677978515625,
+        85.63480377197266,
+        533.385498046875
+      ],
+      "text_sha256": "8cd5cf14e2c8302c200163933f83c2389d990b19b2214d8fadc4943d988f6e99"
+    },
+    {
+      "block_id": "page-0253-block-0015",
+      "order": 15,
+      "text": "Diaphoresis\n",
+      "bbox": [
+        61.889801025390625,
+        539.302978515625,
+        98.42980194091797,
+        548.010498046875
+      ],
+      "text_sha256": "5da03a7a97bf126455052dcd2f666e58055904a9bf96f3442fc643f7d3bb001e"
+    },
+    {
+      "block_id": "page-0253-block-0016",
+      "order": 16,
+      "text": "Low fibre diet\n",
+      "bbox": [
+        61.889801025390625,
+        553.927978515625,
+        105.92228698730469,
+        562.635498046875
+      ],
+      "text_sha256": "a8195d9eae6580e19fab64eda0a4bea2b513cf3538b9dab0bd3f07a28f7f0ee7"
+    },
+    {
+      "block_id": "page-0253-block-0017",
+      "order": 17,
+      "text": "Poor bowel habit\n",
+      "bbox": [
+        61.889801025390625,
+        568.552978515625,
+        116.48977661132812,
+        577.260498046875
+      ],
+      "text_sha256": "625168acdfb62280f6ddfda77310f74f0bbf9df6b02e4d8624d8d995386e683f"
+    },
+    {
+      "block_id": "page-0253-block-0018",
+      "order": 18,
+      "text": "Dehydration (exacerbated by hypersalivation)\n",
+      "bbox": [
+        61.889801025390625,
+        583.177978515625,
+        205.22979736328125,
+        591.885498046875
+      ],
+      "text_sha256": "e73b7d0cd0dfb9ddc02004f90ed596090e8dff3921bb27b0b76ecfc02d910263"
+    },
+    {
+      "block_id": "page-0253-block-0019",
+      "order": 19,
+      "text": "Diabetes\n",
+      "bbox": [
+        61.889801025390625,
+        597.802978515625,
+        89.39230346679688,
+        606.510498046875
+      ],
+      "text_sha256": "7fa2a5102440880f496621d868154ff608e092e99983f5e6109f9407c59aaef0"
+    },
+    {
+      "block_id": "page-0253-block-0020",
+      "order": 20,
+      "text": "Hypothyroidism\n",
+      "bbox": [
+        61.889801025390625,
+        612.427978515625,
+        111.75727844238281,
+        621.135498046875
+      ],
+      "text_sha256": "c66ebfb1fbe6bc9b86614c57ba9e7c701b32cee521058ee658aa433e67f9dbc5"
+    },
+    {
+      "block_id": "page-0253-block-0021",
+      "order": 21,
+      "text": "Parkinson’s disease\n",
+      "bbox": [
+        61.889801025390625,
+        627.052978515625,
+        121.90478515625,
+        635.760498046875
+      ],
+      "text_sha256": "bf7012fbc52a9f270ef5867c818ee317afa3f53d9942ac5cd0d8d32b4d487fe7"
+    },
+    {
+      "block_id": "page-0253-block-0022",
+      "order": 22,
+      "text": "Multiple sclerosis\n",
+      "bbox": [
+        61.889801025390625,
+        641.677978515625,
+        115.91979217529297,
+        650.385498046875
+      ],
+      "text_sha256": "3041c5f850991b0c8426d174f645a8baecda5fe9f60fa6542727ef40442d125e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

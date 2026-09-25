@@ -1,0 +1,359 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0109",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 109,
+  "source_page_index": 108,
+  "source_page_display": 109,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "88    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\n■\n■Risperidone depot is not an esterified form of the parent drug. It contains risperidone \ncoated in polymer to form microspheres. These microspheres have to be suspended in \nan aqueous base immediately before use.\n■\n■The injection must be stored in a fridge (consider the practicalities for community \nstaff).\n■\n■It is available in doses of 25mg, 37.5mg and 50mg. The whole vial must be used \n(because of the nature of the suspension). This means that there is limited flexibility \nin dosing.\n■\n■A test dose is not required or sensible. (Testing tolerability with oral risperidone is \ndesirable but not always practical.)\n■\n■It takes 3–4 weeks for the first injection to produce therapeutic plasma levels. Patients \nmust be maintained on a full dose of their previous antipsychotic for at least 3 weeks \nafter the administration of the first risperidone injection. Oral antipsychotic cover is \nsometimes required for longer (6–8 weeks). If the patient is not already receiving an \noral antipsychotic, oral risperidone should be prescribed. (See Table 1.10 for advice \non switching from depots.) Patients who refuse oral treatment and are acutely ill \nshould not be given RLAI because of the long delay in drug release.\n■\n■Risperidone depot must be administered every 2 weeks. The Product Licence does not \nallow longer intervals between doses. There is little flexibility to negotiate with \npatients about the frequency of administration, although monthly injections may be \neffective.26\n■\n■The most effective way of predicting response to RLAI is to establish dose and \nresponse with oral risperidone.\n■\n■Risperidone injection is not considered suitable for patients with treatment refractory \nschizophrenia, although there are studies showing positive effects.27,28\nFor guidance on switching to risperidone long-acting injection, see Table 1.10.\nTable 1.10  Switching to risperidone long-acting injection (RLAI)\nSwitching from\nRecommended method of switching\nComments\nNo treatment (new \npatient or recently \nnon-compliant)\nStart risperidone oral at 2mg/day and \ntitrate to effective dose. If tolerated, \nprescribe equivalent dose of RLAI\nContinue with oral risperidone for at \nleast 3 weeks then taper over 1–2 weeks. \nBe prepared to continue oral risperidone \nfor longer\nUse oral risperidone before giving injection to \nassure good tolerability\nThose stabilised on 2mg/day start on \n25mg/2 weeks\nThose on higher doses, start on \n37.5mg/2 weeks and be prepared to use \n50mg/2 weeks\n(Manufacturer advice may differ from this – \nour guidance is based on numerous studies of \ndose-related outcome and on comparative \nplasma levels)\n",
+  "raw_text_sha256": "3601b848a602de6211dfc3fe6aaffa6937e828d2f075cf4f18ff7acb57285fc3",
+  "coordinates_sha256": "fdb7494853a87b0612068c2d2247175b3a4e6a427e13447c14dd16ae0ca38477",
+  "block_sequence_sha256": "2a6b1071cd4d22096b69753d466740ad3b6443252d999ce72277351ef9360618",
+  "blocks": [
+    {
+      "block_id": "page-0109-block-0000",
+      "order": 0,
+      "text": "88    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "0d287ca2c50351768d72a72c179ed1c857b8af79715dcf893b74869d5d769a42"
+    },
+    {
+      "block_id": "page-0109-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0109-block-0002",
+      "order": 2,
+      "text": "■\n■Risperidone depot is not an esterified form of the parent drug. It contains risperidone \n",
+      "bbox": [
+        61.889198303222656,
+        62.54931640625,
+        436.7193298339844,
+        74.26931762695312
+      ],
+      "text_sha256": "ff7f9b0315e3266b0a2163c97719f88799e4dca9bebf5de96cfbdd5d10836053"
+    },
+    {
+      "block_id": "page-0109-block-0003",
+      "order": 3,
+      "text": "coated in polymer to form microspheres. These microspheres have to be suspended in \nan aqueous base immediately before use.\n",
+      "bbox": [
+        70.88929748535156,
+        74.54931640625,
+        436.6893005371094,
+        98.26931762695312
+      ],
+      "text_sha256": "a866846ed47fce9dfad220a257e3934fcd4c0c0c2654c14d330a977f68f9024e"
+    },
+    {
+      "block_id": "page-0109-block-0004",
+      "order": 4,
+      "text": "■\n■The injection must be stored in a fridge (consider the practicalities for community \n",
+      "bbox": [
+        61.889198303222656,
+        98.54931640625,
+        436.6992492675781,
+        110.26931762695312
+      ],
+      "text_sha256": "f27c0742dba4918b9b31cfd63adbf674421fb56a07d96e84126506da7ddab178"
+    },
+    {
+      "block_id": "page-0109-block-0005",
+      "order": 5,
+      "text": "staff).\n",
+      "bbox": [
+        70.88929748535156,
+        110.54931640625,
+        95.87930297851562,
+        122.26931762695312
+      ],
+      "text_sha256": "9d5b08a344a9650d1da5e851cf8012227970e85b1b60fd4e68e640c809c910f1"
+    },
+    {
+      "block_id": "page-0109-block-0006",
+      "order": 6,
+      "text": "■\n■It is available in doses of 25mg, 37.5mg and 50mg. The whole vial must be used \n",
+      "bbox": [
+        61.889198303222656,
+        122.54931640625,
+        436.7193908691406,
+        134.26931762695312
+      ],
+      "text_sha256": "99381bf92c1547691d0d5dd065a4e8f8e5e1e8b5a98c9504913d4803de7eae98"
+    },
+    {
+      "block_id": "page-0109-block-0007",
+      "order": 7,
+      "text": "(because of the nature of the suspension). This means that there is limited flexibility \nin dosing.\n",
+      "bbox": [
+        70.88929748535156,
+        134.54931640625,
+        436.6292419433594,
+        158.26931762695312
+      ],
+      "text_sha256": "2c5ca1b0ae98900564cb15eb4666b7758cab209a8130886c37067fd40be5ed68"
+    },
+    {
+      "block_id": "page-0109-block-0008",
+      "order": 8,
+      "text": "■\n■A test dose is not required or sensible. (Testing tolerability with oral risperidone is \n",
+      "bbox": [
+        61.889198303222656,
+        158.54931640625,
+        436.7093200683594,
+        170.26931762695312
+      ],
+      "text_sha256": "0bf57083d65f65bea175181363d200a4e54d209a682e536160f3e7c5ec69ee5b"
+    },
+    {
+      "block_id": "page-0109-block-0009",
+      "order": 9,
+      "text": "desirable but not always practical.)\n",
+      "bbox": [
+        70.88929748535156,
+        170.54931640625,
+        222.02928161621094,
+        182.26931762695312
+      ],
+      "text_sha256": "f9aa53c8e26c0755b35d87dbd05ffbd7a7f14705465e18defa3485faa4941e46"
+    },
+    {
+      "block_id": "page-0109-block-0010",
+      "order": 10,
+      "text": "■\n■It takes 3–4 weeks for the first injection to produce therapeutic plasma levels. Patients \n",
+      "bbox": [
+        61.889198303222656,
+        182.54931640625,
+        436.6493225097656,
+        194.26931762695312
+      ],
+      "text_sha256": "3c7ec470052d8d891640bf5080954036c0074863b5461e191359e96e01952b7e"
+    },
+    {
+      "block_id": "page-0109-block-0011",
+      "order": 11,
+      "text": "must be maintained on a full dose of their previous antipsychotic for at least 3 weeks \nafter the administration of the first risperidone injection. Oral antipsychotic cover is \nsometimes required for longer (6–8 weeks). If the patient is not already receiving an \noral antipsychotic, oral risperidone should be prescribed. (See Table 1.10 for advice \non switching from depots.) Patients who refuse oral treatment and are acutely ill \nshould not be given RLAI because of the long delay in drug release.\n",
+      "bbox": [
+        70.88929748535156,
+        194.54931640625,
+        436.6893005371094,
+        266.2693176269531
+      ],
+      "text_sha256": "bb902110b80a43e8993244fc33ae86c5f6070368ff7dd0c49fa241303b0bd400"
+    },
+    {
+      "block_id": "page-0109-block-0012",
+      "order": 12,
+      "text": "■\n■Risperidone depot must be administered every 2 weeks. The Product Licence does not \n",
+      "bbox": [
+        61.889198303222656,
+        266.54931640625,
+        436.7093811035156,
+        278.2693176269531
+      ],
+      "text_sha256": "8c2d4a50f29a2dd19f1a316af930aec1db39f8f0b184f2dbdc56985b1696583b"
+    },
+    {
+      "block_id": "page-0109-block-0013",
+      "order": 13,
+      "text": "allow longer intervals between doses. There is little flexibility to negotiate with \npatients about the frequency of administration, although monthly injections may be \neffective.26\n",
+      "bbox": [
+        70.88929748535156,
+        278.54931640625,
+        436.6592712402344,
+        314.2693176269531
+      ],
+      "text_sha256": "c5e872c3317adfd67876a504b2033b97718beb94f071af4a42f7b7571df0ec07"
+    },
+    {
+      "block_id": "page-0109-block-0014",
+      "order": 14,
+      "text": "■\n■The most effective way of predicting response to RLAI is to establish dose and \n",
+      "bbox": [
+        61.889198303222656,
+        314.54931640625,
+        436.6693420410156,
+        326.2693176269531
+      ],
+      "text_sha256": "9ef6ec2791fd6b1f9e470639e820da4f120c745eb8b910d4450ca59a8bd537fa"
+    },
+    {
+      "block_id": "page-0109-block-0015",
+      "order": 15,
+      "text": "response with oral risperidone.\n",
+      "bbox": [
+        70.88929748535156,
+        326.54931640625,
+        204.26927185058594,
+        338.2693176269531
+      ],
+      "text_sha256": "acb39ae60e74de49164603b816a03e37e13e4bc6a9f160b9c8438e2720ab4651"
+    },
+    {
+      "block_id": "page-0109-block-0016",
+      "order": 16,
+      "text": "■\n■Risperidone injection is not considered suitable for patients with treatment refractory \n",
+      "bbox": [
+        61.889198303222656,
+        338.54931640625,
+        436.6891784667969,
+        350.2693176269531
+      ],
+      "text_sha256": "ca26e4433033362eafabc6c2926c315933204da76c6fa0504f4d0c1c19a7e442"
+    },
+    {
+      "block_id": "page-0109-block-0017",
+      "order": 17,
+      "text": "schizophrenia, although there are studies showing positive effects.27,28\n",
+      "bbox": [
+        70.88929748535156,
+        350.54931640625,
+        369.0431823730469,
+        362.2693176269531
+      ],
+      "text_sha256": "b5f5c2d3949fff0875c185f7941fb4ae0dec5b32fe7a0295123692ec08a54532"
+    },
+    {
+      "block_id": "page-0109-block-0018",
+      "order": 18,
+      "text": "For guidance on switching to risperidone long-acting injection, see Table 1.10.\n",
+      "bbox": [
+        71.88929748535156,
+        368.54931640625,
+        408.7292785644531,
+        380.2693176269531
+      ],
+      "text_sha256": "a4f81b19575d3e0b144b990d662717ffa107d465013b3daabc185d139b73a76b"
+    },
+    {
+      "block_id": "page-0109-block-0019",
+      "order": 19,
+      "text": "Table 1.10  Switching to risperidone long-acting injection (RLAI)\n",
+      "bbox": [
+        67.88929748535156,
+        409.05010986328125,
+        272.1067810058594,
+        417.9376220703125
+      ],
+      "text_sha256": "f9aacc8fd2c9fd82bd98d14f02a7881817645f34bfe0175a96884a8f38f165b3"
+    },
+    {
+      "block_id": "page-0109-block-0020",
+      "order": 20,
+      "text": "Switching from\nRecommended method of switching\nComments\n",
+      "bbox": [
+        61.88929748535156,
+        429.28509521484375,
+        319.8892517089844,
+        438.172607421875
+      ],
+      "text_sha256": "e2840bcf083ed477381d07448932708818c7bf2e0d7862d4edfb5b226a392c81"
+    },
+    {
+      "block_id": "page-0109-block-0021",
+      "order": 21,
+      "text": "No treatment (new \npatient or recently \nnon-compliant)\n",
+      "bbox": [
+        61.88929748535156,
+        446.0625915527344,
+        129.27682495117188,
+        474.9450988769531
+      ],
+      "text_sha256": "2125158a85b4e56b88d6489643543f563e1712385970078be8a093926aaf4493"
+    },
+    {
+      "block_id": "page-0109-block-0022",
+      "order": 22,
+      "text": "Start risperidone oral at 2mg/day and \ntitrate to effective dose. If tolerated, \nprescribe equivalent dose of RLAI\n",
+      "bbox": [
+        142.88929748535156,
+        446.235107421875,
+        264.1567687988281,
+        474.9375915527344
+      ],
+      "text_sha256": "fd9b3847361d5d3bcbeba0292a19d704999f434eed1238cd25ff041b198be33f"
+    },
+    {
+      "block_id": "page-0109-block-0023",
+      "order": 23,
+      "text": "Continue with oral risperidone for at \nleast 3 weeks then taper over 1–2 weeks. \nBe prepared to continue oral risperidone \nfor longer\n",
+      "bbox": [
+        142.88929748535156,
+        479.22760009765625,
+        277.4992980957031,
+        517.9276123046875
+      ],
+      "text_sha256": "60175346a4615ee63b4f3d5c77465c3cc3ad746e8b3c9d04a758618d7dea7b68"
+    },
+    {
+      "block_id": "page-0109-block-0024",
+      "order": 24,
+      "text": "Use oral risperidone before giving injection to \nassure good tolerability\n",
+      "bbox": [
+        282.3892822265625,
+        446.2200927734375,
+        429.7794494628906,
+        464.9250793457031
+      ],
+      "text_sha256": "c03bbe7b3f980a3f8e543798679f352b6d3d7152bfdb0277fa0f1a2970d31bd0"
+    },
+    {
+      "block_id": "page-0109-block-0025",
+      "order": 25,
+      "text": "Those stabilised on 2mg/day start on \n25mg/2 weeks\n",
+      "bbox": [
+        282.3892822265625,
+        469.215087890625,
+        401.5869445800781,
+        487.9200744628906
+      ],
+      "text_sha256": "aca438bf4c076f4536bbf47889bb9ae363fe178b41ef2744bb3c49ccbd858da2"
+    },
+    {
+      "block_id": "page-0109-block-0026",
+      "order": 26,
+      "text": "Those on higher doses, start on \n37.5mg/2 weeks and be prepared to use \n50mg/2 weeks\n",
+      "bbox": [
+        282.3892822265625,
+        492.2100830078125,
+        414.2543640136719,
+        520.91259765625
+      ],
+      "text_sha256": "45cba692fd484a23b9a22522b4ddcf144f03e7a4a74699a64ecf408048232103"
+    },
+    {
+      "block_id": "page-0109-block-0027",
+      "order": 27,
+      "text": "(Manufacturer advice may differ from this – \nour guidance is based on numerous studies of \ndose-related outcome and on comparative \nplasma levels)\n",
+      "bbox": [
+        282.3892822265625,
+        525.2025146484375,
+        431.4745178222656,
+        563.902587890625
+      ],
+      "text_sha256": "98a67011e397cbd5fea8a94da502f10a4657f5959f5abe59a79fdf39faf1238f"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

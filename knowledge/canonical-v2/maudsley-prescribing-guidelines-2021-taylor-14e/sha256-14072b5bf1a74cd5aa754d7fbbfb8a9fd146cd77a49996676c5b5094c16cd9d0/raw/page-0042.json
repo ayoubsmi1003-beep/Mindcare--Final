@@ -1,0 +1,95 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0042",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 42,
+  "source_page_index": 41,
+  "source_page_display": 42,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    21\nCHAPTER 1\nthe interpretation of such real-world findings is hindered by the issue of confounding \nby indication,23 there are perhaps several plausible explanations. It may be that combin-\ning antipsychotic medications with different receptor profiles can be more effective and \nlead to better therapeutic efficacy and/or a lower side-effect burden and therefore better \noutcomes. It may also be that co-prescribing two antipsychotic medications improves \nmedication adherence in that it increases the likelihood that a patient may use at least \none of them.22 A more complicated and speculative explanation relates to the finding \nthat, in clinical practice, clozapine and LAI antipsychotic preparations appear to be the \nmost effective monotherapies for relapse prevention in schizophrenia.24 Thus, adding a \nsecond antipsychotic medication to clozapine or an LAI antipsychotic medication in an \nattempt to mitigate metabolic side effects (e.g. by adding aripiprazole) or manage symp-\ntoms of agitation, anxiety or sleep disturbance (e.g. by adding olanzapine or quetia-\npine) might enhance a patient’s engagement in their treatment and improve adherence \nto the effective antipsychotic treatment that has been augmented.\nAdverse effects\nEvidence for possible harm with combined antipsychotic medications is perhaps more \nconvincing. Clinically significant side effects have been associated with combined antip-\nsychotic medications, which may partly reflect that such a regimen is commonly a high-\ndose prescription.8,25 There are reports of an increased prevalence and severity of \nEPS,26,27 increased metabolic side effects and diabetes,20,28,29 sexual dysfunction,30 an \nincreased risk of hip fracture,31 paralytic ileus,32 grand mal seizures,33 prolonged QTc34 \nand arrhythmias.13 Switching from antipsychotic polypharmacy to monotherapy has \nbeen shown to lead to worthwhile improvements in cognitive functioning.19\nThe evidence relating to an increased mortality with a continuing antipsychotic polyp-\nharmacy regimen is inconsistent. Two large case–control studies and a database study35–37 \nfound no increased mortality in patients with schizophrenia receiving antipsychotic poly-\npharmacy, compared with antipsychotic monotherapy. However, a 10-year prospective \nstudy of a cohort of 88 patients with schizophrenia reported that receiving more than one \nantipsychotic medication concurrently was associated with substantially increased mor-\ntality.17,38 These investigators explored the possibility that the use of combined antipsy-\nchotic medications might be a proxy for greater severity/increased refractoriness of \npsychiatric illness but found no association between mortality and any measured index of \nillness severity, although these measures focussed on negative symptoms and cognitive \ndeficits. Furthermore, analysis of data from a large anonymised mental healthcare data-\nbase (2007–2014) of 10,945 adult patients with serious mental illness who had been \nprescribed a single antipsychotic or polypharmacy for six months or more, revealed a \nweak association between regular, long-term antipsychotic polypharmacy and all-cause \nmortality and natural causes of death.39 However, the authors concluded that the evidence \nfor the association was limited, even after controlling for the effect of dose. Another study, \ninvolving the follow-up of 99 patients with schizophrenia over a 25-year period, found \nthat those prescribed three antipsychotics simultaneously were twice as likely to die as \nthose who had been prescribed only one.40 These authors also considered the possibility \nof indication bias influencing the findings, speculating that combined antipsychotic medi-\ncation might be more likely to be prescribed for the most severe schizophrenia.\n",
+  "raw_text_sha256": "573b1930180d01c94d2243367c7d753041bba247fec45a5cbf0f37628a8bdc89",
+  "coordinates_sha256": "520aae24916e58c3899386d0e71547415b871a796493350a54a097048c871011",
+  "block_sequence_sha256": "e4a4529f3988b0d50dfbc3c58282c27f6228c48d05bbde1f8f3fd37e33adcfce",
+  "blocks": [
+    {
+      "block_id": "page-0042-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    21\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "98d7e9efcce59dd31791249c1090e67e8d85440331709be0d74e1cc679467571"
+    },
+    {
+      "block_id": "page-0042-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0042-block-0002",
+      "order": 2,
+      "text": "the interpretation of such real-world findings is hindered by the issue of confounding \nby indication,23 there are perhaps several plausible explanations. It may be that combin-\ning antipsychotic medications with different receptor profiles can be more effective and \nlead to better therapeutic efficacy and/or a lower side-effect burden and therefore better \noutcomes. It may also be that co-prescribing two antipsychotic medications improves \nmedication adherence in that it increases the likelihood that a patient may use at least \none of them.22 A more complicated and speculative explanation relates to the finding \nthat, in clinical practice, clozapine and LAI antipsychotic preparations appear to be the \nmost effective monotherapies for relapse prevention in schizophrenia.24 Thus, adding a \nsecond antipsychotic medication to clozapine or an LAI antipsychotic medication in an \nattempt to mitigate metabolic side effects (e.g. by adding aripiprazole) or manage symp-\ntoms of agitation, anxiety or sleep disturbance (e.g. by adding olanzapine or quetia-\npine) might enhance a patient’s engagement in their treatment and improve adherence \nto the effective antipsychotic treatment that has been augmented.\n",
+      "bbox": [
+        47.99650573730469,
+        62.54931640625,
+        422.8200988769531,
+        230.26931762695312
+      ],
+      "text_sha256": "38dd597d4492ce5a7a99fddd395c5151ccc262f9a7d523cbd61e200ac7e0eb0d"
+    },
+    {
+      "block_id": "page-0042-block-0003",
+      "order": 3,
+      "text": "Adverse effects\n",
+      "bbox": [
+        47.99909973144531,
+        247.70431518554688,
+        127.8701171875,
+        260.73931884765625
+      ],
+      "text_sha256": "2829b5953031aa8e8e992beffdca9c91044830ce03b830653e6ea31d5de93cfc"
+    },
+    {
+      "block_id": "page-0042-block-0004",
+      "order": 4,
+      "text": "Evidence for possible harm with combined antipsychotic medications is perhaps more \nconvincing. Clinically significant side effects have been associated with combined antip-\nsychotic medications, which may partly reflect that such a regimen is commonly a high-\ndose prescription.8,25 There are reports of an increased prevalence and severity of \nEPS,26,27 increased metabolic side effects and diabetes,20,28,29 sexual dysfunction,30 an \nincreased risk of hip fracture,31 paralytic ileus,32 grand mal seizures,33 prolonged QTc34 \nand arrhythmias.13 Switching from antipsychotic polypharmacy to monotherapy has \nbeen shown to lead to worthwhile improvements in cognitive functioning.19\n",
+      "bbox": [
+        47.99510955810547,
+        266.54931640625,
+        422.7831726074219,
+        362.2693176269531
+      ],
+      "text_sha256": "f53150ea19dba58de5212aeaef936c71f344db0ae7ac103c2e7a5413dac4df2c"
+    },
+    {
+      "block_id": "page-0042-block-0005",
+      "order": 5,
+      "text": "The evidence relating to an increased mortality with a continuing antipsychotic polyp-\nharmacy regimen is inconsistent. Two large case–control studies and a database study35–37 \nfound no increased mortality in patients with schizophrenia receiving antipsychotic poly-\npharmacy, compared with antipsychotic monotherapy. However, a 10-year prospective \nstudy of a cohort of 88 patients with schizophrenia reported that receiving more than one \nantipsychotic medication concurrently was associated with substantially increased mor-\ntality.17,38 These investigators explored the possibility that the use of combined antipsy-\nchotic medications might be a proxy for greater severity/increased refractoriness of \npsychiatric illness but found no association between mortality and any measured index of \nillness severity, although these measures focussed on negative symptoms and cognitive \ndeficits. Furthermore, analysis of data from a large anonymised mental healthcare data-\nbase (2007–2014) of 10,945 adult patients with serious mental illness who had been \nprescribed a single antipsychotic or polypharmacy for six months or more, revealed a \nweak association between regular, long-term antipsychotic polypharmacy and all-cause \nmortality and natural causes of death.39 However, the authors concluded that the evidence \nfor the association was limited, even after controlling for the effect of dose. Another study, \ninvolving the follow-up of 99 patients with schizophrenia over a 25-year period, found \nthat those prescribed three antipsychotics simultaneously were twice as likely to die as \nthose who had been prescribed only one.40 These authors also considered the possibility \nof indication bias influencing the findings, speculating that combined antipsychotic medi-\ncation might be more likely to be prescribed for the most severe schizophrenia.\n",
+      "bbox": [
+        47.9949951171875,
+        362.54931640625,
+        422.8222351074219,
+        614.2693481445312
+      ],
+      "text_sha256": "4e1b79f100e20e64a5c5ee45b893ae8f5b5f12ad5ad2f7261abacbedbea68a42"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

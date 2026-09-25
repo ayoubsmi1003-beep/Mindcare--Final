@@ -1,0 +1,275 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0297",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 297,
+  "source_page_index": 296,
+  "source_page_display": 297,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "276    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  2\nReferences\n\t 1.\t MDedge Psychiatry. Abilify Maintena OK’d by FDA for adults with bipolar I disorder. 2017; https://www.mdedge.com/psychiatry/arti \ncle/143846/bipolar-disorder/abilify-maintena-okd-fda-adults-bipolar-i-disorder?sso=true.\n\t 2.\t Keramatian K, et al. Long-acting injectable second-generation/atypical antipsychotics for the management of bipolar disorder: a systematic \nreview. CNS Drugs 2019; 33:431–456.\n\t 3.\t Pacchiarotti I, et al. Long-acting injectable antipsychotics (LAIs) for maintenance treatment of bipolar and schizoaffective disorders: a sys-\ntematic review. Eur Neuropsychopharmacol 2019; 29:457–470.\n\t 4.\t Prajapati AR, et al. Second-generation antipsychotic long-acting injections in bipolar disorder: systematic review and meta-analysis. Bipolar \nDisorders 2018; 20:687–696.\n\t 5.\t Esparon J, et al. Comparison of the prophylactic action of flupenthixol with placebo in lithium treated manic-depressive patients. Br J \nPsychiatry 1986; 148:723–725.\n\t 6.\t Yatham L, et al. Randomised trial of oral vs. injectable antipsychotics in bipolar disorder. Presented at the 6th International Conference on \nBipolar Disorder: June 16–18 2005, Pittsburgh, PA; 2005.\n\t 7.\t Berwaerts J, et al. A randomized, placebo- and active-controlled study of paliperidone extended-release as maintenance treatment in patients \nwith bipolar I disorder after an acute manic or mixed episode. J Affect Disord 2012; 138:247–258.\n\t 8.\t Buoli M, et al. Paliperidone palmitate depot in the long-term treatment of psychotic bipolar disorder: a case series. Clin Neuropharmacol \n2015; 38:209–211.\n\t 9.\t Ahlfors UG, et al. Flupenthixol decanoate in recurrent manic-depressive illness. A comparison with lithium. Acta Psychiatr Scand 1981; \n64:226–237.\n\t10.\t Macfadden W, et al. A randomized, double-blind, placebo-controlled study of maintenance treatment with adjunctive risperidone long-acting \ntherapy in patients with bipolar I disorder who relapse frequently. Bipolar Disord 2009; 11:827–839.\n\t11.\t Quiroz JA, et al. Risperidone long-acting injectable monotherapy in the maintenance treatment of bipolar I disorder. Biol Psychiatry 2010; \n68:156–162.\n\t12.\t Vieta E, et al. A randomized, double-blind, placebo-controlled trial to assess prevention of mood episodes with risperidone long-acting inject-\nable in patients with bipolar I disorder. Eur Neuropsychopharmacol 2012; 22:825–835.\n\t13.\t Calabrese JR, et al. Efficacy and safety of aripiprazole once-monthly in the maintenance treatment of bipolar I disorder: a double-blind, \nplacebo-controlled, 52-week randomized withdrawal study. J Clin Psychiatry 2017; 78:324–331.\n\t14.\t Calabrese JR, et al. Aripiprazole once-monthly as maintenance treatment for bipolar I disorder: a 52-week, multicenter, open-label study. Int \nJ Bipolar Disord 2018; 6:14.\n\t15.\t Bond DJ, et al. Depot antipsychotic medications in bipolar disorder: a review of the literature. Acta Psychiatr Scand Suppl 2007; 116: \n3–16.\n\t16.\t Gigante AD, et al. Long-acting injectable antipsychotics for the maintenance treatment of bipolar disorder. CNS Drugs 2012; 26:403–420.\n\t17.\t Goikolea JM, et al. Lower rate of depressive switch following antimanic treatment with second-generation antipsychotics versus haloperidol. \nJ Affect Disord 2013; 144:191–198.\n\t18.\t Wu CS, et al. Comparative effectiveness of long-acting injectable risperidone vs. long-acting injectable first-generation antipsychotics in \nbipolar disorder. J Affect Disord 2016; 197:189–195.\n",
+  "raw_text_sha256": "a8b39b340a6b270fccc5a9f91c89f712b0a98382cd081b216db2de385da39e56",
+  "coordinates_sha256": "0d78d15770f241db42e52929ad7c01d42690407277c7785e3eb01efe7d948c2e",
+  "block_sequence_sha256": "f50b09ace1eb01c4edab017b01e5c2d591b9e6c705f3266127c1f0c9f3a83fdd",
+  "blocks": [
+    {
+      "block_id": "page-0297-block-0000",
+      "order": 0,
+      "text": "276    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "b04ed36f8e8d73b51b9f2b00acf22ace41e05d36dfdfba5c64eac38af9fdaf31"
+    },
+    {
+      "block_id": "page-0297-block-0001",
+      "order": 1,
+      "text": "CHAPTER  2\n",
+      "bbox": [
+        19.520000457763672,
+        145.23529052734375,
+        29.0,
+        188.80328369140625
+      ],
+      "text_sha256": "5befcde2fefe074681a51514b484ad31516d952c51183625b5b7b1fb84f30d2c"
+    },
+    {
+      "block_id": "page-0297-block-0002",
+      "order": 2,
+      "text": "References\n",
+      "bbox": [
+        61.88999938964844,
+        62.31540298461914,
+        117.92399597167969,
+        75.35040283203125
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0297-block-0003",
+      "order": 3,
+      "text": "\t 1.\t MDedge Psychiatry. Abilify Maintena OK’d by FDA for adults with bipolar I disorder. 2017; https://www.mdedge.com/psychiatry/arti \n",
+      "bbox": [
+        61.88999938964844,
+        80.4364013671875,
+        435.53411865234375,
+        87.46839904785156
+      ],
+      "text_sha256": "bc9e30a71cf2a280b510b641b2500f61c87323c6d6644f08775f2460fd377e19"
+    },
+    {
+      "block_id": "page-0297-block-0004",
+      "order": 4,
+      "text": "cle/143846/bipolar-disorder/abilify-maintena-okd-fda-adults-bipolar-i-disorder?sso=true.\n\t 2.\t Keramatian K, et al. Long-acting injectable second-generation/atypical antipsychotics for the management of bipolar disorder: a systematic \n",
+      "bbox": [
+        61.895999908447266,
+        89.4364013671875,
+        435.56390380859375,
+        105.46839904785156
+      ],
+      "text_sha256": "9da92de10f2332e9a20d57fd6a37d388835c2fcda50d9a6d3dfa8a5288103699"
+    },
+    {
+      "block_id": "page-0297-block-0005",
+      "order": 5,
+      "text": "review. CNS Drugs 2019; 33:431–456.\n\t 3.\t Pacchiarotti I, et al. Long-acting injectable antipsychotics (LAIs) for maintenance treatment of bipolar and schizoaffective disorders: a sys-\n",
+      "bbox": [
+        61.902000427246094,
+        107.29240417480469,
+        433.8719177246094,
+        123.46839904785156
+      ],
+      "text_sha256": "2f61097f76f6c28905f77a1d3c852446d383a90789ba005533dedab3a79be709"
+    },
+    {
+      "block_id": "page-0297-block-0006",
+      "order": 6,
+      "text": "tematic review. Eur Neuropsychopharmacol 2019; 29:457–470.\n\t 4.\t Prajapati AR, et al. Second-generation antipsychotic long-acting injections in bipolar disorder: systematic review and meta-analysis. Bipolar \n",
+      "bbox": [
+        61.90800094604492,
+        125.29240417480469,
+        435.6121826171875,
+        141.46839904785156
+      ],
+      "text_sha256": "a35aae0b55b98e02935187fa4a3b6b41ac15bf0e08f48a302189ff9cf90c69f7"
+    },
+    {
+      "block_id": "page-0297-block-0007",
+      "order": 7,
+      "text": "Disorders 2018; 20:687–696.\n\t 5.\t Esparon J, et al. Comparison of the prophylactic action of flupenthixol with placebo in lithium treated manic-depressive patients. Br J \n",
+      "bbox": [
+        61.91400146484375,
+        143.2924041748047,
+        435.5519714355469,
+        159.46839904785156
+      ],
+      "text_sha256": "97f00dcecb9001820862839f539cb1be8ecf2bdd1b179c1914e2c466b0d561f0"
+    },
+    {
+      "block_id": "page-0297-block-0008",
+      "order": 8,
+      "text": "Psychiatry 1986; 148:723–725.\n\t 6.\t Yatham L, et al. Randomised trial of oral vs. injectable antipsychotics in bipolar disorder. Presented at the 6th International Conference on \n",
+      "bbox": [
+        61.91999816894531,
+        161.2924041748047,
+        435.6119384765625,
+        177.46839904785156
+      ],
+      "text_sha256": "7d49cd57ae6038895f706b77ecf99f903ba9a955184232e1c5035897b230134a"
+    },
+    {
+      "block_id": "page-0297-block-0009",
+      "order": 9,
+      "text": "Bipolar Disorder: June 16–18 2005, Pittsburgh, PA; 2005.\n\t 7.\t Berwaerts J, et al. A randomized, placebo- and active-controlled study of paliperidone extended-release as maintenance treatment in patients \n",
+      "bbox": [
+        61.92599868774414,
+        179.4364013671875,
+        435.5819091796875,
+        195.46839904785156
+      ],
+      "text_sha256": "f6fd5b90d881876a860ece6895975c1689ab8c7c51849a248382c21dd570185a"
+    },
+    {
+      "block_id": "page-0297-block-0010",
+      "order": 10,
+      "text": "with bipolar I disorder after an acute manic or mixed episode. J Affect Disord 2012; 138:247–258.\n\t 8.\t Buoli M, et al. Paliperidone palmitate depot in the long-term treatment of psychotic bipolar disorder: a case series. Clin Neuropharmacol \n",
+      "bbox": [
+        61.93199920654297,
+        197.2924041748047,
+        435.6060485839844,
+        213.46839904785156
+      ],
+      "text_sha256": "ff5e122547dc7661986f6d54b9571456c00d84bbedeab57cb92f23c82e2c06ab"
+    },
+    {
+      "block_id": "page-0297-block-0011",
+      "order": 11,
+      "text": "2015; 38:209–211.\n\t 9.\t Ahlfors UG, et al. Flupenthixol decanoate in recurrent manic-depressive illness. A comparison with lithium. Acta Psychiatr Scand 1981; \n",
+      "bbox": [
+        61.9379997253418,
+        215.2924041748047,
+        435.6239318847656,
+        231.46839904785156
+      ],
+      "text_sha256": "71ef420edbed1504bee9032be9766613d5d3f71938869f9bb0a61eb1ce6fb026"
+    },
+    {
+      "block_id": "page-0297-block-0012",
+      "order": 12,
+      "text": "64:226–237.\n\t10.\t Macfadden W, et al. A randomized, double-blind, placebo-controlled study of maintenance treatment with adjunctive risperidone long-acting \n",
+      "bbox": [
+        61.944000244140625,
+        233.2924041748047,
+        435.5819396972656,
+        249.46839904785156
+      ],
+      "text_sha256": "6602a0f3070a2ad2e76481464188d2aebd648b86b001904cd04bc7c437903730"
+    },
+    {
+      "block_id": "page-0297-block-0013",
+      "order": 13,
+      "text": "therapy in patients with bipolar I disorder who relapse frequently. Bipolar Disord 2009; 11:827–839.\n\t11.\t Quiroz JA, et al. Risperidone long-acting injectable monotherapy in the maintenance treatment of bipolar I disorder. Biol Psychiatry 2010; \n",
+      "bbox": [
+        61.95000076293945,
+        251.2924041748047,
+        435.6180419921875,
+        267.4684143066406
+      ],
+      "text_sha256": "7999f03e5a0a838ca08e5c7fbaee1b710afbf6385ed587c45aeb6d6c734f589c"
+    },
+    {
+      "block_id": "page-0297-block-0014",
+      "order": 14,
+      "text": "68:156–162.\n\t12.\t Vieta E, et al. A randomized, double-blind, placebo-controlled trial to assess prevention of mood episodes with risperidone long-acting inject-\n",
+      "bbox": [
+        61.95600128173828,
+        269.2923889160156,
+        433.9200439453125,
+        285.4684143066406
+      ],
+      "text_sha256": "9b17caff757373f9ef4ce957ad1b25c3a362add90a02b0e77c3662174a2fbd65"
+    },
+    {
+      "block_id": "page-0297-block-0015",
+      "order": 15,
+      "text": "able in patients with bipolar I disorder. Eur Neuropsychopharmacol 2012; 22:825–835.\n\t13.\t Calabrese JR, et al. Efficacy and safety of aripiprazole once-monthly in the maintenance treatment of bipolar I disorder: a double-blind, \n",
+      "bbox": [
+        61.96200180053711,
+        287.2923889160156,
+        435.60009765625,
+        303.4684143066406
+      ],
+      "text_sha256": "1a77e006aa12215968d0277fbb3467b01cacbe5fbde59f3e3faace80ed776e1f"
+    },
+    {
+      "block_id": "page-0297-block-0016",
+      "order": 16,
+      "text": "placebo-controlled, 52-week randomized withdrawal study. J Clin Psychiatry 2017; 78:324–331.\n\t14.\t Calabrese JR, et al. Aripiprazole once-monthly as maintenance treatment for bipolar I disorder: a 52-week, multicenter, open-label study. Int \n",
+      "bbox": [
+        61.96799850463867,
+        305.2923889160156,
+        435.59991455078125,
+        321.4684143066406
+      ],
+      "text_sha256": "1dae80158448f070a111bf259d2cab00145b0e91b765bcd5220f453bb86c82cf"
+    },
+    {
+      "block_id": "page-0297-block-0017",
+      "order": 17,
+      "text": "J Bipolar Disord 2018; 6:14.\n\t15.\t Bond DJ, et al. Depot antipsychotic medications in bipolar disorder: a review of the literature. Acta Psychiatr Scand Suppl 2007; 116: \n",
+      "bbox": [
+        61.9739990234375,
+        323.2923889160156,
+        435.6899108886719,
+        339.4684143066406
+      ],
+      "text_sha256": "208948116701e59e5e63683af9d36fe026701b128bdb565c5ac1e251d4bf81c3"
+    },
+    {
+      "block_id": "page-0297-block-0018",
+      "order": 18,
+      "text": "3–16.\n\t16.\t Gigante AD, et al. Long-acting injectable antipsychotics for the maintenance treatment of bipolar disorder. CNS Drugs 2012; 26:403–420.\n\t17.\t Goikolea JM, et al. Lower rate of depressive switch following antimanic treatment with second-generation antipsychotics versus haloperidol. \n",
+      "bbox": [
+        61.97999954223633,
+        341.4364013671875,
+        435.69000244140625,
+        366.4684143066406
+      ],
+      "text_sha256": "9765c785a35c8fa7c4d64a5b9133f0a5a162c0408f72c0924ef4a48e8a8c0541"
+    },
+    {
+      "block_id": "page-0297-block-0019",
+      "order": 19,
+      "text": "J Affect Disord 2013; 144:191–198.\n\t18.\t Wu CS, et al. Comparative effectiveness of long-acting injectable risperidone vs. long-acting injectable first-generation antipsychotics in \n",
+      "bbox": [
+        61.992000579833984,
+        368.2923889160156,
+        435.69000244140625,
+        384.4684143066406
+      ],
+      "text_sha256": "c401ed9d2adaae3367c2d9569ad40114388b43431b146c1ab9611dc469fd3921"
+    },
+    {
+      "block_id": "page-0297-block-0020",
+      "order": 20,
+      "text": "bipolar disorder. J Affect Disord 2016; 197:189–195.\n",
+      "bbox": [
+        72.99600219726562,
+        386.2923889160156,
+        210.94796752929688,
+        393.4684143066406
+      ],
+      "text_sha256": "23743f97253b5894b35c9f9b81871c1c3af7c3143601fe12e29feb7273834ff6"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

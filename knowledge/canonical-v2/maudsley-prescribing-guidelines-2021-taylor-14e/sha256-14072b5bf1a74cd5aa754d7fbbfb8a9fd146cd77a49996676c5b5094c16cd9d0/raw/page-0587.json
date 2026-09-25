@@ -1,0 +1,323 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0587",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 587,
+  "source_page_index": 586,
+  "source_page_display": 587,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "566    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  5\nReferences\n\t 1.\t O’Kearney RT, et al. Behavioural and cognitive behavioural therapy for obsessive compulsive disorder in children and adolescents. Cochrane \nDatabase Syst Rev 2006:CD004856.\n\t 2.\t Freeman JB, et al. Cognitive behavioral treatment for young children with obsessive-compulsive disorder. Biol Psychiatry 2007; \n61:337–343.\n\t 3.\t Mancuso E, et al. Treatment of pediatric obsessive-compulsive disorder: a review. J Child Adolesc Psychopharmacol 2010; 20:299–308.\n\t 4.\t National & Specialist OCD BDD and Related Disorders Service for Young People Maudsley Hospital. Appearance Anxiety: A book on BDD \nfor Young People, Families and Professionals. Jessica Kingsley Publications; 2019.\n\t 5.\t National Institute for Clinical Excellence. Obsessive-compulsive disorder: core interventions in the treatment of obsessive-compulsive disor-\nder and body dysmorphic disorder. Clinical Guidance 2005; 31 [CG31]. https://www.nice.org.uk/guidance/cg31.\n\t 6.\t The Pediatric OCD Treatment Study Team (POTS). Cognitive-behavior therapy, sertraline, and their combination for children and adoles-\ncents with obsessive-compulsive disorder: the Pediatric OCD Treatment Study (POTS) randomized controlled trial. JAMA 2004; \n292:1969–1976.\n\t 7.\t Geller DA, et al. Which SSRI? A meta-analysis of pharmacotherapy trials in pediatric obsessive-compulsive disorder. Am J Psychiatry 2003; \n160:1919–1928.\n\t 8.\t March JS, et al. Treatment benefit and the risk of suicidality in multicenter, randomized, controlled trials of sertraline in children and adoles-\ncents. J Child Adolesc Psychopharmacol 2006; 16:91–102.\n\t 9.\t Kotapati VP, et al. The effectiveness of selective serotonin reuptake inhibitors for treatment of obsessive-compulsive disorder in adolescents \nand children: a systematic review and meta-analysis. Frontiers Psychiatry 2019; 10:523.\n\t10.\t Phillips KA, et al. Treating body dysmorphic disorder with medication: evidence, misconceptions, and a suggested approach. Body Image \n2008; 5:13–27.\n\t11.\t Bloch MH, et al. Assessment and management of treatment-refractory obsessive-compulsive disorder in children. J Am Acad Child Adolesc \nPsychiatry 2015; 54:251–262.\n\t12.\t Scahill L, et al. Children’s Yale-Brown Obsessive Compulsive Scale: reliability and validity. J Am Acad Child Adolesc Psychiatry 1997; \n36:844–852.\n\t13.\t Phillips KA, et al. A severity rating scale for body dysmorphic disorder: development, reliability, and validity of a modified version of the \nYale-Brown Obsessive Compulsive Scale. Psychopharmacol Bull 1997; 33:17–22.\n\t14.\t Baldwin DS, et al. Evidence-based pharmacological treatment of anxiety disorders, post-traumatic stress disorder and obsessive-compulsive \ndisorder: a revision of the 2005 guidelines from the British Association for Psychopharmacology. J Psychopharmacol 2014; 28:403–439.\n\t15.\t Medicines and Healthcare Products Regulatory Agency. Report of the CSM expert working group on the safety of selective serotonin reup-\ntake inhibitor antidepressants. 2005; https://www.neuroscience.ox.ac.uk/publications/474047.\n\t16.\t Garland J, et al. Update on the use of SSRIs and SNRIs with children and adolescents in clinical practice. J Can Acad Child Adolesc Psychiatry \n2016; 25:4–10.\n\t17.\t Fernandez de la Cruz L, et al. Suicide in obsessive-compulsive disorder: a population-based study of 36 788 Swedish patients. Mol Psychiatry \n2017; 22:1626–1632.\n\t18.\t Heyman I, et al. Obsessive-compulsive disorder. BMJ 2006; 333:424–429.\n\t19.\t Grados M, et al. Pharmacotherapy in children and adolescents with obsessive-compulsive disorder. Child Adolesc Psychiatr Clin N Am 1999; \n8:617–634, x.\n\t20.\t Bloch MH, et al. A systematic review: antipsychotic augmentation with treatment refractory obsessive-compulsive disorder. Mol Psychiatry \n2006; 11:622–632.\nFurther reading\nNazeer A, et al. Obsessive-compulsive disorder in children and adolescents: epidemiology, diagnosis and management. Translational Pediatrics \n2020; 9:S76–S93.\n",
+  "raw_text_sha256": "99afe69dba6293b402ac0d76b664299defb935f36b4e44834b094bf3dfa1d18d",
+  "coordinates_sha256": "2883d37935255ed2c99b586ecb2896dae1e9df38bb723979601c6a14f38a4aee",
+  "block_sequence_sha256": "01ddaf41ec8946cac984172f8d99575d7107078e0e53c076ab23d879b18c41a7",
+  "blocks": [
+    {
+      "block_id": "page-0587-block-0000",
+      "order": 0,
+      "text": "566    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "b31a5dcd797c43a690230b9856cbe5d92770ebc4fc61f53ec6fcc264c77a46d5"
+    },
+    {
+      "block_id": "page-0587-block-0001",
+      "order": 1,
+      "text": "CHAPTER  5\n",
+      "bbox": [
+        18.520000457763672,
+        338.22650146484375,
+        28.0,
+        381.79449462890625
+      ],
+      "text_sha256": "4086e0916f45ec531cc17b8c611334eb2b1ef26051ba536579b8ef3c22c1648d"
+    },
+    {
+      "block_id": "page-0587-block-0002",
+      "order": 2,
+      "text": "References\n",
+      "bbox": [
+        61.88999938964844,
+        62.31540298461914,
+        117.92399597167969,
+        75.35040283203125
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0587-block-0003",
+      "order": 3,
+      "text": "\t 1.\t O’Kearney RT, et al. Behavioural and cognitive behavioural therapy for obsessive compulsive disorder in children and adolescents. Cochrane \n",
+      "bbox": [
+        61.88999938964844,
+        80.4364013671875,
+        435.5342102050781,
+        87.46839904785156
+      ],
+      "text_sha256": "c31b13202dd4d1841820e5bd24c23f0bdb4ca38f5d119f4af5d780017a716da4"
+    },
+    {
+      "block_id": "page-0587-block-0004",
+      "order": 4,
+      "text": "Database Syst Rev 2006:CD004856.\n\t 2.\t Freeman JB, et al. Cognitive behavioral treatment for young children with obsessive-compulsive disorder. Biol Psychiatry 2007; \n",
+      "bbox": [
+        61.895999908447266,
+        89.4364013671875,
+        435.53411865234375,
+        105.46839904785156
+      ],
+      "text_sha256": "765a09f2d5bb69036db81282a3092bd12fc88123fa838bcdd3a5da08306335d4"
+    },
+    {
+      "block_id": "page-0587-block-0005",
+      "order": 5,
+      "text": "61:337–343.\n\t 3.\t Mancuso E, et al. Treatment of pediatric obsessive-compulsive disorder: a review. J Child Adolesc Psychopharmacol 2010; 20:299–308.\n\t 4.\t National & Specialist OCD BDD and Related Disorders Service for Young People Maudsley Hospital. Appearance Anxiety: A book on BDD \n",
+      "bbox": [
+        61.902000427246094,
+        107.29240417480469,
+        435.55810546875,
+        132.46839904785156
+      ],
+      "text_sha256": "43d163a7301b0ca5fbd136ee6378305d8b2f604c72a0af3c5e6638a58ada3f9a"
+    },
+    {
+      "block_id": "page-0587-block-0006",
+      "order": 6,
+      "text": "for Young People, Families and Professionals. Jessica Kingsley Publications; 2019.\n\t 5.\t National Institute for Clinical Excellence. Obsessive-compulsive disorder: core interventions in the treatment of obsessive-compulsive disor-\n",
+      "bbox": [
+        61.91400146484375,
+        134.4364013671875,
+        433.91998291015625,
+        150.46839904785156
+      ],
+      "text_sha256": "d8fcff65278d124cab1ac01944af989de1a2c7d689740b66a6d379abe27e867f"
+    },
+    {
+      "block_id": "page-0587-block-0007",
+      "order": 7,
+      "text": "der and body dysmorphic disorder. Clinical Guidance 2005; 31 [CG31]. https://www.nice.org.uk/guidance/cg31.\n\t 6.\t The Pediatric OCD Treatment Study Team (POTS). Cognitive-behavior therapy, sertraline, and their combination for children and adoles-\n",
+      "bbox": [
+        61.91999816894531,
+        152.2924041748047,
+        433.94415283203125,
+        168.46839904785156
+      ],
+      "text_sha256": "158f4bf74dca082e64584b2c05f2c831a5f094512e6aba90fa3e83a582dd3f2f"
+    },
+    {
+      "block_id": "page-0587-block-0008",
+      "order": 8,
+      "text": "cents with obsessive-compulsive disorder: the Pediatric OCD Treatment Study (POTS) randomized controlled trial. JAMA 2004; \n292:1969–1976.\n\t 7.\t Geller DA, et al. Which SSRI? A meta-analysis of pharmacotherapy trials in pediatric obsessive-compulsive disorder. Am J Psychiatry 2003; \n",
+      "bbox": [
+        61.92599868774414,
+        170.4364013671875,
+        435.5998840332031,
+        195.46839904785156
+      ],
+      "text_sha256": "dfcae0b037f9738a0d821d6d05a3a62148ce15e7d320519a1c8fbad18fba2394"
+    },
+    {
+      "block_id": "page-0587-block-0009",
+      "order": 9,
+      "text": "160:1919–1928.\n\t 8.\t March JS, et al. Treatment benefit and the risk of suicidality in multicenter, randomized, controlled trials of sertraline in children and adoles-\n",
+      "bbox": [
+        61.93199920654297,
+        197.2924041748047,
+        433.9141540527344,
+        213.46839904785156
+      ],
+      "text_sha256": "82cba3548c65af75b66e33ee9f49711eb43e3146e7a063eded11320c79de2c62"
+    },
+    {
+      "block_id": "page-0587-block-0010",
+      "order": 10,
+      "text": "cents. J Child Adolesc Psychopharmacol 2006; 16:91–102.\n\t 9.\t Kotapati VP, et al. The effectiveness of selective serotonin reuptake inhibitors for treatment of obsessive-compulsive disorder in adolescents \n",
+      "bbox": [
+        61.9379997253418,
+        215.2924041748047,
+        435.63006591796875,
+        231.46839904785156
+      ],
+      "text_sha256": "4e00d920c113e7a315d022004e3144afe31ba592a38839bc282ef7072bb5181b"
+    },
+    {
+      "block_id": "page-0587-block-0011",
+      "order": 11,
+      "text": "and children: a systematic review and meta-analysis. Frontiers Psychiatry 2019; 10:523.\n\t10.\t Phillips KA, et al. Treating body dysmorphic disorder with medication: evidence, misconceptions, and a suggested approach. Body Image \n",
+      "bbox": [
+        61.944000244140625,
+        233.2924041748047,
+        435.57598876953125,
+        249.46839904785156
+      ],
+      "text_sha256": "1e162860f4a642c9d64e315ed57d0e1d48fd99c277e23ef7a150bf0b22a85769"
+    },
+    {
+      "block_id": "page-0587-block-0012",
+      "order": 12,
+      "text": "2008; 5:13–27.\n\t11.\t Bloch MH, et al. Assessment and management of treatment-refractory obsessive-compulsive disorder in children. J Am Acad Child Adolesc \n",
+      "bbox": [
+        61.95000076293945,
+        251.2924041748047,
+        435.61810302734375,
+        267.4684143066406
+      ],
+      "text_sha256": "66ddc1cb4f886302ebc228866834dddde1717bcd87e31015267c4868328e21bf"
+    },
+    {
+      "block_id": "page-0587-block-0013",
+      "order": 13,
+      "text": "Psychiatry 2015; 54:251–262.\n\t12.\t Scahill L, et al. Children’s Yale-Brown Obsessive Compulsive Scale: reliability and validity. J Am Acad Child Adolesc Psychiatry 1997; \n",
+      "bbox": [
+        61.95600128173828,
+        269.2923889160156,
+        435.6299133300781,
+        285.4684143066406
+      ],
+      "text_sha256": "17738f0ed80b3d54f5481294c8df77c2b61bc014f87fedcfc57fd4817354f8d7"
+    },
+    {
+      "block_id": "page-0587-block-0014",
+      "order": 14,
+      "text": "36:844–852.\n\t13.\t Phillips KA, et al. A severity rating scale for body dysmorphic disorder: development, reliability, and validity of a modified version of the \n",
+      "bbox": [
+        61.96200180053711,
+        287.2923889160156,
+        435.67791748046875,
+        303.4684143066406
+      ],
+      "text_sha256": "56899207913c6c2d27881a317889e9c1ed6c572dd4a6b6af399dcb2de93168d3"
+    },
+    {
+      "block_id": "page-0587-block-0015",
+      "order": 15,
+      "text": "Yale-Brown Obsessive Compulsive Scale. Psychopharmacol Bull 1997; 33:17–22.\n\t14.\t Baldwin DS, et al. Evidence-based pharmacological treatment of anxiety disorders, post-traumatic stress disorder and obsessive-compulsive \n",
+      "bbox": [
+        61.96799850463867,
+        305.2923889160156,
+        435.6060791015625,
+        321.4684143066406
+      ],
+      "text_sha256": "a8577d28bcac2fc0809d6af06ce752e6e2f73408ad5627a3307580f2156727a1"
+    },
+    {
+      "block_id": "page-0587-block-0016",
+      "order": 16,
+      "text": "disorder: a revision of the 2005 guidelines from the British Association for Psychopharmacology. J Psychopharmacol 2014; 28:403–439.\n\t15.\t Medicines and Healthcare Products Regulatory Agency. Report of the CSM expert working group on the safety of selective serotonin reup-\n",
+      "bbox": [
+        61.9739990234375,
+        323.2923889160156,
+        433.95611572265625,
+        339.4684143066406
+      ],
+      "text_sha256": "4ae6584b70a47bcda4ec941db506c6a9eec47ce0504870db08e2e4d75ce75b11"
+    },
+    {
+      "block_id": "page-0587-block-0017",
+      "order": 17,
+      "text": "take inhibitor antidepressants. 2005; https://www.neuroscience.ox.ac.uk/publications/474047.\n\t16.\t Garland J, et al. Update on the use of SSRIs and SNRIs with children and adolescents in clinical practice. J Can Acad Child Adolesc Psychiatry \n",
+      "bbox": [
+        61.97999954223633,
+        341.4364013671875,
+        435.65997314453125,
+        357.4684143066406
+      ],
+      "text_sha256": "68c561bae2d6637b9552f090bedbc43c7c97cc32b57ba37ec93e04d7754a3a71"
+    },
+    {
+      "block_id": "page-0587-block-0018",
+      "order": 18,
+      "text": "2016; 25:4–10.\n\t17.\t Fernandez de la Cruz L, et al. Suicide in obsessive-compulsive disorder: a population-based study of 36 788 Swedish patients. Mol Psychiatry \n",
+      "bbox": [
+        61.986000061035156,
+        359.2923889160156,
+        435.6298828125,
+        375.4684143066406
+      ],
+      "text_sha256": "db883716fde462f9ba4e9ebc2732239869bafb91427bfd1e1f2f87549fd0e08c"
+    },
+    {
+      "block_id": "page-0587-block-0019",
+      "order": 19,
+      "text": "2017; 22:1626–1632.\n\t18.\t Heyman I, et al. Obsessive-compulsive disorder. BMJ 2006; 333:424–429.\n\t19.\t Grados M, et al. Pharmacotherapy in children and adolescents with obsessive-compulsive disorder. Child Adolesc Psychiatr Clin N Am 1999; \n",
+      "bbox": [
+        61.992000579833984,
+        377.2923889160156,
+        435.67803955078125,
+        402.4684143066406
+      ],
+      "text_sha256": "777616bc40193ce54b899905150152589b963e777189e33b51e67cf6e5894f95"
+    },
+    {
+      "block_id": "page-0587-block-0020",
+      "order": 20,
+      "text": "8:617–634, x.\n\t20.\t Bloch MH, et al. A systematic review: antipsychotic augmentation with treatment refractory obsessive-compulsive disorder. Mol Psychiatry \n",
+      "bbox": [
+        62.00400161743164,
+        404.2923889160156,
+        435.6960754394531,
+        420.4684143066406
+      ],
+      "text_sha256": "5e1962064d11964fca9b56ec27ded0b9a6da24c857c82923c804e12ae492e680"
+    },
+    {
+      "block_id": "page-0587-block-0021",
+      "order": 21,
+      "text": "2006; 11:622–632.\n",
+      "bbox": [
+        73.00799560546875,
+        422.2923889160156,
+        122.71197509765625,
+        429.4684143066406
+      ],
+      "text_sha256": "46068940b3d77a2d99a10dbb3eed3e052ceac784febf874cbc9ee8d3388813b9"
+    },
+    {
+      "block_id": "page-0587-block-0022",
+      "order": 22,
+      "text": "Further reading\n",
+      "bbox": [
+        61.88999938964844,
+        447.8153991699219,
+        142.37698364257812,
+        460.85040283203125
+      ],
+      "text_sha256": "97a7eb93e6fca560969f4c10a52d2ef83995974b08b112934e0d108909963303"
+    },
+    {
+      "block_id": "page-0587-block-0023",
+      "order": 23,
+      "text": "Nazeer A, et al. Obsessive-compulsive disorder in children and adolescents: epidemiology, diagnosis and management. Translational Pediatrics \n",
+      "bbox": [
+        61.88999938964844,
+        465.9364013671875,
+        435.5340881347656,
+        472.9684143066406
+      ],
+      "text_sha256": "14eec0559865a33248f29c798baaea71e552e8bfef25f0331b0b8acabb80cfad"
+    },
+    {
+      "block_id": "page-0587-block-0024",
+      "order": 24,
+      "text": "2020; 9:S76–S93.\n",
+      "bbox": [
+        72.88800048828125,
+        474.7923889160156,
+        118.583984375,
+        481.9684143066406
+      ],
+      "text_sha256": "5cc6cac41cf55e4dcee450a1cb6661e6ccb16ba2d8499057a8c2cc0e494833d6"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

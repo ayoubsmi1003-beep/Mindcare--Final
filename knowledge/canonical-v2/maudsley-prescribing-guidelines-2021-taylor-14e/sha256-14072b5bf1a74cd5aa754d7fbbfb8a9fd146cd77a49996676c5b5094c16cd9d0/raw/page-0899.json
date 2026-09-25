@@ -1,0 +1,419 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0899",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 899,
+  "source_page_index": 898,
+  "source_page_display": 899,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "878    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 13\nDrug or drug group\nToxicity in \noverdose\nSmallest dose likely  \nto cause death\nSigns and symptoms of overdose\nPhenothiazines56,72–74\n(e.g. chlorpromazine, \nfluphenazine)\nModerate\nChlorpromazine 5–10g.\nSedation, coma, tachycardia, \narrhythmia, pulmonary oedema, \nhypotension, QT prolongation, \nseizures, dystonia, NMS.\nPimavanserin75\nNot known\nNo overdoses reported but \npimavanserin prolongs QT \ninterval in clinical doses.\nProbably QT prolongation and \narrhythmia. ? Nausea, vomiting, \nconfusion.76\nQuetiapine24,60,77–80\nModerate\nUnclear. Probably more than 5g. \nFatalities can occur in single \nsubstance overdose.\nLethargy, delirium, tachycardia, QT \nprolongation, respiratory depression, \nhypotension, rhabdomyolysis, NMS.\nRisperidone60,81,82\n(assume the same for \npaliperidone)\nLow\nUnclear.\nFatality rare in those taking \nrisperidone or paliperidone \nalone.\nLethargy, dystonia, tachycardia, changes \nin blood pressure, QT prolongation. Renal \nfailure with paliperidone.\nZiprasidone83–88\nLow\nAround 10g. Fatality unlikely \nwhen taken alone.\nDrowsiness, lethargy. QT prolongation, \ntorsades de pointes.\nMood stabilisers\nCarbamazepine89,90\nModerate\nAround 20g, but seizures may \noccur at around 5g.\nSomnolence, coma, respiratory \ndepression, ataxia, seizures, tachycardia, \narrhythmia, electrolyte disturbance.\nLamotrigine91,92\nLow\nAt least 4g.\nTwo deaths reported – one after \n4g, the other after 7.5g, but \noverdoses of >40g have not \nproved fatal.\nDrowsiness, vomiting, ataxia, seizures, \ntachycardia, dyskinesia, QT prolongation.\nLithium93–95\nModerate\nChronic toxicity probably more \ndangerous but single overdose \nis occasionally fatal. Six acute \noverdose deaths recorded in UK \n2005–2012.96\nNausea, diarrhoea, tremor, confusion, \nweakness, lethargy, seizures, coma, \ncardiovascular collapse, bradycardia, \narrhythmia, heart block, renal failure.\nValproate97–101\nModerate\nUnclear but probably more than \n20g. Doses over 400mg/kg \ncause severe toxicity.\nSomnolence, coma, cerebral oedema, \nrespiratory depression, blood dyscrasia, \nhypotension, hypothermia, seizures, \nelectrolyte disturbance \n(hyperammonaemia).\nTable 13.1  (Continued)\nOthers\nBenzodiazepines102,103\nLow\nProbably more than 100mg \ndiazepam equivalents. \nFatality unusual if taken alone. \nAlprazolam is most toxic.\nDrowsiness, ataxia, nystagmus, \nrespiratory dysarthria, depression, coma.\nBuspirone24\nLow\nLimited data. Deaths not \nreported.\nNot known.\n",
+  "raw_text_sha256": "7de633c947375546d92da41d5200dee269ea8b53fd0ec953152fd8e86b7eec2e",
+  "coordinates_sha256": "b0c2d5bb856efdfd33b903affb55a22460e0d4e00232bd6c7c5834393d78e7fd",
+  "block_sequence_sha256": "6692600f39167107f41fd073d8c9c20cea5b164dfde8cd77a3dafdaa0129934c",
+  "blocks": [
+    {
+      "block_id": "page-0899-block-0000",
+      "order": 0,
+      "text": "878    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "777fde4ce3604e92d27cef6b31c1ed83979381d37814a7f7958c4c0eccda5c3d"
+    },
+    {
+      "block_id": "page-0899-block-0001",
+      "order": 1,
+      "text": "CHAPTER 13\n",
+      "bbox": [
+        18.520000457763672,
+        272.95111083984375,
+        28.0,
+        318.74310302734375
+      ],
+      "text_sha256": "a01ce0756ef6b5d41c48be6624d8bd154fa95cf67cb49768f2593332d3a2ec98"
+    },
+    {
+      "block_id": "page-0899-block-0002",
+      "order": 2,
+      "text": "Drug or drug group\n",
+      "bbox": [
+        61.889801025390625,
+        99.43971252441406,
+        130.91978454589844,
+        108.32720947265625
+      ],
+      "text_sha256": "d528646a4477039c6bdce1cc5da8ca2b45d7d96730efadb8e0e467171afacd39"
+    },
+    {
+      "block_id": "page-0899-block-0003",
+      "order": 3,
+      "text": "Toxicity in \noverdose\n",
+      "bbox": [
+        141.89230346679688,
+        89.44221496582031,
+        179.40733337402344,
+        108.32720947265625
+      ],
+      "text_sha256": "51ebed65665cfe44e710fb62a313d80f26f929956df51247961e3b5d5f90dcd5"
+    },
+    {
+      "block_id": "page-0899-block-0004",
+      "order": 4,
+      "text": "Smallest dose likely  \nto cause death\nSigns and symptoms of overdose\n",
+      "bbox": [
+        184.88980102539062,
+        89.44221496582031,
+        410.4297180175781,
+        108.32720947265625
+      ],
+      "text_sha256": "6209e6f36b542e07025e47df7227bdb6e50dfc25f07e27e2d9a5fe9d6ac1c0f2"
+    },
+    {
+      "block_id": "page-0899-block-0005",
+      "order": 5,
+      "text": "Phenothiazines56,72–74\n",
+      "bbox": [
+        61.889801025390625,
+        117.0196762084961,
+        127.80274200439453,
+        125.7271728515625
+      ],
+      "text_sha256": "f3e85a56deceb8f23b96f7cc27f75e87980089d3002816d80ca731eebe813860"
+    },
+    {
+      "block_id": "page-0899-block-0006",
+      "order": 6,
+      "text": "(e.g. chlorpromazine, \nfluphenazine)\n",
+      "bbox": [
+        61.889801025390625,
+        127.0196762084961,
+        131.7672882080078,
+        145.72467041015625
+      ],
+      "text_sha256": "67d63bb2a39ba7e048d7ef55ad8dac841ca8d2eeae3b6378878f230de6ee852a"
+    },
+    {
+      "block_id": "page-0899-block-0007",
+      "order": 7,
+      "text": "Moderate\nChlorpromazine 5–10g.\nSedation, coma, tachycardia, \narrhythmia, pulmonary oedema, \nhypotension, QT prolongation, \nseizures, dystonia, NMS.\n",
+      "bbox": [
+        141.89230346679688,
+        117.0146713256836,
+        404.5649719238281,
+        155.71466064453125
+      ],
+      "text_sha256": "a4f881231fd5c1870b8b50bfe8cfe82a94061d8caefc4ce14b8f3ad6b3f60f4b"
+    },
+    {
+      "block_id": "page-0899-block-0008",
+      "order": 8,
+      "text": "Pimavanserin75\nNot known\nNo overdoses reported but \npimavanserin prolongs QT \ninterval in clinical doses.\n",
+      "bbox": [
+        61.88983154296875,
+        162.02967834472656,
+        272.142333984375,
+        190.7471923828125
+      ],
+      "text_sha256": "0edcd03f15f0c0a33983e4d3861ea088dddf97b933da5bfbfd8a11affccde907"
+    },
+    {
+      "block_id": "page-0899-block-0009",
+      "order": 9,
+      "text": "Probably QT prolongation and \narrhythmia. ? Nausea, vomiting, \nconfusion.76\n",
+      "bbox": [
+        293.8847961425781,
+        162.0371856689453,
+        398.059814453125,
+        190.73968505859375
+      ],
+      "text_sha256": "e43c3d0863e6ea22d37bf1b457005cd8bfb85e3c9ed8f0e6a8cbfc749d256831"
+    },
+    {
+      "block_id": "page-0899-block-0010",
+      "order": 10,
+      "text": "Quetiapine24,60,77–80\nModerate\nUnclear. Probably more than 5g. \nFatalities can occur in single \nsubstance overdose.\n",
+      "bbox": [
+        61.889801025390625,
+        197.06968688964844,
+        287.5323181152344,
+        225.77218627929688
+      ],
+      "text_sha256": "cb19ba7530e992183b7459782f9cb89696ac14a8e5c260b77f1aebab5ae255fc"
+    },
+    {
+      "block_id": "page-0899-block-0011",
+      "order": 11,
+      "text": "Lethargy, delirium, tachycardia, QT \nprolongation, respiratory depression, \nhypotension, rhabdomyolysis, NMS.\n",
+      "bbox": [
+        293.8847961425781,
+        197.0621795654297,
+        413.0899353027344,
+        225.76467895507812
+      ],
+      "text_sha256": "49a7de2a6d207939367a039d360e6790cd5d23ae35ca647311116ef1c96bd98b"
+    },
+    {
+      "block_id": "page-0899-block-0012",
+      "order": 12,
+      "text": "Risperidone60,81,82\n",
+      "bbox": [
+        61.887298583984375,
+        232.0796661376953,
+        116.00214385986328,
+        240.78717041015625
+      ],
+      "text_sha256": "28fbebbf7701913237674ad1e4bb57cf0a2a08bedd2f70b36440dbd9f548aab5"
+    },
+    {
+      "block_id": "page-0899-block-0013",
+      "order": 13,
+      "text": "(assume the same for \npaliperidone)\n",
+      "bbox": [
+        61.889801025390625,
+        242.0946807861328,
+        132.31480407714844,
+        260.7996826171875
+      ],
+      "text_sha256": "c41c6597da7abf3c1d5087cf4494df0b9f609d05070bb10a81a1c77b1b3c1a69"
+    },
+    {
+      "block_id": "page-0899-block-0014",
+      "order": 14,
+      "text": "Low\nUnclear.\nFatality rare in those taking \nrisperidone or paliperidone \nalone.\n",
+      "bbox": [
+        141.89230346679688,
+        232.0896759033203,
+        273.5023193359375,
+        270.7896728515625
+      ],
+      "text_sha256": "022e636b54169f97e40c102cb2d7068493951104461a17d489f312f766a00723"
+    },
+    {
+      "block_id": "page-0899-block-0015",
+      "order": 15,
+      "text": "Lethargy, dystonia, tachycardia, changes \nin blood pressure, QT prolongation. Renal \nfailure with paliperidone.\n",
+      "bbox": [
+        293.8872985839844,
+        232.08216857910156,
+        428.9474792480469,
+        260.78466796875
+      ],
+      "text_sha256": "f2657481f3ae009b8792e068caeea3fe23b41e51c77492b7914b93ebfd496d5d"
+    },
+    {
+      "block_id": "page-0899-block-0016",
+      "order": 16,
+      "text": "Ziprasidone83–88\nLow\nAround 10g. Fatality unlikely \nwhen taken alone.\n",
+      "bbox": [
+        61.889801025390625,
+        277.10467529296875,
+        278.517333984375,
+        295.8246765136719
+      ],
+      "text_sha256": "6589aaf363b92c4a0f175f67bbe86b239bf35a0ef025f7a9b81f387626cfb4b4"
+    },
+    {
+      "block_id": "page-0899-block-0017",
+      "order": 17,
+      "text": "Drowsiness, lethargy. QT prolongation, \ntorsades de pointes.\n",
+      "bbox": [
+        293.8847961425781,
+        277.11968994140625,
+        419.6224060058594,
+        295.8246765136719
+      ],
+      "text_sha256": "00a646d8cc2c93020aa80a359ff2eb56d8724919b852ef24b7f102b008a4ac04"
+    },
+    {
+      "block_id": "page-0899-block-0018",
+      "order": 18,
+      "text": "Mood stabilisers\n",
+      "bbox": [
+        61.889801025390625,
+        311.5646667480469,
+        119.80479431152344,
+        320.4521789550781
+      ],
+      "text_sha256": "61d001a362a627f477cdd6fe3d886ffc769f7772654ccb0cf74d161889f6f764"
+    },
+    {
+      "block_id": "page-0899-block-0019",
+      "order": 19,
+      "text": "Carbamazepine89,90\nModerate\nAround 20g, but seizures may \noccur at around 5g.\n",
+      "bbox": [
+        61.889801025390625,
+        331.1171875,
+        282.9797668457031,
+        349.8246765136719
+      ],
+      "text_sha256": "cafd4c6a672ed87c1d8921c2f18d943aa41fd1c005074a6d7137cef08fb1f4f2"
+    },
+    {
+      "block_id": "page-0899-block-0020",
+      "order": 20,
+      "text": "Somnolence, coma, respiratory \ndepression, ataxia, seizures, tachycardia, \narrhythmia, electrolyte disturbance.\n",
+      "bbox": [
+        293.8847961425781,
+        331.11968994140625,
+        424.3172912597656,
+        359.8221740722656
+      ],
+      "text_sha256": "5674a18e3f2b1e154dd45e6ed0f5122b6672fc7ea88f6777cd132267ed2c553c"
+    },
+    {
+      "block_id": "page-0899-block-0021",
+      "order": 21,
+      "text": "Lamotrigine91,92\nLow\nAt least 4g.\nTwo deaths reported – one after \n4g, the other after 7.5g, but \noverdoses of >40g have not \nproved fatal.\n",
+      "bbox": [
+        61.887298583984375,
+        366.1371765136719,
+        289.86480712890625,
+        414.8421936035156
+      ],
+      "text_sha256": "ebb76aa5487a0d021ce6540787b5c8e3330b180b29848df5e7b692be54b94198"
+    },
+    {
+      "block_id": "page-0899-block-0022",
+      "order": 22,
+      "text": "Drowsiness, vomiting, ataxia, seizures, \ntachycardia, dyskinesia, QT prolongation.\n",
+      "bbox": [
+        293.8847961425781,
+        366.13720703125,
+        424.8798828125,
+        384.8421936035156
+      ],
+      "text_sha256": "e0afd59568e2b2ad970eb48d20bad3461776a6c129c3a145db84a38ba807ebdd"
+    },
+    {
+      "block_id": "page-0899-block-0023",
+      "order": 23,
+      "text": "Lithium93–95\nModerate\nChronic toxicity probably more \ndangerous but single overdose \nis occasionally fatal. Six acute \noverdose deaths recorded in UK \n2005–2012.96\n",
+      "bbox": [
+        61.887298583984375,
+        421.1571960449219,
+        288.67230224609375,
+        469.8671875
+      ],
+      "text_sha256": "54c6fa3c7fdc0b51ed2ceffecc6960387cf037b41270c888ffe840e1dd88fff9"
+    },
+    {
+      "block_id": "page-0899-block-0024",
+      "order": 24,
+      "text": "Nausea, diarrhoea, tremor, confusion, \nweakness, lethargy, seizures, coma, \ncardiovascular collapse, bradycardia, \narrhythmia, heart block, renal failure.\n",
+      "bbox": [
+        293.8898010253906,
+        421.1697082519531,
+        416.42486572265625,
+        459.86968994140625
+      ],
+      "text_sha256": "f23797d7236f315bbd297c49c61d9db798c364b30087531cafa4d83c1df6e891"
+    },
+    {
+      "block_id": "page-0899-block-0025",
+      "order": 25,
+      "text": "Valproate97–101\nModerate\nUnclear but probably more than \n20g. Doses over 400mg/kg \ncause severe toxicity.\n",
+      "bbox": [
+        61.892303466796875,
+        476.189697265625,
+        289.21978759765625,
+        504.8971862792969
+      ],
+      "text_sha256": "dac10d47169bec62c609e46bc84e9dbb0c845df3ea2b20c91d64f8c33aabb167"
+    },
+    {
+      "block_id": "page-0899-block-0026",
+      "order": 26,
+      "text": "Somnolence, coma, cerebral oedema, \nrespiratory depression, blood dyscrasia, \nhypotension, hypothermia, seizures, \nelectrolyte disturbance \n(hyperammonaemia).\n",
+      "bbox": [
+        293.8847961425781,
+        476.18719482421875,
+        420.7174072265625,
+        524.8846435546875
+      ],
+      "text_sha256": "7d3d951b1b9077809056b810ba69b4b3ff1f40457a5e7870cea5b03990a2a109"
+    },
+    {
+      "block_id": "page-0899-block-0027",
+      "order": 27,
+      "text": "Table 13.1  (Continued)\n",
+      "bbox": [
+        67.88980102539062,
+        69.41468811035156,
+        144.17979431152344,
+        78.30218505859375
+      ],
+      "text_sha256": "24029779a5839f9ec78b7b56d6c5134ba1c47fc502bdb061095fdbda9da739f2"
+    },
+    {
+      "block_id": "page-0899-block-0028",
+      "order": 28,
+      "text": "Others\n",
+      "bbox": [
+        61.889801025390625,
+        534.8646850585938,
+        85.64230346679688,
+        543.752197265625
+      ],
+      "text_sha256": "1aa52f7e4f05a078be727a3ece984b3d611b02a7a0ff0188b84488e39bdd7995"
+    },
+    {
+      "block_id": "page-0899-block-0029",
+      "order": 29,
+      "text": "Benzodiazepines102,103\nLow\nProbably more than 100mg \ndiazepam equivalents. \nFatality unusual if taken alone. \nAlprazolam is most toxic.\n",
+      "bbox": [
+        61.889801025390625,
+        553.169677734375,
+        284.47979736328125,
+        591.8696899414062
+      ],
+      "text_sha256": "d910a28386a2c4f26a858090ca965398fe4e10439d183383d6c3fe8ebae2b2ae"
+    },
+    {
+      "block_id": "page-0899-block-0030",
+      "order": 30,
+      "text": "Drowsiness, ataxia, nystagmus, \nrespiratory dysarthria, depression, coma.\n",
+      "bbox": [
+        293.8847961425781,
+        553.1621704101562,
+        422.787353515625,
+        571.8671875
+      ],
+      "text_sha256": "0c69a234489e8c55eddfd604fa59f3f953d5660e48bceecffb5ffc88e575450b"
+    },
+    {
+      "block_id": "page-0899-block-0031",
+      "order": 31,
+      "text": "Buspirone24\nLow\nLimited data. Deaths not \nreported.\n",
+      "bbox": [
+        61.887298583984375,
+        598.1846923828125,
+        265.7298278808594,
+        616.899658203125
+      ],
+      "text_sha256": "a58c3085553cdf746ece7d53d1f945a661b6e0227c5e743c4e43ab8d5c5c1042"
+    },
+    {
+      "block_id": "page-0899-block-0032",
+      "order": 32,
+      "text": "Not known.\n",
+      "bbox": [
+        293.8847961425781,
+        598.1947021484375,
+        331.81982421875,
+        606.9022216796875
+      ],
+      "text_sha256": "77a62f2c793d5fb9f7cc5bd4567ce84a702459b9f11fbb7c24d82bb8f8793958"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

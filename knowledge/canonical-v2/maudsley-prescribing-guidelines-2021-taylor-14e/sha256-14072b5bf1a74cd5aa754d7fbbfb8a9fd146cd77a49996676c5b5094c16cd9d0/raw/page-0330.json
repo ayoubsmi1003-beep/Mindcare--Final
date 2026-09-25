@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0330",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 330,
+  "source_page_index": 329,
+  "source_page_display": 330,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    309\nCHAPTER 3\nrisk with clozapine, and paroxetine is a potent inhibitor of CYP2D6, which can result \nin treatment failure with tamoxifen (a pro-drug) leading to increased mortality.17\nAntidepressants can also cause pharmacodynamic interactions. For example, the car-\ndiotoxicity of TCAs may be exacerbated by drugs such as diuretics that can cause elec-\ntrolyte disturbances. A summary of clinically relevant drug interactions with \nantidepressants can be found later in this chapter.\nPotential pharmacokinetic and pharmacodynamic interactions between antidepres-\nsants have to be considered when switching from one antidepressant to another (see \nsection on Switching antidepressants in this chapter).\nSuicidality\nAntidepressant treatment has been associated with an increased risk of suicidal thoughts \nand acts, particularly in adolescents and young adults,18–21 leading to the recommenda-\ntion that patients should be warned of this potential adverse effect during the early \nweeks of treatment and know how to seek help if required. Suicide and self-harm rates \ntend to be higher when antidepressants are started or stopped, so the same care over \nrisk assessment should be carried out when treatment is stopped as when it is started.22 \nFurthermore, switching antidepressants may be a marker of increased risk of suicidal \nbehaviours in those who initiate antidepressant treatment aged 75 years and over.23\nAll antidepressants have been implicated,24 including those that are marketed for an \nindication other than depression (e.g. atomoxetine). It should be noted that (1) although \nthe relative risk may be elevated above placebo rates in some patient groups, the abso-\nlute risk remains very small; (2) the most effective way to prevent suicidal thoughts and \nacts is to treat depression;25–27 and (3) antidepressant drugs are the most effective treat-\nment currently available.3,28 For the most part, suicidality is greatly reduced by the use \nof antidepressants.29–31 Note, however, that those who experience treatment-emergent \nor worsening suicidal ideation with one antidepressant may be more likely to have a \nsimilar experience with subsequent treatments.32 Some recent data suggests that an \nincreasing proportion of young women who later committed suicide had in the last few \nyears been treated with antidepressants prior to and at the time of the suicide.33 At the \ntime of writing, there is no clear consensus on the potential dangers of antidepressants \nexcept that young people are most at risk.34\nToxicity in overdose varies both between and within groups of antidepressants.35 See \nsection on ‘Psychotropics in overdose’ in Chapter 13.\nDuration of treatment\nAntidepressants relieve the symptoms of depression but do not treat the underlying \ncause. A reasonable amount of evidence suggests that they should be taken for \n6–9 months after recovery from a single episode (presumably to cover the duration of \nan untreated episode). In those patients who have had multiple episodes, there is evi-\ndence of benefit from maintenance treatment for at least 2 years, but no upper duration \nof treatment has been identified (see section on ‘Antidepressant prophylaxis’ in this \nchapter). There are little data on which to base recommendations about the duration of \n",
+  "raw_text_sha256": "9609aca23c039db5477144625578cce1a484f23b308e8bbb4b2e7231ad3a86b7",
+  "coordinates_sha256": "45ea3289868f709cd7e9e6cb67cb7c1099ffd3c78169cb6a968353d85395ce79",
+  "block_sequence_sha256": "0a4ada3aafb5a1c050887f96d899c43a826864aa2c218615b0dd9f9425faaf49",
+  "blocks": [
+    {
+      "block_id": "page-0330-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    309\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "7e577057cdb31e46abe707d8a6906cd4f8a03afe40dee534f3d7e7a13436fde8"
+    },
+    {
+      "block_id": "page-0330-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0330-block-0002",
+      "order": 2,
+      "text": "risk with clozapine, and paroxetine is a potent inhibitor of CYP2D6, which can result \nin treatment failure with tamoxifen (a pro-drug) leading to increased mortality.17\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.719970703125,
+        86.27041625976562
+      ],
+      "text_sha256": "af39154fb515ceec1982e6555ac93cd79b84b74fbfce05c8f715a7b150125f0e"
+    },
+    {
+      "block_id": "page-0330-block-0003",
+      "order": 3,
+      "text": "Antidepressants can also cause pharmacodynamic interactions. For example, the car-\ndiotoxicity of TCAs may be exacerbated by drugs such as diuretics that can cause elec-\ntrolyte disturbances. A summary of clinically relevant drug interactions with \nantidepressants can be found later in this chapter.\n",
+      "bbox": [
+        48.0,
+        86.5504150390625,
+        422.7799377441406,
+        134.27041625976562
+      ],
+      "text_sha256": "b99b59be7126fe6b936af0c6702d41d1d92c266f8eb176e3d0aa4c6e5114bd94"
+    },
+    {
+      "block_id": "page-0330-block-0004",
+      "order": 4,
+      "text": "Potential pharmacokinetic and pharmacodynamic interactions between antidepres-\nsants have to be considered when switching from one antidepressant to another (see \nsection on Switching antidepressants in this chapter).\n",
+      "bbox": [
+        47.999996185302734,
+        134.5504150390625,
+        422.8199462890625,
+        170.27041625976562
+      ],
+      "text_sha256": "34d3b05094b281572e60f4f95fe0469dd26efa284eb183517597065808c7cbf7"
+    },
+    {
+      "block_id": "page-0330-block-0005",
+      "order": 5,
+      "text": "Suicidality\n",
+      "bbox": [
+        48.0,
+        187.70547485351562,
+        101.18498992919922,
+        200.740478515625
+      ],
+      "text_sha256": "1e9863baa97120354f8f5b056b13f995a9bdd6d4b0de3766ef2756cfa3ece0b0"
+    },
+    {
+      "block_id": "page-0330-block-0006",
+      "order": 6,
+      "text": "Antidepressant treatment has been associated with an increased risk of suicidal thoughts \nand acts, particularly in adolescents and young adults,18–21 leading to the recommenda-\ntion that patients should be warned of this potential adverse effect during the early \nweeks of treatment and know how to seek help if required. Suicide and self-harm rates \ntend to be higher when antidepressants are started or stopped, so the same care over \nrisk assessment should be carried out when treatment is stopped as when it is started.22 \nFurthermore, switching antidepressants may be a marker of increased risk of suicidal \nbehaviours in those who initiate antidepressant treatment aged 75 years and over.23\n",
+      "bbox": [
+        47.998199462890625,
+        206.55047607421875,
+        422.80810546875,
+        302.2704772949219
+      ],
+      "text_sha256": "d4bf7e6701c259283a07949dc0e1bf0a4523599df8f90057063cc2bd7a8d5b42"
+    },
+    {
+      "block_id": "page-0330-block-0007",
+      "order": 7,
+      "text": "All antidepressants have been implicated,24 including those that are marketed for an \nindication other than depression (e.g. atomoxetine). It should be noted that (1) although \nthe relative risk may be elevated above placebo rates in some patient groups, the abso-\nlute risk remains very small; (2) the most effective way to prevent suicidal thoughts and \nacts is to treat depression;25–27 and (3) antidepressant drugs are the most effective treat-\nment currently available.3,28 For the most part, suicidality is greatly reduced by the use \nof antidepressants.29–31 Note, however, that those who experience treatment-emergent \nor worsening suicidal ideation with one antidepressant may be more likely to have a \nsimilar experience with subsequent treatments.32 Some recent data suggests that an \nincreasing proportion of young women who later committed suicide had in the last few \nyears been treated with antidepressants prior to and at the time of the suicide.33 At the \ntime of writing, there is no clear consensus on the potential dangers of antidepressants \nexcept that young people are most at risk.34\n",
+      "bbox": [
+        47.99699401855469,
+        302.55047607421875,
+        422.81329345703125,
+        458.2704772949219
+      ],
+      "text_sha256": "aa07a99110e9e5b68938269b52ffd67ebdfa42e0960c5db7e1de1eb990ead570"
+    },
+    {
+      "block_id": "page-0330-block-0008",
+      "order": 8,
+      "text": "Toxicity in overdose varies both between and within groups of antidepressants.35 See \nsection on ‘Psychotropics in overdose’ in Chapter 13.\n",
+      "bbox": [
+        47.99517822265625,
+        458.55047607421875,
+        422.7751770019531,
+        482.2704772949219
+      ],
+      "text_sha256": "79e0c72b444c4ad7cf887b8c4524071aa6d7305e0b7157a63b47c1c298b90c10"
+    },
+    {
+      "block_id": "page-0330-block-0009",
+      "order": 9,
+      "text": "Duration of treatment\n",
+      "bbox": [
+        48.0,
+        499.7054748535156,
+        162.71900939941406,
+        512.740478515625
+      ],
+      "text_sha256": "32a237a9dc3f0b61d6d5c735e030712e7e9227d80ad3a777910812f4351010ca"
+    },
+    {
+      "block_id": "page-0330-block-0010",
+      "order": 10,
+      "text": "Antidepressants relieve the symptoms of depression but do not treat the underlying \ncause. A reasonable amount of evidence suggests that they should be taken for \n6–9 months after recovery from a single episode (presumably to cover the duration of \nan untreated episode). In those patients who have had multiple episodes, there is evi-\ndence of benefit from maintenance treatment for at least 2 years, but no upper duration \nof treatment has been identified (see section on ‘Antidepressant prophylaxis’ in this \nchapter). There are little data on which to base recommendations about the duration of \n",
+      "bbox": [
+        48.0,
+        518.5504760742188,
+        422.8199157714844,
+        602.2705078125
+      ],
+      "text_sha256": "8dc589d119d10facc81d48aed807d589d3913864d04e5f263a539b845df6436b"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

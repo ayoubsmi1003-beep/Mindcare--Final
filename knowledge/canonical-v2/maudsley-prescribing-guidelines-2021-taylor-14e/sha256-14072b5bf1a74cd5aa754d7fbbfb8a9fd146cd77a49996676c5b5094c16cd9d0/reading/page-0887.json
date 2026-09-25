@@ -1,0 +1,15 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0887",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 887,
+  "source_page_index": 886,
+  "repaired_text": "866    The Maudsley Prescribing Guidelines in Psychiatry\nCHAPTER  12\nGeneral effects of caffeine\n■\n■Acute use can increase systolic and diastolic blood pressure (BP) by up to 10mmHg\nfor up to 4 hours.3 Chronic moderate use probably has little effect on BP.8\n■\n■May enhance reinforcing effects of nicotine and possibly other drugs of misuse.4,9\n■\n■Caffeine has de novo psychotropic effects (see Table 12.2), may worsen existing psychiatric illness and may interact with psychotropic drugs.\n■\n■Caffeine is an antagonist at adenosine A1 and A2A receptors, thus stimulating dopa-\nmine pathways.\nPsychotropic effects of caffeine\nAn established withdrawal syndrome exists. Symptoms include headache, depressed \nmood, anxiety, fatigue, irritability, nausea, dysphoria and craving.10\nPharmacokinetics\n■\n■Absorption\n■\n■Rapid after oral administration, especially in liquid form.\n■\n■Half-life of 2.5–4.5 hours.\n■\n■Metabolism\n■\n■Metabolised by CYP1A2, a hepatic cytochrome enzyme that exhibits genetic polymorphism, which may partially account for the large inter-individual differences \nthat are seen in the ability to tolerate caffeine.11 Note that CYP1A2 is induced by \nsmoking and inhibited by a number of drugs such as fluvoxamine.\n■\n■This metabolic pathway may become saturated at higher doses.12\n■\n■Interactions (Table 12.3)\n■\n■The potential effects of caffeine on the metabolism of other drugs, as well as the\npotential to induce a caffeine-withdrawal syndrome, should always be considered \nbefore substituting caffeine-free drinks.\n■\n■Caffeine competitively inhibits CYP1A2. Plasma levels of some drugs may be\nreduced if caffeine is withdrawn.\nTable 12.2  Dose and psychotropic effects of caffeine\nDose\nPsychotropic effect\nGenerally\nCentral nervous system stimulation\nIncreased catecholamine release, \nparticularly dopamine5\nLow to moderate dose2,6\nElation\nImpulsivity\nPeacefulness\nLarge doses >600mg/day7\n(Sensitive (non-tolerant) individuals may experience  \neffects at lower doses; tolerance develops in long-term \nusers)\nAnxiety\nInsomnia\nPsychomotor agitation\nExcitement\nRambling speech\nDelirium\nPsychosis",
+  "repaired_text_sha256": "2a404279f38171ebf17990af9ba45fa593222119b74cf221fcab17ef693419bd",
+  "raw_text_sha256": "ab9a796265fa0bcf9290902e21110b74e92daf6352d4a747ad362a4cfb568b78",
+  "repair_ids": [
+    "repair-000791",
+    "repair-000792"
+  ],
+  "raw_file": "raw/page-0887.json"
+}

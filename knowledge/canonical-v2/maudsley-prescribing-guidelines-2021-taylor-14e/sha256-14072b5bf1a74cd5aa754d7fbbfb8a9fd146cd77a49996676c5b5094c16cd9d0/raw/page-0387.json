@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0387",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 387,
+  "source_page_index": 386,
+  "source_page_display": 387,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "366    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nAntidepressants – alternative routes of administration\nIn rare cases, patients may be unable or unwilling to take antidepressants orally, or \ngastrointestinal absorption of medication may be compromised, and alternative treat-\nments including psychological interventions and electroconvulsive therapy (ECT) are \neither impractical or contra-indicated.\nOne such scenario is depression in the medically ill,1 particularly those who have \nundergone surgical resection procedures affecting the gastrointestinal tract. Such \npatients often have feeding tubes inserted. Where the intra-gastric (IG) route is used, \nantidepressants can usually be crushed and administered. If an intra-jejunal (IJ) tube is \nused then more care is required because of changes in the rate or extent of absorption. \nWhere available, plasma level monitoring may be helpful in differentiating between \nnon-response and lack of absorption.\nVery few non-oral formulations are available as commercial products. Most formula-\ntions do not have UK licences and may be very difficult to obtain, being available only \nthrough pharmaceutical importers or from Specials manufacturers. In addition, the use \nof these preparations beyond their licence or in an absence of a licence usually means \nthat accountability for adverse effects lies with the prescriber. As a consequence, non-\noral administration of antidepressants should be undertaken only when absolutely nec-\nessary. It is worth considering that some psychotropics that are not conventionally \nlabelled ‘antidepressants’ may possess pharmacological antidepressant activity and be \nmore readily available in non-oral formulations. Many of the atypical antipsychotics \nare available as intramuscular injections, although data supporting use in depression \nare limited to oral adjunct of standard antidepressants.\nAlternative antidepressant delivery methods\nSublingual\nThere are a small number of case reports supporting the effectiveness of fluoxetine \nliquid used sublingually in depressed, medically compromised patients.2 In these reports, \ndoses of up to 60mg a day produced plasma fluoxetine and norfluoxetine levels towards \nthe lower end of the proposed therapeutic range.2 Ketamine injection has also been \nused sublingually, with apparent good efficacy.3 It may be better tolerated than other \nroutes of administration (IV or SC).3\nBuccal\nSelegiline is available as oral lyophilisates for absorption in the buccal cavity (licensed \nfor the treatment of Parkinson’s disease) but is selective for MAO-B inhibition at the \n1.25mg doses available – lack of action at MAO-A in the central nervous system at \nthese doses is thought to preclude antidepressant activity.4 A very small study of orally \ndisintegrating 10mg/day selegiline, however, showed significant inhibition of brain \nMAO-A, but clinical antidepressant activity has not been investigated.5\nVarious studies have investigated development of a buccal-adhesive delivery system \nfor doxepin,6,7 but no commercial product is yet available. One case report describes \n",
+  "raw_text_sha256": "6b7551b7f6240eb963851cda29d1599549b62dc53c258603c84022f4ebe795f6",
+  "coordinates_sha256": "192c0939846d51db2fc1bfbfc0f0689a2bf8402d63304cd273eb23e45e0f2d01",
+  "block_sequence_sha256": "8d66890addcc499b779cd2f479b30a8db026849a0753fd507287f5667d67b477",
+  "blocks": [
+    {
+      "block_id": "page-0387-block-0000",
+      "order": 0,
+      "text": "366    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "fc19da56d54129a3d8a0ed8460e224ef2c801c78b5e7ae9626ba7702e29ad737"
+    },
+    {
+      "block_id": "page-0387-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0387-block-0002",
+      "order": 2,
+      "text": "Antidepressants – alternative routes of administration\n",
+      "bbox": [
+        68.88999938964844,
+        66.06539916992188,
+        349.2470397949219,
+        79.10040283203125
+      ],
+      "text_sha256": "54f17fd01bb7c32acdac8b49241d1b43999b6a765dfea390c535b574f6827742"
+    },
+    {
+      "block_id": "page-0387-block-0003",
+      "order": 3,
+      "text": "In rare cases, patients may be unable or unwilling to take antidepressants orally, or \ngastrointestinal absorption of medication may be compromised, and alternative treat-\nments including psychological interventions and electroconvulsive therapy (ECT) are \neither impractical or contra-indicated.\n",
+      "bbox": [
+        61.88999938964844,
+        84.910400390625,
+        436.669921875,
+        132.63040161132812
+      ],
+      "text_sha256": "603f0ba81514783128345c425e2513ac7a70363b334d304f7e572b29b7dc0766"
+    },
+    {
+      "block_id": "page-0387-block-0004",
+      "order": 4,
+      "text": "One such scenario is depression in the medically ill,1 particularly those who have \nundergone surgical resection procedures affecting the gastrointestinal tract. Such \npatients often have feeding tubes inserted. Where the intra-gastric (IG) route is used, \nantidepressants can usually be crushed and administered. If an intra-jejunal (IJ) tube is \nused then more care is required because of changes in the rate or extent of absorption. \nWhere available, plasma level monitoring may be helpful in differentiating between \nnon-response and lack of absorption.\n",
+      "bbox": [
+        61.893707275390625,
+        132.910400390625,
+        436.71368408203125,
+        216.63040161132812
+      ],
+      "text_sha256": "a651fe19fc2562d963e3e154b03a2944f568e0266e2aeff692316184c020701f"
+    },
+    {
+      "block_id": "page-0387-block-0005",
+      "order": 5,
+      "text": "Very few non-oral formulations are available as commercial products. Most formula-\ntions do not have UK licences and may be very difficult to obtain, being available only \nthrough pharmaceutical importers or from Specials manufacturers. In addition, the use \nof these preparations beyond their licence or in an absence of a licence usually means \nthat accountability for adverse effects lies with the prescriber. As a consequence, non-\noral administration of antidepressants should be undertaken only when absolutely nec-\nessary. It is worth considering that some psychotropics that are not conventionally \nlabelled ‘antidepressants’ may possess pharmacological antidepressant activity and be \nmore readily available in non-oral formulations. Many of the atypical antipsychotics \nare available as intramuscular injections, although data supporting use in depression \nare limited to oral adjunct of standard antidepressants.\n",
+      "bbox": [
+        61.893707275390625,
+        216.910400390625,
+        436.7137756347656,
+        348.6304016113281
+      ],
+      "text_sha256": "c54be0e38d1dcc86c306d457fd8a7f29226971a6a4acdfdd296439b27ff9fd8a"
+    },
+    {
+      "block_id": "page-0387-block-0006",
+      "order": 6,
+      "text": "Alternative antidepressant delivery methods\n",
+      "bbox": [
+        61.88999938964844,
+        366.0653991699219,
+        292.9559631347656,
+        379.10040283203125
+      ],
+      "text_sha256": "8e72521a066f46a57e7afc08e3ab80b43a56fad4dc9ec659a22f79a0068cf387"
+    },
+    {
+      "block_id": "page-0387-block-0007",
+      "order": 7,
+      "text": "Sublingual\n",
+      "bbox": [
+        61.88999938964844,
+        385.0003967285156,
+        111.89999389648438,
+        396.85040283203125
+      ],
+      "text_sha256": "8494de50bcff4b36cdbc79018ab0ee0a1eb0a203ad1681749e3f734a0c67be88"
+    },
+    {
+      "block_id": "page-0387-block-0008",
+      "order": 8,
+      "text": "There are a small number of case reports supporting the effectiveness of fluoxetine \nliquid used sublingually in depressed, medically compromised patients.2 In these reports, \ndoses of up to 60mg a day produced plasma fluoxetine and norfluoxetine levels towards \nthe lower end of the proposed therapeutic range.2 Ketamine injection has also been \nused sublingually, with apparent good efficacy.3 It may be better tolerated than other \nroutes of administration (IV or SC).3\n",
+      "bbox": [
+        61.88560485839844,
+        402.67041015625,
+        436.6699523925781,
+        474.6304016113281
+      ],
+      "text_sha256": "5eb582577b639407efe3da434a2d6d19346a5d7373935f66e6dee0dac647bfd2"
+    },
+    {
+      "block_id": "page-0387-block-0009",
+      "order": 9,
+      "text": "Buccal\n",
+      "bbox": [
+        61.88999938964844,
+        493.0003967285156,
+        91.33000183105469,
+        504.85040283203125
+      ],
+      "text_sha256": "901b45c5ca4b75998f747cc4a167d24866fc586fe94a4d6127fc556bb36d1d8c"
+    },
+    {
+      "block_id": "page-0387-block-0010",
+      "order": 10,
+      "text": "Selegiline is available as oral lyophilisates for absorption in the buccal cavity (licensed \nfor the treatment of Parkinson’s disease) but is selective for MAO-B inhibition at the \n1.25mg doses available – lack of action at MAO-A in the central nervous system at \nthese doses is thought to preclude antidepressant activity.4 A very small study of orally \ndisintegrating 10mg/day selegiline, however, showed significant inhibition of brain \nMAO-A, but clinical antidepressant activity has not been investigated.5\n",
+      "bbox": [
+        61.88999938964844,
+        510.910400390625,
+        436.6999206542969,
+        582.6304321289062
+      ],
+      "text_sha256": "89816f6e29054e21fcc4b2b6853ea4f5af862f60ef0cb5d34cbc206dca61ca53"
+    },
+    {
+      "block_id": "page-0387-block-0011",
+      "order": 11,
+      "text": "Various studies have investigated development of a buccal-adhesive delivery system \nfor doxepin,6,7 but no commercial product is yet available. One case report describes \n",
+      "bbox": [
+        61.88999938964844,
+        582.910400390625,
+        436.6800231933594,
+        606.6304321289062
+      ],
+      "text_sha256": "f9937a0c4fa80614723a8bbd72f64881f46ec89bb1cb33800765572024beef04"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

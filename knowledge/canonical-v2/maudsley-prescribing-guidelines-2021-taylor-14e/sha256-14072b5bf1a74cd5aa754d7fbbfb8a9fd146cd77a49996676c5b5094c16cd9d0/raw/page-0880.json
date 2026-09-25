@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0880",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 880,
+  "source_page_index": 879,
+  "source_page_display": 880,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Pharmacokinetics    859\nCHAPTER 11\n\t19.\t Scherf-Clavel M, et al. Smoking is associated with lower dose-corrected serum concentrations of escitalopram. J Clin Psychopharmacol 2019; \n39:485–488.\n\t20.\t Ereshefsky L, et al. Effects of smoking on fluphenazine clearance in psychiatric inpatients. Biol Psychiatry 1985; 20:329–332.\n\t21.\t Spigset O, et al. Effect of cigarette smoking on fluvoxamine pharmacokinetics in humans. Clin Pharmacol Ther 1995; 58:399–403.\n\t22.\t Jann MW, et al. Effects of smoking on haloperidol and reduced haloperidol plasma concentrations and haloperidol clearance. \nPsychopharmacology 1986; 90:468–470.\n\t23.\t Shimoda K, et al. Lower plasma levels of haloperidol in smoking than in nonsmoking schizophrenic patients. Ther Drug Monit 1999; \n21:293–296.\n\t24.\t Takahashi LH, et al. Effect of smoking on the pharmacokinetics of inhaled loxapine. Ther Drug Monit 2014; 36:618–623.\n\t25.\t Grasmader K, et al. Population pharmacokinetic analysis of mirtazapine. Eur J Clin Pharmacol 2004; 60:473–480.\n\t26.\t Carrillo JA, et al. Role of the smoking-induced cytochrome P450 (CYP)1A2 and polymorphic CYP2D6 in steady-state concentration of \nolanzapine. J Clin Psychopharmacol 2003; 23:119–127.\n\t27.\t Gex-Fabry M, et al. Therapeutic drug monitoring of olanzapine: the combined effect of age, gender, smoking, and comedication. Ther Drug \nMonit 2003; 25:46–53.\n\t28.\t Bigos KL, et al. Sex, race, and smoking impact olanzapine exposure. J Clin Pharmacol 2008; 48:157–165.\n\t29.\t Lowe EJ, et al. Impact of tobacco smoking cessation on stable clozapine or olanzapine treatment. Ann Pharmacother 2010; 44:727–732.\n\t30.\t Schoretsanitis G, et al. Effect of smoking on risperidone pharmacokinetics – a multifactorial approach to better predict the influence on drug \nmetabolism. Schizophr Res 2017; 185:51–57.\n\t31.\t Ishida M, et al. Effects of various factors on steady state plasma concentrations of trazodone and its active metabolite m-chlorophenylpiper-\nazine. Int Clin Psychopharmacol 1995; 10:143–146.\n\t32.\t Jann MW, et al. Clinical pharmacokinetics of the depot antipsychotics. Clin Pharmacokinet 1985; 10:315–333.\n\t33.\t Jorgensen A, et al. Zuclopenthixol decanoate in schizophrenia: serum levels and clinical state. Psychopharmacology 1985; 87:364–367.\n\t34.\t Blacker CJ. Clinical issues to consider for clozapine patients who vape: a case illustration. Focus (American Psychiatric Publishing) 2020; \n18:55–57.\n",
+  "raw_text_sha256": "597cc341f519011d18a753703ac2938ffb27c9f5098fc55dc2953ca82144b2cf",
+  "coordinates_sha256": "17bc738f58cbd9fa97b26413d3581d5164b97cce1df804e019eb7959621fb626",
+  "block_sequence_sha256": "4c42122b4f11efa56e5f84db69b7681cb0f977271041432141712bdec719d4a5",
+  "blocks": [
+    {
+      "block_id": "page-0880-block-0000",
+      "order": 0,
+      "text": "Pharmacokinetics    859\n",
+      "bbox": [
+        320.4088134765625,
+        31.395221710205078,
+        420.00079345703125,
+        41.0272216796875
+      ],
+      "text_sha256": "106c77a8d546c7750c0cabef6126cd89316606d534984dd379039b6af3972bcf"
+    },
+    {
+      "block_id": "page-0880-block-0001",
+      "order": 1,
+      "text": "CHAPTER 11\n",
+      "bbox": [
+        454.4096984863281,
+        140.99053955078125,
+        463.88970947265625,
+        186.78250122070312
+      ],
+      "text_sha256": "8577f8a61d9be9d957b7354680b21b61adb6e8c4601aaa9be76ccc79360dc7f3"
+    },
+    {
+      "block_id": "page-0880-block-0002",
+      "order": 2,
+      "text": "\t19.\t Scherf-Clavel M, et al. Smoking is associated with lower dose-corrected serum concentrations of escitalopram. J Clin Psychopharmacol 2019; \n",
+      "bbox": [
+        48.0,
+        63.2703857421875,
+        421.69805908203125,
+        70.30238342285156
+      ],
+      "text_sha256": "072883927bdd40b82b6dca7b13eae675c23605e0667e378eb1f8c17ee151510b"
+    },
+    {
+      "block_id": "page-0880-block-0003",
+      "order": 3,
+      "text": "39:485–488.\n\t20.\t Ereshefsky L, et al. Effects of smoking on fluphenazine clearance in psychiatric inpatients. Biol Psychiatry 1985; 20:329–332.\n\t21.\t Spigset O, et al. Effect of cigarette smoking on fluvoxamine pharmacokinetics in humans. Clin Pharmacol Ther 1995; 58:399–403.\n\t22.\t Jann MW, et al. Effects of smoking on haloperidol and reduced haloperidol plasma concentrations and haloperidol clearance. \n",
+      "bbox": [
+        48.00600051879883,
+        72.12638854980469,
+        421.716064453125,
+        106.30238342285156
+      ],
+      "text_sha256": "a5da2c56c099fc6902f9c4b857566ba14483fc30c41ee3d3932ad966f3f254ea"
+    },
+    {
+      "block_id": "page-0880-block-0004",
+      "order": 4,
+      "text": "Psychopharmacology 1986; 90:468–470.\n\t23.\t Shimoda K, et al. Lower plasma levels of haloperidol in smoking than in nonsmoking schizophrenic patients. Ther Drug Monit 1999; \n",
+      "bbox": [
+        48.02399826049805,
+        108.12638854980469,
+        421.68597412109375,
+        124.30238342285156
+      ],
+      "text_sha256": "872b4dbd3d51aad8e499d92545eaf73a34151730008ac28d37c701815a21dce9"
+    },
+    {
+      "block_id": "page-0880-block-0005",
+      "order": 5,
+      "text": "21:293–296.\n\t24.\t Takahashi LH, et al. Effect of smoking on the pharmacokinetics of inhaled loxapine. Ther Drug Monit 2014; 36:618–623.\n\t25.\t Grasmader K, et al. Population pharmacokinetic analysis of mirtazapine. Eur J Clin Pharmacol 2004; 60:473–480.\n\t26.\t Carrillo JA, et al. Role of the smoking-induced cytochrome P450 (CYP)1A2 and polymorphic CYP2D6 in steady-state concentration of \n",
+      "bbox": [
+        48.029998779296875,
+        126.12638854980469,
+        421.7339172363281,
+        160.30238342285156
+      ],
+      "text_sha256": "2a70b0b9d35cf2e18f313b66b2f75c114279fe8f05969758323c485ff93ee5ab"
+    },
+    {
+      "block_id": "page-0880-block-0006",
+      "order": 6,
+      "text": "olanzapine. J Clin Psychopharmacol 2003; 23:119–127.\n\t27.\t Gex-Fabry M, et al. Therapeutic drug monitoring of olanzapine: the combined effect of age, gender, smoking, and comedication. Ther Drug \n",
+      "bbox": [
+        48.04800033569336,
+        162.1263885498047,
+        421.71600341796875,
+        178.30238342285156
+      ],
+      "text_sha256": "7cb3ff68cdccc1e98c6b0811ce48f756a00b7eb6ef3542f07209d30f9744ed6e"
+    },
+    {
+      "block_id": "page-0880-block-0007",
+      "order": 7,
+      "text": "Monit 2003; 25:46–53.\n\t28.\t Bigos KL, et al. Sex, race, and smoking impact olanzapine exposure. J Clin Pharmacol 2008; 48:157–165.\n\t29.\t Lowe EJ, et al. Impact of tobacco smoking cessation on stable clozapine or olanzapine treatment. Ann Pharmacother 2010; 44:727–732.\n\t30.\t Schoretsanitis G, et al. Effect of smoking on risperidone pharmacokinetics – a multifactorial approach to better predict the influence on drug \n",
+      "bbox": [
+        48.05400085449219,
+        180.1263885498047,
+        421.6979675292969,
+        214.30238342285156
+      ],
+      "text_sha256": "78beae45ebbca2a13bf5cf66c6e50e2b2dbd2fd587495acc438231229810b797"
+    },
+    {
+      "block_id": "page-0880-block-0008",
+      "order": 8,
+      "text": "metabolism. Schizophr Res 2017; 185:51–57.\n\t31.\t Ishida M, et al. Effects of various factors on steady state plasma concentrations of trazodone and its active metabolite m-chlorophenylpiper-\n",
+      "bbox": [
+        48.071998596191406,
+        216.1263885498047,
+        420.0780029296875,
+        232.30238342285156
+      ],
+      "text_sha256": "71b3e570cb956e36f4babaae345d059b27bd6b207a34e51f9c32c5679cc5ffd7"
+    },
+    {
+      "block_id": "page-0880-block-0009",
+      "order": 9,
+      "text": "azine. Int Clin Psychopharmacol 1995; 10:143–146.\n\t32.\t Jann MW, et al. Clinical pharmacokinetics of the depot antipsychotics. Clin Pharmacokinet 1985; 10:315–333.\n\t33.\t Jorgensen A, et al. Zuclopenthixol decanoate in schizophrenia: serum levels and clinical state. Psychopharmacology 1985; 87:364–367.\n\t34.\t Blacker CJ. Clinical issues to consider for clozapine patients who vape: a case illustration. Focus (American Psychiatric Publishing) 2020; \n",
+      "bbox": [
+        48.077999114990234,
+        234.1263885498047,
+        421.7699279785156,
+        268.3023986816406
+      ],
+      "text_sha256": "c7c12f6ea90455878e7683f321ddd463afe20cc29e9717acfc36cd4fbdcc6043"
+    },
+    {
+      "block_id": "page-0880-block-0010",
+      "order": 10,
+      "text": "18:55–57.\n",
+      "bbox": [
+        59.09400177001953,
+        270.1263732910156,
+        85.44599151611328,
+        277.3023986816406
+      ],
+      "text_sha256": "045c35f7b67dc296f5ca1b363124a7abd685f93773935c21c2f97152dd853ebb"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

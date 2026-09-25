@@ -1,0 +1,407 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0334",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 334,
+  "source_page_index": 333,
+  "source_page_display": 334,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    313\nCHAPTER 3\nReferences\n\t 1.\t Furukawa TA, et al. Meta-analysis of effects and side effects of low dosage tricyclic antidepressants in depression: systematic review. BMJ \n2002; 325:991.\n\t 2.\t Donoghue J, et al. Suboptimal use of antidepressants in the treatment of depression. CNS Drugs 2000; 13:365–368.\n\t 3.\t Lancaster SG, et al. Lofepramine. A review of its pharmacodynamic and pharmacokinetic properties, and therapeutic efficacy in depressive \nillness. Drugs 1989; 37:123–140.\n\t 4.\t Montgomery SA, et al. The optimal dosing regimen for citalopram – a meta-analysis of nine placebo-controlled studies. Int Clin \nPsychopharmacol 1994; 9 Suppl 1:35–40.\n\t 5.\t Burke WJ, et al. Fixed-dose trial of the single isomer SSRI escitalopram in depressed outpatients. J Clin Psychiatry 2002; 63:331–336.\n\t 6.\t Altamura AC, et al. The evidence for 20mg a day of fluoxetine as the optimal dose in the treatment of depression. Br J Psychiatry Suppl 1988; \n109–112.\n\t 7.\t Walczak DD, et al. The oral dose-effect relationship for fluvoxamine: a fixed-dose comparison against placebo in depressed outpatients. Ann \nClin Psychiatry 1996; 8:139–151.\n\t 8.\t Dunner DL, et al. Optimal dose regimen for paroxetine. J Clin Psychiatry 1992; 53 Suppl:21–26.\n\t 9.\t Moon CAL, et al. A double-blind comparison of sertraline and clomipramine in the treatment of major depressive disorder and associative \nanxiety in general practice. J Psychopharm 1994; 8:171–176.\n\t10.\t Loo H, et al. Determination of the dose of agomelatine, a melatoninergic agonist and selective 5-HT(2C) antagonist, in the treatment of major \ndepressive disorder: a placebo-controlled dose range study. Int Clin Psychopharmacol 2002; 17:239–247.\n\t11.\t Hewett K, et al. Eight-week, placebo-controlled, double-blind comparison of the antidepressant efficacy and tolerability of bupropion XR \nand venlafaxine XR. J Psychopharmacology 2009; 23:531–538.\n\t12.\t Kornstein SG, et al. The effect of desvenlafaxine 50 mg/day on a subpopulation of anxious/depressed patients: a pooled analysis of seven \nrandomized, placebo-controlled studies. Human Psychopharmacology 2014; 29:492–501.\n\t13.\t Goldstein DJ, et al. Duloxetine in the treatment of depression: a double-blind placebo-controlled comparison with paroxetine. J Clin \nPsychopharmacol 2004; 24:389–399.\n\t14.\t Detke MJ, et al. Duloxetine, 60 mg once daily, for major depressive disorder: a randomized double-blind placebo-controlled trial. J Clin \nPsychiatry 2002; 63:308–315.\n\t15.\t He H, et al. Efficacy and tolerability of different doses of three new antidepressants for treating major depressive disorder: a PRISMA-\ncompliant meta-analysis. J Psychiatr Res 2018; 96:247–259.\n\t16.\t Furukawa TA, et al. No benefit from flexible titration above minimum licensed dose in prescribing antidepressants for major depression: \nsystematic review. Acta Psychiatr Scand 2020; 141:401–409.\n\t17.\t Priest RG, et al. Moclobemide in the treatment of depression. Rev Contemporary Pharmacother 1994; 5:35–43.\n\t18.\t Schatzberg AF. Clinical efficacy of reboxetine in major depression. J Clin Psychiatry 2000; 61 Suppl 10:31–38.\n\t19.\t Brogden RN, et al. Trazodone: a review of its pharmacological properties and therapeutic use in depression and anxiety. Drugs 1981; \n21:401–429.\n\t20.\t Feighner JP, et al. Efficacy of once-daily venlafaxine extended release (XR) for symptoms of anxiety in depressed outpatients. J Affect Disord \n1998; 47:55–62.\n",
+  "raw_text_sha256": "6b80f0b6ecd2af41ee45cbd9d631274e8aff74545d57469ddc1c39ccb837a4dd",
+  "coordinates_sha256": "6f21784201e877fe3bc3d783f0b0cccef100f974180e509220011a294a6f9ab5",
+  "block_sequence_sha256": "5448311ede83e13e767974a78aac1c71cdaefa6a6450ba6d9092fb96d1f4c110",
+  "blocks": [
+    {
+      "block_id": "page-0334-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    313\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "102569924b6dfbaa38519278cd34c1507c1f2bb746e0a50d86abffe5faaf33fd"
+    },
+    {
+      "block_id": "page-0334-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0334-block-0002",
+      "order": 2,
+      "text": "References\n",
+      "bbox": [
+        48.0,
+        62.31546401977539,
+        104.03400421142578,
+        75.3504638671875
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0334-block-0003",
+      "order": 3,
+      "text": "\t 1.\t Furukawa TA, et al. Meta-analysis of effects and side effects of low dosage tricyclic antidepressants in depression: systematic review. BMJ \n",
+      "bbox": [
+        48.0,
+        80.43646240234375,
+        421.6322021484375,
+        87.46846008300781
+      ],
+      "text_sha256": "84511193eed23c5f7fee644b034b94fc0d1bb42cd29b45c38b90d5f6087c991e"
+    },
+    {
+      "block_id": "page-0334-block-0004",
+      "order": 4,
+      "text": "2002; 325:991.\n\t 2.\t Donoghue J, et al. Suboptimal use of antidepressants in the treatment of depression. CNS Drugs 2000; 13:365–368.\n\t 3.\t Lancaster SG, et al. Lofepramine. A review of its pharmacodynamic and pharmacokinetic properties, and therapeutic efficacy in depressive \n",
+      "bbox": [
+        48.00600051879883,
+        89.29246520996094,
+        421.6679992675781,
+        114.46846008300781
+      ],
+      "text_sha256": "975f472402431a078e0844a8fcd0d70640c770acb47f2d66c66bec5606524726"
+    },
+    {
+      "block_id": "page-0334-block-0005",
+      "order": 5,
+      "text": "illness. Drugs 1989; 37:123–140.\n\t 4.\t Montgomery SA, et al. The optimal dosing regimen for citalopram – a meta-analysis of nine placebo-controlled studies. Int Clin \n",
+      "bbox": [
+        48.018001556396484,
+        116.29246520996094,
+        421.64990234375,
+        132.4684600830078
+      ],
+      "text_sha256": "fef7b75292c202d18056fcad4e227325d756a7db740c7a2cb4f213b21a0b2a58"
+    },
+    {
+      "block_id": "page-0334-block-0006",
+      "order": 6,
+      "text": "Psychopharmacol 1994; 9 Suppl 1:35–40.\n\t 5.\t Burke WJ, et al. Fixed-dose trial of the single isomer SSRI escitalopram in depressed outpatients. J Clin Psychiatry 2002; 63:331–336.\n\t 6.\t Altamura AC, et al. The evidence for 20mg a day of fluoxetine as the optimal dose in the treatment of depression. Br J Psychiatry Suppl 1988; \n",
+      "bbox": [
+        48.02399826049805,
+        134.29246520996094,
+        421.662109375,
+        159.4684600830078
+      ],
+      "text_sha256": "cfd73ca78c5d01ec2419431d74abacba1330033300ae9e512ca2d9040b82f1fb"
+    },
+    {
+      "block_id": "page-0334-block-0007",
+      "order": 7,
+      "text": "109–112.\n\t 7.\t Walczak DD, et al. The oral dose-effect relationship for fluvoxamine: a fixed-dose comparison against placebo in depressed outpatients. Ann \n",
+      "bbox": [
+        48.0359992980957,
+        161.43646240234375,
+        421.739990234375,
+        177.4684600830078
+      ],
+      "text_sha256": "49c0cd00e570db31cdeabd8a701ce394c3676b8daa8a591b1494d766a9ffb08b"
+    },
+    {
+      "block_id": "page-0334-block-0008",
+      "order": 8,
+      "text": "Clin Psychiatry 1996; 8:139–151.\n",
+      "bbox": [
+        59.040000915527344,
+        179.29246520996094,
+        146.6759796142578,
+        186.4684600830078
+      ],
+      "text_sha256": "7d06979a0507efdcdedc233c45b014a199c4fc17b50b003091e3d1aa73ba6127"
+    },
+    {
+      "block_id": "page-0334-block-0009",
+      "order": 9,
+      "text": "\t 8.\t Dunner DL, et al. Optimal dose regimen for paroxetine. J Clin Psychiatry 1992; 53 Suppl:21–26.\n",
+      "bbox": [
+        48.04199981689453,
+        188.29246520996094,
+        309.7079772949219,
+        195.46849060058594
+      ],
+      "text_sha256": "f2da3292aba4d388b22c59bf86985fb9a87d9ed0de12f5264812969db3532067"
+    },
+    {
+      "block_id": "page-0334-block-0010",
+      "order": 10,
+      "text": "\t 9.\t Moon CAL, et al. A double-blind comparison of sertraline and clomipramine in the treatment of major depressive disorder and associative \n",
+      "bbox": [
+        48.04800033569336,
+        197.43646240234375,
+        421.7520446777344,
+        204.46849060058594
+      ],
+      "text_sha256": "dc3c4f28d60891ebb872520bc47a3e69b278f6f0abc55db68d16bde989b0a727"
+    },
+    {
+      "block_id": "page-0334-block-0011",
+      "order": 11,
+      "text": "anxiety in general practice. J Psychopharm 1994; 8:171–176.\n",
+      "bbox": [
+        59.052005767822266,
+        206.29246520996094,
+        217.47598266601562,
+        213.4684600830078
+      ],
+      "text_sha256": "60571f1dab7317f1e911b015aae6acff5add9f864829a8fa6fafee445c162258"
+    },
+    {
+      "block_id": "page-0334-block-0012",
+      "order": 12,
+      "text": "\t10.\t Loo H, et al. Determination of the dose of agomelatine, a melatoninergic agonist and selective 5-HT(2C) antagonist, in the treatment of major \n",
+      "bbox": [
+        48.05400085449219,
+        215.43646240234375,
+        421.7579040527344,
+        222.46849060058594
+      ],
+      "text_sha256": "f3c426fd2a1dceeb7e6a29b06ecb3a76e48c9672fb959d4b6b6dd03fd592d67c"
+    },
+    {
+      "block_id": "page-0334-block-0013",
+      "order": 13,
+      "text": "depressive disorder: a placebo-controlled dose range study. Int Clin Psychopharmacol 2002; 17:239–247.\n",
+      "bbox": [
+        59.05799865722656,
+        224.29246520996094,
+        331.637939453125,
+        231.4684600830078
+      ],
+      "text_sha256": "8f6ed65a9e1ac510a7ca24955cac0c3d7b474b1e2c9740942dfbd2c5fde48d0c"
+    },
+    {
+      "block_id": "page-0334-block-0014",
+      "order": 14,
+      "text": "\t11.\t Hewett K, et al. Eight-week, placebo-controlled, double-blind comparison of the antidepressant efficacy and tolerability of bupropion XR \n",
+      "bbox": [
+        48.060001373291016,
+        233.43646240234375,
+        421.7639465332031,
+        240.46849060058594
+      ],
+      "text_sha256": "9813605a91b13c91d092ba5f87d3e7f869de5e4965a71c57e1a060af72aa0d0c"
+    },
+    {
+      "block_id": "page-0334-block-0015",
+      "order": 15,
+      "text": "and venlafaxine XR. J Psychopharmacology 2009; 23:531–538.\n",
+      "bbox": [
+        59.064002990722656,
+        242.29246520996094,
+        224.39395141601562,
+        249.4684600830078
+      ],
+      "text_sha256": "cfcc032dbc48cec5e5126d4247d25ec448035f295a2e50fe6d2220374e642018"
+    },
+    {
+      "block_id": "page-0334-block-0016",
+      "order": 16,
+      "text": "\t12.\t Kornstein SG, et al. The effect of desvenlafaxine 50 mg/day on a subpopulation of anxious/depressed patients: a pooled analysis of seven \n",
+      "bbox": [
+        48.066001892089844,
+        251.43646240234375,
+        421.7399597167969,
+        258.468505859375
+      ],
+      "text_sha256": "c4a0015e9950488f1f224b325acc093f60c00457bf7d2d3c5d27923edeb26a28"
+    },
+    {
+      "block_id": "page-0334-block-0017",
+      "order": 17,
+      "text": "randomized, placebo-controlled studies. Human Psychopharmacology 2014; 29:492–501.\n",
+      "bbox": [
+        59.06999969482422,
+        260.2924499511719,
+        291.5159606933594,
+        267.4684753417969
+      ],
+      "text_sha256": "6d331e22ba652ef4f2c8398548e6b0f306d4d647bb63c1a56183a654db170c85"
+    },
+    {
+      "block_id": "page-0334-block-0018",
+      "order": 18,
+      "text": "\t13.\t Goldstein DJ, et al. Duloxetine in the treatment of depression: a double-blind placebo-controlled comparison with paroxetine. J Clin \n",
+      "bbox": [
+        48.071998596191406,
+        269.43646240234375,
+        421.77001953125,
+        276.468505859375
+      ],
+      "text_sha256": "6e617cc255bd72c2215e0f1d3626ad21ebd6ae0bd07f44bbbcc723e6072294c2"
+    },
+    {
+      "block_id": "page-0334-block-0019",
+      "order": 19,
+      "text": "Psychopharmacol 2004; 24:389–399.\n",
+      "bbox": [
+        59.07600402832031,
+        278.2924499511719,
+        156.3839874267578,
+        285.4684753417969
+      ],
+      "text_sha256": "0b17279d8983c016407c15b473ceac2a6e31cb029489e6eb2ecbb5f018beb6d7"
+    },
+    {
+      "block_id": "page-0334-block-0020",
+      "order": 20,
+      "text": "\t14.\t Detke MJ, et al. Duloxetine, 60 mg once daily, for major depressive disorder: a randomized double-blind placebo-controlled trial. J Clin \n",
+      "bbox": [
+        48.077999114990234,
+        287.43646240234375,
+        421.72796630859375,
+        294.468505859375
+      ],
+      "text_sha256": "d697057688634ef53820e9146cb8b67e13748d94c8fa5b845a52532591188f99"
+    },
+    {
+      "block_id": "page-0334-block-0021",
+      "order": 21,
+      "text": "Psychiatry 2002; 63:308–315.\n",
+      "bbox": [
+        59.082000732421875,
+        296.2924499511719,
+        137.38198852539062,
+        303.4684753417969
+      ],
+      "text_sha256": "ca9dcdda23e917defe6d4a7f8875d22125493a9c80e3d3ed720b19fae84f9e96"
+    },
+    {
+      "block_id": "page-0334-block-0022",
+      "order": 22,
+      "text": "\t15.\t He H, et al. Efficacy and tolerability of different doses of three new antidepressants for treating major depressive disorder: a PRISMA-\n",
+      "bbox": [
+        48.08399963378906,
+        305.43646240234375,
+        420.1201171875,
+        312.468505859375
+      ],
+      "text_sha256": "6a4d162f0ce1e265213e452b1451ef12b495ac23c1d0a2d1d34005e9ec3274cf"
+    },
+    {
+      "block_id": "page-0334-block-0023",
+      "order": 23,
+      "text": "compliant meta-analysis. J Psychiatr Res 2018; 96:247–259.\n",
+      "bbox": [
+        59.08799743652344,
+        314.2924499511719,
+        215.1599578857422,
+        321.4684753417969
+      ],
+      "text_sha256": "8c36c82afe6c010cef89dcd351f747ff0589b67ff7609ff75dde77b87906db32"
+    },
+    {
+      "block_id": "page-0334-block-0024",
+      "order": 24,
+      "text": "\t16.\t Furukawa TA, et al. No benefit from flexible titration above minimum licensed dose in prescribing antidepressants for major depression: \n",
+      "bbox": [
+        48.09000015258789,
+        323.43646240234375,
+        421.794189453125,
+        330.468505859375
+      ],
+      "text_sha256": "800a5262a4ffa0fa60aaae12ebd739b4547cf3dbf1913da541372fdfd6eb46eb"
+    },
+    {
+      "block_id": "page-0334-block-0025",
+      "order": 25,
+      "text": "systematic review. Acta Psychiatr Scand 2020; 141:401–409.\n",
+      "bbox": [
+        59.09400177001953,
+        332.2924499511719,
+        216.27597045898438,
+        339.4684753417969
+      ],
+      "text_sha256": "4620bb40c4c5bd784868baa15807a0146a7da1ffd28d0216eaf907e32afe4188"
+    },
+    {
+      "block_id": "page-0334-block-0026",
+      "order": 26,
+      "text": "\t17.\t Priest RG, et al. Moclobemide in the treatment of depression. Rev Contemporary Pharmacother 1994; 5:35–43.\n",
+      "bbox": [
+        48.09600067138672,
+        341.2924499511719,
+        348.2040100097656,
+        348.468505859375
+      ],
+      "text_sha256": "19f1d884a300ab5976fa55ac46c781de1170fa7d33c459b791099a2e4ebe942a"
+    },
+    {
+      "block_id": "page-0334-block-0027",
+      "order": 27,
+      "text": "\t18.\t Schatzberg AF. Clinical efficacy of reboxetine in major depression. J Clin Psychiatry 2000; 61 Suppl 10:31–38.\n",
+      "bbox": [
+        48.10200119018555,
+        350.2924499511719,
+        344.66998291015625,
+        357.468505859375
+      ],
+      "text_sha256": "0de03ce557c5bfab17790e74722b91b36ae31cc1bd65dcf5c60e48155fd9d2f4"
+    },
+    {
+      "block_id": "page-0334-block-0028",
+      "order": 28,
+      "text": "\t19.\t Brogden RN, et al. Trazodone: a review of its pharmacological properties and therapeutic use in depression and anxiety. Drugs 1981; \n",
+      "bbox": [
+        48.108001708984375,
+        359.43646240234375,
+        421.76995849609375,
+        366.468505859375
+      ],
+      "text_sha256": "f5bfca93495faa747f148e5daeeb1a64560481252fde031e0d9fe4ea13bdddc8"
+    },
+    {
+      "block_id": "page-0334-block-0029",
+      "order": 29,
+      "text": "21:401–429.\n",
+      "bbox": [
+        59.11199951171875,
+        368.2924499511719,
+        92.135986328125,
+        375.4684753417969
+      ],
+      "text_sha256": "2dd69ae21352685a63ec1f1cfbb272735d2771a32452bd561b9fddc5840088fa"
+    },
+    {
+      "block_id": "page-0334-block-0030",
+      "order": 30,
+      "text": "\t20.\t Feighner JP, et al. Efficacy of once-daily venlafaxine extended release (XR) for symptoms of anxiety in depressed outpatients. J Affect Disord \n",
+      "bbox": [
+        48.11399841308594,
+        377.43646240234375,
+        421.7520446777344,
+        384.468505859375
+      ],
+      "text_sha256": "96155455542f0f08484ab127a80f37d05367c897d5562715ae6ca56ece33c13b"
+    },
+    {
+      "block_id": "page-0334-block-0031",
+      "order": 31,
+      "text": "1998; 47:55–62.\n",
+      "bbox": [
+        59.11800003051758,
+        386.2924499511719,
+        102.14998626708984,
+        393.4684753417969
+      ],
+      "text_sha256": "91ebfb53e1c93ee9557423f0f1c96bbc8f19cb6b35ea8151c9dbb36be14a37e1"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

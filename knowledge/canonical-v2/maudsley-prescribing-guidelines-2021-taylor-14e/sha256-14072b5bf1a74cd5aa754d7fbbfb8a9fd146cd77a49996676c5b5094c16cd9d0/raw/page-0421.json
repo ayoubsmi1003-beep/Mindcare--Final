@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0421",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 421,
+  "source_page_index": 420,
+  "source_page_display": 421,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "400    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\n\t26.\t Schlosser R, et al. Effects of subchronic paroxetine administration on night-time endocrinological profiles in healthy male volunteers. \nPsychoneuroendocrinology 2000; 25:377–388.\n\t27.\t Nadeem HS, et al. Comparison of the effects of citalopram and escitalopram on 5-Ht-mediated neuroendocrine responses. \nNeuropsychopharmacology 2004; 29:1699–1703.\n\t28.\t Egberts AC, et al. Non-puerperal lactation associated with antidepressant drug use. Br J Clin Pharmacol 1997; 44:277–281.\n\t29.\t Peterson MC. Reversible galactorrhea and prolactin elevation related to fluoxetine use. Mayo Clin Proc 2001; 76:215–216.\n\t30.\t Morrison J, et al. Galactorrhea induced by paroxetine. Can J Psychiatry 2001; 46:88–89.\n\t31.\t Evrensel A, et al. A case of galactorrhea during paroxetine treatment. Int J Psychiatry Med 2016; 51:302–305.\n\t32.\t Selvaraj V, et al. Escitalopram-induced amenorrhea and false positive urine pregnancy test. Korean J Fam Med 2017; 38:40–42.\n\t33.\t Mahasuar R, et al. Euprolactinemic galactorrhea associated with use of imipramine and escitalopram in a postmenopausal woman. Gen \nHosp Psychiatry 2010; 32:341–343.\n\t34.\t Vispute C, et al. Fluvoxamine-induced reversible euprolactinemic galactorrhea in a case of obsessive-compulsive disorder. Ann Indian \nPsychiatry 2017; 1:127–128.\n\t35.\t Ekinci N, et al. Sertraline-related amenorrhea in an adolescent. Clin Neuropharmacol 2019; 42:99–100.\n\t36.\t Fava GA, et al. Prolactin, cortisol, and antidepressant treatment. Am J Psychiatry 1988; 145:358–360.\n\t37.\t Orlander H, et al. Imipramine induced elevation of prolactin levels in patients with HIV/AIDS improved their immune status. West Indian \nMed J 2009; 58:207–213.\n\t38.\t Meltzer HY, et al. Lack of effect of tricyclic antidepressants on serum prolactin levels. Psychopharmacology (Berl) 1977; 51:185–187.\n\t39.\t Gadd EM, et al. Antidepressants and galactorrhoea. Int Clin Psychopharmacol 1987; 2:361–363.\n\t40.\t Anand VS. Clomipramine–induced galactorrhoea and amenorrhoea. Br J Psychiatry 1985; 147:87–88.\n\t41.\t Fowlie S, et al. Hyperprolactinaemia and nonpuerperal lactation associated with clomipramine. Scott Med J 1987; 32:52.\n\t42.\t Kukreti P, et al. Rising trend of use of antidepressants induced non- puerperal lactation: a case report. JCDR 2016; 10:Vd01–vd02.\n\t43.\t Arslan FC, et al. Trazodone induced galactorrhea: a case report. Gen Hosp Psychiatry 2015; 37:373.e371–372.\n\t44.\t Mahableshwarkar AR, et al. A randomized, double-blind, fixed-dose study comparing the efficacy and tolerability of vortioxetine 2.5 and 10 \nmg in acute treatment of adults with generalized anxiety disorder. Human Psychopharmacology 2014; 29:64–72.\n\t45.\t Baldwin DS, et al. Vortioxetine (Lu AA21004) in the long-term open-label treatment of major depressive disorder. Curr Med Res Opin 2012; \n28:1717–1724.\n\t46.\t Verma A, et al. Risks associated with vortioxetine in the established therapeutic indication. Curr Neuropharmacol 2020. [Epub ahead of \nprint].\n",
+  "raw_text_sha256": "999dd8416a1aab08bc25f76b1eb49ea377464485d2b3b3ea32827220ee1a4390",
+  "coordinates_sha256": "db985d9ae0e1d6cbf39074c1880c88314d937191b25d9ea03fa6838131b8b42f",
+  "block_sequence_sha256": "a2f1b0b18e78e628a1d727c980f952b73f29cababb9477ba6a043ba00d107215",
+  "blocks": [
+    {
+      "block_id": "page-0421-block-0000",
+      "order": 0,
+      "text": "400    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "cf93775d974a2a1e21106ead5c2758a0cb686ee4cf62ed14b85a9c2361bf9f23"
+    },
+    {
+      "block_id": "page-0421-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0421-block-0002",
+      "order": 2,
+      "text": "\t26.\t Schlosser R, et al. Effects of subchronic paroxetine administration on night-time endocrinological profiles in healthy male volunteers. \n",
+      "bbox": [
+        61.88999938964844,
+        63.2703857421875,
+        435.5578918457031,
+        70.30238342285156
+      ],
+      "text_sha256": "aca811f8e292c0770ffadede7cc00de55d3316d634ccdf75d206cfa9d532e88e"
+    },
+    {
+      "block_id": "page-0421-block-0003",
+      "order": 3,
+      "text": "Psychoneuroendocrinology 2000; 25:377–388.\n\t27.\t Nadeem HS, et al. Comparison of the effects of citalopram and escitalopram on 5-Ht-mediated neuroendocrine responses. \n",
+      "bbox": [
+        61.895999908447266,
+        72.12638854980469,
+        435.593994140625,
+        88.30238342285156
+      ],
+      "text_sha256": "9432a9e15e2fc05e37467336030dd729e7657380968f32c7e86cc6b03d015c15"
+    },
+    {
+      "block_id": "page-0421-block-0004",
+      "order": 4,
+      "text": "Neuropsychopharmacology 2004; 29:1699–1703.\n\t28.\t Egberts AC, et al. Non-puerperal lactation associated with antidepressant drug use. Br J Clin Pharmacol 1997; 44:277–281.\n\t29.\t Peterson MC. Reversible galactorrhea and prolactin elevation related to fluoxetine use. Mayo Clin Proc 2001; 76:215–216.\n\t30.\t Morrison J, et al. Galactorrhea induced by paroxetine. Can J Psychiatry 2001; 46:88–89.\n\t31.\t Evrensel A, et al. A case of galactorrhea during paroxetine treatment. Int J Psychiatry Med 2016; 51:302–305.\n\t32.\t Selvaraj V, et al. Escitalopram-induced amenorrhea and false positive urine pregnancy test. Korean J Fam Med 2017; 38:40–42.\n\t33.\t Mahasuar R, et al. Euprolactinemic galactorrhea associated with use of imipramine and escitalopram in a postmenopausal woman. Gen \n",
+      "bbox": [
+        61.902000427246094,
+        90.12638854980469,
+        435.5819396972656,
+        151.30238342285156
+      ],
+      "text_sha256": "bd40a0614aee8d56c8597694c380b5d40a28d91c7be6282eda1ba95b82186df0"
+    },
+    {
+      "block_id": "page-0421-block-0005",
+      "order": 5,
+      "text": "Hosp Psychiatry 2010; 32:341–343.\n\t34.\t Vispute C, et al. Fluvoxamine-induced reversible euprolactinemic galactorrhea in a case of obsessive-compulsive disorder. Ann Indian \n",
+      "bbox": [
+        61.9379997253418,
+        153.1263885498047,
+        435.6121826171875,
+        169.30238342285156
+      ],
+      "text_sha256": "2942958ae464effd7cd019cc37cc836cab001862db343fd36bef49c283c4c756"
+    },
+    {
+      "block_id": "page-0421-block-0006",
+      "order": 6,
+      "text": "Psychiatry 2017; 1:127–128.\n\t35.\t Ekinci N, et al. Sertraline-related amenorrhea in an adolescent. Clin Neuropharmacol 2019; 42:99–100.\n\t36.\t Fava GA, et al. Prolactin, cortisol, and antidepressant treatment. Am J Psychiatry 1988; 145:358–360.\n\t37.\t Orlander H, et al. Imipramine induced elevation of prolactin levels in patients with HIV/AIDS improved their immune status. West Indian \n",
+      "bbox": [
+        61.944000244140625,
+        171.1263885498047,
+        435.64794921875,
+        205.30238342285156
+      ],
+      "text_sha256": "1265954559ed04040bd208d07005f16ccb141f50dea5dfa3b922a551ce5bbb02"
+    },
+    {
+      "block_id": "page-0421-block-0007",
+      "order": 7,
+      "text": "Med J 2009; 58:207–213.\n\t38.\t Meltzer HY, et al. Lack of effect of tricyclic antidepressants on serum prolactin levels. Psychopharmacology (Berl) 1977; 51:185–187.\n\t39.\t Gadd EM, et al. Antidepressants and galactorrhoea. Int Clin Psychopharmacol 1987; 2:361–363.\n\t40.\t Anand VS. Clomipramine–induced galactorrhoea and amenorrhoea. Br J Psychiatry 1985; 147:87–88.\n\t41.\t Fowlie S, et al. Hyperprolactinaemia and nonpuerperal lactation associated with clomipramine. Scott Med J 1987; 32:52.\n\t42.\t Kukreti P, et al. Rising trend of use of antidepressants induced non- puerperal lactation: a case report. JCDR 2016; 10:Vd01–vd02.\n\t43.\t Arslan FC, et al. Trazodone induced galactorrhea: a case report. Gen Hosp Psychiatry 2015; 37:373.e371–372.\n\t44.\t Mahableshwarkar AR, et al. A randomized, double-blind, fixed-dose study comparing the efficacy and tolerability of vortioxetine 2.5 and 10 \n",
+      "bbox": [
+        61.96200180053711,
+        207.1263885498047,
+        435.7018737792969,
+        277.3023986816406
+      ],
+      "text_sha256": "5b3cc24a09b32b5589ba71ded9c7a8168cfb49e4a3961b3336f01da0543d09cd"
+    },
+    {
+      "block_id": "page-0421-block-0008",
+      "order": 8,
+      "text": "mg in acute treatment of adults with generalized anxiety disorder. Human Psychopharmacology 2014; 29:64–72.\n\t45.\t Baldwin DS, et al. Vortioxetine (Lu AA21004) in the long-term open-label treatment of major depressive disorder. Curr Med Res Opin 2012; \n",
+      "bbox": [
+        62.00400161743164,
+        279.1263732910156,
+        435.6480407714844,
+        295.3023986816406
+      ],
+      "text_sha256": "8797a713c520094d93fb9775fc5fc2c23a85ac6e0604e4a3d28823f3853ab6d9"
+    },
+    {
+      "block_id": "page-0421-block-0009",
+      "order": 9,
+      "text": "28:1717–1724.\n\t46.\t Verma A, et al. Risks associated with vortioxetine in the established therapeutic indication. Curr Neuropharmacol 2020. [Epub ahead of \n",
+      "bbox": [
+        62.0099983215332,
+        297.1263732910156,
+        435.7200012207031,
+        313.3023986816406
+      ],
+      "text_sha256": "d7d6acc791e1972d216c8e94cff7c325e7bba6976d451958b8002ec1f95ebc7a"
+    },
+    {
+      "block_id": "page-0421-block-0010",
+      "order": 10,
+      "text": "print].\n",
+      "bbox": [
+        73.01399993896484,
+        315.2703857421875,
+        89.35199737548828,
+        322.3023986816406
+      ],
+      "text_sha256": "542e284002669bf750abd67af6038b184562fcd8f58f8c34d697ae682dad807e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

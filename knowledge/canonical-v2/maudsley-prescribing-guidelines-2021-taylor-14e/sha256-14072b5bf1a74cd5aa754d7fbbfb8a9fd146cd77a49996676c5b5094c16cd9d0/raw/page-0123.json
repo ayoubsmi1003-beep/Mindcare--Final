@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0123",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 123,
+  "source_page_index": 122,
+  "source_page_display": 123,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "102    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nStopping antipsychotics\nAntipsychotics are recommended for long-term treatment of schizophrenia because \nthey reduce symptoms and can reduce the risk of relapse.1 However, antipsychotics \nhave many adverse effects, including metabolic complications, tardive dyskinesia, emo-\ntional blunting and brain shrinkage.2 There is some evidence that reducing or stopping \npatients’ antipsychotics may improve their social functioning (relationships, education \nor employment, independent living) without worsening their rate of relapse or symp-\ntom burden in the medium term,3 although it might increase their risk of relapse in the \nshort term.4 There is also evidence that reducing antipsychotic burden may increase \ncognitive functioning.5\nFurthermore, the evidence for the relapse prevention properties of antipsychotics \nrelies on discontinuation trials in which antipsychotics were mostly stopped in one day, \nleading to withdrawal effects that may have elevated the apparent rate of relapse in the \ndiscontinuation arm, exaggerating the relapse prevention properties of antipsychotics.6 \nPatients often ask to reduce or stop their medication, and in light of the above this may \nbe a reasonable course of action. Cautious de-prescribing should be a component of \nhigh-quality prescribing practice.\nIt should also be noted that more than half of antipsychotic prescriptions in the UK \nare given to patients without a psychotic or manic disorder and instead are prescribed \nfor insomnia, anxiety, personality disorders and symptoms of dementia,7 although \nNICE recommends against medium- or long-term use of antipsychotics in personality \ndisorder,8 and careful use only in dementia.9 The principles for de-prescribing outlined \nbelow also apply to these patients.\nWithdrawal/discontinuation effects of antipsychotics\nStopping or reducing the dose of antipsychotics can cause a variety of symptoms reflect-\ning their various actions (blocking dopamine, histamine, acetylcholine, serotonin and \nnoradrenaline receptors).10,11 They include autonomic effects (diarrhoea, salivation, \nsweating), somatic symptoms (headache, nausea, vomiting, anorexia), motor effects \n(tremulousness, restlessness, dyskinesia) and psychological symptoms (anxiety, irritabil-\nity, agitation, insomnia and psychotic symptoms) (Figure 1.1).10,11 Insomnia is probably \nthe most common withdrawal symptom.\nImportantly, withdrawal/discontinuation symptoms from antipsychotics can include \npsychotic symptoms.11,12 This is suggested by a number of case studies in which people \nwithout a psychotic disorder, treated with dopamine antagonists for reasons such as \nnausea or lactation difficulties, develop psychotic symptoms when these medications \nare abruptly stopped.13–15\nIn patients with psychotic disorders, relapse often occurs when antipsychotics are \nwithdrawn. This has been widely thought to represent an unmasking of the underlying \nchronic illness, but the nature of the process of withdrawing antipsychotics may itself be \ncausally related to relapse.6 This is supported by the marked preponderance of relapses \nsoon after abrupt antipsychotic cessation in patients with schizophrenia in discontinua-\ntion trials. In one analysis, 60% of all relapses over four years occurred within three \nmonths of drug cessation,16 the time most likely for withdrawal effects to be evident. It \nis also supported by evidence that slower tapering can reduce the rate of relapse.16\n",
+  "raw_text_sha256": "a2dac479afb7bf4b4b62c33d9437edb6b4b0a3fad01313abc7dc003a8f611ba2",
+  "coordinates_sha256": "a7cf64bc03b48a739a0760aac702fd4a69f27744be95dba47ef83b11c70a2def",
+  "block_sequence_sha256": "dbd914d06d545ceba741f82831f10c51f447492f6db73d5b2d4b9efaff503b70",
+  "blocks": [
+    {
+      "block_id": "page-0123-block-0000",
+      "order": 0,
+      "text": "102    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "f1e6020149a4de5fd14a8a2736ddd86e6366d21dafb4069d062954f32409e29c"
+    },
+    {
+      "block_id": "page-0123-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0123-block-0002",
+      "order": 2,
+      "text": "Stopping antipsychotics\n",
+      "bbox": [
+        68.88909912109375,
+        56.36801528930664,
+        192.33106994628906,
+        69.40301513671875
+      ],
+      "text_sha256": "22e4f0cd92aa216c13b9cbec51b3c64675614b1ef1a14b4a3bee35ccb172d445"
+    },
+    {
+      "block_id": "page-0123-block-0003",
+      "order": 3,
+      "text": "Antipsychotics are recommended for long-term treatment of schizophrenia because \nthey reduce symptoms and can reduce the risk of relapse.1 However, antipsychotics \nhave many adverse effects, including metabolic complications, tardive dyskinesia, emo-\ntional blunting and brain shrinkage.2 There is some evidence that reducing or stopping \npatients’ antipsychotics may improve their social functioning (relationships, education \nor employment, independent living) without worsening their rate of relapse or symp-\ntom burden in the medium term,3 although it might increase their risk of relapse in the \nshort term.4 There is also evidence that reducing antipsychotic burden may increase \ncognitive functioning.5\n",
+      "bbox": [
+        61.88639831542969,
+        75.2130126953125,
+        436.6938171386719,
+        182.93301391601562
+      ],
+      "text_sha256": "78d5b14ad722417a688987ea772ab555e4a2a4279e2b3f1c0da69386bd772544"
+    },
+    {
+      "block_id": "page-0123-block-0004",
+      "order": 4,
+      "text": "Furthermore, the evidence for the relapse prevention properties of antipsychotics \nrelies on discontinuation trials in which antipsychotics were mostly stopped in one day, \nleading to withdrawal effects that may have elevated the apparent rate of relapse in the \ndiscontinuation arm, exaggerating the relapse prevention properties of antipsychotics.6 \nPatients often ask to reduce or stop their medication, and in light of the above this may \nbe a reasonable course of action. Cautious de-prescribing should be a component of \nhigh-quality prescribing practice.\n",
+      "bbox": [
+        61.88909912109375,
+        183.2130126953125,
+        436.6991271972656,
+        266.9330139160156
+      ],
+      "text_sha256": "b8fb7e279c78af04df2fbdf293203c9a3666381da9cb0a315be2926bdc249e11"
+    },
+    {
+      "block_id": "page-0123-block-0005",
+      "order": 5,
+      "text": "It should also be noted that more than half of antipsychotic prescriptions in the UK \nare given to patients without a psychotic or manic disorder and instead are prescribed \nfor insomnia, anxiety, personality disorders and symptoms of dementia,7 although \nNICE recommends against medium- or long-term use of antipsychotics in personality \ndisorder,8 and careful use only in dementia.9 The principles for de-prescribing outlined \nbelow also apply to these patients.\n",
+      "bbox": [
+        61.88911437988281,
+        267.2130126953125,
+        436.6989440917969,
+        338.9330139160156
+      ],
+      "text_sha256": "de34ad5ab0387643da3cf443a2d1612877cb0fa9c0f58564af9c5b95b85393e5"
+    },
+    {
+      "block_id": "page-0123-block-0006",
+      "order": 6,
+      "text": "Withdrawal/discontinuation effects of antipsychotics\n",
+      "bbox": [
+        61.88909912109375,
+        356.3680114746094,
+        336.0971374511719,
+        369.40301513671875
+      ],
+      "text_sha256": "213cbe2318412fb5f7d18fb06d9e71d1857f92f56d00a331143d7118abcbd130"
+    },
+    {
+      "block_id": "page-0123-block-0007",
+      "order": 7,
+      "text": "Stopping or reducing the dose of antipsychotics can cause a variety of symptoms reflect-\ning their various actions (blocking dopamine, histamine, acetylcholine, serotonin and \nnoradrenaline receptors).10,11 They include autonomic effects (diarrhoea, salivation, \nsweating), somatic symptoms (headache, nausea, vomiting, anorexia), motor effects \n(tremulousness, restlessness, dyskinesia) and psychological symptoms (anxiety, irritabil-\nity, agitation, insomnia and psychotic symptoms) (Figure 1.1).10,11 Insomnia is probably \nthe most common withdrawal symptom.\n",
+      "bbox": [
+        61.88909912109375,
+        375.2130126953125,
+        436.6990661621094,
+        458.9330139160156
+      ],
+      "text_sha256": "3237aff2c06d0bb2b057173c35e67016fe4baf87d86f3c0af486e186180a7cae"
+    },
+    {
+      "block_id": "page-0123-block-0008",
+      "order": 8,
+      "text": "Importantly, withdrawal/discontinuation symptoms from antipsychotics can include \npsychotic symptoms.11,12 This is suggested by a number of case studies in which people \nwithout a psychotic disorder, treated with dopamine antagonists for reasons such as \nnausea or lactation difficulties, develop psychotic symptoms when these medications \nare abruptly stopped.13–15\n",
+      "bbox": [
+        61.89209747314453,
+        459.2130126953125,
+        436.7021179199219,
+        518.9330444335938
+      ],
+      "text_sha256": "0685cc97c0e146853a19673bbc5a4a02a15155afa81c1253e75f210351b2cc2c"
+    },
+    {
+      "block_id": "page-0123-block-0009",
+      "order": 9,
+      "text": "In patients with psychotic disorders, relapse often occurs when antipsychotics are \nwithdrawn. This has been widely thought to represent an unmasking of the underlying \nchronic illness, but the nature of the process of withdrawing antipsychotics may itself be \ncausally related to relapse.6 This is supported by the marked preponderance of relapses \nsoon after abrupt antipsychotic cessation in patients with schizophrenia in discontinua-\ntion trials. In one analysis, 60% of all relapses over four years occurred within three \nmonths of drug cessation,16 the time most likely for withdrawal effects to be evident. It \nis also supported by evidence that slower tapering can reduce the rate of relapse.16\n",
+      "bbox": [
+        61.88670349121094,
+        519.2130126953125,
+        436.7189636230469,
+        614.9330444335938
+      ],
+      "text_sha256": "5f5dd4fbf3f405c0787700bcd23f0a6b511a656be4d56031ff558fadfc72b5f9"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

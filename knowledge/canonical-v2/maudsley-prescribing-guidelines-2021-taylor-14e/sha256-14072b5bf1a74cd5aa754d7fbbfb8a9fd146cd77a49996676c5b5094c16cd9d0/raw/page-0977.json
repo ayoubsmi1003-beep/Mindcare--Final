@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0977",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 977,
+  "source_page_index": 976,
+  "source_page_display": 977,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "956    Index\nformulations  257\nindications  257–258\ninteractions with other drugs  260–261, \n261t\nmechanism of action  257\nmonotherapy  691\non-treatment monitoring  260\nplasma levels  259\npre-treatment tests  259\nuse in women of child-bearing age  260\nvalproic acid  809\nvaping  871\nvarenicline \nadverse effects  505–506\nclinical effectiveness  505\npreparations and dose  505\nvariable-dose reduction  459\nvascular dementia (VaD)  620, 623–624\nmanagement of  623\nvenlafaxine/desvenlafaxine  308, 389, 688, \n709t, 728t, 744t, 779, 799\nvenous thromboembolism, \nantipsychotics and \nevidence of association  187\nlatest data  187, 188t\nmechanisms  188, 188t\noutcomes  188\npractice points  189\nsummary  188\nvilazodone  389, 728t\nvitamins  7\nvortioxetine  367, 389, 709t, 728t, 744t\nwarfarin  602\nwater intoxication  164\nweight gain  826\nantipsychotic-induced  123–124, 123t\nmonitoring  125\ntreatment and prevention  125–126, \n126–127t\ntreatment of  125\nweight loss  125\nWernicke’s encephalopathy  461\nparenteral B-complex  461–462\npresentation  461\nprophylactic thiamine  461\ntreatment of somatic symptoms  462, \n462t\nWorld Health Organisation (WHO)  451, \n897\nZA. See zuclopenthixol acetate (ZA)\nzagotenemab  623\nZ drugs  729t\nziprasidone  554, 581, 589, 712t, 740t, \n771t, 810, 824t\nzolpidem  135–136, 693\nzopiclone  715t\nzuclopenthixol acetate (ZA)  60–61,  \n60–64\nzuclopenthixol decanoate  933t\nzuclopenthixol  741t, 858t\n",
+  "raw_text_sha256": "1a1606b9dbffd3ed1b86e0f5ba086226cdea29bbef93323b2ce3a927f3ceb1e1",
+  "coordinates_sha256": "07106c9caac9a403c6e972bc67cca1f71f6cda16b049442e2db5a6115da95b06",
+  "block_sequence_sha256": "4f7771d53ce3aef5833a4af8ab7af779b7a4113cf9b72103d77dda262bbe7ad0",
+  "blocks": [
+    {
+      "block_id": "page-0977-block-0000",
+      "order": 0,
+      "text": "956    Index\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        111.70579528808594,
+        41.0272216796875
+      ],
+      "text_sha256": "7a2c7e5fbb376802f426a6702ec14b029166462ccdf9bcc237901a001ecfb417"
+    },
+    {
+      "block_id": "page-0977-block-0001",
+      "order": 1,
+      "text": "formulations  257\nindications  257–258\ninteractions with other drugs  260–261, \n",
+      "bbox": [
+        67.88980102539062,
+        63.2703857421875,
+        175.0377960205078,
+        86.29841613769531
+      ],
+      "text_sha256": "79774ce59e0220f6d5ed64d788d1b00ce604d2ebd47911b734933306034eed72"
+    },
+    {
+      "block_id": "page-0977-block-0002",
+      "order": 2,
+      "text": "261t\nmechanism of action  257\nmonotherapy  691\non-treatment monitoring  260\nplasma levels  259\npre-treatment tests  259\nuse in women of child-bearing age  260\nvalproic acid  809\nvaping  871\nvarenicline \n",
+      "bbox": [
+        61.88978576660156,
+        87.26434326171875,
+        172.57778930664062,
+        166.2783966064453
+      ],
+      "text_sha256": "54d247e41f3ca392fa743f6cc7d959e24bbd78e018bdf20fa7fbcfe329449bb9"
+    },
+    {
+      "block_id": "page-0977-block-0003",
+      "order": 3,
+      "text": "adverse effects  505–506\nclinical effectiveness  505\npreparations and dose  505\nvariable-dose reduction  459\nvascular dementia (VaD)  620, 623–624\n",
+      "bbox": [
+        61.889793395996094,
+        167.244384765625,
+        167.8437957763672,
+        206.2683868408203
+      ],
+      "text_sha256": "58700811f533a00bba385f53fb5f5d08fa62520ecb1a01dc662e3dc71ad39959"
+    },
+    {
+      "block_id": "page-0977-block-0004",
+      "order": 4,
+      "text": "management of  623\nvenlafaxine/desvenlafaxine  308, 389, 688, \n",
+      "bbox": [
+        61.88980484008789,
+        207.234375,
+        176.5977783203125,
+        222.26438903808594
+      ],
+      "text_sha256": "9be7fedfb8a726d2290be6b629a1cc804e4c14361364a918a7a002ab16a6dfec"
+    },
+    {
+      "block_id": "page-0977-block-0005",
+      "order": 5,
+      "text": "709t, 728t, 744t, 779, 799\n",
+      "bbox": [
+        79.8897933959961,
+        223.23037719726562,
+        148.37977600097656,
+        230.2623748779297
+      ],
+      "text_sha256": "732007ece197104f68e9fefa3c868d117dd9ccca567229c92f6e901434faa050"
+    },
+    {
+      "block_id": "page-0977-block-0006",
+      "order": 6,
+      "text": "venous thromboembolism, \n",
+      "bbox": [
+        189.88778686523438,
+        63.2283935546875,
+        260.33380126953125,
+        70.26039123535156
+      ],
+      "text_sha256": "986a5a5d51465ae5e058248850a0c1a347a4ad56dcf8aef50e1a60e489309be8"
+    },
+    {
+      "block_id": "page-0977-block-0007",
+      "order": 7,
+      "text": "antipsychotics and \nevidence of association  187\nlatest data  187, 188t\nmechanisms  188, 188t\noutcomes  188\npractice points  189\nsummary  188\nvilazodone  389, 728t\nvitamins  7\nvortioxetine  367, 389, 709t, 728t, 744t\n",
+      "bbox": [
+        189.88778686523438,
+        71.22637939453125,
+        295.7157897949219,
+        150.24037170410156
+      ],
+      "text_sha256": "a7ee2c8cf93a0a51fce1297eeae54b03ec880e8c57c1d191fa8f9ee25afa4a2d"
+    },
+    {
+      "block_id": "page-0977-block-0008",
+      "order": 8,
+      "text": "warfarin  602\nwater intoxication  164\nweight gain  826\n",
+      "bbox": [
+        189.88778686523438,
+        160.20635986328125,
+        253.57179260253906,
+        183.23439025878906
+      ],
+      "text_sha256": "13654927cfb262cbad07ac3bf2d6de7a85444b4b8a6d52d7c169a27a47b123a7"
+    },
+    {
+      "block_id": "page-0977-block-0009",
+      "order": 9,
+      "text": "antipsychotic-induced  123–124, 123t\n",
+      "bbox": [
+        195.88780212402344,
+        184.20037841796875,
+        296.69976806640625,
+        191.2323760986328
+      ],
+      "text_sha256": "c152a734a554ba776538127d2fc63be0391ea2234ecb4bc2e30425c89e9a2219"
+    },
+    {
+      "block_id": "page-0977-block-0010",
+      "order": 10,
+      "text": "monitoring  125\ntreatment and prevention  125–126, \n",
+      "bbox": [
+        201.88778686523438,
+        192.1983642578125,
+        299.6817932128906,
+        207.22837829589844
+      ],
+      "text_sha256": "649cf8104eec13b9e2a64dfe74dc9edcf970c29429adeba18b8840da178974e2"
+    },
+    {
+      "block_id": "page-0977-block-0011",
+      "order": 11,
+      "text": "126–127t\ntreatment of  125\nweight loss  125\n",
+      "bbox": [
+        189.88778686523438,
+        208.19436645507812,
+        249.8817901611328,
+        231.22239685058594
+      ],
+      "text_sha256": "9187681976d5c063c1ce30a7b39d49d46b5620eaa14d9035ebe97994aea564e2"
+    },
+    {
+      "block_id": "page-0977-block-0012",
+      "order": 12,
+      "text": "Wernicke’s encephalopathy  461\n",
+      "bbox": [
+        317.88580322265625,
+        63.1923828125,
+        404.01580810546875,
+        70.22438049316406
+      ],
+      "text_sha256": "e65f80f6cc341acfd7468faf85d7a7ab991500aa1d0197820b8509c7fc311b64"
+    },
+    {
+      "block_id": "page-0977-block-0013",
+      "order": 13,
+      "text": "parenteral B-complex  461–462\npresentation  461\nprophylactic thiamine  461\ntreatment of somatic symptoms  462, \n",
+      "bbox": [
+        323.88580322265625,
+        71.19036865234375,
+        424.643798828125,
+        102.21638488769531
+      ],
+      "text_sha256": "8b358d524f32c31b6a6b496450d63c833540bd5866149bb3674f9621137c2e35"
+    },
+    {
+      "block_id": "page-0977-block-0014",
+      "order": 14,
+      "text": "462t\nWorld Health Organisation (WHO)  451, \n",
+      "bbox": [
+        317.88580322265625,
+        103.182373046875,
+        429.8457946777344,
+        118.21241760253906
+      ],
+      "text_sha256": "078b3b9348c51681f03afac055bc9deaa909215d7dabc9d1e5212519f78aafe8"
+    },
+    {
+      "block_id": "page-0977-block-0015",
+      "order": 15,
+      "text": "897\n",
+      "bbox": [
+        335.88580322265625,
+        119.1783447265625,
+        345.893798828125,
+        126.21034240722656
+      ],
+      "text_sha256": "3ce88b505594766ae4cdc48d1b9fb4f1a602216d93110d2aafc00d19ac240341"
+    },
+    {
+      "block_id": "page-0977-block-0016",
+      "order": 16,
+      "text": "ZA. See zuclopenthixol acetate (ZA)\nzagotenemab  623\nZ drugs  729t\nziprasidone  554, 581, 589, 712t, 740t, \n",
+      "bbox": [
+        317.88580322265625,
+        136.17633056640625,
+        423.1678161621094,
+        167.20240783691406
+      ],
+      "text_sha256": "f426c0b58d6a9600ad8c4d53eceddc62a7fd9bf7de54cad86f35c5d5351784cf"
+    },
+    {
+      "block_id": "page-0977-block-0017",
+      "order": 17,
+      "text": "771t, 810, 824t\nzolpidem  135–136, 693\nzopiclone  715t\nzuclopenthixol acetate (ZA)  60–61,  \n",
+      "bbox": [
+        317.88580322265625,
+        168.16839599609375,
+        417.3358154296875,
+        199.1943817138672
+      ],
+      "text_sha256": "834a21a1dd7d219424744e928fcca3a2b9a37f81677f9756c82700c2fef3df0a"
+    },
+    {
+      "block_id": "page-0977-block-0018",
+      "order": 18,
+      "text": "60–64\nzuclopenthixol decanoate  933t\nzuclopenthixol  741t, 858t\n",
+      "bbox": [
+        317.88580322265625,
+        200.16036987304688,
+        401.9037780761719,
+        223.18836975097656
+      ],
+      "text_sha256": "39e1267eff315266b11afa4ded380a5a776c23f3a68fb9e895ef5d71482c10cb"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

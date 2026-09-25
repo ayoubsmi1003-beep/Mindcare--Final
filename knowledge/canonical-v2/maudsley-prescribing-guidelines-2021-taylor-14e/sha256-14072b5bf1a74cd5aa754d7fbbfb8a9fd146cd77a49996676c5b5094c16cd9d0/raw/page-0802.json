@@ -1,0 +1,323 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0802",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 802,
+  "source_page_index": 801,
+  "source_page_display": 802,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    781\nCHAPTER 10\nPharmacodynamic interactions may also occur, usually through overlapping adverse \neffects.\nPotential pharmacodynamic interactions are shown in Table 10.1.\nTable 10.1  Potential pharmacodynamic interactions with antiretrovirals.38\nPotential adverse effect\nImplicated antiretroviral drug(s) 32,39,40\nImplications for \npsychotropic prescribing\nBone marrow suppression\nZidovudine (anaemia, neutropenia)\nConcurrent use with certain \npsychotropics (e.g. \nclozapine) may increase the \nrisk of myelosuppression/\nneutropenia\nBone mineral density reduction\nTenofovir disoproxil fumarate\n(Tenofovir alafenamide has smaller effect \non BMD)\nMay compound the \nreductions in bone mineral \ndensity possible with \nprolactin elevating \nantipsychotics\nCreatine kinase (CK) elevations\nDolutegravir, emtricitabine, raltegravir\nMay be important to \nacknowledge associated link \nif diagnosis of NMS is being \nconsidered\nECG changes\nAtazanavir, darunavir, efavirenz, lopinavir, \nrilpivirine, ritonavir, saquinavir\nMay increase risk of \narrhythmias associated with \ncertain psychotropic drugs\nCardiovascular effects\nAbacavir, darunavir/ritonavir, lopinavir/\nritonavir\nCardiovascular events (e.g. \nMI) occurred in some \ncohorts\nRenal effects\nTenofovir disoproxil fumarate\n(if regime includes ritonavir, risk is \nincreased)\nProteinuria, \nhypophosphatemia, \nglycosuria, hypokalaemia, \nrenal tubular\nGastrointestinal disturbances\nAtazanavir, darunavir, dolutegravir, \ndidanosine, elvitegravir/cobicistat, \nfosamprenavir, indinavir, lopinavir, \nnelfinavir, raltegravir, saquinavir, tipranavir, \nzidovudine\nMay compound \ngastrointestinal disturbances \nassociated with certain \npsychotropics (e.g. SSRIs)\nSeizure(s)\nDarunavir, efavirenz, maraviroc, ritonavir, \nsaquinavir, zidovudine\nMay increase seizure risk \nassociated with certain \npsychotropic drugs\nMetabolic abnormalities such as \nhypertriglyceridaemia, \nhypercholesterolaemia, insulin \nresistance, hyperglycaemia and \nhyperlactataemia\nAll combination antiretroviral therapy\nMay compound risk of \nmetabolic adverse effects \nassociated with certain \npsychotropic drugs \n(particularly SGAs)\n",
+  "raw_text_sha256": "2f5c3585f7ad9ee4615e4f584d41a968576b997dd5354c42c76791cb7d495811",
+  "coordinates_sha256": "1bc5dea07906f8ef8c4b6038ae859504032ff7c44821b1ed9993daaf4b998c86",
+  "block_sequence_sha256": "9244471059389d8e6ba3b2884148b608b6d80db0f76659bc543417dde1c71caa",
+  "blocks": [
+    {
+      "block_id": "page-0802-block-0000",
+      "order": 0,
+      "text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    781\n",
+      "bbox": [
+        47.999698638916016,
+        31.395221710205078,
+        419.96697998046875,
+        41.0272216796875
+      ],
+      "text_sha256": "25c4603abd137e089d5caaef9a2cb6b61640ab477537ac935b7eb3c9cb17583b"
+    },
+    {
+      "block_id": "page-0802-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        454.4096984863281,
+        75.763671875,
+        463.88970947265625,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0802-block-0002",
+      "order": 2,
+      "text": "Pharmacodynamic interactions may also occur, usually through overlapping adverse \neffects.\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.7700500488281,
+        86.27041625976562
+      ],
+      "text_sha256": "30e57ba16eb69ad826e14dc1eb37813528b36d5480ad8f7530b00775f6ed43a3"
+    },
+    {
+      "block_id": "page-0802-block-0003",
+      "order": 3,
+      "text": "Potential pharmacodynamic interactions are shown in Table 10.1.\n",
+      "bbox": [
+        58.0,
+        86.5504150390625,
+        341.8199768066406,
+        98.27041625976562
+      ],
+      "text_sha256": "619bad1db9028132470d1d8b0d7eb386981ec86144079baa05918837c4c7742b"
+    },
+    {
+      "block_id": "page-0802-block-0004",
+      "order": 4,
+      "text": "Table 10.1  Potential pharmacodynamic interactions with antiretrovirals.38\n",
+      "bbox": [
+        54.0,
+        131.78150939941406,
+        289.0196533203125,
+        140.66900634765625
+      ],
+      "text_sha256": "23f289b102aec826887c6bf04c4277700714f8bc8130d0cab7ac2ad9b09e5778"
+    },
+    {
+      "block_id": "page-0802-block-0005",
+      "order": 5,
+      "text": "Potential adverse effect\nImplicated antiretroviral drug(s) 32,39,40\n",
+      "bbox": [
+        52.0,
+        160.51649475097656,
+        308.3541259765625,
+        169.40399169921875
+      ],
+      "text_sha256": "3875f666bb214689d29e320185a78921a0390da0312accde6c9e38729d9eec80"
+    },
+    {
+      "block_id": "page-0802-block-0006",
+      "order": 6,
+      "text": "Implications for \npsychotropic prescribing\n",
+      "bbox": [
+        325.10919189453125,
+        150.51649475097656,
+        411.08154296875,
+        169.4014892578125
+      ],
+      "text_sha256": "6c08154c6c302c071d42f83ac6e991fc70c9887856f1a47fcf2a5d41ecf399d9"
+    },
+    {
+      "block_id": "page-0802-block-0007",
+      "order": 7,
+      "text": "Bone marrow suppression\nZidovudine (anaemia, neutropenia)\nConcurrent use with certain \npsychotropics (e.g. \nclozapine) may increase the \nrisk of myelosuppression/\nneutropenia\n",
+      "bbox": [
+        51.996673583984375,
+        178.31898498535156,
+        416.2342224121094,
+        227.0164794921875
+      ],
+      "text_sha256": "3f40a67e6d0f7e7a1a6d58daaeb695980d93aa4fba935c4aa65c81c32641fb46"
+    },
+    {
+      "block_id": "page-0802-block-0008",
+      "order": 8,
+      "text": "Bone mineral density reduction\nTenofovir disoproxil fumarate\n",
+      "bbox": [
+        51.996673583984375,
+        235.93397521972656,
+        269.7816162109375,
+        244.6414794921875
+      ],
+      "text_sha256": "84b9236d6eab5a989d2d5dbc592694434313392847670ee126d1e7a91a676a07"
+    },
+    {
+      "block_id": "page-0802-block-0009",
+      "order": 9,
+      "text": "(Tenofovir alafenamide has smaller effect \non BMD)\n",
+      "bbox": [
+        176.99917602539062,
+        248.9314727783203,
+        309.359130859375,
+        267.636474609375
+      ],
+      "text_sha256": "53de1520baae24d2b7a95c944befba332c3b0804d5c77546fedd07cc747733c0"
+    },
+    {
+      "block_id": "page-0802-block-0010",
+      "order": 10,
+      "text": "May compound the \nreductions in bone mineral \ndensity possible with \nprolactin elevating \nantipsychotics\n",
+      "bbox": [
+        325.10919189453125,
+        235.9264678955078,
+        412.4917907714844,
+        284.62396240234375
+      ],
+      "text_sha256": "8a5471225cf29efbabbe19a97cd62904266dc8e44c7ddc3966bd8d1289139428"
+    },
+    {
+      "block_id": "page-0802-block-0011",
+      "order": 11,
+      "text": "Creatine kinase (CK) elevations\nDolutegravir, emtricitabine, raltegravir\nMay be important to \nacknowledge associated link \nif diagnosis of NMS is being \nconsidered\n",
+      "bbox": [
+        51.996673583984375,
+        293.5414733886719,
+        418.0417785644531,
+        332.241455078125
+      ],
+      "text_sha256": "474fa12e1ff55698687f878afc5c36d361843e7e6b77cbd68eeaa02f810a324a"
+    },
+    {
+      "block_id": "page-0802-block-0012",
+      "order": 12,
+      "text": "ECG changes\nAtazanavir, darunavir, efavirenz, lopinavir, \nrilpivirine, ritonavir, saquinavir\n",
+      "bbox": [
+        51.996673583984375,
+        341.1589660644531,
+        311.0391540527344,
+        359.86395263671875
+      ],
+      "text_sha256": "d35a1cff4269d4e007d19b02d4f1530eea738f637e994944fa940895a27bebba"
+    },
+    {
+      "block_id": "page-0802-block-0013",
+      "order": 13,
+      "text": "May increase risk of \narrhythmias associated with \ncertain psychotropic drugs\n",
+      "bbox": [
+        325.10919189453125,
+        341.1589660644531,
+        415.9417419433594,
+        369.8614501953125
+      ],
+      "text_sha256": "2a371b8639b0eaa05fc9428249842aa9a92c1d1be0979640509416b795c00ce2"
+    },
+    {
+      "block_id": "page-0802-block-0014",
+      "order": 14,
+      "text": "Cardiovascular effects\nAbacavir, darunavir/ritonavir, lopinavir/\nritonavir\n",
+      "bbox": [
+        51.996673583984375,
+        378.7789611816406,
+        298.94915771484375,
+        397.48394775390625
+      ],
+      "text_sha256": "81a4d444bf91600733f679d18f288dd99a8ff5a75c6e39c7095b9f6cf227ffa7"
+    },
+    {
+      "block_id": "page-0802-block-0015",
+      "order": 15,
+      "text": "Cardiovascular events (e.g. \nMI) occurred in some \ncohorts\n",
+      "bbox": [
+        325.10919189453125,
+        378.7789611816406,
+        412.48419189453125,
+        407.4814453125
+      ],
+      "text_sha256": "c30dc8490965816c28ec2713c6e04f79ea56bf87e7bee108118d7f70993d4cda"
+    },
+    {
+      "block_id": "page-0802-block-0016",
+      "order": 16,
+      "text": "Renal effects\nTenofovir disoproxil fumarate\n",
+      "bbox": [
+        51.996673583984375,
+        416.3989562988281,
+        269.7816162109375,
+        425.1064453125
+      ],
+      "text_sha256": "1a33ef4268f5a2c00ef6936860550b0d400f92dae36bb049a7ddd47ed29975f0"
+    },
+    {
+      "block_id": "page-0802-block-0017",
+      "order": 17,
+      "text": "(if regime includes ritonavir, risk is \nincreased)\n",
+      "bbox": [
+        176.99917602539062,
+        429.3964538574219,
+        286.5891418457031,
+        448.1014404296875
+      ],
+      "text_sha256": "1493fbb23c14187b07966350c28b47fbccbe1be25c692868c56ac9f53486ff38"
+    },
+    {
+      "block_id": "page-0802-block-0018",
+      "order": 18,
+      "text": "Proteinuria, \nhypophosphatemia, \nglycosuria, hypokalaemia, \nrenal tubular\n",
+      "bbox": [
+        325.10919189453125,
+        416.3914489746094,
+        409.28173828125,
+        455.0914306640625
+      ],
+      "text_sha256": "d5bf28e9dea9e52c8133ae49bbe87adcc3cfdcb88320b9757246153a6d699d92"
+    },
+    {
+      "block_id": "page-0802-block-0019",
+      "order": 19,
+      "text": "Gastrointestinal disturbances\nAtazanavir, darunavir, dolutegravir, \ndidanosine, elvitegravir/cobicistat, \nfosamprenavir, indinavir, lopinavir, \nnelfinavir, raltegravir, saquinavir, tipranavir, \nzidovudine\n",
+      "bbox": [
+        51.996673583984375,
+        464.0089416503906,
+        314.2266540527344,
+        512.7064208984375
+      ],
+      "text_sha256": "40f222f4afaefd193d2c3a4a49016a3d516d9bed8b89ee3fd29c40a7f4fef777"
+    },
+    {
+      "block_id": "page-0802-block-0020",
+      "order": 20,
+      "text": "May compound \ngastrointestinal disturbances \nassociated with certain \npsychotropics (e.g. SSRIs)\n",
+      "bbox": [
+        325.10919189453125,
+        464.0014343261719,
+        417.8993225097656,
+        502.701416015625
+      ],
+      "text_sha256": "952c71ee4204cfceb0981656b5578e8872e812b746c10294e85837b9c3321461"
+    },
+    {
+      "block_id": "page-0802-block-0021",
+      "order": 21,
+      "text": "Seizure(s)\nDarunavir, efavirenz, maraviroc, ritonavir, \nsaquinavir, zidovudine\n",
+      "bbox": [
+        51.996673583984375,
+        521.6163940429688,
+        309.0816650390625,
+        540.3214111328125
+      ],
+      "text_sha256": "84ff377f833a6aed78f3545b0f5c82759aab4f896a822fb1854a6005c82cedce"
+    },
+    {
+      "block_id": "page-0802-block-0022",
+      "order": 22,
+      "text": "May increase seizure risk \nassociated with certain \npsychotropic drugs\n",
+      "bbox": [
+        325.10919189453125,
+        521.6163940429688,
+        405.66668701171875,
+        550.3189086914062
+      ],
+      "text_sha256": "f5e1105ac419f2cf4cc47530db19de8068ba9ec76f3b5512564873ffb7c1f933"
+    },
+    {
+      "block_id": "page-0802-block-0023",
+      "order": 23,
+      "text": "Metabolic abnormalities such as \nhypertriglyceridaemia, \nhypercholesterolaemia, insulin \nresistance, hyperglycaemia and \nhyperlactataemia\n",
+      "bbox": [
+        51.996673583984375,
+        559.2363891601562,
+        156.1716766357422,
+        607.9338989257812
+      ],
+      "text_sha256": "787655f5537da7639b03f6883bf14d4084668810884ed987c5c9cf32c2bcc276"
+    },
+    {
+      "block_id": "page-0802-block-0024",
+      "order": 24,
+      "text": "All combination antiretroviral therapy\nMay compound risk of \nmetabolic adverse effects \nassociated with certain \npsychotropic drugs \n(particularly SGAs)\n",
+      "bbox": [
+        176.99917602539062,
+        559.2288818359375,
+        407.8791809082031,
+        607.9263916015625
+      ],
+      "text_sha256": "65d0d26ea571c22f45c7194d8f4bf62578a5c0e0b8babac14cfdd083600a27f6"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

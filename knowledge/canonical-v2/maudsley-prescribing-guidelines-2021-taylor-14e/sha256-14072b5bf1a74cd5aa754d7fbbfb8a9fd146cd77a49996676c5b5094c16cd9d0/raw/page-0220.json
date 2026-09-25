@@ -1,0 +1,431 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0220",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 220,
+  "source_page_index": 219,
+  "source_page_display": 220,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    199\nCHAPTER 1\nTable 1.37  (Continued)\nTreatment\nComments\nBexarotene 75mg/day18\n(+ antipsychotic)\nRetinoid receptor agonist. One RCT (n = 90) in non-refractory but suboptimally \ntreated patients suggest worthwhile effect on positive symptoms\nBlonanserin (+ antipsychotic)19\nAtypical antipsychotic licensed in Japan and Korea. One case series found it to \nbe effective and well tolerated\nCBT20\nNon-drug therapies should always be considered\nCelecoxib + risperidone21\n(400mg + 6mg/day)\nCOX-2 inhibitors modulate immune response and may prevent glutamate-\nrelated cell death. One RCT showed useful activity in all main symptom \ndomains. Associated with increased CV mortality\nDeep Brain Stimulation (DBS)\nEffectiveness of nucleus accumbens (NAcc) and subgenual anterior cingulate \ncortex (subgenual ACC) targeted DBS demonstrated in 4 of 7 patients with TRS22\nDonepezil 5–10mg/day\n(+ antipsychotic)23–25\nThree RCTs, one negative,24 two positive,23,25 suggesting a small effect on \ncognitive and negative symptoms\nD-Alanine 100mg/kg/day\n(+ antipsychotic)26\nGlycine (NMDA) agonist. One positive RCT\nD-Serine 30mg/kg/day\n(+ olanzapine)27\nGlycine (NMDA) agonist. One positive RCT\nD-serine up to 3g as \nmonotherapy28\nImproved negative symptoms in one RCT, but inferior to high dose olanzapine \nfor treatment of positive symptoms\nECT29\nOpen studies suggest moderate effect, as does a retrospective study.30 Often \nreserved for last-line treatment in practice but can be successful in the short31 \nand long32 term\nEstradiol 100 – 200mcg \ntransdermal/day (+ \nantipsychotic)33\nOestrogens may be psychoprotective and/or antipsychotic. RCT (n = 183) in \nwomen of child-bearing age suggested benefits on positive symptoms, especially \nat higher doses. Note contra-indications include being post-menopausal, history \nof VTE, stroke, breast cancer, migraine with aura. Unopposed estradiol over long \nperiods increases the risk of endometrial hyperplasia and malignancy – consider \nconsulting an endocrinologist. Evidence in men is lacking\nFamotidine 100mg \nbd + antipsychotic34\nH2 antagonist. One short (4 weeks) RCT suggested some benefit in overall \nPANSS and CGI scores\nGinkgo biloba\n(+ antipsychotic)6,7\nPossibly effective in combination with haloperidol. Unlikely to give rise to \nadditional adverse effects but clinical experience limited\nLurasidone up to 240mg/day35\n(+ vortioxetine)\nOne RCT comparing standard with high dose lurasidone produced comparable \nimprovements in TRS when given up to 24 weeks.36 Appears to be well \ntolerated, may be effective but no clozapine comparison arm included. The \naddition of vortioxetine to lurasidone was effective in a small case series37\nMemantine 20mg/day\n(+ antipsychotic)38–40\nMemantine is an NMDA antagonist. Two RCTs. The larger of the two (n = 138) \nwas negative. In the smaller (n = 21), memantine improved positive and \nnegative symptoms when added to clozapine. In another study in non-\nrefractory schizophrenia, memantine improved negative symptoms when added \nto risperidone\n(Continued)\n",
+  "raw_text_sha256": "57c0e4b5aa0015f5fef5b8f8e4290aefc566dafd619e991f365964eccae1554a",
+  "coordinates_sha256": "dc84566843fff3ce00181c7f32d5bf35f25eec8b29acfdce6a4590bf08782aa3",
+  "block_sequence_sha256": "bad393b9530c88df1ce3d7a6bb943db0db37c08e12f2b60e387496d803c3a567",
+  "blocks": [
+    {
+      "block_id": "page-0220-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    199\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "f64cdcbd90a29a5674ac8bd88aabdc57d8b544726022f5af4367e7813e66ad88"
+    },
+    {
+      "block_id": "page-0220-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0220-block-0002",
+      "order": 2,
+      "text": "Table 1.37  (Continued)\n",
+      "bbox": [
+        53.99870300292969,
+        70.08692932128906,
+        130.28868103027344,
+        78.97442626953125
+      ],
+      "text_sha256": "e0aca385c22b6b6a6107b41fb5b6380b231ef0fd8c28170cf2a7168ad4d38662"
+    },
+    {
+      "block_id": "page-0220-block-0003",
+      "order": 3,
+      "text": "Treatment\nComments\n",
+      "bbox": [
+        47.99909973144531,
+        87.11189270019531,
+        201.50160217285156,
+        95.9993896484375
+      ],
+      "text_sha256": "8be686e890d313f8295cc060595592f78dd7d0f699de8b9c632f5bd2fa6e517c"
+    },
+    {
+      "block_id": "page-0220-block-0004",
+      "order": 4,
+      "text": "Bexarotene 75mg/day18\n",
+      "bbox": [
+        47.99909973144531,
+        101.88691711425781,
+        127.33590698242188,
+        110.7744140625
+      ],
+      "text_sha256": "1176d954d7a3732cca3f9a6d0dcd337e2880dd9c54596b1db32c3b5be17bc4b6"
+    },
+    {
+      "block_id": "page-0220-block-0005",
+      "order": 5,
+      "text": "(+ antipsychotic)\n",
+      "bbox": [
+        47.99909973144531,
+        111.88691711425781,
+        106.24409484863281,
+        120.7744140625
+      ],
+      "text_sha256": "c01aedbd031788d634e45a3ab24e6b67bd075a11f6dd2055bb08b370478898cc"
+    },
+    {
+      "block_id": "page-0220-block-0006",
+      "order": 6,
+      "text": "Retinoid receptor agonist. One RCT (n = 90) in non-refractory but suboptimally \ntreated patients suggest worthwhile effect on positive symptoms\n",
+      "bbox": [
+        164.00160217285156,
+        102.06941986083984,
+        417.4492492675781,
+        120.7744140625
+      ],
+      "text_sha256": "b9e7a87ba915d3aff59f1e118b4d6bffa36fe35da75198fbb74aa5986e1e8075"
+    },
+    {
+      "block_id": "page-0220-block-0007",
+      "order": 7,
+      "text": "Blonanserin (+ antipsychotic)19\nAtypical antipsychotic licensed in Japan and Korea. One case series found it to \nbe effective and well tolerated\n",
+      "bbox": [
+        47.99909973144531,
+        126.90943908691406,
+        415.1441955566406,
+        145.79693603515625
+      ],
+      "text_sha256": "245a0dbeb0b5f295ef1b0166bc77ee58809204946e94e594d2bf66f24d16100e"
+    },
+    {
+      "block_id": "page-0220-block-0008",
+      "order": 8,
+      "text": "CBT20\nNon-drug therapies should always be considered\n",
+      "bbox": [
+        47.99659729003906,
+        151.9319610595703,
+        319.3241882324219,
+        160.82440185546875
+      ],
+      "text_sha256": "6372fa6d1d5c9df293866c2558ee2ce22eda85d949c54e2215709c578415e3e7"
+    },
+    {
+      "block_id": "page-0220-block-0009",
+      "order": 9,
+      "text": "Celecoxib + risperidone21\n",
+      "bbox": [
+        47.99659729003906,
+        166.9594268798828,
+        135.29290771484375,
+        175.846923828125
+      ],
+      "text_sha256": "edec3d40e5f3ee949f04c0288af3798a183da88cacd57b7689bf39b40ae3acb5"
+    },
+    {
+      "block_id": "page-0220-block-0010",
+      "order": 10,
+      "text": "(400mg + 6mg/day)\n",
+      "bbox": [
+        47.99909973144531,
+        177.1419219970703,
+        111.68909454345703,
+        185.84942626953125
+      ],
+      "text_sha256": "de3e79052730f35d8f7fd6c62bef5e2ec9db92e5222a95a24145fb95d65f7096"
+    },
+    {
+      "block_id": "page-0220-block-0011",
+      "order": 11,
+      "text": "COX-2 inhibitors modulate immune response and may prevent glutamate-\nrelated cell death. One RCT showed useful activity in all main symptom \ndomains. Associated with increased CV mortality\n",
+      "bbox": [
+        164.00160217285156,
+        167.14442443847656,
+        401.2567138671875,
+        195.846923828125
+      ],
+      "text_sha256": "87699fac3947f8c59f5bfbceab7004b6a304dd2ba516871a2c399f94856c1081"
+    },
+    {
+      "block_id": "page-0220-block-0012",
+      "order": 12,
+      "text": "Deep Brain Stimulation (DBS)\nEffectiveness of nucleus accumbens (NAcc) and subgenual anterior cingulate \ncortex (subgenual ACC) targeted DBS demonstrated in 4 of 7 patients with TRS22\n",
+      "bbox": [
+        47.99909973144531,
+        201.98194885253906,
+        418.8080139160156,
+        220.866943359375
+      ],
+      "text_sha256": "ecf84cc8e7c0ff46e863c686d3ebadae633886de43f6271f42cb35ddb5043589"
+    },
+    {
+      "block_id": "page-0220-block-0013",
+      "order": 13,
+      "text": "Donepezil 5–10mg/day\n(+ antipsychotic)23–25\n",
+      "bbox": [
+        47.99909973144531,
+        227.0119171142578,
+        125.51908874511719,
+        245.89691162109375
+      ],
+      "text_sha256": "f1da565e6dcd0247a559c23c5c41069e4c52f7b12f14356b709dc675c67dbbb0"
+    },
+    {
+      "block_id": "page-0220-block-0014",
+      "order": 14,
+      "text": "Three RCTs, one negative,24 two positive,23,25 suggesting a small effect on \ncognitive and negative symptoms\n",
+      "bbox": [
+        163.997802734375,
+        227.19190979003906,
+        398.7403869628906,
+        245.89691162109375
+      ],
+      "text_sha256": "4d368992cdb2fffc44a493fb8ddecf6b44b7bd3c1401be4edd59c62c4882feb6"
+    },
+    {
+      "block_id": "page-0220-block-0015",
+      "order": 15,
+      "text": "D-Alanine 100mg/kg/day\n(+ antipsychotic)26\n",
+      "bbox": [
+        47.99530029296875,
+        252.0319061279297,
+        131.3502960205078,
+        270.9169006347656
+      ],
+      "text_sha256": "a585cd864714abca735fb07e7fbef48c041e37dbd64002c1158d66082d9ed3dd"
+    },
+    {
+      "block_id": "page-0220-block-0016",
+      "order": 16,
+      "text": "Glycine (NMDA) agonist. One positive RCT\n",
+      "bbox": [
+        163.9990997314453,
+        252.21690368652344,
+        299.44171142578125,
+        260.9244079589844
+      ],
+      "text_sha256": "62a0bfcb2bb02e4d7191121f2384cc58b49c03c920ab9274cb56fc37349e94d1"
+    },
+    {
+      "block_id": "page-0220-block-0017",
+      "order": 17,
+      "text": "D-Serine 30mg/kg/day\n(+ olanzapine)27\n",
+      "bbox": [
+        47.99659729003906,
+        277.06439208984375,
+        122.18659973144531,
+        295.94940185546875
+      ],
+      "text_sha256": "22fd577e0c28212cdeeae180046cbdc2a09a6d66f50db74fc5b686310f56976a"
+    },
+    {
+      "block_id": "page-0220-block-0018",
+      "order": 18,
+      "text": "Glycine (NMDA) agonist. One positive RCT\n",
+      "bbox": [
+        163.9990997314453,
+        277.2419128417969,
+        299.44171142578125,
+        285.94940185546875
+      ],
+      "text_sha256": "62a0bfcb2bb02e4d7191121f2384cc58b49c03c920ab9274cb56fc37349e94d1"
+    },
+    {
+      "block_id": "page-0220-block-0019",
+      "order": 19,
+      "text": "D-serine up to 3g as \nmonotherapy28\n",
+      "bbox": [
+        47.99659729003906,
+        302.0893859863281,
+        117.60408782958984,
+        320.9743957519531
+      ],
+      "text_sha256": "77de2e8204ced548ac21a270cce352d9d2725015beb0a55fbc3e9baa76c9777c"
+    },
+    {
+      "block_id": "page-0220-block-0020",
+      "order": 20,
+      "text": "Improved negative symptoms in one RCT, but inferior to high dose olanzapine \nfor treatment of positive symptoms\n",
+      "bbox": [
+        163.9990997314453,
+        302.2669372558594,
+        414.7543029785156,
+        320.971923828125
+      ],
+      "text_sha256": "78899a8f5a575f7e52d80170630e029bd443fe99f5039674b27528671505d714"
+    },
+    {
+      "block_id": "page-0220-block-0021",
+      "order": 21,
+      "text": "ECT29\nOpen studies suggest moderate effect, as does a retrospective study.30 Often \nreserved for last-line treatment in practice but can be successful in the short31 \nand long32 term\n",
+      "bbox": [
+        47.99659729003906,
+        327.1069030761719,
+        412.7582702636719,
+        355.9994201660156
+      ],
+      "text_sha256": "f8f40ed079777adbe1bf2211965e1c20d4264595dcbdf7d65a8ea91ee5e77ab3"
+    },
+    {
+      "block_id": "page-0220-block-0022",
+      "order": 22,
+      "text": "Estradiol 100 – 200mcg \ntransdermal/day (+ \nantipsychotic)33\n",
+      "bbox": [
+        47.998687744140625,
+        362.1343994140625,
+        129.69618225097656,
+        391.01690673828125
+      ],
+      "text_sha256": "03de721d2a4f9d31bbcbfb6af42329abce6c814651339ac1b9dc6fd058c6b830"
+    },
+    {
+      "block_id": "page-0220-block-0023",
+      "order": 23,
+      "text": "Oestrogens may be psychoprotective and/or antipsychotic. RCT (n = 183) in \nwomen of child-bearing age suggested benefits on positive symptoms, especially \nat higher doses. Note contra-indications include being post-menopausal, history \nof VTE, stroke, breast cancer, migraine with aura. Unopposed estradiol over long \nperiods increases the risk of endometrial hyperplasia and malignancy – consider \nconsulting an endocrinologist. Evidence in men is lacking\n",
+      "bbox": [
+        163.99908447265625,
+        362.27191162109375,
+        422.1039733886719,
+        421.01190185546875
+      ],
+      "text_sha256": "d29a2476c8de4eb95d495f170dfd89522baef10a98e73c83635aa3f87b90c0a8"
+    },
+    {
+      "block_id": "page-0220-block-0024",
+      "order": 24,
+      "text": "Famotidine 100mg \nbd + antipsychotic34\n",
+      "bbox": [
+        47.99658203125,
+        427.1468811035156,
+        114.68656158447266,
+        446.0318908691406
+      ],
+      "text_sha256": "011debee3cadc8c6a0d792164bd193e39b03f98cac9899d1326a1c7a67ed08c8"
+    },
+    {
+      "block_id": "page-0220-block-0025",
+      "order": 25,
+      "text": "H2 antagonist. One short (4 weeks) RCT suggested some benefit in overall \nPANSS and CGI scores\n",
+      "bbox": [
+        163.9990997314453,
+        427.3419189453125,
+        401.9078063964844,
+        446.0469055175781
+      ],
+      "text_sha256": "72aa61a1fdd0b96040ba98a608693085d61f8d8c15f6fe8c3fdf97d8676785e6"
+    },
+    {
+      "block_id": "page-0220-block-0026",
+      "order": 26,
+      "text": "Ginkgo biloba\n(+ antipsychotic)6,7\n",
+      "bbox": [
+        47.99769592285156,
+        452.181884765625,
+        112.32096862792969,
+        471.06689453125
+      ],
+      "text_sha256": "3d8deace70c93a300b1d66b10c91217fc86053172a94f637fb18487277781698"
+    },
+    {
+      "block_id": "page-0220-block-0027",
+      "order": 27,
+      "text": "Possibly effective in combination with haloperidol. Unlikely to give rise to \nadditional adverse effects but clinical experience limited\n",
+      "bbox": [
+        163.9990997314453,
+        452.3669128417969,
+        398.4642639160156,
+        471.0718994140625
+      ],
+      "text_sha256": "5b69201f28fa4fffb6faafd70c8041f379462753e0442793a3ee38d33633f578"
+    },
+    {
+      "block_id": "page-0220-block-0028",
+      "order": 28,
+      "text": "Lurasidone up to 240mg/day35\n",
+      "bbox": [
+        47.99659729003906,
+        477.2069091796875,
+        149.1381072998047,
+        486.09442138671875
+      ],
+      "text_sha256": "115572349494bd9da6fe39fd334f10ae184c14985b60340f3fd16976e1bf8014"
+    },
+    {
+      "block_id": "page-0220-block-0029",
+      "order": 29,
+      "text": "(+ vortioxetine)\n",
+      "bbox": [
+        47.99909973144531,
+        487.3919372558594,
+        96.24658966064453,
+        496.09942626953125
+      ],
+      "text_sha256": "f99cbd3caa9036016a550f9ae00b7946a368edbe5f1d091e7c53da59e4ce0c2a"
+    },
+    {
+      "block_id": "page-0220-block-0030",
+      "order": 30,
+      "text": "One RCT comparing standard with high dose lurasidone produced comparable \nimprovements in TRS when given up to 24 weeks.36 Appears to be well \ntolerated, may be effective but no clozapine comparison arm included. The \naddition of vortioxetine to lurasidone was effective in a small case series37\n",
+      "bbox": [
+        164.00030517578125,
+        477.3944396972656,
+        417.1343078613281,
+        516.0944213867188
+      ],
+      "text_sha256": "ef66a7360d947e2281f06c6d75bf23d50b24f8e22efed8c079316f04917979c1"
+    },
+    {
+      "block_id": "page-0220-block-0031",
+      "order": 31,
+      "text": "Memantine 20mg/day\n(+ antipsychotic)38–40\n",
+      "bbox": [
+        47.99919891357422,
+        522.2368774414062,
+        122.60169982910156,
+        541.1219482421875
+      ],
+      "text_sha256": "92c3ea38e61b52e3f45b37aec984a569c5b9bbcd1801487c1c3c13e5be11a9f2"
+    },
+    {
+      "block_id": "page-0220-block-0032",
+      "order": 32,
+      "text": "Memantine is an NMDA antagonist. Two RCTs. The larger of the two (n = 138) \nwas negative. In the smaller (n = 21), memantine improved positive and \nnegative symptoms when added to clozapine. In another study in non-\nrefractory schizophrenia, memantine improved negative symptoms when added \nto risperidone\n",
+      "bbox": [
+        163.99920654296875,
+        522.3718872070312,
+        420.6943054199219,
+        571.1143798828125
+      ],
+      "text_sha256": "29cfb235e25e3625908c8c1334c65e9c35c2caa5d41bc5157cc198c845edb96d"
+    },
+    {
+      "block_id": "page-0220-block-0033",
+      "order": 33,
+      "text": "(Continued)\n",
+      "bbox": [
+        382.481689453125,
+        591.3869018554688,
+        419.9967346191406,
+        600.139404296875
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

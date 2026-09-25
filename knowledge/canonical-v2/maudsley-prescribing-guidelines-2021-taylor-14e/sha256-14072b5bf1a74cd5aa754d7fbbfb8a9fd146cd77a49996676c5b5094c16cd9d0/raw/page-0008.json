@@ -1,0 +1,83 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0008",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 8,
+  "source_page_index": 7,
+  "source_page_display": 8,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Contents    vii\nBipolar depression\b\n288\nProphylaxis in bipolar disorder\b\n296\nStopping lithium and mood stabilisers\b\n301\nChapter 3  Depression and anxiety disorders\b\n305\nIntroduction to Depression\b\n305\nOfficial guidance on the treatment of depression\b\n305\nAntidepressants – general overview\b\n307\nRecognised minimum effective doses of antidepressants\b\n312\nDrug treatment of depression\b\n314\nManagement of treatment-resistant depression – first choice\b\n317\nManagement of treatment-resistant depression – second choice\b\n321\nTreatment-resistant depression – other reported treatments\b\n323\nKetamine\b\n328\nPsychotic depression\b\n332\nSwitching antidepressants\b\n336\nAntidepressant withdrawal symptoms\b\n343\nStopping antidepressants\b\n348\nElectroconvulsive therapy (ECT) and psychotropic drugs\b\n353\nPsychostimulants in depression\b\n357\nPost-stroke depression\b\n362\nAntidepressants – alternative routes of administration\b\n366\nAntidepressant prophylaxis\b\n374\nDrug interactions with antidepressants\b\n378\nCardiac effects of antidepressants – summary\b\n383\nAntidepressant-induced arrhythmia\b\n389\nAntidepressant-induced hyponatraemia\b\n393\nAntidepressants and hyperprolactinaemia\b\n398\nAntidepressants and diabetes mellitus\b\n401\nAntidepressants and sexual dysfunction\b\n404\nSSRIs and bleeding\b\n409\nSt. John’s Wort\b\n417\nAntidepressants: relative adverse effects – a rough guide\b\n421\nAnxiety spectrum disorders\b\n423\nBenzodiazepines in the treatment of psychiatric disorders\b\n436\nBenzodiazepines, z-drugs and gabapentinoids: dependence, detoxification  \nand discontinuation\b\n440\nBenzodiazepines and disinhibition\b\n448\nChapter 4   Addictions and substance misuse\b\n451\nIntroduction\b\n451\nAlcohol dependence\b\n453\nAlcohol withdrawal delirium – delirium tremens\b\n472\nOpioid dependence\b\n474\nNicotine and smoking cessation\b\n503\nPharmacological treatment of dependence on stimulants\b\n511\nGHB and GBL dependence\b\n514\nBenzodiazepine misuse\b\n517\nSynthetic cannabinoid receptor agonists (SCRAs)\b\n520\n",
+  "raw_text_sha256": "a671a7adc056014fb5d1bf946f58d7e71994e8a6880211730a10989b4cc85f29",
+  "coordinates_sha256": "e144e8347e634c3a9d3646432f554b7c632e21c017e8db3186bd927ee8e3ccb6",
+  "block_sequence_sha256": "7167ba2acc3ecf4043390bbabc38456decfca02fc36d743b4bd66661e64b84a9",
+  "blocks": [
+    {
+      "block_id": "page-0008-block-0000",
+      "order": 0,
+      "text": "Contents    vii\n",
+      "bbox": [
+        360.4245910644531,
+        31.395221710205078,
+        420.0005798339844,
+        41.0272216796875
+      ],
+      "text_sha256": "11abbf68c41ce2dbc4c7fe0b21939a1ca04b12a6607d966939b6df325716906d"
+    },
+    {
+      "block_id": "page-0008-block-0001",
+      "order": 1,
+      "text": "Bipolar depression\b\n288\nProphylaxis in bipolar disorder\b\n296\nStopping lithium and mood stabilisers\b\n301\n",
+      "bbox": [
+        99.0,
+        62.730316162109375,
+        420.4079895019531,
+        97.2723388671875
+      ],
+      "text_sha256": "29369c6ac31e5b6ae4c444d24b93d598f87fcf19c8bed68f8cab7664ea807bc6"
+    },
+    {
+      "block_id": "page-0008-block-0002",
+      "order": 2,
+      "text": "Chapter 3  Depression and anxiety disorders\b\n305\nIntroduction to Depression\b\n305\nOfficial guidance on the treatment of depression\b\n305\nAntidepressants – general overview\b\n307\nRecognised minimum effective doses of antidepressants\b\n312\nDrug treatment of depression\b\n314\nManagement of treatment-resistant depression – first choice\b\n317\nManagement of treatment-resistant depression – second choice\b\n321\nTreatment-resistant depression – other reported treatments\b\n323\nKetamine\b\n328\nPsychotic depression\b\n332\nSwitching antidepressants\b\n336\nAntidepressant withdrawal symptoms\b\n343\nStopping antidepressants\b\n348\nElectroconvulsive therapy (ECT) and psychotropic drugs\b\n353\nPsychostimulants in depression\b\n357\nPost-stroke depression\b\n362\nAntidepressants – alternative routes of administration\b\n366\nAntidepressant prophylaxis\b\n374\nDrug interactions with antidepressants\b\n378\nCardiac effects of antidepressants – summary\b\n383\nAntidepressant-induced arrhythmia\b\n389\nAntidepressant-induced hyponatraemia\b\n393\nAntidepressants and hyperprolactinaemia\b\n398\nAntidepressants and diabetes mellitus\b\n401\nAntidepressants and sexual dysfunction\b\n404\nSSRIs and bleeding\b\n409\nSt. John’s Wort\b\n417\nAntidepressants: relative adverse effects – a rough guide\b\n421\nAnxiety spectrum disorders\b\n423\nBenzodiazepines in the treatment of psychiatric disorders\b\n436\nBenzodiazepines, z-drugs and gabapentinoids: dependence, detoxification  \n",
+      "bbox": [
+        47.99700927734375,
+        110.80826568603516,
+        420.4079895019531,
+        493.18231201171875
+      ],
+      "text_sha256": "eabb1e77205ceade9452868175f92dff04796556a643532fb020c7fbfb5caf0a"
+    },
+    {
+      "block_id": "page-0008-block-0003",
+      "order": 3,
+      "text": "and discontinuation\b\n440\nBenzodiazepines and disinhibition\b\n448\n",
+      "bbox": [
+        99.0,
+        494.63128662109375,
+        420.4079895019531,
+        517.17626953125
+      ],
+      "text_sha256": "35769b08d08dce8fd05c3feff4e3a7b4a5913d41ab61f606569dd5a7c1fe9f14"
+    },
+    {
+      "block_id": "page-0008-block-0004",
+      "order": 4,
+      "text": "Chapter 4   Addictions and substance misuse\b\n451\nIntroduction\b\n451\nAlcohol dependence\b\n453\nAlcohol withdrawal delirium – delirium tremens\b\n472\nOpioid dependence\b\n474\nNicotine and smoking cessation\b\n503\nPharmacological treatment of dependence on stimulants\b\n511\nGHB and GBL dependence\b\n514\nBenzodiazepine misuse\b\n517\nSynthetic cannabinoid receptor agonists (SCRAs)\b\n520\n",
+      "bbox": [
+        47.99700927734375,
+        530.7123413085938,
+        420.4079895019531,
+        649.15234375
+      ],
+      "text_sha256": "665df9177aa90b8eb95d64055b325441d3f297344f17cb235258a93f3fce3207"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

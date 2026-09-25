@@ -1,0 +1,491 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0093",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 93,
+  "source_page_index": 92,
+  "source_page_display": 93,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "72    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nDepot/LAI antipsychotics – pharmacokinetics\nDrug\nUK Trade Name\nTime to peak (days)*\nPlasma half-life \n(days)\nTime to steady \nstate (weeks)**\nAripiprazole1\n(Abilify Maintena)\n7d\n30–46d\n~20W\nAripiprazole lauroxil2–4\n(Aristada (in USA))\n44–50d\n~54–57d\n~16W\nAripiprazole lauroxil \nnanocrystal4–6****\n(Aristada Initio (in \nUSA))\n4d\n~15–18d\nFlupentixol decanoate7,8\n(Depixol)\n4–7d\n8–17d\n~8–12W\nFluphenazine decanoate4,9–11 (Modecate)\n8–12d***\n7–10d\n~8W\nHaloperidol decanoate12,13\n(Haldol)\n7d\n21d\n~14W\nOlanzapine pamoate4,14,15\n(ZypAdhera)\n2–3d\n30d\n~12W\nPaliperidone palmitate4,16\n(monthly)\n(Xeplion)\n13d\n25–49d\n~20W\nPaliperidone palmitate17,18\n(three monthly)\n(Trevicta)\n25d\nDeltoid: 84–95d  \nGluteal: 118–139d\n~52W\nPipotiazine palmitate19,20\n(Piportil)\n7–14d\n15d\n~9W\nRBP-70004,21\n(risperidone sc monthly)\n(Perseris (in USA))\n1st peak ~1d\n2nd peak ~11d\n~8–9d\n~8W\nRisperidone \nmicrospheres22,23\n(Risperidal Consta)\n~30d\n4d\n~8W\nZuclopenthixol  \ndecanoate7,19,24\n(Clopixol)\n4–7d\n19d\n~12W\n*Time to peak is not the same as time to reach therapeutic plasma concentration, but both are dependent on dose. \nFor large (loading) doses, therapeutic activity is often seen before attaining peak levels. For low (test) doses, the \ninitial peak level may be sub-therapeutic.\n**Attainment of steady state (SS) follows logarithmic, not linear characteristics: around 90% of SS levels are \nachieved in three half-lives. Time to attain steady state is independent of dose and dosing frequency (i.e. you can’t \nhurry it up by giving more, more often). Loading doses can be used to produce prompt therapeutic plasma levels \nbut time to SS remains the same.\n***Some estimates suggest peak concentrations after only a few hours.24,25 It is likely that fluphenazine decanoate \nproduces two peaks – one on the day of injection and a second slightly higher peak a week or so later.12\n****used to initiate treatment with Aristada, IM injection with one 30 mg oral dose of aripiprazole; not designed \nfor repeat dosing.\nReferences\n\t 1.\t Mallikaarjun S, et al. Pharmacokinetics, tolerability and safety of aripiprazole once-monthly in adult schizophrenia: an open-label, parallel-\narm, multiple-dose study. Schizophr Res 2013; 150:281–288.\n\t 2.\t Hard ML, et al. Aripiprazole lauroxil: pharmacokinetic profile of this long-acting injectable antipsychotic in persons with schizophrenia. J \nClin Psychopharmacol 2017; 37:289–295.\n\t 3.\t Turncliff R, et al. Relative bioavailability and safety of aripiprazole lauroxil, a novel once-monthly, long-acting injectable atypical antipsy-\nchotic, following deltoid and gluteal administration in adult subjects with schizophrenia. Schizophr Res 2014; 159:404–410.\n\t 4.\t Correll CU, et al. Pharmacokinetic characteristics of long-acting injectable antipsychotics for schizophrenia: an overview. CNS Drugs 2021; \n35:39–59.\n\t 5.\t Alkermes Inc. Highlights of Prescribing Information. ARISTADA INITIO® (aripiprazole lauroxil) extended-release injectable suspension, for \nintramuscular use. 2020; https://www.aristadahcp.com/downloadables/ARISTADA-INITIO-PI.pdf.\n",
+  "raw_text_sha256": "f31cc033bcbc006fa2eab09c1860cc81a3bda0548fcf2a769c1de590bb7c05f2",
+  "coordinates_sha256": "43844419ff31ae8f8aaf04d2c9df6deb75c705e8eb500862d2aa1788a11803aa",
+  "block_sequence_sha256": "7d35fb45ac3175c09417ac5c5e4e37aa245dedbafe091df59563cc03a7cc94aa",
+  "blocks": [
+    {
+      "block_id": "page-0093-block-0000",
+      "order": 0,
+      "text": "72    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "00ca72a7a8fbe52e654eda9d0cdc5e467dd1440d122082c611ff561c3b448773"
+    },
+    {
+      "block_id": "page-0093-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0093-block-0002",
+      "order": 2,
+      "text": "Depot/LAI antipsychotics – pharmacokinetics\n",
+      "bbox": [
+        68.88839721679688,
+        66.06448364257812,
+        299.8993835449219,
+        79.0994873046875
+      ],
+      "text_sha256": "e96f2efe0798d26a8af0f9571bc8cad20a090bb2e2f9a362f28600049140e1fb"
+    },
+    {
+      "block_id": "page-0093-block-0003",
+      "order": 3,
+      "text": "Drug\nUK Trade Name\nTime to peak (days)*\n",
+      "bbox": [
+        61.88849639892578,
+        104.57203674316406,
+        297.7485656738281,
+        113.45953369140625
+      ],
+      "text_sha256": "335fbf3816f09561a2163e2c2dc6db33b51e07c3b998033be48593fc13e6537e"
+    },
+    {
+      "block_id": "page-0093-block-0004",
+      "order": 4,
+      "text": "Plasma half-life \n(days)\n",
+      "bbox": [
+        305.3909912109375,
+        94.57453918457031,
+        361.6635437011719,
+        113.45953369140625
+      ],
+      "text_sha256": "60c8a18fa26fba38a761778ebd3ab61f691c8786e78db5ff23f8e173b60d541f"
+    },
+    {
+      "block_id": "page-0093-block-0005",
+      "order": 5,
+      "text": "Time to steady \nstate (weeks)**\n",
+      "bbox": [
+        373.13848876953125,
+        94.57453918457031,
+        428.5710754394531,
+        113.45953369140625
+      ],
+      "text_sha256": "4d3da70e71629f3ba6658afbead7973ccc0666510ca53c8350f6e0e50ae3ce90"
+    },
+    {
+      "block_id": "page-0093-block-0006",
+      "order": 6,
+      "text": "Aripiprazole1\n(Abilify Maintena)\n7d\n30–46d\n~20W\n",
+      "bbox": [
+        61.88850402832031,
+        121.5270004272461,
+        393.0589294433594,
+        130.237060546875
+      ],
+      "text_sha256": "a47cefcb8a482c11dcc96e2a79aff8a975a815ccd7d2b058cb7d873460fc3372"
+    },
+    {
+      "block_id": "page-0093-block-0007",
+      "order": 7,
+      "text": "Aripiprazole lauroxil2–4\n(Aristada (in USA))\n44–50d\n~54–57d\n~16W\n",
+      "bbox": [
+        61.88890075683594,
+        136.5495147705078,
+        393.0589294433594,
+        145.2593994140625
+      ],
+      "text_sha256": "c4eef5d61aefbd466888fa2485fac0f9285124219d1ce50441d3c53388a27a11"
+    },
+    {
+      "block_id": "page-0093-block-0008",
+      "order": 8,
+      "text": "Aripiprazole lauroxil \nnanocrystal4–6****\n",
+      "bbox": [
+        61.88890075683594,
+        151.5744171142578,
+        127.16887664794922,
+        170.28448486328125
+      ],
+      "text_sha256": "55d96d575ba08e3a77e17d56fc1ecf235f4cdbe507b55b66ca36875dbe4c7322"
+    },
+    {
+      "block_id": "page-0093-block-0009",
+      "order": 9,
+      "text": "(Aristada Initio (in \nUSA))\n",
+      "bbox": [
+        153.3863983154297,
+        151.57948303222656,
+        211.7288818359375,
+        170.28448486328125
+      ],
+      "text_sha256": "9daab652fa8380c4ad837de377c2a6f50f6fba077d529f2e3935f7d1e53f13cf"
+    },
+    {
+      "block_id": "page-0093-block-0010",
+      "order": 10,
+      "text": "4d\n~15–18d\n",
+      "bbox": [
+        224.38890075683594,
+        151.57948303222656,
+        334.4889831542969,
+        160.2869873046875
+      ],
+      "text_sha256": "72ad067d3a01a0cd8f1acc1afb6c4eae7129c116a13d8cfbadf3e9a0e72c525b"
+    },
+    {
+      "block_id": "page-0093-block-0011",
+      "order": 11,
+      "text": "Flupentixol decanoate7,8\n(Depixol)\n4–7d\n8–17d\n~8–12W\n",
+      "bbox": [
+        61.88641357421875,
+        176.6020050048828,
+        400.9789123535156,
+        185.31451416015625
+      ],
+      "text_sha256": "ed9f70c00fae26b59e1da207aa21321a19411996680ea1213dd816c5660be5b0"
+    },
+    {
+      "block_id": "page-0093-block-0012",
+      "order": 12,
+      "text": "Fluphenazine decanoate4,9–11 (Modecate)\n8–12d***\n7–10d\n~8W\n",
+      "bbox": [
+        61.88890075683594,
+        189.12953186035156,
+        388.8888854980469,
+        200.33453369140625
+      ],
+      "text_sha256": "78fc99253c73d9ab12e8e6a0b71a23dc075b03f690e30aa8f284218f4ca571f2"
+    },
+    {
+      "block_id": "page-0093-block-0013",
+      "order": 13,
+      "text": "Haloperidol decanoate12,13\n(Haldol)\n7d\n21d\n~14W\n",
+      "bbox": [
+        61.88890075683594,
+        206.64952087402344,
+        393.0589294433594,
+        215.35952758789062
+      ],
+      "text_sha256": "35c36528b6b99cfdfab3e85c6d5e752a1c6697ef9c029ad2adee1576554b1407"
+    },
+    {
+      "block_id": "page-0093-block-0014",
+      "order": 14,
+      "text": "Olanzapine pamoate4,14,15\n(ZypAdhera)\n2–3d\n30d\n~12W\n",
+      "bbox": [
+        61.88890075683594,
+        221.6745147705078,
+        393.0589294433594,
+        230.384521484375
+      ],
+      "text_sha256": "b68c97f77d1c2d04833dbc51e154130bf37e3cd14a51e9291842e242b24c0986"
+    },
+    {
+      "block_id": "page-0093-block-0015",
+      "order": 15,
+      "text": "Paliperidone palmitate4,16\n",
+      "bbox": [
+        61.88890075683594,
+        236.6995086669922,
+        141.646484375,
+        245.40701293945312
+      ],
+      "text_sha256": "28f733f2aae9d87593c1838c97b4e27fb866fd417e0007bfea542ddcd1ec45db"
+    },
+    {
+      "block_id": "page-0093-block-0016",
+      "order": 16,
+      "text": "(monthly)\n",
+      "bbox": [
+        61.88849639892578,
+        246.70201110839844,
+        92.30848693847656,
+        255.40951538085938
+      ],
+      "text_sha256": "979dfc8049fb11fc4c65220d9692b2a068cc721a6ea3e98f285d001090dca57e"
+    },
+    {
+      "block_id": "page-0093-block-0017",
+      "order": 17,
+      "text": "(Xeplion)\n13d\n25–49d\n~20W\n",
+      "bbox": [
+        153.3885040283203,
+        236.7045135498047,
+        393.0585021972656,
+        245.41201782226562
+      ],
+      "text_sha256": "2d880ea1cf823cf93a29ce5dff47753375c0091133a4f3d2816ba4fe56e278f5"
+    },
+    {
+      "block_id": "page-0093-block-0018",
+      "order": 18,
+      "text": "Paliperidone palmitate17,18\n",
+      "bbox": [
+        61.88850402832031,
+        261.7320251464844,
+        144.0775909423828,
+        270.43951416015625
+      ],
+      "text_sha256": "969197f0cad9ad805643f47285bc557ade248b0f28aa2de3d867d081e4e85825"
+    },
+    {
+      "block_id": "page-0093-block-0019",
+      "order": 19,
+      "text": "(three monthly)\n",
+      "bbox": [
+        61.88849639892578,
+        271.7270202636719,
+        110.92346954345703,
+        280.43450927734375
+      ],
+      "text_sha256": "13e9be8d2a4fd7f7ff6a055096f216f11a76bdef3f5a715d4f24e0eaa347c69f"
+    },
+    {
+      "block_id": "page-0093-block-0020",
+      "order": 20,
+      "text": "(Trevicta)\n25d\nDeltoid: 84–95d  \nGluteal: 118–139d\n",
+      "bbox": [
+        153.3885040283203,
+        261.7295227050781,
+        365.4136047363281,
+        280.43450927734375
+      ],
+      "text_sha256": "1cb16c0c2186bc9dfaae652a6bdceeba078c1cac76105f5d7074ee933bcf8393"
+    },
+    {
+      "block_id": "page-0093-block-0021",
+      "order": 21,
+      "text": "~52W\n",
+      "bbox": [
+        373.13848876953125,
+        261.7295227050781,
+        393.0585021972656,
+        270.43701171875
+      ],
+      "text_sha256": "65523c600aee47d1029b7fdf09c19e8c2addbd87eca064063c53b65de284dfaf"
+    },
+    {
+      "block_id": "page-0093-block-0022",
+      "order": 22,
+      "text": "Pipotiazine palmitate19,20\n(Piportil)\n7–14d\n15d\n~9W\n",
+      "bbox": [
+        61.88850402832031,
+        286.75201416015625,
+        388.8888854980469,
+        295.4645080566406
+      ],
+      "text_sha256": "25c4cd38d1151bdd5bee603c5975eb54be12770acc63b211535007c93d5f0a99"
+    },
+    {
+      "block_id": "page-0093-block-0023",
+      "order": 23,
+      "text": "RBP-70004,21\n",
+      "bbox": [
+        61.88890075683594,
+        301.7745056152344,
+        101.66477966308594,
+        310.48199462890625
+      ],
+      "text_sha256": "c432b34555449655ca6e143fd884612982342baf519ea18a5a1f9028397b0c04"
+    },
+    {
+      "block_id": "page-0093-block-0024",
+      "order": 24,
+      "text": "(risperidone sc monthly)\n",
+      "bbox": [
+        61.88849639892578,
+        311.77703857421875,
+        138.14849853515625,
+        320.4845275878906
+      ],
+      "text_sha256": "386296f6525882cb36497db09d5041325ac3f0bc750861370bd7b560e9614239"
+    },
+    {
+      "block_id": "page-0093-block-0025",
+      "order": 25,
+      "text": "(Perseris (in USA))\n1st peak ~1d\n2nd peak ~11d\n~8–9d\n~8W\n",
+      "bbox": [
+        153.3885040283203,
+        301.779541015625,
+        388.8885192871094,
+        320.4845275878906
+      ],
+      "text_sha256": "cff53690410d9088834e0f70932d868624ca00104114650b7dde8cb4237533cd"
+    },
+    {
+      "block_id": "page-0093-block-0026",
+      "order": 26,
+      "text": "Risperidone \nmicrospheres22,23\n",
+      "bbox": [
+        61.88850402832031,
+        326.8070373535156,
+        114.64059448242188,
+        345.51202392578125
+      ],
+      "text_sha256": "a9a6bc40d1bcbbb913686f3baec789e643878ded403ea8db15564033d2f515e0"
+    },
+    {
+      "block_id": "page-0093-block-0027",
+      "order": 27,
+      "text": "(Risperidal Consta)\n~30d\n4d\n~8W\n",
+      "bbox": [
+        153.38890075683594,
+        326.8020324707031,
+        388.8888854980469,
+        335.509521484375
+      ],
+      "text_sha256": "c48359308c16932e59cd9b8742e73e559a4064f049c2fabe5ad1ec9ddf9df59f"
+    },
+    {
+      "block_id": "page-0093-block-0028",
+      "order": 28,
+      "text": "Zuclopenthixol  \ndecanoate7,19,24\n",
+      "bbox": [
+        61.88890075683594,
+        351.82952880859375,
+        112.73139190673828,
+        370.5345153808594
+      ],
+      "text_sha256": "c99eedf5ffb078652230a5fe396d242487b3a146eda126933583a0af8839afd3"
+    },
+    {
+      "block_id": "page-0093-block-0029",
+      "order": 29,
+      "text": "(Clopixol)\n4–7d\n19d\n~12W\n",
+      "bbox": [
+        153.38890075683594,
+        351.8270263671875,
+        393.0589294433594,
+        360.5345153808594
+      ],
+      "text_sha256": "98b1beb54b957388eacc5986971acbd11cf89a40bac78f3a67964363541dc12d"
+    },
+    {
+      "block_id": "page-0093-block-0030",
+      "order": 30,
+      "text": "*Time to peak is not the same as time to reach therapeutic plasma concentration, but both are dependent on dose. \nFor large (loading) doses, therapeutic activity is often seen before attaining peak levels. For low (test) doses, the \ninitial peak level may be sub-therapeutic.\n**Attainment of steady state (SS) follows logarithmic, not linear characteristics: around 90% of SS levels are \nachieved in three half-lives. Time to attain steady state is independent of dose and dosing frequency (i.e. you can’t \nhurry it up by giving more, more often). Loading doses can be used to produce prompt therapeutic plasma levels \nbut time to SS remains the same.\n***Some estimates suggest peak concentrations after only a few hours.24,25 It is likely that fluphenazine decanoate \nproduces two peaks – one on the day of injection and a second slightly higher peak a week or so later.12\n",
+      "bbox": [
+        61.88890075683594,
+        380.82952880859375,
+        433.5365905761719,
+        469.5320129394531
+      ],
+      "text_sha256": "c64b4d54df783244e4157f46998168bfdbc86dce3f847f5a435889e87488eb3e"
+    },
+    {
+      "block_id": "page-0093-block-0031",
+      "order": 31,
+      "text": "****used to initiate treatment with Aristada, IM injection with one 30 mg oral dose of aripiprazole; not designed \nfor repeat dosing.\n",
+      "bbox": [
+        61.88849639892578,
+        470.8270263671875,
+        426.4111633300781,
+        489.5320129394531
+      ],
+      "text_sha256": "576ac8df43abc5e6bfdc066b8ab43517cf3da766d34219b0f8f9743e00717b31"
+    },
+    {
+      "block_id": "page-0093-block-0032",
+      "order": 32,
+      "text": "References\n",
+      "bbox": [
+        61.88849639892578,
+        507.3745422363281,
+        117.9224853515625,
+        520.4095458984375
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0093-block-0033",
+      "order": 33,
+      "text": "\t 1.\t Mallikaarjun S, et al. Pharmacokinetics, tolerability and safety of aripiprazole once-monthly in adult schizophrenia: an open-label, parallel-\n",
+      "bbox": [
+        61.88849639892578,
+        525.4955444335938,
+        433.90032958984375,
+        532.5275268554688
+      ],
+      "text_sha256": "efaf38639a5114a54ff9bfa9b2320bef41d10912ca8da947cccc400e90193cde"
+    },
+    {
+      "block_id": "page-0093-block-0034",
+      "order": 34,
+      "text": "arm, multiple-dose study. Schizophr Res 2013; 150:281–288.\n\t 2.\t Hard ML, et al. Aripiprazole lauroxil: pharmacokinetic profile of this long-acting injectable antipsychotic in persons with schizophrenia. J \n",
+      "bbox": [
+        61.894500732421875,
+        534.3515625,
+        435.5864562988281,
+        550.5275268554688
+      ],
+      "text_sha256": "7395f7c6aef42e66c931a52c372cd4f6ab69b6db29887b33331730c446c9a9b9"
+    },
+    {
+      "block_id": "page-0093-block-0035",
+      "order": 35,
+      "text": "Clin Psychopharmacol 2017; 37:289–295.\n\t 3.\t Turncliff R, et al. Relative bioavailability and safety of aripiprazole lauroxil, a novel once-monthly, long-acting injectable atypical antipsy-\n",
+      "bbox": [
+        61.90049743652344,
+        552.3515625,
+        433.93035888671875,
+        568.5275268554688
+      ],
+      "text_sha256": "cf306f9badecd291b45eed10bcbbd870af40db65c93bc7a221189d50499dbe6c"
+    },
+    {
+      "block_id": "page-0093-block-0036",
+      "order": 36,
+      "text": "chotic, following deltoid and gluteal administration in adult subjects with schizophrenia. Schizophr Res 2014; 159:404–410.\n\t 4.\t Correll CU, et al. Pharmacokinetic characteristics of long-acting injectable antipsychotics for schizophrenia: an overview. CNS Drugs 2021; \n",
+      "bbox": [
+        61.90650177001953,
+        570.3515625,
+        435.5564880371094,
+        586.5275268554688
+      ],
+      "text_sha256": "f1e25f87a183d4c572b85029835439ef701f81963584e5b3007075bca811c1eb"
+    },
+    {
+      "block_id": "page-0093-block-0037",
+      "order": 37,
+      "text": "35:39–59.\n\t 5.\t Alkermes Inc. Highlights of Prescribing Information. ARISTADA INITIO® (aripiprazole lauroxil) extended-release injectable suspension, for \n",
+      "bbox": [
+        61.912498474121094,
+        588.3515625,
+        435.5985412597656,
+        604.5275268554688
+      ],
+      "text_sha256": "341edb60c3dc12d01db11db10887fce9c71107e69cb31eb253c88a8decef1231"
+    },
+    {
+      "block_id": "page-0093-block-0038",
+      "order": 38,
+      "text": "intramuscular use. 2020; https://www.aristadahcp.com/downloadables/ARISTADA-INITIO-PI.pdf.\n",
+      "bbox": [
+        72.91648864746094,
+        606.4955444335938,
+        328.3183898925781,
+        613.5275268554688
+      ],
+      "text_sha256": "d0e23293dbe5b130fcf489338e0fe3246443df3be33c188bc8a57e70ff3b1df3"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

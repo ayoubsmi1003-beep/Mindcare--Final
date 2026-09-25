@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0634",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 634,
+  "source_page_index": 633,
+  "source_page_display": 634,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Prescribing in older people    613\nCHAPTER  6\nhighlighting the care required when treating patients with dementia who have a history \nof bradycardia or epilepsy.65\nInteractions\nPotential for interaction may also differentiate currently available cholinesterase inhibi-\ntors. Donepezil66 and galantamine67 are metabolised by cytochromes 2D6 and 3A4 and \nso drug levels may be altered by other drugs affecting the function of these enzymes. \nCholinesterase inhibitors themselves may also interfere with the metabolism of other \ndrugs, although this is perhaps a theoretical consideration. Rivastigmine has almost no \npotential for interaction since it is metabolised at the site of action and does not affect \nhepatic cytochromes. A prospective pharmacodynamic analysis of potential drug inter-\nactions between rivastigmine and other medications (22 different therapeutic classes) \ncommonly prescribed in the elderly population compared adverse effects’ odds ratios \nbetween rivastigmine and placebo. Rivastigmine was not associated with any signifi-\ncant pattern of increase in adverse effects that would indicate a drug interaction com-\npared with placebo.68 Rivastigmine thus appears to be least likely to cause problematic \ndrug interactions, a factor that may be important in an elderly population subject to \npolypharmacy (see Table 6.2).\nAnalysis of the French pharmacovigilance database found that the majority of \nreported drug interactions concerning AChE-Is were found to be pharmacodynamic in \nnature and most frequently involved the combination of AChE-I and bradycardic drugs \n(beta blockers, digoxin, amiodarone and calcium channel antagonists). Almost a third \nof these interactions resulted in cardiovascular ADRs such as bradycardia, atrioven-\ntricular block and arterial hypotension. The second most frequent drug interaction \nreported was the combination of AChE-I with anticholinergic drugs leading to pharma-\ncological antagonism.69\nThe pharmacodynamic, pharmacokinetic and pharmacogenetic aspects of drugs used \nin dementia have recently been summarised in two comprehensive reviews.70,71\nWhen to stop treatment\nA large multicentre study72 of community-dwelling patients with moderate or severe \nAD investigated the long-term effects of donepezil over 12 months compared with stop-\nping donepezil after 3 months, switching to memantine or combining donepezil with \nmemantine. Continued treatment with donepezil was associated with continued cogni-\ntive benefits, and patients with a Mini Mental State (MMSE) score as low as 3 also \nbenefitted from treatment. This suggests that patients should continue treatment with \nAChE-Is for as long as possible and there should not be a cut-off MMSE score where \ntreatment is stopped automatically. Moreover, secondary and post-hoc analyses of this \nstudy found that withdrawal of donepezil in patients with moderate-to-severe AD \nincreased the risk of nursing home placement during 12 months of treatment but made \nno difference during the following 3 years of follow-up. This highlights the point that \ndecisions to stop or continue treatment should be informed by potential risks of with-\ndrawal, even if the perceived benefits of continued treatment are not clear.73\n",
+  "raw_text_sha256": "158c4caed2989f7cdc29fa3148c2ee063cd6e99a8815032902a74d5404dbf47c",
+  "coordinates_sha256": "fd1ef5821e8599e5d067a278860bab84782bf372b861b3c84107bcdc069eb9b8",
+  "block_sequence_sha256": "04b5f1b51c045635114a033d35ffe9c608e7c310d4d6ac5845d0bc2f08f3fda5",
+  "blocks": [
+    {
+      "block_id": "page-0634-block-0000",
+      "order": 0,
+      "text": "Prescribing in older people    613\n",
+      "bbox": [
+        281.576904296875,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "6e4ebd31aed08e67b1784a4665b50065025b43ad8e3525dd1a8852cccdcfb183"
+    },
+    {
+      "block_id": "page-0634-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        454.4096984863281,
+        405.35260009765625,
+        463.88970947265625,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0634-block-0002",
+      "order": 2,
+      "text": "highlighting the care required when treating patients with dementia who have a history \nof bradycardia or epilepsy.65\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.8000183105469,
+        86.27041625976562
+      ],
+      "text_sha256": "be2762c654a5a938c65943bc2bf5296f108f0f16e1d0319c4fbcb20f10bb2b49"
+    },
+    {
+      "block_id": "page-0634-block-0003",
+      "order": 3,
+      "text": "Interactions\n",
+      "bbox": [
+        48.0,
+        108.64041900634766,
+        103.55999755859375,
+        120.49041748046875
+      ],
+      "text_sha256": "7220b4146a05716d14355efa029b1dbf955fa607662fc58bf2ee142de106d780"
+    },
+    {
+      "block_id": "page-0634-block-0004",
+      "order": 4,
+      "text": "Potential for interaction may also differentiate currently available cholinesterase inhibi-\ntors. Donepezil66 and galantamine67 are metabolised by cytochromes 2D6 and 3A4 and \nso drug levels may be altered by other drugs affecting the function of these enzymes. \nCholinesterase inhibitors themselves may also interfere with the metabolism of other \ndrugs, although this is perhaps a theoretical consideration. Rivastigmine has almost no \npotential for interaction since it is metabolised at the site of action and does not affect \nhepatic cytochromes. A prospective pharmacodynamic analysis of potential drug inter-\nactions between rivastigmine and other medications (22 different therapeutic classes) \ncommonly prescribed in the elderly population compared adverse effects’ odds ratios \nbetween rivastigmine and placebo. Rivastigmine was not associated with any signifi-\ncant pattern of increase in adverse effects that would indicate a drug interaction com-\npared with placebo.68 Rivastigmine thus appears to be least likely to cause problematic \ndrug interactions, a factor that may be important in an elderly population subject to \npolypharmacy (see Table 6.2).\n",
+      "bbox": [
+        47.99688720703125,
+        126.5504150390625,
+        422.806884765625,
+        294.2704772949219
+      ],
+      "text_sha256": "369af656075af230d47c9908f4e0ad773db952a919384bfbe9df5cd28ac6809f"
+    },
+    {
+      "block_id": "page-0634-block-0005",
+      "order": 5,
+      "text": "Analysis of the French pharmacovigilance database found that the majority of \nreported drug interactions concerning AChE-Is were found to be pharmacodynamic in \nnature and most frequently involved the combination of AChE-I and bradycardic drugs \n(beta blockers, digoxin, amiodarone and calcium channel antagonists). Almost a third \nof these interactions resulted in cardiovascular ADRs such as bradycardia, atrioven-\ntricular block and arterial hypotension. The second most frequent drug interaction \nreported was the combination of AChE-I with anticholinergic drugs leading to pharma-\ncological antagonism.69\n",
+      "bbox": [
+        48.00410461425781,
+        294.55047607421875,
+        422.8140869140625,
+        390.2704772949219
+      ],
+      "text_sha256": "0848bda8e46929be5ff273b671e673697dc069adbe9c240b38deb37a007f7c4b"
+    },
+    {
+      "block_id": "page-0634-block-0006",
+      "order": 6,
+      "text": "The pharmacodynamic, pharmacokinetic and pharmacogenetic aspects of drugs used \nin dementia have recently been summarised in two comprehensive reviews.70,71\n",
+      "bbox": [
+        48.0,
+        390.55047607421875,
+        422.77001953125,
+        414.2704772949219
+      ],
+      "text_sha256": "414902d2d2c59e271646c79c5ff72419082915591884746a9067f70d32430aa9"
+    },
+    {
+      "block_id": "page-0634-block-0007",
+      "order": 7,
+      "text": "When to stop treatment\n",
+      "bbox": [
+        48.0,
+        434.6404724121094,
+        161.9099884033203,
+        446.490478515625
+      ],
+      "text_sha256": "972af84a1f4175e90dc9411a714f4b80853c0daa78d999731f9ce37f39bdb580"
+    },
+    {
+      "block_id": "page-0634-block-0008",
+      "order": 8,
+      "text": "A large multicentre study72 of community-dwelling patients with moderate or severe \nAD investigated the long-term effects of donepezil over 12 months compared with stop-\nping donepezil after 3 months, switching to memantine or combining donepezil with \nmemantine. Continued treatment with donepezil was associated with continued cogni-\ntive benefits, and patients with a Mini Mental State (MMSE) score as low as 3 also \nbenefitted from treatment. This suggests that patients should continue treatment with \nAChE-Is for as long as possible and there should not be a cut-off MMSE score where \ntreatment is stopped automatically. Moreover, secondary and post-hoc analyses of this \nstudy found that withdrawal of donepezil in patients with moderate-to-severe AD \nincreased the risk of nursing home placement during 12 months of treatment but made \nno difference during the following 3 years of follow-up. This highlights the point that \ndecisions to stop or continue treatment should be informed by potential risks of with-\ndrawal, even if the perceived benefits of continued treatment are not clear.73\n",
+      "bbox": [
+        47.999107360839844,
+        452.55047607421875,
+        422.8290710449219,
+        608.2705078125
+      ],
+      "text_sha256": "3a4cf443b34528c9a837de58f749a0efe0c3f06321730b68170c79904606bae2"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

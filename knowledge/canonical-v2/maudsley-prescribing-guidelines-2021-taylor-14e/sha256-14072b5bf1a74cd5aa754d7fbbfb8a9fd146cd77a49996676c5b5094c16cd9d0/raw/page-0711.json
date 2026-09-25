@@ -1,0 +1,323 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0711",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 711,
+  "source_page_index": 710,
+  "source_page_display": 711,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "690    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 7\nTreatment with mood stabilisers\n■\n■Lithium completely equilibrates across the placenta.183\n■\n■Lithium exposure during pregnancy has been associated with an increased risk of \ncongenital anomalies.184 The risk is higher in the first trimester185 and maybe be higher \nat higher doses.184 Although the overall risk of major malformations in infants \nexposed in utero has probably been overestimated in the past lithium should be \navoided in pregnancy if possible. However, if lithium is the best drug for the woman \nand the drug most likely to keep her well the woman should be advised of the \nincreased risk but supported to stay on lithium.\n■\n■If discontinuation is planned slow discontinuation before conception is the preferred \ncourse of action34,186 because abrupt discontinuation is suspected of worsening the \nrisk of relapse. The relapse rate postpartum may be as high as 70% in women who \ndiscontinued lithium before conception.187 If discontinuation is unsuccessful during \npregnancy restart and continue.\n■\n■Lithium use during pregnancy has a well-known association with the cardiac malfor-\nmation Ebstein’s anomaly. However, more recent data suggest that the magnitude of \nthe effect is much smaller than previously estimated.188,189 Furthermore, a large sur-\nveillance study of 5.6 million births found an association with maternal mental health \nproblems generally rather than specifically with lithium.190\n■\n■The period of maximum risk to the foetus is 2–6 weeks after conception,191 before \nmany women know that they are pregnant. The risk of atrial and ventricular septal \ndefects may also be increased.31\n■\n■If lithium is continued during pregnancy, high-resolution ultrasound and echocardi-\nography should be performed in liaison with foetal medicine obstetric services.\n■\n■In the third trimester, the use of lithium may be problematic because of changing \npharmacokinetics: an increasing dose of lithium is required to maintain the lithium \nlevel during pregnancy as total body water increases, but the requirements return \nabruptly to pre-pregnancy levels immediately after delivery.192 NICE recommends \nlithium plasma be adjusted to maintain the plasma level within the woman’s thera-\npeutic range and that lithium should be stopped during active labour and the plasma \nlevel checked 12 hours after her last dose.16,193 Women taking lithium should deliver \nin hospital where fluid balance can be monitored and maintained.\n■\n■A large cohort study reported that lithium was not associated with placenta-mediated \ncomplications or preterm birth.194\n■\n■Lithium use may increase the risk of neonatal readmission within 4 weeks \npostpartum.185\n■\n■Neonatal goitre, hypotonia, lethargy and cardiac arrhythmia can occur.\n■\n■Most data relating to carbamazepine, valproate and lamotrigine come from studies \nin epilepsy, a condition associated with increased neonatal malformation. These data \nmay not be precisely relevant to use in mental illness.\n■\n■Both carbamazepine and valproate have a clear causal link with increased risk of a \nvariety of foetal abnormalities, particularly neural tube defects including spina \nbifida.195 Both drugs should be avoided, if possible, and an antipsychotic prescribed \ninstead. Valproate confers a higher risk (around 10% for major malformations) than \ncarbamazapine196–198 and should not be used in women of child-bearing age except \n",
+  "raw_text_sha256": "68bc714ac0e69c7b19bb7c2e87652fa0927a6f17068246106aa155740fc90b34",
+  "coordinates_sha256": "0679d55126929673b5dee7ebf12bdb7749c6999aa485e136bf95b0ca281c7c76",
+  "block_sequence_sha256": "e43689e704419b302dce21f011b338a684b2d293ffdf99330798a74400ff0995",
+  "blocks": [
+    {
+      "block_id": "page-0711-block-0000",
+      "order": 0,
+      "text": "690    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "973b63e4b04b7746d82d7e48ea727d934d4a2511b6cae0aecde50f5ab0f7b610"
+    },
+    {
+      "block_id": "page-0711-block-0001",
+      "order": 1,
+      "text": "CHAPTER 7\n",
+      "bbox": [
+        18.520000457763672,
+        472.7144775390625,
+        28.0,
+        514.0584716796875
+      ],
+      "text_sha256": "6d1a2318236627f2d413db0336034ac4d71cea7172bd0baddf04c66a07292590"
+    },
+    {
+      "block_id": "page-0711-block-0002",
+      "order": 2,
+      "text": "Treatment with mood stabilisers\n",
+      "bbox": [
+        61.88999938964844,
+        62.500404357910156,
+        213.95999145507812,
+        74.35040283203125
+      ],
+      "text_sha256": "d204b7e3b1a8d98595491ed84c42a2413296fb2058e6c9ee9b41e7f6fe1ae0ed"
+    },
+    {
+      "block_id": "page-0711-block-0003",
+      "order": 3,
+      "text": "■\n■Lithium completely equilibrates across the placenta.183\n",
+      "bbox": [
+        61.88990020751953,
+        86.17040252685547,
+        304.511962890625,
+        98.13040161132812
+      ],
+      "text_sha256": "6ed41b5c97b8f2200849fec6347fed13e512b6341af8c12bc192730a218e0ca4"
+    },
+    {
+      "block_id": "page-0711-block-0004",
+      "order": 4,
+      "text": "■\n■Lithium exposure during pregnancy has been associated with an increased risk of \n",
+      "bbox": [
+        61.88990020751953,
+        98.410400390625,
+        436.6199035644531,
+        110.13040161132812
+      ],
+      "text_sha256": "ee93a2c8b0f2ebc54aa9e26e1af4683895e08271ceb7aee2efbc67ce71277f59"
+    },
+    {
+      "block_id": "page-0711-block-0005",
+      "order": 5,
+      "text": "congenital anomalies.184 The risk is higher in the first trimester185 and maybe be higher \nat higher doses.184 Although the overall risk of major malformations in infants \nexposed in utero has probably been overestimated in the past lithium should be \navoided in pregnancy if possible. However, if lithium is the best drug for the woman \nand the drug most likely to keep her well the woman should be advised of the \nincreased risk but supported to stay on lithium.\n",
+      "bbox": [
+        70.88980102539062,
+        110.410400390625,
+        436.68975830078125,
+        182.13040161132812
+      ],
+      "text_sha256": "10d5beded3718e7ae01b239f373496d8d8c641e0924c6214e110c93b2efa36da"
+    },
+    {
+      "block_id": "page-0711-block-0006",
+      "order": 6,
+      "text": "■\n■If discontinuation is planned slow discontinuation before conception is the preferred \n",
+      "bbox": [
+        61.88990020751953,
+        182.410400390625,
+        436.64990234375,
+        194.13040161132812
+      ],
+      "text_sha256": "14478337641c9482a8cddd0a7cd01aeec9526301d7d49b178daf7d2f185cb1b9"
+    },
+    {
+      "block_id": "page-0711-block-0007",
+      "order": 7,
+      "text": "course of action34,186 because abrupt discontinuation is suspected of worsening the \nrisk of relapse. The relapse rate postpartum may be as high as 70% in women who \ndiscontinued lithium before conception.187 If discontinuation is unsuccessful during \npregnancy restart and continue.\n",
+      "bbox": [
+        70.88630676269531,
+        194.410400390625,
+        436.6846618652344,
+        242.13040161132812
+      ],
+      "text_sha256": "366ddaf48a52288a126f018499fa4d33e16aafde928416e8856b4b27a0fc3bf8"
+    },
+    {
+      "block_id": "page-0711-block-0008",
+      "order": 8,
+      "text": "■\n■Lithium use during pregnancy has a well-known association with the cardiac malfor-\n",
+      "bbox": [
+        61.88990020751953,
+        242.410400390625,
+        433.8899841308594,
+        254.13040161132812
+      ],
+      "text_sha256": "34fa7a3259d6cfb137e25d6d1df120ed5519a6fcfcaf0ba4eaee35eee90a7df3"
+    },
+    {
+      "block_id": "page-0711-block-0009",
+      "order": 9,
+      "text": "mation Ebstein’s anomaly. However, more recent data suggest that the magnitude of \nthe effect is much smaller than previously estimated.188,189 Furthermore, a large sur-\nveillance study of 5.6 million births found an association with maternal mental health \nproblems generally rather than specifically with lithium.190\n",
+      "bbox": [
+        70.88861083984375,
+        254.410400390625,
+        436.70001220703125,
+        302.1304016113281
+      ],
+      "text_sha256": "f283bee98c65309c2230154d6149dd35a5a01c8efa13fd6a63a07e920bc7ee60"
+    },
+    {
+      "block_id": "page-0711-block-0010",
+      "order": 10,
+      "text": "■\n■The period of maximum risk to the foetus is 2–6 weeks after conception,191 before \n",
+      "bbox": [
+        61.88990020751953,
+        302.410400390625,
+        436.6697082519531,
+        314.1304016113281
+      ],
+      "text_sha256": "2b21a810b35a3687395070c09f8f6c21ac7b2ba1428051435d498ab0f737795f"
+    },
+    {
+      "block_id": "page-0711-block-0011",
+      "order": 11,
+      "text": "many women know that they are pregnant. The risk of atrial and ventricular septal \ndefects may also be increased.31\n",
+      "bbox": [
+        70.88970947265625,
+        314.410400390625,
+        436.6397399902344,
+        338.1304016113281
+      ],
+      "text_sha256": "10ffc1ef9b2b71e69168eee11cd1e6283d27be96e1164d66dfa4310fbb6f96b0"
+    },
+    {
+      "block_id": "page-0711-block-0012",
+      "order": 12,
+      "text": "■\n■If lithium is continued during pregnancy, high-resolution ultrasound and echocardi-\n",
+      "bbox": [
+        61.88990020751953,
+        338.410400390625,
+        433.86993408203125,
+        350.1304016113281
+      ],
+      "text_sha256": "e8219a4a48b6283955815f829fa64a3852638075c24e6f89e23fd44ec0cad912"
+    },
+    {
+      "block_id": "page-0711-block-0013",
+      "order": 13,
+      "text": "ography should be performed in liaison with foetal medicine obstetric services.\n",
+      "bbox": [
+        70.88999938964844,
+        350.410400390625,
+        409.8299865722656,
+        362.1304016113281
+      ],
+      "text_sha256": "adf4e8078c8306ee119c7dacbc6777cb7752a7da18f3d05c756c6fe64ffde818"
+    },
+    {
+      "block_id": "page-0711-block-0014",
+      "order": 14,
+      "text": "■\n■In the third trimester, the use of lithium may be problematic because of changing \n",
+      "bbox": [
+        61.88990020751953,
+        362.410400390625,
+        436.6700134277344,
+        374.1304016113281
+      ],
+      "text_sha256": "360cc6cb0cc3391cc5a7764eb4dd1d25f162626962adb777c8bad14f5b950697"
+    },
+    {
+      "block_id": "page-0711-block-0015",
+      "order": 15,
+      "text": "pharmacokinetics: an increasing dose of lithium is required to maintain the lithium \nlevel during pregnancy as total body water increases, but the requirements return \nabruptly to pre-pregnancy levels immediately after delivery.192 NICE recommends \nlithium plasma be adjusted to maintain the plasma level within the woman’s thera-\npeutic range and that lithium should be stopped during active labour and the plasma \nlevel checked 12 hours after her last dose.16,193 Women taking lithium should deliver \nin hospital where fluid balance can be monitored and maintained.\n",
+      "bbox": [
+        70.88650512695312,
+        374.410400390625,
+        436.6764221191406,
+        458.1304016113281
+      ],
+      "text_sha256": "70647dff93704df86de021ed87bb61469fd55c3c1db0b829b61da4275e6a2cb8"
+    },
+    {
+      "block_id": "page-0711-block-0016",
+      "order": 16,
+      "text": "■\n■A large cohort study reported that lithium was not associated with placenta-mediated \n",
+      "bbox": [
+        61.88990020751953,
+        458.410400390625,
+        436.63995361328125,
+        470.1304016113281
+      ],
+      "text_sha256": "03c69e5131a5d58b75bdd1d52be559986ac32c87a88c6ed8dbc7371f955a9507"
+    },
+    {
+      "block_id": "page-0711-block-0017",
+      "order": 17,
+      "text": "complications or preterm birth.194\n",
+      "bbox": [
+        70.88999938964844,
+        470.410400390625,
+        216.17295837402344,
+        482.1304016113281
+      ],
+      "text_sha256": "b70b7607bcd8831de7453f18d7631388936c331d0c17f5a2b264cefed99748f6"
+    },
+    {
+      "block_id": "page-0711-block-0018",
+      "order": 18,
+      "text": "■\n■Lithium use may increase the risk of neonatal readmission within 4 weeks \n",
+      "bbox": [
+        61.88990020751953,
+        482.410400390625,
+        436.6999816894531,
+        494.1304016113281
+      ],
+      "text_sha256": "c37b909b34f757aaa91a4ee31079f4c16a99acf2f2d42f6a1c1186c793eb0580"
+    },
+    {
+      "block_id": "page-0711-block-0019",
+      "order": 19,
+      "text": "postpartum.185\n",
+      "bbox": [
+        70.88999938964844,
+        494.410400390625,
+        133.39395141601562,
+        506.1304016113281
+      ],
+      "text_sha256": "895543ec1648335a4cb7b95d2bd8d2fbb4919dbfdedeb367b47cdedb762d4cca"
+    },
+    {
+      "block_id": "page-0711-block-0020",
+      "order": 20,
+      "text": "■\n■Neonatal goitre, hypotonia, lethargy and cardiac arrhythmia can occur.\n",
+      "bbox": [
+        61.88990020751953,
+        506.410400390625,
+        377.98004150390625,
+        518.1304321289062
+      ],
+      "text_sha256": "4c60452e9dc150dcec0740f056e8ad62eaab76c10a2ac2d5d0cfbb9b222db959"
+    },
+    {
+      "block_id": "page-0711-block-0021",
+      "order": 21,
+      "text": "■\n■Most data relating to carbamazepine, valproate and lamotrigine come from studies \n",
+      "bbox": [
+        61.88990020751953,
+        518.17041015625,
+        436.6699523925781,
+        530.1304321289062
+      ],
+      "text_sha256": "59ed0ed6439a111c164089a8b217cfeb22eafdf596a1c3ba27ea69eba5e80993"
+    },
+    {
+      "block_id": "page-0711-block-0022",
+      "order": 22,
+      "text": "in epilepsy, a condition associated with increased neonatal malformation. These data \nmay not be precisely relevant to use in mental illness.\n",
+      "bbox": [
+        70.8800048828125,
+        530.410400390625,
+        436.6900329589844,
+        554.1304321289062
+      ],
+      "text_sha256": "a09fd6f5019c0c83034d56a3d5da3b27ca6aec0c2fb21f55028b2ada08ba1362"
+    },
+    {
+      "block_id": "page-0711-block-0023",
+      "order": 23,
+      "text": "■\n■Both carbamazepine and valproate have a clear causal link with increased risk of a \n",
+      "bbox": [
+        61.88990020751953,
+        554.410400390625,
+        436.66998291015625,
+        566.1304321289062
+      ],
+      "text_sha256": "14836f4a78a10a3aef963d8b7959b1caa645a20aa0cc822707ce2a6addd3d274"
+    },
+    {
+      "block_id": "page-0711-block-0024",
+      "order": 24,
+      "text": "variety of foetal abnormalities, particularly neural tube defects including spina \nbifida.195 Both drugs should be avoided, if possible, and an antipsychotic prescribed \ninstead. Valproate confers a higher risk (around 10% for major malformations) than \ncarbamazapine196–198 and should not be used in women of child-bearing age except \n",
+      "bbox": [
+        70.88999938964844,
+        566.410400390625,
+        436.7142028808594,
+        614.1304321289062
+      ],
+      "text_sha256": "322ff65730f5dafa538ac9646027eb146769bb7fe84dd8d2d3e05e0d09fdf6e4"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

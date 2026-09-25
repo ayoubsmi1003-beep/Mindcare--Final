@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0278",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 278,
+  "source_page_index": 277,
+  "source_page_display": 278,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Bipolar disorder    257\nCHAPTER 2\nValproate\nMechanism of action1\nValproate is a simple branched-chain fatty acid. Its mechanism of action is complex \nand not fully understood. Valproate inhibits the catabolism of γ-aminobutyric acid \n(GABA), reduces the turnover of arachidonic acid, activates the extracellular \n­signal-regulated kinase (ERK) pathway and thus alters synaptic plasticity, interferes \nwith intracellular, signalling promotes BDNF expression and reduces levels of protein \nkinase C. Recent research has focused on the ability of valproate to alter the expres-\nsion of multiple genes that are involved in transcription regulation, cytoskeletal mod-\nifications and ion homeostasis. Other mechanisms that have been proposed include \ndepletion of inositol, and indirect effects on non-GABA pathways through inhibition \nof voltage-gated sodium channels.\nThere is a growing literature relating to the potential use of valproate as an adjunc-\ntive treatment in several types of cancer; the relevant mechanism of action being inhibi-\ntion of histone deacetylase,2–4 a property that may also confer some effects on \nneuroplasticity.5\nFormulations\nValproate is available in the UK in three forms: sodium valproate, valproic acid (licensed \nfor the treatment of epilepsy) and semi-sodium valproate (licensed for the treatment of \nacute mania). Both semi-sodium and sodium valproate are metabolised to valproic \nacid, which is responsible for the pharmacological activity of all three preparations.6 \nClinical studies of the treatment of affective disorders variably use sodium valproate, \nsemi-sodium valproate, ‘valproate’ or valproic acid. The great majority has used semi-\nsodium valproate.\nIn the US, valproic acid is widely used in the treatment of bipolar illness,7 and in the \nUK sodium valproate is widely used. It is important to remember that doses of sodium \nvalproate and semi-sodium valproate are not equivalent; a slightly higher (approxi-\nmately 10%) dose is required if sodium valproate is used to allow for the extra sodium \ncontent.\nIt is unclear if there is any difference in efficacy between valproic acid, valproate \nsemi-sodium and sodium valproate. A large US quasi-experimental study found that \ninpatients who initially received the semi-sodium preparation had a hospital stay that \nwas a third longer than patients who initially received valproic acid.8 Note that sodium \nvalproate controlled release (Epilim Chrono9) can be administered as a once daily dose, \nwhereas other sodium and semi-sodium valproate preparations require at least twice \ndaily administration.\nIndications\nRandomised controlled trials (RCTs) have shown valproate to be effective in the treat-\nment of mania,10,11 with a response rate of 50% and a number needed to treat (NNT) \nof 2–4,12 although large negative studies do exist.13 One RCT found lithium to be more \n",
+  "raw_text_sha256": "ec7e41b37d99ccc9d6ac3ae7375bd540dcb2ba344aaf04e54dfe113b784cd33a",
+  "coordinates_sha256": "24ce7860e71cda6c18953905df0400d7616f364973ee2c34130a6a858daf500c",
+  "block_sequence_sha256": "02567666c4fbf8d377a4f81ed3973c357360b02e2a2f0f5b413ce18fa31576c3",
+  "blocks": [
+    {
+      "block_id": "page-0278-block-0000",
+      "order": 0,
+      "text": "Bipolar disorder    257\n",
+      "bbox": [
+        326.5046081542969,
+        31.395221710205078,
+        420.0005798339844,
+        41.0272216796875
+      ],
+      "text_sha256": "17f3c3f194b1be0e96184a6b660a2cc01904d0ae6e47043c5ba8780fdb4ef0c7"
+    },
+    {
+      "block_id": "page-0278-block-0001",
+      "order": 1,
+      "text": "CHAPTER 2\n",
+      "bbox": [
+        454.4096984863281,
+        146.3472900390625,
+        463.88970947265625,
+        187.6912841796875
+      ],
+      "text_sha256": "5eaa1f2591abe1a1b2f7664fa3de7ff01a032d44ee83fa594c7852135d4287aa"
+    },
+    {
+      "block_id": "page-0278-block-0002",
+      "order": 2,
+      "text": "Valproate\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        104.93999481201172,
+        79.1004638671875
+      ],
+      "text_sha256": "182b7115031d63458cd88c2f33e791cd1ce54d6438d14736758f040a723ea01d"
+    },
+    {
+      "block_id": "page-0278-block-0003",
+      "order": 3,
+      "text": "Mechanism of action1\n",
+      "bbox": [
+        48.00400161743164,
+        90.06747436523438,
+        159.12232971191406,
+        103.10247802734375
+      ],
+      "text_sha256": "8dc8858e860673d143f241564ffa40eca21fdd51d64e1a074590561d49784b00"
+    },
+    {
+      "block_id": "page-0278-block-0004",
+      "order": 4,
+      "text": "Valproate is a simple branched-chain fatty acid. Its mechanism of action is complex \nand not fully understood. Valproate inhibits the catabolism of γ-aminobutyric acid \n(GABA), reduces the turnover of arachidonic acid, activates the extracellular \n­signal-regulated kinase (ERK) pathway and thus alters synaptic plasticity, interferes \nwith intracellular, signalling promotes BDNF expression and reduces levels of protein \nkinase C. Recent research has focused on the ability of valproate to alter the expres-\nsion of multiple genes that are involved in transcription regulation, cytoskeletal mod-\nifications and ion homeostasis. Other mechanisms that have been proposed include \ndepletion of inositol, and indirect effects on non-GABA pathways through inhibition \nof voltage-gated sodium channels.\n",
+      "bbox": [
+        48.0,
+        108.91046142578125,
+        422.80010986328125,
+        228.63046264648438
+      ],
+      "text_sha256": "699ce3294d785e7e415a38d809c0eb61993d0e6103955ced929b09df4524d79e"
+    },
+    {
+      "block_id": "page-0278-block-0005",
+      "order": 5,
+      "text": "There is a growing literature relating to the potential use of valproate as an adjunc-\ntive treatment in several types of cancer; the relevant mechanism of action being inhibi-\ntion of histone deacetylase,2–4 a property that may also confer some effects on \nneuroplasticity.5\n",
+      "bbox": [
+        47.99571228027344,
+        228.91046142578125,
+        422.7856140136719,
+        276.6304931640625
+      ],
+      "text_sha256": "2bb94a44efbac19504da3b07220d4df09223010588f90de3d6280bb469dd1bd9"
+    },
+    {
+      "block_id": "page-0278-block-0006",
+      "order": 6,
+      "text": "Formulations\n",
+      "bbox": [
+        48.0,
+        294.06549072265625,
+        115.83699798583984,
+        307.1004943847656
+      ],
+      "text_sha256": "e39e33cde5226879be04f66fdc1649de8bcfe4938b0be1e5a6bf29905dd5acbb"
+    },
+    {
+      "block_id": "page-0278-block-0007",
+      "order": 7,
+      "text": "Valproate is available in the UK in three forms: sodium valproate, valproic acid (licensed \nfor the treatment of epilepsy) and semi-sodium valproate (licensed for the treatment of \nacute mania). Both semi-sodium and sodium valproate are metabolised to valproic \nacid, which is responsible for the pharmacological activity of all three preparations.6 \nClinical studies of the treatment of affective disorders variably use sodium valproate, \nsemi-sodium valproate, ‘valproate’ or valproic acid. The great majority has used semi-\nsodium valproate.\n",
+      "bbox": [
+        48.0,
+        312.9104919433594,
+        422.8104248046875,
+        396.6304931640625
+      ],
+      "text_sha256": "f6815b32944cdf59a6c6387ef8e6a71b1c92db2508db48bd499862b044a1d5d5"
+    },
+    {
+      "block_id": "page-0278-block-0008",
+      "order": 8,
+      "text": "In the US, valproic acid is widely used in the treatment of bipolar illness,7 and in the \nUK sodium valproate is widely used. It is important to remember that doses of sodium \nvalproate and semi-sodium valproate are not equivalent; a slightly higher (approxi-\nmately 10%) dose is required if sodium valproate is used to allow for the extra sodium \ncontent.\n",
+      "bbox": [
+        47.9984130859375,
+        396.9104919433594,
+        422.7784118652344,
+        456.6304931640625
+      ],
+      "text_sha256": "4da9903e2538effcceb3ffc679043172defd16d77f76eb00827c7d485335f1d3"
+    },
+    {
+      "block_id": "page-0278-block-0009",
+      "order": 9,
+      "text": "It is unclear if there is any difference in efficacy between valproic acid, valproate \nsemi-sodium and sodium valproate. A large US quasi-experimental study found that \ninpatients who initially received the semi-sodium preparation had a hospital stay that \nwas a third longer than patients who initially received valproic acid.8 Note that sodium \nvalproate controlled release (Epilim Chrono9) can be administered as a once daily dose, \nwhereas other sodium and semi-sodium valproate preparations require at least twice \ndaily administration.\n",
+      "bbox": [
+        47.99699401855469,
+        456.9104919433594,
+        422.79840087890625,
+        540.6304931640625
+      ],
+      "text_sha256": "4bcd9a79a6449255fa16bedd7413bb428be123f6c7f0271b50e7c0d8aab5716e"
+    },
+    {
+      "block_id": "page-0278-block-0010",
+      "order": 10,
+      "text": "Indications\n",
+      "bbox": [
+        48.0,
+        558.0654907226562,
+        104.22100067138672,
+        571.1004638671875
+      ],
+      "text_sha256": "dbc3bcbc83e570d770a06588c99f6a303293ffa7a386579baf161003dba441a6"
+    },
+    {
+      "block_id": "page-0278-block-0011",
+      "order": 11,
+      "text": "Randomised controlled trials (RCTs) have shown valproate to be effective in the treat-\nment of mania,10,11 with a response rate of 50% and a number needed to treat (NNT) \nof 2–4,12 although large negative studies do exist.13 One RCT found lithium to be more \n",
+      "bbox": [
+        47.99840545654297,
+        576.9104614257812,
+        422.7732238769531,
+        612.6304931640625
+      ],
+      "text_sha256": "ad4a397ad4fc3733cc71c253a681b6e05e149c191cdb32f380dd91d7a003d377"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

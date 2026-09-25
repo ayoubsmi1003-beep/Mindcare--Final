@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0578",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 578,
+  "source_page_index": 577,
+  "source_page_display": 578,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Children and adolescents    557\nCHAPTER 5\n(irritability, oppositional behaviour), psychotic disorders (social withdrawal, rest-\nlessness), ADHD (inattention, restlessness), Asperger syndrome (social with-\ndrawal, poor social skills, repetitive behaviours and routines) and learning \ndisabilities. They may also be mimicked by a range of endocrine (hyperthyroid-\nism, hypoglycemia, pheochromocytoma), neurological (migraine, seizures, delir-\nium, brain tumours), cardiovascular (cardiac arrhythmias) and respiratory \n(asthma) conditions and lead intoxication. Anxiety-like symptoms can be observed \nin response to several drugs and substances including anti-asthma medications, \nsympathomimetics, steroids, SSRIs, antipsychotics (akathisia), diet pills, cold \nmedicines, caffeine and energy drinks.\n■\n■Beware of contraindications to SSRIs and potential interactions.\n■\n■Measure baseline severity. Structured interviews including the Anxiety Disorders \nInterview Schedule (ADIS) and the Kiddie-Schedule for Affective Disorders and \nSchizophrenia (Kiddie-SADS). Questionnaires, including the Revised Children’s \nAnxiety and Depression Scale (RCADS), Screen for Child Anxiety and Related \nEmotional Disorders (SCARED) or the Multidimensional Anxiety Scale for Children \n(MASC). Measures of functional impairment including the Children’s Global \nAssessment Scale (CGAS).\n■\n■Obtain consent. Discuss treatment with the young person and the family (e.g. name \nof medication, starting/estimated ending dose, titration timeline, possible side effects \nand strategies to monitor/minimise them, strategies to monitor progress, interven-\ntions for treatment-resistant cases). Document consent in writing.\nWhat to prescribe\n■\n■Selective serotonin reuptake inhibitors (SSRIs) are the medications of choice for the \ntreatment of anxiety disorders in children and adolescents. A meta-analysis identified \nseven short-term RCTs (<16 weeks; n treatment = 446, n control = 386) testing the \nefficacy of SSRIs (fluoxetine, fluvoxamine, paroxetine, sertraline) on changes in \nimpairment for anxiety disorders in young people (CGI-I). The overall odds ratio of \ntreatment response was 4.6 (95% CI = 3.1–7.5) and mean improvement in anxiety \nsymptoms was 5.2 (95% CI = 2.8–8.8) over placebo.8 The Childhood Anxiety \nMultimodal Study (CAMS) showed that monotherapy with sertraline (55% response) \nis as effective as CBT for anxiety (60% response) compared with placebo (24% \nresponse), and that combined therapy with sertraline and CBT is most likely to be \nsuccessful (81% response).9 A network meta-analysis found that SSRIs significantly \nreduce clinician-reported and parent-reported (but not child-reported) anxiety symp-\ntoms and increased remission.10 A network meta-analysis found that the likelihood of \ntreatment response was higher for SSRI compared to other medications below8 and a \nstandard meta-analysis showed that clinically significant treatment effects typically \nemerge by week 6 of treatment, and that SSRIs are associated with more rapid and \ngreater improvement than other medications below.11 With regard to tolerability, \nSSRIs are the most tolerable class of medications, particularly escitalopram and \nfluoxetine.12\nSertraline, fluoxetine and fluvoxamine have been approved by the US Food and \nDrug Administration (FDA) for treatment of paediatric OCD, and fluoxetine and \n",
+  "raw_text_sha256": "4a322035ce7ff09e21c3634f65f3f76ab84303785898a03b6fc2e4374b35302a",
+  "coordinates_sha256": "a93ba518fcf858b983a064f31546c401c3819cd2b8810d80147e10cfeb243f49",
+  "block_sequence_sha256": "b253d323c8b38ea403976457e4aa0267d031d7c73620ca149cd710e59ac0cff7",
+  "blocks": [
+    {
+      "block_id": "page-0578-block-0000",
+      "order": 0,
+      "text": "Children and adolescents    557\n",
+      "bbox": [
+        288.94488525390625,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "cdbba3fe4b6d27bded1b9d035cb998b5cef092af9c46033ba65de9862548aaa2"
+    },
+    {
+      "block_id": "page-0578-block-0001",
+      "order": 1,
+      "text": "CHAPTER 5\n",
+      "bbox": [
+        454.4096984863281,
+        339.3385009765625,
+        463.88970947265625,
+        380.6824951171875
+      ],
+      "text_sha256": "f4b8b4a0fc64e7b3b74e7336306d0959d0384683e387792724f393162639020a"
+    },
+    {
+      "block_id": "page-0578-block-0002",
+      "order": 2,
+      "text": "(irritability, oppositional behaviour), psychotic disorders (social withdrawal, rest-\nlessness), ADHD (inattention, restlessness), Asperger syndrome (social with-\ndrawal, poor social skills, repetitive behaviours and routines) and learning \ndisabilities. They may also be mimicked by a range of endocrine (hyperthyroid-\nism, hypoglycemia, pheochromocytoma), neurological (migraine, seizures, delir-\nium, brain tumours), cardiovascular (cardiac arrhythmias) and respiratory \n(asthma) conditions and lead intoxication. Anxiety-like symptoms can be observed \nin response to several drugs and substances including anti-asthma medications, \nsympathomimetics, steroids, SSRIs, antipsychotics (akathisia), diet pills, cold \nmedicines, caffeine and energy drinks.\n",
+      "bbox": [
+        57.0,
+        62.5504150390625,
+        422.8101501464844,
+        182.27041625976562
+      ],
+      "text_sha256": "0c1d1ae05039f2f62c43b3dc896572e2f23603cb56eed85159f250dd83cf8ea1"
+    },
+    {
+      "block_id": "page-0578-block-0003",
+      "order": 3,
+      "text": "■\n■Beware of contraindications to SSRIs and potential interactions.\n",
+      "bbox": [
+        47.999900817871094,
+        182.31048583984375,
+        332.63995361328125,
+        194.27047729492188
+      ],
+      "text_sha256": "7b91dce74e85690122e82bf01f72f3d113aee28ff929ff22ea7d8d6371d5b7aa"
+    },
+    {
+      "block_id": "page-0578-block-0004",
+      "order": 4,
+      "text": "■\n■Measure baseline severity. Structured interviews including the Anxiety Disorders \n",
+      "bbox": [
+        47.999900817871094,
+        194.31048583984375,
+        422.76995849609375,
+        206.27047729492188
+      ],
+      "text_sha256": "fad6cd9af33a74d1ea8cf8fae677af5e3da09cf2dc7157001b0bdee232023c0c"
+    },
+    {
+      "block_id": "page-0578-block-0005",
+      "order": 5,
+      "text": "Interview Schedule (ADIS) and the Kiddie-Schedule for Affective Disorders and \nSchizophrenia (Kiddie-SADS). Questionnaires, including the Revised Children’s \nAnxiety and Depression Scale (RCADS), Screen for Child Anxiety and Related \nEmotional Disorders (SCARED) or the Multidimensional Anxiety Scale for Children \n(MASC). Measures of functional impairment including the Children’s Global \nAssessment Scale (CGAS).\n",
+      "bbox": [
+        57.0,
+        206.55047607421875,
+        422.780029296875,
+        278.2704772949219
+      ],
+      "text_sha256": "2be08ec7b9319b3d5c7d5b12af981e29aa73659d9f4b4c28bc4704256f2ccd31"
+    },
+    {
+      "block_id": "page-0578-block-0006",
+      "order": 6,
+      "text": "■\n■Obtain consent. Discuss treatment with the young person and the family (e.g. name \n",
+      "bbox": [
+        47.999900817871094,
+        278.31048583984375,
+        422.7999572753906,
+        290.2704772949219
+      ],
+      "text_sha256": "4bd76de4f8a3652b2d01806eedfd135a0b6525772221234dd8dbfa8f42fc64c4"
+    },
+    {
+      "block_id": "page-0578-block-0007",
+      "order": 7,
+      "text": "of medication, starting/estimated ending dose, titration timeline, possible side effects \nand strategies to monitor/minimise them, strategies to monitor progress, interven-\ntions for treatment-resistant cases). Document consent in writing.\n",
+      "bbox": [
+        57.0,
+        290.55047607421875,
+        422.7999267578125,
+        326.2704772949219
+      ],
+      "text_sha256": "cd18bf7fbf35a6d0e836d8fd08523d2b0f84a8b075ac8ee5aef47dffad7cc8af"
+    },
+    {
+      "block_id": "page-0578-block-0008",
+      "order": 8,
+      "text": "What to prescribe\n",
+      "bbox": [
+        48.0,
+        343.7054748535156,
+        140.2899932861328,
+        356.740478515625
+      ],
+      "text_sha256": "232dc920d1013d0fbb8bd820198216bbdf3734aef7eecb68dc6be6b5d006298a"
+    },
+    {
+      "block_id": "page-0578-block-0009",
+      "order": 9,
+      "text": "■\n■Selective serotonin reuptake inhibitors (SSRIs) are the medications of choice for the \n",
+      "bbox": [
+        47.999900817871094,
+        362.31048583984375,
+        422.7598876953125,
+        374.2704772949219
+      ],
+      "text_sha256": "27a51f234b781845507cb48d916a954c1daaa745d63df8964e14753bc3e84d44"
+    },
+    {
+      "block_id": "page-0578-block-0010",
+      "order": 10,
+      "text": "treatment of anxiety disorders in children and adolescents. A meta-analysis identified \nseven short-term RCTs (<16 weeks; n treatment = 446, n control = 386) testing the \nefficacy of SSRIs (fluoxetine, fluvoxamine, paroxetine, sertraline) on changes in \nimpairment for anxiety disorders in young people (CGI-I). The overall odds ratio of \ntreatment response was 4.6 (95% CI = 3.1–7.5) and mean improvement in anxiety \nsymptoms was 5.2 (95% CI = 2.8–8.8) over placebo.8 The Childhood Anxiety \nMultimodal Study (CAMS) showed that monotherapy with sertraline (55% response) \nis as effective as CBT for anxiety (60% response) compared with placebo (24% \nresponse), and that combined therapy with sertraline and CBT is most likely to be \nsuccessful (81% response).9 A network meta-analysis found that SSRIs significantly \nreduce clinician-reported and parent-reported (but not child-reported) anxiety symp-\ntoms and increased remission.10 A network meta-analysis found that the likelihood of \ntreatment response was higher for SSRI compared to other medications below8 and a \nstandard meta-analysis showed that clinically significant treatment effects typically \nemerge by week 6 of treatment, and that SSRIs are associated with more rapid and \ngreater improvement than other medications below.11 With regard to tolerability, \nSSRIs are the most tolerable class of medications, particularly escitalopram and \nfluoxetine.12\n",
+      "bbox": [
+        56.99700927734375,
+        374.55047607421875,
+        422.8199462890625,
+        590.2705078125
+      ],
+      "text_sha256": "940f0389c6d160a1cebc6ee903b1c13547fe1514554e99acb71ff1faafcb7b54"
+    },
+    {
+      "block_id": "page-0578-block-0011",
+      "order": 11,
+      "text": "Sertraline, fluoxetine and fluvoxamine have been approved by the US Food and \nDrug Administration (FDA) for treatment of paediatric OCD, and fluoxetine and \n",
+      "bbox": [
+        57.0,
+        590.5504150390625,
+        422.7698669433594,
+        614.2704467773438
+      ],
+      "text_sha256": "f019f7fa37deaee6623f1f8d784325120db0ea5cdafe66fada994f30521caaae"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

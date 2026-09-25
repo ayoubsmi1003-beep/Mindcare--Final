@@ -1,0 +1,323 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0430",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 430,
+  "source_page_index": 429,
+  "source_page_display": 430,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    409\nCHAPTER 3\nSSRIs and bleeding\nSerotonin is released from platelets in response to vascular injury, promoting vasocon-\nstriction and morphological changes in platelets that lead to aggregation.1 SSRIs inhibit \nthe serotonin transporter which is responsible for the uptake of serotonin into platelets. \nThis depletion of platelet serotonin leads to a reduced ability to form clots and a sub-\nsequent increase in the risk of bleeding. Broadly speaking, the relative risk of any bleed-\ning event compared with no use of SSRI/SNRI is around 1.4, with the absolute risk \nbeing between around 0.5% and 6%2 (depending on numerous factors, but especially \nthe duration of treatment).\nSSRIs may also increase gastric acid secretion and therefore may be indirectly irritant \nto the gastric mucosa,3 increasing the risk of peptic ulcer.4 The risk of abnormal bleed-\ning of any kind with SSRIs is highest during the first 30 days of treatment.5,6 Effect on \nbleeding is probably, but not definitely, related to the affinity of individual SSRIs for the \nserotonin transporter (Table 3.22).7,8\nTable 3.22  Antidepressants and degree of serotonin reuptake inhibition6,9\nDegree of serotonin reuptake \ninhibition\nAntidepressant (SSRI)\nStrong inhibition\nSertraline, paroxetine, fluoxetine, duloxetine, clomipramine\nIntermediate inhibition\nCitalopram, escitalopram, fluvoxamine, vilazodone, vortioxetine, \nvenlafaxine\nAmitriptyline, imipramine\nWeak or no inhibition\nAgomelatine, dosulepin, doxepin, lofepramine, mirtazapine, \nmoclobemide, nortriptyline, reboxetine, mianserin\nRisk factors for bleeding with SSRIs\n■\n■Age, particularly those over 65\n■\n■Alcohol misuse\n■\n■Coronary artery disease\n■\n■Drug misuse\n■\n■Hypertension\n■\n■History of GI bleed\n■\n■History of stroke\n■\n■History of major bleeding\n■\n■Liver disease\n■\n■Labile INR\n■\n■Medication predisposing to bleeding\n■\n■Peptic ulcer\n■\n■Renal disease\n■\n■Smoking\n",
+  "raw_text_sha256": "4f9424481089ffc08c254f50ad68b4954c2dec155d13821127db44fcc229978c",
+  "coordinates_sha256": "9314c610246f10041468f8d0fdd72ccbdffceacba9867e627ceb03d06788db64",
+  "block_sequence_sha256": "970dfb4605fb631412a14692ea036939b4006c2037a3f4ead36b6e25d968565e",
+  "blocks": [
+    {
+      "block_id": "page-0430-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    409\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "504fabe55cd47414688cecc39651778d90f5c19e2cfb4de8a9109aec0eb74208"
+    },
+    {
+      "block_id": "page-0430-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0430-block-0002",
+      "order": 2,
+      "text": "SSRIs and bleeding\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        152.8009796142578,
+        79.1004638671875
+      ],
+      "text_sha256": "c51069d380d0309c4a2b7741f1a6bcd5e360fd699b430279cb5bb932062c2679"
+    },
+    {
+      "block_id": "page-0430-block-0003",
+      "order": 3,
+      "text": "Serotonin is released from platelets in response to vascular injury, promoting vasocon-\nstriction and morphological changes in platelets that lead to aggregation.1 SSRIs inhibit \nthe serotonin transporter which is responsible for the uptake of serotonin into platelets. \nThis depletion of platelet serotonin leads to a reduced ability to form clots and a sub-\nsequent increase in the risk of bleeding. Broadly speaking, the relative risk of any bleed-\ning event compared with no use of SSRI/SNRI is around 1.4, with the absolute risk \nbeing between around 0.5% and 6%2 (depending on numerous factors, but especially \nthe duration of treatment).\n",
+      "bbox": [
+        48.0,
+        84.91046142578125,
+        422.8123474121094,
+        180.63046264648438
+      ],
+      "text_sha256": "ec364b8d3a595dab0b54d4889d76755d462c47925925dc812a0c04e90e55159f"
+    },
+    {
+      "block_id": "page-0430-block-0004",
+      "order": 4,
+      "text": "SSRIs may also increase gastric acid secretion and therefore may be indirectly irritant \nto the gastric mucosa,3 increasing the risk of peptic ulcer.4 The risk of abnormal bleed-\ning of any kind with SSRIs is highest during the first 30 days of treatment.5,6 Effect on \nbleeding is probably, but not definitely, related to the affinity of individual SSRIs for the \nserotonin transporter (Table 3.22).7,8\n",
+      "bbox": [
+        47.99749755859375,
+        180.91046142578125,
+        422.8185729980469,
+        240.6304931640625
+      ],
+      "text_sha256": "ff1791aaf61bbaed73e2cd6375afc2da7b1e39ee7965178a6a52e1e26d52340c"
+    },
+    {
+      "block_id": "page-0430-block-0005",
+      "order": 5,
+      "text": "Table 3.22  Antidepressants and degree of serotonin reuptake inhibition6,9\n",
+      "bbox": [
+        54.0005989074707,
+        262.1968688964844,
+        290.8594970703125,
+        271.0843811035156
+      ],
+      "text_sha256": "12a720f2f7a18c7bfedfc5b8f2098c4875ab4a340de03ee1971a8c4145650efe"
+    },
+    {
+      "block_id": "page-0430-block-0006",
+      "order": 6,
+      "text": "Degree of serotonin reuptake \ninhibition\nAntidepressant (SSRI)\n",
+      "bbox": [
+        48.000701904296875,
+        282.431884765625,
+        266.2056884765625,
+        301.31689453125
+      ],
+      "text_sha256": "16dc21e2fccc54edf80a93199a9052a389863e1055420b80034db87cd5b8096b"
+    },
+    {
+      "block_id": "page-0430-block-0007",
+      "order": 7,
+      "text": "Strong inhibition\nSertraline, paroxetine, fluoxetine, duloxetine, clomipramine\n",
+      "bbox": [
+        48.000701904296875,
+        309.38690185546875,
+        379.1182861328125,
+        318.0943908691406
+      ],
+      "text_sha256": "2c77c719cc7e212e853f5324981775900a18e527f0a791178d809ab40ca3c87d"
+    },
+    {
+      "block_id": "page-0430-block-0008",
+      "order": 8,
+      "text": "Intermediate inhibition\nCitalopram, escitalopram, fluvoxamine, vilazodone, vortioxetine, \nvenlafaxine\nAmitriptyline, imipramine\n",
+      "bbox": [
+        48.000701904296875,
+        324.4093933105469,
+        397.58319091796875,
+        353.11187744140625
+      ],
+      "text_sha256": "02254564d213897b6c0f276a55cc26032e872a3933001eb8c2c0446a8c8d9005"
+    },
+    {
+      "block_id": "page-0430-block-0009",
+      "order": 9,
+      "text": "Weak or no inhibition\nAgomelatine, dosulepin, doxepin, lofepramine, mirtazapine, \nmoclobemide, nortriptyline, reboxetine, mianserin\n",
+      "bbox": [
+        48.000701904296875,
+        359.4268798828125,
+        384.2857666015625,
+        378.1318664550781
+      ],
+      "text_sha256": "ee3ead928ec10d97f1479da54d6475c68740cd54d92f3f181f187320bb381cbd"
+    },
+    {
+      "block_id": "page-0430-block-0010",
+      "order": 10,
+      "text": "Risk factors for bleeding with SSRIs\n",
+      "bbox": [
+        55.25,
+        405.63677978515625,
+        196.46902465820312,
+        415.70928955078125
+      ],
+      "text_sha256": "a7194b40bdf1fc752c24e909c0ef367c16715fe5225b6dabca1f698771034323"
+    },
+    {
+      "block_id": "page-0430-block-0011",
+      "order": 11,
+      "text": "■\n■Age, particularly those over 65\n",
+      "bbox": [
+        55.249900817871094,
+        430.38427734375,
+        197.22998046875,
+        442.1042785644531
+      ],
+      "text_sha256": "9af216002bca04fb0d3bb2f8805067e050020e2a2062a73115cab2cf5483234a"
+    },
+    {
+      "block_id": "page-0430-block-0012",
+      "order": 12,
+      "text": "■\n■Alcohol misuse\n",
+      "bbox": [
+        55.249900817871094,
+        442.38427734375,
+        129.79998779296875,
+        454.1042785644531
+      ],
+      "text_sha256": "263b07b9915594019bcae578449b94a87e76f64f03f5eb3cc9a480ff333a7af8"
+    },
+    {
+      "block_id": "page-0430-block-0013",
+      "order": 13,
+      "text": "■\n■Coronary artery disease\n",
+      "bbox": [
+        55.249900817871094,
+        454.38427734375,
+        167.0399932861328,
+        466.1042785644531
+      ],
+      "text_sha256": "0a0058f4819c9915f9313d08368543239ab51b7fe548cfacf7b80fe2d3d8487d"
+    },
+    {
+      "block_id": "page-0430-block-0014",
+      "order": 14,
+      "text": "■\n■Drug misuse\n",
+      "bbox": [
+        55.249900817871094,
+        466.38427734375,
+        118.1399917602539,
+        478.1042785644531
+      ],
+      "text_sha256": "58d754e256b8d9007886685cd7687a7a8aff24ed82673cccd00a7e3c1c859934"
+    },
+    {
+      "block_id": "page-0430-block-0015",
+      "order": 15,
+      "text": "■\n■Hypertension\n",
+      "bbox": [
+        55.249900817871094,
+        478.38427734375,
+        122.59999084472656,
+        490.1042785644531
+      ],
+      "text_sha256": "9aa99d8ac3a5c7f038e546f1141ed2aadb76d3795340799e671b14d0d6e47836"
+    },
+    {
+      "block_id": "page-0430-block-0016",
+      "order": 16,
+      "text": "■\n■History of GI bleed\n",
+      "bbox": [
+        55.249900817871094,
+        490.38427734375,
+        148.14999389648438,
+        502.1042785644531
+      ],
+      "text_sha256": "141dd67a81abcf3b0abc39dd142f52bd03e963ea8b323110cf32ee112f82139f"
+    },
+    {
+      "block_id": "page-0430-block-0017",
+      "order": 17,
+      "text": "■\n■History of stroke\n",
+      "bbox": [
+        55.249900817871094,
+        502.38427734375,
+        138.1599884033203,
+        514.1043090820312
+      ],
+      "text_sha256": "f5b6b4a04222793145ca26f02f18d24be274b451d70484ea6aa21f1b208512d7"
+    },
+    {
+      "block_id": "page-0430-block-0018",
+      "order": 18,
+      "text": "■\n■History of major bleeding\n",
+      "bbox": [
+        55.249900817871094,
+        514.38427734375,
+        175.9399871826172,
+        526.1043090820312
+      ],
+      "text_sha256": "e9e4ce503c18e5cf008015ba850017ee2de2d60bcf74aeec101c288f001f1892"
+    },
+    {
+      "block_id": "page-0430-block-0019",
+      "order": 19,
+      "text": "■\n■Liver disease\n",
+      "bbox": [
+        55.249900817871094,
+        526.38427734375,
+        119.25,
+        538.1043090820312
+      ],
+      "text_sha256": "2ee587b125dc63ebdbdfe5127c8fceb0551bbe02fb1d6f7ea8aeb76d6e675a58"
+    },
+    {
+      "block_id": "page-0430-block-0020",
+      "order": 20,
+      "text": "■\n■Labile INR\n",
+      "bbox": [
+        55.249900817871094,
+        538.38427734375,
+        112.56999969482422,
+        550.1043090820312
+      ],
+      "text_sha256": "add7bba869a2efed1600c5935694e295629ffe9ca149308376bfc2f2cab43fb7"
+    },
+    {
+      "block_id": "page-0430-block-0021",
+      "order": 21,
+      "text": "■\n■Medication predisposing to bleeding\n",
+      "bbox": [
+        55.249900817871094,
+        550.38427734375,
+        221.5199737548828,
+        562.1043090820312
+      ],
+      "text_sha256": "d509ab1aaee63ba8854b48c49cb6fcd5bf7896ef153044422d201b2500327a6b"
+    },
+    {
+      "block_id": "page-0430-block-0022",
+      "order": 22,
+      "text": "■\n■Peptic ulcer\n",
+      "bbox": [
+        55.249900817871094,
+        562.38427734375,
+        114.25,
+        574.1043090820312
+      ],
+      "text_sha256": "bc8a30808e30dd6c56e650181fcb0e7302148df39cf45818ce8a54bd5eebb0dd"
+    },
+    {
+      "block_id": "page-0430-block-0023",
+      "order": 23,
+      "text": "■\n■Renal disease\n",
+      "bbox": [
+        55.249900817871094,
+        574.38427734375,
+        122.02999877929688,
+        586.1043090820312
+      ],
+      "text_sha256": "6d15cb54bd8bfa7f14196f6878108281c470772f956453361e566f958983a20c"
+    },
+    {
+      "block_id": "page-0430-block-0024",
+      "order": 24,
+      "text": "■\n■Smoking\n",
+      "bbox": [
+        55.249900817871094,
+        586.38427734375,
+        102.02999114990234,
+        598.1043090820312
+      ],
+      "text_sha256": "001b66ef57709187b72fa9c0d1763a7ba640f52d550ec0e984eb1326e46a4801"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

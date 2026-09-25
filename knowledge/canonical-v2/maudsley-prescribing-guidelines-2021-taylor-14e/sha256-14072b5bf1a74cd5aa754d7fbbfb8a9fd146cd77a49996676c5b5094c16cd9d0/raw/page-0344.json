@@ -1,0 +1,575 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0344",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 344,
+  "source_page_index": 343,
+  "source_page_display": 344,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    323\nCHAPTER 3\nTable 3.5  Other reported treatments (alphabetical order – no preference implied)\nTreatment\nComments\nAmantadine1\n(up to 300mg/day)\nLimited data\nAyahuasca2,3\nEffective but specialist use only\nBuprenorphine4\n(0.8–2mg/day)\nReasonable evidence but obvious contraindications\nCarbergoline5\n2mg/day\nVery limited data\nD-cycloserine6\n1000mg/day\nOne small RCT showing useful effect\nDexamethasone7,8\n3–4mg/day\nLimited data\nDextromethorphan + quinidine9,10 \n45/10mg BD\nPromising novel treatment. NDMA antagonist. Quinidine is needed as \nCYP2D6 inhibitor to prolong action of dextromethorphan11\nFolate/methyl folate12–14\n(2mg/day folate?)\nPossible benefit but poor-quality trials\nHyoscine15\n(Scopolomine) (4mcg/kg IV)\nGrowing evidence base of prompt and sizeable effect\nKetoconazole16\n400–800mg/day\nRarely used. Risk of hepatotoxicity\nMAOI and TCA17–19\ne.g. trimipramine and phenelzine\nFormerly very widely used, but great care needed\nMecamylamine20,21\nup to 10mg/day\nOne pilot study of 21 patients\nMinocycline\n200mg/day\nSeveral positive meta-analyses in both animals22 and humans.23,24 Recent \nfailed RCT in bipolar depression25\nModafinil26–30\n100–400mg/day\nSee section on ‘Psychostimulants in depression’ (this chapter)\nNaltrexone31,32\n100mg/day\nNo studies in non-opiate misuers\nNemifitide33\n40–240mg/day SC\nOne pilot study in 25 patients\nNortriptyline ± lithium34–37\nRe-emergent treatment option\nOestrogens38\n(various regimens)\nLimited data\nTreatment-resistant depression – other reported treatments\nA very wide range of treatments have been investigated as potential therapy for treat-\nment-resistant depression. Table 3.5 in this section briefly describes strategies that have \nlimited support for their use but may be worth trying in exceptional circumstances. \nPrescribers should familiarise themselves with the primary literature before using these \nstrategies.\n(Continued)\n",
+  "raw_text_sha256": "b0f93133ce15df1893335640760983b0ae436eb6a1fc4a927bfe1a5ccee7ead8",
+  "coordinates_sha256": "f1d5b32cd362e2711f275da85cfbb483f2cb5d6194ba3cd76ee32bdc38188f76",
+  "block_sequence_sha256": "127b6fc7fe14e36635bbd4697bc08d9c0e9f9363e0a00e510e6f1cc114273c34",
+  "blocks": [
+    {
+      "block_id": "page-0344-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    323\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "03b5751c54b73e15a9f8c57d4809353f3deec33351a7e649211178caa1a9d824"
+    },
+    {
+      "block_id": "page-0344-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0344-block-0002",
+      "order": 2,
+      "text": "Table 3.5  Other reported treatments (alphabetical order – no preference implied)\n",
+      "bbox": [
+        54.0,
+        163.4328155517578,
+        314.19000244140625,
+        172.3203125
+      ],
+      "text_sha256": "fe54cf8fbbb1ddc024ac021e60fcd3d0c9fc994df15699472b80304ec0c83b20"
+    },
+    {
+      "block_id": "page-0344-block-0003",
+      "order": 3,
+      "text": "Treatment\nComments\n",
+      "bbox": [
+        48.0,
+        183.6678009033203,
+        221.61000061035156,
+        192.5552978515625
+      ],
+      "text_sha256": "8be686e890d313f8295cc060595592f78dd7d0f699de8b9c632f5bd2fa6e517c"
+    },
+    {
+      "block_id": "page-0344-block-0004",
+      "order": 4,
+      "text": "Amantadine1\n",
+      "bbox": [
+        48.0,
+        200.44529724121094,
+        93.77320861816406,
+        209.33279418945312
+      ],
+      "text_sha256": "efae281f95e78d89fbf647ca3553bb86aa06e6b489969d5a6a34b3eb8b51cda0"
+    },
+    {
+      "block_id": "page-0344-block-0005",
+      "order": 5,
+      "text": "(up to 300mg/day)\n",
+      "bbox": [
+        48.0,
+        210.62278747558594,
+        107.60999298095703,
+        219.33029174804688
+      ],
+      "text_sha256": "7359380e79527b2dc944c117a77f9dd812f829db9f639b1dd7ad493eba707705"
+    },
+    {
+      "block_id": "page-0344-block-0006",
+      "order": 6,
+      "text": "Limited data\n",
+      "bbox": [
+        184.11000061035156,
+        200.6252899169922,
+        223.68748474121094,
+        209.33279418945312
+      ],
+      "text_sha256": "dcc6e07c406192dbd5f9a6fc232f52939654b08161a6ac7826ce982647b46242"
+    },
+    {
+      "block_id": "page-0344-block-0007",
+      "order": 7,
+      "text": "Ayahuasca2,3\nEffective but specialist use only\n",
+      "bbox": [
+        48.0,
+        225.47279357910156,
+        282.72021484375,
+        234.36029052734375
+      ],
+      "text_sha256": "03ce6f47858170f7058af17b28242e316bf614fdb80ea18331a735bf8dcaa46a"
+    },
+    {
+      "block_id": "page-0344-block-0008",
+      "order": 8,
+      "text": "Buprenorphine4\n",
+      "bbox": [
+        48.00019836425781,
+        240.4902801513672,
+        103.21560668945312,
+        249.37777709960938
+      ],
+      "text_sha256": "7e64c417b2a3ecd40ad43ac45b38d621ab094dfc4815dddf466139ce8ff01212"
+    },
+    {
+      "block_id": "page-0344-block-0009",
+      "order": 9,
+      "text": "(0.8–2mg/day)\n",
+      "bbox": [
+        48.0,
+        250.6727752685547,
+        94.26749420166016,
+        259.3802795410156
+      ],
+      "text_sha256": "46b8c500aa30453a6a782dff53887ffe85efe7a820aacade2214f96ca11b48dd"
+    },
+    {
+      "block_id": "page-0344-block-0010",
+      "order": 10,
+      "text": "Reasonable evidence but obvious contraindications\n",
+      "bbox": [
+        184.11000061035156,
+        240.67527770996094,
+        346.64263916015625,
+        249.38278198242188
+      ],
+      "text_sha256": "e306d4c77796a48671775ad23b1e7493c8ab9d391c746c4b3d8cbd9cc9672f72"
+    },
+    {
+      "block_id": "page-0344-block-0011",
+      "order": 11,
+      "text": "Carbergoline5\n",
+      "bbox": [
+        48.0,
+        265.52276611328125,
+        95.85820770263672,
+        274.4102783203125
+      ],
+      "text_sha256": "6c1f2434dada056d426197e88614737a5b8e7feae42a55f39cc2744b7d96ff0d"
+    },
+    {
+      "block_id": "page-0344-block-0012",
+      "order": 12,
+      "text": "2mg/day\nVery limited data\n",
+      "bbox": [
+        48.0,
+        265.7003173828125,
+        237.85498046875,
+        284.4053039550781
+      ],
+      "text_sha256": "f070a9cd016aec4ed6245be04972aa63111b4994d7d6064bd7584756fd77a84e"
+    },
+    {
+      "block_id": "page-0344-block-0013",
+      "order": 13,
+      "text": "D-cycloserine6\n",
+      "bbox": [
+        48.0,
+        290.54779052734375,
+        97.09540557861328,
+        299.435302734375
+      ],
+      "text_sha256": "e766ce84c0129566e5b0ce8599ec08ca0031bad2264e56b9c4ba8bbb68eb6040"
+    },
+    {
+      "block_id": "page-0344-block-0014",
+      "order": 14,
+      "text": "1000mg/day\nOne small RCT showing useful effect\n",
+      "bbox": [
+        48.0,
+        290.7253112792969,
+        301.49249267578125,
+        309.4302978515625
+      ],
+      "text_sha256": "7be8680c50fd1b88e0e2022e16904c2e70d3cd15c1647e7538db2541be911e56"
+    },
+    {
+      "block_id": "page-0344-block-0015",
+      "order": 15,
+      "text": "Dexamethasone7,8\n",
+      "bbox": [
+        48.0,
+        315.5727844238281,
+        111.17476654052734,
+        324.4602966308594
+      ],
+      "text_sha256": "35754944f85143205700f148d0eb024ab906feb373d272212cb39d37e2dc4ebd"
+    },
+    {
+      "block_id": "page-0344-block-0016",
+      "order": 16,
+      "text": "3–4mg/day\nLimited data\n",
+      "bbox": [
+        48.0,
+        315.75030517578125,
+        223.68748474121094,
+        334.4552917480469
+      ],
+      "text_sha256": "23e7908c79bd14c39a2292cf2c180e5a985c881053dc57294c29de6e9f5b3963"
+    },
+    {
+      "block_id": "page-0344-block-0017",
+      "order": 17,
+      "text": "Dextromethorphan + quinidine9,10 \n45/10mg BD\nPromising novel treatment. NDMA antagonist. Quinidine is needed as \nCYP2D6 inhibitor to prolong action of dextromethorphan11\n",
+      "bbox": [
+        48.0,
+        340.5977783203125,
+        408.0554504394531,
+        359.477783203125
+      ],
+      "text_sha256": "db537666ee4e957a9302e9d4d787aeddb4fb84a57565a7d626605ef3f81eb547"
+    },
+    {
+      "block_id": "page-0344-block-0018",
+      "order": 18,
+      "text": "Folate/methyl folate12–14\n",
+      "bbox": [
+        48.0,
+        365.6177673339844,
+        132.0225830078125,
+        374.5052795410156
+      ],
+      "text_sha256": "013916c083dbfad331951286024afc91c56ef3a02bfbcccde79429b2311608f2"
+    },
+    {
+      "block_id": "page-0344-block-0019",
+      "order": 19,
+      "text": "(2mg/day folate?)\n",
+      "bbox": [
+        48.0,
+        375.79779052734375,
+        104.25749206542969,
+        384.5052795410156
+      ],
+      "text_sha256": "5e10461f19e46b00a0de5eb2334995d3887e50d123638371751bc195c69182fd"
+    },
+    {
+      "block_id": "page-0344-block-0020",
+      "order": 20,
+      "text": "Possible benefit but poor-quality trials\n",
+      "bbox": [
+        184.11000061035156,
+        365.80029296875,
+        304.1250305175781,
+        374.5077819824219
+      ],
+      "text_sha256": "88f8be854e010055eff82e66a80c5c5b1af8fd815f93b2bcb3cc2a03aa2381df"
+    },
+    {
+      "block_id": "page-0344-block-0021",
+      "order": 21,
+      "text": "Hyoscine15\n",
+      "bbox": [
+        48.0,
+        390.64776611328125,
+        84.5267105102539,
+        399.5352783203125
+      ],
+      "text_sha256": "3d66931f034ffd2d5c8446953660197315e72b5a243c39bdc8731c69f9eea661"
+    },
+    {
+      "block_id": "page-0344-block-0022",
+      "order": 22,
+      "text": "(Scopolomine) (4mcg/kg IV)\n",
+      "bbox": [
+        48.0,
+        400.82281494140625,
+        135.9375,
+        409.5303039550781
+      ],
+      "text_sha256": "fedac732f7203434d081ec702074c55559c28aa8ea052f597b15f1eda84a0645"
+    },
+    {
+      "block_id": "page-0344-block-0023",
+      "order": 23,
+      "text": "Growing evidence base of prompt and sizeable effect\n",
+      "bbox": [
+        184.11000061035156,
+        390.8253173828125,
+        354.5550231933594,
+        399.5328063964844
+      ],
+      "text_sha256": "f37dda7be8ec61bdd06846ef245657f6d4e34562ce1e0de946aaf37fd62c354c"
+    },
+    {
+      "block_id": "page-0344-block-0024",
+      "order": 24,
+      "text": "Ketoconazole16\n",
+      "bbox": [
+        48.0,
+        415.67279052734375,
+        100.78671264648438,
+        424.560302734375
+      ],
+      "text_sha256": "33c995772e814dfa7ae4b7fa7d90cacb0d4915525170c42eb1fe16f90e123766"
+    },
+    {
+      "block_id": "page-0344-block-0025",
+      "order": 25,
+      "text": "400–800mg/day\nRarely used. Risk of hepatotoxicity\n",
+      "bbox": [
+        48.0,
+        415.8503112792969,
+        292.7325134277344,
+        434.5552978515625
+      ],
+      "text_sha256": "85372633613b86421f88327f401fec834eb06e37436851b1bac39fcf3eae8cca"
+    },
+    {
+      "block_id": "page-0344-block-0026",
+      "order": 26,
+      "text": "MAOI and TCA17–19\n",
+      "bbox": [
+        48.0,
+        440.6977844238281,
+        111.99757385253906,
+        449.5852966308594
+      ],
+      "text_sha256": "d3a1df06d88eeb5b5c3c8076a99a258426163aeca12306a03c21424dd3aba6cb"
+    },
+    {
+      "block_id": "page-0344-block-0027",
+      "order": 27,
+      "text": "e.g. trimipramine and phenelzine\n",
+      "bbox": [
+        48.0,
+        450.872802734375,
+        153.8474578857422,
+        459.5802917480469
+      ],
+      "text_sha256": "02b2384725ec07fa5b9ed8b08d3e7b892fb882afe3b361069d2c95682b911c4f"
+    },
+    {
+      "block_id": "page-0344-block-0028",
+      "order": 28,
+      "text": "Formerly very widely used, but great care needed\n",
+      "bbox": [
+        184.11000061035156,
+        440.87530517578125,
+        340.9275207519531,
+        449.5827941894531
+      ],
+      "text_sha256": "930f2403a3a6e6e93c2d4924b483f4ed7ab47139ad09b35e42f7d2f18362c2dd"
+    },
+    {
+      "block_id": "page-0344-block-0029",
+      "order": 29,
+      "text": "Mecamylamine20,21\n",
+      "bbox": [
+        48.0,
+        465.7227783203125,
+        112.28697967529297,
+        474.61029052734375
+      ],
+      "text_sha256": "4e283286cc7a768451e7d26637882e9b7c56454537d68bd7acc6ceb3b7bbaefd"
+    },
+    {
+      "block_id": "page-0344-block-0030",
+      "order": 30,
+      "text": "up to 10mg/day\n",
+      "bbox": [
+        48.0,
+        475.8977966308594,
+        99.2699966430664,
+        484.60528564453125
+      ],
+      "text_sha256": "02a50352e5ba3c4639fa32604af85a7956a43471934907ecd96e90ed52320d73"
+    },
+    {
+      "block_id": "page-0344-block-0031",
+      "order": 31,
+      "text": "One pilot study of 21 patients\n",
+      "bbox": [
+        184.11000061035156,
+        465.9002990722656,
+        279.5475158691406,
+        474.6077880859375
+      ],
+      "text_sha256": "dfb6ae571b12a35956e64a7b0ea608db1350ab28d1b4f0e07a82753933125ab6"
+    },
+    {
+      "block_id": "page-0344-block-0032",
+      "order": 32,
+      "text": "Minocycline\n200mg/day\nSeveral positive meta-analyses in both animals22 and humans.23,24 Recent \nfailed RCT in bipolar depression25\n",
+      "bbox": [
+        48.0,
+        490.7477722167969,
+        416.60028076171875,
+        509.6327819824219
+      ],
+      "text_sha256": "e9c1651728916966dbddaeb78c1dce66be1aa7115a910e81387b6239cdf78de4"
+    },
+    {
+      "block_id": "page-0344-block-0033",
+      "order": 33,
+      "text": "Modafinil26–30\n",
+      "bbox": [
+        48.0,
+        515.7677612304688,
+        94.08027648925781,
+        524.6552734375
+      ],
+      "text_sha256": "5043d14985c860a1434b2291f173997039919652734515224c228cae7056ea03"
+    },
+    {
+      "block_id": "page-0344-block-0034",
+      "order": 34,
+      "text": "100–400mg/day\nSee section on ‘Psychostimulants in depression’ (this chapter)\n",
+      "bbox": [
+        48.0,
+        515.9502563476562,
+        378.5926513671875,
+        534.6552734375
+      ],
+      "text_sha256": "039c627d86db73adaf80b4af7d04c6b67b7340809e86f4d8d11f78cd9b5e34bd"
+    },
+    {
+      "block_id": "page-0344-block-0035",
+      "order": 35,
+      "text": "Naltrexone31,32\n",
+      "bbox": [
+        48.0,
+        540.7977905273438,
+        97.98468017578125,
+        549.685302734375
+      ],
+      "text_sha256": "137c0ce48ef4150ca7ffb746489932416007ea063f87d292b47e78c68d1e9746"
+    },
+    {
+      "block_id": "page-0344-block-0036",
+      "order": 36,
+      "text": "100mg/day\nNo studies in non-opiate misuers\n",
+      "bbox": [
+        48.0,
+        540.9752807617188,
+        288.7200012207031,
+        559.6802978515625
+      ],
+      "text_sha256": "da3032f30614cf794269093c43303dc252f422c16736a4fa9e0d4b65547d9369"
+    },
+    {
+      "block_id": "page-0344-block-0037",
+      "order": 37,
+      "text": "Nemifitide33\n",
+      "bbox": [
+        48.0,
+        565.8228149414062,
+        89.9568099975586,
+        574.7103271484375
+      ],
+      "text_sha256": "60d42385745ecc0e86d7c96ee7a3627ba5ea5781e0708cab415ff0df7451beea"
+    },
+    {
+      "block_id": "page-0344-block-0038",
+      "order": 38,
+      "text": "40–240mg/day SC\nOne pilot study in 25 patients\n",
+      "bbox": [
+        48.0,
+        566.000244140625,
+        278.71502685546875,
+        584.705322265625
+      ],
+      "text_sha256": "4684b4c0c17c79a0ae057b34fc98d68da31b96e170748ba61c162e56bb2fdcac"
+    },
+    {
+      "block_id": "page-0344-block-0039",
+      "order": 39,
+      "text": "Nortriptyline ± lithium34–37\nRe-emergent treatment option\n",
+      "bbox": [
+        48.0,
+        590.8477783203125,
+        281.8952331542969,
+        599.7352905273438
+      ],
+      "text_sha256": "6b19dcd5f7065745842b98bd5225eec4e16f0a7b298c73bb413f89d54d22d588"
+    },
+    {
+      "block_id": "page-0344-block-0040",
+      "order": 40,
+      "text": "Oestrogens38\n",
+      "bbox": [
+        48.00019836425781,
+        605.8652954101562,
+        93.14421081542969,
+        614.7528076171875
+      ],
+      "text_sha256": "5357ead24cb64d41575758b173ddb993d11a8c5023b3f0d133b741f9be95f61e"
+    },
+    {
+      "block_id": "page-0344-block-0041",
+      "order": 41,
+      "text": "(various regimens)\n",
+      "bbox": [
+        48.0,
+        616.0477905273438,
+        105.7874984741211,
+        624.7553100585938
+      ],
+      "text_sha256": "c98bece32c2deb1e65ab2d2b297ccec19d85576fa2a39abd0b68aff001cd581d"
+    },
+    {
+      "block_id": "page-0344-block-0042",
+      "order": 42,
+      "text": "Limited data\n",
+      "bbox": [
+        184.11000061035156,
+        606.05029296875,
+        223.68748474121094,
+        614.7578125
+      ],
+      "text_sha256": "dcc6e07c406192dbd5f9a6fc232f52939654b08161a6ac7826ce982647b46242"
+    },
+    {
+      "block_id": "page-0344-block-0043",
+      "order": 43,
+      "text": "Treatment-resistant depression – other reported treatments\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        362.28497314453125,
+        79.1004638671875
+      ],
+      "text_sha256": "107be60180c32d04fcf1bf9fdfea7b60df51537153233318cf8f230c576deafb"
+    },
+    {
+      "block_id": "page-0344-block-0044",
+      "order": 44,
+      "text": "A very wide range of treatments have been investigated as potential therapy for treat-\nment-resistant depression. Table 3.5 in this section briefly describes strategies that have \nlimited support for their use but may be worth trying in exceptional circumstances. \nPrescribers should familiarise themselves with the primary literature before using these \nstrategies.\n",
+      "bbox": [
+        48.0,
+        84.91046142578125,
+        422.8200378417969,
+        144.63046264648438
+      ],
+      "text_sha256": "97fe9d99509f8d585e1c1eb3949b78131b017bebcfad141909755978e9932176"
+    },
+    {
+      "block_id": "page-0344-block-0045",
+      "order": 45,
+      "text": "(Continued)\n",
+      "bbox": [
+        382.4849853515625,
+        632.4644775390625,
+        420.0000305175781,
+        641.2169799804688
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

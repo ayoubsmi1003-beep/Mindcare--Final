@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0425",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 425,
+  "source_page_index": 424,
+  "source_page_display": 425,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "404    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nAntidepressants and sexual dysfunction\nSexual dysfunction is common in the general population, although reliable, precise data \nare lacking.1 Reported prevalence rates vary depending on how sexual dysfunction is \ndefined, assessed and also the method of data collection.1 Physical illness, psychiatric \nillness, substance misuse and prescribed drug treatment can all cause sexual dysfunc-\ntion.2 People with depression are more likely to be obese,3 have diabetes4 and have \ncardiovascular disease5 than the general population, making them more likely to suffer \nsexual dysfunction outside any influence of depression itself.\nBefore prescribing, baseline sexual functioning should be determined because treat-\nment-emergent sexual dysfunction adversely affects the quality of life and may contrib-\nute to reduced compliance.6 Questionnaires or rating scales may be useful (for example, \nthe Arizona Sexual Experience Scale7). If scales are not used then direct questioning \nshould be employed as it is much more effective than relying on spontaneous patient \nreporting.8 Complaints of sexual dysfunction may also indicate progression or inade-\nquate treatment of underlying medical or psychiatric conditions. It may also be the \nresult of drug treatment and intervention may greatly improve quality of life.6\nEffects of depression\nBoth depression and the drugs used to treat it can cause disorders of desire, arousal and \norgasm. The precise nature of the sexual dysfunction may indicate whether depression \nor treatment is the more likely cause. For example, 40–50% of people with depression \nreport diminished libido and problems regarding sexual arousal in the month before \ndiagnosis, but only 15–20% experience orgasm problems before taking an antidepres-\nsant.9 The prevalence for loss of libido appears to correlate with depression severity.10\nAlthough many patients experience treatment-emergent sexual dysfunction whilst \ntaking antidepressants, in others the reduction in depressive symptoms can be accom-\npanied by improvements in sexual desire and satisfaction.6 Improvements appear more \ncommonly among those who respond to antidepressant treatment.6 For example, a \npost-hoc analysis of data from the STAR*D study revealed that sexual dysfunction was \nproblematic in 21% of patients whose depression remitted with citalopram treatment \ncompared with 61% of those whose depression did not remit.11\nEffects of antidepressant drugs\nAntidepressants can cause sedation, hormonal changes, disturbance of cholinergic/adr-\nenergic balance, peripheral alpha-adrenergic agonism, inhibition of nitric oxide and \nincreased serotonin neurotransmission, all of which can result in sexual dysfunction. \nSexual dysfunction has been reported as a side effect of all antidepressants, although \nrates vary (see Table 3.20). Individual susceptibility also varies and may be at least par-\ntially genetically determined.12\nSexual dysfunction with antidepressants is likely to be dose-dependent,12 and is gener-\nally considered to be fully reversible.12 However, there have been reports of long-lasting \nsexual dysfunction where the symptoms have continued despite discontinuation of \nSSRIs/SNRI.13 The term ‘post-SSRI sexual dysfunction’ (PSSD) has been used to describe \nthese symptoms. The prevalence and pathophysiology of PSSD remain uncertain.14\n",
+  "raw_text_sha256": "f50d0d9f2e2a5d3d7f372754beb3f5a56674fe4c24780bf11b18d3293df5d445",
+  "coordinates_sha256": "0e2b357ce16bc7d651f3b856338a4c5fcbd51bb41a89ad25a62c86e6830deab2",
+  "block_sequence_sha256": "83efb97155f6c41871519d539acd9b297012e787c5318d723f492f132371ab5b",
+  "blocks": [
+    {
+      "block_id": "page-0425-block-0000",
+      "order": 0,
+      "text": "404    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "dd43e9318a86b91d9456f0ed2f59679114e51284b3a73b0f727f7c42e6f49dc2"
+    },
+    {
+      "block_id": "page-0425-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0425-block-0002",
+      "order": 2,
+      "text": "Antidepressants and sexual dysfunction\n",
+      "bbox": [
+        68.88999938964844,
+        66.06539916992188,
+        275.260986328125,
+        79.10040283203125
+      ],
+      "text_sha256": "0ec3349ef647799388daffe9da9ed297ccd9e02b5fca7e3983f7e082d07d0c1f"
+    },
+    {
+      "block_id": "page-0425-block-0003",
+      "order": 3,
+      "text": "Sexual dysfunction is common in the general population, although reliable, precise data \nare lacking.1 Reported prevalence rates vary depending on how sexual dysfunction is \ndefined, assessed and also the method of data collection.1 Physical illness, psychiatric \nillness, substance misuse and prescribed drug treatment can all cause sexual dysfunc-\ntion.2 People with depression are more likely to be obese,3 have diabetes4 and have \ncardiovascular disease5 than the general population, making them more likely to suffer \nsexual dysfunction outside any influence of depression itself.\n",
+      "bbox": [
+        61.887901306152344,
+        84.910400390625,
+        436.6985778808594,
+        168.63040161132812
+      ],
+      "text_sha256": "07ad298e556812619c1d8c0b31d33f9b5a17ac8ca5ff779adc3f4a49fa0fd349"
+    },
+    {
+      "block_id": "page-0425-block-0004",
+      "order": 4,
+      "text": "Before prescribing, baseline sexual functioning should be determined because treat-\nment-emergent sexual dysfunction adversely affects the quality of life and may contrib-\nute to reduced compliance.6 Questionnaires or rating scales may be useful (for example, \nthe Arizona Sexual Experience Scale7). If scales are not used then direct questioning \nshould be employed as it is much more effective than relying on spontaneous patient \nreporting.8 Complaints of sexual dysfunction may also indicate progression or inade-\nquate treatment of underlying medical or psychiatric conditions. It may also be the \nresult of drug treatment and intervention may greatly improve quality of life.6\n",
+      "bbox": [
+        61.887298583984375,
+        168.910400390625,
+        436.7010498046875,
+        264.6304016113281
+      ],
+      "text_sha256": "048f810606c40582b4b7e52aa1a9211ed4e86c2b5033c87c2db10e227080e0a9"
+    },
+    {
+      "block_id": "page-0425-block-0005",
+      "order": 5,
+      "text": "Effects of depression\n",
+      "bbox": [
+        61.88999938964844,
+        282.0653991699219,
+        169.66798400878906,
+        295.10040283203125
+      ],
+      "text_sha256": "619ea5a3ffba7b6d7b443d9e510ec30f15a22adcec761a1bdfc05de2a0f505ca"
+    },
+    {
+      "block_id": "page-0425-block-0006",
+      "order": 6,
+      "text": "Both depression and the drugs used to treat it can cause disorders of desire, arousal and \norgasm. The precise nature of the sexual dysfunction may indicate whether depression \nor treatment is the more likely cause. For example, 40–50% of people with depression \nreport diminished libido and problems regarding sexual arousal in the month before \ndiagnosis, but only 15–20% experience orgasm problems before taking an antidepres-\nsant.9 The prevalence for loss of libido appears to correlate with depression severity.10\n",
+      "bbox": [
+        61.88999938964844,
+        300.910400390625,
+        436.66998291015625,
+        372.6304016113281
+      ],
+      "text_sha256": "0fcd371c59a9a5b53fb39bc300db7ef89ca5006669d3b0db0f8d4f44ec9866bc"
+    },
+    {
+      "block_id": "page-0425-block-0007",
+      "order": 7,
+      "text": "Although many patients experience treatment-emergent sexual dysfunction whilst \ntaking antidepressants, in others the reduction in depressive symptoms can be accom-\npanied by improvements in sexual desire and satisfaction.6 Improvements appear more \ncommonly among those who respond to antidepressant treatment.6 For example, a \npost-hoc analysis of data from the STAR*D study revealed that sexual dysfunction was \nproblematic in 21% of patients whose depression remitted with citalopram treatment \ncompared with 61% of those whose depression did not remit.11\n",
+      "bbox": [
+        61.888885498046875,
+        372.910400390625,
+        436.68878173828125,
+        456.6304016113281
+      ],
+      "text_sha256": "0a592420f7a439d127aa95ed7c5b76f6ce67ab7f07fdad6cfaa9c8fc982d5269"
+    },
+    {
+      "block_id": "page-0425-block-0008",
+      "order": 8,
+      "text": "Effects of antidepressant drugs\n",
+      "bbox": [
+        61.88999938964844,
+        474.0653991699219,
+        222.84197998046875,
+        487.10040283203125
+      ],
+      "text_sha256": "357c59ea1f549e2c179d5c20aed5a87076ee1f967637e757a4b37c2c837031f8"
+    },
+    {
+      "block_id": "page-0425-block-0009",
+      "order": 9,
+      "text": "Antidepressants can cause sedation, hormonal changes, disturbance of cholinergic/adr-\nenergic balance, peripheral alpha-adrenergic agonism, inhibition of nitric oxide and \nincreased serotonin neurotransmission, all of which can result in sexual dysfunction. \nSexual dysfunction has been reported as a side effect of all antidepressants, although \nrates vary (see Table 3.20). Individual susceptibility also varies and may be at least par-\ntially genetically determined.12\n",
+      "bbox": [
+        61.889984130859375,
+        492.910400390625,
+        436.6599426269531,
+        564.6304321289062
+      ],
+      "text_sha256": "7d4354514d75987865ba5e4841acbeb20fd53a8285ba263f0ba6f3bcb0a23f5e"
+    },
+    {
+      "block_id": "page-0425-block-0010",
+      "order": 10,
+      "text": "Sexual dysfunction with antidepressants is likely to be dose-dependent,12 and is gener-\nally considered to be fully reversible.12 However, there have been reports of long-lasting \nsexual dysfunction where the symptoms have continued despite discontinuation of \nSSRIs/SNRI.13 The term ‘post-SSRI sexual dysfunction’ (PSSD) has been used to describe \nthese symptoms. The prevalence and pathophysiology of PSSD remain uncertain.14\n",
+      "bbox": [
+        61.885498046875,
+        564.910400390625,
+        436.71539306640625,
+        624.6304321289062
+      ],
+      "text_sha256": "cb0b7074e730d6c2c472fdc89ecf07f8a2988d527e05a540d7089596f3e73221"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,12 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0400",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 400,
+  "source_page_index": 399,
+  "repaired_text": "Depression and anxiety disorders    379\nCHAPTER 3\nAntidepressant\nSubstrate for\nInhibits\nTCAs\nAmitriptyline\nCYP1A2, CYP2D6, CYP3A4, CYP2C19\nClomipramine\nDesipramine\nCYP2D6\nDosulepin\nCYP2D6 and possibly other pathways\nDoxepin\nCYP2D6, CYP1A2 (minor), CYP3A4 \n(minor)\nImipramine\nCYP1A2, CYP2D6, CYP3A4, CYP2C19\nNortriptyline\nCYP2D6\nTrimipramine\nCYP2D6\nOthers\nAgomelatine\nCYP1A2\nBupropion\nCYP2B6\nCYP2D6 (potent)\nEsketamine\nCYP3A4, CYP2B6\nMianserin\nCYP2D6\nMirtazapine\nCYP1A2, CYP2D6, CYP3A4\nCYP2D6 (weak)\nReboxetine\nCYP3A4\nTrazodone\nCYP3A4\nVortioxetine\nCYP2D6, CYP2A6, CYP2B6, CYP2C8, \nCYP2C9, CYP2C19, CYP3A4\nVilazodone\nCYP3A4\nCYP2C8\nCYP enzymes highlighted in bold indicate:\n■\n■predominant metabolic enzyme pathway or\n■\n■predominant enzyme activity.\nTable 3.14  (Continued)\n■\n■Pharmacodynamic interactions where the effects of one drug are altered by another\ndrug via physiological mechanisms such as direct competition at receptor sites (e.g. \ndopamine agonists with dopamine blockers may negate any therapeutic effect), aug-\nmentation of the same neurotransmitter pathway (e.g. fluoxetine with tramadol or a \ntriptan can lead to serotonin syndrome) or an effect on the physiological functioning \nof an organ/organ system in different ways (e.g. SSRIs impair clotting and NSAIDs \nirritate the gastric mucosa so when these drugs are used together, the risk of GI bleeds \nis increased). Up-to-date interaction tables are readily available online and most \nknown interactions are described in an individual product’s literature.\nPharmacodynamic interactions\nTricyclic antidepressants7–10\n■\n■are H1 blockers (sedative). This effect can be exacerbated by other sedative drugs or\nalcohol. Beware respiratory depression",
+  "repaired_text_sha256": "769e4ac3c21576c3a706a402bf146573d728300b9bc681f696bba540706cb672",
+  "raw_text_sha256": "8525f5157d5fc8603e5676f66eb58f333257bc73f238b16b4d5258a955d2f713",
+  "repair_ids": [],
+  "raw_file": "raw/page-0400.json"
+}

@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0032",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 32,
+  "source_page_index": 31,
+  "source_page_display": 32,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    11\nCHAPTER 1\n\t37.\t Ballard C, et al. Pimavanserin in Alzheimer’s Disease Psychosis: efficacy in patients with more pronounced psychotic symptoms. J Prev \nAlzheimers Dis 2019; 6:27–33.\n\t38.\t Nasrallah HA, et al. Successful treatment of clozapine-nonresponsive refractory hallucinations and delusions with pimavanserin, a serotonin \n5HT-2A receptor inverse agonist. Schizophr Res 2019; 208:217–220.\n\t39.\t Small S, et al. Quetiapine in patients with schizophrenia. A high- and low-dose double-blind comparison with placebo. Seroquel Study Group. \nArch Gen Psychiatry 1997; 54:549–557.\n\t40.\t Peuskens J, et al. A comparison of quetiapine and chlorpromazine in the treatment of schizophrenia. Acta Psychiatr Scand 1997; \n96:265–273.\n\t41.\t Arvanitis LA, et al. Multiple fixed doses of ‘Seroquel’ (quetiapine) in patients with acute exacerbation of schizophrenia: a comparison with \nhaloperidol and placebo. Biol Psychiatry 1997; 42:233–246.\n\t42.\t Kopala LC, et al. Treatment of a first episode of psychotic illness with quetiapine: an analysis of 2 year outcomes. Schizophr Res 2006; \n81:29–39.\n\t43.\t Sparshatt A, et al. Quetiapine: dose-response relationship in schizophrenia. CNS Drugs 2008; 22:49–68.\n\t44.\t Sparshatt A, et al. Relationship between daily dose, plasma concentrations, dopamine receptor occupancy, and clinical response to quetiapine: \na review. J Clin Psychiatry 2011; 72:1108–1123.\n\t45.\t Pagsberg AK, et al. Quetiapine extended release versus aripiprazole in children and adolescents with first-episode psychosis: the multicentre, \ndouble-blind, randomised tolerability and efficacy of antipsychotics (TEA) trial. Lancet Psychiatry 2017; 4:605–618.\n\t46.\t Lane HY, et al. Risperidone in acutely exacerbated schizophrenia: dosing strategies and plasma levels. J Clin Psychiatry 2000; 61:209–214.\n\t47.\t Williams R. Optimal dosing with risperidone: updated recommendations. J Clin Psychiatry 2001; 62:282–289.\n\t48.\t Ezewuzie N, et al. Establishing a dose-response relationship for oral risperidone in relapsed schizophrenia. J Psychopharm 2006; 20:86–90.\n\t49.\t Li C, et al. Risperidone dose for schizophrenia. Cochrane Database Syst Rev 2009; Cd007474.\n\t50.\t Bagnall A, et al. Ziprasidone for schizophrenia and severe mental illness. Cochrane Database Syst Rev 2000; CD001945.\n\t51.\t Taylor D. Ziprasidone – an atypical antipsychotic. Pharm J 2001; 266:396–401.\n\t52.\t Joyce AT, et al. Effect of initial ziprasidone dose on length of therapy in schizophrenia. Schizophr Res 2006; 83:285–292.\n",
+  "raw_text_sha256": "6253f858ddef409c1a4936c0109564288a87d925aec5fc697a24414255debd65",
+  "coordinates_sha256": "74b1d51da61d5756e9357ca343a759773fbdaa3a5421bf9e3bfe38903af43406",
+  "block_sequence_sha256": "fe4dc5f432555df4e166d064297b43d50ad5c1e7bcdf64d1392d305cf8f0b079",
+  "blocks": [
+    {
+      "block_id": "page-0032-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    11\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "9abd818b2fa50436a8ef8f99e57d819a07fc14967fe3f16e497a766894f75ea2"
+    },
+    {
+      "block_id": "page-0032-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0032-block-0002",
+      "order": 2,
+      "text": "\t37.\t Ballard C, et al. Pimavanserin in Alzheimer’s Disease Psychosis: efficacy in patients with more pronounced psychotic symptoms. J Prev \n",
+      "bbox": [
+        47.99909973144531,
+        63.2694091796875,
+        421.6670837402344,
+        70.30140686035156
+      ],
+      "text_sha256": "7fe15f5f18c26308dedc12c332854274ca66cf9533985d95fcf5535fa95d8e48"
+    },
+    {
+      "block_id": "page-0032-block-0003",
+      "order": 3,
+      "text": "Alzheimers Dis 2019; 6:27–33.\n\t38.\t Nasrallah HA, et al. Successful treatment of clozapine-nonresponsive refractory hallucinations and delusions with pimavanserin, a serotonin \n",
+      "bbox": [
+        48.005096435546875,
+        72.12541198730469,
+        421.6671447753906,
+        88.30140686035156
+      ],
+      "text_sha256": "7baee88a6f9ae0a122f5447afd9d5c7720b1e8a6961d6ba86aa9bd2074e19796"
+    },
+    {
+      "block_id": "page-0032-block-0004",
+      "order": 4,
+      "text": "5HT-2A receptor inverse agonist. Schizophr Res 2019; 208:217–220.\n\t39.\t Small S, et al. Quetiapine in patients with schizophrenia. A high- and low-dose double-blind comparison with placebo. Seroquel Study Group. \n",
+      "bbox": [
+        48.01110076904297,
+        90.12541198730469,
+        421.6431579589844,
+        106.30140686035156
+      ],
+      "text_sha256": "cdfd949a7848a88426ccd684cdaa3b3d41c1ec02e258e0868f1cb8e177eb1bf2"
+    },
+    {
+      "block_id": "page-0032-block-0005",
+      "order": 5,
+      "text": "Arch Gen Psychiatry 1997; 54:549–557.\n\t40.\t Peuskens J, et al. A comparison of quetiapine and chlorpromazine in the treatment of schizophrenia. Acta Psychiatr Scand 1997; \n",
+      "bbox": [
+        48.01709747314453,
+        108.12541198730469,
+        421.6730041503906,
+        124.30140686035156
+      ],
+      "text_sha256": "a6cd4e466ee19e9f135b4396e1fd76f8356e21bd22beb0c81b46e7250a8000bc"
+    },
+    {
+      "block_id": "page-0032-block-0006",
+      "order": 6,
+      "text": "96:265–273.\n\t41.\t Arvanitis LA, et al. Multiple fixed doses of ‘Seroquel’ (quetiapine) in patients with acute exacerbation of schizophrenia: a comparison with \n",
+      "bbox": [
+        48.023101806640625,
+        126.12541198730469,
+        421.7149963378906,
+        142.30140686035156
+      ],
+      "text_sha256": "91b143b7c2e87e4a61e2467b97575917ed9cb2dae39a5cefc2db56bc84fd9f41"
+    },
+    {
+      "block_id": "page-0032-block-0007",
+      "order": 7,
+      "text": "haloperidol and placebo. Biol Psychiatry 1997; 42:233–246.\n\t42.\t Kopala LC, et al. Treatment of a first episode of psychotic illness with quetiapine: an analysis of 2 year outcomes. Schizophr Res 2006; \n",
+      "bbox": [
+        48.02909851074219,
+        144.1254119873047,
+        421.6672668457031,
+        160.30140686035156
+      ],
+      "text_sha256": "82f0d9c9cea05c80d2d65e935be24803d14e5268320fb6a0b1ec26fb6a01dac2"
+    },
+    {
+      "block_id": "page-0032-block-0008",
+      "order": 8,
+      "text": "81:29–39.\n\t43.\t Sparshatt A, et al. Quetiapine: dose-response relationship in schizophrenia. CNS Drugs 2008; 22:49–68.\n\t44.\t Sparshatt A, et al. Relationship between daily dose, plasma concentrations, dopamine receptor occupancy, and clinical response to quetiapine: \n",
+      "bbox": [
+        48.03510284423828,
+        162.1254119873047,
+        421.6851501464844,
+        187.30140686035156
+      ],
+      "text_sha256": "a9a3b9b98e971f6791a914766f63e4d0d674a9026f2b811c141d08bcab3f3412"
+    },
+    {
+      "block_id": "page-0032-block-0009",
+      "order": 9,
+      "text": "a review. J Clin Psychiatry 2011; 72:1108–1123.\n\t45.\t Pagsberg AK, et al. Quetiapine extended release versus aripiprazole in children and adolescents with first-episode psychosis: the multicentre, \n",
+      "bbox": [
+        48.047096252441406,
+        189.1254119873047,
+        421.6971130371094,
+        205.30140686035156
+      ],
+      "text_sha256": "84ec2abc8fc57d91474911869d688dddfbf51b8cda2fd4e4a6b738f77670ba2f"
+    },
+    {
+      "block_id": "page-0032-block-0010",
+      "order": 10,
+      "text": "double-blind, randomised tolerability and efficacy of antipsychotics (TEA) trial. Lancet Psychiatry 2017; 4:605–618.\n\t46.\t Lane HY, et al. Risperidone in acutely exacerbated schizophrenia: dosing strategies and plasma levels. J Clin Psychiatry 2000; 61:209–214.\n\t47.\t Williams R. Optimal dosing with risperidone: updated recommendations. J Clin Psychiatry 2001; 62:282–289.\n\t48.\t Ezewuzie N, et al. Establishing a dose-response relationship for oral risperidone in relapsed schizophrenia. J Psychopharm 2006; 20:86–90.\n\t49.\t Li C, et al. Risperidone dose for schizophrenia. Cochrane Database Syst Rev 2009; Cd007474.\n\t50.\t Bagnall A, et al. Ziprasidone for schizophrenia and severe mental illness. Cochrane Database Syst Rev 2000; CD001945.\n\t51.\t Taylor D. Ziprasidone – an atypical antipsychotic. Pharm J 2001; 266:396–401.\n\t52.\t Joyce AT, et al. Effect of initial ziprasidone dose on length of therapy in schizophrenia. Schizophr Res 2006; 83:285–292.\n",
+      "bbox": [
+        48.0531005859375,
+        207.1254119873047,
+        419.1111145019531,
+        277.3014221191406
+      ],
+      "text_sha256": "b128767d085cc29e104cb1f1bde4d8a2d0a657c4db4586f6170adeb810027464"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,311 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0686",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 686,
+  "source_page_index": 685,
+  "source_page_display": 686,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": " \n \n \n \n \n \n \n \nLorazepam\nPRN only – avoid regular use \ndue to short half-life and risk of \ndependence\n0.5mg daily\n0.5–2mg daily*\n2mg/day\nMelatonin\nInsomnia – short-term use (up \nto 13 weeks)\n2mg (modified release) once daily\n(1–2 hours before bedtime)\nPregabalin\nGeneralised anxiety disorder\nDose adjustment based on renal \nfunction (see product \ninformation)25\nUsually 25mg bd (increase by \n25mg bd weekly)\nUp to 75mg bd (if healthy and \nnormal renal function)\nUsually 150mg daily*\nUp to 150mg bd (if healthy and \nnormal renal function)\n150–300mg/day*\nZolpidem\nInsomnia (short-term use – up \nto 4 weeks)\n5mg nocte\n5mg nocte\n5mg nocte\nZopiclone\nInsomnia (short-term use – up \nto 4 weeks)\n3.75mg nocte\n3.75–7.5mg nocte\n7.5mg nocte\n*There is no specific information available in the literature for these drug doses in elderly patients – the doses stated are a guide only. Where there are no data, the \nmaximum doses are conservative and may be exceeded if the drug is well tolerated and following clinician’s assessment. \nbs, bis die (twice a day); mane, morning; nocte, at night; prn, pro re nata (as required); tds, ter die sumendum (three times a day).\n",
+  "raw_text_sha256": "84083e6ff32235c81b60ce3746c10ec30c35db48bf08fa3bce0e72334f313fe5",
+  "coordinates_sha256": "1fb691ced2dfd5e1e433452a6a65d33aa19dab0ebd233e42e66bfa82827f57c6",
+  "block_sequence_sha256": "bf7f9d3fd0b43ccf6d722af1dfbbf20719a234216bb028c48f8a31b4ba32a6f5",
+  "blocks": [
+    {
+      "block_id": "page-0686-block-0000",
+      "order": 0,
+      "text": " \n \n \n \n \n \n \n \n",
+      "bbox": [
+        123.73739624023438,
+        108.9914779663086,
+        132.62489318847656,
+        495.33148193359375
+      ],
+      "text_sha256": "20b79b9461a156f3ed7f44fb084f3907cf9ba9539e0d77040eeb552faf2dadff"
+    },
+    {
+      "block_id": "page-0686-block-0001",
+      "order": 1,
+      "text": "Lorazepam\nPRN only – avoid regular use \n",
+      "bbox": [
+        152.04238891601562,
+        429.19647216796875,
+        160.74989318847656,
+        612.6539306640625
+      ],
+      "text_sha256": "f8fc9002413b3639872f2ae2b14a6d28e365cdcf29a88e0042c1fc7e13ededbc"
+    },
+    {
+      "block_id": "page-0686-block-0002",
+      "order": 2,
+      "text": "due to short half-life and risk of \n",
+      "bbox": [
+        162.03988647460938,
+        418.6514892578125,
+        170.7473907470703,
+        522.00146484375
+      ],
+      "text_sha256": "a0400241cdc78021c80bcbc9d6d129ec3fcfb559c38cf93261c9b191fd6a216d"
+    },
+    {
+      "block_id": "page-0686-block-0003",
+      "order": 3,
+      "text": "dependence\n",
+      "bbox": [
+        172.03738403320312,
+        482.82147216796875,
+        180.74488830566406,
+        522.00146484375
+      ],
+      "text_sha256": "e6ba2831858a94051e944f218c67a06dfe2eb8022a36e465865a40ee873b42ba"
+    },
+    {
+      "block_id": "page-0686-block-0004",
+      "order": 4,
+      "text": "0.5mg daily\n0.5–2mg daily*\n2mg/day\n",
+      "bbox": [
+        152.03488159179688,
+        146.07899475097656,
+        160.7423858642578,
+        405.9164733886719
+      ],
+      "text_sha256": "1eb646f95fe79aed8e831def27b7c4acc16fff574e230fbbb52e31f4a4e8a3df"
+    },
+    {
+      "block_id": "page-0686-block-0005",
+      "order": 5,
+      "text": "Melatonin\nInsomnia – short-term use (up \n",
+      "bbox": [
+        190.15737915039062,
+        424.06646728515625,
+        198.86488342285156,
+        612.6539306640625
+      ],
+      "text_sha256": "c93faa0f8ac26c49ae48926df0099fd5b743a9eabb9449791b7861bf844f7e3f"
+    },
+    {
+      "block_id": "page-0686-block-0006",
+      "order": 6,
+      "text": "to 13 weeks)\n2mg (modified release) once daily\n(1–2 hours before bedtime)\n",
+      "bbox": [
+        190.15737915039062,
+        298.5389709472656,
+        208.86239624023438,
+        522.00146484375
+      ],
+      "text_sha256": "b4aa143def34a8f2f4d8450d42e491f0dd05b54ac716cf6e89b49c98dab665b6"
+    },
+    {
+      "block_id": "page-0686-block-0007",
+      "order": 7,
+      "text": "Pregabalin\nGeneralised anxiety disorder\n",
+      "bbox": [
+        218.2823944091797,
+        432.13653564453125,
+        226.98989868164062,
+        612.6539916992188
+      ],
+      "text_sha256": "837b63c99aa0f9699436074897a21471150d00e8423476cac95fb2d1c8adba24"
+    },
+    {
+      "block_id": "page-0686-block-0008",
+      "order": 8,
+      "text": "Dose adjustment based on renal \n",
+      "bbox": [
+        228.27989196777344,
+        417.1065368652344,
+        236.98739624023438,
+        522.0015258789062
+      ],
+      "text_sha256": "bc2c063c4b3715974850f351b6164a5f5883dbb94e4e0c41f0c6abb3b827c532"
+    },
+    {
+      "block_id": "page-0686-block-0009",
+      "order": 9,
+      "text": "function (see product \n",
+      "bbox": [
+        238.2773895263672,
+        451.7040100097656,
+        246.98489379882812,
+        522.0015258789062
+      ],
+      "text_sha256": "103a118400564b870a104e47683e62958f2a39d9c4511f0eab5858a37718f976"
+    },
+    {
+      "block_id": "page-0686-block-0010",
+      "order": 10,
+      "text": "information)25\n",
+      "bbox": [
+        248.27488708496094,
+        477.5537414550781,
+        256.9823913574219,
+        522.0015258789062
+      ],
+      "text_sha256": "76af8b93397709e4a916d8642065412ff0650ba207dea0d2eb89710328096e27"
+    },
+    {
+      "block_id": "page-0686-block-0011",
+      "order": 11,
+      "text": "Usually 25mg bd (increase by \n",
+      "bbox": [
+        218.29238891601562,
+        310.611328125,
+        226.99989318847656,
+        405.91387939453125
+      ],
+      "text_sha256": "5075518a4273ffa60cdd467b5a5adedf179e93daad89e03d403b64678ab6f0d8"
+    },
+    {
+      "block_id": "page-0686-block-0012",
+      "order": 12,
+      "text": "25mg bd weekly)\nUp to 75mg bd (if healthy and \n",
+      "bbox": [
+        228.28988647460938,
+        306.7113037109375,
+        246.99488830566406,
+        405.91387939453125
+      ],
+      "text_sha256": "99ca71dafe487abbc451e19be78d73ad5e5d089c6b99048a1d14e5a11fa9d71a"
+    },
+    {
+      "block_id": "page-0686-block-0013",
+      "order": 13,
+      "text": "normal renal function)\n",
+      "bbox": [
+        248.28488159179688,
+        334.79132080078125,
+        256.99237060546875,
+        405.91387939453125
+      ],
+      "text_sha256": "b091091b9fe1aa3d0531830de4a352d51fa52318c2522cfaac08c804a1e9b152"
+    },
+    {
+      "block_id": "page-0686-block-0014",
+      "order": 14,
+      "text": "Usually 150mg daily*\n",
+      "bbox": [
+        218.28488159179688,
+        220.56629943847656,
+        226.9923858642578,
+        288.91387939453125
+      ],
+      "text_sha256": "de53f949fc3f2fc62fb82c8e1ff665352ccbd0dcadcbf082b62051fea125d99b"
+    },
+    {
+      "block_id": "page-0686-block-0015",
+      "order": 15,
+      "text": "Up to 150mg bd (if healthy and \n",
+      "bbox": [
+        228.28237915039062,
+        185.54127502441406,
+        236.98988342285156,
+        288.91387939453125
+      ],
+      "text_sha256": "716051ac008be40e116b2f1c17f0ed0f05db09d0570a056f6d16db8aa1b7a4b8"
+    },
+    {
+      "block_id": "page-0686-block-0016",
+      "order": 16,
+      "text": "normal renal function)\n",
+      "bbox": [
+        238.27987670898438,
+        217.7913055419922,
+        246.9873809814453,
+        288.91387939453125
+      ],
+      "text_sha256": "b091091b9fe1aa3d0531830de4a352d51fa52318c2522cfaac08c804a1e9b152"
+    },
+    {
+      "block_id": "page-0686-block-0017",
+      "order": 17,
+      "text": "150–300mg/day*\n",
+      "bbox": [
+        218.27737426757812,
+        117.30650329589844,
+        226.98487854003906,
+        173.9989013671875
+      ],
+      "text_sha256": "d7ce4dc9a62e15545d1cf996f285f6a5ba364d418e19f085c544bbc518b35297"
+    },
+    {
+      "block_id": "page-0686-block-0018",
+      "order": 18,
+      "text": "Zolpidem\nInsomnia (short-term use – up \n",
+      "bbox": [
+        276.4023742675781,
+        424.06390380859375,
+        285.10986328125,
+        612.6513671875
+      ],
+      "text_sha256": "4e6c6326d98f95fe719ce0d5638beca7867cb4ba74bef4816492d24ceb6f6c39"
+    },
+    {
+      "block_id": "page-0686-block-0019",
+      "order": 19,
+      "text": "to 4 weeks)\n5mg nocte\n5mg nocte\n5mg nocte\n",
+      "bbox": [
+        276.4023742675781,
+        139.408935546875,
+        295.10736083984375,
+        521.9989013671875
+      ],
+      "text_sha256": "c3eab7a1a1312570f2e2cb6c8c5a14628391e9e677f4fa8060465b83eff7faaa"
+    },
+    {
+      "block_id": "page-0686-block-0020",
+      "order": 20,
+      "text": "Zopiclone\nInsomnia (short-term use – up \n",
+      "bbox": [
+        304.5273742675781,
+        424.06390380859375,
+        313.23486328125,
+        612.6513671875
+      ],
+      "text_sha256": "0ec41af77288534d79b4f42e533e1df654ffd5fc526a82dfa6a735647426e6c4"
+    },
+    {
+      "block_id": "page-0686-block-0021",
+      "order": 21,
+      "text": "to 4 weeks)\n3.75mg nocte\n3.75–7.5mg nocte\n7.5mg nocte\n",
+      "bbox": [
+        304.5273742675781,
+        133.1539306640625,
+        323.23236083984375,
+        521.9989013671875
+      ],
+      "text_sha256": "a73f1a0be33333c63ff3424ae4158e7d3c846aacd804fd33c92be6a3c37c50b7"
+    },
+    {
+      "block_id": "page-0686-block-0022",
+      "order": 22,
+      "text": "*There is no specific information available in the literature for these drug doses in elderly patients – the doses stated are a guide only. Where there are no data, the \nmaximum doses are conservative and may be exceeded if the drug is well tolerated and following clinician’s assessment. \n",
+      "bbox": [
+        333.2748718261719,
+        90.32881927490234,
+        351.9798583984375,
+        612.6513671875
+      ],
+      "text_sha256": "ea5dbedba3a46fe758ebb8e3703fc21334a887fd279f32085554f9234806460c"
+    },
+    {
+      "block_id": "page-0686-block-0023",
+      "order": 23,
+      "text": "bs, bis die (twice a day); mane, morning; nocte, at night; prn, pro re nata (as required); tds, ter die sumendum (three times a day).\n",
+      "bbox": [
+        353.2698669433594,
+        198.38136291503906,
+        361.97735595703125,
+        612.6513671875
+      ],
+      "text_sha256": "585d7083cc9cb90689f70b5a6a98fabdda701b6714f301eea3792dcdd0d097b6"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

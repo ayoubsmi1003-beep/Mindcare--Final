@@ -1,0 +1,263 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0029",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 29,
+  "source_page_index": 28,
+  "source_page_display": 29,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "8    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nGeneral principles of prescribing\n■\n■The lowest possible dose should be used. For each patient, the dose should be titrated \nto the lowest known to be effective (see the section on minimum effective doses); dose \nincreases should then take place only after one or two weeks of assessment during \nwhich the patient is clearly showing poor or no response. (There is gathering evidence \nthat lack of response at 2 weeks is a potent predictor of later poor outcome, unless \ndose or drug is changed.)\n■\n■With regular dosing of long-acting injections, plasma levels rise for at least 6–12 \nweeks after initiation, even without a change in dose (see the section on depot phar-\nmacokinetics in this chapter). Dose increases during this time are therefore difficult \nto evaluate. The preferred method is to establish efficacy and tolerability of oral \nmedication at a particular dose and then give the equivalent dose of that drug in LAI \nform. Where this is not possible, the target dose of LAI for an individual should be \nthat established to be optimal in clinical trials (although such data are not always \navailable for older LAIs).\n■\n■For the large majority of patients, the use of a single antipsychotic (with or without \nadditional mood stabiliser or sedatives) is recommended. Apart from exceptional cir-\ncumstances (e.g. clozapine augmentation), antipsychotic polypharmacy should gener-\nally be avoided because of the increased adverse effect burden and risks associated \nwith QT prolongation and sudden cardiac death (see the section on combined antip-\nsychotics in this chapter).\n■\n■Combinations of antipsychotics should only be used where response to a single antip-\nsychotic (including clozapine) has been clearly demonstrated to be inadequate. In \nsuch cases, the effect of the combination against target symptoms and adverse effects \nshould be carefully evaluated and documented. Where there is no clear benefit, treat-\nment should revert to single antipsychotic therapy.\n■\n■In general, antipsychotics should not be used as ‘when necessary’ sedatives. Time-\nlimited prescriptions of benzodiazepines or general sedatives (e.g. promethazine) are \nrecommended (see the section on rapid tranquillisation in this chapter).\n■\n■Responses to antipsychotic drug treatment should be assessed using recognised rating \nscales and outcomes documented in patients’ records.\n■\n■Those receiving antipsychotics should undergo close monitoring of physical health \n(including blood pressure, pulse, ECG, plasma glucose and plasma lipids) (see appro-\npriate sections in this chapter).\n■\n■When withdrawing antipsychotics, reduce the dose slowly in a hyperbolic regimen \nwhich minimises the risks of withdrawal symptoms and rebound psychosis.\n[Note: This section is not referenced. Please see relevant individual sections in this chap-\nter for detailed and referenced guidance.]\n",
+  "raw_text_sha256": "fa7897efb4353dc34f4612c5fd3406e9cc89913ec31f477b23016634d76fc662",
+  "coordinates_sha256": "add822ef96f81623ed048cd801866e4de599dcf2c2df7acfc2bf60ab902e81ba",
+  "block_sequence_sha256": "9e8d2d203ed45c301f78a5464d6552fec8c58b97bb7de241667514fc39f3e2da",
+  "blocks": [
+    {
+      "block_id": "page-0029-block-0000",
+      "order": 0,
+      "text": "8    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        290.2515869140625,
+        41.0262451171875
+      ],
+      "text_sha256": "9c69cb56aa64e3982b3e8625705aeb3c90ba1dbf616cd1a5143f6e6278a187e3"
+    },
+    {
+      "block_id": "page-0029-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0029-block-0002",
+      "order": 2,
+      "text": "General principles of prescribing\n",
+      "bbox": [
+        68.88909912109375,
+        66.06442260742188,
+        236.15509033203125,
+        79.09942626953125
+      ],
+      "text_sha256": "58a2736f8170ea245d3ea0df2fc70d831a18ccacf598ce90cb6e8b365b8de741"
+    },
+    {
+      "block_id": "page-0029-block-0003",
+      "order": 3,
+      "text": "■\n■The lowest possible dose should be used. For each patient, the dose should be titrated \n",
+      "bbox": [
+        61.888999938964844,
+        90.66942596435547,
+        436.6891174316406,
+        102.62942504882812
+      ],
+      "text_sha256": "b7051974b4b451f62426f70ae1892c50161cb7ecbf322d79eb9a54239eed265c"
+    },
+    {
+      "block_id": "page-0029-block-0004",
+      "order": 4,
+      "text": "to the lowest known to be effective (see the section on minimum effective doses); dose \nincreases should then take place only after one or two weeks of assessment during \nwhich the patient is clearly showing poor or no response. (There is gathering evidence \nthat lack of response at 2 weeks is a potent predictor of later poor outcome, unless \ndose or drug is changed.)\n",
+      "bbox": [
+        70.88909912109375,
+        102.909423828125,
+        436.6790466308594,
+        162.62942504882812
+      ],
+      "text_sha256": "60bed5939568259d2e7312f8d7ed9f0345bbbda18180501140091f0e35e581c2"
+    },
+    {
+      "block_id": "page-0029-block-0005",
+      "order": 5,
+      "text": "■\n■With regular dosing of long-acting injections, plasma levels rise for at least 6–12 \n",
+      "bbox": [
+        61.888999938964844,
+        162.66943359375,
+        436.6991882324219,
+        174.62942504882812
+      ],
+      "text_sha256": "ffcb07796a308faf23a830a3b9b132556108c7e34d6ea515bb040e28de7827b3"
+    },
+    {
+      "block_id": "page-0029-block-0006",
+      "order": 6,
+      "text": "weeks after initiation, even without a change in dose (see the section on depot phar-\nmacokinetics in this chapter). Dose increases during this time are therefore difficult \nto evaluate. The preferred method is to establish efficacy and tolerability of oral \nmedication at a particular dose and then give the equivalent dose of that drug in LAI \nform. Where this is not possible, the target dose of LAI for an individual should be \nthat established to be optimal in clinical trials (although such data are not always \navailable for older LAIs).\n",
+      "bbox": [
+        70.88909912109375,
+        174.909423828125,
+        436.6991882324219,
+        258.6294250488281
+      ],
+      "text_sha256": "72bc4f5b0318f17dc8fa8dd7acfb0017c6f546aeb7987e3175a2519235e67f3f"
+    },
+    {
+      "block_id": "page-0029-block-0007",
+      "order": 7,
+      "text": "■\n■For the large majority of patients, the use of a single antipsychotic (with or without \n",
+      "bbox": [
+        61.888999938964844,
+        258.66943359375,
+        436.6189880371094,
+        270.6294250488281
+      ],
+      "text_sha256": "a39454915fac46fc1ae85d5b27fe5b09e36779041e030b944b50eb29c660ee8d"
+    },
+    {
+      "block_id": "page-0029-block-0008",
+      "order": 8,
+      "text": "additional mood stabiliser or sedatives) is recommended. Apart from exceptional cir-\ncumstances (e.g. clozapine augmentation), antipsychotic polypharmacy should gener-\nally be avoided because of the increased adverse effect burden and risks associated \nwith QT prolongation and sudden cardiac death (see the section on combined antip-\nsychotics in this chapter).\n",
+      "bbox": [
+        70.88909912109375,
+        270.909423828125,
+        436.6791687011719,
+        330.6294250488281
+      ],
+      "text_sha256": "7d88afdc66c8ba9117bed5db384cec4fc884139b19465f807c736b60c41dc004"
+    },
+    {
+      "block_id": "page-0029-block-0009",
+      "order": 9,
+      "text": "■\n■Combinations of antipsychotics should only be used where response to a single antip-\n",
+      "bbox": [
+        61.888999938964844,
+        330.66943359375,
+        433.8890686035156,
+        342.6294250488281
+      ],
+      "text_sha256": "c2e1ca2d0ca699fca1516e16b7b768aee4e8b4d2c5a965f02d97eb16b5bca132"
+    },
+    {
+      "block_id": "page-0029-block-0010",
+      "order": 10,
+      "text": "sychotic (including clozapine) has been clearly demonstrated to be inadequate. In \nsuch cases, the effect of the combination against target symptoms and adverse effects \nshould be carefully evaluated and documented. Where there is no clear benefit, treat-\nment should revert to single antipsychotic therapy.\n",
+      "bbox": [
+        70.88909912109375,
+        342.909423828125,
+        436.6791687011719,
+        390.6294250488281
+      ],
+      "text_sha256": "6fe47686fd97f213db7f7f12f6fa72db1295e8dd62fedd6a0f7847bd75cd5d4e"
+    },
+    {
+      "block_id": "page-0029-block-0011",
+      "order": 11,
+      "text": "■\n■In general, antipsychotics should not be used as ‘when necessary’ sedatives. Time-\n",
+      "bbox": [
+        61.888999938964844,
+        390.66943359375,
+        433.8492126464844,
+        402.6294250488281
+      ],
+      "text_sha256": "91f599a7f4a38b5d118ef0c64031ff730ef157d47684cb64e2667b4a00ba9e8e"
+    },
+    {
+      "block_id": "page-0029-block-0012",
+      "order": 12,
+      "text": "limited prescriptions of benzodiazepines or general sedatives (e.g. promethazine) are \nrecommended (see the section on rapid tranquillisation in this chapter).\n",
+      "bbox": [
+        70.88909912109375,
+        402.909423828125,
+        436.6791687011719,
+        426.6294250488281
+      ],
+      "text_sha256": "16d301a37b0dba743513a1bde76126f99864b7284e9bc842868e5ad29fe944a8"
+    },
+    {
+      "block_id": "page-0029-block-0013",
+      "order": 13,
+      "text": "■\n■Responses to antipsychotic drug treatment should be assessed using recognised rating \n",
+      "bbox": [
+        61.888999938964844,
+        426.66943359375,
+        436.7091369628906,
+        438.6294250488281
+      ],
+      "text_sha256": "3716a7646a3f2aae501cd71b30416e7cf26b111eb027332bed281d049f8b1a31"
+    },
+    {
+      "block_id": "page-0029-block-0014",
+      "order": 14,
+      "text": "scales and outcomes documented in patients’ records.\n",
+      "bbox": [
+        70.88909912109375,
+        438.66943359375,
+        301.4591369628906,
+        450.6294250488281
+      ],
+      "text_sha256": "229fa73c832cc647ecfb656842b5fff791bd753d39ee8bcad0cf0bee72c5785c"
+    },
+    {
+      "block_id": "page-0029-block-0015",
+      "order": 15,
+      "text": "■\n■Those receiving antipsychotics should undergo close monitoring of physical health \n",
+      "bbox": [
+        61.888999938964844,
+        450.909423828125,
+        436.6690979003906,
+        462.6294250488281
+      ],
+      "text_sha256": "e0f0d5eb96ae0b518bd1d74fc0bc00b465d47d80167fa5cafd7d339a5f7c5db8"
+    },
+    {
+      "block_id": "page-0029-block-0016",
+      "order": 16,
+      "text": "(including blood pressure, pulse, ECG, plasma glucose and plasma lipids) (see appro-\npriate sections in this chapter).\n",
+      "bbox": [
+        70.88909912109375,
+        462.909423828125,
+        433.8991394042969,
+        486.6294250488281
+      ],
+      "text_sha256": "52cd74c91cc3ca92a3c9f75fb23799dcf3d08fd8814047244b6d85393d9c1533"
+    },
+    {
+      "block_id": "page-0029-block-0017",
+      "order": 17,
+      "text": "■\n■When withdrawing antipsychotics, reduce the dose slowly in a hyperbolic regimen \n",
+      "bbox": [
+        61.888999938964844,
+        486.909423828125,
+        436.6191711425781,
+        498.6294250488281
+      ],
+      "text_sha256": "39ba054b5083f84d74a2e857d1838c8a06b62cb7dea0fdfe42b8088a7042bafc"
+    },
+    {
+      "block_id": "page-0029-block-0018",
+      "order": 18,
+      "text": "which minimises the risks of withdrawal symptoms and rebound psychosis.\n",
+      "bbox": [
+        70.88909912109375,
+        498.909423828125,
+        395.9491271972656,
+        510.6294250488281
+      ],
+      "text_sha256": "d7cae435531bfb2e771d8bd24b73dd0cef34e5019fb8e5a33390fcfc9478b6b8"
+    },
+    {
+      "block_id": "page-0029-block-0019",
+      "order": 19,
+      "text": "[Note: This section is not referenced. Please see relevant individual sections in this chap-\nter for detailed and referenced guidance.]\n",
+      "bbox": [
+        61.88909912109375,
+        516.909423828125,
+        433.8791809082031,
+        540.6294555664062
+      ],
+      "text_sha256": "82d8bfc78246ec60a658873ea374fc23af359e68ea665986f85fa4d95a027d2b"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

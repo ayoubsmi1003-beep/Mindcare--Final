@@ -1,0 +1,527 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0685",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 685,
+  "source_page_index": 684,
+  "source_page_display": 685,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "\u0003(Continued )\nDrug\nSpecific indication/Additional \nnotes\nStarting dose\nUsual maintenance dose\nMaximum dose in elderly\nLithium carbonate M/R\nBipolar disorder\nMania/depression\nCaution: drug interactions\nCheck renal and thyroid \nfunction and regularly monitor \nplasma levels\n100*–200mg nocte\n200–600mg daily*\n600–1200mg daily (aim for \nplasma levels 0.4–0.7 mmol/L in \nelderly)23\nSodium valproate\nBipolar disorder\nCheck LFTs and consider \nchecking plasma levels\nSodium valproate: 100–200mg \nbd*\nSemi-sodium valproate: 250mg \ndaily or bd*\nSodium valproate: 200–400mg \nbd*\nSemi-sodium valproate: 500mg \nto 1g daily*\nSodium valproate: 400mg bd*\nSemi-sodium valproate: 1 g \ndaily*\nAgitation in dementia (not \nlicensed and not recommended)\nCheck response, tolerability and \nplasma levels for guide\nSodium valproate: 50mg bd \n(liquid) or 100mg bd*\nSodium valproate: 100–200mg \nbd*\nSodium valproate: 200mg bd*\nDrug\nSpecific indication/additional \nnotes\nStarting dose\nUsual maintenance dose\nMaximum dose in elderly\nAnxiolytics/hypnotics\nClonazepam\nAgitation\n0.5mg daily\n1–2mg/day*\n4mg/day*\nDiazepam\nAgitation\n1mg tds\n1mg tds*\n7.5–15mg/day in divided doses \n(for anxiety)\nLemborexant24\nInsomnia\n5mg nocte\n(take no more than once per \nnight, immediately before bed)\n5–10mg nocte\n10mg nocte\nElderly are at a higher risk of falls. \nCaution when using doses >5mg \nin patients ≥65 years old\n",
+  "raw_text_sha256": "6414030145b634bbd16319e00a51c52a28c02b2faadbc94eae1a37a222cefb6d",
+  "coordinates_sha256": "35e50f80d4994299d6db8734b5c3efe05a9b8e19d30cbf75b7b68e0f700031cb",
+  "block_sequence_sha256": "36b4dcf2bdeb06c68de577d4d0afdedbcb4e02c2f25f28339f7ac009a8ae7f75",
+  "blocks": [
+    {
+      "block_id": "page-0685-block-0000",
+      "order": 0,
+      "text": "\u0003(Continued )\n",
+      "bbox": [
+        67.62750244140625,
+        568.2014770507812,
+        76.51499938964844,
+        606.6539916992188
+      ],
+      "text_sha256": "90c473996d890d7e46dd3846054d4ca955e156c108a6f427e77cfbf7293d5dd0"
+    },
+    {
+      "block_id": "page-0685-block-0001",
+      "order": 1,
+      "text": "Drug\nSpecific indication/Additional \n",
+      "bbox": [
+        87.25250244140625,
+        416.1539611816406,
+        96.13999938964844,
+        612.6539916992188
+      ],
+      "text_sha256": "c17c7e44518ab2ee95d7a11ea700b3a689396df9005dc5cf835aff088cdb5f93"
+    },
+    {
+      "block_id": "page-0685-block-0002",
+      "order": 2,
+      "text": "notes\nStarting dose\nUsual maintenance dose\nMaximum dose in elderly\n",
+      "bbox": [
+        87.25250244140625,
+        84.81138610839844,
+        106.13749694824219,
+        522.00146484375
+      ],
+      "text_sha256": "d017d7fd2e6b27a0a2854089b7c2bd8b8247bb9c0cbcaead450515d1ad7004a8"
+    },
+    {
+      "block_id": "page-0685-block-0003",
+      "order": 3,
+      "text": "Lithium carbonate M/R\nBipolar disorder\n",
+      "bbox": [
+        115.55750274658203,
+        472.1265869140625,
+        124.26499938964844,
+        612.654052734375
+      ],
+      "text_sha256": "294099f7cdefcb6a223ada8c40ff9fd58dedb79356b14a30fde0531e2c027945"
+    },
+    {
+      "block_id": "page-0685-block-0004",
+      "order": 4,
+      "text": "Mania/depression\n",
+      "bbox": [
+        125.55500030517578,
+        465.8715515136719,
+        134.2624969482422,
+        522.0015258789062
+      ],
+      "text_sha256": "4b88f98e038e00c6481c26b480e39d654eb51e7ca040c9d6cff665c5b7ccdf4b"
+    },
+    {
+      "block_id": "page-0685-block-0005",
+      "order": 5,
+      "text": "Caution: drug interactions\n",
+      "bbox": [
+        135.552490234375,
+        438.2340393066406,
+        144.25999450683594,
+        522.0015258789062
+      ],
+      "text_sha256": "dfd0f68a1268d7f2286bf34f2b07ac39b7d8d427dab959137663d8bf9c56458e"
+    },
+    {
+      "block_id": "page-0685-block-0006",
+      "order": 6,
+      "text": "Check renal and thyroid \n",
+      "bbox": [
+        145.54998779296875,
+        443.50653076171875,
+        154.2574920654297,
+        522.0015258789062
+      ],
+      "text_sha256": "4b0816353f0a6eea6b95a77a8ef376c8304ce5f3fa89ce5966f4093e71300ba8"
+    },
+    {
+      "block_id": "page-0685-block-0007",
+      "order": 7,
+      "text": "function and regularly monitor \n",
+      "bbox": [
+        155.5474853515625,
+        422.1240234375,
+        164.25498962402344,
+        522.0015258789062
+      ],
+      "text_sha256": "9305cd6dca9fcc2cc6b9e5ea7ddbb9342e1476a0722131136095a9342f9812e4"
+    },
+    {
+      "block_id": "page-0685-block-0008",
+      "order": 8,
+      "text": "plasma levels\n",
+      "bbox": [
+        165.54498291015625,
+        480.3390197753906,
+        174.2524871826172,
+        522.0015258789062
+      ],
+      "text_sha256": "807297e4287b8d2308eb0a22dc82b0d4e600e60f74964d9f362095fd9a25aa99"
+    },
+    {
+      "block_id": "page-0685-block-0009",
+      "order": 9,
+      "text": "100*–200mg nocte\n200–600mg daily*\n600–1200mg daily (aim for \nplasma levels 0.4–0.7 mmol/L in \n",
+      "bbox": [
+        115.54248809814453,
+        69.8191146850586,
+        134.2474822998047,
+        405.9165344238281
+      ],
+      "text_sha256": "4fb53d376921f125c8b05345eeb531946b190d2f9e979e24b5bdf5378d310606"
+    },
+    {
+      "block_id": "page-0685-block-0010",
+      "order": 10,
+      "text": "elderly)23\n",
+      "bbox": [
+        135.5374755859375,
+        146.2261199951172,
+        144.24497985839844,
+        174.00152587890625
+      ],
+      "text_sha256": "188f2f72cce081dd4d0afe7ce0d00d34796c8baba8afaaa6a313d5fba4053b6f"
+    },
+    {
+      "block_id": "page-0685-block-0011",
+      "order": 11,
+      "text": "Sodium valproate\nBipolar disorder\n",
+      "bbox": [
+        183.6824951171875,
+        472.12652587890625,
+        192.38999938964844,
+        612.6539916992188
+      ],
+      "text_sha256": "ae1e15863de1e604ad7420f33637e1f19da77eb7f857d38561f3fe210d512540"
+    },
+    {
+      "block_id": "page-0685-block-0012",
+      "order": 12,
+      "text": "Check LFTs and consider \n",
+      "bbox": [
+        193.67999267578125,
+        442.4040222167969,
+        202.3874969482422,
+        522.00146484375
+      ],
+      "text_sha256": "2a3817bfc3874a1e4bc9b58b1db13ef0b9b58acb3933723faefa643e8d4610b7"
+    },
+    {
+      "block_id": "page-0685-block-0013",
+      "order": 13,
+      "text": "checking plasma levels\n",
+      "bbox": [
+        203.677490234375,
+        449.91900634765625,
+        212.38499450683594,
+        522.00146484375
+      ],
+      "text_sha256": "0aa1f37fbc2588f777bdd5bb02d3d5cd2e50e71871a22e3e8ef7722e16a1aaf8"
+    },
+    {
+      "block_id": "page-0685-block-0014",
+      "order": 14,
+      "text": "Sodium valproate: 100–200mg \n",
+      "bbox": [
+        183.67498779296875,
+        304.7713928222656,
+        192.3824920654297,
+        405.91650390625
+      ],
+      "text_sha256": "0afe38592c7640deb811e053e70fa9db56823b219dfeaf318274e10e4cf38eeb"
+    },
+    {
+      "block_id": "page-0685-block-0015",
+      "order": 15,
+      "text": "bd*\n",
+      "bbox": [
+        193.6724853515625,
+        393.4064636230469,
+        202.37998962402344,
+        405.91650390625
+      ],
+      "text_sha256": "6f73f98e4a35f7049d436569c1dc7397f0901b87934d8cc852873b8139a3e22f"
+    },
+    {
+      "block_id": "page-0685-block-0016",
+      "order": 16,
+      "text": "Semi-sodium valproate: 250mg \n",
+      "bbox": [
+        203.66998291015625,
+        303.95391845703125,
+        212.3774871826172,
+        405.91650390625
+      ],
+      "text_sha256": "69063ada782eefa66845388b542a74b3ca5106ffd32dff3ecb7b998d65488bb7"
+    },
+    {
+      "block_id": "page-0685-block-0017",
+      "order": 17,
+      "text": "daily or bd*\n",
+      "bbox": [
+        213.66748046875,
+        367.98895263671875,
+        222.37498474121094,
+        405.91650390625
+      ],
+      "text_sha256": "e1e3d782bb7509ed5ff1edca5ad2825e860d1887876068ac7c602374b035c66b"
+    },
+    {
+      "block_id": "page-0685-block-0018",
+      "order": 18,
+      "text": "Sodium valproate: 200–400mg \n",
+      "bbox": [
+        183.66748046875,
+        187.77137756347656,
+        192.37498474121094,
+        288.91650390625
+      ],
+      "text_sha256": "a06e6aadcb8122575e35b170d84c1832d88edc436437a60a863b1fa95212190d"
+    },
+    {
+      "block_id": "page-0685-block-0019",
+      "order": 19,
+      "text": "bd*\n",
+      "bbox": [
+        193.66497802734375,
+        276.4064636230469,
+        202.3724822998047,
+        288.91650390625
+      ],
+      "text_sha256": "6f73f98e4a35f7049d436569c1dc7397f0901b87934d8cc852873b8139a3e22f"
+    },
+    {
+      "block_id": "page-0685-block-0020",
+      "order": 20,
+      "text": "Semi-sodium valproate: 500mg \n",
+      "bbox": [
+        203.6624755859375,
+        186.9539031982422,
+        212.36997985839844,
+        288.91650390625
+      ],
+      "text_sha256": "2042ffd01c9e6e1cfa01a1876e5d7480f587011dc513ceae26ad6e92b8ab2965"
+    },
+    {
+      "block_id": "page-0685-block-0021",
+      "order": 21,
+      "text": "to 1g daily*\n",
+      "bbox": [
+        213.65997314453125,
+        250.9889678955078,
+        222.3674774169922,
+        288.91650390625
+      ],
+      "text_sha256": "27b18a93588d313df5fd8790efe5ea2844ca3bddf774a779eeb52047b73ed381"
+    },
+    {
+      "block_id": "page-0685-block-0022",
+      "order": 22,
+      "text": "Sodium valproate: 400mg bd*\n",
+      "bbox": [
+        183.65997314453125,
+        76.60667419433594,
+        192.3674774169922,
+        174.00152587890625
+      ],
+      "text_sha256": "ca1ac924db0a6b224f08aaf1d1aae47b3affccd14d763fcae87c82e75fcee0ef"
+    },
+    {
+      "block_id": "page-0685-block-0023",
+      "order": 23,
+      "text": "Semi-sodium valproate: 1 g \n",
+      "bbox": [
+        193.657470703125,
+        84.5416488647461,
+        202.36497497558594,
+        174.00152587890625
+      ],
+      "text_sha256": "ccb1ec9c45ee2ed6001a63b3f397f90cef8048c9af36818ab18e9661ee0e098c"
+    },
+    {
+      "block_id": "page-0685-block-0024",
+      "order": 24,
+      "text": "daily*\n",
+      "bbox": [
+        203.65496826171875,
+        155.25157165527344,
+        212.3624725341797,
+        174.00152587890625
+      ],
+      "text_sha256": "ae423ef6436954ed7450dadeb97a1ac02e5315b028477dc924f8bd8bce6a1c7b"
+    },
+    {
+      "block_id": "page-0685-block-0025",
+      "order": 25,
+      "text": "Agitation in dementia (not \n",
+      "bbox": [
+        231.77996826171875,
+        435.3165588378906,
+        240.4874725341797,
+        522.0015258789062
+      ],
+      "text_sha256": "346c16915cd20bd359ebede16f572f8087540eb16d9c14cb236db719887fdd22"
+    },
+    {
+      "block_id": "page-0685-block-0026",
+      "order": 26,
+      "text": "licensed and not recommended)\n",
+      "bbox": [
+        241.7774658203125,
+        419.1990051269531,
+        250.48497009277344,
+        522.0015258789062
+      ],
+      "text_sha256": "ffc5f3a7adb463dfb041530be483884564b03c8646d86af19318fb10e46e29e2"
+    },
+    {
+      "block_id": "page-0685-block-0027",
+      "order": 27,
+      "text": "Check response, tolerability and \n",
+      "bbox": [
+        251.7749786376953,
+        417.95404052734375,
+        260.48248291015625,
+        522.0015258789062
+      ],
+      "text_sha256": "03567ac82c5c7f2d2c68ce88a16d902cbee435351c7d0ea12f37311347e07b58"
+    },
+    {
+      "block_id": "page-0685-block-0028",
+      "order": 28,
+      "text": "plasma levels for guide\n",
+      "bbox": [
+        261.7724914550781,
+        449.07904052734375,
+        270.47998046875,
+        522.0015258789062
+      ],
+      "text_sha256": "065324fdbe4f4efef55772cf1ec5ae5caf5bad1bf7f1bd99e824777ef5e59f6d"
+    },
+    {
+      "block_id": "page-0685-block-0029",
+      "order": 29,
+      "text": "Sodium valproate: 50mg bd \n",
+      "bbox": [
+        231.77247619628906,
+        314.7764587402344,
+        240.47998046875,
+        405.9165344238281
+      ],
+      "text_sha256": "4cf42f572c30fdde0e947521405dc4cc673cbb1ab51a6970c4d887d8a84fd344"
+    },
+    {
+      "block_id": "page-0685-block-0030",
+      "order": 30,
+      "text": "(liquid) or 100mg bd*\nSodium valproate: 100–200mg \n",
+      "bbox": [
+        231.77247619628906,
+        187.7714080810547,
+        250.47747802734375,
+        405.9165344238281
+      ],
+      "text_sha256": "8eaadea5e0e6d3998f9e3fe42e4af8f8fa868288502671157bcac3b859a0f474"
+    },
+    {
+      "block_id": "page-0685-block-0031",
+      "order": 31,
+      "text": "bd*\nSodium valproate: 200mg bd*\n",
+      "bbox": [
+        231.77247619628906,
+        76.60667419433594,
+        250.47747802734375,
+        288.9165344238281
+      ],
+      "text_sha256": "46b664dfaa77323ddd2ed9aed23fae0be6109244dcce7e68f65c42d8769458e4"
+    },
+    {
+      "block_id": "page-0685-block-0032",
+      "order": 32,
+      "text": "Drug\nSpecific indication/additional \n",
+      "bbox": [
+        279.719970703125,
+        417.39898681640625,
+        288.60748291015625,
+        612.654052734375
+      ],
+      "text_sha256": "24f208c01b320a880057a7db859ef0394c24559575428d3392d29ed72c3b2942"
+    },
+    {
+      "block_id": "page-0685-block-0033",
+      "order": 33,
+      "text": "notes\nStarting dose\nUsual maintenance dose\nMaximum dose in elderly\n",
+      "bbox": [
+        279.719970703125,
+        84.81144714355469,
+        298.60498046875,
+        522.0015258789062
+      ],
+      "text_sha256": "d017d7fd2e6b27a0a2854089b7c2bd8b8247bb9c0cbcaead450515d1ad7004a8"
+    },
+    {
+      "block_id": "page-0685-block-0034",
+      "order": 34,
+      "text": "Anxiolytics/hypnotics\n",
+      "bbox": [
+        307.844970703125,
+        536.821533203125,
+        316.73248291015625,
+        612.654052734375
+      ],
+      "text_sha256": "ecbe01eae95d2eb1ab8aec4cd9205b5fff46745a1e31ccac34a3506820055a71"
+    },
+    {
+      "block_id": "page-0685-block-0035",
+      "order": 35,
+      "text": "Clonazepam\nAgitation\n0.5mg daily\n1–2mg/day*\n4mg/day*\n",
+      "bbox": [
+        326.1524963378906,
+        141.9091033935547,
+        334.8599853515625,
+        612.654052734375
+      ],
+      "text_sha256": "611b00e1cbdd17e0045e0c60a236a7d17f65fce264ca0322de7b5a562dd5f27c"
+    },
+    {
+      "block_id": "page-0685-block-0036",
+      "order": 36,
+      "text": "Diazepam\nAgitation\n1mg tds\n1mg tds*\n7.5–15mg/day in divided doses \n(for anxiety)\n",
+      "bbox": [
+        344.2799987792969,
+        72.7142562866211,
+        362.9849853515625,
+        612.654052734375
+      ],
+      "text_sha256": "cb9bf09279e6b72ad7e9f71b8c88f9daa98bd48a46937147ff4256c596343502"
+    },
+    {
+      "block_id": "page-0685-block-0037",
+      "order": 37,
+      "text": "Lemborexant24\nInsomnia\n5mg nocte\n(take no more than once per \n",
+      "bbox": [
+        372.4049987792969,
+        312.27789306640625,
+        391.13751220703125,
+        612.654052734375
+      ],
+      "text_sha256": "c8cb8a63ff9c82990862c8408e4929e3a1b8f9a39335c154517670f64a7f0f67"
+    },
+    {
+      "block_id": "page-0685-block-0038",
+      "order": 38,
+      "text": "night, immediately before bed)\n",
+      "bbox": [
+        392.4275207519531,
+        307.29034423828125,
+        401.135009765625,
+        405.9154052734375
+      ],
+      "text_sha256": "51e4634834130dd4f4f9e84a90fbcdfcadd65a39636480b03bda79232c977e4c"
+    },
+    {
+      "block_id": "page-0685-block-0039",
+      "order": 39,
+      "text": "5–10mg nocte\n10mg nocte\nElderly are at a higher risk of falls. \n",
+      "bbox": [
+        372.4250183105469,
+        64.13301849365234,
+        391.1300048828125,
+        289.91290283203125
+      ],
+      "text_sha256": "e6d3944d6c9f3e3d043129685d307c6afd1296affa5b23573430be4090e00d65"
+    },
+    {
+      "block_id": "page-0685-block-0040",
+      "order": 40,
+      "text": "Caution when using doses >5mg \n",
+      "bbox": [
+        392.4200134277344,
+        66.1206283569336,
+        401.12750244140625,
+        174.00042724609375
+      ],
+      "text_sha256": "57f78661cc3a1313b53f0034b346d77ac1a61fa98e9da61bce971e1074f7e378"
+    },
+    {
+      "block_id": "page-0685-block-0041",
+      "order": 41,
+      "text": "in patients ≥65 years old\n",
+      "bbox": [
+        402.4175109863281,
+        95.57304382324219,
+        411.125,
+        174.00042724609375
+      ],
+      "text_sha256": "719438eb7341154b62338d9e0f39390e4b1e6a013de3c8ab86ceb1fd7d6a7638"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

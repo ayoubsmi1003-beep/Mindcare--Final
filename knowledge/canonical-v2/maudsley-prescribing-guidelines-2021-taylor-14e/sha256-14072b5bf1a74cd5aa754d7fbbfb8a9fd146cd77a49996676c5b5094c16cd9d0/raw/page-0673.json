@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0673",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 673,
+  "source_page_index": 672,
+  "source_page_display": 673,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "652    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  6\nsome evidence to support the use of a low dose (50mg) of trazodone, although a larger trial \nis needed to allow a more definitive conclusion to be reached on the balance of risks and \nbenefits. There was no evidence of any effect of ramelteon on sleep in patients with mild-to-\nmoderate dementia due to AD. This is an area with a high need for pragmatic trials, particu-\nlarly of those drugs that are in common clinical use for sleep problems in dementia.\nRecommendation: Limited evidence to support the use of melatonin – but safe to use \nand may be justified in some cases where benefits are seen. Non-pharmacological \nmanagement of sleep disturbances should be tried first.\nSedating antihistamines, e.g. promethazine\nPromethazine is frequently used in BPSD for its sedative effects. It has strong anticho-\nlinergic effects and readily penetrates the BBB, therefore, potentially causing significant \ncognitive impairment.84\nRecommendation: Promethazine may be used for short-term use only but evidence is minimal.\nMiscellaneous agents\nA pooled analysis provided evidence of efficacy of Ginkgo biloba at a daily dose of \n240mg in the treatment of out-patients suffering from Alzheimer’s, vascular or mixed \ndementia with BPSD.85\nNewer antipsychotic agents are being explored for the management of BPSD, includ-\ning brexpiprazole, lumateperone (a potent antagonist at 5-HT2A receptors and a seroto-\nnin reuptake inhibitor) and pimavanserin (an inverse agonist and antagonist at 5-HT2A \nreceptors). Other agents currently being investigated for BPSD include dextromethor-\nphan/quinidine, bupropion/dextromethorphan and methylphenidate.86\nRecently, nabilone, a synthetic cannabinoid, significantly improved agitation and \naggression in patients with AD in a randomised, placebo-controlled, crossover trial \nwith 39 participants. Nabilone was well tolerated and although sedation was a more \ncommon adverse effect, it was not significantly different between the treatment groups.87 \nNabilone appears to be a promising therapeutic cannabinoid for treating agitation and \naggressive symptoms due to AD.86\nElectroconvulsive therapy (ECT)\nECT may benefit individuals with BPSD by enhancing the central transmission of neu-\nrochemicals, including GABA, glutamate, dopamine and noradrenaline/norepineph-\nrine. Case reports, case series, retrospective chart reviews, retrospective case–control \nstudies and an open-label prospective study on ECT have demonstrated promising \nresults in decreasing agitation in patients with dementia. A systematic review reported \nthat clinically significant improvement was observed in 88% of the 122 individuals in \nthese studies, and the effect was often noted early in the treatment course. Additionally, \nthe adverse effects were most often mild, transient or not reported (although reports of \n",
+  "raw_text_sha256": "72bebbaa62fc87a6edd174e667c91559bb55bbf7916ebb5aa2f98a3cd02f3409",
+  "coordinates_sha256": "f96e6cd70ec46226fdfbbab3761374c97fb570f31550efa64be9ae5a6ea84e55",
+  "block_sequence_sha256": "590937c634bd65ecc38ad18a23e0a10fe51ad578dc2aa1226afcfc5b3aab0ac5",
+  "blocks": [
+    {
+      "block_id": "page-0673-block-0000",
+      "order": 0,
+      "text": "652    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "c3bbcd0acadee06d9b3f50309a513fa8f44fca4f9f31abe1249db89b7cc71638"
+    },
+    {
+      "block_id": "page-0673-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        18.520000457763672,
+        405.35260009765625,
+        28.0,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0673-block-0002",
+      "order": 2,
+      "text": "some evidence to support the use of a low dose (50mg) of trazodone, although a larger trial \nis needed to allow a more definitive conclusion to be reached on the balance of risks and \nbenefits. There was no evidence of any effect of ramelteon on sleep in patients with mild-to-\nmoderate dementia due to AD. This is an area with a high need for pragmatic trials, particu-\nlarly of those drugs that are in common clinical use for sleep problems in dementia.\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.6598815917969,
+        122.27029418945312
+      ],
+      "text_sha256": "672342104dc2fa9fffdbc287b242c6ea6386df1f0dff8ef5a5d41f3d378ce7d7"
+    },
+    {
+      "block_id": "page-0673-block-0003",
+      "order": 3,
+      "text": "Recommendation: Limited evidence to support the use of melatonin – but safe to use \nand may be justified in some cases where benefits are seen. Non-pharmacological \nmanagement of sleep disturbances should be tried first.\n",
+      "bbox": [
+        69.38980102539062,
+        143.48377990722656,
+        412.2884826660156,
+        173.5482177734375
+      ],
+      "text_sha256": "1c2e624805c8caa9941c3e6ba6d09196e2f16638f7e4dcfbe69e0b1a29676cda"
+    },
+    {
+      "block_id": "page-0673-block-0004",
+      "order": 4,
+      "text": "Sedating antihistamines, e.g. promethazine\nPromethazine is frequently used in BPSD for its sedative effects. It has strong anticho-\nlinergic effects and readily penetrates the BBB, therefore, potentially causing significant \ncognitive impairment.84\n",
+      "bbox": [
+        61.88999938964844,
+        199.439697265625,
+        436.6499328613281,
+        246.60220336914062
+      ],
+      "text_sha256": "a8350301304e2177f0e6afb013d9b54303f0ba2868ef02af38547dbff5e1f1d1"
+    },
+    {
+      "block_id": "page-0673-block-0005",
+      "order": 5,
+      "text": "Recommendation: Promethazine may be used for short-term use only but evidence is minimal.\n",
+      "bbox": [
+        69.38980102539062,
+        267.8155822753906,
+        425.8376159667969,
+        277.8880920410156
+      ],
+      "text_sha256": "d71d3500c12643e689a241385f8f7e0e669679a8700d1119f3b6f0da58b0e3e9"
+    },
+    {
+      "block_id": "page-0673-block-0006",
+      "order": 6,
+      "text": "Miscellaneous agents\nA pooled analysis provided evidence of efficacy of Ginkgo biloba at a daily dose of \n240mg in the treatment of out-patients suffering from Alzheimer’s, vascular or mixed \ndementia with BPSD.85\n",
+      "bbox": [
+        61.88999938964844,
+        303.771484375,
+        436.6798400878906,
+        350.9339904785156
+      ],
+      "text_sha256": "dfc999f25ab0b87037a474ab9440a72e92412623893eab88dca63f767507f21d"
+    },
+    {
+      "block_id": "page-0673-block-0007",
+      "order": 7,
+      "text": "Newer antipsychotic agents are being explored for the management of BPSD, includ-\ning brexpiprazole, lumateperone (a potent antagonist at 5-HT2A receptors and a seroto-\nnin reuptake inhibitor) and pimavanserin (an inverse agonist and antagonist at 5-HT2A \nreceptors). Other agents currently being investigated for BPSD include dextromethor-\nphan/quinidine, bupropion/dextromethorphan and methylphenidate.86\n",
+      "bbox": [
+        61.889801025390625,
+        351.2139892578125,
+        436.6697998046875,
+        410.9339904785156
+      ],
+      "text_sha256": "554bd088f856dae127a0b87f6ddc237dbc2bb2176c0f2a40d54b3f97bc6cbd69"
+    },
+    {
+      "block_id": "page-0673-block-0008",
+      "order": 8,
+      "text": "Recently, nabilone, a synthetic cannabinoid, significantly improved agitation and \naggression in patients with AD in a randomised, placebo-controlled, crossover trial \nwith 39 participants. Nabilone was well tolerated and although sedation was a more \ncommon adverse effect, it was not significantly different between the treatment groups.87 \nNabilone appears to be a promising therapeutic cannabinoid for treating agitation and \naggressive symptoms due to AD.86\n",
+      "bbox": [
+        61.889801025390625,
+        410.9739990234375,
+        436.71002197265625,
+        482.9339904785156
+      ],
+      "text_sha256": "980a7a9961f13a3d77272d7ac0ab799c60a30391041e90d40c3961a1f1f4e184"
+    },
+    {
+      "block_id": "page-0673-block-0009",
+      "order": 9,
+      "text": "Electroconvulsive therapy (ECT)\n",
+      "bbox": [
+        61.88999938964844,
+        500.3689880371094,
+        224.282958984375,
+        513.4039916992188
+      ],
+      "text_sha256": "0370bbdd2b4c277909afbb46eaa21f91e5a6c25178b09b087d54d96f785e74fe"
+    },
+    {
+      "block_id": "page-0673-block-0010",
+      "order": 10,
+      "text": "ECT may benefit individuals with BPSD by enhancing the central transmission of neu-\nrochemicals, including GABA, glutamate, dopamine and noradrenaline/norepineph-\nrine. Case reports, case series, retrospective chart reviews, retrospective case–control \nstudies and an open-label prospective study on ECT have demonstrated promising \nresults in decreasing agitation in patients with dementia. A systematic review reported \nthat clinically significant improvement was observed in 88% of the 122 individuals in \nthese studies, and the effect was often noted early in the treatment course. Additionally, \nthe adverse effects were most often mild, transient or not reported (although reports of \n",
+      "bbox": [
+        61.88999938964844,
+        519.2139892578125,
+        436.69989013671875,
+        614.9340209960938
+      ],
+      "text_sha256": "27204f48f5ee4b7a2387c4e3d356cbd79417ce7e6f30a642dc24f38e6432c6c7"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

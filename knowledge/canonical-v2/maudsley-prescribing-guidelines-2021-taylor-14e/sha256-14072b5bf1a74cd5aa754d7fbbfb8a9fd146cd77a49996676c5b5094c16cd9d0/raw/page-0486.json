@@ -1,0 +1,407 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0486",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 486,
+  "source_page_index": 485,
+  "source_page_display": 486,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    465\nCHAPTER 4\nThe therapeutic effect of disulfiram is thus mediated by its incompatibility with alco-\nhol, resulting in alcohol aversion. Supervised medication optimises compliance and \ncontributes to effectiveness.\nThe intensity of the intolerance reaction is dose dependent, both with regard to the \namount of alcohol consumed and the dose of disulfiram. However, it is thought that \nmuch of the therapeutic effect is mediated by the mental anticipation of the aversive \nreaction, rather than the pharmacological action itself. Sudden death is more prevalent \nat doses above 1000mg.27 With this in mind, the value of prescribing higher doses of \ndisulfiram must be carefully considered.\nDoses are 800mg for the first dose, reducing to 100–200mg daily for maintenance. In \nco-morbid alcohol and cocaine dependence, doses of 500mg daily have been given. \nHalitosis is a common side effect. If there is a sudden onset of jaundice (the rare com-\nplication of hepatotoxicity), the patient should stop the drug and seek urgent medical \nattention.\nThe evidence for disulfiram is weaker than for acamprosate and naltrexone.2 In the \nUK, NICE recommends its use ‘as a second-line option for moderate-to-severe alcohol \ndependence for patients who are not suitable for acamprosate or naltrexone or have a \nspecified preference for disulfiram and who aim to stay abstinent from alcohol’.2\nMild alcohol–disulfiram reaction\n■\n■Facial flushing\n■\n■Sweating\n■\n■Nausea\n■\n■Hyperventilation\n■\n■Dyspnea\n■\n■Tachycardia\n■\n■Hypotension\nContraindications\n■\n■Ingestion of alcohol within the previous 24 hours\n■\n■Cardiac failure\n■\n■Coronary artery disease\n■\n■Hypertension\n■\n■Cerebrovascular disease\n■\n■Pregnancy\n■\n■Breastfeeding\n■\n■Liver disease\n■\n■Peripheral neuropathy\n■\n■Severe mental illness\nSevere alcohol–disulfiram reaction\n■\n■Acute heart failure\n■\n■Myocardial infarction\n■\n■Arrhythmias\n■\n■Bradycardia\n■\n■Respiratory depression\n■\n■Severe hypotension\n",
+  "raw_text_sha256": "9d0eded115fbd4ff65e9ce7c4760373d35acc27a2136ebb5a1790efc8f4ea1e9",
+  "coordinates_sha256": "f0ea5b886be7d7f7270b49d6adf66869f086ff7e86113dca1d9b9bd13352fe98",
+  "block_sequence_sha256": "44ed5e1d4f3db67c0c1a29fe9f545404853ab8c045b3afd9de7c95aa3d38d9d4",
+  "blocks": [
+    {
+      "block_id": "page-0486-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    465\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "47c1d326ee549f4e7a2922c79f74cb43bb7d5eec388c58e67a2fcdefd681f873"
+    },
+    {
+      "block_id": "page-0486-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0486-block-0002",
+      "order": 2,
+      "text": "The therapeutic effect of disulfiram is thus mediated by its incompatibility with alco-\nhol, resulting in alcohol aversion. Supervised medication optimises compliance and \ncontributes to effectiveness.\n",
+      "bbox": [
+        47.999698638916016,
+        377.2023010253906,
+        422.8096923828125,
+        412.92230224609375
+      ],
+      "text_sha256": "9395130f832537333aed0a359c70a3842929aa1190befdd8073160761d137302"
+    },
+    {
+      "block_id": "page-0486-block-0003",
+      "order": 3,
+      "text": "The intensity of the intolerance reaction is dose dependent, both with regard to the \namount of alcohol consumed and the dose of disulfiram. However, it is thought that \nmuch of the therapeutic effect is mediated by the mental anticipation of the aversive \nreaction, rather than the pharmacological action itself. Sudden death is more prevalent \nat doses above 1000mg.27 With this in mind, the value of prescribing higher doses of \ndisulfiram must be carefully considered.\n",
+      "bbox": [
+        47.99829864501953,
+        413.2023010253906,
+        422.8196105957031,
+        484.9222717285156
+      ],
+      "text_sha256": "fb770ead93f84b4f1b9279b58fbd0dace842b718b194f64ca631bc30d7a6e41a"
+    },
+    {
+      "block_id": "page-0486-block-0004",
+      "order": 4,
+      "text": "Doses are 800mg for the first dose, reducing to 100–200mg daily for maintenance. In \nco-morbid alcohol and cocaine dependence, doses of 500mg daily have been given. \nHalitosis is a common side effect. If there is a sudden onset of jaundice (the rare com-\nplication of hepatotoxicity), the patient should stop the drug and seek urgent medical \nattention.\n",
+      "bbox": [
+        47.99829864501953,
+        485.2022705078125,
+        422.8283386230469,
+        544.9223022460938
+      ],
+      "text_sha256": "fac78b84a021898d6456e13aecae0078c4b1f8fa6d791969e2632e239be3e083"
+    },
+    {
+      "block_id": "page-0486-block-0005",
+      "order": 5,
+      "text": "The evidence for disulfiram is weaker than for acamprosate and naltrexone.2 In the \nUK, NICE recommends its use ‘as a second-line option for moderate-to-severe alcohol \ndependence for patients who are not suitable for acamprosate or naltrexone or have a \nspecified preference for disulfiram and who aim to stay abstinent from alcohol’.2\n",
+      "bbox": [
+        47.9967041015625,
+        545.2022705078125,
+        422.7866516113281,
+        592.9223022460938
+      ],
+      "text_sha256": "340cfa84d5887f9b23ab697c00a6944104edbc4ee124bf62b82b8225e69ac8a9"
+    },
+    {
+      "block_id": "page-0486-block-0006",
+      "order": 6,
+      "text": "Mild alcohol–disulfiram reaction\n",
+      "bbox": [
+        128.99989318847656,
+        70.02790069580078,
+        257.3074645996094,
+        80.10040283203125
+      ],
+      "text_sha256": "9edc283638e28ca820c5a2f9b3c3379dd49dffe223e75c463ef46c53a7827a74"
+    },
+    {
+      "block_id": "page-0486-block-0007",
+      "order": 7,
+      "text": "■\n■Facial flushing\n",
+      "bbox": [
+        128.9998016357422,
+        80.23190307617188,
+        188.4998779296875,
+        90.10040283203125
+      ],
+      "text_sha256": "1d3989fc0c87dd9d519ce114693ccda7d93fd6f3cc67ac3cc3bf027b65091b9b"
+    },
+    {
+      "block_id": "page-0486-block-0008",
+      "order": 8,
+      "text": "■\n■Sweating\n",
+      "bbox": [
+        128.9998016357422,
+        90.23190307617188,
+        171.0323944091797,
+        100.10040283203125
+      ],
+      "text_sha256": "edea046897d2950f20b4c9706ec6cea0174b9028da39a1e2090042f24edac38c"
+    },
+    {
+      "block_id": "page-0486-block-0009",
+      "order": 9,
+      "text": "■\n■Nausea\n",
+      "bbox": [
+        128.9998016357422,
+        100.23190307617188,
+        163.95188903808594,
+        110.10040283203125
+      ],
+      "text_sha256": "81d4bdcc9729d67929716fd93a3536938758c9cb7e538328bd8e638583d03be0"
+    },
+    {
+      "block_id": "page-0486-block-0010",
+      "order": 10,
+      "text": "■\n■Hyperventilation\n",
+      "bbox": [
+        128.9998016357422,
+        110.23190307617188,
+        196.5238800048828,
+        120.10040283203125
+      ],
+      "text_sha256": "4ed629c0e0bbc6fc0c3bc8a3493af84f3e3c80b8b44a86bf4fa0b3b92e8723e3"
+    },
+    {
+      "block_id": "page-0486-block-0011",
+      "order": 11,
+      "text": "■\n■Dyspnea\n",
+      "bbox": [
+        128.9998016357422,
+        120.23190307617188,
+        168.20188903808594,
+        130.10040283203125
+      ],
+      "text_sha256": "091b12a39746a65f781540aa1810a0f2e60d10a4bd1a5b79114674f874dd8229"
+    },
+    {
+      "block_id": "page-0486-block-0012",
+      "order": 12,
+      "text": "■\n■Tachycardia\n",
+      "bbox": [
+        128.9998016357422,
+        130.23190307617188,
+        178.8948974609375,
+        140.10040283203125
+      ],
+      "text_sha256": "2e6f6c6b87df085ebae95260193d26c0d73d326c11ee34ed526fe20c41cd088c"
+    },
+    {
+      "block_id": "page-0486-block-0013",
+      "order": 13,
+      "text": "■\n■Hypotension\n",
+      "bbox": [
+        128.9998016357422,
+        140.23190307617188,
+        182.84738159179688,
+        150.10040283203125
+      ],
+      "text_sha256": "51a440b6af8e7bdb0ea15132382cca3b3b5f74132855b757fbc843397329b3e2"
+    },
+    {
+      "block_id": "page-0486-block-0014",
+      "order": 14,
+      "text": "Contraindications\n",
+      "bbox": [
+        128.99989318847656,
+        160.0283966064453,
+        199.36289978027344,
+        170.10089111328125
+      ],
+      "text_sha256": "d6a07f566cf590ac6f791232698997a832f2b84e4e02060df751707ce706e902"
+    },
+    {
+      "block_id": "page-0486-block-0015",
+      "order": 15,
+      "text": "■\n■Ingestion of alcohol within the previous 24 hours\n",
+      "bbox": [
+        128.9998016357422,
+        170.23190307617188,
+        314.9544372558594,
+        180.10040283203125
+      ],
+      "text_sha256": "1f88f758a7ee7553a8ad1b1aa0417cc94f4fc5a4a6024df5ca5875a2daa3c761"
+    },
+    {
+      "block_id": "page-0486-block-0016",
+      "order": 16,
+      "text": "■\n■Cardiac failure\n",
+      "bbox": [
+        128.9998016357422,
+        180.23190307617188,
+        189.60488891601562,
+        190.10040283203125
+      ],
+      "text_sha256": "29468603f9214f82c22e16c97d12ed12b1f9fed130a34d995bbf9cffc78ccfe9"
+    },
+    {
+      "block_id": "page-0486-block-0017",
+      "order": 17,
+      "text": "■\n■Coronary artery disease\n",
+      "bbox": [
+        128.9998016357422,
+        190.23190307617188,
+        222.346923828125,
+        200.10040283203125
+      ],
+      "text_sha256": "0a0058f4819c9915f9313d08368543239ab51b7fe548cfacf7b80fe2d3d8487d"
+    },
+    {
+      "block_id": "page-0486-block-0018",
+      "order": 18,
+      "text": "■\n■Hypertension\n",
+      "bbox": [
+        128.9998016357422,
+        200.23190307617188,
+        185.20188903808594,
+        210.10040283203125
+      ],
+      "text_sha256": "9aa99d8ac3a5c7f038e546f1141ed2aadb76d3795340799e671b14d0d6e47836"
+    },
+    {
+      "block_id": "page-0486-block-0019",
+      "order": 19,
+      "text": "■\n■Cerebrovascular disease\n",
+      "bbox": [
+        128.9998016357422,
+        210.23190307617188,
+        223.6134033203125,
+        220.10040283203125
+      ],
+      "text_sha256": "a5012493f6b4521b433d98933c309d6e473bb80f4bbde3690a101b53254e90ef"
+    },
+    {
+      "block_id": "page-0486-block-0020",
+      "order": 20,
+      "text": "■\n■Pregnancy\n",
+      "bbox": [
+        128.9998016357422,
+        220.23190307617188,
+        174.6533966064453,
+        230.10040283203125
+      ],
+      "text_sha256": "28a43f83734d64078631476bc308e791925885f28681789f330add1783126324"
+    },
+    {
+      "block_id": "page-0486-block-0021",
+      "order": 21,
+      "text": "■\n■Breastfeeding\n",
+      "bbox": [
+        128.9998016357422,
+        230.23190307617188,
+        186.93589782714844,
+        240.10040283203125
+      ],
+      "text_sha256": "29fe904ca8056d082f6adc00a0afda6b523f00df621bc382a7b1dba5ade9ff09"
+    },
+    {
+      "block_id": "page-0486-block-0022",
+      "order": 22,
+      "text": "■\n■Liver disease\n",
+      "bbox": [
+        128.9998016357422,
+        240.23190307617188,
+        182.35440063476562,
+        250.10040283203125
+      ],
+      "text_sha256": "2ee587b125dc63ebdbdfe5127c8fceb0551bbe02fb1d6f7ea8aeb76d6e675a58"
+    },
+    {
+      "block_id": "page-0486-block-0023",
+      "order": 23,
+      "text": "■\n■Peripheral neuropathy\n",
+      "bbox": [
+        128.9998016357422,
+        250.23190307617188,
+        217.16189575195312,
+        260.10040283203125
+      ],
+      "text_sha256": "3f6f1d25d8733d7af042a6c4adfca5d2f9b34306fbd3fc1d9b0dff1797ba89fe"
+    },
+    {
+      "block_id": "page-0486-block-0024",
+      "order": 24,
+      "text": "■\n■Severe mental illness\n",
+      "bbox": [
+        128.9998016357422,
+        260.2319030761719,
+        211.95140075683594,
+        270.10040283203125
+      ],
+      "text_sha256": "5b5f686e32bb744ea958aa85bd1b43cf1b24ed5fa9981a158e5b0c31049e4372"
+    },
+    {
+      "block_id": "page-0486-block-0025",
+      "order": 25,
+      "text": "Severe alcohol–disulfiram reaction\n",
+      "bbox": [
+        128.99989318847656,
+        280.02838134765625,
+        266.1474609375,
+        290.10089111328125
+      ],
+      "text_sha256": "e04c614bad3fa4591e5b5f820dfb0753a7673ead08906f76cb2ed249423e4f16"
+    },
+    {
+      "block_id": "page-0486-block-0026",
+      "order": 26,
+      "text": "■\n■Acute heart failure\n",
+      "bbox": [
+        128.9998016357422,
+        290.2319030761719,
+        204.87091064453125,
+        300.10040283203125
+      ],
+      "text_sha256": "35229b176c046bd9ef15c5b214e18f1121de9b7644a4e22d9bf80cf7c4cb7194"
+    },
+    {
+      "block_id": "page-0486-block-0027",
+      "order": 27,
+      "text": "■\n■Myocardial infarction\n",
+      "bbox": [
+        128.9998016357422,
+        300.2319030761719,
+        213.68539428710938,
+        310.10040283203125
+      ],
+      "text_sha256": "9d4b450123b9943e4827d6f6a1a8019744f2cd48dfbb07b9da7d5c1e5abad95d"
+    },
+    {
+      "block_id": "page-0486-block-0028",
+      "order": 28,
+      "text": "■\n■Arrhythmias\n",
+      "bbox": [
+        128.9998016357422,
+        310.2319030761719,
+        181.41090393066406,
+        320.10040283203125
+      ],
+      "text_sha256": "7dcf4600c6b1659a57dfbe7f156d700cbf8e8225d001cff00158a867c0f15691"
+    },
+    {
+      "block_id": "page-0486-block-0029",
+      "order": 29,
+      "text": "■\n■Bradycardia\n",
+      "bbox": [
+        128.9998016357422,
+        320.2319030761719,
+        179.3708953857422,
+        330.10040283203125
+      ],
+      "text_sha256": "6f044cd505675e25854de023578ecbbb6485128fb6829c043da7b070180f47d2"
+    },
+    {
+      "block_id": "page-0486-block-0030",
+      "order": 30,
+      "text": "■\n■Respiratory depression\n",
+      "bbox": [
+        128.9998016357422,
+        330.2319030761719,
+        218.58140563964844,
+        340.10040283203125
+      ],
+      "text_sha256": "1f84ed767c05b153a3b2962f19c3c40e3f462bb66e1ea1b1135d203edebfc658"
+    },
+    {
+      "block_id": "page-0486-block-0031",
+      "order": 31,
+      "text": "■\n■Severe hypotension\n",
+      "bbox": [
+        128.9998016357422,
+        340.2319030761719,
+        207.71839904785156,
+        350.10040283203125
+      ],
+      "text_sha256": "fa62910d38fdb71ad8c55c7c8221f951cc3ea9315b2c8b99d57e64734b561437"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

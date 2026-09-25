@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0885",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 885,
+  "source_page_index": 884,
+  "source_page_display": 885,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "864    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  11\nTable 11.8  Psychotropic drugs: choice in patients who continue to drink\nSafest choice\nBest avoided\nAntipsychotics\nSulpiride and amisulpride\nPaliperidone, if depot required\n(non-sedative and renally excreted)\nVery sedative antipsychotics such as \nchlorpromazine and clozapine\nAntidepressants\nSSRI – citalopram, sertraline\nPotent inhibitors of CYP3A4 (fluoxetine, \nparoxetine) may decrease alcohol \nmetabolism in chronic drinkers\nTCAs, because impairment of metabolism \nby alcohol (while intoxicated) can lead to \nincreased plasma levels and consequent \nsigns and symptoms of overdose (profound \nhypotension, seizures, arrhythmias and \ncoma)\nCardiac effects can be exacerbated by \nelectrolyte disturbances\nCombinations of TCAs and alcohol \nprofoundly impair psychomotor skills\nMirtazapine – often very sedative\nMAOIs as can cause profound hypotension. \nAlso potential interaction with tyramine-\ncontaining drinks which can lead to \nhypertensive crisis\nMood stabilisers\nValproate\nCarbamazepine\nNote: higher plasma levels achieved \nduring periods of alcohol intoxication may \nbe poorly tolerated\nLithium, because it has a narrow \ntherapeutic index and alcohol-related \ndehydration and electrolyte disturbance can \nprecipitate lithium toxicity\nNB. Be aware of the possibility of hepatic failure or reduced hepatic function in chronic alcohol misusers. See section \non hepatic impairment in Chapter 8.\nAlso note risk of hepatic toxicity with some recommended drugs (e.g. valproate).\nReferences\n\t 1.\t Zakhari S. Overview: how is alcohol metabolized by the body? Alcohol Research & Health: The Journal of the National Institute on Alcohol \nAbuse and Alcoholism 2006; 29:245–254.\n\t 2.\t Tanaka E. Toxicological interactions involving psychiatric drugs and alcohol: an update. J Clin Pharm Ther 2003; 28:81–95.\n\t 3.\t Wan Chih T. Alcohol-related drug interactions. Pharmacist’s Letter/Prescriber’s Letter 2008; 24:240106.\n\t 4.\t Smith RG. An appraisal of potential drug interactions in cigarette smokers and alcohol drinkers. J Am Podiatr Med Assoc 2009; 99:81–88.\n\t 5.\t Salmela KS, et al. Respective roles of human cytochrome P-4502E1, 1A2, and 3A4 in the hepatic microsomal ethanol oxidizing system. \nAlcohol Clin Exp Res 1998; 22:2125–2132.\n\t 6.\t Hamitouche S, et al. Ethanol oxidation into acetaldehyde by 16 recombinant human cytochrome P450 isoforms: role of CYP2C isoforms in \nhuman liver microsomes. Toxicol Lett 2006; 167:221–230.\n\t 7.\t Koster M, et al. Seizures during antidepressant treatment in psychiatric inpatients–results from the transnational pharmacovigilance project \n“Arzneimittelsicherheit in der Psychiatrie” (AMSP) 1993–2008. Psychopharmacology 2013; 230:191–201.\n\t 8.\t Cederbaum AI. Alcohol metabolism. Clin Liver Dis 2012; 16:667–685.\n\t 9.\t Wall TL, et al. Biology, genetics, and environment: underlying factors influencing alcohol metabolism. Alcohol Research: Current Reviews \n2016; 38:59–68.\n\t10.\t Williams CS, et al. Do ethanol and metronidazole interact to produce a disulfiram-like reaction? Ann Pharmacother 2000; 34:255–257.\n\t11.\t Visapää JP, et al. Lack of disulfiram-like reaction with metronidazole and ethanol. Ann Pharmacother 2002; 36:971–974.\n\t12.\t Mergenhagen KA, et al. Fact versus fiction: a review of the evidence behind alcohol and antibiotic interactions. Antimicrob Agents Chemother \n2020; 64:e02167–02119.\n\t13.\t Huang Z, et al. Influence of ethanol on the metabolism of alprazolam. Expert Opin Drug Metab Toxicol 2018; 14:551–559.\n",
+  "raw_text_sha256": "b31480e758e78ec38b2896ded007a3851d221063cc18857fc40ca6cded3b72e8",
+  "coordinates_sha256": "fae41f8479e8765dca3dc2738a749d9ccfc1573fdbfd231e0462e86fee66d10b",
+  "block_sequence_sha256": "d6b86f14ac56318eccd6ddae23e4c058617331d375cc93ce47ef0489de91354c",
+  "blocks": [
+    {
+      "block_id": "page-0885-block-0000",
+      "order": 0,
+      "text": "864    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "4f47e1d4621dfb552d07b868848c30d4e205bf174c290094c0c3102f8b1c189a"
+    },
+    {
+      "block_id": "page-0885-block-0001",
+      "order": 1,
+      "text": "CHAPTER  11\n",
+      "bbox": [
+        18.520000457763672,
+        139.8785400390625,
+        28.0,
+        187.89450073242188
+      ],
+      "text_sha256": "83984f4328940309c03288e26b8edf9834cfa8fef30d3eedac5a4c266fe9aee7"
+    },
+    {
+      "block_id": "page-0885-block-0002",
+      "order": 2,
+      "text": "Table 11.8  Psychotropic drugs: choice in patients who continue to drink\n",
+      "bbox": [
+        67.88999938964844,
+        70.08790588378906,
+        299.9025573730469,
+        78.97540283203125
+      ],
+      "text_sha256": "e9635ab54ae95600d0ad071df4443b12c7c561516c18dafeb4d5a4b5872befd0"
+    },
+    {
+      "block_id": "page-0885-block-0003",
+      "order": 3,
+      "text": "Safest choice\nBest avoided\n",
+      "bbox": [
+        144.0,
+        89.96290588378906,
+        337.37249755859375,
+        98.85040283203125
+      ],
+      "text_sha256": "1d1cac8a51b1750617607f0c3d32702cf7ef2b034cdcc72b6631244a0462b0e6"
+    },
+    {
+      "block_id": "page-0885-block-0004",
+      "order": 4,
+      "text": "Antipsychotics\nSulpiride and amisulpride\nPaliperidone, if depot required\n(non-sedative and renally excreted)\n",
+      "bbox": [
+        61.8900146484375,
+        108.09040832519531,
+        254.98501586914062,
+        136.972900390625
+      ],
+      "text_sha256": "338cf6ffc5a6df748be2b2b1318c0e53024fb8a9227d7a9015b6a11feb3811de"
+    },
+    {
+      "block_id": "page-0885-block-0005",
+      "order": 5,
+      "text": "Very sedative antipsychotics such as \nchlorpromazine and clozapine\n",
+      "bbox": [
+        291.94500732421875,
+        108.08290100097656,
+        419.0625,
+        126.9678955078125
+      ],
+      "text_sha256": "72d3ed29ec484f16a494f4dab66e0a13828e509f11bf92464cc120a2caa235d7"
+    },
+    {
+      "block_id": "page-0885-block-0006",
+      "order": 6,
+      "text": "Antidepressants\nSSRI – citalopram, sertraline\nPotent inhibitors of CYP3A4 (fluoxetine, \nparoxetine) may decrease alcohol \nmetabolism in chronic drinkers\n",
+      "bbox": [
+        61.8900146484375,
+        146.2053985595703,
+        274.0274963378906,
+        185.08538818359375
+      ],
+      "text_sha256": "8ddde6d8a646e9eeb640117e8b3ff5e8c23943070f02e5aa438e6398135c62ae"
+    },
+    {
+      "block_id": "page-0885-block-0007",
+      "order": 7,
+      "text": "TCAs, because impairment of metabolism \nby alcohol (while intoxicated) can lead to \nincreased plasma levels and consequent \nsigns and symptoms of overdose (profound \nhypotension, seizures, arrhythmias and \ncoma)\nCardiac effects can be exacerbated by \nelectrolyte disturbances\nCombinations of TCAs and alcohol \nprofoundly impair psychomotor skills\nMirtazapine – often very sedative\nMAOIs as can cause profound hypotension. \nAlso potential interaction with tyramine-\ncontaining drinks which can lead to \nhypertensive crisis\n",
+      "bbox": [
+        291.94500732421875,
+        146.19789123535156,
+        435.1800842285156,
+        295.05035400390625
+      ],
+      "text_sha256": "6d75dde88d4eaf2a0ecaf8507bbf6e28677ca0c2a4d558956d9013a23c194a39"
+    },
+    {
+      "block_id": "page-0885-block-0008",
+      "order": 8,
+      "text": "Mood stabilisers\nValproate\nCarbamazepine\nNote: higher plasma levels achieved \nduring periods of alcohol intoxication may \nbe poorly tolerated\n",
+      "bbox": [
+        61.8900146484375,
+        304.29034423828125,
+        280.68743896484375,
+        353.1678466796875
+      ],
+      "text_sha256": "ac5f324a9f23930ea16be740615448d85fc5f593e13cf0e9c2fb56e39216b015"
+    },
+    {
+      "block_id": "page-0885-block-0009",
+      "order": 9,
+      "text": "Lithium, because it has a narrow \ntherapeutic index and alcohol-related \ndehydration and electrolyte disturbance can \nprecipitate lithium toxicity\n",
+      "bbox": [
+        291.94500732421875,
+        304.2828369140625,
+        433.90509033203125,
+        343.162841796875
+      ],
+      "text_sha256": "106a6c5c6a0d7f65b2955462923b6c33f1f2f1b111ba41cb48fa01cceef8b143"
+    },
+    {
+      "block_id": "page-0885-block-0010",
+      "order": 10,
+      "text": "NB. Be aware of the possibility of hepatic failure or reduced hepatic function in chronic alcohol misusers. See section \non hepatic impairment in Chapter 8.\nAlso note risk of hepatic toxicity with some recommended drugs (e.g. valproate).\n",
+      "bbox": [
+        61.8900146484375,
+        363.2028503417969,
+        435.9601745605469,
+        391.90533447265625
+      ],
+      "text_sha256": "de59cf6427b4343e4ab0ad616c1fe8b54151b5092d6d7fed42060170602dbd9d"
+    },
+    {
+      "block_id": "page-0885-block-0011",
+      "order": 11,
+      "text": "References\n",
+      "bbox": [
+        61.88999938964844,
+        415.8153991699219,
+        117.92399597167969,
+        428.85040283203125
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0885-block-0012",
+      "order": 12,
+      "text": "\t 1.\t Zakhari S. Overview: how is alcohol metabolized by the body? Alcohol Research & Health: The Journal of the National Institute on Alcohol \n",
+      "bbox": [
+        61.88999938964844,
+        433.9364013671875,
+        435.5341491699219,
+        440.9684143066406
+      ],
+      "text_sha256": "4fc5818670c96c74ca88023c35566bbd19cc5bc13ed32a574e9fd5e3ef75cb85"
+    },
+    {
+      "block_id": "page-0885-block-0013",
+      "order": 13,
+      "text": "Abuse and Alcoholism 2006; 29:245–254.\n\t 2.\t Tanaka E. Toxicological interactions involving psychiatric drugs and alcohol: an update. J Clin Pharm Ther 2003; 28:81–95.\n\t 3.\t Wan Chih T. Alcohol-related drug interactions. Pharmacist’s Letter/Prescriber’s Letter 2008; 24:240106.\n\t 4.\t Smith RG. An appraisal of potential drug interactions in cigarette smokers and alcohol drinkers. J Am Podiatr Med Assoc 2009; 99:81–88.\n\t 5.\t Salmela KS, et al. Respective roles of human cytochrome P-4502E1, 1A2, and 3A4 in the hepatic microsomal ethanol oxidizing system. \n",
+      "bbox": [
+        61.895999908447266,
+        442.7923889160156,
+        435.5758972167969,
+        485.9684143066406
+      ],
+      "text_sha256": "69b0a9b1836c1d072a5cc4d9531e7a6fc98f34a19135f9e59b88148c4e00205b"
+    },
+    {
+      "block_id": "page-0885-block-0014",
+      "order": 14,
+      "text": "Alcohol Clin Exp Res 1998; 22:2125–2132.\n\t 6.\t Hamitouche S, et al. Ethanol oxidation into acetaldehyde by 16 recombinant human cytochrome P450 isoforms: role of CYP2C isoforms in \n",
+      "bbox": [
+        61.91999816894531,
+        487.7923889160156,
+        435.57012939453125,
+        503.9684143066406
+      ],
+      "text_sha256": "f3b758474871717b0d7723219486ab217fdcb50f7c69fd6cf54f0e4bbe026963"
+    },
+    {
+      "block_id": "page-0885-block-0015",
+      "order": 15,
+      "text": "human liver microsomes. Toxicol Lett 2006; 167:221–230.\n\t 7.\t Koster M, et al. Seizures during antidepressant treatment in psychiatric inpatients–results from the transnational pharmacovigilance project \n",
+      "bbox": [
+        61.92599868774414,
+        505.7923889160156,
+        435.5939636230469,
+        521.9683837890625
+      ],
+      "text_sha256": "cb510ddb1d99a23434bd53f6b363bacfcd91a5580d3ec36d28476b93a68dd867"
+    },
+    {
+      "block_id": "page-0885-block-0016",
+      "order": 16,
+      "text": "“Arzneimittelsicherheit in der Psychiatrie” (AMSP) 1993–2008. Psychopharmacology 2013; 230:191–201.\n\t 8.\t Cederbaum AI. Alcohol metabolism. Clin Liver Dis 2012; 16:667–685.\n\t 9.\t Wall TL, et al. Biology, genetics, and environment: underlying factors influencing alcohol metabolism. Alcohol Research: Current Reviews \n",
+      "bbox": [
+        61.93199920654297,
+        523.7924194335938,
+        435.5999755859375,
+        548.9683837890625
+      ],
+      "text_sha256": "e9f7eaba8bf238a4a583b1dba419da3ca78dd8b61d4c967af6e9db59066ca21e"
+    },
+    {
+      "block_id": "page-0885-block-0017",
+      "order": 17,
+      "text": "2016; 38:59–68.\n\t10.\t Williams CS, et al. Do ethanol and metronidazole interact to produce a disulfiram-like reaction? Ann Pharmacother 2000; 34:255–257.\n\t11.\t Visapää JP, et al. Lack of disulfiram-like reaction with metronidazole and ethanol. Ann Pharmacother 2002; 36:971–974.\n\t12.\t Mergenhagen KA, et al. Fact versus fiction: a review of the evidence behind alcohol and antibiotic interactions. Antimicrob Agents Chemother \n",
+      "bbox": [
+        61.944000244140625,
+        550.7924194335938,
+        435.6239013671875,
+        584.9683837890625
+      ],
+      "text_sha256": "f6fc777305192e9daff31998ae3b1b34731b50c8f5926872eee9febdb4413335"
+    },
+    {
+      "block_id": "page-0885-block-0018",
+      "order": 18,
+      "text": "2020; 64:e02167–02119.\n\t13.\t Huang Z, et al. Influence of ethanol on the metabolism of alprazolam. Expert Opin Drug Metab Toxicol 2018; 14:551–559.\n",
+      "bbox": [
+        61.96200180053711,
+        586.7924194335938,
+        394.9679870605469,
+        602.9683837890625
+      ],
+      "text_sha256": "0cbe5309304ad2b80d3a2250fee326d8edd1a2fe72328b0f3fc5414656871cc0"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

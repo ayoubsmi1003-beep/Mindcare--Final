@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0762",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 762,
+  "source_page_index": 761,
+  "source_page_display": 762,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Hepatic and renal impairment    741\nCHAPTER 8\nDrug\nComments\nBupropion22,23,25,32,40,66–68 \n(amfebutamone)\n0.5% excreted unchanged in the urine. Dosing: GFR <50mL/min, 150mg once \ndaily. A single dose study in haemodialysis patients (stage 5 disease) recommended \na dose of 150mg every 3 days. Metabolites may accumulate in renal impairment \nand clearance is reduced. Elevated levels increase risk of seizures. Has been used to \ntreat sexual dysfunction in mild to moderately depressed patients with chronic \nkidney disease.\nCitalopram22,23,25,40,69–75\n<13% of citalopram is excreted unchanged in the urine. Single-dose studies in mild \nand moderate renal impairment show no change in the pharmacokinetics of \ncitalopram. Dosing is as for normal renal function; however, use with caution if \nGFR <10mL/min due to reduced clearance. The manufacturer does not advise use if \nGFR <20mL/min. Renal failure has been reported with citalopram overdose. \nCitalopram can treat depression in chronic renal failure and improve quality of life \nbut use of citalopram (or escitalopram) is associated with a higher risk of sudden \ncardiac death versus other SSRIs (fluoxetine, fluvoxamine, paroxetine, sertraline) \nwhen used in patients on haemodialysis (adjusted hazard ratio, 1.18; 95% CI 1.05, \n1.31). A case report of hyponatraemia has been reported in a renal transplant \npatient on citalopram.\nClomipramine22,23,25,32,76\n2% of unchanged clomipramine is excreted in the urine. Dosing: GFR 20–50mL/min, \ndose as for normal renal function; GFR <20mL/min, effects unknown, start at a low \ndose and monitor patient for urinary retention, confusion, sedation and postural \nhypotension as accumulation can occur. There is a case report of clomipramine-\ninduced interstitial nephritis and reversible acute renal failure.\nDesvenlafaxine12,22,77,78\n45% of desvenlafaxine is excreted unchanged in the urine. Manufacturer recommends: \nGFR 30–50mL/min, 50mg per day; GFR <30mL/min, 25mg daily. Half-life is prolonged \nand desvenlafaxine accumulates as GFR decreases. Urinary retention, delay when \nstarting to pass urine and proteinuria, has been reported as adverse effects.\nDosulepin22,25,79 \n(dothiepin)\n56% of mainly active metabolites renally excreted. They have a long half-life and may \naccumulate, resulting in excessive sedation. Dosing: GFR 20–50mL/min, dose as for \nnormal renal function; GFR <20mL/min, start with a small dose and titrate to \nresponse. Monitor patient for urinary retention, confusion, sedation and postural \nhypotension.\nDoxepin22,23,25,32,80\n<1% excreted unchanged in urine. Dosing: GFR 10–50mL/min as in normal renal \nfunction but monitor patient for urinary retention, confusion, sedation and postural \nhypotension; GFR <10mL/min start with a small dose and increase slowly. \nManufacturer advises using with caution. Haemolytic anaemia with renal failure has \nbeen reported with doxepin. Used topically to treat pruritis in chronic renal failure.\nDuloxetine22,25,81–83\n<1% excreted unchanged in urine. Manufacturer states no dose adjustment is \nnecessary for GFR >30mL/min; however, starting at a low dose and increasing slowly \nis advised. Duloxetine is contraindicated in patients with a GFR <30mL/min as it can \naccumulate in chronic kidney disease. Licensed to treat diabetic neuropathic pain and \nstress incontinence in women. Diabetes is a common cause of renal impairment. Two \ncase reports of acute renal failure with duloxetine have been reported. Serotonin \nsyndrome reported in a patient with chronic kidney disease on trazodone and \nduloxetine.84\n(Continued)\nTable 8.9  (Continued)\n",
+  "raw_text_sha256": "5ca93136c0007c3761cc8e8c808e1273437e9fb1269d7949cc906aa076baad51",
+  "coordinates_sha256": "2e19e60500ea4b48f00e25dc02342776a9347a944024ae059d9db1b6b9329f39",
+  "block_sequence_sha256": "e3268d0c3c3d48e340b04dab5650bad9eb0c4f9c31b8c4e59aeb1b81ae439482",
+  "blocks": [
+    {
+      "block_id": "page-0762-block-0000",
+      "order": 0,
+      "text": "Hepatic and renal impairment    741\n",
+      "bbox": [
+        269.185302734375,
+        31.395221710205078,
+        420.00048828125,
+        41.0272216796875
+      ],
+      "text_sha256": "998dfb860d977a36df155a1779f86e57ce8f702b315090989e918c2a9561976b"
+    },
+    {
+      "block_id": "page-0762-block-0001",
+      "order": 1,
+      "text": "CHAPTER 8\n",
+      "bbox": [
+        454.4096984863281,
+        532.3878173828125,
+        463.88970947265625,
+        573.7318115234375
+      ],
+      "text_sha256": "5ba3d9fb75ff4f418d4a2e9d517f30966dcfb279c10487eec43c5aa3fd8757a2"
+    },
+    {
+      "block_id": "page-0762-block-0002",
+      "order": 2,
+      "text": "Drug\nComments\n",
+      "bbox": [
+        48.0,
+        89.71290588378906,
+        184.5,
+        98.60040283203125
+      ],
+      "text_sha256": "f0d3aba6cb5c63a8b3ce76553ca73a800f481925284fe7cc72b7ce3c93bfebe6"
+    },
+    {
+      "block_id": "page-0762-block-0003",
+      "order": 3,
+      "text": "Bupropion22,23,25,32,40,66–68 \n(amfebutamone)\n",
+      "bbox": [
+        47.99939727783203,
+        108.01790618896484,
+        125.60189819335938,
+        126.722900390625
+      ],
+      "text_sha256": "afbf4eab53dab81d5c75532d942146e3c02444c50f4fdfcebcd409e0c10808ca"
+    },
+    {
+      "block_id": "page-0762-block-0004",
+      "order": 4,
+      "text": "0.5% excreted unchanged in the urine. Dosing: GFR <50mL/min, 150mg once \ndaily. A single dose study in haemodialysis patients (stage 5 disease) recommended \na dose of 150mg every 3 days. Metabolites may accumulate in renal impairment \nand clearance is reduced. Elevated levels increase risk of seizures. Has been used to \ntreat sexual dysfunction in mild to moderately depressed patients with chronic \nkidney disease.\n",
+      "bbox": [
+        146.9993896484375,
+        108.01790618896484,
+        420.00689697265625,
+        166.712890625
+      ],
+      "text_sha256": "dfb707daf973ba03fb2120c8971a76076d24c3c85513ff6c69c920dd03252717"
+    },
+    {
+      "block_id": "page-0762-block-0005",
+      "order": 5,
+      "text": "Citalopram22,23,25,40,69–75\n<13% of citalopram is excreted unchanged in the urine. Single-dose studies in mild \nand moderate renal impairment show no change in the pharmacokinetics of \ncitalopram. Dosing is as for normal renal function; however, use with caution if \nGFR <10mL/min due to reduced clearance. The manufacturer does not advise use if \nGFR <20mL/min. Renal failure has been reported with citalopram overdose. \nCitalopram can treat depression in chronic renal failure and improve quality of life \nbut use of citalopram (or escitalopram) is associated with a higher risk of sudden \ncardiac death versus other SSRIs (fluoxetine, fluvoxamine, paroxetine, sertraline) \nwhen used in patients on haemodialysis (adjusted hazard ratio, 1.18; 95% CI 1.05, \n1.31). A case report of hyponatraemia has been reported in a renal transplant \npatient on citalopram.\n",
+      "bbox": [
+        47.9993896484375,
+        176.1328887939453,
+        421.2825927734375,
+        284.82537841796875
+      ],
+      "text_sha256": "3759b338dbba9fad775ceea9c714d433ba728454ec11d1ae3a2575783a5f3f20"
+    },
+    {
+      "block_id": "page-0762-block-0006",
+      "order": 6,
+      "text": "Clomipramine22,23,25,32,76\n2% of unchanged clomipramine is excreted in the urine. Dosing: GFR 20–50mL/min, \ndose as for normal renal function; GFR <20mL/min, effects unknown, start at a low \ndose and monitor patient for urinary retention, confusion, sedation and postural \nhypotension as accumulation can occur. There is a case report of clomipramine-\ninduced interstitial nephritis and reversible acute renal failure.\n",
+      "bbox": [
+        48.0,
+        294.2453918457031,
+        419.0025329589844,
+        342.96539306640625
+      ],
+      "text_sha256": "ddef992188900263b0e0b68f45c2205022fbcdf3667d5f8d0e1bfb0590b08820"
+    },
+    {
+      "block_id": "page-0762-block-0007",
+      "order": 7,
+      "text": "Desvenlafaxine12,22,77,78\n45% of desvenlafaxine is excreted unchanged in the urine. Manufacturer recommends: \nGFR 30–50mL/min, 50mg per day; GFR <30mL/min, 25mg daily. Half-life is prolonged \nand desvenlafaxine accumulates as GFR decreases. Urinary retention, delay when \nstarting to pass urine and proteinuria, has been reported as adverse effects.\n",
+      "bbox": [
+        48.0,
+        352.3854064941406,
+        419.9849548339844,
+        391.0928955078125
+      ],
+      "text_sha256": "604f4c317a70baa3844a0d0376c52e8700572b583783d6b1157c236047b8964a"
+    },
+    {
+      "block_id": "page-0762-block-0008",
+      "order": 8,
+      "text": "Dosulepin22,25,79 \n(dothiepin)\n",
+      "bbox": [
+        47.999900817871094,
+        400.5129089355469,
+        98.78240203857422,
+        419.222900390625
+      ],
+      "text_sha256": "c8bc0be935ad643680b83e458d2f445371ce7730c73bb70cc6690147886dd3de"
+    },
+    {
+      "block_id": "page-0762-block-0009",
+      "order": 9,
+      "text": "56% of mainly active metabolites renally excreted. They have a long half-life and may \naccumulate, resulting in excessive sedation. Dosing: GFR 20–50mL/min, dose as for \nnormal renal function; GFR <20mL/min, start with a small dose and titrate to \nresponse. Monitor patient for urinary retention, confusion, sedation and postural \nhypotension.\n",
+      "bbox": [
+        146.99990844726562,
+        400.5179138183594,
+        422.0472717285156,
+        449.21539306640625
+      ],
+      "text_sha256": "f5936544338ce1969e08c18714e7c2718fbe4436d4ab8fd13896ea5e0aded03f"
+    },
+    {
+      "block_id": "page-0762-block-0010",
+      "order": 10,
+      "text": "Doxepin22,23,25,32,80\n<1% excreted unchanged in urine. Dosing: GFR 10–50mL/min as in normal renal \nfunction but monitor patient for urinary retention, confusion, sedation and postural \nhypotension; GFR <10mL/min start with a small dose and increase slowly. \nManufacturer advises using with caution. Haemolytic anaemia with renal failure has \nbeen reported with doxepin. Used topically to treat pruritis in chronic renal failure.\n",
+      "bbox": [
+        47.999908447265625,
+        458.6354064941406,
+        420.4499816894531,
+        507.34039306640625
+      ],
+      "text_sha256": "965f32c5d916664a0457aecdf6fe7b153f0b586f62c93fee913daea8b9d1af00"
+    },
+    {
+      "block_id": "page-0762-block-0011",
+      "order": 11,
+      "text": "Duloxetine22,25,81–83\n<1% excreted unchanged in urine. Manufacturer states no dose adjustment is \nnecessary for GFR >30mL/min; however, starting at a low dose and increasing slowly \nis advised. Duloxetine is contraindicated in patients with a GFR <30mL/min as it can \naccumulate in chronic kidney disease. Licensed to treat diabetic neuropathic pain and \nstress incontinence in women. Diabetes is a common cause of renal impairment. Two \ncase reports of acute renal failure with duloxetine have been reported. Serotonin \nsyndrome reported in a patient with chronic kidney disease on trazodone and \nduloxetine.84\n",
+      "bbox": [
+        48.0,
+        516.7603759765625,
+        421.20758056640625,
+        595.4578857421875
+      ],
+      "text_sha256": "dd7cb1543911d78cf818d5e3233898e8a3488aa7305d8b9239112db8a7cd80d8"
+    },
+    {
+      "block_id": "page-0762-block-0012",
+      "order": 12,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.0849914550781,
+        604.097900390625,
+        419.9999084472656,
+        612.8504028320312
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0762-block-0013",
+      "order": 13,
+      "text": "Table 8.9  (Continued)\n",
+      "bbox": [
+        54.000099182128906,
+        70.08790588378906,
+        126.87010192871094,
+        78.97540283203125
+      ],
+      "text_sha256": "79a98c30130756f7d84b977e84494d5c065e0f195846a9ebedc1e5055bf15684"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,239 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0945",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 945,
+  "source_page_index": 944,
+  "source_page_display": 945,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "924    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 14\nThe General Medical Council allows doctors to prescribe off-label but only where \nthe prescriber is satisfied that there is enough evidence or experience to support efficacy \nand safety.6\nIn the USA, it is lawful to prescribe off label ‘within a legitimate health care practi-\ntioner-patient relationship’.7 Marketing of off-label use is forbidden but information \nmay be provided following an unsolicited request.8 Off-label prescribing has been esti-\nmated to represent 13% of all prescribing in mental health conditions in the USA.9\nIt has been suggested that off-label prescribing in psychiatry is less likely to be sup-\nported by a strong evidence base than off-label prescribing in other areas of medicine.10 \nIn psychiatry, small (underpowered) studies (with wide confidence intervals) often \ninfluence practice, particularly with respect to treatment resistant illness (a great many \nexamples can be found in this publication). When these small studies are combined in \nthe form of a meta-analysis, considerable heterogeneity is often found suggesting pub-\nlication bias (that is, that some negative studies are not published). Treatments may \ntherefore become incorporated into ‘routine custom and practice’ in the absence of any \nevidence supporting efficacy and/or tolerability, and these treatments may sometimes \ncontinue to be used despite the findings of later, larger, and more definitive negative \nstudies and meta-analyses. The use of omega-3 fatty acids in schizophrenia is a good \nexample of this. An example of widespread off-label prescribing of a psychotropic in \nnon-mental health conditions is amitriptyline – 93% of UK primary care prescriptions \nare off-label.11\nThe psychopharmacology special interest group at the Royal College of Psychiatrists \npublished a consensus statement on the use of licensed medicines for unlicensed uses12 \nwhich was updated in 2017.13 They note that unlicensed use is common in general adult \npsychiatry with cross-sectional studies showing that up to 50% of patients are pre-\nscribed at least one drug outside the terms of its licence. They also note that the preva-\nlence of this type of prescribing is likely to be higher in patients under the age of 18 or \nover 65, in those with a learning disability, in women who are pregnant or lactating and \nin those patients who are cared for in forensic psychiatry settings. The main recommen-\ndations in the consensus statement are summarised below.\nBefore prescribing ‘off-label’:\n■\n■Exclude licensed alternatives (e.g. they have proved ineffective or poorly tolerated).\n■\n■Ensure familiarity with the evidence base for the intended unlicensed use. If unsure, seek advice \nfrom another clinician (and possibly a specialist pharmacist).\n■\n■Consider and document the potential risks and benefits of the proposed treatment. Share this \nrisk assessment with the patient, and carers if applicable. Document the discussion and the \npatient’s consent or lack of capacity to consent.\n■\n■If prescribing responsibility is to be shared with primary care, ensure that the risk assessment \nand consent issues are shared with the GP.\n■\n■Monitor for efficacy and side effects; start a low dose and increase slowly.\n■\n■Consider publishing the case to add to the body of knowledge.\n■\n■Withdraw any treatment that is ineffective or where emergent risks outweigh the benefits.\nThe more experimental the unlicensed use is, the more important it is to adhere to the above \nguidance.\n",
+  "raw_text_sha256": "68fe17aa1abb99d5bd32ae8cd4f1d41f280439be3209bd4e00830bbb3dd18373",
+  "coordinates_sha256": "7fea1484b770765a35626d3c125f669ba2e9359082ecf625ec838c2214fb8abd",
+  "block_sequence_sha256": "6fb750e4a9e52542df2a9fd8e232ac9b75fe9e825b3f08af2c0925c2b98752ac",
+  "blocks": [
+    {
+      "block_id": "page-0945-block-0000",
+      "order": 0,
+      "text": "924    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "d8630c4fa1fd5d5d09dc835a42abea44324ced19fbf52e54404011bef44b3d10"
+    },
+    {
+      "block_id": "page-0945-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        18.520000457763672,
+        338.7405090332031,
+        28.0,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0945-block-0002",
+      "order": 2,
+      "text": "The General Medical Council allows doctors to prescribe off-label but only where \nthe prescriber is satisfied that there is enough evidence or experience to support efficacy \nand safety.6\n",
+      "bbox": [
+        61.889801025390625,
+        61.8770751953125,
+        436.6497802734375,
+        97.59707641601562
+      ],
+      "text_sha256": "90aa7e27857056811ca1b511b3e060bddfa19dd383e9188ed6dbe12188d8b0e5"
+    },
+    {
+      "block_id": "page-0945-block-0003",
+      "order": 3,
+      "text": "In the USA, it is lawful to prescribe off label ‘within a legitimate health care practi-\ntioner-patient relationship’.7 Marketing of off-label use is forbidden but information \nmay be provided following an unsolicited request.8 Off-label prescribing has been esti-\nmated to represent 13% of all prescribing in mental health conditions in the USA.9\n",
+      "bbox": [
+        61.88600158691406,
+        97.8770751953125,
+        436.6759033203125,
+        145.59707641601562
+      ],
+      "text_sha256": "03addc926f231cbee30bbb419f60c229466b1707509130460794c079530293d3"
+    },
+    {
+      "block_id": "page-0945-block-0004",
+      "order": 4,
+      "text": "It has been suggested that off-label prescribing in psychiatry is less likely to be sup-\nported by a strong evidence base than off-label prescribing in other areas of medicine.10 \nIn psychiatry, small (underpowered) studies (with wide confidence intervals) often \ninfluence practice, particularly with respect to treatment resistant illness (a great many \nexamples can be found in this publication). When these small studies are combined in \nthe form of a meta-analysis, considerable heterogeneity is often found suggesting pub-\nlication bias (that is, that some negative studies are not published). Treatments may \ntherefore become incorporated into ‘routine custom and practice’ in the absence of any \nevidence supporting efficacy and/or tolerability, and these treatments may sometimes \ncontinue to be used despite the findings of later, larger, and more definitive negative \nstudies and meta-analyses. The use of omega-3 fatty acids in schizophrenia is a good \nexample of this. An example of widespread off-label prescribing of a psychotropic in \nnon-mental health conditions is amitriptyline – 93% of UK primary care prescriptions \nare off-label.11\n",
+      "bbox": [
+        61.889801025390625,
+        145.8770751953125,
+        436.709716796875,
+        313.5970764160156
+      ],
+      "text_sha256": "8631d79dcb56086fa54ccc0f64bb0bce0bb176bc305f3b3b9eda469af7200cdc"
+    },
+    {
+      "block_id": "page-0945-block-0005",
+      "order": 5,
+      "text": "The psychopharmacology special interest group at the Royal College of Psychiatrists \npublished a consensus statement on the use of licensed medicines for unlicensed uses12 \nwhich was updated in 2017.13 They note that unlicensed use is common in general adult \npsychiatry with cross-sectional studies showing that up to 50% of patients are pre-\nscribed at least one drug outside the terms of its licence. They also note that the preva-\nlence of this type of prescribing is likely to be higher in patients under the age of 18 or \nover 65, in those with a learning disability, in women who are pregnant or lactating and \nin those patients who are cared for in forensic psychiatry settings. The main recommen-\ndations in the consensus statement are summarised below.\n",
+      "bbox": [
+        61.889801025390625,
+        313.8770751953125,
+        436.6997375488281,
+        421.5970764160156
+      ],
+      "text_sha256": "ecd411726f722f80bbea1e19f8805986c0eb8441d47ddc80d7d4e34e6a0625fc"
+    },
+    {
+      "block_id": "page-0945-block-0006",
+      "order": 6,
+      "text": "Before prescribing ‘off-label’:\n",
+      "bbox": [
+        69.14099884033203,
+        456.88189697265625,
+        173.99700927734375,
+        466.7503967285156
+      ],
+      "text_sha256": "56f83e5ad398b2d37524d0f17f5279b9288930f19566bb2dbd1ed3e16065369f"
+    },
+    {
+      "block_id": "page-0945-block-0007",
+      "order": 7,
+      "text": "■\n■Exclude licensed alternatives (e.g. they have proved ineffective or poorly tolerated).\n",
+      "bbox": [
+        69.14099884033203,
+        472.88189697265625,
+        376.8836669921875,
+        482.7503967285156
+      ],
+      "text_sha256": "35071ac7823a57b1e08a5b61e7bf0711c49d6f0f80401a5ce7edd08be1737dca"
+    },
+    {
+      "block_id": "page-0945-block-0008",
+      "order": 8,
+      "text": "■\n■Ensure familiarity with the evidence base for the intended unlicensed use. If unsure, seek advice \n",
+      "bbox": [
+        69.14099884033203,
+        482.88189697265625,
+        425.8776550292969,
+        492.7503967285156
+      ],
+      "text_sha256": "c5482c518dd858f87e54212458024eb7f00bdc405e64bfd95a3aedb96639c25e"
+    },
+    {
+      "block_id": "page-0945-block-0009",
+      "order": 9,
+      "text": "from another clinician (and possibly a specialist pharmacist).\n",
+      "bbox": [
+        77.64099884033203,
+        492.8778991699219,
+        293.7789611816406,
+        502.74639892578125
+      ],
+      "text_sha256": "626db4abfd32c0a986e2a57a9bcf01ccc0b780c36c322029832f4c3d90ad9a24"
+    },
+    {
+      "block_id": "page-0945-block-0010",
+      "order": 10,
+      "text": "■\n■Consider and document the potential risks and benefits of the proposed treatment. Share this \n",
+      "bbox": [
+        69.14099884033203,
+        502.88189697265625,
+        419.6131896972656,
+        512.7503662109375
+      ],
+      "text_sha256": "0628f0d8bfcf42a8c69146092e9bbdd888213d25eb470b0e6711b8fd2225ecee"
+    },
+    {
+      "block_id": "page-0945-block-0011",
+      "order": 11,
+      "text": "risk assessment with the patient, and carers if applicable. Document the discussion and the \npatient’s consent or lack of capacity to consent.\n",
+      "bbox": [
+        77.64099884033203,
+        512.8778686523438,
+        409.0392150878906,
+        532.742431640625
+      ],
+      "text_sha256": "69ff8f211c048d41b8b836ea46c662fbd70b63f3a2b71076927740f2ccafea05"
+    },
+    {
+      "block_id": "page-0945-block-0012",
+      "order": 12,
+      "text": "■\n■If prescribing responsibility is to be shared with primary care, ensure that the risk assessment \n",
+      "bbox": [
+        69.14099884033203,
+        532.8818359375,
+        413.59503173828125,
+        542.7503662109375
+      ],
+      "text_sha256": "f7846279aea45f5aacb56d3965569128e0ad390426efbd2a8d502f2ecae6fdd8"
+    },
+    {
+      "block_id": "page-0945-block-0013",
+      "order": 13,
+      "text": "and consent issues are shared with the GP.\n",
+      "bbox": [
+        77.64099884033203,
+        542.8778686523438,
+        231.43153381347656,
+        552.7463989257812
+      ],
+      "text_sha256": "e19fae85b5f0e168eaf0f99292384a33d4e618f8f8a15137525563007148bd3c"
+    },
+    {
+      "block_id": "page-0945-block-0014",
+      "order": 14,
+      "text": "■\n■Monitor for efficacy and side effects; start a low dose and increase slowly.\n",
+      "bbox": [
+        69.14099884033203,
+        552.8818359375,
+        344.1670837402344,
+        562.7503662109375
+      ],
+      "text_sha256": "cdb513022b69dceee310363bb699f93f846dcd94b36ed5f92281fd30e6c3cd33"
+    },
+    {
+      "block_id": "page-0945-block-0015",
+      "order": 15,
+      "text": "■\n■Consider publishing the case to add to the body of knowledge.\n",
+      "bbox": [
+        69.14099884033203,
+        562.8818359375,
+        306.7501220703125,
+        572.7503662109375
+      ],
+      "text_sha256": "44166d1299b194d52d3923319ef3933c2be90657a337c5cb268fe2fbc4f6e48c"
+    },
+    {
+      "block_id": "page-0945-block-0016",
+      "order": 16,
+      "text": "■\n■Withdraw any treatment that is ineffective or where emergent risks outweigh the benefits.\n",
+      "bbox": [
+        69.14099884033203,
+        572.8818359375,
+        405.5882263183594,
+        582.7503662109375
+      ],
+      "text_sha256": "9fa51245a566071d362952ed071da1280359376cf3def20d95d65ab77848f3e2"
+    },
+    {
+      "block_id": "page-0945-block-0017",
+      "order": 17,
+      "text": "The more experimental the unlicensed use is, the more important it is to adhere to the above \nguidance.\n",
+      "bbox": [
+        69.14099884033203,
+        588.8788452148438,
+        428.9971008300781,
+        608.743408203125
+      ],
+      "text_sha256": "84b89f4ec26db31b16dd2903a04da89609058cc27634f057e66da628a7d7927a"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0291",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 291,
+  "source_page_index": 290,
+  "source_page_display": 291,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "270    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  2\noutcomes is made difficult by trials including patients whose mania occurred in the \ncontext of failed mood stabiliser treatment.\nAlthough mechanism is difficult to discern, converging evidence suggests antimanic \neffects of antipsychotics are related to their effects on the dopamine system.15,16\nDepression\nIn acute treatment of bipolar depression, antipsychotics that are found to be effective \ninclude cariprazine, lurasidone, olanzapine (+/- fluoxetine) and quetiapine.13,17 In terms \nof mechanism, this does not appear to be a dopamine-mediated effect, as aripiprazole \nand other dopamine-blocking antipsychotics do not show efficacy in acute bipolar \ndepression.17\nMaintenance\nIt is striking that compounds which appear to have efficacy in the acute phase of BD, \nwhether that be mania or depression, seem to exert effects in maintenance treatment, \ni.e. prophylaxis.18 This is borne out by a network meta-analysis of maintenance treat-\nments in BD, which included aripiprazole, olanzapine, paliperidone, quetiapine and \nrisperidone LAI, all of which, with the exception of aripiprazole and paliperidone, \nshowed effects against relapse.19 It should be noted that this analysis did not include \nmore recent trials of aripiprazole (see further).19\nSpecific antipsychotics\nAripiprazole\nAripiprazole is effective in acute treatment of mania both alone20–22 as an add-on agent23 \nand in long-term prophylaxis.24,25 No difference is seen when directly compared with \nlithium or haloperidol although one small RCT suggested that lithium was more effec-\ntive in mania.26 In trials in mania, it is associated with nausea and movement disorder \n(mainly akathisia).27 Aripiprazole LAI is also effective for prophylaxis in bipolar 1 dis-\norder with the effect predominantly on prevention of manic episodes.28\nAsenapine\nAsenapine is given by the sublingual route and is effective in mania.29,30 Efficacy seems \nto be maintained in the longer term,31 RCT evidence showing efficacy in preventing \ndepression and manic episodes, in people with bipolar 1 disorder.32 Asenapine is unlikely \nto cause weight gain and metabolic disturbance33 than other antipsychotics.\nCariprazine\nCariprazine is efficacious for treating mania as well as depression symptoms in people \nwith mania with mixed features,34 and has a low propensity for weight gain.33\n",
+  "raw_text_sha256": "e473fda043ff70303554be22bc0ac469df6c9daa15dcbbe3a09912d5fc9309f1",
+  "coordinates_sha256": "91542b81d7db88743441f2bbffdd0789d7c23af03a251e8a6db924bc82063eb4",
+  "block_sequence_sha256": "e4782a2b7fc58d0623fb8913d07acb0020cbc98b3568a97d5d41855685e8da72",
+  "blocks": [
+    {
+      "block_id": "page-0291-block-0000",
+      "order": 0,
+      "text": "270    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "fac4ae17bf0a60000056921693ebbd0237743b971a031a09bd473e3c5818b440"
+    },
+    {
+      "block_id": "page-0291-block-0001",
+      "order": 1,
+      "text": "CHAPTER  2\n",
+      "bbox": [
+        19.520000457763672,
+        145.23529052734375,
+        29.0,
+        188.80328369140625
+      ],
+      "text_sha256": "5befcde2fefe074681a51514b484ad31516d952c51183625b5b7b1fb84f30d2c"
+    },
+    {
+      "block_id": "page-0291-block-0002",
+      "order": 2,
+      "text": "outcomes is made difficult by trials including patients whose mania occurred in the \ncontext of failed mood stabiliser treatment.\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.6901550292969,
+        86.27029418945312
+      ],
+      "text_sha256": "c59509ac923fae6dd53790438d8163280572d548a800cf5b39c22a57000955bc"
+    },
+    {
+      "block_id": "page-0291-block-0003",
+      "order": 3,
+      "text": "Although mechanism is difficult to discern, converging evidence suggests antimanic \neffects of antipsychotics are related to their effects on the dopamine system.15,16\n",
+      "bbox": [
+        61.88999938964844,
+        86.55029296875,
+        436.6900634765625,
+        110.27029418945312
+      ],
+      "text_sha256": "4924823d2cb3ef310f723f45683e57e8c346c854e80899084e948d809109d252"
+    },
+    {
+      "block_id": "page-0291-block-0004",
+      "order": 4,
+      "text": "Depression\n",
+      "bbox": [
+        61.88999938964844,
+        128.64028930664062,
+        114.11000061035156,
+        140.49029541015625
+      ],
+      "text_sha256": "ce671d3d1ab8a2414473ed7cde1062546ccf670ea792bc40a6968a2aa033a858"
+    },
+    {
+      "block_id": "page-0291-block-0005",
+      "order": 5,
+      "text": "In acute treatment of bipolar depression, antipsychotics that are found to be effective \ninclude cariprazine, lurasidone, olanzapine (+/- fluoxetine) and quetiapine.13,17 In terms \nof mechanism, this does not appear to be a dopamine-mediated effect, as aripiprazole \nand other dopamine-blocking antipsychotics do not show efficacy in acute bipolar \ndepression.17\n",
+      "bbox": [
+        61.88999938964844,
+        146.55029296875,
+        436.7113342285156,
+        206.27029418945312
+      ],
+      "text_sha256": "8ca6dca07fa9d7be7f1d6ae721348f6c06e5341eadf0bff4ee60bc0599251f2b"
+    },
+    {
+      "block_id": "page-0291-block-0006",
+      "order": 6,
+      "text": "Maintenance\n",
+      "bbox": [
+        61.88999938964844,
+        224.64028930664062,
+        123.00999450683594,
+        236.49029541015625
+      ],
+      "text_sha256": "245496722c77b035921bdab558c16a0fb4cd3c619e21d32b387265c51b86637f"
+    },
+    {
+      "block_id": "page-0291-block-0007",
+      "order": 7,
+      "text": "It is striking that compounds which appear to have efficacy in the acute phase of BD, \nwhether that be mania or depression, seem to exert effects in maintenance treatment, \ni.e. prophylaxis.18 This is borne out by a network meta-analysis of maintenance treat-\nments in BD, which included aripiprazole, olanzapine, paliperidone, quetiapine and \nrisperidone LAI, all of which, with the exception of aripiprazole and paliperidone, \nshowed effects against relapse.19 It should be noted that this analysis did not include \nmore recent trials of aripiprazole (see further).19\n",
+      "bbox": [
+        61.88999938964844,
+        242.55029296875,
+        436.7010192871094,
+        326.2702941894531
+      ],
+      "text_sha256": "76baad7f6ba071da8040fe2cef3b2865116c1bd87cce85277e7de2297345ad6b"
+    },
+    {
+      "block_id": "page-0291-block-0008",
+      "order": 8,
+      "text": "Specific antipsychotics\n",
+      "bbox": [
+        61.88999938964844,
+        343.7052917480469,
+        177.38998413085938,
+        356.74029541015625
+      ],
+      "text_sha256": "742bcfe1e5a974d0d2234ddad53a72dcfe0e955bc2fdf8e95b0ac9c2e8a660f4"
+    },
+    {
+      "block_id": "page-0291-block-0009",
+      "order": 9,
+      "text": "Aripiprazole\n",
+      "bbox": [
+        61.88999938964844,
+        362.6402893066406,
+        119.67999267578125,
+        374.49029541015625
+      ],
+      "text_sha256": "14519352ede9c2040fd55378fee8da3db552a04445d82486e370b24e73082a30"
+    },
+    {
+      "block_id": "page-0291-block-0010",
+      "order": 10,
+      "text": "Aripiprazole is effective in acute treatment of mania both alone20–22 as an add-on agent23 \nand in long-term prophylaxis.24,25 No difference is seen when directly compared with \nlithium or haloperidol although one small RCT suggested that lithium was more effec-\ntive in mania.26 In trials in mania, it is associated with nausea and movement disorder \n(mainly akathisia).27 Aripiprazole LAI is also effective for prophylaxis in bipolar 1 dis-\norder with the effect predominantly on prevention of manic episodes.28\n",
+      "bbox": [
+        61.88499450683594,
+        380.55029296875,
+        436.67510986328125,
+        452.2702941894531
+      ],
+      "text_sha256": "e7164321d1f7bcdf9288ed7ecb35724ef4fb54bb84fdf386074887f5cb8098ea"
+    },
+    {
+      "block_id": "page-0291-block-0011",
+      "order": 11,
+      "text": "Asenapine\n",
+      "bbox": [
+        61.88999938964844,
+        470.6402893066406,
+        111.33999633789062,
+        482.49029541015625
+      ],
+      "text_sha256": "1daa08a62165d94ca617e2405d000db4c88a469ca78841e18d6517852265757d"
+    },
+    {
+      "block_id": "page-0291-block-0012",
+      "order": 12,
+      "text": "Asenapine is given by the sublingual route and is effective in mania.29,30 Efficacy seems \nto be maintained in the longer term,31 RCT evidence showing efficacy in preventing \ndepression and manic episodes, in people with bipolar 1 disorder.32 Asenapine is unlikely \nto cause weight gain and metabolic disturbance33 than other antipsychotics.\n",
+      "bbox": [
+        61.88568115234375,
+        488.55029296875,
+        436.6777038574219,
+        536.2703247070312
+      ],
+      "text_sha256": "38f76c7de5ca10b4c5ec044ac3fb6a4672603d724055f024beb416fb56945b09"
+    },
+    {
+      "block_id": "page-0291-block-0013",
+      "order": 13,
+      "text": "Cariprazine\n",
+      "bbox": [
+        61.89118957519531,
+        554.6403198242188,
+        115.24118041992188,
+        566.4902954101562
+      ],
+      "text_sha256": "8e5b8a98bd34854d9f6a2ec681d63e84d1e8943e8769cb380463bb74a35dc90b"
+    },
+    {
+      "block_id": "page-0291-block-0014",
+      "order": 14,
+      "text": "Cariprazine is efficacious for treating mania as well as depression symptoms in people \nwith mania with mixed features,34 and has a low propensity for weight gain.33\n",
+      "bbox": [
+        61.89118957519531,
+        572.55029296875,
+        436.7012023925781,
+        596.2703247070312
+      ],
+      "text_sha256": "1576025283877232505be444746b2f2a0adcf44abfe051fc9fd35ba673f6baf5"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

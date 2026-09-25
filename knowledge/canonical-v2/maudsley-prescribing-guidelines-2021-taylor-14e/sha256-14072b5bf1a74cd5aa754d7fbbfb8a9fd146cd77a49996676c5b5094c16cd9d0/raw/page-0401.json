@@ -1,0 +1,335 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0401",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 401,
+  "source_page_index": 400,
+  "source_page_display": 401,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "380    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\n■\n■are anticholinergic (dry mouth, blurred vision, constipation). This effect can be exac-\nerbated by other anticholinergic drugs such as antihistamines or antipsychotics. \nBeware cognitive impairment and gastrointestinal obstruction\n■\n■are adrenergic α1 blockers (postural hypotension). This effect can be exacerbated by \nother drugs that block α1-receptors and by antihypertensive drugs in general. Beware \nfalls. Adrenaline in combination with α1-blockers can lead to hypertension\n■\n■are arrhythmogenic. Caution is required with other drugs that can alter cardiac con-\nduction directly or indirectly. See section on ‘Antidepressant-induced arrhythmia’ in \nthis chapter\n■\n■lower the seizure threshold. Caution is required with other proconvulsive drugs (e.g. \nantipsychotics) and particularly if the patient is being treated for epilepsy. See section \non ‘Epilepsy’ (Chapter 10)\n■\n■possess varying degrees of serotonin reuptake inhibition (e.g. imipramine and clomi-\npramine in particular). There is the potential for these drugs to interact with other \nserotonergic drugs (e.g. tramadol, SSRIs, MAOIs, triptans) to cause serotonin \nsyndrome\nSSRIs/SNRIs7–9,11,12\n■\n■increase serotonergic neurotransmission. The main concern when co-prescribed with \nother serotonergic drugs is serotonin syndrome\n■\n■inhibit platelet aggregation and increase the risk of bleeding, particularly of the upper \nGI tract. This effect is exacerbated by aspirin and NSAIDs (see section on ‘SSRIs and \nbleeding’ in this chapter)\n■\n■may be more likely than other antidepressants to cause hyponatraemia (see section \non ‘Antidepressant-induced hyponatraemia’ in this chapter). This may exacerbate \nelectrolyte disturbances caused by other drugs such as diuretics.\n■\n■may cause osteopenia. This adds to the negative effects prolactin elevating drugs have \non bone mineral density and increases the risks of clinical harm should the patient \nhave a fall.\nMAOIs13,14\n■\n■prevent the destruction of monoamine neurotransmitters (e.g. serotonin). \nCo-prescription with serotonergic drugs (in particular, sertonin reuptake inhibitors or \nreleasing agents) risks potentially fatal serotonin syndrome. Examples include SSRI \nand related antidepressants but also certain over-the-counter medicines (e.g. chlor-\nphenamine, dextromethorphan), opioids (e.g. tramadol, pethidine) and drugs of mis-\nuse (e.g. MDMA)\n■\n■prevent the destruction of other monoamine neurotransmitters (e.g. catecholamines). \nCo-prescription with sympathomimetic drugs that raise blood pressure (e.g. psycho-\nstimulants) can cause hypertensive crises. MAOIs also prevent the breakdown of \ndietary tyramine (high levels present in aged and fermented foods), which acts as a \ncatecholamine releasing agent leading to similar hypertensive reactions\n",
+  "raw_text_sha256": "254225e7b9355990a307c39c52d168441ce5761220852338c3cd87e8e22a18dd",
+  "coordinates_sha256": "6db60dfc9c7b2ef37e166a094bc763d539c813b83f8bb1b74d502bf310b39c6c",
+  "block_sequence_sha256": "e2fb02cb8681fc5a4ebcaf9b6d160eca6ec4e8841d82dadcbc66bcc43a813a8d",
+  "blocks": [
+    {
+      "block_id": "page-0401-block-0000",
+      "order": 0,
+      "text": "380    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "a7d6850685488802ab5030609b56ddf097908e40aaddb54d072fa3a5d9b99fcd"
+    },
+    {
+      "block_id": "page-0401-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0401-block-0002",
+      "order": 2,
+      "text": "■\n■are anticholinergic (dry mouth, blurred vision, constipation). This effect can be exac-\n",
+      "bbox": [
+        61.88990020751953,
+        62.55029296875,
+        433.91998291015625,
+        74.27029418945312
+      ],
+      "text_sha256": "4f27ad3d18b76b0d87e5020c4234fcaedaaac823ba63a03c0257c2250841fdd8"
+    },
+    {
+      "block_id": "page-0401-block-0003",
+      "order": 3,
+      "text": "erbated by other anticholinergic drugs such as antihistamines or antipsychotics. \nBeware cognitive impairment and gastrointestinal obstruction\n",
+      "bbox": [
+        70.88999938964844,
+        74.55029296875,
+        436.64996337890625,
+        98.27029418945312
+      ],
+      "text_sha256": "50fdd498c65fb8dd00ed6cb2679414052dee44ae5616b45d856727d0f5479fde"
+    },
+    {
+      "block_id": "page-0401-block-0004",
+      "order": 4,
+      "text": "■\n■are adrenergic α1 blockers (postural hypotension). This effect can be exacerbated by \n",
+      "bbox": [
+        61.88990020751953,
+        98.10029602050781,
+        436.6380920410156,
+        112.64955139160156
+      ],
+      "text_sha256": "161568cc7eaaa48dce231ad453d268660624d4246bb58509fe7dce189171bc1c"
+    },
+    {
+      "block_id": "page-0401-block-0005",
+      "order": 5,
+      "text": "other drugs that block α1-receptors and by antihypertensive drugs in general. Beware \nfalls. Adrenaline in combination with α1-blockers can lead to hypertension\n",
+      "bbox": [
+        70.88579559326172,
+        110.10029602050781,
+        436.6458435058594,
+        136.64955139160156
+      ],
+      "text_sha256": "eebe06af23412e81e8356e17c04b923534b656eb628d312e91dac30f36f31cd0"
+    },
+    {
+      "block_id": "page-0401-block-0006",
+      "order": 6,
+      "text": "■\n■are arrhythmogenic. Caution is required with other drugs that can alter cardiac con-\n",
+      "bbox": [
+        61.88990020751953,
+        134.55029296875,
+        433.90997314453125,
+        146.27029418945312
+      ],
+      "text_sha256": "5119f24efc3b58d4e14f7bff05e07ac59d4aa3cffefb3d8f4fd4c735e491a48d"
+    },
+    {
+      "block_id": "page-0401-block-0007",
+      "order": 7,
+      "text": "duction directly or indirectly. See section on ‘Antidepressant-induced arrhythmia’ in \nthis chapter\n",
+      "bbox": [
+        70.88999938964844,
+        146.55029296875,
+        436.6700134277344,
+        170.27029418945312
+      ],
+      "text_sha256": "635b34ee893e66b855fc212d2d99c434f355b378278c574bd10afb9605fe67ae"
+    },
+    {
+      "block_id": "page-0401-block-0008",
+      "order": 8,
+      "text": "■\n■lower the seizure threshold. Caution is required with other proconvulsive drugs (e.g. \n",
+      "bbox": [
+        61.88990020751953,
+        170.55029296875,
+        436.69000244140625,
+        182.27029418945312
+      ],
+      "text_sha256": "08f10e92b091f6ec4d46b0b3dc2d029ab844c8bcae42bddb20d551d27c046a85"
+    },
+    {
+      "block_id": "page-0401-block-0009",
+      "order": 9,
+      "text": "antipsychotics) and particularly if the patient is being treated for epilepsy. See section \non ‘Epilepsy’ (Chapter 10)\n",
+      "bbox": [
+        70.88999938964844,
+        182.55029296875,
+        436.64996337890625,
+        206.27029418945312
+      ],
+      "text_sha256": "e0975d7c6c04de7bf095f5c9bb944f9bb14091dc3d2c49f3408804a2181bce58"
+    },
+    {
+      "block_id": "page-0401-block-0010",
+      "order": 10,
+      "text": "■\n■possess varying degrees of serotonin reuptake inhibition (e.g. imipramine and clomi-\n",
+      "bbox": [
+        61.88990020751953,
+        206.55029296875,
+        433.8503112792969,
+        218.27029418945312
+      ],
+      "text_sha256": "6dd1f8b6d0390a43598d9b6da90b2f5b7569a1db1c86861d2ba1c65e44655bd9"
+    },
+    {
+      "block_id": "page-0401-block-0011",
+      "order": 11,
+      "text": "pramine in particular). There is the potential for these drugs to interact with other \nserotonergic drugs (e.g. tramadol, SSRIs, MAOIs, triptans) to cause serotonin \nsyndrome\n",
+      "bbox": [
+        70.88999938964844,
+        218.55029296875,
+        436.7000732421875,
+        254.27029418945312
+      ],
+      "text_sha256": "9f1b42c5e55fc076fac1156c95bc7ebb352f266c2134755f26a2e0b30b53a524"
+    },
+    {
+      "block_id": "page-0401-block-0012",
+      "order": 12,
+      "text": "SSRIs/SNRIs7–9,11,12\n",
+      "bbox": [
+        61.88999938964844,
+        272.6402893066406,
+        140.83477783203125,
+        284.49029541015625
+      ],
+      "text_sha256": "d5dadee4b6aff4ff0daea9ca2a0dd39faea7e24da3b0e92809d258ecd284649f"
+    },
+    {
+      "block_id": "page-0401-block-0013",
+      "order": 13,
+      "text": "■\n■increase serotonergic neurotransmission. The main concern when co-prescribed with \n",
+      "bbox": [
+        61.88990020751953,
+        290.55029296875,
+        436.6900329589844,
+        302.2702941894531
+      ],
+      "text_sha256": "57ba145ad0e9f1d0f77852b3aaf24fd7bd6576a86a122ef6c40777b0afae8df2"
+    },
+    {
+      "block_id": "page-0401-block-0014",
+      "order": 14,
+      "text": "other serotonergic drugs is serotonin syndrome\n",
+      "bbox": [
+        70.88999938964844,
+        302.55029296875,
+        273.7099914550781,
+        314.2702941894531
+      ],
+      "text_sha256": "b65cecf5fa0ea12b93a3149afcfa7f60b3282ad79256d262ceec03e1ff338349"
+    },
+    {
+      "block_id": "page-0401-block-0015",
+      "order": 15,
+      "text": "■\n■inhibit platelet aggregation and increase the risk of bleeding, particularly of the upper \n",
+      "bbox": [
+        61.88990020751953,
+        314.55029296875,
+        436.62994384765625,
+        326.2702941894531
+      ],
+      "text_sha256": "ff2e86c4128579814d11f8070f5a39b01305f74412bcb2cc1b56abbaa84f193f"
+    },
+    {
+      "block_id": "page-0401-block-0016",
+      "order": 16,
+      "text": "GI tract. This effect is exacerbated by aspirin and NSAIDs (see section on ‘SSRIs and \nbleeding’ in this chapter)\n",
+      "bbox": [
+        70.88999938964844,
+        326.55029296875,
+        436.7000732421875,
+        350.2702941894531
+      ],
+      "text_sha256": "d560143bd023fcda8186f079c97a7ec6909297666a8df256ce0df847788a5c93"
+    },
+    {
+      "block_id": "page-0401-block-0017",
+      "order": 17,
+      "text": "■\n■may be more likely than other antidepressants to cause hyponatraemia (see section \n",
+      "bbox": [
+        61.88990020751953,
+        350.55029296875,
+        436.6600036621094,
+        362.2702941894531
+      ],
+      "text_sha256": "fd9b6ffacaf130f08984d1f37b9080acc6cad1af1fa2233588c661f4ed6b1596"
+    },
+    {
+      "block_id": "page-0401-block-0018",
+      "order": 18,
+      "text": "on ‘Antidepressant-induced hyponatraemia’ in this chapter). This may exacerbate \nelectrolyte disturbances caused by other drugs such as diuretics.\n",
+      "bbox": [
+        70.88999938964844,
+        362.55029296875,
+        436.6600341796875,
+        386.2702941894531
+      ],
+      "text_sha256": "79f681e2e9e1da238dfba9d8788e80ab79b246f89a5675a7b907c1d752c80bad"
+    },
+    {
+      "block_id": "page-0401-block-0019",
+      "order": 19,
+      "text": "■\n■may cause osteopenia. This adds to the negative effects prolactin elevating drugs have \n",
+      "bbox": [
+        61.88990020751953,
+        386.55029296875,
+        436.6800231933594,
+        398.2702941894531
+      ],
+      "text_sha256": "42473f05ca4e4b2759548638b09b7316fad2f6967f1f2f602bbf98a585a02d27"
+    },
+    {
+      "block_id": "page-0401-block-0020",
+      "order": 20,
+      "text": "on bone mineral density and increases the risks of clinical harm should the patient \nhave a fall.\n",
+      "bbox": [
+        70.88999938964844,
+        398.55029296875,
+        436.6400146484375,
+        422.2702941894531
+      ],
+      "text_sha256": "c7e6ec832ab88ca89ef2a53945b9aa167ba25352a02bcb840c38342e90581658"
+    },
+    {
+      "block_id": "page-0401-block-0021",
+      "order": 21,
+      "text": "MAOIs13,14\n",
+      "bbox": [
+        61.88999938964844,
+        440.6402893066406,
+        108.1362533569336,
+        452.49029541015625
+      ],
+      "text_sha256": "0e7e47832add5afb0d1dd25a306ea0c954fa2d0659f541a85560047ab6144be9"
+    },
+    {
+      "block_id": "page-0401-block-0022",
+      "order": 22,
+      "text": "■\n■prevent the destruction of monoamine neurotransmitters (e.g. serotonin). \n",
+      "bbox": [
+        61.88990020751953,
+        458.55029296875,
+        436.68017578125,
+        470.2702941894531
+      ],
+      "text_sha256": "ce6c1efd032d8d1cdcafbd5d8f140e3ddba7dd8b9b433f6275d36a3ddba4c5f4"
+    },
+    {
+      "block_id": "page-0401-block-0023",
+      "order": 23,
+      "text": "Co-prescription with serotonergic drugs (in particular, sertonin reuptake inhibitors or \nreleasing agents) risks potentially fatal serotonin syndrome. Examples include SSRI \nand related antidepressants but also certain over-the-counter medicines (e.g. chlor-\nphenamine, dextromethorphan), opioids (e.g. tramadol, pethidine) and drugs of mis-\nuse (e.g. MDMA)\n",
+      "bbox": [
+        70.88999938964844,
+        470.55029296875,
+        436.6402282714844,
+        530.2703247070312
+      ],
+      "text_sha256": "db6f927a7ac64b92229909e87a87b21c9873e4637415e1e913c3c8b4211a668b"
+    },
+    {
+      "block_id": "page-0401-block-0024",
+      "order": 24,
+      "text": "■\n■prevent the destruction of other monoamine neurotransmitters (e.g. catecholamines). \n",
+      "bbox": [
+        61.88990020751953,
+        530.55029296875,
+        436.6499938964844,
+        542.2703247070312
+      ],
+      "text_sha256": "b9511761c8d9d3459bcff921655048b0a7a565b5d4a21351d6543cae513058c4"
+    },
+    {
+      "block_id": "page-0401-block-0025",
+      "order": 25,
+      "text": "Co-prescription with sympathomimetic drugs that raise blood pressure (e.g. psycho-\nstimulants) can cause hypertensive crises. MAOIs also prevent the breakdown of \ndietary tyramine (high levels present in aged and fermented foods), which acts as a \ncatecholamine releasing agent leading to similar hypertensive reactions\n",
+      "bbox": [
+        70.88999938964844,
+        542.55029296875,
+        436.6800231933594,
+        590.2703247070312
+      ],
+      "text_sha256": "c3f1d5294bad41db3fa96627c6fa6c154ca22a7ec808042c713fae0127043092"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0273",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 273,
+  "source_page_index": 272,
+  "source_page_display": 273,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "252    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  2\nIn contrast with these recommendations, a naturalistic study found that, in patients \nwho had been in remission for at least 2 years and had discontinued lithium very slowly, \nthe recurrence rate was at least 3 times greater than in patients who continued lithium; \nsignificant survival differences persisted for many years. Patients maintained on high \nlithium levels prior to discontinuation were particularly prone to relapse.56\nA large US study based on prescription records found that half of those prescribed \nlithium took almost all of their prescribed doses, a quarter took between 50% and \n80%, and the remaining quarter took less than 50%; in addition, a third of patients \ntook lithium for less than 6 months in total.57 A large audit found that one in ten \npatients prescribed long-term lithium treatment had a plasma level below the therapeu-\ntic range.58 It is clear that suboptimal adherence limits the effectiveness of lithium in \nclinical practice. A database study suggested the extent to which lithium taken was \ndirectly related to the risk of suicide (more prescriptions = lower suicide rate).59\nLess convincing data support the emergence of depressive symptoms in bipolar \npatients after lithium discontinuation.52 There are few data relating to patients with \nunipolar depression.\nTable 2.1  Lithium – prescribing and monitoring\nIndications\nMania, hypomania, prophylaxis of bipolar affective disorder and recurrent depression. \nReduces aggression and suicidality.\nPre-lithium workup\neGFR and TFTs. ECG recommended in patients who have risk factors for, or existing \ncardiovascular disease. Baseline measure of weight desirable.\nPrescribing\nStart at 400mg at night (200mg in the elderly). Plasma level after 7 days, then 7 days after \nevery dose change until the desired level is reached (0.4mmol/L may be effective in unipolar \ndepression, 0.6–1.0mmol/L in bipolar illness and slightly higher levels in difficult-to-treat \nmania). Blood should be taken 12 hours after the last dose. Take care when prescribing liquid \npreparations to clearly specify the strength required.\nMonitoring\nPlasma lithium every 6 months (more frequent monitoring is necessary in those prescribed \ninteracting drugs, the elderly and those with established renal impairment or other relevant \nphysical illness). eGFR and TFTs every 6 months. Weight (or BMI) should also be monitored.\nStopping\nReduce slowly over at least 1 month and preferably 3 months.\nAvoid reductions in plasma levels of >0.2mmol/L.\nInteractions with other drugs60–62\nBecause of lithium’s relatively narrow therapeutic index, pharmacokinetic interactions \nwith other drugs can precipitate lithium toxicity. Most clinically significant interactions \nare with drugs that alter renal sodium handling.\nACE inhibitors\nAngiotensin-converting enzyme (ACE) inhibitors can (1) reduce thirst leading to mild \ndehydration and (2) increase renal sodium loss leading to increased Na re-absorption \nby the kidney, resulting in an increase in lithium plasma levels. The magnitude of this \n",
+  "raw_text_sha256": "faafb8a05361dd70417feb08ba1f8052d03a6f2bad1374f93f383b38d4b3e1bc",
+  "coordinates_sha256": "f2f1f12b28350ba31f32dc1ff712b9ff5e5a5b086912fc77a101acaaeffab3ad",
+  "block_sequence_sha256": "7cd3e92b61f1c165de9b382244e305f09ece00df6259585dd0f5b1988dd119dd",
+  "blocks": [
+    {
+      "block_id": "page-0273-block-0000",
+      "order": 0,
+      "text": "252    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "c884e1fa3c266170ef99bc1c56ea953a17bef59f0d45ccf6ac3b44373e4e0764"
+    },
+    {
+      "block_id": "page-0273-block-0001",
+      "order": 1,
+      "text": "CHAPTER  2\n",
+      "bbox": [
+        19.520000457763672,
+        145.23529052734375,
+        29.0,
+        188.80328369140625
+      ],
+      "text_sha256": "5befcde2fefe074681a51514b484ad31516d952c51183625b5b7b1fb84f30d2c"
+    },
+    {
+      "block_id": "page-0273-block-0002",
+      "order": 2,
+      "text": "In contrast with these recommendations, a naturalistic study found that, in patients \nwho had been in remission for at least 2 years and had discontinued lithium very slowly, \nthe recurrence rate was at least 3 times greater than in patients who continued lithium; \nsignificant survival differences persisted for many years. Patients maintained on high \nlithium levels prior to discontinuation were particularly prone to relapse.56\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.6799011230469,
+        122.27029418945312
+      ],
+      "text_sha256": "3fc8b61016b12746ed5b7a0aa93d1961ef7695c871bd906bdef4d2ca36568fed"
+    },
+    {
+      "block_id": "page-0273-block-0003",
+      "order": 3,
+      "text": "A large US study based on prescription records found that half of those prescribed \nlithium took almost all of their prescribed doses, a quarter took between 50% and \n80%, and the remaining quarter took less than 50%; in addition, a third of patients \ntook lithium for less than 6 months in total.57 A large audit found that one in ten \npatients prescribed long-term lithium treatment had a plasma level below the therapeu-\ntic range.58 It is clear that suboptimal adherence limits the effectiveness of lithium in \nclinical practice. A database study suggested the extent to which lithium taken was \ndirectly related to the risk of suicide (more prescriptions = lower suicide rate).59\n",
+      "bbox": [
+        61.88630676269531,
+        122.55029296875,
+        436.7032775878906,
+        218.27029418945312
+      ],
+      "text_sha256": "01f78312736510359e38f3d65d10cc9d0a13e42cb6cf8e9df5cdce47c5b8b7b1"
+    },
+    {
+      "block_id": "page-0273-block-0004",
+      "order": 4,
+      "text": "Less convincing data support the emergence of depressive symptoms in bipolar \npatients after lithium discontinuation.52 There are few data relating to patients with \nunipolar depression.\n",
+      "bbox": [
+        61.88618469238281,
+        218.55029296875,
+        436.6862487792969,
+        254.27029418945312
+      ],
+      "text_sha256": "a32af5aef2db6033cb0e945fda466be01da39a839890a3977114b3f3ecca9df1"
+    },
+    {
+      "block_id": "page-0273-block-0005",
+      "order": 5,
+      "text": "Table 2.1  Lithium – prescribing and monitoring\n",
+      "bbox": [
+        67.89029693603516,
+        276.4783935546875,
+        220.7102508544922,
+        285.36590576171875
+      ],
+      "text_sha256": "258047beaa468d43b6a16ceb1bcca471f2a008f1a0936995d5f35f7e22b38f09"
+    },
+    {
+      "block_id": "page-0273-block-0006",
+      "order": 6,
+      "text": "Indications\nMania, hypomania, prophylaxis of bipolar affective disorder and recurrent depression. \nReduces aggression and suicidality.\n",
+      "bbox": [
+        61.89030075073242,
+        296.5334167480469,
+        409.53033447265625,
+        315.2384033203125
+      ],
+      "text_sha256": "f651bc2e475c6003a93d89b0b9ad7c448361ff1c554d3fd2842f9e515f87caf5"
+    },
+    {
+      "block_id": "page-0273-block-0007",
+      "order": 7,
+      "text": "Pre-lithium workup\neGFR and TFTs. ECG recommended in patients who have risk factors for, or existing \ncardiovascular disease. Baseline measure of weight desirable.\n",
+      "bbox": [
+        61.89030456542969,
+        324.6584167480469,
+        402.4278564453125,
+        343.3634033203125
+      ],
+      "text_sha256": "be26d37461127cf18724d9a8f82d9506574f679c5efaaac60dcc3ed5283d4dfe"
+    },
+    {
+      "block_id": "page-0273-block-0008",
+      "order": 8,
+      "text": "Prescribing\nStart at 400mg at night (200mg in the elderly). Plasma level after 7 days, then 7 days after \nevery dose change until the desired level is reached (0.4mmol/L may be effective in unipolar \ndepression, 0.6–1.0mmol/L in bipolar illness and slightly higher levels in difficult-to-treat \nmania). Blood should be taken 12 hours after the last dose. Take care when prescribing liquid \npreparations to clearly specify the strength required.\n",
+      "bbox": [
+        61.89030456542969,
+        352.7834167480469,
+        434.7004089355469,
+        401.48089599609375
+      ],
+      "text_sha256": "26d189b1812c6a041806856ecdb9000f6e805891a994f65281c3472ebbeaca07"
+    },
+    {
+      "block_id": "page-0273-block-0009",
+      "order": 9,
+      "text": "Monitoring\nPlasma lithium every 6 months (more frequent monitoring is necessary in those prescribed \ninteracting drugs, the elderly and those with established renal impairment or other relevant \nphysical illness). eGFR and TFTs every 6 months. Weight (or BMI) should also be monitored.\n",
+      "bbox": [
+        61.89030456542969,
+        410.9009094238281,
+        427.9803771972656,
+        439.6033935546875
+      ],
+      "text_sha256": "94b3f60e240ba75eb18f3c79a205d6c06b9865f9294b85e243fd2a3d7febc8e4"
+    },
+    {
+      "block_id": "page-0273-block-0010",
+      "order": 10,
+      "text": "Stopping\nReduce slowly over at least 1 month and preferably 3 months.\nAvoid reductions in plasma levels of >0.2mmol/L.\n",
+      "bbox": [
+        61.89030456542969,
+        449.0234069824219,
+        333.120361328125,
+        467.7283935546875
+      ],
+      "text_sha256": "9cf1c7746cef3cdcfd127f601bc804d18b988b721eb3aa255f0636834ca8a446"
+    },
+    {
+      "block_id": "page-0273-block-0011",
+      "order": 11,
+      "text": "Interactions with other drugs60–62\n",
+      "bbox": [
+        61.88999938964844,
+        488.3315734863281,
+        230.92611694335938,
+        501.3665771484375
+      ],
+      "text_sha256": "48e938d9334605b8bf56c1beeaf7c59fa2f725bfa6d1e895921c6fe2c8447e65"
+    },
+    {
+      "block_id": "page-0273-block-0012",
+      "order": 12,
+      "text": "Because of lithium’s relatively narrow therapeutic index, pharmacokinetic interactions \nwith other drugs can precipitate lithium toxicity. Most clinically significant interactions \nare with drugs that alter renal sodium handling.\n",
+      "bbox": [
+        61.88999938964844,
+        507.17657470703125,
+        436.6899108886719,
+        542.8966064453125
+      ],
+      "text_sha256": "25f7829687a9b3a9253db0242edacb514d87d87dfb3da02d0cc8d4806d706f98"
+    },
+    {
+      "block_id": "page-0273-block-0013",
+      "order": 13,
+      "text": "ACE inhibitors\n",
+      "bbox": [
+        61.88999938964844,
+        561.2666015625,
+        128.55999755859375,
+        573.1165771484375
+      ],
+      "text_sha256": "c793bde93264efe2ce997e4082a7607211de0b3a0f0c9f040e2fc484119c27be"
+    },
+    {
+      "block_id": "page-0273-block-0014",
+      "order": 14,
+      "text": "Angiotensin-converting enzyme (ACE) inhibitors can (1) reduce thirst leading to mild \ndehydration and (2) increase renal sodium loss leading to increased Na re-absorption \nby the kidney, resulting in an increase in lithium plasma levels. The magnitude of this \n",
+      "bbox": [
+        61.88999938964844,
+        579.1765747070312,
+        436.6999206542969,
+        614.8966064453125
+      ],
+      "text_sha256": "9b10bf7ad7cd2738d6325974468bab025a4faa0f6897b56eaeba353fe210ccb5"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

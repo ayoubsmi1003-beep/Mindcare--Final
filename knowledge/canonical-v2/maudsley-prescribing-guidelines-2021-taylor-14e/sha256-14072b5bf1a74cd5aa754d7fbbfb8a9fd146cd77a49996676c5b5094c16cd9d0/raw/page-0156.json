@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0156",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 156,
+  "source_page_index": 155,
+  "source_page_display": 156,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    135\nCHAPTER 1\nCatatonia\nThere are two catatonia sub-types, a retarded or stuporous form with decreased psy-\nchomotor behaviour and an excited form, characterised by agitation, combativeness, \nimpulsivity and apparently purposeless overactivity.1,2 The former tends to present as \nstupor: the key features include mutism, rigidity, marked psychomotor retardation, \nnegativism, posturing, waxy flexibility, and catalepsy. While historically associated with \nschizophrenia, stupor is also seen in other psychiatric conditions such as depression \nand, less commonly, mania,3–8 alcohol9 or benzodiazepine withdrawal10 and conversion \ndisorder.3,4,11–17 If psychiatric stupor is left untreated, physical health complications are \nunavoidable and develop rapidly. Prompt treatment is crucial to prevent serious com-\nplications such as dehydration, venous thrombosis, pulmonary embolism, pneumonia, \nand ultimately death.18\nA catatonic syndrome may be produced by a variety of systemic, neurological and \ntoxic conditions, including developmental disorders such as autism, neurodegenerative \nconditions19,20 and the following:\n■\n■subarachnoid haemorrhages\n■\n■basal ganglia disorders\n■\n■non-convulsive status epilepticus\n■\n■locked-in and akinetic mutism states\n■\n■endocrine and metabolic disorders, e.g. Wilson’s21\n■\n■Prader–Willi syndrome\n■\n■antiphospholipid syndrome22\n■\n■autoimmune encephalitis23\n■\n■systemic lupus erythematosus24\n■\n■infections (especially CNS infections)\n■\n■dementia\n■\n■drug withdrawal and toxic drug states, e.g. after abrupt withdrawal of clozapine and \nwithdrawal of zolpidem, benzodiazepines25 and many non-psychotropic medications, \nincluding medicines used in oncology.\nThe treatment of stupor in the context of catatonia is somewhat dependent on its cause \nbut should usually include benzodiazepines. Benzodiazepines alone are the drugs of \nchoice for stupor occurring in the context of affective and conversion disorders.5,6,26 It is \npostulated that benzodiazepines may act by increasing GABAergic transmission or \nreducing levels of brain-derived neurotrophic factor.27 There is most clinical experience \nwith lorazepam. Many patients will respond to standard doses (up to 4mg per day), but \nrepeated and higher doses (between 8mg and 24mg per day) may be needed.28 One \nsmall, observational study of patients with catatonic stupor in the context of a mood \ndisorder,5 either major depressive disorder or bipolar disorder, used a lorazepam-diaze-\npam treatment protocol and reported a response in 10 of the 12 patients with intramus-\ncular lorazepam 2–4mg. In another study using a very similar protocol, relief of symptoms \nwas achieved in 18 out of 21 patients with catatonia caused by general medical condi-\ntions or substance misuse.29 Where benzodiazepines are effective, the benefit is of rapid \nonset. A test dose of zolpidem (10mg) may predict response to benzodiazepines,30 and \n",
+  "raw_text_sha256": "bfbc53b87ebee914400fb407f42da24770b8ff2f6d3147ff97d7c841e8b3696d",
+  "coordinates_sha256": "7db84f83eaf86c6fbff7887966053962ae84626396d2b5b70b3eb1cd2260ec6c",
+  "block_sequence_sha256": "147f54fac6f9610e642a23d0a56ee6706aef7ca4ef4979eba09220278f73d069",
+  "blocks": [
+    {
+      "block_id": "page-0156-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    135\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "af81d42dba13775531c5a5e0300eb101926bf480aba5ec82b6365ad81c0064fd"
+    },
+    {
+      "block_id": "page-0156-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0156-block-0002",
+      "order": 2,
+      "text": "Catatonia\n",
+      "bbox": [
+        54.99909973144531,
+        66.06448364257812,
+        105.12608337402344,
+        79.0994873046875
+      ],
+      "text_sha256": "c759e8f776b9dc7b7ed9538da82762e27ef7a80c5647a3c030948aaad047e053"
+    },
+    {
+      "block_id": "page-0156-block-0003",
+      "order": 3,
+      "text": "There are two catatonia sub-types, a retarded or stuporous form with decreased psy-\nchomotor behaviour and an excited form, characterised by agitation, combativeness, \nimpulsivity and apparently purposeless overactivity.1,2 The former tends to present as \nstupor: the key features include mutism, rigidity, marked psychomotor retardation, \nnegativism, posturing, waxy flexibility, and catalepsy. While historically associated with \nschizophrenia, stupor is also seen in other psychiatric conditions such as depression \nand, less commonly, mania,3–8 alcohol9 or benzodiazepine withdrawal10 and conversion \ndisorder.3,4,11–17 If psychiatric stupor is left untreated, physical health complications are \nunavoidable and develop rapidly. Prompt treatment is crucial to prevent serious com-\nplications such as dehydration, venous thrombosis, pulmonary embolism, pneumonia, \nand ultimately death.18\n",
+      "bbox": [
+        47.993995666503906,
+        84.90948486328125,
+        422.8139343261719,
+        216.62948608398438
+      ],
+      "text_sha256": "b7045d42e59febf0e42303aa61ee6af98b82977606463ffb56854efa48664050"
+    },
+    {
+      "block_id": "page-0156-block-0004",
+      "order": 4,
+      "text": "A catatonic syndrome may be produced by a variety of systemic, neurological and \ntoxic conditions, including developmental disorders such as autism, neurodegenerative \nconditions19,20 and the following:\n",
+      "bbox": [
+        47.999000549316406,
+        216.909423828125,
+        422.8089904785156,
+        252.62942504882812
+      ],
+      "text_sha256": "b795524427a2e0838c7e986c2fea02e37c8d7c6036d1821a0d930780342ddab8"
+    },
+    {
+      "block_id": "page-0156-block-0005",
+      "order": 5,
+      "text": "■\n■subarachnoid haemorrhages\n",
+      "bbox": [
+        47.999000549316406,
+        258.909423828125,
+        178.68899536132812,
+        270.6294250488281
+      ],
+      "text_sha256": "68e59abf54ceff73e631e47d9701bb08b814878844dd36eb5a399c051d10880d"
+    },
+    {
+      "block_id": "page-0156-block-0006",
+      "order": 6,
+      "text": "■\n■basal ganglia disorders\n",
+      "bbox": [
+        47.999000549316406,
+        270.909423828125,
+        155.36898803710938,
+        282.6294250488281
+      ],
+      "text_sha256": "8457f10aca877889991d8e78bdae8476a9b610fe592a70a9f4833d61ba572c59"
+    },
+    {
+      "block_id": "page-0156-block-0007",
+      "order": 7,
+      "text": "■\n■non-convulsive status epilepticus\n",
+      "bbox": [
+        47.999000549316406,
+        282.909423828125,
+        198.13897705078125,
+        294.6294250488281
+      ],
+      "text_sha256": "3ee0c68bb0b7b3678828593b3e9e4e525e0ffccff1838a872b7a4944ab63e601"
+    },
+    {
+      "block_id": "page-0156-block-0008",
+      "order": 8,
+      "text": "■\n■locked-in and akinetic mutism states\n",
+      "bbox": [
+        47.999000549316406,
+        294.909423828125,
+        214.21900939941406,
+        306.6294250488281
+      ],
+      "text_sha256": "30fb2220530bc8cc8411f89b5429fe3e1abfc6e950abd89c12f91db883d15961"
+    },
+    {
+      "block_id": "page-0156-block-0009",
+      "order": 9,
+      "text": "■\n■endocrine and metabolic disorders, e.g. Wilson’s21\n",
+      "bbox": [
+        47.999000549316406,
+        306.909423828125,
+        270.3907775878906,
+        318.6294250488281
+      ],
+      "text_sha256": "fc64243714cdcb85a3d8932a63b96e5ec8d4d02bf0d0c78b8f80b7d6e98d4014"
+    },
+    {
+      "block_id": "page-0156-block-0010",
+      "order": 10,
+      "text": "■\n■Prader–Willi syndrome\n",
+      "bbox": [
+        47.999000549316406,
+        318.909423828125,
+        156.2790069580078,
+        330.6294250488281
+      ],
+      "text_sha256": "44ae0cc634ca11a9b3765c894e665a363c80160e02b7d53da91ad706b8cb9429"
+    },
+    {
+      "block_id": "page-0156-block-0011",
+      "order": 11,
+      "text": "■\n■antiphospholipid syndrome22\n",
+      "bbox": [
+        47.999000549316406,
+        330.909423828125,
+        181.8613739013672,
+        342.6294250488281
+      ],
+      "text_sha256": "bc462dea5f8359281a0b976d6d5a163fe9feb0ff74213e80f70ce0a57a12c09b"
+    },
+    {
+      "block_id": "page-0156-block-0012",
+      "order": 12,
+      "text": "■\n■autoimmune encephalitis23\n",
+      "bbox": [
+        47.999000549316406,
+        342.909423828125,
+        171.25086975097656,
+        354.6294250488281
+      ],
+      "text_sha256": "3f7cc15b60b7d62c4265de14935714b29cebfcca07fdf996ef5b30da7d406ca7"
+    },
+    {
+      "block_id": "page-0156-block-0013",
+      "order": 13,
+      "text": "■\n■systemic lupus erythematosus24\n",
+      "bbox": [
+        47.999000549316406,
+        354.909423828125,
+        190.69036865234375,
+        366.6294250488281
+      ],
+      "text_sha256": "c70d0666d2815c6aa7200e250eb4d9cae5e216352a0aa15cb0aceee5029a5463"
+    },
+    {
+      "block_id": "page-0156-block-0014",
+      "order": 14,
+      "text": "■\n■infections (especially CNS infections)\n",
+      "bbox": [
+        47.999000549316406,
+        366.909423828125,
+        216.99900817871094,
+        378.6294250488281
+      ],
+      "text_sha256": "06f5aeb7347baeb69d9670b1c4d8e335aa635274cf9a400ffab80681572e31c1"
+    },
+    {
+      "block_id": "page-0156-block-0015",
+      "order": 15,
+      "text": "■\n■dementia\n",
+      "bbox": [
+        47.999000549316406,
+        378.909423828125,
+        96.42900085449219,
+        390.6294250488281
+      ],
+      "text_sha256": "ed70c3817e664b7ae73d17289845cb2dc7131e1ea5fffda402da80ce79a91e8d"
+    },
+    {
+      "block_id": "page-0156-block-0016",
+      "order": 16,
+      "text": "■\n■drug withdrawal and toxic drug states, e.g. after abrupt withdrawal of clozapine and \n",
+      "bbox": [
+        47.999000549316406,
+        390.909423828125,
+        422.7289733886719,
+        402.6294250488281
+      ],
+      "text_sha256": "9e2fa705d782f0b480e566148e5faf4c55889e574ba3e528e4b93e79e2c66a17"
+    },
+    {
+      "block_id": "page-0156-block-0017",
+      "order": 17,
+      "text": "withdrawal of zolpidem, benzodiazepines25 and many non-psychotropic medications, \nincluding medicines used in oncology.\n",
+      "bbox": [
+        56.999000549316406,
+        402.909423828125,
+        422.7806091308594,
+        426.6294250488281
+      ],
+      "text_sha256": "7f9c4cc14afd09f7b7ef446bade14d6407b255675edc7bcdd42c82718887fd87"
+    },
+    {
+      "block_id": "page-0156-block-0018",
+      "order": 18,
+      "text": "The treatment of stupor in the context of catatonia is somewhat dependent on its cause \nbut should usually include benzodiazepines. Benzodiazepines alone are the drugs of \nchoice for stupor occurring in the context of affective and conversion disorders.5,6,26 It is \npostulated that benzodiazepines may act by increasing GABAergic transmission or \nreducing levels of brain-derived neurotrophic factor.27 There is most clinical experience \nwith lorazepam. Many patients will respond to standard doses (up to 4mg per day), but \nrepeated and higher doses (between 8mg and 24mg per day) may be needed.28 One \nsmall, observational study of patients with catatonic stupor in the context of a mood \ndisorder,5 either major depressive disorder or bipolar disorder, used a lorazepam-diaze-\npam treatment protocol and reported a response in 10 of the 12 patients with intramus-\ncular lorazepam 2–4mg. In another study using a very similar protocol, relief of symptoms \nwas achieved in 18 out of 21 patients with catatonia caused by general medical condi-\ntions or substance misuse.29 Where benzodiazepines are effective, the benefit is of rapid \nonset. A test dose of zolpidem (10mg) may predict response to benzodiazepines,30 and \n",
+      "bbox": [
+        47.99639892578125,
+        432.909423828125,
+        422.8009338378906,
+        600.6294555664062
+      ],
+      "text_sha256": "cd4966f50a00773f46847a4d24a964725006b6ad129dd028e719d0581599ab53"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

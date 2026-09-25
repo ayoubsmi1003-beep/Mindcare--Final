@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0665",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 665,
+  "source_page_index": 664,
+  "source_page_display": 665,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "644    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  6\nManagement of behavioural and psychological symptoms  \nof dementia (BPSD)\nBPSD include a wide range of difficulties, including aggression, agitation, vocalisation, \ndistress during care, disinhibition, hallucinations, delusions, apathy, low mood and \nanxiety.1 Such symptoms occur in over 90% of patients to varying degrees.2 The fact \nthat several of these occur simultaneously in individuals makes it difficult to target \nspecific symptoms. The drug treatment of these symptoms is not supported by a robust \nbody of scientific evidence3 and many available agents have serious adverse effects.\nNon-drug measures\nSince the publication in the UK of the report Time for Action, which detailed the risks \nassociated with antipsychotic use in dementia,4 there has been a drive to review evidence \nfor antipsychotics and to formulate non-pharmacological treatment pathways for BPSD. \nSystematic reviews have been completed,5 new models of care have been developed6,7 \nand guidance documents have been written.8 The key themes include the following:\n1.\t An individualised and pragmatic approach to treatment rather than the application \nof ‘off-the-shelf’ therapies.\n2.\t Ensuring contributory physical factors are addressed as a first step. These include \npain (see section later), acute physical illness, constipation and medication side \neffects (see safer prescribing in dementia section).\n3.\t The importance of understanding ‘problem behaviours’ as an expression of distress \nand unmet need.6,7\n4.\t Use of life history, direct observation of care and data collection (e.g. sleep, pain \nand ABC charts) to understand what the unmet needs might be and to inform \n­treatment changes.8\n5.\t Formulation meetings to develop a model of the factors leading to and ­perpetuating \nthe behaviour, which can be modified in light of new evidence.\n6.\t Clear and pragmatic care plans developed with carers to address unmet needs \n­identified through the above processes.\n7.\t Care plans reviewed and adjusted according to effectiveness of the interventions \ntried.\nSome more structured psychosocial interventions for BPSD9 are reasonably well sup-\nported by research.10 These interventions can be useful to consider as part of an indi-\nvidualised care plan and are better if implemented by supporting care givers and \ndeveloping their skills. Behavioural management techniques and caregiver psychoedu-\ncation centred on individual patient’s behaviour have been found to be generally suc-\ncessful and the effects can last for months.11\nA systematic review of systematic reviews12 provided an overview of the evidence for \nthese interventions. Among sensory simulation interventions, the only convincingly \neffective intervention (reducing agitation and aggressive behaviour) was music therapy. \nWhilst a well-conducted study13 (n = 71) reported a favourable treatment effect on \nmeasures of agitation and behavioural symptoms with Melissa balm, this has not been \nreplicated due to methodological limitations.12 The efﬁcacy of aromatherapy and \n",
+  "raw_text_sha256": "c124f5724f5fbc457aea16786ca6add88647877ca4ae509c55abc66e1fb4fb2a",
+  "coordinates_sha256": "d25bae30dd581908ab988961f2ad81ec5dd77e058117feb829270bd8dbad1ecf",
+  "block_sequence_sha256": "0e7cccba17c92354373de91058f04b9863547d92fe6cc1e02bcf978646561b30",
+  "blocks": [
+    {
+      "block_id": "page-0665-block-0000",
+      "order": 0,
+      "text": "644    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "6f8e0c4e406bf44756964f646e74f3549ddc888af861d2083028fe10af4a0d45"
+    },
+    {
+      "block_id": "page-0665-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        18.520000457763672,
+        405.35260009765625,
+        28.0,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0665-block-0002",
+      "order": 2,
+      "text": "Management of behavioural and psychological symptoms  \nof dementia (BPSD)\n",
+      "bbox": [
+        68.88999938964844,
+        68.06539916992188,
+        374.4920654296875,
+        93.10137939453125
+      ],
+      "text_sha256": "ac34053fc40519c586ef7b8af173e24e42479c638ddb7b459db2dba28aeb9d3b"
+    },
+    {
+      "block_id": "page-0665-block-0003",
+      "order": 3,
+      "text": "BPSD include a wide range of difficulties, including aggression, agitation, vocalisation, \ndistress during care, disinhibition, hallucinations, delusions, apathy, low mood and \nanxiety.1 Such symptoms occur in over 90% of patients to varying degrees.2 The fact \nthat several of these occur simultaneously in individuals makes it difficult to target \nspecific symptoms. The drug treatment of these symptoms is not supported by a robust \nbody of scientific evidence3 and many available agents have serious adverse effects.\n",
+      "bbox": [
+        61.88999938964844,
+        98.910400390625,
+        436.7202453613281,
+        170.63040161132812
+      ],
+      "text_sha256": "a870d42b9db63c9a87a61eac54d788dc1036e5550c060946d478bc00a11f1892"
+    },
+    {
+      "block_id": "page-0665-block-0004",
+      "order": 4,
+      "text": "Non-drug measures\n",
+      "bbox": [
+        61.88999938964844,
+        188.06539916992188,
+        163.13400268554688,
+        201.10040283203125
+      ],
+      "text_sha256": "8c1ed13795e3403385ba3a1d054e50cfbc982d4a02771f4e3cd77d794a68c31d"
+    },
+    {
+      "block_id": "page-0665-block-0005",
+      "order": 5,
+      "text": "Since the publication in the UK of the report Time for Action, which detailed the risks \nassociated with antipsychotic use in dementia,4 there has been a drive to review evidence \nfor antipsychotics and to formulate non-pharmacological treatment pathways for BPSD. \nSystematic reviews have been completed,5 new models of care have been developed6,7 \nand guidance documents have been written.8 The key themes include the following:\n",
+      "bbox": [
+        61.889801025390625,
+        206.910400390625,
+        436.68505859375,
+        266.6304016113281
+      ],
+      "text_sha256": "f49e337146ab06edb79c68670a3c1ddc6f3c3604e81cead9aa71194e688f2c3e"
+    },
+    {
+      "block_id": "page-0665-block-0006",
+      "order": 6,
+      "text": "1.\t An individualised and pragmatic approach to treatment rather than the application \nof ‘off-the-shelf’ therapies.\n2.\t Ensuring contributory physical factors are addressed as a first step. These include \npain (see section later), acute physical illness, constipation and medication side \neffects (see safer prescribing in dementia section).\n3.\t The importance of understanding ‘problem behaviours’ as an expression of distress \nand unmet need.6,7\n",
+      "bbox": [
+        65.92059326171875,
+        272.910400390625,
+        436.6705627441406,
+        356.6304016113281
+      ],
+      "text_sha256": "23cf15a6abd3ada8b997f64d560f06df610549c71bf8b956583db0aa01476081"
+    },
+    {
+      "block_id": "page-0665-block-0007",
+      "order": 7,
+      "text": "4.\t Use of life history, direct observation of care and data collection (e.g. sleep, pain \nand ABC charts) to understand what the unmet needs might be and to inform \n­treatment changes.8\n",
+      "bbox": [
+        65.9198989868164,
+        356.910400390625,
+        436.68994140625,
+        392.6304016113281
+      ],
+      "text_sha256": "0cb2479e5f2aa4b9cf84a4dd6d3683a5ce51cdc46f0c6e290d0e7a85214ac0f1"
+    },
+    {
+      "block_id": "page-0665-block-0008",
+      "order": 8,
+      "text": "5.\t Formulation meetings to develop a model of the factors leading to and ­perpetuating \nthe behaviour, which can be modified in light of new evidence.\n6.\t Clear and pragmatic care plans developed with carers to address unmet needs \n­identified through the above processes.\n7.\t Care plans reviewed and adjusted according to effectiveness of the interventions \ntried.\n",
+      "bbox": [
+        65.9198989868164,
+        392.910400390625,
+        436.6698913574219,
+        464.6304016113281
+      ],
+      "text_sha256": "0aab19d60d6dc1276ec4028b9e05c2447cb4347fdd3e6fe138034499d02516bd"
+    },
+    {
+      "block_id": "page-0665-block-0009",
+      "order": 9,
+      "text": "Some more structured psychosocial interventions for BPSD9 are reasonably well sup-\nported by research.10 These interventions can be useful to consider as part of an indi-\nvidualised care plan and are better if implemented by supporting care givers and \ndeveloping their skills. Behavioural management techniques and caregiver psychoedu-\ncation centred on individual patient’s behaviour have been found to be generally suc-\ncessful and the effects can last for months.11\n",
+      "bbox": [
+        61.88990020751953,
+        470.910400390625,
+        436.67205810546875,
+        542.6304321289062
+      ],
+      "text_sha256": "87046d7ef85b131f89ddbea7775d6f2e751632c5024b86f4a1cd13c2d193d941"
+    },
+    {
+      "block_id": "page-0665-block-0010",
+      "order": 10,
+      "text": "A systematic review of systematic reviews12 provided an overview of the evidence for \nthese interventions. Among sensory simulation interventions, the only convincingly \neffective intervention (reducing agitation and aggressive behaviour) was music therapy. \nWhilst a well-conducted study13 (n = 71) reported a favourable treatment effect on \nmeasures of agitation and behavioural symptoms with Melissa balm, this has not been \nreplicated due to methodological limitations.12 The efﬁcacy of aromatherapy and \n",
+      "bbox": [
+        61.88838195800781,
+        542.910400390625,
+        436.7020568847656,
+        614.6304321289062
+      ],
+      "text_sha256": "033f4c15432ec00fb6d8c356c026f66a743daa90143fc997a59e345f11e260f5"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0823",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 823,
+  "source_page_index": 822,
+  "source_page_display": 823,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "802    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\n\t33.\t Deb S, et al. The effectiveness of mood stabilizers and antiepileptic medication for the management of behaviour problems in adults with \nintellectual disability: a systematic review. J Intellect Disabil Res 2008; 52:107–113.\n\t34.\t Ruedrich S, et al. Effect of divalproex sodium on aggression and self-injurious behaviour in adults with intellectual disability: a retrospective \nreview. J Intellect Disabil Res 1999; 43(Pt 2):105–111.\n\t35.\t Donovan SJ, et al. Divalproex treatment for youth with explosive temper and mood lability: a double-blind, placebo-controlled crossover \ndesign. Am J Psychiatry 2000; 157:818–820.\n\t36.\t Unwin GL, et al. Use of medication for the management of behavior problems among adults with intellectual disabilities: a clinicians’ con-\nsensus survey. Am J Ment Retard 2008; 113:19–31.\n\t37.\t Pary RJ. Towards defining adequate lithium trials for individuals with mental retardation and mental illness. Am J Ment Retard 1991; \n95:681–691.\n\t38.\t Craft M, et al. Lithium in the treatment of aggression in mentally handicapped patients: a double-blind trial. Br J Psychiatry 1987; \n150:685–689.\n\t39.\t Malone RP, et al. A double-blind placebo-controlled study of lithium in hospitalized aggressive children and adolescents with conduct disor-\nder. Arch Gen Psychiatry 2000; 57:649–654.\n\t40.\t Yuan J, et al. Lithium treatment is safe in children with intellectual disability. Front Mol Neurosci 2018; 11:425.\n\t41.\t Campbell M, et al. Naltrexone in autistic children: an acute open dose range tolerance trial. J Am Acad Child Adolesc Psychiatry 1989; \n28:200–206.\n\t42.\t Barrett RP, et al. Effects of naloxone and naltrexone on self-injury: a double-blind, placebo-controlled analysis. Am J Ment Retard 1989; \n93:644–651.\n\t43.\t Mouaffak F, et al. Kleptomania treated with naltrexone in a patient with intellectual disability. J Psychiatry Neurosci 2020; 45:71–72.\n\t44.\t Sabus A, et al. Management of self-injurious behaviors in children with neurodevelopmental disorders: a pharmacotherapy overview. \nPharmacotherapy 2019; 39:645–664.\n",
+  "raw_text_sha256": "17d105aa80043c68a970ad6193d4ab486fe3174e9ea224eb5143c99be168fe1d",
+  "coordinates_sha256": "e007d0c13d5f23d7b1cb2c48371ca6a086bcc140a05adf3e1b710d6c4a15de4b",
+  "block_sequence_sha256": "e999db6468fb2f8aa44a5f5803a64bf3ec65eafad5a05e24620aeb21eecb31a2",
+  "blocks": [
+    {
+      "block_id": "page-0823-block-0000",
+      "order": 0,
+      "text": "802    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "fed01e2ca337c9add22cac96d8358e0fcd3bf6350396a60a5bb2809e8619a522"
+    },
+    {
+      "block_id": "page-0823-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0823-block-0002",
+      "order": 2,
+      "text": "\t33.\t Deb S, et al. The effectiveness of mood stabilizers and antiepileptic medication for the management of behaviour problems in adults with \n",
+      "bbox": [
+        61.88999938964844,
+        63.2703857421875,
+        435.593994140625,
+        70.30238342285156
+      ],
+      "text_sha256": "57281ec3467f4062e042ece1b1175fecfbc96ad3ee3efc78214a9547a7dcc29b"
+    },
+    {
+      "block_id": "page-0823-block-0003",
+      "order": 3,
+      "text": "intellectual disability: a systematic review. J Intellect Disabil Res 2008; 52:107–113.\n\t34.\t Ruedrich S, et al. Effect of divalproex sodium on aggression and self-injurious behaviour in adults with intellectual disability: a retrospective \n",
+      "bbox": [
+        61.895999908447266,
+        72.12638854980469,
+        435.6118469238281,
+        88.30238342285156
+      ],
+      "text_sha256": "98bffc188fbbcffb5c0c4f3ead6dae0ff85bad7e2118de82e883936844c0167b"
+    },
+    {
+      "block_id": "page-0823-block-0004",
+      "order": 4,
+      "text": "review. J Intellect Disabil Res 1999; 43(Pt 2):105–111.\n\t35.\t Donovan SJ, et al. Divalproex treatment for youth with explosive temper and mood lability: a double-blind, placebo-controlled crossover \n",
+      "bbox": [
+        61.902000427246094,
+        90.12638854980469,
+        435.5999755859375,
+        106.30238342285156
+      ],
+      "text_sha256": "7e1e75259d534df784d8dc0ae5b2e11ba089e450648c8608e2426e5716682f44"
+    },
+    {
+      "block_id": "page-0823-block-0005",
+      "order": 5,
+      "text": "design. Am J Psychiatry 2000; 157:818–820.\n\t36.\t Unwin GL, et al. Use of medication for the management of behavior problems among adults with intellectual disabilities: a clinicians’ con-\n",
+      "bbox": [
+        61.90800094604492,
+        108.12638854980469,
+        433.865966796875,
+        124.30238342285156
+      ],
+      "text_sha256": "281e623d3d566021e3dea687aa5c3c77f31376fddee078d5cf3bb1d69e5e437d"
+    },
+    {
+      "block_id": "page-0823-block-0006",
+      "order": 6,
+      "text": "sensus survey. Am J Ment Retard 2008; 113:19–31.\n\t37.\t Pary RJ. Towards defining adequate lithium trials for individuals with mental retardation and mental illness. Am J Ment Retard 1991; \n",
+      "bbox": [
+        61.91400146484375,
+        126.12638854980469,
+        435.62384033203125,
+        142.30238342285156
+      ],
+      "text_sha256": "26f4b61e9d7f0f01dbccf44dbaa84fec162cc9121807496c7534f1c444a47b38"
+    },
+    {
+      "block_id": "page-0823-block-0007",
+      "order": 7,
+      "text": "95:681–691.\n\t38.\t Craft M, et al. Lithium in the treatment of aggression in mentally handicapped patients: a double-blind trial. Br J Psychiatry 1987; \n",
+      "bbox": [
+        61.91999816894531,
+        144.1263885498047,
+        435.5521240234375,
+        160.30238342285156
+      ],
+      "text_sha256": "16dc9a2a16f434dc8a33e333a5549b8e2d3c79dc5b7e119f411310778f78fde2"
+    },
+    {
+      "block_id": "page-0823-block-0008",
+      "order": 8,
+      "text": "150:685–689.\n\t39.\t Malone RP, et al. A double-blind placebo-controlled study of lithium in hospitalized aggressive children and adolescents with conduct disor-\n",
+      "bbox": [
+        61.92599868774414,
+        162.1263885498047,
+        433.9319763183594,
+        178.30238342285156
+      ],
+      "text_sha256": "93e9640ba40b4b91f9d9f55be5b7d9079f21372468c31afd70fa3dfa464e0e62"
+    },
+    {
+      "block_id": "page-0823-block-0009",
+      "order": 9,
+      "text": "der. Arch Gen Psychiatry 2000; 57:649–654.\n\t40.\t Yuan J, et al. Lithium treatment is safe in children with intellectual disability. Front Mol Neurosci 2018; 11:425.\n\t41.\t Campbell M, et al. Naltrexone in autistic children: an acute open dose range tolerance trial. J Am Acad Child Adolesc Psychiatry 1989; \n",
+      "bbox": [
+        61.93199920654297,
+        180.1263885498047,
+        435.6480407714844,
+        205.30238342285156
+      ],
+      "text_sha256": "5db276a274814a8cf3299daa621f8bc24862bb2793078e020b88f21706919cfb"
+    },
+    {
+      "block_id": "page-0823-block-0010",
+      "order": 10,
+      "text": "28:200–206.\n\t42.\t Barrett RP, et al. Effects of naloxone and naltrexone on self-injury: a double-blind, placebo-controlled analysis. Am J Ment Retard 1989; \n",
+      "bbox": [
+        61.944000244140625,
+        207.1263885498047,
+        435.5760803222656,
+        223.30238342285156
+      ],
+      "text_sha256": "9e71d1d1f8697df2fa2816a4024a531c760f5f3503d202925960cc09a417fbda"
+    },
+    {
+      "block_id": "page-0823-block-0011",
+      "order": 11,
+      "text": "93:644–651.\n\t43.\t Mouaffak F, et al. Kleptomania treated with naltrexone in a patient with intellectual disability. J Psychiatry Neurosci 2020; 45:71–72.\n\t44.\t Sabus A, et al. Management of self-injurious behaviors in children with neurodevelopmental disorders: a pharmacotherapy overview. \n",
+      "bbox": [
+        61.95000076293945,
+        225.1263885498047,
+        435.65399169921875,
+        250.30238342285156
+      ],
+      "text_sha256": "d3d8d7e6a27de8965ea63c7b6e3e48a0a55ce7c800322612200a6b7540e4f5f6"
+    },
+    {
+      "block_id": "page-0823-block-0012",
+      "order": 12,
+      "text": "Pharmacotherapy 2019; 39:645–664.\n",
+      "bbox": [
+        72.95999145507812,
+        252.1263885498047,
+        169.88397216796875,
+        259.3023986816406
+      ],
+      "text_sha256": "a1a002ae89016eb9e80bc95c78f1fb331a06f5e40e9eb051cca27805965ea962"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

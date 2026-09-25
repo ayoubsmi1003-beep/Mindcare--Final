@@ -1,0 +1,335 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0953",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 953,
+  "source_page_index": 952,
+  "source_page_display": 953,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "932    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 14\nSite of administration of intramuscular injections\nTable 14.7 gives the sites of administration formally indicated in the individual prod-\nuct’s EU licence. Other routes and sites may be possible, but pharmacokinetic analysis \nof administration via these sites is generally not available.\nTable 14.7  Site of administration of intramuscular injections\nAntipsychotic generic name and \nformulation\nSite(s) of administration\nTypical antipsychotic (FGA) depots\nBromperidol decanoate\n(available in Belgium, Germany, Italy and the \nNetherlands1)\n(in sesame oil)\nDeep intramuscular injection into the gluteal muscle. SPC in some \ncountries recommend to alternate injections into the left and \nright sides to prevent pain at the injection site.2\nClopentixol decanoate\n(in Viscoleo® thin vegetable oil)\nDeep intramuscular injection into the gluteal region.3,4\nFlupentixol decanoate\n(in thin vegetable oil derived from coconuts)\nDeep intramuscular injection into the upper outer buttock \n(dorsogluteal) or lateral thigh (vastus lateralis).5\nFluphenazine decanoate\n(in sesame oil)\nDeep intramuscular injection into the gluteal region.5\nCan also be administered into the lateral surface of the thigh \nmuscle but this is unlicensed use. Administration into the \ndeltoid is not recommended by manufacturer.6\nFluspirilene\n(available in some EU countries, Canada, \nArgentina and Israel7)\n(in vegetable oil8)\nDeep intramuscular injection into the gluteus muscle (intragluteal). \nBecause of its microcrystalline form, irritation and inflammation \nsymptoms may occur at the injection site. Manufacturer \nrecommends to alternate between left and right gluteal muscle.2,9\nHaloperidol decanoate\n(in sesame oil)\nDeep intramuscular injection into the gluteal region using an \nappropriate needle, preferably 2–2.5 inches long, of at least 21 \ngauge.5\nCan also be administered into the deltoid muscle according to \nthe manufacturer.10 Although this is an unlicensed use one trial \nsuggests it is safe and effective.11\nPerphenazine decanoate\n(in clinical use in the Nordic countries, \nBelgium, Portugal and the Netherlands12)\n(in sesame oil)\nDeep intramuscular injection.12,13\nNo other information available.\nPerphenazine enanthate\n(in clinical use in the Nordic countries, \nBelgium, Portugal and the Netherlands12)\n(in sesame oil)\nDeep intramuscular injection into the gluteal region.12,14\n",
+  "raw_text_sha256": "e2226835cdc98f7446ff4af46d48b2716987945f0d137d06f9e5fb46e67ed7f9",
+  "coordinates_sha256": "94e294a961baf44913725ccb78e28386ed2ad2abcfb2acb0cc24adc03f7d9b0e",
+  "block_sequence_sha256": "8862c8f822a01a9871b936778f21b19d7b2c78c8a0961a0ce5ed1c3b01b149e8",
+  "blocks": [
+    {
+      "block_id": "page-0953-block-0000",
+      "order": 0,
+      "text": "932    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "52ace4ba1ba1122ea59d84450e3e5c1d0404d885e1244ddaa1f8d3473f681e61"
+    },
+    {
+      "block_id": "page-0953-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        18.520000457763672,
+        338.7405090332031,
+        28.0,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0953-block-0002",
+      "order": 2,
+      "text": "Site of administration of intramuscular injections\n",
+      "bbox": [
+        68.88980102539062,
+        65.39218139648438,
+        321.9338684082031,
+        78.42718505859375
+      ],
+      "text_sha256": "e133a250473196738679e61bd01f099f3412860d4f08fb7b449e157c1a464c55"
+    },
+    {
+      "block_id": "page-0953-block-0003",
+      "order": 3,
+      "text": "Table 14.7 gives the sites of administration formally indicated in the individual prod-\nuct’s EU licence. Other routes and sites may be possible, but pharmacokinetic analysis \nof administration via these sites is generally not available.\n",
+      "bbox": [
+        61.889801025390625,
+        84.2371826171875,
+        436.6198425292969,
+        119.95718383789062
+      ],
+      "text_sha256": "f65c9df3f4fcc841ec3aa973a36d9bcb1c7bd9dc44bade6f4960f2102ee274a3"
+    },
+    {
+      "block_id": "page-0953-block-0004",
+      "order": 4,
+      "text": "Table 14.7  Site of administration of intramuscular injections\n",
+      "bbox": [
+        67.89099884033203,
+        152.67152404785156,
+        261.2484436035156,
+        161.55902099609375
+      ],
+      "text_sha256": "e94726c68328f2d25609d0cd912b28d382269528e5e09ff7eec67236db82acea"
+    },
+    {
+      "block_id": "page-0953-block-0005",
+      "order": 5,
+      "text": "Antipsychotic generic name and \nformulation\nSite(s) of administration\n",
+      "bbox": [
+        61.89099884033203,
+        172.90650939941406,
+        301.38848876953125,
+        191.79150390625
+      ],
+      "text_sha256": "d512d42c6da481513c028d4bf88b23bd1acdaed5161cd96bfc6cfdf69d1a0b07"
+    },
+    {
+      "block_id": "page-0953-block-0006",
+      "order": 6,
+      "text": "Typical antipsychotic (FGA) depots\n",
+      "bbox": [
+        61.89100646972656,
+        203.1389923095703,
+        182.31100463867188,
+        212.0264892578125
+      ],
+      "text_sha256": "2c24bc5e6d7ecf5b816a9cb8f9693c088472e88b39d002f8377ca2a1fbc9ce2d"
+    },
+    {
+      "block_id": "page-0953-block-0007",
+      "order": 7,
+      "text": "Bromperidol decanoate\n(available in Belgium, Germany, Italy and the \nNetherlands1)\n(in sesame oil)\n",
+      "bbox": [
+        61.89100646972656,
+        220.1639862060547,
+        205.7935028076172,
+        259.0514831542969
+      ],
+      "text_sha256": "c4d81634fee84fdb54570670b8497baa64209cf3265015b089bb2021db014e05"
+    },
+    {
+      "block_id": "page-0953-block-0008",
+      "order": 8,
+      "text": "Deep intramuscular injection into the gluteal muscle. SPC in some \ncountries recommend to alternate injections into the left and \nright sides to prevent pain at the injection site.2\n",
+      "bbox": [
+        216.37669372558594,
+        220.34397888183594,
+        428.48431396484375,
+        249.04647827148438
+      ],
+      "text_sha256": "593a49c1359c5842cc5067678323180f20c9c9ea34d9f76a2e643800eb18e59c"
+    },
+    {
+      "block_id": "page-0953-block-0009",
+      "order": 9,
+      "text": "Clopentixol decanoate\n(in Viscoleo® thin vegetable oil)\n",
+      "bbox": [
+        61.89099884033203,
+        265.19146728515625,
+        163.36598205566406,
+        284.07647705078125
+      ],
+      "text_sha256": "5462cdc6c37fe26852cced5f244aaa327588ddfc0b525386ffe13fc3f1e06161"
+    },
+    {
+      "block_id": "page-0953-block-0010",
+      "order": 10,
+      "text": "Deep intramuscular injection into the gluteal region.3,4\n",
+      "bbox": [
+        216.37600708007812,
+        265.19146728515625,
+        394.42498779296875,
+        274.0789794921875
+      ],
+      "text_sha256": "62eb9051ee089ff695b63151d774fedb49349c47b06a378b94535183deb269b4"
+    },
+    {
+      "block_id": "page-0953-block-0011",
+      "order": 11,
+      "text": "Flupentixol decanoate\n(in thin vegetable oil derived from coconuts)\n",
+      "bbox": [
+        61.89099884033203,
+        290.21649169921875,
+        202.60598754882812,
+        309.10150146484375
+      ],
+      "text_sha256": "dcf23ac403d27b310802028d9234f6faec32c714dd9de1733c4330ec620c7652"
+    },
+    {
+      "block_id": "page-0953-block-0012",
+      "order": 12,
+      "text": "Deep intramuscular injection into the upper outer buttock \n(dorsogluteal) or lateral thigh (vastus lateralis).5\n",
+      "bbox": [
+        216.37600708007812,
+        290.21649169921875,
+        410.14605712890625,
+        309.10150146484375
+      ],
+      "text_sha256": "754a7b20750e3b2a7ab4a0b09dee4e32652b14da344893f41fd9b0f818ac00a5"
+    },
+    {
+      "block_id": "page-0953-block-0013",
+      "order": 13,
+      "text": "Fluphenazine decanoate\n(in sesame oil)\n",
+      "bbox": [
+        61.8911018371582,
+        315.2414855957031,
+        147.74356079101562,
+        334.1264953613281
+      ],
+      "text_sha256": "2420ab31285188bea12e7b7c3fb43ed24ba832557bd2a4be06b69127e4e31d54"
+    },
+    {
+      "block_id": "page-0953-block-0014",
+      "order": 14,
+      "text": "Deep intramuscular injection into the gluteal region.5\n",
+      "bbox": [
+        216.3760986328125,
+        315.2414855957031,
+        390.7783203125,
+        324.1289978027344
+      ],
+      "text_sha256": "6151e9331ddf31b12e2ecf999efa579e5adbc4bd9c387509ee23885b36427a72"
+    },
+    {
+      "block_id": "page-0953-block-0015",
+      "order": 15,
+      "text": "Can also be administered into the lateral surface of the thigh \nmuscle but this is unlicensed use. Administration into the \ndeltoid is not recommended by manufacturer.6\n",
+      "bbox": [
+        216.3740997314453,
+        325.2414855957031,
+        422.54168701171875,
+        354.1239929199219
+      ],
+      "text_sha256": "0a9f2fefa218644162168c9fcb565073dc8196062f29a2629fb0255d01058a96"
+    },
+    {
+      "block_id": "page-0953-block-0016",
+      "order": 16,
+      "text": "Fluspirilene\n(available in some EU countries, Canada, \nArgentina and Israel7)\n(in vegetable oil8)\n",
+      "bbox": [
+        61.89099884033203,
+        360.2664794921875,
+        193.58351135253906,
+        399.15399169921875
+      ],
+      "text_sha256": "ad8f9052c02dad27a9d2192968e0d2be22ecbb4dc98b169fdb9b7ac7077f99c7"
+    },
+    {
+      "block_id": "page-0953-block-0017",
+      "order": 17,
+      "text": "Deep intramuscular injection into the gluteus muscle (intragluteal). \nBecause of its microcrystalline form, irritation and inflammation \nsymptoms may occur at the injection site. Manufacturer \nrecommends to alternate between left and right gluteal muscle.2,9\n",
+      "bbox": [
+        216.37640380859375,
+        360.2664794921875,
+        429.9462890625,
+        399.146484375
+      ],
+      "text_sha256": "d0062e54d1067d10cb88626528570fef0c1eaa07b56efb6249f881d565d51917"
+    },
+    {
+      "block_id": "page-0953-block-0018",
+      "order": 18,
+      "text": "Haloperidol decanoate\n(in sesame oil)\n",
+      "bbox": [
+        61.890899658203125,
+        405.2914733886719,
+        141.9083709716797,
+        424.1764831542969
+      ],
+      "text_sha256": "f7b67aae1a9a8def0782dc044aa47460e148a3dbbbd487aaae1a431df90d52f1"
+    },
+    {
+      "block_id": "page-0953-block-0019",
+      "order": 19,
+      "text": "Deep intramuscular injection into the gluteal region using an \nappropriate needle, preferably 2–2.5 inches long, of at least 21 \ngauge.5\n",
+      "bbox": [
+        216.3759002685547,
+        405.2914733886719,
+        419.90350341796875,
+        434.1739807128906
+      ],
+      "text_sha256": "f358958875ef309b9c7bfeabbc7acc146c5e0e96fc58284438296159ab4992ea"
+    },
+    {
+      "block_id": "page-0953-block-0020",
+      "order": 20,
+      "text": "Can also be administered into the deltoid muscle according to \nthe manufacturer.10 Although this is an unlicensed use one trial \nsuggests it is safe and effective.11\n",
+      "bbox": [
+        216.37399291992188,
+        435.2914733886719,
+        427.92071533203125,
+        464.1764831542969
+      ],
+      "text_sha256": "53cd1eeda2d77412ec9cf5eda0d5f54d2f8de4e2cd986f976e85996b1941993c"
+    },
+    {
+      "block_id": "page-0953-block-0021",
+      "order": 21,
+      "text": "Perphenazine decanoate\n(in clinical use in the Nordic countries, \nBelgium, Portugal and the Netherlands12)\n(in sesame oil)\n",
+      "bbox": [
+        61.89099884033203,
+        470.31646728515625,
+        192.61720275878906,
+        509.20147705078125
+      ],
+      "text_sha256": "e8fcb52f65fbb975e153dd78c0b89ef2df2c84f4a0c901b3513df942ef25b4c0"
+    },
+    {
+      "block_id": "page-0953-block-0022",
+      "order": 22,
+      "text": "Deep intramuscular injection.12,13\n",
+      "bbox": [
+        216.377197265625,
+        470.4939880371094,
+        320.6502380371094,
+        479.20147705078125
+      ],
+      "text_sha256": "f8abbbea0d5e1e4c3324db772ce84422a2da2b4f25551426a8c2aa3b63c5c7e1"
+    },
+    {
+      "block_id": "page-0953-block-0023",
+      "order": 23,
+      "text": "No other information available.\n",
+      "bbox": [
+        216.37399291992188,
+        480.4964904785156,
+        315.9665222167969,
+        489.2039794921875
+      ],
+      "text_sha256": "fc53a147e0bfffb16063531514afee66ba0cc70d6edbd18b1a13075c3082e836"
+    },
+    {
+      "block_id": "page-0953-block-0024",
+      "order": 24,
+      "text": "Perphenazine enanthate\n(in clinical use in the Nordic countries, \nBelgium, Portugal and the Netherlands12)\n(in sesame oil)\n",
+      "bbox": [
+        61.88899230957031,
+        515.3414916992188,
+        192.61720275878906,
+        554.2265014648438
+      ],
+      "text_sha256": "3afda8a472db20c73dbd1e23bb6b02c2969652bf0ebdbef68545d1ac05c2a2ad"
+    },
+    {
+      "block_id": "page-0953-block-0025",
+      "order": 25,
+      "text": "Deep intramuscular injection into the gluteal region.12,14\n",
+      "bbox": [
+        216.377197265625,
+        515.3389892578125,
+        396.78973388671875,
+        524.2265014648438
+      ],
+      "text_sha256": "cfdbefde92906db15c722d11542afe20feac9366e777061079fcd430aaca1f71"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

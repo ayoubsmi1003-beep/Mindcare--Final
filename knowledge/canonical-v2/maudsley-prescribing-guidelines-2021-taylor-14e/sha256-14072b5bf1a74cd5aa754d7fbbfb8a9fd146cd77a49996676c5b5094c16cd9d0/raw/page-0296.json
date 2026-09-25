@@ -1,0 +1,239 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0296",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 296,
+  "source_page_index": 295,
+  "source_page_display": 296,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Bipolar disorder    275\nCHAPTER 2\nData for FGAs in BD are scarce and generally of low quality (open trials, case series \nand retrospective analyses). In these studies, FGA LAIs seem to reduce the risk of relapse \ncompared with prior treatments. The largest (open) study9 (n = 85) (note: reference 9 \nreports the results of two studies) suggested flupentixol decanoate (20mg every 2–3 \nweeks) reduced the risk of elevated mood episodes. Other reports describe similar \neffects for other FGA LAIs. An RCT conducted with flupentixol LAI9 showed no effect \nand no superiority over lithium.\nTaking into account this single RCT and all of the small and uncontrolled observa-\ntions, there is very little evidence to support the often-repeated lore that flupentixol \nLAI increases the risk of manic relapse, and haloperidol LAI and fluphenazine LAI \nincrease the risk of depressive relapse (or at least that FGAs provoke depression). It is \nnotable that authors of systematic reviews15,16 repeat this view, which seems to be based \non the observed increase in depressive episodes in the open study conducted by Ahlfors \net al.9 In fact, this increase occurred only in subjects whose lithium treatment had been \nstopped immediately before the study began. Nonetheless, oral haloperidol, when used \nfor mania, is more likely than oral SGAs to cause a switch to depression,17 so some cau-\ntion is clearly required.\nThere are no controlled comparisons of FGA and SGA LAIs.2–4 A Taiwanese retro-\nspective cohort study18 uncovered a higher risk of depressive episode recurrence and a \nhigher likelihood of hospitalisation in those prescribed FGA LAIs (50% were prescribed \nflupentixol, 25% haloperidol and 25% others) compared with those prescribed risperi-\ndone LAI. The hazard ratio for readmission was 1.20 (95% CI: 1.04–1.38) – risperi-\ndone incident rate 0.42; FGAs 0.51. Of particular note was the substantial rate of \ntreatment discontinuation. At 1 year, only 7.2% of those initially prescribed risperidone \nand 2.2% of those initiated on FGA LAIs remained on the original treatment.\nConclusions\n■\n■Support for the use of FGA LAIs in bipolar is weak.\n■\n■Very limited evidence suggests that FGA LAIs may be effective in reducing recurrence \nof mania/hypomania but they do not prevent recurrence of depression and may \nincrease the risk.\n■\n■Risperidone LAI and aripiprazole LAI are robustly associated with a reduced risk of \nrecurrence of episodes of mania/hypomania compared with placebo.\n■\n■There is no evidence to suggest that SGAs increase the risk of depression.\n■\n■Risperidone LAI and aripiprazole LAI have no effect on the risk of depressive \nrecurrence.\n■\n■There is no evidence to support the benefit of LAIs over oral antipsychotic treatment \nin bipolar maintenance.\n■\n■As with other conditions, the use of LAIs offers the advantage of transparency with \nrespect to compliance: the LAI injection is either given or it is not.\n",
+  "raw_text_sha256": "03ce069806c3095b4ee039e0b0e54e6f13e848580135c182d2401becf13c08ca",
+  "coordinates_sha256": "653c0876f7b3d0760b4b43a8d6fdb8acddc1a32848de918b2d570d8b7974fe24",
+  "block_sequence_sha256": "9ab732c45d4ca22b7ae3344bb22bf5baec327e675952511692a58bfad28b57f1",
+  "blocks": [
+    {
+      "block_id": "page-0296-block-0000",
+      "order": 0,
+      "text": "Bipolar disorder    275\n",
+      "bbox": [
+        326.5046081542969,
+        31.395221710205078,
+        420.0005798339844,
+        41.0272216796875
+      ],
+      "text_sha256": "cf9823dc3b2599601157d3c922f1f69bb0337a594842b6718fe8f2ce11dbea04"
+    },
+    {
+      "block_id": "page-0296-block-0001",
+      "order": 1,
+      "text": "CHAPTER 2\n",
+      "bbox": [
+        454.4096984863281,
+        146.3472900390625,
+        463.88970947265625,
+        187.6912841796875
+      ],
+      "text_sha256": "5eaa1f2591abe1a1b2f7664fa3de7ff01a032d44ee83fa594c7852135d4287aa"
+    },
+    {
+      "block_id": "page-0296-block-0002",
+      "order": 2,
+      "text": "Data for FGAs in BD are scarce and generally of low quality (open trials, case series \nand retrospective analyses). In these studies, FGA LAIs seem to reduce the risk of relapse \ncompared with prior treatments. The largest (open) study9 (n = 85) (note: reference 9 \nreports the results of two studies) suggested flupentixol decanoate (20mg every 2–3 \nweeks) reduced the risk of elevated mood episodes. Other reports describe similar \neffects for other FGA LAIs. An RCT conducted with flupentixol LAI9 showed no effect \nand no superiority over lithium.\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.8035888671875,
+        146.27041625976562
+      ],
+      "text_sha256": "45e5140a10df16cffad713b1cc8eb59559484e68eef94ba891d1add5c63ea0db"
+    },
+    {
+      "block_id": "page-0296-block-0003",
+      "order": 3,
+      "text": "Taking into account this single RCT and all of the small and uncontrolled observa-\ntions, there is very little evidence to support the often-repeated lore that flupentixol \nLAI increases the risk of manic relapse, and haloperidol LAI and fluphenazine LAI \nincrease the risk of depressive relapse (or at least that FGAs provoke depression). It is \nnotable that authors of systematic reviews15,16 repeat this view, which seems to be based \non the observed increase in depressive episodes in the open study conducted by Ahlfors \net al.9 In fact, this increase occurred only in subjects whose lithium treatment had been \nstopped immediately before the study began. Nonetheless, oral haloperidol, when used \nfor mania, is more likely than oral SGAs to cause a switch to depression,17 so some cau-\ntion is clearly required.\n",
+      "bbox": [
+        47.997901916503906,
+        146.5504150390625,
+        422.827880859375,
+        266.2704772949219
+      ],
+      "text_sha256": "46499e90d4958ef312c3e71f08c34228b4e7acee53ef6c25f1988e8c868c1565"
+    },
+    {
+      "block_id": "page-0296-block-0004",
+      "order": 4,
+      "text": "There are no controlled comparisons of FGA and SGA LAIs.2–4 A Taiwanese retro-\nspective cohort study18 uncovered a higher risk of depressive episode recurrence and a \nhigher likelihood of hospitalisation in those prescribed FGA LAIs (50% were prescribed \nflupentixol, 25% haloperidol and 25% others) compared with those prescribed risperi-\ndone LAI. The hazard ratio for readmission was 1.20 (95% CI: 1.04–1.38) – risperi-\ndone incident rate 0.42; FGAs 0.51. Of particular note was the substantial rate of \ntreatment discontinuation. At 1 year, only 7.2% of those initially prescribed risperidone \nand 2.2% of those initiated on FGA LAIs remained on the original treatment.\n",
+      "bbox": [
+        47.99879455566406,
+        266.55047607421875,
+        422.7987976074219,
+        362.2704772949219
+      ],
+      "text_sha256": "c15cd086f432eee6aa29b50e3896d2eda7f576ffa7cf6446cae7bb2956592e65"
+    },
+    {
+      "block_id": "page-0296-block-0005",
+      "order": 5,
+      "text": "Conclusions\n",
+      "bbox": [
+        48.0,
+        379.7054748535156,
+        109.09400939941406,
+        392.740478515625
+      ],
+      "text_sha256": "5c99ba935136f2eaa7faad49f9a90ed459de3735e6e6a9e5823aa45af94b9496"
+    },
+    {
+      "block_id": "page-0296-block-0006",
+      "order": 6,
+      "text": "■\n■Support for the use of FGA LAIs in bipolar is weak.\n",
+      "bbox": [
+        48.0,
+        404.55047607421875,
+        280.94000244140625,
+        416.2704772949219
+      ],
+      "text_sha256": "1ceaa74df45b639967b770f2c179c7e5e4f072547f36dba9108add7896ac7fc7"
+    },
+    {
+      "block_id": "page-0296-block-0007",
+      "order": 7,
+      "text": "■\n■Very limited evidence suggests that FGA LAIs may be effective in reducing recurrence \n",
+      "bbox": [
+        48.0,
+        416.55047607421875,
+        422.7699890136719,
+        428.2704772949219
+      ],
+      "text_sha256": "1a0999cb2c0e755c150aa585aee0c4964d576085abf0b22d49db0deb910a4b11"
+    },
+    {
+      "block_id": "page-0296-block-0008",
+      "order": 8,
+      "text": "of mania/hypomania but they do not prevent recurrence of depression and may \nincrease the risk.\n",
+      "bbox": [
+        57.0,
+        428.55047607421875,
+        422.77001953125,
+        452.2704772949219
+      ],
+      "text_sha256": "a0fa1c0f2fb74dc0b9b6663bc4af31ee11083fb0ee2352f81220f71be1f235f6"
+    },
+    {
+      "block_id": "page-0296-block-0009",
+      "order": 9,
+      "text": "■\n■Risperidone LAI and aripiprazole LAI are robustly associated with a reduced risk of \n",
+      "bbox": [
+        48.0,
+        452.55047607421875,
+        422.7599792480469,
+        464.2704772949219
+      ],
+      "text_sha256": "cfeb5359156a83cb6137ed0672c20d0b9924c2b8799a2524ad60beb7a4e19fae"
+    },
+    {
+      "block_id": "page-0296-block-0010",
+      "order": 10,
+      "text": "recurrence of episodes of mania/hypomania compared with placebo.\n",
+      "bbox": [
+        57.0,
+        464.55047607421875,
+        351.469970703125,
+        476.2704772949219
+      ],
+      "text_sha256": "59e92b2f33a64bf9cd0ee32cee2386b7e16876cdf119638f001ddbcaf8654ef2"
+    },
+    {
+      "block_id": "page-0296-block-0011",
+      "order": 11,
+      "text": "■\n■There is no evidence to suggest that SGAs increase the risk of depression.\n",
+      "bbox": [
+        48.0,
+        476.55047607421875,
+        372.0300598144531,
+        488.2704772949219
+      ],
+      "text_sha256": "e7cad435ecfb24464b5981fec45882911d634882e247322f82d4e0680ffaaedc"
+    },
+    {
+      "block_id": "page-0296-block-0012",
+      "order": 12,
+      "text": "■\n■Risperidone LAI and aripiprazole LAI have no effect on the risk of depressive \n",
+      "bbox": [
+        48.0,
+        488.55047607421875,
+        422.7398681640625,
+        500.2704772949219
+      ],
+      "text_sha256": "3d8e29fd3409ded999779dae5704de9a94e0419cfb70aaf81f38f272030fd0a1"
+    },
+    {
+      "block_id": "page-0296-block-0013",
+      "order": 13,
+      "text": "recurrence.\n",
+      "bbox": [
+        57.0,
+        500.55047607421875,
+        104.77000427246094,
+        512.2705078125
+      ],
+      "text_sha256": "e301d1699114ed00534f07112b1e8b18a7a6555eb12e3584d5ae2f0999c5e917"
+    },
+    {
+      "block_id": "page-0296-block-0014",
+      "order": 14,
+      "text": "■\n■There is no evidence to support the benefit of LAIs over oral antipsychotic treatment \n",
+      "bbox": [
+        48.0,
+        512.5504760742188,
+        422.83001708984375,
+        524.2705078125
+      ],
+      "text_sha256": "cd80da94f0aa7bc1378fbaa1c4fcb4be5520ef35a7e16851b659ffa2cb66cf7e"
+    },
+    {
+      "block_id": "page-0296-block-0015",
+      "order": 15,
+      "text": "in bipolar maintenance.\n",
+      "bbox": [
+        57.0,
+        524.5504760742188,
+        159.23997497558594,
+        536.2705078125
+      ],
+      "text_sha256": "b38e0a46754c34d8e2f3ed6e68f4f0abdd51d299f9a6a241210e4f9b933f2f94"
+    },
+    {
+      "block_id": "page-0296-block-0016",
+      "order": 16,
+      "text": "■\n■As with other conditions, the use of LAIs offers the advantage of transparency with \n",
+      "bbox": [
+        48.0,
+        536.5504760742188,
+        422.7799377441406,
+        548.2705078125
+      ],
+      "text_sha256": "412b5e8b7cbeef30d5dbc050de111ccd0978144aea16fbc237b22d57d23a5ddb"
+    },
+    {
+      "block_id": "page-0296-block-0017",
+      "order": 17,
+      "text": "respect to compliance: the LAI injection is either given or it is not.\n",
+      "bbox": [
+        57.0,
+        548.5504760742188,
+        341.45001220703125,
+        560.2705078125
+      ],
+      "text_sha256": "d1c2ae3b73a15d179aae73f41776ab021d3bafe9e09220cbb9a99c0b6224b171"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

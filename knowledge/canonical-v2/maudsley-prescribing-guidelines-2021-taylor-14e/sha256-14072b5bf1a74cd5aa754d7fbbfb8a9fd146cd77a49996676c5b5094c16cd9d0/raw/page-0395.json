@@ -1,0 +1,287 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0395",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 395,
+  "source_page_index": 394,
+  "source_page_display": 395,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "374    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nAntidepressant prophylaxis\nFirst episode\nA single episode of depression should be treated for at least 6–9 months after full remis-\nsion.1 If antidepressant therapy is stopped immediately on recovery, 50% of patients \nexperience a return of depressive symptoms within 3–6 months.1 A landmark study of \nfluoxetine maintenance2 demonstrated that stopping successful treatment at 12 weeks \ngave the worst relapse outcome, followed by withdrawal at 26 weeks and then with-\ndrawal at 50 weeks (at which point placebo and active treatment did not differ in \nrespect to relapse risk). Another trial suggested that withdrawal should only be \nattempted when patients had been ‘free of significant symptoms for 16–20  weeks’3 \nEven non-continuous use of antidepressants during the first 6 months of treatment \npredicts higher rates of relapse.4\nRecurrent depression\nMajor depressive disorder is unremitting in 15% of cases and recurrent in 35%. About \nhalf of those with a first-onset episode recover and have no further episodes.5 Many \nfactors are known to increase the risk of recurrence, including a family history of \ndepression, recurrent dysthymia, concurrent non-affective psychiatric illness, female \ngender, long episode duration, degree of treatment resistance,6 chronic medical illness \nand social factors (e.g. lack of confiding relationships and psychosocial stressors). Some \nprescription drugs may precipitate depression.6,7\nFigure 3.5 outlines the risk of recurrence for multiple-episode patients: those recruited \nto the study had already experienced at least three episodes of depression, with 3 years \nor less between episodes.8,9 People with depression are at increased risk of cardiovascu-\nlar disease.10 Suicide mortality is significantly increased over population norms.\nA meta-analysis of antidepressant continuation studies11 concluded that continuing \ntreatment with antidepressants reduces the odds of depressive relapse by around \n100\n80\n60\n40\n% of patients remaining well\n20\n0\n0\n6\n12\n24\nTime (months)\n36\n48\n60\nActive drug\nPlacebo after\n3 years\nPlacebo\nFigure 3.5  The risk of recurrence of depression in multi-episode patients. Patients had experienced at \nleast three episodes of depression with 3 years or less between episodes\n",
+  "raw_text_sha256": "3fce55a9359d34c1de9c9fea8bb6f442a4ceca2ff938c1de242c3943314545ec",
+  "coordinates_sha256": "032343e0c1c1c68a7697e4f932615bfa6c241ef90dc4c007974831f25aaa1513",
+  "block_sequence_sha256": "a211e0d1e41ebde8b7c6d3a8537cec4d05624a7182892b8c7cf5c202c1433a5b",
+  "blocks": [
+    {
+      "block_id": "page-0395-block-0000",
+      "order": 0,
+      "text": "374    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "1eb68576221850e5da85bcdf00874350d658610226c05a9f17566a18f4077f5b"
+    },
+    {
+      "block_id": "page-0395-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0395-block-0002",
+      "order": 2,
+      "text": "Antidepressant prophylaxis\n",
+      "bbox": [
+        68.88990020751953,
+        66.06539916992188,
+        210.89987182617188,
+        79.10040283203125
+      ],
+      "text_sha256": "4a2064aeb99ef888c73c80f592525da901c5e2a589c4c4798ec2b2118ca40355"
+    },
+    {
+      "block_id": "page-0395-block-0003",
+      "order": 3,
+      "text": "First episode\n",
+      "bbox": [
+        61.89390182495117,
+        102.06838989257812,
+        127.28890228271484,
+        115.1033935546875
+      ],
+      "text_sha256": "7458b62f4ba3666778314a71f3461db59b70ce8b634059d68c50d579c7624bd0"
+    },
+    {
+      "block_id": "page-0395-block-0004",
+      "order": 4,
+      "text": "A single episode of depression should be treated for at least 6–9 months after full remis-\nsion.1 If antidepressant therapy is stopped immediately on recovery, 50% of patients \nexperience a return of depressive symptoms within 3–6 months.1 A landmark study of \nfluoxetine maintenance2 demonstrated that stopping successful treatment at 12 weeks \ngave the worst relapse outcome, followed by withdrawal at 26 weeks and then with-\ndrawal at 50 weeks (at which point placebo and active treatment did not differ in \nrespect to relapse risk). Another trial suggested that withdrawal should only be \nattempted when patients had been ‘free of significant symptoms for 16–20  weeks’3 \nEven non-continuous use of antidepressants during the first 6 months of treatment \npredicts higher rates of relapse.4\n",
+      "bbox": [
+        61.88719940185547,
+        120.910400390625,
+        436.6971130371094,
+        240.63040161132812
+      ],
+      "text_sha256": "393a607b406097b5cc2d07e80967fc234110dbd395df10502962f86fad361b6e"
+    },
+    {
+      "block_id": "page-0395-block-0005",
+      "order": 5,
+      "text": "Recurrent depression\n",
+      "bbox": [
+        61.88990020751953,
+        258.0653991699219,
+        170.88888549804688,
+        271.10040283203125
+      ],
+      "text_sha256": "8a87c84e84809bb7ffbe521b95551f4727c651b9b6ea547f6503644d59aefc09"
+    },
+    {
+      "block_id": "page-0395-block-0006",
+      "order": 6,
+      "text": "Major depressive disorder is unremitting in 15% of cases and recurrent in 35%. About \nhalf of those with a first-onset episode recover and have no further episodes.5 Many \nfactors are known to increase the risk of recurrence, including a family history of \ndepression, recurrent dysthymia, concurrent non-affective psychiatric illness, female \ngender, long episode duration, degree of treatment resistance,6 chronic medical illness \nand social factors (e.g. lack of confiding relationships and psychosocial stressors). Some \nprescription drugs may precipitate depression.6,7\n",
+      "bbox": [
+        61.88629150390625,
+        276.910400390625,
+        436.6805114746094,
+        360.6304016113281
+      ],
+      "text_sha256": "5847e4707cffcad908d4d86a59f4516062c010da8002c524cd5226be8355085e"
+    },
+    {
+      "block_id": "page-0395-block-0007",
+      "order": 7,
+      "text": "Figure 3.5 outlines the risk of recurrence for multiple-episode patients: those recruited \nto the study had already experienced at least three episodes of depression, with 3 years \nor less between episodes.8,9 People with depression are at increased risk of cardiovascu-\nlar disease.10 Suicide mortality is significantly increased over population norms.\n",
+      "bbox": [
+        61.88990020751953,
+        360.910400390625,
+        436.7198791503906,
+        408.6304016113281
+      ],
+      "text_sha256": "cf31c5bdd3cde712388fa83afade3aece765d135b757d2af5f2883cae48df74d"
+    },
+    {
+      "block_id": "page-0395-block-0008",
+      "order": 8,
+      "text": "A meta-analysis of antidepressant continuation studies11 concluded that continuing \ntreatment with antidepressants reduces the odds of depressive relapse by around \n",
+      "bbox": [
+        61.889404296875,
+        408.910400390625,
+        436.6695556640625,
+        432.6304016113281
+      ],
+      "text_sha256": "08da475f4c38ecb6653cd7c4acea9217aea845d6a4b5adb292fffa2304d3cf04"
+    },
+    {
+      "block_id": "page-0395-block-0009",
+      "order": 9,
+      "text": "100\n",
+      "bbox": [
+        91.49700164794922,
+        445.5790710449219,
+        104.00699615478516,
+        454.79656982421875
+      ],
+      "text_sha256": "eea8254c7500ba3de996aa8ad6af399183f04e17d4a8102fde539dbc93a90012"
+    },
+    {
+      "block_id": "page-0395-block-0010",
+      "order": 10,
+      "text": "80\n",
+      "bbox": [
+        96.29290008544922,
+        467.34619140625,
+        104.63289642333984,
+        476.5636901855469
+      ],
+      "text_sha256": "95aebc97bc646c67fdcd923a5965b001f3c8a5c4d3a77075112e12a3a311d760"
+    },
+    {
+      "block_id": "page-0395-block-0011",
+      "order": 11,
+      "text": "60\n",
+      "bbox": [
+        96.29290008544922,
+        489.1111755371094,
+        104.63289642333984,
+        498.32867431640625
+      ],
+      "text_sha256": "95cf32708a31caa478a0e9141103ac567d85e5186e697e7e0c81f75589999e31"
+    },
+    {
+      "block_id": "page-0395-block-0012",
+      "order": 12,
+      "text": "40\n",
+      "bbox": [
+        96.29290008544922,
+        510.8761901855469,
+        104.63289642333984,
+        520.0936889648438
+      ],
+      "text_sha256": "673650f936cb3b0a2f93ce09d81be10748b1b203c19e8176b4eefc1964a0cf3a"
+    },
+    {
+      "block_id": "page-0395-block-0013",
+      "order": 13,
+      "text": "% of patients remaining well\n",
+      "bbox": [
+        78.15890502929688,
+        456.4224853515625,
+        87.37640380859375,
+        550.614990234375
+      ],
+      "text_sha256": "74270283370977d25851b9246641e69aa2c36642fc424607d4acaca32a2354bd"
+    },
+    {
+      "block_id": "page-0395-block-0014",
+      "order": 14,
+      "text": "20\n",
+      "bbox": [
+        96.29290008544922,
+        532.6474609375,
+        104.63289642333984,
+        541.864990234375
+      ],
+      "text_sha256": "5378796307535df3ec8d8b15a2e2dc5641419c3d3060cfe32238c0fa973f7aa3"
+    },
+    {
+      "block_id": "page-0395-block-0015",
+      "order": 15,
+      "text": "0\n0\n6\n12\n24\n",
+      "bbox": [
+        100.46289825439453,
+        554.4124755859375,
+        222.09788513183594,
+        573.4024658203125
+      ],
+      "text_sha256": "47e637f9f79dea1bef14c590c3227ec058ad011f58c291b412c7f902fe6e824e"
+    },
+    {
+      "block_id": "page-0395-block-0016",
+      "order": 16,
+      "text": "Time (months)\n",
+      "bbox": [
+        192.43280029296875,
+        578.8104858398438,
+        240.3577880859375,
+        588.0280151367188
+      ],
+      "text_sha256": "48cdff8ed77c4e913ee53bb644f9e3c4bb853bbcbce92e0e98b8408bc33c88fd"
+    },
+    {
+      "block_id": "page-0395-block-0017",
+      "order": 17,
+      "text": "36\n48\n60\n",
+      "bbox": [
+        249.57679748535156,
+        564.1864624023438,
+        329.54937744140625,
+        573.4039916992188
+      ],
+      "text_sha256": "e79b5338c8b502ab8a4b5f5533db468a7d0690e140f48926d14e20cc462254ef"
+    },
+    {
+      "block_id": "page-0395-block-0018",
+      "order": 18,
+      "text": "Active drug\n",
+      "bbox": [
+        368.4367980957031,
+        452.8789978027344,
+        407.1968078613281,
+        462.09649658203125
+      ],
+      "text_sha256": "df9c58ab27c04884c9d9e54336375c70cba844cbe9ff6c7bc85e4416ef069c61"
+    },
+    {
+      "block_id": "page-0395-block-0019",
+      "order": 19,
+      "text": "Placebo after\n3 years\n",
+      "bbox": [
+        368.4367980957031,
+        471.0065002441406,
+        413.0393371582031,
+        489.2239990234375
+      ],
+      "text_sha256": "e5de1ab68546b26fe6bfb77b3d0b4d0b83a6f6d6999595d28f3014f999ae5415"
+    },
+    {
+      "block_id": "page-0395-block-0020",
+      "order": 20,
+      "text": "Placebo\n",
+      "bbox": [
+        368.4367980957031,
+        497.54150390625,
+        395.94683837890625,
+        506.7590026855469
+      ],
+      "text_sha256": "e8085df4c06a1dc9f4e29b7ec107040e8168da53ca4d33237c9c4e9357b36cda"
+    },
+    {
+      "block_id": "page-0395-block-0021",
+      "order": 21,
+      "text": "Figure 3.5  The risk of recurrence of depression in multi-episode patients. Patients had experienced at \nleast three episodes of depression with 3 years or less between episodes\n",
+      "bbox": [
+        79.27690124511719,
+        595.6414794921875,
+        406.2845153808594,
+        614.5264892578125
+      ],
+      "text_sha256": "4a805658d34ffe475bf701bc3a83447f53336827b03a615ecc525295bfbe089b"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

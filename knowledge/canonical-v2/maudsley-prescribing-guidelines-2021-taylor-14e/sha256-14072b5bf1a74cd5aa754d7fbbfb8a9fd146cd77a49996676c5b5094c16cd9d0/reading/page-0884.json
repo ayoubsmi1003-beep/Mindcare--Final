@@ -1,0 +1,12 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0884",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 884,
+  "source_page_index": 883,
+  "repaired_text": "Pharmacokinetics    863\nCHAPTER 11\nTable 11.7  (Continued)\nAlcohol can cause or worsen psychotic symptoms by increasing dopamine release in \nmesolimbic pathways. The effect of antipsychotic drugs may be competitively antago-\nnised, rendering them less effective (Table 11.8).\nElectrolyte disturbances secondary to alcohol-related dehydration can be exacer-\nbated by other drugs that cause electrolyte disturbances such as diuretics.\nNote that heavy alcohol consumption can lead to hypoglycaemia in people with dia-\nbetes who take insulin or oral hypoglycaemics. Theoretically there is an increased risk \nof lactic acidosis in patients who take metformin with alcohol. Alcohol can also increase \nblood pressure.\nChronic drinkers are particularly susceptible to the GI irritant effects of aspirin and \nNSAIDs.\nNB:\nIn the presence of pharmacokinetic interactions, pharmacodynamic interactions will be \nmore marked. For example, in a chronic heavy drinker who is sober, enzyme induction \nwill increase the metabolism of diazepam which may lead to increased levels of anxiety \n(treatment failure). If the same patient becomes intoxicated with alcohol, the metabo-\nlism of diazepam will be greatly reduced as it will have to compete with alcohol for the \nmetabolic capacity of CYP3A4. Plasma levels of alcohol and diazepam will rise (toxic-\nity). As both alcohol and diazepam are sedative (via GABAA affinity), loss of conscious-\nness and respiratory depression may occur.\nEffect of \nalcohol\nEffect exacerbated by\nPotential consequences\nAmnesia\nOther amnesic drugs, e.g.\nBarbiturates\nBenzodiazepines\nZ-hypnotics\nIncreased amnesic effects ranging from mild \nmemory loss to total amnesia. Usually \nanterograde amnesia: loss of memory of \nevents after the effects of alcohol begin\nAtaxia\nACE inhibitors\nß-blockers\nCa channel blockers\nNitrates\nAdrenergic alpha receptor antagonists, e.g.\nClozapine\nRisperidone\nTricyclics\nIncreased unsteadiness and falls",
+  "repaired_text_sha256": "e07c43f054e49eae3836ea6299bc6366c0faf68c2562aa4a2183101f4b285606",
+  "raw_text_sha256": "35ef456823d834d2b7782fee7f765742c6dd10af088306026b2ddc0bc82d7d03",
+  "repair_ids": [],
+  "raw_file": "raw/page-0884.json"
+}

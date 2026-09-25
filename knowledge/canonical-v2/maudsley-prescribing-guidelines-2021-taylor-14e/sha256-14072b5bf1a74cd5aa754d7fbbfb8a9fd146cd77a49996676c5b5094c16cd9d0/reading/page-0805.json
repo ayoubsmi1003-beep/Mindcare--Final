@@ -1,0 +1,14 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0805",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 805,
+  "source_page_index": 804,
+  "repaired_text": "784    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\n36.\t Ambrosius B, et al. Antineuroinflammatory drugs in HIV-associated neurocognitive disorders as potential therapy. Neurol Neuroimmunol\nNeuroinflamm 2019; 6:e551.\n\t37.\t Sacktor N, et al. Paroxetine and fluconazole therapy for HIV-associated neurocognitive impairment: results from a double-blind, placebocontrolled trial. J Neurovirol 2018; 24:16–27.\n\t38.\t Panel on Antiretroviral Guidelines for Adults and Adolescents. Guidelines for the Use of Antiretroviral Agents in Adults and Adolescents\nLiving with HIV. Department of Health and Human Services. 2019;  https://clinicalinfo.hiv.gov/en.\n\t39.\t European AIDS Clinical Society. Guidelines Version 9.0 October 2017.  http://www.eacsociety.org/files/guidelines_9.0-english.pdf.\n\t40.\t World Health Organisation. Consolidated guidelines on the use of antiretroviral drugs for treating and preventing HIV infection.\nRecommendations for a public health approach - Second edition. 2016; http://www.who.int/hiv/pub/arv/arv-2016/en/.\n41.\t Parker C. Psychiatric effects of drugs for other disorders. Medicine 2016; 44:768–774.",
+  "repaired_text_sha256": "4842ce1cf055dd826925a24c15d1359589ca0887c12ff6a61a70ebeee41f8f00",
+  "raw_text_sha256": "18e01106e6b3a520357a3f0e229d8d3d43ca431c5dbdb410f99a54ab04d293b5",
+  "repair_ids": [
+    "repair-000713"
+  ],
+  "raw_file": "raw/page-0805.json"
+}

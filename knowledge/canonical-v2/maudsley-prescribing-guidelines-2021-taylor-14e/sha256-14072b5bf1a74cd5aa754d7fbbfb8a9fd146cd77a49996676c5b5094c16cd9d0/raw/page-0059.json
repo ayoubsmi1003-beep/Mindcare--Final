@@ -1,0 +1,479 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0059",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 59,
+  "source_page_index": 58,
+  "source_page_display": 59,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "38    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nMonitoring\nThe following table summarises suggested monitoring for those receiving antipsychotic \nmedication.1 Monitoring of people taking antipsychotics is very poor in most countries.2–5 \nGuidance given here is strongly recommended to assure safe use of these drugs. More \ndetails, references and background are provided in specific sections in this chapter.\nParameter/\ntest\nSuggested \nfrequency\nAction to be taken if \nresults outside  \nreference range\nMedications with \nspecial precautions\nMedications for which \nmonitoring is not \nrequired\nUrea and \nelectrolytes \n(including \ncreatinine or \nestimated \nGFR)\nBaseline and yearly \nas part of a routine \nphysical health \ncheck\nInvestigate all \nabnormalities detected\nAmisulpride and \nsulpiride renally \nexcreted – consider \nreducing dose if GFR \nreduced\nNone\nFull blood \ncount \n(FBC)6–11\nBaseline and yearly \nas part of a routine \nphysical health \ncheck and to detect \nchronic bone \nmarrow suppression \n(small risk \nassociated with \nsome antipsychotic \nmedications)\nStop suspect medication \nif neutrophils fall below \n1.5 × 109/L\nRefer to specialist \nmedical care if \nneutrophils below 0.5 × \n109/L. Note high \nfrequency of benign \nethnic neutropenia in \ncertain ethnic groups\nClozapine – FBC weekly \nfor 18 weeks, then \ntwo-weekly up to one \nyear, then monthly \n(schedule varies from \ncountry to country)\nNone\nBlood \nlipids12,13\n(cholesterol; \ntriglycerides)\nFasting \nsample, if \npossible\nBaseline, at 3 \nmonths then yearly \nto detect \nantipsychotic-\ninduced changes, \nand generally \nmonitor physical \nhealth\nOffer lifestyle advice. \nConsider changing \nantipsychotic medication \nand/or initiating statin \ntherapy\nClozapine, olanzapine \n– 3 monthly for first \nyear, then yearly\nSome antipsychotic \nmedications (e.g. \naripiprazole, lurasidone) \nnot clearly associated \nwith dyslipidaemia, but \nprevalence is high in this \npatient group,14–16 so all \npatients should be \nmonitored\nWeight12,13,16\n(include \nwaist size \nand BMI, if \npossible)\nBaseline, frequently \nfor three months \nthen yearly to \ndetect \nantipsychotic-\ninduced changes, \nand generally \nmonitor physical \nhealth\nOffer lifestyle advice. \nConsider changing \nantipsychotic medication \nand/or dietary/\npharmacological \nintervention\nClozapine, olanzapine \n– frequently for three \nmonths then 3 monthly \nfor first year, then \nyearly\nAripiprazole, ziprasidone, \nbrexpiprazole, cariprazine \nand lurasidone not clearly \nassociated with weight \ngain but monitoring \nrecommended \nnonetheless – obesity \nprevalence high in this \npatient group\nPlasma \nglucose\n(fasting \nsample, if \npossible)\nBaseline, at 4–6 \nmonths, then yearly \nto detect \nantipsychotic-\ninduced changes \nand generally \nmonitor physical \nhealth\nOffer lifestyle advice. \nObtain fasting sample or \nnon-fasting and HbA1C.\nRefer to GP or specialist\nClozapine, olanzapine, \nchlorpromazine – test \nat baseline, one month, \nthen 4–6 monthly\nSome antipsychotic \nmedications not clearly \nassociated with IFG, but \nprevalence is high in this \npatient group,17,18 so all \npatients should be \nmonitored\n(Continued)\n",
+  "raw_text_sha256": "f9e3c5eb77389d91cae7ff61c370ffc1e8486cdd6f416651c925821bd13f361f",
+  "coordinates_sha256": "dfba234f16043ef8dc0bd269fd33ca6d6475d0dd5610a45afa18f861db0ef60c",
+  "block_sequence_sha256": "24aeb217171b18526b58047be2418f47f9c6d84ff192c1df21f759545c599fdd",
+  "blocks": [
+    {
+      "block_id": "page-0059-block-0000",
+      "order": 0,
+      "text": "38    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "a949e3860dbde1be7723cc2666a4120af99d440fef764ab84a86c917b92021a0"
+    },
+    {
+      "block_id": "page-0059-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0059-block-0002",
+      "order": 2,
+      "text": "Monitoring\n",
+      "bbox": [
+        68.88909912109375,
+        66.06442260742188,
+        127.5521011352539,
+        79.09942626953125
+      ],
+      "text_sha256": "c03a80785732954eec6c21129031ebc8adf5351a6e1969013d8ef9fa84c76471"
+    },
+    {
+      "block_id": "page-0059-block-0003",
+      "order": 3,
+      "text": "The following table summarises suggested monitoring for those receiving antipsychotic \nmedication.1 Monitoring of people taking antipsychotics is very poor in most countries.2–5 \nGuidance given here is strongly recommended to assure safe use of these drugs. More \ndetails, references and background are provided in specific sections in this chapter.\n",
+      "bbox": [
+        61.88909912109375,
+        84.909423828125,
+        436.7091979980469,
+        132.62942504882812
+      ],
+      "text_sha256": "530f08db8b97ac5ce39cafd2c2cef2d7cbcdfea5260850dd4cf81d34c13e5b83"
+    },
+    {
+      "block_id": "page-0059-block-0004",
+      "order": 4,
+      "text": "Parameter/\ntest\n",
+      "bbox": [
+        61.88909912109375,
+        161.57191467285156,
+        101.07660675048828,
+        180.4569091796875
+      ],
+      "text_sha256": "9e03ec94c49aedee0b5540f178297c79ca3f41259fa0e92d15e22d8948b533ca"
+    },
+    {
+      "block_id": "page-0059-block-0005",
+      "order": 5,
+      "text": "Suggested \nfrequency\n",
+      "bbox": [
+        110.99909973144531,
+        161.57191467285156,
+        150.17161560058594,
+        180.4569091796875
+      ],
+      "text_sha256": "2de46ef90528a6bcb77492509047398f9af958c7944c3d3880bd7304164e5601"
+    },
+    {
+      "block_id": "page-0059-block-0006",
+      "order": 6,
+      "text": "Action to be taken if \nresults outside  \nreference range\n",
+      "bbox": [
+        182.00160217285156,
+        151.56690979003906,
+        256.6041564941406,
+        180.44940185546875
+      ],
+      "text_sha256": "2d3eff3c3a7d7a7e4e053eaba98d06061455b8342256502c2e51633fa049cf86"
+    },
+    {
+      "block_id": "page-0059-block-0007",
+      "order": 7,
+      "text": "Medications with \nspecial precautions\n",
+      "bbox": [
+        268.47662353515625,
+        161.5644073486328,
+        335.4290466308594,
+        180.44940185546875
+      ],
+      "text_sha256": "421ec93663dda398f77378dc043fd7b880e199d513bc4ebbc43a3a04791c3412"
+    },
+    {
+      "block_id": "page-0059-block-0008",
+      "order": 8,
+      "text": "Medications for which \nmonitoring is not \nrequired\n",
+      "bbox": [
+        351.4791259765625,
+        151.5594024658203,
+        432.3139953613281,
+        180.44189453125
+      ],
+      "text_sha256": "0ca6e6439b9f2e94f302a4d071e3a312f0d6cbf628eafe46bb07c643abecb8e5"
+    },
+    {
+      "block_id": "page-0059-block-0009",
+      "order": 9,
+      "text": "Urea and \nelectrolytes \n(including \ncreatinine or \nestimated \nGFR)\n",
+      "bbox": [
+        61.89662170410156,
+        188.33192443847656,
+        104.69161224365234,
+        247.2069091796875
+      ],
+      "text_sha256": "a6da83f94029d367d2d1fc8a45253e0521504586ebfc5a565ca34d46d14f35c5"
+    },
+    {
+      "block_id": "page-0059-block-0010",
+      "order": 10,
+      "text": "Baseline and yearly \nas part of a routine \nphysical health \ncheck\n",
+      "bbox": [
+        111.00662231445312,
+        188.4969024658203,
+        174.2166290283203,
+        227.1968994140625
+      ],
+      "text_sha256": "6a100c375ef9a5beb37e19cf238cfb7aa7746e44be1cc3dd165e1cd5bf142029"
+    },
+    {
+      "block_id": "page-0059-block-0011",
+      "order": 11,
+      "text": "Investigate all \nabnormalities detected\n",
+      "bbox": [
+        182.00912475585938,
+        188.48939514160156,
+        254.924072265625,
+        207.19439697265625
+      ],
+      "text_sha256": "09c04319d9c2e31639fc2ac60422f05ec06a9b4f0264b79dc434860f67444bba"
+    },
+    {
+      "block_id": "page-0059-block-0012",
+      "order": 12,
+      "text": "Amisulpride and \nsulpiride renally \nexcreted – consider \nreducing dose if GFR \nreduced\n",
+      "bbox": [
+        268.484130859375,
+        188.48939514160156,
+        336.6966857910156,
+        237.1868896484375
+      ],
+      "text_sha256": "a03da186fecab171dafac001da6158d977345e007d0073e62cc544d0ced9cc67"
+    },
+    {
+      "block_id": "page-0059-block-0013",
+      "order": 13,
+      "text": "None\n",
+      "bbox": [
+        351.48663330078125,
+        188.4818878173828,
+        368.57916259765625,
+        197.18939208984375
+      ],
+      "text_sha256": "af5d8a21858f42808c9bcc17012b77bcc2fd6ab3b071dbd4a05f13f410470541"
+    },
+    {
+      "block_id": "page-0059-block-0014",
+      "order": 14,
+      "text": "Full blood \ncount \n(FBC)6–11\n",
+      "bbox": [
+        61.90412902832031,
+        253.32688903808594,
+        98.99161529541016,
+        282.2093811035156
+      ],
+      "text_sha256": "421368c3c81718cfec7b80b4becdfa9c16c94299d39e4393d2901db722d402c0"
+    },
+    {
+      "block_id": "page-0059-block-0015",
+      "order": 15,
+      "text": "Baseline and yearly \nas part of a routine \nphysical health \ncheck and to detect \nchronic bone \nmarrow suppression \n(small risk \nassociated with \nsome antipsychotic \nmedications)\n",
+      "bbox": [
+        110.99929809570312,
+        253.5519256591797,
+        177.4117889404297,
+        352.2369079589844
+      ],
+      "text_sha256": "a39c8552fe6bee8c2d4fce7915a05aa6e379c2c99930c9ea264cafdafa7b5c43"
+    },
+    {
+      "block_id": "page-0059-block-0016",
+      "order": 16,
+      "text": "Stop suspect medication \nif neutrophils fall below \n1.5 × 109/L\n",
+      "bbox": [
+        182.00180053710938,
+        253.52940368652344,
+        262.0118103027344,
+        282.2594299316406
+      ],
+      "text_sha256": "cf7df42c60bf3778da270c4fec2c922d9b39be598e128fceab818d8c9d1ff4c7"
+    },
+    {
+      "block_id": "page-0059-block-0017",
+      "order": 17,
+      "text": "Refer to specialist \nmedical care if \nneutrophils below 0.5 × \n109/L. Note high \nfrequency of benign \nethnic neutropenia in \ncertain ethnic groups\n",
+      "bbox": [
+        182.0002899169922,
+        286.5494384765625,
+        260.5627746582031,
+        355.2519226074219
+      ],
+      "text_sha256": "d10235084f955c279d519cb1c3245e5a84cff287f92111478834f3b533d7b6d6"
+    },
+    {
+      "block_id": "page-0059-block-0018",
+      "order": 18,
+      "text": "Clozapine – FBC weekly \nfor 18 weeks, then \ntwo-weekly up to one \nyear, then monthly \n(schedule varies from \ncountry to country)\n",
+      "bbox": [
+        268.47540283203125,
+        253.54441833496094,
+        346.8204040527344,
+        312.2394104003906
+      ],
+      "text_sha256": "b1c7529a6628bcd11ad2e7c24bd09b12506a04d0a9bf2df53ee8f48b10c56ca5"
+    },
+    {
+      "block_id": "page-0059-block-0019",
+      "order": 19,
+      "text": "None\n",
+      "bbox": [
+        351.4779052734375,
+        253.52940368652344,
+        368.5704345703125,
+        262.2369079589844
+      ],
+      "text_sha256": "af5d8a21858f42808c9bcc17012b77bcc2fd6ab3b071dbd4a05f13f410470541"
+    },
+    {
+      "block_id": "page-0059-block-0020",
+      "order": 20,
+      "text": "Blood \nlipids12,13\n",
+      "bbox": [
+        61.89540100097656,
+        361.37188720703125,
+        91.5788803100586,
+        380.25689697265625
+      ],
+      "text_sha256": "9666417536715b3e9a6dc421853bf5d74254aa3987bfb15fcdda4acffcf326e9"
+    },
+    {
+      "block_id": "page-0059-block-0021",
+      "order": 21,
+      "text": "(cholesterol; \ntriglycerides)\nFasting \nsample, if \npossible\n",
+      "bbox": [
+        61.88909912109375,
+        381.5769348144531,
+        102.59159088134766,
+        430.2744140625
+      ],
+      "text_sha256": "8dd3202a51c1e55948cc3454c6aee187ee3600e5ba5d126c61f61d349bb463a6"
+    },
+    {
+      "block_id": "page-0059-block-0022",
+      "order": 22,
+      "text": "Baseline, at 3 \nmonths then yearly \nto detect \nantipsychotic-\ninduced changes, \nand generally \nmonitor physical \nhealth\n",
+      "bbox": [
+        110.99909973144531,
+        361.5669250488281,
+        174.3365936279297,
+        440.25689697265625
+      ],
+      "text_sha256": "1ba47b191e62632f2b316f0674c1326b960632a6505d9a8d1b153141485ec494"
+    },
+    {
+      "block_id": "page-0059-block-0023",
+      "order": 23,
+      "text": "Offer lifestyle advice. \nConsider changing \nantipsychotic medication \nand/or initiating statin \ntherapy\n",
+      "bbox": [
+        182.00160217285156,
+        361.5519104003906,
+        263.2491149902344,
+        410.2493896484375
+      ],
+      "text_sha256": "920c62c920ec4e334984bf78b2e7a936dda3c93cf48c04238c1963c26c3c96b4"
+    },
+    {
+      "block_id": "page-0059-block-0024",
+      "order": 24,
+      "text": "Clozapine, olanzapine \n– 3 monthly for first \nyear, then yearly\n",
+      "bbox": [
+        268.47662353515625,
+        361.5444030761719,
+        340.9941711425781,
+        390.24688720703125
+      ],
+      "text_sha256": "fb79c2863ccb9145e2a22631aba9ab42d897a37e58a20d46bd744410351d59d8"
+    },
+    {
+      "block_id": "page-0059-block-0025",
+      "order": 25,
+      "text": "Some antipsychotic \nmedications (e.g. \naripiprazole, lurasidone) \nnot clearly associated \nwith dyslipidaemia, but \nprevalence is high in this \npatient group,14–16 so all \npatients should be \nmonitored\n",
+      "bbox": [
+        351.4718017578125,
+        361.5368957519531,
+        431.7742004394531,
+        450.2794189453125
+      ],
+      "text_sha256": "1f6dbba752448292ef753dc7e925a6320c08ebd9bdda9cd33231fa5771d01421"
+    },
+    {
+      "block_id": "page-0059-block-0026",
+      "order": 26,
+      "text": "Weight12,13,16\n",
+      "bbox": [
+        61.88932800292969,
+        456.4143981933594,
+        104.6092529296875,
+        465.3019104003906
+      ],
+      "text_sha256": "d52c3bc2e482366970331b6797117dcc397e8049b92b9fcfb74a4157ebf27985"
+    },
+    {
+      "block_id": "page-0059-block-0027",
+      "order": 27,
+      "text": "(include \nwaist size \nand BMI, if \npossible)\n",
+      "bbox": [
+        61.88909912109375,
+        466.6019287109375,
+        98.98409271240234,
+        505.3019104003906
+      ],
+      "text_sha256": "c9dfada41a0d3a045122fb4dc97d01dc2e1bc9e9389f4dfc2c35d46277694834"
+    },
+    {
+      "block_id": "page-0059-block-0028",
+      "order": 28,
+      "text": "Baseline, frequently \nfor three months \nthen yearly to \ndetect \nantipsychotic-\ninduced changes, \nand generally \nmonitor physical \nhealth\n",
+      "bbox": [
+        110.99909973144531,
+        456.596923828125,
+        175.45408630371094,
+        545.284423828125
+      ],
+      "text_sha256": "f759549c26143f3e42dfad95f73a8517ec4aba595d28cf11eea77e3d41406f2e"
+    },
+    {
+      "block_id": "page-0059-block-0029",
+      "order": 29,
+      "text": "Offer lifestyle advice. \nConsider changing \nantipsychotic medication \nand/or dietary/\npharmacological \nintervention\n",
+      "bbox": [
+        182.00160217285156,
+        456.57440185546875,
+        263.2491149902344,
+        515.2694091796875
+      ],
+      "text_sha256": "cf918abb9af6687919e8fea0c7324fc61cde113a72d552c445c4e875d2ca8d12"
+    },
+    {
+      "block_id": "page-0059-block-0030",
+      "order": 30,
+      "text": "Clozapine, olanzapine \n– frequently for three \nmonths then 3 monthly \nfor first year, then \nyearly\n",
+      "bbox": [
+        268.47662353515625,
+        456.55938720703125,
+        345.9966735839844,
+        505.2568664550781
+      ],
+      "text_sha256": "fc47b9e611fbcdf55d69bf88acd3a5436a0f366907fafcb54af7412e4278913b"
+    },
+    {
+      "block_id": "page-0059-block-0031",
+      "order": 31,
+      "text": "Aripiprazole, ziprasidone, \nbrexpiprazole, cariprazine \nand lurasidone not clearly \nassociated with weight \ngain but monitoring \nrecommended \nnonetheless – obesity \nprevalence high in this \npatient group\n",
+      "bbox": [
+        351.4791259765625,
+        456.5518798828125,
+        435.6592102050781,
+        545.2393798828125
+      ],
+      "text_sha256": "2c63b60388e9e0d9bb8d67019f1c9fd6c3c03a31e6114b9a7b4312c6241bcd93"
+    },
+    {
+      "block_id": "page-0059-block-0032",
+      "order": 32,
+      "text": "Plasma \nglucose\n(fasting \nsample, if \npossible)\n",
+      "bbox": [
+        61.89662170410156,
+        551.3743286132812,
+        94.81411743164062,
+        600.2518310546875
+      ],
+      "text_sha256": "d622986c2d3cae1609f4a9221f9ded29de3247480d219b218b9978e561c70e55"
+    },
+    {
+      "block_id": "page-0059-block-0033",
+      "order": 33,
+      "text": "Baseline, at 4–6 \nmonths, then yearly \nto detect \nantipsychotic-\ninduced changes \nand generally \nmonitor physical \nhealth\n",
+      "bbox": [
+        111.00662231445312,
+        551.5468139648438,
+        176.4291229248047,
+        630.23681640625
+      ],
+      "text_sha256": "02423561034568a03009998f63a5d0f9a242905a9f7db025a67b667713a1e91e"
+    },
+    {
+      "block_id": "page-0059-block-0034",
+      "order": 34,
+      "text": "Offer lifestyle advice. \nObtain fasting sample or \nnon-fasting and HbA1C.\nRefer to GP or specialist\n",
+      "bbox": [
+        181.9989013671875,
+        551.5317993164062,
+        262.8516540527344,
+        590.3319091796875
+      ],
+      "text_sha256": "919d2f3dd5a459216c221c82be2e3fd51b38385baf382c60a908b48a90a01203"
+    },
+    {
+      "block_id": "page-0059-block-0035",
+      "order": 35,
+      "text": "Clozapine, olanzapine, \nchlorpromazine – test \nat baseline, one month, \nthen 4–6 monthly\n",
+      "bbox": [
+        268.473876953125,
+        551.6243896484375,
+        346.4139709472656,
+        590.3244018554688
+      ],
+      "text_sha256": "b15abcb78100bbdbbbc78909b4d56c53d95ab504c2c3f180660ed04074672caa"
+    },
+    {
+      "block_id": "page-0059-block-0036",
+      "order": 36,
+      "text": "Some antipsychotic \nmedications not clearly \nassociated with IFG, but \nprevalence is high in this \npatient group,17,18 so all \npatients should be \nmonitored\n",
+      "bbox": [
+        351.46868896484375,
+        551.6168823242188,
+        431.7714538574219,
+        620.3294067382812
+      ],
+      "text_sha256": "3b6a05113a74625471e0259889a7335034adcd622dcc4c24bb4b69ca1391b8f8"
+    },
+    {
+      "block_id": "page-0059-block-0037",
+      "order": 37,
+      "text": "(Continued)\n",
+      "bbox": [
+        396.3712158203125,
+        638.4119262695312,
+        433.8862609863281,
+        647.1644287109375
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

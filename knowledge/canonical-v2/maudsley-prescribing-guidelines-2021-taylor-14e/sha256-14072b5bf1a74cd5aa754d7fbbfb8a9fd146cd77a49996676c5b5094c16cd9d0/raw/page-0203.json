@@ -1,0 +1,299 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0203",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 203,
+  "source_page_index": 202,
+  "source_page_display": 203,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "182    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nre-exposing to clozapine patients with previous history of clozapine-induced pneumo-\nnia. Early referral to general medical services should be considered where there is any \ndoubt about the severity or type of chest infection.\nSummary\n■\n■Assume the use of all antipsychotics increase the risk of pneumonia.\n■\n■Monitor all patients for signs of chest infection and treat promptly.\nReferences\n\t 1.\t Dzahini O, et al. Antipsychotic drug use and pneumonia: systematic review and meta-analysis. J Psychopharmacology 2018; \n32:1167–1181.\n\t 2.\t Cepaityte D, et al. Exploring a safety signal of antipsychotic-associated pneumonia: a pharmacovigilance-pharmacodynamic study. Schizophr \nBull 2020: [Epub ahead of print].\n\t 3.\t Hung GC, et al. Antipsychotic reexposure and recurrent pneumonia in schizophrenia: a nested case-control study. J Clin Psychiatry 2016; \n77:60–66.\n\t 4.\t Kuo CJ, et al. Second-generation antipsychotic medications and risk of pneumonia in schizophrenia. Schizophr Bull 2013; 39:648–657.\n\t 5.\t Yang SY, et al. Antipsychotic drugs, mood stabilizers, and risk of pneumonia in bipolar disorder: a nationwide case-control study. J Clin \nPsychiatry 2013; 74:e79–e86.\n\t 6.\t Huybrechts KF, et al. Comparative safety of antipsychotic medications in nursing home residents. J Am Geriatr Soc 2012; 60:420–429.\n\t 7.\t Trifiro G, et al. Association of community-acquired pneumonia with antipsychotic drug use in elderly patients: a nested case-control study. \nAnn Intern Med 2010; 152:418–440.\n\t 8.\t Chen YH, et al. Poor clinical outcomes among pneumonia patients with schizophrenia. Schizophr Bull 2011; 37:1088–1094.\n\t 9.\t Nose M, et al. Antipsychotic drug exposure and risk of pneumonia: a systematic review and meta-analysis of observational studies. \nPharmacoepidemiol Drug Saf 2015; 24:812–820.\n\t10.\t Tolppanen AM, et al. Antipsychotic use and risk of hospitalization or death due to pneumonia in persons with and those without Alzheimer \ndisease. Chest 2016; 150:1233–1241.\n\t11.\t Chan HY, et al. Is antipsychotic treatment associated with risk of pneumonia in people with serious mental illness?: the roles of severity of \npsychiatric symptoms and global functioning. J Clin Psychopharmacol 2019; 39:434–440.\n\t12.\t Plaze M, et al. Repurposing chlorpromazine to treat COVID-19: the reCoVery study. Encephale 2020; 46:169–172.\n\t13.\t Otręba M, et al. Antiviral activity of chlorpromazine, fluphenazine, perphenazine, prochlorperazine, and thioridazine towards RNA-viruses. \nA review. Eur J Pharmacol 2020; 887:173553.\n\t14.\t Knol W, et al. Antipsychotic drug use and risk of pneumonia in elderly people. J Am Geriatr Soc 2008; 56:661–666.\n\t15.\t Herzig SJ, et al. Antipsychotics and the risk of aspiration pneumonia in individuals hospitalized for nonpsychiatric conditions: a cohort study. \nJ Am Geriatr Soc 2017; 65:2580–2586.\n\t16.\t Galappathie N, et al. Clozapine-associated pneumonia and respiratory arrest secondary to severe constipation. Med Sci Law 2014; \n54:105–109.\n\t17.\t Ponsford M, et al. Clozapine is associated with secondary antibody deficiency. Br J Psychiatry 2018; 214:1–7.\n\t18.\t De Leon J, et al. Pneumonia may be more frequent and have more fatal outcomes with clozapine than with other second-generation antipsy-\nchotics. World Psychiatry 2020; 19:120–121.\nFurther reading\nSchoretsanitis G, et al. An update on the complex relationship between clozapine and pneumonia. Expert Rev Clin Pharmacol 2021; \n14:145–149.\n",
+  "raw_text_sha256": "0a152864648abe1d399db1a1f3f4756e6fe86356c2852e2b59e2e810b5ff410e",
+  "coordinates_sha256": "3407b05a83ebc9662fa384fd40736c6ed948641da20306c14631197be487d845",
+  "block_sequence_sha256": "2b2d1b300d754c8e3dbadc033b32cc03c0b539a79542b9f3e46d9d6be67e073e",
+  "blocks": [
+    {
+      "block_id": "page-0203-block-0000",
+      "order": 0,
+      "text": "182    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "b08e7917c185d9e860205591b4139156119e8a6a306a169920da2d37373432cd"
+    },
+    {
+      "block_id": "page-0203-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0203-block-0002",
+      "order": 2,
+      "text": "re-exposing to clozapine patients with previous history of clozapine-induced pneumo-\nnia. Early referral to general medical services should be considered where there is any \ndoubt about the severity or type of chest infection.\n",
+      "bbox": [
+        61.88909912109375,
+        62.54931640625,
+        436.6692810058594,
+        98.26931762695312
+      ],
+      "text_sha256": "efa15dbb9e905b875659fe780e2da94fca97c251bf4aa5b9eaa4f831df345619"
+    },
+    {
+      "block_id": "page-0203-block-0003",
+      "order": 3,
+      "text": "Summary\n",
+      "bbox": [
+        61.88909912109375,
+        115.70431518554688,
+        110.79510498046875,
+        128.73931884765625
+      ],
+      "text_sha256": "3cbb36aca330b3bd113955dfbada0adb7a5f95ad9f678bd61f175406c6a37e95"
+    },
+    {
+      "block_id": "page-0203-block-0004",
+      "order": 4,
+      "text": "■\n■Assume the use of all antipsychotics increase the risk of pneumonia.\n",
+      "bbox": [
+        69.13899993896484,
+        143.87081909179688,
+        324.0202331542969,
+        153.73931884765625
+      ],
+      "text_sha256": "5fcc772333a635eb135aef970b2350bd0525b370953d46e7cb23d11c1d5eac93"
+    },
+    {
+      "block_id": "page-0203-block-0005",
+      "order": 5,
+      "text": "■\n■Monitor all patients for signs of chest infection and treat promptly.\n",
+      "bbox": [
+        69.13899993896484,
+        156.87081909179688,
+        318.3507385253906,
+        166.73931884765625
+      ],
+      "text_sha256": "d305cffb33eb4b83523515ad60a4b6d1c2894538544ec5f858ab6c9201d67fb7"
+    },
+    {
+      "block_id": "page-0203-block-0006",
+      "order": 6,
+      "text": "References\n",
+      "bbox": [
+        61.88909912109375,
+        194.57931518554688,
+        117.923095703125,
+        207.61431884765625
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0203-block-0007",
+      "order": 7,
+      "text": "\t 1.\t Dzahini O, et al. Antipsychotic drug use and pneumonia: systematic review and meta-analysis. J Psychopharmacology 2018; \n",
+      "bbox": [
+        61.88909912109375,
+        212.7003173828125,
+        435.5270690917969,
+        219.73231506347656
+      ],
+      "text_sha256": "cefe14db8427b4f0dc2454862525c9ce2caaac8008a1283ade913dbeb8a8032c"
+    },
+    {
+      "block_id": "page-0203-block-0008",
+      "order": 8,
+      "text": "32:1167–1181.\n\t 2.\t Cepaityte D, et al. Exploring a safety signal of antipsychotic-associated pneumonia: a pharmacovigilance-pharmacodynamic study. Schizophr \n",
+      "bbox": [
+        61.895103454589844,
+        221.5563201904297,
+        435.5451965332031,
+        237.73231506347656
+      ],
+      "text_sha256": "d37c36808215e56ca9b58646eba6a936bf7fea94affc16085ad66f731480cd92"
+    },
+    {
+      "block_id": "page-0203-block-0009",
+      "order": 9,
+      "text": "Bull 2020: [Epub ahead of print].\n\t 3.\t Hung GC, et al. Antipsychotic reexposure and recurrent pneumonia in schizophrenia: a nested case-control study. J Clin Psychiatry 2016; \n",
+      "bbox": [
+        61.901100158691406,
+        239.7003173828125,
+        435.5270690917969,
+        255.73231506347656
+      ],
+      "text_sha256": "b7349e6ed171de892dd254a6e1d09a40296343c4d8f14306149efff7f73e02b6"
+    },
+    {
+      "block_id": "page-0203-block-0010",
+      "order": 10,
+      "text": "77:60–66.\n\t 4.\t Kuo CJ, et al. Second-generation antipsychotic medications and risk of pneumonia in schizophrenia. Schizophr Bull 2013; 39:648–657.\n\t 5.\t Yang SY, et al. Antipsychotic drugs, mood stabilizers, and risk of pneumonia in bipolar disorder: a nationwide case-control study. J Clin \n",
+      "bbox": [
+        61.90709686279297,
+        257.5563049316406,
+        435.5450744628906,
+        282.7323303222656
+      ],
+      "text_sha256": "e8fac6095ba8900bd04ac4a872c8193c37c11dea4ac032594450a6e77a403f7b"
+    },
+    {
+      "block_id": "page-0203-block-0011",
+      "order": 11,
+      "text": "Psychiatry 2013; 74:e79–e86.\n\t 6.\t Huybrechts KF, et al. Comparative safety of antipsychotic medications in nursing home residents. J Am Geriatr Soc 2012; 60:420–429.\n\t 7.\t Trifiro G, et al. Association of community-acquired pneumonia with antipsychotic drug use in elderly patients: a nested case-control study. \n",
+      "bbox": [
+        61.919097900390625,
+        284.5563049316406,
+        435.5992126464844,
+        309.7323303222656
+      ],
+      "text_sha256": "d895376c1998f43e0e8149d8e7428bbf0a0780db3749e1654f208b568c02ae11"
+    },
+    {
+      "block_id": "page-0203-block-0012",
+      "order": 12,
+      "text": "Ann Intern Med 2010; 152:418–440.\n\t 8.\t Chen YH, et al. Poor clinical outcomes among pneumonia patients with schizophrenia. Schizophr Bull 2011; 37:1088–1094.\n\t 9.\t Nose M, et al. Antipsychotic drug exposure and risk of pneumonia: a systematic review and meta-analysis of observational studies. \n",
+      "bbox": [
+        61.93109893798828,
+        311.5563049316406,
+        435.5630187988281,
+        336.7323303222656
+      ],
+      "text_sha256": "40ab41e4232a8adb558c8fb2d94056850106818636df92991c332b7452384c20"
+    },
+    {
+      "block_id": "page-0203-block-0013",
+      "order": 13,
+      "text": "Pharmacoepidemiol Drug Saf 2015; 24:812–820.\n\t10.\t Tolppanen AM, et al. Antipsychotic use and risk of hospitalization or death due to pneumonia in persons with and those without Alzheimer \n",
+      "bbox": [
+        61.94309997558594,
+        338.5563049316406,
+        435.6109313964844,
+        354.7323303222656
+      ],
+      "text_sha256": "ca34681e39155d43761f019c22c8d3c6a6333f6a53f028b643ba376f44d764f3"
+    },
+    {
+      "block_id": "page-0203-block-0014",
+      "order": 14,
+      "text": "disease. Chest 2016; 150:1233–1241.\n\t11.\t Chan HY, et al. Is antipsychotic treatment associated with risk of pneumonia in people with serious mental illness?: the roles of severity of \n",
+      "bbox": [
+        61.9490966796875,
+        356.5563049316406,
+        435.6053161621094,
+        372.7323303222656
+      ],
+      "text_sha256": "510501e4069bde2e74a49242adc63b170eb577eb1bdf7e150a3129eb8fafff06"
+    },
+    {
+      "block_id": "page-0203-block-0015",
+      "order": 15,
+      "text": "psychiatric symptoms and global functioning. J Clin Psychopharmacol 2019; 39:434–440.\n\t12.\t Plaze M, et al. Repurposing chlorpromazine to treat COVID-19: the reCoVery study. Encephale 2020; 46:169–172.\n\t13.\t Otręba M, et al. Antiviral activity of chlorpromazine, fluphenazine, perphenazine, prochlorperazine, and thioridazine towards RNA-viruses. \n",
+      "bbox": [
+        61.955101013183594,
+        374.5563049316406,
+        435.6172790527344,
+        400.5243225097656
+      ],
+      "text_sha256": "542e226cce244d9dbc6cac1ed6fa4f80b6085920d1eda1904a1ec3c421d7f315"
+    },
+    {
+      "block_id": "page-0203-block-0016",
+      "order": 16,
+      "text": "A review. Eur J Pharmacol 2020; 887:173553.\n\t14.\t Knol W, et al. Antipsychotic drug use and risk of pneumonia in elderly people. J Am Geriatr Soc 2008; 56:661–666.\n\t15.\t Herzig SJ, et al. Antipsychotics and the risk of aspiration pneumonia in individuals hospitalized for nonpsychiatric conditions: a cohort study. \n",
+      "bbox": [
+        61.96710205078125,
+        401.5563049316406,
+        435.6111145019531,
+        426.7323303222656
+      ],
+      "text_sha256": "a7d781fff14a96e86a8ae5d890f66e3ab509efd011160847f633809620d77325"
+    },
+    {
+      "block_id": "page-0203-block-0017",
+      "order": 17,
+      "text": "J Am Geriatr Soc 2017; 65:2580–2586.\n\t16.\t Galappathie N, et al. Clozapine-associated pneumonia and respiratory arrest secondary to severe constipation. Med Sci Law 2014; \n",
+      "bbox": [
+        61.979103088378906,
+        428.5563049316406,
+        435.6410827636719,
+        444.7323303222656
+      ],
+      "text_sha256": "7673263278879f18efd44510e7eb4f8cb62267a418c859f8f042172c2a4d6277"
+    },
+    {
+      "block_id": "page-0203-block-0018",
+      "order": 18,
+      "text": "54:105–109.\n\t17.\t Ponsford M, et al. Clozapine is associated with secondary antibody deficiency. Br J Psychiatry 2018; 214:1–7.\n\t18.\t De Leon J, et al. Pneumonia may be more frequent and have more fatal outcomes with clozapine than with other second-generation antipsy-\n",
+      "bbox": [
+        61.98509979248047,
+        446.5563049316406,
+        434.00286865234375,
+        471.7323303222656
+      ],
+      "text_sha256": "14eb6916f8cea388ac1946b9b5396001007676b4a178bce3bf6d687fa6a79133"
+    },
+    {
+      "block_id": "page-0203-block-0019",
+      "order": 19,
+      "text": "chotics. World Psychiatry 2020; 19:120–121.\n",
+      "bbox": [
+        72.99510192871094,
+        473.5563049316406,
+        190.3490753173828,
+        480.7323303222656
+      ],
+      "text_sha256": "5c71b4fff74810ca7982220f7dc73f6f6854802e4be2f8048351ff9dfcb0719c"
+    },
+    {
+      "block_id": "page-0203-block-0020",
+      "order": 20,
+      "text": "Further reading\n",
+      "bbox": [
+        61.88909912109375,
+        499.0793151855469,
+        142.37608337402344,
+        512.1143188476562
+      ],
+      "text_sha256": "97a7eb93e6fca560969f4c10a52d2ef83995974b08b112934e0d108909963303"
+    },
+    {
+      "block_id": "page-0203-block-0021",
+      "order": 21,
+      "text": "Schoretsanitis G, et al. An update on the complex relationship between clozapine and pneumonia. Expert Rev Clin Pharmacol 2021; \n",
+      "bbox": [
+        61.88909912109375,
+        517.2003173828125,
+        435.5511169433594,
+        524.2322998046875
+      ],
+      "text_sha256": "dbf78ba426a2df39635d1ca74c4041af37302c637e6cc6a6002b21af9eba8a6e"
+    },
+    {
+      "block_id": "page-0203-block-0022",
+      "order": 22,
+      "text": "14:145–149.\n",
+      "bbox": [
+        72.88710021972656,
+        526.2003173828125,
+        105.91108703613281,
+        533.2322998046875
+      ],
+      "text_sha256": "3f727b39258c47992ba3faa624cac9ec919907c580b328de3744abded5ccdd9d"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

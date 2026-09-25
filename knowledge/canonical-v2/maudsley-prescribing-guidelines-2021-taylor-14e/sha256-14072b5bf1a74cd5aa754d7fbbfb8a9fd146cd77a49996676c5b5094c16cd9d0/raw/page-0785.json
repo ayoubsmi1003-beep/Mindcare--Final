@@ -1,0 +1,359 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0785",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 785,
+  "source_page_index": 784,
+  "source_page_display": 785,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "764    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  9\nReferences\n\t 1.\t Martínez-González L, et al. Incidence of anorexia nervosa in women: a systematic review and meta-analysis. Int J Environ Res Public Health \n2020; 17:3824.\n\t 2.\t Galmiche M, et al. Prevalence of eating disorders over the 2000–2018 period: a systematic literature review. Am J Clin Nutr 2019; \n109:1402–1413.\n\t 3.\t Frank GKW. Pharmacotherapeutic strategies for the treatment of anorexia nervosa – too much for one drug? Expert Opin Pharmacother \n2020; 21:1045–1058.\n\t 4.\t National Institute for Clinical Excellence. Eating disorders: recognition and treatment. NICE guideline [NG69] 2017 (Last update March \n2020); https://www.nice.org.uk/guidance/ng69.\n\t 5.\t American Psychiatric Association. Treatment of patients with eating disorders, third edition. Am J Psychiatry 2006; 163:4–54.\n\t 6.\t Crow SJ, et al. What potential role is there for medication treatment in anorexia nervosa? Int J Eat Disord 2009; 42:1–8.\n\t 7.\t Dunican KC, et al. The role of olanzapine in the treatment of anorexia nervosa. Ann Pharmacothe 2007; 41:111–115.\n\t 8.\t Bissada H, et al. Olanzapine in the treatment of low body weight and obsessive thinking in women with anorexia nervosa: a randomized, \ndouble-blind, placebo-controlled trial. Am J Psychiatry 2008; 165:1281–1288.\n\t 9.\t Leggero C, et al. Low-dose olanzapine monotherapy in girls with anorexia nervosa, restricting subtype: focus on hyperactivity. J Child \nAdolesc Psychopharmacol 2010; 20:127–133.\n\t10.\t Court A, et al. Investigating the effectiveness, safety and tolerability of quetiapine in the treatment of anorexia nervosa in young people: a \npilot study. J Psychiatr Res 2010; 44:1027–1034.\n\t11.\t Powers PS, et al. Double-blind placebo-controlled trial of quetiapine in anorexia nervosa. Eur Eat Disord Rev 2012; 20:331–334.\n\t12.\t Miniati M, et al. Psychopharmacological options for adult patients with anorexia nervosa. CNS Spectr 2016; 21:134–142.\n\t13.\t de Vos J, et al. Meta analysis on the efficacy of pharmacotherapy versus placebo on anorexia nervosa. J Eat Disord 2014; 2:27.\nSummary of NICE guidance on eating disorders4\nAnorexia nervosa\n■\n■Psychological interventions are the treatments of choice and should be accompanied by \nmonitoring of the patient’s physical state\n■\n■No pharmacological intervention is recommended. A range of medicines may be used in the \ntreatment of co-morbid conditions\nBulimia nervosa\n■\n■An evidence-based self-help programme or cognitive behaviour therapy for bulimia nervosa \nshould be the first choice of treatment\n■\n■A trial of fluoxetine may be offered as an alternative or additional first step\nBinge eating disorder\n■\n■An evidence-based self-help programme of cognitive behavioural therapy for binge eating \ndisorder should be the first choice of treatment\n■\n■A trial of an SSRI can be considered as an alternative or additional first step\n■\n■Lisdexamfetamine is also an option\nOther atypical eating disorders\nThere have been no useful studies of the use of medicines to treat atypical eating disor-\nders other than anorexia nervosa and BED.4,55 In the absence of evidence to guide the \nmanagement of other atypical eating disorders (also known as ‘eating disorders not \notherwise specified’), it is recommended that the clinician considers following the \nguidance of the eating disorder that mostly resembles the individual patient’s eating \ndisorder.4\n",
+  "raw_text_sha256": "06db052f2f000d6cc359cb57ebd11afa72f10cc306b88c7a6b1843047571605a",
+  "coordinates_sha256": "78a92c06d48113dabcc7ed2555af2472662060e362a68f1dc6321e9d8e880384",
+  "block_sequence_sha256": "6983cf4908afa56b5f980cfb0163e8c8cbdff4cb8160f45ba6ecb5e581fc7aa9",
+  "blocks": [
+    {
+      "block_id": "page-0785-block-0000",
+      "order": 0,
+      "text": "764    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "2d882adf8f1898c0cfa8b4024398fa158c4eede6181698d1ec8df129564e3d93"
+    },
+    {
+      "block_id": "page-0785-block-0001",
+      "order": 1,
+      "text": "CHAPTER  9\n",
+      "bbox": [
+        18.520000457763672,
+        597.6024780273438,
+        28.0,
+        641.1704711914062
+      ],
+      "text_sha256": "2f213d231c74a11904a8da09025a8eefa6dceb4a2df848af43d9c4d19beb9596"
+    },
+    {
+      "block_id": "page-0785-block-0002",
+      "order": 2,
+      "text": "References\n",
+      "bbox": [
+        61.88999938964844,
+        405.1493835449219,
+        117.92399597167969,
+        418.18438720703125
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0785-block-0003",
+      "order": 3,
+      "text": "\t 1.\t Martínez-González L, et al. Incidence of anorexia nervosa in women: a systematic review and meta-analysis. Int J Environ Res Public Health \n",
+      "bbox": [
+        61.88999938964844,
+        423.2703857421875,
+        435.5821533203125,
+        430.3023986816406
+      ],
+      "text_sha256": "fdea92b58b98ab6901e27065af80fba07a1e61b0d0b910699adc570cb60e75a7"
+    },
+    {
+      "block_id": "page-0785-block-0004",
+      "order": 4,
+      "text": "2020; 17:3824.\n\t 2.\t Galmiche M, et al. Prevalence of eating disorders over the 2000–2018 period: a systematic literature review. Am J Clin Nutr 2019; \n",
+      "bbox": [
+        61.895999908447266,
+        432.1263732910156,
+        435.60601806640625,
+        448.3023986816406
+      ],
+      "text_sha256": "e235eb9d63fc9a393f12a6a2add1d957781064a3ebfdcff679847d8c7d32c170"
+    },
+    {
+      "block_id": "page-0785-block-0005",
+      "order": 5,
+      "text": "109:1402–1413.\n\t 3.\t Frank GKW. Pharmacotherapeutic strategies for the treatment of anorexia nervosa – too much for one drug? Expert Opin Pharmacother \n",
+      "bbox": [
+        61.902000427246094,
+        450.1263732910156,
+        435.53997802734375,
+        466.3023986816406
+      ],
+      "text_sha256": "f77107b94a78666ccf4e77c26c97347a65b0245d06490ce29e39b4abfd4ba9b1"
+    },
+    {
+      "block_id": "page-0785-block-0006",
+      "order": 6,
+      "text": "2020; 21:1045–1058.\n\t 4.\t National Institute for Clinical Excellence. Eating disorders: recognition and treatment. NICE guideline [NG69] 2017 (Last update March \n",
+      "bbox": [
+        61.90800094604492,
+        468.1263732910156,
+        435.59991455078125,
+        484.3023986816406
+      ],
+      "text_sha256": "659213b18198e27eb26887abf625f0f042789cc39ca1db410d2bd4b60eedd0e7"
+    },
+    {
+      "block_id": "page-0785-block-0007",
+      "order": 7,
+      "text": "2020); https://www.nice.org.uk/guidance/ng69.\n\t 5.\t American Psychiatric Association. Treatment of patients with eating disorders, third edition. Am J Psychiatry 2006; 163:4–54.\n\t 6.\t Crow SJ, et al. What potential role is there for medication treatment in anorexia nervosa? Int J Eat Disord 2009; 42:1–8.\n\t 7.\t Dunican KC, et al. The role of olanzapine in the treatment of anorexia nervosa. Ann Pharmacothe 2007; 41:111–115.\n\t 8.\t Bissada H, et al. Olanzapine in the treatment of low body weight and obsessive thinking in women with anorexia nervosa: a randomized, \n",
+      "bbox": [
+        61.91400146484375,
+        486.2703857421875,
+        435.6479797363281,
+        529.3023681640625
+      ],
+      "text_sha256": "12b5cc077a2af534eef9dccc7cbf1cb4de54bf0631dd8a897a7fdeeb9d0e9ef0"
+    },
+    {
+      "block_id": "page-0785-block-0008",
+      "order": 8,
+      "text": "double-blind, placebo-controlled trial. Am J Psychiatry 2008; 165:1281–1288.\n\t 9.\t Leggero C, et al. Low-dose olanzapine monotherapy in girls with anorexia nervosa, restricting subtype: focus on hyperactivity. J Child \n",
+      "bbox": [
+        61.9379997253418,
+        531.1264038085938,
+        435.60009765625,
+        547.3023681640625
+      ],
+      "text_sha256": "468163564491bd02ba8057d9aec0b689cb895fd721a12e96241c567d715c7b73"
+    },
+    {
+      "block_id": "page-0785-block-0009",
+      "order": 9,
+      "text": "Adolesc Psychopharmacol 2010; 20:127–133.\n\t10.\t Court A, et al. Investigating the effectiveness, safety and tolerability of quetiapine in the treatment of anorexia nervosa in young people: a \n",
+      "bbox": [
+        61.944000244140625,
+        549.1264038085938,
+        435.5699768066406,
+        565.3023681640625
+      ],
+      "text_sha256": "057b04d9db71bd6840e971de9bf1066fc4c0063a08e3bd01c96685814862a74b"
+    },
+    {
+      "block_id": "page-0785-block-0010",
+      "order": 10,
+      "text": "pilot study. J Psychiatr Res 2010; 44:1027–1034.\n\t11.\t Powers PS, et al. Double-blind placebo-controlled trial of quetiapine in anorexia nervosa. Eur Eat Disord Rev 2012; 20:331–334.\n\t12.\t Miniati M, et al. Psychopharmacological options for adult patients with anorexia nervosa. CNS Spectr 2016; 21:134–142.\n\t13.\t de Vos J, et al. Meta analysis on the efficacy of pharmacotherapy versus placebo on anorexia nervosa. J Eat Disord 2014; 2:27.\n",
+      "bbox": [
+        61.95000076293945,
+        567.1264038085938,
+        408.07806396484375,
+        601.3023681640625
+      ],
+      "text_sha256": "7b8ab6f20ea6ea8cdf5cedef41c048aed6e73d38922c81f1a5f11a0acc4e3d9c"
+    },
+    {
+      "block_id": "page-0785-block-0011",
+      "order": 11,
+      "text": "Summary of NICE guidance on eating disorders4\n",
+      "bbox": [
+        67.63999938964844,
+        190.1905059814453,
+        258.2177429199219,
+        200.26300048828125
+      ],
+      "text_sha256": "7233e5438d1257fea5445a973242bafe7d969308f69cc07b08f53a27f445dbb0"
+    },
+    {
+      "block_id": "page-0785-block-0012",
+      "order": 12,
+      "text": "Anorexia nervosa\n",
+      "bbox": [
+        67.63999938964844,
+        210.8155059814453,
+        137.8669891357422,
+        220.88800048828125
+      ],
+      "text_sha256": "d0298ad22f9d3fbdc01998c8969bffe4605292f25e0b59bd120abaffdc57359e"
+    },
+    {
+      "block_id": "page-0785-block-0013",
+      "order": 13,
+      "text": "■\n■Psychological interventions are the treatments of choice and should be accompanied by \n",
+      "bbox": [
+        67.63990020751953,
+        223.7196044921875,
+        395.0942077636719,
+        233.58810424804688
+      ],
+      "text_sha256": "fd6c4424e49a975da4c64f73f6f27a2f95d27199d918331cac08b59c0c30a614"
+    },
+    {
+      "block_id": "page-0785-block-0014",
+      "order": 14,
+      "text": "monitoring of the patient’s physical state\n",
+      "bbox": [
+        76.13999938964844,
+        233.71560668945312,
+        223.48751831054688,
+        243.5841064453125
+      ],
+      "text_sha256": "121521935e1e6163eade52f87816815b055839153e2259f6795cd7e0e0bb2656"
+    },
+    {
+      "block_id": "page-0785-block-0015",
+      "order": 15,
+      "text": "■\n■No pharmacological intervention is recommended. A range of medicines may be used in the \n",
+      "bbox": [
+        67.63990020751953,
+        243.7196044921875,
+        411.7881774902344,
+        253.58810424804688
+      ],
+      "text_sha256": "12b7cc79ee855500ab62c9c71e13b1d341749cc3e9f6d71cf51d68fe4daa03cf"
+    },
+    {
+      "block_id": "page-0785-block-0016",
+      "order": 16,
+      "text": "treatment of co-morbid conditions\n",
+      "bbox": [
+        76.13999938964844,
+        253.71560668945312,
+        201.13247680664062,
+        263.5841064453125
+      ],
+      "text_sha256": "4d49f602892bde9b220c5d76245b495a75c5fe4405b7bbb49e802b5b561b6294"
+    },
+    {
+      "block_id": "page-0785-block-0017",
+      "order": 17,
+      "text": "Bulimia nervosa\n",
+      "bbox": [
+        67.63999938964844,
+        273.43560791015625,
+        131.406982421875,
+        283.50811767578125
+      ],
+      "text_sha256": "b9a8ef39049ba15c0259c5b0195371ab357654f8973027f2dc27a78589c0373f"
+    },
+    {
+      "block_id": "page-0785-block-0018",
+      "order": 18,
+      "text": "■\n■An evidence-based self-help programme or cognitive behaviour therapy for bulimia nervosa \n",
+      "bbox": [
+        67.63990020751953,
+        286.3446044921875,
+        409.40814208984375,
+        296.2131042480469
+      ],
+      "text_sha256": "c115fac19563d4d937bf231b6150081d28723d4ce50bd0223d797e6a9f6d3858"
+    },
+    {
+      "block_id": "page-0785-block-0019",
+      "order": 19,
+      "text": "should be the first choice of treatment\n",
+      "bbox": [
+        76.13999938964844,
+        296.3406066894531,
+        215.3020477294922,
+        306.2091064453125
+      ],
+      "text_sha256": "fa548cb2fb4555ceafa233fb306c1ea113967ac4ff2215f2ac2ce0b48d36e578"
+    },
+    {
+      "block_id": "page-0785-block-0020",
+      "order": 20,
+      "text": "■\n■A trial of fluoxetine may be offered as an alternative or additional first step\n",
+      "bbox": [
+        67.63990020751953,
+        306.3446044921875,
+        346.57611083984375,
+        316.2131042480469
+      ],
+      "text_sha256": "2c93c937d28e732cd9db3e9a678f44bca099b6559be0f4a4965185f73e932f6c"
+    },
+    {
+      "block_id": "page-0785-block-0021",
+      "order": 21,
+      "text": "Binge eating disorder\n",
+      "bbox": [
+        67.63999938964844,
+        326.0646057128906,
+        153.44747924804688,
+        336.1371154785156
+      ],
+      "text_sha256": "d705ea714bc5fa23a671b608cec5d7d38d90173324aac03a2474c29558cf6bb2"
+    },
+    {
+      "block_id": "page-0785-block-0022",
+      "order": 22,
+      "text": "■\n■An evidence-based self-help programme of cognitive behavioural therapy for binge eating \n",
+      "bbox": [
+        67.63990020751953,
+        338.9696044921875,
+        404.2231750488281,
+        348.8381042480469
+      ],
+      "text_sha256": "6826b3876da8df12061a94bd5f636c25b91b8e63b0027b08432c3b32f0b8d2ec"
+    },
+    {
+      "block_id": "page-0785-block-0023",
+      "order": 23,
+      "text": "disorder should be the first choice of treatment\n",
+      "bbox": [
+        76.13999938964844,
+        348.9656066894531,
+        246.79457092285156,
+        358.8341064453125
+      ],
+      "text_sha256": "a9c9279f41e24408bac8dc78e26414ac4a9932dce3ca20c1ea4f235a17947da3"
+    },
+    {
+      "block_id": "page-0785-block-0024",
+      "order": 24,
+      "text": "■\n■A trial of an SSRI can be considered as an alternative or additional first step\n",
+      "bbox": [
+        67.63990020751953,
+        358.9696044921875,
+        347.6980895996094,
+        368.8381042480469
+      ],
+      "text_sha256": "27d71964397560d160338e69c3ec8a176dca862759a4680fa106144c492caaf0"
+    },
+    {
+      "block_id": "page-0785-block-0025",
+      "order": 25,
+      "text": "■\n■Lisdexamfetamine is also an option\n",
+      "bbox": [
+        67.63990020751953,
+        368.9696044921875,
+        202.7050018310547,
+        378.8381042480469
+      ],
+      "text_sha256": "a5df0f4bd7cb6777a63082f351680c48f3c43231d388182eb6613919694df2da"
+    },
+    {
+      "block_id": "page-0785-block-0026",
+      "order": 26,
+      "text": "Other atypical eating disorders\n",
+      "bbox": [
+        61.88999938964844,
+        62.500404357910156,
+        207.47998046875,
+        74.35040283203125
+      ],
+      "text_sha256": "7d83b38b0df35e52aa1b37c94c7980538f7c21402203534ae2490e96a29b4d8b"
+    },
+    {
+      "block_id": "page-0785-block-0027",
+      "order": 27,
+      "text": "There have been no useful studies of the use of medicines to treat atypical eating disor-\nders other than anorexia nervosa and BED.4,55 In the absence of evidence to guide the \nmanagement of other atypical eating disorders (also known as ‘eating disorders not \notherwise specified’), it is recommended that the clinician considers following the \nguidance of the eating disorder that mostly resembles the individual patient’s eating \ndisorder.4\n",
+      "bbox": [
+        61.889984130859375,
+        80.410400390625,
+        436.67291259765625,
+        152.13040161132812
+      ],
+      "text_sha256": "42fabca6c47de646c0d02bbee07398171571d40efa69b33d87b277ea0aa37b30"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

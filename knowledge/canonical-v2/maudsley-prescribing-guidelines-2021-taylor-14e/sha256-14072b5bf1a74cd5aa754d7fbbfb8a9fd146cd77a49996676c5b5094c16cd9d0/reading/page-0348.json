@@ -1,0 +1,15 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0348",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 348,
+  "source_page_index": 347,
+  "repaired_text": "Depression and anxiety disorders    327\nCHAPTER 3\n71.\t National Institute for Clinical Excellence. Depression: the treatment and management of depression in adults. Clinical Guidance [CG90].\n2009 (last reviewed Dec 2013); https://www.nice.org.uk/guidance/cg90.\n\t72.\t Harrison CL, et al. Tolerability of high-dose venlafaxine in depressed patients. J Psychopharmacology 2004; 18:200–204.\n\t73.\t Fountoulakis KN, et al. Combined oral venlafaxine and intravenous clomipramine-A: successful temporary response in a patient with\nextremely refractory depression. Can J Psychiatry 2004; 49:73–74.\n\t74.\t Siwek M, et al. Zinc supplementation augments efficacy of imipramine in treatment resistant patients: a double blind, placebo-controlled\nstudy. J Affect Disord 2009; 118:187–195.\n\t75.\t Papakostas GI, et al. Ziprasidone augmentation of selective serotonin reuptake inhibitors (SSRIs) for SSRI-resistant major depressive disorder. J Clin Psychiatry 2004; 65:217–221.\n\t76.\t Dunner DL, et al. Efficacy and tolerability of adjunctive ziprasidone in treatment-resistant depression: a randomized, open-label, pilot study.\nJ Clin Psychiatry 2007; 68:1071–1077.\n\t77.\t Papakostas GI, et al. A 12-week, randomized, double-blind, placebo-controlled, sequential parallel comparison trial of ziprasidone as monotherapy for major depressive disorder. J Clin Psychiatry 2012; 73:1541–1547.",
+  "repaired_text_sha256": "4d8c1cd02f91d6b92dcec2b9c7099ff0790c0985223bb2b5a7070b3fe8d0e30f",
+  "raw_text_sha256": "6e776c10ffe23b12debd30fdd883c5de00ab343b4bd5073646201615e1b3d1c9",
+  "repair_ids": [
+    "repair-000370",
+    "repair-000371"
+  ],
+  "raw_file": "raw/page-0348.json"
+}

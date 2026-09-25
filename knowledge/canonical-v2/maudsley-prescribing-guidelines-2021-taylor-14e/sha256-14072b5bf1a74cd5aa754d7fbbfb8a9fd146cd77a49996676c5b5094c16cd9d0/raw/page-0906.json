@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0906",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 906,
+  "source_page_index": 905,
+  "source_page_display": 906,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Psychotropic drugs in special conditions    885\nCHAPTER 13\nTable 13.3  Benzodiazepines concentration in normal dosing and the legal limit\nDrug/daily dose\nRange of concentrations reported  \n(legal limit)\nClonazepam 0.5–6.0mg41,42\n5–80µg/L (50)\nDiazepam 5–30mg43\n50–1000µg/L (550)\nFlunitrazepam 0.5–2.0mg44,45\n10–20µg/L (300)\nLorazepam 1–4mg46,47\n10–70µg/L (100)\nOxazepam 15–30mg48\n250–600µg/L (300)\nTemazepam 10–20mg49\n200–900µg/L (1000)\nIn regards to methadone, doses of up to 80mg a day generally give plasma levels \nbelow the UK legal limit.50 The legal limits listed here apply only to those who are law-\nfully prescribed the drug in question – the driver may be subject to prosecution if it can \nbe proved the drugs were taken illicitly.\nOther medicines\nMany psychotropics can impair alertness, concentration and driving performance. \nMedicines that block H1, α1-adrenergic or cholinergic receptors may be particularly \nproblematic. Effects are particularly marked at the start of treatment and after \nincreasing the dose. Drivers must be made aware of any potential for impairment \nand are advised to evaluate their driving performance at these times. They must stop \ndriving if adversely affected.51 The use of alcohol will further increase any \nimpairment.\nSome antipsychotics and antidepressants lower the seizure threshold. In the UK, \nthe DVLA advises this is taken into consideration when prescribing for a driver. \nFurther information about the effects of psychotropics on driving can be found in \nTable 13.2.\nMedication-induced sedation\nMany psychotropics are sedating. The more sedating a medicine is, the more likely it is \nto impair driving ability. Other medicines, either prescribed or bought over the counter, \nmay also be sedative and/or affect driving ability (e.g. antihistamines5). One study \nfound that 89% of patients taking other psychotropics in addition to antidepressants \nfailed a battery of ‘fitness to drive’ tests.52 Since the degree of sedation any individual \nwill experience is very difficult to predict, patients prescribed sedating medicines should \nbe advised not to drive if they feel sedated. In the UK, it is the responsibility of the \ndriver to ensure they are fit to drive.\n",
+  "raw_text_sha256": "aaa64ccb5c35038b52bdb3dbaac7244d326d5d7cd4f758291c9a0e7f649e3019",
+  "coordinates_sha256": "024ff58fd2820130c2fcf7922bfdf9f80451c1084f35062076db66909bfdb674",
+  "block_sequence_sha256": "8dc073b5584f0463d66fc21d56cba79af3281c890454d8bc21e3007a24bf44ac",
+  "blocks": [
+    {
+      "block_id": "page-0906-block-0000",
+      "order": 0,
+      "text": "Psychotropic drugs in special conditions    885\n",
+      "bbox": [
+        227.09710693359375,
+        31.395221710205078,
+        420.0010986328125,
+        41.0272216796875
+      ],
+      "text_sha256": "8b9a1f3b868007e995731c58f614a1fae61c14b458b9b264032a6b01cbf30aaf"
+    },
+    {
+      "block_id": "page-0906-block-0001",
+      "order": 1,
+      "text": "CHAPTER 13\n",
+      "bbox": [
+        454.4096984863281,
+        272.95111083984375,
+        463.88970947265625,
+        318.74310302734375
+      ],
+      "text_sha256": "a01ce0756ef6b5d41c48be6624d8bd154fa95cf67cb49768f2593332d3a2ec98"
+    },
+    {
+      "block_id": "page-0906-block-0002",
+      "order": 2,
+      "text": "Table 13.3  Benzodiazepines concentration in normal dosing and the legal limit\n",
+      "bbox": [
+        100.33329772949219,
+        69.41468811035156,
+        353.7283935546875,
+        78.30218505859375
+      ],
+      "text_sha256": "d8c69ebc36a8b27d9dd521f8f4f04080ba239bda3c7e58e5f2b11c04fb35499b"
+    },
+    {
+      "block_id": "page-0906-block-0003",
+      "order": 3,
+      "text": "Drug/daily dose\n",
+      "bbox": [
+        94.33329772949219,
+        99.53968811035156,
+        150.59080505371094,
+        108.42718505859375
+      ],
+      "text_sha256": "4c4b4c3052a5bfc321910898d62e6ada9ad159fa9d5752a1b536ef52f6706a27"
+    },
+    {
+      "block_id": "page-0906-block-0004",
+      "order": 4,
+      "text": "Range of concentrations reported  \n(legal limit)\n",
+      "bbox": [
+        205.3332977294922,
+        89.54219055175781,
+        328.1308288574219,
+        108.42718505859375
+      ],
+      "text_sha256": "008fb93887f095f8b6e1fd37db2b48f911e318d352555c90c5d84dfa213e164c"
+    },
+    {
+      "block_id": "page-0906-block-0005",
+      "order": 5,
+      "text": "Clonazepam 0.5–6.0mg41,42\n5–80µg/L (50)\n",
+      "bbox": [
+        94.33329772949219,
+        119.59468841552734,
+        249.9433135986328,
+        128.30218505859375
+      ],
+      "text_sha256": "517b0e733cc592211c0f3fcac1c1f06a1f7650e11e6233bf4125f5604602acfb"
+    },
+    {
+      "block_id": "page-0906-block-0006",
+      "order": 6,
+      "text": "Diazepam 5–30mg43\n50–1000µg/L (550)\n",
+      "bbox": [
+        94.33329772949219,
+        134.61720275878906,
+        266.6233215332031,
+        143.32720947265625
+      ],
+      "text_sha256": "ab4144a56d2eaf926e9eac3884bb86805a51c7d8cd22c725ae00361d44e501d0"
+    },
+    {
+      "block_id": "page-0906-block-0007",
+      "order": 7,
+      "text": "Flunitrazepam 0.5–2.0mg44,45\n10–20µg/L (300)\n",
+      "bbox": [
+        94.33329772949219,
+        149.64222717285156,
+        258.2832946777344,
+        158.3521728515625
+      ],
+      "text_sha256": "b0ff0e22fb29df77f02145aa75284fe55cb4ceece944792b769c1658691693ee"
+    },
+    {
+      "block_id": "page-0906-block-0008",
+      "order": 8,
+      "text": "Lorazepam 1–4mg46,47\n10–70µg/L (100)\n",
+      "bbox": [
+        94.33329772949219,
+        164.6671905517578,
+        258.2832946777344,
+        173.377197265625
+      ],
+      "text_sha256": "dfc3b86cd1a493b7ba589a630a41d317af5de45c954255c9d29ea96383a09502"
+    },
+    {
+      "block_id": "page-0906-block-0009",
+      "order": 9,
+      "text": "Oxazepam 15–30mg48\n250–600µg/L (300)\n",
+      "bbox": [
+        94.33329772949219,
+        179.6921844482422,
+        266.6233215332031,
+        188.40219116210938
+      ],
+      "text_sha256": "4bf2b426b2a86e11ad953fb1f6564995f26e95629c3b202fc957a542f2228bf4"
+    },
+    {
+      "block_id": "page-0906-block-0010",
+      "order": 10,
+      "text": "Temazepam 10–20mg49\n200–900µg/L (1000)\n",
+      "bbox": [
+        94.33329772949219,
+        194.71717834472656,
+        270.7933349609375,
+        203.42718505859375
+      ],
+      "text_sha256": "e5c516a172863a706f6401219c821069fb29bbb45da02e57daa0fef8e2a6842d"
+    },
+    {
+      "block_id": "page-0906-block-0011",
+      "order": 11,
+      "text": "In regards to methadone, doses of up to 80mg a day generally give plasma levels \nbelow the UK legal limit.50 The legal limits listed here apply only to those who are law-\nfully prescribed the drug in question – the driver may be subject to prosecution if it can \nbe proved the drugs were taken illicitly.\n",
+      "bbox": [
+        47.99940490722656,
+        246.51217651367188,
+        422.7900695800781,
+        294.232177734375
+      ],
+      "text_sha256": "e5f0829901a727ad356c3f5c16c15770115b23ce40b17c47fa2fc8aace6cfadf"
+    },
+    {
+      "block_id": "page-0906-block-0012",
+      "order": 12,
+      "text": "Other medicines\n",
+      "bbox": [
+        48.0,
+        317.66717529296875,
+        132.34799194335938,
+        330.7021789550781
+      ],
+      "text_sha256": "d47763348d0897de51460aa39574f3acd3cb3c6e88daafbe890d321173d7f0cf"
+    },
+    {
+      "block_id": "page-0906-block-0013",
+      "order": 13,
+      "text": "Many psychotropics can impair alertness, concentration and driving performance. \nMedicines that block H1, α1-adrenergic or cholinergic receptors may be particularly \nproblematic. Effects are particularly marked at the start of treatment and after \nincreasing the dose. Drivers must be made aware of any potential for impairment \nand are advised to evaluate their driving performance at these times. They must stop \ndriving if adversely affected.51 The use of alcohol will further increase any \nimpairment.\n",
+      "bbox": [
+        48.0,
+        336.5121765136719,
+        422.8036804199219,
+        420.232177734375
+      ],
+      "text_sha256": "36686461a834f65796844acc645b468f2598cc51f80aa37a72039dc91e25a804"
+    },
+    {
+      "block_id": "page-0906-block-0014",
+      "order": 14,
+      "text": "Some antipsychotics and antidepressants lower the seizure threshold. In the UK, \nthe DVLA advises this is taken into consideration when prescribing for a driver. \nFurther information about the effects of psychotropics on driving can be found in \nTable 13.2.\n",
+      "bbox": [
+        48.00068664550781,
+        420.5121765136719,
+        422.82061767578125,
+        468.232177734375
+      ],
+      "text_sha256": "545d71f3023a8af42b21b42098be3f8d4c52601e682a786db11add5d1cfbc085"
+    },
+    {
+      "block_id": "page-0906-block-0015",
+      "order": 15,
+      "text": "Medication-induced sedation\n",
+      "bbox": [
+        48.00068664550781,
+        492.6021728515625,
+        185.23068237304688,
+        504.4521789550781
+      ],
+      "text_sha256": "b8447f074e9f4afe0d4fdbe38a96eb7134e2bf455e5da7d4904f134e0c4122e3"
+    },
+    {
+      "block_id": "page-0906-block-0016",
+      "order": 16,
+      "text": "Many psychotropics are sedating. The more sedating a medicine is, the more likely it is \nto impair driving ability. Other medicines, either prescribed or bought over the counter, \nmay also be sedative and/or affect driving ability (e.g. antihistamines5). One study \nfound that 89% of patients taking other psychotropics in addition to antidepressants \nfailed a battery of ‘fitness to drive’ tests.52 Since the degree of sedation any individual \nwill experience is very difficult to predict, patients prescribed sedating medicines should \nbe advised not to drive if they feel sedated. In the UK, it is the responsibility of the \ndriver to ensure they are fit to drive.\n",
+      "bbox": [
+        47.998321533203125,
+        510.51214599609375,
+        422.790771484375,
+        606.2322387695312
+      ],
+      "text_sha256": "8fc1f8b45fd968828fec9d8140b191ad9bcd137a193fcfa93f523650ebd683f7"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

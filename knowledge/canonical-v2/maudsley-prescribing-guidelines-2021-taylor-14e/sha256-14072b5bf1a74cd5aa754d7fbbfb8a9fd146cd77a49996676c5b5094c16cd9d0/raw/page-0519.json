@@ -1,0 +1,107 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0519",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 519,
+  "source_page_index": 518,
+  "source_page_display": 519,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "498    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nperiod of acute pain are to manage the pain and avoid the consequences of withdrawal, \nso it is important to maintain sufficient background medication to achieve both. Liaison \nwith both the inpatient pain team and the local addictions services, as well as collabora-\ntive discussion with the patient, is important. The patient may be known to the addic-\ntion services, who will be able to inform the treatment plan, assist in a reliable conversion \nfrom street drugs (if these are also being taken) to prescribed analgesics and help plan \na smooth transition from acute pain intervention to ongoing management of the \npatient’s substance misuse.35 Further details can be found in a consensus document by \nthe British Pain Society, Royal College of Psychiatrists, Royal College of GPs and the \nAdvisory Council on the Misuse of Drugs.82\nAs advised in the consensus document, in palliative care, the principles of providing \nanalgesia ‘in substance misusers are fundamentally no different from those for other \nadult patients needing palliative care’, although increased liaison with substance misuse \nservices is essential. Those who are opioid dependent may receive maintenance therapy \nfrom a substance misuse service ‘and this should be regarded as a separate prescription \nfrom that for analgesia when attending as a [pain clinic] outpatient’, as also described in \nthe context of chronic non-cancer pain above. During admission all medication would \nusually be received from the inpatient unit, but with ‘a clear plan for separate follow-ups \nfor substance misuse and symptom palliation … in place on discharge except during the \nterminal phase of an illness’.82 Again, further details can be found in the consensus advice \ndocument.82 Subsequent to the publication of this document, there have been concerns \nregarding the abuse potential of pregabalin, a non-opioid medication used for chronic \npain,70 and the potential for prescription of pregabalin and opioids to increase the poten-\ntial for overdose.39  Caution is advised when prescribing pregabalin for chronic pain. \nSubstitute prescribing can occur at any time in pregnancy and carries a lower risk than continuing \nillicit use. Treatment should strike a balance between stabilising drug use and minimising the dose \nof OST in order to prevent neonatal abstinence syndrome (NAS).1\nPregnancy and opioid use (also see section ‘Substance misuse in \npregnancy’ in this chapter)\nWomen can present with opioid dependency at any stage in pregnancy, and stabilisation \non substitute methadone is the treatment of choice. Detoxification in the first trimester \nis contraindicated due to the risk of spontaneous abortion and in the third trimester it is \nassociated with preterm delivery, foetal distress and stillbirth. If detoxification is \nrequested, this is most safely achieved in the second trimester but should only be super-\nvised by specialists with the appropriate competencies and with careful monitoring for \nany evidence of instability. Detoxification should be prescribed in small frequent decre-\nments, e.g. 2–3mg of methadone every 3–5 days.1 Enforcing detoxification is contrain-\ndicated as it is likely to deter some clients from seeking help, and the majority will then \nreturn to opioid use at some point during their pregnancy;83 fluctuating opioid concen-\ntrations in the maternal blood from intermittent use of illicit opioids may then lead to \nfoetal withdrawal or overdose.84,85 Buprenorphine is associated with less severe neonatal \nwithdrawal symptoms.14 However, buprenorphine should not be initiated in pregnancy \nor switched to methadone because of the risk of inducing withdrawal in the foetus.\n",
+  "raw_text_sha256": "a89af5f8bbcf3e66456cdcdcf8ae4409cef6c57e3cf0c2e57d1a4560a4e691c5",
+  "coordinates_sha256": "9c2091ed73cb495fbf7685c0c834dde81e028a5d5551618c1b6dde49e1406adf",
+  "block_sequence_sha256": "7eda03a11351e671386b11cdb203c6b4a73eb6e31b7b2eea203aa7d9c3438dbe",
+  "blocks": [
+    {
+      "block_id": "page-0519-block-0000",
+      "order": 0,
+      "text": "498    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "45b41fef22ee5c72d4706ca0422b993d43afb7e56670cbc1abb8fcff4860a24a"
+    },
+    {
+      "block_id": "page-0519-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0519-block-0002",
+      "order": 2,
+      "text": "period of acute pain are to manage the pain and avoid the consequences of withdrawal, \nso it is important to maintain sufficient background medication to achieve both. Liaison \nwith both the inpatient pain team and the local addictions services, as well as collabora-\ntive discussion with the patient, is important. The patient may be known to the addic-\ntion services, who will be able to inform the treatment plan, assist in a reliable conversion \nfrom street drugs (if these are also being taken) to prescribed analgesics and help plan \na smooth transition from acute pain intervention to ongoing management of the \npatient’s substance misuse.35 Further details can be found in a consensus document by \nthe British Pain Society, Royal College of Psychiatrists, Royal College of GPs and the \nAdvisory Council on the Misuse of Drugs.82\n",
+      "bbox": [
+        61.88678741455078,
+        62.55029296875,
+        436.7100830078125,
+        182.27029418945312
+      ],
+      "text_sha256": "a58c743a84868aee27a82f5f11ae2450279b1e541be5ce4540e821b063beb9ce"
+    },
+    {
+      "block_id": "page-0519-block-0003",
+      "order": 3,
+      "text": "As advised in the consensus document, in palliative care, the principles of providing \nanalgesia ‘in substance misusers are fundamentally no different from those for other \nadult patients needing palliative care’, although increased liaison with substance misuse \nservices is essential. Those who are opioid dependent may receive maintenance therapy \nfrom a substance misuse service ‘and this should be regarded as a separate prescription \nfrom that for analgesia when attending as a [pain clinic] outpatient’, as also described in \nthe context of chronic non-cancer pain above. During admission all medication would \nusually be received from the inpatient unit, but with ‘a clear plan for separate follow-ups \nfor substance misuse and symptom palliation … in place on discharge except during the \nterminal phase of an illness’.82 Again, further details can be found in the consensus advice \ndocument.82 Subsequent to the publication of this document, there have been concerns \nregarding the abuse potential of pregabalin, a non-opioid medication used for chronic \npain,70 and the potential for prescription of pregabalin and opioids to increase the poten-\ntial for overdose.39  Caution is advised when prescribing pregabalin for chronic pain. \n",
+      "bbox": [
+        61.88999938964844,
+        182.55029296875,
+        436.7203063964844,
+        350.2702941894531
+      ],
+      "text_sha256": "168f68e52c0d61c0e41a6cbb2f331382962f8391d873dbec6091f142e27fc8f6"
+    },
+    {
+      "block_id": "page-0519-block-0004",
+      "order": 4,
+      "text": "Substitute prescribing can occur at any time in pregnancy and carries a lower risk than continuing \nillicit use. Treatment should strike a balance between stabilising drug use and minimising the dose \nof OST in order to prevent neonatal abstinence syndrome (NAS).1\n",
+      "bbox": [
+        69.38999938964844,
+        408.181884765625,
+        428.7872314453125,
+        438.0423889160156
+      ],
+      "text_sha256": "cd6dc91c712ff87befd2b49782950a6b251bc5878e5dfd6e032388091663718e"
+    },
+    {
+      "block_id": "page-0519-block-0005",
+      "order": 5,
+      "text": "Pregnancy and opioid use (also see section ‘Substance misuse in \npregnancy’ in this chapter)\n",
+      "bbox": [
+        61.88999938964844,
+        366.1681823730469,
+        395.3990783691406,
+        391.2041931152344
+      ],
+      "text_sha256": "91c5d224b00a0bb2a001f5308f8c62575badafcaf983a1c7bf92132114a9e167"
+    },
+    {
+      "block_id": "page-0519-block-0006",
+      "order": 6,
+      "text": "Women can present with opioid dependency at any stage in pregnancy, and stabilisation \non substitute methadone is the treatment of choice. Detoxification in the first trimester \nis contraindicated due to the risk of spontaneous abortion and in the third trimester it is \nassociated with preterm delivery, foetal distress and stillbirth. If detoxification is \nrequested, this is most safely achieved in the second trimester but should only be super-\nvised by specialists with the appropriate competencies and with careful monitoring for \nany evidence of instability. Detoxification should be prescribed in small frequent decre-\nments, e.g. 2–3mg of methadone every 3–5 days.1 Enforcing detoxification is contrain-\ndicated as it is likely to deter some clients from seeking help, and the majority will then \nreturn to opioid use at some point during their pregnancy;83 fluctuating opioid concen-\ntrations in the maternal blood from intermittent use of illicit opioids may then lead to \nfoetal withdrawal or overdose.84,85 Buprenorphine is associated with less severe neonatal \nwithdrawal symptoms.14 However, buprenorphine should not be initiated in pregnancy \nor switched to methadone because of the risk of inducing withdrawal in the foetus.\n",
+      "bbox": [
+        61.8876953125,
+        455.9854736328125,
+        436.70989990234375,
+        623.7055053710938
+      ],
+      "text_sha256": "6d1fd59a8832654e71d6ffc4bd3bd632f50370f4805bcf98d950da019be92af8"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

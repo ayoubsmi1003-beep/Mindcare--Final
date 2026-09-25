@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0867",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 867,
+  "source_page_index": 866,
+  "source_page_display": 867,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "846    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  11\n\t120.\t Takeuchi H, et al. Dose reduction of risperidone and olanzapine and estimated dopamine D(2) receptor occupancy in stable patients with \nschizophrenia: findings from an open label, randomized, controlled study. J Clin Psychiatry 2014; 75:1209–1214.\n\t121.\t Bowskill SV, et al. Risperidone and total 9-hydroxyrisperidone in relation to prescribed dose and other factors: data from a therapeutic drug \nmonitoring service, 2002–2010. Ther Drug Monit 2012; 34:349–355.\n\t122.\t Pandina GJ, et al. A randomized, placebo-controlled study to assess the efficacy and safety of 3 doses of paliperidone palmitate in adults \nwith acutely exacerbated schizophrenia. J Clin Psychopharmacol 2010; 30:235–244.\n\t123.\t Mauri MC, et al. Paliperidone long-acting plasma level monitoring and a new method of evaluation of clinical Stability. Pharmacopsychiatry \n2017; 50:145–151.\n\t124.\t Paletta S, et al. Two years of maintenance therapy with paliperidone long-acting in schizophrenia and schizoaffective disorder: a study with \nplasma levels. Eur Neuropsychopharmacol 2016; 26:S556–S557.\n\t125.\t Berwaerts J, et al. Efficacy and safety of the 3-month formulation of paliperidone palmitate vs placebo for relapse prevention of schizophre-\nnia: A randomized clinical trial. JAMA Psychiatry 2015; 72:830–839.\n",
+  "raw_text_sha256": "2421d4cdda2b4ab4efbe12a5c5f9120d443fe7f42cbcba9f139d32c5292d93d4",
+  "coordinates_sha256": "4e882ad5e1282a54c6efb5daee52e8abc08c547325dcc7f452bdbcbecd02dd44",
+  "block_sequence_sha256": "50b4dbe3936e827326dd0ed1ae9d98cbc9f670294ec829a3488f85a9ca447679",
+  "blocks": [
+    {
+      "block_id": "page-0867-block-0000",
+      "order": 0,
+      "text": "846    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "5b5a0b8e31140e599a74662d5f12800529658137cfa6827b767a44b0ab913edb"
+    },
+    {
+      "block_id": "page-0867-block-0001",
+      "order": 1,
+      "text": "CHAPTER  11\n",
+      "bbox": [
+        18.520000457763672,
+        139.8785400390625,
+        28.0,
+        187.89450073242188
+      ],
+      "text_sha256": "83984f4328940309c03288e26b8edf9834cfa8fef30d3eedac5a4c266fe9aee7"
+    },
+    {
+      "block_id": "page-0867-block-0002",
+      "order": 2,
+      "text": "\t120.\t Takeuchi H, et al. Dose reduction of risperidone and olanzapine and estimated dopamine D(2) receptor occupancy in stable patients with \n",
+      "bbox": [
+        61.88999938964844,
+        63.2703857421875,
+        435.5400085449219,
+        70.30238342285156
+      ],
+      "text_sha256": "234c88d76632772eaff8c70ec96b2f9e04f63d67331111cfc0e0dd9f2ede074e"
+    },
+    {
+      "block_id": "page-0867-block-0003",
+      "order": 3,
+      "text": "schizophrenia: findings from an open label, randomized, controlled study. J Clin Psychiatry 2014; 75:1209–1214.\n\t121.\t Bowskill SV, et al. Risperidone and total 9-hydroxyrisperidone in relation to prescribed dose and other factors: data from a therapeutic drug \n",
+      "bbox": [
+        61.88999938964844,
+        72.12638854980469,
+        435.5220642089844,
+        88.30238342285156
+      ],
+      "text_sha256": "569615fcfd982648fd8e741b88af11d0ea6a6f45505f363b60a26477c4336f4d"
+    },
+    {
+      "block_id": "page-0867-block-0004",
+      "order": 4,
+      "text": "monitoring service, 2002–2010. Ther Drug Monit 2012; 34:349–355.\n\t122.\t Pandina GJ, et al. A randomized, placebo-controlled study to assess the efficacy and safety of 3 doses of paliperidone palmitate in adults \n",
+      "bbox": [
+        61.88999938964844,
+        90.12638854980469,
+        435.5458068847656,
+        106.30238342285156
+      ],
+      "text_sha256": "74a72e717217e1aef9c838e75e0965ff54cb6a8cc71a0cb2fa4216ba4bcbd5d7"
+    },
+    {
+      "block_id": "page-0867-block-0005",
+      "order": 5,
+      "text": "with acutely exacerbated schizophrenia. J Clin Psychopharmacol 2010; 30:235–244.\n\t123.\t Mauri MC, et al. Paliperidone long-acting plasma level monitoring and a new method of evaluation of clinical Stability. Pharmacopsychiatry \n",
+      "bbox": [
+        61.88999938964844,
+        108.12638854980469,
+        435.5220031738281,
+        124.30238342285156
+      ],
+      "text_sha256": "1ac879e744a5d7e7b465fa237c86749cddaee7230d1f47df498f56a9f0f6d495"
+    },
+    {
+      "block_id": "page-0867-block-0006",
+      "order": 6,
+      "text": "2017; 50:145–151.\n\t124.\t Paletta S, et al. Two years of maintenance therapy with paliperidone long-acting in schizophrenia and schizoaffective disorder: a study with \n",
+      "bbox": [
+        61.88999938964844,
+        126.12638854980469,
+        435.5279541015625,
+        142.30238342285156
+      ],
+      "text_sha256": "0df797d75369abedb80775a5a053e070a8a9e7cf6a033abc58485f673ac9abb6"
+    },
+    {
+      "block_id": "page-0867-block-0007",
+      "order": 7,
+      "text": "plasma levels. Eur Neuropsychopharmacol 2016; 26:S556–S557.\n\t125.\t Berwaerts J, et al. Efficacy and safety of the 3-month formulation of paliperidone palmitate vs placebo for relapse prevention of schizophre-\n",
+      "bbox": [
+        61.88999938964844,
+        144.1263885498047,
+        433.8900451660156,
+        160.30238342285156
+      ],
+      "text_sha256": "f26a631d20265ada21660341075b9ba953d9be6deca8d7199751897c119e122a"
+    },
+    {
+      "block_id": "page-0867-block-0008",
+      "order": 8,
+      "text": "nia: A randomized clinical trial. JAMA Psychiatry 2015; 72:830–839.\n",
+      "bbox": [
+        76.13999938964844,
+        162.1263885498047,
+        255.82196044921875,
+        169.30238342285156
+      ],
+      "text_sha256": "9b8c06d7cb7507709bd2307447151f5aa1142cd526a84a0feb0b8786bddcd8a2"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

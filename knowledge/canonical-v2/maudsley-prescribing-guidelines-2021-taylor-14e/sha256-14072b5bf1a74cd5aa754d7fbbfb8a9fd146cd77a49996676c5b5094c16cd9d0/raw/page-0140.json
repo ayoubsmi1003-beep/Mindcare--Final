@@ -1,0 +1,275 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0140",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 140,
+  "source_page_index": 139,
+  "source_page_display": 140,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    119\nCHAPTER 1\nTable 1.16  Other options for the treatment of TD\nDrug\nComments\nAmino acids74\nUse is supported by a small randomised, placebo-controlled trial. Low risk of toxicity\nBotulinum toxin75–78\nCase reports of success for localised dyskinesia. Probably now treatment of choice for \ndisabling or distressing focal symptoms\nCalcium antagonists79\nA few published studies but not widely used. Cochrane is dismissive.80 A meta-\nanalysis found no effect49\nDonepezil81–83\nSupported by a single open study and case series. One negative RCT (n = 12). Dose \nis 10mg/day. No clear evidence of efficacy for rivastigmine or galantamine84\nFish oils85,86\nVery limited support for the use of EPA at dose of 2g/day\nFluvoxamine87\nThree case reports. Dose is 100mg/day. Beware of interactions\nGabapentin88\nAdds weight to theory that GABAergic mechanisms improve TD.\nDose is 900–1200mg/day. Inconclusive data on other GABA agonists89\nLevetiracetam90–93\nThree published case studies. One RCT. Dose up to 3000mg/day\nMelatonin94\nUse is supported by a meta-analysis of four trials.95 Usually well tolerated. Dose is \n10mg/day. Some evidence that melatonin receptor genotype determines risk of TD96\nNaltrexone97\nMay be effective when added to benzodiazepines. Well tolerated.\nDose is 200mg/day\nOndansetron98,99\nLimited evidence but low toxicity.\nDose – up to 12mg/day\nPropranolol100–102\nFormerly a relatively widely used treatment. Open-label studies only and a \nprospective randomized trial is probably warranted. Dose is 40–120mg/day. Beware \nof contra-indications (asthma, bradycardia, hypotension)\nQuercetin103\nPlant compound which is thought to be an antioxidant.\nSome promising case reports103–105\nSodium oxybate106\nOne case report. Dose was 8g/day\nRepetitive transcranial \nmagnetic stimulation \n(rTMS)107,108\nRCT data on patients with ‘tardive syndromes’ suggest the potential for bilateral \nhemispheric high frequency rTMS to be a feasible treatment where TD is \nunresponsive to ‘first-line’ medical treatment107\nZolpidem109\nThree case reports. Dose 10–30mg a day\n",
+  "raw_text_sha256": "f3a8a8d0e5e1987156e19a58da2865b31bdedcf8f7c6c9f27aebd7f0153d750c",
+  "coordinates_sha256": "2af276bf3281d02b787829a9fcb12914d0e8dc6dbee4977c480705bf1cb3edbb",
+  "block_sequence_sha256": "9e7058d85fe3d2a5c8437e47d1eaf4a81f2db1810de1ca3d2ea1a8f80822ad94",
+  "blocks": [
+    {
+      "block_id": "page-0140-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    119\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "f1b23670ed0d2211f2b0448b3aa667cf44c9998e319129a35640ecf5b970200b"
+    },
+    {
+      "block_id": "page-0140-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0140-block-0002",
+      "order": 2,
+      "text": "Table 1.16  Other options for the treatment of TD\n",
+      "bbox": [
+        53.99909973144531,
+        70.08699035644531,
+        213.8990936279297,
+        78.9744873046875
+      ],
+      "text_sha256": "0ff878dd9c2da9e2c1d0947e41c8426babd575b1b0da6115c85b0ffca585a1d7"
+    },
+    {
+      "block_id": "page-0140-block-0003",
+      "order": 3,
+      "text": "Drug\nComments\n",
+      "bbox": [
+        47.99909973144531,
+        89.32203674316406,
+        182.49659729003906,
+        98.20953369140625
+      ],
+      "text_sha256": "f0d3aba6cb5c63a8b3ce76553ca73a800f481925284fe7cc72b7ce3c93bfebe6"
+    },
+    {
+      "block_id": "page-0140-block-0004",
+      "order": 4,
+      "text": "Amino acids74\nUse is supported by a small randomised, placebo-controlled trial. Low risk of toxicity\n",
+      "bbox": [
+        47.99909973144531,
+        106.2770004272461,
+        412.8014831542969,
+        114.987060546875
+      ],
+      "text_sha256": "527b311ce04a19231ab086116e0cb8a2b443a5315404fa7fde1745d0a2315e26"
+    },
+    {
+      "block_id": "page-0140-block-0005",
+      "order": 5,
+      "text": "Botulinum toxin75–78\nCase reports of success for localised dyskinesia. Probably now treatment of choice for \ndisabling or distressing focal symptoms\n",
+      "bbox": [
+        48.00140380859375,
+        121.29952239990234,
+        419.6189880371094,
+        140.00689697265625
+      ],
+      "text_sha256": "223d73bb286768915cbd712ec61c78cd1f3353da0f5d285dde213518284f1346"
+    },
+    {
+      "block_id": "page-0140-block-0006",
+      "order": 6,
+      "text": "Calcium antagonists79\nA few published studies but not widely used. Cochrane is dismissive.80 A meta-\nanalysis found no effect49\n",
+      "bbox": [
+        48.00140380859375,
+        146.32191467285156,
+        396.5784912109375,
+        165.031982421875
+      ],
+      "text_sha256": "5dca27098d09d9d20679f31ca49b396e697bab445fd521e38004467fee3f75f1"
+    },
+    {
+      "block_id": "page-0140-block-0007",
+      "order": 7,
+      "text": "Donepezil81–83\nSupported by a single open study and case series. One negative RCT (n = 12). Dose \nis 10mg/day. No clear evidence of efficacy for rivastigmine or galantamine84\n",
+      "bbox": [
+        47.99909973144531,
+        171.3070068359375,
+        412.5013732910156,
+        190.0570068359375
+      ],
+      "text_sha256": "3af84bfc12a8f273781d4c5faab68bf0d28e4da73cc45a3f2492f0c111a845ef"
+    },
+    {
+      "block_id": "page-0140-block-0008",
+      "order": 8,
+      "text": "Fish oils85,86\nVery limited support for the use of EPA at dose of 2g/day\n",
+      "bbox": [
+        47.999000549316406,
+        196.3770294189453,
+        326.5663146972656,
+        205.08453369140625
+      ],
+      "text_sha256": "937aee75bd51c124c2cf1b975ac7d3252478aa1cac10c18bdeb10b79044c0f99"
+    },
+    {
+      "block_id": "page-0140-block-0009",
+      "order": 9,
+      "text": "Fluvoxamine87\nThree case reports. Dose is 100mg/day. Beware of interactions\n",
+      "bbox": [
+        48.00129699707031,
+        211.39952087402344,
+        343.1038513183594,
+        220.10952758789062
+      ],
+      "text_sha256": "f42e538d2d930717b820daede676f561394970a2f10a179320bef297e2d00bad"
+    },
+    {
+      "block_id": "page-0140-block-0010",
+      "order": 10,
+      "text": "Gabapentin88\nAdds weight to theory that GABAergic mechanisms improve TD.\nDose is 900–1200mg/day. Inconclusive data on other GABA agonists89\n",
+      "bbox": [
+        48.00129699707031,
+        226.4245147705078,
+        368.8214416503906,
+        245.13201904296875
+      ],
+      "text_sha256": "1d1fa63081f70c03d193cd4ea03d1fb1985d583852a091dad74872f7852208a8"
+    },
+    {
+      "block_id": "page-0140-block-0011",
+      "order": 11,
+      "text": "Levetiracetam90–93\nThree published case studies. One RCT. Dose up to 3000mg/day\n",
+      "bbox": [
+        47.999000549316406,
+        251.45201110839844,
+        349.1039123535156,
+        260.1595153808594
+      ],
+      "text_sha256": "69538879eed2697d64ea68b416a24faaef64fbec9c51c33d6cc4784b6366519d"
+    },
+    {
+      "block_id": "page-0140-block-0012",
+      "order": 12,
+      "text": "Melatonin94\nUse is supported by a meta-analysis of four trials.95 Usually well tolerated. Dose is \n10mg/day. Some evidence that melatonin receptor genotype determines risk of TD96\n",
+      "bbox": [
+        48.00129699707031,
+        266.4745178222656,
+        413.2287292480469,
+        285.1820068359375
+      ],
+      "text_sha256": "5b259de00f6b809523a536cd910b2d4799f11f3c10b688aea60189c49ec857a3"
+    },
+    {
+      "block_id": "page-0140-block-0013",
+      "order": 13,
+      "text": "Naltrexone97\nMay be effective when added to benzodiazepines. Well tolerated.\nDose is 200mg/day\n",
+      "bbox": [
+        47.99909973144531,
+        291.50201416015625,
+        354.7514343261719,
+        310.2070007324219
+      ],
+      "text_sha256": "0163b91a67e02cb16c812e4c66de2165beece1e9804c2041eeb3138a4e4447d8"
+    },
+    {
+      "block_id": "page-0140-block-0014",
+      "order": 14,
+      "text": "Ondansetron98,99\nLimited evidence but low toxicity.\nDose – up to 12mg/day\n",
+      "bbox": [
+        48.00129699707031,
+        316.5220031738281,
+        250.96624755859375,
+        335.2320251464844
+      ],
+      "text_sha256": "d8bc1c3a980550881e50ba06cad0c29541692f65f526d5af92486fd68e7cc9b9"
+    },
+    {
+      "block_id": "page-0140-block-0015",
+      "order": 15,
+      "text": "Propranolol100–102\nFormerly a relatively widely used treatment. Open-label studies only and a \nprospective randomized trial is probably warranted. Dose is 40–120mg/day. Beware \nof contra-indications (asthma, bradycardia, hypotension)\n",
+      "bbox": [
+        48.00129699707031,
+        341.5470275878906,
+        413.1163635253906,
+        370.2545166015625
+      ],
+      "text_sha256": "de4df9396c7d7c14c728c8b4f02e7e98a881c9d8c4cd6d6e95aa06a14361d85a"
+    },
+    {
+      "block_id": "page-0140-block-0016",
+      "order": 16,
+      "text": "Quercetin103\nPlant compound which is thought to be an antioxidant.\nSome promising case reports103–105\n",
+      "bbox": [
+        48.00129699707031,
+        376.56951904296875,
+        322.1338806152344,
+        395.2820129394531
+      ],
+      "text_sha256": "db331713920c87cd70bb71e8ceb313160190fa0f8df938b5641db9413c086ccd"
+    },
+    {
+      "block_id": "page-0140-block-0017",
+      "order": 17,
+      "text": "Sodium oxybate106\nOne case report. Dose was 8g/day\n",
+      "bbox": [
+        47.999000549316406,
+        401.6020202636719,
+        254.05633544921875,
+        410.30950927734375
+      ],
+      "text_sha256": "be84428bb2428a92b3cb2f6162b101ea1d1172dcf08d4a788dc3ac1226f0e4a0"
+    },
+    {
+      "block_id": "page-0140-block-0018",
+      "order": 18,
+      "text": "Repetitive transcranial \nmagnetic stimulation \n(rTMS)107,108\n",
+      "bbox": [
+        48.00129699707031,
+        416.62451171875,
+        120.0762710571289,
+        445.3269958496094
+      ],
+      "text_sha256": "3f14e9701d4d9e46e397eea7003bafbdb96226d03293331d80c2e8a36a57a35c"
+    },
+    {
+      "block_id": "page-0140-block-0019",
+      "order": 19,
+      "text": "RCT data on patients with ‘tardive syndromes’ suggest the potential for bilateral \nhemispheric high frequency rTMS to be a feasible treatment where TD is \nunresponsive to ‘first-line’ medical treatment107\n",
+      "bbox": [
+        144.99879455566406,
+        416.62701416015625,
+        402.6839294433594,
+        445.3294982910156
+      ],
+      "text_sha256": "152995503918fe04fcf613aec42a0fa9560aed7d2142a5bed3fd99c23bd6d84d"
+    },
+    {
+      "block_id": "page-0140-block-0020",
+      "order": 20,
+      "text": "Zolpidem109\nThree case reports. Dose 10–30mg a day\n",
+      "bbox": [
+        47.99909973144531,
+        451.65203857421875,
+        275.1763610839844,
+        460.3595275878906
+      ],
+      "text_sha256": "c140b3bd3ba45afa5b6ddfe38222ef8938738395b44665eacbea429aec329a6b"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

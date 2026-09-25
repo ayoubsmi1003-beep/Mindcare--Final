@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0593",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 593,
+  "source_page_index": 592,
+  "source_page_display": 593,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "572    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  5\nSummary of NICE guidance for ADHD in adults1\n■\n■Drug treatment should only be initiated by a specialist and only after a comprehensive \nassessment of mental and physical health and social influences.\n■\n■Medication for ADHD should be offered to adults if their ADHD symptoms are still causing a \nsignificant impairment in at least one domain after environmental modifications have been \nimplemented and reviewed.\n■\n■Non-pharmacological options (supportive therapy, CBT, regular reviews) can be considered \ndepending on choice, difficulties with adherence or intolerable side effects. Combination of \nmedication with non-pharmacological options can also be considered in partial response to \nmedication treatment.\n■\n■Methylphenidate or lisdexamfetamine are recommended for use in adults with ADHD as \nfirst-line treatments. Switching between the two could be considered after a 6-week trial of an \nadequate dose with suboptimal response.\n■\n■Dexamfetamine can be used for adults whose ADHD symptoms are responding to lisdexamfe-\ntamine but who cannot tolerate the longer effect profile.\n■\n■Atomoxetine could be offered to adults if:\n■\n■they cannot tolerate lisdexamfetamine or methylphenidate or\n■\n■their symptoms have not responded to separate 6-week trials of lisdexamfetamine and \nmethylphenidate, having considered alternative preparations and adequate doses.\n■\n■Monitoring should include measurement of weight, blood pressure and heart rate. A cardiology \nopinion and ECG should be organised as in the case of children and adolescents mentioned \nabove.\n",
+  "raw_text_sha256": "285ea1032e52cfba7a0aa8f531a762db6210efc7581257444ed579ae85ba5060",
+  "coordinates_sha256": "9f9408ec28211637d38e010a2258034689dcf34a6f94a74c5c5002ebf713a4bf",
+  "block_sequence_sha256": "bb03383797f6f20670ad3fe288d3c4fccc55a9e36197375630bef2b8d691cef3",
+  "blocks": [
+    {
+      "block_id": "page-0593-block-0000",
+      "order": 0,
+      "text": "572    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "bf8dc9f06163a590fb97eb770526e4fa80d1e31a3f07ec8729ca4f3b7c1c3187"
+    },
+    {
+      "block_id": "page-0593-block-0001",
+      "order": 1,
+      "text": "CHAPTER  5\n",
+      "bbox": [
+        18.520000457763672,
+        338.22650146484375,
+        28.0,
+        381.79449462890625
+      ],
+      "text_sha256": "4086e0916f45ec531cc17b8c611334eb2b1ef26051ba536579b8ef3c22c1648d"
+    },
+    {
+      "block_id": "page-0593-block-0002",
+      "order": 2,
+      "text": "Summary of NICE guidance for ADHD in adults1\n",
+      "bbox": [
+        69.13999938964844,
+        69.60181427001953,
+        257.9749450683594,
+        79.67431640625
+      ],
+      "text_sha256": "b8b5596c03f7e0dde976fe1078efeb2a256486e26bea236246b3d1217325d5b7"
+    },
+    {
+      "block_id": "page-0593-block-0003",
+      "order": 3,
+      "text": "■\n■Drug treatment should only be initiated by a specialist and only after a comprehensive \n",
+      "bbox": [
+        69.13990020751953,
+        88.88076782226562,
+        390.924560546875,
+        98.749267578125
+      ],
+      "text_sha256": "571a6152719fdd9958724c362debb82e2431b848a6bbd743a97ddb1c11446783"
+    },
+    {
+      "block_id": "page-0593-block-0004",
+      "order": 4,
+      "text": "assessment of mental and physical health and social influences.\n",
+      "bbox": [
+        77.63999938964844,
+        98.87673950195312,
+        306.6980285644531,
+        108.7452392578125
+      ],
+      "text_sha256": "a941c799fdfa67d9da7a57ce62c3232ca4d3499eca2703a983d5545392662b76"
+    },
+    {
+      "block_id": "page-0593-block-0005",
+      "order": 5,
+      "text": "■\n■Medication for ADHD should be offered to adults if their ADHD symptoms are still causing a \n",
+      "bbox": [
+        69.13990020751953,
+        108.88076782226562,
+        412.99053955078125,
+        118.749267578125
+      ],
+      "text_sha256": "f0683966c8cad0d0c48e686b2f1ae4c41ee604648889dfa13c0bdee4a22187fb"
+    },
+    {
+      "block_id": "page-0593-block-0006",
+      "order": 6,
+      "text": "significant impairment in at least one domain after environmental modifications have been \nimplemented and reviewed.\n",
+      "bbox": [
+        77.63999938964844,
+        118.87673950195312,
+        408.0606384277344,
+        138.7412109375
+      ],
+      "text_sha256": "aa7de3c403d508e6e645c259b7746d81f617007366855180c70cb2ae68e6a5d7"
+    },
+    {
+      "block_id": "page-0593-block-0007",
+      "order": 7,
+      "text": "■\n■Non-pharmacological options (supportive therapy, CBT, regular reviews) can be considered \n",
+      "bbox": [
+        69.13990020751953,
+        138.88076782226562,
+        406.071533203125,
+        148.749267578125
+      ],
+      "text_sha256": "6b60d151c307ea1af0d0ee4f8e8c2593ab635d41ad7952640eb920a12a858953"
+    },
+    {
+      "block_id": "page-0593-block-0008",
+      "order": 8,
+      "text": "depending on choice, difficulties with adherence or intolerable side effects. Combination of \nmedication with non-pharmacological options can also be considered in partial response to \nmedication treatment.\n",
+      "bbox": [
+        77.63999938964844,
+        148.87673950195312,
+        411.09515380859375,
+        178.7371826171875
+      ],
+      "text_sha256": "1e4c1d2fc4c50f7897eed61107ecf5dc82dea1934d4b4ee08e02543d66d04311"
+    },
+    {
+      "block_id": "page-0593-block-0009",
+      "order": 9,
+      "text": "■\n■Methylphenidate or lisdexamfetamine are recommended for use in adults with ADHD as \n",
+      "bbox": [
+        69.13990020751953,
+        178.88079833984375,
+        398.9571533203125,
+        188.74929809570312
+      ],
+      "text_sha256": "483f1d4573299f7995acfd3683c5502a87af8bf16854ce5b8fc9b714a733a92f"
+    },
+    {
+      "block_id": "page-0593-block-0010",
+      "order": 10,
+      "text": "first-line treatments. Switching between the two could be considered after a 6-week trial of an \nadequate dose with suboptimal response.\n",
+      "bbox": [
+        77.63999938964844,
+        188.87680053710938,
+        423.02923583984375,
+        208.74130249023438
+      ],
+      "text_sha256": "44cc20375b18d410f86ae71ddbf1b67ad1d8a4b949493c73862d005159354a00"
+    },
+    {
+      "block_id": "page-0593-block-0011",
+      "order": 11,
+      "text": "■\n■Dexamfetamine can be used for adults whose ADHD symptoms are responding to lisdexamfe-\n",
+      "bbox": [
+        69.13990020751953,
+        208.88079833984375,
+        417.3851318359375,
+        218.74929809570312
+      ],
+      "text_sha256": "7f38142f59bbed390778dc4a20eebfb7f3a5b292a69e53f525777abe01cb39b8"
+    },
+    {
+      "block_id": "page-0593-block-0012",
+      "order": 12,
+      "text": "tamine but who cannot tolerate the longer effect profile.\n",
+      "bbox": [
+        77.63999938964844,
+        218.87680053710938,
+        283.71405029296875,
+        228.74530029296875
+      ],
+      "text_sha256": "873d887fe0f37d1cb0479ec2d3ec43cef3bfddc96c833777acb81a0d84d0f308"
+    },
+    {
+      "block_id": "page-0593-block-0013",
+      "order": 13,
+      "text": "■\n■Atomoxetine could be offered to adults if:\n",
+      "bbox": [
+        69.13990020751953,
+        228.88079833984375,
+        229.88352966308594,
+        238.74929809570312
+      ],
+      "text_sha256": "9ee1d21621d04a6abddab29d4a360b6d2695974374aa2c2f261343bf17621d75"
+    },
+    {
+      "block_id": "page-0593-block-0014",
+      "order": 14,
+      "text": "■\n■they cannot tolerate lisdexamfetamine or methylphenidate or\n",
+      "bbox": [
+        77.63990020751953,
+        238.88079833984375,
+        308.0836181640625,
+        248.74929809570312
+      ],
+      "text_sha256": "e872044d5d4956379be2ca1288f41da87483a10ea9bf86adb7ad68aab170d6b6"
+    },
+    {
+      "block_id": "page-0593-block-0015",
+      "order": 15,
+      "text": "■\n■their symptoms have not responded to separate 6-week trials of lisdexamfetamine and \n",
+      "bbox": [
+        77.63990020751953,
+        248.88079833984375,
+        401.93212890625,
+        258.7492980957031
+      ],
+      "text_sha256": "886d3700fd92f5ff140e7b026f14fe6ee09d3bc8535185e9dba56bf3034e6b78"
+    },
+    {
+      "block_id": "page-0593-block-0016",
+      "order": 16,
+      "text": "methylphenidate, having considered alternative preparations and adequate doses.\n",
+      "bbox": [
+        86.13999938964844,
+        258.8768005371094,
+        382.5946350097656,
+        268.74530029296875
+      ],
+      "text_sha256": "385a811d52a109a7d9b423f210656a1d50f1c1cc568b36f6f5fac65582b71c09"
+    },
+    {
+      "block_id": "page-0593-block-0017",
+      "order": 17,
+      "text": "■\n■Monitoring should include measurement of weight, blood pressure and heart rate. A cardiology \n",
+      "bbox": [
+        69.13990020751953,
+        268.88079833984375,
+        425.97857666015625,
+        278.7492980957031
+      ],
+      "text_sha256": "f1e62749364bc3b09954c13dbd16f797d1ec69347a10f827e0ad3e0be11d8c71"
+    },
+    {
+      "block_id": "page-0593-block-0018",
+      "order": 18,
+      "text": "opinion and ECG should be organised as in the case of children and adolescents mentioned \nabove.\n",
+      "bbox": [
+        77.63999938964844,
+        278.8768005371094,
+        411.4521179199219,
+        298.7413024902344
+      ],
+      "text_sha256": "e7137a92045243628ecfad832c7f18e2f6541ee342f3cebaac172757705fb7f3"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

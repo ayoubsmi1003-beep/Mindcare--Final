@@ -1,0 +1,299 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0933",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 933,
+  "source_page_index": 932,
+  "source_page_display": 933,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "912    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 14\nParameter\nReference range10\nAgents reported to raise levels\nAgents reported to \nlower levels\nSodium\n133–146mmol/L\nLithium (in overdose)\nAntidepressants: \nespecially SSRIs/SNRIs; \nothers also implicated\nAntipsychotics: all \n(via SIADH)\nMood stabilisers: \ncarbamazepine, \nlithium, valproate\nOther: benzodiazepines, \nclonidine, donepezil, \nmemantine, rivastigmine\nHyponatraemia should \nbe considered in any \npatient on an \nantidepressant who \ndevelops confusion, \nconvulsions or \ndrowsiness\nTestosterone\nMales: 9.9–27.8nmol/L \nFemales: 0.22– 2.9nmol/L\nDiazepam\nOpioids, ramelteon\nThyroid-stimulating \nhormone\n0.3–4.0mU/L\nAripiprazole, carbamazepine, lithium, \nquetiapine, rivastigmine, sertraline, \nvalproate (slightly)\nMoclobemide, thyroid \nagents\nThyroxine\nFree: 9–26pmol/L \nTotal: 60–150nmol/L\nRarely; amfetamine (heavy abuse), \nmoclobemide, propranolol\nBarbiturates, \ncarbamazepine, \nliothyronine, lithium \n(causes decreased T4 \nsecretion), opioids, \nphenytoin, valproate. \nRarely implicated: \naripiprazole, clozapine, \nquetiapine, \nrivastigmine, sertraline\nTriglycerides\nNone known\nTriiodothyronine\nFree 3.0–6.8pmol/L; total \n1.2–2.9nmol/L\nHeroin, methadone\nFree T3: valproate; total \nT3: carbamazepine, \nlithium, propranolol\nUrate (uric acid)\nFemales: 0.16–0.36mmol/L \nMales: 0.21–0.43mmol/L \n(increases with age)\nAlcohol (acute), caffeine (false positive), \nclozapine, levodopa, olanzapine, pindolol, \nprazosin, topiramate, zonisamide\nSertraline (slightly)\nUrea\n2.5–7.8mmol/L \n(increases with age)\nCarbamazepine, levodopa; rarely with \nagents associated with anticonvulsant \nhypersensitivity syndrome and \nrhabdomyolysis\nNone known\n*May also be associated with hypoglycaemia.\n† May also be associated with subnormal prolactin levels.\nTable 14.2  (Continued)\n",
+  "raw_text_sha256": "1e848aaa8d0e7653e954a3a988b828eb0952ffcdc116211a4c4e3c7f93bb1bd6",
+  "coordinates_sha256": "5504830154e94a4b137e24f70a6965fcc3375cb2d106c756a221b12094e96686",
+  "block_sequence_sha256": "5392001a4661937c6cb94f995e3d2eda76c6059adcfb0f6d8f0bcb0a6abcf25a",
+  "blocks": [
+    {
+      "block_id": "page-0933-block-0000",
+      "order": 0,
+      "text": "912    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "c68a585250109b5c4e6e3cfb49f6d62a6f8aebcbce868aa809dc9cd9035bcd74"
+    },
+    {
+      "block_id": "page-0933-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        18.520000457763672,
+        338.7405090332031,
+        28.0,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0933-block-0002",
+      "order": 2,
+      "text": "Parameter\nReference range10\nAgents reported to raise levels\nAgents reported to \nlower levels\n",
+      "bbox": [
+        61.889801025390625,
+        89.78968811035156,
+        424.34716796875,
+        108.6746826171875
+      ],
+      "text_sha256": "aa61555c628d7c54f10a422c1400f45d1c140ad78ce30a6f27ae2348bfc3308b"
+    },
+    {
+      "block_id": "page-0933-block-0003",
+      "order": 3,
+      "text": "Sodium\n133–146mmol/L\nLithium (in overdose)\nAntidepressants: \nespecially SSRIs/SNRIs; \nothers also implicated\nAntipsychotics: all \n(via SIADH)\nMood stabilisers: \ncarbamazepine, \nlithium, valproate\nOther: benzodiazepines, \nclonidine, donepezil, \nmemantine, rivastigmine\nHyponatraemia should \nbe considered in any \npatient on an \nantidepressant who \ndevelops confusion, \nconvulsions or \ndrowsiness\n",
+      "bbox": [
+        61.887176513671875,
+        116.30970764160156,
+        431.9747314453125,
+        295.1546630859375
+      ],
+      "text_sha256": "ee308ac44eb7e44ed4d8fe035c4ed176850d4fd638f7330b441155c7f33d8e08"
+    },
+    {
+      "block_id": "page-0933-block-0004",
+      "order": 4,
+      "text": "Testosterone\nMales: 9.9–27.8nmol/L \nFemales: 0.22– 2.9nmol/L\n",
+      "bbox": [
+        61.887176513671875,
+        301.46966552734375,
+        214.54222106933594,
+        320.1746520996094
+      ],
+      "text_sha256": "d77ed72ff81b098b4bcee63096790cf8900ee46294227b8e8ed07c3cdf8aca6e"
+    },
+    {
+      "block_id": "page-0933-block-0005",
+      "order": 5,
+      "text": "Diazepam\nOpioids, ramelteon\n",
+      "bbox": [
+        228.64218139648438,
+        301.46966552734375,
+        415.7297668457031,
+        310.1771545410156
+      ],
+      "text_sha256": "92095390918088103cce4befbebf17d396d82988bfe7f9122eaaecc6ac8697d2"
+    },
+    {
+      "block_id": "page-0933-block-0006",
+      "order": 6,
+      "text": "Thyroid-stimulating \nhormone\n",
+      "bbox": [
+        61.887176513671875,
+        326.4971618652344,
+        125.50215911865234,
+        345.2021484375
+      ],
+      "text_sha256": "efd5bac375e68fcc9f88bce2ed66067101d2a09736f7b576353ce154f5e82136"
+    },
+    {
+      "block_id": "page-0933-block-0007",
+      "order": 7,
+      "text": "0.3–4.0mU/L\nAripiprazole, carbamazepine, lithium, \nquetiapine, rivastigmine, sertraline, \nvalproate (slightly)\n",
+      "bbox": [
+        135.88967895507812,
+        326.4971618652344,
+        349.8946838378906,
+        355.19964599609375
+      ],
+      "text_sha256": "28cbdc90390fbac5910a98a9fecdea2f75576b23d74b8b0db7a0fa3a7d1d31be"
+    },
+    {
+      "block_id": "page-0933-block-0008",
+      "order": 8,
+      "text": "Moclobemide, thyroid \nagents\n",
+      "bbox": [
+        354.8896789550781,
+        326.4896545410156,
+        427.2647399902344,
+        345.19464111328125
+      ],
+      "text_sha256": "a4055f739987ff5abddb9d3595cdba65f3c11bf64ff82dcf9b01135847e4dc93"
+    },
+    {
+      "block_id": "page-0933-block-0009",
+      "order": 9,
+      "text": "Thyroxine\nFree: 9–26pmol/L \nTotal: 60–150nmol/L\n",
+      "bbox": [
+        61.887176513671875,
+        361.5146484375,
+        201.32716369628906,
+        380.2196350097656
+      ],
+      "text_sha256": "7360010e50a028e2d3886c2c5c6153c9b73e7b46a1439337335f2f0e72e66079"
+    },
+    {
+      "block_id": "page-0933-block-0010",
+      "order": 10,
+      "text": "Rarely; amfetamine (heavy abuse), \nmoclobemide, propranolol\n",
+      "bbox": [
+        228.64218139648438,
+        361.5146484375,
+        339.7621765136719,
+        380.2196350097656
+      ],
+      "text_sha256": "85331e79a38be89c9bbca57e25a0a909cccf796aa4483ddd1bd57f7b0236e27d"
+    },
+    {
+      "block_id": "page-0933-block-0011",
+      "order": 11,
+      "text": "Barbiturates, \ncarbamazepine, \nliothyronine, lithium \n(causes decreased T4 \nsecretion), opioids, \nphenytoin, valproate. \nRarely implicated: \naripiprazole, clozapine, \nquetiapine, \nrivastigmine, sertraline\n",
+      "bbox": [
+        354.8896789550781,
+        361.5146484375,
+        430.3097229003906,
+        460.1996154785156
+      ],
+      "text_sha256": "5de592b432b7655b903c9730a6c276b99ffe59d3d2aa4e47661d52cc240a4542"
+    },
+    {
+      "block_id": "page-0933-block-0012",
+      "order": 12,
+      "text": "Triglycerides\nNone known\n",
+      "bbox": [
+        61.887176513671875,
+        466.5146179199219,
+        396.1622314453125,
+        475.22210693359375
+      ],
+      "text_sha256": "36b712f6adb4e3b08453ee7854e8e194a585d176e2cc4ebfa2e0ffc1a75d8175"
+    },
+    {
+      "block_id": "page-0933-block-0013",
+      "order": 13,
+      "text": "Triiodothyronine\nFree 3.0–6.8pmol/L; total \n1.2–2.9nmol/L\nHeroin, methadone\nFree T3: valproate; total \nT3: carbamazepine, \nlithium, propranolol\n",
+      "bbox": [
+        61.887176513671875,
+        481.5371398925781,
+        431.6370544433594,
+        510.2396240234375
+      ],
+      "text_sha256": "f6c6a2c4b40072db8db74fbc0414090628f1fe1a044375c21a74582cbbc5536d"
+    },
+    {
+      "block_id": "page-0933-block-0014",
+      "order": 14,
+      "text": "Urate (uric acid)\nFemales: 0.16–0.36mmol/L \nMales: 0.21–0.43mmol/L \n(increases with age)\n",
+      "bbox": [
+        61.887176513671875,
+        516.5546264648438,
+        224.23968505859375,
+        545.2571411132812
+      ],
+      "text_sha256": "dc0fa90e84aff0ad17f2c89a8c5a1ea3fd049765abc38d848a1c37c4d88c3d1f"
+    },
+    {
+      "block_id": "page-0933-block-0015",
+      "order": 15,
+      "text": "Alcohol (acute), caffeine (false positive), \nclozapine, levodopa, olanzapine, pindolol, \nprazosin, topiramate, zonisamide\n",
+      "bbox": [
+        228.64218139648438,
+        516.547119140625,
+        352.9772644042969,
+        545.2496337890625
+      ],
+      "text_sha256": "21874579eb4dcadc9f851fba314434c87a87944a7fcb9691c66ab858b10f2391"
+    },
+    {
+      "block_id": "page-0933-block-0016",
+      "order": 16,
+      "text": "Sertraline (slightly)\n",
+      "bbox": [
+        354.8896789550781,
+        516.5396118164062,
+        413.21722412109375,
+        525.2471313476562
+      ],
+      "text_sha256": "1a6d6532ffee1fe9dfd650528db039709f4a5f8fef4d9a7747f714f6e2458f6b"
+    },
+    {
+      "block_id": "page-0933-block-0017",
+      "order": 17,
+      "text": "Urea\n2.5–7.8mmol/L \n(increases with age)\n",
+      "bbox": [
+        61.887176513671875,
+        551.5645751953125,
+        198.6796875,
+        570.2696533203125
+      ],
+      "text_sha256": "235fdca1be5f8a3a8dd8d51223ff547f4ed4170bc3d4afa8e17bb2a10ef22611"
+    },
+    {
+      "block_id": "page-0933-block-0018",
+      "order": 18,
+      "text": "Carbamazepine, levodopa; rarely with \nagents associated with anticonvulsant \nhypersensitivity syndrome and \nrhabdomyolysis\n",
+      "bbox": [
+        228.64218139648438,
+        551.5645751953125,
+        351.8522033691406,
+        590.2646484375
+      ],
+      "text_sha256": "9f9cfa5fb244a74ae80b51188240867560a69599e20a4b2ea39eb4e65a002880"
+    },
+    {
+      "block_id": "page-0933-block-0019",
+      "order": 19,
+      "text": "None known\n",
+      "bbox": [
+        354.8896789550781,
+        551.55712890625,
+        396.1622314453125,
+        560.2646484375
+      ],
+      "text_sha256": "ba6586dc579443d5e17252c96d100bb0bdb30ec0ac15a8dc02e530767503ecc9"
+    },
+    {
+      "block_id": "page-0933-block-0020",
+      "order": 20,
+      "text": "*May also be associated with hypoglycaemia.\n",
+      "bbox": [
+        61.887176513671875,
+        599.55712890625,
+        207.31967163085938,
+        608.2646484375
+      ],
+      "text_sha256": "76538383e6168874ae2b8d4a3e3bd6349c805ec44311ca5fa6471f1d824d861b"
+    },
+    {
+      "block_id": "page-0933-block-0021",
+      "order": 21,
+      "text": "† May also be associated with subnormal prolactin levels.\n",
+      "bbox": [
+        61.889801025390625,
+        609.669677734375,
+        242.95587158203125,
+        618.377197265625
+      ],
+      "text_sha256": "02cf9b61e4cd9376fe3ff98a22d53bd675598bdf735fa9582dc4e5fbba543572"
+    },
+    {
+      "block_id": "page-0933-block-0022",
+      "order": 22,
+      "text": "Table 14.2  (Continued)\n",
+      "bbox": [
+        67.88970184326172,
+        70.08790588378906,
+        144.17970275878906,
+        78.97540283203125
+      ],
+      "text_sha256": "8bd13b41fda1b6770466837f45163f93b570ec912d9c083e8b068ddb8e61d0bd"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

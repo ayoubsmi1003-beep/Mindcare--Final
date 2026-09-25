@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0285",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 285,
+  "source_page_index": 284,
+  "source_page_display": 285,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "264    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  2\nCarbamazepine\nMechanism of action1\nCarbamazepine blocks voltage-dependent sodium channels thus inhibiting repetitive \nneuronal firing. It reduces glutamate release and decreases the turnover of dopamine \nand nor adrenaline. Carbamazepine has a similar molecular structure to TCAs.\nAs well as blocking voltage-dependent sodium channels, oxcarbazepine (a structural \nderivative of carbamazepine) also increases potassium conductance and modulates \nhigh-voltage activated calcium channels.\nFormulations\nCarbamazepine is available as a liquid, chewable, immediate-release and controlled-\nrelease tablets. Conventional formulations generally have to be administered two to three \ntimes daily. The controlled release preparation can be given once or twice daily, and the \nreduced fluctuation in serum levels usually leads to improved tolerability. This ­preparation \nhas a lower bioavailability and an increase in dose of 10–15% may be required.\nIndications\nCarbamazepine is primarily used as an antiseizure medication in the treatment of grand mal \nand focal seizures. It is also used in the treatment of trigeminal neuralgia and, in the UK, is \nlicensed for the treatment of bipolar illness in patients who do not respond to lithium.\nWith respect to the treatment of mania, two placebo-controlled randomised studies \nhave found the extended release formulation of carbamazepine to be effective; in both \nstudies, the response rate in the carbamazepine arm was twice that in the placebo arm.2,3 \nCarbamazepine was not particularly well tolerated; the incidence of dizziness, somno-\nlence and nausea was high. Another study found carbamazepine alone to be as effective \nas carbamazepine plus olanzapine.4 NICE does not recommend carbamazepine as a \nfirst-line treatment for mania.5 A Cochrane review concluded that there were insuffi-\ncient trials of adequate methodological quality on oxcarbazepine in the acute treatment \nof BD to inform about on its efficacy and acceptability.6\nOpen studies suggest that carbamazepine monotherapy has some efficacy in bipolar \ndepression;7 note that the evidence base supporting other strategies is stronger (see \n­section ‘Bipolar depression’). Carbamazepine may also be useful in unipolar depression \neither alone8 or as an augmentation strategy.9\nCarbamazepine is generally considered to be less effective than lithium in the prophy-\nlaxis of bipolar illness;10 several published studies report a low response rate and high \ndrop-out rate. A meta-analysis (n = 464) failed to find a significant difference in efficacy \nbetween lithium and carbamazepine, but those who received carbamazepine were more \nlikely to drop out of treatment because of side effects.11 Lithium is considered to be \nsuperior to carbamazepine in reducing suicidal behaviour,12 although data are not con-\nsistent13 and carbamazepine may have anti-suicidal properties.14 NICE considers carba-\nmazepine to be a third-line prophylactic agent,5 and data emerging since this guidance \nsupport this positioning.15 Three small studies suggest that the related oxcarbazepine \n",
+  "raw_text_sha256": "55c310df1698aa7d418feb4de02ab53f21b20b887cd9c450c51a7e2a5c18ed62",
+  "coordinates_sha256": "66f2b6bde8072cb02aced963fdde9688db8c592a3c7f2caddeb5150a7477caf8",
+  "block_sequence_sha256": "50ba32af9ba98666a454ae1dec36961c08a4e4aa657e0cd8a23c51a3d7e52e81",
+  "blocks": [
+    {
+      "block_id": "page-0285-block-0000",
+      "order": 0,
+      "text": "264    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "4f65be44603958aac1f46cdfc80f81914fa289a1b57cc580c8e328b3936761d8"
+    },
+    {
+      "block_id": "page-0285-block-0001",
+      "order": 1,
+      "text": "CHAPTER  2\n",
+      "bbox": [
+        19.520000457763672,
+        145.23529052734375,
+        29.0,
+        188.80328369140625
+      ],
+      "text_sha256": "5befcde2fefe074681a51514b484ad31516d952c51183625b5b7b1fb84f30d2c"
+    },
+    {
+      "block_id": "page-0285-block-0002",
+      "order": 2,
+      "text": "Carbamazepine\n",
+      "bbox": [
+        68.88999938964844,
+        66.06539916992188,
+        148.969970703125,
+        79.10040283203125
+      ],
+      "text_sha256": "4dfbcc7868753a38e09b7a63c84ebc448722e70b17b881574105c13f526c2689"
+    },
+    {
+      "block_id": "page-0285-block-0003",
+      "order": 3,
+      "text": "Mechanism of action1\n",
+      "bbox": [
+        61.89400100708008,
+        90.06741333007812,
+        173.0123291015625,
+        103.1024169921875
+      ],
+      "text_sha256": "8dc8858e860673d143f241564ffa40eca21fdd51d64e1a074590561d49784b00"
+    },
+    {
+      "block_id": "page-0285-block-0004",
+      "order": 4,
+      "text": "Carbamazepine blocks voltage-dependent sodium channels thus inhibiting repetitive \nneuronal firing. It reduces glutamate release and decreases the turnover of dopamine \nand nor adrenaline. Carbamazepine has a similar molecular structure to TCAs.\n",
+      "bbox": [
+        61.88999938964844,
+        108.910400390625,
+        436.6700134277344,
+        144.63040161132812
+      ],
+      "text_sha256": "3c5dccf76d1865664f87f1b43983cb440ecb2b02f6cfa1023f60e15bf423cdf9"
+    },
+    {
+      "block_id": "page-0285-block-0005",
+      "order": 5,
+      "text": "As well as blocking voltage-dependent sodium channels, oxcarbazepine (a structural \nderivative of carbamazepine) also increases potassium conductance and modulates \nhigh-voltage activated calcium channels.\n",
+      "bbox": [
+        61.88999938964844,
+        144.910400390625,
+        436.6800537109375,
+        180.63040161132812
+      ],
+      "text_sha256": "bd9a24a09d1af0e919e4d2b48ed38d3c2b5eeb4c9c4ad0ccd7d3ba81c3cfb5c9"
+    },
+    {
+      "block_id": "page-0285-block-0006",
+      "order": 6,
+      "text": "Formulations\n",
+      "bbox": [
+        61.88999938964844,
+        198.06539916992188,
+        129.72698974609375,
+        211.10040283203125
+      ],
+      "text_sha256": "e39e33cde5226879be04f66fdc1649de8bcfe4938b0be1e5a6bf29905dd5acbb"
+    },
+    {
+      "block_id": "page-0285-block-0007",
+      "order": 7,
+      "text": "Carbamazepine is available as a liquid, chewable, immediate-release and controlled-\nrelease tablets. Conventional formulations generally have to be administered two to three \ntimes daily. The controlled release preparation can be given once or twice daily, and the \nreduced fluctuation in serum levels usually leads to improved tolerability. This ­preparation \nhas a lower bioavailability and an increase in dose of 10–15% may be required.\n",
+      "bbox": [
+        61.88999938964844,
+        216.910400390625,
+        436.6801452636719,
+        276.6304016113281
+      ],
+      "text_sha256": "218eb8a6c6363e392f15910373bb34d1512a955f4a674465d8ecb816789a2258"
+    },
+    {
+      "block_id": "page-0285-block-0008",
+      "order": 8,
+      "text": "Indications\n",
+      "bbox": [
+        61.88999938964844,
+        294.0653991699219,
+        118.11100006103516,
+        307.10040283203125
+      ],
+      "text_sha256": "dbc3bcbc83e570d770a06588c99f6a303293ffa7a386579baf161003dba441a6"
+    },
+    {
+      "block_id": "page-0285-block-0009",
+      "order": 9,
+      "text": "Carbamazepine is primarily used as an antiseizure medication in the treatment of grand mal \nand focal seizures. It is also used in the treatment of trigeminal neuralgia and, in the UK, is \nlicensed for the treatment of bipolar illness in patients who do not respond to lithium.\n",
+      "bbox": [
+        61.88999938964844,
+        312.910400390625,
+        436.6703796386719,
+        348.6304016113281
+      ],
+      "text_sha256": "f970eed99bd04a4ff02e81e9398cd87ff43beb344195de34b6a43dc3bfb0413d"
+    },
+    {
+      "block_id": "page-0285-block-0010",
+      "order": 10,
+      "text": "With respect to the treatment of mania, two placebo-controlled randomised studies \nhave found the extended release formulation of carbamazepine to be effective; in both \nstudies, the response rate in the carbamazepine arm was twice that in the placebo arm.2,3 \nCarbamazepine was not particularly well tolerated; the incidence of dizziness, somno-\nlence and nausea was high. Another study found carbamazepine alone to be as effective \nas carbamazepine plus olanzapine.4 NICE does not recommend carbamazepine as a \nfirst-line treatment for mania.5 A Cochrane review concluded that there were insuffi-\ncient trials of adequate methodological quality on oxcarbazepine in the acute treatment \nof BD to inform about on its efficacy and acceptability.6\n",
+      "bbox": [
+        61.88890075683594,
+        348.8004150390625,
+        436.69891357421875,
+        456.6304016113281
+      ],
+      "text_sha256": "2a6f6505b3c4cf396133f8ebc6565df274668e0d5a8b38ce19138a0394443310"
+    },
+    {
+      "block_id": "page-0285-block-0011",
+      "order": 11,
+      "text": "Open studies suggest that carbamazepine monotherapy has some efficacy in bipolar \ndepression;7 note that the evidence base supporting other strategies is stronger (see \n­section ‘Bipolar depression’). Carbamazepine may also be useful in unipolar depression \neither alone8 or as an augmentation strategy.9\n",
+      "bbox": [
+        61.88999938964844,
+        456.8004150390625,
+        436.6700439453125,
+        504.6304016113281
+      ],
+      "text_sha256": "70375b20b9c05916b22982d4a380925aca1def280c55ab7bdd102dc92916ae7e"
+    },
+    {
+      "block_id": "page-0285-block-0012",
+      "order": 12,
+      "text": "Carbamazepine is generally considered to be less effective than lithium in the prophy-\nlaxis of bipolar illness;10 several published studies report a low response rate and high \ndrop-out rate. A meta-analysis (n = 464) failed to find a significant difference in efficacy \nbetween lithium and carbamazepine, but those who received carbamazepine were more \nlikely to drop out of treatment because of side effects.11 Lithium is considered to be \nsuperior to carbamazepine in reducing suicidal behaviour,12 although data are not con-\nsistent13 and carbamazepine may have anti-suicidal properties.14 NICE considers carba-\nmazepine to be a third-line prophylactic agent,5 and data emerging since this guidance \nsupport this positioning.15 Three small studies suggest that the related oxcarbazepine \n",
+      "bbox": [
+        61.885284423828125,
+        504.8004150390625,
+        436.701416015625,
+        612.6304321289062
+      ],
+      "text_sha256": "09d26c13e8a6217eeae38d060e4feeab3546e733c1fdbe70927e7b6fb1c37421"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

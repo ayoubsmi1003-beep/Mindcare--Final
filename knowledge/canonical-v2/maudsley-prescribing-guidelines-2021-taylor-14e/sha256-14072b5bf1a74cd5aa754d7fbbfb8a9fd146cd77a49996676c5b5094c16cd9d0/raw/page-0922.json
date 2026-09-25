@@ -1,0 +1,215 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0922",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 922,
+  "source_page_index": 921,
+  "source_page_display": 922,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Miscellany    901\nCHAPTER 14\nNote that blood tests can provide an accurate plasma level of some drugs or their \nmetabolites at the time of sampling, but they do not provide any information about the \npatterns of medication-taking behaviour, levels of adherence or factors that may change \nadherence.29\nFor some antipsychotics such as clozapine, olanzapine and risperidone, blood tests \ncan be useful to directly assess plasma levels. It is important to note that plasma levels \nof these drugs achieved with a fixed dose vary somewhat and it is not possible to accu-\nrately determine partial non-adherence (i.e. total non-adherence will be readily revealed \nbut partial and full adherence may be difficult to tell apart).\nMonitoring adherence and assessing attitudes to medication\nPsychiatrists generally prefer to use direct questioning over the use of more intrusive/\nobjective methods of assessing adherence and so partial or non-adherence may go \nundetected.30 NICE recommends that the patient should be asked in a non-judgemen-\ntal way if they have missed any doses over a specific time period such as the previous \nweek.2\nA number of rating scales and checklists are available that help to guide and \nstructure discussion around attitudes to medication. The most widely used is the \nDrug Attitude Inventory (DAI)31 which consists of a mix of positive and negative \nstatements about medication; 30 statements in its full form and 10 in its abbreviated \nform. It is designed to be completed by the patient who simply agrees or disagrees \nwith each statement. The total score is an indicator of the patient’s overall percep-\ntion of the balance between the benefits and harms associated with taking medica-\ntion, and therefore likely adherence. Attitudes to medication as measured using the \nDAI have been shown to be a useful predictor of compliance over time.32 Other \navailable checklists include the Rating of Medication Influences Scale (ROMI),33 the \nBeliefs about Medicines Questionnaire34 and the Medication Adherence Rating Scale \n(MARS).18\nAssessments methods\nVariables measured\nAdvantages\nDisadvantages\nSelf-reported\nValidated assessment \nscales (questionnaires) \n(e.g. Medication \nAdherence Rating Scale \n– MARS)\nEasy to use\nInexpensive\nSubject to reporting bias\nTendency to please clinicians\nMassively overestimates \nadherence\nSubjective\nElectronic monitoring \ndevices (e.g. \nMedication Event \nMonitoring \nSystem – MEMS)14\nNumber of times \nmedication container has \nbeen opened and \n(assumed) percentage of \ndoses removed\nAmongst the most \naccurate methods\nObjective\nProvides additional \ninformation on \nmedication-taking \nbehaviour\nExpensive\nBulky containers\nNot evidence for ingestion of \nmedication – only of container \nopening\nPatients feel under surveillance\n(Continued)\n",
+  "raw_text_sha256": "f8dbe51fd790262a673e9f2617e5ce978e88707b7a6552068649498cbecae8e4",
+  "coordinates_sha256": "8b6b7618dfa39e3f582fa0a6f883edf529bc39d0b55b0e657041809e3bedc3d7",
+  "block_sequence_sha256": "4ff0265255270ff1fc86d58a1ee8c8f3626623b04a29ba0460677fe7a82b6f1b",
+  "blocks": [
+    {
+      "block_id": "page-0922-block-0000",
+      "order": 0,
+      "text": "Miscellany    901\n",
+      "bbox": [
+        349.2962951660156,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "b7bc836154fd6694e2137ca98138eb2f4194d9cde03f3b321750b4e9d70ef83e"
+    },
+    {
+      "block_id": "page-0922-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        454.4096984863281,
+        338.7405090332031,
+        463.88970947265625,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0922-block-0002",
+      "order": 2,
+      "text": "Note that blood tests can provide an accurate plasma level of some drugs or their \nmetabolites at the time of sampling, but they do not provide any information about the \npatterns of medication-taking behaviour, levels of adherence or factors that may change \nadherence.29\n",
+      "bbox": [
+        48.039398193359375,
+        263.3871765136719,
+        422.8193664550781,
+        311.107177734375
+      ],
+      "text_sha256": "90fc6b689d89147811efaaa8613cce163a936489fde46507d47b0df79dc57fc0"
+    },
+    {
+      "block_id": "page-0922-block-0003",
+      "order": 3,
+      "text": "For some antipsychotics such as clozapine, olanzapine and risperidone, blood tests \ncan be useful to directly assess plasma levels. It is important to note that plasma levels \nof these drugs achieved with a fixed dose vary somewhat and it is not possible to accu-\nrately determine partial non-adherence (i.e. total non-adherence will be readily revealed \nbut partial and full adherence may be difficult to tell apart).\n",
+      "bbox": [
+        48.039398193359375,
+        311.3871765136719,
+        422.809326171875,
+        371.107177734375
+      ],
+      "text_sha256": "8be19c362f57900d779f71c3b9a27f6834c4181415dfefe75f3b490f4a223512"
+    },
+    {
+      "block_id": "page-0922-block-0004",
+      "order": 4,
+      "text": "Monitoring adherence and assessing attitudes to medication\n",
+      "bbox": [
+        48.039398193359375,
+        388.54217529296875,
+        361.37445068359375,
+        401.5771789550781
+      ],
+      "text_sha256": "a32dc2fbe35d3b5121fa16fa1d91c2b929dd62c9717e8d1007efcfe48457d72a"
+    },
+    {
+      "block_id": "page-0922-block-0005",
+      "order": 5,
+      "text": "Psychiatrists generally prefer to use direct questioning over the use of more intrusive/\nobjective methods of assessing adherence and so partial or non-adherence may go \nundetected.30 NICE recommends that the patient should be asked in a non-judgemen-\ntal way if they have missed any doses over a specific time period such as the previous \nweek.2\n",
+      "bbox": [
+        48.039398193359375,
+        407.3871765136719,
+        422.763427734375,
+        467.1072082519531
+      ],
+      "text_sha256": "d2a8123167e2a060bdfc68cf98f997d2534b3a3477f1552fd2d8b5294b79278b"
+    },
+    {
+      "block_id": "page-0922-block-0006",
+      "order": 6,
+      "text": "A number of rating scales and checklists are available that help to guide and \nstructure discussion around attitudes to medication. The most widely used is the \nDrug Attitude Inventory (DAI)31 which consists of a mix of positive and negative \nstatements about medication; 30 statements in its full form and 10 in its abbreviated \nform. It is designed to be completed by the patient who simply agrees or disagrees \nwith each statement. The total score is an indicator of the patient’s overall percep-\ntion of the balance between the benefits and harms associated with taking medica-\ntion, and therefore likely adherence. Attitudes to medication as measured using the \nDAI have been shown to be a useful predictor of compliance over time.32 Other \navailable checklists include the Rating of Medication Influences Scale (ROMI),33 the \nBeliefs about Medicines Questionnaire34 and the Medication Adherence Rating Scale \n(MARS).18\n",
+      "bbox": [
+        48.03631591796875,
+        467.38720703125,
+        422.8284912109375,
+        611.1072387695312
+      ],
+      "text_sha256": "d127c9d6b9083daece69b4a590a307aab2d80be2705b974253f27093f52f0ba9"
+    },
+    {
+      "block_id": "page-0922-block-0007",
+      "order": 7,
+      "text": "Assessments methods\nVariables measured\nAdvantages\nDisadvantages\n",
+      "bbox": [
+        47.999698638916016,
+        82.39961242675781,
+        360.44970703125,
+        91.287109375
+      ],
+      "text_sha256": "80fd71276548fb2e3c3188c719eb554d314f635eb88a21f328cf905edb85b06d"
+    },
+    {
+      "block_id": "page-0922-block-0008",
+      "order": 8,
+      "text": "Self-reported\nValidated assessment \nscales (questionnaires) \n(e.g. Medication \nAdherence Rating Scale \n– MARS)\n",
+      "bbox": [
+        47.99969482421875,
+        102.77711486816406,
+        209.377197265625,
+        151.65460205078125
+      ],
+      "text_sha256": "2b661104199719e33e8dc7485bfcde065ed9f4524c0a1e66df665ae96ebe98d3"
+    },
+    {
+      "block_id": "page-0922-block-0009",
+      "order": 9,
+      "text": "Easy to use\nInexpensive\n",
+      "bbox": [
+        220.7471923828125,
+        102.9496078491211,
+        257.4146728515625,
+        121.65460205078125
+      ],
+      "text_sha256": "8f279ed091327572c6f52e8b010e438823bc00bef0200ca949e77ee4c921d193"
+    },
+    {
+      "block_id": "page-0922-block-0010",
+      "order": 10,
+      "text": "Subject to reporting bias\nTendency to please clinicians\nMassively overestimates \nadherence\nSubjective\n",
+      "bbox": [
+        308.7746887207031,
+        102.9496078491211,
+        399.6147766113281,
+        151.6470947265625
+      ],
+      "text_sha256": "1fbbe496a62002c48704cf7726ef3b0a63c4eeaf039f93f872b6a6002cbe0d86"
+    },
+    {
+      "block_id": "page-0922-block-0011",
+      "order": 11,
+      "text": "Electronic monitoring \ndevices (e.g. \nMedication Event \nMonitoring \nSystem – MEMS)14\n",
+      "bbox": [
+        47.99969482421875,
+        157.78211975097656,
+        125.78968811035156,
+        206.65960693359375
+      ],
+      "text_sha256": "d10f87494078fb229c3479d20480409a7eb4a3d1f3427cce9ccf1ec13bd9e9d0"
+    },
+    {
+      "block_id": "page-0922-block-0012",
+      "order": 12,
+      "text": "Number of times \nmedication container has \nbeen opened and \n(assumed) percentage of \ndoses removed\n",
+      "bbox": [
+        131.99940490722656,
+        157.9795684814453,
+        214.5068817138672,
+        206.67706298828125
+      ],
+      "text_sha256": "5c4fe5b9daab076d74aa930bb5f62f84a83fcebfdf7a11486048678f536621ab"
+    },
+    {
+      "block_id": "page-0922-block-0013",
+      "order": 13,
+      "text": "Amongst the most \naccurate methods\nObjective\nProvides additional \ninformation on \nmedication-taking \nbehaviour\n",
+      "bbox": [
+        220.7469024658203,
+        157.97206115722656,
+        282.7044677734375,
+        226.66455078125
+      ],
+      "text_sha256": "4714923cda5296ab93419dbb830fe935591ae20570208aef0b4032336e3416d8"
+    },
+    {
+      "block_id": "page-0922-block-0014",
+      "order": 14,
+      "text": "Expensive\nBulky containers\nNot evidence for ingestion of \nmedication – only of container \nopening\nPatients feel under surveillance\n",
+      "bbox": [
+        308.7744140625,
+        157.95704650878906,
+        408.3669738769531,
+        216.65203857421875
+      ],
+      "text_sha256": "e249386332dd5e0b30f7e3786bd483474e22b50a7b17ebd997e30001b9bf887f"
+    },
+    {
+      "block_id": "page-0922-block-0015",
+      "order": 15,
+      "text": "(Continued)\n",
+      "bbox": [
+        47.999420166015625,
+        63.059574127197266,
+        85.51441955566406,
+        71.81207275390625
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

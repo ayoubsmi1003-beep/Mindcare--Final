@@ -1,0 +1,335 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0482",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 482,
+  "source_page_index": 481,
+  "source_page_display": 482,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    461\nCHAPTER 4\nWernicke’s encephalopathy\nWernicke’s encephalopathy is an acute neuropsychiatric condition caused by thiamine \ndeficiency. In alcohol dependence, thiamine deficiency is secondary to both reduced \ndietary intake and reduced absorption.\nThe following are the risk factors for Wernicke’s encephalopathy in alcohol \ndependence:14\n■\n■Acute withdrawal\n■\n■Malnourishment\n■\n■Decompensated liver disease\n■\n■Emergency department (ED) attendance\n■\n■Hospitalisation for co-morbidity\n■\n■Homelessness\nPresentation\nThe ‘classical’ triad of ophthalmoplegia, ataxia and confusion is rarely present in \nWernicke’s encephalopathy, and the syndrome is much more common than is recog-\nnised. A presumptive diagnosis of Wernicke’s encephalopathy should therefore be made \nin any patient undergoing detoxification who experiences any of the following signs:\n■\n■Ataxia\n■\n■Hypothermia\n■\n■Hypotension\n■\n■Confusion\n■\n■Ophthalmoplegia/nystagmus\n■\n■Memory disturbance\n■\n■Unconsciousness/coma\nAny history of malnutrition, recent weight loss, vomiting or diarrhoea or peripheral \nneuropathy should also be noted.15\nProphylactic thiamine\nLow-risk drinkers without neuropsychiatric complications and with an adequate diet \nshould be offered oral thiamine: a minimum of 300mg daily during assisted alcohol \nwithdrawal and periods of continued alcohol intake.9\nCaution: As thiamine is required to utilise glucose, a glucose load in a thiamine-\ndeficient patient can precipitate Wernicke’s encephalopathy.\nParenteral B-complex (in the UK – Pabrinex) must be administered before \nglucose is administered in all patients presenting with altered mental status\nIt is generally advised that patients undergoing inpatient detoxification should be given \nparenteral thiamine as prophylaxis,2,9,14,16,17 although there is insufficient evidence from \nrandomised controlled trials (RCTs) as to the best dose, frequency or duration of use. \n",
+  "raw_text_sha256": "d07bd3843202c60879e01e05f7ecd238ac2c96a0d4c001e27ad3ef90a00fb5c3",
+  "coordinates_sha256": "2d3959791c4bf961c1d466e212af79e69cd8c02384e08ccff7d697306e598fb6",
+  "block_sequence_sha256": "4df8a718d938a51fe0c35ed3b73e63a181e4072cf3043ba749b1b2c2c42cfdf7",
+  "blocks": [
+    {
+      "block_id": "page-0482-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    461\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "fc0f540385d1a5c40ec4eb6ed9fc42de8dd90758e4b054b106804bce63475f33"
+    },
+    {
+      "block_id": "page-0482-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0482-block-0002",
+      "order": 2,
+      "text": "Wernicke’s encephalopathy\n",
+      "bbox": [
+        48.0,
+        62.31546401977539,
+        189.6029510498047,
+        75.3504638671875
+      ],
+      "text_sha256": "35aad5dab906e6822af537c9d3bfc7c906582732e24af876b3ee93e7792a7cac"
+    },
+    {
+      "block_id": "page-0482-block-0003",
+      "order": 3,
+      "text": "Wernicke’s encephalopathy is an acute neuropsychiatric condition caused by thiamine \ndeficiency. In alcohol dependence, thiamine deficiency is secondary to both reduced \ndietary intake and reduced absorption.\n",
+      "bbox": [
+        48.0,
+        81.16046142578125,
+        422.79998779296875,
+        116.88046264648438
+      ],
+      "text_sha256": "9718b3fc3b9cc8e3d13cb259e7279fa20fd6bca08ccb778332d82dbf3655915b"
+    },
+    {
+      "block_id": "page-0482-block-0004",
+      "order": 4,
+      "text": "The following are the risk factors for Wernicke’s encephalopathy in alcohol \ndependence:14\n",
+      "bbox": [
+        48.0,
+        117.16046142578125,
+        422.8099670410156,
+        140.88046264648438
+      ],
+      "text_sha256": "c68ce0bb248a31edcb1436abe9a74e887137e08374caa45124623bd1acce0f98"
+    },
+    {
+      "block_id": "page-0482-block-0005",
+      "order": 5,
+      "text": "■\n■Acute withdrawal\n",
+      "bbox": [
+        47.999900817871094,
+        147.16046142578125,
+        134.22000122070312,
+        158.88046264648438
+      ],
+      "text_sha256": "800f19105c7844f187fa3a9b27f9080d5c4ed76ebfd14070c095a9d98dfe9bca"
+    },
+    {
+      "block_id": "page-0482-block-0006",
+      "order": 6,
+      "text": "■\n■Malnourishment\n",
+      "bbox": [
+        47.999900817871094,
+        159.16046142578125,
+        129.22998046875,
+        170.88046264648438
+      ],
+      "text_sha256": "7ef44702ac53afe4fed954aeae216d1a6e214e2c64a484b3ba4451efb77dadea"
+    },
+    {
+      "block_id": "page-0482-block-0007",
+      "order": 7,
+      "text": "■\n■Decompensated liver disease\n",
+      "bbox": [
+        47.999900817871094,
+        171.16049194335938,
+        179.77000427246094,
+        182.8804931640625
+      ],
+      "text_sha256": "a38e11c536599dc0827728dbfdc49bb902d95e3fdee64d4664c42708db8bfaa2"
+    },
+    {
+      "block_id": "page-0482-block-0008",
+      "order": 8,
+      "text": "■\n■Emergency department (ED) attendance\n",
+      "bbox": [
+        47.999900817871094,
+        183.16049194335938,
+        229.18002319335938,
+        194.8804931640625
+      ],
+      "text_sha256": "35234236fd9ac4cbb45d4fec134a2ef6bfbf9cf3a7fdbd38e04399e22af82874"
+    },
+    {
+      "block_id": "page-0482-block-0009",
+      "order": 9,
+      "text": "■\n■Hospitalisation for co-morbidity\n",
+      "bbox": [
+        47.999900817871094,
+        195.16049194335938,
+        197.5899658203125,
+        206.8804931640625
+      ],
+      "text_sha256": "6369f817bbf6a9c338f3e9c20123ef1784c48cc2d35dc053d27f1e8a9e6cbaf1"
+    },
+    {
+      "block_id": "page-0482-block-0010",
+      "order": 10,
+      "text": "■\n■Homelessness\n",
+      "bbox": [
+        47.999900817871094,
+        207.16049194335938,
+        116.43999481201172,
+        218.8804931640625
+      ],
+      "text_sha256": "d4399e398478f9b3d4ca0e96f1a8737569bb7417066fc6fc2454b3a87ee0301d"
+    },
+    {
+      "block_id": "page-0482-block-0011",
+      "order": 11,
+      "text": "Presentation\n",
+      "bbox": [
+        48.0,
+        243.25048828125,
+        107.45999908447266,
+        255.10049438476562
+      ],
+      "text_sha256": "03eb70ddb334b8762d51cd404bf5d7a36002f6b21b0b8d46ccfd5aedf7954c35"
+    },
+    {
+      "block_id": "page-0482-block-0012",
+      "order": 12,
+      "text": "The ‘classical’ triad of ophthalmoplegia, ataxia and confusion is rarely present in \nWernicke’s encephalopathy, and the syndrome is much more common than is recog-\nnised. A presumptive diagnosis of Wernicke’s encephalopathy should therefore be made \nin any patient undergoing detoxification who experiences any of the following signs:\n",
+      "bbox": [
+        48.0,
+        261.1604919433594,
+        422.7698974609375,
+        308.8804931640625
+      ],
+      "text_sha256": "916abe102a3287a0e22d8bddf1dcfb2b51c57045b0a2726afd21b2a461721e8a"
+    },
+    {
+      "block_id": "page-0482-block-0013",
+      "order": 13,
+      "text": "■\n■Ataxia\n",
+      "bbox": [
+        47.999900817871094,
+        315.1604919433594,
+        85.87999725341797,
+        326.8804931640625
+      ],
+      "text_sha256": "529a0e37f71514c13518bbf1f9518b7db0d48eb3faa8b515f3aae0bf4bc3cb72"
+    },
+    {
+      "block_id": "page-0482-block-0014",
+      "order": 14,
+      "text": "■\n■Hypothermia\n",
+      "bbox": [
+        47.999900817871094,
+        327.1604919433594,
+        114.77999114990234,
+        338.8804931640625
+      ],
+      "text_sha256": "a7f151606479ff88bfceea0972a2f137242d75c4a261d35c7d846f7323b7c80e"
+    },
+    {
+      "block_id": "page-0482-block-0015",
+      "order": 15,
+      "text": "■\n■Hypotension\n",
+      "bbox": [
+        47.999900817871094,
+        339.1604919433594,
+        112.57998657226562,
+        350.8804931640625
+      ],
+      "text_sha256": "51a440b6af8e7bdb0ea15132382cca3b3b5f74132855b757fbc843397329b3e2"
+    },
+    {
+      "block_id": "page-0482-block-0016",
+      "order": 16,
+      "text": "■\n■Confusion\n",
+      "bbox": [
+        47.999900817871094,
+        351.1604919433594,
+        102.01998901367188,
+        362.8804931640625
+      ],
+      "text_sha256": "a89028214fa5b1f69b9e819a6eda63b4deff0e80502d5c32d8de0b84435e82e8"
+    },
+    {
+      "block_id": "page-0482-block-0017",
+      "order": 17,
+      "text": "■\n■Ophthalmoplegia/nystagmus\n",
+      "bbox": [
+        47.999900817871094,
+        363.1604919433594,
+        180.88999938964844,
+        374.8804931640625
+      ],
+      "text_sha256": "1dab9fbf2059d2f274d09db449af1bd68819181c4e0c6bc47775320f050cac56"
+    },
+    {
+      "block_id": "page-0482-block-0018",
+      "order": 18,
+      "text": "■\n■Memory disturbance\n",
+      "bbox": [
+        47.999900817871094,
+        375.1604919433594,
+        147.0,
+        386.8804931640625
+      ],
+      "text_sha256": "28c69cfa6b94b861eb84eafa64e82f53a987409298dfd725e16fb07650dbcb14"
+    },
+    {
+      "block_id": "page-0482-block-0019",
+      "order": 19,
+      "text": "■\n■Unconsciousness/coma\n",
+      "bbox": [
+        47.999900817871094,
+        387.1604919433594,
+        155.33999633789062,
+        398.8804931640625
+      ],
+      "text_sha256": "57842c1b8d62982f25a66ad03e81a679fe59ea1ed98c858f0cde8bd4c7e869f5"
+    },
+    {
+      "block_id": "page-0482-block-0020",
+      "order": 20,
+      "text": "Any history of malnutrition, recent weight loss, vomiting or diarrhoea or peripheral \nneuropathy should also be noted.15\n",
+      "bbox": [
+        48.0,
+        405.1604919433594,
+        422.77001953125,
+        428.8804931640625
+      ],
+      "text_sha256": "02677796ac8f6bffeac6b6d1e2d04e962bc92ce1710f27011658918391fd70cf"
+    },
+    {
+      "block_id": "page-0482-block-0021",
+      "order": 21,
+      "text": "Prophylactic thiamine\n",
+      "bbox": [
+        48.0,
+        447.25048828125,
+        149.6899871826172,
+        459.1004943847656
+      ],
+      "text_sha256": "e4ab200d722a8c8c64c006d273069b0d724600058e823d6d38658a2ef2cd1cea"
+    },
+    {
+      "block_id": "page-0482-block-0022",
+      "order": 22,
+      "text": "Low-risk drinkers without neuropsychiatric complications and with an adequate diet \nshould be offered oral thiamine: a minimum of 300mg daily during assisted alcohol \nwithdrawal and periods of continued alcohol intake.9\n",
+      "bbox": [
+        48.0,
+        465.1604919433594,
+        422.7398376464844,
+        500.8804931640625
+      ],
+      "text_sha256": "4c1b1223e5a724c50cda7809e9d54e7541becf9e4002f2ba70e609c184dca59c"
+    },
+    {
+      "block_id": "page-0482-block-0023",
+      "order": 23,
+      "text": "Caution: As thiamine is required to utilise glucose, a glucose load in a thiamine-\ndeficient patient can precipitate Wernicke’s encephalopathy.\n",
+      "bbox": [
+        48.0,
+        501.1604919433594,
+        419.95989990234375,
+        524.8804931640625
+      ],
+      "text_sha256": "d261b7bc22900587d1302b425a0f3fdc8038929ac4440500865381b92421d671"
+    },
+    {
+      "block_id": "page-0482-block-0024",
+      "order": 24,
+      "text": "Parenteral B-complex (in the UK – Pabrinex) must be administered before \nglucose is administered in all patients presenting with altered mental status\n",
+      "bbox": [
+        48.0,
+        543.25048828125,
+        405.29998779296875,
+        567.1004638671875
+      ],
+      "text_sha256": "e9aa6c0c969ababc0fbcba0ea5a6aa1524d598ac2aa280470850cca4c031bebd"
+    },
+    {
+      "block_id": "page-0482-block-0025",
+      "order": 25,
+      "text": "It is generally advised that patients undergoing inpatient detoxification should be given \nparenteral thiamine as prophylaxis,2,9,14,16,17 although there is insufficient evidence from \nrandomised controlled trials (RCTs) as to the best dose, frequency or duration of use. \n",
+      "bbox": [
+        47.99650573730469,
+        573.1604614257812,
+        422.7799072265625,
+        608.8804931640625
+      ],
+      "text_sha256": "5bbf0d240b1884f9a941967f36ac2122b06392fb550dbc070a4626a2e1aefd65"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

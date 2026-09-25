@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0494",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 494,
+  "source_page_index": 493,
+  "source_page_display": 494,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    473\nCHAPTER 4\nAll patients with delirium tremens should have IV thiamine (as Pabrinex in the UK) \nat treatment dose, as malnutrition is a known predisposing cause of DTs. Sufficient \nsedation should be achieved to facilitate the giving of this treatment and IV \nrehydration.\nClinical experience indicates that medical and ITU teams are most comfortable with \nNSW Regime 1 (oral diazepam loading) or NEJM Regime 2 (IM lorazepam), in the first \ninstance. NICE suggests that haloperidol can be used to manage behavioural distur-\nbance in delirium tremens, but others urge caution in view of its cardiotoxicity and \npropensity to provoke seizures.1,2 Both NICE and the New South Wales guidance suggest \nolanzapine as a possibility for behavioural disturbance refractory to benzodiazepines.2,3\nLoading of benzodiazepines should not be done in patients with chronic obstructive \npulmonary disease (COPD) or other respiratory compromise and it is more likely that \nthese patients will require respiratory support in order to tolerate medically assisted \ndetoxification, so early involvement of the ITU team is critical. Care should be taken to \nmonitor respiratory rate (RR) and oxygenation particularly in those patients who are \nsmokers and may have occult respiratory disease. Prescription of ‘when necessary’ \nflumazenil to reverse benzodiazepine toxicity is advisable.\nReferences\n\t 1.\t Schuckit MA. Recognition and management of withdrawal delirium (delirium tremens). N Engl J Med 2014; 371:2109–2113.\n\t 2.\t National Institute for Health and Clinical Excellence. Alcohol-use disorders: physical complications. Clinical Guidance [CG100]. 2010 (last \nupdated April 2017); https://www.nice.org.uk/guidance/cg100.\n\t 3.\t NSW \nGovernment. \nDrug \nand \nalcohol \nwithdrawal \nclinical \npractice \nguidelines. \n2008; \nhttps://www1.health.nsw.gov.au/pds/\nActivePDSDocuments/GL2008_011.pdf.\n\t 4.\t Mayo-Smith MF, et al. Management of alcohol withdrawal delirium. An evidence-based practice guideline. Arch Intern Med 2004; \n164:1405–1412.\n\t 5.\t Nguyen TA, et al. Phenobarbital and symptom-triggered lorazepam versus lorazepam alone for severe alcohol withdrawal in the intensive \ncare unit. Alcohol 2020; 82:23–27.\nTable 4.7  Detailed administration schedules for delirium tremens\nNew South Wales Guidance3\nNEJM diazepam1\nNEJM lorazepam1\nRegimen 1:\n20mg diazepam orally hourly until \nlight sedation achieved\nMax 80mg\nSublingual olanzapine 10mg if \ncontinued agitation\nRegimen 2:\nIf unable to accept diazepam, IV \nmidazolam 5mg, then 2mg/hour in \nHDU setting\n2mg lorazepam is an alternative to \nIV midazolam if it is not available\nRegimen 1:\n10–20mg diazepam orally or IV \n1–4 hourly\nRegimen 2:\n5mg IV bolus\nThen 10mg IV boluses every 10 \nminutes × 2\nThen 20mg IV bolus if needed\nThen 5–20mg IV diazepam/hour\nRegimen 1:\n8mg lorazepam orally, IM or IV every \n15 minutes (2 doses). If a third dose \nrequired, give 8mg IV When \nsedation achieved give 10–30mg/\nhour\nRegimen 2:\n1–4mg lorazepam IM every 30–60 \nminutes until sedation achieved then \nhourly as needed\nRegimen 3:\n1–4mg lorazepam IV every 5–15 \nminutes as needed\n",
+  "raw_text_sha256": "5d63a60f2697567b3fbf8c44b40c0d747c728d82a26b034520224ca50f092b48",
+  "coordinates_sha256": "d2b9be547fe4a48ccfb27396fbc310398a8d617d13203fb38791db700d241bea",
+  "block_sequence_sha256": "4d310bb8b3385d8c833d4e7a6fd88cf08a3671a64706843473d303cabc8a1762",
+  "blocks": [
+    {
+      "block_id": "page-0494-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    473\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "2583ea632fcc397a475a3bf607a9daed5e289bc9f97463431969c6bc1ebf4164"
+    },
+    {
+      "block_id": "page-0494-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0494-block-0002",
+      "order": 2,
+      "text": "All patients with delirium tremens should have IV thiamine (as Pabrinex in the UK) \nat treatment dose, as malnutrition is a known predisposing cause of DTs. Sufficient \nsedation should be achieved to facilitate the giving of this treatment and IV \nrehydration.\n",
+      "bbox": [
+        48.0,
+        262.20037841796875,
+        422.8199768066406,
+        309.9203796386719
+      ],
+      "text_sha256": "95186a3cd671045802bdc0b00439a96ceb732782410f3a2733081365080a0172"
+    },
+    {
+      "block_id": "page-0494-block-0003",
+      "order": 3,
+      "text": "Clinical experience indicates that medical and ITU teams are most comfortable with \nNSW Regime 1 (oral diazepam loading) or NEJM Regime 2 (IM lorazepam), in the first \ninstance. NICE suggests that haloperidol can be used to manage behavioural distur-\nbance in delirium tremens, but others urge caution in view of its cardiotoxicity and \npropensity to provoke seizures.1,2 Both NICE and the New South Wales guidance suggest \nolanzapine as a possibility for behavioural disturbance refractory to benzodiazepines.2,3\n",
+      "bbox": [
+        47.99920654296875,
+        310.20037841796875,
+        422.8402099609375,
+        381.9203796386719
+      ],
+      "text_sha256": "0009642129d0724b7276c58b2be9b3c2c35c9a4b4d05e3f88ae4f3e88f149550"
+    },
+    {
+      "block_id": "page-0494-block-0004",
+      "order": 4,
+      "text": "Loading of benzodiazepines should not be done in patients with chronic obstructive \npulmonary disease (COPD) or other respiratory compromise and it is more likely that \nthese patients will require respiratory support in order to tolerate medically assisted \ndetoxification, so early involvement of the ITU team is critical. Care should be taken to \nmonitor respiratory rate (RR) and oxygenation particularly in those patients who are \nsmokers and may have occult respiratory disease. Prescription of ‘when necessary’ \nflumazenil to reverse benzodiazepine toxicity is advisable.\n",
+      "bbox": [
+        48.0,
+        382.20037841796875,
+        422.8000793457031,
+        465.9203796386719
+      ],
+      "text_sha256": "821c7a83295999c1bc9c0e181b3099a10fc9f846588e2133d7c9aab44602bd4b"
+    },
+    {
+      "block_id": "page-0494-block-0005",
+      "order": 5,
+      "text": "References\n",
+      "bbox": [
+        48.0,
+        483.3553771972656,
+        104.03400421142578,
+        496.390380859375
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0494-block-0006",
+      "order": 6,
+      "text": "\t 1.\t Schuckit MA. Recognition and management of withdrawal delirium (delirium tremens). N Engl J Med 2014; 371:2109–2113.\n\t 2.\t National Institute for Health and Clinical Excellence. Alcohol-use disorders: physical complications. Clinical Guidance [CG100]. 2010 (last \n",
+      "bbox": [
+        48.0,
+        501.3323669433594,
+        421.6379699707031,
+        517.5083618164062
+      ],
+      "text_sha256": "1a159cea9107e1cbf46252a50365c7d8d8c3885ec32d9732974150ad3625be60"
+    },
+    {
+      "block_id": "page-0494-block-0007",
+      "order": 7,
+      "text": "updated April 2017); https://www.nice.org.uk/guidance/cg100.\n\t 3.\t NSW \nGovernment. \nDrug \nand \nalcohol \nwithdrawal \nclinical \npractice \nguidelines. \n2008; \nhttps://www1.health.nsw.gov.au/pds/\nActivePDSDocuments/GL2008_011.pdf.\n\t 4.\t Mayo-Smith MF, et al. Management of alcohol withdrawal delirium. An evidence-based practice guideline. Arch Intern Med 2004; \n",
+      "bbox": [
+        48.012001037597656,
+        519.4763793945312,
+        421.72210693359375,
+        553.5083618164062
+      ],
+      "text_sha256": "9f75fb2cb340e3be5728a6dc760f06b8c5035426f796f43307e2015ac9101d99"
+    },
+    {
+      "block_id": "page-0494-block-0008",
+      "order": 8,
+      "text": "164:1405–1412.\n\t 5.\t Nguyen TA, et al. Phenobarbital and symptom-triggered lorazepam versus lorazepam alone for severe alcohol withdrawal in the intensive \n",
+      "bbox": [
+        48.02399826049805,
+        555.3323974609375,
+        421.656005859375,
+        571.5083618164062
+      ],
+      "text_sha256": "8562e9a0172977caaaf52b269d686a38d3f7ee54fdade8460468efb007d7f693"
+    },
+    {
+      "block_id": "page-0494-block-0009",
+      "order": 9,
+      "text": "care unit. Alcohol 2020; 82:23–27.\n",
+      "bbox": [
+        59.02799606323242,
+        573.3323974609375,
+        149.8499755859375,
+        580.5083618164062
+      ],
+      "text_sha256": "7ad59f692c947fe6141c3c8560487ed9bdd7014e2f3f315aa74e4eb5492e2cc7"
+    },
+    {
+      "block_id": "page-0494-block-0010",
+      "order": 10,
+      "text": "Table 4.7  Detailed administration schedules for delirium tremens\n",
+      "bbox": [
+        54.0,
+        70.08790588378906,
+        262.64251708984375,
+        78.97540283203125
+      ],
+      "text_sha256": "503e680877f7af59b26947ad7c3126f509ce02e36c772b5784347c057a42c440"
+    },
+    {
+      "block_id": "page-0494-block-0011",
+      "order": 11,
+      "text": "New South Wales Guidance3\nNEJM diazepam1\nNEJM lorazepam1\n",
+      "bbox": [
+        48.0,
+        89.96290588378906,
+        362.1930236816406,
+        98.85040283203125
+      ],
+      "text_sha256": "524161797d4809054e7c0ed8c78414e28c4b1b0a9672b152c339f76e9d2f39b4"
+    },
+    {
+      "block_id": "page-0494-block-0012",
+      "order": 12,
+      "text": "Regimen 1:\n20mg diazepam orally hourly until \nlight sedation achieved\nMax 80mg\nSublingual olanzapine 10mg if \ncontinued agitation\n",
+      "bbox": [
+        48.0,
+        108.26790618896484,
+        159.26248168945312,
+        166.962890625
+      ],
+      "text_sha256": "e94f5b2ce0963558371c99706195d9e0a8fb1f3104503ecb46e16a5d9ffc479b"
+    },
+    {
+      "block_id": "page-0494-block-0013",
+      "order": 13,
+      "text": "Regimen 2:\nIf unable to accept diazepam, IV \nmidazolam 5mg, then 2mg/hour in \nHDU setting\n2mg lorazepam is an alternative to \nIV midazolam if it is not available\n",
+      "bbox": [
+        48.0,
+        171.2528839111328,
+        162.1949920654297,
+        229.9478759765625
+      ],
+      "text_sha256": "fba346cf709cf6c449ef845ed9fdef04d724c5d93b848330bd5f718aa161560f"
+    },
+    {
+      "block_id": "page-0494-block-0014",
+      "order": 14,
+      "text": "Regimen 1:\n10–20mg diazepam orally or IV \n1–4 hourly\n",
+      "bbox": [
+        177.50250244140625,
+        108.23787689208984,
+        279.5999450683594,
+        136.94036865234375
+      ],
+      "text_sha256": "5301644aed80823f1d383747a64a8d1fa93c13285cbd15c9c96ae4061e22f0d3"
+    },
+    {
+      "block_id": "page-0494-block-0015",
+      "order": 15,
+      "text": "Regimen 2:\n5mg IV bolus\nThen 10mg IV boluses every 10 \nminutes × 2\nThen 20mg IV bolus if needed\nThen 5–20mg IV diazepam/hour\n",
+      "bbox": [
+        177.50250244140625,
+        141.23036193847656,
+        280.447509765625,
+        199.92535400390625
+      ],
+      "text_sha256": "7b632fecbc54024aa2550d966697b3934364e829a6596177fd01b6cd0cacab28"
+    },
+    {
+      "block_id": "page-0494-block-0016",
+      "order": 16,
+      "text": "Regimen 1:\n8mg lorazepam orally, IM or IV every \n15 minutes (2 doses). If a third dose \nrequired, give 8mg IV When \nsedation achieved give 10–30mg/\nhour\n",
+      "bbox": [
+        301.0050048828125,
+        108.2153549194336,
+        419.8949890136719,
+        166.91033935546875
+      ],
+      "text_sha256": "58c4a4ec328258d5a3309c9e24105277763b328d648e66bf94e11769030c5d0a"
+    },
+    {
+      "block_id": "page-0494-block-0017",
+      "order": 17,
+      "text": "Regimen 2:\n1–4mg lorazepam IM every 30–60 \nminutes until sedation achieved then \nhourly as needed\n",
+      "bbox": [
+        301.0050048828125,
+        171.20033264160156,
+        420.5776062011719,
+        209.90032958984375
+      ],
+      "text_sha256": "0bc73fc77a38364b8d690566997d71532eb80df364af3fc97975daab9543a0af"
+    },
+    {
+      "block_id": "page-0494-block-0018",
+      "order": 18,
+      "text": "Regimen 3:\n1–4mg lorazepam IV every 5–15 \nminutes as needed\n",
+      "bbox": [
+        301.0050048828125,
+        214.19032287597656,
+        406.4325256347656,
+        242.892822265625
+      ],
+      "text_sha256": "b40e1a02575944c93ea8b4fa76b4738b17ccedf6c18efb42c804cca4a2c61660"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

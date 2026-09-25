@@ -1,0 +1,275 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0506",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 506,
+  "source_page_index": 505,
+  "source_page_display": 506,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    485\nCHAPTER 4\ncommitments, those who need to travel regularly (making daily medications pick-up \ndifficult) and those struggling to adhere to a daily medication regime.\nProlonged-release buprenorphine injection offers the same benefits as sublingual \nbuprenorphine, i.e. suppression of withdrawal symptoms and craving, alongside opioid \nblockade of additional opiates are taken. It has a sustained release and some patients \nfind that it reduces the noticeable peaks and troughs experienced on sublingual \nbuprenorphine. In turn, this may reduce ‘on-top’ use of opioids. Contraindications to \nprolonged-release buprenorphine injection are hypersensitivity or allergy to active sub-\nstance or excipients, severe hepatic impairment, alcohol dependence and delirium \ntremens.\nDifferent brands of oral buprenorphine and bioavailability\nEspranor is a brand of buprenorphine which is increasingly used in the UK community \naddiction services. Espranor is placed on the tongue, not under it. The pharmacokinet-\nics of buprenorphine show quite wide interindividual variation53 and to some extent the \nvariability in PK is accommodated by titrating people slowly against their personal \ntherapeutic response. However, for conversion from buprenorphine or other brands of \nbuprenorphine to Espranor, the following conversion table has been developed, based \non clinical experience:\nBuprenorphine sublingual\nEspranor orodispersible\n8mg\n6mg\n10mg\n8mg\n12mg\n10mg\n14/16mg\n12mg\n18mg\n14mg\n20/22mg\n16mg\n>26mg\n18mg\nTable 4.11  Conventional sublingual buprenorphine daily treatment doses and \nrecommended corresponding doses of weekly and monthly Buvidal®\nDose of daily sublingual \nbuprenorphine\nDose of weekly Buvidal®\nDose of monthly \nBuvidal®\n2–6mg\n  8mg\n32mg\n8–10mg\n16mg\n64mg\n12–16mg\n24mg\n96mg\n18–24mg\n32mg\n128mg\n",
+  "raw_text_sha256": "408dfda2e069e0c688e4275abc1250ebfd9b8ad24c5900ce0b988838eb18864e",
+  "coordinates_sha256": "4c9bdf2d727d0e720f924ceb7f2053045e990be0c9af6d1247e3c91c628347ab",
+  "block_sequence_sha256": "7f0c46ffc403703ac7f894ee935ae420b2020801b54415c5d9eb3a46c86ad033",
+  "blocks": [
+    {
+      "block_id": "page-0506-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    485\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "5a53b17f6fd7ec2f820a313d6e8302ebdf6cef51e2e713ce4713170637a096e6"
+    },
+    {
+      "block_id": "page-0506-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0506-block-0002",
+      "order": 2,
+      "text": "commitments, those who need to travel regularly (making daily medications pick-up \ndifficult) and those struggling to adhere to a daily medication regime.\n",
+      "bbox": [
+        47.999698638916016,
+        205.05038452148438,
+        422.7496032714844,
+        228.7703857421875
+      ],
+      "text_sha256": "fe0efd28a1aa677cff406091a47bbc6928c564909b9a0a4f924387531d695027"
+    },
+    {
+      "block_id": "page-0506-block-0003",
+      "order": 3,
+      "text": "Prolonged-release buprenorphine injection offers the same benefits as sublingual \nbuprenorphine, i.e. suppression of withdrawal symptoms and craving, alongside opioid \nblockade of additional opiates are taken. It has a sustained release and some patients \nfind that it reduces the noticeable peaks and troughs experienced on sublingual \nbuprenorphine. In turn, this may reduce ‘on-top’ use of opioids. Contraindications to \nprolonged-release buprenorphine injection are hypersensitivity or allergy to active sub-\nstance or excipients, severe hepatic impairment, alcohol dependence and delirium \ntremens.\n",
+      "bbox": [
+        47.999698638916016,
+        229.05038452148438,
+        422.7996520996094,
+        324.7703857421875
+      ],
+      "text_sha256": "443f8a5d256e93410d58c048e76330a6742a70be98bd8e2389dbb5c0585bf128"
+    },
+    {
+      "block_id": "page-0506-block-0004",
+      "order": 4,
+      "text": "Different brands of oral buprenorphine and bioavailability\n",
+      "bbox": [
+        47.999698638916016,
+        343.140380859375,
+        322.8896484375,
+        354.9903869628906
+      ],
+      "text_sha256": "00f4216a12310bdcebc9b0fe1268b33b9c90d5de9dcf1e28830d6bd6c3feb320"
+    },
+    {
+      "block_id": "page-0506-block-0005",
+      "order": 5,
+      "text": "Espranor is a brand of buprenorphine which is increasingly used in the UK community \naddiction services. Espranor is placed on the tongue, not under it. The pharmacokinet-\nics of buprenorphine show quite wide interindividual variation53 and to some extent the \nvariability in PK is accommodated by titrating people slowly against their personal \ntherapeutic response. However, for conversion from buprenorphine or other brands of \nbuprenorphine to Espranor, the following conversion table has been developed, based \non clinical experience:\n",
+      "bbox": [
+        47.995208740234375,
+        361.0503845214844,
+        422.8197326660156,
+        444.7703857421875
+      ],
+      "text_sha256": "efb18f266c772e1bb55d254aeb08e20babe0c035f9af618ea2490291a81c5825"
+    },
+    {
+      "block_id": "page-0506-block-0006",
+      "order": 6,
+      "text": "Buprenorphine sublingual\nEspranor orodispersible\n",
+      "bbox": [
+        129.99989318847656,
+        466.3528747558594,
+        337.202392578125,
+        475.2403869628906
+      ],
+      "text_sha256": "9a604df11579441dcf99daa4b168fba7af23952692f0096e3f7cfe544a553be9"
+    },
+    {
+      "block_id": "page-0506-block-0007",
+      "order": 7,
+      "text": "8mg\n6mg\n",
+      "bbox": [
+        129.99989318847656,
+        484.660400390625,
+        268.5849304199219,
+        493.3678894042969
+      ],
+      "text_sha256": "86c1ce6d55236b1e4c82c468b4ddd288ad679afe728a693750903802536b98da"
+    },
+    {
+      "block_id": "page-0506-block-0008",
+      "order": 8,
+      "text": "10mg\n8mg\n",
+      "bbox": [
+        129.99990844726562,
+        502.78790283203125,
+        268.5849304199219,
+        511.4953918457031
+      ],
+      "text_sha256": "4d7ecbc88516ef846cd1d1347673c71a358787e88b378ec2eef5fab5cb5b6b7f"
+    },
+    {
+      "block_id": "page-0506-block-0009",
+      "order": 9,
+      "text": "12mg\n10mg\n",
+      "bbox": [
+        129.99990844726562,
+        520.9154052734375,
+        272.75494384765625,
+        529.6229248046875
+      ],
+      "text_sha256": "1569fa58409928c3f7d2d032db7300943e12fbe32524236f251de0e3861db2b6"
+    },
+    {
+      "block_id": "page-0506-block-0010",
+      "order": 10,
+      "text": "14/16mg\n12mg\n",
+      "bbox": [
+        129.99990844726562,
+        539.0428466796875,
+        272.75494384765625,
+        547.7503662109375
+      ],
+      "text_sha256": "72274c211a60cd56d9d4baf8fbb4760888abcda1e8e016f725987465e71e72b6"
+    },
+    {
+      "block_id": "page-0506-block-0011",
+      "order": 11,
+      "text": "18mg\n14mg\n",
+      "bbox": [
+        129.99990844726562,
+        557.17041015625,
+        272.75494384765625,
+        565.8779296875
+      ],
+      "text_sha256": "c2039a2ddcd33d9e9459d8553e0bdcb4186038dda82e00e18f0d37bc455d11d8"
+    },
+    {
+      "block_id": "page-0506-block-0012",
+      "order": 12,
+      "text": "20/22mg\n16mg\n",
+      "bbox": [
+        129.99990844726562,
+        575.2978515625,
+        272.75494384765625,
+        584.00537109375
+      ],
+      "text_sha256": "a952d6743378f801980b41ce42c3be9b77c3bb9c8b30910d2f3e7a48cd027c39"
+    },
+    {
+      "block_id": "page-0506-block-0013",
+      "order": 13,
+      "text": ">26mg\n18mg\n",
+      "bbox": [
+        129.99990844726562,
+        593.4254150390625,
+        272.75494384765625,
+        602.1329345703125
+      ],
+      "text_sha256": "1312685e3c979ad7cbf5c09b1e17e3b81d952c7a084e7506f373375424ba468d"
+    },
+    {
+      "block_id": "page-0506-block-0014",
+      "order": 14,
+      "text": "Table 4.11  Conventional sublingual buprenorphine daily treatment doses and \nrecommended corresponding doses of weekly and monthly Buvidal®\n",
+      "bbox": [
+        107.4374008178711,
+        67.33790588378906,
+        359.3324890136719,
+        86.222900390625
+      ],
+      "text_sha256": "b27650b7d9ecad6559a0059fc2a4b1c36a55e51418b563dd7f8fa71d78ade609"
+    },
+    {
+      "block_id": "page-0506-block-0015",
+      "order": 15,
+      "text": "Dose of daily sublingual \nbuprenorphine\n",
+      "bbox": [
+        101.4374008178711,
+        97.21290588378906,
+        188.53497314453125,
+        116.097900390625
+      ],
+      "text_sha256": "23473d9581896b017102e20fc6ec4883dc7c0a53c8b00e670b9d1dedaf2812a6"
+    },
+    {
+      "block_id": "page-0506-block-0016",
+      "order": 16,
+      "text": "Dose of weekly Buvidal®\nDose of monthly \nBuvidal®\n",
+      "bbox": [
+        207.43490600585938,
+        97.21290588378906,
+        368.2772521972656,
+        116.097900390625
+      ],
+      "text_sha256": "3d75f4375ce33586ce95173b476954d30573ba862861178b66c704c0662c89c7"
+    },
+    {
+      "block_id": "page-0506-block-0017",
+      "order": 17,
+      "text": "2–6mg\n  8mg\n32mg\n",
+      "bbox": [
+        101.43730163574219,
+        125.51790618896484,
+        326.1898498535156,
+        134.22540283203125
+      ],
+      "text_sha256": "8ec7c6d73b9c1eab28734a115b4bc030091c130c82c7d63f30be5e738551450b"
+    },
+    {
+      "block_id": "page-0506-block-0018",
+      "order": 18,
+      "text": "8–10mg\n16mg\n64mg\n",
+      "bbox": [
+        101.42982482910156,
+        143.64540100097656,
+        326.182373046875,
+        152.3529052734375
+      ],
+      "text_sha256": "bc8c0f4d64f0435ca368efde0caca53dcf063f75f40bc2ca96e5e8b3afc52bd5"
+    },
+    {
+      "block_id": "page-0506-block-0019",
+      "order": 19,
+      "text": "12–16mg\n24mg\n96mg\n",
+      "bbox": [
+        101.42234802246094,
+        161.7729034423828,
+        326.1748962402344,
+        170.48040771484375
+      ],
+      "text_sha256": "1d66b29f2b17c50537fc93d6482d267a4ad141695460d2eaa6e5b1682fe499c2"
+    },
+    {
+      "block_id": "page-0506-block-0020",
+      "order": 20,
+      "text": "18–24mg\n32mg\n128mg\n",
+      "bbox": [
+        101.41487121582031,
+        179.90040588378906,
+        330.3374328613281,
+        188.60791015625
+      ],
+      "text_sha256": "0082c3a9236c15365a6194c2aa7f4546c2c177938de057c1a71a24c9b8ad37df"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

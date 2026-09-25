@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0075",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 75,
+  "source_page_index": 74,
+  "source_page_display": 75,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "54    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\noften chosen combinations of convenience or based on clinical lore and perhaps the \nmost systematic evidence is available for the addition of a second antipsychotic to clo-\nzapine24,25 – perhaps supported by the rationale that since clozapine has relatively low \nD2 occupancy, increasing its D2 occupancy may yield additional benefits.26 However, a \nmeta-analysis of RCTs comparing augmentation with a second antipsychotic with con-\ntinuing antipsychotic monotherapy in schizophrenia27 found a lack of double-blind/\nhigh-quality evidence for efficacy for the combination, in terms of treatment response \nand symptom improvement. Furthermore, compared with antipsychotic monotherapy, \ncombined antipsychotics seem to be associated with an increased side-effect burden and \na greater risk of high-dose prescribing.28,29\nWhile augmentation with another antipsychotic medication as a treatment strategy \nshould probably be avoided, under some conditions of acute exacerbation or agitation \nthe prescriber may see this as the only practicable solution. Or quite often the prescriber \nmay inherit the care of a patient on antipsychotic polypharmacy. Most RCT evidence \nsuggests that such a regimen can be safely switched back to antipsychotic monotherapy \nwithout symptom exacerbation, at least in the majority of patients,30–32 although this is \nnot a universal finding.33 Essock et al.32 conducted a relatively large trial involving 127 \npatients with schizophrenia who were stable on antipsychotic polypharmacy. Over a \n12-month period, a switch to monotherapy was successful in about two thirds of the \npatients in whom it was tested. And in those cases where the move to monotherapy \nresulted in a return of symptoms, the most common recourse was a return to the origi-\nnal polypharmacy; this was achieved without any significant worsening in this group. \nThe advantages for the monotherapy group were exposure to less medication, equiva-\nlent symptom severity and some loss of weight.\nSo when should the prescriber just continue with the current regimen? The evidence \nreviewed above suggests that no one strategy, such as increasing the dose, switching to \nanother antipsychotic medication or augmentation with a second antipsychotic medica-\ntion, is the clear winner in all situations. But increasing the dose if plasma drug levels are \nlow, switching to olanzapine or risperidone if these medications have not been tried, or \naugmentation if there is insufficient response to clozapine, may be beneficial in some \ncases. Given the limited efficacy of these manoeuvres, perhaps an equally important call \nby the treating doctor is when to just stay with the current pharmacotherapy and focus \non non-pharmacological means: engagement in case management, targeted psychological \ntreatments and vocational rehabilitation as means of enhancing patient well-being. While \nit may seem a passive option – staying may often do less harm that aimless switching.\nSummary\nWhen treatment fails\n■\n■If the dose of antipsychotic medication has been optimised, consider watchful waiting.\n■\n■Consider increasing the antipsychotic dose according to tolerability and plasma levels (little \nsupporting evidence34,35).\n■\n■If this fails, consider switching to olanzapine or risperidone (if not already used).\n■\n■If this fails, use clozapine (supporting evidence very strong).\n■\n■If clozapine fails, use time-limited augmentation strategies (supporting evidence variable).\n",
+  "raw_text_sha256": "19516ca3129ec17ba4d39090cefd7b552aca4ce9834a368ba2cbf4791229bf4b",
+  "coordinates_sha256": "917a507431abf2d71ca9f5a18fd16dea3992da7f29119b286b51379578ec0231",
+  "block_sequence_sha256": "1714a269ea0797342d065be938b0117193144bb141d273cfaa94fb510f1fc220",
+  "blocks": [
+    {
+      "block_id": "page-0075-block-0000",
+      "order": 0,
+      "text": "54    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "f0b536023189270e10421d29f562938af3dbf48b9cc57f907efe2c676e46c9bc"
+    },
+    {
+      "block_id": "page-0075-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0075-block-0002",
+      "order": 2,
+      "text": "often chosen combinations of convenience or based on clinical lore and perhaps the \nmost systematic evidence is available for the addition of a second antipsychotic to clo-\nzapine24,25 – perhaps supported by the rationale that since clozapine has relatively low \nD2 occupancy, increasing its D2 occupancy may yield additional benefits.26 However, a \nmeta-analysis of RCTs comparing augmentation with a second antipsychotic with con-\ntinuing antipsychotic monotherapy in schizophrenia27 found a lack of double-blind/\nhigh-quality evidence for efficacy for the combination, in terms of treatment response \nand symptom improvement. Furthermore, compared with antipsychotic monotherapy, \ncombined antipsychotics seem to be associated with an increased side-effect burden and \na greater risk of high-dose prescribing.28,29\n",
+      "bbox": [
+        61.88450622558594,
+        62.54931640625,
+        436.6944274902344,
+        182.26931762695312
+      ],
+      "text_sha256": "958f073581f3b960aa5280b993b55e970047c872bbbb0923cf9213c985824152"
+    },
+    {
+      "block_id": "page-0075-block-0003",
+      "order": 3,
+      "text": "While augmentation with another antipsychotic medication as a treatment strategy \nshould probably be avoided, under some conditions of acute exacerbation or agitation \nthe prescriber may see this as the only practicable solution. Or quite often the prescriber \nmay inherit the care of a patient on antipsychotic polypharmacy. Most RCT evidence \nsuggests that such a regimen can be safely switched back to antipsychotic monotherapy \nwithout symptom exacerbation, at least in the majority of patients,30–32 although this is \nnot a universal finding.33 Essock et al.32 conducted a relatively large trial involving 127 \npatients with schizophrenia who were stable on antipsychotic polypharmacy. Over a \n12-month period, a switch to monotherapy was successful in about two thirds of the \npatients in whom it was tested. And in those cases where the move to monotherapy \nresulted in a return of symptoms, the most common recourse was a return to the origi-\nnal polypharmacy; this was achieved without any significant worsening in this group. \nThe advantages for the monotherapy group were exposure to less medication, equiva-\nlent symptom severity and some loss of weight.\n",
+      "bbox": [
+        61.88909912109375,
+        182.54931640625,
+        436.7029113769531,
+        350.2693176269531
+      ],
+      "text_sha256": "2c409fe2101a723dbd8369cc1f17614871ab6fef869ed50dd346e80e3ed4c7a8"
+    },
+    {
+      "block_id": "page-0075-block-0004",
+      "order": 4,
+      "text": "So when should the prescriber just continue with the current regimen? The evidence \nreviewed above suggests that no one strategy, such as increasing the dose, switching to \nanother antipsychotic medication or augmentation with a second antipsychotic medica-\ntion, is the clear winner in all situations. But increasing the dose if plasma drug levels are \nlow, switching to olanzapine or risperidone if these medications have not been tried, or \naugmentation if there is insufficient response to clozapine, may be beneficial in some \ncases. Given the limited efficacy of these manoeuvres, perhaps an equally important call \nby the treating doctor is when to just stay with the current pharmacotherapy and focus \non non-pharmacological means: engagement in case management, targeted psychological \ntreatments and vocational rehabilitation as means of enhancing patient well-being. While \nit may seem a passive option – staying may often do less harm that aimless switching.\n",
+      "bbox": [
+        61.89308166503906,
+        350.54931640625,
+        436.7232360839844,
+        482.2693176269531
+      ],
+      "text_sha256": "90267450839e8d122ac67d7cd6c7f70060c1e737aba52ca4e45aaca7076ee1c3"
+    },
+    {
+      "block_id": "page-0075-block-0005",
+      "order": 5,
+      "text": "Summary\n",
+      "bbox": [
+        61.88909912109375,
+        499.7043151855469,
+        110.79510498046875,
+        512.7393188476562
+      ],
+      "text_sha256": "3cbb36aca330b3bd113955dfbada0adb7a5f95ad9f678bd61f175406c6a37e95"
+    },
+    {
+      "block_id": "page-0075-block-0006",
+      "order": 6,
+      "text": "When treatment fails\n",
+      "bbox": [
+        69.13909912109375,
+        526.35693359375,
+        154.01162719726562,
+        536.429443359375
+      ],
+      "text_sha256": "a12f757a553602b2003a910c1caf1d689bb8d6866b476d1ff21e66ee85987e27"
+    },
+    {
+      "block_id": "page-0075-block-0007",
+      "order": 7,
+      "text": "■\n■If the dose of antipsychotic medication has been optimised, consider watchful waiting.\n",
+      "bbox": [
+        69.13899993896484,
+        545.8858642578125,
+        391.2382507324219,
+        555.75439453125
+      ],
+      "text_sha256": "99a67219081e3db3a42de5ea13a72e067c1e5b63cbc0ac57a5ab0819ad9c1b96"
+    },
+    {
+      "block_id": "page-0075-block-0008",
+      "order": 8,
+      "text": "■\n■Consider increasing the antipsychotic dose according to tolerability and plasma levels (little \n",
+      "bbox": [
+        69.13899993896484,
+        555.8858642578125,
+        407.4391784667969,
+        565.75439453125
+      ],
+      "text_sha256": "4256f8fe333a29c338468db00f4c2b188b87362ce2220ef80cfaecd26a3166cd"
+    },
+    {
+      "block_id": "page-0075-block-0009",
+      "order": 9,
+      "text": "supporting evidence34,35).\n",
+      "bbox": [
+        77.63909912109375,
+        565.8818969726562,
+        167.9735107421875,
+        575.75439453125
+      ],
+      "text_sha256": "1327d1306781302dac5812278df2b9df0404974852abb65d36929b253c1e92f8"
+    },
+    {
+      "block_id": "page-0075-block-0010",
+      "order": 10,
+      "text": "■\n■If this fails, consider switching to olanzapine or risperidone (if not already used).\n",
+      "bbox": [
+        69.13899993896484,
+        575.8858642578125,
+        366.0612487792969,
+        585.75439453125
+      ],
+      "text_sha256": "bdd4f6373b9ab91b872b44548c528e9dad492d0933c5b1069d7f0dc8484d9ed7"
+    },
+    {
+      "block_id": "page-0075-block-0011",
+      "order": 11,
+      "text": "■\n■If this fails, use clozapine (supporting evidence very strong).\n",
+      "bbox": [
+        69.13899993896484,
+        585.8858642578125,
+        292.3746643066406,
+        595.75439453125
+      ],
+      "text_sha256": "5ac3a8a7527be34f6baa355574f7c47de0596b5ee22582515b36172a5a6f19cb"
+    },
+    {
+      "block_id": "page-0075-block-0012",
+      "order": 12,
+      "text": "■\n■If clozapine fails, use time-limited augmentation strategies (supporting evidence variable).\n",
+      "bbox": [
+        69.13899993896484,
+        595.8858642578125,
+        401.1237487792969,
+        605.75439453125
+      ],
+      "text_sha256": "9c7d12d9c0382eee5394ac32fcf125867e95f7157680643af36bc7d525d51723"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

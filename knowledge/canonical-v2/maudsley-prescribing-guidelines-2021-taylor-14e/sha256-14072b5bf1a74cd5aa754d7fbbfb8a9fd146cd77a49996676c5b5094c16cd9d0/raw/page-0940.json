@@ -1,0 +1,263 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0940",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 940,
+  "source_page_index": 939,
+  "source_page_display": 940,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Miscellany    919\nCHAPTER 14\nDrug\nPsychiatric side effect\nComment\nCalcium channel blockers \n(e.g. diltiazem, amlodipine)\nMood changes, lethargy, dysphoria, \nmania, psychosis, delirium, \nakathisia\nCausal association not clearly \ndemonstrated\nStatins9–11 \n(e.g. simvastatin, atorvastatin)\nCognitive impairment, memory \nimpairment, depression, emotional \nlability, irritability, sleep disturbance\nCausal associations between statins \nand changes in mood, sleep and \ncognition have not established in \nsystematic reviews of RCTs. Statins \npenetrate the blood-brain barrier; \nsimvastatin has the highest \npermeability. Switching to hydrophilic \nstatins (e.g. pravastatin, rosuvastatin) \nhas been suggested in suspected cases \nof moderate-severe psychiatric ADRs\nCorticosteroids\nGlucocorticoids \n(e.g. betamethasone, \nprednisolone, prednisone)\nMood disorders, suicidal ideation, \neuphoria, agitation, sleep \ndisturbances, psychosis and \ndelirium, dementia, cognitive \nimpairment\nClear causal association. Onset of \npsychiatric ADRs are often very \nsudden, and within the first 1–2 week \nof starting treatment. Symptoms \ngenerally respond to dose decreases \nand have been reported in association \nwith several routes of administration \n(including oral, parenteral and \ninhaled), although are probably less \ncommon with inhalation. Symptoms \nusually resolve on gradual \ndiscontinuation, although duration of \nsymptoms varies considerably\nOther agents\nChemotherapeutic agents \n(e.g. 5-fluorouracil, asparaginase, \nbortezomib, ifosfamide, vincristine)\nMore commonly: cognitive \nimpairment, delirium, psychosis \nLess commonly: depression, \nanxiety, suicidal ideation\nAlmost all chemotherapeutic agents \nare associated with significant \npsychiatric ADRs which may be \nmultifactorial in origin (i.e. secondary \nto the disease process, ADRs and \npsychological distress). Cancer \ntherapy-associated cognitive changes \ninclude difficulty in executive \nfunctions, multitasking, short-term \nmemory recall and attention. Cognitive \nchanges seem to be dose dependent, \nand certain drugs (methotrexate, \nfludarabine, cytarabine, 5-fluorouracil, \ncisplatin), are associated with worse \ncognitive effects\nCimetidine\nCognitive impairment, delirium\nTable 14.4  (Continued)\n(Continued)\n",
+  "raw_text_sha256": "fb39f1c42b4fcdb53f2b03f96ceb2087d70844e3b9e8e29d7ad044779e8c2d8a",
+  "coordinates_sha256": "e288f01f9ebba26d1ab3e145da60c150ecca61b544b12a0368ebf7fd824fbc06",
+  "block_sequence_sha256": "df899c256452ff273eef761b534750a038feb1f3bd37302f4ce4e2745592de71",
+  "blocks": [
+    {
+      "block_id": "page-0940-block-0000",
+      "order": 0,
+      "text": "Miscellany    919\n",
+      "bbox": [
+        349.2962951660156,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "138ae4ccc9f11167751c362f8e1612a0a300f7015b094e37f68d7a0be2a00b9a"
+    },
+    {
+      "block_id": "page-0940-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        454.4096984863281,
+        338.7405090332031,
+        463.88970947265625,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0940-block-0002",
+      "order": 2,
+      "text": "Drug\nPsychiatric side effect\nComment\n",
+      "bbox": [
+        48.039398193359375,
+        89.78968811035156,
+        329.54443359375,
+        98.67718505859375
+      ],
+      "text_sha256": "9e349db6f15484697169ed1ed9f4f9a823886c66f8e2c04ad5ea86c3d6a8ec83"
+    },
+    {
+      "block_id": "page-0940-block-0003",
+      "order": 3,
+      "text": "Calcium channel blockers \n(e.g. diltiazem, amlodipine)\n",
+      "bbox": [
+        48.03941345214844,
+        106.99471282958984,
+        134.7169189453125,
+        125.69970703125
+      ],
+      "text_sha256": "63c201d44205f49423970d9f9c2cf8294175f93dbc69b7673718d520aafcc771"
+    },
+    {
+      "block_id": "page-0940-block-0004",
+      "order": 4,
+      "text": "Mood changes, lethargy, dysphoria, \nmania, psychosis, delirium, \nakathisia\n",
+      "bbox": [
+        173.70941162109375,
+        106.99471282958984,
+        289.471923828125,
+        135.69720458984375
+      ],
+      "text_sha256": "dc779ddd9a01c488bb658a1fdbaddbb04d2359df902b459ead7cccde2637bbf9"
+    },
+    {
+      "block_id": "page-0940-block-0005",
+      "order": 5,
+      "text": "Causal association not clearly \ndemonstrated\n",
+      "bbox": [
+        295.3744201660156,
+        106.9872055053711,
+        390.7969970703125,
+        125.69219970703125
+      ],
+      "text_sha256": "97618a526cafdcdd8074fa1137ed701b6ca9374a40a673c328d3de2a21d83a71"
+    },
+    {
+      "block_id": "page-0940-block-0006",
+      "order": 6,
+      "text": "Statins9–11 \n(e.g. simvastatin, atorvastatin)\n",
+      "bbox": [
+        48.038597106933594,
+        142.01222229003906,
+        143.45359802246094,
+        160.72467041015625
+      ],
+      "text_sha256": "a452d462509d0b321eda8bda2a3f7610809a516e942497330cb54124a5006061"
+    },
+    {
+      "block_id": "page-0940-block-0007",
+      "order": 7,
+      "text": "Cognitive impairment, memory \nimpairment, depression, emotional \nlability, irritability, sleep disturbance\n",
+      "bbox": [
+        173.70860290527344,
+        142.01966857910156,
+        286.921142578125,
+        170.72216796875
+      ],
+      "text_sha256": "02353518c322db5088172938e389a2b445c63d61ba66f3b69edfba655ce5613c"
+    },
+    {
+      "block_id": "page-0940-block-0008",
+      "order": 8,
+      "text": "Causal associations between statins \nand changes in mood, sleep and \ncognition have not established in \nsystematic reviews of RCTs. Statins \npenetrate the blood-brain barrier; \nsimvastatin has the highest \npermeability. Switching to hydrophilic \nstatins (e.g. pravastatin, rosuvastatin) \nhas been suggested in suspected cases \nof moderate-severe psychiatric ADRs\n",
+      "bbox": [
+        295.37359619140625,
+        142.0121612548828,
+        421.2462463378906,
+        240.6971435546875
+      ],
+      "text_sha256": "a43cde810fde918589e965396c8682b80050cf54c58601d160f461c5774b7130"
+    },
+    {
+      "block_id": "page-0940-block-0009",
+      "order": 9,
+      "text": "Corticosteroids\n",
+      "bbox": [
+        48.03858947753906,
+        246.83213806152344,
+        100.81608581542969,
+        255.71963500976562
+      ],
+      "text_sha256": "5365a2d9b207f705c3d5668483ef40199c392c2b5306d724f527cba3fbacf4ed"
+    },
+    {
+      "block_id": "page-0940-block-0010",
+      "order": 10,
+      "text": "Glucocorticoids \n(e.g. betamethasone, \nprednisolone, prednisone)\n",
+      "bbox": [
+        48.03858947753906,
+        262.0346374511719,
+        130.7185821533203,
+        290.73712158203125
+      ],
+      "text_sha256": "24ecb527afa35648991a981103f934a010449d203b15f7c5d1376ea48dd71fee"
+    },
+    {
+      "block_id": "page-0940-block-0011",
+      "order": 11,
+      "text": "Mood disorders, suicidal ideation, \neuphoria, agitation, sleep \ndisturbances, psychosis and \ndelirium, dementia, cognitive \nimpairment\n",
+      "bbox": [
+        173.70858764648438,
+        262.0271301269531,
+        283.1860656738281,
+        310.724609375
+      ],
+      "text_sha256": "29941b0c81aa5306c7ec0ac13ff398d95d19f572d1d869998b63a299f0fb6ce5"
+    },
+    {
+      "block_id": "page-0940-block-0012",
+      "order": 12,
+      "text": "Clear causal association. Onset of \npsychiatric ADRs are often very \nsudden, and within the first 1–2 week \nof starting treatment. Symptoms \ngenerally respond to dose decreases \nand have been reported in association \nwith several routes of administration \n(including oral, parenteral and \ninhaled), although are probably less \ncommon with inhalation. Symptoms \nusually resolve on gradual \ndiscontinuation, although duration of \nsymptoms varies considerably\n",
+      "bbox": [
+        295.37359619140625,
+        262.0196228027344,
+        419.16119384765625,
+        390.69708251953125
+      ],
+      "text_sha256": "19073bd18a8d5c40b41a7746e00d5803ce1458a0198ae03f491d52e44ed42101"
+    },
+    {
+      "block_id": "page-0940-block-0013",
+      "order": 13,
+      "text": "Other agents\n",
+      "bbox": [
+        48.03858947753906,
+        396.8320617675781,
+        94.298583984375,
+        405.7195739746094
+      ],
+      "text_sha256": "545658dfb4b5e5f9a8698e84d7b924033325a211f0a34a107de26443665f13e8"
+    },
+    {
+      "block_id": "page-0940-block-0014",
+      "order": 14,
+      "text": "Chemotherapeutic agents \n(e.g. 5-fluorouracil, asparaginase, \nbortezomib, ifosfamide, vincristine)\n",
+      "bbox": [
+        48.03858947753906,
+        412.0345764160156,
+        160.11856079101562,
+        440.737060546875
+      ],
+      "text_sha256": "88d859c2368650f13eb0192a301a9fd224060bdb8ffc7a05c51599dbcd570d8e"
+    },
+    {
+      "block_id": "page-0940-block-0015",
+      "order": 15,
+      "text": "More commonly: cognitive \nimpairment, delirium, psychosis \nLess commonly: depression, \nanxiety, suicidal ideation\n",
+      "bbox": [
+        173.70858764648438,
+        412.0270690917969,
+        276.2110900878906,
+        450.72705078125
+      ],
+      "text_sha256": "1e90e2cca6cdcf19bab51a97a0547723925ab5b425941965de7612c173c826b7"
+    },
+    {
+      "block_id": "page-0940-block-0016",
+      "order": 16,
+      "text": "Almost all chemotherapeutic agents \nare associated with significant \npsychiatric ADRs which may be \nmultifactorial in origin (i.e. secondary \nto the disease process, ADRs and \npsychological distress). Cancer \ntherapy-associated cognitive changes \ninclude difficulty in executive \nfunctions, multitasking, short-term \nmemory recall and attention. Cognitive \nchanges seem to be dose dependent, \nand certain drugs (methotrexate, \nfludarabine, cytarabine, 5-fluorouracil, \ncisplatin), are associated with worse \ncognitive effects\n",
+      "bbox": [
+        295.37359619140625,
+        412.0195617675781,
+        422.1161804199219,
+        560.6920166015625
+      ],
+      "text_sha256": "d83a32165be9b15bb3138da2b9c34bc61beb7b4e4a1e3d7356ec9207251e931d"
+    },
+    {
+      "block_id": "page-0940-block-0017",
+      "order": 17,
+      "text": "Cimetidine\nCognitive impairment, delirium\n",
+      "bbox": [
+        48.03858947753906,
+        567.0070190429688,
+        272.87359619140625,
+        575.7145385742188
+      ],
+      "text_sha256": "74efb34a3c084ffda9df0db0240a183e88255279d5477937ee400fdd164d4389"
+    },
+    {
+      "block_id": "page-0940-block-0018",
+      "order": 18,
+      "text": "Table 14.4  (Continued)\n",
+      "bbox": [
+        54.0,
+        70.08790588378906,
+        130.2899932861328,
+        78.97540283203125
+      ],
+      "text_sha256": "7d17da805584a2a1f97e0bd5d20373994d4caa4955bd15a6fd65ee7bc7d0251c"
+    },
+    {
+      "block_id": "page-0940-block-0019",
+      "order": 19,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.9849853515625,
+        587.992919921875,
+        419.99993896484375,
+        596.7454223632812
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0053",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 53,
+  "source_page_index": 52,
+  "source_page_display": 53,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "32    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nNegative symptoms\nNegative symptoms in schizophrenia symptoms represent the absence or diminution of \nnormal behaviours and functions and constitute an important dimension of psychopa-\nthology. A subdomain of ‘expressive deficits’ manifests as a decrease in verbal output or \nverbal expressiveness and flattened or blunted affect, assessed by diminished facial \nemotional expression, poor eye contact, decreased spontaneous movement and lack of \nspontaneity. A second ‘avolition/amotivation’ subdomain is characterised by a subjec-\ntive reduction in interests, desires and goals, and a behavioural reduction in purposeful \nacts, including a lack of self-initiated social interactions.1,2\nPersistent negative symptoms are held to account for much of the long-term morbid-\nity and poor functional outcome of patients with schizophrenia.3–6 But the aetiology of \nnegative symptoms is complex, and it is important to determine the most likely cause in \nany individual case before embarking on a treatment regimen. An important clinical \ndistinction is between primary negative symptoms, which comprise an enduring deficit \nstate, predict a poor prognosis and are stable over time, and secondary negative symp-\ntoms, which are consequent upon positive psychotic symptoms, depression or demor-\nalisation, or medication side effects, such as bradykinesia as part of drug-induced \nparkinsonism.5,7 Other sources of secondary negative symptoms may include chronic \nsubstance/alcohol use, high-dose antipsychotic medication, social deprivation, lack of \nstimulation and hospitalisation.8 Secondary negative symptoms may be best tackled by \ntreating the relevant underlying cause. In people with established schizophrenia, nega-\ntive symptoms are seen to a varying degree in up to three-quarters, with up to 20% \nhaving persistent primary negative symptoms.9,10\nThe literature pertaining to the pharmacological treatment of negative symptoms \nlargely consists of sub-analyses of acute efficacy studies, correlational analysis and path \nanalyses.11 There is often no reliable distinction between primary and secondary ­negative \nsymptoms or between the two subdomains of expressive deficits and avolition/amotiva-\ntion, and few studies specifically recruit patients with persistent negative symptoms. \nWhile the evidence suggests short-term efficacy for a few interventions, there is no \nrobust evidence for an effective treatment for persistent primary negative symptoms.\nIn general:\n■\n■In first-episode psychosis, the presence of negative symptoms has been related to poor \noutcome in terms of recovery and level of social functioning.4,9 There is evidence to \nsuggest that the earlier a psychotic illness is effectively treated, the less likely is the \ndevelopment of negative symptoms over time.12–14 However, when interpreting such \ndata, it should be borne in mind that an early clinical picture characterised by nega-\ntive symptoms, being less socially disruptive and more subtle as signs of psychotic \nillness than positive symptoms, may contribute to delay in presentation to clinical \nservices and thus associated with a longer duration of untreated psychosis. In other \nwords, patients with an inherently poorer prognosis in terms of persistent negative \nsymptoms may be diagnosed and treated later.\n■\n■While antipsychotic medication has been shown to improve negative symptoms, this \nbenefit seems to be limited to secondary negative symptoms in acute psychotic epi-\nsodes.15 There is no consistent evidence for any superiority of SGAs over FGAs in the \n",
+  "raw_text_sha256": "8025f96d289598a98bf330dad6dee782cf5ce631192ea8b6d47e40a59c4599ce",
+  "coordinates_sha256": "4d218dab03b0de0076cee8fca7424879788c7ebaaf3ce16c81fbb3b8f99e8710",
+  "block_sequence_sha256": "ef5767e24a63a572e5b27e557dadf7c25c283c01ba8b28739f07b5142cec88fb",
+  "blocks": [
+    {
+      "block_id": "page-0053-block-0000",
+      "order": 0,
+      "text": "32    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "231b7a607d861145bc37227789b2cff4e50e3f331ff71c8d8b75bc1259e68211"
+    },
+    {
+      "block_id": "page-0053-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0053-block-0002",
+      "order": 2,
+      "text": "Negative symptoms\n",
+      "bbox": [
+        68.88839721679688,
+        66.06448364257812,
+        171.5734100341797,
+        79.0994873046875
+      ],
+      "text_sha256": "1eb9f614099cc4598e607cec2d2fc7f764bd74b75459a52eee8361d117f2bc93"
+    },
+    {
+      "block_id": "page-0053-block-0003",
+      "order": 3,
+      "text": "Negative symptoms in schizophrenia symptoms represent the absence or diminution of \nnormal behaviours and functions and constitute an important dimension of psychopa-\nthology. A subdomain of ‘expressive deficits’ manifests as a decrease in verbal output or \nverbal expressiveness and flattened or blunted affect, assessed by diminished facial \nemotional expression, poor eye contact, decreased spontaneous movement and lack of \nspontaneity. A second ‘avolition/amotivation’ subdomain is characterised by a subjec-\ntive reduction in interests, desires and goals, and a behavioural reduction in purposeful \nacts, including a lack of self-initiated social interactions.1,2\n",
+      "bbox": [
+        61.888397216796875,
+        84.90948486328125,
+        436.6884460449219,
+        180.62948608398438
+      ],
+      "text_sha256": "ef3d35f03646522fc5140be45b56e53894761fa5cadc64418943d61b03c602fe"
+    },
+    {
+      "block_id": "page-0053-block-0004",
+      "order": 4,
+      "text": "Persistent negative symptoms are held to account for much of the long-term morbid-\nity and poor functional outcome of patients with schizophrenia.3–6 But the aetiology of \nnegative symptoms is complex, and it is important to determine the most likely cause in \nany individual case before embarking on a treatment regimen. An important clinical \ndistinction is between primary negative symptoms, which comprise an enduring deficit \nstate, predict a poor prognosis and are stable over time, and secondary negative symp-\ntoms, which are consequent upon positive psychotic symptoms, depression or demor-\nalisation, or medication side effects, such as bradykinesia as part of drug-induced \nparkinsonism.5,7 Other sources of secondary negative symptoms may include chronic \nsubstance/alcohol use, high-dose antipsychotic medication, social deprivation, lack of \nstimulation and hospitalisation.8 Secondary negative symptoms may be best tackled by \ntreating the relevant underlying cause. In people with established schizophrenia, nega-\ntive symptoms are seen to a varying degree in up to three-quarters, with up to 20% \nhaving persistent primary negative symptoms.9,10\n",
+      "bbox": [
+        61.88560485839844,
+        180.90948486328125,
+        436.7254943847656,
+        348.6295166015625
+      ],
+      "text_sha256": "1b83d00a53bb5dfca546d599963b286e9b893ec9b416863b3bf700518c7137dd"
+    },
+    {
+      "block_id": "page-0053-block-0005",
+      "order": 5,
+      "text": "The literature pertaining to the pharmacological treatment of negative symptoms \nlargely consists of sub-analyses of acute efficacy studies, correlational analysis and path \nanalyses.11 There is often no reliable distinction between primary and secondary ­negative \nsymptoms or between the two subdomains of expressive deficits and avolition/amotiva-\ntion, and few studies specifically recruit patients with persistent negative symptoms. \nWhile the evidence suggests short-term efficacy for a few interventions, there is no \nrobust evidence for an effective treatment for persistent primary negative symptoms.\n",
+      "bbox": [
+        61.88770294189453,
+        348.9095153808594,
+        436.6986389160156,
+        432.6295166015625
+      ],
+      "text_sha256": "fd67b9b46d927ce38add66432318f534700d562628c121268d93be863c4dac0e"
+    },
+    {
+      "block_id": "page-0053-block-0006",
+      "order": 6,
+      "text": "In general:\n",
+      "bbox": [
+        71.88770294189453,
+        432.9095153808594,
+        117.43769836425781,
+        444.6295166015625
+      ],
+      "text_sha256": "ed52a82962afcdf7a7d84acc249da6b8766d19787b072fd409138f4b71a58f3b"
+    },
+    {
+      "block_id": "page-0053-block-0007",
+      "order": 7,
+      "text": "■\n■In first-episode psychosis, the presence of negative symptoms has been related to poor \n",
+      "bbox": [
+        61.88829803466797,
+        450.9095153808594,
+        436.7084655761719,
+        462.6295166015625
+      ],
+      "text_sha256": "b272e2a4477001980bba3376e2e45662a852e82b12ef8157ad06ce1ef79476db"
+    },
+    {
+      "block_id": "page-0053-block-0008",
+      "order": 8,
+      "text": "outcome in terms of recovery and level of social functioning.4,9 There is evidence to \nsuggest that the earlier a psychotic illness is effectively treated, the less likely is the \ndevelopment of negative symptoms over time.12–14 However, when interpreting such \ndata, it should be borne in mind that an early clinical picture characterised by nega-\ntive symptoms, being less socially disruptive and more subtle as signs of psychotic \nillness than positive symptoms, may contribute to delay in presentation to clinical \nservices and thus associated with a longer duration of untreated psychosis. In other \nwords, patients with an inherently poorer prognosis in terms of persistent negative \nsymptoms may be diagnosed and treated later.\n",
+      "bbox": [
+        70.88839721679688,
+        462.9095153808594,
+        436.7220153808594,
+        570.6295166015625
+      ],
+      "text_sha256": "9b3b24710f4e46f072eb3c315302a3bdda1a8635ee34626b30bd3205faa7eac0"
+    },
+    {
+      "block_id": "page-0053-block-0009",
+      "order": 9,
+      "text": "■\n■While antipsychotic medication has been shown to improve negative symptoms, this \n",
+      "bbox": [
+        61.88829803466797,
+        570.9094848632812,
+        436.6584167480469,
+        582.6295166015625
+      ],
+      "text_sha256": "0129feb080398551c6d1d7a002b9fef76b2f0352ba2978573c3ffa2f74d989b9"
+    },
+    {
+      "block_id": "page-0053-block-0010",
+      "order": 10,
+      "text": "benefit seems to be limited to secondary negative symptoms in acute psychotic epi-\nsodes.15 There is no consistent evidence for any superiority of SGAs over FGAs in the \n",
+      "bbox": [
+        70.88839721679688,
+        582.9094848632812,
+        436.6209411621094,
+        606.6295166015625
+      ],
+      "text_sha256": "5f959098f9cb333a7699136992e92c4082378388fd9620afeb0a196360453751"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

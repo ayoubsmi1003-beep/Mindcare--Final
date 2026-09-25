@@ -1,0 +1,16 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0752",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 752,
+  "source_page_index": 751,
+  "repaired_text": "Hepatic and renal impairment    731\nCHAPTER 8\nDrug-induced hepatic damage\nHy’s rule, defined as ALT >3 times the upper limit of normal combined with serum bili-\nrubin >2 times the upper limit of normal, is recommended by the FDA to assess the \nhepatotoxicity of new drugs.73\nDrug induced hepatic damage can be due to:\n■\n■Direct dose-related hepatotoxicity (Type 1 ADR). A small number of drugs fall into\nthis category, e.g. paracetamol; alcohol.\n■\n■Hypersensitivity reactions (Type 2 ADR). These can present with rash, fever and\neosinophilia. Almost all drugs have been associated with cases of hepatotoxicity; fre-\nquency varies.\nAlmost any type of liver damage can occur, ranging from mild transient asymptomatic \nincreases in LFTs to fulminant hepatic failure. See tables earlier in this section for details \nof the hepatotoxic potential of individual drugs.\nRisk factors for drug-induced hepatotoxicity include:87\n■\n■Increasing age\n■\n■Female gender\n■\n■Alcohol consumption\n■\n■Co-prescription of enzyme inducing drugs\n■\n■Genetic predisposition\n■\n■Obesity\n■\n■Pre-existing liver disease (small effect)\nWhen interpreting LFTs, remember that:88\n■\n■12% of the healthy adult population have one LFT outside (above or below) the\nnormal reference range.\n■\n■Up to 10% of patients with clinically significant hepatic disease have normal LFTs.\n■\n■Individual LFTs lack specificity for the liver, but >1 abnormal test greatly increases\nthe likelihood of liver pathology.\n■\n■The absolute values of LFTs are a poor indicator of disease severity.\nWhen monitoring LFTs:\n■\n■Ideally LFTs should be measured before treatment starts so that ‘baseline’ values are\navailable.\n■\n■LFT elevations of <2 times the upper limit of the normal reference range are rarely\nclinically significant.\n■\n■Most drug related LFT elevations occur early in treatment (first month) and are transient. They may indicate adaptation of the liver to the drug rather than damaged per \nse. Transient LFT elevations may also occur during periods of weight gain.89\n■\n■If LFTs are persistently elevated >3-fold, continuing to rise or accompanied by clinical symptoms, the suspected drugs should be withdrawn.\n■\n■When tracking change, >20% change in liver enzymes is required to exclude biological or analytical variation.",
+  "repaired_text_sha256": "16e7557a885d9776b4f59f00daa16a481c11cbcc795dd12341f70203bf7d5a35",
+  "raw_text_sha256": "ee2d5bf28fe4c109ed5b933a8034eb1898297b7b18b1b3f4250b4c5072b289ec",
+  "repair_ids": [
+    "repair-000678",
+    "repair-000679",
+    "repair-000680"
+  ],
+  "raw_file": "raw/page-0752.json"
+}

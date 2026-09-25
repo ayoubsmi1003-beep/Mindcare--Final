@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0625",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 625,
+  "source_page_index": 624,
+  "source_page_display": 625,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "604    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  6\nDementia\nDementia is a progressive syndrome affecting around 5% of those aged over 65 years, and \nincreases to 20% in those aged over 80 years. This disorder is characterised by cognitive \ndecline, impaired memory and thinking and a gradual loss of skills needed to carry out \nactivities of daily living. Changes in mood, personality and social behaviour are frequent.1\nThe various types of dementia are classified according to the different disease processes \naffecting the brain. The most common cause of dementia is Alzheimer’s disease (AD), \naccounting for around 60% of all cases. Vascular dementia and dementia with Lewy bodies \n(DLB) are responsible for most other cases. AD and vascular dementia may coexist and are \noften difficult to separate clinically. Dementia is also encountered in about 30–70% of \npatients with Parkinson’s disease1 (see separate section on Parkinson’s disease).\nAlzheimer’s disease\nMechanism of action of cognitive enhancers used in AD\nAcetylcholinesterase (AChE) inhibitors\nThe cholinergic hypothesis of AD is predicated on the observation that the cognitive dete-\nrioration associated with the disease results from progressive loss of cholinergic neurons \nand decreasing levels of acetylcholine (ACh) in the brain.2 However, it is no longer widely \nbelieved that cholinergic depletion alone is responsible for the symptoms of AD.3\nThree inhibitors of AChE are currently licensed in the UK and elsewhere for the \ntreatment of mild-to-moderate dementia in AD: donepezil, rivastigmine and galan-\ntamine. These three drugs are now also recommended in severe AD. In addition, riv-\nastigmine is licensed in the treatment of mild-to-moderate dementia associated with \nParkinson’s disease.\nBoth acetylcholinesterase (AChE) and butyrylcholinesterase (BuChE) have been \nfound to play an important role in the degradation of ACh.4 Cholinesterase inhibitors \ndiffer in pharmacological action: donepezil selectively inhibits AChE, rivastigmine \naffects both AChE and BuChE and galantamine selectively inhibits AChE and also has \nnicotinic receptor agonist properties.5 To date, these differences have not been shown to \nresult in important differences in efficacy or tolerability. (See Table 6.1 for comparison \nof AChE inhibitors (AChE-Is).)\nMemantine\nMemantine is licensed in the UK and elsewhere for the treatment of moderate-to-severe \ndementia in AD. It is believed to exert its therapeutic effect by acting as a low-to-mod-\nerate affinity, non-competitive N-methyl-D-aspartate (NMDA) receptor antagonist that \nbinds preferentially to open NMDA receptor-operated calcium channels. This activity-\ndependent binding blocks NMDA-mediated ion flux and is thought to mitigate the \neffects of sustained and pathologically elevated levels of glutamate (and this excitotox-\nicity) that may lead to neuronal dysfunction.6 (See Table 6.1.)\n",
+  "raw_text_sha256": "9a461fb27ba386d9673a4fd37a5c27fcf9918e120f998653fda91aa06898c2d2",
+  "coordinates_sha256": "092f24e38b4a4af4130d33329e54dcf159b3fd5a4e40ed8ce5bb30fadba59269",
+  "block_sequence_sha256": "9aaab5b329ed00845e3fb6a01c1491fcc8695299770b98dffa6e6959e9826561",
+  "blocks": [
+    {
+      "block_id": "page-0625-block-0000",
+      "order": 0,
+      "text": "604    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "a8616c2d57f18d4e296e668429973fa0b46940f9484271ec224c50a64a6bf19a"
+    },
+    {
+      "block_id": "page-0625-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        18.520000457763672,
+        405.35260009765625,
+        28.0,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0625-block-0002",
+      "order": 2,
+      "text": "Dementia\n",
+      "bbox": [
+        68.88999938964844,
+        66.06539916992188,
+        119.0169906616211,
+        79.10040283203125
+      ],
+      "text_sha256": "23befc8155a45f05d5733208e2bfd106698defb1a3fb358517c12e90e82bbcd9"
+    },
+    {
+      "block_id": "page-0625-block-0003",
+      "order": 3,
+      "text": "Dementia is a progressive syndrome affecting around 5% of those aged over 65 years, and \nincreases to 20% in those aged over 80 years. This disorder is characterised by cognitive \ndecline, impaired memory and thinking and a gradual loss of skills needed to carry out \nactivities of daily living. Changes in mood, personality and social behaviour are frequent.1\n",
+      "bbox": [
+        61.88999938964844,
+        84.910400390625,
+        436.6697692871094,
+        132.63040161132812
+      ],
+      "text_sha256": "68eb49323333f65377d1c52ed83103a4d0a7d2df0eb1c8b574502ce57f5665e6"
+    },
+    {
+      "block_id": "page-0625-block-0004",
+      "order": 4,
+      "text": "The various types of dementia are classified according to the different disease processes \naffecting the brain. The most common cause of dementia is Alzheimer’s disease (AD), \naccounting for around 60% of all cases. Vascular dementia and dementia with Lewy bodies \n(DLB) are responsible for most other cases. AD and vascular dementia may coexist and are \noften difficult to separate clinically. Dementia is also encountered in about 30–70% of \npatients with Parkinson’s disease1 (see separate section on Parkinson’s disease).\n",
+      "bbox": [
+        61.88999938964844,
+        132.910400390625,
+        436.7198181152344,
+        204.63040161132812
+      ],
+      "text_sha256": "28913b2c91976bbd734bf89210deac1dcb682f5f7980d6e20a1d3ed18876d3b5"
+    },
+    {
+      "block_id": "page-0625-block-0005",
+      "order": 5,
+      "text": "Alzheimer’s disease\n",
+      "bbox": [
+        61.88999938964844,
+        222.06539916992188,
+        162.53997802734375,
+        235.10040283203125
+      ],
+      "text_sha256": "e302dc310e195b66855dacd7151af62a08ceede13a3782d2f3a5790917bbac89"
+    },
+    {
+      "block_id": "page-0625-block-0006",
+      "order": 6,
+      "text": "Mechanism of action of cognitive enhancers used in AD\n",
+      "bbox": [
+        61.88999938964844,
+        240.1164093017578,
+        346.7019958496094,
+        253.09640502929688
+      ],
+      "text_sha256": "fff943a54f1485ad478ddd4ac202dc104ae573a68bfe261046f4ab6e47c19fb2"
+    },
+    {
+      "block_id": "page-0625-block-0007",
+      "order": 7,
+      "text": "Acetylcholinesterase (AChE) inhibitors\n",
+      "bbox": [
+        61.88999938964844,
+        259.0003967285156,
+        240.7899932861328,
+        270.85040283203125
+      ],
+      "text_sha256": "2a0f735e44832b0ef90b56a789eeba806a8ba8b3605f0fa601d27f9857463324"
+    },
+    {
+      "block_id": "page-0625-block-0008",
+      "order": 8,
+      "text": "The cholinergic hypothesis of AD is predicated on the observation that the cognitive dete-\nrioration associated with the disease results from progressive loss of cholinergic neurons \nand decreasing levels of acetylcholine (ACh) in the brain.2 However, it is no longer widely \nbelieved that cholinergic depletion alone is responsible for the symptoms of AD.3\n",
+      "bbox": [
+        61.88999938964844,
+        276.910400390625,
+        436.69207763671875,
+        324.6304016113281
+      ],
+      "text_sha256": "4d0539f4e9de36f7f584eeccac931c3f72fd1542fefe783fe787da423a640717"
+    },
+    {
+      "block_id": "page-0625-block-0009",
+      "order": 9,
+      "text": "Three inhibitors of AChE are currently licensed in the UK and elsewhere for the \ntreatment of mild-to-moderate dementia in AD: donepezil, rivastigmine and galan-\ntamine. These three drugs are now also recommended in severe AD. In addition, riv-\nastigmine is licensed in the treatment of mild-to-moderate dementia associated with \nParkinson’s disease.\n",
+      "bbox": [
+        61.88999938964844,
+        324.910400390625,
+        436.70025634765625,
+        384.6304016113281
+      ],
+      "text_sha256": "e112e2c7f3dfa5958113fb861b9c5d52e44975218ebb99708a712cdd906accb7"
+    },
+    {
+      "block_id": "page-0625-block-0010",
+      "order": 10,
+      "text": "Both acetylcholinesterase (AChE) and butyrylcholinesterase (BuChE) have been \nfound to play an important role in the degradation of ACh.4 Cholinesterase inhibitors \ndiffer in pharmacological action: donepezil selectively inhibits AChE, rivastigmine \naffects both AChE and BuChE and galantamine selectively inhibits AChE and also has \nnicotinic receptor agonist properties.5 To date, these differences have not been shown to \nresult in important differences in efficacy or tolerability. (See Table 6.1 for comparison \nof AChE inhibitors (AChE-Is).)\n",
+      "bbox": [
+        61.88999938964844,
+        384.910400390625,
+        436.7002868652344,
+        468.6304016113281
+      ],
+      "text_sha256": "954a1169d08b70f89d2279739ed46e5168dfabc8f47d295d3dc3ec0875e3e09f"
+    },
+    {
+      "block_id": "page-0625-block-0011",
+      "order": 11,
+      "text": "Memantine\n",
+      "bbox": [
+        61.89030456542969,
+        487.0003967285156,
+        115.79029846191406,
+        498.85040283203125
+      ],
+      "text_sha256": "7e3dc6e3071bb16b3fbe386ab22fecdbd666d3bc1f74f537f2808c226af7cc02"
+    },
+    {
+      "block_id": "page-0625-block-0012",
+      "order": 12,
+      "text": "Memantine is licensed in the UK and elsewhere for the treatment of moderate-to-severe \ndementia in AD. It is believed to exert its therapeutic effect by acting as a low-to-mod-\nerate affinity, non-competitive N-methyl-D-aspartate (NMDA) receptor antagonist that \nbinds preferentially to open NMDA receptor-operated calcium channels. This activity-\ndependent binding blocks NMDA-mediated ion flux and is thought to mitigate the \neffects of sustained and pathologically elevated levels of glutamate (and this excitotox-\nicity) that may lead to neuronal dysfunction.6 (See Table 6.1.)\n",
+      "bbox": [
+        61.89030456542969,
+        504.910400390625,
+        436.6603088378906,
+        588.6304321289062
+      ],
+      "text_sha256": "c39b348fcf03455befe2d5619efede99454f63ce704dd46054aaef894415a662"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

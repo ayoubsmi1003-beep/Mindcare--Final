@@ -1,0 +1,455 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0229",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 229,
+  "source_page_index": 228,
+  "source_page_display": 229,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "208    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nGuidelines for the initiation of clozapine for patients based in the \ncommunity\nContra-indications to community initiation\n■\n■History of seizures, significant cardiac disease, unstable diabetes, paralytic ileus, blood \ndyscrasia, neuroleptic malignant syndrome or other disorder that increases the risk of \nserious side-effects (initiation with close monitoring in hospital may still be possible)\n■\n■Previous severe side effects on titration of clozapine or other antipsychotics\n■\n■Unreliable or chaotic life-style that may affect adherence to the medication or the \nmonitoring regimen\n■\n■Significant abuse of alcohol or other drugs likely to increase the risk of side-effects \n(e.g. cocaine)\nSuitability for community initiation (answers should all be yes)\n■\n■Is the patient likely to be adherent with oral medication and to monitoring \nrequirements?\n■\n■Has the patient understood the need for regular physical monitoring and blood tests?\n■\n■Has the patient understood the possible side-effects and what to do about them (par-\nticularly the rare but serious ones)?\n■\n■Is the patient readily contactable (e.g. in the event of a result that needs follow-up)?\n■\n■Is it possible for the patient to be seen every day during the early titration phase?\n■\n■Is the patient able to collect medication every week or can medication be delivered to \ntheir home?\n■\n■Is the patient likely to be able to seek help out-of-hours if they experience potentially \nserious side-effects (e.g. indicators of myocarditis or infection such as fever, malaise, \nchest pain)?\nInitial work-up\nTo screen for risk factors and provide a baseline:\n■\n■Physical examination, FBC (see below), LFTs, urea and electrolytes (U&Es), lipids, \nglucose/HbA1c. Consider troponin, C-reactive protein (CRP), beta-natriuretic pep-\ntide, erythrocyte sedimentation rate (ESR) (as baseline for further tests)\n■\n■ECG- particularly to screen for evidence of past MI or ventricular abnormality\n■\n■Echocardiogram if clinically indicated\nMandatory blood monitoring and registration\n■\n■Register with the relevant monitoring service.\n■\n■Perform baseline blood tests (white cell count (WCC) and differential count) before \nstarting clozapine.\n■\n■Further blood testing continues weekly for the first 18 weeks and then every 2 weeks \nfor the remainder of the year. After that, the blood monitoring is usually done monthly.\n■\n■Inform the patient’s GP.\n",
+  "raw_text_sha256": "e462186537ece315888b25993752df4e01afc27ae21367edc2d7f0b5ffccde5a",
+  "coordinates_sha256": "5bc333dde8edb89dc22f034870106ae1f59587034a31099c1f69b2a4c52f5b7c",
+  "block_sequence_sha256": "828e9e943567efbfbb13d0e3faf8930c186aa0ae9c6fbd8acc82e0e14c86fca5",
+  "blocks": [
+    {
+      "block_id": "page-0229-block-0000",
+      "order": 0,
+      "text": "208    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "bbe0350d4ee8cad3a0f5463b94f68ae58df0baee7315d1d643a58bd51ba19b3b"
+    },
+    {
+      "block_id": "page-0229-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0229-block-0002",
+      "order": 2,
+      "text": "Guidelines for the initiation of clozapine for patients based in the \ncommunity\n",
+      "bbox": [
+        68.88909912109375,
+        67.06448364257812,
+        411.1872253417969,
+        92.1004638671875
+      ],
+      "text_sha256": "a2e5d59f6f29bbe5f3dd6f0f75c55a697b3c01e80cc835f8ded825022894422e"
+    },
+    {
+      "block_id": "page-0229-block-0003",
+      "order": 3,
+      "text": "Contra-indications to community initiation\n",
+      "bbox": [
+        61.893096923828125,
+        109.06246948242188,
+        281.9151611328125,
+        122.09747314453125
+      ],
+      "text_sha256": "3f9ca333bcd76dd74e14ab6277ee9e311a9dbd8ecf8cde1fda1c65454ea8e4d9"
+    },
+    {
+      "block_id": "page-0229-block-0004",
+      "order": 4,
+      "text": "■\n■History of seizures, significant cardiac disease, unstable diabetes, paralytic ileus, blood \n",
+      "bbox": [
+        61.888999938964844,
+        133.90948486328125,
+        436.6488342285156,
+        145.62948608398438
+      ],
+      "text_sha256": "65bc57598b42ad74afe65aa6a5710d988537d48e8a4a8cac178c1054cf38989e"
+    },
+    {
+      "block_id": "page-0229-block-0005",
+      "order": 5,
+      "text": "dyscrasia, neuroleptic malignant syndrome or other disorder that increases the risk of \nserious side-effects (initiation with close monitoring in hospital may still be possible)\n",
+      "bbox": [
+        70.88909912109375,
+        145.90948486328125,
+        436.6390686035156,
+        169.62948608398438
+      ],
+      "text_sha256": "c4259392541f250080362da93e3d351414054070b95785a9cadc70d6c70f84fa"
+    },
+    {
+      "block_id": "page-0229-block-0006",
+      "order": 6,
+      "text": "■\n■Previous severe side effects on titration of clozapine or other antipsychotics\n",
+      "bbox": [
+        61.888999938964844,
+        169.90948486328125,
+        394.819091796875,
+        181.62948608398438
+      ],
+      "text_sha256": "9f9901f0d28316a3930edc6817693a49d06d45710b5a7e678cf94ea36f0ce055"
+    },
+    {
+      "block_id": "page-0229-block-0007",
+      "order": 7,
+      "text": "■\n■Unreliable or chaotic life-style that may affect adherence to the medication or the \n",
+      "bbox": [
+        61.888999938964844,
+        181.90948486328125,
+        436.6289367675781,
+        193.62948608398438
+      ],
+      "text_sha256": "86ee80715c4185bd0457906b245d7338ed4155a703debe9ade7436cbdb3accdd"
+    },
+    {
+      "block_id": "page-0229-block-0008",
+      "order": 8,
+      "text": "monitoring regimen\n",
+      "bbox": [
+        70.88909912109375,
+        193.90948486328125,
+        156.43907165527344,
+        205.62948608398438
+      ],
+      "text_sha256": "66953f4bf183a470faa0b804b07560474413f662a5e80403a881bb7b27e8bdd6"
+    },
+    {
+      "block_id": "page-0229-block-0009",
+      "order": 9,
+      "text": "■\n■Significant abuse of alcohol or other drugs likely to increase the risk of side-effects \n",
+      "bbox": [
+        61.888999938964844,
+        205.90951538085938,
+        436.6589660644531,
+        217.6295166015625
+      ],
+      "text_sha256": "9246c75e25bbf934e3869328d7090b635728aa2d3cdab01c5bcfa04d6f3273d1"
+    },
+    {
+      "block_id": "page-0229-block-0010",
+      "order": 10,
+      "text": "(e.g. cocaine)\n",
+      "bbox": [
+        70.88909912109375,
+        217.90951538085938,
+        127.17909240722656,
+        229.6295166015625
+      ],
+      "text_sha256": "2c5bb8e40ae01b45404ecb3d9e47d9f28bd8dae6e99a6bf8d517b3fe5418dc7f"
+    },
+    {
+      "block_id": "page-0229-block-0011",
+      "order": 11,
+      "text": "Suitability for community initiation (answers should all be yes)\n",
+      "bbox": [
+        61.88909912109375,
+        247.06451416015625,
+        386.4552307128906,
+        260.0995178222656
+      ],
+      "text_sha256": "ec40f8461a49135bc41fa09c0370924399bdbc1ac9e1a67d12189a898a61a48d"
+    },
+    {
+      "block_id": "page-0229-block-0012",
+      "order": 12,
+      "text": "■\n■Is the patient likely to be adherent with oral medication and to monitoring \n",
+      "bbox": [
+        61.888999938964844,
+        271.9095153808594,
+        436.6590270996094,
+        283.6295166015625
+      ],
+      "text_sha256": "4b49d379e0a5e875106994a211d055cc02513d0d5185ed813f40874a736fa3e4"
+    },
+    {
+      "block_id": "page-0229-block-0013",
+      "order": 13,
+      "text": "requirements?\n",
+      "bbox": [
+        70.88909912109375,
+        283.9095153808594,
+        131.42909240722656,
+        295.6295166015625
+      ],
+      "text_sha256": "a1080757160bc759bdcd4cf740a5a421fc5a23687ca6b0e2c0e7b549d031c4f4"
+    },
+    {
+      "block_id": "page-0229-block-0014",
+      "order": 14,
+      "text": "■\n■Has the patient understood the need for regular physical monitoring and blood tests?\n",
+      "bbox": [
+        61.888999938964844,
+        295.9095153808594,
+        433.87921142578125,
+        307.6295166015625
+      ],
+      "text_sha256": "5706309fad2f7695da9d9a306d1ec03603e86482ae930066baea2991f6bd1ca7"
+    },
+    {
+      "block_id": "page-0229-block-0015",
+      "order": 15,
+      "text": "■\n■Has the patient understood the possible side-effects and what to do about them (par-\n",
+      "bbox": [
+        61.888999938964844,
+        307.9095153808594,
+        433.8890686035156,
+        319.6295166015625
+      ],
+      "text_sha256": "2e064d82c4c3b772484efa9f4aaed3c1885bfe2d48c391930397051fc233d3ef"
+    },
+    {
+      "block_id": "page-0229-block-0016",
+      "order": 16,
+      "text": "ticularly the rare but serious ones)?\n",
+      "bbox": [
+        70.88911437988281,
+        319.9095153808594,
+        222.5791015625,
+        331.6295166015625
+      ],
+      "text_sha256": "ce2fe671138a283fb15b65d214db40c1f1f3e9522885a3fce3c82b5cabff35c9"
+    },
+    {
+      "block_id": "page-0229-block-0017",
+      "order": 17,
+      "text": "■\n■Is the patient readily contactable (e.g. in the event of a result that needs follow-up)?\n",
+      "bbox": [
+        61.888999938964844,
+        331.9095153808594,
+        430.53900146484375,
+        343.6295166015625
+      ],
+      "text_sha256": "233beaccbcd13ff42a96c3561d15897d467c3c5f65e26ec600925fa76a264b9d"
+    },
+    {
+      "block_id": "page-0229-block-0018",
+      "order": 18,
+      "text": "■\n■Is it possible for the patient to be seen every day during the early titration phase?\n",
+      "bbox": [
+        61.888999938964844,
+        343.9095153808594,
+        419.26910400390625,
+        355.6295166015625
+      ],
+      "text_sha256": "85f60b716e66f49d2f372dcd6d5e9f0db714e8f5d2f01f29d14b6a035d8cef13"
+    },
+    {
+      "block_id": "page-0229-block-0019",
+      "order": 19,
+      "text": "■\n■Is the patient able to collect medication every week or can medication be delivered to \n",
+      "bbox": [
+        61.888999938964844,
+        355.9095153808594,
+        436.6890563964844,
+        367.6295166015625
+      ],
+      "text_sha256": "6928e4174c8763c4aafa6c47cb0eafe2f11dae0bca08113ed461e2df31981d14"
+    },
+    {
+      "block_id": "page-0229-block-0020",
+      "order": 20,
+      "text": "their home?\n",
+      "bbox": [
+        70.88909912109375,
+        367.9095153808594,
+        121.98908996582031,
+        379.6295166015625
+      ],
+      "text_sha256": "3ff0df4885bb50601f038ca095ca57ec242bca17ea624f18fe7019fdfcf1bd85"
+    },
+    {
+      "block_id": "page-0229-block-0021",
+      "order": 21,
+      "text": "■\n■Is the patient likely to be able to seek help out-of-hours if they experience potentially \n",
+      "bbox": [
+        61.888999938964844,
+        379.9095153808594,
+        436.6090393066406,
+        391.6295166015625
+      ],
+      "text_sha256": "72884d058492ff3d414ae0131fa9fa7925d1d8ba4ed0a0dc61de734b41f94761"
+    },
+    {
+      "block_id": "page-0229-block-0022",
+      "order": 22,
+      "text": "serious side-effects (e.g. indicators of myocarditis or infection such as fever, malaise, \nchest pain)?\n",
+      "bbox": [
+        70.88909912109375,
+        391.9095153808594,
+        436.6591491699219,
+        415.6295166015625
+      ],
+      "text_sha256": "118e637c8e208119aa73d72831ed2ad1cd9100cf67b393716000552daf497377"
+    },
+    {
+      "block_id": "page-0229-block-0023",
+      "order": 23,
+      "text": "Initial work-up\n",
+      "bbox": [
+        61.88909912109375,
+        433.06451416015625,
+        138.29507446289062,
+        446.0995178222656
+      ],
+      "text_sha256": "e198b3f4dc084e6b40ce9737c019470416f0177301f3f5faf601cfb79e728806"
+    },
+    {
+      "block_id": "page-0229-block-0024",
+      "order": 24,
+      "text": "To screen for risk factors and provide a baseline:\n",
+      "bbox": [
+        61.88909912109375,
+        451.9095153808594,
+        271.5090637207031,
+        463.6295166015625
+      ],
+      "text_sha256": "917612f7a69a9d637519a6d1d6ed45e140214d0497261c37f77bb85405daec0a"
+    },
+    {
+      "block_id": "page-0229-block-0025",
+      "order": 25,
+      "text": "■\n■Physical examination, FBC (see below), LFTs, urea and electrolytes (U&Es), lipids, \n",
+      "bbox": [
+        61.888999938964844,
+        469.9095153808594,
+        436.6291809082031,
+        481.6295166015625
+      ],
+      "text_sha256": "4d653e6a7425ce4451b209b933c7dc6caba62d1f9bd31951c3397e5beeb6df0f"
+    },
+    {
+      "block_id": "page-0229-block-0026",
+      "order": 26,
+      "text": "glucose/HbA1c. Consider troponin, C-reactive protein (CRP), beta-natriuretic pep-\ntide, erythrocyte sedimentation rate (ESR) (as baseline for further tests)\n",
+      "bbox": [
+        70.88909912109375,
+        481.9095153808594,
+        433.8990783691406,
+        505.6295166015625
+      ],
+      "text_sha256": "e61f51c67cba41a4350f88ea912ff9d57be6108644726efa584308329cdb8d53"
+    },
+    {
+      "block_id": "page-0229-block-0027",
+      "order": 27,
+      "text": "■\n■ECG- particularly to screen for evidence of past MI or ventricular abnormality\n",
+      "bbox": [
+        61.888999938964844,
+        505.90948486328125,
+        409.79913330078125,
+        517.6295166015625
+      ],
+      "text_sha256": "56b555b51dba12513906aff96d3061d2127428b9ac8cb054d13e179f153ba4ea"
+    },
+    {
+      "block_id": "page-0229-block-0028",
+      "order": 28,
+      "text": "■\n■Echocardiogram if clinically indicated\n",
+      "bbox": [
+        61.888999938964844,
+        517.9094848632812,
+        234.2390899658203,
+        529.6295166015625
+      ],
+      "text_sha256": "8419a6c879f606521dce321f94ca59e9effb5da270f6e347729f6d915e3a34bb"
+    },
+    {
+      "block_id": "page-0229-block-0029",
+      "order": 29,
+      "text": "Mandatory blood monitoring and registration\n",
+      "bbox": [
+        61.88909912109375,
+        547.0645141601562,
+        299.445068359375,
+        560.0994873046875
+      ],
+      "text_sha256": "6a009a099e19fab41767fa9481d73a0619ff5b1819aa192fda1e634580f04b38"
+    },
+    {
+      "block_id": "page-0229-block-0030",
+      "order": 30,
+      "text": "■\n■Register with the relevant monitoring service.\n",
+      "bbox": [
+        61.888999938964844,
+        571.9094848632812,
+        266.9991149902344,
+        583.6295166015625
+      ],
+      "text_sha256": "9c8985c3c45c69e34b6ffde4e294414e472010198a14d3595dbd2719e3b9eb86"
+    },
+    {
+      "block_id": "page-0229-block-0031",
+      "order": 31,
+      "text": "■\n■Perform baseline blood tests (white cell count (WCC) and differential count) before \n",
+      "bbox": [
+        61.888999938964844,
+        583.9094848632812,
+        436.6590270996094,
+        595.6295166015625
+      ],
+      "text_sha256": "930b10b64e5ae99e39c5f11948a48927595dd9d3c368f6927b0be44022b18eb4"
+    },
+    {
+      "block_id": "page-0229-block-0032",
+      "order": 32,
+      "text": "starting clozapine.\n",
+      "bbox": [
+        70.88909912109375,
+        595.9094848632812,
+        149.78909301757812,
+        607.6295166015625
+      ],
+      "text_sha256": "42546310fbeb20a4141fdb0538447098de45afdd2ddc555eed8e79a74d630bbd"
+    },
+    {
+      "block_id": "page-0229-block-0033",
+      "order": 33,
+      "text": "■\n■Further blood testing continues weekly for the first 18 weeks and then every 2 weeks \n",
+      "bbox": [
+        61.888999938964844,
+        607.9094848632812,
+        436.6490173339844,
+        619.6295166015625
+      ],
+      "text_sha256": "2c692f01b24dd35fc61d29d1912d5a9a443b8740f8c9ab29e96628eec1696971"
+    },
+    {
+      "block_id": "page-0229-block-0034",
+      "order": 34,
+      "text": "for the remainder of the year. After that, the blood monitoring is usually done monthly.\n",
+      "bbox": [
+        70.88909912109375,
+        619.9094848632812,
+        434.2289733886719,
+        631.6295166015625
+      ],
+      "text_sha256": "ac9aceac74bd2e04f392a85968e6c8aeb1a9e67bb2f5c1d320f64b2f3ede8bbe"
+    },
+    {
+      "block_id": "page-0229-block-0035",
+      "order": 35,
+      "text": "■\n■Inform the patient’s GP.\n",
+      "bbox": [
+        61.888999938964844,
+        631.9094848632812,
+        173.29908752441406,
+        643.6295166015625
+      ],
+      "text_sha256": "d39adc85ef50f2a783679f9554276ff6c67f8efcc9e4a47139e81990ea3f1148"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

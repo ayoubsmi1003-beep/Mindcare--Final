@@ -1,0 +1,419 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0736",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 736,
+  "source_page_index": 735,
+  "source_page_display": 736,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Table 7.6  Hypnotics in breast-feeding\nDrug\nInfant plasma concentration\nEstimated daily infant dose \nas proportion of maternal \ndose (RID)\nAcute adverse effects in \ninfant\nDevelopmental effects in \ninfant\nBenzodiazepines4,14,38,182–189\nNot reported\nClonazepam – 2.8%\nDiazepam – 0.88–7.1%\nLorazepam – 2.6–2.9%\nOxazepam – 0.28–1%\nSedation, lethargy, weight loss \nand mild jaundice.\nOne case of persistent apnoea \nwith clonazepam.\nRestlessness and mild \ndrowsiness with alprazolam.\nIn a telephone survey of 124 \nwomen two reported CNS \ndepression in their \nbreastfeeding neonates. One \nof the children was exposed to \nbenzodiazepines in utero.\nNo adverse effects have been \nreported in others.\nNon reported but not studied.\nPromethazine\nNo published data available at \nthe time of writing.\nZopiclone, zolpidem and\nzaleplon4,190–192\nNot reported.\nZaleplon = 1.5%\nZopiclone = 1.5%\nZolpidem = 0.02–0.18%\nNone reported.\nNone reported but not studied.\n",
+  "raw_text_sha256": "ca3d1a7f32ce72264ff424f000273d0bde69bd3388a82ed232a2d1ed3abbef57",
+  "coordinates_sha256": "5f88a0b07794d19a04772580f28cfeb2fe023bf9e6ddcacc4b69a0f5de15ea27",
+  "block_sequence_sha256": "048ff9007d2433a042934ca6b7a417616c5ad9a4753968931645f31f17d30c91",
+  "blocks": [
+    {
+      "block_id": "page-0736-block-0000",
+      "order": 0,
+      "text": "Table 7.6  Hypnotics in breast-feeding\n",
+      "bbox": [
+        53.73749923706055,
+        484.6739807128906,
+        62.625,
+        606.6539916992188
+      ],
+      "text_sha256": "37fc6ab3151aed77ff9fd6d9a2a4c518652a78c58a5ae68320bddb60cd6e257d"
+    },
+    {
+      "block_id": "page-0736-block-0001",
+      "order": 1,
+      "text": "Drug\nInfant plasma concentration\nEstimated daily infant dose \n",
+      "bbox": [
+        74.36250305175781,
+        297.0914611816406,
+        83.25,
+        612.6539916992188
+      ],
+      "text_sha256": "6f6ef64d84ef85347363620ca5f5bcb33745b282b06bda7ee349e4bc7f6a3fc3"
+    },
+    {
+      "block_id": "page-0736-block-0002",
+      "order": 2,
+      "text": "as proportion of maternal \n",
+      "bbox": [
+        84.36000061035156,
+        302.10150146484375,
+        93.24749755859375,
+        395.4539794921875
+      ],
+      "text_sha256": "577352a3079fe2bbbbbb1a48a57c59bf4a10a0e36593f422b85854c8f8ae8748"
+    },
+    {
+      "block_id": "page-0736-block-0003",
+      "order": 3,
+      "text": "dose (RID)\n",
+      "bbox": [
+        94.35749816894531,
+        359.62652587890625,
+        103.2449951171875,
+        395.4539794921875
+      ],
+      "text_sha256": "69f9263b97c1eb976fd5f25ac0cc2303b1338cde4d37963dce887603a5f79411"
+    },
+    {
+      "block_id": "page-0736-block-0004",
+      "order": 4,
+      "text": "Acute adverse effects in \n",
+      "bbox": [
+        74.35499572753906,
+        196.5314483642578,
+        83.24249267578125,
+        283.08148193359375
+      ],
+      "text_sha256": "f1f53ac9b4b3c15700f5464d1b5e6577ca5afd517982b3b55b0b58e69c74ac6e"
+    },
+    {
+      "block_id": "page-0736-block-0005",
+      "order": 5,
+      "text": "infant\nDevelopmental effects in \n",
+      "bbox": [
+        74.35499572753906,
+        80.4015121459961,
+        93.239990234375,
+        283.08148193359375
+      ],
+      "text_sha256": "92a8c2acee5ba1936b9ba6d4a86cf77c395e6ff907f3cc18f7edd18836813954"
+    },
+    {
+      "block_id": "page-0736-block-0006",
+      "order": 6,
+      "text": "infant\n",
+      "bbox": [
+        84.35249328613281,
+        149.45396423339844,
+        93.239990234375,
+        170.708984375
+      ],
+      "text_sha256": "e7126f01d55795d9d0761c51e3f277a39d4ed441a3504bd0a6901247c19c0069"
+    },
+    {
+      "block_id": "page-0736-block-0007",
+      "order": 7,
+      "text": "Benzodiazepines4,14,38,182–189\nNot reported\nClonazepam – 2.8%\n",
+      "bbox": [
+        114.65999603271484,
+        329.60467529296875,
+        123.375,
+        612.646484375
+      ],
+      "text_sha256": "51b76ef17e697129b5f62a6c3e03ff20a649c3bd82d431d92c045f0c13eb977d"
+    },
+    {
+      "block_id": "page-0736-block-0008",
+      "order": 8,
+      "text": "Diazepam – 0.88–7.1%\n",
+      "bbox": [
+        124.66500091552734,
+        319.59967041015625,
+        133.37249755859375,
+        395.4547119140625
+      ],
+      "text_sha256": "6f50d11a1cad99c04ae2ac025d7848e9cfab35edc329aaa9ea51f8bd8d95efe7"
+    },
+    {
+      "block_id": "page-0736-block-0009",
+      "order": 9,
+      "text": "Lorazepam – 2.6–2.9%\n",
+      "bbox": [
+        134.66249084472656,
+        320.439697265625,
+        143.3699951171875,
+        395.4547119140625
+      ],
+      "text_sha256": "539cf976ced801f5ca069932e928c43b2c1f56d56764f7b40e1848909b5d8edd"
+    },
+    {
+      "block_id": "page-0736-block-0010",
+      "order": 10,
+      "text": "Oxazepam – 0.28–1%\n",
+      "bbox": [
+        144.6599884033203,
+        323.7771911621094,
+        153.36749267578125,
+        395.4547119140625
+      ],
+      "text_sha256": "69108af450ce2c84faafd7b5c0342ff0d741f982e59e637c92f2b2ac8065d363"
+    },
+    {
+      "block_id": "page-0736-block-0011",
+      "order": 11,
+      "text": "Sedation, lethargy, weight loss \n",
+      "bbox": [
+        114.65999603271484,
+        183.7521209716797,
+        123.36749267578125,
+        283.08221435546875
+      ],
+      "text_sha256": "de5cb6799d3b676ab83f00adce1ac9893d90d85a3e1738d1f4a20d7a773e31b2"
+    },
+    {
+      "block_id": "page-0736-block-0012",
+      "order": 12,
+      "text": "and mild jaundice.\n",
+      "bbox": [
+        124.6574935913086,
+        224.3196258544922,
+        133.364990234375,
+        283.08221435546875
+      ],
+      "text_sha256": "e14bc58ecf81502ef0129280f7d5607ce4ef66e7391ff21f32943e43f413ae6f"
+    },
+    {
+      "block_id": "page-0736-block-0013",
+      "order": 13,
+      "text": "One case of persistent apnoea \n",
+      "bbox": [
+        140.6549835205078,
+        184.3146209716797,
+        149.36248779296875,
+        283.08221435546875
+      ],
+      "text_sha256": "47b48e43b5fc2ec1eb9b06023f672b4d5754b51fe951cab72497d81d908c37c4"
+    },
+    {
+      "block_id": "page-0736-block-0014",
+      "order": 14,
+      "text": "with clonazepam.\n",
+      "bbox": [
+        150.65248107910156,
+        226.4121856689453,
+        159.3599853515625,
+        283.08221435546875
+      ],
+      "text_sha256": "4e7d286c3df72e2442de25c425174358976fd25d3eb8c82bf201b9c3b6ef747c"
+    },
+    {
+      "block_id": "page-0736-block-0015",
+      "order": 15,
+      "text": "Restlessness and mild \n",
+      "bbox": [
+        166.6499786376953,
+        212.6495819091797,
+        175.35748291015625,
+        283.08221435546875
+      ],
+      "text_sha256": "410f39f93b9627aa73bb102faadeaa1ee7f052ed3ed9870d203366897eba2d72"
+    },
+    {
+      "block_id": "page-0736-block-0016",
+      "order": 16,
+      "text": "drowsiness with alprazolam.\n",
+      "bbox": [
+        176.64747619628906,
+        192.7896270751953,
+        185.35498046875,
+        283.08221435546875
+      ],
+      "text_sha256": "726794e0bb68e07ca851934c9531ebf5e203ee3d42d0ffcca07d5d4ffbf10d33"
+    },
+    {
+      "block_id": "page-0736-block-0017",
+      "order": 17,
+      "text": "In a telephone survey of 124 \n",
+      "bbox": [
+        192.6449737548828,
+        189.7221221923828,
+        201.35247802734375,
+        283.08221435546875
+      ],
+      "text_sha256": "15d7839efb9c6eda36d4ef9f077e9f6e26f40d667539b912bbbf101fbb9b115c"
+    },
+    {
+      "block_id": "page-0736-block-0018",
+      "order": 18,
+      "text": "women two reported CNS \n",
+      "bbox": [
+        202.64247131347656,
+        196.94468688964844,
+        211.3499755859375,
+        283.08221435546875
+      ],
+      "text_sha256": "e9331aaee084aef82c1645ab7823dcdd7ec011c82a0db2076197b4f4f64460e0"
+    },
+    {
+      "block_id": "page-0736-block-0019",
+      "order": 19,
+      "text": "depression in their \n",
+      "bbox": [
+        212.6399688720703,
+        222.36961364746094,
+        221.34747314453125,
+        283.08221435546875
+      ],
+      "text_sha256": "e1084b522b904a79b1cdb7e869e1bfd88d63f49be3a4785ee6ea560ec7f13fdc"
+    },
+    {
+      "block_id": "page-0736-block-0020",
+      "order": 20,
+      "text": "breastfeeding neonates. One \n",
+      "bbox": [
+        222.63746643066406,
+        188.6121063232422,
+        231.344970703125,
+        283.08221435546875
+      ],
+      "text_sha256": "276157cafae56e2bb72f79d3f1c1f5bab3f2e9ef794bb8b8c6a45ee964f1b2b7"
+    },
+    {
+      "block_id": "page-0736-block-0021",
+      "order": 21,
+      "text": "of the children was exposed to \n",
+      "bbox": [
+        232.6349639892578,
+        182.7771453857422,
+        241.34246826171875,
+        283.08221435546875
+      ],
+      "text_sha256": "cf1d8fdd0aa36e8d2be61eba5027e5c928f07201fee9e5db3b517e3bca8a1e0b"
+    },
+    {
+      "block_id": "page-0736-block-0022",
+      "order": 22,
+      "text": "benzodiazepines in utero.\n",
+      "bbox": [
+        242.63246154785156,
+        201.11460876464844,
+        251.3399658203125,
+        283.08221435546875
+      ],
+      "text_sha256": "89a40753fb7e53b14122907d84dae2774292e606820d0b32b6d8188aceabb38b"
+    },
+    {
+      "block_id": "page-0736-block-0023",
+      "order": 23,
+      "text": "No adverse effects have been \n",
+      "bbox": [
+        258.6299743652344,
+        187.3747100830078,
+        267.33746337890625,
+        283.08221435546875
+      ],
+      "text_sha256": "11a84be52f0ed5db2fb303e537b3c81fb2d5f0971b342b3929791de5737a11d8"
+    },
+    {
+      "block_id": "page-0736-block-0024",
+      "order": 24,
+      "text": "reported in others.\n",
+      "bbox": [
+        268.6274719238281,
+        223.6221466064453,
+        277.3349609375,
+        283.08221435546875
+      ],
+      "text_sha256": "73bde1e3ab6796ae25a8fc3c6649407ca3b74394061b93f3c9aa0b8b6d8e24f4"
+    },
+    {
+      "block_id": "page-0736-block-0025",
+      "order": 25,
+      "text": "Non reported but not studied.\n",
+      "bbox": [
+        114.62995147705078,
+        74.55989837646484,
+        123.33744812011719,
+        170.709716796875
+      ],
+      "text_sha256": "186cec9d92003c6d12aacd4002f4121a020abb24f200a613d58cc0092fa32365"
+    },
+    {
+      "block_id": "page-0736-block-0026",
+      "order": 26,
+      "text": "Promethazine\nNo published data available at \n",
+      "bbox": [
+        286.7549743652344,
+        409.4647216796875,
+        295.46246337890625,
+        612.647216796875
+      ],
+      "text_sha256": "0f891a48594eec97a9e9ff1cac8d2cc1f0a641d41e05ae05de3af56a9f456fd4"
+    },
+    {
+      "block_id": "page-0736-block-0027",
+      "order": 27,
+      "text": "the time of writing.\n",
+      "bbox": [
+        296.7524719238281,
+        445.7347412109375,
+        305.4599609375,
+        507.8197021484375
+      ],
+      "text_sha256": "c6f7bc17a8bff31df492df92b100ad8efe7ed6d4263e782172ec12801736ebb4"
+    },
+    {
+      "block_id": "page-0736-block-0028",
+      "order": 28,
+      "text": "Zopiclone, zolpidem and\n",
+      "bbox": [
+        314.8799743652344,
+        534.2947387695312,
+        323.58746337890625,
+        612.647216796875
+      ],
+      "text_sha256": "dbb1287024946c5e5b4507a4c776eed26544f9ea601303e55cf4154fdcf4741e"
+    },
+    {
+      "block_id": "page-0736-block-0029",
+      "order": 29,
+      "text": "zaleplon4,190–192\nNot reported.\nZaleplon = 1.5%\n",
+      "bbox": [
+        314.9175109863281,
+        341.7696533203125,
+        333.5849609375,
+        612.647216796875
+      ],
+      "text_sha256": "2c431351ab1ebb8f80a61982287b1ffd14df95122a6450883d22604b4953602f"
+    },
+    {
+      "block_id": "page-0736-block-0030",
+      "order": 30,
+      "text": "Zopiclone = 1.5%\n",
+      "bbox": [
+        324.9150085449219,
+        338.0196533203125,
+        333.62249755859375,
+        395.4547119140625
+      ],
+      "text_sha256": "2e98461fbd746e61198d8fc3e2a641769bc8be30aa2f569118cbf42d491424b8"
+    },
+    {
+      "block_id": "page-0736-block-0031",
+      "order": 31,
+      "text": "Zolpidem = 0.02–0.18%\n",
+      "bbox": [
+        334.9125061035156,
+        316.7571105957031,
+        343.6199951171875,
+        395.4547119140625
+      ],
+      "text_sha256": "f76b9cce347d5c8d0b65cbe4719d6fa2cf4d940fd21d60df7ad9caa1d29229e2"
+    },
+    {
+      "block_id": "page-0736-block-0032",
+      "order": 32,
+      "text": "None reported.\nNone reported but not studied.\n",
+      "bbox": [
+        314.9100036621094,
+        70.80989837646484,
+        323.61749267578125,
+        283.08221435546875
+      ],
+      "text_sha256": "52ecf3f0d0dc659268fd32af8e5be3cca6c396beccc0f763d9a3455bb675cfac"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,383 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0678",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 678,
+  "source_page_index": 677,
+  "source_page_display": 678,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "A guide to medication doses of commonly used psychotropics in older adults\nDrug\nSpecific indication/\nadditional notes\nStarting dose\nUsual maintenance dose\nMaximum dose in \nelderly\nAntidepressants\nAgomelatine\nDepression\nMonitor LFTs; data suggest \nthat agomelatine is not \neffective in patients >75 years\n25mg nocte\n25–50mg daily\n50mg nocte\nCitalopram\nDepression/anxiety disorder\n10mg mane\n10–20mg mane\n20mg mane\nClomipramine\nDepression/phobic and \nobsessional states\n10mg nocte (dose increases should be \ncautious)\n30–75mg daily1 should be \nreached after about 10 days\n75mg daily1\nDesvenlafaxine\nNo formal recommendations are available for dosing in older adults2\nReduced doses may be advisable in geriatric patients due to decreased clearance; every other day dosing may \nbe considered in geriatric patients with poor tolerability to the drug\nFor older adults, possible reduced renal clearance of desvenlafaxine should be considered when determining \nan appropriate dose\nDosage in renal impairment:\nCrCl 50–80mL/minute: no dosage adjustment needed\nCrCl 30–50mL/minute: 50mg daily is the recommended daily and maximum dose\nCrCl <30mL/minute or end-stage renal disease: 50mg every other day is the recommended daily and \nmaximum dose\nOlder adults are also at greater risk for developing clinically significant hyponatremia2\n400mg daily2\nDuloxetine\nDepression/anxiety disorder\n30mg daily*\n60mg daily\n120mg daily3\n(caution as limited data in \nelderly for this dose)\nEscitalopram\nDepression/anxiety disorder\n5mg mane\n5–10mg mane\n10mg mane\n(Continued)\n",
+  "raw_text_sha256": "a94b9f051c3ee2b7b9fd63d809dfa4eb2329c84f3b8d181efaf130ff91d8db9a",
+  "coordinates_sha256": "ac3f130ca1115f79403db19e9cedf330bde99773202e49089fde1ed80978da0c",
+  "block_sequence_sha256": "716c6dd3ff86bdfe878d9ab6fe33d13ab5ab7f7408a56ed3e460ccc5fe468e07",
+  "blocks": [
+    {
+      "block_id": "page-0678-block-0000",
+      "order": 0,
+      "text": "A guide to medication doses of commonly used psychotropics in older adults\n",
+      "bbox": [
+        53.71500015258789,
+        208.60879516601562,
+        66.75,
+        605.6539916992188
+      ],
+      "text_sha256": "4bbed739ffeb62de7759552dd1997572915d81d5bc6f00ccd6ea67df0aee0cb0"
+    },
+    {
+      "block_id": "page-0678-block-0001",
+      "order": 1,
+      "text": "Drug\nSpecific indication/\n",
+      "bbox": [
+        99.86500549316406,
+        451.5464172363281,
+        118.75,
+        612.6539916992188
+      ],
+      "text_sha256": "7338c07e62114dcf4e9d0f5ece770fcee7a376937071293ac7aace02ecc5062d"
+    },
+    {
+      "block_id": "page-0678-block-0002",
+      "order": 2,
+      "text": "additional notes\nStarting dose\nUsual maintenance dose\nMaximum dose in \n",
+      "bbox": [
+        99.86500549316406,
+        91.1039047241211,
+        118.75,
+        518.2214965820312
+      ],
+      "text_sha256": "13c3fafaeab8571fbd185c31504620897e8ab350b5c1b8ff75c639fa1d107c47"
+    },
+    {
+      "block_id": "page-0678-block-0003",
+      "order": 3,
+      "text": "elderly\n",
+      "bbox": [
+        109.86250305175781,
+        131.9340057373047,
+        118.75,
+        156.114013671875
+      ],
+      "text_sha256": "dba6c3b2f5fd2d08af3d9adc6e4b265e9ab203099aab9fd4e0759981423eb3c1"
+    },
+    {
+      "block_id": "page-0678-block-0004",
+      "order": 4,
+      "text": "Antidepressants\n",
+      "bbox": [
+        127.99000549316406,
+        555.5790405273438,
+        136.87750244140625,
+        612.6614990234375
+      ],
+      "text_sha256": "2e12ac14096be234a9b975ce033aebb8d95f8f3ff92503034de89e253e59f21d"
+    },
+    {
+      "block_id": "page-0678-block-0005",
+      "order": 5,
+      "text": "Agomelatine\nDepression\n",
+      "bbox": [
+        146.29750061035156,
+        483.3540344238281,
+        155.0050048828125,
+        612.6614990234375
+      ],
+      "text_sha256": "cfbb71d6d451e47fed24220e7344dffb6fcc19b024c33a121931a7aad69015f4"
+    },
+    {
+      "block_id": "page-0678-block-0006",
+      "order": 6,
+      "text": "Monitor LFTs; data suggest \n",
+      "bbox": [
+        156.2949981689453,
+        430.7115478515625,
+        165.00250244140625,
+        518.22900390625
+      ],
+      "text_sha256": "b642bb4dbd1ca6087ed0e4fdc039dffe1393027868d36a501cc305405296285f"
+    },
+    {
+      "block_id": "page-0678-block-0007",
+      "order": 7,
+      "text": "that agomelatine is not \n",
+      "bbox": [
+        166.29249572753906,
+        441.9690856933594,
+        175.0,
+        518.22900390625
+      ],
+      "text_sha256": "566032eb0404c191d069291a52cbd708c0cf5ad445f418e9bcc28e1208ab8550"
+    },
+    {
+      "block_id": "page-0678-block-0008",
+      "order": 8,
+      "text": "effective in patients >75 years\n",
+      "bbox": [
+        176.2899932861328,
+        422.6190490722656,
+        184.99749755859375,
+        518.22900390625
+      ],
+      "text_sha256": "ae72bc202e6e57b0d3e7a984d41498528021192ef6a31d8087fc797efb5c4ec6"
+    },
+    {
+      "block_id": "page-0678-block-0009",
+      "order": 9,
+      "text": "25mg nocte\n25–50mg daily\n50mg nocte\n",
+      "bbox": [
+        146.2899932861328,
+        117.361572265625,
+        154.99749755859375,
+        410.634033203125
+      ],
+      "text_sha256": "155d65c1376e7cd352a91650c17738c1ff3d57f2f9101de85aba0637adc115f6"
+    },
+    {
+      "block_id": "page-0678-block-0010",
+      "order": 10,
+      "text": "Citalopram\nDepression/anxiety disorder\n10mg mane\n10–20mg mane\n20mg mane\n",
+      "bbox": [
+        194.41749572753906,
+        117.36907958984375,
+        203.125,
+        612.6690673828125
+      ],
+      "text_sha256": "6c793013de0a29bf9a34e33aebec9145374a6f5fbc2bacde18dd9657db7b6cb3"
+    },
+    {
+      "block_id": "page-0678-block-0011",
+      "order": 11,
+      "text": "Clomipramine\nDepression/phobic and \n",
+      "bbox": [
+        212.5449981689453,
+        446.9490051269531,
+        221.25250244140625,
+        612.676513671875
+      ],
+      "text_sha256": "9cf99d56b77aa973440902ac0542e268bceba9546c695d3b2588e7816e0317aa"
+    },
+    {
+      "block_id": "page-0678-block-0012",
+      "order": 12,
+      "text": "obsessional states\n10mg nocte (dose increases should be \ncautious)\n30–75mg daily1 should be \nreached after about 10 days\n75mg daily1\n",
+      "bbox": [
+        212.54249572753906,
+        118.25401306152344,
+        231.25,
+        518.2440185546875
+      ],
+      "text_sha256": "c237db44d644b88eda0dd487f06b941b3b504f3d8d2eb29d7a097d13e47c33e3"
+    },
+    {
+      "block_id": "page-0678-block-0013",
+      "order": 13,
+      "text": "Desvenlafaxine\nNo formal recommendations are available for dosing in older adults2\n",
+      "bbox": [
+        240.66749572753906,
+        300.6139831542969,
+        249.375,
+        612.6539916992188
+      ],
+      "text_sha256": "1fc0f6c9b340b1b9549bfe6838d7f79375197f8151a41b5c524ea62c866a8e20"
+    },
+    {
+      "block_id": "page-0678-block-0014",
+      "order": 14,
+      "text": "Reduced doses may be advisable in geriatric patients due to decreased clearance; every other day dosing may \n",
+      "bbox": [
+        250.66749572753906,
+        167.48023986816406,
+        259.375,
+        518.2178955078125
+      ],
+      "text_sha256": "a519cd6689bb32e27b7f572ba5c24787880ba0c3adf9a41c0f36ec72d8f0a1ca"
+    },
+    {
+      "block_id": "page-0678-block-0015",
+      "order": 15,
+      "text": "be considered in geriatric patients with poor tolerability to the drug\n",
+      "bbox": [
+        260.6650085449219,
+        303.3277893066406,
+        269.37249755859375,
+        518.2178955078125
+      ],
+      "text_sha256": "7d1e88886c0939a4b4191aa476300662dd6ad6589cdfa3d46a0279b18af4e5f0"
+    },
+    {
+      "block_id": "page-0678-block-0016",
+      "order": 16,
+      "text": "For older adults, possible reduced renal clearance of desvenlafaxine should be considered when determining \n",
+      "bbox": [
+        270.6625061035156,
+        171.05775451660156,
+        279.3699951171875,
+        518.2178955078125
+      ],
+      "text_sha256": "7e6449be5f5f20e9213a57a8c0158b1be504f6d661386f3f73f59a770f4885b7"
+    },
+    {
+      "block_id": "page-0678-block-0017",
+      "order": 17,
+      "text": "an appropriate dose\n",
+      "bbox": [
+        280.6600036621094,
+        454.16790771484375,
+        289.36749267578125,
+        518.2178955078125
+      ],
+      "text_sha256": "25328498f32c65e47380898d3ceb8d14a26dfa1fe0487706723c7d9ba8a28d23"
+    },
+    {
+      "block_id": "page-0678-block-0018",
+      "order": 18,
+      "text": "Dosage in renal impairment:\n",
+      "bbox": [
+        290.6575012207031,
+        427.9254150390625,
+        299.364990234375,
+        518.2178955078125
+      ],
+      "text_sha256": "4ff223e8b5c03b9a0bea70ee5a9635d776682631f3592362d227134952bb7dbb"
+    },
+    {
+      "block_id": "page-0678-block-0019",
+      "order": 19,
+      "text": "CrCl 50–80mL/minute: no dosage adjustment needed\n",
+      "bbox": [
+        300.6549987792969,
+        346.08526611328125,
+        309.36248779296875,
+        518.2178955078125
+      ],
+      "text_sha256": "290a30e53ca295f6d797d7605417f5fa6d36cbcc5da2de9f79dcd73240bbe524"
+    },
+    {
+      "block_id": "page-0678-block-0020",
+      "order": 20,
+      "text": "CrCl 30–50mL/minute: 50mg daily is the recommended daily and maximum dose\n",
+      "bbox": [
+        310.6524963378906,
+        258.7327880859375,
+        319.3599853515625,
+        518.2178955078125
+      ],
+      "text_sha256": "5e666e19dd84c6908fcecf0ee11ec68a45cfde4825d5363dcf9836e58929b93c"
+    },
+    {
+      "block_id": "page-0678-block-0021",
+      "order": 21,
+      "text": "CrCl <30mL/minute or end-stage renal disease: 50mg every other day is the recommended daily and \n",
+      "bbox": [
+        320.6499938964844,
+        195.1927947998047,
+        329.35748291015625,
+        518.2178955078125
+      ],
+      "text_sha256": "798259afe10d821b6c9bc7865c8eed04097eb5d50fac48e16f6b3a50ad818682"
+    },
+    {
+      "block_id": "page-0678-block-0022",
+      "order": 22,
+      "text": "maximum dose\n",
+      "bbox": [
+        330.6474914550781,
+        469.4678955078125,
+        339.35498046875,
+        518.2178955078125
+      ],
+      "text_sha256": "7b7539a03c57a16f41d8b8f865b0153b3a04c25314b516c58727fc7fc7dad727"
+    },
+    {
+      "block_id": "page-0678-block-0023",
+      "order": 23,
+      "text": "Older adults are also at greater risk for developing clinically significant hyponatremia2\n",
+      "bbox": [
+        340.6449890136719,
+        247.0279998779297,
+        349.35247802734375,
+        518.2178955078125
+      ],
+      "text_sha256": "c512321dc8e995d8f28d7197d27ddcf4824b16d4b28f85270edd862023c7c386"
+    },
+    {
+      "block_id": "page-0678-block-0024",
+      "order": 24,
+      "text": "400mg daily2\n",
+      "bbox": [
+        240.66749572753906,
+        114.08396911621094,
+        249.375,
+        156.10711669921875
+      ],
+      "text_sha256": "5d24038eb7a468da9853a19d4c3aa6c75518dfa91194d37c9cf273e8212bd68e"
+    },
+    {
+      "block_id": "page-0678-block-0025",
+      "order": 25,
+      "text": "Duloxetine\nDepression/anxiety disorder\n30mg daily*\n60mg daily\n120mg daily3\n",
+      "bbox": [
+        358.7925109863281,
+        114.08396911621094,
+        367.5,
+        612.6539916992188
+      ],
+      "text_sha256": "6954211d2a480cf76279c5384ee1bb9e710e9f5cba6825d1be9512502aca3b8f"
+    },
+    {
+      "block_id": "page-0678-block-0026",
+      "order": 26,
+      "text": "(caution as limited data in \n",
+      "bbox": [
+        368.74749755859375,
+        71.51473236083984,
+        377.5,
+        156.10711669921875
+      ],
+      "text_sha256": "2d917559a5586dcbca4f988d60fd3c826d9cb1b5c2353bbf445002a017e3d197"
+    },
+    {
+      "block_id": "page-0678-block-0027",
+      "order": 27,
+      "text": "elderly for this dose)\n",
+      "bbox": [
+        378.7449951171875,
+        91.5172348022461,
+        387.49749755859375,
+        156.10711669921875
+      ],
+      "text_sha256": "a81d021e1ac1bec81213442724a2f7ed2c97c4e186127399b3c71788887f376e"
+    },
+    {
+      "block_id": "page-0678-block-0028",
+      "order": 28,
+      "text": "Escitalopram\nDepression/anxiety disorder\n5mg mane\n5–10mg mane\n10mg mane\n",
+      "bbox": [
+        396.9175109863281,
+        117.35467529296875,
+        405.625,
+        612.6546630859375
+      ],
+      "text_sha256": "a2be3662e70a73c3b2c81167ace62c48d45c470ae999e8f6ffe0b8b6e28767dc"
+    },
+    {
+      "block_id": "page-0678-block-0029",
+      "order": 29,
+      "text": "(Continued)\n",
+      "bbox": [
+        417.677490234375,
+        64.35958099365234,
+        426.42999267578125,
+        100.3746337890625
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

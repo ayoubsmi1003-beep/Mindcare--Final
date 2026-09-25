@@ -1,0 +1,575 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0807",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 807,
+  "source_page_index": 806,
+  "source_page_display": 807,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "786    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\nPsychiatric side effects of antiseizure medications\nVirtually all antiseizure medications are known to have psychotropic effects. These effects \ncan be both helpful and unhelpful. The adverse and beneficial psychiatric side effects of \nantiseizure medications are summarised in Table 10.4. Readers are directed to the \n‘Summary of psychiatric side-effects of non-psychotropics’ elsewhere in The Guidelines \nfor a more detailed summary of psychiatric symptoms associated with antiseizure medi-\ncations, and for further information about determining causality in any given patient.\nCause of symptoms\nDescription\nManagement\nPost-ictal symptoms\n■\n■Typically presents between several hours to \n7 days following a seizure (depression, anxi-\nety, suicidal ideation and psychosis reported)\n■\n■PWE and interictal psychiatric disorders may \nexperience worsening of symptoms previ-\nously in remission (breakthrough symptoms)\n■\n■Postictal psychosis can remit spon-\ntaneously or respond to treatment \nwith low doses of antipsychotics.15 \nShort-term symptomatic treatment \nwith a benzodiazepine or antipsy-\nchotic is recommended for up to \n3 months16 Taper off carefully after \nsymptom resolution14\nIctal symptoms\n■\n■May present as ictal fear/panic (most com-\nmonly), depressive symptoms, or rarely, \npsychosis\n■\n■There is no evidence that psychotro-\npics can prevent ictal symptoms17\nPara-ictal episodes\n‘forced \nnormalisation’\n(psychiatric symptoms \nemerging as a result of \na reduction in seizure \nfrequency)\n■\n■Psychotic or, less commonly, severe affective \nsymptoms following seizure remission in \nPWE\n■\n■Rapid medication titration schedules, rapid \nseizure control, previously medication-re-\nsistant epilepsy, and temporal lobe epilepsy \nmay be risk factors15\n■\n■A decision should be made on how \nto proceed with antiseizure medi-\ncations and psychotropics through \na process of shared decision-\nmaking with carers.14 Symptomatic \ntreatment with antipsychotics or \nantidepressants may be indicated\nIatrogenic \npsychiatric \nsymptoms\n■\n■Changes in treatments for seizures could \nresult in psychiatric symptoms as a result of:\n■\n■Starting antiseizure medications with known \nnegative psychotropic properties (particularly \nin those with a psychiatric history)\n■\n■Stopping antiseizure medications with ben-\neficial psychotropic properties (e.g. mood \nstabilisation)\n■\n■Starting antiseizure medications with \nenzyme-inducing properties in people stable \non psychotropics\n■\n■Surgery for epilepsy: de novo postsurgical \nepisodes of depression, anxiety and, rarely, \npsychosis have been reported. Exacerbation \nof pre-existing conditions more common.\n■\n■Symptoms are managed by resolving \nthe underlying cause in the first in-\nstance\n■\n■Consider switching antiseizure \nmedications with known negative \npsychotropic properties to better \ntolerated antiseizure medications (see \nTable 10.4)\n■\n■Antiseizure medications can lower \nfolate levels which may affect \nmood. Folate levels should be \nchecked and low levels remedied if \nnecessary\n■\n■If changing antiseizure medications \nis not suitable, antidepressants can \nbe considered for iatrogenic depres-\nsive symptoms18\n■\n■Postsurgical neuropsychiatric symp-\ntoms may be treated successfully \nwith psychotropics17\nTable 10.3  (Continued)\n",
+  "raw_text_sha256": "84125d5d526344775cfa773fef8924fc88ab4dde4b9c79d4b9fdea20ac5fde22",
+  "coordinates_sha256": "04c287fb00da1d578575f1efca496bff8bb79a1dfdf19bdc051922266c61eee0",
+  "block_sequence_sha256": "d48c36f646c49ef2b4fecba0563fa52caa8b6d42bcd69e75ccecbbdf71a18499",
+  "blocks": [
+    {
+      "block_id": "page-0807-block-0000",
+      "order": 0,
+      "text": "786    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "2481dc39514bdf5083c9c69e3a47aa3c73b89cc4ffbce04f8dc34527e08831e9"
+    },
+    {
+      "block_id": "page-0807-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0807-block-0002",
+      "order": 2,
+      "text": "Psychiatric side effects of antiseizure medications\n",
+      "bbox": [
+        61.88999938964844,
+        543.87451171875,
+        316.98004150390625,
+        556.9094848632812
+      ],
+      "text_sha256": "e989eeee934895706074f7e61b091a43e4fdeb7408195cb6f7851344c07dca39"
+    },
+    {
+      "block_id": "page-0807-block-0003",
+      "order": 3,
+      "text": "Virtually all antiseizure medications are known to have psychotropic effects. These effects \ncan be both helpful and unhelpful. The adverse and beneficial psychiatric side effects of \nantiseizure medications are summarised in Table 10.4. Readers are directed to the \n‘Summary of psychiatric side-effects of non-psychotropics’ elsewhere in The Guidelines \nfor a more detailed summary of psychiatric symptoms associated with antiseizure medi-\ncations, and for further information about determining causality in any given patient.\n",
+      "bbox": [
+        61.889984130859375,
+        562.719482421875,
+        436.66998291015625,
+        634.4395141601562
+      ],
+      "text_sha256": "0253d7f1e74c1178c67fe17fff0997ed5133d6af40f2cba74b9ecb2458f48b9b"
+    },
+    {
+      "block_id": "page-0807-block-0004",
+      "order": 4,
+      "text": "Cause of symptoms\nDescription\nManagement\n",
+      "bbox": [
+        65.88999938964844,
+        90.37532043457031,
+        354.97003173828125,
+        99.2628173828125
+      ],
+      "text_sha256": "3c3e7a8e1645a7345f5045632480c05ecf55495e273b53dd9d548c3e651816f6"
+    },
+    {
+      "block_id": "page-0807-block-0005",
+      "order": 5,
+      "text": "Post-ictal symptoms\n■\n■Typically presents between several hours to \n",
+      "bbox": [
+        65.8900146484375,
+        108.00032043457031,
+        295.921630859375,
+        116.8878173828125
+      ],
+      "text_sha256": "566d9e56fb13692941f516c58b51310b57409aedc0d38a2d9d0c767f5f3e7f9d"
+    },
+    {
+      "block_id": "page-0807-block-0006",
+      "order": 6,
+      "text": "7 days following a seizure (depression, anxi-\nety, suicidal ideation and psychosis reported)\n",
+      "bbox": [
+        156.8791046142578,
+        118.17781829833984,
+        298.5766296386719,
+        136.8828125
+      ],
+      "text_sha256": "4e2a59f5600f56d4066dd17a7ca064c7a5d36891f1eb80e62ce95a2459091698"
+    },
+    {
+      "block_id": "page-0807-block-0007",
+      "order": 7,
+      "text": "■\n■PWE and interictal psychiatric disorders may \n",
+      "bbox": [
+        147.87899780273438,
+        138.18031311035156,
+        298.81658935546875,
+        146.8878173828125
+      ],
+      "text_sha256": "dd9eb9dd47be410dd7eb4d469afd2b3ae10477079802617da2bd6a4472ff312b"
+    },
+    {
+      "block_id": "page-0807-block-0008",
+      "order": 8,
+      "text": "experience worsening of symptoms previ-\nously in remission (breakthrough symptoms)\n",
+      "bbox": [
+        156.8791046142578,
+        148.1778106689453,
+        297.33160400390625,
+        166.8828125
+      ],
+      "text_sha256": "d67d32d4e0c4bbc7f27c4256f2e7b3e385c34769b4438a41e5a5f5e00cd6b42e"
+    },
+    {
+      "block_id": "page-0807-block-0009",
+      "order": 9,
+      "text": "■\n■Postictal psychosis can remit spon-\n",
+      "bbox": [
+        307.8789978027344,
+        108.1803207397461,
+        426.7466735839844,
+        116.8878173828125
+      ],
+      "text_sha256": "25550ec67929e3f36415d654003b98ba0b9154435e44475db3ee2c284b6b9926"
+    },
+    {
+      "block_id": "page-0807-block-0010",
+      "order": 10,
+      "text": "taneously or respond to treatment \nwith low doses of antipsychotics.15 \nShort-term symptomatic treatment \nwith a benzodiazepine or antipsy-\nchotic is recommended for up to \n3 months16 Taper off carefully after \nsymptom resolution14\n",
+      "bbox": [
+        316.87908935546875,
+        118.17781829833984,
+        430.220947265625,
+        186.88531494140625
+      ],
+      "text_sha256": "914ce1ef22e109bf82461fec445e42aed8c5da180afe954fc4f113df98b42bbe"
+    },
+    {
+      "block_id": "page-0807-block-0011",
+      "order": 11,
+      "text": "Ictal symptoms\n■\n■May present as ictal fear/panic (most com-\n",
+      "bbox": [
+        65.88999938964844,
+        189.6252899169922,
+        292.156494140625,
+        198.51278686523438
+      ],
+      "text_sha256": "2a5014cf6c1f4692091d3aac122e27e84be87233a662175ea6d949df706449bc"
+    },
+    {
+      "block_id": "page-0807-block-0012",
+      "order": 12,
+      "text": "monly), depressive symptoms, or rarely, \npsychosis\n",
+      "bbox": [
+        156.87899780273438,
+        199.8027801513672,
+        283.8389587402344,
+        218.50778198242188
+      ],
+      "text_sha256": "165ff3bddd5f79d19109abdf7f733ffca392b72feca1287243842230b6fd0428"
+    },
+    {
+      "block_id": "page-0807-block-0013",
+      "order": 13,
+      "text": "■\n■There is no evidence that psychotro-\n",
+      "bbox": [
+        307.8789978027344,
+        188.1053009033203,
+        432.45404052734375,
+        196.81280517578125
+      ],
+      "text_sha256": "d6d0dd58265cb7482dbfda14f249b0ebab492a09053d2f26141fa1e434d79918"
+    },
+    {
+      "block_id": "page-0807-block-0014",
+      "order": 14,
+      "text": "pics can prevent ictal symptoms17\n",
+      "bbox": [
+        316.8789978027344,
+        198.10279846191406,
+        422.84722900390625,
+        206.810302734375
+      ],
+      "text_sha256": "868a09aa7e88633bae1617dd342635b89a43acfacea0684359f7ad075ca65e84"
+    },
+    {
+      "block_id": "page-0807-block-0015",
+      "order": 15,
+      "text": "Para-ictal episodes\n",
+      "bbox": [
+        65.88999938964844,
+        227.2502899169922,
+        131.31997680664062,
+        236.13778686523438
+      ],
+      "text_sha256": "8702b787eced3b4a3f516b27afd094b83f98067c7ec7200491eb49b2243892b0"
+    },
+    {
+      "block_id": "page-0807-block-0016",
+      "order": 16,
+      "text": "‘forced \nnormalisation’\n",
+      "bbox": [
+        65.88999938964844,
+        240.24778747558594,
+        116.73249053955078,
+        259.1327819824219
+      ],
+      "text_sha256": "9b705f0537d63f2524a4ee5ad82b73c4cbc760a250f5cd5fb77e35b5bd51f99c"
+    },
+    {
+      "block_id": "page-0807-block-0017",
+      "order": 17,
+      "text": "(psychiatric symptoms \nemerging as a result of \na reduction in seizure \nfrequency)\n",
+      "bbox": [
+        65.88999938964844,
+        263.3777770996094,
+        141.3175048828125,
+        302.1227722167969
+      ],
+      "text_sha256": "f91c773bd0f8dd16f9292787e7a7fdb4df7141f683c03d6422e516bd7b71f78d"
+    },
+    {
+      "block_id": "page-0807-block-0018",
+      "order": 18,
+      "text": "■\n■Psychotic or, less commonly, severe affective \n",
+      "bbox": [
+        147.87899780273438,
+        227.43028259277344,
+        299.37890625,
+        236.13778686523438
+      ],
+      "text_sha256": "a891fc8d21571cebc37e09f5703e569f1ddf3db0507fd449121ed1a9285b0bb0"
+    },
+    {
+      "block_id": "page-0807-block-0019",
+      "order": 19,
+      "text": "symptoms following seizure remission in \nPWE\n",
+      "bbox": [
+        156.87899780273438,
+        237.4277801513672,
+        287.45404052734375,
+        256.1327819824219
+      ],
+      "text_sha256": "edba64839a6f33c189a6e38e2e63060a72f1aaf6bb8954299a8d1e027bd99cc4"
+    },
+    {
+      "block_id": "page-0807-block-0020",
+      "order": 20,
+      "text": "■\n■Rapid medication titration schedules, rapid \n",
+      "bbox": [
+        147.87899780273438,
+        257.4302978515625,
+        295.23150634765625,
+        266.1377868652344
+      ],
+      "text_sha256": "7a3ffdcddd2415fd970150600a0d4a0d6d65b410f93386e0690f09b3625cb0cf"
+    },
+    {
+      "block_id": "page-0807-block-0021",
+      "order": 21,
+      "text": "seizure control, previously medication-re-\nsistant epilepsy, and temporal lobe epilepsy \nmay be risk factors15\n",
+      "bbox": [
+        156.87899780273438,
+        267.42779541015625,
+        296.6264953613281,
+        296.1302795410156
+      ],
+      "text_sha256": "608d39bd259f15c536fe369903c56b7a4a7769c5d1b2e7b07d5755afa7797485"
+    },
+    {
+      "block_id": "page-0807-block-0022",
+      "order": 22,
+      "text": "■\n■A decision should be made on how \n",
+      "bbox": [
+        307.8789978027344,
+        227.43028259277344,
+        431.92913818359375,
+        236.13778686523438
+      ],
+      "text_sha256": "fd5b86d97eb756c6acb67ed5ec1451767a51ead7b96bba1829ae6ea06f57d903"
+    },
+    {
+      "block_id": "page-0807-block-0023",
+      "order": 23,
+      "text": "to proceed with antiseizure medi-\ncations and psychotropics through \na process of shared decision-\nmaking with carers.14 Symptomatic \ntreatment with antipsychotics or \nantidepressants may be indicated\n",
+      "bbox": [
+        316.8789978027344,
+        237.4277801513672,
+        430.34808349609375,
+        296.1327819824219
+      ],
+      "text_sha256": "ffa81a5b25af3848e33c2c3042cd71ca29c30930acd2d09b5284be88f07cdbff"
+    },
+    {
+      "block_id": "page-0807-block-0024",
+      "order": 24,
+      "text": "Iatrogenic \npsychiatric \nsymptoms\n",
+      "bbox": [
+        65.89311218261719,
+        311.8602600097656,
+        105.47811126708984,
+        340.7427673339844
+      ],
+      "text_sha256": "b74b14f88458c93915a188aedafdf3e922f14364eb6b8131b9b5027d4fe6a5cf"
+    },
+    {
+      "block_id": "page-0807-block-0025",
+      "order": 25,
+      "text": "■\n■Changes in treatments for seizures could \n",
+      "bbox": [
+        147.87899780273438,
+        312.04730224609375,
+        289.1264953613281,
+        320.7547912597656
+      ],
+      "text_sha256": "3ca5bb10c959f55db382349b7e2655f3263af7d09311442d7cae8b6650bd5ab9"
+    },
+    {
+      "block_id": "page-0807-block-0026",
+      "order": 26,
+      "text": "result in psychiatric symptoms as a result of:\n",
+      "bbox": [
+        156.87899780273438,
+        322.0447998046875,
+        297.0239562988281,
+        330.7522888183594
+      ],
+      "text_sha256": "75b36e0df26d3f27a99ea490cd60a968973f1fee38f9971be2d33b0c8174e616"
+    },
+    {
+      "block_id": "page-0807-block-0027",
+      "order": 27,
+      "text": "■\n■Starting antiseizure medications with known \n",
+      "bbox": [
+        147.87899780273438,
+        332.04730224609375,
+        300.9239807128906,
+        340.7547912597656
+      ],
+      "text_sha256": "e44b942a86e6157a278dc35b18b2acee0c614224c487cccf89395d5f71f5b1c7"
+    },
+    {
+      "block_id": "page-0807-block-0028",
+      "order": 28,
+      "text": "negative psychotropic properties (particularly \nin those with a psychiatric history)\n",
+      "bbox": [
+        156.87899780273438,
+        342.0447998046875,
+        301.6064758300781,
+        360.7497863769531
+      ],
+      "text_sha256": "b7e106e6e6e6e3e82ca0d693044833746f7717e64ecf694501edcac81f903935"
+    },
+    {
+      "block_id": "page-0807-block-0029",
+      "order": 29,
+      "text": "■\n■Stopping antiseizure medications with ben-\n",
+      "bbox": [
+        147.87899780273438,
+        362.04730224609375,
+        295.09649658203125,
+        370.7547912597656
+      ],
+      "text_sha256": "8060b24a59a5d193603f2f2a854273a558246af827c6d66be6b1e4ccec09a708"
+    },
+    {
+      "block_id": "page-0807-block-0030",
+      "order": 30,
+      "text": "eficial psychotropic properties (e.g. mood \nstabilisation)\n",
+      "bbox": [
+        156.87899780273438,
+        372.0447998046875,
+        290.79901123046875,
+        390.7497863769531
+      ],
+      "text_sha256": "bca89b1245380abda4f4f7afdaf10259cccb32d6d362e7f900f1642b29e04774"
+    },
+    {
+      "block_id": "page-0807-block-0031",
+      "order": 31,
+      "text": "■\n■Starting antiseizure medications with \n",
+      "bbox": [
+        147.87899780273438,
+        392.04730224609375,
+        276.74395751953125,
+        400.7547912597656
+      ],
+      "text_sha256": "82d387a996b2f2c7cf90f609aa0aae8c7f14c740a31c4a9e1c8ff1f5226e541b"
+    },
+    {
+      "block_id": "page-0807-block-0032",
+      "order": 32,
+      "text": "enzyme-inducing properties in people stable \non psychotropics\n",
+      "bbox": [
+        156.87899780273438,
+        402.0447998046875,
+        300.0990295410156,
+        420.7497863769531
+      ],
+      "text_sha256": "edb762deb3b95b80c123ac3b53caf115a85ab5f5ea5fe1365c12c65441e1c712"
+    },
+    {
+      "block_id": "page-0807-block-0033",
+      "order": 33,
+      "text": "■\n■Surgery for epilepsy: de novo postsurgical \n",
+      "bbox": [
+        147.87899780273438,
+        422.04730224609375,
+        291.90155029296875,
+        430.7547912597656
+      ],
+      "text_sha256": "7fb7aa8a6774bc025db140108b49e7d784d02a674656539155ba92aa6680045e"
+    },
+    {
+      "block_id": "page-0807-block-0034",
+      "order": 34,
+      "text": "episodes of depression, anxiety and, rarely, \npsychosis have been reported. Exacerbation \nof pre-existing conditions more common.\n",
+      "bbox": [
+        156.87899780273438,
+        432.0447998046875,
+        298.0140075683594,
+        460.7472839355469
+      ],
+      "text_sha256": "2465872e78575955ce598ad5ba0148ac09be9ad8cc0dc82b3e61cb75a71447a3"
+    },
+    {
+      "block_id": "page-0807-block-0035",
+      "order": 35,
+      "text": "■\n■Symptoms are managed by resolving \n",
+      "bbox": [
+        307.8789978027344,
+        312.04730224609375,
+        429.0039367675781,
+        320.7547912597656
+      ],
+      "text_sha256": "e6d41c9b41887c7238dd568764523fde68b20125bbe0b9231c80e10f781bb897"
+    },
+    {
+      "block_id": "page-0807-block-0036",
+      "order": 36,
+      "text": "the underlying cause in the first in-\nstance\n",
+      "bbox": [
+        316.8789978027344,
+        322.0447998046875,
+        420.2739562988281,
+        340.7497863769531
+      ],
+      "text_sha256": "7bf2f26357739ac15da4c07f049ff67d3fa50f6f3922cc67198e9f4e1c98efdb"
+    },
+    {
+      "block_id": "page-0807-block-0037",
+      "order": 37,
+      "text": "■\n■Consider switching antiseizure \n",
+      "bbox": [
+        307.8789978027344,
+        342.04730224609375,
+        411.79150390625,
+        350.7547912597656
+      ],
+      "text_sha256": "9ad7969264024697c0bf663c94106a1ce7be639d0d4be232e47321ca14a52a5c"
+    },
+    {
+      "block_id": "page-0807-block-0038",
+      "order": 38,
+      "text": "medications with known negative \npsychotropic properties to better \ntolerated antiseizure medications (see \nTable 10.4)\n",
+      "bbox": [
+        316.8789978027344,
+        352.0447998046875,
+        433.5566101074219,
+        390.7447814941406
+      ],
+      "text_sha256": "93e22c95fdf529a098971e86bdd107605516720367398f39975e3d8279fd7e3b"
+    },
+    {
+      "block_id": "page-0807-block-0039",
+      "order": 39,
+      "text": "■\n■Antiseizure medications can lower \n",
+      "bbox": [
+        307.8789978027344,
+        392.04730224609375,
+        427.9990539550781,
+        400.7547912597656
+      ],
+      "text_sha256": "cf58e0bac3f5c5fbb20326a4067782a95b1eec96f2c726ba03b61173d61415d6"
+    },
+    {
+      "block_id": "page-0807-block-0040",
+      "order": 40,
+      "text": "folate levels which may affect \nmood. Folate levels should be \nchecked and low levels remedied if \nnecessary\n",
+      "bbox": [
+        316.8789978027344,
+        402.0447998046875,
+        430.5040283203125,
+        440.7447814941406
+      ],
+      "text_sha256": "838d25e8141de0098999bee6ae7ca9d69a5a4c8a3934866fb4de37222044beba"
+    },
+    {
+      "block_id": "page-0807-block-0041",
+      "order": 41,
+      "text": "■\n■If changing antiseizure medications \n",
+      "bbox": [
+        307.8789978027344,
+        442.04730224609375,
+        431.33660888671875,
+        450.7547912597656
+      ],
+      "text_sha256": "21ffe40feb82bebdf05b6bfaf5de14b190f7346fcafa90b06588de5770ee0c47"
+    },
+    {
+      "block_id": "page-0807-block-0042",
+      "order": 42,
+      "text": "is not suitable, antidepressants can \nbe considered for iatrogenic depres-\nsive symptoms18\n",
+      "bbox": [
+        316.8789978027344,
+        452.0447998046875,
+        431.9065856933594,
+        480.7472839355469
+      ],
+      "text_sha256": "6734a8a8293f0c68ad67a178afc206dd814c492956f4c30b1822564f11ca5c33"
+    },
+    {
+      "block_id": "page-0807-block-0043",
+      "order": 43,
+      "text": "■\n■Postsurgical neuropsychiatric symp-\n",
+      "bbox": [
+        307.8789978027344,
+        482.04730224609375,
+        429.6565856933594,
+        490.7547912597656
+      ],
+      "text_sha256": "4380c6ba036fc823989818d4133a1a41bbabaefa5364c0b300d9bc80dc5fb50f"
+    },
+    {
+      "block_id": "page-0807-block-0044",
+      "order": 44,
+      "text": "toms may be treated successfully \nwith psychotropics17\n",
+      "bbox": [
+        316.8789978027344,
+        492.0447998046875,
+        423.8215026855469,
+        510.7497863769531
+      ],
+      "text_sha256": "325ed4ad93a6c4007f043bf6256f7711042ef560895b8584eaedec10b4a9ff12"
+    },
+    {
+      "block_id": "page-0807-block-0045",
+      "order": 45,
+      "text": "Table 10.3  (Continued)\n",
+      "bbox": [
+        67.88999938964844,
+        70.08790588378906,
+        144.17999267578125,
+        78.97540283203125
+      ],
+      "text_sha256": "628d479380e06b136ce51b8999e541aa38b02aa276059c3a0103bdf0ab15684d"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

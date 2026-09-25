@@ -1,0 +1,263 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0935",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 935,
+  "source_page_index": 934,
+  "source_page_display": 935,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "914    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 14\nTable 14.3  (Continued)\nParameter\nReference range\nAgents reported to raise \nlevels\nAgents reported to lower \nlevels\nMean cell \nhaemoglobin\n27–32pg\nMedications associated with \nmegaloblastic anaemia e.g. all \nantiseizure medications, \nnitrous oxide\nAlcohol\nNone known\nMean cell haemoglobin \nconcentration\n320–360g/L\nMean cell volume\n80–100fL\nMonocytes\n0.2–0.8 × 109/L\nHaloperidol\nNone known\nNeutrophils\n2.0–7.5 × 109/L \n(may be lower in people of \nAfrican descent due to \nbenign ethnic neutropenia)\nBupropion, carbamazepine†, \ncitalopram, chlorpromazine, \nclozapine†, duloxetine, \nfluoxetine, fluphenazine, \nhaloperidol, lamotrigine, \nlithium, maprotiline, \nolanzapine, quetiapine, \nrisperidone/paliperidone, \nrivastigmine, tiotixene, \ntrazodone, venlafaxine\nAgents associated with \nagranulocytosis: \namoxapine, aripiprazole, \nbarbiturates, carbamazepine, \nchlordiazepoxide, \nchlorpromazine, clozapine‡, \ncocaine (adulterated), \ndiazepam, fluphenazine, \nhaloperidol, meprobamate, \nmianserin, mirtazapine, \nolanzapine, pirenzepine, \npromethazine, risperidone/\npaliperidone, TCAs \n(especially imipramine), \ntranylcypromine, valproate\nAgents associated with \nleucopoenia: amitriptyline, \namoxapine, asenapine, \nbupropion, carbamazepine, \ncariprazine, chlorpromazine, \ncitalopram, clomipramine, \nclonazepam, clozapine, \nduloxetine, fluoxetine, \nfluphenazine, galantamine, \nhaloperidol, lamotrigine, \nlorazepam, lumateperone, \nlurasidone, memantine, \nmeprobamate, mianserin, \nmirtazapine, modafinil, nitrous \noxide, olanzapine, oxazepam, \nphenelzine, pregabalin, \npromethazine, quetiapine, \ntranylcypromine, valproate, \nvenlafaxine, ziprasidone\nAgents associated with \nneutropenia: sertraline, \ntrazodone, valproate\nPacked cell volume\nFemales: 0.37–0.47L/L \nMales: 0.40–0.52L/L\nClozapine (rare), testosterone\nBenzodiazepines (rare), \nbuprenorphine, naltrexone, \nvigabatrin\n",
+  "raw_text_sha256": "a0252a80d6c4a5bb6edc977e0d38904195d4ae09561f0528d75389a296735e34",
+  "coordinates_sha256": "210349b5fcff5c69171f5fdf691885a4cf3a31ce2b644e7109a67f306f866c7d",
+  "block_sequence_sha256": "a2704f98922623c9344a8cd0f4e0ee0b618c82936176437dae7961005d27f467",
+  "blocks": [
+    {
+      "block_id": "page-0935-block-0000",
+      "order": 0,
+      "text": "914    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "607f5b66745ab6269ffdb776bb53a003d6516ddc63b94a01d08f52c612581eca"
+    },
+    {
+      "block_id": "page-0935-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        18.520000457763672,
+        338.7405090332031,
+        28.0,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0935-block-0002",
+      "order": 2,
+      "text": "Table 14.3  (Continued)\n",
+      "bbox": [
+        67.88970184326172,
+        70.08790588378906,
+        144.17970275878906,
+        78.97540283203125
+      ],
+      "text_sha256": "7231225c9e8b14058598bb982db0899de80655e21e54ec16db99d31c9d795d7b"
+    },
+    {
+      "block_id": "page-0935-block-0003",
+      "order": 3,
+      "text": "Parameter\nReference range\nAgents reported to raise \nlevels\n",
+      "bbox": [
+        61.889801025390625,
+        90.03968811035156,
+        320.8197937011719,
+        108.9246826171875
+      ],
+      "text_sha256": "2d8396b50a0166fb5174838b85b12dbab30e8d3f13f6168449e65c27a04464a6"
+    },
+    {
+      "block_id": "page-0935-block-0004",
+      "order": 4,
+      "text": "Agents reported to lower \nlevels\n",
+      "bbox": [
+        337.852294921875,
+        90.03968811035156,
+        429.8172912597656,
+        108.9246826171875
+      ],
+      "text_sha256": "fb27f96225e0cbd9a32bd98053962899f0febd02bfe697fd98d1c326340a4999"
+    },
+    {
+      "block_id": "page-0935-block-0005",
+      "order": 5,
+      "text": "Mean cell \nhaemoglobin\n",
+      "bbox": [
+        61.889801025390625,
+        116.73970794677734,
+        103.98728942871094,
+        135.4447021484375
+      ],
+      "text_sha256": "52b72ced524d70f63768354903a8ecb68c78693be99b34dc2a01ea02fb9d00af"
+    },
+    {
+      "block_id": "page-0935-block-0006",
+      "order": 6,
+      "text": "27–32pg\nMedications associated with \nmegaloblastic anaemia e.g. all \nantiseizure medications, \nnitrous oxide\n",
+      "bbox": [
+        139.852294921875,
+        116.73970794677734,
+        330.94482421875,
+        155.439697265625
+      ],
+      "text_sha256": "28288977d04525db3197a5e30405d7376a50658c68fa13c960e0629090e0de60"
+    },
+    {
+      "block_id": "page-0935-block-0007",
+      "order": 7,
+      "text": "Alcohol\n",
+      "bbox": [
+        232.60479736328125,
+        166.7346954345703,
+        256.77728271484375,
+        175.44219970703125
+      ],
+      "text_sha256": "ea607c5a5b871f6582c8881d61eec7d991d381ac1069909f5b165d897b466b47"
+    },
+    {
+      "block_id": "page-0935-block-0008",
+      "order": 8,
+      "text": "None known\n",
+      "bbox": [
+        337.852294921875,
+        116.7322006225586,
+        379.1248474121094,
+        125.439697265625
+      ],
+      "text_sha256": "ba6586dc579443d5e17252c96d100bb0bdb30ec0ac15a8dc02e530767503ecc9"
+    },
+    {
+      "block_id": "page-0935-block-0009",
+      "order": 9,
+      "text": "Mean cell haemoglobin \nconcentration\n",
+      "bbox": [
+        61.889801025390625,
+        141.7597198486328,
+        135.8397979736328,
+        160.4647216796875
+      ],
+      "text_sha256": "78eaac8c41082d3e3bb0e4839186c2fd2b648584726b26797af47e2a77ebc530"
+    },
+    {
+      "block_id": "page-0935-block-0010",
+      "order": 10,
+      "text": "320–360g/L\n",
+      "bbox": [
+        139.852294921875,
+        141.7597198486328,
+        178.20729064941406,
+        150.46722412109375
+      ],
+      "text_sha256": "913f4e6cdfb3610d3f596b268ccbce053faaeb46bd8b1047661b58f1781af79b"
+    },
+    {
+      "block_id": "page-0935-block-0011",
+      "order": 11,
+      "text": "Mean cell volume\n80–100fL\n",
+      "bbox": [
+        61.889793395996094,
+        166.78724670410156,
+        170.27978515625,
+        175.4947509765625
+      ],
+      "text_sha256": "3f101f4f9d0f128ae6ca852bf611097046e2580a51d55280de8a3aadc4b4f07f"
+    },
+    {
+      "block_id": "page-0935-block-0012",
+      "order": 12,
+      "text": "Monocytes\n0.2–0.8 × 109/L\nHaloperidol\nNone known\n",
+      "bbox": [
+        61.889793395996094,
+        181.8097381591797,
+        379.1239318847656,
+        190.52719116210938
+      ],
+      "text_sha256": "86cd9133aecca2f9103ca01f1b6aa2b27608126601740c06c1f34efd484b2891"
+    },
+    {
+      "block_id": "page-0935-block-0013",
+      "order": 13,
+      "text": "Neutrophils\n2.0–7.5 × 109/L \n(may be lower in people of \nAfrican descent due to \nbenign ethnic neutropenia)\n",
+      "bbox": [
+        61.888885498046875,
+        196.84217834472656,
+        225.72325134277344,
+        235.544677734375
+      ],
+      "text_sha256": "80cc8cd60eec4c1eede18ff44d3789b6acf1eba3994845a3c7c4e7dc1587fd99"
+    },
+    {
+      "block_id": "page-0935-block-0014",
+      "order": 14,
+      "text": "Bupropion, carbamazepine†, \ncitalopram, chlorpromazine, \nclozapine†, duloxetine, \nfluoxetine, fluphenazine, \nhaloperidol, lamotrigine, \nlithium, maprotiline, \nolanzapine, quetiapine, \nrisperidone/paliperidone, \nrivastigmine, tiotixene, \ntrazodone, venlafaxine\n",
+      "bbox": [
+        232.60079956054688,
+        196.83717346191406,
+        324.9184875488281,
+        295.53466796875
+      ],
+      "text_sha256": "55bd614588f56cb9d760e380ade8d02c5a0c8dca2bbe65c37f20100827209cae"
+    },
+    {
+      "block_id": "page-0935-block-0015",
+      "order": 15,
+      "text": "Agents associated with \nagranulocytosis: \namoxapine, aripiprazole, \nbarbiturates, carbamazepine, \nchlordiazepoxide, \nchlorpromazine, clozapine‡, \ncocaine (adulterated), \ndiazepam, fluphenazine, \nhaloperidol, meprobamate, \nmianserin, mirtazapine, \nolanzapine, pirenzepine, \npromethazine, risperidone/\npaliperidone, TCAs \n(especially imipramine), \ntranylcypromine, valproate\n",
+      "bbox": [
+        337.8486022949219,
+        196.6471710205078,
+        430.82598876953125,
+        345.4996337890625
+      ],
+      "text_sha256": "62bf4f04b6a1028f5723575453de84e152958dbe96fbed3af3e065c3945aec38"
+    },
+    {
+      "block_id": "page-0935-block-0016",
+      "order": 16,
+      "text": "Agents associated with \nleucopoenia: amitriptyline, \namoxapine, asenapine, \nbupropion, carbamazepine, \ncariprazine, chlorpromazine, \ncitalopram, clomipramine, \nclonazepam, clozapine, \nduloxetine, fluoxetine, \nfluphenazine, galantamine, \nhaloperidol, lamotrigine, \nlorazepam, lumateperone, \nlurasidone, memantine, \nmeprobamate, mianserin, \nmirtazapine, modafinil, nitrous \noxide, olanzapine, oxazepam, \nphenelzine, pregabalin, \npromethazine, quetiapine, \ntranylcypromine, valproate, \nvenlafaxine, ziprasidone\n",
+      "bbox": [
+        337.8486022949219,
+        350.6146240234375,
+        430.9685363769531,
+        539.4570922851562
+      ],
+      "text_sha256": "93169694dbd345be8733c003c19cd193d6c21dd06591e476bea5f9bb78de4efc"
+    },
+    {
+      "block_id": "page-0935-block-0017",
+      "order": 17,
+      "text": "Agents associated with \nneutropenia: sertraline, \ntrazodone, valproate\n",
+      "bbox": [
+        337.8486022949219,
+        544.5720825195312,
+        422.02105712890625,
+        573.45458984375
+      ],
+      "text_sha256": "d296a2c0f1ed79c25145b778250f74781d8966a0f5cec7f0905c724e6480787b"
+    },
+    {
+      "block_id": "page-0935-block-0018",
+      "order": 18,
+      "text": "Packed cell volume\nFemales: 0.37–0.47L/L \nMales: 0.40–0.52L/L\n",
+      "bbox": [
+        61.8861083984375,
+        579.7695922851562,
+        213.19862365722656,
+        598.474609375
+      ],
+      "text_sha256": "913fbac14f0c8d43af99173cca0a0150adb84f7257b3c66142c2134f625b5b6c"
+    },
+    {
+      "block_id": "page-0935-block-0019",
+      "order": 19,
+      "text": "Clozapine (rare), testosterone\nBenzodiazepines (rare), \nbuprenorphine, naltrexone, \nvigabatrin\n",
+      "bbox": [
+        232.60110473632812,
+        579.7695922851562,
+        427.1886901855469,
+        608.4721069335938
+      ],
+      "text_sha256": "642dec339753cbc4799fc8f420de1905c7efe1e6c15896e4e5fa41f7b1ebcfed"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

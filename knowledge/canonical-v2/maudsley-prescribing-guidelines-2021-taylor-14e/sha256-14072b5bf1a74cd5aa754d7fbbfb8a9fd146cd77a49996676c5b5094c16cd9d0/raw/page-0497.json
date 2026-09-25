@@ -1,0 +1,419 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0497",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 497,
+  "source_page_index": 496,
+  "source_page_display": 497,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "476    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nprescribed as ‘maintenance’, which refers to a longer period of months to years on a \nstable dose of OST.\nThe goals of OST are as follows:\n■\n■To reduce or prevent withdrawal symptoms\n■\n■To reduce or eliminate non-prescribed drug use\n■\n■To stabilise drug intake and lifestyle\n■\n■To reduce drug-related harm (particularly injecting behaviour)\n■\n■To engage and provide an opportunity to work with the patient\nTreatment will depend upon:\n■\n■what pharmacotherapies and/or other interventions are available\n■\n■patient’s previous history of drug use and treatment\n■\n■patient’s current drug use and circumstances\n■\n■location/service where treatment is initiated.\nMost OST prescribing for people with mental health problems should be initiated by \nspecialist addiction services, although they should continue to receive appropriate psy-\nchiatric care from mental health services.8 Some people with co-morbid opioid depend-\nence and mental health problems will be admitted to psychiatric inpatient wards and \ngeneral psychiatrists will need to take over, or initiate prescribing in the immediate \nterm1 (see dedicated section later).\nClinicians should take care to ensure that patients are physiologically dependent on \nopioids before initiating OST, e.g. clinical evidence of opioid withdrawal, positive urine \ndrug screens and documented ongoing OST.\nAssessment should involve the following:\n■\n■What opioids the person is taking\n■\n■What other drugs are used, including alcohol and other depressants\n■\n■Frequency, quantity and route of administration of all substances used\n■\n■Time of last use\n■\n■Medical co-morbidity that may affect prescribing decisions, e.g. COPD\n■\n■Prescribed medication, which can interact with OST – respiratory depressants, those \nthat prolong QT\n■\n■Previous experience of treatment\n■\n■Previous overdoses\n■\n■Whether they have Take Home Naloxone\n■\n■Whether there are objective signs of opioid withdrawal using a validated scale such \nas Objective Opiate Withdrawal Scale (OOWS) or Clinical Opiate Withdrawal Scale \n(COWS); see Table 4.8\n■\n■Examination of injection sites\n■\n■Collateral information from addiction services and pharmacy with respect to usual \ndose of OST and most recently dispensed dose\nUntreated heroin withdrawal symptoms typically begin after 4–6 hours and reach \ntheir peak 32–72 hours after the last dose. Symptoms will have subsided substantially \nafter 5 days. Untreated methadone withdrawal typically reaches its peak between 4 and \n6 days after the last dose and symptoms do not subside for 10–12 days. Untreated \n",
+  "raw_text_sha256": "aced5b5f79edb10112d8d3cb8f8f93eed0453147f5e9a060cefb106685c25835",
+  "coordinates_sha256": "5579cce7f62bcca24af6a3be8b31b9b8f32fd6d40b7445b08d557e0a48cba614",
+  "block_sequence_sha256": "f3ef05c9b4c2b1873d93f3fbf072b24b71c4a1eac7926889b15606e0aa401cbc",
+  "blocks": [
+    {
+      "block_id": "page-0497-block-0000",
+      "order": 0,
+      "text": "476    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "b25050be1e8a05354ad3d2495b1a841b8614cb04b897a102f73ed5ec37576a23"
+    },
+    {
+      "block_id": "page-0497-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0497-block-0002",
+      "order": 2,
+      "text": "prescribed as ‘maintenance’, which refers to a longer period of months to years on a \nstable dose of OST.\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.6199035644531,
+        86.27029418945312
+      ],
+      "text_sha256": "89b31c32d1d4a61d5e20021cce5d8dc69639c81e1450abece1d23ba57f13de2b"
+    },
+    {
+      "block_id": "page-0497-block-0003",
+      "order": 3,
+      "text": "The goals of OST are as follows:\n",
+      "bbox": [
+        71.88999938964844,
+        86.55029296875,
+        213.01998901367188,
+        98.27029418945312
+      ],
+      "text_sha256": "00b8f1f05e4a95faea8aecd29ecb28a2da9aaf429591844acd9ddbe3513c5561"
+    },
+    {
+      "block_id": "page-0497-block-0004",
+      "order": 4,
+      "text": "■\n■To reduce or prevent withdrawal symptoms\n",
+      "bbox": [
+        61.88990020751953,
+        104.55029296875,
+        259.3599853515625,
+        116.27029418945312
+      ],
+      "text_sha256": "3670ec9633dffd2d64ea12aaf33b154bb681678e2df49615b92451be9a71c82f"
+    },
+    {
+      "block_id": "page-0497-block-0005",
+      "order": 5,
+      "text": "■\n■To reduce or eliminate non-prescribed drug use\n",
+      "bbox": [
+        61.88990020751953,
+        116.55029296875,
+        274.3800048828125,
+        128.27029418945312
+      ],
+      "text_sha256": "deaa0ce7b3b10d91fa17d7c75eeb64ee0398a234a58417dee3ec74223aae7674"
+    },
+    {
+      "block_id": "page-0497-block-0006",
+      "order": 6,
+      "text": "■\n■To stabilise drug intake and lifestyle\n",
+      "bbox": [
+        61.88990020751953,
+        128.55029296875,
+        226.04998779296875,
+        140.27029418945312
+      ],
+      "text_sha256": "64bbdb2026f257691562b9c3e587936ea13cad75d0abb0da05f19f230334d2b9"
+    },
+    {
+      "block_id": "page-0497-block-0007",
+      "order": 7,
+      "text": "■\n■To reduce drug-related harm (particularly injecting behaviour)\n",
+      "bbox": [
+        61.88990020751953,
+        140.55029296875,
+        339.3799743652344,
+        152.27029418945312
+      ],
+      "text_sha256": "e93987a5e23c422e83f8840bdf18d6624b16734a413914f058b03808bd812e90"
+    },
+    {
+      "block_id": "page-0497-block-0008",
+      "order": 8,
+      "text": "■\n■To engage and provide an opportunity to work with the patient\n",
+      "bbox": [
+        61.88990020751953,
+        152.55029296875,
+        344.98992919921875,
+        164.27029418945312
+      ],
+      "text_sha256": "46bf782d47e611027599fa0290629ffe1e2d12f3e3a8d4ba339a64367c22fdbf"
+    },
+    {
+      "block_id": "page-0497-block-0009",
+      "order": 9,
+      "text": "Treatment will depend upon:\n",
+      "bbox": [
+        71.88999938964844,
+        170.55029296875,
+        196.7899932861328,
+        182.27029418945312
+      ],
+      "text_sha256": "9e7e52f84376b844458df4b59d5158eef52706bffc19dad9d7d3b52f7a82418c"
+    },
+    {
+      "block_id": "page-0497-block-0010",
+      "order": 10,
+      "text": "■\n■what pharmacotherapies and/or other interventions are available\n",
+      "bbox": [
+        61.88990020751953,
+        188.55029296875,
+        350.3799743652344,
+        200.27029418945312
+      ],
+      "text_sha256": "134de8d854974341261b3980accf6f0b4e2c71430f52312285b1b543eb66ebd2"
+    },
+    {
+      "block_id": "page-0497-block-0011",
+      "order": 11,
+      "text": "■\n■patient’s previous history of drug use and treatment\n",
+      "bbox": [
+        61.88990020751953,
+        200.55029296875,
+        293.51995849609375,
+        212.27029418945312
+      ],
+      "text_sha256": "c922b4d97dd19ad5da64ee0d4e468cc14ad6827904530b6e9795354484ad3177"
+    },
+    {
+      "block_id": "page-0497-block-0012",
+      "order": 12,
+      "text": "■\n■patient’s current drug use and circumstances\n",
+      "bbox": [
+        61.88990020751953,
+        212.55029296875,
+        261.8299865722656,
+        224.27029418945312
+      ],
+      "text_sha256": "ac43b5e6ffd93286c4723c472cf8bfe680b67f61e5f0d6314b4bf398030e516d"
+    },
+    {
+      "block_id": "page-0497-block-0013",
+      "order": 13,
+      "text": "■\n■location/service where treatment is initiated.\n",
+      "bbox": [
+        61.88990020751953,
+        224.55029296875,
+        261.44000244140625,
+        236.27029418945312
+      ],
+      "text_sha256": "bb995efdf0ff0573529002dd502ad6a09c5786e3850cde803428a16569844b3a"
+    },
+    {
+      "block_id": "page-0497-block-0014",
+      "order": 14,
+      "text": "Most OST prescribing for people with mental health problems should be initiated by \nspecialist addiction services, although they should continue to receive appropriate psy-\nchiatric care from mental health services.8 Some people with co-morbid opioid depend-\nence and mental health problems will be admitted to psychiatric inpatient wards and \ngeneral psychiatrists will need to take over, or initiate prescribing in the immediate \nterm1 (see dedicated section later).\n",
+      "bbox": [
+        61.88999938964844,
+        242.55029296875,
+        436.6928405761719,
+        314.2702941894531
+      ],
+      "text_sha256": "2c609b79369133138269636b244057624eaf976e8db9dc09c21ab0dd512fb296"
+    },
+    {
+      "block_id": "page-0497-block-0015",
+      "order": 15,
+      "text": "Clinicians should take care to ensure that patients are physiologically dependent on \nopioids before initiating OST, e.g. clinical evidence of opioid withdrawal, positive urine \ndrug screens and documented ongoing OST.\n",
+      "bbox": [
+        61.89099884033203,
+        314.55029296875,
+        436.7010192871094,
+        350.2702941894531
+      ],
+      "text_sha256": "da884e0bdbe9968302b886a4fa9ff2a38431e32d4fd01f187b9170fa18050811"
+    },
+    {
+      "block_id": "page-0497-block-0016",
+      "order": 16,
+      "text": "Assessment should involve the following:\n",
+      "bbox": [
+        71.89099884033203,
+        350.55029296875,
+        249.14097595214844,
+        362.2702941894531
+      ],
+      "text_sha256": "182f5f87a542a25c9097b064538d7b0daf638d56a56c8ae760f0e90e913db3c8"
+    },
+    {
+      "block_id": "page-0497-block-0017",
+      "order": 17,
+      "text": "■\n■What opioids the person is taking\n",
+      "bbox": [
+        61.88990020751953,
+        368.55029296875,
+        216.49996948242188,
+        380.2702941894531
+      ],
+      "text_sha256": "b5eb19dd412e50f8334e9d5e7ccc329702f588308ae244afae16626f83970083"
+    },
+    {
+      "block_id": "page-0497-block-0018",
+      "order": 18,
+      "text": "■\n■What other drugs are used, including alcohol and other depressants\n",
+      "bbox": [
+        61.88990020751953,
+        380.55029296875,
+        361.7200012207031,
+        392.2702941894531
+      ],
+      "text_sha256": "aeb66d7bde5c4249484b46611ea1a26129877386d8ab6a7b9462b8a6c6a6e21f"
+    },
+    {
+      "block_id": "page-0497-block-0019",
+      "order": 19,
+      "text": "■\n■Frequency, quantity and route of administration of all substances used\n",
+      "bbox": [
+        61.88990020751953,
+        392.55029296875,
+        373.5699462890625,
+        404.2702941894531
+      ],
+      "text_sha256": "6e9259ec4b854a5b10ba1c137f4620a74db0e29366e5376a3bf43d366fbbb012"
+    },
+    {
+      "block_id": "page-0497-block-0020",
+      "order": 20,
+      "text": "■\n■Time of last use\n",
+      "bbox": [
+        61.88990020751953,
+        404.55029296875,
+        138.83999633789062,
+        416.2702941894531
+      ],
+      "text_sha256": "3a17a8f99feca59b4e37fd3ae58dc7ff7f88c1b9a7f7845ae3c856700f317d7d"
+    },
+    {
+      "block_id": "page-0497-block-0021",
+      "order": 21,
+      "text": "■\n■Medical co-morbidity that may affect prescribing decisions, e.g. COPD\n",
+      "bbox": [
+        61.88990020751953,
+        416.55029296875,
+        376.27001953125,
+        428.2702941894531
+      ],
+      "text_sha256": "7511c9ad03ab95918d06995d90652b34e03385849f0d0add6ef088ff3c26ffe6"
+    },
+    {
+      "block_id": "page-0497-block-0022",
+      "order": 22,
+      "text": "■\n■Prescribed medication, which can interact with OST – respiratory depressants, those \n",
+      "bbox": [
+        61.88990020751953,
+        428.55029296875,
+        436.7000732421875,
+        440.2702941894531
+      ],
+      "text_sha256": "b0cae6c6e32f8afa29070efe7027516a1c42fe58071d59ea0ea036b966216c5f"
+    },
+    {
+      "block_id": "page-0497-block-0023",
+      "order": 23,
+      "text": "that prolong QT\n",
+      "bbox": [
+        70.88999938964844,
+        440.55029296875,
+        142.5699920654297,
+        452.2702941894531
+      ],
+      "text_sha256": "6eb176636b178452a9af45c0f61cd90ddac1c8ccd183bf4bbdf412bd16caa044"
+    },
+    {
+      "block_id": "page-0497-block-0024",
+      "order": 24,
+      "text": "■\n■Previous experience of treatment\n",
+      "bbox": [
+        61.88990020751953,
+        452.55029296875,
+        211.99000549316406,
+        464.2702941894531
+      ],
+      "text_sha256": "ba8d47c6c4a010d9e016073874b8c8d1477bf9660aa7e09bcbf86a2e1f90f6dd"
+    },
+    {
+      "block_id": "page-0497-block-0025",
+      "order": 25,
+      "text": "■\n■Previous overdoses\n",
+      "bbox": [
+        61.88990020751953,
+        464.55029296875,
+        152.57998657226562,
+        476.2702941894531
+      ],
+      "text_sha256": "1a56961e1e13b93156b8bc949a11cab90b9e945f091c9381b3c9df6747500884"
+    },
+    {
+      "block_id": "page-0497-block-0026",
+      "order": 26,
+      "text": "■\n■Whether they have Take Home Naloxone\n",
+      "bbox": [
+        61.88990020751953,
+        476.55029296875,
+        250.21998596191406,
+        488.2702941894531
+      ],
+      "text_sha256": "b3e9f338800593cc35c155f7fd9e1a6d0f9810b4d352bcb013c72251d45d9944"
+    },
+    {
+      "block_id": "page-0497-block-0027",
+      "order": 27,
+      "text": "■\n■Whether there are objective signs of opioid withdrawal using a validated scale such \n",
+      "bbox": [
+        61.88990020751953,
+        488.55029296875,
+        436.6400451660156,
+        500.2702941894531
+      ],
+      "text_sha256": "e2d800169f809fcc31ba0c91b2c4cb4a0738b0942540c49b0e5d9b0ade2815d0"
+    },
+    {
+      "block_id": "page-0497-block-0028",
+      "order": 28,
+      "text": "as Objective Opiate Withdrawal Scale (OOWS) or Clinical Opiate Withdrawal Scale \n(COWS); see Table 4.8\n",
+      "bbox": [
+        70.88999938964844,
+        500.55029296875,
+        436.69000244140625,
+        524.2703247070312
+      ],
+      "text_sha256": "b9c1bfe9f7febb2d25b449902758477c8eeda8a2d841656fc66057b511eda2b1"
+    },
+    {
+      "block_id": "page-0497-block-0029",
+      "order": 29,
+      "text": "■\n■Examination of injection sites\n",
+      "bbox": [
+        61.88990020751953,
+        524.55029296875,
+        199.239990234375,
+        536.2703247070312
+      ],
+      "text_sha256": "2b784b327446dac7edd414ef732efb4e0e0d069af300eab07b0d67e233f4512e"
+    },
+    {
+      "block_id": "page-0497-block-0030",
+      "order": 30,
+      "text": "■\n■Collateral information from addiction services and pharmacy with respect to usual \n",
+      "bbox": [
+        61.88990020751953,
+        536.55029296875,
+        436.6700439453125,
+        548.2703247070312
+      ],
+      "text_sha256": "13395b3c82ad72650dd9cab38a231b87f9b5de278e2aa5722be2c751ed35277f"
+    },
+    {
+      "block_id": "page-0497-block-0031",
+      "order": 31,
+      "text": "dose of OST and most recently dispensed dose\n",
+      "bbox": [
+        70.88999938964844,
+        548.55029296875,
+        270.9100036621094,
+        560.2703247070312
+      ],
+      "text_sha256": "463c0d44bd57fb335c5bb7e5582e48f9946649c3ace7bd5addc8b270a4ec81d7"
+    },
+    {
+      "block_id": "page-0497-block-0032",
+      "order": 32,
+      "text": "Untreated heroin withdrawal symptoms typically begin after 4–6 hours and reach \ntheir peak 32–72 hours after the last dose. Symptoms will have subsided substantially \nafter 5 days. Untreated methadone withdrawal typically reaches its peak between 4 and \n6 days after the last dose and symptoms do not subside for 10–12 days. Untreated \n",
+      "bbox": [
+        61.88999938964844,
+        566.55029296875,
+        436.6899719238281,
+        614.2703247070312
+      ],
+      "text_sha256": "5184d81cc30afc3213dce43bffbd02ad64964b34dcc4bf7f55f3a7442147664f"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

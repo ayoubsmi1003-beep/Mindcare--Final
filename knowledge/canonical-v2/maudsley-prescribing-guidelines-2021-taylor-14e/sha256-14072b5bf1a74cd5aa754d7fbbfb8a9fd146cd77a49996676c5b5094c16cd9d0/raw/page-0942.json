@@ -1,0 +1,335 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0942",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 942,
+  "source_page_index": 941,
+  "source_page_display": 942,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Miscellany    921\nCHAPTER 14\nBox 14.1  Factors determining the probability of a causal relationship between drugs and \npsychiatric side effects4,15\n■\n■Temporal relationship between the drug exposure and the psychiatric side effect\n■\n■Evidence of the specific psychiatric side effects occurring with the suspected drug\n■\n■Plausible pharmacological mechanism for the psychiatric side effect (e.g. dopamine agonists \nand psychosis)\n■\n■Presence of alternative explanations for symptoms (e.g. pre-existing mental illness, de novo \npsychiatric illness, other drugs)\n■\n■Response of symptoms to the withdrawal of the drug\n■\n■Effect of re-challenge with the same drug\nTable 14.5  Adapted Naranjo adverse drug reactions (ADR) probability scale criteria14\nQuestions\nYes\nNo\nNA/unknown\n1. Are there previous conclusive reports on this reaction?\n+1\n0\n0\n2. \u0007Did the ADR appear after the suspected drug was administered?\n+2\n−1\n0\n3. Did the ADR improve when the drug was discontinued?\n+1\n0\n0\n4. Did the ADR appear with re-challenge?\n+2\n−1\n0\n5. Are there alternative causes for the ADR?\n−1\n+2\n0\n6. Did the reaction appear when placebo was given?\n−1\n+1\n0\n7. Was the drug detected in the blood at toxic levels?\n+1\n0\n0\n8. Was the ADR more severe when the dose was increased, or \nless severe when the dose was decreased?\n+1\n0\n0\n9. Did the patient have a similar reaction to the same or similar \ndrugs in any previous exposure?\n+1\n0\n0\n10. Was the ADR confirmed by any objective evidence?\n+1\n0\n0\nProbability score: ≥9 = definite; 5–8 = probable; 1–4 = possible; ≤0 = doubtful\n",
+  "raw_text_sha256": "4a9bf8f2d77c296578b4a71a0398b385a94ae401d6ac840e28597f8e69d27481",
+  "coordinates_sha256": "291b8edf184d264d1fbbdb425b6d28579c0692f12af0110f851050b7cc98d771",
+  "block_sequence_sha256": "59b3d301b97621d151e22d788486f9b98e8c4e170bba01825596fa3520352e1b",
+  "blocks": [
+    {
+      "block_id": "page-0942-block-0000",
+      "order": 0,
+      "text": "Miscellany    921\n",
+      "bbox": [
+        349.2962951660156,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "8059820ab1ad638db21d00e9a25aaba4b0552a2fd6c3a07b6c7c7f3213538fcc"
+    },
+    {
+      "block_id": "page-0942-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        454.4096984863281,
+        338.7405090332031,
+        463.88970947265625,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0942-block-0002",
+      "order": 2,
+      "text": "Box 14.1  Factors determining the probability of a causal relationship between drugs and \npsychiatric side effects4,15\n",
+      "bbox": [
+        55.5,
+        325.11767578125,
+        380.61663818359375,
+        347.19219970703125
+      ],
+      "text_sha256": "b78c27596879f43c9fbe3435bc8b1717b6c1cdb812114a53f05f18c4bf932c0d"
+    },
+    {
+      "block_id": "page-0942-block-0003",
+      "order": 3,
+      "text": "■\n■Temporal relationship between the drug exposure and the psychiatric side effect\n",
+      "bbox": [
+        59.499900817871094,
+        352.3966979980469,
+        357.5185546875,
+        362.26519775390625
+      ],
+      "text_sha256": "4917cb31ffbb5f3453a6ac10a6bd1b70be417e38bdf43a2d1a619c752c830c46"
+    },
+    {
+      "block_id": "page-0942-block-0004",
+      "order": 4,
+      "text": "■\n■Evidence of the specific psychiatric side effects occurring with the suspected drug\n",
+      "bbox": [
+        59.499900817871094,
+        362.3966979980469,
+        362.0491638183594,
+        372.26519775390625
+      ],
+      "text_sha256": "03b902bb559d71199facc0552178dd6352258bf044f37c24bd39d2d4313f63c4"
+    },
+    {
+      "block_id": "page-0942-block-0005",
+      "order": 5,
+      "text": "■\n■Plausible pharmacological mechanism for the psychiatric side effect (e.g. dopamine agonists \n",
+      "bbox": [
+        59.499900817871094,
+        372.3966979980469,
+        402.67913818359375,
+        382.26519775390625
+      ],
+      "text_sha256": "68f888dd30b8d7f69c322ec424a1ce0e043767161e4b94ae87dd722381f20145"
+    },
+    {
+      "block_id": "page-0942-block-0006",
+      "order": 6,
+      "text": "and psychosis)\n",
+      "bbox": [
+        68.0,
+        382.3927001953125,
+        119.96050262451172,
+        392.2611999511719
+      ],
+      "text_sha256": "c016865fbb8b599c9fd2d88e04104d56e89345950e188405cd64b3dd4d8852ca"
+    },
+    {
+      "block_id": "page-0942-block-0007",
+      "order": 7,
+      "text": "■\n■Presence of alternative explanations for symptoms (e.g. pre-existing mental illness, de novo \n",
+      "bbox": [
+        59.499900817871094,
+        392.3966979980469,
+        399.3726501464844,
+        402.26519775390625
+      ],
+      "text_sha256": "4f698339cd9bc42451e453f7a85324fed35cd54685d1bc7da0294337d0f6ecd7"
+    },
+    {
+      "block_id": "page-0942-block-0008",
+      "order": 8,
+      "text": "psychiatric illness, other drugs)\n",
+      "bbox": [
+        68.0,
+        402.3927001953125,
+        178.508544921875,
+        412.2611999511719
+      ],
+      "text_sha256": "3a86700350d93975e98af9bd791e348c51512eaa28467e42ded2ad4f3854e7de"
+    },
+    {
+      "block_id": "page-0942-block-0009",
+      "order": 9,
+      "text": "■\n■Response of symptoms to the withdrawal of the drug\n",
+      "bbox": [
+        59.499900817871094,
+        412.3966979980469,
+        261.65557861328125,
+        422.26519775390625
+      ],
+      "text_sha256": "0c21766a55031745128da7e2b528b656d554962301f093058cc9aa45a3d88c47"
+    },
+    {
+      "block_id": "page-0942-block-0010",
+      "order": 10,
+      "text": "■\n■Effect of re-challenge with the same drug\n",
+      "bbox": [
+        59.499900817871094,
+        422.3966979980469,
+        218.3395233154297,
+        432.26519775390625
+      ],
+      "text_sha256": "b14078c4038d4d009cdd04d50711799538d7a3fd9a20e75519a340b55683aedd"
+    },
+    {
+      "block_id": "page-0942-block-0011",
+      "order": 11,
+      "text": "Table 14.5  Adapted Naranjo adverse drug reactions (ADR) probability scale criteria14\n",
+      "bbox": [
+        54.0,
+        70.08790588378906,
+        323.6396484375,
+        78.97540283203125
+      ],
+      "text_sha256": "3bd8563ff6c56ae8751f73e3dd5a1d71872c0a7072616e5ce757bc1b77a598e6"
+    },
+    {
+      "block_id": "page-0942-block-0012",
+      "order": 12,
+      "text": "Questions\nYes\nNo\nNA/unknown\n",
+      "bbox": [
+        52.0,
+        88.71290588378906,
+        405.49749755859375,
+        97.60040283203125
+      ],
+      "text_sha256": "544529aa43f0ed1fd5bb5b81f190b76877431ca764c22f06e1488d9fdce9f06b"
+    },
+    {
+      "block_id": "page-0942-block-0013",
+      "order": 13,
+      "text": "1. Are there previous conclusive reports on this reaction?\n+1\n0\n0\n",
+      "bbox": [
+        52.0,
+        106.07537841796875,
+        362.1700134277344,
+        114.827880859375
+      ],
+      "text_sha256": "d97389bd9f3dda21a59edfab6018681842f33fc2836a1fcd34b0af0c4f7fc36b"
+    },
+    {
+      "block_id": "page-0942-block-0014",
+      "order": 14,
+      "text": "2. \u0007Did the ADR appear after the suspected drug was administered?\n+2\n−1\n0\n",
+      "bbox": [
+        52.0,
+        121.14290618896484,
+        362.1700134277344,
+        129.85040283203125
+      ],
+      "text_sha256": "8f251eb445df686beaf5ad8e8c9836fa89747196239e459c22177be3da4012b9"
+    },
+    {
+      "block_id": "page-0942-block-0015",
+      "order": 15,
+      "text": "3. Did the ADR improve when the drug was discontinued?\n+1\n0\n0\n",
+      "bbox": [
+        52.0,
+        136.16542053222656,
+        362.1700134277344,
+        144.8729248046875
+      ],
+      "text_sha256": "2fa9b087b4fe162a78b843064778b6ec0336dede5dbb13723183f389dadba845"
+    },
+    {
+      "block_id": "page-0942-block-0016",
+      "order": 16,
+      "text": "4. Did the ADR appear with re-challenge?\n+2\n−1\n0\n",
+      "bbox": [
+        52.0,
+        151.1879425048828,
+        362.1700134277344,
+        159.89544677734375
+      ],
+      "text_sha256": "49f9ad3d4aaa01eb9c9cdad64a59410d2d24486061d279e855d994d4e81a0163"
+    },
+    {
+      "block_id": "page-0942-block-0017",
+      "order": 17,
+      "text": "5. Are there alternative causes for the ADR?\n−1\n+2\n0\n",
+      "bbox": [
+        52.0,
+        166.21046447753906,
+        362.1700134277344,
+        174.91796875
+      ],
+      "text_sha256": "5ba34e860ea77750196fce0c036916e1275be011364965ec241a84fb9a09a6b9"
+    },
+    {
+      "block_id": "page-0942-block-0018",
+      "order": 18,
+      "text": "6. Did the reaction appear when placebo was given?\n−1\n+1\n0\n",
+      "bbox": [
+        52.0,
+        181.2329559326172,
+        362.1700134277344,
+        189.94046020507812
+      ],
+      "text_sha256": "3b786c9f94bede14f4cc8029097112ed623c892deeb31d35c55317f1eafe1de5"
+    },
+    {
+      "block_id": "page-0942-block-0019",
+      "order": 19,
+      "text": "7. Was the drug detected in the blood at toxic levels?\n+1\n0\n0\n",
+      "bbox": [
+        52.0,
+        196.2554473876953,
+        362.1700134277344,
+        204.96295166015625
+      ],
+      "text_sha256": "38ca35781f1967dc05700ca97c24df974ce009d6854f8cd59e857f50f59d7b2a"
+    },
+    {
+      "block_id": "page-0942-block-0020",
+      "order": 20,
+      "text": "8. Was the ADR more severe when the dose was increased, or \nless severe when the dose was decreased?\n",
+      "bbox": [
+        52.0,
+        211.27793884277344,
+        252.19754028320312,
+        229.98294067382812
+      ],
+      "text_sha256": "10497001bda61f502794e396e73430cee3514b694406724f36a472ccce659bb3"
+    },
+    {
+      "block_id": "page-0942-block-0021",
+      "order": 21,
+      "text": "+1\n0\n0\n",
+      "bbox": [
+        271.0,
+        211.27793884277344,
+        362.1700134277344,
+        219.98544311523438
+      ],
+      "text_sha256": "6d729ae3c33b24f9f089b5bbaa37fc10319112fa41dad6c26f8970317b1e76a3"
+    },
+    {
+      "block_id": "page-0942-block-0022",
+      "order": 22,
+      "text": "9. Did the patient have a similar reaction to the same or similar \ndrugs in any previous exposure?\n",
+      "bbox": [
+        52.0,
+        236.30543518066406,
+        254.79244995117188,
+        255.01043701171875
+      ],
+      "text_sha256": "c54fff59c021dde4ed7d50d2d5beb39b124753a18e20db176c1d09664135b7cb"
+    },
+    {
+      "block_id": "page-0942-block-0023",
+      "order": 23,
+      "text": "+1\n0\n0\n",
+      "bbox": [
+        271.0,
+        236.30543518066406,
+        362.1700134277344,
+        245.012939453125
+      ],
+      "text_sha256": "6d729ae3c33b24f9f089b5bbaa37fc10319112fa41dad6c26f8970317b1e76a3"
+    },
+    {
+      "block_id": "page-0942-block-0024",
+      "order": 24,
+      "text": "10. Was the ADR confirmed by any objective evidence?\n+1\n0\n0\n",
+      "bbox": [
+        52.0,
+        261.33294677734375,
+        362.1700134277344,
+        270.0404357910156
+      ],
+      "text_sha256": "d531207444eb09936e5e94683b52d10ce509892c0bac17c75502f0b26c34e33b"
+    },
+    {
+      "block_id": "page-0942-block-0025",
+      "order": 25,
+      "text": "Probability score: ≥9 = definite; 5–8 = probable; 1–4 = possible; ≤0 = doubtful\n",
+      "bbox": [
+        52.0,
+        276.3554382324219,
+        301.487548828125,
+        285.06292724609375
+      ],
+      "text_sha256": "778023f3a9ea57c5502ca81054cd8ac5756a73a44c7cca8ed740d55e89de8223"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0779",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 779,
+  "source_page_index": 778,
+  "source_page_display": 779,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "758    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  9\nfor the individual symptoms or behaviour associated with the disorder (for example, \nrepeated self-harm, marked emotional instability, risk-taking behaviour and transient \npsychotic symptoms)\n■\n■Drug treatment may be considered in the overall treatment of co-morbid conditions\n■\n■Short-term use of sedative medication may be considered as part of the overall treat-\nment plan for people with borderline personality disorder in a crisis. The duration of \ntreatment should be agreed with the patient but should be no longer than one week.\nNICE guidelines were last reviewed in July 2018, when no changes were recommended.9 \nSoon after the initial publication of the NICE guideline for BPD, two further independent \nsystematic reviews were published.10,11 Essentially the same studies were considered in \nall three reviews, and where numerical data were combined in meta-analyses the results \nof these analyses were similar. In addition, all noted that the majority of studies of drug \ntreatment in BPD last for only 6 weeks and that the large number of different outcome \nmeasures that were used made it difficult to evaluate and compare studies. NICE con-\nsidered that the data were not robust enough to be the basis for recommendations to \nthe NHS while the other two reviews concluded that some of the analyses showed \npromising results and that these were sufficient to inform clinical practice.\nA more recent systematic review12 updated the previous analyses by including 15 \nstudies published between 2010 and 2017. Conclusions were little different from the ear-\nlier NICE review – that the body of evidence was insufficient to make clear clinical rec-\nommendations. The latest analysis of published, unpublished and ongoing studies13 \nconcluded not only that no drug treatment has been conclusively shown to be effective in \nBPD but also that the number of drug trials has declined markedly in the past few years.\nAntipsychotics\nOpen studies, which are admittedly more prone to bias, have found benefit for a number \nof first- and second-generation antipsychotics over a wide range of symptoms. In con-\ntrast, placebo-controlled RCTs generally show more limited benefits for active drug \nover placebo. The symptoms/symptom clusters that appear to be most responsive to \ntreatment are affect dysregulation, anger, impulsivity and cognitive-perceptual symp-\ntoms.10,11,14,15 Olanzapine may have the best supported effect12,16,17 but its effect is mod-\nest, at best.12 Open and naturalistic studies report reductions in aggression and \nself-harming behaviour with clozapine18–22and clozapine has been shown to have an \nanti-aggressive effect in people with schizophrenia.23 Clozapine seems to reduce the risk \nof hospital admission in BPD.22 Quetiapine is perhaps the most widely used antipsy-\nchotic in BDP. Its use is supported by a small RCT for which full results were published \nonline in 2020.24\nAntidepressants\nSeveral open studies have found that selective serotonin reuptake inhibitors (SSRIs) \nreduce impulsivity and aggression in BPD, but these findings have not been replicated \nin RCTs. One RCT comparing fluoxetine with DBT showed higher rates of suicide \nattempts in those given fluoxetine.25 It can be concluded with reasonable certainty that \n",
+  "raw_text_sha256": "50424b886746daa6b2031328d0ace46088197471e0aafbb47ce3d09c9f7eba43",
+  "coordinates_sha256": "e97eb8f568d074fccbcb81e0f8dd054d76cdd331a7f461b6bfb3cf1c9241758e",
+  "block_sequence_sha256": "91d2d183740f505600d59144a5989d6a0b02d85baecdda79600061e5b18eeb44",
+  "blocks": [
+    {
+      "block_id": "page-0779-block-0000",
+      "order": 0,
+      "text": "758    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "f1ca91947aecd2aeba5d8d7e18504d21f008a22fd751144a639775aee3eaea2a"
+    },
+    {
+      "block_id": "page-0779-block-0001",
+      "order": 1,
+      "text": "CHAPTER  9\n",
+      "bbox": [
+        18.520000457763672,
+        597.6024780273438,
+        28.0,
+        641.1704711914062
+      ],
+      "text_sha256": "2f213d231c74a11904a8da09025a8eefa6dceb4a2df848af43d9c4d19beb9596"
+    },
+    {
+      "block_id": "page-0779-block-0002",
+      "order": 2,
+      "text": "for the individual symptoms or behaviour associated with the disorder (for example, \nrepeated self-harm, marked emotional instability, risk-taking behaviour and transient \npsychotic symptoms)\n",
+      "bbox": [
+        70.88999938964844,
+        62.55029296875,
+        436.70001220703125,
+        98.27029418945312
+      ],
+      "text_sha256": "0fbc7f2e180900d0ddf46403ad4ec8ce8953d5d8f019b994f49a4bc8e059d5e7"
+    },
+    {
+      "block_id": "page-0779-block-0003",
+      "order": 3,
+      "text": "■\n■Drug treatment may be considered in the overall treatment of co-morbid conditions\n",
+      "bbox": [
+        61.88990020751953,
+        98.55029296875,
+        431.4499206542969,
+        110.27029418945312
+      ],
+      "text_sha256": "39c2574b7209d4fbebcf973e4d2e7a4ec4ec87b58d967accbd9593a752b8e897"
+    },
+    {
+      "block_id": "page-0779-block-0004",
+      "order": 4,
+      "text": "■\n■Short-term use of sedative medication may be considered as part of the overall treat-\n",
+      "bbox": [
+        61.88990020751953,
+        110.55029296875,
+        433.8598937988281,
+        122.27029418945312
+      ],
+      "text_sha256": "a158d88c6f57db20708cd6867be24108fbee4bb0d14ef576e0b91b8bacd263d2"
+    },
+    {
+      "block_id": "page-0779-block-0005",
+      "order": 5,
+      "text": "ment plan for people with borderline personality disorder in a crisis. The duration of \ntreatment should be agreed with the patient but should be no longer than one week.\n",
+      "bbox": [
+        70.88999938964844,
+        122.55029296875,
+        436.64007568359375,
+        146.27029418945312
+      ],
+      "text_sha256": "4f1308027ad9bbcef5fe3ddb270cb135abc1f5d225775a4ce9cc77db7f848412"
+    },
+    {
+      "block_id": "page-0779-block-0006",
+      "order": 6,
+      "text": "NICE guidelines were last reviewed in July 2018, when no changes were recommended.9 \nSoon after the initial publication of the NICE guideline for BPD, two further independent \nsystematic reviews were published.10,11 Essentially the same studies were considered in \nall three reviews, and where numerical data were combined in meta-analyses the results \nof these analyses were similar. In addition, all noted that the majority of studies of drug \ntreatment in BPD last for only 6 weeks and that the large number of different outcome \nmeasures that were used made it difficult to evaluate and compare studies. NICE con-\nsidered that the data were not robust enough to be the basis for recommendations to \nthe NHS while the other two reviews concluded that some of the analyses showed \npromising results and that these were sufficient to inform clinical practice.\n",
+      "bbox": [
+        61.88999938964844,
+        152.55029296875,
+        436.7220764160156,
+        272.2702941894531
+      ],
+      "text_sha256": "4a05fc3172523e21d8baa688aa53ef070fc4d7f81b93d97761b16b82da53e978"
+    },
+    {
+      "block_id": "page-0779-block-0007",
+      "order": 7,
+      "text": "A more recent systematic review12 updated the previous analyses by including 15 \nstudies published between 2010 and 2017. Conclusions were little different from the ear-\nlier NICE review – that the body of evidence was insufficient to make clear clinical rec-\nommendations. The latest analysis of published, unpublished and ongoing studies13 \nconcluded not only that no drug treatment has been conclusively shown to be effective in \nBPD but also that the number of drug trials has declined markedly in the past few years.\n",
+      "bbox": [
+        61.8900146484375,
+        272.55029296875,
+        436.7301330566406,
+        344.2702941894531
+      ],
+      "text_sha256": "fe521761fec81e19e4ed4928b794f2b3725e7a346f4d3453212ade89d1932b07"
+    },
+    {
+      "block_id": "page-0779-block-0008",
+      "order": 8,
+      "text": "Antipsychotics\n",
+      "bbox": [
+        61.88999938964844,
+        361.7052917480469,
+        137.04200744628906,
+        374.74029541015625
+      ],
+      "text_sha256": "66a87c9d9c00b8fa993ae9a90f576148dfe50f1c930aed10c7efe7d8254d7496"
+    },
+    {
+      "block_id": "page-0779-block-0009",
+      "order": 9,
+      "text": "Open studies, which are admittedly more prone to bias, have found benefit for a number \nof first- and second-generation antipsychotics over a wide range of symptoms. In con-\ntrast, placebo-controlled RCTs generally show more limited benefits for active drug \nover placebo. The symptoms/symptom clusters that appear to be most responsive to \ntreatment are affect dysregulation, anger, impulsivity and cognitive-perceptual symp-\ntoms.10,11,14,15 Olanzapine may have the best supported effect12,16,17 but its effect is mod-\nest, at best.12 Open and naturalistic studies report reductions in aggression and \nself-harming behaviour with clozapine18–22and clozapine has been shown to have an \nanti-aggressive effect in people with schizophrenia.23 Clozapine seems to reduce the risk \nof hospital admission in BPD.22 Quetiapine is perhaps the most widely used antipsy-\nchotic in BDP. Its use is supported by a small RCT for which full results were published \nonline in 2020.24\n",
+      "bbox": [
+        61.88969802856445,
+        380.55029296875,
+        436.7000427246094,
+        524.2703247070312
+      ],
+      "text_sha256": "5fe8955145c1ad592f7179ee7d0251794e443d14d747cfaeef7d3b056af9064a"
+    },
+    {
+      "block_id": "page-0779-block-0010",
+      "order": 10,
+      "text": "Antidepressants\n",
+      "bbox": [
+        61.88999938964844,
+        541.705322265625,
+        145.4130096435547,
+        554.7402954101562
+      ],
+      "text_sha256": "2e12ac14096be234a9b975ce033aebb8d95f8f3ff92503034de89e253e59f21d"
+    },
+    {
+      "block_id": "page-0779-block-0011",
+      "order": 11,
+      "text": "Several open studies have found that selective serotonin reuptake inhibitors (SSRIs) \nreduce impulsivity and aggression in BPD, but these findings have not been replicated \nin RCTs. One RCT comparing fluoxetine with DBT showed higher rates of suicide \nattempts in those given fluoxetine.25 It can be concluded with reasonable certainty that \n",
+      "bbox": [
+        61.88999938964844,
+        560.55029296875,
+        436.7099609375,
+        608.2703247070312
+      ],
+      "text_sha256": "c0a9f0092df34902b0d24c5775d1fac1ab4d63988327dd2a95d7567e56849333"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

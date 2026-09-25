@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0488",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 488,
+  "source_page_index": 487,
+  "source_page_display": 488,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    467\nCHAPTER 4\nThe number of young people who are dependent and needing pharmacotherapy is \nlikely to be small, but for those who are dependent there should be a lower threshold \nfor admission to hospital. Doses of chlordiazepoxide for medically assisted withdrawal \nmay need to be adjusted, but the general principles of withdrawal management are the \nsame as for adults. All young people should have a full health screen carried out rou-\ntinely to allow identification of physical and mental health problems. The evidence base \nfor acamprosate, naltrexone and disulfiram in 16–19-year-olds is evolving,9 but nal-\ntrexone is best supported in this age group.32,33\nOlder adults\nThere should be a lower threshold for inpatient medically assisted alcohol withdrawal \nfor older adults.2 While benzodiazepines remain the treatment of choice, they may need \nto be prescribed in lower doses and in some situations shorter acting drugs may be \npreferred.9 All older adults with alcohol-use disorders should have full routine health \nscreens to identify physical and mental health problems. The evidence base for pharma-\ncotherapy of alcohol-use disorders in older people is limited.\nConcurrent alcohol and drug use disorders\nWhere alcohol and drug use disorders are co-morbid, treat both conditions actively.2\nCo-existing alcohol and benzodiazepine dependence\nThis is best managed with one benzodiazepine, either chlordiazepoxide or diazepam. \nThe starting dose should take into account the requirements for medically assisted alco-\nhol withdrawal and the typical daily equivalent dose of the relevant benzodiazepine(s).2 \nInpatient treatment should be carried out over a 2–3-week period, possibly longer.2\nCo-existing alcohol dependence and cocaine use\nIn co-morbid cocaine/alcohol dependence, naltrexone 150mg/day resulted in reduced \ncocaine and alcohol use in men but not in women.34\nCo-existing alcohol and opioid dependence\nBoth conditions should be treated, and attention paid to the increased mortality of \nindividuals withdrawing from both drugs.\nCo-morbid alcohol and nicotine dependence\nEncourage individuals to stop smoking. Refer for smoking cessation in primary care \nand other settings. In inpatient settings, offer nicotine patches/inhalator during assisted \nalcohol withdrawal. Always promote vaping as a safer alternative to tobacco \nsmoking.\n",
+  "raw_text_sha256": "aeea0f1d8fd3c1956745486ed2a884915cd5b8dfbc75b3c84a453ce516a91a4c",
+  "coordinates_sha256": "9e71995fe3fc47c6c521d28ad643dceb66fc4dcc102ddc54c9ac5e8d71b63b84",
+  "block_sequence_sha256": "167e7b131f753de9ba2287a4c85ef876072107abc275157908d349c45d843ebf",
+  "blocks": [
+    {
+      "block_id": "page-0488-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    467\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "696ace43a243615d572fe0c44dbb45b730da25f3d07345d25e348f355004d8c5"
+    },
+    {
+      "block_id": "page-0488-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0488-block-0002",
+      "order": 2,
+      "text": "The number of young people who are dependent and needing pharmacotherapy is \nlikely to be small, but for those who are dependent there should be a lower threshold \nfor admission to hospital. Doses of chlordiazepoxide for medically assisted withdrawal \nmay need to be adjusted, but the general principles of withdrawal management are the \nsame as for adults. All young people should have a full health screen carried out rou-\ntinely to allow identification of physical and mental health problems. The evidence base \nfor acamprosate, naltrexone and disulfiram in 16–19-year-olds is evolving,9 but nal-\ntrexone is best supported in this age group.32,33\n",
+      "bbox": [
+        47.998321533203125,
+        62.5504150390625,
+        422.82000732421875,
+        158.27041625976562
+      ],
+      "text_sha256": "12deccfbb2ba69cb0528aa0c4b678f49b317c37beeab410e8dd49a13c264686e"
+    },
+    {
+      "block_id": "page-0488-block-0003",
+      "order": 3,
+      "text": "Older adults\n",
+      "bbox": [
+        48.0,
+        175.70547485351562,
+        111.5689926147461,
+        188.740478515625
+      ],
+      "text_sha256": "399c12281846b3702af4d76c87b876796b1bdf99014b60e52c5fda8236c8d4b9"
+    },
+    {
+      "block_id": "page-0488-block-0004",
+      "order": 4,
+      "text": "There should be a lower threshold for inpatient medically assisted alcohol withdrawal \nfor older adults.2 While benzodiazepines remain the treatment of choice, they may need \nto be prescribed in lower doses and in some situations shorter acting drugs may be \npreferred.9 All older adults with alcohol-use disorders should have full routine health \nscreens to identify physical and mental health problems. The evidence base for pharma-\ncotherapy of alcohol-use disorders in older people is limited.\n",
+      "bbox": [
+        48.0,
+        194.55047607421875,
+        422.80072021484375,
+        266.2704772949219
+      ],
+      "text_sha256": "9d6c02567e6531a52e25125b55ef17077a7a584bfd673e426ad16854a4f8bbe4"
+    },
+    {
+      "block_id": "page-0488-block-0005",
+      "order": 5,
+      "text": "Concurrent alcohol and drug use disorders\n",
+      "bbox": [
+        48.0,
+        283.7054748535156,
+        266.9989318847656,
+        296.740478515625
+      ],
+      "text_sha256": "afc31c70228fe749a7f527f523e38a148c244c7f25c9cd6846d2bfb35664f480"
+    },
+    {
+      "block_id": "page-0488-block-0006",
+      "order": 6,
+      "text": "Where alcohol and drug use disorders are co-morbid, treat both conditions actively.2\n",
+      "bbox": [
+        48.0,
+        302.55047607421875,
+        411.698486328125,
+        314.2704772949219
+      ],
+      "text_sha256": "7472273d7c57df611db19f7784fd62536d60bd60fcf943e5cb913f46b9e767ff"
+    },
+    {
+      "block_id": "page-0488-block-0007",
+      "order": 7,
+      "text": "Co-existing alcohol and benzodiazepine dependence\n",
+      "bbox": [
+        48.0,
+        332.6404724121094,
+        295.8199157714844,
+        344.490478515625
+      ],
+      "text_sha256": "f9a024c9ea4560d7151269714dc97628587a4d780f72a5fceb073c902d172d3f"
+    },
+    {
+      "block_id": "page-0488-block-0008",
+      "order": 8,
+      "text": "This is best managed with one benzodiazepine, either chlordiazepoxide or diazepam. \nThe starting dose should take into account the requirements for medically assisted alco-\nhol withdrawal and the typical daily equivalent dose of the relevant benzodiazepine(s).2 \nInpatient treatment should be carried out over a 2–3-week period, possibly longer.2\n",
+      "bbox": [
+        48.0,
+        350.55047607421875,
+        422.78997802734375,
+        398.2704772949219
+      ],
+      "text_sha256": "412235e2b8c5adb311153613bb4bea6a3844ec36db7bd4b58e34b83fc8174f56"
+    },
+    {
+      "block_id": "page-0488-block-0009",
+      "order": 9,
+      "text": "Co-existing alcohol dependence and cocaine use\n",
+      "bbox": [
+        48.0,
+        416.6404724121094,
+        275.2499694824219,
+        428.490478515625
+      ],
+      "text_sha256": "154da93905cdd9965cacc1860e3341076f4e9755cb2c2bacfb64dff84536ba73"
+    },
+    {
+      "block_id": "page-0488-block-0010",
+      "order": 10,
+      "text": "In co-morbid cocaine/alcohol dependence, naltrexone 150mg/day resulted in reduced \ncocaine and alcohol use in men but not in women.34\n",
+      "bbox": [
+        48.0,
+        434.55047607421875,
+        422.8099670410156,
+        458.2704772949219
+      ],
+      "text_sha256": "d521d67619ade630d25213f3e4c03fddbf9783c7aedd633ed399d8148aa874c6"
+    },
+    {
+      "block_id": "page-0488-block-0011",
+      "order": 11,
+      "text": "Co-existing alcohol and opioid dependence\n",
+      "bbox": [
+        48.0,
+        476.6404724121094,
+        251.3599853515625,
+        488.490478515625
+      ],
+      "text_sha256": "fc1301efa701ed43da2ef1b88754b7286d5ebbc71e7e958f8d51d6cbde94a813"
+    },
+    {
+      "block_id": "page-0488-block-0012",
+      "order": 12,
+      "text": "Both conditions should be treated, and attention paid to the increased mortality of \nindividuals withdrawing from both drugs.\n",
+      "bbox": [
+        48.0,
+        494.55047607421875,
+        422.7298583984375,
+        518.2705078125
+      ],
+      "text_sha256": "bab04bc9b0d88ed56984d317a387c5accb5ea5cd7488e3bbc725455c0fe8ab22"
+    },
+    {
+      "block_id": "page-0488-block-0013",
+      "order": 13,
+      "text": "Co-morbid alcohol and nicotine dependence\n",
+      "bbox": [
+        48.0,
+        536.6405029296875,
+        255.79998779296875,
+        548.490478515625
+      ],
+      "text_sha256": "12900a292e6ee2b3f02cbbcff365edca6ff16634cf5918686e85707acc2a630c"
+    },
+    {
+      "block_id": "page-0488-block-0014",
+      "order": 14,
+      "text": "Encourage individuals to stop smoking. Refer for smoking cessation in primary care \nand other settings. In inpatient settings, offer nicotine patches/inhalator during assisted \nalcohol withdrawal. Always promote vaping as a safer alternative to tobacco \nsmoking.\n",
+      "bbox": [
+        48.0,
+        554.5504760742188,
+        422.81011962890625,
+        602.2705078125
+      ],
+      "text_sha256": "85282f16ba375e20c29c2b0e52839f90decdfbf5ba07c77a92d7b7228b92203d"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,323 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0204",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 204,
+  "source_page_index": 203,
+  "source_page_display": 204,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    183\nCHAPTER 1\nSwitching antipsychotics\nSummary of recommendations for switching antipsychotics because of poor \ntolerability.\nAdverse effect\nSuggested drugs\nAlternatives\nAcute EPS1–8\nDystonia, parkinsonism, bradykinesia\nAripiprazole\nBrexpiprazole\nCariprazine\nOlanzapine\nQuetiapine\nClozapine\nLurasidone\nZiprasidone\nAkathisia2,9,10\nOlanzapine\nQuetiapine\nClozapine\nBrexpiprazole\nDyslipidaemia7,8,11–16\nAmisulpride\nAripiprazole§\nLurasidone\nZiprasidone\nAsenapine\nBrexpiprazole\nCariprazine\nImpaired glucose\ntolerance7,8,15,17–21\nAmisulpride\nAripiprazole§\nLurasidone\nZiprasidone\nBrexpiprazole\nCariprazine\nHaloperidol\nHyperprolactinaemia7,8,15,22–28\nAripiprazole§\nBrexpiprazole\nCariprazine\nLurasidone\nQuetiapine\nClozapine\nOlanzapine\nZiprasidone\nPostural hypotension8,15,29\nAmisulpride\nAripiprazole\nBrexpiprazole\nCariprazine\nLurasidone\nHaloperidol\nSulpiride\nTrifluoperazine\nQT prolongation27,30–37\nBrexpiprazole\nCariprazine\nLurasidone\nPaliperidone\nLow dose monotherapy of any \ndrug not formally contra-\nindicated in QT prolongation\n(with ECG monitoring)\nSedation7,8,27\nAmisulpride\nAripiprazole\nBrexpiprazole\nCariprazine\nRisperidone\nSulpiride\nHaloperidol\nTrifluoperazine\nZiprasidone\n(Continued)\n",
+  "raw_text_sha256": "6635f244cf26727f3ff889b03cc932919f4d9b82d978fef12c1c7a518a2e7d2c",
+  "coordinates_sha256": "8ba5ffefd1ee27804e1a519569c41b1ba0943ec556c2aec5fcfe6d34e58b9569",
+  "block_sequence_sha256": "6326c4f78d526f26b84814604de204db6c5c072500c722405a71dd0c81318cee",
+  "blocks": [
+    {
+      "block_id": "page-0204-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    183\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "2bad105d54437f889765e20ecd726effa1ce11d55ad27b2516c08eefbd8d2b20"
+    },
+    {
+      "block_id": "page-0204-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0204-block-0002",
+      "order": 2,
+      "text": "Switching antipsychotics\n",
+      "bbox": [
+        54.99909973144531,
+        66.06448364257812,
+        182.72007751464844,
+        79.0994873046875
+      ],
+      "text_sha256": "4021b54583e73f805012c799bdf0b36f25d7001423e30d4d93e157007114022c"
+    },
+    {
+      "block_id": "page-0204-block-0003",
+      "order": 3,
+      "text": "Summary of recommendations for switching antipsychotics because of poor \ntolerability.\n",
+      "bbox": [
+        47.99909973144531,
+        84.90948486328125,
+        422.7491149902344,
+        108.62948608398438
+      ],
+      "text_sha256": "1a55c025b0a66d84d2ad214c379815447e2a831bdb4063a26a182e6f795d5ce9"
+    },
+    {
+      "block_id": "page-0204-block-0004",
+      "order": 4,
+      "text": "Adverse effect\nSuggested drugs\nAlternatives\n",
+      "bbox": [
+        47.99909973144531,
+        128.57191467285156,
+        353.0616760253906,
+        137.45941162109375
+      ],
+      "text_sha256": "4d6302feff63e6f4ef1ebe890033848e28763a36d32132f30bc0cea07b08bc6f"
+    },
+    {
+      "block_id": "page-0204-block-0005",
+      "order": 5,
+      "text": "Acute EPS1–8\n",
+      "bbox": [
+        47.99909973144531,
+        145.52943420410156,
+        87.13226318359375,
+        154.2369384765625
+      ],
+      "text_sha256": "726ec8abbae006841a15bfbe3680a91171145bbb327bc5513eb8a043eaf39f97"
+    },
+    {
+      "block_id": "page-0204-block-0006",
+      "order": 6,
+      "text": "Dystonia, parkinsonism, bradykinesia\n",
+      "bbox": [
+        47.99909973144531,
+        155.5269317626953,
+        165.5165557861328,
+        164.23443603515625
+      ],
+      "text_sha256": "916d04efb374f7782ff64da7da87a56e939d2dbc984c13c67e7c7e3a8db3cced"
+    },
+    {
+      "block_id": "page-0204-block-0007",
+      "order": 7,
+      "text": "Aripiprazole\nBrexpiprazole\nCariprazine\nOlanzapine\nQuetiapine\n",
+      "bbox": [
+        194.9990997314453,
+        145.52943420410156,
+        237.7790985107422,
+        194.2269287109375
+      ],
+      "text_sha256": "e6f7a9591a8875986152d062c894b07f5813e14c32c02436777df3b238d28077"
+    },
+    {
+      "block_id": "page-0204-block-0008",
+      "order": 8,
+      "text": "Clozapine\nLurasidone\nZiprasidone\n",
+      "bbox": [
+        309.99658203125,
+        145.5219268798828,
+        346.67169189453125,
+        174.22442626953125
+      ],
+      "text_sha256": "e74c10802377efd499807d9ed94fc68f601d0832e7aca23bd336b3edaa7b2f7f"
+    },
+    {
+      "block_id": "page-0204-block-0009",
+      "order": 9,
+      "text": "Akathisia2,9,10\nOlanzapine\nQuetiapine\n",
+      "bbox": [
+        47.99909973144531,
+        200.5419464111328,
+        230.83409118652344,
+        219.25689697265625
+      ],
+      "text_sha256": "2fa78bbbb6a65be1a1951ac8677b1f0c57ab638cf4fbf2fd9d9cff8d23bc15d0"
+    },
+    {
+      "block_id": "page-0204-block-0010",
+      "order": 10,
+      "text": "Clozapine\nBrexpiprazole\n",
+      "bbox": [
+        309.99658203125,
+        200.55189514160156,
+        352.776611328125,
+        219.25689697265625
+      ],
+      "text_sha256": "03e1b1119e327e714fa922fc9f4dc404fa6a0055f6bebe2abec591b97d5a2ab1"
+    },
+    {
+      "block_id": "page-0204-block-0011",
+      "order": 11,
+      "text": "Dyslipidaemia7,8,11–16\nAmisulpride\nAripiprazole§\nLurasidone\nZiprasidone\n",
+      "bbox": [
+        47.99909973144531,
+        225.57188415527344,
+        237.5015869140625,
+        264.27691650390625
+      ],
+      "text_sha256": "dec1d3b05a686e527351bc6232d303602edef39abe25cf231a73c850273b39aa"
+    },
+    {
+      "block_id": "page-0204-block-0012",
+      "order": 12,
+      "text": "Asenapine\nBrexpiprazole\nCariprazine\n",
+      "bbox": [
+        309.99658203125,
+        225.5694122314453,
+        352.776611328125,
+        254.27191162109375
+      ],
+      "text_sha256": "82c53d4a86e871ab87fea3217b68612f708834e99cb3922a48c0d2f23c7e4f57"
+    },
+    {
+      "block_id": "page-0204-block-0013",
+      "order": 13,
+      "text": "Impaired glucose\ntolerance7,8,15,17–21\n",
+      "bbox": [
+        47.99909973144531,
+        270.5919189453125,
+        102.86045837402344,
+        289.2969055175781
+      ],
+      "text_sha256": "d8658e439461fe48dec283c1dc84bdf31ecba60cd0656c44ccf12a8e107fd3b8"
+    },
+    {
+      "block_id": "page-0204-block-0014",
+      "order": 14,
+      "text": "Amisulpride\nAripiprazole§\nLurasidone\nZiprasidone\n",
+      "bbox": [
+        194.9990997314453,
+        270.6019287109375,
+        237.5015869140625,
+        309.3019104003906
+      ],
+      "text_sha256": "da14a8abe0074e8d980997ed04a08fc69cf961e1c07572324cfb5b399c9b0d6a"
+    },
+    {
+      "block_id": "page-0204-block-0015",
+      "order": 15,
+      "text": "Brexpiprazole\nCariprazine\nHaloperidol\n",
+      "bbox": [
+        309.99658203125,
+        270.59442138671875,
+        352.776611328125,
+        299.2969055175781
+      ],
+      "text_sha256": "9db31c9767048f8f371d5165e0c5df9b36fca560736c3dae8fa79fd88c22ac09"
+    },
+    {
+      "block_id": "page-0204-block-0016",
+      "order": 16,
+      "text": "Hyperprolactinaemia7,8,15,22–28\nAripiprazole§\nBrexpiprazole\nCariprazine\nLurasidone\nQuetiapine\n",
+      "bbox": [
+        47.99909973144531,
+        315.6169128417969,
+        237.7790985107422,
+        364.32440185546875
+      ],
+      "text_sha256": "836dda0ad31da7adaf254431debc9ddd81aa020ce615d0a5bac956d22f3f1cdb"
+    },
+    {
+      "block_id": "page-0204-block-0017",
+      "order": 17,
+      "text": "Clozapine\nOlanzapine\nZiprasidone\n",
+      "bbox": [
+        309.99658203125,
+        315.6194152832031,
+        346.67169189453125,
+        344.3218994140625
+      ],
+      "text_sha256": "e4e93eac0eefacd2ea12809f5d3737c74eb75138fae81d58bca72f8b6d379822"
+    },
+    {
+      "block_id": "page-0204-block-0018",
+      "order": 18,
+      "text": "Postural hypotension8,15,29\nAmisulpride\nAripiprazole\nBrexpiprazole\nCariprazine\nLurasidone\n",
+      "bbox": [
+        47.99909973144531,
+        370.639404296875,
+        237.7790985107422,
+        419.3493957519531
+      ],
+      "text_sha256": "6de0f3858414c9be857ec888298a7448edd3be1d16db4d369f0ab7ea7f639e2f"
+    },
+    {
+      "block_id": "page-0204-block-0019",
+      "order": 19,
+      "text": "Haloperidol\nSulpiride\nTrifluoperazine\n",
+      "bbox": [
+        309.99658203125,
+        370.6444091796875,
+        356.80413818359375,
+        399.3468933105469
+      ],
+      "text_sha256": "a4242ffb55fc90d81083671dc3095c43facef23dc5d3e87652f9ce85ee1be8a4"
+    },
+    {
+      "block_id": "page-0204-block-0020",
+      "order": 20,
+      "text": "QT prolongation27,30–37\nBrexpiprazole\nCariprazine\nLurasidone\nPaliperidone\n",
+      "bbox": [
+        47.99909973144531,
+        425.6643981933594,
+        237.7790985107422,
+        464.3769226074219
+      ],
+      "text_sha256": "7fc224a53ce2e3ef580685e4a9f17f5a8370010029562b9706cfd3c94e405df2"
+    },
+    {
+      "block_id": "page-0204-block-0021",
+      "order": 21,
+      "text": "Low dose monotherapy of any \ndrug not formally contra-\nindicated in QT prolongation\n(with ECG monitoring)\n",
+      "bbox": [
+        309.99658203125,
+        425.66943359375,
+        409.6041564941406,
+        464.3694152832031
+      ],
+      "text_sha256": "ce6da4cfa083b624d754fe2dbf686c4d947e55f9c46e8c05c2259013442bd726"
+    },
+    {
+      "block_id": "page-0204-block-0022",
+      "order": 22,
+      "text": "Sedation7,8,27\nAmisulpride\nAripiprazole\nBrexpiprazole\nCariprazine\nRisperidone\nSulpiride\n",
+      "bbox": [
+        47.99909973144531,
+        470.6844177246094,
+        237.7790985107422,
+        529.3969116210938
+      ],
+      "text_sha256": "d7e1be35358955fd0e7d708405557e89fdf4d3abbb4a33776c89c879a04afa8f"
+    },
+    {
+      "block_id": "page-0204-block-0023",
+      "order": 23,
+      "text": "Haloperidol\nTrifluoperazine\nZiprasidone\n",
+      "bbox": [
+        309.99658203125,
+        470.6869201660156,
+        356.80413818359375,
+        499.389404296875
+      ],
+      "text_sha256": "00416bd408b869217b717b4b518180e5dec16bd3763b9a291256cbe19acef4b9"
+    },
+    {
+      "block_id": "page-0204-block-0024",
+      "order": 24,
+      "text": "(Continued)\n",
+      "bbox": [
+        382.48406982421875,
+        536.37939453125,
+        419.9991149902344,
+        545.1318969726562
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

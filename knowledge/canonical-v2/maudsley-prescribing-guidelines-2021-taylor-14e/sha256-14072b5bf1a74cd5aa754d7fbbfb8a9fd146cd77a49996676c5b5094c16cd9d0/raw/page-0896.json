@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0896",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 896,
+  "source_page_index": 895,
+  "source_page_display": 896,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\nPsychotropics in overdose\nSuicide attempts and suicidal gestures are frequently encountered in psychiatric and \ngeneral practice, and psychotropic drugs are often taken in overdose (Table 13.1). This \nsection gives brief details of the toxicity in overdose of commonly used psychotropics. \nIt is intended to help guide drug choice in those thought to be at risk of suicide, to give \nsome indication of safe quantities to prescribe and to help identify symptoms of over-\ndose. This section gives no information on the treatment of psychotropic overdose and \nreaders are directed to specialist poisons centres. In all cases of suspected overdose, \nurgent referral to acute medical facilities is, of course, strongly advised.\nPsychotropic drugs in special \nconditions\nChapter 13\nTable 13.1  Psychotropic drugs in overdose\nDrug or drug group\nToxicity in \noverdose\nSmallest dose likely  \nto cause death\nSigns and symptoms of overdose\nAntidepressants\nAgomelatine1,2\nLow\nNo deaths reported.\nIn early trials, 800mg was \nmaximum tolerated dose. EU \nSPC reports no serious effects \nfrom 2.45g overdose. A mixed \noverdose of 7.5g caused only \ndrowsiness and mild \ntachycardia.\nSedation, agitation, stomach pains, \ndizziness.\n(Continued)\n",
+  "raw_text_sha256": "ac983ff220ed89323b5904e463925d6f2909dd4be92c87456de6398f367b6640",
+  "coordinates_sha256": "1e03c3436a2f066da25100dda1c7a67320f44a1802d85db1ce2b2cbcad79af4f",
+  "block_sequence_sha256": "5d54aeade04704f725a0c0629e6541163ee7cc8cd6575a5a0e5edc61a3fc82f4",
+  "blocks": [
+    {
+      "block_id": "page-0896-block-0000",
+      "order": 0,
+      "text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\n",
+      "bbox": [
+        47.99980163574219,
+        585.1019897460938,
+        348.48388671875,
+        614.4779663085938
+      ],
+      "text_sha256": "c78fcd1eeb2357afb8eb5b97a8c858d68167bd409b9074c0da4e20c032bd5665"
+    },
+    {
+      "block_id": "page-0896-block-0001",
+      "order": 1,
+      "text": "Psychotropics in overdose\n",
+      "bbox": [
+        55.0,
+        241.86898803710938,
+        188.44097900390625,
+        254.90399169921875
+      ],
+      "text_sha256": "d2782a66c32527e55527b637eb6682791dd37064a6454d2399f488d1a8548608"
+    },
+    {
+      "block_id": "page-0896-block-0002",
+      "order": 2,
+      "text": "Suicide attempts and suicidal gestures are frequently encountered in psychiatric and \ngeneral practice, and psychotropic drugs are often taken in overdose (Table 13.1). This \nsection gives brief details of the toxicity in overdose of commonly used psychotropics. \nIt is intended to help guide drug choice in those thought to be at risk of suicide, to give \nsome indication of safe quantities to prescribe and to help identify symptoms of over-\ndose. This section gives no information on the treatment of psychotropic overdose and \nreaders are directed to specialist poisons centres. In all cases of suspected overdose, \nurgent referral to acute medical facilities is, of course, strongly advised.\n",
+      "bbox": [
+        48.0,
+        260.7139892578125,
+        422.82000732421875,
+        356.4339904785156
+      ],
+      "text_sha256": "6dd6b3909c46d2849bfc4e0ab6601b0d3738de7edad0f72d880ea10340c44c62"
+    },
+    {
+      "block_id": "page-0896-block-0003",
+      "order": 3,
+      "text": "Psychotropic drugs in special \n",
+      "bbox": [
+        123.37779998779297,
+        111.36316680908203,
+        426.1197509765625,
+        137.43316650390625
+      ],
+      "text_sha256": "0a4b3e77f3746c59a79f563ded70ed42a21ff3d7bb2c32551fcb8bccf9932aec"
+    },
+    {
+      "block_id": "page-0896-block-0004",
+      "order": 4,
+      "text": "conditions\n",
+      "bbox": [
+        312.4678039550781,
+        135.36517333984375,
+        420.0037536621094,
+        161.4351806640625
+      ],
+      "text_sha256": "b0031a65e4cac5e6557b20d5cd4a66e1f0ae539494b5635d154522c6106cf04d"
+    },
+    {
+      "block_id": "page-0896-block-0005",
+      "order": 5,
+      "text": "Chapter 13\n",
+      "bbox": [
+        312.8031921386719,
+        59.724403381347656,
+        420.0011901855469,
+        82.60040283203125
+      ],
+      "text_sha256": "b8d81c3cd5260bb9dc135e5ef2991be5b6b851d917fa1a0858e79988bd1dd9f6"
+    },
+    {
+      "block_id": "page-0896-block-0006",
+      "order": 6,
+      "text": "Table 13.1  Psychotropic drugs in overdose\n",
+      "bbox": [
+        54.0,
+        386.0220947265625,
+        191.27249145507812,
+        394.90960693359375
+      ],
+      "text_sha256": "7642452ca33c5b01e047ac55db4d2137d3e41f548da044ae8f5066707750ba32"
+    },
+    {
+      "block_id": "page-0896-block-0007",
+      "order": 7,
+      "text": "Drug or drug group\n",
+      "bbox": [
+        48.0,
+        416.1470947265625,
+        117.02997589111328,
+        425.03460693359375
+      ],
+      "text_sha256": "d528646a4477039c6bdce1cc5da8ca2b45d7d96730efadb8e0e467171afacd39"
+    },
+    {
+      "block_id": "page-0896-block-0008",
+      "order": 8,
+      "text": "Toxicity in \noverdose\n",
+      "bbox": [
+        128.00250244140625,
+        406.14959716796875,
+        165.5175323486328,
+        425.03460693359375
+      ],
+      "text_sha256": "51ebed65665cfe44e710fb62a313d80f26f929956df51247961e3b5d5f90dcd5"
+    },
+    {
+      "block_id": "page-0896-block-0009",
+      "order": 9,
+      "text": "Smallest dose likely  \nto cause death\nSigns and symptoms of overdose\n",
+      "bbox": [
+        171.0,
+        406.14959716796875,
+        396.5399169921875,
+        425.03460693359375
+      ],
+      "text_sha256": "6209e6f36b542e07025e47df7227bdb6e50dfc25f07e27e2d9a5fe9d6ac1c0f2"
+    },
+    {
+      "block_id": "page-0896-block-0010",
+      "order": 10,
+      "text": "Antidepressants\n",
+      "bbox": [
+        48.0,
+        436.26959228515625,
+        104.94749450683594,
+        445.1571044921875
+      ],
+      "text_sha256": "2e12ac14096be234a9b975ce033aebb8d95f8f3ff92503034de89e253e59f21d"
+    },
+    {
+      "block_id": "page-0896-block-0011",
+      "order": 11,
+      "text": "Agomelatine1,2\nLow\nNo deaths reported.\nIn early trials, 800mg was \nmaximum tolerated dose. EU \nSPC reports no serious effects \nfrom 2.45g overdose. A mixed \noverdose of 7.5g caused only \ndrowsiness and mild \ntachycardia.\n",
+      "bbox": [
+        48.0,
+        454.5771179199219,
+        270.33502197265625,
+        533.26708984375
+      ],
+      "text_sha256": "781ca739200f2240441d16af3a82581f7d01abd1fc60c2a56bde24a7fa7da088"
+    },
+    {
+      "block_id": "page-0896-block-0012",
+      "order": 12,
+      "text": "Sedation, agitation, stomach pains, \ndizziness.\n",
+      "bbox": [
+        279.9949951171875,
+        454.5621032714844,
+        394.60260009765625,
+        473.26708984375
+      ],
+      "text_sha256": "d53fe28271ca8b6bccb3372d872cf72480064defbc81cf9e6e2297b9d21f8e37"
+    },
+    {
+      "block_id": "page-0896-block-0013",
+      "order": 13,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.98248291015625,
+        542.2970581054688,
+        419.9974365234375,
+        551.049560546875
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

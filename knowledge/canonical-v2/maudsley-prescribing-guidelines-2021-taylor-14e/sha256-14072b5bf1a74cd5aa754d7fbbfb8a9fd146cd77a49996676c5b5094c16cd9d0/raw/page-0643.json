@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0643",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 643,
+  "source_page_index": 642,
+  "source_page_display": 643,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "622    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  6\nTrazodone and dibenzoylmethane\nTwo existing compounds have been found to be markedly neuroprotective in mouse \nmodels of neurodegeneration, using clinically relevant doses over a prolonged period of \ntime, without systemic toxicity. Trazodone is an antidepressant in the serotonin antago-\nnist and reuptake inhibitor class, which has additional anxiolytic and hypnotic effects, \nhas been shown to reduce behavioural and psychological symptoms of dementia (BPSD) \nin AD. A recent small retrospective study examined whether long-term use of trazo-\ndone, a slow-wave-sleep enhancer, was associated with delayed cognitive decline. \nTrazodone non-users had 2.6-fold faster decline MMSE (primary outcome) than trazo-\ndone users. The observed effects were especially associated with subjective improve-\nment of sleep complaints in post-hoc analyses. Results suggested an association between \ntrazodone use and delayed cognitive decline although whether the observed relation-\nship of trazodone to cognitive function is causal or an indirect marker of other effects, \nsuch as treated sleep disruption (mediated through slow-wave-sleep enhancement), \nrequires conﬁrmation through prospective studies.112\nDibenzoylmethane (DBM) is a minor constituent of liquorice that has been found to \nhave antineoplastic effects, with efficacy against prostate and mammary tumours. In \nprion-diseased mice, both trazodone and DBM treatment restored memory deficits, \nabrogated development of neurological signs, prevented neurodegeneration and signifi-\ncantly prolonged survival. In tauopathy-frontotemporal dementia mice, both drugs \nwere neuroprotective, rescued memory deficits and reduced hippocampal atrophy. \nFurther, trazodone reduced p-tau burden. These compounds represent potential new \ndisease-modifying treatments for dementia.113 There are no available observational \ndata suggesting that trazodone reduces the risk of dementia but some data are available \nthat suggest important adverse outcomes in older people.114\nNovel treatments\nSeveral new drugs have failed to improve clinical outcomes in phase III trials for AD, \nincluding the following:\n■\n■Semagacestat is a γ-secretase inhibitor;115 the trials including 3,000 patients were \ndiscontinued in 2010 because of the absence of improvement in cognition in the \nstudy group and worsening cognition at higher doses compared to controls. Incidence \nof skin cancer was also higher in the study group.116\n■\n■Solanezumab is a humanised monoclonal antibody that binds soluble forms of amy-\nloid and promotes its clearance from the brain.117 An RCT (EXPEDITION3) of 2,129 \npatients with mild AD found that solanezumab at a dose of 400mg administered \nevery 4 weeks did not significantly affect cognitive decline.118\n■\n■Bapineuzumab is a humanised anti-amyloid-β monoclonal antibody.119 A 2017 meta-\nanalysis of RCTs with bapineuzumab confirmed its lack of clinical efficacy and its \nassociations with serious adverse effects (vasogenic oedema). The doses of bapineu-\nzumab used in these studies were limited because of higher rates of amyloid-related \nimaging abnormalities with effusion or oedema at higher doses. Its use is not recom-\nmended in patients with mild-to-moderate AD.120\n",
+  "raw_text_sha256": "ceb8e9789eab2a47ccf98292875b6472d18d5c5d5ef192de5b1597f2f8b3bcf7",
+  "coordinates_sha256": "caa8401d313874d30304b8d40739202ec6ba9716e83ffb39df66840c303bb656",
+  "block_sequence_sha256": "c41a612a24fe4a29fc180957429b450dc0b65221f3c7b17d8ad0da2d49dba748",
+  "blocks": [
+    {
+      "block_id": "page-0643-block-0000",
+      "order": 0,
+      "text": "622    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "42edd20406d44359b313d1dae2457a796cfeeb5837fef50cccbb6140303190aa"
+    },
+    {
+      "block_id": "page-0643-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        18.520000457763672,
+        405.35260009765625,
+        28.0,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0643-block-0002",
+      "order": 2,
+      "text": "Trazodone and dibenzoylmethane\nTwo existing compounds have been found to be markedly neuroprotective in mouse \nmodels of neurodegeneration, using clinically relevant doses over a prolonged period of \ntime, without systemic toxicity. Trazodone is an antidepressant in the serotonin antago-\nnist and reuptake inhibitor class, which has additional anxiolytic and hypnotic effects, \nhas been shown to reduce behavioural and psychological symptoms of dementia (BPSD) \nin AD. A recent small retrospective study examined whether long-term use of trazo-\ndone, a slow-wave-sleep enhancer, was associated with delayed cognitive decline. \nTrazodone non-users had 2.6-fold faster decline MMSE (primary outcome) than trazo-\ndone users. The observed effects were especially associated with subjective improve-\nment of sleep complaints in post-hoc analyses. Results suggested an association between \ntrazodone use and delayed cognitive decline although whether the observed relation-\nship of trazodone to cognitive function is causal or an indirect marker of other effects, \nsuch as treated sleep disruption (mediated through slow-wave-sleep enhancement), \nrequires conﬁrmation through prospective studies.112\n",
+      "bbox": [
+        61.88999938964844,
+        62.59290313720703,
+        436.7199401855469,
+        241.75540161132812
+      ],
+      "text_sha256": "ce6dced4cdf0d835bbcfae3aa8158791721be078fa96de3c44648e4b47ca91ec"
+    },
+    {
+      "block_id": "page-0643-block-0003",
+      "order": 3,
+      "text": "Dibenzoylmethane (DBM) is a minor constituent of liquorice that has been found to \nhave antineoplastic effects, with efficacy against prostate and mammary tumours. In \nprion-diseased mice, both trazodone and DBM treatment restored memory deficits, \nabrogated development of neurological signs, prevented neurodegeneration and signifi-\ncantly prolonged survival. In tauopathy-frontotemporal dementia mice, both drugs \nwere neuroprotective, rescued memory deficits and reduced hippocampal atrophy. \nFurther, trazodone reduced p-tau burden. These compounds represent potential new \ndisease-modifying treatments for dementia.113 There are no available observational \ndata suggesting that trazodone reduces the risk of dementia but some data are available \nthat suggest important adverse outcomes in older people.114\n",
+      "bbox": [
+        61.88999938964844,
+        241.79541015625,
+        436.7243347167969,
+        361.7554016113281
+      ],
+      "text_sha256": "6b8750ca97c4e79a036cb15b45b12751804048a4ee53be34e9b70adf92afdbb4"
+    },
+    {
+      "block_id": "page-0643-block-0004",
+      "order": 4,
+      "text": "Novel treatments\n",
+      "bbox": [
+        61.890098571777344,
+        380.1253967285156,
+        143.58009338378906,
+        391.97540283203125
+      ],
+      "text_sha256": "b7fc9c332c22f380453ad2aa811f4f911cf3949d8a46706d8d5772e1bcba18c8"
+    },
+    {
+      "block_id": "page-0643-block-0005",
+      "order": 5,
+      "text": "Several new drugs have failed to improve clinical outcomes in phase III trials for AD, \nincluding the following:\n",
+      "bbox": [
+        61.890098571777344,
+        398.035400390625,
+        436.63018798828125,
+        421.7554016113281
+      ],
+      "text_sha256": "f4e92b0e536be51043e4a96148670207eff8a35ce7d1d75403e46e730c9a43a5"
+    },
+    {
+      "block_id": "page-0643-block-0006",
+      "order": 6,
+      "text": "■\n■Semagacestat is a γ-secretase inhibitor;115 the trials including 3,000 patients were \n",
+      "bbox": [
+        61.88999938964844,
+        427.0054016113281,
+        436.6719055175781,
+        441.2054138183594
+      ],
+      "text_sha256": "ffbe14bcca298a605436962d86db672e897dd0620962cc75259af69a7ab84d31"
+    },
+    {
+      "block_id": "page-0643-block-0007",
+      "order": 7,
+      "text": "discontinued in 2010 because of the absence of improvement in cognition in the \nstudy group and worsening cognition at higher doses compared to controls. Incidence \nof skin cancer was also higher in the study group.116\n",
+      "bbox": [
+        70.89199829101562,
+        440.035400390625,
+        436.67205810546875,
+        475.7554016113281
+      ],
+      "text_sha256": "c657d1bd158936aadf7fae326ac4e001436050cc96bf17737e273d394bad36c9"
+    },
+    {
+      "block_id": "page-0643-block-0008",
+      "order": 8,
+      "text": "■\n■Solanezumab is a humanised monoclonal antibody that binds soluble forms of amy-\n",
+      "bbox": [
+        61.88999938964844,
+        475.79541015625,
+        433.840087890625,
+        487.7554016113281
+      ],
+      "text_sha256": "6a8b8236897576ce0844433b053dc527042605f8011d08f249f1b463a10d5d9f"
+    },
+    {
+      "block_id": "page-0643-block-0009",
+      "order": 9,
+      "text": "loid and promotes its clearance from the brain.117 An RCT (EXPEDITION3) of 2,129 \npatients with mild AD found that solanezumab at a dose of 400mg administered \nevery 4 weeks did not significantly affect cognitive decline.118\n",
+      "bbox": [
+        70.88931274414062,
+        488.035400390625,
+        436.6592102050781,
+        523.7554321289062
+      ],
+      "text_sha256": "c8b1f3c87fa6a8da8eafe55df68bab122a7c753e088eedcd1f40fd6376e2ceb5"
+    },
+    {
+      "block_id": "page-0643-block-0010",
+      "order": 10,
+      "text": "■\n■Bapineuzumab is a humanised anti-amyloid-β monoclonal antibody.119 A 2017 meta-\n",
+      "bbox": [
+        61.88999938964844,
+        523.0054321289062,
+        433.9012145996094,
+        537.2053833007812
+      ],
+      "text_sha256": "f3a143e53718d4849a283cee44fe19f80d59f8805f98c75fe033103708074bbf"
+    },
+    {
+      "block_id": "page-0643-block-0011",
+      "order": 11,
+      "text": "analysis of RCTs with bapineuzumab confirmed its lack of clinical efficacy and its \nassociations with serious adverse effects (vasogenic oedema). The doses of bapineu-\nzumab used in these studies were limited because of higher rates of amyloid-related \nimaging abnormalities with effusion or oedema at higher doses. Its use is not recom-\nmended in patients with mild-to-moderate AD.120\n",
+      "bbox": [
+        70.89120483398438,
+        536.035400390625,
+        436.6912536621094,
+        595.7554321289062
+      ],
+      "text_sha256": "980bd54c654136387ffcc3644b4bd7b2cbaa5807731e159d0b4a35bc7f179ad8"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

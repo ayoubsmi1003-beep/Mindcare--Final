@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0171",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 171,
+  "source_page_index": 170,
+  "source_page_display": 171,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "150    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nhyperlipidaemia than those with no antipsychotic exposure and three times more likely \nto develop hyperlipidaemia than patients receiving FGAs.34 Risperidone treatment was \nnot associated with an increased likelihood of hyperlipidaemia compared with no \nantipsychotic exposure or treatment with an FGA.\nClozapine\nMean triglyceride levels have been shown to double and cholesterol levels to increase \nby at least 10% after 5 years of treatment with clozapine.35 Patients treated with clo-\nzapine have triglyceride levels that are almost double those of patients who are treated \nwith FGA medications.36,37 Cholesterol levels are also increased.7\nParticular care should be taken before prescribing clozapine or olanzapine for \npatients who are obese, diabetic or known to have pre-existing hyperlipidaemia.38\nScreening and monitoring\nAll patients should have their lipids measured at baseline, 3 months after starting treat-\nment with a new antipsychotic medication and then annually. Those prescribed clozap-\nine and olanzapine should ideally have their serum lipids measured every 3 months for \nthe first year of treatment, and then annually. Clinically significant changes in cholesterol \nare unlikely over the short term, but triglycerides can increase dramatically.39 In practice, \ndyslipidaemia is widespread in patients on long-term antipsychotic treatment irrespec-\ntive of the medication prescribed or of diagnosis.40–42 Screening for this potentially seri-\nous side effect of antipsychotic medication is not yet routine in clinical practice,43 but is \nstrongly recommended by NICE.44\nSevere hypertriglyceridemia (fasting level of >5mmol/L) is a risk factor for pancreati-\ntis. Note that antipsychotic-induced dyslipidaemia can occur independent of weight \ngain.45\nClinical management of dyslipidaemia\nPatients with raised cholesterol may benefit from dietary advice, lifestyle changes and/or \ntreatment with statins.46,47 Statins seem to be effective in this patient group, but interac-\ntions are possible.48 The outline of a systematic approach to the diagnosis and manage-\nment of hypercholesterolaemia is available,49 based on NICE guidance.50 Further, risk \ntables and treatment guidelines can be found in the British National Formulary (BNF). \nEvidence supports the treatment of cholesterol concentrations as low as 4mmol/l in \nhigh-risk patients,51 and this is the highest level recommended by NICE for secondary \nprevention of cardiovascular events.52 NICE makes no recommendations on target lev-\nels for primary prevention, but recent advice promotes the use of statins for anyone with \na > 10% ten-year risk of cardiovascular disease.52 Coronary heart disease and stroke \nrisk can be reduced by a third by reducing cholesterol to as low as 3.5mmol/L. When \ntriglycerides alone are raised, diets low in saturated fats, and the taking of fish oil and \nfibrates are effective treatments,27,53,54 although there is no proof that mortality is \nreduced. Such patients should be screened for IGT and diabetes.\nIf moderate to severe hyperlipidaemia develops during antipsychotic treatment, a \nswitch to another antipsychotic medication less likely to cause this problem should be \nconsidered in the first instance. Although not recommended as a strategy in patients \nwith treatment-resistant illness, clozapine-induced hypertriglyceridaemia has been \n",
+  "raw_text_sha256": "26865880732ee85014ab5572cedac528efd9bd0c32060b83b3b013abaa83b8a8",
+  "coordinates_sha256": "d5303753f3186450240d2e0861d84bbe30614da89ca8cbd2e619985e13893f7a",
+  "block_sequence_sha256": "247532a2c590d5bbbe6a8809d12917e55fd77cbd03b96c0df8d6861776ae4d4f",
+  "blocks": [
+    {
+      "block_id": "page-0171-block-0000",
+      "order": 0,
+      "text": "150    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "4f093cd4cd36c151000c28f007c1294300875fa8ffaa70f31aa53ca67ba55edc"
+    },
+    {
+      "block_id": "page-0171-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0171-block-0002",
+      "order": 2,
+      "text": "hyperlipidaemia than those with no antipsychotic exposure and three times more likely \nto develop hyperlipidaemia than patients receiving FGAs.34 Risperidone treatment was \nnot associated with an increased likelihood of hyperlipidaemia compared with no \nantipsychotic exposure or treatment with an FGA.\n",
+      "bbox": [
+        61.88909912109375,
+        62.54931640625,
+        436.6636657714844,
+        110.26931762695312
+      ],
+      "text_sha256": "56a183758b619058efc72995f5b1566a911b2706db2f37a23c46b6c100115a5c"
+    },
+    {
+      "block_id": "page-0171-block-0003",
+      "order": 3,
+      "text": "Clozapine\n",
+      "bbox": [
+        61.88909912109375,
+        127.70431518554688,
+        112.62107849121094,
+        140.73931884765625
+      ],
+      "text_sha256": "0bd60b9b2d37cb1923ef72b68316ecf506009979d23dbd051c264f05e5e95770"
+    },
+    {
+      "block_id": "page-0171-block-0004",
+      "order": 4,
+      "text": "Mean triglyceride levels have been shown to double and cholesterol levels to increase \nby at least 10% after 5 years of treatment with clozapine.35 Patients treated with clo-\nzapine have triglyceride levels that are almost double those of patients who are treated \nwith FGA medications.36,37 Cholesterol levels are also increased.7\n",
+      "bbox": [
+        61.88871765136719,
+        146.54931640625,
+        436.6990661621094,
+        194.26931762695312
+      ],
+      "text_sha256": "3dbaa3c44e5d8d1ff1781b0ddbf5671f2796fa9a250271f8435333260a7ace68"
+    },
+    {
+      "block_id": "page-0171-block-0005",
+      "order": 5,
+      "text": "Particular care should be taken before prescribing clozapine or olanzapine for \npatients who are obese, diabetic or known to have pre-existing hyperlipidaemia.38\n",
+      "bbox": [
+        61.88909912109375,
+        194.54931640625,
+        436.6491394042969,
+        218.26931762695312
+      ],
+      "text_sha256": "4bd0aa992a00c802b0315c67d3543a01e8f8ca42df78d7e7dce2a6d46abdec1c"
+    },
+    {
+      "block_id": "page-0171-block-0006",
+      "order": 6,
+      "text": "Screening and monitoring\n",
+      "bbox": [
+        61.88909912109375,
+        235.70431518554688,
+        196.15504455566406,
+        248.73931884765625
+      ],
+      "text_sha256": "26bfab3c034b85ea90f425f2ee8262f4db8b76c872d28320d5cf6fa390940b83"
+    },
+    {
+      "block_id": "page-0171-block-0007",
+      "order": 7,
+      "text": "All patients should have their lipids measured at baseline, 3 months after starting treat-\nment with a new antipsychotic medication and then annually. Those prescribed clozap-\nine and olanzapine should ideally have their serum lipids measured every 3 months for \nthe first year of treatment, and then annually. Clinically significant changes in cholesterol \nare unlikely over the short term, but triglycerides can increase dramatically.39 In practice, \ndyslipidaemia is widespread in patients on long-term antipsychotic treatment irrespec-\ntive of the medication prescribed or of diagnosis.40–42 Screening for this potentially seri-\nous side effect of antipsychotic medication is not yet routine in clinical practice,43 but is \nstrongly recommended by NICE.44\n",
+      "bbox": [
+        61.88456726074219,
+        254.54931640625,
+        436.7091369628906,
+        362.2693176269531
+      ],
+      "text_sha256": "2de0d3440dfb2f435232dfc19ed30be723a70a7ce58ee61274dd16af685b74b4"
+    },
+    {
+      "block_id": "page-0171-block-0008",
+      "order": 8,
+      "text": "Severe hypertriglyceridemia (fasting level of >5mmol/L) is a risk factor for pancreati-\ntis. Note that antipsychotic-induced dyslipidaemia can occur independent of weight \ngain.45\n",
+      "bbox": [
+        61.88909912109375,
+        362.54931640625,
+        436.6790466308594,
+        398.2693176269531
+      ],
+      "text_sha256": "b802aa579cf40cc14f904e17baf3f60f495a10cd62c0ffa263a501fb8258a9cb"
+    },
+    {
+      "block_id": "page-0171-block-0009",
+      "order": 9,
+      "text": "Clinical management of dyslipidaemia\n",
+      "bbox": [
+        61.88909912109375,
+        415.7043151855469,
+        258.72308349609375,
+        428.73931884765625
+      ],
+      "text_sha256": "e8abe2479d69af7e01fc190195ff7f37e0a1fe17aa6b8e408709504122e0f601"
+    },
+    {
+      "block_id": "page-0171-block-0010",
+      "order": 10,
+      "text": "Patients with raised cholesterol may benefit from dietary advice, lifestyle changes and/or \ntreatment with statins.46,47 Statins seem to be effective in this patient group, but interac-\ntions are possible.48 The outline of a systematic approach to the diagnosis and manage-\nment of hypercholesterolaemia is available,49 based on NICE guidance.50 Further, risk \ntables and treatment guidelines can be found in the British National Formulary (BNF). \nEvidence supports the treatment of cholesterol concentrations as low as 4mmol/l in \nhigh-risk patients,51 and this is the highest level recommended by NICE for secondary \nprevention of cardiovascular events.52 NICE makes no recommendations on target lev-\nels for primary prevention, but recent advice promotes the use of statins for anyone with \na > 10% ten-year risk of cardiovascular disease.52 Coronary heart disease and stroke \nrisk can be reduced by a third by reducing cholesterol to as low as 3.5mmol/L. When \ntriglycerides alone are raised, diets low in saturated fats, and the taking of fish oil and \nfibrates are effective treatments,27,53,54 although there is no proof that mortality is \nreduced. Such patients should be screened for IGT and diabetes.\n",
+      "bbox": [
+        61.884193420410156,
+        434.54931640625,
+        436.7159729003906,
+        602.2693481445312
+      ],
+      "text_sha256": "8e98d685141d51f6e20093a4151201dd6c272c80a73a010313510e7079bce14d"
+    },
+    {
+      "block_id": "page-0171-block-0011",
+      "order": 11,
+      "text": "If moderate to severe hyperlipidaemia develops during antipsychotic treatment, a \nswitch to another antipsychotic medication less likely to cause this problem should be \nconsidered in the first instance. Although not recommended as a strategy in patients \nwith treatment-resistant illness, clozapine-induced hypertriglyceridaemia has been \n",
+      "bbox": [
+        61.89320373535156,
+        602.54931640625,
+        436.7031555175781,
+        650.2693481445312
+      ],
+      "text_sha256": "908a8bae1fad6890b13a5bbfe8a9ef4931043e2de58986c9bfe7ec0274ce3f1a"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,947 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0113",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 113,
+  "source_page_index": 112,
+  "source_page_display": 113,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug\nTrade name Formulation\nDosing \ninterval\nSite(s) of \nadministration\nDosing \ninformation\nPre-mixing \nrequired\nPre-treatment \nwith oral \ntherapy \nessential*\nPre-treatment \nwith oral \ntherapy \ndesirable**\nRegulatory \nstatus\nAdditional information\nAripiprazole \nlauroxil \nextended-\nrelease \ninjectable\nAristada \nInitio\nNanocrystalline \ndispersion;1 \nLinkeRx \ntechnology2\nSingle dose\nIntra-muscular \ninjection into the \ndeltoid or gluteal \nmuscle\n675mg (IM \ndispersion  \n= 459mg \naripiprazole)3\nNo\nYes – but see \nadditional \ninformation\nYes\nFDA approved \n20184\nAristada initio, together with one 30mg \ndose of oral aripiprazole, is designed to \nonly be given to initiate treatment with \nAristada (see Aripiprazole LAI section in \nChapter 1) and should not be used for \nrepeated dosing.5\nPaliperidone \npalmitate \n6-month\nformulation\nN/A\nMicro-\ncrystalline \nsuspension\n6-monthly\nIntra-muscular \ninjection\n700mg/\n1000mg?6\nNo\nNo\nNo – patients \nwill already \nhave received \nlong-acting \npaliperidone\nPhase 3 study \nunderway7\nDesigned for patients stabilised on \nPP1M or PP3M8\nRisperidone \nfor \nsub-\ncutaneous \ninjection \n(RBP-7000)\nPerseris\nSuspension, \nCo-polymer; \nATRIGEL \ntechnology3\n1-monthly\nAbdominal \nsub-cutaneous \ninjection only9\n90mg/120mg\nYes\nNo10\nYes\nFDA approved \n201811\nDoes not require loading doses or oral \nsupplementation. Prior tolerability \nwith oral risperidone should be \nestablished9\nNewer long-acting injectable antipsychotic preparations\nThe following table provides brief details of some newer LAI antipsychotic formulations.\n(Continued)\n",
+  "raw_text_sha256": "b623a6bf49a6dbe902d3aea4f312df0d9e2717f67a053c8954fde4bf44c501e4",
+  "coordinates_sha256": "a3cfe7253933db6bd19c80e884fa01f8a04566082c0fc25004c04855110803bf",
+  "block_sequence_sha256": "f6bab083c41d7f8b25735c56d740bc5d2270dadcfa6ba1340729ab5f89bf8928",
+  "blocks": [
+    {
+      "block_id": "page-0113-block-0000",
+      "order": 0,
+      "text": "Drug\nTrade name Formulation\nDosing \n",
+      "bbox": [
+        155.61390686035156,
+        480.4905090332031,
+        174.4989013671875,
+        652.6530151367188
+      ],
+      "text_sha256": "91b7c3aaaf5a97c70f408a3de96be6cff84a051c83c84754230c947d0129f666"
+    },
+    {
+      "block_id": "page-0113-block-0001",
+      "order": 1,
+      "text": "interval\nSite(s) of \n",
+      "bbox": [
+        155.61390686035156,
+        431.0655212402344,
+        174.4989013671875,
+        507.15301513671875
+      ],
+      "text_sha256": "3b807b544b6f5a11bbf03708e2475b091761732e04bd65719dfb655ca4f49808"
+    },
+    {
+      "block_id": "page-0113-block-0002",
+      "order": 2,
+      "text": "administration\nDosing \n",
+      "bbox": [
+        155.61390686035156,
+        377.7405700683594,
+        174.4989013671875,
+        464.40301513671875
+      ],
+      "text_sha256": "7abd46b6efd926c97713377a5c0768c7a78fac7494d959969dcfe107496513ad"
+    },
+    {
+      "block_id": "page-0113-block-0003",
+      "order": 3,
+      "text": "information\nPre-mixing \n",
+      "bbox": [
+        155.61390686035156,
+        317.2755126953125,
+        174.4989013671875,
+        404.40301513671875
+      ],
+      "text_sha256": "cb259a82a8dea17b99d3fc23ee2704dc1af0215061381858be0fb8b571f42fb7"
+    },
+    {
+      "block_id": "page-0113-block-0004",
+      "order": 4,
+      "text": "required\n",
+      "bbox": [
+        165.6114044189453,
+        327.41552734375,
+        174.4989013671875,
+        357.15301513671875
+      ],
+      "text_sha256": "a5b0a56fd8d2fcf82092fb779244729989674b90787530cbf7946f4d00da53a6"
+    },
+    {
+      "block_id": "page-0113-block-0005",
+      "order": 5,
+      "text": "Pre-treatment \n",
+      "bbox": [
+        135.6114044189453,
+        262.2629089355469,
+        144.4989013671875,
+        313.26300048828125
+      ],
+      "text_sha256": "1acb0807d348d7aab5f1a4b381969b57518a30e49cd3b268dd0968a967c2b3bb"
+    },
+    {
+      "block_id": "page-0113-block-0006",
+      "order": 6,
+      "text": "with oral \n",
+      "bbox": [
+        145.60890197753906,
+        279.08551025390625,
+        154.49639892578125,
+        313.26300048828125
+      ],
+      "text_sha256": "84d73db5cda150d41be0319c4d5134ff087da8ea7d8251296daaec8727f34ce5"
+    },
+    {
+      "block_id": "page-0113-block-0007",
+      "order": 7,
+      "text": "therapy \n",
+      "bbox": [
+        155.6063995361328,
+        283.66796875,
+        164.493896484375,
+        313.26300048828125
+      ],
+      "text_sha256": "04ab2b3df87cd713a0ce5259c40bebdf5483908ed4943f0c59f069ffc74227c9"
+    },
+    {
+      "block_id": "page-0113-block-0008",
+      "order": 8,
+      "text": "essential*\n",
+      "bbox": [
+        165.60389709472656,
+        278.25299072265625,
+        174.49139404296875,
+        313.26300048828125
+      ],
+      "text_sha256": "1cdb4f32e7f3ae1ced125d74651e644931aa65714f93e4c9c8d0be3b89a8da3c"
+    },
+    {
+      "block_id": "page-0113-block-0009",
+      "order": 9,
+      "text": "Pre-treatment \n",
+      "bbox": [
+        135.60389709472656,
+        209.4029083251953,
+        144.49139404296875,
+        260.40301513671875
+      ],
+      "text_sha256": "1acb0807d348d7aab5f1a4b381969b57518a30e49cd3b268dd0968a967c2b3bb"
+    },
+    {
+      "block_id": "page-0113-block-0010",
+      "order": 10,
+      "text": "with oral \n",
+      "bbox": [
+        145.6013946533203,
+        226.2255096435547,
+        154.4888916015625,
+        260.40301513671875
+      ],
+      "text_sha256": "84d73db5cda150d41be0319c4d5134ff087da8ea7d8251296daaec8727f34ce5"
+    },
+    {
+      "block_id": "page-0113-block-0011",
+      "order": 11,
+      "text": "therapy \n",
+      "bbox": [
+        155.59889221191406,
+        230.80796813964844,
+        164.48638916015625,
+        260.40301513671875
+      ],
+      "text_sha256": "04ab2b3df87cd713a0ce5259c40bebdf5483908ed4943f0c59f069ffc74227c9"
+    },
+    {
+      "block_id": "page-0113-block-0012",
+      "order": 12,
+      "text": "desirable**\nRegulatory \n",
+      "bbox": [
+        155.59889221191406,
+        165.55799865722656,
+        174.48388671875,
+        260.40301513671875
+      ],
+      "text_sha256": "04d60e8454b3ff7b370b4a83bb30abed44ea404abcde9ce8a84e338a7d2a7fb7"
+    },
+    {
+      "block_id": "page-0113-block-0013",
+      "order": 13,
+      "text": "status\nAdditional information\n",
+      "bbox": [
+        165.5963897705078,
+        71.1404037475586,
+        174.48388671875,
+        206.40301513671875
+      ],
+      "text_sha256": "4f4a438ce2f0a16bdaa476bc192409473523ebd9e77beaf3996b4950bba3ae60"
+    },
+    {
+      "block_id": "page-0113-block-0014",
+      "order": 14,
+      "text": "Aripiprazole \n",
+      "bbox": [
+        182.6468963623047,
+        614.9300537109375,
+        190.77389526367188,
+        652.6530151367188
+      ],
+      "text_sha256": "89f7885c2a021efef19b91bddac6e04c6efa268d300fb357077d195dbc2a9bae"
+    },
+    {
+      "block_id": "page-0113-block-0015",
+      "order": 15,
+      "text": "lauroxil \n",
+      "bbox": [
+        192.64990234375,
+        629.4480590820312,
+        200.7769012451172,
+        652.6530151367188
+      ],
+      "text_sha256": "c281935d900e75d237e3700d9c6e5c5fc2fff54218e37697c4b5dc60f652919e"
+    },
+    {
+      "block_id": "page-0113-block-0016",
+      "order": 16,
+      "text": "extended-\n",
+      "bbox": [
+        202.6529083251953,
+        622.70703125,
+        210.7799072265625,
+        652.6530151367188
+      ],
+      "text_sha256": "e59018ec41ea0db20fee1b9e0d5a8939fb3ccd65567f35dbb70fb65d780e528d"
+    },
+    {
+      "block_id": "page-0113-block-0017",
+      "order": 17,
+      "text": "release \n",
+      "bbox": [
+        212.65591430664062,
+        630.2250366210938,
+        220.7829132080078,
+        652.6530151367188
+      ],
+      "text_sha256": "3a83f221e414d2b9ba3d4ec902edaca63bd64ebd49066b299c71313276e3d9a5"
+    },
+    {
+      "block_id": "page-0113-block-0018",
+      "order": 18,
+      "text": "injectable\n",
+      "bbox": [
+        222.65890502929688,
+        624.2680053710938,
+        230.78590393066406,
+        652.6530151367188
+      ],
+      "text_sha256": "37dbad8129a80cc9c42774980fe4161a14be91d6df369565601b2dbf0580dc91"
+    },
+    {
+      "block_id": "page-0113-block-0019",
+      "order": 19,
+      "text": "Aristada \n",
+      "bbox": [
+        182.66090393066406,
+        578.95703125,
+        190.78790283203125,
+        605.4030151367188
+      ],
+      "text_sha256": "6d04d185c9d75f86813ccdbdf4ec032afe0f4ce52b687de60c9421ac271f48f6"
+    },
+    {
+      "block_id": "page-0113-block-0020",
+      "order": 20,
+      "text": "Initio\nNanocrystalline \n",
+      "bbox": [
+        182.66090393066406,
+        511.8479919433594,
+        200.79090881347656,
+        605.4030151367188
+      ],
+      "text_sha256": "f52fe5ad6017a4bfc260aa63656b7b45ac5cbb74dac1daac99fe00942b1997f9"
+    },
+    {
+      "block_id": "page-0113-block-0021",
+      "order": 21,
+      "text": "dispersion;1 \n",
+      "bbox": [
+        192.6468963623047,
+        522.7893676757812,
+        200.79090881347656,
+        558.9019775390625
+      ],
+      "text_sha256": "4afdee80b1b2c1875bab6f72960e676fd82cbce2bf822c8411aa4d3df4bef94f"
+    },
+    {
+      "block_id": "page-0113-block-0022",
+      "order": 22,
+      "text": "LinkeRx \n",
+      "bbox": [
+        202.64990234375,
+        534.40234375,
+        210.7769012451172,
+        558.90234375
+      ],
+      "text_sha256": "0cb4263ac60525902981e98ae474a3c840a8cd9878d0f29d55bed879b9a5e880"
+    },
+    {
+      "block_id": "page-0113-block-0023",
+      "order": 23,
+      "text": "technology2\n",
+      "bbox": [
+        212.6529083251953,
+        523.5732421875,
+        220.7799072265625,
+        558.90234375
+      ],
+      "text_sha256": "64d09d88ee26a19fc5a1bc80ac237e0639f761c7502f8ce8585b17924451fbba"
+    },
+    {
+      "block_id": "page-0113-block-0024",
+      "order": 24,
+      "text": "Single dose\nIntra-muscular \n",
+      "bbox": [
+        182.6468963623047,
+        419.6880798339844,
+        190.77389526367188,
+        507.15301513671875
+      ],
+      "text_sha256": "f6a746945a330af793c48ad0028ab705ab642e20b91cf952e6ef923ceb05dccd"
+    },
+    {
+      "block_id": "page-0113-block-0025",
+      "order": 25,
+      "text": "injection into the \n",
+      "bbox": [
+        192.64990234375,
+        411.8970642089844,
+        200.7769012451172,
+        464.4040222167969
+      ],
+      "text_sha256": "05756ac917faec962f0d1cf700514ffedcd9ca96968f749a318d9fa5ae91c2f4"
+    },
+    {
+      "block_id": "page-0113-block-0026",
+      "order": 26,
+      "text": "deltoid or gluteal \n",
+      "bbox": [
+        202.6529083251953,
+        411.50506591796875,
+        210.7799072265625,
+        464.4040222167969
+      ],
+      "text_sha256": "f33c41f8e8024e17b94fae988f3dbb01db6edfea2c3f81807eb72c919bf535a8"
+    },
+    {
+      "block_id": "page-0113-block-0027",
+      "order": 27,
+      "text": "muscle\n",
+      "bbox": [
+        212.65591430664062,
+        443.7960510253906,
+        220.7829132080078,
+        464.4040222167969
+      ],
+      "text_sha256": "69ce0e089c108cc98b75493ab3b3d41494a7ef2bd482651e12b422631369228d"
+    },
+    {
+      "block_id": "page-0113-block-0028",
+      "order": 28,
+      "text": "675mg (IM \ndispersion  \n",
+      "bbox": [
+        182.65391540527344,
+        369.39300537109375,
+        200.78392028808594,
+        404.4070129394531
+      ],
+      "text_sha256": "8b1a2953dec3e76e3030645315500aa0aff286f4769cef32aade17ec614a0a2e"
+    },
+    {
+      "block_id": "page-0113-block-0029",
+      "order": 29,
+      "text": "= 459mg \n",
+      "bbox": [
+        202.65992736816406,
+        374.9159851074219,
+        210.78692626953125,
+        404.4070129394531
+      ],
+      "text_sha256": "1253740e9593852476d281d22b3ba353d7d18b8b79d5046afde97244162c5d77"
+    },
+    {
+      "block_id": "page-0113-block-0030",
+      "order": 30,
+      "text": "aripiprazole)3\n",
+      "bbox": [
+        212.66293334960938,
+        365.5804748535156,
+        220.78993225097656,
+        404.4070129394531
+      ],
+      "text_sha256": "a34096c2974db716f5155af95345ecacf8251c4663ae81bfc3a4888a7a755ed7"
+    },
+    {
+      "block_id": "page-0113-block-0031",
+      "order": 31,
+      "text": "No\nYes – but see \n",
+      "bbox": [
+        182.6468963623047,
+        272.28497314453125,
+        190.77389526367188,
+        357.15301513671875
+      ],
+      "text_sha256": "2e80f6cc513136c27c356c50c3d07a927d2dba92067a073c9cf073ea5078ba95"
+    },
+    {
+      "block_id": "page-0113-block-0032",
+      "order": 32,
+      "text": "additional \n",
+      "bbox": [
+        192.64990234375,
+        281.75604248046875,
+        200.7769012451172,
+        313.26300048828125
+      ],
+      "text_sha256": "5a5bb24f116cd38b23c0c263fcd8641cc903dcc00a4c5142788942ac26f39329"
+    },
+    {
+      "block_id": "page-0113-block-0033",
+      "order": 33,
+      "text": "information\n",
+      "bbox": [
+        202.6529083251953,
+        278.2630615234375,
+        210.7799072265625,
+        313.26300048828125
+      ],
+      "text_sha256": "83a36ab3779f4bcbc4b677d9c749f50debfbe19ffc33bdfc668b1e592789e680"
+    },
+    {
+      "block_id": "page-0113-block-0034",
+      "order": 34,
+      "text": "Yes\nFDA approved \n",
+      "bbox": [
+        182.65390014648438,
+        162.4619598388672,
+        190.78089904785156,
+        260.406005859375
+      ],
+      "text_sha256": "e8b55b77c104e5002b7ae7f02becf9723fe417b211547f83c06e15ee183396c1"
+    },
+    {
+      "block_id": "page-0113-block-0035",
+      "order": 35,
+      "text": "20184\nAristada initio, together with one 30mg \n",
+      "bbox": [
+        182.6468963623047,
+        41.34861755371094,
+        200.78390502929688,
+        206.40802001953125
+      ],
+      "text_sha256": "35c2121cc4e26c8d3f3dc2bab524c6e33e60176af0e96e9539e24d5d64f1db7f"
+    },
+    {
+      "block_id": "page-0113-block-0036",
+      "order": 36,
+      "text": "dose of oral aripiprazole, is designed to \n",
+      "bbox": [
+        192.64990234375,
+        43.01432800292969,
+        200.7769012451172,
+        158.402587890625
+      ],
+      "text_sha256": "74fe6e4b6eb287e41229d50c32892ba910bc54296c53a79e5e57efa04d0a692c"
+    },
+    {
+      "block_id": "page-0113-block-0037",
+      "order": 37,
+      "text": "only be given to initiate treatment with \n",
+      "bbox": [
+        202.6529083251953,
+        43.46244812011719,
+        210.7799072265625,
+        158.402587890625
+      ],
+      "text_sha256": "8c58f647f7b4f2c14837c19701c111f6c9d6b96f160a6cba75aca8ff280227d9"
+    },
+    {
+      "block_id": "page-0113-block-0038",
+      "order": 38,
+      "text": "Aristada (see Aripiprazole LAI section in \n",
+      "bbox": [
+        212.65591430664062,
+        42.64335632324219,
+        220.7829132080078,
+        158.402587890625
+      ],
+      "text_sha256": "baa89b26f37117c5c1164f8fded7827e0987ff6909e673c519d43607bc593166"
+    },
+    {
+      "block_id": "page-0113-block-0039",
+      "order": 39,
+      "text": "Chapter 1) and should not be used for \n",
+      "bbox": [
+        222.65890502929688,
+        44.96037292480469,
+        230.78590393066406,
+        158.402587890625
+      ],
+      "text_sha256": "59c3c532e00302f2c01a293f4ba46b58191e51c453265e54fba2d23f347aa646"
+    },
+    {
+      "block_id": "page-0113-block-0040",
+      "order": 40,
+      "text": "repeated dosing.5\n",
+      "bbox": [
+        232.66189575195312,
+        107.53290557861328,
+        240.7888946533203,
+        158.402587890625
+      ],
+      "text_sha256": "8495103b0c743b095225141cf45dd8b118338a65dbe55edc22b72f5533efba18"
+    },
+    {
+      "block_id": "page-0113-block-0041",
+      "order": 41,
+      "text": "Paliperidone \n",
+      "bbox": [
+        247.29690551757812,
+        614.1460571289062,
+        255.4239044189453,
+        652.6530151367188
+      ],
+      "text_sha256": "1ca1c0080e5cf0ffdeb1c0e75b2c16c516e758b6027d1aedef2f41619f26d726"
+    },
+    {
+      "block_id": "page-0113-block-0042",
+      "order": 42,
+      "text": "palmitate \n",
+      "bbox": [
+        257.29986572265625,
+        622.7140502929688,
+        265.4268798828125,
+        652.6530151367188
+      ],
+      "text_sha256": "fa8e069cc697441fc6196c59dff5ccbf6ae7edb3c4f4425007afd46364fa8fe3"
+    },
+    {
+      "block_id": "page-0113-block-0043",
+      "order": 43,
+      "text": "6-month\nformulation\n",
+      "bbox": [
+        267.3028564453125,
+        617.6530151367188,
+        285.432861328125,
+        652.6530151367188
+      ],
+      "text_sha256": "ccf8ab89ecc7b503a3bc0a3920cc46f3f5e98dc38463a9e90acd8cf8451d40fb"
+    },
+    {
+      "block_id": "page-0113-block-0044",
+      "order": 44,
+      "text": "N/A\nMicro-\n",
+      "bbox": [
+        247.30386352539062,
+        539.5890502929688,
+        255.4308624267578,
+        605.4030151367188
+      ],
+      "text_sha256": "270299978b31619159d0c2a999e7552d6abadb52353c5f50879b6277cd7f814e"
+    },
+    {
+      "block_id": "page-0113-block-0045",
+      "order": 45,
+      "text": "crystalline \n",
+      "bbox": [
+        257.30682373046875,
+        527.801025390625,
+        265.433837890625,
+        558.9019775390625
+      ],
+      "text_sha256": "e4c4ee74fac83ad03f91bc8fb2ae8a5f9fe7fbbd6aaab4f8041bd0d7fa53b3be"
+    },
+    {
+      "block_id": "page-0113-block-0046",
+      "order": 46,
+      "text": "suspension\n",
+      "bbox": [
+        267.309814453125,
+        526.2189331054688,
+        275.43682861328125,
+        558.9019775390625
+      ],
+      "text_sha256": "ce837b32563e6fce69ba311f74da36c865c78f8d66e83f37097ee7c2fb3366ee"
+    },
+    {
+      "block_id": "page-0113-block-0047",
+      "order": 47,
+      "text": "6-monthly\nIntra-muscular \n",
+      "bbox": [
+        247.31085205078125,
+        419.68609619140625,
+        255.43785095214844,
+        507.1510009765625
+      ],
+      "text_sha256": "3e8f8c1e39edae2284322aadd0737252acc922ef0b58e73df249757b40b159c2"
+    },
+    {
+      "block_id": "page-0113-block-0048",
+      "order": 48,
+      "text": "injection\n700mg/\n1000mg?6\nNo\nNo\nNo – patients \n",
+      "bbox": [
+        247.29690551757812,
+        218.7840118408203,
+        265.44085693359375,
+        464.4020080566406
+      ],
+      "text_sha256": "818355b65e8205b01dc55fcf194bc0af893506a293c77913d5f54810602a1885"
+    },
+    {
+      "block_id": "page-0113-block-0049",
+      "order": 49,
+      "text": "will already \n",
+      "bbox": [
+        257.29986572265625,
+        225.1470489501953,
+        265.4268798828125,
+        260.406005859375
+      ],
+      "text_sha256": "b223392948dff9f7d02e390cd96dd4fbb6c4613cdf51825a753770b33cd175e3"
+    },
+    {
+      "block_id": "page-0113-block-0050",
+      "order": 50,
+      "text": "have received \n",
+      "bbox": [
+        267.3028564453125,
+        218.1470184326172,
+        275.42987060546875,
+        260.406005859375
+      ],
+      "text_sha256": "9cdf57c4b74361aaa2254514c544ee378d15e3862221988342f9212e0b5ff735"
+    },
+    {
+      "block_id": "page-0113-block-0051",
+      "order": 51,
+      "text": "long-acting \n",
+      "bbox": [
+        277.30584716796875,
+        224.62205505371094,
+        285.432861328125,
+        260.406005859375
+      ],
+      "text_sha256": "e8636bd729c22249c7cea53242d469bfb31911e1ed4519cc945525b005654a57"
+    },
+    {
+      "block_id": "page-0113-block-0052",
+      "order": 52,
+      "text": "paliperidone\n",
+      "bbox": [
+        287.308837890625,
+        223.45306396484375,
+        295.43585205078125,
+        260.406005859375
+      ],
+      "text_sha256": "e79476d31cc47cf1968c0a570003e0ab6aedb6c31086e4789233b13ab1e4b6b6"
+    },
+    {
+      "block_id": "page-0113-block-0053",
+      "order": 53,
+      "text": "Phase 3 study \n",
+      "bbox": [
+        247.31088256835938,
+        163.61692810058594,
+        255.43788146972656,
+        206.40802001953125
+      ],
+      "text_sha256": "65473d93d4733209afd427ea7a98dbf9a013a6b741d7b32b8be48b5904134f9a"
+    },
+    {
+      "block_id": "page-0113-block-0054",
+      "order": 54,
+      "text": "underway7\nDesigned for patients stabilised on \n",
+      "bbox": [
+        247.29690551757812,
+        53.76622009277344,
+        265.44085693359375,
+        206.40802001953125
+      ],
+      "text_sha256": "984386b2b9da26edbdb0452fd13094c9265ebad9c52b98cfefc03a84de61efc7"
+    },
+    {
+      "block_id": "page-0113-block-0055",
+      "order": 55,
+      "text": "PP1M or PP3M8\n",
+      "bbox": [
+        257.29986572265625,
+        111.78876495361328,
+        265.4268798828125,
+        158.402587890625
+      ],
+      "text_sha256": "2e540133dceb32c2cedd001173b8d317af77587d5007923b878c322d6cafe656"
+    },
+    {
+      "block_id": "page-0113-block-0056",
+      "order": 56,
+      "text": "Risperidone \n",
+      "bbox": [
+        301.9468994140625,
+        616.0850219726562,
+        310.07391357421875,
+        652.6530151367188
+      ],
+      "text_sha256": "7b6ddc3925c29871a8936b5073f4c1706d01d35e7f72cf1469c139cb3c678212"
+    },
+    {
+      "block_id": "page-0113-block-0057",
+      "order": 57,
+      "text": "for \n",
+      "bbox": [
+        311.94989013671875,
+        642.1530151367188,
+        320.076904296875,
+        652.6530151367188
+      ],
+      "text_sha256": "ddd2cab581488701044a73587702561834772be09def3b110b282f8c66e99a08"
+    },
+    {
+      "block_id": "page-0113-block-0058",
+      "order": 58,
+      "text": "sub-\n",
+      "bbox": [
+        321.952880859375,
+        639.8150024414062,
+        330.07989501953125,
+        652.6530151367188
+      ],
+      "text_sha256": "946236798fbe9553f9fc6e1c18a4a756b22686bd8433655a49fa82ff2f7cdedb"
+    },
+    {
+      "block_id": "page-0113-block-0059",
+      "order": 59,
+      "text": "cutaneous \n",
+      "bbox": [
+        331.95587158203125,
+        619.97705078125,
+        340.0828857421875,
+        652.6530151367188
+      ],
+      "text_sha256": "9d5295cf789b7eb7dd56bbb350b9adcb7f48c0cb89b6424a0572a3eb118ca730"
+    },
+    {
+      "block_id": "page-0113-block-0060",
+      "order": 60,
+      "text": "injection \n",
+      "bbox": [
+        341.9588623046875,
+        625.4300537109375,
+        350.08587646484375,
+        652.6530151367188
+      ],
+      "text_sha256": "2a5f48f080e96de6bb734e3630a56060f62c61ccd6ed6a2bec049178fcbfa772"
+    },
+    {
+      "block_id": "page-0113-block-0061",
+      "order": 61,
+      "text": "(RBP-7000)\n",
+      "bbox": [
+        351.96185302734375,
+        619.5780639648438,
+        360.0888671875,
+        652.6530151367188
+      ],
+      "text_sha256": "a15b3dddb9f9e9da0d897c92d12add11b80e16fcc7aaf61d513c28e479894f1c"
+    },
+    {
+      "block_id": "page-0113-block-0062",
+      "order": 62,
+      "text": "Perseris\nSuspension, \n",
+      "bbox": [
+        301.9608154296875,
+        521.5499877929688,
+        310.08782958984375,
+        605.4030151367188
+      ],
+      "text_sha256": "1f6014788ff78433cd0ef9d37b9d917010eafc46674646c5c7db1e0fd7872f00"
+    },
+    {
+      "block_id": "page-0113-block-0063",
+      "order": 63,
+      "text": "Co-polymer; \n",
+      "bbox": [
+        311.96380615234375,
+        520.0100708007812,
+        320.0908203125,
+        558.9019775390625
+      ],
+      "text_sha256": "6858d5d623e3fdcc32f751ec10c51a0b63b78bd450f2653d6af8449de7d1fbe4"
+    },
+    {
+      "block_id": "page-0113-block-0064",
+      "order": 64,
+      "text": "ATRIGEL \n",
+      "bbox": [
+        321.966796875,
+        532.155029296875,
+        330.09381103515625,
+        558.9019775390625
+      ],
+      "text_sha256": "69ce11827bb733e1495000e89d9a6f9a2d7919097a569e861cb50c9f294578b8"
+    },
+    {
+      "block_id": "page-0113-block-0065",
+      "order": 65,
+      "text": "technology3\n",
+      "bbox": [
+        331.96978759765625,
+        523.5732421875,
+        340.0968017578125,
+        558.9019775390625
+      ],
+      "text_sha256": "86bf45e51d1a644c3a8ab8e130111b2bd79076e8979d0c09cdc6e3a31fbe4a99"
+    },
+    {
+      "block_id": "page-0113-block-0066",
+      "order": 66,
+      "text": "1-monthly\nAbdominal \n",
+      "bbox": [
+        301.9468994140625,
+        429.7820739746094,
+        310.07391357421875,
+        507.15301513671875
+      ],
+      "text_sha256": "c1bae390e01e8d578a83ecb47fa25a45b14ece842b98f57f8b3a45818d736fe5"
+    },
+    {
+      "block_id": "page-0113-block-0067",
+      "order": 67,
+      "text": "sub-cutaneous \n",
+      "bbox": [
+        311.94989013671875,
+        418.8900451660156,
+        320.076904296875,
+        464.4040222167969
+      ],
+      "text_sha256": "5afdf5b0a316053360e7c9ba235081cad7fdec451318f3aee34e01786303581f"
+    },
+    {
+      "block_id": "page-0113-block-0068",
+      "order": 68,
+      "text": "injection only9\n",
+      "bbox": [
+        321.952880859375,
+        422.4656677246094,
+        330.07989501953125,
+        464.4040222167969
+      ],
+      "text_sha256": "ecbf04c067bde6a303d086ab3987877ca16d08bd0267e94d573b5f1b7e97505a"
+    },
+    {
+      "block_id": "page-0113-block-0069",
+      "order": 69,
+      "text": "90mg/120mg\nYes\nNo10\nYes\nFDA approved \n",
+      "bbox": [
+        301.9468994140625,
+        162.45884704589844,
+        310.07391357421875,
+        404.4029235839844
+      ],
+      "text_sha256": "52536f1f54df78ca6e7223c8e12e5ceaab68992059a9ca4c5f09cf74bd4b1eff"
+    },
+    {
+      "block_id": "page-0113-block-0070",
+      "order": 70,
+      "text": "201811\nDoes not require loading doses or oral \n",
+      "bbox": [
+        301.9468994140625,
+        42.72715759277344,
+        320.076904296875,
+        206.4049072265625
+      ],
+      "text_sha256": "f4d9b57914c95597c09c8f6ad6e8499ebfec4dbd9ebe41968b292142d98fa5ea"
+    },
+    {
+      "block_id": "page-0113-block-0071",
+      "order": 71,
+      "text": "supplementation. Prior tolerability \n",
+      "bbox": [
+        311.94989013671875,
+        55.73332214355469,
+        320.076904296875,
+        158.402587890625
+      ],
+      "text_sha256": "6b670df7cc495f16472459f647dfc65a0a6e56dff147191a07b3df2502e24540"
+    },
+    {
+      "block_id": "page-0113-block-0072",
+      "order": 72,
+      "text": "with oral risperidone should be \n",
+      "bbox": [
+        321.952880859375,
+        63.87425231933594,
+        330.07989501953125,
+        158.402587890625
+      ],
+      "text_sha256": "6db68d9dc5d4afba09d7fb2495b4d9a73b23295d5bb00b4707ef1659eaf8220b"
+    },
+    {
+      "block_id": "page-0113-block-0073",
+      "order": 73,
+      "text": "established9\n",
+      "bbox": [
+        331.95587158203125,
+        123.07300567626953,
+        340.0828857421875,
+        158.402587890625
+      ],
+      "text_sha256": "d7ea4533b7d5d5e2dafabbe382c4a3b5bb21290a63bd7a1252cd1b101b44ffe5"
+    },
+    {
+      "block_id": "page-0113-block-0074",
+      "order": 74,
+      "text": "Newer long-acting injectable antipsychotic preparations\n",
+      "bbox": [
+        63.60409927368164,
+        356.1440124511719,
+        76.63909912109375,
+        645.6530151367188
+      ],
+      "text_sha256": "8b523113d4afb1612a400d232ec699adc352e8c415d1d0f1f5fed1eea0f87416"
+    },
+    {
+      "block_id": "page-0113-block-0075",
+      "order": 75,
+      "text": "The following table provides brief details of some newer LAI antipsychotic formulations.\n",
+      "bbox": [
+        92.4490966796875,
+        282.3428039550781,
+        104.16909790039062,
+        652.6530151367188
+      ],
+      "text_sha256": "6a23dfa3ea7b819e8913babf18931e423e631d68fdb10b44ed4c548fd2fc0737"
+    },
+    {
+      "block_id": "page-0113-block-0076",
+      "order": 76,
+      "text": "(Continued)\n",
+      "bbox": [
+        368.63641357421875,
+        37.277976989746094,
+        377.388916015625,
+        74.79290771484375
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,263 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0214",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 214,
+  "source_page_index": 213,
+  "source_page_display": 214,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    193\nCHAPTER 1\nOptimising clozapine treatment\nUsing clozapine alone\nTarget dose\n(Note that dose is \nbest adjusted \naccording to \npatient \ntolerability and \nplasma level)\n■\n■Average dose in UK is around 450mg/day1\n■\n■Response usually seen in the range 150–900mg/day2\n■\n■Lower doses required in the elderly, females and non-smokers, and in those prescribed \ncertain enzyme inhibitors3,4 (see clozapine titration schedule)\nPlasma levels\n■\n■Most studies indicate that threshold for response is in the range 350–420µg/l.5,6 Threshold \nmay be as high as 500µg/l7\n■\n■In male smokers who cannot achieve therapeutic plasma levels, metabolic inhibitors (fluvox-\namine8 or cimetidine9 for example) can be co-prescribed but extreme caution is required10\n■\n■Importance of norclozapine levels not established but clozapine/norclozapine ratio may aid \nassessment of recent compliance\nClozapine augmentation\nClozapine ‘augmentation’ has become common practice because inadequate response \nto clozapine alone is a frequent clinical event. The evidence base supporting augmenta-\ntion strategies is growing but remains insufficient to allow the development of any \nalgorithm or schedule of treatment options. In practice, the result of clozapine augmen-\ntation is often disappointing and substantial changes in symptom severity are rarely \nobserved. This clinical impression is supported by the equivocal results of many studies, \nwhich suggests a small effect size at best. Meta-analyses of antipsychotic augmentation \nsuggest no effect,11 a small effect in long term studies,12 a very small effect overall,13 or \nsmall effects in specific symptom domains.14 It should be noted that few high-quality \nstudies in this area exist – when only large, high-quality studies are included, most \nmeta-analyses report no benefit to pharmacological augmentation.15 Investigations into \ndopaminergic activity in refractory schizophrenia suggest there is no overproduction of \ndopamine.16,17 Dopamine antagonists are thus unlikely to be effective.\nIt is recommended that all augmentation attempts are carefully monitored and, if no \nclear benefit is forthcoming, abandoned after 3–6 months. The addition of another \ndrug to clozapine treatment must be expected to worsen overall adverse effect burden \nand so continued ineffective treatment is not appropriate. In some cases, the addition of \nan augmenting agent may reduce the severity of some adverse effects (e.g. weight gain, \ndyslipidaemia – see below) or allow a reduction in clozapine dose. The addition of ari-\npiprazole to clozapine may be particularly effective in reversing metabolic effects.18,19 \nRecently published international consensus guidelines recommend (after optimising \nplasma levels) tailoring augmentation agent choice to residual symptoms; adding ami-\nsulpride or aripiprazole for positive symptoms, antidepressants for negative symptoms, \nand mood stabilisers for suicidal ideation or aggression.15\nTable 1.36 shows suggested treatment options (in alphabetical order) where \n3–6 months of optimised clozapine alone has provided unsatisfactory benefit.\n",
+  "raw_text_sha256": "4ebaf21e6f75dd4ce24848c29564bc99fa983c2dd01a55f3c0aacf8b1ef6def3",
+  "coordinates_sha256": "8867ffe23d7c1be566f708eddf34e113e20426a64fa57d9c500f8cd147048c30",
+  "block_sequence_sha256": "1409e9ac7c3be82f41973ff912a18a700ec5a6d8b1d5c5904bd15472456839eb",
+  "blocks": [
+    {
+      "block_id": "page-0214-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    193\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "f8ad24579613aa9bf81ed00628f412a0cfd221b63837242b593f3986bc5542bc"
+    },
+    {
+      "block_id": "page-0214-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0214-block-0002",
+      "order": 2,
+      "text": "Optimising clozapine treatment\n",
+      "bbox": [
+        54.99909973144531,
+        66.06448364257812,
+        218.61306762695312,
+        79.0994873046875
+      ],
+      "text_sha256": "b9acefbcbec1733ec8e9494300c6b33a626164002d188b6025447330c11a5754"
+    },
+    {
+      "block_id": "page-0214-block-0003",
+      "order": 3,
+      "text": "Using clozapine alone\n",
+      "bbox": [
+        48.00309753417969,
+        90.06649780273438,
+        161.07205200195312,
+        103.10150146484375
+      ],
+      "text_sha256": "ae508fceb63f8028c42b07b73f0bd748e86e94992e8ea535a1ef78009f2db4d9"
+    },
+    {
+      "block_id": "page-0214-block-0004",
+      "order": 4,
+      "text": "Target dose\n",
+      "bbox": [
+        47.99909973144531,
+        118.57191467285156,
+        88.8440933227539,
+        127.45941162109375
+      ],
+      "text_sha256": "e7baf6597597263a6779b926b1dc028f35921a757880e93defd00c18dff2dea0"
+    },
+    {
+      "block_id": "page-0214-block-0005",
+      "order": 5,
+      "text": "(Note that dose is \nbest adjusted \naccording to \npatient \ntolerability and \nplasma level)\n",
+      "bbox": [
+        47.99909973144531,
+        130.77442932128906,
+        106.34908294677734,
+        189.46942138671875
+      ],
+      "text_sha256": "528534a0370a54e6e15982e081e48c122bf5110f5b79c5fc95dc6596dc4a4892"
+    },
+    {
+      "block_id": "page-0214-block-0006",
+      "order": 6,
+      "text": "■\n■Average dose in UK is around 450mg/day1\n",
+      "bbox": [
+        117.54080200195312,
+        130.7769317626953,
+        261.6611022949219,
+        139.48443603515625
+      ],
+      "text_sha256": "044997eed230b41137fa468634801791005e9e9209ab355577c0c582f27c3ff7"
+    },
+    {
+      "block_id": "page-0214-block-0007",
+      "order": 7,
+      "text": "■\n■Response usually seen in the range 150–900mg/day2\n",
+      "bbox": [
+        117.5408935546875,
+        142.7769317626953,
+        294.8634338378906,
+        151.48443603515625
+      ],
+      "text_sha256": "67e806c14febc2b468564914d4c406afe59b14ce4dd318c90e3ad107267332b5"
+    },
+    {
+      "block_id": "page-0214-block-0008",
+      "order": 8,
+      "text": "■\n■Lower doses required in the elderly, females and non-smokers, and in those prescribed \n",
+      "bbox": [
+        117.5408935546875,
+        154.7769317626953,
+        404.2510070800781,
+        163.48443603515625
+      ],
+      "text_sha256": "479b6e8143ed5d5b929faad737d5adfc86900555a3d7ab5325787438135c8c67"
+    },
+    {
+      "block_id": "page-0214-block-0009",
+      "order": 9,
+      "text": "certain enzyme inhibitors3,4 (see clozapine titration schedule)\n",
+      "bbox": [
+        126.5408935546875,
+        163.7769317626953,
+        318.8725891113281,
+        172.48443603515625
+      ],
+      "text_sha256": "f829d88f57cb06bf328e84779f45f04731ac9cb1e8c45fa63fa971c710763b7c"
+    },
+    {
+      "block_id": "page-0214-block-0010",
+      "order": 10,
+      "text": "Plasma levels\n■\n■Most studies indicate that threshold for response is in the range 350–420µg/l.5,6 Threshold \n",
+      "bbox": [
+        48.00250244140625,
+        195.62196350097656,
+        416.4615173339844,
+        204.50946044921875
+      ],
+      "text_sha256": "f6928221a87c0f7e5baa8c0f1da4c66bea368dc657d9df975fc4077768eed5a8"
+    },
+    {
+      "block_id": "page-0214-block-0011",
+      "order": 11,
+      "text": "may be as high as 500µg/l7\n",
+      "bbox": [
+        126.54148864746094,
+        204.80189514160156,
+        212.75390625,
+        213.5093994140625
+      ],
+      "text_sha256": "f72a17522fb74de48c82cb486637a7aee993a0f079ee605246de68120d81d15e"
+    },
+    {
+      "block_id": "page-0214-block-0012",
+      "order": 12,
+      "text": "■\n■In male smokers who cannot achieve therapeutic plasma levels, metabolic inhibitors (fluvox-\n",
+      "bbox": [
+        117.5408935546875,
+        216.8019256591797,
+        419.47601318359375,
+        225.50942993164062
+      ],
+      "text_sha256": "af647d12359d3a3d4a174465fbff3e8e9196a8e0e49ebabe45e178319c2ac4eb"
+    },
+    {
+      "block_id": "page-0214-block-0013",
+      "order": 13,
+      "text": "amine8 or cimetidine9 for example) can be co-prescribed but extreme caution is required10\n",
+      "bbox": [
+        126.5408935546875,
+        225.8019256591797,
+        411.5649719238281,
+        234.50942993164062
+      ],
+      "text_sha256": "aee5f24c8ebb525b2d3076e777aa1501109b0cee488257ac227ab6c83efee21b"
+    },
+    {
+      "block_id": "page-0214-block-0014",
+      "order": 14,
+      "text": "■\n■Importance of norclozapine levels not established but clozapine/norclozapine ratio may aid \n",
+      "bbox": [
+        117.5408935546875,
+        237.8019256591797,
+        417.5485534667969,
+        246.50942993164062
+      ],
+      "text_sha256": "bb33ab245f41e79f3da8802ddf6ffc952c73fb0a637bc9d1f353edd649279aa5"
+    },
+    {
+      "block_id": "page-0214-block-0015",
+      "order": 15,
+      "text": "assessment of recent compliance\n",
+      "bbox": [
+        126.5408935546875,
+        246.8019256591797,
+        231.40586853027344,
+        255.50942993164062
+      ],
+      "text_sha256": "72d0e6f8a0f078b313c486bc17b59723651318fd657b675a519aa90b6c394a4e"
+    },
+    {
+      "block_id": "page-0214-block-0016",
+      "order": 16,
+      "text": "Clozapine augmentation\n",
+      "bbox": [
+        47.99909973144531,
+        282.34942626953125,
+        175.13706970214844,
+        295.3844299316406
+      ],
+      "text_sha256": "3016e326eb0fe413e46389241d1d56410ce67c2cbfafbec9ba780fd695fca89b"
+    },
+    {
+      "block_id": "page-0214-block-0017",
+      "order": 17,
+      "text": "Clozapine ‘augmentation’ has become common practice because inadequate response \nto clozapine alone is a frequent clinical event. The evidence base supporting augmenta-\ntion strategies is growing but remains insufficient to allow the development of any \nalgorithm or schedule of treatment options. In practice, the result of clozapine augmen-\ntation is often disappointing and substantial changes in symptom severity are rarely \nobserved. This clinical impression is supported by the equivocal results of many studies, \nwhich suggests a small effect size at best. Meta-analyses of antipsychotic augmentation \nsuggest no effect,11 a small effect in long term studies,12 a very small effect overall,13 or \nsmall effects in specific symptom domains.14 It should be noted that few high-quality \nstudies in this area exist – when only large, high-quality studies are included, most \nmeta-analyses report no benefit to pharmacological augmentation.15 Investigations into \ndopaminergic activity in refractory schizophrenia suggest there is no overproduction of \ndopamine.16,17 Dopamine antagonists are thus unlikely to be effective.\n",
+      "bbox": [
+        47.99501037597656,
+        301.1944274902344,
+        422.7990417480469,
+        456.9144287109375
+      ],
+      "text_sha256": "b266e84c06e1f851e32079dc772e41b9347eb48b58121caefabbfc3094543919"
+    },
+    {
+      "block_id": "page-0214-block-0018",
+      "order": 18,
+      "text": "It is recommended that all augmentation attempts are carefully monitored and, if no \nclear benefit is forthcoming, abandoned after 3–6 months. The addition of another \ndrug to clozapine treatment must be expected to worsen overall adverse effect burden \nand so continued ineffective treatment is not appropriate. In some cases, the addition of \nan augmenting agent may reduce the severity of some adverse effects (e.g. weight gain, \ndyslipidaemia – see below) or allow a reduction in clozapine dose. The addition of ari-\npiprazole to clozapine may be particularly effective in reversing metabolic effects.18,19 \nRecently published international consensus guidelines recommend (after optimising \nplasma levels) tailoring augmentation agent choice to residual symptoms; adding ami-\nsulpride or aripiprazole for positive symptoms, antidepressants for negative symptoms, \nand mood stabilisers for suicidal ideation or aggression.15\n",
+      "bbox": [
+        47.99540710449219,
+        457.1944274902344,
+        422.8094787597656,
+        588.9144287109375
+      ],
+      "text_sha256": "ccd4bb516dc94f61868b34f2188ea00453704a0b1c6d267da2de0d06077f659c"
+    },
+    {
+      "block_id": "page-0214-block-0019",
+      "order": 19,
+      "text": "Table 1.36 shows suggested treatment options (in alphabetical order) where \n3–6 months of optimised clozapine alone has provided unsatisfactory benefit.\n",
+      "bbox": [
+        47.99909973144531,
+        589.1943969726562,
+        422.7389831542969,
+        612.9144287109375
+      ],
+      "text_sha256": "ea51679785003c9c324700afbf962fce8de4adb8fcee5fc1f3e3c6f287920ac6"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

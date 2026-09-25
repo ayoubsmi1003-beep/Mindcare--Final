@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0585",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 585,
+  "source_page_index": 584,
+  "source_page_display": 585,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "564    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  5\nCBT and medication in the treatment of childhood OCD and BDD\nStudies now show convincingly that CBT is superior to placebo and that efforts should \nbe made to try and ensure access to a suitably experienced CBT practitioner.\nThe principle study that directly compared the efficacy of CBT, sertraline, and their \ncombination, in children and adolescents, led NICE to conclude that children with \nOCD should begin treatment with CBT alone or CBT plus an SSRI.2 There is ongoing \ndebate as to whether CBT should be recommended as initial monotherapy or whether \ncombination therapy should be offered from the outset. Internationally there is a grow-\ning trend to offer a combination of psychological therapy and medication, most par-\nticularly for patients with BDD. The addition of an SSRI to a CBT treatment package \nhas been shown to significantly address the differential response to CBT treatment \nalone, seen between experienced and less experienced therapists.6\nSome children, particularly those with developmental disabilities can find CBT \nextremely challenging. Efforts to tailor treatment protocols can be efficacious in many \ninstances. For some children, however the experience of anxiety during exposure tasks \ncan be overwhelming. On occasions to use of beta blocker such as propranolol can mod-\nerate the physical concomitants of anxiety to a degree such that CBT can continue.\nTreatment-refractory OCD and BDD in children\nEvidence from randomised trials suggest that up to three quarters of medicated patients \nmake an adequate response to treatment. Roughly one quarter of children with OCD \nwill therefore fail to respond to an initial SSRI, administered for at least 12 weeks at the \nmaximum tolerated dose, in combination with an adequate trial of CBT and ERP. These \nchildren should be reassessed, clarifying compliance, and ensuring that co-morbidity is \nnot being missed. Non-responding children should usually have additional trials of at \nleast one other SSRI. Research suggests approximately 40% respond to a second SSRI \nin both OCD19 and BDD.10 Following this, if the response is limited, a child should usu-\nally be referred to a specialist centre. In OCD, trials of clomipramine may be considered \nand/or augmentation with a low dose of risperidone or aripiprazole.18,20 Research hints \nat the fact that using a medication with a different mode of action such as risperidone \nor clomipramine may benefit patients who have failed to respond to two adequate SSRI \ntrials.11 There is evidence that low dose antipsychotic augmentation, as an ‘off-label’ \ntherapy, can benefit patients whose response to treatment has been inadequate despite \nat least 3 months of maximal tolerated SSRI. Unfortunately, only one-third of treatment \nresistant adult cases of OCD showed a meaningful response to this augmentation strat-\negy. The data would, therefore, suggest that caution should be exercised when augment-\ning treatment packages for OCD in children and young people. A six-week trial of low \ndose anti-psychotic augmentation should be sufficient to assess efficacy. It is important \nto discontinue if no response noted. The same evidence base is not present for the treat-\nment of BDD. As highlighted above, it is important to note that the presence of delu-\nsional intensity beliefs in BDD does predict a better response to antipsychotic \nmedication.\nOften children whose OCD or BDD has been difficult to treat have co-morbidities \nsuch as autism spectrum disorder (ASD), ADHD, or tic disorders. The response to \n",
+  "raw_text_sha256": "307c15680d4c057a48ed4244a7d968e7ed9443e32cc33b7a40979054599454ed",
+  "coordinates_sha256": "52e56dd73f1056ad0126ccdb57f124e08d57eb8b96065df35b817ed7a9a644c8",
+  "block_sequence_sha256": "dc0e4012df599912b47abebd360723ce59561afe899d026a3a7f2029718c013e",
+  "blocks": [
+    {
+      "block_id": "page-0585-block-0000",
+      "order": 0,
+      "text": "564    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "0b260750eada84a12690349ac262f9b0d61159a50ad133774b4c223b524692f0"
+    },
+    {
+      "block_id": "page-0585-block-0001",
+      "order": 1,
+      "text": "CHAPTER  5\n",
+      "bbox": [
+        18.520000457763672,
+        338.22650146484375,
+        28.0,
+        381.79449462890625
+      ],
+      "text_sha256": "4086e0916f45ec531cc17b8c611334eb2b1ef26051ba536579b8ef3c22c1648d"
+    },
+    {
+      "block_id": "page-0585-block-0002",
+      "order": 2,
+      "text": "CBT and medication in the treatment of childhood OCD and BDD\n",
+      "bbox": [
+        61.88999938964844,
+        62.31540298461914,
+        395.4101257324219,
+        75.35040283203125
+      ],
+      "text_sha256": "f5dd7cf276ffc2bc9cf2dac3472dae181bee4fad588d7b5e3151e1de8a15d911"
+    },
+    {
+      "block_id": "page-0585-block-0003",
+      "order": 3,
+      "text": "Studies now show convincingly that CBT is superior to placebo and that efforts should \nbe made to try and ensure access to a suitably experienced CBT practitioner.\n",
+      "bbox": [
+        61.88999938964844,
+        81.160400390625,
+        436.619873046875,
+        104.88040161132812
+      ],
+      "text_sha256": "a30c4cd3d51dab5078b027ce3f88b46bf5a92774e5d5401dd4424682861f4ae6"
+    },
+    {
+      "block_id": "page-0585-block-0004",
+      "order": 4,
+      "text": "The principle study that directly compared the efficacy of CBT, sertraline, and their \ncombination, in children and adolescents, led NICE to conclude that children with \nOCD should begin treatment with CBT alone or CBT plus an SSRI.2 There is ongoing \ndebate as to whether CBT should be recommended as initial monotherapy or whether \ncombination therapy should be offered from the outset. Internationally there is a grow-\ning trend to offer a combination of psychological therapy and medication, most par-\nticularly for patients with BDD. The addition of an SSRI to a CBT treatment package \nhas been shown to significantly address the differential response to CBT treatment \nalone, seen between experienced and less experienced therapists.6\n",
+      "bbox": [
+        61.88999938964844,
+        105.160400390625,
+        436.7098388671875,
+        212.88040161132812
+      ],
+      "text_sha256": "3b71136f3ecd8a7e511688ad686ceb30d8c97599fb65c373590c00b88147629c"
+    },
+    {
+      "block_id": "page-0585-block-0005",
+      "order": 5,
+      "text": "Some children, particularly those with developmental disabilities can find CBT \nextremely challenging. Efforts to tailor treatment protocols can be efficacious in many \ninstances. For some children, however the experience of anxiety during exposure tasks \ncan be overwhelming. On occasions to use of beta blocker such as propranolol can mod-\nerate the physical concomitants of anxiety to a degree such that CBT can continue.\n",
+      "bbox": [
+        61.88999938964844,
+        213.160400390625,
+        436.7097473144531,
+        272.8804016113281
+      ],
+      "text_sha256": "1943b7ae6a046fcd0ba71cc95c6e874f2f851920384905f991126312eb9c0a8e"
+    },
+    {
+      "block_id": "page-0585-block-0006",
+      "order": 6,
+      "text": "Treatment-refractory OCD and BDD in children\n",
+      "bbox": [
+        61.88999938964844,
+        290.3153991699219,
+        301.1070251464844,
+        303.35040283203125
+      ],
+      "text_sha256": "738d42235981627ee335a6006290c33b75f6d3cfeb53db2d29dd2dfd7e86bf04"
+    },
+    {
+      "block_id": "page-0585-block-0007",
+      "order": 7,
+      "text": "Evidence from randomised trials suggest that up to three quarters of medicated patients \nmake an adequate response to treatment. Roughly one quarter of children with OCD \nwill therefore fail to respond to an initial SSRI, administered for at least 12 weeks at the \nmaximum tolerated dose, in combination with an adequate trial of CBT and ERP. These \nchildren should be reassessed, clarifying compliance, and ensuring that co-morbidity is \nnot being missed. Non-responding children should usually have additional trials of at \nleast one other SSRI. Research suggests approximately 40% respond to a second SSRI \nin both OCD19 and BDD.10 Following this, if the response is limited, a child should usu-\nally be referred to a specialist centre. In OCD, trials of clomipramine may be considered \nand/or augmentation with a low dose of risperidone or aripiprazole.18,20 Research hints \nat the fact that using a medication with a different mode of action such as risperidone \nor clomipramine may benefit patients who have failed to respond to two adequate SSRI \ntrials.11 There is evidence that low dose antipsychotic augmentation, as an ‘off-label’ \ntherapy, can benefit patients whose response to treatment has been inadequate despite \nat least 3 months of maximal tolerated SSRI. Unfortunately, only one-third of treatment \nresistant adult cases of OCD showed a meaningful response to this augmentation strat-\negy. The data would, therefore, suggest that caution should be exercised when augment-\ning treatment packages for OCD in children and young people. A six-week trial of low \ndose anti-psychotic augmentation should be sufficient to assess efficacy. It is important \nto discontinue if no response noted. The same evidence base is not present for the treat-\nment of BDD. As highlighted above, it is important to note that the presence of delu-\nsional intensity beliefs in BDD does predict a better response to antipsychotic \nmedication.\n",
+      "bbox": [
+        61.886993408203125,
+        309.160400390625,
+        436.7099609375,
+        584.8804321289062
+      ],
+      "text_sha256": "3eaaecaa34e57498a994725461c62fd031eb0081ad9b6b1ea6c08fa252781965"
+    },
+    {
+      "block_id": "page-0585-block-0008",
+      "order": 8,
+      "text": "Often children whose OCD or BDD has been difficult to treat have co-morbidities \nsuch as autism spectrum disorder (ASD), ADHD, or tic disorders. The response to \n",
+      "bbox": [
+        61.8927001953125,
+        585.160400390625,
+        436.7127685546875,
+        608.8804321289062
+      ],
+      "text_sha256": "0711de57483bc398cb8c9eabe042c1c80cdaa20be0782c8b9af7fb629f48f38d"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,335 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0419",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 419,
+  "source_page_index": 418,
+  "source_page_display": 419,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "398    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nAntidepressants and hyperprolactinaemia\nProlactin release is controlled by endogenous dopamine but is also indirectly modu-\nlated by serotonin via stimulation of 5HT1C and 5HT2 receptors.1,2 Long-standing \nincreased plasma prolactin (with or without symptoms) is very occasionally seen with \nantidepressant use.3 Where antidepressant-induced hyperprolactinaemia does occur, \nrises in prolactin are usually small and short-lived4 and so symptoms are very rare. \nThere is no association between SSRI use and breast cancer.5\nRoutine monitoring of prolactin is not recommended, but where symptoms suggest \nthe possibility of hyperprolactinaemia, then measurement of plasma prolactin is essen-\ntial. Where symptomatic hyperprolactinaemia is confirmed, a switch to mirtazapine is \nrecommended (see below), although there is also evidence that switching to an alterna-\ntive SSRI can resolve symptoms.6,7\nSome details of associations between antidepressants and increased prolactin are \ngiven in Table 3.18.\nTable 3.18  Reported associations between antidepressants and increased prolactin\nDrug/group\nProspective studies\nCase reports/series\nAgomelatine\nNo mention of prolactin changes in clinical \ntrials8\nMelatonin itself may inhibit prolactin \nproduction9\nNone\nBupropion\nSingle doses of up to 100mg seem not to affect \nprolactin10\nMay decrease prolactin11\nNone\nMAOIs\nSmall mean changes observed with phenelzine11 \nand tranylcypromine12\nVery occasional reports of increased prolactin11\nMirtazapine\nStrong evidence that mirtazapine has no effect \non prolactin13–15\nOccasional reports of galactorrhoea16\nand gynaecomastia17\nSNRIs\nClear association observed between venlafaxine \nand duloxetine and prolactin elevation18–20\nGalactorrhoea reported with venlafaxine21,22 and \nduloxetine.23,24 Duloxetine-linked \nhyperprolactinaemia has been treated with \naripiprazole18\nSSRIs\nProspective studies generally show no change in \nprolactin.25–27 Some evidence from prescription \nevent monitoring that SSRIs are associated with \nhigher risk of non-puerperal lactation.28 In a \nFrench study, 1.6% of adverse event reports for \nSSRIs were of hyperprolactinaemia3\nGalactorrhoea reported with fluoxetine6,29 and \nparoxetine30,31\nEuprolactinaemic galactorrhoea and \namenorrhoea32 reported with escitalopram33 and \nfluvoxamine34\nHyperprolactinaemia reported with sertraline7,35\n(Continued)\n",
+  "raw_text_sha256": "ebfc9ac3dd6909bfe3619c14b68cbfc8daf2a49ba48f7694cb07a0bd5b90cefb",
+  "coordinates_sha256": "faa3882efdd5cd4232268e4e506273b542222651e906c5d6cee09d6d3312eff3",
+  "block_sequence_sha256": "6246316b1a2536606d1199342c573057ae7b81c31d498d4377cb6d0dd38d6769",
+  "blocks": [
+    {
+      "block_id": "page-0419-block-0000",
+      "order": 0,
+      "text": "398    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "a0c08fdb31e377f3a57d61ca377f4cd4e7d64b97384313d3544bf93a894e34b0"
+    },
+    {
+      "block_id": "page-0419-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0419-block-0002",
+      "order": 2,
+      "text": "Antidepressants and hyperprolactinaemia\n",
+      "bbox": [
+        68.88999938964844,
+        66.06539916992188,
+        284.86395263671875,
+        79.10040283203125
+      ],
+      "text_sha256": "0f6417baabe887cdb0916b97ffa200bb225f95cb6cdc9383d0f34f5ac531ce9c"
+    },
+    {
+      "block_id": "page-0419-block-0003",
+      "order": 3,
+      "text": "Prolactin release is controlled by endogenous dopamine but is also indirectly modu-\nlated by serotonin via stimulation of 5HT1C and 5HT2 receptors.1,2 Long-standing \nincreased plasma prolactin (with or without symptoms) is very occasionally seen with \nantidepressant use.3 Where antidepressant-induced hyperprolactinaemia does occur, \nrises in prolactin are usually small and short-lived4 and so symptoms are very rare. \nThere is no association between SSRI use and breast cancer.5\n",
+      "bbox": [
+        61.889198303222656,
+        84.910400390625,
+        436.6936340332031,
+        156.63040161132812
+      ],
+      "text_sha256": "15ac9ae50b208cf9661a8a1564acb168c3dedc670332d26a128ed4e24e78888f"
+    },
+    {
+      "block_id": "page-0419-block-0004",
+      "order": 4,
+      "text": "Routine monitoring of prolactin is not recommended, but where symptoms suggest \nthe possibility of hyperprolactinaemia, then measurement of plasma prolactin is essen-\ntial. Where symptomatic hyperprolactinaemia is confirmed, a switch to mirtazapine is \nrecommended (see below), although there is also evidence that switching to an alterna-\ntive SSRI can resolve symptoms.6,7\n",
+      "bbox": [
+        61.88999938964844,
+        156.910400390625,
+        436.64996337890625,
+        216.63040161132812
+      ],
+      "text_sha256": "6123f0e5ccdfc5c234b2bf0ad4df11bfd978565e1b91f148cc10c7f5d8f144bf"
+    },
+    {
+      "block_id": "page-0419-block-0005",
+      "order": 5,
+      "text": "Some details of associations between antidepressants and increased prolactin are \ngiven in Table 3.18.\n",
+      "bbox": [
+        61.88999938964844,
+        216.910400390625,
+        436.68011474609375,
+        240.63040161132812
+      ],
+      "text_sha256": "eab1837524a8f8effddc224ce0f4423561ccb143bb39fbadb52ca3079b1614d7"
+    },
+    {
+      "block_id": "page-0419-block-0006",
+      "order": 6,
+      "text": "Table 3.18  Reported associations between antidepressants and increased prolactin\n",
+      "bbox": [
+        67.89019775390625,
+        274.9474792480469,
+        333.38275146484375,
+        283.8349914550781
+      ],
+      "text_sha256": "bc485de7f2733b045751cd2ee9dd511db33c87c2d5c6f58cdf7239eb98dd6838"
+    },
+    {
+      "block_id": "page-0419-block-0007",
+      "order": 7,
+      "text": "Drug/group\nProspective studies\nCase reports/series\n",
+      "bbox": [
+        61.890201568603516,
+        295.1824645996094,
+        341.4302062988281,
+        304.0699768066406
+      ],
+      "text_sha256": "0a69960dfe95619ad22080be2790813f40860c4f9230489033da128184ebdbca"
+    },
+    {
+      "block_id": "page-0419-block-0008",
+      "order": 8,
+      "text": "Agomelatine\nNo mention of prolactin changes in clinical \ntrials8\n",
+      "bbox": [
+        61.89019775390625,
+        311.9599609375,
+        253.357666015625,
+        330.844970703125
+      ],
+      "text_sha256": "2ce22264b6ca60fd4040894df86b47ec870d17ec353df4848bae248ce78d9813"
+    },
+    {
+      "block_id": "page-0419-block-0009",
+      "order": 9,
+      "text": "Melatonin itself may inhibit prolactin \nproduction9\n",
+      "bbox": [
+        115.13980102539062,
+        332.13751220703125,
+        234.17225646972656,
+        350.8424987792969
+      ],
+      "text_sha256": "3bc14ff16e1f5e26bf9739799079350d8ff0a0cf6a676330631e78b4ab9fe496"
+    },
+    {
+      "block_id": "page-0419-block-0010",
+      "order": 10,
+      "text": "None\n",
+      "bbox": [
+        274.8898010253906,
+        312.13751220703125,
+        291.9823303222656,
+        320.8450012207031
+      ],
+      "text_sha256": "af5d8a21858f42808c9bcc17012b77bcc2fd6ab3b071dbd4a05f13f410470541"
+    },
+    {
+      "block_id": "page-0419-block-0011",
+      "order": 11,
+      "text": "Bupropion\nSingle doses of up to 100mg seem not to affect \nprolactin10\n",
+      "bbox": [
+        61.889801025390625,
+        356.97998046875,
+        270.0447998046875,
+        375.864990234375
+      ],
+      "text_sha256": "1b2c480b13c16bd5e0ca60e45b737c8c221ad90010089219e1268f367eb516f3"
+    },
+    {
+      "block_id": "page-0419-block-0012",
+      "order": 12,
+      "text": "May decrease prolactin11\n",
+      "bbox": [
+        115.13980102539062,
+        377.1625061035156,
+        193.4787139892578,
+        385.8699951171875
+      ],
+      "text_sha256": "fde6cb14506b71304d8efde8f97ae5edd27da8bd8a7ce7688cf91fa6aa9e9a5c"
+    },
+    {
+      "block_id": "page-0419-block-0013",
+      "order": 13,
+      "text": "None\n",
+      "bbox": [
+        274.8898010253906,
+        357.1625061035156,
+        291.9823303222656,
+        365.8699951171875
+      ],
+      "text_sha256": "af5d8a21858f42808c9bcc17012b77bcc2fd6ab3b071dbd4a05f13f410470541"
+    },
+    {
+      "block_id": "page-0419-block-0014",
+      "order": 14,
+      "text": "MAOIs\nSmall mean changes observed with phenelzine11 \nand tranylcypromine12\n",
+      "bbox": [
+        61.889801025390625,
+        392.0074768066406,
+        270.97479248046875,
+        410.8924865722656
+      ],
+      "text_sha256": "fc8408f80778ddd76c35241afcde01a0998d1b8d771ec5f31fc01084c1535942"
+    },
+    {
+      "block_id": "page-0419-block-0015",
+      "order": 15,
+      "text": "Very occasional reports of increased prolactin11\n",
+      "bbox": [
+        274.8898010253906,
+        392.1875,
+        423.5178527832031,
+        400.8949890136719
+      ],
+      "text_sha256": "7211df5e6d1adc2e7c4f0b93db201fa99bb3cb2df3eae6f368fbcfd2d150c209"
+    },
+    {
+      "block_id": "page-0419-block-0016",
+      "order": 16,
+      "text": "Mirtazapine\nStrong evidence that mirtazapine has no effect \non prolactin13–15\n",
+      "bbox": [
+        61.890201568603516,
+        417.032470703125,
+        266.54266357421875,
+        435.91748046875
+      ],
+      "text_sha256": "890b81d08ac1c618fc24174c8c41341672c07e79be448fcdeed880bfc8f65f6f"
+    },
+    {
+      "block_id": "page-0419-block-0017",
+      "order": 17,
+      "text": "Occasional reports of galactorrhoea16\n",
+      "bbox": [
+        274.8898010253906,
+        417.2124938964844,
+        393.3681335449219,
+        425.91998291015625
+      ],
+      "text_sha256": "ee616870c060eefccb5b2a58e639bb2e555d784d948b884f8a9f7542045b7466"
+    },
+    {
+      "block_id": "page-0419-block-0018",
+      "order": 18,
+      "text": "and gynaecomastia17\n",
+      "bbox": [
+        274.8898010253906,
+        427.2124938964844,
+        341.4239501953125,
+        435.91998291015625
+      ],
+      "text_sha256": "687e904c5151407932f29d6a77509f34486ca2d1e37537e5215a17c9f338006f"
+    },
+    {
+      "block_id": "page-0419-block-0019",
+      "order": 19,
+      "text": "SNRIs\nClear association observed between venlafaxine \nand duloxetine and prolactin elevation18–20\n",
+      "bbox": [
+        61.890201568603516,
+        442.0574951171875,
+        269.7377014160156,
+        460.9425048828125
+      ],
+      "text_sha256": "a062aeee1a73cb5416cc7b339b491bed6031d356230c8c8c98361261587e86aa"
+    },
+    {
+      "block_id": "page-0419-block-0020",
+      "order": 20,
+      "text": "Galactorrhoea reported with venlafaxine21,22 and \nduloxetine.23,24 Duloxetine-linked \nhyperprolactinaemia has been treated with \naripiprazole18\n",
+      "bbox": [
+        274.8890075683594,
+        442.2375183105469,
+        429.4339904785156,
+        480.94000244140625
+      ],
+      "text_sha256": "cb08b6f42f8f330b967a035f6864c489bb34887340768811c6b6472665a06841"
+    },
+    {
+      "block_id": "page-0419-block-0021",
+      "order": 21,
+      "text": "SSRIs\nProspective studies generally show no change in \nprolactin.25–27 Some evidence from prescription \nevent monitoring that SSRIs are associated with \nhigher risk of non-puerperal lactation.28 In a \nFrench study, 1.6% of adverse event reports for \nSSRIs were of hyperprolactinaemia3\n",
+      "bbox": [
+        61.890201568603516,
+        487.08245849609375,
+        265.0051574707031,
+        545.9649658203125
+      ],
+      "text_sha256": "e08e991b8801a8885ee6f6173f165a10b6cccae10afa59df104b7686af5fbd15"
+    },
+    {
+      "block_id": "page-0419-block-0022",
+      "order": 22,
+      "text": "Galactorrhoea reported with fluoxetine6,29 and \nparoxetine30,31\n",
+      "bbox": [
+        274.8898010253906,
+        487.2624816894531,
+        424.5248107910156,
+        505.96746826171875
+      ],
+      "text_sha256": "3751c4e5ac68c87bf7237e85f5029618c2dff705c902595d5530ad58b0da4042"
+    },
+    {
+      "block_id": "page-0419-block-0023",
+      "order": 23,
+      "text": "Euprolactinaemic galactorrhoea and \namenorrhoea32 reported with escitalopram33 and \nfluvoxamine34\n",
+      "bbox": [
+        274.8898010253906,
+        507.2624816894531,
+        431.99560546875,
+        535.9674682617188
+      ],
+      "text_sha256": "76440f543a6e91513063fa3ebeee22e7fdd83134cff95ef3546d2be47fbfb384"
+    },
+    {
+      "block_id": "page-0419-block-0024",
+      "order": 24,
+      "text": "Hyperprolactinaemia reported with sertraline7,35\n",
+      "bbox": [
+        274.8898010253906,
+        537.262451171875,
+        423.98089599609375,
+        545.969970703125
+      ],
+      "text_sha256": "2a0004e548973b612a1a855fe6fe3a56a9af0e9ef4a7c6d1afca20774c4bd4f0"
+    },
+    {
+      "block_id": "page-0419-block-0025",
+      "order": 25,
+      "text": "(Continued)\n",
+      "bbox": [
+        396.37530517578125,
+        553.1436157226562,
+        433.8903503417969,
+        561.8961181640625
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

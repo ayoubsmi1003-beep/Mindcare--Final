@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0279",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 279,
+  "source_page_index": 278,
+  "source_page_display": 279,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "258    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  2\neffective overall than valproate11 but a large (n = 300) randomised open trial of 12 weeks \nduration found lithium and valproate to be equally effective in the treatment of acute \nmania.14 Valproate may be effective in patients who have failed to respond to lithium; \nin a small placebo-controlled RCT (n = 36) in patients who had failed to respond to or \ncould not tolerate lithium, the median decrease in the Young Mania Rating Scale scores \nwas 54% in the valproate group and 5% in the placebo group.15 It may be less effective \nthan olanzapine, both as monotherapy16 and as an adjunctive treatment to lithium12 in \nacute mania. A network meta-analysis reported that valproate was less effective but \nbetter tolerated than lithium.17\nA meta-analysis of four small RCTs concluded that valproate is effective in bipolar \ndepression with a small to medium effect size.18 A 2020 meta-analysis placed dival-\nproex 5th out of 21 treatments for bipolar depression.19\nAlthough open-label studies suggest that valproate is effective in the prophylaxis \nof bipolar affective disorder,20 RCT data are limited.21,22 Bowden et al.23 found no \ndifference between lithium, valproate and placebo in the primary outcome measure, \ntime to any mood episode, although valproate was superior to lithium and placebo \non some secondary outcome measures. This study can be criticised for including \npatients who were ‘not ill enough’ and for not lasting ‘long enough’ (1  year). In \nanother RCT,21 which lasted for 47 weeks, there was no difference in relapse rates \nbetween valproate and olanzapine. The study had no placebo arm and the attrition \nrate was high, so is difficult to interpret. A post hoc analysis of data from this study \nfound that patients with rapid cycling illness had a better very early response to val-\nproate than to olanzapine but that this advantage was not maintained.22 Outcomes \nwith respect to manic symptoms for those who did not have a rapid cycling illness \nwere better at 1 year with olanzapine than valproate. In a further 20 months’ RCT \nof lithium versus valproate in patients with rapid cycling illness, both the relapse and \nattrition rate were high, and no difference in efficacy between valproate and lithium \nwas apparent.24 More recently, the BALANCE study found lithium to be numerically \nsuperior to valproate, and the combination of lithium and valproate to be statisti-\ncally superior to valproate alone.25 Aripiprazole in combination with valproate is \nsuperior to valproate alone.26\nThe National Institute for Health and Clinical Excellence (NICE) recommends val-\nproate as a first-line option for the treatment of acute episodes of mania, in combina-\ntion with an antidepressant for the treatment of acute episodes of depression, and for \nprophylaxis,27 but importantly NOT in women of child-bearing potential.27,28 Cochrane \nconclude that the evidence supporting the use of valproate as prophylaxis is limited,29 \nyet use for this indication has substantially increased in recent years.30 Indeed, in the US, \nvalproate use in BD has risen at the expense of lithium use, despite the latter drug’s \nrecommendation as the first-line drug.31\nValproate is sometimes used to treat aggressive behaviours of variable aetiology.32 \nOne very small RCT (n = 16) failed to detect any advantage for risperidone augmented \nwith valproate over risperidone alone in reducing hostility in patients with schizophre-\nnia.33 A mirror-image study found that, in patients with schizophrenia or BD in a secure \nsetting, valproate decreased agitation.34\nThere is a small positive placebo-controlled RCT of valproate in generalised anxiety \ndisorder.35\n",
+  "raw_text_sha256": "e732384686c35959b27f6cc6f1176e16149698bdc0f6ff18adf204c25fffe5ae",
+  "coordinates_sha256": "6feb8f4ec037278027e8f3fe4b0749cdff1d37da71302915cec57a74169efb70",
+  "block_sequence_sha256": "631059a5450ea30eecb9b22b1004f65f341caf2044679c51d6ec9acfbbb0a46d",
+  "blocks": [
+    {
+      "block_id": "page-0279-block-0000",
+      "order": 0,
+      "text": "258    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "0e634691dd398544414fc8b7fcb6f501a61d6f8a5985254b43dbf6434f475926"
+    },
+    {
+      "block_id": "page-0279-block-0001",
+      "order": 1,
+      "text": "CHAPTER  2\n",
+      "bbox": [
+        19.520000457763672,
+        145.23529052734375,
+        29.0,
+        188.80328369140625
+      ],
+      "text_sha256": "5befcde2fefe074681a51514b484ad31516d952c51183625b5b7b1fb84f30d2c"
+    },
+    {
+      "block_id": "page-0279-block-0002",
+      "order": 2,
+      "text": "effective overall than valproate11 but a large (n = 300) randomised open trial of 12 weeks \nduration found lithium and valproate to be equally effective in the treatment of acute \nmania.14 Valproate may be effective in patients who have failed to respond to lithium; \nin a small placebo-controlled RCT (n = 36) in patients who had failed to respond to or \ncould not tolerate lithium, the median decrease in the Young Mania Rating Scale scores \nwas 54% in the valproate group and 5% in the placebo group.15 It may be less effective \nthan olanzapine, both as monotherapy16 and as an adjunctive treatment to lithium12 in \nacute mania. A network meta-analysis reported that valproate was less effective but \nbetter tolerated than lithium.17\n",
+      "bbox": [
+        61.88749694824219,
+        62.55029296875,
+        436.71270751953125,
+        170.27029418945312
+      ],
+      "text_sha256": "a56f9952e80aa1dc204c9186dd36f93ebd3d5246b1efc12a5cf9cde37a594934"
+    },
+    {
+      "block_id": "page-0279-block-0003",
+      "order": 3,
+      "text": "A meta-analysis of four small RCTs concluded that valproate is effective in bipolar \ndepression with a small to medium effect size.18 A 2020 meta-analysis placed dival-\nproex 5th out of 21 treatments for bipolar depression.19\n",
+      "bbox": [
+        61.889984130859375,
+        170.310302734375,
+        436.6700134277344,
+        206.27029418945312
+      ],
+      "text_sha256": "a442bf4a246fd81c65b54617492ccf80da93aadbc60112a3926586918adfa34c"
+    },
+    {
+      "block_id": "page-0279-block-0004",
+      "order": 4,
+      "text": "Although open-label studies suggest that valproate is effective in the prophylaxis \nof bipolar affective disorder,20 RCT data are limited.21,22 Bowden et al.23 found no \ndifference between lithium, valproate and placebo in the primary outcome measure, \ntime to any mood episode, although valproate was superior to lithium and placebo \non some secondary outcome measures. This study can be criticised for including \npatients who were ‘not ill enough’ and for not lasting ‘long enough’ (1  year). In \nanother RCT,21 which lasted for 47 weeks, there was no difference in relapse rates \nbetween valproate and olanzapine. The study had no placebo arm and the attrition \nrate was high, so is difficult to interpret. A post hoc analysis of data from this study \nfound that patients with rapid cycling illness had a better very early response to val-\nproate than to olanzapine but that this advantage was not maintained.22 Outcomes \nwith respect to manic symptoms for those who did not have a rapid cycling illness \nwere better at 1 year with olanzapine than valproate. In a further 20 months’ RCT \nof lithium versus valproate in patients with rapid cycling illness, both the relapse and \nattrition rate were high, and no difference in efficacy between valproate and lithium \nwas apparent.24 More recently, the BALANCE study found lithium to be numerically \nsuperior to valproate, and the combination of lithium and valproate to be statisti-\ncally superior to valproate alone.25 Aripiprazole in combination with valproate is \nsuperior to valproate alone.26\n",
+      "bbox": [
+        61.88970184326172,
+        206.310302734375,
+        436.704345703125,
+        434.2702941894531
+      ],
+      "text_sha256": "5ffdfa4dcdf024d31615a28362bb08b03793c4fa8fbf73d07ed858071eb5a837"
+    },
+    {
+      "block_id": "page-0279-block-0005",
+      "order": 5,
+      "text": "The National Institute for Health and Clinical Excellence (NICE) recommends val-\nproate as a first-line option for the treatment of acute episodes of mania, in combina-\ntion with an antidepressant for the treatment of acute episodes of depression, and for \nprophylaxis,27 but importantly NOT in women of child-bearing potential.27,28 Cochrane \nconclude that the evidence supporting the use of valproate as prophylaxis is limited,29 \nyet use for this indication has substantially increased in recent years.30 Indeed, in the US, \nvalproate use in BD has risen at the expense of lithium use, despite the latter drug’s \nrecommendation as the first-line drug.31\n",
+      "bbox": [
+        61.887603759765625,
+        434.55029296875,
+        436.6723937988281,
+        530.2703247070312
+      ],
+      "text_sha256": "8fe1afc17e471ab8c8d837311d8143ddaa18a590ab049f246394bec1f57c7fe6"
+    },
+    {
+      "block_id": "page-0279-block-0006",
+      "order": 6,
+      "text": "Valproate is sometimes used to treat aggressive behaviours of variable aetiology.32 \nOne very small RCT (n = 16) failed to detect any advantage for risperidone augmented \nwith valproate over risperidone alone in reducing hostility in patients with schizophre-\nnia.33 A mirror-image study found that, in patients with schizophrenia or BD in a secure \nsetting, valproate decreased agitation.34\n",
+      "bbox": [
+        61.8900146484375,
+        530.55029296875,
+        436.6829833984375,
+        590.2703247070312
+      ],
+      "text_sha256": "8a25c8c44a7e393f2ee0f4c215cd64d6f62c28803d265c89c8544a010c43ab8a"
+    },
+    {
+      "block_id": "page-0279-block-0007",
+      "order": 7,
+      "text": "There is a small positive placebo-controlled RCT of valproate in generalised anxiety \ndisorder.35\n",
+      "bbox": [
+        61.88999938964844,
+        590.55029296875,
+        436.6300354003906,
+        614.2703247070312
+      ],
+      "text_sha256": "ad40dd786f5ad9d9053848b7e127ce9aa5b279b1a248ed5d18cffe0866628cca"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

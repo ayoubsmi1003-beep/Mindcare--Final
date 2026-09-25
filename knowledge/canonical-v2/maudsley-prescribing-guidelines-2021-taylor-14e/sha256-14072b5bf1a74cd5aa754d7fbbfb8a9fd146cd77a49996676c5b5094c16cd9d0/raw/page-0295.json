@@ -1,0 +1,347 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0295",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 295,
+  "source_page_index": 294,
+  "source_page_display": 295,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "274    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  2\nAntipsychotic long-acting injections in bipolar disorder\nLAIs are widely used in BD although none is formally licensed in the UK for this indica-\ntion (Abilify Maintena is approved by the FDA in the US1). Support for their use is \nrather limited: there have been dozens of open-label trials or case series published, but \nfew included more than a handful of subjects.2–4 Retrospective cohort studies and popu-\nlation level studies do, nonetheless, offer some support for the use of LAIs (mainly \nSGAs) in bipolar maintenance.2 There have also been seven RCTs, only five of which \nwere sufficiently powered to produce interpretable results (the remaining two trials \nincluded only 30 subjects in total5,6). These five RCTs represent the highest level of evi-\ndence for LAIs in BD. Their details are set out in Table 2.5.\nFew firm conclusions can be drawn from the controlled trials outlined in the table. \nRisperidone LAI is clearly effective either as the sole treatment or as an adjunct but \nprovides protection only against manic, hypomanic and mixed-manic episodes and nei-\nther decreases nor increases the risk of depressive relapse. Risperidone LAI may be less \neffective than oral olanzapine. It might be tentatively assumed that paliperidone LAI \nhas similar effects to risperidone LAI. Oral paliperidone prevents manic relapse in BD7 \nand case reports describe good outcomes with the LAI form.8 Aripiprazole LAI also \nprotects against manic relapse and does not appear to affect the risk of depression.\nTable 2.5  Randomised controlled trials of long-acting injections in bipolar disorder\nStudy\nN\nLAI\nComparator\nDuration\nOutcome\nAhlfors et al. \n19819\n33 (19/14)\nFlupentixol \ndecanoate\nLithium\n18 months Neither treatment improved main \noutcome (number of mood episodes)\nMacFadden \net al.10*\n124 (65/59)\nRisperidone \n(adjunct)\nPlacebo \n(adjunct)\n12 months Risperidone LAI reduced rate of relapse \ncompared with placebo (relative risk 2.3)\nQuiroz \net al.11*\n303 (154/149) Risperidone \nmonotherapy\nPlacebo \nmonotherapy\n24 months Overall relapse rate was 30% with \nrisperidone, 56% with placebo. \nRisperidone did not protect against \ndepressive relapse\nVieta \net al.12*\n398 \n(132/135/131)\nRisperidone \nmonotherapy\nPlacebo or \noral \nolanzapine \nmonotherapy\n18 months Recurrence of any mood episode: oral \nolanzapine 23.8%; risperidone LAI \n38.9%; placebo 56.4%. Olanzapine and \nrisperidone reduced the risk of elevated \nmood episode but only olanzapine \nreduced the risk of depression\nCalabrese \net al.13*\n266 (133/133) Aripiprazole \nmonotherapy\nPlacebo \nmonotherapy\n12 months Relapse to any mood episode 26.5% with \naripiprazole; 51.1% with placebo. No \nclear effect on recurrence of depression.\nAn open follow-on study of this RCT (that \nalso included patients newly prescribed \naripiprazole) showed somewhat better \nlevels of protection: 87–98% of participants \nremained well over 12 months.14\n*Trial sponsored by the manufacturer.\n",
+  "raw_text_sha256": "2b512cdfcdfd86753782aad7cc3e40653204263694af402065d7421b8fa4b860",
+  "coordinates_sha256": "bcfc561183ff331b1700760d4c16fd255a3ac71e68a30080cb0809b9405e1f8b",
+  "block_sequence_sha256": "74ddcae5116d723e137bd6573e9c609ddfd8fade7eeaad458089cc54d093183a",
+  "blocks": [
+    {
+      "block_id": "page-0295-block-0000",
+      "order": 0,
+      "text": "274    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "60e044ffe8d1083ee64cfb623a7deb24ff73cb54364b922c6da61a931a7b3583"
+    },
+    {
+      "block_id": "page-0295-block-0001",
+      "order": 1,
+      "text": "CHAPTER  2\n",
+      "bbox": [
+        19.520000457763672,
+        145.23529052734375,
+        29.0,
+        188.80328369140625
+      ],
+      "text_sha256": "5befcde2fefe074681a51514b484ad31516d952c51183625b5b7b1fb84f30d2c"
+    },
+    {
+      "block_id": "page-0295-block-0002",
+      "order": 2,
+      "text": "Antipsychotic long-acting injections in bipolar disorder\n",
+      "bbox": [
+        68.88999938964844,
+        66.06539916992188,
+        351.64508056640625,
+        79.10040283203125
+      ],
+      "text_sha256": "b132edeb7e5d5709dc0358effa974117c871fcb5eacd8a4174323cbfcadecc08"
+    },
+    {
+      "block_id": "page-0295-block-0003",
+      "order": 3,
+      "text": "LAIs are widely used in BD although none is formally licensed in the UK for this indica-\ntion (Abilify Maintena is approved by the FDA in the US1). Support for their use is \nrather limited: there have been dozens of open-label trials or case series published, but \nfew included more than a handful of subjects.2–4 Retrospective cohort studies and popu-\nlation level studies do, nonetheless, offer some support for the use of LAIs (mainly \nSGAs) in bipolar maintenance.2 There have also been seven RCTs, only five of which \nwere sufficiently powered to produce interpretable results (the remaining two trials \nincluded only 30 subjects in total5,6). These five RCTs represent the highest level of evi-\ndence for LAIs in BD. Their details are set out in Table 2.5.\n",
+      "bbox": [
+        61.88720703125,
+        84.910400390625,
+        436.6800537109375,
+        192.63040161132812
+      ],
+      "text_sha256": "2418c586378dcbf58aa43737bbb2e9ae35ecba14a3145524722bf18bb765e72d"
+    },
+    {
+      "block_id": "page-0295-block-0004",
+      "order": 4,
+      "text": "Few firm conclusions can be drawn from the controlled trials outlined in the table. \nRisperidone LAI is clearly effective either as the sole treatment or as an adjunct but \nprovides protection only against manic, hypomanic and mixed-manic episodes and nei-\nther decreases nor increases the risk of depressive relapse. Risperidone LAI may be less \neffective than oral olanzapine. It might be tentatively assumed that paliperidone LAI \nhas similar effects to risperidone LAI. Oral paliperidone prevents manic relapse in BD7 \nand case reports describe good outcomes with the LAI form.8 Aripiprazole LAI also \nprotects against manic relapse and does not appear to affect the risk of depression.\n",
+      "bbox": [
+        61.8900146484375,
+        192.910400390625,
+        436.7105407714844,
+        288.6304016113281
+      ],
+      "text_sha256": "f33e4f4d7b4c390eba569aa3116fa34e6630e3745e5b2203011ab087ecb4d8cc"
+    },
+    {
+      "block_id": "page-0295-block-0005",
+      "order": 5,
+      "text": "Table 2.5  Randomised controlled trials of long-acting injections in bipolar disorder\n",
+      "bbox": [
+        67.88980102539062,
+        321.3914794921875,
+        331.8448791503906,
+        330.27899169921875
+      ],
+      "text_sha256": "6da681ec60444478974f560be1b4727a3099e863cb1bb136bb78a514a21f90e0"
+    },
+    {
+      "block_id": "page-0295-block-0006",
+      "order": 6,
+      "text": "Study\nN\nLAI\nComparator\nDuration\nOutcome\n",
+      "bbox": [
+        64.38980102539062,
+        339.2664794921875,
+        331.4722900390625,
+        348.15399169921875
+      ],
+      "text_sha256": "430507766ee0b60aa9710d6b43b253280e72776ed91e76ee34fda47da80914ce"
+    },
+    {
+      "block_id": "page-0295-block-0007",
+      "order": 7,
+      "text": "Ahlfors et al. \n19819\n33 (19/14)\nFlupentixol \ndecanoate\n",
+      "bbox": [
+        64.38980102539062,
+        355.0690002441406,
+        199.05728149414062,
+        373.7764892578125
+      ],
+      "text_sha256": "c5b76ab8e3bad54ec1c000c7a8aafa6ae1bfdd8edb2f087d77946cb605b0298e"
+    },
+    {
+      "block_id": "page-0295-block-0008",
+      "order": 8,
+      "text": "Lithium\n18 months Neither treatment improved main \noutcome (number of mood episodes)\n",
+      "bbox": [
+        210.38980102539062,
+        355.0715026855469,
+        418.169921875,
+        373.7764892578125
+      ],
+      "text_sha256": "732a8947d600a15b664e3f9cc551ce14aa02829d9915fad8d923288594ea442a"
+    },
+    {
+      "block_id": "page-0295-block-0009",
+      "order": 9,
+      "text": "MacFadden \net al.10*\n",
+      "bbox": [
+        64.38729858398438,
+        380.6914978027344,
+        103.55979919433594,
+        399.40399169921875
+      ],
+      "text_sha256": "66b0aa20c8939b3a477827dbeec74cb6bcc9e4fb7807d149e0b50432c804041c"
+    },
+    {
+      "block_id": "page-0295-block-0010",
+      "order": 10,
+      "text": "124 (65/59)\nRisperidone \n(adjunct)\n",
+      "bbox": [
+        111.38679504394531,
+        380.6990051269531,
+        201.5667724609375,
+        399.40399169921875
+      ],
+      "text_sha256": "c12b8809980fd95caf5c81f62daa0fe77ba662f40a3677c214d504fb010eafa6"
+    },
+    {
+      "block_id": "page-0295-block-0011",
+      "order": 11,
+      "text": "Placebo \n(adjunct)\n",
+      "bbox": [
+        210.3867950439453,
+        380.6990051269531,
+        238.30929565429688,
+        399.40399169921875
+      ],
+      "text_sha256": "d651667fa59244fd7abe6e4e2db5cfa1e86298fc7814424158b090abd8376865"
+    },
+    {
+      "block_id": "page-0295-block-0012",
+      "order": 12,
+      "text": "12 months Risperidone LAI reduced rate of relapse \ncompared with placebo (relative risk 2.3)\n",
+      "bbox": [
+        259.3843078613281,
+        380.6990051269531,
+        429.12432861328125,
+        399.40399169921875
+      ],
+      "text_sha256": "afa03a242ed0d634a302ed461b0faf259d6b6397eb08304213be6a3f4cbc8086"
+    },
+    {
+      "block_id": "page-0295-block-0013",
+      "order": 13,
+      "text": "Quiroz \net al.11*\n",
+      "bbox": [
+        64.38430786132812,
+        406.3190002441406,
+        89.2542953491211,
+        425.02899169921875
+      ],
+      "text_sha256": "c8d49d335cc6049380515bfa3ab289e8790c4d2502c20cc3af2f91e9f447296e"
+    },
+    {
+      "block_id": "page-0295-block-0014",
+      "order": 14,
+      "text": "303 (154/149) Risperidone \nmonotherapy\n",
+      "bbox": [
+        111.38679504394531,
+        406.3240051269531,
+        205.3092803955078,
+        425.02899169921875
+      ],
+      "text_sha256": "9318b8bb13aea4c63440fb98ba577e089351cce0c843b6b4b919ed7b30eb78fb"
+    },
+    {
+      "block_id": "page-0295-block-0015",
+      "order": 15,
+      "text": "Placebo \nmonotherapy\n",
+      "bbox": [
+        210.3867950439453,
+        406.3240051269531,
+        253.3092803955078,
+        425.02899169921875
+      ],
+      "text_sha256": "53a34c84ff6bb4f3bfbe0711ea469dabcc8a624735eb5e569a3dce67249a5d37"
+    },
+    {
+      "block_id": "page-0295-block-0016",
+      "order": 16,
+      "text": "24 months Overall relapse rate was 30% with \nrisperidone, 56% with placebo. \nRisperidone did not protect against \ndepressive relapse\n",
+      "bbox": [
+        259.3843078613281,
+        406.3240051269531,
+        413.44195556640625,
+        445.02398681640625
+      ],
+      "text_sha256": "2ef9536ee629f8a0f2ee8299149c6ea9e0e6bec8fb6d4bb8b5834c14c0338dbe"
+    },
+    {
+      "block_id": "page-0295-block-0017",
+      "order": 17,
+      "text": "Vieta \net al.12*\n",
+      "bbox": [
+        64.38430786132812,
+        451.9389953613281,
+        89.2542953491211,
+        470.65399169921875
+      ],
+      "text_sha256": "92806196983861d8d39c811305b6630e458219cea40e42c3638c0afa80dcd9de"
+    },
+    {
+      "block_id": "page-0295-block-0018",
+      "order": 18,
+      "text": "398 \n(132/135/131)\n",
+      "bbox": [
+        111.38679504394531,
+        451.9490051269531,
+        157.2567901611328,
+        470.65399169921875
+      ],
+      "text_sha256": "9d81bb2f2465273341c7722df78267cf818fcafd6404fd433aa1712cfb076083"
+    },
+    {
+      "block_id": "page-0295-block-0019",
+      "order": 19,
+      "text": "Risperidone \nmonotherapy\n",
+      "bbox": [
+        162.3867950439453,
+        451.9490051269531,
+        205.3092803955078,
+        470.65399169921875
+      ],
+      "text_sha256": "92c77e78fdc833e44a9b71f44870d34994cef51ed4560e987efb2d262c6ad463"
+    },
+    {
+      "block_id": "page-0295-block-0020",
+      "order": 20,
+      "text": "Placebo or \noral \nolanzapine \nmonotherapy\n",
+      "bbox": [
+        210.3867950439453,
+        451.9490051269531,
+        253.3092803955078,
+        490.64898681640625
+      ],
+      "text_sha256": "c6f8268a2e07773071dbaae6eb46071d2bebadc6067f3e841f488cf0294140e8"
+    },
+    {
+      "block_id": "page-0295-block-0021",
+      "order": 21,
+      "text": "18 months Recurrence of any mood episode: oral \nolanzapine 23.8%; risperidone LAI \n38.9%; placebo 56.4%. Olanzapine and \nrisperidone reduced the risk of elevated \nmood episode but only olanzapine \nreduced the risk of depression\n",
+      "bbox": [
+        259.3843078613281,
+        451.9414978027344,
+        431.096923828125,
+        510.636474609375
+      ],
+      "text_sha256": "0fbf5abadeda5bd91de12a2c43589d063d4bc0dc9680204504a50f26486388b5"
+    },
+    {
+      "block_id": "page-0295-block-0022",
+      "order": 22,
+      "text": "Calabrese \net al.13*\n",
+      "bbox": [
+        64.38430786132812,
+        517.5514526367188,
+        97.58680725097656,
+        536.2789916992188
+      ],
+      "text_sha256": "7ff29098bf7d87581ec21cd9d902d4f1f4ba26d5708fdd444e1489d0638ef3ff"
+    },
+    {
+      "block_id": "page-0295-block-0023",
+      "order": 23,
+      "text": "266 (133/133) Aripiprazole \nmonotherapy\n",
+      "bbox": [
+        111.38679504394531,
+        517.573974609375,
+        205.3092803955078,
+        536.2789916992188
+      ],
+      "text_sha256": "dfde2c3241a4ad37b933e8bfe5663d63f11fa72ee631906d74a0d15aa53d9b2a"
+    },
+    {
+      "block_id": "page-0295-block-0024",
+      "order": 24,
+      "text": "Placebo \nmonotherapy\n",
+      "bbox": [
+        210.3867950439453,
+        517.573974609375,
+        253.3092803955078,
+        536.2789916992188
+      ],
+      "text_sha256": "53a34c84ff6bb4f3bfbe0711ea469dabcc8a624735eb5e569a3dce67249a5d37"
+    },
+    {
+      "block_id": "page-0295-block-0025",
+      "order": 25,
+      "text": "12 months Relapse to any mood episode 26.5% with \naripiprazole; 51.1% with placebo. No \nclear effect on recurrence of depression.\nAn open follow-on study of this RCT (that \nalso included patients newly prescribed \naripiprazole) showed somewhat better \nlevels of protection: 87–98% of participants \nremained well over 12 months.14\n",
+      "bbox": [
+        259.3843078613281,
+        517.573974609375,
+        435.67950439453125,
+        596.2639770507812
+      ],
+      "text_sha256": "b8f4a5589c81f57f4bd8eacbf16946a825f3f67d604fb1ba720fe7a0969bf86c"
+    },
+    {
+      "block_id": "page-0295-block-0026",
+      "order": 26,
+      "text": "*Trial sponsored by the manufacturer.\n",
+      "bbox": [
+        61.889801025390625,
+        605.8214721679688,
+        182.33978271484375,
+        614.5289916992188
+      ],
+      "text_sha256": "e8e76ecee5a773d6fb52593f89d34c166f3e5dae2d15d15551531ea6a036313e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,587 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0136",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 136,
+  "source_page_index": 135,
+  "source_page_display": 136,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "CHAPTER 1\n \n(Continued)\nContinue at reduced dose\nContinue\nIneffective/not appropriate\nEffective\nIneffective/not appropriate to switch\nEffective\nContinue\nEffective\nContinue if no\ncontraindications\nEffective\nContinue, if no\ncontraindications\nEffective\nContinue if tolerated;\nwithdraw very slowly\nEffective\nEffective\nContinue, but attempt slow\nwithdrawal after 2–4 weeks\n(risk of dependence)\nContinue, but attempt\nwithdrawal\nafter several months\nEffective\nNot effective/contra-indicated\nNot effective/not tolerated\nIneffective/no other EPS\nIneffective\nIneffective\nReduce dose of current antipsychotic\nmedication/switch from antipsychotic\npolypharmacy to monotherapy (if possible) or\nslow rate of dosage increase15,16 \nSwitch to quetiapine/olanzapine17–19\n(lowest effective dose possible)\n(clozapine also an option if the psychiatric\ndiagnosis is treatment-resistant schizophrenia20)\nConsider low-dose\npropranolol: 30–80mg/day10,21,22\n(start at 10mg tds)\nNB. Note contra-indications\n(asthma, bradycardia, hypotension, etc.)\nConsider low-dose (15mg) mirtazapine or\nmianserin (30mg)\n(5HT2A antagonists)23–25\nConsider an antimuscarinic drug16\n(e.g. benzatropine 6mg/day)\nWeak support for efﬁcacy26,27 and risk of\ncognitive and anticholinergic adverse effects, but\nmay be effective where other EPS present6,10,13\nConsider cyproheptadine 16mg/day22,28\nConsider a benzodiazepine15,16\n(e.g. diazepam up to 15mg/day clonazepam\n0.5–3mg/day)\nConsider clonidine 0.2–0.8mg/day16,29\n",
+  "raw_text_sha256": "4cd2c0482e5fcb7a4702e7b48c9013efeecb26580e5ee495ee6b5562a0412ea5",
+  "coordinates_sha256": "62b689d754bc5ef9ae50f2452386cec804ef20aa7a95e6fe6cb0cd6f92466091",
+  "block_sequence_sha256": "ca6011814178ff3dea6744cce64d6e4a5b6e5f73df5d6160c0a3ddfbb916f666",
+  "blocks": [
+    {
+      "block_id": "page-0136-block-0000",
+      "order": 0,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0136-block-0001",
+      "order": 1,
+      "text": " \n",
+      "bbox": [
+        106.02969360351562,
+        400.4994201660156,
+        108.11469268798828,
+        409.3869323730469
+      ],
+      "text_sha256": "94913c6a8de6130b11d1fa9d5de98aaacd1920339cea3ea3d3f3ff219741f3f2"
+    },
+    {
+      "block_id": "page-0136-block-0002",
+      "order": 2,
+      "text": "(Continued)\n",
+      "bbox": [
+        382.48480224609375,
+        650.5343017578125,
+        419.9998474121094,
+        659.2868041992188
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0136-block-0003",
+      "order": 3,
+      "text": "Continue at reduced dose\n",
+      "bbox": [
+        311.55780029296875,
+        62.561187744140625,
+        399.0978698730469,
+        71.7786865234375
+      ],
+      "text_sha256": "9700354083de20f741930a5eb4a845e1db809917b71a437f19a86c99b454bac9"
+    },
+    {
+      "block_id": "page-0136-block-0004",
+      "order": 4,
+      "text": "Continue\n",
+      "bbox": [
+        340.31982421875,
+        149.34133911132812,
+        370.3348693847656,
+        158.558837890625
+      ],
+      "text_sha256": "adb2540b253f1647fc7311e6085e4ab2d8c3425579873ed4d51ec2b373c794f3"
+    },
+    {
+      "block_id": "page-0136-block-0005",
+      "order": 5,
+      "text": "Ineffective/not appropriate\n",
+      "bbox": [
+        102.9822998046875,
+        96.62387084960938,
+        191.35482788085938,
+        105.84136962890625
+      ],
+      "text_sha256": "197e88f0e3cedcf29fca66356f632103e874587c6cde8e1d4df10f4c960a4bef"
+    },
+    {
+      "block_id": "page-0136-block-0006",
+      "order": 6,
+      "text": "Effective\n",
+      "bbox": [
+        246.11378479003906,
+        56.34609603881836,
+        277.3738098144531,
+        65.2710952758789
+      ],
+      "text_sha256": "af90b98bf86de1f246038b135eb6cd7fb7c6a4becb1f29841450551224878d19"
+    },
+    {
+      "block_id": "page-0136-block-0007",
+      "order": 7,
+      "text": "Ineffective/not appropriate to switch\n",
+      "bbox": [
+        87.14440155029297,
+        183.59542846679688,
+        207.19692993164062,
+        192.81292724609375
+      ],
+      "text_sha256": "04babf2989107d16f311a0fdf5387c52a74539c056ab6be76c5c3d5928499997"
+    },
+    {
+      "block_id": "page-0136-block-0008",
+      "order": 8,
+      "text": "Effective\n",
+      "bbox": [
+        246.11378479003906,
+        140.65689086914062,
+        277.3738098144531,
+        149.58189392089844
+      ],
+      "text_sha256": "af90b98bf86de1f246038b135eb6cd7fb7c6a4becb1f29841450551224878d19"
+    },
+    {
+      "block_id": "page-0136-block-0009",
+      "order": 9,
+      "text": "Continue\nEffective\n",
+      "bbox": [
+        246.11378479003906,
+        316.3238220214844,
+        370.3348693847656,
+        334.225830078125
+      ],
+      "text_sha256": "c99eb8cef93b96f451ebb6af8bce81ca967effab62d5b45930c4538fdf5fce71"
+    },
+    {
+      "block_id": "page-0136-block-0010",
+      "order": 10,
+      "text": "Continue if no\ncontraindications\n",
+      "bbox": [
+        326.5657958984375,
+        234.1893310546875,
+        384.0909423828125,
+        252.40682983398438
+      ],
+      "text_sha256": "8e66bbfd83c8210dd7fa779cd0f9345b43a0f820f2556aca48f14db264bfacd9"
+    },
+    {
+      "block_id": "page-0136-block-0011",
+      "order": 11,
+      "text": "Effective\n",
+      "bbox": [
+        246.11378479003906,
+        230.00482177734375,
+        277.3738098144531,
+        238.92982482910156
+      ],
+      "text_sha256": "af90b98bf86de1f246038b135eb6cd7fb7c6a4becb1f29841450551224878d19"
+    },
+    {
+      "block_id": "page-0136-block-0012",
+      "order": 12,
+      "text": "Continue, if no\ncontraindications\n",
+      "bbox": [
+        326.5662841796875,
+        476.83831787109375,
+        384.0914306640625,
+        495.0558166503906
+      ],
+      "text_sha256": "26bb6df874835f210509746f1c7b021ca440949e1b7543697227faf98b13a80e"
+    },
+    {
+      "block_id": "page-0136-block-0013",
+      "order": 13,
+      "text": "Effective\n",
+      "bbox": [
+        246.11378479003906,
+        472.6538391113281,
+        277.3738098144531,
+        481.5788269042969
+      ],
+      "text_sha256": "af90b98bf86de1f246038b135eb6cd7fb7c6a4becb1f29841450551224878d19"
+    },
+    {
+      "block_id": "page-0136-block-0014",
+      "order": 14,
+      "text": "Continue if tolerated;\nwithdraw very slowly\n",
+      "bbox": [
+        320.5208740234375,
+        611.8973999023438,
+        390.1359558105469,
+        630.1149291992188
+      ],
+      "text_sha256": "8720bef600ce04f4f1ab4a26b95d65c6e6e82961254a12b733fe044d1da5a146"
+    },
+    {
+      "block_id": "page-0136-block-0015",
+      "order": 15,
+      "text": "Effective\n",
+      "bbox": [
+        246.11378479003906,
+        607.7127685546875,
+        277.3738098144531,
+        616.6378173828125
+      ],
+      "text_sha256": "af90b98bf86de1f246038b135eb6cd7fb7c6a4becb1f29841450551224878d19"
+    },
+    {
+      "block_id": "page-0136-block-0016",
+      "order": 16,
+      "text": "Effective\n",
+      "bbox": [
+        246.11378479003906,
+        399.00592041015625,
+        277.3738098144531,
+        407.930908203125
+      ],
+      "text_sha256": "af90b98bf86de1f246038b135eb6cd7fb7c6a4becb1f29841450551224878d19"
+    },
+    {
+      "block_id": "page-0136-block-0017",
+      "order": 17,
+      "text": "Continue, but attempt slow\nwithdrawal after 2–4 weeks\n",
+      "bbox": [
+        310.1063232421875,
+        538.1163940429688,
+        400.54888916015625,
+        556.3339233398438
+      ],
+      "text_sha256": "a3c6384785eec47ec8aabfb86a08ef05669b051095908e9e0c3f4342d64b19ed"
+    },
+    {
+      "block_id": "page-0136-block-0018",
+      "order": 18,
+      "text": "(risk of dependence)\n",
+      "bbox": [
+        320.31378173828125,
+        556.1163940429688,
+        390.3338623046875,
+        565.3339233398438
+      ],
+      "text_sha256": "baf9f446b96460121976f1401a7b9dd7e03e3fe3edba7240743ae1bdc18b91e7"
+    },
+    {
+      "block_id": "page-0136-block-0019",
+      "order": 19,
+      "text": "Continue, but attempt\n",
+      "bbox": [
+        319.060791015625,
+        397.6734313964844,
+        391.5933532714844,
+        406.89093017578125
+      ],
+      "text_sha256": "86413d01fc9c0efdd9ad12e69b38f57ff3366223212f8bbca7107211e33cd729"
+    },
+    {
+      "block_id": "page-0136-block-0020",
+      "order": 20,
+      "text": "withdrawal\nafter several months\n",
+      "bbox": [
+        321.3558349609375,
+        406.6734313964844,
+        389.29840087890625,
+        424.89093017578125
+      ],
+      "text_sha256": "fa825f3854ae41fa0195b6608a9693a021f2fd4f38f09e87a878cbbd4603f56e"
+    },
+    {
+      "block_id": "page-0136-block-0021",
+      "order": 21,
+      "text": "Effective\n",
+      "bbox": [
+        246.11378479003906,
+        540.556884765625,
+        277.3738098144531,
+        549.48193359375
+      ],
+      "text_sha256": "af90b98bf86de1f246038b135eb6cd7fb7c6a4becb1f29841450551224878d19"
+    },
+    {
+      "block_id": "page-0136-block-0022",
+      "order": 22,
+      "text": "Not effective/contra-indicated\n",
+      "bbox": [
+        97.5657958984375,
+        275.0953063964844,
+        196.7758026123047,
+        284.31280517578125
+      ],
+      "text_sha256": "405607dfcb7dca3eb91ff3b3f8914f1e80ec33efa945fe954e4c487478e2f2ea"
+    },
+    {
+      "block_id": "page-0136-block-0023",
+      "order": 23,
+      "text": "Not effective/not tolerated\n",
+      "bbox": [
+        104.02279663085938,
+        352.8453063964844,
+        190.3178253173828,
+        362.06280517578125
+      ],
+      "text_sha256": "0486fb828e13523d8b2dae4afa83a7d0a73c5690cde36fa8d0ecb6eef66ac6bc"
+    },
+    {
+      "block_id": "page-0136-block-0024",
+      "order": 24,
+      "text": "Ineffective/no other EPS\n",
+      "bbox": [
+        107.15029907226562,
+        442.0433044433594,
+        187.19033813476562,
+        451.26080322265625
+      ],
+      "text_sha256": "d4ab882f641f156d76712554457271d1f963697cd4c77f9ea34e9a19877491b2"
+    },
+    {
+      "block_id": "page-0136-block-0025",
+      "order": 25,
+      "text": "Ineffective\n",
+      "bbox": [
+        129.86810302734375,
+        574.8753051757812,
+        164.47311401367188,
+        584.0928344726562
+      ],
+      "text_sha256": "a5a159e6c2765c991ac0312a0e2229762c802bf61671efc2eca09e864f432782"
+    },
+    {
+      "block_id": "page-0136-block-0026",
+      "order": 26,
+      "text": "Ineffective\n",
+      "bbox": [
+        129.86810302734375,
+        499.38641357421875,
+        164.47311401367188,
+        508.6039123535156
+      ],
+      "text_sha256": "a5a159e6c2765c991ac0312a0e2229762c802bf61671efc2eca09e864f432782"
+    },
+    {
+      "block_id": "page-0136-block-0027",
+      "order": 27,
+      "text": "Reduce dose of current antipsychotic\n",
+      "bbox": [
+        82.39440155029297,
+        47.844940185546875,
+        209.94692993164062,
+        57.06243896484375
+      ],
+      "text_sha256": "724bcd167f011e6f6d3e2a378f00b772990027c590431337ba3111a3c55067f1"
+    },
+    {
+      "block_id": "page-0136-block-0028",
+      "order": 28,
+      "text": "medication/switch from antipsychotic\npolypharmacy to monotherapy (if possible) or\n",
+      "bbox": [
+        69.89939880371094,
+        57.842437744140625,
+        222.4344024658203,
+        77.05743408203125
+      ],
+      "text_sha256": "642c77f536c83232c14bcb3c6cf054f0b88dc697a6b485e9a023aafb362c42fe"
+    },
+    {
+      "block_id": "page-0136-block-0029",
+      "order": 29,
+      "text": "slow rate of dosage increase15,16 \n",
+      "bbox": [
+        89.73690032958984,
+        76.90572357177734,
+        202.601806640625,
+        87.06243896484375
+      ],
+      "text_sha256": "9e806bd5301a4f014cca8d040744cc0d06309c2c6294b4feb05f9fc4fbd0c11a"
+    },
+    {
+      "block_id": "page-0136-block-0030",
+      "order": 30,
+      "text": "Switch to quetiapine/olanzapine17–19\n",
+      "bbox": [
+        84.10929870605469,
+        132.18605041503906,
+        208.22830200195312,
+        142.34490966796875
+      ],
+      "text_sha256": "c6efd2a2ed08212d440aaa23fe17360d883e8bed0a2b384ab22e11ff93a575d6"
+    },
+    {
+      "block_id": "page-0136-block-0031",
+      "order": 31,
+      "text": "(lowest effective dose possible)\n",
+      "bbox": [
+        93.2396011352539,
+        142.12533569335938,
+        199.10211181640625,
+        151.34283447265625
+      ],
+      "text_sha256": "c790073c1c78f240465a9ec30e90323b7a6f4ab37159e5ecacef3e739771ab88"
+    },
+    {
+      "block_id": "page-0136-block-0032",
+      "order": 32,
+      "text": "(clozapine also an option if the psychiatric\ndiagnosis is treatment-resistant schizophrenia20)\n",
+      "bbox": [
+        64.89710235595703,
+        156.12783813476562,
+        227.4432830810547,
+        174.3453369140625
+      ],
+      "text_sha256": "8a9547a07d0a5793135a63f436db5d1c4748f7d0c2dd20ab67561aa1c3b09c06"
+    },
+    {
+      "block_id": "page-0136-block-0033",
+      "order": 33,
+      "text": "Consider low-dose\npropranolol: 30–80mg/day10,21,22\n",
+      "bbox": [
+        90.17829895019531,
+        216.83782958984375,
+        204.16632080078125,
+        235.05532836914062
+      ],
+      "text_sha256": "91a1e0956d48a4a001a38faac4dfd45d50615e3867dad229cc0d5f774e4370dd"
+    },
+    {
+      "block_id": "page-0136-block-0034",
+      "order": 34,
+      "text": "(start at 10mg tds)\n",
+      "bbox": [
+        116.33050537109375,
+        238.8353271484375,
+        178.0105438232422,
+        248.05282592773438
+      ],
+      "text_sha256": "a71d9cb15d261a4fbe20d409f9656d15585bdcb67532e70d9a991ab6d576668e"
+    },
+    {
+      "block_id": "page-0136-block-0035",
+      "order": 35,
+      "text": "NB. Note contra-indications\n(asthma, bradycardia, hypotension, etc.)\n",
+      "bbox": [
+        79.01799774169922,
+        251.83282470703125,
+        215.31552124023438,
+        270.0503234863281
+      ],
+      "text_sha256": "15305e7311aeddfbf010610f5a7c52b3d211b65920aba2380b991336c75b3c6f"
+    },
+    {
+      "block_id": "page-0136-block-0036",
+      "order": 36,
+      "text": "Consider low-dose (15mg) mirtazapine or\n",
+      "bbox": [
+        74.90799713134766,
+        314.40533447265625,
+        217.4304962158203,
+        323.6228332519531
+      ],
+      "text_sha256": "a39f1010959c1998bdb4511778543f7e6bff2ddf7662b388b8526373252df854"
+    },
+    {
+      "block_id": "page-0136-block-0037",
+      "order": 37,
+      "text": "mianserin (30mg)\n(5HT2A antagonists)23–25\n",
+      "bbox": [
+        105.260498046875,
+        324.40283203125,
+        187.0723114013672,
+        345.0301513671875
+      ],
+      "text_sha256": "69b3b56b0e41e5159849fc50f9b253170b34c79d37fd8686d803bb748703c486"
+    },
+    {
+      "block_id": "page-0136-block-0038",
+      "order": 38,
+      "text": "Consider an antimuscarinic drug16\n",
+      "bbox": [
+        86.1521987915039,
+        385.79595947265625,
+        206.1887969970703,
+        395.95391845703125
+      ],
+      "text_sha256": "ca73251d7867b2ddeabe03f4f1da0afad36252c9c126bddfc79613fd7a55ce93"
+    },
+    {
+      "block_id": "page-0136-block-0039",
+      "order": 39,
+      "text": "(e.g. benzatropine 6mg/day)\n",
+      "bbox": [
+        98.24209594726562,
+        396.4864196777344,
+        194.09962463378906,
+        405.70391845703125
+      ],
+      "text_sha256": "7929c6920bbf4978eff46f26125d9430e317e3bf10403a32cb4f3643fc7d4864"
+    },
+    {
+      "block_id": "page-0136-block-0040",
+      "order": 40,
+      "text": "Weak support for efﬁcacy26,27 and risk of\ncognitive and anticholinergic adverse effects, but\n",
+      "bbox": [
+        63.428794860839844,
+        407.5460510253906,
+        228.91632080078125,
+        427.45391845703125
+      ],
+      "text_sha256": "9b37d428b6f9fcff710600f2b508ef64c505bf81e42cd8798790819d00c77d70"
+    },
+    {
+      "block_id": "page-0136-block-0041",
+      "order": 41,
+      "text": "may be effective where other EPS present6,10,13\n",
+      "bbox": [
+        66.5562973022461,
+        427.0460510253906,
+        225.7868194580078,
+        437.20391845703125
+      ],
+      "text_sha256": "fa0c754435bdaaa91b35bfefaaa27873eb8518ac56c79fa36938889a970b9eff"
+    },
+    {
+      "block_id": "page-0136-block-0042",
+      "order": 42,
+      "text": "Consider cyproheptadine 16mg/day22,28\n",
+      "bbox": [
+        77.0374984741211,
+        478.1740417480469,
+        215.30355834960938,
+        488.3309326171875
+      ],
+      "text_sha256": "e7e75c847da7553e9f468b27d31a05e720632e6f0ab978f0f613b1a2d9fd87c7"
+    },
+    {
+      "block_id": "page-0136-block-0043",
+      "order": 43,
+      "text": "Consider a benzodiazepine15,16\n",
+      "bbox": [
+        91.8313980102539,
+        538.489013671875,
+        200.5095672607422,
+        548.6469116210938
+      ],
+      "text_sha256": "d1537981d51b13cd54209108fa9ee2b45b529320297902e443ddd4cd0308ac61"
+    },
+    {
+      "block_id": "page-0136-block-0044",
+      "order": 44,
+      "text": "(e.g. diazepam up to 15mg/day clonazepam\n",
+      "bbox": [
+        71.56430053710938,
+        548.4293823242188,
+        220.7768096923828,
+        557.6469116210938
+      ],
+      "text_sha256": "b036d568f35ab47d4ff8531cf11a9747c706ecae4dc6fa9356b36693ce5cb5b9"
+    },
+    {
+      "block_id": "page-0136-block-0045",
+      "order": 45,
+      "text": "0.5–3mg/day)\n",
+      "bbox": [
+        123.03680419921875,
+        557.4293823242188,
+        169.29681396484375,
+        566.6469116210938
+      ],
+      "text_sha256": "51d49c8a9833d1cbe454b83adbf87fdc72a4f24e831609b585c51e13907f3822"
+    },
+    {
+      "block_id": "page-0136-block-0046",
+      "order": 46,
+      "text": "Consider clonidine 0.2–0.8mg/day16,29\n",
+      "bbox": [
+        81.36680603027344,
+        614.4070434570312,
+        212.9735565185547,
+        624.5618896484375
+      ],
+      "text_sha256": "9523c7c09f50803f2e4a2b9ed07b08592a03e2f53baffbc515fa3aa590f6f3c3"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

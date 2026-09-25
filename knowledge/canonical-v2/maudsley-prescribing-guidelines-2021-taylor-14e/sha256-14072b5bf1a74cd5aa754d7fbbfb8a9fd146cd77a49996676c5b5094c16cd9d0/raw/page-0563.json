@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0563",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 563,
+  "source_page_index": 562,
+  "source_page_display": 563,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "542    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  5\nPrescribing for depression in children and adolescents\nBefore prescribing\n■\n■Undertake a comprehensive assessment: Establish a clinical diagnosis of depression. \nExclude differential diagnoses, including psychiatric disorders (such as bipolar affec-\ntive disorder) medical disorders (such as endocrine disorders) and medication-related \neffects (such as steroid adverse effects). Identify any comorbid psychiatric or medical \nconditions. Consider contraindications to SSRIs and potential interactions. Assess the \nrisk of harm to self and others. Formulate considering factors that could predispose, \nprecipitate and perpetuate depression, such as family history of psychiatric disorders \n(including depression and bipolar affective disorder) and environmental stressors \n(including victimisation and other adverse experiences). If any co-occurring problems \nare identified, these should be addressed and prioritised based on a comprehensive \nformulation.\n■\n■Measure baseline severity: Measures of depression symptoms include the clinician-\nadministered Children’s Depression Rating Scale-Revised (CDRS-R)15,16 and the child \nand parent-reported Mood and Feelings Questionnaire (MFQ)17 or Revised Children’s \nAnxiety and Depression Scale (RCADS).18 Measures of functional impairment include \nthe Children’s Global Assessment Scale (CGAS).19\n■\n■Obtain informed consent: Discuss the nature, course and treatment of depression, \npotential adverse effects of medication, delay in onset of treatment effects, plan for \nmonitoring and maintenance of medication and potential discontinuation effects.\n■\n■Develop a safety plan: In all but exceptional circumstances, a parent or carer should be \nresponsible for the secure storage of medication for a child or adolescent. Advise the \nyoung person and their parent/carer of professionals or services they should contact if \nthey experience significant adverse effects, risk of harm, or worsening symptoms.\nWhat to prescribe\n■\n■Fluoxetine is the recommended first-line medication for depression in children and \nadolescents.3,4 It has the strongest current evidence for efficacy,8,20–22 and UK NICE \nstates that it is the only antidepressant for which clinical trial evidence shows that \nbenefits outweigh risks.4 Fluoxetine should be started at a low dose of 10mg daily \nwhich can be increased after one week to the minimum therapeutic dose of 20mg \ndaily. Higher doses (up to 40–60mg daily) may be considered, particularly in older \nchildren of higher body weight and/or when, in severe illness, an early clinical \nresponse is considered a priority.4–7 The long half-life of fluoxetine may be beneficial \nfor adolescents, as they would be less likely to experience discontinuation effects if a \ndose is delayed or missed.23 Fluoxetine is approved by the USA Food and Drug \nAdministration (FDA) for treatment of depression in patients aged 8 years and over.\n■\n■Sertraline and escitalopram have also been found to be more effective for treating \ndepression in young people than placebo,8,21 and could be considered as alterna-\ntives if fluoxetine is not tolerated. Sertraline and escitalopram should also be \n",
+  "raw_text_sha256": "0d9b3559280348f8c1ec8c29afc647c7ea8958bf8ce5c4ba0c508e8bb522290f",
+  "coordinates_sha256": "6511ace2b3e0bad0330bceee7b47b065ffd1428da461e0d804dd06f4b61375ef",
+  "block_sequence_sha256": "52be961299814db48327d043bc6e352fec97ef95267ba2b8e70fcd6f2eaced62",
+  "blocks": [
+    {
+      "block_id": "page-0563-block-0000",
+      "order": 0,
+      "text": "542    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "fcb5269792ffbc9f5d17e58c9af113c3fefd97befd52ebcc2d4a99c0836a89ec"
+    },
+    {
+      "block_id": "page-0563-block-0001",
+      "order": 1,
+      "text": "CHAPTER  5\n",
+      "bbox": [
+        18.520000457763672,
+        338.22650146484375,
+        28.0,
+        381.79449462890625
+      ],
+      "text_sha256": "4086e0916f45ec531cc17b8c611334eb2b1ef26051ba536579b8ef3c22c1648d"
+    },
+    {
+      "block_id": "page-0563-block-0002",
+      "order": 2,
+      "text": "Prescribing for depression in children and adolescents\n",
+      "bbox": [
+        61.88999938964844,
+        62.31540298461914,
+        339.3760070800781,
+        75.35040283203125
+      ],
+      "text_sha256": "906c6fca71785854a6e50077ae0573a1aec306e1b79e5c81225c563c59c0ebe3"
+    },
+    {
+      "block_id": "page-0563-block-0003",
+      "order": 3,
+      "text": "Before prescribing\n",
+      "bbox": [
+        61.88999938964844,
+        81.25040435791016,
+        147.64999389648438,
+        93.10040283203125
+      ],
+      "text_sha256": "ed5191c8eb6616a49cb0169f22fb5d44ff3d47a2dd51b206d7f4ac8d1f365a8e"
+    },
+    {
+      "block_id": "page-0563-block-0004",
+      "order": 4,
+      "text": "■\n■Undertake a comprehensive assessment: Establish a clinical diagnosis of depression. \n",
+      "bbox": [
+        61.88990020751953,
+        105.160400390625,
+        436.6800231933594,
+        116.88040161132812
+      ],
+      "text_sha256": "c2a902f90d4f656eb99c9636227669e6d16e884b686316fe563d1203d17c58d5"
+    },
+    {
+      "block_id": "page-0563-block-0005",
+      "order": 5,
+      "text": "Exclude differential diagnoses, including psychiatric disorders (such as bipolar affec-\ntive disorder) medical disorders (such as endocrine disorders) and medication-related \neffects (such as steroid adverse effects). Identify any comorbid psychiatric or medical \nconditions. Consider contraindications to SSRIs and potential interactions. Assess the \nrisk of harm to self and others. Formulate considering factors that could predispose, \nprecipitate and perpetuate depression, such as family history of psychiatric disorders \n(including depression and bipolar affective disorder) and environmental stressors \n(including victimisation and other adverse experiences). If any co-occurring problems \nare identified, these should be addressed and prioritised based on a comprehensive \nformulation.\n",
+      "bbox": [
+        70.88999938964844,
+        117.160400390625,
+        436.6800842285156,
+        236.88040161132812
+      ],
+      "text_sha256": "05f77a44d1141fe50b12f9720a13e7ebc1beb5ce287c706f39b1cf2335f017ac"
+    },
+    {
+      "block_id": "page-0563-block-0006",
+      "order": 6,
+      "text": "■\n■Measure baseline severity: Measures of depression symptoms include the clinician-\n",
+      "bbox": [
+        61.88990020751953,
+        237.160400390625,
+        433.8499450683594,
+        248.88040161132812
+      ],
+      "text_sha256": "bfbd90166c17f3f86f3718cdccf8aa792476064ef5ba869f79c4a53e95cbae8d"
+    },
+    {
+      "block_id": "page-0563-block-0007",
+      "order": 7,
+      "text": "administered Children’s Depression Rating Scale-Revised (CDRS-R)15,16 and the child \nand parent-reported Mood and Feelings Questionnaire (MFQ)17 or Revised Children’s \nAnxiety and Depression Scale (RCADS).18 Measures of functional impairment include \nthe Children’s Global Assessment Scale (CGAS).19\n",
+      "bbox": [
+        70.8876953125,
+        249.160400390625,
+        436.6826477050781,
+        296.8804016113281
+      ],
+      "text_sha256": "68113aa0272ce1f9b8019b7c62ca802f12bf3376e67f3261203ca45a31052ec2"
+    },
+    {
+      "block_id": "page-0563-block-0008",
+      "order": 8,
+      "text": "■\n■Obtain informed consent: Discuss the nature, course and treatment of depression, \n",
+      "bbox": [
+        61.88990020751953,
+        297.160400390625,
+        436.6899719238281,
+        308.8804016113281
+      ],
+      "text_sha256": "51361a63da04315be29c76fb4cbd50593f50292112f0bb434343ad97bf0a5efe"
+    },
+    {
+      "block_id": "page-0563-block-0009",
+      "order": 9,
+      "text": "potential adverse effects of medication, delay in onset of treatment effects, plan for \nmonitoring and maintenance of medication and potential discontinuation effects.\n",
+      "bbox": [
+        70.88999938964844,
+        309.160400390625,
+        436.659912109375,
+        332.8804016113281
+      ],
+      "text_sha256": "f0f550ee7c40aeb37754c29579f40b34fb50e6ea18b0fdf166445c405d7ff515"
+    },
+    {
+      "block_id": "page-0563-block-0010",
+      "order": 10,
+      "text": "■\n■Develop a safety plan: In all but exceptional circumstances, a parent or carer should be \n",
+      "bbox": [
+        61.88990020751953,
+        333.160400390625,
+        436.65997314453125,
+        344.8804016113281
+      ],
+      "text_sha256": "43ba4e102e619a7fe675df44fd46ef66b698a05a68d10db664578400da8cf673"
+    },
+    {
+      "block_id": "page-0563-block-0011",
+      "order": 11,
+      "text": "responsible for the secure storage of medication for a child or adolescent. Advise the \nyoung person and their parent/carer of professionals or services they should contact if \nthey experience significant adverse effects, risk of harm, or worsening symptoms.\n",
+      "bbox": [
+        70.88999938964844,
+        345.160400390625,
+        436.7198181152344,
+        380.8804016113281
+      ],
+      "text_sha256": "4161cb29cb248983cd86dfd6c83b73b2c981a9389f5623509193cba921b5637e"
+    },
+    {
+      "block_id": "page-0563-block-0012",
+      "order": 12,
+      "text": "What to prescribe\n",
+      "bbox": [
+        61.88999938964844,
+        404.3153991699219,
+        153.98199462890625,
+        417.35040283203125
+      ],
+      "text_sha256": "232dc920d1013d0fbb8bd820198216bbdf3734aef7eecb68dc6be6b5d006298a"
+    },
+    {
+      "block_id": "page-0563-block-0013",
+      "order": 13,
+      "text": "■\n■Fluoxetine is the recommended first-line medication for depression in children and \n",
+      "bbox": [
+        61.88990020751953,
+        429.160400390625,
+        436.6799621582031,
+        440.8804016113281
+      ],
+      "text_sha256": "195950140aacf58b857c009b000d93334f5e479dc32beb72bc0092512c8eb31a"
+    },
+    {
+      "block_id": "page-0563-block-0014",
+      "order": 14,
+      "text": "adolescents.3,4 It has the strongest current evidence for efficacy,8,20–22 and UK NICE \nstates that it is the only antidepressant for which clinical trial evidence shows that \nbenefits outweigh risks.4 Fluoxetine should be started at a low dose of 10mg daily \nwhich can be increased after one week to the minimum therapeutic dose of 20mg \ndaily. Higher doses (up to 40–60mg daily) may be considered, particularly in older \nchildren of higher body weight and/or when, in severe illness, an early clinical \nresponse is considered a priority.4–7 The long half-life of fluoxetine may be beneficial \nfor adolescents, as they would be less likely to experience discontinuation effects if a \ndose is delayed or missed.23 Fluoxetine is approved by the USA Food and Drug \nAdministration (FDA) for treatment of depression in patients aged 8 years and over.\n",
+      "bbox": [
+        70.8883056640625,
+        441.160400390625,
+        436.7115173339844,
+        560.8804321289062
+      ],
+      "text_sha256": "5b748fb683f7496428bc38a4802354a1024483ad7bdd5bfe3b846fee7884f68f"
+    },
+    {
+      "block_id": "page-0563-block-0015",
+      "order": 15,
+      "text": "■\n■Sertraline and escitalopram have also been found to be more effective for treating \n",
+      "bbox": [
+        61.88990020751953,
+        561.160400390625,
+        436.6702880859375,
+        572.8804321289062
+      ],
+      "text_sha256": "60ba79dd6bc50bb45ef890f2f01d53728dacec9ad37ed4939ae2043d6a2eb4d4"
+    },
+    {
+      "block_id": "page-0563-block-0016",
+      "order": 16,
+      "text": "depression in young people than placebo,8,21 and could be considered as alterna-\ntives if fluoxetine is not tolerated. Sertraline and escitalopram should also be \n",
+      "bbox": [
+        70.88999938964844,
+        573.160400390625,
+        436.6510009765625,
+        596.8804321289062
+      ],
+      "text_sha256": "659e74d18351a4a7e363e70f26b5c3ea3569f1d1a1323f87644f21520222f55a"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

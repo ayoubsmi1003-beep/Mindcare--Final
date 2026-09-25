@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0103",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 103,
+  "source_page_index": 102,
+  "source_page_display": 103,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "82    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nReferences\n\t 1.\t Heres S, et al. Pharmacokinetics of olanzapine long-acting injection: the clinical perspective. Int Clin Psychopharmacol 2014; 29:299–312.\n\t 2.\t Lauriello J, et al. An 8-week, double-blind, randomized, placebo-controlled study of olanzapine long-acting injection in acutely ill patients \nwith schizophrenia. J Clin Psychiatry 2008; 69:790–799.\n\t 3.\t Mitchell M, et al. Single- and multiple-dose pharmacokinetic, safety, and tolerability profiles of olanzapine long-acting injection: an open-\nlabel, multicenter, nonrandomized study in patients with schizophrenia. Clin Ther 2013; 35:1890–1908.\n\t 4.\t Denee TR, et al. Treatment continuation and treatment characteristics of four long acting antipsychotic medications (Paliperidone Palmitate, \nRisperidone Microspheres, Olanzapine Pamoate and Haloperidol Decanoate) in The Netherlands. Value Health 2015; 18:A407.\n\t 5.\t Taipale H, et al. Comparative effectiveness of antipsychotic drugs for rehospitalization in schizophrenia-a nationwide study with 20-year \nfollow-up. Schizophr Bull 2017; 44:1381–1387.\n\t 6.\t Luedecke D, et al. Post-injection delirium/sedation syndrome in patients treated with olanzapine pamoate: mechanism, incidence, and man-\nagement. CNS Drugs 2015; 29:41–46.\n\t 7.\t McDonnell DP, et al. Post-injection delirium/sedation syndrome in patients with schizophrenia treated with olanzapine long-acting injection, \nII: investigations of mechanism. BMC Psychiatry 2010; 10:45.\n\t 8.\t Bushes CJ, et al. Olanzapine long-acting injection: review of first experiences of post-injection delirium/sedation syndrome in routine clinical \npractice. BMC Psychiatry 2015; 15:65.\n\t 9.\t Meyers KJ, et al. Postinjection delirium/sedation syndrome in patients with schizophrenia receiving olanzapine long-acting injection: results \nfrom a large observational study. B J Psych Open 2017; 3:186–192.\n\t10.\t Garg S, et al. Delayed onset postinjection delirium/sedation syndrome associated with olanzapine pamoate: a case report. J Clin \nPsychopharmacol 2019; 39:523–524.\n\t11.\t Eli Lilly and Company (NZ) Limited. ZYPREXA RELPREVV® (olanzapine pamoate monohydrate). 2019; https://www.medsafe.govt.nz/\nConsumers/cmi/z/zyprexarelprevvinj.pdf.\n\t12.\t Siskind D, et al. Monitoring for post-injection delirium/sedation syndrome with long-acting olanzapine during the COVID-19 pandemic. Aust \nN Z J Psychiatry 2020; 54:759–761.\n\t13.\t Venkatesan V, et al. Postinjection delirium/sedation syndrome after 31st long-acting olanzapine depot injection. Clin Neuropharmacol 2019; \n42:64–65.\n\t14.\t Eli Lilly and Company Limited. Summary of Product Characteristics. ZYPADHERA 210 mg powder and solvent for prolonged release sus-\npension for injection. 2020; https://www.medicines.org.uk/emc/product/6429.\n\t15.\t Anand E, et al. A 6-year open-label study of the efficacy and safety of olanzapine long-acting injection in patients with schizophrenia: a post \nhoc analysis based on the European label recommendation. Neuropsychiatr Dis Treat 2015; 11:1349–1357.\n\t16.\t Atkins S, et al. A pooled analysis of injection site-related adverse events in patients with schizophrenia treated with olanzapine long-acting \ninjection. BMC Psychiatry 2014; 14:7.\n",
+  "raw_text_sha256": "b1e990d9e48c7976ce7d04868a0aa67f80f8d92a56bcc3f035f3b5fc78df29fb",
+  "coordinates_sha256": "0171512ebf2eaab91b4fb671cc3c034e190e64321f9665fd4f96bf66960a23a9",
+  "block_sequence_sha256": "3c8716f09e29249fdac04deb78820f2f2e1ecad6d5aa07ce9a03155701d89d9d",
+  "blocks": [
+    {
+      "block_id": "page-0103-block-0000",
+      "order": 0,
+      "text": "82    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "3ddf6bb3d50fda694ce6ad5987059b7c0cab3f152a66144e11e8e0298207af58"
+    },
+    {
+      "block_id": "page-0103-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0103-block-0002",
+      "order": 2,
+      "text": "References\n",
+      "bbox": [
+        61.888999938964844,
+        62.31442642211914,
+        117.92298889160156,
+        75.34942626953125
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0103-block-0003",
+      "order": 3,
+      "text": "\t 1.\t Heres S, et al. Pharmacokinetics of olanzapine long-acting injection: the clinical perspective. Int Clin Psychopharmacol 2014; 29:299–312.\n\t 2.\t Lauriello J, et al. An 8-week, double-blind, randomized, placebo-controlled study of olanzapine long-acting injection in acutely ill patients \n",
+      "bbox": [
+        61.888999938964844,
+        80.29142761230469,
+        435.5987854003906,
+        96.46742248535156
+      ],
+      "text_sha256": "433a87ee3ab41117e723164de845a87347f986177c4b04a244856b945c8a789c"
+    },
+    {
+      "block_id": "page-0103-block-0004",
+      "order": 4,
+      "text": "with schizophrenia. J Clin Psychiatry 2008; 69:790–799.\n\t 3.\t Mitchell M, et al. Single- and multiple-dose pharmacokinetic, safety, and tolerability profiles of olanzapine long-acting injection: an open-\n",
+      "bbox": [
+        61.9010009765625,
+        98.29142761230469,
+        433.93084716796875,
+        114.46742248535156
+      ],
+      "text_sha256": "d4b47a844c0a9092a724a1dbbab4f9e6a8de3dbf31673494e1bac8462c623b8c"
+    },
+    {
+      "block_id": "page-0103-block-0005",
+      "order": 5,
+      "text": "label, multicenter, nonrandomized study in patients with schizophrenia. Clin Ther 2013; 35:1890–1908.\n\t 4.\t Denee TR, et al. Treatment continuation and treatment characteristics of four long acting antipsychotic medications (Paliperidone Palmitate, \n",
+      "bbox": [
+        61.90699768066406,
+        116.29142761230469,
+        435.5449523925781,
+        132.46742248535156
+      ],
+      "text_sha256": "e2b997934b6aa33d8e5162bbb06d6e20bf67a5d41c062f6eef1e9d102f5ab6c9"
+    },
+    {
+      "block_id": "page-0103-block-0006",
+      "order": 6,
+      "text": "Risperidone Microspheres, Olanzapine Pamoate and Haloperidol Decanoate) in The Netherlands. Value Health 2015; 18:A407.\n\t 5.\t Taipale H, et al. Comparative effectiveness of antipsychotic drugs for rehospitalization in schizophrenia-a nationwide study with 20-year \n",
+      "bbox": [
+        61.913002014160156,
+        134.2914276123047,
+        435.5989685058594,
+        150.46742248535156
+      ],
+      "text_sha256": "3d7cb1bdef66146a83c669f2ae9af4e30ddf66e60c872b719791df839bc6c59e"
+    },
+    {
+      "block_id": "page-0103-block-0007",
+      "order": 7,
+      "text": "follow-up. Schizophr Bull 2017; 44:1381–1387.\n\t 6.\t Luedecke D, et al. Post-injection delirium/sedation syndrome in patients treated with olanzapine pamoate: mechanism, incidence, and man-\n",
+      "bbox": [
+        61.91899871826172,
+        152.2914276123047,
+        433.88275146484375,
+        168.46742248535156
+      ],
+      "text_sha256": "6eb25c809a14acb2bdddcdc7eea12f40aafad4585fbe06be5b5c52175bd6f874"
+    },
+    {
+      "block_id": "page-0103-block-0008",
+      "order": 8,
+      "text": "agement. CNS Drugs 2015; 29:41–46.\n\t 7.\t McDonnell DP, et al. Post-injection delirium/sedation syndrome in patients with schizophrenia treated with olanzapine long-acting injection, \n",
+      "bbox": [
+        61.92500305175781,
+        170.2914276123047,
+        435.6109313964844,
+        186.46742248535156
+      ],
+      "text_sha256": "4c97eb3d94e6ff87d0d727b895e57818e9ac3fa554bb6dc3a7dc55eb178025f3"
+    },
+    {
+      "block_id": "page-0103-block-0009",
+      "order": 9,
+      "text": "II: investigations of mechanism. BMC Psychiatry 2010; 10:45.\n\t 8.\t Bushes CJ, et al. Olanzapine long-acting injection: review of first experiences of post-injection delirium/sedation syndrome in routine clinical \n",
+      "bbox": [
+        61.930999755859375,
+        188.2914276123047,
+        435.5690002441406,
+        204.46742248535156
+      ],
+      "text_sha256": "5ada0b54b911303cb284ea382e648d4d9b75267d551d8d8e53b05249cbedfe22"
+    },
+    {
+      "block_id": "page-0103-block-0010",
+      "order": 10,
+      "text": "practice. BMC Psychiatry 2015; 15:65.\n\t 9.\t Meyers KJ, et al. Postinjection delirium/sedation syndrome in patients with schizophrenia receiving olanzapine long-acting injection: results \n",
+      "bbox": [
+        61.93699645996094,
+        206.2914276123047,
+        435.5870056152344,
+        222.46742248535156
+      ],
+      "text_sha256": "99eabea4f61270909b1247fbb7b3354400825ccc32522d8a7613a347e8d414a9"
+    },
+    {
+      "block_id": "page-0103-block-0011",
+      "order": 11,
+      "text": "from a large observational study. B J Psych Open 2017; 3:186–192.\n\t10.\t Garg S, et al. Delayed onset postinjection delirium/sedation syndrome associated with olanzapine pamoate: a case report. J Clin \n",
+      "bbox": [
+        61.94300079345703,
+        224.2914276123047,
+        435.6169738769531,
+        240.46742248535156
+      ],
+      "text_sha256": "8749bcf645300d99bed863057cb75cb1b868047412460b81f16c02f456880179"
+    },
+    {
+      "block_id": "page-0103-block-0012",
+      "order": 12,
+      "text": "Psychopharmacol 2019; 39:523–524.\n\t11.\t Eli Lilly and Company (NZ) Limited. ZYPREXA RELPREVV® (olanzapine pamoate monohydrate). 2019; https://www.medsafe.govt.nz/\n",
+      "bbox": [
+        61.948997497558594,
+        242.2914276123047,
+        433.9669494628906,
+        258.4674377441406
+      ],
+      "text_sha256": "f593397f179deb0b96adcff8c5c969310696447eddb69decb551389bfb94b2c9"
+    },
+    {
+      "block_id": "page-0103-block-0013",
+      "order": 13,
+      "text": "Consumers/cmi/z/zyprexarelprevvinj.pdf.\n\t12.\t Siskind D, et al. Monitoring for post-injection delirium/sedation syndrome with long-acting olanzapine during the COVID-19 pandemic. Aust \n",
+      "bbox": [
+        61.95500183105469,
+        260.4354248046875,
+        435.6048278808594,
+        276.4674377441406
+      ],
+      "text_sha256": "63d0ac1a009a24319837d997a379d47967ab74b7ea4df0f3d8a1a18a4b9102d9"
+    },
+    {
+      "block_id": "page-0103-block-0014",
+      "order": 14,
+      "text": "N Z J Psychiatry 2020; 54:759–761.\n\t13.\t Venkatesan V, et al. Postinjection delirium/sedation syndrome after 31st long-acting olanzapine depot injection. Clin Neuropharmacol 2019; \n",
+      "bbox": [
+        61.96099853515625,
+        278.2914123535156,
+        435.6589050292969,
+        294.4674377441406
+      ],
+      "text_sha256": "8fd45cce6ddf80c1efa0755a420f5e1e8d02309ce7588ede00f05d2b1a592f88"
+    },
+    {
+      "block_id": "page-0103-block-0015",
+      "order": 15,
+      "text": "42:64–65.\n\t14.\t Eli Lilly and Company Limited. Summary of Product Characteristics. ZYPADHERA 210 mg powder and solvent for prolonged release sus-\n",
+      "bbox": [
+        61.967002868652344,
+        296.2914123535156,
+        433.98492431640625,
+        312.4674377441406
+      ],
+      "text_sha256": "d2f0ea8f6da554b924057e004c5315d28aa0364972c7cc4a22c72d2a4d1c21c2"
+    },
+    {
+      "block_id": "page-0103-block-0016",
+      "order": 16,
+      "text": "pension for injection. 2020; https://www.medicines.org.uk/emc/product/6429.\n\t15.\t Anand E, et al. A 6-year open-label study of the efficacy and safety of olanzapine long-acting injection in patients with schizophrenia: a post \n",
+      "bbox": [
+        61.972999572753906,
+        314.4354248046875,
+        435.6468200683594,
+        330.4674377441406
+      ],
+      "text_sha256": "6ac38c6e0d91ed04318452a36784f6280ebd6c324a0809f8ae9e7b9c1534f101"
+    },
+    {
+      "block_id": "page-0103-block-0017",
+      "order": 17,
+      "text": "hoc analysis based on the European label recommendation. Neuropsychiatr Dis Treat 2015; 11:1349–1357.\n\t16.\t Atkins S, et al. A pooled analysis of injection site-related adverse events in patients with schizophrenia treated with olanzapine long-acting \n",
+      "bbox": [
+        61.97899627685547,
+        332.2914123535156,
+        435.6588439941406,
+        348.4674377441406
+      ],
+      "text_sha256": "a5fd23897e6634af98e41b5084bd5ab928fb15b6271e1388b30b72e721c954c3"
+    },
+    {
+      "block_id": "page-0103-block-0018",
+      "order": 18,
+      "text": "injection. BMC Psychiatry 2014; 14:7.\n",
+      "bbox": [
+        72.98299407958984,
+        350.2914123535156,
+        172.72097778320312,
+        357.4674377441406
+      ],
+      "text_sha256": "8208dcdced2ff3f7ad6fef5ae3f4b0fae4b50a9b89dbdedfc3853981f872cd18"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

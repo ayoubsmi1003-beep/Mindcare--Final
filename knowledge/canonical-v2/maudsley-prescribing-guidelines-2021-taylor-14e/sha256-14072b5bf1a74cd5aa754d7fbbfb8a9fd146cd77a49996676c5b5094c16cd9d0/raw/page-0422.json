@@ -1,0 +1,383 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0422",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 422,
+  "source_page_index": 421,
+  "source_page_display": 422,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    401\nCHAPTER 3\nAntidepressants and diabetes mellitus\nDepression and diabetes\nThere is an established link between diabetes and depression.1 Prevalence rates of co-\nmorbid depressive symptoms in diabetic patients have been reported to range from 9 to \n60%, depending on the study design and screening method used.2 Moreover, having \ndiabetes doubles the odds of co-morbid depression,2 and a diagnosis of diabetes is \nlinked to an increased likelihood of antidepressant prescription.3,4 Patients with depres-\nsion and diabetes have a high number of cardiovascular risk factors and increased and \n50% increased risk of mortality.5,6 The presence of depression has a negative impact on \nmetabolic control and likewise poor metabolic control may worsen depression.7 \nConsidering all of this, the treatment of co-morbid depression in patients with diabetes \nis of vital importance, and drug choice should take into account likely effects on meta-\nbolic control (see Table 3.19). Cochrane8 suggests that antidepressants are effective and \nmoderately improve glycaemic control. Be aware, however, that the prescribing of anti-\ndepressants may be associated with reduced adherence to antidiabetic medication.9\nTable 3.19  Effect of antidepressants on glucose homeostasis and weight\nAntidepressant class\nEffect on glucose homeostasis and weight\nSSRIs10–23\n■\n■Studies indicate that SSRIs have a favourable effect on diabetic parameters in patients \nwith type II diabetes. Insulin requirements may be decreased\n■\n■Fluoxetine has been associated with improvement in HbA1c levels, reduced insulin \nrequirements, weight loss and enhanced insulin sensitivity. Its effect on insulin sensitivity \nis independent of its effect on weight loss. Sertraline may also reduce HbA1c\n■\n■Escitalopram also seems to improve glycaemic control\n■\n■Some evidence that long-term SSRIs may increase the risk of diabetes in general24 and \ngestational diabetes, in particular,25 but there is also evidence of no effect either way26\nTCAs16,17,27–29\n■\n■TCAs are associated with increased appetite, weight gain and hyperglycaemia\n■\n■Nortriptyline improved depression but worsened glycaemic control in diabetic patients in \none study. Overall improvement in depression had a beneficial effect on HbA1c. Clomip-\nramine reported to precipitate diabetes\n■\n■Long-term use of TCAs seems to increase risk of diabetes\nMAOIs30,31\n■\n■Irreversible MAOIs have a tendency to cause extreme hypoglycaemic episodes and \nweight gain\n■\n■No known effects with moclobemide\nSNRIs28,32,33\n■\n■SNRIs do not appear to disrupt glycaemic control and have minimal impact on weight\n■\n■Studies of duloxetine in the treatment of diabetic neuropathy show that it has little \ninfluence on glycaemic control. No data on depression and diabetes\n■\n■Limited data on venlafaxine\n■\n■One report of hyperglycaemia with desvenlafaxine34\nMirtazapine35,36\n■\n■Mirtazapine does not appear to impair glucose tolerance in non-diabetic depressed \npatients\n■\n■Improvement in HbA1c was seen with short-term use but HbA1c worsened during a \n1-year follow-up\n■\n■Mirtazapine was associated with an increase in body mass index (BMI) in diabetic \npatients both in the short and long term\nAgomelatine22,23,37,38\n■\n■A few studies suggest agomelatine is effective with some improvement or no worsening \nof glycaemic parameters\n■\n■Agomelatine also demonstrated a minimum effect on body weight\nReboxetine, trazodone \nand vortioxetine\n■\n■No data in patients with diabetes\n■\n■One study revealed 20% increased risk of type 2 diabetes in people prescribed trazodone24\n",
+  "raw_text_sha256": "b88d35a8fdb4376dcf33071003139f88c3985278056b79e9325f9e276e376a0d",
+  "coordinates_sha256": "87ee69c77ce102396a6264149d941dc0041545660ca9c2d1b6b8afda7d4400ca",
+  "block_sequence_sha256": "e21ca5294651d38f804999f71b1aeb4cae49ab8af1c21222f1f0cc7fd50e35fa",
+  "blocks": [
+    {
+      "block_id": "page-0422-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    401\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "f68aedc25d65667706bc185fc5b8bdb21c4210297ee13ee885b1b761d57a753e"
+    },
+    {
+      "block_id": "page-0422-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0422-block-0002",
+      "order": 2,
+      "text": "Antidepressants and diabetes mellitus\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        252.21897888183594,
+        79.1004638671875
+      ],
+      "text_sha256": "7a457ae60290d269ad58ad18f0b0d44f464773bd7df537c219473b7e33cc5adf"
+    },
+    {
+      "block_id": "page-0422-block-0003",
+      "order": 3,
+      "text": "Depression and diabetes\n",
+      "bbox": [
+        48.00400161743164,
+        90.06747436523438,
+        174.93299865722656,
+        103.10247802734375
+      ],
+      "text_sha256": "14051be656afc8c9b31c5fbd49b64f884f0ea47fe373ba14b49d8a9d9ed1f46b"
+    },
+    {
+      "block_id": "page-0422-block-0004",
+      "order": 4,
+      "text": "There is an established link between diabetes and depression.1 Prevalence rates of co-\nmorbid depressive symptoms in diabetic patients have been reported to range from 9 to \n60%, depending on the study design and screening method used.2 Moreover, having \ndiabetes doubles the odds of co-morbid depression,2 and a diagnosis of diabetes is \nlinked to an increased likelihood of antidepressant prescription.3,4 Patients with depres-\nsion and diabetes have a high number of cardiovascular risk factors and increased and \n50% increased risk of mortality.5,6 The presence of depression has a negative impact on \nmetabolic control and likewise poor metabolic control may worsen depression.7 \nConsidering all of this, the treatment of co-morbid depression in patients with diabetes \nis of vital importance, and drug choice should take into account likely effects on meta-\nbolic control (see Table 3.19). Cochrane8 suggests that antidepressants are effective and \nmoderately improve glycaemic control. Be aware, however, that the prescribing of anti-\ndepressants may be associated with reduced adherence to antidiabetic medication.9\n",
+      "bbox": [
+        47.99528503417969,
+        108.91046142578125,
+        422.80291748046875,
+        264.6304931640625
+      ],
+      "text_sha256": "c170fd351d44eb85175cbc23ca65cf8ca25aad27c8f047352edd150d91563558"
+    },
+    {
+      "block_id": "page-0422-block-0005",
+      "order": 5,
+      "text": "Table 3.19  Effect of antidepressants on glucose homeostasis and weight\n",
+      "bbox": [
+        54.0005989074707,
+        284.0779724121094,
+        287.5430908203125,
+        292.9654846191406
+      ],
+      "text_sha256": "cc400c6408c6277c158ae91b932d1f2d4d4bdc309694752023bbbb449ddbd1da"
+    },
+    {
+      "block_id": "page-0422-block-0006",
+      "order": 6,
+      "text": "Antidepressant class\nEffect on glucose homeostasis and weight\n",
+      "bbox": [
+        48.0005989074707,
+        304.3128662109375,
+        276.0306701660156,
+        313.20037841796875
+      ],
+      "text_sha256": "07f6f3fd84be284559181681f61c349218de7d859529512df102654f01a267a4"
+    },
+    {
+      "block_id": "page-0422-block-0007",
+      "order": 7,
+      "text": "SSRIs10–23\n■\n■Studies indicate that SSRIs have a favourable effect on diabetic parameters in patients \n",
+      "bbox": [
+        48.00059509277344,
+        321.26800537109375,
+        411.695068359375,
+        329.9778747558594
+      ],
+      "text_sha256": "ad8c569ce8525cd4bd5b9fe869ce02bbdd47345e4be816e8917ce8d420e99a0c"
+    },
+    {
+      "block_id": "page-0422-block-0008",
+      "order": 8,
+      "text": "with type II diabetes. Insulin requirements may be decreased\n■\n■Fluoxetine has been associated with improvement in HbA1c levels, reduced insulin \n",
+      "bbox": [
+        127.39990234375,
+        330.26800537109375,
+        400.7525634765625,
+        347.9754943847656
+      ],
+      "text_sha256": "91a54115de121f61371a6b9b4231004c2bccb5cd7fa171355e1cbd0e2c0d3bd2"
+    },
+    {
+      "block_id": "page-0422-block-0009",
+      "order": 9,
+      "text": "requirements, weight loss and enhanced insulin sensitivity. Its effect on insulin sensitivity \nis independent of its effect on weight loss. Sertraline may also reduce HbA1c\n■\n■Escitalopram also seems to improve glycaemic control\n",
+      "bbox": [
+        127.39990234375,
+        348.26800537109375,
+        419.0826416015625,
+        374.9754943847656
+      ],
+      "text_sha256": "35f0a626703422a43df06d79b79491544c2cc7159106ff54bfa8455ed7b976ba"
+    },
+    {
+      "block_id": "page-0422-block-0010",
+      "order": 10,
+      "text": "■\n■Some evidence that long-term SSRIs may increase the risk of diabetes in general24 and \n",
+      "bbox": [
+        127.39990234375,
+        375.26800537109375,
+        412.39959716796875,
+        383.9754943847656
+      ],
+      "text_sha256": "0d5b668a8e2d5912f6072cd482583244bd3cfcd37173dd294f11faaf27f1d652"
+    },
+    {
+      "block_id": "page-0422-block-0011",
+      "order": 11,
+      "text": "gestational diabetes, in particular,25 but there is also evidence of no effect either way26\n",
+      "bbox": [
+        136.39959716796875,
+        384.26800537109375,
+        411.0140380859375,
+        392.9754943847656
+      ],
+      "text_sha256": "bcf5c014c2929eefb88f65808a947edc57967038f2dea807cc0d9ca2d31fe37c"
+    },
+    {
+      "block_id": "page-0422-block-0012",
+      "order": 12,
+      "text": "TCAs16,17,27–29\n■\n■TCAs are associated with increased appetite, weight gain and hyperglycaemia\n",
+      "bbox": [
+        48.0005989074707,
+        399.2929992675781,
+        384.4925842285156,
+        408.00048828125
+      ],
+      "text_sha256": "7c683e5be3bcd774daad14a0f6861a8dc5f16278c500b1cc0d31fb98de359e1a"
+    },
+    {
+      "block_id": "page-0422-block-0013",
+      "order": 13,
+      "text": "■\n■Nortriptyline improved depression but worsened glycaemic control in diabetic patients in \n",
+      "bbox": [
+        127.39990234375,
+        408.2929992675781,
+        420.60504150390625,
+        417.00048828125
+      ],
+      "text_sha256": "e6e16b5ce578518b85cb8d9377b655fd9c36402cbd25a92fcb313b0e1ed3e104"
+    },
+    {
+      "block_id": "page-0422-block-0014",
+      "order": 14,
+      "text": "one study. Overall improvement in depression had a beneficial effect on HbA1c. Clomip-\nramine reported to precipitate diabetes\n■\n■Long-term use of TCAs seems to increase risk of diabetes\n",
+      "bbox": [
+        127.39990234375,
+        417.2929992675781,
+        418.26507568359375,
+        444.00048828125
+      ],
+      "text_sha256": "34c46c5cf145966b864e45f94028c8cb5bdd20ce42e352f0020042d6189d1ef6"
+    },
+    {
+      "block_id": "page-0422-block-0015",
+      "order": 15,
+      "text": "MAOIs30,31\n■\n■Irreversible MAOIs have a tendency to cause extreme hypoglycaemic episodes and \n",
+      "bbox": [
+        47.99749755859375,
+        450.3155212402344,
+        399.8900146484375,
+        459.0255126953125
+      ],
+      "text_sha256": "9142ec1590dfc21047cb64ab2ddccb34c279abc2c5426ed9ea0c549d1cab8023"
+    },
+    {
+      "block_id": "page-0422-block-0016",
+      "order": 16,
+      "text": "weight gain\n■\n■No known effects with moclobemide\n",
+      "bbox": [
+        127.39990234375,
+        459.3180236816406,
+        254.614990234375,
+        477.0255126953125
+      ],
+      "text_sha256": "f1d6246cc2f7c416bbab4251361bc4a47caf9c1edfcd0dce32ab0deb7a3327c7"
+    },
+    {
+      "block_id": "page-0422-block-0017",
+      "order": 17,
+      "text": "SNRIs28,32,33\n■\n■SNRIs do not appear to disrupt glycaemic control and have minimal impact on weight\n",
+      "bbox": [
+        47.99749755859375,
+        483.34051513671875,
+        409.2200622558594,
+        492.05047607421875
+      ],
+      "text_sha256": "0258d4075650faae73e47e734705204fe1359aa3d2ad601471b4fa7a02c5d0bb"
+    },
+    {
+      "block_id": "page-0422-block-0018",
+      "order": 18,
+      "text": "■\n■Studies of duloxetine in the treatment of diabetic neuropathy show that it has little \n",
+      "bbox": [
+        127.39990234375,
+        492.3429870605469,
+        403.2425537109375,
+        501.05047607421875
+      ],
+      "text_sha256": "4bfc83dc3a895663cb4b4c39e0716464e47150bf973474895a0c9b5a9ecf0b16"
+    },
+    {
+      "block_id": "page-0422-block-0019",
+      "order": 19,
+      "text": "influence on glycaemic control. No data on depression and diabetes\n■\n■Limited data on venlafaxine\n",
+      "bbox": [
+        127.39990234375,
+        501.3429870605469,
+        352.8501281738281,
+        519.0504760742188
+      ],
+      "text_sha256": "d98f9e01b883a249f26b99496f6bb41ebcb0297f7026066b0eb5238b2599e9d4"
+    },
+    {
+      "block_id": "page-0422-block-0020",
+      "order": 20,
+      "text": "■\n■One report of hyperglycaemia with desvenlafaxine34\n",
+      "bbox": [
+        127.39990234375,
+        519.3429565429688,
+        301.5429382324219,
+        528.0504760742188
+      ],
+      "text_sha256": "f97beab0344b53ed420a817a8c9adbd2836bce90180eecda989c03ec3a01b6b1"
+    },
+    {
+      "block_id": "page-0422-block-0021",
+      "order": 21,
+      "text": "Mirtazapine35,36\n■\n■Mirtazapine does not appear to impair glucose tolerance in non-diabetic depressed \n",
+      "bbox": [
+        48.000701904296875,
+        534.3679809570312,
+        403.3926086425781,
+        543.0755004882812
+      ],
+      "text_sha256": "c39ceeaea23c36c06e5511afdb80ba8e289639c8a8dd04e3e794eb2083a5f644"
+    },
+    {
+      "block_id": "page-0422-block-0022",
+      "order": 22,
+      "text": "patients\n■\n■Improvement in HbA1c was seen with short-term use but HbA1c worsened during a \n",
+      "bbox": [
+        127.39990234375,
+        543.3679809570312,
+        407.57763671875,
+        561.0755004882812
+      ],
+      "text_sha256": "c15f1cba3d0d13077253b4fd46ebda970fcd04cdcf537d455e236bd849046022"
+    },
+    {
+      "block_id": "page-0422-block-0023",
+      "order": 23,
+      "text": "1-year follow-up\n■\n■Mirtazapine was associated with an increase in body mass index (BMI) in diabetic \n",
+      "bbox": [
+        127.39990234375,
+        561.3679809570312,
+        396.7175598144531,
+        579.0755004882812
+      ],
+      "text_sha256": "460dbe09f2894240904711cbf4a6ee28dcae47908a4521a5391e99903abe6599"
+    },
+    {
+      "block_id": "page-0422-block-0024",
+      "order": 24,
+      "text": "patients both in the short and long term\n",
+      "bbox": [
+        136.39999389648438,
+        579.3679809570312,
+        265.1824645996094,
+        588.0755004882812
+      ],
+      "text_sha256": "6e05bd05e0a8b0c5f1157f0bf7e730bdd04bb8d9f321dbdda71cdb5a373eda1c"
+    },
+    {
+      "block_id": "page-0422-block-0025",
+      "order": 25,
+      "text": "Agomelatine22,23,37,38\n■\n■A few studies suggest agomelatine is effective with some improvement or no worsening \n",
+      "bbox": [
+        47.99749755859375,
+        594.3905029296875,
+        420.33502197265625,
+        603.1004638671875
+      ],
+      "text_sha256": "5203cdb18191ccf85038433130ce3d3e6fbf0f262f9ef2ee42f91f74e8d98e9d"
+    },
+    {
+      "block_id": "page-0422-block-0026",
+      "order": 26,
+      "text": "of glycaemic parameters\n■\n■Agomelatine also demonstrated a minimum effect on body weight\n",
+      "bbox": [
+        127.39990234375,
+        603.3929443359375,
+        349.625,
+        621.1004638671875
+      ],
+      "text_sha256": "980ed18a83366464fd19ea0aae1784a280437f4d61010d6574231f8d3b8647fc"
+    },
+    {
+      "block_id": "page-0422-block-0027",
+      "order": 27,
+      "text": "Reboxetine, trazodone \nand vortioxetine\n",
+      "bbox": [
+        47.99749755859375,
+        627.4154663085938,
+        122.17998504638672,
+        646.1204833984375
+      ],
+      "text_sha256": "5a01673c30c4052abd9e81736b078f2a561fe667370053ed33af88d0581e0a92"
+    },
+    {
+      "block_id": "page-0422-block-0028",
+      "order": 28,
+      "text": "■\n■No data in patients with diabetes\n",
+      "bbox": [
+        127.39990234375,
+        627.41796875,
+        242.25497436523438,
+        636.12548828125
+      ],
+      "text_sha256": "8d8c1c03fd72ce05653ce0a6a896b7ade852b2cec9ae0565c164e1e1f73e7560"
+    },
+    {
+      "block_id": "page-0422-block-0029",
+      "order": 29,
+      "text": "■\n■One study revealed 20% increased risk of type 2 diabetes in people prescribed trazodone24\n",
+      "bbox": [
+        127.39990234375,
+        636.41796875,
+        419.9878845214844,
+        645.12548828125
+      ],
+      "text_sha256": "fbc70906c279d98cccdfa55093b618905e2f8d8c56ea9356a0ab4d44c868019a"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

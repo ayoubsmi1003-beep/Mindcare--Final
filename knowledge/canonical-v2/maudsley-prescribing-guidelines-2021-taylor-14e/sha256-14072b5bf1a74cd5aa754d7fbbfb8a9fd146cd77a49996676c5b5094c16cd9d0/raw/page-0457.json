@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0457",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 457,
+  "source_page_index": 456,
+  "source_page_display": 457,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "436    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nBenzodiazepines in the treatment of psychiatric disorders\nBenzodiazepines have a valid place in the treatment of some forms of epilepsy and \nsevere muscle spasm, and as premedication agents in some surgical procedures. \nHowever, the vast majority of prescriptions are written for their hypnotic and anxio-\nlytic effects. They are also used for rapid tranquillisation and, usually as adjuncts, in the \ntreatment of depression and schizophrenia. Benzodiazepines are commonly both pre-\nscribed and misused. A European study found that almost 10% of adults had taken a \nbenzodiazepine over the previous year1 and a 2019 US study reported past-year usage \nof 12.6% amongst adults.2 Generally speaking, the use of benzodiazepines in psychiat-\nric disorders has gradually become less supportable over the past few decades.3\nBenzodiazepines are sometimes divided into two groups depending on their half-life: \nhypnotics (short half-life) or anxiolytics (long half-life), although there are many excep-\ntions (for example, nitrazepam and alprazolam, respectively).\nAnxiolytic effect\nBenzodiazepines reduce pathological anxiety, agitation and tension. Although useful in \nthe short-term management of generalised anxiety disorder4 either alone or to augment \nSSRIs, benzodiazepines are clearly addictive; many patients continue to take these drugs \nfor years5 with unknown benefits and many likely harms. If a benzodiazepine is pre-\nscribed, this should not routinely be for longer than one month.\nNICE recommend that benzodiazepines should not be used in patients with general-\nised anxiety disorder except as a short-term measure during crisis.6 Evidence is mixed \nin other anxiety disorders, and potential benefits should be viewed in the context of the \nknown risks associated with benzodiazepine use. A small number of trials report the \nefficacy of benzodiazepines in social anxiety disorder.7 Benzodiazepines may be useful \nin panic disorders,8 but further studies are needed to draw reliable conclusions about \ntheir efficacy and safety with long-term use.8,9 Benzodiazepines are ineffective or and \nmay be harmful in the treatment of PTSD10 or phobias.11\nRepeat prescriptions should be avoided in those with major personality problems \nwhose difficulties are unlikely to resolve, especially in response to drug therapy. \nBenzodiazepines should also be avoided, if possible, in those with a history of substance \nmisuse.\nHypnotic effect\nBenzodiazepines inhibit REM sleep and REM rebound is seen when they are discontin-\nued.11 There is a debate over the clinical significance of this property.12\nBenzodiazepines are effective hypnotics, at least in the short term.13 RCTs support the \neffectiveness of Z hypnotics over a period of at least 6 months;13,14 it is unclear if this \nholds true for benzodiazepine hypnotics. Intermittent use probably extends the period \nover which benzodiazepines are effective as hypnotics.\nPhysical causes (pain, dyspnoea, etc.) or substance misuse (most commonly high caf-\nfeine consumption) should always be excluded before a hypnotic drug is prescribed. \nWhere possible, behavioural therapies (e.g. CBT for insomnia) should be offered before \n",
+  "raw_text_sha256": "f1909f5de83809625cac254b00a04ae5ae8b7bfdf6d7eea5736518030f71ab4b",
+  "coordinates_sha256": "6fff3d815aed5b120408d95ac08973f9f065ab21a26a12c16c95391dee03a5c2",
+  "block_sequence_sha256": "3ee43d12de34f942682f85b431b39ec560e8c5a35d6b0ac2adbc1c25c39964bd",
+  "blocks": [
+    {
+      "block_id": "page-0457-block-0000",
+      "order": 0,
+      "text": "436    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "b93da77034c2f22b9af8531b5b205602666e1be75bbcdc407d12802f0be9eef8"
+    },
+    {
+      "block_id": "page-0457-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0457-block-0002",
+      "order": 2,
+      "text": "Benzodiazepines in the treatment of psychiatric disorders\n",
+      "bbox": [
+        68.88999938964844,
+        66.06539916992188,
+        366.154052734375,
+        79.10040283203125
+      ],
+      "text_sha256": "cf6174c4481885d781c6c9fdce903b8bad7869d5bc25fa13b6b243d2a1318fbc"
+    },
+    {
+      "block_id": "page-0457-block-0003",
+      "order": 3,
+      "text": "Benzodiazepines have a valid place in the treatment of some forms of epilepsy and \nsevere muscle spasm, and as premedication agents in some surgical procedures. \nHowever, the vast majority of prescriptions are written for their hypnotic and anxio-\nlytic effects. They are also used for rapid tranquillisation and, usually as adjuncts, in the \ntreatment of depression and schizophrenia. Benzodiazepines are commonly both pre-\nscribed and misused. A European study found that almost 10% of adults had taken a \nbenzodiazepine over the previous year1 and a 2019 US study reported past-year usage \nof 12.6% amongst adults.2 Generally speaking, the use of benzodiazepines in psychiat-\nric disorders has gradually become less supportable over the past few decades.3\n",
+      "bbox": [
+        61.88999938964844,
+        84.910400390625,
+        436.7100524902344,
+        192.63040161132812
+      ],
+      "text_sha256": "a483aafcfc046641bc31556aa9166aabd83fcb8d56e02ac6e31182f66d80a87f"
+    },
+    {
+      "block_id": "page-0457-block-0004",
+      "order": 4,
+      "text": "Benzodiazepines are sometimes divided into two groups depending on their half-life: \nhypnotics (short half-life) or anxiolytics (long half-life), although there are many excep-\ntions (for example, nitrazepam and alprazolam, respectively).\n",
+      "bbox": [
+        61.88999938964844,
+        192.910400390625,
+        436.6598205566406,
+        228.63040161132812
+      ],
+      "text_sha256": "94675e1cbc16b6322aad663c1e816cc9ae57bc813ddffaad69e611f09b0141c6"
+    },
+    {
+      "block_id": "page-0457-block-0005",
+      "order": 5,
+      "text": "Anxiolytic effect\n",
+      "bbox": [
+        61.88999938964844,
+        246.06539916992188,
+        146.656005859375,
+        259.10040283203125
+      ],
+      "text_sha256": "eaa3524885be9cf1ffbb15520ce5d14cff334ddf653c414e10ad1c754cc22037"
+    },
+    {
+      "block_id": "page-0457-block-0006",
+      "order": 6,
+      "text": "Benzodiazepines reduce pathological anxiety, agitation and tension. Although useful in \nthe short-term management of generalised anxiety disorder4 either alone or to augment \nSSRIs, benzodiazepines are clearly addictive; many patients continue to take these drugs \nfor years5 with unknown benefits and many likely harms. If a benzodiazepine is pre-\nscribed, this should not routinely be for longer than one month.\n",
+      "bbox": [
+        61.888092041015625,
+        264.910400390625,
+        436.6880187988281,
+        324.6304016113281
+      ],
+      "text_sha256": "a0a106799281b8eefe56b94dd3e8bd1ff4ff1ff37f22f27a951df1324e0b779f"
+    },
+    {
+      "block_id": "page-0457-block-0007",
+      "order": 7,
+      "text": "NICE recommend that benzodiazepines should not be used in patients with general-\nised anxiety disorder except as a short-term measure during crisis.6 Evidence is mixed \nin other anxiety disorders, and potential benefits should be viewed in the context of the \nknown risks associated with benzodiazepine use. A small number of trials report the \nefficacy of benzodiazepines in social anxiety disorder.7 Benzodiazepines may be useful \nin panic disorders,8 but further studies are needed to draw reliable conclusions about \ntheir efficacy and safety with long-term use.8,9 Benzodiazepines are ineffective or and \nmay be harmful in the treatment of PTSD10 or phobias.11\n",
+      "bbox": [
+        61.886505126953125,
+        324.910400390625,
+        436.7176208496094,
+        420.6304016113281
+      ],
+      "text_sha256": "73ff0c9f8abf93dedb3d328878fc61ba6ab81459d83d337be459a1ac951e18d4"
+    },
+    {
+      "block_id": "page-0457-block-0008",
+      "order": 8,
+      "text": "Repeat prescriptions should be avoided in those with major personality problems \nwhose difficulties are unlikely to resolve, especially in response to drug therapy. \nBenzodiazepines should also be avoided, if possible, in those with a history of substance \nmisuse.\n",
+      "bbox": [
+        61.88999938964844,
+        420.910400390625,
+        436.6999206542969,
+        468.6304016113281
+      ],
+      "text_sha256": "292e2e5917dc5f077f383257f2a3f11a6b7955b2615281432222d3d98b68136d"
+    },
+    {
+      "block_id": "page-0457-block-0009",
+      "order": 9,
+      "text": "Hypnotic effect\n",
+      "bbox": [
+        61.88999938964844,
+        486.0653991699219,
+        141.14500427246094,
+        499.10040283203125
+      ],
+      "text_sha256": "5d16341d69a9ec83d9a936423ce00a1ebc791d63634ebc2bbc11bdbc1145a28d"
+    },
+    {
+      "block_id": "page-0457-block-0010",
+      "order": 10,
+      "text": "Benzodiazepines inhibit REM sleep and REM rebound is seen when they are discontin-\nued.11 There is a debate over the clinical significance of this property.12\n",
+      "bbox": [
+        61.88999938964844,
+        504.910400390625,
+        433.8499450683594,
+        528.6304321289062
+      ],
+      "text_sha256": "64531a34e6e4c6bf35839bd85353bb78b4e2383e4926c92c7958e720f5c8e21a"
+    },
+    {
+      "block_id": "page-0457-block-0011",
+      "order": 11,
+      "text": "Benzodiazepines are effective hypnotics, at least in the short term.13 RCTs support the \neffectiveness of Z hypnotics over a period of at least 6 months;13,14 it is unclear if this \nholds true for benzodiazepine hypnotics. Intermittent use probably extends the period \nover which benzodiazepines are effective as hypnotics.\n",
+      "bbox": [
+        61.890380859375,
+        528.910400390625,
+        436.6903381347656,
+        576.6304321289062
+      ],
+      "text_sha256": "a0fa8c5144e5167f4b5ad128f52bfe646fc56dfc5d754b7ece86a02aeb1bc565"
+    },
+    {
+      "block_id": "page-0457-block-0012",
+      "order": 12,
+      "text": "Physical causes (pain, dyspnoea, etc.) or substance misuse (most commonly high caf-\nfeine consumption) should always be excluded before a hypnotic drug is prescribed. \nWhere possible, behavioural therapies (e.g. CBT for insomnia) should be offered before \n",
+      "bbox": [
+        61.890380859375,
+        576.910400390625,
+        436.700439453125,
+        612.6304321289062
+      ],
+      "text_sha256": "8069eba6ebaafbd0f32f0f3fa8bb78e3ea79104aeb43be07298d9ce3c7341d21"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

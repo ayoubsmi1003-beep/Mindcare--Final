@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0854",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 854,
+  "source_page_index": 853,
+  "source_page_display": 854,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\nChapter 11\nPharmacokinetics\nPlasma level monitoring of psychotropic drugs\nPlasma drug concentration or plasma ‘level’ monitoring is a process often subject to \nsome confusion and misunderstanding. Drug level monitoring, when appropriately \nused, is of considerable help in optimising treatment and assuring adherence. However, \nin psychiatry, as in other areas of medicine, plasma level determinations are frequently \nundertaken without good cause and results acted upon inappropriately.1 In other \ninstances, therapeutic drug monitoring is underused.\nBefore taking a blood sample for plasma concentration assay, make sure that the fol-\nlowing criteria are satisfied:\n■\n■Is there a clinically useful assay method available?\nOnly a minority of drugs have available assays. The assay must be clinically validated \nand results available within a clinically useful timescale. Check with your local \nlaboratory.\n■\n■Is the drug at ‘steady state’?\nPlasma levels are usually meaningful only when samples are taken after steady-state \nlevels have been achieved. This takes four to five drug half-lives. A clear exception to \nthis advice is suspected overdose; in such situations attainment of steady state is of no \nrelevance. Another exception is when using blood concentrations to guide titration \n(e.g. with clozapine).\n■\n■Is the timing of the sample correct?\nSampling time is vitally important for many but not all drugs. If the recommended \nsampling time is, say, 12 hours post-dose, then the sample should be taken 11–13 \nhours post-dose if possible; 10–14 hours post-dose, if absolutely necessary. A \nstudy of clozapine samples taken 1 and 2 hours before and after the 12-hour \nscheduled sample time showed a mean variation of clozapine blood concentration \nof less than 10%, but some individuals’ levels varied by over 50%.2 So, if a sam-\nple is not taken within 1–2 hours of the required time, it has the potential to \n",
+  "raw_text_sha256": "358949c121607ad63f9f3c77497e1dacb3a123c8e0a8cdf26f336debe4b82ffd",
+  "coordinates_sha256": "83553aef9aa6fb5950c4bde652bb859baf147729668c64387c4cbe965403b379",
+  "block_sequence_sha256": "32765fce8bd21261988093b880ea80aa120ab429bbee3c013d8c0c8063962124",
+  "blocks": [
+    {
+      "block_id": "page-0854-block-0000",
+      "order": 0,
+      "text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\n",
+      "bbox": [
+        47.99980163574219,
+        585.1019897460938,
+        348.48388671875,
+        614.4779663085938
+      ],
+      "text_sha256": "c78fcd1eeb2357afb8eb5b97a8c858d68167bd409b9074c0da4e20c032bd5665"
+    },
+    {
+      "block_id": "page-0854-block-0001",
+      "order": 1,
+      "text": "Chapter 11\n",
+      "bbox": [
+        312.8031921386719,
+        59.724403381347656,
+        420.0011901855469,
+        82.60040283203125
+      ],
+      "text_sha256": "21595a908c8e1bac1ccd9a3e3c82842df42289719f984029c200e2bd4f35706b"
+    },
+    {
+      "block_id": "page-0854-block-0002",
+      "order": 2,
+      "text": "Pharmacokinetics\n",
+      "bbox": [
+        240.30599975585938,
+        111.36316680908203,
+        420.0019836425781,
+        137.43316650390625
+      ],
+      "text_sha256": "dbbf7a46e6117bc0f8028f8d5d0ae2108e545419519ea6266ae809184ff847f8"
+    },
+    {
+      "block_id": "page-0854-block-0003",
+      "order": 3,
+      "text": "Plasma level monitoring of psychotropic drugs\n",
+      "bbox": [
+        55.0,
+        205.54217529296875,
+        294.99798583984375,
+        218.57717895507812
+      ],
+      "text_sha256": "3bc82b332b701af815e6e94c98a35f9a0d1f85956976db58f424efa0ef591efa"
+    },
+    {
+      "block_id": "page-0854-block-0004",
+      "order": 4,
+      "text": "Plasma drug concentration or plasma ‘level’ monitoring is a process often subject to \nsome confusion and misunderstanding. Drug level monitoring, when appropriately \nused, is of considerable help in optimising treatment and assuring adherence. However, \nin psychiatry, as in other areas of medicine, plasma level determinations are frequently \nundertaken without good cause and results acted upon inappropriately.1 In other \ninstances, therapeutic drug monitoring is underused.\n",
+      "bbox": [
+        48.0,
+        224.38717651367188,
+        422.78997802734375,
+        296.107177734375
+      ],
+      "text_sha256": "a9675378a3b364bb8f3661787cb9ec80b56b2e29f030b3242fb2e3c5955e3caf"
+    },
+    {
+      "block_id": "page-0854-block-0005",
+      "order": 5,
+      "text": "Before taking a blood sample for plasma concentration assay, make sure that the fol-\nlowing criteria are satisfied:\n",
+      "bbox": [
+        48.00396728515625,
+        296.3871765136719,
+        419.9938659667969,
+        320.107177734375
+      ],
+      "text_sha256": "463b2c530400925cdde48c76671208b440c118a77ac1cc7288075274bcfff9a8"
+    },
+    {
+      "block_id": "page-0854-block-0006",
+      "order": 6,
+      "text": "■\n■Is there a clinically useful assay method available?\n",
+      "bbox": [
+        47.999900817871094,
+        330.1471862792969,
+        271.4849853515625,
+        342.107177734375
+      ],
+      "text_sha256": "e3c8eda382fc3d60fe4d1a0030d4a1de921b6b96e49eeb1e2b9233c90aee243b"
+    },
+    {
+      "block_id": "page-0854-block-0007",
+      "order": 7,
+      "text": "Only a minority of drugs have available assays. The assay must be clinically validated \nand results available within a clinically useful timescale. Check with your local \nlaboratory.\n",
+      "bbox": [
+        56.80500030517578,
+        342.3871765136719,
+        422.804931640625,
+        378.107177734375
+      ],
+      "text_sha256": "beb4c50ce64396a7a121f2cb3717b9f4528184654db70c9d6b9f61f9ce4dd1cd"
+    },
+    {
+      "block_id": "page-0854-block-0008",
+      "order": 8,
+      "text": "■\n■Is the drug at ‘steady state’?\n",
+      "bbox": [
+        47.999900817871094,
+        378.1471862792969,
+        176.2550048828125,
+        390.107177734375
+      ],
+      "text_sha256": "e02df0144e0802eafafdaa8249b76780d00d5d5f18db9847b5cf7e2115a7c26a"
+    },
+    {
+      "block_id": "page-0854-block-0009",
+      "order": 9,
+      "text": "Plasma levels are usually meaningful only when samples are taken after steady-state \nlevels have been achieved. This takes four to five drug half-lives. A clear exception to \nthis advice is suspected overdose; in such situations attainment of steady state is of no \nrelevance. Another exception is when using blood concentrations to guide titration \n(e.g. with clozapine).\n",
+      "bbox": [
+        56.80500030517578,
+        390.3871765136719,
+        422.784912109375,
+        450.107177734375
+      ],
+      "text_sha256": "f068c3da75dce1c76d0956bf8e10a26c0d14a4dcd39d1548e42be182c64adb33"
+    },
+    {
+      "block_id": "page-0854-block-0010",
+      "order": 10,
+      "text": "■\n■Is the timing of the sample correct?\n",
+      "bbox": [
+        47.999900817871094,
+        450.147216796875,
+        208.46499633789062,
+        462.1072082519531
+      ],
+      "text_sha256": "1785033050c0e732205b98d233ccce222aa4ac38cf03e253a11ffc380900c438"
+    },
+    {
+      "block_id": "page-0854-block-0011",
+      "order": 11,
+      "text": "Sampling time is vitally important for many but not all drugs. If the recommended \nsampling time is, say, 12 hours post-dose, then the sample should be taken 11–13 \nhours post-dose if possible; 10–14 hours post-dose, if absolutely necessary. A \nstudy of clozapine samples taken 1 and 2 hours before and after the 12-hour \nscheduled sample time showed a mean variation of clozapine blood concentration \nof less than 10%, but some individuals’ levels varied by over 50%.2 So, if a sam-\nple is not taken within 1–2 hours of the required time, it has the potential to \n",
+      "bbox": [
+        56.80438232421875,
+        462.38720703125,
+        422.83453369140625,
+        546.1072387695312
+      ],
+      "text_sha256": "446ff1a38264643d263471856c333a9d2f83a476e5d75bfee968373838f53100"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

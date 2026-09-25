@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0175",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 175,
+  "source_page_index": 174,
+  "source_page_display": 175,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "154    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nfamily history of diabetes,23,32 although these factors greatly increase the risk of devel-\noping diabetes on clozapine.33\nClozapine appears to increase plasma levels of insulin in a clozapine level-dependent \nfashion.34,35 It has been shown to be more likely than FGAs to increase plasma glucose \nand insulin following oral glucose challenge.36 Testing for diabetes is essential given the \nhigh prevalence of diabetes in people receiving clozapine.37\nOlanzapine\nAs with clozapine, olanzapine has been strongly linked to impaired glucose tolerance, \ndiabetes and diabetic ketoacidosis.38 Olanzapine and clozapine appear to directly \ninduce insulin resistance.39,40 Risk of diabetes has also been reported to be higher with \nolanzapine than with FGA drugs,41 again with a particular risk in younger patients.25 \nThe time course of development of diabetes has not been established but impaired glu-\ncose tolerance seems to occur even in the absence of obesity and family history of dia-\nbetes.23,32 Olanzapine is probably more diabetogenic than risperidone.42–46 Olanzapine \nis also associated with plasma levels of glucose and insulin higher than those seen with \nFGAs (after oral glucose load).36,47\nRisperidone\nRisperidone has been linked, mainly in case reports, to impaired glucose tolerance,48 \ndiabetes49 and ketoacidosis.50 The number of reports of such adverse effects is substan-\ntially smaller than with either clozapine or olanzapine.51 At least one study has sug-\ngested that changes in fasting glucose are significantly less common with risperidone \nthan with olanzapine,42 but other studies have detected no difference.52\nRisperidone seems no more likely than FGA drugs to be associated with diabe-\ntes,25,41,43 although there may be an increased risk in patients under 40 years of age.25 \nRisperidone has, however, been observed adversely to affect fasting glucose and plasma \nglucose (following glucose challenge) compared with the levels seen in healthy volun-\nteers (but not compared with patients taking FGAs).36\nQuetiapine\nLike risperidone, quetiapine has been linked to cases of new-onset diabetes and ketoaci-\ndosis.53–55 Again, the number of reports is much lower than with olanzapine or clozap-\nine. Quetiapine appears to be more likely than FGA medications to be associated with \ndiabetes.25,56 Two studies showed quetiapine to be equal to olanzapine in the incidence \nof diabetes.52,57 The risk with quetiapine may be dose-related, with daily doses of 400mg \nor more being clearly linked to changes in HbA1C.58\nOther SGAs\nAmisulpride appears not to elevate plasma glucose59 and seems not to be associated \nwith diabetes.60 There is one reported case of ketoacidosis occurring in a patient given \nthe closely related medication, sulpiride.61 Data for aripiprazole62–65 and ziprasidone66,67 \n",
+  "raw_text_sha256": "784af1922f3a94206323943940d0d1488e1461926d40a6b262938eddc84e980d",
+  "coordinates_sha256": "9f9dfbf97dcdbfe968b7ba87867246f4990990308f3294e6a5a05642de261414",
+  "block_sequence_sha256": "459c6e48a05a0f1ee638aaddf85c8deffec06b00e348b2370acf1d17110f92bc",
+  "blocks": [
+    {
+      "block_id": "page-0175-block-0000",
+      "order": 0,
+      "text": "154    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "ec8c8c9a9709faa90bd051463e99ee0ca07e1951a504805e8e0cdf332f9a15ec"
+    },
+    {
+      "block_id": "page-0175-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0175-block-0002",
+      "order": 2,
+      "text": "family history of diabetes,23,32 although these factors greatly increase the risk of devel-\noping diabetes on clozapine.33\n",
+      "bbox": [
+        61.88909912109375,
+        62.54931640625,
+        433.8814392089844,
+        86.26931762695312
+      ],
+      "text_sha256": "aa270483a9f0078431d1d69ff1d6d69ebc36f337844a7aa2281662bbe02af2bb"
+    },
+    {
+      "block_id": "page-0175-block-0003",
+      "order": 3,
+      "text": "Clozapine appears to increase plasma levels of insulin in a clozapine level-dependent \nfashion.34,35 It has been shown to be more likely than FGAs to increase plasma glucose \nand insulin following oral glucose challenge.36 Testing for diabetes is essential given the \nhigh prevalence of diabetes in people receiving clozapine.37\n",
+      "bbox": [
+        61.885498046875,
+        86.54931640625,
+        436.6825256347656,
+        134.26931762695312
+      ],
+      "text_sha256": "155f095a701f2acc67e988690076334d82e2d58beb4a24b11d74bebaa71e58f2"
+    },
+    {
+      "block_id": "page-0175-block-0004",
+      "order": 4,
+      "text": "Olanzapine\n",
+      "bbox": [
+        61.88909912109375,
+        152.63931274414062,
+        115.23908996582031,
+        164.48931884765625
+      ],
+      "text_sha256": "0d885341cd7a3b92c6209db4205eb93aa8d75701ae5100041f1fc34db3920e8f"
+    },
+    {
+      "block_id": "page-0175-block-0005",
+      "order": 5,
+      "text": "As with clozapine, olanzapine has been strongly linked to impaired glucose tolerance, \ndiabetes and diabetic ketoacidosis.38 Olanzapine and clozapine appear to directly \ninduce insulin resistance.39,40 Risk of diabetes has also been reported to be higher with \nolanzapine than with FGA drugs,41 again with a particular risk in younger patients.25 \nThe time course of development of diabetes has not been established but impaired glu-\ncose tolerance seems to occur even in the absence of obesity and family history of dia-\nbetes.23,32 Olanzapine is probably more diabetogenic than risperidone.42–46 Olanzapine \nis also associated with plasma levels of glucose and insulin higher than those seen with \nFGAs (after oral glucose load).36,47\n",
+      "bbox": [
+        61.88758850097656,
+        170.54931640625,
+        436.6976013183594,
+        278.2693176269531
+      ],
+      "text_sha256": "ab21f46b6fd79879e0267ead1288f19f9f9e2eb86bd72e71e1b22810f6718ab8"
+    },
+    {
+      "block_id": "page-0175-block-0006",
+      "order": 6,
+      "text": "Risperidone\n",
+      "bbox": [
+        61.88909912109375,
+        296.6393127441406,
+        117.4490966796875,
+        308.48931884765625
+      ],
+      "text_sha256": "a57deef574cb1285a2da93e7b14c7d8834b8dfb167369a3c9262f566493ff650"
+    },
+    {
+      "block_id": "page-0175-block-0007",
+      "order": 7,
+      "text": "Risperidone has been linked, mainly in case reports, to impaired glucose tolerance,48 \ndiabetes49 and ketoacidosis.50 The number of reports of such adverse effects is substan-\ntially smaller than with either clozapine or olanzapine.51 At least one study has sug-\ngested that changes in fasting glucose are significantly less common with risperidone \nthan with olanzapine,42 but other studies have detected no difference.52\n",
+      "bbox": [
+        61.888702392578125,
+        314.54931640625,
+        436.6690979003906,
+        374.2693176269531
+      ],
+      "text_sha256": "9570a57da0598266ecd27494a98adb156582cb821959a96c2b856a707d56f28b"
+    },
+    {
+      "block_id": "page-0175-block-0008",
+      "order": 8,
+      "text": "Risperidone seems no more likely than FGA drugs to be associated with diabe-\ntes,25,41,43 although there may be an increased risk in patients under 40 years of age.25 \nRisperidone has, however, been observed adversely to affect fasting glucose and plasma \nglucose (following glucose challenge) compared with the levels seen in healthy volun-\nteers (but not compared with patients taking FGAs).36\n",
+      "bbox": [
+        61.88909912109375,
+        374.54931640625,
+        436.6791076660156,
+        434.2693176269531
+      ],
+      "text_sha256": "a3e03a9bba7530c0864e2fcc60835c527e0e5bfbba7d0e0cbb717af1bf45d0d5"
+    },
+    {
+      "block_id": "page-0175-block-0009",
+      "order": 9,
+      "text": "Quetiapine\n",
+      "bbox": [
+        61.88909912109375,
+        452.6393127441406,
+        114.12908935546875,
+        464.48931884765625
+      ],
+      "text_sha256": "41327e1285b139254503aaa07065625405b7c29d457a97ba1c2d41cb54c42d3b"
+    },
+    {
+      "block_id": "page-0175-block-0010",
+      "order": 10,
+      "text": "Like risperidone, quetiapine has been linked to cases of new-onset diabetes and ketoaci-\ndosis.53–55 Again, the number of reports is much lower than with olanzapine or clozap-\nine. Quetiapine appears to be more likely than FGA medications to be associated with \ndiabetes.25,56 Two studies showed quetiapine to be equal to olanzapine in the incidence \nof diabetes.52,57 The risk with quetiapine may be dose-related, with daily doses of 400mg \nor more being clearly linked to changes in HbA1C.58\n",
+      "bbox": [
+        61.88529968261719,
+        470.54931640625,
+        436.6452331542969,
+        544.6485595703125
+      ],
+      "text_sha256": "ace6bf1a8f1f96e24e250b33c03c601b586f1422a03c781f8dbf3fe45750229f"
+    },
+    {
+      "block_id": "page-0175-block-0011",
+      "order": 11,
+      "text": "Other SGAs\n",
+      "bbox": [
+        61.88909912109375,
+        559.704345703125,
+        121.78410339355469,
+        572.7393188476562
+      ],
+      "text_sha256": "0e5fdc6d336225dbeecbbd5837adf14f3a686bdbb24b2bd74f36b3d9a1d158dc"
+    },
+    {
+      "block_id": "page-0175-block-0012",
+      "order": 12,
+      "text": "Amisulpride appears not to elevate plasma glucose59 and seems not to be associated \nwith diabetes.60 There is one reported case of ketoacidosis occurring in a patient given \nthe closely related medication, sulpiride.61 Data for aripiprazole62–65 and ziprasidone66,67 \n",
+      "bbox": [
+        61.88520812988281,
+        578.54931640625,
+        436.6806945800781,
+        614.2693481445312
+      ],
+      "text_sha256": "242f01ad8671b880a0dd60102f9524ac778fd683e804da0757ff68e6dc4695c9"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

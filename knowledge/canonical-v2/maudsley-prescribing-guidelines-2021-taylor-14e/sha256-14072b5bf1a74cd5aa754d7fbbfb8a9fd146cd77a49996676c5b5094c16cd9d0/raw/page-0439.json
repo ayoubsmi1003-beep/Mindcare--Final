@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0439",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 439,
+  "source_page_index": 438,
+  "source_page_display": 439,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "418    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nAdverse effects\nSJW appears to be well tolerated.5,6 In a systematic review of existing studies, adverse \neffects were significantly less than with older antidepressants, slightly less than SSRIs \nand similar to placebo.6 The most common, if infrequent, side-effects are nausea, rash, \nfatigue, restlessness, and photosensitivity.15 Although severe phototoxic reactions seem \nto be rare, patients should be informed that SJW can increase light sensitivity.15 SJW \nmay also share the propensity of SSRIs to increase the risk of bleeding; a case report \ndescribes prolonged epistaxis after nasal insertion of SJW.16 Case reports have described \nmania, hypomania and mixed states associated with SJW.17 Onset of manic symptoms \nrange from ranged from 3 days to 2 months.17 Caution is advised with high doses and \nthose with a known history of bipolar affective disorder.18\nDrug interactions\nSJW is a potent inducer of intestinal and hepatic CYP3A4, CYP2C9, CYP2C19, \nCYP2E1 and intestinal p-glycoprotein.15,19 Hyperforin is responsible for this effect.20 \nThe hyperforin content of SJW preparations varies 50-fold, which will result in a dif-\nferent propensity for drug interactions between brands. Preparations providing a daily \ndose of <1mg hyperforin are less likely to induce CYP enzymes.20,21 CYP3A4 activity is \ninduced over 1–2 weeks and returns to normal approximately 7 days after SJW is \ndiscontinued.22\nStudies have shown that SJW significantly reduces plasma concentrations of warfa-\nrin,23 hormonal contraceptives,24 digoxin and indinavir,15 (a drug used in the treatment \nof HIV). According to case reports, SJW has lowered the plasma concentrations of \nclozapine, theophylline, ciclosporin, gliclazide and statins.15,19,25,26 There is a theoretical \nrisk that SJW may interact with some antiseizure medications.19 It has also been reported \nthat SJW can increase the effects of clopidogrel (a pro-drug).19 Serotonin syndrome has \nbeen reported when SJW was taken together with sertraline, paroxetine, nefazodone-\nand the triptans.27,28 SJW should not be taken with any drugs that have a predominantly \nserotonergic action.\nBox 3.3  Key points that patients should know\n■\n■Evidence suggests that SJW may be effective in the treatment of mild to moderate \ndepression, but we do not know enough about how much should be taken or \nwhat the side-effects are. There is less evidence of benefit in severe depression.\n■\n■SJW is not a licensed medicine.\n■\n■SJW can interact with other medicines, resulting in serious side-effects. Some \nimportant drugs may be metabolised more rapidly and therefore become ineffec-\ntive with serious consequences (e.g. increased viral load in HIV, failure of oral \ncontraceptives leading to unwanted pregnancy, reduced anticoagulant effect with \nwarfarin leading to thrombosis).\n■\n■The symptoms of depression can sometimes be caused by other physical or mental \nillnesses. It is important that these possible causes are investigated.\n■\n■It is always best to consult the doctor if any herbal or natural remedy is being \ntaken or the patient is thinking of taking one.\n",
+  "raw_text_sha256": "d7c35e638249a3e513cd19e5e27471a874ce15792456724654cc4ecc1d1eea1b",
+  "coordinates_sha256": "eb51febfa0b33037f02e3426475fd34d21b0e6fb7872fd9b53b848d559d20d1d",
+  "block_sequence_sha256": "f18a0181b2b90719ba910849349c615a7d5b08fe118e3f16d0f6e59b0970416a",
+  "blocks": [
+    {
+      "block_id": "page-0439-block-0000",
+      "order": 0,
+      "text": "418    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "4513956565ed29397863f746d6f1f390f18bcbaefc6835b9203d733b494c23bc"
+    },
+    {
+      "block_id": "page-0439-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0439-block-0002",
+      "order": 2,
+      "text": "Adverse effects\n",
+      "bbox": [
+        61.88999938964844,
+        62.31540298461914,
+        141.76100158691406,
+        75.35040283203125
+      ],
+      "text_sha256": "2829b5953031aa8e8e992beffdca9c91044830ce03b830653e6ea31d5de93cfc"
+    },
+    {
+      "block_id": "page-0439-block-0003",
+      "order": 3,
+      "text": "SJW appears to be well tolerated.5,6 In a systematic review of existing studies, adverse \neffects were significantly less than with older antidepressants, slightly less than SSRIs \nand similar to placebo.6 The most common, if infrequent, side-effects are nausea, rash, \nfatigue, restlessness, and photosensitivity.15 Although severe phototoxic reactions seem \nto be rare, patients should be informed that SJW can increase light sensitivity.15 SJW \nmay also share the propensity of SSRIs to increase the risk of bleeding; a case report \ndescribes prolonged epistaxis after nasal insertion of SJW.16 Case reports have described \nmania, hypomania and mixed states associated with SJW.17 Onset of manic symptoms \nrange from ranged from 3 days to 2 months.17 Caution is advised with high doses and \nthose with a known history of bipolar affective disorder.18\n",
+      "bbox": [
+        61.887603759765625,
+        81.160400390625,
+        436.71240234375,
+        200.88040161132812
+      ],
+      "text_sha256": "9612d1e1c7190b677b20886f241ad0e5eaff9a39004489bf3844e0437ee225cb"
+    },
+    {
+      "block_id": "page-0439-block-0004",
+      "order": 4,
+      "text": "Drug interactions\n",
+      "bbox": [
+        61.88999938964844,
+        218.31539916992188,
+        151.72698974609375,
+        231.35040283203125
+      ],
+      "text_sha256": "5186b3517636eb30beb613a4f1459f26e323cf9c4f02370f28a210f501a4f144"
+    },
+    {
+      "block_id": "page-0439-block-0005",
+      "order": 5,
+      "text": "SJW is a potent inducer of intestinal and hepatic CYP3A4, CYP2C9, CYP2C19, \nCYP2E1 and intestinal p-glycoprotein.15,19 Hyperforin is responsible for this effect.20 \nThe hyperforin content of SJW preparations varies 50-fold, which will result in a dif-\nferent propensity for drug interactions between brands. Preparations providing a daily \ndose of <1mg hyperforin are less likely to induce CYP enzymes.20,21 CYP3A4 activity is \ninduced over 1–2 weeks and returns to normal approximately 7 days after SJW is \ndiscontinued.22\n",
+      "bbox": [
+        61.88909912109375,
+        237.160400390625,
+        436.6700134277344,
+        320.8804016113281
+      ],
+      "text_sha256": "0e98f6a55391098951d57a849646a11d70025baa279a87e3272d9b469a0cd666"
+    },
+    {
+      "block_id": "page-0439-block-0006",
+      "order": 6,
+      "text": "Studies have shown that SJW significantly reduces plasma concentrations of warfa-\nrin,23 hormonal contraceptives,24 digoxin and indinavir,15 (a drug used in the treatment \nof HIV). According to case reports, SJW has lowered the plasma concentrations of \nclozapine, theophylline, ciclosporin, gliclazide and statins.15,19,25,26 There is a theoretical \nrisk that SJW may interact with some antiseizure medications.19 It has also been reported \nthat SJW can increase the effects of clopidogrel (a pro-drug).19 Serotonin syndrome has \nbeen reported when SJW was taken together with sertraline, paroxetine, nefazodone-\nand the triptans.27,28 SJW should not be taken with any drugs that have a predominantly \nserotonergic action.\n",
+      "bbox": [
+        61.88568115234375,
+        321.160400390625,
+        436.68597412109375,
+        428.8804016113281
+      ],
+      "text_sha256": "6ff656c8a8cae0c2dc9c3b76fd6b40c77ffa68b0e06bcaad05fad1db750a9600"
+    },
+    {
+      "block_id": "page-0439-block-0007",
+      "order": 7,
+      "text": "Box 3.3  Key points that patients should know\n",
+      "bbox": [
+        69.13980102539062,
+        454.0810852050781,
+        237.77133178710938,
+        464.1535949707031
+      ],
+      "text_sha256": "b242e15cf6fd028c111607b085a00e458ec824011e5e148c24e9de6f168d6648"
+    },
+    {
+      "block_id": "page-0439-block-0008",
+      "order": 8,
+      "text": "■\n■Evidence suggests that SJW may be effective in the treatment of mild to moderate \n",
+      "bbox": [
+        69.13970184326172,
+        473.91357421875,
+        429.4598388671875,
+        485.6335754394531
+      ],
+      "text_sha256": "f87ee264b9dd621b65a6207156989086a62bc5e9567c30f2a861e914380069c4"
+    },
+    {
+      "block_id": "page-0439-block-0009",
+      "order": 9,
+      "text": "depression, but we do not know enough about how much should be taken or \nwhat the side-effects are. There is less evidence of benefit in severe depression.\n",
+      "bbox": [
+        78.13980102539062,
+        485.91357421875,
+        429.4497985839844,
+        509.6335754394531
+      ],
+      "text_sha256": "3df5f0c9578afc19efcf9e6e4128902486c81d309d26fa40e9ee5a2b6f7b612a"
+    },
+    {
+      "block_id": "page-0439-block-0010",
+      "order": 10,
+      "text": "■\n■SJW is not a licensed medicine.\n",
+      "bbox": [
+        69.13970184326172,
+        509.91357421875,
+        212.039794921875,
+        521.6336059570312
+      ],
+      "text_sha256": "8acf7267f00426a477b7c4163ab941e4a8841dc74038afd146010291c2f009d5"
+    },
+    {
+      "block_id": "page-0439-block-0011",
+      "order": 11,
+      "text": "■\n■SJW can interact with other medicines, resulting in serious side-effects. Some \n",
+      "bbox": [
+        69.13970184326172,
+        521.91357421875,
+        429.4398193359375,
+        533.6336059570312
+      ],
+      "text_sha256": "18113a9cfabb954274a8bad2f192376291b501e68df337010261ab38a2122cb2"
+    },
+    {
+      "block_id": "page-0439-block-0012",
+      "order": 12,
+      "text": "important drugs may be metabolised more rapidly and therefore become ineffec-\ntive with serious consequences (e.g. increased viral load in HIV, failure of oral \ncontraceptives leading to unwanted pregnancy, reduced anticoagulant effect with \nwarfarin leading to thrombosis).\n",
+      "bbox": [
+        78.13980102539062,
+        533.91357421875,
+        429.42974853515625,
+        581.6336059570312
+      ],
+      "text_sha256": "f95c080166a49c71a17c1776b8c95896173c160aae1eb1789958c9d98e6d799b"
+    },
+    {
+      "block_id": "page-0439-block-0013",
+      "order": 13,
+      "text": "■\n■The symptoms of depression can sometimes be caused by other physical or mental \n",
+      "bbox": [
+        69.13970184326172,
+        581.91357421875,
+        429.3698425292969,
+        593.6336059570312
+      ],
+      "text_sha256": "ec55c385718a4bff46e27d279dc5bae292b3f09b5d704e17c58699a4d90b0295"
+    },
+    {
+      "block_id": "page-0439-block-0014",
+      "order": 14,
+      "text": "illnesses. It is important that these possible causes are investigated.\n",
+      "bbox": [
+        78.13980102539062,
+        593.91357421875,
+        364.4498291015625,
+        605.6336059570312
+      ],
+      "text_sha256": "1151e6feee9b294f263704600facfebe02edee896d1d3cc0752d3d0c062ed2ee"
+    },
+    {
+      "block_id": "page-0439-block-0015",
+      "order": 15,
+      "text": "■\n■It is always best to consult the doctor if any herbal or natural remedy is being \n",
+      "bbox": [
+        69.13970184326172,
+        605.91357421875,
+        429.3697509765625,
+        617.6336059570312
+      ],
+      "text_sha256": "576d1645c9e9c8492f9a0e15238f562e835cbf3ecbc0dfd1de84b1cd981d89ee"
+    },
+    {
+      "block_id": "page-0439-block-0016",
+      "order": 16,
+      "text": "taken or the patient is thinking of taking one.\n",
+      "bbox": [
+        78.13980102539062,
+        617.91357421875,
+        274.3097839355469,
+        629.6336059570312
+      ],
+      "text_sha256": "52afb223f1aa26ae7a93f98b2af975e6e6e3459f09079c2c0d23cad73fe0ec47"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

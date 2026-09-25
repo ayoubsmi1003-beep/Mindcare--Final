@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0769",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 769,
+  "source_page_index": 768,
+  "source_page_display": 769,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "748    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 8\nTable 8.13  Other psychotropic drugs in renal impairment\nDrug\nComments\nBremelanotide41,192\n64.8% excreted unchanged in urine. Manufacturer states 30–89mL/min no dosage \nadjustment necessary, caution GFR <30mL/min as increased adverse effects. Exposure \nis increased in renal impairment. Case report of Melanotan II (bremelanotide is a \nvariation of Melanotan II) and rhabdomyolysis and renal dysfunction.193\nDeutetrabenazine194\nNo clinical studies in renal impairment. Data limited, no specific dosing advice.\nPitolisant41,195\nLess than 2% excreted unchanged in urine. Dosing GFR 15–59mL/min, 9mg daily; \nincrease after 7 days to max 18mg once daily;196 GFR less than 15mL/min not \nrecommended.196 Peak concentrations and exposure increased in all stages of renal \nimpairment.\nPrucalopride41\n60–65% excreted unchanged in urine. Dosing GFR ≥30mL/min no adjustment \nnecessary; GFR <30mL/min, 1mg daily. Contraindicated by manufacturer in patients \nrequiring dialysis. Exposure increased in moderate and severe renal impairment197 \nand raised plasma concentrations in all stages of renal impairment.198 Case report of \nacute tubular necrosis and acute renal failure associated with prucalopride use.199\nSolriamfetol41,200\n95% excreted unchanged in urine. Dosing advice GFR 60–89mL/min no dose \nadjustment is required; GFR 30–59mL/min, 37.5mg once daily, increased to \nmaximum of 75mg once daily after 5 days; GFR 15–29mL/min, 5mg once daily; GFR \n<15mL/min not recommended. In moderate or severe renal impairment risk of \nincreased blood pressure and heart rate because of the prolonged half-life. \nIncreased exposure and t1/2 in all stages of renal impairment particularly ESRD.201\nValbenazine41\n<2% excreted unchanged in urine. No adjustment is necessary GFR 30–90mL/min in \nmild, moderate renal impairment. Manufacturer does not recommend in severe \nrenal impairment GFR <30mL/min.202 Urinary retention reported as adverse effect in \nclinical trials.\n",
+  "raw_text_sha256": "2a593fee53811d648da51535d8dab72cb8e2ef08d28eb72e80800849c07d1d31",
+  "coordinates_sha256": "e3ad8b9e385f56c424f4f1439dae276fed3f09ad0f46ea6545c4d29c1ffbad7c",
+  "block_sequence_sha256": "b8ab338d4fac95be0938af78f8f41ee9ec1f4f8c648ca8e9ce950046d40568ed",
+  "blocks": [
+    {
+      "block_id": "page-0769-block-0000",
+      "order": 0,
+      "text": "748    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "180f4431ca7201ee4c44fbced5b6f7e85713c8c4f58255ba188120de82a964ba"
+    },
+    {
+      "block_id": "page-0769-block-0001",
+      "order": 1,
+      "text": "CHAPTER 8\n",
+      "bbox": [
+        18.520000457763672,
+        532.3878173828125,
+        28.0,
+        573.7318115234375
+      ],
+      "text_sha256": "5ba3d9fb75ff4f418d4a2e9d517f30966dcfb279c10487eec43c5aa3fd8757a2"
+    },
+    {
+      "block_id": "page-0769-block-0002",
+      "order": 2,
+      "text": "Table 8.13  Other psychotropic drugs in renal impairment\n",
+      "bbox": [
+        67.88999938964844,
+        70.08790588378906,
+        251.81996154785156,
+        78.97540283203125
+      ],
+      "text_sha256": "c7115b1c090cc8de75101f19f22f5c684336ca58da0dcd00d7b54b28ce725437"
+    },
+    {
+      "block_id": "page-0769-block-0003",
+      "order": 3,
+      "text": "Drug\nComments\n",
+      "bbox": [
+        61.88999938964844,
+        89.96290588378906,
+        202.0050048828125,
+        98.85040283203125
+      ],
+      "text_sha256": "f0d3aba6cb5c63a8b3ce76553ca73a800f481925284fe7cc72b7ce3c93bfebe6"
+    },
+    {
+      "block_id": "page-0769-block-0004",
+      "order": 4,
+      "text": "Bremelanotide41,192\n64.8% excreted unchanged in urine. Manufacturer states 30–89mL/min no dosage \nadjustment necessary, caution GFR <30mL/min as increased adverse effects. Exposure \nis increased in renal impairment. Case report of Melanotan II (bremelanotide is a \nvariation of Melanotan II) and rhabdomyolysis and renal dysfunction.193\n",
+      "bbox": [
+        61.89000701904297,
+        108.26790618896484,
+        435.110595703125,
+        146.9678955078125
+      ],
+      "text_sha256": "d85f6b7a4c77da84dc93061952a628ea15f681a2623ffa8fa58bfc68ad36ee6b"
+    },
+    {
+      "block_id": "page-0769-block-0005",
+      "order": 5,
+      "text": "Deutetrabenazine194\nNo clinical studies in renal impairment. Data limited, no specific dosing advice.\n",
+      "bbox": [
+        61.88999938964844,
+        156.3928985595703,
+        413.9681701660156,
+        165.10040283203125
+      ],
+      "text_sha256": "528a750da9b80f787b48d1a8a88df707c66a29bd88636c1b1de7a758d6e94ffc"
+    },
+    {
+      "block_id": "page-0769-block-0006",
+      "order": 6,
+      "text": "Pitolisant41,195\nLess than 2% excreted unchanged in urine. Dosing GFR 15–59mL/min, 9mg daily; \nincrease after 7 days to max 18mg once daily;196 GFR less than 15mL/min not \nrecommended.196 Peak concentrations and exposure increased in all stages of renal \nimpairment.\n",
+      "bbox": [
+        61.888099670410156,
+        174.5178985595703,
+        430.8762512207031,
+        213.222900390625
+      ],
+      "text_sha256": "918bd681da5bb9c4e55e453ba599ef905dde5267cb41a3e9bb83802fcb070bed"
+    },
+    {
+      "block_id": "page-0769-block-0007",
+      "order": 7,
+      "text": "Prucalopride41\n60–65% excreted unchanged in urine. Dosing GFR ≥30mL/min no adjustment \nnecessary; GFR <30mL/min, 1mg daily. Contraindicated by manufacturer in patients \nrequiring dialysis. Exposure increased in moderate and severe renal impairment197 \nand raised plasma concentrations in all stages of renal impairment.198 Case report of \nacute tubular necrosis and acute renal failure associated with prucalopride use.199\n",
+      "bbox": [
+        61.89110565185547,
+        222.6428985595703,
+        434.8865051269531,
+        271.347900390625
+      ],
+      "text_sha256": "52623e9982ecde6e5612261b54991465c5a2ed1a21904020f691e30cc39ef86a"
+    },
+    {
+      "block_id": "page-0769-block-0008",
+      "order": 8,
+      "text": "Solriamfetol41,200\n95% excreted unchanged in urine. Dosing advice GFR 60–89mL/min no dose \nadjustment is required; GFR 30–59mL/min, 37.5mg once daily, increased to \nmaximum of 75mg once daily after 5 days; GFR 15–29mL/min, 5mg once daily; GFR \n<15mL/min not recommended. In moderate or severe renal impairment risk of \nincreased blood pressure and heart rate because of the prolonged half-life. \nIncreased exposure and t1/2 in all stages of renal impairment particularly ESRD.201\n",
+      "bbox": [
+        61.88999938964844,
+        280.7679138183594,
+        434.9530944824219,
+        341.1910400390625
+      ],
+      "text_sha256": "8e6ed2d1749d1fc0b7711c3a581b1d789083145b46d28d44fa43a482a5b17a77"
+    },
+    {
+      "block_id": "page-0769-block-0009",
+      "order": 9,
+      "text": "Valbenazine41\n<2% excreted unchanged in urine. No adjustment is necessary GFR 30–90mL/min in \nmild, moderate renal impairment. Manufacturer does not recommend in severe \nrenal impairment GFR <30mL/min.202 Urinary retention reported as adverse effect in \nclinical trials.\n",
+      "bbox": [
+        61.88999938964844,
+        348.8929138183594,
+        435.5831298828125,
+        387.597900390625
+      ],
+      "text_sha256": "b286ac96400b0a05aea7ca30fb9dd2452e320052465483c67fd08818390acd78"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

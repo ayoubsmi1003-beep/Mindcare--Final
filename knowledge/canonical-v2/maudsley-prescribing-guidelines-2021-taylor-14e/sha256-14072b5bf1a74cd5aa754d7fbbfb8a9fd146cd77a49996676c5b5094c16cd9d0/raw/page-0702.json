@@ -1,0 +1,467 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0702",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 702,
+  "source_page_index": 701,
+  "source_page_display": 702,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Pregnancy and breastfeeding    681\nCHAPTER 7\nWhat to include in discussions with pregnant women16\nDiscussions should include:\n■\n■The woman’s ability to be treated with non-pharmacological interventions. This \nshould include previous response to non-pharmacological interventions.\n■\n■The potential impact of an untreated mental disorder on the foetus or infant.\n■\n■The risks from stopping medication abruptly.\n■\n■Severity of previous episodes, response to treatment and the woman’s preference.\n■\n■The background risk of foetal malformations for pregnant women without a mental \ndisorder.\n■\n■The increased risk of harm associated with drug treatments during pregnancy and the \npostnatal period, including the risk of overdose (and acknowledge uncertainty sur-\nrounding risks).\n■\n■The possibility that stopping a drug with known teratogenic risk after pregnancy is \nconfirmed may not remove the risk of malformations.\n■\n■Breastfeeding.\nWhere possible, written material should be provided to explain the risks (preferably \nindividualised). Absolute and relative risks should be discussed. Risks should be described \nusing natural frequencies rather than percentages (e.g., 1 in 10 rather than 10%) and \ncommon denominators (e.g., 1 in 100 and 25 in 100, rather than 1 in 100 and 1 in 4).\nPsychosis during pregnancy and postpartum\n■\n■Pregnancy does not protect against relapse.\n■\n■Psychosis during pregnancy predicts postpartum psychosis.17\n■\n■The incidence of postpartum psychosis is 0.1–0.25% in the general population \n(around 1–2 psychiatric hospitalisations per 1000 births).\n■\n■Women with bipolar disorder have an increased risk of postpartum psychosis with \naround one in five experiencing a psychotic relapse postpartum.18\nIn all pregnant women\n■\n■Ensure that the parents are as involved as possible in all decisions.\n■\n■Use the lowest effective dose.\n■\n■Use the drug with the lowest known risk to mother and foetus.\n■\n■Prescribe as few drugs as possible both simultaneously and in sequence.\n■\n■Be prepared to adjust doses as pregnancy progresses and drug handling is altered. Dose \nincreases are frequently required in the third trimester14 when blood volume expands by around \n30%. Plasma level monitoring may be helpful, where available. Note that hepatic enzyme \nactivity changes markedly during pregnancy; CYP2D6 activity is increased by almost 50% by the \nend of pregnancy while the activity of CYP1A2 is reduced by up to 70%.15\n■\n■Consider referral to specialist perinatal services.\n■\n■Ensure adequate foetal screening.\n■\n■Be aware of potential problems with individual drugs around the time of delivery.\n■\n■Inform the obstetric team of psychotropic use and possible complications.\n■\n■Monitor the neonate for withdrawal effects after birth.\n■\n■Document all decisions.\n",
+  "raw_text_sha256": "8283bed8d5ebce23908c2662f4d35ba5376e5752e655815450eeaee36b5b75c9",
+  "coordinates_sha256": "e7c81098fb5c2bbcd5cdf6efae30c764aaecef0887397982c561077ffc6520ea",
+  "block_sequence_sha256": "966e1ca9b72c952645f64cf4bcf8ae7a7020b33003c70d73cb635a165a57f37d",
+  "blocks": [
+    {
+      "block_id": "page-0702-block-0000",
+      "order": 0,
+      "text": "Pregnancy and breastfeeding    681\n",
+      "bbox": [
+        271.769287109375,
+        31.395221710205078,
+        420.00048828125,
+        41.0272216796875
+      ],
+      "text_sha256": "d032655c85d3324e707855835c04aa70d886baa2d80b3dc5f0b7a7108376bc69"
+    },
+    {
+      "block_id": "page-0702-block-0001",
+      "order": 1,
+      "text": "CHAPTER 7\n",
+      "bbox": [
+        454.4096984863281,
+        472.7144775390625,
+        463.88970947265625,
+        514.0584716796875
+      ],
+      "text_sha256": "6d1a2318236627f2d413db0336034ac4d71cea7172bd0baddf04c66a07292590"
+    },
+    {
+      "block_id": "page-0702-block-0002",
+      "order": 2,
+      "text": "What to include in discussions with pregnant women16\n",
+      "bbox": [
+        55.0,
+        260.3689880371094,
+        337.5572814941406,
+        273.40399169921875
+      ],
+      "text_sha256": "2e9630aae75615426b295dade5049a08b4941809005cd80d78401109e3c8582e"
+    },
+    {
+      "block_id": "page-0702-block-0003",
+      "order": 3,
+      "text": "Discussions should include:\n",
+      "bbox": [
+        48.0,
+        279.2139892578125,
+        166.3899688720703,
+        290.9339904785156
+      ],
+      "text_sha256": "96b7766ed480455ec0b1392a83a5d1f926181dc5da18590aab6865d951897160"
+    },
+    {
+      "block_id": "page-0702-block-0004",
+      "order": 4,
+      "text": "■\n■The woman’s ability to be treated with non-pharmacological interventions. This \n",
+      "bbox": [
+        47.999900817871094,
+        291.2139892578125,
+        422.800048828125,
+        302.9339904785156
+      ],
+      "text_sha256": "3e804793507edcf6da1999d97912774239b8e762a441f1c7775eb0a8fdd37036"
+    },
+    {
+      "block_id": "page-0702-block-0005",
+      "order": 5,
+      "text": "should include previous response to non-pharmacological interventions.\n",
+      "bbox": [
+        57.0,
+        303.2139892578125,
+        367.0899353027344,
+        314.9339904785156
+      ],
+      "text_sha256": "7d0e63334dd7f0b55f2efcc29db0ec961e825d8dcc490c1472792e33a04795ba"
+    },
+    {
+      "block_id": "page-0702-block-0006",
+      "order": 6,
+      "text": "■\n■The potential impact of an untreated mental disorder on the foetus or infant.\n",
+      "bbox": [
+        47.999900817871094,
+        315.2139892578125,
+        388.6999816894531,
+        326.9339904785156
+      ],
+      "text_sha256": "0cc372279add8dc02c44471882eb26db5dd905759b0f0128871a7862e9cbba82"
+    },
+    {
+      "block_id": "page-0702-block-0007",
+      "order": 7,
+      "text": "■\n■The risks from stopping medication abruptly.\n",
+      "bbox": [
+        47.999900817871094,
+        327.2139892578125,
+        252.219970703125,
+        338.9339904785156
+      ],
+      "text_sha256": "e3799d786c0df7772a0cf684f35d447a277fabe002c6a3eb47e0f6aeef7cb134"
+    },
+    {
+      "block_id": "page-0702-block-0008",
+      "order": 8,
+      "text": "■\n■Severity of previous episodes, response to treatment and the woman’s preference.\n",
+      "bbox": [
+        47.999900817871094,
+        339.2139892578125,
+        405.3500061035156,
+        350.9339904785156
+      ],
+      "text_sha256": "911a6d7e69793753a0fa62b15ec9688b56e65eb5689d5893e662cb1ec09a0545"
+    },
+    {
+      "block_id": "page-0702-block-0009",
+      "order": 9,
+      "text": "■\n■The background risk of foetal malformations for pregnant women without a mental \n",
+      "bbox": [
+        47.999900817871094,
+        351.2139892578125,
+        422.8099060058594,
+        362.9339904785156
+      ],
+      "text_sha256": "3037ec26923f06e1cacf9fd9eff3f360e977f7f70abf552f2761c1425d3bcf5e"
+    },
+    {
+      "block_id": "page-0702-block-0010",
+      "order": 10,
+      "text": "disorder.\n",
+      "bbox": [
+        57.0,
+        363.2139892578125,
+        94.23999786376953,
+        374.9339904785156
+      ],
+      "text_sha256": "42475e2fb0ef7cb7f1c8e79aceb4ea5dfbaf1c89a38170a268b8481cacac747a"
+    },
+    {
+      "block_id": "page-0702-block-0011",
+      "order": 11,
+      "text": "■\n■The increased risk of harm associated with drug treatments during pregnancy and the \n",
+      "bbox": [
+        47.999900817871094,
+        375.2139892578125,
+        422.8000183105469,
+        386.9339904785156
+      ],
+      "text_sha256": "792c93ff47b94574b4bc889ded77033ce8eb9da2aa1251f801c97a0ffce78a31"
+    },
+    {
+      "block_id": "page-0702-block-0012",
+      "order": 12,
+      "text": "postnatal period, including the risk of overdose (and acknowledge uncertainty sur-\nrounding risks).\n",
+      "bbox": [
+        57.0,
+        387.2139892578125,
+        419.9999694824219,
+        410.9339904785156
+      ],
+      "text_sha256": "4b7132ca75d85925c81fec9083e839565829e7fef9b4b0f0713e80ce8e902fea"
+    },
+    {
+      "block_id": "page-0702-block-0013",
+      "order": 13,
+      "text": "■\n■The possibility that stopping a drug with known teratogenic risk after pregnancy is \n",
+      "bbox": [
+        47.999900817871094,
+        411.2139892578125,
+        422.8099060058594,
+        422.9339904785156
+      ],
+      "text_sha256": "5b868717fdfcf844b36f4b74fc9524c35c42b7d61ec160502f8865f44ede4b76"
+    },
+    {
+      "block_id": "page-0702-block-0014",
+      "order": 14,
+      "text": "confirmed may not remove the risk of malformations.\n",
+      "bbox": [
+        57.0,
+        423.2139892578125,
+        289.1999816894531,
+        434.9339904785156
+      ],
+      "text_sha256": "c947bfc3f893e0c4cc30627885341fcdfac49d76b529c8dbce01118b0e699ae1"
+    },
+    {
+      "block_id": "page-0702-block-0015",
+      "order": 15,
+      "text": "■\n■Breastfeeding.\n",
+      "bbox": [
+        47.999900817871094,
+        435.2139892578125,
+        117.55000305175781,
+        446.9339904785156
+      ],
+      "text_sha256": "7ef352de414508cefe8249b405fa4f95d41373a7e0335fac8254bf536e2a69a5"
+    },
+    {
+      "block_id": "page-0702-block-0016",
+      "order": 16,
+      "text": "Where possible, written material should be provided to explain the risks (preferably \nindividualised). Absolute and relative risks should be discussed. Risks should be described \nusing natural frequencies rather than percentages (e.g., 1 in 10 rather than 10%) and \ncommon denominators (e.g., 1 in 100 and 25 in 100, rather than 1 in 100 and 1 in 4).\n",
+      "bbox": [
+        48.0,
+        453.2139892578125,
+        422.7598571777344,
+        500.9339904785156
+      ],
+      "text_sha256": "cd8695be37dc8e7d0d36a0e7da0fc30423a26a6ed839fc69a3ec600ce06ea665"
+    },
+    {
+      "block_id": "page-0702-block-0017",
+      "order": 17,
+      "text": "Psychosis during pregnancy and postpartum\n",
+      "bbox": [
+        48.0,
+        518.3690185546875,
+        276.9759216308594,
+        531.4039916992188
+      ],
+      "text_sha256": "89617802f1c615a587bfc8e7ab700704a7469e28ac3f1debad99cf9789edaed3"
+    },
+    {
+      "block_id": "page-0702-block-0018",
+      "order": 18,
+      "text": "■\n■Pregnancy does not protect against relapse.\n",
+      "bbox": [
+        47.999900817871094,
+        543.2139892578125,
+        243.13999938964844,
+        554.9340209960938
+      ],
+      "text_sha256": "f1ec699e7cb192ffef8e5b60ce05b48ffa69c7e847bc1334b4028079f8e0ae98"
+    },
+    {
+      "block_id": "page-0702-block-0019",
+      "order": 19,
+      "text": "■\n■Psychosis during pregnancy predicts postpartum psychosis.17\n",
+      "bbox": [
+        47.999900817871094,
+        555.2139892578125,
+        317.99078369140625,
+        566.9340209960938
+      ],
+      "text_sha256": "eb6f7942a794f42217352763a67c747ac6d1df00333df9f023748bf577094e45"
+    },
+    {
+      "block_id": "page-0702-block-0020",
+      "order": 20,
+      "text": "■\n■The incidence of postpartum psychosis is 0.1–0.25% in the general population \n",
+      "bbox": [
+        47.999900817871094,
+        567.2139892578125,
+        422.7598876953125,
+        578.9340209960938
+      ],
+      "text_sha256": "cea8e971fede152ce500cc43ef8da273766463e3d76512106641869e16f680f1"
+    },
+    {
+      "block_id": "page-0702-block-0021",
+      "order": 21,
+      "text": "(around 1–2 psychiatric hospitalisations per 1000 births).\n",
+      "bbox": [
+        57.0,
+        579.2139892578125,
+        305.4299621582031,
+        590.9340209960938
+      ],
+      "text_sha256": "9f21c052bc9aaa2f5d8601462a4594153bac723dc4d2c9ab629e6f08ac62d027"
+    },
+    {
+      "block_id": "page-0702-block-0022",
+      "order": 22,
+      "text": "■\n■Women with bipolar disorder have an increased risk of postpartum psychosis with \n",
+      "bbox": [
+        47.999900817871094,
+        591.2139892578125,
+        422.8200378417969,
+        602.9340209960938
+      ],
+      "text_sha256": "e8ba12cf2040297cd84a3419601474c878aac17857c9497af713a82f10cb6c66"
+    },
+    {
+      "block_id": "page-0702-block-0023",
+      "order": 23,
+      "text": "around one in five experiencing a psychotic relapse postpartum.18\n",
+      "bbox": [
+        57.0,
+        603.2139892578125,
+        339.0904846191406,
+        614.9340209960938
+      ],
+      "text_sha256": "51b324a04be5f94f33f13e5e481f8c3735c56e44ada1ffeb8dd2af22de9bd3d8"
+    },
+    {
+      "block_id": "page-0702-block-0024",
+      "order": 24,
+      "text": "In all pregnant women\n",
+      "bbox": [
+        55.25,
+        70.02790069580078,
+        146.25949096679688,
+        80.10040283203125
+      ],
+      "text_sha256": "386347fd7f899e8af2f16d1b6740068c86f77b0aef921852fe69c82dc2cfa05c"
+    },
+    {
+      "block_id": "page-0702-block-0025",
+      "order": 25,
+      "text": "■\n■Ensure that the parents are as involved as possible in all decisions.\n",
+      "bbox": [
+        55.249900817871094,
+        86.23190307617188,
+        301.33349609375,
+        96.10040283203125
+      ],
+      "text_sha256": "415ee2c7dba1e106194e3a6cb2ed160e2a2e83907935656bbe3b8a93bca0cb96"
+    },
+    {
+      "block_id": "page-0702-block-0026",
+      "order": 26,
+      "text": "■\n■Use the lowest effective dose.\n",
+      "bbox": [
+        63.749900817871094,
+        96.23190307617188,
+        180.24252319335938,
+        106.10040283203125
+      ],
+      "text_sha256": "dc98b132d5c9be77f66f1a21c80aae95086dcf07107a8d46546ac620b472d994"
+    },
+    {
+      "block_id": "page-0702-block-0027",
+      "order": 27,
+      "text": "■\n■Use the drug with the lowest known risk to mother and foetus.\n",
+      "bbox": [
+        63.749900817871094,
+        106.23190307617188,
+        301.80963134765625,
+        116.10040283203125
+      ],
+      "text_sha256": "91d521e41bfbd6cb2a4190c1d110bd71556200e132232394b9d7e10d61953a08"
+    },
+    {
+      "block_id": "page-0702-block-0028",
+      "order": 28,
+      "text": "■\n■Prescribe as few drugs as possible both simultaneously and in sequence.\n",
+      "bbox": [
+        55.249900817871094,
+        116.23190307617188,
+        324.3260803222656,
+        126.10040283203125
+      ],
+      "text_sha256": "023f710c81c56333ae427358138e8026dbc10d9feb9312986eae6c949e4fb894"
+    },
+    {
+      "block_id": "page-0702-block-0029",
+      "order": 29,
+      "text": "■\n■Be prepared to adjust doses as pregnancy progresses and drug handling is altered. Dose \n",
+      "bbox": [
+        55.249900817871094,
+        126.23190307617188,
+        383.5711669921875,
+        136.10040283203125
+      ],
+      "text_sha256": "56604a4be6f23b9f17f3adf8c29ad73b2baa79b2bb68b227f13b5dd3f9f1af64"
+    },
+    {
+      "block_id": "page-0702-block-0030",
+      "order": 30,
+      "text": "increases are frequently required in the third trimester14 when blood volume expands by around \n30%. Plasma level monitoring may be helpful, where available. Note that hepatic enzyme \nactivity changes markedly during pregnancy; CYP2D6 activity is increased by almost 50% by the \nend of pregnancy while the activity of CYP1A2 is reduced by up to 70%.15\n",
+      "bbox": [
+        63.75,
+        136.22787475585938,
+        413.3811340332031,
+        176.08831787109375
+      ],
+      "text_sha256": "9def73a18d34aa8cef44986e20c616fb55a17a0010e37a05e394575da4c60e69"
+    },
+    {
+      "block_id": "page-0702-block-0031",
+      "order": 31,
+      "text": "■\n■Consider referral to specialist perinatal services.\n",
+      "bbox": [
+        55.249900817871094,
+        176.23190307617188,
+        234.53201293945312,
+        186.10040283203125
+      ],
+      "text_sha256": "52604eccec3acd94a32e1440f82c25a868b430cb5684cef5b07c819a6300fc3a"
+    },
+    {
+      "block_id": "page-0702-block-0032",
+      "order": 32,
+      "text": "■\n■Ensure adequate foetal screening.\n",
+      "bbox": [
+        55.249900817871094,
+        186.23190307617188,
+        186.24349975585938,
+        196.10040283203125
+      ],
+      "text_sha256": "ece24ea80ea4ae940dd3251c01e0ae61519c8999e2dd5323e048a1181e1967ff"
+    },
+    {
+      "block_id": "page-0702-block-0033",
+      "order": 33,
+      "text": "■\n■Be aware of potential problems with individual drugs around the time of delivery.\n",
+      "bbox": [
+        55.249900817871094,
+        196.23190307617188,
+        357.2210693359375,
+        206.10040283203125
+      ],
+      "text_sha256": "458d3cf75404950ff9fd6de494e9c0cbf445990e9bdb3b93841b716f5e0b1aa3"
+    },
+    {
+      "block_id": "page-0702-block-0034",
+      "order": 34,
+      "text": "■\n■Inform the obstetric team of psychotropic use and possible complications.\n",
+      "bbox": [
+        55.249900817871094,
+        206.23190307617188,
+        330.42901611328125,
+        216.10040283203125
+      ],
+      "text_sha256": "561b0e3650f130ea31d10a3c1290b7c1876d6a49fd52c47c872a8cae060c70c9"
+    },
+    {
+      "block_id": "page-0702-block-0035",
+      "order": 35,
+      "text": "■\n■Monitor the neonate for withdrawal effects after birth.\n",
+      "bbox": [
+        55.249900817871094,
+        216.23190307617188,
+        262.4120788574219,
+        226.10040283203125
+      ],
+      "text_sha256": "0863c48fe403ff32bf9995368fd1d71751bfb151587dc1e8f51e3e0dd244a16b"
+    },
+    {
+      "block_id": "page-0702-block-0036",
+      "order": 36,
+      "text": "■\n■Document all decisions.\n",
+      "bbox": [
+        55.249900817871094,
+        226.23190307617188,
+        149.2344970703125,
+        236.10040283203125
+      ],
+      "text_sha256": "e6c38ff0e1fdc7c218098c3e6b4ea68f84a5d577ffa5db97a2defd3315dff7ae"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

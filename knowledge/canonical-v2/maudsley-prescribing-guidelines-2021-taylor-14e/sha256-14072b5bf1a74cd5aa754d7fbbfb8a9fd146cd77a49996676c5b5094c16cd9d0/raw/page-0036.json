@@ -1,0 +1,395 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0036",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 36,
+  "source_page_index": 35,
+  "source_page_display": 36,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    15\nCHAPTER 1\nReferences\n\t 1.\t Foster P. Neuroleptic equivalence. Pharm J 1989; 243:431–432.\n\t 2.\t Atkins M, et al. Chlorpromazine equivalents: a consensus of opinion for both clinical and research implications. Psychiatric Bull 1997; \n21:224–226.\n\t 3.\t Patel MX, et al. How to compare doses of different antipsychotics: a systematic review of methods. Schizophr Res 2013; 149:141–148.\n\t 4.\t Gardner DM, et al. International consensus study of antipsychotic dosing. Am J Psychiatry 2010; 167:686–693.\n\t 5.\t Leucht S, et al. Dose equivalents for antipsychotic drugs: the ddd method. Schizophr Bull 2016; 42 Suppl 1:S90–S94.\n\t 6.\t Rothe PH, et al. Dose equivalents for second generation long-acting injectable antipsychotics: the minimum effective dose method. Schizophr \nRes 2018; 193:23–28.\n\t 7.\t Leucht S, et al. Dose equivalents for second-generation antipsychotics: the minimum effective dose method. Schizophr Bull 2014; \n40:314–326.\n\t 8.\t Leucht S, et al. Dose equivalents for second-generation antipsychotic drugs: the classical mean dose method. Schizophr Bull 2015; \n41:1397–1402.\n\t 9.\t Woods SW. Chlorpromazine equivalent doses for the newer atypical antipsychotics. J Clin Psychiatry 2003; 64:663–667.\n\t10.\t Leucht S, et al. Dose-response meta-analysis of antipsychotic drugs for acute schizophrenia. Am J Psychiatry 2020; 177:342–353.\nTable 1.3  Second-generation antipsychotics – approximate equivalent doses3–10\nDrug\nApproximate equivalent dose\nAmisulpride\n400mg\nAripiprazole\n15mg\nAsenapine\n10mg\nBlonanserin\n~\nBrexpiprazole\n2mg\nCariprazine\n1.5mg\nClotiapine\n100mg\nIloperidone\n12mg\nLumateperone\n~\nLurasidone\n80mg (74mg base)\nMelperone\n300mg\nMolindone\n50mg\nOlanzapine\n10mg\nPaliperidone LAI\n100mg/month\nPimavanserin\n~\nQuetiapine\n400mg\nRisperidone oral\n4mg\nRisperidone LAI\n50mg/2 weeks\nRisperidone RBP-7000\n120mg/month\nZiprasidone\n80mg\n~Unknown equivalence at time of writing.\n",
+  "raw_text_sha256": "4e611d90965e668e3a7a89213cdaf728fdd50da31e6192724b1efdd226751bd6",
+  "coordinates_sha256": "766f5d9b4ed45a55cf815bc6dbecff88394c750371d1aa008205cc9e380d318c",
+  "block_sequence_sha256": "6a5578b095984e53bacec54df98a308022a8a4de739e6fe0e4dfde57594f7dad",
+  "blocks": [
+    {
+      "block_id": "page-0036-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    15\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "7a2a44698d7e03b067774ff01da21a4fe305afa7a9172c64356f4342bee96fdd"
+    },
+    {
+      "block_id": "page-0036-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0036-block-0002",
+      "order": 2,
+      "text": "References\n",
+      "bbox": [
+        47.99909973144531,
+        439.8227233886719,
+        104.03309631347656,
+        452.85772705078125
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0036-block-0003",
+      "order": 3,
+      "text": "\t 1.\t Foster P. Neuroleptic equivalence. Pharm J 1989; 243:431–432.\n\t 2.\t Atkins M, et al. Chlorpromazine equivalents: a consensus of opinion for both clinical and research implications. Psychiatric Bull 1997; \n",
+      "bbox": [
+        47.99909973144531,
+        457.7997131347656,
+        421.6611022949219,
+        473.9757385253906
+      ],
+      "text_sha256": "7291ff8d447d35f462a831784da3b049dd88d31a0970fdc56ccd6ca6f2beac97"
+    },
+    {
+      "block_id": "page-0036-block-0004",
+      "order": 4,
+      "text": "21:224–226.\n\t 3.\t Patel MX, et al. How to compare doses of different antipsychotics: a systematic review of methods. Schizophr Res 2013; 149:141–148.\n\t 4.\t Gardner DM, et al. International consensus study of antipsychotic dosing. Am J Psychiatry 2010; 167:686–693.\n\t 5.\t Leucht S, et al. Dose equivalents for antipsychotic drugs: the ddd method. Schizophr Bull 2016; 42 Suppl 1:S90–S94.\n\t 6.\t Rothe PH, et al. Dose equivalents for second generation long-acting injectable antipsychotics: the minimum effective dose method. Schizophr \n",
+      "bbox": [
+        48.01110076904297,
+        475.7997131347656,
+        421.6971130371094,
+        518.9757080078125
+      ],
+      "text_sha256": "fbab6dfd4f0dfe304bcd7a8c1a43bb23435231079d73888cb6d627c2083d6eaa"
+    },
+    {
+      "block_id": "page-0036-block-0005",
+      "order": 5,
+      "text": "Res 2018; 193:23–28.\n\t 7.\t Leucht S, et al. Dose equivalents for second-generation antipsychotics: the minimum effective dose method. Schizophr Bull 2014; \n",
+      "bbox": [
+        48.03510284423828,
+        520.7997436523438,
+        421.6971740722656,
+        536.9757080078125
+      ],
+      "text_sha256": "6a007095d639d04b0b2f81f1016a9326e0329c73c6ec1f6aa1983a7c68eca36e"
+    },
+    {
+      "block_id": "page-0036-block-0006",
+      "order": 6,
+      "text": "40:314–326.\n\t 8.\t Leucht S, et al. Dose equivalents for second-generation antipsychotic drugs: the classical mean dose method. Schizophr Bull 2015; \n",
+      "bbox": [
+        48.041099548339844,
+        538.7997436523438,
+        421.7391052246094,
+        554.9757080078125
+      ],
+      "text_sha256": "e410cd40d0d0455e4c400fe87a5d2b22c4ad0b733ce58ca3d0ecff0fc51a3c97"
+    },
+    {
+      "block_id": "page-0036-block-0007",
+      "order": 7,
+      "text": "41:1397–1402.\n\t 9.\t Woods SW. Chlorpromazine equivalent doses for the newer atypical antipsychotics. J Clin Psychiatry 2003; 64:663–667.\n\t10.\t Leucht S, et al. Dose-response meta-analysis of antipsychotic drugs for acute schizophrenia. Am J Psychiatry 2020; 177:342–353.\n",
+      "bbox": [
+        48.047096252441406,
+        556.7997436523438,
+        393.3890686035156,
+        581.9757080078125
+      ],
+      "text_sha256": "14fed064ec9b50749ea7425fc77d70d7ab20c959760f17548b33c4c133ebebd0"
+    },
+    {
+      "block_id": "page-0036-block-0008",
+      "order": 8,
+      "text": "Table 1.3  Second-generation antipsychotics – approximate equivalent doses3–10\n",
+      "bbox": [
+        53.998802185058594,
+        70.08692932128906,
+        307.9685974121094,
+        78.97442626953125
+      ],
+      "text_sha256": "2c26e7ba369995fd2354ee925eb029a09abda5a30b86fba680debcef9900be10"
+    },
+    {
+      "block_id": "page-0036-block-0009",
+      "order": 9,
+      "text": "Drug\nApproximate equivalent dose\n",
+      "bbox": [
+        47.998802185058594,
+        90.32191467285156,
+        338.4737854003906,
+        99.20941162109375
+      ],
+      "text_sha256": "da32b59acc5b63fa436cf310c2078e076de14fff003c59ac39584a3fc8982fe4"
+    },
+    {
+      "block_id": "page-0036-block-0010",
+      "order": 10,
+      "text": "Amisulpride\n400mg\n",
+      "bbox": [
+        47.99879455566406,
+        107.2794418334961,
+        256.92633056640625,
+        115.9869384765625
+      ],
+      "text_sha256": "05e624877db8af513fac779159d74b15e92aff61819e9c5aa035f2db1d18004f"
+    },
+    {
+      "block_id": "page-0036-block-0011",
+      "order": 11,
+      "text": "Aripiprazole\n15mg\n",
+      "bbox": [
+        47.99879455566406,
+        122.30196380615234,
+        252.75631713867188,
+        131.00946044921875
+      ],
+      "text_sha256": "9c1d03d8e8a58f51cf3101dc456d88cdc72cdb4013da6fd2bce3cb85236a5d55"
+    },
+    {
+      "block_id": "page-0036-block-0012",
+      "order": 12,
+      "text": "Asenapine\n10mg\n",
+      "bbox": [
+        47.99879455566406,
+        137.32447814941406,
+        252.75631713867188,
+        146.031982421875
+      ],
+      "text_sha256": "225c802fb7e027141e67c3b382d0022ccef76925df6998b7fbf9dae8b3818847"
+    },
+    {
+      "block_id": "page-0036-block-0013",
+      "order": 13,
+      "text": "Blonanserin\n~\n",
+      "bbox": [
+        47.99879455566406,
+        152.3470001220703,
+        238.49879455566406,
+        161.05450439453125
+      ],
+      "text_sha256": "09bd4fe06bb35ead514ea418d6bb2b3ef78896655ded2120fececf1980e02418"
+    },
+    {
+      "block_id": "page-0036-block-0014",
+      "order": 14,
+      "text": "Brexpiprazole\n2mg\n",
+      "bbox": [
+        47.99879455566406,
+        167.36952209472656,
+        248.5863037109375,
+        176.0770263671875
+      ],
+      "text_sha256": "12f845a1f09ad4cc155ecb53d32bf7cbede842280d821519f391ef97f0432ea5"
+    },
+    {
+      "block_id": "page-0036-block-0015",
+      "order": 15,
+      "text": "Cariprazine\n1.5mg\n",
+      "bbox": [
+        47.99879455566406,
+        182.3920440673828,
+        254.84130859375,
+        191.09954833984375
+      ],
+      "text_sha256": "e664ae27769b8e09b1ce813d41b5efe8dc675d295c96dd0777d1a9eef7bdfc76"
+    },
+    {
+      "block_id": "page-0036-block-0016",
+      "order": 16,
+      "text": "Clotiapine\n100mg\n",
+      "bbox": [
+        47.99879455566406,
+        197.41456604003906,
+        256.92633056640625,
+        206.1220703125
+      ],
+      "text_sha256": "6cc0d28ead1a1ff53eb416ed4973383de370f01484e9b980b642af8c80509e00"
+    },
+    {
+      "block_id": "page-0036-block-0017",
+      "order": 17,
+      "text": "Iloperidone\n12mg\n",
+      "bbox": [
+        47.99879455566406,
+        212.4370574951172,
+        252.75631713867188,
+        221.14456176757812
+      ],
+      "text_sha256": "77ca6ebeecf155cadaf5b9f1b984df388a3fd773f00615dbcc7ec23146cbd79d"
+    },
+    {
+      "block_id": "page-0036-block-0018",
+      "order": 18,
+      "text": "Lumateperone\n~\n",
+      "bbox": [
+        47.99879455566406,
+        227.4595489501953,
+        238.49879455566406,
+        236.16705322265625
+      ],
+      "text_sha256": "0b2e4d9da86cf0da196c29f373adf7a08f309e9d34d4a7b9e2210825896bf315"
+    },
+    {
+      "block_id": "page-0036-block-0019",
+      "order": 19,
+      "text": "Lurasidone\n80mg (74mg base)\n",
+      "bbox": [
+        47.99879455566406,
+        242.48204040527344,
+        294.4413757324219,
+        251.18954467773438
+      ],
+      "text_sha256": "ba79361f4be1cc5e277202eb2a0c3632128835042087c91836b4aa6bd135b466"
+    },
+    {
+      "block_id": "page-0036-block-0020",
+      "order": 20,
+      "text": "Melperone\n300mg\n",
+      "bbox": [
+        47.99879455566406,
+        257.5045471191406,
+        256.92633056640625,
+        266.2120361328125
+      ],
+      "text_sha256": "d17b4a9cb5234eba360f7ec71f89874e9b16b859a2092ca947222eecde2ca303"
+    },
+    {
+      "block_id": "page-0036-block-0021",
+      "order": 21,
+      "text": "Molindone\n50mg\n",
+      "bbox": [
+        47.99879455566406,
+        272.52703857421875,
+        252.75631713867188,
+        281.2345275878906
+      ],
+      "text_sha256": "06a573903f2accd8596f9d02c771bc827731cbff9045ccd29ac7ffe89b888908"
+    },
+    {
+      "block_id": "page-0036-block-0022",
+      "order": 22,
+      "text": "Olanzapine\n10mg\n",
+      "bbox": [
+        47.99879455566406,
+        287.5495300292969,
+        252.75631713867188,
+        296.25701904296875
+      ],
+      "text_sha256": "d92987c51057f5a773ebb51e1e2c46a26fd7c3658b1e4343477ced2d953e0845"
+    },
+    {
+      "block_id": "page-0036-block-0023",
+      "order": 23,
+      "text": "Paliperidone LAI\n100mg/month\n",
+      "bbox": [
+        47.99879455566406,
+        302.572021484375,
+        280.2663879394531,
+        311.2795104980469
+      ],
+      "text_sha256": "20b1c8c447ae2edc3364b795b87a6b031d1a10521311997265c185052cdcdf06"
+    },
+    {
+      "block_id": "page-0036-block-0024",
+      "order": 24,
+      "text": "Pimavanserin\n~\n",
+      "bbox": [
+        47.99879455566406,
+        317.5945129394531,
+        238.49879455566406,
+        326.302001953125
+      ],
+      "text_sha256": "1cb5aba02fb00a664ada651d665cdb76eafe3dd88efc7bd883aab4cd29040888"
+    },
+    {
+      "block_id": "page-0036-block-0025",
+      "order": 25,
+      "text": "Quetiapine\n400mg\n",
+      "bbox": [
+        47.99879455566406,
+        332.61700439453125,
+        256.92633056640625,
+        341.3244934082031
+      ],
+      "text_sha256": "886a541c691c84ad8da197d91b4a8352b2d9f6aaebce25334c4094f9b76f9dc4"
+    },
+    {
+      "block_id": "page-0036-block-0026",
+      "order": 26,
+      "text": "Risperidone oral\n4mg\n",
+      "bbox": [
+        47.99879455566406,
+        347.6394958496094,
+        248.5863037109375,
+        356.34698486328125
+      ],
+      "text_sha256": "c15b624fa3a30ff9903ae10469942bf7991bd689581f370cd75b0deaf435ff68"
+    },
+    {
+      "block_id": "page-0036-block-0027",
+      "order": 27,
+      "text": "Risperidone LAI\n50mg/2 weeks\n",
+      "bbox": [
+        47.99879455566406,
+        362.6619873046875,
+        281.0988464355469,
+        371.3694763183594
+      ],
+      "text_sha256": "87cf909b26efeead7f2114fe0c6768046ba8b8e01771e234c9f1808027dc7ecd"
+    },
+    {
+      "block_id": "page-0036-block-0028",
+      "order": 28,
+      "text": "Risperidone RBP-7000\n120mg/month\n",
+      "bbox": [
+        47.99879455566406,
+        377.6844787597656,
+        280.2663879394531,
+        386.3919677734375
+      ],
+      "text_sha256": "6fb16f0b03acf60926cf755fd1db8b4ba552d969bd59719b19f65f40a776471d"
+    },
+    {
+      "block_id": "page-0036-block-0029",
+      "order": 29,
+      "text": "Ziprasidone\n80mg\n",
+      "bbox": [
+        47.99879455566406,
+        392.70697021484375,
+        252.75631713867188,
+        401.4144592285156
+      ],
+      "text_sha256": "b157d3dcd78af8965a1d7e759b56c9c9bd61ea4454088a739132a7f029471abb"
+    },
+    {
+      "block_id": "page-0036-block-0030",
+      "order": 30,
+      "text": "~Unknown equivalence at time of writing.\n",
+      "bbox": [
+        47.99879455566406,
+        411.7044677734375,
+        183.3512725830078,
+        420.4119567871094
+      ],
+      "text_sha256": "34a74602826ead5725d96409ce55a315c3d1b8f37b7de23c2e9d559d2af4d9a3"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

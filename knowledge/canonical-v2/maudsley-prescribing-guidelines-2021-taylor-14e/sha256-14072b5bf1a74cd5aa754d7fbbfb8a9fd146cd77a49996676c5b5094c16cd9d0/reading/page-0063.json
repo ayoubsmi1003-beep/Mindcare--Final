@@ -1,0 +1,14 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0063",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 63,
+  "source_page_index": 62,
+  "repaired_text": "42    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nTreatment algorithms for schizophrenia\nFirst-episode schizophrenia\nEither:\nAgree on the choice of antipsychotic medication\nwith patient1 and/or carer\nOr, if not possible:\nStart second-generation antipsychotic medication2,3\nTreatment algorithm\nTitrate, as necessary, to minimum effective dose\n(see section on ‘minimum effective dose’–this chapter)\n* Any improvement is likely to be apparent within 2–3 weeks of receiving an effective dose.4 Most improvement \noccurs during this period.5 If no effect by 2–3 weeks, change dose or drug. If some response detected,\ncontinue for a total of 10 weeks before abandoning treatment.6\n** Relapse and readmission rates are vastly reduced by early use of depot/long-acting injections in this\npatient group.7–9 First episode patients will accept long-acting injections.10\n*** Early use of clozapine much more likely than anything else to be successful.6,11\nReluctance to use clozapine is associated with poor outcomes.12\nAdjust dosage regimen according to therapeutic\nresponse and tolerability/safety\nChange drug and\nfollow above process\nAssess over 2–3 weeks*\nClozapine***\nIf poor adherence related to poor \ntolerability, discuss with patient and\nchange to drug with more \nfavourable side-effect profile\nIf poor adherence related to other\nfactors, consider early use of\ndepot/long-acting injection**\nContinue at dose \nestablished as effective\nConsider switching to \ndepot/long-acting injection\nbefore discharge**\nEffective\nNo effect\nNot effective\nNot tolerated or \npoor medication\nadherence",
+  "repaired_text_sha256": "c12c2f01a7fd946d2b46e013bd566462d5bfba1098015c2eb2d0aa5a172671a7",
+  "raw_text_sha256": "027ed35a43c8b0a080605bf546fd36429c56ccb470b8e6e65d15af395337d5ba",
+  "repair_ids": [
+    "repair-000055"
+  ],
+  "raw_file": "raw/page-0063.json"
+}

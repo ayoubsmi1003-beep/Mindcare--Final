@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0326",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 326,
+  "source_page_index": 325,
+  "source_page_display": 326,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\nChapter 3\nDepression and anxiety disorders\nIntroduction to Depression\nDepression is widely recognised as a major public health problem around the world. \nThe mainstay of treatment is the prescription of antidepressants, although psychologi-\ncal treatments have a place as first-line alternative to antidepressants in milder forms of \ndepression.1 Other methods of treating depression (VNS,2 rTMS,3 etc.) are also used \nbut are not widely available.\nThe basic principles of prescribing are described here, along with a summary of NICE \nguidance.\nTable 3.1  Basic principles of prescribing in depression\n■\n■Discuss with the patient choice of drug and utility/availability of other, non-pharmacological treatments.\n■\n■Discuss with the patient likely outcomes, such as gradual relief from depressive symptoms over several weeks.\n■\n■Prescribe a dose of antidepressant (after titration, if necessary) that is likely to be effective.\n■\n■For a single episode, continue treatment for at least 6–9 months after resolution of symptoms (multiple epi-\nsodes may require longer).\n■\n■Withdraw antidepressants very gradually; always inform patients of the risk and nature of discontinuation symptoms.\nOfficial guidance on the treatment of depression\nNICE guidelines1 – a summary\n■\n■Antidepressants are not recommended as a first-line treatment in recent onset, mild \ndepression – active monitoring, individual guided self-help, CBT or exercise are \npreferred.\n",
+  "raw_text_sha256": "dd6059982219cbfa10b94104195511ca9676d578d14cff6b0c42b2290145d469",
+  "coordinates_sha256": "fa8c4fc298b43b86707bce8e267e8df8c3cefbc75e46109f345501e5bb7c9678",
+  "block_sequence_sha256": "e9d4fe1eb7a8299185fa4ea8486b415c989af5733cc32675daad4f14fff1a363",
+  "blocks": [
+    {
+      "block_id": "page-0326-block-0000",
+      "order": 0,
+      "text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\n",
+      "bbox": [
+        47.99980163574219,
+        585.1019897460938,
+        348.48388671875,
+        614.4779663085938
+      ],
+      "text_sha256": "c78fcd1eeb2357afb8eb5b97a8c858d68167bd409b9074c0da4e20c032bd5665"
+    },
+    {
+      "block_id": "page-0326-block-0001",
+      "order": 1,
+      "text": "Chapter 3\n",
+      "bbox": [
+        324.43121337890625,
+        59.724403381347656,
+        420.001220703125,
+        82.60040283203125
+      ],
+      "text_sha256": "ee79b5bf455f0c8aeeb83ccc075073ac9f4ab8a161f802ee2f50f29ebe83fe75"
+    },
+    {
+      "block_id": "page-0326-block-0002",
+      "order": 2,
+      "text": "Depression and anxiety disorders\n",
+      "bbox": [
+        76.07749938964844,
+        111.36316680908203,
+        420.00347900390625,
+        137.43316650390625
+      ],
+      "text_sha256": "c67d92bda29d8b3b98a23c55e92dfd0b47e8ae235bbecab3ab3a9c4df628468b"
+    },
+    {
+      "block_id": "page-0326-block-0003",
+      "order": 3,
+      "text": "Introduction to Depression\n",
+      "bbox": [
+        55.0,
+        229.43197631835938,
+        193.32498168945312,
+        242.46697998046875
+      ],
+      "text_sha256": "53de1ffd32cf241b4497118f13832f817132135e601f2ff254e45ae84e5e1121"
+    },
+    {
+      "block_id": "page-0326-block-0004",
+      "order": 4,
+      "text": "Depression is widely recognised as a major public health problem around the world. \nThe mainstay of treatment is the prescription of antidepressants, although psychologi-\ncal treatments have a place as first-line alternative to antidepressants in milder forms of \ndepression.1 Other methods of treating depression (VNS,2 rTMS,3 etc.) are also used \nbut are not widely available.\n",
+      "bbox": [
+        47.997406005859375,
+        248.2769775390625,
+        422.7774353027344,
+        307.9969787597656
+      ],
+      "text_sha256": "bf2b9ee7640096bb709e6a56dbd065224cb27e7d91e63522007972162dafb568"
+    },
+    {
+      "block_id": "page-0326-block-0005",
+      "order": 5,
+      "text": "The basic principles of prescribing are described here, along with a summary of NICE \nguidance.\n",
+      "bbox": [
+        47.997406005859375,
+        308.2769775390625,
+        422.7674255371094,
+        331.9969787597656
+      ],
+      "text_sha256": "da3f366c255bc6799c4266a73942f6f84cd5d45f9969b08c13cec9eb39fcdfbb"
+    },
+    {
+      "block_id": "page-0326-block-0006",
+      "order": 6,
+      "text": "Table 3.1  Basic principles of prescribing in depression\n",
+      "bbox": [
+        54.0,
+        355.09979248046875,
+        226.27496337890625,
+        363.9873046875
+      ],
+      "text_sha256": "8015093cb023983861fa1dafca37159674d11366c4e9bb106003be2bd2d86744"
+    },
+    {
+      "block_id": "page-0326-block-0007",
+      "order": 7,
+      "text": "■\n■Discuss with the patient choice of drug and utility/availability of other, non-pharmacological treatments.\n",
+      "bbox": [
+        53.999900817871094,
+        375.5148010253906,
+        393.8625183105469,
+        384.2222900390625
+      ],
+      "text_sha256": "3179c77aec3c3a7698ec43ae6b63d006fb9e99fa6808c9e3017622cb57971d55"
+    },
+    {
+      "block_id": "page-0326-block-0008",
+      "order": 8,
+      "text": "■\n■Discuss with the patient likely outcomes, such as gradual relief from depressive symptoms over several weeks.\n",
+      "bbox": [
+        53.999900817871094,
+        388.5148010253906,
+        412.61248779296875,
+        397.2222900390625
+      ],
+      "text_sha256": "9b9f25e154eaefaabe62906d2b49aefe136cf0eadfc6f9ced30a0fd3c6eaca19"
+    },
+    {
+      "block_id": "page-0326-block-0009",
+      "order": 9,
+      "text": "■\n■Prescribe a dose of antidepressant (after titration, if necessary) that is likely to be effective.\n",
+      "bbox": [
+        53.999900817871094,
+        401.5148010253906,
+        350.5049133300781,
+        410.2222900390625
+      ],
+      "text_sha256": "19aaa1887ee925b23dcb621d21d021d304e94ae4f97338c1e4439fd0c8d9ce9f"
+    },
+    {
+      "block_id": "page-0326-block-0010",
+      "order": 10,
+      "text": "■\n■For a single episode, continue treatment for at least 6–9 months after resolution of symptoms (multiple epi-\n",
+      "bbox": [
+        53.999900817871094,
+        414.5148010253906,
+        406.51513671875,
+        423.2222900390625
+      ],
+      "text_sha256": "8d34559f92c669203487209c43595b76a6ac62805e596f5c707fe5d7ebc1e665"
+    },
+    {
+      "block_id": "page-0326-block-0011",
+      "order": 11,
+      "text": "sodes may require longer).\n",
+      "bbox": [
+        63.0,
+        423.5148010253906,
+        147.3300018310547,
+        432.2222900390625
+      ],
+      "text_sha256": "ff47add607c46a38b4b18c1edbd6dc5083de2e396b1979fe1bfa2ae41028dc0b"
+    },
+    {
+      "block_id": "page-0326-block-0012",
+      "order": 12,
+      "text": "■\n■Withdraw antidepressants very gradually; always inform patients of the risk and nature of discontinuation symptoms.\n",
+      "bbox": [
+        53.999900817871094,
+        436.5148010253906,
+        419.5949401855469,
+        445.2222900390625
+      ],
+      "text_sha256": "427ac8022bdcff86198aae49507b5cd10f461440880e3d6709888bd3ffcda808"
+    },
+    {
+      "block_id": "page-0326-block-0013",
+      "order": 13,
+      "text": "Official guidance on the treatment of depression\n",
+      "bbox": [
+        54.99980163574219,
+        472.70758056640625,
+        306.8448181152344,
+        485.7425842285156
+      ],
+      "text_sha256": "3eec8c08c4e0d1ae3380ad63b1c3268e6db68ba2b678ce138aae9f0a53e330d2"
+    },
+    {
+      "block_id": "page-0326-block-0014",
+      "order": 14,
+      "text": "NICE guidelines1 – a summary\n",
+      "bbox": [
+        48.00380325317383,
+        496.70758056640625,
+        200.0976104736328,
+        509.74456787109375
+      ],
+      "text_sha256": "b41d42c9515a49c0c4b50daa0505139ddd17f91072cf0cc4626e953ecd4484d7"
+    },
+    {
+      "block_id": "page-0326-block-0015",
+      "order": 15,
+      "text": "■\n■Antidepressants are not recommended as a first-line treatment in recent onset, mild \n",
+      "bbox": [
+        47.999698638916016,
+        521.5525512695312,
+        422.769775390625,
+        533.2725830078125
+      ],
+      "text_sha256": "16d34be1ff0ecd533103efe49ce6483ccbed4b451928d81124867e1929992c3f"
+    },
+    {
+      "block_id": "page-0326-block-0016",
+      "order": 16,
+      "text": "depression – active monitoring, individual guided self-help, CBT or exercise are \npreferred.\n",
+      "bbox": [
+        56.99980163574219,
+        533.5525512695312,
+        422.81976318359375,
+        557.2725830078125
+      ],
+      "text_sha256": "48431507b066bc504add634facbb4392e7c5cb0f348e89aada3ab2b06e25881c"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

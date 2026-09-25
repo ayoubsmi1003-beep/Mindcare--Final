@@ -1,0 +1,395 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0069",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 69,
+  "source_page_index": 68,
+  "source_page_display": 69,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "48    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nNICE guidelines for the treatment of schizophrenia1\nThe 2009 NICE Guidelines1 differed importantly from previous guidelines. There was \nno longer an imperative to prescribe an ‘atypical’ as first-line treatment, and it was \nrecommended only that clozapine be ‘offered’ (rather than prescribed) after the prior \nfailure of two antipsychotics. These semantic differences pointed respectively towards \na disillusionment with SGAs and a recognition of the delay in prescribing clozapine in \npractice. Much emphasis was placed on involving patients and their carers in prescrib-\ning decisions. There is some evidence that this is rarely done2 but that it can be done.3 \nNew NICE Guidelines appeared in February 2014 and were reviewed again in March \n2019.\nNICE Guidelines – a summary\n■\n■For people with newly diagnosed schizophrenia, offer oral antipsychotic medication \nas well as psychological interventions (CBT or family intervention). Provide informa-\ntion and discuss the benefits and side-effect profile of each drug with the service user. \nThe choice of drug should be made by the service user and healthcare professional \ntogether, considering:\n■\n■the relative potential of individual antipsychotic drugs to cause extrapyramidal side \neffects (including akathisia), cardiovascular side effects, metabolic side effects \n(including weight gain), hormonal side effects (including raised prolactin levels) \nand other side effects (including unpleasant subjective experiences);\n■\n■the views of the carer where the service user agrees.\n■\n■Before starting antipsychotic medication, undertake and record the following base-\nline investigations:\n■\n■Weight\n■\n■Waist circumference\n■\n■Pulse and blood pressure\n■\n■Fasting blood glucose, HbA1C, blood lipid profile, prolactin\n■\n■Assessment of movement disorders\n■\n■Assessment of nutritional status, diet and level of physical activity\n■\n■Before starting antipsychotic medication, offer the person with schizophrenia an elec-\ntrocardiogram (ECG) if:\n■\n■specified in the SPC\n■\n■a physical examination has identified specific cardiovascular risk (such as diagnosis \nof high blood pressure)\n■\n■there is personal history of cardiovascular disease, or\n■\n■the service user is being admitted as an inpatient.\n■\n■Treatment with antipsychotic medication should be considered an explicit individual \ntherapeutic trial, and the following should be considered:\n■\n■Recording of indications and expected benefits and risks of oral antipsychotic medica-\ntion, and the expected time for a change in symptoms and appearance of side effects.\n■\n■At the start of treatment, give a dose at the lower end of the licensed range and \nslowly titrate upwards within the dose range given in the British National Formulary \n(BNF) or SPC.\n",
+  "raw_text_sha256": "7ba818ecfa5b22f259d77bcea39f8f13f4d6e3b12ef7a57bca69dd84eafc4039",
+  "coordinates_sha256": "8c614929886f13c23fa03ebf6915013f1ca3ccf779a3a23ce820bd79c4beb3cf",
+  "block_sequence_sha256": "23961a45e87799eff4112ca11a2a8327ccbe7ba586530b88ed11c0e066af2bf3",
+  "blocks": [
+    {
+      "block_id": "page-0069-block-0000",
+      "order": 0,
+      "text": "48    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "a516534a9100b513d4ae284e2fdbef0fa1443981abf7603889c1874b02da32c9"
+    },
+    {
+      "block_id": "page-0069-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0069-block-0002",
+      "order": 2,
+      "text": "NICE guidelines for the treatment of schizophrenia1\n",
+      "bbox": [
+        68.88909912109375,
+        66.06442260742188,
+        334.2742614746094,
+        79.09942626953125
+      ],
+      "text_sha256": "622a5b9d4e1c591da81377aa4b574127941449f8e31e6b564b72935c8be00a97"
+    },
+    {
+      "block_id": "page-0069-block-0003",
+      "order": 3,
+      "text": "The 2009 NICE Guidelines1 differed importantly from previous guidelines. There was \nno longer an imperative to prescribe an ‘atypical’ as first-line treatment, and it was \nrecommended only that clozapine be ‘offered’ (rather than prescribed) after the prior \nfailure of two antipsychotics. These semantic differences pointed respectively towards \na disillusionment with SGAs and a recognition of the delay in prescribing clozapine in \npractice. Much emphasis was placed on involving patients and their carers in prescrib-\ning decisions. There is some evidence that this is rarely done2 but that it can be done.3 \nNew NICE Guidelines appeared in February 2014 and were reviewed again in March \n2019.\n",
+      "bbox": [
+        61.88909912109375,
+        84.909423828125,
+        436.7098693847656,
+        192.62942504882812
+      ],
+      "text_sha256": "15eca96a517d7021f5ee31cdc3b78673dcf26b874531ab091b8d7ad36ed8841f"
+    },
+    {
+      "block_id": "page-0069-block-0004",
+      "order": 4,
+      "text": "NICE Guidelines – a summary\n",
+      "bbox": [
+        61.88909912109375,
+        210.06442260742188,
+        211.64306640625,
+        223.09942626953125
+      ],
+      "text_sha256": "9449fef8c2c05d2eb39d65f147fffbc65a316420218fbb111241ab43ce69c951"
+    },
+    {
+      "block_id": "page-0069-block-0005",
+      "order": 5,
+      "text": "■\n■For people with newly diagnosed schizophrenia, offer oral antipsychotic medication \n",
+      "bbox": [
+        61.888999938964844,
+        228.909423828125,
+        436.6789855957031,
+        240.62942504882812
+      ],
+      "text_sha256": "17132ac277df635febd3e9d8d0583890a21afca43fc08f5bef7a1b2b78ad1e5e"
+    },
+    {
+      "block_id": "page-0069-block-0006",
+      "order": 6,
+      "text": "as well as psychological interventions (CBT or family intervention). Provide informa-\ntion and discuss the benefits and side-effect profile of each drug with the service user. \nThe choice of drug should be made by the service user and healthcare professional \ntogether, considering:\n",
+      "bbox": [
+        70.88909912109375,
+        240.909423828125,
+        436.6589660644531,
+        288.6294250488281
+      ],
+      "text_sha256": "5e9cd23d4fecf233bd7881e73544637cf1c414486f7c85e87fd67355642f6a51"
+    },
+    {
+      "block_id": "page-0069-block-0007",
+      "order": 7,
+      "text": "■\n■the relative potential of individual antipsychotic drugs to cause extrapyramidal side \n",
+      "bbox": [
+        71.08399963378906,
+        288.909423828125,
+        436.6791687011719,
+        300.6294250488281
+      ],
+      "text_sha256": "5a2233f0b9b0bc78e1f2d3854b1b3e391b8626135c3f20444792a3aa3adc78f0"
+    },
+    {
+      "block_id": "page-0069-block-0008",
+      "order": 8,
+      "text": "effects (including akathisia), cardiovascular side effects, metabolic side effects \n(including weight gain), hormonal side effects (including raised prolactin levels) \nand other side effects (including unpleasant subjective experiences);\n",
+      "bbox": [
+        79.88909912109375,
+        300.909423828125,
+        436.6890563964844,
+        336.6294250488281
+      ],
+      "text_sha256": "5d0d1f39988809c50207c17f5c9668955a30a0aa1a89b65b83b84d2986ecefa4"
+    },
+    {
+      "block_id": "page-0069-block-0009",
+      "order": 9,
+      "text": "■\n■the views of the carer where the service user agrees.\n",
+      "bbox": [
+        71.08399963378906,
+        336.909423828125,
+        301.5491638183594,
+        348.6294250488281
+      ],
+      "text_sha256": "d20ede3e60f403c6bc094ed3a147c6a456025abb2a03dca318032454490581e1"
+    },
+    {
+      "block_id": "page-0069-block-0010",
+      "order": 10,
+      "text": "■\n■Before starting antipsychotic medication, undertake and record the following base-\n",
+      "bbox": [
+        61.888999938964844,
+        348.909423828125,
+        433.9089660644531,
+        360.6294250488281
+      ],
+      "text_sha256": "f43d299a96653203044dae4dab021f3f1cf3aa2b2c52986ddbe71d9f7d3941fd"
+    },
+    {
+      "block_id": "page-0069-block-0011",
+      "order": 11,
+      "text": "line investigations:\n",
+      "bbox": [
+        70.88909912109375,
+        360.909423828125,
+        150.90908813476562,
+        372.6294250488281
+      ],
+      "text_sha256": "509ab918ae1d865ff43592aedc37d4517ea084c58924ffc0118579ecf8e5783a"
+    },
+    {
+      "block_id": "page-0069-block-0012",
+      "order": 12,
+      "text": "■\n■Weight\n",
+      "bbox": [
+        71.08399963378906,
+        372.909423828125,
+        110.25910949707031,
+        384.6294250488281
+      ],
+      "text_sha256": "8b52eca9717f337c5888631a93bc4a2c1fe7f09b223983fb3a6b1459256b9b4a"
+    },
+    {
+      "block_id": "page-0069-block-0013",
+      "order": 13,
+      "text": "■\n■Waist circumference\n",
+      "bbox": [
+        71.08399963378906,
+        384.909423828125,
+        166.7790985107422,
+        396.6294250488281
+      ],
+      "text_sha256": "3240576f019d95cb863baa49c81accf8846121c61cec3923d9e2e5eeee59169b"
+    },
+    {
+      "block_id": "page-0069-block-0014",
+      "order": 14,
+      "text": "■\n■Pulse and blood pressure\n",
+      "bbox": [
+        71.08399963378906,
+        396.909423828125,
+        187.15907287597656,
+        408.6294250488281
+      ],
+      "text_sha256": "c6e551882ba9248e29a63e5363babd10e7a440ee50b51f8e75e93cb927fa5730"
+    },
+    {
+      "block_id": "page-0069-block-0015",
+      "order": 15,
+      "text": "■\n■Fasting blood glucose, HbA1C, blood lipid profile, prolactin\n",
+      "bbox": [
+        71.08399963378906,
+        408.909423828125,
+        334.67919921875,
+        423.0086669921875
+      ],
+      "text_sha256": "c257935a696b28ea433b9a9b7f7ad01b87b7ae724cbbab908d2752a4699acaaf"
+    },
+    {
+      "block_id": "page-0069-block-0016",
+      "order": 16,
+      "text": "■\n■Assessment of movement disorders\n",
+      "bbox": [
+        71.08399963378906,
+        420.909423828125,
+        230.40908813476562,
+        432.6294250488281
+      ],
+      "text_sha256": "3c437de24cfc12e9d3de51e157c42d01db62454e7ef025773e57be2422ad86ae"
+    },
+    {
+      "block_id": "page-0069-block-0017",
+      "order": 17,
+      "text": "■\n■Assessment of nutritional status, diet and level of physical activity\n",
+      "bbox": [
+        71.08399963378906,
+        432.909423828125,
+        363.42901611328125,
+        444.6294250488281
+      ],
+      "text_sha256": "f26fa1c85b05a579276533cfa3fdb518f46e7078fd5b83f955fb08d3ece83b65"
+    },
+    {
+      "block_id": "page-0069-block-0018",
+      "order": 18,
+      "text": "■\n■Before starting antipsychotic medication, offer the person with schizophrenia an elec-\n",
+      "bbox": [
+        61.888999938964844,
+        444.909423828125,
+        433.9290466308594,
+        456.6294250488281
+      ],
+      "text_sha256": "629317e4d0bafad9544c741b3d5e650d6f3a452350a959fb3be7a29908cab53f"
+    },
+    {
+      "block_id": "page-0069-block-0019",
+      "order": 19,
+      "text": "trocardiogram (ECG) if:\n",
+      "bbox": [
+        70.88909912109375,
+        456.909423828125,
+        175.32908630371094,
+        468.6294250488281
+      ],
+      "text_sha256": "61b8a0de9087832ed81b61529db2049bb4346a19afd05b9c6e75071d7ac08114"
+    },
+    {
+      "block_id": "page-0069-block-0020",
+      "order": 20,
+      "text": "■\n■specified in the SPC\n",
+      "bbox": [
+        71.08399963378906,
+        468.909423828125,
+        164.8990936279297,
+        480.6294250488281
+      ],
+      "text_sha256": "cad74c0700f1357cbea57d508a20c4379c11bc74d8488c53e9bb66a4756af1af"
+    },
+    {
+      "block_id": "page-0069-block-0021",
+      "order": 21,
+      "text": "■\n■a physical examination has identified specific cardiovascular risk (such as diagnosis \n",
+      "bbox": [
+        71.08399963378906,
+        480.909423828125,
+        436.6391906738281,
+        492.6294250488281
+      ],
+      "text_sha256": "7e0c641f9bf7855b7cf27ab41667fd1b335459852e39c1a1afb4099f49e7c730"
+    },
+    {
+      "block_id": "page-0069-block-0022",
+      "order": 22,
+      "text": "of high blood pressure)\n",
+      "bbox": [
+        79.88909912109375,
+        492.909423828125,
+        179.9290771484375,
+        504.6294250488281
+      ],
+      "text_sha256": "16166afa9364f79ca79d23979c36684553e396eba4580b15cf3a0a2e7b19b796"
+    },
+    {
+      "block_id": "page-0069-block-0023",
+      "order": 23,
+      "text": "■\n■there is personal history of cardiovascular disease, or\n",
+      "bbox": [
+        71.08399963378906,
+        504.909423828125,
+        307.9091796875,
+        516.6294555664062
+      ],
+      "text_sha256": "7581e78dc2b335bf69008d87c0a7955b7888cebd41e8fc2504fe07a884ee0b12"
+    },
+    {
+      "block_id": "page-0069-block-0024",
+      "order": 24,
+      "text": "■\n■the service user is being admitted as an inpatient.\n",
+      "bbox": [
+        71.08399963378906,
+        516.909423828125,
+        291.0190734863281,
+        528.6294555664062
+      ],
+      "text_sha256": "4fa987c80c63371eec964a2625ca5b1a8e7bd31be4313b51d5f89accdd5f44c1"
+    },
+    {
+      "block_id": "page-0069-block-0025",
+      "order": 25,
+      "text": "■\n■Treatment with antipsychotic medication should be considered an explicit individual \n",
+      "bbox": [
+        61.888999938964844,
+        528.909423828125,
+        436.6690979003906,
+        540.6294555664062
+      ],
+      "text_sha256": "23abb432e8097c732f3df587c0b9850441a344c9d5336c6c9120b6902873f660"
+    },
+    {
+      "block_id": "page-0069-block-0026",
+      "order": 26,
+      "text": "therapeutic trial, and the following should be considered:\n",
+      "bbox": [
+        70.88909912109375,
+        540.909423828125,
+        317.2591247558594,
+        552.6294555664062
+      ],
+      "text_sha256": "5b1f732ff24ee01c66ef6f1bdad2e832d7f3ff9fd0dff894230ce044116591a3"
+    },
+    {
+      "block_id": "page-0069-block-0027",
+      "order": 27,
+      "text": "■\n■Recording of indications and expected benefits and risks of oral antipsychotic medica-\n",
+      "bbox": [
+        71.08399963378906,
+        552.909423828125,
+        433.9192199707031,
+        564.6294555664062
+      ],
+      "text_sha256": "2e76201b28e5d247107f08c71b84d948275695c64bd2ad18fe1e0a471e3101ab"
+    },
+    {
+      "block_id": "page-0069-block-0028",
+      "order": 28,
+      "text": "tion, and the expected time for a change in symptoms and appearance of side effects.\n",
+      "bbox": [
+        79.88909912109375,
+        564.909423828125,
+        432.6293029785156,
+        576.6294555664062
+      ],
+      "text_sha256": "07c105f21e95df1403c4d2deb6db2925ea4cbb3b80c3d99230db7ae6f3dd3fe3"
+    },
+    {
+      "block_id": "page-0069-block-0029",
+      "order": 29,
+      "text": "■\n■At the start of treatment, give a dose at the lower end of the licensed range and \n",
+      "bbox": [
+        71.08399963378906,
+        576.909423828125,
+        436.6189270019531,
+        588.6294555664062
+      ],
+      "text_sha256": "f2c03347ef6218e715ea3993e999a5b37dee8731b299d00f5175ab9d44653387"
+    },
+    {
+      "block_id": "page-0069-block-0030",
+      "order": 30,
+      "text": "slowly titrate upwards within the dose range given in the British National Formulary \n(BNF) or SPC.\n",
+      "bbox": [
+        79.88909912109375,
+        588.909423828125,
+        436.6790466308594,
+        612.6294555664062
+      ],
+      "text_sha256": "2eca16a89fa28933414641935665bbd9b72f01e0da7a09caa61d595e7e8290b0"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

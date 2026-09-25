@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0310",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 310,
+  "source_page_index": 309,
+  "source_page_display": 310,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Bipolar disorder    289\nCHAPTER 2\nTable 2.9  Established treatments (listed in alphabetical order)\nDrug/regime\nComments\nLamotrigine1,13–19\nLamotrigine appears to be effective both as a treatment for bipolar depression \nand as prophylaxis against further episodes. It does not induce switching or \nrapid cycling. It is as effective as citalopram and causes less weight gain than \nlithium. Overall, the effect of lamotrigine is difficult to be clear about with \nnumerous equivocal trials20,21 that perhaps failed to allow for the time taken for \nfull titration of the drug. It may be useful as an adjunct to lithium22 or as an \nalternative to it in pregnancy.23 A later trial24 suggests robust efficacy when \ncombined with quetiapine. There is a small antimanic effect of lamotrigine.25\nTreatment is somewhat complicated by the small risk of rash, which is \nassociated with speed of dose titration. The necessity for titration may limit \nclinical utility.\nA further complication is the question of dose: 50mg/day has efficacy, but \n200mg/day is probably better. In the US, doses of up to 1200mg/day have been \nused (mean around 250mg/day). Plasma concentrations (only the range for \nanticonvulsant effects is known) may guide the need for higher doses.\nLithium1,13,26–28\nLithium is probably effective in treating bipolar depression but supporting data \nare methodologically questionable.29 There is some evidence that lithium \nprevents depressive relapse but its effects on manic relapse are considered more \nrobust. Fairly strong support for lithium in reducing suicidality in bipolar \ndisorder30,31\nLurasidone\nThree RCTs show good effect for lurasidone either alone32 or as an adjunct to \nmood stabilisers.33,34 A further RCT reported good outcome in bipolar \ndepression with sub-syndromal hypomanic symptoms.35 Pooled analysis suggests \nresponse is dose related.36 A network meta-analysis suggests that lurasidone is \nmore effective than aripiprazole and ziprasidone but not quetiapine or \nolanzapine.37\nMood stabiliser + \nantidepressant38–44\nAntidepressants are still widely used in bipolar depression, particularly for \nbreakthrough episodes occurring in those on mood stabilisers. They have been \nassumed to be effective, although there is a risk of cycle acceleration and/or \nswitching. Studies suggest that mood stabilisers alone are just as effective as \nmood stabilisers–antidepressant combination although sub-analysis suggested \nhigher doses of antidepressants may be effective.45–47 Tricyclics and MAOIs are \nusually best avoided. SSRIs are generally recommended if an antidepressant is to \nbe prescribed. Venlafaxine and bupropion (amfebutamone) have also been \nused. Venlafaxine may be more likely to induce a switch to mania.48,49\nContinuing antidepressant treatment after resolution of symptoms may protect \nagainst depressive relapse,50,51 although only in the absence of a mood \nstabiliser.52 At the time of writing, there is no consensus on whether or not to \ncontinue antidepressants long term.53 The most recent findings suggest that \nswitch rates are no higher than with sertraline alone than with \nlithium + sertraline.54\nSome guidelines recommend the use of antidepressant in bipolar II depression,11 \nand there is evidence that sertraline does not increase switch rates in these \npatients.54\n(Continued)\n",
+  "raw_text_sha256": "cf7c59a9a39d80efa52980a01407599380b19c20c53ae5579b8fef4ea9df9741",
+  "coordinates_sha256": "901139be386b334ff059867946c2fd00fff459058a0a0d22a0906b69da1f5e3e",
+  "block_sequence_sha256": "4dd567f8f5313a1431080ae9f4b5f86d4e860f600b09aa5c7a70539e7b1915bd",
+  "blocks": [
+    {
+      "block_id": "page-0310-block-0000",
+      "order": 0,
+      "text": "Bipolar disorder    289\n",
+      "bbox": [
+        326.5046081542969,
+        31.395221710205078,
+        420.0005798339844,
+        41.0272216796875
+      ],
+      "text_sha256": "943d8f4e9c9f5c61f20524ac33549303e1caa15821898a937ec5116c188f7e28"
+    },
+    {
+      "block_id": "page-0310-block-0001",
+      "order": 1,
+      "text": "CHAPTER 2\n",
+      "bbox": [
+        454.4096984863281,
+        146.3472900390625,
+        463.88970947265625,
+        187.6912841796875
+      ],
+      "text_sha256": "5eaa1f2591abe1a1b2f7664fa3de7ff01a032d44ee83fa594c7852135d4287aa"
+    },
+    {
+      "block_id": "page-0310-block-0002",
+      "order": 2,
+      "text": "Table 2.9  Established treatments (listed in alphabetical order)\n",
+      "bbox": [
+        54.00040054321289,
+        70.08790588378906,
+        254.59536743164062,
+        78.97540283203125
+      ],
+      "text_sha256": "e35d0f3040a85cb619cf9f3b9724994e294bd14ce6225dbfa20fd0d2d4f50b57"
+    },
+    {
+      "block_id": "page-0310-block-0003",
+      "order": 3,
+      "text": "Drug/regime\nComments\n",
+      "bbox": [
+        52.00040054321289,
+        87.96290588378906,
+        195.49790954589844,
+        96.85040283203125
+      ],
+      "text_sha256": "7a9329b6103c48a6cb1b9f3e034b2825b42863acc24613b19e0d45b2d61d89fb"
+    },
+    {
+      "block_id": "page-0310-block-0004",
+      "order": 4,
+      "text": "Lamotrigine1,13–19\nLamotrigine appears to be effective both as a treatment for bipolar depression \nand as prophylaxis against further episodes. It does not induce switching or \nrapid cycling. It is as effective as citalopram and causes less weight gain than \nlithium. Overall, the effect of lamotrigine is difficult to be clear about with \nnumerous equivocal trials20,21 that perhaps failed to allow for the time taken for \nfull titration of the drug. It may be useful as an adjunct to lithium22 or as an \nalternative to it in pregnancy.23 A later trial24 suggests robust efficacy when \ncombined with quetiapine. There is a small antimanic effect of lamotrigine.25\n",
+      "bbox": [
+        52.000404357910156,
+        103.7654037475586,
+        413.40948486328125,
+        182.472900390625
+      ],
+      "text_sha256": "0748ccbd67ebd24ef27f028ed778bbb0e8759f7525acf4eebcc16e50b8ba7997"
+    },
+    {
+      "block_id": "page-0310-block-0005",
+      "order": 5,
+      "text": "Treatment is somewhat complicated by the small risk of rash, which is \nassociated with speed of dose titration. The necessity for titration may limit \nclinical utility.\n",
+      "bbox": [
+        158.00039672851562,
+        186.7678985595703,
+        399.6729431152344,
+        215.47039794921875
+      ],
+      "text_sha256": "124840d25ea613e5efe097363f0e87cca9375cd1480e8a43adbbf2e1cd5c8979"
+    },
+    {
+      "block_id": "page-0310-block-0006",
+      "order": 6,
+      "text": "A further complication is the question of dose: 50mg/day has efficacy, but \n200mg/day is probably better. In the US, doses of up to 1200mg/day have been \nused (mean around 250mg/day). Plasma concentrations (only the range for \nanticonvulsant effects is known) may guide the need for higher doses.\n",
+      "bbox": [
+        158.00039672851562,
+        219.76039123535156,
+        414.343017578125,
+        258.46038818359375
+      ],
+      "text_sha256": "21799982d1d99119354f2922342a47db8a0143d8a8602d72fc2c34a405831c7c"
+    },
+    {
+      "block_id": "page-0310-block-0007",
+      "order": 7,
+      "text": "Lithium1,13,26–28\nLithium is probably effective in treating bipolar depression but supporting data \nare methodologically questionable.29 There is some evidence that lithium \nprevents depressive relapse but its effects on manic relapse are considered more \nrobust. Fairly strong support for lithium in reducing suicidality in bipolar \ndisorder30,31\n",
+      "bbox": [
+        52.002891540527344,
+        265.3753967285156,
+        414.8539123535156,
+        314.0928955078125
+      ],
+      "text_sha256": "38f750bc41820900eed2e59e17d856a1b88bb69bb2b9cdfe5b6c809bcad92559"
+    },
+    {
+      "block_id": "page-0310-block-0008",
+      "order": 8,
+      "text": "Lurasidone\nThree RCTs show good effect for lurasidone either alone32 or as an adjunct to \nmood stabilisers.33,34 A further RCT reported good outcome in bipolar \ndepression with sub-syndromal hypomanic symptoms.35 Pooled analysis suggests \nresponse is dose related.36 A network meta-analysis suggests that lurasidone is \nmore effective than aripiprazole and ziprasidone but not quetiapine or \nolanzapine.37\n",
+      "bbox": [
+        52.00040054321289,
+        321.0179138183594,
+        417.07763671875,
+        379.72039794921875
+      ],
+      "text_sha256": "158844c29833583572ca1dafc018466b394de7260478966ec6a24234e7b15080"
+    },
+    {
+      "block_id": "page-0310-block-0009",
+      "order": 9,
+      "text": "Mood stabiliser + \nantidepressant38–44\n",
+      "bbox": [
+        52.00040054321289,
+        386.6429138183594,
+        110.44827270507812,
+        405.347900390625
+      ],
+      "text_sha256": "8c545a02fdd4afc2790c1845ebf065834eccaf7873c47e0864d301358223516f"
+    },
+    {
+      "block_id": "page-0310-block-0010",
+      "order": 10,
+      "text": "Antidepressants are still widely used in bipolar depression, particularly for \nbreakthrough episodes occurring in those on mood stabilisers. They have been \nassumed to be effective, although there is a risk of cycle acceleration and/or \nswitching. Studies suggest that mood stabilisers alone are just as effective as \nmood stabilisers–antidepressant combination although sub-analysis suggested \nhigher doses of antidepressants may be effective.45–47 Tricyclics and MAOIs are \nusually best avoided. SSRIs are generally recommended if an antidepressant is to \nbe prescribed. Venlafaxine and bupropion (amfebutamone) have also been \nused. Venlafaxine may be more likely to induce a switch to mania.48,49\n",
+      "bbox": [
+        157.99960327148438,
+        386.6429138183594,
+        415.9621887207031,
+        475.3428955078125
+      ],
+      "text_sha256": "9354cf74be3d994f7dec02c9239045da9d8d00633a9822a35852fea735495fae"
+    },
+    {
+      "block_id": "page-0310-block-0011",
+      "order": 11,
+      "text": "Continuing antidepressant treatment after resolution of symptoms may protect \nagainst depressive relapse,50,51 although only in the absence of a mood \nstabiliser.52 At the time of writing, there is no consensus on whether or not to \ncontinue antidepressants long term.53 The most recent findings suggest that \nswitch rates are no higher than with sertraline alone than with \nlithium + sertraline.54\n",
+      "bbox": [
+        157.99710083007812,
+        479.6429138183594,
+        412.4753723144531,
+        538.3453979492188
+      ],
+      "text_sha256": "fdc87cbf049d6298774601b620c0c0711b41cf240b021b96ee8b8032f2dad41f"
+    },
+    {
+      "block_id": "page-0310-block-0012",
+      "order": 12,
+      "text": "Some guidelines recommend the use of antidepressant in bipolar II depression,11 \nand there is evidence that sertraline does not increase switch rates in these \npatients.54\n",
+      "bbox": [
+        158.00039672851562,
+        542.6428833007812,
+        415.8428955078125,
+        571.3453979492188
+      ],
+      "text_sha256": "9ff141f8407b314046b124904e7d080014fa99d9679bdcb8b323c934f6249dc4"
+    },
+    {
+      "block_id": "page-0310-block-0013",
+      "order": 13,
+      "text": "(Continued)\n",
+      "bbox": [
+        382.48541259765625,
+        577.59130859375,
+        420.0004577636719,
+        586.3438110351562
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

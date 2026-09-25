@@ -1,0 +1,275 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0581",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 581,
+  "source_page_index": 580,
+  "source_page_display": 581,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "560    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  5\n■\n■Because of lack of information on long-term safety and possible improvement in \nsymptoms with age and learning, consider discontinuing treatment after a period of \nstable improvement. A trial of medication should be started at a period of low stress/\ndemands. Discontinuation should also be considered if the medication is no longer \nworking or the side effects are too severe. Taper SSRIs slowly (e.g. 25–50% weekly) \nto minimize risk of discontinuation symptoms. Monitor closely for recurrence of \nsymptoms/relapse and, if deterioration is noted, promptly restart medication.\nSpecific issues\nTreatment of anxiety disorders in pre-school children must routinely focus on psycho-\ntherapy. In rare cases when a very young child has extreme ongoing symptoms and \nimpairment, clinicians should reconsider diagnosis and case formulation, and reassess \nthe adequacy of the psychotherapy trial. There are no RCTs of pharmacological inter-\nventions for anxiety in pre-school children, but case reports suggest potential benefit of \nfluoxetine and buspirone.15 Therefore, any prescription in pre-school children is \noff-label.16\nReferences\n\t 1.\t Kessler RC, et al. Lifetime prevalence and age-of-onset distributions of DSM-IV disorders in the National Comorbidity Survey Replication. \nArch Gen Psychiatry 2005; 62:593–602.\n\t 2.\t Merikangas KR, et al. Lifetime prevalence of mental disorders in U.S. adolescents: results from the National Comorbidity Survey Replication–\nAdolescent Supplement (NCS-A). J Am Acad Child Adolesc Psychiatry 2010; 49:980–989.\n\t 3.\t Simonoff E, et al. Psychiatric disorders in children with autism spectrum disorders: prevalence, comorbidity, and associated factors in a \npopulation-derived sample. J Am Acad Child Adolesc Psychiatry 2008; 47:921–929.\n\t 4.\t Danese A, et al. Adverse childhood experiences, allostasis, allostatic load, and age-related disease. Physiol Behav 2012; 106:29–39.\n\t 5.\t Pine DS, et al. The risk for early-adulthood anxiety and depressive disorders in adolescents with anxiety and depressive disorders. Arch Gen \nPsychiatry 1998; 55:56–64.\n\t 6.\t National Institute for Health and Clinical Excellence. Social anxiety disorder: recognition, assessment and treatment. Clinical Guidance 159 \n2013 (last checked June 2017); https://www.nice.org.uk/guidance/cg159.\n\t 7.\t Connolly SD, et al. Practice parameter for the assessment and treatment of children and adolescents with anxiety disorders. J Am Acad Child \nAdolesc Psychiatry 2007; 46:267–283.\n\t 8.\t Dobson ET, et al. Efficacy and tolerability of pharmacotherapy for pediatric anxiety disorders: a network meta-analysis. J Clin Psychiatry \n2019; 80:17r12064.\n\t 9.\t Walkup JT, et al. Cognitive behavioral therapy, sertraline, or a combination in childhood anxiety. N Engl J Med 2008; 359:2753–2766.\n\t10.\t Wang Z, et al. Comparative effectiveness and safety of cognitive behavioral therapy and pharmacotherapy for childhood anxiety disorders: \na systematic review and meta-analysis. JAMA Pediatrics 2017; 171:1049–1056.\n\t11.\t Strawn JR, et al. The impact of antidepressant dose and class on treatment response in pediatric anxiety disorders: a meta-analysis. J Am Acad \nChild Adolesc Psychiatry 2018; 57:235–244.e232.\n\t12.\t Solmi M, et al. Safety of 80 antidepressants, antipsychotics, anti-attention-deficit/hyperactivity medications and mood stabilizers in children \nand adolescents with psychiatric disorders: a large scale systematic meta-review of 78 adverse effects. World Psychiatry Off J World \nPsychiatric Assoc (WPA) 2020; 19:214–232.\n\t13.\t Strawn JR, et al. Buspirone in children and adolescents with anxiety: a review and Bayesian analysis of abandoned randomized controlled \ntrials. J Child Adolesc Psychopharmacol 2018; 28:2–9.\n\t14.\t Strawn JR, et al. Extended release guanfacine in pediatric anxiety disorders: a pilot, randomized, placebo-controlled trial. J Child Adolesc \nPsychopharmacol 2017; 27:29–37.\n\t15.\t Gleason MM, et al. Psychopharmacological treatment for very young children: contexts and guidelines. J Am Acad Child Adolesc Psychiatry \n2007; 46:1532–1572.\n\t16.\t Mohatt J, et al. Treatment of separation, generalized, and social anxiety disorders in youths. Am J Psychiatry 2014; 171:741–748.\n",
+  "raw_text_sha256": "a41db9576dd2dabb9529d93c5ef98994299b46750849b0c55232207ed79e13f0",
+  "coordinates_sha256": "60ed2433f3e01ab0f42e1cf7fc5ac3ef754a7637706a9e8d7060fe2475e1cd16",
+  "block_sequence_sha256": "6fcc070eaad69f138f227086952e2fedbdc2e1f6f5a28c12e8187b72593ca797",
+  "blocks": [
+    {
+      "block_id": "page-0581-block-0000",
+      "order": 0,
+      "text": "560    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "f187a7dd47ca008f978c305e7676e7717d0dcf1f495e8f1d29840075ff6c76de"
+    },
+    {
+      "block_id": "page-0581-block-0001",
+      "order": 1,
+      "text": "CHAPTER  5\n",
+      "bbox": [
+        18.520000457763672,
+        338.22650146484375,
+        28.0,
+        381.79449462890625
+      ],
+      "text_sha256": "4086e0916f45ec531cc17b8c611334eb2b1ef26051ba536579b8ef3c22c1648d"
+    },
+    {
+      "block_id": "page-0581-block-0002",
+      "order": 2,
+      "text": "■\n■Because of lack of information on long-term safety and possible improvement in \n",
+      "bbox": [
+        71.08489990234375,
+        62.55029296875,
+        436.69012451171875,
+        74.27029418945312
+      ],
+      "text_sha256": "7e805265c37046d7f5c5e8e126f4552939005698c90fcdadfe21786f44356d79"
+    },
+    {
+      "block_id": "page-0581-block-0003",
+      "order": 3,
+      "text": "symptoms with age and learning, consider discontinuing treatment after a period of \nstable improvement. A trial of medication should be started at a period of low stress/\ndemands. Discontinuation should also be considered if the medication is no longer \nworking or the side effects are too severe. Taper SSRIs slowly (e.g. 25–50% weekly) \nto minimize risk of discontinuation symptoms. Monitor closely for recurrence of \nsymptoms/relapse and, if deterioration is noted, promptly restart medication.\n",
+      "bbox": [
+        79.88999938964844,
+        74.55029296875,
+        436.70001220703125,
+        146.27029418945312
+      ],
+      "text_sha256": "41d95a8a67b2ab7b1d11503434f511ecd3b4e859367cd397c298067fcb2aea2d"
+    },
+    {
+      "block_id": "page-0581-block-0004",
+      "order": 4,
+      "text": "Specific issues\n",
+      "bbox": [
+        61.88999938964844,
+        164.64028930664062,
+        128.0,
+        176.49029541015625
+      ],
+      "text_sha256": "08ec43892097d1c1cbb5595df4a8478c23551838fe144d4ac47b07e28636a7c9"
+    },
+    {
+      "block_id": "page-0581-block-0005",
+      "order": 5,
+      "text": "Treatment of anxiety disorders in pre-school children must routinely focus on psycho-\ntherapy. In rare cases when a very young child has extreme ongoing symptoms and \nimpairment, clinicians should reconsider diagnosis and case formulation, and reassess \nthe adequacy of the psychotherapy trial. There are no RCTs of pharmacological inter-\nventions for anxiety in pre-school children, but case reports suggest potential benefit of \nfluoxetine and buspirone.15 Therefore, any prescription in pre-school children is \noff-label.16\n",
+      "bbox": [
+        61.889984130859375,
+        182.55029296875,
+        436.6899719238281,
+        266.2702941894531
+      ],
+      "text_sha256": "1cc3d531c3bd37337125e7c6fa0a71117aad1a5d20283bec58659f7b684206cd"
+    },
+    {
+      "block_id": "page-0581-block-0006",
+      "order": 6,
+      "text": "References\n",
+      "bbox": [
+        61.88999938964844,
+        283.7052917480469,
+        117.92399597167969,
+        296.74029541015625
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0581-block-0007",
+      "order": 7,
+      "text": "\t 1.\t Kessler RC, et al. Lifetime prevalence and age-of-onset distributions of DSM-IV disorders in the National Comorbidity Survey Replication. \n",
+      "bbox": [
+        61.88999938964844,
+        301.8262939453125,
+        435.60009765625,
+        308.8583068847656
+      ],
+      "text_sha256": "900984be72b219a7e48402eb849dfcb77bcc8ea0ea66f3bdcef7636245afafe9"
+    },
+    {
+      "block_id": "page-0581-block-0008",
+      "order": 8,
+      "text": "Arch Gen Psychiatry 2005; 62:593–602.\n\t 2.\t Merikangas KR, et al. Lifetime prevalence of mental disorders in U.S. adolescents: results from the National Comorbidity Survey Replication–\n",
+      "bbox": [
+        61.895999908447266,
+        310.6822814941406,
+        433.8720397949219,
+        326.8583068847656
+      ],
+      "text_sha256": "4b8463ff902af2537c91fe9f493ede6b038c7876c7bb4ff7615136faf71234c2"
+    },
+    {
+      "block_id": "page-0581-block-0009",
+      "order": 9,
+      "text": "Adolescent Supplement (NCS-A). J Am Acad Child Adolesc Psychiatry 2010; 49:980–989.\n\t 3.\t Simonoff E, et al. Psychiatric disorders in children with autism spectrum disorders: prevalence, comorbidity, and associated factors in a \n",
+      "bbox": [
+        61.902000427246094,
+        328.6822814941406,
+        435.5941162109375,
+        344.8583068847656
+      ],
+      "text_sha256": "2d372dbfdaf6ff7ed94c1c03a465e397d734e2c8d7e92a4cba63d141cd335116"
+    },
+    {
+      "block_id": "page-0581-block-0010",
+      "order": 10,
+      "text": "population-derived sample. J Am Acad Child Adolesc Psychiatry 2008; 47:921–929.\n\t 4.\t Danese A, et al. Adverse childhood experiences, allostasis, allostatic load, and age-related disease. Physiol Behav 2012; 106:29–39.\n\t 5.\t Pine DS, et al. The risk for early-adulthood anxiety and depressive disorders in adolescents with anxiety and depressive disorders. Arch Gen \n",
+      "bbox": [
+        61.90800094604492,
+        346.6822814941406,
+        435.59405517578125,
+        371.8583068847656
+      ],
+      "text_sha256": "66d6c6fc2d6ad5bb156e0703fd543bc7b3e86683d164ae616bcdfb4a1b3c4f1a"
+    },
+    {
+      "block_id": "page-0581-block-0011",
+      "order": 11,
+      "text": "Psychiatry 1998; 55:56–64.\n\t 6.\t National Institute for Health and Clinical Excellence. Social anxiety disorder: recognition, assessment and treatment. Clinical Guidance 159 \n",
+      "bbox": [
+        61.91999816894531,
+        373.6822814941406,
+        435.5881652832031,
+        389.8583068847656
+      ],
+      "text_sha256": "aa397d3a6f33eac6e4bcc5e1ea55747abbde5a6399acece4e659ae80bbacb119"
+    },
+    {
+      "block_id": "page-0581-block-0012",
+      "order": 12,
+      "text": "2013 (last checked June 2017); https://www.nice.org.uk/guidance/cg159.\n\t 7.\t Connolly SD, et al. Practice parameter for the assessment and treatment of children and adolescents with anxiety disorders. J Am Acad Child \n",
+      "bbox": [
+        61.92599868774414,
+        391.8262939453125,
+        435.5458984375,
+        407.8583068847656
+      ],
+      "text_sha256": "ec3f19932e0ff7fb38ede10ef092ad54289b7ab9808df73319f0836926335e78"
+    },
+    {
+      "block_id": "page-0581-block-0013",
+      "order": 13,
+      "text": "Adolesc Psychiatry 2007; 46:267–283.\n\t 8.\t Dobson ET, et al. Efficacy and tolerability of pharmacotherapy for pediatric anxiety disorders: a network meta-analysis. J Clin Psychiatry \n",
+      "bbox": [
+        61.93199920654297,
+        409.6822814941406,
+        435.6419677734375,
+        425.8583068847656
+      ],
+      "text_sha256": "a839241e29a765dfb8dc0510d43f6218ab2f57efbe1a2030a8d6eb18c7c6d416"
+    },
+    {
+      "block_id": "page-0581-block-0014",
+      "order": 14,
+      "text": "2019; 80:17r12064.\n\t 9.\t Walkup JT, et al. Cognitive behavioral therapy, sertraline, or a combination in childhood anxiety. N Engl J Med 2008; 359:2753–2766.\n\t10.\t Wang Z, et al. Comparative effectiveness and safety of cognitive behavioral therapy and pharmacotherapy for childhood anxiety disorders: \n",
+      "bbox": [
+        61.9379997253418,
+        427.6822814941406,
+        435.6421203613281,
+        452.8583068847656
+      ],
+      "text_sha256": "b7d2bbe4a0099ee0fae5b7d4a55316bb495dab1e0a5368777d5403cb30eb41ac"
+    },
+    {
+      "block_id": "page-0581-block-0015",
+      "order": 15,
+      "text": "a systematic review and meta-analysis. JAMA Pediatrics 2017; 171:1049–1056.\n\t11.\t Strawn JR, et al. The impact of antidepressant dose and class on treatment response in pediatric anxiety disorders: a meta-analysis. J Am Acad \n",
+      "bbox": [
+        61.95000076293945,
+        454.6822814941406,
+        435.65411376953125,
+        470.8583068847656
+      ],
+      "text_sha256": "f4432524ca300bd2f36f10c4c7f6d5b8e3a058cab234dd1428da3ab072516b39"
+    },
+    {
+      "block_id": "page-0581-block-0016",
+      "order": 16,
+      "text": "Child Adolesc Psychiatry 2018; 57:235–244.e232.\n\t12.\t Solmi M, et al. Safety of 80 antidepressants, antipsychotics, anti-attention-deficit/hyperactivity medications and mood stabilizers in children \n",
+      "bbox": [
+        61.95600128173828,
+        472.6822814941406,
+        435.6239013671875,
+        488.8583068847656
+      ],
+      "text_sha256": "fb88632c6a6f37962c446babba0ff1628922d7a81fd5fb9206b72aef74484b98"
+    },
+    {
+      "block_id": "page-0581-block-0017",
+      "order": 17,
+      "text": "and adolescents with psychiatric disorders: a large scale systematic meta-review of 78 adverse effects. World Psychiatry Off J World \nPsychiatric Assoc (WPA) 2020; 19:214–232.\n\t13.\t Strawn JR, et al. Buspirone in children and adolescents with anxiety: a review and Bayesian analysis of abandoned randomized controlled \n",
+      "bbox": [
+        61.96200180053711,
+        490.8262939453125,
+        435.630126953125,
+        515.8582763671875
+      ],
+      "text_sha256": "31cbc310fe3a2874309cde9a60d4bc0061a6184e9e495ebb3344177918fb4275"
+    },
+    {
+      "block_id": "page-0581-block-0018",
+      "order": 18,
+      "text": "trials. J Child Adolesc Psychopharmacol 2018; 28:2–9.\n\t14.\t Strawn JR, et al. Extended release guanfacine in pediatric anxiety disorders: a pilot, randomized, placebo-controlled trial. J Child Adolesc \n",
+      "bbox": [
+        61.96799850463867,
+        517.6823120117188,
+        435.6420593261719,
+        533.8582763671875
+      ],
+      "text_sha256": "e6b0b7dbdb9580d737d3259838ba194272557de5e00edb5d53e3d437cba5023b"
+    },
+    {
+      "block_id": "page-0581-block-0019",
+      "order": 19,
+      "text": "Psychopharmacol 2017; 27:29–37.\n\t15.\t Gleason MM, et al. Psychopharmacological treatment for very young children: contexts and guidelines. J Am Acad Child Adolesc Psychiatry \n",
+      "bbox": [
+        61.9739990234375,
+        535.6823120117188,
+        435.6840515136719,
+        551.8582763671875
+      ],
+      "text_sha256": "d1ac6c0e36dcbc8a7a001b7640c53be98731ddb87202eba58e4bf77ddc3ba443"
+    },
+    {
+      "block_id": "page-0581-block-0020",
+      "order": 20,
+      "text": "2007; 46:1532–1572.\n\t16.\t Mohatt J, et al. Treatment of separation, generalized, and social anxiety disorders in youths. Am J Psychiatry 2014; 171:741–748.\n",
+      "bbox": [
+        61.97999954223633,
+        553.6823120117188,
+        408.45001220703125,
+        569.8582763671875
+      ],
+      "text_sha256": "5f8ce083ac525795f3c31fa4859b54fb4ff3a155221feddaf97b96cc5d29358c"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

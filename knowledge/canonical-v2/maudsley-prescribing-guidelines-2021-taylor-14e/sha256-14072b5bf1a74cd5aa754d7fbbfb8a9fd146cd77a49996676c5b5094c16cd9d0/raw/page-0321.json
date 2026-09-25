@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0321",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 321,
+  "source_page_index": 320,
+  "source_page_display": 321,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "300    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  2\n\t48.\t Bowden CL, et al. A placebo-controlled 18-month trial of lamotrigine and lithium maintenance treatment in recently manic or hypomanic \npatients with bipolar I disorder. Arch Gen Psychiatry 2003; 60:392–400.\n\t49.\t Pikalov A, et al. Long-term use of lurasidone in patients with bipolar disorder: safety and effectiveness over 2 years of treatment. Int J Bipolar \nDisord 2017; 5:9.\n\t50.\t Calabrese JR, et al. Lurasidone in combination with lithium or valproate for the maintenance treatment of bipolar I disorder. Eur \nNeuropsychopharmacol 2017; 27:865–876.\n\t51.\t Wingård L, et al. Monotherapy vs. combination therapy for post mania maintenance treatment: a population based cohort study. Eur \nNeuropsychopharmacol 2019; 29:691–700.\n\t52.\t Jauhar S, et al. Controversies in bipolar disorder; role of second-generation antipsychotic for maintenance therapy. Int J Bipolar Disord 2019; \n7:10.\n\t53.\t Ghaemi SN, et al. Long-term antidepressant treatment in bipolar disorder: meta-analyses of benefits and risks. Acta Psychiatr Scand 2008; \n118:347–356.\n\t54.\t Ghaemi SN, et al. Antidepressant discontinuation in bipolar depression: a Systematic Treatment Enhancement Program for Bipolar Disorder \n(STEP-BD) randomized clinical trial of long-term effectiveness and safety. J Clin Psychiatry 2010; 71:372–380.\n\t55.\t Ostacher MJ, et al. Impact of substance use disorders on recovery from episodes of depression in bipolar disorder patients: prospective data \nfrom the Systematic Treatment Enhancement Program for Bipolar Disorder (STEP-BD). Am J Psychiatry 2010; 167:289–297.\n",
+  "raw_text_sha256": "1c193b6379013228d03a3aecb3aa6aef2e11a4b4d4bd9a29e47cfbaa7856672e",
+  "coordinates_sha256": "0745728a9c5a03132fb4b5faabd518e2b101a7f2735c1e3f4ae2b0a0ebadb78e",
+  "block_sequence_sha256": "5018d5c22fdceae26cc3599531809d8c4b3cbefc53318c6883b067a9effea4b7",
+  "blocks": [
+    {
+      "block_id": "page-0321-block-0000",
+      "order": 0,
+      "text": "300    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "9cff1a1da089c1b431279d538128e5bd8862b48379df83426fd878122b9f9ffe"
+    },
+    {
+      "block_id": "page-0321-block-0001",
+      "order": 1,
+      "text": "CHAPTER  2\n",
+      "bbox": [
+        19.520000457763672,
+        145.23529052734375,
+        29.0,
+        188.80328369140625
+      ],
+      "text_sha256": "5befcde2fefe074681a51514b484ad31516d952c51183625b5b7b1fb84f30d2c"
+    },
+    {
+      "block_id": "page-0321-block-0002",
+      "order": 2,
+      "text": "\t48.\t Bowden CL, et al. A placebo-controlled 18-month trial of lamotrigine and lithium maintenance treatment in recently manic or hypomanic \n",
+      "bbox": [
+        61.88999938964844,
+        63.2703857421875,
+        435.5459289550781,
+        70.30238342285156
+      ],
+      "text_sha256": "9743cf701f5e77d5db7067085b61e20165a3b42c5f64f7cf5a4970f5cd625fe6"
+    },
+    {
+      "block_id": "page-0321-block-0003",
+      "order": 3,
+      "text": "patients with bipolar I disorder. Arch Gen Psychiatry 2003; 60:392–400.\n\t49.\t Pikalov A, et al. Long-term use of lurasidone in patients with bipolar disorder: safety and effectiveness over 2 years of treatment. Int J Bipolar \n",
+      "bbox": [
+        61.895999908447266,
+        72.12638854980469,
+        435.5461120605469,
+        88.30238342285156
+      ],
+      "text_sha256": "939399cbdce42aa6740c197d1734c7f511e2a99112975cc5500979632ef43140"
+    },
+    {
+      "block_id": "page-0321-block-0004",
+      "order": 4,
+      "text": "Disord 2017; 5:9.\n\t50.\t Calabrese JR, et al. Lurasidone in combination with lithium or valproate for the maintenance treatment of bipolar I disorder. Eur \n",
+      "bbox": [
+        61.902000427246094,
+        90.12638854980469,
+        435.5279235839844,
+        106.30238342285156
+      ],
+      "text_sha256": "c66f1101ef512a3f1ec0e11da17c326e649fc5bba8712be76bf643f69e03c050"
+    },
+    {
+      "block_id": "page-0321-block-0005",
+      "order": 5,
+      "text": "Neuropsychopharmacol 2017; 27:865–876.\n\t51.\t Wingård L, et al. Monotherapy vs. combination therapy for post mania maintenance treatment: a population based cohort study. Eur \n",
+      "bbox": [
+        61.90800094604492,
+        108.12638854980469,
+        435.6178894042969,
+        124.30238342285156
+      ],
+      "text_sha256": "1428b0ff92f071cf86d56dda54cc0dc05f29b6207f5a308462a5aa44835094b1"
+    },
+    {
+      "block_id": "page-0321-block-0006",
+      "order": 6,
+      "text": "Neuropsychopharmacol 2019; 29:691–700.\n\t52.\t Jauhar S, et al. Controversies in bipolar disorder; role of second-generation antipsychotic for maintenance therapy. Int J Bipolar Disord 2019; \n",
+      "bbox": [
+        61.91400146484375,
+        126.12638854980469,
+        435.5459289550781,
+        142.30238342285156
+      ],
+      "text_sha256": "f59b618282ac5debe02928b255769a1fda80cd8870b6d0d52114cbf021e207b0"
+    },
+    {
+      "block_id": "page-0321-block-0007",
+      "order": 7,
+      "text": "7:10.\n\t53.\t Ghaemi SN, et al. Long-term antidepressant treatment in bipolar disorder: meta-analyses of benefits and risks. Acta Psychiatr Scand 2008; \n",
+      "bbox": [
+        61.91999816894531,
+        144.1263885498047,
+        435.5640869140625,
+        160.30238342285156
+      ],
+      "text_sha256": "f8b610678a26216faec3a8527a0b48a9cf021ba182555bc9ee2e7bdf446735c2"
+    },
+    {
+      "block_id": "page-0321-block-0008",
+      "order": 8,
+      "text": "118:347–356.\n\t54.\t Ghaemi SN, et al. Antidepressant discontinuation in bipolar depression: a Systematic Treatment Enhancement Program for Bipolar Disorder \n",
+      "bbox": [
+        61.92599868774414,
+        162.1263885498047,
+        435.6119384765625,
+        178.30238342285156
+      ],
+      "text_sha256": "99276f2b79f1cab1272caa0e4863cdafb0b8d953f588298bf6b7b8bbf8eaae55"
+    },
+    {
+      "block_id": "page-0321-block-0009",
+      "order": 9,
+      "text": "(STEP-BD) randomized clinical trial of long-term effectiveness and safety. J Clin Psychiatry 2010; 71:372–380.\n\t55.\t Ostacher MJ, et al. Impact of substance use disorders on recovery from episodes of depression in bipolar disorder patients: prospective data \n",
+      "bbox": [
+        61.93199920654297,
+        180.1263885498047,
+        435.6419677734375,
+        196.30238342285156
+      ],
+      "text_sha256": "0506de8b42be6e4f1c2b42ad20debc6b3303cd0ab0e6ece35422b5abace62698"
+    },
+    {
+      "block_id": "page-0321-block-0010",
+      "order": 10,
+      "text": "from the Systematic Treatment Enhancement Program for Bipolar Disorder (STEP-BD). Am J Psychiatry 2010; 167:289–297.\n",
+      "bbox": [
+        72.93600463867188,
+        198.1263885498047,
+        397.031982421875,
+        205.30238342285156
+      ],
+      "text_sha256": "fe63c6d7bd6334f66319f9cb3a5eb844c1d5a39dabf962692866fc4ddf9af5ac"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

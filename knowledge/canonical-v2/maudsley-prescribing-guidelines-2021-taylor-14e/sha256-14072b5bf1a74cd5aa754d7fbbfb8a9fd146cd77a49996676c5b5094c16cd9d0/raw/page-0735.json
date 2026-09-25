@@ -1,0 +1,515 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0735",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 735,
+  "source_page_index": 734,
+  "source_page_display": 735,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Table 7.5  (Continued)\nDrug\nInfant plasma \nconcentration\nEstimated daily infant \ndose as proportion of \nmaternal dose (RID)\nAcute adverse effects in infant\nDevelopmental effects in infant\nLithium177\nNB. Avoid\nUndetectable to 57% of \nmaternal plasma levels.\n12–30.1%\nEarly feeding problems, increased \nurea, raised creatinine, non-specific \nsigns of toxicity.\nOne case of elevated TSH. In utero \nexposure. One case of cyanosis, \nlethargy, hypothermia, hypotonia and \na heart murmur. In utero exposure.\nNo adverse effects have been \nreported in others.\nNone reported.\nTopiramate178,179\nUndetectable to 20% of \nmaternal plasma levels.\n3–35%\nDiarrhoea\nNone reported but not assessed.\nValproate4,14,153–156,161,180,181\n<2% of maternal \nplasma levels.\n1.4–1.7%\nThrombocytopenia and anaemia \nwhich reversed on stopping \nbreastfeeding. In utero exposure.\nA prospective study of children of women \nwith epilepsy found that breastfeeding whilst \ntaking an anticonvulsant was not associated \nwith adverse development of infants at ages \n6–36 months. The study assessed outcomes \nin children exposed to anticonvulsants in \nutero who were subsequently breastfed \ncompared with those who were not.\nA study of 199 infants exposed to \nantiepileptic medications during breast \nfeeding failed to show a difference in IQ \nbetween breastfed and non-breastfed infants \nat the age of 3 years. The infants were \nexposed to antiepileptic medications in utero.\nA study of 181 children concluded that IQ \nwas not adversely affected by anticonvulsant \nexposure through breast milk.\n(Continued)\n",
+  "raw_text_sha256": "a77e2e5255c0a03939ca34b4ea2d3e9a47d016e8acb5ed03a96a76c41010389e",
+  "coordinates_sha256": "210ea600f08f80a62e041d3941bb3a37e7105bb5a797e725119b8ddce0c45820",
+  "block_sequence_sha256": "a8a0942197b7064360e7539815e540d8cb2121f8ad67c96f155970cd5cd519f5",
+  "blocks": [
+    {
+      "block_id": "page-0735-block-0000",
+      "order": 0,
+      "text": "Table 7.5  (Continued)\n",
+      "bbox": [
+        41.30249786376953,
+        534.5339965820312,
+        50.189998626708984,
+        606.6539916992188
+      ],
+      "text_sha256": "270f3a31984b24ad374c66d18e1efcc7c4d441766d9bb549cb4a6e2d32c6931b"
+    },
+    {
+      "block_id": "page-0735-block-0001",
+      "order": 1,
+      "text": "Drug\nInfant plasma \n",
+      "bbox": [
+        71.95500183105469,
+        467.896484375,
+        90.83999633789062,
+        612.6539916992188
+      ],
+      "text_sha256": "740ab9eb672cde86fd19cae765bab98ff010246377b1aac1269ef7543dd4a3b7"
+    },
+    {
+      "block_id": "page-0735-block-0002",
+      "order": 2,
+      "text": "concentration\n",
+      "bbox": [
+        81.95249938964844,
+        469.5765075683594,
+        90.83999633789062,
+        518.3264770507812
+      ],
+      "text_sha256": "5e7b39b8735747a51153dd69c9b4c9de9c17893912aab750c14d6dfcd85b4665"
+    },
+    {
+      "block_id": "page-0735-block-0003",
+      "order": 3,
+      "text": "Estimated daily infant \n",
+      "bbox": [
+        61.94999313354492,
+        347.2139587402344,
+        70.83749389648438,
+        426.82647705078125
+      ],
+      "text_sha256": "2841e2ae24ac2a5a655457c138f0cb23dacf705d1b0e79882dd0fceac11fad57"
+    },
+    {
+      "block_id": "page-0735-block-0004",
+      "order": 4,
+      "text": "dose as proportion of \n",
+      "bbox": [
+        71.94749450683594,
+        348.62408447265625,
+        80.83499145507812,
+        426.82647705078125
+      ],
+      "text_sha256": "21fbe6c96b9b77500331b3393eeb77725f2a895797804d7adb4058055a75758d"
+    },
+    {
+      "block_id": "page-0735-block-0005",
+      "order": 5,
+      "text": "maternal dose (RID)\nAcute adverse effects in infant\nDevelopmental effects in infant\n",
+      "bbox": [
+        81.94499206542969,
+        90.26383209228516,
+        90.83248901367188,
+        426.82647705078125
+      ],
+      "text_sha256": "babc94d37b7b1d50500dae91cbc091d8e93d9a66d69e0bbdd11d06f634a2d571"
+    },
+    {
+      "block_id": "page-0735-block-0006",
+      "order": 6,
+      "text": "Lithium177\n",
+      "bbox": [
+        102.24748992919922,
+        581.6160888671875,
+        110.95498657226562,
+        612.6539916992188
+      ],
+      "text_sha256": "61063e552f498e8331e298179f114f33860277af5a86737d13c9e65b0ab3f54a"
+    },
+    {
+      "block_id": "page-0735-block-0007",
+      "order": 7,
+      "text": "NB. Avoid\nUndetectable to 57% of \n",
+      "bbox": [
+        102.26000213623047,
+        438.3089904785156,
+        120.96499633789062,
+        612.6539916992188
+      ],
+      "text_sha256": "f2fd63b7948e388d710cc4e460ad0a5f2bc488d1eb392683fee52e220e59664e"
+    },
+    {
+      "block_id": "page-0735-block-0008",
+      "order": 8,
+      "text": "maternal plasma levels.\n12–30.1%\nEarly feeding problems, increased \n",
+      "bbox": [
+        102.26000213623047,
+        227.09388732910156,
+        120.96499633789062,
+        518.3264770507812
+      ],
+      "text_sha256": "10464057afa0e43b6c53a3efd245d6fa57172a34d3290d4943d5e16accf2351d"
+    },
+    {
+      "block_id": "page-0735-block-0009",
+      "order": 9,
+      "text": "urea, raised creatinine, non-specific \n",
+      "bbox": [
+        112.25749969482422,
+        221.2664031982422,
+        120.96499633789062,
+        336.00146484375
+      ],
+      "text_sha256": "d774464213050fe1fea802f7e966b0e5c26356fd33c070c1463fb079ba878fa3"
+    },
+    {
+      "block_id": "page-0735-block-0010",
+      "order": 10,
+      "text": "signs of toxicity.\n",
+      "bbox": [
+        122.25499725341797,
+        285.4439392089844,
+        130.96249389648438,
+        336.00146484375
+      ],
+      "text_sha256": "fa7bdd93e15eee339459bbd7d8b96a5aceefede96714dd28aa877596024a3737"
+    },
+    {
+      "block_id": "page-0735-block-0011",
+      "order": 11,
+      "text": "One case of elevated TSH. In utero \n",
+      "bbox": [
+        137.25498962402344,
+        223.62144470214844,
+        145.96249389648438,
+        336.00146484375
+      ],
+      "text_sha256": "b72cc2bb59ef0c7c11c424583dc717c89b0677f0678f1b3ed4ff32083830a85f"
+    },
+    {
+      "block_id": "page-0735-block-0012",
+      "order": 12,
+      "text": "exposure. One case of cyanosis, \n",
+      "bbox": [
+        147.2524871826172,
+        232.7864227294922,
+        155.95999145507812,
+        336.00146484375
+      ],
+      "text_sha256": "473b58969e4bde9dc0267f1da17f2717d9619cbf3cbd563d506c56538cd26efc"
+    },
+    {
+      "block_id": "page-0735-block-0013",
+      "order": 13,
+      "text": "lethargy, hypothermia, hypotonia and \n",
+      "bbox": [
+        157.24998474121094,
+        213.75135803222656,
+        165.95748901367188,
+        336.00146484375
+      ],
+      "text_sha256": "eadc12844dedbba5364d36ff2e583aec18733ffc5856376958387a206f7374f9"
+    },
+    {
+      "block_id": "page-0735-block-0014",
+      "order": 14,
+      "text": "a heart murmur. In utero exposure.\n",
+      "bbox": [
+        167.2474822998047,
+        224.44642639160156,
+        175.95498657226562,
+        336.00146484375
+      ],
+      "text_sha256": "fedbdea8c9d3a4c5f2cd4a2085598c3eb84d690c443985e7c63c1b31197b5c99"
+    },
+    {
+      "block_id": "page-0735-block-0015",
+      "order": 15,
+      "text": "No adverse effects have been \n",
+      "bbox": [
+        182.2474822998047,
+        240.29396057128906,
+        190.95498657226562,
+        336.00146484375
+      ],
+      "text_sha256": "11a84be52f0ed5db2fb303e537b3c81fb2d5f0971b342b3929791de5737a11d8"
+    },
+    {
+      "block_id": "page-0735-block-0016",
+      "order": 16,
+      "text": "reported in others.\n",
+      "bbox": [
+        192.24497985839844,
+        276.5414123535156,
+        200.95248413085938,
+        336.00146484375
+      ],
+      "text_sha256": "73bde1e3ab6796ae25a8fc3c6649407ca3b74394061b93f3c9aa0b8b6d8e24f4"
+    },
+    {
+      "block_id": "page-0735-block-0017",
+      "order": 17,
+      "text": "None reported.\n",
+      "bbox": [
+        102.24498748779297,
+        153.1964874267578,
+        110.95248413085938,
+        201.82647705078125
+      ],
+      "text_sha256": "cf53711182540597a6673376e5a8845af9f30f2c10f30bce4f5f441c2d8dec77"
+    },
+    {
+      "block_id": "page-0735-block-0018",
+      "order": 18,
+      "text": "Topiramate178,179\nUndetectable to 20% of \n",
+      "bbox": [
+        210.3724822998047,
+        438.3097229003906,
+        219.08999633789062,
+        612.6539916992188
+      ],
+      "text_sha256": "98534a7dca901a97e1cdcf68e0c0067a3be5848f6eb2003e174d6ebc6274f5cc"
+    },
+    {
+      "block_id": "page-0735-block-0019",
+      "order": 19,
+      "text": "maternal plasma levels.\n3–35%\nDiarrhoea\nNone reported but not assessed.\n",
+      "bbox": [
+        210.3824920654297,
+        98.17733001708984,
+        229.08749389648438,
+        518.3272094726562
+      ],
+      "text_sha256": "7af6c5b3a47ca2be0c57d77a830fa64523465e03d97ddb6f9edc546d63bb2c8d"
+    },
+    {
+      "block_id": "page-0735-block-0020",
+      "order": 20,
+      "text": "Valproate4,14,153–156,161,180,181\n<2% of maternal \n",
+      "bbox": [
+        238.5074920654297,
+        460.772216796875,
+        247.21499633789062,
+        612.6547241210938
+      ],
+      "text_sha256": "31b760b3cff53f9164d1bdf46d5f5ef44f243df1519de6f3f7d99b3bc875771f"
+    },
+    {
+      "block_id": "page-0735-block-0021",
+      "order": 21,
+      "text": "plasma levels.\n1.4–1.7%\nThrombocytopenia and anaemia \n",
+      "bbox": [
+        238.5074920654297,
+        230.7021026611328,
+        257.2124938964844,
+        518.3272094726562
+      ],
+      "text_sha256": "08efbc4c1dd859d566fb263de57c9062f9f89df34bda9a96080d004d1ba01389"
+    },
+    {
+      "block_id": "page-0735-block-0022",
+      "order": 22,
+      "text": "which reversed on stopping \n",
+      "bbox": [
+        248.50498962402344,
+        245.69459533691406,
+        257.2124938964844,
+        336.002197265625
+      ],
+      "text_sha256": "a1b46c2cc8c211ed53f727847ffb5fb0905d82e5c7b0d9cc65d9fa4574421489"
+    },
+    {
+      "block_id": "page-0735-block-0023",
+      "order": 23,
+      "text": "breastfeeding. In utero exposure.\n",
+      "bbox": [
+        258.4574890136719,
+        230.41709899902344,
+        267.2099914550781,
+        336.002197265625
+      ],
+      "text_sha256": "47290ca0df51a72cc662c3a5d60f4977746347695495bf56ed3e34d197322c70"
+    },
+    {
+      "block_id": "page-0735-block-0024",
+      "order": 24,
+      "text": "A prospective study of children of women \n",
+      "bbox": [
+        238.49998474121094,
+        73.26204681396484,
+        247.20748901367188,
+        201.82720947265625
+      ],
+      "text_sha256": "6bd672e9f46bfc1cf5e27fda4bb162ecdf2760d4be9a131dd74b6a489f14e670"
+    },
+    {
+      "block_id": "page-0735-block-0025",
+      "order": 25,
+      "text": "with epilepsy found that breastfeeding whilst \n",
+      "bbox": [
+        248.4974822998047,
+        63.189720153808594,
+        257.2049865722656,
+        201.82720947265625
+      ],
+      "text_sha256": "e8c06d6651ab89dcc55c8a730b9c98536ec53054494a74b2de8a4b2cc061eb8a"
+    },
+    {
+      "block_id": "page-0735-block-0026",
+      "order": 26,
+      "text": "taking an anticonvulsant was not associated \n",
+      "bbox": [
+        258.4949951171875,
+        66.44466400146484,
+        267.2024841308594,
+        201.82720947265625
+      ],
+      "text_sha256": "46b83ef34a3dfdbe8c394cd847d97481cb431404f6d7140860866fad23354d5e"
+    },
+    {
+      "block_id": "page-0735-block-0027",
+      "order": 27,
+      "text": "with adverse development of infants at ages \n",
+      "bbox": [
+        268.49249267578125,
+        65.61959075927734,
+        277.1999816894531,
+        201.82720947265625
+      ],
+      "text_sha256": "ef707a4d9ed666c0c48931c634af4dcf910e1f9aa1656be6fd72b055da1286ba"
+    },
+    {
+      "block_id": "page-0735-block-0028",
+      "order": 28,
+      "text": "6–36 months. The study assessed outcomes \nin children exposed to anticonvulsants in \n",
+      "bbox": [
+        278.489990234375,
+        66.7221908569336,
+        297.1949768066406,
+        201.82720947265625
+      ],
+      "text_sha256": "5c692b31d616f55dad904db38b97be9c4c0ae009c343dd22b027b42f3aa8c6f7"
+    },
+    {
+      "block_id": "page-0735-block-0029",
+      "order": 29,
+      "text": "utero who were subsequently breastfed \n",
+      "bbox": [
+        298.4849853515625,
+        79.51717376708984,
+        307.1924743652344,
+        201.82720947265625
+      ],
+      "text_sha256": "9b64301f40b102784286994b199c153f1d2e68668c53103c1be1f19b30ab4bb0"
+    },
+    {
+      "block_id": "page-0735-block-0030",
+      "order": 30,
+      "text": "compared with those who were not.\n",
+      "bbox": [
+        308.48248291015625,
+        90.74459075927734,
+        317.1899719238281,
+        201.82720947265625
+      ],
+      "text_sha256": "680009d488b70db740477668417f1d875f5ffb9d706c780b6e73e6c2a01785cc"
+    },
+    {
+      "block_id": "page-0735-block-0031",
+      "order": 31,
+      "text": "A study of 199 infants exposed to \n",
+      "bbox": [
+        324.47998046875,
+        96.89485931396484,
+        333.1874694824219,
+        201.82720947265625
+      ],
+      "text_sha256": "1a120807ccfc73e0cb856c8fe7b304b6bac9d0d9fa702e1e4213793d683b7273"
+    },
+    {
+      "block_id": "page-0735-block-0032",
+      "order": 32,
+      "text": "antiepileptic medications during breast \n",
+      "bbox": [
+        334.47747802734375,
+        82.67476654052734,
+        343.1849670410156,
+        201.82720947265625
+      ],
+      "text_sha256": "8f5baac93e976c1980d18caf2842019fca71825f801a4f7ef445f633159149dd"
+    },
+    {
+      "block_id": "page-0735-block-0033",
+      "order": 33,
+      "text": "feeding failed to show a difference in IQ \n",
+      "bbox": [
+        344.4749755859375,
+        78.14485931396484,
+        353.1824645996094,
+        201.82720947265625
+      ],
+      "text_sha256": "8456ff4714d8e99a3f83ed7fa1a67a5713cbffb0ae48a01f2be3af970944642e"
+    },
+    {
+      "block_id": "page-0735-block-0034",
+      "order": 34,
+      "text": "between breastfed and non-breastfed infants \n",
+      "bbox": [
+        354.47247314453125,
+        62.229637145996094,
+        363.1799621582031,
+        201.82720947265625
+      ],
+      "text_sha256": "2590435f6de6d01addc69d32a39cb7dd039683960dc19b758e0d0b07ea13a3c2"
+    },
+    {
+      "block_id": "page-0735-block-0035",
+      "order": 35,
+      "text": "at the age of 3 years. The infants were \n",
+      "bbox": [
+        364.469970703125,
+        83.0797348022461,
+        373.1774597167969,
+        201.82720947265625
+      ],
+      "text_sha256": "ffd5a0d0102600567e9213304ba280133842df1066b573fc08abba8baeb9326f"
+    },
+    {
+      "block_id": "page-0735-block-0036",
+      "order": 36,
+      "text": "exposed to antiepileptic medications in utero.\n",
+      "bbox": [
+        374.4224548339844,
+        64.3297348022461,
+        383.1749572753906,
+        201.82720947265625
+      ],
+      "text_sha256": "7a4be8049e8d1b1608150ca0be0061582876bf39b0a5ffa7f6e823118fea0400"
+    },
+    {
+      "block_id": "page-0735-block-0037",
+      "order": 37,
+      "text": "A study of 181 children concluded that IQ \n",
+      "bbox": [
+        389.46746826171875,
+        71.6795883178711,
+        398.1749572753906,
+        201.82720947265625
+      ],
+      "text_sha256": "a9aa12d1c1bb13572f2ff6f89f10235c4dbd1046623353e31f88908632fda418"
+    },
+    {
+      "block_id": "page-0735-block-0038",
+      "order": 38,
+      "text": "was not adversely affected by anticonvulsant \n",
+      "bbox": [
+        399.4649658203125,
+        63.407432556152344,
+        408.1724548339844,
+        201.82720947265625
+      ],
+      "text_sha256": "b9722949c11ccc99144b8e5def27dd2c601c5e187d474ce478c41ae8aef7cfb9"
+    },
+    {
+      "block_id": "page-0735-block-0039",
+      "order": 39,
+      "text": "exposure through breast milk.\n",
+      "bbox": [
+        409.46246337890625,
+        110.58235931396484,
+        418.1699523925781,
+        201.82720947265625
+      ],
+      "text_sha256": "aace50a3974c35ea40d762ed4e5c86b6d1cc32a2bf19188202c8247c2a368262"
+    },
+    {
+      "block_id": "page-0735-block-0040",
+      "order": 40,
+      "text": "(Continued)\n",
+      "bbox": [
+        426.9299621582031,
+        64.32967376708984,
+        435.6824645996094,
+        100.3447265625
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

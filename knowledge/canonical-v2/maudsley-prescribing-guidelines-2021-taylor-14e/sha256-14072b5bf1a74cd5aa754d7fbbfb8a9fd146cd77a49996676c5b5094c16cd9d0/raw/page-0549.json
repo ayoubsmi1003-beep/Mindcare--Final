@@ -1,0 +1,1247 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0549",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 549,
+  "source_page_index": 548,
+  "source_page_display": 549,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Cannabis\nHeroin/methadone6\nCocaine, amfetamine, ecstasy,  \nMDA, 6-APD\nAlcohol\nKetamine7\nAntidepressants\n■\n■Tachycardia has been \nreported (monitor pulse \nand take care with \nTCAs24)\n■\n■Complex, unpredict-\nable effects of CYP \ninduction (tobacco) \nand CYP inhibition \n(THC/CBD)\n■\n■Avoid very sedative antidepres-\nsants\n■\n■Some SSRIs can increase \nmethadone plasma levels25 \n(citalopram is SSRI of choice but \nnote the small risk of additive \nQTc prolongation)\n■\n■Case report of serotonin syn-\ndrome occurring when sertra-\nline prescribed with methadone \nfor a palliative care patient26\n■\n■Avoid TCAs (arrhythmia risk)\n■\n■MAOIs contraindicated (hypertension)\n■\n■Combining moclobemide and MDMA \ncan be fatal27\n■\n■SSRIs may increase plasma concentra-\ntions of MDMA28 but reduce subjective \neffects29\n■\n■Risk of SSRIs increasing cocaine levels, \nespecially fluoxetine30\n■\n■Concomitant use of SSRIs or aripipra-\nzole and lamotrigine with cocaine or \nother stimulants (especially MDA and \n6-APD) could precipitate a serotonin \nsyndrome31,32\n■\n■SSRIs may enhance subjective reaction \nto cocaine33\n■\n■Avoid very \nsedative antide-\npressants\n■\n■Avoid antide-\npressants that \nare toxic in OD\n■\n■Impaired psy-\nchomotor skills \n(not SSRIs)\n■\n■Inhibitors of \nCYP3A4 (e.g. \nfluoxetine/\nparoxetine) will \nlengthen ket-\namine half-life\n■\n■Beware of \nhypertension \nwith SNRIs and \nreboxetine\nAnticholinergics\n■\n■Misuse is likely. Try to avoid if at all possible (by using a second-generation drug if an antipsychotic is required)\n■\n■Can cause hallucinations, elation and cognitive impairment\nLithium\n■\n■Very toxic if taken erratically\n■\n■Always consider the effects of dehydration (particularly problematic with alcohol or ecstasy)\nCarbamazepine \n(CBZ)/valproate\n■\n■CBZ may decrease \nTHC concentrations via \ninduction of CYP3A434\n■\n■CBZ decreases methadone \nlevels35 (danger if CBZ stopped \nsuddenly)\n■\n■Valproate seems less likely to \ninteract\n■\n■CBZ induces CYP3A4, which leads to \nmore rapid formation of norcocaine \n(hepatotoxic and more cardiotoxic than \ncocaine)36\n■\n■Monitor LFTs\n■\n■CBZ decreases \nketamine plasma \nconcentrations \nvia CYP3A4 \ninduction\nBenzodiazepines\n■\n■Monitor level of seda-\ntion\n■\n■Oversedation (and respiratory \ndepression possible)\n■\n■Concomitant use can lead to \naccidental overdose\n■\n■Possible pharmacokinetic interac-\ntion (increased methadone levels)\n■\n■Oversedation (if high doses of cocaine \nhave been taken)\n■\n■Widely used after cocaine intoxication\n■\n■Future misuse possible detoxification\n■\n■Oversedation \n(and respiratory \ndepression) \npossible\n■\n■Widely used in \nalcohol detoxi-\nfication\n■\n■Oversedation \nand respiratory \ndepression\nTable 4.21  (Continued)\n",
+  "raw_text_sha256": "7ac5911fd5d8866d8148b17494ae2688fb22d55e541812bf442af288cae90cd7",
+  "coordinates_sha256": "48255dc218e3b964e688cc0ae9879c7bdad808f6bf74118d20003531d0945992",
+  "block_sequence_sha256": "ab0494c9c280c4c708c0edfe9d44cbe9ecf28992cdf543567627e2a4db8138da",
+  "blocks": [
+    {
+      "block_id": "page-0549-block-0000",
+      "order": 0,
+      "text": "Cannabis\nHeroin/methadone6\nCocaine, amfetamine, ecstasy,  \n",
+      "bbox": [
+        87.51250457763672,
+        228.4846649169922,
+        106.4000015258789,
+        557.5003662109375
+      ],
+      "text_sha256": "fb053bb20d9aa74c49ee261d0817e50a28b3ecc7ccf94b58ed591aef5e6f020d"
+    },
+    {
+      "block_id": "page-0549-block-0001",
+      "order": 1,
+      "text": "MDA, 6-APD\nAlcohol\nKetamine7\n",
+      "bbox": [
+        97.51000213623047,
+        82.14286804199219,
+        106.39749908447266,
+        337.8271789550781
+      ],
+      "text_sha256": "2f0a3da8c868c5276b633d3259f7bfd88fb0b1e8c2a8f4667172380945917247"
+    },
+    {
+      "block_id": "page-0549-block-0002",
+      "order": 2,
+      "text": "Antidepressants\n■\n■Tachycardia has been \n",
+      "bbox": [
+        114.63750457763672,
+        479.04290771484375,
+        123.5250015258789,
+        630.1539916992188
+      ],
+      "text_sha256": "fe6e5ca2805ea4092e3da9c817391c530bb1d99018f04b88e2964c5c1b60f46c"
+    },
+    {
+      "block_id": "page-0549-block-0003",
+      "order": 3,
+      "text": "reported (monitor pulse \n",
+      "bbox": [
+        123.81749725341797,
+        470.7479553222656,
+        132.52499389648438,
+        548.5003662109375
+      ],
+      "text_sha256": "e69097f53512d396b2ab9c3c55ef4437fc35d7452157117ee42aef6486cce0db"
+    },
+    {
+      "block_id": "page-0549-block-0004",
+      "order": 4,
+      "text": "and take care with \n",
+      "bbox": [
+        132.81748962402344,
+        486.962890625,
+        141.52499389648438,
+        548.5003662109375
+      ],
+      "text_sha256": "785f61bd241b632c2391df9679d9fe1d06e279b3bd256872375d0b66218a6c1b"
+    },
+    {
+      "block_id": "page-0549-block-0005",
+      "order": 5,
+      "text": "TCAs24)\n",
+      "bbox": [
+        141.81748962402344,
+        524.880859375,
+        150.52499389648438,
+        548.5003662109375
+      ],
+      "text_sha256": "d063c8c55e8d6443b8c3653fd90c73bf4a825adad3a8776e22fde3082e5f3539"
+    },
+    {
+      "block_id": "page-0549-block-0006",
+      "order": 6,
+      "text": "■\n■Complex, unpredict-\n",
+      "bbox": [
+        152.81748962402344,
+        483.212890625,
+        161.52499389648438,
+        557.50048828125
+      ],
+      "text_sha256": "6b65f0a7cdde57c61d8373d436236503b85b0ecddf67195b4b9ec739fd4c1ce4"
+    },
+    {
+      "block_id": "page-0549-block-0007",
+      "order": 7,
+      "text": "able effects of CYP \n",
+      "bbox": [
+        161.81748962402344,
+        485.7178955078125,
+        170.52499389648438,
+        548.5003662109375
+      ],
+      "text_sha256": "7959ac699931cb580af59ab1b8f17de2473d51f626b266e37452b8f7e7922860"
+    },
+    {
+      "block_id": "page-0549-block-0008",
+      "order": 8,
+      "text": "induction (tobacco) \n",
+      "bbox": [
+        170.81748962402344,
+        484.73541259765625,
+        179.52499389648438,
+        548.5003662109375
+      ],
+      "text_sha256": "2efcc22aa12eca2a060a02a97724e2b1b67bff35b69d13d0e441c08c88c8238a"
+    },
+    {
+      "block_id": "page-0549-block-0009",
+      "order": 9,
+      "text": "and CYP inhibition \n",
+      "bbox": [
+        179.81748962402344,
+        486.81292724609375,
+        188.52499389648438,
+        548.5003662109375
+      ],
+      "text_sha256": "9724af90ad32ba7ca64fff1a4654cc2fca33e9fea07d8ea80751262b09d98ab6"
+    },
+    {
+      "block_id": "page-0549-block-0010",
+      "order": 10,
+      "text": "(THC/CBD)\n",
+      "bbox": [
+        188.81748962402344,
+        514.3153686523438,
+        197.52499389648438,
+        548.5003662109375
+      ],
+      "text_sha256": "8f5470bc0baf8f08eec87db3a3662bea7863a8bedab314018b9aef260be99f28"
+    },
+    {
+      "block_id": "page-0549-block-0011",
+      "order": 11,
+      "text": "■\n■Avoid very sedative antidepres-\n",
+      "bbox": [
+        114.8175048828125,
+        352.93218994140625,
+        123.5250015258789,
+        460.8272705078125
+      ],
+      "text_sha256": "5a85779a508e37cb50b1a8b2dbdda72c053d0b52d7e165449dfd9c3371a9f8ab"
+    },
+    {
+      "block_id": "page-0549-block-0012",
+      "order": 12,
+      "text": "sants\n",
+      "bbox": [
+        123.81749725341797,
+        435.5746765136719,
+        132.52499389648438,
+        451.82720947265625
+      ],
+      "text_sha256": "93ecd88baf83232c1b8dbe2abb2158243a4aefe815264e1e5d0f5ab40b15343d"
+    },
+    {
+      "block_id": "page-0549-block-0013",
+      "order": 13,
+      "text": "■\n■Some SSRIs can increase \n",
+      "bbox": [
+        134.81748962402344,
+        372.3721923828125,
+        143.52499389648438,
+        460.8272705078125
+      ],
+      "text_sha256": "078941618fe2b126d3ee6d0a14d0cfc7c139d666dbc5c50f0e5b713cf55f302a"
+    },
+    {
+      "block_id": "page-0549-block-0014",
+      "order": 14,
+      "text": "methadone plasma levels25 \n",
+      "bbox": [
+        143.81748962402344,
+        364.45831298828125,
+        152.52499389648438,
+        451.82720947265625
+      ],
+      "text_sha256": "bbc1c835a17da98cf4157df509324118a137093f183f4ecd62925f4e177adc19"
+    },
+    {
+      "block_id": "page-0549-block-0015",
+      "order": 15,
+      "text": "(citalopram is SSRI of choice but \n",
+      "bbox": [
+        152.81748962402344,
+        347.725830078125,
+        161.52499389648438,
+        451.8258056640625
+      ],
+      "text_sha256": "3ca9dc6f760f58f38a2394e18e6f59e6340e409043bce95c1f54e46982451a5d"
+    },
+    {
+      "block_id": "page-0549-block-0016",
+      "order": 16,
+      "text": "note the small risk of additive \n",
+      "bbox": [
+        161.81748962402344,
+        355.5707702636719,
+        170.52499389648438,
+        451.8258056640625
+      ],
+      "text_sha256": "ea06b3986af27b8e27604a97655816ce5456ace965d54d412f61bbd0dea0a6e8"
+    },
+    {
+      "block_id": "page-0549-block-0017",
+      "order": 17,
+      "text": "QTc prolongation)\n",
+      "bbox": [
+        170.81748962402344,
+        394.86322021484375,
+        179.52499389648438,
+        451.8258056640625
+      ],
+      "text_sha256": "94b9b7a522d98adb87d681b9b86c7365451181cb6c867bf25ae7df96acf4105b"
+    },
+    {
+      "block_id": "page-0549-block-0018",
+      "order": 18,
+      "text": "■\n■Case report of serotonin syn-\n",
+      "bbox": [
+        181.81748962402344,
+        359.1646423339844,
+        190.52499389648438,
+        460.8272705078125
+      ],
+      "text_sha256": "2f909540c88c3ccdf4314277b9b2d4a83e609da6b2100401ed148ee0d0f22ff7"
+    },
+    {
+      "block_id": "page-0549-block-0019",
+      "order": 19,
+      "text": "drome occurring when sertra-\n",
+      "bbox": [
+        190.81748962402344,
+        356.5396728515625,
+        199.52499389648438,
+        451.82720947265625
+      ],
+      "text_sha256": "c97af67ec51c1b636c290e3a8c01c3d16cfb6a02df3cbbb5923808c9a8423002"
+    },
+    {
+      "block_id": "page-0549-block-0020",
+      "order": 20,
+      "text": "line prescribed with methadone \n",
+      "bbox": [
+        199.81748962402344,
+        348.6121520996094,
+        208.52499389648438,
+        451.82720947265625
+      ],
+      "text_sha256": "743e8d0a27a9e7c8d7631904a804513d5f7fc55219994812618e2f7af7bcf491"
+    },
+    {
+      "block_id": "page-0549-block-0021",
+      "order": 21,
+      "text": "for a palliative care patient26\n",
+      "bbox": [
+        208.81748962402344,
+        362.11114501953125,
+        217.52499389648438,
+        451.82720947265625
+      ],
+      "text_sha256": "7a68c1bd6e813ac2ee0dd82ef08a0e81a15f0d04e7db29a93f455eeb4a666be4"
+    },
+    {
+      "block_id": "page-0549-block-0022",
+      "order": 22,
+      "text": "■\n■Avoid TCAs (arrhythmia risk)\n",
+      "bbox": [
+        114.8175048828125,
+        238.1221466064453,
+        123.5250015258789,
+        337.8273010253906
+      ],
+      "text_sha256": "4d8f06cea00d6d609575c26677bc95fc69e875670a15fa9ed800eacbd4d15f0f"
+    },
+    {
+      "block_id": "page-0549-block-0023",
+      "order": 23,
+      "text": "■\n■MAOIs contraindicated (hypertension)\n",
+      "bbox": [
+        125.81749725341797,
+        207.9795379638672,
+        134.52499389648438,
+        337.8273010253906
+      ],
+      "text_sha256": "25dd8285bcce717e9d9258e566a37f73f60795e3c87f4f228ff39c281be05722"
+    },
+    {
+      "block_id": "page-0549-block-0024",
+      "order": 24,
+      "text": "■\n■Combining moclobemide and MDMA \n",
+      "bbox": [
+        136.81748962402344,
+        206.29200744628906,
+        145.52499389648438,
+        337.8273010253906
+      ],
+      "text_sha256": "65c3eb8a1ad4b123c2d3e78919b135ad70718a5d7bc263cf4d4772d837ad7cd8"
+    },
+    {
+      "block_id": "page-0549-block-0025",
+      "order": 25,
+      "text": "can be fatal27\n",
+      "bbox": [
+        145.81748962402344,
+        286.4653625488281,
+        154.52499389648438,
+        328.8271789550781
+      ],
+      "text_sha256": "6e62f553643520f63c0610cf813613000bd96bfd40a87b8add9c6f77e40a6c60"
+    },
+    {
+      "block_id": "page-0549-block-0026",
+      "order": 26,
+      "text": "■\n■SSRIs may increase plasma concentra-\n",
+      "bbox": [
+        156.81748962402344,
+        208.54965209960938,
+        165.52499389648438,
+        337.8273010253906
+      ],
+      "text_sha256": "43a13c4f021ed62ba291ec85b06db7d85e8b67e6eaca68867c03d288024eb3a8"
+    },
+    {
+      "block_id": "page-0549-block-0027",
+      "order": 27,
+      "text": "tions of MDMA28 but reduce subjective \n",
+      "bbox": [
+        165.81748962402344,
+        202.41307067871094,
+        174.52499389648438,
+        328.8271789550781
+      ],
+      "text_sha256": "2627d5aac91ef42704168626d8979412f3cd008918062419883a24084e1eb50a"
+    },
+    {
+      "block_id": "page-0549-block-0028",
+      "order": 28,
+      "text": "effects29\n",
+      "bbox": [
+        174.81748962402344,
+        302.8602600097656,
+        183.52499389648438,
+        328.8255920410156
+      ],
+      "text_sha256": "369b4db8b6efdb58ce2a4a6e0bc36a57c783c56729358c63d783e0e2e569b8d0"
+    },
+    {
+      "block_id": "page-0549-block-0029",
+      "order": 29,
+      "text": "■\n■Risk of SSRIs increasing cocaine levels, \n",
+      "bbox": [
+        185.81748962402344,
+        205.61708068847656,
+        194.52499389648438,
+        337.8273010253906
+      ],
+      "text_sha256": "9bc73e3e18d50a15b34ddbbfd0456a598c0e867674439a536849bb39c2e225cd"
+    },
+    {
+      "block_id": "page-0549-block-0030",
+      "order": 30,
+      "text": "especially fluoxetine30\n",
+      "bbox": [
+        194.81748962402344,
+        260.2159423828125,
+        203.52499389648438,
+        328.8271789550781
+      ],
+      "text_sha256": "6872272b7850b6d3f1a4180a74fca7956666df70d50e6543154627583e78687c"
+    },
+    {
+      "block_id": "page-0549-block-0031",
+      "order": 31,
+      "text": "■\n■Concomitant use of SSRIs or aripipra-\n",
+      "bbox": [
+        205.81748962402344,
+        209.64456176757812,
+        214.52499389648438,
+        337.8273010253906
+      ],
+      "text_sha256": "a78a0965c3a7c97fc52fa25a716ce3b7ef160098205e974e218d0dc548828220"
+    },
+    {
+      "block_id": "page-0549-block-0032",
+      "order": 32,
+      "text": "zole and lamotrigine with cocaine or \n",
+      "bbox": [
+        214.81748962402344,
+        210.06459045410156,
+        223.52499389648438,
+        328.8271789550781
+      ],
+      "text_sha256": "904ee077f49a47172d3efb850b2846dbbfee04f4cce92a0f2311d4d5acf58778"
+    },
+    {
+      "block_id": "page-0549-block-0033",
+      "order": 33,
+      "text": "other stimulants (especially MDA and \n",
+      "bbox": [
+        223.81748962402344,
+        207.9795684814453,
+        232.52499389648438,
+        328.8271789550781
+      ],
+      "text_sha256": "1a1284a9412a011163353fc0891eb7a296ab151b4222142a8f09b083cf4266ef"
+    },
+    {
+      "block_id": "page-0549-block-0034",
+      "order": 34,
+      "text": "6-APD) could precipitate a serotonin \nsyndrome31,32\n",
+      "bbox": [
+        232.81748962402344,
+        211.1595916748047,
+        250.52499389648438,
+        328.8271789550781
+      ],
+      "text_sha256": "1cc08f5ee4f60c1b757b50c88bc4f40783c04b980eb776f1ba4716487e3a0622"
+    },
+    {
+      "block_id": "page-0549-block-0035",
+      "order": 35,
+      "text": "■\n■SSRIs may enhance subjective reaction \n",
+      "bbox": [
+        252.81748962402344,
+        204.79212951660156,
+        261.5249938964844,
+        337.8273010253906
+      ],
+      "text_sha256": "ad136fdf47a94e88ef614510303b4aabd229955b17d7c470e5b97d92b771efc6"
+    },
+    {
+      "block_id": "page-0549-block-0036",
+      "order": 36,
+      "text": "to cocaine33\n",
+      "bbox": [
+        261.8175048828125,
+        291.0479431152344,
+        270.5249938964844,
+        328.8271789550781
+      ],
+      "text_sha256": "a73e24fe0c5c038748df0dd3a654bbc7cf8dd5325d13dc6e450949ca570e01bd"
+    },
+    {
+      "block_id": "page-0549-block-0037",
+      "order": 37,
+      "text": "■\n■Avoid very \n",
+      "bbox": [
+        114.8175048828125,
+        145.7971954345703,
+        123.5250015258789,
+        190.07730102539062
+      ],
+      "text_sha256": "c4cc36348d73037da5a2b761dbfcc4afc214ba5dd916e8a57f9146c48972225a"
+    },
+    {
+      "block_id": "page-0549-block-0038",
+      "order": 38,
+      "text": "sedative antide-\n",
+      "bbox": [
+        123.81749725341797,
+        130.6622314453125,
+        132.52499389648438,
+        181.07717895507812
+      ],
+      "text_sha256": "f13b89a70d23d585a44b63dcf174071c8b3ff69a9f68430f450316ccfc250a89"
+    },
+    {
+      "block_id": "page-0549-block-0039",
+      "order": 39,
+      "text": "pressants\n",
+      "bbox": [
+        132.81748962402344,
+        151.62474060058594,
+        141.52499389648438,
+        181.07717895507812
+      ],
+      "text_sha256": "bf9f2c8467988830adb1b839fb0cf15c4bfdd7e5e0669371e7fa453b945d1cee"
+    },
+    {
+      "block_id": "page-0549-block-0040",
+      "order": 40,
+      "text": "■\n■Avoid antide-\n",
+      "bbox": [
+        143.81748962402344,
+        138.289794921875,
+        152.52499389648438,
+        190.07730102539062
+      ],
+      "text_sha256": "e89b866d66b956ad50cc6b63ef88d1dfae1d42cca704e58aa6260d9b64d98694"
+    },
+    {
+      "block_id": "page-0549-block-0041",
+      "order": 41,
+      "text": "pressants that \n",
+      "bbox": [
+        152.81748962402344,
+        134.5397491455078,
+        161.52499389648438,
+        181.07717895507812
+      ],
+      "text_sha256": "00d11a7d8f1ba5482d3ad1bfafad128d2e1d124ea25be0e1f5954747ff286cb4"
+    },
+    {
+      "block_id": "page-0549-block-0042",
+      "order": 42,
+      "text": "are toxic in OD\n",
+      "bbox": [
+        161.81748962402344,
+        133.7147216796875,
+        170.52499389648438,
+        181.07717895507812
+      ],
+      "text_sha256": "579b7ff88962b450219190a9247aa609daf574d8e1633e58a1e73c51c54e6e20"
+    },
+    {
+      "block_id": "page-0549-block-0043",
+      "order": 43,
+      "text": "■\n■Impaired psy-\n",
+      "bbox": [
+        172.81748962402344,
+        138.2972412109375,
+        181.52499389648438,
+        190.07730102539062
+      ],
+      "text_sha256": "b0dd497c395e1f80bcad561ad5a2821d8ee968c45bf5cf8d921ca34a521df366"
+    },
+    {
+      "block_id": "page-0549-block-0044",
+      "order": 44,
+      "text": "chomotor skills \n",
+      "bbox": [
+        181.81748962402344,
+        131.07484436035156,
+        190.52499389648438,
+        181.07717895507812
+      ],
+      "text_sha256": "37af027eb29f672a3c1e171d48f2d6db8f3b3dee4cd959d80fcbd0bdc338d9a7"
+    },
+    {
+      "block_id": "page-0549-block-0045",
+      "order": 45,
+      "text": "(not SSRIs)\n",
+      "bbox": [
+        190.81748962402344,
+        147.7322540283203,
+        199.52499389648438,
+        181.07717895507812
+      ],
+      "text_sha256": "08433ecd7d2998f4aa940c94bf6a87387406aad87112d51ab0cd8bcde4dfcf01"
+    },
+    {
+      "block_id": "page-0549-block-0046",
+      "order": 46,
+      "text": "■\n■Inhibitors of \n",
+      "bbox": [
+        114.8175048828125,
+        68.9139633178711,
+        123.5250015258789,
+        118.3388671875
+      ],
+      "text_sha256": "8330998f321e201f0c9a4de458969fa964fd2bb525062288cce32fc19cbd916b"
+    },
+    {
+      "block_id": "page-0549-block-0047",
+      "order": 47,
+      "text": "CYP3A4 (e.g. \n",
+      "bbox": [
+        123.81749725341797,
+        64.31624603271484,
+        132.52499389648438,
+        109.33880615234375
+      ],
+      "text_sha256": "ef476c491ebc4f2a1ddc9864e8d7d315d25eb384b46dfd993467c2dc265554ec"
+    },
+    {
+      "block_id": "page-0549-block-0048",
+      "order": 48,
+      "text": "fluoxetine/\n",
+      "bbox": [
+        132.81748962402344,
+        75.58138275146484,
+        141.52499389648438,
+        109.33880615234375
+      ],
+      "text_sha256": "9e425e1829a9add4ac34540f495e55d0a1fae36e2d32b6e3a7c4e2ade7d7067d"
+    },
+    {
+      "block_id": "page-0549-block-0049",
+      "order": 49,
+      "text": "paroxetine) will \n",
+      "bbox": [
+        141.81748962402344,
+        58.638877868652344,
+        150.52499389648438,
+        109.33880615234375
+      ],
+      "text_sha256": "fe96f5eab3dee76e2a48a58c135d31ac33672b0d678bf7f3363563ac9fbe6a75"
+    },
+    {
+      "block_id": "page-0549-block-0050",
+      "order": 50,
+      "text": "lengthen ket-\n",
+      "bbox": [
+        150.81748962402344,
+        66.4163818359375,
+        159.52499389648438,
+        109.33880615234375
+      ],
+      "text_sha256": "fca16ea6bf2a4fa72c507f059cbb40d073a2ecdfb345e2aafa30c663dfffbbbc"
+    },
+    {
+      "block_id": "page-0549-block-0051",
+      "order": 51,
+      "text": "amine half-life\n",
+      "bbox": [
+        159.81748962402344,
+        63.513916015625,
+        168.52499389648438,
+        109.33880615234375
+      ],
+      "text_sha256": "b5b64e7fc885a74749af079593bf6b56e8db1803b4df9efe92884bfd6ec32c03"
+    },
+    {
+      "block_id": "page-0549-block-0052",
+      "order": 52,
+      "text": "■\n■Beware of \n",
+      "bbox": [
+        170.81748962402344,
+        74.8838119506836,
+        179.52499389648438,
+        118.3388671875
+      ],
+      "text_sha256": "19788575b3c54a8b87d23182d77e4fba59026ac3610dd19a678a81d07a3e1c15"
+    },
+    {
+      "block_id": "page-0549-block-0053",
+      "order": 53,
+      "text": "hypertension \n",
+      "bbox": [
+        179.81748962402344,
+        65.99642181396484,
+        188.52499389648438,
+        109.33880615234375
+      ],
+      "text_sha256": "c1206ec7256d841d1856a93eaf0cd90c4b9a2886ed399fb3a3c4526d4a6e8f1f"
+    },
+    {
+      "block_id": "page-0549-block-0054",
+      "order": 54,
+      "text": "with SNRIs and \n",
+      "bbox": [
+        188.81748962402344,
+        59.321372985839844,
+        197.52499389648438,
+        109.33880615234375
+      ],
+      "text_sha256": "1fbac19cf2633d3f4f673d1a932b07b582d715f8f442983ebedd6cf08e10ad2d"
+    },
+    {
+      "block_id": "page-0549-block-0055",
+      "order": 55,
+      "text": "reboxetine\n",
+      "bbox": [
+        197.81748962402344,
+        75.723876953125,
+        206.52499389648438,
+        109.33880615234375
+      ],
+      "text_sha256": "62247e9d07f0df07377df7314dc8274d07dd4c7f323d10b9ef0c148ca70e8916"
+    },
+    {
+      "block_id": "page-0549-block-0056",
+      "order": 56,
+      "text": "Anticholinergics\n■\n■Misuse is likely. Try to avoid if at all possible (by using a second-generation drug if an antipsychotic is required)\n",
+      "bbox": [
+        278.7649841308594,
+        197.59764099121094,
+        287.6524963378906,
+        630.15380859375
+      ],
+      "text_sha256": "7804bc9641b5cce9de01c1c06a5b064dbd2c30d3776377db3646a4487fd32a9a"
+    },
+    {
+      "block_id": "page-0549-block-0057",
+      "order": 57,
+      "text": "■\n■Can cause hallucinations, elation and cognitive impairment\n",
+      "bbox": [
+        289.9425048828125,
+        360.1453552246094,
+        298.6499938964844,
+        557.50048828125
+      ],
+      "text_sha256": "6d0cd59a8d526c2a1d9d83fffcdcaed194e806ba2a7992a128c6c90aab9ef960"
+    },
+    {
+      "block_id": "page-0549-block-0058",
+      "order": 58,
+      "text": "Lithium\n■\n■Very toxic if taken erratically\n",
+      "bbox": [
+        306.8849792480469,
+        458.94293212890625,
+        315.7749938964844,
+        630.1528930664062
+      ],
+      "text_sha256": "b7e661bc0bdc60ed1bc040b65a35710b9b7aaec232c594d81afb56946bc4146b"
+    },
+    {
+      "block_id": "page-0549-block-0059",
+      "order": 59,
+      "text": "■\n■Always consider the effects of dehydration (particularly problematic with alcohol or ecstasy)\n",
+      "bbox": [
+        318.0675048828125,
+        256.6828308105469,
+        326.7749938964844,
+        557.50048828125
+      ],
+      "text_sha256": "4fdc92a6757cb7edf3533df33a58f50104d9b09f8896e9d96255f840eae5d3ad"
+    },
+    {
+      "block_id": "page-0549-block-0060",
+      "order": 60,
+      "text": "Carbamazepine \n",
+      "bbox": [
+        335.0099792480469,
+        573.4678955078125,
+        343.8974914550781,
+        630.1528930664062
+      ],
+      "text_sha256": "b405814d9de63b5e1bf917d9e44114de0b794d5f1f778d02374684f15860a702"
+    },
+    {
+      "block_id": "page-0549-block-0061",
+      "order": 61,
+      "text": "(CBZ)/valproate\n",
+      "bbox": [
+        345.0074768066406,
+        575.9729614257812,
+        353.8949890136719,
+        630.1528930664062
+      ],
+      "text_sha256": "fd89b9fde2e7397b9cfb52aa8175e676617919d5498a09190a798fe00316e660"
+    },
+    {
+      "block_id": "page-0549-block-0062",
+      "order": 62,
+      "text": "■\n■CBZ may decrease \n",
+      "bbox": [
+        335.1925048828125,
+        488.21539306640625,
+        343.8999938964844,
+        557.50048828125
+      ],
+      "text_sha256": "1361b655930f45877a969d1e7ce80fde72a79b8d1f3dad47dfc3c284aa61cdd4"
+    },
+    {
+      "block_id": "page-0549-block-0063",
+      "order": 63,
+      "text": "THC concentrations via \n",
+      "bbox": [
+        344.1925048828125,
+        472.6604309082031,
+        352.8999938964844,
+        548.5003662109375
+      ],
+      "text_sha256": "37dac41b658f7f0c6b1142284e61830706c02aeba79dc848b80a80227c1a9577"
+    },
+    {
+      "block_id": "page-0549-block-0064",
+      "order": 64,
+      "text": "induction of CYP3A434\n",
+      "bbox": [
+        353.1925048828125,
+        476.1163635253906,
+        361.8999938964844,
+        548.5003662109375
+      ],
+      "text_sha256": "7acef6240e869f6ffd9133086db6e69cd7d80170fb0c570f23bfdfafb1e6e7fb"
+    },
+    {
+      "block_id": "page-0549-block-0065",
+      "order": 65,
+      "text": "■\n■CBZ decreases methadone \n",
+      "bbox": [
+        335.1925048828125,
+        368.5772399902344,
+        343.8999938964844,
+        460.8272705078125
+      ],
+      "text_sha256": "65fe085b27d86cecea0f1efa06ecc9ea9dadb8b0067f734d37e3fa554e39da30"
+    },
+    {
+      "block_id": "page-0549-block-0066",
+      "order": 66,
+      "text": "levels35 (danger if CBZ stopped \n",
+      "bbox": [
+        344.1925048828125,
+        356.31536865234375,
+        352.8999938964844,
+        451.82720947265625
+      ],
+      "text_sha256": "256a5b2041e375e778fe061030dc01322653a5a55ff7f4559ab7ab5d3a50cfc6"
+    },
+    {
+      "block_id": "page-0549-block-0067",
+      "order": 67,
+      "text": "suddenly)\n",
+      "bbox": [
+        353.1925048828125,
+        422.6003112792969,
+        361.8999938964844,
+        451.82781982421875
+      ],
+      "text_sha256": "bb7fe04c20edc145f251817049b8988d3cff4c64ecb3e09f03b14999037e4784"
+    },
+    {
+      "block_id": "page-0549-block-0068",
+      "order": 68,
+      "text": "■\n■Valproate seems less likely to \n",
+      "bbox": [
+        364.1925048828125,
+        357.79217529296875,
+        372.8999938964844,
+        460.8272705078125
+      ],
+      "text_sha256": "cd0e8d23d4dc014a53524defa46afa9962e4b9cbf582d131b24f255fb2cf3ff0"
+    },
+    {
+      "block_id": "page-0549-block-0069",
+      "order": 69,
+      "text": "interact\n",
+      "bbox": [
+        373.1925048828125,
+        427.6697082519531,
+        381.8999938964844,
+        451.82720947265625
+      ],
+      "text_sha256": "edb6cf358450d571d69d2a78171af3fa3f7aec5acb01c457fad6165e9fd55e32"
+    },
+    {
+      "block_id": "page-0549-block-0070",
+      "order": 70,
+      "text": "■\n■CBZ induces CYP3A4, which leads to \n",
+      "bbox": [
+        335.1925048828125,
+        208.3695831298828,
+        343.8999938964844,
+        337.8273010253906
+      ],
+      "text_sha256": "1bbfd0c99e2a8c8b7567a6e17411ba85de9809713a94a7c0426d28603f180511"
+    },
+    {
+      "block_id": "page-0549-block-0071",
+      "order": 71,
+      "text": "more rapid formation of norcocaine \n",
+      "bbox": [
+        344.1925048828125,
+        212.4196014404297,
+        352.8999938964844,
+        328.8271789550781
+      ],
+      "text_sha256": "cec713fa65f90e0d4a00cf5dae1d9ada0f99151c5dd53e4ea827f84372792ea6"
+    },
+    {
+      "block_id": "page-0549-block-0072",
+      "order": 72,
+      "text": "(hepatotoxic and more cardiotoxic than \n",
+      "bbox": [
+        353.1925048828125,
+        201.1696319580078,
+        361.8999938964844,
+        328.8271789550781
+      ],
+      "text_sha256": "f1962a9ecee8456d3c1b32c1f891115f6e67039f39946a09f6f0e5c35313073d"
+    },
+    {
+      "block_id": "page-0549-block-0073",
+      "order": 73,
+      "text": "cocaine)36\n",
+      "bbox": [
+        362.1925048828125,
+        297.7153625488281,
+        370.8999938964844,
+        328.8271789550781
+      ],
+      "text_sha256": "57b8e120f706881254cc240ed6d1213416be2f04f81dc8c9c79405d1f8da6f1d"
+    },
+    {
+      "block_id": "page-0549-block-0074",
+      "order": 74,
+      "text": "■\n■Monitor LFTs\n■\n■CBZ decreases \n",
+      "bbox": [
+        335.1925048828125,
+        61.548851013183594,
+        343.8999938964844,
+        190.07730102539062
+      ],
+      "text_sha256": "f68c310c526bae460e5b20a77cc4cd3272b3506ebbf031b2425292209afaff59"
+    },
+    {
+      "block_id": "page-0549-block-0075",
+      "order": 75,
+      "text": "ketamine plasma \n",
+      "bbox": [
+        344.1925048828125,
+        53.088890075683594,
+        352.8999938964844,
+        109.33880615234375
+      ],
+      "text_sha256": "02f0e7e9d4d6d39a6b40010d8ec7084791751d3b809c8f25b955bcf2cf2d960b"
+    },
+    {
+      "block_id": "page-0549-block-0076",
+      "order": 76,
+      "text": "concentrations \n",
+      "bbox": [
+        353.1925048828125,
+        60.168907165527344,
+        361.8999938964844,
+        109.33880615234375
+      ],
+      "text_sha256": "2c4d57ea1430bfa46d9efda2448bb67353b4b85a3e7c2cae20a362ccb7243e3f"
+    },
+    {
+      "block_id": "page-0549-block-0077",
+      "order": 77,
+      "text": "via CYP3A4 \n",
+      "bbox": [
+        362.1925048828125,
+        69.74629974365234,
+        370.8999938964844,
+        109.33880615234375
+      ],
+      "text_sha256": "42615554eac77f10d3595c16f1383d90c4939671eefede81c4ddda1e8101578b"
+    },
+    {
+      "block_id": "page-0549-block-0078",
+      "order": 78,
+      "text": "induction\n",
+      "bbox": [
+        371.1925048828125,
+        79.33140563964844,
+        379.8999938964844,
+        109.33880615234375
+      ],
+      "text_sha256": "b7aa63e13db982c626eedbc1ac623f408d53133660c7d6dc4b00bda8b70d2f08"
+    },
+    {
+      "block_id": "page-0549-block-0079",
+      "order": 79,
+      "text": "Benzodiazepines\n■\n■Monitor level of seda-\n",
+      "bbox": [
+        390.1374816894531,
+        478.49542236328125,
+        399.0249938964844,
+        630.15380859375
+      ],
+      "text_sha256": "fd2be2eda7e6ae54a2a768e4ea0dc5d90081a680b838f01bfeb42bbe419846b8"
+    },
+    {
+      "block_id": "page-0549-block-0080",
+      "order": 80,
+      "text": "tion\n",
+      "bbox": [
+        399.3175048828125,
+        535.9979248046875,
+        408.0249938964844,
+        548.5003662109375
+      ],
+      "text_sha256": "b255e01e581eed652bab9e98cddca3e597f91e7062d86e1deffb4c8df6b8fd62"
+    },
+    {
+      "block_id": "page-0549-block-0081",
+      "order": 81,
+      "text": "■\n■Oversedation (and respiratory \n",
+      "bbox": [
+        390.3175048828125,
+        355.7071533203125,
+        399.0249938964844,
+        460.8272705078125
+      ],
+      "text_sha256": "29122be4b66613ecb6892e41a5b30f5c4cf72fbc1604513a59a2f6542c003473"
+    },
+    {
+      "block_id": "page-0549-block-0082",
+      "order": 82,
+      "text": "depression possible)\n",
+      "bbox": [
+        399.3175048828125,
+        388.1895751953125,
+        408.0249938964844,
+        451.82720947265625
+      ],
+      "text_sha256": "7506333bca5d37d73d9d9fad7f4bd197b8bef48fc5e3d511dcaa21d0c5523417"
+    },
+    {
+      "block_id": "page-0549-block-0083",
+      "order": 83,
+      "text": "■\n■Concomitant use can lead to \n",
+      "bbox": [
+        410.3175048828125,
+        357.64215087890625,
+        419.0249938964844,
+        460.8272705078125
+      ],
+      "text_sha256": "52cb9571803b2231aec9ab40429101e9aa948dc9ed95bdc321e53d26f4521c88"
+    },
+    {
+      "block_id": "page-0549-block-0084",
+      "order": 84,
+      "text": "accidental overdose\n",
+      "bbox": [
+        419.3175048828125,
+        389.0446472167969,
+        428.0249938964844,
+        451.82720947265625
+      ],
+      "text_sha256": "eb195aa1d3bc6cc196cd5dbdb60865250ee920ae44dee2b8e7dd5bdc01267cc5"
+    },
+    {
+      "block_id": "page-0549-block-0085",
+      "order": 85,
+      "text": "■\n■Possible pharmacokinetic interac-\n",
+      "bbox": [
+        430.3175048828125,
+        350.38214111328125,
+        439.0249938964844,
+        460.8272705078125
+      ],
+      "text_sha256": "d07ddb8255e33186f930dcf42240f3233b1804f524a316a441d248f06d5c43e5"
+    },
+    {
+      "block_id": "page-0549-block-0086",
+      "order": 86,
+      "text": "tion (increased methadone levels)\n",
+      "bbox": [
+        439.3175048828125,
+        350.08221435546875,
+        448.0249938964844,
+        451.82720947265625
+      ],
+      "text_sha256": "f126cf815f4c19f1c2a80cd9de900306e45ea063979413de73da3d6fa81f7d49"
+    },
+    {
+      "block_id": "page-0549-block-0087",
+      "order": 87,
+      "text": "■\n■Oversedation (if high doses of cocaine \n",
+      "bbox": [
+        390.3175048828125,
+        205.05455017089844,
+        399.0249938964844,
+        337.8273010253906
+      ],
+      "text_sha256": "b2491a63484e4944460f8549fcdcd7ff470d469c1975f1731a38a7e383e8cf42"
+    },
+    {
+      "block_id": "page-0549-block-0088",
+      "order": 88,
+      "text": "have been taken)\n",
+      "bbox": [
+        399.3175048828125,
+        273.8146667480469,
+        408.0249938964844,
+        328.8271789550781
+      ],
+      "text_sha256": "1226e09082a2a8806a3ce1682f0be475f11e67ba7012e2db8231008009fb845c"
+    },
+    {
+      "block_id": "page-0549-block-0089",
+      "order": 89,
+      "text": "■\n■Widely used after cocaine intoxication\n",
+      "bbox": [
+        410.3175048828125,
+        207.4021453857422,
+        419.0249938964844,
+        337.8273010253906
+      ],
+      "text_sha256": "5e0e61e8ff892b79c9ff721944a22a0e4f228a3fb6b24f98b068457f6788ee30"
+    },
+    {
+      "block_id": "page-0549-block-0090",
+      "order": 90,
+      "text": "■\n■Future misuse possible detoxification\n",
+      "bbox": [
+        421.3175048828125,
+        211.8645477294922,
+        430.0249938964844,
+        337.8273010253906
+      ],
+      "text_sha256": "62cfbc81ccc742e7c6f6940704b9a5d02a0d169ccf79cdd6202cf3618ba0b5de"
+    },
+    {
+      "block_id": "page-0549-block-0091",
+      "order": 91,
+      "text": "■\n■Oversedation \n",
+      "bbox": [
+        390.3175048828125,
+        136.9097442626953,
+        399.0249938964844,
+        190.07730102539062
+      ],
+      "text_sha256": "da21426f2630ba30dbc69985ec45c07715da40e612009c66e39879caedbd71cd"
+    },
+    {
+      "block_id": "page-0549-block-0092",
+      "order": 92,
+      "text": "(and respiratory \n",
+      "bbox": [
+        399.3175048828125,
+        129.12477111816406,
+        408.0249938964844,
+        181.07717895507812
+      ],
+      "text_sha256": "138754f2a3fdd739e063a69d980166f85c217e1e21a045dced067b1420266769"
+    },
+    {
+      "block_id": "page-0549-block-0093",
+      "order": 93,
+      "text": "depression) \n",
+      "bbox": [
+        408.3175048828125,
+        142.86476135253906,
+        417.0249938964844,
+        181.07717895507812
+      ],
+      "text_sha256": "617ac4acbd5c79caabc56ff098e9d038a624ddfed97efa48575cc8c37a8f1789"
+    },
+    {
+      "block_id": "page-0549-block-0094",
+      "order": 94,
+      "text": "possible\n",
+      "bbox": [
+        417.3175048828125,
+        155.65228271484375,
+        426.0249938964844,
+        181.07717895507812
+      ],
+      "text_sha256": "f25e13c49ec8b3fa718bfa01cddddceac37bd51ecbcfecb6b67d005e14354703"
+    },
+    {
+      "block_id": "page-0549-block-0095",
+      "order": 95,
+      "text": "■\n■Widely used in \n",
+      "bbox": [
+        428.3175048828125,
+        132.13978576660156,
+        437.0249938964844,
+        190.07730102539062
+      ],
+      "text_sha256": "afa6911e5efc760d5aaba6e05a8a3a1f64e1e979df400a8094ae11c4fd33a310"
+    },
+    {
+      "block_id": "page-0549-block-0096",
+      "order": 96,
+      "text": "alcohol detoxi-\n",
+      "bbox": [
+        437.3175048828125,
+        133.9923095703125,
+        446.0249938964844,
+        181.07717895507812
+      ],
+      "text_sha256": "b635fab93a2fb2fe3f653e182f3a8bd3cd56c75a56457b47f61e87e687a22cbc"
+    },
+    {
+      "block_id": "page-0549-block-0097",
+      "order": 97,
+      "text": "fication\n",
+      "bbox": [
+        446.3175048828125,
+        157.32469177246094,
+        455.0249938964844,
+        181.07717895507812
+      ],
+      "text_sha256": "c39528094b89a00c270f840d2dbe17f617fd09c4f9b3db144ebecc7552beaa4d"
+    },
+    {
+      "block_id": "page-0549-block-0098",
+      "order": 98,
+      "text": "■\n■Oversedation \n",
+      "bbox": [
+        390.3175048828125,
+        65.1714096069336,
+        399.0249938964844,
+        118.3388671875
+      ],
+      "text_sha256": "da21426f2630ba30dbc69985ec45c07715da40e612009c66e39879caedbd71cd"
+    },
+    {
+      "block_id": "page-0549-block-0099",
+      "order": 99,
+      "text": "and respiratory \n",
+      "bbox": [
+        399.3175048828125,
+        59.471397399902344,
+        408.0249938964844,
+        109.33880615234375
+      ],
+      "text_sha256": "4286014fc329e05be1c1090ecc4eac2132246e87e6bc10af767060e011ebf753"
+    },
+    {
+      "block_id": "page-0549-block-0100",
+      "order": 100,
+      "text": "depression\n",
+      "bbox": [
+        408.3175048828125,
+        75.29643249511719,
+        417.0249938964844,
+        109.33880615234375
+      ],
+      "text_sha256": "01b11a904cd61038eaf41c6f3812afe1a417e123ce74cfd020da2e3ed6720bc1"
+    },
+    {
+      "block_id": "page-0549-block-0101",
+      "order": 101,
+      "text": "Table 4.21  (Continued)\n",
+      "bbox": [
+        67.62750244140625,
+        547.8639526367188,
+        76.51499938964844,
+        624.1539916992188
+      ],
+      "text_sha256": "3ddbf9f871874f44b646d426b75cb24771ccb97cc9f3332e6f6f7190f06a88fb"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

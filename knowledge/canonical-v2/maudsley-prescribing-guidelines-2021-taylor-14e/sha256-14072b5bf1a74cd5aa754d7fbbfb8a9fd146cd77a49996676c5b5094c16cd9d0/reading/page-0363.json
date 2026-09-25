@@ -1,0 +1,16 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0363",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 363,
+  "source_page_index": 362,
+  "repaired_text": "342    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nReferences\n1.\t Cleare A, et al. Evidence-based guidelines for treating depressive disorders with antidepressants: a revision of the 2008 British Association for\nPsychopharmacology guidelines. J Psychopharmacology 2015; 29:459–525.\n\t 2.\t Harvey BH, et al. New insights on the antidepressant discontinuation syndrome. Human Psychopharmacology 2014; 29:503–516.\n\t 3.\t Malhi GS, et al. Royal Australian and New Zealand College of Psychiatrists clinical practice guidelines for mood disorders. Aust N Z J\nPsychiatry 2015; 49:1087–1206.\n\t 4.\t Benazzi F. Fluoxetine for the treatment of SSRI discontinuation syndrome. Int J Neuropsychopharmacol 2008; 11:725–726.\n\t 5.\t Perahia DG, et al. Switching to duloxetine from selective serotonin reuptake inhibitor antidepressants: a multicenter trial comparing 2 switching techniques. J Clin Psychiatry 2008; 69:95–105.\n\t 6.\t Goodwin GM, et al. Agomelatine prevents relapse in patients with major depressive disorder without evidence of a discontinuation syndrome: a 24-week randomized, double-blind, placebo-controlled trial. J Clin Psychiatry 2009; 70:1128–1137.\n\t 7.\t Buckley NA, et al. Serotonin syndrome. BMJ 2014; 348:g1626.\n\t 8.\t Abadie D, et al. Serotonin syndrome: analysis of cases registered in the French pharmacovigilance database. J Clin Psychopharmacol 2015;\n35:382–388.\n\t 9.\t Chen G, et al. Pharmacokinetic drug interactions involving vortioxetine (Lu AA21004), a multimodal antidepressant. Clin Drug Investig\n2013; 33:727–736.\n\t10.\t Citrome L. Vortioxetine for major depressive disorder: a systematic review of the efficacy and safety profile for this newly approved antidepressant – what is the number needed to treat, number needed to harm and likelihood to be helped or harmed? Int J Clin Pract 2014; \n68:60–82.",
+  "repaired_text_sha256": "cb966c2af2860e1824444ae6aadbfa21bcf9a5797d24ed13b2947895d801cf5b",
+  "raw_text_sha256": "833ec51f6255a5735c37a8df76b57298ae72cbcaaaf445ee8707a04239c9db46",
+  "repair_ids": [
+    "repair-000394",
+    "repair-000395",
+    "repair-000396"
+  ],
+  "raw_file": "raw/page-0363.json"
+}

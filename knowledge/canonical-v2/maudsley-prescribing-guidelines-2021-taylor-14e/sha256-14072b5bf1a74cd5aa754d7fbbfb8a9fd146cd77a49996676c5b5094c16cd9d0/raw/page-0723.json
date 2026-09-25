@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0723",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 723,
+  "source_page_index": 722,
+  "source_page_display": 723,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "702    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 7\nBreastfeeding\nThe long-term benefits of breastfeeding on child physical health and cognitive develop-\nment are well known. Women are generally encouraged to breastfeed for at least 6 \nmonths. One factor that may influence a mother’s decision to breastfeed is the safety of \na drug taken whilst breastfeeding. With some notable exceptions most psychotropic \ndrugs should be continued in breastfeeding women because of the benefits of breast-\nfeeding and the lack of evidence of harm for most drugs. However current evidence \nsuggests that for a few drugs (see below) the woman should be advised not to breast-\nfeed if such medications are the best option for her care.\nData on the safety of psychotropic medication in breast-feeding are largely derived \nfrom small studies or case reports and case series. Reported infant and neonatal out-\ncomes in most cases are limited to short term acute adverse effects. Long-term safety \ncannot, therefore, be guaranteed for the psychotropics mentioned here. The informa-\ntion presented must be interpreted with caution with respect to the limits of the data \nfrom which it is derived and the need for such information to be regularly updated.\nInfant exposure\nAll psychotropics are excreted in breast milk to varying degrees. The most direct meas-\nure of infant exposure is, of course, infant plasma levels but these data are rarely avail-\nable. Instead, many publications report only drug concentrations in breast milk and in \nmaternal plasma. Maternal plasma levels of antipsychotics may be a useful estimate of \ninfant exposure.1 Breast milk drug concentrations can be used to estimate the daily \ninfant dose (by assuming a milk intake of 150mL/kg/day). The infant weight-adjusted \ndose when expressed as a proportion of the maternal weight-adjusted dose is known as \nthe Relative Infant Dose (RID). The RID should be used as a guide only, as values are \nestimates and these estimates vary widely in the literature for individual drugs.\nDrugs with a RID below 10% are usually regarded as safe in breastfeeding. Where \nmeasured, infant plasma levels below 10% of average maternal plasma levels have also \nbeen proposed as safe in breastfeeding.2\nGeneral principles of prescribing psychotropics in breastfeeding\n■\n■The safety of individual drugs in breastfeeding should be taken into account when \nprescribing psychotropic medication for women considering pregnancy.\n■\n■Discussions about the safety of drugs in breastfeeding should be held as early as pos-\nsible ideally before conception or early in pregnancy. Decisions about the use of drugs \nin pregnancy should include the discussion about breastfeeding. Switching drugs at \nthe end of pregnancy or in the days after birth is not advisable because of the high \nrisk of relapse.\n■\n■Where a mother has taken a particular psychotropic during pregnancy and until \ndelivery, continuation with the drug while breastfeeding will usually be appropriate \n(see notable exceptions below), as this may minimise withdrawal symptoms in the \ninfant.\n■\n■In each case the benefits of breastfeeding to the mother and infant must be weighed \nagainst the risk of drug exposure in the infant.\n",
+  "raw_text_sha256": "e94d781952dcf82cb06031494fd0d0426897480bb59d5a104ab593da23cca3f5",
+  "coordinates_sha256": "843c0abda01731b3ec9fe49da516f1bf2a60718d4323be1f5dc470d1ceccf837",
+  "block_sequence_sha256": "da47d3867c5d9cceca9db2ff08eb7068d6ee15b0268e490a8ffc7864871f96d5",
+  "blocks": [
+    {
+      "block_id": "page-0723-block-0000",
+      "order": 0,
+      "text": "702    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "3335fc4a4a6ecae80aedad18251539851e01ba6a326f83d0d1624af238ba1dcc"
+    },
+    {
+      "block_id": "page-0723-block-0001",
+      "order": 1,
+      "text": "CHAPTER 7\n",
+      "bbox": [
+        18.520000457763672,
+        472.7144775390625,
+        28.0,
+        514.0584716796875
+      ],
+      "text_sha256": "6d1a2318236627f2d413db0336034ac4d71cea7172bd0baddf04c66a07292590"
+    },
+    {
+      "block_id": "page-0723-block-0002",
+      "order": 2,
+      "text": "Breastfeeding\n",
+      "bbox": [
+        68.88999938964844,
+        66.06539916992188,
+        140.81898498535156,
+        79.10040283203125
+      ],
+      "text_sha256": "3ba86e933f6c8da9bd074b77a46b2f5812bd4f22522f910e0af1cafc48ef71ea"
+    },
+    {
+      "block_id": "page-0723-block-0003",
+      "order": 3,
+      "text": "The long-term benefits of breastfeeding on child physical health and cognitive develop-\nment are well known. Women are generally encouraged to breastfeed for at least 6 \nmonths. One factor that may influence a mother’s decision to breastfeed is the safety of \na drug taken whilst breastfeeding. With some notable exceptions most psychotropic \ndrugs should be continued in breastfeeding women because of the benefits of breast-\nfeeding and the lack of evidence of harm for most drugs. However current evidence \nsuggests that for a few drugs (see below) the woman should be advised not to breast-\nfeed if such medications are the best option for her care.\n",
+      "bbox": [
+        61.88999938964844,
+        84.910400390625,
+        436.7200012207031,
+        180.63040161132812
+      ],
+      "text_sha256": "963126780d2acb2d88ef544c6244811209ea14dfc40d1046307c6ad11d721c4e"
+    },
+    {
+      "block_id": "page-0723-block-0004",
+      "order": 4,
+      "text": "Data on the safety of psychotropic medication in breast-feeding are largely derived \nfrom small studies or case reports and case series. Reported infant and neonatal out-\ncomes in most cases are limited to short term acute adverse effects. Long-term safety \ncannot, therefore, be guaranteed for the psychotropics mentioned here. The informa-\ntion presented must be interpreted with caution with respect to the limits of the data \nfrom which it is derived and the need for such information to be regularly updated.\n",
+      "bbox": [
+        61.88999938964844,
+        180.910400390625,
+        436.6997985839844,
+        252.63040161132812
+      ],
+      "text_sha256": "a7a6dbef96cbb3281fff70151753add108dc519114a590a38ab90ad453c3c394"
+    },
+    {
+      "block_id": "page-0723-block-0005",
+      "order": 5,
+      "text": "Infant exposure\n",
+      "bbox": [
+        61.88999938964844,
+        268.0653991699219,
+        143.59799194335938,
+        281.10040283203125
+      ],
+      "text_sha256": "88ca093162f5671242a756ad888e8c900cc3f9c99f8c8cf7dfc080da16b9d31d"
+    },
+    {
+      "block_id": "page-0723-block-0006",
+      "order": 6,
+      "text": "All psychotropics are excreted in breast milk to varying degrees. The most direct meas-\nure of infant exposure is, of course, infant plasma levels but these data are rarely avail-\nable. Instead, many publications report only drug concentrations in breast milk and in \nmaternal plasma. Maternal plasma levels of antipsychotics may be a useful estimate of \ninfant exposure.1 Breast milk drug concentrations can be used to estimate the daily \ninfant dose (by assuming a milk intake of 150mL/kg/day). The infant weight-adjusted \ndose when expressed as a proportion of the maternal weight-adjusted dose is known as \nthe Relative Infant Dose (RID). The RID should be used as a guide only, as values are \nestimates and these estimates vary widely in the literature for individual drugs.\n",
+      "bbox": [
+        61.88999938964844,
+        286.910400390625,
+        436.6834716796875,
+        394.6304016113281
+      ],
+      "text_sha256": "c118bf86b37863b78b2f02d350563e7748b119c9fcb8fb71ab20ec98b0599085"
+    },
+    {
+      "block_id": "page-0723-block-0007",
+      "order": 7,
+      "text": "Drugs with a RID below 10% are usually regarded as safe in breastfeeding. Where \nmeasured, infant plasma levels below 10% of average maternal plasma levels have also \nbeen proposed as safe in breastfeeding.2\n",
+      "bbox": [
+        61.89350128173828,
+        394.910400390625,
+        436.6735534667969,
+        430.6304016113281
+      ],
+      "text_sha256": "a00f2e7619362b007fb7a1e5a5f8b1c07a9e3ea8b5dcc6e1fdae91dcdafa2477"
+    },
+    {
+      "block_id": "page-0723-block-0008",
+      "order": 8,
+      "text": "General principles of prescribing psychotropics in breastfeeding\n",
+      "bbox": [
+        61.88999938964844,
+        446.0653991699219,
+        390.7130432128906,
+        459.10040283203125
+      ],
+      "text_sha256": "c1269a110421d5176afb308768183ac541546672b587a1615029812d6e183279"
+    },
+    {
+      "block_id": "page-0723-block-0009",
+      "order": 9,
+      "text": "■\n■The safety of individual drugs in breastfeeding should be taken into account when \n",
+      "bbox": [
+        61.88990020751953,
+        470.910400390625,
+        436.64990234375,
+        482.6304016113281
+      ],
+      "text_sha256": "c75a66ab1d6f8700df637ed3e81eaaa6e7011ab0b35cca4da8279a21aaff4624"
+    },
+    {
+      "block_id": "page-0723-block-0010",
+      "order": 10,
+      "text": "prescribing psychotropic medication for women considering pregnancy.\n",
+      "bbox": [
+        70.88999938964844,
+        482.910400390625,
+        378.9100036621094,
+        494.6304016113281
+      ],
+      "text_sha256": "7ee4fc850dc42a2dc84aa0087c8b86a579c39546c8dd5fb8fbeaf4f11bdaf990"
+    },
+    {
+      "block_id": "page-0723-block-0011",
+      "order": 11,
+      "text": "■\n■Discussions about the safety of drugs in breastfeeding should be held as early as pos-\n",
+      "bbox": [
+        61.88990020751953,
+        494.910400390625,
+        433.8900451660156,
+        506.6304016113281
+      ],
+      "text_sha256": "8b02f7260dcb96c92ec3f9741dace289da679e3fa133cdc2bfe1d2dd172707b3"
+    },
+    {
+      "block_id": "page-0723-block-0012",
+      "order": 12,
+      "text": "sible ideally before conception or early in pregnancy. Decisions about the use of drugs \nin pregnancy should include the discussion about breastfeeding. Switching drugs at \nthe end of pregnancy or in the days after birth is not advisable because of the high \nrisk of relapse.\n",
+      "bbox": [
+        70.88999938964844,
+        506.910400390625,
+        436.6600036621094,
+        554.6304321289062
+      ],
+      "text_sha256": "3f3ad9a8d5a9701cb659826ac5da386b9885fd2fe4d662d7a8a0333b910a5a01"
+    },
+    {
+      "block_id": "page-0723-block-0013",
+      "order": 13,
+      "text": "■\n■Where a mother has taken a particular psychotropic during pregnancy and until \n",
+      "bbox": [
+        61.88990020751953,
+        554.910400390625,
+        436.6800231933594,
+        566.6304321289062
+      ],
+      "text_sha256": "81c9390ea5c27036ee28df11ce82c662c18e1b8b2c01e44f9bc02e71a1810102"
+    },
+    {
+      "block_id": "page-0723-block-0014",
+      "order": 14,
+      "text": "delivery, continuation with the drug while breastfeeding will usually be appropriate \n(see notable exceptions below), as this may minimise withdrawal symptoms in the \ninfant.\n",
+      "bbox": [
+        70.88999938964844,
+        566.910400390625,
+        436.6800231933594,
+        602.6304321289062
+      ],
+      "text_sha256": "2d4e66b4b0441e2858ccf82a9d3b8e376d8848bc81d0664f7100d6aa5dc2e36c"
+    },
+    {
+      "block_id": "page-0723-block-0015",
+      "order": 15,
+      "text": "■\n■In each case the benefits of breastfeeding to the mother and infant must be weighed \n",
+      "bbox": [
+        61.88990020751953,
+        602.910400390625,
+        436.6099548339844,
+        614.6304321289062
+      ],
+      "text_sha256": "e9e515001c5538fbc89db30ecf1505f8acc78861676b1b4e2c8c64d74400f19a"
+    },
+    {
+      "block_id": "page-0723-block-0016",
+      "order": 16,
+      "text": "against the risk of drug exposure in the infant.\n",
+      "bbox": [
+        70.88999938964844,
+        614.910400390625,
+        270.949951171875,
+        626.6304321289062
+      ],
+      "text_sha256": "978c6a71c5d6c1c16fa1a82eb8474bcdad139c7d95bd57b9431d1a720a0afdae"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

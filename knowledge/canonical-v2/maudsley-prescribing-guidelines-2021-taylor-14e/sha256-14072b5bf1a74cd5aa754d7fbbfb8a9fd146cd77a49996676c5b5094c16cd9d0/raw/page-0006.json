@@ -1,0 +1,83 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0006",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 6,
+  "source_page_index": 5,
+  "source_page_display": 6,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Contents\nPreface\b\nxi\nAcknowledgments\b\nxii\nNotes on using The Maudsley® Prescribing Guidelines in Psychiatry\b\nxiii\nList of abbreviations\b\nxv\nPart 1      Drug treatment of major psychiatric conditions\b\n1\nChapter 1   Schizophrenia and related psychoses\b\n3\nANTIPSYCHOTIC DRUGS\b\n3\nGeneral introduction\b\n3\nAntipsychotics – general principles of prescribing\b\n8\nAntipsychotics – minimum effective doses\b\n9\nAntipsychotics – quick reference for licensed maximum doses\b\n12\nAntipsychotics – equivalent doses\b\n14\nHigh-dose antipsychotics: prescribing and monitoring\b\n16\nCombined antipsychotics (antipsychotic polypharmacy)\b\n20\nAntipsychotic prophylaxis\b\n25\nNegative symptoms\b\n32\nMonitoring\b\n38\nRelative adverse effects – a rough guide\b\n41\nTreatment algorithms for schizophrenia\b\n42\nFirst-generation antipsychotics – place in therapy\b\n46\nNICE guidelines for the treatment of schizophrenia\b\n48\nAntipsychotic response – to increase the dose, to switch, to add or  \njust wait – what is the right move?\b\n51\nAcutely disturbed or violent behaviour\b\n56\nAntipsychotic depots/long-acting injections (LAIs)\b\n67\nDepot/LAI antipsychotics – pharmacokinetics\b\n72\nManagement of patients on long-term depots/LAIs\b\n74\nAripiprazole long-acting injection\b\n77\nOlanzapine long-acting injection\b\n80\nPaliperidone palmitate long-acting injection\b\n83\nRisperidone long-acting injection\b\n87\nRisperidone subcutaneous long-acting injection\b\n91\n",
+  "raw_text_sha256": "3c96cd206925873b0d2d1f32cf417b91bda5b6891a29dbe0179e45c342980573",
+  "coordinates_sha256": "e20d07fa42b35dc67bd15a34312a5e6d81f78c19faa832f1432b3bb603474669",
+  "block_sequence_sha256": "f0fbf5d5bdd9c3ce3a50199f13b84c1dcc650f50613eff26a2f0430c1f9464c8",
+  "blocks": [
+    {
+      "block_id": "page-0006-block-0000",
+      "order": 0,
+      "text": "Contents\n",
+      "bbox": [
+        327.1173095703125,
+        111.93036651611328,
+        420.00128173828125,
+        138.0003662109375
+      ],
+      "text_sha256": "a5e325a3fedebb7bc522eb6454926c46b47aa62c374bda386ef829bc8f347353"
+    },
+    {
+      "block_id": "page-0006-block-0001",
+      "order": 1,
+      "text": "Preface\b\nxi\nAcknowledgments\b\nxii\nNotes on using The Maudsley® Prescribing Guidelines in Psychiatry\b\nxiii\nList of abbreviations\b\nxv\n",
+      "bbox": [
+        98.99359130859375,
+        226.09689331054688,
+        420.00311279296875,
+        272.64190673828125
+      ],
+      "text_sha256": "d8112d565118328fea734353f7f5bf6bc96b157f7a8002db2a3f186c0d205a0c"
+    },
+    {
+      "block_id": "page-0006-block-0002",
+      "order": 2,
+      "text": "Part 1      Drug treatment of major psychiatric conditions\b\n1\n",
+      "bbox": [
+        47.999603271484375,
+        285.67388916015625,
+        419.9966125488281,
+        296.3388977050781
+      ],
+      "text_sha256": "a41fd1be7648a5179df32872ef71fa5880724f8b4e424d335b6a6d820f668f71"
+    },
+    {
+      "block_id": "page-0006-block-0003",
+      "order": 3,
+      "text": "Chapter 1   Schizophrenia and related psychoses\b\n3\nANTIPSYCHOTIC DRUGS\b\n3\nGeneral introduction\b\n3\nAntipsychotics – general principles of prescribing\b\n8\nAntipsychotics – minimum effective doses\b\n9\nAntipsychotics – quick reference for licensed maximum doses\b\n12\nAntipsychotics – equivalent doses\b\n14\nHigh-dose antipsychotics: prescribing and monitoring\b\n16\nCombined antipsychotics (antipsychotic polypharmacy)\b\n20\nAntipsychotic prophylaxis\b\n25\nNegative symptoms\b\n32\nMonitoring\b\n38\nRelative adverse effects – a rough guide\b\n41\nTreatment algorithms for schizophrenia\b\n42\nFirst-generation antipsychotics – place in therapy\b\n46\nNICE guidelines for the treatment of schizophrenia\b\n48\nAntipsychotic response – to increase the dose, to switch, to add or  \n",
+      "bbox": [
+        47.999603271484375,
+        303.67388916015625,
+        419.9966125488281,
+        506.0928955078125
+      ],
+      "text_sha256": "30a1c40909d3f726c21e91d1531060a96e1fe50052aa05827cc18251c9b3ec07"
+    },
+    {
+      "block_id": "page-0006-block-0004",
+      "order": 4,
+      "text": "just wait – what is the right move?\b\n51\nAcutely disturbed or violent behaviour\b\n56\nAntipsychotic depots/long-acting injections (LAIs)\b\n67\nDepot/LAI antipsychotics – pharmacokinetics\b\n72\nManagement of patients on long-term depots/LAIs\b\n74\nAripiprazole long-acting injection\b\n77\nOlanzapine long-acting injection\b\n80\nPaliperidone palmitate long-acting injection\b\n83\nRisperidone long-acting injection\b\n87\nRisperidone subcutaneous long-acting injection\b\n91\n",
+      "bbox": [
+        98.984619140625,
+        507.5419006347656,
+        419.98760986328125,
+        626.0628662109375
+      ],
+      "text_sha256": "805a44df850872d0c54dd741663eb1575f9d49bac9a00adb9f0badb6d034f00a"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,407 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0400",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 400,
+  "source_page_index": 399,
+  "source_page_display": 400,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    379\nCHAPTER 3\nAntidepressant\nSubstrate for\nInhibits\nTCAs\nAmitriptyline\nCYP1A2, CYP2D6, CYP3A4, CYP2C19\nClomipramine\nDesipramine\nCYP2D6\nDosulepin\nCYP2D6 and possibly other pathways\nDoxepin\nCYP2D6, CYP1A2 (minor), CYP3A4 \n(minor)\nImipramine\nCYP1A2, CYP2D6, CYP3A4, CYP2C19\nNortriptyline\nCYP2D6\nTrimipramine\nCYP2D6\nOthers\nAgomelatine\nCYP1A2\nBupropion\nCYP2B6\nCYP2D6 (potent)\nEsketamine\nCYP3A4, CYP2B6\nMianserin\nCYP2D6\nMirtazapine\nCYP1A2, CYP2D6, CYP3A4\nCYP2D6 (weak)\nReboxetine\nCYP3A4\nTrazodone\nCYP3A4\nVortioxetine\nCYP2D6, CYP2A6, CYP2B6, CYP2C8, \nCYP2C9, CYP2C19, CYP3A4\nVilazodone\nCYP3A4\nCYP2C8\nCYP enzymes highlighted in bold indicate:\n■\n■predominant metabolic enzyme pathway or\n■\n■predominant enzyme activity.\nTable 3.14  (Continued)\n■\n■Pharmacodynamic interactions where the effects of one drug are altered by another \ndrug via physiological mechanisms such as direct competition at receptor sites (e.g. \ndopamine agonists with dopamine blockers may negate any therapeutic effect), aug-\nmentation of the same neurotransmitter pathway (e.g. fluoxetine with tramadol or a \ntriptan can lead to serotonin syndrome) or an effect on the physiological functioning \nof an organ/organ system in different ways (e.g. SSRIs impair clotting and NSAIDs \nirritate the gastric mucosa so when these drugs are used together, the risk of GI bleeds \nis increased). Up-to-date interaction tables are readily available online and most \nknown interactions are described in an individual product’s literature.\nPharmacodynamic interactions\nTricyclic antidepressants7–10\n■\n■are H1 blockers (sedative). This effect can be exacerbated by other sedative drugs or \nalcohol. Beware respiratory depression\n",
+  "raw_text_sha256": "8525f5157d5fc8603e5676f66eb58f333257bc73f238b16b4d5258a955d2f713",
+  "coordinates_sha256": "b39ed9d8bbf2113f7d86f030ab818fdd53121775f95a305a60feb392b5d62dc9",
+  "block_sequence_sha256": "a2d0f4047e1cf785fd939a289884afcd42fa40e275cd1924a08c771e7042b4db",
+  "blocks": [
+    {
+      "block_id": "page-0400-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    379\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "399080f84a2970fb18b43044d13c117a8ca4c3297fefae579553dc6dfae2f2b5"
+    },
+    {
+      "block_id": "page-0400-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0400-block-0002",
+      "order": 2,
+      "text": "Antidepressant\nSubstrate for\nInhibits\n",
+      "bbox": [
+        47.999698638916016,
+        89.95191955566406,
+        331.754638671875,
+        98.83941650390625
+      ],
+      "text_sha256": "65dad7f544eb5d9b0b1aa5d2c01c867d82e4d6fd8c2e51430e2c9d31968a2347"
+    },
+    {
+      "block_id": "page-0400-block-0003",
+      "order": 3,
+      "text": "TCAs\n",
+      "bbox": [
+        48.0072021484375,
+        106.9094467163086,
+        64.6797103881836,
+        115.616943359375
+      ],
+      "text_sha256": "422d1dde1779e19f9277e6ecbb33e3065cea1736b9f7c6de1fe51736d495d29c"
+    },
+    {
+      "block_id": "page-0400-block-0004",
+      "order": 4,
+      "text": "Amitriptyline\nCYP1A2, CYP2D6, CYP3A4, CYP2C19\n",
+      "bbox": [
+        98.00970458984375,
+        121.75196838378906,
+        287.41473388671875,
+        130.63946533203125
+      ],
+      "text_sha256": "f25d79772e5f1d7123c7d454caa48172788e67c476506f344fdfb7fdb62b1748"
+    },
+    {
+      "block_id": "page-0400-block-0005",
+      "order": 5,
+      "text": "Clomipramine\n",
+      "bbox": [
+        98.00970458984375,
+        136.95448303222656,
+        143.0096893310547,
+        145.6619873046875
+      ],
+      "text_sha256": "fd9deaae4034b070d885e55e7a515a494a7d3fde55cd6ff150cb5ad52c49c4ee"
+    },
+    {
+      "block_id": "page-0400-block-0006",
+      "order": 6,
+      "text": "Desipramine\nCYP2D6\n",
+      "bbox": [
+        98.00970458984375,
+        151.79701232910156,
+        191.12969970703125,
+        160.68450927734375
+      ],
+      "text_sha256": "97448dd6ca0c96c418c3aa3b926eb8ba631d12411ad14221e9c702b6d14372b2"
+    },
+    {
+      "block_id": "page-0400-block-0007",
+      "order": 7,
+      "text": "Dosulepin\nCYP2D6 and possibly other pathways\n",
+      "bbox": [
+        98.00970458984375,
+        166.95452880859375,
+        282.81719970703125,
+        175.70703125
+      ],
+      "text_sha256": "60f8a3dbb88a120373b766b02ac360ccc41364f41d16912029a44923781a4c87"
+    },
+    {
+      "block_id": "page-0400-block-0008",
+      "order": 8,
+      "text": "Doxepin\nCYP2D6, CYP1A2 (minor), CYP3A4 \n(minor)\n",
+      "bbox": [
+        98.00970458984375,
+        181.97702026367188,
+        277.822265625,
+        200.72702026367188
+      ],
+      "text_sha256": "d5a5d397e1e8dfa6f38bbf915ab673040c4b41c19c219d8c6b640ddb1ce968c2"
+    },
+    {
+      "block_id": "page-0400-block-0009",
+      "order": 9,
+      "text": "Imipramine\nCYP1A2, CYP2D6, CYP3A4, CYP2C19\n",
+      "bbox": [
+        98.00970458984375,
+        206.8620147705078,
+        287.41473388671875,
+        215.74951171875
+      ],
+      "text_sha256": "2c7f02a54da34005066e3cd877b2e2db88e83d7a29c931118496cf275f8ac818"
+    },
+    {
+      "block_id": "page-0400-block-0010",
+      "order": 10,
+      "text": "Nortriptyline\nCYP2D6\n",
+      "bbox": [
+        98.00970458984375,
+        221.88450622558594,
+        191.12969970703125,
+        230.77200317382812
+      ],
+      "text_sha256": "153d7f94ce6f4fb783fd61f81e76ec2a828dc8697d4269576804fea086b3ed49"
+    },
+    {
+      "block_id": "page-0400-block-0011",
+      "order": 11,
+      "text": "Trimipramine\nCYP2D6\n",
+      "bbox": [
+        98.00970458984375,
+        236.90699768066406,
+        191.12969970703125,
+        245.79449462890625
+      ],
+      "text_sha256": "6582c200f2490b07400fdcb4ac3161624b240fa0ef883583be2e425b91e6c5fc"
+    },
+    {
+      "block_id": "page-0400-block-0012",
+      "order": 12,
+      "text": "Others\n",
+      "bbox": [
+        48.0072021484375,
+        252.10948181152344,
+        69.25470733642578,
+        260.8169860839844
+      ],
+      "text_sha256": "1aa52f7e4f05a078be727a3ece984b3d611b02a7a0ff0188b84488e39bdd7995"
+    },
+    {
+      "block_id": "page-0400-block-0013",
+      "order": 13,
+      "text": "Agomelatine\nCYP1A2\n",
+      "bbox": [
+        98.00970458984375,
+        266.95196533203125,
+        191.12969970703125,
+        275.8394775390625
+      ],
+      "text_sha256": "7b60b909e579807d1e33d4669e71de735b2d6f524013e1ddce0065c8efaf95a1"
+    },
+    {
+      "block_id": "page-0400-block-0014",
+      "order": 14,
+      "text": "Bupropion\nCYP2B6\nCYP2D6 (potent)\n",
+      "bbox": [
+        98.00970458984375,
+        281.9744567871094,
+        363.854736328125,
+        290.8619689941406
+      ],
+      "text_sha256": "195a5bb74e5e677cb41727322f00e3bc1b0dad17f6987262cac0bc81ffaf969d"
+    },
+    {
+      "block_id": "page-0400-block-0015",
+      "order": 15,
+      "text": "Esketamine\nCYP3A4, CYP2B6\n",
+      "bbox": [
+        98.00970458984375,
+        296.9969482421875,
+        221.9772186279297,
+        305.88446044921875
+      ],
+      "text_sha256": "895cfcf6ae659013ce56c24f1527f977a24a1f511f32631336967d69c4666a47"
+    },
+    {
+      "block_id": "page-0400-block-0016",
+      "order": 16,
+      "text": "Mianserin\nCYP2D6\n",
+      "bbox": [
+        98.00970458984375,
+        312.1544494628906,
+        189.87721252441406,
+        320.9069519042969
+      ],
+      "text_sha256": "7024edd6b20f41f56de707e3f84f8187f237aaa795f884e24c936a1448c60bec"
+    },
+    {
+      "block_id": "page-0400-block-0017",
+      "order": 17,
+      "text": "Mirtazapine\nCYP1A2, CYP2D6, CYP3A4\nCYP2D6 (weak)\n",
+      "bbox": [
+        98.00970458984375,
+        327.17694091796875,
+        355.10968017578125,
+        335.929443359375
+      ],
+      "text_sha256": "6aed2969127b385863ef9221015bdaf568bb907c71c0590ca5552bd11bf516a8"
+    },
+    {
+      "block_id": "page-0400-block-0018",
+      "order": 18,
+      "text": "Reboxetine\nCYP3A4\n",
+      "bbox": [
+        98.00970458984375,
+        342.0644226074219,
+        191.12969970703125,
+        350.9519348144531
+      ],
+      "text_sha256": "78aa876dc8a8fba5f7b389aa6a97eb50007af903d64b0cabb9bef7c51239b38b"
+    },
+    {
+      "block_id": "page-0400-block-0019",
+      "order": 19,
+      "text": "Trazodone\nCYP3A4\n",
+      "bbox": [
+        98.00970458984375,
+        357.0869140625,
+        191.12969970703125,
+        365.97442626953125
+      ],
+      "text_sha256": "61965ed7cd750fdb48d7ada6275797f1683a430ae7116279f5aad7d67a9dc822"
+    },
+    {
+      "block_id": "page-0400-block-0020",
+      "order": 20,
+      "text": "Vortioxetine\nCYP2D6, CYP2A6, CYP2B6, CYP2C8, \nCYP2C9, CYP2C19, CYP3A4\n",
+      "bbox": [
+        98.00970458984375,
+        372.1094055175781,
+        287.0097351074219,
+        390.9944152832031
+      ],
+      "text_sha256": "fadc73d24afb16d336d056759ba5201a605a3af5ee16ec734be0a569df7995b4"
+    },
+    {
+      "block_id": "page-0400-block-0021",
+      "order": 21,
+      "text": "Vilazodone\nCYP3A4\nCYP2C8\n",
+      "bbox": [
+        98.00970458984375,
+        397.12939453125,
+        331.3497009277344,
+        406.01690673828125
+      ],
+      "text_sha256": "1dd27107d86f38d46d6e73be602f79338b253756231acbdbafa51ee0bac7dcd0"
+    },
+    {
+      "block_id": "page-0400-block-0022",
+      "order": 22,
+      "text": "CYP enzymes highlighted in bold indicate:\n",
+      "bbox": [
+        48.01470947265625,
+        416.12689208984375,
+        184.2822265625,
+        425.014404296875
+      ],
+      "text_sha256": "d9697a77a79c388944dbe425f3a885025fde14f469170f2e5f6b1228727399e1"
+    },
+    {
+      "block_id": "page-0400-block-0023",
+      "order": 23,
+      "text": "■\n■predominant metabolic enzyme pathway or\n",
+      "bbox": [
+        47.99959945678711,
+        426.3569030761719,
+        196.45469665527344,
+        435.06439208984375
+      ],
+      "text_sha256": "408cf45dc2b82ac9188756818f817baf94db6803f285509fb4a7c63006f3e291"
+    },
+    {
+      "block_id": "page-0400-block-0024",
+      "order": 24,
+      "text": "■\n■predominant enzyme activity.\n",
+      "bbox": [
+        47.99959945678711,
+        436.3569030761719,
+        150.32968139648438,
+        445.06439208984375
+      ],
+      "text_sha256": "725a1b9565b7071ee52af5bd8c7b286b430a8ba7034fac18db08e68405b0137c"
+    },
+    {
+      "block_id": "page-0400-block-0025",
+      "order": 25,
+      "text": "Table 3.14  (Continued)\n",
+      "bbox": [
+        54.0,
+        70.08790588378906,
+        130.2899932861328,
+        78.97540283203125
+      ],
+      "text_sha256": "38daddf8bcf7373a96a2596f844eb7db82b98c850c274492f8212eb59e0fff19"
+    },
+    {
+      "block_id": "page-0400-block-0026",
+      "order": 26,
+      "text": "■\n■Pharmacodynamic interactions where the effects of one drug are altered by another \n",
+      "bbox": [
+        47.999900817871094,
+        460.10601806640625,
+        421.7400817871094,
+        472.0660095214844
+      ],
+      "text_sha256": "4bead6580601eaff202ae1318eda1f459f59571c031d2bb997ee6fde5d947238"
+    },
+    {
+      "block_id": "page-0400-block-0027",
+      "order": 27,
+      "text": "drug via physiological mechanisms such as direct competition at receptor sites (e.g. \ndopamine agonists with dopamine blockers may negate any therapeutic effect), aug-\nmentation of the same neurotransmitter pathway (e.g. fluoxetine with tramadol or a \ntriptan can lead to serotonin syndrome) or an effect on the physiological functioning \nof an organ/organ system in different ways (e.g. SSRIs impair clotting and NSAIDs \nirritate the gastric mucosa so when these drugs are used together, the risk of GI bleeds \nis increased). Up-to-date interaction tables are readily available online and most \nknown interactions are described in an individual product’s literature.\n",
+      "bbox": [
+        57.0,
+        472.34600830078125,
+        421.7599792480469,
+        568.0660400390625
+      ],
+      "text_sha256": "66bb77a277e70dd53653ecc68a82b742503d902257bb9136a70f6074c30b7943"
+    },
+    {
+      "block_id": "page-0400-block-0028",
+      "order": 28,
+      "text": "Pharmacodynamic interactions\n",
+      "bbox": [
+        48.0,
+        577.5010375976562,
+        206.30099487304688,
+        590.5360107421875
+      ],
+      "text_sha256": "2be3012b43b6af9a3af7c2bf22f96d24f7b695816152e02769b72fa2b9fe8ce7"
+    },
+    {
+      "block_id": "page-0400-block-0029",
+      "order": 29,
+      "text": "Tricyclic antidepressants7–10\n",
+      "bbox": [
+        48.0,
+        596.43603515625,
+        173.7980499267578,
+        608.2860107421875
+      ],
+      "text_sha256": "e9d1db466ba81bcb526584fba2b006b11ae0e8896291a39271082cef394b1eb6"
+    },
+    {
+      "block_id": "page-0400-block-0030",
+      "order": 30,
+      "text": "■\n■are H1 blockers (sedative). This effect can be exacerbated by other sedative drugs or \n",
+      "bbox": [
+        47.999900817871094,
+        614.3460083007812,
+        421.76806640625,
+        628.4453125
+      ],
+      "text_sha256": "7d84ffc0e3f06193c6ca60fd0fbe19959350217d8ac0fdb0ff8db18517f91546"
+    },
+    {
+      "block_id": "page-0400-block-0031",
+      "order": 31,
+      "text": "alcohol. Beware respiratory depression\n",
+      "bbox": [
+        56.99800109863281,
+        626.3460083007812,
+        223.8879852294922,
+        638.0660400390625
+      ],
+      "text_sha256": "9eb036d2f81ecb47a90abac6baa222582b8e2e28082baa4f9cfef7e0308c0f2f"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

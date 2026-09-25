@@ -1,0 +1,419 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0065",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 65,
+  "source_page_index": 64,
+  "source_page_display": 65,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "44    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nRelapse or acute exacerbation of schizophrenia\n(adherence doubtful or known to be poor)\nReferences\n\t 1.\t Robinson DG, et al. Psychopharmacological treatment in the RAISE-ETP study: outcomes of a manual and computer decision support system \nbased intervention. Am J Psychiatry 2018; 175:169–179.\n\t 2.\t Zhu Y, et al. Antipsychotic drugs for the acute treatment of patients with a first episode of schizophrenia: a systematic review with pairwise \nand network meta-analyses. Lancet Psychiatry 2017; 4:694–705.\n\t 3.\t Zhang JP, et al. Efficacy and safety of individual second-generation vs. first-generation antipsychotics in first-episode psychosis: a systematic \nreview and meta-analysis. Int J Neuropsychopharmacol 2013; 16:1205–1218.\n\t 4.\t Leucht S, et al. Early-onset hypothesis of antipsychotic drug action: a hypothesis tested, confirmed and extended. Biol Psychiatry 2005; \n57:1543–1549.\n\t 5.\t Agid O, et al. The ‘delayed onset’ of antipsychotic action–an idea whose time has come and gone. J Psychiatry Neurosci 2006; 31:93–100.\n\t 6.\t Kahn RS, et al. Amisulpride and olanzapine followed by open-label treatment with clozapine in first-episode schizophrenia and schizophreni-\nform disorder (OPTiMiSE): a three-phase switching study. Lancet Psychiatry 2018; 5:797–807.\n\t 7.\t Subotnik KL, et al. Long-acting injectable risperidone for relapse prevention and control of breakthrough symptoms after a recent first epi-\nsode of schizophrenia. a randomized clinical trial. JAMA Psychiatry 2015; 72:822–829.\n\t 8.\t Schreiner A, et al. Paliperidone palmitate versus oral antipsychotics in recently diagnosed schizophrenia. Schizophr Res 2015; \n169:393–399.\n\t 9.\t Alphs L, et al. Treatment effect with paliperidone palmitate compared with oral antipsychotics in patients with recent-onset versus more \nchronic schizophrenia and a history of criminal justice system involvement. Early Intervention in Psychiatry 2018; 12:55–65.\n\t10.\t Kane JM, et al. Patients with early-phase schizophrenia will accept treatment with sustained-release medication (Long-Acting Injectable \nAntipsychotics): results from the recruitment phase of the PRELAPSE trial. J Clin Psychiatry 2019; 80:18m12546.\nInvestigate reasons for\npoor adherence\nDiscuss with patient\nSwitch to antipsychotic medication with\na more favourable side-effect profile\nDiscuss with patient\nConsider depot/LAI antipsychotic\nmedication**\nSimplify drug regimen\nReduce any anticholinergic load\nConsider ‘compliance aids’*\nConsider depot/LAI**\nForgetful or\ndisorganised\nTreatment algorithm\nLack of insight\nor support\nPoorly tolerated\ntreatment\n*Compliance aids (e.g. Medidose system in the UK) are not a substitute for patient education. The ultimate\naim should be to promote independent living, perhaps with patients ﬁlling their own compliance aid, having\nﬁrst been given support and training. Note that such compliance aids are of little use unless the patient is\nclearly motivated to adhere to prescribed treatment. Note also that some medicines are not suitable for\nstorage in compliance aids.\n**Patients generally have positive views of depot medication.10,30\n",
+  "raw_text_sha256": "ff6270adf692142c9ff852f5434d914cfd2065fa92e87f0522d6075e86dda2c0",
+  "coordinates_sha256": "8f6189e291b632b0ec8d58e72a05afce62c8cacd59f12e0096a0aad8b1b6d145",
+  "block_sequence_sha256": "89f9eed5692d2d36db2f11031fa3aeb352e123db1a92ed3707eb4dd80b84ef74",
+  "blocks": [
+    {
+      "block_id": "page-0065-block-0000",
+      "order": 0,
+      "text": "44    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "114bf39d026109ee0a8ccb7d01d0f833a70b364e69f836a1068448e4da3d626b"
+    },
+    {
+      "block_id": "page-0065-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0065-block-0002",
+      "order": 2,
+      "text": "Relapse or acute exacerbation of schizophrenia\n",
+      "bbox": [
+        61.88909912109375,
+        62.31442642211914,
+        305.5721130371094,
+        75.34942626953125
+      ],
+      "text_sha256": "5f1abfa349aa74c23fefede03e9d1117c1470c980df368e93e1e090657fa0a5e"
+    },
+    {
+      "block_id": "page-0065-block-0003",
+      "order": 3,
+      "text": "(adherence doubtful or known to be poor)\n",
+      "bbox": [
+        61.88909912109375,
+        81.159423828125,
+        244.72909545898438,
+        92.87942504882812
+      ],
+      "text_sha256": "3cf74947ef3e495b859873cf0c082e9f06710cf7d6818b37d187f130640cffd0"
+    },
+    {
+      "block_id": "page-0065-block-0004",
+      "order": 4,
+      "text": "References\n",
+      "bbox": [
+        61.88890075683594,
+        417.1377258300781,
+        117.92289733886719,
+        430.1727294921875
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0065-block-0005",
+      "order": 5,
+      "text": "\t 1.\t Robinson DG, et al. Psychopharmacological treatment in the RAISE-ETP study: outcomes of a manual and computer decision support system \n",
+      "bbox": [
+        61.88890075683594,
+        435.25872802734375,
+        435.5147399902344,
+        442.2907409667969
+      ],
+      "text_sha256": "6c252151420191d32290a8b555c29899a8be510355d6f6e189722031b0d3ebd2"
+    },
+    {
+      "block_id": "page-0065-block-0006",
+      "order": 6,
+      "text": "based intervention. Am J Psychiatry 2018; 175:169–179.\n\t 2.\t Zhu Y, et al. Antipsychotic drugs for the acute treatment of patients with a first episode of schizophrenia: a systematic review with pairwise \n",
+      "bbox": [
+        61.8948974609375,
+        444.1147155761719,
+        435.5208435058594,
+        460.2907409667969
+      ],
+      "text_sha256": "0ec9792a79f62fb4c2c99f02fd91a04624eafac1a55208624d963d91262a7dfd"
+    },
+    {
+      "block_id": "page-0065-block-0007",
+      "order": 7,
+      "text": "and network meta-analyses. Lancet Psychiatry 2017; 4:694–705.\n\t 3.\t Zhang JP, et al. Efficacy and safety of individual second-generation vs. first-generation antipsychotics in first-episode psychosis: a systematic \n",
+      "bbox": [
+        61.900901794433594,
+        462.1147155761719,
+        435.5688781738281,
+        478.2907409667969
+      ],
+      "text_sha256": "1215b632a0368b2d32c73cf0bb347a8215bb5dcd25a9c8dee10bd1f8b7331f7c"
+    },
+    {
+      "block_id": "page-0065-block-0008",
+      "order": 8,
+      "text": "review and meta-analysis. Int J Neuropsychopharmacol 2013; 16:1205–1218.\n\t 4.\t Leucht S, et al. Early-onset hypothesis of antipsychotic drug action: a hypothesis tested, confirmed and extended. Biol Psychiatry 2005; \n",
+      "bbox": [
+        61.906898498535156,
+        480.1147155761719,
+        435.5689392089844,
+        496.2907409667969
+      ],
+      "text_sha256": "a7a4c092908d789da9cd854a78f06cadc330aaf895b492fd5d1caaa2f751d5b1"
+    },
+    {
+      "block_id": "page-0065-block-0009",
+      "order": 9,
+      "text": "57:1543–1549.\n\t 5.\t Agid O, et al. The ‘delayed onset’ of antipsychotic action–an idea whose time has come and gone. J Psychiatry Neurosci 2006; 31:93–100.\n\t 6.\t Kahn RS, et al. Amisulpride and olanzapine followed by open-label treatment with clozapine in first-episode schizophrenia and schizophreni-\n",
+      "bbox": [
+        61.91290283203125,
+        498.1147155761719,
+        433.9068603515625,
+        523.2907104492188
+      ],
+      "text_sha256": "7c906e54cd26f1b1254a2e5e7f95bfc2666c1c134811c8dc80a067227023d8e4"
+    },
+    {
+      "block_id": "page-0065-block-0010",
+      "order": 10,
+      "text": "form disorder (OPTiMiSE): a three-phase switching study. Lancet Psychiatry 2018; 5:797–807.\n\t 7.\t Subotnik KL, et al. Long-acting injectable risperidone for relapse prevention and control of breakthrough symptoms after a recent first epi-\n",
+      "bbox": [
+        61.924896240234375,
+        525.11474609375,
+        433.91290283203125,
+        541.2907104492188
+      ],
+      "text_sha256": "0f725a44a5d3fb7a2dd9f8d20ba80f8fa3b2d9505322f6fda78af50b730cf9ee"
+    },
+    {
+      "block_id": "page-0065-block-0011",
+      "order": 11,
+      "text": "sode of schizophrenia. a randomized clinical trial. JAMA Psychiatry 2015; 72:822–829.\n\t 8.\t Schreiner A, et al. Paliperidone palmitate versus oral antipsychotics in recently diagnosed schizophrenia. Schizophr Res 2015; \n",
+      "bbox": [
+        61.93090057373047,
+        543.11474609375,
+        435.5690612792969,
+        559.2907104492188
+      ],
+      "text_sha256": "859e33802238087f05865fbf5b9e81eaa023c71a67d9714680c4953550d9c45f"
+    },
+    {
+      "block_id": "page-0065-block-0012",
+      "order": 12,
+      "text": "169:393–399.\n\t 9.\t Alphs L, et al. Treatment effect with paliperidone palmitate compared with oral antipsychotics in patients with recent-onset versus more \n",
+      "bbox": [
+        61.93689727783203,
+        561.11474609375,
+        435.6049499511719,
+        577.2907104492188
+      ],
+      "text_sha256": "ab84cce816f60d0750545a4532127e207486fb58988cb16bffcd6636c32263dd"
+    },
+    {
+      "block_id": "page-0065-block-0013",
+      "order": 13,
+      "text": "chronic schizophrenia and a history of criminal justice system involvement. Early Intervention in Psychiatry 2018; 12:55–65.\n\t10.\t Kane JM, et al. Patients with early-phase schizophrenia will accept treatment with sustained-release medication (Long-Acting Injectable \n",
+      "bbox": [
+        61.942901611328125,
+        579.11474609375,
+        435.5866394042969,
+        595.2907104492188
+      ],
+      "text_sha256": "967abf4bbaa52366f2d5088616d62eb7647ecfa573388bd18efbe42d7fbbbeba"
+    },
+    {
+      "block_id": "page-0065-block-0014",
+      "order": 14,
+      "text": "Antipsychotics): results from the recruitment phase of the PRELAPSE trial. J Clin Psychiatry 2019; 80:18m12546.\n",
+      "bbox": [
+        72.9468994140625,
+        597.11474609375,
+        368.3508605957031,
+        604.2907104492188
+      ],
+      "text_sha256": "2752bbef35747c588af68c4957819ac63d0d5ea8e0355fcd87839e4a1aba3245"
+    },
+    {
+      "block_id": "page-0065-block-0015",
+      "order": 15,
+      "text": "Investigate reasons for\n",
+      "bbox": [
+        137.64230346679688,
+        157.30892944335938,
+        213.92481994628906,
+        166.52642822265625
+      ],
+      "text_sha256": "0c488498798b7f164e25b61642a5f1a25362b88be5aef87a4dcc6c597896bbff"
+    },
+    {
+      "block_id": "page-0065-block-0016",
+      "order": 16,
+      "text": "poor adherence\n",
+      "bbox": [
+        148.89981079101562,
+        166.30892944335938,
+        202.6748046875,
+        175.52642822265625
+      ],
+      "text_sha256": "7e53c1318677e571ea018983916823ad4752700dae3d69ea16c212e73bf5ec7c"
+    },
+    {
+      "block_id": "page-0065-block-0017",
+      "order": 17,
+      "text": "Discuss with patient\n",
+      "bbox": [
+        274.65972900390625,
+        264.709228515625,
+        341.7622985839844,
+        273.9267272949219
+      ],
+      "text_sha256": "467b73779cc512a283632e6449c70c5b5df95ef8d64bbd661b48733bc40b9fb1"
+    },
+    {
+      "block_id": "page-0065-block-0018",
+      "order": 18,
+      "text": "Switch to antipsychotic medication with\n",
+      "bbox": [
+        236.9422149658203,
+        277.834228515625,
+        379.4721374511719,
+        286.75921630859375
+      ],
+      "text_sha256": "07746d99aaa0f4581b4f3a51eb3dc1e2308f650fe7d4b215c51d094ae649e7d6"
+    },
+    {
+      "block_id": "page-0065-block-0019",
+      "order": 19,
+      "text": "a more favourable side-effect profile\n",
+      "bbox": [
+        243.60972595214844,
+        286.834228515625,
+        372.8122863769531,
+        295.75921630859375
+      ],
+      "text_sha256": "a7a7ad1686f848aa65af28454fff5d9b0aa773c563dc90acf1e8912f7fb8b997"
+    },
+    {
+      "block_id": "page-0065-block-0020",
+      "order": 20,
+      "text": "Discuss with patient\n",
+      "bbox": [
+        110.57640075683594,
+        264.7112121582031,
+        177.67889404296875,
+        273.9287109375
+      ],
+      "text_sha256": "467b73779cc512a283632e6449c70c5b5df95ef8d64bbd661b48733bc40b9fb1"
+    },
+    {
+      "block_id": "page-0065-block-0021",
+      "order": 21,
+      "text": "Consider depot/LAI antipsychotic\n",
+      "bbox": [
+        84.32640075683594,
+        277.8362121582031,
+        203.928955078125,
+        286.7611999511719
+      ],
+      "text_sha256": "c3d6ad15fb4c6a9c1852553db4905ee08c68d7d7ecebf2f3efe64667c415d34f"
+    },
+    {
+      "block_id": "page-0065-block-0022",
+      "order": 22,
+      "text": "medication**\n",
+      "bbox": [
+        121.41389465332031,
+        286.8362121582031,
+        166.84140014648438,
+        295.7611999511719
+      ],
+      "text_sha256": "71a15317c75c423ed69b1fcbba05253eb129ccbdae8e5d8bd91767fd8a511b0b"
+    },
+    {
+      "block_id": "page-0065-block-0023",
+      "order": 23,
+      "text": "Simplify drug regimen\n",
+      "bbox": [
+        327.82269287109375,
+        142.68392944335938,
+        401.5702209472656,
+        151.90142822265625
+      ],
+      "text_sha256": "119173dab1fddaf8fcbd7e56228823acd478a0b02e9aab0dca5a6fe6d2ec76cc"
+    },
+    {
+      "block_id": "page-0065-block-0024",
+      "order": 24,
+      "text": "Reduce any anticholinergic load\n",
+      "bbox": [
+        310.50518798828125,
+        155.68142700195312,
+        418.8879089355469,
+        164.89892578125
+      ],
+      "text_sha256": "397b8dc77f72ebd14a3385244b149c704831c75768ef2b1bb01e96fc9cb42922"
+    },
+    {
+      "block_id": "page-0065-block-0025",
+      "order": 25,
+      "text": "Consider ‘compliance aids’*\n",
+      "bbox": [
+        317.60772705078125,
+        168.67892456054688,
+        411.7928771972656,
+        177.89642333984375
+      ],
+      "text_sha256": "d6280480f127218a664eb66fda05c9658b02e1bcbca911067ab67c05349f8465"
+    },
+    {
+      "block_id": "page-0065-block-0026",
+      "order": 26,
+      "text": "Consider depot/LAI**\n",
+      "bbox": [
+        329.0601806640625,
+        181.67642211914062,
+        400.3327331542969,
+        190.8939208984375
+      ],
+      "text_sha256": "93ee7ae62f0afd68919efa77dab548762ef12b56beb9170e426da6e0ff8a2ba8"
+    },
+    {
+      "block_id": "page-0065-block-0027",
+      "order": 27,
+      "text": "Forgetful or\n",
+      "bbox": [
+        235.5566864013672,
+        155.38070678710938,
+        277.6391296386719,
+        164.3057098388672
+      ],
+      "text_sha256": "db003d06a8fc328b6503aea9af48f60142af5f92926e1770279dd069c55944e2"
+    },
+    {
+      "block_id": "page-0065-block-0028",
+      "order": 28,
+      "text": "disorganised\n",
+      "bbox": [
+        233.2541961669922,
+        168.37820434570312,
+        279.9341735839844,
+        177.30320739746094
+      ],
+      "text_sha256": "bd452e2a104537487b3cd97439ea41b2809ac6801201fe415dd20cabd6949e5c"
+    },
+    {
+      "block_id": "page-0065-block-0029",
+      "order": 29,
+      "text": "Treatment algorithm\n",
+      "bbox": [
+        217.0926971435547,
+        120.9348373413086,
+        304.1047668457031,
+        131.64483642578125
+      ],
+      "text_sha256": "6e776dd62ee3fde4b7407e1f78087c27bd77228150c826ab4d3bcdc977406421"
+    },
+    {
+      "block_id": "page-0065-block-0030",
+      "order": 30,
+      "text": "Lack of insight\nor support\n",
+      "bbox": [
+        115.73219299316406,
+        206.4481201171875,
+        168.65972900390625,
+        224.3731231689453
+      ],
+      "text_sha256": "578eb4fd92ebb8ed6752bf3468abbb2c831094350e082a60b20bf6a00d4d76a5"
+    },
+    {
+      "block_id": "page-0065-block-0031",
+      "order": 31,
+      "text": "Poorly tolerated\ntreatment\n",
+      "bbox": [
+        262.59716796875,
+        205.97561645507812,
+        319.6946716308594,
+        223.90061950683594
+      ],
+      "text_sha256": "c07a4cfd75c9fd32ad4312455bf5d0fc101b161edcc7a635d8b3fa2d8b8e9139"
+    },
+    {
+      "block_id": "page-0065-block-0032",
+      "order": 32,
+      "text": "*Compliance aids (e.g. Medidose system in the UK) are not a substitute for patient education. The ultimate\naim should be to promote independent living, perhaps with patients ﬁlling their own compliance aid, having\nﬁrst been given support and training. Note that such compliance aids are of little use unless the patient is\nclearly motivated to adhere to prescribed treatment. Note also that some medicines are not suitable for\nstorage in compliance aids.\n**Patients generally have positive views of depot medication.10,30\n",
+      "bbox": [
+        68.46070098876953,
+        324.51812744140625,
+        427.3209533691406,
+        386.2356262207031
+      ],
+      "text_sha256": "07f5e59559f4e8d2d848deaf19f58aabef288d224844b4cecaa7ade80aca85fb"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

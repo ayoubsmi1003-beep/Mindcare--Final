@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0817",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 817,
+  "source_page_index": 816,
+  "source_page_display": 817,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "796    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\nReferences\n\t 1.\t McDonald-McGinn DM, et al. 22q11.2 deletion syndrome. Nat Rev Dis Primers 2015; 1:15071.\n\t 2.\t Mosheva M, et al. Effectiveness and side effects of psychopharmacotherapy in individuals with 22q11.2 deletion syndrome with comorbid \npsychiatric disorders: a systematic review. Eur Child Adolesc Psychiatry 2020; 29:1035–1048.\n\t 3.\t Fung WL, et al. Practical guidelines for managing adults with 22q11.2 deletion syndrome. Genet Med 2015; 17:599–609.\n\t 4.\t Baker K, et al. Psychiatric illness. Consensus Document on 22q11 Deletion Syndrome (22q11DS) MaxAppeal 2017; http://www.maxappeal.\norg.uk/downloads/Consensus_Document_on_22q11_Deletion_Syndrome_Master_2017_(final_draft)_9-end_(1)2018.pdf.\n\t 5.\t Dori N, et al. The effectiveness and safety of antipsychotic and antidepressant medications in individuals with 22q11.2 deletion syndrome. J \nChild Adolesc Psychopharmacol 2017; 27:83–90.\n\t 6.\t Gothelf D, et al. Obsessive-compulsive disorder in patients with velocardiofacial (22q11 deletion) syndrome. Am J Med Genet B \nNeuropsychiatr Genet 2004; 126b:99–105.\n\t 7.\t Bassett AS, et al. Practical guidelines for managing patients with 22q11.2 deletion syndrome. J Pediatr 2011; 159:332–339.\n\t 8.\t de Boer J, et al. Adverse effects of antipsychotic medication in patients with 22q11.2 deletion syndrome: A systematic review. Am J Med Genet \nA 2019; 179:2292–2306.\n\t 9.\t Faedda GL, et al. 4.19 Treatment of velo-cardio-facial syndrome-related psychosis with metyrosine. J Am Acad Child Adolesc Psychiatry \n2016; 55:S169.\n\t10.\t Engebretsen MH, et al. Metyrosine treatment in a woman with chromosome 22q11.2 deletion syndrome and psychosis: a case study. Int J \nDev Disabil 2017:1–6.\n\t11.\t O’Hanlon JF, et al. Replacement of antipsychotic and antiepileptic medication by L-alpha-methyldopa in a woman with velocardiofacial \nsyndrome. Int Clin Psychopharmacol 2003; 18:117–119.\n",
+  "raw_text_sha256": "2e7733fc54e9029f449edcbf3bd9002b6b10ee19b19961ddac774ea5fe019047",
+  "coordinates_sha256": "6eb837857e6e3cd59df05ad785dfbf1e00d09d0c7e204fe9b53309b26aeaf2d6",
+  "block_sequence_sha256": "b0e138c86a52c2cad442359cdd19313ce8b01d4724ff4593fce426b8b9a047c9",
+  "blocks": [
+    {
+      "block_id": "page-0817-block-0000",
+      "order": 0,
+      "text": "796    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "993e5cc77f09543392245ea4d99369f6dbef9a14fcdc857b67a2a2dc1145fa80"
+    },
+    {
+      "block_id": "page-0817-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0817-block-0002",
+      "order": 2,
+      "text": "References\n",
+      "bbox": [
+        61.88999938964844,
+        62.31540298461914,
+        117.92399597167969,
+        75.35040283203125
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0817-block-0003",
+      "order": 3,
+      "text": "\t 1.\t McDonald-McGinn DM, et al. 22q11.2 deletion syndrome. Nat Rev Dis Primers 2015; 1:15071.\n\t 2.\t Mosheva M, et al. Effectiveness and side effects of psychopharmacotherapy in individuals with 22q11.2 deletion syndrome with comorbid \n",
+      "bbox": [
+        61.88999938964844,
+        80.29240417480469,
+        435.55194091796875,
+        96.46839904785156
+      ],
+      "text_sha256": "01b8ef8220d81f5c47be5d878b2ce3f0a6a0a887b9c6a1bc2d38c8b9770d36c3"
+    },
+    {
+      "block_id": "page-0817-block-0004",
+      "order": 4,
+      "text": "psychiatric disorders: a systematic review. Eur Child Adolesc Psychiatry 2020; 29:1035–1048.\n\t 3.\t Fung WL, et al. Practical guidelines for managing adults with 22q11.2 deletion syndrome. Genet Med 2015; 17:599–609.\n\t 4.\t Baker K, et al. Psychiatric illness. Consensus Document on 22q11 Deletion Syndrome (22q11DS) MaxAppeal 2017; http://www.maxappeal.\n",
+      "bbox": [
+        61.902000427246094,
+        98.29240417480469,
+        433.9378356933594,
+        123.46839904785156
+      ],
+      "text_sha256": "bb517ab52af41b4eb4fe687ba987817559c8eec674e188a93adffee3f8d02037"
+    },
+    {
+      "block_id": "page-0817-block-0005",
+      "order": 5,
+      "text": "org.uk/downloads/Consensus_Document_on_22q11_Deletion_Syndrome_Master_2017_(final_draft)_9-end_(1)2018.pdf.\n\t 5.\t Dori N, et al. The effectiveness and safety of antipsychotic and antidepressant medications in individuals with 22q11.2 deletion syndrome. J \n",
+      "bbox": [
+        61.91400146484375,
+        125.4364013671875,
+        435.5940246582031,
+        141.46839904785156
+      ],
+      "text_sha256": "d0f69679da73004cef497514d19d95b80793529b2d2b2c41a9000916f9346cdb"
+    },
+    {
+      "block_id": "page-0817-block-0006",
+      "order": 6,
+      "text": "Child Adolesc Psychopharmacol 2017; 27:83–90.\n\t 6.\t Gothelf D, et al. Obsessive-compulsive disorder in patients with velocardiofacial (22q11 deletion) syndrome. Am J Med Genet B \n",
+      "bbox": [
+        61.91999816894531,
+        143.2924041748047,
+        435.5519104003906,
+        159.46839904785156
+      ],
+      "text_sha256": "6e779ff804fcd534c69d618cdaf476e89959b18143c622855834a40e62c4c373"
+    },
+    {
+      "block_id": "page-0817-block-0007",
+      "order": 7,
+      "text": "Neuropsychiatr Genet 2004; 126b:99–105.\n\t 7.\t Bassett AS, et al. Practical guidelines for managing patients with 22q11.2 deletion syndrome. J Pediatr 2011; 159:332–339.\n\t 8.\t de Boer J, et al. Adverse effects of antipsychotic medication in patients with 22q11.2 deletion syndrome: A systematic review. Am J Med Genet \n",
+      "bbox": [
+        61.92599868774414,
+        161.2924041748047,
+        435.59393310546875,
+        186.46839904785156
+      ],
+      "text_sha256": "3a68de325818ba93143f483a0d5a6cb69ea3446a097ded953dc6cfbe0061cc95"
+    },
+    {
+      "block_id": "page-0817-block-0008",
+      "order": 8,
+      "text": "A 2019; 179:2292–2306.\n\t 9.\t Faedda GL, et al. 4.19 Treatment of velo-cardio-facial syndrome-related psychosis with metyrosine. J Am Acad Child Adolesc Psychiatry \n",
+      "bbox": [
+        61.9379997253418,
+        188.2924041748047,
+        435.64202880859375,
+        204.46839904785156
+      ],
+      "text_sha256": "0a6cb29dcb126381246e8a3935ea42d327e38df66e7a9a4468fdc65b5dc3158d"
+    },
+    {
+      "block_id": "page-0817-block-0009",
+      "order": 9,
+      "text": "2016; 55:S169.\n\t10.\t Engebretsen MH, et al. Metyrosine treatment in a woman with chromosome 22q11.2 deletion syndrome and psychosis: a case study. Int J \n",
+      "bbox": [
+        61.944000244140625,
+        206.2924041748047,
+        435.5999450683594,
+        222.46839904785156
+      ],
+      "text_sha256": "a940899852447bd4c797421d145a5759be99a635224e5cb9dc493a906859caa9"
+    },
+    {
+      "block_id": "page-0817-block-0010",
+      "order": 10,
+      "text": "Dev Disabil 2017:1–6.\n\t11.\t O’Hanlon JF, et al. Replacement of antipsychotic and antiepileptic medication by L-alpha-methyldopa in a woman with velocardiofacial \n",
+      "bbox": [
+        61.95000076293945,
+        224.4364013671875,
+        435.617919921875,
+        240.46839904785156
+      ],
+      "text_sha256": "0f6b600e69541539b795a0adb561e3d471050197bfc006d68c25d6ed10323b14"
+    },
+    {
+      "block_id": "page-0817-block-0011",
+      "order": 11,
+      "text": "syndrome. Int Clin Psychopharmacol 2003; 18:117–119.\n",
+      "bbox": [
+        72.95399475097656,
+        242.2924041748047,
+        220.71595764160156,
+        249.46839904785156
+      ],
+      "text_sha256": "669414a9eabf75a1a3d104cc6e398fbbdbed00398984ce1ea4053d182e347549"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

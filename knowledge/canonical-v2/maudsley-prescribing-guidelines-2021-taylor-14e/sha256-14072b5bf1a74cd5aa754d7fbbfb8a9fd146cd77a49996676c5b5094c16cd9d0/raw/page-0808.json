@@ -1,0 +1,455 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0808",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 808,
+  "source_page_index": 807,
+  "source_page_display": 808,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    787\nCHAPTER 10\nTable 10.4  Adverse and beneficial psychiatric side effects of antiseizure medications5,19,20\nAntiseizure medications\nAdverse psychiatric symptoms\nPsychiatric benefits\nBarbiturates, primidone\n■\n■Behavioural disturbance/ADHD symptoms\n■\n■Depression, cognitive impairment\n■\n■Anxiolytic\nBenzodiazepines\nCarbamazepine, \noxcarbazepine\n■\n■Not reported\n■\n■Mood stabilising, \nanti-manic\nEthosuximide\n■\n■Behavioural disturbance, depression, psychosis\n■\n■None reported\nFelbamate\n■\n■Anxiety, depression, psychosis\n■\n■None reported\nGabapentin, pregabalin\n■\n■Depression and anxiety on cessation\n■\n■Anxiolytic\nLacosamide\n■\n■None reported\n■\n■None reported\nLamotrigine\n■\n■Anxiogenic in some\n■\n■Behavioural disturbance in cognitive impairment\n■\n■Antidepressant\n■\n■Mood stabilising\nLevetiracetam\n■\n■Anxiety, behavioural disturbance, depression\n■\n■None confirmed\nPerampanel\n■\n■Behavioural disturbance, depression, psychosis\n■\n■None reported\nPhenytoin\n■\n■Behavioural disturbance, depression\n■\n■Anti-manic\nTiagabine\n■\n■Behavioural disturbance, depression\n■\n■Anxiolytic\nTopiramate\n■\n■Anxiety, behavioural disturbance, depression\n■\n■Unclear; possible \nanti-manic/antipsy-\nchotic\nValproate\n■\n■Behavioural disturbance (at high doses in children)\n■\n■Mood stabilising, \nanti-manic\n■\n■Anti-panic\nVigabatrin\n■\n■Behavioural disturbance/ADHD symptoms\n■\n■Depression, psychosis\n■\n■None reported\nZonisamide\n■\n■Behavioural disturbance, depression\n■\n■None confirmed\nInteractions21\nPharmacokinetic interactions\nImportant pharmacokinetic interactions exist in both directions between antiseizure med-\nications and psychotropics, primarily mediated through cytochrome P450 enzymes.8,22 \nPsychotropics with enzyme-inhibiting effects (e.g. fluoxetine, fluvoxamine, paroxetine, \nand at higher doses, sertraline) may increase antiseizure medication plasma levels. This is \nespecially relevant to antiseizure medications with a narrow therapeutic index (e.g. carba-\nmazepine and phenytoin). Plasma levels should be monitored, and dosage adjustment may \nbe required. Citalopram and escitalopram are very weak inhibitors of CYP 1A2 and 2D6.\nSome antiseizure medications are potent enzyme inducers (e.g. phenytoin, carbamaz-\nepine, phenobarbital, primidone) and others are weak inducers (e.g. oxcarbazepine at \n",
+  "raw_text_sha256": "0a7e31bca9317e42e3852fd562409994bc5fa03c636c45ce68c2a2cdd3e531a6",
+  "coordinates_sha256": "312ca599e70fe305f272655d24b5947ea2d4ac0f55b86cf239f86b3403adb406",
+  "block_sequence_sha256": "238a948214ac1e4fbee4a57e3fc0af6f78dfc1702456270d50546bdfa9e7e932",
+  "blocks": [
+    {
+      "block_id": "page-0808-block-0000",
+      "order": 0,
+      "text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    787\n",
+      "bbox": [
+        47.999698638916016,
+        31.395221710205078,
+        419.96697998046875,
+        41.0272216796875
+      ],
+      "text_sha256": "d11dbceac96cef7b6c3c272f04f9c8591cde87d979b2b30f050b6e65029a5cde"
+    },
+    {
+      "block_id": "page-0808-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        454.4096984863281,
+        75.763671875,
+        463.88970947265625,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0808-block-0002",
+      "order": 2,
+      "text": "Table 10.4  Adverse and beneficial psychiatric side effects of antiseizure medications5,19,20\n",
+      "bbox": [
+        54.0,
+        70.08790588378906,
+        337.9236145019531,
+        78.97540283203125
+      ],
+      "text_sha256": "2bc7b1b257b45bcf6a7da4ae39980d40fd442ba32247234912ef8661df0ca68b"
+    },
+    {
+      "block_id": "page-0808-block-0003",
+      "order": 3,
+      "text": "Antiseizure medications\nAdverse psychiatric symptoms\nPsychiatric benefits\n",
+      "bbox": [
+        52.0,
+        88.82289123535156,
+        405.5950012207031,
+        97.71038818359375
+      ],
+      "text_sha256": "6c14fcd127972582b4200f5b48a4272e74a496fd135651a7e9a0822787c745a1"
+    },
+    {
+      "block_id": "page-0808-block-0004",
+      "order": 4,
+      "text": "Barbiturates, primidone\n■\n■Behavioural disturbance/ADHD symptoms\n",
+      "bbox": [
+        52.0,
+        106.62789154052734,
+        298.6171875,
+        115.33538818359375
+      ],
+      "text_sha256": "3fc76f81f2fa1391af2378849aaa2933496f0dc754ea116320ce748efbaccb07"
+    },
+    {
+      "block_id": "page-0808-block-0005",
+      "order": 5,
+      "text": "■\n■Depression, cognitive impairment\n",
+      "bbox": [
+        156.67970275878906,
+        116.62789154052734,
+        272.2171936035156,
+        125.33538818359375
+      ],
+      "text_sha256": "c531c4f070a826306d74ba1c0cbfb3ac324ae1d795d3ab8772c4471c779a8866"
+    },
+    {
+      "block_id": "page-0808-block-0006",
+      "order": 6,
+      "text": "■\n■Anxiolytic\n",
+      "bbox": [
+        337.66680908203125,
+        106.62789154052734,
+        377.4918212890625,
+        115.33538818359375
+      ],
+      "text_sha256": "b52967d47b3b373ef211db9fe95c69235904c967f072e5007d280e8c3ec15e3f"
+    },
+    {
+      "block_id": "page-0808-block-0007",
+      "order": 7,
+      "text": "Benzodiazepines\n",
+      "bbox": [
+        51.999298095703125,
+        124.25289154052734,
+        104.92680358886719,
+        132.96038818359375
+      ],
+      "text_sha256": "b2415b7ae654663c88764302a51bd5b9c4cc200adbc533f41662bd096b532f6c"
+    },
+    {
+      "block_id": "page-0808-block-0008",
+      "order": 8,
+      "text": "Carbamazepine, \noxcarbazepine\n",
+      "bbox": [
+        51.999298095703125,
+        141.8778839111328,
+        106.17179870605469,
+        160.5828857421875
+      ],
+      "text_sha256": "81dc107a08231df02d2a8475d677eb65f7826b851b1e73cd27278354dba0f210"
+    },
+    {
+      "block_id": "page-0808-block-0009",
+      "order": 9,
+      "text": "■\n■Not reported\n■\n■Mood stabilising, \n",
+      "bbox": [
+        156.67970275878906,
+        141.8778839111328,
+        403.3519287109375,
+        150.58538818359375
+      ],
+      "text_sha256": "66c4f6b3b45a7f206900541bce891d59337a10a31e14dd65f25d4dce02f8a695"
+    },
+    {
+      "block_id": "page-0808-block-0010",
+      "order": 10,
+      "text": "anti-manic\n",
+      "bbox": [
+        346.66680908203125,
+        151.87538146972656,
+        380.4093322753906,
+        160.5828857421875
+      ],
+      "text_sha256": "9128b980a9dc433d27d8d502989503ef3475edacaed22a8657e3a1d550497cfe"
+    },
+    {
+      "block_id": "page-0808-block-0011",
+      "order": 11,
+      "text": "Ethosuximide\n■\n■Behavioural disturbance, depression, psychosis\n■\n■None reported\n",
+      "bbox": [
+        51.999298095703125,
+        169.50038146972656,
+        393.21185302734375,
+        178.21038818359375
+      ],
+      "text_sha256": "24b1869b940f547406d93efeca85d24fd1bdab02e8d639b5b52d2edb6475a7fc"
+    },
+    {
+      "block_id": "page-0808-block-0012",
+      "order": 12,
+      "text": "Felbamate\n■\n■Anxiety, depression, psychosis\n■\n■None reported\n",
+      "bbox": [
+        51.999298095703125,
+        187.1278839111328,
+        393.21185302734375,
+        195.83538818359375
+      ],
+      "text_sha256": "a834ed2f0f25e33ff85700e251ffa5e94ad1cc89ac368fff07dd2899943ca5dd"
+    },
+    {
+      "block_id": "page-0808-block-0013",
+      "order": 13,
+      "text": "Gabapentin, pregabalin\n■\n■Depression and anxiety on cessation\n■\n■Anxiolytic\n",
+      "bbox": [
+        51.999298095703125,
+        204.7528839111328,
+        377.4918212890625,
+        213.46038818359375
+      ],
+      "text_sha256": "5d1c8b564b0aaa19212cd5819a38878c58895ffcd4e16e0eb4fe4ace73a73211"
+    },
+    {
+      "block_id": "page-0808-block-0014",
+      "order": 14,
+      "text": "Lacosamide\n■\n■None reported\n■\n■None reported\n",
+      "bbox": [
+        51.999298095703125,
+        222.3778839111328,
+        393.21185302734375,
+        231.08538818359375
+      ],
+      "text_sha256": "28c571d43f802929d699a88819449bd964ee02f31296a606d74510b39e4781a2"
+    },
+    {
+      "block_id": "page-0808-block-0015",
+      "order": 15,
+      "text": "Lamotrigine\n■\n■Anxiogenic in some\n",
+      "bbox": [
+        51.999298095703125,
+        240.0028839111328,
+        228.1921844482422,
+        248.71038818359375
+      ],
+      "text_sha256": "d60e2966ef49300539253fd1d9b7432cfd912031f4701ecf57a29750630e2550"
+    },
+    {
+      "block_id": "page-0808-block-0016",
+      "order": 16,
+      "text": "■\n■Behavioural disturbance in cognitive impairment\n",
+      "bbox": [
+        156.67970275878906,
+        250.0028839111328,
+        319.4372253417969,
+        258.71038818359375
+      ],
+      "text_sha256": "79878d089e8772d020de277999ad6db85bd83c7bff06830472cabf82f1c088c5"
+    },
+    {
+      "block_id": "page-0808-block-0017",
+      "order": 17,
+      "text": "■\n■Antidepressant\n",
+      "bbox": [
+        337.66680908203125,
+        240.0028839111328,
+        394.4568786621094,
+        248.71038818359375
+      ],
+      "text_sha256": "b6ecd157ee5e78c018a8011d64897a3d5ba5696ca632834c57bfbb9ea88282cb"
+    },
+    {
+      "block_id": "page-0808-block-0018",
+      "order": 18,
+      "text": "■\n■Mood stabilising\n",
+      "bbox": [
+        337.66680908203125,
+        250.0028839111328,
+        399.18194580078125,
+        258.71038818359375
+      ],
+      "text_sha256": "1ecd65316b1211471195633ab989de10f87cb3a99cc93262690602c62836efbb"
+    },
+    {
+      "block_id": "page-0808-block-0019",
+      "order": 19,
+      "text": "Levetiracetam\n■\n■Anxiety, behavioural disturbance, depression\n■\n■None confirmed\n",
+      "bbox": [
+        51.999298095703125,
+        267.6278991699219,
+        398.349365234375,
+        276.33538818359375
+      ],
+      "text_sha256": "01747c974f23a1aa8df104f23df04ce51fa4ffd0188ea26b0ee43d168f9e6fc6"
+    },
+    {
+      "block_id": "page-0808-block-0020",
+      "order": 20,
+      "text": "Perampanel\n■\n■Behavioural disturbance, depression, psychosis\n■\n■None reported\n",
+      "bbox": [
+        51.999298095703125,
+        285.2528991699219,
+        393.21185302734375,
+        293.96038818359375
+      ],
+      "text_sha256": "3d1464f9b113fc6ba4f794a8f970b2c3f05607bfb84e4ec76654ba4416c59b42"
+    },
+    {
+      "block_id": "page-0808-block-0021",
+      "order": 21,
+      "text": "Phenytoin\n■\n■Behavioural disturbance, depression\n■\n■Anti-manic\n",
+      "bbox": [
+        51.999298095703125,
+        302.8778991699219,
+        381.6618347167969,
+        311.58538818359375
+      ],
+      "text_sha256": "2ac1ff0e6a29a8f87c415b05474f3b842a7256f24cb122fe755a6fd40bc261bb"
+    },
+    {
+      "block_id": "page-0808-block-0022",
+      "order": 22,
+      "text": "Tiagabine\n■\n■Behavioural disturbance, depression\n■\n■Anxiolytic\n",
+      "bbox": [
+        51.999298095703125,
+        320.5028991699219,
+        377.4918212890625,
+        329.21038818359375
+      ],
+      "text_sha256": "5cebbb7718376178b3577d7865f6e87ff8eedf9e8eb3f42f114b721839c34e00"
+    },
+    {
+      "block_id": "page-0808-block-0023",
+      "order": 23,
+      "text": "Topiramate\n■\n■Anxiety, behavioural disturbance, depression\n■\n■Unclear; possible \n",
+      "bbox": [
+        51.999298095703125,
+        338.1278991699219,
+        402.5118713378906,
+        346.83538818359375
+      ],
+      "text_sha256": "015b8c9a6c635f4ad5dd4b08ad35bb0ea330199ca635c1698eca4c650653eab4"
+    },
+    {
+      "block_id": "page-0808-block-0024",
+      "order": 24,
+      "text": "anti-manic/antipsy-\nchotic\n",
+      "bbox": [
+        346.66680908203125,
+        348.1253967285156,
+        407.4918518066406,
+        366.83038330078125
+      ],
+      "text_sha256": "958cccf1b3ee0691f2baaade6ff6eea0bca4209f482654b2930acef8b6a68f18"
+    },
+    {
+      "block_id": "page-0808-block-0025",
+      "order": 25,
+      "text": "Valproate\n■\n■Behavioural disturbance (at high doses in children)\n■\n■Mood stabilising, \n",
+      "bbox": [
+        51.999298095703125,
+        375.7478942871094,
+        403.3519287109375,
+        384.46038818359375
+      ],
+      "text_sha256": "099aba14586fa5d7e43ba867dae8663912093d5e89d75cc7f74bb6d21650cc64"
+    },
+    {
+      "block_id": "page-0808-block-0026",
+      "order": 26,
+      "text": "anti-manic\n",
+      "bbox": [
+        346.66680908203125,
+        385.7503967285156,
+        380.4093322753906,
+        394.4578857421875
+      ],
+      "text_sha256": "9128b980a9dc433d27d8d502989503ef3475edacaed22a8657e3a1d550497cfe"
+    },
+    {
+      "block_id": "page-0808-block-0027",
+      "order": 27,
+      "text": "■\n■Anti-panic\n",
+      "bbox": [
+        337.66680908203125,
+        395.7528991699219,
+        379.5843505859375,
+        404.46038818359375
+      ],
+      "text_sha256": "7a4405676b3408acc161403ce9fce1bbfe593352982b7ee22e39198cc6b3a77c"
+    },
+    {
+      "block_id": "page-0808-block-0028",
+      "order": 28,
+      "text": "Vigabatrin\n■\n■Behavioural disturbance/ADHD symptoms\n",
+      "bbox": [
+        51.999298095703125,
+        413.3778991699219,
+        298.6171875,
+        422.08538818359375
+      ],
+      "text_sha256": "23f3b83aef2ea71458c57128bc3bd5a2ab44bbdc56c400dd0984588dcb141ca4"
+    },
+    {
+      "block_id": "page-0808-block-0029",
+      "order": 29,
+      "text": "■\n■Depression, psychosis\n",
+      "bbox": [
+        156.67970275878906,
+        423.3778991699219,
+        234.3121795654297,
+        432.08538818359375
+      ],
+      "text_sha256": "975fc44588f43fdf087d83c65ec3b0ec3cdd1aa7b6b51ca1a03bdc5f913fd6f3"
+    },
+    {
+      "block_id": "page-0808-block-0030",
+      "order": 30,
+      "text": "■\n■None reported\n",
+      "bbox": [
+        337.66680908203125,
+        413.3778991699219,
+        393.21185302734375,
+        422.08538818359375
+      ],
+      "text_sha256": "57ff7c50cd9cc1422a69e24f7eddab41ecadf4f6735bba697a205878f98603c6"
+    },
+    {
+      "block_id": "page-0808-block-0031",
+      "order": 31,
+      "text": "Zonisamide\n■\n■Behavioural disturbance, depression\n■\n■None confirmed\n",
+      "bbox": [
+        51.999298095703125,
+        441.0003967285156,
+        398.349365234375,
+        449.71038818359375
+      ],
+      "text_sha256": "2ab9d13225bbcdbb1f80269ab4794a74babe5ce951e572f70f96511f8461b2a9"
+    },
+    {
+      "block_id": "page-0808-block-0032",
+      "order": 32,
+      "text": "Interactions21\n",
+      "bbox": [
+        48.0,
+        476.3689880371094,
+        116.24645233154297,
+        489.40399169921875
+      ],
+      "text_sha256": "bf663fcf3aac65e2e0047b81d38eb692a79b6b9669cb4d5c242a2bff586e1175"
+    },
+    {
+      "block_id": "page-0808-block-0033",
+      "order": 33,
+      "text": "Pharmacokinetic interactions\n",
+      "bbox": [
+        48.0,
+        501.3039855957031,
+        183.5800018310547,
+        513.1539916992188
+      ],
+      "text_sha256": "0a71fe6b1cf63ae49756f427b5da9a5eaecd1e07127638e40be298e51a806bb4"
+    },
+    {
+      "block_id": "page-0808-block-0034",
+      "order": 34,
+      "text": "Important pharmacokinetic interactions exist in both directions between antiseizure med-\nications and psychotropics, primarily mediated through cytochrome P450 enzymes.8,22 \nPsychotropics with enzyme-inhibiting effects (e.g. fluoxetine, fluvoxamine, paroxetine, \nand at higher doses, sertraline) may increase antiseizure medication plasma levels. This is \nespecially relevant to antiseizure medications with a narrow therapeutic index (e.g. carba-\nmazepine and phenytoin). Plasma levels should be monitored, and dosage adjustment may \nbe required. Citalopram and escitalopram are very weak inhibitors of CYP 1A2 and 2D6.\n",
+      "bbox": [
+        47.999786376953125,
+        519.2139892578125,
+        422.77978515625,
+        602.9340209960938
+      ],
+      "text_sha256": "a3e22b8fc7ee824e925a4e92c7c801cebb31d66799079bdd5d8c9f38a8f16041"
+    },
+    {
+      "block_id": "page-0808-block-0035",
+      "order": 35,
+      "text": "Some antiseizure medications are potent enzyme inducers (e.g. phenytoin, carbamaz-\nepine, phenobarbital, primidone) and others are weak inducers (e.g. oxcarbazepine at \n",
+      "bbox": [
+        47.999786376953125,
+        603.2139892578125,
+        422.7797546386719,
+        626.9340209960938
+      ],
+      "text_sha256": "73d2d5b28020b9a810e0c78a714b7710ecccc1a253220fa8da8288a541419abb"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

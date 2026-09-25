@@ -1,0 +1,431 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0959",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 959,
+  "source_page_index": 958,
+  "source_page_display": 959,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "938    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 14\nMedication\nIndication\nClass\nDosea\nAdverse Effectsb\nComments\nDroperidol19–24\nAcute \ndisturbance\nButyrophenone \n(D2 antagonist)\n5–10mg\nHistorical concerns \nover QT prolongation \nhave been contested \nin subsequent \nreviews and trials\nCombination with \nmidazolam is more \neffective than either\nIV droperidol is \nsuperior to lorazepam\nHaloperidol\nAcute \ndisturbance24–27\nButyrophenone \n(D2 antagonist)\n5–10mg\nDystonia, hypoxia\nLack of robust recent \nevidence\nECG essential\nDelirium28–30\n2–2.5mg every \n4–8 hours \nUp to 10mg slow \nbolus\nOver sedation \nhypokinesia\nMost recent evidence \nshowed effect not \nsuperior to placebo in \nICU delirium\nECG essential\nKetamine\nAcute \ndisturbance31–34\nNMDA \nantagonist\n1–5mg/kg\nNo effect on \nrespiratory drive. \nMay increase heart \nrate and blood \npressure\nSupported by the \nRoyal College of \nEmergency Medicine\nDepression35–43\n0.5mg/kg, diluted \nin 0.9% saline, \nover a 40-minute \nperiod \n(absolute dose \n26–60mg)\nNo serious adverse \nevents. Dissociation \nwas common. \nTransient blood \npressure elevation\nMost recent evidence \nsupports weekly \ninfusions and is more \npositive than previous \nCochrane review \n(2015)44\nBipolar \ndepression44,45\n0.5mg/kg\nWell tolerated\nCochrane (2015)44 \nsuggests evidence is \nlimited, though a \n2018 study found it \nsafe and effective\nFatigue46\n0.5mg/kg\nMild and transient\nApparently safe and \neffective\nLorazepam\nAcute \ndisturbance23\nBenzodiazepine\nNo significant side \neffects reported\nInferior to IV \ndroperidol\nDelirium29\n3mg of \nlorazepam in \n25mL of 0.9% \nnormal saline \nsolution\nDifficult to say as \nwas given in \ncombination with \nhaloperidol\nCombination with \nhaloperidol more \neffective than \nhaloperidol\nMidazolam20,21,47,48 Acute \ndisturbance\nBenzodiazepine 2.5–15mg\nSafe but respiratory \ndepression is a \npossibility, especially \nin higher doses\nHigh dose protocols \nare not more \neffective but have \nhigher adverse events \nincidence. \nCombination with \ndroperidol more \neffective\nTable 14.8  (Continued)\n",
+  "raw_text_sha256": "f8404e3dda89d8150f0b9f25b1a961d7b3d174c8fcfed84fcc607498a221be5c",
+  "coordinates_sha256": "3be44b7c309edd37b2fe4034b48328a7a388ae33e2f44d0a255cd8d8907f45eb",
+  "block_sequence_sha256": "4bea965873d43555bc015848c40a0e0fc28056a543fa78575078c5901d097380",
+  "blocks": [
+    {
+      "block_id": "page-0959-block-0000",
+      "order": 0,
+      "text": "938    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "cff2dba511c2bc91d34e7a074fc88541e052f493da1df0f9a07fe4f6807c6d53"
+    },
+    {
+      "block_id": "page-0959-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        18.520000457763672,
+        338.7405090332031,
+        28.0,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0959-block-0002",
+      "order": 2,
+      "text": "Medication\nIndication\nClass\nDosea\nAdverse Effectsb\nComments\n",
+      "bbox": [
+        61.889801025390625,
+        90.78968811035156,
+        401.5981140136719,
+        99.67718505859375
+      ],
+      "text_sha256": "1c3c3f1d5961ee985d648abfb33b9e69eca39c8dbc9281b7e8e278091287bc22"
+    },
+    {
+      "block_id": "page-0959-block-0003",
+      "order": 3,
+      "text": "Droperidol19–24\nAcute \ndisturbance\n",
+      "bbox": [
+        61.89312744140625,
+        107.99471282958984,
+        161.85227966308594,
+        126.69970703125
+      ],
+      "text_sha256": "d60966f97c22ab4a7df6a3495e4f7d1b4f18a8a55ed0cf42d4b2406aa63db11c"
+    },
+    {
+      "block_id": "page-0959-block-0004",
+      "order": 4,
+      "text": "Butyrophenone \n(D2 antagonist)\n",
+      "bbox": [
+        178.76480102539062,
+        107.99471282958984,
+        229.89979553222656,
+        126.69970703125
+      ],
+      "text_sha256": "0b5b01d0aa81ed0c89638c98bff1bd3c41cfa38c6f963bd02859da1372ff8e48"
+    },
+    {
+      "block_id": "page-0959-block-0005",
+      "order": 5,
+      "text": "5–10mg\nHistorical concerns \nover QT prolongation \nhave been contested \nin subsequent \nreviews and trials\n",
+      "bbox": [
+        233.76229858398438,
+        107.99471282958984,
+        362.18487548828125,
+        156.69219970703125
+      ],
+      "text_sha256": "107fb64f190a7d1faa5790d917a1551330a88e6039753d0836af3b4ca1ae4f15"
+    },
+    {
+      "block_id": "page-0959-block-0006",
+      "order": 6,
+      "text": "Combination with \nmidazolam is more \neffective than either\nIV droperidol is \nsuperior to lorazepam\n",
+      "bbox": [
+        364.0972900390625,
+        107.9872055053711,
+        433.892333984375,
+        156.6846923828125
+      ],
+      "text_sha256": "3bcc1ce8bee79fc208ae77758d218e46fa9decc80aed10bef630fd80ce9caebb"
+    },
+    {
+      "block_id": "page-0959-block-0007",
+      "order": 7,
+      "text": "Haloperidol\nAcute \ndisturbance24–27\n",
+      "bbox": [
+        61.892303466796875,
+        162.9997100830078,
+        173.76248168945312,
+        181.7047119140625
+      ],
+      "text_sha256": "ea550fbcf69d2de9b553e0aa83616fe8d9db630a5c1e48f4de6adfc0b91325dd"
+    },
+    {
+      "block_id": "page-0959-block-0008",
+      "order": 8,
+      "text": "Butyrophenone \n(D2 antagonist)\n",
+      "bbox": [
+        178.76480102539062,
+        163.01966857910156,
+        229.89979553222656,
+        181.72467041015625
+      ],
+      "text_sha256": "0b5b01d0aa81ed0c89638c98bff1bd3c41cfa38c6f963bd02859da1372ff8e48"
+    },
+    {
+      "block_id": "page-0959-block-0009",
+      "order": 9,
+      "text": "5–10mg\nDystonia, hypoxia\nLack of robust recent \nevidence\nECG essential\n",
+      "bbox": [
+        233.76229858398438,
+        163.01966857910156,
+        433.412353515625,
+        191.72216796875
+      ],
+      "text_sha256": "5c2c874e85f6a85423de349d9d149c175f41b65c3f96904cec09f7a5ade7b3fc"
+    },
+    {
+      "block_id": "page-0959-block-0010",
+      "order": 10,
+      "text": "Delirium28–30\n2–2.5mg every \n4–8 hours \nUp to 10mg slow \nbolus\n",
+      "bbox": [
+        124.76480102539062,
+        198.0371551513672,
+        291.28985595703125,
+        236.74468994140625
+      ],
+      "text_sha256": "075231f1524ad847397218cb479f521d5343b7c22fc2b29e82c31fbecef1ed8e"
+    },
+    {
+      "block_id": "page-0959-block-0011",
+      "order": 11,
+      "text": "Over sedation \nhypokinesia\n",
+      "bbox": [
+        295.7673034667969,
+        198.0371856689453,
+        342.01983642578125,
+        216.7421875
+      ],
+      "text_sha256": "cbec8d494986cf8fa0b97c9b8df8f9dbfaa08e8177b322a21d67590441c246ee"
+    },
+    {
+      "block_id": "page-0959-block-0012",
+      "order": 12,
+      "text": "Most recent evidence \nshowed effect not \nsuperior to placebo in \nICU delirium\nECG essential\n",
+      "bbox": [
+        364.09979248046875,
+        198.0371856689453,
+        435.7848815917969,
+        246.73468017578125
+      ],
+      "text_sha256": "69c4153d2ab70dc586475760f51fccd326037139c02524a23e3acbca001e7eb1"
+    },
+    {
+      "block_id": "page-0959-block-0013",
+      "order": 13,
+      "text": "Ketamine\nAcute \ndisturbance31–34\n",
+      "bbox": [
+        61.894805908203125,
+        253.04966735839844,
+        173.76248168945312,
+        271.7546691894531
+      ],
+      "text_sha256": "f48997364cc50c259fccfb44b75dde0a46c67464e3d6ec894f91ef6e214d6d65"
+    },
+    {
+      "block_id": "page-0959-block-0014",
+      "order": 14,
+      "text": "NMDA \nantagonist\n",
+      "bbox": [
+        178.76480102539062,
+        253.06968688964844,
+        212.52227783203125,
+        271.7746887207031
+      ],
+      "text_sha256": "5a81097f2d429c3770233ac79bddcbb78fb70f7c6723d78f6d1e627947f07ac2"
+    },
+    {
+      "block_id": "page-0959-block-0015",
+      "order": 15,
+      "text": "1–5mg/kg\nNo effect on \nrespiratory drive. \nMay increase heart \nrate and blood \npressure\n",
+      "bbox": [
+        233.76229858398438,
+        253.06968688964844,
+        358.1272888183594,
+        301.7671813964844
+      ],
+      "text_sha256": "f95e8be514fbb2619914eb57b6c495e484de217cea810404da8bbe38f5232e17"
+    },
+    {
+      "block_id": "page-0959-block-0016",
+      "order": 16,
+      "text": "Supported by the \nRoyal College of \nEmergency Medicine\n",
+      "bbox": [
+        364.0972900390625,
+        253.0621795654297,
+        430.3448181152344,
+        281.7646789550781
+      ],
+      "text_sha256": "ff01d2b4b62c571963388b8769eb7779db7593e3c30b1aa91cf13a2cb64b874d"
+    },
+    {
+      "block_id": "page-0959-block-0017",
+      "order": 17,
+      "text": "Depression35–43\n0.5mg/kg, diluted \nin 0.9% saline, \nover a 40-minute \nperiod \n(absolute dose \n26–60mg)\n",
+      "bbox": [
+        124.76480102539062,
+        308.0821838378906,
+        292.954833984375,
+        366.7896728515625
+      ],
+      "text_sha256": "6227e58cb2b9730548bd753104f97fe9af72b0b4d97617913e97342e609709ca"
+    },
+    {
+      "block_id": "page-0959-block-0018",
+      "order": 18,
+      "text": "No serious adverse \nevents. Dissociation \nwas common. \nTransient blood \npressure elevation\n",
+      "bbox": [
+        295.7673034667969,
+        308.0796813964844,
+        360.35736083984375,
+        356.77716064453125
+      ],
+      "text_sha256": "527852f1d8d7b25d4466de79a71d4d3baef06792d5ffa0636ee8ef26cc391146"
+    },
+    {
+      "block_id": "page-0959-block-0019",
+      "order": 19,
+      "text": "Most recent evidence \nsupports weekly \ninfusions and is more \npositive than previous \nCochrane review \n(2015)44\n",
+      "bbox": [
+        364.09979248046875,
+        308.0721740722656,
+        435.6423645019531,
+        366.76715087890625
+      ],
+      "text_sha256": "bb9603957d00d387220a6786c9404cd5d4a128d018e6b9a2f29eb207b21669d3"
+    },
+    {
+      "block_id": "page-0959-block-0020",
+      "order": 20,
+      "text": "Bipolar \ndepression44,45\n",
+      "bbox": [
+        124.76480102539062,
+        373.11968994140625,
+        169.7469940185547,
+        391.8246765136719
+      ],
+      "text_sha256": "136e21c35c545f6c450ac04752a045dd0ad8f3fd92092d1e9cedcf2ce05aab3f"
+    },
+    {
+      "block_id": "page-0959-block-0021",
+      "order": 21,
+      "text": "0.5mg/kg\nWell tolerated\nCochrane (2015)44 \nsuggests evidence is \nlimited, though a \n2018 study found it \nsafe and effective\n",
+      "bbox": [
+        233.76480102539062,
+        373.11968994140625,
+        430.362548828125,
+        421.8171691894531
+      ],
+      "text_sha256": "a152a8f53ee0c9ff86272ba1b1e5fbfcc66c5df09842e5bff3b378587ac03545"
+    },
+    {
+      "block_id": "page-0959-block-0022",
+      "order": 22,
+      "text": "Fatigue46\n0.5mg/kg\nMild and transient\nApparently safe and \neffective\n",
+      "bbox": [
+        124.76748657226562,
+        428.1321716308594,
+        430.2274169921875,
+        446.8497009277344
+      ],
+      "text_sha256": "9fc88dba040e47c22c0e55eecdad43a8e66db6b3889e2a037d8412b7578ede7e"
+    },
+    {
+      "block_id": "page-0959-block-0023",
+      "order": 23,
+      "text": "Lorazepam\nAcute \ndisturbance23\n",
+      "bbox": [
+        61.894805908203125,
+        453.1647033691406,
+        166.71401977539062,
+        471.86968994140625
+      ],
+      "text_sha256": "3f162ad4dc26346ccdf230c479c649ac5f21c0d7c19b21d5d775572a44e7135f"
+    },
+    {
+      "block_id": "page-0959-block-0024",
+      "order": 24,
+      "text": "Benzodiazepine\nNo significant side \neffects reported\n",
+      "bbox": [
+        178.76480102539062,
+        453.1697082519531,
+        356.1923828125,
+        471.87469482421875
+      ],
+      "text_sha256": "68194aa00161fc654e0de9dea2d536c8eebee325a31fa141f751c3d083f86566"
+    },
+    {
+      "block_id": "page-0959-block-0025",
+      "order": 25,
+      "text": "Inferior to IV \ndroperidol\n",
+      "bbox": [
+        364.0972900390625,
+        453.1697082519531,
+        406.1798095703125,
+        471.87469482421875
+      ],
+      "text_sha256": "334ddf58d15f054c4929302663f17a9f3a8c49e8dd448c5b57e5616197aae32c"
+    },
+    {
+      "block_id": "page-0959-block-0026",
+      "order": 26,
+      "text": "Delirium29\n3mg of \nlorazepam in \n25mL of 0.9% \nnormal saline \nsolution\n",
+      "bbox": [
+        124.76480102539062,
+        478.1897277832031,
+        282.5298156738281,
+        526.8922119140625
+      ],
+      "text_sha256": "c5b50d3bf5c5eaa794fd49fc8352fdd6a59e3c931a3d7b7039298ef198b96d7b"
+    },
+    {
+      "block_id": "page-0959-block-0027",
+      "order": 27,
+      "text": "Difficult to say as \nwas given in \ncombination with \nhaloperidol\n",
+      "bbox": [
+        295.7673034667969,
+        478.18719482421875,
+        354.10986328125,
+        516.88720703125
+      ],
+      "text_sha256": "f1f7bac925a4c483595c1501ddd29aed9112343e15a6cf59dc9ef3e0aa465423"
+    },
+    {
+      "block_id": "page-0959-block-0028",
+      "order": 28,
+      "text": "Combination with \nhaloperidol more \neffective than \nhaloperidol\n",
+      "bbox": [
+        364.09979248046875,
+        478.1796875,
+        424.1148681640625,
+        516.879638671875
+      ],
+      "text_sha256": "00c15fbbc118eaf5ab38841839aebfa4cba6008106faef2962ef7efc387b8e4b"
+    },
+    {
+      "block_id": "page-0959-block-0029",
+      "order": 29,
+      "text": "Midazolam20,21,47,48 Acute \n",
+      "bbox": [
+        61.894805908203125,
+        530.72216796875,
+        145.5998077392578,
+        541.9271850585938
+      ],
+      "text_sha256": "89a7bf73fae05d9eea7286e683e977274fd9a8a3fb6dc204d7463fc2c677ed9e"
+    },
+    {
+      "block_id": "page-0959-block-0030",
+      "order": 30,
+      "text": "disturbance\n",
+      "bbox": [
+        124.76480102539062,
+        543.2171630859375,
+        161.85227966308594,
+        551.9246826171875
+      ],
+      "text_sha256": "f1d226996434227c4df0d653ce3b01afb3821fe263b11b0e299e4bbc80c73758"
+    },
+    {
+      "block_id": "page-0959-block-0031",
+      "order": 31,
+      "text": "Benzodiazepine 2.5–15mg\nSafe but respiratory \ndepression is a \npossibility, especially \nin higher doses\n",
+      "bbox": [
+        178.76480102539062,
+        533.2196655273438,
+        362.1548767089844,
+        571.919677734375
+      ],
+      "text_sha256": "ec5cbb483a1583574269a337f838b3c59a883437847d5eeb808248dafd8da5b0"
+    },
+    {
+      "block_id": "page-0959-block-0032",
+      "order": 32,
+      "text": "High dose protocols \nare not more \neffective but have \nhigher adverse events \nincidence. \nCombination with \ndroperidol more \neffective\n",
+      "bbox": [
+        364.0972900390625,
+        533.212158203125,
+        435.3548278808594,
+        611.9021606445312
+      ],
+      "text_sha256": "2daf3a90e0e1ed122355ceea9f4fd3fc847449a005d73153e2af45804721c603"
+    },
+    {
+      "block_id": "page-0959-block-0033",
+      "order": 33,
+      "text": "Table 14.8  (Continued)\n",
+      "bbox": [
+        67.88980102539062,
+        70.08790588378906,
+        144.17979431152344,
+        78.97540283203125
+      ],
+      "text_sha256": "8a5de33dc345de7abc415343255bbd54c4c1d94ff98995f2f6977c2cad14fefd"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

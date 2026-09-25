@@ -1,0 +1,348 @@
+{
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "parts": [
+    {
+      "part_no": 1,
+      "title": "Drug treatment of major psychiatric conditions",
+      "physical_start": 22,
+      "physical_end": 557,
+      "printed_start": 1,
+      "printed_end": 536,
+      "chapters": [
+        {
+          "number": 1,
+          "title": "Schizophrenia and related psychoses",
+          "physical_start": 24,
+          "physical_end": 267,
+          "printed_start": 3,
+          "printed_end": 246,
+          "evidence": {
+            "toc_entry_text": "Chapter 1 Schizophrenia and related psychoses",
+            "body_heading_text": "Schizophrenia and related psychoses",
+            "block_ids": [
+              "page-0024-block-0001",
+              "page-0024-block-0002",
+              "page-0024-block-0003"
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "title": "Bipolar disorder",
+          "physical_start": 268,
+          "physical_end": 325,
+          "printed_start": 247,
+          "printed_end": 304,
+          "evidence": {
+            "toc_entry_text": "Chapter 2 Bipolar disorder",
+            "body_heading_text": "Bipolar disorder",
+            "block_ids": [
+              "page-0268-block-0001",
+              "page-0268-block-0002"
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "title": "Depression and anxiety disorders",
+          "physical_start": 326,
+          "physical_end": 471,
+          "printed_start": 305,
+          "printed_end": 450,
+          "evidence": {
+            "toc_entry_text": "Chapter 3 Depression and anxiety disorders",
+            "body_heading_text": "Depression and anxiety disorders",
+            "block_ids": [
+              "page-0326-block-0001",
+              "page-0326-block-0002"
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "title": "Addictions and substance misuse",
+          "physical_start": 472,
+          "physical_end": 557,
+          "printed_start": 451,
+          "printed_end": 536,
+          "evidence": {
+            "toc_entry_text": "Chapter 4 Addictions and substance misuse",
+            "body_heading_text": "Addictions and substance misuse",
+            "block_ids": [
+              "page-0472-block-0001",
+              "page-0472-block-0002"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part_no": 2,
+      "title": "Drug treatment of special patient groups",
+      "physical_start": 558,
+      "physical_end": 775,
+      "printed_start": 537,
+      "printed_end": 754,
+      "chapters": [
+        {
+          "number": 5,
+          "title": "Children and adolescents",
+          "physical_start": 559,
+          "physical_end": 621,
+          "printed_start": null,
+          "printed_end": null,
+          "evidence": {
+            "toc_entry_text": "Chapter 5 Children and adolescents",
+            "body_heading_text": "Children and adolescents",
+            "block_ids": [
+              "page-0560-block-0013",
+              "page-0560-block-0014"
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "title": "Prescribing in older people",
+          "physical_start": 622,
+          "physical_end": 699,
+          "printed_start": 601,
+          "printed_end": null,
+          "evidence": {
+            "toc_entry_text": "Chapter 6 Prescribing in older people",
+            "body_heading_text": "Prescribing in older people",
+            "block_ids": [
+              "page-0622-block-0001",
+              "page-0622-block-0002"
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "title": "Pregnancy and breastfeeding",
+          "physical_start": 700,
+          "physical_end": 743,
+          "printed_start": 679,
+          "printed_end": null,
+          "evidence": {
+            "toc_entry_text": "Chapter 7 Pregnancy and breastfeeding",
+            "body_heading_text": "Pregnancy and breastfeeding",
+            "block_ids": [
+              "page-0700-block-0001",
+              "page-0700-block-0002"
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "title": "Hepatic and renal impairment",
+          "physical_start": 744,
+          "physical_end": 775,
+          "printed_start": 723,
+          "printed_end": 754,
+          "evidence": {
+            "toc_entry_text": "Chapter 8 Hepatic and renal impairment",
+            "body_heading_text": "Hepatic and renal impairment",
+            "block_ids": [
+              "page-0744-block-0001",
+              "page-0744-block-0002"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part_no": 3,
+      "title": "Prescribing in specialist conditions",
+      "physical_start": 776,
+      "physical_end": 851,
+      "printed_start": 755,
+      "printed_end": 830,
+      "chapters": [
+        {
+          "number": 9,
+          "title": "Drug treatment of other psychiatric conditions",
+          "physical_start": 778,
+          "physical_end": 797,
+          "printed_start": 757,
+          "printed_end": null,
+          "evidence": {
+            "toc_entry_text": "Chapter 9 Drug treatment of other psychiatric conditions",
+            "body_heading_text": "Drug treatment of other psychiatric conditions",
+            "block_ids": [
+              "page-0778-block-0001",
+              "page-0778-block-0002",
+              "page-0778-block-0003"
+            ]
+          }
+        },
+        {
+          "number": 10,
+          "title": "Drug treatment of psychiatric symptoms occurring in the context of other disorders",
+          "physical_start": 798,
+          "physical_end": 851,
+          "printed_start": 777,
+          "printed_end": 830,
+          "evidence": {
+            "toc_entry_text": "Chapter 10 Drug treatment of psychiatric symptoms occurring in the context of other disorders",
+            "body_heading_text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders",
+            "block_ids": [
+              "page-0798-block-0001",
+              "page-0798-block-0002",
+              "page-0798-block-0003"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part_no": 4,
+      "title": "Other aspects of psychotropic drug use",
+      "physical_start": 852,
+      "physical_end": 962,
+      "printed_start": 831,
+      "printed_end": 941,
+      "chapters": [
+        {
+          "number": 11,
+          "title": "Pharmacokinetics",
+          "physical_start": 854,
+          "physical_end": 885,
+          "printed_start": 833,
+          "printed_end": 864,
+          "evidence": {
+            "toc_entry_text": "Chapter 11 Pharmacokinetics",
+            "body_heading_text": "Pharmacokinetics",
+            "block_ids": [
+              "page-0854-block-0001",
+              "page-0854-block-0002"
+            ]
+          }
+        },
+        {
+          "number": 12,
+          "title": "Other substances",
+          "physical_start": 886,
+          "physical_end": 895,
+          "printed_start": 865,
+          "printed_end": 874,
+          "evidence": {
+            "toc_entry_text": "Chapter 12 Other substances",
+            "body_heading_text": "Other substances",
+            "block_ids": [
+              "page-0886-block-0004",
+              "page-0886-block-0005"
+            ]
+          }
+        },
+        {
+          "number": 13,
+          "title": "Psychotropic drugs in special conditions",
+          "physical_start": 896,
+          "physical_end": 917,
+          "printed_start": 875,
+          "printed_end": null,
+          "evidence": {
+            "toc_entry_text": "Chapter 13 Psychotropic drugs in special conditions",
+            "body_heading_text": "Psychotropic drugs in special conditions",
+            "block_ids": [
+              "page-0896-block-0003",
+              "page-0896-block-0004",
+              "page-0896-block-0005"
+            ]
+          }
+        },
+        {
+          "number": 14,
+          "title": "Miscellany",
+          "physical_start": 918,
+          "physical_end": 962,
+          "printed_start": 897,
+          "printed_end": 941,
+          "evidence": {
+            "toc_entry_text": "Chapter 14 Miscellany",
+            "body_heading_text": "Miscellany",
+            "block_ids": [
+              "page-0918-block-0004",
+              "page-0918-block-0005"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "back_matter": [
+    {
+      "title": "Blank page",
+      "physical_start": 963,
+      "physical_end": 963,
+      "printed_start": null,
+      "printed_end": null
+    },
+    {
+      "title": "Index",
+      "physical_start": 964,
+      "physical_end": 977,
+      "printed_start": 943,
+      "printed_end": 956
+    },
+    {
+      "title": "WILEY END USER LICENSE AGREEMENT",
+      "physical_start": 978,
+      "physical_end": 978,
+      "printed_start": null,
+      "printed_end": null
+    }
+  ],
+  "toc_mismatches": [
+    {
+      "kind": "toc_typography",
+      "chapter_no": 2,
+      "toc_entry_text": "Chapter 2 Bipolar disorder",
+      "body_heading_text": "Bipolar disorder",
+      "detail": "TOC prints 'Chapter2' (missing space); normalized for comparison only"
+    },
+    {
+      "kind": "unverifiable_printed_start",
+      "chapter_no": 5,
+      "toc_entry_text": "Chapter 5 Children and adolescents",
+      "body_heading_text": null,
+      "detail": "TOC advertises 539 but chapter opens on unnumbered physical 559 (empty title page); 539 resolves at physical 560 per pages.map.json"
+    },
+    {
+      "kind": "empty_title_page",
+      "chapter_no": 5,
+      "toc_entry_text": "Chapter 5 Children and adolescents",
+      "body_heading_text": "Children and adolescents",
+      "detail": "chapter range opens on unnumbered physical 559, an empty (image-only) title page with no extractable blocks; title + 'Chapter 5' marker sit footer-style at the end of physical 560; opening unit spans 559-560"
+    },
+    {
+      "kind": "heading_position_footer",
+      "chapter_no": 5,
+      "toc_entry_text": "Chapter 5 Children and adolescents",
+      "body_heading_text": "Children and adolescents",
+      "detail": "Chapter-5 marker sits at block index 14 of 15 (trailing content in reading order; top-right folio band geometry) instead of a page-head divider"
+    },
+    {
+      "kind": "heading_position_footer",
+      "chapter_no": 12,
+      "toc_entry_text": "Chapter 12 Other substances",
+      "body_heading_text": "Other substances",
+      "detail": "Chapter-12 marker sits at block index 5 of 14 (trailing content in reading order; top-right folio band geometry) instead of a page-head divider"
+    },
+    {
+      "kind": "heading_position_footer",
+      "chapter_no": 13,
+      "toc_entry_text": "Chapter 13 Psychotropic drugs in special conditions",
+      "body_heading_text": "Psychotropic drugs in special conditions",
+      "detail": "Chapter-13 marker sits at block index 5 of 14 (trailing content in reading order; top-right folio band geometry) instead of a page-head divider"
+    },
+    {
+      "kind": "heading_position_footer",
+      "chapter_no": 14,
+      "toc_entry_text": "Chapter 14 Miscellany",
+      "body_heading_text": "Miscellany",
+      "detail": "Chapter-14 marker sits at block index 5 of 6 (trailing content in reading order; top-right folio band geometry) instead of a page-head divider"
+    }
+  ]
+}

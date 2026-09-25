@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0043",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 43,
+  "source_page_index": 42,
+  "source_page_display": 43,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "22    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nGiven the association between combined antipsychotic medication and a greater \nside-effect burden,15,41 it follows that it should be standard practice to document in the \nclinical records the rationale for prescribing combined antipsychotics in individual \ncases, along with a clear account of the benefits and side effects of an individual trial of \nthe strategy. Medico-legally, this would seem to be prudent although in practice it is \nrarely done.42\nThe use of combined antipsychotic medications in clinical practice\nThere are myriad possible antipsychotic medication combinations but very limited data \non their relative risk–benefit profiles in relation to overall therapeutic response or tar-\nget symptom clusters. The clinical disadvantages of antipsychotic polypharmacy include \nan increased side-effect burden, higher total dosage, increased risk of drug–drug inter-\nactions, poorer medication adherence related to the complexity of the treatment, and \ndifficulties in the attribution of any response to one or more of the individual antipsy-\nchotic medications prescribed, leading to difficulty in determining the implications for \nan optimal longer-term regimen.6\nDespite the limited supportive evidence base, the use of antipsychotic polypharmacy \nis an established custom and practice in many countries.43–45 Furthermore, the general \nconsensus across treatment guidelines that the use of combined antipsychotic medica-\ntion for the treatment of refractory psychotic illness should be considered only after \nother, evidence-based, pharmacological treatments such as clozapine have been \nexhausted, is not consistently followed in clinical practice.6,12,13,46–48 However, it should \nbe noted that a trial of clozapine augmentation with a second antipsychotic medication \nto enhance efficacy is a potentially supportable practice49–53 (see the section on clozap-\nine augmentation in this chapter). Other antipsychotic polypharmacy strategies with \npotentially valid rationales are the addition of aripiprazole to reduce body weight in \npatients receiving clozapine54,55 and to normalise prolactin levels in those on haloperi-\ndol56 and risperidone LAI57 (although not amisulpride58). Polypharmacy with aripipra-\nzole in such circumstances may thus represent worthwhile, evidence-based practice, \nalbeit in the absence of regulatory trials demonstrating safety. In many cases, however, \nusing aripiprazole alone might be a more logical choice.\nConclusion\nSome of the findings reported above might be considered to challenge the prevailing \nconsensus that prescribing more than one antipsychotic medication is unlikely to \nimprove efficacy and may increase medical morbidity.59,60 Nevertheless, on the evidence \ncurrently available relating to efficacy and the potential for serious adverse effects, the \nroutine use of combined, non-clozapine, antipsychotic medications may be best avoided.\n",
+  "raw_text_sha256": "e20ededdc99c3f2ada2bd45e4f3886897789ef81784184df3937dd87644a1e53",
+  "coordinates_sha256": "f7ac1db2e038f9aef5ae9062329cb88076d9a939d160a0bf4c0e361bc3ac3b3e",
+  "block_sequence_sha256": "6ef74c282c6e22953830eaf02b41244ea3e722c9ed9fb0a0e2fbecd9f5de02c9",
+  "blocks": [
+    {
+      "block_id": "page-0043-block-0000",
+      "order": 0,
+      "text": "22    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "39bc78237eaf491463f1ac786a4204e0a8add6969b33e0eca0e1c727f260f6db"
+    },
+    {
+      "block_id": "page-0043-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0043-block-0002",
+      "order": 2,
+      "text": "Given the association between combined antipsychotic medication and a greater \nside-effect burden,15,41 it follows that it should be standard practice to document in the \nclinical records the rationale for prescribing combined antipsychotics in individual \ncases, along with a clear account of the benefits and side effects of an individual trial of \nthe strategy. Medico-legally, this would seem to be prudent although in practice it is \nrarely done.42\n",
+      "bbox": [
+        61.88909912109375,
+        62.5494384765625,
+        436.7127990722656,
+        134.26943969726562
+      ],
+      "text_sha256": "e3ea57fa4bd38f5c416d02f409d964f1dfe5bd38154e35606f19e4464c84ea44"
+    },
+    {
+      "block_id": "page-0043-block-0003",
+      "order": 3,
+      "text": "The use of combined antipsychotic medications in clinical practice\n",
+      "bbox": [
+        61.88909912109375,
+        151.70443725585938,
+        400.4802551269531,
+        164.73944091796875
+      ],
+      "text_sha256": "fa76ff745ed9d270d4d297b507d6cbe13cd6329333aa79a9d32641b67bc8b00e"
+    },
+    {
+      "block_id": "page-0043-block-0004",
+      "order": 4,
+      "text": "There are myriad possible antipsychotic medication combinations but very limited data \non their relative risk–benefit profiles in relation to overall therapeutic response or tar-\nget symptom clusters. The clinical disadvantages of antipsychotic polypharmacy include \nan increased side-effect burden, higher total dosage, increased risk of drug–drug inter-\nactions, poorer medication adherence related to the complexity of the treatment, and \ndifficulties in the attribution of any response to one or more of the individual antipsy-\nchotic medications prescribed, leading to difficulty in determining the implications for \nan optimal longer-term regimen.6\n",
+      "bbox": [
+        61.88908386230469,
+        170.5494384765625,
+        436.6990051269531,
+        266.2694396972656
+      ],
+      "text_sha256": "2ad6d20ba9769caba69a251aec205a36c428b6120ffd340e224d2555423ebf9c"
+    },
+    {
+      "block_id": "page-0043-block-0005",
+      "order": 5,
+      "text": "Despite the limited supportive evidence base, the use of antipsychotic polypharmacy \nis an established custom and practice in many countries.43–45 Furthermore, the general \nconsensus across treatment guidelines that the use of combined antipsychotic medica-\ntion for the treatment of refractory psychotic illness should be considered only after \nother, evidence-based, pharmacological treatments such as clozapine have been \nexhausted, is not consistently followed in clinical practice.6,12,13,46–48 However, it should \nbe noted that a trial of clozapine augmentation with a second antipsychotic medication \nto enhance efficacy is a potentially supportable practice49–53 (see the section on clozap-\nine augmentation in this chapter). Other antipsychotic polypharmacy strategies with \npotentially valid rationales are the addition of aripiprazole to reduce body weight in \npatients receiving clozapine54,55 and to normalise prolactin levels in those on haloperi-\ndol56 and risperidone LAI57 (although not amisulpride58). Polypharmacy with aripipra-\nzole in such circumstances may thus represent worthwhile, evidence-based practice, \nalbeit in the absence of regulatory trials demonstrating safety. In many cases, however, \nusing aripiprazole alone might be a more logical choice.\n",
+      "bbox": [
+        61.88551330566406,
+        266.54949951171875,
+        436.7119445800781,
+        446.2695007324219
+      ],
+      "text_sha256": "f89b4e508f58303e1b8b2c6e408fc54cb6646748d31526b22b348aad6ccd338e"
+    },
+    {
+      "block_id": "page-0043-block-0006",
+      "order": 6,
+      "text": "Conclusion\n",
+      "bbox": [
+        61.88909912109375,
+        463.7044982910156,
+        118.0990982055664,
+        476.739501953125
+      ],
+      "text_sha256": "fb4270967771c960d7d920b3bd067a3698167efcff42f8f7ef03d29382979ea5"
+    },
+    {
+      "block_id": "page-0043-block-0007",
+      "order": 7,
+      "text": "Some of the findings reported above might be considered to challenge the prevailing \nconsensus that prescribing more than one antipsychotic medication is unlikely to \nimprove efficacy and may increase medical morbidity.59,60 Nevertheless, on the evidence \ncurrently available relating to efficacy and the potential for serious adverse effects, the \nroutine use of combined, non-clozapine, antipsychotic medications may be best avoided.\n",
+      "bbox": [
+        61.88909912109375,
+        482.54949951171875,
+        436.7090759277344,
+        542.26953125
+      ],
+      "text_sha256": "11162dc5be0b040409ef831861afc088c42a663c22ae614c9ac25688ed960209"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

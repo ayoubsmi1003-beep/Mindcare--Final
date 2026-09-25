@@ -1,0 +1,215 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0790",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 790,
+  "source_page_index": 789,
+  "source_page_display": 790,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of other psychiatric conditions     769\nCHAPTER 9\nChoice of drug17–20\nHigh quality trials of pharmacological treatments for delirium are lacking, with avail-\nable studies often small, comprising heterogeneous populations and clinical outcomes, \nexcluding patients with neurologic and psychiatric comorbidities,21 and producing \nconflicting results. These problems mean that the results of meta-analyses must be \napproached with caution; a recent network meta-analysis found a combination of hal-\noperidol and lorazepam to be effective treatment for delirium, but this was based on a \nsingle study in cancer patients measuring effect on agitation, not delirium.22 There is \ninsufficient evidence to recommend any single drug treatment over others. Certain \npatient populations may derive less benefit from antipsychotic treatment (e.g. those in \npalliative care may experience worsening of symptoms23,24). Treatment choice should \ntherefore be informed by the likelihood of interaction with coexisting medical condi-\ntions or other medications (see Table 9.1).\nPharmacological prophylaxis25–29\n Data around the use of medication to prevent delirium are sparse and conflicting. Most \nstudies use low dose haloperidol in patients deemed at high risk of developing delirium \n(elderly, post-surgical or ICU patients). Prophylactic low dose haloperidol (around \n3mg/day) was thought to reduce the severity and duration of delirium episodes and \nshorten the length of hospital stay in patients at high risk of developing the condition, \nbut a recent study in older subjects found no effect.30 Higher doses (>5mg/day) may \nreduce the incidence in surgical patients,31 but a large RCT found no benefit to mortality \nin critically ill patients.32 Cochrane25 suggests prophylactic olanzapine may be effective, \nand a small RCT found some benefit to aripiprazole.33 Rivastigmine may be effective34 \nbut Cochrane is dismissive.25 Data are conflicting for melatonin,35–37 ramelteon38–41 and \nsuvorexant42 but at least these drugs are well tolerated and may reduce sleep distur-\nbance, which contributes to the risk of delirium.43 Some evidence exists to support non-\ndrug measures to minimise the risk of delirium.44\nTable 9.1  Drugs used to treat delirium\nDrug\nDose\nAdverse effects\nNotes\nFirst-generation antipsychotics\nHaloperidol1,5,7,12,30,45–47\nOral 0.5–1mg \nbd with \nadditional doses \nevery 4 hourly \nas needed.\n(peak effect: \n4–6 hours)\nEPSE can occur \nespecially at doses \nabove 3mg\nProlonged QT interval\nIncreased risk of \nstroke in patients with \ndementia\nConsidered first line agent and is the \nonly licensed treatment in the UK for \nthis indication. No trial data has \ndemonstrated superiority of other \nantipsychotics over haloperidol; \nhowever, care must be taken to \nmonitor for extrapyramidal and cardiac \nside effects\n(Continued)\n",
+  "raw_text_sha256": "f23fa83db96552bc0f4d359bf066283a916a95902fd5d34e89169289936388d7",
+  "coordinates_sha256": "80cc7f2593791ba5603653171993bc404d11acf58b51c2cad32ca4cd0ef7830b",
+  "block_sequence_sha256": "80701b682debd0c6ec1ac921350527a8537c4c0b4a0d9f3a3f3dd37c3e247d4f",
+  "blocks": [
+    {
+      "block_id": "page-0790-block-0000",
+      "order": 0,
+      "text": "Drug treatment of other psychiatric conditions     769\n",
+      "bbox": [
+        196.0341033935547,
+        31.395221710205078,
+        420.0020751953125,
+        41.0272216796875
+      ],
+      "text_sha256": "aaf9e9da4a4e9a40da4b1550365b758cc7f9a7160151803d4b187b89d60142ba"
+    },
+    {
+      "block_id": "page-0790-block-0001",
+      "order": 1,
+      "text": "CHAPTER 9\n",
+      "bbox": [
+        454.4096984863281,
+        598.7144775390625,
+        463.88970947265625,
+        640.0584716796875
+      ],
+      "text_sha256": "a82498383e032e8013503b8de1dd71e97ad0ce75549c664143d6c75c10c3a855"
+    },
+    {
+      "block_id": "page-0790-block-0002",
+      "order": 2,
+      "text": "Choice of drug17–20\n",
+      "bbox": [
+        48.0,
+        62.31546401977539,
+        141.2471160888672,
+        75.3504638671875
+      ],
+      "text_sha256": "dde0aa2b32ae50afd7132872fe5b22de3c23e8275c502f890ea4aa75cc0427fd"
+    },
+    {
+      "block_id": "page-0790-block-0003",
+      "order": 3,
+      "text": "High quality trials of pharmacological treatments for delirium are lacking, with avail-\nable studies often small, comprising heterogeneous populations and clinical outcomes, \nexcluding patients with neurologic and psychiatric comorbidities,21 and producing \nconflicting results. These problems mean that the results of meta-analyses must be \napproached with caution; a recent network meta-analysis found a combination of hal-\noperidol and lorazepam to be effective treatment for delirium, but this was based on a \nsingle study in cancer patients measuring effect on agitation, not delirium.22 There is \ninsufficient evidence to recommend any single drug treatment over others. Certain \npatient populations may derive less benefit from antipsychotic treatment (e.g. those in \npalliative care may experience worsening of symptoms23,24). Treatment choice should \ntherefore be informed by the likelihood of interaction with coexisting medical condi-\ntions or other medications (see Table 9.1).\n",
+      "bbox": [
+        47.998992919921875,
+        81.16046142578125,
+        422.820556640625,
+        224.8804931640625
+      ],
+      "text_sha256": "638072b90fbeb92c743338c2a0db16e09bac1982f0d057ab498925096f21d841"
+    },
+    {
+      "block_id": "page-0790-block-0004",
+      "order": 4,
+      "text": "Pharmacological prophylaxis25–29\n",
+      "bbox": [
+        48.0,
+        242.31549072265625,
+        213.18670654296875,
+        255.35049438476562
+      ],
+      "text_sha256": "dfcb5880f3bfd6fd03977b6f7ee73afc8b01d57661dfbe425eb414aa68c691b8"
+    },
+    {
+      "block_id": "page-0790-block-0005",
+      "order": 5,
+      "text": " Data around the use of medication to prevent delirium are sparse and conflicting. Most \nstudies use low dose haloperidol in patients deemed at high risk of developing delirium \n(elderly, post-surgical or ICU patients). Prophylactic low dose haloperidol (around \n3mg/day) was thought to reduce the severity and duration of delirium episodes and \nshorten the length of hospital stay in patients at high risk of developing the condition, \nbut a recent study in older subjects found no effect.30 Higher doses (>5mg/day) may \nreduce the incidence in surgical patients,31 but a large RCT found no benefit to mortality \nin critically ill patients.32 Cochrane25 suggests prophylactic olanzapine may be effective, \nand a small RCT found some benefit to aripiprazole.33 Rivastigmine may be effective34 \nbut Cochrane is dismissive.25 Data are conflicting for melatonin,35–37 ramelteon38–41 and \nsuvorexant42 but at least these drugs are well tolerated and may reduce sleep distur-\nbance, which contributes to the risk of delirium.43 Some evidence exists to support non-\ndrug measures to minimise the risk of delirium.44\n",
+      "bbox": [
+        47.99560546875,
+        261.1604919433594,
+        422.7803039550781,
+        416.8804931640625
+      ],
+      "text_sha256": "cc81cb3a0dece3265cf60fe57f1562c45864a7d583eba369c5b9292c98df63cb"
+    },
+    {
+      "block_id": "page-0790-block-0006",
+      "order": 6,
+      "text": "Table 9.1  Drugs used to treat delirium\n",
+      "bbox": [
+        54.0,
+        451.14349365234375,
+        178.06497192382812,
+        460.031005859375
+      ],
+      "text_sha256": "1e30371bb06739e85fbbfa45f887c4ea74f348bb79aa8b1c4f1cca077fc1366d"
+    },
+    {
+      "block_id": "page-0790-block-0007",
+      "order": 7,
+      "text": "Drug\nDose\nAdverse effects\nNotes\n",
+      "bbox": [
+        48.0,
+        471.12847900390625,
+        314.5274963378906,
+        480.0159912109375
+      ],
+      "text_sha256": "60a78b8cd9dc096a6d60f46505aaad1abcc6d57d3170f46fec2c4ebda10c2e70"
+    },
+    {
+      "block_id": "page-0790-block-0008",
+      "order": 8,
+      "text": "First-generation antipsychotics\n",
+      "bbox": [
+        47.99998474121094,
+        491.36346435546875,
+        156.3374786376953,
+        500.2509765625
+      ],
+      "text_sha256": "614eddeacc1cdcf8546bb1f06ac22050181819d3689b21e2869c07984ffa8929"
+    },
+    {
+      "block_id": "page-0790-block-0009",
+      "order": 9,
+      "text": "Haloperidol1,5,7,12,30,45–47\nOral 0.5–1mg \nbd with \nadditional doses \nevery 4 hourly \nas needed.\n",
+      "bbox": [
+        47.99998474121094,
+        511.6659851074219,
+        199.57977294921875,
+        560.365966796875
+      ],
+      "text_sha256": "48c1b7ed4d38a5d24ea89451b274b5e5d01f0a0649656ef312449efa744075b3"
+    },
+    {
+      "block_id": "page-0790-block-0010",
+      "order": 10,
+      "text": "(peak effect: \n4–6 hours)\n",
+      "bbox": [
+        145.9998016357422,
+        564.6559448242188,
+        187.94732666015625,
+        583.3609619140625
+      ],
+      "text_sha256": "76929db9a041411381a839f1c1961a31e53b1f06a933f20845c80634c885f6aa"
+    },
+    {
+      "block_id": "page-0790-block-0011",
+      "order": 11,
+      "text": "EPSE can occur \nespecially at doses \nabove 3mg\n",
+      "bbox": [
+        209.4947967529297,
+        511.6534729003906,
+        269.914794921875,
+        540.35595703125
+      ],
+      "text_sha256": "7c5c2707351960b065da207485568690ba8ba4bb7aad2c03026d2e8392fa92b0"
+    },
+    {
+      "block_id": "page-0790-block-0012",
+      "order": 12,
+      "text": "Prolonged QT interval\n",
+      "bbox": [
+        209.4947967529297,
+        544.6459350585938,
+        278.53228759765625,
+        553.3534545898438
+      ],
+      "text_sha256": "579a8a96c650e87513c59015fee0d25f21f7f3d0d583017d75ec3d7016278435"
+    },
+    {
+      "block_id": "page-0790-block-0013",
+      "order": 13,
+      "text": "Increased risk of \nstroke in patients with \ndementia\n",
+      "bbox": [
+        209.4947967529297,
+        557.6434326171875,
+        282.7023010253906,
+        586.345947265625
+      ],
+      "text_sha256": "1a8d3eadea495a323c0fb5f8eb56fea52cab13ab6385a498f80f077e00a35076"
+    },
+    {
+      "block_id": "page-0790-block-0014",
+      "order": 14,
+      "text": "Considered first line agent and is the \nonly licensed treatment in the UK for \nthis indication. No trial data has \ndemonstrated superiority of other \nantipsychotics over haloperidol; \nhowever, care must be taken to \nmonitor for extrapyramidal and cardiac \nside effects\n",
+      "bbox": [
+        294.10980224609375,
+        511.6384582519531,
+        420.63482666015625,
+        590.3284301757812
+      ],
+      "text_sha256": "a758b80feaf7ced436d21662f7b6620510129fd02ee8aa4ba123438e4b027f3a"
+    },
+    {
+      "block_id": "page-0790-block-0015",
+      "order": 15,
+      "text": "(Continued)\n",
+      "bbox": [
+        382.16729736328125,
+        600.73095703125,
+        419.08221435546875,
+        609.4834594726562
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

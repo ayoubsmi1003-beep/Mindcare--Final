@@ -1,0 +1,215 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0812",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 812,
+  "source_page_index": 811,
+  "source_page_display": 812,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    791\nCHAPTER 10\nEpilepsy and driving\nIn the United Kingdom, people with epilepsy may not drive a car if they have had a \nseizure while awake in the previous year. However, they may be eligible to drive if sei-\nzures occur only during sleep and this has been an established nocturnal pattern for at \nleast 3 years. The consequences of inducing seizure with antidepressants or antipsy-\nchotics can therefore be significant. For further information see \"http://www.gov.uk/\nepilepsy-and-driving\" www.gov.uk/epilepsy-and-driving.\nReferences\n\t 1.\t Scott AJ, et al. Anxiety and depressive disorders in people with epilepsy: A meta-analysis. Epilepsia 2017; 58:973–982.\n\t 2.\t Clancy MJ, et al. The prevalence of psychosis in epilepsy; a systematic review and meta-analysis. BMC Psychiatry 2014; 14:75.\n\t 3.\t Hesdorffer DC, et al. Occurrence and recurrence of attempted suicide among people with epilepsy. JAMA Psychiatry 2016; 73:80–86.\n\t 4.\t Thurman DJ, et al. The burden of premature mortality of epilepsy in high-income countries: A systematic review from the mortality task force \nof the international league against epilepsy. Epilepsia 2017; 58:17–26.\n\t 5.\t Kanner AM. Management of psychiatric and neurological comorbidities in epilepsy. Nat Rev Neurol 2016; 12:106–116.\n\t 6.\t Hesdorffer DC. Comorbidity between neurological illness and psychiatric disorders. CNS Spectr 2016; 21:230–238.\n\t 7.\t Kanner AM. Can neurochemical changes of mood disorders explain the increase risk of epilepsy or its worse seizure control? Neurochem Res \n2017; 42:2071–2076.\n\t 8.\t Curran S, et al. Selecting an antidepressant for use in a patient with epilepsy. Safety considerations. Drug Saf 1998; 18:125–133.\n\t 9.\t Blumer D, et al. Treatment of the interictal psychoses. J Clin Psychiatry 2000; 61:110–122.\n\t10.\t Mula M. The pharmacological management of psychiatric comorbidities in patients with epilepsy. Pharmacol Res 2016; 107:147–153.\n\t11.\t Elger CE, et al. Diagnosing and treating depression in epilepsy. Seizure 2017; 44:184–193.\n\t12.\t Anbarasan D. Psychoactive medications and seizures—challenges and pitfalls. Neurol Rep 2016; 9:24–27.\nSafety in \nepilepsy\nDrug\nComments\nDrugs for ADHD\nLow risk\nMethylphenidate\nThree RCTs support safety and efficacy in children with epilepsy at \ntherapeutic doses (0.3–1mg/kg/day).10 Two single dose RCTs and one open \nlabel extension study demonstrated no effect on seizures in adults.54,55 A \nlarge case control study found an increased rate of seizures after the start of \nmethylphenidate but not in the longer term.56 This is difficult to interpret but \nsuggests caution would be appropriate\nProbably low \nrisk57,58 – use \nwith caution \n(limited data)\nAmfetamines\nData are limited to one small retrospective study in PWE.10 No patients who \nhad well controlled epilepsy experienced an increase in seizure frequency.59 \nOf note, dexamfetamine was historically used as an adjunctive antiseizure \nagent60\nAtomoxetine\nData are limited to one small retrospective study in PWE.10 Discontinuation \nrates were high (though none due to seizure exacerbation61). Seizure rate \nsimilar to placebo for patients without epilepsy62\nThis table contains information about the pro-convulsive effects of antidepressants and antipsychotics when used \nin therapeutic doses. See section on psychotropics in overdose for information about supra-therapeutic doses.\nTable 10.5  (Continued)\n",
+  "raw_text_sha256": "1b08965918a43cbdfd9bec2783398afb36ed51cade4aeadb5df7c6c21d413685",
+  "coordinates_sha256": "b74e1a371cc16306e4ef7086852c0c7dcec72123ed4940ffbb761684ed1f1be7",
+  "block_sequence_sha256": "0ad8b046d7e67866547dff09bc1360e5a3fcd1cc97cb33086f62649a36759986",
+  "blocks": [
+    {
+      "block_id": "page-0812-block-0000",
+      "order": 0,
+      "text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    791\n",
+      "bbox": [
+        47.999698638916016,
+        31.395221710205078,
+        419.96697998046875,
+        41.0272216796875
+      ],
+      "text_sha256": "82292f5e95e05ce7dbf4814e52614219b07a05d4caa1aa8a3749fbee5c478474"
+    },
+    {
+      "block_id": "page-0812-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        454.4096984863281,
+        75.763671875,
+        463.88970947265625,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0812-block-0002",
+      "order": 2,
+      "text": "Epilepsy and driving\n",
+      "bbox": [
+        48.0,
+        343.79217529296875,
+        153.1379852294922,
+        356.8271789550781
+      ],
+      "text_sha256": "86bc95f443795e5ff34fe0d1df8b5aed8fbe12c0a31ab2150d561665c6b667f1"
+    },
+    {
+      "block_id": "page-0812-block-0003",
+      "order": 3,
+      "text": "In the United Kingdom, people with epilepsy may not drive a car if they have had a \nseizure while awake in the previous year. However, they may be eligible to drive if sei-\nzures occur only during sleep and this has been an established nocturnal pattern for at \nleast 3 years. The consequences of inducing seizure with antidepressants or antipsy-\nchotics can therefore be significant. For further information see \"http://www.gov.uk/\nepilepsy-and-driving\" www.gov.uk/epilepsy-and-driving.\n",
+      "bbox": [
+        48.0,
+        362.6371765136719,
+        422.82989501953125,
+        434.357177734375
+      ],
+      "text_sha256": "c39c68eab2c2a34b720f631eaf3f373c4caa2d53a4f905a85ddb4003cf31e61a"
+    },
+    {
+      "block_id": "page-0812-block-0004",
+      "order": 4,
+      "text": "References\n",
+      "bbox": [
+        48.0,
+        451.7922058105469,
+        104.03400421142578,
+        464.82720947265625
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0812-block-0005",
+      "order": 5,
+      "text": "\t 1.\t Scott AJ, et al. Anxiety and depressive disorders in people with epilepsy: A meta-analysis. Epilepsia 2017; 58:973–982.\n\t 2.\t Clancy MJ, et al. The prevalence of psychosis in epilepsy; a systematic review and meta-analysis. BMC Psychiatry 2014; 14:75.\n\t 3.\t Hesdorffer DC, et al. Occurrence and recurrence of attempted suicide among people with epilepsy. JAMA Psychiatry 2016; 73:80–86.\n\t 4.\t Thurman DJ, et al. The burden of premature mortality of epilepsy in high-income countries: A systematic review from the mortality task force \n",
+      "bbox": [
+        48.0,
+        469.7691955566406,
+        421.721923828125,
+        503.9452209472656
+      ],
+      "text_sha256": "efb58ab31ca5c40cc2ab65d477d3bf3b3eab8be4220582a51089efecd164ad67"
+    },
+    {
+      "block_id": "page-0812-block-0006",
+      "order": 6,
+      "text": "of the international league against epilepsy. Epilepsia 2017; 58:17–26.\n\t 5.\t Kanner AM. Management of psychiatric and neurological comorbidities in epilepsy. Nat Rev Neurol 2016; 12:106–116.\n\t 6.\t Hesdorffer DC. Comorbidity between neurological illness and psychiatric disorders. CNS Spectr 2016; 21:230–238.\n\t 7.\t Kanner AM. Can neurochemical changes of mood disorders explain the increase risk of epilepsy or its worse seizure control? Neurochem Res \n",
+      "bbox": [
+        48.02399826049805,
+        505.7691955566406,
+        421.6741638183594,
+        539.9451904296875
+      ],
+      "text_sha256": "503d4a2cd1059a465a79d971ab2d344268ad358b9e277dfe761b6f792e7e878e"
+    },
+    {
+      "block_id": "page-0812-block-0007",
+      "order": 7,
+      "text": "2017; 42:2071–2076.\n\t 8.\t Curran S, et al. Selecting an antidepressant for use in a patient with epilepsy. Safety considerations. Drug Saf 1998; 18:125–133.\n\t 9.\t Blumer D, et al. Treatment of the interictal psychoses. J Clin Psychiatry 2000; 61:110–122.\n\t10.\t Mula M. The pharmacological management of psychiatric comorbidities in patients with epilepsy. Pharmacol Res 2016; 107:147–153.\n\t11.\t Elger CE, et al. Diagnosing and treating depression in epilepsy. Seizure 2017; 44:184–193.\n\t12.\t Anbarasan D. Psychoactive medications and seizures—challenges and pitfalls. Neurol Rep 2016; 9:24–27.\n",
+      "bbox": [
+        48.04199981689453,
+        541.7692260742188,
+        407.2319641113281,
+        593.9451904296875
+      ],
+      "text_sha256": "f70d4b992f35ba4bcf4cb15b67f1131a81de81468ff21b8c3a67cd83486f593a"
+    },
+    {
+      "block_id": "page-0812-block-0008",
+      "order": 8,
+      "text": "Safety in \nepilepsy\nDrug\nComments\n",
+      "bbox": [
+        52.0,
+        88.57289123535156,
+        208.0,
+        107.4578857421875
+      ],
+      "text_sha256": "20014f57ffe63ace16346a7bafb63ea03584b896658699da8d178d91483c8d4b"
+    },
+    {
+      "block_id": "page-0812-block-0009",
+      "order": 9,
+      "text": "Drugs for ADHD\n",
+      "bbox": [
+        52.0,
+        116.19538879394531,
+        109.07500457763672,
+        125.0828857421875
+      ],
+      "text_sha256": "c449827bd09ef6a07a4eec5be8cd64a83d6c5cc0004c39b9d6f5daa826e2f251"
+    },
+    {
+      "block_id": "page-0812-block-0010",
+      "order": 10,
+      "text": "Low risk\nMethylphenidate\nThree RCTs support safety and efficacy in children with epilepsy at \ntherapeutic doses (0.3–1mg/kg/day).10 Two single dose RCTs and one open \nlabel extension study demonstrated no effect on seizures in adults.54,55 A \nlarge case control study found an increased rate of seizures after the start of \nmethylphenidate but not in the longer term.56 This is difficult to interpret but \nsuggests caution would be appropriate\n",
+      "bbox": [
+        52.0,
+        134.00038146972656,
+        417.61846923828125,
+        192.7078857421875
+      ],
+      "text_sha256": "d812dcac3dfcdc4d3a5171421f81de2459ff129ff0bc0d0a924b865bf0db0662"
+    },
+    {
+      "block_id": "page-0812-block-0011",
+      "order": 11,
+      "text": "Probably low \nrisk57,58 – use \nwith caution \n(limited data)\n",
+      "bbox": [
+        51.99720001220703,
+        201.62538146972656,
+        95.20840454101562,
+        240.33038330078125
+      ],
+      "text_sha256": "532aed7dae899aa09392343de416acdd610f9c3b2e9a18224c410735bbf89b22"
+    },
+    {
+      "block_id": "page-0812-block-0012",
+      "order": 12,
+      "text": "Amfetamines\nData are limited to one small retrospective study in PWE.10 No patients who \nhad well controlled epilepsy experienced an increase in seizure frequency.59 \nOf note, dexamfetamine was historically used as an adjunctive antiseizure \nagent60\n",
+      "bbox": [
+        102.30720520019531,
+        201.6228790283203,
+        412.89263916015625,
+        240.33038330078125
+      ],
+      "text_sha256": "a524cc6c693626c5277f92de53d132b34c5af014f74caee12abf8c22c86e5a95"
+    },
+    {
+      "block_id": "page-0812-block-0013",
+      "order": 13,
+      "text": "Atomoxetine\nData are limited to one small retrospective study in PWE.10 Discontinuation \nrates were high (though none due to seizure exacerbation61). Seizure rate \nsimilar to placebo for patients without epilepsy62\n",
+      "bbox": [
+        102.30719757080078,
+        249.2528839111328,
+        409.9676818847656,
+        277.9578857421875
+      ],
+      "text_sha256": "af44a570328fd3ae6e0eaba68b3fb3296e747c124b28b571ba267b755918a244"
+    },
+    {
+      "block_id": "page-0812-block-0014",
+      "order": 14,
+      "text": "This table contains information about the pro-convulsive effects of antidepressants and antipsychotics when used \nin therapeutic doses. See section on psychotropics in overdose for information about supra-therapeutic doses.\n",
+      "bbox": [
+        52.0,
+        286.8778991699219,
+        415.39764404296875,
+        305.5828857421875
+      ],
+      "text_sha256": "c96c6a0a860258934f2430e31e5ea3e10915e085cc51ebfe0e40febd2d973179"
+    },
+    {
+      "block_id": "page-0812-block-0015",
+      "order": 15,
+      "text": "Table 10.5  (Continued)\n",
+      "bbox": [
+        54.0,
+        70.08790588378906,
+        130.2899932861328,
+        78.97540283203125
+      ],
+      "text_sha256": "6f96aa44cab7a550a602c4a6f190cc85216b9f93ad3df4757bbc96e0499b5302"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

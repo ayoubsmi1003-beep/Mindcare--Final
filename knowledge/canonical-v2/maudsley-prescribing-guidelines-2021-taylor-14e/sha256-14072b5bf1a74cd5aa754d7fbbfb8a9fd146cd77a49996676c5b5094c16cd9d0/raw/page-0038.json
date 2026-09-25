@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0038",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 38,
+  "source_page_index": 37,
+  "source_page_display": 38,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    17\nCHAPTER 1\nIn a study of patients with first-episode schizophrenia, increasing the dose of olanzap-\nine up to 30mg/day and the dose of risperidone up to 10mg/day in non-responders to \nstandard doses yielded only a 4% absolute increase in overall response rate; switching \nto an alternative antipsychotic, including clozapine, was considerably more successful.20 \nOne small (n = 12) open study of high-dose quetiapine (up to 1400mg/day) found mod-\nest benefits in a third of subjects,21 but other, larger studies of quetiapine have shown no \nbenefit for higher doses.8,22,23 A further RCT of high-dose olanzapine (up to 45mg/day) \nversus clozapine for treatment-resistant schizophrenia found similar efficacy for the two \ntreatments, but concluded that, given the small sample size, it would be premature to \nconclude that they were equivalent.24 A systematic review of relevant studies comparing \nolanzapine at above standard dosage with clozapine for TRS concluded that while olan-\nzapine, particularly in higher dosage, might be considered as an alternative to clozapine \nin TRS, clozapine still had the most robust evidence for efficacy.25\nThe most recent systematic analysis of dose response26 largely confirmed the observa-\ntion of a flat or horizontal dose–response curve above a certain dose for all antipsychot-\nics, with the possible exceptions of olanzapine and lurasidone (with these two drugs, \nthere is evidence that doses at the upper end of the licensed range are somewhat more \neffective than lower doses10,27). This systematic review also suggested that doses above \nwhich no additional benefit was likely were somewhat higher than those stated above, \ne.g. risperidone 6.3mg/day; quetiapine 482mg/day. Importantly, however, there was no \nevidence to support the use of doses of any drug above its licensed does range.\nAdverse effects\nThe majority of side effects associated with antipsychotic treatment are dose-related. \nThese include EPS, sedation, postural hypotension, anticholinergic effects, QTc prolon-\ngation and coronary heart disease mortality.28–31 High-dose antipsychotic treatment is \nclearly associated with a greater side-effect burden.12,23,28,32,33 There is some evidence \nthat antipsychotic dose reduction from very high (mean 2253mg chlorpromazine equiv-\nalents per day) to high (mean 1315mg chlorpromazine equivalents per day) dose leads \nto improvements in cognition and negative symptoms.34\nRecommendations\n■\n■The use of high-dose antipsychotic medication should be an exceptional clinical practice and \nonly ever employed when adequate trials of standard treatments, including clozapine, have \nfailed.\n■\n■If high-dose antipsychotic medication is prescribed, it should be standard practice to review and \ndocument the target symptoms, therapeutic response and side effects, ideally using validated \nrating scales, so that there is ongoing consideration of the risk-benefit ratio for the patient. \nClose physical monitoring (including ECG) is essential.\n",
+  "raw_text_sha256": "4e280948abf38f36d8a1adefbecead5b5315ee77d23a2b4723b0aa0f119d2717",
+  "coordinates_sha256": "c74b0aba0003447a9a9b6ba8e7ef9c98ec1f8bf4ef63ba8fc567cfe32fbd16c8",
+  "block_sequence_sha256": "24a2d829b35b7bf9f60dbd788303ccab1359e1bffa5dbae576428217216fd2e4",
+  "blocks": [
+    {
+      "block_id": "page-0038-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    17\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "39176d8d078b02a4d83c8a9630a1646b7a1236f1ad0d82b6285179da9ea18e94"
+    },
+    {
+      "block_id": "page-0038-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0038-block-0002",
+      "order": 2,
+      "text": "In a study of patients with first-episode schizophrenia, increasing the dose of olanzap-\nine up to 30mg/day and the dose of risperidone up to 10mg/day in non-responders to \nstandard doses yielded only a 4% absolute increase in overall response rate; switching \nto an alternative antipsychotic, including clozapine, was considerably more successful.20 \nOne small (n = 12) open study of high-dose quetiapine (up to 1400mg/day) found mod-\nest benefits in a third of subjects,21 but other, larger studies of quetiapine have shown no \nbenefit for higher doses.8,22,23 A further RCT of high-dose olanzapine (up to 45mg/day) \nversus clozapine for treatment-resistant schizophrenia found similar efficacy for the two \ntreatments, but concluded that, given the small sample size, it would be premature to \nconclude that they were equivalent.24 A systematic review of relevant studies comparing \nolanzapine at above standard dosage with clozapine for TRS concluded that while olan-\nzapine, particularly in higher dosage, might be considered as an alternative to clozapine \nin TRS, clozapine still had the most robust evidence for efficacy.25\n",
+      "bbox": [
+        47.99909973144531,
+        62.54931640625,
+        422.8217468261719,
+        218.26931762695312
+      ],
+      "text_sha256": "e0de85ed379dba7bd80c8d2a2b71067684242a04b0b6eabacdd464d59839d831"
+    },
+    {
+      "block_id": "page-0038-block-0003",
+      "order": 3,
+      "text": "The most recent systematic analysis of dose response26 largely confirmed the observa-\ntion of a flat or horizontal dose–response curve above a certain dose for all antipsychot-\nics, with the possible exceptions of olanzapine and lurasidone (with these two drugs, \nthere is evidence that doses at the upper end of the licensed range are somewhat more \neffective than lower doses10,27). This systematic review also suggested that doses above \nwhich no additional benefit was likely were somewhat higher than those stated above, \ne.g. risperidone 6.3mg/day; quetiapine 482mg/day. Importantly, however, there was no \nevidence to support the use of doses of any drug above its licensed does range.\n",
+      "bbox": [
+        47.999114990234375,
+        218.54931640625,
+        422.8291320800781,
+        314.2693176269531
+      ],
+      "text_sha256": "6e7892ec96ce93ec4b5fc66e6ed5c091f1996fe0b3454116518d920e384de1d7"
+    },
+    {
+      "block_id": "page-0038-block-0004",
+      "order": 4,
+      "text": "Adverse effects\n",
+      "bbox": [
+        47.99909973144531,
+        331.7043151855469,
+        127.8701171875,
+        344.73931884765625
+      ],
+      "text_sha256": "2829b5953031aa8e8e992beffdca9c91044830ce03b830653e6ea31d5de93cfc"
+    },
+    {
+      "block_id": "page-0038-block-0005",
+      "order": 5,
+      "text": "The majority of side effects associated with antipsychotic treatment are dose-related. \nThese include EPS, sedation, postural hypotension, anticholinergic effects, QTc prolon-\ngation and coronary heart disease mortality.28–31 High-dose antipsychotic treatment is \nclearly associated with a greater side-effect burden.12,23,28,32,33 There is some evidence \nthat antipsychotic dose reduction from very high (mean 2253mg chlorpromazine equiv-\nalents per day) to high (mean 1315mg chlorpromazine equivalents per day) dose leads \nto improvements in cognition and negative symptoms.34\n",
+      "bbox": [
+        47.99681091308594,
+        350.54931640625,
+        422.7971496582031,
+        434.2693176269531
+      ],
+      "text_sha256": "6c345cbb2d2b1f68ea3c9864dbd3eea0a744c4b2ed9f31914adf46fc29ca387f"
+    },
+    {
+      "block_id": "page-0038-block-0006",
+      "order": 6,
+      "text": "Recommendations\n",
+      "bbox": [
+        47.99909973144531,
+        451.7043151855469,
+        143.33607482910156,
+        464.73931884765625
+      ],
+      "text_sha256": "7c6111eea3863d48159f2438bbf0ff11339f5274f59a2eadc81aefbbe48246bb"
+    },
+    {
+      "block_id": "page-0038-block-0007",
+      "order": 7,
+      "text": "■\n■The use of high-dose antipsychotic medication should be an exceptional clinical practice and \n",
+      "bbox": [
+        55.499000549316406,
+        478.63092041015625,
+        400.2677307128906,
+        488.4994201660156
+      ],
+      "text_sha256": "56d757f947283aac33337c12886efbe14bd179a2d314817e79621ad795ec5aba"
+    },
+    {
+      "block_id": "page-0038-block-0008",
+      "order": 8,
+      "text": "only ever employed when adequate trials of standard treatments, including clozapine, have \nfailed.\n",
+      "bbox": [
+        63.99909973144531,
+        488.6269226074219,
+        396.1792297363281,
+        508.4914245605469
+      ],
+      "text_sha256": "4921db8276399e3c490fa6d0d074ee964d7c38ad3ecd65103ce155286d5c265c"
+    },
+    {
+      "block_id": "page-0038-block-0009",
+      "order": 9,
+      "text": "■\n■If high-dose antipsychotic medication is prescribed, it should be standard practice to review and \n",
+      "bbox": [
+        55.499000549316406,
+        508.6308898925781,
+        412.0827941894531,
+        518.4993896484375
+      ],
+      "text_sha256": "fbf641f0d21fc301200a78107b99760454cd7a69f4bcb26dc1422888e41d463d"
+    },
+    {
+      "block_id": "page-0038-block-0010",
+      "order": 10,
+      "text": "document the target symptoms, therapeutic response and side effects, ideally using validated \nrating scales, so that there is ongoing consideration of the risk-benefit ratio for the patient. \nClose physical monitoring (including ECG) is essential.\n",
+      "bbox": [
+        63.99909973144531,
+        518.6268920898438,
+        403.7272644042969,
+        548.4874267578125
+      ],
+      "text_sha256": "fea29ca4a6c376fd31ab02f11c20f2f9c50848a4d1c859ecd3a0e251c759be1b"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,239 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0590",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 590,
+  "source_page_index": 589,
+  "source_page_display": 590,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Children and adolescents    569\nCHAPTER 5\nAttention deficit hyperactivity disorder\nAttention deficit hyperactivity disorder (ADHD) in children\n■\n■A diagnosis of ADHD should be made only after a comprehensive assessment by a \nspecialist with expertise in ADHD.1 Appropriate psychological, psychosocial and \nbehavioural interventions should be put in place. Drug treatments should be only a \npart of the overall treatment plan.\n■\n■The indication for drug treatment is the presence of impairment resulting from \nADHD despite environmental modifications, parent training (if appropriate), advice \non parenting strategies, and liaison with school.\n■\n■Methylphenidate is the first line treatment when medication is indicated. It is a cen-\ntral nervous system (CNS) stimulant with a large evidence base from trials. Most \ncommon adverse effects include insomnia, appetite suppression, raised blood pres-\nsure and pulse rate and growth deceleration – which can usually be managed by \nsymptomatic management, treatment breaks, and/or dose reduction depending on \nthe side effect. In the UK, there are several modified release preparations with differ-\nent release profiles available, including generic options (see Box 5.2).\n■\n■Dexamfetamine is an alternative CNS stimulant. Effects and adverse reactions are \nbroadly similar to methylphenidate, but there is much less evidence on efficacy and \nsafety than exists for methylphenidate and is probably more likely to be diverted and \nmisused. Both methylphenidate and dexamfetamine are Schedule 2 Controlled Drugs \nand prescriptions should be written appropriately (total amount in words and fig-\nures) and for a maximum supply of 30 days (in the UK).\n■\n■Lisdexamfetamine is a prodrug – the dexamfetamine is complexed with the amino \nacid lysine and in this form is inactive. It is broken down in red blood cells so that \ndexamfetamine is gradually made available. It, therefore, has a similar practical role \nto extended-release preparations of methylphenidate and, like them, is unlikely to be \nabused for recreational or dependency-driven purposes. Several randomised con-\ntrolled trials have established it as superior to placebo in children2,3 and adolescents.4 \nEffect size from preliminary research appears to be at least as great as that of Oros-\nmethylphenidate3 and it seems to have a similar range of adverse effects.5,6 Recent \nnetwork meta-analyses found lisdexamfetamine to be more effective than methylphe-\nnidate7,8 and long-term data suggest that it can be considered as an alternative to \nextended-release methylphenidate.9\n■\n■Atomoxetine10–13 is a non-stimulant alternative. It may be particularly useful for chil-\ndren who do not respond to stimulants, where stimulant diversion is a problem or \nwhen ‘dopaminergic’ adverse effects (such as tics, anxiety and stereotypies) become \nproblematic on stimulants. Parents should be warned of the possibilities of suicidal \nthinking and liver disease emerging and advised of the possible features that they \nmight notice. It is less effective than stimulants.7,8,11,14,15\n■\n■Other medications include the alpha-2 agonists clonidine16 and guanfacine. A licensed \nmodified-release preparation of guanfacine was approved in the UK in January \n201617 for use in children with ADHD and can be considered as an alternative non-\nstimulant medication to atomoxetine.\n",
+  "raw_text_sha256": "7acecb8db6a60760d5580f193faed23841b3477f94a86ec57eed2de1abe807bf",
+  "coordinates_sha256": "4cb3e7086c1497325e8893aa44f1b61f483d400510b55684b3cb5edd3194b5d8",
+  "block_sequence_sha256": "e6218029c19eb9288c4286515ec5af26ad4487bffe7ee912a6b5409d6066d487",
+  "blocks": [
+    {
+      "block_id": "page-0590-block-0000",
+      "order": 0,
+      "text": "Children and adolescents    569\n",
+      "bbox": [
+        288.94488525390625,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "ef31b71d888c494955a20c32ed716fbee2cce62258af6869a563e9e94c821b3c"
+    },
+    {
+      "block_id": "page-0590-block-0001",
+      "order": 1,
+      "text": "CHAPTER 5\n",
+      "bbox": [
+        454.4096984863281,
+        339.3385009765625,
+        463.88970947265625,
+        380.6824951171875
+      ],
+      "text_sha256": "f4b8b4a0fc64e7b3b74e7336306d0959d0384683e387792724f393162639020a"
+    },
+    {
+      "block_id": "page-0590-block-0002",
+      "order": 2,
+      "text": "Attention deficit hyperactivity disorder\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        257.1249694824219,
+        79.1004638671875
+      ],
+      "text_sha256": "a16b3d957f7a67ad65bf0600131c29efca0243da9f1e680a038f21aa0caef4fe"
+    },
+    {
+      "block_id": "page-0590-block-0003",
+      "order": 3,
+      "text": "Attention deficit hyperactivity disorder (ADHD) in children\n",
+      "bbox": [
+        48.00400161743164,
+        96.06246948242188,
+        349.5360412597656,
+        109.09747314453125
+      ],
+      "text_sha256": "bce810f04fcc5cda43d0ebd3d3f61d3b8dfcdfeab7885e39f3403e19e311da54"
+    },
+    {
+      "block_id": "page-0590-block-0004",
+      "order": 4,
+      "text": "■\n■A diagnosis of ADHD should be made only after a comprehensive assessment by a \n",
+      "bbox": [
+        47.999900817871094,
+        120.91046142578125,
+        422.7900695800781,
+        132.63046264648438
+      ],
+      "text_sha256": "23ef293789d1c0b9ff7e56b46142b4c00d5ea6d3d262de99fc54b1bb92fc116f"
+    },
+    {
+      "block_id": "page-0590-block-0005",
+      "order": 5,
+      "text": "specialist with expertise in ADHD.1 Appropriate psychological, psychosocial and \nbehavioural interventions should be put in place. Drug treatments should be only a \npart of the overall treatment plan.\n",
+      "bbox": [
+        56.99589538574219,
+        132.91046142578125,
+        422.80584716796875,
+        168.63046264648438
+      ],
+      "text_sha256": "0d9e79f0fa6237fc9d7af0d651afa4fcdc3bb7e4363d7cb31f2270d69fd090e3"
+    },
+    {
+      "block_id": "page-0590-block-0006",
+      "order": 6,
+      "text": "■\n■The indication for drug treatment is the presence of impairment resulting from \n",
+      "bbox": [
+        47.999900817871094,
+        168.91046142578125,
+        422.7500305175781,
+        180.63046264648438
+      ],
+      "text_sha256": "46207ebafc96550196ecfb426daeeb544756c30745457bc0d2d428e529ee14f4"
+    },
+    {
+      "block_id": "page-0590-block-0007",
+      "order": 7,
+      "text": "ADHD despite environmental modifications, parent training (if appropriate), advice \non parenting strategies, and liaison with school.\n",
+      "bbox": [
+        57.0,
+        180.91046142578125,
+        422.75994873046875,
+        204.63046264648438
+      ],
+      "text_sha256": "3eaba7148ad82da31460621986dbb896de9cc2dda2fac2670e909fdb30a2c6ba"
+    },
+    {
+      "block_id": "page-0590-block-0008",
+      "order": 8,
+      "text": "■\n■Methylphenidate is the first line treatment when medication is indicated. It is a cen-\n",
+      "bbox": [
+        47.999900817871094,
+        204.67050170898438,
+        419.969970703125,
+        216.6304931640625
+      ],
+      "text_sha256": "b63db4848299bd673f6f1361b5482ccd4044efec77a59dc24e0e31da92217060"
+    },
+    {
+      "block_id": "page-0590-block-0009",
+      "order": 9,
+      "text": "tral nervous system (CNS) stimulant with a large evidence base from trials. Most \ncommon adverse effects include insomnia, appetite suppression, raised blood pres-\nsure and pulse rate and growth deceleration – which can usually be managed by \nsymptomatic management, treatment breaks, and/or dose reduction depending on \nthe side effect. In the UK, there are several modified release preparations with differ-\nent release profiles available, including generic options (see Box 5.2).\n",
+      "bbox": [
+        57.0,
+        216.91049194335938,
+        422.7799987792969,
+        288.6304931640625
+      ],
+      "text_sha256": "3813c442951b8d84d07e22fa5ad73563ca0af3a94b54d5e687b2128538c2b235"
+    },
+    {
+      "block_id": "page-0590-block-0010",
+      "order": 10,
+      "text": "■\n■Dexamfetamine is an alternative CNS stimulant. Effects and adverse reactions are \n",
+      "bbox": [
+        47.999900817871094,
+        288.6705017089844,
+        422.800048828125,
+        300.6304931640625
+      ],
+      "text_sha256": "85944fe06eafc10b23bb92045bc63ba8a267283bdf91f54b4df6f4019953870a"
+    },
+    {
+      "block_id": "page-0590-block-0011",
+      "order": 11,
+      "text": "broadly similar to methylphenidate, but there is much less evidence on efficacy and \nsafety than exists for methylphenidate and is probably more likely to be diverted and \nmisused. Both methylphenidate and dexamfetamine are Schedule 2 Controlled Drugs \nand prescriptions should be written appropriately (total amount in words and fig-\nures) and for a maximum supply of 30 days (in the UK).\n",
+      "bbox": [
+        57.0,
+        300.9104919433594,
+        422.82000732421875,
+        360.6304931640625
+      ],
+      "text_sha256": "44eb5098018e4b5fa435bd41829d268562613a8cc2139c8c80576debcd97fbad"
+    },
+    {
+      "block_id": "page-0590-block-0012",
+      "order": 12,
+      "text": "■\n■Lisdexamfetamine is a prodrug – the dexamfetamine is complexed with the amino \n",
+      "bbox": [
+        47.999900817871094,
+        360.6705017089844,
+        422.7899169921875,
+        372.6304931640625
+      ],
+      "text_sha256": "6e2c949c6be7a57630389c976da7a954c6a7b7b2ebbabae2ddc0bbe558267588"
+    },
+    {
+      "block_id": "page-0590-block-0013",
+      "order": 13,
+      "text": "acid lysine and in this form is inactive. It is broken down in red blood cells so that \ndexamfetamine is gradually made available. It, therefore, has a similar practical role \nto extended-release preparations of methylphenidate and, like them, is unlikely to be \nabused for recreational or dependency-driven purposes. Several randomised con-\ntrolled trials have established it as superior to placebo in children2,3 and adolescents.4 \nEffect size from preliminary research appears to be at least as great as that of Oros-\nmethylphenidate3 and it seems to have a similar range of adverse effects.5,6 Recent \nnetwork meta-analyses found lisdexamfetamine to be more effective than methylphe-\nnidate7,8 and long-term data suggest that it can be considered as an alternative to \nextended-release methylphenidate.9\n",
+      "bbox": [
+        56.996917724609375,
+        372.9104919433594,
+        422.81341552734375,
+        492.6304931640625
+      ],
+      "text_sha256": "0025a7b32cd45f6db134c6da0ef31cc3b9f423012ec16f447781f7d67c669f99"
+    },
+    {
+      "block_id": "page-0590-block-0014",
+      "order": 14,
+      "text": "■\n■Atomoxetine10–13 is a non-stimulant alternative. It may be particularly useful for chil-\n",
+      "bbox": [
+        47.999900817871094,
+        492.6705017089844,
+        420.02044677734375,
+        504.6304931640625
+      ],
+      "text_sha256": "c3478b4c01ba077da9d58f2bd59256f288db829b060adaca9c499712b220062e"
+    },
+    {
+      "block_id": "page-0590-block-0015",
+      "order": 15,
+      "text": "dren who do not respond to stimulants, where stimulant diversion is a problem or \nwhen ‘dopaminergic’ adverse effects (such as tics, anxiety and stereotypies) become \nproblematic on stimulants. Parents should be warned of the possibilities of suicidal \nthinking and liver disease emerging and advised of the possible features that they \nmight notice. It is less effective than stimulants.7,8,11,14,15\n",
+      "bbox": [
+        57.000396728515625,
+        504.91046142578125,
+        422.81036376953125,
+        564.6304931640625
+      ],
+      "text_sha256": "99bca03078a62e1455cf966e353a8b37f34beb6886f1ac499dd121008bce1804"
+    },
+    {
+      "block_id": "page-0590-block-0016",
+      "order": 16,
+      "text": "■\n■Other medications include the alpha-2 agonists clonidine16 and guanfacine. A licensed \n",
+      "bbox": [
+        47.999900817871094,
+        564.6704711914062,
+        422.7929992675781,
+        576.6304931640625
+      ],
+      "text_sha256": "d4f768fdb4a0da32cdd2ecc1f1f77162482546e375f61cf2d6a293f1ffd5433d"
+    },
+    {
+      "block_id": "page-0590-block-0017",
+      "order": 17,
+      "text": "modified-release preparation of guanfacine was approved in the UK in January \n201617 for use in children with ADHD and can be considered as an alternative non-\nstimulant medication to atomoxetine.\n",
+      "bbox": [
+        57.002899169921875,
+        576.9104614257812,
+        422.7430725097656,
+        612.6304931640625
+      ],
+      "text_sha256": "b81c1acb7011b97a18a65ce404a8c356f37e453f7a6b053b65e0b1b3baf6f803"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,455 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0806",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 806,
+  "source_page_index": 805,
+  "source_page_display": 806,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    785\nCHAPTER 10\nEpilepsy\nPsychiatric comorbidities in epilepsy\nPeople with epilepsy (PWE) have an elevated prevalence of several psychiatric disorders \nincluding depression (22.9%), anxiety (20.2%) and psychosis (5.2%).1,2 Suicide is five-\nfold higher in PWE compared to the general population3 and is an important cause of \npremature mortality.4 The link between epilepsy and mental illness is bidirectional as \npatients with depression, anxiety and psychosis have an increased risk of developing new-\nonset epilepsy.5,6 Suicide attempts are also associated with the development of epilepsy.3 \nThis bidirectional relationship might be explained by a common underlying pathology \nbetween mental illness and epilepsy. Disturbances in neurotransmission, neuro-inflamma-\ntion and the HPA axis have all been suggested7 to be the shared pathology.\nInterictal psychiatric disorders (with symptoms occurring independently of seizures) \nare likely to require treatment with psychotropics.8–10 When prescribing psychotropics \nto people with epilepsy, the following general principles11,12 should be adhered to:\n■\n■First, rule out other possible causes of psychiatric symptoms (both peri-ictal and iat-\nrogenic, see Table 10.3).\n■\n■Optimise the treatment of epilepsy (ideally before prescribing psychotropics).\n■\n■Consider using psychotropics with known antiseizure properties (e.g. antiseizure \nmedications in bipolar disorder).\n■\n■Check for interactions with antiseizure medications.\n■\n■Start with a low dose and titrate according to tolerability and response (proconvul-\nsive effects are dose-related).\n■\n■If seizures do occur, consider changing the psychotropic drug or optimising the \nantiseizure medication.\nTable 10.3  Possible causes of psychiatric symptoms in PWE and their management5\nCause of symptoms\nDescription\nManagement\nInterictal psychiatric \ndisorders\n■\n■Symptoms occurring independently of sei-\nzures\n■\n■Although common in PWE, other causes \nand relatedness to seizures should be ruled \nout first\n■\n■Likely to require treatment with \npsychotropics\n■\n■See Table 10.5 for more information \nabout the use of specific psychotro-\npics in PWE\nPeri-ictal symptoms\n■\n■PWE may experience psychiatric symptoms \nthat are temporally related to seizures\n■\n■All peri-ictal psychiatric symptoms \n(pre-ictal, postictal and ictal) are \ninitially treated by optimising antisei-\nzure medications11\n■\n■Peri-ictal depressive symptoms do \nnot appear to respond to treatment \nwith antidepressants13,14\nPre-ictal symptoms\n■\n■Typically presents as a dysphoric mood pre-\nceding a seizure by a period of 30 minutes \nto hours to 2 or 3 days\n(Continued)\n",
+  "raw_text_sha256": "ccf0ceb9f318fd573aa64880c51d6d47af89db526d92cf4838d1dbf34c97d0cd",
+  "coordinates_sha256": "eaf6c4233112c890c884cea5a648bcf237e315957d9df9f351a1e8f834e8fea4",
+  "block_sequence_sha256": "aef7aceacba61e2b0199a43356c0db95e0d5df0acf8bc2c06a3ff7b1ef618192",
+  "blocks": [
+    {
+      "block_id": "page-0806-block-0000",
+      "order": 0,
+      "text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    785\n",
+      "bbox": [
+        47.999698638916016,
+        31.395221710205078,
+        419.96697998046875,
+        41.0272216796875
+      ],
+      "text_sha256": "99da1d7fd36e60d5d77e9a6a1f2faecdc54405e635b55a07e62a6776e1ac59e6"
+    },
+    {
+      "block_id": "page-0806-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        454.4096984863281,
+        75.763671875,
+        463.88970947265625,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0806-block-0002",
+      "order": 2,
+      "text": "Epilepsy\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        97.78999328613281,
+        79.1004638671875
+      ],
+      "text_sha256": "cb37d5d7f486b7dd30c3530c1781261a6f5b416f4acb8ca035d9b6ad5504d1ff"
+    },
+    {
+      "block_id": "page-0806-block-0003",
+      "order": 3,
+      "text": "Psychiatric comorbidities in epilepsy\n",
+      "bbox": [
+        48.00400161743164,
+        102.06845092773438,
+        234.42095947265625,
+        115.10345458984375
+      ],
+      "text_sha256": "14f81ec02eff38bddc6f32bab285b837007b577d89eb9fd702e07c91c33bd205"
+    },
+    {
+      "block_id": "page-0806-block-0004",
+      "order": 4,
+      "text": "People with epilepsy (PWE) have an elevated prevalence of several psychiatric disorders \nincluding depression (22.9%), anxiety (20.2%) and psychosis (5.2%).1,2 Suicide is five-\nfold higher in PWE compared to the general population3 and is an important cause of \npremature mortality.4 The link between epilepsy and mental illness is bidirectional as \npatients with depression, anxiety and psychosis have an increased risk of developing new-\nonset epilepsy.5,6 Suicide attempts are also associated with the development of epilepsy.3 \nThis bidirectional relationship might be explained by a common underlying pathology \nbetween mental illness and epilepsy. Disturbances in neurotransmission, neuro-inflamma-\ntion and the HPA axis have all been suggested7 to be the shared pathology.\n",
+      "bbox": [
+        47.997100830078125,
+        120.91046142578125,
+        422.80926513671875,
+        228.6304931640625
+      ],
+      "text_sha256": "5bb1fad3c0afad17a0bf8d1484ed8f2023e4fa42c1e0dde2519c4f6b6ca1702a"
+    },
+    {
+      "block_id": "page-0806-block-0005",
+      "order": 5,
+      "text": "Interictal psychiatric disorders (with symptoms occurring independently of seizures) \nare likely to require treatment with psychotropics.8–10 When prescribing psychotropics \nto people with epilepsy, the following general principles11,12 should be adhered to:\n",
+      "bbox": [
+        48.001800537109375,
+        228.91049194335938,
+        422.791748046875,
+        264.6304931640625
+      ],
+      "text_sha256": "3553c406dace17963d3a722675035d21d1b9d68fe028138840f01797da9f4d16"
+    },
+    {
+      "block_id": "page-0806-block-0006",
+      "order": 6,
+      "text": "■\n■First, rule out other possible causes of psychiatric symptoms (both peri-ictal and iat-\n",
+      "bbox": [
+        47.999900817871094,
+        270.9104919433594,
+        419.9498291015625,
+        282.6304931640625
+      ],
+      "text_sha256": "7a864b2341b617618698600c673b99927ef306119db4e01e9c8f5a9c4b5bd1f5"
+    },
+    {
+      "block_id": "page-0806-block-0007",
+      "order": 7,
+      "text": "rogenic, see Table 10.3).\n",
+      "bbox": [
+        56.999900817871094,
+        282.9104919433594,
+        160.96987915039062,
+        294.6304931640625
+      ],
+      "text_sha256": "8be11575272e2f861c8825ab0fc22571851f119d1ff09895168864369f0b7fed"
+    },
+    {
+      "block_id": "page-0806-block-0008",
+      "order": 8,
+      "text": "■\n■Optimise the treatment of epilepsy (ideally before prescribing psychotropics).\n",
+      "bbox": [
+        47.999900817871094,
+        294.9104919433594,
+        389.2299499511719,
+        306.6304931640625
+      ],
+      "text_sha256": "d5d45b54dbf42f57bf21fbdf8ac8861d2a8f0a1fa7f40663c2b981051d9cb939"
+    },
+    {
+      "block_id": "page-0806-block-0009",
+      "order": 9,
+      "text": "■\n■Consider using psychotropics with known antiseizure properties (e.g. antiseizure \n",
+      "bbox": [
+        47.999900817871094,
+        306.9104919433594,
+        422.79986572265625,
+        318.6304931640625
+      ],
+      "text_sha256": "2755ba76e4f41e6e4598f126564fd53889b2c3034bb7b4d1f48d630edd729905"
+    },
+    {
+      "block_id": "page-0806-block-0010",
+      "order": 10,
+      "text": "medications in bipolar disorder).\n",
+      "bbox": [
+        56.999900817871094,
+        318.9104919433594,
+        198.14987182617188,
+        330.6304931640625
+      ],
+      "text_sha256": "b91fe537cf13ad996a999c77be2054f50713173c07cc024581c003633b5cc566"
+    },
+    {
+      "block_id": "page-0806-block-0011",
+      "order": 11,
+      "text": "■\n■Check for interactions with antiseizure medications.\n",
+      "bbox": [
+        47.999900817871094,
+        330.9104919433594,
+        281.4598693847656,
+        342.6304931640625
+      ],
+      "text_sha256": "14e38b1f2ab002c2cf00b3e1f1fcac11508c4395469092a8ccd49fb605bc3940"
+    },
+    {
+      "block_id": "page-0806-block-0012",
+      "order": 12,
+      "text": "■\n■Start with a low dose and titrate according to tolerability and response (proconvul-\n",
+      "bbox": [
+        47.999900817871094,
+        342.9104919433594,
+        419.97991943359375,
+        354.6304931640625
+      ],
+      "text_sha256": "bff0bce1f652aa1f3b8aabf317586439129c5dd2d6e8957d0b561a95d5109748"
+    },
+    {
+      "block_id": "page-0806-block-0013",
+      "order": 13,
+      "text": "sive effects are dose-related).\n",
+      "bbox": [
+        56.999900817871094,
+        354.9104919433594,
+        180.30992126464844,
+        366.6304931640625
+      ],
+      "text_sha256": "134c3e16d69c0629ed10de427ac91cf0efda6f2e4077181061f6d597ac38836e"
+    },
+    {
+      "block_id": "page-0806-block-0014",
+      "order": 14,
+      "text": "■\n■If seizures do occur, consider changing the psychotropic drug or optimising the \n",
+      "bbox": [
+        47.999900817871094,
+        366.9104919433594,
+        422.7899475097656,
+        378.6304931640625
+      ],
+      "text_sha256": "eb000083cf7cfbc09288044bef302f0c22a3efe86381ba01d6f3cb363fc1c336"
+    },
+    {
+      "block_id": "page-0806-block-0015",
+      "order": 15,
+      "text": "antiseizure medication.\n",
+      "bbox": [
+        56.999900817871094,
+        378.9104919433594,
+        156.4398956298828,
+        390.6304931640625
+      ],
+      "text_sha256": "0ed841398697148343b2353ab34ded4db5b261c5d28ec194357a2a939bf731bc"
+    },
+    {
+      "block_id": "page-0806-block-0016",
+      "order": 16,
+      "text": "Table 10.3  Possible causes of psychiatric symptoms in PWE and their management5\n",
+      "bbox": [
+        54.0,
+        428.4505920410156,
+        321.8834228515625,
+        437.3381042480469
+      ],
+      "text_sha256": "0a356e89faf4007e0d012cbfe05b529edfe6bd53ec6372a11804b89b705f88ea"
+    },
+    {
+      "block_id": "page-0806-block-0017",
+      "order": 17,
+      "text": "Cause of symptoms\nDescription\nManagement\n",
+      "bbox": [
+        52.0,
+        448.73797607421875,
+        341.08001708984375,
+        457.62548828125
+      ],
+      "text_sha256": "3c3e7a8e1645a7345f5045632480c05ecf55495e273b53dd9d548c3e651816f6"
+    },
+    {
+      "block_id": "page-0806-block-0018",
+      "order": 18,
+      "text": "Interictal psychiatric \ndisorders\n",
+      "bbox": [
+        52.0,
+        466.36297607421875,
+        124.93000030517578,
+        485.24798583984375
+      ],
+      "text_sha256": "3a5301f32b5ec1122dde4ea3e66d3ffc9b9896a9b178b4fe4436d7824042fa42"
+    },
+    {
+      "block_id": "page-0806-block-0019",
+      "order": 19,
+      "text": "■\n■Symptoms occurring independently of sei-\n",
+      "bbox": [
+        133.98899841308594,
+        466.5429992675781,
+        277.583984375,
+        475.25048828125
+      ],
+      "text_sha256": "13957f5513bcbd28ee6640b80b76a0fe6c67a8e778b5ee29887676a7fe509712"
+    },
+    {
+      "block_id": "page-0806-block-0020",
+      "order": 20,
+      "text": "zures\n",
+      "bbox": [
+        142.98899841308594,
+        476.5404968261719,
+        159.5189971923828,
+        485.24798583984375
+      ],
+      "text_sha256": "ba4e3e7bed037de4a91709f9af2d0c1216114230ea6b8766d13b7a6dbabd1c76"
+    },
+    {
+      "block_id": "page-0806-block-0021",
+      "order": 21,
+      "text": "■\n■Although common in PWE, other causes \n",
+      "bbox": [
+        133.98899841308594,
+        486.5429992675781,
+        274.26904296875,
+        495.25048828125
+      ],
+      "text_sha256": "c9b4631eecdf9cb1ebbb836fe07c80b39153377b4ff4465e2bd7cc88b46ab5bf"
+    },
+    {
+      "block_id": "page-0806-block-0022",
+      "order": 22,
+      "text": "and relatedness to seizures should be ruled \nout first\n",
+      "bbox": [
+        142.98899841308594,
+        496.5404968261719,
+        282.3389892578125,
+        515.2454833984375
+      ],
+      "text_sha256": "3c4d66054a1b4c3ec58ca85b9b0fa11c6c14f57c6ef8cfbe8f97a569ce2762a3"
+    },
+    {
+      "block_id": "page-0806-block-0023",
+      "order": 23,
+      "text": "■\n■Likely to require treatment with \n",
+      "bbox": [
+        293.989013671875,
+        466.5429992675781,
+        405.4914855957031,
+        475.25048828125
+      ],
+      "text_sha256": "8aa660f30de96e41603319644e9387178d4efa35ea51e60fb0057a84cae563c2"
+    },
+    {
+      "block_id": "page-0806-block-0024",
+      "order": 24,
+      "text": "psychotropics\n",
+      "bbox": [
+        302.989013671875,
+        476.5404968261719,
+        346.1890563964844,
+        485.24798583984375
+      ],
+      "text_sha256": "25776928d3d3e0d67ceb290acf01edd8eb344e124f7492c9213fc18d489383e7"
+    },
+    {
+      "block_id": "page-0806-block-0025",
+      "order": 25,
+      "text": "■\n■See Table 10.5 for more information \n",
+      "bbox": [
+        293.989013671875,
+        486.5429992675781,
+        420.7915954589844,
+        495.25048828125
+      ],
+      "text_sha256": "e80eae8bd9d27bf8cc97cbc1f80777b1b159364709d99eaccd74c46c5517a4fa"
+    },
+    {
+      "block_id": "page-0806-block-0026",
+      "order": 26,
+      "text": "about the use of specific psychotro-\npics in PWE\n",
+      "bbox": [
+        302.989013671875,
+        496.5404968261719,
+        417.0415954589844,
+        515.2454833984375
+      ],
+      "text_sha256": "eee7864202c20801ccb1a5475c9174630d8be691dc39c92850490732383d6606"
+    },
+    {
+      "block_id": "page-0806-block-0027",
+      "order": 27,
+      "text": "Peri-ictal symptoms\n■\n■PWE may experience psychiatric symptoms \n",
+      "bbox": [
+        52.00151062011719,
+        523.9829711914062,
+        281.30401611328125,
+        532.87548828125
+      ],
+      "text_sha256": "21501ca70cc6e692666fa307589ca8ad6b96895425394b0a8cc9ca4b8dfcf5b6"
+    },
+    {
+      "block_id": "page-0806-block-0028",
+      "order": 28,
+      "text": "that are temporally related to seizures\n",
+      "bbox": [
+        142.98899841308594,
+        534.1654663085938,
+        263.40899658203125,
+        542.8729858398438
+      ],
+      "text_sha256": "9c136a1b1aeace5bd5736205290bf5c844a1842d3d6978fd5728c5c48ba53698"
+    },
+    {
+      "block_id": "page-0806-block-0029",
+      "order": 29,
+      "text": "■\n■All peri-ictal psychiatric symptoms \n",
+      "bbox": [
+        293.989013671875,
+        524.16796875,
+        412.96905517578125,
+        532.87548828125
+      ],
+      "text_sha256": "cc90cdf79aa5f0273209bd37e3ed75e540db3424db9606c8c4777e5988d55244"
+    },
+    {
+      "block_id": "page-0806-block-0030",
+      "order": 30,
+      "text": "(pre-ictal, postictal and ictal) are \ninitially treated by optimising antisei-\nzure medications11\n",
+      "bbox": [
+        302.989013671875,
+        534.1654663085938,
+        419.92913818359375,
+        562.8679809570312
+      ],
+      "text_sha256": "57cf4f8a3345d24515c06d7e0d18cb0d68eb40e6bcd0adb673e571b5d2267bd0"
+    },
+    {
+      "block_id": "page-0806-block-0031",
+      "order": 31,
+      "text": "■\n■Peri-ictal depressive symptoms do \n",
+      "bbox": [
+        293.9888916015625,
+        564.16796875,
+        412.0165710449219,
+        572.87548828125
+      ],
+      "text_sha256": "88b0d0210fa8838f31828a7e446547482fd374611def6932d50a369c147554db"
+    },
+    {
+      "block_id": "page-0806-block-0032",
+      "order": 32,
+      "text": "not appear to respond to treatment \nwith antidepressants13,14\n",
+      "bbox": [
+        302.989013671875,
+        574.1654663085938,
+        418.9915771484375,
+        592.8704833984375
+      ],
+      "text_sha256": "bab0d085cf0ee8bee4062d29801c1ea86ee546a147b104ec3cbc5d5d1699d138"
+    },
+    {
+      "block_id": "page-0806-block-0033",
+      "order": 33,
+      "text": "Pre-ictal symptoms\n■\n■Typically presents as a dysphoric mood pre-\n",
+      "bbox": [
+        52.0,
+        554.1011962890625,
+        280.23150634765625,
+        562.9887084960938
+      ],
+      "text_sha256": "eaa799ec69dcd25fa881d4d02df00acd87dc296d62fa139138df271d0a2485ff"
+    },
+    {
+      "block_id": "page-0806-block-0034",
+      "order": 34,
+      "text": "ceding a seizure by a period of 30 minutes \nto hours to 2 or 3 days\n",
+      "bbox": [
+        142.98899841308594,
+        564.2786865234375,
+        280.8015441894531,
+        582.9837036132812
+      ],
+      "text_sha256": "c1ecf46bc6387f92be22d189c9b07216208296c6ff94a6fb8de75bed06b41c81"
+    },
+    {
+      "block_id": "page-0806-block-0035",
+      "order": 35,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.98651123046875,
+        602.648681640625,
+        420.00146484375,
+        611.4011840820312
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

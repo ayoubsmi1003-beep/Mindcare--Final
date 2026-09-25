@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0258",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 258,
+  "source_page_index": 257,
+  "source_page_display": 258,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    237\nCHAPTER 1\nHaematological monitoring is mandatory to mitigate the haematological risk. \nHowever, worldwide, there are marked variations in the recommendations for monitor-\ning frequency and the threshold for clozapine cessation,12 reflecting, perhaps, the weak \nevidence on which they are based. In October 2015, the US Food and Drugs Administration \n(FDA) introduced changes to the clozapine monitoring system making only the absolute \nneutrophil count (ANC) mandatory and effectively lowering the threshold for cessation \nof clozapine treatment.13 It is recommended that treatment with clozapine be stopped \nwhen neutrophils fall below 1000/mm3 (compared with UK recommendations for cessa-\ntion if ANC < 1500/mm3). The new FDA regulations will undoubtedly improve clozap-\nine use in the USA and may have implications internationally.\nThere is evidence that clozapine is grossly underutilised worldwide, with very wide \nvariation in prescribing frequency from one country to another.14 This may be explained \nat least in part by the stringent blood monitoring requirements. The worldwide out-\nbreak of COVID-19 in 2020 prompted a re-evaluation of clozapine haematological \nmonitoring with a group proposing a reduction from monthly to three-monthly for \npatients who have received clozapine for more than one year without a history of neu-\ntropenia.15 When considering that the development of agranulocytosis occurs over a \nweek or less, the value of monthly monitoring is clearly questionable, especially in \npatients for whom the overall risk of agranulocytosis is near to zero.\nBenign ethnic neutropenia\nBenign ethnic neutropenia (BEN) is a widely recognised, hereditary condition in which \nthe neutrophil count is relatively low. People of African or Middle Eastern descent have \na higher prevalence. BEN is characterised by low WCCs which may frequently fall \nbelow the lower limit of normal. This pattern may be observed before, during and after \nthe use of clozapine and very probably accounts for a proportion of observed or appar-\nent clozapine-associated neutropenias and treatment cessation. Many countries allow \nregistration of BEN status whereby different (lower) limits are set for neutrophil counts \nin these patients. While true clozapine-induced neutropenia can occur in the context of \nBEN, the current evidence suggests that BEN does not pose an increased risk of dyscra-\nsias during clozapine treatment.16,17\nConcurrent medications\nDifferent classes of medicines associated with haematological adverse effects are co-pre-\nscribed with clozapine. These include other antipsychotics, antiseizure medications such as \nsodium valproate and carbamazepine, antibacterials, gastrointestinal agents such as pro-\nton-pump inhibitors. Many patients develop neutropenia on clozapine but not all are clo-\nzapine-related or even pathological. The possible contributory role of these agents should \nalways be considered and these agents discontinued if clozapine rechallenge is attempted.18\nManagement options\nBefore treatment initiation, it is important to evaluate baseline haematological values. \nIf a patient is suspected of having BEN, there should be a referral to a haematologist for \nconfirmation should be undertaken.19\n",
+  "raw_text_sha256": "abe47dbe4d230d947ac8459db3b11477dd2ad59a0e7189e5f3f4047adf29bc42",
+  "coordinates_sha256": "51fe2d44e5a2ad7bd370b5d388a4a62bafb77d7e39249955e58a16c832642f79",
+  "block_sequence_sha256": "2ab120dd6d8569d105482f03138706f1d75c68d2be49e2bc7d81dabc476f081d",
+  "blocks": [
+    {
+      "block_id": "page-0258-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    237\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "9aae2363249c05e04669f588f62b30329fca0a97526567632a7133bee69d540c"
+    },
+    {
+      "block_id": "page-0258-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0258-block-0002",
+      "order": 2,
+      "text": "Haematological monitoring is mandatory to mitigate the haematological risk. \nHowever, worldwide, there are marked variations in the recommendations for monitor-\ning frequency and the threshold for clozapine cessation,12 reflecting, perhaps, the weak \nevidence on which they are based. In October 2015, the US Food and Drugs Administration \n(FDA) introduced changes to the clozapine monitoring system making only the absolute \nneutrophil count (ANC) mandatory and effectively lowering the threshold for cessation \nof clozapine treatment.13 It is recommended that treatment with clozapine be stopped \nwhen neutrophils fall below 1000/mm3 (compared with UK recommendations for cessa-\ntion if ANC < 1500/mm3). The new FDA regulations will undoubtedly improve clozap-\nine use in the USA and may have implications internationally.\n",
+      "bbox": [
+        47.99430847167969,
+        62.54931640625,
+        422.7991027832031,
+        182.26931762695312
+      ],
+      "text_sha256": "ff531368f2544ed4b9c2abb97c749e0cd58242f00285a17572f96f91ff1223d2"
+    },
+    {
+      "block_id": "page-0258-block-0003",
+      "order": 3,
+      "text": "There is evidence that clozapine is grossly underutilised worldwide, with very wide \nvariation in prescribing frequency from one country to another.14 This may be explained \nat least in part by the stringent blood monitoring requirements. The worldwide out-\nbreak of COVID-19 in 2020 prompted a re-evaluation of clozapine haematological \nmonitoring with a group proposing a reduction from monthly to three-monthly for \npatients who have received clozapine for more than one year without a history of neu-\ntropenia.15 When considering that the development of agranulocytosis occurs over a \nweek or less, the value of monthly monitoring is clearly questionable, especially in \npatients for whom the overall risk of agranulocytosis is near to zero.\n",
+      "bbox": [
+        48.00079345703125,
+        182.54931640625,
+        422.8229675292969,
+        290.2693176269531
+      ],
+      "text_sha256": "20d768f14f6a69a2db1a7398a1ba57f3447edfb14f8aebfab0f9a5ce54f3c844"
+    },
+    {
+      "block_id": "page-0258-block-0004",
+      "order": 4,
+      "text": "Benign ethnic neutropenia\n",
+      "bbox": [
+        47.99909973144531,
+        303.7043151855469,
+        185.32305908203125,
+        316.73931884765625
+      ],
+      "text_sha256": "4469e7199110875461801f06487f9b87172e39ef3449b40515a0736639134699"
+    },
+    {
+      "block_id": "page-0258-block-0005",
+      "order": 5,
+      "text": "Benign ethnic neutropenia (BEN) is a widely recognised, hereditary condition in which \nthe neutrophil count is relatively low. People of African or Middle Eastern descent have \na higher prevalence. BEN is characterised by low WCCs which may frequently fall \nbelow the lower limit of normal. This pattern may be observed before, during and after \nthe use of clozapine and very probably accounts for a proportion of observed or appar-\nent clozapine-associated neutropenias and treatment cessation. Many countries allow \nregistration of BEN status whereby different (lower) limits are set for neutrophil counts \nin these patients. While true clozapine-induced neutropenia can occur in the context of \nBEN, the current evidence suggests that BEN does not pose an increased risk of dyscra-\nsias during clozapine treatment.16,17\n",
+      "bbox": [
+        47.99909973144531,
+        322.54931640625,
+        422.8191223144531,
+        442.2693176269531
+      ],
+      "text_sha256": "8b723b384dd0beffbccf27662568366c66dfbe849722c7eb308fc6ad8f7907fa"
+    },
+    {
+      "block_id": "page-0258-block-0006",
+      "order": 6,
+      "text": "Concurrent medications\n",
+      "bbox": [
+        47.99909973144531,
+        455.7043151855469,
+        170.63809204101562,
+        468.73931884765625
+      ],
+      "text_sha256": "d5e58719a2941d1be39c783d9bcb7d2b1e3d20ee878f0f8867ee6dea8c4d0a01"
+    },
+    {
+      "block_id": "page-0258-block-0007",
+      "order": 7,
+      "text": "Different classes of medicines associated with haematological adverse effects are co-pre-\nscribed with clozapine. These include other antipsychotics, antiseizure medications such as \nsodium valproate and carbamazepine, antibacterials, gastrointestinal agents such as pro-\nton-pump inhibitors. Many patients develop neutropenia on clozapine but not all are clo-\nzapine-related or even pathological. The possible contributory role of these agents should \nalways be considered and these agents discontinued if clozapine rechallenge is attempted.18\n",
+      "bbox": [
+        47.99909973144531,
+        474.54931640625,
+        422.8190002441406,
+        546.2693481445312
+      ],
+      "text_sha256": "4902eecf34f8b40208dd26960f039298e718222db7e3b5884598563d4aa6b86f"
+    },
+    {
+      "block_id": "page-0258-block-0008",
+      "order": 8,
+      "text": "Management options\n",
+      "bbox": [
+        47.99909973144531,
+        559.704345703125,
+        159.2310791015625,
+        572.7393188476562
+      ],
+      "text_sha256": "7002cfe935c55415f620c49db30f93aec3c666718c35aacb0c26c2242490f1c5"
+    },
+    {
+      "block_id": "page-0258-block-0009",
+      "order": 9,
+      "text": "Before treatment initiation, it is important to evaluate baseline haematological values. \nIf a patient is suspected of having BEN, there should be a referral to a haematologist for \nconfirmation should be undertaken.19\n",
+      "bbox": [
+        47.99909973144531,
+        578.54931640625,
+        422.7990417480469,
+        614.2693481445312
+      ],
+      "text_sha256": "40258937c89f795b97b5ebbde3505b78c9266f9dd5c968da20b6b4be608a666a"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

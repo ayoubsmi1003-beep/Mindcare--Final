@@ -1,0 +1,14 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0416",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 416,
+  "source_page_index": 415,
+  "repaired_text": "Depression and anxiety disorders    395\nCHAPTER 3\n■\n■If serum sodium is <125mmol/L, refer urgently to specialist medical care. There is an\nincreased risk of life-threatening symptoms such as seizures, coma and respiratory \narrest. The antidepressant should be discontinued immediately. (Note risk of discon-\ntinuation symptoms which may complicate the clinical picture.) Over rapid correc-\ntion of hyponatraemia may be harmful.19\nRestarting treatment\n■\n■For those who develop hyponatraemia with an SSRI, there are many case reports of\nrecurrent hyponatraemia on rechallenge with the same, or a different SSRI, and rela-\ntively fewer reports of recurrence occurring with an antidepressant from another \nclass.15,17 There are also a handful of case reports of successful rechallenge.1\n■\n■Consider withdrawing other drugs associated with hyponatraemia (risk increases\nexponentially when antidepressants are combined with diuretics3).\n■\n■Prescribe a drug from a different class. Consider noradrenergic drugs such as nortriptyline and lofepramine, mirtazapine or an MAOI such as moclobemide. Agomelatine \nor bupropion57 might also be considered. Begin with a low dose, increasing slowly, \nand monitor closely. If hyponatraemia recurs and continued antidepressant use is \nessential, consider water restriction and/or careful use of demeclocycline (see BNF).\n■\n■Consider ECT.\nOther prescribed drugs\nCarbamazepine has a well-known association with SIADH.58 Note also that antipsy-\nchotic use has been linked to hyponatraemia59–61 (See in section Hyponatraemia in \nchapter 1). Other commonly prescribed drugs such as thiazide diuretics, opiates, \nNSAIDs, tramadol, cytotoxics, omeprazole and trimethoprim can also cause \nhyponatraemia.2,51,58",
+  "repaired_text_sha256": "25e02ab0b994fa5c4a0e9b24b6d41e6cf90840b2aad98c1a82f6d29719400a87",
+  "raw_text_sha256": "1d54c12e82edb6cf41fb6971f4cb3e077926c6fb1bef7225ec258babae38dba1",
+  "repair_ids": [
+    "repair-000442"
+  ],
+  "raw_file": "raw/page-0416.json"
+}

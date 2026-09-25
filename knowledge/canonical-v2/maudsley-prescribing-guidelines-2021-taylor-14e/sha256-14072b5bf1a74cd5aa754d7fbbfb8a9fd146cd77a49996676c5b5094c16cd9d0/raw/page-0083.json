@@ -1,0 +1,551 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0083",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 83,
+  "source_page_index": 82,
+  "source_page_display": 83,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "62    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\n(Continued)\nRapid tranquillisation summary\nIn an emergency situation – Assess if there may be a medical cause.69 Optimise regular \nprescription. The aim of pharmacological treatment is to calm the patient but not to oversedate. \nNote: lower doses should be used for children, adolescents and older adults. Patients’ levels of \nconsciousness and physical health should be monitored after administration of parenteral \nmedication (see protocol)\nStep Intervention\n1 De-escalation, time out, placement, etc., as appropriate\n2 Offer oral treatment\nIf patient is prescribed a regular \nantipsychotic:\nLorazepam 1–2mg\nPromethazine 25–50mg\nMonotherapy with buccal \nmidazolam may avoid the need \nfor IM treatment. Dose: 10mg\nNote that this preparation is \nunlicensed\nIf patient is not already taking a regular oral or depot antipsychotic:\n■\n■Olanzapine 10mg or\n■\n■Risperidone 1–2mg or\n■\n■Quetiapine 50–100mg or\n■\n■Haloperidol 5mg (best with promethazine 25mg). Note that the \nEU SPC for haloperidol recommends: A pre-treatment ECG and to \navoid concomitant antipsychotics\n■\n■Inhaled loxapine 10mg Note that use of this preparation requires \nthe co-operation of the patient, and that bronchospasm is a rare \nside effect (have a salbutamol inhaler to hand).\nRepeat after 45–60 minutes, if necessary. Consider combining sedative and antipsychotic treatment.\nGo to step 3 if two doses fail or sooner if the patient is placing themselves or others at significant risk.\n3 Consider IM treatment\nLorazepam 2mgab\nPromethazine 50mgc\nOlanzapine 10mgd\nAripiprazole 9.75mg\nHaloperidol 5mg\nHave flumazenil to hand in case of benzodiazepine-induced respiratory \ndepression.\nIM promethazine is a useful option in a benzodiazepine-tolerant patient.\nIM olanzapine should NOT be combined with an IM benzodiazepine, particularly \nif alcohol has been consumed.70\nLess hypotension than olanzapine, but less effective5,13,71\nHaloperidol should be the last drug considered\n■\n■The incidence of acute dystonia is high; combine with IM promethazine and \nensure IM procyclidine is available\n■\n■Pre-treatment ECG required\nRepeat after 30–60 minutes if insufficient effect. Combinations of haloperidol and lorazepam or haloperidol \nand promethazine may be considered if single drug treatment fails. Drugs must not be mixed in the same \nsyringe. IM olanzapine must never be combined with IM benzodiazepine.\n4 Consider IV treatment\n■\n■Diazepam 10mg over at least 2 minutesbe\n■\n■Repeat after 5–10 minutes if insufficient effect (up to 3 times)\n■\n■Have flumazenil to hand\n5 Seek expert advicef\nConsider transfer to medical unit for administration of IM ketamine\nNotes\na. \u0007Carefully check administration and dilution instructions, which differ between manufacturers. Many centres \nuse 4mg. An alternative is IM midazolam 5–15mg. 5mg is usually sufficient. The risk of respiratory depression \nis dose-related with both drugs but generally greater with midazolam.\nb. \u0007Caution in the very young and elderly and those with pre-existing brain damage or impulse control problems, \nas disinhibition reactions are more likely.72\n",
+  "raw_text_sha256": "2768b098612b3d2e6e497dcadd202400ac6603ece6c6faab93a51d6041c5a69d",
+  "coordinates_sha256": "5f7406bf3786962335b03359b01255fc8075fb12fce18d384ef81c254fab1e19",
+  "block_sequence_sha256": "4adfbd372ab84a1cae2ca7eaa9dd43adb63a600ea3f6b31e17560a9560164778",
+  "blocks": [
+    {
+      "block_id": "page-0083-block-0000",
+      "order": 0,
+      "text": "62    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "7bce59d2d15846682bbc080e8230b16cd931ba14b4a035474c938ad127c7b683"
+    },
+    {
+      "block_id": "page-0083-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0083-block-0002",
+      "order": 2,
+      "text": "(Continued)\n",
+      "bbox": [
+        393.87408447265625,
+        642.981201171875,
+        431.3891296386719,
+        651.7337036132812
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0083-block-0003",
+      "order": 3,
+      "text": "Rapid tranquillisation summary\n",
+      "bbox": [
+        68.88839721679688,
+        69.57703399658203,
+        194.05091857910156,
+        79.6495361328125
+      ],
+      "text_sha256": "c320c3f7c3a440c91fe8ebf1e547f13ea14f0a0c75c69b9f203f5bbc875e5b47"
+    },
+    {
+      "block_id": "page-0083-block-0004",
+      "order": 4,
+      "text": "In an emergency situation – Assess if there may be a medical cause.69 Optimise regular \nprescription. The aim of pharmacological treatment is to calm the patient but not to oversedate. \nNote: lower doses should be used for children, adolescents and older adults. Patients’ levels of \nconsciousness and physical health should be monitored after administration of parenteral \nmedication (see protocol)\n",
+      "bbox": [
+        68.88819885253906,
+        88.65198516845703,
+        419.3009338378906,
+        138.7083740234375
+      ],
+      "text_sha256": "3716c5c36db3bc774477d5b1fbadce3065e0ee60fe9237520b2e15bb4f491ccb"
+    },
+    {
+      "block_id": "page-0083-block-0005",
+      "order": 5,
+      "text": "Step Intervention\n",
+      "bbox": [
+        68.88839721679688,
+        144.6120147705078,
+        130.57589721679688,
+        153.49951171875
+      ],
+      "text_sha256": "d55f5de04456480d39daa91fd91871d0645be1bce4ee80963cbb26326a418f1e"
+    },
+    {
+      "block_id": "page-0083-block-0006",
+      "order": 6,
+      "text": "1 De-escalation, time out, placement, etc., as appropriate\n",
+      "bbox": [
+        68.88839721679688,
+        159.63453674316406,
+        257.1085205078125,
+        168.52203369140625
+      ],
+      "text_sha256": "6ea91eac1fe968db0f8e17ad43422ef97ea16c30b4469a9765ed0a4cca2eea17"
+    },
+    {
+      "block_id": "page-0083-block-0007",
+      "order": 7,
+      "text": "2 Offer oral treatment\n",
+      "bbox": [
+        68.88839721679688,
+        174.6570587158203,
+        146.98590087890625,
+        183.5445556640625
+      ],
+      "text_sha256": "398915f870165832279e15b1f865c67f07804ffc058bbe2da5ae589bdebfcba2"
+    },
+    {
+      "block_id": "page-0083-block-0008",
+      "order": 8,
+      "text": "If patient is prescribed a regular \nantipsychotic:\nLorazepam 1–2mg\n",
+      "bbox": [
+        68.88839721679688,
+        189.8595733642578,
+        171.5408935546875,
+        218.56207275390625
+      ],
+      "text_sha256": "73b8937a1b2e8d15257d9c863ec5517e38ac59f09eef53716cd4645483c02c70"
+    },
+    {
+      "block_id": "page-0083-block-0009",
+      "order": 9,
+      "text": "Promethazine 25–50mg\n",
+      "bbox": [
+        68.88839721679688,
+        222.6720733642578,
+        150.45089721679688,
+        231.5595703125
+      ],
+      "text_sha256": "97d22804c1e67571bd49922df703c9330d6dea43c73f14a22d8193c5eedaad19"
+    },
+    {
+      "block_id": "page-0083-block-0010",
+      "order": 10,
+      "text": "Monotherapy with buccal \nmidazolam may avoid the need \nfor IM treatment. Dose: 10mg\nNote that this preparation is \nunlicensed\n",
+      "bbox": [
+        68.88839721679688,
+        235.66957092285156,
+        174.743408203125,
+        284.54705810546875
+      ],
+      "text_sha256": "f7b6fc0acbedefe39cb0527e9303042778eef0697c857926ad022a0479765d03"
+    },
+    {
+      "block_id": "page-0083-block-0011",
+      "order": 11,
+      "text": "If patient is not already taking a regular oral or depot antipsychotic:\n",
+      "bbox": [
+        196.7934112548828,
+        189.83705139160156,
+        411.9610290527344,
+        198.5445556640625
+      ],
+      "text_sha256": "5b3590799e97e9e218e0ac62ec3e5918e681974add8c9f5457c04cf10c08a1c8"
+    },
+    {
+      "block_id": "page-0083-block-0012",
+      "order": 12,
+      "text": "■\n■Olanzapine 10mg or\n",
+      "bbox": [
+        196.7967987060547,
+        201.68690490722656,
+        275.40447998046875,
+        210.57440185546875
+      ],
+      "text_sha256": "3481014f97b6db8f004db778cf3f71cec497a22df751ac22d6d9cfb8859df154"
+    },
+    {
+      "block_id": "page-0083-block-0013",
+      "order": 13,
+      "text": "■\n■Risperidone 1–2mg or\n",
+      "bbox": [
+        196.7967987060547,
+        213.68690490722656,
+        280.81195068359375,
+        222.57440185546875
+      ],
+      "text_sha256": "ab734b6deea62a48e6c44fa404c92a43e640993ce76819e740c4c457ebf4ac84"
+    },
+    {
+      "block_id": "page-0083-block-0014",
+      "order": 14,
+      "text": "■\n■Quetiapine 50–100mg or\n",
+      "bbox": [
+        196.7967987060547,
+        225.68690490722656,
+        290.83197021484375,
+        234.57440185546875
+      ],
+      "text_sha256": "5697ff16555988b565df1c8040d84025d6fd93015b64ae736dbcecba3def90dc"
+    },
+    {
+      "block_id": "page-0083-block-0015",
+      "order": 15,
+      "text": "■\n■Haloperidol 5mg (best with promethazine 25mg). Note that the \n",
+      "bbox": [
+        196.7967987060547,
+        237.68690490722656,
+        415.7069396972656,
+        246.57440185546875
+      ],
+      "text_sha256": "9891c9cf6371ab4e0ecaf303dd0eaae63dfd9dbeded80589bca99d770c5dfb05"
+    },
+    {
+      "block_id": "page-0083-block-0016",
+      "order": 16,
+      "text": "EU SPC for haloperidol recommends: A pre-treatment ECG and to \navoid concomitant antipsychotics\n",
+      "bbox": [
+        205.79690551757812,
+        246.8668975830078,
+        418.3395080566406,
+        264.57440185546875
+      ],
+      "text_sha256": "a7d9f82a1401a5c5853137a9b92c8c89d1f771e788ab51a531905630a2e96051"
+    },
+    {
+      "block_id": "page-0083-block-0017",
+      "order": 17,
+      "text": "■\n■Inhaled loxapine 10mg Note that use of this preparation requires \n",
+      "bbox": [
+        196.7967987060547,
+        268.6868896484375,
+        421.2795104980469,
+        277.57440185546875
+      ],
+      "text_sha256": "095a9323ff2c8eda455426309e77753ed1546b827da18b7cb612bfa36100fe42"
+    },
+    {
+      "block_id": "page-0083-block-0018",
+      "order": 18,
+      "text": "the co-operation of the patient, and that bronchospasm is a rare \nside effect (have a salbutamol inhaler to hand).\n",
+      "bbox": [
+        205.79690551757812,
+        278.8644104003906,
+        413.8995666503906,
+        297.56939697265625
+      ],
+      "text_sha256": "a8589e1ee94c474245823fbc8ec910cb0bb8dd276598e8b40e0794af388575df"
+    },
+    {
+      "block_id": "page-0083-block-0019",
+      "order": 19,
+      "text": "Repeat after 45–60 minutes, if necessary. Consider combining sedative and antipsychotic treatment.\nGo to step 3 if two doses fail or sooner if the patient is placing themselves or others at significant risk.\n",
+      "bbox": [
+        68.89190673828125,
+        301.6869201660156,
+        394.7670593261719,
+        320.39190673828125
+      ],
+      "text_sha256": "43ddb14f6dc92a683f08d3bb0acef1a2202eb93524cde43531d07007027dddc8"
+    },
+    {
+      "block_id": "page-0083-block-0020",
+      "order": 20,
+      "text": "3 Consider IM treatment\n",
+      "bbox": [
+        68.89190673828125,
+        326.5268859863281,
+        154.60939025878906,
+        335.4143981933594
+      ],
+      "text_sha256": "c8c06e8558795501dd6ac531b02926433de329409f1a0153a7754c6fbb64a61a"
+    },
+    {
+      "block_id": "page-0083-block-0021",
+      "order": 21,
+      "text": "Lorazepam 2mgab\n",
+      "bbox": [
+        68.89190673828125,
+        341.54937744140625,
+        129.7704620361328,
+        350.4368896484375
+      ],
+      "text_sha256": "9ba79d914bea235d909e4c3499a11ffb860ed20b63c54bb54b1b56037470a01f"
+    },
+    {
+      "block_id": "page-0083-block-0022",
+      "order": 22,
+      "text": "Promethazine 50mgc\n",
+      "bbox": [
+        68.88849639892578,
+        364.56201171875,
+        141.13438415527344,
+        373.44952392578125
+      ],
+      "text_sha256": "0759e510ba98a622a0ebc95f74d6f0a2c682fc3f81cfdd740a8ce1ee72bd81f0"
+    },
+    {
+      "block_id": "page-0083-block-0023",
+      "order": 23,
+      "text": "Olanzapine 10mgd\n",
+      "bbox": [
+        68.88849639892578,
+        377.56201171875,
+        133.0067138671875,
+        386.44952392578125
+      ],
+      "text_sha256": "ebe364bed97553c613fed4ca853600d77af01c64cda7ad9fd0ae0e7aefed85aa"
+    },
+    {
+      "block_id": "page-0083-block-0024",
+      "order": 24,
+      "text": "Aripiprazole 9.75mg\n",
+      "bbox": [
+        68.88849639892578,
+        400.56201171875,
+        140.1610107421875,
+        409.44952392578125
+      ],
+      "text_sha256": "0fd60fd35279e14d046a11ca05967dd8071e4449b849b39824bd2a5da87e7284"
+    },
+    {
+      "block_id": "page-0083-block-0025",
+      "order": 25,
+      "text": "Haloperidol 5mg\n",
+      "bbox": [
+        68.88849639892578,
+        413.55950927734375,
+        127.65100860595703,
+        422.447021484375
+      ],
+      "text_sha256": "9c1c5c37f31cc4642e1775f37a62de4a12420c1958c2e486b310eac00d59351e"
+    },
+    {
+      "block_id": "page-0083-block-0026",
+      "order": 26,
+      "text": "Have flumazenil to hand in case of benzodiazepine-induced respiratory \ndepression.\n",
+      "bbox": [
+        160.3885040283203,
+        341.7395324707031,
+        388.6136169433594,
+        360.44451904296875
+      ],
+      "text_sha256": "e0e7e52660b3f215c930a5cd7b37e7cd65f324b307eb86d724661fa4b1987d93"
+    },
+    {
+      "block_id": "page-0083-block-0027",
+      "order": 27,
+      "text": "IM promethazine is a useful option in a benzodiazepine-tolerant patient.\n",
+      "bbox": [
+        160.3885040283203,
+        364.7345275878906,
+        391.5386657714844,
+        373.4420166015625
+      ],
+      "text_sha256": "b9a06b22c28550304c91e1818d142bb4fa749f5015b8f35898b61c394f4ab528"
+    },
+    {
+      "block_id": "page-0083-block-0028",
+      "order": 28,
+      "text": "IM olanzapine should NOT be combined with an IM benzodiazepine, particularly \nif alcohol has been consumed.70\n",
+      "bbox": [
+        160.3885040283203,
+        377.7320251464844,
+        418.7710876464844,
+        396.43701171875
+      ],
+      "text_sha256": "7b3e1cca32cf943c44295ca57eebe0adceea3554d51f55761bb18afe8de6c2ce"
+    },
+    {
+      "block_id": "page-0083-block-0029",
+      "order": 29,
+      "text": "Less hypotension than olanzapine, but less effective5,13,71\n",
+      "bbox": [
+        160.38819885253906,
+        400.7420349121094,
+        339.8605041503906,
+        409.44952392578125
+      ],
+      "text_sha256": "7a464885f5960a95d0b5bb71ec177381346a2198186da605208ff8fff11d4bd8"
+    },
+    {
+      "block_id": "page-0083-block-0030",
+      "order": 30,
+      "text": "Haloperidol should be the last drug considered\n",
+      "bbox": [
+        160.38819885253906,
+        413.56201171875,
+        325.6881408691406,
+        422.44952392578125
+      ],
+      "text_sha256": "30e3de61f075d0bd4d2fffcc84c3f44efe58fb81e246ecf47a4b0fb58d77f189"
+    },
+    {
+      "block_id": "page-0083-block-0031",
+      "order": 31,
+      "text": "■\n■The incidence of acute dystonia is high; combine with IM promethazine and \n",
+      "bbox": [
+        160.38819885253906,
+        425.7420349121094,
+        413.8808288574219,
+        434.44952392578125
+      ],
+      "text_sha256": "8c98e2d9c36fb239bf088bce08dacec3bb5c69457525d8cda4e499c042b075d4"
+    },
+    {
+      "block_id": "page-0083-block-0032",
+      "order": 32,
+      "text": "ensure IM procyclidine is available\n",
+      "bbox": [
+        169.38819885253906,
+        434.7420349121094,
+        277.0357666015625,
+        443.44952392578125
+      ],
+      "text_sha256": "29a066b3a33dd81c0088695a50b8dd1d6d6f7ba3b730e3c6b1d20a3e742ef7db"
+    },
+    {
+      "block_id": "page-0083-block-0033",
+      "order": 33,
+      "text": "■\n■Pre-treatment ECG required\n",
+      "bbox": [
+        160.38819885253906,
+        446.7420349121094,
+        258.0082092285156,
+        455.44952392578125
+      ],
+      "text_sha256": "cd6d92de201b661153ee9dc9b2be40e81966d8ac50b47abee703ce3800c07048"
+    },
+    {
+      "block_id": "page-0083-block-0034",
+      "order": 34,
+      "text": "Repeat after 30–60 minutes if insufficient effect. Combinations of haloperidol and lorazepam or haloperidol \nand promethazine may be considered if single drug treatment fails. Drugs must not be mixed in the same \nsyringe. IM olanzapine must never be combined with IM benzodiazepine.\n",
+      "bbox": [
+        68.88819885253906,
+        459.6645202636719,
+        415.3359069824219,
+        488.36700439453125
+      ],
+      "text_sha256": "54929da4e667e8991df2e5cd2a3c30535b959286c11aef571081f852e3c4c7a0"
+    },
+    {
+      "block_id": "page-0083-block-0035",
+      "order": 35,
+      "text": "4 Consider IV treatment\n",
+      "bbox": [
+        68.88819885253906,
+        496.10699462890625,
+        150.0382080078125,
+        504.9945068359375
+      ],
+      "text_sha256": "7ded3370445b0d5736f51cbc62d6fb29b0727e41fb84adb089940488cd213c04"
+    },
+    {
+      "block_id": "page-0083-block-0036",
+      "order": 36,
+      "text": "■\n■Diazepam 10mg over at least 2 minutesbe\n",
+      "bbox": [
+        68.88839721679688,
+        511.13702392578125,
+        212.9446563720703,
+        520.0245361328125
+      ],
+      "text_sha256": "73e4cb52c6ce5f20bd99bbf1822727819086138bc388ba65bb8afe4935c6bb18"
+    },
+    {
+      "block_id": "page-0083-block-0037",
+      "order": 37,
+      "text": "■\n■Repeat after 5–10 minutes if insufficient effect (up to 3 times)\n",
+      "bbox": [
+        68.88839721679688,
+        520.3170166015625,
+        275.1384582519531,
+        529.0245361328125
+      ],
+      "text_sha256": "b191f61b4722304ff6766f1ab2f298bf108f299e7559e17b5d44434cb471e146"
+    },
+    {
+      "block_id": "page-0083-block-0038",
+      "order": 38,
+      "text": "■\n■Have flumazenil to hand\n",
+      "bbox": [
+        68.88839721679688,
+        529.3170166015625,
+        155.82098388671875,
+        538.0245361328125
+      ],
+      "text_sha256": "1272335bf051cd3a7fb5833f25c10f0621b2a6f3dbebc332b38a437195d0006e"
+    },
+    {
+      "block_id": "page-0083-block-0039",
+      "order": 39,
+      "text": "5 Seek expert advicef\n",
+      "bbox": [
+        68.88849639892578,
+        544.1594848632812,
+        142.88414001464844,
+        553.0469970703125
+      ],
+      "text_sha256": "760fa5de2349604fe61a62f5b494206c606de2362f691365a47e13fb3b53bb95"
+    },
+    {
+      "block_id": "page-0083-block-0040",
+      "order": 40,
+      "text": "Consider transfer to medical unit for administration of IM ketamine\n",
+      "bbox": [
+        68.88849639892578,
+        554.1619873046875,
+        288.0835266113281,
+        563.0494995117188
+      ],
+      "text_sha256": "c7cd44548bc6673fb7d163631c4124c1b7a40bed00c0d1bb1cd504d031d56209"
+    },
+    {
+      "block_id": "page-0083-block-0041",
+      "order": 41,
+      "text": "Notes\na. \u0007Carefully check administration and dilution instructions, which differ between manufacturers. Many centres \n",
+      "bbox": [
+        68.88849639892578,
+        573.3394775390625,
+        422.1235046386719,
+        592.0444946289062
+      ],
+      "text_sha256": "b59c669379a44d89bea86d0ccc203e5e1ee54f14918d5f3fb66a71ad8e024805"
+    },
+    {
+      "block_id": "page-0083-block-0042",
+      "order": 42,
+      "text": "use 4mg. An alternative is IM midazolam 5–15mg. 5mg is usually sufficient. The risk of respiratory depression \nis dose-related with both drugs but generally greater with midazolam.\nb. \u0007Caution in the very young and elderly and those with pre-existing brain damage or impulse control problems, \n",
+      "bbox": [
+        68.88848876953125,
+        593.33447265625,
+        428.1385192871094,
+        622.0369873046875
+      ],
+      "text_sha256": "481ec51cf3f9b94fb197d3ad2de225ef4249f6c58234672ba65d413e2b221d64"
+    },
+    {
+      "block_id": "page-0083-block-0043",
+      "order": 43,
+      "text": "as disinhibition reactions are more likely.72\n",
+      "bbox": [
+        77.22850036621094,
+        623.3270263671875,
+        210.16651916503906,
+        632.0345458984375
+      ],
+      "text_sha256": "8a5a0d0e5d418155795da4c90082f1c12a952787d97778de448e4ba46b26eea2"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0118",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 118,
+  "source_page_index": 117,
+  "source_page_display": 118,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    97\nCHAPTER 1\nimprovement or improved further. Another small retrospective study of ECT augmen-\ntation of clozapine reported an acute response (defined as improvement rated on the \nClinical Global Impression-Improvement scale15) in around three-quarters of the patient \nsample, and three-quarters of the responders remained out of hospital over a one-year \nfollow-up period.16\nIn a randomised, single-blind study,2 patients with clozapine-refractory schizophre-\nnia either continued solely on their clozapine treatment or had it augmented with a \ncourse of bilateral ECT. After eight weeks, a pre-defined response criterion (which \nincluded a 40% or greater reduction in the psychotic symptom subscale of the Brief \nPsychiatric Rating Scale17) was met by half the patients receiving clozapine plus ECT, \nbut none of the group on clozapine alone. When the non-responders from the clozap-\nine-alone group crossed over to an 8-week, open trial of ECT, nearly half met the \nresponse criterion.\nA systematic review and meta-analysis18 looking specifically at ECT augmentation of \nclozapine treatment found a paucity of controlled studies, although the authors \nacknowledged the methodological challenges of such investigations. They concluded \nthat ECT may be an effective augmentation strategy for schizophrenia that has failed to \nrespond to clozapine monotherapy, but that further research was required to determine \nthe place of such a strategy in any TRS treatment algorithm. A subsequent meta-analy-\nsis of RCTs addressing ECT augmentation for clozapine-resistant schizophrenia noted \nthe lack of studies with sham-ECT as a control but reached the conclusion that such a \ntreatment strategy was eﬀective and relatively safe.19\nAdverse effects\nAlthough ECT augmentation of continuing antipsychotic medication appears to be \ngenerally well tolerated, adverse effects such as transient retrograde and anterograde \namnesia, headaches and nausea have been reported for a minority of cases,3,11,12,20 and \nthere are reports of an increase in blood pressure after ECT and prolonged seizures.1 \nThere is some evidence to suggest that the cognitive side effects may be generally mild \nand transient.19,21\nSummary\nIn summary, the evidence supports ECT augmentation of pharmacotherapy, particu-\nlarly clozapine, as a potentially efficacious and relatively safe augmentation strategy in \nTRS,7,22–24 although further, well-controlled trials are required to establish the benefit–\nrisk balance of such a treatment strategy in both the short and long term.\n",
+  "raw_text_sha256": "1834a97290850821e68c247c3bc882655a97196bb69c08f314b0ed86059f9090",
+  "coordinates_sha256": "119a6124ad182e881abbde1a41005aa50b39300434ec733a1e6985d870d85eae",
+  "block_sequence_sha256": "26633a4d81fda770265ecc69a662e0468667ee00bb4944a921def8dd19e8a971",
+  "blocks": [
+    {
+      "block_id": "page-0118-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    97\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "5b5ea5ab75e14ac0cc1399ef8efeb395f04a9c115984381ffd568f35df5b53d4"
+    },
+    {
+      "block_id": "page-0118-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0118-block-0002",
+      "order": 2,
+      "text": "improvement or improved further. Another small retrospective study of ECT augmen-\ntation of clozapine reported an acute response (defined as improvement rated on the \nClinical Global Impression-Improvement scale15) in around three-quarters of the patient \nsample, and three-quarters of the responders remained out of hospital over a one-year \nfollow-up period.16\n",
+      "bbox": [
+        47.99690246582031,
+        62.54931640625,
+        422.8068542480469,
+        122.26931762695312
+      ],
+      "text_sha256": "8c330dd2521c1e6131cb2e8ceed937dc6526444ac31ec7666b536cf2a4176631"
+    },
+    {
+      "block_id": "page-0118-block-0003",
+      "order": 3,
+      "text": "In a randomised, single-blind study,2 patients with clozapine-refractory schizophre-\nnia either continued solely on their clozapine treatment or had it augmented with a \ncourse of bilateral ECT. After eight weeks, a pre-defined response criterion (which \nincluded a 40% or greater reduction in the psychotic symptom subscale of the Brief \nPsychiatric Rating Scale17) was met by half the patients receiving clozapine plus ECT, \nbut none of the group on clozapine alone. When the non-responders from the clozap-\nine-alone group crossed over to an 8-week, open trial of ECT, nearly half met the \nresponse criterion.\n",
+      "bbox": [
+        48.00080871582031,
+        122.54931640625,
+        422.7927551269531,
+        218.26931762695312
+      ],
+      "text_sha256": "6f8ae730c8171704ff6928724166f1afa6f768709a43e473ce2b99b29f7e23eb"
+    },
+    {
+      "block_id": "page-0118-block-0004",
+      "order": 4,
+      "text": "A systematic review and meta-analysis18 looking specifically at ECT augmentation of \nclozapine treatment found a paucity of controlled studies, although the authors \nacknowledged the methodological challenges of such investigations. They concluded \nthat ECT may be an effective augmentation strategy for schizophrenia that has failed to \nrespond to clozapine monotherapy, but that further research was required to determine \nthe place of such a strategy in any TRS treatment algorithm. A subsequent meta-analy-\nsis of RCTs addressing ECT augmentation for clozapine-resistant schizophrenia noted \nthe lack of studies with sham-ECT as a control but reached the conclusion that such a \ntreatment strategy was eﬀective and relatively safe.19\n",
+      "bbox": [
+        48.00059509277344,
+        218.54931640625,
+        422.8305358886719,
+        327.5893249511719
+      ],
+      "text_sha256": "b9c6eac102eb4a6af35e3eac486e7878df96ce3fdbbb51dacff22044fd1f2a63"
+    },
+    {
+      "block_id": "page-0118-block-0005",
+      "order": 5,
+      "text": "Adverse effects\n",
+      "bbox": [
+        47.99909973144531,
+        343.7043151855469,
+        127.8701171875,
+        356.73931884765625
+      ],
+      "text_sha256": "2829b5953031aa8e8e992beffdca9c91044830ce03b830653e6ea31d5de93cfc"
+    },
+    {
+      "block_id": "page-0118-block-0006",
+      "order": 6,
+      "text": "Although ECT augmentation of continuing antipsychotic medication appears to be \ngenerally well tolerated, adverse effects such as transient retrograde and anterograde \namnesia, headaches and nausea have been reported for a minority of cases,3,11,12,20 and \nthere are reports of an increase in blood pressure after ECT and prolonged seizures.1 \nThere is some evidence to suggest that the cognitive side effects may be generally mild \nand transient.19,21\n",
+      "bbox": [
+        47.99909973144531,
+        362.54931640625,
+        422.8192443847656,
+        434.2693176269531
+      ],
+      "text_sha256": "e8f0f0156a000d4770533c7304cd142d629687c9515414513c7e0c4fe76b554a"
+    },
+    {
+      "block_id": "page-0118-block-0007",
+      "order": 7,
+      "text": "Summary\n",
+      "bbox": [
+        47.99909973144531,
+        451.7043151855469,
+        96.90509033203125,
+        464.73931884765625
+      ],
+      "text_sha256": "3cbb36aca330b3bd113955dfbada0adb7a5f95ad9f678bd61f175406c6a37e95"
+    },
+    {
+      "block_id": "page-0118-block-0008",
+      "order": 8,
+      "text": "In summary, the evidence supports ECT augmentation of pharmacotherapy, particu-\nlarly clozapine, as a potentially efficacious and relatively safe augmentation strategy in \nTRS,7,22–24 although further, well-controlled trials are required to establish the benefit–\nrisk balance of such a treatment strategy in both the short and long term.\n",
+      "bbox": [
+        47.99909973144531,
+        470.54931640625,
+        422.7790832519531,
+        518.2693481445312
+      ],
+      "text_sha256": "80ea4cfc091bd75dd5ac2cc76bd336356e75da235a1d4f13a43bdfc8df203b01"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

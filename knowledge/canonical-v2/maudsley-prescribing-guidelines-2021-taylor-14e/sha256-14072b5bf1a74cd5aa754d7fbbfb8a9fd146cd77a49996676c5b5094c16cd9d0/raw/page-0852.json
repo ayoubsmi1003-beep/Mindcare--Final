@@ -1,0 +1,47 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0852",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 852,
+  "source_page_index": 851,
+  "source_page_display": 852,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Part 4 \nOther aspects of \npsychotropic drug use\n",
+  "raw_text_sha256": "931199ce38609b2c7ff70760605c3119f0c075c949e83ed723803fcf5f623032",
+  "coordinates_sha256": "8b83f65d94251a5157824bdac9388a902b5694a05026f5c5cbc9836b1ec2dcb3",
+  "block_sequence_sha256": "047fdead6a840e251cf87b73c8a0fd25bc2fadec535e10842a1db3c6416246f3",
+  "blocks": [
+    {
+      "block_id": "page-0852-block-0000",
+      "order": 0,
+      "text": "Part 4 \n",
+      "bbox": [
+        362.4689025878906,
+        59.724403381347656,
+        425.81488037109375,
+        82.60040283203125
+      ],
+      "text_sha256": "4ae80535576f1357fd8cd28b8384372459371465e6aa78b6f47fbed2918546e9"
+    },
+    {
+      "block_id": "page-0852-block-0001",
+      "order": 1,
+      "text": "Other aspects of \npsychotropic drug use\n",
+      "bbox": [
+        191.86221313476562,
+        111.36316680908203,
+        426.11822509765625,
+        161.4351806640625
+      ],
+      "text_sha256": "1e2dbce03a5370228da95d9211c738a4a684e821931c047c0f029eac49d09a49"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

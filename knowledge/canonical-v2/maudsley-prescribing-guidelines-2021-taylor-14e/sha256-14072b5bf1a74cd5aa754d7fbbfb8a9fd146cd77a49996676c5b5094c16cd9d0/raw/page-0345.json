@@ -1,0 +1,491 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0345",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 345,
+  "source_page_index": 344,
+  "source_page_display": 345,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "324    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nTreatment\nComments\nOmega–3-triglycerides EPA39\nUsually added to antidepressant treatment. Effect is possibly dose-\nsensitive – total dose should be <1g a day and EPA content >60%\nPindolol30,40–44\n5mg tds or 7.5mg once daily\nWell tolerated, can be initiated in primary care. Data mainly relate to \nacceleration of response. Refractory data somewhat contradictory\nPramipexole38,39\n0.125–5mg/day\nOne good RCT showing clear effect\nPsilocybin45\n10/25mg one week apart\nEffective but specialist use only\nRisperidone46–51\n0.5–3mg/day to antidepressant\nGenerally less robust RCT support than for other SGAs\nS-adenosyl-l-methionine52–54\n400mg/day IM; 1600mg/day oral\nLimited data in treatment-resistant depression\nUse weakly supported by a Cochrane review55\nSSRI + Buspirone56,57\nUp to 60mg/day\nSupported by STAR*D\nHigher doses required poorly tolerated (dizziness common)\nSSRI + TCA58\nFormerly widely used\nStimulants:\namfetamine; methylphenidate\nVaried outcomes. See section on ‘Psychostimulants in depression’  \n(this chapter)\nTCA – high dose59\nFormerly widely used. Cardiac monitoring essential\nTestosterone gel30,60\nEffective in those with low testosterone levels\nTianeptine61,62\n25–50mg/day\nTiny database. Tianeptine not available in many countries\nTryptophan63–66\n2–3g TDS\nLong history of successful use\nVenlafaxine67–70\n>200mg/day\nCan be initiated in primary care\nRecommended by NICE71\nNausea and vomiting; discontinuation reactions more common.  \nBlood pressure monitoring essential\nVenlafaxine – very high dose (up to \n600mg/day)72\nSee above entry. Cardiac monitoring essential\nVenlafaxine + IV clomipramine73\nCardiac monitoring essential\nZinc74\n25mg Zn +/day\nOne RCT (n = 60) showed good results in refractory depression\nZiprasidone75–77\nUp to 160mg/day\nPoorly supported. Probably has no antidepressant effects\nNote: Other non-drug treatments are available, including various psychological approaches, repetitive transcranial \nmagnetic stimulation (rTMS), vagus nerve stimulation, deep brain stimulation and psychosurgery. Discussion of these \nis beyond the scope of the book.\nEPA, eicosapentanoic acid; IM, intramuscular; IV, intravenous; MAOI, monoamine oxidase inhibitor; RCT, randomised \ncontrolled trial; SC, subcutaneous; SSRI, selective serotonin reuptake inhibitor; TCA, tricyclic antidepressant; tds, \nthree times a day.\nTable 3.5  (Continued)\n",
+  "raw_text_sha256": "d37d586c9077e20534b440fd9adfec8f781629f6dcd47b3b73e67a1afc5763c3",
+  "coordinates_sha256": "cbbf4ac10c1a1a2597de5e3d66333afa69b23ef0251e1e3f7a5660175684acf8",
+  "block_sequence_sha256": "da503a0e3187d4886cd85f1d338e79358ad8abc20590770385f0f2d88d5e4824",
+  "blocks": [
+    {
+      "block_id": "page-0345-block-0000",
+      "order": 0,
+      "text": "324    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "b60c103b5ecbd217f3fee986a664b44bf91c1bbaca04072933ff1291b8cf84b4"
+    },
+    {
+      "block_id": "page-0345-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0345-block-0002",
+      "order": 2,
+      "text": "Treatment\nComments\n",
+      "bbox": [
+        61.88999938964844,
+        90.26429748535156,
+        235.5,
+        99.15179443359375
+      ],
+      "text_sha256": "8be686e890d313f8295cc060595592f78dd7d0f699de8b9c632f5bd2fa6e517c"
+    },
+    {
+      "block_id": "page-0345-block-0003",
+      "order": 3,
+      "text": "Omega–3-triglycerides EPA39\nUsually added to antidepressant treatment. Effect is possibly dose-\nsensitive – total dose should be <1g a day and EPA content >60%\n",
+      "bbox": [
+        61.88999938964844,
+        107.04182434082031,
+        409.28277587890625,
+        125.92431640625
+      ],
+      "text_sha256": "a15dbde7523623a9bff950a266a14ebc28152b6dc27180976c4bf3b7e54e6307"
+    },
+    {
+      "block_id": "page-0345-block-0004",
+      "order": 4,
+      "text": "Pindolol30,40–44\n",
+      "bbox": [
+        61.89019775390625,
+        132.05934143066406,
+        108.63323974609375,
+        140.94683837890625
+      ],
+      "text_sha256": "61fbd81d08c9a9bb5040e8134d35cd19a2391a3cd7833b9fdf4f8f64bbe26767"
+    },
+    {
+      "block_id": "page-0345-block-0005",
+      "order": 5,
+      "text": "5mg tds or 7.5mg once daily\nWell tolerated, can be initiated in primary care. Data mainly relate to \nacceleration of response. Refractory data somewhat contradictory\n",
+      "bbox": [
+        61.88999938964844,
+        132.2467803955078,
+        418.41748046875,
+        150.9517822265625
+      ],
+      "text_sha256": "6b4dd401f307090f40480ebfe12d9c811df658e75dc07c6590c391b36178fab8"
+    },
+    {
+      "block_id": "page-0345-block-0006",
+      "order": 6,
+      "text": "Pramipexole38,39\n",
+      "bbox": [
+        61.88999938964844,
+        157.08680725097656,
+        116.59967803955078,
+        165.97430419921875
+      ],
+      "text_sha256": "698f29890191e4fec2c7c2dcd9f5814bd775585529d48b1b2db6230a094ae571"
+    },
+    {
+      "block_id": "page-0345-block-0007",
+      "order": 7,
+      "text": "0.125–5mg/day\nOne good RCT showing clear effect\n",
+      "bbox": [
+        61.88999938964844,
+        157.2718048095703,
+        311.6399841308594,
+        175.976806640625
+      ],
+      "text_sha256": "f2dfe0eb1b9c336556a47b4f327820bf506a92b4424cce6eb38c7c4c94ec05b8"
+    },
+    {
+      "block_id": "page-0345-block-0008",
+      "order": 8,
+      "text": "Psilocybin45\n",
+      "bbox": [
+        61.88999938964844,
+        182.1193084716797,
+        101.75431060791016,
+        191.00680541992188
+      ],
+      "text_sha256": "aaf5886091cb4413f5a97546f1a93607f1c147d7c528fdf7a04d663560edd329"
+    },
+    {
+      "block_id": "page-0345-block-0009",
+      "order": 9,
+      "text": "10/25mg one week apart\nEffective but specialist use only\n",
+      "bbox": [
+        61.88999938964844,
+        182.2967987060547,
+        296.61004638671875,
+        201.00180053710938
+      ],
+      "text_sha256": "91dc1f72a08f69dd88d39e7609f90c2044947f9069963add3c35daa78fec8c55"
+    },
+    {
+      "block_id": "page-0345-block-0010",
+      "order": 10,
+      "text": "Risperidone46–51\n",
+      "bbox": [
+        61.88999938964844,
+        207.14430236816406,
+        115.47017669677734,
+        216.03179931640625
+      ],
+      "text_sha256": "a3a211058dd8e9dd2c9b0a74debbf47e6f7d022049cbceb69734921bd64cc89d"
+    },
+    {
+      "block_id": "page-0345-block-0011",
+      "order": 11,
+      "text": "0.5–3mg/day to antidepressant\nGenerally less robust RCT support than for other SGAs\n",
+      "bbox": [
+        61.88999938964844,
+        207.32179260253906,
+        371.6475830078125,
+        226.02679443359375
+      ],
+      "text_sha256": "026cd10007dbe391d658d81865d82892e2090e81d0d7a0883be5e23632ec16d5"
+    },
+    {
+      "block_id": "page-0345-block-0012",
+      "order": 12,
+      "text": "S-adenosyl-l-methionine52–54\n",
+      "bbox": [
+        61.88999938964844,
+        232.16929626464844,
+        159.644775390625,
+        241.05679321289062
+      ],
+      "text_sha256": "36e68b714d9b614b901f476adc0855e4202557772631ac9df110371b625d84c0"
+    },
+    {
+      "block_id": "page-0345-block-0013",
+      "order": 13,
+      "text": "400mg/day IM; 1600mg/day oral\nLimited data in treatment-resistant depression\nUse weakly supported by a Cochrane review55\n",
+      "bbox": [
+        61.88999938964844,
+        232.34678649902344,
+        344.4162292480469,
+        251.05178833007812
+      ],
+      "text_sha256": "1f81cd481e94f392ac15f69ebe31a56d52951754659e7b544a8675d7d83a6401"
+    },
+    {
+      "block_id": "page-0345-block-0014",
+      "order": 14,
+      "text": "SSRI + Buspirone56,57\n",
+      "bbox": [
+        61.88999938964844,
+        257.18927001953125,
+        131.78688049316406,
+        266.0767822265625
+      ],
+      "text_sha256": "f9274675254fa8f59b338fdfaa3b0a37a8f19a2dece245d8c3c32c0fd340ede5"
+    },
+    {
+      "block_id": "page-0345-block-0015",
+      "order": 15,
+      "text": "Up to 60mg/day\n",
+      "bbox": [
+        61.88999938964844,
+        267.3692932128906,
+        113.99248504638672,
+        276.0767822265625
+      ],
+      "text_sha256": "63e1f87bf0c8a33c684a16efdb21e34fea4a4e53ade06ec9d5bbe1a91130b6e6"
+    },
+    {
+      "block_id": "page-0345-block-0016",
+      "order": 16,
+      "text": "Supported by STAR*D\nHigher doses required poorly tolerated (dizziness common)\n",
+      "bbox": [
+        198.0,
+        257.3717956542969,
+        385.26007080078125,
+        276.0767822265625
+      ],
+      "text_sha256": "4ce5f2d98d8ea94e2c42ca4c82bf4737c23bb57468f344abc93eb455530bcf81"
+    },
+    {
+      "block_id": "page-0345-block-0017",
+      "order": 17,
+      "text": "SSRI + TCA58\nFormerly widely used\n",
+      "bbox": [
+        61.88999938964844,
+        282.2117614746094,
+        265.0802001953125,
+        291.101806640625
+      ],
+      "text_sha256": "e8299363e7d24eb1efcc5f685bb987eca8d47150317c576389308561d5d87ec5"
+    },
+    {
+      "block_id": "page-0345-block-0018",
+      "order": 18,
+      "text": "Stimulants:\namfetamine; methylphenidate\n",
+      "bbox": [
+        61.89019775390625,
+        297.2367858886719,
+        158.13766479492188,
+        316.1217956542969
+      ],
+      "text_sha256": "231fccd757c5d5ef7ca734545d0154e9e44f42678bd8fbc7048745726ad85bae"
+    },
+    {
+      "block_id": "page-0345-block-0019",
+      "order": 19,
+      "text": "Varied outcomes. See section on ‘Psychostimulants in depression’  \n(this chapter)\n",
+      "bbox": [
+        198.0001983642578,
+        297.41680908203125,
+        410.4078369140625,
+        316.1217956542969
+      ],
+      "text_sha256": "33300570c96dfc761881eedcb5de52a2f89c9fb670f18f77a714ce8d569db23a"
+    },
+    {
+      "block_id": "page-0345-block-0020",
+      "order": 20,
+      "text": "TCA – high dose59\nFormerly widely used. Cardiac monitoring essential\n",
+      "bbox": [
+        61.89019775390625,
+        322.25677490234375,
+        359.9552917480469,
+        331.15179443359375
+      ],
+      "text_sha256": "567fbe70b955e11e9a782e2b8463d2ace13bc436dad753f95b3bb6affe301156"
+    },
+    {
+      "block_id": "page-0345-block-0021",
+      "order": 21,
+      "text": "Testosterone gel30,60\nEffective in those with low testosterone levels\n",
+      "bbox": [
+        61.89019775390625,
+        337.2867736816406,
+        343.14776611328125,
+        346.1767883300781
+      ],
+      "text_sha256": "ee3d5786cd4588baf5f546aae077c572e644537eaa8114c252e7e0e2113c03be"
+    },
+    {
+      "block_id": "page-0345-block-0022",
+      "order": 22,
+      "text": "Tianeptine61,62\n",
+      "bbox": [
+        61.89019775390625,
+        352.311767578125,
+        110.34468078613281,
+        361.19927978515625
+      ],
+      "text_sha256": "e979b4a6eb8568cc86d8563cc8d39d81e5d75a2ddc0942b37753afbd77e5a6ae"
+    },
+    {
+      "block_id": "page-0345-block-0023",
+      "order": 23,
+      "text": "25–50mg/day\nTiny database. Tianeptine not available in many countries\n",
+      "bbox": [
+        61.88999938964844,
+        352.4967956542969,
+        380.8800964355469,
+        371.2017822265625
+      ],
+      "text_sha256": "7f8c8cd8f5e8e63db1400a00af4d07c0769993f7b544f8ffcc7a713c0a0af1c4"
+    },
+    {
+      "block_id": "page-0345-block-0024",
+      "order": 24,
+      "text": "Tryptophan63–66\n",
+      "bbox": [
+        61.88999938964844,
+        377.3442687988281,
+        114.3677749633789,
+        386.2317810058594
+      ],
+      "text_sha256": "d6d06a1ac0378a79a77bebdc0e9511c712d1134955f759cb06015bb7d8d1b642"
+    },
+    {
+      "block_id": "page-0345-block-0025",
+      "order": 25,
+      "text": "2–3g TDS\nLong history of successful use\n",
+      "bbox": [
+        61.88999938964844,
+        377.5218200683594,
+        292.5975341796875,
+        396.226806640625
+      ],
+      "text_sha256": "997dde419d8edaf007a850b3cd03975cd43b759e392c7b468c3f81e9b40defba"
+    },
+    {
+      "block_id": "page-0345-block-0026",
+      "order": 26,
+      "text": "Venlafaxine67–70\n",
+      "bbox": [
+        61.88999938964844,
+        402.3692932128906,
+        115.49297332763672,
+        411.2568054199219
+      ],
+      "text_sha256": "d025e94e7ad715c7d5ce5473d71e3e1aa0d79d197cae22224731fcad3d110d07"
+    },
+    {
+      "block_id": "page-0345-block-0027",
+      "order": 27,
+      "text": ">200mg/day\n",
+      "bbox": [
+        61.88999938964844,
+        412.5443115234375,
+        102.6524887084961,
+        421.2518005371094
+      ],
+      "text_sha256": "e28f28f9d9ca7c0f772262a2576328259dbc6832ddb174acc95879b8007d03e7"
+    },
+    {
+      "block_id": "page-0345-block-0028",
+      "order": 28,
+      "text": "Can be initiated in primary care\nRecommended by NICE71\n",
+      "bbox": [
+        198.0,
+        402.54681396484375,
+        298.2824401855469,
+        421.2518005371094
+      ],
+      "text_sha256": "d07b1c6e2d28cb5f960c8c6f1458ed6dc6e01f39a3f3151b16de8be69cbefcfd"
+    },
+    {
+      "block_id": "page-0345-block-0029",
+      "order": 29,
+      "text": "Nausea and vomiting; discontinuation reactions more common.  \nBlood pressure monitoring essential\n",
+      "bbox": [
+        198.0001983642578,
+        422.5443115234375,
+        404.8503112792969,
+        441.2492980957031
+      ],
+      "text_sha256": "c6c81724ad2bfa75a26787e46b8644b3eef26ffcee2e3b2ee539353ca74794bd"
+    },
+    {
+      "block_id": "page-0345-block-0030",
+      "order": 30,
+      "text": "Venlafaxine – very high dose (up to \n600mg/day)72\nSee above entry. Cardiac monitoring essential\n",
+      "bbox": [
+        61.89019775390625,
+        447.38427734375,
+        343.02032470703125,
+        466.269287109375
+      ],
+      "text_sha256": "f5e0925365b011836f36ec498fca56808301b3939f3fd4842f18a77ba9d69f5e"
+    },
+    {
+      "block_id": "page-0345-block-0031",
+      "order": 31,
+      "text": "Venlafaxine + IV clomipramine73\nCardiac monitoring essential\n",
+      "bbox": [
+        61.89019775390625,
+        472.4167785644531,
+        288.7052307128906,
+        481.3042907714844
+      ],
+      "text_sha256": "da68b3679e214f2185553e26282805fc99ab7e9334eace91002ce6733e575f1d"
+    },
+    {
+      "block_id": "page-0345-block-0032",
+      "order": 32,
+      "text": "Zinc74\n",
+      "bbox": [
+        61.89019775390625,
+        487.436767578125,
+        80.91950988769531,
+        496.32427978515625
+      ],
+      "text_sha256": "47c4f3bed1423a6dd8c6687e79cf0a35f387eda2ab15277481fc07cab0ca1c4c"
+    },
+    {
+      "block_id": "page-0345-block-0033",
+      "order": 33,
+      "text": "25mg Zn +/day\nOne RCT (n = 60) showed good results in refractory depression\n",
+      "bbox": [
+        61.88999938964844,
+        487.5767822265625,
+        398.8201599121094,
+        506.3267822265625
+      ],
+      "text_sha256": "402b69183b50ae19d6765d30c2e4d899cc6ef7ad630faf8dd3fb43f16263b81e"
+    },
+    {
+      "block_id": "page-0345-block-0034",
+      "order": 34,
+      "text": "Ziprasidone75–77\n",
+      "bbox": [
+        61.88999938964844,
+        512.4692993164062,
+        115.05767822265625,
+        521.3568115234375
+      ],
+      "text_sha256": "3c62c27764754c6b7a5e6dc8020bda45c9cb3ce2c6520033a6bcb9f4b14e684f"
+    },
+    {
+      "block_id": "page-0345-block-0035",
+      "order": 35,
+      "text": "Up to 160mg/day\n",
+      "bbox": [
+        61.88999938964844,
+        522.644287109375,
+        118.16248321533203,
+        531.351806640625
+      ],
+      "text_sha256": "4bf10d9f94eb95f7f469ec30dac56d53195bb51b707db65765904a8fbd67b65a"
+    },
+    {
+      "block_id": "page-0345-block-0036",
+      "order": 36,
+      "text": "Poorly supported. Probably has no antidepressant effects\n",
+      "bbox": [
+        198.0,
+        512.6467895507812,
+        378.8775634765625,
+        521.3543090820312
+      ],
+      "text_sha256": "a548e58a7da9018c7fac30774b98523411abc385d2817f1c8b7322c5367c0754"
+    },
+    {
+      "block_id": "page-0345-block-0037",
+      "order": 37,
+      "text": "Note: Other non-drug treatments are available, including various psychological approaches, repetitive transcranial \nmagnetic stimulation (rTMS), vagus nerve stimulation, deep brain stimulation and psychosurgery. Discussion of these \nis beyond the scope of the book.\nEPA, eicosapentanoic acid; IM, intramuscular; IV, intravenous; MAOI, monoamine oxidase inhibitor; RCT, randomised \ncontrolled trial; SC, subcutaneous; SSRI, selective serotonin reuptake inhibitor; TCA, tricyclic antidepressant; tds, \nthree times a day.\n",
+      "bbox": [
+        61.88999938964844,
+        541.6492919921875,
+        435.4201965332031,
+        600.3442993164062
+      ],
+      "text_sha256": "e2a6879624b5311a55b252d01fa2df055299b978d8002657f3e5921f384809c0"
+    },
+    {
+      "block_id": "page-0345-block-0038",
+      "order": 38,
+      "text": "Table 3.5  (Continued)\n",
+      "bbox": [
+        67.88999938964844,
+        70.08790588378906,
+        140.00999450683594,
+        78.97540283203125
+      ],
+      "text_sha256": "57a40c00dff1fea4d94bb5338a0b927fd3645747426c4ee8ef178b694ace334d"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

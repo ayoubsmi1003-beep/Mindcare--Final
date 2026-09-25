@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0525",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 525,
+  "source_page_index": 524,
+  "source_page_display": 525,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "504    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nformulations such as a patch and an oral/nasal product) is more effective than using a \nsingle NRT product. The OR of abstinence for combination NRT compared to single \nNRT products is 1.43. Combination NRT has a similar efficacy to varenicline, and a \ngreater efficacy than bupropion (Table 4.15).7\nStudies with smokers from the general population suggest that each cigarette pro-\nvides a smoker with approximately 1–2.9mg of nicotine, depending on the frequency \nand intensity of smoking.8 Findings from studies in people with schizophrenia who \nsmoke suggest that they take more frequent puffs over a shorter period of time and, as \na result, extract more nicotine from cigarettes compared with those without a mental \nhealth condition.9 It is therefore plausible that these smokers may require higher doses \nof nicotine replacement.\nThe nicotine from oral products has to be absorbed through the cheeks, gums and \nback of the lips. The correct technique is to chew the gum/suck the lozenge until the \ntaste becomes strong and then rest it between the cheek and gum. When the taste starts \nto fade, it is advised to repeat this process for about 20–30 minutes. Many gum users \npress the gum down against the (buccal) gum to increase the surface area of contact and \nso the rate of nicotine absorption. Lozenges also allow sublingual absorption of nicotine \nTable 4.15  Nicotine preparations and dose\nSmoking less than 20 cigarettes/\nday\nSmoking more than 20 cigarettes/\nday or people who smoke within 30 \nminutes of waking up\nTopical patch\n24-hour formulation (21mg, \n14mg and 7mg)\n16-hour formulation (25mg, \n15mg, 10mg)\nIf smoking >20 cigarettes/day use 21mg (24 hours) or 25mg (16 hours) patch\nThere is no difference in efficacy between 16-hour and 24-hour formulations\nThe 16-hour patch should be removed at bedtime\nNasal spray (0.5mg/T)\nOne spray in each nostril when craving; not more than twice per hour; maximum \n64 sprays/day\nOral spray (1mg/T)\n1–2 sprays when craving; not more than 2 sprays per episode; not more than 4 \nsprays/hour; maximum 64 sprays/day\nLozenge (1mg, 2mg and \n4mg)\nOne 1mg hourly to prevent craving\nOne 2mg or 4mg hourly to prevent \ncraving. Usually not more than 15 \nlozenges/day\nGum (2mg, 4mg and 6mg)\nOne piece of 2mg hourly to prevent \ncraving\nOne piece of 4mg or 6mg hourly to \nprevent craving. No more than 15 pieces \n4mg/day\nInhalator (15mg)\nNo more than 6 cartridges of 15mg/day\nSublingual tablet (2mg)\n1–2 tablets hourly to prevent craving\n2 tablets hourly to prevent craving; not \nmore than 40 tablets/day\nMouth strips (2.5mg)\nOne strip of 2.5mg hourly to prevent \ncraving\nOne strip hourly to prevent craving; not \nmore than 15 strips/day\n",
+  "raw_text_sha256": "412068f0692342d390b63b44a9434ccfdc18c93d7f4acaece0e0f6dbb56b8dc9",
+  "coordinates_sha256": "994a9b664d761a82dfa6ddc2973b57c1790c2ee909c8ec67639cc36800ff896d",
+  "block_sequence_sha256": "6df66255b2afb0fdef689c520875ce717c62f0fc7169a0b0d01d2ad1b17629cc",
+  "blocks": [
+    {
+      "block_id": "page-0525-block-0000",
+      "order": 0,
+      "text": "504    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "943449180d79e43c91d04cf5fada364133d029eec1a3fd5efacee975226f784f"
+    },
+    {
+      "block_id": "page-0525-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0525-block-0002",
+      "order": 2,
+      "text": "formulations such as a patch and an oral/nasal product) is more effective than using a \nsingle NRT product. The OR of abstinence for combination NRT compared to single \nNRT products is 1.43. Combination NRT has a similar efficacy to varenicline, and a \ngreater efficacy than bupropion (Table 4.15).7\n",
+      "bbox": [
+        61.88999938964844,
+        411.2139892578125,
+        436.6998291015625,
+        458.9339904785156
+      ],
+      "text_sha256": "22f865343a624d152fc858b1845a8a5edc1c4cb388821611a375cf0e3f8a6bd7"
+    },
+    {
+      "block_id": "page-0525-block-0003",
+      "order": 3,
+      "text": "Studies with smokers from the general population suggest that each cigarette pro-\nvides a smoker with approximately 1–2.9mg of nicotine, depending on the frequency \nand intensity of smoking.8 Findings from studies in people with schizophrenia who \nsmoke suggest that they take more frequent puffs over a shorter period of time and, as \na result, extract more nicotine from cigarettes compared with those without a mental \nhealth condition.9 It is therefore plausible that these smokers may require higher doses \nof nicotine replacement.\n",
+      "bbox": [
+        61.886505126953125,
+        459.2139892578125,
+        436.7065124511719,
+        542.9340209960938
+      ],
+      "text_sha256": "b1a5c92fbe0076a0a9f93dbab3a9ddaa6c24b0eb88fba77ac6f50ead5f799403"
+    },
+    {
+      "block_id": "page-0525-block-0004",
+      "order": 4,
+      "text": "The nicotine from oral products has to be absorbed through the cheeks, gums and \nback of the lips. The correct technique is to chew the gum/suck the lozenge until the \ntaste becomes strong and then rest it between the cheek and gum. When the taste starts \nto fade, it is advised to repeat this process for about 20–30 minutes. Many gum users \npress the gum down against the (buccal) gum to increase the surface area of contact and \nso the rate of nicotine absorption. Lozenges also allow sublingual absorption of nicotine \n",
+      "bbox": [
+        61.89369201660156,
+        543.2139892578125,
+        436.7337951660156,
+        614.9340209960938
+      ],
+      "text_sha256": "1110080dca9e9aad6d1c472a81c1534609fb80c2c45ed0e869ab9f763f1a8187"
+    },
+    {
+      "block_id": "page-0525-block-0005",
+      "order": 5,
+      "text": "Table 4.15  Nicotine preparations and dose\n",
+      "bbox": [
+        67.8904037475586,
+        70.08790588378906,
+        206.13787841796875,
+        78.97540283203125
+      ],
+      "text_sha256": "3ec8a9a18528cb30ff58f30f4905bf2f2346849b5acd5ca1f63ea1b32ae1be6d"
+    },
+    {
+      "block_id": "page-0525-block-0006",
+      "order": 6,
+      "text": "Smoking less than 20 cigarettes/\nday\n",
+      "bbox": [
+        168.0,
+        99.96290588378906,
+        282.06011962890625,
+        118.847900390625
+      ],
+      "text_sha256": "07f33d50791fb4d54d3f730ab06adf77ea90ee51058faba6a0d34e0f9da31f06"
+    },
+    {
+      "block_id": "page-0525-block-0007",
+      "order": 7,
+      "text": "Smoking more than 20 cigarettes/\nday or people who smoke within 30 \nminutes of waking up\n",
+      "bbox": [
+        303.94500732421875,
+        89.95790100097656,
+        433.1474609375,
+        118.84039306640625
+      ],
+      "text_sha256": "0cb566f8cc23ee2be2fc86b8e100531d1dc0ed5a838e0c99d296ffcb46119f0f"
+    },
+    {
+      "block_id": "page-0525-block-0008",
+      "order": 8,
+      "text": "Topical patch\n24-hour formulation (21mg, \n14mg and 7mg)\n16-hour formulation (25mg, \n15mg, 10mg)\n",
+      "bbox": [
+        61.8900146484375,
+        128.0803985595703,
+        154.41749572753906,
+        176.9578857421875
+      ],
+      "text_sha256": "63c4dbe85bc37df4215b9fe269efc29a79b535228482f031c3f2db51a8331dac"
+    },
+    {
+      "block_id": "page-0525-block-0009",
+      "order": 9,
+      "text": "If smoking >20 cigarettes/day use 21mg (24 hours) or 25mg (16 hours) patch\nThere is no difference in efficacy between 16-hour and 24-hour formulations\nThe 16-hour patch should be removed at bedtime\n",
+      "bbox": [
+        168.00001525878906,
+        128.2528839111328,
+        414.94512939453125,
+        156.95538330078125
+      ],
+      "text_sha256": "ddb246831d3f6bb70e309bfe8f35947d30c7b70696213553c3f78a95f83f1c55"
+    },
+    {
+      "block_id": "page-0525-block-0010",
+      "order": 10,
+      "text": "Nasal spray (0.5mg/T)\nOne spray in each nostril when craving; not more than twice per hour; maximum \n64 sprays/day\n",
+      "bbox": [
+        61.8900146484375,
+        186.1903839111328,
+        428.7300109863281,
+        205.07537841796875
+      ],
+      "text_sha256": "28d10e832100c11c40b7710f6dcc95b0c0f4015e5ab008f6c1815828b7907c3a"
+    },
+    {
+      "block_id": "page-0525-block-0011",
+      "order": 11,
+      "text": "Oral spray (1mg/T)\n1–2 sprays when craving; not more than 2 sprays per episode; not more than 4 \nsprays/hour; maximum 64 sprays/day\n",
+      "bbox": [
+        61.8900146484375,
+        214.3153839111328,
+        422.797607421875,
+        233.20037841796875
+      ],
+      "text_sha256": "e3e57f6f2bf1b49d238f80c3fc5c1c229d24e41edb1e46a030c3978e671be367"
+    },
+    {
+      "block_id": "page-0525-block-0012",
+      "order": 12,
+      "text": "Lozenge (1mg, 2mg and \n4mg)\nOne 1mg hourly to prevent craving\nOne 2mg or 4mg hourly to prevent \ncraving. Usually not more than 15 \nlozenges/day\n",
+      "bbox": [
+        61.8900146484375,
+        242.4403839111328,
+        418.4175720214844,
+        271.3228759765625
+      ],
+      "text_sha256": "c9bed9b205595a9381f067aa07edbb62752af1418649411b1312a2f9ce32ff96"
+    },
+    {
+      "block_id": "page-0525-block-0013",
+      "order": 13,
+      "text": "Gum (2mg, 4mg and 6mg)\nOne piece of 2mg hourly to prevent \ncraving\n",
+      "bbox": [
+        61.8900146484375,
+        280.5628662109375,
+        284.54998779296875,
+        299.4478759765625
+      ],
+      "text_sha256": "d85bee93279a08158758adfa2a5fb75d18f9ac4a0d44a45a62fd6fb9dbd9bffb"
+    },
+    {
+      "block_id": "page-0525-block-0014",
+      "order": 14,
+      "text": "One piece of 4mg or 6mg hourly to \nprevent craving. No more than 15 pieces \n4mg/day\n",
+      "bbox": [
+        303.94500732421875,
+        280.7428894042969,
+        435.780029296875,
+        309.44537353515625
+      ],
+      "text_sha256": "816c78651077cb6e2d76e44403d6d7f3f86a73f0b2f5835a084061807edd87b2"
+    },
+    {
+      "block_id": "page-0525-block-0015",
+      "order": 15,
+      "text": "Inhalator (15mg)\nNo more than 6 cartridges of 15mg/day\n",
+      "bbox": [
+        61.8900146484375,
+        318.68536376953125,
+        294.97503662109375,
+        327.5728759765625
+      ],
+      "text_sha256": "5af54da1dd2cf2c0ebf8c88fcb70d038a01bb273aa27c2db65b253273b7c4b93"
+    },
+    {
+      "block_id": "page-0525-block-0016",
+      "order": 16,
+      "text": "Sublingual tablet (2mg)\n1–2 tablets hourly to prevent craving\n2 tablets hourly to prevent craving; not \nmore than 40 tablets/day\n",
+      "bbox": [
+        61.8900146484375,
+        336.8128662109375,
+        430.4925537109375,
+        355.6978759765625
+      ],
+      "text_sha256": "026c3dd7cf2a15dec5cf470db64b38c70b2d809a91c75fff9bdbebc9dff413e2"
+    },
+    {
+      "block_id": "page-0525-block-0017",
+      "order": 17,
+      "text": "Mouth strips (2.5mg)\nOne strip of 2.5mg hourly to prevent \ncraving\n",
+      "bbox": [
+        61.8900146484375,
+        364.9378662109375,
+        287.8874816894531,
+        383.8228759765625
+      ],
+      "text_sha256": "23561a2174e8bbd6229f58ba1cda5b6376785631a4c7866578d3ba24be413097"
+    },
+    {
+      "block_id": "page-0525-block-0018",
+      "order": 18,
+      "text": "One strip hourly to prevent craving; not \nmore than 15 strips/day\n",
+      "bbox": [
+        303.94500732421875,
+        365.1178894042969,
+        432.1575622558594,
+        383.8228759765625
+      ],
+      "text_sha256": "3650d49cb0bf8e5552b8f2eca85a2c56857977394753c2ef9ea7844e70b2da37"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

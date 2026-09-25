@@ -1,0 +1,248 @@
+{
+  "qa_version": "gate7-qa-freeze-v1",
+  "package": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "package_version": "v1",
+  "source_lock_sha256": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "inputs": {
+    "raw": 978,
+    "reading": 978,
+    "pages_map_segments": 89,
+    "structure_chapters": 14,
+    "units": 7861,
+    "tables": 275,
+    "figures": 19,
+    "algorithms": 12,
+    "assertions": 12711,
+    "medications": 1954,
+    "concepts": 431,
+    "relations": 4980,
+    "xrefs": 159
+  },
+  "counts": {
+    "pages_total": 978,
+    "pages_verified": 886,
+    "pages_uncertain": 14,
+    "tables_total": 275,
+    "tables_verified": 248,
+    "figures_total": 19,
+    "algorithms_total": 12,
+    "dose_records": 1954,
+    "medication_records": 1954,
+    "interaction_records": 1344,
+    "monitoring_records": 2099,
+    "contraindication_records": 148,
+    "warning_records": 2477,
+    "switch_records": 531,
+    "special_population_records": 1215,
+    "reference_records": 164,
+    "xrefs_total": 159,
+    "xrefs_unresolved": 118,
+    "golden_tests_total": 113,
+    "golden_tests_passed": 113,
+    "golden_tests_failed": 0,
+    "critical_errors": 0,
+    "manual_review_required": 6253
+  },
+  "count_definitions": {
+    "tables_verified": "structurally validated (non-empty rectangular rows, resolved continuation links) - NOT cleared for clinical use; every table remains needs_review and queued",
+    "warning_records": "assertions with claim_type=adverse_effect",
+    "switch_records": "medication records with taper_info (switch/taper procedures)",
+    "special_population_records": "assertions matching pregnancy/breastfeeding/child/adolescent/older/hepatic/renal/neonatal patterns (case-insensitive)",
+    "reference_records": "units with unit_type=reference",
+    "manual_review_required": "unique record ids across all review-queue categories"
+  },
+  "notes": [
+    "tables_verified here means structurally validated, NOT cleared for clinical use: all 275 tables carry verification_status=needs_review and sit in review-queue.json; no table is cleared for clinical use.",
+    "All counts recomputed from generated artifacts by taylor_pipeline qa-freeze; no worker claims copied.",
+    "Parser success never marks verified: PASS2 is independent recomputation (own corpora, own tiers, own sampling).",
+    "Dose strings: each verbatim-grounded in raw (whitespace-insensitive, hyphen-join fallback for names). Failing bound atoms (min/max) are nulled with atom_reject_reason, never silently corrected."
+  ],
+  "technical_qa": [
+    {
+      "dimension": "pass1:raw-count-978",
+      "verdict": "PASS",
+      "evidence": "raw files=978"
+    },
+    {
+      "dimension": "pass1:raw-continuity-0001-0978",
+      "verdict": "PASS",
+      "evidence": "contiguous 0001..0978"
+    },
+    {
+      "dimension": "pass1:reading-count-978",
+      "verdict": "PASS",
+      "evidence": "reading files=978"
+    },
+    {
+      "dimension": "pass1:reading-hash-recompute-978",
+      "verdict": "PASS",
+      "evidence": "all repaired_text_sha256 recompute OK"
+    },
+    {
+      "dimension": "pass1:checkpoint-count-978",
+      "verdict": "PASS",
+      "evidence": "checkpoint files=978"
+    },
+    {
+      "dimension": "pass1:checkpoint-agree-spot",
+      "verdict": "PASS",
+      "evidence": "spot pages 1/100/500/978 raw_text_sha256 agree"
+    },
+    {
+      "dimension": "pass1:raw-hash-recompute-978",
+      "verdict": "PASS",
+      "evidence": "all raw_text_sha256 recompute OK"
+    },
+    {
+      "dimension": "pass1:map-segments-89",
+      "verdict": "PASS",
+      "evidence": "segments=89"
+    },
+    {
+      "dimension": "pass1:map-no-global-offset",
+      "verdict": "PASS",
+      "evidence": "no global_offset key"
+    },
+    {
+      "dimension": "pass1:map-coverage-1-978",
+      "verdict": "PASS",
+      "evidence": "physical 1..978 exact"
+    },
+    {
+      "dimension": "pass1:structure-4-parts-14-chapters",
+      "verdict": "PASS",
+      "evidence": "parts=4 chapters=14"
+    },
+    {
+      "dimension": "pass1:units-7861-lines",
+      "verdict": "PASS",
+      "evidence": "units lines=7861"
+    },
+    {
+      "dimension": "pass1:units-ids-unique",
+      "verdict": "PASS",
+      "evidence": "n=7861 unique=7861"
+    },
+    {
+      "dimension": "pass1:units-chain",
+      "verdict": "PASS",
+      "evidence": "preceding/following consistent 7861"
+    },
+    {
+      "dimension": "pass1:units-parents-resolve",
+      "verdict": "PASS",
+      "evidence": "all parents resolve"
+    },
+    {
+      "dimension": "pass1:units-no-cross-chapter",
+      "verdict": "PASS",
+      "evidence": "no unit spans 2 chapters"
+    },
+    {
+      "dimension": "pass1:tables-275-lines",
+      "verdict": "PASS",
+      "evidence": "tables lines=275"
+    },
+    {
+      "dimension": "pass1:tables-rows-rectangular",
+      "verdict": "WARNING",
+      "evidence": "non-rectangular-or-empty=27 e.g.[('maudsley-taylor-2021:table:69:0004', []), ('maudsley-taylor-2021:table:188:0037', []), ('maudsley-taylor-2021:table:383:0090', [])]"
+    },
+    {
+      "dimension": "pass1:tables-headerless-info",
+      "verdict": "PASS",
+      "evidence": "headerless_or_mismatch=44 e.g.[('maudsley-taylor-2021:table:84:0007', 0, 4), ('maudsley-taylor-2021:table:107:0014', 0, 1), ('maudsley-taylor-2021:table:110:0015', 0, 2)]"
+    },
+    {
+      "dimension": "pass1:tables-continuation-links",
+      "verdict": "PASS",
+      "evidence": "all links resolve; 178 chains"
+    },
+    {
+      "dimension": "pass1:figures-19-present",
+      "verdict": "PASS",
+      "evidence": "figures=19"
+    },
+    {
+      "dimension": "pass1:algorithms-12-present",
+      "verdict": "PASS",
+      "evidence": "algorithms=12"
+    },
+    {
+      "dimension": "pass1:figures-algorithms-host-units",
+      "verdict": "PASS",
+      "evidence": "all host_unit_id resolve"
+    },
+    {
+      "dimension": "pass1:header-text-spans-excluded",
+      "verdict": "PASS",
+      "evidence": "no assertion sourced solely from folio blocks"
+    },
+    {
+      "dimension": "pass1:xrefs-159-unresolved-118",
+      "verdict": "PASS",
+      "evidence": "total=159 {'unresolved': 118, 'resolved_internal': 41}"
+    },
+    {
+      "dimension": "pass2:(a)-dose-grounded-2002",
+      "verdict": "PASS",
+      "evidence": "checked=2002 failures=0 []"
+    },
+    {
+      "dimension": "pass2:(b)-no-auto-ok-high-risk",
+      "verdict": "PASS",
+      "evidence": "classes={'dose(medication_statement)': 1082, 'contraindication': 148, 'interaction': 1344, 'monitoring': 2099, 'threshold': 60} auto_ok=0"
+    },
+    {
+      "dimension": "pass2:(c)-spot30-dose-verbatim",
+      "verdict": "PASS",
+      "evidence": "30/30 dose verbatim=True gen ok=True"
+    },
+    {
+      "dimension": "pass2:(c)-spot30-context",
+      "verdict": "PASS",
+      "evidence": "context mismatches=0 []"
+    },
+    {
+      "dimension": "pass2:(d)-qt-serotonin-livha",
+      "verdict": "PASS",
+      "evidence": "QT=168 serotonin-syndrome=36 Li-VPA=54"
+    },
+    {
+      "dimension": "pass2:(e)-populations",
+      "verdict": "PASS",
+      "evidence": "{\"adolescent\": 146, \"children\": 275, \"older\": 249, \"overdose\": 136, \"pregnancy\": 257, \"switch\": 229, \"taper\": 98}"
+    },
+    {
+      "dimension": "pass2:(f)-hyphen-count",
+      "verdict": "PASS",
+      "evidence": "assertions=525 meds=57 total=582"
+    },
+    {
+      "dimension": "pass2:(f)-hyphen-sample20-raw",
+      "verdict": "PASS",
+      "evidence": "20/20 flags explained"
+    },
+    {
+      "dimension": "pass2:(g)-conflicts",
+      "verdict": "PASS",
+      "evidence": "literal-markers=0 pair-present=True"
+    }
+  ],
+  "overall_package": "PASS",
+  "overall_rationale": "no critical errors; package frozen pending explicit human sign-off",
+  "critical_errors_detail": [],
+  "golden_dry_run": {
+    "total": 113,
+    "passed": 113,
+    "failed": 0,
+    "written_to_file": false,
+    "reason_not_written": "freeze withheld (overall_package=BLOCKED); golden expectations verified in-memory only"
+  },
+  "promotion": {
+    "retrieval_eligible": false,
+    "clinical_active": false
+  },
+  "review_coverage": "Every dose/contra/interaction/monitoring/threshold record id (1954+148+1344+2099+60+476), all 275 tables, all 12 algorithms, all 40 inferred segments, all 14 uncertain pages, all 582 hyphen-merge records, and 2 conflict items are queued; no dose/contra/interaction/monitoring/threshold record is cleared for clinical use.",
+  "status": "PENDING_APPROVAL"
+}

@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0411",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 411,
+  "source_page_index": 410,
+  "source_page_display": 411,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "390    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nOne study supports the safety of citalopram in patients with coronary artery disease50 \n(although citalopram is linked to a risk of torsades de pointes51). Escitalopram did not \naffect mortality in a trial in patients with heart failure,52 and a later systematic review \nfound no adverse effect on mortality for any SSRIs in heart failure.53 Sertraline may \nhelp improve cardiovascular risk factors,54 but in older people, there is an indication \nthat all modern antidepressants confer an increased risk of arrhythmia.55\nRelative cardiotoxicity\nRelative cardiotoxicity of antidepressants is difficult to establish with any precision. \nSurveillance monitoring data suggest that all marketed antidepressants have been linked \nto arrhythmia (ranging from clinically insignificant to life threatening) and sudden car-\ndiac death. For a substantial proportion of drugs these figures are more likely to reflect \ncoincidence rather than causation.\nThe Fatal Toxicity Index (FTI) may provide some means for comparison. This is a \nmeasure of the number of overdose deaths per million (FP10) prescriptions issued. FTI \nfigures suggest high toxicity for tricyclic drugs (especially dosulepin but not lofepramine), \nmedium toxicity for venlafaxine and moclobemide, and low toxicity for SSRIs, mir-\ntazapine and reboxetine.56–60 However, FTI does not necessarily reflect only cardiotox-\nicity (antidepressants variously cause serotonin syndrome, seizures and coma) and is, in \nany case, open to other influences. This is best evidenced in the change in FTI over time. \nA good example here is nortriptyline, the FTI of which has been estimated at 0.616 and \n39.212 and several values in between.56,57,59 This change probably reflects changes in the \ntype of patient prescribed nortriptyline, but ‘double-counting’ (nortriptyline is a metab-\nolite of amitriptyline) at post-mortem also plays a part. There is good evidence that \nvenlafaxine is relatively more often prescribed to patients with more severe depression \nand who are relatively more likely to attempt suicide.61–63 This is likely to inflate venla-\nfaxine’s FTI and erroneously suggest greater inherent toxicity. Drugs with consistently \nlow FTIs can probably be assumed to have very low risk of arrhythmias.\nCitalopram and escitalopram have very low overdose toxicity despite QT prolongation \noccurring in about one-third of reported overdoses.64 Standard doses of citalopram may \nbe linked to an increased risk of cardiac arrest,8 but as mentioned earlier, other data sug-\ngest no increased risk of arrhythmia or death with standard and higher licensed doses of \ncitalopram and escitalopram.34 Citalopram and escitalopram are probably the most car-\ndiotoxic of the SSRIs, but their toxicity is modest at worst, and possibly insignificant.\nSummary\n■\n■Tricyclics (but not lofepramine) have an established link to ion channel blockade and \ncardiac arrhythmia.\n■\n■Non-tricyclics generally have a very low risk of inducing arrhythmia.\n■\n■Sertraline is recommended post MI, but other SSRIs and mirtazapine are also likely \nto be safe.\n■\n■Bupropion, citalopram, escitalopram, moclobemide, lofepramine and venlafaxine \nshould be used with caution or avoided in those at risk of serious arrhythmia (those \nwith heart failure, left ventricular hypertrophy; previous arrhythmia or MI). An ECG \nshould be performed at baseline and 1 week after every increase in dose if any of \nthese drugs are used in at-risk patients.\n",
+  "raw_text_sha256": "a667c2fa228a6206b3a5479621312b4d49e8fbdff11e61da97d97f0d863094e0",
+  "coordinates_sha256": "d3b2cb34aa6198873eed757fd731b73469bd59b9e159c12fdd0eef10513d7b2e",
+  "block_sequence_sha256": "adb7990478fcf076df4a132909fb9ca700b96575ec1de66412eced1fe2800e99",
+  "blocks": [
+    {
+      "block_id": "page-0411-block-0000",
+      "order": 0,
+      "text": "390    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "057cbeaf6946c07abebff6fb90b42accfc992e5ce2a17238275b251314e3afe3"
+    },
+    {
+      "block_id": "page-0411-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0411-block-0002",
+      "order": 2,
+      "text": "One study supports the safety of citalopram in patients with coronary artery disease50 \n(although citalopram is linked to a risk of torsades de pointes51). Escitalopram did not \naffect mortality in a trial in patients with heart failure,52 and a later systematic review \nfound no adverse effect on mortality for any SSRIs in heart failure.53 Sertraline may \nhelp improve cardiovascular risk factors,54 but in older people, there is an indication \nthat all modern antidepressants confer an increased risk of arrhythmia.55\n",
+      "bbox": [
+        61.88623046875,
+        62.55029296875,
+        436.6721496582031,
+        134.27029418945312
+      ],
+      "text_sha256": "ee3f400bb4ca2f2b9fe102ebd42d4fba3cb128b649044e54c3a8c19ed706ce06"
+    },
+    {
+      "block_id": "page-0411-block-0003",
+      "order": 3,
+      "text": "Relative cardiotoxicity\n",
+      "bbox": [
+        61.88999938964844,
+        151.70529174804688,
+        176.61997985839844,
+        164.74029541015625
+      ],
+      "text_sha256": "8b070c5627bb2364b8dbb159a533f48602bd648ff7edee870eee43d9fc2cc329"
+    },
+    {
+      "block_id": "page-0411-block-0004",
+      "order": 4,
+      "text": "Relative cardiotoxicity of antidepressants is difficult to establish with any precision. \nSurveillance monitoring data suggest that all marketed antidepressants have been linked \nto arrhythmia (ranging from clinically insignificant to life threatening) and sudden car-\ndiac death. For a substantial proportion of drugs these figures are more likely to reflect \ncoincidence rather than causation.\n",
+      "bbox": [
+        61.889984130859375,
+        170.55029296875,
+        436.7199401855469,
+        230.27029418945312
+      ],
+      "text_sha256": "23bd2809c9c666f3148d886b77b1fd63b9267da225ded0323931660d259fecf5"
+    },
+    {
+      "block_id": "page-0411-block-0005",
+      "order": 5,
+      "text": "The Fatal Toxicity Index (FTI) may provide some means for comparison. This is a \nmeasure of the number of overdose deaths per million (FP10) prescriptions issued. FTI \nfigures suggest high toxicity for tricyclic drugs (especially dosulepin but not lofepramine), \nmedium toxicity for venlafaxine and moclobemide, and low toxicity for SSRIs, mir-\ntazapine and reboxetine.56–60 However, FTI does not necessarily reflect only cardiotox-\nicity (antidepressants variously cause serotonin syndrome, seizures and coma) and is, in \nany case, open to other influences. This is best evidenced in the change in FTI over time. \nA good example here is nortriptyline, the FTI of which has been estimated at 0.616 and \n39.212 and several values in between.56,57,59 This change probably reflects changes in the \ntype of patient prescribed nortriptyline, but ‘double-counting’ (nortriptyline is a metab-\nolite of amitriptyline) at post-mortem also plays a part. There is good evidence that \nvenlafaxine is relatively more often prescribed to patients with more severe depression \nand who are relatively more likely to attempt suicide.61–63 This is likely to inflate venla-\nfaxine’s FTI and erroneously suggest greater inherent toxicity. Drugs with consistently \nlow FTIs can probably be assumed to have very low risk of arrhythmias.\n",
+      "bbox": [
+        61.88569641113281,
+        230.55029296875,
+        436.6965637207031,
+        410.2702941894531
+      ],
+      "text_sha256": "0c4732e345a40fb3ae00ab81574a6ce6d4e493718cbe567a634c1409eed70436"
+    },
+    {
+      "block_id": "page-0411-block-0006",
+      "order": 6,
+      "text": "Citalopram and escitalopram have very low overdose toxicity despite QT prolongation \noccurring in about one-third of reported overdoses.64 Standard doses of citalopram may \nbe linked to an increased risk of cardiac arrest,8 but as mentioned earlier, other data sug-\ngest no increased risk of arrhythmia or death with standard and higher licensed doses of \ncitalopram and escitalopram.34 Citalopram and escitalopram are probably the most car-\ndiotoxic of the SSRIs, but their toxicity is modest at worst, and possibly insignificant.\n",
+      "bbox": [
+        61.88569641113281,
+        410.55029296875,
+        436.6724548339844,
+        482.2702941894531
+      ],
+      "text_sha256": "6af2654f83211d2dc0d47298f3c427c35bae3f952dcbed135af4271981924a01"
+    },
+    {
+      "block_id": "page-0411-block-0007",
+      "order": 7,
+      "text": "Summary\n",
+      "bbox": [
+        61.88990020751953,
+        499.7052917480469,
+        110.79589080810547,
+        512.7402954101562
+      ],
+      "text_sha256": "3cbb36aca330b3bd113955dfbada0adb7a5f95ad9f678bd61f175406c6a37e95"
+    },
+    {
+      "block_id": "page-0411-block-0008",
+      "order": 8,
+      "text": "■\n■Tricyclics (but not lofepramine) have an established link to ion channel blockade and \n",
+      "bbox": [
+        61.88990020751953,
+        518.55029296875,
+        436.69989013671875,
+        530.2703247070312
+      ],
+      "text_sha256": "bf805d5a66829c20426ccffac91471e37bec439a6e7849aae139acc70fdaa4ec"
+    },
+    {
+      "block_id": "page-0411-block-0009",
+      "order": 9,
+      "text": "cardiac arrhythmia.\n",
+      "bbox": [
+        70.88990020751953,
+        530.55029296875,
+        155.889892578125,
+        542.2703247070312
+      ],
+      "text_sha256": "61d5dc22cba7b06a13f3fc3fe04c8666f90bdd5b81731871f61300a9038548ce"
+    },
+    {
+      "block_id": "page-0411-block-0010",
+      "order": 10,
+      "text": "■\n■Non-tricyclics generally have a very low risk of inducing arrhythmia.\n",
+      "bbox": [
+        61.88990020751953,
+        542.55029296875,
+        368.1598815917969,
+        554.2703247070312
+      ],
+      "text_sha256": "d3a95ca8e32dc2a58eacbb8d105cad99fa02842925a5d5b1281b4ddeebda609b"
+    },
+    {
+      "block_id": "page-0411-block-0011",
+      "order": 11,
+      "text": "■\n■Sertraline is recommended post MI, but other SSRIs and mirtazapine are also likely \n",
+      "bbox": [
+        61.88990020751953,
+        554.55029296875,
+        436.6299133300781,
+        566.2703247070312
+      ],
+      "text_sha256": "09cdfb53947247d2bd93b7d3b4d06662024511d704826c65cf435eee0b556fc7"
+    },
+    {
+      "block_id": "page-0411-block-0012",
+      "order": 12,
+      "text": "to be safe.\n",
+      "bbox": [
+        70.88990020751953,
+        566.55029296875,
+        114.77989959716797,
+        578.2703247070312
+      ],
+      "text_sha256": "9b1cbb9512a3921b446cde1d468fd5d2be587f1519a3c6a8f46fbe572a744b8d"
+    },
+    {
+      "block_id": "page-0411-block-0013",
+      "order": 13,
+      "text": "■\n■Bupropion, citalopram, escitalopram, moclobemide, lofepramine and venlafaxine \n",
+      "bbox": [
+        61.88990020751953,
+        578.55029296875,
+        436.68988037109375,
+        590.2703247070312
+      ],
+      "text_sha256": "3bb4bed1f0cedfb06e85e14207e6519a3ef7f56a8ee66dcaf82d37c9160579ae"
+    },
+    {
+      "block_id": "page-0411-block-0014",
+      "order": 14,
+      "text": "should be used with caution or avoided in those at risk of serious arrhythmia (those \nwith heart failure, left ventricular hypertrophy; previous arrhythmia or MI). An ECG \nshould be performed at baseline and 1 week after every increase in dose if any of \nthese drugs are used in at-risk patients.\n",
+      "bbox": [
+        70.88990020751953,
+        590.55029296875,
+        436.7099304199219,
+        638.2703247070312
+      ],
+      "text_sha256": "59f206a3fb04718aacf08f961318ab53f55bdbe5271a9cdd373bd74e9871e538"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

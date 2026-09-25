@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0577",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 577,
+  "source_page_index": 576,
+  "source_page_display": 577,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "556    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  5\nAnxiety disorders in children and adolescents\nDiagnostic issues\nFear and worry are common in children and they are part of normal development. At \nthe same time, anxiety disorders often begin in childhood and adolescence1 and they are \nthe most common psychiatric disorders in this age group, with overall prevalence \nbetween 8% and 30% depending on the impairment cut-offs used.2 Anxiety disorders \nmay be even more common in children with neurodevelopment disorders.3\nIn children, the more obvious clinical presentation with distress and avoidance may \nbe masked by prominent behavioural symptoms (e.g. irritability and angry outbursts \nlinked to avoidance). Therefore, the assessment and treatment of anxiety disorders in \nchildren needs to be undertaken by clinicians who can discriminate normal, develop-\nmentally appropriate worries, fears and shyness from anxiety disorders that signifi-\ncantly impair a child’s functioning, and who can appreciate developmental variations in \nthe presentation of symptoms.\nClinical guidance\nAnxiety symptoms in children and adolescents often improve with age, presumably in \nparallel to the development of the prefrontal cortex and, in particular, executive function. \nHowever, anxiety disorders are distressing and impairing conditions that need to be \ntreated promptly. Chronic stress mediators may have significant impact on brain develop-\nment4 and functional impairment linked to anxiety symptoms may prevent young people \nfrom accessing normative experiences that are critical for social, emotional and cognitive \ndevelopment. Finally, early and effective treatment may prevent continuity of psychopa-\nthology into adulthood, for example, young people with anxiety disorders are three times \nmore likely to have anxiety and depression in adult life compared to non-anxious youths.5\nGuidelines for treatment of anxiety disorders in children and adolescents have been \nmade available in the UK and the United States. NICE guidelines focus on the treatment \nof social anxiety disorder in children and adolescents, suggesting the use of cognitive \nbehavioural therapy (CBT) and cautioning against the routine use of pharmacological \ntreatment for social anxiety in this age group.6 Guidelines from the American Academy \nof Child and Adolescent Psychiatry (AACAP) cover the treatment of all non-OCD, non-\nPTSD anxiety disorders.7 AACAP guidelines suggest multimodal treatment including \npsychoeducation, psychotherapy (e.g. a 12-session course of exposure-based CBT), and \npharmacotherapy. Drug treatment is endorsed for moderate-to-severe anxiety symp-\ntoms, when impairment makes participation in psychotherapy difficult or when psy-\nchotherapy leads to only partial response.\nPrescribing for anxiety disorders in children and adolescents\nBefore prescribing\n■\n■Exclude other diagnoses. Anxiety symptoms can be mimicked by a range of psychi-\natric disorders including depression (inattention, sleep problems), bipolar disor-\nder (irritability, sleep problems, restlessness), oppositional-defiant disorder \n",
+  "raw_text_sha256": "af593af0723108dfea655fdf91c43bf20000ee892de68ee05db5b758888ea0b7",
+  "coordinates_sha256": "8220de73cf98f31e4d0ed386267f8a6a83dc597d73f7a1b2d37d9ac219df98bf",
+  "block_sequence_sha256": "5e72ee71b22fa77a22ee87f603e0f42081c77f13af251b980ba5e9f3540feb8f",
+  "blocks": [
+    {
+      "block_id": "page-0577-block-0000",
+      "order": 0,
+      "text": "556    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "a692de22796296cc8dbea28b64318294d99b8ec057060a857ca3d4b5fd993209"
+    },
+    {
+      "block_id": "page-0577-block-0001",
+      "order": 1,
+      "text": "CHAPTER  5\n",
+      "bbox": [
+        18.520000457763672,
+        338.22650146484375,
+        28.0,
+        381.79449462890625
+      ],
+      "text_sha256": "4086e0916f45ec531cc17b8c611334eb2b1ef26051ba536579b8ef3c22c1648d"
+    },
+    {
+      "block_id": "page-0577-block-0002",
+      "order": 2,
+      "text": "Anxiety disorders in children and adolescents\n",
+      "bbox": [
+        68.88999938964844,
+        66.06539916992188,
+        303.1899719238281,
+        79.10040283203125
+      ],
+      "text_sha256": "8974219beadeb93f76da9c1b53163bea3b9a885e649c4a2a5fb52f24f459ea45"
+    },
+    {
+      "block_id": "page-0577-block-0003",
+      "order": 3,
+      "text": "Diagnostic issues\n",
+      "bbox": [
+        61.89400100708008,
+        96.06240844726562,
+        149.88299560546875,
+        109.097412109375
+      ],
+      "text_sha256": "ed02882ffde2b1dd8358e2f6df2344d9a85d1e7925926d20cf8264aedbd29336"
+    },
+    {
+      "block_id": "page-0577-block-0004",
+      "order": 4,
+      "text": "Fear and worry are common in children and they are part of normal development. At \nthe same time, anxiety disorders often begin in childhood and adolescence1 and they are \nthe most common psychiatric disorders in this age group, with overall prevalence \nbetween 8% and 30% depending on the impairment cut-offs used.2 Anxiety disorders \nmay be even more common in children with neurodevelopment disorders.3\n",
+      "bbox": [
+        61.885406494140625,
+        114.910400390625,
+        436.67041015625,
+        174.63040161132812
+      ],
+      "text_sha256": "0bb98257b469eebb82d01e4ef513f1fa0da214f078d9ccd2655f40b7c4e32d01"
+    },
+    {
+      "block_id": "page-0577-block-0005",
+      "order": 5,
+      "text": "In children, the more obvious clinical presentation with distress and avoidance may \nbe masked by prominent behavioural symptoms (e.g. irritability and angry outbursts \nlinked to avoidance). Therefore, the assessment and treatment of anxiety disorders in \nchildren needs to be undertaken by clinicians who can discriminate normal, develop-\nmentally appropriate worries, fears and shyness from anxiety disorders that signifi-\ncantly impair a child’s functioning, and who can appreciate developmental variations in \nthe presentation of symptoms.\n",
+      "bbox": [
+        61.88999938964844,
+        174.910400390625,
+        436.70001220703125,
+        258.6304016113281
+      ],
+      "text_sha256": "20703bc40df3353b3388fda2dc7e212d6ad20b44b08e3c3b4f971f41710c3fd2"
+    },
+    {
+      "block_id": "page-0577-block-0006",
+      "order": 6,
+      "text": "Clinical guidance\n",
+      "bbox": [
+        61.88999938964844,
+        276.0653991699219,
+        148.67999267578125,
+        289.10040283203125
+      ],
+      "text_sha256": "26764bf139176e7ef99c6ac39bb0a8237d115cd3d9e65e4744b6c80c8263e5a9"
+    },
+    {
+      "block_id": "page-0577-block-0007",
+      "order": 7,
+      "text": "Anxiety symptoms in children and adolescents often improve with age, presumably in \nparallel to the development of the prefrontal cortex and, in particular, executive function. \nHowever, anxiety disorders are distressing and impairing conditions that need to be \ntreated promptly. Chronic stress mediators may have significant impact on brain develop-\nment4 and functional impairment linked to anxiety symptoms may prevent young people \nfrom accessing normative experiences that are critical for social, emotional and cognitive \ndevelopment. Finally, early and effective treatment may prevent continuity of psychopa-\nthology into adulthood, for example, young people with anxiety disorders are three times \nmore likely to have anxiety and depression in adult life compared to non-anxious youths.5\n",
+      "bbox": [
+        61.88999938964844,
+        294.910400390625,
+        436.7098693847656,
+        402.6304016113281
+      ],
+      "text_sha256": "1af906b8a48d670b5d1849c6155b2aadfc46dda2c2e3ccc85bf60e08c8903586"
+    },
+    {
+      "block_id": "page-0577-block-0008",
+      "order": 8,
+      "text": "Guidelines for treatment of anxiety disorders in children and adolescents have been \nmade available in the UK and the United States. NICE guidelines focus on the treatment \nof social anxiety disorder in children and adolescents, suggesting the use of cognitive \nbehavioural therapy (CBT) and cautioning against the routine use of pharmacological \ntreatment for social anxiety in this age group.6 Guidelines from the American Academy \nof Child and Adolescent Psychiatry (AACAP) cover the treatment of all non-OCD, non-\nPTSD anxiety disorders.7 AACAP guidelines suggest multimodal treatment including \npsychoeducation, psychotherapy (e.g. a 12-session course of exposure-based CBT), and \npharmacotherapy. Drug treatment is endorsed for moderate-to-severe anxiety symp-\ntoms, when impairment makes participation in psychotherapy difficult or when psy-\nchotherapy leads to only partial response.\n",
+      "bbox": [
+        61.88591003417969,
+        402.910400390625,
+        436.6999816894531,
+        534.6304321289062
+      ],
+      "text_sha256": "8d5b9e3a26cc12afb7cce061742b64b60caadf075f2cb42a60aaadbf2a91f568"
+    },
+    {
+      "block_id": "page-0577-block-0009",
+      "order": 9,
+      "text": "Prescribing for anxiety disorders in children and adolescents\n",
+      "bbox": [
+        61.88999938964844,
+        552.0654296875,
+        372.3980712890625,
+        565.1004028320312
+      ],
+      "text_sha256": "fb950287e87fce272653be221e30ac13a0068221285e9a99b19d373693324c01"
+    },
+    {
+      "block_id": "page-0577-block-0010",
+      "order": 10,
+      "text": "Before prescribing\n",
+      "bbox": [
+        61.88999938964844,
+        571.0004272460938,
+        148.00999450683594,
+        582.8504028320312
+      ],
+      "text_sha256": "ed5191c8eb6616a49cb0169f22fb5d44ff3d47a2dd51b206d7f4ac8d1f365a8e"
+    },
+    {
+      "block_id": "page-0577-block-0011",
+      "order": 11,
+      "text": "■\n■Exclude other diagnoses. Anxiety symptoms can be mimicked by a range of psychi-\n",
+      "bbox": [
+        61.88990020751953,
+        588.67041015625,
+        433.90020751953125,
+        600.6304321289062
+      ],
+      "text_sha256": "c9943f3d4565f5a3c828b549d09bbacbe82d4a801c81c2bdb2d9bb6b4cacc8b7"
+    },
+    {
+      "block_id": "page-0577-block-0012",
+      "order": 12,
+      "text": "atric disorders including depression (inattention, sleep problems), bipolar disor-\nder (irritability, sleep problems, restlessness), oppositional-defiant disorder \n",
+      "bbox": [
+        70.88999938964844,
+        600.910400390625,
+        436.6901550292969,
+        624.6304321289062
+      ],
+      "text_sha256": "ba0d2e6589e72533b18d8373b3a9250f2e7c8ecda35d33b3df31f22fd69702d1"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

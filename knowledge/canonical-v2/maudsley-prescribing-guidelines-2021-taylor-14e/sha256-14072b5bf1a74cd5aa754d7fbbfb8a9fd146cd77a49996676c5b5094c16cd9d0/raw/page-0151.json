@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0151",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 151,
+  "source_page_index": 150,
+  "source_page_display": 151,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "130    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\n\t64.\t Tek C, et al. A randomized, double-blind, placebo-controlled pilot study of naltrexone to counteract antipsychotic-associated weight gain: \nproof of concept. J Clin Psychopharmacol 2014; 34:608–612.\n\t65.\t Sjostrom L, et al. Randomised placebo-controlled trial of orlistat for weight loss and prevention of weight regain in obese patients. European \nMulticentre Orlistat Study Group. Lancet 1998; 352:167–172.\n\t66.\t Hilger E, et al. The effect of orlistat on plasma levels of psychotropic drugs in patients with long-term psychopharmacotherapy. J Clin \nPsychopharmacol 2002; 22:68–70.\n\t67.\t Pavlovic ZM. Orlistat in the treatment of clozapine-induced hyperglycemia and weight gain. Eur Psychiatry 2005; 20:520.\n\t68.\t Carpenter LL, et al. A case series describing orlistat use in patients on psychotropic medications. Med Health R I 2004; 87:375–377.\n\t69.\t Joffe G, et al. Orlistat in clozapine- or olanzapine-treated patients with overweight or obesity: a 16-week randomized, double-blind, placebo-\ncontrolled trial. J Clin Psychiatry 2008; 69:706–711.\n\t70.\t Tchoukhine E, et al. Orlistat in clozapine- or olanzapine treated patients with overweight or obesity: a 16-week open-label extension phase \nand both phases of a randomized controlled trial. J Clin Psychiatry 2011; 72:326–330.\n\t71.\t Chukhin E, et al. In a randomized placebo-controlled add-on study orlistat significantly reduced clozapine-induced constipation. \nIntClinPsychopharmacol 2013; 28:67–70.\n\t72.\t Amrami-Weizman A, et al. The effect of reboxetine co-administration with olanzapine on metabolic and endocrine profile in schizophrenia \npatients. Psychopharmacology 2013; 230:23–27.\n\t73.\t Correll CU, et al. Efficacy for psychopathology and body weight and safety of topiramate-antipsychotic cotreatment in patients with schizo-\nphrenia spectrum disorders: results from a meta-analysis of randomized controlled trials. J Clin Psychiatry 2016; 77:e746–e756.\n\t74.\t Zheng W, et al. Efficacy and safety of adjunctive topiramate for schizophrenia: a meta-analysis of randomized controlled trials. Acta Psychiatr \nScand 2016; 134:385–398.\n\t75.\t Buoli M, et al. The use of zonisamide for the treatment of psychiatric disorders: a systematic review. Clin Neuropharmacol 2017; \n40:85–92.\n",
+  "raw_text_sha256": "7e1ad099ac370190ec65bcf6f83e88a6b717cf0bed4167e759eafd58f179d271",
+  "coordinates_sha256": "9397759971f2b1f31b77979865e8afeae4be214bffa3165fd241215c5eb3c519",
+  "block_sequence_sha256": "5ca7f5b7eaa8eb3d84a27de75a075cf8b5431939281b0933448927a604146eaf",
+  "blocks": [
+    {
+      "block_id": "page-0151-block-0000",
+      "order": 0,
+      "text": "130    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "b03b5ad0f189cd4fb945700dcce84ec9f34bd64d0ef0ea7bfca4da849e6702c3"
+    },
+    {
+      "block_id": "page-0151-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0151-block-0002",
+      "order": 2,
+      "text": "\t64.\t Tek C, et al. A randomized, double-blind, placebo-controlled pilot study of naltrexone to counteract antipsychotic-associated weight gain: \n",
+      "bbox": [
+        61.88909912109375,
+        63.2694091796875,
+        435.5569763183594,
+        70.30140686035156
+      ],
+      "text_sha256": "baf1722930b3e63e63e67702fcc480e27e12eaf51ad31d919b42a426436f6eb0"
+    },
+    {
+      "block_id": "page-0151-block-0003",
+      "order": 3,
+      "text": "proof of concept. J Clin Psychopharmacol 2014; 34:608–612.\n\t65.\t Sjostrom L, et al. Randomised placebo-controlled trial of orlistat for weight loss and prevention of weight regain in obese patients. European \n",
+      "bbox": [
+        61.895103454589844,
+        72.12541198730469,
+        435.5210876464844,
+        88.30140686035156
+      ],
+      "text_sha256": "0c764268f3187b822b9583fac03a47afffa98f1c93b606961f97d1cc5b75f154"
+    },
+    {
+      "block_id": "page-0151-block-0004",
+      "order": 4,
+      "text": "Multicentre Orlistat Study Group. Lancet 1998; 352:167–172.\n\t66.\t Hilger E, et al. The effect of orlistat on plasma levels of psychotropic drugs in patients with long-term psychopharmacotherapy. J Clin \n",
+      "bbox": [
+        61.901100158691406,
+        90.12541198730469,
+        435.5632019042969,
+        106.30140686035156
+      ],
+      "text_sha256": "4ed3221d044135d3ce08abb3853e946ee57a86b2bbbdcd59833a0a1b72a2a316"
+    },
+    {
+      "block_id": "page-0151-block-0005",
+      "order": 5,
+      "text": "Psychopharmacol 2002; 22:68–70.\n\t67.\t Pavlovic ZM. Orlistat in the treatment of clozapine-induced hyperglycemia and weight gain. Eur Psychiatry 2005; 20:520.\n\t68.\t Carpenter LL, et al. A case series describing orlistat use in patients on psychotropic medications. Med Health R I 2004; 87:375–377.\n\t69.\t Joffe G, et al. Orlistat in clozapine- or olanzapine-treated patients with overweight or obesity: a 16-week randomized, double-blind, placebo-\n",
+      "bbox": [
+        61.90709686279297,
+        108.12541198730469,
+        433.96099853515625,
+        142.30140686035156
+      ],
+      "text_sha256": "65d8ad1031abf749f271301ae97f42bfa609873f0b7bfc30b4019f0739d7d787"
+    },
+    {
+      "block_id": "page-0151-block-0006",
+      "order": 6,
+      "text": "controlled trial. J Clin Psychiatry 2008; 69:706–711.\n\t70.\t Tchoukhine E, et al. Orlistat in clozapine- or olanzapine treated patients with overweight or obesity: a 16-week open-label extension phase \n",
+      "bbox": [
+        61.92510223388672,
+        144.1254119873047,
+        435.5749816894531,
+        160.30140686035156
+      ],
+      "text_sha256": "f372cbffbe7ec21e92111875ecfb3dc22740609ea9cc50e1ba8ff038570d442e"
+    },
+    {
+      "block_id": "page-0151-block-0007",
+      "order": 7,
+      "text": "and both phases of a randomized controlled trial. J Clin Psychiatry 2011; 72:326–330.\n\t71.\t Chukhin E, et al. In a randomized placebo-controlled add-on study orlistat significantly reduced clozapine-induced constipation. \n",
+      "bbox": [
+        61.93109893798828,
+        162.1254119873047,
+        435.5751037597656,
+        178.30140686035156
+      ],
+      "text_sha256": "5b7fc9241cc123fe8b78ef7176d4d9ec5cd50dba470418e0c8ab392d910018d5"
+    },
+    {
+      "block_id": "page-0151-block-0008",
+      "order": 8,
+      "text": "IntClinPsychopharmacol 2013; 28:67–70.\n\t72.\t Amrami-Weizman A, et al. The effect of reboxetine co-administration with olanzapine on metabolic and endocrine profile in schizophrenia \n",
+      "bbox": [
+        61.937103271484375,
+        180.1254119873047,
+        435.6291198730469,
+        196.30140686035156
+      ],
+      "text_sha256": "5d2c3d7d92362769c6a8542d807ef993fca4df1adb83dd5b31a0efead66c5c80"
+    },
+    {
+      "block_id": "page-0151-block-0009",
+      "order": 9,
+      "text": "patients. Psychopharmacology 2013; 230:23–27.\n\t73.\t Correll CU, et al. Efficacy for psychopathology and body weight and safety of topiramate-antipsychotic cotreatment in patients with schizo-\n",
+      "bbox": [
+        61.94309997558594,
+        198.1254119873047,
+        433.90704345703125,
+        214.30140686035156
+      ],
+      "text_sha256": "148496bd264a3e6395f4a93b9bfb857bc0a8ef79b342e5bc53bc237678f324ab"
+    },
+    {
+      "block_id": "page-0151-block-0010",
+      "order": 10,
+      "text": "phrenia spectrum disorders: results from a meta-analysis of randomized controlled trials. J Clin Psychiatry 2016; 77:e746–e756.\n\t74.\t Zheng W, et al. Efficacy and safety of adjunctive topiramate for schizophrenia: a meta-analysis of randomized controlled trials. Acta Psychiatr \n",
+      "bbox": [
+        61.9490966796875,
+        216.1254119873047,
+        435.6470642089844,
+        232.30140686035156
+      ],
+      "text_sha256": "f12d12dfbaa77c0388663ede4bdb0fc3082864bdc40bbdb9736e538b6b666c5c"
+    },
+    {
+      "block_id": "page-0151-block-0011",
+      "order": 11,
+      "text": "Scand 2016; 134:385–398.\n\t75.\t Buoli M, et al. The use of zonisamide for the treatment of psychiatric disorders: a systematic review. Clin Neuropharmacol 2017; \n",
+      "bbox": [
+        61.955101013183594,
+        234.1254119873047,
+        435.5871887207031,
+        250.30140686035156
+      ],
+      "text_sha256": "1608d4c024539eb94564eb872ff94b657f34df651f72eada8f76cbae6939e246"
+    },
+    {
+      "block_id": "page-0151-block-0012",
+      "order": 12,
+      "text": "40:85–92.\n",
+      "bbox": [
+        72.95909881591797,
+        252.1254119873047,
+        99.31109619140625,
+        259.3014221191406
+      ],
+      "text_sha256": "e74fd1643a1a6705361700d92eea6c2a5424297bd0dfdf5a676742a0753041bc"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

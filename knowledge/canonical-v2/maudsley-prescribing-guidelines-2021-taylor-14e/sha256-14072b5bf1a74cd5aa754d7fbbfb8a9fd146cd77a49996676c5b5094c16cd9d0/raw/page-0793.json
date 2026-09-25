@@ -1,0 +1,287 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0793",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 793,
+  "source_page_index": 792,
+  "source_page_display": 793,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "772    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  9\nDrug\nDose\nAdverse effects\nNotes\nCholinesterase Inhibitors\nDonepezil75\nOral 5mg od\nReasonably well \ntolerated compared \nwith placebo. Nausea, \nvomiting and \ndiarrhoea are the most \ncommon adverse \neffects reported\nVery limited evidence. In the small \nstudies where it has been used, clinical \nbenefits have not been convincing. \nNot recommended\nRivastigmine76–78\nOral 1.5–6mg \nbd\nA study which added \nrivastigmine to usual \ncare (haloperidol), \nshowed that \nrivastigmine did not \ndecrease the duration \nof delirium but in fact \nwas associated with a \nmore severe type of \ndelirium, a longer stay \nin intensive care and \nhigher mortality \ncompared with placebo\nUse of rivastigmine to treat delirium in \ncritically ill patients is not \nrecommended. May have a place in \ndelirium prevention34\nOther Drugs\nTrazodone4,7\n25–150mg \nnocte\nOver sedation is \nproblematic\nLimited experience – used only in \nuncontrolled studies. Not \nrecommended\nSodium valproate79–82\nOral/IM/IV\n250mg bd \nincreased to \naround \n1500mg/day, or \n20mg/kg/day\nTarget plasma \nlevels have not \nbeen validated \nfor this \nindication. Note \nthat physically \nill patients may \nhave altered \nalbumin \nbinding of \nvalproate.\nIV loading \ndoses have also \nbeen used in \nICU settings\nContraindicated in \nactive liver disease\nMonitor for \nthrombocytopaenia \n(more common in \ncritically ill patients)\nSome case reports of use where \nantipsychotics and/or benzodiazepines \nare ineffective; otherwise not \nrecommended\nbd, bis die (twice a day); nocte, at night; od, omne in die (once a day)\nTable 9.1 (Continued)\n",
+  "raw_text_sha256": "f4f16246b508d9cab5ff106b988f67efcca782f788fac0abe477c3dd8e66ecfc",
+  "coordinates_sha256": "291bcb2db46e7f6337dc223c776423f8f03d7b52758818d5585a123bbf775f49",
+  "block_sequence_sha256": "7ad361f593912f54e5875f5ab899e26563e6989708e3b637ac28ef9de1fb61a4",
+  "blocks": [
+    {
+      "block_id": "page-0793-block-0000",
+      "order": 0,
+      "text": "772    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "cb53b61e92df44c5283db9dd72bb079f6cd1ee7530fc09d3f407a4248691b2cd"
+    },
+    {
+      "block_id": "page-0793-block-0001",
+      "order": 1,
+      "text": "CHAPTER  9\n",
+      "bbox": [
+        18.520000457763672,
+        597.6024780273438,
+        28.0,
+        641.1704711914062
+      ],
+      "text_sha256": "2f213d231c74a11904a8da09025a8eefa6dceb4a2df848af43d9c4d19beb9596"
+    },
+    {
+      "block_id": "page-0793-block-0002",
+      "order": 2,
+      "text": "Drug\nDose\nAdverse effects\nNotes\n",
+      "bbox": [
+        61.889801025390625,
+        90.32289123535156,
+        328.4173278808594,
+        99.21038818359375
+      ],
+      "text_sha256": "60a78b8cd9dc096a6d60f46505aaad1abcc6d57d3170f46fec2c4ebda10c2e70"
+    },
+    {
+      "block_id": "page-0793-block-0003",
+      "order": 3,
+      "text": "Cholinesterase Inhibitors\n",
+      "bbox": [
+        61.88978576660156,
+        110.55787658691406,
+        149.3997802734375,
+        119.44537353515625
+      ],
+      "text_sha256": "a2f5a5d25715e1fa46a6953d2fd61b0c79cc83aa0bde59cfd449b2aa599f94f0"
+    },
+    {
+      "block_id": "page-0793-block-0004",
+      "order": 4,
+      "text": "Donepezil75\nOral 5mg od\nReasonably well \ntolerated compared \nwith placebo. Nausea, \nvomiting and \ndiarrhoea are the most \ncommon adverse \neffects reported\n",
+      "bbox": [
+        61.88978576660156,
+        130.86036682128906,
+        298.07696533203125,
+        199.55535888671875
+      ],
+      "text_sha256": "354e861cf289d2bf54edc1b9ec72fe722dbabbd025ab2f51d45f9f8e6e7078b1"
+    },
+    {
+      "block_id": "page-0793-block-0005",
+      "order": 5,
+      "text": "Very limited evidence. In the small \nstudies where it has been used, clinical \nbenefits have not been convincing. \nNot recommended\n",
+      "bbox": [
+        307.9994812011719,
+        130.8478546142578,
+        433.7220764160156,
+        169.5478515625
+      ],
+      "text_sha256": "353a9e2f3a1a1b649d3348d3ca662caf464a7600e6f29b7dc3fd1aadcb767aaf"
+    },
+    {
+      "block_id": "page-0793-block-0006",
+      "order": 6,
+      "text": "Rivastigmine76–78\nOral 1.5–6mg \nbd\n",
+      "bbox": [
+        61.886993408203125,
+        208.9678497314453,
+        206.1494903564453,
+        227.69290161132812
+      ],
+      "text_sha256": "1970057d515b3e4522591bd8f2fc781a63c2e52d11a48f7aab85b5097b5cddb1"
+    },
+    {
+      "block_id": "page-0793-block-0007",
+      "order": 7,
+      "text": "A study which added \nrivastigmine to usual \ncare (haloperidol), \nshowed that \nrivastigmine did not \ndecrease the duration \nof delirium but in fact \nwas associated with a \nmore severe type of \ndelirium, a longer stay \nin intensive care and \nhigher mortality \ncompared with placebo\n",
+      "bbox": [
+        223.38449096679688,
+        208.98789978027344,
+        295.6770324707031,
+        337.6653747558594
+      ],
+      "text_sha256": "47b2e4a3af1e61fc4fd569b1ed06b633c3b5e2b83021409d5cd1f6bf992a316a"
+    },
+    {
+      "block_id": "page-0793-block-0008",
+      "order": 8,
+      "text": "Use of rivastigmine to treat delirium in \ncritically ill patients is not \nrecommended. May have a place in \ndelirium prevention34\n",
+      "bbox": [
+        307.9994812011719,
+        208.95787048339844,
+        432.4470520019531,
+        247.65786743164062
+      ],
+      "text_sha256": "2b1c50caac752c6a4359c0c6dd528185277baa15511406ac4e886906d1e7344e"
+    },
+    {
+      "block_id": "page-0793-block-0009",
+      "order": 9,
+      "text": "Other Drugs\n",
+      "bbox": [
+        61.889801025390625,
+        347.0428771972656,
+        105.22480010986328,
+        355.9303894042969
+      ],
+      "text_sha256": "8f020a617efd7e582a770b951aa5d395f3de857492449f0572a7269e1ef958a5"
+    },
+    {
+      "block_id": "page-0793-block-0010",
+      "order": 10,
+      "text": "Trazodone4,7\n25–150mg \nnocte\n",
+      "bbox": [
+        61.889801025390625,
+        367.34539794921875,
+        196.99209594726562,
+        386.0528869628906
+      ],
+      "text_sha256": "208208f33ec34ca2d9e2550f1843699ca65454e4ea4b8f6b4fa07a1a5806d5e7"
+    },
+    {
+      "block_id": "page-0793-block-0011",
+      "order": 11,
+      "text": "Over sedation is \nproblematic\n",
+      "bbox": [
+        223.3845977783203,
+        367.347900390625,
+        276.30462646484375,
+        386.0528869628906
+      ],
+      "text_sha256": "b6bcc4c03d08d010e2a258379d11dc281b351bd9a3db06f2cf5702c4dd9e5955"
+    },
+    {
+      "block_id": "page-0793-block-0012",
+      "order": 12,
+      "text": "Limited experience – used only in \nuncontrolled studies. Not \nrecommended\n",
+      "bbox": [
+        307.9996032714844,
+        367.347900390625,
+        415.9246520996094,
+        396.0503845214844
+      ],
+      "text_sha256": "1757238a4f6da40f857cafe62c89eb04f432ac79191565001b9c0cb60b66d317"
+    },
+    {
+      "block_id": "page-0793-block-0013",
+      "order": 13,
+      "text": "Sodium valproate79–82\nOral/IM/IV\n",
+      "bbox": [
+        61.887115478515625,
+        405.47039794921875,
+        191.9670867919922,
+        414.1803894042969
+      ],
+      "text_sha256": "e1bb2b413b5529783e2c7267b19b10665223b1b9b18c52ed1ea813701f1eb80f"
+    },
+    {
+      "block_id": "page-0793-block-0014",
+      "order": 14,
+      "text": "250mg bd \nincreased to \naround \n1500mg/day, or \n20mg/kg/day\n",
+      "bbox": [
+        159.8896026611328,
+        418.47039794921875,
+        212.5546112060547,
+        467.1678771972656
+      ],
+      "text_sha256": "c8bcf78c1756c126cf86bef0a3fc4ae839e879a69aa1f56e54117a486dbfc092"
+    },
+    {
+      "block_id": "page-0793-block-0015",
+      "order": 15,
+      "text": "Target plasma \nlevels have not \nbeen validated \nfor this \nindication. Note \nthat physically \nill patients may \nhave altered \nalbumin \nbinding of \nvalproate.\n",
+      "bbox": [
+        159.8896026611328,
+        471.4578857421875,
+        212.8170928955078,
+        580.140380859375
+      ],
+      "text_sha256": "bf838be47740f5bd719857695f7aa4ddea499eb1e3acb9929b2237919a41cbe5"
+    },
+    {
+      "block_id": "page-0793-block-0016",
+      "order": 16,
+      "text": "IV loading \ndoses have also \nbeen used in \nICU settings\n",
+      "bbox": [
+        159.8896026611328,
+        584.4302978515625,
+        211.5720977783203,
+        623.13037109375
+      ],
+      "text_sha256": "8ae8db9b1da7ec53e5461031733b0c1ebbf1f15e3097a3b1eab3177afc713d30"
+    },
+    {
+      "block_id": "page-0793-block-0017",
+      "order": 17,
+      "text": "Contraindicated in \nactive liver disease\n",
+      "bbox": [
+        223.3845977783203,
+        405.42034912109375,
+        284.64459228515625,
+        424.1253356933594
+      ],
+      "text_sha256": "7ed926315eb3084cc8ba83c50018d042c1d6ea1393e711b131b18c25c13b689b"
+    },
+    {
+      "block_id": "page-0793-block-0018",
+      "order": 18,
+      "text": "Monitor for \nthrombocytopaenia \n(more common in \ncritically ill patients)\n",
+      "bbox": [
+        223.3845977783203,
+        428.41534423828125,
+        287.8396301269531,
+        467.1153259277344
+      ],
+      "text_sha256": "f5bcb850ffec64123d74dba3fa2783649a345b5d31c3525a7da22cb2463f248c"
+    },
+    {
+      "block_id": "page-0793-block-0019",
+      "order": 19,
+      "text": "Some case reports of use where \nantipsychotics and/or benzodiazepines \nare ineffective; otherwise not \nrecommended\n",
+      "bbox": [
+        307.9996032714844,
+        405.40533447265625,
+        432.604736328125,
+        444.1053161621094
+      ],
+      "text_sha256": "e741d843938b21f948d0927fd8b509124a02be4e2ce6c5b2a543f02b210f1bb8"
+    },
+    {
+      "block_id": "page-0793-block-0020",
+      "order": 20,
+      "text": "bd, bis die (twice a day); nocte, at night; od, omne in die (once a day)\n",
+      "bbox": [
+        61.887115478515625,
+        630.6453247070312,
+        284.037109375,
+        639.3528442382812
+      ],
+      "text_sha256": "17663a42f97b8f874c05a9e24e48181b721e7433c2d2bfa75bc8a84a9e75e47c"
+    },
+    {
+      "block_id": "page-0793-block-0021",
+      "order": 21,
+      "text": "Table 9.1 (Continued)\n",
+      "bbox": [
+        67.88980102539062,
+        70.08796691894531,
+        138.34478759765625,
+        78.9754638671875
+      ],
+      "text_sha256": "5d8881270f655c47a62e4b8f943924c6e2e0e3cb091d43a0eacabaa7642993bd"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,899 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0594",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 594,
+  "source_page_index": 593,
+  "source_page_display": 594,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Table 5.6  Prescribing in attention deficit hyperactivity disorder.\nMedication\nOnset and duration of \naction\nDose\nNotes\nRecommended \nmonitoring/general notes\nMethylphenidate \nimmediate release\nBranded products (Ritalin, \nMedikinet, Tranquilyn) \nand various generic \npreparations available33–35\nOnset: 20–60 minutes\nDuration: 2–4 hours\nInitially 5–10mg daily titrated up in weekly \nincrements of 5–10mg, to a maximum of \n2.1mg/kg/day in divided doses. Licensed \nmaximum dose 60mg daily (or after \nspecialist review up to 90mg daily N.B. \nunlicensed)1\nMethylphenidate usually first-line \ntreatment in ADHD. Generally \nwell tolerated36\nFor methylphenidate, \ndexamfetamine and \nlisdexamfetamine:\n■\n■Blood pressure37\n■\n■Pulse\n■\n■Height\n■\n■Weight\nMonitor for insomnia, mood \nand appetite change and \nthe development of tics,38 \nalthough some evidence \nsuggests tics are not \nassociated with \npsychostimulants39 \nDiscontinue if no benefits \nseen in 1 month \nControlled Drug\nMethylphenidate\nmodified release*\nAn afternoon dose of immediate \nrelease methylphenidate may be \nnecessary in some children to \noptimise treatment\nConcerta XL33,34,40–42\nBioequivalent versions of \nConcerta XL:\nMatoride XL, Xenidate XL, \nXenidate XL, Delmosart \nmodified release\nOnset: 30 minutes–2 hours\nDuration: 12 hours\nInitially 18mg in the morning, titrated up to \na licensed maximum dose of 54mg daily (or \nafter specialist review up to 108mg daily \nN.B. unlicensed)\n18mg = 15mg methylphenidate immediate \nrelease\nConsists of an immediate-release \ncomponent (22% of the dose) \nand a modified-release \ncomponent (78% of the dose)\nEquasym XL43,44\nOnset: 20–60 minutes\nDuration: 8 hours\nInitially 10mg in the morning, titrated up to \na licensed maximum dose of 60mg daily\nConsists of an immediate-release \ncomponent (30% of the dose) and \na modified-release component \n(70% of the dose). Capsules can \nbe opened and sprinkled\nMedikinet XL\nOnset: 20–60 minutes\nDuration: up to 8 hours\nDose as for Equasym XL\nConsists of an immediate-release \ncomponent (50% of the dose) \nand a modified-release \ncomponent (50% of the dose).\nCapsules can be opened and \nsprinkled45\n(Continued)\n",
+  "raw_text_sha256": "2618bb3aba2795c2eb1b2fbed9bc4ec407ad4a641666a1488793dfa495a4dc14",
+  "coordinates_sha256": "84f7c2407bb763df48b573510927366f7f62f1dcc5df75a3a10cc24a6c0fdafb",
+  "block_sequence_sha256": "3927f2f7aa3fbbe72e97f2df4dcf0294a1106c40937fdf63ded98a05026b7452",
+  "blocks": [
+    {
+      "block_id": "page-0594-block-0000",
+      "order": 0,
+      "text": "Table 5.6  Prescribing in attention deficit hyperactivity disorder.\n",
+      "bbox": [
+        53.73749923706055,
+        404.821533203125,
+        62.625,
+        606.6539916992188
+      ],
+      "text_sha256": "8aaf9718a50de4da535eb50cfc2d071393b976f552f9228ddd64528feff6d267"
+    },
+    {
+      "block_id": "page-0594-block-0001",
+      "order": 1,
+      "text": "Medication\nOnset and duration of \n",
+      "bbox": [
+        73.86500549316406,
+        445.1489562988281,
+        92.75,
+        612.6539916992188
+      ],
+      "text_sha256": "249d9116f7aa1909fc82fa6994e689eda576e19d63c364fd211530554ae82935"
+    },
+    {
+      "block_id": "page-0594-block-0002",
+      "order": 2,
+      "text": "action\nDose\nNotes\nRecommended \n",
+      "bbox": [
+        73.86500549316406,
+        105.9089584350586,
+        92.75,
+        521.0789794921875
+      ],
+      "text_sha256": "5ff48f0fa10de5b92d40969839ca76707d94e8e630a5b46cb7e23298e6458375"
+    },
+    {
+      "block_id": "page-0594-block-0003",
+      "order": 3,
+      "text": "monitoring/general notes\n",
+      "bbox": [
+        83.86250305175781,
+        69.23390197753906,
+        92.75,
+        160.08148193359375
+      ],
+      "text_sha256": "c7de4acb37fc65c9292e176280624160599bab084cbaf51eaebe094e8ee4194b"
+    },
+    {
+      "block_id": "page-0594-block-0004",
+      "order": 4,
+      "text": "Methylphenidate \n",
+      "bbox": [
+        101.99000549316406,
+        549.72900390625,
+        110.87750244140625,
+        612.6614990234375
+      ],
+      "text_sha256": "0a9c4018dc1b34660b2f03f34ad340c8fb208c0defb306d7047f2a533b5284a5"
+    },
+    {
+      "block_id": "page-0594-block-0005",
+      "order": 5,
+      "text": "immediate release\n",
+      "bbox": [
+        111.98750305175781,
+        548.1840209960938,
+        120.875,
+        612.6614990234375
+      ],
+      "text_sha256": "7a9fae69636dd5cac86d8a16461e474cf2fb84ede263ef5f02d2323ef4594c4b"
+    },
+    {
+      "block_id": "page-0594-block-0006",
+      "order": 6,
+      "text": "Branded products (Ritalin, \n",
+      "bbox": [
+        122.16500091552734,
+        528.1890258789062,
+        130.87249755859375,
+        612.6614990234375
+      ],
+      "text_sha256": "4d1877b69ec45a670f7a7f0726a5ca8ef80087f710365d469a01527231d3247f"
+    },
+    {
+      "block_id": "page-0594-block-0007",
+      "order": 7,
+      "text": "Medikinet, Tranquilyn) \n",
+      "bbox": [
+        132.16249084472656,
+        539.5889892578125,
+        140.8699951171875,
+        612.6614990234375
+      ],
+      "text_sha256": "65bc13b6b61b05b041f96fca934b6cf3b3395b37b098d9052e383739e17dc5be"
+    },
+    {
+      "block_id": "page-0594-block-0008",
+      "order": 8,
+      "text": "and various generic \n",
+      "bbox": [
+        142.1599884033203,
+        548.4840087890625,
+        150.86749267578125,
+        612.6614990234375
+      ],
+      "text_sha256": "78a38f002f62dc24b400dc8ee906bf7f7fe6deddd028f71bf9265d31502fed37"
+    },
+    {
+      "block_id": "page-0594-block-0009",
+      "order": 9,
+      "text": "preparations available33–35\n",
+      "bbox": [
+        152.15748596191406,
+        531.2941284179688,
+        160.864990234375,
+        612.6614990234375
+      ],
+      "text_sha256": "ccf658fa6e3e3b9b7e665f4655480e3646d819872b1bf30c92ba94949a547485"
+    },
+    {
+      "block_id": "page-0594-block-0010",
+      "order": 10,
+      "text": "Onset: 20–60 minutes\n",
+      "bbox": [
+        102.1675033569336,
+        450.2247009277344,
+        110.875,
+        521.0772094726562
+      ],
+      "text_sha256": "cd5e3e727e112e7d026b4c2e2a7649e103ee65e991360dae835c05b73972e702"
+    },
+    {
+      "block_id": "page-0594-block-0011",
+      "order": 11,
+      "text": "Duration: 2–4 hours\nInitially 5–10mg daily titrated up in weekly \n",
+      "bbox": [
+        102.1675033569336,
+        291.5696105957031,
+        120.87249755859375,
+        521.0772094726562
+      ],
+      "text_sha256": "06fc5d20cef995651e9c5de8184b244c6894f25d03b16ade8fa709607e069b57"
+    },
+    {
+      "block_id": "page-0594-block-0012",
+      "order": 12,
+      "text": "increments of 5–10mg, to a maximum of \n",
+      "bbox": [
+        112.16500091552734,
+        295.4471740722656,
+        120.87249755859375,
+        429.07470703125
+      ],
+      "text_sha256": "34148ce2a03b058a0b62fd94e43720fb4d405381ceded885b7ec38a0ed8473f5"
+    },
+    {
+      "block_id": "page-0594-block-0013",
+      "order": 13,
+      "text": "2.1mg/kg/day in divided doses. Licensed \nmaximum dose 60mg daily (or after \n",
+      "bbox": [
+        122.1624984741211,
+        298.6195983886719,
+        140.86749267578125,
+        429.07470703125
+      ],
+      "text_sha256": "323a650e8d43bf3ef9420a9deea9c99814a7c0d834efc94a05a88ea8247b5fb5"
+    },
+    {
+      "block_id": "page-0594-block-0014",
+      "order": 14,
+      "text": "specialist review up to 90mg daily N.B. \n",
+      "bbox": [
+        142.15748596191406,
+        303.77215576171875,
+        150.864990234375,
+        429.07470703125
+      ],
+      "text_sha256": "c6481518013a1bdb1a032b0e57da588336a4868628ba719173c082ec4f4c675c"
+    },
+    {
+      "block_id": "page-0594-block-0015",
+      "order": 15,
+      "text": "unlicensed)1\n",
+      "bbox": [
+        152.1549835205078,
+        390.803955078125,
+        160.86248779296875,
+        429.07470703125
+      ],
+      "text_sha256": "554e5036342366d90c801c5802cc0c15453eaa30553b4ad7b0b86cf22c046163"
+    },
+    {
+      "block_id": "page-0594-block-0016",
+      "order": 16,
+      "text": "Methylphenidate usually first-line \n",
+      "bbox": [
+        102.1675033569336,
+        170.15956115722656,
+        110.875,
+        278.0771789550781
+      ],
+      "text_sha256": "fe14e392dbdf080e2f59e6302fe1ada02fc126204afcc0689521d30c48b4a382"
+    },
+    {
+      "block_id": "page-0594-block-0017",
+      "order": 17,
+      "text": "treatment in ADHD. Generally \n",
+      "bbox": [
+        112.16500091552734,
+        180.2921600341797,
+        120.87249755859375,
+        278.0771789550781
+      ],
+      "text_sha256": "2290591798d1be232f5acee275d7c77fa6e1390fbc2ae7e77b2c8708025fdc78"
+    },
+    {
+      "block_id": "page-0594-block-0018",
+      "order": 18,
+      "text": "well tolerated36\n",
+      "bbox": [
+        122.1624984741211,
+        229.4680633544922,
+        130.8699951171875,
+        278.0771789550781
+      ],
+      "text_sha256": "810adb0b0f70e025d1d33ec9688e4aa276f1ec0c0b466a35b325d23237c7dd19"
+    },
+    {
+      "block_id": "page-0594-block-0019",
+      "order": 19,
+      "text": "For methylphenidate, \n",
+      "bbox": [
+        102.1675033569336,
+        90.0722885131836,
+        110.875,
+        160.07720947265625
+      ],
+      "text_sha256": "d99ed53b2807c53d599b4f96eec998d586cecbc44c4bf90abc27fcb3cc639f61"
+    },
+    {
+      "block_id": "page-0594-block-0020",
+      "order": 20,
+      "text": "dexamfetamine and \n",
+      "bbox": [
+        112.16500091552734,
+        94.24227142333984,
+        120.87249755859375,
+        160.07720947265625
+      ],
+      "text_sha256": "98d561fd129f8d01d2d957a3e38673342b5893ebb476fec1053867ef451fd996"
+    },
+    {
+      "block_id": "page-0594-block-0021",
+      "order": 21,
+      "text": "lisdexamfetamine:\n",
+      "bbox": [
+        122.1624984741211,
+        102.1698226928711,
+        130.8699951171875,
+        160.07720947265625
+      ],
+      "text_sha256": "41d250c097365736bd38baa45af599d51593d901a2d7e71dec66e2b141de5b73"
+    },
+    {
+      "block_id": "page-0594-block-0022",
+      "order": 22,
+      "text": "■\n■Blood pressure37\n",
+      "bbox": [
+        132.16749572753906,
+        99.88517761230469,
+        140.875,
+        160.0772705078125
+      ],
+      "text_sha256": "fab7e87e658300e619264974cbde19095c3a7332728b7785285d4fbda52abf64"
+    },
+    {
+      "block_id": "page-0594-block-0023",
+      "order": 23,
+      "text": "■\n■Pulse\n",
+      "bbox": [
+        142.16749572753906,
+        135.32476806640625,
+        150.875,
+        160.0772705078125
+      ],
+      "text_sha256": "61bcd171ae4f27d2752b79b1ad13fa228905a1198caa46c5767fb4b811b3baf0"
+    },
+    {
+      "block_id": "page-0594-block-0024",
+      "order": 24,
+      "text": "■\n■Height\n",
+      "bbox": [
+        152.16749572753906,
+        130.322265625,
+        160.875,
+        160.0772705078125
+      ],
+      "text_sha256": "10f2a5b6fa94f01456c5d544ee6109170b6d7ac76be915d615cfec27c68e62ce"
+    },
+    {
+      "block_id": "page-0594-block-0025",
+      "order": 25,
+      "text": "■\n■Weight\n",
+      "bbox": [
+        162.16749572753906,
+        128.3797607421875,
+        170.875,
+        160.0772705078125
+      ],
+      "text_sha256": "8b52eca9717f337c5888631a93bc4a2c1fe7f09b223983fb3a6b1459256b9b4a"
+    },
+    {
+      "block_id": "page-0594-block-0026",
+      "order": 26,
+      "text": "Monitor for insomnia, mood \n",
+      "bbox": [
+        178.1649932861328,
+        67.1349105834961,
+        186.87249755859375,
+        160.07470703125
+      ],
+      "text_sha256": "c3c428c36c0d81426a43610c1a5115755500c4ea829665faeedbd5940312aacd"
+    },
+    {
+      "block_id": "page-0594-block-0027",
+      "order": 27,
+      "text": "and appetite change and \n",
+      "bbox": [
+        188.16249084472656,
+        77.96480560302734,
+        196.8699951171875,
+        160.07470703125
+      ],
+      "text_sha256": "cba4812d66d2e1fe73cc246df27d8c83bc4b3a7fa47818569ea181cfa8b26fa0"
+    },
+    {
+      "block_id": "page-0594-block-0028",
+      "order": 28,
+      "text": "the development of tics,38 \n",
+      "bbox": [
+        198.1599884033203,
+        75.6258773803711,
+        206.875,
+        160.07470703125
+      ],
+      "text_sha256": "9fedc2b689b6eb9e2a579af824d9b274262f41380630833f439075e32fafe454"
+    },
+    {
+      "block_id": "page-0594-block-0029",
+      "order": 29,
+      "text": "although some evidence \n",
+      "bbox": [
+        208.1649932861328,
+        80.0584945678711,
+        216.87249755859375,
+        160.07586669921875
+      ],
+      "text_sha256": "9a72990ce0c0814fad1b1125b1bfeb1c36ca62920b65b1d5acde17311f7c4e57"
+    },
+    {
+      "block_id": "page-0594-block-0030",
+      "order": 30,
+      "text": "suggests tics are not \n",
+      "bbox": [
+        218.16249084472656,
+        93.1159896850586,
+        226.8699951171875,
+        160.07586669921875
+      ],
+      "text_sha256": "2d412c1201ffda1c7112096c82988996771eead66522ee8b7b5b84518ad5cfad"
+    },
+    {
+      "block_id": "page-0594-block-0031",
+      "order": 31,
+      "text": "associated with \n",
+      "bbox": [
+        228.1599884033203,
+        108.8209457397461,
+        236.86749267578125,
+        160.07586669921875
+      ],
+      "text_sha256": "a104816145ccce392a1219855d7ad93cd948010d1104e28248f28aa8f9a323a4"
+    },
+    {
+      "block_id": "page-0594-block-0032",
+      "order": 32,
+      "text": "psychostimulants39 \n",
+      "bbox": [
+        238.15748596191406,
+        98.5459213256836,
+        246.875,
+        160.07586669921875
+      ],
+      "text_sha256": "17876803e46cd81199a083d33d3ceca56210704c893dbd4c95fcb581a25e6176"
+    },
+    {
+      "block_id": "page-0594-block-0033",
+      "order": 33,
+      "text": "Discontinue if no benefits \n",
+      "bbox": [
+        254.1649932861328,
+        76.3086166381836,
+        262.87249755859375,
+        160.075927734375
+      ],
+      "text_sha256": "b42968673a5aca12c63398b61fb87011e1cf4e2ba58216357afeb00528be5d7b"
+    },
+    {
+      "block_id": "page-0594-block-0034",
+      "order": 34,
+      "text": "seen in 1 month \n",
+      "bbox": [
+        264.1625061035156,
+        105.88851165771484,
+        272.8699951171875,
+        160.075927734375
+      ],
+      "text_sha256": "9d1635ccc450434566b98ce216223649fc2c638e9cc1d3427d6eccf7f846cf9e"
+    },
+    {
+      "block_id": "page-0594-block-0035",
+      "order": 35,
+      "text": "Controlled Drug\n",
+      "bbox": [
+        280.1600036621094,
+        108.52854919433594,
+        288.86749267578125,
+        160.075927734375
+      ],
+      "text_sha256": "8092f182d1ff45d339e3a76615aab9ed563b525d67f43b712bfa19dbd83a4704"
+    },
+    {
+      "block_id": "page-0594-block-0036",
+      "order": 36,
+      "text": "Methylphenidate\n",
+      "bbox": [
+        170.10499572753906,
+        551.8084716796875,
+        178.99249267578125,
+        612.6559448242188
+      ],
+      "text_sha256": "2b57cc52d57b82e213e1106c5d6d092e0d4b195c34ab44621379fecc43a33cc6"
+    },
+    {
+      "block_id": "page-0594-block-0037",
+      "order": 37,
+      "text": "modified release*\n",
+      "bbox": [
+        186.1024932861328,
+        549.8509521484375,
+        194.989990234375,
+        612.6559448242188
+      ],
+      "text_sha256": "79e892b194a8346dea14ccf43638e002bc9be7e5f161fe1fb8f2f0eec93a7e9d"
+    },
+    {
+      "block_id": "page-0594-block-0038",
+      "order": 38,
+      "text": "An afternoon dose of immediate \n",
+      "bbox": [
+        170.2849884033203,
+        171.25831604003906,
+        178.99249267578125,
+        278.0809326171875
+      ],
+      "text_sha256": "67d261e1d947451d571ff2244d3bbf02c6e11d79bf50b0220df165737fd10434"
+    },
+    {
+      "block_id": "page-0594-block-0039",
+      "order": 39,
+      "text": "release methylphenidate may be \n",
+      "bbox": [
+        180.28248596191406,
+        172.79591369628906,
+        188.989990234375,
+        278.0809326171875
+      ],
+      "text_sha256": "8a94d40c735a7e8d555cad0212e715643f62d2f3545cce3bd443e23f1e8e1a5d"
+    },
+    {
+      "block_id": "page-0594-block-0040",
+      "order": 40,
+      "text": "necessary in some children to \n",
+      "bbox": [
+        190.2799835205078,
+        182.3733673095703,
+        198.98748779296875,
+        278.0809326171875
+      ],
+      "text_sha256": "7b5e59517298c03d95da53a497df73afa34d0da986e0cee7492f110c1fe9885f"
+    },
+    {
+      "block_id": "page-0594-block-0041",
+      "order": 41,
+      "text": "optimise treatment\n",
+      "bbox": [
+        200.27748107910156,
+        217.39089965820312,
+        208.9849853515625,
+        278.0809326171875
+      ],
+      "text_sha256": "81e5f945e6983a5433143b8fef3f53dbda296ecf4f07e3224592471068f9b113"
+    },
+    {
+      "block_id": "page-0594-block-0042",
+      "order": 42,
+      "text": "Concerta XL33,34,40–42\n",
+      "bbox": [
+        218.4049835205078,
+        549.4232788085938,
+        227.11248779296875,
+        612.6559448242188
+      ],
+      "text_sha256": "b12be0ca76010eb5a76fa1b564ae82bce0bbc81e19ea98a3db86971d3145ab4a"
+    },
+    {
+      "block_id": "page-0594-block-0043",
+      "order": 43,
+      "text": "Bioequivalent versions of \n",
+      "bbox": [
+        234.41749572753906,
+        531.3914794921875,
+        243.125,
+        612.6539916992188
+      ],
+      "text_sha256": "4f567f26eabed4b790df35c179bbca68223a99d7966ffcb113fb6d506232c916"
+    },
+    {
+      "block_id": "page-0594-block-0044",
+      "order": 44,
+      "text": "Concerta XL:\n",
+      "bbox": [
+        244.4149932861328,
+        571.4039916992188,
+        253.12249755859375,
+        612.6539916992188
+      ],
+      "text_sha256": "de8f0429ad2055911ad62b1ac4f1c97fb4ecbea0da98fe43e31b27b297426174"
+    },
+    {
+      "block_id": "page-0594-block-0045",
+      "order": 45,
+      "text": "Matoride XL, Xenidate XL, \n",
+      "bbox": [
+        260.4125061035156,
+        527.3564453125,
+        269.1199951171875,
+        612.6539916992188
+      ],
+      "text_sha256": "b4e7896f766d8429b6098a966e03158c1250e268b85e06e3bea3605bceda904c"
+    },
+    {
+      "block_id": "page-0594-block-0046",
+      "order": 46,
+      "text": "Xenidate XL, Delmosart \n",
+      "bbox": [
+        270.4100036621094,
+        536.0414428710938,
+        279.11749267578125,
+        612.6539916992188
+      ],
+      "text_sha256": "250f16e99251477d59715320993296041b4c81db0d319f9e16a6ca2371be9687"
+    },
+    {
+      "block_id": "page-0594-block-0047",
+      "order": 47,
+      "text": "modified release\n",
+      "bbox": [
+        280.4075012207031,
+        560.62646484375,
+        289.114990234375,
+        612.6539916992188
+      ],
+      "text_sha256": "cf4c1b442f19b100d307040a3ad2e5af00d325f65a72201ee72c29ae837aec94"
+    },
+    {
+      "block_id": "page-0594-block-0048",
+      "order": 48,
+      "text": "Onset: 30 minutes–2 hours\n",
+      "bbox": [
+        218.4049835205078,
+        434.3865051269531,
+        227.11248779296875,
+        521.0789794921875
+      ],
+      "text_sha256": "6bd45fb09f23bb554e7c24a7c500a356f44059904a4723fdf8ab2499939bf4e2"
+    },
+    {
+      "block_id": "page-0594-block-0049",
+      "order": 49,
+      "text": "Duration: 12 hours\nInitially 18mg in the morning, titrated up to \n",
+      "bbox": [
+        218.4049835205078,
+        287.67132568359375,
+        237.1099853515625,
+        521.0789794921875
+      ],
+      "text_sha256": "3a86f18d765ed8287ca21aa60b79981105cf1a2a9937848d583e846971639039"
+    },
+    {
+      "block_id": "page-0594-block-0050",
+      "order": 50,
+      "text": "a licensed maximum dose of 54mg daily (or \n",
+      "bbox": [
+        228.40248107910156,
+        287.806396484375,
+        237.1099853515625,
+        429.07647705078125
+      ],
+      "text_sha256": "4d74667b22dcb20f06c57f04583e63e0224d3cd7ec73e766ddc1fd816d6d5d95"
+    },
+    {
+      "block_id": "page-0594-block-0051",
+      "order": 51,
+      "text": "after specialist review up to 108mg daily \n",
+      "bbox": [
+        238.3999786376953,
+        297.95391845703125,
+        247.10748291015625,
+        429.07647705078125
+      ],
+      "text_sha256": "9529a93fe7ac6a0a44c0bd5d32eea499747771cf11607a1fa36b169013ff8b3f"
+    },
+    {
+      "block_id": "page-0594-block-0052",
+      "order": 52,
+      "text": "N.B. unlicensed)\n",
+      "bbox": [
+        248.39747619628906,
+        377.8064270019531,
+        257.10498046875,
+        429.07647705078125
+      ],
+      "text_sha256": "99202d753a0cf10f2b2e150a001c98363e9a1cb35699811df7ce1a3f958205e1"
+    },
+    {
+      "block_id": "page-0594-block-0053",
+      "order": 53,
+      "text": "18mg = 15mg methylphenidate immediate \nrelease\n",
+      "bbox": [
+        264.3949890136719,
+        289.141357421875,
+        283.0999755859375,
+        429.07647705078125
+      ],
+      "text_sha256": "04d2acec70ca99e82513455ee679a9be1a8be82bbbe14b53a525d0de447ccc88"
+    },
+    {
+      "block_id": "page-0594-block-0054",
+      "order": 54,
+      "text": "Consists of an immediate-release \n",
+      "bbox": [
+        218.3899688720703,
+        170.70887756347656,
+        227.09747314453125,
+        278.0789794921875
+      ],
+      "text_sha256": "a9f04a006076f7739b0518efd847ef3610713c77ebf019e583986e3f70f71b12"
+    },
+    {
+      "block_id": "page-0594-block-0055",
+      "order": 55,
+      "text": "component (22% of the dose) \n",
+      "bbox": [
+        228.38746643066406,
+        178.8763885498047,
+        237.094970703125,
+        278.0789794921875
+      ],
+      "text_sha256": "0bfd2203a0de3ec2c291f2f940874907bf1ce7f5a3d0dc1531df0e202683764d"
+    },
+    {
+      "block_id": "page-0594-block-0056",
+      "order": 56,
+      "text": "and a modified-release \n",
+      "bbox": [
+        238.3849639892578,
+        203.20640563964844,
+        247.09246826171875,
+        278.0789794921875
+      ],
+      "text_sha256": "e768a6ee69e0c96c758899914270fe72645c9464184a1d668782e26b8d1f0d77"
+    },
+    {
+      "block_id": "page-0594-block-0057",
+      "order": 57,
+      "text": "component (78% of the dose)\n",
+      "bbox": [
+        248.38246154785156,
+        180.9613800048828,
+        257.0899658203125,
+        278.0789794921875
+      ],
+      "text_sha256": "343197e374ac642de325fbd01d55216ce4d07061a9758b5d0f8d0ce95c396fd3"
+    },
+    {
+      "block_id": "page-0594-block-0058",
+      "order": 58,
+      "text": "Equasym XL43,44\nOnset: 20–60 minutes\n",
+      "bbox": [
+        298.5049743652344,
+        450.2247009277344,
+        307.25,
+        612.6539916992188
+      ],
+      "text_sha256": "930269169afb76e3c7f6081b55c2af5ee898cb41a058425f3f80382bc0b7ae3d"
+    },
+    {
+      "block_id": "page-0594-block-0059",
+      "order": 59,
+      "text": "Duration: 8 hours\nInitially 10mg in the morning, titrated up to \n",
+      "bbox": [
+        298.5425109863281,
+        287.6695556640625,
+        317.24749755859375,
+        521.0772094726562
+      ],
+      "text_sha256": "43b082cd12be2153ba0217635aabf0d10907f8ef23a50afe09814fbbc20db57d"
+    },
+    {
+      "block_id": "page-0594-block-0060",
+      "order": 60,
+      "text": "a licensed maximum dose of 60mg daily\nConsists of an immediate-release \n",
+      "bbox": [
+        298.5425109863281,
+        172.7997589111328,
+        317.24749755859375,
+        429.07470703125
+      ],
+      "text_sha256": "a2c8d6fab22474cd1e87310df2c8de71522f7a9418f10e681d7c72d9c4ea422d"
+    },
+    {
+      "block_id": "page-0594-block-0061",
+      "order": 61,
+      "text": "component (30% of the dose) and \n",
+      "bbox": [
+        308.5400085449219,
+        166.72474670410156,
+        317.24749755859375,
+        278.07720947265625
+      ],
+      "text_sha256": "fa05d96a8ffeffde3ca9e31d5a513c88549970b74187f6bd5cdb54c1d507eaac"
+    },
+    {
+      "block_id": "page-0594-block-0062",
+      "order": 62,
+      "text": "a modified-release component \n",
+      "bbox": [
+        318.5375061035156,
+        180.4422149658203,
+        327.2449951171875,
+        278.07720947265625
+      ],
+      "text_sha256": "3c960073fb60bc10a08f93b26c57d68eb2b26d8d3b6e0af51171db4fa2aa6f1c"
+    },
+    {
+      "block_id": "page-0594-block-0063",
+      "order": 63,
+      "text": "(70% of the dose). Capsules can \n",
+      "bbox": [
+        328.5350036621094,
+        173.81227111816406,
+        337.24249267578125,
+        278.07720947265625
+      ],
+      "text_sha256": "d12f955cfa3c71eab8ff1e0ae920ff7e64b5c32696c052413ab89e8783d61d06"
+    },
+    {
+      "block_id": "page-0594-block-0064",
+      "order": 64,
+      "text": "be opened and sprinkled\n",
+      "bbox": [
+        338.5325012207031,
+        200.36219787597656,
+        347.239990234375,
+        278.07720947265625
+      ],
+      "text_sha256": "b8a22dc864ced7378df5509325c066ea748a6d61bb34e1338b2a8c745b4150bd"
+    },
+    {
+      "block_id": "page-0594-block-0065",
+      "order": 65,
+      "text": "Medikinet XL\nOnset: 20–60 minutes\n",
+      "bbox": [
+        356.6600036621094,
+        450.2247314453125,
+        365.36749267578125,
+        612.6522216796875
+      ],
+      "text_sha256": "cfb42d6f172e2e620e851b7afe444da78aad406dff0d6747974614a56f1e01bf"
+    },
+    {
+      "block_id": "page-0594-block-0066",
+      "order": 66,
+      "text": "Duration: up to 8 hours\nDose as for Equasym XL\nConsists of an immediate-release \n",
+      "bbox": [
+        356.6600036621094,
+        170.70716857910156,
+        375.364990234375,
+        521.0772094726562
+      ],
+      "text_sha256": "f86ea3ba380702e2a03e2a06f27519bb443d8589177d065da9885ee0467cfe08"
+    },
+    {
+      "block_id": "page-0594-block-0067",
+      "order": 67,
+      "text": "component (50% of the dose) \n",
+      "bbox": [
+        366.6575012207031,
+        178.87461853027344,
+        375.364990234375,
+        278.07720947265625
+      ],
+      "text_sha256": "1d9cdaf41fb9b9d7d3787d5d1d08672d5cdb27f9fe925c61cf1c7b73cbc0a32c"
+    },
+    {
+      "block_id": "page-0594-block-0068",
+      "order": 68,
+      "text": "and a modified-release \n",
+      "bbox": [
+        376.6549987792969,
+        203.2046356201172,
+        385.36248779296875,
+        278.07720947265625
+      ],
+      "text_sha256": "e768a6ee69e0c96c758899914270fe72645c9464184a1d668782e26b8d1f0d77"
+    },
+    {
+      "block_id": "page-0594-block-0069",
+      "order": 69,
+      "text": "component (50% of the dose).\n",
+      "bbox": [
+        386.6524963378906,
+        178.87461853027344,
+        395.3599853515625,
+        278.07720947265625
+      ],
+      "text_sha256": "284f7d2d627fe2e654ada366c90e2e3a4725f86010d182b87f34e925eb9c8cfb"
+    },
+    {
+      "block_id": "page-0594-block-0070",
+      "order": 70,
+      "text": "Capsules can be opened and \n",
+      "bbox": [
+        399.6499938964844,
+        183.8695831298828,
+        408.35748291015625,
+        278.07720947265625
+      ],
+      "text_sha256": "80bacb50359ca46c69bbc8cbb9b2f96074afd9f6de81cfa3facbda6dd3b624c4"
+    },
+    {
+      "block_id": "page-0594-block-0071",
+      "order": 71,
+      "text": "sprinkled45\n",
+      "bbox": [
+        409.6474914550781,
+        244.4603729248047,
+        418.35498046875,
+        278.07720947265625
+      ],
+      "text_sha256": "f118bf4dbfe8e547ec4a75c34ca0ad909602ea7de3ac4f980e189e9b868d1487"
+    },
+    {
+      "block_id": "page-0594-block-0072",
+      "order": 72,
+      "text": "(Continued)\n",
+      "bbox": [
+        426.3368835449219,
+        64.3501205444336,
+        435.0893859863281,
+        100.36517333984375
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

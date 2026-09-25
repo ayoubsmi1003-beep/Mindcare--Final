@@ -1,0 +1,14 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0415",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 415,
+  "source_page_index": 414,
+  "repaired_text": "394    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nTable 3.17  Summary of risk of hyponatraemia with antidepressants7,14,46–48\nDrug/drug group\nRisk of Na\nLevel of supporting evidence\nSSRIs\nHigh\nStrong\nSNRIs\nHigh\nStrong\nTricyclics\nModerate\nStrong\nMAOIs\nLow\nWeak\nNaSSas (mirtazapine, mianserin)\nLow\nStrong\nBupropion\nLow\nModerate\nAgomelatine\nLow\nWeak\nMonitoring1,14,15,49–53\nAll patients taking antidepressants should be informed of and observed for signs of \nhyponatraemia (dizziness, nausea, lethargy, confusion, cramps, seizures). The risk is \nhighest in the first 2–4 weeks of starting antidepressants and diminishes over time until \nby 3–6 months the risk is the same as for patients who do not take antidepressants.47,48 \nSerum sodium should be determined (at baseline and 2 and 4 weeks, and then \n3-monthly54) for those at high risk of drug-induced hyponatraemia. High-risk factors \nare as follows:\n■\n■Older age\n■\n■Female sex\n■\n■Major surgery\n■\n■History of hyponatraemia or a low baseline sodium concentration\n■\n■Co-therapy with other drugs known to be associated with hyponatraemia (e.g. diuretics, NSAIDs, antipsychotics, carbamazepine, cancer chemotherapy, calcium antag-\nonists, ACE inhibitors and laxatives)\n■\n■Reduced renal function (GFR < 50mL/min)\n■\n■Medical co-morbidity (e.g. hypothyroidism, diabetes, COPD, hypertension, head\ninjury, CCF, CVA, various cancers)\n■\n■Low body weight\nAge is perhaps the most important risk factor, so for older people (especially women) \nmonitoring is essential.15,47,55,56\nTreatment56\nIt may be possible to manage mild hyponatraemia with fluid restriction.50 Some suggest \nincreasing sodium intake,4 although this is likely to be impractical. If symptoms persist, \nthe antidepressant should be discontinued.\n■\n■The normal range for serum sodium is 136–145mmol/L.\n■\n■If serum sodium is >125mmol/L – monitor sodium daily until normal. Symptoms\ninclude headache, nausea, vomiting, muscle cramps, restlessness, lethargy, confusion \nand disorientation. Consider withdrawing the offending antidepressant.",
+  "repaired_text_sha256": "809e204ba0afd4b040ef100d67dbea0bd25cea5879e14722cc9ed567a8cac132",
+  "raw_text_sha256": "c736c4b3b012b8f329eaaee0077fa48335b34d2c81ba3215807322c8e7b59a4d",
+  "repair_ids": [
+    "repair-000441"
+  ],
+  "raw_file": "raw/page-0415.json"
+}

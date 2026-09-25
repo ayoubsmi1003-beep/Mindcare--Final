@@ -1,0 +1,347 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0921",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 921,
+  "source_page_index": 920,
+  "source_page_display": 921,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "900    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 14\nStage 3 – Assessing medication adherence28,29\nAdherence-enhancing interventions\nIntentional non-adherence\nUnintentional non-adherence\nAdherence therapy for exploring dysfunctional beliefs \nabout medication or the illness, providing information and \ngoal setting. It requires more time and multiple sessions.\nCognitive behavioural therapy to eradicate or control \nthe residual symptoms that prevent adherence. To address \ndysfunctional beliefs about treatment.\nCognitive remediation to help with cognitive deficit in \npsychotic patients and thought disorder.\nMindfulness to help with symptoms.\nMonitor side effects regularly and periodically.\nTherapeutic alliance – patients tend to please their \nclinicians. Non-judgemental attitude and openness on \nclinician’s part allow patients to communicate their \ndysfunctional thoughts and behaviour.\nFamily intervention; psychoeducation and family therapy.\nPairing-up medication – taking with a daily activity. \ne.g. having breakfast, brushing teeth or before \nbedtime.\nUse technology: messaging service, email and \ntelephone.\nPharmacy interventions for those with physical \nimpairment (e.g. opening bottles).\n(Continued)\nAssessments methods\nVariables measured\nAdvantages\nDisadvantages\nDirect (Objective)\nBlood test\nDrug/metabolite plasma \nlevels\nAccurate\nInvasive\nCostly\nInterpersonal variations: fast or \nslow metabolisers\nNot reliable for all drugs (see \ndiscussion in accompanying text)\nOnly a result of zero can be \ndefinitively interpreted\nIndirect (Subjective)\nPill count\nNumber of missing \ntablets\nSimple to use (useful in \nclinical trials)\nLabour-intensive in clinical \npractice\nSubstantial evidence that pill \ncounts grossly underestimate \nlevels of adherence14\nElectronic database-\nclinical/pharmacy \nrecords\nHistory of non-adherence\nPharmacy dispensing and \ncollection records (e.g. \nMedication Possession \nRatio – MPR)\nReadily accessible\nEasy to identify \nnon-adherent patients\nInexpensive\nNon-invasive\nNot reliable evidence for \nmedication being ingested; only \nshows collection and possession\n",
+  "raw_text_sha256": "19fb19ca900f3b7d9bb04e87c9596cbcbcdf37fff33f8b7cb1cdea71e0a3f785",
+  "coordinates_sha256": "7eceae52bbd99728557a3c18952a65f781169d91467602456cdfafbb40dec9fa",
+  "block_sequence_sha256": "0bbf0df40123f84fc25b46dfaccad4b6bfa9235953c301ae5aba4d2e68f094f8",
+  "blocks": [
+    {
+      "block_id": "page-0921-block-0000",
+      "order": 0,
+      "text": "900    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "18d4672d638241d166eb022434588755f0d34877779a14187d151b2620ef32d5"
+    },
+    {
+      "block_id": "page-0921-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        18.520000457763672,
+        338.7405090332031,
+        28.0,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0921-block-0002",
+      "order": 2,
+      "text": "Stage 3 – Assessing medication adherence28,29\n",
+      "bbox": [
+        61.89099884033203,
+        316.1170959472656,
+        274.1056823730469,
+        327.96710205078125
+      ],
+      "text_sha256": "e636d0943ed3cfd670097f958849193815b98b93773ba57596a238e2ea2bc533"
+    },
+    {
+      "block_id": "page-0921-block-0003",
+      "order": 3,
+      "text": "Adherence-enhancing interventions\n",
+      "bbox": [
+        61.889801025390625,
+        82.39967346191406,
+        188.01730346679688,
+        91.28717041015625
+      ],
+      "text_sha256": "72c8ec3aba4af45e44d69e2218c3b3579b27b51651eeba72ba9fc01939a4f74b"
+    },
+    {
+      "block_id": "page-0921-block-0004",
+      "order": 4,
+      "text": "Intentional non-adherence\nUnintentional non-adherence\n",
+      "bbox": [
+        61.889801025390625,
+        102.63465881347656,
+        363.47222900390625,
+        111.52215576171875
+      ],
+      "text_sha256": "6ca400b31914aef2e4ef23683e64d9c1049e955003fde05cf1fad4c35da1c961"
+    },
+    {
+      "block_id": "page-0921-block-0005",
+      "order": 5,
+      "text": "Adherence therapy for exploring dysfunctional beliefs \nabout medication or the illness, providing information and \ngoal setting. It requires more time and multiple sessions.\nCognitive behavioural therapy to eradicate or control \nthe residual symptoms that prevent adherence. To address \ndysfunctional beliefs about treatment.\nCognitive remediation to help with cognitive deficit in \npsychotic patients and thought disorder.\nMindfulness to help with symptoms.\nMonitor side effects regularly and periodically.\nTherapeutic alliance – patients tend to please their \nclinicians. Non-judgemental attitude and openness on \nclinician’s part allow patients to communicate their \ndysfunctional thoughts and behaviour.\nFamily intervention; psychoeducation and family therapy.\n",
+      "bbox": [
+        61.889801025390625,
+        122.75715637207031,
+        251.65478515625,
+        271.609619140625
+      ],
+      "text_sha256": "99d22418c4700f0c18494c28c46b37d488e2c3c5d046d0efca79cdd91f50befa"
+    },
+    {
+      "block_id": "page-0921-block-0006",
+      "order": 6,
+      "text": "Pairing-up medication – taking with a daily activity. \ne.g. having breakfast, brushing teeth or before \nbedtime.\n",
+      "bbox": [
+        259.84478759765625,
+        122.89962005615234,
+        424.15484619140625,
+        151.60211181640625
+      ],
+      "text_sha256": "7265092c2be9b47dd7ec5d085bac1a8c00a295ca4dfa37c8a46b08dc12b389e9"
+    },
+    {
+      "block_id": "page-0921-block-0007",
+      "order": 7,
+      "text": "Use technology: messaging service, email and \ntelephone.\n",
+      "bbox": [
+        259.84478759765625,
+        155.89210510253906,
+        407.7823791503906,
+        174.59710693359375
+      ],
+      "text_sha256": "f0b92563561dc2a29eb263c5efdec97c39b5d8c4e1246a30b47a754c0c650343"
+    },
+    {
+      "block_id": "page-0921-block-0008",
+      "order": 8,
+      "text": "Pharmacy interventions for those with physical \nimpairment (e.g. opening bottles).\n",
+      "bbox": [
+        259.84478759765625,
+        178.7071075439453,
+        419.4598693847656,
+        197.59210205078125
+      ],
+      "text_sha256": "62b06fc8f03b5ade9e6b9f9b04d19de9bccf5da11f8b8ef37ad030f442d98c68"
+    },
+    {
+      "block_id": "page-0921-block-0009",
+      "order": 9,
+      "text": "(Continued)\n",
+      "bbox": [
+        61.889801025390625,
+        62.599613189697266,
+        99.40478515625,
+        71.35211181640625
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0921-block-0010",
+      "order": 10,
+      "text": "Assessments methods\nVariables measured\nAdvantages\nDisadvantages\n",
+      "bbox": [
+        61.89099884033203,
+        342.71966552734375,
+        374.34100341796875,
+        351.607177734375
+      ],
+      "text_sha256": "80fd71276548fb2e3c3188c719eb554d314f635eb88a21f328cf905edb85b06d"
+    },
+    {
+      "block_id": "page-0921-block-0011",
+      "order": 11,
+      "text": "Direct (Objective)\n",
+      "bbox": [
+        61.8909912109375,
+        362.95465087890625,
+        123.01598358154297,
+        371.8421630859375
+      ],
+      "text_sha256": "dd69d3ad443374891956f0cb94d04e459579e60b2f640f3c3d339b2176728970"
+    },
+    {
+      "block_id": "page-0921-block-0012",
+      "order": 12,
+      "text": "Blood test\nDrug/metabolite plasma \nlevels\n",
+      "bbox": [
+        61.8909912109375,
+        383.0771484375,
+        224.64846801757812,
+        401.962158203125
+      ],
+      "text_sha256": "77917476036f47bb8287a5a8ff3f5202c2d6c75c01e2f461c363894b13419c83"
+    },
+    {
+      "block_id": "page-0921-block-0013",
+      "order": 13,
+      "text": "Accurate\nInvasive\n",
+      "bbox": [
+        234.63848876953125,
+        383.2571716308594,
+        347.2434997558594,
+        391.96466064453125
+      ],
+      "text_sha256": "c7c1fec2a804816eddebed5507ab12ff25ca51dad0fef07c9cca95bd031b2027"
+    },
+    {
+      "block_id": "page-0921-block-0014",
+      "order": 14,
+      "text": "Costly\n",
+      "bbox": [
+        322.6659851074219,
+        396.2546691894531,
+        342.2485046386719,
+        404.962158203125
+      ],
+      "text_sha256": "8687674fc77d7db4f889d47e4163cb651d927d06d85df4c88cf245244a68d363"
+    },
+    {
+      "block_id": "page-0921-block-0015",
+      "order": 15,
+      "text": "Interpersonal variations: fast or \nslow metabolisers\n",
+      "bbox": [
+        322.6659851074219,
+        409.2521667480469,
+        423.5035705566406,
+        427.9571533203125
+      ],
+      "text_sha256": "d3d7fc7d10f31648dbdc991c41d1b766e469a7a005433f1587c83f9e9d62fa66"
+    },
+    {
+      "block_id": "page-0921-block-0016",
+      "order": 16,
+      "text": "Not reliable for all drugs (see \ndiscussion in accompanying text)\n",
+      "bbox": [
+        322.6659851074219,
+        432.2471618652344,
+        427.2610778808594,
+        450.9521484375
+      ],
+      "text_sha256": "ffb1534fc233ef1e071e6dd6103f4de02b0f1a2e25c79a22e826edc323eb0424"
+    },
+    {
+      "block_id": "page-0921-block-0017",
+      "order": 17,
+      "text": "Only a result of zero can be \ndefinitively interpreted\n",
+      "bbox": [
+        322.6659851074219,
+        455.2421569824219,
+        412.4034729003906,
+        473.9471435546875
+      ],
+      "text_sha256": "b4ede01ced6fa01df860bcf2cc037f93fb1fc5874cbfe6dc0ecc68b0dc7aa03d"
+    },
+    {
+      "block_id": "page-0921-block-0018",
+      "order": 18,
+      "text": "Indirect (Subjective)\n",
+      "bbox": [
+        61.8909912109375,
+        482.797119140625,
+        131.7684783935547,
+        491.68463134765625
+      ],
+      "text_sha256": "e3fa30be192bfcbbccae19289f50cad19f70d046dd61eb9898eef62c86ab6496"
+    },
+    {
+      "block_id": "page-0921-block-0019",
+      "order": 19,
+      "text": "Pill count\nNumber of missing \ntablets\n",
+      "bbox": [
+        61.8909912109375,
+        499.8221435546875,
+        208.40347290039062,
+        518.7071533203125
+      ],
+      "text_sha256": "944c00a4dddded58f632dc3e0a5884f17f4f1d33043c1cf4be152a4bb4153e5a"
+    },
+    {
+      "block_id": "page-0921-block-0020",
+      "order": 20,
+      "text": "Simple to use (useful in \nclinical trials)\n",
+      "bbox": [
+        234.63848876953125,
+        500.0021667480469,
+        310.9060363769531,
+        518.7071533203125
+      ],
+      "text_sha256": "de51a9d3da398846ca37f35f712ffec7571385a08a401a99342a3dd4718c83f0"
+    },
+    {
+      "block_id": "page-0921-block-0021",
+      "order": 21,
+      "text": "Labour-intensive in clinical \npractice\n",
+      "bbox": [
+        322.6659851074219,
+        500.0021667480469,
+        408.08355712890625,
+        518.7071533203125
+      ],
+      "text_sha256": "08172fb947e87af925299486d30a5d0868cead190fcdc050c09daa8fd14e953f"
+    },
+    {
+      "block_id": "page-0921-block-0022",
+      "order": 22,
+      "text": "Substantial evidence that pill \ncounts grossly underestimate \nlevels of adherence14\n",
+      "bbox": [
+        322.6659851074219,
+        522.9971313476562,
+        417.40606689453125,
+        551.6996459960938
+      ],
+      "text_sha256": "e0b40ae272d872214ddd9e15ea8d47c6308467f8877df2f6925e97027e996add"
+    },
+    {
+      "block_id": "page-0921-block-0023",
+      "order": 23,
+      "text": "Electronic database-\nclinical/pharmacy \nrecords\n",
+      "bbox": [
+        61.89099884033203,
+        557.8648071289062,
+        132.60098266601562,
+        586.747314453125
+      ],
+      "text_sha256": "fe3b4cf56a5e0a465217c5a7af61997ff3efd0decde21827155a5d494ad65215"
+    },
+    {
+      "block_id": "page-0921-block-0024",
+      "order": 24,
+      "text": "History of non-adherence\nPharmacy dispensing and \ncollection records (e.g. \nMedication Possession \nRatio – MPR)\n",
+      "bbox": [
+        145.8909912109375,
+        558.0372314453125,
+        228.8259735107422,
+        606.7347412109375
+      ],
+      "text_sha256": "0dac3fafee5096e08eff3dd7d19fef8999d3f21333c9b1a195a3e69e771ea5dc"
+    },
+    {
+      "block_id": "page-0921-block-0025",
+      "order": 25,
+      "text": "Readily accessible\nEasy to identify \nnon-adherent patients\nInexpensive\nNon-invasive\n",
+      "bbox": [
+        234.63848876953125,
+        558.02978515625,
+        305.7685241699219,
+        606.727294921875
+      ],
+      "text_sha256": "8698286f5904f7c7508d317ec207f7dce4bff68503f2d048ea6572c423563b80"
+    },
+    {
+      "block_id": "page-0921-block-0026",
+      "order": 26,
+      "text": "Not reliable evidence for \nmedication being ingested; only \nshows collection and possession\n",
+      "bbox": [
+        322.6659851074219,
+        558.022216796875,
+        426.8561096191406,
+        586.7247314453125
+      ],
+      "text_sha256": "f6b8ec62416a6fb768eb5328bf889a960ac2e22228a183a15b98b784a9340de8"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

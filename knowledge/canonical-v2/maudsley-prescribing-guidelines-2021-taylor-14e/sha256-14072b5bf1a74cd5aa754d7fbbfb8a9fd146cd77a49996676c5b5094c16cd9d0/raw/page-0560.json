@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0560",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 560,
+  "source_page_index": 559,
+  "source_page_display": 560,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor, \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\nPrinciples of prescribing practice in childhood and adolescence\n■\n■Target symptoms, not diagnoses \n Diagnosis can be difficult in children and co-morbidity is very common. Treatment \nshould target key symptoms. While a working diagnosis is beneficial to frame expec-\ntations and help communication with patients and parents, it should be kept in mind \nthat it could take some time for the illness to evolve.\n■\n■Technical aspects of paediatric prescribing \n\t The Medicines Act 1968 and European legislation make provision for doctors to use \nmedicines in an off-label or out-of-licence capacity or to use unlicensed medicines. \nHowever, individual prescribers are always responsible for ensuring that there is ade-\nquate information to support the quality, efficacy, safety and intended use of a drug \nbefore prescribing it. It is recognised that the informed use of unlicensed medicines, \nor of licensed medicines for unlicensed applications (‘off-label’ use), is often necessary \nin paediatric practice.\n■\n■Prescription writing in the UK: Inclusion of age is a legal requirement in the case of \nprescription-only medicines for children under 12 years of age, but it is preferable \nto state the age for all prescriptions for children.\n■\n■Begin with less, go slow and monitor efficacy and adverse reactions\n\t In outpatient care, dosage will usually commence lower in mg/kg per day terms than \nadults. Gradually increase dose as needed, and finish at a dose that produces ade-\nquate symptom control with minimum adverse reactions (adverse reactions are more \ncommon in children and adolescents). In routine clinical care, regular monitoring of \nefficacy and adverse reactions is essential, in order to ensure that treatment is neces-\nsary and that it should continue.\n■\n■Multiple medications are often required in the severely ill\n\t Monotherapy is ideal. However, childhood-onset illness can be severe and may \nrequire treatment with psychosocial approaches in combination with more than one \nmedication. Co-pharmacy is using different medications for different disorders or \nChildren and adolescents\nChapter 5\n",
+  "raw_text_sha256": "0c6f41aaef9fcdc3c3ce759f1603ce4c6102f9db090cf76ff99f318f2ddc70d5",
+  "coordinates_sha256": "d4f4b3dd5a9170e05577b91a750e3749df2e54bccd839d733792bfc22d3b336f",
+  "block_sequence_sha256": "7088534472eb57ea91ff1eeac3b6ee9b91c2e254145ad56a072c084567d30449",
+  "blocks": [
+    {
+      "block_id": "page-0560-block-0000",
+      "order": 0,
+      "text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor, \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\n",
+      "bbox": [
+        47.99980163574219,
+        585.1019897460938,
+        346.61187744140625,
+        614.4779663085938
+      ],
+      "text_sha256": "5cb1367002128735db5d963ec963e7d92734898f38fc8bf3b6f9f908d24abcd2"
+    },
+    {
+      "block_id": "page-0560-block-0001",
+      "order": 1,
+      "text": "Principles of prescribing practice in childhood and adolescence\n",
+      "bbox": [
+        55.0,
+        205.682373046875,
+        376.882080078125,
+        218.71737670898438
+      ],
+      "text_sha256": "8be052974b29dddc3ad4077c4bd04075615c0529f8b3bd5dbfba0879d22aff94"
+    },
+    {
+      "block_id": "page-0560-block-0002",
+      "order": 2,
+      "text": "■\n■Target symptoms, not diagnoses \n",
+      "bbox": [
+        47.999900817871094,
+        230.28738403320312,
+        197.35000610351562,
+        242.24737548828125
+      ],
+      "text_sha256": "8a359017c0eb94d9f4eb56f208c1856b410b975b8c41102211901c2043f29458"
+    },
+    {
+      "block_id": "page-0560-block-0003",
+      "order": 3,
+      "text": " Diagnosis can be difficult in children and co-morbidity is very common. Treatment \n",
+      "bbox": [
+        48.0,
+        242.52737426757812,
+        422.7999267578125,
+        254.24737548828125
+      ],
+      "text_sha256": "455ff36c6898068d452137daa5a94ecf373fecbc4e1b12c4e67fb4e7a2367fe0"
+    },
+    {
+      "block_id": "page-0560-block-0004",
+      "order": 4,
+      "text": "should target key symptoms. While a working diagnosis is beneficial to frame expec-\ntations and help communication with patients and parents, it should be kept in mind \nthat it could take some time for the illness to evolve.\n",
+      "bbox": [
+        57.0,
+        254.52737426757812,
+        422.8096923828125,
+        290.24737548828125
+      ],
+      "text_sha256": "57bdd9a65eeed2b4840f2988923b3f7a464d8df72aeacb02e3ef025f84498b2e"
+    },
+    {
+      "block_id": "page-0560-block-0005",
+      "order": 5,
+      "text": "■\n■Technical aspects of paediatric prescribing \n\t The Medicines Act 1968 and European legislation make provision for doctors to use \n",
+      "bbox": [
+        47.999900817871094,
+        290.2873840332031,
+        422.72991943359375,
+        314.24737548828125
+      ],
+      "text_sha256": "d6793d903b4b0bd8522f7db5187d95179c17bc8b0075bbb5dcfdf71d88db0dda"
+    },
+    {
+      "block_id": "page-0560-block-0006",
+      "order": 6,
+      "text": "medicines in an off-label or out-of-licence capacity or to use unlicensed medicines. \nHowever, individual prescribers are always responsible for ensuring that there is ade-\nquate information to support the quality, efficacy, safety and intended use of a drug \nbefore prescribing it. It is recognised that the informed use of unlicensed medicines, \nor of licensed medicines for unlicensed applications (‘off-label’ use), is often necessary \nin paediatric practice.\n",
+      "bbox": [
+        57.0,
+        314.5273742675781,
+        422.8298645019531,
+        386.24737548828125
+      ],
+      "text_sha256": "bb2478c76efc14ba79d2f26c4278b99e0619e7739fc67abafe89e3195f278e31"
+    },
+    {
+      "block_id": "page-0560-block-0007",
+      "order": 7,
+      "text": "■\n■Prescription writing in the UK: Inclusion of age is a legal requirement in the case of \n",
+      "bbox": [
+        57.19490051269531,
+        386.5273742675781,
+        422.8099670410156,
+        398.24737548828125
+      ],
+      "text_sha256": "11839140b130517f8e98e00ad67b169046f022265f4431564633ac8e13a21e3a"
+    },
+    {
+      "block_id": "page-0560-block-0008",
+      "order": 8,
+      "text": "prescription-only medicines for children under 12 years of age, but it is preferable \nto state the age for all prescriptions for children.\n",
+      "bbox": [
+        66.0,
+        398.5273742675781,
+        422.7401123046875,
+        422.24737548828125
+      ],
+      "text_sha256": "b06e509676101367ed8f1ca1adcd95bde30ac25eecdaad99c9ddda1314cefaa3"
+    },
+    {
+      "block_id": "page-0560-block-0009",
+      "order": 9,
+      "text": "■\n■Begin with less, go slow and monitor efficacy and adverse reactions\n\t In outpatient care, dosage will usually commence lower in mg/kg per day terms than \n",
+      "bbox": [
+        47.999900817871094,
+        422.2873840332031,
+        422.78997802734375,
+        446.2474060058594
+      ],
+      "text_sha256": "bc02af06c83736f8270ea25c885d8862e2d9d9650bbcf3ad54cb63d9f91a8bb2"
+    },
+    {
+      "block_id": "page-0560-block-0010",
+      "order": 10,
+      "text": "adults. Gradually increase dose as needed, and finish at a dose that produces ade-\nquate symptom control with minimum adverse reactions (adverse reactions are more \ncommon in children and adolescents). In routine clinical care, regular monitoring of \nefficacy and adverse reactions is essential, in order to ensure that treatment is neces-\nsary and that it should continue.\n",
+      "bbox": [
+        57.0,
+        446.5273742675781,
+        422.75,
+        506.24737548828125
+      ],
+      "text_sha256": "e17c19e343fa0fd332d33c8e72e03d835d81b7edfdddcdb6de4f11d0010b5bc8"
+    },
+    {
+      "block_id": "page-0560-block-0011",
+      "order": 11,
+      "text": "■\n■Multiple medications are often required in the severely ill\n\t Monotherapy is ideal. However, childhood-onset illness can be severe and may \n",
+      "bbox": [
+        47.999900817871094,
+        506.28741455078125,
+        422.7601318359375,
+        530.2474365234375
+      ],
+      "text_sha256": "98cb602dad15c785d9f67fd7a94cbab9a688b282aceb856a1d23b56281f601d2"
+    },
+    {
+      "block_id": "page-0560-block-0012",
+      "order": 12,
+      "text": "require treatment with psychosocial approaches in combination with more than one \nmedication. Co-pharmacy is using different medications for different disorders or \n",
+      "bbox": [
+        57.0,
+        530.5274047851562,
+        422.7700500488281,
+        554.2474365234375
+      ],
+      "text_sha256": "69b6b18eaad9bfc77c0ddd971b3f111057e14c56dbabfcd7bf9ba306dcc1b09e"
+    },
+    {
+      "block_id": "page-0560-block-0013",
+      "order": 13,
+      "text": "Children and adolescents\n",
+      "bbox": [
+        161.2606964111328,
+        105.33771514892578,
+        420.00262451171875,
+        131.40771484375
+      ],
+      "text_sha256": "8f0137cd7c4627883cbed2e0a332e43a0dc1fc38e075f9486695226a9b0ceca2"
+    },
+    {
+      "block_id": "page-0560-block-0014",
+      "order": 14,
+      "text": "Chapter 5\n",
+      "bbox": [
+        324.43121337890625,
+        59.724403381347656,
+        420.001220703125,
+        82.60040283203125
+      ],
+      "text_sha256": "f72ba35f58eea3afd8a8f9c546e65970b2cca5c31977d81c8ab031db8a1bb707"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

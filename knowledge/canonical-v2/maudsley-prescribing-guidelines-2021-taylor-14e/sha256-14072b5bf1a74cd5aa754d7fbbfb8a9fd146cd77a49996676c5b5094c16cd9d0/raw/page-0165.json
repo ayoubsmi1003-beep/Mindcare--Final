@@ -1,0 +1,215 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0165",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 165,
+  "source_page_index": 164,
+  "source_page_display": 165,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "144    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nfindings are in some contrast with those from studies in patients, which uniformly sug-\ngest no or minimal effect.76–78 This disparity is probably explained by the use of differ-\nent correction factors and by random change, as often seen in placebo-treated patients78 \nand as suggested by the apparent lack of dose-related effect. No cases of QTc > 500ms \nor TDP have been reported with lurasidone to our knowledge.\nBrexpiprazole remains in the ‘no effect’ group, but be aware that one study of 16 \npatients found an increase in QTc (Hodges formula) of 10.1ms and an important \nincrease in dispersion transmural repolarisation time.13 All other data suggest no effect.\nOther risk factors\nA number of physiological/pathological factors are associated with an increased risk of \nQT changes and of arrhythmia (Table 1.22) and many non-psychotropic drugs are \nlinked to QT prolongation (Table 1.23).24 These additional risk factors seem almost \nalways to be present in cases of antipsychotic-induced TDP.79\nTable 1.22  Physiological risk factors for QTc prolongation and arrhythmia\nCardiac\nLong QT syndrome\nBradycardia\nIschaemic heart disease\nMyocarditis\nMyocardial infarction\nLeft ventricular hypertrophy\nMetabolic\nHypokalaemia\nHypomagnesaemia\nHypocalcaemia\nOthers\nExtreme physical exertion\nStress or shock\nAnorexia nervosa\nExtremes of age – children and elderly may be more susceptible to QT \nchanges\nFemale gender\nNote: Hypokalaemia-related QTc prolongation is more commonly observed \nin acute psychotic admissions.80 Also, be aware that there are a number of \nphysical and genetic factors which may not be discovered on routine \nexamination but which probably predispose patients to arrhythmia.81,82\nECG monitoring\nMeasure QTc in all patients prescribed antipsychotics:\n■\n■On admission\n■\n■If previous abnormality or known additional risk factor, at annual physical health \ncheck\n",
+  "raw_text_sha256": "2bb4a363f779b4dcdc6e48b097b5d39cffa7a2dd956b318e5ce50ba0706e7a25",
+  "coordinates_sha256": "44e8081726091674121bed4dbddcf73be07dc809d6908dfe9b2e18adb9c756e9",
+  "block_sequence_sha256": "ca5eab6c42b074036361fcb9fac1f2a1d47947c6394843a15512b287fa20988f",
+  "blocks": [
+    {
+      "block_id": "page-0165-block-0000",
+      "order": 0,
+      "text": "144    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "e48334803f5de3798785f2be3e24842bea1410764cad1d916aa8b1edf054b2a9"
+    },
+    {
+      "block_id": "page-0165-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0165-block-0002",
+      "order": 2,
+      "text": "findings are in some contrast with those from studies in patients, which uniformly sug-\ngest no or minimal effect.76–78 This disparity is probably explained by the use of differ-\nent correction factors and by random change, as often seen in placebo-treated patients78 \nand as suggested by the apparent lack of dose-related effect. No cases of QTc > 500ms \nor TDP have been reported with lurasidone to our knowledge.\n",
+      "bbox": [
+        61.88780212402344,
+        62.54931640625,
+        436.6690979003906,
+        122.26931762695312
+      ],
+      "text_sha256": "e4dd2d139bc174c6f3169809db101d72b6b819b02fc93b9bb5cbc27a800f28ab"
+    },
+    {
+      "block_id": "page-0165-block-0003",
+      "order": 3,
+      "text": "Brexpiprazole remains in the ‘no effect’ group, but be aware that one study of 16 \npatients found an increase in QTc (Hodges formula) of 10.1ms and an important \nincrease in dispersion transmural repolarisation time.13 All other data suggest no effect.\n",
+      "bbox": [
+        61.88911437988281,
+        122.54931640625,
+        436.6589660644531,
+        158.26931762695312
+      ],
+      "text_sha256": "44490798d83a99661cbc329f3fa659f98fdc676a7936278aebab5ee78d6c54cf"
+    },
+    {
+      "block_id": "page-0165-block-0004",
+      "order": 4,
+      "text": "Other risk factors\n",
+      "bbox": [
+        61.88909912109375,
+        175.70431518554688,
+        151.7371063232422,
+        188.73931884765625
+      ],
+      "text_sha256": "70e5e814fb08cab473f8632d72292378ac05332440f4280697fa8d304b5f0131"
+    },
+    {
+      "block_id": "page-0165-block-0005",
+      "order": 5,
+      "text": "A number of physiological/pathological factors are associated with an increased risk of \nQT changes and of arrhythmia (Table 1.22) and many non-psychotropic drugs are \nlinked to QT prolongation (Table 1.23).24 These additional risk factors seem almost \nalways to be present in cases of antipsychotic-induced TDP.79\n",
+      "bbox": [
+        61.88909912109375,
+        194.54931640625,
+        436.6990661621094,
+        242.26931762695312
+      ],
+      "text_sha256": "549994ba9cb72d444ac0419d3ffd3a509be1bd1974fae8e4e7f880147b06c479"
+    },
+    {
+      "block_id": "page-0165-block-0006",
+      "order": 6,
+      "text": "Table 1.22  Physiological risk factors for QTc prolongation and arrhythmia\n",
+      "bbox": [
+        130.889404296875,
+        274.00250244140625,
+        365.78948974609375,
+        282.8900146484375
+      ],
+      "text_sha256": "8d3ad1a3a8191fa0ab0fd6cd6821b37b27c214678ab764a4011416001b246b4b"
+    },
+    {
+      "block_id": "page-0165-block-0007",
+      "order": 7,
+      "text": "Cardiac\nLong QT syndrome\nBradycardia\nIschaemic heart disease\nMyocarditis\nMyocardial infarction\nLeft ventricular hypertrophy\n",
+      "bbox": [
+        124.889404296875,
+        291.0274963378906,
+        213.0743865966797,
+        359.8999938964844
+      ],
+      "text_sha256": "d2013721588087124e3c373aec7cb9fb923f08e32776533ec089091020ebb307"
+    },
+    {
+      "block_id": "page-0165-block-0008",
+      "order": 8,
+      "text": "Metabolic\nHypokalaemia\nHypomagnesaemia\nHypocalcaemia\n",
+      "bbox": [
+        124.889404296875,
+        366.03497314453125,
+        185.72938537597656,
+        404.91497802734375
+      ],
+      "text_sha256": "bdfe4433e19843a064bddd90a0e166f4d5e7a072c5177487380f1a9eb112f2e5"
+    },
+    {
+      "block_id": "page-0165-block-0009",
+      "order": 9,
+      "text": "Others\nExtreme physical exertion\nStress or shock\nAnorexia nervosa\nExtremes of age – children and elderly may be more susceptible to QT \nchanges\nFemale gender\n",
+      "bbox": [
+        124.889404296875,
+        411.0499572753906,
+        349.4994201660156,
+        479.9224548339844
+      ],
+      "text_sha256": "30c781b8850d6d397e2db408b4eed4d7677b88cd38d8293750011598952e21da"
+    },
+    {
+      "block_id": "page-0165-block-0010",
+      "order": 10,
+      "text": "Note: Hypokalaemia-related QTc prolongation is more commonly observed \nin acute psychotic admissions.80 Also, be aware that there are a number of \nphysical and genetic factors which may not be discovered on routine \nexamination but which probably predispose patients to arrhythmia.81,82\n",
+      "bbox": [
+        124.889404296875,
+        490.0324401855469,
+        366.1720275878906,
+        528.9600219726562
+      ],
+      "text_sha256": "587e3a8fe8dfb07950486944da1acac172cb29f952aff6394883d6c385ff0363"
+    },
+    {
+      "block_id": "page-0165-block-0011",
+      "order": 11,
+      "text": "ECG monitoring\n",
+      "bbox": [
+        61.88890075683594,
+        553.3306274414062,
+        143.78387451171875,
+        566.3656005859375
+      ],
+      "text_sha256": "985048fbfd01c48139651fd418ded6237138e78ef984be301bcf07303629b8f9"
+    },
+    {
+      "block_id": "page-0165-block-0012",
+      "order": 12,
+      "text": "Measure QTc in all patients prescribed antipsychotics:\n",
+      "bbox": [
+        61.88890075683594,
+        572.1755981445312,
+        295.4988708496094,
+        583.8956298828125
+      ],
+      "text_sha256": "5f70b8a0135d238028b05c10179023abf5bdfc5a33f59c6bc238abfaddb47deb"
+    },
+    {
+      "block_id": "page-0165-block-0013",
+      "order": 13,
+      "text": "■\n■On admission\n",
+      "bbox": [
+        61.88880157470703,
+        590.1755981445312,
+        130.8988800048828,
+        601.8956298828125
+      ],
+      "text_sha256": "b30e651ad65e90a9f37c6f4e2f7f339f0c75c09bc90c8f0632b0d23826f26894"
+    },
+    {
+      "block_id": "page-0165-block-0014",
+      "order": 14,
+      "text": "■\n■If previous abnormality or known additional risk factor, at annual physical health \n",
+      "bbox": [
+        61.88880157470703,
+        602.1755981445312,
+        436.6288757324219,
+        613.8956298828125
+      ],
+      "text_sha256": "21b1a26f8b876e0c28c87e79fa92cb44d3b1de868771731417e5ddcc9e90c88e"
+    },
+    {
+      "block_id": "page-0165-block-0015",
+      "order": 15,
+      "text": "check\n",
+      "bbox": [
+        70.88890075683594,
+        614.1755981445312,
+        95.32890319824219,
+        625.8956298828125
+      ],
+      "text_sha256": "b78232388282c6420137ababfeb08b77a605007fe7650cfce4e36bb6afa013fb"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

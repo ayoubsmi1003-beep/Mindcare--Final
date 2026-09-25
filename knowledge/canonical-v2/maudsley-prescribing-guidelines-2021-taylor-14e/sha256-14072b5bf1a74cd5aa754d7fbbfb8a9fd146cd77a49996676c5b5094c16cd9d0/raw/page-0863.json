@@ -1,0 +1,311 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0863",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 863,
+  "source_page_index": 862,
+  "source_page_display": 863,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "842    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  11\nReferences\n\t\n1.\t Mann K, et al. Appropriateness of therapeutic drug monitoring for antidepressants in routine psychiatric inpatient care. Ther Drug Monit \n2006; 28:83–88.\n\t\n2.\t Jakobsen MI, et al. The significance of sampling time in therapeutic drug monitoring of clozapine. Acta Psychiatr Scand 2017; \n135:159–169.\n\t\n3.\t Hiemke C. relationships of psychoactive drugs and the problem to calculate therapeutic reference ranges. Ther Drug Monit 2019; 41: \n174–179.\n\t\n4.\t Taylor D, et al. Doses of carbamazepine and valproate in bipolar affective disorder. Psychiatric Bulletin 1997; 21:221–223.\n\t\n5.\t Eadie MJ. Anticonvulsant drugs. Drugs 1984; 27: 328–363.\n\t\n6.\t Chbili C, et al. Relationships between pharmacokinetic parameters of carbamazepine and therapeutic response in patients with bipolar \ndisease. Ann Biol Clin (Paris) 2014; 72:453–459.\n\t\n7.\t Cohen AF, et al. Lamotrigine, a new anticonvulsant: pharmacokinetics in normal humans. Clin Pharmacol Ther 1987; 42:535–541.\n\t\n8.\t Kilpatrick ES, et al. Concentration-effect and concentration-toxicity relations with lamotrigine: a prospective study. Epilepsia 1996; \n37:534–538.\n\t\n9.\t Johannessen SI, et al. Therapeutic drug monitoring of the newer antiepileptic drugs. Ther Drug Monit 2003; 25:347–363.\n\t 10.\t Kagawa S, et al. Relationship between plasma concentrations of lamotrigine and its early therapeutic effect of lamotrigine augmentation \ntherapy in treatment-resistant depressive disorder. Ther Drug Monit 2014; 36:730–733.\n\t 11.\t Nakamura A, et al. Prediction of an optimal dose of lamotrigine for augmentation therapy in treatment-resistant depressive disorder from \nplasma lamotrigine concentration at week 2. Ther Drug Monit 2016; 38:379–382.\n\t 12.\t Schou M. Forty years of lithium treatment. Arch Gen Psychiatry 1997; 54: 9–13.\n\t 13.\t Anon. Using lithium safely. Drug Ther Bull 1999; 37:22–24.\n\t 14.\t Nicholson J, et al. Monitoring patients on lithium – a good practice guideline. Psychiatric Bulletin 2002; 26:348–351.\n\t 15.\t National Institute for Health and Care Excellence. Bipolar disorder: assessment and management: Clinical Guidance [CG185] 2014 (last \nupdated February 2020); https://www.nice.org.uk/guidance/cg185.\n\t 16.\t Severus WE, et al. What is the optimal serum lithium level in the long-term treatment of bipolar disorder–a review? Bipolar Disorders 2008; \n10:231–237.\n\t 17.\t Nolen WA, et al. The association of the effect of lithium in the maintenance treatment of bipolar disorder with lithium plasma levels: a post \nhoc analysis of a double-blind study comparing switching to lithium or placebo in patients who responded to quetiapine (Trial 144). Bipolar \nDisorders 2013; 15:100–109.\n\t 18.\t Nazirizadeh Y, et al. Serum concentrations of paliperidone versus risperidone and clinical effects. Eur J Clin Pharmacol 2010; \n66:797–803.\n\t 19.\t Schoretsanitis G, et al. A systematic review and combined analysis of therapeutic drug monitoring studies for oral paliperidone. Expert Rev \nClin Pharmacol 2018; 11:625–639.\n\t 20.\t Taylor D, et al. Plasma levels of tricyclics and related antidepressants: are they necessary or useful? Psychiatric Bulletin 1995; 19:548–550.\nTable 11.2  (Continued)\nAntidepressants\nTarget range (µg/L)\nMilnacipran\n100–150\nMirtazapine\n30–80\nMoclobemide\n300–1000\nParoxetine\n20–65\nReboxetine\n60–350\nSertraline\n10–150\nTrazodone\n700–1000\nVenlafaxine \n(+O-desmethylvenlafaxine)\n100–400\nVilazodone\n30–70\nVortioxetine\n15–60\n",
+  "raw_text_sha256": "9117330f4b12b53b9b1d75280830c48893503361c2fbe2e912686c88de2fe907",
+  "coordinates_sha256": "0fbff331378ae7040c658740d268a829c3d306ae268fa6f2d11f7ba90e466450",
+  "block_sequence_sha256": "c3676b5e7e0e2a695d679ccc46e32bd524c976ad4de0de6971ccef4bd17a215b",
+  "blocks": [
+    {
+      "block_id": "page-0863-block-0000",
+      "order": 0,
+      "text": "842    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "bf38f9cb7264153c410c77ff10c56bd4ddc45e5445b267dc27fa2058f854099b"
+    },
+    {
+      "block_id": "page-0863-block-0001",
+      "order": 1,
+      "text": "CHAPTER  11\n",
+      "bbox": [
+        18.520000457763672,
+        139.8785400390625,
+        28.0,
+        187.89450073242188
+      ],
+      "text_sha256": "83984f4328940309c03288e26b8edf9834cfa8fef30d3eedac5a4c266fe9aee7"
+    },
+    {
+      "block_id": "page-0863-block-0002",
+      "order": 2,
+      "text": "References\n",
+      "bbox": [
+        61.88999938964844,
+        310.6493835449219,
+        117.92399597167969,
+        323.68438720703125
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0863-block-0003",
+      "order": 3,
+      "text": "\t\n1.\t Mann K, et al. Appropriateness of therapeutic drug monitoring for antidepressants in routine psychiatric inpatient care. Ther Drug Monit \n2006; 28:83–88.\n\t\n2.\t Jakobsen MI, et al. The significance of sampling time in therapeutic drug monitoring of clozapine. Acta Psychiatr Scand 2017; \n135:159–169.\n\t\n3.\t Hiemke C. relationships of psychoactive drugs and the problem to calculate therapeutic reference ranges. Ther Drug Monit 2019; 41: \n174–179.\n\t\n4.\t Taylor D, et al. Doses of carbamazepine and valproate in bipolar affective disorder. Psychiatric Bulletin 1997; 21:221–223.\n\t\n5.\t Eadie MJ. Anticonvulsant drugs. Drugs 1984; 27: 328–363.\n\t\n6.\t Chbili C, et al. Relationships between pharmacokinetic parameters of carbamazepine and therapeutic response in patients with bipolar \ndisease. Ann Biol Clin (Paris) 2014; 72:453–459.\n\t\n7.\t Cohen AF, et al. Lamotrigine, a new anticonvulsant: pharmacokinetics in normal humans. Clin Pharmacol Ther 1987; 42:535–541.\n\t\n8.\t Kilpatrick ES, et al. Concentration-effect and concentration-toxicity relations with lamotrigine: a prospective study. Epilepsia 1996; \n37:534–538.\n\t\n9.\t Johannessen SI, et al. Therapeutic drug monitoring of the newer antiepileptic drugs. Ther Drug Monit 2003; 25:347–363.\n\t 10.\t Kagawa S, et al. Relationship between plasma concentrations of lamotrigine and its early therapeutic effect of lamotrigine augmentation \n",
+      "bbox": [
+        61.88999938964844,
+        328.7703857421875,
+        435.59405517578125,
+        461.8023986816406
+      ],
+      "text_sha256": "5922f90d84a4cb49c2f5b0c77d4eb51db4ea12fc076a53ad9275a5189945c37d"
+    },
+    {
+      "block_id": "page-0863-block-0004",
+      "order": 4,
+      "text": "therapy in treatment-resistant depressive disorder. Ther Drug Monit 2014; 36:730–733.\n\t 11.\t Nakamura A, et al. Prediction of an optimal dose of lamotrigine for augmentation therapy in treatment-resistant depressive disorder from \n",
+      "bbox": [
+        61.88999938964844,
+        463.6263732910156,
+        435.5460205078125,
+        479.8023986816406
+      ],
+      "text_sha256": "fd0d97bdd64acdff35365fc5ee694c1b53ba9b21cc95d4ed0316f0af7b7cf9ed"
+    },
+    {
+      "block_id": "page-0863-block-0005",
+      "order": 5,
+      "text": "plasma lamotrigine concentration at week 2. Ther Drug Monit 2016; 38:379–382.\n\t 12.\t Schou M. Forty years of lithium treatment. Arch Gen Psychiatry 1997; 54: 9–13.\n\t 13.\t Anon. Using lithium safely. Drug Ther Bull 1999; 37:22–24.\n\t 14.\t Nicholson J, et al. Monitoring patients on lithium – a good practice guideline. Psychiatric Bulletin 2002; 26:348–351.\n\t 15.\t National Institute for Health and Care Excellence. Bipolar disorder: assessment and management: Clinical Guidance [CG185] 2014 (last \n",
+      "bbox": [
+        61.88999938964844,
+        481.6263732910156,
+        435.5639343261719,
+        524.8023681640625
+      ],
+      "text_sha256": "f6a78ebd45aba37f517e88d2369dabb02d29b87cf31f2fffa74bb3b6608df263"
+    },
+    {
+      "block_id": "page-0863-block-0006",
+      "order": 6,
+      "text": "updated February 2020); https://www.nice.org.uk/guidance/cg185.\n\t 16.\t Severus WE, et al. What is the optimal serum lithium level in the long-term treatment of bipolar disorder–a review? Bipolar Disorders 2008; \n",
+      "bbox": [
+        61.88999938964844,
+        526.7703857421875,
+        435.6000671386719,
+        542.8023681640625
+      ],
+      "text_sha256": "6ab120037f07510c43624468bf8ee3af5cbdb0984a539c006acc725dab16efd2"
+    },
+    {
+      "block_id": "page-0863-block-0007",
+      "order": 7,
+      "text": "10:231–237.\n\t 17.\t Nolen WA, et al. The association of the effect of lithium in the maintenance treatment of bipolar disorder with lithium plasma levels: a post \n",
+      "bbox": [
+        61.88999938964844,
+        544.6264038085938,
+        435.5279846191406,
+        560.8023681640625
+      ],
+      "text_sha256": "3f2104fd82cdc4f37e661056fcf89c803e6707add4246ac1e61de11e0cb13d0b"
+    },
+    {
+      "block_id": "page-0863-block-0008",
+      "order": 8,
+      "text": "hoc analysis of a double-blind study comparing switching to lithium or placebo in patients who responded to quetiapine (Trial 144). Bipolar \nDisorders 2013; 15:100–109.\n\t 18.\t Nazirizadeh Y, et al. Serum concentrations of paliperidone versus risperidone and clinical effects. Eur J Clin Pharmacol 2010; \n",
+      "bbox": [
+        61.88999938964844,
+        562.7703857421875,
+        435.5640563964844,
+        587.8023681640625
+      ],
+      "text_sha256": "4aca97b63ad332685c409e5ee1023691641e03e18ee118979df2c39458537bbc"
+    },
+    {
+      "block_id": "page-0863-block-0009",
+      "order": 9,
+      "text": "66:797–803.\n\t 19.\t Schoretsanitis G, et al. A systematic review and combined analysis of therapeutic drug monitoring studies for oral paliperidone. Expert Rev \n",
+      "bbox": [
+        61.88999938964844,
+        589.6264038085938,
+        435.58203125,
+        605.8023681640625
+      ],
+      "text_sha256": "66cfe6e5df94b235f5c7d0806d3cbf94c057367349f199829c3259d85b2a6708"
+    },
+    {
+      "block_id": "page-0863-block-0010",
+      "order": 10,
+      "text": "Clin Pharmacol 2018; 11:625–639.\n\t 20.\t Taylor D, et al. Plasma levels of tricyclics and related antidepressants: are they necessary or useful? Psychiatric Bulletin 1995; 19:548–550.\n",
+      "bbox": [
+        61.88999938964844,
+        607.6264038085938,
+        433.842041015625,
+        623.8023681640625
+      ],
+      "text_sha256": "ce259b58b3382dcc7c3c6620de90eceff9bf0e0b1c48e682366eb3c842e48f63"
+    },
+    {
+      "block_id": "page-0863-block-0011",
+      "order": 11,
+      "text": "Table 11.2  (Continued)\n",
+      "bbox": [
+        127.48979949951172,
+        70.17201232910156,
+        202.27980041503906,
+        79.05950927734375
+      ],
+      "text_sha256": "0cc0621ed7743000ea07ccf2660919ebc5cf715b3615fff1f16bb78c58cb4a7f"
+    },
+    {
+      "block_id": "page-0863-block-0012",
+      "order": 12,
+      "text": "Antidepressants\nTarget range (µg/L)\n",
+      "bbox": [
+        121.48979949951172,
+        89.58790588378906,
+        309.8072814941406,
+        98.47540283203125
+      ],
+      "text_sha256": "7e4c7211b4cd6eafd262d41a681e1f1ae9d4d76b73bdaeb7e5389a091c2dda49"
+    },
+    {
+      "block_id": "page-0863-block-0013",
+      "order": 13,
+      "text": "Milnacipran\n100–150\n",
+      "bbox": [
+        121.48979187011719,
+        107.71540832519531,
+        271.0623474121094,
+        116.6029052734375
+      ],
+      "text_sha256": "cb2f438af335bf55db1bd079c77b60b7b58a7f0e37752e5b323b4bfdef351a33"
+    },
+    {
+      "block_id": "page-0863-block-0014",
+      "order": 14,
+      "text": "Mirtazapine\n30–80\n",
+      "bbox": [
+        121.48979187011719,
+        125.84291076660156,
+        262.7223205566406,
+        134.73040771484375
+      ],
+      "text_sha256": "739e5c4e79f90182b4c4fe9b203d987e5593c09e2e1e47e33538b4669df6d43c"
+    },
+    {
+      "block_id": "page-0863-block-0015",
+      "order": 15,
+      "text": "Moclobemide\n300–1000\n",
+      "bbox": [
+        121.48979187011719,
+        143.9704132080078,
+        275.23236083984375,
+        152.85791015625
+      ],
+      "text_sha256": "dcaa7c6a5885ca51fee922e65bd319e8b5c5fdcfeed1aac9603401a0f343f3a9"
+    },
+    {
+      "block_id": "page-0863-block-0016",
+      "order": 16,
+      "text": "Paroxetine\n20–65\n",
+      "bbox": [
+        121.48979187011719,
+        162.09791564941406,
+        262.7223205566406,
+        170.98541259765625
+      ],
+      "text_sha256": "a677fc5a1f0110d1343043e2ad10584689b56c30831eebcdde9db98ffa7ad8c3"
+    },
+    {
+      "block_id": "page-0863-block-0017",
+      "order": 17,
+      "text": "Reboxetine\n60–350\n",
+      "bbox": [
+        121.48979187011719,
+        180.2254180908203,
+        266.892333984375,
+        189.1129150390625
+      ],
+      "text_sha256": "52bc5b93fafba97dcabc33b5a64083928670d9ec54b1c8e5b51323955e8035c2"
+    },
+    {
+      "block_id": "page-0863-block-0018",
+      "order": 18,
+      "text": "Sertraline\n10–150\n",
+      "bbox": [
+        121.48979187011719,
+        198.35292053222656,
+        266.892333984375,
+        207.24041748046875
+      ],
+      "text_sha256": "bb9c38043cddd2be3a848d506965d08513cc8b35a9aae0bbb55cf6f97b63ab43"
+    },
+    {
+      "block_id": "page-0863-block-0019",
+      "order": 19,
+      "text": "Trazodone\n700–1000\n",
+      "bbox": [
+        121.48979187011719,
+        216.4804229736328,
+        275.23236083984375,
+        225.367919921875
+      ],
+      "text_sha256": "a8b01519560d9a920f6a4e401df1e5851ae9823a293b000a23da9907d44bc746"
+    },
+    {
+      "block_id": "page-0863-block-0020",
+      "order": 20,
+      "text": "Venlafaxine \n(+O-desmethylvenlafaxine)\n",
+      "bbox": [
+        121.48979187011719,
+        234.60792541503906,
+        217.26480102539062,
+        253.492919921875
+      ],
+      "text_sha256": "c5789b4c1b4c11921454593f0f30c463b9575fe1c30c7f5ec5290c0e5752b62f"
+    },
+    {
+      "block_id": "page-0863-block-0021",
+      "order": 21,
+      "text": "100–400\n",
+      "bbox": [
+        242.29229736328125,
+        234.7879180908203,
+        271.0623474121094,
+        243.49542236328125
+      ],
+      "text_sha256": "f644c279765e4cb63d2f28ed18224385a70f67b85b56af1b45e3a724cc519dd9"
+    },
+    {
+      "block_id": "page-0863-block-0022",
+      "order": 22,
+      "text": "Vilazodone\n30–70\n",
+      "bbox": [
+        121.48979187011719,
+        262.73291015625,
+        262.7223205566406,
+        271.62042236328125
+      ],
+      "text_sha256": "49818ed38530a4eeb468be63caf305a6f999b91907e844f39723e38d055fcfec"
+    },
+    {
+      "block_id": "page-0863-block-0023",
+      "order": 23,
+      "text": "Vortioxetine\n15–60\n",
+      "bbox": [
+        121.48979187011719,
+        280.86041259765625,
+        262.7223205566406,
+        289.7479248046875
+      ],
+      "text_sha256": "bb071e9f8b09bda693e73b68389d040e0198e91a5794bd872efff72780b8f752"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0080",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 80,
+  "source_page_index": 79,
+  "source_page_display": 80,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    59\nCHAPTER 1\nconcluded that most trials were too small to highlight differences in either positive or \nnegative effects and whilst adding a benzodiazepine to another drug may not be clearly \nadvantageous it may lead to unnecessary side effects.47\nWith respect to those who are behaviourally disturbed secondary to acute intoxica-\ntion with alcohol or illicit drugs, there are fewer data to guide practice. A large obser-\nvational study of IV sedation in patients intoxicated with alcohol found that \ncombination treatment (most commonly haloperidol 5mg and lorazepam 2mg) was \nmore effective and reduced the need for subsequent sedation than either drug given \nalone.48 A case series (N = 59) of patients who received modest doses of oral, IM or IV \nhaloperidol to manage behavioural disturbance in the context of PCP consumption, \nreported that haloperidol was effective and well tolerated (one case each of mild hypo-\ntension and mild hypoxia).49 A section on the treatment of agitated delirium is included \nin Chapter 9.\nKetamine is widely used for agitation from hospital emergency departments. In a \nsystematic review of 18 studies of ketamine,50 a mean dose of 315mg IM ketamine \nachieved adequate sedation in an average of 7.2 minutes. Over 30% of 650 patients \nwere eventually intubated and more than 1% experienced laryngospasm. Ketamine is \nprobably not an option for RT where facilities for intubation are not available.\nOverall the current broad consensus is that midazolam and droperidol are the fast-\nest-acting single drug, intramuscular treatments51 and that haloperidol alone should be \navoided and perhaps abandoned completely even in combination.52 Second-line treat-\nments are combinations of benzodiazepines and antipsychotics and third line would \nprobably now be intravenous benzodiazepines and then ketamine (2–5mg/kg IM), \nassuming intubation facilities are available.\nPractical measures\nPlans for the management of individual patients should ideally be made in advance. The \naim is to prevent disturbed behaviour and reduce risk of violence. Nursing interven-\ntions (de-escalation, time out, seclusion53), increased nursing levels, transfer of the \npatient to a psychiatric intensive care unit (PICU) and pharmacological management \nare options that may be employed. Care should be taken to avoid combinations and \nhigh cumulative doses of antipsychotic drugs. The monitoring of routine physical \nobservations after RT is essential. Note that RT is often viewed as punitive by patients. \nThere is little research into the patient experience of RT.\nThe aims of RT are threefold:\n■\n■To reduce suffering for the patient: psychological or physical (through self-harm or \naccidents).\n■\n■To reduce risk of harm to others by maintaining a safe environment.\n■\n■To do no harm (by prescribing safe regimes and monitoring physical health).\nNote: Despite the need for rapid and effective treatment, concomitant use of two or \nmore antipsychotics (antipsychotic polypharmacy) should be avoided on the basis of \nrisk associated with QT prolongation (common to almost all antipsychotics). This is a \nparticularly important consideration in RT where the patient’s physical state predis-\nposes to cardiac arrhythmia.\n",
+  "raw_text_sha256": "bdfe9e50d32002c0dbfda783308ed63612f54020fb6845df708920359bcfc22a",
+  "coordinates_sha256": "2b3028c27b68c2b44b8fb6c3cf40c4540eb802536acfc909e79f56a0be1c6ae1",
+  "block_sequence_sha256": "736824748f119c529e1ac35cdb4325a519324d4b847774be2863afef011b3494",
+  "blocks": [
+    {
+      "block_id": "page-0080-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    59\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "5064b0f76bba26db3bd6af950a8ba556f22189d833c60488cbc5271dab226766"
+    },
+    {
+      "block_id": "page-0080-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0080-block-0002",
+      "order": 2,
+      "text": "concluded that most trials were too small to highlight differences in either positive or \nnegative effects and whilst adding a benzodiazepine to another drug may not be clearly \nadvantageous it may lead to unnecessary side effects.47\n",
+      "bbox": [
+        47.99909973144531,
+        62.5494384765625,
+        422.8191223144531,
+        98.26943969726562
+      ],
+      "text_sha256": "0825b5ef0ba2d7fbaa0df0d689ffe4b2bf270d341e4c6d0f23de28a837f769ef"
+    },
+    {
+      "block_id": "page-0080-block-0003",
+      "order": 3,
+      "text": "With respect to those who are behaviourally disturbed secondary to acute intoxica-\ntion with alcohol or illicit drugs, there are fewer data to guide practice. A large obser-\nvational study of IV sedation in patients intoxicated with alcohol found that \ncombination treatment (most commonly haloperidol 5mg and lorazepam 2mg) was \nmore effective and reduced the need for subsequent sedation than either drug given \nalone.48 A case series (N = 59) of patients who received modest doses of oral, IM or IV \nhaloperidol to manage behavioural disturbance in the context of PCP consumption, \nreported that haloperidol was effective and well tolerated (one case each of mild hypo-\ntension and mild hypoxia).49 A section on the treatment of agitated delirium is included \nin Chapter 9.\n",
+      "bbox": [
+        47.99909973144531,
+        98.5494384765625,
+        422.8268127441406,
+        218.26943969726562
+      ],
+      "text_sha256": "b85cdeffef52da1c22e5285118dc5780fa92745a7523a42984f6af375c6fe192"
+    },
+    {
+      "block_id": "page-0080-block-0004",
+      "order": 4,
+      "text": "Ketamine is widely used for agitation from hospital emergency departments. In a \nsystematic review of 18 studies of ketamine,50 a mean dose of 315mg IM ketamine \nachieved adequate sedation in an average of 7.2 minutes. Over 30% of 650 patients \nwere eventually intubated and more than 1% experienced laryngospasm. Ketamine is \nprobably not an option for RT where facilities for intubation are not available.\n",
+      "bbox": [
+        47.99958801269531,
+        218.5494384765625,
+        422.8122863769531,
+        278.2695007324219
+      ],
+      "text_sha256": "35cb9f61c78d1e4fce740b930cc5249ce497b67d3c68a2b076b3009a0591b151"
+    },
+    {
+      "block_id": "page-0080-block-0005",
+      "order": 5,
+      "text": "Overall the current broad consensus is that midazolam and droperidol are the fast-\nest-acting single drug, intramuscular treatments51 and that haloperidol alone should be \navoided and perhaps abandoned completely even in combination.52 Second-line treat-\nments are combinations of benzodiazepines and antipsychotics and third line would \nprobably now be intravenous benzodiazepines and then ketamine (2–5mg/kg IM), \nassuming intubation facilities are available.\n",
+      "bbox": [
+        47.99958801269531,
+        278.54949951171875,
+        422.7940368652344,
+        350.2695007324219
+      ],
+      "text_sha256": "19c9a7fb136401966bc711aa45c480b18b13012efb84b77c9082315f96cf57da"
+    },
+    {
+      "block_id": "page-0080-block-0006",
+      "order": 6,
+      "text": "Practical measures\n",
+      "bbox": [
+        47.99909973144531,
+        367.7044982910156,
+        142.54409790039062,
+        380.739501953125
+      ],
+      "text_sha256": "a3ca27cf8998eee54463a4a27b4c6870e7a22431e5df3db737978814be7fa4d7"
+    },
+    {
+      "block_id": "page-0080-block-0007",
+      "order": 7,
+      "text": "Plans for the management of individual patients should ideally be made in advance. The \naim is to prevent disturbed behaviour and reduce risk of violence. Nursing interven-\ntions (de-escalation, time out, seclusion53), increased nursing levels, transfer of the \npatient to a psychiatric intensive care unit (PICU) and pharmacological management \nare options that may be employed. Care should be taken to avoid combinations and \nhigh cumulative doses of antipsychotic drugs. The monitoring of routine physical \nobservations after RT is essential. Note that RT is often viewed as punitive by patients. \nThere is little research into the patient experience of RT.\n",
+      "bbox": [
+        47.99909973144531,
+        386.54949951171875,
+        422.8106994628906,
+        482.2695007324219
+      ],
+      "text_sha256": "ca80b008f39aee93ef4870e5c60410e19156f6d8b7556d2106605198a4efd27d"
+    },
+    {
+      "block_id": "page-0080-block-0008",
+      "order": 8,
+      "text": "The aims of RT are threefold:\n",
+      "bbox": [
+        58.00077819824219,
+        482.54949951171875,
+        186.02078247070312,
+        494.2695007324219
+      ],
+      "text_sha256": "3e49df6681781e3da2d1afeef316d63b4dba5616ca2984180c54d4535570e6b4"
+    },
+    {
+      "block_id": "page-0080-block-0009",
+      "order": 9,
+      "text": "■\n■To reduce suffering for the patient: psychological or physical (through self-harm or \n",
+      "bbox": [
+        47.999000549316406,
+        500.54949951171875,
+        422.7991027832031,
+        512.26953125
+      ],
+      "text_sha256": "f18eda18b24a78f4124b2a109fb26d76bf64b4fb5b774f458bc9f04e0f81527d"
+    },
+    {
+      "block_id": "page-0080-block-0010",
+      "order": 10,
+      "text": "accidents).\n",
+      "bbox": [
+        56.99909973144531,
+        512.5494995117188,
+        102.54910278320312,
+        524.26953125
+      ],
+      "text_sha256": "06fc6ac805f59750702335d8ed0bdbe08a96fd3991d93d8ad7dec5231cada5c1"
+    },
+    {
+      "block_id": "page-0080-block-0011",
+      "order": 11,
+      "text": "■\n■To reduce risk of harm to others by maintaining a safe environment.\n",
+      "bbox": [
+        47.999000549316406,
+        524.5494995117188,
+        351.5990295410156,
+        536.26953125
+      ],
+      "text_sha256": "a358fba7c7d8823c5d687d374e6461bb6bce8d4101d34073ca3afdc29e2fe576"
+    },
+    {
+      "block_id": "page-0080-block-0012",
+      "order": 12,
+      "text": "■\n■To do no harm (by prescribing safe regimes and monitoring physical health).\n",
+      "bbox": [
+        47.999000549316406,
+        536.5494995117188,
+        387.1791076660156,
+        548.26953125
+      ],
+      "text_sha256": "9b36dd70cc58d0c8701fbaeb910fed58cad76c9d61789cd5aa85b94708b689fe"
+    },
+    {
+      "block_id": "page-0080-block-0013",
+      "order": 13,
+      "text": "Note: Despite the need for rapid and effective treatment, concomitant use of two or \nmore antipsychotics (antipsychotic polypharmacy) should be avoided on the basis of \nrisk associated with QT prolongation (common to almost all antipsychotics). This is a \nparticularly important consideration in RT where the patient’s physical state predis-\nposes to cardiac arrhythmia.\n",
+      "bbox": [
+        47.99909973144531,
+        554.5494995117188,
+        422.7890319824219,
+        614.26953125
+      ],
+      "text_sha256": "5483cf91d3e860e775457020af39f0d4cea8b53bdecd3c78ae8f7190fc97c473"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

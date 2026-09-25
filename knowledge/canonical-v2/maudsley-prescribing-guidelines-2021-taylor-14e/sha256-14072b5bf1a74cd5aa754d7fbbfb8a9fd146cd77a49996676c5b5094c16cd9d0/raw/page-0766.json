@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0766",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 766,
+  "source_page_index": 765,
+  "source_page_display": 766,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Hepatic and renal impairment    745\nCHAPTER 8\nTable 8.11  Anxiolytics and hypnotics in renal impairment\nDrug\nComments\nBuspirone22,23,25,32\nLess than 1% is excreted unchanged; however, active metabolite is renally excreted. \nDosing advice contradictory, suggest: GFR 10–50mL/min start at a low dose and give \ntwice daily; GFR <10mL/min avoid if possible due to accumulation of active \nmetabolites; if essential, reduce dose by 25–50% if patient is anuric. Manufacturer \ncontraindicates in severe renal impairment.\nChlordiazepoxide23,25,32\n1–2% excreted unchanged but chlordiazepoxide has a long-acting active metabolite \nthat can accumulate. Dosing: GFR 10–50mL/min, dose as normal renal function; GFR \n<10mL/min, reduce dose by 50%. Monitor for excessive sedation. Manufacturer \ncautions in chronic renal disease.\nClomethiazole22,23,25,153\n(chlormethiazole)\n0.1–5% of unchanged drug excreted unchanged in urine. Dose as in normal renal function \nbut monitor for excessive sedation. Manufacturer recommends caution in renal disease.\nClonazepam22,23,25,154\n<0.5% of clonazepam excreted unchanged in urine. Dose adjustment not required in \nimpaired renal function; however, with long-term administration, active metabolites \nmay accumulate, so start at a low doses and increase according to response. Monitor \nfor excessive sedation. Has been used for insomnia in patients on haemodialysis.\n(Continued)\nTable 8.10  (Continued)\nDrug\nComments\nLithium (continued)\nthe development of end stage renal disease.19 These differences may be due to \nmethodology, improved monitoring and targeting recommended maintenance serum \nlevels (0.6–0.8mmol/L in BPAD).\nPrevent by using once-daily dosing, recommended plasma levels, avoiding intoxication, \nactive monitoring of kidney function and collaboration between psychiatrist, \nnephrologist and patient in decision making on continuation if CKD occurs.140\nRisk factors for lithium-induced nephrotoxicity include, increasing age, duration of \ntreatment, cumulative dose, lower initial eGFR, female gender, hypertension and \ndiabetes, concomitant nephrotoxic drugs, nephrogenic diabetes insipidus and \nprevious lithium toxicity.141\nIf lithium is used in renal impairment, toxicity is more likely and lithium toxicity \nincreases the risk of renal impairment. Renal damage is more likely with chronic \ntoxicity than acute. The manufacturer contraindicates lithium in renal impairment. \nDosing: GFR 10–50mL/min, avoid or reduce dose (50–75% of normal dose) and \nmonitor levels; GFR <10mL/min, avoid if possible, however if used it is essential to \nreduce dose (25–50% of normal dose). There is a case report of successful use in a \npatient on haemodialysis.142\nValproate22,23,25,143–149\nApproximately 2% excreted unchanged. Dose adjustment usually not required in \nrenal impairment; however, free valproate levels may be increased. Renal impairment, \ninterstitial nephritis, Fanconi syndrome, renal tubular acidosis and renal failure have \nbeen reported. Risk factors for renal tubular dysfunction include being bedbound and \nlow serum carnitine and phosphorus levels.150 Dose as in normal renal function; \nhowever, in severe impairment (GFR <10mL/min) it may be necessary to alter doses \naccording to free (unbound) valproate levels. Possibly less likely than lithium to cause \nchronic kidney disease in patients with bipolar disorder151 but data are conflicting.152\n",
+  "raw_text_sha256": "8da763d51e2f3a3167521fd6ec026e6def97804b7b278586b177d8ddd4d3d298",
+  "coordinates_sha256": "31b17d9ad60a7df744bb7450a0fab2f390959e53797210f32ac2f0fe77ec06bc",
+  "block_sequence_sha256": "3279eb710572a5b5b6bf0f7630a1c657c34e7bc5eb133dd77e787a45764c8bbb",
+  "blocks": [
+    {
+      "block_id": "page-0766-block-0000",
+      "order": 0,
+      "text": "Hepatic and renal impairment    745\n",
+      "bbox": [
+        269.185302734375,
+        31.395221710205078,
+        420.00048828125,
+        41.0272216796875
+      ],
+      "text_sha256": "c05afaade57cfd6af6ad5071f22b8d382bb0b3f5d64a814ac779192fe7976759"
+    },
+    {
+      "block_id": "page-0766-block-0001",
+      "order": 1,
+      "text": "CHAPTER 8\n",
+      "bbox": [
+        454.4096984863281,
+        532.3878173828125,
+        463.88970947265625,
+        573.7318115234375
+      ],
+      "text_sha256": "5ba3d9fb75ff4f418d4a2e9d517f30966dcfb279c10487eec43c5aa3fd8757a2"
+    },
+    {
+      "block_id": "page-0766-block-0002",
+      "order": 2,
+      "text": "Table 8.11  Anxiolytics and hypnotics in renal impairment\n",
+      "bbox": [
+        54.0,
+        387.87579345703125,
+        237.6449737548828,
+        396.7633056640625
+      ],
+      "text_sha256": "5ba62164b2f71f3213317885d628286256e3dd64ec92e14d6bfa6c1e28ee505e"
+    },
+    {
+      "block_id": "page-0766-block-0003",
+      "order": 3,
+      "text": "Drug\nComments\n",
+      "bbox": [
+        48.0,
+        407.75079345703125,
+        184.5,
+        416.6383056640625
+      ],
+      "text_sha256": "f0d3aba6cb5c63a8b3ce76553ca73a800f481925284fe7cc72b7ce3c93bfebe6"
+    },
+    {
+      "block_id": "page-0766-block-0004",
+      "order": 4,
+      "text": "Buspirone22,23,25,32\nLess than 1% is excreted unchanged; however, active metabolite is renally excreted. \nDosing advice contradictory, suggest: GFR 10–50mL/min start at a low dose and give \ntwice daily; GFR <10mL/min avoid if possible due to accumulation of active \nmetabolites; if essential, reduce dose by 25–50% if patient is anuric. Manufacturer \ncontraindicates in severe renal impairment.\n",
+      "bbox": [
+        48.0,
+        426.0558166503906,
+        419.2725524902344,
+        474.7532958984375
+      ],
+      "text_sha256": "1c2a138c1cec8b40a34ad56f5b91cc8a185171abceaeb6358778f7190cbcff4b"
+    },
+    {
+      "block_id": "page-0766-block-0005",
+      "order": 5,
+      "text": "Chlordiazepoxide23,25,32\n1–2% excreted unchanged but chlordiazepoxide has a long-acting active metabolite \nthat can accumulate. Dosing: GFR 10–50mL/min, dose as normal renal function; GFR \n<10mL/min, reduce dose by 50%. Monitor for excessive sedation. Manufacturer \ncautions in chronic renal disease.\n",
+      "bbox": [
+        48.0,
+        484.1733093261719,
+        419.8276062011719,
+        522.8807983398438
+      ],
+      "text_sha256": "07612d18488ed144360c1bf96f0d2c157f73c34f114a93671b9b11a549d41d05"
+    },
+    {
+      "block_id": "page-0766-block-0006",
+      "order": 6,
+      "text": "Clomethiazole22,23,25,153\n",
+      "bbox": [
+        48.0,
+        532.30078125,
+        119.3584213256836,
+        541.00830078125
+      ],
+      "text_sha256": "b57c8a4cd48376398368866c3650e6a96d8e4dae87912a6ec64e7c8457ea0fd1"
+    },
+    {
+      "block_id": "page-0766-block-0007",
+      "order": 7,
+      "text": "(chlormethiazole)\n",
+      "bbox": [
+        48.0,
+        542.3057861328125,
+        102.99749755859375,
+        551.0133056640625
+      ],
+      "text_sha256": "a6dfc8c5c04edb460072b0b259294b37e5d10e87909403521d95f188de2619b8"
+    },
+    {
+      "block_id": "page-0766-block-0008",
+      "order": 8,
+      "text": "0.1–5% of unchanged drug excreted unchanged in urine. Dose as in normal renal function \nbut monitor for excessive sedation. Manufacturer recommends caution in renal disease.\n",
+      "bbox": [
+        147.0,
+        532.3082885742188,
+        421.2452087402344,
+        551.0133056640625
+      ],
+      "text_sha256": "290201b8c84438d1726843914115209a270842bff9e2de1837bc95d09daf511b"
+    },
+    {
+      "block_id": "page-0766-block-0009",
+      "order": 9,
+      "text": "Clonazepam22,23,25,154\n<0.5% of clonazepam excreted unchanged in urine. Dose adjustment not required in \nimpaired renal function; however, with long-term administration, active metabolites \nmay accumulate, so start at a low doses and increase according to response. Monitor \nfor excessive sedation. Has been used for insomnia in patients on haemodialysis.\n",
+      "bbox": [
+        48.0,
+        560.4307861328125,
+        421.1551818847656,
+        599.1307983398438
+      ],
+      "text_sha256": "7635fd9039ce8630652e54e2ae68065c840877d2138eb625136e34dfa44dae97"
+    },
+    {
+      "block_id": "page-0766-block-0010",
+      "order": 10,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.16748046875,
+        607.71826171875,
+        420.0823974609375,
+        616.4707641601562
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0766-block-0011",
+      "order": 11,
+      "text": "Table 8.10  (Continued)\n",
+      "bbox": [
+        54.0,
+        70.08790588378906,
+        131.04000854492188,
+        78.97540283203125
+      ],
+      "text_sha256": "310396a0f817f7e1f17262b27fafbec04a78564b8a36288dfd63b515e3addcb4"
+    },
+    {
+      "block_id": "page-0766-block-0012",
+      "order": 12,
+      "text": "Drug\nComments\n",
+      "bbox": [
+        48.0,
+        89.46296691894531,
+        184.5,
+        98.3504638671875
+      ],
+      "text_sha256": "f0d3aba6cb5c63a8b3ce76553ca73a800f481925284fe7cc72b7ce3c93bfebe6"
+    },
+    {
+      "block_id": "page-0766-block-0013",
+      "order": 13,
+      "text": "Lithium (continued)\nthe development of end stage renal disease.19 These differences may be due to \nmethodology, improved monitoring and targeting recommended maintenance serum \nlevels (0.6–0.8mmol/L in BPAD).\nPrevent by using once-daily dosing, recommended plasma levels, avoiding intoxication, \nactive monitoring of kidney function and collaboration between psychiatrist, \nnephrologist and patient in decision making on continuation if CKD occurs.140\n",
+      "bbox": [
+        48.0,
+        107.7679672241211,
+        421.5235595703125,
+        166.46295166015625
+      ],
+      "text_sha256": "2a06bf3e568493effd6f948844498a2ccdcf9e9b65130a21faf8f832a04a8ccb"
+    },
+    {
+      "block_id": "page-0766-block-0014",
+      "order": 14,
+      "text": "Risk factors for lithium-induced nephrotoxicity include, increasing age, duration of \ntreatment, cumulative dose, lower initial eGFR, female gender, hypertension and \ndiabetes, concomitant nephrotoxic drugs, nephrogenic diabetes insipidus and \nprevious lithium toxicity.141\n",
+      "bbox": [
+        147.0,
+        167.76795959472656,
+        410.9250793457031,
+        206.46795654296875
+      ],
+      "text_sha256": "58ed01c960cbedef1e4f6f80b6cb932e5a4e95d5cc29b8eb20af6930a8eba361"
+    },
+    {
+      "block_id": "page-0766-block-0015",
+      "order": 15,
+      "text": "If lithium is used in renal impairment, toxicity is more likely and lithium toxicity \nincreases the risk of renal impairment. Renal damage is more likely with chronic \ntoxicity than acute. The manufacturer contraindicates lithium in renal impairment. \nDosing: GFR 10–50mL/min, avoid or reduce dose (50–75% of normal dose) and \nmonitor levels; GFR <10mL/min, avoid if possible, however if used it is essential to \nreduce dose (25–50% of normal dose). There is a case report of successful use in a \npatient on haemodialysis.142\n",
+      "bbox": [
+        147.0,
+        207.7679901123047,
+        413.3250427246094,
+        276.4604797363281
+      ],
+      "text_sha256": "6eb6a0ab7a68d37b8328e283d9a209063e51d906b542adf4e1e0ee4397aef9f8"
+    },
+    {
+      "block_id": "page-0766-block-0016",
+      "order": 16,
+      "text": "Valproate22,23,25,143–149\nApproximately 2% excreted unchanged. Dose adjustment usually not required in \nrenal impairment; however, free valproate levels may be increased. Renal impairment, \ninterstitial nephritis, Fanconi syndrome, renal tubular acidosis and renal failure have \nbeen reported. Risk factors for renal tubular dysfunction include being bedbound and \nlow serum carnitine and phosphorus levels.150 Dose as in normal renal function; \nhowever, in severe impairment (GFR <10mL/min) it may be necessary to alter doses \naccording to free (unbound) valproate levels. Possibly less likely than lithium to cause \nchronic kidney disease in patients with bipolar disorder151 but data are conflicting.152\n",
+      "bbox": [
+        48.0,
+        285.89300537109375,
+        422.05517578125,
+        364.6004943847656
+      ],
+      "text_sha256": "0059423e9c3df42de391a2f59abee8cc784446079953d8fa3df08542bcabb954"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

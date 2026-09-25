@@ -1,0 +1,371 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0791",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 791,
+  "source_page_index": 790,
+  "source_page_display": 791,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "770    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  9\nTable 9.1 (Continued)\nDrug\nDose\nAdverse effects\nNotes\nHaloperidol (continued)\nIM 0.5–1mg, \nobserve for \n30–60 minutes \nand repeat if \nnecessary\n(peak effect: \n20–40 minutes)\nBaseline ECG is recommended for all \npatients, and especially for the elderly \nor those with a family or personal \nhistory of cardiac disease. Low doses \n(<1mg) are unlikely to cause problems \nin those with no pre-existing disease48\nRegular monitoring of the ECG and \npotassium levels should be carried out \nif there are other conditions present \nthat may prolong the QT interval\nAvoid in Lewy body dementia and \nParkinson’s disease\nAvoid intravenous use where possible. \nHowever, in the medical ICU setting, IV \nis often used with close continuous \nECG monitoring\nSecond-generation antipsychotics\nAmisulpride12,13,49,50\nOral 50–300mg \nod, up to a \nmaximum of \n800mg od\nDoses higher \nthan 300mg \nshould be given \nin two divided \ndoses\nProlonged QT interval\nIncreased risk of \nstroke in patients with \ndementia\nVery limited evidence in delirium\nAs amisulpride is almost entirely \nexcreted via the kidneys it is imperative \nto monitor renal function when used \nin medically ill or elderly patients\nAripiprazole12,13,49–51\nOral 5–15mg/\nday, up to a \nmaximum of \n30mg/day\nEPSE less likely than \nwith haloperidol\nAkathisia or \nworsening sleep cycle \nmay be problematic\nIncreased risk of \nstroke in patients with \ndementia\nVery limited evidence\nUse of the rapid-acting intramuscular \npreparation has been described52\nOlanzapine19,53–57\nOral 2.5–5mg \nod, up to a \nmaximum of \n20mg/day\nEPSE less likely than \nwith haloperidol\nSedation is the most \ncommonly reported \nside effect\nIncreased risk of \nstroke in patients with \ndementia\nA trial comparing olanzapine, \nrisperidone, haloperidol and quetiapine \nshowed that all were equally \nefficacious and safe in the treatment \nof delirium, but the response rate to \nolanzapine was poorer in the older age \ngroup (>75 years)58\nThe rapid-acting intramuscular \npreparations has not been assessed in \nthe treatment of delirium. IV use of \nthe IM preparation has been \ndescribed59\n",
+  "raw_text_sha256": "446f7e7129ad4785b0487718a4bad93cb7db519a0982be54f01b8283194edd22",
+  "coordinates_sha256": "2c79c8e6fbdd7fa71184d17b6e6d07da17f79cc41ccb3f1e11a92bd61b51c766",
+  "block_sequence_sha256": "a6fdee63de5b64e8d4528d567a4aa6cfd7625b97c4b7267f4715d9d9a613694b",
+  "blocks": [
+    {
+      "block_id": "page-0791-block-0000",
+      "order": 0,
+      "text": "770    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "953cad5470307f5026b13c89712f994dc7c66be191c14a6fb365e6a153c8fcf2"
+    },
+    {
+      "block_id": "page-0791-block-0001",
+      "order": 1,
+      "text": "CHAPTER  9\n",
+      "bbox": [
+        18.520000457763672,
+        597.6024780273438,
+        28.0,
+        641.1704711914062
+      ],
+      "text_sha256": "2f213d231c74a11904a8da09025a8eefa6dceb4a2df848af43d9c4d19beb9596"
+    },
+    {
+      "block_id": "page-0791-block-0002",
+      "order": 2,
+      "text": "Table 9.1 (Continued)\n",
+      "bbox": [
+        67.88999938964844,
+        70.08796691894531,
+        138.34498596191406,
+        78.9754638671875
+      ],
+      "text_sha256": "5d8881270f655c47a62e4b8f943924c6e2e0e3cb091d43a0eacabaa7642993bd"
+    },
+    {
+      "block_id": "page-0791-block-0003",
+      "order": 3,
+      "text": "Drug\nDose\nAdverse effects\nNotes\n",
+      "bbox": [
+        61.88999938964844,
+        90.32289123535156,
+        328.4175109863281,
+        99.21038818359375
+      ],
+      "text_sha256": "60a78b8cd9dc096a6d60f46505aaad1abcc6d57d3170f46fec2c4ebda10c2e70"
+    },
+    {
+      "block_id": "page-0791-block-0004",
+      "order": 4,
+      "text": "Haloperidol (continued)\nIM 0.5–1mg, \nobserve for \n30–60 minutes \nand repeat if \nnecessary\n",
+      "bbox": [
+        61.889984130859375,
+        110.6253890991211,
+        209.90997314453125,
+        159.3228759765625
+      ],
+      "text_sha256": "2519ed1868ece65762c775d2a3cb89540ff0829f95db702945695a4378883ba3"
+    },
+    {
+      "block_id": "page-0791-block-0005",
+      "order": 5,
+      "text": "(peak effect: \n20–40 minutes)\n",
+      "bbox": [
+        159.89248657226562,
+        163.6128692626953,
+        209.90997314453125,
+        182.31787109375
+      ],
+      "text_sha256": "91dcac5146d358874ca627190173e268c31bca06d41683495e792037e1a3c000"
+    },
+    {
+      "block_id": "page-0791-block-0006",
+      "order": 6,
+      "text": "Baseline ECG is recommended for all \npatients, and especially for the elderly \nor those with a family or personal \nhistory of cardiac disease. Low doses \n(<1mg) are unlikely to cause problems \nin those with no pre-existing disease48\n",
+      "bbox": [
+        308.00250244140625,
+        110.6103744506836,
+        431.8350524902344,
+        169.30535888671875
+      ],
+      "text_sha256": "c1d1a389e2b99cf0ce02b15dc3e6803f2d61da2b2a03a6cd10f925b5607eb2e4"
+    },
+    {
+      "block_id": "page-0791-block-0007",
+      "order": 7,
+      "text": "Regular monitoring of the ECG and \npotassium levels should be carried out \nif there are other conditions present \nthat may prolong the QT interval\n",
+      "bbox": [
+        307.9996032714844,
+        173.6278839111328,
+        431.7722473144531,
+        212.327880859375
+      ],
+      "text_sha256": "f49996a3101ca9fa9fabdfc7d9bc529061656ca84c638def0ce4243c94d1c8f3"
+    },
+    {
+      "block_id": "page-0791-block-0008",
+      "order": 8,
+      "text": "Avoid in Lewy body dementia and \nParkinson’s disease\n",
+      "bbox": [
+        307.9996032714844,
+        216.6178741455078,
+        418.7221374511719,
+        235.3228759765625
+      ],
+      "text_sha256": "19882af3b03cbb6d239d276327b9442ab7c60225f9dd3b2f92e7c1d4dcd31857"
+    },
+    {
+      "block_id": "page-0791-block-0009",
+      "order": 9,
+      "text": "Avoid intravenous use where possible. \nHowever, in the medical ICU setting, IV \nis often used with close continuous \nECG monitoring\n",
+      "bbox": [
+        307.9996032714844,
+        239.6128692626953,
+        434.8246154785156,
+        278.3128662109375
+      ],
+      "text_sha256": "338781207917dcbd60fbd89ccc9f3fe4ccc2dc0961ad7f84d817242eb71ac8f6"
+    },
+    {
+      "block_id": "page-0791-block-0010",
+      "order": 10,
+      "text": "Second-generation antipsychotics\n",
+      "bbox": [
+        61.887115478515625,
+        287.6578674316406,
+        180.64212036132812,
+        296.5453796386719
+      ],
+      "text_sha256": "dac4e204d703c7d610999f46fe70b16b562484f3042a6f00948f6cd057a8f076"
+    },
+    {
+      "block_id": "page-0791-block-0011",
+      "order": 11,
+      "text": "Amisulpride12,13,49,50\nOral 50–300mg \nod, up to a \nmaximum of \n800mg od\n",
+      "bbox": [
+        61.887115478515625,
+        307.96038818359375,
+        212.40478515625,
+        346.6878967285156
+      ],
+      "text_sha256": "168cf9b3e7fb4fd97b83331d3f43728483b620c2c22b9d8ec78b3dbeabf926c9"
+    },
+    {
+      "block_id": "page-0791-block-0012",
+      "order": 12,
+      "text": "Doses higher \nthan 300mg \nshould be given \nin two divided \ndoses\n",
+      "bbox": [
+        159.88980102539062,
+        350.9779052734375,
+        212.41229248046875,
+        399.6753845214844
+      ],
+      "text_sha256": "0f10507ed67e80cf5d70f0b9d9da52545ef284a667af61dc29dc347f88047258"
+    },
+    {
+      "block_id": "page-0791-block-0013",
+      "order": 13,
+      "text": "Prolonged QT interval\n",
+      "bbox": [
+        223.38479614257812,
+        307.96539306640625,
+        292.42230224609375,
+        316.6728820800781
+      ],
+      "text_sha256": "579a8a96c650e87513c59015fee0d25f21f7f3d0d583017d75ec3d7016278435"
+    },
+    {
+      "block_id": "page-0791-block-0014",
+      "order": 14,
+      "text": "Increased risk of \nstroke in patients with \ndementia\n",
+      "bbox": [
+        223.38479614257812,
+        320.962890625,
+        296.5923156738281,
+        349.6653747558594
+      ],
+      "text_sha256": "1a8d3eadea495a323c0fb5f8eb56fea52cab13ab6385a498f80f077e00a35076"
+    },
+    {
+      "block_id": "page-0791-block-0015",
+      "order": 15,
+      "text": "Very limited evidence in delirium\n",
+      "bbox": [
+        307.9997863769531,
+        307.9578857421875,
+        411.32733154296875,
+        316.6653747558594
+      ],
+      "text_sha256": "58763683bbd47b143bf91a7ff403a0254a3da3e5293f32af195d3652476cf06b"
+    },
+    {
+      "block_id": "page-0791-block-0016",
+      "order": 16,
+      "text": "As amisulpride is almost entirely \nexcreted via the kidneys it is imperative \nto monitor renal function when used \nin medically ill or elderly patients\n",
+      "bbox": [
+        307.9997863769531,
+        320.95538330078125,
+        434.51727294921875,
+        359.6553649902344
+      ],
+      "text_sha256": "98e27b363a342d07df25263fc35297b33e2be8c9bc4246900f213c498ad0f17d"
+    },
+    {
+      "block_id": "page-0791-block-0017",
+      "order": 17,
+      "text": "Aripiprazole12,13,49–51\nOral 5–15mg/\nday, up to a \nmaximum of \n30mg/day\n",
+      "bbox": [
+        61.887298583984375,
+        409.0728759765625,
+        204.06478881835938,
+        447.8128967285156
+      ],
+      "text_sha256": "05398d3cd0d30389fd520b1986f78484f8395ceff35cd958b2f46de066d72ea9"
+    },
+    {
+      "block_id": "page-0791-block-0018",
+      "order": 18,
+      "text": "EPSE less likely than \nwith haloperidol\n",
+      "bbox": [
+        223.38479614257812,
+        409.10540771484375,
+        288.3872985839844,
+        427.8103942871094
+      ],
+      "text_sha256": "0d9a6684cbec6e83f4d53b6717f7ba47a6bc55f9e57514d16a7c54d3b4fbbeaf"
+    },
+    {
+      "block_id": "page-0791-block-0019",
+      "order": 19,
+      "text": "Akathisia or \nworsening sleep cycle \nmay be problematic\n",
+      "bbox": [
+        223.38479614257812,
+        432.10040283203125,
+        294.64227294921875,
+        460.8028869628906
+      ],
+      "text_sha256": "b2a65a354f5ba04ef55bcf0522917f96cd53712c15727dc20695b1ad6714e800"
+    },
+    {
+      "block_id": "page-0791-block-0020",
+      "order": 20,
+      "text": "Increased risk of \nstroke in patients with \ndementia\n",
+      "bbox": [
+        223.38479614257812,
+        465.0928955078125,
+        296.5923156738281,
+        493.7953796386719
+      ],
+      "text_sha256": "1a8d3eadea495a323c0fb5f8eb56fea52cab13ab6385a498f80f077e00a35076"
+    },
+    {
+      "block_id": "page-0791-block-0021",
+      "order": 21,
+      "text": "Very limited evidence\n",
+      "bbox": [
+        307.9997863769531,
+        409.09039306640625,
+        375.4922790527344,
+        417.7978820800781
+      ],
+      "text_sha256": "86c6a413e33f936b28735421cd34d6d3d7a920c0523f61bc3323f623bdf37133"
+    },
+    {
+      "block_id": "page-0791-block-0022",
+      "order": 22,
+      "text": "Use of the rapid-acting intramuscular \npreparation has been described52\n",
+      "bbox": [
+        307.9997863769531,
+        422.087890625,
+        428.8398742675781,
+        440.7928771972656
+      ],
+      "text_sha256": "29c86a9cdc4ddbc6bac832369e7199a4bddf73c9a29210b12a0a65ca080b2989"
+    },
+    {
+      "block_id": "page-0791-block-0023",
+      "order": 23,
+      "text": "Olanzapine19,53–57\nOral 2.5–5mg \nod, up to a \nmaximum of \n20mg/day\n",
+      "bbox": [
+        61.88999938964844,
+        503.2378845214844,
+        206.14979553222656,
+        541.9378662109375
+      ],
+      "text_sha256": "bc3e91cdd1cb5f0909e8a98e3da2e30fb366f6502788b527f52eab8949b63f55"
+    },
+    {
+      "block_id": "page-0791-block-0024",
+      "order": 24,
+      "text": "EPSE less likely than \nwith haloperidol\n",
+      "bbox": [
+        223.38479614257812,
+        503.2303771972656,
+        288.3872985839844,
+        521.9353637695312
+      ],
+      "text_sha256": "0d9a6684cbec6e83f4d53b6717f7ba47a6bc55f9e57514d16a7c54d3b4fbbeaf"
+    },
+    {
+      "block_id": "page-0791-block-0025",
+      "order": 25,
+      "text": "Sedation is the most \ncommonly reported \nside effect\n",
+      "bbox": [
+        223.38479614257812,
+        526.225341796875,
+        290.47979736328125,
+        554.9278564453125
+      ],
+      "text_sha256": "30c5940bd3c7f965226d53fa115e25de1075e317f750be6fd0793c6a66d46ea8"
+    },
+    {
+      "block_id": "page-0791-block-0026",
+      "order": 26,
+      "text": "Increased risk of \nstroke in patients with \ndementia\n",
+      "bbox": [
+        223.38479614257812,
+        559.2178344726562,
+        296.5923156738281,
+        587.9203491210938
+      ],
+      "text_sha256": "1a8d3eadea495a323c0fb5f8eb56fea52cab13ab6385a498f80f077e00a35076"
+    },
+    {
+      "block_id": "page-0791-block-0027",
+      "order": 27,
+      "text": "A trial comparing olanzapine, \nrisperidone, haloperidol and quetiapine \nshowed that all were equally \nefficacious and safe in the treatment \nof delirium, but the response rate to \nolanzapine was poorer in the older age \ngroup (>75 years)58\n",
+      "bbox": [
+        307.9997863769531,
+        503.2153625488281,
+        435.2000427246094,
+        571.9078369140625
+      ],
+      "text_sha256": "61e130d8f927eb220cf9d3475bab558500b2595d4fa729fe706087bc974ec8a0"
+    },
+    {
+      "block_id": "page-0791-block-0028",
+      "order": 28,
+      "text": "The rapid-acting intramuscular \npreparations has not been assessed in \nthe treatment of delirium. IV use of \nthe IM preparation has been \ndescribed59\n",
+      "bbox": [
+        307.9996032714844,
+        576.2378540039062,
+        430.81976318359375,
+        624.9353637695312
+      ],
+      "text_sha256": "b0df8acdc310831ab85788d3f043a3deb95aef297292e3c733ac9a4efbaa8220"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

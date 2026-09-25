@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0287",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 287,
+  "source_page_index": 286,
+  "source_page_display": 287,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "266    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  2\n2–3 times normal is rarely a cause for concern28). A delayed multi-organ hypersensitiv-\nity reaction rarely occurs, mainly manifesting itself as various skin reactions, a low \nWBC count and abnormal LFTs. Fatalities have been reported.28,29 There is no clear \ntimescale for these events.\nSome antiseizure medications have been associated with an increased risk of suicidal \nbehaviour. Carbamazepine has not been implicated, either in general30,31 or more spe-\ncifically in those with bipolar illness.32\nPre-treatment tests\nBaseline urea and electrolytes (U&Es) FBC and LFTs are recommended by NICE. A \nbaseline measure of weight is also desirable.\nOn-treatment monitoring\nNICE recommends that U&Es, FBC and LFTs should be repeated after 6 months, and \nthat weight (or BMI) should also be monitored.\nDiscontinuation\nIt is not known if abrupt discontinuation of carbamazepine worsens the natural course \nof bipolar illness in the same way that abrupt cessation of lithium does. In one small \ncase series (n = 6), one patient developed depression within a month of discontinua-\ntion,33 while in another small case series (n = 4), three patients had a recurrence of their \nmood disorder within 3 months.34 Until further data are available, if carbamazepine is \nto be discontinued, it should be done slowly (over at least a month).\nUse in women of child-bearing age\nCarbamazepine is an established human teratogen (see Chapter 7).\nWomen who have mania are likely to be sexually disinhibited. The risk of unplanned \npregnancy is likely to be above population norms (where 50% of pregnancies are \nunplanned). If carbamazepine cannot be avoided, adequate contraception should be \nensured (note the interaction between carbamazepine and oral contraceptives outlined \nbelow) and prophylactic folate prescribed.\nInteractions with other drugs35–38\nCarbamazepine is a potent inducer of hepatic cytochrome enzymes and is metabolised by \nCYP3A4. Plasma levels of most antidepressants, most antipsychotics, benzodiazepines, \nwarfarin, zolpidem, some cholinesterase inhibitors, methadone, thyroxine, theophylline, \noestrogens and other steroids may be reduced by carbamazepine, resulting in treatment \nfailure. Patients requiring contraception should either receive a preparation containing \nnot less than 50µg oestrogen or use a non-hormonal method. Drugs that inhibit CYP3A4 \nwill increase carbamazepine plasma levels and may precipitate toxicity. Examples include \nfluconazole, cimetidine, diltiazem, verapamil, erythromycin and some SSRIs.\n",
+  "raw_text_sha256": "cc563925f91a59646936c1a2905930453ebe563324970deab7cfb8a47ff9217b",
+  "coordinates_sha256": "613bd45dab89aea61f92bfc444b535b9e13711a72cd5b84ac67b75637a2428fc",
+  "block_sequence_sha256": "e25942ba9bd5eaf962dcf3ec5969c7dcf28868f16443d0a49f7970945335fff0",
+  "blocks": [
+    {
+      "block_id": "page-0287-block-0000",
+      "order": 0,
+      "text": "266    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "d06b6ac5ac0099faf6185c932d5f8ab1d18d13c286492e40c2258ebc982dc56b"
+    },
+    {
+      "block_id": "page-0287-block-0001",
+      "order": 1,
+      "text": "CHAPTER  2\n",
+      "bbox": [
+        19.520000457763672,
+        145.23529052734375,
+        29.0,
+        188.80328369140625
+      ],
+      "text_sha256": "5befcde2fefe074681a51514b484ad31516d952c51183625b5b7b1fb84f30d2c"
+    },
+    {
+      "block_id": "page-0287-block-0002",
+      "order": 2,
+      "text": "2–3 times normal is rarely a cause for concern28). A delayed multi-organ hypersensitiv-\nity reaction rarely occurs, mainly manifesting itself as various skin reactions, a low \nWBC count and abnormal LFTs. Fatalities have been reported.28,29 There is no clear \ntimescale for these events.\n",
+      "bbox": [
+        61.888702392578125,
+        62.55029296875,
+        436.66876220703125,
+        110.27029418945312
+      ],
+      "text_sha256": "badf5cb9924ce07fd6b449bd9d2db12c2fee617d8aadba71573dc22c46bb96d0"
+    },
+    {
+      "block_id": "page-0287-block-0003",
+      "order": 3,
+      "text": "Some antiseizure medications have been associated with an increased risk of suicidal \nbehaviour. Carbamazepine has not been implicated, either in general30,31 or more spe-\ncifically in those with bipolar illness.32\n",
+      "bbox": [
+        61.888702392578125,
+        110.55029296875,
+        436.6587219238281,
+        146.27029418945312
+      ],
+      "text_sha256": "c4a0e04c0b8f781b287f5f4f340607df95e59784c2f46c0cc397cf062e1c923a"
+    },
+    {
+      "block_id": "page-0287-block-0004",
+      "order": 4,
+      "text": "Pre-treatment tests\n",
+      "bbox": [
+        61.88999938964844,
+        163.70529174804688,
+        161.1320037841797,
+        176.74029541015625
+      ],
+      "text_sha256": "a284bcc2f76212b7a21827778e92eea80343b67c93f887728acec58a673cd4e3"
+    },
+    {
+      "block_id": "page-0287-block-0005",
+      "order": 5,
+      "text": "Baseline urea and electrolytes (U&Es) FBC and LFTs are recommended by NICE. A \nbaseline measure of weight is also desirable.\n",
+      "bbox": [
+        61.88999938964844,
+        182.55029296875,
+        436.6700744628906,
+        206.27029418945312
+      ],
+      "text_sha256": "62ee730747f2ca0e37fa700f626b4148df5884b8677f77f568aaf217ad9b81aa"
+    },
+    {
+      "block_id": "page-0287-block-0006",
+      "order": 6,
+      "text": "On-treatment monitoring\n",
+      "bbox": [
+        61.88999938964844,
+        223.70529174804688,
+        193.71397399902344,
+        236.74029541015625
+      ],
+      "text_sha256": "0666cc155fcdc8d9888bd309734f38db3d4080038e1d6fd82859bb2e4daad87f"
+    },
+    {
+      "block_id": "page-0287-block-0007",
+      "order": 7,
+      "text": "NICE recommends that U&Es, FBC and LFTs should be repeated after 6 months, and \nthat weight (or BMI) should also be monitored.\n",
+      "bbox": [
+        61.88999938964844,
+        242.55029296875,
+        436.6400451660156,
+        266.2702941894531
+      ],
+      "text_sha256": "895fcdf8a8401475713f017fd53abd7a488b9918addfcb83d4b2b31df74b834c"
+    },
+    {
+      "block_id": "page-0287-block-0008",
+      "order": 8,
+      "text": "Discontinuation\n",
+      "bbox": [
+        61.88999938964844,
+        283.7052917480469,
+        143.77398681640625,
+        296.74029541015625
+      ],
+      "text_sha256": "b634bf807c743515f1ae869a41765c0d286df22768cea1d9e6a4bea43e938a9d"
+    },
+    {
+      "block_id": "page-0287-block-0009",
+      "order": 9,
+      "text": "It is not known if abrupt discontinuation of carbamazepine worsens the natural course \nof bipolar illness in the same way that abrupt cessation of lithium does. In one small \ncase series (n = 6), one patient developed depression within a month of discontinua-\ntion,33 while in another small case series (n = 4), three patients had a recurrence of their \nmood disorder within 3 months.34 Until further data are available, if carbamazepine is \nto be discontinued, it should be done slowly (over at least a month).\n",
+      "bbox": [
+        61.88539123535156,
+        302.55029296875,
+        436.7099609375,
+        374.2702941894531
+      ],
+      "text_sha256": "f3ccf0923646c27f12db91f87bf7ccfacd5b4ceeb78b9fbd7d0ff75a5d6749df"
+    },
+    {
+      "block_id": "page-0287-block-0010",
+      "order": 10,
+      "text": "Use in women of child-bearing age\n",
+      "bbox": [
+        61.88999938964844,
+        391.7052917480469,
+        242.8069305419922,
+        404.74029541015625
+      ],
+      "text_sha256": "8a568faf784c8501cc223cb4dbfbdfda034220f67d9cd097b1fb44b6aad36a4f"
+    },
+    {
+      "block_id": "page-0287-block-0011",
+      "order": 11,
+      "text": "Carbamazepine is an established human teratogen (see Chapter 7).\n",
+      "bbox": [
+        61.88999938964844,
+        410.55029296875,
+        349.11993408203125,
+        422.2702941894531
+      ],
+      "text_sha256": "8893030caec06380035ff2a16dc4e9a7d483145d66608d8901cf5f23c09f2557"
+    },
+    {
+      "block_id": "page-0287-block-0012",
+      "order": 12,
+      "text": "Women who have mania are likely to be sexually disinhibited. The risk of unplanned \npregnancy is likely to be above population norms (where 50% of pregnancies are \nunplanned). If carbamazepine cannot be avoided, adequate contraception should be \nensured (note the interaction between carbamazepine and oral contraceptives outlined \nbelow) and prophylactic folate prescribed.\n",
+      "bbox": [
+        61.88999938964844,
+        422.55029296875,
+        436.7099609375,
+        482.2702941894531
+      ],
+      "text_sha256": "0f19883ca7eab769e4d26d61d7b50fc16ae6604e19e751c02b21c794ef255275"
+    },
+    {
+      "block_id": "page-0287-block-0013",
+      "order": 13,
+      "text": "Interactions with other drugs35–38\n",
+      "bbox": [
+        61.88999938964844,
+        499.7052917480469,
+        230.92611694335938,
+        512.7402954101562
+      ],
+      "text_sha256": "0223ef67cdd5035c1fed82d70d49936194794f443105c5e9c41d69c3f73b2262"
+    },
+    {
+      "block_id": "page-0287-block-0014",
+      "order": 14,
+      "text": "Carbamazepine is a potent inducer of hepatic cytochrome enzymes and is metabolised by \nCYP3A4. Plasma levels of most antidepressants, most antipsychotics, benzodiazepines, \nwarfarin, zolpidem, some cholinesterase inhibitors, methadone, thyroxine, theophylline, \noestrogens and other steroids may be reduced by carbamazepine, resulting in treatment \nfailure. Patients requiring contraception should either receive a preparation containing \nnot less than 50µg oestrogen or use a non-hormonal method. Drugs that inhibit CYP3A4 \nwill increase carbamazepine plasma levels and may precipitate toxicity. Examples include \nfluconazole, cimetidine, diltiazem, verapamil, erythromycin and some SSRIs.\n",
+      "bbox": [
+        61.88995361328125,
+        518.55029296875,
+        436.6799011230469,
+        614.2703247070312
+      ],
+      "text_sha256": "8470bcfa9242f16c70163cdb51a9c8194a963107bf00e0a8ed2bea0e6b4d69ac"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

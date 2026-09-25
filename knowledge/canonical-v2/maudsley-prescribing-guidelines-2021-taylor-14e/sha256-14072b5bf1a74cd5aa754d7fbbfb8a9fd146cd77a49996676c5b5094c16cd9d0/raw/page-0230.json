@@ -1,0 +1,323 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0230",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 230,
+  "source_page_index": 229,
+  "source_page_display": 230,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    209\nCHAPTER 1\nDosing\nStarting clozapine in the community requires a slow and flexible titration schedule. \nPrior antipsychotics should be slowly discontinued during the titration phase (depots \ncan usually be stopped at the start of titration). Clozapine can cause marked postural \nhypotension. The initially monitoring is partly aimed at detecting and managing this.\nThere are two basic methods for starting clozapine in the community. One is to give \nthe first dose in the morning in clinic and then monitor the patient for at least three \nhours. If the dose is well tolerated, the patient is then allowed home with a dose to take \nbefore going to bed. This dosing schedule is described in Table 1.38. This is a very cau-\ntious schedule: most patients will tolerate faster titration. The second method involves \ngiving the patient the first dose to take immediately before bed, so avoiding the need for \nclose physical monitoring immediately after administration. Subsequent doses and \nmonitoring is as for the first method. All initiations should take place early in the week \n(e.g. on a Monday) so that adequate staffing and monitoring are assured.\nTable 1.38  Suggested titration regime for initiation of clozapine in the community (note that much faster \ntitrations can be undertaken in many patients where tolerability allows)\nDay\nDay of the \nweek\nMorning  \ndose (mg)\nEvening  \ndose (mg)\nMonitoring\nPercentage dose \nof previous \nantipsychotic\n1\nMonday\n6.25\n6.25\nA\n100\n2\nTuesday\n6.25\n6.25\nA\n3\nWednesday\n6.25\n6.25\nA\n4\nThursday\n6.25\n12.5\nA, B, FBC\n5\nFriday\n12.5\n12.5\nA\nCheck results from day 4. \nRemind patient of out-of-hours \narrangements for weekend\n6\nSaturday\n12.5\n12.5\nNo routine monitoring unless \nclinically indicated\n7\nSunday\n12.5\n12.5\nNo routine monitoring unless \nclinically indicated\n8\nMonday\n12.5\n25\nA\n75*\n9\nTuesday\n12.5\n25\nA\n10\nWednesday\n25\n25\nA\n11\nThursday\n25\n37.5\nA, B, FBC\n12\nFriday\n25\n37.5\nA\nCheck results from day 1. \nRemind patient of out-of-hours \narrangements for week-end\n13\nSaturday\n25\n37.5\nNo routine monitoring unless \nclinically indicated\n(Continued)\n",
+  "raw_text_sha256": "ae04ec09563faaf8ab09935a48091d0a32703a85f9c1c6fd580bc68dcaa712c6",
+  "coordinates_sha256": "0db918cffc76bca86841c31ee343a15d360a9ef60285d73b44570a50b8fecaa7",
+  "block_sequence_sha256": "c01e7c834ded312a6b5dbb514ec1cfd1e01997279ad05fba953d2389936f196e",
+  "blocks": [
+    {
+      "block_id": "page-0230-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    209\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "da5baba7ea57219b57ad91a2751dbea913bc487c1d407ddbd6497679ed5dae8f"
+    },
+    {
+      "block_id": "page-0230-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0230-block-0002",
+      "order": 2,
+      "text": "Dosing\n",
+      "bbox": [
+        47.99909973144531,
+        62.31442642211914,
+        84.04610443115234,
+        75.34942626953125
+      ],
+      "text_sha256": "221a5abe8e79c2169919f81a186903f62d3c51ee39df48d49c21be02ea0e62f6"
+    },
+    {
+      "block_id": "page-0230-block-0003",
+      "order": 3,
+      "text": "Starting clozapine in the community requires a slow and flexible titration schedule. \nPrior antipsychotics should be slowly discontinued during the titration phase (depots \ncan usually be stopped at the start of titration). Clozapine can cause marked postural \nhypotension. The initially monitoring is partly aimed at detecting and managing this.\n",
+      "bbox": [
+        47.99909973144531,
+        81.159423828125,
+        422.7591857910156,
+        128.87942504882812
+      ],
+      "text_sha256": "08308540377e010cf23080e797b50ac6929758e481442af620bf8895ec507f89"
+    },
+    {
+      "block_id": "page-0230-block-0004",
+      "order": 4,
+      "text": "There are two basic methods for starting clozapine in the community. One is to give \nthe first dose in the morning in clinic and then monitor the patient for at least three \nhours. If the dose is well tolerated, the patient is then allowed home with a dose to take \nbefore going to bed. This dosing schedule is described in Table 1.38. This is a very cau-\ntious schedule: most patients will tolerate faster titration. The second method involves \ngiving the patient the first dose to take immediately before bed, so avoiding the need for \nclose physical monitoring immediately after administration. Subsequent doses and \nmonitoring is as for the first method. All initiations should take place early in the week \n(e.g. on a Monday) so that adequate staffing and monitoring are assured.\n",
+      "bbox": [
+        47.99909973144531,
+        129.159423828125,
+        422.8290100097656,
+        236.87942504882812
+      ],
+      "text_sha256": "e02447a15b989edd8cf2fa7743e44e4d25fc4935436cb7f885fd349155d0592c"
+    },
+    {
+      "block_id": "page-0230-block-0005",
+      "order": 5,
+      "text": "Table 1.38  Suggested titration regime for initiation of clozapine in the community (note that much faster \ntitrations can be undertaken in many patients where tolerability allows)\n",
+      "bbox": [
+        53.99909973144531,
+        262.02630615234375,
+        393.9065856933594,
+        280.91131591796875
+      ],
+      "text_sha256": "d5126701a933510cff9ee795f4deb6dc3529269af54dedc64806163edf453ba3"
+    },
+    {
+      "block_id": "page-0230-block-0006",
+      "order": 6,
+      "text": "Day\n",
+      "bbox": [
+        47.99909973144531,
+        312.26129150390625,
+        61.75410079956055,
+        321.1488037109375
+      ],
+      "text_sha256": "ab71403ac34fd4d56f0eccdd8d0414492629e64b1e98131853234957f36a7145"
+    },
+    {
+      "block_id": "page-0230-block-0007",
+      "order": 7,
+      "text": "Day of the \nweek\n",
+      "bbox": [
+        83.99909973144531,
+        302.2637939453125,
+        123.17911529541016,
+        321.1488037109375
+      ],
+      "text_sha256": "6985b4d2dd239a1e2a1edb8580e2ca006271ecafaa5bb81c084d40045e6260a2"
+    },
+    {
+      "block_id": "page-0230-block-0008",
+      "order": 8,
+      "text": "Morning  \ndose (mg)\n",
+      "bbox": [
+        136.72410583496094,
+        302.2637939453125,
+        171.7191162109375,
+        321.1488037109375
+      ],
+      "text_sha256": "21a96001c07a328baa84d9202b347d692070ecce4d983830f77838427ef13772"
+    },
+    {
+      "block_id": "page-0230-block-0009",
+      "order": 9,
+      "text": "Evening  \ndose (mg)\nMonitoring\n",
+      "bbox": [
+        194.7891082763672,
+        302.2637939453125,
+        291.7865295410156,
+        321.1488037109375
+      ],
+      "text_sha256": "0e44cb9bd2ac553825d1fb569db361e49e797e424699b904f42299bf9b36f769"
+    },
+    {
+      "block_id": "page-0230-block-0010",
+      "order": 10,
+      "text": "Percentage dose \nof previous \nantipsychotic\n",
+      "bbox": [
+        361.7916259765625,
+        292.2587890625,
+        421.6716003417969,
+        321.14129638671875
+      ],
+      "text_sha256": "860c297990e099e8b31d2ad23bce5b92c00417de1cadea2c60e98fb23f2feca0"
+    },
+    {
+      "block_id": "page-0230-block-0011",
+      "order": 11,
+      "text": "1\nMonday\n6.25\n6.25\nA\n100\n",
+      "bbox": [
+        47.99909973144531,
+        329.2113037109375,
+        374.3016662597656,
+        337.9187927246094
+      ],
+      "text_sha256": "91da9fe3a6d9c98c1fec4cab538c1711e3a9cbe0140da670269e84b1a77924a3"
+    },
+    {
+      "block_id": "page-0230-block-0012",
+      "order": 12,
+      "text": "2\nTuesday\n6.25\n6.25\nA\n",
+      "bbox": [
+        47.99909973144531,
+        344.2337951660156,
+        256.7915954589844,
+        352.9412841796875
+      ],
+      "text_sha256": "339d426fb35d14eaa3100d6461afe73067f9b37217b07e81ab134053b1b5964a"
+    },
+    {
+      "block_id": "page-0230-block-0013",
+      "order": 13,
+      "text": "3\nWednesday\n6.25\n6.25\nA\n",
+      "bbox": [
+        47.99909973144531,
+        359.25628662109375,
+        256.7915954589844,
+        367.9637756347656
+      ],
+      "text_sha256": "a53c2e5e4c08fcbf3d4a397c84f4e47121fc371c31b0081a757be335c5eac32a"
+    },
+    {
+      "block_id": "page-0230-block-0014",
+      "order": 14,
+      "text": "4\nThursday\n6.25\n12.5\nA, B, FBC\n",
+      "bbox": [
+        47.99909973144531,
+        374.2787780761719,
+        281.8040771484375,
+        382.98626708984375
+      ],
+      "text_sha256": "c46c03409d5c1b1aefd8d446485891871289025b0b67309466a4ca7d791986f7"
+    },
+    {
+      "block_id": "page-0230-block-0015",
+      "order": 15,
+      "text": "5\nFriday\n12.5\n12.5\nA\nCheck results from day 4. \nRemind patient of out-of-hours \narrangements for weekend\n",
+      "bbox": [
+        47.99909973144531,
+        389.30126953125,
+        351.5016174316406,
+        428.0012512207031
+      ],
+      "text_sha256": "da50dc5abc039d28894912731ed417fec77d884f7be6437de7ed0b89df397a58"
+    },
+    {
+      "block_id": "page-0230-block-0016",
+      "order": 16,
+      "text": "6\nSaturday\n12.5\n12.5\nNo routine monitoring unless \nclinically indicated\n",
+      "bbox": [
+        47.99909973144531,
+        434.3162536621094,
+        347.0992736816406,
+        453.021240234375
+      ],
+      "text_sha256": "59459db84bbd6939e5e6db4e6b33fb5b8e24c362d6bb52f5a412a075fbc302c5"
+    },
+    {
+      "block_id": "page-0230-block-0017",
+      "order": 17,
+      "text": "7\nSunday\n12.5\n12.5\nNo routine monitoring unless \nclinically indicated\n",
+      "bbox": [
+        47.99909973144531,
+        459.33624267578125,
+        347.0992736816406,
+        478.0412292480469
+      ],
+      "text_sha256": "1f131cdb65b7083edbbc8237c5c45f827c7bd2b614dcc2bbe3e3ea62bc3a8e90"
+    },
+    {
+      "block_id": "page-0230-block-0018",
+      "order": 18,
+      "text": "8\nMonday\n12.5\n25\nA\n75*\n",
+      "bbox": [
+        47.99909973144531,
+        484.3562316894531,
+        374.3016662597656,
+        493.063720703125
+      ],
+      "text_sha256": "94bdd66b46155c5152ab85a67b0571eeb042e9e85567b880d5dc1818fd106b6d"
+    },
+    {
+      "block_id": "page-0230-block-0019",
+      "order": 19,
+      "text": "9\nTuesday\n12.5\n25\nA\n",
+      "bbox": [
+        47.99909973144531,
+        499.3787536621094,
+        256.7915954589844,
+        508.08624267578125
+      ],
+      "text_sha256": "48020aae1ea6f29294b30effa10afe5a6863b8dddf7c5c0ac599726ea8821f86"
+    },
+    {
+      "block_id": "page-0230-block-0020",
+      "order": 20,
+      "text": "10\nWednesday\n25\n25\nA\n",
+      "bbox": [
+        47.99909973144531,
+        514.4012451171875,
+        256.7915954589844,
+        523.1087646484375
+      ],
+      "text_sha256": "da90c5584454d33c1c8b7f1c779998863ebd033ba5eb9d9d57fd92182a04f268"
+    },
+    {
+      "block_id": "page-0230-block-0021",
+      "order": 21,
+      "text": "11\nThursday\n25\n37.5\nA, B, FBC\n",
+      "bbox": [
+        47.99909973144531,
+        529.4237060546875,
+        281.8040771484375,
+        538.1312255859375
+      ],
+      "text_sha256": "92f4519948f682aeecb6064c81832e4e0d2afb565a2960f02c3095e855bb8409"
+    },
+    {
+      "block_id": "page-0230-block-0022",
+      "order": 22,
+      "text": "12\nFriday\n25\n37.5\nA\nCheck results from day 1. \nRemind patient of out-of-hours \narrangements for week-end\n",
+      "bbox": [
+        47.99909973144531,
+        544.4462280273438,
+        351.7189636230469,
+        583.146240234375
+      ],
+      "text_sha256": "2f6279b740e6c5e95f6c999efd24ff910910353e1e75b4eec8e196f521502a69"
+    },
+    {
+      "block_id": "page-0230-block-0023",
+      "order": 23,
+      "text": "13\nSaturday\n25\n37.5\nNo routine monitoring unless \nclinically indicated\n",
+      "bbox": [
+        47.99909973144531,
+        589.4612426757812,
+        347.0992736816406,
+        608.166259765625
+      ],
+      "text_sha256": "ffde52e14ca2f6b2f00f513ea6280fc563b10a9a5cb7055926ce8ee0459587c5"
+    },
+    {
+      "block_id": "page-0230-block-0024",
+      "order": 24,
+      "text": "(Continued)\n",
+      "bbox": [
+        382.484130859375,
+        616.3412475585938,
+        419.9991760253906,
+        625.09375
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

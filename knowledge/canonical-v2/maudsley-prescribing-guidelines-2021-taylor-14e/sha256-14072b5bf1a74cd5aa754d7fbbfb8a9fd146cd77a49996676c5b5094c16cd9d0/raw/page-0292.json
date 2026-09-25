@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0292",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 292,
+  "source_page_index": 291,
+  "source_page_display": 292,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Bipolar disorder    271\nCHAPTER 2\nClozapine\nThe earliest observational study of antipsychotics for maintenance treatment in BD \nexamined clozapine in people attending a service for resistant mood disorders.35 There \nis evidence from 15 trials to suggest improvements in treatment-resistant BD (where \ntwo treatments have failed, despite adequate dose and duration), in depression, mania, \nrapid cycling states and psychotic symptoms.36\nLurasidone\nLurasidone is licensed by the FDA as monotherapy and adjunctive treatment to lithium \nand divalproex for acute treatment of bipolar depression, on the basis of RCTs of \nmonotherapy versus placebo37 and as adjunct to lithium or valproate.38 Main side \neffects include nausea and akathisia, with minimal effects on weight and metabolic \nparameters.33\nOlanzapine\nOlanzapine is effective in mania.39,40 As with other FGAs, olanzapine is most effective \nwhen used in combination with a mood stabiliser in acute mania and for symptomatic \n(though not syndromal) relapse prevention41,42 (although in one study, olanzapine + car-\nbamazepine was no better than carbamazepine alone43). Data suggest that olanzapine \nmay offer benefits in longer term treatment.44,45 It may be more effective than lith-\nium.46,47 Olanzapine is of course associated with significant metabolic effects, including \nweight gain.\nQuetiapine\nData relating to quetiapine48–50 suggest robust efficacy in all aspects of BD, including \nprevention of bipolar depression.51 It has low propensity for EPSEs, though significant \neffects on weight and metabolic parameters.\nRisperidone\nRisperidone has shown efficacy in mania,52 particularly in combination with a mood \nstabiliser.53,54 Risperidone LAI is also effective55 (note though that the pharmacokinetics \nof this formulation generally render it an unsuitable choice for the acute treatment of \nmania). The long-acting version is used as prophylaxis (an unlicensed use in most coun-\ntries). It is effective as prophylaxis against mania in the longer term.18 Paliperidone can \nbe assumed to have similar effects.\nOther antipsychotics\nThere are few data for amisulpride56 and rather more for ziprasidone,57 which is widely \nused for mania in the US. Iloperidone may be effective in mixed episodes58 but data are \ninsufficient to support its use.\n",
+  "raw_text_sha256": "d9ad4b90afe4547d42c6a91718ad464cef34e2d9d862fa730f5f4fc6dd2caf69",
+  "coordinates_sha256": "ebe6feab4e430ccc9bfbf29b1d8981e6a73077a3dc05cbe568d0dc956eb4a628",
+  "block_sequence_sha256": "f0ef66bb8900f73e5edae7a5efa03b9eeb63663836b465889e8e5149cd27839c",
+  "blocks": [
+    {
+      "block_id": "page-0292-block-0000",
+      "order": 0,
+      "text": "Bipolar disorder    271\n",
+      "bbox": [
+        326.5046081542969,
+        31.395221710205078,
+        420.0005798339844,
+        41.0272216796875
+      ],
+      "text_sha256": "054557b5a1663448f546d4034cad73bf8c6b989dcb4c6249420ec1b928cfe0b2"
+    },
+    {
+      "block_id": "page-0292-block-0001",
+      "order": 1,
+      "text": "CHAPTER 2\n",
+      "bbox": [
+        454.4096984863281,
+        146.3472900390625,
+        463.88970947265625,
+        187.6912841796875
+      ],
+      "text_sha256": "5eaa1f2591abe1a1b2f7664fa3de7ff01a032d44ee83fa594c7852135d4287aa"
+    },
+    {
+      "block_id": "page-0292-block-0002",
+      "order": 2,
+      "text": "Clozapine\n",
+      "bbox": [
+        48.0,
+        62.500465393066406,
+        94.1199951171875,
+        74.3504638671875
+      ],
+      "text_sha256": "0bd60b9b2d37cb1923ef72b68316ecf506009979d23dbd051c264f05e5e95770"
+    },
+    {
+      "block_id": "page-0292-block-0003",
+      "order": 3,
+      "text": "The earliest observational study of antipsychotics for maintenance treatment in BD \nexamined clozapine in people attending a service for resistant mood disorders.35 There \nis evidence from 15 trials to suggest improvements in treatment-resistant BD (where \ntwo treatments have failed, despite adequate dose and duration), in depression, mania, \nrapid cycling states and psychotic symptoms.36\n",
+      "bbox": [
+        48.0,
+        80.41046142578125,
+        422.803466796875,
+        140.13046264648438
+      ],
+      "text_sha256": "79f5d8d2252ec75cb58c84f4bec1dda62e8d6ef400f4f104ac36c9c9e6eff0f8"
+    },
+    {
+      "block_id": "page-0292-block-0004",
+      "order": 4,
+      "text": "Lurasidone\n",
+      "bbox": [
+        48.0,
+        158.50045776367188,
+        99.66999816894531,
+        170.3504638671875
+      ],
+      "text_sha256": "28b17601847ef40cbdcd0c927811e44e72539352101012ef133563c7fb103f3d"
+    },
+    {
+      "block_id": "page-0292-block-0005",
+      "order": 5,
+      "text": "Lurasidone is licensed by the FDA as monotherapy and adjunctive treatment to lithium \nand divalproex for acute treatment of bipolar depression, on the basis of RCTs of \nmonotherapy versus placebo37 and as adjunct to lithium or valproate.38 Main side \neffects include nausea and akathisia, with minimal effects on weight and metabolic \nparameters.33\n",
+      "bbox": [
+        48.0,
+        176.41046142578125,
+        422.82012939453125,
+        236.1304931640625
+      ],
+      "text_sha256": "7dccd0a5b4bd9f86839bbbf43619126d7a0bc09a046110c41b8eea56c887fac6"
+    },
+    {
+      "block_id": "page-0292-block-0006",
+      "order": 6,
+      "text": "Olanzapine\n",
+      "bbox": [
+        48.0,
+        254.50048828125,
+        101.34999084472656,
+        266.3504943847656
+      ],
+      "text_sha256": "0d885341cd7a3b92c6209db4205eb93aa8d75701ae5100041f1fc34db3920e8f"
+    },
+    {
+      "block_id": "page-0292-block-0007",
+      "order": 7,
+      "text": "Olanzapine is effective in mania.39,40 As with other FGAs, olanzapine is most effective \nwhen used in combination with a mood stabiliser in acute mania and for symptomatic \n(though not syndromal) relapse prevention41,42 (although in one study, olanzapine + car-\nbamazepine was no better than carbamazepine alone43). Data suggest that olanzapine \nmay offer benefits in longer term treatment.44,45 It may be more effective than lith-\nium.46,47 Olanzapine is of course associated with significant metabolic effects, including \nweight gain.\n",
+      "bbox": [
+        47.99649429321289,
+        272.4104919433594,
+        422.7969970703125,
+        356.1304931640625
+      ],
+      "text_sha256": "ae544bb98ac3287bda7955769bb66babe08b1181b15c3b3ab253bed7495f9138"
+    },
+    {
+      "block_id": "page-0292-block-0008",
+      "order": 8,
+      "text": "Quetiapine\n",
+      "bbox": [
+        47.99649429321289,
+        374.50048828125,
+        100.23648834228516,
+        386.3504943847656
+      ],
+      "text_sha256": "41327e1285b139254503aaa07065625405b7c29d457a97ba1c2d41cb54c42d3b"
+    },
+    {
+      "block_id": "page-0292-block-0009",
+      "order": 9,
+      "text": "Data relating to quetiapine48–50 suggest robust efficacy in all aspects of BD, including \nprevention of bipolar depression.51 It has low propensity for EPSEs, though significant \neffects on weight and metabolic parameters.\n",
+      "bbox": [
+        47.99649429321289,
+        392.4104919433594,
+        422.81048583984375,
+        428.1304931640625
+      ],
+      "text_sha256": "4f37e8c2bd8aee0c42432e7e148bf3eb173b87e04337dd175d94b68c18717808"
+    },
+    {
+      "block_id": "page-0292-block-0010",
+      "order": 10,
+      "text": "Risperidone\n",
+      "bbox": [
+        48.0045166015625,
+        446.50048828125,
+        103.56451416015625,
+        458.3504943847656
+      ],
+      "text_sha256": "a57deef574cb1285a2da93e7b14c7d8834b8dfb167369a3c9262f566493ff650"
+    },
+    {
+      "block_id": "page-0292-block-0011",
+      "order": 11,
+      "text": "Risperidone has shown efficacy in mania,52 particularly in combination with a mood \nstabiliser.53,54 Risperidone LAI is also effective55 (note though that the pharmacokinetics \nof this formulation generally render it an unsuitable choice for the acute treatment of \nmania). The long-acting version is used as prophylaxis (an unlicensed use in most coun-\ntries). It is effective as prophylaxis against mania in the longer term.18 Paliperidone can \nbe assumed to have similar effects.\n",
+      "bbox": [
+        47.997802734375,
+        464.4104919433594,
+        422.79962158203125,
+        536.1304931640625
+      ],
+      "text_sha256": "1f7654da8a6bca4fefc65b6a1ced2c83227025f3739ce967c2bd3e0ce93039e2"
+    },
+    {
+      "block_id": "page-0292-block-0012",
+      "order": 12,
+      "text": "Other antipsychotics\n",
+      "bbox": [
+        48.0001220703125,
+        554.50048828125,
+        144.6701202392578,
+        566.3504638671875
+      ],
+      "text_sha256": "e841fd911dab8ea7a8b3fac11772111023964b70b460e22a88ed5d949dd3eb87"
+    },
+    {
+      "block_id": "page-0292-block-0013",
+      "order": 13,
+      "text": "There are few data for amisulpride56 and rather more for ziprasidone,57 which is widely \nused for mania in the US. Iloperidone may be effective in mixed episodes58 but data are \ninsufficient to support its use.\n",
+      "bbox": [
+        47.99591064453125,
+        572.4104614257812,
+        422.7925720214844,
+        608.1304931640625
+      ],
+      "text_sha256": "6e9774ec8631cb4cba293a0d873a73c6ff95fbc76b7291f9d0c4234bddf9f4ff"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

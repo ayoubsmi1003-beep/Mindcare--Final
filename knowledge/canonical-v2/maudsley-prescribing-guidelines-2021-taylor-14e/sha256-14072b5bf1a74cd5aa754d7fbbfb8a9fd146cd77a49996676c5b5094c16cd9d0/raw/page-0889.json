@@ -1,0 +1,347 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0889",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 889,
+  "source_page_index": 888,
+  "source_page_display": 889,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "868    The Maudsley Prescribing Guidelines in Psychiatry\nCHAPTER  12\nCaffeine abuse or dependence as a clinical syndrome has been reported3 and caffeine \nuse disorder and caffeine withdrawal are both DSM-V diagnoses.\nEnergy drinks\nSo-called energy drinks contain large amounts of caffeine along with sugar, vitamins \nand a number of other ingredients such as guarana and taurine. There is some evidence \nthat these drinks can improve attention and short-term memory.18 Marketing is tar-\ngeted at adolescents and young adults, some of whom consume large volumes of these \ndrinks, and seem to be particularly vulnerable to developing signs and symptoms of \ncaffeine intoxication. Symptoms of anxiety and depression, frank suicidal behaviour \nand seizures have been associated with use of these products by young people.19–21 \nWhen combined with alcohol, aggressive behaviour may result.22 Excessive intake may \nlead to acute psychosis23,24 or mania.25\nSchizophrenia\n■\n■Patients with schizophrenia often consume large amounts of caffeine-containing \ndrinks1 and are twice as likely as controls to consume >200mg caffeine/day.5\n■\n■Caffeine-containing drinks may be used to relieve dry mouth (as a side effect of some \nantipsychotic drugs), for the stimulant effects of caffeine (to relieve dysphoria/\nsedation/negative symptoms)5 or simply because coffee/tea drinking structures the \nday or relieves boredom.\n■\n■Schizophrenia may increase sensitivity to drug-related cues.5\n■\n■Moderate caffeine intake may improve cognitive and negative symptoms in schizo-\nphrenia, but this is poorly researched.26\n■\n■Large doses of caffeine can worsen psychotic symptoms5,27 (in particular, elation and \nconceptual disorganisation) and result in the prescription of larger doses of antipsy-\nchotic drugs.\n■\n■The removal of caffeine from the diets of chronically disturbed (challenging behav-\niour) patients may ultimately lead to decreased levels of hostility, irritability and \nsuspiciousness,28 although this may not hold true in less disturbed populations.29\n■\n■Caffeine cessation may be of benefit in clozapine-resistant schizophrenia.30\nMood disorders\n■\n■Caffeine may elevate mood through increasing noradrenaline release31 and modest \ncaffeine consumption may protect against depression in those who do not have a pre-\nexisting mood disorder.32\n■\n■People with mood disorders are more likely to consume caffeine, particularly when \ndepressed.14,33\n■\n■Depressed patients may be more sensitive to the anxiogenic effects of caffeine.34,35\n■\n■Excessive consumption of caffeine may precipitate mania.35,36\n■\n■Caffeine can increase cortisol secretion (gives a false positive in the dexamethasone-\nsuppression test),37 increase seizure length during electroconvulsive therapy38 and \nincrease the clearance of lithium by promoting diuresis.39\n",
+  "raw_text_sha256": "e43aaffcd533aef7de8e8b0e554201c676b5f3464674a1e2cb137d263ac2b0e2",
+  "coordinates_sha256": "890551c189047fa4c43b0de056ae40601e4a02cde6a8064a518815c6a8b6f347",
+  "block_sequence_sha256": "019fcb4d79c78bc3591531dc81ccfef1a488cb65a7913a65b9d7ca612f38c3c0",
+  "blocks": [
+    {
+      "block_id": "page-0889-block-0000",
+      "order": 0,
+      "text": "868    The Maudsley Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        296.3137512207031,
+        41.0272216796875
+      ],
+      "text_sha256": "b745f9bb4d324c5ceba635973f2536887a03de49a69751e947986da17500c5d7"
+    },
+    {
+      "block_id": "page-0889-block-0001",
+      "order": 1,
+      "text": "CHAPTER  12\n",
+      "bbox": [
+        18.520000457763672,
+        205.64230346679688,
+        28.0,
+        253.65829467773438
+      ],
+      "text_sha256": "95dc1db43e22bb418b1d53761b542f43fefb6bd1be50825929587901903f44b3"
+    },
+    {
+      "block_id": "page-0889-block-0002",
+      "order": 2,
+      "text": "Caffeine abuse or dependence as a clinical syndrome has been reported3 and caffeine \nuse disorder and caffeine withdrawal are both DSM-V diagnoses.\n",
+      "bbox": [
+        61.8848876953125,
+        61.8770751953125,
+        436.67486572265625,
+        85.59707641601562
+      ],
+      "text_sha256": "2a58b464c708459d422b960c26d26e9ce16c200b2fdd41a0f463786b10341b0f"
+    },
+    {
+      "block_id": "page-0889-block-0003",
+      "order": 3,
+      "text": "Energy drinks\n",
+      "bbox": [
+        61.889801025390625,
+        105.03207397460938,
+        132.79579162597656,
+        118.06707763671875
+      ],
+      "text_sha256": "9e65a64a8cf5622b7b7830ccb68110f11dc80e7acc374d6e044d5df4cd3cdc94"
+    },
+    {
+      "block_id": "page-0889-block-0004",
+      "order": 4,
+      "text": "So-called energy drinks contain large amounts of caffeine along with sugar, vitamins \nand a number of other ingredients such as guarana and taurine. There is some evidence \nthat these drinks can improve attention and short-term memory.18 Marketing is tar-\ngeted at adolescents and young adults, some of whom consume large volumes of these \ndrinks, and seem to be particularly vulnerable to developing signs and symptoms of \ncaffeine intoxication. Symptoms of anxiety and depression, frank suicidal behaviour \nand seizures have been associated with use of these products by young people.19–21 \nWhen combined with alcohol, aggressive behaviour may result.22 Excessive intake may \nlead to acute psychosis23,24 or mania.25\n",
+      "bbox": [
+        61.88739013671875,
+        123.8770751953125,
+        436.69970703125,
+        231.59707641601562
+      ],
+      "text_sha256": "2859afc23f9c81ef3f8038173ef3fc78753b422cd715927115b94f14894290bb"
+    },
+    {
+      "block_id": "page-0889-block-0005",
+      "order": 5,
+      "text": "Schizophrenia\n",
+      "bbox": [
+        61.889801025390625,
+        251.03207397460938,
+        134.42379760742188,
+        264.06707763671875
+      ],
+      "text_sha256": "c429990104d2a691dcecca2a42e3a2ae92b1ace371bcbbefcfb51e2f1ad64a03"
+    },
+    {
+      "block_id": "page-0889-block-0006",
+      "order": 6,
+      "text": "■\n■Patients with schizophrenia often consume large amounts of caffeine-containing \n",
+      "bbox": [
+        61.88970184326172,
+        269.8770751953125,
+        436.6647033691406,
+        281.5970764160156
+      ],
+      "text_sha256": "e37cb140ed9855ba30e2f5b0f5be6326dcc9761424613719f9f701caa6219039"
+    },
+    {
+      "block_id": "page-0889-block-0007",
+      "order": 7,
+      "text": "drinks1 and are twice as likely as controls to consume >200mg caffeine/day.5\n",
+      "bbox": [
+        70.6948013305664,
+        281.8770751953125,
+        399.08489990234375,
+        293.5970764160156
+      ],
+      "text_sha256": "aeaa9a293fed9e593985287ac6a289826b355dfd6366af07fbad7cd4b13ba309"
+    },
+    {
+      "block_id": "page-0889-block-0008",
+      "order": 8,
+      "text": "■\n■Caffeine-containing drinks may be used to relieve dry mouth (as a side effect of some \n",
+      "bbox": [
+        61.88970184326172,
+        293.8770751953125,
+        436.644775390625,
+        305.5970764160156
+      ],
+      "text_sha256": "b959faf227f18d5c07d886a5f28c3dd92871ead22a0a4efb8c5a6d7295f40fb4"
+    },
+    {
+      "block_id": "page-0889-block-0009",
+      "order": 9,
+      "text": "antipsychotic drugs), for the stimulant effects of caffeine (to relieve dysphoria/\nsedation/negative symptoms)5 or simply because coffee/tea drinking structures the \nday or relieves boredom.\n",
+      "bbox": [
+        70.6948013305664,
+        305.8770751953125,
+        436.6484069824219,
+        341.5970764160156
+      ],
+      "text_sha256": "f388aac45d2c0c56c3b013ebe5f9549951ccaa0eb44c29a4f6906e460562ec21"
+    },
+    {
+      "block_id": "page-0889-block-0010",
+      "order": 10,
+      "text": "■\n■Schizophrenia may increase sensitivity to drug-related cues.5\n",
+      "bbox": [
+        61.88970184326172,
+        341.8770751953125,
+        329.5033874511719,
+        353.5970764160156
+      ],
+      "text_sha256": "aa7cf246dc3f2fd973f884a3aa6ea2f2a5a9946c0ca8913e77c84628af1f4085"
+    },
+    {
+      "block_id": "page-0889-block-0011",
+      "order": 11,
+      "text": "■\n■Moderate caffeine intake may improve cognitive and negative symptoms in schizo-\n",
+      "bbox": [
+        61.88970184326172,
+        353.8770751953125,
+        433.84478759765625,
+        365.5970764160156
+      ],
+      "text_sha256": "5c7e0ea2acccbeb84f1f713c1c57f73170e1301d4da933492535b9b161096353"
+    },
+    {
+      "block_id": "page-0889-block-0012",
+      "order": 12,
+      "text": "phrenia, but this is poorly researched.26\n",
+      "bbox": [
+        70.6948013305664,
+        365.8770751953125,
+        239.63636779785156,
+        377.5970764160156
+      ],
+      "text_sha256": "e206872f740d2b878e342c21fe6dc1324a936426cd154afffb1e5806652a2756"
+    },
+    {
+      "block_id": "page-0889-block-0013",
+      "order": 13,
+      "text": "■\n■Large doses of caffeine can worsen psychotic symptoms5,27 (in particular, elation and \n",
+      "bbox": [
+        61.88970184326172,
+        377.8770751953125,
+        436.6836853027344,
+        389.5970764160156
+      ],
+      "text_sha256": "b4c4bc836aeb50288785e0776a366ef774abac9c0c72307d28a56eaf68a307a5"
+    },
+    {
+      "block_id": "page-0889-block-0014",
+      "order": 14,
+      "text": "conceptual disorganisation) and result in the prescription of larger doses of antipsy-\nchotic drugs.\n",
+      "bbox": [
+        70.69369506835938,
+        389.8770751953125,
+        433.8737487792969,
+        413.5970764160156
+      ],
+      "text_sha256": "7fe429193ffe102520f00385588d127a544e3fe0cf737b1c878a07b64475a582"
+    },
+    {
+      "block_id": "page-0889-block-0015",
+      "order": 15,
+      "text": "■\n■The removal of caffeine from the diets of chronically disturbed (challenging behav-\n",
+      "bbox": [
+        61.88970184326172,
+        413.8770751953125,
+        433.874755859375,
+        425.5970764160156
+      ],
+      "text_sha256": "6e249953e22acfeda6cb1a17f08e349ef42ce1b0cf226569f1bd6e43908a9c76"
+    },
+    {
+      "block_id": "page-0889-block-0016",
+      "order": 16,
+      "text": "iour) patients may ultimately lead to decreased levels of hostility, irritability and \nsuspiciousness,28 although this may not hold true in less disturbed populations.29\n",
+      "bbox": [
+        70.6948013305664,
+        425.8770751953125,
+        436.6947937011719,
+        449.5970764160156
+      ],
+      "text_sha256": "db1ebfca39b7e61de310441e3cec3c57dee8268e370f0abc293f0d0d86f91edf"
+    },
+    {
+      "block_id": "page-0889-block-0017",
+      "order": 17,
+      "text": "■\n■Caffeine cessation may be of benefit in clozapine-resistant schizophrenia.30\n",
+      "bbox": [
+        61.88970184326172,
+        449.8770751953125,
+        391.6340637207031,
+        461.5970764160156
+      ],
+      "text_sha256": "e99e7c4d6f8227980c4667d82930371f219c3e9b0c9da9722a3d0a24d5f55708"
+    },
+    {
+      "block_id": "page-0889-block-0018",
+      "order": 18,
+      "text": "Mood disorders\n",
+      "bbox": [
+        61.889801025390625,
+        487.0320739746094,
+        142.95982360839844,
+        500.06707763671875
+      ],
+      "text_sha256": "6d8706d38be10e3f4061966593728710bd809c3951828448795e22829b7eb906"
+    },
+    {
+      "block_id": "page-0889-block-0019",
+      "order": 19,
+      "text": "■\n■Caffeine may elevate mood through increasing noradrenaline release31 and modest \n",
+      "bbox": [
+        61.88970184326172,
+        505.8770751953125,
+        436.66668701171875,
+        517.5971069335938
+      ],
+      "text_sha256": "6096d8273606870c24f1b9641d285dcd3e91dbfa60eba5f36136eecd84a718d2"
+    },
+    {
+      "block_id": "page-0889-block-0020",
+      "order": 20,
+      "text": "caffeine consumption may protect against depression in those who do not have a pre-\nexisting mood disorder.32\n",
+      "bbox": [
+        70.69671630859375,
+        517.8770751953125,
+        433.88677978515625,
+        541.5971069335938
+      ],
+      "text_sha256": "1ca1b5be70dce917cd50f88a3e8f0676a3189a9fedd7e9b5e12464299a831ce2"
+    },
+    {
+      "block_id": "page-0889-block-0021",
+      "order": 21,
+      "text": "■\n■People with mood disorders are more likely to consume caffeine, particularly when \n",
+      "bbox": [
+        61.88970184326172,
+        541.8770751953125,
+        436.64471435546875,
+        553.5971069335938
+      ],
+      "text_sha256": "374910e9af6c6971dddf605e0dfc5a977cd471b13cd9574ec7e3482b9ea95483"
+    },
+    {
+      "block_id": "page-0889-block-0022",
+      "order": 22,
+      "text": "depressed.14,33\n",
+      "bbox": [
+        70.6948013305664,
+        553.8770751953125,
+        129.7307586669922,
+        565.5971069335938
+      ],
+      "text_sha256": "edeaa452b55b6e90272f44e5a544076608f150edb1af9b8a0249728f2774d109"
+    },
+    {
+      "block_id": "page-0889-block-0023",
+      "order": 23,
+      "text": "■\n■Depressed patients may be more sensitive to the anxiogenic effects of caffeine.34,35\n",
+      "bbox": [
+        61.88970184326172,
+        565.8770751953125,
+        421.3670654296875,
+        577.5971069335938
+      ],
+      "text_sha256": "deb2e20db3611c9d6d2124e74bef42ba537ea7ac0848bef7cd59d78e4369d51a"
+    },
+    {
+      "block_id": "page-0889-block-0024",
+      "order": 24,
+      "text": "■\n■Excessive consumption of caffeine may precipitate mania.35,36\n",
+      "bbox": [
+        61.88970184326172,
+        577.8770751953125,
+        334.148681640625,
+        589.5971069335938
+      ],
+      "text_sha256": "ea63b2a0210d8cdd73b1d530d804539cbd6aec58de8691c9ca216923eec8db52"
+    },
+    {
+      "block_id": "page-0889-block-0025",
+      "order": 25,
+      "text": "■\n■Caffeine can increase cortisol secretion (gives a false positive in the dexamethasone-\n",
+      "bbox": [
+        61.88970184326172,
+        589.8770751953125,
+        433.8947448730469,
+        601.5971069335938
+      ],
+      "text_sha256": "43ba3b4fb4f83502fcdaca150017e141e3c90a83f7dbb8b0fe20a33c55d3d814"
+    },
+    {
+      "block_id": "page-0889-block-0026",
+      "order": 26,
+      "text": "suppression test),37 increase seizure length during electroconvulsive therapy38 and \nincrease the clearance of lithium by promoting diuresis.39\n",
+      "bbox": [
+        70.69186401367188,
+        601.8770751953125,
+        436.671875,
+        625.5971069335938
+      ],
+      "text_sha256": "1905f5d874a5b2d1e3a2148a3a045ad32aa7213d60d9433d688c51c486688bfb"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0024",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 24,
+  "source_page_index": 23,
+  "source_page_display": 24,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\nChapter 1\nSchizophrenia and related \npsychoses\nANTIPSYCHOTIC DRUGS\nGeneral introduction\nClassification of antipsychotics\nBefore the 1990s, antipsychotics (or major tranquillisers as they were then known) \nwere classified according to their chemistry. The first antipsychotic, chlorpromazine, \nwas a phenothiazine compound – a tricyclic structure incorporating a nitrogen and a \nsulphur atom. Further phenothiazines were generated and marketed, as were chemi-\ncally similar thioxanthenes, such as flupentixol. Later entirely different chemical struc-\ntures were developed according to pharmacological paradigms. These included \nbutyrophenones (haloperidol), diphenylbutylpiperidines (pimozide) and substituted \nbenzamides (sulpiride and amisulpride).\nChemical classification remains useful but is rendered somewhat redundant by the \nbroad range of chemical entities now available and by the absence of any clear struc-\nture-activity relationships for newer drugs. The chemistry of some older drugs does \nrelate to their propensity to cause movement disorders. Piperazine phenothiazines (e.g. \nfluphenazine, trifluoperazine), butyrophenones and thioxanthenes are most likely to \ncause extrapyramidal effects, while piperidine phenothiazines (e.g. pipotiazine) and \nbenzamides are the least likely. Aliphatic phenothiazines (e.g. chlorpromazine) and \ndiphenylbutylpiperidines (pimozide) are perhaps somewhere in-between.\nRelative liability for inducing extrapyramidal symptoms (EPS) was originally the pri-\nmary factor behind the typical/atypical classification. Clozapine had long been known \nas an atypical antipsychotic on the basis of its low liability to cause EPS and its failure \nin animal-based antipsychotic screening tests. Its re-marketing in 1990 signalled the \nbeginning of a series of new medications, all of which were introduced with claims (of \nvarying degrees of accuracy) of ‘atypicality’. Of these medications, perhaps only clozap-\nine and, possibly, quetiapine are completely atypical, seemingly having a very low \n",
+  "raw_text_sha256": "9c13f1fcf225935f8e3d7975615ddc1cfc61c7fc13cf946a8e9c50f60c52034e",
+  "coordinates_sha256": "796fb069a21781d55f2ad13f325cd85e54045ca9d379ea87b04e6cb907fb43d7",
+  "block_sequence_sha256": "c33a907f4c91f0fa8cc57c9219ef7125312ad736a14a4f6202289393d339f489",
+  "blocks": [
+    {
+      "block_id": "page-0024-block-0000",
+      "order": 0,
+      "text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\n",
+      "bbox": [
+        47.9989013671875,
+        585.1010131835938,
+        348.48297119140625,
+        614.4769897460938
+      ],
+      "text_sha256": "c78fcd1eeb2357afb8eb5b97a8c858d68167bd409b9074c0da4e20c032bd5665"
+    },
+    {
+      "block_id": "page-0024-block-0001",
+      "order": 1,
+      "text": "Chapter 1\n",
+      "bbox": [
+        324.4302978515625,
+        59.723426818847656,
+        420.00030517578125,
+        82.59942626953125
+      ],
+      "text_sha256": "8e7b8f8468b8138fb17ee8db20c3abe5332a3fc2191b1a3a70db99c0447d55ec"
+    },
+    {
+      "block_id": "page-0024-block-0002",
+      "order": 2,
+      "text": "Schizophrenia and related \n",
+      "bbox": [
+        150.61090087890625,
+        111.36219024658203,
+        426.1168518066406,
+        137.43218994140625
+      ],
+      "text_sha256": "c78862a17aafca2965293f2d3adc85d959a8e85a82d31d8a0737de835a18eca5"
+    },
+    {
+      "block_id": "page-0024-block-0003",
+      "order": 3,
+      "text": "psychoses\n",
+      "bbox": [
+        316.138916015625,
+        135.36419677734375,
+        420.0008544921875,
+        161.4342041015625
+      ],
+      "text_sha256": "266a34465df13440dcf8751b8bc12d06b297d924e25f4acc8a663b33f43d280a"
+    },
+    {
+      "block_id": "page-0024-block-0004",
+      "order": 4,
+      "text": "ANTIPSYCHOTIC DRUGS\n",
+      "bbox": [
+        54.99909973144531,
+        220.79119873046875,
+        178.46307373046875,
+        233.82620239257812
+      ],
+      "text_sha256": "93f7e609865338a947b7fa8d622396b62607574ddaca931ee6b6541c625b68bb"
+    },
+    {
+      "block_id": "page-0024-block-0005",
+      "order": 5,
+      "text": "General introduction\n",
+      "bbox": [
+        54.99909973144531,
+        244.79318237304688,
+        162.3700714111328,
+        257.82818603515625
+      ],
+      "text_sha256": "4e7d11035c0944d619e81a904d9239943ec009c839b176d1461e544a4b8f6b3a"
+    },
+    {
+      "block_id": "page-0024-block-0006",
+      "order": 6,
+      "text": "Classification of antipsychotics\n",
+      "bbox": [
+        47.99909973144531,
+        269.7261962890625,
+        191.88909912109375,
+        281.5762023925781
+      ],
+      "text_sha256": "351c965b71fd32ac57b0d8aaebf808fc2c8994c35d94245b69801bc8bfd37cbc"
+    },
+    {
+      "block_id": "page-0024-block-0007",
+      "order": 7,
+      "text": "Before the 1990s, antipsychotics (or major tranquillisers as they were then known) \nwere classified according to their chemistry. The first antipsychotic, chlorpromazine, \nwas a phenothiazine compound – a tricyclic structure incorporating a nitrogen and a \nsulphur atom. Further phenothiazines were generated and marketed, as were chemi-\ncally similar thioxanthenes, such as flupentixol. Later entirely different chemical struc-\ntures were developed according to pharmacological paradigms. These included \nbutyrophenones (haloperidol), diphenylbutylpiperidines (pimozide) and substituted \nbenzamides (sulpiride and amisulpride).\n",
+      "bbox": [
+        47.99909973144531,
+        287.6361999511719,
+        422.8190002441406,
+        383.356201171875
+      ],
+      "text_sha256": "74943e622158c8830300b8cf6ab487129ec99867b5095bfbe3e6f05515ba9f69"
+    },
+    {
+      "block_id": "page-0024-block-0008",
+      "order": 8,
+      "text": "Chemical classification remains useful but is rendered somewhat redundant by the \nbroad range of chemical entities now available and by the absence of any clear struc-\nture-activity relationships for newer drugs. The chemistry of some older drugs does \nrelate to their propensity to cause movement disorders. Piperazine phenothiazines (e.g. \nfluphenazine, trifluoperazine), butyrophenones and thioxanthenes are most likely to \ncause extrapyramidal effects, while piperidine phenothiazines (e.g. pipotiazine) and \nbenzamides are the least likely. Aliphatic phenothiazines (e.g. chlorpromazine) and \ndiphenylbutylpiperidines (pimozide) are perhaps somewhere in-between.\n",
+      "bbox": [
+        47.99909973144531,
+        383.6361999511719,
+        422.8191833496094,
+        479.356201171875
+      ],
+      "text_sha256": "5798ae4dd7c4aac62e37eb88c55726c7044e35a5c45e36903ae5b04e7b0ed2a8"
+    },
+    {
+      "block_id": "page-0024-block-0009",
+      "order": 9,
+      "text": "Relative liability for inducing extrapyramidal symptoms (EPS) was originally the pri-\nmary factor behind the typical/atypical classification. Clozapine had long been known \nas an atypical antipsychotic on the basis of its low liability to cause EPS and its failure \nin animal-based antipsychotic screening tests. Its re-marketing in 1990 signalled the \nbeginning of a series of new medications, all of which were introduced with claims (of \nvarying degrees of accuracy) of ‘atypicality’. Of these medications, perhaps only clozap-\nine and, possibly, quetiapine are completely atypical, seemingly having a very low \n",
+      "bbox": [
+        47.99909973144531,
+        479.6361999511719,
+        422.8190002441406,
+        563.356201171875
+      ],
+      "text_sha256": "ebaa94ec8f6e196433720c44074f5f16ca8493d63329470d4f1d6031c58e8ba0"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

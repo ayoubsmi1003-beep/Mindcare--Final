@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0162",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 162,
+  "source_page_index": 161,
+  "source_page_display": 162,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    141\nCHAPTER 1\nECG changes – QT prolongation\nIntroduction\nMany psychotropic drugs are associated with ECG changes and some are causally \nlinked to serious ventricular arrhythmia and sudden cardiac death. Specifically, some \nantipsychotics block cardiac potassium channels and are linked to prolongation of the \ncardiac QT interval, a risk factor for the ventricular arrhythmia torsade de pointes, \nwhich is sometimes fatal.1\nCase–control studies have suggested that the use of most antipsychotics is associated \nwith an increase in the rate of sudden cardiac death.2–8 This risk is probably a result of \nthe arrhythmogenic potential of antipsychotics,9,10 although schizophrenia itself may be \nassociated with QT prolongation.11 Nonetheless, a study in first-episode patients \nshowed that the use of antipsychotics produced clear prolongation on the QT interval \nafter 2–4 weeks.12 QT interval is longer in patients with schizophrenia than in controls \n(e.g. 418ms vs 393ms in one study13 and in a recent study prolonged QTc was identified \nin 7.6% of psychiatric in-patients patients who had an ECG.14\nOverall, risk is probably dose-related and, although the absolute risk is low, it is sub-\nstantially higher than the, say, risk of fatal agranulocytosis with clozapine.9 One report \nof cases gathered by a national database put the risk of TdP at between 0 and 19.2 cases \nper 100,000 patient-years, depending on the individual antipsychotic and age of \npatients.15 The effect of antipsychotic polypharmacy on QT is somewhat uncertain,16 \nbut the extent of QT prolongation is probably a function of overall dose.17\nECG monitoring of drug-induced changes in mental health settings is complicated by \na number of factors. Psychiatrists may have limited expertise in ECG interpretation, for \nexample, and still less expertise in manually measuring QT intervals. Even cardiologists \nshow an inter-rater reliability in QT measurement of up to 20ms.18 Self-reading, com-\nputerised ECG devices are now widely available and compensate for some lack of \nexpertise, but different models use different algorithms and different correction formu-\nlae.19 In addition, ECG machines may not be as readily available in all clinical areas as \nthey are in general medicine. Also, there may be insufficient time for ECG determina-\ntion in many areas (e.g. out-patients). Lastly, ECG determination may be difficult to \nperform in acutely disturbed, physically uncooperative patients.\nECG monitoring is essential for all patients prescribed antipsychotics. An estimate of \nQTC interval should be made on admission to in-patient units (in the UK, this is recom-\nmended in the NICE schizophrenia guideline20) and yearly thereafter.\nQT prolongation\n■\n■The cardiac QT interval (usually cited as QTc – QT corrected for heart rate) is a use-\nful, but imprecise indicator of risk of torsade de pointes and of increased cardiac \nmortality.21 Different correction factors and methods may give markedly different \nvalues.22\n■\n■The QT interval broadly reflects the duration of cardiac repolarisation. Lengthening \nof repolarisation duration induces heterogeneity of electrical phasing in different \n",
+  "raw_text_sha256": "c5557d76e3a9c942b06e203dd005b4a66712ecebbf6bab7a29d92bf5421f38cb",
+  "coordinates_sha256": "9cb21d5ba401d2d226c52b74290a7e80b9662ea66773ff8460083d622e570405",
+  "block_sequence_sha256": "b13e719289a8ec67119e23e36f6eae7c902936de45f6545cf6abb8d8261a1768",
+  "blocks": [
+    {
+      "block_id": "page-0162-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    141\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "256e208e76006880e217b35d299d9f4ad60a90dee32f7f1c5b55122e55557409"
+    },
+    {
+      "block_id": "page-0162-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0162-block-0002",
+      "order": 2,
+      "text": "ECG changes – QT prolongation\n",
+      "bbox": [
+        54.99909973144531,
+        66.06448364257812,
+        217.9860382080078,
+        79.0994873046875
+      ],
+      "text_sha256": "77bf50de9c191af468679063a1761c2098fdcb2d431a1a9667c67fc953a9663f"
+    },
+    {
+      "block_id": "page-0162-block-0003",
+      "order": 3,
+      "text": "Introduction\n",
+      "bbox": [
+        48.00309753417969,
+        94.05947875976562,
+        111.96810150146484,
+        107.094482421875
+      ],
+      "text_sha256": "3fa53fc0dab8ef96d05d8fd4c7e41b490182803725c67b86a531e09effc5fa77"
+    },
+    {
+      "block_id": "page-0162-block-0004",
+      "order": 4,
+      "text": "Many psychotropic drugs are associated with ECG changes and some are causally \nlinked to serious ventricular arrhythmia and sudden cardiac death. Specifically, some \nantipsychotics block cardiac potassium channels and are linked to prolongation of the \ncardiac QT interval, a risk factor for the ventricular arrhythmia torsade de pointes, \nwhich is sometimes fatal.1\n",
+      "bbox": [
+        47.99909973144531,
+        112.90948486328125,
+        422.8091735839844,
+        172.62948608398438
+      ],
+      "text_sha256": "321c89834709c7e054dea21f0ba97eac0b55a29be412efa2db02e0e64839a739"
+    },
+    {
+      "block_id": "page-0162-block-0005",
+      "order": 5,
+      "text": "Case–control studies have suggested that the use of most antipsychotics is associated \nwith an increase in the rate of sudden cardiac death.2–8 This risk is probably a result of \nthe arrhythmogenic potential of antipsychotics,9,10 although schizophrenia itself may be \nassociated with QT prolongation.11 Nonetheless, a study in first-episode patients \nshowed that the use of antipsychotics produced clear prolongation on the QT interval \nafter 2–4 weeks.12 QT interval is longer in patients with schizophrenia than in controls \n(e.g. 418ms vs 393ms in one study13 and in a recent study prolonged QTc was identified \nin 7.6% of psychiatric in-patients patients who had an ECG.14\n",
+      "bbox": [
+        47.99418640136719,
+        172.90948486328125,
+        422.8071594238281,
+        268.6295166015625
+      ],
+      "text_sha256": "c769f1bb161b2360fd55f1b74d1e2f8e8994929f7e82bb59bafb4debe767241d"
+    },
+    {
+      "block_id": "page-0162-block-0006",
+      "order": 6,
+      "text": "Overall, risk is probably dose-related and, although the absolute risk is low, it is sub-\nstantially higher than the, say, risk of fatal agranulocytosis with clozapine.9 One report \nof cases gathered by a national database put the risk of TdP at between 0 and 19.2 cases \nper 100,000 patient-years, depending on the individual antipsychotic and age of \npatients.15 The effect of antipsychotic polypharmacy on QT is somewhat uncertain,16 \nbut the extent of QT prolongation is probably a function of overall dose.17\n",
+      "bbox": [
+        47.99909973144531,
+        268.9095153808594,
+        422.8114929199219,
+        340.6295166015625
+      ],
+      "text_sha256": "c483c54995e17947b2cdcf42812be2acd06048135ab1ecc104fb614ea7d9d320"
+    },
+    {
+      "block_id": "page-0162-block-0007",
+      "order": 7,
+      "text": "ECG monitoring of drug-induced changes in mental health settings is complicated by \na number of factors. Psychiatrists may have limited expertise in ECG interpretation, for \nexample, and still less expertise in manually measuring QT intervals. Even cardiologists \nshow an inter-rater reliability in QT measurement of up to 20ms.18 Self-reading, com-\nputerised ECG devices are now widely available and compensate for some lack of \nexpertise, but different models use different algorithms and different correction formu-\nlae.19 In addition, ECG machines may not be as readily available in all clinical areas as \nthey are in general medicine. Also, there may be insufficient time for ECG determina-\ntion in many areas (e.g. out-patients). Lastly, ECG determination may be difficult to \nperform in acutely disturbed, physically uncooperative patients.\n",
+      "bbox": [
+        47.99909973144531,
+        340.9095153808594,
+        422.8218078613281,
+        460.6295166015625
+      ],
+      "text_sha256": "6f031dac63c871a17117e80b96d1299754f92edfb6d683769318ca3e2db940e8"
+    },
+    {
+      "block_id": "page-0162-block-0008",
+      "order": 8,
+      "text": "ECG monitoring is essential for all patients prescribed antipsychotics. An estimate of \nQTC interval should be made on admission to in-patient units (in the UK, this is recom-\nmended in the NICE schizophrenia guideline20) and yearly thereafter.\n",
+      "bbox": [
+        47.99800109863281,
+        460.9095153808594,
+        422.7618713378906,
+        496.6295166015625
+      ],
+      "text_sha256": "6df1d50be14d019f8c3356429b480b89a2c5541c76a17732842c6d1f106e398f"
+    },
+    {
+      "block_id": "page-0162-block-0009",
+      "order": 9,
+      "text": "QT prolongation\n",
+      "bbox": [
+        47.99909973144531,
+        514.0645141601562,
+        133.3700714111328,
+        527.0994873046875
+      ],
+      "text_sha256": "c9e0e12ae9cb8645f003ca0d42710d5d6a7637f989c81755466421fa0bbb33d3"
+    },
+    {
+      "block_id": "page-0162-block-0010",
+      "order": 10,
+      "text": "■\n■The cardiac QT interval (usually cited as QTc – QT corrected for heart rate) is a use-\n",
+      "bbox": [
+        47.999000549316406,
+        538.9094848632812,
+        420.0289611816406,
+        550.6295166015625
+      ],
+      "text_sha256": "8918e03dd6471d29c4ae8e5c8b89f5b1ca6d65ee9d61737a50266d20c749c6e9"
+    },
+    {
+      "block_id": "page-0162-block-0011",
+      "order": 11,
+      "text": "ful, but imprecise indicator of risk of torsade de pointes and of increased cardiac \nmortality.21 Different correction factors and methods may give markedly different \nvalues.22\n",
+      "bbox": [
+        56.99909973144531,
+        550.9094848632812,
+        422.8190612792969,
+        586.6295166015625
+      ],
+      "text_sha256": "23c3a1334ff6fd614cc122b6b5308e95e798b1f67c32de8e46c3b7fcec8e5556"
+    },
+    {
+      "block_id": "page-0162-block-0012",
+      "order": 12,
+      "text": "■\n■The QT interval broadly reflects the duration of cardiac repolarisation. Lengthening \n",
+      "bbox": [
+        47.999000549316406,
+        586.9094848632812,
+        422.7390441894531,
+        598.6295166015625
+      ],
+      "text_sha256": "c04548db3f7e4d300a4a662cafaf418ddc274c60e2b82f5b4ef41c2afa6a4b10"
+    },
+    {
+      "block_id": "page-0162-block-0013",
+      "order": 13,
+      "text": "of repolarisation duration induces heterogeneity of electrical phasing in different \n",
+      "bbox": [
+        56.99909973144531,
+        598.9094848632812,
+        422.7989807128906,
+        610.6295166015625
+      ],
+      "text_sha256": "eb44a8b8f2d19df990b7538e3449feae0aee41c49ef1e7f1376fe785c3e1a603"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

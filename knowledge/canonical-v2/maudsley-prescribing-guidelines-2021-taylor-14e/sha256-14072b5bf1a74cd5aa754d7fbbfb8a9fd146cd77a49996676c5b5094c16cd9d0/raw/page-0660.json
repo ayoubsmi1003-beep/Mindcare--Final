@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0660",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 660,
+  "source_page_index": 659,
+  "source_page_display": 660,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Prescribing in older people    639\nCHAPTER  6\nrelationships than other opiates. It is therefore, theoretically at least, a good candidate \nfor oral analgesia in dementia.44 Caution, however, should be used in addictive behav-\niours due to considerable problems with addiction and misuse. Buprenorphine trans-\ndermal patches probably have fewer side effects than many other opiates.\nAntihistamines\nFirst-generation H1 antihistamines include chlorpheniramine, hydroxyzine, cyclizine \nand promethazine. They are non-selective, have anticholinergic activity and readily \npenetrate the BBB, which can lead to unwanted cognitive side effects. They can impair \ncognitive and psychomotor performance and can trigger seizures, dyskinesia, dystonia \nand hallucinations. The second-generation H1 antihistamines (such as loratadine, ceti-\nrizine and fexofenadine) penetrate poorly into the CNS and are considerably less likely \nto cause these adverse effects. Moreover, they lack any anticholinergic effects.22\nStatins\nA Cochrane review assessed the clinical efficacy and tolerability of statins in the treat-\nment of dementia47 and showed that there was no significant benefit from statins in \nterms of cognitive function, but equally no evidence that statins were detrimental to \ncognition. Earlier case reports had highlighted subjective complaints of memory loss \nassociated with the use of statins.48 These tended to occur within 2 months of starting \nthe drug and were most commonly associated with simvastatin. In the event of a patient \nexperiencing cognitive problems on simvastatin, it may be worth first stopping the \ndrug, and if the complaint resolves, try atorvastatin or pravastatin instead, as these \ndrugs are less likely to cross the BBB. A more recent Cochrane review49 assessed the \nefficacy of statins in the prevention of dementia and concluded that there was no evi-\ndence that statins given in late life to people at risk of vascular disease prevented cogni-\ntive decline or dementia.\nAntihypertensives\nMid-life hypertension has negative effects on cognition and increases the risk of a per-\nson developing dementia.50 There is no evidence that antihypertensive treatment wors-\nens cognition. It appears to have a positive effect on global cognition, and long-term \ntreatment of hypertension can reduce the risk of dementia.51,52\nOther cardiac drugs\nDigoxin has been associated with acute confusional states at therapeutic drug concentra-\ntions.53 It has also been reported to cause nightmares.54 However, one study showed that \nthe treatment of cardiac failure with digoxin improved cognitive performance in 25% of \nthe patients treated (and in 23% of the patients treated who did not have cardiac fail-\nure).55 There are some case reports of amiodarone being associated with delirium.56,57\n",
+  "raw_text_sha256": "49ad63467c2e86f115a455aa84692304ef2c352cbd725e85a759491f2f8f2f52",
+  "coordinates_sha256": "02811b23dca8a51033d2cdd2f70cfe55965b13d535d971065251d54f33c2fbe3",
+  "block_sequence_sha256": "cb027d05c9654dc099e165156519be9c0aba403b53cfdf2cdf6467f86b926622",
+  "blocks": [
+    {
+      "block_id": "page-0660-block-0000",
+      "order": 0,
+      "text": "Prescribing in older people    639\n",
+      "bbox": [
+        281.576904296875,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "f92c07c9b18b57bf491ccfc37f8fb269e856484b55467376cb0c1e663887c6cb"
+    },
+    {
+      "block_id": "page-0660-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        454.4096984863281,
+        405.35260009765625,
+        463.88970947265625,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0660-block-0002",
+      "order": 2,
+      "text": "relationships than other opiates. It is therefore, theoretically at least, a good candidate \nfor oral analgesia in dementia.44 Caution, however, should be used in addictive behav-\niours due to considerable problems with addiction and misuse. Buprenorphine trans-\ndermal patches probably have fewer side effects than many other opiates.\n",
+      "bbox": [
+        48.0,
+        62.55029296875,
+        422.75,
+        110.27029418945312
+      ],
+      "text_sha256": "b2341cdf424f223e1694ac0c6a5efb0c2129d9fb142ea69818290063250521eb"
+    },
+    {
+      "block_id": "page-0660-block-0003",
+      "order": 3,
+      "text": "Antihistamines\n",
+      "bbox": [
+        48.001708984375,
+        128.64028930664062,
+        118.56170654296875,
+        140.49029541015625
+      ],
+      "text_sha256": "db9c53a8c4fe99df1db1d01fbd1b9f83ef61742d890550d5b4559e46e369e2a7"
+    },
+    {
+      "block_id": "page-0660-block-0004",
+      "order": 4,
+      "text": "First-generation H1 antihistamines include chlorpheniramine, hydroxyzine, cyclizine \nand promethazine. They are non-selective, have anticholinergic activity and readily \npenetrate the BBB, which can lead to unwanted cognitive side effects. They can impair \ncognitive and psychomotor performance and can trigger seizures, dyskinesia, dystonia \nand hallucinations. The second-generation H1 antihistamines (such as loratadine, ceti-\nrizine and fexofenadine) penetrate poorly into the CNS and are considerably less likely \nto cause these adverse effects. Moreover, they lack any anticholinergic effects.22\n",
+      "bbox": [
+        47.99920654296875,
+        146.310302734375,
+        422.8197937011719,
+        230.27029418945312
+      ],
+      "text_sha256": "65697ee6c92bb122a91e88e43c4cc6fac377071f7bc7ec96997ee187fcfa18f8"
+    },
+    {
+      "block_id": "page-0660-block-0005",
+      "order": 5,
+      "text": "Statins\n",
+      "bbox": [
+        48.0,
+        248.64028930664062,
+        80.2300033569336,
+        260.49029541015625
+      ],
+      "text_sha256": "e9a225328105afa15cab7f9bd584db96f3b6f7f05b6724877acadbc7073ef6ed"
+    },
+    {
+      "block_id": "page-0660-block-0006",
+      "order": 6,
+      "text": "A Cochrane review assessed the clinical efficacy and tolerability of statins in the treat-\nment of dementia47 and showed that there was no significant benefit from statins in \nterms of cognitive function, but equally no evidence that statins were detrimental to \ncognition. Earlier case reports had highlighted subjective complaints of memory loss \nassociated with the use of statins.48 These tended to occur within 2 months of starting \nthe drug and were most commonly associated with simvastatin. In the event of a patient \nexperiencing cognitive problems on simvastatin, it may be worth first stopping the \ndrug, and if the complaint resolves, try atorvastatin or pravastatin instead, as these \ndrugs are less likely to cross the BBB. A more recent Cochrane review49 assessed the \nefficacy of statins in the prevention of dementia and concluded that there was no evi-\ndence that statins given in late life to people at risk of vascular disease prevented cogni-\ntive decline or dementia.\n",
+      "bbox": [
+        47.9989013671875,
+        266.55029296875,
+        422.8188781738281,
+        410.2702941894531
+      ],
+      "text_sha256": "2f9d98eba1c1b7a4d64095dd8ae8110b69c023dbad85152484f3ef4208aefab2"
+    },
+    {
+      "block_id": "page-0660-block-0007",
+      "order": 7,
+      "text": "Antihypertensives\n",
+      "bbox": [
+        48.0048828125,
+        428.6402893066406,
+        133.5748748779297,
+        440.49029541015625
+      ],
+      "text_sha256": "265de272476319fcf9308e7e1416944bc12e7cb4ddc0dd4770a544f3c28c014b"
+    },
+    {
+      "block_id": "page-0660-block-0008",
+      "order": 8,
+      "text": "Mid-life hypertension has negative effects on cognition and increases the risk of a per-\nson developing dementia.50 There is no evidence that antihypertensive treatment wors-\nens cognition. It appears to have a positive effect on global cognition, and long-term \ntreatment of hypertension can reduce the risk of dementia.51,52\n",
+      "bbox": [
+        47.998191833496094,
+        446.55029296875,
+        422.7881164550781,
+        494.2702941894531
+      ],
+      "text_sha256": "bb2e40123d18520eb7cf3ecb2a7c22e4ea605ec2fc78ecd78b52a683153c7bff"
+    },
+    {
+      "block_id": "page-0660-block-0009",
+      "order": 9,
+      "text": "Other cardiac drugs\n",
+      "bbox": [
+        48.0,
+        512.6403198242188,
+        140.22999572753906,
+        524.4902954101562
+      ],
+      "text_sha256": "5654464bf3156bdf4709e78bff878cbf88eac6d436bd33121a47d16ca3c64098"
+    },
+    {
+      "block_id": "page-0660-block-0010",
+      "order": 10,
+      "text": "Digoxin has been associated with acute confusional states at therapeutic drug concentra-\ntions.53 It has also been reported to cause nightmares.54 However, one study showed that \nthe treatment of cardiac failure with digoxin improved cognitive performance in 25% of \nthe patients treated (and in 23% of the patients treated who did not have cardiac fail-\nure).55 There are some case reports of amiodarone being associated with delirium.56,57\n",
+      "bbox": [
+        48.0,
+        530.310302734375,
+        422.783447265625,
+        590.2703247070312
+      ],
+      "text_sha256": "45160bf51a796357ffbf68fc1229df556b416a1cf1ce2b2d9002337cd807223e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,455 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0758",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 758,
+  "source_page_index": 757,
+  "source_page_display": 758,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Hepatic and renal impairment    737\nCHAPTER 8\nNotes\n■\n■Monitor decline in renal function over a considerable period as a 30% change over two years \nis associated with a 5-fold increase in risk of ESRD. CKD progression is often non-linear.4\n■\n■Monitor risk of moving from CKD stages 3–5 (eGFR 10–59) to dialysis/transplanta-\ntion using Tangri score at https://qxmd.com/calculate/calculator_125/kidney-failure-\nrisk-equation-8-variable. The four (age, sex, eGFR, urine albumin/creatinine ratio) \nand eight (as four items plus serum calcium, phosphorus, bicarbonate, albumin) vari-\nable equations accurately predict the 2- and 5-year probability of treated kidney \nfailure (dialysis or transplantation) for a potential patient with CKD stages 3–5.5\n■\n■In general renal function significantly affects overall drug elimination; then the \namount of drug excreted unchanged in urine should be 30% or more of the dose.6\n■\n■Older adults (>65 years) should be assumed to have at least mild renal impairment. \nTheir serum creatinine may not be raised because they have a smaller muscle mass.\n■\n■Avoid drugs that are nephrotoxic (e.g. lithium, NSAIDs) where renal reserve is limited.\n■\n■Be cautious when using drugs that are extensively renally cleared (e.g. sulpiride, ami-\nsulpride, lithium).\n■\n■Elimination of drugs metabolised hepatically can be reduced in kidney disease pos-\nsibly by inhibition of enzymatic activity caused by uraemia.7\n■\n■Start at a low dose and increase slowly because, in renal impairment, the half-life of \na drug and the time for it to reach steady state (amount absorbed is the same as \ncleared when drug is given continuously) are often prolonged. Plasma level monitor-\ning may be useful for some drugs.\n■\n■Try to avoid long-acting drugs (e.g. depot preparations). Their dose and frequency \ncannot be easily adjusted should renal function change.\n■\n■Prescribe as few drugs as possible. Patients with renal failure take many medications requir-\ning regular review. Interactions and side effects can be avoided if fewer drugs are used.\n■\n■Monitor patient for adverse effects. Patients with renal impairment are more likely to expe-\nrience side effects and they may take longer to develop than in healthy patients. Adverse \neffects such as sedation, confusion and postural hypotension can be more common.\n■\n■Be cautious when using drugs with anticholinergic effects, since they may cause uri-\nnary retention.\n■\n■There are few clinical studies of the use of psychotropic drugs in people with renal \nimpairment. Advice about drug use in renal impairment is often based on knowledge \nof the drug’s pharmacokinetics in healthy patients.\n■\n■The effect of renal replacement therapies (e.g. dialysis) on drugs is difficult to predict. \nSee Tables 8.4–8.9 that follow. Seek specialist advice.\n■\n■Try to avoid drugs known to prolong QTc interval. In established renal failure elec-\ntrolyte changes are common, so probably best to avoid antipsychotics with the great-\nest risk of QTc prolongation (see section on QTc prolongation).\n■\n■Monitor weight carefully. Weight gain predisposes to diabetes which can contribute to \nrhabdomyolysis8 and renal failure. Psychotropic medications commonly cause weight gain.\n■\n■Be vigilant for serotonin syndrome with antidepressants, dystonias and neuroleptic \nmalignant syndrome (NMS) with antipsychotics. The resulting rhabdomyolysis can \ncause renal failure. There are case reports of rhabdomyolysis occurring with antipsy-\nchotics without other symptoms of NMS.9–11.\n",
+  "raw_text_sha256": "5a15a267ae6762dd73906bc4843cfb22f377086675db83e66852f9b4d8a3852a",
+  "coordinates_sha256": "8ac0056bb260c1c340ba023e146d23c908df39844c929d1d34caabf0d3a9a110",
+  "block_sequence_sha256": "a790caf3cdda1d7e6fe20884fbd0cafca6bf9205ade173f23c4882d4f3677f28",
+  "blocks": [
+    {
+      "block_id": "page-0758-block-0000",
+      "order": 0,
+      "text": "Hepatic and renal impairment    737\n",
+      "bbox": [
+        269.185302734375,
+        31.395221710205078,
+        420.00048828125,
+        41.0272216796875
+      ],
+      "text_sha256": "d64ef45433e09d31a87d94fd67b44680d9aa69f500d1330b76570edeac1ac8fb"
+    },
+    {
+      "block_id": "page-0758-block-0001",
+      "order": 1,
+      "text": "CHAPTER 8\n",
+      "bbox": [
+        454.4096984863281,
+        532.3878173828125,
+        463.88970947265625,
+        573.7318115234375
+      ],
+      "text_sha256": "5ba3d9fb75ff4f418d4a2e9d517f30966dcfb279c10487eec43c5aa3fd8757a2"
+    },
+    {
+      "block_id": "page-0758-block-0002",
+      "order": 2,
+      "text": "Notes\n",
+      "bbox": [
+        48.0,
+        62.31546401977539,
+        77.94200134277344,
+        75.3504638671875
+      ],
+      "text_sha256": "38732073f309589131fec63f417896537e63d27fc29fcf7c60d5f47379f0887a"
+    },
+    {
+      "block_id": "page-0758-block-0003",
+      "order": 3,
+      "text": "■\n■Monitor decline in renal function over a considerable period as a 30% change over two years \n",
+      "bbox": [
+        47.999900817871094,
+        86.92046356201172,
+        422.8197326660156,
+        98.88046264648438
+      ],
+      "text_sha256": "3dcad9e503b043fc70d92cd99f1649897bc98c655084babd43d9907012ea0dfb"
+    },
+    {
+      "block_id": "page-0758-block-0004",
+      "order": 4,
+      "text": "is associated with a 5-fold increase in risk of ESRD. CKD progression is often non-linear.4\n",
+      "bbox": [
+        57.0,
+        99.16046142578125,
+        409.1083984375,
+        110.88046264648438
+      ],
+      "text_sha256": "ebd9f06c23957c8a0881bcee1577aca8843d017e72dd489915ec0898f39cac6f"
+    },
+    {
+      "block_id": "page-0758-block-0005",
+      "order": 5,
+      "text": "■\n■Monitor risk of moving from CKD stages 3–5 (eGFR 10–59) to dialysis/transplanta-\n",
+      "bbox": [
+        48.0,
+        110.92046356201172,
+        419.989990234375,
+        122.88046264648438
+      ],
+      "text_sha256": "0cb436edf4bd896303fdf49ae4df7efb71f1657a4ee5a5add1b74b290f8305ce"
+    },
+    {
+      "block_id": "page-0758-block-0006",
+      "order": 6,
+      "text": "tion using Tangri score at https://qxmd.com/calculate/calculator_125/kidney-failure-\nrisk-equation-8-variable. The four (age, sex, eGFR, urine albumin/creatinine ratio) \nand eight (as four items plus serum calcium, phosphorus, bicarbonate, albumin) vari-\nable equations accurately predict the 2- and 5-year probability of treated kidney \nfailure (dialysis or transplantation) for a potential patient with CKD stages 3–5.5\n",
+      "bbox": [
+        57.0,
+        122.92046356201172,
+        422.7699890136719,
+        182.88046264648438
+      ],
+      "text_sha256": "9a99aa5ae35dfe37d9c48e325d43d5c8ec778fd36d49d2c0121b2ef2bef251ff"
+    },
+    {
+      "block_id": "page-0758-block-0007",
+      "order": 7,
+      "text": "■\n■In general renal function significantly affects overall drug elimination; then the \n",
+      "bbox": [
+        48.0,
+        183.160400390625,
+        422.79998779296875,
+        194.88040161132812
+      ],
+      "text_sha256": "f3f2819d2860c6473827748192d63fd55fe0d3e9097a3a2a054e12e2057d09d6"
+    },
+    {
+      "block_id": "page-0758-block-0008",
+      "order": 8,
+      "text": "amount of drug excreted unchanged in urine should be 30% or more of the dose.6\n",
+      "bbox": [
+        57.0,
+        195.160400390625,
+        410.8785705566406,
+        206.88040161132812
+      ],
+      "text_sha256": "3615089c70a4bed3a9f1e2f8007e02cd312c72719dbbd54c588dd844d3e8f948"
+    },
+    {
+      "block_id": "page-0758-block-0009",
+      "order": 9,
+      "text": "■\n■Older adults (>65 years) should be assumed to have at least mild renal impairment. \n",
+      "bbox": [
+        48.0,
+        206.92041015625,
+        422.7300109863281,
+        218.88040161132812
+      ],
+      "text_sha256": "6b93eb5876d03e1ca8b8936a807080202bc9090fa11188809e0613663929ea14"
+    },
+    {
+      "block_id": "page-0758-block-0010",
+      "order": 10,
+      "text": "Their serum creatinine may not be raised because they have a smaller muscle mass.\n",
+      "bbox": [
+        57.0,
+        219.160400390625,
+        414.1900939941406,
+        230.88040161132812
+      ],
+      "text_sha256": "3011009157839d38a7855e328e2eb14b58bf54e09d39f9264089694c4521c02c"
+    },
+    {
+      "block_id": "page-0758-block-0011",
+      "order": 11,
+      "text": "■\n■Avoid drugs that are nephrotoxic (e.g. lithium, NSAIDs) where renal reserve is limited.\n",
+      "bbox": [
+        48.0,
+        230.92041015625,
+        417.16009521484375,
+        242.88040161132812
+      ],
+      "text_sha256": "cf580ec8a14ee9115bc4f7ed7485af35c815a63780beea4ed8d3440485da288f"
+    },
+    {
+      "block_id": "page-0758-block-0012",
+      "order": 12,
+      "text": "■\n■Be cautious when using drugs that are extensively renally cleared (e.g. sulpiride, ami-\n",
+      "bbox": [
+        48.0,
+        242.92041015625,
+        419.9700012207031,
+        254.88040161132812
+      ],
+      "text_sha256": "cf927d1eb70cb544e54e305f806552bcb8089eba134a85aa612fec372ea7210f"
+    },
+    {
+      "block_id": "page-0758-block-0013",
+      "order": 13,
+      "text": "sulpride, lithium).\n",
+      "bbox": [
+        57.0,
+        255.160400390625,
+        133.86997985839844,
+        266.8804016113281
+      ],
+      "text_sha256": "8abd05decd17ba75a9133578f8b9db7ba8ec8fb9f649ee8fdf26f862ca5d9dfe"
+    },
+    {
+      "block_id": "page-0758-block-0014",
+      "order": 14,
+      "text": "■\n■Elimination of drugs metabolised hepatically can be reduced in kidney disease pos-\n",
+      "bbox": [
+        48.0,
+        267.160400390625,
+        420.00006103515625,
+        278.8804016113281
+      ],
+      "text_sha256": "523d4fb2f0a828c17591c2bf72accae8120b237ec76b3b74dd694fd170d9cd7d"
+    },
+    {
+      "block_id": "page-0758-block-0015",
+      "order": 15,
+      "text": "sibly by inhibition of enzymatic activity caused by uraemia.7\n",
+      "bbox": [
+        57.0,
+        279.160400390625,
+        316.3794860839844,
+        290.8804016113281
+      ],
+      "text_sha256": "0471d7571cfda529f1de62f0944bee7d29d359839659de39df91172e9848163b"
+    },
+    {
+      "block_id": "page-0758-block-0016",
+      "order": 16,
+      "text": "■\n■Start at a low dose and increase slowly because, in renal impairment, the half-life of \n",
+      "bbox": [
+        48.0,
+        290.92041015625,
+        422.75,
+        302.8804016113281
+      ],
+      "text_sha256": "01d37edeef31b829fae41c5d9d2abf14041fd374ac45dd97d91a79313e37233b"
+    },
+    {
+      "block_id": "page-0758-block-0017",
+      "order": 17,
+      "text": "a drug and the time for it to reach steady state (amount absorbed is the same as \ncleared when drug is given continuously) are often prolonged. Plasma level monitor-\ning may be useful for some drugs.\n",
+      "bbox": [
+        57.0,
+        303.160400390625,
+        422.7300109863281,
+        338.8804016113281
+      ],
+      "text_sha256": "fd92ff67da5fdd2ef556a8025de429fc7f3533ca65a90b69444585ac5e0aae1f"
+    },
+    {
+      "block_id": "page-0758-block-0018",
+      "order": 18,
+      "text": "■\n■Try to avoid long-acting drugs (e.g. depot preparations). Their dose and frequency \n",
+      "bbox": [
+        48.0,
+        338.92041015625,
+        422.7500305175781,
+        350.8804016113281
+      ],
+      "text_sha256": "82a9e33028bd9e3125e02a69583cd47f53c29079592e7a0a0c5a0d019abd3732"
+    },
+    {
+      "block_id": "page-0758-block-0019",
+      "order": 19,
+      "text": "cannot be easily adjusted should renal function change.\n",
+      "bbox": [
+        57.0,
+        351.160400390625,
+        295.39996337890625,
+        362.8804016113281
+      ],
+      "text_sha256": "ed686d84aafbdc5f78f33d5f93538abf44bad06ab3822361bb4e349512d2876a"
+    },
+    {
+      "block_id": "page-0758-block-0020",
+      "order": 20,
+      "text": "■\n■Prescribe as few drugs as possible. Patients with renal failure take many medications requir-\n",
+      "bbox": [
+        48.0,
+        362.92041015625,
+        419.9999694824219,
+        374.8804016113281
+      ],
+      "text_sha256": "469384cb36da2e8b885cc71e8f5587484cf7f47a5bcc692e67b1def1c629ee51"
+    },
+    {
+      "block_id": "page-0758-block-0021",
+      "order": 21,
+      "text": "ing regular review. Interactions and side effects can be avoided if fewer drugs are used.\n",
+      "bbox": [
+        57.0,
+        375.160400390625,
+        402.6802062988281,
+        386.8804016113281
+      ],
+      "text_sha256": "4c0d1e724e6787eb1e8c5f6d1f7eb18fe941e131b4d52bac12a321d751ee9371"
+    },
+    {
+      "block_id": "page-0758-block-0022",
+      "order": 22,
+      "text": "■\n■Monitor patient for adverse effects. Patients with renal impairment are more likely to expe-\n",
+      "bbox": [
+        48.0,
+        386.92041015625,
+        420.0001525878906,
+        398.8804016113281
+      ],
+      "text_sha256": "1ee78b6d529eb29a8bf1157c999b43d25ec269003b62365876ba84fa80cd747b"
+    },
+    {
+      "block_id": "page-0758-block-0023",
+      "order": 23,
+      "text": "rience side effects and they may take longer to develop than in healthy patients. Adverse \neffects such as sedation, confusion and postural hypotension can be more common.\n",
+      "bbox": [
+        57.0,
+        399.160400390625,
+        422.7402648925781,
+        422.8804016113281
+      ],
+      "text_sha256": "56cc2fcc094dd5279b7205f8c683b3c309425cacd3390b5719a3e5a0e97a263f"
+    },
+    {
+      "block_id": "page-0758-block-0024",
+      "order": 24,
+      "text": "■\n■Be cautious when using drugs with anticholinergic effects, since they may cause uri-\n",
+      "bbox": [
+        48.0,
+        422.92041015625,
+        419.99993896484375,
+        434.8804016113281
+      ],
+      "text_sha256": "0bc6841ba64cc6396588d5fe1e33ba160149050d78b880d473707b8e6447206b"
+    },
+    {
+      "block_id": "page-0758-block-0025",
+      "order": 25,
+      "text": "nary retention.\n",
+      "bbox": [
+        57.0,
+        435.160400390625,
+        120.89999389648438,
+        446.8804016113281
+      ],
+      "text_sha256": "34cff358eda13c0a356f50b9c78504cfeaf0ddc299dbff5744138ae06759d0b9"
+    },
+    {
+      "block_id": "page-0758-block-0026",
+      "order": 26,
+      "text": "■\n■There are few clinical studies of the use of psychotropic drugs in people with renal \n",
+      "bbox": [
+        48.0,
+        446.92041015625,
+        422.7899475097656,
+        458.8804016113281
+      ],
+      "text_sha256": "9d7d914c64f95d7d1f3fd316493f8af8ccb01afc6861d3b959cf3f712b2be1fc"
+    },
+    {
+      "block_id": "page-0758-block-0027",
+      "order": 27,
+      "text": "impairment. Advice about drug use in renal impairment is often based on knowledge \nof the drug’s pharmacokinetics in healthy patients.\n",
+      "bbox": [
+        57.0,
+        459.160400390625,
+        422.8000183105469,
+        482.8804016113281
+      ],
+      "text_sha256": "6e70e332be2737117d482abe90aae9b0f363573125945dc12e48bc38d5e30dbf"
+    },
+    {
+      "block_id": "page-0758-block-0028",
+      "order": 28,
+      "text": "■\n■The effect of renal replacement therapies (e.g. dialysis) on drugs is difficult to predict. \n",
+      "bbox": [
+        48.0,
+        482.92041015625,
+        422.7799072265625,
+        494.8804016113281
+      ],
+      "text_sha256": "0997a376bff5385316187e09f6f578e92ba720e026b210a861d79574ae09651f"
+    },
+    {
+      "block_id": "page-0758-block-0029",
+      "order": 29,
+      "text": "See Tables 8.4–8.9 that follow. Seek specialist advice.\n",
+      "bbox": [
+        57.0,
+        495.160400390625,
+        285.0699768066406,
+        506.8804016113281
+      ],
+      "text_sha256": "09bdcf50d0a3f919f150932fe8c14e1bac0cd9ede187ce6d36f79845e0392504"
+    },
+    {
+      "block_id": "page-0758-block-0030",
+      "order": 30,
+      "text": "■\n■Try to avoid drugs known to prolong QTc interval. In established renal failure elec-\n",
+      "bbox": [
+        48.0,
+        506.92041015625,
+        419.9599304199219,
+        518.8804321289062
+      ],
+      "text_sha256": "66c2a28f1fa932ebc42e86110622d0b63951b7fd45c440df00bf5f45eee23e92"
+    },
+    {
+      "block_id": "page-0758-block-0031",
+      "order": 31,
+      "text": "trolyte changes are common, so probably best to avoid antipsychotics with the great-\nest risk of QTc prolongation (see section on QTc prolongation).\n",
+      "bbox": [
+        57.0,
+        519.160400390625,
+        419.97991943359375,
+        542.8804321289062
+      ],
+      "text_sha256": "d6a710a9fc72d8018152e6b56d2c7be3783559147a11115b27751eb5b5b900f9"
+    },
+    {
+      "block_id": "page-0758-block-0032",
+      "order": 32,
+      "text": "■\n■Monitor weight carefully. Weight gain predisposes to diabetes which can contribute to \n",
+      "bbox": [
+        47.999900817871094,
+        542.92041015625,
+        422.810302734375,
+        554.8804321289062
+      ],
+      "text_sha256": "4ed6602ba9f0619a2bdc37c375cd240613350d826466a3737ede658e05a73d81"
+    },
+    {
+      "block_id": "page-0758-block-0033",
+      "order": 33,
+      "text": "rhabdomyolysis8 and renal failure. Psychotropic medications commonly cause weight gain.\n",
+      "bbox": [
+        57.0,
+        555.160400390625,
+        420.4064636230469,
+        566.8804321289062
+      ],
+      "text_sha256": "39217decb1fae683a646390853b0d53eeee115289704990b5d4de4b3c2334f95"
+    },
+    {
+      "block_id": "page-0758-block-0034",
+      "order": 34,
+      "text": "■\n■Be vigilant for serotonin syndrome with antidepressants, dystonias and neuroleptic \n",
+      "bbox": [
+        47.999900817871094,
+        566.92041015625,
+        422.7900085449219,
+        578.8804321289062
+      ],
+      "text_sha256": "01b8c3374e88f6d494f4602b2716136daf19146d55b64aed9e8ea533d96aa0c1"
+    },
+    {
+      "block_id": "page-0758-block-0035",
+      "order": 35,
+      "text": "malignant syndrome (NMS) with antipsychotics. The resulting rhabdomyolysis can \ncause renal failure. There are case reports of rhabdomyolysis occurring with antipsy-\nchotics without other symptoms of NMS.9–11.\n",
+      "bbox": [
+        57.0,
+        578.92041015625,
+        422.80010986328125,
+        614.8804321289062
+      ],
+      "text_sha256": "6f2c55d6e0bbdba0ea02b553825bc22e5bfa0faf8eaca68c3ad4e795f3df4114"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

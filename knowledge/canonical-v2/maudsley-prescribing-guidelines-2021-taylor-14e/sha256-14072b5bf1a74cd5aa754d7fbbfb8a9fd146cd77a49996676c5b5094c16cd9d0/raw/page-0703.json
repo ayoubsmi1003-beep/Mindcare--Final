@@ -1,0 +1,335 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0703",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 703,
+  "source_page_index": 702,
+  "source_page_display": 703,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "682    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 7\n■\n■There is a high risk of relapse in women with a family history of postpartum psycho-\nsis or a personal history of postpartum psychosis.19\n■\n■The mental health of the mother in the perinatal period influences foetal well-being, \nobstetric outcome and child development.\nThe risks of not treating psychosis include:\n■\n■Harm to the mother through poor self-care or judgement, lack of obstetric care or \nimpulsive acts including suicide.\n■\n■Harm to the foetus or neonate (ranging from neglect to infanticide).\nIt has long been established that people with schizophrenia are more likely to have \nminor physical anomalies than the general population. Some of these anomalies may be \napparent at birth, while others are more subtle and may not be obvious until later in \nlife. This background risk complicates assessment of the effects of antipsychotic drugs. \n(Psychiatric illness itself during pregnancy is an independent risk factor for congenital \nmalformations and perinatal mortality.)\nTreatment with antipsychotics\nFirst generation antipsychotics\n■\n■Are generally considered to have minimal risk of teratogenicity,20,21 although data are \nless than convincing, as might be expected.\n■\n■Most initial data originated from studies that included primarily women with \nhyperemesis gravidarum (a condition associated with an increased risk of congenital \nmalformations) treated with low doses of phenothiazines. The modest increase in risk \nidentified in some of these studies, along with no clear clustering of congenital abnor-\nmalities, suggests that the condition being treated may be responsible rather than \ndrug treatment.\n■\n■A prospective study that included 284 women who took an FGA (mostly haloperidol, \npromethazine or flupentixol) during pregnancy concluded that preterm birth and low \nbirth weight were more common with FGAs than SGAs (or no antipsychotic expo-\nsure).22 In total, 20% of neonates exposed to an FGA in the last week of gestation \nexperienced early somnolence and jitteriness.\n■\n■In a recent large American study including over a million women, no meaningful \nincrease in the risk of major malformations or cardiac malformations was seen in \n733 women prescribed an FGA.23\n■\n■There may be an association between haloperidol and limb defects (based on a small \nnumber of cases), but if real, the risk is likely to be extremely low.\n■\n■Neonatal dyskinesia has been reported with FGAs.24\n■\n■Neonatal jaundice has been reported with phenothiazines.20\nIt remains uncertain whether FGAs are entirely without risk to the foetus or to later \ndevelopment.20,21 However, this continued uncertainty and the wide use of these drugs \nover ­several decades suggest that any risk is small – an assumption borne out by most \nstudies.25\n",
+  "raw_text_sha256": "ce91bf2d944a2c23d12232e60082e5a112c6bb7325cc1697161f138ea475ff5b",
+  "coordinates_sha256": "4a22c8528c49da1b774bdeef713c52b31f631a1a18df34078b07b17447d80463",
+  "block_sequence_sha256": "96c1110efdc60d6811ce249f0b154614cd439c03de70bab09a870b3b27e715a5",
+  "blocks": [
+    {
+      "block_id": "page-0703-block-0000",
+      "order": 0,
+      "text": "682    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "0bcc364b6e2b0b3e23eab7d391d43d6cf0c7841410ca01d9d9288ef58f5ac174"
+    },
+    {
+      "block_id": "page-0703-block-0001",
+      "order": 1,
+      "text": "CHAPTER 7\n",
+      "bbox": [
+        18.520000457763672,
+        472.7144775390625,
+        28.0,
+        514.0584716796875
+      ],
+      "text_sha256": "6d1a2318236627f2d413db0336034ac4d71cea7172bd0baddf04c66a07292590"
+    },
+    {
+      "block_id": "page-0703-block-0002",
+      "order": 2,
+      "text": "■\n■There is a high risk of relapse in women with a family history of postpartum psycho-\n",
+      "bbox": [
+        61.88990020751953,
+        62.55029296875,
+        433.90997314453125,
+        74.27029418945312
+      ],
+      "text_sha256": "9994364b2f51f51aced5bfde0554c9b920dd8fef9f08b939c0f876607d558512"
+    },
+    {
+      "block_id": "page-0703-block-0003",
+      "order": 3,
+      "text": "sis or a personal history of postpartum psychosis.19\n",
+      "bbox": [
+        70.88999938964844,
+        74.55029296875,
+        290.7712707519531,
+        86.27029418945312
+      ],
+      "text_sha256": "89395aff674a2fd5eace8aa1fb6c884cc6ed9b311394a6abe580d558b354608d"
+    },
+    {
+      "block_id": "page-0703-block-0004",
+      "order": 4,
+      "text": "■\n■The mental health of the mother in the perinatal period influences foetal well-being, \n",
+      "bbox": [
+        61.88990020751953,
+        86.55029296875,
+        436.6700134277344,
+        98.27029418945312
+      ],
+      "text_sha256": "27948dc785e80a2de142a9ddc666394df82da73efc647f8bfdac9f850807e17e"
+    },
+    {
+      "block_id": "page-0703-block-0005",
+      "order": 5,
+      "text": "obstetric outcome and child development.\n",
+      "bbox": [
+        70.88999938964844,
+        98.55029296875,
+        251.4499969482422,
+        110.27029418945312
+      ],
+      "text_sha256": "3f4abaacd753a7645039ead3d6f435baac0bbe12579ff377f7cff23e1df40bf2"
+    },
+    {
+      "block_id": "page-0703-block-0006",
+      "order": 6,
+      "text": "The risks of not treating psychosis include:\n",
+      "bbox": [
+        61.88999938964844,
+        116.55029296875,
+        246.37997436523438,
+        128.27029418945312
+      ],
+      "text_sha256": "a7e8dd97692ede06572f8b4f0f87c9e82af9c7ff24f723e21fc45e5ff6c5ce98"
+    },
+    {
+      "block_id": "page-0703-block-0007",
+      "order": 7,
+      "text": "■\n■Harm to the mother through poor self-care or judgement, lack of obstetric care or \n",
+      "bbox": [
+        61.88990020751953,
+        134.55029296875,
+        436.7000732421875,
+        146.27029418945312
+      ],
+      "text_sha256": "3969a3b28333a898381a85db4c63db0d8403ab415c455f42cf3c675652325832"
+    },
+    {
+      "block_id": "page-0703-block-0008",
+      "order": 8,
+      "text": "impulsive acts including suicide.\n",
+      "bbox": [
+        70.88999938964844,
+        146.55029296875,
+        209.24998474121094,
+        158.27029418945312
+      ],
+      "text_sha256": "d7c5b95c849a9873aaea8dfaa2f674d396eb09907851cc09238df732c2ae17f8"
+    },
+    {
+      "block_id": "page-0703-block-0009",
+      "order": 9,
+      "text": "■\n■Harm to the foetus or neonate (ranging from neglect to infanticide).\n",
+      "bbox": [
+        61.88990020751953,
+        158.55029296875,
+        363.6799011230469,
+        170.27029418945312
+      ],
+      "text_sha256": "04da47b577f692a0dab0afe7f0b07e02e37b28f27d4a21a4389a73b7cb19f01c"
+    },
+    {
+      "block_id": "page-0703-block-0010",
+      "order": 10,
+      "text": "It has long been established that people with schizophrenia are more likely to have \nminor physical anomalies than the general population. Some of these anomalies may be \napparent at birth, while others are more subtle and may not be obvious until later in \nlife. This background risk complicates assessment of the effects of antipsychotic drugs. \n(Psychiatric illness itself during pregnancy is an independent risk factor for congenital \nmalformations and perinatal mortality.)\n",
+      "bbox": [
+        61.88999938964844,
+        176.55029296875,
+        436.68988037109375,
+        248.27029418945312
+      ],
+      "text_sha256": "ddd6bf1e69161a8e67343bc00d5e541a7cf2ea097a9efe14638d4ab5be991454"
+    },
+    {
+      "block_id": "page-0703-block-0011",
+      "order": 11,
+      "text": "Treatment with antipsychotics\n",
+      "bbox": [
+        61.88999938964844,
+        265.7052917480469,
+        217.75997924804688,
+        278.74029541015625
+      ],
+      "text_sha256": "93d81cabcc293f1da856a3badba09782df272543910b19b99ccda795761dc523"
+    },
+    {
+      "block_id": "page-0703-block-0012",
+      "order": 12,
+      "text": "First generation antipsychotics\n",
+      "bbox": [
+        61.88999938964844,
+        284.6402893066406,
+        205.7899932861328,
+        296.49029541015625
+      ],
+      "text_sha256": "1547447192292acc926e678f1ddde1a0a386c3c9f8b3076c34746b43f21774e1"
+    },
+    {
+      "block_id": "page-0703-block-0013",
+      "order": 13,
+      "text": "■\n■Are generally considered to have minimal risk of teratogenicity,20,21 although data are \n",
+      "bbox": [
+        61.88990020751953,
+        308.55029296875,
+        436.6649475097656,
+        320.2702941894531
+      ],
+      "text_sha256": "faebed32ead8e42b51b494955d4247aa93b921875a91f01f32a31621547f1016"
+    },
+    {
+      "block_id": "page-0703-block-0014",
+      "order": 14,
+      "text": "less than convincing, as might be expected.\n",
+      "bbox": [
+        70.89498901367188,
+        320.55029296875,
+        255.54498291015625,
+        332.2702941894531
+      ],
+      "text_sha256": "a8d8cd19dd685b59a383baf157e3a4bbac24f9627de37c728ad54b20081a03a1"
+    },
+    {
+      "block_id": "page-0703-block-0015",
+      "order": 15,
+      "text": "■\n■Most initial data originated from studies that included primarily women with \n",
+      "bbox": [
+        61.88990020751953,
+        332.55029296875,
+        436.7099914550781,
+        344.2702941894531
+      ],
+      "text_sha256": "684d9b93d64192d312893d3df4588cbc74d5b02fca5a1c478b25ad352e21312b"
+    },
+    {
+      "block_id": "page-0703-block-0016",
+      "order": 16,
+      "text": "hyperemesis gravidarum (a condition associated with an increased risk of congenital \nmalformations) treated with low doses of phenothiazines. The modest increase in risk \nidentified in some of these studies, along with no clear clustering of congenital abnor-\nmalities, suggests that the condition being treated may be responsible rather than \ndrug treatment.\n",
+      "bbox": [
+        70.88999938964844,
+        344.55029296875,
+        436.69989013671875,
+        404.2702941894531
+      ],
+      "text_sha256": "33f381714cb072820e2fd562d4c44b03490efa8235a6ce5070e32f913ede9de2"
+    },
+    {
+      "block_id": "page-0703-block-0017",
+      "order": 17,
+      "text": "■\n■A prospective study that included 284 women who took an FGA (mostly haloperidol, \n",
+      "bbox": [
+        61.88990020751953,
+        404.55029296875,
+        436.70989990234375,
+        416.2702941894531
+      ],
+      "text_sha256": "bf76ae62cbae1ffb1638054be7087a838577426687741a741b5665f5d4d3003d"
+    },
+    {
+      "block_id": "page-0703-block-0018",
+      "order": 18,
+      "text": "promethazine or flupentixol) during pregnancy concluded that preterm birth and low \nbirth weight were more common with FGAs than SGAs (or no antipsychotic expo-\nsure).22 In total, 20% of neonates exposed to an FGA in the last week of gestation \nexperienced early somnolence and jitteriness.\n",
+      "bbox": [
+        70.88999938964844,
+        416.55029296875,
+        436.7123107910156,
+        464.2702941894531
+      ],
+      "text_sha256": "e392c843b44ecc0c95c395d58232882f0cc50552abac5e253924d11e752404ef"
+    },
+    {
+      "block_id": "page-0703-block-0019",
+      "order": 19,
+      "text": "■\n■In a recent large American study including over a million women, no meaningful \n",
+      "bbox": [
+        61.88990020751953,
+        464.55029296875,
+        436.679931640625,
+        476.2702941894531
+      ],
+      "text_sha256": "23347b62e5f76456ed53d670b3745751917a1570d1540f1ef2a1623a846aa94f"
+    },
+    {
+      "block_id": "page-0703-block-0020",
+      "order": 20,
+      "text": "increase in the risk of major malformations or cardiac malformations was seen in \n733 women prescribed an FGA.23\n",
+      "bbox": [
+        70.88999938964844,
+        476.55029296875,
+        436.6900939941406,
+        500.2702941894531
+      ],
+      "text_sha256": "c49c1ad89f30a401d90b3292597fb0614076c811c9230caf7ab3354c35a81920"
+    },
+    {
+      "block_id": "page-0703-block-0021",
+      "order": 21,
+      "text": "■\n■There may be an association between haloperidol and limb defects (based on a small \n",
+      "bbox": [
+        61.88990020751953,
+        500.55029296875,
+        436.7100830078125,
+        512.2703247070312
+      ],
+      "text_sha256": "6b3a8a7d78084958acba4755f41d4a40d7d2f78b0fb64ea9acffd8d69219b42b"
+    },
+    {
+      "block_id": "page-0703-block-0022",
+      "order": 22,
+      "text": "number of cases), but if real, the risk is likely to be extremely low.\n",
+      "bbox": [
+        70.88999938964844,
+        512.55029296875,
+        354.25994873046875,
+        524.2703247070312
+      ],
+      "text_sha256": "fc38eb84d6ef02ffea07cadad86001d44ff7eb8aabfd3129055af5108b0d2f72"
+    },
+    {
+      "block_id": "page-0703-block-0023",
+      "order": 23,
+      "text": "■\n■Neonatal dyskinesia has been reported with FGAs.24\n",
+      "bbox": [
+        61.88990020751953,
+        524.55029296875,
+        296.3110656738281,
+        536.2703247070312
+      ],
+      "text_sha256": "93e75cfa0414ed5e8ac421e4db3d813c1df329dfa14a1d7f1708f0bd306bed84"
+    },
+    {
+      "block_id": "page-0703-block-0024",
+      "order": 24,
+      "text": "■\n■Neonatal jaundice has been reported with phenothiazines.20\n",
+      "bbox": [
+        61.88990020751953,
+        536.55029296875,
+        327.9806823730469,
+        548.2703247070312
+      ],
+      "text_sha256": "fec8b6eba84c6d44e5b33580f860e3a5256fc24564079630d1150e431dd0c66a"
+    },
+    {
+      "block_id": "page-0703-block-0025",
+      "order": 25,
+      "text": "It remains uncertain whether FGAs are entirely without risk to the foetus or to later \ndevelopment.20,21 However, this continued uncertainty and the wide use of these drugs \nover ­several decades suggest that any risk is small – an assumption borne out by most \nstudies.25\n",
+      "bbox": [
+        61.885894775390625,
+        554.55029296875,
+        436.6999206542969,
+        602.2703247070312
+      ],
+      "text_sha256": "28f203333e71c1513bc5a0021612301e403c0eefa3ca45d683c6139ab8662ed0"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

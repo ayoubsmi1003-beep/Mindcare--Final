@@ -1,0 +1,263 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0318",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 318,
+  "source_page_index": 317,
+  "source_page_display": 318,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Bipolar disorder    297\nCHAPTER 2\nNICE recommendations30\n■\n■When planning long-term pharmacological interventions to prevent relapse, take into account \ndrugs that have been effective during episodes of mania or bipolar depression. Discuss with \nthe person whether they prefer to continue this treatment or switch to lithium, and explain \nthat lithium is the most effective long-term treatment for BD.\n■\n■Offer lithium as a first-line, long-term pharmacological treatment for BD and: if lithium is insuf-\nficiently effective, consider adding valproate; if lithium is poorly tolerated, consider valproate \nor olanzapine instead, or if it has been effective during an episode of mania or bipolar depres-\nsion, quetiapine.\n■\n■Do not offer valproate to women of child-bearing potential.\n■\n■Discuss with the person the possible benefits and risks of each drug for them.\n■\n■The secondary care team should maintain responsibility for monitoring the efficacy and tolera-\nbility of antipsychotic medication until the person’s condition has stabilised.\n■\n■Before stopping medication, discuss with the person how to recognise early signs of relapse \nand what to do if symptoms recur.\n■\n■If stopping medication, do so gradually and monitor for signs of relapse.\n■\n■Continue monitoring symptoms, mood and mental state for 2 years after stopping medication. \nThis may be undertaken in primary care.\nOptimising lithium treatment42\nFor adults with BD, the standard lithium serum level should be 0.60–0.80mmol/L with \nthe option to reduce it to 0.40–0.60mmol/L in case of good response but poor tolerance \nor to increase it to 0.80–1.00mmol/L in case of insufficient response and good tolerance. \nFor children and adolescents no consensus exists, but the majority of the International \nSociety for Bipolar Disorders (ISBD)/ International Study Group on Lithium (IGSLI) \nTask Force endorsed the same recommendation. For the elderly, a more ­conservative \napproach may be adopted: usually 0.40–0.60mmol/L, with the option to go to maxi-\nmally 0.70 or 0.80mmol/L at 65–79 years and to maximally 0.70mmol/L over 80 years.\nCombination treatment\nA significant proportion of patients with bipolar illness fail to be treated adequately \nwith a single mood stabiliser,14 so combinations of mood stabilisers43,44 or a mood sta-\nbiliser and an antipsychotic44,45 are commonly used.46 Also, there is evidence that where \ncombination treatments are effective in mania or depression, then continuation with \nthe same combination provides optimal prophylaxis.31,45 The use of polypharmacy \nneeds to be balanced against the likely increased side-effect burden. Combinations of \nolanzapine, risperidone, quetiapine or haloperidol with lithium or valproate are recom-\nmended by NICE30 and BAP guidelines.10 Alternative antipsychotics (e.g. aripiprazole) \nare also options in combinations with lithium or valproate, particularly if these have \nbeen found to be effective during the treatment of an acute episode of mania or depres-\nsion31,47 Carbamazepine is considered to be third line. Lamotrigine may be useful in \nbipolar II disorder30 but seems only to significantly prevent recurrence of depression.48 \nLurasidone may have broadly similar long-term efficacy, both as monotherapy and \nwhen combined with a mood stabiliser.49,50\n",
+  "raw_text_sha256": "1e233f09952b9f5bf7b40111537bdc3a13f7bd2d2e837f86bd7b81cb9ab6749c",
+  "coordinates_sha256": "584a0afab2183a5579b7b67bb23504ddbdeea6d3991e1b614c87a5e333e0081e",
+  "block_sequence_sha256": "12ee7c43f7bc97b31c2cbef109ae758a6ae9f6de444ba512276615810e05641f",
+  "blocks": [
+    {
+      "block_id": "page-0318-block-0000",
+      "order": 0,
+      "text": "Bipolar disorder    297\n",
+      "bbox": [
+        326.5046081542969,
+        31.395221710205078,
+        420.0005798339844,
+        41.0272216796875
+      ],
+      "text_sha256": "8c2e63cbd304869e4b3dca1101b0f320d22744d512b86fd5a080456750d0745f"
+    },
+    {
+      "block_id": "page-0318-block-0001",
+      "order": 1,
+      "text": "CHAPTER 2\n",
+      "bbox": [
+        454.4096984863281,
+        146.3472900390625,
+        463.88970947265625,
+        187.6912841796875
+      ],
+      "text_sha256": "5eaa1f2591abe1a1b2f7664fa3de7ff01a032d44ee83fa594c7852135d4287aa"
+    },
+    {
+      "block_id": "page-0318-block-0002",
+      "order": 2,
+      "text": "NICE recommendations30\n",
+      "bbox": [
+        55.25019836425781,
+        69.57880401611328,
+        153.17172241210938,
+        79.65130615234375
+      ],
+      "text_sha256": "77a756349605343c92012f8076cdb396eb8f86a1749aec839bf426c81fb155f6"
+    },
+    {
+      "block_id": "page-0318-block-0003",
+      "order": 3,
+      "text": "■\n■When planning long-term pharmacological interventions to prevent relapse, take into account \n",
+      "bbox": [
+        60.250099182128906,
+        89.10781860351562,
+        411.81732177734375,
+        98.976318359375
+      ],
+      "text_sha256": "b96d5fcbee710a85466230f2ee9600248ad0ea9fb37b5e3c8b1ef25f35e12f69"
+    },
+    {
+      "block_id": "page-0318-block-0004",
+      "order": 4,
+      "text": "drugs that have been effective during episodes of mania or bipolar depression. Discuss with \nthe person whether they prefer to continue this treatment or switch to lithium, and explain \nthat lithium is the most effective long-term treatment for BD.\n",
+      "bbox": [
+        69.25019836425781,
+        99.10379028320312,
+        402.87530517578125,
+        128.9642333984375
+      ],
+      "text_sha256": "0b9bf2680502ed20fcdcfbdc2eb4987aa8b7369321bc9991be01ee12a72e5029"
+    },
+    {
+      "block_id": "page-0318-block-0005",
+      "order": 5,
+      "text": "■\n■Offer lithium as a first-line, long-term pharmacological treatment for BD and: if lithium is insuf-\n",
+      "bbox": [
+        60.250099182128906,
+        129.10781860351562,
+        412.72686767578125,
+        138.976318359375
+      ],
+      "text_sha256": "c5efa710687f685b7fbaf463a8ad5edede8671b1bbc0d38a077a8915ced0e0cc"
+    },
+    {
+      "block_id": "page-0318-block-0006",
+      "order": 6,
+      "text": "ficiently effective, consider adding valproate; if lithium is poorly tolerated, consider valproate \nor olanzapine instead, or if it has been effective during an episode of mania or bipolar depres-\nsion, quetiapine.\n",
+      "bbox": [
+        69.25019836425781,
+        139.10379028320312,
+        409.4799499511719,
+        168.9642333984375
+      ],
+      "text_sha256": "48462ee0337f00cb6308a6f99ae00b28af6729bd8b86b4205063ee3277e211ae"
+    },
+    {
+      "block_id": "page-0318-block-0007",
+      "order": 7,
+      "text": "■\n■Do not offer valproate to women of child-bearing potential.\n",
+      "bbox": [
+        60.250099182128906,
+        169.10781860351562,
+        285.7282409667969,
+        178.976318359375
+      ],
+      "text_sha256": "3d55275ae7228a58eab205855823c6c34e866e853837216cb0ece5bb357dda37"
+    },
+    {
+      "block_id": "page-0318-block-0008",
+      "order": 8,
+      "text": "■\n■Discuss with the person the possible benefits and risks of each drug for them.\n",
+      "bbox": [
+        60.250099182128906,
+        179.1077880859375,
+        350.29437255859375,
+        188.97628784179688
+      ],
+      "text_sha256": "e0cc05d120676f7f83007cb383fe266c0e261275799766dfaa4424066890e966"
+    },
+    {
+      "block_id": "page-0318-block-0009",
+      "order": 9,
+      "text": "■\n■The secondary care team should maintain responsibility for monitoring the efficacy and tolera-\n",
+      "bbox": [
+        60.250099182128906,
+        189.1077880859375,
+        409.7603759765625,
+        198.97628784179688
+      ],
+      "text_sha256": "46ccaf18350e57a171b41fb8f86b5b15c8789486a69924e5be03e01df09e0224"
+    },
+    {
+      "block_id": "page-0318-block-0010",
+      "order": 10,
+      "text": "bility of antipsychotic medication until the person’s condition has stabilised.\n",
+      "bbox": [
+        69.25019836425781,
+        199.10379028320312,
+        341.2843017578125,
+        208.9722900390625
+      ],
+      "text_sha256": "de8db02f138c3b16f0bb0e8ad5e493d8c2cf9a87cbab89ed5155895b812bbb02"
+    },
+    {
+      "block_id": "page-0318-block-0011",
+      "order": 11,
+      "text": "■\n■Before stopping medication, discuss with the person how to recognise early signs of relapse \n",
+      "bbox": [
+        60.250099182128906,
+        209.1077880859375,
+        403.19830322265625,
+        218.97628784179688
+      ],
+      "text_sha256": "381d3663499f3e3cfb4202313f4fdd43fa4b7538c3cf7ab1e1675850ad288ec0"
+    },
+    {
+      "block_id": "page-0318-block-0012",
+      "order": 12,
+      "text": "and what to do if symptoms recur.\n",
+      "bbox": [
+        69.25019836425781,
+        219.10379028320312,
+        193.9452362060547,
+        228.9722900390625
+      ],
+      "text_sha256": "9aa4135a41abb3e74a1ba73626495638439eea30fd6d31b3fdab366966db5a40"
+    },
+    {
+      "block_id": "page-0318-block-0013",
+      "order": 13,
+      "text": "■\n■If stopping medication, do so gradually and monitor for signs of relapse.\n",
+      "bbox": [
+        60.250099182128906,
+        229.1077880859375,
+        330.7697448730469,
+        238.97628784179688
+      ],
+      "text_sha256": "4fcb6907dfdf2597497f875d3f80de53f3a594cc0df2e1bdd87d228e322e2adb"
+    },
+    {
+      "block_id": "page-0318-block-0014",
+      "order": 14,
+      "text": "■\n■Continue monitoring symptoms, mood and mental state for 2 years after stopping medication. \n",
+      "bbox": [
+        60.250099182128906,
+        239.1077880859375,
+        414.97088623046875,
+        248.97628784179688
+      ],
+      "text_sha256": "81a9a77df7cd506946c81f3037c36bff7e2d4c154acfb22ff46d667e0ce98383"
+    },
+    {
+      "block_id": "page-0318-block-0015",
+      "order": 15,
+      "text": "This may be undertaken in primary care.\n",
+      "bbox": [
+        69.25019836425781,
+        249.10379028320312,
+        214.5492401123047,
+        258.9722900390625
+      ],
+      "text_sha256": "92f1ac528c3a47132c8410200b1fd1851ad6d5ab94cd00deb1f93bfaad1c3a03"
+    },
+    {
+      "block_id": "page-0318-block-0016",
+      "order": 16,
+      "text": "Optimising lithium treatment42\n",
+      "bbox": [
+        48.0,
+        296.4844970703125,
+        206.52294921875,
+        309.5195007324219
+      ],
+      "text_sha256": "8a92d1a4b3e66191ea5eecdf3d5db01eab1025566e1db554a74d242bd3d469f0"
+    },
+    {
+      "block_id": "page-0318-block-0017",
+      "order": 17,
+      "text": "For adults with BD, the standard lithium serum level should be 0.60–0.80mmol/L with \nthe option to reduce it to 0.40–0.60mmol/L in case of good response but poor tolerance \nor to increase it to 0.80–1.00mmol/L in case of insufficient response and good tolerance. \nFor children and adolescents no consensus exists, but the majority of the International \nSociety for Bipolar Disorders (ISBD)/ International Study Group on Lithium (IGSLI) \nTask Force endorsed the same recommendation. For the elderly, a more ­conservative \napproach may be adopted: usually 0.40–0.60mmol/L, with the option to go to maxi-\nmally 0.70 or 0.80mmol/L at 65–79 years and to maximally 0.70mmol/L over 80 years.\n",
+      "bbox": [
+        48.0,
+        315.3294982910156,
+        422.8198547363281,
+        411.04949951171875
+      ],
+      "text_sha256": "337be7d25df4afaa5fa6576a1c2ea3118fc1128b1df3456c45c401544878cebd"
+    },
+    {
+      "block_id": "page-0318-block-0018",
+      "order": 18,
+      "text": "Combination treatment\n",
+      "bbox": [
+        48.0,
+        428.4844665527344,
+        169.44000244140625,
+        441.51947021484375
+      ],
+      "text_sha256": "c2cef46b98d7542dc200d35ff4f56c80e7dfee75f7cb968e4098047a7f020693"
+    },
+    {
+      "block_id": "page-0318-block-0019",
+      "order": 19,
+      "text": "A significant proportion of patients with bipolar illness fail to be treated adequately \nwith a single mood stabiliser,14 so combinations of mood stabilisers43,44 or a mood sta-\nbiliser and an antipsychotic44,45 are commonly used.46 Also, there is evidence that where \ncombination treatments are effective in mania or depression, then continuation with \nthe same combination provides optimal prophylaxis.31,45 The use of polypharmacy \nneeds to be balanced against the likely increased side-effect burden. Combinations of \nolanzapine, risperidone, quetiapine or haloperidol with lithium or valproate are recom-\nmended by NICE30 and BAP guidelines.10 Alternative antipsychotics (e.g. aripiprazole) \nare also options in combinations with lithium or valproate, particularly if these have \nbeen found to be effective during the treatment of an acute episode of mania or depres-\nsion31,47 Carbamazepine is considered to be third line. Lamotrigine may be useful in \nbipolar II disorder30 but seems only to significantly prevent recurrence of depression.48 \nLurasidone may have broadly similar long-term efficacy, both as monotherapy and \nwhen combined with a mood stabiliser.49,50\n",
+      "bbox": [
+        47.996604919433594,
+        447.3294677734375,
+        422.8095703125,
+        615.0494995117188
+      ],
+      "text_sha256": "3c2d0ee20b4a93ab78e77d7cc2b8ca54997e1a3975f546bdebc4957560cf5e24"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

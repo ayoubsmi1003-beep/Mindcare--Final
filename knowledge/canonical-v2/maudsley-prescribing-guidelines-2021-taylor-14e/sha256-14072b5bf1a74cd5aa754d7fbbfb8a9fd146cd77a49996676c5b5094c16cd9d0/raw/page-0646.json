@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0646",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 646,
+  "source_page_index": 645,
+  "source_page_display": 646,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Prescribing in older people    625\nCHAPTER  6\nMild cognitive impairment (MCI)\nMCI is hypothesised to represent a pre-clinical stage of dementia but forms a heteroge-\nneous group with variable prognosis. A Cochrane review assessing the safety and effi-\ncacy of AChE-Is in MCI found there was very little evidence that they affect progression \nto dementia or cognitive test scores. This weak evidence was countered by the increased \nrisk of adverse effects particularly GI effects meaning that AChE-Is could not be recom-\nmended in MCI.137 A systematic review138 found that there was no replicated evidence \nthat any intervention was effective for MCI, including AChE-Is and the NSAID \nrofecoxib. A further systematic review and meta-analysis found that although AChE-Is \nhave a slight efficacy in the treatment of MCI, there are many safety issues; therefore, \nthey are difficult to recommend for MCI.139 Experts from several different countries \nrecently reviewed the available evidence for the pharmacological and non-pharmaco-\nlogical treatment for MCI.140\nOther dementias\nA systemic review of RCTs for frontotemporal dementias showed that certain drugs \nmay be effective in reducing behavioural symptoms (e.g. SSRIs and trazodone) but none \nof these had an effect on cognition.141\nA Cochrane review assessed the efficacy and safety of AChE-Is for rare dementias \nassociated with neurological conditions. The sample sizes of most trials were very small, \nand efficacy on cognitive function and ASL was found to be unclear, although AChE-Is \nwere associated with more GI side effects compared with placebo.142\nSummary of clinical practice guidance with anti-dementia  \ndrugs from BAP22\nAChE-Is and memantine are effective in AD of a broad range of severity. Other drugs, \nincluding statins, anti-inflammatory drugs, vitamin E, nutritional supplements and \nginkgo, cannot be recommended either for the treatment or prevention of AD. Neither \nAChE-Is nor memantine are effective in MCI. AChE-Is are not effective in frontotem-\nporal dementia and may cause agitation. AChE-Is may be used for people with LBDs \n(both Parkinson’s disease dementia and DLB), and memantine may be helpful. No \ndrugs are clearly effective in vascular dementia, though AChE-Is are beneficial in mixed \ndementia. Early evidence suggests multifactorial interventions may have potential to \nprevent or delay the onset of dementia. Many novel pharmacological approaches \ninvolving strategies to reduce amyloid and/or tau deposition in those with or at high \nrisk of AD are in progress. Though results of pivotal studies in early (prodromal/mild) \nAD are awaited, results to date in more established (mild-to-moderate) AD have been \nequivocal and no disease-modifying agents are either licensed or can be currently rec-\nommended for clinical use.\n",
+  "raw_text_sha256": "0c69b9894096bc66864293e716b43eac20971b34d681b4ebae5c9f3b4f501bf8",
+  "coordinates_sha256": "8291a4b83ca82e10b1f6aebf62adec0e14d52b40671660849aadc4e3de66e2a6",
+  "block_sequence_sha256": "8578bafd8c01d7918b965c1a8196e03bebc5b38da725828cb4ed795943ca9a2a",
+  "blocks": [
+    {
+      "block_id": "page-0646-block-0000",
+      "order": 0,
+      "text": "Prescribing in older people    625\n",
+      "bbox": [
+        281.576904296875,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "c3c6d1d97f760aa42296eb025755b1745930f76fd2e773227e82257e4c1e4dd5"
+    },
+    {
+      "block_id": "page-0646-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        454.4096984863281,
+        405.35260009765625,
+        463.88970947265625,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0646-block-0002",
+      "order": 2,
+      "text": "Mild cognitive impairment (MCI)\n",
+      "bbox": [
+        48.0,
+        62.31546401977539,
+        215.4639892578125,
+        75.3504638671875
+      ],
+      "text_sha256": "1c2e87df1d0964fff3c9cf55176b7e8b9401c5a8ecd0ecf09d784eb8782e367f"
+    },
+    {
+      "block_id": "page-0646-block-0003",
+      "order": 3,
+      "text": "MCI is hypothesised to represent a pre-clinical stage of dementia but forms a heteroge-\nneous group with variable prognosis. A Cochrane review assessing the safety and effi-\ncacy of AChE-Is in MCI found there was very little evidence that they affect progression \nto dementia or cognitive test scores. This weak evidence was countered by the increased \nrisk of adverse effects particularly GI effects meaning that AChE-Is could not be recom-\nmended in MCI.137 A systematic review138 found that there was no replicated evidence \nthat any intervention was effective for MCI, including AChE-Is and the NSAID \nrofecoxib. A further systematic review and meta-analysis found that although AChE-Is \nhave a slight efficacy in the treatment of MCI, there are many safety issues; therefore, \nthey are difficult to recommend for MCI.139 Experts from several different countries \nrecently reviewed the available evidence for the pharmacological and non-pharmaco-\nlogical treatment for MCI.140\n",
+      "bbox": [
+        48.0,
+        81.16046142578125,
+        422.8144836425781,
+        224.8804931640625
+      ],
+      "text_sha256": "ae61dce70c935e068b584de60d51e7cd885ff5bf2a472724ec8864a99d68f322"
+    },
+    {
+      "block_id": "page-0646-block-0004",
+      "order": 4,
+      "text": "Other dementias\n",
+      "bbox": [
+        48.0,
+        242.31549072265625,
+        134.80099487304688,
+        255.35049438476562
+      ],
+      "text_sha256": "adfca55a3d9843a031b3be7c4fc97a4720da97c81746ec5c9c4760119d7f1760"
+    },
+    {
+      "block_id": "page-0646-block-0005",
+      "order": 5,
+      "text": "A systemic review of RCTs for frontotemporal dementias showed that certain drugs \nmay be effective in reducing behavioural symptoms (e.g. SSRIs and trazodone) but none \nof these had an effect on cognition.141\n",
+      "bbox": [
+        48.0,
+        260.9205017089844,
+        422.8199157714844,
+        296.8804931640625
+      ],
+      "text_sha256": "7d56368bdc14c4002290e92416afda20d159ab7e28589e4470943344de829e8f"
+    },
+    {
+      "block_id": "page-0646-block-0006",
+      "order": 6,
+      "text": "A Cochrane review assessed the efficacy and safety of AChE-Is for rare dementias \nassociated with neurological conditions. The sample sizes of most trials were very small, \nand efficacy on cognitive function and ASL was found to be unclear, although AChE-Is \nwere associated with more GI side effects compared with placebo.142\n",
+      "bbox": [
+        48.0,
+        296.9205017089844,
+        422.7900085449219,
+        344.8804931640625
+      ],
+      "text_sha256": "fa02f8b6ca9aa6ba4e4b12a2c7105021402333413f0d41f42bc54e23c7c1f5c0"
+    },
+    {
+      "block_id": "page-0646-block-0007",
+      "order": 7,
+      "text": "Summary of clinical practice guidance with anti-dementia  \ndrugs from BAP22\n",
+      "bbox": [
+        48.0,
+        362.31549072265625,
+        357.4520263671875,
+        387.35150146484375
+      ],
+      "text_sha256": "e18be5c3aa3bd7f775df4bcffdb71594a2f45af2597b2e7f4465f51164277eae"
+    },
+    {
+      "block_id": "page-0646-block-0008",
+      "order": 8,
+      "text": "AChE-Is and memantine are effective in AD of a broad range of severity. Other drugs, \nincluding statins, anti-inflammatory drugs, vitamin E, nutritional supplements and \nginkgo, cannot be recommended either for the treatment or prevention of AD. Neither \nAChE-Is nor memantine are effective in MCI. AChE-Is are not effective in frontotem-\nporal dementia and may cause agitation. AChE-Is may be used for people with LBDs \n(both Parkinson’s disease dementia and DLB), and memantine may be helpful. No \ndrugs are clearly effective in vascular dementia, though AChE-Is are beneficial in mixed \ndementia. Early evidence suggests multifactorial interventions may have potential to \nprevent or delay the onset of dementia. Many novel pharmacological approaches \ninvolving strategies to reduce amyloid and/or tau deposition in those with or at high \nrisk of AD are in progress. Though results of pivotal studies in early (prodromal/mild) \nAD are awaited, results to date in more established (mild-to-moderate) AD have been \nequivocal and no disease-modifying agents are either licensed or can be currently rec-\nommended for clinical use.\n",
+      "bbox": [
+        48.0,
+        393.1604919433594,
+        422.8200988769531,
+        560.8804931640625
+      ],
+      "text_sha256": "6c72055602808c59393e2539d4e333a7f0cbd72278c4718df1ed5b7692724ce4"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0780",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 780,
+  "source_page_index": 779,
+  "source_page_display": 780,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of other psychiatric conditions     759\nCHAPTER 9\nthere is no robust evidence to support the use of antidepressants in treating depressed \nmood or impulsivity in people with BPD.10,11\nMood-stabilisers\nUp to a half of people with BPD may be also be diagnosed with a bipolar spectrum \ndisorder26 (although such diagnoses are rather controversial) and mood-stabilisers \nare commonly prescribed.2 There is some evidence that mood stabilisers reduce \nimpulsivity, anger and affect dysregulation in people with BPD.10,11 Lithium is \nlicensed for the control of aggressive behaviour or intentional self-harm.27 A large \nRCT of lamotrigine found it had no effect on any symptom domain.28 Mifepristone \nis also ineffective.29\nMemantine\nAn RCT of 33 subjects found adjunctive memantine 20mg a day to be more effective \nthan placebo30 and well tolerated. More trials are needed.\nOpioid antagonists\nVery limited evidence supports the efficacy of naltrexone in reducing self-harm and dis-\nsociative symptoms,12,31 but there are no definitive trials supporting the effectiveness of \nnaltrexone in the treatment of patients with BPD.\nManagement of crisis\nDrug treatments are often used during periods of crisis when symptoms can be severe, \ndistressing and potentially life-threatening. In BPD these symptoms can be expected to \nwax and wane.3 Consequently, drug therapy may then be required intermittently, and \nwith each episode, the decision to prescribe needs to be informed by a careful \nconsideration of the relative harms and benefits of medication. It is generally easy to see \nwhen treatment is required, but much more difficult to decide when modest gains are \nworthwhile and whether or not continuation is likely to be necessary. The use of psy-\nchotropic drugs is not without harm, so treatment should always take the form of a \nrigorously evaluated short-term trial.\nNICE9 recommend that during periods of crisis, time-limited treatment with a seda-\ntive drug may be helpful. Anticipated side effect profile and potential toxicity in over-\ndose should guide choice. For example, benzodiazepines (particularly short-acting \ndrugs) can cause disinhibition in this group of patients,32 potentially compounding \nproblems. Sedative antipsychotics can cause EPS and/or considerable weight gain, and \ntricyclic antidepressants are particularly toxic in overdose. A sedative antihistamine \nsuch as promethazine (25–50mg) is usually well tolerated and may be a helpful \nshort-term treatment when used as part of a coordinated care plan. Its adverse effects \n(dry mouth, constipation), deleterious effects on sleep architecture and lack of clear \nanxiolytic effects militate against longer term use.\n",
+  "raw_text_sha256": "6bd998ed6b4731762c6796c5727f302b1837cd9676ef3d8d172bdc52b65af7d7",
+  "coordinates_sha256": "f1fb1acf8189c55dce6a1bd6b81229ae79f5f44b2117a57ec1a9d4cb1b9feb9e",
+  "block_sequence_sha256": "66f0e73529e7e60bb0e93c317a8e09f2e5b1da5f10ac165b15eedeb0d6b0dcdd",
+  "blocks": [
+    {
+      "block_id": "page-0780-block-0000",
+      "order": 0,
+      "text": "Drug treatment of other psychiatric conditions     759\n",
+      "bbox": [
+        196.0341033935547,
+        31.395221710205078,
+        420.0020751953125,
+        41.0272216796875
+      ],
+      "text_sha256": "8243d7fe22fc4353aa882348069943a0b778f7935a2fb9873256d956119ea74f"
+    },
+    {
+      "block_id": "page-0780-block-0001",
+      "order": 1,
+      "text": "CHAPTER 9\n",
+      "bbox": [
+        454.4096984863281,
+        598.7144775390625,
+        463.88970947265625,
+        640.0584716796875
+      ],
+      "text_sha256": "a82498383e032e8013503b8de1dd71e97ad0ce75549c664143d6c75c10c3a855"
+    },
+    {
+      "block_id": "page-0780-block-0002",
+      "order": 2,
+      "text": "there is no robust evidence to support the use of antidepressants in treating depressed \nmood or impulsivity in people with BPD.10,11\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.7900695800781,
+        86.27041625976562
+      ],
+      "text_sha256": "2e68bb4911e77a4f4fd1f5e8883416de64ab9186d16f4f7da8b7be24da1840c6"
+    },
+    {
+      "block_id": "page-0780-block-0003",
+      "order": 3,
+      "text": "Mood-stabilisers\n",
+      "bbox": [
+        48.0,
+        103.70541381835938,
+        133.54701232910156,
+        116.74041748046875
+      ],
+      "text_sha256": "fd2ee1f9c1c866691df5b2f54bf9fff12ca6c71ed4ceddae9d2eff62ab51091a"
+    },
+    {
+      "block_id": "page-0780-block-0004",
+      "order": 4,
+      "text": "Up to a half of people with BPD may be also be diagnosed with a bipolar spectrum \ndisorder26 (although such diagnoses are rather controversial) and mood-stabilisers \nare commonly prescribed.2 There is some evidence that mood stabilisers reduce \nimpulsivity, anger and affect dysregulation in people with BPD.10,11 Lithium is \nlicensed for the control of aggressive behaviour or intentional self-harm.27 A large \nRCT of lamotrigine found it had no effect on any symptom domain.28 Mifepristone \nis also ineffective.29\n",
+      "bbox": [
+        47.997398376464844,
+        122.5504150390625,
+        422.7945251464844,
+        206.27047729492188
+      ],
+      "text_sha256": "da7e2f9fa72cfd6663e3c12729058f1927c9e090a8923df0b593ba700510cd42"
+    },
+    {
+      "block_id": "page-0780-block-0005",
+      "order": 5,
+      "text": "Memantine\n",
+      "bbox": [
+        48.0,
+        223.70547485351562,
+        107.28999328613281,
+        236.740478515625
+      ],
+      "text_sha256": "7e3dc6e3071bb16b3fbe386ab22fecdbd666d3bc1f74f537f2808c226af7cc02"
+    },
+    {
+      "block_id": "page-0780-block-0006",
+      "order": 6,
+      "text": "An RCT of 33 subjects found adjunctive memantine 20mg a day to be more effective \nthan placebo30 and well tolerated. More trials are needed.\n",
+      "bbox": [
+        48.0,
+        242.31048583984375,
+        422.7299499511719,
+        266.2704772949219
+      ],
+      "text_sha256": "bdc846f32084ce1853cee5e0cbf60af3a553f40b9b9e114428445ae6e75b5b21"
+    },
+    {
+      "block_id": "page-0780-block-0007",
+      "order": 7,
+      "text": "Opioid antagonists\n",
+      "bbox": [
+        48.0,
+        283.7054748535156,
+        146.39500427246094,
+        296.740478515625
+      ],
+      "text_sha256": "ccbb2a626fd8d8ca57f3084e95cb62d08512ebbba1991db3ee3252e94baa1441"
+    },
+    {
+      "block_id": "page-0780-block-0008",
+      "order": 8,
+      "text": "Very limited evidence supports the efficacy of naltrexone in reducing self-harm and dis-\nsociative symptoms,12,31 but there are no definitive trials supporting the effectiveness of \nnaltrexone in the treatment of patients with BPD.\n",
+      "bbox": [
+        48.0,
+        302.31048583984375,
+        422.7408142089844,
+        338.2704772949219
+      ],
+      "text_sha256": "ba025e74d047afc1af5ccddbb42a97bf1003e996f1bb3219391d35b6959d3eae"
+    },
+    {
+      "block_id": "page-0780-block-0009",
+      "order": 9,
+      "text": "Management of crisis\n",
+      "bbox": [
+        48.0,
+        355.7054748535156,
+        159.2320098876953,
+        368.740478515625
+      ],
+      "text_sha256": "541de3f81cbcfa324f723d12793a0d3a2acbe66dd95c9596b20c44cfc2d261c0"
+    },
+    {
+      "block_id": "page-0780-block-0010",
+      "order": 10,
+      "text": "Drug treatments are often used during periods of crisis when symptoms can be severe, \ndistressing and potentially life-threatening. In BPD these symptoms can be expected to \nwax and wane.3 Consequently, drug therapy may then be required intermittently, and \nwith each episode, the decision to prescribe needs to be informed by a careful \nconsideration of the relative harms and benefits of medication. It is generally easy to see \nwhen treatment is required, but much more difficult to decide when modest gains are \nworthwhile and whether or not continuation is likely to be necessary. The use of psy-\nchotropic drugs is not without harm, so treatment should always take the form of a \nrigorously evaluated short-term trial.\n",
+      "bbox": [
+        48.0,
+        374.55047607421875,
+        422.8101501464844,
+        482.2704772949219
+      ],
+      "text_sha256": "18c4e30113e112319704e66503bc05000a545764671a01a97968b254d76932a8"
+    },
+    {
+      "block_id": "page-0780-block-0011",
+      "order": 11,
+      "text": "NICE9 recommend that during periods of crisis, time-limited treatment with a seda-\ntive drug may be helpful. Anticipated side effect profile and potential toxicity in over-\ndose should guide choice. For example, benzodiazepines (particularly short-acting \ndrugs) can cause disinhibition in this group of patients,32 potentially compounding \nproblems. Sedative antipsychotics can cause EPS and/or considerable weight gain, and \ntricyclic antidepressants are particularly toxic in overdose. A sedative antihistamine \nsuch as promethazine (25–50mg) is usually well tolerated and may be a helpful \nshort-term treatment when used as part of a coordinated care plan. Its adverse effects \n(dry mouth, constipation), deleterious effects on sleep architecture and lack of clear \nanxiolytic effects militate against longer term use.\n",
+      "bbox": [
+        47.997100830078125,
+        482.55047607421875,
+        422.8269958496094,
+        602.2705078125
+      ],
+      "text_sha256": "d4a18bf5defe73d0f0810e20b73828a640e3e5936b4747b0fd595435b4c37195"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

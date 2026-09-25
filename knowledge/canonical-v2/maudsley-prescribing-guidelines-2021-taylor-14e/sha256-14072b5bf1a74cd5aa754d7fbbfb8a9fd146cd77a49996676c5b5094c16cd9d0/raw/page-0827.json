@@ -1,0 +1,347 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0827",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 827,
+  "source_page_index": 826,
+  "source_page_display": 827,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "806    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\nSymptoms\nTreatments\nApathy\n■\n■Common in HD and appears to worsen with disease progression.17 Some sedative med-\nications (e.g. antipsychotics, benzodiazepines, tetrabenazine) may contribute, so dose \nreduction or withdrawal should be considered.7 Bupropion was recently studied in one mul-\nticentre RCT and found to be ineffective.26 Other agents, including methylphenidate, atom-\noxetine, modafinil, amantadine and bromocriptine have been trialled with little success.17\nPsychosis\n■\n■One of the least prevalent psychiatric manifestations of HD, perhaps due to the use of \nantidopaminergics for motor symptoms.17 There are no RCTs to guide choice; treatment is \nempirical. Note that antipsychotic drugs may exacerbate any underlying movement disorder.\n■\n■SGAs: Olanzapine and risperidone are used most frequently;17 low starting doses are \nrecommended.4 Case reports support the efficacy of risperidone, quetiapine, aripiprazole \nand amisulpride.20 Clozapine may be considered in refractory cases5,20 or akinetic forms of \nHD with debilitating parkinsonian symptoms.7\n■\n■FGAs: Used less frequently due to the risk of dystonia and parkinsonism; however, halo-\nperidol has been used when chorea is also problematic to the patient.20\nTable 10.9  Summary of available treatments for mental state and behavioural changes in Huntington’s disease5,7,17\nSymptoms\nMost commonly prescribed \npharmacological treatments\nAlternatives\nAnxiety\nSSRIs, mirtazapine, pregabalin, \nvenlafaxine\nOlanzapine, risperidone, quetiapine \nbenzodiazepines, propranolol, buspirone\nDepression or \nsuicidality\nSSRIs, mirtazapine, venlafaxine\nTCAs; ECT in refractory cases\nObsessive compulsive \nbehaviours\nSSRIs\nClomipramine\nIrritability or agitation\nSSRIs, SGAs (olanzapine, risperidone, \nsulpiride), tiapride, benzodiazepines\nAntiseizure medications (lamotrigine, \ncarbamazepine, valproate), TCAs, buspirone, \npropranolol; consider trial of an analgesic\nApathy\nNone\nNone\nPsychosis\nOlanzapine, risperidone, haloperidol, \nsulpiride, tiapride, injectable \nantipsychotic medication\nClozapine, quetiapine\nTable 10.8  (Continued)\nsymptoms are perhaps the most amenable to pharmacotherapy.5 In general, psychiatric \ntreatment choices are selected as they would be in other conditions,4 though patients \nare relatively more sensitive to side effects.4 The most commonly prescribed psycho-\ntropics are summarised in Table 10.8 (mostly based on low quality evidence).17\n",
+  "raw_text_sha256": "34baf08982866e2a0728bb255e507b5a16b14f81740d115885cbcf87e053f695",
+  "coordinates_sha256": "6c582b877d386324a8a7d8d2607d401ee243d3482d00c47829abe8a93f187631",
+  "block_sequence_sha256": "cfee25ca26f925d282ae0d60668104e8a2842604b77d74d2f32d4325fb076494",
+  "blocks": [
+    {
+      "block_id": "page-0827-block-0000",
+      "order": 0,
+      "text": "806    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "ce6ec1fbfe05a813cae091555303cb92df438e0064f9db16ca95f4baf969154f"
+    },
+    {
+      "block_id": "page-0827-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0827-block-0002",
+      "order": 2,
+      "text": "Symptoms\nTreatments\n",
+      "bbox": [
+        65.88999938964844,
+        87.89967346191406,
+        171.48248291015625,
+        96.78717041015625
+      ],
+      "text_sha256": "654602292d5fea1cc0c4fb70478f93352a2864af123a0c08ee99472b416442f3"
+    },
+    {
+      "block_id": "page-0827-block-0003",
+      "order": 3,
+      "text": "Apathy\n■\n■Common in HD and appears to worsen with disease progression.17 Some sedative med-\n",
+      "bbox": [
+        65.88999938964844,
+        105.52467346191406,
+        414.5972595214844,
+        114.41217041015625
+      ],
+      "text_sha256": "615528975ec1cbd9cbfecb5392e600e5c84494c98dfe9d000d5b8984d620efe5"
+    },
+    {
+      "block_id": "page-0827-block-0004",
+      "order": 4,
+      "text": "ications (e.g. antipsychotics, benzodiazepines, tetrabenazine) may contribute, so dose \nreduction or withdrawal should be considered.7 Bupropion was recently studied in one mul-\nticentre RCT and found to be ineffective.26 Other agents, including methylphenidate, atom-\noxetine, modafinil, amantadine and bromocriptine have been trialled with little success.17\n",
+      "bbox": [
+        141.2952117919922,
+        115.7021713256836,
+        427.10516357421875,
+        154.40966796875
+      ],
+      "text_sha256": "9cc381253ac3560749a3fffecaf1a0e2ae016606300903edb8972c0e4eddb54a"
+    },
+    {
+      "block_id": "page-0827-block-0005",
+      "order": 5,
+      "text": "Psychosis\n■\n■One of the least prevalent psychiatric manifestations of HD, perhaps due to the use of \n",
+      "bbox": [
+        65.88999938964844,
+        163.14967346191406,
+        412.12640380859375,
+        172.03717041015625
+      ],
+      "text_sha256": "7c3a05f9ad7fa618c88492e1fb87c4794333837f6a94fc345618d33a534f60bd"
+    },
+    {
+      "block_id": "page-0827-block-0006",
+      "order": 6,
+      "text": "antidopaminergics for motor symptoms.17 There are no RCTs to guide choice; treatment is \nempirical. Note that antipsychotic drugs may exacerbate any underlying movement disorder.\n",
+      "bbox": [
+        141.29098510742188,
+        173.32716369628906,
+        429.11834716796875,
+        192.03469848632812
+      ],
+      "text_sha256": "60af9813bbcb7b69ca3d364021e93f5aecf486457dd4a90a08cec0eba444fa21"
+    },
+    {
+      "block_id": "page-0827-block-0007",
+      "order": 7,
+      "text": "■\n■SGAs: Olanzapine and risperidone are used most frequently;17 low starting doses are \n",
+      "bbox": [
+        132.29400634765625,
+        193.1497039794922,
+        413.7094421386719,
+        202.03720092773438
+      ],
+      "text_sha256": "5b5aeba3b53bcba8cb625eb61893a1a8375647e65dcf2db1c917246e7a9ceb0f"
+    },
+    {
+      "block_id": "page-0827-block-0008",
+      "order": 8,
+      "text": "recommended.4 Case reports support the efficacy of risperidone, quetiapine, aripiprazole \nand amisulpride.20 Clozapine may be considered in refractory cases5,20 or akinetic forms of \nHD with debilitating parkinsonian symptoms.7\n",
+      "bbox": [
+        141.29440307617188,
+        203.3271942138672,
+        429.4103088378906,
+        232.03469848632812
+      ],
+      "text_sha256": "e7899241ae234c6b0dccc83b5e163d9f97000631852e32b6c87033c7089f1376"
+    },
+    {
+      "block_id": "page-0827-block-0009",
+      "order": 9,
+      "text": "■\n■FGAs: Used less frequently due to the risk of dystonia and parkinsonism; however, halo-\n",
+      "bbox": [
+        132.29400634765625,
+        233.1497039794922,
+        422.604248046875,
+        242.03720092773438
+      ],
+      "text_sha256": "a62d9264c146af5fb6b7d0dbd27058b0ba3997feaf560007b1829b3c2529bc6a"
+    },
+    {
+      "block_id": "page-0827-block-0010",
+      "order": 10,
+      "text": "peridol has been used when chorea is also problematic to the patient.20\n",
+      "bbox": [
+        141.29409790039062,
+        243.3271942138672,
+        368.8519287109375,
+        252.03469848632812
+      ],
+      "text_sha256": "c17223f68f697be0a830dbcd958ebff0c5cf7bd2d91d6f4a700636c41b985c51"
+    },
+    {
+      "block_id": "page-0827-block-0011",
+      "order": 11,
+      "text": "Table 10.9  Summary of available treatments for mental state and behavioural changes in Huntington’s disease5,7,17\n",
+      "bbox": [
+        67.88999938964844,
+        299.2131652832031,
+        417.6452331542969,
+        308.1006774902344
+      ],
+      "text_sha256": "a225f673febf8df67b8f90f8a5e51cf759ab3805c5af8eb5854b95d793bd381e"
+    },
+    {
+      "block_id": "page-0827-block-0012",
+      "order": 12,
+      "text": "Symptoms\n",
+      "bbox": [
+        65.88999938964844,
+        327.9480895996094,
+        102.97750091552734,
+        336.8356018066406
+      ],
+      "text_sha256": "4ee7df923250f65402b6ec0ea216283edf67d5d179e8d366a2f20d25ebc00b1c"
+    },
+    {
+      "block_id": "page-0827-block-0013",
+      "order": 13,
+      "text": "Most commonly prescribed \npharmacological treatments\nAlternatives\n",
+      "bbox": [
+        149.33499145507812,
+        317.9505920410156,
+        329.0650634765625,
+        336.8356018066406
+      ],
+      "text_sha256": "01087e0af02ecab000293ed733970ede4069d7d7ad079267556b481cd2b05d79"
+    },
+    {
+      "block_id": "page-0827-block-0014",
+      "order": 14,
+      "text": "Anxiety\nSSRIs, mirtazapine, pregabalin, \nvenlafaxine\n",
+      "bbox": [
+        65.88999938964844,
+        345.75311279296875,
+        249.2124786376953,
+        364.4580993652344
+      ],
+      "text_sha256": "e453f125511d7aaa263a23225d0c3c0a67364102b0bfa57f67e9aba5e0462015"
+    },
+    {
+      "block_id": "page-0827-block-0015",
+      "order": 15,
+      "text": "Olanzapine, risperidone, quetiapine \nbenzodiazepines, propranolol, buspirone\n",
+      "bbox": [
+        286.0,
+        345.75311279296875,
+        415.772705078125,
+        364.4580993652344
+      ],
+      "text_sha256": "9782d22d812b0fa25ae6bb3e1ab42f85be3b81c897251a7696af3d72aea66c64"
+    },
+    {
+      "block_id": "page-0827-block-0016",
+      "order": 16,
+      "text": "Depression or \nsuicidality\n",
+      "bbox": [
+        65.88999938964844,
+        373.3756103515625,
+        111.60249328613281,
+        392.0805969238281
+      ],
+      "text_sha256": "fc39d3d18d0cb16c56d38057aab98c54bc4fab9f1aeba07b82d023a2b1cb9a15"
+    },
+    {
+      "block_id": "page-0827-block-0017",
+      "order": 17,
+      "text": "SSRIs, mirtazapine, venlafaxine\nTCAs; ECT in refractory cases\n",
+      "bbox": [
+        149.33499145507812,
+        373.3756103515625,
+        378.782470703125,
+        382.0830993652344
+      ],
+      "text_sha256": "10b6ac786067af036940b8be9fc655c63a4212aaf1310d047b88a9d0315b8259"
+    },
+    {
+      "block_id": "page-0827-block-0018",
+      "order": 18,
+      "text": "Obsessive compulsive \nbehaviours\n",
+      "bbox": [
+        65.88999938964844,
+        400.99810791015625,
+        136.30751037597656,
+        419.7030944824219
+      ],
+      "text_sha256": "8c5728ba0a20d5cea1de389dbf17bc41a975f1ff3b2d0380d81a5776e2c9a90b"
+    },
+    {
+      "block_id": "page-0827-block-0019",
+      "order": 19,
+      "text": "SSRIs\nClomipramine\n",
+      "bbox": [
+        149.33499145507812,
+        400.99810791015625,
+        331.00006103515625,
+        409.7055969238281
+      ],
+      "text_sha256": "a3c8658afe960139bc375627abab82a82a22be9333583b89757586d5748b7b8e"
+    },
+    {
+      "block_id": "page-0827-block-0020",
+      "order": 20,
+      "text": "Irritability or agitation\nSSRIs, SGAs (olanzapine, risperidone, \nsulpiride), tiapride, benzodiazepines\n",
+      "bbox": [
+        65.88999938964844,
+        428.62060546875,
+        269.3649597167969,
+        447.3255920410156
+      ],
+      "text_sha256": "f53790a83499d228cc8c316337dad3405fd95c2b57b3e2b3cec3ce8989c6cc49"
+    },
+    {
+      "block_id": "page-0827-block-0021",
+      "order": 21,
+      "text": "Antiseizure medications (lamotrigine, \ncarbamazepine, valproate), TCAs, buspirone, \npropranolol; consider trial of an analgesic\n",
+      "bbox": [
+        286.0,
+        428.62060546875,
+        430.7575378417969,
+        457.3230895996094
+      ],
+      "text_sha256": "ea2dbd9a126c05906de69e91a15598f47c7d0bfe81215c0705694d906b840122"
+    },
+    {
+      "block_id": "page-0827-block-0022",
+      "order": 22,
+      "text": "Apathy\nNone\nNone\n",
+      "bbox": [
+        65.88999938964844,
+        466.2406005859375,
+        303.092529296875,
+        474.9480895996094
+      ],
+      "text_sha256": "10ef929d8abfed4d5463bcbe055b5e63e286391901acf6d171503024a802c409"
+    },
+    {
+      "block_id": "page-0827-block-0023",
+      "order": 23,
+      "text": "Psychosis\nOlanzapine, risperidone, haloperidol, \nsulpiride, tiapride, injectable \nantipsychotic medication\n",
+      "bbox": [
+        65.88999938964844,
+        483.8656005859375,
+        268.9449462890625,
+        512.568115234375
+      ],
+      "text_sha256": "0998d612a456096ae6f473895f5b34962e81983ff86b90031125968c4c09f891"
+    },
+    {
+      "block_id": "page-0827-block-0024",
+      "order": 24,
+      "text": "Clozapine, quetiapine\n",
+      "bbox": [
+        286.0,
+        483.85809326171875,
+        355.60009765625,
+        492.5655822753906
+      ],
+      "text_sha256": "2143a6617d8ac80195bfc381d9f999048f0b9c1a18161c52ed6c47e15ec947c7"
+    },
+    {
+      "block_id": "page-0827-block-0025",
+      "order": 25,
+      "text": "Table 10.8  (Continued)\n",
+      "bbox": [
+        67.88999938964844,
+        69.41468811035156,
+        144.17999267578125,
+        78.30218505859375
+      ],
+      "text_sha256": "864c521837ad90b01d79f85497d578eff0bce5a392a4fbc2cc17070397d22dea"
+    },
+    {
+      "block_id": "page-0827-block-0026",
+      "order": 26,
+      "text": "symptoms are perhaps the most amenable to pharmacotherapy.5 In general, psychiatric \ntreatment choices are selected as they would be in other conditions,4 though patients \nare relatively more sensitive to side effects.4 The most commonly prescribed psycho-\ntropics are summarised in Table 10.8 (mostly based on low quality evidence).17\n",
+      "bbox": [
+        61.88739013671875,
+        545.2239990234375,
+        436.669921875,
+        592.9440307617188
+      ],
+      "text_sha256": "fa344bc03dc87524553140d57b798d5bbbd42608d066e7dcf60a742cbf9c1022"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

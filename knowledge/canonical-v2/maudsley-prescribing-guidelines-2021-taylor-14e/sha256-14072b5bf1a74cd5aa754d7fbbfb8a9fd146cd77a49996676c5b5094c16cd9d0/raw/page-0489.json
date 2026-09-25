@@ -1,0 +1,227 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0489",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 489,
+  "source_page_index": 488,
+  "source_page_display": 489,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "468    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nCo-morbid mental health disorders\nPeople with alcohol-use disorders often present with other mental health disorders, \nparticularly anxiety and depression. Public Health England has described it as ‘the \nnorm rather than the exception’ and encourage a collaborative, effective and flexible \napproach between frontline services, stating that it is ‘everyone’s job’ and that there is \n‘no wrong door’.35\nSubstance-use disorders including alcohol misuse should never be a reason to exclude a \npatient from:\n■\n■Crisis psychiatric services\n■\n■Mood/anxiety/personality services after completion of detoxification.\nDepression\nDepressive and anxiety symptoms occur commonly during alcohol withdrawal, but usu-\nally diminish by the third or fourth week of abstinence. Meta-analyses suggest that anti-\ndepressants with mixed pharmacology (the tricyclics imipramine or trimipramine) \nperform better than selective serotonin reuptake inhibitors (SSRIs; fluoxetine or sertra-\nline) in reducing depressive symptoms in individuals with an alcohol-use disorder, but the \nantidepressant effect is modest.2,9,36,37 A greater antidepressant effect was seen if the diag-\nnosis of depression was made after at least 1 week of abstinence, thus excluding those \nwith affective symptoms caused by alcohol withdrawal. There is stronger evidence for \ndepression categorised as independent, rather than substance induced.36 As treatment \neffects are masked by comparatively large placebo effects, which conceal improvements \nthat would otherwise be attributed to medication, there is a need for larger randomised \nplacebo-controlled trials. Despite the evidence for tricyclics, they are not recommended \nin clinical practice because of their potential for cardiotoxicity and toxicity in overdose.\nRelapse prevention medication should be considered in combination with antide-\npressants. Pettinati et al.38 showed that the combination of sertraline (200mg/day) with \nnaltrexone (100mg/day) had superior outcomes – improved drinking outcomes and \nbetter mood – compared with placebo and compared with each drug alone. In contrast, \ncitalopram showed no benefit when added to naltrexone.39\nSecondary analyses of acamprosate and naltrexone trials suggest that:\n■\n■acamprosate has an indirect modest beneficial effect on depression via increasing \nabstinence and\n■\n■in depressed alcohol-dependent patients, the combination of naltrexone and an anti-\ndepressant may be better than either drug alone,9 but findings are not consistent.39\nBipolar affective disorder\nBipolar patients tend to use alcohol to reduce symptoms of anxiety. Where there is co-\nmorbidity, it is important to treat the different phases as recommended in guidelines for \nbipolar disorder. It may be worth adding sodium valproate to lithium as two trials have \n",
+  "raw_text_sha256": "6bf5d62ab3bcc7346adf14c27aa9da01ca38bf5bd9aedfd9ea4377cb2b2422fb",
+  "coordinates_sha256": "c5c0ad6db5d929a7715460f6c2e0a966f5e7c817127ee141f3388896ac7db0e9",
+  "block_sequence_sha256": "83724e642c32dab7d32b471e5782b27a7b4c53734098418e4ce1bae0de82e697",
+  "blocks": [
+    {
+      "block_id": "page-0489-block-0000",
+      "order": 0,
+      "text": "468    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "60d170a96d41264ccaa9be295a0860dd2083ee2e4818fc360357feecdb12ef35"
+    },
+    {
+      "block_id": "page-0489-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0489-block-0002",
+      "order": 2,
+      "text": "Co-morbid mental health disorders\n",
+      "bbox": [
+        61.88999938964844,
+        62.31540298461914,
+        241.99298095703125,
+        75.35040283203125
+      ],
+      "text_sha256": "d3ca26d3d50fb57e0793eb62c764d0f5b843c8cfb632083756927a23f838f37d"
+    },
+    {
+      "block_id": "page-0489-block-0003",
+      "order": 3,
+      "text": "People with alcohol-use disorders often present with other mental health disorders, \nparticularly anxiety and depression. Public Health England has described it as ‘the \nnorm rather than the exception’ and encourage a collaborative, effective and flexible \napproach between frontline services, stating that it is ‘everyone’s job’ and that there is \n‘no wrong door’.35\n",
+      "bbox": [
+        61.88999938964844,
+        81.160400390625,
+        436.6999816894531,
+        140.88040161132812
+      ],
+      "text_sha256": "1d4e5ba19b4c2fe07e8bc898270af5271ccbd0818080165d1bf2a772f100537d"
+    },
+    {
+      "block_id": "page-0489-block-0004",
+      "order": 4,
+      "text": "Substance-use disorders including alcohol misuse should never be a reason to exclude a \npatient from:\n",
+      "bbox": [
+        61.88999938964844,
+        146.92041015625,
+        436.62005615234375,
+        170.88040161132812
+      ],
+      "text_sha256": "f3632fd5229ebe0842c4cf0a33487cd74681e1da105c199035b68ee1c15f2acc"
+    },
+    {
+      "block_id": "page-0489-block-0005",
+      "order": 5,
+      "text": "■\n■Crisis psychiatric services\n",
+      "bbox": [
+        61.88990020751953,
+        176.92041015625,
+        180.21998596191406,
+        188.88040161132812
+      ],
+      "text_sha256": "debed9b0cc3c3821714c076039055e5c02ac162f164e782dbb33b4e9d397062d"
+    },
+    {
+      "block_id": "page-0489-block-0006",
+      "order": 6,
+      "text": "■\n■Mood/anxiety/personality services after completion of detoxification.\n",
+      "bbox": [
+        61.88990020751953,
+        188.92041015625,
+        371.3099060058594,
+        200.88040161132812
+      ],
+      "text_sha256": "765c560f546db7a0f2269435c6ee256d30b9a281b68ca128f66a4882b5206c4f"
+    },
+    {
+      "block_id": "page-0489-block-0007",
+      "order": 7,
+      "text": "Depression\n",
+      "bbox": [
+        61.88999938964844,
+        225.25039672851562,
+        114.11000061035156,
+        237.10040283203125
+      ],
+      "text_sha256": "ce671d3d1ab8a2414473ed7cde1062546ccf670ea792bc40a6968a2aa033a858"
+    },
+    {
+      "block_id": "page-0489-block-0008",
+      "order": 8,
+      "text": "Depressive and anxiety symptoms occur commonly during alcohol withdrawal, but usu-\nally diminish by the third or fourth week of abstinence. Meta-analyses suggest that anti-\ndepressants with mixed pharmacology (the tricyclics imipramine or trimipramine) \nperform better than selective serotonin reuptake inhibitors (SSRIs; fluoxetine or sertra-\nline) in reducing depressive symptoms in individuals with an alcohol-use disorder, but the \nantidepressant effect is modest.2,9,36,37 A greater antidepressant effect was seen if the diag-\nnosis of depression was made after at least 1 week of abstinence, thus excluding those \nwith affective symptoms caused by alcohol withdrawal. There is stronger evidence for \ndepression categorised as independent, rather than substance induced.36 As treatment \neffects are masked by comparatively large placebo effects, which conceal improvements \nthat would otherwise be attributed to medication, there is a need for larger randomised \nplacebo-controlled trials. Despite the evidence for tricyclics, they are not recommended \nin clinical practice because of their potential for cardiotoxicity and toxicity in overdose.\n",
+      "bbox": [
+        61.88519287109375,
+        243.160400390625,
+        436.6955261230469,
+        398.8804016113281
+      ],
+      "text_sha256": "135a0ecd4f65e0b1d7cdab53aa56eb9756e847cffdf2325e2e962db170d2d6c5"
+    },
+    {
+      "block_id": "page-0489-block-0009",
+      "order": 9,
+      "text": "Relapse prevention medication should be considered in combination with antide-\npressants. Pettinati et al.38 showed that the combination of sertraline (200mg/day) with \nnaltrexone (100mg/day) had superior outcomes – improved drinking outcomes and \nbetter mood – compared with placebo and compared with each drug alone. In contrast, \ncitalopram showed no benefit when added to naltrexone.39\n",
+      "bbox": [
+        61.885406494140625,
+        399.160400390625,
+        436.6729736328125,
+        458.8804016113281
+      ],
+      "text_sha256": "f516c2952d7d86b7462460f1d1dd0a4b5a2b1626565e92a89e0686b0e380888f"
+    },
+    {
+      "block_id": "page-0489-block-0010",
+      "order": 10,
+      "text": "Secondary analyses of acamprosate and naltrexone trials suggest that:\n",
+      "bbox": [
+        71.88999938964844,
+        459.160400390625,
+        372.47998046875,
+        470.8804016113281
+      ],
+      "text_sha256": "36fed233a42384701420fe0355b419cb295d17aecfce12121d56351d940b131b"
+    },
+    {
+      "block_id": "page-0489-block-0011",
+      "order": 11,
+      "text": "■\n■acamprosate has an indirect modest beneficial effect on depression via increasing \n",
+      "bbox": [
+        61.88990020751953,
+        477.160400390625,
+        436.6199951171875,
+        488.8804016113281
+      ],
+      "text_sha256": "a219f33be3ad5e5a77e581aa17815e8499741e7cde8fe62929687f3a91296a22"
+    },
+    {
+      "block_id": "page-0489-block-0012",
+      "order": 12,
+      "text": "abstinence and\n",
+      "bbox": [
+        70.88999938964844,
+        489.160400390625,
+        134.7899932861328,
+        500.8804016113281
+      ],
+      "text_sha256": "40591ee33661b218fe91d777ea15f30bcf23443ba32023195cfcc89b8a043f0b"
+    },
+    {
+      "block_id": "page-0489-block-0013",
+      "order": 13,
+      "text": "■\n■in depressed alcohol-dependent patients, the combination of naltrexone and an anti-\n",
+      "bbox": [
+        61.88990020751953,
+        501.160400390625,
+        433.9098815917969,
+        512.8804321289062
+      ],
+      "text_sha256": "78f7eca3dd939f1ad99fed74d74eec4cdb5ac636f6b86ba3e021ae8de6797250"
+    },
+    {
+      "block_id": "page-0489-block-0014",
+      "order": 14,
+      "text": "depressant may be better than either drug alone,9 but findings are not consistent.39\n",
+      "bbox": [
+        70.88999938964844,
+        513.160400390625,
+        425.111083984375,
+        524.8804321289062
+      ],
+      "text_sha256": "3c3220c9cdb272aa9a5dd9c74048b15a5c5c8ed9149be8b184837b66988d3a46"
+    },
+    {
+      "block_id": "page-0489-block-0015",
+      "order": 15,
+      "text": "Bipolar affective disorder\n",
+      "bbox": [
+        61.88999938964844,
+        543.2504272460938,
+        180.62998962402344,
+        555.1004028320312
+      ],
+      "text_sha256": "85d793d0d96b32da8fbd5ffd4408791cd88eb518d20209b4d5896effa63a4198"
+    },
+    {
+      "block_id": "page-0489-block-0016",
+      "order": 16,
+      "text": "Bipolar patients tend to use alcohol to reduce symptoms of anxiety. Where there is co-\nmorbidity, it is important to treat the different phases as recommended in guidelines for \nbipolar disorder. It may be worth adding sodium valproate to lithium as two trials have \n",
+      "bbox": [
+        61.88999938964844,
+        561.160400390625,
+        436.69989013671875,
+        596.8804321289062
+      ],
+      "text_sha256": "39be50240e0a9f15b7b1696d26cde746553e19594cf9d89a90426e7e5a681f84"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

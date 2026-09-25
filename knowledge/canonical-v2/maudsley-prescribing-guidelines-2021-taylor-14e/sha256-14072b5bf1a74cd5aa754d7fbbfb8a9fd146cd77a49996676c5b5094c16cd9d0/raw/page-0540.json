@@ -1,0 +1,239 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0540",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 540,
+  "source_page_index": 539,
+  "source_page_display": 540,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    519\nCHAPTER 4\nReferences\n\t 1.\t Advisory Council on the Misuse of Drugs (ACMD). A review of the evidence of use and harms of Novel Benzodiazepines. London: Home \nOffice. 2020; https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/881969/ACMD_report_-_a_\nreview_of_the_evidence_of_use_and_harms_of_novel_benzodiazepines.pdf.\n\t 2.\t Manchester KR, et al. The emergence of new psychoactive substance (NPS) benzodiazepines: A review. Drug Test Anal 2018; 10:392–393.\n\t 3.\t Denis C, et al. Pharmacological interventions for benzodiazepine mono-dependence management in outpatient settings. Cochrane Database \nSyst Rev 2006; CD005194.\n\t 4.\t Lader M, et al. Withdrawing benzodiazepines in primary care. CNS Drugs 2009; 23:19–34.\n\t 5.\t Department of Health (DoH). Drug misuse and dependence: UK guidelines on clinical management. London: Department of Health. 2017; \nhttps://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/673978/clinical_guidelines_2017.pdf.\n\t 6.\t Royal Australian College of General Practitioners (RACGP). Prescribing drugs of dependence in general practice, Part B – benzodiazepines. \nMelbourne, Australia. 2015; https://www.racgp.org.au/FSDEDEV/media/documents/Clinical%20Resources/Guidelines/Drugs%20of%20\ndependence/Prescribing-drugs-of-dependence-in-general-practice-Part-B-Benzodiazepines.pdf.\n\t 7.\t Gould RL, et al. Interventions for reducing benzodiazepine use in older people: meta-analysis of randomised controlled trials. Br J Psychiatry \n2014; 204:98–107.\n\t 8.\t Tannenbaum C, et al. Reduction of inappropriate benzodiazepine prescriptions among older adults through direct patient education: the \nEMPOWER cluster randomized trial. JAMA Inter Med 2014; 174:890–898.\n\t 9.\t Baandrup L, et al. Pharmacological interventions for benzodiazepine discontinuation in chronic benzodiazepine users. Cochrane Database \nSyst Rev 2018; 3:Cd011481.\n\t10.\t Vicens C, et al. Comparative efficacy of two interventions to discontinue long-term benzodiazepine use: cluster randomised controlled trial \nin primary care. Br J Psychiatry 2014; 204:471–479.\n\t11.\t Darker CD, et al. Psychosocial interventions for benzodiazepine harmful use, abuse or dependence. Cochrane Database Syst Rev 2015; \nCd009652.\n",
+  "raw_text_sha256": "ca6dea766083ec8c92d6c64087dc2a8d87b08fbb358659a478398144c96fc800",
+  "coordinates_sha256": "d0a99d0aa2afa9157130aa4bb785fd91649530060cf9f1ca68d2e1191d3eb51f",
+  "block_sequence_sha256": "7f7830702763f2688e6a523da7eb449278d7ade2c0394f32320a59d66253b7eb",
+  "blocks": [
+    {
+      "block_id": "page-0540-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    519\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "3bc1394827d57f8a6de6081e9ccec91c9aa6c12af985c029274155f6837100ff"
+    },
+    {
+      "block_id": "page-0540-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0540-block-0002",
+      "order": 2,
+      "text": "References\n",
+      "bbox": [
+        48.0,
+        62.31546401977539,
+        104.03400421142578,
+        75.3504638671875
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0540-block-0003",
+      "order": 3,
+      "text": "\t 1.\t Advisory Council on the Misuse of Drugs (ACMD). A review of the evidence of use and harms of Novel Benzodiazepines. London: Home \n",
+      "bbox": [
+        48.0,
+        80.43646240234375,
+        421.6498718261719,
+        87.46846008300781
+      ],
+      "text_sha256": "5e450b0b4642944a09a949d292f858a5d97f52b28a0e7bc8a852d16f5eabffa5"
+    },
+    {
+      "block_id": "page-0540-block-0004",
+      "order": 4,
+      "text": "Office. 2020; https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/881969/ACMD_report_-_a_\nreview_of_the_evidence_of_use_and_harms_of_novel_benzodiazepines.pdf.\n\t 2.\t Manchester KR, et al. The emergence of new psychoactive substance (NPS) benzodiazepines: A review. Drug Test Anal 2018; 10:392–393.\n\t 3.\t Denis C, et al. Pharmacological interventions for benzodiazepine mono-dependence management in outpatient settings. Cochrane Database \n",
+      "bbox": [
+        48.00600051879883,
+        89.43646240234375,
+        421.70391845703125,
+        123.46846008300781
+      ],
+      "text_sha256": "20f5231f20afc1e15c93ed98d35b01a89a2c78a1e9d21127270efe6b83238d9a"
+    },
+    {
+      "block_id": "page-0540-block-0005",
+      "order": 5,
+      "text": "Syst Rev 2006; CD005194.\n\t 4.\t Lader M, et al. Withdrawing benzodiazepines in primary care. CNS Drugs 2009; 23:19–34.\n\t 5.\t Department of Health (DoH). Drug misuse and dependence: UK guidelines on clinical management. London: Department of Health. 2017; \n",
+      "bbox": [
+        48.018001556396484,
+        125.43646240234375,
+        421.6558837890625,
+        150.4684600830078
+      ],
+      "text_sha256": "aba88a474c16d22dd375d76670c12c811a98be3a4ca8ec6f92857db09165356f"
+    },
+    {
+      "block_id": "page-0540-block-0006",
+      "order": 6,
+      "text": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/673978/clinical_guidelines_2017.pdf.\n\t 6.\t Royal Australian College of General Practitioners (RACGP). Prescribing drugs of dependence in general practice, Part B – benzodiazepines. \n",
+      "bbox": [
+        48.029998779296875,
+        152.43646240234375,
+        421.6739807128906,
+        168.4684600830078
+      ],
+      "text_sha256": "096a0c20c72e51d820a7456ee44e22abff1107e2650708a6818c48115258fe2b"
+    },
+    {
+      "block_id": "page-0540-block-0007",
+      "order": 7,
+      "text": "Melbourne, Australia. 2015; https://www.racgp.org.au/FSDEDEV/media/documents/Clinical%20Resources/Guidelines/Drugs%20of%20\ndependence/Prescribing-drugs-of-dependence-in-general-practice-Part-B-Benzodiazepines.pdf.\n",
+      "bbox": [
+        59.03400421142578,
+        170.43646240234375,
+        420.04205322265625,
+        186.4684600830078
+      ],
+      "text_sha256": "dcb333c29e2b1b9aa286e0c309d9a61bdca9c8c2b524d725bf0773deaa9dea15"
+    },
+    {
+      "block_id": "page-0540-block-0008",
+      "order": 8,
+      "text": "\t 7.\t Gould RL, et al. Interventions for reducing benzodiazepine use in older people: meta-analysis of randomised controlled trials. Br J Psychiatry \n",
+      "bbox": [
+        48.0359992980957,
+        188.43646240234375,
+        421.7279968261719,
+        195.46849060058594
+      ],
+      "text_sha256": "5a15e5dc07b9e843aa319027fc0ffcd0122f3e7be2da79c8d8fc56d8b3306182"
+    },
+    {
+      "block_id": "page-0540-block-0009",
+      "order": 9,
+      "text": "2014; 204:98–107.\n",
+      "bbox": [
+        59.040000915527344,
+        197.29246520996094,
+        108.74398040771484,
+        204.4684600830078
+      ],
+      "text_sha256": "31723bbfe7d0dbd7bf41f8b91abbe32a5bea886297ab7edec260c044e543c13d"
+    },
+    {
+      "block_id": "page-0540-block-0010",
+      "order": 10,
+      "text": "\t 8.\t Tannenbaum C, et al. Reduction of inappropriate benzodiazepine prescriptions among older adults through direct patient education: the \n",
+      "bbox": [
+        48.04199981689453,
+        206.43646240234375,
+        421.6978759765625,
+        213.46849060058594
+      ],
+      "text_sha256": "6d7a3f78a6cb9cae8e6f09fd853e2621e387eb6b5ccf33cc8174db865e047cbd"
+    },
+    {
+      "block_id": "page-0540-block-0011",
+      "order": 11,
+      "text": "EMPOWER cluster randomized trial. JAMA Inter Med 2014; 174:890–898.\n",
+      "bbox": [
+        59.04600143432617,
+        215.29246520996094,
+        255.90599060058594,
+        222.4684600830078
+      ],
+      "text_sha256": "8a109e7edd6d46179fff91df33fcf913c60105e81a422a7d79163d5512f7fc4b"
+    },
+    {
+      "block_id": "page-0540-block-0012",
+      "order": 12,
+      "text": "\t 9.\t Baandrup L, et al. Pharmacological interventions for benzodiazepine discontinuation in chronic benzodiazepine users. Cochrane Database \n",
+      "bbox": [
+        48.04800033569336,
+        224.43646240234375,
+        421.7399597167969,
+        231.46849060058594
+      ],
+      "text_sha256": "e11123c521c3291b3604d1912c5c042704565ea5ee656780469cbdf8f3516d2d"
+    },
+    {
+      "block_id": "page-0540-block-0013",
+      "order": 13,
+      "text": "Syst Rev 2018; 3:Cd011481.\n",
+      "bbox": [
+        59.051998138427734,
+        233.29246520996094,
+        133.75198364257812,
+        240.4684600830078
+      ],
+      "text_sha256": "ec2d45f293257e5ecd8341848f236c33197723819794442c6f8469cca7f44dd0"
+    },
+    {
+      "block_id": "page-0540-block-0014",
+      "order": 14,
+      "text": "\t10.\t Vicens C, et al. Comparative efficacy of two interventions to discontinue long-term benzodiazepine use: cluster randomised controlled trial \n",
+      "bbox": [
+        48.05400085449219,
+        242.43646240234375,
+        421.74609375,
+        249.46849060058594
+      ],
+      "text_sha256": "2ae355072399769ce2eed37a032dc50dcbe09f36be59368ad754211dbe7d2189"
+    },
+    {
+      "block_id": "page-0540-block-0015",
+      "order": 15,
+      "text": "in primary care. Br J Psychiatry 2014; 204:471–479.\n",
+      "bbox": [
+        59.05799865722656,
+        251.29246520996094,
+        195.47996520996094,
+        258.4684753417969
+      ],
+      "text_sha256": "d5a485287274ff32098e61ceccd0b29e32bee5d31c20dc928f47d09cc9a8ddef"
+    },
+    {
+      "block_id": "page-0540-block-0016",
+      "order": 16,
+      "text": "\t11.\t Darker CD, et al. Psychosocial interventions for benzodiazepine harmful use, abuse or dependence. Cochrane Database Syst Rev 2015; \n",
+      "bbox": [
+        48.060001373291016,
+        260.43646240234375,
+        421.72198486328125,
+        267.468505859375
+      ],
+      "text_sha256": "e8d78e1f32d5d350377bea90fdc816bb17acee2f4c25fd48b4efa3599c502284"
+    },
+    {
+      "block_id": "page-0540-block-0017",
+      "order": 17,
+      "text": "Cd009652.\n",
+      "bbox": [
+        59.064002990722656,
+        269.43646240234375,
+        88.4159927368164,
+        276.4684753417969
+      ],
+      "text_sha256": "a2d6b5188e47b043f97497fff2ebb69e7da3841f49351709427ae00a69ccdb57"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

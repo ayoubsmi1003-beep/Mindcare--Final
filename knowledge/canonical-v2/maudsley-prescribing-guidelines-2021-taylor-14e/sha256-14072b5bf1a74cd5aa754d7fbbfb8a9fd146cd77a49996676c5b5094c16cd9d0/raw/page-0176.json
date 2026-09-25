@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0176",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 176,
+  "source_page_index": 175,
+  "source_page_display": 176,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    155\nCHAPTER 1\nsuggest that neither drug alters glucose homeostasis. Aripiprazole may even reverse \ndiabetes caused by other drugs68 (although ketoacidosis has been reported with ari-\npiprazole69–71). A large case–control study has confirmed that neither amisulpride nor \naripiprazole increase the risk of diabetes.72 These three drugs (amisulpride, aripiprazole \nand ziprasidone) are recommended for those with a history of or predisposition to \n­diabetes mellitus or as an alternative to other antipsychotics known to be diabetogenic. \nData suggest neither lurasidone73,74 nor asenapine75,76 has any effect on glucose homeo-\nstasis. Likewise, initial data for brexpiprazole77 and cariprazine78,79 suggest minimal \neffects on glucose tolerance. Thus, for patients developing prediabetes or diabetes who \nare being treated with clozapine, olanzapine or quetiapine, switching to antipsychotic \nmedications with a lower cardiometabolic risk, such as aripiprazole, brexpiprazole, \ncariprazine, lurasidone or ziprasidone, has been recommended.80\nLumateperone appears to have no effect on glucose parameters81 but clinical experi-\nence if limited.\nPredicting antipsychotic-related diabetes\nThe risk of diabetes is increased to a much greater extent in younger adults than in the \nelderly82,83 (for whom antipsychotic medication may show no increased risk84). First-\nepisode patients seem particularly prone to the development of diabetes, with a variety \nof antipsychotic medications.85–87 During treatment, rapid weight gain and a rise in \nplasma triglycerides seem to be predictive of the development of diabetes.88\nMonitoring\nDiabetes is a growing problem in western society and has a strong association with \nobesity, (older) age, (lower) educational achievement and certain ethnic groups.89,90 \nDiabetes markedly increases cardiovascular mortality, largely as a consequence of ath-\nerosclerosis.91 Likewise, the use of antipsychotic medication also increases cardiovascu-\nlar mortality.92–94 Intervention to reduce plasma glucose levels and minimise other risk \nfactors (obesity, hypercholesterolaemia) is therefore essential.95\nThere is no clear consensus on diabetes-monitoring practice for those receiving antip-\nsychotics,96 and recommendations in formal guidelines vary considerably.97 Given the \nprevious known parlous state of testing for diabetes in the UK8,98–100 and elsewhere,101 \narguments over precisely which tests are done and when seem to miss the point. There \nis an overwhelming need to improve monitoring by any means and so any tests for \ndiabetes are supported – urine glucose and random plasma glucose included.\nIdeally, though, all patients should have oral glucose tolerance tests (OGTT) per-\nformed as this is the most sensitive method of detection.102,103 Fasting plasma glucose \n(FPG) tests are less sensitive but recommended.104 Any abnormality in FPG should pro-\nvoke an OGTT. Fasting tests are often difficult to obtain in acutely ill, disorganised \npatients, so measurement of random plasma glucose or glycosylated haemoglobin \n(HbA1C) may also be used (fasting not required). HbA1C is now recognised as a useful \ntool for detecting and monitoring diabetes.105 Frequency of monitoring should then be \ndetermined by physical factors (e.g. weight gain) and known risk factors (e.g. family \nhistory of diabetes, lipid abnormalities, smoking status). The absolute minimum is \n",
+  "raw_text_sha256": "4a16b8166c24e10bd55d26a87076acfff1d90a6b0c977afb7bd98fb9911bebf6",
+  "coordinates_sha256": "328d7102021332271a4416bdea5752ccbb679beca920f37a0b25cdf07f8d4767",
+  "block_sequence_sha256": "006fb23ba71ec96b7843072db300f648027b904b745ffee225a8437f21ce1ee2",
+  "blocks": [
+    {
+      "block_id": "page-0176-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    155\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "3974939e4c1dc741346fd2229d4f85d30209ff821f0bc175f3e9878dc6d9cab3"
+    },
+    {
+      "block_id": "page-0176-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0176-block-0002",
+      "order": 2,
+      "text": "suggest that neither drug alters glucose homeostasis. Aripiprazole may even reverse \ndiabetes caused by other drugs68 (although ketoacidosis has been reported with ari-\npiprazole69–71). A large case–control study has confirmed that neither amisulpride nor \naripiprazole increase the risk of diabetes.72 These three drugs (amisulpride, aripiprazole \nand ziprasidone) are recommended for those with a history of or predisposition to \n­diabetes mellitus or as an alternative to other antipsychotics known to be diabetogenic. \nData suggest neither lurasidone73,74 nor asenapine75,76 has any effect on glucose homeo-\nstasis. Likewise, initial data for brexpiprazole77 and cariprazine78,79 suggest minimal \neffects on glucose tolerance. Thus, for patients developing prediabetes or diabetes who \nare being treated with clozapine, olanzapine or quetiapine, switching to antipsychotic \nmedications with a lower cardiometabolic risk, such as aripiprazole, brexpiprazole, \ncariprazine, lurasidone or ziprasidone, has been recommended.80\n",
+      "bbox": [
+        47.996307373046875,
+        62.5494384765625,
+        422.8206481933594,
+        206.26943969726562
+      ],
+      "text_sha256": "5335a9b98d79893e0be8def42c752685f1d14ccbadd0377ae318c002e35c653f"
+    },
+    {
+      "block_id": "page-0176-block-0003",
+      "order": 3,
+      "text": "Lumateperone appears to have no effect on glucose parameters81 but clinical experi-\nence if limited.\n",
+      "bbox": [
+        48.00077819824219,
+        206.54949951171875,
+        420.0107116699219,
+        230.26950073242188
+      ],
+      "text_sha256": "0e37eb7eba626f7a32c87f4bdfc2b45fd52c8de7bebac6e3d7916e615b0f4352"
+    },
+    {
+      "block_id": "page-0176-block-0004",
+      "order": 4,
+      "text": "Predicting antipsychotic-related diabetes\n",
+      "bbox": [
+        47.99909973144531,
+        247.70449829101562,
+        258.4730529785156,
+        260.739501953125
+      ],
+      "text_sha256": "81118071aa36057659b70f5c7ff8cd1e50ecb5dcde5e484c4fc4accb216e9499"
+    },
+    {
+      "block_id": "page-0176-block-0005",
+      "order": 5,
+      "text": "The risk of diabetes is increased to a much greater extent in younger adults than in the \nelderly82,83 (for whom antipsychotic medication may show no increased risk84). First-\nepisode patients seem particularly prone to the development of diabetes, with a variety \nof antipsychotic medications.85–87 During treatment, rapid weight gain and a rise in \nplasma triglycerides seem to be predictive of the development of diabetes.88\n",
+      "bbox": [
+        47.99639892578125,
+        266.54949951171875,
+        422.8091125488281,
+        326.2695007324219
+      ],
+      "text_sha256": "16bfe568d18a2f1d1f29b0f1a98673505484395e96fe3178408b2faf28c78788"
+    },
+    {
+      "block_id": "page-0176-block-0006",
+      "order": 6,
+      "text": "Monitoring\n",
+      "bbox": [
+        47.99909973144531,
+        344.6394958496094,
+        101.3291015625,
+        356.489501953125
+      ],
+      "text_sha256": "c03a80785732954eec6c21129031ebc8adf5351a6e1969013d8ef9fa84c76471"
+    },
+    {
+      "block_id": "page-0176-block-0007",
+      "order": 7,
+      "text": "Diabetes is a growing problem in western society and has a strong association with \nobesity, (older) age, (lower) educational achievement and certain ethnic groups.89,90 \nDiabetes markedly increases cardiovascular mortality, largely as a consequence of ath-\nerosclerosis.91 Likewise, the use of antipsychotic medication also increases cardiovascu-\nlar mortality.92–94 Intervention to reduce plasma glucose levels and minimise other risk \nfactors (obesity, hypercholesterolaemia) is therefore essential.95\n",
+      "bbox": [
+        47.99530029296875,
+        362.54949951171875,
+        422.8090515136719,
+        434.2695007324219
+      ],
+      "text_sha256": "1ff6df53ef4061fdd4646c2ab4120df95e057b15677bc5b62fb630f8001e4eb9"
+    },
+    {
+      "block_id": "page-0176-block-0008",
+      "order": 8,
+      "text": "There is no clear consensus on diabetes-monitoring practice for those receiving antip-\nsychotics,96 and recommendations in formal guidelines vary considerably.97 Given the \nprevious known parlous state of testing for diabetes in the UK8,98–100 and elsewhere,101 \narguments over precisely which tests are done and when seem to miss the point. There \nis an overwhelming need to improve monitoring by any means and so any tests for \ndiabetes are supported – urine glucose and random plasma glucose included.\n",
+      "bbox": [
+        47.99488830566406,
+        434.54949951171875,
+        422.8194274902344,
+        506.2695007324219
+      ],
+      "text_sha256": "1b90cd877661c25a3af9d057df827fa66f0cc131ee3618c11e9f197eeb4622e1"
+    },
+    {
+      "block_id": "page-0176-block-0009",
+      "order": 9,
+      "text": "Ideally, though, all patients should have oral glucose tolerance tests (OGTT) per-\nformed as this is the most sensitive method of detection.102,103 Fasting plasma glucose \n(FPG) tests are less sensitive but recommended.104 Any abnormality in FPG should pro-\nvoke an OGTT. Fasting tests are often difficult to obtain in acutely ill, disorganised \npatients, so measurement of random plasma glucose or glycosylated haemoglobin \n(HbA1C) may also be used (fasting not required). HbA1C is now recognised as a useful \ntool for detecting and monitoring diabetes.105 Frequency of monitoring should then be \ndetermined by physical factors (e.g. weight gain) and known risk factors (e.g. family \nhistory of diabetes, lipid abnormalities, smoking status). The absolute minimum is \n",
+      "bbox": [
+        47.99421691894531,
+        506.54949951171875,
+        422.8222351074219,
+        614.2694091796875
+      ],
+      "text_sha256": "02191647a57275a0bd42893a664e14c62f04f2cec82b603b92cbb9f3780d7895"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

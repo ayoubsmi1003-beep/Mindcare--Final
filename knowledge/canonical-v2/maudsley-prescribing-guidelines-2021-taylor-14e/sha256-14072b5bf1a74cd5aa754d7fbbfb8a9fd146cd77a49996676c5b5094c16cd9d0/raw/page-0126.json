@@ -1,0 +1,155 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0126",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 126,
+  "source_page_index": 125,
+  "source_page_display": 126,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    105\nCHAPTER 1\nanother 25–62.5% dose reduction was achieved with three-quarters of patients show-\ning no sign of relapse27 and 46.0–57.6% dose reduction produced no change in overall \nPANSS scores between the reduction and maintenance groups.28\nExponentially reducing regimes (that is, reducing by a fixed proportion of the most \nrecent dose) will produce roughly linear reductions at all receptor targets of antipsy-\nchotics, making it applicable to a wide range of antipsychotic medication. Notably, the \nstudy that was able to reduce antipsychotic doses by more than half in some patients \nwith no relapse employed exponentially reducing dose regimens by reducing dose by \n25% of the most recent dose every 6 months.27\nTapering in practice\nAll patients should be informed of the risk of withdrawal symptoms on stopping or \nreducing the dose of any antipsychotic, including insomnia and an increase in psychotic \nsymptoms. Clozapine is associated with the most common and severe withdrawal \nsymptoms, possibly because of its potent anti-cholinergic effects.\nPatient should be warned not to stop antipsychotics abruptly, because this is the \nmethod thought to be most likely to precipitate a relapse and/or severe withdrawal \neffects.\nWhen to attempt discontinuation\nLongstanding or lifelong antipsychotic treatment is something of a modern-day phe-\nnomenon. It the 1960s, discontinuation of antipsychotics was usually attempted after \nacute response, but abrupt discontinuation often led to relapse (but interestingly, not \nalways29). There are currently no evidence-based recommendations for antipsychotic \nwithdrawal, but we suggest that it only be attempted in patients who have been in \nremission for 6 months (first episode) or one year (multi-episode).\nThe initial dose reduction could be derived from the patient’s previous experience of \ndose reduction. For many patients the dose could be reduced by approximately 25% of \nthe most recent dose (e.g. for olanzapine this would be a reduction from 20mg to \n15mg), although some might require as small a decrease as 10% of their current dose. \nThe patient should then be monitored for three months following this reduction for any \nwithdrawal symptoms or worsening of psychotic symptoms, recalling that these symp-\ntoms can be transitory withdrawal effects rather than signs of inevitable relapse, indi-\ncating the necessity for reinstatement of their regular dose of medication. If a patient \ntolerates this reduction with no significant effect on their overall mental state (or per-\nhaps only mild symptoms of insomnia), then further reductions could be made at the \nsame rate (e.g. a reduction of 10–25% of their dose every 3 months). Patients may \nrequire increased psychosocial support during this period of withdrawal.\nIf a patient experiences significant withdrawal symptoms or worsening of psychotic \nsymptoms then an increase back to the original dose (or partway thereof) may be neces-\nsary. It should be noted that this does not preclude further attempts at reduction, but \nthese attempts should be delayed till stability is established and should be more gradual \nthan previously attempted (perhaps as small as 5–10% of current dose).\n",
+  "raw_text_sha256": "62334f64efd631ca3c026388dd0486a4c84b0c523b80f5c373c95bcdeaf5e9da",
+  "coordinates_sha256": "f7e37a133d2d95ca0820305551d32ecd9299c518b4eb5ba4654e9d4bd622269d",
+  "block_sequence_sha256": "9d7815ec5d2ff7de65cedad39c0821cc673029cc6df848b4ffb023f70dd057e8",
+  "blocks": [
+    {
+      "block_id": "page-0126-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    105\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "34b5ad1b5b6ec781fc61e545ca3708cb23d882c0b326a4837f46cd1745be86e7"
+    },
+    {
+      "block_id": "page-0126-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0126-block-0002",
+      "order": 2,
+      "text": "another 25–62.5% dose reduction was achieved with three-quarters of patients show-\ning no sign of relapse27 and 46.0–57.6% dose reduction produced no change in overall \nPANSS scores between the reduction and maintenance groups.28\n",
+      "bbox": [
+        47.99439239501953,
+        62.5494384765625,
+        422.7743225097656,
+        98.26943969726562
+      ],
+      "text_sha256": "32c09c59c3ab9ec5d5fbfb1cd7abe127aabbb61522de628debd50fdd4b8dfdfa"
+    },
+    {
+      "block_id": "page-0126-block-0003",
+      "order": 3,
+      "text": "Exponentially reducing regimes (that is, reducing by a fixed proportion of the most \nrecent dose) will produce roughly linear reductions at all receptor targets of antipsy-\nchotics, making it applicable to a wide range of antipsychotic medication. Notably, the \nstudy that was able to reduce antipsychotic doses by more than half in some patients \nwith no relapse employed exponentially reducing dose regimens by reducing dose by \n25% of the most recent dose every 6 months.27\n",
+      "bbox": [
+        47.99909973144531,
+        98.5494384765625,
+        422.8290710449219,
+        170.26943969726562
+      ],
+      "text_sha256": "f810434014dbfa03f76dfed035216bef304684f9d184177891c70e53482f626d"
+    },
+    {
+      "block_id": "page-0126-block-0004",
+      "order": 4,
+      "text": "Tapering in practice\n",
+      "bbox": [
+        47.99909973144531,
+        187.70443725585938,
+        148.85809326171875,
+        200.73944091796875
+      ],
+      "text_sha256": "34086e0c7446429947c080c575e1ca89fd3357142621789f16626d68cea39162"
+    },
+    {
+      "block_id": "page-0126-block-0005",
+      "order": 5,
+      "text": "All patients should be informed of the risk of withdrawal symptoms on stopping or \nreducing the dose of any antipsychotic, including insomnia and an increase in psychotic \nsymptoms. Clozapine is associated with the most common and severe withdrawal \nsymptoms, possibly because of its potent anti-cholinergic effects.\n",
+      "bbox": [
+        47.99909973144531,
+        206.54949951171875,
+        422.8090515136719,
+        254.26950073242188
+      ],
+      "text_sha256": "2db392d51fb68ce368779017b9eea3fe48d0ac6ce21cf9f8471158e0bf3e6fea"
+    },
+    {
+      "block_id": "page-0126-block-0006",
+      "order": 6,
+      "text": "Patient should be warned not to stop antipsychotics abruptly, because this is the \nmethod thought to be most likely to precipitate a relapse and/or severe withdrawal \neffects.\n",
+      "bbox": [
+        47.99909973144531,
+        254.54949951171875,
+        422.7790832519531,
+        290.2695007324219
+      ],
+      "text_sha256": "8ccbcfbec8e6b05668aaed6fe5a7cb513a1e224f601130b853c8fed5cc2343a6"
+    },
+    {
+      "block_id": "page-0126-block-0007",
+      "order": 7,
+      "text": "When to attempt discontinuation\n",
+      "bbox": [
+        47.99909973144531,
+        307.7044982910156,
+        220.96307373046875,
+        320.739501953125
+      ],
+      "text_sha256": "c0f33af2d61669859f885a9535879185e2efa007ff000d1c33b1f8c168592d55"
+    },
+    {
+      "block_id": "page-0126-block-0008",
+      "order": 8,
+      "text": "Longstanding or lifelong antipsychotic treatment is something of a modern-day phe-\nnomenon. It the 1960s, discontinuation of antipsychotics was usually attempted after \nacute response, but abrupt discontinuation often led to relapse (but interestingly, not \nalways29). There are currently no evidence-based recommendations for antipsychotic \nwithdrawal, but we suggest that it only be attempted in patients who have been in \nremission for 6 months (first episode) or one year (multi-episode).\n",
+      "bbox": [
+        47.99909973144531,
+        326.54949951171875,
+        422.8019714355469,
+        398.2695007324219
+      ],
+      "text_sha256": "23aa45b536ed7473b0dcf121013902734893c4e03b067490b114652d5bb33f9e"
+    },
+    {
+      "block_id": "page-0126-block-0009",
+      "order": 9,
+      "text": "The initial dose reduction could be derived from the patient’s previous experience of \ndose reduction. For many patients the dose could be reduced by approximately 25% of \nthe most recent dose (e.g. for olanzapine this would be a reduction from 20mg to \n15mg), although some might require as small a decrease as 10% of their current dose. \nThe patient should then be monitored for three months following this reduction for any \nwithdrawal symptoms or worsening of psychotic symptoms, recalling that these symp-\ntoms can be transitory withdrawal effects rather than signs of inevitable relapse, indi-\ncating the necessity for reinstatement of their regular dose of medication. If a patient \ntolerates this reduction with no significant effect on their overall mental state (or per-\nhaps only mild symptoms of insomnia), then further reductions could be made at the \nsame rate (e.g. a reduction of 10–25% of their dose every 3 months). Patients may \nrequire increased psychosocial support during this period of withdrawal.\n",
+      "bbox": [
+        48.00199890136719,
+        398.54949951171875,
+        422.8318786621094,
+        542.26953125
+      ],
+      "text_sha256": "2d891e4003a8c484d458c6771036965c9d506648f3b89580da1a7bfbb02cb777"
+    },
+    {
+      "block_id": "page-0126-block-0010",
+      "order": 10,
+      "text": "If a patient experiences significant withdrawal symptoms or worsening of psychotic \nsymptoms then an increase back to the original dose (or partway thereof) may be neces-\nsary. It should be noted that this does not preclude further attempts at reduction, but \nthese attempts should be delayed till stability is established and should be more gradual \nthan previously attempted (perhaps as small as 5–10% of current dose).\n",
+      "bbox": [
+        48.00199890136719,
+        542.5494995117188,
+        422.8121032714844,
+        602.26953125
+      ],
+      "text_sha256": "dd8b180473ad97c719d4ae5bdf74ca0f809f8bd83995f3bbc93fc43f8b380a33"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

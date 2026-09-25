@@ -1,0 +1,455 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0446",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 446,
+  "source_page_index": 445,
+  "source_page_display": 446,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    425\nCHAPTER 3\npsychological input, although evidence to support this assumption is slim. Some studies \nsuggest that optimal outcome is achieved by combining psychological and drug thera-\npies,6,39 but negative studies also exist.40,41\nA discussion of the evidence base for psychological interventions is outside the scope \nof these guidelines. It is recognised that for many patients psychological therapies are \nthe appropriate first-line treatment, and indeed this is supported by NICE.6\nSummary of NICE guidelines for the treatment of generalised anxiety \ndisorder,6 panic disorder6 and OCD29\n■\n■A ‘stepped care’ approach is recommended to help in choosing the most effective \nintervention.\n■\n■A comprehensive assessment is recommended that considers the degree of distress \nand functional impairment; the effect of any co-morbid mental illness, substance mis-\nuse or medical condition; and past response to treatment.\n■\n■Treat the primary disorder first.\n■\n■Psychological therapy is more effective than pharmacological therapy and should be \nused as first line where possible. Details of the types of therapy recommended and \ntheir duration can be found in the NICE guidelines.\n■\n■Pharmacological therapy is also effective. Most evidence supports the use of the SSRIs \n(sertraline as first line).\n■\n■Provide information on the likely benefits and disadvantages of each mode of \ntreatment.\n■\n■Consider combination therapy for complex anxiety disorders that are refractory to \ntreatment.\nPanic disorder\n■\n■Benzodiazepines should not be used.\n■\n■An SSRI should be used as first line. If SSRIs are contraindicated or there is no \nresponse, imipramine or clomipramine can be used.\n■\n■Self-help (based on CBT principles) should be encouraged, as should formal CBT.\nGeneralised anxiety disorder\n■\n■Benzodiazepines should not be used except for crises.\n■\n■An SSRI should be used as first-line treatment.\n■\n■SNRIs and pregabalin are second and third choices, respectively.\n■\n■High-intensity psychological intervention and self-help (based on CBT principles) \nshould be encouraged.\n■\n■Antipsychotics should not be offered (presumably this includes quetiapine).\nOCD (where there is moderate or severe functional impairment)\n■\n■Use an SSRI or intensive CBT.\n■\n■Combine the SSRI and CBT if response to single strategy is suboptimal.\n■\n■Use clomipramine if SSRIs fail.\n■\n■If response is still suboptimal, add an antipsychotic or combine clomipramine and \ncitalopram (see Boxes 3.4–3.8).\n",
+  "raw_text_sha256": "a65f55e07ac70aef4722be777fc837b3bedf545792fe785f8c257d6932fadf88",
+  "coordinates_sha256": "ced0c7bb2dd5da6fe7a72c28ea838a426faa2c65d13b48d04c1749d111256686",
+  "block_sequence_sha256": "2854e430efef4ad68d0ca6a6b3f756a37ddaa216d372968b019282c009d27435",
+  "blocks": [
+    {
+      "block_id": "page-0446-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    425\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "66f810b559cdf48c67b71d211f5781af4099dea779ef2318e6249227bcc98a7d"
+    },
+    {
+      "block_id": "page-0446-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0446-block-0002",
+      "order": 2,
+      "text": "psychological input, although evidence to support this assumption is slim. Some studies \nsuggest that optimal outcome is achieved by combining psychological and drug thera-\npies,6,39 but negative studies also exist.40,41\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.77008056640625,
+        98.27041625976562
+      ],
+      "text_sha256": "4fe7f31ef4c8ad6ce560295733862939db8fdc5f4f41988b33cf0c23582319c6"
+    },
+    {
+      "block_id": "page-0446-block-0003",
+      "order": 3,
+      "text": "A discussion of the evidence base for psychological interventions is outside the scope \nof these guidelines. It is recognised that for many patients psychological therapies are \nthe appropriate first-line treatment, and indeed this is supported by NICE.6\n",
+      "bbox": [
+        48.0,
+        98.5504150390625,
+        422.7699890136719,
+        134.27041625976562
+      ],
+      "text_sha256": "a07251f7987b591150c74a953af6fe20300a09118e3a4d16b08b36afbbe714ff"
+    },
+    {
+      "block_id": "page-0446-block-0004",
+      "order": 4,
+      "text": "Summary of NICE guidelines for the treatment of generalised anxiety \ndisorder,6 panic disorder6 and OCD29\n",
+      "bbox": [
+        48.0,
+        149.70541381835938,
+        409.0860595703125,
+        174.74139404296875
+      ],
+      "text_sha256": "e8eb9132e843b043978e1e0162b332b1db24718a09c8bc9334404df94165997f"
+    },
+    {
+      "block_id": "page-0446-block-0005",
+      "order": 5,
+      "text": "■\n■A ‘stepped care’ approach is recommended to help in choosing the most effective \n",
+      "bbox": [
+        47.999900817871094,
+        180.55047607421875,
+        422.7299499511719,
+        192.27047729492188
+      ],
+      "text_sha256": "4b00a03d3860062bd3a4a464888c281075821068e92fdceff9b389c9302e0afd"
+    },
+    {
+      "block_id": "page-0446-block-0006",
+      "order": 6,
+      "text": "intervention.\n",
+      "bbox": [
+        57.0,
+        192.55047607421875,
+        112.00999450683594,
+        204.27047729492188
+      ],
+      "text_sha256": "c4abe67626af9379ab8f2f5f18c7c80c42e9629a8269ec32545282a8ec754627"
+    },
+    {
+      "block_id": "page-0446-block-0007",
+      "order": 7,
+      "text": "■\n■A comprehensive assessment is recommended that considers the degree of distress \n",
+      "bbox": [
+        47.999900817871094,
+        204.55047607421875,
+        422.81011962890625,
+        216.27047729492188
+      ],
+      "text_sha256": "0c776fcab6e5e5b9d6bc40bd8905eda74fafb126fe97bea3052b17d5d4fed7a3"
+    },
+    {
+      "block_id": "page-0446-block-0008",
+      "order": 8,
+      "text": "and functional impairment; the effect of any co-morbid mental illness, substance mis-\nuse or medical condition; and past response to treatment.\n",
+      "bbox": [
+        57.0,
+        216.55047607421875,
+        420.00006103515625,
+        240.27047729492188
+      ],
+      "text_sha256": "93182a5507d2c67565fba8363621cd0c5fe0560baf75435b6834eb36fbe27c1f"
+    },
+    {
+      "block_id": "page-0446-block-0009",
+      "order": 9,
+      "text": "■\n■Treat the primary disorder first.\n",
+      "bbox": [
+        47.999900817871094,
+        240.55047607421875,
+        194.11000061035156,
+        252.27047729492188
+      ],
+      "text_sha256": "55f22ee4ba0eae803d4fbd3594ded3b282cbb4690a24c92707bacd1f015b9cdf"
+    },
+    {
+      "block_id": "page-0446-block-0010",
+      "order": 10,
+      "text": "■\n■Psychological therapy is more effective than pharmacological therapy and should be \n",
+      "bbox": [
+        47.999900817871094,
+        252.55047607421875,
+        422.7500915527344,
+        264.2704772949219
+      ],
+      "text_sha256": "e76dcba827986cbcb4c2e6fa70a805de5565a17aa33e4b3f0bbcd1bad6eb7829"
+    },
+    {
+      "block_id": "page-0446-block-0011",
+      "order": 11,
+      "text": "used as first line where possible. Details of the types of therapy recommended and \ntheir duration can be found in the NICE guidelines.\n",
+      "bbox": [
+        57.0,
+        264.55047607421875,
+        422.7899475097656,
+        288.2704772949219
+      ],
+      "text_sha256": "6c99c8a69052f5e4a6db3533f9cd35aef8f4c012bc2b893ab332ce1bd75e36a9"
+    },
+    {
+      "block_id": "page-0446-block-0012",
+      "order": 12,
+      "text": "■\n■Pharmacological therapy is also effective. Most evidence supports the use of the SSRIs \n",
+      "bbox": [
+        47.999900817871094,
+        288.55047607421875,
+        422.7799377441406,
+        300.2704772949219
+      ],
+      "text_sha256": "f061389fa894365f7cd5266d6a72b73ae3563cfac96f4686f636fd16c6575f21"
+    },
+    {
+      "block_id": "page-0446-block-0013",
+      "order": 13,
+      "text": "(sertraline as first line).\n",
+      "bbox": [
+        57.0,
+        300.55047607421875,
+        156.4499969482422,
+        312.2704772949219
+      ],
+      "text_sha256": "7459200a02ed8a8e209860ca9a90e057a5b43e4595b8798864904d32300d7d97"
+    },
+    {
+      "block_id": "page-0446-block-0014",
+      "order": 14,
+      "text": "■\n■Provide information on the likely benefits and disadvantages of each mode of \n",
+      "bbox": [
+        47.999900817871094,
+        312.55047607421875,
+        422.7599792480469,
+        324.2704772949219
+      ],
+      "text_sha256": "2c3c3bec2290b16e36dc48d95e7c2ce592f363c917f5f92cdb8f513196ad6f7e"
+    },
+    {
+      "block_id": "page-0446-block-0015",
+      "order": 15,
+      "text": "treatment.\n",
+      "bbox": [
+        57.0,
+        324.55047607421875,
+        101.42000579833984,
+        336.2704772949219
+      ],
+      "text_sha256": "c7ee1e800687c10edbbb02024eb4f31c4b3fa5cf04cca37d3a200a41e1c311f0"
+    },
+    {
+      "block_id": "page-0446-block-0016",
+      "order": 16,
+      "text": "■\n■Consider combination therapy for complex anxiety disorders that are refractory to \n",
+      "bbox": [
+        47.999900817871094,
+        336.55047607421875,
+        422.7900390625,
+        348.2704772949219
+      ],
+      "text_sha256": "86be3676a3ced0b3aad975fa45cdb5c48c31766862c053b37b76f703519ec4e4"
+    },
+    {
+      "block_id": "page-0446-block-0017",
+      "order": 17,
+      "text": "treatment.\n",
+      "bbox": [
+        57.0,
+        348.55047607421875,
+        101.42000579833984,
+        360.2704772949219
+      ],
+      "text_sha256": "c7ee1e800687c10edbbb02024eb4f31c4b3fa5cf04cca37d3a200a41e1c311f0"
+    },
+    {
+      "block_id": "page-0446-block-0018",
+      "order": 18,
+      "text": "Panic disorder\n",
+      "bbox": [
+        48.0,
+        375.7054748535156,
+        120.53400421142578,
+        388.740478515625
+      ],
+      "text_sha256": "9fb67673bcd83733ebfad75559f6870c0671b7c7d318ebb12035380fddd932e2"
+    },
+    {
+      "block_id": "page-0446-block-0019",
+      "order": 19,
+      "text": "■\n■Benzodiazepines should not be used.\n",
+      "bbox": [
+        47.999900817871094,
+        394.55047607421875,
+        214.2699737548828,
+        406.2704772949219
+      ],
+      "text_sha256": "2cfee5e232026e8334f7a706350d1726030f71ff63deed4c0d370dc3303b590b"
+    },
+    {
+      "block_id": "page-0446-block-0020",
+      "order": 20,
+      "text": "■\n■An SSRI should be used as first line. If SSRIs are contraindicated or there is no \n",
+      "bbox": [
+        47.999900817871094,
+        406.55047607421875,
+        422.820068359375,
+        418.2704772949219
+      ],
+      "text_sha256": "fe82595c3b67acd180774af39e70da461d359b240db3caa9aa1b7c043bd16e7c"
+    },
+    {
+      "block_id": "page-0446-block-0021",
+      "order": 21,
+      "text": "response, imipramine or clomipramine can be used.\n",
+      "bbox": [
+        57.0,
+        418.55047607421875,
+        278.8599548339844,
+        430.2704772949219
+      ],
+      "text_sha256": "5bc622d7ceff287242293277d49b35a435af6e9c7ca5ec12c4a14b9b23ecb4eb"
+    },
+    {
+      "block_id": "page-0446-block-0022",
+      "order": 22,
+      "text": "■\n■Self-help (based on CBT principles) should be encouraged, as should formal CBT.\n",
+      "bbox": [
+        47.999900817871094,
+        430.55047607421875,
+        407.8100280761719,
+        442.2704772949219
+      ],
+      "text_sha256": "5f6d1048bb2d1a36c5bda5ee72076c6054f43af7d142b2d951595f53971d5c06"
+    },
+    {
+      "block_id": "page-0446-block-0023",
+      "order": 23,
+      "text": "Generalised anxiety disorder\n",
+      "bbox": [
+        48.0,
+        457.7054748535156,
+        196.34597778320312,
+        470.740478515625
+      ],
+      "text_sha256": "8ee770989ce9a706a5c71f142031d482db0c90c36f2380af5672f42f9ee71a8b"
+    },
+    {
+      "block_id": "page-0446-block-0024",
+      "order": 24,
+      "text": "■\n■Benzodiazepines should not be used except for crises.\n",
+      "bbox": [
+        47.999900817871094,
+        476.55047607421875,
+        286.4900207519531,
+        488.2704772949219
+      ],
+      "text_sha256": "1eb634f7b9a1d27edea78aef7f311e318203da13f6d69541c02c306e11503200"
+    },
+    {
+      "block_id": "page-0446-block-0025",
+      "order": 25,
+      "text": "■\n■An SSRI should be used as first-line treatment.\n",
+      "bbox": [
+        47.999900817871094,
+        488.55047607421875,
+        257.54998779296875,
+        500.2704772949219
+      ],
+      "text_sha256": "90abf78ccdd41d76d86bc0499af70851d7252953470e0105fce8b3383edd39b2"
+    },
+    {
+      "block_id": "page-0446-block-0026",
+      "order": 26,
+      "text": "■\n■SNRIs and pregabalin are second and third choices, respectively.\n",
+      "bbox": [
+        47.999900817871094,
+        500.55047607421875,
+        334.0799865722656,
+        512.2705078125
+      ],
+      "text_sha256": "f2dbc17cc2eeef3934cfcbefbf7cd6bc809fcd4efd1b9ebf27b7aa0ea5cd1d0f"
+    },
+    {
+      "block_id": "page-0446-block-0027",
+      "order": 27,
+      "text": "■\n■High-intensity psychological intervention and self-help (based on CBT principles) \n",
+      "bbox": [
+        47.999900817871094,
+        512.5504760742188,
+        422.8099060058594,
+        524.2705078125
+      ],
+      "text_sha256": "21839c4e3c184ce64c9d4f25869b1bb4676ccff5cb296638ad246a469344673a"
+    },
+    {
+      "block_id": "page-0446-block-0028",
+      "order": 28,
+      "text": "should be encouraged.\n",
+      "bbox": [
+        57.0,
+        524.5504760742188,
+        153.69998168945312,
+        536.2705078125
+      ],
+      "text_sha256": "7de9f58983acd3d1108edd6c399302594eb9a40c7cd4b58f4f28f7f7bf7029c4"
+    },
+    {
+      "block_id": "page-0446-block-0029",
+      "order": 29,
+      "text": "■\n■Antipsychotics should not be offered (presumably this includes quetiapine).\n",
+      "bbox": [
+        47.999900817871094,
+        536.5504760742188,
+        381.49993896484375,
+        548.2705078125
+      ],
+      "text_sha256": "6cb2e41579e7abfaf184b22499db6a13101d9e026f862d77f413eeda3ac6d2fb"
+    },
+    {
+      "block_id": "page-0446-block-0030",
+      "order": 30,
+      "text": "OCD (where there is moderate or severe functional impairment)\n",
+      "bbox": [
+        48.0,
+        563.7055053710938,
+        378.09906005859375,
+        576.740478515625
+      ],
+      "text_sha256": "f58a193ad2e5261ed9cfd2829e0f65b735a0244d64c319801d93a5908c596ef1"
+    },
+    {
+      "block_id": "page-0446-block-0031",
+      "order": 31,
+      "text": "■\n■Use an SSRI or intensive CBT.\n",
+      "bbox": [
+        47.999900817871094,
+        582.5504150390625,
+        186.44000244140625,
+        594.2704467773438
+      ],
+      "text_sha256": "a5717b73c36713020d8b48673296808dc6e026d232123413dfcee7aea19d654c"
+    },
+    {
+      "block_id": "page-0446-block-0032",
+      "order": 32,
+      "text": "■\n■Combine the SSRI and CBT if response to single strategy is suboptimal.\n",
+      "bbox": [
+        47.999900817871094,
+        594.5504150390625,
+        365.3500061035156,
+        606.2704467773438
+      ],
+      "text_sha256": "770c824f79049793a813e949d9af3d645a412b2a0f138b46230d375193af51af"
+    },
+    {
+      "block_id": "page-0446-block-0033",
+      "order": 33,
+      "text": "■\n■Use clomipramine if SSRIs fail.\n",
+      "bbox": [
+        47.999900817871094,
+        606.5504150390625,
+        190.30999755859375,
+        618.2704467773438
+      ],
+      "text_sha256": "05747989da3c37fec65ee4f0325fb6cad29c7ce1fa9d44f6c759fa104761d59b"
+    },
+    {
+      "block_id": "page-0446-block-0034",
+      "order": 34,
+      "text": "■\n■If response is still suboptimal, add an antipsychotic or combine clomipramine and \n",
+      "bbox": [
+        47.999900817871094,
+        618.5504150390625,
+        422.8000183105469,
+        630.2704467773438
+      ],
+      "text_sha256": "06299a89a2266edd4fe38cb6879fad4928a17e468fa6841ccd6f99672460cd80"
+    },
+    {
+      "block_id": "page-0446-block-0035",
+      "order": 35,
+      "text": "citalopram (see Boxes 3.4–3.8).\n",
+      "bbox": [
+        57.0,
+        630.5504150390625,
+        192.56997680664062,
+        642.2704467773438
+      ],
+      "text_sha256": "03b82cf2b679a6548898f8126c95ab961d1a95fbb74fb676d1c8c6658e182617"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

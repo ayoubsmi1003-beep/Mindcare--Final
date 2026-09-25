@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0715",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 715,
+  "source_page_index": 714,
+  "source_page_display": 715,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "694    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 7\nReferences\n\t1.\t McElhatton PR. Pregnancy: (2) General principles of drug use in pregnancy. Pharm J 2003; 270:232–234.\n\t2.\t Rasmussen SA, et al. Maternal obesity and risk of neural tube defects: a metaanalysis. Am J Obstet Gynecol 2008; 198:611–619.\n\t3.\t Schneid-Kofman N, et al. Psychiatric illness and adverse pregnancy outcome. Int J Gynaecol Obstet 2008; 101:53–56.\n\t4.\t Stein A, et al. Effects of perinatal mental disorders on the fetus and child. Lancet 2014; 384:1800–1819.\n\t5.\t MacCabe JH, et al. Adverse pregnancy outcomes in mothers with affective psychosis. Bipolar Disorders 2007; 9:305–309.\n\t6.\t Boden R, et al. Risks of adverse pregnancy and birth outcomes in women treated or not treated with mood stabilisers for bipolar disorder: \npopulation based cohort study. BMJ 2012; 345:e7085.\n\t7.\t Nosarti C, et al. Preterm birth and psychiatric disorders in young adult life. Arch Gen Psychiatry 2012; 69:E1–E8.\n\t8.\t Khalifeh H, et al. Suicide in perinatal and non-perinatal women in contact with psychiatric services: 15 year findings from a UK national \ninquiry. Lancet Psychiatry 2016; 3:233–242.\n9.\t de La Rochebrochard E, et al. Children born after unplanned pregnancies and cognitive development at 3 years: social differentials in the \nUnited Kingdom Millennium Cohort. Am J Epidemiol 2013; 178:910–920.\n\t10.\t Gov.uk Guidance. Valproate (Epilim▼, Depakote▼) pregnancy prevention programme: updated educational materials 2020; https://www.\ngov.uk/drug-safety-update/valproate-epilim-depakote-pregnancy-prevention-programme-updated-educational-materials\nTable 7.1  Recommendations* – psychotropic drugs in pregnancy.  \nMinimise the number of drugs the foetus is exposed to\nPsychotropic\nRecommendations\nAntidepressants\nWomen who are at a high risk of relapse are best maintained on the same \nantidepressant during and after pregnancy.\nWhen initiating an antidepressant in a woman planning pregnancy, previous \nresponse must be taken in to account. Sertraline is an option.\nAntipsychotics\nNo clear evidence that any antipsychotic is a major teratogen. Consider using/\ncontinuing drug mother has previously responded to rather than switching prior to/\nduring pregnancy.\nScreen for adverse metabolic effects. Offer women an oral glucose tolerance test. \nArrange for the woman to give birth in a unit with access to neonatal intensive care \nfacilities.\nWhen initiating an antipsychotic in a woman planning pregnancy previous response \nmust be taken in to account. Quetiapine has relative low rate of placental passage.\nMood stabilisers\nValproate should be stopped if a woman becomes pregnant. Where medication \nhistory clearly shows that no other agent has been effective and that if valproate is \nstopped the woman will relapse a careful risk benefit analysis must be conducted. \nThe woman must understand the risks of valproate use in pregnancy. Avoid other \nanticonvulsants unless risks and consequences of relapse outweigh the known risk \nof teratogenesis. Consider using a mood stabilising antipsychotic.\nLamotrigine is also an option (bipolar depression only).\nSedatives\nNon drug measures are preferred.\nBenzodiazepines, zopiclone and zolpidem are probably not teratogenic but are best \navoided in late pregnancy. Promethazine is widely used but supporting safety data \nare scarce.\n*It cannot be overstated that treatment needs to be individualised for each patient. This summary box is not \nintended to suggest that all patients should be switched to a recommended drug. For each patient, take into \naccount their current prescription, response to treatment, history of response to other treatments and the risks \nknown to apply in pregnancy (both for current treatment and for switching).\n",
+  "raw_text_sha256": "78c496bda1d296d59baa13e8417c93e88854f0bf30a0bb86da1486f07ef81d48",
+  "coordinates_sha256": "9d0dd6b6eb036c902c5ba63131c6234f30cf09791d5e592d3efbae1a21ed16ba",
+  "block_sequence_sha256": "e5b55ffbc6a048b1663fa38e66e1a6eb2af3a8e601c54eda8a36454802946842",
+  "blocks": [
+    {
+      "block_id": "page-0715-block-0000",
+      "order": 0,
+      "text": "694    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "2d76ae06e37f1140b861918eba75490818d1cf1c573adf70c3fbe40f3a6d1223"
+    },
+    {
+      "block_id": "page-0715-block-0001",
+      "order": 1,
+      "text": "CHAPTER 7\n",
+      "bbox": [
+        18.520000457763672,
+        472.7144775390625,
+        28.0,
+        514.0584716796875
+      ],
+      "text_sha256": "6d1a2318236627f2d413db0336034ac4d71cea7172bd0baddf04c66a07292590"
+    },
+    {
+      "block_id": "page-0715-block-0002",
+      "order": 2,
+      "text": "References\n",
+      "bbox": [
+        61.889801025390625,
+        475.6493835449219,
+        117.92379760742188,
+        488.68438720703125
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0715-block-0003",
+      "order": 3,
+      "text": "\t1.\t McElhatton PR. Pregnancy: (2) General principles of drug use in pregnancy. Pharm J 2003; 270:232–234.\n\t2.\t Rasmussen SA, et al. Maternal obesity and risk of neural tube defects: a metaanalysis. Am J Obstet Gynecol 2008; 198:611–619.\n\t3.\t Schneid-Kofman N, et al. Psychiatric illness and adverse pregnancy outcome. Int J Gynaecol Obstet 2008; 101:53–56.\n\t4.\t Stein A, et al. Effects of perinatal mental disorders on the fetus and child. Lancet 2014; 384:1800–1819.\n\t5.\t MacCabe JH, et al. Adverse pregnancy outcomes in mothers with affective psychosis. Bipolar Disorders 2007; 9:305–309.\n\t6.\t Boden R, et al. Risks of adverse pregnancy and birth outcomes in women treated or not treated with mood stabilisers for bipolar disorder: \n",
+      "bbox": [
+        68.48979949951172,
+        495.1263732910156,
+        435.5698547363281,
+        547.3023681640625
+      ],
+      "text_sha256": "389d889ff2ae596f9d644343641bf287bd21d89affd0165e0f0b0a0210b23ab8"
+    },
+    {
+      "block_id": "page-0715-block-0004",
+      "order": 4,
+      "text": "population based cohort study. BMJ 2012; 345:e7085.\n\t7.\t Nosarti C, et al. Preterm birth and psychiatric disorders in young adult life. Arch Gen Psychiatry 2012; 69:E1–E8.\n\t8.\t Khalifeh H, et al. Suicide in perinatal and non-perinatal women in contact with psychiatric services: 15 year findings from a UK national \n",
+      "bbox": [
+        68.48979949951172,
+        549.1264038085938,
+        435.5577392578125,
+        574.3023681640625
+      ],
+      "text_sha256": "39bb04dfcb68855dcaa917dec0903c36cbfc6335a43abd5e147767787c00757d"
+    },
+    {
+      "block_id": "page-0715-block-0005",
+      "order": 5,
+      "text": "inquiry. Lancet Psychiatry 2016; 3:233–242.\n9.\t de La Rochebrochard E, et al. Children born after unplanned pregnancies and cognitive development at 3 years: social differentials in the \nUnited Kingdom Millennium Cohort. Am J Epidemiol 2013; 178:910–920.\n\t10.\t Gov.uk Guidance. Valproate (Epilim▼, Depakote▼) pregnancy prevention programme: updated educational materials 2020; https://www.\n",
+      "bbox": [
+        65.1897964477539,
+        576.1264038085938,
+        435.5037536621094,
+        610.3023681640625
+      ],
+      "text_sha256": "e849876bb40bd182cda806e05a292e9b18bc7874f247e72dd90a10c8f41a58b2"
+    },
+    {
+      "block_id": "page-0715-block-0006",
+      "order": 6,
+      "text": "gov.uk/drug-safety-update/valproate-epilim-depakote-pregnancy-prevention-programme-updated-educational-materials\n",
+      "bbox": [
+        76.18780517578125,
+        612.2703857421875,
+        384.29974365234375,
+        619.3023681640625
+      ],
+      "text_sha256": "06504ca4c74f5c1312559518b86cc411357eaaaa183065d0b9128c14d9744223"
+    },
+    {
+      "block_id": "page-0715-block-0007",
+      "order": 7,
+      "text": "Table 7.1  Recommendations* – psychotropic drugs in pregnancy.  \nMinimise the number of drugs the foetus is exposed to\n",
+      "bbox": [
+        67.8904037475586,
+        70.08790588378906,
+        298.1407470703125,
+        88.972900390625
+      ],
+      "text_sha256": "4b45cc9b913c7cbcc2284092b92f5091b3fdf908469077ed5302a152201cedea"
+    },
+    {
+      "block_id": "page-0715-block-0008",
+      "order": 8,
+      "text": "Psychotropic\nRecommendations\n",
+      "bbox": [
+        61.89039993286133,
+        100.71290588378906,
+        228.14291381835938,
+        109.60040283203125
+      ],
+      "text_sha256": "360a5925047f28b0e56a37344ed83df11cff2160c329dc6cccb4918dc81c422a"
+    },
+    {
+      "block_id": "page-0715-block-0009",
+      "order": 9,
+      "text": "Antidepressants\nWomen who are at a high risk of relapse are best maintained on the same \nantidepressant during and after pregnancy.\n",
+      "bbox": [
+        61.89039611816406,
+        120.83540344238281,
+        402.2254943847656,
+        139.72039794921875
+      ],
+      "text_sha256": "742378154e40f4c3940218af1136f9419f46982b8d2a8983f282a41a0299bdd2"
+    },
+    {
+      "block_id": "page-0715-block-0010",
+      "order": 10,
+      "text": "When initiating an antidepressant in a woman planning pregnancy, previous \nresponse must be taken in to account. Sertraline is an option.\n",
+      "bbox": [
+        163.14039611816406,
+        145.01539611816406,
+        408.3529968261719,
+        163.72039794921875
+      ],
+      "text_sha256": "d93471770a529f9b2ae2f5b16263b801034e867a027c440a9a3f4fbd34cad9f3"
+    },
+    {
+      "block_id": "page-0715-block-0011",
+      "order": 11,
+      "text": "Antipsychotics\nNo clear evidence that any antipsychotic is a major teratogen. Consider using/\ncontinuing drug mother has previously responded to rather than switching prior to/\nduring pregnancy.\n",
+      "bbox": [
+        61.89039611816406,
+        172.9604034423828,
+        429.1805114746094,
+        201.8428955078125
+      ],
+      "text_sha256": "0b4c6980bf1bc057f402cc02bd1ed50a81788875960965fe0b4e51992c38bdc5"
+    },
+    {
+      "block_id": "page-0715-block-0012",
+      "order": 12,
+      "text": "Screen for adverse metabolic effects. Offer women an oral glucose tolerance test. \nArrange for the woman to give birth in a unit with access to neonatal intensive care \nfacilities.\n",
+      "bbox": [
+        163.14039611816406,
+        207.1378936767578,
+        432.6229553222656,
+        235.84039306640625
+      ],
+      "text_sha256": "5f94a60506feddb54b13b4a41c7719bbb0daa90a5e58152dc3445be4f09100ef"
+    },
+    {
+      "block_id": "page-0715-block-0013",
+      "order": 13,
+      "text": "When initiating an antipsychotic in a woman planning pregnancy previous response \nmust be taken in to account. Quetiapine has relative low rate of placental passage.\n",
+      "bbox": [
+        163.14039611816406,
+        241.13539123535156,
+        432.3755187988281,
+        259.84039306640625
+      ],
+      "text_sha256": "fdb29b2369265688ca0bb0498395eabc8bd4d3c6d2a7270169a8d7ed5bf39490"
+    },
+    {
+      "block_id": "page-0715-block-0014",
+      "order": 14,
+      "text": "Mood stabilisers\nValproate should be stopped if a woman becomes pregnant. Where medication \nhistory clearly shows that no other agent has been effective and that if valproate is \nstopped the woman will relapse a careful risk benefit analysis must be conducted. \nThe woman must understand the risks of valproate use in pregnancy. Avoid other \nanticonvulsants unless risks and consequences of relapse outweigh the known risk \nof teratogenesis. Consider using a mood stabilising antipsychotic.\n",
+      "bbox": [
+        61.89039611816406,
+        269.08038330078125,
+        429.1429138183594,
+        327.95538330078125
+      ],
+      "text_sha256": "41ab76bc12ac0b7d75c3960e7d450252d5faaf690827ce23d7e162673a7793ea"
+    },
+    {
+      "block_id": "page-0715-block-0015",
+      "order": 15,
+      "text": "Lamotrigine is also an option (bipolar depression only).\n",
+      "bbox": [
+        163.14039611816406,
+        333.2503967285156,
+        337.2154541015625,
+        341.9578857421875
+      ],
+      "text_sha256": "f943626e59cc2b4768141397dd1d1bd0739247e08ad7ff5187af043e8442cefb"
+    },
+    {
+      "block_id": "page-0715-block-0016",
+      "order": 16,
+      "text": "Sedatives\nNon drug measures are preferred.\n",
+      "bbox": [
+        61.89039611816406,
+        351.1978759765625,
+        270.952880859375,
+        360.08538818359375
+      ],
+      "text_sha256": "fc1ff1bb6d34072937ab78837c50c2673bd2152bb3c4e8c049bca1b177797a73"
+    },
+    {
+      "block_id": "page-0715-block-0017",
+      "order": 17,
+      "text": "Benzodiazepines, zopiclone and zolpidem are probably not teratogenic but are best \navoided in late pregnancy. Promethazine is widely used but supporting safety data \nare scarce.\n",
+      "bbox": [
+        163.14039611816406,
+        365.3804016113281,
+        431.53546142578125,
+        394.0828857421875
+      ],
+      "text_sha256": "31757489a45735b63ae3f4269c0a2d79ae305c6d2f4ae522effaa7ce962594eb"
+    },
+    {
+      "block_id": "page-0715-block-0018",
+      "order": 18,
+      "text": "*It cannot be overstated that treatment needs to be individualised for each patient. This summary box is not \nintended to suggest that all patients should be switched to a recommended drug. For each patient, take into \naccount their current prescription, response to treatment, history of response to other treatments and the risks \nknown to apply in pregnancy (both for current treatment and for switching).\n",
+      "bbox": [
+        61.89039611816406,
+        403.8778991699219,
+        419.28802490234375,
+        442.6603698730469
+      ],
+      "text_sha256": "e23f1af4a828de572a068562b5e29a96a305c85b115a62fa4e3e0276622c8563"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

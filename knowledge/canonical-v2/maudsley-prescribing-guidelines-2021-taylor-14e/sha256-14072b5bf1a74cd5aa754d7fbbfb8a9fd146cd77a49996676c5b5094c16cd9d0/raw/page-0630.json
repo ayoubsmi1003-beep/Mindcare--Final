@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0630",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 630,
+  "source_page_index": 629,
+  "source_page_display": 630,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Prescribing in older people    609\nCHAPTER  6\nongoing cholinesterase inhibitors improved key outcomes compared with cholinester-\nase inhibitor monotherapy, including measures of cognition and global status. The most \ncommon adverse events were headache, diarrhoea and dizziness.31\nNote that these high doses of donepezil and memantine have not yet been approved \nin the UK and many other countries. In addition, most older people seen in practice \nwith AD are likely to be frailer and have more co-morbidities than patients in clinical \ntrials and may therefore be less likely to tolerate the higher doses.\nCombination treatment\nAlthough studies investigating the benefits of combining AChE-Is and memantine have \nfound conflicting results, both the European Academy of Neurology (EAN) Guidelines \nand the UK’s National Institute for Health and Care Excellence (NICE)1 recommend \nthe use of a combination of AChE-I plus memantine rather than AChE-I alone in \npatients with moderate-to-severe AD. The strength of the evidence supporting this rec-\nommendation is rather weak.32 Studies have confirmed that there are no pharmacoki-\nnetic or pharmacodynamic interactions between AChE-Is and memantine.33,34\nTolerability\nDrug tolerability may differ between AChE-Is, but, again, in the absence of sufficient \ndirect comparisons, it is difficult to draw conclusions. Overall tolerability can be \nbroadly evaluated by reference to the numbers withdrawing from clinical trials. \nWithdrawal rates in trials of donepezil35,36 ranged from 4% to 16% (placebo 1–7%). \nWith rivastigmine,37,38 rates ranged from 7% to 29% (placebo 7%) and with galan-\ntamine39–41 from 7% to 23% (placebo 7–9%). These figures relate to withdrawals spe-\ncifically associated with adverse effects. The number needed to harm (NNH) has been \nreported to be 12.16 A study of the French pharmacovigilance database identified age, \nthe use of antipsychotic drugs, antihypertensives and drugs targeting the alimentary \ntract and metabolism as factors associated with serious reactions to AChE-Is.42\nTolerability seems to be affected by speed of titration and, perhaps less clearly, by \ndose. Most adverse effects occurred in trials during titration, and slower titration sched-\nules are recommended in clinical use. This may mean that these drugs are equally well \ntolerated in practice.\nRivastigmine patches offer convenience and a superior tolerability profile to rivastig-\nmine capsules.27,28 Data from three trials found that rivastigmine patch was better toler-\nated than the capsules with fewer GI adverse effects and fewer discontinuations due to \nthese adverse effects.43 Data support recommendations for patients on high doses of \nrivastigmine capsules (>6mg/day) to switch directly to the 9.5mg/24 hours patch, while \nthose on lower doses (≤6mg/day) should start on 4.6mg/hour patch for 4 weeks before \nincreasing to the 9.5mg/hour patch. This latter switch is also recommended for patients \nswitching from other oral cholinesterase inhibitors to the rivastigmine patch (with a \n1 week washout period in patients who are sensitive to adverse effects or who have very \nlow body weight or a history of bradycardia).44 It is possible to consider increasing the \ndose to 13.3mg/24 hours after 6 months on 9.5mg/24 hours if tolerated, and meaning-\nful cognitive or functional decline occurs. A 48-week RCT found the higher strength \n",
+  "raw_text_sha256": "12e78327ac5e613c14ad5e55482908af0574b9ed0570f84c3b3f0ec64d4ceb99",
+  "coordinates_sha256": "cbd94e164f8b32c8be46a91c45fafec356ff6bf7002bff8ba0b331087b761804",
+  "block_sequence_sha256": "13ec68675b24cd93d635d190c7ac16e3106c75d631bffa17174402e37efca899",
+  "blocks": [
+    {
+      "block_id": "page-0630-block-0000",
+      "order": 0,
+      "text": "Prescribing in older people    609\n",
+      "bbox": [
+        281.576904296875,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "1972a42e977b68b684144fcc87084e1ff21486420a45bc60a4922a3ef6c391a1"
+    },
+    {
+      "block_id": "page-0630-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        454.4096984863281,
+        405.35260009765625,
+        463.88970947265625,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0630-block-0002",
+      "order": 2,
+      "text": "ongoing cholinesterase inhibitors improved key outcomes compared with cholinester-\nase inhibitor monotherapy, including measures of cognition and global status. The most \ncommon adverse events were headache, diarrhoea and dizziness.31\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.76995849609375,
+        98.27041625976562
+      ],
+      "text_sha256": "9bc8101034f337ca87e7ca7b1cd65b59992cc549a277839fde090748dc2ff1de"
+    },
+    {
+      "block_id": "page-0630-block-0003",
+      "order": 3,
+      "text": "Note that these high doses of donepezil and memantine have not yet been approved \nin the UK and many other countries. In addition, most older people seen in practice \nwith AD are likely to be frailer and have more co-morbidities than patients in clinical \ntrials and may therefore be less likely to tolerate the higher doses.\n",
+      "bbox": [
+        48.0,
+        98.5504150390625,
+        422.8300476074219,
+        146.27041625976562
+      ],
+      "text_sha256": "14ec1f4ccaee94c15b1f68e4452dc9041dbb04ac45a3571bda16fa0cd4193049"
+    },
+    {
+      "block_id": "page-0630-block-0004",
+      "order": 4,
+      "text": "Combination treatment\n",
+      "bbox": [
+        48.0,
+        164.64041137695312,
+        158.57998657226562,
+        176.49041748046875
+      ],
+      "text_sha256": "c2cef46b98d7542dc200d35ff4f56c80e7dfee75f7cb968e4098047a7f020693"
+    },
+    {
+      "block_id": "page-0630-block-0005",
+      "order": 5,
+      "text": "Although studies investigating the benefits of combining AChE-Is and memantine have \nfound conflicting results, both the European Academy of Neurology (EAN) Guidelines \nand the UK’s National Institute for Health and Care Excellence (NICE)1 recommend \nthe use of a combination of AChE-I plus memantine rather than AChE-I alone in \npatients with moderate-to-severe AD. The strength of the evidence supporting this rec-\nommendation is rather weak.32 Studies have confirmed that there are no pharmacoki-\nnetic or pharmacodynamic interactions between AChE-Is and memantine.33,34\n",
+      "bbox": [
+        47.995513916015625,
+        182.5504150390625,
+        422.82000732421875,
+        266.2704772949219
+      ],
+      "text_sha256": "7967ae3964b172716f1574250a38911ff825661c61510f154f7f0b0417731bac"
+    },
+    {
+      "block_id": "page-0630-block-0006",
+      "order": 6,
+      "text": "Tolerability\n",
+      "bbox": [
+        48.0,
+        284.6404724121094,
+        100.61998748779297,
+        296.490478515625
+      ],
+      "text_sha256": "09cb33631f690bc23fa3ec68f265ac5a551c2f1c7d4d1b5bf14ffe54dbae3e07"
+    },
+    {
+      "block_id": "page-0630-block-0007",
+      "order": 7,
+      "text": "Drug tolerability may differ between AChE-Is, but, again, in the absence of sufficient \ndirect comparisons, it is difficult to draw conclusions. Overall tolerability can be \nbroadly evaluated by reference to the numbers withdrawing from clinical trials. \nWithdrawal rates in trials of donepezil35,36 ranged from 4% to 16% (placebo 1–7%). \nWith rivastigmine,37,38 rates ranged from 7% to 29% (placebo 7%) and with galan-\ntamine39–41 from 7% to 23% (placebo 7–9%). These figures relate to withdrawals spe-\ncifically associated with adverse effects. The number needed to harm (NNH) has been \nreported to be 12.16 A study of the French pharmacovigilance database identified age, \nthe use of antipsychotic drugs, antihypertensives and drugs targeting the alimentary \ntract and metabolism as factors associated with serious reactions to AChE-Is.42\n",
+      "bbox": [
+        47.99729919433594,
+        302.55047607421875,
+        422.79730224609375,
+        422.2704772949219
+      ],
+      "text_sha256": "507026c0c0716d243d200d824aca8550fa946f16fe88d7a7a5e4de3673e2d32e"
+    },
+    {
+      "block_id": "page-0630-block-0008",
+      "order": 8,
+      "text": "Tolerability seems to be affected by speed of titration and, perhaps less clearly, by \ndose. Most adverse effects occurred in trials during titration, and slower titration sched-\nules are recommended in clinical use. This may mean that these drugs are equally well \ntolerated in practice.\n",
+      "bbox": [
+        48.0,
+        422.55047607421875,
+        422.800048828125,
+        470.2704772949219
+      ],
+      "text_sha256": "f6d3de44d03ed87fa6db4d4acd03d4bdd8d1d335886d2c0b085bf46204ef1f12"
+    },
+    {
+      "block_id": "page-0630-block-0009",
+      "order": 9,
+      "text": "Rivastigmine patches offer convenience and a superior tolerability profile to rivastig-\nmine capsules.27,28 Data from three trials found that rivastigmine patch was better toler-\nated than the capsules with fewer GI adverse effects and fewer discontinuations due to \nthese adverse effects.43 Data support recommendations for patients on high doses of \nrivastigmine capsules (>6mg/day) to switch directly to the 9.5mg/24 hours patch, while \nthose on lower doses (≤6mg/day) should start on 4.6mg/hour patch for 4 weeks before \nincreasing to the 9.5mg/hour patch. This latter switch is also recommended for patients \nswitching from other oral cholinesterase inhibitors to the rivastigmine patch (with a \n1 week washout period in patients who are sensitive to adverse effects or who have very \nlow body weight or a history of bradycardia).44 It is possible to consider increasing the \ndose to 13.3mg/24 hours after 6 months on 9.5mg/24 hours if tolerated, and meaning-\nful cognitive or functional decline occurs. A 48-week RCT found the higher strength \n",
+      "bbox": [
+        47.99708557128906,
+        470.31048583984375,
+        422.820556640625,
+        614.2704467773438
+      ],
+      "text_sha256": "bf3bb2773c502d3741c76b1d6f103fb1571c4c954d488c3ee709cfd34e5e28e7"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

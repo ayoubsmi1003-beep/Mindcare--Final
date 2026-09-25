@@ -1,0 +1,371 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0710",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 710,
+  "source_page_index": 709,
+  "source_page_display": 710,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Pregnancy and breastfeeding    689\nCHAPTER 7\nBipolar illness during pregnancy and postpartum\n■\n■The risk of relapse during pregnancy if mood stabilising medication is discontinued \nis high; one study found that bipolar women who were euthymic at conception and \ndiscontinued mood stabilisers were twice as likely to relapse and spent five times as \nlong in relapse ill than women who continued mood stabilisers.181 However, others \nhave found illness severity rather than medication changes in pregnancy to predict \npregnancy relapse.182\n■\n■The risk of relapse after delivery is hugely increased.\n■\n■The mental health of the mother influences foetal well-being, obstetric outcome and \nchild development.\n■\n■Women with bipolar illness are 50% more likely than controls to have their labour \ninduced or a caesarean delivery, a preterm delivery, and a neonate that is small for \ngestational age; the neonate is also more likely to have hypoglycaemia and micro-\ncephaly.6 These associations hold true in both treated and untreated women.\n■\n■Bipolar illness itself does not seem to significantly increase the malformation rate; \nany such association is with mood stabilising drugs.6\nThe risks of not stabilising mood include:\n■\n■Harm to the mother through poor self-care, lack of obstetric care or self-harm.\n■\n■Harm to the foetus or neonate (ranging from neglect to infanticide).\nBox 7.3  Recommendations – depression in pregnancy\n■\n■Patients who are already receiving antidepressants and are at high risk of relapse are best \nmaintained on the same antidepressant during and after pregnancy.\n■\n■Those who develop a moderate–severe or severe depressive illness during pregnancy should be \ntreated with antidepressant drugs.\n■\n■If initiating an antidepressant during pregnancy or for a woman considering pregnancy previous \nresponse to treatment must be taken into account. The antidepressant which has previously \nproved to be effective should be considered. For previously untreated patients, sertraline may be \nconsidered.\n■\n■Screen for alcohol use and be vigilant for the development of hypertension and preeclampsia. \nWomen who take SSRIs may be at increased risk of postpartum haemorrhage.\n■\n■When taken in late pregnancy, SSRIs may increase the risk of persistent pulmonary hypertension \nof the new-born. The absolute risk is very low.\n■\n■The neonate may experience discontinuation symptoms, which are usually mild, such as \nagitation and irritability, or rarely respiratory distress and convulsions (with SSRIs). The risk is \nassumed to be particularly high with short half-life drugs such as paroxetine and venlafaxine. \nContinuing to breastfeed and then ‘weaning’ by switching to mixed (breast/bottle) feeding may \nhelp reduce the severity of reactions.\nNICE recommends ECT for pregnant women with severe depression, severe mixed \naffective states or mania, or catatonia, whose physical health or that of the fetus is at \nserious risk. Box 7.3 summarises recommendations for treating depression in \npregnancy.\n",
+  "raw_text_sha256": "c75b301a3849926d612773e549fce653b30f76be768d5ee73201eb27f720fdf7",
+  "coordinates_sha256": "e4d1f50d57d0b2bfb95916ba3e6fd1a420c360f5382551e0df291baafd39a07b",
+  "block_sequence_sha256": "070724ebfd4b63ebc4f798ae6e19c61d50ff099a5ae2f90af54414d0c5c395d8",
+  "blocks": [
+    {
+      "block_id": "page-0710-block-0000",
+      "order": 0,
+      "text": "Pregnancy and breastfeeding    689\n",
+      "bbox": [
+        271.769287109375,
+        31.395221710205078,
+        420.00048828125,
+        41.0272216796875
+      ],
+      "text_sha256": "a5ce59c0d7771cc93243cef0c80c97ce00a2f57f6220f19e7bc4b0623aeeb26d"
+    },
+    {
+      "block_id": "page-0710-block-0001",
+      "order": 1,
+      "text": "CHAPTER 7\n",
+      "bbox": [
+        454.4096984863281,
+        472.7144775390625,
+        463.88970947265625,
+        514.0584716796875
+      ],
+      "text_sha256": "6d1a2318236627f2d413db0336034ac4d71cea7172bd0baddf04c66a07292590"
+    },
+    {
+      "block_id": "page-0710-block-0002",
+      "order": 2,
+      "text": "Bipolar illness during pregnancy and postpartum\n",
+      "bbox": [
+        48.0,
+        363.95538330078125,
+        300.2189025878906,
+        376.9903869628906
+      ],
+      "text_sha256": "540ea814a2f5eab81e90dace664e06ba4a5ec7d8545591d7dc2c38c0ae07e649"
+    },
+    {
+      "block_id": "page-0710-block-0003",
+      "order": 3,
+      "text": "■\n■The risk of relapse during pregnancy if mood stabilising medication is discontinued \n",
+      "bbox": [
+        47.999900817871094,
+        382.8003845214844,
+        422.8199462890625,
+        394.5203857421875
+      ],
+      "text_sha256": "84ac87d8a18a3f83893f1fa42656aee2dd1f16e54d4c8bd206162ee19312e2dc"
+    },
+    {
+      "block_id": "page-0710-block-0004",
+      "order": 4,
+      "text": "is high; one study found that bipolar women who were euthymic at conception and \ndiscontinued mood stabilisers were twice as likely to relapse and spent five times as \nlong in relapse ill than women who continued mood stabilisers.181 However, others \nhave found illness severity rather than medication changes in pregnancy to predict \npregnancy relapse.182\n",
+      "bbox": [
+        56.99847412109375,
+        394.8003845214844,
+        422.81988525390625,
+        454.5203857421875
+      ],
+      "text_sha256": "4c26573186516d80b253f4898feec58247db759a9062d83d75e7b7274f333949"
+    },
+    {
+      "block_id": "page-0710-block-0005",
+      "order": 5,
+      "text": "■\n■The risk of relapse after delivery is hugely increased.\n",
+      "bbox": [
+        47.999900817871094,
+        454.8003845214844,
+        282.58001708984375,
+        466.5203857421875
+      ],
+      "text_sha256": "fb005cb6e0361a6186676cba64b11491262d6717663c9ff4851882a658432734"
+    },
+    {
+      "block_id": "page-0710-block-0006",
+      "order": 6,
+      "text": "■\n■The mental health of the mother influences foetal well-being, obstetric outcome and \n",
+      "bbox": [
+        47.999900817871094,
+        466.8003845214844,
+        422.77996826171875,
+        478.5203857421875
+      ],
+      "text_sha256": "b7bfbfc76d01e97d558919c2a4ed9c9f6b670556b11bb6f1f95134ab02213605"
+    },
+    {
+      "block_id": "page-0710-block-0007",
+      "order": 7,
+      "text": "child development.\n",
+      "bbox": [
+        57.0,
+        478.8003845214844,
+        138.6699981689453,
+        490.5203857421875
+      ],
+      "text_sha256": "6102973d26fd0365e570168a2afbf00c824868488b9601cd4a11adddc63248df"
+    },
+    {
+      "block_id": "page-0710-block-0008",
+      "order": 8,
+      "text": "■\n■Women with bipolar illness are 50% more likely than controls to have their labour \n",
+      "bbox": [
+        47.999900817871094,
+        490.8003845214844,
+        422.8000183105469,
+        502.5203857421875
+      ],
+      "text_sha256": "e511cd1ec2bc4363317c434d9572f072dd88049beb78905fbb3cb25f66e29218"
+    },
+    {
+      "block_id": "page-0710-block-0009",
+      "order": 9,
+      "text": "induced or a caesarean delivery, a preterm delivery, and a neonate that is small for \ngestational age; the neonate is also more likely to have hypoglycaemia and micro-\ncephaly.6 These associations hold true in both treated and untreated women.\n",
+      "bbox": [
+        57.0,
+        502.80035400390625,
+        422.7299499511719,
+        538.5203857421875
+      ],
+      "text_sha256": "167e64f52da7bbfbc3f190fc75de4fe9e791aea62671c81301a6a8b2612f672a"
+    },
+    {
+      "block_id": "page-0710-block-0010",
+      "order": 10,
+      "text": "■\n■Bipolar illness itself does not seem to significantly increase the malformation rate; \n",
+      "bbox": [
+        47.999900817871094,
+        538.8003540039062,
+        422.7899475097656,
+        550.5203857421875
+      ],
+      "text_sha256": "088fbe8f6f86746f8c45054b7fe49ed286339bafae4cd7285c569745afea5320"
+    },
+    {
+      "block_id": "page-0710-block-0011",
+      "order": 11,
+      "text": "any such association is with mood stabilising drugs.6\n",
+      "bbox": [
+        57.0,
+        550.8003540039062,
+        283.6501770019531,
+        562.5203857421875
+      ],
+      "text_sha256": "394e03c49c36fd90f8dfaa9323b66160b7f73d907e409ec3cbb75c3fea109731"
+    },
+    {
+      "block_id": "page-0710-block-0012",
+      "order": 12,
+      "text": "The risks of not stabilising mood include:\n",
+      "bbox": [
+        58.0,
+        568.8004150390625,
+        236.93997192382812,
+        580.5204467773438
+      ],
+      "text_sha256": "6a6ee7036148c4e16fcc330d61ee033a5a45658085d2ad00694a8d81ce121907"
+    },
+    {
+      "block_id": "page-0710-block-0013",
+      "order": 13,
+      "text": "■\n■Harm to the mother through poor self-care, lack of obstetric care or self-harm.\n",
+      "bbox": [
+        47.999900817871094,
+        586.8004150390625,
+        396.6399841308594,
+        598.5204467773438
+      ],
+      "text_sha256": "e46e6918df9518de37fa2836da6a3574370a35dd03146dc0ad0ab7427ec0da0e"
+    },
+    {
+      "block_id": "page-0710-block-0014",
+      "order": 14,
+      "text": "■\n■Harm to the foetus or neonate (ranging from neglect to infanticide).\n",
+      "bbox": [
+        47.999900817871094,
+        598.8004150390625,
+        349.7898864746094,
+        610.5204467773438
+      ],
+      "text_sha256": "04da47b577f692a0dab0afe7f0b07e02e37b28f27d4a21a4389a73b7cb19f01c"
+    },
+    {
+      "block_id": "page-0710-block-0015",
+      "order": 15,
+      "text": "Box 7.3  Recommendations – depression in pregnancy\n",
+      "bbox": [
+        55.25,
+        139.3679962158203,
+        252.3820037841797,
+        149.44049072265625
+      ],
+      "text_sha256": "98926692559169a38f2febbc27c82db61dff62511833c06ea5c2bd27b687cbc3"
+    },
+    {
+      "block_id": "page-0710-block-0016",
+      "order": 16,
+      "text": "■\n■Patients who are already receiving antidepressants and are at high risk of relapse are best \n",
+      "bbox": [
+        55.249900817871094,
+        164.89700317382812,
+        388.07611083984375,
+        174.7655029296875
+      ],
+      "text_sha256": "58dbb9605abf96145c8a1a6f50da4656f2ef638a61bd2733e15cec97d00f0d9a"
+    },
+    {
+      "block_id": "page-0710-block-0017",
+      "order": 17,
+      "text": "maintained on the same antidepressant during and after pregnancy.\n",
+      "bbox": [
+        63.75,
+        174.89300537109375,
+        309.6805419921875,
+        184.76150512695312
+      ],
+      "text_sha256": "0d2cef49a780e2b4c6020ac1f6cd382cbef41b9fad32dae6a9ea29cf3d492659"
+    },
+    {
+      "block_id": "page-0710-block-0018",
+      "order": 18,
+      "text": "■\n■Those who develop a moderate–severe or severe depressive illness during pregnancy should be \n",
+      "bbox": [
+        55.249900817871094,
+        184.89700317382812,
+        408.8756103515625,
+        194.7655029296875
+      ],
+      "text_sha256": "3626805c15f83a6684e4cde46086e7ef47d57920d4142cebb33e82e858d97126"
+    },
+    {
+      "block_id": "page-0710-block-0019",
+      "order": 19,
+      "text": "treated with antidepressant drugs.\n",
+      "bbox": [
+        63.75,
+        194.89300537109375,
+        188.13050842285156,
+        204.76150512695312
+      ],
+      "text_sha256": "2f29d57c484123fa0f432efd57ea2f86f19849ef0943bb5594c4d99ebc0cc8f7"
+    },
+    {
+      "block_id": "page-0710-block-0020",
+      "order": 20,
+      "text": "■\n■If initiating an antidepressant during pregnancy or for a woman considering pregnancy previous \n",
+      "bbox": [
+        55.249900817871094,
+        204.89700317382812,
+        412.6496276855469,
+        214.7655029296875
+      ],
+      "text_sha256": "16eff29c76263bd84c656f969406dfe0daa598028188a380a3b46bc275c8eb6a"
+    },
+    {
+      "block_id": "page-0710-block-0021",
+      "order": 21,
+      "text": "response to treatment must be taken into account. The antidepressant which has previously \nproved to be effective should be considered. For previously untreated patients, sertraline may be \nconsidered.\n",
+      "bbox": [
+        63.75,
+        214.89300537109375,
+        413.8821105957031,
+        244.75350952148438
+      ],
+      "text_sha256": "c6ee24adda66f7e0bf92fc6a1516e4a88707e4fa2484f79799522b6584bb9ceb"
+    },
+    {
+      "block_id": "page-0710-block-0022",
+      "order": 22,
+      "text": "■\n■Screen for alcohol use and be vigilant for the development of hypertension and preeclampsia. \n",
+      "bbox": [
+        55.249900817871094,
+        244.89700317382812,
+        404.9146423339844,
+        254.7655029296875
+      ],
+      "text_sha256": "2c51c30c963f8d9463e44fd76f051af19ebbe46913afc44f28d2af5a72d3b497"
+    },
+    {
+      "block_id": "page-0710-block-0023",
+      "order": 23,
+      "text": "Women who take SSRIs may be at increased risk of postpartum haemorrhage.\n",
+      "bbox": [
+        63.75,
+        254.89300537109375,
+        346.3411865234375,
+        264.7615051269531
+      ],
+      "text_sha256": "ab3477d8dc215ed9ca570f898e711e49d6f45e7e25e28559cde3f8bfb0af3285"
+    },
+    {
+      "block_id": "page-0710-block-0024",
+      "order": 24,
+      "text": "■\n■When taken in late pregnancy, SSRIs may increase the risk of persistent pulmonary hypertension \n",
+      "bbox": [
+        55.249900817871094,
+        264.8970031738281,
+        412.6156921386719,
+        274.7655029296875
+      ],
+      "text_sha256": "cc0a86d01bd20b8da077147b2058196bfad22d659132a4098eb6fdd0770b3110"
+    },
+    {
+      "block_id": "page-0710-block-0025",
+      "order": 25,
+      "text": "of the new-born. The absolute risk is very low.\n",
+      "bbox": [
+        63.75,
+        274.89300537109375,
+        231.1065216064453,
+        284.7615051269531
+      ],
+      "text_sha256": "11bb1910c0217eb725474d50b24d792f169a43c8cfeb3a01de7fe587a0c46bfb"
+    },
+    {
+      "block_id": "page-0710-block-0026",
+      "order": 26,
+      "text": "■\n■The neonate may experience discontinuation symptoms, which are usually mild, such as \n",
+      "bbox": [
+        55.249900817871094,
+        284.8970031738281,
+        383.3330383300781,
+        294.7655029296875
+      ],
+      "text_sha256": "dcb22c157a7ca9ddc13e2346f43de838b71cf1d3082b7d78176a55c68635a351"
+    },
+    {
+      "block_id": "page-0710-block-0027",
+      "order": 27,
+      "text": "agitation and irritability, or rarely respiratory distress and convulsions (with SSRIs). The risk is \nassumed to be particularly high with short half-life drugs such as paroxetine and venlafaxine. \nContinuing to breastfeed and then ‘weaning’ by switching to mixed (breast/bottle) feeding may \nhelp reduce the severity of reactions.\n",
+      "bbox": [
+        63.75,
+        294.89300537109375,
+        412.02069091796875,
+        334.74951171875
+      ],
+      "text_sha256": "181c50b4b775a5a7e01580fd25e0c86a54a53591c5a0b61b94effb1a8aa6055c"
+    },
+    {
+      "block_id": "page-0710-block-0028",
+      "order": 28,
+      "text": "NICE recommends ECT for pregnant women with severe depression, severe mixed \naffective states or mania, or catatonia, whose physical health or that of the fetus is at \nserious risk. Box 7.3 summarises recommendations for treating depression in \npregnancy.\n",
+      "bbox": [
+        57.0,
+        62.55029296875,
+        422.7999572753906,
+        110.27029418945312
+      ],
+      "text_sha256": "ff1951661ae1bba0ca835f91cc17debeb1111c8c8fa12fb0cf0644c87ef15477"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

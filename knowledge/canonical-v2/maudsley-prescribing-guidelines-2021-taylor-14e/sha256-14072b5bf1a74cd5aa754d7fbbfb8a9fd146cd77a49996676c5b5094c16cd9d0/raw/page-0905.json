@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0905",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 905,
+  "source_page_index": 904,
+  "source_page_display": 905,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "884    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 13\nTable 13.2  Psychotropics and driving\nDrug\nEffect\nAlcohol\nAlcohol causes sedation and impaired coordination, vision, attention and information-\nprocessing. Alcohol-dependent drivers are twice as likely to be involved in traffic accidents and \noffences than licensed drivers as a whole,5 and a third of all fatal RTAs involve alcohol-\ndependent drivers.5 Young drivers who use alcohol in combination with illicit drugs are \nparticularly at high risk.12,13\nAntiseizure \nmedication\nInitial, dose-related side effects may affect driving ability (e.g. blurred vision, ataxia and \nsedation). There are strict rules regarding epilepsy and driving. Lamotrigine may have limited \neffects on driving ability.14\nAntidepressants\nPeople who are prescribed an antidepressant have an increased risk of being involved in a RTA \nparticularly at treatment initiation. SSRIs may have some advantages over TCAs, but driving \nability is still diminished compared with healthy individuals,15 suggesting that depression itself \nmay make a major contribution.16,17 SSRIs tend not to impair driving in healthy volunteers.18–20 In \nremitted patients on SSRIs, driving performance may likewise not be impaired.21 Initiation \neffects caused by mirtazapine diminish to an extent when it is given as a single dose at night, \nbut many people experience substantial hangover which can impair driving.22 Effects may \ndisappear in chronic treatment.23 Trazodone also appears to impair driving ability.24 Agomelatine \nand venlafaxine may actually improve driving performance.25 Vortioxetine has no effect.23 \nIntranasal esketamine seems to have no effect on driving ability 8 hours post dose.26\nAntipsychotics\nSedation and EPS can impair coordination and response time.2 A high proportion of patients \ntreated with antipsychotics may have an impaired ability to drive.27,28 One study found that \npatients with schizophrenia taking atypical antipsychotics or clozapine performed better in tests \nof skills related to car-driving ability than patients with schizophrenia taking first-generation \nantipsychotics,29 but 25% of all patients were severely impaired with respect to driving skills.\nHypnotics and \nAnxiolytics\nBenzodiazepines cause sedation and impaired attention, information processing, memory and \nmotor coordination, and along with opiates are the medicines most frequently implicated in \nRTAs.30,31 When used as anxiolytics and hypnotics, benzodiazepines, zopiclone and zolpidem are \nassociated with an increased risk of RTAs.30 There is some gender variation in the pharmacokinetics \nof zolpidem with females having higher drug plasma concentrations than males for any given dose; \nthe driving ability of females may therefore be particularly impaired.3 Zolpidem may additionally be \nassociated with automatism and ‘sleep driving’.32 Zaleplon and the newer hypnotics acting at \nmelatonin or serotonin receptors have not been found to have any negative residual effects on \ndriving ability.33 Orexin receptor antagonists (suvorexant and lemborexant), available in some \ncountries, appear not to impair driving the day after being taken.34,35\nLithium\nLithium may impair visual adaptation to the dark,2 but the implications for driving safety are \nunknown. Many patients treated with lithium can be shown to be unfit to drive,14 although the \nexact contribution of lithium is difficult to determine. Elderly people who take lithium may be at \nincreased risk of being involved in an injurious motor vehicle crash.36\nMethylphenidate\nSome studies have demonstrated that reaction time is longer in patients with ADHD which may in \nturn be associated with increased driving risks.37 Other studies have found that methylphenidate \nimproved driving performance in adults with ADHD,38 again suggesting that illness may make a \nbigger contribution to fitness to drive than the specific pharmacology of the treatment.38\nOpioids\nOpioids have major adverse effect on the risk of RTA.39 Buprenorphine and methadone reduce \ndriving ability at low doses in non addicts.40\nADHD, attention deficit hyperactivity disorder; EPS, extrapyramidal symptoms; RTA, road traffic accident; SSRI, \nselective serotonin reuptake inhibitor; TCA, tricyclic antidepressant.\n",
+  "raw_text_sha256": "36acf475e530000008e2ecd14175e3d6e0e10c499edcfb82a5402d8b735ab577",
+  "coordinates_sha256": "0301209f4b23e493f0093b930071086ea8436bcd361303f6dc2c33e36d9c90fa",
+  "block_sequence_sha256": "1b4d3b33599db3a72a9831d33c379b8267e754c39e1d9e83e1457d101fa9de05",
+  "blocks": [
+    {
+      "block_id": "page-0905-block-0000",
+      "order": 0,
+      "text": "884    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "4241c6786280047f446e974a2b8e7fb32999333499757c84bb1f5d4d5f9d09ac"
+    },
+    {
+      "block_id": "page-0905-block-0001",
+      "order": 1,
+      "text": "CHAPTER 13\n",
+      "bbox": [
+        18.520000457763672,
+        272.95111083984375,
+        28.0,
+        318.74310302734375
+      ],
+      "text_sha256": "a01ce0756ef6b5d41c48be6624d8bd154fa95cf67cb49768f2593332d3a2ec98"
+    },
+    {
+      "block_id": "page-0905-block-0002",
+      "order": 2,
+      "text": "Table 13.2  Psychotropics and driving\n",
+      "bbox": [
+        67.88980102539062,
+        69.41468811035156,
+        187.3722686767578,
+        78.30218505859375
+      ],
+      "text_sha256": "015f01145ee963c41b1bc0aad3a811e8c756c7a23d09d76c607cd88eda6c3dbe"
+    },
+    {
+      "block_id": "page-0905-block-0003",
+      "order": 3,
+      "text": "Drug\nEffect\n",
+      "bbox": [
+        61.889801025390625,
+        89.53968811035156,
+        147.31480407714844,
+        98.42718505859375
+      ],
+      "text_sha256": "a47a5de435df89608f1e0fde34dd273d21e2c20dc4713a3c2d814e2f1ff2e551"
+    },
+    {
+      "block_id": "page-0905-block-0004",
+      "order": 4,
+      "text": "Alcohol\nAlcohol causes sedation and impaired coordination, vision, attention and information-\nprocessing. Alcohol-dependent drivers are twice as likely to be involved in traffic accidents and \noffences than licensed drivers as a whole,5 and a third of all fatal RTAs involve alcohol-\ndependent drivers.5 Young drivers who use alcohol in combination with illicit drugs are \nparticularly at high risk.12,13\n",
+      "bbox": [
+        61.889801025390625,
+        107.34468841552734,
+        430.394775390625,
+        156.0496826171875
+      ],
+      "text_sha256": "62519d9751c3a36e599771d93fc3f1c2024a9eb212f78c3e802ff96d424c8cf0"
+    },
+    {
+      "block_id": "page-0905-block-0005",
+      "order": 5,
+      "text": "Antiseizure \nmedication\n",
+      "bbox": [
+        61.889801025390625,
+        163.3697052001953,
+        99.25479888916016,
+        182.07470703125
+      ],
+      "text_sha256": "df65f9483deda8dbee61c0d95e0b3fec334bca95f2854c30a0a6d979ab82d575"
+    },
+    {
+      "block_id": "page-0905-block-0006",
+      "order": 6,
+      "text": "Initial, dose-related side effects may affect driving ability (e.g. blurred vision, ataxia and \nsedation). There are strict rules regarding epilepsy and driving. Lamotrigine may have limited \neffects on driving ability.14\n",
+      "bbox": [
+        127.02730560302734,
+        163.3697052001953,
+        423.1723937988281,
+        192.07220458984375
+      ],
+      "text_sha256": "b5b2465ff84c3faff0931f3f8aba7543b106f73a58d1681c8f5accf27e28f549"
+    },
+    {
+      "block_id": "page-0905-block-0007",
+      "order": 7,
+      "text": "Antidepressants\nPeople who are prescribed an antidepressant have an increased risk of being involved in a RTA \nparticularly at treatment initiation. SSRIs may have some advantages over TCAs, but driving \nability is still diminished compared with healthy individuals,15 suggesting that depression itself \nmay make a major contribution.16,17 SSRIs tend not to impair driving in healthy volunteers.18–20 In \nremitted patients on SSRIs, driving performance may likewise not be impaired.21 Initiation \neffects caused by mirtazapine diminish to an extent when it is given as a single dose at night, \nbut many people experience substantial hangover which can impair driving.22 Effects may \ndisappear in chronic treatment.23 Trazodone also appears to impair driving ability.24 Agomelatine \nand venlafaxine may actually improve driving performance.25 Vortioxetine has no effect.23 \nIntranasal esketamine seems to have no effect on driving ability 8 hours post dose.26\n",
+      "bbox": [
+        61.889801025390625,
+        201.4946746826172,
+        435.3255920410156,
+        300.1996765136719
+      ],
+      "text_sha256": "236c3cd036829a9584893be275a84d754aeed594873d6dff030e5d3c8804319a"
+    },
+    {
+      "block_id": "page-0905-block-0008",
+      "order": 8,
+      "text": "Antipsychotics\nSedation and EPS can impair coordination and response time.2 A high proportion of patients \ntreated with antipsychotics may have an impaired ability to drive.27,28 One study found that \npatients with schizophrenia taking atypical antipsychotics or clozapine performed better in tests \nof skills related to car-driving ability than patients with schizophrenia taking first-generation \nantipsychotics,29 but 25% of all patients were severely impaired with respect to driving skills.\n",
+      "bbox": [
+        61.88970184326172,
+        306.51971435546875,
+        428.94793701171875,
+        355.2272033691406
+      ],
+      "text_sha256": "415423b5cd9a25da74bed77c1e85ba6486e2fc3f29bb0b07d4f08204cf5c5329"
+    },
+    {
+      "block_id": "page-0905-block-0009",
+      "order": 9,
+      "text": "Hypnotics and \nAnxiolytics\n",
+      "bbox": [
+        61.89079284667969,
+        361.5422058105469,
+        109.40328979492188,
+        380.2471923828125
+      ],
+      "text_sha256": "0036e828f1ade23b2dd27889382b5edc5f72e52a21e873ec60440ecbfd7ff800"
+    },
+    {
+      "block_id": "page-0905-block-0010",
+      "order": 10,
+      "text": "Benzodiazepines cause sedation and impaired attention, information processing, memory and \nmotor coordination, and along with opiates are the medicines most frequently implicated in \nRTAs.30,31 When used as anxiolytics and hypnotics, benzodiazepines, zopiclone and zolpidem are \nassociated with an increased risk of RTAs.30 There is some gender variation in the pharmacokinetics \nof zolpidem with females having higher drug plasma concentrations than males for any given dose; \nthe driving ability of females may therefore be particularly impaired.3 Zolpidem may additionally be \nassociated with automatism and ‘sleep driving’.32 Zaleplon and the newer hypnotics acting at \nmelatonin or serotonin receptors have not been found to have any negative residual effects on \ndriving ability.33 Orexin receptor antagonists (suvorexant and lemborexant), available in some \ncountries, appear not to impair driving the day after being taken.34,35\n",
+      "bbox": [
+        127.02529907226562,
+        361.5422058105469,
+        433.83538818359375,
+        460.24969482421875
+      ],
+      "text_sha256": "3fdd3369d941e679848e8c251c96fb6bdba8ed72d45ae838593e844ada20094e"
+    },
+    {
+      "block_id": "page-0905-block-0011",
+      "order": 11,
+      "text": "Lithium\nLithium may impair visual adaptation to the dark,2 but the implications for driving safety are \nunknown. Many patients treated with lithium can be shown to be unfit to drive,14 although the \nexact contribution of lithium is difficult to determine. Elderly people who take lithium may be at \nincreased risk of being involved in an injurious motor vehicle crash.36\n",
+      "bbox": [
+        61.88970184326172,
+        466.5697021484375,
+        434.8205261230469,
+        505.2721862792969
+      ],
+      "text_sha256": "07f6c4543a7aee4861a8e67961a43e6f7dbce6b5c1762052d6ceb0caf9271289"
+    },
+    {
+      "block_id": "page-0905-block-0012",
+      "order": 12,
+      "text": "Methylphenidate\nSome studies have demonstrated that reaction time is longer in patients with ADHD which may in \nturn be associated with increased driving risks.37 Other studies have found that methylphenidate \nimproved driving performance in adults with ADHD,38 again suggesting that illness may make a \nbigger contribution to fitness to drive than the specific pharmacology of the treatment.38\n",
+      "bbox": [
+        61.88970184326172,
+        511.5946960449219,
+        434.5421447753906,
+        550.2996826171875
+      ],
+      "text_sha256": "ee5f0e371772c80443c1d9e4e80b7adebfc86677bf5f34b7a0bf2d2fb88cb188"
+    },
+    {
+      "block_id": "page-0905-block-0013",
+      "order": 13,
+      "text": "Opioids\nOpioids have major adverse effect on the risk of RTA.39 Buprenorphine and methadone reduce \ndriving ability at low doses in non addicts.40\n",
+      "bbox": [
+        61.88970184326172,
+        556.6196899414062,
+        429.4137268066406,
+        575.32470703125
+      ],
+      "text_sha256": "7b2ff5434abcf4cc6f094984eef8e1ce7ed1f8857832e9f4236e9df45a6245fc"
+    },
+    {
+      "block_id": "page-0905-block-0014",
+      "order": 14,
+      "text": "ADHD, attention deficit hyperactivity disorder; EPS, extrapyramidal symptoms; RTA, road traffic accident; SSRI, \nselective serotonin reuptake inhibitor; TCA, tricyclic antidepressant.\n",
+      "bbox": [
+        61.88970184326172,
+        587.1196899414062,
+        414.3522033691406,
+        605.82470703125
+      ],
+      "text_sha256": "d36451cdf4d420bba0aab4d3528cc390f5f1a46397802bae605cb331b3278e7c"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0714",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 714,
+  "source_page_index": 713,
+  "source_page_display": 714,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Pregnancy and breastfeeding    693\nCHAPTER 7\nduring pregnancy) did not confirm these associations, nor suggest others.225 Note that \ndata on elective terminations were not available.\n■\n■Benzodiazepine use in pregnancy, has been associated with caesarean delivery, spon-\ntaneous abortion, neonatal intensive care admission, neonatal ventilatory support, \nlow birth weight, preterm delivery small head circumference, and small for gesta-\ntional age babies.224,229–233\n■\n■Third-trimester use is commonly associated with neonatal difficulties (floppy baby \nsyndrome).234\n■\n■Promethazine has been used in hyperemesis gravidarum and appears not to be tera-\ntogenic, although data are limited.\n■\n■Data on Z drugs are limited. However, available data suggest that Z drugs are not \nassociated with an increased risk of congenital malformations.235\n■\n■Zolpidem may be associated with an increased risk of preterm delivery, low birth-\nweight, increased likelihood of caesarean section.236\nRapid tranquillisation\nThere is almost no published information on the use of rapid tranquillisation in preg-\nnant women. The acute use of short-acting benzodiazepines such as lorazepam and \nof the sedative antihistamine promethazine is unlikely to be harmful. Presumably, the \nuse of either drug will be problematic immediately before birth. NICE also recom-\nmends the use of an antipsychotic but do not specify a particular drug.16 Involvement \nof an anaesthetist if rapid tranquillisation is needed during labour is strongly advised. \nNote that antipsychotics are not generally recommended as a first line treatment for \nmanaging acute behavioural disturbance (see section on acute behavioural distur-\nbance). Where sedative drugs have been given during labour an anaesthetist and \nneonatologist should be present for resuscitation of the baby in cases of respiratory \ndepression.\nADHD\nLimited data suggest that methylphenidate is not a major teratogen.237 A small increased \nrisk of cardiac malformations has been reported. The risk was not reported with \namphetamines.238 Modafinil may be associated with an increased risk of congenital \nmalformations (including congenital heart defects, hypospadias and orofacial clefts).239, \n240 Modafinil should not be initiated in pregnancy.239 Women of childbearing age must \nunderstand the risk of taking modafinil in pregnancy and should be advised to use \neffective contraception during treatment with modafinil and for 2 months after discon-\ntinuing treatment.239 \nTable 7.1 ­outlines recommendations for the treatment of psychotropics in pregnancy.\n",
+  "raw_text_sha256": "af10ba2e9bb5aba883293a9971c9faccc0e873a6f78b46fd1fba40d0f43d76ef",
+  "coordinates_sha256": "d6cee71dc7065b31b454248a139092927448c401efa193f5f2bb0ff6c5ddac1a",
+  "block_sequence_sha256": "f08710319bb4ddf53d71881a8486fb8b5990d7855e2d94eede90bb63d5bd7fb2",
+  "blocks": [
+    {
+      "block_id": "page-0714-block-0000",
+      "order": 0,
+      "text": "Pregnancy and breastfeeding    693\n",
+      "bbox": [
+        271.769287109375,
+        31.395221710205078,
+        420.00048828125,
+        41.0272216796875
+      ],
+      "text_sha256": "8beed788c4109a320308cd283dcd9753db637be9f22a133128dcd91ab191f723"
+    },
+    {
+      "block_id": "page-0714-block-0001",
+      "order": 1,
+      "text": "CHAPTER 7\n",
+      "bbox": [
+        454.4096984863281,
+        472.7144775390625,
+        463.88970947265625,
+        514.0584716796875
+      ],
+      "text_sha256": "6d1a2318236627f2d413db0336034ac4d71cea7172bd0baddf04c66a07292590"
+    },
+    {
+      "block_id": "page-0714-block-0002",
+      "order": 2,
+      "text": "during pregnancy) did not confirm these associations, nor suggest others.225 Note that \ndata on elective terminations were not available.\n",
+      "bbox": [
+        56.996490478515625,
+        62.5504150390625,
+        422.78643798828125,
+        86.27041625976562
+      ],
+      "text_sha256": "1b5b454a73bb85cd3daa804b78492e08a117c0439f12fce900d617c7954ef909"
+    },
+    {
+      "block_id": "page-0714-block-0003",
+      "order": 3,
+      "text": "■\n■Benzodiazepine use in pregnancy, has been associated with caesarean delivery, spon-\n",
+      "bbox": [
+        47.999900817871094,
+        86.5504150390625,
+        419.97003173828125,
+        98.27041625976562
+      ],
+      "text_sha256": "546a8baded37f65df483444632f12d8f4ef38065cc3f3c21962743e379564b7b"
+    },
+    {
+      "block_id": "page-0714-block-0004",
+      "order": 4,
+      "text": "taneous abortion, neonatal intensive care admission, neonatal ventilatory support, \nlow birth weight, preterm delivery small head circumference, and small for gesta-\ntional age babies.224,229–233\n",
+      "bbox": [
+        57.0,
+        98.5504150390625,
+        422.79998779296875,
+        134.27041625976562
+      ],
+      "text_sha256": "8d8564d64398ffb1a20239b9558d554b88b263f200af5657f99b9bdfe0598213"
+    },
+    {
+      "block_id": "page-0714-block-0005",
+      "order": 5,
+      "text": "■\n■Third-trimester use is commonly associated with neonatal difficulties (floppy baby \n",
+      "bbox": [
+        47.999900817871094,
+        134.5504150390625,
+        422.8099670410156,
+        146.27041625976562
+      ],
+      "text_sha256": "bc94a105fce5b7efb8efa70baeb4583e002270a7e9d6d2c776ee79fce699af5d"
+    },
+    {
+      "block_id": "page-0714-block-0006",
+      "order": 6,
+      "text": "syndrome).234\n",
+      "bbox": [
+        57.0,
+        146.5504150390625,
+        115.0539321899414,
+        158.27041625976562
+      ],
+      "text_sha256": "a11b66605ec42ded832226add8e29e3a03b16ff821b0ddad484d15a1c1a84958"
+    },
+    {
+      "block_id": "page-0714-block-0007",
+      "order": 7,
+      "text": "■\n■Promethazine has been used in hyperemesis gravidarum and appears not to be tera-\n",
+      "bbox": [
+        47.999900817871094,
+        158.3104248046875,
+        419.9700012207031,
+        170.27041625976562
+      ],
+      "text_sha256": "69c16fa798fb7c345fe599b32aca1d59ddf7a8aba2cef7dc6ed8214a08de49bb"
+    },
+    {
+      "block_id": "page-0714-block-0008",
+      "order": 8,
+      "text": "togenic, although data are limited.\n",
+      "bbox": [
+        57.0,
+        170.5504150390625,
+        204.97999572753906,
+        182.27041625976562
+      ],
+      "text_sha256": "c8cb572e3776d3089d3cd4b18b0eb3a727bfa83508f01f5adb4aad5a4cd68a79"
+    },
+    {
+      "block_id": "page-0714-block-0009",
+      "order": 9,
+      "text": "■\n■Data on Z drugs are limited. However, available data suggest that Z drugs are not \n",
+      "bbox": [
+        47.999900817871094,
+        182.55047607421875,
+        422.7900085449219,
+        194.27047729492188
+      ],
+      "text_sha256": "cd8241d93e9e802fcdd9fabee298cc0d94bd37cc7f17298fb49df0686b21c1d3"
+    },
+    {
+      "block_id": "page-0714-block-0010",
+      "order": 10,
+      "text": "associated with an increased risk of congenital malformations.235\n",
+      "bbox": [
+        57.0,
+        194.55047607421875,
+        335.6419677734375,
+        206.27047729492188
+      ],
+      "text_sha256": "4ab9e9198dd8c8692d1856b8aafd02fea360e7c2ef58dd967436ac43c8861914"
+    },
+    {
+      "block_id": "page-0714-block-0011",
+      "order": 11,
+      "text": "■\n■Zolpidem may be associated with an increased risk of preterm delivery, low birth-\n",
+      "bbox": [
+        47.999900817871094,
+        206.55047607421875,
+        419.94989013671875,
+        218.27047729492188
+      ],
+      "text_sha256": "76175c9c88de48d78b16ce39dc26c6dd753133e2ddac1c865ba7537db70d16d0"
+    },
+    {
+      "block_id": "page-0714-block-0012",
+      "order": 12,
+      "text": "weight, increased likelihood of caesarean section.236\n",
+      "bbox": [
+        57.0,
+        218.55047607421875,
+        278.6124572753906,
+        230.27047729492188
+      ],
+      "text_sha256": "ff77479fc89340a2adf0fcfb6cd41055c62182f3ae37dbaa1d5f71f9c70c0710"
+    },
+    {
+      "block_id": "page-0714-block-0013",
+      "order": 13,
+      "text": "Rapid tranquillisation\n",
+      "bbox": [
+        48.0,
+        259.7054748535156,
+        159.24298095703125,
+        272.740478515625
+      ],
+      "text_sha256": "006bbac69d7a5cef9444353ac87179c9bf55a54a2abc7d5ee6e2dfb515a06345"
+    },
+    {
+      "block_id": "page-0714-block-0014",
+      "order": 14,
+      "text": "There is almost no published information on the use of rapid tranquillisation in preg-\nnant women. The acute use of short-acting benzodiazepines such as lorazepam and \nof the sedative antihistamine promethazine is unlikely to be harmful. Presumably, the \nuse of either drug will be problematic immediately before birth. NICE also recom-\nmends the use of an antipsychotic but do not specify a particular drug.16 Involvement \nof an anaesthetist if rapid tranquillisation is needed during labour is strongly advised. \nNote that antipsychotics are not generally recommended as a first line treatment for \nmanaging acute behavioural disturbance (see section on acute behavioural distur-\nbance). Where sedative drugs have been given during labour an anaesthetist and \nneonatologist should be present for resuscitation of the baby in cases of respiratory \ndepression.\n",
+      "bbox": [
+        48.0,
+        278.55047607421875,
+        422.8200988769531,
+        410.2704772949219
+      ],
+      "text_sha256": "6740001ca535646560315e5ea1b86fe659405f7223b3cb1c0f9284ad8d0b7151"
+    },
+    {
+      "block_id": "page-0714-block-0015",
+      "order": 15,
+      "text": "ADHD\n",
+      "bbox": [
+        48.0,
+        433.7054748535156,
+        79.76800537109375,
+        446.740478515625
+      ],
+      "text_sha256": "be2df7c008af51055084f33cfa1a7ead3670e92cca16a9f084d86d569d3e50d8"
+    },
+    {
+      "block_id": "page-0714-block-0016",
+      "order": 16,
+      "text": "Limited data suggest that methylphenidate is not a major teratogen.237 A small increased \nrisk of cardiac malformations has been reported. The risk was not reported with \namphetamines.238 Modafinil may be associated with an increased risk of congenital \nmalformations (including congenital heart defects, hypospadias and orofacial clefts).239, \n",
+      "bbox": [
+        48.0,
+        452.55047607421875,
+        422.81365966796875,
+        500.2704772949219
+      ],
+      "text_sha256": "3e750c97fd89fd5f143c03d82ac125e4558ae9e2ce653e8f0de6070789aaef29"
+    },
+    {
+      "block_id": "page-0714-block-0017",
+      "order": 17,
+      "text": "240 Modafinil should not be initiated in pregnancy.239 Women of childbearing age must \nunderstand the risk of taking modafinil in pregnancy and should be advised to use \neffective contraception during treatment with modafinil and for 2 months after discon-\ntinuing treatment.239 \n",
+      "bbox": [
+        47.9996337890625,
+        500.55047607421875,
+        422.7632751464844,
+        548.2705078125
+      ],
+      "text_sha256": "1fee5e9ea980679a2bb7b7f3220200c74ea1c0d11bd7ef625c1ff7ba3fcdf483"
+    },
+    {
+      "block_id": "page-0714-block-0018",
+      "order": 18,
+      "text": "Table 7.1 ­outlines recommendations for the treatment of psychotropics in pregnancy.\n",
+      "bbox": [
+        48.00360870361328,
+        553.5504760742188,
+        399.8236389160156,
+        565.2705078125
+      ],
+      "text_sha256": "ce6ff36291ca24d7dac521da2387b5a482068420c1a1e238403cb026a47defec"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

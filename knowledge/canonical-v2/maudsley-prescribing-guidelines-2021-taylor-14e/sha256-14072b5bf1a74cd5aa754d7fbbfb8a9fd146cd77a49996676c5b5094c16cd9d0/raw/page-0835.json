@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0835",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 835,
+  "source_page_index": 834,
+  "source_page_display": 835,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "814    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\nParkinson’s disease\nParkinson’s disease (PD) is a progressive, degenerative neurological disorder character-\nised by resting tremor, cogwheel rigidity, bradykinesia and postural instability. The \nprevalence of co-morbid psychiatric disorders is high. Approximately 25% will suffer \nfrom major depression at some point during the course of their illness, a further 25% \nfrom milder forms of depression, 25% from anxiety spectrum disorders, 25% from \npsychosis and up to 80% will develop dementia.1–3 While depression and anxiety can \noccur at any time, psychosis, dementia and delirium are more prevalent in the later \nstages of the illness. Close co-operation between the psychiatrist and neurologist is \nrequired to optimise treatment for this group of patients.\nDepression in Parkinson’s disease\nDepression in PD predicts greater cognitive decline, deterioration in functioning and \nprogression of motor symptoms,4 possibly reflecting more advanced and widespread \nneurodegeneration involving multiple neurotransmitter pathways.5 Depression may \nalso occur after the withdrawal of dopamine agonists.6 Pre-existing dementia is an \nestablished risk factor for the development of depression.\nDepression in PD – recommendations for treatment\nStep\nIntervention\n1\nExclude/treat organic causes such as hypothyroidism (the prevalence of which is relatively high in \nPD4).\n2\nSSRIs are considered to be first-line treatment although the effect size is modest.7–9 Some \npatients may experience a worsening of motor symptoms although the absolute risk is low.10,11 \nCare must be taken when combining SSRIs with selegiline, as the risk of serotonin syndrome is \nincreased.4 The SNRIs venlafaxine12 and duloxetine13 also appear to have some effect although \nvenlafaxine may modestly worsen motor symptoms.12\nTCAs are generally poorly tolerated because of their anticholinergic (can worsen cognitive \nproblems; constipation) and alpha-blocking effects (can worsen symptoms of autonomic \ndysfunction). Note though that several meta-analyses8,9 have reported that low dose TCAs to be \nmore effective than SSRIs,14–16 although low dose amitriptyline and sertraline seem to be equally \neffective.17,18 The most recent network meta-analysis found that SSRIs were the most effective \ntreatments; significantly better than MAOIs and dopamine agonists.19 Limited evidence supports \nthe safe use of agomelatine.20,21 Atomoxetine is not effective.22 CBT should always be \nconsidered.23\n3\nConsider augmentation with dopamine agonists/releasers such as pramipexole.24 Note though \nthat these drugs increase the risk of impulse control disorders.25,26 They have also rarely been \nassociated with the development of psychosis.27\n4\nConsider ECT. Depression and motor symptoms generally respond well,4 but the risk of inducing \ndelirium is high,28 particularly in patients with pre-existing cognitive impairment.\n5\nFollow the algorithm for treatment-resistant depression (see relevant section in Chapter 3) from \nthis point. Be aware of the increased propensity for adverse effects and drug interactions in this \npatient group.\n",
+  "raw_text_sha256": "c29c9942ca9133f3e7d8bbd0f517c6889f20ac8926d866a5aad2a15c33d7f86e",
+  "coordinates_sha256": "df7a0dbf12ebd5da52470ea8db922221831e178ec7823d16980a8ba323bd02f7",
+  "block_sequence_sha256": "076ee12d5d74ff40a35c31ed27b81dc6c6fc758e8de6356ba679d899e61a8668",
+  "blocks": [
+    {
+      "block_id": "page-0835-block-0000",
+      "order": 0,
+      "text": "814    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "0ed9d23482394290ecdd09d8f7b53dec00b2415bdd9c8481762fc77347bbace0"
+    },
+    {
+      "block_id": "page-0835-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0835-block-0002",
+      "order": 2,
+      "text": "Parkinson’s disease\n",
+      "bbox": [
+        68.88999938964844,
+        66.06546020507812,
+        167.70298767089844,
+        79.1004638671875
+      ],
+      "text_sha256": "bf7012fbc52a9f270ef5867c818ee317afa3f53d9942ac5cd0d8d32b4d487fe7"
+    },
+    {
+      "block_id": "page-0835-block-0003",
+      "order": 3,
+      "text": "Parkinson’s disease (PD) is a progressive, degenerative neurological disorder character-\nised by resting tremor, cogwheel rigidity, bradykinesia and postural instability. The \nprevalence of co-morbid psychiatric disorders is high. Approximately 25% will suffer \nfrom major depression at some point during the course of their illness, a further 25% \nfrom milder forms of depression, 25% from anxiety spectrum disorders, 25% from \npsychosis and up to 80% will develop dementia.1–3 While depression and anxiety can \noccur at any time, psychosis, dementia and delirium are more prevalent in the later \nstages of the illness. Close co-operation between the psychiatrist and neurologist is \nrequired to optimise treatment for this group of patients.\n",
+      "bbox": [
+        61.885986328125,
+        84.91046142578125,
+        436.7099609375,
+        192.63046264648438
+      ],
+      "text_sha256": "88ed53809bde68a423dc16b6d2a851b9eab53ec884a2c45834ec392b198fc591"
+    },
+    {
+      "block_id": "page-0835-block-0004",
+      "order": 4,
+      "text": "Depression in Parkinson’s disease\n",
+      "bbox": [
+        61.88999938964844,
+        210.06549072265625,
+        233.8419647216797,
+        223.10049438476562
+      ],
+      "text_sha256": "99d1c9e549f4d46237f5f1ebf9f49002782029fc52a2958b7fd3138014fc4545"
+    },
+    {
+      "block_id": "page-0835-block-0005",
+      "order": 5,
+      "text": "Depression in PD predicts greater cognitive decline, deterioration in functioning and \nprogression of motor symptoms,4 possibly reflecting more advanced and widespread \nneurodegeneration involving multiple neurotransmitter pathways.5 Depression may \nalso occur after the withdrawal of dopamine agonists.6 Pre-existing dementia is an \nestablished risk factor for the development of depression.\n",
+      "bbox": [
+        61.88751220703125,
+        228.91049194335938,
+        436.677490234375,
+        288.6304931640625
+      ],
+      "text_sha256": "9ede2bb00c5fa2a97951bf11dc2b3b461c8b68cabf24e0682bd4cc6eb93ceaf5"
+    },
+    {
+      "block_id": "page-0835-block-0006",
+      "order": 6,
+      "text": "Depression in PD – recommendations for treatment\n",
+      "bbox": [
+        67.88999938964844,
+        307.3379821777344,
+        248.34750366210938,
+        316.2254943847656
+      ],
+      "text_sha256": "6adb824c7f89ea899febd66f12a6b0dd3dd524a3ef62a23f4d2913202d3eb352"
+    },
+    {
+      "block_id": "page-0835-block-0007",
+      "order": 7,
+      "text": "Step\nIntervention\n",
+      "bbox": [
+        65.88999938964844,
+        324.4629821777344,
+        162.1525115966797,
+        333.3504943847656
+      ],
+      "text_sha256": "226955917d1a9ae551d54b27d8369810f1ceb1bcd1e1028448b6ed101a4b17c3"
+    },
+    {
+      "block_id": "page-0835-block-0008",
+      "order": 8,
+      "text": "1\nExclude/treat organic causes such as hypothyroidism (the prevalence of which is relatively high in \nPD4).\n",
+      "bbox": [
+        65.88999938964844,
+        340.0854797363281,
+        428.2900390625,
+        358.9754943847656
+      ],
+      "text_sha256": "d6a92d41118963d237280cd9a3cc1f47be5a4cd3831512ad8376b47ccdc663fa"
+    },
+    {
+      "block_id": "page-0835-block-0009",
+      "order": 9,
+      "text": "2\nSSRIs are considered to be first-line treatment although the effect size is modest.7–9 Some \npatients may experience a worsening of motor symptoms although the absolute risk is low.10,11 \nCare must be taken when combining SSRIs with selegiline, as the risk of serotonin syndrome is \nincreased.4 The SNRIs venlafaxine12 and duloxetine13 also appear to have some effect although \nvenlafaxine may modestly worsen motor symptoms.12\n",
+      "bbox": [
+        65.89099884033203,
+        367.7129821777344,
+        422.2919006347656,
+        416.5979919433594
+      ],
+      "text_sha256": "d726a698baf97585a83380550e24a1fe120202c696f38a1c0d803a284ddfcb89"
+    },
+    {
+      "block_id": "page-0835-block-0010",
+      "order": 10,
+      "text": "TCAs are generally poorly tolerated because of their anticholinergic (can worsen cognitive \nproblems; constipation) and alpha-blocking effects (can worsen symptoms of autonomic \ndysfunction). Note though that several meta-analyses8,9 have reported that low dose TCAs to be \nmore effective than SSRIs,14–16 although low dose amitriptyline and sertraline seem to be equally \neffective.17,18 The most recent network meta-analysis found that SSRIs were the most effective \ntreatments; significantly better than MAOIs and dopamine agonists.19 Limited evidence supports \nthe safe use of agomelatine.20,21 Atomoxetine is not effective.22 CBT should always be \nconsidered.23\n",
+      "bbox": [
+        118.38700103759766,
+        420.89300537109375,
+        426.8948669433594,
+        499.5979919433594
+      ],
+      "text_sha256": "6c1c79cefd0207461a20ebd71a39bc1a80d8e4311bcf6224d1fcd23415512044"
+    },
+    {
+      "block_id": "page-0835-block-0011",
+      "order": 11,
+      "text": "3\nConsider augmentation with dopamine agonists/releasers such as pramipexole.24 Note though \nthat these drugs increase the risk of impulse control disorders.25,26 They have also rarely been \nassociated with the development of psychosis.27\n",
+      "bbox": [
+        65.88999938964844,
+        508.33795166015625,
+        420.6848449707031,
+        537.2230224609375
+      ],
+      "text_sha256": "04fd2001a75bc14878a3f1c70b25954189095cfe48d838d4927cbd4540db5b7d"
+    },
+    {
+      "block_id": "page-0835-block-0012",
+      "order": 12,
+      "text": "4\nConsider ECT. Depression and motor symptoms generally respond well,4 but the risk of inducing \ndelirium is high,28 particularly in patients with pre-existing cognitive impairment.\n",
+      "bbox": [
+        65.88999938964844,
+        545.9629516601562,
+        428.1241760253906,
+        564.8504638671875
+      ],
+      "text_sha256": "2d07635fdd0066c3c71b70c49709785ee7b8546ad20f145334c209d85ee0479e"
+    },
+    {
+      "block_id": "page-0835-block-0013",
+      "order": 13,
+      "text": "5\nFollow the algorithm for treatment-resistant depression (see relevant section in Chapter 3) from \nthis point. Be aware of the increased propensity for adverse effects and drug interactions in this \npatient group.\n",
+      "bbox": [
+        65.89149475097656,
+        573.5879516601562,
+        424.97662353515625,
+        602.470458984375
+      ],
+      "text_sha256": "8733766dce0166494dad80d2523d8bc7cfe8fcfa6f1c18b6d795efc6447462d8"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

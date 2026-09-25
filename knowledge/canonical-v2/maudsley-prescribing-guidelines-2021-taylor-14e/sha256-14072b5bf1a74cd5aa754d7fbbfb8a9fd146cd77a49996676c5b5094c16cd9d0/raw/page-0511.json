@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0511",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 511,
+  "source_page_index": 510,
+  "source_page_display": 511,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "490    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nOverdose with buprenorphine\nBuprenorphine (as a single drug in overdose) is generally regarded as safer than metha-\ndone and heroin because it causes less respiratory depression and is less likely to be \nassociated with overdose death.63 However, in combination with other respiratory \ndepressant drugs, the effects may be harder to manage. Very high doses of naloxone \n(e.g. 10–15mg) may be needed to reverse buprenorphine effects (although lower doses \nsuch as 0.8–2mg may be sufficient).4 As a consequence, ventilator support is often \nrequired in cases where buprenorphine is contributing to respiratory depression (e.g. in \npolydrug overdose).\nBuprenorphine with naloxone (Suboxone)\nConsideration may be given by the prescriber to a buprenorphine/naloxone prepara-\ntion which may reduce the risk of diversion. The different sublingual and parenteral \nabsorption profiles of buprenorphine and naloxone are the key factors: if used sublin-\ngually, the naloxone will have negligible effects. However, if the combined preparation \nis injected, the naloxone will have a substantial effect and will attenuate the effects of \nbuprenorphine in the short term and is also likely to precipitate withdrawal in opioid-\ndependent individuals on full opioid agonists.64\nAlternative oral opioid preparations\nOral methadone and buprenorphine should continue to be the mainstay of treatment;1 \nother oral options such as slow-release oral morphine (SROM) preparations and dihy-\ndrocodeine are not licensed in the UK for the treatment of opiate dependence.1\nHowever, a specialised clinician may in very exceptional circumstances prescribe oral \ndihydrocodeine as maintenance therapy, where clients are unable to tolerate methadone \nor buprenorphine, or in other exceptional circumstances, taking into account the difficul-\nties associated with its short half-life, supervision requirements and diversion potential.1\nCautions with buprenorphine\n■\n■Liver function: There is some evidence suggesting that high-dose buprenorphine can cause \nchanges in liver function in individuals with a history of liver disease.62 Such patients should \nhave LFTs measured before commencing with follow-up investigations conducted 6–12 weeks \nafter commencing buprenorphine. More frequent testing should be considered in patients of \nparticular concern, e.g. severe liver disease. Elevated liver enzymes in the absence of clinically \nsignificant liver disease, however, does not necessarily contraindicate treatment with \nbuprenorphine.\n■\n■Intoxication: Buprenorphine should not be given to any patient showing signs of intoxication, \nespecially due to alcohol or other depressant drugs (e.g. benzodiazepines, sedating antipsychot-\nics and pregabalin39). Buprenorphine in combination with other sedative drugs can result in \nrespiratory depression, sedation, coma and death. Concurrent alcohol and illicit drug consump-\ntion must be borne in mind when considering subsequent prescribing of buprenorphine due to \nthe increased risk of overdose associated with polysubstance misuse.\n",
+  "raw_text_sha256": "5af5db70a495ff6c902b75738940dba960c24d8cd3bef3896b65f8041dbf1a3f",
+  "coordinates_sha256": "d883380fca0b3a3f380d7d16da53b8a1cd9f8227417e3c497c4ef59d1f26bb75",
+  "block_sequence_sha256": "825aa3dcaef6f90ac2e233ef41ae788dace95ad1fcc04cc5157c2f05544f6faa",
+  "blocks": [
+    {
+      "block_id": "page-0511-block-0000",
+      "order": 0,
+      "text": "490    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "e924fdb2f762952302f114f6d3e74618d18e7b3e2d99af55d92e1e8ef22169ad"
+    },
+    {
+      "block_id": "page-0511-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0511-block-0002",
+      "order": 2,
+      "text": "Overdose with buprenorphine\n",
+      "bbox": [
+        61.88999938964844,
+        258.9063720703125,
+        204.6899871826172,
+        270.7563781738281
+      ],
+      "text_sha256": "50dc07f3ad924b54e33564aa62ec50989d0e74b9f7b1d8b3a9c7612c16b4401d"
+    },
+    {
+      "block_id": "page-0511-block-0003",
+      "order": 3,
+      "text": "Buprenorphine (as a single drug in overdose) is generally regarded as safer than metha-\ndone and heroin because it causes less respiratory depression and is less likely to be \nassociated with overdose death.63 However, in combination with other respiratory \ndepressant drugs, the effects may be harder to manage. Very high doses of naloxone \n(e.g. 10–15mg) may be needed to reverse buprenorphine effects (although lower doses \nsuch as 0.8–2mg may be sufficient).4 As a consequence, ventilator support is often \nrequired in cases where buprenorphine is contributing to respiratory depression (e.g. in \npolydrug overdose).\n",
+      "bbox": [
+        61.88999938964844,
+        276.8163757324219,
+        436.6849365234375,
+        372.536376953125
+      ],
+      "text_sha256": "2c53cc5a94c4875e72c1f4de6c8b251abda889cce622befce2d708569038f1b8"
+    },
+    {
+      "block_id": "page-0511-block-0004",
+      "order": 4,
+      "text": "Buprenorphine with naloxone (Suboxone)\n",
+      "bbox": [
+        61.88999938964844,
+        389.97137451171875,
+        279.887939453125,
+        403.0063781738281
+      ],
+      "text_sha256": "9bc3a2dc37d0dc4f8bb84bd1c2511b128171a6cf7088fea9b8ea6336ec5f933a"
+    },
+    {
+      "block_id": "page-0511-block-0005",
+      "order": 5,
+      "text": "Consideration may be given by the prescriber to a buprenorphine/naloxone prepara-\ntion which may reduce the risk of diversion. The different sublingual and parenteral \nabsorption profiles of buprenorphine and naloxone are the key factors: if used sublin-\ngually, the naloxone will have negligible effects. However, if the combined preparation \nis injected, the naloxone will have a substantial effect and will attenuate the effects of \nbuprenorphine in the short term and is also likely to precipitate withdrawal in opioid-\ndependent individuals on full opioid agonists.64\n",
+      "bbox": [
+        61.88999938964844,
+        408.8163757324219,
+        436.71002197265625,
+        492.536376953125
+      ],
+      "text_sha256": "b058ca3e89b21bb3a8a1b9984214bf8de629bd4ddb99e5a3d645332f8ab5e2c3"
+    },
+    {
+      "block_id": "page-0511-block-0006",
+      "order": 6,
+      "text": "Alternative oral opioid preparations\n",
+      "bbox": [
+        61.88999938964844,
+        509.9714050292969,
+        248.3289337158203,
+        523.0064086914062
+      ],
+      "text_sha256": "bbb35455d344a7371ef09afe7ee30141aa47ea2250a8f5b2bd7ff74da0e60034"
+    },
+    {
+      "block_id": "page-0511-block-0007",
+      "order": 7,
+      "text": "Oral methadone and buprenorphine should continue to be the mainstay of treatment;1 \nother oral options such as slow-release oral morphine (SROM) preparations and dihy-\ndrocodeine are not licensed in the UK for the treatment of opiate dependence.1\n",
+      "bbox": [
+        61.889801025390625,
+        528.81640625,
+        436.6697998046875,
+        564.5364379882812
+      ],
+      "text_sha256": "cd8fbbfe2476174266d669218a1a86e85ad24da1d5657dab2c693d8c4fbe36cf"
+    },
+    {
+      "block_id": "page-0511-block-0008",
+      "order": 8,
+      "text": "However, a specialised clinician may in very exceptional circumstances prescribe oral \ndihydrocodeine as maintenance therapy, where clients are unable to tolerate methadone \nor buprenorphine, or in other exceptional circumstances, taking into account the difficul-\nties associated with its short half-life, supervision requirements and diversion potential.1\n",
+      "bbox": [
+        61.88999938964844,
+        564.81640625,
+        436.650390625,
+        612.5364379882812
+      ],
+      "text_sha256": "9ba2c8af8ad855ac8dd5c4cd40f3c641578e4f278d1974cb6d62b5a1def8fa40"
+    },
+    {
+      "block_id": "page-0511-block-0009",
+      "order": 9,
+      "text": "Cautions with buprenorphine\n",
+      "bbox": [
+        68.88999938964844,
+        70.07776641845703,
+        186.80197143554688,
+        80.1502685546875
+      ],
+      "text_sha256": "8e435a445da780b19a78cabc866635bb2eae8fb307bd858a4b4b7937f42d687f"
+    },
+    {
+      "block_id": "page-0511-block-0010",
+      "order": 10,
+      "text": "■\n■Liver function: There is some evidence suggesting that high-dose buprenorphine can cause \n",
+      "bbox": [
+        68.88990020751953,
+        89.65277862548828,
+        413.8627624511719,
+        99.72528076171875
+      ],
+      "text_sha256": "12096d5a3a750f52adda954dbf56f25bb7346891ac9af69b01092ca92027b0f9"
+    },
+    {
+      "block_id": "page-0511-block-0011",
+      "order": 11,
+      "text": "changes in liver function in individuals with a history of liver disease.62 Such patients should \nhave LFTs measured before commencing with follow-up investigations conducted 6–12 weeks \nafter commencing buprenorphine. More frequent testing should be considered in patients of \nparticular concern, e.g. severe liver disease. Elevated liver enzymes in the absence of clinically \nsignificant liver disease, however, does not necessarily contraindicate treatment with \nbuprenorphine.\n",
+      "bbox": [
+        77.38880920410156,
+        99.85275268554688,
+        419.49700927734375,
+        159.70513916015625
+      ],
+      "text_sha256": "3716d578dc19acea199bddf7fea6805202a686c7584ef46d697dede3b73f4095"
+    },
+    {
+      "block_id": "page-0511-block-0012",
+      "order": 12,
+      "text": "■\n■Intoxication: Buprenorphine should not be given to any patient showing signs of intoxication, \n",
+      "bbox": [
+        68.88990020751953,
+        159.6527862548828,
+        423.0086669921875,
+        169.72528076171875
+      ],
+      "text_sha256": "4c8bf0482489e2e393d637a2a2bebb444ee006d73f258f3c27be486446d6c46a"
+    },
+    {
+      "block_id": "page-0511-block-0013",
+      "order": 13,
+      "text": "especially due to alcohol or other depressant drugs (e.g. benzodiazepines, sedating antipsychot-\nics and pregabalin39). Buprenorphine in combination with other sedative drugs can result in \nrespiratory depression, sedation, coma and death. Concurrent alcohol and illicit drug consump-\ntion must be borne in mind when considering subsequent prescribing of buprenorphine due to \nthe increased risk of overdose associated with polysubstance misuse.\n",
+      "bbox": [
+        77.38999938964844,
+        169.85275268554688,
+        424.3941955566406,
+        219.71328735351562
+      ],
+      "text_sha256": "6cf098086d3af5efd607b084f3885b709e386a34af494f7eca23e41797b2b15e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

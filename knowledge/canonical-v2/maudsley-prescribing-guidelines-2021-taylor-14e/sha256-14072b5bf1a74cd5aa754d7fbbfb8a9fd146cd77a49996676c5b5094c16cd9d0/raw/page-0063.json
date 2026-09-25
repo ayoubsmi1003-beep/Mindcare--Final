@@ -1,0 +1,407 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0063",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 63,
+  "source_page_index": 62,
+  "source_page_display": 63,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "42    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nTreatment algorithms for schizophrenia\nFirst-episode schizophrenia\nEither:\nAgree on the choice of antipsychotic medication\nwith patient1 and/or carer\nOr, if not possible:\nStart second-generation antipsychotic medication2,3\nTreatment algorithm\nTitrate, as necessary, to minimum effective dose\n(see section on ‘minimum effective dose’–this chapter)\n* Any improvement is likely to be apparent within 2–3 weeks of receiving an effective dose.4 Most improvement \noccurs during this period.5 If no effect by 2–3 weeks, change dose or drug. If some response detected,\ncontinue for a total of 10 weeks before abandoning treatment.6\n** Relapse and readmission rates are vastly reduced by early use of depot/long-acting injections in this\npatient group.7–9 First episode patients will accept long-acting injections.10\n*** Early use of clozapine much more likely than anything else to be successful.6,11\nReluctance to use clozapine is associated with poor outcomes.12 \nAdjust dosage regimen according to therapeutic\nresponse and tolerability/safety\nChange drug and\nfollow above process\nAssess over 2–3 weeks*\nClozapine***\nIf poor adherence related to poor \ntolerability, discuss with patient and \nchange to drug with more \nfavourable side-effect proﬁle\nIf poor adherence related to other \nfactors, consider early use of \ndepot/long-acting injection**\nContinue at dose \nestablished as effective\nConsider switching to \ndepot/long-acting injection \nbefore discharge**\nEffective\nNo effect\nNot effective\nNot tolerated or \npoor medication\nadherence\n",
+  "raw_text_sha256": "027ed35a43c8b0a080605bf546fd36429c56ccb470b8e6e65d15af395337d5ba",
+  "coordinates_sha256": "5229b683b8c8a9c00db07a9201d370a3eebc9976dfd9b91bdd45ab2dcb4b4836",
+  "block_sequence_sha256": "2347049425b289ef3ceabe286b10164f774e574f2ef483c24e2a8b3efa9ccff3",
+  "blocks": [
+    {
+      "block_id": "page-0063-block-0000",
+      "order": 0,
+      "text": "42    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "7fd18c1bfc89e2d7eb810a4a59ca37c777030fc9296406780938b89c725f0cac"
+    },
+    {
+      "block_id": "page-0063-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0063-block-0002",
+      "order": 2,
+      "text": "Treatment algorithms for schizophrenia\n",
+      "bbox": [
+        68.88909912109375,
+        66.06448364257812,
+        272.8511047363281,
+        79.0994873046875
+      ],
+      "text_sha256": "d10a4ba351ce59b9aa7a1905fb900ec8339673892eb9029eac55adc2da9af14e"
+    },
+    {
+      "block_id": "page-0063-block-0003",
+      "order": 3,
+      "text": "First-episode schizophrenia\n",
+      "bbox": [
+        61.893096923828125,
+        94.05947875976562,
+        202.2530517578125,
+        107.094482421875
+      ],
+      "text_sha256": "f67d898305dc894eacdc0827e647b99557bd87eabdd0b78f36d49cf163d91d8c"
+    },
+    {
+      "block_id": "page-0063-block-0004",
+      "order": 4,
+      "text": "Either:\n",
+      "bbox": [
+        233.90440368652344,
+        137.3863525390625,
+        256.4692687988281,
+        145.86509704589844
+      ],
+      "text_sha256": "a96109f9fc780034de05e4e398830812f7643e565c8a8b8aa7900f7fcdabd3c7"
+    },
+    {
+      "block_id": "page-0063-block-0005",
+      "order": 5,
+      "text": "Agree on the choice of antipsychotic medication\n",
+      "bbox": [
+        166.3878936767578,
+        148.66525268554688,
+        323.98553466796875,
+        157.421875
+      ],
+      "text_sha256": "72ddbf01f12369b07c9270d0ae1b0db39fdd5c4d55be6ec73259e9b36d5d285d"
+    },
+    {
+      "block_id": "page-0063-block-0006",
+      "order": 6,
+      "text": "with patient1 and/or carer\n",
+      "bbox": [
+        204.89138793945312,
+        156.32310485839844,
+        285.478759765625,
+        165.9720458984375
+      ],
+      "text_sha256": "00361b0694fadf2eca570da39c1ffbd3cad7e0ed35c84cd4c368adfb4ca48dd5"
+    },
+    {
+      "block_id": "page-0063-block-0007",
+      "order": 7,
+      "text": "Or, if not possible:\n",
+      "bbox": [
+        213.7158966064453,
+        168.736572265625,
+        276.66510009765625,
+        177.21531677246094
+      ],
+      "text_sha256": "a2e0b73cbeb3e2d421f8caed5f51aa60a919bb7647014172125143cada1bc78f"
+    },
+    {
+      "block_id": "page-0063-block-0008",
+      "order": 8,
+      "text": "Start second-generation antipsychotic medication2,3\n",
+      "bbox": [
+        160.5063934326172,
+        179.12290954589844,
+        329.8724060058594,
+        188.7720947265625
+      ],
+      "text_sha256": "d2fa7ca6c00a03a3484fec533422ee953d83511e70dd4a0c1362db8a99280d70"
+    },
+    {
+      "block_id": "page-0063-block-0009",
+      "order": 9,
+      "text": "Treatment algorithm\n",
+      "bbox": [
+        209.1864013671875,
+        118.87103271484375,
+        291.84783935546875,
+        129.0455322265625
+      ],
+      "text_sha256": "6e776dd62ee3fde4b7407e1f78087c27bd77228150c826ab4d3bcdc977406421"
+    },
+    {
+      "block_id": "page-0063-block-0010",
+      "order": 10,
+      "text": "Titrate, as necessary, to minimum effective dose\n",
+      "bbox": [
+        168.36520385742188,
+        229.13015747070312,
+        322.00848388671875,
+        237.88677978515625
+      ],
+      "text_sha256": "5e9baf234844fa6f3bbaed74512bc44a2f55ac541d7f5f6b44320f0d7ba25ce3"
+    },
+    {
+      "block_id": "page-0063-block-0011",
+      "order": 11,
+      "text": "(see section on ‘minimum effective dose’–this chapter)\n",
+      "bbox": [
+        170.20399475097656,
+        237.47018432617188,
+        320.1697998046875,
+        245.20127868652344
+      ],
+      "text_sha256": "339c52a321a173a4a06fde023cc5817cf7523eb4c1e190a51603d8582ed1697b"
+    },
+    {
+      "block_id": "page-0063-block-0012",
+      "order": 12,
+      "text": "* Any improvement is likely to be apparent within 2–3 weeks of receiving an effective dose.4 Most improvement \noccurs during this period.5 If no effect by 2–3 weeks, change dose or drug. If some response detected,\ncontinue for a total of 10 weeks before abandoning treatment.6\n",
+      "bbox": [
+        71.24848937988281,
+        546.8609619140625,
+        427.5767517089844,
+        573.6107788085938
+      ],
+      "text_sha256": "bebb2728d138e7afba97c4b1771b495b1fb3c4076fd0963b2aa245a4a28df8fa"
+    },
+    {
+      "block_id": "page-0063-block-0013",
+      "order": 13,
+      "text": "** Relapse and readmission rates are vastly reduced by early use of depot/long-acting injections in this\npatient group.7–9 First episode patients will accept long-acting injections.10\n",
+      "bbox": [
+        71.25139617919922,
+        573.4041137695312,
+        399.114990234375,
+        590.7107543945312
+      ],
+      "text_sha256": "d9918b0a44829d24ac7195594dab48a1a412c498ece7b7cf69fe555f382aed81"
+    },
+    {
+      "block_id": "page-0063-block-0014",
+      "order": 14,
+      "text": "*** Early use of clozapine much more likely than anything else to be successful.6,11\n",
+      "bbox": [
+        71.25139617919922,
+        589.6109619140625,
+        334.2945251464844,
+        599.2607421875
+      ],
+      "text_sha256": "3ffd9de6d48668c884935b26f1a39a9bb1cbaa8f03f089a49a6a4c06ff56890b"
+    },
+    {
+      "block_id": "page-0063-block-0015",
+      "order": 15,
+      "text": "Reluctance to use clozapine is associated with poor outcomes.12 \n",
+      "bbox": [
+        71.25139617919922,
+        598.1609497070312,
+        279.4602966308594,
+        607.810791015625
+      ],
+      "text_sha256": "5769a49a829b00a3a990b664ad32aac04b9265289d492f8a980e46d6d3496982"
+    },
+    {
+      "block_id": "page-0063-block-0016",
+      "order": 16,
+      "text": "Adjust dosage regimen according to therapeutic\n",
+      "bbox": [
+        167.77389526367188,
+        287.6491394042969,
+        322.59991455078125,
+        296.40576171875
+      ],
+      "text_sha256": "0b11fe313aed63266e921abf4866b3d463fbe388a5692dda9358c9cabe103058"
+    },
+    {
+      "block_id": "page-0063-block-0017",
+      "order": 17,
+      "text": "response and tolerability/safety\n",
+      "bbox": [
+        195.49014282226562,
+        296.1991271972656,
+        294.87664794921875,
+        304.95574951171875
+      ],
+      "text_sha256": "1704f08762427b23f3c7033859e223436d76c695117a7f48b1a0dee765621095"
+    },
+    {
+      "block_id": "page-0063-block-0018",
+      "order": 18,
+      "text": "Change drug and\nfollow above process\n",
+      "bbox": [
+        190.45315551757812,
+        442.7141418457031,
+        258.1619873046875,
+        460.020751953125
+      ],
+      "text_sha256": "cd5d526bbb2e38c05533de4349f5deed889ccd2575bb1b658c7690ff8326e286"
+    },
+    {
+      "block_id": "page-0063-block-0019",
+      "order": 19,
+      "text": "Assess over 2–3 weeks*\n",
+      "bbox": [
+        206.5803985595703,
+        349.9681396484375,
+        283.7939147949219,
+        358.7247619628906
+      ],
+      "text_sha256": "ec5947e11b9ee14878362f3f76535e7541e7c776d53cbab1fc7bf34b446046ca"
+    },
+    {
+      "block_id": "page-0063-block-0020",
+      "order": 20,
+      "text": "Clozapine***\n",
+      "bbox": [
+        204.1154022216797,
+        517.2571411132812,
+        244.49990844726562,
+        526.0137939453125
+      ],
+      "text_sha256": "d5901e0ba58ab37cabf6ddc39cdeb82995190bc76a88b26b89bb00b089e6722a"
+    },
+    {
+      "block_id": "page-0063-block-0021",
+      "order": 21,
+      "text": "If poor adherence related to poor \ntolerability, discuss with patient and \n",
+      "bbox": [
+        286.8070068359375,
+        435.94415283203125,
+        402.4313049316406,
+        453.2507629394531
+      ],
+      "text_sha256": "38fe510e8789074002e86fdad7a6d433c97284e21673df94e111bf26fc38bbb9"
+    },
+    {
+      "block_id": "page-0063-block-0022",
+      "order": 22,
+      "text": "change to drug with more \nfavourable side-effect proﬁle\n",
+      "bbox": [
+        298.093017578125,
+        453.04412841796875,
+        389.16455078125,
+        470.3507385253906
+      ],
+      "text_sha256": "7f5083dc6809dd866d3bdc96c97fb10912190b5f5ccfcac63deffbd00c00bcf2"
+    },
+    {
+      "block_id": "page-0063-block-0023",
+      "order": 23,
+      "text": "If poor adherence related to other \n",
+      "bbox": [
+        289.96337890625,
+        472.9941101074219,
+        399.2747497558594,
+        481.750732421875
+      ],
+      "text_sha256": "6937b24946a10277a224679768f7dfcfc85b9444f260d660d0afb07657b4f5ed"
+    },
+    {
+      "block_id": "page-0063-block-0024",
+      "order": 24,
+      "text": "factors, consider early use of \n",
+      "bbox": [
+        297.4945068359375,
+        481.5440979003906,
+        391.7508850097656,
+        490.30072021484375
+      ],
+      "text_sha256": "fec6af56042016e1fc57c59230b96273eb8f033a159b3bf49c4a2b4fd1e809b9"
+    },
+    {
+      "block_id": "page-0063-block-0025",
+      "order": 25,
+      "text": "depot/long-acting injection**\n",
+      "bbox": [
+        298.29248046875,
+        490.0941162109375,
+        388.9792785644531,
+        498.8507385253906
+      ],
+      "text_sha256": "aef5bd64dd4eb3796a45b83b53377d785c1e3dbac9fae9991e54fce5eaaa2ad9"
+    },
+    {
+      "block_id": "page-0063-block-0026",
+      "order": 26,
+      "text": "Continue at dose \nestablished as effective\n",
+      "bbox": [
+        84.77762603759766,
+        435.9441223144531,
+        160.01763916015625,
+        453.250732421875
+      ],
+      "text_sha256": "ba0e91f0d3d2cd4d45b9106fe679ef5e222141defbed6c2ce6f5faee56ead722"
+    },
+    {
+      "block_id": "page-0063-block-0027",
+      "order": 27,
+      "text": "Consider switching to \ndepot/long-acting injection \n",
+      "bbox": [
+        79.83287811279297,
+        455.89410400390625,
+        166.9502716064453,
+        473.20074462890625
+      ],
+      "text_sha256": "f325b68c319e4a0d8ce78cf165089fab7232ef6f8eabc91a3db93f14bf7abf98"
+    },
+    {
+      "block_id": "page-0063-block-0028",
+      "order": 28,
+      "text": "before discharge**\n",
+      "bbox": [
+        92.30875396728516,
+        472.9941101074219,
+        152.49362182617188,
+        481.750732421875
+      ],
+      "text_sha256": "5d4d63659b7c2669c83de545cbf5b752d2966ceacb163ab8067b964eed22ad71"
+    },
+    {
+      "block_id": "page-0063-block-0029",
+      "order": 29,
+      "text": "Effective\nNo effect\n",
+      "bbox": [
+        117.47940063476562,
+        389.50213623046875,
+        256.3384704589844,
+        398.2587585449219
+      ],
+      "text_sha256": "1b65c864050098d6f20970e603437ccc39d759e3faf8a4eee40454779cbf2401"
+    },
+    {
+      "block_id": "page-0063-block-0030",
+      "order": 30,
+      "text": "Not effective\n",
+      "bbox": [
+        227.42527770996094,
+        481.4360046386719,
+        267.4249267578125,
+        490.192626953125
+      ],
+      "text_sha256": "9038554baf571a515f12d7e49e91a40979801f8d5a739eb997f028bb7a8953d3"
+    },
+    {
+      "block_id": "page-0063-block-0031",
+      "order": 31,
+      "text": "Not tolerated or \npoor medication\nadherence\n",
+      "bbox": [
+        313.6092529296875,
+        385.07037353515625,
+        365.4791259765625,
+        410.9269714355469
+      ],
+      "text_sha256": "161913d257fd7c6b1a685aeb640735d6d21da0acdef3b487c49bf5e0ec6ad045"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

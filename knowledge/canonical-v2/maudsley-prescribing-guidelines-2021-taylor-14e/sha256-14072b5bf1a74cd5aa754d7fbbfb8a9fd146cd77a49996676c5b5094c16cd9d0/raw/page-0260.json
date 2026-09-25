@@ -1,0 +1,311 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0260",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 260,
+  "source_page_index": 259,
+  "source_page_display": 260,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    239\nCHAPTER 1\ninsufficient to prevent ‘dipping’ of WCC below the normal range. Again, this strategy \nrisks masking a severe neutropenia or agranulocytosis. It is also likely to be practically \ndifficult to manage outside a specialist unit, as frequent blood testing (twice to three \ntimes a week) is required, as well as immediate access to medical review and the G-CSF \nitself.\nConsultation with a haematologist and discussion with the medical adviser at the \nclozapine monitoring service is essential before considering the use of G-CSF. A patient’s \nindividual clinical circumstances should be considered. In particular, patients should be \nconsidered to be very high risk for rechallenge with clozapine if the first episode of \ndyscrasia fulfilled any of the following criteria, all of which suggest that the low counts \nare clozapine related:\nFigure 1.4  The use of lithium with clozapine\nTreatment/rechallenge with clozapine\nconsidered desirable\nDiscontinue if possible, other drugs that\nare known to suppress the bone marrow\nRefer to \nhaematologist for \nBEN dx if appropriate\nBaseline U&Es, TFTs, FBC\nBorderline/\nlow WCC\nWCC in right range\nPrescribe lithium 400mg daily Titrate dose\nto achieve a plasma level >0.4mmol/l\n(Higher plasma levels may be appropriate\nfor patients who have an affective\ncomponent to their illness) Repeat WCC\nIf WCC result is in the normal\nrange, start/restart clozapine\nEnsure ongoing monitoring for clozapine and\nlithium (Note that lithium does not protect\nagainst agranulocytosis: if the WCC\ncontinues to fall despite lithium treatment,\nconsideration should be given to\ndiscontinuing clozapine.\nParticular vigilance is required in high-risk\npatients during the ﬁrst 18 weeks of treatment\nLithium contra-\nindicated or \ninappropriate\nHaematology referral/\nConsultation with\nclozapine registry \nUnlicensed US\nmonitoring \ncriteria\nTreatment\nplan with\nG-CSF\n",
+  "raw_text_sha256": "cd1ca44755d81985124b785794ff9ae326be07b2810f2bf755f2bebe38461a5c",
+  "coordinates_sha256": "2fb9134a71971ccbc36d3d8926e6189fce9c4ca4479e134f246078883f4639b9",
+  "block_sequence_sha256": "785b528ad24f68503548afb12e94a98ccdde45c758a46bc1a6c6ec4bb406f319",
+  "blocks": [
+    {
+      "block_id": "page-0260-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    239\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "769f825ad577626700d47df7eb5d6a74db74c58ff71b42a3792c7ee25940c385"
+    },
+    {
+      "block_id": "page-0260-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0260-block-0002",
+      "order": 2,
+      "text": "insufficient to prevent ‘dipping’ of WCC below the normal range. Again, this strategy \nrisks masking a severe neutropenia or agranulocytosis. It is also likely to be practically \ndifficult to manage outside a specialist unit, as frequent blood testing (twice to three \ntimes a week) is required, as well as immediate access to medical review and the G-CSF \nitself.\n",
+      "bbox": [
+        47.99909973144531,
+        490.2289123535156,
+        422.8088073730469,
+        549.948974609375
+      ],
+      "text_sha256": "16e4fc50c1f4e5753ee8ffb8dd952685ed9e8307cd3b0c05eed38740556a8af9"
+    },
+    {
+      "block_id": "page-0260-block-0003",
+      "order": 3,
+      "text": "Consultation with a haematologist and discussion with the medical adviser at the \nclozapine monitoring service is essential before considering the use of G-CSF. A patient’s \nindividual clinical circumstances should be considered. In particular, patients should be \nconsidered to be very high risk for rechallenge with clozapine if the first episode of \ndyscrasia fulfilled any of the following criteria, all of which suggest that the low counts \nare clozapine related:\n",
+      "bbox": [
+        47.99909973144531,
+        550.2289428710938,
+        422.8289489746094,
+        621.948974609375
+      ],
+      "text_sha256": "8cc21abc215df7f27ab22ba5be3ded2ac48fd0301f2eb9d833dfa52687aa0a24"
+    },
+    {
+      "block_id": "page-0260-block-0004",
+      "order": 4,
+      "text": "Figure 1.4  The use of lithium with clozapine\n",
+      "bbox": [
+        47.99909973144531,
+        456.6119079589844,
+        192.05908203125,
+        465.4994201660156
+      ],
+      "text_sha256": "a149476cef94d384f6fb740a520f10cdb5a312d6990575f25e4fdbe309e1cfb5"
+    },
+    {
+      "block_id": "page-0260-block-0005",
+      "order": 5,
+      "text": "Treatment/rechallenge with clozapine\n",
+      "bbox": [
+        162.80459594726562,
+        73.41879272460938,
+        288.2721862792969,
+        82.63629150390625
+      ],
+      "text_sha256": "04bb4d5f1d09178e6eadc24d515ec6348e16c5ebb1fdafcc560ee834d87d39a9"
+    },
+    {
+      "block_id": "page-0260-block-0006",
+      "order": 6,
+      "text": "considered desirable\n",
+      "bbox": [
+        189.902099609375,
+        82.41879272460938,
+        261.1670837402344,
+        91.63629150390625
+      ],
+      "text_sha256": "a4d9fd80a6254f81b252a9cc6ccfc6661fccb0ba7c7623fce695cb96c1b09d85"
+    },
+    {
+      "block_id": "page-0260-block-0007",
+      "order": 7,
+      "text": "Discontinue if possible, other drugs that\nare known to suppress the bone marrow\n",
+      "bbox": [
+        159.17459106445312,
+        126.57876586914062,
+        294.2196960449219,
+        144.7962646484375
+      ],
+      "text_sha256": "f6a4b21173a940f19c152f807a31ff371bd9bea762f23a504ae263d94050a168"
+    },
+    {
+      "block_id": "page-0260-block-0008",
+      "order": 8,
+      "text": "Refer to \nhaematologist for \nBEN dx if appropriate\n",
+      "bbox": [
+        60.39209747314453,
+        88.59127807617188,
+        130.652099609375,
+        115.80877685546875
+      ],
+      "text_sha256": "74c5c2523d4106509fe541ec99a66b93a931d7083f22b9abd773d7853ba42f2a"
+    },
+    {
+      "block_id": "page-0260-block-0009",
+      "order": 9,
+      "text": "Baseline U&Es, TFTs, FBC\n",
+      "bbox": [
+        180.3845977783203,
+        177.65377807617188,
+        269.1695861816406,
+        186.87127685546875
+      ],
+      "text_sha256": "6f9447bc8db4ff3347423a94e2a2c8e53fe1de0b7eaa47ebdd9060e5653e9f7c"
+    },
+    {
+      "block_id": "page-0260-block-0010",
+      "order": 10,
+      "text": "Borderline/\nlow WCC\n",
+      "bbox": [
+        88.0595932006836,
+        153.03878784179688,
+        124.73458099365234,
+        171.25628662109375
+      ],
+      "text_sha256": "46de137c1f6ccffb4f988cfc9421cbd948ad4730d56dd7ebf484725469009c36"
+    },
+    {
+      "block_id": "page-0260-block-0011",
+      "order": 11,
+      "text": "WCC in right range\nPrescribe lithium 400mg daily Titrate dose\n",
+      "bbox": [
+        60.27959442138672,
+        220.17129516601562,
+        295.7196350097656,
+        230.018798828125
+      ],
+      "text_sha256": "2d1fb1005c83f720f930637c26a60807596948be9f85a41499f049bc5a5c5082"
+    },
+    {
+      "block_id": "page-0260-block-0012",
+      "order": 12,
+      "text": "to achieve a plasma level >0.4mmol/l\n(Higher plasma levels may be appropriate\n",
+      "bbox": [
+        154.652099609375,
+        229.80130004882812,
+        295.9220886230469,
+        248.018798828125
+      ],
+      "text_sha256": "3b6e36afd11f811849f8ef3da375d1ea0dce6ebf001aa17581ae500f1da72a23"
+    },
+    {
+      "block_id": "page-0260-block-0013",
+      "order": 13,
+      "text": "for patients who have an affective\ncomponent to their illness) Repeat WCC\n",
+      "bbox": [
+        158.18460083007812,
+        247.80130004882812,
+        292.3971862792969,
+        266.018798828125
+      ],
+      "text_sha256": "ab8f5a8151d9789e4837b5c22b1fa49fcc612ac8d8c742324abd5ecc66ae436d"
+    },
+    {
+      "block_id": "page-0260-block-0014",
+      "order": 14,
+      "text": "If WCC result is in the normal\nrange, start/restart clozapine\n",
+      "bbox": [
+        176.43209838867188,
+        304.5762939453125,
+        273.5421447753906,
+        322.7937927246094
+      ],
+      "text_sha256": "a0119557104bba8cc0e0917baf0211ba6464fb9319040b61ce5ee0252d97b21b"
+    },
+    {
+      "block_id": "page-0260-block-0015",
+      "order": 15,
+      "text": "Ensure ongoing monitoring for clozapine and\n",
+      "bbox": [
+        150.7895965576172,
+        362.3487854003906,
+        296.9495544433594,
+        371.5662841796875
+      ],
+      "text_sha256": "51b1c00dc9c736d1faa1ec5b0b8a77d3b167db058bc9dc31a8307985452e33bb"
+    },
+    {
+      "block_id": "page-0260-block-0016",
+      "order": 16,
+      "text": "lithium (Note that lithium does not protect\n",
+      "bbox": [
+        157.45709228515625,
+        371.3487854003906,
+        290.2821350097656,
+        380.5662841796875
+      ],
+      "text_sha256": "f4f01e83d78ef86998715d6a36df0832a0a22c9245be8845b8176d0aa497030e"
+    },
+    {
+      "block_id": "page-0260-block-0017",
+      "order": 17,
+      "text": "against agranulocytosis: if the WCC\ncontinues to fall despite lithium treatment,\n",
+      "bbox": [
+        156.67709350585938,
+        380.3487854003906,
+        291.0620422363281,
+        398.5662841796875
+      ],
+      "text_sha256": "c81dbfd1160a27bfaad2737d16771dcaed2581ef7eee906e4c39ba1f2c6efffc"
+    },
+    {
+      "block_id": "page-0260-block-0018",
+      "order": 18,
+      "text": "consideration should be given to\n",
+      "bbox": [
+        170.79959106445312,
+        398.3487854003906,
+        276.9395446777344,
+        407.5662841796875
+      ],
+      "text_sha256": "ef98a7493ae0150fb2069fbf840ab64ecfdf6aa2635ae167c516c9c03ea41932"
+    },
+    {
+      "block_id": "page-0260-block-0019",
+      "order": 19,
+      "text": "discontinuing clozapine.\nParticular vigilance is required in high-risk\npatients during the ﬁrst 18 weeks of treatment\n",
+      "bbox": [
+        149.91209411621094,
+        407.3487854003906,
+        297.8270568847656,
+        434.5662841796875
+      ],
+      "text_sha256": "9c292d8ea6aa281f4b987a9b62d2ed6ac4deba0267b6a0d49e57671e5d89dcca"
+    },
+    {
+      "block_id": "page-0260-block-0020",
+      "order": 20,
+      "text": "Lithium contra-\nindicated or \ninappropriate\n",
+      "bbox": [
+        343.8245849609375,
+        187.33627319335938,
+        393.8421630859375,
+        214.55377197265625
+      ],
+      "text_sha256": "b534b1f6f0498332566100b292a5696a2a819895b01d4bfad441a3935a8faac7"
+    },
+    {
+      "block_id": "page-0260-block-0021",
+      "order": 21,
+      "text": "Haematology referral/\nConsultation with\nclozapine registry \n",
+      "bbox": [
+        331.26959228515625,
+        260.2212829589844,
+        403.7872009277344,
+        287.43878173828125
+      ],
+      "text_sha256": "019fd7c2b4c4ad016648d0d813816b22012bc3214c87a6cd97c6e294bdf9c28c"
+    },
+    {
+      "block_id": "page-0260-block-0022",
+      "order": 22,
+      "text": "Unlicensed US\nmonitoring \ncriteria\n",
+      "bbox": [
+        312.3021240234375,
+        303.42877197265625,
+        360.9620666503906,
+        330.6462707519531
+      ],
+      "text_sha256": "429a28afeb966f6cb138551d7ce42ead16656771f81bd82f60c7cebb41ca8ead"
+    },
+    {
+      "block_id": "page-0260-block-0023",
+      "order": 23,
+      "text": "Treatment\nplan with\nG-CSF\n",
+      "bbox": [
+        321.4896240234375,
+        353.4087829589844,
+        355.2546691894531,
+        380.62628173828125
+      ],
+      "text_sha256": "3c4fa36929e77b41705b856c50c987b318d5d10ab645351cf577e3c0f0093c82"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

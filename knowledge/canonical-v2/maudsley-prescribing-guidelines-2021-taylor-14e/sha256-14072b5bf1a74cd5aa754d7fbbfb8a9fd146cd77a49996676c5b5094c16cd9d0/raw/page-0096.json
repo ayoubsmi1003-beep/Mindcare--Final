@@ -1,0 +1,371 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0096",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 96,
+  "source_page_index": 95,
+  "source_page_display": 96,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    75\nCHAPTER 1\nWhen considering dose reduction, the following prompts may be helpful:\n■\n■Is the patient symptom-free and if so for how long? Long-standing, non-distressing \nsymptoms which have not previously been responsive to medication may be excluded.\n■\n■How severe, tolerable and disabling are the side effects (EPS including tardive dyski-\nnesia, metabolic side effects including obesity, etc.)? When patients report no or mini-\nmal adverse effects, it is usually sensible to continue treatment and monitor closely \nfor signs of tardive dyskinesia.\n■\n■What is the previous pattern of illness? Consider the speed of onset, duration and \nseverity of past relapses and any dangers or risks posed to self or others\n■\n■Has dosage reduction been attempted before? If so, what was the outcome?\n■\n■What are the patient’s current social circumstances? Is it a period of relative stability, \nor should stressful life events be anticipated?\n■\n■What is the potential social cost of relapse (e.g. is the patient the sole breadwinner for \na family)?\n■\n■Is the patient able to monitor his/her own symptoms? If so, will he/she seek appropri-\nate help?\nIf, after consideration of the above, the decision is taken to reduce the medication dose, \nthe patient’s family should be involved and a clear explanation given of what should be \ndone if and when symptoms return or worsen. It would then be reasonable to proceed \nin the following manner:\n■\n■If it has not already been done, any co-prescribed oral antipsychotic medication \nshould be discontinued.\n■\n■Where the product labelling allows, the interval between injections should be \nincreased to up to 4 weeks before decreasing the dose given each time.\n■\n■The dose should be reduced by no more than a third at any one time. Note: special \nconsiderations apply to risperidone Consta LAI.\n■\n■Decrements should, if possible, be made no more frequently than every 3 months, \npreferably every 6 months or more. The slower the rate of withdrawal, the longer the \ntime to relapse.19\n■\n■Discontinuation of medication should not be seen as the ultimate aim of the above \nprocess, although it sometimes results. While an intermittent, targeted (symptom-\ntriggered) treatment approach with antipsychotic medication is not as effective as \ncontinuous treatment, it may be preferable to no treatment.20–22\nIf the patient becomes symptomatic, this should be seen not as a failure but rather as an \nimportant step in determining the minimum effective dose that the patient requires.\nFor more discussion, see the section on long-term antipsychotic treatment in this \nchapter.\n",
+  "raw_text_sha256": "bfd1d588740f70b3d021c4dd42edba6511aae056b9a342b9022fa43cd15b0625",
+  "coordinates_sha256": "d72c306032b421a23a4826098294ee1d9a1ea753d5085485c47d60a1addbe616",
+  "block_sequence_sha256": "1ccd371f8e0b6937da4ee8c360b13f23a51ac390b5977c80dab985ebeae59d09",
+  "blocks": [
+    {
+      "block_id": "page-0096-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    75\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "dbdbc0d728552b916899dc66509ea2c1fbc8c26a21e6df32b72de8023f489df4"
+    },
+    {
+      "block_id": "page-0096-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0096-block-0002",
+      "order": 2,
+      "text": "When considering dose reduction, the following prompts may be helpful:\n",
+      "bbox": [
+        57.99909973144531,
+        62.5494384765625,
+        372.6990661621094,
+        74.26943969726562
+      ],
+      "text_sha256": "70738e8388596fe034d816a336628e76eb709badd883bda2c31f586e091e14c9"
+    },
+    {
+      "block_id": "page-0096-block-0003",
+      "order": 3,
+      "text": "■\n■Is the patient symptom-free and if so for how long? Long-standing, non-distressing \n",
+      "bbox": [
+        47.999000549316406,
+        80.5494384765625,
+        422.7290344238281,
+        92.26943969726562
+      ],
+      "text_sha256": "cb558a8c010099a286b93bb84d1dbb05b935de4f755298f13dfdb37f1676e868"
+    },
+    {
+      "block_id": "page-0096-block-0004",
+      "order": 4,
+      "text": "symptoms which have not previously been responsive to medication may be excluded.\n",
+      "bbox": [
+        56.99909973144531,
+        92.5494384765625,
+        420.3290100097656,
+        104.26943969726562
+      ],
+      "text_sha256": "348240ad962e189f32bf08279dce63c201b687b6eeb894ca3cc023b951216bd9"
+    },
+    {
+      "block_id": "page-0096-block-0005",
+      "order": 5,
+      "text": "■\n■How severe, tolerable and disabling are the side effects (EPS including tardive dyski-\n",
+      "bbox": [
+        47.999000549316406,
+        104.5494384765625,
+        420.0290222167969,
+        116.26943969726562
+      ],
+      "text_sha256": "05706cf0726853c1baf3677cc3adcafc59f6c10173cadd1072d8abba7e50747e"
+    },
+    {
+      "block_id": "page-0096-block-0006",
+      "order": 6,
+      "text": "nesia, metabolic side effects including obesity, etc.)? When patients report no or mini-\nmal adverse effects, it is usually sensible to continue treatment and monitor closely \nfor signs of tardive dyskinesia.\n",
+      "bbox": [
+        56.99909973144531,
+        116.5494384765625,
+        422.7289123535156,
+        152.26943969726562
+      ],
+      "text_sha256": "3ff429bfb539c3b552b557db9c53088272899d7e8b75b5538b430822699a7042"
+    },
+    {
+      "block_id": "page-0096-block-0007",
+      "order": 7,
+      "text": "■\n■What is the previous pattern of illness? Consider the speed of onset, duration and \n",
+      "bbox": [
+        47.999000549316406,
+        152.5494384765625,
+        422.8291320800781,
+        164.26943969726562
+      ],
+      "text_sha256": "7b9287958d6f0757de25af1f79bfacf133191bca20ff5d3cc547094bcf690a11"
+    },
+    {
+      "block_id": "page-0096-block-0008",
+      "order": 8,
+      "text": "severity of past relapses and any dangers or risks posed to self or others\n",
+      "bbox": [
+        56.99909973144531,
+        164.5494384765625,
+        365.4091796875,
+        176.26943969726562
+      ],
+      "text_sha256": "c42d99f0eebc94d80c9127f2e21e25c7b7b8e60a7fa02088834817b1f2045c37"
+    },
+    {
+      "block_id": "page-0096-block-0009",
+      "order": 9,
+      "text": "■\n■Has dosage reduction been attempted before? If so, what was the outcome?\n",
+      "bbox": [
+        47.999000549316406,
+        176.5494384765625,
+        382.1790771484375,
+        188.26943969726562
+      ],
+      "text_sha256": "070789ec6b6e36c5723d848f436059866255964eb8f75a865a966822ac8ea29a"
+    },
+    {
+      "block_id": "page-0096-block-0010",
+      "order": 10,
+      "text": "■\n■What are the patient’s current social circumstances? Is it a period of relative stability, \n",
+      "bbox": [
+        47.999000549316406,
+        188.5494384765625,
+        422.7690124511719,
+        200.26943969726562
+      ],
+      "text_sha256": "a4df753570de6bd34a688ede5210347373bddac6fe58764205902c406f682b0f"
+    },
+    {
+      "block_id": "page-0096-block-0011",
+      "order": 11,
+      "text": "or should stressful life events be anticipated?\n",
+      "bbox": [
+        56.99909973144531,
+        200.5494384765625,
+        249.2490692138672,
+        212.26943969726562
+      ],
+      "text_sha256": "0379218aba3186f6be3a28758c41ce2f8d3bdfe88ece6b644849e5280ac79d4a"
+    },
+    {
+      "block_id": "page-0096-block-0012",
+      "order": 12,
+      "text": "■\n■What is the potential social cost of relapse (e.g. is the patient the sole breadwinner for \n",
+      "bbox": [
+        47.999000549316406,
+        212.54949951171875,
+        422.7190246582031,
+        224.26950073242188
+      ],
+      "text_sha256": "e1ddd2aeb59e9b0b9f22c79b6f999152d31baf055764d8fe1b60a449afe1368a"
+    },
+    {
+      "block_id": "page-0096-block-0013",
+      "order": 13,
+      "text": "a family)?\n",
+      "bbox": [
+        56.99909973144531,
+        224.54949951171875,
+        99.75909423828125,
+        236.26950073242188
+      ],
+      "text_sha256": "6f8552c164d5bdc31bf1d74af580560ccd96bc9d0704c7a117916de4391086b4"
+    },
+    {
+      "block_id": "page-0096-block-0014",
+      "order": 14,
+      "text": "■\n■Is the patient able to monitor his/her own symptoms? If so, will he/she seek appropri-\n",
+      "bbox": [
+        47.999000549316406,
+        236.54949951171875,
+        419.9591979980469,
+        248.26950073242188
+      ],
+      "text_sha256": "cabec09f6fb7f00c4914ddf90e2eb86c0439703a4e5bbac769df31bd463b33f0"
+    },
+    {
+      "block_id": "page-0096-block-0015",
+      "order": 15,
+      "text": "ate help?\n",
+      "bbox": [
+        56.99909973144531,
+        248.54949951171875,
+        95.3291015625,
+        260.2695007324219
+      ],
+      "text_sha256": "075e4a32c59cc53adc84f4055eb75c90594f535fb03dd8abf01d3ae9238a467c"
+    },
+    {
+      "block_id": "page-0096-block-0016",
+      "order": 16,
+      "text": "If, after consideration of the above, the decision is taken to reduce the medication dose, \nthe patient’s family should be involved and a clear explanation given of what should be \ndone if and when symptoms return or worsen. It would then be reasonable to proceed \nin the following manner:\n",
+      "bbox": [
+        47.99909973144531,
+        266.54949951171875,
+        422.7489929199219,
+        314.2695007324219
+      ],
+      "text_sha256": "0c565a1b41995d09c0f38f42851cd2eb20997b9b43d2fe3175424ec767f5e2f9"
+    },
+    {
+      "block_id": "page-0096-block-0017",
+      "order": 17,
+      "text": "■\n■If it has not already been done, any co-prescribed oral antipsychotic medication \n",
+      "bbox": [
+        47.999000549316406,
+        320.54949951171875,
+        422.8091735839844,
+        332.2695007324219
+      ],
+      "text_sha256": "c9f3810619713f3b2a9c99e523c79f35112280b46758985bc5ebdc2cea2ebffc"
+    },
+    {
+      "block_id": "page-0096-block-0018",
+      "order": 18,
+      "text": "should be discontinued.\n",
+      "bbox": [
+        56.99909973144531,
+        332.54949951171875,
+        159.26907348632812,
+        344.2695007324219
+      ],
+      "text_sha256": "958920bf78bbcaeaf7867bdf8d9b24c5f8679b6ff1487ceda0cb4b2fd2e45766"
+    },
+    {
+      "block_id": "page-0096-block-0019",
+      "order": 19,
+      "text": "■\n■Where the product labelling allows, the interval between injections should be \n",
+      "bbox": [
+        47.999000549316406,
+        344.54949951171875,
+        422.8089904785156,
+        356.2695007324219
+      ],
+      "text_sha256": "bdf997ec3f2577041dd4c45003385929ffbf9eddd2ae433da874240d6927ff44"
+    },
+    {
+      "block_id": "page-0096-block-0020",
+      "order": 20,
+      "text": "increased to up to 4 weeks before decreasing the dose given each time.\n",
+      "bbox": [
+        56.99909973144531,
+        356.54949951171875,
+        359.7991027832031,
+        368.2695007324219
+      ],
+      "text_sha256": "c778ff05e0e3cb0648168886e1c29ff4d5c24024f14dd2503c17c94b21bbed25"
+    },
+    {
+      "block_id": "page-0096-block-0021",
+      "order": 21,
+      "text": "■\n■The dose should be reduced by no more than a third at any one time. Note: special \n",
+      "bbox": [
+        47.999000549316406,
+        368.54949951171875,
+        422.7690734863281,
+        380.2695007324219
+      ],
+      "text_sha256": "c1b60b7bd2c737685d0bc464bea669b96b612c1eedaa0cc832039327abe88ff8"
+    },
+    {
+      "block_id": "page-0096-block-0022",
+      "order": 22,
+      "text": "considerations apply to risperidone Consta LAI.\n",
+      "bbox": [
+        56.99909973144531,
+        380.54949951171875,
+        264.2590637207031,
+        392.2695007324219
+      ],
+      "text_sha256": "0cfc5323e4652e06619acd7bd44d38f052dd739b34be9d214ddbfe8e323a8968"
+    },
+    {
+      "block_id": "page-0096-block-0023",
+      "order": 23,
+      "text": "■\n■Decrements should, if possible, be made no more frequently than every 3 months, \n",
+      "bbox": [
+        47.999000549316406,
+        392.54949951171875,
+        422.7990417480469,
+        404.2695007324219
+      ],
+      "text_sha256": "115594e411f4571c46c89b421a2c0adace3045fd3f453d5f75e541bf389c721c"
+    },
+    {
+      "block_id": "page-0096-block-0024",
+      "order": 24,
+      "text": "preferably every 6 months or more. The slower the rate of withdrawal, the longer the \ntime to relapse.19\n",
+      "bbox": [
+        56.99909973144531,
+        404.54949951171875,
+        422.8089904785156,
+        428.2695007324219
+      ],
+      "text_sha256": "41c59de8cc746091967cf395f91c73a4e1088a1430f8ce2b3ff4a2a203266b36"
+    },
+    {
+      "block_id": "page-0096-block-0025",
+      "order": 25,
+      "text": "■\n■Discontinuation of medication should not be seen as the ultimate aim of the above \n",
+      "bbox": [
+        47.999000549316406,
+        428.54949951171875,
+        422.7890930175781,
+        440.2695007324219
+      ],
+      "text_sha256": "16f3591372ab334fbdb66d6ed6ce5e18d6ce1612ba0863697c3bfa04938b8f16"
+    },
+    {
+      "block_id": "page-0096-block-0026",
+      "order": 26,
+      "text": "process, although it sometimes results. While an intermittent, targeted (symptom-\ntriggered) treatment approach with antipsychotic medication is not as effective as \ncontinuous treatment, it may be preferable to no treatment.20–22\n",
+      "bbox": [
+        56.99909973144531,
+        440.54949951171875,
+        422.7490539550781,
+        476.2695007324219
+      ],
+      "text_sha256": "919792d40e23fae7dd6295d0eca3b46cce7dee1d297b055223a75ffe9675eeb6"
+    },
+    {
+      "block_id": "page-0096-block-0027",
+      "order": 27,
+      "text": "If the patient becomes symptomatic, this should be seen not as a failure but rather as an \nimportant step in determining the minimum effective dose that the patient requires.\n",
+      "bbox": [
+        47.99909973144531,
+        482.54949951171875,
+        422.8391418457031,
+        506.2695007324219
+      ],
+      "text_sha256": "e9de037b88ad0ca64795807fb3ed5632131fcc6eb2d314e98a2e63ee8d6822d1"
+    },
+    {
+      "block_id": "page-0096-block-0028",
+      "order": 28,
+      "text": "For more discussion, see the section on long-term antipsychotic treatment in this \nchapter.\n",
+      "bbox": [
+        47.99909973144531,
+        506.54949951171875,
+        422.7289123535156,
+        530.26953125
+      ],
+      "text_sha256": "d713c14c5b449ae91c80b884fa06526ff94220d17c90c67e9cc52208bf98d1cf"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

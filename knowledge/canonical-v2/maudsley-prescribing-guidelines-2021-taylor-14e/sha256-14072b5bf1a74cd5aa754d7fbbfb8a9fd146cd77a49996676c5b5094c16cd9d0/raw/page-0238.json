@@ -1,0 +1,299 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0238",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 238,
+  "source_page_index": 237,
+  "source_page_display": 238,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    217\nCHAPTER 1\nClozapine: uncommon or unusual adverse effects\nAdverse effect\nTime course\nComment\nAgranulocytosis/\nneutropenia (delayed)1–4\nUsually first 3 \nmonths but may \noccur at any \ntime\nOccasional reports of apparent clozapine-related blood dyscrasia \neven after 1 year of treatment. Risk may be elevated for up to 9 \nyears.5 It is possible that clozapine is not the causative agent in \nsome cases.6,7 See section on haematological adverse effects\nColitis/gastrointestinal \nnecrosis8–15\nUsually within \nthe first month \nbut may be any \ntime16\nGrowing body of case reports. Any severe or chronic diarrhoea \nshould prompt specialist referral as there is a substantial risk of \ndeath. Anticholinergic use probably increases risk of colitis and \nnecrosis17\nDelirium18–20\nAny time\nReported to be fairly common (8–10%18,21) but rarely seen in \npractice if dose is titrated slowly and plasma level determinations \nare used. Older age and medical comorbidity increase the risk of \ndelirium. Ensure common causes of delirium are treated (see the \nsection on delirium)\nEosinophilia22–24\nFirst weeks25,26\nReasonably common but significance unclear. Some suggestion \nthat eosinophilia predicts neutropenia but this is disputed. Usually \nbenign but investigate for signs of inflammatory organ damage27 \n(myocarditis,28 interstitial nephritis,26,29 interstitial lung disease, \nhepatitis, pancreatitis30). May be associated with colitis and related \nsymptoms.15,31 Six case reports of DRESS syndrome.32 Successful \nrechallenge in the absence of organ inflammation is possible.33 \nConcomitant antidepressants may increase risk34,35\nHeat stroke36,37\nAny time\nTwo cases reported, both occurred during a heatwave. May be \nmistaken for NMS (CK was elevated in both cases)\nHepatic failure/enzyme \nabnormalities38–44\nFirst few months\nBenign changes in LFTs are common (up to 50% of patients) but \nworth monitoring because of the very small risk of fulminant \nhepatic failure.45 Rash may be associated with clozapine-related \nhepatitis.46 See section on hepatic impairment\nHypothermia47\nAny time\nA few case reports and events in pharmacovigilance databases. \nCan be fatal\nInterstitial \nnephritis29,48–56\nUsually first \nthree weeks, \npossibly up to \nthree months26,57\nA handful of reports implicating clozapine. Immune-mediated. May \noccur after only a few doses. Symptoms include fever, tachycardia, \nnausea, vomiting, diarrhoea, raised creatinine, urinary difficulties \nand eosinophilia. The classic nephritis-associated rash may not be \npresent.26 There are no cases of successful rechallenge26\nInterstitial lung disease\nUsually first few \nmonths, possibly \nlater in \ntreatment\nSix case reports.58 May be caused by aspiration or an immune \nreaction. Symptoms are non-specific: shortness of breath, fever, \ncough, fatigue. Pneumonitis has also been reported59\nOcular effects\nAny time\nSingle case report of ocular pigmentation,60 five of periorbital \noedema.61 Clozapine may cause dry eye syndrome62\n(Continued)\n",
+  "raw_text_sha256": "ce63da984c77180a03774f4becbf865ff451baa077f6eb84245aa75a25955514",
+  "coordinates_sha256": "9a00e0ebbf8b4592ae0dcced5f924da85c7cf33ec7e37dcae516189a9c059e4b",
+  "block_sequence_sha256": "d75171115603690efb1285239f9c7fcf3a371b0bebc797db96e7e53af8bcc210",
+  "blocks": [
+    {
+      "block_id": "page-0238-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    217\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "1ed095618bffae5b4146d1c1a2b3682f255b70d4c4aac8c0dc54f0c393342979"
+    },
+    {
+      "block_id": "page-0238-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0238-block-0002",
+      "order": 2,
+      "text": "Clozapine: uncommon or unusual adverse effects\n",
+      "bbox": [
+        54.99909973144531,
+        66.06442260742188,
+        309.0550842285156,
+        79.09942626953125
+      ],
+      "text_sha256": "619a6de4cd2875a09815bd0eeb92438bea6ad742b2be97f107eca809e5246628"
+    },
+    {
+      "block_id": "page-0238-block-0003",
+      "order": 3,
+      "text": "Adverse effect\nTime course\nComment\n",
+      "bbox": [
+        47.99909973144531,
+        94.57191467285156,
+        238.75411987304688,
+        103.45941162109375
+      ],
+      "text_sha256": "078e96fe408dc94a60e6ba2be7d0d6aee976808e14b85126f441f08cfd6df04c"
+    },
+    {
+      "block_id": "page-0238-block-0004",
+      "order": 4,
+      "text": "Agranulocytosis/\nneutropenia (delayed)1–4\n",
+      "bbox": [
+        47.99909973144531,
+        111.5294418334961,
+        124.51216125488281,
+        130.23443603515625
+      ],
+      "text_sha256": "446a73bd85391f1583dbbe6c748cee996ebcc1b18a8b733b2d06fc2974910224"
+    },
+    {
+      "block_id": "page-0238-block-0005",
+      "order": 5,
+      "text": "Usually first 3 \nmonths but may \noccur at any \ntime\n",
+      "bbox": [
+        137.9990997314453,
+        111.52693939208984,
+        192.5915985107422,
+        150.2269287109375
+      ],
+      "text_sha256": "efc758484f23665e72e57bf8bb3198aa6464a31e29ee8869f9063fb736118bf2"
+    },
+    {
+      "block_id": "page-0238-block-0006",
+      "order": 6,
+      "text": "Occasional reports of apparent clozapine-related blood dyscrasia \neven after 1 year of treatment. Risk may be elevated for up to 9 \nyears.5 It is possible that clozapine is not the causative agent in \nsome cases.6,7 See section on haematological adverse effects\n",
+      "bbox": [
+        204.58270263671875,
+        111.5194320678711,
+        412.1092224121094,
+        150.23443603515625
+      ],
+      "text_sha256": "4abeb0a168b48c5be8e4514ff846bda6d86966f74d46f1d8e00b9aa3fab3a2cb"
+    },
+    {
+      "block_id": "page-0238-block-0007",
+      "order": 7,
+      "text": "Colitis/gastrointestinal \nnecrosis8–15\n",
+      "bbox": [
+        47.99920654296875,
+        156.54945373535156,
+        120.3666763305664,
+        175.25445556640625
+      ],
+      "text_sha256": "73fc5e840ddb8cc5ecb461f73fc76434f676a191b2ccfd45b15a8115b887b683"
+    },
+    {
+      "block_id": "page-0238-block-0008",
+      "order": 8,
+      "text": "Usually within \nthe first month \nbut may be any \ntime16\n",
+      "bbox": [
+        137.9990997314453,
+        156.55189514160156,
+        189.6741180419922,
+        195.25189208984375
+      ],
+      "text_sha256": "98decca867ab901527a97ef2936777ee002ebbb96cf32b2a38b929a0cc03faf5"
+    },
+    {
+      "block_id": "page-0238-block-0009",
+      "order": 9,
+      "text": "Growing body of case reports. Any severe or chronic diarrhoea \nshould prompt specialist referral as there is a substantial risk of \ndeath. Anticholinergic use probably increases risk of colitis and \nnecrosis17\n",
+      "bbox": [
+        204.58180236816406,
+        156.55189514160156,
+        406.6918640136719,
+        195.25189208984375
+      ],
+      "text_sha256": "caec98fcf79f2e47ddc6ba0c0db010796c07a4d961d62b600853d2e8d4cf4b6d"
+    },
+    {
+      "block_id": "page-0238-block-0010",
+      "order": 10,
+      "text": "Delirium18–20\nAny time\nReported to be fairly common (8–10%18,21) but rarely seen in \npractice if dose is titrated slowly and plasma level determinations \nare used. Older age and medical comorbidity increase the risk of \ndelirium. Ensure common causes of delirium are treated (see the \nsection on delirium)\n",
+      "bbox": [
+        47.99909973144531,
+        201.57691955566406,
+        413.7459411621094,
+        250.2744140625
+      ],
+      "text_sha256": "c57907675638dee500c0ce211a45554e64b1ef60712d2a002cd145cba3814c77"
+    },
+    {
+      "block_id": "page-0238-block-0011",
+      "order": 11,
+      "text": "Eosinophilia22–24\nFirst weeks25,26\nReasonably common but significance unclear. Some suggestion \nthat eosinophilia predicts neutropenia but this is disputed. Usually \nbenign but investigate for signs of inflammatory organ damage27 \n(myocarditis,28 interstitial nephritis,26,29 interstitial lung disease, \nhepatitis, pancreatitis30). May be associated with colitis and related \nsymptoms.15,31 Six case reports of DRESS syndrome.32 Successful \nrechallenge in the absence of organ inflammation is possible.33 \nConcomitant antidepressants may increase risk34,35\n",
+      "bbox": [
+        47.9932861328125,
+        256.58941650390625,
+        418.7681579589844,
+        335.3069152832031
+      ],
+      "text_sha256": "e329228428ee4041521d3b8321b368e7d28ff86a0d2446f65a44df5860ca697b"
+    },
+    {
+      "block_id": "page-0238-block-0012",
+      "order": 12,
+      "text": "Heat stroke36,37\nAny time\nTwo cases reported, both occurred during a heatwave. May be \nmistaken for NMS (CK was elevated in both cases)\n",
+      "bbox": [
+        47.99909973144531,
+        341.6269226074219,
+        406.5291442871094,
+        360.3319091796875
+      ],
+      "text_sha256": "89d78f57ba00b0194dc4129ab11299dfa1a0f5029cbda88234f122ff0dc90afe"
+    },
+    {
+      "block_id": "page-0238-block-0013",
+      "order": 13,
+      "text": "Hepatic failure/enzyme \nabnormalities38–44\n",
+      "bbox": [
+        47.99908447265625,
+        366.64691162109375,
+        122.85657501220703,
+        385.3518981933594
+      ],
+      "text_sha256": "815b29644615157e7b71f0f32679402f3a55ebd4ed2a5fb2f61f3ab7488a2e71"
+    },
+    {
+      "block_id": "page-0238-block-0014",
+      "order": 14,
+      "text": "First few months\nBenign changes in LFTs are common (up to 50% of patients) but \nworth monitoring because of the very small risk of fulminant \nhepatic failure.45 Rash may be associated with clozapine-related \nhepatitis.46 See section on hepatic impairment\n",
+      "bbox": [
+        137.9990997314453,
+        366.65191650390625,
+        412.4241638183594,
+        405.3594055175781
+      ],
+      "text_sha256": "d07d11c38d2fd0bc755d61991814fcf7a2a894f1619152098a31b65ae9131f43"
+    },
+    {
+      "block_id": "page-0238-block-0015",
+      "order": 15,
+      "text": "Hypothermia47\nAny time\nA few case reports and events in pharmacovigilance databases. \nCan be fatal\n",
+      "bbox": [
+        47.99859619140625,
+        411.6744079589844,
+        408.2242126464844,
+        430.3819274902344
+      ],
+      "text_sha256": "182c542b6003300aec6ce5f3edbbf34c64ffcfdf70d0a8c9ef82bf26ca80b3e2"
+    },
+    {
+      "block_id": "page-0238-block-0016",
+      "order": 16,
+      "text": "Interstitial \nnephritis29,48–56\n",
+      "bbox": [
+        47.99908447265625,
+        436.6969299316406,
+        93.48963928222656,
+        455.40191650390625
+      ],
+      "text_sha256": "ae3254a05c71903bdc4ca2caaf4dba56f16f406b5e06b159d4b11c7dba87bdd5"
+    },
+    {
+      "block_id": "page-0238-block-0017",
+      "order": 17,
+      "text": "Usually first \nthree weeks, \npossibly up to \nthree months26,57\n",
+      "bbox": [
+        137.9990997314453,
+        436.7019348144531,
+        191.72637939453125,
+        475.40191650390625
+      ],
+      "text_sha256": "385da4b139161eaba291f7e62fffac18ff771c177d1bc6146cd3e46c86782511"
+    },
+    {
+      "block_id": "page-0238-block-0018",
+      "order": 18,
+      "text": "A handful of reports implicating clozapine. Immune-mediated. May \noccur after only a few doses. Symptoms include fever, tachycardia, \nnausea, vomiting, diarrhoea, raised creatinine, urinary difficulties \nand eosinophilia. The classic nephritis-associated rash may not be \npresent.26 There are no cases of successful rechallenge26\n",
+      "bbox": [
+        204.58180236816406,
+        436.7019348144531,
+        421.5494689941406,
+        485.409423828125
+      ],
+      "text_sha256": "336bb917df127cd296b971d86694ef5ef0be578e6e97371fd15638f5c352d1df"
+    },
+    {
+      "block_id": "page-0238-block-0019",
+      "order": 19,
+      "text": "Interstitial lung disease\nUsually first few \nmonths, possibly \nlater in \ntreatment\n",
+      "bbox": [
+        47.99909973144531,
+        491.7269287109375,
+        193.43157958984375,
+        530.4268798828125
+      ],
+      "text_sha256": "77e335b66e95e656613b55f5e6b031823f921a3d85b7b4b3d59311562509ea1f"
+    },
+    {
+      "block_id": "page-0238-block-0020",
+      "order": 20,
+      "text": "Six case reports.58 May be caused by aspiration or an immune \nreaction. Symptoms are non-specific: shortness of breath, fever, \ncough, fatigue. Pneumonitis has also been reported59\n",
+      "bbox": [
+        204.58348083496094,
+        491.71942138671875,
+        409.3335266113281,
+        520.429443359375
+      ],
+      "text_sha256": "124d88992858bef8e59fd16e9f3beffad7620f8468137cfc6e6bb1d19aec334b"
+    },
+    {
+      "block_id": "page-0238-block-0021",
+      "order": 21,
+      "text": "Ocular effects\nAny time\nSingle case report of ocular pigmentation,60 five of periorbital \noedema.61 Clozapine may cause dry eye syndrome62\n",
+      "bbox": [
+        47.99909973144531,
+        536.7518920898438,
+        402.2377014160156,
+        555.4594116210938
+      ],
+      "text_sha256": "f832e621f210a6d0fd6e0ba4a0e7c964b8776b182efcea0348c7001fc707cde5"
+    },
+    {
+      "block_id": "page-0238-block-0022",
+      "order": 22,
+      "text": "(Continued)\n",
+      "bbox": [
+        382.48406982421875,
+        565.4005126953125,
+        419.9991149902344,
+        574.1530151367188
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

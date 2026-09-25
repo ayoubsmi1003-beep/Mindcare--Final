@@ -1,0 +1,119 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0081",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 81,
+  "source_page_index": 80,
+  "source_page_display": 81,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "60    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nZuclopenthixol acetate\nZuclopenthixol acetate (ZA) is widely used in the UK and elsewhere in Europe and is \nbest known by its trade name Acuphase. Zuclopenthixol itself is a thioxanthene dopa-\nmine antagonist first introduced in the early 1960s. ZA is not a rapidly tranquillising \nagent. Its elimination half-life is around 20 hours. Intramuscular injection of zuclopen-\nthixol base results in rapid absorption and a duration of action of 12–24 hours. By \nslowing absorption after IM injection, the biological half-life (and so duration of action) \nbecomes dependent on the rate of release from the IM reservoir. This can be achieved \nby esterification of the zuclopenthixol molecule; the rate of release being broadly pro-\nportion to the length of the ester carbon chain. Thus, zuclopenthixol decanoate is slow \nto act but very long-acting as a result of retarded release after IM injection. \nZuclopenthixol acetate (with eight carbon atoms fewer) would be expected to provide \nrelatively prompt release but with an intermediate duration of action. The intention of \nthe manufacturers was that the use of ZA would obviate the need for repeated IM injec-\ntions in disturbed patients.\nAn initial pharmacokinetic study of ZA included 19 patients ‘in whom calming effect \nby parenteral neuroleptic was considered necessary’.54 Zuclopenthixol was detectable \nin the plasma after 1–2 hours but did not reach peak concentrations until around 36 \nhours after dosing. At 72 hours, plasma levels were around a third of those at 36 hours. \nThe clinical effect of ZA was not rapid – 10 of 17 patients exhibited minimal or no \nchange in psychotic symptoms at 4 hours. Sedation was evident at 4 hours, but it had \neffectively abated by 72 hours.\nA follow-up study by the same research group55 examined more closely the clinical \neffects of ZA in 83 patients. The authors concluded that ZA produced ‘pronounced and \nrapid reduction in psychotic symptoms’. In fact, psychotic symptoms were first assessed \nonly after 24 hours and so a claim of rapid effect is not reasonably supported. Sedative \neffects were measured after two hours when a statistically significant effect was observed \n– at baseline mean sedation score was 0.0 (0 = no sign of sedation) and at 2 hours 0.6 \n(1 = slightly sedated). Maximum sedation was observed at 8 hours (mean score 2.2; \n2 = moderately sedated). At 72 hours mean score was 1.1. Dystonia and rigidity were \nthe most commonly reported adverse effects.\nTwo independently conducted open studies, produced similar results – a slow onset \nof effect peaking at 24 hours and still being evident at 72 hours.56,57 The first UK study \nwas reported in 1990.58 In the trial, a significant reduction in psychosis score was first \nevident at 8 hours and scores continued to fall until the last measurement at 72 hours. \nOf 25 patients assessed only 4 showed signs of tranquillisation at 1 hour (19 at 2 hours \nand 22 at 24 hours).\nA comparative trial of ZA59 examined its effects and those of IM/oral haloperidol \nand IM/oral zuclopenthixol base (in multiple doses over 6 days). The two non-ester, IM/\noral preparations produced a greater degree of sedation at 2 hours than did ZA, but the \neffect of ZA and zuclopenthixol was more sustained than with haloperidol over 144 \nhours (although patients received more zuclopenthixol doses). No clear differences \nbetween treatments were detected, with the exception of the slow onset of effect of ZA. \nThe number of doses given varied substantially: ZA 1–4; haloperidol 1–26 and zuclo-\npenthixol 1–22. This is the key (and perhaps unique) advantage of ZA – it reduces the \n",
+  "raw_text_sha256": "47a089eba2198099608b084c0e5fb4a1fc506603ef398b31bd036a24679d921b",
+  "coordinates_sha256": "4698fa057b90d8b1b9fca7d16a9eaa3b9d90a0b42387ef93d0114207412b8101",
+  "block_sequence_sha256": "aeee15e20e932cbd8653e2a77262ec5582d86836e9d66b3a7b3ebe979697ee16",
+  "blocks": [
+    {
+      "block_id": "page-0081-block-0000",
+      "order": 0,
+      "text": "60    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        295.1475830078125,
+        41.0262451171875
+      ],
+      "text_sha256": "b3ef62f437875d36e8ebcf55c3f314c5eb08da52f974f881785f1901a3b2c9fb"
+    },
+    {
+      "block_id": "page-0081-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0081-block-0002",
+      "order": 2,
+      "text": "Zuclopenthixol acetate\n",
+      "bbox": [
+        61.88909912109375,
+        62.499427795410156,
+        169.1390838623047,
+        74.34942626953125
+      ],
+      "text_sha256": "2eadd2a5b8d4c411ac5ff4140a1db3b22729a66aa281c9cc62b97b45450e1126"
+    },
+    {
+      "block_id": "page-0081-block-0003",
+      "order": 3,
+      "text": "Zuclopenthixol acetate (ZA) is widely used in the UK and elsewhere in Europe and is \nbest known by its trade name Acuphase. Zuclopenthixol itself is a thioxanthene dopa-\nmine antagonist first introduced in the early 1960s. ZA is not a rapidly tranquillising \nagent. Its elimination half-life is around 20 hours. Intramuscular injection of zuclopen-\nthixol base results in rapid absorption and a duration of action of 12–24 hours. By \nslowing absorption after IM injection, the biological half-life (and so duration of action) \nbecomes dependent on the rate of release from the IM reservoir. This can be achieved \nby esterification of the zuclopenthixol molecule; the rate of release being broadly pro-\nportion to the length of the ester carbon chain. Thus, zuclopenthixol decanoate is slow \nto act but very long-acting as a result of retarded release after IM injection. \nZuclopenthixol acetate (with eight carbon atoms fewer) would be expected to provide \nrelatively prompt release but with an intermediate duration of action. The intention of \nthe manufacturers was that the use of ZA would obviate the need for repeated IM injec-\ntions in disturbed patients.\n",
+      "bbox": [
+        61.88909912109375,
+        80.409423828125,
+        436.7090759277344,
+        248.12942504882812
+      ],
+      "text_sha256": "621c11458796b2c765df4edb4ac403102e71ada1ab7a7f22b2f4174940e52d11"
+    },
+    {
+      "block_id": "page-0081-block-0004",
+      "order": 4,
+      "text": "An initial pharmacokinetic study of ZA included 19 patients ‘in whom calming effect \nby parenteral neuroleptic was considered necessary’.54 Zuclopenthixol was detectable \nin the plasma after 1–2 hours but did not reach peak concentrations until around 36 \nhours after dosing. At 72 hours, plasma levels were around a third of those at 36 hours. \nThe clinical effect of ZA was not rapid – 10 of 17 patients exhibited minimal or no \nchange in psychotic symptoms at 4 hours. Sedation was evident at 4 hours, but it had \neffectively abated by 72 hours.\n",
+      "bbox": [
+        61.888885498046875,
+        248.409423828125,
+        436.6988830566406,
+        332.1294250488281
+      ],
+      "text_sha256": "ecb711f072625dfb201dd456096d9373b99b7d0e9877155eb9b3b96348262bec"
+    },
+    {
+      "block_id": "page-0081-block-0005",
+      "order": 5,
+      "text": "A follow-up study by the same research group55 examined more closely the clinical \neffects of ZA in 83 patients. The authors concluded that ZA produced ‘pronounced and \nrapid reduction in psychotic symptoms’. In fact, psychotic symptoms were first assessed \nonly after 24 hours and so a claim of rapid effect is not reasonably supported. Sedative \neffects were measured after two hours when a statistically significant effect was observed \n– at baseline mean sedation score was 0.0 (0 = no sign of sedation) and at 2 hours 0.6 \n(1 = slightly sedated). Maximum sedation was observed at 8 hours (mean score 2.2; \n2 = moderately sedated). At 72 hours mean score was 1.1. Dystonia and rigidity were \nthe most commonly reported adverse effects.\n",
+      "bbox": [
+        61.88560485839844,
+        332.409423828125,
+        436.7154235839844,
+        440.1294250488281
+      ],
+      "text_sha256": "0c43dcb035b323d57ac65977d133079bd66e11648390f3cdbc70ee1c2d3d9db1"
+    },
+    {
+      "block_id": "page-0081-block-0006",
+      "order": 6,
+      "text": "Two independently conducted open studies, produced similar results – a slow onset \nof effect peaking at 24 hours and still being evident at 72 hours.56,57 The first UK study \nwas reported in 1990.58 In the trial, a significant reduction in psychosis score was first \nevident at 8 hours and scores continued to fall until the last measurement at 72 hours. \nOf 25 patients assessed only 4 showed signs of tranquillisation at 1 hour (19 at 2 hours \nand 22 at 24 hours).\n",
+      "bbox": [
+        61.88560485839844,
+        440.409423828125,
+        436.7056579589844,
+        512.1294555664062
+      ],
+      "text_sha256": "684081253906e1b0b976f1919a88ffb57a49527d0032fa9bfadf5c35f9afebe6"
+    },
+    {
+      "block_id": "page-0081-block-0007",
+      "order": 7,
+      "text": "A comparative trial of ZA59 examined its effects and those of IM/oral haloperidol \nand IM/oral zuclopenthixol base (in multiple doses over 6 days). The two non-ester, IM/\noral preparations produced a greater degree of sedation at 2 hours than did ZA, but the \neffect of ZA and zuclopenthixol was more sustained than with haloperidol over 144 \nhours (although patients received more zuclopenthixol doses). No clear differences \nbetween treatments were detected, with the exception of the slow onset of effect of ZA. \nThe number of doses given varied substantially: ZA 1–4; haloperidol 1–26 and zuclo-\npenthixol 1–22. This is the key (and perhaps unique) advantage of ZA – it reduces the \n",
+      "bbox": [
+        61.8843994140625,
+        512.409423828125,
+        436.7143859863281,
+        608.1294555664062
+      ],
+      "text_sha256": "dd652cbfc573d3589cfdc8b8afc7104d561147dec4578ec8c165a709a28136ed"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

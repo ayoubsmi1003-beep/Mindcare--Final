@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0809",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 809,
+  "source_page_index": 808,
+  "source_page_display": 809,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "788    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\ndoses ≥900mg/day, topiramate at doses ≥400mg/day). These drugs can lower plasma \nlevels of multiple psychotropics, possibly leading to treatment failure.\nPharmacodynamic interactions13\nAdverse effects with antiseizure medications that may overlap with psychotropic \nadverse effects include:\n■\n■Weight gain: Caused by some antiseizure medications (e.g. carbamazepine, gabapen-\ntin, pregabalin, valproate)\n■\n■Sexual adverse effects: With phenobarbital and primidone but possible with all \nenzyme-inducing antiseizure medications\n■\n■Hyponatraemia: With carbamazepine, oxcarbazepine (note, if severe, it can provoke \nseizures)\n■\n■Osteoporosis and osteopenia: Reported with long-term use of enzyme-inducing \nantiseizure medications\n■\n■Blood dyscrasias: Reported with valproate carbamazepine and especially with \nfelbamate10\nPsychotropics and the risk of seizures in people with epilepsy\nIn the general population, the annual incidence of unprovoked seizures is about 50 per \n100,000 persons.23 It is notable that the incidence of unprovoked seizures in the placebo \narms of randomised controlled trials of antidepressants and antipsychotics is approxi-\nmately 15-fold higher, suggesting that both depression and psychosis are risk factors for \nseizures.24 A bidirectional relationship between epilepsy and several psychiatric illnesses \nhas been demonstrated, whereby not only do PWE have a higher risk of developing a \npsychiatric illness, but people with psychiatric illness have a higher risk of developing \nepilepsy.5,6 This bidirectional relationship exists for depression, anxiety, psychosis and \nsuicidality.3,5,6 Thus, the occurrence of seizures may, in some cases, be the expression of \nthe natural progression of a psychiatric illness, unrelated to the use of psychotropics.\nReports of seizures associated with psychotropics must factor in this bidirectional rela-\ntionship between psychiatric illness and epilepsy. For example, although observational \nstudies have reported an association between antidepressant treatment and seizures,25 a \nsimilar association is also found with non-drug treatments for depression (counselling, for \nexample).26 These findings are consistent with depression itself being the main risk factor \nfor seizures. In fact, one analysis of controlled studies with psychotropics showed that the \nincidence of seizures was substantially lower among patients receiving most antidepres-\nsants (SSRIs, for example) in comparison with those randomised to placebo.24 Nonetheless, \ndefinitive data are lacking in PWE27,28 and certain psychotropics have a dose-related risk \nof seizures within usual dose ranges. Most can cause seizures in overdose. Note also that \nalmost all antidepressants and antipsychotics have been associated with hyponatraemia \n(see section on hyponatraemia) and seizures may occur if this is severe.17,29 General guid-\nance on the safety of psychotropics in PWE is summarised in Table 10.5.\nElectroconvulsive therapy (ECT) has anticonvulsive properties and is worth consid-\nering in the treatment of depression in patients with unstable epilepsy.8,17,22 ECT does \nnot appear to cause or worsen epilepsy.17,30\n",
+  "raw_text_sha256": "7ca947b7ee9a730b2bedf5e8d6ce2bb6efb9f207e5745adbfab5f18a6713c3af",
+  "coordinates_sha256": "367f957e6289fd18e5e8233135293d75fe379dff069ec78c2d03b8f8e4262967",
+  "block_sequence_sha256": "e90fd88180ac92d209b3acee037959e70502bd49832d119de6edf34a0da7361c",
+  "blocks": [
+    {
+      "block_id": "page-0809-block-0000",
+      "order": 0,
+      "text": "788    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "12d9f1a9e2ab2df182a4c752c1bbb8f734b09b1ebba094e5cfcc5319b249edb1"
+    },
+    {
+      "block_id": "page-0809-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0809-block-0002",
+      "order": 2,
+      "text": "doses ≥900mg/day, topiramate at doses ≥400mg/day). These drugs can lower plasma \nlevels of multiple psychotropics, possibly leading to treatment failure.\n",
+      "bbox": [
+        61.88999938964844,
+        62.5504150390625,
+        436.64007568359375,
+        86.27041625976562
+      ],
+      "text_sha256": "32a0d3611828dc060b36400f2a974159306df2ec640948b0419710d8ceb04bf4"
+    },
+    {
+      "block_id": "page-0809-block-0003",
+      "order": 3,
+      "text": "Pharmacodynamic interactions13\n",
+      "bbox": [
+        61.88999938964844,
+        103.70541381835938,
+        227.32044982910156,
+        116.74041748046875
+      ],
+      "text_sha256": "ed778fe9b0099475644200b815838aec96c2b85d35795c0ad9773f89b9348322"
+    },
+    {
+      "block_id": "page-0809-block-0004",
+      "order": 4,
+      "text": "Adverse effects with antiseizure medications that may overlap with psychotropic \nadverse effects include:\n",
+      "bbox": [
+        61.88999938964844,
+        122.5504150390625,
+        436.6800537109375,
+        146.27041625976562
+      ],
+      "text_sha256": "35d064ede5c8ddeb259f4f031ae1c52f63487b90bed1c9305b09425345a224a0"
+    },
+    {
+      "block_id": "page-0809-block-0005",
+      "order": 5,
+      "text": "■\n■Weight gain: Caused by some antiseizure medications (e.g. carbamazepine, gabapen-\n",
+      "bbox": [
+        61.88990020751953,
+        152.5504150390625,
+        433.8599548339844,
+        164.27041625976562
+      ],
+      "text_sha256": "49da2498b7f89a67d6fe5bb1e3659560b6d2dec8daf615b45892d9a718cb0064"
+    },
+    {
+      "block_id": "page-0809-block-0006",
+      "order": 6,
+      "text": "tin, pregabalin, valproate)\n",
+      "bbox": [
+        70.88999938964844,
+        164.5504150390625,
+        182.39999389648438,
+        176.27041625976562
+      ],
+      "text_sha256": "1a3c44a434e22be7ce9598fce310471dd4202ed6d4ffc9108905e837203955b1"
+    },
+    {
+      "block_id": "page-0809-block-0007",
+      "order": 7,
+      "text": "■\n■Sexual adverse effects: With phenobarbital and primidone but possible with all \n",
+      "bbox": [
+        61.88990020751953,
+        176.55047607421875,
+        436.7000427246094,
+        188.27047729492188
+      ],
+      "text_sha256": "91a13a1243cfc1485a2c840291d5338a9a89328f78314a995ee1aa0bf653510b"
+    },
+    {
+      "block_id": "page-0809-block-0008",
+      "order": 8,
+      "text": "enzyme-inducing antiseizure medications\n",
+      "bbox": [
+        70.88999938964844,
+        188.55047607421875,
+        246.989990234375,
+        200.27047729492188
+      ],
+      "text_sha256": "5d9a8765e511073a94d4b37f514173cb5fe42ed433744e929e91ae1655443819"
+    },
+    {
+      "block_id": "page-0809-block-0009",
+      "order": 9,
+      "text": "■\n■Hyponatraemia: With carbamazepine, oxcarbazepine (note, if severe, it can provoke \n",
+      "bbox": [
+        61.88990020751953,
+        200.55047607421875,
+        436.6298828125,
+        212.27047729492188
+      ],
+      "text_sha256": "b6f79143e99dc2b7cd29c3091ff5c7d3c2ae5198dce11c556761bd7b3475ee09"
+    },
+    {
+      "block_id": "page-0809-block-0010",
+      "order": 10,
+      "text": "seizures)\n",
+      "bbox": [
+        70.88999938964844,
+        212.55047607421875,
+        107.55000305175781,
+        224.27047729492188
+      ],
+      "text_sha256": "efd59d7156b9b913ff470a708dc05fbd3b895b56459f5dae5a41a07dc9111256"
+    },
+    {
+      "block_id": "page-0809-block-0011",
+      "order": 11,
+      "text": "■\n■Osteoporosis and osteopenia: Reported with long-term use of enzyme-inducing \n",
+      "bbox": [
+        61.88990020751953,
+        224.55047607421875,
+        436.65997314453125,
+        236.27047729492188
+      ],
+      "text_sha256": "a8f418622a44f1eded6470290c0086c09fe127f3e41f4f3365e1b7d5d97097ce"
+    },
+    {
+      "block_id": "page-0809-block-0012",
+      "order": 12,
+      "text": "antiseizure medications\n",
+      "bbox": [
+        70.88999938964844,
+        236.55047607421875,
+        171.44000244140625,
+        248.27047729492188
+      ],
+      "text_sha256": "691cf7c3ea71b7aadfc595e56dd167f7e2f3d4c93a7fc3c9d7cba394c2d57937"
+    },
+    {
+      "block_id": "page-0809-block-0013",
+      "order": 13,
+      "text": "■\n■Blood dyscrasias: Reported with valproate carbamazepine and especially with \n",
+      "bbox": [
+        61.88990020751953,
+        248.55047607421875,
+        436.6399230957031,
+        260.2704772949219
+      ],
+      "text_sha256": "ae7a68214611fb1be94d4f2d4d3d55f9aa372152d0421aa377c38b56c46803c1"
+    },
+    {
+      "block_id": "page-0809-block-0014",
+      "order": 14,
+      "text": "felbamate10\n",
+      "bbox": [
+        70.88999938964844,
+        260.55047607421875,
+        119.57235717773438,
+        272.2704772949219
+      ],
+      "text_sha256": "352bd0d5e73d5b60d76e13ac899ff7e1fe9bb29706df92b7101a601dd26d2181"
+    },
+    {
+      "block_id": "page-0809-block-0015",
+      "order": 15,
+      "text": "Psychotropics and the risk of seizures in people with epilepsy\n",
+      "bbox": [
+        61.88999938964844,
+        295.7054748535156,
+        378.7121276855469,
+        308.740478515625
+      ],
+      "text_sha256": "b9617cd77050e9096cdd0d6ce9708c018ebf6a118f209e1afa3647de048b4ea8"
+    },
+    {
+      "block_id": "page-0809-block-0016",
+      "order": 16,
+      "text": "In the general population, the annual incidence of unprovoked seizures is about 50 per \n100,000 persons.23 It is notable that the incidence of unprovoked seizures in the placebo \narms of randomised controlled trials of antidepressants and antipsychotics is approxi-\nmately 15-fold higher, suggesting that both depression and psychosis are risk factors for \nseizures.24 A bidirectional relationship between epilepsy and several psychiatric illnesses \nhas been demonstrated, whereby not only do PWE have a higher risk of developing a \npsychiatric illness, but people with psychiatric illness have a higher risk of developing \nepilepsy.5,6 This bidirectional relationship exists for depression, anxiety, psychosis and \nsuicidality.3,5,6 Thus, the occurrence of seizures may, in some cases, be the expression of \nthe natural progression of a psychiatric illness, unrelated to the use of psychotropics.\n",
+      "bbox": [
+        61.887298583984375,
+        314.55047607421875,
+        436.7052307128906,
+        434.2704772949219
+      ],
+      "text_sha256": "cb01abb0e6b39e8efd4586b741047312f3548cab8f7e82201aaf6af66f15d0a8"
+    },
+    {
+      "block_id": "page-0809-block-0017",
+      "order": 17,
+      "text": "Reports of seizures associated with psychotropics must factor in this bidirectional rela-\ntionship between psychiatric illness and epilepsy. For example, although observational \nstudies have reported an association between antidepressant treatment and seizures,25 a \nsimilar association is also found with non-drug treatments for depression (counselling, for \nexample).26 These findings are consistent with depression itself being the main risk factor \nfor seizures. In fact, one analysis of controlled studies with psychotropics showed that the \nincidence of seizures was substantially lower among patients receiving most antidepres-\nsants (SSRIs, for example) in comparison with those randomised to placebo.24 Nonetheless, \ndefinitive data are lacking in PWE27,28 and certain psychotropics have a dose-related risk \nof seizures within usual dose ranges. Most can cause seizures in overdose. Note also that \nalmost all antidepressants and antipsychotics have been associated with hyponatraemia \n(see section on hyponatraemia) and seizures may occur if this is severe.17,29 General guid-\nance on the safety of psychotropics in PWE is summarised in Table 10.5.\n",
+      "bbox": [
+        61.887298583984375,
+        434.55047607421875,
+        436.7144775390625,
+        590.2705078125
+      ],
+      "text_sha256": "771c64f47765e8bc109bf9ee8ce78296b8951c35c0ec21d731b5d5cbadf38c91"
+    },
+    {
+      "block_id": "page-0809-block-0018",
+      "order": 18,
+      "text": "Electroconvulsive therapy (ECT) has anticonvulsive properties and is worth consid-\nering in the treatment of depression in patients with unstable epilepsy.8,17,22 ECT does \nnot appear to cause or worsen epilepsy.17,30\n",
+      "bbox": [
+        61.88690185546875,
+        590.5504760742188,
+        436.6768798828125,
+        626.2704467773438
+      ],
+      "text_sha256": "7607566ec2bf255a74e0a8369515cc40aab68da3f941166dcbe0c98ba5520c9f"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

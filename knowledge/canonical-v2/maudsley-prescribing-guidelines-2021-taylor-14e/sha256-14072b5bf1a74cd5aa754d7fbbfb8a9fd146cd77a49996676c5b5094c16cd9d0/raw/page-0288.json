@@ -1,0 +1,287 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0288",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 288,
+  "source_page_index": 287,
+  "source_page_display": 288,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Bipolar disorder    267\nCHAPTER 2\nPharmacodynamic interactions also occur. The anticonvulsant activity of carbamaz-\nepine is reduced by drugs that lower the seizure threshold (e.g. antipsychotics and anti-\ndepressants), the potential for carbamazepine to cause neutropenia may be increased by \nother drugs that have the potential to depress the bone marrow (e.g. clozapine), and the \nrisk of hyponatraemia may be increased by other drugs that have the potential to \ndeplete sodium (e.g. diuretics). Neurotoxicity has been reported when carbamazepine is \nused in combination with lithium. This is rare. For a full review of carbamazepine inter-\nactions, see chapter 17 of Applied Clinical Pharmacokinetics of Psychopharmacological \nAgents.39\nAs carbamazepine is structurally similar to TCAs, in theory it should not be given \nwithin 14 days of discontinuing a monoamine oxidase inhibitor (MAOI).\nTable 2.4  Carbamazepine – prescribing and monitoring\nIndications\nMania (not first line), bipolar depression (evidence weak), unipolar depression \n(evidence weak) and prophylaxis of bipolar disorder (third line after antipsychotics \nand valproate). Alcohol withdrawal (may be poorly tolerated)\nCarbamazepine is licensed for the treatment of bipolar illness in patients who do \nnot respond to lithium\nPre-carbamazepine workup\nU&Es, FBC and LFTs. Baseline measure of weight desirable\nPrescribing\nTitrate dose upwards against response and side effects; start with 100–200mg bd \nand aim for 400mg bd (some patients will require higher doses)\nNote that the modified release formulation (Tegretol Retard) can be given once to \ntwice daily, is associated with less severe fluctuations in serum levels and is \ngenerally better tolerated\nPlasma levels can be used to assure adequate dosing and treatment compliance. \nBlood should be taken immediately before the next dose. Carbamazepine induces \nits own metabolism; serum levels (if used) should be re-checked a month after an \nincrease in dose\nMonitoring\nU&Es, FBC and LFTs if clinically indicated\nWeight (or BMI)\nStopping\nReduce slowly over at least 1 month\nbd, bis in die (twice a day)\nReferences\n\t 1.\t Novartis Pharmaceuticals UK Limited. Summary of product characteristics. Tegretol tablets 100mg, 200mg, 400mg. 2020; https://www.medi \ncines.org.uk/emc/medicine/1328.\n\t 2.\t Weisler RH, et al. A multicenter, randomized, double-blind, placebo-controlled trial of extended-release carbamazepine capsules as mono-\ntherapy for bipolar disorder patients with manic or mixed episodes. J Clin Psychiatry 2004; 65:478–484.\n\t 3.\t Weisler RH, et al. Extended-release carbamazepine capsules as monotherapy for acute mania in bipolar disorder: a multicenter, randomized, \ndouble-blind, placebo-controlled trial. J Clin Psychiatry 2005; 66:323–330.\n\t 4.\t Tohen M, et al. Olanzapine plus carbamazepine v. carbamazepine alone in treating manic episodes. Br J Psychiatry 2008; 192:135–143.\n\t 5.\t National Institute for Health and Care Excellence. Bipolar disorder: assessment and management. Clinical Guidance 185 [CG185]. 2014 \n(Last updated February 2020); https://www.nice.org.uk/guidance/cg185.\n\t 6.\t Vasudev A, et al. Oxcarbazepine for acute affective episodes in bipolar disorder. Cochrane Database Syst Rev 2011; Cd004857.\n\t 7.\t Dilsaver SC, et al. Treatment of bipolar depression with carbamazepine: results of an open study. Biol Psychiatry 1996; 40:935–937.\n\t 8.\t Zhang ZJ, et al. The effectiveness of carbamazepine in unipolar depression: a double-blind, randomized, placebo-controlled study. J Affect \nDisord 2008; 109:91–97.\n",
+  "raw_text_sha256": "f9adee1434b9e88a139e0c646532fad781b62271095101ec216a5bb130b65b07",
+  "coordinates_sha256": "e1e77e5989a9cb5a19915a4414a84a8fdad5da8d20c751d5cab69eec6f00e5fe",
+  "block_sequence_sha256": "9746e953e55507c0d60daa88b0422675ab5adad9988f38119f89487ab5e768a9",
+  "blocks": [
+    {
+      "block_id": "page-0288-block-0000",
+      "order": 0,
+      "text": "Bipolar disorder    267\n",
+      "bbox": [
+        326.5046081542969,
+        31.395221710205078,
+        420.0005798339844,
+        41.0272216796875
+      ],
+      "text_sha256": "756b2cfe039cbbb57985a03829006c0459ec8a7ff7f0f5a1158dfd3cd75183c1"
+    },
+    {
+      "block_id": "page-0288-block-0001",
+      "order": 1,
+      "text": "CHAPTER 2\n",
+      "bbox": [
+        454.4096984863281,
+        146.3472900390625,
+        463.88970947265625,
+        187.6912841796875
+      ],
+      "text_sha256": "5eaa1f2591abe1a1b2f7664fa3de7ff01a032d44ee83fa594c7852135d4287aa"
+    },
+    {
+      "block_id": "page-0288-block-0002",
+      "order": 2,
+      "text": "Pharmacodynamic interactions also occur. The anticonvulsant activity of carbamaz-\nepine is reduced by drugs that lower the seizure threshold (e.g. antipsychotics and anti-\ndepressants), the potential for carbamazepine to cause neutropenia may be increased by \nother drugs that have the potential to depress the bone marrow (e.g. clozapine), and the \nrisk of hyponatraemia may be increased by other drugs that have the potential to \ndeplete sodium (e.g. diuretics). Neurotoxicity has been reported when carbamazepine is \nused in combination with lithium. This is rare. For a full review of carbamazepine inter-\nactions, see chapter 17 of Applied Clinical Pharmacokinetics of Psychopharmacological \nAgents.39\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.83001708984375,
+        170.27041625976562
+      ],
+      "text_sha256": "a5ede21a74633cae6cab9528bf60b4ed9ca8f9c93049f9678622919caf1c11f1"
+    },
+    {
+      "block_id": "page-0288-block-0003",
+      "order": 3,
+      "text": "As carbamazepine is structurally similar to TCAs, in theory it should not be given \nwithin 14 days of discontinuing a monoamine oxidase inhibitor (MAOI).\n",
+      "bbox": [
+        48.0,
+        170.55047607421875,
+        422.7798767089844,
+        194.27047729492188
+      ],
+      "text_sha256": "3d94550756bdd67925223fc2c3d0010648dd03aef6c5af611de3c07faf84ab1c"
+    },
+    {
+      "block_id": "page-0288-block-0004",
+      "order": 4,
+      "text": "Table 2.4  Carbamazepine – prescribing and monitoring\n",
+      "bbox": [
+        54.0005989074707,
+        228.9969940185547,
+        233.0780487060547,
+        237.88449096679688
+      ],
+      "text_sha256": "d8b89722e676a41e63eff0ea67160465b8c19fc3c47c28cbf0a6cadb1a4c37cd"
+    },
+    {
+      "block_id": "page-0288-block-0005",
+      "order": 5,
+      "text": "Indications\nMania (not first line), bipolar depression (evidence weak), unipolar depression \n(evidence weak) and prophylaxis of bipolar disorder (third line after antipsychotics \nand valproate). Alcohol withdrawal (may be poorly tolerated)\n",
+      "bbox": [
+        52.0005989074707,
+        247.05198669433594,
+        410.125732421875,
+        275.7544860839844
+      ],
+      "text_sha256": "b13f87724c96dab200bf82af5c69f9493af8f4f0b670ae0207404e079b670f92"
+    },
+    {
+      "block_id": "page-0288-block-0006",
+      "order": 6,
+      "text": "Carbamazepine is licensed for the treatment of bipolar illness in patients who do \nnot respond to lithium\n",
+      "bbox": [
+        148.00059509277344,
+        280.04449462890625,
+        407.4857177734375,
+        298.7494812011719
+      ],
+      "text_sha256": "bda453e570fac6be610662a585d878204f46c033c9b7203247218bf5dec96561"
+    },
+    {
+      "block_id": "page-0288-block-0007",
+      "order": 7,
+      "text": "Pre-carbamazepine workup\nU&Es, FBC and LFTs. Baseline measure of weight desirable\n",
+      "bbox": [
+        52.00059509277344,
+        305.66448974609375,
+        332.48565673828125,
+        314.3719787597656
+      ],
+      "text_sha256": "43e5f3439bfdb5d2ddc0fa4e6b0952381d2dbc6925fc52e456398be787746a72"
+    },
+    {
+      "block_id": "page-0288-block-0008",
+      "order": 8,
+      "text": "Prescribing\nTitrate dose upwards against response and side effects; start with 100–200mg bd \nand aim for 400mg bd (some patients will require higher doses)\n",
+      "bbox": [
+        52.00059509277344,
+        321.2869873046875,
+        410.7557067871094,
+        339.9919738769531
+      ],
+      "text_sha256": "1ef4f324906ed6f4e1e2f763a416cb621b59282f64f459f9cc16d45a602b0544"
+    },
+    {
+      "block_id": "page-0288-block-0009",
+      "order": 9,
+      "text": "Note that the modified release formulation (Tegretol Retard) can be given once to \ntwice daily, is associated with less severe fluctuations in serum levels and is \ngenerally better tolerated\n",
+      "bbox": [
+        148.00059509277344,
+        344.281982421875,
+        410.1331481933594,
+        372.9844665527344
+      ],
+      "text_sha256": "6ffc3000497474a9ee79b88314a3d4840490c2197e4a5c8c6aabe04b5d4785b7"
+    },
+    {
+      "block_id": "page-0288-block-0010",
+      "order": 10,
+      "text": "Plasma levels can be used to assure adequate dosing and treatment compliance. \nBlood should be taken immediately before the next dose. Carbamazepine induces \nits own metabolism; serum levels (if used) should be re-checked a month after an \nincrease in dose\n",
+      "bbox": [
+        148.00059509277344,
+        377.27447509765625,
+        411.2506103515625,
+        415.9744567871094
+      ],
+      "text_sha256": "9505c4a4ec1b3a73a8f13d0ecdb1ebafba24d6c07352f2f3ba6be6839c7bc8fe"
+    },
+    {
+      "block_id": "page-0288-block-0011",
+      "order": 11,
+      "text": "Monitoring\nU&Es, FBC and LFTs if clinically indicated\n",
+      "bbox": [
+        52.00059509277344,
+        422.88946533203125,
+        275.92059326171875,
+        431.5969543457031
+      ],
+      "text_sha256": "65df74c7f6b695396576b22a976244e1ab6eee2e07b6cdf5780cc3338b5e7f36"
+    },
+    {
+      "block_id": "page-0288-block-0012",
+      "order": 12,
+      "text": "Weight (or BMI)\n",
+      "bbox": [
+        148.00059509277344,
+        435.886962890625,
+        198.70809936523438,
+        444.5944519042969
+      ],
+      "text_sha256": "0bea7e6b4b0f781040492e415b51c7aa8e1edd320e61413f47b239175639e15f"
+    },
+    {
+      "block_id": "page-0288-block-0013",
+      "order": 13,
+      "text": "Stopping\nReduce slowly over at least 1 month\n",
+      "bbox": [
+        52.00059509277344,
+        451.50946044921875,
+        263.43310546875,
+        460.2169494628906
+      ],
+      "text_sha256": "7c08663e61df31206a426a7d7c5b82d1112e7a1cca7d12d9c8793de528f52b1c"
+    },
+    {
+      "block_id": "page-0288-block-0014",
+      "order": 14,
+      "text": "bd, bis in die (twice a day)\n",
+      "bbox": [
+        48.00309753417969,
+        469.7569580078125,
+        131.35809326171875,
+        478.4644470214844
+      ],
+      "text_sha256": "405975824d6ac94b60d45550cee5192d9ca1c9630d026501b28b9418e656a1f2"
+    },
+    {
+      "block_id": "page-0288-block-0015",
+      "order": 15,
+      "text": "References\n",
+      "bbox": [
+        48.0,
+        489.9654846191406,
+        104.03400421142578,
+        503.00048828125
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0288-block-0016",
+      "order": 16,
+      "text": "\t 1.\t Novartis Pharmaceuticals UK Limited. Summary of product characteristics. Tegretol tablets 100mg, 200mg, 400mg. 2020; https://www.medi \n",
+      "bbox": [
+        48.0,
+        508.08648681640625,
+        421.6739501953125,
+        515.1184692382812
+      ],
+      "text_sha256": "5b9b600d93c288a7d0c974c41b073ef1d0a4d5aa92ae226fc7f6c710cc902527"
+    },
+    {
+      "block_id": "page-0288-block-0017",
+      "order": 17,
+      "text": "cines.org.uk/emc/medicine/1328.\n\t 2.\t Weisler RH, et al. A multicenter, randomized, double-blind, placebo-controlled trial of extended-release carbamazepine capsules as mono-\n",
+      "bbox": [
+        48.00600051879883,
+        517.0864868164062,
+        419.9879150390625,
+        533.1184692382812
+      ],
+      "text_sha256": "9efce5f180c072ffa76c773b45c532fc300ddd005be66b95ee0264bf3e7e2f8f"
+    },
+    {
+      "block_id": "page-0288-block-0018",
+      "order": 18,
+      "text": "therapy for bipolar disorder patients with manic or mixed episodes. J Clin Psychiatry 2004; 65:478–484.\n\t 3.\t Weisler RH, et al. Extended-release carbamazepine capsules as monotherapy for acute mania in bipolar disorder: a multicenter, randomized, \n",
+      "bbox": [
+        48.012001037597656,
+        534.9425048828125,
+        421.6621398925781,
+        551.1184692382812
+      ],
+      "text_sha256": "c2464ac929123474e02be4325de0a99869b893729ec30e7c5780862363946d0b"
+    },
+    {
+      "block_id": "page-0288-block-0019",
+      "order": 19,
+      "text": "double-blind, placebo-controlled trial. J Clin Psychiatry 2005; 66:323–330.\n\t 4.\t Tohen M, et al. Olanzapine plus carbamazepine v. carbamazepine alone in treating manic episodes. Br J Psychiatry 2008; 192:135–143.\n\t 5.\t National Institute for Health and Care Excellence. Bipolar disorder: assessment and management. Clinical Guidance 185 [CG185]. 2014 \n",
+      "bbox": [
+        48.018001556396484,
+        552.9425048828125,
+        421.66192626953125,
+        578.1184692382812
+      ],
+      "text_sha256": "e85679ef106a7e7fbe61424d963e10bfc5262f967578ef877238bd44e78b455d"
+    },
+    {
+      "block_id": "page-0288-block-0020",
+      "order": 20,
+      "text": "(Last updated February 2020); https://www.nice.org.uk/guidance/cg185.\n\t 6.\t Vasudev A, et al. Oxcarbazepine for acute affective episodes in bipolar disorder. Cochrane Database Syst Rev 2011; Cd004857.\n\t 7.\t Dilsaver SC, et al. Treatment of bipolar depression with carbamazepine: results of an open study. Biol Psychiatry 1996; 40:935–937.\n\t 8.\t Zhang ZJ, et al. The effectiveness of carbamazepine in unipolar depression: a double-blind, randomized, placebo-controlled study. J Affect \n",
+      "bbox": [
+        48.029998779296875,
+        580.0864868164062,
+        421.7099609375,
+        614.1184692382812
+      ],
+      "text_sha256": "3e4d3003077d8f51d3c35fa5bf8f4544160457e495e909dc549c9b52386dedc0"
+    },
+    {
+      "block_id": "page-0288-block-0021",
+      "order": 21,
+      "text": "Disord 2008; 109:91–97.\n",
+      "bbox": [
+        59.045989990234375,
+        615.9425048828125,
+        125.08796691894531,
+        623.1184692382812
+      ],
+      "text_sha256": "b07ea548b340c49e42cafab5f17e325780d70f0024387a41b564e3af3f6187cf"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

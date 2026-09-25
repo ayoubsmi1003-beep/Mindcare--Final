@@ -1,0 +1,14 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0949",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 949,
+  "source_page_index": 948,
+  "repaired_text": "928    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 14\nIf a patient consents to treatment, the RC completes a form T2.\nIf a patient has not given consent or has not got the capacity to consent a second \nopinion appointed doctor (SOAD) is called. The SOAD then completes a form T3.\nA copy of the forms T2 and T3 should be kept with the patient’s medication chart as \nrecommended in paragraph 25.75 of the Code of Practice.1\nCompletion of forms T2 and T3\nThe following should be stated on the forms:\n■\n■The name of the drug or the class of drug\n■\n■If the class of drug is stated, the number of drugs allowed at any one time\n■\n■The route of administration\n■\n■The maximum dosage with reference to BNF guidance\nFor example, antipsychotic, second generation × 1 (oral) within BNF maximum dose\nlimits.\nFor a patient who has capacity and is consenting to treatment and is only willing to \ntake a particular drug it is appropriate for the RC to write the name of the drug instead \nof the name of the class of drug on the T2.\nFor example, olanzapine tablets only (oral) within BNF maximum dose limits.\nPsychotropics not found in the BNF may be written on a T2 or T3 with its indication.\nFor example, melperone tablets (oral) up to a maximum of 25mg daily for the treatment of schizophrenia.\nNon-psychotropics used for the treatment of mental disorder should be included on the \nT2 and T3, for example omega-3 fatty acids (fish oils) in schizophrenia. Antimuscarinics \nused to treat hypersalivation and the extrapyramidal adverse effects of antipsychotics \nshould be included too.\nArranging and preparing for SOAD visits\nThe Code at paragraph 25.51 states: Clinicians should consider seeking a review by a \nspecialist mental health pharmacist before seeking a SOAD certificate, particularly if \nthe patient’s medication regime is complex or unusual.\nStatutory consultees\nSOADs should consult with two people before issuing a T3. One must be a nurse. The \nother must not be a nurse or a doctor. Both must have been involved with the patient’s \ntreatment. These two people are known as statutory consultees. Mental health pharma-\ncists can perform this role where they have been involved in any recent review of a \npatient’s medication.",
+  "repaired_text_sha256": "6c149e34416e30644729d9f4e49cc25b0c699e15ad2406cb58c0f816388dc66e",
+  "raw_text_sha256": "b2186297d095d5d7631bbad3129159b98671802e8972eb4584d41ccf1baf7a55",
+  "repair_ids": [
+    "repair-000823"
+  ],
+  "raw_file": "raw/page-0949.json"
+}

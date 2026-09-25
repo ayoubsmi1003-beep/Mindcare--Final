@@ -1,0 +1,95 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0252",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 252,
+  "source_page_index": 251,
+  "source_page_display": 252,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    231\nCHAPTER 1\n\t61.\t Uzun Ö, et al. Effect of N-acetylcysteine on clozapine-induced sialorrhea in schizophrenic patients: a case series. Int Clin Psychopharmacol \n2020; 35:229–231.\n\t62.\t Leung JG, et al. Immediate-release oxybutynin for the treatment of clozapine-induced sialorrhea. Ann Pharmacother 2011; 45:e45.\n\t63.\t Fritze J, et al. Pirenzepine for clozapine-induced hypersalivation. Lancet 1995; 346:1034.\n\t64.\t Bai YM, et al. Therapeutic effect of pirenzepine for clozapine-induced hypersalivation: a randomized, double-blind, placebo-controlled, cross-\nover study. J Clin Psychopharmacol 2001; 21:608–611.\n\t65.\t Schneider B, et al. Reduction of clozapine-induced hypersalivation by pirenzepine is safe. Pharmacopsychiatry 2004; 37:43–45.\n\t66.\t Kreinin A, et al. Sulpiride addition for the treatment of clozapine-induced hypersalivation: preliminary study. Isr J Psychiatry Relat Sci 2005; \n42:61–63.\n\t67.\t Wang J, et al. Sulpiride augmentation for schizophrenia. Cochrane Database Syst Rev 2010; CD008125.\n",
+  "raw_text_sha256": "72148d65ac47ca9e7e44573e16a648ec111c02bbcea923935f59903e7682e935",
+  "coordinates_sha256": "298408de4f121f24ef2c8077ce54305c0db2aecfd40a3c04f728883bf88d1b3f",
+  "block_sequence_sha256": "77a91369e917f7974ee9b24eecb378bb676a5b409c0dc367c60bc0b0459a845c",
+  "blocks": [
+    {
+      "block_id": "page-0252-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    231\n",
+      "bbox": [
+        240.8483123779297,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "303cf57ec42eb701614d641743480f88ca1dfba324fdc57991cb2db7ff634b83"
+    },
+    {
+      "block_id": "page-0252-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0252-block-0002",
+      "order": 2,
+      "text": "\t61.\t Uzun Ö, et al. Effect of N-acetylcysteine on clozapine-induced sialorrhea in schizophrenic patients: a case series. Int Clin Psychopharmacol \n",
+      "bbox": [
+        47.99909973144531,
+        63.2694091796875,
+        421.6731262207031,
+        70.30140686035156
+      ],
+      "text_sha256": "26da385107d764600b2353337a4d13ebc6b50e9860d60f6cec18542c0fc23019"
+    },
+    {
+      "block_id": "page-0252-block-0003",
+      "order": 3,
+      "text": "2020; 35:229–231.\n\t62.\t Leung JG, et al. Immediate-release oxybutynin for the treatment of clozapine-induced sialorrhea. Ann Pharmacother 2011; 45:e45.\n\t63.\t Fritze J, et al. Pirenzepine for clozapine-induced hypersalivation. Lancet 1995; 346:1034.\n\t64.\t Bai YM, et al. Therapeutic effect of pirenzepine for clozapine-induced hypersalivation: a randomized, double-blind, placebo-controlled, cross-\n",
+      "bbox": [
+        48.005096435546875,
+        72.12541198730469,
+        420.023193359375,
+        106.30140686035156
+      ],
+      "text_sha256": "43599871b4f6127c6af659166efdbc1fb35accf4723b4a19ca51ae2379fa0f05"
+    },
+    {
+      "block_id": "page-0252-block-0004",
+      "order": 4,
+      "text": "over study. J Clin Psychopharmacol 2001; 21:608–611.\n\t65.\t Schneider B, et al. Reduction of clozapine-induced hypersalivation by pirenzepine is safe. Pharmacopsychiatry 2004; 37:43–45.\n\t66.\t Kreinin A, et al. Sulpiride addition for the treatment of clozapine-induced hypersalivation: preliminary study. Isr J Psychiatry Relat Sci 2005; \n",
+      "bbox": [
+        48.023101806640625,
+        108.12541198730469,
+        421.7149963378906,
+        133.30140686035156
+      ],
+      "text_sha256": "6e3a0a36489f878aca354766de5d6f642e6096de21e7e19550ca93bbb67ebfea"
+    },
+    {
+      "block_id": "page-0252-block-0005",
+      "order": 5,
+      "text": "42:61–63.\n\t67.\t Wang J, et al. Sulpiride augmentation for schizophrenia. Cochrane Database Syst Rev 2010; CD008125.\n",
+      "bbox": [
+        48.03510284423828,
+        135.1254119873047,
+        328.4330749511719,
+        151.30140686035156
+      ],
+      "text_sha256": "7d65deb790c385f2ba2cd031f7d153af25cc84635de8a23b5a46754fff171406"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

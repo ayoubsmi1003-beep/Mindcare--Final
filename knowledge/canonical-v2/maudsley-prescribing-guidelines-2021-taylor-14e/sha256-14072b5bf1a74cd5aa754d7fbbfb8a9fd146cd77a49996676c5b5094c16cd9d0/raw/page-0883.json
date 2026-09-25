@@ -1,0 +1,239 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0883",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 883,
+  "source_page_index": 882,
+  "source_page_display": 883,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "862    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  11\nTable 11.6  (Continued)\nInteractions of uncertain aetiology include increased blood alcohol concentrations in \npeople who take verapamil and decreased metabolism of methylphenidate in people \nwho consume alcohol.\nPharmacodynamic interactions2–4\nAlcohol enhances inhibitory neurotransmission at GABAA receptors and reduces excita­\ntory neurotransmission at glutamate NMDA receptors (Table 11.7). It also increases \ndopamine release in the mesolimbic pathway and may have some effects on serotonin \nand opiate pathways. Given these actions, alcohol would be expected to cause sedation, \namnesia, ataxia and give rise to feelings of pleasure (and/or worsen psychotic symptoms \nin vulnerable individuals).\nTable 11.7  Pharmacodynamic interactions with alcohol\nEffect of \nalcohol\nEffect exacerbated by\nPotential consequences\nSedation\nOther sedative drugs, e.g.\nAntihistamines\nAntipsychotics\nBaclofen\nBenzodiazepines\nLofexidine\nOpiates\nTizanidine\nTricyclics\nZ-hypnotics\nIncreased CNS depression ranging from \nincreased propensity to be involved in \naccidents through to respiratory depression \nand death\n(Continued)\nSubstrates for enzyme \n(note: this is not an\nexhaustive list)\nEffects in an intoxicated \npatient\nEffects in a chronic, sober \ndrinker\nCYP3A4\nAlprazolam\nAripiprazole\nBenzodiazepines\nCarbamazepine\nClozapine\nDonepezil\nGalantamine\nHaloperidol\nMethadone\nMirtazapine\nQuetiapine\nRisperidone\nSildenafil\nTricyclics\nValproate\nVenlafaxine\n‘Z’ hypnotics\nCompetition between \nalcohol and drug leading to \nreduced rates of metabolism \nof both compounds. \nIncreased plasma levels may \nlead to toxicity\nIncreased rate of drug \nmetabolism potentially leading \nto therapeutic failure\nEnzyme induction can last for \nseveral weeks after alcohol \nconsumption ceases\n",
+  "raw_text_sha256": "3c442a7d54ed79ad933cf520ef49cd5bc104542c50bd6c4f61141da9204ac98c",
+  "coordinates_sha256": "91e9e9ffd9180b40d0bdea4509d7487822e89992cc0e662b85b4aad1774a1b42",
+  "block_sequence_sha256": "d4b5c4ec3d28354e3e59fd4159ef72fcdb916ca69804c53304a603de7d1c503f",
+  "blocks": [
+    {
+      "block_id": "page-0883-block-0000",
+      "order": 0,
+      "text": "862    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "ab18b51b8bb5f95d098dd00c746a4149fced1492a2110c2612865443f1264fd4"
+    },
+    {
+      "block_id": "page-0883-block-0001",
+      "order": 1,
+      "text": "CHAPTER  11\n",
+      "bbox": [
+        18.520000457763672,
+        139.8785400390625,
+        28.0,
+        187.89450073242188
+      ],
+      "text_sha256": "83984f4328940309c03288e26b8edf9834cfa8fef30d3eedac5a4c266fe9aee7"
+    },
+    {
+      "block_id": "page-0883-block-0002",
+      "order": 2,
+      "text": "Table 11.6  (Continued)\n",
+      "bbox": [
+        67.88999938964844,
+        70.08790588378906,
+        144.17999267578125,
+        78.97540283203125
+      ],
+      "text_sha256": "597f12f2a8d8b1ec5f98275ccdea44f4c9c1b060900b8d7adf5bf0c0cbc1af7e"
+    },
+    {
+      "block_id": "page-0883-block-0003",
+      "order": 3,
+      "text": "Interactions of uncertain aetiology include increased blood alcohol concentrations in \npeople who take verapamil and decreased metabolism of methylphenidate in people \nwho consume alcohol.\n",
+      "bbox": [
+        61.88999938964844,
+        310.6204833984375,
+        436.69989013671875,
+        346.3404846191406
+      ],
+      "text_sha256": "8bea96a84feffeaaba2b484d78a46592014b87168fdb65ca435866766a55f5f6"
+    },
+    {
+      "block_id": "page-0883-block-0004",
+      "order": 4,
+      "text": "Pharmacodynamic interactions2–4\n",
+      "bbox": [
+        61.88999938964844,
+        361.7754821777344,
+        230.52694702148438,
+        374.81048583984375
+      ],
+      "text_sha256": "91c712bd5aeab53a17e62cd2c7e6f0f8ca893f8f5a1df13ac93d3802db20ae87"
+    },
+    {
+      "block_id": "page-0883-block-0005",
+      "order": 5,
+      "text": "Alcohol enhances inhibitory neurotransmission at GABAA receptors and reduces excita­\ntory neurotransmission at glutamate NMDA receptors (Table 11.7). It also increases \ndopamine release in the mesolimbic pathway and may have some effects on serotonin \nand opiate pathways. Given these actions, alcohol would be expected to cause sedation, \namnesia, ataxia and give rise to feelings of pleasure (and/or worsen psychotic symptoms \nin vulnerable individuals).\n",
+      "bbox": [
+        61.88999938964844,
+        380.6204833984375,
+        436.7025451660156,
+        452.3404846191406
+      ],
+      "text_sha256": "2719c0a99e8880544a40e59687e6e4fbba66b6d748c379a40f975d7b4921799b"
+    },
+    {
+      "block_id": "page-0883-block-0006",
+      "order": 6,
+      "text": "Table 11.7  Pharmacodynamic interactions with alcohol\n",
+      "bbox": [
+        67.88999938964844,
+        477.0479736328125,
+        245.41494750976562,
+        485.93548583984375
+      ],
+      "text_sha256": "c37ab8ad943b8194bd2bfaf6a772aad285cea98223335d1f40ff0aeefec0b463"
+    },
+    {
+      "block_id": "page-0883-block-0007",
+      "order": 7,
+      "text": "Effect of \nalcohol\nEffect exacerbated by\nPotential consequences\n",
+      "bbox": [
+        61.88999938964844,
+        496.9832763671875,
+        367.8374328613281,
+        515.8682861328125
+      ],
+      "text_sha256": "7060607bb5108a556a128ac0c0aa149777ef8242c604f83107dee876a2fa9df4"
+    },
+    {
+      "block_id": "page-0883-block-0008",
+      "order": 8,
+      "text": "Sedation\nOther sedative drugs, e.g.\nAntihistamines\nAntipsychotics\nBaclofen\nBenzodiazepines\nLofexidine\nOpiates\nTizanidine\nTricyclics\nZ-hypnotics\n",
+      "bbox": [
+        61.889984130859375,
+        525.1082763671875,
+        213.2849884033203,
+        623.9732666015625
+      ],
+      "text_sha256": "2a86b5d52ec1b47241612786ef41988057b86e95b2ffd9761adefd7976465c70"
+    },
+    {
+      "block_id": "page-0883-block-0009",
+      "order": 9,
+      "text": "Increased CNS depression ranging from \nincreased propensity to be involved in \naccidents through to respiratory depression \nand death\n",
+      "bbox": [
+        285.3299865722656,
+        525.2657470703125,
+        425.36260986328125,
+        563.9657592773438
+      ],
+      "text_sha256": "a21b4272ae68e1e9de368a5a077554f28754ca52437be095bc30965cc5d8a6d7"
+    },
+    {
+      "block_id": "page-0883-block-0010",
+      "order": 10,
+      "text": "(Continued)\n",
+      "bbox": [
+        397.875,
+        632.9282836914062,
+        433.88995361328125,
+        641.6807861328125
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    },
+    {
+      "block_id": "page-0883-block-0011",
+      "order": 11,
+      "text": "Substrates for enzyme \n(note: this is not an\nexhaustive list)\n",
+      "bbox": [
+        124.29650115966797,
+        89.66297912597656,
+        205.56651306152344,
+        118.54547119140625
+      ],
+      "text_sha256": "28f30943a5be09d749be848a0666229ab74ba298b601ef91c2e5b97e16898718"
+    },
+    {
+      "block_id": "page-0883-block-0012",
+      "order": 12,
+      "text": "Effects in an intoxicated \npatient\n",
+      "bbox": [
+        229.4915008544922,
+        99.66047668457031,
+        316.4614562988281,
+        118.54547119140625
+      ],
+      "text_sha256": "fc5d03e6d7986538f8e59c1dd6c9708da646db18961a720470d1bbda40c0b338"
+    },
+    {
+      "block_id": "page-0883-block-0013",
+      "order": 13,
+      "text": "Effects in a chronic, sober \ndrinker\n",
+      "bbox": [
+        334.6864929199219,
+        99.66047668457031,
+        426.5088806152344,
+        118.54547119140625
+      ],
+      "text_sha256": "1bccecffbe3495207d85d9c8a86d9a205c18c1f6532a58a84446a2702a1d3c35"
+    },
+    {
+      "block_id": "page-0883-block-0014",
+      "order": 14,
+      "text": "CYP3A4\nAlprazolam\nAripiprazole\nBenzodiazepines\nCarbamazepine\nClozapine\nDonepezil\nGalantamine\nHaloperidol\nMethadone\nMirtazapine\nQuetiapine\nRisperidone\nSildenafil\nTricyclics\nValproate\nVenlafaxine\n‘Z’ hypnotics\n",
+      "bbox": [
+        61.881500244140625,
+        127.92047119140625,
+        177.2164764404297,
+        296.6329345703125
+      ],
+      "text_sha256": "8129ebfa81cef0433066c55ac4ba9b7b0059ebdac422d3feb5cb7f2a3ca84578"
+    },
+    {
+      "block_id": "page-0883-block-0015",
+      "order": 15,
+      "text": "Competition between \nalcohol and drug leading to \nreduced rates of metabolism \nof both compounds. \nIncreased plasma levels may \nlead to toxicity\n",
+      "bbox": [
+        229.4840087890625,
+        127.92794036865234,
+        322.6865539550781,
+        186.6229248046875
+      ],
+      "text_sha256": "4c24ca5516b81dd7d04903ac11143834872fbe417b244c33d049c2ca829a17e5"
+    },
+    {
+      "block_id": "page-0883-block-0016",
+      "order": 16,
+      "text": "Increased rate of drug \nmetabolism potentially leading \nto therapeutic failure\n",
+      "bbox": [
+        334.67901611328125,
+        127.91292572021484,
+        434.68414306640625,
+        156.61541748046875
+      ],
+      "text_sha256": "b01e1d4315cf43b5165603dbcc3793f5384419df57afde5229b4982c4fe76e8e"
+    },
+    {
+      "block_id": "page-0883-block-0017",
+      "order": 17,
+      "text": "Enzyme induction can last for \nseveral weeks after alcohol \nconsumption ceases\n",
+      "bbox": [
+        334.67901611328125,
+        163.90541076660156,
+        430.9340515136719,
+        192.60791015625
+      ],
+      "text_sha256": "582b062bac86c124ec0e89af8e7e0a345bd3e399e87554cff5064a0cba1e389e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

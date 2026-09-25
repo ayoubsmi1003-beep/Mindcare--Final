@@ -1,0 +1,191 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0661",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 661,
+  "source_page_index": 660,
+  "source_page_display": 661,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "640    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  6\nH2 antagonists and proton pump inhibitors (PPIs)\nHistamine-2 receptor antagonists (e.g. cimetidine, ranitidine and famotidine) are rarely \nused nowadays. Cimetidine causes several pharmacokinetic interactions, and ranitidine \nproducts have been recalled due to possible contamination with NDMA \n(N-nitrosodimethylamine). NDMA has been identified as a potential risk factor in the \ndevelopment of certain cancers. Famotidine remains in use. CNS reactions to these \ndrugs have been reported, especially with cimetidine.58 A study looking at observational \ndata on PPIs found an association between PPI use and incident dementia. This is sup-\nported by pharmacoepidemiological analyses on primary data and is in line with ani-\nmal studies in which the use of PPIs increased the levels of β-amyloid in the brains of \nmice.59 Randomised, prospective clinical trials are needed to confirm this association. \nMany patients on PPIs have Helicobacter pylori–infected gastric mucosa. As Helicobacter \nhas been reported to be associated with cognitive deterioration, this could be the mech-\nanism behind the apparent link between PPI drugs and dementia. Furthermore, this \nassociation was not replicated in other studies.60,61\nAntibiotics\nThere are reports of many antibiotics being associated with delirium62,63 but there is no \nconsistent pattern of them causing cognitive impairment. Given the importance of \ntreating infection in dementia, the most appropriate antibiotic for the infection being \ntreated should be used. Antituberculous therapy, particularly isoniazid, has attracted \nsome case reports of adverse psychiatric reactions (Table 6.6).64\nTable 6.6  Recommended drugs and drugs to avoid in dementia (adapted with permission26)\nCondition\nDrug class or drug name\nDrugs to avoid in dementia\nRecommended drugs  \nin dementia\nAllergic conditions\nAntihistamines\nChlorphenamine\nPromethazine\nHydroxyzine\nCyproheptadine\nCyclizine\n(and other first-generation \nantihistamines)\nCetirizine\nLoratadine\nFexofenadine\n(and other second-generation \nantihistamines)\nAsthma/COPD\nBronchodilators\nBeta-agonists\nInhaled anticholinergics (have \nnot been reported to affect \ncognition)\nTheophylline\nConstipation\nLaxatives\nNo evidence to suggest that laxatives have any negative \nimpact on cognitive function\nConstipation itself may worsen cognition\nDiarrhoea\nLoperamide\nLow-potency anticholinergic. Not known to have effects on \ncognitive function; however, may add to the anticholinergic \ncognitive burden if used in combination to other anticholinergics\n",
+  "raw_text_sha256": "f48db6a4ab989ac34acb82ead0f628b402fdc08482a09cfc6d112d28302a6773",
+  "coordinates_sha256": "ea1d528974831f8c9dbc7acfe774f7f146f22b11e55c487ffc148d2ca61e6f3a",
+  "block_sequence_sha256": "e8d5f17a66fb75911b23c9d69b33ed75cebf3487fbc6a0cd5cddb42a141953a4",
+  "blocks": [
+    {
+      "block_id": "page-0661-block-0000",
+      "order": 0,
+      "text": "640    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "a41994cd1bf898b34e2b2f41fa22d23b5869eb3f9b569b443538ef1c6c74d85f"
+    },
+    {
+      "block_id": "page-0661-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        18.520000457763672,
+        405.35260009765625,
+        28.0,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0661-block-0002",
+      "order": 2,
+      "text": "H2 antagonists and proton pump inhibitors (PPIs)\n",
+      "bbox": [
+        61.88999938964844,
+        62.500465393066406,
+        291.25128173828125,
+        76.63797760009766
+      ],
+      "text_sha256": "6d81f436fffbcb1389982dc7c4869b4bef9430caebe265b8a909e44e9ab58e6d"
+    },
+    {
+      "block_id": "page-0661-block-0003",
+      "order": 3,
+      "text": "Histamine-2 receptor antagonists (e.g. cimetidine, ranitidine and famotidine) are rarely \nused nowadays. Cimetidine causes several pharmacokinetic interactions, and ranitidine \nproducts have been recalled due to possible contamination with NDMA \n(N-nitrosodimethylamine). NDMA has been identified as a potential risk factor in the \ndevelopment of certain cancers. Famotidine remains in use. CNS reactions to these \ndrugs have been reported, especially with cimetidine.58 A study looking at observational \ndata on PPIs found an association between PPI use and incident dementia. This is sup-\nported by pharmacoepidemiological analyses on primary data and is in line with ani-\nmal studies in which the use of PPIs increased the levels of β-amyloid in the brains of \nmice.59 Randomised, prospective clinical trials are needed to confirm this association. \nMany patients on PPIs have Helicobacter pylori–infected gastric mucosa. As Helicobacter \nhas been reported to be associated with cognitive deterioration, this could be the mech-\nanism behind the apparent link between PPI drugs and dementia. Furthermore, this \nassociation was not replicated in other studies.60,61\n",
+      "bbox": [
+        61.88719177246094,
+        80.41046142578125,
+        436.69256591796875,
+        248.1304931640625
+      ],
+      "text_sha256": "4e3d85b7d0c7a76eee044afbe78d4cc1182c330fb2ffd1ec53f50b894956dc60"
+    },
+    {
+      "block_id": "page-0661-block-0004",
+      "order": 4,
+      "text": "Antibiotics\n",
+      "bbox": [
+        61.88999938964844,
+        266.50048828125,
+        112.44000244140625,
+        278.3504943847656
+      ],
+      "text_sha256": "00273ed6c3ed84a123184f3d8cd75a949c8ff0f9ab9ebb176f33de528a7efa07"
+    },
+    {
+      "block_id": "page-0661-block-0005",
+      "order": 5,
+      "text": "There are reports of many antibiotics being associated with delirium62,63 but there is no \nconsistent pattern of them causing cognitive impairment. Given the importance of \ntreating infection in dementia, the most appropriate antibiotic for the infection being \ntreated should be used. Antituberculous therapy, particularly isoniazid, has attracted \nsome case reports of adverse psychiatric reactions (Table 6.6).64\n",
+      "bbox": [
+        61.8887939453125,
+        284.4104919433594,
+        436.70867919921875,
+        344.1304931640625
+      ],
+      "text_sha256": "daefd109341c016c7dcda702d93559b5de48cd9e734acb219cc457cf177fe07d"
+    },
+    {
+      "block_id": "page-0661-block-0006",
+      "order": 6,
+      "text": "Table 6.6  Recommended drugs and drugs to avoid in dementia (adapted with permission26)\n",
+      "bbox": [
+        67.88999938964844,
+        371.373779296875,
+        362.4226989746094,
+        380.26129150390625
+      ],
+      "text_sha256": "b4b682dd7b656e8fdf7e1deb7a758df8d8b323a185cec27b813b36229a3ee773"
+    },
+    {
+      "block_id": "page-0661-block-0007",
+      "order": 7,
+      "text": "Condition\nDrug class or drug name\nDrugs to avoid in dementia\n",
+      "bbox": [
+        65.88999938964844,
+        399.248779296875,
+        325.8924560546875,
+        408.13629150390625
+      ],
+      "text_sha256": "2258414d3f640b5a61341f0e22ccc357ec23f5d1be79ea210cfb10716c41e018"
+    },
+    {
+      "block_id": "page-0661-block-0008",
+      "order": 8,
+      "text": "Recommended drugs  \nin dementia\n",
+      "bbox": [
+        333.8949890136719,
+        389.25128173828125,
+        412.232421875,
+        408.13629150390625
+      ],
+      "text_sha256": "728f1d63352b659fc1b76b603ad2f672bd2277c9ffb9aa099091336d86ba603d"
+    },
+    {
+      "block_id": "page-0661-block-0009",
+      "order": 9,
+      "text": "Allergic conditions\nAntihistamines\nChlorphenamine\nPromethazine\nHydroxyzine\nCyproheptadine\nCyclizine\n(and other first-generation \nantihistamines)\n",
+      "bbox": [
+        65.89749145507812,
+        415.0513000488281,
+        316.5775451660156,
+        483.7437744140625
+      ],
+      "text_sha256": "d09885b83a71e5d703a8889858dc38ff43f627444a9674d34c7ffd9f983d2ad6"
+    },
+    {
+      "block_id": "page-0661-block-0010",
+      "order": 10,
+      "text": "Cetirizine\nLoratadine\nFexofenadine\n(and other second-generation \nantihistamines)\n",
+      "bbox": [
+        333.9024963378906,
+        415.0362854003906,
+        431.0126037597656,
+        463.7337646484375
+      ],
+      "text_sha256": "352caf0e424cbd4d463a11461f6004fe5a4456a97909d586c9122497466e215e"
+    },
+    {
+      "block_id": "page-0661-block-0011",
+      "order": 11,
+      "text": "Asthma/COPD\nBronchodilators\nBeta-agonists\nInhaled anticholinergics (have \nnot been reported to affect \ncognition)\nTheophylline\n",
+      "bbox": [
+        65.90499877929688,
+        490.6512756347656,
+        430.16510009765625,
+        539.3487548828125
+      ],
+      "text_sha256": "4c1ff08b919b9f31be41474f43d5c7b9317601eaf49b82bf4ab0fc869d05b9cb"
+    },
+    {
+      "block_id": "page-0661-block-0012",
+      "order": 12,
+      "text": "Constipation\nLaxatives\nNo evidence to suggest that laxatives have any negative \nimpact on cognitive function\nConstipation itself may worsen cognition\n",
+      "bbox": [
+        65.90499877929688,
+        546.2637329101562,
+        409.92254638671875,
+        574.9662475585938
+      ],
+      "text_sha256": "a2b04ece443099c4ac19bf183d9ac9a30c9a542ba12722e34f3b09b9e8c3ae3c"
+    },
+    {
+      "block_id": "page-0661-block-0013",
+      "order": 13,
+      "text": "Diarrhoea\nLoperamide\nLow-potency anticholinergic. Not known to have effects on \ncognitive function; however, may add to the anticholinergic \ncognitive burden if used in combination to other anticholinergics\n",
+      "bbox": [
+        65.90499877929688,
+        581.8812255859375,
+        430.7123107910156,
+        610.583740234375
+      ],
+      "text_sha256": "38a56f534cd8f7c06a62361d2377b99681989255be74a02aaee32442c00c0960"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

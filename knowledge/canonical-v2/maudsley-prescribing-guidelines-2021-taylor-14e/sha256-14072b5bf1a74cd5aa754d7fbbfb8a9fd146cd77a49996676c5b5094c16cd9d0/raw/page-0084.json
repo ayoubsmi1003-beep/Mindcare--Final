@@ -1,0 +1,347 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0084",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 84,
+  "source_page_index": 83,
+  "source_page_display": 84,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Schizophrenia and related psychoses    63\nCHAPTER 1\nRapid tranquillisation summary  (Continued)\nc. \u0007Promethazine has a slow onset of action but is often an effective sedative. Dilution is not required before IM \ninjection. May be repeated up to a maximum of 100mg/day. Wait 1–2 hours after injection to assess response. \nNote that promethazine alone has been reported, albeit very rarely, to cause NMS,73 although it is an extremely \nweak dopamine antagonist. Note also the potential pharmacokinetic interaction between promethazine and \nhaloperidol (reduced metabolism of haloperidol), which may confer risk if repeated doses of both are administered.\nd. \u0007Recommended by NICE only for moderate behavioural disturbance, but data from a large observational study \nalso supports efficacy in clinical emergencies.\ne. \u0007Use Diazemuls to avoid injection site reactions. Lorazepam can also be given IV. IV therapy may be used \ninstead of IM when a very rapid effect is required. IV therapy also ensures near-immediate delivery of the \ndrug to its site of action and effectively avoids the danger of inadvertent accumulation of slowly absorbed IM \ndoses. IV doses can be repeated after only 5–10 minutes if no effect is observed. Midazolam can also be used \nIV, but respiratory depression is common.1\nf. \u0007Options at this point are limited, although the wider use of IM ketamine has improved the range of options \navailable. IM amylobarbitone and IM paraldehyde have been used in the past but are used now only \nextremely rarely and are generally not easy to obtain. IV olanzapine, IV droperidol and IV haloperidol are \npossible but adverse effects are fairly common. ECT is also an option.\nRapid tranquillisation – physical monitoring\nAfter any parenteral drug administration, monitor as follows:\n■\n■Temperature\n■\n■Pulse\n■\n■Blood pressure\n■\n■Respiratory rate\nEvery 15 minutes for 1 hour, and then hourly until the patient is ambulatory. Patients who refuse \nto have their vital signs monitored or who remain too behaviourally disturbed to be approached \nshould be observed for signs/symptoms of pyrexia, hypoxia, hypotension, over-sedation and \ngeneral physical well-being.\nIf the patient is asleep or unconscious, the continuous use of pulse oximetry to measure \noxygen saturation is desirable. A nurse should remain with the patient until ambulatory.\nECG and haematological monitoring are also strongly recommended when parenteral antipsy-\nchotics are given, especially when higher doses are used.74,75 Hypokalaemia, stress and agitation \nplace the patient at risk of cardiac arrhythmia76 (see the section on ‘QT prolongation’). ECG \nmonitoring is formally recommended for all patients who receive haloperidol.\nRemedial measures in rapid tranquillisation\nProblem \t\t\n\t\n\t\n\t\nRemedial measures\nAcute dystonia (including\t\n\t\n\t\nGive procyclidine 5–10mg IM or IV\noculogyric crises)\nReduced respiratory rate (<10/min)\t\n\t\n\u0007Give oxygen, raise legs, ensure patient is not lying\nor oxygen saturation (<90%) \t \t\n\t\nface down.\n\t\n\u0007Give flumazenil if benzodiazepine-induced \nrespiratory depression suspected (see protocol)\n\t\n\u0007If induced by any other sedative agent: \ntransfer to a medical bed and ventilate \nmechanically.\n(Continued)\n",
+  "raw_text_sha256": "11b9ea54bfbab601bf8db3764be36bdcafc9c40c68ec0b39bdebd0d4e438f9b7",
+  "coordinates_sha256": "f6898e01710760fe060e87ccfb26cb3bd82eeb0360f75068b826ece60454c011",
+  "block_sequence_sha256": "9d5263f4d3187e88575ad58f79023207a3c9a15064bfd0131c005f9504ad6c50",
+  "blocks": [
+    {
+      "block_id": "page-0084-block-0000",
+      "order": 0,
+      "text": "Schizophrenia and related psychoses    63\n",
+      "bbox": [
+        245.7443084716797,
+        31.394245147705078,
+        419.99951171875,
+        41.0262451171875
+      ],
+      "text_sha256": "7e7ee4932d543028862a60e93f8a87efa7d6561155e4b6fdbc100b509f638d51"
+    },
+    {
+      "block_id": "page-0084-block-0001",
+      "order": 1,
+      "text": "CHAPTER 1\n",
+      "bbox": [
+        454.4087829589844,
+        77.9866943359375,
+        463.8887939453125,
+        119.3306884765625
+      ],
+      "text_sha256": "50ea479c5e56d804f519f996f92e5b1a1af8c35affd82eeab07b1ef90330bdef"
+    },
+    {
+      "block_id": "page-0084-block-0002",
+      "order": 2,
+      "text": "Rapid tranquillisation summary  (Continued)\n",
+      "bbox": [
+        54.99909973144531,
+        69.07691192626953,
+        221.42520141601562,
+        79.59942626953125
+      ],
+      "text_sha256": "e3f1e84b38740a264eff8315b915acf432565e7630e363eb3a64eec616e63bb1"
+    },
+    {
+      "block_id": "page-0084-block-0003",
+      "order": 3,
+      "text": "c. \u0007Promethazine has a slow onset of action but is often an effective sedative. Dilution is not required before IM \n",
+      "bbox": [
+        55.24769592285156,
+        90.01692962646484,
+        392.3952331542969,
+        98.72442626953125
+      ],
+      "text_sha256": "1e47f309999faf27a39447d6e6a26c5a53567f7eac01b15ea79e100eebe7c282"
+    },
+    {
+      "block_id": "page-0084-block-0004",
+      "order": 4,
+      "text": "injection. May be repeated up to a maximum of 100mg/day. Wait 1–2 hours after injection to assess response. \nNote that promethazine alone has been reported, albeit very rarely, to cause NMS,73 although it is an extremely \nweak dopamine antagonist. Note also the potential pharmacokinetic interaction between promethazine and \nhaloperidol (reduced metabolism of haloperidol), which may confer risk if repeated doses of both are administered.\nd. \u0007Recommended by NICE only for moderate behavioural disturbance, but data from a large observational study \n",
+      "bbox": [
+        55.245330810546875,
+        100.0144271850586,
+        414.7503967285156,
+        148.7169189453125
+      ],
+      "text_sha256": "0e062d3db07e3e8e95937900777889cb870272b10d66c588f02118102a68541d"
+    },
+    {
+      "block_id": "page-0084-block-0005",
+      "order": 5,
+      "text": "also supports efficacy in clinical emergencies.\ne. \u0007Use Diazemuls to avoid injection site reactions. Lorazepam can also be given IV. IV therapy may be used \n",
+      "bbox": [
+        55.24530029296875,
+        150.0069122314453,
+        395.0102844238281,
+        168.7119140625
+      ],
+      "text_sha256": "1039fee7eead8bda5be06348b206c9537e9b1a24715aec052a8b38b9fa239ad4"
+    },
+    {
+      "block_id": "page-0084-block-0006",
+      "order": 6,
+      "text": "instead of IM when a very rapid effect is required. IV therapy also ensures near-immediate delivery of the \ndrug to its site of action and effectively avoids the danger of inadvertent accumulation of slowly absorbed IM \ndoses. IV doses can be repeated after only 5–10 minutes if no effect is observed. Midazolam can also be used \nIV, but respiratory depression is common.1\n",
+      "bbox": [
+        63.16529846191406,
+        170.0019073486328,
+        414.6304626464844,
+        208.701904296875
+      ],
+      "text_sha256": "3841d1ce1e2fb8b9a8bdbbc296bb564f9fdae4962c48798169c167bc86ab8857"
+    },
+    {
+      "block_id": "page-0084-block-0007",
+      "order": 7,
+      "text": "f. \u0007Options at this point are limited, although the wider use of IM ketamine has improved the range of options \n",
+      "bbox": [
+        55.24909973144531,
+        210.0169219970703,
+        406.7142028808594,
+        218.72442626953125
+      ],
+      "text_sha256": "b41b5c9e4d234080ad50933a9d192cc8d519fad571f1f9bcd6a892706e1a8452"
+    },
+    {
+      "block_id": "page-0084-block-0008",
+      "order": 8,
+      "text": "available. IM amylobarbitone and IM paraldehyde have been used in the past but are used now only \nextremely rarely and are generally not easy to obtain. IV olanzapine, IV droperidol and IV haloperidol are \npossible but adverse effects are fairly common. ECT is also an option.\n",
+      "bbox": [
+        61.91658020019531,
+        220.01441955566406,
+        395.8617248535156,
+        248.7169189453125
+      ],
+      "text_sha256": "9ce3ccc9e7870e0827b0e59d45f8fe8a0f9291210152043b58ae3f24b0e41ab0"
+    },
+    {
+      "block_id": "page-0084-block-0009",
+      "order": 9,
+      "text": "Rapid tranquillisation – physical monitoring\n",
+      "bbox": [
+        55.49909973144531,
+        273.4922180175781,
+        229.774658203125,
+        283.5647277832031
+      ],
+      "text_sha256": "6ac02dd3c25a81c6d434d3466cefa8a17466c587baf2a287c4b9bfd2fa871230"
+    },
+    {
+      "block_id": "page-0084-block-0010",
+      "order": 10,
+      "text": "After any parenteral drug administration, monitor as follows:\n",
+      "bbox": [
+        55.49909973144531,
+        293.0252380371094,
+        275.8956604003906,
+        302.89373779296875
+      ],
+      "text_sha256": "bbf59d8930974891c5671ddb1e55ae21d9b8dd8c36e5ebbcc25f00f9b5ddfdfb"
+    },
+    {
+      "block_id": "page-0084-block-0011",
+      "order": 11,
+      "text": "■\n■Temperature\n",
+      "bbox": [
+        55.499000549316406,
+        308.8172912597656,
+        114.39559936523438,
+        318.8898010253906
+      ],
+      "text_sha256": "300f907df8b55ddfbd2b40f5c6affd1ba915dbba8ba249ca58661c0b6dd0c692"
+    },
+    {
+      "block_id": "page-0084-block-0012",
+      "order": 12,
+      "text": "■\n■Pulse\n",
+      "bbox": [
+        55.499000549316406,
+        318.8172912597656,
+        84.7815933227539,
+        328.8898010253906
+      ],
+      "text_sha256": "61bcd171ae4f27d2752b79b1ad13fa228905a1198caa46c5767fb4b811b3baf0"
+    },
+    {
+      "block_id": "page-0084-block-0013",
+      "order": 13,
+      "text": "■\n■Blood pressure\n",
+      "bbox": [
+        55.499000549316406,
+        328.8172912597656,
+        123.19308471679688,
+        338.8898010253906
+      ],
+      "text_sha256": "923d35e764271da6ef1e6b186ac356a8416feae471e62389db20dd664d9ba750"
+    },
+    {
+      "block_id": "page-0084-block-0014",
+      "order": 14,
+      "text": "■\n■Respiratory rate\n",
+      "bbox": [
+        55.499000549316406,
+        338.8172912597656,
+        128.24209594726562,
+        348.8898010253906
+      ],
+      "text_sha256": "4b06dfe98c2d7841992226ad7c3c6ca8b7941edf438f0e241e9b4a5354bffb5d"
+    },
+    {
+      "block_id": "page-0084-block-0015",
+      "order": 15,
+      "text": "Every 15 minutes for 1 hour, and then hourly until the patient is ambulatory. Patients who refuse \nto have their vital signs monitored or who remain too behaviourally disturbed to be approached \nshould be observed for signs/symptoms of pyrexia, hypoxia, hypotension, over-sedation and \ngeneral physical well-being.\n",
+      "bbox": [
+        55.49909973144531,
+        355.018310546875,
+        407.0677795410156,
+        394.87481689453125
+      ],
+      "text_sha256": "ea5bf67846f3945a31f57dcbe8db93b41415cc524994dfc06436537d6eef0297"
+    },
+    {
+      "block_id": "page-0084-block-0016",
+      "order": 16,
+      "text": "If the patient is asleep or unconscious, the continuous use of pulse oximetry to measure \noxygen saturation is desirable. A nurse should remain with the patient until ambulatory.\n",
+      "bbox": [
+        55.49909973144531,
+        394.7983093261719,
+        389.3112487792969,
+        414.8668212890625
+      ],
+      "text_sha256": "688a8e36758dcf70aefddb3b423ee13c1935f6215af5557134af5f745b2adf8c"
+    },
+    {
+      "block_id": "page-0084-block-0017",
+      "order": 17,
+      "text": "ECG and haematological monitoring are also strongly recommended when parenteral antipsy-\nchotics are given, especially when higher doses are used.74,75 Hypokalaemia, stress and agitation \nplace the patient at risk of cardiac arrhythmia76 (see the section on ‘QT prolongation’). ECG \nmonitoring is formally recommended for all patients who receive haloperidol.\n",
+      "bbox": [
+        55.49909973144531,
+        414.99432373046875,
+        405.8692626953125,
+        454.88580322265625
+      ],
+      "text_sha256": "0c80493b5faa8bd88551fbf73637a0b8bb83e727f2a095a54aeb34b1636e4132"
+    },
+    {
+      "block_id": "page-0084-block-0018",
+      "order": 18,
+      "text": "Remedial measures in rapid tranquillisation\n",
+      "bbox": [
+        55.49970245361328,
+        481.9075927734375,
+        228.69573974609375,
+        491.9801025390625
+      ],
+      "text_sha256": "9e48dafcf449de1165f9c5a919664f5ad77419a2fcac27f2fa522f4d244141f3"
+    },
+    {
+      "block_id": "page-0084-block-0019",
+      "order": 19,
+      "text": "Problem \t\t\n\t\n\t\n\t\nRemedial measures\n",
+      "bbox": [
+        55.49970245361328,
+        501.7001037597656,
+        307.96368408203125,
+        511.18011474609375
+      ],
+      "text_sha256": "c6f5bea9cba1dff7da40c67ddbfb8ed935d7f0da09a8c665f8be78811ef26b38"
+    },
+    {
+      "block_id": "page-0084-block-0020",
+      "order": 20,
+      "text": "Acute dystonia (including\t\n\t\n\t\nGive procyclidine 5–10mg IM or IV\n",
+      "bbox": [
+        55.49971008300781,
+        514.7001342773438,
+        358.03570556640625,
+        524.1801147460938
+      ],
+      "text_sha256": "a0413e118e820f6fa0279238b66e374bf9f9e53b8778eb8251098d1f4df801d8"
+    },
+    {
+      "block_id": "page-0084-block-0021",
+      "order": 21,
+      "text": "oculogyric crises)\n",
+      "bbox": [
+        55.49969482421875,
+        527.89208984375,
+        112.82769775390625,
+        537.1801147460938
+      ],
+      "text_sha256": "a62caa4f9dee49d76a51542075d100b4c9e60f42e682eb0625305373961b3a23"
+    },
+    {
+      "block_id": "page-0084-block-0022",
+      "order": 22,
+      "text": "Reduced respiratory rate (<10/min)\t\n\t\n\u0007Give oxygen, raise legs, ensure patient is not lying\n",
+      "bbox": [
+        55.49969482421875,
+        540.7001342773438,
+        405.15570068359375,
+        550.1801147460938
+      ],
+      "text_sha256": "a8b5d274c3fdb99d095a8b249ff480b796a93638d8c61302ca2fe7baeedcb749"
+    },
+    {
+      "block_id": "page-0084-block-0023",
+      "order": 23,
+      "text": "or oxygen saturation (<90%) \t \t\n\t\nface down.\n",
+      "bbox": [
+        55.49971008300781,
+        553.89208984375,
+        273.731689453125,
+        563.1801147460938
+      ],
+      "text_sha256": "c6ec138c593de24f86942938eb3f9f11fc31280b8e26944c30231cba0f0e26d7"
+    },
+    {
+      "block_id": "page-0084-block-0024",
+      "order": 24,
+      "text": "\t\n\u0007Give flumazenil if benzodiazepine-induced \nrespiratory depression suspected (see protocol)\n",
+      "bbox": [
+        55.49970245361328,
+        566.7001342773438,
+        394.20367431640625,
+        586.1801147460938
+      ],
+      "text_sha256": "3c8a7e01017b7a2311df5c1378b20dc02f29253b67e265fc53b7a082aa4b4057"
+    },
+    {
+      "block_id": "page-0084-block-0025",
+      "order": 25,
+      "text": "\t\n\u0007If induced by any other sedative agent: \ntransfer to a medical bed and ventilate \nmechanically.\n",
+      "bbox": [
+        55.49970245361328,
+        589.89208984375,
+        383.99566650390625,
+        619.1801147460938
+      ],
+      "text_sha256": "1b35c5e21c2b650961c9d618ba55ae3b9a3ae2b4ad231d0424e9aea0b33f23b3"
+    },
+    {
+      "block_id": "page-0084-block-0026",
+      "order": 26,
+      "text": "(Continued)\n",
+      "bbox": [
+        382.98480224609375,
+        627.7470092773438,
+        420.4998474121094,
+        636.49951171875
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

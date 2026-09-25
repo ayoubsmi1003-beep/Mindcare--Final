@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0531",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 531,
+  "source_page_index": 530,
+  "source_page_display": 531,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "510    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\n\t15.\t Hajek P, et al. Varenicline in prevention of relapse to smoking: effect of quit pattern on response to extended treatment. Addiction 2009; \n104:1597–1602.\n\t16.\t Anthenelli RM, et al. Neuropsychiatric safety and efficacy of varenicline, bupropion, and nicotine patch in smokers with and without psychi-\natric disorders (EAGLES): a double-blind, randomised, placebo-controlled clinical trial. Lancet 2016; 387:2507–2520.\n\t17.\t Benli AR, et al. A comparison of the efficacy of varenicline and bupropion and an evaluation of the effect of the medications in the context \nof the smoking cessation programme. Tob Induc Dis 2017; 15:10.\n\t18.\t Giasson-Gariepy K, et al. A case of hypomania during nicotine cessation treatment with bupropion. Addict Sci Clin Pract 2013; 8:22.\n\t19.\t Care Quality Commission. Brief guide: the use of ‘blanket restrictions’ in mental health wards. 2020; https://www.cqc.org.uk/sites/default/\nfiles/20191125_900767_briefguide-blanket_restrictions_mental_health_wards_v3.pdf.\n\t20.\t Health and Social Care. Using electronic cigarettes in NHS mental health organisations. 2020; https://www.gov.uk/government/publications/e-\ncigarettes-use-by-patients-in-nhs-mental-health-organisations/using-electronic-cigarettes-in-nhs-mental-health-organisations.\n\t21.\t NHS England. Long Term Plan. 2020; https://www.longtermplan.nhs.uk/wp-content/uploads/2019/08/nhs-long-term-plan-version-1.2.pdf.\n\t22.\t Hartmann-Boyce J, et al. Electronic cigarettes for smoking cessation. Cochrane Database Syst Rev 2020; 10:Cd010216.\n\t23.\t Beard E, et al. Association of prevalence of electronic cigarette use with smoking cessation and cigarette consumption in England: a time-\nseries analysis between 2006 and 2017. Addiction 2020; 115:961–974.\n\t24.\t McNeill A, et al. Vaping in England: an evidence update including mental health and pregnancy, March 2020: a report commissioned by \nPublic Health England. London: Public Health England. 2020; https://assets.publishing.service.gov.uk/government/uploads/system/uploads/\nattachment_data/file/869401/Vaping_in_England_evidence_update_March_2020.pdf.\n\t25.\t McNeill A, et al. Evidence review of ecigarettes and heated tobacco products 2018. A report commissioned by Public Health England. \nLondon: Public Health England. 2018; https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/\nfile/684963/Evidence_review_of_e-cigarettes_and_heated_tobacco_products_2018.pdf.\n\t26.\t Committee on Toxicity of Chemicals in Food Consumer Products and the Environment (COT). Statement on the potential toxicological risks \nfrom electronic nicotine (and non-nicotine) delivery systems (E(N)NDS – e-cigarettes). 2020; https://cot.food.gov.uk/sites/default/files/2020-\n09/COT%20E%28N%29NDS%20statement%202020-04.pdf.\n",
+  "raw_text_sha256": "af5e0be013713e67f5867398f0ec76a6bf3db305c45482830dc1a57fc8911c42",
+  "coordinates_sha256": "7502ed8f77ee7a3d0ce0e764805dd7617f3ba947a5b8d04cd0a4d14750fff37b",
+  "block_sequence_sha256": "b6dd2528eb865f18acfd3a322f7fcbeba3f2f857db62147354f9c20591b52b33",
+  "blocks": [
+    {
+      "block_id": "page-0531-block-0000",
+      "order": 0,
+      "text": "510    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "21b60b72245374a562635dfb2b37b7bc4734b1c7f322ae38b54c1b6634f4e656"
+    },
+    {
+      "block_id": "page-0531-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0531-block-0002",
+      "order": 2,
+      "text": "\t15.\t Hajek P, et al. Varenicline in prevention of relapse to smoking: effect of quit pattern on response to extended treatment. Addiction 2009; \n",
+      "bbox": [
+        61.88999938964844,
+        63.2703857421875,
+        435.60003662109375,
+        70.30238342285156
+      ],
+      "text_sha256": "173d538cd49cd85b3a3346371ca16e5d5968d6422f6fbfe2d850ab610a075383"
+    },
+    {
+      "block_id": "page-0531-block-0003",
+      "order": 3,
+      "text": "104:1597–1602.\n\t16.\t Anthenelli RM, et al. Neuropsychiatric safety and efficacy of varenicline, bupropion, and nicotine patch in smokers with and without psychi-\n",
+      "bbox": [
+        61.895999908447266,
+        72.12638854980469,
+        433.8778991699219,
+        88.30238342285156
+      ],
+      "text_sha256": "ba6eb4fd7ef38ae259ea72ba1e186dbf326e841684c3290bb26433235897916c"
+    },
+    {
+      "block_id": "page-0531-block-0004",
+      "order": 4,
+      "text": "atric disorders (EAGLES): a double-blind, randomised, placebo-controlled clinical trial. Lancet 2016; 387:2507–2520.\n\t17.\t Benli AR, et al. A comparison of the efficacy of varenicline and bupropion and an evaluation of the effect of the medications in the context \n",
+      "bbox": [
+        61.902000427246094,
+        90.12638854980469,
+        435.5457763671875,
+        106.30238342285156
+      ],
+      "text_sha256": "92a104d38d59f9cc4040cc87ffa810bee3a8f0689236f45d1c67631a66dbfc89"
+    },
+    {
+      "block_id": "page-0531-block-0005",
+      "order": 5,
+      "text": "of the smoking cessation programme. Tob Induc Dis 2017; 15:10.\n\t18.\t Giasson-Gariepy K, et al. A case of hypomania during nicotine cessation treatment with bupropion. Addict Sci Clin Pract 2013; 8:22.\n\t19.\t Care Quality Commission. Brief guide: the use of ‘blanket restrictions’ in mental health wards. 2020; https://www.cqc.org.uk/sites/default/\n",
+      "bbox": [
+        61.90800094604492,
+        108.12638854980469,
+        433.9500427246094,
+        133.30238342285156
+      ],
+      "text_sha256": "c4c8a94b21c2bd1cd4b7342da0de2528525e61a9cf7d9a306cc2288be6053f56"
+    },
+    {
+      "block_id": "page-0531-block-0006",
+      "order": 6,
+      "text": "files/20191125_900767_briefguide-blanket_restrictions_mental_health_wards_v3.pdf.\n\t20.\t Health and Social Care. Using electronic cigarettes in NHS mental health organisations. 2020; https://www.gov.uk/government/publications/e-\n",
+      "bbox": [
+        61.91999816894531,
+        135.2703857421875,
+        433.9499816894531,
+        151.30238342285156
+      ],
+      "text_sha256": "efb7db63d38f21c8a8eed226617f1347c7abf2098b0d0f2213f4dae05df23f1b"
+    },
+    {
+      "block_id": "page-0531-block-0007",
+      "order": 7,
+      "text": "cigarettes-use-by-patients-in-nhs-mental-health-organisations/using-electronic-cigarettes-in-nhs-mental-health-organisations.\n\t21.\t NHS England. Long Term Plan. 2020; https://www.longtermplan.nhs.uk/wp-content/uploads/2019/08/nhs-long-term-plan-version-1.2.pdf.\n\t22.\t Hartmann-Boyce J, et al. Electronic cigarettes for smoking cessation. Cochrane Database Syst Rev 2020; 10:Cd010216.\n\t23.\t Beard E, et al. Association of prevalence of electronic cigarette use with smoking cessation and cigarette consumption in England: a time-\n",
+      "bbox": [
+        61.92599868774414,
+        153.2703857421875,
+        433.919921875,
+        187.30238342285156
+      ],
+      "text_sha256": "7874a08602d08e0b32c8edf1cb254aca3cbd833932ce684b133250bee50953a3"
+    },
+    {
+      "block_id": "page-0531-block-0008",
+      "order": 8,
+      "text": "series analysis between 2006 and 2017. Addiction 2020; 115:961–974.\n\t24.\t McNeill A, et al. Vaping in England: an evidence update including mental health and pregnancy, March 2020: a report commissioned by \n",
+      "bbox": [
+        61.944000244140625,
+        189.1263885498047,
+        435.617919921875,
+        205.30238342285156
+      ],
+      "text_sha256": "f8238633b87d30afd9cef7b9797b6b98667a8dbdfaa80df86ad3c02444133811"
+    },
+    {
+      "block_id": "page-0531-block-0009",
+      "order": 9,
+      "text": "Public Health England. London: Public Health England. 2020; https://assets.publishing.service.gov.uk/government/uploads/system/uploads/\nattachment_data/file/869401/Vaping_in_England_evidence_update_March_2020.pdf.\n\t25.\t McNeill A, et al. Evidence review of ecigarettes and heated tobacco products 2018. A report commissioned by Public Health England. \n",
+      "bbox": [
+        61.95000076293945,
+        207.2703857421875,
+        435.63592529296875,
+        232.30238342285156
+      ],
+      "text_sha256": "58b4cb646d50b6faf297dfb7f8e87eb3dd3a40696905e9f517196b5787e3afd8"
+    },
+    {
+      "block_id": "page-0531-block-0010",
+      "order": 10,
+      "text": "London: Public Health England. 2018; https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/\nfile/684963/Evidence_review_of_e-cigarettes_and_heated_tobacco_products_2018.pdf.\n\t26.\t Committee on Toxicity of Chemicals in Food Consumer Products and the Environment (COT). Statement on the potential toxicological risks \n",
+      "bbox": [
+        61.95600128173828,
+        234.2703857421875,
+        435.6059875488281,
+        259.3023986816406
+      ],
+      "text_sha256": "7d0fdcee62f43a05430f1c1a5bb94db573c952e0e05611659abf0972bda43151"
+    },
+    {
+      "block_id": "page-0531-block-0011",
+      "order": 11,
+      "text": "from electronic nicotine (and non-nicotine) delivery systems (E(N)NDS – e-cigarettes). 2020; https://cot.food.gov.uk/sites/default/files/2020-\n09/COT%20E%28N%29NDS%20statement%202020-04.pdf.\n",
+      "bbox": [
+        72.95999145507812,
+        261.2703857421875,
+        433.94390869140625,
+        277.3023986816406
+      ],
+      "text_sha256": "34fcb5df197012d38888c043483fae2908020d65f66fd012c7415d9b61b9ca18"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,1643 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0696",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 696,
+  "source_page_index": 695,
+  "source_page_display": 696,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "SSRIs20,21\nDry mouth can be \na problem with \nparoxetine\nMuch less of \na problem, \nbut an \nincreased risk \nof falls is \ndocumented \nwith SSRIs\nCan be a \nproblem \nwith \nparoxetine \nand \nfluvoxamine\nUnlikely \nwith the \nother SSRIs\nParoxetine \nand possibly \ncitalopram \nmay cause \nweight gain\nOthers are \nweight \nneutral\nSafe with the \npossible \nexception of \ncitalopram; one \nminor metabolite \ncan cause QTc \nprolongation. \nSignificance \nunknown\nGI effects and headaches, \nhyponatraemia, increased \nrisk of bleeds in the older \nperson (add gastroprotection \nif also on an NSAID or \naspirin), orofacial dyskinesia \nwith paroxetine, cognitive \nimpairment,22 interstitial \nlung disease23,24\nFluvoxamine, fluoxetine \nand paroxetine are potent \ninhibitors of several hepatic \ncytochrome enzymes (see \nsection on antidepressant \ndrug interactions) \nSertraline is safer and \ncitalopram, escitalopram \nand vortioxetine are safest\nOthers25,26\nMinimal with \nmirtazapine and \nvenlafaxine*\nCan be rarely a \nproblem with \nreboxetine*\nDuloxetine* – few \neffects\nVery low incidence \nwith agomelatine\nVenlafaxine \ncan cause \nhypotension \nat lower \ndoses, but it \ncan increase \nBP at higher \ndoses, as can \nduloxetine\nDizziness \ncommon with \nagomelatine\nMirtazapine, \nmianserin \nand \ntrazodone \nare sedatives\nVenlafaxine, \nduloxetine \n– neutral \neffects\nAgomelatine \naids sleep\nGreatest \nproblem is \nwith \nmirtazapine, \nalthough \nolder people \nare not \nparticularly \nprone to \nweight gain\nLow \nincidence \nwith \nagomelatine\nVenlafaxine is \nmore toxic in \noverdose than \nSSRIs, but safer \nthan TCAs\nOthers are \nrelatively safe\nInsomnia and hypokalaemia \nwith reboxetine\nNausea with venlafaxine, \nduloxetine\nWeight loss and nausea with \nduloxetine\nPossibly hepatotoxicity with \nagomelatine\nMonitor LFTs\nCognitive impairment with \ntrazodone22\nInterstitial lung disease with \nserotonin and \nnorepinephrine reuptake \ninhibitors24\nDuloxetine inhibits CYP2D6\nMoclobemide and \nvenlafaxine inhibit CYP450 \nenzymes. Check for \npotential interactions\nReboxetine is safe\nAgomelatine should be \navoided in patients who \ntake potent CYP1A2 \ninhibitors\n*Noradrenergic drugs may produce ‘anticholinergic’ effects via norepinephrine re-uptake inhibition.\nTable 6.8  (Continued )\n",
+  "raw_text_sha256": "bfb467004ff8a8d69e3b56525c8ec50b94366e0ee63ee918d2d01ce6858e1ae7",
+  "coordinates_sha256": "a662de1f78e8d598c94ea4bf6b11e0453561254bcb25e06000ad9525303fafef",
+  "block_sequence_sha256": "cf1ac25f291fc0d16befd01b8f6a2d6a1734d6be2e92c7f8204649f2a3c0b57d",
+  "blocks": [
+    {
+      "block_id": "page-0696-block-0000",
+      "order": 0,
+      "text": "SSRIs20,21\nDry mouth can be \n",
+      "bbox": [
+        131.8623046875,
+        496.0589904785156,
+        140.7498016357422,
+        612.6539916992188
+      ],
+      "text_sha256": "e278951951b27519c08ecdc4c1480b843d76f69bdde01187219b5b100983724c"
+    },
+    {
+      "block_id": "page-0696-block-0001",
+      "order": 1,
+      "text": "a problem with \n",
+      "bbox": [
+        142.039794921875,
+        504.9465026855469,
+        150.74729919433594,
+        555.6539916992188
+      ],
+      "text_sha256": "ada6e4a1a1933cfffdfdfb5d444b3a446e420ef13d7e709a0d26db31e196db46"
+    },
+    {
+      "block_id": "page-0696-block-0002",
+      "order": 2,
+      "text": "paroxetine\n",
+      "bbox": [
+        152.03729248046875,
+        522.0390014648438,
+        160.7447967529297,
+        555.6539916992188
+      ],
+      "text_sha256": "398142da4bddbf07b44f676eafdba48846af5dd83b62a9b167e83e00a45dc078"
+    },
+    {
+      "block_id": "page-0696-block-0003",
+      "order": 3,
+      "text": "Much less of \n",
+      "bbox": [
+        132.0347900390625,
+        440.1465148925781,
+        140.74229431152344,
+        482.656494140625
+      ],
+      "text_sha256": "56e51c0bbdd30055f3b9c26838e32e8c6719abf8fb4859b055960792aaf3e186"
+    },
+    {
+      "block_id": "page-0696-block-0004",
+      "order": 4,
+      "text": "a problem, \n",
+      "bbox": [
+        142.03228759765625,
+        446.1164855957031,
+        150.7397918701172,
+        482.656494140625
+      ],
+      "text_sha256": "a06275e2a8a10dd7d50ffbb02a6f4bf8e204e34ccde8bfe4595c7ae25419272f"
+    },
+    {
+      "block_id": "page-0696-block-0005",
+      "order": 5,
+      "text": "but an \n",
+      "bbox": [
+        152.02978515625,
+        459.72900390625,
+        160.73728942871094,
+        482.656494140625
+      ],
+      "text_sha256": "ae0c227d60010d9709b3917ea3a0ed42068e06a271d87f3f8c09d39eb3b75334"
+    },
+    {
+      "block_id": "page-0696-block-0006",
+      "order": 6,
+      "text": "increased risk \n",
+      "bbox": [
+        162.02728271484375,
+        437.7915344238281,
+        170.7347869873047,
+        482.656494140625
+      ],
+      "text_sha256": "38e9a0adc15cbbbccb58bfd9951445a3a13943d9293451fd0d8535d1c8ec76a1"
+    },
+    {
+      "block_id": "page-0696-block-0007",
+      "order": 7,
+      "text": "of falls is \n",
+      "bbox": [
+        172.0247802734375,
+        452.6565246582031,
+        180.73228454589844,
+        482.656494140625
+      ],
+      "text_sha256": "c7cc8721b0f7b626e33f53fa057910fc2865d5dbbc567df7db67bb8d23c391d4"
+    },
+    {
+      "block_id": "page-0696-block-0008",
+      "order": 8,
+      "text": "documented \n",
+      "bbox": [
+        182.02227783203125,
+        440.1465148925781,
+        190.7297821044922,
+        482.656494140625
+      ],
+      "text_sha256": "0abf4bcfd6bebfd0684d95a8793bf69213c95a8246c00514f36c5e294072d5ad"
+    },
+    {
+      "block_id": "page-0696-block-0009",
+      "order": 9,
+      "text": "with SSRIs\n",
+      "bbox": [
+        192.019775390625,
+        450.1514892578125,
+        200.72727966308594,
+        482.656494140625
+      ],
+      "text_sha256": "2bcdf8bb0a21830e532b86c3dc96be68df7b42cbe18cea2fa965bc1349fe87ee"
+    },
+    {
+      "block_id": "page-0696-block-0010",
+      "order": 10,
+      "text": "Can be a \n",
+      "bbox": [
+        132.019775390625,
+        394.8089904785156,
+        140.72727966308594,
+        425.656494140625
+      ],
+      "text_sha256": "245ce60883f08e69aaf6c4e5bf15b3ce36a2b64d331a59fd42da9b0a51d24990"
+    },
+    {
+      "block_id": "page-0696-block-0011",
+      "order": 11,
+      "text": "problem \n",
+      "bbox": [
+        142.01727294921875,
+        397.0364685058594,
+        150.7247772216797,
+        425.656494140625
+      ],
+      "text_sha256": "4c9a42e7b422b072892a746ebf9c4311ab39311383e619978aa8ce275acbb0ae"
+    },
+    {
+      "block_id": "page-0696-block-0012",
+      "order": 12,
+      "text": "with \n",
+      "bbox": [
+        152.0147705078125,
+        409.40399169921875,
+        160.72227478027344,
+        425.656494140625
+      ],
+      "text_sha256": "b366ea9b5c87c6068bed10466f9d9f50fea1aec1b54a9549f0c1905cdc50bf8e"
+    },
+    {
+      "block_id": "page-0696-block-0013",
+      "order": 13,
+      "text": "paroxetine \n",
+      "bbox": [
+        162.01226806640625,
+        389.95648193359375,
+        170.7197723388672,
+        425.656494140625
+      ],
+      "text_sha256": "251de7fa0d1e7d2f465b41a00571fec43a772d1c61650481c5123fda99b2ce5d"
+    },
+    {
+      "block_id": "page-0696-block-0014",
+      "order": 14,
+      "text": "and \n",
+      "bbox": [
+        172.009765625,
+        411.4814758300781,
+        180.71726989746094,
+        425.656494140625
+      ],
+      "text_sha256": "a3b53ea7e445dc5436c49e232dd008e99d30c643691ef489baf9307b4352c09a"
+    },
+    {
+      "block_id": "page-0696-block-0015",
+      "order": 15,
+      "text": "fluvoxamine\n",
+      "bbox": [
+        182.00726318359375,
+        386.9114685058594,
+        190.7147674560547,
+        425.656494140625
+      ],
+      "text_sha256": "1638c5490d3656522179497f312b382f6ddb96bc64f1010ee3f134cc08f3922f"
+    },
+    {
+      "block_id": "page-0696-block-0016",
+      "order": 16,
+      "text": "Unlikely \n",
+      "bbox": [
+        195.0047607421875,
+        398.573974609375,
+        203.71226501464844,
+        425.656494140625
+      ],
+      "text_sha256": "65b8d8dcbb8d49cfebf893c4d769645830993a8d9c85c0322a9b616884617d37"
+    },
+    {
+      "block_id": "page-0696-block-0017",
+      "order": 17,
+      "text": "with the \n",
+      "bbox": [
+        205.00225830078125,
+        396.9014892578125,
+        213.7097625732422,
+        425.656494140625
+      ],
+      "text_sha256": "cd8160fa8f98e0f6dfac289e9ea7da3ba4c9c974d3d723ccae8ac3860b61a224"
+    },
+    {
+      "block_id": "page-0696-block-0018",
+      "order": 18,
+      "text": "other SSRIs\n",
+      "bbox": [
+        214.999755859375,
+        390.23394775390625,
+        223.70726013183594,
+        425.656494140625
+      ],
+      "text_sha256": "8ea1eb722a531f287c4c74435a948520d19f0da3f5c7997af347472a7d8a41ad"
+    },
+    {
+      "block_id": "page-0696-block-0019",
+      "order": 19,
+      "text": "Paroxetine \n",
+      "bbox": [
+        131.99725341796875,
+        337.3739929199219,
+        140.7047576904297,
+        372.65399169921875
+      ],
+      "text_sha256": "a9f942050225230ce3b040dfe5aa1539d009f77eea35fb5d92890ea3b0927bd8"
+    },
+    {
+      "block_id": "page-0696-block-0020",
+      "order": 20,
+      "text": "and possibly \n",
+      "bbox": [
+        141.9947509765625,
+        331.388916015625,
+        150.70225524902344,
+        372.65399169921875
+      ],
+      "text_sha256": "78d2c59d3d255fcf39914bc1fa6a0669ca3076ce8325ef5a8ae685ae6d9280ad"
+    },
+    {
+      "block_id": "page-0696-block-0021",
+      "order": 21,
+      "text": "citalopram \n",
+      "bbox": [
+        151.99224853515625,
+        336.82647705078125,
+        160.6997528076172,
+        372.65399169921875
+      ],
+      "text_sha256": "ecfb0e8363a4296d1846d297a936658efd16c0291843ebe9a3779fc57c6dac3b"
+    },
+    {
+      "block_id": "page-0696-block-0022",
+      "order": 22,
+      "text": "may cause \n",
+      "bbox": [
+        161.98974609375,
+        337.239013671875,
+        170.69725036621094,
+        372.65399169921875
+      ],
+      "text_sha256": "17fe0c6f8334e34950bb75b475b63fc9ed0387f10d85ca59e79bc0286099adb3"
+    },
+    {
+      "block_id": "page-0696-block-0023",
+      "order": 23,
+      "text": "weight gain\n",
+      "bbox": [
+        171.98724365234375,
+        334.7264404296875,
+        180.6947479248047,
+        372.65399169921875
+      ],
+      "text_sha256": "a229f3e7c7e1a44b832e98550db5d73b2c7529750bb7257852e103eec2078fd3"
+    },
+    {
+      "block_id": "page-0696-block-0024",
+      "order": 24,
+      "text": "Others are \n",
+      "bbox": [
+        184.9847412109375,
+        337.3739929199219,
+        193.69224548339844,
+        372.65399169921875
+      ],
+      "text_sha256": "d2e3634c5e434061aaad674551a376578e408498399235c6518ab87cb5e3d549"
+    },
+    {
+      "block_id": "page-0696-block-0025",
+      "order": 25,
+      "text": "weight \n",
+      "bbox": [
+        194.98223876953125,
+        348.4814758300781,
+        203.6897430419922,
+        372.65399169921875
+      ],
+      "text_sha256": "1fabaf5194f1c635d24c292a7b76b2bf92c9dafb95a1544c80d5665dfdfe0ded"
+    },
+    {
+      "block_id": "page-0696-block-0026",
+      "order": 26,
+      "text": "neutral\n",
+      "bbox": [
+        204.979736328125,
+        350.1539611816406,
+        213.68724060058594,
+        372.65399169921875
+      ],
+      "text_sha256": "1a3376a1e42e75f0d137b6a8baa4b46fad019cb3d13a6dccdd4d944903bd0791"
+    },
+    {
+      "block_id": "page-0696-block-0027",
+      "order": 27,
+      "text": "Safe with the \n",
+      "bbox": [
+        131.98223876953125,
+        276.2340393066406,
+        140.6897430419922,
+        319.6514892578125
+      ],
+      "text_sha256": "3ec16b90913a41d77006168eeccff1bf184644a223abd652ec971f22fa11e51e"
+    },
+    {
+      "block_id": "page-0696-block-0028",
+      "order": 28,
+      "text": "possible \n",
+      "bbox": [
+        141.979736328125,
+        292.8239440917969,
+        150.68724060058594,
+        319.6514892578125
+      ],
+      "text_sha256": "8952e401085b986d24cda1a018eb4f47a16664408be5624cd976bb2ebfb91fbf"
+    },
+    {
+      "block_id": "page-0696-block-0029",
+      "order": 29,
+      "text": "exception of \n",
+      "bbox": [
+        151.97723388671875,
+        279.053955078125,
+        160.6847381591797,
+        319.6514892578125
+      ],
+      "text_sha256": "046bc482f2ce1d334e81db55ca0c425e013656a3f489627fb312496aca97ea4c"
+    },
+    {
+      "block_id": "page-0696-block-0030",
+      "order": 30,
+      "text": "citalopram; one \n",
+      "bbox": [
+        161.9747314453125,
+        268.9289855957031,
+        170.68223571777344,
+        319.6514892578125
+      ],
+      "text_sha256": "306073e456633ff4e2c3994ffd8bae4ac2aafe5fa9bc8517bdce76b8c0187101"
+    },
+    {
+      "block_id": "page-0696-block-0031",
+      "order": 31,
+      "text": "minor metabolite \n",
+      "bbox": [
+        171.97222900390625,
+        264.031494140625,
+        180.6797332763672,
+        319.6514892578125
+      ],
+      "text_sha256": "a019f4f4b2edec4803a3c3579fa1bd6ce0b21b081266ea97315377e32e34499d"
+    },
+    {
+      "block_id": "page-0696-block-0032",
+      "order": 32,
+      "text": "can cause QTc \n",
+      "bbox": [
+        181.9697265625,
+        273.7364501953125,
+        190.67723083496094,
+        319.6514892578125
+      ],
+      "text_sha256": "2bb8a6bd60b81c0361758f772c44a017beae382371d49783b8ed976f8071d9d6"
+    },
+    {
+      "block_id": "page-0696-block-0033",
+      "order": 33,
+      "text": "prolongation. \n",
+      "bbox": [
+        191.96722412109375,
+        275.5214538574219,
+        200.6747283935547,
+        319.6514892578125
+      ],
+      "text_sha256": "9ded957ce6b245a38bbf2bf10a90415b5d01cc0fc49349412695b85651abb498"
+    },
+    {
+      "block_id": "page-0696-block-0034",
+      "order": 34,
+      "text": "Significance \n",
+      "bbox": [
+        201.9647216796875,
+        280.7264404296875,
+        210.67222595214844,
+        319.6514892578125
+      ],
+      "text_sha256": "1fb1a0805e1eed9a4c81652b2967265140c64152b99ca01a9bf3adbbcb74ea3b"
+    },
+    {
+      "block_id": "page-0696-block-0035",
+      "order": 35,
+      "text": "unknown\n",
+      "bbox": [
+        211.96221923828125,
+        289.80145263671875,
+        220.6697235107422,
+        319.6514892578125
+      ],
+      "text_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f"
+    },
+    {
+      "block_id": "page-0696-block-0036",
+      "order": 36,
+      "text": "GI effects and headaches, \n",
+      "bbox": [
+        131.959716796875,
+        172.1939239501953,
+        140.66722106933594,
+        256.6514892578125
+      ],
+      "text_sha256": "5530e3b4287e09f79872b75ead660b1bba9a390266a74cd023938a4ba584bfe8"
+    },
+    {
+      "block_id": "page-0696-block-0037",
+      "order": 37,
+      "text": "hyponatraemia, increased \n",
+      "bbox": [
+        141.95721435546875,
+        172.6139678955078,
+        150.6647186279297,
+        256.6514892578125
+      ],
+      "text_sha256": "1c1fd1a440cff0a772b8280d1771214210b52189993c59094b8efff4dd302b5d"
+    },
+    {
+      "block_id": "page-0696-block-0038",
+      "order": 38,
+      "text": "risk of bleeds in the older \n",
+      "bbox": [
+        151.9547119140625,
+        173.7163848876953,
+        160.66221618652344,
+        256.6514892578125
+      ],
+      "text_sha256": "b381eb420a4e20cbaf5262f8d97c0d28412bd297756ac5848ff396a812fdbb83"
+    },
+    {
+      "block_id": "page-0696-block-0039",
+      "order": 39,
+      "text": "person (add gastroprotection \n",
+      "bbox": [
+        161.95220947265625,
+        161.8964385986328,
+        170.6597137451172,
+        256.6514892578125
+      ],
+      "text_sha256": "545c30ddea8490676d38322ba3e679d24bc5ca1e4d9ca945c9c4c7eb7cfcd380"
+    },
+    {
+      "block_id": "page-0696-block-0040",
+      "order": 40,
+      "text": "if also on an NSAID or \n",
+      "bbox": [
+        171.94970703125,
+        184.1264190673828,
+        180.65721130371094,
+        256.6514892578125
+      ],
+      "text_sha256": "d7467e194e635f713c9715a803d4f7e61c466a639e3c8bdbdf27932b4935fcda"
+    },
+    {
+      "block_id": "page-0696-block-0041",
+      "order": 41,
+      "text": "aspirin), orofacial dyskinesia \n",
+      "bbox": [
+        181.94720458984375,
+        165.9464874267578,
+        190.6547088623047,
+        256.6514892578125
+      ],
+      "text_sha256": "bd2d3778c0b6b38712d13a7b26e00cbcde849017adf358e87d96a313bf207e70"
+    },
+    {
+      "block_id": "page-0696-block-0042",
+      "order": 42,
+      "text": "with paroxetine, cognitive \n",
+      "bbox": [
+        191.9447021484375,
+        171.7814483642578,
+        200.65220642089844,
+        256.6514892578125
+      ],
+      "text_sha256": "1d1098339f30d3bd60699956b4f48347e0df5d3c1943fb023713a560166dfb3b"
+    },
+    {
+      "block_id": "page-0696-block-0043",
+      "order": 43,
+      "text": "impairment,22 interstitial \n",
+      "bbox": [
+        201.94219970703125,
+        177.63975524902344,
+        210.7498016357422,
+        256.6514892578125
+      ],
+      "text_sha256": "74fb1b90e7df51553bda78a2ebfa034931a6bae2761ccee81c86d6994da0bf09"
+    },
+    {
+      "block_id": "page-0696-block-0044",
+      "order": 44,
+      "text": "lung disease23,24\n",
+      "bbox": [
+        212.039794921875,
+        206.5343780517578,
+        220.74729919433594,
+        256.6523132324219
+      ],
+      "text_sha256": "09ba61151dd42bcacf03dd4be46589f2737cdf09ceae58a55215dcffe2e7068e"
+    },
+    {
+      "block_id": "page-0696-block-0045",
+      "order": 45,
+      "text": "Fluvoxamine, fluoxetine \n",
+      "bbox": [
+        132.04229736328125,
+        74.15657806396484,
+        140.7498016357422,
+        151.65399169921875
+      ],
+      "text_sha256": "1683c1d2f9baf2179afeca414b36614fb782c3090a58c78d146a6b0fba99e4b2"
+    },
+    {
+      "block_id": "page-0696-block-0046",
+      "order": 46,
+      "text": "and paroxetine are potent \n",
+      "bbox": [
+        142.039794921875,
+        66.4916000366211,
+        150.74729919433594,
+        151.65399169921875
+      ],
+      "text_sha256": "ebad5b284336e33b4474bad5c58a41f424a2611d931deb1e44e6ecce287fbfdd"
+    },
+    {
+      "block_id": "page-0696-block-0047",
+      "order": 47,
+      "text": "inhibitors of several hepatic \n",
+      "bbox": [
+        152.03729248046875,
+        62.066673278808594,
+        160.7447967529297,
+        151.65399169921875
+      ],
+      "text_sha256": "f073aa6c98b7fc21a96459fd31efa866bbffac6d1af595d3e132085751ada07a"
+    },
+    {
+      "block_id": "page-0696-block-0048",
+      "order": 48,
+      "text": "cytochrome enzymes (see \n",
+      "bbox": [
+        162.0347900390625,
+        68.0439682006836,
+        170.74229431152344,
+        151.65399169921875
+      ],
+      "text_sha256": "999eb8b6a3f4adcfff8eb93230fa722ed337987b197110b91e0aebd084e5da7e"
+    },
+    {
+      "block_id": "page-0696-block-0049",
+      "order": 49,
+      "text": "section on antidepressant \n",
+      "bbox": [
+        172.03228759765625,
+        68.02169036865234,
+        180.7397918701172,
+        151.65399169921875
+      ],
+      "text_sha256": "cf041759126b3afb7dde3fa0d54cb86c153f612a6aaf940d50ea0d4831d35c7f"
+    },
+    {
+      "block_id": "page-0696-block-0050",
+      "order": 50,
+      "text": "drug interactions) \n",
+      "bbox": [
+        182.02978515625,
+        93.31160736083984,
+        190.73728942871094,
+        151.65399169921875
+      ],
+      "text_sha256": "849b02cd2042afc32bd5f6efd85f7f28e8a853256a53afdbd3e489d2efe4c7a3"
+    },
+    {
+      "block_id": "page-0696-block-0051",
+      "order": 51,
+      "text": "Sertraline is safer and \n",
+      "bbox": [
+        192.02728271484375,
+        81.2365951538086,
+        200.7347869873047,
+        151.65399169921875
+      ],
+      "text_sha256": "3ab03c306405a20ba3816e9522431a8dde89366020ff3530853a9dec54b68e35"
+    },
+    {
+      "block_id": "page-0696-block-0052",
+      "order": 52,
+      "text": "citalopram, escitalopram \n",
+      "bbox": [
+        202.0247802734375,
+        71.2466049194336,
+        210.73228454589844,
+        151.65399169921875
+      ],
+      "text_sha256": "6f34eb41cc53c66845e0dfa436b8a5d2acd71baa57cdd3978445d0724619ad39"
+    },
+    {
+      "block_id": "page-0696-block-0053",
+      "order": 53,
+      "text": "and vortioxetine are safest\n",
+      "bbox": [
+        212.02227783203125,
+        67.62408447265625,
+        220.7297821044922,
+        151.65399169921875
+      ],
+      "text_sha256": "8e834717805cc68f154f6a1a3b46a2912e853f6fdb155984c423ea24631bd035"
+    },
+    {
+      "block_id": "page-0696-block-0054",
+      "order": 54,
+      "text": "Others25,26\nMinimal with \n",
+      "bbox": [
+        235.46728515625,
+        511.4865417480469,
+        244.3748016357422,
+        612.656494140625
+      ],
+      "text_sha256": "75093bec582069dd84b092534bd6bd8dddc2618f0e75fe87985b1e6805433fac"
+    },
+    {
+      "block_id": "page-0696-block-0055",
+      "order": 55,
+      "text": "mirtazapine and \n",
+      "bbox": [
+        245.664794921875,
+        501.9015197753906,
+        254.37229919433594,
+        555.6539916992188
+      ],
+      "text_sha256": "21de5848e2613107884b9b5041288ea2ae6310a4a0be834f1735ad35acff5857"
+    },
+    {
+      "block_id": "page-0696-block-0056",
+      "order": 56,
+      "text": "venlafaxine*\n",
+      "bbox": [
+        255.6623077392578,
+        515.6565551757812,
+        264.36981201171875,
+        555.6539916992188
+      ],
+      "text_sha256": "4f3a519b2cc703a73656705d888ae78a7698bbcb5927f8ac87b7b1698bcc46ef"
+    },
+    {
+      "block_id": "page-0696-block-0057",
+      "order": 57,
+      "text": "Can be rarely a \n",
+      "bbox": [
+        268.6598205566406,
+        505.3664855957031,
+        277.3673095703125,
+        555.6539916992188
+      ],
+      "text_sha256": "2604c263aa2f7dd13461a3294da3e3d2f4b87af2b7af41c396912aa3e35ad590"
+    },
+    {
+      "block_id": "page-0696-block-0058",
+      "order": 58,
+      "text": "problem with \n",
+      "bbox": [
+        278.6573181152344,
+        510.7815246582031,
+        287.36480712890625,
+        555.6539916992188
+      ],
+      "text_sha256": "f22c58aedabb3a80cc3519023c261c0b65b9fe0d8a6b23c3f26b0fa3da0a8ed2"
+    },
+    {
+      "block_id": "page-0696-block-0059",
+      "order": 59,
+      "text": "reboxetine*\n",
+      "bbox": [
+        288.6548156738281,
+        517.8690185546875,
+        297.3623046875,
+        555.6539916992188
+      ],
+      "text_sha256": "56704265186ed5dcf6eaeb0fa3e948dab8000394e0c8c86d3493e6095e7fb893"
+    },
+    {
+      "block_id": "page-0696-block-0060",
+      "order": 60,
+      "text": "Duloxetine* – few \n",
+      "bbox": [
+        301.6523132324219,
+        495.22650146484375,
+        310.35980224609375,
+        555.6539916992188
+      ],
+      "text_sha256": "ca6fe2f10a64575c7dfe72e104cdce2bc48ba6f2bafbc72955e750fd25afd9a1"
+    },
+    {
+      "block_id": "page-0696-block-0061",
+      "order": 61,
+      "text": "effects\n",
+      "bbox": [
+        311.6498107910156,
+        534.5490112304688,
+        320.3572998046875,
+        555.6539916992188
+      ],
+      "text_sha256": "156b1088cce164b24dbe16f757f5abf7deb86fbd8f4f250b588b2a73354a49b3"
+    },
+    {
+      "block_id": "page-0696-block-0062",
+      "order": 62,
+      "text": "Very low incidence \n",
+      "bbox": [
+        324.6473083496094,
+        493.98150634765625,
+        333.35479736328125,
+        555.6539916992188
+      ],
+      "text_sha256": "a8185cfcad5a244fa8eacab4aa4da46b620fa9fc9f4a6f67be5fb9160f09030a"
+    },
+    {
+      "block_id": "page-0696-block-0063",
+      "order": 63,
+      "text": "with agomelatine\n",
+      "bbox": [
+        334.6448059082031,
+        499.8165283203125,
+        343.352294921875,
+        555.6539916992188
+      ],
+      "text_sha256": "9f043b78420d259185cb666f39077c8f45ceac7430028c0bffacaa9d098d0c5c"
+    },
+    {
+      "block_id": "page-0696-block-0064",
+      "order": 64,
+      "text": "Venlafaxine \n",
+      "bbox": [
+        235.64479064941406,
+        443.9040222167969,
+        244.352294921875,
+        482.656494140625
+      ],
+      "text_sha256": "e619d7d31c8f38806548775853921aa7700f7dbc8a9188e83ce2a2075ba82b89"
+    },
+    {
+      "block_id": "page-0696-block-0065",
+      "order": 65,
+      "text": "can cause \n",
+      "bbox": [
+        245.6422882080078,
+        449.3190002441406,
+        254.34979248046875,
+        482.656494140625
+      ],
+      "text_sha256": "c499c9c2ee3e857fc96a29bd35e9556b6539b65f70c3720cf21b3d81dfe0b877"
+    },
+    {
+      "block_id": "page-0696-block-0066",
+      "order": 66,
+      "text": "hypotension \n",
+      "bbox": [
+        255.63978576660156,
+        441.3915100097656,
+        264.3472900390625,
+        482.656494140625
+      ],
+      "text_sha256": "e422018e1bd64b1fb53d488b646ee14d53d335d36c83c2c7d6a8b4ab334d20a2"
+    },
+    {
+      "block_id": "page-0696-block-0067",
+      "order": 67,
+      "text": "at lower \n",
+      "bbox": [
+        265.6372985839844,
+        454.3215026855469,
+        274.34478759765625,
+        482.656494140625
+      ],
+      "text_sha256": "e550e3ccc87fdbb01eb6ec760c774bfdfa1288003eaa51a2c506bc43a6f2c170"
+    },
+    {
+      "block_id": "page-0696-block-0068",
+      "order": 68,
+      "text": "doses, but it \n",
+      "bbox": [
+        275.6347961425781,
+        441.3915100097656,
+        284.34228515625,
+        482.656494140625
+      ],
+      "text_sha256": "750caca2f3e18903d9caf5cf9d9e9ee9e738bb1a530fc3bce7e374d123bb73cd"
+    },
+    {
+      "block_id": "page-0696-block-0069",
+      "order": 69,
+      "text": "can increase \n",
+      "bbox": [
+        285.6322937011719,
+        441.54150390625,
+        294.33978271484375,
+        482.656494140625
+      ],
+      "text_sha256": "bdbb288588a768cf8c2b523ebf389c55438536a143b028476c151baf89a5f247"
+    },
+    {
+      "block_id": "page-0696-block-0070",
+      "order": 70,
+      "text": "BP at higher \n",
+      "bbox": [
+        295.6297912597656,
+        441.8114929199219,
+        304.3372802734375,
+        482.656494140625
+      ],
+      "text_sha256": "41ca8705aff60b216ad4c0fee67c4543d1a5499308da9279ccd81f0c58c5038b"
+    },
+    {
+      "block_id": "page-0696-block-0071",
+      "order": 71,
+      "text": "doses, as can \n",
+      "bbox": [
+        305.6272888183594,
+        438.4739990234375,
+        314.33477783203125,
+        482.656494140625
+      ],
+      "text_sha256": "c165e0ac37dd45f9e75cc45c3abab970100030030ca83430463c64074771da49"
+    },
+    {
+      "block_id": "page-0696-block-0072",
+      "order": 72,
+      "text": "duloxetine\n",
+      "bbox": [
+        315.6247863769531,
+        449.31903076171875,
+        324.332275390625,
+        482.656494140625
+      ],
+      "text_sha256": "c88d1b451befea0404f3916c558ca2c530ad1914aad1c668541bfcdda9df85bc"
+    },
+    {
+      "block_id": "page-0696-block-0073",
+      "order": 73,
+      "text": "Dizziness \n",
+      "bbox": [
+        328.6222839355469,
+        451.8240051269531,
+        337.32977294921875,
+        482.656494140625
+      ],
+      "text_sha256": "49af5dc5b5ac7c114395c4d35e117c71217ccf02a297d170e9e335a486c3741f"
+    },
+    {
+      "block_id": "page-0696-block-0074",
+      "order": 74,
+      "text": "common with \n",
+      "bbox": [
+        338.6197814941406,
+        435.9840087890625,
+        347.3272705078125,
+        482.656494140625
+      ],
+      "text_sha256": "f6f65f5a34f46e02cb21243bdc514da9af260afcc0e78ad5e29979358bea0884"
+    },
+    {
+      "block_id": "page-0696-block-0075",
+      "order": 75,
+      "text": "agomelatine\n",
+      "bbox": [
+        348.6172790527344,
+        443.071533203125,
+        357.32476806640625,
+        482.656494140625
+      ],
+      "text_sha256": "2a3abf25b0bfdf90485222351dea113e318b8c38137a7a91ef550b5f0816512b"
+    },
+    {
+      "block_id": "page-0696-block-0076",
+      "order": 76,
+      "text": "Mirtazapine, \n",
+      "bbox": [
+        235.61476135253906,
+        383.573974609375,
+        244.322265625,
+        425.656494140625
+      ],
+      "text_sha256": "641c5ee2d6787362da3f293bd29f6cce9ffbe9cb3bff4cad30fbbe906c6a88d4"
+    },
+    {
+      "block_id": "page-0696-block-0077",
+      "order": 77,
+      "text": "mianserin \n",
+      "bbox": [
+        245.6122589111328,
+        392.73895263671875,
+        254.31976318359375,
+        425.656494140625
+      ],
+      "text_sha256": "bb39fc49e347eaf32bdb34616d7e58d0f472cf35790f28de2343d9bd5c639c41"
+    },
+    {
+      "block_id": "page-0696-block-0078",
+      "order": 78,
+      "text": "and \n",
+      "bbox": [
+        255.60975646972656,
+        411.4814758300781,
+        264.3172607421875,
+        425.656494140625
+      ],
+      "text_sha256": "a3b53ea7e445dc5436c49e232dd008e99d30c643691ef489baf9307b4352c09a"
+    },
+    {
+      "block_id": "page-0696-block-0079",
+      "order": 79,
+      "text": "trazodone \n",
+      "bbox": [
+        265.6072692871094,
+        391.06646728515625,
+        274.31475830078125,
+        425.656494140625
+      ],
+      "text_sha256": "9dff25b2b5c4f93a486295f6a936a6ad3912d6d242d552f08458c504fb2909fa"
+    },
+    {
+      "block_id": "page-0696-block-0080",
+      "order": 80,
+      "text": "are sedatives\n",
+      "bbox": [
+        275.6047668457031,
+        384.96148681640625,
+        284.312255859375,
+        425.656494140625
+      ],
+      "text_sha256": "843b99c5eaaa561bca358e8cf0706dc4df4e6fbe5d254c955da1eda45efa4637"
+    },
+    {
+      "block_id": "page-0696-block-0081",
+      "order": 81,
+      "text": "Venlafaxine, \n",
+      "bbox": [
+        288.6022644042969,
+        384.8190002441406,
+        297.30975341796875,
+        425.656494140625
+      ],
+      "text_sha256": "e8cfc2c138d28265d0ac89f1d9c57381dc40c572e2b082a86162146fd29a8f70"
+    },
+    {
+      "block_id": "page-0696-block-0082",
+      "order": 82,
+      "text": "duloxetine \n",
+      "bbox": [
+        298.5997619628906,
+        390.23394775390625,
+        307.3072509765625,
+        425.656494140625
+      ],
+      "text_sha256": "7d868aba6c259c390013dafb748d205ab790b351b003e4930f4f75c320202fce"
+    },
+    {
+      "block_id": "page-0696-block-0083",
+      "order": 83,
+      "text": "– neutral \n",
+      "bbox": [
+        308.5972595214844,
+        395.2364807128906,
+        317.30474853515625,
+        425.656494140625
+      ],
+      "text_sha256": "8d52cf48be323df797529bb3601bfc8b67e4502139c5f96c54b6c8fd9a11451c"
+    },
+    {
+      "block_id": "page-0696-block-0084",
+      "order": 84,
+      "text": "effects\n",
+      "bbox": [
+        318.5947570800781,
+        404.551513671875,
+        327.30224609375,
+        425.656494140625
+      ],
+      "text_sha256": "156b1088cce164b24dbe16f757f5abf7deb86fbd8f4f250b588b2a73354a49b3"
+    },
+    {
+      "block_id": "page-0696-block-0085",
+      "order": 85,
+      "text": "Agomelatine \n",
+      "bbox": [
+        331.5922546386719,
+        382.73394775390625,
+        340.29974365234375,
+        425.656494140625
+      ],
+      "text_sha256": "e14c5b0cd529b8e70dd6a876f01ce89eaa2a1078fd34f5b7aa7cbf33440e764d"
+    },
+    {
+      "block_id": "page-0696-block-0086",
+      "order": 86,
+      "text": "aids sleep\n",
+      "bbox": [
+        341.5897521972656,
+        394.8164367675781,
+        350.2972412109375,
+        425.656494140625
+      ],
+      "text_sha256": "1a75cf563c547b7f591492f6d69abb61c2bae025625c9d499f678ebef4d4913f"
+    },
+    {
+      "block_id": "page-0696-block-0087",
+      "order": 87,
+      "text": "Greatest \n",
+      "bbox": [
+        235.5922393798828,
+        343.6289978027344,
+        244.29974365234375,
+        372.65399169921875
+      ],
+      "text_sha256": "3c50b520c5ffac0ad86b326e578ec4a4709d3a020626472a19b03db9d19d4f5c"
+    },
+    {
+      "block_id": "page-0696-block-0088",
+      "order": 88,
+      "text": "problem is \n",
+      "bbox": [
+        245.58973693847656,
+        337.366455078125,
+        254.2972412109375,
+        372.65399169921875
+      ],
+      "text_sha256": "40babaa26454cd8cfcbf6dae1f43042db89a05e71c71cd92103e96dd55439189"
+    },
+    {
+      "block_id": "page-0696-block-0089",
+      "order": 89,
+      "text": "with \n",
+      "bbox": [
+        255.5872344970703,
+        356.4014892578125,
+        264.29473876953125,
+        372.65399169921875
+      ],
+      "text_sha256": "b366ea9b5c87c6068bed10466f9d9f50fea1aec1b54a9549f0c1905cdc50bf8e"
+    },
+    {
+      "block_id": "page-0696-block-0090",
+      "order": 90,
+      "text": "mirtazapine, \n",
+      "bbox": [
+        265.5847473144531,
+        330.9914855957031,
+        274.292236328125,
+        372.65399169921875
+      ],
+      "text_sha256": "e7c42c36c3a823569566b9bd59a96cedbf109f447532b1d5805b469b13e9566f"
+    },
+    {
+      "block_id": "page-0696-block-0091",
+      "order": 91,
+      "text": "although \n",
+      "bbox": [
+        275.5822448730469,
+        341.8064270019531,
+        284.28973388671875,
+        372.65399169921875
+      ],
+      "text_sha256": "3c2898647f0864c878ec9c435b24d2927f7ff9c827aa2179c015308d4535b06d"
+    },
+    {
+      "block_id": "page-0696-block-0092",
+      "order": 92,
+      "text": "older people \n",
+      "bbox": [
+        285.5797424316406,
+        330.5564270019531,
+        294.2872314453125,
+        372.65399169921875
+      ],
+      "text_sha256": "2cc29ef278d0399809fb5aadc7b226350541bafd581e6f0922870b724d69f0b5"
+    },
+    {
+      "block_id": "page-0696-block-0093",
+      "order": 93,
+      "text": "are not \n",
+      "bbox": [
+        295.5772399902344,
+        347.78399658203125,
+        304.28472900390625,
+        372.65399169921875
+      ],
+      "text_sha256": "76b2517f380d831c9d9595ef63c06eb128f9edc87ed4e43b29b82a3e18119833"
+    },
+    {
+      "block_id": "page-0696-block-0094",
+      "order": 94,
+      "text": "particularly \n",
+      "bbox": [
+        305.5747375488281,
+        335.58148193359375,
+        314.2822265625,
+        372.65399169921875
+      ],
+      "text_sha256": "f9136974797851bc57a09ce8bea1e65a9f51eec1ca1ed03d8edf69fa85d67e73"
+    },
+    {
+      "block_id": "page-0696-block-0095",
+      "order": 95,
+      "text": "prone to \n",
+      "bbox": [
+        315.5722351074219,
+        343.1939697265625,
+        324.27972412109375,
+        372.65399169921875
+      ],
+      "text_sha256": "ab4343b529e355ca82c23aac780718113d31c5d935b7f49942eae2a30bfdf748"
+    },
+    {
+      "block_id": "page-0696-block-0096",
+      "order": 96,
+      "text": "weight gain\n",
+      "bbox": [
+        325.5697326660156,
+        334.7264404296875,
+        334.2772216796875,
+        372.65399169921875
+      ],
+      "text_sha256": "a229f3e7c7e1a44b832e98550db5d73b2c7529750bb7257852e103eec2078fd3"
+    },
+    {
+      "block_id": "page-0696-block-0097",
+      "order": 97,
+      "text": "Low \n",
+      "bbox": [
+        338.5672302246094,
+        357.2340087890625,
+        347.27471923828125,
+        372.65399169921875
+      ],
+      "text_sha256": "23aef52138eee9e209094e64a641d9efcc6ffb066d28694c62920a97a4ff49c4"
+    },
+    {
+      "block_id": "page-0696-block-0098",
+      "order": 98,
+      "text": "incidence \n",
+      "bbox": [
+        348.5647277832031,
+        340.5689697265625,
+        357.272216796875,
+        372.65399169921875
+      ],
+      "text_sha256": "2983cf3ab062812c9b8c64d3dbb22749603eb8573dccd1d88c58f888dfdd766d"
+    },
+    {
+      "block_id": "page-0696-block-0099",
+      "order": 99,
+      "text": "with \n",
+      "bbox": [
+        358.5622253417969,
+        356.4014892578125,
+        367.26971435546875,
+        372.65399169921875
+      ],
+      "text_sha256": "b366ea9b5c87c6068bed10466f9d9f50fea1aec1b54a9549f0c1905cdc50bf8e"
+    },
+    {
+      "block_id": "page-0696-block-0100",
+      "order": 100,
+      "text": "agomelatine\n",
+      "bbox": [
+        368.5597229003906,
+        333.0689392089844,
+        377.2672119140625,
+        372.65399169921875
+      ],
+      "text_sha256": "2a3abf25b0bfdf90485222351dea113e318b8c38137a7a91ef550b5f0816512b"
+    },
+    {
+      "block_id": "page-0696-block-0101",
+      "order": 101,
+      "text": "Venlafaxine is \n",
+      "bbox": [
+        235.5622100830078,
+        274.2314758300781,
+        244.26971435546875,
+        319.6514892578125
+      ],
+      "text_sha256": "453b7e88d9751d4cfa752ae5ca38f99d3b2ec37d2299d9fea141a8b1c105b3d2"
+    },
+    {
+      "block_id": "page-0696-block-0102",
+      "order": 102,
+      "text": "more toxic in \n",
+      "bbox": [
+        245.55970764160156,
+        276.03900146484375,
+        254.2672119140625,
+        319.6514892578125
+      ],
+      "text_sha256": "66bd1265f78927493b01967d9dd022eab3006e0d62b90ab380351815fa722ff1"
+    },
+    {
+      "block_id": "page-0696-block-0103",
+      "order": 103,
+      "text": "overdose than \n",
+      "bbox": [
+        255.5572052001953,
+        272.2739562988281,
+        264.26470947265625,
+        319.6514892578125
+      ],
+      "text_sha256": "323996c8df3f02d7f8ae56e13f62cd8d16b348f0a68a285ae6d5125692a40e57"
+    },
+    {
+      "block_id": "page-0696-block-0104",
+      "order": 104,
+      "text": "SSRIs, but safer \n",
+      "bbox": [
+        265.5547180175781,
+        268.8089599609375,
+        274.26220703125,
+        319.6514892578125
+      ],
+      "text_sha256": "36b0e244574bc36ab55cc39d07b20797153efd385ad739099c3902748a8229be"
+    },
+    {
+      "block_id": "page-0696-block-0105",
+      "order": 105,
+      "text": "than TCAs\n",
+      "bbox": [
+        275.5522155761719,
+        286.30645751953125,
+        284.25970458984375,
+        319.6514892578125
+      ],
+      "text_sha256": "de1d7b2f3cbe15b84f2508dc70017fed59e7173beb3232343155ec385a40e3bc"
+    },
+    {
+      "block_id": "page-0696-block-0106",
+      "order": 106,
+      "text": "Others are \n",
+      "bbox": [
+        288.5497131347656,
+        284.3714904785156,
+        297.2572021484375,
+        319.6514892578125
+      ],
+      "text_sha256": "d2e3634c5e434061aaad674551a376578e408498399235c6518ab87cb5e3d549"
+    },
+    {
+      "block_id": "page-0696-block-0107",
+      "order": 107,
+      "text": "relatively safe\n",
+      "bbox": [
+        298.5472106933594,
+        276.8865051269531,
+        307.25469970703125,
+        319.6514892578125
+      ],
+      "text_sha256": "c15d07cc61ae57164bffdc13ab5a974cdaa2c3e50a2c5990c0d8044d7561651c"
+    },
+    {
+      "block_id": "page-0696-block-0108",
+      "order": 108,
+      "text": "Insomnia and hypokalaemia \n",
+      "bbox": [
+        235.5471954345703,
+        165.38392639160156,
+        244.25469970703125,
+        256.6514892578125
+      ],
+      "text_sha256": "9d5f0a12592792198b4c3b70a8a8d9b05960d992108424d9d1a270ffc3bbad07"
+    },
+    {
+      "block_id": "page-0696-block-0109",
+      "order": 109,
+      "text": "with reboxetine\n",
+      "bbox": [
+        245.54469299316406,
+        206.78396606445312,
+        254.252197265625,
+        256.6514892578125
+      ],
+      "text_sha256": "6e777b1181baca4845f678866a37cd98c98d300659aec18641344b889f96e04b"
+    },
+    {
+      "block_id": "page-0696-block-0110",
+      "order": 110,
+      "text": "Nausea with venlafaxine, \n",
+      "bbox": [
+        258.5422058105469,
+        174.9763946533203,
+        267.24969482421875,
+        256.6514892578125
+      ],
+      "text_sha256": "1f9dc33f360238b2dcce55d708031a81997db621e5e9553ca8ca2ddbc90aaf7f"
+    },
+    {
+      "block_id": "page-0696-block-0111",
+      "order": 111,
+      "text": "duloxetine\n",
+      "bbox": [
+        268.5397033691406,
+        223.31393432617188,
+        277.2471923828125,
+        256.6514892578125
+      ],
+      "text_sha256": "c88d1b451befea0404f3916c558ca2c530ad1914aad1c668541bfcdda9df85bc"
+    },
+    {
+      "block_id": "page-0696-block-0112",
+      "order": 112,
+      "text": "Weight loss and nausea with \n",
+      "bbox": [
+        281.5372009277344,
+        162.59388732910156,
+        290.24468994140625,
+        256.6514892578125
+      ],
+      "text_sha256": "1b32de5fc6c6d26ee58fb63b2ba72494e6c102e562475bbab2533f3c94f6aa2a"
+    },
+    {
+      "block_id": "page-0696-block-0113",
+      "order": 113,
+      "text": "duloxetine\n",
+      "bbox": [
+        291.5346984863281,
+        223.31393432617188,
+        300.2421875,
+        256.6514892578125
+      ],
+      "text_sha256": "c88d1b451befea0404f3916c558ca2c530ad1914aad1c668541bfcdda9df85bc"
+    },
+    {
+      "block_id": "page-0696-block-0114",
+      "order": 114,
+      "text": "Possibly hepatotoxicity with \n",
+      "bbox": [
+        304.5321960449219,
+        166.6514434814453,
+        313.23968505859375,
+        256.6514892578125
+      ],
+      "text_sha256": "28451cba5c73db8983b9f81fa04e27a17902a577dded5ad9b6e94e93c7d628c4"
+    },
+    {
+      "block_id": "page-0696-block-0115",
+      "order": 115,
+      "text": "agomelatine\n",
+      "bbox": [
+        314.5296936035156,
+        217.06643676757812,
+        323.2371826171875,
+        256.6514892578125
+      ],
+      "text_sha256": "2a3abf25b0bfdf90485222351dea113e318b8c38137a7a91ef550b5f0816512b"
+    },
+    {
+      "block_id": "page-0696-block-0116",
+      "order": 116,
+      "text": "Monitor LFTs\n",
+      "bbox": [
+        327.5271911621094,
+        216.2339630126953,
+        336.23468017578125,
+        256.6514892578125
+      ],
+      "text_sha256": "59f5ac6da9f939ada91f5abc9c80766df8168dd3447eaf532a3dc846775a31e6"
+    },
+    {
+      "block_id": "page-0696-block-0117",
+      "order": 117,
+      "text": "Cognitive impairment with \n",
+      "bbox": [
+        340.5246887207031,
+        169.14894104003906,
+        349.232177734375,
+        256.6514892578125
+      ],
+      "text_sha256": "55b7818316dd1ee22e44b5def4b02b9466c5a84e9aedb48233142d6d3ccd0f42"
+    },
+    {
+      "block_id": "page-0696-block-0118",
+      "order": 118,
+      "text": "trazodone22\n",
+      "bbox": [
+        350.5221862792969,
+        219.28697204589844,
+        359.22967529296875,
+        256.6514892578125
+      ],
+      "text_sha256": "72cf918d101cbcc03b87e9eda06e826af0c49e4c8068093ac9f62040b1b2e20a"
+    },
+    {
+      "block_id": "page-0696-block-0119",
+      "order": 119,
+      "text": "Interstitial lung disease with \n",
+      "bbox": [
+        363.66729736328125,
+        165.8139190673828,
+        372.3747863769531,
+        256.65399169921875
+      ],
+      "text_sha256": "6b2be31660123d83eeb1f2379c2d37256ddd664c070f97178199409a83a6f8c0"
+    },
+    {
+      "block_id": "page-0696-block-0120",
+      "order": 120,
+      "text": "serotonin and \n",
+      "bbox": [
+        373.664794921875,
+        210.5214080810547,
+        382.3722839355469,
+        256.65399169921875
+      ],
+      "text_sha256": "65accd26a4b4291649820d3e1bc5eab3a111df692c522576a630dcdd2e6aa971"
+    },
+    {
+      "block_id": "page-0696-block-0121",
+      "order": 121,
+      "text": "norepinephrine reuptake \n",
+      "bbox": [
+        383.66229248046875,
+        175.6538848876953,
+        392.3697814941406,
+        256.65399169921875
+      ],
+      "text_sha256": "16297c610e39b8f04c7ec3da98bce1cddc14ae406d5871711d22db3f08054fba"
+    },
+    {
+      "block_id": "page-0696-block-0122",
+      "order": 122,
+      "text": "inhibitors24\n",
+      "bbox": [
+        393.6597900390625,
+        222.2047576904297,
+        402.3672790527344,
+        256.65399169921875
+      ],
+      "text_sha256": "e49d3a3004264e1623de3ca775daf42f9535a1b976e0b8e08fc4987eea4770d3"
+    },
+    {
+      "block_id": "page-0696-block-0123",
+      "order": 123,
+      "text": "Duloxetine inhibits CYP2D6\n",
+      "bbox": [
+        235.66729736328125,
+        63.71665573120117,
+        244.3748016357422,
+        151.65399169921875
+      ],
+      "text_sha256": "7265b488460611e4e5e6eb47e339983ae1bd76ca7f64c57291cb21157c96427a"
+    },
+    {
+      "block_id": "page-0696-block-0124",
+      "order": 124,
+      "text": "Moclobemide and \n",
+      "bbox": [
+        248.664794921875,
+        91.63912200927734,
+        257.372314453125,
+        151.65399169921875
+      ],
+      "text_sha256": "9fdf7cc589e8b26740f8c73dcc7b83801917728fef8d2d9c629570731bb7393b"
+    },
+    {
+      "block_id": "page-0696-block-0125",
+      "order": 125,
+      "text": "venlafaxine inhibit CYP450 \n",
+      "bbox": [
+        258.6623229980469,
+        63.724143981933594,
+        267.36981201171875,
+        151.65399169921875
+      ],
+      "text_sha256": "f038f65d565ebaea0b2eb164c07378ab40c1784824289a3a82b7cf6a627262e7"
+    },
+    {
+      "block_id": "page-0696-block-0126",
+      "order": 126,
+      "text": "enzymes. Check for \n",
+      "bbox": [
+        268.6598205566406,
+        86.65145111083984,
+        277.3673095703125,
+        151.65399169921875
+      ],
+      "text_sha256": "fcbefeb4226732f87e82ed82c0306a94f64166525dfd0de73a8d298949dc63e3"
+    },
+    {
+      "block_id": "page-0696-block-0127",
+      "order": 127,
+      "text": "potential interactions\n",
+      "bbox": [
+        278.6573181152344,
+        84.1541519165039,
+        287.36480712890625,
+        151.65399169921875
+      ],
+      "text_sha256": "43ad19de0f2b2028b700305b984f10d4f13e520ff157ac1b1b315dc9649ecc71"
+    },
+    {
+      "block_id": "page-0696-block-0128",
+      "order": 128,
+      "text": "Reboxetine is safe\n",
+      "bbox": [
+        291.6548156738281,
+        94.5640869140625,
+        300.3623046875,
+        151.65399169921875
+      ],
+      "text_sha256": "ae26bae7e3d1caf4ef132e50e6b52339b84beb404b254616886808a9c90176ed"
+    },
+    {
+      "block_id": "page-0696-block-0129",
+      "order": 129,
+      "text": "Agomelatine should be \n",
+      "bbox": [
+        304.6523132324219,
+        75.3791732788086,
+        313.35980224609375,
+        151.65399169921875
+      ],
+      "text_sha256": "a92b00fecfaf2510d905ad3adb7019fd6d18f4cba2928ecf5bdae4e9ff8d01a9"
+    },
+    {
+      "block_id": "page-0696-block-0130",
+      "order": 130,
+      "text": "avoided in patients who \n",
+      "bbox": [
+        314.6498107910156,
+        72.8816146850586,
+        323.3572998046875,
+        151.65399169921875
+      ],
+      "text_sha256": "77f81aa9bfb67ca668b95a5384793b5988149c15623a64a40d7d612d6a595360"
+    },
+    {
+      "block_id": "page-0696-block-0131",
+      "order": 131,
+      "text": "take potent CYP1A2 \n",
+      "bbox": [
+        324.6473083496094,
+        83.7190170288086,
+        333.35479736328125,
+        151.65399169921875
+      ],
+      "text_sha256": "fd96d98f6a1abf3da84c6171eeec053395c12d2b82b31690ba5e8d62cabe539e"
+    },
+    {
+      "block_id": "page-0696-block-0132",
+      "order": 132,
+      "text": "inhibitors\n",
+      "bbox": [
+        334.6448059082031,
+        122.0666275024414,
+        343.352294921875,
+        151.65399169921875
+      ],
+      "text_sha256": "f8a0a80513f44b4a050e337a4c54a71314166472ce2004ea788ed4efa5d016d0"
+    },
+    {
+      "block_id": "page-0696-block-0133",
+      "order": 133,
+      "text": "*Noradrenergic drugs may produce ‘anticholinergic’ effects via norepinephrine re-uptake inhibition.\n",
+      "bbox": [
+        412.3973083496094,
+        294.95635986328125,
+        421.10479736328125,
+        612.656494140625
+      ],
+      "text_sha256": "7555c46741c4fbc2a6b74df21f01d927143c6a60c9b68135754b0fc3723672c2"
+    },
+    {
+      "block_id": "page-0696-block-0134",
+      "order": 134,
+      "text": "Table 6.8  (Continued )\n",
+      "bbox": [
+        111.9623031616211,
+        532.4491577148438,
+        120.84980010986328,
+        606.6541748046875
+      ],
+      "text_sha256": "94d5dfde170d1b80f955a7f5d316c25ac72811cc617830694352f33451d9f6a3"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

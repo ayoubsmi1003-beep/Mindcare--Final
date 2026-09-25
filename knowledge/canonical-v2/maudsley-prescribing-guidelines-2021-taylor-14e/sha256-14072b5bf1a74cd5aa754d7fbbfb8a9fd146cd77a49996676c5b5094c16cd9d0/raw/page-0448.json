@@ -1,0 +1,359 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0448",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 448,
+  "source_page_index": 447,
+  "source_page_display": 448,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    427\nCHAPTER 3\nBox 3.5  Panic disorder\nCrisis management\nDrug\nComment\nBenzodiazepines\nRapid effect although panic symptoms return quickly if the drug is \nwithdrawn.61 NICE do not recommend.6 Cochrane lukewarm62\nFirst-line drug treatment\n(In order of preference)6,63\nSSRIs\n(Up to maximum licensed dose)\nTherapeutic effect can be delayed (this applies to all \nantidepressants64) and patients can experience an initial \nexacerbation of panic symptoms.6 Use supported by Cochrane65\nVenlafaxine MR\n75–225mg63\nInitiate at 37.5mg for 7 days\nSecond-line treatment (Less well tolerated or weak evidence base, no order of preference)\nMirtazapine\n15–60mg/day66\nA meta-analysis suggests that mirtazapine does not help with \npanic symptoms but with the anxiety associated with this \ndisorder.63 Rather limited data overall67\nMoclobemide\n300–600mg/day68\nOne fixed-dose study of 450mg/day and one flexible-dose study \nsuggest efficacy68,69\nMAOIs\nPhenelzine\n10–60mg/day64\nNo long-term studies, reserve for treatment-resistant cases due to \npoor tolerability64\nTricyclic antidepressants\nClomipramine\n25–250mg/day64\nImipramine\n25–300mg/day64\nLofepramine\n70–140mg/day in divided doses70\nStart with a low dose and increase dose according to response \nand tolerability\nExperimental\nD-cycloserine\n50mg/day\nA RCT suggests acceleration of treatment response to CBT, but \nthis advantage is lost at follow-up71\nGabapentin\n600–3600mg/day\nOne RCT showed no difference between gabapentin and placebo. \nHowever, significant improvement was demonstrated in the more \nseverely ill72\nInositol\n12g/day73\nOne positive PCT in 21 patients. Equivalent to fluvoxamine in one \nstudy.74 Well tolerated\nLevetiracetam\n250mg twice daily67\nUsually well tolerated\nPindolol\n7.5mg/day\nEfficacy suggested in a small 21-patient DB-PCT where pindolol \n2.5mg tds was used to augment fluoxetine in treatment-resistant \npanic disorder75\nValproate\n500–2250mg/day\nTwo very small positive open studies76,77\nHydrocortisone\nOnly acute treatment shown to prevent development of PTSD78\nDB-PCT, double blind randomised controlled trial, CBT, cognitive behavioural therapy\n",
+  "raw_text_sha256": "a1f06eb7d96df23e666988b89104edd949c834468beaa3f706b85b2ff9605f57",
+  "coordinates_sha256": "95da6ff27f57833e7bdd5a6fa4c42f64e7bdf5ff9f5bb5ac2230510ed81a08d9",
+  "block_sequence_sha256": "adfb7bcc6f3de32d3ef5ad0ddd6f5780060a608a6aa312338644997a27086171",
+  "blocks": [
+    {
+      "block_id": "page-0448-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    427\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "6727408f7b53538387062394a82aeea8d76f5bb5ae455aad54626a96925805dd"
+    },
+    {
+      "block_id": "page-0448-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0448-block-0002",
+      "order": 2,
+      "text": "Box 3.5  Panic disorder\n",
+      "bbox": [
+        55.249698638916016,
+        69.32788848876953,
+        139.17019653320312,
+        79.400390625
+      ],
+      "text_sha256": "d0e8eb397b39e407b4859edac9d9e87531a9c2ca74e639f7a286575c65ba5b87"
+    },
+    {
+      "block_id": "page-0448-block-0003",
+      "order": 3,
+      "text": "Crisis management\n",
+      "bbox": [
+        55.249698638916016,
+        95.11286926269531,
+        122.34469604492188,
+        104.0003662109375
+      ],
+      "text_sha256": "6a9fffe15d60a5392c2ec08b9c5c8874f8a5bdfd690ea1c1e2b10af2e21d93aa"
+    },
+    {
+      "block_id": "page-0448-block-0004",
+      "order": 4,
+      "text": "Drug\nComment\n",
+      "bbox": [
+        55.249698638916016,
+        110.13539123535156,
+        235.42218017578125,
+        119.02288818359375
+      ],
+      "text_sha256": "5258753e6832c947af674f29dcc36125d4ad33bfaba7a80fda9ddb481d884eec"
+    },
+    {
+      "block_id": "page-0448-block-0005",
+      "order": 5,
+      "text": "Benzodiazepines\nRapid effect although panic symptoms return quickly if the drug is \nwithdrawn.61 NICE do not recommend.6 Cochrane lukewarm62\n",
+      "bbox": [
+        55.24969482421875,
+        125.3379135131836,
+        414.477294921875,
+        144.0504150390625
+      ],
+      "text_sha256": "7beba50fdf1e066611089256239876d7ba1aaeeb6fcf5fe84395dea9630753e0"
+    },
+    {
+      "block_id": "page-0448-block-0006",
+      "order": 6,
+      "text": "First-line drug treatment\n(In order of preference)6,63\n",
+      "bbox": [
+        55.249698638916016,
+        150.18788146972656,
+        141.7996826171875,
+        169.0728759765625
+      ],
+      "text_sha256": "1c164ff3033dedd5d07f7b32d7705b7862ae5a85c0a7072bdfb2be3c1d17e8b1"
+    },
+    {
+      "block_id": "page-0448-block-0007",
+      "order": 7,
+      "text": "SSRIs\n(Up to maximum licensed dose)\n",
+      "bbox": [
+        55.249698638916016,
+        175.3928985595703,
+        155.68218994140625,
+        194.097900390625
+      ],
+      "text_sha256": "fbe5d8ec5e666b5f599d358caa9aba746a3fa798a95d87edcb17c7d3cad241b0"
+    },
+    {
+      "block_id": "page-0448-block-0008",
+      "order": 8,
+      "text": "Therapeutic effect can be delayed (this applies to all \nantidepressants64) and patients can experience an initial \nexacerbation of panic symptoms.6 Use supported by Cochrane65\n",
+      "bbox": [
+        201.25119018554688,
+        175.3928985595703,
+        404.8232421875,
+        204.10040283203125
+      ],
+      "text_sha256": "61fe807f34f8e512bff315fc1092c6d92900db7f9c9990690c7c03df1c944711"
+    },
+    {
+      "block_id": "page-0448-block-0009",
+      "order": 9,
+      "text": "Venlafaxine MR\n75–225mg63\nInitiate at 37.5mg for 7 days\n",
+      "bbox": [
+        55.24959945678711,
+        210.4178924560547,
+        292.0968933105469,
+        229.12289428710938
+      ],
+      "text_sha256": "a74f1cc359ff85f492c64fc36ed46768ad556a627f57daade81b4bb9f2d08cf8"
+    },
+    {
+      "block_id": "page-0448-block-0010",
+      "order": 10,
+      "text": "Second-line treatment (Less well tolerated or weak evidence base, no order of preference)\n",
+      "bbox": [
+        55.246917724609375,
+        235.26539611816406,
+        349.3369140625,
+        244.15289306640625
+      ],
+      "text_sha256": "bf973023cc356551656ef6e3e485a742fedd17d15e30dbc8a4aa5a96e2ae151c"
+    },
+    {
+      "block_id": "page-0448-block-0011",
+      "order": 11,
+      "text": "Mirtazapine\n15–60mg/day66\nA meta-analysis suggests that mirtazapine does not help with \npanic symptoms but with the anxiety associated with this \ndisorder.63 Rather limited data overall67\n",
+      "bbox": [
+        55.246917724609375,
+        250.46788024902344,
+        399.6095275878906,
+        279.1753845214844
+      ],
+      "text_sha256": "3f719db9a127d27f6830e04749199a3e1d67b5e3fb1aad5e758ae6de2c5a8c4a"
+    },
+    {
+      "block_id": "page-0448-block-0012",
+      "order": 12,
+      "text": "Moclobemide\n300–600mg/day68\nOne fixed-dose study of 450mg/day and one flexible-dose study \nsuggest efficacy68,69\n",
+      "bbox": [
+        55.24959945678711,
+        285.4928894042969,
+        407.5445251464844,
+        304.1978759765625
+      ],
+      "text_sha256": "d6f9a8f6aa09cd44c077d8546ee1ec0bce904fd942fcd52ac43c1d7d0abc6766"
+    },
+    {
+      "block_id": "page-0448-block-0013",
+      "order": 13,
+      "text": "MAOIs\nPhenelzine\n10–60mg/day64\n",
+      "bbox": [
+        55.24959945678711,
+        310.337890625,
+        104.29411315917969,
+        339.22039794921875
+      ],
+      "text_sha256": "05f4087c2b0956e168f677a741dcf948f0d4ba9c69b830070517477cdc8aaad0"
+    },
+    {
+      "block_id": "page-0448-block-0014",
+      "order": 14,
+      "text": "No long-term studies, reserve for treatment-resistant cases due to \npoor tolerability64\n",
+      "bbox": [
+        201.24940490722656,
+        310.5179138183594,
+        412.51690673828125,
+        329.222900390625
+      ],
+      "text_sha256": "59a1407f2791d44678d003d8f34de980705054734a1b158fbb07a0e99ca0b3cd"
+    },
+    {
+      "block_id": "page-0448-block-0015",
+      "order": 15,
+      "text": "Tricyclic antidepressants\nClomipramine\n25–250mg/day64\n",
+      "bbox": [
+        55.24959945678711,
+        345.3628845214844,
+        139.84959411621094,
+        374.2453918457031
+      ],
+      "text_sha256": "05a604001920aee5fd2fbf860a017bfaa868cf92aa4e53cad8f1b862e6392ae5"
+    },
+    {
+      "block_id": "page-0448-block-0016",
+      "order": 16,
+      "text": "Imipramine\n25–300mg/day64\n",
+      "bbox": [
+        55.24959945678711,
+        375.54290771484375,
+        108.464111328125,
+        394.2478942871094
+      ],
+      "text_sha256": "7d207e41ac589fb7531ea83d6360e70c796547e09acc22d9caae0e3e92be469a"
+    },
+    {
+      "block_id": "page-0448-block-0017",
+      "order": 17,
+      "text": "Lofepramine\n70–140mg/day in divided doses70\n",
+      "bbox": [
+        55.24959945678711,
+        395.54290771484375,
+        161.3985137939453,
+        414.2478942871094
+      ],
+      "text_sha256": "e911526404f2f0cf3e97bb8c86035da06367ea0a5083572db92529051718a09c"
+    },
+    {
+      "block_id": "page-0448-block-0018",
+      "order": 18,
+      "text": "Start with a low dose and increase dose according to response \nand tolerability\n",
+      "bbox": [
+        201.24940490722656,
+        345.54290771484375,
+        402.5570373535156,
+        364.2478942871094
+      ],
+      "text_sha256": "7618fb4597fdf41b191027e0f29af2805a6cd9d42dd983e4625ee7152b16a818"
+    },
+    {
+      "block_id": "page-0448-block-0019",
+      "order": 19,
+      "text": "Experimental\n",
+      "bbox": [
+        55.246917724609375,
+        420.3853759765625,
+        101.93441772460938,
+        429.27288818359375
+      ],
+      "text_sha256": "702e2f7671070157a0c2a6eb9d738ac3bfa6e376d61bff37dcfbbc7ca052d904"
+    },
+    {
+      "block_id": "page-0448-block-0020",
+      "order": 20,
+      "text": "D-cycloserine\n50mg/day\nA RCT suggests acceleration of treatment response to CBT, but \nthis advantage is lost at follow-up71\n",
+      "bbox": [
+        55.246917724609375,
+        435.5879211425781,
+        403.93695068359375,
+        454.29290771484375
+      ],
+      "text_sha256": "faf4920e535c195d9e7d4f579863ebc6ac06f78ba55ed6080b53ebb865fa7446"
+    },
+    {
+      "block_id": "page-0448-block-0021",
+      "order": 21,
+      "text": "Gabapentin\n600–3600mg/day\nOne RCT showed no difference between gabapentin and placebo. \nHowever, significant improvement was demonstrated in the more \nseverely ill72\n",
+      "bbox": [
+        55.24959945678711,
+        460.6178894042969,
+        414.7997131347656,
+        489.32037353515625
+      ],
+      "text_sha256": "f9e2e636eaaf105d2d7190d75ecb19be74c3f919723a433f23f45e94a84010ea"
+    },
+    {
+      "block_id": "page-0448-block-0022",
+      "order": 22,
+      "text": "Inositol\n12g/day73\nOne positive PCT in 21 patients. Equivalent to fluvoxamine in one \nstudy.74 Well tolerated\n",
+      "bbox": [
+        55.24959945678711,
+        495.6429138183594,
+        412.1195373535156,
+        514.3504028320312
+      ],
+      "text_sha256": "8d1b10e1199c078027aba2c72c434fcea22288c2b86d32a5c7ada3049729c260"
+    },
+    {
+      "block_id": "page-0448-block-0023",
+      "order": 23,
+      "text": "Levetiracetam\n250mg twice daily67\nUsually well tolerated\n",
+      "bbox": [
+        55.2489013671875,
+        520.6654052734375,
+        269.5818786621094,
+        539.370361328125
+      ],
+      "text_sha256": "3365990945da2432bd9e75670003a1dca4e3868e5604f94ae8e4969bda66100a"
+    },
+    {
+      "block_id": "page-0448-block-0024",
+      "order": 24,
+      "text": "Pindolol\n7.5mg/day\nEfficacy suggested in a small 21-patient DB-PCT where pindolol \n2.5mg tds was used to augment fluoxetine in treatment-resistant \npanic disorder75\n",
+      "bbox": [
+        55.246917724609375,
+        545.6953735351562,
+        411.4219970703125,
+        574.3978881835938
+      ],
+      "text_sha256": "ec38e7394e7bb9a9c589b6117f790c58bfb28a5503659fb30ef749de7e098520"
+    },
+    {
+      "block_id": "page-0448-block-0025",
+      "order": 25,
+      "text": "Valproate\n500–2250mg/day\nTwo very small positive open studies76,77\n",
+      "bbox": [
+        55.24959945678711,
+        580.7178955078125,
+        327.2904357910156,
+        599.4229125976562
+      ],
+      "text_sha256": "06bf89305512e734761cf7bb29f9e138103127a91d30622731ee18fa82a5fc53"
+    },
+    {
+      "block_id": "page-0448-block-0026",
+      "order": 26,
+      "text": "Hydrocortisone\nOnly acute treatment shown to prevent development of PTSD78\n",
+      "bbox": [
+        55.24959945678711,
+        605.7428588867188,
+        402.93994140625,
+        614.4503784179688
+      ],
+      "text_sha256": "0347439496d11d6fd91c7842a99e375ad0065388977249036414893ba2a3d57c"
+    },
+    {
+      "block_id": "page-0448-block-0027",
+      "order": 27,
+      "text": "DB-PCT, double blind randomised controlled trial, CBT, cognitive behavioural therapy\n",
+      "bbox": [
+        48.0,
+        631.400390625,
+        317.9175109863281,
+        640.10791015625
+      ],
+      "text_sha256": "79e9c1e71850f9018a98f9e74e0ed84f45e081b428388a06a7c6d75f9774b1ec"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

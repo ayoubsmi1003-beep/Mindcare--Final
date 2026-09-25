@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0750",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 750,
+  "source_page_index": 749,
+  "source_page_display": 750,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Hepatic and renal impairment    729\nCHAPTER 8\nStimulants in hepatic impairment5,6,75\nRecommendations for the use of stimulant medications in hepatic impairment are out-\nlined in Table 8.4.\nTable 8.4  Stimulants in hepatic impairment\nAtomoxetine76\nReduce initial and target dose by 50% in moderate impairment, and by 75% in \nsevere impairment. Very rare reports of liver toxicity, manifested by elevated hepatic \nenzymes, and raised bilirubin with jaundice. SPC states ‘discontinue in patients with \njaundice or laboratory evidence of liver injury, and do not restart’.\nMethylphenidate77\nRare reports of liver dysfunction and hypersensitivity reactions.\nDexamphetamine/\nlisdexamphetamine78,79\nLittle experience in liver disease, manufacturers recommend cautious dose titration. \nVery rarely associated with abnormal liver function, two case reports of \nhepatotoxicity.80,81\nSedatives in hepatic impairment\nTable 8.5 summarises recommended sedatives in hepatic impairment.\nTable 8.5  Sedatives in hepatic impairment\nBenzodiazepines\nExtensively hepatically metabolised. Prolonged duration of effect particularly for drugs \nwith active metabolites (diazepam, midazolam, clonazepam). Lorazepam, oxazepam and \ntemazepam do not have active metabolites and are preferred; lorazepam is considered \nthe best tolerated in advanced liver disease19 and is commonly used in alcohol \nwithdrawal. Serum enzyme elevations are uncommon and liver injury very rare.19\nPromethazine6\nExtensive hepatic metabolism. Manufacturers recommend caution in liver \nimpairment. Jaundice reported with high doses, no reports of LFT abnormalities or \ntoxicity with lower doses.19\nZ drugs6,82,83\nHepatically metabolised, but all have a relatively short half-life (1–7 hours). Reduce \ninitial doses in mild to moderate impairment (use zopiclone 3.75mg, zolpidem 5mg, \nzaleplon 5mg), avoid in severe impairment. Zaleplon is subject to significant first-pass \nmetabolism and zolpidem plasma concentrations and half-life are significantly \nincreased in hepatic impairment; these agents should be used with caution.84 Although \nzopiclone has the longer half-life, this may not be clinically relevant except in severe \ndisease.83 Zopiclone and zaleplon have not been associated with hepatotoxicity. There \nare rare reports of abnormal LFTs and a single case of liver injury with zolpidem.19\nDrug\nComments\nValproate74\nHighly protein bound and hepatically metabolised. Dosage reduction with close \nmonitoring of LFTs in moderate hepatic impairment. Use plasma levels (measure free \nlevels − total concentrations may appear to be normal) to guide dosage. Caution \nadvised. Contraindicated in severe and/or active hepatic impairment, or family history \nof severe impairment; impairment of usual metabolic pathway can lead to generation \nof hepatotoxic metabolites via alternative pathway. Risk of liver toxicity is increased in \npeople with hepatic insufficiency if salicylates are used concomitantly. Associated \nwith elevated LFTs and serious hepatotoxicity including fulminant hepatic failure \n(sometimes fatal). Mitochondrial disease, learning disability, polypharmacy, metabolic \ndisorders and underlying hepatic disease may be risk factors. Particularly hepatotoxic \nin very young children. The greatest risk is in the first three months of treatment.\nTable 8.3  (Continued)\n(Continued)\n",
+  "raw_text_sha256": "fdc286c2ae53af2e67a361fd941c10018eb43f56f16c365599225318e6449a77",
+  "coordinates_sha256": "bac151dd6f6391ef8be603f017d58bc8a567e07dd4f989107746814c97abe5f0",
+  "block_sequence_sha256": "54c7e60691f10df11103afa5c3a91edd50b85fe70821bff6a8b7cc2606f39e9d",
+  "blocks": [
+    {
+      "block_id": "page-0750-block-0000",
+      "order": 0,
+      "text": "Hepatic and renal impairment    729\n",
+      "bbox": [
+        269.185302734375,
+        31.395221710205078,
+        420.00048828125,
+        41.0272216796875
+      ],
+      "text_sha256": "c5f54b02610fb74e7878e9178177090f0c85e913dce89aabd4ad4c05f9a681e4"
+    },
+    {
+      "block_id": "page-0750-block-0001",
+      "order": 1,
+      "text": "CHAPTER 8\n",
+      "bbox": [
+        454.4096984863281,
+        532.3878173828125,
+        463.88970947265625,
+        573.7318115234375
+      ],
+      "text_sha256": "5ba3d9fb75ff4f418d4a2e9d517f30966dcfb279c10487eec43c5aa3fd8757a2"
+    },
+    {
+      "block_id": "page-0750-block-0002",
+      "order": 2,
+      "text": "Stimulants in hepatic impairment5,6,75\n",
+      "bbox": [
+        48.0,
+        232.9281005859375,
+        237.591552734375,
+        245.96310424804688
+      ],
+      "text_sha256": "da9e1a82f04f7d3fea0aedbc3430598c15967da37b5efa5985a7d8e577080b33"
+    },
+    {
+      "block_id": "page-0750-block-0003",
+      "order": 3,
+      "text": "Recommendations for the use of stimulant medications in hepatic impairment are out-\nlined in Table 8.4.\n",
+      "bbox": [
+        48.0,
+        251.77310180664062,
+        419.97998046875,
+        275.49310302734375
+      ],
+      "text_sha256": "4d4130ffa6bc4f5c824b975162f0ae93c978331b8fb24836010a8841969fd629"
+    },
+    {
+      "block_id": "page-0750-block-0004",
+      "order": 4,
+      "text": "Table 8.4  Stimulants in hepatic impairment\n",
+      "bbox": [
+        54.0,
+        284.2005920410156,
+        194.01747131347656,
+        293.0881042480469
+      ],
+      "text_sha256": "31bc85afc4b832fa50815dd3624f0f0e9c8d0becf071fe800e8cb214fb2e23ce"
+    },
+    {
+      "block_id": "page-0750-block-0005",
+      "order": 5,
+      "text": "Atomoxetine76\nReduce initial and target dose by 50% in moderate impairment, and by 75% in \nsevere impairment. Very rare reports of liver toxicity, manifested by elevated hepatic \nenzymes, and raised bilirubin with jaundice. SPC states ‘discontinue in patients with \njaundice or laboratory evidence of liver injury, and do not restart’.\n",
+      "bbox": [
+        48.0,
+        303.0755920410156,
+        416.6296081542969,
+        341.9555969238281
+      ],
+      "text_sha256": "f624a8e13d398fc7dd416733c8ccf999d95c67144add002e499e1df61e1ca495"
+    },
+    {
+      "block_id": "page-0750-block-0006",
+      "order": 6,
+      "text": "Methylphenidate77\nRare reports of liver dysfunction and hypersensitivity reactions.\n",
+      "bbox": [
+        47.99700927734375,
+        349.6955871582031,
+        346.1820373535156,
+        358.5881042480469
+      ],
+      "text_sha256": "4a9b370991cf86a66cdae6c6cf6fe928e446e891eef9f250e2223fd4c695dbc5"
+    },
+    {
+      "block_id": "page-0750-block-0007",
+      "order": 7,
+      "text": "Dexamphetamine/\nlisdexamphetamine78,79\n",
+      "bbox": [
+        47.99700927734375,
+        366.3280944824219,
+        128.1268768310547,
+        385.2131042480469
+      ],
+      "text_sha256": "9480106756e2faa7d88fd5b5808acd178dab16d896739f11d6303c003d592c6d"
+    },
+    {
+      "block_id": "page-0750-block-0008",
+      "order": 8,
+      "text": "Little experience in liver disease, manufacturers recommend cautious dose titration. \nVery rarely associated with abnormal liver function, two case reports of \nhepatotoxicity.80,81\n",
+      "bbox": [
+        147.41700744628906,
+        366.505615234375,
+        415.06207275390625,
+        395.2080993652344
+      ],
+      "text_sha256": "beacb5ead71183881d54908f96267763700b7beaaa69e3a8ed9e8d3de715e9af"
+    },
+    {
+      "block_id": "page-0750-block-0009",
+      "order": 9,
+      "text": "Sedatives in hepatic impairment\n",
+      "bbox": [
+        48.0,
+        411.3031005859375,
+        214.2760009765625,
+        424.3381042480469
+      ],
+      "text_sha256": "fab7f51604d217a03b3abd5bb0e7ab23e2bf826e667be6f842177683c7f61cb1"
+    },
+    {
+      "block_id": "page-0750-block-0010",
+      "order": 10,
+      "text": "Table 8.5 summarises recommended sedatives in hepatic impairment.\n",
+      "bbox": [
+        48.0,
+        428.1480712890625,
+        345.989990234375,
+        439.8680725097656
+      ],
+      "text_sha256": "408dddaf38bdaca5b308c81978c593979b2b159fb82fb2e1deb25c57a8deae5b"
+    },
+    {
+      "block_id": "page-0750-block-0011",
+      "order": 11,
+      "text": "Table 8.5  Sedatives in hepatic impairment\n",
+      "bbox": [
+        54.0,
+        449.5755615234375,
+        190.26747131347656,
+        458.46307373046875
+      ],
+      "text_sha256": "5a181fdcf9cbb02bec8f90811e53b20206288021eae59e7516a73c89ba6d8d36"
+    },
+    {
+      "block_id": "page-0750-block-0012",
+      "order": 12,
+      "text": "Benzodiazepines\nExtensively hepatically metabolised. Prolonged duration of effect particularly for drugs \nwith active metabolites (diazepam, midazolam, clonazepam). Lorazepam, oxazepam and \ntemazepam do not have active metabolites and are preferred; lorazepam is considered \nthe best tolerated in advanced liver disease19 and is commonly used in alcohol \nwithdrawal. Serum enzyme elevations are uncommon and liver injury very rare.19\n",
+      "bbox": [
+        48.0,
+        468.4505615234375,
+        419.8575134277344,
+        517.3355712890625
+      ],
+      "text_sha256": "e378920ee981450a68cf634ff7f5e00b0fc115bb4ed42c2a0d7b71e49647746a"
+    },
+    {
+      "block_id": "page-0750-block-0013",
+      "order": 13,
+      "text": "Promethazine6\nExtensive hepatic metabolism. Manufacturers recommend caution in liver \nimpairment. Jaundice reported with high doses, no reports of LFT abnormalities or \ntoxicity with lower doses.19\n",
+      "bbox": [
+        48.0,
+        525.0755615234375,
+        411.7691345214844,
+        553.9580688476562
+      ],
+      "text_sha256": "5f586047330d42838c19123c7b0e0642a7641d2e9476535292aaf266a380af19"
+    },
+    {
+      "block_id": "page-0750-block-0014",
+      "order": 14,
+      "text": "Z drugs6,82,83\nHepatically metabolised, but all have a relatively short half-life (1–7 hours). Reduce \ninitial doses in mild to moderate impairment (use zopiclone 3.75mg, zolpidem 5mg, \nzaleplon 5mg), avoid in severe impairment. Zaleplon is subject to significant first-pass \nmetabolism and zolpidem plasma concentrations and half-life are significantly \nincreased in hepatic impairment; these agents should be used with caution.84 Although \nzopiclone has the longer half-life, this may not be clinically relevant except in severe \ndisease.83 Zopiclone and zaleplon have not been associated with hepatotoxicity. There \nare rare reports of abnormal LFTs and a single case of liver injury with zolpidem.19\n",
+      "bbox": [
+        48.0,
+        561.7005615234375,
+        421.3863830566406,
+        640.5855712890625
+      ],
+      "text_sha256": "f56255f4acaa79ba773e1437fb912eef00f54f381639ebc27f52d03fd07c18ee"
+    },
+    {
+      "block_id": "page-0750-block-0015",
+      "order": 15,
+      "text": "Drug\nComments\n",
+      "bbox": [
+        48.0,
+        89.71296691894531,
+        184.89749145507812,
+        98.6004638671875
+      ],
+      "text_sha256": "f0d3aba6cb5c63a8b3ce76553ca73a800f481925284fe7cc72b7ce3c93bfebe6"
+    },
+    {
+      "block_id": "page-0750-block-0016",
+      "order": 16,
+      "text": "Valproate74\nHighly protein bound and hepatically metabolised. Dosage reduction with close \nmonitoring of LFTs in moderate hepatic impairment. Use plasma levels (measure free \nlevels − total concentrations may appear to be normal) to guide dosage. Caution \nadvised. Contraindicated in severe and/or active hepatic impairment, or family history \nof severe impairment; impairment of usual metabolic pathway can lead to generation \nof hepatotoxic metabolites via alternative pathway. Risk of liver toxicity is increased in \npeople with hepatic insufficiency if salicylates are used concomitantly. Associated \nwith elevated LFTs and serious hepatotoxicity including fulminant hepatic failure \n(sometimes fatal). Mitochondrial disease, learning disability, polypharmacy, metabolic \ndisorders and underlying hepatic disease may be risk factors. Particularly hepatotoxic \nin very young children. The greatest risk is in the first three months of treatment.\n",
+      "bbox": [
+        47.99999237060547,
+        107.01546478271484,
+        422.1174621582031,
+        215.700439453125
+      ],
+      "text_sha256": "9ef0fc9e11edf7df4c153418fdd6eb220ac2974d9efa8856b0eab9332e0e93f0"
+    },
+    {
+      "block_id": "page-0750-block-0017",
+      "order": 17,
+      "text": "Table 8.3  (Continued)\n",
+      "bbox": [
+        53.99980163574219,
+        70.08790588378906,
+        126.49480438232422,
+        78.97540283203125
+      ],
+      "text_sha256": "6b9d557e15fd32a382f511613f919aef9e0ff8915af5d062de550da955e3819d"
+    },
+    {
+      "block_id": "page-0750-block-0018",
+      "order": 18,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.45233154296875,
+        646.2154541015625,
+        420.36724853515625,
+        654.9679565429688
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

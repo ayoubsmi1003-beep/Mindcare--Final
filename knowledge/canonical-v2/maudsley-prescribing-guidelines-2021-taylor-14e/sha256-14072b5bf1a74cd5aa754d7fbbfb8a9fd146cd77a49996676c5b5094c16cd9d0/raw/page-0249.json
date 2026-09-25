@@ -1,0 +1,335 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0249",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 249,
+  "source_page_index": 248,
+  "source_page_display": 249,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "228    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nTreatment\nComments\nBenzhexol (trihexyphenidyl)\n5–15mg/day35\nSmall, open study suggests useful activity. Used in some centres but \nmay impair cognitive function. Lower doses (2mg) may be \neffective36\nBenzatropine 2mg/day\n+ terazosin 2mg/day37\nCombination shown to be better than either drug alone. Terazosin \nis an α1 antagonist so it may cause hypotension.\nBotulinum toxin38–41\n(Botox) Bilateral parotid gland injections (150 \nIU into each gland)\nEffective in treating sialorrhoea associated with neurological \ndisorders. Six cases of successful treatment of clozapine-related \nhypersalivation in the literature\nBupropion\n100–150mg/day42\nSingle case report. May lower seizure threshold\nChlorphenamine16\nAntihistamine and relatively weak antimuscarinic. One high-quality \nstudy\nClonidine\n0.1–0.2mg patch weekly\nor 0.1mg orally at night43,44\nα2 partial agonist. Limited literature support. May exacerbate \npsychosis, depression and cause hypotension\nDiphenhydramine15,16\nAntihistamine and potent antimuscarinic. Few high-quality studies\nGlycopyrrolate\n0.5mg to 4mg BD45–49\nOne RCT showed glycopyrrolate to be more effective than \nbiperiden without worsening cognitive function while another \nfound significant clinical improvement of ‘nocturnal sialorrhoea’ \nwith 2mg a day compared with placebo\nGuanfacine\n1mg daily50\nα2 agonist. Single case report. May cause hypotension\nHyoscine\n0.3mg tablet sucked or chewed up to 3 \ntimes daily or 1.5mg/72 hours patch51–54\nPeripheral and central anticholinergic. Very widely used but only \none double-blind RCT. May cause cognitive impairment, drowsiness \nand worsen constipation\nIpratropium Nasal spray\n(0.03% or 0.06%) – given sublingually up to \n2 sprays three times a day of the 0.06% or \nintranasally, 1 spray into each nostril daily of \nthe 0.03%55,56\nLimited literature support. The only placebo-controlled RCT \nconducted was negative57\nLofexidine\n0.2mg twice daily58\nα2 agonist. Very few data. May exacerbate psychosis, depression \nand cause hypotension\nMetoclopramide\nStarting dose of 10mg a day16,59,60\nDouble-blind, placebo-controlled trial found metoclopramide was \nassociated with a significant reduction in nocturnal hypersalivation \nand drooling.\nMoclobemide\n150–300mg/day45\nEffective in 9 of 14 patients treated in one open study. Appears to \nbe as effective as amisulpride (see above)\nN-Acetylcysteine61\nAn antioxidant that also modulates glutamatergic, neurotrophic \nand inflammatory pathways. Small case series reported with \nsignificant decrease in sialorrhea.\nTable 1.40  (Continued)\n",
+  "raw_text_sha256": "eec96a8140f6fc46895143d6d62ed81924de032b23387d721d19dbc5ca0df4af",
+  "coordinates_sha256": "841c11a1737cf927334bbc3f622ba897aa15d027a11a4d2fcd581c13280a7d61",
+  "block_sequence_sha256": "d3e9c561449624b5dca74e8e54fd8b41ebb516d67d1450862de358a07302e977",
+  "blocks": [
+    {
+      "block_id": "page-0249-block-0000",
+      "order": 0,
+      "text": "228    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "5962c3bdc31e7da5169be5169b0fdf86de166609c325170110c2e5757ebfea29"
+    },
+    {
+      "block_id": "page-0249-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0249-block-0002",
+      "order": 2,
+      "text": "Treatment\nComments\n",
+      "bbox": [
+        61.88909912109375,
+        90.32191467285156,
+        255.38912963867188,
+        99.20941162109375
+      ],
+      "text_sha256": "8be686e890d313f8295cc060595592f78dd7d0f699de8b9c632f5bd2fa6e517c"
+    },
+    {
+      "block_id": "page-0249-block-0003",
+      "order": 3,
+      "text": "Benzhexol (trihexyphenidyl)\n5–15mg/day35\nSmall, open study suggests useful activity. Used in some centres but \nmay impair cognitive function. Lower doses (2mg) may be \neffective36\n",
+      "bbox": [
+        61.88909912109375,
+        107.09944152832031,
+        435.8467712402344,
+        135.97943115234375
+      ],
+      "text_sha256": "07b9f8d5e77d58cbdef17178e2c37e3d9bdaf39f625cc915b2fb0b2e87bb8937"
+    },
+    {
+      "block_id": "page-0249-block-0004",
+      "order": 4,
+      "text": "Benzatropine 2mg/day\n+ terazosin 2mg/day37\n",
+      "bbox": [
+        61.88909912109375,
+        142.1219024658203,
+        138.85411071777344,
+        161.00689697265625
+      ],
+      "text_sha256": "9289d5024187ad94749fa0e2bf7b16f7bf047ae3022de050be9054be4c7978fa"
+    },
+    {
+      "block_id": "page-0249-block-0005",
+      "order": 5,
+      "text": "Combination shown to be better than either drug alone. Terazosin \nis an α1 antagonist so it may cause hypotension.\n",
+      "bbox": [
+        217.88909912109375,
+        142.30189514160156,
+        432.1117858886719,
+        161.7250213623047
+      ],
+      "text_sha256": "17ef7fea8f2c063c857b9b74e2c20ec09cddf09f3af857a1c36a8a723cc2ec26"
+    },
+    {
+      "block_id": "page-0249-block-0006",
+      "order": 6,
+      "text": "Botulinum toxin38–41\n",
+      "bbox": [
+        61.889984130859375,
+        167.14942932128906,
+        130.88917541503906,
+        176.03692626953125
+      ],
+      "text_sha256": "dbe121a59bf7f36a1e5ac5349dd9fc0174094ef187e800fc9e8d8b35ceac195a"
+    },
+    {
+      "block_id": "page-0249-block-0007",
+      "order": 7,
+      "text": "(Botox) Bilateral parotid gland injections (150 \nIU into each gland)\n",
+      "bbox": [
+        61.88909912109375,
+        177.32691955566406,
+        207.62155151367188,
+        196.03192138671875
+      ],
+      "text_sha256": "3c04a6189b638edb5f04a34b61bc5c21fc46dc2ec67e70e837ced41d62f95898"
+    },
+    {
+      "block_id": "page-0249-block-0008",
+      "order": 8,
+      "text": "Effective in treating sialorrhoea associated with neurological \ndisorders. Six cases of successful treatment of clozapine-related \nhypersalivation in the literature\n",
+      "bbox": [
+        217.88909912109375,
+        167.32191467285156,
+        421.6491394042969,
+        196.0244140625
+      ],
+      "text_sha256": "8b99d71f50a8930076eb48320e21beab0c170be98ff94e269d34ef2fb66b70b1"
+    },
+    {
+      "block_id": "page-0249-block-0009",
+      "order": 9,
+      "text": "Bupropion\n100–150mg/day42\nSingle case report. May lower seizure threshold\n",
+      "bbox": [
+        61.88909912109375,
+        202.15943908691406,
+        368.3316345214844,
+        221.04443359375
+      ],
+      "text_sha256": "4fd81044815dd68d27177ecff3fd844ac07d7f08fdc297b894ea288e83feb2c4"
+    },
+    {
+      "block_id": "page-0249-block-0010",
+      "order": 10,
+      "text": "Chlorphenamine16\nAntihistamine and relatively weak antimuscarinic. One high-quality \nstudy\n",
+      "bbox": [
+        61.88909912109375,
+        227.1993865966797,
+        432.7567443847656,
+        246.0819091796875
+      ],
+      "text_sha256": "f67bf56eb9bb2a051adbfa5dc914b1bc277c2f026ca11d6e5eb5de1895407f8b"
+    },
+    {
+      "block_id": "page-0249-block-0011",
+      "order": 11,
+      "text": "Clonidine\n0.1–0.2mg patch weekly\nor 0.1mg orally at night43,44\n",
+      "bbox": [
+        61.88909912109375,
+        252.21690368652344,
+        148.67578125,
+        281.0993957519531
+      ],
+      "text_sha256": "57a7c7e4194f41bf9aab551838bcc2afdaadad090e5b51414ff1585eca7452b6"
+    },
+    {
+      "block_id": "page-0249-block-0012",
+      "order": 12,
+      "text": "α2 partial agonist. Limited literature support. May exacerbate \npsychosis, depression and cause hypotension\n",
+      "bbox": [
+        217.88909912109375,
+        251.81690979003906,
+        413.2727355957031,
+        270.1094055175781
+      ],
+      "text_sha256": "16d0d1974b600aefecae150c930833a79f312036e5d05baf6142795fbc6b647c"
+    },
+    {
+      "block_id": "page-0249-block-0013",
+      "order": 13,
+      "text": "Diphenhydramine15,16\nAntihistamine and potent antimuscarinic. Few high-quality studies\n",
+      "bbox": [
+        61.89019775390625,
+        287.24688720703125,
+        428.7442932128906,
+        296.1344299316406
+      ],
+      "text_sha256": "675afe2c1bcbe11c0c0a2a16f05495be083ef3a3aa0a052b86a0fc3d5e8999e4"
+    },
+    {
+      "block_id": "page-0249-block-0014",
+      "order": 14,
+      "text": "Glycopyrrolate\n0.5mg to 4mg BD45–49\nOne RCT showed glycopyrrolate to be more effective than \nbiperiden without worsening cognitive function while another \nfound significant clinical improvement of ‘nocturnal sialorrhoea’ \nwith 2mg a day compared with placebo\n",
+      "bbox": [
+        61.88909912109375,
+        302.2694091796875,
+        424.1542663574219,
+        341.15191650390625
+      ],
+      "text_sha256": "c22e405f76088ba4c00bd1fa3ea51e060ee4ec1cd217edf95a53986082d22219"
+    },
+    {
+      "block_id": "page-0249-block-0015",
+      "order": 15,
+      "text": "Guanfacine\n1mg daily50\nα2 agonist. Single case report. May cause hypotension\n",
+      "bbox": [
+        61.88909912109375,
+        346.89190673828125,
+        389.5578308105469,
+        366.1719055175781
+      ],
+      "text_sha256": "25dce973f9d74c438915cdef42ef84a258d3bcea777e48b5f01c1b7ebaae9fe3"
+    },
+    {
+      "block_id": "page-0249-block-0016",
+      "order": 16,
+      "text": "Hyoscine\n0.3mg tablet sucked or chewed up to 3 \ntimes daily or 1.5mg/72 hours patch51–54\n",
+      "bbox": [
+        61.89019775390625,
+        372.32440185546875,
+        190.68020629882812,
+        401.2069091796875
+      ],
+      "text_sha256": "7f84ee53229d7e3071f5d4b2aaa774490f61624babd0b55b995b0b5e74de29c1"
+    },
+    {
+      "block_id": "page-0249-block-0017",
+      "order": 17,
+      "text": "Peripheral and central anticholinergic. Very widely used but only \none double-blind RCT. May cause cognitive impairment, drowsiness \nand worsen constipation\n",
+      "bbox": [
+        217.88909912109375,
+        372.5019226074219,
+        435.2992858886719,
+        401.20440673828125
+      ],
+      "text_sha256": "317a03ed2131c8cf1bf350c059b793d87773d54128855f6ea12f809b26a55afd"
+    },
+    {
+      "block_id": "page-0249-block-0018",
+      "order": 18,
+      "text": "Ipratropium Nasal spray\n(0.03% or 0.06%) – given sublingually up to \n2 sprays three times a day of the 0.06% or \nintranasally, 1 spray into each nostril daily of \nthe 0.03%55,56\n",
+      "bbox": [
+        61.88909912109375,
+        407.3393859863281,
+        206.9465789794922,
+        456.2168884277344
+      ],
+      "text_sha256": "2d2181c6136e33fe0a802fce65541efbe27d30d971b22fa3f89a170b4480a426"
+    },
+    {
+      "block_id": "page-0249-block-0019",
+      "order": 19,
+      "text": "Limited literature support. The only placebo-controlled RCT \nconducted was negative57\n",
+      "bbox": [
+        217.88909912109375,
+        407.52691650390625,
+        408.4717712402344,
+        426.2319030761719
+      ],
+      "text_sha256": "d8d27b05822913ca66c9e59f586afbea3b25597ba88c3be676ab86d739fb20cf"
+    },
+    {
+      "block_id": "page-0249-block-0020",
+      "order": 20,
+      "text": "Lofexidine\n0.2mg twice daily58\nα2 agonist. Very few data. May exacerbate psychosis, depression \nand cause hypotension\n",
+      "bbox": [
+        61.88909912109375,
+        461.9668884277344,
+        424.5527038574219,
+        481.25689697265625
+      ],
+      "text_sha256": "a284a6203b658f8018bf1c99d4cc711dda503a7516a0d0608079ef87f831e6e7"
+    },
+    {
+      "block_id": "page-0249-block-0021",
+      "order": 21,
+      "text": "Metoclopramide\nStarting dose of 10mg a day16,59,60\n",
+      "bbox": [
+        61.89019775390625,
+        487.39190673828125,
+        169.76126098632812,
+        506.27691650390625
+      ],
+      "text_sha256": "1503af645bc0317639cebcaefab895df1d7f34fa62e355887603a7539c7ab44a"
+    },
+    {
+      "block_id": "page-0249-block-0022",
+      "order": 22,
+      "text": "Double-blind, placebo-controlled trial found metoclopramide was \nassociated with a significant reduction in nocturnal hypersalivation \nand drooling.\n",
+      "bbox": [
+        217.88909912109375,
+        487.5769348144531,
+        432.0743103027344,
+        516.2794189453125
+      ],
+      "text_sha256": "7a5dabc4e74eaf19177bffd556f1dcc11e6ba203b9e13c5d0848b042f4d54cdd"
+    },
+    {
+      "block_id": "page-0249-block-0023",
+      "order": 23,
+      "text": "Moclobemide\n150–300mg/day45\nEffective in 9 of 14 patients treated in one open study. Appears to \nbe as effective as amisulpride (see above)\n",
+      "bbox": [
+        61.88909912109375,
+        522.4143676757812,
+        430.7242126464844,
+        541.306884765625
+      ],
+      "text_sha256": "12a7ff7a581c7d98ab0beeb8af14978cf826471ec12055eb41b0bf86e42fec97"
+    },
+    {
+      "block_id": "page-0249-block-0024",
+      "order": 24,
+      "text": "N-Acetylcysteine61\nAn antioxidant that also modulates glutamatergic, neurotrophic \nand inflammatory pathways. Small case series reported with \nsignificant decrease in sialorrhea.\n",
+      "bbox": [
+        61.88909912109375,
+        547.44189453125,
+        423.4792785644531,
+        576.3294067382812
+      ],
+      "text_sha256": "e9c1e2b25b414f0c108ff35d67786444052e43de0ff046cfec0e9f448ee639a4"
+    },
+    {
+      "block_id": "page-0249-block-0025",
+      "order": 25,
+      "text": "Table 1.40  (Continued)\n",
+      "bbox": [
+        67.88870239257812,
+        70.08692932128906,
+        144.17869567871094,
+        78.97442626953125
+      ],
+      "text_sha256": "f1dab5e2bd766a6c24db37e39cf32b3d8fa65b8d2d901c3a4a47cfd753d53507"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

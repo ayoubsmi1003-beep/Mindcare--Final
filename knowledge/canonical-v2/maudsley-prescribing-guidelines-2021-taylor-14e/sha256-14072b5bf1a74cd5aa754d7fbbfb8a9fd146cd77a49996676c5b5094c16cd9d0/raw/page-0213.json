@@ -1,0 +1,287 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0213",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 213,
+  "source_page_index": 212,
+  "source_page_display": 213,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "192    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nIntramuscular clozapine\nIntramuscular (IM) clozapine is a short-term intervention for patients with a treatment-\nrefractory psychotic disorder who refuse oral medication, with a view to converting to \noral clozapine once treatment is established achieved.1 Although evidence is relatively \nlimited, recent observational data indicate that initiating treatment with IM clozapine \ndoes not adversely affect long-term adherence to oral treatment.1,2 IM clozapine has \nalso been found to be similar to oral clozapine with respect to short-term safety and \ntolerability.3 Importantly, the decision to prescribe IM clozapine should be undertaken \non an individual basis and considered as a last resort when all other approaches have \nfailed and only in those who are predicted to respond to clozapine treatment.1 This \npreparation is unlicensed in the UK and many other countries and so adequate precau-\ntions should be taken and patient or carer consent obtained.\nGeneral recommendations for prescribing intramuscular clozapine in adults are sum-\nmarised in Table 1.35.\nTable 1.35  General recommendations for prescribing IM clozapine\nStrength\n25mg/ml\nMaximum dose*\n100mg (4ml) per site\nOral equivalent dose\nThe oral bioavailability of clozapine is about half that of the IM injection, e.g. 50mg \nIM injection daily = 100mg tablets/oral solution daily\nSite of administration†\nThe manufacturer states deep intramuscular gluteal injection\nMaximum treatment \nlength‡\nBefore administering each injection, the patient should be offered oral clozapine.\nClozapine injection should be used for the shortest duration possible (maximum \n2 weeks consecutively)\nDosing frequency\nTo minimise the number of injections, once daily dosing is preferred\nMonitoring\nAfter each administration, patients should be observed every 15 minutes for the first \n2 hours to check for excess sedation.\nRoutine clozapine monitoring also applies\n*For doses greater than 100mg, the dose may be divided and administered into two sites.\n†Case series data report administration via lateral thigh or deltoid — note the injection is painful.2\n‡Case series data report use of intramuscular clozapine for up to 96 days.2,3\nNote: If IM benzodiazepines are required leave at least ONE HOUR between administration of IM clozapine and IM \nbenzodiazepines.\nReferences\n\t 1.\t Casetta C, et al. A retrospective study of intramuscular clozapine prescription for treatment initiation and maintenance in treatment-resistant \npsychosis. Br J Psychiatry 2020; 217:506–513.\n\t 2.\t Henry R, et al. Evaluation of the effectiveness and acceptability of intramuscular clozapine injection: illustrative case series. B J Psych Bulletin \n2020; 44:239–243.\n\t 3.\t Schulte PF, et al. Compulsory treatment with clozapine: a retrospective long-term cohort study. Int J Law Psychiatry 2007; 30:539–545.\n",
+  "raw_text_sha256": "0bd8c2bf859b61b31129d10cff1108aa0d832ae3326900b187576dafd32df3ef",
+  "coordinates_sha256": "0ce18b4ac5c2df138465104557a748e1e9e21bc28261e471de4340869f225816",
+  "block_sequence_sha256": "81f494089b77db47dbefcd4543772d36f9bb8818a05b9f6c089eae89380ca335",
+  "blocks": [
+    {
+      "block_id": "page-0213-block-0000",
+      "order": 0,
+      "text": "192    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "848c76c261e213331ca89f9295b9feb3de31d701b73387dc60cce581876dc78e"
+    },
+    {
+      "block_id": "page-0213-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0213-block-0002",
+      "order": 2,
+      "text": "Intramuscular clozapine\n",
+      "bbox": [
+        68.88909912109375,
+        66.06442260742188,
+        191.737060546875,
+        79.09942626953125
+      ],
+      "text_sha256": "37e35852bdc65996fa04f2af296d5e30927891ca0f430a8b44f441a1244601d0"
+    },
+    {
+      "block_id": "page-0213-block-0003",
+      "order": 3,
+      "text": "Intramuscular (IM) clozapine is a short-term intervention for patients with a treatment-\nrefractory psychotic disorder who refuse oral medication, with a view to converting to \noral clozapine once treatment is established achieved.1 Although evidence is relatively \nlimited, recent observational data indicate that initiating treatment with IM clozapine \ndoes not adversely affect long-term adherence to oral treatment.1,2 IM clozapine has \nalso been found to be similar to oral clozapine with respect to short-term safety and \ntolerability.3 Importantly, the decision to prescribe IM clozapine should be undertaken \non an individual basis and considered as a last resort when all other approaches have \nfailed and only in those who are predicted to respond to clozapine treatment.1 This \npreparation is unlicensed in the UK and many other countries and so adequate precau-\ntions should be taken and patient or carer consent obtained.\n",
+      "bbox": [
+        61.88909912109375,
+        84.909423828125,
+        436.7001647949219,
+        216.62942504882812
+      ],
+      "text_sha256": "3f69c43ebda83c7ffac27a980dd94033d27315177341e4eb0f9efbca214d9a3a"
+    },
+    {
+      "block_id": "page-0213-block-0004",
+      "order": 4,
+      "text": "General recommendations for prescribing intramuscular clozapine in adults are sum-\nmarised in Table 1.35.\n",
+      "bbox": [
+        61.89140319824219,
+        216.909423828125,
+        433.8714904785156,
+        240.62942504882812
+      ],
+      "text_sha256": "6828e602636999c1ac9cd4de4d0146a05f19b3d620fa19f89a7594f22622a937"
+    },
+    {
+      "block_id": "page-0213-block-0005",
+      "order": 5,
+      "text": "Table 1.35  General recommendations for prescribing IM clozapine\n",
+      "bbox": [
+        67.88909912109375,
+        263.40618896484375,
+        281.81915283203125,
+        272.293701171875
+      ],
+      "text_sha256": "72e8e65963e2a55c5cefa9975cda42a905977ef3717d13929ac05e3259467f48"
+    },
+    {
+      "block_id": "page-0213-block-0006",
+      "order": 6,
+      "text": "Strength\n25mg/ml\n",
+      "bbox": [
+        61.88909912109375,
+        280.43121337890625,
+        191.1440887451172,
+        289.3187255859375
+      ],
+      "text_sha256": "8effc86cda6f0c50666289f702568126b1f3815eb001d3cc9458e67c6b71525c"
+    },
+    {
+      "block_id": "page-0213-block-0007",
+      "order": 7,
+      "text": "Maximum dose*\n100mg (4ml) per site\n",
+      "bbox": [
+        61.88909912109375,
+        295.4537048339844,
+        229.0716094970703,
+        304.3412170410156
+      ],
+      "text_sha256": "c6bc1fdb7aedd52069707540b556245dc9983f693f64f153afe6fad08fd02de4"
+    },
+    {
+      "block_id": "page-0213-block-0008",
+      "order": 8,
+      "text": "Oral equivalent dose\nThe oral bioavailability of clozapine is about half that of the IM injection, e.g. 50mg \nIM injection daily = 100mg tablets/oral solution daily\n",
+      "bbox": [
+        61.88909912109375,
+        310.4761962890625,
+        430.7616882324219,
+        329.3612060546875
+      ],
+      "text_sha256": "f16d61346143a3f998d83988d264392f9d63dd634d4bf537942f113205bc558e"
+    },
+    {
+      "block_id": "page-0213-block-0009",
+      "order": 9,
+      "text": "Site of administration†\nThe manufacturer states deep intramuscular gluteal injection\n",
+      "bbox": [
+        61.88909912109375,
+        335.4961853027344,
+        356.0090637207031,
+        344.3938293457031
+      ],
+      "text_sha256": "a0c2f49e18da94830330f85bdb44911070379faf2e901e0098e7c65ad16a8118"
+    },
+    {
+      "block_id": "page-0213-block-0010",
+      "order": 10,
+      "text": "Maximum treatment \nlength‡\n",
+      "bbox": [
+        61.88890075683594,
+        350.52880859375,
+        136.77639770507812,
+        369.413818359375
+      ],
+      "text_sha256": "3c929c9d381a8ea1984a89472ddfbc92bf372a2ce443607a0fb68a7dc3f33aaa"
+    },
+    {
+      "block_id": "page-0213-block-0011",
+      "order": 11,
+      "text": "Before administering each injection, the patient should be offered oral clozapine.\nClozapine injection should be used for the shortest duration possible (maximum \n2 weeks consecutively)\n",
+      "bbox": [
+        162.38890075683594,
+        350.7112121582031,
+        420.7715148925781,
+        379.4136962890625
+      ],
+      "text_sha256": "fe285df290ee428b453d78a55da8802c55489f82c01874724aed7b57770d0246"
+    },
+    {
+      "block_id": "page-0213-block-0012",
+      "order": 12,
+      "text": "Dosing frequency\nTo minimise the number of injections, once daily dosing is preferred\n",
+      "bbox": [
+        61.88890075683594,
+        385.5486755371094,
+        377.9840393066406,
+        394.4361877441406
+      ],
+      "text_sha256": "a33e6a683ae439e4626f079f18f3dcbc2dbddb3378c3259859059b1d0c482cff"
+    },
+    {
+      "block_id": "page-0213-block-0013",
+      "order": 13,
+      "text": "Monitoring\nAfter each administration, patients should be observed every 15 minutes for the first \n2 hours to check for excess sedation.\nRoutine clozapine monitoring also applies\n",
+      "bbox": [
+        61.88890075683594,
+        400.5711669921875,
+        434.0840759277344,
+        429.45367431640625
+      ],
+      "text_sha256": "4f78260ed947adbda344fc150a3bbabeb8e842ac7ff7235f395fa8668d6626ce"
+    },
+    {
+      "block_id": "page-0213-block-0014",
+      "order": 14,
+      "text": "*For doses greater than 100mg, the dose may be divided and administered into two sites.\n",
+      "bbox": [
+        61.88890075683594,
+        439.7436828613281,
+        349.1840515136719,
+        448.451171875
+      ],
+      "text_sha256": "3b3776483df778f2e0dde1b2654309b43659d35b6f4f3da18b152517738a7b5a"
+    },
+    {
+      "block_id": "page-0213-block-0015",
+      "order": 15,
+      "text": "†Case series data report administration via lateral thigh or deltoid — note the injection is painful.2\n",
+      "bbox": [
+        61.88909912109375,
+        449.76123046875,
+        372.4776306152344,
+        458.4687194824219
+      ],
+      "text_sha256": "5a35bf484998bf440430f106b648771bbd6b00af3dc92adc5af11437a0bbf0b7"
+    },
+    {
+      "block_id": "page-0213-block-0016",
+      "order": 16,
+      "text": "‡Case series data report use of intramuscular clozapine for up to 96 days.2,3\n",
+      "bbox": [
+        61.89018249511719,
+        459.76123046875,
+        301.5455627441406,
+        468.4687194824219
+      ],
+      "text_sha256": "6fffdf8ab7790cdfb2cb1d6d4bba258db1cd47c686fc77635f9e3652efb29c55"
+    },
+    {
+      "block_id": "page-0213-block-0017",
+      "order": 17,
+      "text": "Note: If IM benzodiazepines are required leave at least ONE HOUR between administration of IM clozapine and IM \nbenzodiazepines.\n",
+      "bbox": [
+        61.88909912109375,
+        469.71630859375,
+        428.6167297363281,
+        488.46630859375
+      ],
+      "text_sha256": "d7273150238ed17bed85d08956489df2604cdf78e1bd6fc5c5c30f771c1b2b06"
+    },
+    {
+      "block_id": "page-0213-block-0018",
+      "order": 18,
+      "text": "References\n",
+      "bbox": [
+        61.88909912109375,
+        503.8780212402344,
+        117.923095703125,
+        516.9130249023438
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0213-block-0019",
+      "order": 19,
+      "text": "\t 1.\t Casetta C, et al. A retrospective study of intramuscular clozapine prescription for treatment initiation and maintenance in treatment-resistant \n",
+      "bbox": [
+        61.88909912109375,
+        521.9990234375,
+        435.5210266113281,
+        529.031005859375
+      ],
+      "text_sha256": "308c658a6e2be6894c619808bee46011ea2b71e2928ccfcbc811a58f7ec679f6"
+    },
+    {
+      "block_id": "page-0213-block-0020",
+      "order": 20,
+      "text": "psychosis. Br J Psychiatry 2020; 217:506–513.\n\t 2.\t Henry R, et al. Evaluation of the effectiveness and acceptability of intramuscular clozapine injection: illustrative case series. B J Psych Bulletin \n",
+      "bbox": [
+        61.895103454589844,
+        530.8550415039062,
+        435.5630798339844,
+        547.031005859375
+      ],
+      "text_sha256": "d40eca79f59878b7e24aa0313a2f9172045e3fd2b22fdb11e4962b11e4be0671"
+    },
+    {
+      "block_id": "page-0213-block-0021",
+      "order": 21,
+      "text": "2020; 44:239–243.\n\t 3.\t Schulte PF, et al. Compulsory treatment with clozapine: a retrospective long-term cohort study. Int J Law Psychiatry 2007; 30:539–545.\n",
+      "bbox": [
+        61.901100158691406,
+        548.8550415039062,
+        424.2411193847656,
+        565.031005859375
+      ],
+      "text_sha256": "8a14200cbd76b1e78f13548e02c1783205b62e6f242f87a4ea0db3d0cf2d345d"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

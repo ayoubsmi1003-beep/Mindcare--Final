@@ -1,0 +1,17 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0806",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 806,
+  "source_page_index": 805,
+  "repaired_text": "Drug treatment of psychiatric symptoms occurring in the context of other disorders    785\nCHAPTER 10\nEpilepsy\nPsychiatric comorbidities in epilepsy\nPeople with epilepsy (PWE) have an elevated prevalence of several psychiatric disorders \nincluding depression (22.9%), anxiety (20.2%) and psychosis (5.2%).1,2 Suicide is five-\nfold higher in PWE compared to the general population3 and is an important cause of \npremature mortality.4 The link between epilepsy and mental illness is bidirectional as \npatients with depression, anxiety and psychosis have an increased risk of developing new-\nonset epilepsy.5,6 Suicide attempts are also associated with the development of epilepsy.3 \nThis bidirectional relationship might be explained by a common underlying pathology \nbetween mental illness and epilepsy. Disturbances in neurotransmission, neuro-inflamma-\ntion and the HPA axis have all been suggested7 to be the shared pathology.\nInterictal psychiatric disorders (with symptoms occurring independently of seizures) \nare likely to require treatment with psychotropics.8–10 When prescribing psychotropics \nto people with epilepsy, the following general principles11,12 should be adhered to:\n■\n■First, rule out other possible causes of psychiatric symptoms (both peri-ictal and iatrogenic, see Table 10.3).\n■\n■Optimise the treatment of epilepsy (ideally before prescribing psychotropics).\n■\n■Consider using psychotropics with known antiseizure properties (e.g. antiseizure\nmedications in bipolar disorder).\n■\n■Check for interactions with antiseizure medications.\n■\n■Start with a low dose and titrate according to tolerability and response (proconvulsive effects are dose-related).\n■\n■If seizures do occur, consider changing the psychotropic drug or optimising the\nantiseizure medication.\nTable 10.3  Possible causes of psychiatric symptoms in PWE and their management5\nCause of symptoms\nDescription\nManagement\nInterictal psychiatric \ndisorders\n■\n■Symptoms occurring independently of seizures\n■\n■Although common in PWE, other causes\nand relatedness to seizures should be ruled \nout first\n■\n■Likely to require treatment with\npsychotropics\n■\n■See Table 10.5 for more information\nabout the use of specific psychotro-\npics in PWE\nPeri-ictal symptoms\n■\n■PWE may experience psychiatric symptoms\nthat are temporally related to seizures\n■\n■All peri-ictal psychiatric symptoms\n(pre-ictal, postictal and ictal) are \ninitially treated by optimising antisei-\nzure medications11\n■\n■Peri-ictal depressive symptoms do\nnot appear to respond to treatment \nwith antidepressants13,14\nPre-ictal symptoms\n■\n■Typically presents as a dysphoric mood preceding a seizure by a period of 30 minutes \nto hours to 2 or 3 days\n(Continued)",
+  "repaired_text_sha256": "2c2a327a90e411933fc6c61f780007765d6aa7369df9ac9729aeb39c1ccdf03e",
+  "raw_text_sha256": "ccf0ceb9f318fd573aa64880c51d6d47af89db526d92cf4838d1dbf34c97d0cd",
+  "repair_ids": [
+    "repair-000714",
+    "repair-000715",
+    "repair-000716",
+    "repair-000717"
+  ],
+  "raw_file": "raw/page-0806.json"
+}

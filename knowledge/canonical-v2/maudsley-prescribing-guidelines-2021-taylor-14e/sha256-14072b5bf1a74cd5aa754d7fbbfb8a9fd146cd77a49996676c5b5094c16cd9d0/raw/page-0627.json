@@ -1,0 +1,491 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0627",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 627,
+  "source_page_index": 626,
+  "source_page_display": 627,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Characteristic\nDonepezil\nRivastigmine\nGalantamine\nMemantine\nHalf life (hours)\n~70\n~1 (oral)\n3.4 (patch)\n7–8 (oral solution)\n8–10 (XL capsules)\n60–100\nMetabolism\nCYP 3A4\nCYP 2D6 (minor)\nMinimal involvement of CYP isoenzymes\nCYP 3A4\nCYP 2D6\nPrimarily non-hepatic\nDrug–drug \ninteractions\nYes (see separate table)\nInteractions unlikely\nYes (see separate table)\nYes (see separate \ntable)\nEffect of food on \nabsorption\nNone\nDelays rate and extent of absorption\nDelays rate but not extent of \nabsorption\nNone\nCost of \npreparations7,14\n(for 1-month \ntreatment at usual, \ni.e. max dose in the \nUK)\nTablets: £1.52\nOrodispersible tablets: £10.43\nOral solution (1mg/mL):\n£100.22\nCapsules: £66.10\nOral solution (2mg/mL): £135.55\nPatches 9.5mg: £19.97\n4.6mg and 13.3mg: £77.97\nCapsules m/r: £79.80\nOral solution (4mg/mL): £201.60\nTablets: £8.46\nOrodispersible tablets:\n£49.98\nOral solution (10mg/\nmL): £61.77\nNB: Bottles supplied \nwith a dosing pump \ndispensing 5mg in \n0.5mL per actuation\nRelative cost\n$\n$$\n$$\n$\nPatent status\nGenerics available\nGenerics available\nGenerics available\nGenerics available\nTable 6.1  (Continued)\n",
+  "raw_text_sha256": "6a76887b732462ec27479178a2c17a642e5454abcc7a321b86874ad9632ad3f8",
+  "coordinates_sha256": "5185986e38c6a07c032cc21e223c97a713d512bb6338dd090d60739bb8e6e380",
+  "block_sequence_sha256": "79c888beb7704363fa88c7f8b5821f47d418b62a8e3c9ee0168168683a8dc1f3",
+  "blocks": [
+    {
+      "block_id": "page-0627-block-0000",
+      "order": 0,
+      "text": "Characteristic\nDonepezil\nRivastigmine\nGalantamine\nMemantine\n",
+      "bbox": [
+        114.00240325927734,
+        101.42649841308594,
+        122.88990020751953,
+        609.1539916992188
+      ],
+      "text_sha256": "de8185e13d69e1263e3334c5b08faa0a6462fa3e06edc7834be68e89427abf2f"
+    },
+    {
+      "block_id": "page-0627-block-0001",
+      "order": 1,
+      "text": "Half life (hours)\n~70\n~1 (oral)\n",
+      "bbox": [
+        129.80490112304688,
+        380.4864807128906,
+        138.5124053955078,
+        609.146484375
+      ],
+      "text_sha256": "f7f5684acde0671e47c9e8226dcfd8c1dd11c5ce16a0d9cd627146a836840a38"
+    },
+    {
+      "block_id": "page-0627-block-0002",
+      "order": 2,
+      "text": "3.4 (patch)\n7–8 (oral solution)\n8–10 (XL capsules)\n60–100\n",
+      "bbox": [
+        129.80490112304688,
+        117.24406433105469,
+        148.50990295410156,
+        407.4939880371094
+      ],
+      "text_sha256": "58a65531017f9a9e32f3a077f90b73f1ec11d8825bd727e6c6859c66c30b9a28"
+    },
+    {
+      "block_id": "page-0627-block-0003",
+      "order": 3,
+      "text": "Metabolism\nCYP 3A4\n",
+      "bbox": [
+        165.42990112304688,
+        502.5489501953125,
+        174.1374053955078,
+        609.1389770507812
+      ],
+      "text_sha256": "91da3d4b2279b5990bb7fea3358d19ad8de07911f9491d440436b3b4ef6a8038"
+    },
+    {
+      "block_id": "page-0627-block-0004",
+      "order": 4,
+      "text": "CYP 2D6 (minor)\nMinimal involvement of CYP isoenzymes\nCYP 3A4\n",
+      "bbox": [
+        165.42990112304688,
+        233.89891052246094,
+        184.13490295410156,
+        531.3114624023438
+      ],
+      "text_sha256": "675f099b994658977e5c162cc9ee95fa9201f3f27ff2f965a6879a7d5004bb2b"
+    },
+    {
+      "block_id": "page-0627-block-0005",
+      "order": 5,
+      "text": "CYP 2D6\nPrimarily non-hepatic\n",
+      "bbox": [
+        165.42990112304688,
+        74.34413146972656,
+        184.13490295410156,
+        262.6614990234375
+      ],
+      "text_sha256": "615dc16d2de7f3ea2231455c9d587854205459b5aa9aff284f154635eba65835"
+    },
+    {
+      "block_id": "page-0627-block-0006",
+      "order": 6,
+      "text": "Drug–drug \n",
+      "bbox": [
+        201.05490112304688,
+        572.448974609375,
+        209.7624053955078,
+        609.1314697265625
+      ],
+      "text_sha256": "b08e73b6cbff3d014d331e22560800c681f1ab3c9e9d38cde86f5df7a1ed529d"
+    },
+    {
+      "block_id": "page-0627-block-0007",
+      "order": 7,
+      "text": "interactions\nYes (see separate table)\nInteractions unlikely\nYes (see separate table)\nYes (see separate \n",
+      "bbox": [
+        201.05490112304688,
+        85.4289779663086,
+        219.75990295410156,
+        609.1314697265625
+      ],
+      "text_sha256": "223d5bab0e4320b0083cf046b82a72894e347a0bc69cd7c7e741127297bcf7ee"
+    },
+    {
+      "block_id": "page-0627-block-0008",
+      "order": 8,
+      "text": "table)\n",
+      "bbox": [
+        211.05239868164062,
+        123.9115219116211,
+        219.75990295410156,
+        141.8289794921875
+      ],
+      "text_sha256": "7bbea3322a6503a228c2cfd724deccec01c902829e7eaa9dbc963c15f0520b4e"
+    },
+    {
+      "block_id": "page-0627-block-0009",
+      "order": 9,
+      "text": "Effect of food on \n",
+      "bbox": [
+        226.67489624023438,
+        552.5814819335938,
+        235.3824005126953,
+        609.1239624023438
+      ],
+      "text_sha256": "db3040a6135355352b43518d8462518078dbfd5ff24b60c7aed69119bd9c922b"
+    },
+    {
+      "block_id": "page-0627-block-0010",
+      "order": 10,
+      "text": "absorption\nNone\nDelays rate and extent of absorption\nDelays rate but not extent of \n",
+      "bbox": [
+        226.67489624023438,
+        168.8888702392578,
+        245.37989807128906,
+        609.1239624023438
+      ],
+      "text_sha256": "36208d6c1c9f28d59c66515369430de68be4bc77827dfd3c65b403535cc0bcee"
+    },
+    {
+      "block_id": "page-0627-block-0011",
+      "order": 11,
+      "text": "absorption\nNone\n",
+      "bbox": [
+        226.67489624023438,
+        124.72900390625,
+        245.37989807128906,
+        262.646484375
+      ],
+      "text_sha256": "cf8d0aa21079f0951e8320aa443b7a92eda01ef55c8d27cd57c6425fd91ff155"
+    },
+    {
+      "block_id": "page-0627-block-0012",
+      "order": 12,
+      "text": "Cost of \n",
+      "bbox": [
+        252.30238342285156,
+        583.6914672851562,
+        261.0098876953125,
+        609.116455078125
+      ],
+      "text_sha256": "f56ae1ac1be53705fa24ae9064e64537bc383a4b41ca397d8b37616a10ae7b9e"
+    },
+    {
+      "block_id": "page-0627-block-0013",
+      "order": 13,
+      "text": "preparations7,14\n",
+      "bbox": [
+        262.2998962402344,
+        560.7754516601562,
+        271.00738525390625,
+        609.116455078125
+      ],
+      "text_sha256": "5469ae3e7c6c74774d36a1620d74a8d1d8137bce1c06b0488abaa5eb20bfbf90"
+    },
+    {
+      "block_id": "page-0627-block-0014",
+      "order": 14,
+      "text": "(for 1-month \n",
+      "bbox": [
+        272.3074035644531,
+        565.8114624023438,
+        281.014892578125,
+        609.1539916992188
+      ],
+      "text_sha256": "f57f51aeec41f74ccb83049d13f4531de54e29b1339ba166b20535d473b902a2"
+    },
+    {
+      "block_id": "page-0627-block-0015",
+      "order": 15,
+      "text": "treatment at usual, \n",
+      "bbox": [
+        282.3049011230469,
+        546.3715209960938,
+        291.01239013671875,
+        609.1539916992188
+      ],
+      "text_sha256": "9af286472d5a25a2ce7c6f3ae16b030e6cdc810540389adc4d3a1ffef2779593"
+    },
+    {
+      "block_id": "page-0627-block-0016",
+      "order": 16,
+      "text": "i.e. max dose in the \n",
+      "bbox": [
+        292.3023986816406,
+        544.5564575195312,
+        301.0098876953125,
+        609.1539916992188
+      ],
+      "text_sha256": "c3d9976e26e695f466e1fe101c53990dd7a0aaca94cba1b3ed232ebb7eecaef9"
+    },
+    {
+      "block_id": "page-0627-block-0017",
+      "order": 17,
+      "text": "UK)\n",
+      "bbox": [
+        302.2998962402344,
+        597.4839477539062,
+        311.00738525390625,
+        609.1539916992188
+      ],
+      "text_sha256": "681f7b27bc1de0651a2e0fca3f82d5ecb50d1194d22fde801dd7cf8396b2dbe8"
+    },
+    {
+      "block_id": "page-0627-block-0018",
+      "order": 18,
+      "text": "Tablets: £1.52\n",
+      "bbox": [
+        252.29737854003906,
+        486.7239685058594,
+        261.0048828125,
+        531.3264770507812
+      ],
+      "text_sha256": "a7d6d0ebf122f51737fe484a8efb3602ea89fa0de6bdeefb7ee937b3367a071b"
+    },
+    {
+      "block_id": "page-0627-block-0019",
+      "order": 19,
+      "text": "Orodispersible tablets: £10.43\n",
+      "bbox": [
+        262.2948913574219,
+        435.6040344238281,
+        271.00238037109375,
+        531.3264770507812
+      ],
+      "text_sha256": "76a17bf846cae033e59fbeffb46810189caa2ab67543f4097cc0baeecb5effd0"
+    },
+    {
+      "block_id": "page-0627-block-0020",
+      "order": 20,
+      "text": "Oral solution (1mg/mL):\n",
+      "bbox": [
+        272.2923889160156,
+        455.8990173339844,
+        280.9998779296875,
+        531.3264770507812
+      ],
+      "text_sha256": "1830b37c0912921aa0d75faa5b5d4c6978d3dd0d36409bec7cc204126ca21929"
+    },
+    {
+      "block_id": "page-0627-block-0021",
+      "order": 21,
+      "text": "£100.22\n",
+      "bbox": [
+        282.2898864746094,
+        504.2214660644531,
+        290.99737548828125,
+        531.3264770507812
+      ],
+      "text_sha256": "ebc739e8c93244ec7bd2c610a722209d398f9946785eb77b362687f00a853c63"
+    },
+    {
+      "block_id": "page-0627-block-0022",
+      "order": 22,
+      "text": "Capsules: £66.10\n",
+      "bbox": [
+        252.2898712158203,
+        352.05389404296875,
+        260.99737548828125,
+        407.5014953613281
+      ],
+      "text_sha256": "9f6b647b6a0c8a1db1cbec9fc46cf9f221eb295dfb71519080296f457dac632f"
+    },
+    {
+      "block_id": "page-0627-block-0023",
+      "order": 23,
+      "text": "Oral solution (2mg/mL): £135.55\n",
+      "bbox": [
+        262.2873840332031,
+        302.8838806152344,
+        270.994873046875,
+        407.5014953613281
+      ],
+      "text_sha256": "36b4583d8dbcbdf6b14d8c4c3e55cf0ddecc55b6bb4d7e3d3bb13ac75bd09a26"
+    },
+    {
+      "block_id": "page-0627-block-0024",
+      "order": 24,
+      "text": "Patches 9.5mg: £19.97\n",
+      "bbox": [
+        272.2848815917969,
+        333.3039245605469,
+        280.99237060546875,
+        407.5014953613281
+      ],
+      "text_sha256": "a0c18d8f7ad0e256acc07b7d8e0008403eee70150a8b791fd78e145785dfe8b5"
+    },
+    {
+      "block_id": "page-0627-block-0025",
+      "order": 25,
+      "text": "4.6mg and 13.3mg: £77.97\n",
+      "bbox": [
+        282.2823791503906,
+        318.2813720703125,
+        290.9898681640625,
+        407.5014953613281
+      ],
+      "text_sha256": "cd71c81a687058d567e9a21d41a2be2ab49ca763a68f6cb478ba26bcaf9edb51"
+    },
+    {
+      "block_id": "page-0627-block-0026",
+      "order": 26,
+      "text": "Capsules m/r: £79.80\n",
+      "bbox": [
+        252.28236389160156,
+        194.31394958496094,
+        260.9898681640625,
+        262.676513671875
+      ],
+      "text_sha256": "69009bc9b2f0ab5594bd5f8ef89b9799b7619b6fe889a8bea1570fa406b5c6fd"
+    },
+    {
+      "block_id": "page-0627-block-0027",
+      "order": 27,
+      "text": "Oral solution (4mg/mL): £201.60\nTablets: £8.46\n",
+      "bbox": [
+        252.28236389160156,
+        97.24906921386719,
+        270.98736572265625,
+        262.676513671875
+      ],
+      "text_sha256": "f36a33dad40cd17a0f7886273a98aca10abcbccebb45f2b665b31f5316e1936e"
+    },
+    {
+      "block_id": "page-0627-block-0028",
+      "order": 28,
+      "text": "Orodispersible tablets:\n",
+      "bbox": [
+        262.2798767089844,
+        71.14925384521484,
+        270.98736572265625,
+        141.85150146484375
+      ],
+      "text_sha256": "c341afe217a943abf04d71836a2d82034ec5e7ff98682702189ab8d6019f8ce5"
+    },
+    {
+      "block_id": "page-0627-block-0029",
+      "order": 29,
+      "text": "£49.98\n",
+      "bbox": [
+        272.2773742675781,
+        118.91654968261719,
+        280.98486328125,
+        141.85150146484375
+      ],
+      "text_sha256": "598e8bf6646b62192a08f33d21701c087d147fc19d78c6ee8e13dfce7ebf2b01"
+    },
+    {
+      "block_id": "page-0627-block-0030",
+      "order": 30,
+      "text": "Oral solution (10mg/\n",
+      "bbox": [
+        282.2748718261719,
+        76.00167083740234,
+        290.98236083984375,
+        141.85150146484375
+      ],
+      "text_sha256": "adf35ef3e66c953032b75465ba68f83f3170cffab279b890ec31230b1ff9e5c3"
+    },
+    {
+      "block_id": "page-0627-block-0031",
+      "order": 31,
+      "text": "mL): £61.77\n",
+      "bbox": [
+        292.2723693847656,
+        103.08396911621094,
+        300.9798583984375,
+        141.85150146484375
+      ],
+      "text_sha256": "1a18d89fa28624d8c72aeb504149cbef27edc813d85936b8da5d173da91cbef9"
+    },
+    {
+      "block_id": "page-0627-block-0032",
+      "order": 32,
+      "text": "NB: Bottles supplied \n",
+      "bbox": [
+        302.2698669433594,
+        75.9941635131836,
+        310.97735595703125,
+        141.85150146484375
+      ],
+      "text_sha256": "76e1a2373c959f261b963e308cfdbd3f568a423966820abc7f9ef5b3d0f34d91"
+    },
+    {
+      "block_id": "page-0627-block-0033",
+      "order": 33,
+      "text": "with a dosing pump \n",
+      "bbox": [
+        312.2673645019531,
+        75.5741195678711,
+        320.974853515625,
+        141.85150146484375
+      ],
+      "text_sha256": "10e281bd5412e103a658564a67fd60786a90104f073a971c505f436e3b039813"
+    },
+    {
+      "block_id": "page-0627-block-0034",
+      "order": 34,
+      "text": "dispensing 5mg in \n",
+      "bbox": [
+        322.2648620605469,
+        81.4092025756836,
+        330.97235107421875,
+        141.85150146484375
+      ],
+      "text_sha256": "e48deb7bf692d1c74eb0fb6d05acae1cf12e2a04b5ff9f75cb46c239b6edf648"
+    },
+    {
+      "block_id": "page-0627-block-0035",
+      "order": 35,
+      "text": "0.5mL per actuation\n",
+      "bbox": [
+        332.2623596191406,
+        77.26152038574219,
+        340.9698486328125,
+        141.85150146484375
+      ],
+      "text_sha256": "7e96cc9444470cf18435855cca6ee7a5d026442635e8369e529eb2b34f9ef39e"
+    },
+    {
+      "block_id": "page-0627-block-0036",
+      "order": 36,
+      "text": "Relative cost\n$\n$$\n$$\n$\n",
+      "bbox": [
+        357.8898620605469,
+        137.6739959716797,
+        366.59735107421875,
+        609.146484375
+      ],
+      "text_sha256": "d80055dc8f16c501ddf2b53d8ddf9282fb65369aa1876bd21e9da887b0e0f7ca"
+    },
+    {
+      "block_id": "page-0627-block-0037",
+      "order": 37,
+      "text": "Patent status\nGenerics available\nGenerics available\nGenerics available\nGenerics available\n",
+      "bbox": [
+        373.5123596191406,
+        84.7615966796875,
+        382.2198486328125,
+        609.1389770507812
+      ],
+      "text_sha256": "29c4e9d995a2ee46faea85246156f77339b0fcb1a5a8c4dfaaec54906a6bcbee"
+    },
+    {
+      "block_id": "page-0627-block-0038",
+      "order": 38,
+      "text": "Table 6.1  (Continued)\n",
+      "bbox": [
+        96.62730407714844,
+        534.5339965820312,
+        105.51480102539062,
+        606.6539916992188
+      ],
+      "text_sha256": "01a5a6345eb28b113b01cda7ce297e9377f6db2835c5a868a6de0930bed39865"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

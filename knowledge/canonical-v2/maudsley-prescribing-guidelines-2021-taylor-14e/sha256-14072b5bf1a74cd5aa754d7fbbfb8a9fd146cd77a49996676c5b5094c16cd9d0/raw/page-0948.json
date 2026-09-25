@@ -1,0 +1,251 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0948",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 948,
+  "source_page_index": 947,
+  "source_page_display": 948,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Miscellany    927\nCHAPTER 14\nThe Mental Health Act in England and Wales\nThe 1983 Mental Health Act (MHA) as amended by the 2007 MHA is the legislation \nwithin England and Wales that provides the framework for detaining and treating peo-\nple with mental disorder in hospital. It also allows for the supervision of people in the \ncommunity.\nThe guidance here provides a quick summary of the sections that prescribers are \nlikely to come across in their day to day work. It is not an exhaustive list. The Act has \na statutory Code of Practice for practitioners and Chapter 25 of the Code provides \ndetailed guidance on the treatment rules of the Act.1 The MHA may be accessed at \nwww.legislation.gov.uk.\nCivil and forensic detention sections\nSection 2\nAdmission for assessment which lasts for up to 28 days\nSection 3\nAdmission for treatment which may last up to 6 months and is renewable\nSection 36\nRemand to hospital for treatment\nSection 37\nHospital Order made by the courts (runs like a S3)\nNotional 37\nTreat as if subject to S37. This term is used informally under a number of different \ncircumstances. One example is where a patient previously detained under S47/49 and their \nrestriction order expires\nSection 38\nInterim Hospital Order\nSection 41\nRestriction Order an order made by the Crown Court restricting discharge. Accompanies S37 \nand is written as S37/41\nSection 47\nTransfer to hospital of prisoners\nSection 49\nA restriction order which usually accompanies S47 (Written as S47/49)\nSection 48\nApplies to un-sentenced prisoners in need of urgent treatment and is accompanied by S49 \n(Written as S48/49)\nSection 58\nTreatment requiring consent or a second opinion\nPlease note in law it is the Responsible Clinician (RC) who is accountable for the \noperation of S58\nIt is important to note that the power to treat under Section 58 is only for treatment of \nmental disorder. Physical treatment (generally) is governed by the normal rules of con-\nsent or, if the person lacks capacity, the authority of the Mental Capacity Act.\nThe RC is usually the patient’s consultant.\nFor the first three months of detention the RC may give medication (with or without \nconsent) to a person under one of the detention sections named above for the treatment \nof their mental disorder. Thereafter the patient’s consent or a second opinion must be \nsought. The three months countdown starts when medication for mental disorder is first \nadministered whilst the patient is detained. Be aware that this includes a patient detained \nunder S2 who is then without a break, changed to and detained under S3. For practical \npurposes the three month rule is usually calculated from the date of first detention.\n",
+  "raw_text_sha256": "d679394076f82588df4aa0270122d8cbc6418fb782da60bcfa17818d17afedbc",
+  "coordinates_sha256": "1ab2b2b0322e2d1e3981d5ec034a321efb8b4a3c7d92d412c066aa3b379e868e",
+  "block_sequence_sha256": "65957e7a7e1aa84a52fc96d48327bb94def949d06971bdd4b9a1437a900c6103",
+  "blocks": [
+    {
+      "block_id": "page-0948-block-0000",
+      "order": 0,
+      "text": "Miscellany    927\n",
+      "bbox": [
+        349.2962951660156,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "15ee4561673e279110b885c6b6598126e820fa811be23e3cea1f86edfb91bb33"
+    },
+    {
+      "block_id": "page-0948-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        454.4096984863281,
+        338.7405090332031,
+        463.88970947265625,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0948-block-0002",
+      "order": 2,
+      "text": "The Mental Health Act in England and Wales\n",
+      "bbox": [
+        55.039398193359375,
+        65.39218139648438,
+        285.6873474121094,
+        78.42718505859375
+      ],
+      "text_sha256": "4b717fb99e732993abf457cf1e32d934a74da741503098f0772d9549d52652f1"
+    },
+    {
+      "block_id": "page-0948-block-0003",
+      "order": 3,
+      "text": "The 1983 Mental Health Act (MHA) as amended by the 2007 MHA is the legislation \nwithin England and Wales that provides the framework for detaining and treating peo-\nple with mental disorder in hospital. It also allows for the supervision of people in the \ncommunity.\n",
+      "bbox": [
+        48.039398193359375,
+        84.2371826171875,
+        422.8693542480469,
+        131.95718383789062
+      ],
+      "text_sha256": "ac9a013650d419de2ecf35b2a85e27014b7987f002d3eba57777563048b4fb3f"
+    },
+    {
+      "block_id": "page-0948-block-0004",
+      "order": 4,
+      "text": "The guidance here provides a quick summary of the sections that prescribers are \nlikely to come across in their day to day work. It is not an exhaustive list. The Act has \na statutory Code of Practice for practitioners and Chapter 25 of the Code provides \ndetailed guidance on the treatment rules of the Act.1 The MHA may be accessed at \nwww.legislation.gov.uk.\n",
+      "bbox": [
+        48.037109375,
+        132.2371826171875,
+        422.83941650390625,
+        191.95718383789062
+      ],
+      "text_sha256": "e5c71688d268025d96a13b30190c12eda288cba1949956a04fe1bcefe8aef4fb"
+    },
+    {
+      "block_id": "page-0948-block-0005",
+      "order": 5,
+      "text": "Civil and forensic detention sections\n",
+      "bbox": [
+        48.0,
+        219.24398803710938,
+        234.823974609375,
+        232.27899169921875
+      ],
+      "text_sha256": "cd356af2c2389e3ace972fb6de68e4812719ddb4648d44c563a532ca58cf79f9"
+    },
+    {
+      "block_id": "page-0948-block-0006",
+      "order": 6,
+      "text": "Section 2\nAdmission for assessment which lasts for up to 28 days\n",
+      "bbox": [
+        48.0,
+        245.64149475097656,
+        292.7850036621094,
+        254.52899169921875
+      ],
+      "text_sha256": "53418eec7c672a51dbb79e930ba5fdb5b1fee3c06c0b2d8621d6e0a5e797605c"
+    },
+    {
+      "block_id": "page-0948-block-0007",
+      "order": 7,
+      "text": "Section 3\nAdmission for treatment which may last up to 6 months and is renewable\n",
+      "bbox": [
+        48.0,
+        260.6639709472656,
+        351.6825866699219,
+        269.5514831542969
+      ],
+      "text_sha256": "566731fc29ecb71e889301c536f219e8d2b7ef8886e23b62ff94bd1b233484a5"
+    },
+    {
+      "block_id": "page-0948-block-0008",
+      "order": 8,
+      "text": "Section 36\nRemand to hospital for treatment\n",
+      "bbox": [
+        48.0,
+        275.68646240234375,
+        223.45498657226562,
+        284.573974609375
+      ],
+      "text_sha256": "222545b9691d3e616006e7c20666f3fb49df7c83b4a03b501f96b08731813e2b"
+    },
+    {
+      "block_id": "page-0948-block-0009",
+      "order": 9,
+      "text": "Section 37\nHospital Order made by the courts (runs like a S3)\n",
+      "bbox": [
+        48.0,
+        290.7089538574219,
+        275.1374816894531,
+        299.5964660644531
+      ],
+      "text_sha256": "0c55fa3602511b32bb87d407b3fc330247378fef3ed2c98c74cf5113a8ab32c1"
+    },
+    {
+      "block_id": "page-0948-block-0010",
+      "order": 10,
+      "text": "Notional 37\nTreat as if subject to S37. This term is used informally under a number of different \ncircumstances. One example is where a patient previously detained under S47/49 and their \nrestriction order expires\n",
+      "bbox": [
+        48.0,
+        305.7314453125,
+        408.2176513671875,
+        334.61395263671875
+      ],
+      "text_sha256": "2cf142b0f7f3844bfe97165ec321d3355b79ae063263bff9183aad254943af18"
+    },
+    {
+      "block_id": "page-0948-block-0011",
+      "order": 11,
+      "text": "Section 38\nInterim Hospital Order\n",
+      "bbox": [
+        48.0,
+        340.7489318847656,
+        187.19247436523438,
+        349.6364440917969
+      ],
+      "text_sha256": "86eba7fead770912e44442f98ed8a456b13e02dcb5046578823443d6c726af1c"
+    },
+    {
+      "block_id": "page-0948-block-0012",
+      "order": 12,
+      "text": "Section 41\nRestriction Order an order made by the Crown Court restricting discharge. Accompanies S37 \nand is written as S37/41\n",
+      "bbox": [
+        48.0,
+        355.77142333984375,
+        414.3301086425781,
+        374.65643310546875
+      ],
+      "text_sha256": "7a5fbd914351025a9e31d1e1accf8f87eb9389bd7de36c54d60baf7c478f2f76"
+    },
+    {
+      "block_id": "page-0948-block-0013",
+      "order": 13,
+      "text": "Section 47\nTransfer to hospital of prisoners\n",
+      "bbox": [
+        48.0,
+        380.7914123535156,
+        217.0724639892578,
+        389.6789245605469
+      ],
+      "text_sha256": "c29ccf603214c3297738ada7dbd5e1cdaec06b2fc248a2e62bda06c7fd390d3d"
+    },
+    {
+      "block_id": "page-0948-block-0014",
+      "order": 14,
+      "text": "Section 49\nA restriction order which usually accompanies S47 (Written as S47/49)\n",
+      "bbox": [
+        48.0,
+        395.81390380859375,
+        340.2900085449219,
+        404.701416015625
+      ],
+      "text_sha256": "84824631cd2e0c42803bca3baba351c01e3b6e3fbd60a6047042d474cee03f52"
+    },
+    {
+      "block_id": "page-0948-block-0015",
+      "order": 15,
+      "text": "Section 48\nApplies to un-sentenced prisoners in need of urgent treatment and is accompanied by S49 \n(Written as S48/49)\n",
+      "bbox": [
+        48.0,
+        410.8363952636719,
+        407.67755126953125,
+        429.7214050292969
+      ],
+      "text_sha256": "bf797b7143fd6d197a9361f4ca195a2d4e96eaa0ba28c186117a1893cb3bed42"
+    },
+    {
+      "block_id": "page-0948-block-0016",
+      "order": 16,
+      "text": "Section 58\nTreatment requiring consent or a second opinion\nPlease note in law it is the Responsible Clinician (RC) who is accountable for the \noperation of S58\n",
+      "bbox": [
+        48.0,
+        435.85638427734375,
+        395.2874450683594,
+        464.7388916015625
+      ],
+      "text_sha256": "afecbd051fb9c2b19437613c42dc160ad2a7c242944cffa42a7a58bd4114ce4b"
+    },
+    {
+      "block_id": "page-0948-block-0017",
+      "order": 17,
+      "text": "It is important to note that the power to treat under Section 58 is only for treatment of \nmental disorder. Physical treatment (generally) is governed by the normal rules of con-\nsent or, if the person lacks capacity, the authority of the Mental Capacity Act.\n",
+      "bbox": [
+        48.0,
+        479.4639892578125,
+        422.6998291015625,
+        515.1840209960938
+      ],
+      "text_sha256": "14e9164fabc3e5b86e348d78c6fab73d565aa4aea6de5aba90435997c4f49000"
+    },
+    {
+      "block_id": "page-0948-block-0018",
+      "order": 18,
+      "text": "The RC is usually the patient’s consultant.\nFor the first three months of detention the RC may give medication (with or without \nconsent) to a person under one of the detention sections named above for the treatment \nof their mental disorder. Thereafter the patient’s consent or a second opinion must be \nsought. The three months countdown starts when medication for mental disorder is first \nadministered whilst the patient is detained. Be aware that this includes a patient detained \nunder S2 who is then without a break, changed to and detained under S3. For practical \npurposes the three month rule is usually calculated from the date of first detention.\n",
+      "bbox": [
+        48.0,
+        515.4639892578125,
+        422.81988525390625,
+        611.1840209960938
+      ],
+      "text_sha256": "2bc6c78797e21b13d007e76c4c56e11cef9e694c67955d631ecdd805ec9ebc61"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

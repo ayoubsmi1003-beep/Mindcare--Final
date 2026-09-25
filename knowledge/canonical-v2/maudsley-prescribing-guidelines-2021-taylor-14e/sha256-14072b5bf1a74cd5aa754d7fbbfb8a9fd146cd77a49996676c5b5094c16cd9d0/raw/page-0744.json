@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0744",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 744,
+  "source_page_index": 743,
+  "source_page_display": 744,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\nChapter 8\nHepatic and renal impairment\nHepatic impairment\nPatients with hepatic impairment may have:\n■\n■Reduced capacity to metabolise biological waste products, dietary proteins and for-\neign substances, such as drugs. Clinical consequences include hepatic encephalopathy \nand increased dose-related side-effects from drugs.\n■\n■Reduced ability to synthesise plasma proteins and vitamin K-dependent clotting factors. \nClinical consequences include hypoalbuminaemia, leading in extreme cases to ascites. \nIncreased toxicity from highly protein-bound drugs should be anticipated. There is also \nan increased risk of bleeding from gastro-irritant drugs and perhaps with SSRIs.\n■\n■Reduced hepatic blood flow. Clinical consequences include oesophageal varices and \nelevated plasma levels of drugs subject to first-pass metabolism.\nGeneral principles\nLiver function tests (LFTs) are a poor marker of hepatic metabolising capacity, as the \nhepatic reserve is large. Note that many patients with chronic liver disease are asymp-\ntomatic or have fluctuating clinical symptoms. Always consider the clinical presenta-\ntion rather than adhere to rigid rules involving LFTs.\nThere are few clinical studies relating to the use of psychotropic drugs in people with \nhepatic disease. The following principles should be adhered to:\n1.\t Prescribe as few drugs as possible.\n2.\t Use lower starting doses, particularly of drugs that are highly protein bound. TCAs, \nSSRIs (except citalopram), trazodone and antipsychotics may have increased free \nplasma levels, at least initially. This will not be reflected in measured (total) plasma \nlevels. Use lower doses of drugs known to be subject to extensive first-pass metabo-\nlism. Examples include TCAs and haloperidol.\n",
+  "raw_text_sha256": "e056ff012cb2b94f1e587f8710897e4cb765844a0880a733414a7ef40dc64949",
+  "coordinates_sha256": "6a9ef062a87cfc3687c6ff617a3d702fa2401c3c6d3e15d078aecc6de02b78cf",
+  "block_sequence_sha256": "58f30ecd1090ea523503f8053361066c870bc0aa96ccd9cd4aca388c7d56a181",
+  "blocks": [
+    {
+      "block_id": "page-0744-block-0000",
+      "order": 0,
+      "text": "The Maudsley® Prescribing Guidelines in Psychiatry, Fourteenth Edition. David M. Taylor,  \nThomas R. E. Barnes and Allan H. Young.  \n© 2021 David M. Taylor. Published 2021 by John Wiley & Sons Ltd.\n",
+      "bbox": [
+        47.99980163574219,
+        585.1019897460938,
+        348.48388671875,
+        614.4779663085938
+      ],
+      "text_sha256": "c78fcd1eeb2357afb8eb5b97a8c858d68167bd409b9074c0da4e20c032bd5665"
+    },
+    {
+      "block_id": "page-0744-block-0001",
+      "order": 1,
+      "text": "Chapter 8\n",
+      "bbox": [
+        324.43121337890625,
+        59.724403381347656,
+        420.001220703125,
+        82.60040283203125
+      ],
+      "text_sha256": "a95e8a20edebc76aeee7ae813b3e7df701a97a60d60fa68e2deaef6515d8cf78"
+    },
+    {
+      "block_id": "page-0744-block-0002",
+      "order": 2,
+      "text": "Hepatic and renal impairment\n",
+      "bbox": [
+        112.31050109863281,
+        111.36316680908203,
+        420.0024719238281,
+        137.43316650390625
+      ],
+      "text_sha256": "9252b38fcda1ae0d536be257a6e04e7ee034e404964c352834a5a02c50cff00b"
+    },
+    {
+      "block_id": "page-0744-block-0003",
+      "order": 3,
+      "text": "Hepatic impairment\n",
+      "bbox": [
+        55.0,
+        229.43197631835938,
+        157.0800018310547,
+        242.46697998046875
+      ],
+      "text_sha256": "a199c1ff3b2facba2a267da5941711da2834d61a59ec81e2d94e166c290ece2c"
+    },
+    {
+      "block_id": "page-0744-block-0004",
+      "order": 4,
+      "text": "Patients with hepatic impairment may have:\n",
+      "bbox": [
+        48.0,
+        248.2769775390625,
+        237.42996215820312,
+        259.9969787597656
+      ],
+      "text_sha256": "ee285041cfd88f2402b4a1767e81ab91c0cfdb2debe1eb11e495aa2822053484"
+    },
+    {
+      "block_id": "page-0744-block-0005",
+      "order": 5,
+      "text": "■\n■Reduced capacity to metabolise biological waste products, dietary proteins and for-\n",
+      "bbox": [
+        47.999900817871094,
+        266.0369873046875,
+        419.9999694824219,
+        277.9969787597656
+      ],
+      "text_sha256": "4abd2f28e05522c624c3d3f335006404c49d5adb183bd9286ccb2f53c945387c"
+    },
+    {
+      "block_id": "page-0744-block-0006",
+      "order": 6,
+      "text": "eign substances, such as drugs. Clinical consequences include hepatic encephalopathy \nand increased dose-related side-effects from drugs.\n",
+      "bbox": [
+        57.0,
+        278.2769775390625,
+        422.7398986816406,
+        301.9969787597656
+      ],
+      "text_sha256": "a85d7d6615bc2843e1a570df267ea5c4ea3227e8334409722736258f4526a430"
+    },
+    {
+      "block_id": "page-0744-block-0007",
+      "order": 7,
+      "text": "■\n■Reduced ability to synthesise plasma proteins and vitamin K-dependent clotting factors. \n",
+      "bbox": [
+        47.999900817871094,
+        302.0369873046875,
+        422.7601623535156,
+        313.9969787597656
+      ],
+      "text_sha256": "f8742183f2488e39ae0e5f8de4539431f6283f40565d5d5b690597f7c3bee6ec"
+    },
+    {
+      "block_id": "page-0744-block-0008",
+      "order": 8,
+      "text": "Clinical consequences include hypoalbuminaemia, leading in extreme cases to ascites. \nIncreased toxicity from highly protein-bound drugs should be anticipated. There is also \nan increased risk of bleeding from gastro-irritant drugs and perhaps with SSRIs.\n",
+      "bbox": [
+        57.0,
+        314.2769775390625,
+        422.8201599121094,
+        349.9969787597656
+      ],
+      "text_sha256": "7835b0297740d3a4e874045ea7524e03db17e3a602d33d25e9f550eec0eec968"
+    },
+    {
+      "block_id": "page-0744-block-0009",
+      "order": 9,
+      "text": "■\n■Reduced hepatic blood flow. Clinical consequences include oesophageal varices and \n",
+      "bbox": [
+        47.999900817871094,
+        350.0369873046875,
+        422.78997802734375,
+        361.9969787597656
+      ],
+      "text_sha256": "be27d4bf4ed6f5d633bcb69d91386f1ac675f52bbc91ee83f5f3536b5a9fc3d9"
+    },
+    {
+      "block_id": "page-0744-block-0010",
+      "order": 10,
+      "text": "elevated plasma levels of drugs subject to first-pass metabolism.\n",
+      "bbox": [
+        57.0,
+        362.2769775390625,
+        331.4400329589844,
+        373.9969787597656
+      ],
+      "text_sha256": "990e99b53e6a21d2a1c4e56ae687a987f3d4b1eab96ab08129b84025dd92101b"
+    },
+    {
+      "block_id": "page-0744-block-0011",
+      "order": 11,
+      "text": "General principles\n",
+      "bbox": [
+        48.0,
+        391.4319763183594,
+        140.90599060058594,
+        404.46697998046875
+      ],
+      "text_sha256": "819bfc247b02775d3db6491c159b39d2b677b007e5f214ad97e46dd74645a62d"
+    },
+    {
+      "block_id": "page-0744-block-0012",
+      "order": 12,
+      "text": "Liver function tests (LFTs) are a poor marker of hepatic metabolising capacity, as the \nhepatic reserve is large. Note that many patients with chronic liver disease are asymp-\ntomatic or have fluctuating clinical symptoms. Always consider the clinical presenta-\ntion rather than adhere to rigid rules involving LFTs.\n",
+      "bbox": [
+        48.0,
+        410.2769775390625,
+        422.7299499511719,
+        457.9969787597656
+      ],
+      "text_sha256": "47f30c6c1e0a7c7b3b60582912d2a40e44c26c4b1b0c85f29bd0e67fcf087e29"
+    },
+    {
+      "block_id": "page-0744-block-0013",
+      "order": 13,
+      "text": "There are few clinical studies relating to the use of psychotropic drugs in people with \nhepatic disease. The following principles should be adhered to:\n",
+      "bbox": [
+        48.0,
+        458.2769775390625,
+        422.7600402832031,
+        481.9969787597656
+      ],
+      "text_sha256": "088ac2ac40d0044278db1602a2393fca4b8d368f834795c4fb1d1b53a0dd960f"
+    },
+    {
+      "block_id": "page-0744-block-0014",
+      "order": 14,
+      "text": "1.\t Prescribe as few drugs as possible.\n2.\t Use lower starting doses, particularly of drugs that are highly protein bound. TCAs, \nSSRIs (except citalopram), trazodone and antipsychotics may have increased free \nplasma levels, at least initially. This will not be reflected in measured (total) plasma \nlevels. Use lower doses of drugs known to be subject to extensive first-pass metabo-\nlism. Examples include TCAs and haloperidol.\n",
+      "bbox": [
+        52.029998779296875,
+        488.0369873046875,
+        422.7899475097656,
+        559.9970092773438
+      ],
+      "text_sha256": "cca9f68648f15921f8fb63bf5d5ce31709c6a3b08d3a202a72a25b60867f5571"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,131 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0389",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 389,
+  "source_page_index": 388,
+  "source_page_display": 389,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "368    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nOne attraction of IV administration of antidepressants may be a more rapid onset of \naction, but this is not consistently demonstrated in controlled studies.29\nExtensive studies of IV ketamine, a glutamate N-methyl-d-aspartate (NMDA) recep-\ntor antagonist have demonstrated rapid, albeit short-lived antidepressant effects.30 \nConcerns over long-term duration of response may be less relevant for acutely medi-\ncally unwell patients. Ketamine has also been delivered via intranasal,31 IM and SC \nroutes,32,33 sublingually3,34 and via transmucosal routes.35 IV scopolamine (hyoscine) as \nan antidepressant has also been investigated and has produced rapid antidepressant \neffects within 72 hours in both unipolar and bipolar depression.36–38\nTransdermal\nAmitriptyline gel is used in pain clinics as an adjuvant in the treatment of a variety of \nchronic pain conditions.39,40 It is usually prepared as a 50mmol/L or 100mmol/L gel \nwith or without lidocaine, and although it has proven analgesic activity there are no \npublished data on the plasma levels attained via this route. Nortriptyline hydrochloride \nhas been formulated as a transdermal patch for smoking cessation.41 Nanoemulsion \nformulations of imipramine and of doxepin have also been formulated for transdermal \ndelivery for use as analgesics.42 At the time of writing there are no published studies on \nnortriptyline patches or imipramine or doxepin nanoemulsions in depression. It is \nunlikely that any of these formulations achieve plasma concentrations high enough to \nelicit antidepressant effects.\nOral selegiline at doses greater than 20mg/day may be antidepressant, but enzyme \nselectivity is lost at these doses, necessitating a tyramine-restricted diet.43,44 Selegiline \ncan be administered transdermally. It is efficacious and tolerable and delivers 25–30% \nof the selegiline content over 24 hours and steady-state plasma concentrations are \nachieved within 5 days of daily dosing.45 This route bypasses first-pass metabolism, \nthereby providing a higher, more sustained, plasma concentration of selegiline while \nbeing relatively sparing of the gastrointestinal MAO-A system.46,47 There seems to be no \nneed for tyramine restriction when the lower dose patch (6mg/24 hours) is used, and \nthere have been no reports of hypertensive reactions even with the higher dose patch. \nPatients using the higher strength patches (9mg or 12mg/24 hours) should avoid very \nhigh tyramine content food substances,48 but generally transdermal selegiline is well \ntolerated.\nRectal\nThe rectal mucosa lacks the extensive villi and microvilli of other parts of the gastroin-\ntestinal tract limiting its surface area. Therefore, rectal agents need to be in a formula-\ntion that maximises the extent of contact the active ingredient will have with the \nmucosa. There are no readily available antidepressant suppositories, but extemporane-\nous preparation is possible. For example, amitriptyline (in cocoa butter) suppositories \nhave been manufactured by a hospital pharmacy and administered in a dose of 50mg \ntwice daily with some subjective success.49,50 Doxepin capsules have been administered \nvia the rectal route directly in the treatment of cancer-related pain (without a special \nformulation) and produced plasma concentrations within the supposed therapeutic \n",
+  "raw_text_sha256": "4e0327dbb0dd82feb0e06a012f53f1284780a08d1db421c887ddcff61bdad02d",
+  "coordinates_sha256": "437ca70cecb4791f3d2b0ca9c139807c17ff79d0d2df56738419817d0de437eb",
+  "block_sequence_sha256": "5383efab8d2440cc97a4d2c40874c4a3bb3b02b993388a3084a147b9b8b21c05",
+  "blocks": [
+    {
+      "block_id": "page-0389-block-0000",
+      "order": 0,
+      "text": "368    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "af87a6b30545adaebe1d2f6ecd9ac1da2aef6f0ac653dadadc22cb555239d29b"
+    },
+    {
+      "block_id": "page-0389-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0389-block-0002",
+      "order": 2,
+      "text": "One attraction of IV administration of antidepressants may be a more rapid onset of \naction, but this is not consistently demonstrated in controlled studies.29\n",
+      "bbox": [
+        61.88999938964844,
+        62.55029296875,
+        436.6700134277344,
+        86.27029418945312
+      ],
+      "text_sha256": "bcb68617b764b96880a27ea377c9208f0a6798d7332956ee84dcec6e5ed83637"
+    },
+    {
+      "block_id": "page-0389-block-0003",
+      "order": 3,
+      "text": "Extensive studies of IV ketamine, a glutamate N-methyl-d-aspartate (NMDA) recep-\ntor antagonist have demonstrated rapid, albeit short-lived antidepressant effects.30 \nConcerns over long-term duration of response may be less relevant for acutely medi-\ncally unwell patients. Ketamine has also been delivered via intranasal,31 IM and SC \nroutes,32,33 sublingually3,34 and via transmucosal routes.35 IV scopolamine (hyoscine) as \nan antidepressant has also been investigated and has produced rapid antidepressant \neffects within 72 hours in both unipolar and bipolar depression.36–38\n",
+      "bbox": [
+        61.887908935546875,
+        86.31029510498047,
+        436.7143859863281,
+        170.27029418945312
+      ],
+      "text_sha256": "92e2aea38da2002cb67c9392d493c42b9f4764a57f25ce5f6d1966dbe63bc83e"
+    },
+    {
+      "block_id": "page-0389-block-0004",
+      "order": 4,
+      "text": "Transdermal\n",
+      "bbox": [
+        61.88999938964844,
+        188.64028930664062,
+        119.49999237060547,
+        200.49029541015625
+      ],
+      "text_sha256": "2973a31cd5177bd4302fe1d9fde315fc4f72635033cd1f0a802272b64938704c"
+    },
+    {
+      "block_id": "page-0389-block-0005",
+      "order": 5,
+      "text": "Amitriptyline gel is used in pain clinics as an adjuvant in the treatment of a variety of \nchronic pain conditions.39,40 It is usually prepared as a 50mmol/L or 100mmol/L gel \nwith or without lidocaine, and although it has proven analgesic activity there are no \npublished data on the plasma levels attained via this route. Nortriptyline hydrochloride \nhas been formulated as a transdermal patch for smoking cessation.41 Nanoemulsion \nformulations of imipramine and of doxepin have also been formulated for transdermal \ndelivery for use as analgesics.42 At the time of writing there are no published studies on \nnortriptyline patches or imipramine or doxepin nanoemulsions in depression. It is \nunlikely that any of these formulations achieve plasma concentrations high enough to \nelicit antidepressant effects.\n",
+      "bbox": [
+        61.88999938964844,
+        206.310302734375,
+        436.7045593261719,
+        326.2702941894531
+      ],
+      "text_sha256": "d4416b7cd31c87431ee41fb6ddc11a9ecffa9e6b9caf105d133e2084db5f33fd"
+    },
+    {
+      "block_id": "page-0389-block-0006",
+      "order": 6,
+      "text": "Oral selegiline at doses greater than 20mg/day may be antidepressant, but enzyme \nselectivity is lost at these doses, necessitating a tyramine-restricted diet.43,44 Selegiline \ncan be administered transdermally. It is efficacious and tolerable and delivers 25–30% \nof the selegiline content over 24 hours and steady-state plasma concentrations are \nachieved within 5 days of daily dosing.45 This route bypasses first-pass metabolism, \nthereby providing a higher, more sustained, plasma concentration of selegiline while \nbeing relatively sparing of the gastrointestinal MAO-A system.46,47 There seems to be no \nneed for tyramine restriction when the lower dose patch (6mg/24 hours) is used, and \nthere have been no reports of hypertensive reactions even with the higher dose patch. \nPatients using the higher strength patches (9mg or 12mg/24 hours) should avoid very \nhigh tyramine content food substances,48 but generally transdermal selegiline is well \ntolerated.\n",
+      "bbox": [
+        61.887603759765625,
+        326.55029296875,
+        436.70172119140625,
+        470.2702941894531
+      ],
+      "text_sha256": "85f3a63ea42dbc7f704a0c362d2d06f288d26bb9937f641c54d6b73fc1ee492e"
+    },
+    {
+      "block_id": "page-0389-block-0007",
+      "order": 7,
+      "text": "Rectal\n",
+      "bbox": [
+        61.887603759765625,
+        488.6402893066406,
+        90.22760009765625,
+        500.49029541015625
+      ],
+      "text_sha256": "cda34c14ca5b74039ec8381428775d972d88844b581633924166599296a10f19"
+    },
+    {
+      "block_id": "page-0389-block-0008",
+      "order": 8,
+      "text": "The rectal mucosa lacks the extensive villi and microvilli of other parts of the gastroin-\ntestinal tract limiting its surface area. Therefore, rectal agents need to be in a formula-\ntion that maximises the extent of contact the active ingredient will have with the \nmucosa. There are no readily available antidepressant suppositories, but extemporane-\nous preparation is possible. For example, amitriptyline (in cocoa butter) suppositories \nhave been manufactured by a hospital pharmacy and administered in a dose of 50mg \ntwice daily with some subjective success.49,50 Doxepin capsules have been administered \nvia the rectal route directly in the treatment of cancer-related pain (without a special \nformulation) and produced plasma concentrations within the supposed therapeutic \n",
+      "bbox": [
+        61.887603759765625,
+        506.55029296875,
+        436.7181396484375,
+        614.2703247070312
+      ],
+      "text_sha256": "a0063a440c47247651a2fe25c7035bbefeba09a49e492ba28d57758ddadf4fa4"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

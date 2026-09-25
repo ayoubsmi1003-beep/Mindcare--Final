@@ -1,0 +1,95 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0849",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 849,
+  "source_page_index": 848,
+  "source_page_display": 849,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "828    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\n\t39.\t Alam A, et al. Lithium toxicity following vertical sleeve gastrectomy: a case report. Clin Psychopharmacol Neurosci 2016; 14:318–320.\n\t40.\t Bingham KS, et al. Perioperative lithium use in bariatric surgery: a case series and literature review. Psychosomatics 2016; 57:638–644.\n\t41.\t Merhi ZO. Challenging oral contraception after weight loss by bariatric surgery. Gynecol Obstet Invest 2007; 64:100–102.\n\t42.\t Tandra S, et al. Pharmacokinetic and pharmacodynamic alterations in the Roux-en-Y gastric bypass recipients. Ann Surg 2013; \n258:262–269.\n\t43.\t Chan LN, et al. Proximal Roux-en-Y gastric bypass alters drug absorption pattern but not systemic exposure of CYP3A4 and P-glycoprotein \nsubstrates. Pharmacotherapy 2015; 35:361–369.\n\t44.\t Brill MJ, et al. The Pharmacokinetics of the CYP3A substrate midazolam in morbidly obese patients before and one year after bariatric sur-\ngery. Pharm Res 2015; 32:3927–3936.\n\t45.\t Ochs HR, et al. Diazepam absorption: effects of age, sex, and Billroth gastrectomy. Dig Dis Sci 1982; 27:225–230.\n\t46.\t Strømmen M, et al. Bioavailability of methadone after sleeve gastrectomy: a planned case observation. Clin Ther 2016; 38:1532–1536.\n\t47.\t Azran C, et al. Impaired oral absorption of methylphenidate after Roux-en-Y gastric bypass. Surg Obes Relat Dis 2017; 13:1245–1247.\n\t48.\t Ludvigsson M, et al. Methylphenidate toxicity after Roux-en-Y gastric bypass. Surg Obesity Relat Dis 2016; 12:e55-e57.\n\t49.\t Karmali S, et al. Weight recidivism post-bariatric surgery: a systematic review. Obes Surg 2013; 23:1922–1933.\n\t50.\t Ivezaj V, et al. Changes in alcohol use after metabolic and bariatric surgery: predictors and mechanisms. Curr Psychiatry Rep 2019; 21:85.\n\t51.\t Parikh M, et al. ASMBS position statement on alcohol use before and after bariatric surgery. Surg Obesity Relat Dis 2016; 12:225–230.\n\t52.\t Stevens T, et al. Your patient and weight-loss surgery. Adv Psychiatric Treatment 2012; 18:418–425.\n",
+  "raw_text_sha256": "07806ead769abe2ff64165504894f1fbaa3a589587926f15a169180e0e3c8e6e",
+  "coordinates_sha256": "534727815e2217ab585ba935d4637f7460ad3f224f9bd34aec9466b68e830e39",
+  "block_sequence_sha256": "7ba8182d99ab3cc7494d7d12f24644b3c35ac3c8c4d6ca32fca7a067cb21f86f",
+  "blocks": [
+    {
+      "block_id": "page-0849-block-0000",
+      "order": 0,
+      "text": "828    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "58f8c75b95fbd97ef030676c8fc55ea6995865acc8a527fc016751a36e1e4664"
+    },
+    {
+      "block_id": "page-0849-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0849-block-0002",
+      "order": 2,
+      "text": "\t39.\t Alam A, et al. Lithium toxicity following vertical sleeve gastrectomy: a case report. Clin Psychopharmacol Neurosci 2016; 14:318–320.\n\t40.\t Bingham KS, et al. Perioperative lithium use in bariatric surgery: a case series and literature review. Psychosomatics 2016; 57:638–644.\n\t41.\t Merhi ZO. Challenging oral contraception after weight loss by bariatric surgery. Gynecol Obstet Invest 2007; 64:100–102.\n\t42.\t Tandra S, et al. Pharmacokinetic and pharmacodynamic alterations in the Roux-en-Y gastric bypass recipients. Ann Surg 2013; \n",
+      "bbox": [
+        61.889801025390625,
+        63.12638854980469,
+        435.5638427734375,
+        97.30238342285156
+      ],
+      "text_sha256": "d47b9d71b61d0ed05a07472200ee7f318a885a419ee1fe228115477c3c4119f8"
+    },
+    {
+      "block_id": "page-0849-block-0003",
+      "order": 3,
+      "text": "258:262–269.\n\t43.\t Chan LN, et al. Proximal Roux-en-Y gastric bypass alters drug absorption pattern but not systemic exposure of CYP3A4 and P-glycoprotein \n",
+      "bbox": [
+        61.91379928588867,
+        99.12638854980469,
+        435.6236572265625,
+        115.30238342285156
+      ],
+      "text_sha256": "b1afb825e89ab974ebefa9827da930cf29d43e35798dda170a0ccd2fa9fa2877"
+    },
+    {
+      "block_id": "page-0849-block-0004",
+      "order": 4,
+      "text": "substrates. Pharmacotherapy 2015; 35:361–369.\n\t44.\t Brill MJ, et al. The Pharmacokinetics of the CYP3A substrate midazolam in morbidly obese patients before and one year after bariatric sur-\n",
+      "bbox": [
+        61.9197998046875,
+        117.12638854980469,
+        433.92578125,
+        133.30238342285156
+      ],
+      "text_sha256": "9bcffda960fa13b5dee258962a028938f4eda318c514f3a9e021df236c4e5f1d"
+    },
+    {
+      "block_id": "page-0849-block-0005",
+      "order": 5,
+      "text": "gery. Pharm Res 2015; 32:3927–3936.\n\t45.\t Ochs HR, et al. Diazepam absorption: effects of age, sex, and Billroth gastrectomy. Dig Dis Sci 1982; 27:225–230.\n\t46.\t Strømmen M, et al. Bioavailability of methadone after sleeve gastrectomy: a planned case observation. Clin Ther 2016; 38:1532–1536.\n\t47.\t Azran C, et al. Impaired oral absorption of methylphenidate after Roux-en-Y gastric bypass. Surg Obes Relat Dis 2017; 13:1245–1247.\n\t48.\t Ludvigsson M, et al. Methylphenidate toxicity after Roux-en-Y gastric bypass. Surg Obesity Relat Dis 2016; 12:e55-e57.\n\t49.\t Karmali S, et al. Weight recidivism post-bariatric surgery: a systematic review. Obes Surg 2013; 23:1922–1933.\n\t50.\t Ivezaj V, et al. Changes in alcohol use after metabolic and bariatric surgery: predictors and mechanisms. Curr Psychiatry Rep 2019; 21:85.\n\t51.\t Parikh M, et al. ASMBS position statement on alcohol use before and after bariatric surgery. Surg Obesity Relat Dis 2016; 12:225–230.\n\t52.\t Stevens T, et al. Your patient and weight-loss surgery. Adv Psychiatric Treatment 2012; 18:418–425.\n",
+      "bbox": [
+        61.92580032348633,
+        135.1263885498047,
+        430.6138916015625,
+        214.30238342285156
+      ],
+      "text_sha256": "d4b5926327bf96aecb8f131ffc51815678d75104678b33b1748a0ae3df5171f7"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,479 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0596",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 596,
+  "source_page_index": 595,
+  "source_page_display": 596,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": " \n \n \n \n \n \nGuanfacine \nmodified-release8,52\nApproximately 1–5  \nweeks53\n(Guanfacine is a central \nalpha2A-adrenergic \nreceptor agonist)\nFor Child 6–12 years (body-weight 25kg and \nabove)\nInitially 1mg once daily; adjusted in steps \nof 1mg every week if necessary and if \ntolerated; maintenance 0.05–0.12mg/kg \nonce daily (max. per dose 4mg)\nFor Child 13–17 years (body weight \n34–41.4kg)\nInitially 1mg once daily; adjusted in steps of \n1mg every week if necessary and if \ntolerated; maintenance 0.05–0.12mg/kg \nonce daily (max. per dose 4mg)\nFor Child 13–17 years (body weight \n41.5–49.4kg)\nInitially 1 mg once daily; adjusted in steps of \n1 mg every week if necessary and if \ntolerated; maintenance 0.05–0.12 mg/kg \nonce daily (max. per dose 5 mg)\nFor Child 13–17 years (body-weight \n49.5–58.4kg)\nInitially 1mg once daily; adjusted in steps of \n1mg every week if necessary and if \ntolerated; maintenance 0.05–0.12mg/kg \nonce daily (max. per dose 6mg)\nFor Child 13–17 years (body weight 58.5kg \nand above)\nInitially 1mg once daily; adjusted in steps of \n1mg every week if necessary and if \ntolerated; maintenance 0.05–0.12mg/kg \nonce daily (max. per dose 7mg)\nEfficacy and tolerability data \nshould be interpreted with \ncaution8\nSimilar monitoring to other \nmedication for ADHD.\n*For details of other preparations available outside the UK, see Cortese et al. (2017).54.\nTable 5.6  (Continued)\n",
+  "raw_text_sha256": "372776b61a19d865b1dbeca9e5ac4cf3f93566aa434c16f5466408a733cba451",
+  "coordinates_sha256": "49c2353efef33eb13604f52a43a11c6d793ccde6581c3807b891d6d621881e91",
+  "block_sequence_sha256": "dd0803b76b2c7089068a6cb1ef1b489be8fa530c3fa1686ecd9f79f63e1a07b3",
+  "blocks": [
+    {
+      "block_id": "page-0596-block-0000",
+      "order": 0,
+      "text": " \n \n \n \n \n",
+      "bbox": [
+        54.612098693847656,
+        105.9089584350586,
+        63.49959945678711,
+        501.3689880371094
+      ],
+      "text_sha256": "17f65dd61e15ac88509373fbbe5994599f666fbe25adb0c67bae9a4641b5a180"
+    },
+    {
+      "block_id": "page-0596-block-0001",
+      "order": 1,
+      "text": " \n",
+      "bbox": [
+        64.60960388183594,
+        88.8164291381836,
+        73.49710083007812,
+        90.90142822265625
+      ],
+      "text_sha256": "e16f1596201850fd4a63680b27f603cb64e67176159be3d8ed78a4403fdb1700"
+    },
+    {
+      "block_id": "page-0596-block-0002",
+      "order": 2,
+      "text": "Guanfacine \n",
+      "bbox": [
+        82.73710632324219,
+        570.5714111328125,
+        91.62460327148438,
+        612.6614379882812
+      ],
+      "text_sha256": "da373f37d744864fd01cc74f3062b14e95add056bcf002a8efcaa9825a5f3204"
+    },
+    {
+      "block_id": "page-0596-block-0003",
+      "order": 3,
+      "text": "modified-release8,52\nApproximately 1–5  \n",
+      "bbox": [
+        82.91460418701172,
+        456.6222229003906,
+        101.62210083007812,
+        612.6614379882812
+      ],
+      "text_sha256": "0f23d20a9bc178eb0645ae6fddc89c392c56cf84a4dc92b53220d37ba6f68415"
+    },
+    {
+      "block_id": "page-0596-block-0004",
+      "order": 4,
+      "text": "weeks53\n",
+      "bbox": [
+        92.91210174560547,
+        496.2125549316406,
+        101.61959838867188,
+        521.0772094726562
+      ],
+      "text_sha256": "2d057274ae418650e30439aa01fc8ad4941968de569366ec3283602757d9ab78"
+    },
+    {
+      "block_id": "page-0596-block-0005",
+      "order": 5,
+      "text": "(Guanfacine is a central \n",
+      "bbox": [
+        102.91460418701172,
+        443.9922180175781,
+        111.62210083007812,
+        521.0772094726562
+      ],
+      "text_sha256": "e2104fabc2cafd6738bce7a8764e7efcb4455b347999d1113f5e58ec5e9dfe51"
+    },
+    {
+      "block_id": "page-0596-block-0006",
+      "order": 6,
+      "text": "alpha2A-adrenergic \n",
+      "bbox": [
+        112.91210174560547,
+        456.2022399902344,
+        121.61959838867188,
+        521.0772094726562
+      ],
+      "text_sha256": "5d7ddc2af239d01b0a29621469f8fff02ab0102191c0d009f5c91cf3cb3c4d57"
+    },
+    {
+      "block_id": "page-0596-block-0007",
+      "order": 7,
+      "text": "receptor agonist)\n",
+      "bbox": [
+        122.90959930419922,
+        467.0397033691406,
+        131.61709594726562,
+        521.0772094726562
+      ],
+      "text_sha256": "047c7685cb3a11e594bbb50eb41a566f6a3ba878bbd78a79b00f0486ccb7da93"
+    },
+    {
+      "block_id": "page-0596-block-0008",
+      "order": 8,
+      "text": "For Child 6–12 years (body-weight 25kg and \n",
+      "bbox": [
+        82.91210174560547,
+        284.444580078125,
+        91.61959838867188,
+        429.07470703125
+      ],
+      "text_sha256": "692881ea48fe8509a02b821c60d636182fdb21bd8bf46a6b3362e912477f0ced"
+    },
+    {
+      "block_id": "page-0596-block-0009",
+      "order": 9,
+      "text": "above)\n",
+      "bbox": [
+        92.90959930419922,
+        407.8197021484375,
+        101.61709594726562,
+        429.07470703125
+      ],
+      "text_sha256": "0f45fb8b8ad672cc6e24ff95d429cb72782f8f0786b99eb4383c19d86f1e866f"
+    },
+    {
+      "block_id": "page-0596-block-0010",
+      "order": 10,
+      "text": "Initially 1mg once daily; adjusted in steps \n",
+      "bbox": [
+        102.90709686279297,
+        296.55706787109375,
+        111.61459350585938,
+        429.07470703125
+      ],
+      "text_sha256": "ef36f417cb3795117dded6bd065410c2780e972a154bc1ee8c2b539c3df6009c"
+    },
+    {
+      "block_id": "page-0596-block-0011",
+      "order": 11,
+      "text": "of 1mg every week if necessary and if \n",
+      "bbox": [
+        112.90459442138672,
+        306.5697326660156,
+        121.61209106445312,
+        429.07470703125
+      ],
+      "text_sha256": "bdaa0b9c8cf5252b7d471ec79ee6e8463864cb077febfc75ceb315a5659125b0"
+    },
+    {
+      "block_id": "page-0596-block-0012",
+      "order": 12,
+      "text": "tolerated; maintenance 0.05–0.12mg/kg \n",
+      "bbox": [
+        122.90209197998047,
+        297.3746032714844,
+        131.60958862304688,
+        429.07470703125
+      ],
+      "text_sha256": "335a2b270d1b9cda58f75106f5b3daa5102f0670b1770ae6ec68abf316443aaa"
+    },
+    {
+      "block_id": "page-0596-block-0013",
+      "order": 13,
+      "text": "once daily (max. per dose 4mg)\n",
+      "bbox": [
+        132.8995819091797,
+        329.0546875,
+        141.60708618164062,
+        429.07470703125
+      ],
+      "text_sha256": "22fc83ed6dc829bec6bbbbbc7815271ff019667f3c30862613f7d3a88003a8fe"
+    },
+    {
+      "block_id": "page-0596-block-0014",
+      "order": 14,
+      "text": "For Child 13–17 years (body weight \n",
+      "bbox": [
+        148.89707946777344,
+        313.2071228027344,
+        157.60458374023438,
+        429.07470703125
+      ],
+      "text_sha256": "d59408497241312cda86ae0414487d86ad251dd1748dfb8fe6d41ac4a34573c4"
+    },
+    {
+      "block_id": "page-0596-block-0015",
+      "order": 15,
+      "text": "34–41.4kg)\nInitially 1mg once daily; adjusted in steps of \n",
+      "bbox": [
+        158.8945770263672,
+        287.8045654296875,
+        177.59957885742188,
+        429.07470703125
+      ],
+      "text_sha256": "bc171dd74ab7c9ecba5c8e7a7b7617acbe7d855794f4dbd565952f1f90dabc3f"
+    },
+    {
+      "block_id": "page-0596-block-0016",
+      "order": 16,
+      "text": "1mg every week if necessary and if \ntolerated; maintenance 0.05–0.12mg/kg \n",
+      "bbox": [
+        178.8895721435547,
+        297.3746032714844,
+        197.59457397460938,
+        429.07470703125
+      ],
+      "text_sha256": "bf6a1752f7248aaf25723c3ab5f09725780a7e67a24a9f4d7a6b5382664ee3f2"
+    },
+    {
+      "block_id": "page-0596-block-0017",
+      "order": 17,
+      "text": "once daily (max. per dose 4mg)\n",
+      "bbox": [
+        198.8845672607422,
+        329.0546875,
+        207.59207153320312,
+        429.07470703125
+      ],
+      "text_sha256": "22fc83ed6dc829bec6bbbbbc7815271ff019667f3c30862613f7d3a88003a8fe"
+    },
+    {
+      "block_id": "page-0596-block-0018",
+      "order": 18,
+      "text": "For Child 13–17 years (body weight \n",
+      "bbox": [
+        214.88206481933594,
+        317.9096984863281,
+        223.58956909179688,
+        429.07470703125
+      ],
+      "text_sha256": "d59408497241312cda86ae0414487d86ad251dd1748dfb8fe6d41ac4a34573c4"
+    },
+    {
+      "block_id": "page-0596-block-0019",
+      "order": 19,
+      "text": "41.5–49.4kg)\nInitially 1 mg once daily; adjusted in steps of \n",
+      "bbox": [
+        224.8795623779297,
+        285.7196044921875,
+        243.5845947265625,
+        429.07470703125
+      ],
+      "text_sha256": "e09d2dce02d176f0292e413dd0bc941ff53efaa6633be700ff0cb6ba6c67357a"
+    },
+    {
+      "block_id": "page-0596-block-0020",
+      "order": 20,
+      "text": "1 mg every week if necessary and if \ntolerated; maintenance 0.05–0.12 mg/kg \n",
+      "bbox": [
+        244.8745880126953,
+        295.2896728515625,
+        263.5796203613281,
+        429.07470703125
+      ],
+      "text_sha256": "002537cd76676f75fa84796c86ba778e366e83ded48c3ae1d93733fef7c58b3b"
+    },
+    {
+      "block_id": "page-0596-block-0021",
+      "order": 21,
+      "text": "once daily (max. per dose 5 mg)\n",
+      "bbox": [
+        264.8695983886719,
+        326.9696960449219,
+        273.57708740234375,
+        429.0746765136719
+      ],
+      "text_sha256": "69525b630d7074d7e391a9b720a5f5e46490ca0e096428e2f46353c9566e2a45"
+    },
+    {
+      "block_id": "page-0596-block-0022",
+      "order": 22,
+      "text": "For Child 13–17 years (body-weight \n",
+      "bbox": [
+        280.8670959472656,
+        312.79461669921875,
+        289.5745849609375,
+        429.07470703125
+      ],
+      "text_sha256": "8568cf025374ec7af15a64c2c27b6a7c0410cca49dbcb1e1c7904d44dd1690d8"
+    },
+    {
+      "block_id": "page-0596-block-0023",
+      "order": 23,
+      "text": "49.5–58.4kg)\nInitially 1mg once daily; adjusted in steps of \n",
+      "bbox": [
+        290.8645935058594,
+        287.8045654296875,
+        309.569580078125,
+        429.07470703125
+      ],
+      "text_sha256": "5f6e46e465bfface4c621314cf9a948d549ea4ae288f6e177e58ec661dd79a1d"
+    },
+    {
+      "block_id": "page-0596-block-0024",
+      "order": 24,
+      "text": "1mg every week if necessary and if \ntolerated; maintenance 0.05–0.12mg/kg \n",
+      "bbox": [
+        310.8595886230469,
+        297.3746032714844,
+        329.5645751953125,
+        429.07470703125
+      ],
+      "text_sha256": "bf6a1752f7248aaf25723c3ab5f09725780a7e67a24a9f4d7a6b5382664ee3f2"
+    },
+    {
+      "block_id": "page-0596-block-0025",
+      "order": 25,
+      "text": "once daily (max. per dose 6mg)\n",
+      "bbox": [
+        330.8545837402344,
+        329.0546875,
+        339.56207275390625,
+        429.07470703125
+      ],
+      "text_sha256": "7bba61f75335a38bab00c409ab451f76b3d9e63246bac5c6b98228f29123370f"
+    },
+    {
+      "block_id": "page-0596-block-0026",
+      "order": 26,
+      "text": "For Child 13–17 years (body weight 58.5kg \n",
+      "bbox": [
+        346.8520812988281,
+        288.6070861816406,
+        355.5595703125,
+        429.07470703125
+      ],
+      "text_sha256": "c51653314b0d63ea154f77fa9850590aa97d23e1d44ba16969bb27be60fbda0a"
+    },
+    {
+      "block_id": "page-0596-block-0027",
+      "order": 27,
+      "text": "and above)\n",
+      "bbox": [
+        356.8495788574219,
+        393.6446838378906,
+        365.55706787109375,
+        429.07470703125
+      ],
+      "text_sha256": "7825b55dc4435349852ee067817251a0be6916a4cf09eda65e7182972565abab"
+    },
+    {
+      "block_id": "page-0596-block-0028",
+      "order": 28,
+      "text": "Initially 1mg once daily; adjusted in steps of \n",
+      "bbox": [
+        366.8470764160156,
+        287.8045654296875,
+        375.5545654296875,
+        429.07470703125
+      ],
+      "text_sha256": "82ce7b0fab7d299de14cf707d4918aa84931ad5e8710fcf7e91e1940d6fe1c85"
+    },
+    {
+      "block_id": "page-0596-block-0029",
+      "order": 29,
+      "text": "1mg every week if necessary and if \ntolerated; maintenance 0.05–0.12mg/kg \n",
+      "bbox": [
+        376.8445739746094,
+        297.3746032714844,
+        395.549560546875,
+        429.07470703125
+      ],
+      "text_sha256": "bf6a1752f7248aaf25723c3ab5f09725780a7e67a24a9f4d7a6b5382664ee3f2"
+    },
+    {
+      "block_id": "page-0596-block-0030",
+      "order": 30,
+      "text": "once daily (max. per dose 7mg)\n",
+      "bbox": [
+        396.8395690917969,
+        329.0546875,
+        405.54705810546875,
+        429.07470703125
+      ],
+      "text_sha256": "efa4d936101995da614a0ce258149c0992db97310b54364faa0545714231a11f"
+    },
+    {
+      "block_id": "page-0596-block-0031",
+      "order": 31,
+      "text": "Efficacy and tolerability data \n",
+      "bbox": [
+        82.8370590209961,
+        186.1421661376953,
+        91.54460144042969,
+        278.07720947265625
+      ],
+      "text_sha256": "ec15ce5ca42e10dd8e7fb61fa4d728aa442740f245bef5d4ebf22d90cc0e68fe"
+    },
+    {
+      "block_id": "page-0596-block-0032",
+      "order": 32,
+      "text": "should be interpreted with \n",
+      "bbox": [
+        92.83460235595703,
+        191.10707092285156,
+        101.54209899902344,
+        278.0771789550781
+      ],
+      "text_sha256": "2fe78be0433837876f2d3e53c9a12fcb8b84c300307ebb4e7b4363784918db8f"
+    },
+    {
+      "block_id": "page-0596-block-0033",
+      "order": 33,
+      "text": "caution8\n",
+      "bbox": [
+        102.83209991455078,
+        251.8938751220703,
+        111.53959655761719,
+        278.0771789550781
+      ],
+      "text_sha256": "e2c35fbefb3841251b1408dfb3c7cf02ffc33d331e7075b8b7c7ff35175a0224"
+    },
+    {
+      "block_id": "page-0596-block-0034",
+      "order": 34,
+      "text": "Similar monitoring to other \n",
+      "bbox": [
+        82.91460418701172,
+        71.3224105834961,
+        91.62210083007812,
+        160.07720947265625
+      ],
+      "text_sha256": "431a47b2b55532cc6fb5fa3f16ce395590bf5f6f24f3b955d9e51d1b5ffda8bc"
+    },
+    {
+      "block_id": "page-0596-block-0035",
+      "order": 35,
+      "text": "medication for ADHD.\n",
+      "bbox": [
+        92.91210174560547,
+        89.23226165771484,
+        101.61959838867188,
+        160.07720947265625
+      ],
+      "text_sha256": "9ce76e264152089a76b332f9d0672a3ff0b14878ec10aaec0c2c8378387a6ba2"
+    },
+    {
+      "block_id": "page-0596-block-0036",
+      "order": 36,
+      "text": "*For details of other preparations available outside the UK, see Cortese et al. (2017).54.\n",
+      "bbox": [
+        415.91461181640625,
+        336.66131591796875,
+        424.6221008300781,
+        612.6572265625
+      ],
+      "text_sha256": "4e4f879b5cb5466f939108853300236772935809c3f8686e14b7456623c9b66e"
+    },
+    {
+      "block_id": "page-0596-block-0037",
+      "order": 37,
+      "text": "Table 5.6  (Continued)\n",
+      "bbox": [
+        62.73749923706055,
+        534.5339965820312,
+        71.625,
+        606.6539916992188
+      ],
+      "text_sha256": "308af4b2ab5a2bcb6709b843b581b3357fd321e73efb500ede69d32b97df89d6"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,12 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0245",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 245,
+  "source_page_index": 244,
+  "repaired_text": "224    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nrechallenge with rigorous cardiac monitoring (including ECHO) and instigation of \ndisease-modifying cardiac medications may be possible.44,60,61\nNote also that, despite an overall reduction in mortality, younger patients may have \nan increased risk of sudden death,62 perhaps because of clozapine-induced ECG \nchanges.63 The overall picture remains very unclear but caution is required. There may, \nof course, be similar problems with other antipsychotics.57,64,65\nSummary\n■\n■Overall mortality is lower for those on clozapine than in schizophrenia as a whole.\n■\n■Risk of fatal agranulocytosis is less than 1 in 8000 during standard monitoring.\n■\n■Risk of fatal pulmonary embolism is estimated to be around 1 in 4500 patients\ntreated.\n■\n■Risk of fatal myocarditis or cardiomyopathy may be as high as 1 in 1000 patients.\n■\n■Careful monitoring is essential during clozapine treatment, particularly during the\nfirst 3 months (see box).\nTable 1.39  Suggested monitoring for myocarditis52,53,66,67\nBaseline\nPulse, blood pressure, temperature, respiratory rate\nFull blood count (FBC)\nC-reactive protein (CRP)\nTroponin\nEchocardiography (if available)\nElectrocardiogram (ECG)\nDaily, if possible\nPulse, blood pressure, temperature, respiratory rate\nAsk about: chest pain, fever, cough, shortness of \nbreath, exercise capacity\nOn days 7, 14, 21, and 28\nCRP\nTroponin\nFBC\nECG if possible\nIf CRP > 100mg/L or troponin > twice upper limit of normal\nStop clozapine; repeat echo\nIf fever + tachycardia + raised CRP or troponin (but not as \nabove)\nDaily CRP and troponin measures",
+  "repaired_text_sha256": "914c95fc0d81604fb38b13040dee4ef2a6f3f65a753c318a049c4ec8cd92d50c",
+  "raw_text_sha256": "fd21f3cbdb73cfcf1ffa236e39f0e3f6a59de128bfc1fcd69cc9cdc222670fd4",
+  "repair_ids": [],
+  "raw_file": "raw/page-0245.json"
+}

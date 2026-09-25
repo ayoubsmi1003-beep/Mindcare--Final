@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0571",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 571,
+  "source_page_index": 570,
+  "source_page_display": 571,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "550    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  5\nTable 5.2  Summary of RCT evidence on medication used in youth with bipolar depression\nMedication\nComments\nQuetiapine\nIn adults, there is considerably better evidence for efficacious treatments (see the \nsection on bipolar depression), such as quetiapine.42,43 Surprisingly, however, a \nsmall study in 32 adolescents,44 followed by a larger RCT (N = 193)45 failed to \nshow effectiveness. This latest study had a high placebo response, which is not \npresent in adult quetiapine studies46 and which may reflect issues that have been \nnoted before about phenotyping of mood disorders and multi-site studies47\nOlanzapine/fluoxetine \ncombination\nThe only double-blind randomised placebo-controlled trial with positive results for the \ntreatment of bipolar depression in youth is a large study (N = 255) of the olanzapine/\nfluoxetine combination (either 6/25mg or 12/50mg daily) for 8 weeks.48 Between-group \ndifferences were significant at week 1 and all subsequent visits. Most frequent side \neffects were weight gain (4.4kg for the olanzapine/fluoxetine combination vs 0.5kg for \nplacebo), somnolence and hyperlipidaemia. The olanzapine/fluoxetine combination is \nrecommended by NICE guidelines,5 along with quetiapine, as first-line treatment for \nbipolar depression in youth, as in adults. Although the olanzapine/fluoxetine \ncombination is not currently available as a single preparation in the UK, its effects can \nbe achieved by combining olanzapine and fluoxetine (e.g. 5/20mg or 10/40mg)\nTable 5.1  (Continued)\nMedication\nComments\nQuetiapine\nA double-blind, placebo-controlled study (N = 277)35 showed quetiapine (at doses of \n400mg/day or 600mg/day) to be significantly better than placebo in reducing mean YMRS \nscores at 3 weeks. The most common side effects included somnolence and sedation. \nWeight gain was 1.7kg in the quetiapine group versus 0.4kg for placebo\nQuetiapine is effective as an adjunct to valproate compared with valproate alone (N = 30, \n6 weeks)36 and was as effective as valproate in a double-blind trial (N = 50, 4 weeks)37\nAripiprazole\nA double-blind placebo-controlled study38,39 showed aripiprazole (at doses 10mg/day or \n30mg/day) to be significantly better than placebo in reducing mean YMRS scores at both \n4 weeks (N = 296)38 and 30 weeks (N = 210).39 Note the significantly higher incidence of \nextrapyramidal side effects in the treatment groups (especially the higher dose). Weight \ngain was significantly higher in the treatment groups compared to placebo (3.0kg versus \n6.5kg for the low and 6.6kg for the high dose arm) at week 30 but not at week 4\nZiprasidone\nA double-blind, placebo-controlled trial (N = 237)40 showed ziprasidone (at flexible doses \n40–160mg) to be significantly more effective than placebo in reducing mean YMRS scores \nat 4 weeks. Sedation and somnolence were the most common side effects, while it \ndemonstrated a neutral metabolic profile and no QTc prolongation\nAsenapine\nA 3 weeks double-blind, placebo-controlled study (N = 350) demonstrated statistical \nsuperiority of asenapine over placebo for each of the doses used (2.5, 5 or 10mg b.i.d.), \nwith significant difference as early as day 4. However, many side effects were reported, \nincluding weight gain of more than 7% from baseline (8–12% incidence in asenapine \ngroup vs 1.1% in placebo group), metabolic changes (increase in fasting insulin, lipids, \nglucose), as well as somnolence, sedation, oral hypoaesthesia and paraesthesia41\nALT, alanine transaminase; AST, aspartate aminotransferase; ER, extended release; MS, mood stabilisers; RCT, \nrandomised controlled trial; YMRS, Young Mania Rating Scale.\n",
+  "raw_text_sha256": "6e3b214b6b352494612b4899108b22ea2af01c48c47296a3ead5293c9df05cba",
+  "coordinates_sha256": "c6ace158704c9e0caca4b163f59c6ee8c54558bc534ae19cae8baee2ea617f53",
+  "block_sequence_sha256": "d097b75d2f0ae2f7dae8a6f9227f21532b65f46dc495b02b18ddc91cb05f3322",
+  "blocks": [
+    {
+      "block_id": "page-0571-block-0000",
+      "order": 0,
+      "text": "550    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "8ad30e0c0d96463216b9d640409973decb0a112f4759fae6de32092e4b0aca6c"
+    },
+    {
+      "block_id": "page-0571-block-0001",
+      "order": 1,
+      "text": "CHAPTER  5\n",
+      "bbox": [
+        18.520000457763672,
+        338.22650146484375,
+        28.0,
+        381.79449462890625
+      ],
+      "text_sha256": "4086e0916f45ec531cc17b8c611334eb2b1ef26051ba536579b8ef3c22c1648d"
+    },
+    {
+      "block_id": "page-0571-block-0002",
+      "order": 2,
+      "text": "Table 5.2  Summary of RCT evidence on medication used in youth with bipolar depression\n",
+      "bbox": [
+        67.8904037475586,
+        407.05938720703125,
+        356.1604919433594,
+        415.9468994140625
+      ],
+      "text_sha256": "f7ce6eef1f6de390d5c3624f9a8c6a995239d13fa8435ae7d896734c407963be"
+    },
+    {
+      "block_id": "page-0571-block-0003",
+      "order": 3,
+      "text": "Medication\nComments\n",
+      "bbox": [
+        61.89039993286133,
+        427.68438720703125,
+        191.3928985595703,
+        436.5718994140625
+      ],
+      "text_sha256": "35aee83f47070555718b2b25a126fdd48bff57144c738e16c7b958a5157b9767"
+    },
+    {
+      "block_id": "page-0571-block-0004",
+      "order": 4,
+      "text": "Quetiapine\nIn adults, there is considerably better evidence for efficacious treatments (see the \nsection on bipolar depression), such as quetiapine.42,43 Surprisingly, however, a \nsmall study in 32 adolescents,44 followed by a larger RCT (N = 193)45 failed to \nshow effectiveness. This latest study had a high placebo response, which is not \npresent in adult quetiapine studies46 and which may reflect issues that have been \nnoted before about phenotyping of mood disorders and multi-site studies47\n",
+      "bbox": [
+        61.89039611816406,
+        444.889404296875,
+        426.36029052734375,
+        503.5943908691406
+      ],
+      "text_sha256": "5d296fbf1b0040bd7925c15bc0a4b942d265736477ccb173e0b1a9f80b4267f0"
+    },
+    {
+      "block_id": "page-0571-block-0005",
+      "order": 5,
+      "text": "Olanzapine/fluoxetine \ncombination\n",
+      "bbox": [
+        61.89039993286133,
+        509.9143981933594,
+        133.56039428710938,
+        528.619384765625
+      ],
+      "text_sha256": "ba9889953827fcc13711f2624fb43a9a95b4b7cd31f6abe0196456a732b694b9"
+    },
+    {
+      "block_id": "page-0571-block-0006",
+      "order": 6,
+      "text": "The only double-blind randomised placebo-controlled trial with positive results for the \ntreatment of bipolar depression in youth is a large study (N = 255) of the olanzapine/\nfluoxetine combination (either 6/25mg or 12/50mg daily) for 8 weeks.48 Between-group \ndifferences were significant at week 1 and all subsequent visits. Most frequent side \neffects were weight gain (4.4kg for the olanzapine/fluoxetine combination vs 0.5kg for \nplacebo), somnolence and hyperlipidaemia. The olanzapine/fluoxetine combination is \nrecommended by NICE guidelines,5 along with quetiapine, as first-line treatment for \nbipolar depression in youth, as in adults. Although the olanzapine/fluoxetine \ncombination is not currently available as a single preparation in the UK, its effects can \nbe achieved by combining olanzapine and fluoxetine (e.g. 5/20mg or 10/40mg)\n",
+      "bbox": [
+        153.88980102539062,
+        509.9143981933594,
+        429.97222900390625,
+        608.6143798828125
+      ],
+      "text_sha256": "52be23716056493fff7661c83aa037b15d30d18bbd72a5176c1e4e1972fffe82"
+    },
+    {
+      "block_id": "page-0571-block-0007",
+      "order": 7,
+      "text": "Table 5.1  (Continued)\n",
+      "bbox": [
+        67.88999938964844,
+        70.08790588378906,
+        140.00999450683594,
+        78.97540283203125
+      ],
+      "text_sha256": "7fe9741501d318ba637c329b1e42a540a41d44ee1ce2be32c22ddbbdb890c233"
+    },
+    {
+      "block_id": "page-0571-block-0008",
+      "order": 8,
+      "text": "Medication\nComments\n",
+      "bbox": [
+        61.88999938964844,
+        89.88612365722656,
+        174.38998413085938,
+        98.77362060546875
+      ],
+      "text_sha256": "35aee83f47070555718b2b25a126fdd48bff57144c738e16c7b958a5157b9767"
+    },
+    {
+      "block_id": "page-0571-block-0009",
+      "order": 9,
+      "text": "Quetiapine\nA double-blind, placebo-controlled study (N = 277)35 showed quetiapine (at doses of \n400mg/day or 600mg/day) to be significantly better than placebo in reducing mean YMRS \nscores at 3 weeks. The most common side effects included somnolence and sedation. \nWeight gain was 1.7kg in the quetiapine group versus 0.4kg for placebo\n",
+      "bbox": [
+        61.88999938964844,
+        107.09114837646484,
+        426.8179016113281,
+        145.79119873046875
+      ],
+      "text_sha256": "4562dab6cbde48470d2005c4b23fe1f2e64ec3a2e260bd2a73bfc67fa79b55b8"
+    },
+    {
+      "block_id": "page-0571-block-0010",
+      "order": 10,
+      "text": "Quetiapine is effective as an adjunct to valproate compared with valproate alone (N = 30, \n6 weeks)36 and was as effective as valproate in a double-blind trial (N = 50, 4 weeks)37\n",
+      "bbox": [
+        136.8903045654297,
+        153.03619384765625,
+        424.3503112792969,
+        171.7987060546875
+      ],
+      "text_sha256": "43f1681602b5d86e8d691195404d6982397c174707363775593bff1db1707f45"
+    },
+    {
+      "block_id": "page-0571-block-0011",
+      "order": 11,
+      "text": "Aripiprazole\nA double-blind placebo-controlled study38,39 showed aripiprazole (at doses 10mg/day or \n30mg/day) to be significantly better than placebo in reducing mean YMRS scores at both \n4 weeks (N = 296)38 and 30 weeks (N = 210).39 Note the significantly higher incidence of \nextrapyramidal side effects in the treatment groups (especially the higher dose). Weight \ngain was significantly higher in the treatment groups compared to placebo (3.0kg versus \n6.5kg for the low and 6.6kg for the high dose arm) at week 30 but not at week 4\n",
+      "bbox": [
+        61.88999938964844,
+        178.11607360839844,
+        422.50836181640625,
+        236.81607055664062
+      ],
+      "text_sha256": "677ab2d306a0d4d278dbf6e33c8d2041ca9683a0ca1892459a8aab4ba87db456"
+    },
+    {
+      "block_id": "page-0571-block-0012",
+      "order": 12,
+      "text": "Ziprasidone\nA double-blind, placebo-controlled trial (N = 237)40 showed ziprasidone (at flexible doses \n40–160mg) to be significantly more effective than placebo in reducing mean YMRS scores \nat 4 weeks. Sedation and somnolence were the most common side effects, while it \ndemonstrated a neutral metabolic profile and no QTc prolongation\n",
+      "bbox": [
+        61.886077880859375,
+        243.1310577392578,
+        426.66033935546875,
+        281.8410949707031
+      ],
+      "text_sha256": "ad029b0257fe6a21944af2d5eef12132da8883e704983e73e15387b06d0c0831"
+    },
+    {
+      "block_id": "page-0571-block-0013",
+      "order": 13,
+      "text": "Asenapine\nA 3 weeks double-blind, placebo-controlled study (N = 350) demonstrated statistical \nsuperiority of asenapine over placebo for each of the doses used (2.5, 5 or 10mg b.i.d.), \nwith significant difference as early as day 4. However, many side effects were reported, \nincluding weight gain of more than 7% from baseline (8–12% incidence in asenapine \ngroup vs 1.1% in placebo group), metabolic changes (increase in fasting insulin, lipids, \nglucose), as well as somnolence, sedation, oral hypoaesthesia and paraesthesia41\n",
+      "bbox": [
+        61.890289306640625,
+        288.1560974121094,
+        419.89532470703125,
+        346.85107421875
+      ],
+      "text_sha256": "e2a520f43f7ecf9567f12031e928e9eccb501457a045a1201cb3a49993190128"
+    },
+    {
+      "block_id": "page-0571-block-0014",
+      "order": 14,
+      "text": "ALT, alanine transaminase; AST, aspartate aminotransferase; ER, extended release; MS, mood stabilisers; RCT, \nrandomised controlled trial; YMRS, Young Mania Rating Scale.\n",
+      "bbox": [
+        61.88999938964844,
+        359.1661071777344,
+        410.7000732421875,
+        377.87109375
+      ],
+      "text_sha256": "1fcf76244f844eec7c70ef3e7643885a1adcba89f867190dcec216d0fa533407"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

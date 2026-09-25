@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0243",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 243,
+  "source_page_index": 242,
+  "source_page_display": 243,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "222    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nClozapine: serious haematological and cardiovascular adverse effects\nAgranulocytosis, thromboembolism, cardiomyopathy and myocarditis\nClozapine is a somewhat toxic drug, but it may reduce overall mortality in schizophre-\nnia,1 largely because of a reduction in the rate of suicide.2–4 Clozapine can cause serious, \nlife-threatening adverse effects, of which agranulocytosis is the best known, and which \nis seen in 0.4% of clozapine patients.5 The incidence of death related to agranulocytosis \nfollowing clozapine prescription is 0.013%, with a case fatality rate of 2.1%.6 Risk is \nclearly well managed by the approved clozapine monitoring systems and the incidence \nof severe neutropenia declines to negligible levels after the first year of treatment.6 \nSuccessful rechallenge after clozapine-associated neutropenia may be possible,7 but not \nafter agranulocytosis.8 Most neutropenia occurring in the context of clozapine treat-\nment is coincidental to the use of clozapine.9\nThromboembolism\nA possible association between clozapine and thromboembolism has been suggested.10 \nInitially, Walker et al.2 uncovered a risk of fatal pulmonary embolism of 1 in 4500 – \nabout 20 times the risk in the population as a whole. Following a case report of non-\nfatal pulmonary embolism possibly related to clozapine,11 data from the Swedish \nauthorities were published.12 Twelve cases of venous thromboembolism were described, \nof which five were fatal. The risk of thromboembolism was estimated to be 1 in 2000 \nto 1 in 6000 patients treated. Thromboembolism may be related to clozapine’s observed \neffects on antiphospholipid antibodies13 and platelet aggregation.14 It seems most likely \nto occur in the first 6 months of treatment15 but can occur at any time. The risk may be \nindependent of dose,15 but some studies suggest a correlation with higher doses.16 Other \nantipsychotics are also strongly linked to thromboembolism, although clozapine may \npresent the highest risk.16,17\nWith all drugs, the causes of thromboembolism are probably multifactorial.18 \nSedation may lead to a reduction in movement and consequent venous stasis. Obesity, \nhyperprolactinaemia and smoking are additional independent risk factors for thrombo-\nembolism.19,20 Encouraging exercise and ensuring good hydration are essential precau-\ntionary measures.21\nMyocarditis and cardiomyopathy\nClozapine is associated with myocarditis and cardiomyopathy. Myocarditis is a \nhypersensitivity response to clozapine, resulting in inflammation of the myocar-\ndium. Some debate surrounds the prevalence of myocarditis, with several Australian \nstudies finding it to occur in around 3% of patients.22–24 Studies conducted else-\nwhere25–27 have suggested much a lower incidence of 1% or less. The reason for such \nvariation in reported incidence is unclear; some authors propose that a lack of \nrobust monitoring leads to missed diagnoses in those countries reporting lower inci-\ndences.28 Meta-analysis suggests an event rate of less than 1% – 7 per 1000 patients.29 \nMyocarditis is potentially fatal (case fatality rate of 12.7%29), and is most likely to \n",
+  "raw_text_sha256": "189e3dee722ae1c7c60f833022a494bb6e93a43934ef20d29fc0db33bf938880",
+  "coordinates_sha256": "a466e8e1d78512d51f49cd72933e681782a1c7f88cc25c4668e3c704824d2e08",
+  "block_sequence_sha256": "38a53f9ed2c2a44924e68d144ae03518a36e8b6d160065237974027fc2f02c72",
+  "blocks": [
+    {
+      "block_id": "page-0243-block-0000",
+      "order": 0,
+      "text": "222    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "26c5580edba720ee12073201be7cc8609808b3cd74b595eb3879bc522557c627"
+    },
+    {
+      "block_id": "page-0243-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0243-block-0002",
+      "order": 2,
+      "text": "Clozapine: serious haematological and cardiovascular adverse effects\n",
+      "bbox": [
+        68.88909912109375,
+        66.06448364257812,
+        425.4541320800781,
+        79.0994873046875
+      ],
+      "text_sha256": "c6435977af01fdd9e2f0153ab52978fba8468eabb396bc29cf700c5f0375c8a4"
+    },
+    {
+      "block_id": "page-0243-block-0003",
+      "order": 3,
+      "text": "Agranulocytosis, thromboembolism, cardiomyopathy and myocarditis\n",
+      "bbox": [
+        61.893096923828125,
+        90.06649780273438,
+        421.8902282714844,
+        103.10150146484375
+      ],
+      "text_sha256": "5d851d54230376f4fd8fec690729a24c02e006d42936ebcc1c4e61a35e610b2c"
+    },
+    {
+      "block_id": "page-0243-block-0004",
+      "order": 4,
+      "text": "Clozapine is a somewhat toxic drug, but it may reduce overall mortality in schizophre-\nnia,1 largely because of a reduction in the rate of suicide.2–4 Clozapine can cause serious, \nlife-threatening adverse effects, of which agranulocytosis is the best known, and which \nis seen in 0.4% of clozapine patients.5 The incidence of death related to agranulocytosis \nfollowing clozapine prescription is 0.013%, with a case fatality rate of 2.1%.6 Risk is \nclearly well managed by the approved clozapine monitoring systems and the incidence \nof severe neutropenia declines to negligible levels after the first year of treatment.6 \nSuccessful rechallenge after clozapine-associated neutropenia may be possible,7 but not \nafter agranulocytosis.8 Most neutropenia occurring in the context of clozapine treat-\nment is coincidental to the use of clozapine.9\n",
+      "bbox": [
+        61.88560485839844,
+        108.90948486328125,
+        436.6895446777344,
+        228.62942504882812
+      ],
+      "text_sha256": "9c9ba4707cd139e9184a92365a5cfa68dc712bad79f2961b8f09980e718f3c00"
+    },
+    {
+      "block_id": "page-0243-block-0005",
+      "order": 5,
+      "text": "Thromboembolism\n",
+      "bbox": [
+        61.88909912109375,
+        246.06442260742188,
+        158.86508178710938,
+        259.09942626953125
+      ],
+      "text_sha256": "699d0208390863fe48f912055959a06a6ae7c69e1ac83a27383f7f0cfaeebd92"
+    },
+    {
+      "block_id": "page-0243-block-0006",
+      "order": 6,
+      "text": "A possible association between clozapine and thromboembolism has been suggested.10 \nInitially, Walker et al.2 uncovered a risk of fatal pulmonary embolism of 1 in 4500 – \nabout 20 times the risk in the population as a whole. Following a case report of non-\nfatal pulmonary embolism possibly related to clozapine,11 data from the Swedish \nauthorities were published.12 Twelve cases of venous thromboembolism were described, \nof which five were fatal. The risk of thromboembolism was estimated to be 1 in 2000 \nto 1 in 6000 patients treated. Thromboembolism may be related to clozapine’s observed \neffects on antiphospholipid antibodies13 and platelet aggregation.14 It seems most likely \nto occur in the first 6 months of treatment15 but can occur at any time. The risk may be \nindependent of dose,15 but some studies suggest a correlation with higher doses.16 Other \nantipsychotics are also strongly linked to thromboembolism, although clozapine may \npresent the highest risk.16,17\n",
+      "bbox": [
+        61.88560485839844,
+        264.66943359375,
+        436.6924743652344,
+        408.6294250488281
+      ],
+      "text_sha256": "6de782a5707c4a98476af0aea0d58c876056191b917c0896fda35307ab6a34f3"
+    },
+    {
+      "block_id": "page-0243-block-0007",
+      "order": 7,
+      "text": "With all drugs, the causes of thromboembolism are probably multifactorial.18 \nSedation may lead to a reduction in movement and consequent venous stasis. Obesity, \nhyperprolactinaemia and smoking are additional independent risk factors for thrombo-\nembolism.19,20 Encouraging exercise and ensuring good hydration are essential precau-\ntionary measures.21\n",
+      "bbox": [
+        61.88519287109375,
+        408.909423828125,
+        436.6794738769531,
+        468.6294250488281
+      ],
+      "text_sha256": "ce953be4f3dcdb17bbbce9a5f1f9477078bcce67b1c12295b6cdca3ee2e6e708"
+    },
+    {
+      "block_id": "page-0243-block-0008",
+      "order": 8,
+      "text": "Myocarditis and cardiomyopathy\n",
+      "bbox": [
+        61.88909912109375,
+        486.0644226074219,
+        232.0150909423828,
+        499.09942626953125
+      ],
+      "text_sha256": "11d13a19c16f3474c1459d3e37d1c6382adce9eac5909466873687c845e79d69"
+    },
+    {
+      "block_id": "page-0243-block-0009",
+      "order": 9,
+      "text": "Clozapine is associated with myocarditis and cardiomyopathy. Myocarditis is a \nhypersensitivity response to clozapine, resulting in inflammation of the myocar-\ndium. Some debate surrounds the prevalence of myocarditis, with several Australian \nstudies finding it to occur in around 3% of patients.22–24 Studies conducted else-\nwhere25–27 have suggested much a lower incidence of 1% or less. The reason for such \nvariation in reported incidence is unclear; some authors propose that a lack of \nrobust monitoring leads to missed diagnoses in those countries reporting lower inci-\ndences.28 Meta-analysis suggests an event rate of less than 1% – 7 per 1000 patients.29 \nMyocarditis is potentially fatal (case fatality rate of 12.7%29), and is most likely to \n",
+      "bbox": [
+        61.884307861328125,
+        504.66943359375,
+        436.6940612792969,
+        612.6294555664062
+      ],
+      "text_sha256": "f576c94cd7fd1816db0aaa61678279dd2ba997c5f6df01077996737103c0fd31"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

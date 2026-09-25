@@ -1,0 +1,12 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0266",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 266,
+  "source_page_index": 265,
+  "repaired_text": "Schizophrenia and related psychoses    245\nCHAPTER 1\nBenign ethnic neutropenia\nACKR1 rs2814778\t\n\u0007CC genotype at rs2814778 (Duffy Null Status) is considered \nto be the cause of BEN9\nMetabolism\nClozapine is largely metabolised by CYP1A2 and, to a lesser extent, CYP3A4/5. \nCYP2D6 plays almost no role. Metabolic rate is usually classified as poor (PM), inter-\nmediate (IM) or extensive (EM) and each is associated with a particular genetic variant. \nGenetic analysis can therefore allow an estimate of the target dose of clozapine for an \nindividual.\nCytochrome p4501A2\t\n\u0007PM/IM/EM status as normally defined by analysis of e.g. \nCYP1A2*1 F/1 C/1A/1K10\nCytochrome p4503A4\t\nPM/IM/EM status\n\t\n\u0007CYP3A4 is a minor route of clozapine metabolism but \nmetaboliser status affects blood concentration.11\nCytochrome p4503A5\t\nPM/IM/EM status\n\t\n\u0007CYP3A5 PM status associated with elevated clozapine \nblood levels12\nOther non-CYP genetic associations have also been demonstrated.\nNFIB rs28379954 T > C\t\n\u0007CT carriers have much lower blood concentrations than \nTT carriers in both smokers and non-smokers13\nAlso the rs2472297 genotype independently predicts clozapine plasm levels.14 Levels \nare highest in C/C carriers and lowest in T/T carriers (C/T somewhere in between). This \nsingle nucleotide polymorphism is located bewteen genes coding for CYP1A1 and \nCYP1A2 on chromosome 15.\nOther adverse effects\nGenetic predictors of myocarditis15 and weight gain16 have also been found but associa-\ntions are probably too weak to allow clinical application.10",
+  "repaired_text_sha256": "8d0b2309f8bfe8d9424bebed65d074a240b53a0cbc572f2f165d0b5da3c43944",
+  "raw_text_sha256": "7ebe1960d7c0987c22b37ae6a813a746ce5773b789cfd84fba5a67d086668d20",
+  "repair_ids": [],
+  "raw_file": "raw/page-0266.json"
+}

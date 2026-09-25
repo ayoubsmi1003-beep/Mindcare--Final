@@ -1,0 +1,107 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0868",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 868,
+  "source_page_index": 867,
+  "source_page_display": 868,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Pharmacokinetics    847\nCHAPTER 11\nInterpreting postmortem blood concentrations\nMuch is known about the distribution of drugs in the body during life but relatively \nlittle about these same parameters after death. A great many drugs are subject to post-\nmortem distribution changes but, for obvious practical reasons, research into the mech-\nanisms and extent of these effects is very limited. The best that can be said is that a drug \nplasma concentration measured during life may be very different from the concentra-\ntion measured at some time after death (usually in whole blood from the femoral \nartery).\nA number of processes are responsible for these changes. In life, active mechanisms \nserve to concentrate some drugs in certain organs or tissues. After death, passive diffu-\nsion occurs as cell membranes break down and this will mean that postmortem blood \nsamples will, for some drugs, show higher concentrations than were seen during life. \n(This is known as post mortem redistribution (PMR) and has been described as a ‘toxi-\ncological nightmare’1 because of the number of different processes involved.) In addi-\ntion, central blood vessels surrounding major organs often demonstrate much higher \ndrug concentrations than relatively distant peripheral samples.2 PMR and other pro-\ncesses are temperature- and time-dependent and so time since death and conditions of \nstorage are important determinants of blood concentration changes.3 Postmortem \nredistribution tends to be greater with drugs with a large volume of distribution (i.e. \nthose for which tissue concentrations in life vastly exceed blood concentrations) espe-\ncially when given over a long period during life.\nOther processes of importance4 include the postmortem synthesis of certain com-\npounds. For example, the body is able to generate gamma-hydroxy butyrate. Trauma \nmay allow the introduction of yeasts that metabolise glucose to alcohol. Another phe-\nnomenon is the degradation of drugs by bacteria (e.g. clonazepam and nitrazepam) or \nfungi. Also, the metabolism of some drugs (cocaine, for example) appears to continue \nafter death (although this may be simple chemical instability of the parent \ncompound).\nTable 11.3 lists some of the factors relevant to drug concentration changes after \ndeath and the possible consequences of these processes. Generally speaking, an isolated \npostmortem blood concentration cannot be sensibly interpreted. Even where in-life lev-\nels are available, experts agree that, for most drugs in most circumstances, interpreta-\ntion of blood levels after death is near impossible: high concentrations should certainly \nnot be taken, in the absence of other evidence, to indicate death by overdose, for exam-\nple. Two valuable reference sources for interpretation of PM sample analysis are the \nsystematic reviews of Ketola and Kriikku5 and Ketola and Ojanpera.6 Expert advice \nshould always be sought when considering the role of medication in a death.7\n",
+  "raw_text_sha256": "f638c8188cb18274e49f27a125cbbb695c5bb7226ef63f43c9ba46291e1eeddb",
+  "coordinates_sha256": "6de3cfa1b6186daff14d0afcc2ece9643ad9462dfa125f406d4ed25944d745b2",
+  "block_sequence_sha256": "94e9fb9b3346292815e046d997c8fcccece46f84153d6bb4f5ca4ff854b6e193",
+  "blocks": [
+    {
+      "block_id": "page-0868-block-0000",
+      "order": 0,
+      "text": "Pharmacokinetics    847\n",
+      "bbox": [
+        320.4088134765625,
+        31.395221710205078,
+        420.00079345703125,
+        41.0272216796875
+      ],
+      "text_sha256": "6c4f93df8023ee65a24276fb09997c579e2b779cccad44170da0ffd40b738e28"
+    },
+    {
+      "block_id": "page-0868-block-0001",
+      "order": 1,
+      "text": "CHAPTER 11\n",
+      "bbox": [
+        454.4096984863281,
+        140.99053955078125,
+        463.88970947265625,
+        186.78250122070312
+      ],
+      "text_sha256": "8577f8a61d9be9d957b7354680b21b61adb6e8c4601aaa9be76ccc79360dc7f3"
+    },
+    {
+      "block_id": "page-0868-block-0002",
+      "order": 2,
+      "text": "Interpreting postmortem blood concentrations\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        296.2079772949219,
+        79.1004638671875
+      ],
+      "text_sha256": "62cfcffdc6e9ae5c9a25702b74c36274cd705b3b0cdd7d9b3a92f5e44996f0eb"
+    },
+    {
+      "block_id": "page-0868-block-0003",
+      "order": 3,
+      "text": "Much is known about the distribution of drugs in the body during life but relatively \nlittle about these same parameters after death. A great many drugs are subject to post-\nmortem distribution changes but, for obvious practical reasons, research into the mech-\nanisms and extent of these effects is very limited. The best that can be said is that a drug \nplasma concentration measured during life may be very different from the concentra-\ntion measured at some time after death (usually in whole blood from the femoral \nartery).\n",
+      "bbox": [
+        48.0,
+        84.91046142578125,
+        422.85009765625,
+        168.63046264648438
+      ],
+      "text_sha256": "16ad3f2772dd474e555b7011904b2d5d0085ff53dd9d5801ac168e19e9e41cec"
+    },
+    {
+      "block_id": "page-0868-block-0004",
+      "order": 4,
+      "text": "A number of processes are responsible for these changes. In life, active mechanisms \nserve to concentrate some drugs in certain organs or tissues. After death, passive diffu-\nsion occurs as cell membranes break down and this will mean that postmortem blood \nsamples will, for some drugs, show higher concentrations than were seen during life. \n(This is known as post mortem redistribution (PMR) and has been described as a ‘toxi-\ncological nightmare’1 because of the number of different processes involved.) In addi-\ntion, central blood vessels surrounding major organs often demonstrate much higher \ndrug concentrations than relatively distant peripheral samples.2 PMR and other pro-\ncesses are temperature- and time-dependent and so time since death and conditions of \nstorage are important determinants of blood concentration changes.3 Postmortem \nredistribution tends to be greater with drugs with a large volume of distribution (i.e. \nthose for which tissue concentrations in life vastly exceed blood concentrations) espe-\ncially when given over a long period during life.\n",
+      "bbox": [
+        47.998291015625,
+        168.91046142578125,
+        422.8218994140625,
+        324.6304931640625
+      ],
+      "text_sha256": "c9e6305b825d8154cc1614192736e845f17b771b0edd6935ba234f973b73a322"
+    },
+    {
+      "block_id": "page-0868-block-0005",
+      "order": 5,
+      "text": "Other processes of importance4 include the postmortem synthesis of certain com-\npounds. For example, the body is able to generate gamma-hydroxy butyrate. Trauma \nmay allow the introduction of yeasts that metabolise glucose to alcohol. Another phe-\nnomenon is the degradation of drugs by bacteria (e.g. clonazepam and nitrazepam) or \nfungi. Also, the metabolism of some drugs (cocaine, for example) appears to continue \nafter death (although this may be simple chemical instability of the parent \ncompound).\n",
+      "bbox": [
+        48.001708984375,
+        324.9104919433594,
+        422.8016662597656,
+        408.6304931640625
+      ],
+      "text_sha256": "bb18872671eaa44448036fa020b05fd2b581edcbf85b16e455e17e69921ec6e7"
+    },
+    {
+      "block_id": "page-0868-block-0006",
+      "order": 6,
+      "text": "Table 11.3 lists some of the factors relevant to drug concentration changes after \ndeath and the possible consequences of these processes. Generally speaking, an isolated \npostmortem blood concentration cannot be sensibly interpreted. Even where in-life lev-\nels are available, experts agree that, for most drugs in most circumstances, interpreta-\ntion of blood levels after death is near impossible: high concentrations should certainly \nnot be taken, in the absence of other evidence, to indicate death by overdose, for exam-\nple. Two valuable reference sources for interpretation of PM sample analysis are the \nsystematic reviews of Ketola and Kriikku5 and Ketola and Ojanpera.6 Expert advice \nshould always be sought when considering the role of medication in a death.7\n",
+      "bbox": [
+        48.001708984375,
+        408.9104919433594,
+        422.8117370605469,
+        516.6304931640625
+      ],
+      "text_sha256": "ef34844bd5815d9e16a2feadc226196ea0552357b5488cd02b0e6380b6d539eb"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

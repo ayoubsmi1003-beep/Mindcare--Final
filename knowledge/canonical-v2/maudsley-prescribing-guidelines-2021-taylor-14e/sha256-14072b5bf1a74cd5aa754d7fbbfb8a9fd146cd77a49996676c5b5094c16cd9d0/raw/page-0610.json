@@ -1,0 +1,107 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0610",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 610,
+  "source_page_index": 609,
+  "source_page_display": 610,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Children and adolescents    589\nCHAPTER 5\nand pimozide (N = 25) in TS over a 24-month period demonstrated that treatment was \nnot associated with significant increase in body mass index. However, pimozide treat-\nment was associated with increases in blood glucose which did not plateau from 12 to \n24 months, aripiprazole treatment was associated with increased cholesterol and both \nmedications were associated with increased triglycerides.27 Two meta-analyses support \nthe efficacy of aripiprazole.28,29 One study30 suggests twice weekly administration may be \nbetter tolerated than daily dosing. A small randomised controlled trial (N = 24) compar-\ning aripiprazole with sodium valproate in children with TS demonstrated a statistically \nsignificant difference in tic reduction favouring aripiprazole.31\nRisperidone has in addition to the studies mentioned above also been shown to be \nmore effective than placebo in a small (N  =  34), randomised study.32 Fatigue and \nincreased appetite were problematic in the risperidone arm and a mean weight gain of \n2.8kg over 8 weeks was reported. One small randomised, controlled trial found risperi-\ndone and clonidine to be equally effective.33 A small double-blind crossover study sug-\ngested that olanzapine34 may be more effective than pimozide. Sulpiride has been shown \nto be effective and relatively well tolerated,35 as has ziprasidone.36 Open studies support \nthe efficacy of quetiapine37 and olanzapine.38,39 One very small crossover study (N = 7) \nfound no effect for clozapine.40\nOverall, metabolic side-effects and weight gain are common with second generation \nantipsychotics, even aripiprazole, so benefit/risk ratios need careful discussion.18\nOther drugs\nA small, double-blind, placebo-controlled, crossover trial of baclofen was suggestive of \nbeneficial effects in overall impairment rather than a specific effect on tics.41 The numeri-\ncal benefits shown in this study did not reach statistical significance. Similarly, a double-\nblind, placebo-controlled trial of nicotine augmentation of haloperidol found beneficial \neffects in overall impairment rather than a specific effect on tics.42 These benefits persisted \nfor several weeks after nicotine (in the form of patches) was withdrawn. Nicotine patches \nwere associated with a high prevalence of nausea and vomiting (71% and 40%, respec-\ntively). The authors suggest that PRN use may be appropriate. Pergolide (a D1–D2–D3 \nagonist) given in low dose significantly reduced tics in a double-blind, placebo-controlled, \ncrossover study in children and adolescents.43 Side-effects included sedation, dizziness, \nnausea and irritability. Pergolide was also evaluated in a randomised trial in children and \nadolescents with chronic tics and TS, and showed significant tic reduction compared with \nplacebo.44 Flutamide, an antiandrogen, has been the subject of a small RCT in adults with \nTS. Modest, short-lived effects were seen in motor but not phonic tics.45 A small ran-\ndomised controlled trial has shown significant advantages for metoclopramide over pla-\ncebo46 and for topiramate over placebo.47 A meta-analysis identified 14 randomised \ncontrolled trials (all from China) comparing topiramate with haloperidol or tiapride. It \nconcluded that owing to the overall low quality of the study designs, there is not enough \nevidence to support the routine use of topiramate in clinical practice.48 More recently the \nuse of the monoamine depleting agent deutetrabenazine has been shown to be effective.49 \nTetrabenazine may also be useful as an add-on treatment.50 Ecopipam, a D1 receptor \nantagonist, was also found to be effective in the treatment of tics in a recent randomised \nplacebo-controlled crossover study including children and adolescents with TS.51\n",
+  "raw_text_sha256": "86b1ad6230d83e96ec05940a7aca4aee59402b20ad7cbdb8ab2434d80dce8d63",
+  "coordinates_sha256": "1a33874d73b1316285e4ae1a9ecff979de489ebd1494c81fbb1dbe533e03fce7",
+  "block_sequence_sha256": "0d83cf0cc0b92b630a8a4a727b26f33815ebb54ae60d4888566b93d4507ee526",
+  "blocks": [
+    {
+      "block_id": "page-0610-block-0000",
+      "order": 0,
+      "text": "Children and adolescents    589\n",
+      "bbox": [
+        288.94488525390625,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "40668344d8ecc199f29a617872cf04310b397487a020d8451d866d3671181946"
+    },
+    {
+      "block_id": "page-0610-block-0001",
+      "order": 1,
+      "text": "CHAPTER 5\n",
+      "bbox": [
+        454.4096984863281,
+        339.3385009765625,
+        463.88970947265625,
+        380.6824951171875
+      ],
+      "text_sha256": "f4b8b4a0fc64e7b3b74e7336306d0959d0384683e387792724f393162639020a"
+    },
+    {
+      "block_id": "page-0610-block-0002",
+      "order": 2,
+      "text": "and pimozide (N = 25) in TS over a 24-month period demonstrated that treatment was \nnot associated with significant increase in body mass index. However, pimozide treat-\nment was associated with increases in blood glucose which did not plateau from 12 to \n24 months, aripiprazole treatment was associated with increased cholesterol and both \nmedications were associated with increased triglycerides.27 Two meta-analyses support \nthe efficacy of aripiprazole.28,29 One study30 suggests twice weekly administration may be \nbetter tolerated than daily dosing. A small randomised controlled trial (N = 24) compar-\ning aripiprazole with sodium valproate in children with TS demonstrated a statistically \nsignificant difference in tic reduction favouring aripiprazole.31\n",
+      "bbox": [
+        48.0,
+        62.5504150390625,
+        422.83001708984375,
+        170.27041625976562
+      ],
+      "text_sha256": "52ddd8b93d8620e482c92639eeb5aa614865f73f4b5a490d428c8f1d5599a1c3"
+    },
+    {
+      "block_id": "page-0610-block-0003",
+      "order": 3,
+      "text": "Risperidone has in addition to the studies mentioned above also been shown to be \nmore effective than placebo in a small (N  =  34), randomised study.32 Fatigue and \nincreased appetite were problematic in the risperidone arm and a mean weight gain of \n2.8kg over 8 weeks was reported. One small randomised, controlled trial found risperi-\ndone and clonidine to be equally effective.33 A small double-blind crossover study sug-\ngested that olanzapine34 may be more effective than pimozide. Sulpiride has been shown \nto be effective and relatively well tolerated,35 as has ziprasidone.36 Open studies support \nthe efficacy of quetiapine37 and olanzapine.38,39 One very small crossover study (N = 7) \nfound no effect for clozapine.40\n",
+      "bbox": [
+        47.999114990234375,
+        170.31048583984375,
+        422.82977294921875,
+        278.2704772949219
+      ],
+      "text_sha256": "8c0d8ff68984ea8e0567a0d11f22bdef5b3f22e80a36e6e76d00cb2684da9c85"
+    },
+    {
+      "block_id": "page-0610-block-0004",
+      "order": 4,
+      "text": "Overall, metabolic side-effects and weight gain are common with second generation \nantipsychotics, even aripiprazole, so benefit/risk ratios need careful discussion.18\n",
+      "bbox": [
+        47.999900817871094,
+        278.55047607421875,
+        422.8099670410156,
+        302.2704772949219
+      ],
+      "text_sha256": "3a1ddcbb5180c0e45ae6ac27fea7c46b6af9102d065b69ebb6264aa9db35b17c"
+    },
+    {
+      "block_id": "page-0610-block-0005",
+      "order": 5,
+      "text": "Other drugs\n",
+      "bbox": [
+        47.999900817871094,
+        320.6404724121094,
+        104.6698989868164,
+        332.490478515625
+      ],
+      "text_sha256": "3b2e081737a6c99cc29e76c99e42cc9c981fa665531b664fe829a17d59e94f54"
+    },
+    {
+      "block_id": "page-0610-block-0006",
+      "order": 6,
+      "text": "A small, double-blind, placebo-controlled, crossover trial of baclofen was suggestive of \nbeneficial effects in overall impairment rather than a specific effect on tics.41 The numeri-\ncal benefits shown in this study did not reach statistical significance. Similarly, a double-\nblind, placebo-controlled trial of nicotine augmentation of haloperidol found beneficial \neffects in overall impairment rather than a specific effect on tics.42 These benefits persisted \nfor several weeks after nicotine (in the form of patches) was withdrawn. Nicotine patches \nwere associated with a high prevalence of nausea and vomiting (71% and 40%, respec-\ntively). The authors suggest that PRN use may be appropriate. Pergolide (a D1–D2–D3 \nagonist) given in low dose significantly reduced tics in a double-blind, placebo-controlled, \ncrossover study in children and adolescents.43 Side-effects included sedation, dizziness, \nnausea and irritability. Pergolide was also evaluated in a randomised trial in children and \nadolescents with chronic tics and TS, and showed significant tic reduction compared with \nplacebo.44 Flutamide, an antiandrogen, has been the subject of a small RCT in adults with \nTS. Modest, short-lived effects were seen in motor but not phonic tics.45 A small ran-\ndomised controlled trial has shown significant advantages for metoclopramide over pla-\ncebo46 and for topiramate over placebo.47 A meta-analysis identified 14 randomised \ncontrolled trials (all from China) comparing topiramate with haloperidol or tiapride. It \nconcluded that owing to the overall low quality of the study designs, there is not enough \nevidence to support the routine use of topiramate in clinical practice.48 More recently the \nuse of the monoamine depleting agent deutetrabenazine has been shown to be effective.49 \nTetrabenazine may also be useful as an add-on treatment.50 Ecopipam, a D1 receptor \nantagonist, was also found to be effective in the treatment of tics in a recent randomised \nplacebo-controlled crossover study including children and adolescents with TS.51\n",
+      "bbox": [
+        47.99729919433594,
+        338.31048583984375,
+        422.82763671875,
+        614.2704467773438
+      ],
+      "text_sha256": "ea10abc5bad710daee975203b2131be048dfad2439689b399183242722e7ecf3"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,371 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0350",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 350,
+  "source_page_index": 349,
+  "source_page_display": 350,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    329\nCHAPTER 3\nAdverse effects\nKetamine generally leads to significant dissociative symptoms when given at antide-\npressant doses.8 These include perceptual distortions and can lead to significant anxiety. \nAs a result, it is necessary that any patients administered ketamine should be observed \nby a trained clinician during dosing and for an hour after administration. Furthermore, \nalthough a rare event, ketamine has been reported to induce laryngospasm and so the \nobserving clinician should be trained in intermediate or advanced life support. When \nketamine is given at lower doses by oral or sublingual routes, it is less likely to induce \nstrong dissociative symptoms, and so once a test dose has been given under clinical \nsupervision, it may be possible for administration to take place in a non-clinical (home) \nsetting although patients should be advised not to drive, operate heavy machinery or \npartake in other high risk activities for at least an hour after administration. In addi-\ntion, consideration must be given by the prescribing clinician to the risks of diversion \nand illegal use.\nKetamine can have significant effects on blood pressure and heart rate, and before \nadministration, a physical examination including baseline blood pressure, full blood \ncount, liver function test, thyroid function test plus ECG is recommended. Furthermore, \nphysical monitoring (blood pressure and heart rate) during and after ketamine admin-\nistration is also indicated.\nTable 3.6  Dosing recommendations for different routes of ketamine administration and intranasal  \nesketamine in TRD\nRoute\nDose\nDetails\nFrequency\nComments\nIV2–6\n■\n■0.5mg/kg, \nincreasing up \nto 1.0mg/kg if \nno response\n■\n■(titrate from \n0.25mg/kg in \nolder people)\n■\n■Infuse over  \n40 minutes\n■\n■Induction phase: \nonce or twice a \nweek\n■\n■Maintenance \nphase: according to \nresponse, weekly \nand then every 2 \nweeks, or even \nmonthly (consider \nsupplementing \nwith oral/sublingual \ndoses between IV \ntreatments)\n■\n■Needs to be adminis-\ntered in clinical setting.\n■\n■Cognitive effects (con-\nfusion, dissociation, \netc.) do occasionally \noccur.\n■\n■Associated with \ntransient increase in \nBP, tachycardia and \narrhythmias. Pre-treat-\nment ECG required. \nMonitor BP before and \nafter infusion.\n■\n■Observe during and for \n1 hour after infusion.\nSC9,10\n■\n■0.5mg/kg, \nincreasing up \nto 1.0mg/kg if \nno response\n■\n■(titrate from \n0.25mg/kg in \nolder people)\n■\n■SC bolus injec-\ntion to appro-\npriate SC site\n■\n■As per IV above\n■\n■As per IV above.\n■\n■May be better toler-\nated than IV or IM \nroutes.9\n(Continued)\n",
+  "raw_text_sha256": "51abe2209bd5ebc658b2728d0a16c92dd667d4a45bc392fc398dc7dd42758fc4",
+  "coordinates_sha256": "2d4b5a6e88d0c84ffe1924c73d124fe6da7ceb89084da09eee983c5aa33cdb37",
+  "block_sequence_sha256": "ab97de8e3f63e8fdce56b8d2a94022e3831206900fd337b3b2c9a6872cb30662",
+  "blocks": [
+    {
+      "block_id": "page-0350-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    329\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "c065fe8a3ece38c9ba701c912653d0681c421444c07e7df95b80720f22bc1b7a"
+    },
+    {
+      "block_id": "page-0350-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0350-block-0002",
+      "order": 2,
+      "text": "Adverse effects\n",
+      "bbox": [
+        48.0,
+        62.31546401977539,
+        127.8709945678711,
+        75.3504638671875
+      ],
+      "text_sha256": "2829b5953031aa8e8e992beffdca9c91044830ce03b830653e6ea31d5de93cfc"
+    },
+    {
+      "block_id": "page-0350-block-0003",
+      "order": 3,
+      "text": "Ketamine generally leads to significant dissociative symptoms when given at antide-\npressant doses.8 These include perceptual distortions and can lead to significant anxiety. \nAs a result, it is necessary that any patients administered ketamine should be observed \nby a trained clinician during dosing and for an hour after administration. Furthermore, \nalthough a rare event, ketamine has been reported to induce laryngospasm and so the \nobserving clinician should be trained in intermediate or advanced life support. When \nketamine is given at lower doses by oral or sublingual routes, it is less likely to induce \nstrong dissociative symptoms, and so once a test dose has been given under clinical \nsupervision, it may be possible for administration to take place in a non-clinical (home) \nsetting although patients should be advised not to drive, operate heavy machinery or \npartake in other high risk activities for at least an hour after administration. In addi-\ntion, consideration must be given by the prescribing clinician to the risks of diversion \nand illegal use.\n",
+      "bbox": [
+        47.99639892578125,
+        81.16046142578125,
+        422.8263854980469,
+        236.88046264648438
+      ],
+      "text_sha256": "3da543121b835991a20d0019a69785b2226ac84daad746cbab522ebfc3252d50"
+    },
+    {
+      "block_id": "page-0350-block-0004",
+      "order": 4,
+      "text": "Ketamine can have significant effects on blood pressure and heart rate, and before \nadministration, a physical examination including baseline blood pressure, full blood \ncount, liver function test, thyroid function test plus ECG is recommended. Furthermore, \nphysical monitoring (blood pressure and heart rate) during and after ketamine admin-\nistration is also indicated.\n",
+      "bbox": [
+        47.99639892578125,
+        237.16046142578125,
+        422.7964172363281,
+        296.8804626464844
+      ],
+      "text_sha256": "8e51efb24061a99d4b786913a0f16a1898c7cb2591e914cad3f464188eaa7efa"
+    },
+    {
+      "block_id": "page-0350-block-0005",
+      "order": 5,
+      "text": "Table 3.6  Dosing recommendations for different routes of ketamine administration and intranasal  \nesketamine in TRD\n",
+      "bbox": [
+        54.0,
+        321.10296630859375,
+        372.26263427734375,
+        339.98797607421875
+      ],
+      "text_sha256": "6f58fef09cafce47900fb5a518253bd4169bc52f84509c71467f05d0378e838b"
+    },
+    {
+      "block_id": "page-0350-block-0006",
+      "order": 6,
+      "text": "Route\nDose\nDetails\nFrequency\nComments\n",
+      "bbox": [
+        48.0,
+        351.337890625,
+        373.5,
+        360.22540283203125
+      ],
+      "text_sha256": "68d937ebbcb220fbebeb9b0f27e09c7046824b5f9d9eb6a5465a3a4d55a92cbc"
+    },
+    {
+      "block_id": "page-0350-block-0007",
+      "order": 7,
+      "text": "IV2–6\n■\n■0.5mg/kg, \n",
+      "bbox": [
+        48.0,
+        368.1153869628906,
+        156.12710571289062,
+        377.0028991699219
+      ],
+      "text_sha256": "e8388b46addd532cfa4319922195fea12f10f5a9228ede5eadc6e0ecab11ca77"
+    },
+    {
+      "block_id": "page-0350-block-0008",
+      "order": 8,
+      "text": "increasing up \nto 1.0mg/kg if \nno response\n■\n■(titrate from \n",
+      "bbox": [
+        112.1094970703125,
+        377.2929992675781,
+        169.04209899902344,
+        413.00048828125
+      ],
+      "text_sha256": "32821823548a431b1b0bae129c1f68c93abe46af5f10722557b5c19c27eb4aae"
+    },
+    {
+      "block_id": "page-0350-block-0009",
+      "order": 9,
+      "text": "0.25mg/kg in \nolder people)\n",
+      "bbox": [
+        121.1095962524414,
+        413.2929992675781,
+        166.13209533691406,
+        431.00048828125
+      ],
+      "text_sha256": "48cca4ea82cf58d8be18176588e69e8413d37304fc0330c32a44acc5806f3337"
+    },
+    {
+      "block_id": "page-0350-block-0010",
+      "order": 10,
+      "text": "■\n■Infuse over  \n",
+      "bbox": [
+        178.99929809570312,
+        368.2929992675781,
+        227.17190551757812,
+        377.00048828125
+      ],
+      "text_sha256": "e37d9b6fa2dfda0fb25046593125a841f2d03313f3dc4fd0eac5a4f018f1e9d5"
+    },
+    {
+      "block_id": "page-0350-block-0011",
+      "order": 11,
+      "text": "40 minutes\n",
+      "bbox": [
+        187.99940490722656,
+        377.2929992675781,
+        223.84188842773438,
+        386.00048828125
+      ],
+      "text_sha256": "7f9a22b71851e7937be5ce90fc20c8268b47df4b36028e42fb49b51b2d0d6a9a"
+    },
+    {
+      "block_id": "page-0350-block-0012",
+      "order": 12,
+      "text": "■\n■Induction phase: \n",
+      "bbox": [
+        251.99929809570312,
+        368.2929992675781,
+        316.01947021484375,
+        377.00048828125
+      ],
+      "text_sha256": "9a27dd1e55e1aa2657846d36a59c25ac2138a023477c271909d927e01c948e8a"
+    },
+    {
+      "block_id": "page-0350-block-0013",
+      "order": 13,
+      "text": "once or twice a \nweek\n■\n■Maintenance \n",
+      "bbox": [
+        251.99929809570312,
+        377.2929992675781,
+        312.2543640136719,
+        404.00048828125
+      ],
+      "text_sha256": "e4cb47983af529b4b373d5cf0d058559e029c49d22358552f05efa7102693fe7"
+    },
+    {
+      "block_id": "page-0350-block-0014",
+      "order": 14,
+      "text": "phase: according to \nresponse, weekly \nand then every 2 \nweeks, or even \nmonthly (consider \nsupplementing \nwith oral/sublingual \ndoses between IV \ntreatments)\n",
+      "bbox": [
+        260.9993896484375,
+        404.2929992675781,
+        326.0169982910156,
+        485.00048828125
+      ],
+      "text_sha256": "e9e01bb20f77d83d2f0a07586346b35c6c525b53b575b505130c57e1482894dd"
+    },
+    {
+      "block_id": "page-0350-block-0015",
+      "order": 15,
+      "text": "■\n■Needs to be adminis-\n",
+      "bbox": [
+        335.9992980957031,
+        368.2929992675781,
+        412.51446533203125,
+        377.00048828125
+      ],
+      "text_sha256": "36bb137671c661964cf0a070028279f1f6103eb9619a6baa62c98b7a6b9b1f81"
+    },
+    {
+      "block_id": "page-0350-block-0016",
+      "order": 16,
+      "text": "tered in clinical setting.\n■\n■Cognitive effects (con-\n",
+      "bbox": [
+        335.9992980957031,
+        377.2929992675781,
+        418.6119384765625,
+        395.00048828125
+      ],
+      "text_sha256": "a84c794fd3d5f7dc7098d9b16108a5fa623e8d2300a12ee2eae3756c3bace5f5"
+    },
+    {
+      "block_id": "page-0350-block-0017",
+      "order": 17,
+      "text": "fusion, dissociation, \netc.) do occasionally \noccur.\n■\n■Associated with \n",
+      "bbox": [
+        335.9992980957031,
+        395.2929992675781,
+        411.25439453125,
+        431.00048828125
+      ],
+      "text_sha256": "406c0e8610ad9616be02080206963985aa2d59ebfaed19f0e94fac6800ce4107"
+    },
+    {
+      "block_id": "page-0350-block-0018",
+      "order": 18,
+      "text": "transient increase in \nBP, tachycardia and \narrhythmias. Pre-treat-\nment ECG required. \nMonitor BP before and \nafter infusion.\n■\n■Observe during and for \n",
+      "bbox": [
+        335.9992980957031,
+        431.2929992675781,
+        421.2669677734375,
+        494.00048828125
+      ],
+      "text_sha256": "94731284185b2dacfe657f151b7073c5d071e003a57d7e0812f24fcde97d1980"
+    },
+    {
+      "block_id": "page-0350-block-0019",
+      "order": 19,
+      "text": "1 hour after infusion.\n",
+      "bbox": [
+        344.9993896484375,
+        494.2929992675781,
+        412.9344787597656,
+        503.00048828125
+      ],
+      "text_sha256": "b5d7474e7f61af7a073c73e9444e89c1701d7574cb522b1f7381e52e0653af05"
+    },
+    {
+      "block_id": "page-0350-block-0020",
+      "order": 20,
+      "text": "SC9,10\n■\n■0.5mg/kg, \n",
+      "bbox": [
+        47.9993896484375,
+        509.135498046875,
+        156.12710571289062,
+        518.0255126953125
+      ],
+      "text_sha256": "8e203ff7409f21bf57a4cebd457d7864323228e94b9b47ffbf5cca21eb0dacb6"
+    },
+    {
+      "block_id": "page-0350-block-0021",
+      "order": 21,
+      "text": "increasing up \nto 1.0mg/kg if \nno response\n■\n■(titrate from \n",
+      "bbox": [
+        112.1094970703125,
+        518.3179931640625,
+        169.04209899902344,
+        554.0255126953125
+      ],
+      "text_sha256": "32821823548a431b1b0bae129c1f68c93abe46af5f10722557b5c19c27eb4aae"
+    },
+    {
+      "block_id": "page-0350-block-0022",
+      "order": 22,
+      "text": "0.25mg/kg in \nolder people)\n",
+      "bbox": [
+        121.1095962524414,
+        554.3179931640625,
+        166.13209533691406,
+        572.0255126953125
+      ],
+      "text_sha256": "48cca4ea82cf58d8be18176588e69e8413d37304fc0330c32a44acc5806f3337"
+    },
+    {
+      "block_id": "page-0350-block-0023",
+      "order": 23,
+      "text": "■\n■SC bolus injec-\n",
+      "bbox": [
+        178.99929809570312,
+        509.3180236816406,
+        235.09188842773438,
+        518.0255126953125
+      ],
+      "text_sha256": "7e7abde8adf915782ef687286ad2c5c0a2f8896d853dbc609baef01531b2b9c9"
+    },
+    {
+      "block_id": "page-0350-block-0024",
+      "order": 24,
+      "text": "tion to appro-\npriate SC site\n",
+      "bbox": [
+        187.99940490722656,
+        518.3179931640625,
+        232.4593963623047,
+        536.0255126953125
+      ],
+      "text_sha256": "7685c6f0b3b702a18d38bf91e06f132653acd16f2ae13b82d3e7200b2c16a7ef"
+    },
+    {
+      "block_id": "page-0350-block-0025",
+      "order": 25,
+      "text": "■\n■As per IV above\n■\n■As per IV above.\n",
+      "bbox": [
+        251.99929809570312,
+        509.3180236816406,
+        397.0943908691406,
+        518.0255126953125
+      ],
+      "text_sha256": "dcc6e94b1e1fc906ed783033d0deb7d3d64658625cc71a9d496b0f5ee25fe695"
+    },
+    {
+      "block_id": "page-0350-block-0026",
+      "order": 26,
+      "text": "■\n■May be better toler-\n",
+      "bbox": [
+        335.9992980957031,
+        518.3179931640625,
+        408.7493896484375,
+        527.0255126953125
+      ],
+      "text_sha256": "9cc315892d49b376dc1ddd0d9c66424540a7c594795c8325602da791e1b861c3"
+    },
+    {
+      "block_id": "page-0350-block-0027",
+      "order": 27,
+      "text": "ated than IV or IM \nroutes.9\n",
+      "bbox": [
+        344.9993896484375,
+        527.3179931640625,
+        405.4269104003906,
+        545.0255126953125
+      ],
+      "text_sha256": "012e0152d23ba893318ac79722778dd4822586aec54b04701be0c929b7f8b012"
+    },
+    {
+      "block_id": "page-0350-block-0028",
+      "order": 28,
+      "text": "(Continued)\n",
+      "bbox": [
+        382.4849853515625,
+        582.4644775390625,
+        420.0000305175781,
+        591.2169799804688
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

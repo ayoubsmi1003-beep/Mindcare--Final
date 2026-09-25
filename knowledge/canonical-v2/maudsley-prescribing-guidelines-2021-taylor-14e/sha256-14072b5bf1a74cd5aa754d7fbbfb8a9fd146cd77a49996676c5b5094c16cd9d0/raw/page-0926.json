@@ -1,0 +1,143 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0926",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 926,
+  "source_page_index": 925,
+  "source_page_display": 926,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Miscellany    905\nCHAPTER 14\nRe-starting psychotropic medications after a period of non-compliance\nA common scenario when a patient is admitted to hospital is that they have been non-\ncompliant with their medications for some time before admission. The clinical question \nof whether to re-start the medication and at which dose is a complex one. The risk of \nwithdrawal symptoms and relapse must be balanced against the risk of adverse drug \nreactions when medications are re-introduced too quickly. There is little published evi-\ndence on this area, with most guidance (of undeclared provenance) coming from manu-\nfacturers, so the below guidance should be followed with caution.\nSummary of Product Characteristics (SPCs) and other formal regulatory documents \ntend not to deal with this clinical scenario, but official Patient Information Leaflets \noften do. These leaflets are unanimous in advising that on no account should a double \ndose be given to make up for a missed dose. The vast majority advise only on what to \ndo if a single dose has been missed. In this case, some leaflets advise taking the missed \ndose later (providing it is not too close to the next dose), whereas others recommend \nskipping the missed dose altogether and starting again with the next dose.\nIn the event that more than one dose has been missed, the first question is whether or \nnot this is the appropriate drug for a patient to be taking. Poor compliance often indi-\ncates some dissatisfaction on the part of the patient. If it is a drug with a short half-life \nor one that requires lengthy re-titration, it may not be appropriate to re-start prescrib-\ning for a patient who is frequently non-compliant. Similarly, if a patient is intoxicated \nwith alcohol or drugs, it may not be sensible to restart medication at that time. Find out \nif there are any particular reasons for non-compliance. In schizophrenia and schizoaf-\nfective disorder consider the appropriateness of a long-acting injection.\nRegarding the question as to whether to re-start the drug at the same dose or whether \nto re-titrate from a lower dose, clearly the time since the last dose is vitally important. \nIf more than a week or two has passed, then all drugs will probably need to be restarted \nas if new treatment (although for many drugs that do not require titration this will \nmean starting back on the same dose as before). The only exceptions are long-acting \ndepot formulations and oral drugs with long half-lives such as aripiprazole, cariprazine \nand penfluridol.\nTable 14.1 summarises our recommendations. The drugs in the first column have \nspecific safety issues that mean they require re-titration after the specified length of \ntime. The drugs in the middle column are thought to be safe because the maximum dose \nis usually no higher than the highest recommended starting dose. Drugs in the right \ncolumn are thought to be safe to restart at the prior dose because a similar drug appears \nin the middle column, because clinical experience suggests they are safe or because the \nrisks associated with giving un-titrated high doses are thought to be low.\nLamotrigine\nLamotrigine has been associated with life-threatening cutaneous reactions, especially \nwith high initial doses. The manufacturer’s product information therefore advises that \nif five half-lives have elapsed since the last lamotrigine dose was given, lamotrigine \nshould be titrated as if for the first time. The half-life in healthy subjects on no other \nmedication is around 33  hours. This is affected by other medications and is \n",
+  "raw_text_sha256": "0c137332d09d81b1786dcc351b5517e19434cb0a4b8f63d41602245c67931617",
+  "coordinates_sha256": "ee950c1d31f16e4f39d577d8900516688b553b0a27c2ef460381e7e13c57719b",
+  "block_sequence_sha256": "42f75b22d49c80e95770319fd2a59302015513f2bc6085ccd4c461c12836d58f",
+  "blocks": [
+    {
+      "block_id": "page-0926-block-0000",
+      "order": 0,
+      "text": "Miscellany    905\n",
+      "bbox": [
+        349.2962951660156,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "4f4aafe1a5701a5ebb556a36c5664594a7f7725142202892f8779ae77141d890"
+    },
+    {
+      "block_id": "page-0926-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        454.4096984863281,
+        338.7405090332031,
+        463.88970947265625,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0926-block-0002",
+      "order": 2,
+      "text": "Re-starting psychotropic medications after a period of non-compliance\n",
+      "bbox": [
+        55.039398193359375,
+        65.89218139648438,
+        419.0954895019531,
+        78.92718505859375
+      ],
+      "text_sha256": "9ebe4076b47c52ac2e2c486266bdd609c7482cc7b8f7dcc795eae0353f29717a"
+    },
+    {
+      "block_id": "page-0926-block-0003",
+      "order": 3,
+      "text": "A common scenario when a patient is admitted to hospital is that they have been non-\ncompliant with their medications for some time before admission. The clinical question \nof whether to re-start the medication and at which dose is a complex one. The risk of \nwithdrawal symptoms and relapse must be balanced against the risk of adverse drug \nreactions when medications are re-introduced too quickly. There is little published evi-\ndence on this area, with most guidance (of undeclared provenance) coming from manu-\nfacturers, so the below guidance should be followed with caution.\n",
+      "bbox": [
+        48.039398193359375,
+        84.7371826171875,
+        422.7894287109375,
+        168.45718383789062
+      ],
+      "text_sha256": "9291c8f0eb53308f0fa0a314152448af1805549d1f03f5ccee0669c570bc5cda"
+    },
+    {
+      "block_id": "page-0926-block-0004",
+      "order": 4,
+      "text": "Summary of Product Characteristics (SPCs) and other formal regulatory documents \ntend not to deal with this clinical scenario, but official Patient Information Leaflets \noften do. These leaflets are unanimous in advising that on no account should a double \ndose be given to make up for a missed dose. The vast majority advise only on what to \ndo if a single dose has been missed. In this case, some leaflets advise taking the missed \ndose later (providing it is not too close to the next dose), whereas others recommend \nskipping the missed dose altogether and starting again with the next dose.\n",
+      "bbox": [
+        48.039398193359375,
+        168.7371826171875,
+        422.8293762207031,
+        252.45718383789062
+      ],
+      "text_sha256": "1996768e8c51ff07cce1d306fde9d147b4c9599d2207a3fbf72048d5643e744a"
+    },
+    {
+      "block_id": "page-0926-block-0005",
+      "order": 5,
+      "text": "In the event that more than one dose has been missed, the first question is whether or \nnot this is the appropriate drug for a patient to be taking. Poor compliance often indi-\ncates some dissatisfaction on the part of the patient. If it is a drug with a short half-life \nor one that requires lengthy re-titration, it may not be appropriate to re-start prescrib-\ning for a patient who is frequently non-compliant. Similarly, if a patient is intoxicated \nwith alcohol or drugs, it may not be sensible to restart medication at that time. Find out \nif there are any particular reasons for non-compliance. In schizophrenia and schizoaf-\nfective disorder consider the appropriateness of a long-acting injection.\n",
+      "bbox": [
+        48.039398193359375,
+        252.7371826171875,
+        422.8194885253906,
+        348.4571838378906
+      ],
+      "text_sha256": "0187de8026beff0d6e7516765b868becc52793e46353a56d929ba5fd5a4d0b1c"
+    },
+    {
+      "block_id": "page-0926-block-0006",
+      "order": 6,
+      "text": "Regarding the question as to whether to re-start the drug at the same dose or whether \nto re-titrate from a lower dose, clearly the time since the last dose is vitally important. \nIf more than a week or two has passed, then all drugs will probably need to be restarted \nas if new treatment (although for many drugs that do not require titration this will \nmean starting back on the same dose as before). The only exceptions are long-acting \ndepot formulations and oral drugs with long half-lives such as aripiprazole, cariprazine \nand penfluridol.\n",
+      "bbox": [
+        48.039398193359375,
+        348.7371826171875,
+        422.8293151855469,
+        432.4571838378906
+      ],
+      "text_sha256": "29361578346b2ba3494a10cb074a1db1e57766c6870a17518c94915f2cbebd26"
+    },
+    {
+      "block_id": "page-0926-block-0007",
+      "order": 7,
+      "text": "Table 14.1 summarises our recommendations. The drugs in the first column have \nspecific safety issues that mean they require re-titration after the specified length of \ntime. The drugs in the middle column are thought to be safe because the maximum dose \nis usually no higher than the highest recommended starting dose. Drugs in the right \ncolumn are thought to be safe to restart at the prior dose because a similar drug appears \nin the middle column, because clinical experience suggests they are safe or because the \nrisks associated with giving un-titrated high doses are thought to be low.\n",
+      "bbox": [
+        48.039398193359375,
+        432.7371826171875,
+        422.79937744140625,
+        516.4572143554688
+      ],
+      "text_sha256": "86606c4f9113d9789b961f1a5735554bf09234dcfa9aec3713578c974da68b94"
+    },
+    {
+      "block_id": "page-0926-block-0008",
+      "order": 8,
+      "text": "Lamotrigine\n",
+      "bbox": [
+        48.039398193359375,
+        533.8922119140625,
+        110.38739776611328,
+        546.9271850585938
+      ],
+      "text_sha256": "b3394accac2a452befc71e3d9bca026942127890bcb6902fd524c67fc40dbe1f"
+    },
+    {
+      "block_id": "page-0926-block-0009",
+      "order": 9,
+      "text": "Lamotrigine has been associated with life-threatening cutaneous reactions, especially \nwith high initial doses. The manufacturer’s product information therefore advises that \nif five half-lives have elapsed since the last lamotrigine dose was given, lamotrigine \nshould be titrated as if for the first time. The half-life in healthy subjects on no other \nmedication is around 33  hours. This is affected by other medications and is \n",
+      "bbox": [
+        48.039398193359375,
+        552.7371826171875,
+        422.79962158203125,
+        612.4572143554688
+      ],
+      "text_sha256": "31ff564bbbf997cc88237e82660bdd9d740a3824d0b24927d960a371cc129c22"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

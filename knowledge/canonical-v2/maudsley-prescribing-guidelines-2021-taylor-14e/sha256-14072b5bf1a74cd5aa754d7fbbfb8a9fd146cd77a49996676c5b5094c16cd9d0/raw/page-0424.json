@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0424",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 424,
+  "source_page_index": 423,
+  "source_page_display": 424,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    403\nCHAPTER 3\n\t25.\t Dandjinou M, et al. Antidepressant use during pregnancy and the risk of gestational diabetes mellitus: a nested case-control study. BMJ Open \n2019; 9:e025908.\n\t26.\t Kuo HY, et al. Antidepressants and risk of type 2 diabetes mellitus: a population-based nested case-control study. J Clin Psychopharmacol \n2020; 40:359–365.\n\t27.\t Lustman PJ, et al. Effects of nortriptyline on depression and glycemic control in diabetes: results of a double-blind, placebo-controlled trial. \nPsychosom Med 1997; 59:241–250.\n\t28.\t McIntyre RS, et al. The effect of antidepressants on glucose homeostasis and insulin sensitivity: synthesis and mechanisms. Expert Opinion \non Drug Safety 2006; 5:157–168.\n\t29.\t Mumoli N, et al. Clomipramine-induced diabetes. Ann Intern Med 2008; 149:595–596.\n\t30.\t Goodnick PJ. Use of antidepressants in treatment of comorbid diabetes mellitus and depression as well as in diabetic neuropathy. Ann Clin \nPsychiatry 2001; 13:31–41.\n\t31.\t McIntyre RS, et al. Mood and psychotic disorders and type 2 diabetes: a metabolic triad. Canadian Journal of Diabetes 2005; 29:122–132.\n\t32.\t Raskin J, et al. Duloxetine versus routine care in the long-term management of diabetic peripheral neuropathic pain. J Palliat Med 2006; \n9:29–40.\n\t33.\t Crucitti A, et al. Duloxetine treatment and glycemic controls in patients with diagnoses other than diabetic peripheral neuropathic pain: a \nmeta-analysis. Curr Med Res Opin 2010; 26:2579–2588.\n\t34.\t Mekonnen AD, et al. Desvenlafaxine-associated hyperglycemia: a case report and literature review. Ment Health Clin 2020; 10:85–89.\n\t35.\t Song HR, et al. Does mirtazapine interfere with naturalistic diabetes treatment? J Clin Psychopharmacol 2014; 34:588–594.\n\t36.\t Song HR, et al. Effects of mirtazapine on patients undergoing naturalistic diabetes treatment: a follow-up study extended from 6 to 12 \nmonths. J Clin Psychopharmacol 2015; 35:730–731.\n\t37.\t Karaiskos D, et al. Agomelatine and sertraline for the treatment of depression in type 2 diabetes mellitus. Int J Clin Pract 2013; \n67:257–260.\n\t38.\t Vasile D, et al. P.2.c.002 Agomelatine versus selective serotoninergic reuptake inhibitors in major depressive disorder and comorbid diabetes \nmellitus. Eur Neuropsychopharmacol 2011; 21:S383–S384.\n",
+  "raw_text_sha256": "c8b0abff3f2b2912764b48421b6b3af49e09454081ce44f504cf09844a71178e",
+  "coordinates_sha256": "50b9a0b77134ba7c2c312c267defea5d5e4febc38fec05c0f7430b72a0165697",
+  "block_sequence_sha256": "f18eee573ffdaa028dfec97c0b27c2b519b6fb29f37a4e41adce1b24f5f58e46",
+  "blocks": [
+    {
+      "block_id": "page-0424-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    403\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "6d717d2daa66176139ec03cfbb39de1ebb12093f86d6e52f8c115614b786451e"
+    },
+    {
+      "block_id": "page-0424-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0424-block-0002",
+      "order": 2,
+      "text": "\t25.\t Dandjinou M, et al. Antidepressant use during pregnancy and the risk of gestational diabetes mellitus: a nested case-control study. BMJ Open \n",
+      "bbox": [
+        48.0,
+        63.2703857421875,
+        421.66802978515625,
+        70.30238342285156
+      ],
+      "text_sha256": "53447d16d7faffbd1d5ed588df1b075ff731eb162b75ac0a6ce31d1c750292bb"
+    },
+    {
+      "block_id": "page-0424-block-0003",
+      "order": 3,
+      "text": "2019; 9:e025908.\n\t26.\t Kuo HY, et al. Antidepressants and risk of type 2 diabetes mellitus: a population-based nested case-control study. J Clin Psychopharmacol \n",
+      "bbox": [
+        48.00600051879883,
+        72.12638854980469,
+        421.69793701171875,
+        88.30238342285156
+      ],
+      "text_sha256": "345146aa7209c2a57b14259e587875bc2ce173ceeabf2baae16fe9f0488115d7"
+    },
+    {
+      "block_id": "page-0424-block-0004",
+      "order": 4,
+      "text": "2020; 40:359–365.\n\t27.\t Lustman PJ, et al. Effects of nortriptyline on depression and glycemic control in diabetes: results of a double-blind, placebo-controlled trial. \n",
+      "bbox": [
+        48.012001037597656,
+        90.12638854980469,
+        421.64404296875,
+        106.30238342285156
+      ],
+      "text_sha256": "799cd15b80d8e6480d1e286adbb096b0a8a47b54f706119db11fa1c64c67a9ea"
+    },
+    {
+      "block_id": "page-0424-block-0005",
+      "order": 5,
+      "text": "Psychosom Med 1997; 59:241–250.\n\t28.\t McIntyre RS, et al. The effect of antidepressants on glucose homeostasis and insulin sensitivity: synthesis and mechanisms. Expert Opinion \n",
+      "bbox": [
+        48.018001556396484,
+        108.12638854980469,
+        421.7040710449219,
+        124.30238342285156
+      ],
+      "text_sha256": "e36f0f677a74fce73aedab2cad27dd324ab04e34807e27399dc9a25910847ba2"
+    },
+    {
+      "block_id": "page-0424-block-0006",
+      "order": 6,
+      "text": "on Drug Safety 2006; 5:157–168.\n\t29.\t Mumoli N, et al. Clomipramine-induced diabetes. Ann Intern Med 2008; 149:595–596.\n\t30.\t Goodnick PJ. Use of antidepressants in treatment of comorbid diabetes mellitus and depression as well as in diabetic neuropathy. Ann Clin \n",
+      "bbox": [
+        48.02399826049805,
+        126.12638854980469,
+        421.7280578613281,
+        151.30238342285156
+      ],
+      "text_sha256": "d7abb87202ad86e3e14fdd09ccf2d405fd370d62e26ba14d93b85fa99ca10c25"
+    },
+    {
+      "block_id": "page-0424-block-0007",
+      "order": 7,
+      "text": "Psychiatry 2001; 13:31–41.\n\t31.\t McIntyre RS, et al. Mood and psychotic disorders and type 2 diabetes: a metabolic triad. Canadian Journal of Diabetes 2005; 29:122–132.\n\t32.\t Raskin J, et al. Duloxetine versus routine care in the long-term management of diabetic peripheral neuropathic pain. J Palliat Med 2006; \n",
+      "bbox": [
+        48.0359992980957,
+        153.1263885498047,
+        421.7458801269531,
+        178.30238342285156
+      ],
+      "text_sha256": "092e1a710bffaba4a1ebe38f4451b3dc7a6cf0ff53be6e026c8b29fe5992301b"
+    },
+    {
+      "block_id": "page-0424-block-0008",
+      "order": 8,
+      "text": "9:29–40.\n\t33.\t Crucitti A, et al. Duloxetine treatment and glycemic controls in patients with diagnoses other than diabetic peripheral neuropathic pain: a \n",
+      "bbox": [
+        48.04800033569336,
+        180.1263885498047,
+        421.6800231933594,
+        196.30238342285156
+      ],
+      "text_sha256": "27a7ecf41a6c2939a88123f0f817c5f565f7aad4a2e081c5f87bd601b58ac942"
+    },
+    {
+      "block_id": "page-0424-block-0009",
+      "order": 9,
+      "text": "meta-analysis. Curr Med Res Opin 2010; 26:2579–2588.\n\t34.\t Mekonnen AD, et al. Desvenlafaxine-associated hyperglycemia: a case report and literature review. Ment Health Clin 2020; 10:85–89.\n\t35.\t Song HR, et al. Does mirtazapine interfere with naturalistic diabetes treatment? J Clin Psychopharmacol 2014; 34:588–594.\n\t36.\t Song HR, et al. Effects of mirtazapine on patients undergoing naturalistic diabetes treatment: a follow-up study extended from 6 to 12 \n",
+      "bbox": [
+        48.05400085449219,
+        198.1263885498047,
+        421.7758483886719,
+        232.30238342285156
+      ],
+      "text_sha256": "f1fa597bdf822c58afc19a7fad8a6556d53b6e1ebc740726e18c3f8934c1336a"
+    },
+    {
+      "block_id": "page-0424-block-0010",
+      "order": 10,
+      "text": "months. J Clin Psychopharmacol 2015; 35:730–731.\n\t37.\t Karaiskos D, et al. Agomelatine and sertraline for the treatment of depression in type 2 diabetes mellitus. Int J Clin Pract 2013; \n",
+      "bbox": [
+        48.071998596191406,
+        234.1263885498047,
+        421.71600341796875,
+        250.30238342285156
+      ],
+      "text_sha256": "fcc08d361d68c61ec20310d2dd7c11dc12259b8f7fc15231084747b980d6dc42"
+    },
+    {
+      "block_id": "page-0424-block-0011",
+      "order": 11,
+      "text": "67:257–260.\n\t38.\t Vasile D, et al. P.2.c.002 Agomelatine versus selective serotoninergic reuptake inhibitors in major depressive disorder and comorbid diabetes \n",
+      "bbox": [
+        48.077999114990234,
+        252.1263885498047,
+        421.78216552734375,
+        268.3023986816406
+      ],
+      "text_sha256": "fd805b22e0b8bdca13b66eb9005d52a6d77b19814d05536cff3be781614f42b7"
+    },
+    {
+      "block_id": "page-0424-block-0012",
+      "order": 12,
+      "text": "mellitus. Eur Neuropsychopharmacol 2011; 21:S383–S384.\n",
+      "bbox": [
+        59.082000732421875,
+        270.1263732910156,
+        213.5099639892578,
+        277.3023986816406
+      ],
+      "text_sha256": "78b5c2bbbc9d83e545f3fa6f15e7c231e69891d821fa459c79eafa48347dbe6e"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

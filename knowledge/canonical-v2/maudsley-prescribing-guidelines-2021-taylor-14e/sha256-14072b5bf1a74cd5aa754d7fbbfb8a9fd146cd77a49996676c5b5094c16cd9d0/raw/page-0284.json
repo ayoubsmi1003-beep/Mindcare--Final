@@ -1,0 +1,167 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0284",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 284,
+  "source_page_index": 283,
+  "source_page_display": 284,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Bipolar disorder    263\nCHAPTER 2\n\t45.\t Bjornsson E. Hepatotoxicity associated with antiepileptic drugs. Acta Neurol Scand 2008; 118:281–290.\n\t46.\t Patorno E, et al. Anticonvulsant medications and the risk of suicide, attempted suicide, or violent death. JAMA 2010; 303:1401–1409.\n\t47.\t Gibbons RD, et al. Relationship between antiepileptic drugs and suicide attempts in patients with bipolar disorder. Arch Gen Psychiatry \n2009; 66:1354–1360.\n\t48.\t Arana A, et al. Suicide-related events in patients treated with antiepileptic drugs. N Engl J Med 2010; 363:542–551.\n\t49.\t Andersohn F, et al. Use of antiepileptic drugs in epilepsy and the risk of self-harm or suicidal behavior. Neurology 2010; 75:335–340.\n\t50.\t Franks MA, et al. Bouncing back: is the bipolar rebound phenomenon peculiar to lithium? A retrospective naturalistic study. J Psychopharmacol \n2008; 22:452–456.\n\t51.\t National Institute for Health and Clinical Excellence. The epilepsies: the diagnosis and management of the epilepsies in adults and children \nin primary and secondary care. Clinical Guidance 137. 2012 (Last updated February 2016); https://www.nice.org.uk/guidance/cg137.\n\t52.\t GOV.UK Guidance. Valproate use by women and girls. 2020; https://www.gov.uk/guidance/valproate-use-by-women-and-girls.\n\t53.\t Sanofi. Summary of product characteristics. Depakote 250mg tablets. 2020; https://www.medicines.org.uk/emc/medicine/25929.\n\t54.\t James L, et al. Informing patients of the teratogenic potential of mood stabilising drugs; a case notes review of the practice of psychiatrists. J \nPsychopharmacol 2007; 21:815–819.\n\t55.\t James L, et al. Mood stabilizers and teratogenicity – prescribing practice and awareness amongst practising psychiatrists. J Mental Health \n2009; 18:137–143.\n\t56.\t Meador KJ, et al. Cognitive function at 3 years of age after fetal exposure to antiepileptic drugs. N Engl J Med 2009; 360:1597–1605.\n\t57.\t Sandson NB, et al. An interaction between aspirin and valproate: the relevance of plasma protein displacement drug-drug interactions. Am J \nPsychiatry 2006; 163:1891–1896.\n\t58.\t Fehr C, et al. Increase in serum clomipramine concentrations caused by valproate. J Clin Psychopharmacol 2000; 20:493–494.\n\t59.\t Morris RG, et al. Clinical study of lamotrigine and valproic acid in patients with epilepsy: using a drug interaction to advantage? Ther Drug \nMonit 2000; 22:656–660.\n\t60.\t Aichhorn W, et al. Influence of age, gender, body weight and valproate comedication on quetiapine plasma concentrations. Int Clin \nPsychopharmacol 2006; 21:81–85.\n\t61.\t Gunes A, et al. Inhibitory effect of valproic acid on cytochrome P450 2C9 activity in epilepsy patients. Basic Clin Pharmacol Toxicol 2007; \n100:383–386.\n\t62.\t Bergemann N, et al. Valproate lowers plasma concentration of olanzapine. J Clin Psychopharmacol 2006; 26:432–434.\n",
+  "raw_text_sha256": "f291670e253e3bb58cfd5c7bce4c3a6bb160cd058f5fd668d05f6eebbb82a214",
+  "coordinates_sha256": "4a67af8841f80f7f6311fbb5bf434fadaa158a60538dd3ecf9cc293e0919f650",
+  "block_sequence_sha256": "711c4762da4067b9fabed3516807d41348e20bfb536f4239a579e472e0abc6a3",
+  "blocks": [
+    {
+      "block_id": "page-0284-block-0000",
+      "order": 0,
+      "text": "Bipolar disorder    263\n",
+      "bbox": [
+        326.5046081542969,
+        31.395221710205078,
+        420.0005798339844,
+        41.0272216796875
+      ],
+      "text_sha256": "dc989f9314368a62ef284699da11b83a167879e20e9304fe408954e639444df6"
+    },
+    {
+      "block_id": "page-0284-block-0001",
+      "order": 1,
+      "text": "CHAPTER 2\n",
+      "bbox": [
+        454.4096984863281,
+        146.3472900390625,
+        463.88970947265625,
+        187.6912841796875
+      ],
+      "text_sha256": "5eaa1f2591abe1a1b2f7664fa3de7ff01a032d44ee83fa594c7852135d4287aa"
+    },
+    {
+      "block_id": "page-0284-block-0002",
+      "order": 2,
+      "text": "\t45.\t Bjornsson E. Hepatotoxicity associated with antiepileptic drugs. Acta Neurol Scand 2008; 118:281–290.\n\t46.\t Patorno E, et al. Anticonvulsant medications and the risk of suicide, attempted suicide, or violent death. JAMA 2010; 303:1401–1409.\n\t47.\t Gibbons RD, et al. Relationship between antiepileptic drugs and suicide attempts in patients with bipolar disorder. Arch Gen Psychiatry \n",
+      "bbox": [
+        48.0,
+        63.12638854980469,
+        421.6621398925781,
+        88.30238342285156
+      ],
+      "text_sha256": "553596b7e50a084b8becca0eb3f73896e30c30f3f1867528db60aa74a2909c06"
+    },
+    {
+      "block_id": "page-0284-block-0003",
+      "order": 3,
+      "text": "2009; 66:1354–1360.\n\t48.\t Arana A, et al. Suicide-related events in patients treated with antiepileptic drugs. N Engl J Med 2010; 363:542–551.\n\t49.\t Andersohn F, et al. Use of antiepileptic drugs in epilepsy and the risk of self-harm or suicidal behavior. Neurology 2010; 75:335–340.\n\t50.\t Franks MA, et al. Bouncing back: is the bipolar rebound phenomenon peculiar to lithium? A retrospective naturalistic study. J Psychopharmacol \n",
+      "bbox": [
+        48.018001556396484,
+        90.12638854980469,
+        421.74609375,
+        124.30238342285156
+      ],
+      "text_sha256": "071d3d1d7429fa5826b8fd77cd105c282a4dd9bc75b03f85c7e84bd36b817757"
+    },
+    {
+      "block_id": "page-0284-block-0004",
+      "order": 4,
+      "text": "2008; 22:452–456.\n\t51.\t National Institute for Health and Clinical Excellence. The epilepsies: the diagnosis and management of the epilepsies in adults and children \n",
+      "bbox": [
+        48.0359992980957,
+        126.12638854980469,
+        421.6980285644531,
+        142.30238342285156
+      ],
+      "text_sha256": "b8bffbf7ad1517e54af15f99436a4c3f3ac9e27e37d2619e471da8b46f7c3d28"
+    },
+    {
+      "block_id": "page-0284-block-0005",
+      "order": 5,
+      "text": "in primary and secondary care. Clinical Guidance 137. 2012 (Last updated February 2016); https://www.nice.org.uk/guidance/cg137.\n\t52.\t GOV.UK Guidance. Valproate use by women and girls. 2020; https://www.gov.uk/guidance/valproate-use-by-women-and-girls.\n\t53.\t Sanofi. Summary of product characteristics. Depakote 250mg tablets. 2020; https://www.medicines.org.uk/emc/medicine/25929.\n\t54.\t James L, et al. Informing patients of the teratogenic potential of mood stabilising drugs; a case notes review of the practice of psychiatrists. J \n",
+      "bbox": [
+        48.04199981689453,
+        144.2703857421875,
+        421.7041320800781,
+        178.30238342285156
+      ],
+      "text_sha256": "896a0bb4e6530f3d853e53ac865af819760bbfd9733db12403159c8689893cb3"
+    },
+    {
+      "block_id": "page-0284-block-0006",
+      "order": 6,
+      "text": "Psychopharmacol 2007; 21:815–819.\n\t55.\t James L, et al. Mood stabilizers and teratogenicity – prescribing practice and awareness amongst practising psychiatrists. J Mental Health \n",
+      "bbox": [
+        48.060001373291016,
+        180.1263885498047,
+        421.7039794921875,
+        196.30238342285156
+      ],
+      "text_sha256": "413ec62fafbe12b512c441aab86d4f4c66c20f8906c135241c32e2acecae162a"
+    },
+    {
+      "block_id": "page-0284-block-0007",
+      "order": 7,
+      "text": "2009; 18:137–143.\n\t56.\t Meador KJ, et al. Cognitive function at 3 years of age after fetal exposure to antiepileptic drugs. N Engl J Med 2009; 360:1597–1605.\n\t57.\t Sandson NB, et al. An interaction between aspirin and valproate: the relevance of plasma protein displacement drug-drug interactions. Am J \n",
+      "bbox": [
+        48.066001892089844,
+        198.1263885498047,
+        421.7700500488281,
+        223.30238342285156
+      ],
+      "text_sha256": "3a87ba40dd9232f46fcc1799aa59e56c31ea87743ad6c990a5ee742a8fc2ce12"
+    },
+    {
+      "block_id": "page-0284-block-0008",
+      "order": 8,
+      "text": "Psychiatry 2006; 163:1891–1896.\n\t58.\t Fehr C, et al. Increase in serum clomipramine concentrations caused by valproate. J Clin Psychopharmacol 2000; 20:493–494.\n\t59.\t Morris RG, et al. Clinical study of lamotrigine and valproic acid in patients with epilepsy: using a drug interaction to advantage? Ther Drug \n",
+      "bbox": [
+        48.077999114990234,
+        225.1263885498047,
+        421.75201416015625,
+        250.30238342285156
+      ],
+      "text_sha256": "4c28f92e75173bf22abcda2658a331dd0b6d3ea942f0addabc6099c9e75c9c9c"
+    },
+    {
+      "block_id": "page-0284-block-0009",
+      "order": 9,
+      "text": "Monit 2000; 22:656–660.\n\t60.\t Aichhorn W, et al. Influence of age, gender, body weight and valproate comedication on quetiapine plasma concentrations. Int Clin \n",
+      "bbox": [
+        48.09000015258789,
+        252.1263885498047,
+        421.76397705078125,
+        268.3023986816406
+      ],
+      "text_sha256": "9902a32415c6cea863276514e072d9f2bffa1e1b8faabe8a1a9a67e0acaf8afd"
+    },
+    {
+      "block_id": "page-0284-block-0010",
+      "order": 10,
+      "text": "Psychopharmacol 2006; 21:81–85.\n\t61.\t Gunes A, et al. Inhibitory effect of valproic acid on cytochrome P450 2C9 activity in epilepsy patients. Basic Clin Pharmacol Toxicol 2007; \n",
+      "bbox": [
+        48.09600067138672,
+        270.1263732910156,
+        421.7219543457031,
+        286.3023986816406
+      ],
+      "text_sha256": "02bf9c726b839593cc700af97a9470b296536819ae9b3e7e5d6b3e77947f4df1"
+    },
+    {
+      "block_id": "page-0284-block-0011",
+      "order": 11,
+      "text": "100:383–386.\n\t62.\t Bergemann N, et al. Valproate lowers plasma concentration of olanzapine. J Clin Psychopharmacol 2006; 26:432–434.\n",
+      "bbox": [
+        48.10200119018555,
+        288.1263732910156,
+        366.7079772949219,
+        304.3023986816406
+      ],
+      "text_sha256": "59ec291c4a3f771c4552359aeb64d6c77d5b50e4ecbdca6c6f1befb48e7168e7"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

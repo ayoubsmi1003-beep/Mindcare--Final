@@ -1,0 +1,179 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0831",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 831,
+  "source_page_index": 830,
+  "source_page_display": 831,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "810    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\nBipolar disorder\nThe incidence of bipolar disorder can be as high as 13% in the MS population2 com-\npared with 1–6% in the general population. Mania can be induced by drugs such as \nsteroids or baclofen.52\nAnecdotal evidence suggests that patients presenting with mania/bipolar disorder \nshould be treated with mood stabilisers such as sodium valproate as these are better \ntolerated than lithium.53\nLithium can cause diuresis and thus lead to increased difficulties with tolerance in \npeople with bladder disorder. Mania accompanied by psychosis could be treated with \nlow dose antipsychotics such as risperidone, olanzapine2 and ziprasidone.54 Patients \nrequiring psychiatric treatment for steroid-induced mania with psychosis have been \nknown to respond well to olanzapine,55 further case reports suggest risperidone is also \nuseful. There have been no trials in this area.\nPsychosis\nPsychosis occurs in 1.1% of the MS population and compared with other psychiatric \ndisorders is relatively uncommon.54 In a very few cases, psychosis is the presenting com-\nplaint of MS.56 There have been few published trials, but risperidone or clozapine have \nbeen recommended because of their low risk of extra pyramidal symptoms.52 On this \nbasis, olanzapine, aripiprazole and quetiapine might also, in theory at least, be possible \noptions. ECT has been used in refractory cases.57\nPsychosis may rarely be the presentation of an MS relapse in which case steroids may \nbe beneficial but would need to be given under close supervision. Note also the small \nrisk of psychotic reactions in patients receiving THC-containing formulations.58,59\nCognitive impairment\nCognitive impairment occurs in at least 40–65% of people with MS. Some of the medi-\ncations commonly prescribed can worsen cognition, for example, tizanidine, diazepam, \ngabapentin.60 Although there are no published trials, evidence from clinical case studies \nsuggests that the treatment of sleep difficulties, depression and fatigue can enhance \ncognitive function.60 There have been two small trials with donepezil for people with \nmild-moderate cognitive impairment showing moderate efficacy.61,62 A larger study \nfound no effect.63 Similarly, data supporting the use of memantine are weak.64 Overall, \nno symptomatic treatment has proven worthwhile efficacy65 and disease modifying \nagents offer greater promise.66\nFatigue\nFatigue is a common symptom in MS with up to 80% of people with MS affected.67 The \naetiology of fatigue is unclear but there have been suggestions that disruption of neu-\nronal networks,68 depression or psychological reactions,52 sleep disturbances, inflam-\nmation69 or medication may play a role in its development. Pharmacological and \nnon-pharmacological strategies67 should be used in a treatment strategy.\n",
+  "raw_text_sha256": "2679a9ab3ce2fc6c2753d6193dad7d38ddc686c909e3bf285f3574df5312be24",
+  "coordinates_sha256": "e68525f48e973ba5eceeb8fe3ec74010e0f864ba9136b0a9f344d3367c530e55",
+  "block_sequence_sha256": "e82f19336ebc37d0c71ee11043019aa53e4a3dc98ebc1d9a14d5502a745efeee",
+  "blocks": [
+    {
+      "block_id": "page-0831-block-0000",
+      "order": 0,
+      "text": "810    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "0e03dfabf7424092e69333432d90622eae104459b5c964afbe48ca7ff0ef44e5"
+    },
+    {
+      "block_id": "page-0831-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0831-block-0002",
+      "order": 2,
+      "text": "Bipolar disorder\n",
+      "bbox": [
+        61.88999938964844,
+        62.500465393066406,
+        136.89999389648438,
+        74.3504638671875
+      ],
+      "text_sha256": "b07774e0031f5249e7d5077c60e8dfe3fb18493619baff9d1c91c4fd01fb0e19"
+    },
+    {
+      "block_id": "page-0831-block-0003",
+      "order": 3,
+      "text": "The incidence of bipolar disorder can be as high as 13% in the MS population2 com-\npared with 1–6% in the general population. Mania can be induced by drugs such as \nsteroids or baclofen.52\n",
+      "bbox": [
+        61.88999938964844,
+        80.41046142578125,
+        436.6914367675781,
+        116.13046264648438
+      ],
+      "text_sha256": "0497ef8972f801020b1943dd2c0ef9c8810ff8245c72de0e20fdd42549359bd4"
+    },
+    {
+      "block_id": "page-0831-block-0004",
+      "order": 4,
+      "text": "Anecdotal evidence suggests that patients presenting with mania/bipolar disorder \nshould be treated with mood stabilisers such as sodium valproate as these are better \ntolerated than lithium.53\n",
+      "bbox": [
+        61.88999938964844,
+        116.41046142578125,
+        436.64007568359375,
+        152.13046264648438
+      ],
+      "text_sha256": "b0b8d29124bc93e7b40b34fd765dbeaff9792b3aea67fcb14ce314a4428579b1"
+    },
+    {
+      "block_id": "page-0831-block-0005",
+      "order": 5,
+      "text": "Lithium can cause diuresis and thus lead to increased difficulties with tolerance in \npeople with bladder disorder. Mania accompanied by psychosis could be treated with \nlow dose antipsychotics such as risperidone, olanzapine2 and ziprasidone.54 Patients \nrequiring psychiatric treatment for steroid-induced mania with psychosis have been \nknown to respond well to olanzapine,55 further case reports suggest risperidone is also \nuseful. There have been no trials in this area.\n",
+      "bbox": [
+        61.886505126953125,
+        152.41046142578125,
+        436.67999267578125,
+        224.1304931640625
+      ],
+      "text_sha256": "3f491898c5c859dffd65794abae09352184efeb87eb80bcf09c30a7c4a82b060"
+    },
+    {
+      "block_id": "page-0831-block-0006",
+      "order": 6,
+      "text": "Psychosis\n",
+      "bbox": [
+        61.886505126953125,
+        242.50048828125,
+        105.76651000976562,
+        254.35049438476562
+      ],
+      "text_sha256": "9d5be61e32c6df8e769cf0678e47f58376297063eb639b4f917b1bc377db189f"
+    },
+    {
+      "block_id": "page-0831-block-0007",
+      "order": 7,
+      "text": "Psychosis occurs in 1.1% of the MS population and compared with other psychiatric \ndisorders is relatively uncommon.54 In a very few cases, psychosis is the presenting com-\nplaint of MS.56 There have been few published trials, but risperidone or clozapine have \nbeen recommended because of their low risk of extra pyramidal symptoms.52 On this \nbasis, olanzapine, aripiprazole and quetiapine might also, in theory at least, be possible \noptions. ECT has been used in refractory cases.57\n",
+      "bbox": [
+        61.88639831542969,
+        260.4104919433594,
+        436.6888732910156,
+        332.1304931640625
+      ],
+      "text_sha256": "2774b50df6cfa7606ed6785d8c6df8269e69827fa056b10ef71dc14f62f3363c"
+    },
+    {
+      "block_id": "page-0831-block-0008",
+      "order": 8,
+      "text": "Psychosis may rarely be the presentation of an MS relapse in which case steroids may \nbe beneficial but would need to be given under close supervision. Note also the small \nrisk of psychotic reactions in patients receiving THC-containing formulations.58,59\n",
+      "bbox": [
+        61.88999938964844,
+        332.4104919433594,
+        436.6500549316406,
+        368.1304931640625
+      ],
+      "text_sha256": "25c132e1668a05e6b8ba1adc86552f6eae46f18997f35552214ee5c4e562626b"
+    },
+    {
+      "block_id": "page-0831-block-0009",
+      "order": 9,
+      "text": "Cognitive impairment\n",
+      "bbox": [
+        61.88999938964844,
+        386.50048828125,
+        164.13998413085938,
+        398.3504943847656
+      ],
+      "text_sha256": "58911ed1bc606b707db07180715f0366604efd996fb05b179099c825af054d55"
+    },
+    {
+      "block_id": "page-0831-block-0010",
+      "order": 10,
+      "text": "Cognitive impairment occurs in at least 40–65% of people with MS. Some of the medi-\ncations commonly prescribed can worsen cognition, for example, tizanidine, diazepam, \ngabapentin.60 Although there are no published trials, evidence from clinical case studies \nsuggests that the treatment of sleep difficulties, depression and fatigue can enhance \ncognitive function.60 There have been two small trials with donepezil for people with \nmild-moderate cognitive impairment showing moderate efficacy.61,62 A larger study \nfound no effect.63 Similarly, data supporting the use of memantine are weak.64 Overall, \nno symptomatic treatment has proven worthwhile efficacy65 and disease modifying \nagents offer greater promise.66\n",
+      "bbox": [
+        61.88731384277344,
+        404.4104919433594,
+        436.7126770019531,
+        512.1304931640625
+      ],
+      "text_sha256": "7141531ebf87e7a091b10eeb66c25cd19353b227544504f56740aa64e0392531"
+    },
+    {
+      "block_id": "page-0831-block-0011",
+      "order": 11,
+      "text": "Fatigue\n",
+      "bbox": [
+        61.88999938964844,
+        530.50048828125,
+        96.89999389648438,
+        542.3504638671875
+      ],
+      "text_sha256": "e320931ff63fd59e597007acf3250ce7d68ed09d23db62047b0084f1ca70b55b"
+    },
+    {
+      "block_id": "page-0831-block-0012",
+      "order": 12,
+      "text": "Fatigue is a common symptom in MS with up to 80% of people with MS affected.67 The \naetiology of fatigue is unclear but there have been suggestions that disruption of neu-\nronal networks,68 depression or psychological reactions,52 sleep disturbances, inflam-\nmation69 or medication may play a role in its development. Pharmacological and \nnon-pharmacological strategies67 should be used in a treatment strategy.\n",
+      "bbox": [
+        61.88739013671875,
+        548.4104614257812,
+        436.6673889160156,
+        608.1304931640625
+      ],
+      "text_sha256": "ea90b302e70359fc5f605b3d5cd3f5d992d93c88926547ec8696703c5567e077"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

@@ -1,0 +1,287 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0934",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 934,
+  "source_page_index": 933,
+  "source_page_display": 934,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Miscellany    913\nCHAPTER 14\nTable 14.3  Summary of haematological changes associated with psychotropics\nParameter\nReference range\nAgents reported to raise \nlevels\nAgents reported to lower \nlevels\nActivated partial \nthromboplastin time\n23–33 seconds\nPhenothiazines (especially \nchlorpromazine)\nModafinil (rare)\nBasophils\n0.0–0.1 × 109/L\nClozapine, TCAs (especially \ndesipramine)\nNone known\nEosinophils\n0.04–0.40 × 109/L\nAmoxapine, beta-blockers, \nbupropion, buspirone, \ncarbamazepine, chloral \nhydrate, chlorpromazine, \nclonazepam, clozapine, \ndonepezil, fluphenazine, \nhaloperidol, loxapine, \nmeprobamate, maprotiline, \nmethylphenidate (IV abuse \nonly), modafinil, naltrexone \n(parenterally administered), \nolanzapine, promethazine, \nquetiapine, risperidone/\npaliperidone, SSRIs, TCAs, \ntetrazepam, tryptophan*, \nvalproate, venlafaxine; may \nalso be a feature of agents \ncausing a hypersensitivity \nsyndrome\nNone known\nErythrocyte \nsedimentation rate\nFemales: 1–12mm/h \nMales: 1–10mm/h \n(increases with age)\nClozapine, dexamfetamine, \nlevomepromazine, \nmaprotiline, SSRIs\nBuprenorphine\nHaemoglobin\nFemales: 115–165g/L \nMales: 130–180g/L\nClozapine, testosterone, \ntobacco smoking\nAripiprazole, barbiturates, \nbuprenorphine, bupropion, \ncarbamazepine, \nchlordiazepoxide, \nchlorpromazine, donepezil, \nduloxetine, galantamine, \nMAOIs, memantine, \nmeprobamate, mianserin, \nphenytoin, promethazine, \nrivastigmine, tramadol, \ntrifluoperazine, vigabatrin\nLymphocytes\n1.5–4.5 × 109/L\nNaltrexone, opioids, tobacco \nsmoking, valproate; may also \nbe a feature of drugs causing \nhypersensitivity syndrome\nAlcohol (chronic), chloral \nhydrate, clozapine, lithium, \nmirtazapine (rarely)\n(Continued)\n",
+  "raw_text_sha256": "154fb72a1f1f64a5ad71c3ef1448e854cd744a093f823542340b898fa26c29b8",
+  "coordinates_sha256": "3fd733e61eae92f6200fd0eb49e898f0ab1eb48433156ad1a9b8f3434d593c9b",
+  "block_sequence_sha256": "ba706631ac57bffa5cb6fd82a1bc94f88746926d33f5a69433e204bb32192275",
+  "blocks": [
+    {
+      "block_id": "page-0934-block-0000",
+      "order": 0,
+      "text": "Miscellany    913\n",
+      "bbox": [
+        349.2962951660156,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "6dba31c26adc3475c0bffa7620fce1326a5c0a3c0fd4dbff59f4512dd79de87a"
+    },
+    {
+      "block_id": "page-0934-block-0001",
+      "order": 1,
+      "text": "CHAPTER 14\n",
+      "bbox": [
+        454.4096984863281,
+        338.7405090332031,
+        463.88970947265625,
+        384.5325012207031
+      ],
+      "text_sha256": "0a024eca3bae4ee1716fc22d3cfddf68c8e41ad43db3d0a2863e4fe5e95d714e"
+    },
+    {
+      "block_id": "page-0934-block-0002",
+      "order": 2,
+      "text": "Table 14.3  Summary of haematological changes associated with psychotropics\n",
+      "bbox": [
+        54.039398193359375,
+        70.08796691894531,
+        307.2769470214844,
+        78.9754638671875
+      ],
+      "text_sha256": "ca3eb781b0cdf82dc378deb5f3336fcf29d779fd4ccd20af9961b6a89ac01714"
+    },
+    {
+      "block_id": "page-0934-block-0003",
+      "order": 3,
+      "text": "Parameter\nReference range\nAgents reported to raise \nlevels\n",
+      "bbox": [
+        48.039398193359375,
+        88.21296691894531,
+        306.9693908691406,
+        107.09796142578125
+      ],
+      "text_sha256": "2d8396b50a0166fb5174838b85b12dbab30e8d3f13f6168449e65c27a04464a6"
+    },
+    {
+      "block_id": "page-0934-block-0004",
+      "order": 4,
+      "text": "Agents reported to lower \nlevels\n",
+      "bbox": [
+        324.00189208984375,
+        88.21296691894531,
+        415.9668884277344,
+        107.09796142578125
+      ],
+      "text_sha256": "fb27f96225e0cbd9a32bd98053962899f0febd02bfe697fd98d1c326340a4999"
+    },
+    {
+      "block_id": "page-0934-block-0005",
+      "order": 5,
+      "text": "Activated partial \nthromboplastin time\n",
+      "bbox": [
+        48.039398193359375,
+        114.9129867553711,
+        112.90689849853516,
+        133.61798095703125
+      ],
+      "text_sha256": "675aa7559136ea37c977e6ffd36bc6efe92c6dc4712b67a4b47a03db450fd837"
+    },
+    {
+      "block_id": "page-0934-block-0006",
+      "order": 6,
+      "text": "23–33 seconds\nPhenothiazines (especially \nchlorpromazine)\n",
+      "bbox": [
+        126.00189971923828,
+        114.9129867553711,
+        302.9268798828125,
+        133.61798095703125
+      ],
+      "text_sha256": "101dd9364d96bc84b405d41776b73db1233f616ed5e33bfc4f7486acf3e862bf"
+    },
+    {
+      "block_id": "page-0934-block-0007",
+      "order": 7,
+      "text": "Modafinil (rare)\n",
+      "bbox": [
+        324.00189208984375,
+        114.9129867553711,
+        373.03692626953125,
+        123.6204833984375
+      ],
+      "text_sha256": "355fb1eb98f1e6644aa05dc55803571325ab3a48bc97296a727e338c5404e3e3"
+    },
+    {
+      "block_id": "page-0934-block-0008",
+      "order": 8,
+      "text": "Basophils\n0.0–0.1 × 109/L\nClozapine, TCAs (especially \ndesipramine)\n",
+      "bbox": [
+        48.039398193359375,
+        139.9405059814453,
+        307.5160217285156,
+        158.64801025390625
+      ],
+      "text_sha256": "b25595d0715da7534157bfb54ee157a412645ea2988d8d8029e33da1de9732c6"
+    },
+    {
+      "block_id": "page-0934-block-0009",
+      "order": 9,
+      "text": "None known\n",
+      "bbox": [
+        324.0009765625,
+        139.94300842285156,
+        365.2735290527344,
+        148.6505126953125
+      ],
+      "text_sha256": "ba6586dc579443d5e17252c96d100bb0bdb30ec0ac15a8dc02e530767503ecc9"
+    },
+    {
+      "block_id": "page-0934-block-0010",
+      "order": 10,
+      "text": "Eosinophils\n0.04–0.40 × 109/L\nAmoxapine, beta-blockers, \nbupropion, buspirone, \ncarbamazepine, chloral \nhydrate, chlorpromazine, \nclonazepam, clozapine, \ndonepezil, fluphenazine, \nhaloperidol, loxapine, \nmeprobamate, maprotiline, \nmethylphenidate (IV abuse \nonly), modafinil, naltrexone \n(parenterally administered), \nolanzapine, promethazine, \nquetiapine, risperidone/\npaliperidone, SSRIs, TCAs, \ntetrazepam, tryptophan*, \nvalproate, venlafaxine; may \nalso be a feature of agents \ncausing a hypersensitivity \nsyndrome\n",
+      "bbox": [
+        48.038482666015625,
+        164.9679718017578,
+        305.7309265136719,
+        353.63043212890625
+      ],
+      "text_sha256": "f8dd950ee84d77adcb2a292752e817ae2394faa9c84629e13e2e81c9e8cad42e"
+    },
+    {
+      "block_id": "page-0934-block-0011",
+      "order": 11,
+      "text": "None known\n",
+      "bbox": [
+        324.0009765625,
+        164.9229278564453,
+        365.2735290527344,
+        173.63043212890625
+      ],
+      "text_sha256": "ba6586dc579443d5e17252c96d100bb0bdb30ec0ac15a8dc02e530767503ecc9"
+    },
+    {
+      "block_id": "page-0934-block-0012",
+      "order": 12,
+      "text": "Erythrocyte \nsedimentation rate\n",
+      "bbox": [
+        48.038482666015625,
+        359.9454650878906,
+        108.03846740722656,
+        378.65045166015625
+      ],
+      "text_sha256": "ed76c91aac0dfb6380780d15d4cabc557198943d54effa20157b1b3768f42eb7"
+    },
+    {
+      "block_id": "page-0934-block-0013",
+      "order": 13,
+      "text": "Females: 1–12mm/h \nMales: 1–10mm/h \n(increases with age)\n",
+      "bbox": [
+        126.00098419189453,
+        359.9454650878906,
+        192.6759796142578,
+        388.64794921875
+      ],
+      "text_sha256": "16a7c9dbbdcf33a84e17b3aa480fa66fd71c5e2ee6ae6e45756062312a163c7d"
+    },
+    {
+      "block_id": "page-0934-block-0014",
+      "order": 14,
+      "text": "Clozapine, dexamfetamine, \nlevomepromazine, \nmaprotiline, SSRIs\n",
+      "bbox": [
+        218.75347900390625,
+        359.9379577636719,
+        308.3409729003906,
+        388.64044189453125
+      ],
+      "text_sha256": "eaa07a5279d2a4a47293e7ffb9777de7f5cdbac6a06f04dffe6c7f790c686d02"
+    },
+    {
+      "block_id": "page-0934-block-0015",
+      "order": 15,
+      "text": "Buprenorphine\n",
+      "bbox": [
+        324.0009765625,
+        359.9304504394531,
+        371.3860778808594,
+        368.637939453125
+      ],
+      "text_sha256": "92117a660f9da06ce129dce4faf2b22eb9fd759b6e7a4e996929f6ea93010de2"
+    },
+    {
+      "block_id": "page-0934-block-0016",
+      "order": 16,
+      "text": "Haemoglobin\nFemales: 115–165g/L \nMales: 130–180g/L\n",
+      "bbox": [
+        48.038482666015625,
+        394.9554443359375,
+        196.02098083496094,
+        413.6604309082031
+      ],
+      "text_sha256": "a45d491ed5125ff76deff8d660abb6ce11d9b39fa4505ef660672c4d59f87da6"
+    },
+    {
+      "block_id": "page-0934-block-0017",
+      "order": 17,
+      "text": "Clozapine, testosterone, \ntobacco smoking\n",
+      "bbox": [
+        218.75347900390625,
+        394.9554443359375,
+        298.21600341796875,
+        413.6604309082031
+      ],
+      "text_sha256": "8570bd4152a815601737d4b2eb5fcc72a4cadfaf04ca4d5ca2e6c8ef40966595"
+    },
+    {
+      "block_id": "page-0934-block-0018",
+      "order": 18,
+      "text": "Aripiprazole, barbiturates, \nbuprenorphine, bupropion, \ncarbamazepine, \nchlordiazepoxide, \nchlorpromazine, donepezil, \nduloxetine, galantamine, \nMAOIs, memantine, \nmeprobamate, mianserin, \nphenytoin, promethazine, \nrivastigmine, tramadol, \ntrifluoperazine, vigabatrin\n",
+      "bbox": [
+        324.0009765625,
+        394.9554443359375,
+        412.9436340332031,
+        503.6379089355469
+      ],
+      "text_sha256": "6ba7b9f0e9705bfcadef0ebb96fe0c0efdd4fedbe20d2b0aca85e2fa2f643dbe"
+    },
+    {
+      "block_id": "page-0934-block-0019",
+      "order": 19,
+      "text": "Lymphocytes\n1.5–4.5 × 109/L\nNaltrexone, opioids, tobacco \nsmoking, valproate; may also \nbe a feature of drugs causing \nhypersensitivity syndrome\n",
+      "bbox": [
+        48.038482666015625,
+        509.9529113769531,
+        314.47607421875,
+        548.7429809570312
+      ],
+      "text_sha256": "93909ff96247526bbcf5d24d068230c01aadeb8ef78477d55f7de2414cf84b77"
+    },
+    {
+      "block_id": "page-0934-block-0020",
+      "order": 20,
+      "text": "Alcohol (chronic), chloral \nhydrate, clozapine, lithium, \nmirtazapine (rarely)\n",
+      "bbox": [
+        324.0009765625,
+        510.0354919433594,
+        412.7560119628906,
+        538.7379760742188
+      ],
+      "text_sha256": "4bf696166fca6e5bc843ed9af92f377b0ade219e0e97ff4bfaebec8dd044dd67"
+    },
+    {
+      "block_id": "page-0934-block-0021",
+      "order": 21,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.9859619140625,
+        559.2279663085938,
+        420.00091552734375,
+        567.98046875
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

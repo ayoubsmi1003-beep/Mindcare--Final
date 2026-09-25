@@ -1,0 +1,323 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0336",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 336,
+  "source_page_index": 335,
+  "source_page_display": 336,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Depression and anxiety disorders    315\nCHAPTER 3\nNotes\n■\n■Tools such as the Montgomery–Asberg Depression Rating Scale (MADRS)12 and the Hamilton Depression Rating \nScale (HDRS)13 are used in trials to assess drug effect. The HDRS is now somewhat anachronistic, and few clinicians \nare familiar with the MADRS (although it is probably the best scale to measure severity and change). The Patient \nHealth Questionnaire-9 (PHQ-9)14 is simple to use and is recommended for assessing symptom change in depres-\nsion (although it better measures frequency rather than severity of symptoms).\n■\n■Choice of antidepressant is governed largely by patient and clinician preference, but most authorities recommend \nan SSRI, or mirtazapine where sedation is required. The largest network meta-analysis15 suggested that drugs with \neffects on both norepinephrine and serotonin uptake are the most effective (5 of the top 6 ranked drugs are dual-\naction drugs), whereas agomelatine and SSRIs have the lowest drop-out rates. A 2018 network meta-analysis16 of \nnewer antidepressants suggested few, if any, clear advantages over older drugs for levomilnacipran, vilazodone and \nvortioxetine.\n■\n■Assessment at two weeks has some utility in determining eventual outcome.17 Only around 30% of those not \nreaching accepted symptom score threshold for improvement at two weeks will ultimately respond. Even fewer \npeople go on to respond if there is no improvement at all or deterioration at 2 weeks.\n■\n■Switching between drug classes in cases of poor tolerability is supported by some studies18 and has a strong theo-\nretical basis. Having said that, in practice, many patients who cannot tolerate one SSRI will readily tolerate another.\n■\n■In cases of non-response, there is some evidence that switching within a drug class is effective,8,19–22 but switching \nbetween classes is, in practice, the most common option and is supported by some analyses.23 The APA recommend \nboth options.2 The 2018 NICE draft guidelines24 suggested that there is little cogent evidence for switching between \nantidepressants (an observation in another analysis25) and that combining antidepressants or adding an second-\ngeneration antipsychotic (SGA) are better-supported options at this stage. The strongest evidence in support of \nswitching after the failure of one treatment is probably for vortioxetine.10\n■\n■There is minimal evidence to recommend increasing the dose of most SSRIs in depression, at least when severity is \nmeasured using total rating scale scores.26 Examining only the mood item on the HAMD suggests some dose-\nresponse relationship for SSRIs.27 Other evidence suggests that increasing the dose of venlafaxine, escitalopram and \ntricyclics may be helpful.3 Generally speaking, gains in efficacy afforded by dose increases are small (SSRIs, venla-\nfaxine) or non-existent (e.g. mirtazapine above 30mg/day) while effects on tolerability are reliably and starkly \ndetrimental.28\n■\n■Switch treatments early (e.g. after a week or two) if adverse effects are intolerable or if no improvement at all is seen \nby 3–4 weeks. Opinions on when to switch vary somewhat, but it is clear that antidepressants have a fairly prompt \nonset of action29–31 and that non-response at 2–6  weeks is a good predictor of overall non-response.32–34 The \nabsence of any improvement at all at 3–4 weeks should normally provoke a change in treatment (British Association \nfor Psychopharmacology [BAP] guidelines suggest 4 weeks3). If there is some improvement at this time, continue \nand assess for a further 2–3 weeks (see the section on ‘Antidepressants: general overview’, this chapter).\nReferences\n\t 1.\t Leuchter AF, et al. Role of pill-taking, expectation and therapeutic alliance in the placebo response in clinical trials for major depression. Br \nJ Psychiatry 2014; 205:443–449.\n\t 2.\t American Psychiatric Association. Practice guideline for the treatment of patients with major depressive disorder. Third Edition. Washington, \nUSA: American Psychiatric Association; 2010.\n\t 3.\t Anderson IM, et al. Evidence-based guidelines for treating depressive disorders with antidepressants: a revision of the 2000 British Association \nfor Psychopharmacology guidelines. J Psychopharmacology 2008; 22:343–396.\n\t 4.\t Crismon ML, et al. The Texas medication algorithm project: report of the Texas consensus conference panel on medication treatment of \nmajor depressive disorder. J Clin Psychiatry 1999; 60:142–156.\n\t 5.\t Kocsis JH, et al. Maintenance therapy for chronic depression. A controlled clinical trial of desipramine. Arch Gen Psychiatry 1996; \n53:769–774.\n\t 6.\t Dekker J, et al. The use of antidepressants after recovery from depression. Eur J Psychiatry 2000; 14:207–212.\n\t 7.\t Nelson JC. Treatment of antidepressant nonresponders: augmentation or switch? J Clin Psychiatry 1998; 59 Suppl 15:35–41.\n\t 8.\t Joffe RT. Substitution therapy in patients with major depression. CNS Drugs 1999; 11:175–180.\n\t 9.\t National Institute for Health and Care Excellence. Depression in adults: recognition and management. Clinical Guidance [CG90]. 2009 \n(reviewed December 2013); http://www.nice.org.uk/Guidance/cg90.\n",
+  "raw_text_sha256": "ed97552a31b9cab17bb4fe27038b687c94802ebafbb29b672b27e6ff4e2e0faa",
+  "coordinates_sha256": "de13c7593739b61d8f342dd80da379a2c5388b73d6c7ce3064fe90c6e2bdfade",
+  "block_sequence_sha256": "8020705499162d475ad2267cb451629fc7b1c1e6f85f2c0e9b93663b221ead6e",
+  "blocks": [
+    {
+      "block_id": "page-0336-block-0000",
+      "order": 0,
+      "text": "Depression and anxiety disorders    315\n",
+      "bbox": [
+        254.6331024169922,
+        31.395221710205078,
+        420.0002746582031,
+        41.0272216796875
+      ],
+      "text_sha256": "53bfa282635ffd52b549bbedf2e5cf7ac2fbfdf7b4b6fa9cc9e6ee09e20d7886"
+    },
+    {
+      "block_id": "page-0336-block-0001",
+      "order": 1,
+      "text": "CHAPTER 3\n",
+      "bbox": [
+        454.4096984863281,
+        209.63778686523438,
+        463.88970947265625,
+        250.98178100585938
+      ],
+      "text_sha256": "08261288cd84a44002ee48a8c2c00bff05e491f76646c6ce6b6a7e854e67fd56"
+    },
+    {
+      "block_id": "page-0336-block-0002",
+      "order": 2,
+      "text": "Notes\n",
+      "bbox": [
+        48.0,
+        62.500465393066406,
+        75.22000122070312,
+        74.3504638671875
+      ],
+      "text_sha256": "38732073f309589131fec63f417896537e63d27fc29fcf7c60d5f47379f0887a"
+    },
+    {
+      "block_id": "page-0336-block-0003",
+      "order": 3,
+      "text": "■\n■Tools such as the Montgomery–Asberg Depression Rating Scale (MADRS)12 and the Hamilton Depression Rating \n",
+      "bbox": [
+        47.999900817871094,
+        87.0179672241211,
+        422.0745849609375,
+        95.7254638671875
+      ],
+      "text_sha256": "edccf4264784cdf8fe830351425d2fff467ebd6ed28d933b47827794b4f82fe5"
+    },
+    {
+      "block_id": "page-0336-block-0004",
+      "order": 4,
+      "text": "Scale (HDRS)13 are used in trials to assess drug effect. The HDRS is now somewhat anachronistic, and few clinicians \nare familiar with the MADRS (although it is probably the best scale to measure severity and change). The Patient \nHealth Questionnaire-9 (PHQ-9)14 is simple to use and is recommended for assessing symptom change in depres-\nsion (although it better measures frequency rather than severity of symptoms).\n",
+      "bbox": [
+        56.99639892578125,
+        97.01546478271484,
+        422.03826904296875,
+        135.72296142578125
+      ],
+      "text_sha256": "736b5eacdeb3bac55995bb14278e080f9559b54dbfebbbff63d7dad43d575c20"
+    },
+    {
+      "block_id": "page-0336-block-0005",
+      "order": 5,
+      "text": "■\n■Choice of antidepressant is governed largely by patient and clinician preference, but most authorities recommend \n",
+      "bbox": [
+        47.999900817871094,
+        137.01795959472656,
+        422.05499267578125,
+        145.7254638671875
+      ],
+      "text_sha256": "a3aea647a8404a665ada4a87f0d487f104baf804320ef7c7a0a38fa707d7ba5e"
+    },
+    {
+      "block_id": "page-0336-block-0006",
+      "order": 6,
+      "text": "an SSRI, or mirtazapine where sedation is required. The largest network meta-analysis15 suggested that drugs with \neffects on both norepinephrine and serotonin uptake are the most effective (5 of the top 6 ranked drugs are dual-\naction drugs), whereas agomelatine and SSRIs have the lowest drop-out rates. A 2018 network meta-analysis16 of \nnewer antidepressants suggested few, if any, clear advantages over older drugs for levomilnacipran, vilazodone and \nvortioxetine.\n",
+      "bbox": [
+        56.99688720703125,
+        147.0154571533203,
+        422.1269226074219,
+        195.720458984375
+      ],
+      "text_sha256": "5800662e871882dfeb48a7f841a831056688fc0ab829f0226273f711dd24941b"
+    },
+    {
+      "block_id": "page-0336-block-0007",
+      "order": 7,
+      "text": "■\n■Assessment at two weeks has some utility in determining eventual outcome.17 Only around 30% of those not \n",
+      "bbox": [
+        47.999900817871094,
+        197.0179901123047,
+        422.080078125,
+        205.72549438476562
+      ],
+      "text_sha256": "3ef61eb57595c4a4c5ded3b7232b8ac4da8c8dd5f47dee296d7e69a0a5073ca6"
+    },
+    {
+      "block_id": "page-0336-block-0008",
+      "order": 8,
+      "text": "reaching accepted symptom score threshold for improvement at two weeks will ultimately respond. Even fewer \npeople go on to respond if there is no improvement at all or deterioration at 2 weeks.\n",
+      "bbox": [
+        57.002410888671875,
+        207.01548767089844,
+        422.0498046875,
+        225.72048950195312
+      ],
+      "text_sha256": "e7cf92fbd54749b99f1201f31bc5fe4a63e5ce03bdff59cb9a5fcf50af1b4ba7"
+    },
+    {
+      "block_id": "page-0336-block-0009",
+      "order": 9,
+      "text": "■\n■Switching between drug classes in cases of poor tolerability is supported by some studies18 and has a strong theo-\n",
+      "bbox": [
+        47.999900817871094,
+        227.0179901123047,
+        420.000244140625,
+        235.72549438476562
+      ],
+      "text_sha256": "a93d79bedab043b2f392df22edb09387e30d643637bae6df2e13be1e773a8e69"
+    },
+    {
+      "block_id": "page-0336-block-0010",
+      "order": 10,
+      "text": "retical basis. Having said that, in practice, many patients who cannot tolerate one SSRI will readily tolerate another.\n",
+      "bbox": [
+        57.000213623046875,
+        237.01548767089844,
+        419.96282958984375,
+        245.72299194335938
+      ],
+      "text_sha256": "1cd3410fa2ad7674523ee7b94f44aeae1cafd30f5e7bcc82030606e5c0c14757"
+    },
+    {
+      "block_id": "page-0336-block-0011",
+      "order": 11,
+      "text": "■\n■In cases of non-response, there is some evidence that switching within a drug class is effective,8,19–22 but switching \n",
+      "bbox": [
+        47.999900817871094,
+        247.0179901123047,
+        422.08392333984375,
+        255.72549438476562
+      ],
+      "text_sha256": "5f0a89b966ee682009802ee4b135ef08faff7c433bdefbec06b30d0fa842f91c"
+    },
+    {
+      "block_id": "page-0336-block-0012",
+      "order": 12,
+      "text": "between classes is, in practice, the most common option and is supported by some analyses.23 The APA recommend \nboth options.2 The 2018 NICE draft guidelines24 suggested that there is little cogent evidence for switching between \nantidepressants (an observation in another analysis25) and that combining antidepressants or adding an second-\ngeneration antipsychotic (SGA) are better-supported options at this stage. The strongest evidence in support of \nswitching after the failure of one treatment is probably for vortioxetine.10\n",
+      "bbox": [
+        56.996917724609375,
+        257.0155029296875,
+        422.0920104980469,
+        305.7204895019531
+      ],
+      "text_sha256": "8969811570df13835690c60d8b84df0fc271584b20bbdbace4ef9e2e22b7cc75"
+    },
+    {
+      "block_id": "page-0336-block-0013",
+      "order": 13,
+      "text": "■\n■There is minimal evidence to recommend increasing the dose of most SSRIs in depression, at least when severity is \n",
+      "bbox": [
+        47.999900817871094,
+        307.01800537109375,
+        422.0624694824219,
+        315.7254943847656
+      ],
+      "text_sha256": "c38986cbf09d913ab9c3d4865bb681fc5c7cb67421bb31d12aca68ef9c90a930"
+    },
+    {
+      "block_id": "page-0336-block-0014",
+      "order": 14,
+      "text": "measured using total rating scale scores.26 Examining only the mood item on the HAMD suggests some dose-\nresponse relationship for SSRIs.27 Other evidence suggests that increasing the dose of venlafaxine, escitalopram and \ntricyclics may be helpful.3 Generally speaking, gains in efficacy afforded by dose increases are small (SSRIs, venla-\nfaxine) or non-existent (e.g. mirtazapine above 30mg/day) while effects on tolerability are reliably and starkly \ndetrimental.28\n",
+      "bbox": [
+        56.998504638671875,
+        317.0155029296875,
+        422.0926818847656,
+        365.7204895019531
+      ],
+      "text_sha256": "4cc06803c8326d460e9a018ddbfb35a9bea305f3dbbaa2745d5630193b371750"
+    },
+    {
+      "block_id": "page-0336-block-0015",
+      "order": 15,
+      "text": "■\n■Switch treatments early (e.g. after a week or two) if adverse effects are intolerable or if no improvement at all is seen \n",
+      "bbox": [
+        47.999900817871094,
+        366.9729919433594,
+        422.04742431640625,
+        375.7254943847656
+      ],
+      "text_sha256": "5eb136eac38d275d02109f9389d98b847d6eef20e39beb8d5cd3d6f4fec401be"
+    },
+    {
+      "block_id": "page-0336-block-0016",
+      "order": 16,
+      "text": "by 3–4 weeks. Opinions on when to switch vary somewhat, but it is clear that antidepressants have a fairly prompt \nonset of action29–31 and that non-response at 2–6  weeks is a good predictor of overall non-response.32–34 The \nabsence of any improvement at all at 3–4 weeks should normally provoke a change in treatment (British Association \nfor Psychopharmacology [BAP] guidelines suggest 4 weeks3). If there is some improvement at this time, continue \nand assess for a further 2–3 weeks (see the section on ‘Antidepressants: general overview’, this chapter).\n",
+      "bbox": [
+        56.99830627441406,
+        377.0155029296875,
+        422.1070251464844,
+        425.7229919433594
+      ],
+      "text_sha256": "2d84eccea4f1481524078bddc1a6fa52d00c27016356ba3080f807099bbe1957"
+    },
+    {
+      "block_id": "page-0336-block-0017",
+      "order": 17,
+      "text": "References\n",
+      "bbox": [
+        48.0,
+        443.56549072265625,
+        104.03400421142578,
+        456.6004943847656
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0336-block-0018",
+      "order": 18,
+      "text": "\t 1.\t Leuchter AF, et al. Role of pill-taking, expectation and therapeutic alliance in the placebo response in clinical trials for major depression. Br \n",
+      "bbox": [
+        48.0,
+        461.6864929199219,
+        421.67401123046875,
+        468.718505859375
+      ],
+      "text_sha256": "b522975c6ad0897f19e015647a1e0eef220ab1fc5f6dd12de5fb82f59994b934"
+    },
+    {
+      "block_id": "page-0336-block-0019",
+      "order": 19,
+      "text": "J Psychiatry 2014; 205:443–449.\n\t 2.\t American Psychiatric Association. Practice guideline for the treatment of patients with major depressive disorder. Third Edition. Washington, \n",
+      "bbox": [
+        48.00600051879883,
+        470.54248046875,
+        421.69207763671875,
+        486.718505859375
+      ],
+      "text_sha256": "3a5461b95fe6dbf02263fe4277a096c0d827df51323234983d3565fa12e8dc81"
+    },
+    {
+      "block_id": "page-0336-block-0020",
+      "order": 20,
+      "text": "USA: American Psychiatric Association; 2010.\n\t 3.\t Anderson IM, et al. Evidence-based guidelines for treating depressive disorders with antidepressants: a revision of the 2000 British Association \n",
+      "bbox": [
+        48.012001037597656,
+        488.6864929199219,
+        421.703857421875,
+        504.718505859375
+      ],
+      "text_sha256": "780562daf73d30d124a21a7bc7d3af975846235c720562f8565ee450a5546b4e"
+    },
+    {
+      "block_id": "page-0336-block-0021",
+      "order": 21,
+      "text": "for Psychopharmacology guidelines. J Psychopharmacology 2008; 22:343–396.\n\t 4.\t Crismon ML, et al. The Texas medication algorithm project: report of the Texas consensus conference panel on medication treatment of \n",
+      "bbox": [
+        48.018001556396484,
+        506.5424499511719,
+        421.69195556640625,
+        522.7184448242188
+      ],
+      "text_sha256": "81f6012b7aaa8f115896c35e652d32281d5f7c087c7956df61bfab6425ceb201"
+    },
+    {
+      "block_id": "page-0336-block-0022",
+      "order": 22,
+      "text": "major depressive disorder. J Clin Psychiatry 1999; 60:142–156.\n\t 5.\t Kocsis JH, et al. Maintenance therapy for chronic depression. A controlled clinical trial of desipramine. Arch Gen Psychiatry 1996; \n",
+      "bbox": [
+        48.02399826049805,
+        524.54248046875,
+        421.739990234375,
+        540.7184448242188
+      ],
+      "text_sha256": "53dcd5198d59eca367c2d6e43c2545003ce73fcb4849b56b12107673863e3a7e"
+    },
+    {
+      "block_id": "page-0336-block-0023",
+      "order": 23,
+      "text": "53:769–774.\n\t 6.\t Dekker J, et al. The use of antidepressants after recovery from depression. Eur J Psychiatry 2000; 14:207–212.\n\t 7.\t Nelson JC. Treatment of antidepressant nonresponders: augmentation or switch? J Clin Psychiatry 1998; 59 Suppl 15:35–41.\n\t 8.\t Joffe RT. Substitution therapy in patients with major depression. CNS Drugs 1999; 11:175–180.\n\t 9.\t National Institute for Health and Care Excellence. Depression in adults: recognition and management. Clinical Guidance [CG90]. 2009 \n",
+      "bbox": [
+        48.029998779296875,
+        542.54248046875,
+        421.72784423828125,
+        585.7184448242188
+      ],
+      "text_sha256": "a4cbddef1c1e232f130ff016ffe6f74768803aa51c3ebfa47b26794bf5252ce0"
+    },
+    {
+      "block_id": "page-0336-block-0024",
+      "order": 24,
+      "text": "(reviewed December 2013); http://www.nice.org.uk/Guidance/cg90.\n",
+      "bbox": [
+        59.052001953125,
+        587.6864624023438,
+        233.86196899414062,
+        594.7184448242188
+      ],
+      "text_sha256": "23cb9ef2da56345310f971f6d23425f3ccc1c02a9468f346fbf9c533fb733e2c"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

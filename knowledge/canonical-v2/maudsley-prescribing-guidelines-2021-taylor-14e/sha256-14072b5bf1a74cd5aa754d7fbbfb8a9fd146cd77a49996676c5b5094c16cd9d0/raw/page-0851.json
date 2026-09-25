@@ -1,0 +1,299 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0851",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 851,
+  "source_page_index": 850,
+  "source_page_display": 851,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "830    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER 10\nSymptom\nExample drugs\nTerminal agitation\nBenzodiazepines, for example, midazolam\nAntipsychotics, for example, haloperidol\nOveractive bladder symptoms\nAmitriptyline\nDuloxetine\nDrooling\nAmitriptyline\nIntractable hiccups\nHaloperidol\nPathological laughter or crying\nCitalopram\nSertraline\nSweating\nAmitriptyline\nReferences\n\t 1.\t Wilcock A, et al. PCF7 Palliative Care Formulary. 7th Edition. Nottingham Palliativedrugs.com Ltd; 2020.\n\t 2.\t Anderson K, et al. Prescriber barriers and enablers to minimising potentially inappropriate medications in adults: a systematic review and \nthematic synthesis. BMJ Open 2014; 4:e006544.\n\t 3.\t Garfinkel D, et al. Inappropriate medication use and polypharmacy in end-stage cancer patients: isn’t it the family doctor’s role to de-pre-\nscribe much earlier? Int J Clin Pract 2018; 72:e13061.\n\t 4.\t Rayner L, et al. The clinical epidemiology of depression in palliative care and the predictive value of somatic symptoms: cross-sectional survey \nwith four-week follow-up. Palliat Med 2011; 25:229–241.\n\t 5.\t Stiefel F, et al. Depression in palliative care: a pragmatic report from the Expert Working Group of the European Association for Palliative \nCare. Support Care Cancer 2001; 9:477–488.\n\t 6.\t Rayner L, et al. Antidepressants for the treatment of depression in palliative care: systematic review and meta-analysis. Palliat Med 2011; \n25:36–51.\n\t 7.\t Rayner L, et al. Expert opinion on detecting and treating depression in palliative care: A Delphi study. BMC Palliat Care 2011; 10:10.\n\t 8.\t Candy M, et al. Psychostimulants for depression. Cochrane Database Syst Rev 2008:Cd006722.\n\t 9.\t Salt S, et al. Drug therapy for symptoms associated with anxiety in adult palliative care patients. Cochrane Database Syst Rev 2017; \n5:Cd004596.\n\t10.\t Atkin N, et al. ‘Worried to death’: the assessment and management of anxiety in patients with advanced life-limiting disease, a national survey \nof palliative medicine physicians. BMC Palliat Care 2017; 16:69.\n\t11.\t Moorey S, et al. A cluster randomized controlled trial of cognitive behaviour therapy for common mental disorders in patients with advanced \ncancer. Psychol Med 2009; 39:713–723.\n\t12.\t National Institute for Clinical Excellence. NG31: care of dying adults in the last days of life. 2015; https://www.nice.org.uk/guidance/NG31.\nTable 10.14  (Continued)\n",
+  "raw_text_sha256": "e96eeb3696261fe066151b733d6b3c93b23309cacecadb9b1bd83b993c21c9f2",
+  "coordinates_sha256": "79f74735b411564b7b5339acedff3290d068814e4ab894308de1878badce01e7",
+  "block_sequence_sha256": "5c22778ef22c811f5e77f8212c92533ab5904ef0b501e5898a9da3d58b9676f0",
+  "blocks": [
+    {
+      "block_id": "page-0851-block-0000",
+      "order": 0,
+      "text": "830    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "a802b8a620330b8fd1d88b9f6523f51f37e0856ccc202d735a2eb48342a0a5f2"
+    },
+    {
+      "block_id": "page-0851-block-0001",
+      "order": 1,
+      "text": "CHAPTER 10\n",
+      "bbox": [
+        18.520000457763672,
+        75.763671875,
+        28.0,
+        121.5556640625
+      ],
+      "text_sha256": "f66b9dd1aa23dbcd31f9e459a89236900b5e603961d8df16dd9e7928173774fa"
+    },
+    {
+      "block_id": "page-0851-block-0002",
+      "order": 2,
+      "text": "Symptom\nExample drugs\n",
+      "bbox": [
+        65.88980102539062,
+        88.64790344238281,
+        303.4822692871094,
+        97.535400390625
+      ],
+      "text_sha256": "16ba157b717fe42e9562f1071d5c311e5e9a3436939a61da336a98da1ca225bb"
+    },
+    {
+      "block_id": "page-0851-block-0003",
+      "order": 3,
+      "text": "Terminal agitation\nBenzodiazepines, for example, midazolam\n",
+      "bbox": [
+        65.88980102539062,
+        106.4529037475586,
+        385.5623779296875,
+        115.160400390625
+      ],
+      "text_sha256": "c3762bb18e7e807fcce1a4707a72856394141cb2c2f59ef52657fed74b9e7ba7"
+    },
+    {
+      "block_id": "page-0851-block-0004",
+      "order": 4,
+      "text": "Antipsychotics, for example, haloperidol\n",
+      "bbox": [
+        251.38729858398438,
+        119.45040130615234,
+        379.3149108886719,
+        128.15789794921875
+      ],
+      "text_sha256": "cb53b9b42a70eca50b5c01ef69b309032f4c250dca3e6fb050721b4ec9c03005"
+    },
+    {
+      "block_id": "page-0851-block-0005",
+      "order": 5,
+      "text": "Overactive bladder symptoms\nAmitriptyline\n",
+      "bbox": [
+        65.88980102539062,
+        137.0753936767578,
+        292.2098388671875,
+        145.78289794921875
+      ],
+      "text_sha256": "3a74c30490df1af9ab61c2f7d5af577174d0cd632193c643a2cc1730b8b7ba49"
+    },
+    {
+      "block_id": "page-0851-block-0006",
+      "order": 6,
+      "text": "Duloxetine\n",
+      "bbox": [
+        251.38729858398438,
+        150.07289123535156,
+        285.5573425292969,
+        158.7803955078125
+      ],
+      "text_sha256": "fd3812c1a879387912f79ffdf5a1203f1420234837147afb509d5a67116fd857"
+    },
+    {
+      "block_id": "page-0851-block-0007",
+      "order": 7,
+      "text": "Drooling\nAmitriptyline\n",
+      "bbox": [
+        65.88980102539062,
+        167.69789123535156,
+        292.2098388671875,
+        176.4053955078125
+      ],
+      "text_sha256": "9f74c7ffafbb6aa78a132b304b0ad358ee1eef110bdf8a0a0a43c921acf02847"
+    },
+    {
+      "block_id": "page-0851-block-0008",
+      "order": 8,
+      "text": "Intractable hiccups\nHaloperidol\n",
+      "bbox": [
+        65.88980102539062,
+        185.32289123535156,
+        288.0623779296875,
+        194.0303955078125
+      ],
+      "text_sha256": "5318a58b058300e39ec264465d1792a9339c700029c7a15ce85aac508eff4ac7"
+    },
+    {
+      "block_id": "page-0851-block-0009",
+      "order": 9,
+      "text": "Pathological laughter or crying\nCitalopram\n",
+      "bbox": [
+        65.88980102539062,
+        202.94789123535156,
+        286.8023376464844,
+        211.6553955078125
+      ],
+      "text_sha256": "f3db5317ce8ae7965e0c46610c49eb59ef21bb93fed16582e28349eb0c0ba7f3"
+    },
+    {
+      "block_id": "page-0851-block-0010",
+      "order": 10,
+      "text": "Sertraline\n",
+      "bbox": [
+        251.38729858398438,
+        215.9453887939453,
+        281.37982177734375,
+        224.65289306640625
+      ],
+      "text_sha256": "e794413d7e16a519adf3da8d7b86b230e3aac702a1f60e2caa3bd4060113f56b"
+    },
+    {
+      "block_id": "page-0851-block-0011",
+      "order": 11,
+      "text": "Sweating\nAmitriptyline\n",
+      "bbox": [
+        65.88980102539062,
+        233.5703887939453,
+        292.2098388671875,
+        242.27789306640625
+      ],
+      "text_sha256": "13a34c926a7ce3d7e5bef37b0de07031c8348c479475b8031a4a89ca3e45d141"
+    },
+    {
+      "block_id": "page-0851-block-0012",
+      "order": 12,
+      "text": "References\n",
+      "bbox": [
+        61.889801025390625,
+        266.8753967285156,
+        117.92379760742188,
+        279.910400390625
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0851-block-0013",
+      "order": 13,
+      "text": "\t 1.\t Wilcock A, et al. PCF7 Palliative Care Formulary. 7th Edition. Nottingham Palliativedrugs.com Ltd; 2020.\n\t 2.\t Anderson K, et al. Prescriber barriers and enablers to minimising potentially inappropriate medications in adults: a systematic review and \n",
+      "bbox": [
+        61.889801025390625,
+        284.99639892578125,
+        435.5517578125,
+        301.0284118652344
+      ],
+      "text_sha256": "ac92a28bed36ec36add6af97d2eae33509cff8cc3d2dff514fdf6a91b7a99093"
+    },
+    {
+      "block_id": "page-0851-block-0014",
+      "order": 14,
+      "text": "thematic synthesis. BMJ Open 2014; 4:e006544.\n\t 3.\t Garfinkel D, et al. Inappropriate medication use and polypharmacy in end-stage cancer patients: isn’t it the family doctor’s role to de-pre-\n",
+      "bbox": [
+        61.901798248291016,
+        302.8523864746094,
+        433.93170166015625,
+        319.0284118652344
+      ],
+      "text_sha256": "c29b138fd71b8f4df4f481478d961fbbd5ea751791d0e266b736230d357fce0d"
+    },
+    {
+      "block_id": "page-0851-block-0015",
+      "order": 15,
+      "text": "scribe much earlier? Int J Clin Pract 2018; 72:e13061.\n\t 4.\t Rayner L, et al. The clinical epidemiology of depression in palliative care and the predictive value of somatic symptoms: cross-sectional survey \n",
+      "bbox": [
+        61.907798767089844,
+        320.8523864746094,
+        435.60589599609375,
+        337.0284118652344
+      ],
+      "text_sha256": "4fb20f54a9e25f5eaefc50d494c82f2e9d06d0fe59ac91845b886b65af5205b8"
+    },
+    {
+      "block_id": "page-0851-block-0016",
+      "order": 16,
+      "text": "with four-week follow-up. Palliat Med 2011; 25:229–241.\n\t 5.\t Stiefel F, et al. Depression in palliative care: a pragmatic report from the Expert Working Group of the European Association for Palliative \n",
+      "bbox": [
+        61.91379928588867,
+        338.8523864746094,
+        435.6237487792969,
+        355.0284118652344
+      ],
+      "text_sha256": "2c459fcfaf2cec0a8442f7194cadf2a5242aff1a3f582382bbdeacfa07468a8b"
+    },
+    {
+      "block_id": "page-0851-block-0017",
+      "order": 17,
+      "text": "Care. Support Care Cancer 2001; 9:477–488.\n\t 6.\t Rayner L, et al. Antidepressants for the treatment of depression in palliative care: systematic review and meta-analysis. Palliat Med 2011; \n",
+      "bbox": [
+        61.9197998046875,
+        356.8523864746094,
+        435.56378173828125,
+        373.0284118652344
+      ],
+      "text_sha256": "b55843e6c5aa5228ad7381ca04e3c6dd900831877bb7575600d8fd6b2c27a555"
+    },
+    {
+      "block_id": "page-0851-block-0018",
+      "order": 18,
+      "text": "25:36–51.\n\t 7.\t Rayner L, et al. Expert opinion on detecting and treating depression in palliative care: A Delphi study. BMC Palliat Care 2011; 10:10.\n\t 8.\t Candy M, et al. Psychostimulants for depression. Cochrane Database Syst Rev 2008:Cd006722.\n\t 9.\t Salt S, et al. Drug therapy for symptoms associated with anxiety in adult palliative care patients. Cochrane Database Syst Rev 2017; \n",
+      "bbox": [
+        61.92580032348633,
+        374.8523864746094,
+        435.5638427734375,
+        409.0284118652344
+      ],
+      "text_sha256": "6980cb128dd62120c997ed439de664f04aed9feaafb289d3edb4b586fe0e7047"
+    },
+    {
+      "block_id": "page-0851-block-0019",
+      "order": 19,
+      "text": "5:Cd004596.\n\t10.\t Atkin N, et al. ‘Worried to death’: the assessment and management of anxiety in patients with advanced life-limiting disease, a national survey \n",
+      "bbox": [
+        61.94380187988281,
+        410.8523864746094,
+        435.6358642578125,
+        427.0284118652344
+      ],
+      "text_sha256": "dbfe4372333463a8db6f1ba1461cfefa8097f03e0abf0c76732e3b0318caff3b"
+    },
+    {
+      "block_id": "page-0851-block-0020",
+      "order": 20,
+      "text": "of palliative medicine physicians. BMC Palliat Care 2017; 16:69.\n\t11.\t Moorey S, et al. A cluster randomized controlled trial of cognitive behaviour therapy for common mental disorders in patients with advanced \n",
+      "bbox": [
+        61.949798583984375,
+        428.8523864746094,
+        435.59967041015625,
+        445.0284118652344
+      ],
+      "text_sha256": "a43b32fd0c66fa564636105fc3d677daeb5ea0f37494dcb620500e6eb0f7bd4f"
+    },
+    {
+      "block_id": "page-0851-block-0021",
+      "order": 21,
+      "text": "cancer. Psychol Med 2009; 39:713–723.\n\t12.\t National Institute for Clinical Excellence. NG31: care of dying adults in the last days of life. 2015; https://www.nice.org.uk/guidance/NG31.\n",
+      "bbox": [
+        61.9557991027832,
+        446.8523864746094,
+        434.18377685546875,
+        463.0284118652344
+      ],
+      "text_sha256": "046333f31489f30246f6724aa4d758f039e7c0afb9b24f1472313b60d929b953"
+    },
+    {
+      "block_id": "page-0851-block-0022",
+      "order": 22,
+      "text": "Table 10.14  (Continued)\n",
+      "bbox": [
+        67.88999938964844,
+        70.08790588378906,
+        148.34999084472656,
+        78.97540283203125
+      ],
+      "text_sha256": "105fc79bf0fd42723c0915dbb0f765975129906177652a3a20225d2f47d4a4de"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

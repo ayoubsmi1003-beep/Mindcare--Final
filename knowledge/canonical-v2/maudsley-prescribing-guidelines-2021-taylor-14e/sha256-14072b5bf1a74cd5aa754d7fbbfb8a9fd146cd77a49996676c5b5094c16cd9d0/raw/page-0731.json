@@ -1,0 +1,719 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0731",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 731,
+  "source_page_index": 730,
+  "source_page_display": 731,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Table 7.4  (Continued)\nDrug\nInfant plasma \nconcentration\nEstimated daily infant \ndose as proportion of \nmaternal dose (RID)\nAcute adverse effects in \ninfant\nDevelopmental effects in infant\nButyrophenones4,14,38,82,100,108–111\nNot reported.\nHaloperidol = 0.2–12%\nOne case of hypersomnia, poor \nfeeding, and slowing in motor \nmovements. Mother was also \ntaking risperidone. The effects \nwere noted when haloperidol \ndose was increased.\nDelayed development was noted in \nthree infants exposed to a \ncombination of haloperidol and \nchlorpromazine in breast milk.\nNormal development has also been \nreported.\nCariprazine\nNo published data available \nat the time of writing.\nClozapine4,14,38,82,109,112–115\nNB Avoid\n6.5% of maternal plasma \nconcentration.*\n1.4%\nSedation, agranulocytosis, \ndecreased sucking reflex, \nirritability, seizures and \ncardiovascular instability.\nThere is one report of delayed \nspeech acquisition. The infant was \nalso exposed to clozapine in utero.\nLurasidone\nNo published data available \nat the time of writing.\nLumateperone tosylate\nPublished data not \navailable.\nOlanzapine4,14,38,100,116–128\nUndetectable or low.\nOne case of plasma levels \ndecreasing over 5 months. \nThe authors proposed that \ninfant’s capacity to \nmetabolise olanzapine \n‘developed rapidly’ around \nthe age of 4 months.\n1.0–1.6%\nSomnolence, drowsiness, \nirritability, tremor, insomnia, \nlethargy, poor suckling and \nshaking.\nOne case of jaundice and \nsedation. Infant was exposed in \nutero and had cardiomegaly.\nOne case of lower developmental \nage than chronological age. \nMother was taking additional \npsychotropic medication.\nOne case of speech delay and one \nof motor developmental delay.\nTwo cases of failure to gain weight.\nNormal development has also been \nreported.\n(Continued)\n",
+  "raw_text_sha256": "ad6c9c92a0a1c1c8e0cde9ffb49b9e7c367a25f6987e673e09190f580e41f7b5",
+  "coordinates_sha256": "6e4d156758d59b530ea5a92ed1f7af3bcad1e64b5b2f283783e9544a3c788b92",
+  "block_sequence_sha256": "e4b96c6e62bddc2ebbb7cbac822cb6152b2c617052f172cd760c010465f200de",
+  "blocks": [
+    {
+      "block_id": "page-0731-block-0000",
+      "order": 0,
+      "text": "Table 7.4  (Continued)\n",
+      "bbox": [
+        45.1161003112793,
+        534.5339965820312,
+        54.00360107421875,
+        606.6539916992188
+      ],
+      "text_sha256": "0ae4ceed5aad3fa172262ac6861e167bc3f502fe25d9c6e8bf9ac131d2397aa9"
+    },
+    {
+      "block_id": "page-0731-block-0001",
+      "order": 1,
+      "text": "Drug\nInfant plasma \n",
+      "bbox": [
+        75.74360656738281,
+        439.2239685058594,
+        94.62860107421875,
+        612.6539916992188
+      ],
+      "text_sha256": "740ab9eb672cde86fd19cae765bab98ff010246377b1aac1269ef7543dd4a3b7"
+    },
+    {
+      "block_id": "page-0731-block-0002",
+      "order": 2,
+      "text": "concentration\n",
+      "bbox": [
+        85.74110412597656,
+        440.90399169921875,
+        94.62860107421875,
+        489.65399169921875
+      ],
+      "text_sha256": "5e7b39b8735747a51153dd69c9b4c9de9c17893912aab750c14d6dfcd85b4665"
+    },
+    {
+      "block_id": "page-0731-block-0003",
+      "order": 3,
+      "text": "Estimated daily infant \n",
+      "bbox": [
+        65.73860168457031,
+        309.8489685058594,
+        74.6260986328125,
+        389.46148681640625
+      ],
+      "text_sha256": "2841e2ae24ac2a5a655457c138f0cb23dacf705d1b0e79882dd0fceac11fad57"
+    },
+    {
+      "block_id": "page-0731-block-0004",
+      "order": 4,
+      "text": "dose as proportion of \n",
+      "bbox": [
+        75.73609924316406,
+        311.25909423828125,
+        84.62359619140625,
+        389.46148681640625
+      ],
+      "text_sha256": "21fbe6c96b9b77500331b3393eeb77725f2a895797804d7adb4058055a75758d"
+    },
+    {
+      "block_id": "page-0731-block-0005",
+      "order": 5,
+      "text": "maternal dose (RID)\nAcute adverse effects in \n",
+      "bbox": [
+        75.73609924316406,
+        207.3539581298828,
+        94.62109375,
+        389.46148681640625
+      ],
+      "text_sha256": "e1bd3585ae717c1b911d4bf2fdaceab2365a65bd49c19794f6485141ed38afd7"
+    },
+    {
+      "block_id": "page-0731-block-0006",
+      "order": 6,
+      "text": "infant\nDevelopmental effects in infant\n",
+      "bbox": [
+        85.73359680175781,
+        66.36893463134766,
+        94.62109375,
+        293.90399169921875
+      ],
+      "text_sha256": "6ca6973910aaf5c340def8cac268e73890761e31bdeb5e80f907abd8e9a63028"
+    },
+    {
+      "block_id": "page-0731-block-0007",
+      "order": 7,
+      "text": "Butyrophenones4,14,38,82,100,108–111\nNot reported.\nHaloperidol = 0.2–12%\nOne case of hypersomnia, poor \n",
+      "bbox": [
+        106.03609466552734,
+        191.79908752441406,
+        114.75360107421875,
+        612.6539306640625
+      ],
+      "text_sha256": "d2cb5ef49f7acee39880514a81db54e0ac78e8031bb603b4584242ceb9302b73"
+    },
+    {
+      "block_id": "page-0731-block-0008",
+      "order": 8,
+      "text": "feeding, and slowing in motor \n",
+      "bbox": [
+        116.0436019897461,
+        195.1216583251953,
+        124.7510986328125,
+        293.904296875
+      ],
+      "text_sha256": "55a6fa5360c981e191bdb5e3f9fdb0389816b2629f0aaf4a66eca79a2a300729"
+    },
+    {
+      "block_id": "page-0731-block-0009",
+      "order": 9,
+      "text": "movements. Mother was also \n",
+      "bbox": [
+        126.04109954833984,
+        197.64173889160156,
+        134.74859619140625,
+        293.904296875
+      ],
+      "text_sha256": "1de94755509c626494dfd3271f801de4955cb3ddc875157a72f7fca72b3d7bb4"
+    },
+    {
+      "block_id": "page-0731-block-0010",
+      "order": 10,
+      "text": "taking risperidone. The effects \n",
+      "bbox": [
+        136.03858947753906,
+        195.2792205810547,
+        144.74609375,
+        293.904296875
+      ],
+      "text_sha256": "1a33c05f5dd2dcf394a465ea4a814c6fefd9358670fd0716142133b4bc4e2659"
+    },
+    {
+      "block_id": "page-0731-block-0011",
+      "order": 11,
+      "text": "were noted when haloperidol \n",
+      "bbox": [
+        146.0360870361328,
+        197.34169006347656,
+        154.74359130859375,
+        293.904296875
+      ],
+      "text_sha256": "778618f7ab408a75a912dbc422a783c7a2c893f6f7d3dd73de3cbd5cb6e831ab"
+    },
+    {
+      "block_id": "page-0731-block-0012",
+      "order": 12,
+      "text": "dose was increased.\n",
+      "bbox": [
+        156.03358459472656,
+        230.2742462158203,
+        164.7410888671875,
+        293.904296875
+      ],
+      "text_sha256": "840f179fe4bfb23edb14e718054f5e4e0ec567332e9b427baf39dcd887d5b879"
+    },
+    {
+      "block_id": "page-0731-block-0013",
+      "order": 13,
+      "text": "Delayed development was noted in \n",
+      "bbox": [
+        106.03108978271484,
+        63.324424743652344,
+        114.73858642578125,
+        177.93182373046875
+      ],
+      "text_sha256": "60eb06a0457d9c737ca1b37ea09d1b2d99c66886b3fe002694f1db6c1eb9a391"
+    },
+    {
+      "block_id": "page-0731-block-0014",
+      "order": 14,
+      "text": "three infants exposed to a \n",
+      "bbox": [
+        116.0285873413086,
+        92.6344223022461,
+        124.736083984375,
+        177.93182373046875
+      ],
+      "text_sha256": "c21f1a4f3e026019f2bd619986658e81d9f1ca88a3a23f38b18bcd5964a8df0e"
+    },
+    {
+      "block_id": "page-0731-block-0015",
+      "order": 15,
+      "text": "combination of haloperidol and \n",
+      "bbox": [
+        126.02608489990234,
+        74.9870834350586,
+        134.73358154296875,
+        177.93182373046875
+      ],
+      "text_sha256": "9b60d42fba22bae14bd54439ebdf3184ef6256d088fe1437a45f7711e362ca68"
+    },
+    {
+      "block_id": "page-0731-block-0016",
+      "order": 16,
+      "text": "chlorpromazine in breast milk.\n",
+      "bbox": [
+        136.02357482910156,
+        81.53450775146484,
+        144.7310791015625,
+        177.93182373046875
+      ],
+      "text_sha256": "bb6dd5d6e2e6224cf141faea4ad2ce78af0a475d5e48970c47fef951bc86705d"
+    },
+    {
+      "block_id": "page-0731-block-0017",
+      "order": 17,
+      "text": "Normal development has also been \n",
+      "bbox": [
+        152.0210723876953,
+        63.324485778808594,
+        160.72857666015625,
+        177.93182373046875
+      ],
+      "text_sha256": "292db53989e8be5cec343f3958dcadcb888605e026e6a9c5e940d8d0a9e69541"
+    },
+    {
+      "block_id": "page-0731-block-0018",
+      "order": 18,
+      "text": "reported.\n",
+      "bbox": [
+        162.01856994628906,
+        148.47938537597656,
+        170.72607421875,
+        177.93182373046875
+      ],
+      "text_sha256": "d15a88170c382811a331d271ffe4280263de718b84f375a082156d898cf013ec"
+    },
+    {
+      "block_id": "page-0731-block-0019",
+      "order": 19,
+      "text": "Cariprazine\nNo published data available \n",
+      "bbox": [
+        179.94357299804688,
+        399.6318359375,
+        188.6510772705078,
+        612.654296875
+      ],
+      "text_sha256": "eca03b6044b13b80fca4af1482239ed5eaf07f22ea531dec43dfd96b653c368d"
+    },
+    {
+      "block_id": "page-0731-block-0020",
+      "order": 20,
+      "text": "at the time of writing.\n",
+      "bbox": [
+        189.94107055664062,
+        419.2367858886719,
+        198.64857482910156,
+        489.6543273925781
+      ],
+      "text_sha256": "c2eb2b9e91cf356ae197bef48dea7b6f47ff9bca4462ee8c8e53c77edafc2a6d"
+    },
+    {
+      "block_id": "page-0731-block-0021",
+      "order": 21,
+      "text": "Clozapine4,14,38,82,109,112–115\n",
+      "bbox": [
+        207.86607360839844,
+        533.8201904296875,
+        216.57357788085938,
+        612.654296875
+      ],
+      "text_sha256": "2e5a0ef11c408cd4cdae162e56efff927f9cb4c830dda7ea44fb5941dc564b8e"
+    },
+    {
+      "block_id": "page-0731-block-0022",
+      "order": 22,
+      "text": "NB Avoid\n6.5% of maternal plasma \nconcentration.*\n1.4%\nSedation, agranulocytosis, \n",
+      "bbox": [
+        207.89610290527344,
+        208.46800231933594,
+        226.60360717773438,
+        612.6539916992188
+      ],
+      "text_sha256": "ec7ef7f0d6209694c3fe588ff252cf61dba9ba5bfc6746ebb8d7c04ccc6ec6c6"
+    },
+    {
+      "block_id": "page-0731-block-0023",
+      "order": 23,
+      "text": "decreased sucking reflex, \n",
+      "bbox": [
+        217.8936004638672,
+        212.0830841064453,
+        226.60110473632812,
+        293.9006042480469
+      ],
+      "text_sha256": "915d87a9482d63e77cad8857d5466e6d7e49efd59f969884dc169eefb828249b"
+    },
+    {
+      "block_id": "page-0731-block-0024",
+      "order": 24,
+      "text": "irritability, seizures and \n",
+      "bbox": [
+        227.89109802246094,
+        219.73304748535156,
+        236.59860229492188,
+        293.9006042480469
+      ],
+      "text_sha256": "158434cde242dc3ebd6fde30ab882121f11a7d84781ab5373501cf3bc034a57f"
+    },
+    {
+      "block_id": "page-0731-block-0025",
+      "order": 25,
+      "text": "cardiovascular instability.\n",
+      "bbox": [
+        237.8885955810547,
+        215.57054138183594,
+        246.59609985351562,
+        293.9006042480469
+      ],
+      "text_sha256": "fe180459277bdd2b2f4fafbbf0ee635ab50473b5cf8095d7a57add9f5d2c8c40"
+    },
+    {
+      "block_id": "page-0731-block-0026",
+      "order": 26,
+      "text": "There is one report of delayed \n",
+      "bbox": [
+        207.8885955810547,
+        80.2632064819336,
+        216.59609985351562,
+        177.9281005859375
+      ],
+      "text_sha256": "992f0e703a01989c9aa77fd1ec38b90f09bf1251faa1038ebec9b2a1e3fb0202"
+    },
+    {
+      "block_id": "page-0731-block-0027",
+      "order": 27,
+      "text": "speech acquisition. The infant was \n",
+      "bbox": [
+        217.88609313964844,
+        66.23824310302734,
+        226.59359741210938,
+        177.9281005859375
+      ],
+      "text_sha256": "2d9b26f4673e12a7f779c2963bf50473e189e154c2f9c52838f20034e744ecdb"
+    },
+    {
+      "block_id": "page-0731-block-0028",
+      "order": 28,
+      "text": "also exposed to clozapine in utero.\n",
+      "bbox": [
+        227.8835906982422,
+        67.20577239990234,
+        236.59109497070312,
+        177.9281005859375
+      ],
+      "text_sha256": "cabd9470c010b2fbbce5c81aede5d0e66ea41265b85e6a61265a1d122678451a"
+    },
+    {
+      "block_id": "page-0731-block-0029",
+      "order": 29,
+      "text": "Lurasidone\nNo published data available \n",
+      "bbox": [
+        255.8061065673828,
+        399.62811279296875,
+        264.51361083984375,
+        612.650634765625
+      ],
+      "text_sha256": "79eb3aa4688027468d77dff7316437f4470439ba2ca9eb971f73d3de031d4bb8"
+    },
+    {
+      "block_id": "page-0731-block-0030",
+      "order": 30,
+      "text": "at the time of writing.\n",
+      "bbox": [
+        265.8036193847656,
+        419.2330627441406,
+        274.5111083984375,
+        489.6506042480469
+      ],
+      "text_sha256": "c2eb2b9e91cf356ae197bef48dea7b6f47ff9bca4462ee8c8e53c77edafc2a6d"
+    },
+    {
+      "block_id": "page-0731-block-0031",
+      "order": 31,
+      "text": "Lumateperone tosylate\nPublished data not \n",
+      "bbox": [
+        283.7286071777344,
+        427.963134765625,
+        292.43609619140625,
+        612.650634765625
+      ],
+      "text_sha256": "49a4a7e540e36172980a1454f657df36e1306057d9eb6877f09282626082e755"
+    },
+    {
+      "block_id": "page-0731-block-0032",
+      "order": 32,
+      "text": "available.\n",
+      "bbox": [
+        293.7261047363281,
+        460.0706481933594,
+        302.43359375,
+        489.6506042480469
+      ],
+      "text_sha256": "cb902e608c58fb468520676a7fc116c66c596d68459ce2fd40791253a2d74f4f"
+    },
+    {
+      "block_id": "page-0731-block-0033",
+      "order": 33,
+      "text": "Olanzapine4,14,38,100,116–128\nUndetectable or low.\n",
+      "bbox": [
+        311.6510925292969,
+        422.9718017578125,
+        320.37860107421875,
+        612.650634765625
+      ],
+      "text_sha256": "bb682c10fcb506b15dfae276a081576fb700c0652cf069a2cc43e153255e6c80"
+    },
+    {
+      "block_id": "page-0731-block-0034",
+      "order": 34,
+      "text": "One case of plasma levels \n",
+      "bbox": [
+        321.6686096191406,
+        405.90179443359375,
+        330.3760986328125,
+        489.654296875
+      ],
+      "text_sha256": "c07fda1d91a8b3c518ee6f4cfc79f895be0a92b1a18fa0cf1c2ce42e7909f247"
+    },
+    {
+      "block_id": "page-0731-block-0035",
+      "order": 35,
+      "text": "decreasing over 5 months. \n",
+      "bbox": [
+        331.6661071777344,
+        403.1042785644531,
+        340.37359619140625,
+        489.654296875
+      ],
+      "text_sha256": "62907c8993a4e9866f3c28e719d28230dc96551267a7a17a5f6dd3ffdb3963e0"
+    },
+    {
+      "block_id": "page-0731-block-0036",
+      "order": 36,
+      "text": "The authors proposed that \n",
+      "bbox": [
+        341.6636047363281,
+        402.6767578125,
+        350.37109375,
+        489.654296875
+      ],
+      "text_sha256": "3e11ac0f93e31ab08cf42e74684791fbe2a4c2f7c8803936e725b1d964176a4a"
+    },
+    {
+      "block_id": "page-0731-block-0037",
+      "order": 37,
+      "text": "infant’s capacity to \n",
+      "bbox": [
+        351.6611022949219,
+        427.9892883300781,
+        360.36859130859375,
+        489.654296875
+      ],
+      "text_sha256": "d1aa0dc40863c0ac46399d41e913edf202c06a8be8ba45ce28fcb8f26c57892e"
+    },
+    {
+      "block_id": "page-0731-block-0038",
+      "order": 38,
+      "text": "metabolise olanzapine \n",
+      "bbox": [
+        361.6585998535156,
+        416.3117980957031,
+        370.3660888671875,
+        489.654296875
+      ],
+      "text_sha256": "a173f2e3cef931568130c261d3b0bc49a4f8f13d6bbbd1ef735d2444d5ba41e0"
+    },
+    {
+      "block_id": "page-0731-block-0039",
+      "order": 39,
+      "text": "‘developed rapidly’ around \n",
+      "bbox": [
+        371.6560974121094,
+        402.2643127441406,
+        380.36358642578125,
+        489.654296875
+      ],
+      "text_sha256": "712b1770476dc219bb727e99921613c811609a79d4c91505d683e9376efa8171"
+    },
+    {
+      "block_id": "page-0731-block-0040",
+      "order": 40,
+      "text": "the age of 4 months.\n",
+      "bbox": [
+        381.6535949707031,
+        422.13177490234375,
+        390.361083984375,
+        489.654296875
+      ],
+      "text_sha256": "4e0072cc755f06be604a406bd8f7a62182a2c3319cc4f16739dafc6b28af3926"
+    },
+    {
+      "block_id": "page-0731-block-0041",
+      "order": 41,
+      "text": "1.0–1.6%\nSomnolence, drowsiness, \n",
+      "bbox": [
+        311.6560974121094,
+        211.51670837402344,
+        320.36358642578125,
+        389.4617919921875
+      ],
+      "text_sha256": "8c0cdc1cf1b83aade79bc6a90f70c876cd4c8710eaa67f61ed279d3d20d75493"
+    },
+    {
+      "block_id": "page-0731-block-0042",
+      "order": 42,
+      "text": "irritability, tremor, insomnia, \n",
+      "bbox": [
+        321.6535949707031,
+        202.9292449951172,
+        330.361083984375,
+        293.904296875
+      ],
+      "text_sha256": "b2162995022554abe11eb3a4a5f0946cb3162d2ceba543942fc6869b80a226b5"
+    },
+    {
+      "block_id": "page-0731-block-0043",
+      "order": 43,
+      "text": "lethargy, poor suckling and \n",
+      "bbox": [
+        331.6510925292969,
+        205.40419006347656,
+        340.35858154296875,
+        293.904296875
+      ],
+      "text_sha256": "f78f1fd89616f57282c97075351c5ef99a8af12eccfbebb507fe8087201ba7a1"
+    },
+    {
+      "block_id": "page-0731-block-0044",
+      "order": 44,
+      "text": "shaking.\n",
+      "bbox": [
+        341.6485900878906,
+        267.22674560546875,
+        350.3560791015625,
+        293.904296875
+      ],
+      "text_sha256": "46268ce95d73e3d182105612df43ae6d48815c991105700145b2cdf8a307642e"
+    },
+    {
+      "block_id": "page-0731-block-0045",
+      "order": 45,
+      "text": "One case of jaundice and \n",
+      "bbox": [
+        357.6460876464844,
+        210.96922302246094,
+        366.35357666015625,
+        293.904296875
+      ],
+      "text_sha256": "131befbc879e0be6c763bc5ddd54c74847ea36053f446d7acd25c3a2ef033a88"
+    },
+    {
+      "block_id": "page-0731-block-0046",
+      "order": 46,
+      "text": "sedation. Infant was exposed in \n",
+      "bbox": [
+        367.59857177734375,
+        191.07920837402344,
+        376.35107421875,
+        293.904296875
+      ],
+      "text_sha256": "9bb07f1b963c241d5db6f1ad48f708d17a66b7e7ae4b6b4be03b5b1018dfca47"
+    },
+    {
+      "block_id": "page-0731-block-0047",
+      "order": 47,
+      "text": "utero and had cardiomegaly.\n",
+      "bbox": [
+        377.5960693359375,
+        203.22926330566406,
+        386.34857177734375,
+        293.904296875
+      ],
+      "text_sha256": "90357c411b3a102f7443852cedd5ab1ab57f9696ceaf3fbbfd2b2ec55d8c18ad"
+    },
+    {
+      "block_id": "page-0731-block-0048",
+      "order": 48,
+      "text": "One case of lower developmental \n",
+      "bbox": [
+        311.6410827636719,
+        68.7544174194336,
+        320.34857177734375,
+        177.93182373046875
+      ],
+      "text_sha256": "adc674a1e18214eb8a3e25753fdfc269b5071a65c431e560c479254b67a8f937"
+    },
+    {
+      "block_id": "page-0731-block-0049",
+      "order": 49,
+      "text": "age than chronological age. \n",
+      "bbox": [
+        321.6385803222656,
+        86.79195404052734,
+        330.3460693359375,
+        177.93182373046875
+      ],
+      "text_sha256": "6f0d803fb09fe2effbc796b68260b34ecde9c331cfb0567a2b14c53190fdd3bb"
+    },
+    {
+      "block_id": "page-0731-block-0050",
+      "order": 50,
+      "text": "Mother was taking additional \n",
+      "bbox": [
+        331.6360778808594,
+        81.6620101928711,
+        340.34356689453125,
+        177.93182373046875
+      ],
+      "text_sha256": "63ef299426fd3ae4d6e618f5a8f50e398f7367ccc805ef97bc457050c7a0761d"
+    },
+    {
+      "block_id": "page-0731-block-0051",
+      "order": 51,
+      "text": "psychotropic medication.\n",
+      "bbox": [
+        341.6335754394531,
+        98.0644760131836,
+        350.341064453125,
+        177.93182373046875
+      ],
+      "text_sha256": "b04068720ea43cb6bd192bac9df36b89ecdc3460e5fe70cb59d9b9de36df7425"
+    },
+    {
+      "block_id": "page-0731-block-0052",
+      "order": 52,
+      "text": "One case of speech delay and one \n",
+      "bbox": [
+        357.6310729980469,
+        66.65438079833984,
+        366.33856201171875,
+        177.93182373046875
+      ],
+      "text_sha256": "1a3e149fe2f9d28ebd31c06167ba6f2acdd8f8630fb71ca9c1d152138f1f9601"
+    },
+    {
+      "block_id": "page-0731-block-0053",
+      "order": 53,
+      "text": "of motor developmental delay.\n",
+      "bbox": [
+        367.6285705566406,
+        80.28194427490234,
+        376.3360595703125,
+        177.93182373046875
+      ],
+      "text_sha256": "08cdae49cc73bc9c6a8bd9238db6330a2e76d6bbaaf11a5d7872407c0ee78362"
+    },
+    {
+      "block_id": "page-0731-block-0054",
+      "order": 54,
+      "text": "Two cases of failure to gain weight.\n",
+      "bbox": [
+        383.6260681152344,
+        64.62191009521484,
+        392.33355712890625,
+        177.93182373046875
+      ],
+      "text_sha256": "9e57a2b73d7dd6c0c495340c6c82d5698feed7347ed3f65b067bc7423ca7a4fd"
+    },
+    {
+      "block_id": "page-0731-block-0055",
+      "order": 55,
+      "text": "Normal development has also been \n",
+      "bbox": [
+        399.6235656738281,
+        63.324485778808594,
+        408.3310546875,
+        177.93182373046875
+      ],
+      "text_sha256": "292db53989e8be5cec343f3958dcadcb888605e026e6a9c5e940d8d0a9e69541"
+    },
+    {
+      "block_id": "page-0731-block-0056",
+      "order": 56,
+      "text": "reported.\n",
+      "bbox": [
+        409.6210632324219,
+        148.47938537597656,
+        418.32855224609375,
+        177.93182373046875
+      ],
+      "text_sha256": "d15a88170c382811a331d271ffe4280263de718b84f375a082156d898cf013ec"
+    },
+    {
+      "block_id": "page-0731-block-0057",
+      "order": 57,
+      "text": "(Continued)\n",
+      "bbox": [
+        426.9235534667969,
+        64.3442611694336,
+        435.6760559082031,
+        100.35931396484375
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

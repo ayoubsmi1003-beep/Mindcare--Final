@@ -1,0 +1,323 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0788",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 788,
+  "source_page_index": 787,
+  "source_page_display": 788,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Drug treatment of other psychiatric conditions     767\nCHAPTER 9\nDelirium\nDelirium is a common neuropsychiatric condition that presents in medical and surgical \nsettings and is known by various names including organic brain syndrome, intensive \ncare psychosis and acute confusional state.1\nDiagnostic criteria for delirium2\n■\n■Disturbance of consciousness (reduced clarity of awareness of the environment) with \nreduced ability to focus, sustain or shift attention\n■\n■A change in cognition (such as memory deficit, disorientation, language disturbance or \nperceptual disturbance) not better explained by a pre-existing or evolving dementia\n■\n■The disturbance develops over a short period of time (usually hours to days) and \ntends to fluctuate over the course of the day\n■\n■There is often evidence from the history, physical examination or laboratory findings \nthat the disturbance is due to concomitant medications, a medical condition, sub-\nstance intoxication or substance withdrawal\nTools for evaluation3\nA brief cognitive assessment should be included in the examination of patients at risk \nof delirium. A standardised tool, the Confusion Assessment Method (CAM) is a brief, \nvalidated algorithm currently used to diagnose delirium. CAM relies on the presence of \nacute onset of symptoms, fluctuating course, inattention and either disorganised \nthinking or an altered level of consciousness.\nClinical subtypes of delirium4–6\n■\n■Hyperactive delirium: Characterised by increased motor activity with agitation, hal-\nlucinations and inappropriate behaviour\n■\n■Hypoactive delirium: Characterised by reduced motor activity and lethargy (has a \npoorer prognosis)\n■\n■Mixed delirium: Features of both increased and reduced motor activity\nPrevalence\nDelirium is present in 10% of hospitalised medical patients and a further 10–30% \ndevelop delirium after admission.4 Postoperative delirium occurs in 15–53% of patients \nand in 70–87% of those in intensive care.7\nRisk factors\nDelirium is almost invariably multifactorial, and it is often impossible to isolate a single \nprecipitant as the cause.4 The most important risk factors4,5,8–10 have consistently \nemerged as:\n",
+  "raw_text_sha256": "6b0dce45dc2c92c42547a0fd5316de6eb5db23ae5ecf5062940023e82a40ceb9",
+  "coordinates_sha256": "2b6bd25df109ad5b24920a2bf17df14b7892959d7f9c27e639a874938ec624ca",
+  "block_sequence_sha256": "e215a09ef4f8f15434a0218847341caf03d0dc0e1acfd4028c66c02cf45dcb8b",
+  "blocks": [
+    {
+      "block_id": "page-0788-block-0000",
+      "order": 0,
+      "text": "Drug treatment of other psychiatric conditions     767\n",
+      "bbox": [
+        196.0341033935547,
+        31.395221710205078,
+        420.0020751953125,
+        41.0272216796875
+      ],
+      "text_sha256": "d3c01b0a0680e7947e69446796b2567b38c1603493b1e17750df8a35f2faeecd"
+    },
+    {
+      "block_id": "page-0788-block-0001",
+      "order": 1,
+      "text": "CHAPTER 9\n",
+      "bbox": [
+        454.4096984863281,
+        598.7144775390625,
+        463.88970947265625,
+        640.0584716796875
+      ],
+      "text_sha256": "a82498383e032e8013503b8de1dd71e97ad0ce75549c664143d6c75c10c3a855"
+    },
+    {
+      "block_id": "page-0788-block-0002",
+      "order": 2,
+      "text": "Delirium\n",
+      "bbox": [
+        55.0,
+        66.06546020507812,
+        99.01099395751953,
+        79.1004638671875
+      ],
+      "text_sha256": "88a5dc3974e38b9f2d0589ea59c3527dc472f7c18540d8988c005c98e7a09120"
+    },
+    {
+      "block_id": "page-0788-block-0003",
+      "order": 3,
+      "text": "Delirium is a common neuropsychiatric condition that presents in medical and surgical \nsettings and is known by various names including organic brain syndrome, intensive \ncare psychosis and acute confusional state.1\n",
+      "bbox": [
+        48.0,
+        84.91046142578125,
+        422.74993896484375,
+        120.63046264648438
+      ],
+      "text_sha256": "7eb03a4e31ca7023ac82d4f25aa20524ae9b1c7a6edd890894045ef6901ee76d"
+    },
+    {
+      "block_id": "page-0788-block-0004",
+      "order": 4,
+      "text": "Diagnostic criteria for delirium2\n",
+      "bbox": [
+        48.0,
+        138.06546020507812,
+        209.25973510742188,
+        151.1004638671875
+      ],
+      "text_sha256": "a56e42b1f70c6e0050d277aea086ce95cf6b66a1af2b5751b2f9db6cd99c44b7"
+    },
+    {
+      "block_id": "page-0788-block-0005",
+      "order": 5,
+      "text": "■\n■Disturbance of consciousness (reduced clarity of awareness of the environment) with \n",
+      "bbox": [
+        47.999900817871094,
+        162.91046142578125,
+        422.8099060058594,
+        174.63046264648438
+      ],
+      "text_sha256": "5eff34c33ec2a66d7053895a507561ba7951969d8a8fdb373ad8efc923096347"
+    },
+    {
+      "block_id": "page-0788-block-0006",
+      "order": 6,
+      "text": "reduced ability to focus, sustain or shift attention\n",
+      "bbox": [
+        57.0,
+        174.91046142578125,
+        268.8999938964844,
+        186.63046264648438
+      ],
+      "text_sha256": "17a75ddf42394fcf7ae700131e5dc1334f28c98e2715090e17cb66776108b152"
+    },
+    {
+      "block_id": "page-0788-block-0007",
+      "order": 7,
+      "text": "■\n■A change in cognition (such as memory deficit, disorientation, language disturbance or \n",
+      "bbox": [
+        47.999900817871094,
+        186.91049194335938,
+        422.82000732421875,
+        198.6304931640625
+      ],
+      "text_sha256": "42292c7d2ac3852470b7866306e9b56c0c73a1cdb1702901a4e2640acd49e0ec"
+    },
+    {
+      "block_id": "page-0788-block-0008",
+      "order": 8,
+      "text": "perceptual disturbance) not better explained by a pre-existing or evolving dementia\n",
+      "bbox": [
+        57.0,
+        198.91049194335938,
+        410.46002197265625,
+        210.6304931640625
+      ],
+      "text_sha256": "68e6339a1e9315018292a28ddb1ec99fc9477fd65dd73cda280b59c13dca0574"
+    },
+    {
+      "block_id": "page-0788-block-0009",
+      "order": 9,
+      "text": "■\n■The disturbance develops over a short period of time (usually hours to days) and \n",
+      "bbox": [
+        47.999900817871094,
+        210.91049194335938,
+        422.72998046875,
+        222.6304931640625
+      ],
+      "text_sha256": "612336b73123ce315199ca9f37d35359b3185e16a51694a75c3bcbdbd3360f13"
+    },
+    {
+      "block_id": "page-0788-block-0010",
+      "order": 10,
+      "text": "tends to fluctuate over the course of the day\n",
+      "bbox": [
+        57.0,
+        222.91049194335938,
+        246.45999145507812,
+        234.6304931640625
+      ],
+      "text_sha256": "fc704f6ce3bf1dbb3e0c9c4e966040c3241889f7c30a4ed8466eb8d054bee5e1"
+    },
+    {
+      "block_id": "page-0788-block-0011",
+      "order": 11,
+      "text": "■\n■There is often evidence from the history, physical examination or laboratory findings \n",
+      "bbox": [
+        47.999900817871094,
+        234.91049194335938,
+        422.78997802734375,
+        246.6304931640625
+      ],
+      "text_sha256": "13c9f7bc09456bfa9b68fbf1f563f7307d6a952485e4c3416aacdf9e9e0e8367"
+    },
+    {
+      "block_id": "page-0788-block-0012",
+      "order": 12,
+      "text": "that the disturbance is due to concomitant medications, a medical condition, sub-\nstance intoxication or substance withdrawal\n",
+      "bbox": [
+        57.0,
+        246.91049194335938,
+        419.94989013671875,
+        270.6304931640625
+      ],
+      "text_sha256": "f0e24127cf9b550bb583bff70b15cfb3eccbee17650b8e525eba83b0d14de5df"
+    },
+    {
+      "block_id": "page-0788-block-0013",
+      "order": 13,
+      "text": "Tools for evaluation3\n",
+      "bbox": [
+        48.0,
+        294.06549072265625,
+        154.26083374023438,
+        307.1004943847656
+      ],
+      "text_sha256": "7b5a1724e1816eb111fd0ffa3498307f704d056d7101c1db14b107ff3f4eac9d"
+    },
+    {
+      "block_id": "page-0788-block-0014",
+      "order": 14,
+      "text": "A brief cognitive assessment should be included in the examination of patients at risk \nof delirium. A standardised tool, the Confusion Assessment Method (CAM) is a brief, \nvalidated algorithm currently used to diagnose delirium. CAM relies on the presence of \nacute onset of symptoms, fluctuating course, inattention and either disorganised \nthinking or an altered level of consciousness.\n",
+      "bbox": [
+        48.0,
+        312.9104919433594,
+        422.8200378417969,
+        372.6304931640625
+      ],
+      "text_sha256": "2719dfc0f607dbf1ebb1df0b2470f8b1de091285d07a471e3c6851f5f88cb6b6"
+    },
+    {
+      "block_id": "page-0788-block-0015",
+      "order": 15,
+      "text": "Clinical subtypes of delirium4–6\n",
+      "bbox": [
+        48.0,
+        390.06549072265625,
+        204.416259765625,
+        403.1004943847656
+      ],
+      "text_sha256": "e5c2b6a245774a8f44c731b53dca91bb4c05a86ca9685ce8f64bf5540ff6fa6c"
+    },
+    {
+      "block_id": "page-0788-block-0016",
+      "order": 16,
+      "text": "■\n■Hyperactive delirium: Characterised by increased motor activity with agitation, hal-\n",
+      "bbox": [
+        47.999900817871094,
+        408.6705017089844,
+        420.0298767089844,
+        420.6304931640625
+      ],
+      "text_sha256": "4ced5b7eb1d6b86096f31840e7b85f91508a0ca5f0160f4ea4853a67281206c7"
+    },
+    {
+      "block_id": "page-0788-block-0017",
+      "order": 17,
+      "text": "lucinations and inappropriate behaviour\n",
+      "bbox": [
+        57.0,
+        420.9104919433594,
+        230.9599609375,
+        432.6304931640625
+      ],
+      "text_sha256": "01c9981f8ef24a73515edf0d24286c86d8e12c78ab36848436a9f7edea070ce9"
+    },
+    {
+      "block_id": "page-0788-block-0018",
+      "order": 18,
+      "text": "■\n■Hypoactive delirium: Characterised by reduced motor activity and lethargy (has a \n",
+      "bbox": [
+        47.999900817871094,
+        432.6705017089844,
+        422.8099060058594,
+        444.6304931640625
+      ],
+      "text_sha256": "138ac5a74cbd679f175c8f035ca61c84227c33f7a08ab859e9957c063b7bf530"
+    },
+    {
+      "block_id": "page-0788-block-0019",
+      "order": 19,
+      "text": "poorer prognosis)\n",
+      "bbox": [
+        57.0,
+        444.9104919433594,
+        133.6999969482422,
+        456.6304931640625
+      ],
+      "text_sha256": "eadc0c497fa4558ba48e81ae31ecb01ba5fe09e01e457daa23707984ca42f23a"
+    },
+    {
+      "block_id": "page-0788-block-0020",
+      "order": 20,
+      "text": "■\n■Mixed delirium: Features of both increased and reduced motor activity\n",
+      "bbox": [
+        47.999900817871094,
+        456.6705017089844,
+        362.489990234375,
+        468.6304931640625
+      ],
+      "text_sha256": "523f2cec02c76e52482131ba64995e7dbeff6d282f97bb2d5f9b88790f9a850d"
+    },
+    {
+      "block_id": "page-0788-block-0021",
+      "order": 21,
+      "text": "Prevalence\n",
+      "bbox": [
+        48.0,
+        486.06549072265625,
+        103.43998718261719,
+        499.1004943847656
+      ],
+      "text_sha256": "285ae019fcd00771970aa037a9626710b9b7f2e2a14f9427870f31327a59dea4"
+    },
+    {
+      "block_id": "page-0788-block-0022",
+      "order": 22,
+      "text": "Delirium is present in 10% of hospitalised medical patients and a further 10–30% \ndevelop delirium after admission.4 Postoperative delirium occurs in 15–53% of patients \nand in 70–87% of those in intensive care.7\n",
+      "bbox": [
+        48.0,
+        504.91046142578125,
+        422.8199157714844,
+        540.6304931640625
+      ],
+      "text_sha256": "17302ccc9ad827490c3b682572cf0476dfa8f0124db751ab34566f7a7004e392"
+    },
+    {
+      "block_id": "page-0788-block-0023",
+      "order": 23,
+      "text": "Risk factors\n",
+      "bbox": [
+        48.0,
+        558.0654907226562,
+        107.27899932861328,
+        571.1004638671875
+      ],
+      "text_sha256": "73363e0ddfa4d67fcda56c22a8fbd3c667ed413b43921f2f781d494b066214ef"
+    },
+    {
+      "block_id": "page-0788-block-0024",
+      "order": 24,
+      "text": "Delirium is almost invariably multifactorial, and it is often impossible to isolate a single \nprecipitant as the cause.4 The most important risk factors4,5,8–10 have consistently \nemerged as:\n",
+      "bbox": [
+        47.9993896484375,
+        576.9104614257812,
+        422.7798767089844,
+        612.6304931640625
+      ],
+      "text_sha256": "0946d53cb56a49e1279be90075e2dc29417abf359ea96a94a5003bc9e5accdaa"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

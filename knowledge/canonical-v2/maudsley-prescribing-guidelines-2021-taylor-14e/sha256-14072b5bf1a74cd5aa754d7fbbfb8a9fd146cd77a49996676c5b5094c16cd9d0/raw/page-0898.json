@@ -1,0 +1,491 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0898",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 898,
+  "source_page_index": 897,
+  "source_page_display": 898,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Psychotropic drugs in special conditions    877\nCHAPTER 13\nAntipsychotics\nAmisulpride48–50\nModerate\nAround 16g.\nQT prolongation, arrhythmia, cardiac arrest.\nAripiprazole51–53\nLow\nUnclear.\nFatality unlikely when taken alone.\nSedation, lethargy, GI disturbance, \ndrooling.\nAsenapine54\nProbably \nlow\nUnclear. No deaths from \noverdose reported. Oral \nabsorption very limited.\nSedation, confusion, facial dystonia, \nbenign ECG changes.\nBrexpiprazole55\nProbably \nlow\nNo information available.\nPresumably agitation and nausea?\nButyrophenones56–58\n(e.g. haloperidol)\nModerate\nHaloperidol – probably above \n500mg.\nArrhythmia may occur at  \n300mg.\nSedation, coma, dystonia, NMS, QT \nprolongation, arrhythmia.\nCariprazine59\nLow\nEU SPC reports one overdose  \nof 48mg.\nSedation, low blood pressure.\nClozapine60,61\nModerate\nAround 2g; much lower in \nthose not tolerant to its \neffects.62\nLethargy, coma, tachycardia, hypotension, \nhypersalivation, pneumonia, seizures.\nIloperidone63–65\nProbably \nmoderate\nUnclear but probably more than \n500mg.\nPotent effect on QT interval. Sedation, \ntachycardia, respiratory depression, \nhypotension likely.\nLumateperone66\nProbably \nlow\nNo overdoses reported.\nPresumably sedation and dizziness?\nLurasidone67\nLow\nUnclear. An overdose of \n1360mg was not fatal.68 One \nstudy reported no deaths in 821 \nexposures.24\nVery limited information. Minimal effect \non QT interval.\nOlanzapine60,69–71\nModerate\nUnclear. Probably substantially \nmore than 200mg.\nLethargy, confusion, myoclonus, \nmyopathy, hypotension, tachycardia, \ndelirium. Possibly QT prolongation.\nDrug or drug group\nToxicity in \noverdose\nSmallest dose likely  \nto cause death\nSigns and symptoms of overdose\nVenlafaxine3,41–43 \n(desvenlafaxine causes \nsimilar effects but may \nbe less toxic44)\nModerate\nProbably above 5g, but seizures \nmay occur after ingestion of 1g.\nVomiting, sedation, tachycardia, \nhypertension, seizures, acidosis. Rarely QT \nprolongation, arrhythmia, \nrhabdomyolysis. Very rarely cardiac arrest/\nMI, heart failure.\nVilazodone45,46\nLow\nDoses below 300mg are not \nfatal. No fatalities recorded in \n714 exposures.24\nDrowsiness, agitation, vomiting, seizures.\nVortioxetine47\nLow\nUnclear. An overdose of 250mg \ncaused no symptoms.\nNausea, somnolence, diarrhoea, pruritis.\nTable 13.1  (Continued)\n(Continued)\n",
+  "raw_text_sha256": "e00102bd5cdfca4baacba251f46ce23e30065cbdf81d9a05275187b76b0c6795",
+  "coordinates_sha256": "21334b67bd04a1289fa5bf5d272feb703452e0ede80cda316a5987ed9b86d92f",
+  "block_sequence_sha256": "9337b39905abe16b637141302dcb8712664d1a7d142f9e8f8dbe18c7ceee4a42",
+  "blocks": [
+    {
+      "block_id": "page-0898-block-0000",
+      "order": 0,
+      "text": "Psychotropic drugs in special conditions    877\n",
+      "bbox": [
+        227.09710693359375,
+        31.395221710205078,
+        420.0010986328125,
+        41.0272216796875
+      ],
+      "text_sha256": "2b88c9156fb7e8da7b4999c46dab9f76f66f52d412fdd81dfcc0e75545466f31"
+    },
+    {
+      "block_id": "page-0898-block-0001",
+      "order": 1,
+      "text": "CHAPTER 13\n",
+      "bbox": [
+        454.4096984863281,
+        272.95111083984375,
+        463.88970947265625,
+        318.74310302734375
+      ],
+      "text_sha256": "a01ce0756ef6b5d41c48be6624d8bd154fa95cf67cb49768f2593332d3a2ec98"
+    },
+    {
+      "block_id": "page-0898-block-0002",
+      "order": 2,
+      "text": "Antipsychotics\n",
+      "bbox": [
+        48.039398193359375,
+        239.16477966308594,
+        99.2793960571289,
+        248.05227661132812
+      ],
+      "text_sha256": "66a87c9d9c00b8fa993ae9a90f576148dfe50f1c930aed10c7efe7d8254d7496"
+    },
+    {
+      "block_id": "page-0898-block-0003",
+      "order": 3,
+      "text": "Amisulpride48–50\nModerate\nAround 16g.\nQT prolongation, arrhythmia, cardiac arrest.\n",
+      "bbox": [
+        48.039398193359375,
+        257.46978759765625,
+        413.8267822265625,
+        266.1797790527344
+      ],
+      "text_sha256": "ea6d05bb2f43a7686c05b3193d6adf6b40d9664f09ca6eabafc31fae46e45af2"
+    },
+    {
+      "block_id": "page-0898-block-0004",
+      "order": 4,
+      "text": "Aripiprazole51–53\nLow\nUnclear.\nFatality unlikely when taken alone.\n",
+      "bbox": [
+        48.036895751953125,
+        272.4922790527344,
+        273.8094177246094,
+        291.1996765136719
+      ],
+      "text_sha256": "92eb2caf1693f256a72f6c1d62efcc8be12487fdc8bf5beb076f253d28b3974c"
+    },
+    {
+      "block_id": "page-0898-block-0005",
+      "order": 5,
+      "text": "Sedation, lethargy, GI disturbance, \ndrooling.\n",
+      "bbox": [
+        280.0343933105469,
+        272.49468994140625,
+        391.8594665527344,
+        291.1996765136719
+      ],
+      "text_sha256": "78f70c2f6ed557cf308484f0590bc9ea8ab0f282a2a14273d78360a3b3ddab2f"
+    },
+    {
+      "block_id": "page-0898-block-0006",
+      "order": 6,
+      "text": "Asenapine54\nProbably \nlow\n",
+      "bbox": [
+        48.036895751953125,
+        297.5146789550781,
+        157.4918975830078,
+        316.2247009277344
+      ],
+      "text_sha256": "8270f92a62b61599d8a52f3a8db722934de5ef2e26a4bc106193ea33f9f1d460"
+    },
+    {
+      "block_id": "page-0898-block-0007",
+      "order": 7,
+      "text": "Unclear. No deaths from \noverdose reported. Oral \nabsorption very limited.\n",
+      "bbox": [
+        171.03689575195312,
+        297.51971435546875,
+        250.64190673828125,
+        326.2221984863281
+      ],
+      "text_sha256": "641ca9b2009b36ca12f916302febbdff01351fa6825ab43c89f0c740cc541121"
+    },
+    {
+      "block_id": "page-0898-block-0008",
+      "order": 8,
+      "text": "Sedation, confusion, facial dystonia, \nbenign ECG changes.\n",
+      "bbox": [
+        280.0343933105469,
+        297.51220703125,
+        397.1394958496094,
+        316.2171936035156
+      ],
+      "text_sha256": "d2190fcf99f4aef3e4941614aa41aee3a1919601a471047c88fc57133dc56b5d"
+    },
+    {
+      "block_id": "page-0898-block-0009",
+      "order": 9,
+      "text": "Brexpiprazole55\nProbably \nlow\n",
+      "bbox": [
+        48.036895751953125,
+        332.5372009277344,
+        157.4918975830078,
+        351.2497863769531
+      ],
+      "text_sha256": "7459d3f95b5e5cc3cad5f7ddc521f9c1e4c170a4ac8d549d6727e60acf358091"
+    },
+    {
+      "block_id": "page-0898-block-0010",
+      "order": 10,
+      "text": "No information available.\nPresumably agitation and nausea?\n",
+      "bbox": [
+        171.03689575195312,
+        332.5447998046875,
+        389.08447265625,
+        341.2522888183594
+      ],
+      "text_sha256": "83704394a1d8658776b0b303aadc6af79c1531e0591508cd9bd1ae11e8737c50"
+    },
+    {
+      "block_id": "page-0898-block-0011",
+      "order": 11,
+      "text": "Butyrophenones56–58\n",
+      "bbox": [
+        48.036895751953125,
+        357.5722961425781,
+        111.91727447509766,
+        366.27978515625
+      ],
+      "text_sha256": "5dd1b9fa945af71480316045021fdd1c1631964e1dcd969659a55ee523cb0f25"
+    },
+    {
+      "block_id": "page-0898-block-0012",
+      "order": 12,
+      "text": "(e.g. haloperidol)\n",
+      "bbox": [
+        48.039398193359375,
+        367.5697937011719,
+        102.22689056396484,
+        376.27728271484375
+      ],
+      "text_sha256": "fbdf029316caf435270432b1381b71831412f066e78152904547d9832eb994a8"
+    },
+    {
+      "block_id": "page-0898-block-0013",
+      "order": 13,
+      "text": "Moderate\nHaloperidol – probably above \n500mg.\nArrhythmia may occur at  \n300mg.\n",
+      "bbox": [
+        128.04190063476562,
+        357.5722961425781,
+        266.7618408203125,
+        396.27227783203125
+      ],
+      "text_sha256": "4cb73e0dbb7d66a6fad4654e25d3cce897f0aad4958c374ef6db56d2e79b21f9"
+    },
+    {
+      "block_id": "page-0898-block-0014",
+      "order": 14,
+      "text": "Sedation, coma, dystonia, NMS, QT \nprolongation, arrhythmia.\n",
+      "bbox": [
+        280.0368957519531,
+        357.5647888183594,
+        395.4769287109375,
+        376.269775390625
+      ],
+      "text_sha256": "6a882dee7bba86e051cd1bc78032a4d0bf770231749372a6b57c0908b657646b"
+    },
+    {
+      "block_id": "page-0898-block-0015",
+      "order": 15,
+      "text": "Cariprazine59\nLow\nEU SPC reports one overdose  \nof 48mg.\n",
+      "bbox": [
+        48.039398193359375,
+        402.5872802734375,
+        267.8769226074219,
+        421.2997741699219
+      ],
+      "text_sha256": "98964fef4b155b8853c6516c300d13c9643de1db75556d9842c010883db3e04e"
+    },
+    {
+      "block_id": "page-0898-block-0016",
+      "order": 16,
+      "text": "Sedation, low blood pressure.\n",
+      "bbox": [
+        280.0343933105469,
+        402.59478759765625,
+        374.7969970703125,
+        411.3022766113281
+      ],
+      "text_sha256": "58508cf8abded1238309d1ffa2cd97f0c2ff7c9777d8da4740866c4d30f01e03"
+    },
+    {
+      "block_id": "page-0898-block-0017",
+      "order": 17,
+      "text": "Clozapine60,61\nModerate\nAround 2g; much lower in \nthose not tolerant to its \neffects.62\n",
+      "bbox": [
+        48.036895751953125,
+        427.61968994140625,
+        257.6018981933594,
+        456.3221740722656
+      ],
+      "text_sha256": "5bc499c5050d9d5b51a82bc9af3ef610cc9c0522fee28e5a87e3bc3883f047eb"
+    },
+    {
+      "block_id": "page-0898-block-0018",
+      "order": 18,
+      "text": "Lethargy, coma, tachycardia, hypotension, \nhypersalivation, pneumonia, seizures.\n",
+      "bbox": [
+        280.0393981933594,
+        427.61968994140625,
+        416.12689208984375,
+        446.3246765136719
+      ],
+      "text_sha256": "5c978cc1261566aa89199962157d6c83781558ba096e125cf5f6147d32191372"
+    },
+    {
+      "block_id": "page-0898-block-0019",
+      "order": 19,
+      "text": "Iloperidone63–65\nProbably \nmoderate\n",
+      "bbox": [
+        48.041900634765625,
+        462.6446838378906,
+        158.87188720703125,
+        481.34979248046875
+      ],
+      "text_sha256": "e2362f9550d3259dc4b0bcc63a32cc3eab74ab76d0d50233c713c129d6a29f1b"
+    },
+    {
+      "block_id": "page-0898-block-0020",
+      "order": 20,
+      "text": "Unclear but probably more than \n500mg.\nPotent effect on QT interval. Sedation, \ntachycardia, respiratory depression, \nhypotension likely.\n",
+      "bbox": [
+        171.03689575195312,
+        462.6448059082031,
+        404.4894104003906,
+        491.3472900390625
+      ],
+      "text_sha256": "e7b915c12410ab12af18458074cd1dc393ba149287996c17282df49f68f6e714"
+    },
+    {
+      "block_id": "page-0898-block-0021",
+      "order": 21,
+      "text": "Lumateperone66\nProbably \nlow\n",
+      "bbox": [
+        48.036895751953125,
+        497.6623229980469,
+        157.4918975830078,
+        516.374755859375
+      ],
+      "text_sha256": "58e6a83aca8c0163b2ad5c47e74ee0c80753538342af1d5b4a6e25f9a7460bc8"
+    },
+    {
+      "block_id": "page-0898-block-0022",
+      "order": 22,
+      "text": "No overdoses reported.\nPresumably sedation and dizziness?\n",
+      "bbox": [
+        171.03689575195312,
+        497.6697998046875,
+        393.24700927734375,
+        506.3772888183594
+      ],
+      "text_sha256": "a5b5c8d9719f9144536f2bf7c4c5e4000e92fb02881c7ab0b96fba69d99046b6"
+    },
+    {
+      "block_id": "page-0898-block-0023",
+      "order": 23,
+      "text": "Lurasidone67\nLow\nUnclear. An overdose of \n1360mg was not fatal.68 One \nstudy reported no deaths in 821 \nexposures.24\n",
+      "bbox": [
+        48.036895751953125,
+        522.6947631835938,
+        275.943603515625,
+        561.3972778320312
+      ],
+      "text_sha256": "93cc15a70fb08c59330e45a4a8daacb692a1b2fe324cec7e1fa6a322b471a850"
+    },
+    {
+      "block_id": "page-0898-block-0024",
+      "order": 24,
+      "text": "Very limited information. Minimal effect \non QT interval.\n",
+      "bbox": [
+        280.0393981933594,
+        522.6947631835938,
+        409.47442626953125,
+        541.3997802734375
+      ],
+      "text_sha256": "21ffb698cf01db106b9bb062592a9d9558a0caf5d1c486f94b69e2ad6d5f1d56"
+    },
+    {
+      "block_id": "page-0898-block-0025",
+      "order": 25,
+      "text": "Olanzapine60,69–71\nModerate\nUnclear. Probably substantially \nmore than 200mg.\n",
+      "bbox": [
+        48.041900634765625,
+        570.8147583007812,
+        269.3843688964844,
+        589.5247802734375
+      ],
+      "text_sha256": "ecbdd45c6b48a4a4911f07b5f303c009ec377d58b0a42278f9173664e7102d2e"
+    },
+    {
+      "block_id": "page-0898-block-0026",
+      "order": 26,
+      "text": "Lethargy, confusion, myoclonus, \nmyopathy, hypotension, tachycardia, \ndelirium. Possibly QT prolongation.\n",
+      "bbox": [
+        280.0343933105469,
+        570.8197631835938,
+        398.8044128417969,
+        599.5222778320312
+      ],
+      "text_sha256": "5e9e9f83103484c3e6b5ed900a9d6e7e3016469dff1e817b375f2ab1ebd164f7"
+    },
+    {
+      "block_id": "page-0898-block-0027",
+      "order": 27,
+      "text": "Drug or drug group\n",
+      "bbox": [
+        48.039398193359375,
+        99.78968811035156,
+        117.06937408447266,
+        108.67718505859375
+      ],
+      "text_sha256": "d528646a4477039c6bdce1cc5da8ca2b45d7d96730efadb8e0e467171afacd39"
+    },
+    {
+      "block_id": "page-0898-block-0028",
+      "order": 28,
+      "text": "Toxicity in \noverdose\n",
+      "bbox": [
+        128.04190063476562,
+        89.79219055175781,
+        165.5569305419922,
+        108.67718505859375
+      ],
+      "text_sha256": "51ebed65665cfe44e710fb62a313d80f26f929956df51247961e3b5d5f90dcd5"
+    },
+    {
+      "block_id": "page-0898-block-0029",
+      "order": 29,
+      "text": "Smallest dose likely  \nto cause death\nSigns and symptoms of overdose\n",
+      "bbox": [
+        171.03939819335938,
+        89.79219055175781,
+        396.5793151855469,
+        108.67718505859375
+      ],
+      "text_sha256": "6209e6f36b542e07025e47df7227bdb6e50dfc25f07e27e2d9a5fe9d6ac1c0f2"
+    },
+    {
+      "block_id": "page-0898-block-0030",
+      "order": 30,
+      "text": "Venlafaxine3,41–43 \n(desvenlafaxine causes \nsimilar effects but may \nbe less toxic44)\n",
+      "bbox": [
+        48.039398193359375,
+        119.84468841552734,
+        122.05879211425781,
+        158.55218505859375
+      ],
+      "text_sha256": "7bdc36a4f5c90ac14db6a09bce0c55faf766f0336a9944a84ca688a60df14a2f"
+    },
+    {
+      "block_id": "page-0898-block-0031",
+      "order": 31,
+      "text": "Moderate\nProbably above 5g, but seizures \nmay occur after ingestion of 1g.\n",
+      "bbox": [
+        128.03590393066406,
+        119.84468841552734,
+        272.32086181640625,
+        138.5496826171875
+      ],
+      "text_sha256": "f1165e14b2bc5919cc55bb309368407802dc2e6fcd39e8f7fbc3d2df751ad510"
+    },
+    {
+      "block_id": "page-0898-block-0032",
+      "order": 32,
+      "text": "Vomiting, sedation, tachycardia, \nhypertension, seizures, acidosis. Rarely QT \nprolongation, arrhythmia, \nrhabdomyolysis. Very rarely cardiac arrest/\nMI, heart failure.\n",
+      "bbox": [
+        280.0308837890625,
+        119.84468841552734,
+        415.60845947265625,
+        168.54217529296875
+      ],
+      "text_sha256": "9e8c8f77e87d6023c36babecb06068ec67e4313ab8cf9ec428ee9c04a738e59e"
+    },
+    {
+      "block_id": "page-0898-block-0033",
+      "order": 33,
+      "text": "Vilazodone45,46\nLow\nDoses below 300mg are not \nfatal. No fatalities recorded in \n714 exposures.24\n",
+      "bbox": [
+        48.03338623046875,
+        174.85716247558594,
+        267.43438720703125,
+        203.57217407226562
+      ],
+      "text_sha256": "744db5da5cc7fdf6e5d4f1b98014468a47ebea6f64945d2304e48804a2f19039"
+    },
+    {
+      "block_id": "page-0898-block-0034",
+      "order": 34,
+      "text": "Drowsiness, agitation, vomiting, seizures.\n",
+      "bbox": [
+        280.0393981933594,
+        174.8696746826172,
+        411.4544982910156,
+        183.57717895507812
+      ],
+      "text_sha256": "c1b55b8a3ab02d2291e97275224588e9cb0ad979ad540669bd071fe7c37cadde"
+    },
+    {
+      "block_id": "page-0898-block-0035",
+      "order": 35,
+      "text": "Vortioxetine47\nLow\nUnclear. An overdose of 250mg \ncaused no symptoms.\n",
+      "bbox": [
+        48.041900634765625,
+        209.89466857910156,
+        274.4094543457031,
+        228.59970092773438
+      ],
+      "text_sha256": "00c9916f2553e1629a392b5001c7d369c4d994ee0ff595be98b633ba5c1e908a"
+    },
+    {
+      "block_id": "page-0898-block-0036",
+      "order": 36,
+      "text": "Nausea, somnolence, diarrhoea, pruritis.\n",
+      "bbox": [
+        280.0343933105469,
+        209.8946990966797,
+        408.80950927734375,
+        218.60220336914062
+      ],
+      "text_sha256": "38cb00b8aa40f7be4176be9127423775703ecc238d93a2a8e5345881fade7fc2"
+    },
+    {
+      "block_id": "page-0898-block-0037",
+      "order": 37,
+      "text": "Table 13.1  (Continued)\n",
+      "bbox": [
+        54.0,
+        69.41468811035156,
+        130.2899932861328,
+        78.30218505859375
+      ],
+      "text_sha256": "24029779a5839f9ec78b7b56d6c5134ba1c47fc502bdb061095fdbda9da739f2"
+    },
+    {
+      "block_id": "page-0898-block-0038",
+      "order": 38,
+      "text": "(Continued)\n",
+      "bbox": [
+        383.9849853515625,
+        608.9121704101562,
+        419.99993896484375,
+        617.6646728515625
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

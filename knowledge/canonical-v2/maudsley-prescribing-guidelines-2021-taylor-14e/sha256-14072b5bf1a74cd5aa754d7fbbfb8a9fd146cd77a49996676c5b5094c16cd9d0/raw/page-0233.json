@@ -1,0 +1,263 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0233",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 233,
+  "source_page_index": 232,
+  "source_page_display": 233,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "212    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nCLOZAPINE ADVERSE EFFECTS\nClozapine: common adverse effects \nAdverse effect\nTime course\nAction\nSedation\nFirst few months. May\npersist, but usually\nwears off to some extent.\nGive smaller dose in the morning. Give evening \ndose earlier if morning waking is troublesome.\nReduce dose if possible.\nCase reports of successful use of psychostimulants \n(methylphenidate1) and betahistine2 but long-term \ndata are lacking. Modafinil does not appear to be \neffective3\nHypersalivation\nFirst few months. Usually\npersists, but sometimes\nwears off. Often very\ntroublesome at night\nGive hyoscine 300mcg sucked and swallowed up \nto three times a day. Many other options – see the \nsection on hypersalivation. Note anticholinergics \nworsen constipation and cognition\nConstipation\nFirst 4 months are the highest \nrisk.4 Usually persists and so \nrequires continuous monitoring/\ntreatment\nAdvise patients of the risks before starting, screen \nregularly, ensure adequate fibre, fluid and exercise. \nStimulant laxatives (senna) are first-line treatments, \nadding emollients (docusate) and/or osmotics \n(macrogols) if needed.5 Bulk-forming laxatives \nshould usually be avoided as the underlying cause \nis gastric hypomotility. Stop other medicines that \nmay be contributing and reduce clozapine dose if \npossible. Effective treatment or prevention of \nconstipation is essential as death may result.4,6–9 \nSee the section of clozapine-induced constipation\nHypotension\nFirst 4 weeks\nAdvise patient to take time when standing up.\nReduce dose or slow down rate of increase. \nIncrease fluid intake to 2l daily.10 If severe, consider \nmoclobemide and Bovril,11 fludrocortisone, \ndesmopressin or abdominal binders.10 Over longer \nterm, weight gain may lead to hypertension\nHypertension12\nFirst 4 weeks,\nsometimes longer\nMonitor closely and increase dose as slowly as is \nnecessary. Hypotensive therapy is sometimes \nnecessary13\nTachycardia\nFirst 4 weeks, but\nsometimes persists\nVery common in early stages of treatment but \nusually benign. May be dose-related.14 Tachycardia, \nif persistent at rest and associated with fever, \nhypotension or chest pain, may indicate \nmyocarditis15,16 (see the section on cardiovascular \nside effects). Referral to a cardiologist is advised. \nClozapine should be stopped if tachycardia occurs \nin the context of chest pain or heart failure. Benign \nsinus tachycardia can be treated with bisoprolol17 \nor atenolol,18 although evidence base is poor.19,20 \nIvabradine may be used if hypotension or \ncontra-indications limit the use of beta blockers.21 \nNote that prolonged tachycardia can itself \nprecipitate cardiomyopathy22 or other \ncardiovascular consequences10\n(Continued)\n",
+  "raw_text_sha256": "b5588966c10cb1ca808ce30aa9d4172dfdc733299c39f418f4ad63553ced52c4",
+  "coordinates_sha256": "40aab477450d61f264cff6b7fa350fca1a019837ba2752cba3029ec6fc77b6e7",
+  "block_sequence_sha256": "52cc4ec127bbbef443e414dadf976be2a98e66bc3f9f813e688e656909d9a950",
+  "blocks": [
+    {
+      "block_id": "page-0233-block-0000",
+      "order": 0,
+      "text": "212    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        300.0435791015625,
+        41.0262451171875
+      ],
+      "text_sha256": "fd0a0c71ad320fcb334cd99894fd24be17052901779e253c612264cd09b4282b"
+    },
+    {
+      "block_id": "page-0233-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0233-block-0002",
+      "order": 2,
+      "text": "CLOZAPINE ADVERSE EFFECTS\n",
+      "bbox": [
+        68.88909912109375,
+        66.06442260742188,
+        223.549072265625,
+        79.09942626953125
+      ],
+      "text_sha256": "b18ec62c5cccb9ac681df957d937684c6736f7b7ccd643a097126d02bb3a726a"
+    },
+    {
+      "block_id": "page-0233-block-0003",
+      "order": 3,
+      "text": "Clozapine: common adverse effects \n",
+      "bbox": [
+        68.88909912109375,
+        92.06845092773438,
+        254.5030517578125,
+        105.10345458984375
+      ],
+      "text_sha256": "918c9c240c26dc8745cf651d028ccbea78bb74645790ca43647bdf841dc10997"
+    },
+    {
+      "block_id": "page-0233-block-0004",
+      "order": 4,
+      "text": "Adverse effect\nTime course\nAction\n",
+      "bbox": [
+        61.88909912109375,
+        120.57191467285156,
+        292.8065490722656,
+        129.45941162109375
+      ],
+      "text_sha256": "63d6b7bac284f5c59599b2bd5a719496ae3748aa530bf9daa98b83699e272db3"
+    },
+    {
+      "block_id": "page-0233-block-0005",
+      "order": 5,
+      "text": "Sedation\nFirst few months. May\npersist, but usually\nwears off to some extent.\n",
+      "bbox": [
+        61.89659118652344,
+        137.7769317626953,
+        229.85162353515625,
+        166.47943115234375
+      ],
+      "text_sha256": "5bc899bcb16f051d598674048621e20f8a54806e771c8c91b6fbd2a9a5ac1cb2"
+    },
+    {
+      "block_id": "page-0233-block-0006",
+      "order": 6,
+      "text": "Give smaller dose in the morning. Give evening \ndose earlier if morning waking is troublesome.\n",
+      "bbox": [
+        269.901611328125,
+        137.76942443847656,
+        422.9692077636719,
+        156.47442626953125
+      ],
+      "text_sha256": "f41f5565da8b2a7684329db4d72acf47a8c534da47154bfb73b9395729ddf03e"
+    },
+    {
+      "block_id": "page-0233-block-0007",
+      "order": 7,
+      "text": "Reduce dose if possible.\n",
+      "bbox": [
+        269.901611328125,
+        160.76441955566406,
+        346.1767272949219,
+        169.471923828125
+      ],
+      "text_sha256": "d75b92d46d0c5c57bef62ceaba9e59f8209a07b0f10781fa94a6665db53b2574"
+    },
+    {
+      "block_id": "page-0233-block-0008",
+      "order": 8,
+      "text": "Case reports of successful use of psychostimulants \n(methylphenidate1) and betahistine2 but long-term \ndata are lacking. Modafinil does not appear to be \neffective3\n",
+      "bbox": [
+        269.8902587890625,
+        173.7619171142578,
+        432.7042541503906,
+        212.47943115234375
+      ],
+      "text_sha256": "730677d00601e20dcc2919b550af533357886a23155dea8dc232f9461696947b"
+    },
+    {
+      "block_id": "page-0233-block-0009",
+      "order": 9,
+      "text": "Hypersalivation\nFirst few months. Usually\npersists, but sometimes\nwears off. Often very\ntroublesome at night\n",
+      "bbox": [
+        61.88909912109375,
+        218.8019256591797,
+        227.89410400390625,
+        257.5019226074219
+      ],
+      "text_sha256": "93c8933e59ead049c147bb8ca023a24504c192952cbb372e5e0e58018ffeca5f"
+    },
+    {
+      "block_id": "page-0233-block-0010",
+      "order": 10,
+      "text": "Give hyoscine 300mcg sucked and swallowed up \nto three times a day. Many other options – see the \nsection on hypersalivation. Note anticholinergics \nworsen constipation and cognition\n",
+      "bbox": [
+        269.89410400390625,
+        218.79441833496094,
+        432.8466491699219,
+        257.4944152832031
+      ],
+      "text_sha256": "b7bab029fbc50e1bbf9af2358308cf44163ff44b7f94c376d6f28da39898d77e"
+    },
+    {
+      "block_id": "page-0233-block-0011",
+      "order": 11,
+      "text": "Constipation\nFirst 4 months are the highest \nrisk.4 Usually persists and so \nrequires continuous monitoring/\ntreatment\n",
+      "bbox": [
+        61.89662170410156,
+        263.8094177246094,
+        250.14505004882812,
+        302.5294189453125
+      ],
+      "text_sha256": "8c78d34ba553ba425870edb06c900bc1e5eea66f2fcca6c62e553c091c5bb44f"
+    },
+    {
+      "block_id": "page-0233-block-0012",
+      "order": 12,
+      "text": "Advise patients of the risks before starting, screen \nregularly, ensure adequate fibre, fluid and exercise. \nStimulant laxatives (senna) are first-line treatments, \nadding emollients (docusate) and/or osmotics \n(macrogols) if needed.5 Bulk-forming laxatives \nshould usually be avoided as the underlying cause \nis gastric hypomotility. Stop other medicines that \nmay be contributing and reduce clozapine dose if \npossible. Effective treatment or prevention of \nconstipation is essential as death may result.4,6–9 \nSee the section of clozapine-induced constipation\n",
+      "bbox": [
+        269.88751220703125,
+        263.8219299316406,
+        434.6075134277344,
+        372.53192138671875
+      ],
+      "text_sha256": "51831f2a3e0bbe3280867cab0c127e1002ae94f2e8dc62dff9a81021c8dd4a0a"
+    },
+    {
+      "block_id": "page-0233-block-0013",
+      "order": 13,
+      "text": "Hypotension\nFirst 4 weeks\nAdvise patient to take time when standing up.\n",
+      "bbox": [
+        61.89002990722656,
+        378.846923828125,
+        418.2601623535156,
+        387.5544128417969
+      ],
+      "text_sha256": "be548939ca643c331c401b37b808f6dd4ed8fc0cbe9400538386a3bd96317de5"
+    },
+    {
+      "block_id": "page-0233-block-0014",
+      "order": 14,
+      "text": "Reduce dose or slow down rate of increase. \nIncrease fluid intake to 2l daily.10 If severe, consider \nmoclobemide and Bovril,11 fludrocortisone, \ndesmopressin or abdominal binders.10 Over longer \nterm, weight gain may lead to hypertension\n",
+      "bbox": [
+        269.8900146484375,
+        391.84442138671875,
+        434.2149963378906,
+        440.5569152832031
+      ],
+      "text_sha256": "ffd1bb8a8c32164d9ff0d21c9e0631e099128803313b5108fa1cb59c6e9fcbcf"
+    },
+    {
+      "block_id": "page-0233-block-0015",
+      "order": 15,
+      "text": "Hypertension12\nFirst 4 weeks,\nsometimes longer\n",
+      "bbox": [
+        61.89277648925781,
+        446.8719177246094,
+        204.55906677246094,
+        465.5819091796875
+      ],
+      "text_sha256": "eec1f1bd8c67ca5a906117f5b6f9b7fc0336f9afc57630690ccfd51ecb5a84d5"
+    },
+    {
+      "block_id": "page-0233-block-0016",
+      "order": 16,
+      "text": "Monitor closely and increase dose as slowly as is \nnecessary. Hypotensive therapy is sometimes \nnecessary13\n",
+      "bbox": [
+        269.8916015625,
+        446.8769226074219,
+        425.6142272949219,
+        475.57940673828125
+      ],
+      "text_sha256": "f1a18f811bd045e5615bf3aec9b55ff5ef68fb87b29b7a2809f98562c39a407b"
+    },
+    {
+      "block_id": "page-0233-block-0017",
+      "order": 17,
+      "text": "Tachycardia\nFirst 4 weeks, but\nsometimes persists\n",
+      "bbox": [
+        61.88909912109375,
+        481.9019470214844,
+        207.4715576171875,
+        500.60693359375
+      ],
+      "text_sha256": "f3361c2174cc681e0b5df4333e48587cf80b00c3a4596a369e0aee4fc5c79e13"
+    },
+    {
+      "block_id": "page-0233-block-0018",
+      "order": 18,
+      "text": "Very common in early stages of treatment but \nusually benign. May be dose-related.14 Tachycardia, \nif persistent at rest and associated with fever, \nhypotension or chest pain, may indicate \nmyocarditis15,16 (see the section on cardiovascular \nside effects). Referral to a cardiologist is advised. \nClozapine should be stopped if tachycardia occurs \nin the context of chest pain or heart failure. Benign \nsinus tachycardia can be treated with bisoprolol17 \nor atenolol,18 although evidence base is poor.19,20 \nIvabradine may be used if hypotension or \ncontra-indications limit the use of beta blockers.21 \nNote that prolonged tachycardia can itself \nprecipitate cardiomyopathy22 or other \ncardiovascular consequences10\n",
+      "bbox": [
+        269.88592529296875,
+        481.9019470214844,
+        435.1935119628906,
+        630.60693359375
+      ],
+      "text_sha256": "f624f0da1a3406e769574c6f3177ec19efec78abb515fdb65c991357e04ddd67"
+    },
+    {
+      "block_id": "page-0233-block-0019",
+      "order": 19,
+      "text": "(Continued)\n",
+      "bbox": [
+        396.12481689453125,
+        639.2470092773438,
+        433.6398620605469,
+        647.99951171875
+      ],
+      "text_sha256": "4a2e664e6469c9c0edd51725e06fb5fd1a89afbde56f1566e9be0fb33b620754"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

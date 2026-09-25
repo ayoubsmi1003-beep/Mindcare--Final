@@ -1,0 +1,107 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0583",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 583,
+  "source_page_index": 582,
+  "source_page_display": 583,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "562    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  5\nsome weeks to months to become noticeable. In the UK, NICE therefore recom-\nmend treatment trials of SSRIs for OCD or BDD of three months and increasing \ntowards the maximum tolerated effective dosage. Carefully explaining these tempo-\nral effects to patients can be important in sustaining compliance. In addition, the \nearliest signs of improvement may be apparent to an informant before the patient. \nUse of an observer-rated quantitative measure such as the CY-BOCS12 or BDD-\nYBOCS,13 may therefore be helpful to monitor progress in clinical settings. The \nBritish Association of Psychopharmacology suggest starting at the lowest dose \nknown to be effective and waiting for up to 12 weeks before evaluating effective-\nness.14 Thereafter dosage titration is recommended if there is insufficient clinical \nresponse.\nPrescribing SSRIs in children\nIn 2004, the British Medicines and Healthcare Products Regulatory Authority Agency \n(MHRA) cautioned against the use of SSRIs in young people, owing to a possible \nincreased risk of suicidal ideation.15 The risk–benefit ratio in children is markedly dif-\nferent in OCD/BDD than depression. Careful re-analysis of treatment data highlights \nthat SSRIs are clearly more efficacious in childhood OCD than they are in the treatment \nof moderate depressive episodes in children and young people.16 Investigators con-\ncluded that in the paediatric OCD group, the pooled risk for suicidal ideation and \nattempts was less than 1% across all studies. This of course is an important risk and \nshould be explained and carefully monitored. Nonetheless, the naturalistic course of \nuntreated OCD and BDD is that it tends not to spontaneously remit and has tremen-\ndous morbidity. It is also now known that untreated OCD and BDD is associated with \nvery significant morbidity including a ten-fold increased risk of completed suicide com-\npared with the general population.10,17 These factors need to be carefully considered \nand discussed with the patient and their carers or family in making informed choices \nabout treatment.\nOn occasion, medications other than sertraline and fluvoxamine may be used as \n‘off-label’ preparations with the appropriate and suitable caution. NICE guidance5 \nfor the treatment of OCD recommends the use of SSRIs before use of clomipramine, \nbecause of the latter drug’s greater propensity for side effects and need for cardiac \nmonitoring. Factors guiding the choice of other medications may include issues such \nas the presence of other disorders (NICE recommends fluoxetine for OCD with co-\nmorbid depression); a good treatment response to a certain drug in other family \nmembers; and the presence of other disorders, as well as cost and availability. \nCompliance with medication can be a problem with some young people, which can \nguide the choice of preparation in some instances. For instance, young people with \npatchy compliance may be better suited to treatment with fluoxetine considering its \nlong half-life, when compared with other SSRIs. Some children find tablets or cap-\nsules hard to swallow and the availability of licensed liquid formulations is limited in \nmost countries.\nSome young people are very reluctant to engage in CBT as part of the treatment. \nWhilst CBT is the mainstay of treatment packages for OCD and BDD, in some instances \nmedication alone may be the only viable therapeutic option. Some children have very \n",
+  "raw_text_sha256": "e4e3cb9eed28e292bf22aac05f1763864f0f61dca2cb786f472adb27f7f5ef66",
+  "coordinates_sha256": "280eeb582d6c25109601f4b86601fa9af762a9760a37c52127c3f8146aa92eac",
+  "block_sequence_sha256": "27820cd4eee941e2d0f353279fb402ba90a1592116bd471d5c469167731e2e93",
+  "blocks": [
+    {
+      "block_id": "page-0583-block-0000",
+      "order": 0,
+      "text": "562    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "6cffaeab1d979ab07c576736aafc93b4a0db97d47a9ed7632dc20bd94db76166"
+    },
+    {
+      "block_id": "page-0583-block-0001",
+      "order": 1,
+      "text": "CHAPTER  5\n",
+      "bbox": [
+        18.520000457763672,
+        338.22650146484375,
+        28.0,
+        381.79449462890625
+      ],
+      "text_sha256": "4086e0916f45ec531cc17b8c611334eb2b1ef26051ba536579b8ef3c22c1648d"
+    },
+    {
+      "block_id": "page-0583-block-0002",
+      "order": 2,
+      "text": "some weeks to months to become noticeable. In the UK, NICE therefore recom-\nmend treatment trials of SSRIs for OCD or BDD of three months and increasing \ntowards the maximum tolerated effective dosage. Carefully explaining these tempo-\nral effects to patients can be important in sustaining compliance. In addition, the \nearliest signs of improvement may be apparent to an informant before the patient. \nUse of an observer-rated quantitative measure such as the CY-BOCS12 or BDD-\nYBOCS,13 may therefore be helpful to monitor progress in clinical settings. The \nBritish Association of Psychopharmacology suggest starting at the lowest dose \nknown to be effective and waiting for up to 12 weeks before evaluating effective-\nness.14 Thereafter dosage titration is recommended if there is insufficient clinical \nresponse.\n",
+      "bbox": [
+        61.88569641113281,
+        62.55029296875,
+        436.7101745605469,
+        194.27029418945312
+      ],
+      "text_sha256": "4bd5ae8397b79bea3e232522dd29df7d6b045f1b5401fb9af2db4eb677e36c74"
+    },
+    {
+      "block_id": "page-0583-block-0003",
+      "order": 3,
+      "text": "Prescribing SSRIs in children\n",
+      "bbox": [
+        61.88999938964844,
+        211.70529174804688,
+        205.73696899414062,
+        224.74029541015625
+      ],
+      "text_sha256": "b24743fa507c8a32c0fa805c0a7d6eea44379e883d624d135a45a70006c4703c"
+    },
+    {
+      "block_id": "page-0583-block-0004",
+      "order": 4,
+      "text": "In 2004, the British Medicines and Healthcare Products Regulatory Authority Agency \n(MHRA) cautioned against the use of SSRIs in young people, owing to a possible \nincreased risk of suicidal ideation.15 The risk–benefit ratio in children is markedly dif-\nferent in OCD/BDD than depression. Careful re-analysis of treatment data highlights \nthat SSRIs are clearly more efficacious in childhood OCD than they are in the treatment \nof moderate depressive episodes in children and young people.16 Investigators con-\ncluded that in the paediatric OCD group, the pooled risk for suicidal ideation and \nattempts was less than 1% across all studies. This of course is an important risk and \nshould be explained and carefully monitored. Nonetheless, the naturalistic course of \nuntreated OCD and BDD is that it tends not to spontaneously remit and has tremen-\ndous morbidity. It is also now known that untreated OCD and BDD is associated with \nvery significant morbidity including a ten-fold increased risk of completed suicide com-\npared with the general population.10,17 These factors need to be carefully considered \nand discussed with the patient and their carers or family in making informed choices \nabout treatment.\n",
+      "bbox": [
+        61.888397216796875,
+        230.55029296875,
+        436.7247619628906,
+        410.2702941894531
+      ],
+      "text_sha256": "39183acf95a044256a8231cad3636845d89078c43114c5d20c0b436ac1dc75be"
+    },
+    {
+      "block_id": "page-0583-block-0005",
+      "order": 5,
+      "text": "On occasion, medications other than sertraline and fluvoxamine may be used as \n‘off-label’ preparations with the appropriate and suitable caution. NICE guidance5 \nfor the treatment of OCD recommends the use of SSRIs before use of clomipramine, \nbecause of the latter drug’s greater propensity for side effects and need for cardiac \nmonitoring. Factors guiding the choice of other medications may include issues such \nas the presence of other disorders (NICE recommends fluoxetine for OCD with co-\nmorbid depression); a good treatment response to a certain drug in other family \nmembers; and the presence of other disorders, as well as cost and availability. \nCompliance with medication can be a problem with some young people, which can \nguide the choice of preparation in some instances. For instance, young people with \npatchy compliance may be better suited to treatment with fluoxetine considering its \nlong half-life, when compared with other SSRIs. Some children find tablets or cap-\nsules hard to swallow and the availability of licensed liquid formulations is limited in \nmost countries.\n",
+      "bbox": [
+        61.8900146484375,
+        410.55029296875,
+        436.710205078125,
+        578.2703247070312
+      ],
+      "text_sha256": "8df6073eae62a63db8e62a59558e75618067194a74b00aecfc8646a89394617c"
+    },
+    {
+      "block_id": "page-0583-block-0006",
+      "order": 6,
+      "text": "Some young people are very reluctant to engage in CBT as part of the treatment. \nWhilst CBT is the mainstay of treatment packages for OCD and BDD, in some instances \nmedication alone may be the only viable therapeutic option. Some children have very \n",
+      "bbox": [
+        61.8900146484375,
+        578.55029296875,
+        436.6400146484375,
+        614.2703247070312
+      ],
+      "text_sha256": "2e60ccab9481dd320c1a653b3c93c47cba576ea9078bdd236c93a62f8bca0109"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

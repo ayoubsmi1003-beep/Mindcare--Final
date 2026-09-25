@@ -1,0 +1,275 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0637",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 637,
+  "source_page_index": 636,
+  "source_page_display": 637,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "616    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  6\nThe efficacy of AChE-Is over the time course of a dementing illness is not fully under-\nstood. On the one hand, there is evidence that the drugs, when initially prescribed, may \nachieve stabilisation of cognitive function for 2–5 months18 but the study referenced \nearlier suggests that stopping the drugs even late in the course of the illness may have \ndetrimental effects. The reality is that there are probably individual variations in \n­treatment response which as yet are not well understood and cannot be predicted. \nHence, decisions on whether to stop an AChE-I should be made on a patient-by-patient \nbasis, taking into account views of family and carers. However, the consensus of opin-\nion is that if the drug is well tolerated and the patient’s physical health is stable, then it \nis probably best to continue the drug. The risks of discontinuation of dementia medica-\ntion should be balanced against side effects and costs of continuing treatment.95\nIn addition to this, a meta-analysis evaluating the efficacy of the three AChE-Is and \nmemantine in relation to the severity of AD found that the efficacy of all drugs \nexcept memantine was independent of dementia severity in all domains. The effect \nof memantine on functional impairment was actually better in more severe patients. \nResults clearly demonstrated that patients in differing stages of AD retain the abil-\nity to respond to treatment with AChE-Is and memantine. Medication effects are \ntherefore substantially independent from disease severity, and patients with a wide \nrange of severities can benefit from drug therapy. This suggests that the severity of \na patient’s illness should not preclude treatment with these drugs.76\nGuidance for discontinuation of dementia medication in clinical practice has been \nsummarised in the following section.77\nReasons for stopping treatment\n■\n■When the patient/caregiver decides to stop (after being advised on the risks and ben-\nefits of stopping treatment)\n■\n■When the patient refuses to take the medication (but see section on covert \nadministration)\n■\n■When there are problems with patient compliance which cannot be reasonably \nresolved\n■\n■When the patient’s cognitive, functional or behavioural decline is worsened by \ntreatment\n■\n■When there are intolerable side effects\n■\n■When co-morbidities make treatment risky or futile (e.g. terminal illness)\n■\n■Where there is no clinically meaningful benefit to continuing therapy (clinical judge-\nment should be used here rather than ceasing treatment when a patient reaches a \ncertain score on a cognitive outcome or when they are institutionalised)\n■\n■When dementia has progressed to a severely impaired stage (Global Deterioration \nScale stage 7: development of swallowing difficulties)\nWhen a decision is made to stop therapy (for reasons other than lack of tolerability), \ntapering of the dose and monitoring the patient for evidence of significant decline dur-\ning the next 1–3 months are advised. If such decline occurs, reinstatement of therapy \nshould be considered.\n",
+  "raw_text_sha256": "4b69a13fa0b51c8166277bb907b3b9c8452db2ed1cf3879af19de8cd43893f89",
+  "coordinates_sha256": "f8b1a7819694e529b403e95c4de77c477143b27879c0259069058ad70b112e32",
+  "block_sequence_sha256": "39dfa1d07c0eb0c66aa9d689814e864abd1a63d46ca5bdb936704960c5a957ae",
+  "blocks": [
+    {
+      "block_id": "page-0637-block-0000",
+      "order": 0,
+      "text": "616    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "e9b7c11032d0d0671b7abffe0fbf8129b37b62025c96c4bfd53ddb6d68a2d90b"
+    },
+    {
+      "block_id": "page-0637-block-0001",
+      "order": 1,
+      "text": "CHAPTER  6\n",
+      "bbox": [
+        18.520000457763672,
+        405.35260009765625,
+        28.0,
+        448.92059326171875
+      ],
+      "text_sha256": "935ab719d62f5b8fc179816946e9d76a8dc6efc267836ff132b1e5feb7647773"
+    },
+    {
+      "block_id": "page-0637-block-0002",
+      "order": 2,
+      "text": "The efficacy of AChE-Is over the time course of a dementing illness is not fully under-\nstood. On the one hand, there is evidence that the drugs, when initially prescribed, may \nachieve stabilisation of cognitive function for 2–5 months18 but the study referenced \nearlier suggests that stopping the drugs even late in the course of the illness may have \ndetrimental effects. The reality is that there are probably individual variations in \n­treatment response which as yet are not well understood and cannot be predicted. \nHence, decisions on whether to stop an AChE-I should be made on a patient-by-patient \nbasis, taking into account views of family and carers. However, the consensus of opin-\nion is that if the drug is well tolerated and the patient’s physical health is stable, then it \nis probably best to continue the drug. The risks of discontinuation of dementia medica-\ntion should be balanced against side effects and costs of continuing treatment.95\n",
+      "bbox": [
+        61.889984130859375,
+        62.55029296875,
+        436.7340087890625,
+        194.27029418945312
+      ],
+      "text_sha256": "8a77b9565023e260c4610c36d51e2469796a3db58da829d0b24c0dab50a97aed"
+    },
+    {
+      "block_id": "page-0637-block-0003",
+      "order": 3,
+      "text": "In addition to this, a meta-analysis evaluating the efficacy of the three AChE-Is and \nmemantine in relation to the severity of AD found that the efficacy of all drugs \nexcept memantine was independent of dementia severity in all domains. The effect \nof memantine on functional impairment was actually better in more severe patients. \nResults clearly demonstrated that patients in differing stages of AD retain the abil-\nity to respond to treatment with AChE-Is and memantine. Medication effects are \ntherefore substantially independent from disease severity, and patients with a wide \nrange of severities can benefit from drug therapy. This suggests that the severity of \na patient’s illness should not preclude treatment with these drugs.76\n",
+      "bbox": [
+        61.8900146484375,
+        194.55029296875,
+        436.710205078125,
+        302.2702941894531
+      ],
+      "text_sha256": "be04240a15ffa1d1f25e61b4ddfc064d05aa443d0faff1fb29acc1ec01d1fc3b"
+    },
+    {
+      "block_id": "page-0637-block-0004",
+      "order": 4,
+      "text": "Guidance for discontinuation of dementia medication in clinical practice has been \nsummarised in the following section.77\n",
+      "bbox": [
+        61.88999938964844,
+        302.55029296875,
+        436.6399841308594,
+        326.2702941894531
+      ],
+      "text_sha256": "2b2cf68bea196fa917ad381ad9e27c1be274f971471db96c3ab6cbfb2e0386a0"
+    },
+    {
+      "block_id": "page-0637-block-0005",
+      "order": 5,
+      "text": "Reasons for stopping treatment\n",
+      "bbox": [
+        61.88999938964844,
+        343.7052917480469,
+        226.09799194335938,
+        356.74029541015625
+      ],
+      "text_sha256": "b301ed46de0f594e449efc37dc7109cee7e56111e6c977397bd8aca376c6a893"
+    },
+    {
+      "block_id": "page-0637-block-0006",
+      "order": 6,
+      "text": "■\n■When the patient/caregiver decides to stop (after being advised on the risks and ben-\n",
+      "bbox": [
+        61.88990020751953,
+        368.55029296875,
+        433.8899841308594,
+        380.2702941894531
+      ],
+      "text_sha256": "7d94c1df5aed1aa932a7b277d2665e906f119739d307ea888d0958d6defcdba5"
+    },
+    {
+      "block_id": "page-0637-block-0007",
+      "order": 7,
+      "text": "efits of stopping treatment)\n",
+      "bbox": [
+        70.88999938964844,
+        380.55029296875,
+        188.10000610351562,
+        392.2702941894531
+      ],
+      "text_sha256": "ac105d20a679a4ec6728e854fdfe1747b80505286c173d850cb8a00e2d206604"
+    },
+    {
+      "block_id": "page-0637-block-0008",
+      "order": 8,
+      "text": "■\n■When the patient refuses to take the medication (but see section on covert \n",
+      "bbox": [
+        61.88990020751953,
+        392.55029296875,
+        436.64996337890625,
+        404.2702941894531
+      ],
+      "text_sha256": "393cc84bb177122e13e36372aef8802f8371384fbf5686b82bd320211b00c418"
+    },
+    {
+      "block_id": "page-0637-block-0009",
+      "order": 9,
+      "text": "administration)\n",
+      "bbox": [
+        70.88999938964844,
+        404.55029296875,
+        137.55999755859375,
+        416.2702941894531
+      ],
+      "text_sha256": "4d89340d54f5bc20bae886beb350ef85e8d1859d08ba298d16600f2ec4c049e8"
+    },
+    {
+      "block_id": "page-0637-block-0010",
+      "order": 10,
+      "text": "■\n■When there are problems with patient compliance which cannot be reasonably \n",
+      "bbox": [
+        61.88990020751953,
+        416.55029296875,
+        436.70001220703125,
+        428.2702941894531
+      ],
+      "text_sha256": "5ec0b88baed29a96466ff3a7f68d6d72ecbe41d892c22f7a8d660108911427f1"
+    },
+    {
+      "block_id": "page-0637-block-0011",
+      "order": 11,
+      "text": "resolved\n",
+      "bbox": [
+        70.88999938964844,
+        428.55029296875,
+        106.44999694824219,
+        440.2702941894531
+      ],
+      "text_sha256": "3a6b975479a644e01da8a06ae3df67f52785abb2c35bf359efdfe40adea1da8c"
+    },
+    {
+      "block_id": "page-0637-block-0012",
+      "order": 12,
+      "text": "■\n■When the patient’s cognitive, functional or behavioural decline is worsened by \n",
+      "bbox": [
+        61.88990020751953,
+        440.55029296875,
+        436.6199951171875,
+        452.2702941894531
+      ],
+      "text_sha256": "c4c9ef48075e3619750f9a310e7ccf523c0235212626eb89200c639479d187c2"
+    },
+    {
+      "block_id": "page-0637-block-0013",
+      "order": 13,
+      "text": "treatment\n",
+      "bbox": [
+        70.88999938964844,
+        452.55029296875,
+        112.5300064086914,
+        464.2702941894531
+      ],
+      "text_sha256": "b1ae7797d3d53e4c6b7912905d5ab39726d24c9c19915cff0d2d2e629e755b60"
+    },
+    {
+      "block_id": "page-0637-block-0014",
+      "order": 14,
+      "text": "■\n■When there are intolerable side effects\n",
+      "bbox": [
+        61.88990020751953,
+        464.55029296875,
+        235.3300018310547,
+        476.2702941894531
+      ],
+      "text_sha256": "b9200489d687d331552735d6d24aa25c201d1564c36f345ec44d6b8f532e9fbb"
+    },
+    {
+      "block_id": "page-0637-block-0015",
+      "order": 15,
+      "text": "■\n■When co-morbidities make treatment risky or futile (e.g. terminal illness)\n",
+      "bbox": [
+        61.88990020751953,
+        476.55029296875,
+        384.9499816894531,
+        488.2702941894531
+      ],
+      "text_sha256": "be022fcd49fb9b2fd90379892118400534582ccc0d51950e28010d2884c4541d"
+    },
+    {
+      "block_id": "page-0637-block-0016",
+      "order": 16,
+      "text": "■\n■Where there is no clinically meaningful benefit to continuing therapy (clinical judge-\n",
+      "bbox": [
+        61.88990020751953,
+        488.55029296875,
+        433.87982177734375,
+        500.2702941894531
+      ],
+      "text_sha256": "a048c96fdb83b9d5a199a671f21c409726fd4afde31539bd37bff683efae040a"
+    },
+    {
+      "block_id": "page-0637-block-0017",
+      "order": 17,
+      "text": "ment should be used here rather than ceasing treatment when a patient reaches a \ncertain score on a cognitive outcome or when they are institutionalised)\n",
+      "bbox": [
+        70.88999938964844,
+        500.55029296875,
+        436.6700439453125,
+        524.2703247070312
+      ],
+      "text_sha256": "ed768a3cf6ac89d776d98ed1c8fe1a02608edb8fa8c4aea52c8ed62316ae5b63"
+    },
+    {
+      "block_id": "page-0637-block-0018",
+      "order": 18,
+      "text": "■\n■When dementia has progressed to a severely impaired stage (Global Deterioration \n",
+      "bbox": [
+        61.88990020751953,
+        524.55029296875,
+        436.6199035644531,
+        536.2703247070312
+      ],
+      "text_sha256": "3e923f05f137af855116ea63374bdc7cbd7e904f15886027717e06217147f923"
+    },
+    {
+      "block_id": "page-0637-block-0019",
+      "order": 19,
+      "text": "Scale stage 7: development of swallowing difficulties)\n",
+      "bbox": [
+        70.88999938964844,
+        536.55029296875,
+        300.3499450683594,
+        548.2703247070312
+      ],
+      "text_sha256": "2584c4727d56208572d5822e6580b261c6c52a8d88eea6c93ff432248a5f076e"
+    },
+    {
+      "block_id": "page-0637-block-0020",
+      "order": 20,
+      "text": "When a decision is made to stop therapy (for reasons other than lack of tolerability), \ntapering of the dose and monitoring the patient for evidence of significant decline dur-\ning the next 1–3 months are advised. If such decline occurs, reinstatement of therapy \nshould be considered.\n",
+      "bbox": [
+        61.889984130859375,
+        554.55029296875,
+        436.6499328613281,
+        602.2703247070312
+      ],
+      "text_sha256": "404bd14955de01d935306a7bf50cd88eb3cc88496c406c8277f1ef0ea0f79409"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

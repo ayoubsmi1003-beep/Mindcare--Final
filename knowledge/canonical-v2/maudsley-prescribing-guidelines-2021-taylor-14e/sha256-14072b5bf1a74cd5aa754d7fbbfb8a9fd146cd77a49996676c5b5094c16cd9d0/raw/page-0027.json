@@ -1,0 +1,203 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0027",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 27,
+  "source_page_index": 26,
+  "source_page_display": 27,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "6    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  1\nspecific adverse effects), although comparative data are not robust26 (see largescale \nmeta-analyses13,27 for rankings of some adverse effect risks).\nAdverse effects are a common reason for treatment discontinuation,28 particularly \nwhen efficacy is poor.13 Patients do not always spontaneously report side effects how-\never,29 and psychiatrists’ views of the prevalence and importance of adverse effects dif-\nfer markedly from patient experience.30 Systematic enquiry, along with a physical \nexamination and appropriate biochemical tests, is the only way accurately to assess \ntheir presence and severity or perceived severity. Patient-completed checklists such as \nthe Glasgow Antipsychotic Side-effect Scale (GASS)31 can be a useful first step in this \nprocess. The clinician-completed Antipsychotic Non-Neurological Side-Effects Rating \nScale (ANNSERS) facilitates a more detailed and comprehensive assessment.32\nNon-adherence to antipsychotic treatment is common, and here the guaranteed medi-\ncation delivery associated with depot/long-acting injectable antipsychotic preparations is \nunequivocally advantageous. In comparison with oral antipsychotics, there is strong evi-\ndence that depots are associated with a reduced risk of relapse and rehospitalisation.33–35 \nThe introduction of SGA long-acting injections has to some extent changed the image of \ndepots, which were sometimes perceived as punishments for miscreant patients. Their \ntolerability advantage probably relates partly to the better definition of their therapeutic \ndose range, meaning that the optimal dose is more likely to be prescribed (compare ari-\npiprazole, with a licensed dose 300mg or 400mg a month, with flupentixol, which has a \nlicensed dose in the UK of 50mg every four weeks to 400mg a week). The optimal dose \nof flupentixol is around 40mg every 2 weeks:27 just 5% of the maximum allowed.\nAs already mentioned, for patients whose symptoms have not responded sufficiently \nto adequate, sequential trials of two or more antipsychotic drugs, clozapine is the most \neffective treatment,36–38 and its use in these circumstances is recommended by NICE.3 \nThe biological basis for the superior efficacy of clozapine is uncertain.39 Olanzapine \nshould probably be one of the two drugs used before clozapine.10,40 A case might also be \nmade for a trial of amisulpride: it has a uniformly high ranking in meta-analyses, and \none trial found continuation with amisulpride to be as effective as switching to olanzap-\nine.41 This trial also suggested clozapine might be best placed as the second drug used, \ngiven that switching provided no benefit over continuing with the first prescribed drug.\nThis chapter covers the treatment of schizophrenia with antipsychotic drugs, the rela-\ntive adverse effect profile of these drugs and how adverse effects can be managed.\nReferences\n\t 1.\t Zohar J, et al. A review of the current nomenclature for psychotropic agents and an introduction to the Neuroscience-based Nomenclature. \nEur Neuropsychopharmacol 2015; 25:2318–2325.\n\t 2.\t National Institute for Clinical Excellence. Medicines adherence: involving patients in decisions about prescribed medicines and supporting \nadherence. Clinical Guidance [CG76]. 2009 (last checked March 2019); https://www.nice.org.uk/Guidance/CG76.\n\t 3.\t National Institute for Health and Care Excellence. Psychosis and schizophrenia in adults: prevention and management. Clinical Guidance \n[CG178]. 2014 (last checked March 2019); https://www.nice.org.uk/guidance/cg178.\n\t 4.\t Lieberman JA, et al. Effectiveness of antipsychotic drugs in patients with chronic schizophrenia. N Engl J Med 2005; 353:1209–1223.\n\t 5.\t Jones PB, et al. Randomized controlled trial of the effect on Quality of Life of second- vs first-generation antipsychotic drugs in schizophrenia: \nCost Utility of the Latest Antipsychotic Drugs in Schizophrenia Study (CUtLASS 1). Arch Gen Psychiatry 2006; 63:1079–1087.\n\t 6.\t Tandon R, et al. World Psychiatric Association Pharmacopsychiatry Section statement on comparative effectiveness of antipsychotics in the \ntreatment of schizophrenia. Schizophr Res 2008; 100:20–38.\n\t 7.\t Tarsy D, et al. Epidemiology of tardive dyskinesia before and during the era of modern antipsychotic drugs. Handb Clin Neurol 2011; \n100:601–616.\n",
+  "raw_text_sha256": "7479404afbdd88a0c214c46308a220d6572ed217ee99db6a1616b0e5649d91aa",
+  "coordinates_sha256": "8868e56ca5b14e0f5047ddb472511caca1d12a971e7b046d611ccc626414e568",
+  "block_sequence_sha256": "839ac11a30bf00c1f9231f1d9c893a3ea5cf19bacdc9570a4aa3a2d1b3983f9b",
+  "blocks": [
+    {
+      "block_id": "page-0027-block-0000",
+      "order": 0,
+      "text": "6    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.88890075683594,
+        31.394245147705078,
+        290.2515869140625,
+        41.0262451171875
+      ],
+      "text_sha256": "4691ec26d62a1add6af3e8a5df9a5d4eec4f0b2570b4b7312025b849c6a87b76"
+    },
+    {
+      "block_id": "page-0027-block-0001",
+      "order": 1,
+      "text": "CHAPTER  1\n",
+      "bbox": [
+        18.519100189208984,
+        76.87469482421875,
+        27.999099731445312,
+        120.44268798828125
+      ],
+      "text_sha256": "db4c530ff211d35441c8e4e2ee7fb46bfc637e36d5c24f41380c7d7c7185ac73"
+    },
+    {
+      "block_id": "page-0027-block-0002",
+      "order": 2,
+      "text": "specific adverse effects), although comparative data are not robust26 (see largescale \nmeta-analyses13,27 for rankings of some adverse effect risks).\n",
+      "bbox": [
+        61.88789367675781,
+        62.54931640625,
+        436.6679382324219,
+        86.26931762695312
+      ],
+      "text_sha256": "1580992439caaac4b4fc4cd7fe8753058099d58c4ab41803f57fb3a9ffb76445"
+    },
+    {
+      "block_id": "page-0027-block-0003",
+      "order": 3,
+      "text": "Adverse effects are a common reason for treatment discontinuation,28 particularly \nwhen efficacy is poor.13 Patients do not always spontaneously report side effects how-\never,29 and psychiatrists’ views of the prevalence and importance of adverse effects dif-\nfer markedly from patient experience.30 Systematic enquiry, along with a physical \nexamination and appropriate biochemical tests, is the only way accurately to assess \ntheir presence and severity or perceived severity. Patient-completed checklists such as \nthe Glasgow Antipsychotic Side-effect Scale (GASS)31 can be a useful first step in this \nprocess. The clinician-completed Antipsychotic Non-Neurological Side-Effects Rating \nScale (ANNSERS) facilitates a more detailed and comprehensive assessment.32\n",
+      "bbox": [
+        61.886199951171875,
+        86.54931640625,
+        436.6940002441406,
+        194.26931762695312
+      ],
+      "text_sha256": "8d425e405ba9cbdc0539f8df970585e8f963eef6aef0397bade87c054193a028"
+    },
+    {
+      "block_id": "page-0027-block-0004",
+      "order": 4,
+      "text": "Non-adherence to antipsychotic treatment is common, and here the guaranteed medi-\ncation delivery associated with depot/long-acting injectable antipsychotic preparations is \nunequivocally advantageous. In comparison with oral antipsychotics, there is strong evi-\ndence that depots are associated with a reduced risk of relapse and rehospitalisation.33–35 \nThe introduction of SGA long-acting injections has to some extent changed the image of \ndepots, which were sometimes perceived as punishments for miscreant patients. Their \ntolerability advantage probably relates partly to the better definition of their therapeutic \ndose range, meaning that the optimal dose is more likely to be prescribed (compare ari-\npiprazole, with a licensed dose 300mg or 400mg a month, with flupentixol, which has a \nlicensed dose in the UK of 50mg every four weeks to 400mg a week). The optimal dose \nof flupentixol is around 40mg every 2 weeks:27 just 5% of the maximum allowed.\n",
+      "bbox": [
+        61.88909912109375,
+        194.54931640625,
+        436.7288513183594,
+        326.2693176269531
+      ],
+      "text_sha256": "4742f81878499e848fc3dfdc685c85eee40546d3cf7b6295555f3db5a40c8bca"
+    },
+    {
+      "block_id": "page-0027-block-0005",
+      "order": 5,
+      "text": "As already mentioned, for patients whose symptoms have not responded sufficiently \nto adequate, sequential trials of two or more antipsychotic drugs, clozapine is the most \neffective treatment,36–38 and its use in these circumstances is recommended by NICE.3 \nThe biological basis for the superior efficacy of clozapine is uncertain.39 Olanzapine \nshould probably be one of the two drugs used before clozapine.10,40 A case might also be \nmade for a trial of amisulpride: it has a uniformly high ranking in meta-analyses, and \none trial found continuation with amisulpride to be as effective as switching to olanzap-\nine.41 This trial also suggested clozapine might be best placed as the second drug used, \ngiven that switching provided no benefit over continuing with the first prescribed drug.\n",
+      "bbox": [
+        61.88690185546875,
+        326.54931640625,
+        436.7319030761719,
+        434.2693176269531
+      ],
+      "text_sha256": "647a16258ca9f33491bedf322efc320399cb63d9a624a161686e85bc880077e1"
+    },
+    {
+      "block_id": "page-0027-block-0006",
+      "order": 6,
+      "text": "This chapter covers the treatment of schizophrenia with antipsychotic drugs, the rela-\ntive adverse effect profile of these drugs and how adverse effects can be managed.\n",
+      "bbox": [
+        61.88690185546875,
+        434.54931640625,
+        433.8768615722656,
+        458.2693176269531
+      ],
+      "text_sha256": "2dcbefbab91edfb288120d3cab7619a143fe08abb1ef17a192a0f720fce3a7cd"
+    },
+    {
+      "block_id": "page-0027-block-0007",
+      "order": 7,
+      "text": "References\n",
+      "bbox": [
+        61.88909912109375,
+        475.7043151855469,
+        117.923095703125,
+        488.73931884765625
+      ],
+      "text_sha256": "e56261e0bd30965b8e68ed2abb15b14182fe929d9a21d7ed7c2b6509a6583fda"
+    },
+    {
+      "block_id": "page-0027-block-0008",
+      "order": 8,
+      "text": "\t 1.\t Zohar J, et al. A review of the current nomenclature for psychotropic agents and an introduction to the Neuroscience-based Nomenclature. \n",
+      "bbox": [
+        61.88909912109375,
+        493.8253173828125,
+        435.5930480957031,
+        500.8573303222656
+      ],
+      "text_sha256": "2432ae7fa624b9f039004408885b60d71453a458f57dbb1da59042784fbffd6b"
+    },
+    {
+      "block_id": "page-0027-block-0009",
+      "order": 9,
+      "text": "Eur Neuropsychopharmacol 2015; 25:2318–2325.\n\t 2.\t National Institute for Clinical Excellence. Medicines adherence: involving patients in decisions about prescribed medicines and supporting \n",
+      "bbox": [
+        61.895103454589844,
+        502.8253173828125,
+        435.5451965332031,
+        518.8572998046875
+      ],
+      "text_sha256": "81e0abaa78a90d09f697e6d720d8b95f764539b9b4bbef8cceb4655101764945"
+    },
+    {
+      "block_id": "page-0027-block-0010",
+      "order": 10,
+      "text": "adherence. Clinical Guidance [CG76]. 2009 (last checked March 2019); https://www.nice.org.uk/Guidance/CG76.\n\t 3.\t National Institute for Health and Care Excellence. Psychosis and schizophrenia in adults: prevention and management. Clinical Guidance \n",
+      "bbox": [
+        61.901100158691406,
+        520.8253173828125,
+        435.6050720214844,
+        536.8572998046875
+      ],
+      "text_sha256": "e5bdf35f9649229a9c8d6fb819e49487c65ec442ab7709adaa0748d46207ffad"
+    },
+    {
+      "block_id": "page-0027-block-0011",
+      "order": 11,
+      "text": "[CG178]. 2014 (last checked March 2019); https://www.nice.org.uk/guidance/cg178.\n\t 4.\t Lieberman JA, et al. Effectiveness of antipsychotic drugs in patients with chronic schizophrenia. N Engl J Med 2005; 353:1209–1223.\n\t 5.\t Jones PB, et al. Randomized controlled trial of the effect on Quality of Life of second- vs first-generation antipsychotic drugs in schizophrenia: \n",
+      "bbox": [
+        61.90709686279297,
+        538.8253173828125,
+        435.5991516113281,
+        563.8572998046875
+      ],
+      "text_sha256": "5f6ef78ff321c318618180274e25ce1a1bab45a4f34cec06370ef23df4285082"
+    },
+    {
+      "block_id": "page-0027-block-0012",
+      "order": 12,
+      "text": "Cost Utility of the Latest Antipsychotic Drugs in Schizophrenia Study (CUtLASS 1). Arch Gen Psychiatry 2006; 63:1079–1087.\n\t 6.\t Tandon R, et al. World Psychiatric Association Pharmacopsychiatry Section statement on comparative effectiveness of antipsychotics in the \n",
+      "bbox": [
+        61.919097900390625,
+        565.6813354492188,
+        435.5570373535156,
+        581.8572998046875
+      ],
+      "text_sha256": "004a801f3167ae4f420480b51aef2ec080eab90415c0239c4bf28dbd97d5d464"
+    },
+    {
+      "block_id": "page-0027-block-0013",
+      "order": 13,
+      "text": "treatment of schizophrenia. Schizophr Res 2008; 100:20–38.\n\t 7.\t Tarsy D, et al. Epidemiology of tardive dyskinesia before and during the era of modern antipsychotic drugs. Handb Clin Neurol 2011; \n",
+      "bbox": [
+        61.92510223388672,
+        583.6813354492188,
+        435.5691223144531,
+        599.8572998046875
+      ],
+      "text_sha256": "557ec6330fbdda24e6c7f7554ac9d875ff80b449cccb20eed2fe46e57d9025dc"
+    },
+    {
+      "block_id": "page-0027-block-0014",
+      "order": 14,
+      "text": "100:601–616.\n",
+      "bbox": [
+        72.9291000366211,
+        601.6813354492188,
+        109.28907775878906,
+        608.8572998046875
+      ],
+      "text_sha256": "072d6e60b21d011522a34a6a992f4590afea59e244a5bd17c7d7564dfafe96e7"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

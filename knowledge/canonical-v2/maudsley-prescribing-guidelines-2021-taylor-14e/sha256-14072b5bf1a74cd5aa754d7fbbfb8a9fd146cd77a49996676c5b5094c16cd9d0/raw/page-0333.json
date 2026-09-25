@@ -1,0 +1,359 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0333",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 333,
+  "source_page_index": 332,
+  "source_page_display": 333,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "312    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  3\nRecognised minimum effective doses of antidepressants\nThe recommended minimum effective doses of antidepressants are summarised in Table 3.2.\nTable 3.2  The recommended minimum effective doses of antidepressants\nAntidepressant\nDose\nTricyclics\nUnclear; at least 75–100mg/day,1 possibly 125mg/day2\nLofepramine\n140mg/day3\nSSRIs\nCitalopram\n20mg/day4\nEscitalopram\n10mg/day5\nFluoxetine\n20mg/day6\nFluvoxamine\n50mg/day7\nParoxetine\n20mg/day8\nSertraline\n50mg/day9\nOthers\nAgomelatine\n25mg/day10\nBupropion\n150mg/day11\nDesvenlafaxine\n50mg/day12\nDuloxetine\n60mg/day13,14\nLevomilnacipran\n40mg/day15\nMirtazapine\n30mg/day (15mg?16)\nMoclobemide\n300mg/17\nReboxetine\n8mg/day18\nTrazodone\n150mg/day19\nVenlafaxine\n75mg/day20\nVilazodone\n20mg/day15\nVortioxetine\n10mg/day15\n",
+  "raw_text_sha256": "3faa15258d89cfd96be8297c225ae700f66235f6171610cb6096d54c6ee9a238",
+  "coordinates_sha256": "a445233091e85145de3563c42adab848a080bc655f30703423a554bcd7aa06d3",
+  "block_sequence_sha256": "6db0d1aca43806379c5ce66faefb9f2e8f1dd30d3135fc09d45145627431c1cd",
+  "blocks": [
+    {
+      "block_id": "page-0333-block-0000",
+      "order": 0,
+      "text": "312    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "10764d99edd3cd05932c1bc979bd754820bb676a6b769efee393d356075b0524"
+    },
+    {
+      "block_id": "page-0333-block-0001",
+      "order": 1,
+      "text": "CHAPTER  3\n",
+      "bbox": [
+        18.520000457763672,
+        208.52578735351562,
+        28.0,
+        252.09378051757812
+      ],
+      "text_sha256": "2f78ede85c2c4a59339ca2a3dd3170e99239eaa558f153e25a22934fb073ed55"
+    },
+    {
+      "block_id": "page-0333-block-0002",
+      "order": 2,
+      "text": "Recognised minimum effective doses of antidepressants\n",
+      "bbox": [
+        68.88990020751953,
+        66.06539916992188,
+        358.8059387207031,
+        79.10040283203125
+      ],
+      "text_sha256": "d1fe9ef28c3af5c813357f5ed3b5d33082216d43952b0c2ecaae236b0211a077"
+    },
+    {
+      "block_id": "page-0333-block-0003",
+      "order": 3,
+      "text": "The recommended minimum effective doses of antidepressants are summarised in Table 3.2.\n",
+      "bbox": [
+        61.88990020751953,
+        84.910400390625,
+        434.2999267578125,
+        96.63040161132812
+      ],
+      "text_sha256": "0bce95ab428f1f816f041e29efac5ec76fcb124c2e17e93ce2455e0da9933af2"
+    },
+    {
+      "block_id": "page-0333-block-0004",
+      "order": 4,
+      "text": "Table 3.2  The recommended minimum effective doses of antidepressants\n",
+      "bbox": [
+        108.39009857177734,
+        118.03297424316406,
+        344.6851806640625,
+        126.92047119140625
+      ],
+      "text_sha256": "282d5e8e9a3bd22638bb2583d43da070c4c170f9410bbed4d7655ab7bae510ab"
+    },
+    {
+      "block_id": "page-0333-block-0005",
+      "order": 5,
+      "text": "Antidepressant\nDose\n",
+      "bbox": [
+        102.39009857177734,
+        138.2680206298828,
+        230.88760375976562,
+        147.155517578125
+      ],
+      "text_sha256": "321b3dd975cb7e57928af0e2e38e02a07b615919a314910db5d9db470fcbcc05"
+    },
+    {
+      "block_id": "page-0333-block-0006",
+      "order": 6,
+      "text": "Tricyclics\nUnclear; at least 75–100mg/day,1 possibly 125mg/day2\n",
+      "bbox": [
+        102.39010620117188,
+        155.2229766845703,
+        386.768310546875,
+        163.93304443359375
+      ],
+      "text_sha256": "e7c2ce4c9d96076d0dfafa1470f3335ad6fd707c2ba98ea78e31f9f89719b8f3"
+    },
+    {
+      "block_id": "page-0333-block-0007",
+      "order": 7,
+      "text": "Lofepramine\n140mg/day3\n",
+      "bbox": [
+        102.39019775390625,
+        170.2480010986328,
+        252.08360290527344,
+        178.95550537109375
+      ],
+      "text_sha256": "4cd7f5e181435baaad3dfb6f47e3500496d664b2121ccb731140ad780b79433f"
+    },
+    {
+      "block_id": "page-0333-block-0008",
+      "order": 8,
+      "text": "SSRIs\n",
+      "bbox": [
+        102.39019775390625,
+        188.30299377441406,
+        120.72769165039062,
+        197.19049072265625
+      ],
+      "text_sha256": "08664af043726394eab1e4e2704bac7181aaedd9d7ee03b04a6945c2535a7755"
+    },
+    {
+      "block_id": "page-0333-block-0009",
+      "order": 9,
+      "text": "Citalopram\n20mg/day4\n",
+      "bbox": [
+        102.39019775390625,
+        205.5079803466797,
+        247.91360473632812,
+        214.21548461914062
+      ],
+      "text_sha256": "b28462500a0e6e7d2ce474613404406b19960682568456af12237b6cac31f7f8"
+    },
+    {
+      "block_id": "page-0333-block-0010",
+      "order": 10,
+      "text": "Escitalopram\n10mg/day5\n",
+      "bbox": [
+        102.39019775390625,
+        220.53297424316406,
+        247.91360473632812,
+        229.240478515625
+      ],
+      "text_sha256": "6e48c7bd52b94a3e86f3fff28c49f23eb06cce08547e3008533ad0d81b5736eb"
+    },
+    {
+      "block_id": "page-0333-block-0011",
+      "order": 11,
+      "text": "Fluoxetine\n20mg/day6\n",
+      "bbox": [
+        102.39019775390625,
+        235.55799865722656,
+        247.91360473632812,
+        244.2655029296875
+      ],
+      "text_sha256": "efe581e3d2b9f6ef589cc69f65531cf3fbb5e93cd427410328c0138ad916c0b3"
+    },
+    {
+      "block_id": "page-0333-block-0012",
+      "order": 12,
+      "text": "Fluvoxamine\n50mg/day7\n",
+      "bbox": [
+        102.39019775390625,
+        250.58299255371094,
+        247.91360473632812,
+        259.2904968261719
+      ],
+      "text_sha256": "4c9221d3363d2c42a672206603f0a2fd3f157b2476ac24b1b927a88fe739ac4d"
+    },
+    {
+      "block_id": "page-0333-block-0013",
+      "order": 13,
+      "text": "Paroxetine\n20mg/day8\n",
+      "bbox": [
+        102.39019775390625,
+        265.6080017089844,
+        247.91360473632812,
+        274.31549072265625
+      ],
+      "text_sha256": "4d9f9cdf8ac3f6e5831073232837a0bee4c40a7b35ba032ff30647d35d448a49"
+    },
+    {
+      "block_id": "page-0333-block-0014",
+      "order": 14,
+      "text": "Sertraline\n50mg/day9\n",
+      "bbox": [
+        102.39019775390625,
+        280.63299560546875,
+        247.91360473632812,
+        289.3404846191406
+      ],
+      "text_sha256": "841905fe058e723eda8c28ffa815729afad24a25f88e8e1e9887c05d362d9408"
+    },
+    {
+      "block_id": "page-0333-block-0015",
+      "order": 15,
+      "text": "Others\n",
+      "bbox": [
+        102.39019775390625,
+        298.6878662109375,
+        126.1427001953125,
+        307.57537841796875
+      ],
+      "text_sha256": "1aa52f7e4f05a078be727a3ece984b3d611b02a7a0ff0188b84488e39bdd7995"
+    },
+    {
+      "block_id": "page-0333-block-0016",
+      "order": 16,
+      "text": "Agomelatine\n25mg/day10\n",
+      "bbox": [
+        102.39019775390625,
+        315.89288330078125,
+        250.34471130371094,
+        324.6003723144531
+      ],
+      "text_sha256": "fdaaa669f22f188c4b9c6cceb9a411878f961f8ecbd82228b78f52934e03bf41"
+    },
+    {
+      "block_id": "page-0333-block-0017",
+      "order": 17,
+      "text": "Bupropion\n150mg/day11\n",
+      "bbox": [
+        102.39019775390625,
+        330.9179992675781,
+        254.51470947265625,
+        339.62548828125
+      ],
+      "text_sha256": "20efcadc13850df18460ff8822ad815b844f18be5597a749685f33c8d9af4caf"
+    },
+    {
+      "block_id": "page-0333-block-0018",
+      "order": 18,
+      "text": "Desvenlafaxine\n50mg/day12\n",
+      "bbox": [
+        102.39019775390625,
+        345.9429931640625,
+        250.34471130371094,
+        354.6504821777344
+      ],
+      "text_sha256": "002e6ae6cf3b7c7d14b0a8a8407dcef0e1b71f7e3635c0ccf639a91edddbca99"
+    },
+    {
+      "block_id": "page-0333-block-0019",
+      "order": 19,
+      "text": "Duloxetine\n60mg/day13,14\n",
+      "bbox": [
+        102.39019775390625,
+        360.968017578125,
+        256.4224853515625,
+        369.6755065917969
+      ],
+      "text_sha256": "c39fa20ffe293c11a8fa23ea60e282ceffa3fec15500795b6303fb22efbaf5c8"
+    },
+    {
+      "block_id": "page-0333-block-0020",
+      "order": 20,
+      "text": "Levomilnacipran\n40mg/day15\n",
+      "bbox": [
+        102.39019775390625,
+        375.9930114746094,
+        250.34471130371094,
+        384.70050048828125
+      ],
+      "text_sha256": "4ad79e8c0f02d13f71c55318d7c5891bfe82d9c19547f52b120d980f573498f2"
+    },
+    {
+      "block_id": "page-0333-block-0021",
+      "order": 21,
+      "text": "Mirtazapine\n30mg/day (15mg?16)\n",
+      "bbox": [
+        102.39019775390625,
+        391.01800537109375,
+        279.1070861816406,
+        399.7254943847656
+      ],
+      "text_sha256": "1337c8f050b5ef1daa4664375dcec011a5f4317150ecfdb0eb7c19688ec144a1"
+    },
+    {
+      "block_id": "page-0333-block-0022",
+      "order": 22,
+      "text": "Moclobemide\n300mg/17\n",
+      "bbox": [
+        102.39208984375,
+        406.0404968261719,
+        243.2648162841797,
+        414.74798583984375
+      ],
+      "text_sha256": "928ec65c468ee6991aacc6f8ba2c4a54babd5c8628926afd98df963e28ffbeb7"
+    },
+    {
+      "block_id": "page-0333-block-0023",
+      "order": 23,
+      "text": "Reboxetine\n8mg/day18\n",
+      "bbox": [
+        102.39009857177734,
+        421.0679931640625,
+        246.1746063232422,
+        429.7754821777344
+      ],
+      "text_sha256": "88944cc9cadb376778222f112aeb4d943358597b13e807c4a874f973d71f4c09"
+    },
+    {
+      "block_id": "page-0333-block-0024",
+      "order": 24,
+      "text": "Trazodone\n150mg/day19\n",
+      "bbox": [
+        102.39009857177734,
+        436.0929870605469,
+        254.51461791992188,
+        444.80047607421875
+      ],
+      "text_sha256": "6a0093c68e12d64fab4eead8583507d3c2814bf743aa12c6989495420f503fbb"
+    },
+    {
+      "block_id": "page-0333-block-0025",
+      "order": 25,
+      "text": "Venlafaxine\n75mg/day20\n",
+      "bbox": [
+        102.39009857177734,
+        451.1180114746094,
+        250.34461975097656,
+        459.82550048828125
+      ],
+      "text_sha256": "14a3deecf3fb6276bbb07f790fa0802e82d49f18871d565c4e3468c77739f6ce"
+    },
+    {
+      "block_id": "page-0333-block-0026",
+      "order": 26,
+      "text": "Vilazodone\n20mg/day15\n",
+      "bbox": [
+        102.39009857177734,
+        466.14300537109375,
+        250.34461975097656,
+        474.8504943847656
+      ],
+      "text_sha256": "a3b71d7b94e758301a3b0cceb3d4741429a425cef484e81fd46f7dd988876abd"
+    },
+    {
+      "block_id": "page-0333-block-0027",
+      "order": 27,
+      "text": "Vortioxetine\n10mg/day15\n",
+      "bbox": [
+        102.39009857177734,
+        481.1679992675781,
+        250.34461975097656,
+        489.87548828125
+      ],
+      "text_sha256": "6792d5a80fab3e851228a1421a9056b22f0eecd1be6f0d984beeb599087844f2"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

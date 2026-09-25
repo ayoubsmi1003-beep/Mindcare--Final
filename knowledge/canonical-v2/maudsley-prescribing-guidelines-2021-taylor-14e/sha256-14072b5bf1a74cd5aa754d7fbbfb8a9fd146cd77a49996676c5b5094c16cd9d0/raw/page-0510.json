@@ -1,0 +1,239 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0510",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 510,
+  "source_page_index": 509,
+  "source_page_display": 510,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "Addictions and substance misuse    489\nCHAPTER 4\nimmediately following buprenorphine. In this case, do NOT give further buprenor-\nphine and contact specialist addiction services for advice.\nStabilisation dose of buprenorphine\nOutpatients should attend regularly for the first few days to enable assessment by the \nprescriber and any dose titration. Dose increases should be made in increments of \n2–4mg at a time, daily if necessary, up to a maximum daily dose of 32mg. The recom-\nmended effective maintenance doses are in the range of 12–16mg daily,1 and patients \nshould generally be able to achieve maintenance levels within 1–2 weeks of starting \nbuprenorphine – usually more quickly than with methadone.\nBuprenorphine less than daily dosing\nBuprenorphine is licensed in the UK as a medication to be taken daily. International \nevidence and experience indicate that many clients can be comfortably maintained on \none dose every 2–3 days.58–61 This may be pertinent for patients in buprenorphine treat-\nment who are considered unsuitable for take-away medication because of the risk of \ndiversion.\nThe following conversion rate is recommended:\n2-day buprenorphine dose = 2 × daily dose of buprenorphine (to a max. 32mg)\n3-day buprenorphine dose = 3× daily dose of buprenorphine (to a max. 32mg)\nNote: In the event of patients being unable to stabilise comfortably on buprenorphine \n(often those transferring from methadone), the option of transferring to methadone \nshould be available. Methadone can be commenced 24 hours after the last buprenor-\nphine dose. Doses should be titrated cautiously according to the clinical response, being \nmindful of the residual ‘blockade’ effect of buprenorphine which may last for several \ndays, meaning that methadone toxicity can occur in a delayed manner.\nTable 4.13  Patient-controlled analgesia to restarting*.\nDay\nPatient on PCA?\nSublingual buprenorphine dose\nFrequency\n0\nYes\n0.4mg\nFour times a day\n1\nNo\n1mg\nTwice daily\n2\nNo\n2mg\nTwice daily\n3\nNo\n4mg\nOnce daily\n*NB: Dose adjustments may be necessary if withdrawal symptoms worsen immediately following buprenorphine.\n",
+  "raw_text_sha256": "9b0ab25d8ae9ac5ad6b770cb3000d48cd58d83f3eb065aef02a37117ec5105af",
+  "coordinates_sha256": "3c24b3bff9493e2a3b26365d241eae3acdc110a2b0c0c8fa95807f0a14331432",
+  "block_sequence_sha256": "99264d81c6608a8a23f376609c20bc48ffacc4b5d1ed082ffdc16430c29f127a",
+  "blocks": [
+    {
+      "block_id": "page-0510-block-0000",
+      "order": 0,
+      "text": "Addictions and substance misuse    489\n",
+      "bbox": [
+        255.6728973388672,
+        31.395221710205078,
+        420.0008850097656,
+        41.0272216796875
+      ],
+      "text_sha256": "461bf357bbbd839daef9eeb499db52b1ea359f90ee18e460f7ddd3795073dad7"
+    },
+    {
+      "block_id": "page-0510-block-0001",
+      "order": 1,
+      "text": "CHAPTER 4\n",
+      "bbox": [
+        454.4096984863281,
+        282.8472900390625,
+        463.88970947265625,
+        324.1912841796875
+      ],
+      "text_sha256": "05fb44a58cf3756d631aaf08bd8233d174573eb7674eb045069897e0eb08f5bc"
+    },
+    {
+      "block_id": "page-0510-block-0002",
+      "order": 2,
+      "text": "immediately following buprenorphine. In this case, do NOT give further buprenor-\nphine and contact specialist addiction services for advice.\n",
+      "bbox": [
+        48.0,
+        210.11981201171875,
+        420.0,
+        234.07980346679688
+      ],
+      "text_sha256": "4df13c8ef736467647e5bbf2b839eadea7538ba4e7e69369d5dcca5f57ae841d"
+    },
+    {
+      "block_id": "page-0510-block-0003",
+      "order": 3,
+      "text": "Stabilisation dose of buprenorphine\n",
+      "bbox": [
+        48.0,
+        252.44979858398438,
+        217.47000122070312,
+        264.2998046875
+      ],
+      "text_sha256": "dc24274ab7f7539aa9678c3b73321353a233bb92f27e02b4622b8b632533c504"
+    },
+    {
+      "block_id": "page-0510-block-0004",
+      "order": 4,
+      "text": "Outpatients should attend regularly for the first few days to enable assessment by the \nprescriber and any dose titration. Dose increases should be made in increments of \n2–4mg at a time, daily if necessary, up to a maximum daily dose of 32mg. The recom-\nmended effective maintenance doses are in the range of 12–16mg daily,1 and patients \nshould generally be able to achieve maintenance levels within 1–2 weeks of starting \nbuprenorphine – usually more quickly than with methadone.\n",
+      "bbox": [
+        48.0,
+        270.35980224609375,
+        422.8020324707031,
+        342.0798034667969
+      ],
+      "text_sha256": "b1dda239d9ab0de905d45d4800d88d146b80c557e4e7dba7a31fca1dd7be4f72"
+    },
+    {
+      "block_id": "page-0510-block-0005",
+      "order": 5,
+      "text": "Buprenorphine less than daily dosing\n",
+      "bbox": [
+        48.002105712890625,
+        360.4497985839844,
+        223.0220947265625,
+        372.2998046875
+      ],
+      "text_sha256": "d142f267238844331c04d8b177a4be842d0f4779214e2c01ea0597b251c057ed"
+    },
+    {
+      "block_id": "page-0510-block-0006",
+      "order": 6,
+      "text": "Buprenorphine is licensed in the UK as a medication to be taken daily. International \nevidence and experience indicate that many clients can be comfortably maintained on \none dose every 2–3 days.58–61 This may be pertinent for patients in buprenorphine treat-\nment who are considered unsuitable for take-away medication because of the risk of \ndiversion.\n",
+      "bbox": [
+        48.00010681152344,
+        378.35980224609375,
+        422.7920837402344,
+        438.0798034667969
+      ],
+      "text_sha256": "a79a644fd12e4984d270e50a0d1ff29e4133a4c1fd10a2f9d7a62f08b81ab988"
+    },
+    {
+      "block_id": "page-0510-block-0007",
+      "order": 7,
+      "text": "The following conversion rate is recommended:\n",
+      "bbox": [
+        58.00010681152344,
+        438.35980224609375,
+        263.0101013183594,
+        450.0798034667969
+      ],
+      "text_sha256": "834f6a2cad43bb3d5152ef8268e03a3a4bd039351952fac48584d27106d0d20a"
+    },
+    {
+      "block_id": "page-0510-block-0008",
+      "order": 8,
+      "text": "2-day buprenorphine dose = 2 × daily dose of buprenorphine (to a max. 32mg)\n",
+      "bbox": [
+        55.25,
+        469.8423156738281,
+        308.23248291015625,
+        478.5498046875
+      ],
+      "text_sha256": "515a278a71423d19c9c7ec399f26ffe0927992dd224dc7662e07ee1cf934abf8"
+    },
+    {
+      "block_id": "page-0510-block-0009",
+      "order": 9,
+      "text": "3-day buprenorphine dose = 3× daily dose of buprenorphine (to a max. 32mg)\n",
+      "bbox": [
+        55.25,
+        483.9648132324219,
+        306.1474609375,
+        492.67230224609375
+      ],
+      "text_sha256": "f76f583044e8b8207ea1454869c07be89547836e26f5d488bc0ddef0dac1b1ca"
+    },
+    {
+      "block_id": "page-0510-block-0010",
+      "order": 10,
+      "text": "Note: In the event of patients being unable to stabilise comfortably on buprenorphine \n(often those transferring from methadone), the option of transferring to methadone \nshould be available. Methadone can be commenced 24 hours after the last buprenor-\nphine dose. Doses should be titrated cautiously according to the clinical response, being \nmindful of the residual ‘blockade’ effect of buprenorphine which may last for several \ndays, meaning that methadone toxicity can occur in a delayed manner.\n",
+      "bbox": [
+        48.0,
+        506.10980224609375,
+        422.76995849609375,
+        577.829833984375
+      ],
+      "text_sha256": "28ed04fc6d61f3502499731c54344cd4e56fbe40c713836ad9df86c27680705e"
+    },
+    {
+      "block_id": "page-0510-block-0011",
+      "order": 11,
+      "text": "Table 4.13  Patient-controlled analgesia to restarting*.\n",
+      "bbox": [
+        54.0,
+        70.08790588378906,
+        227.47406005859375,
+        78.97540283203125
+      ],
+      "text_sha256": "229b0514f2f967087f4eac42cc813bb4caa7fb05beebcad3b7226f5508faa8e2"
+    },
+    {
+      "block_id": "page-0510-block-0012",
+      "order": 12,
+      "text": "Day\nPatient on PCA?\nSublingual buprenorphine dose\nFrequency\n",
+      "bbox": [
+        48.0,
+        89.96290588378906,
+        383.8800048828125,
+        98.85040283203125
+      ],
+      "text_sha256": "ecd15f942f276eb7a4f5b1ee4c23c6ae68be03f39f5394071355a7a2fd813e29"
+    },
+    {
+      "block_id": "page-0510-block-0013",
+      "order": 13,
+      "text": "0\nYes\n0.4mg\nFour times a day\n",
+      "bbox": [
+        48.000030517578125,
+        108.2704086303711,
+        400.260009765625,
+        116.9779052734375
+      ],
+      "text_sha256": "0d8e4b4a13bfc09a003dbd6bdfa7ff83ac051deb934d8cfe58eaaa81a22fa63f"
+    },
+    {
+      "block_id": "page-0510-block-0014",
+      "order": 14,
+      "text": "1\nNo\n1mg\nTwice daily\n",
+      "bbox": [
+        48.000030517578125,
+        126.39791107177734,
+        382.01251220703125,
+        135.10540771484375
+      ],
+      "text_sha256": "6f4fe9e255174c4451fcffe31953c68935bdb78525a2c27cbdcc07140742c04f"
+    },
+    {
+      "block_id": "page-0510-block-0015",
+      "order": 15,
+      "text": "2\nNo\n2mg\nTwice daily\n",
+      "bbox": [
+        48.000030517578125,
+        144.52540588378906,
+        382.01251220703125,
+        153.23291015625
+      ],
+      "text_sha256": "32f17c5e0a4f5e97e25809c701da36d30f65d147fdf149008ac845c130e68ef4"
+    },
+    {
+      "block_id": "page-0510-block-0016",
+      "order": 16,
+      "text": "3\nNo\n4mg\nOnce daily\n",
+      "bbox": [
+        48.000030517578125,
+        162.6529083251953,
+        381.09002685546875,
+        171.36041259765625
+      ],
+      "text_sha256": "64cc45831b1eb1f1a95c067b6fcd1705544a112f651a2db866546fccdc388a61"
+    },
+    {
+      "block_id": "page-0510-block-0017",
+      "order": 17,
+      "text": "*NB: Dose adjustments may be necessary if withdrawal symptoms worsen immediately following buprenorphine.\n",
+      "bbox": [
+        48.000030517578125,
+        181.4029083251953,
+        408.7502136230469,
+        190.11041259765625
+      ],
+      "text_sha256": "354da591ff1a6a03d5695c80e3d65e0c331b0b382d49c2a21004c26a0f2d1387"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}

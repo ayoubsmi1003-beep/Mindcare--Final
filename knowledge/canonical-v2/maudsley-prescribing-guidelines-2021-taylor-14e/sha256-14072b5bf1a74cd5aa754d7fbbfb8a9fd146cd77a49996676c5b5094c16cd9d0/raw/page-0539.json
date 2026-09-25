@@ -1,0 +1,275 @@
+{
+  "page_id": "maudsley-prescribing-guidelines-2021-taylor-14e:page-0539",
+  "book_id": "maudsley-prescribing-guidelines-2021-taylor-14e",
+  "source_version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "source_sha256": "14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "physical_page": 539,
+  "source_page_index": 538,
+  "source_page_display": 539,
+  "extraction_status": "extracted",
+  "extraction_engine": "pymupdf",
+  "raw_text": "518    The Maudsley® Prescribing Guidelines in Psychiatry\nCHAPTER  4\nIf patients have been prescribed benzodiazepines for a substantial period of time, it \nmay be preferable to convert to equivalents of diazepam as this is longer acting and so \nless likely to be associated with withdrawal symptoms. Benzodiazepine dependence as \npart of polysubstance dependence should also be treated by a gradual withdrawal of \nthe medication. Benzodiazepines prescribed at greater than 30mg diazepam equivalent \nper day may cause harm5 and so this should be avoided if at all possible (such doses are \nrare in iatrogenic dependence10). Psychosocial interventions including contingency \nmanagement have had some success at reducing benzodiazepine use. A Cochrane review \nfound that ‘there is evidence to support the use of CBT plus taper to reduce BZD use in \nthe short term. There is currently no evidence to support the use of MI. In addition, \nthere is some emerging evidence that simple interventions, such as structured consulta-\ntion and individually tailored GP letters, may be worth exploring further.’11\nPregnancy and benzodiazepine misuse\nBenzodiazepines are not major human teratogens but should ideally be gradually dis-\ncontinued before a planned pregnancy. If a woman is prescribed benzodiazepines and \nfound to be pregnant, the prescription should be gradually withdrawn over as short a \ntime as possible, being mindful of the risk of withdrawal seizures and the potential \nconsequences for the pregnant woman and foetus. A risk–benefit analysis should be \nundertaken and specialist advice sought (see section ‘Pregnancy’ in Chapter 7). As for \nall patients, it may be appropriate for a woman dependent on benzodiazepines to be \nstabilised on diazepam, prior to dose reduction.5\nSummary\n■\n■Benzodiazepines should be withdrawn at a rate of around one-eighth of the dose every 2 weeks.\n■\n■Discontinuation should usually be completed within 6 months.\n■\n■Switching to an equivalent dose of diazepam before withdrawal is commonplace.\n■\n■Benzodiazepine misuse is frequently seen in multi-substance misuse where opioids may be the \nprimary drug of dependence.\nTypical diazepam withdrawal schedule for iatrogenic dependence\nBaseline\n30mg/day\nWeek 2\n25mg/day\nWeek 4\n20mg/day\nWeek 6\n18mg/day\nWeek 8\n16mg/day\nWeek 10\n14mg/day\nWeek 12\n12mg/day\nWeek 14\n10mg/day\nThen reduce by 2mg/day every 2 weeks if tolerated.\n",
+  "raw_text_sha256": "81962500f4ccdf2b5848a1909d6c273f04340b73a68e5666cee2a7598825377a",
+  "coordinates_sha256": "5800c6f3cdf63603b0826e6fdd668fc773a16af3bc93626999db92031c8c85d9",
+  "block_sequence_sha256": "01ba1f8e51adb31c1aea5afded329c311ac4839e9234fed6179d7514186400d0",
+  "blocks": [
+    {
+      "block_id": "page-0539-block-0000",
+      "order": 0,
+      "text": "518    The Maudsley® Prescribing Guidelines in Psychiatry\n",
+      "bbox": [
+        61.889801025390625,
+        31.395221710205078,
+        300.0444641113281,
+        41.0272216796875
+      ],
+      "text_sha256": "8f56a5417ccc494477a75ce5a3f93b27a0614587a2fcadcfb50dd6128882bcea"
+    },
+    {
+      "block_id": "page-0539-block-0001",
+      "order": 1,
+      "text": "CHAPTER  4\n",
+      "bbox": [
+        18.520000457763672,
+        281.73529052734375,
+        28.0,
+        325.30328369140625
+      ],
+      "text_sha256": "d694b904881e17f3bff73a064a8f6ef119e0b717ad6d4e6eb3a5b5444d94f725"
+    },
+    {
+      "block_id": "page-0539-block-0002",
+      "order": 2,
+      "text": "If patients have been prescribed benzodiazepines for a substantial period of time, it \nmay be preferable to convert to equivalents of diazepam as this is longer acting and so \nless likely to be associated with withdrawal symptoms. Benzodiazepine dependence as \npart of polysubstance dependence should also be treated by a gradual withdrawal of \nthe medication. Benzodiazepines prescribed at greater than 30mg diazepam equivalent \nper day may cause harm5 and so this should be avoided if at all possible (such doses are \nrare in iatrogenic dependence10). Psychosocial interventions including contingency \nmanagement have had some success at reducing benzodiazepine use. A Cochrane review \nfound that ‘there is evidence to support the use of CBT plus taper to reduce BZD use in \nthe short term. There is currently no evidence to support the use of MI. In addition, \nthere is some emerging evidence that simple interventions, such as structured consulta-\ntion and individually tailored GP letters, may be worth exploring further.’11\n",
+      "bbox": [
+        61.88859558105469,
+        62.55029296875,
+        436.69976806640625,
+        206.27029418945312
+      ],
+      "text_sha256": "f828ef2cf984037cf8094fab8c7245c389015bc90115597f6040fd3d6b6ae62a"
+    },
+    {
+      "block_id": "page-0539-block-0003",
+      "order": 3,
+      "text": "Pregnancy and benzodiazepine misuse\n",
+      "bbox": [
+        61.88990020751953,
+        223.70529174804688,
+        261.56182861328125,
+        236.74029541015625
+      ],
+      "text_sha256": "67c8c4381b040de20c9957d74c49a920ff6afbb92fa5394937e3a0c3278a6b8f"
+    },
+    {
+      "block_id": "page-0539-block-0004",
+      "order": 4,
+      "text": "Benzodiazepines are not major human teratogens but should ideally be gradually dis-\ncontinued before a planned pregnancy. If a woman is prescribed benzodiazepines and \nfound to be pregnant, the prescription should be gradually withdrawn over as short a \ntime as possible, being mindful of the risk of withdrawal seizures and the potential \nconsequences for the pregnant woman and foetus. A risk–benefit analysis should be \nundertaken and specialist advice sought (see section ‘Pregnancy’ in Chapter 7). As for \nall patients, it may be appropriate for a woman dependent on benzodiazepines to be \nstabilised on diazepam, prior to dose reduction.5\n",
+      "bbox": [
+        61.88990020751953,
+        242.55029296875,
+        436.6598205566406,
+        338.2702941894531
+      ],
+      "text_sha256": "1c066ac8712fb9e10ebc3e5ee429c5fd354e6528941a4420c0e7670f7f514584"
+    },
+    {
+      "block_id": "page-0539-block-0005",
+      "order": 5,
+      "text": "Summary\n",
+      "bbox": [
+        61.88990020751953,
+        355.7052917480469,
+        110.79589080810547,
+        368.74029541015625
+      ],
+      "text_sha256": "3cbb36aca330b3bd113955dfbada0adb7a5f95ad9f678bd61f175406c6a37e95"
+    },
+    {
+      "block_id": "page-0539-block-0006",
+      "order": 6,
+      "text": "■\n■Benzodiazepines should be withdrawn at a rate of around one-eighth of the dose every 2 weeks.\n",
+      "bbox": [
+        61.889801025390625,
+        374.2467956542969,
+        421.6611633300781,
+        384.11529541015625
+      ],
+      "text_sha256": "b67c9db1eafc6b9fb648a3d0b0f1a38a015f7e4fa4f6809ddd756a760c678704"
+    },
+    {
+      "block_id": "page-0539-block-0007",
+      "order": 7,
+      "text": "■\n■Discontinuation should usually be completed within 6 months.\n",
+      "bbox": [
+        61.889801025390625,
+        384.2467956542969,
+        296.6429748535156,
+        394.11529541015625
+      ],
+      "text_sha256": "b5dd1758925dc7909f24f77ad64e65790d7d7f53d476cd21006ff92a2ee2d325"
+    },
+    {
+      "block_id": "page-0539-block-0008",
+      "order": 8,
+      "text": "■\n■Switching to an equivalent dose of diazepam before withdrawal is commonplace.\n",
+      "bbox": [
+        61.889801025390625,
+        394.2467956542969,
+        365.4164733886719,
+        404.11529541015625
+      ],
+      "text_sha256": "671fc809c33e71ee23f6d69f443799a4fb39f73a44bda7419ce568ede883fc13"
+    },
+    {
+      "block_id": "page-0539-block-0009",
+      "order": 9,
+      "text": "■\n■Benzodiazepine misuse is frequently seen in multi-substance misuse where opioids may be the \n",
+      "bbox": [
+        61.889801025390625,
+        404.2467956542969,
+        413.4415283203125,
+        414.11529541015625
+      ],
+      "text_sha256": "20a6eb1248aad9af0861c45c95184c01952ad1014985c11300d48655496734ad"
+    },
+    {
+      "block_id": "page-0539-block-0010",
+      "order": 10,
+      "text": "primary drug of dependence.\n",
+      "bbox": [
+        70.38990020751953,
+        414.2427978515625,
+        176.1893768310547,
+        424.1112976074219
+      ],
+      "text_sha256": "50862e6771697c0008145d635cf12507a0a5e5ba043986793c8104257aa44ff1"
+    },
+    {
+      "block_id": "page-0539-block-0011",
+      "order": 11,
+      "text": "Typical diazepam withdrawal schedule for iatrogenic dependence\n",
+      "bbox": [
+        129.40980529785156,
+        440.3215026855469,
+        337.21234130859375,
+        449.02899169921875
+      ],
+      "text_sha256": "ed4f8ef8f62813864d7033c1b1910248321df4ddef9e3afbe474b703ee6d84d5"
+    },
+    {
+      "block_id": "page-0539-block-0012",
+      "order": 12,
+      "text": "Baseline\n30mg/day\n",
+      "bbox": [
+        129.40980529785156,
+        460.1965026855469,
+        303.76983642578125,
+        468.90399169921875
+      ],
+      "text_sha256": "237cfc714470c5b657443c6a174d8e279125d43e36099ff4e1288e1aff95eac9"
+    },
+    {
+      "block_id": "page-0539-block-0013",
+      "order": 13,
+      "text": "Week 2\n25mg/day\n",
+      "bbox": [
+        129.40980529785156,
+        478.3240051269531,
+        303.76983642578125,
+        487.031494140625
+      ],
+      "text_sha256": "ff587ac010f53358259f6f512919f7ff6de699c72f551deff874ca3985dc7aa7"
+    },
+    {
+      "block_id": "page-0539-block-0014",
+      "order": 14,
+      "text": "Week 4\n20mg/day\n",
+      "bbox": [
+        129.40980529785156,
+        496.4515075683594,
+        303.76983642578125,
+        505.15899658203125
+      ],
+      "text_sha256": "89aa39ec241c9fa8d5c07004a0de5ee03968253eb1f2ad96ec1d31120a18d43d"
+    },
+    {
+      "block_id": "page-0539-block-0015",
+      "order": 15,
+      "text": "Week 6\n18mg/day\n",
+      "bbox": [
+        129.40980529785156,
+        514.5789794921875,
+        303.76983642578125,
+        523.2864990234375
+      ],
+      "text_sha256": "54ae2911e55643adf21bcc76a872176043d872907bf1a91644a55cdc0431725e"
+    },
+    {
+      "block_id": "page-0539-block-0016",
+      "order": 16,
+      "text": "Week 8\n16mg/day\n",
+      "bbox": [
+        129.40980529785156,
+        532.7064819335938,
+        303.76983642578125,
+        541.4140014648438
+      ],
+      "text_sha256": "53dd079d25b1765c9d9b817d3fcedb378145f4dba2c0f5125c21e2a13de14f88"
+    },
+    {
+      "block_id": "page-0539-block-0017",
+      "order": 17,
+      "text": "Week 10\n14mg/day\n",
+      "bbox": [
+        129.40980529785156,
+        550.833984375,
+        303.76983642578125,
+        559.54150390625
+      ],
+      "text_sha256": "fb610274f322753dfafcacd1a4dfe4a079ceac18a82a3d059b5d7fd87a2624ee"
+    },
+    {
+      "block_id": "page-0539-block-0018",
+      "order": 18,
+      "text": "Week 12\n12mg/day\n",
+      "bbox": [
+        129.40980529785156,
+        568.9614868164062,
+        303.76983642578125,
+        577.6690063476562
+      ],
+      "text_sha256": "e19dd6239dec61872f0ab24f7a36c42bf25f706775e30e52381da8177e907f88"
+    },
+    {
+      "block_id": "page-0539-block-0019",
+      "order": 19,
+      "text": "Week 14\n10mg/day\n",
+      "bbox": [
+        129.40980529785156,
+        587.0889892578125,
+        303.76983642578125,
+        595.7965087890625
+      ],
+      "text_sha256": "fdc4d3cfcb818d176d18e3fd0fc104507ae043b204ab85411b4eea728501d755"
+    },
+    {
+      "block_id": "page-0539-block-0020",
+      "order": 20,
+      "text": "Then reduce by 2mg/day every 2 weeks if tolerated.\n",
+      "bbox": [
+        123.40982055664062,
+        605.8389892578125,
+        288.7098693847656,
+        614.5465087890625
+      ],
+      "text_sha256": "2e4e8cb7fe5ffa5818357cd393e53888cb0d4372145aad3a2491bd31fc5c507b"
+    }
+  ],
+  "parser": {
+    "name": "taylor_pipeline",
+    "version": "extract-raw-v1"
+  },
+  "failure_code": null,
+  "failure_detail": null
+}
