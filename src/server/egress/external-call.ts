@@ -31,7 +31,7 @@ import { withEgressGate } from "@/server/db/withCaller";
 import { classerCharge, MESSAGE_REFUS_FRONTIERE } from "@/server/egress/classification";
 import { env } from "@/server/env";
 
-export type BoundaryPurpose = "jarvis" | "voix-entree" | "voix-sortie" | "resume-cas";
+export type BoundaryPurpose = "jarvis" | "voix-entree" | "voix-sortie" | "resume-cas" | "communication";
 
 /**
  * ⚠️ `"assistant"` AJOUTÉ EN V-JARVIS-CORE — et c'est un changement de
@@ -1332,4 +1332,166 @@ async function echecVoix<T>(
   });
 
   return estConfiguration ? llmErr("configuration", message) : llmErr("indisponible", message);
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// COMMUNICATION — Composio session-scopée (domaine 112/113).
+// ═══════════════════════════════════════════════════════════════════════════
+//
+// MÊME DISCIPLINE QUE `llm()` : frontière DÉTERMINISTE sur les octets
+// (`classerCharge`, zéro-byte invariant — C1/C2/INCONNU et C3 sans reçu ne
+// donnent jamais lieu à un appel réseau), un seul retry sur échec
+// TRANSITOIRE (timeout, 5xx, 429, réseau), jamais sur 4xx (permission,
+// fenêtre de messagerie, gabarit invalide : ce sont des états à surfacer,
+// pas à rejouer), journalisation best-effort dans `boundary_crossings`
+// (motif `communication`, migration 114).
+//
+// `entiteId` est l'identité STABLE du cabinet (pas un identifiant personnel)
+// : c'est elle qui scope la session Composio. `sessionToken` reste un uuid
+// aléatoire par appel, jamais un patient_id.
+
+const BASE_COMPOSIO_DEFAUT = "https://backend.composio.dev";
+
+export interface RequeteComposio {
+  /** Capacité MindCare (ex. `whatsapp.envoyer_texte`), jamais un slug brut. */
+  readonly outil: string;
+  /** Charge C4 attendue ; la frontière tranche sur ces octets. */
+  readonly charge: Readonly<Record<string, unknown>>;
+  /** Clé stable `comm:<conversation>:<empreinte>` (idempotence retry). */
+  readonly cleIdempotence: string;
+  /** Identité stable du cabinet (scope de session), pas une PII. */
+  readonly entiteId: string;
+  /** uuid aléatoire par appel — JAMAIS le patient_id. */
+  readonly sessionToken: string;
+  readonly timeoutMs?: number;
+}
+
+export interface ResultatComposio {
+  /** Identifiant externe rendu par le provider, null si absent. */
+  readonly idExterne: string | null;
+}
+
+function baseComposio(): string {
+  const brute = env().COMPOSIO_BASE_URL ?? BASE_COMPOSIO_DEFAUT;
+  return brute.replace(/\/+$/, "");
+}
+
+export async function appelComposio(
+  req: RequeteComposio,
+): Promise<LlmResult<ResultatComposio>> {
+  const clef = env().COMPOSIO_API_KEY;
+  if (clef === undefined || clef === "") {
+    return llmErr("configuration", "Messagerie externe indisponible.");
+  }
+  const timeoutMs = req.timeoutMs ?? TIMEOUT_MS_DEFAUT;
+  const depart = Date.now();
+  const modele = "composio-session";
+
+  // La frontière s'applique AVANT tout appel réseau : outil + charge + clé.
+  const verdict = classerCharge(
+    { outil: req.outil, charge: req.charge, cle: req.cleIdempotence },
+    null,
+  );
+  if (verdict.decision === "BLOQUER") {
+    await journaliser({
+      purpose: "communication",
+      provider: "composio",
+      model: modele,
+      promptVersion: "n/a",
+      promptHash: "n/a",
+      sessionToken: req.sessionToken,
+      charsOut: null,
+      tokensIn: null,
+      tokensOut: null,
+      estimatedCostUsd: null,
+      outcome: "blocked",
+      latencyMs: Date.now() - depart,
+    });
+    return llmErr("frontiere", MESSAGE_REFUS_FRONTIERE);
+  }
+
+  const corps = JSON.stringify({
+    outil: req.outil,
+    arguments: req.charge,
+    entite_id: req.entiteId,
+    cle_idempotence: req.cleIdempotence,
+  });
+
+  let derniereErreur: unknown;
+  for (let tentative = 0; tentative < 2; tentative++) {
+    const controller = new AbortController();
+    const minuteur = setTimeout(() => controller.abort(), timeoutMs);
+    try {
+      const reponse = await fetch(`${baseComposio()}/api/v3/tools/execute`, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${clef}`,
+          "Content-Type": "application/json",
+          "X-Entity-Id": req.entiteId,
+          "X-Idempotency-Key": req.cleIdempotence,
+        },
+        body: corps,
+        signal: controller.signal,
+      });
+      clearTimeout(minuteur);
+
+      if (!reponse.ok) {
+        const transitoire = reponse.status >= 500 || reponse.status === 429;
+        throw new Error(transitoire ? `transitoire: HTTP ${reponse.status}` : `permanent: HTTP ${reponse.status}`);
+      }
+
+      const recu: unknown = await reponse.json();
+      const idExterne =
+        typeof recu === "object" && recu !== null
+          ? ((recu as { id?: unknown; message_id?: unknown }).id ??
+            (recu as { id?: unknown; message_id?: unknown }).message_id ??
+            null)
+          : null;
+
+      await journaliser({
+        purpose: "communication",
+        provider: "composio",
+        model: modele,
+        promptVersion: "n/a",
+        promptHash: "n/a",
+        sessionToken: req.sessionToken,
+        charsOut: corps.length,
+        tokensIn: null,
+        tokensOut: null,
+        estimatedCostUsd: null,
+        outcome: "ok",
+        latencyMs: Date.now() - depart,
+      });
+
+      return llmOk({ idExterne: typeof idExterne === "string" ? idExterne : null });
+    } catch (cause) {
+      clearTimeout(minuteur);
+      if (controller.signal.aborted) {
+        derniereErreur = new Error("transitoire: timeout");
+      } else if (cause instanceof TypeError) {
+        derniereErreur = new Error("transitoire: réseau");
+      } else {
+        derniereErreur = cause;
+      }
+      if (tentative === 0 && estTransitoire(derniereErreur)) continue;
+      break;
+    }
+  }
+
+  const texte = derniereErreur instanceof Error ? derniereErreur.message : "";
+  await journaliser({
+    purpose: "communication",
+    provider: "composio",
+    model: modele,
+    promptVersion: "n/a",
+    promptHash: "n/a",
+    sessionToken: req.sessionToken,
+    charsOut: null,
+    tokensIn: null,
+    tokensOut: null,
+    estimatedCostUsd: null,
+    outcome: texte.includes("timeout") ? "timeout" : "error",
+    latencyMs: Date.now() - depart,
+  });
+  return llmErr("indisponible", "Messagerie externe indisponible.");
 }

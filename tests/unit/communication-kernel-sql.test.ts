@@ -70,3 +70,12 @@ describe("migration 113 communication gates", () => {
     expect(sql113).toContain("propose");
   });
 });
+
+const sql114 = readFileSync("supabase/migrations/114_boundary_purpose_communication.sql", "utf8");
+
+describe("migration 114 purpose communication", () => {
+  it("élargit la CHECK aux cinq usages", () => {
+    expect(sql114).toContain("'communication'");
+    expect(sql114).toContain("boundary_crossings_purpose_check");
+  });
+});

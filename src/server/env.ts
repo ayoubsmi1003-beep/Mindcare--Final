@@ -70,6 +70,12 @@ const Schema = z.object({
 
   // ── Origines autorisées (voir `src/server/cors.ts`) ────────────────────
   CORS_ORIGINS: z.string().optional(),
+
+  // ── Communication externe (domaine Communication, 112/113) ───────────────
+  // Session Composio scopée cabinet. Serveur uniquement, jamais NEXT_PUBLIC_
+  // (règle 2) : aucun de ces noms ne doit apparaître dans `.next/static/`.
+  COMPOSIO_API_KEY: z.string().optional(),
+  COMPOSIO_BASE_URL: z.string().optional(),
 });
 
 export type EnvServeur = z.infer<typeof Schema>;
