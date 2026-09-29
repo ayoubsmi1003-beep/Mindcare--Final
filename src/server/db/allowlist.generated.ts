@@ -17,6 +17,14 @@ export const RPC_AUTORISES: ReadonlySet<string> = new Set([
   "cancel_appointment",
   "check_slot_available",
   "close_consultation",
+  "comm_append_message",
+  "comm_create_conversation",
+  "comm_get_consent",
+  "comm_list_conversations",
+  "comm_list_messages",
+  "comm_register_delivery",
+  "comm_set_consent",
+  "comm_transition_message",
   "confirm_appointment",
   "confirm_jarvis_action",
   "create_appointment",
@@ -100,4 +108,4 @@ export const RELATIONS_AUTORISEES: Readonly<Record<string, readonly string[]>> =
 };
 
 /** Nombre d'entrées, pour que le contrôle de démarrage puisse le journaliser. */
-export const NB_RPC = 78;
+export const NB_RPC = 86;
