@@ -52,8 +52,11 @@ export const frMessages = {
     connecte: "Connecté",
     nonConnecte: "Non connecté",
     erreur: "Erreur de connexion",
+    verifieOk: "Vérifié : connecté",
+    verifieKo: "Vérifié : non connecté",
   },
   actions: {
+    verifier: "Vérifier",
     preparer: "Préparer",
     approuverEtEnvoyer: "Approuver et envoyer",
     envoyer: "Envoyer",

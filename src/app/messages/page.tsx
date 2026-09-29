@@ -50,7 +50,7 @@ import {
   type RoutageConversation,
 } from "@/services/communication/communication-service";
 import { lireConsentement, poserConsentement } from "@/services/communication/consentement";
-import { lireConnexions, type EtatConnexion } from "@/services/communication/connexions";
+import { lireConnexions, testerConnexionCanal, type EtatConnexion } from "@/services/communication/connexions";
 import { executerEnvoi } from "@/services/communication/envoi";
 import type {
   ItemMessage,
@@ -259,6 +259,30 @@ export default function PageMessages(): React.JSX.Element {
     }
   }
 
+  /** Vérification live, lecture seule : dit si le canal répond vraiment. */
+  async function verifierCanal(): Promise<void> {
+    if (active === null || occupe) return;
+    setOccupe(true);
+    setNotice(null);
+    try {
+      const bilan = await testerConnexionCanal(active.canal);
+      if (!bilan.ok) {
+        setNotice(fr.erreurs.indisponible);
+        return;
+      }
+      const disponibles = bilan.data.capacites.filter((c) => c.disponible).length;
+      const total = bilan.data.capacites.length;
+      setNotice(
+        bilan.data.connecte
+          ? `${frMessages.connexion.verifieOk} (${disponibles}/${total}).`
+          : frMessages.connexion.verifieKo,
+      );
+      await charger();
+    } finally {
+      setOccupe(false);
+    }
+  }
+
   async function basculerConsentement(): Promise<void> {
     if (routage?.patientId == null || occupe) return;
     setOccupe(true);
@@ -339,6 +363,15 @@ export default function PageMessages(): React.JSX.Element {
                 <span className="font-ui text-label text-ink-500">
                   {statutCanal(active.canal)}
                 </span>
+                <Bouton
+                  type="button"
+                  rang="discret"
+                  taille="compact"
+                  disabled={occupe}
+                  onClick={() => void verifierCanal()}
+                >
+                  {frMessages.actions.verifier}
+                </Bouton>
               </div>
               {messages.length === 0 ? (
                 <EtatVide message={frMessages.conversationVide} />

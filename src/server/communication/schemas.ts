@@ -40,3 +40,7 @@ export const SchemaAutomationEval = z.object({
   /** Seuil d'attente en minutes, 5..480 (la porte borne déjà à 5 min). */
   seuilMinutes: z.number().int().min(5).max(480).optional(),
 });
+
+export const SchemaConnexionTest = z.object({
+  canal: z.enum(["whatsapp", "facebook", "instagram"]),
+});

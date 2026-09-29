@@ -5,6 +5,7 @@
  */
 
 import { db } from "../db";
+import { lireTestConnexion } from "../db/http";
 import { logFieldsFor } from "../errors";
 import { log } from "../log";
 import { err, ok, type Result } from "../result";
@@ -68,6 +69,29 @@ export async function lireConnexions(
   });
   if (!result.ok) {
     log.error("communication.connexions", logFieldsFor(result.error));
+    return err(result.error);
+  }
+  return ok(result.data);
+}
+
+export interface BilanConnexionTest {
+  readonly canal: string;
+  readonly connecte: boolean;
+  readonly capacites: readonly { readonly nom: string; readonly disponible: boolean }[];
+}
+
+/**
+ * Vérification live (lecture seule) : quelles capacités le compte connecté
+ * expose-t-il vraiment. Aucun envoi, aucune publication — le « juste
+ * vérifier » de l'opérateur.
+ */
+export async function testerConnexionCanal(canal: Canal): Promise<Result<BilanConnexionTest>> {
+  if (canal !== "whatsapp" && canal !== "facebook" && canal !== "instagram") {
+    return err({ code: "regle-metier", message: "Canal inconnu." });
+  }
+  const result = await lireTestConnexion(canal);
+  if (!result.ok) {
+    log.error("communication.test", logFieldsFor(result.error));
     return err(result.error);
   }
   return ok(result.data);

@@ -366,3 +366,31 @@ export function posterEnvoiCommunication(corps: {
     "http.communication.envoyer",
   );
 }
+
+/**
+ * Vérification live d'une connexion (lecture seule). GET direct comme
+ * `getSession` : la route ne prend que le canal en query, aucun corps.
+ */
+export async function lireTestConnexion(canal: "whatsapp" | "facebook" | "instagram"): Promise<
+  Result<{
+    readonly canal: string;
+    readonly connecte: boolean;
+    readonly capacites: readonly { readonly nom: string; readonly disponible: boolean }[];
+  }>
+> {
+  let reponse: Response;
+  try {
+    reponse = await fetch(`/api/communication/connexions/tester?canal=${encodeURIComponent(canal)}`, {
+      method: "GET",
+      credentials: "same-origin",
+      cache: "no-store",
+    });
+  } catch (brut) {
+    return err(toAppError(brut, "http.communication.tester"));
+  }
+  return lireEnveloppe<{
+    readonly canal: string;
+    readonly connecte: boolean;
+    readonly capacites: readonly { readonly nom: string; readonly disponible: boolean }[];
+  }>(reponse, "http.communication.tester");
+}
