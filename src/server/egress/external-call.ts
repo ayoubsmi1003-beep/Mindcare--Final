@@ -135,7 +135,19 @@ export type LlmResult<T> =
   | { readonly ok: true; readonly data: T }
   | { readonly ok: false; readonly error: { readonly code: LlmErrorCode; readonly message: string } };
 
-export type LlmErrorCode = "hors-ligne" | "indisponible" | "configuration" | "frontiere";
+export type LlmErrorCode =
+  | "hors-ligne"
+  | "indisponible"
+  | "configuration"
+  | "frontiere"
+  /**
+   * Refus explicite du PROVIDER (Meta), distingué de « indisponible » parce
+   * qu'il n'est ni transitoire niazi de configuration locale : c'est une
+   * décision d'exploitation côté Meta (app Live, business verification,
+   * fenêtre 24 h, destinataire). Le message joint dit laquelle — rejouer
+   * sans rien changer ne servirait à rien.
+   */
+  | "refus-provider";
 
 function llmOk<T>(data: T): LlmResult<T> {
   return { ok: true, data };
@@ -1356,6 +1368,11 @@ async function echecVoix<T>(
 // `COMPOSIO_ENTITY_ID` manquant → `configuration`, fail-closed.
 
 import { Composio } from "@composio/core";
+import {
+  classerRefusProvider,
+  messageRefusProvider,
+  type FamilleRefusProvider,
+} from "@/server/communication/diagnostic-refus";
 
 const BASE_COMPOSIO_DEFAUT = "https://backend.composio.dev";
 const CHEMIN_LISTE_DEFAUT = "/api/v3/tools";
@@ -1377,7 +1394,10 @@ export interface ComposioProvider {
     readonly version: string;
     readonly params: Readonly<Record<string, unknown>>;
     readonly timeoutMs: number;
-  }): Promise<{ readonly idExterne: string | null }>;
+  }): Promise<{
+    readonly idExterne: string | null;
+    readonly refus: import("@/server/communication/diagnostic-refus").FamilleRefusProvider | null;
+  }>;
 }
 
 function cleComposio(): string | null {
@@ -1402,6 +1422,18 @@ function statutErreur(cause: unknown): number | null {
   if (typeof interne !== "object" || interne === null) return null;
   const statut = (interne as { status?: unknown }).status;
   return typeof statut === "number" ? statut : null;
+}
+
+/**
+ * Corps d'erreur provider, extrait pour CLASSER (jamais journalisé, jamais
+ * rendu : il peut porter des identifiants). `null` si absent.
+ */
+function corpsErreur(cause: unknown): unknown {
+  if (typeof cause !== "object" || cause === null) return null;
+  const interne = (cause as { cause?: unknown }).cause;
+  if (typeof interne !== "object" || interne === null) return null;
+  const portee = interne as { error?: unknown; data?: unknown; details?: unknown };
+  return portee.error ?? portee.data ?? portee.details ?? null;
 }
 
 function classerErreurComposio(cause: unknown): Error {
@@ -1492,12 +1524,28 @@ export const sdkComposioProvider: ComposioProvider = {
         args.timeoutMs,
       );
     } catch (cause) {
-      throw classerErreurComposio(cause);
+      // Le refus est CLASSÉ ici pour que l'appelant sache s'il doit
+      // rejouer (transitoire), attendre (fenêtre) ou faire agir un humain
+      // (autorisation). Le corps brut ne sort JAMAIS de ce fichier.
+      const famille = classerRefusProvider(statutErreur(cause), corpsErreur(cause));
+      const classee = classerErreurComposio(cause);
+      throw new Error(`${classee.message} [refus:${famille}]`);
     }
     const donnees =
       typeof reponse === "object" && reponse !== null
-        ? (reponse as { data?: unknown }).data
+        ? (reponse as { data?: unknown; error?: unknown }).data
         : null;
+    // Un 200 peut porter un refus métier dans le corps (façon Meta/Composio
+    // de rendre un échec sans statut HTTP) : on le classe aussi.
+    if (
+      typeof reponse === "object" &&
+      reponse !== null &&
+      (reponse as { error?: unknown }).error !== null &&
+      (reponse as { error?: unknown }).error !== undefined
+    ) {
+      const famille = classerRefusProvider(null, reponse);
+      throw new Error(`permanent: refus provider [refus:${famille}]`);
+    }
     const idExterne =
       typeof donnees === "object" && donnees !== null
         ? ((donnees as { id?: unknown }).id ??
@@ -1506,7 +1554,7 @@ export const sdkComposioProvider: ComposioProvider = {
           (donnees as { mid?: unknown }).mid ??
           null)
         : null;
-    return { idExterne: typeof idExterne === "string" ? idExterne : null };
+    return { idExterne: typeof idExterne === "string" ? idExterne : null, refus: null };
   },
 };
 
@@ -1527,6 +1575,12 @@ export interface RequeteComposio {
 export interface ResultatComposio {
   /** Identifiant externe rendu par le provider, null si absent. */
   readonly idExterne: string | null;
+  /**
+   * Famille du refus provider (`fenetre`, `autorisation`, `cible`, …).
+   * `null` = succès. Permet à l'écran de dire la VRAIE cause au lieu d'un
+   * « indisponible » qui fait perdre des heures (cf. diagnostic-refus.ts).
+   */
+  readonly refus: import("@/server/communication/diagnostic-refus").FamilleRefusProvider | null;
 }
 
 function baseComposio(): string {
@@ -1621,6 +1675,9 @@ export async function appelComposio(
   const texte = derniereErreur instanceof Error ? derniereErreur.message : "";
   const estConfiguration =
     texte.startsWith("configuration:") || texte.startsWith("permanent: aucun compte");
+  // Famille de refus provider, si l'exécution l'a classée (jamais le corps
+  // brut : voir `diagnostic-refus.ts`).
+  const famille = /\[refus:([a-z]+)\]/.exec(texte)?.[1] ?? null;
   await journaliser({
     purpose: "communication",
     provider: provider.name,
@@ -1637,6 +1694,13 @@ export async function appelComposio(
   });
   if (estConfiguration) {
     return llmErr("configuration", "Messagerie externe indisponible.");
+  }
+  // Un refus d'AUTORISATION provider n'est pas « indisponible » : c'est une
+  // décision d'exploitation (app Meta Live + business verification) qui ne
+  // se résout ni en réessayant ni en attendant. Le dire honnêtement, avec un
+  // code distinct, évite de faire perdre des heures à l'opératrice.
+  if (famille === "autorisation" || famille === "fenetre" || famille === "cible") {
+    return llmErr("refus-provider", messageRefusProvider(famille as FamilleRefusProvider));
   }
   return llmErr("indisponible", "Messagerie externe indisponible.");
 }

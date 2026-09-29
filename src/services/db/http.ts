@@ -368,6 +368,61 @@ export function posterEnvoiCommunication(corps: {
 }
 
 /**
+ * Exécution d'un envoi préparé, EN RENVOYANT la `Response` brute.
+ *
+ * Pourquoi une fonction distincte de `posterEnvoiCommunication` : un refus
+ * PROVIDER (fenêtre 24 h, app Meta non approuvée, destinataire) est rendu
+ * par la route sous `{ ok:false, code:"refle", motif }`. `lireEnveloppe` ne
+ * connaît que les codes FRONTIÈRE et classerait ce refus « inattendu »,
+ * effaçant la vraie cause à l'écran. Rendre la `Response` permet à
+ * `communication/envoi.ts` de lire CE SEUL champ — le `motif`, déjà filtré
+ * côté serveur, jamais le corps brut de l'erreur provider.
+ *
+ * Seule frontière réseau du dépôt pour l'envoi : ce fichier est l'un des
+ * trois seuls autorisés à appeler `fetch` (règle 1).
+ */
+export function posterEnvoiBrut(corps: {
+  readonly conversationId: string;
+  readonly messageId: string;
+  readonly canal: "whatsapp" | "facebook" | "instagram";
+  readonly outil:
+    | "whatsapp.envoyer_texte"
+    | "whatsapp.envoyer_gabarit"
+    | "facebook.envoyer_message_page"
+    | "instagram.envoyer_reponse";
+}): Promise<Response | null> {
+  // `poster` intercepte déjà les pannes de transport et les rend en `Result`.
+  // Ici on veut la `Response` : on réutilise donc le même `fetch` enrobé, mais
+  // en rendant `null` sur coupure réseau (l'appelant classera « indisponible »).
+  return fetch("/api/communication/envoyer", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    credentials: "same-origin",
+    body: JSON.stringify(corps),
+  }).catch(() => null);
+}
+
+/**
+ * Motif d'un refus PROVIDER, tel que la route le rend (`code: "refle"`).
+ * L'enveloppe `{ ok:false, code }` de `lireEnveloppe` ne porte que des codes
+ * FRONTIÈRE connus : un refus provider viendrait donc être classé
+ * « inattendu », ce qui effacerait la VRAIE cause à l'écran. On lit donc le
+ * corps nous-mêmes, et on ne rend QUE le `motif` — un texte de configuration
+ * que la route a déjà filtré, jamais le corps brut de l'erreur provider.
+ */
+export async function lireMotifRefusProvider(reponse: Response): Promise<string | null> {
+  if (reponse.status !== 422) return null;
+  try {
+    const corps: unknown = (await reponse.json()) as unknown;
+    if (typeof corps !== "object" || corps === null) return null;
+    const motif = (corps as { motif?: unknown }).motif;
+    return typeof motif === "string" && motif !== "" ? motif : null;
+  } catch {
+    return null;
+  }
+}
+
+/**
  * Vérification live d'une connexion (lecture seule). GET direct comme
  * `getSession` : la route ne prend que le canal en query, aucun corps.
  */

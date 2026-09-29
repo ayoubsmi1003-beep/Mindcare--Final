@@ -45,7 +45,12 @@ interface Routage {
 }
 
 type IssueEnvoi =
-  | { readonly erreur: "indisponible" | "regle-metier" | "introuvable"; readonly statut: number }
+  | {
+      readonly erreur: "indisponible" | "regle-metier" | "introuvable" | "refle";
+      readonly statut: number;
+      /** Motif provider honnête, rendu à l'écran quand le canal refuse. */
+      readonly motif?: string;
+    }
   | { readonly envoye: true; readonly idExterne: string | null };
 
 export async function POST(requete: Request): Promise<NextResponse> {
@@ -124,10 +129,19 @@ export async function POST(requete: Request): Promise<NextResponse> {
       if (!resultat.ok) {
         // Refus de frontière (PII) → `blocked` : relecture humaine exigée.
         // Panne → `failed` : pas de retry silencieux, pas de faux succès.
-        await passer(q, messageId, resultat.error.code === "frontiere" ? "blocked" : "failed");
-        return resultat.error.code === "frontiere"
-          ? { erreur: "regle-metier" as const, statut: 422 }
-          : { erreur: "indisponible" as const, statut: 503 };
+        if (resultat.error.code === "frontiere") {
+          await passer(q, messageId, "blocked");
+          return { erreur: "regle-metier" as const, statut: 422 };
+        }
+        // Refus PROVIDER (fenêtre 24 h, app Meta non approuvée, destinataire) :
+        // ni panne ni blocage MindCare → ni `failed` ni `blocked`. On rend le
+        // motif HONNÊTE à l'écran (422) : rejouer ne changerait rien, et le
+        // masquer en panne ferait perdre des heures à l'opératrice.
+        if (resultat.error.code === "refus-provider") {
+          return { erreur: "refle" as const, statut: 422, motif: resultat.error.message };
+        }
+        await passer(q, messageId, "failed");
+        return { erreur: "indisponible" as const, statut: 503 };
       }
 
       await passer(q, messageId, "sent");
@@ -139,7 +153,14 @@ export async function POST(requete: Request): Promise<NextResponse> {
       return { envoye: true as const, idExterne: resultat.data.idExterne };
     });
 
-    if ("erreur" in issue) return refus(issue.erreur, issue.statut);
+    if ("erreur" in issue) {
+      // Le motif provider part dans la réponse : c'est un texte de
+      // configuration, jamais le corps brut de l'erreur ni une donnée patient.
+      if (issue.motif !== undefined) {
+        return NextResponse.json({ ok: false, code: "refle", motif: issue.motif }, { status: issue.statut });
+      }
+      return refus(issue.erreur, issue.statut);
+    }
     return NextResponse.json({ ok: true, data: { idExterne: issue.idExterne } });
   } catch {
     return refus("indisponible", 503);

@@ -223,7 +223,10 @@ export default function PageMessages(): React.JSX.Element {
         return;
       }
       const envoi = await executerEnvoi(active.id, message.id, active.canal, outilPour(active.canal));
-      setNotice(envoi.ok ? frMessages.envoye : frMessages.echecEnvoi);
+      // Un refus du canal porte son PROPRE motif (fenêtre 24 h, app Meta non
+      // approuvée, destinataire) : l'afficher tel quel vaut mieux qu'un
+      // « échec » générique qui ferait croire à une panne du cabinet.
+      setNotice(envoi.ok ? frMessages.envoye : (envoi.error.message ?? frMessages.echecEnvoi));
       await chargerFil(active.id);
       await charger();
     } finally {
@@ -237,7 +240,7 @@ export default function PageMessages(): React.JSX.Element {
     setNotice(null);
     try {
       const envoi = await executerEnvoi(active.id, message.id, active.canal, outilPour(active.canal));
-      setNotice(envoi.ok ? frMessages.envoye : frMessages.echecEnvoi);
+      setNotice(envoi.ok ? frMessages.envoye : (envoi.error.message ?? frMessages.echecEnvoi));
       await chargerFil(active.id);
       await charger();
     } finally {
