@@ -63,4 +63,10 @@ describe("analyserDemandeRdv", () => {
     expect(analyserDemandeRdv("15h", LUNDI).intent).toBe("INCONNU");
     expect(analyserDemandeRdv("", LUNDI).intent).toBe("INCONNU");
   });
+
+  it("ne casse pas les hamzas arabes (piège NFD : إ ne se décompose pas)", () => {
+    // إ (U+0625) se décompose en NFD ; la normalisation doit préserver le match.
+    expect(analyserDemandeRdv("أريد إلغاء الموعد", LUNDI).intent).toBe("ANNULER");
+    expect(analyserDemandeRdv("موعد يوم الإثنين", LUNDI).jour).toBe("2026-09-28");
+  });
 });

@@ -123,3 +123,12 @@ describe("migration 117 confirmation revérifiée", () => {
     expect(sql117).toContain("requested");
   });
 });
+
+const sql118 = readFileSync("supabase/migrations/118_automations_lecture.sql", "utf8");
+
+describe("migration 118 automations", () => {
+  it("expose les conversations en attente sans contenu clinique", () => {
+    expect(sql118).toContain("comm_conversations_en_attente");
+    expect(sql118).toContain("AI_HANDLING");
+  });
+});

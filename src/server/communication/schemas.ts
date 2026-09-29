@@ -24,3 +24,8 @@ export const SchemaWebhook = z.object({
   contenu: z.string().min(1).max(4000),
   langue: z.enum(["fr", "ar", "darija", "mixte"]).optional(),
 });
+
+export const SchemaAutomationEval = z.object({
+  /** Seuil d'attente en minutes, 5..480 (la porte borne déjà à 5 min). */
+  seuilMinutes: z.number().int().min(5).max(480).optional(),
+});

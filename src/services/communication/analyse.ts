@@ -65,10 +65,11 @@ const JOURS: ReadonlyArray<readonly string[]> = [
 ];
 
 function sansDiacritiques(texte: string): string {
-  return texte
-    .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
-    .toLowerCase();
+  // NFKC + minuscules, SANS chasse aux diacritiques : la décomposition NFD
+  // scinde إ en ا + hamza-souscrit, qu'une plage latine ne retire pas — les
+  // formes arabes du lexique ne matcheraient plus. Les formes accentuées
+  // françaises figurent en double dans les marqueurs (après-midi|apres-midi).
+  return texte.normalize("NFKC").toLowerCase();
 }
 
 const MARQUEURS_DARIJA_LATIN =
@@ -78,7 +79,7 @@ const MARQUEURS_CONFIRMER =
   /\b(oui|ouais|ok|d['’]accord|daccord|confirmer|confirme|je viens|parfait|c['’]est bon|ca marche|ça marche)\b|^(n3am|wakha|ok|oui)\b|\b(n3am|wakha)\b|(نعم|أجل|أكيد|تمام|موافق|واخا|نحضر|حاضر|نكون حاضر)/;
 
 const MARQUEURS_ANNULER =
-  /(annuler|annulation|annule|annulé|annulée|ne peux pas|ne pourrai pas|peux pas|pourrai pas|ne viendr|viendr(ai|a) pas|empêche|impossible de venir|désolé|desole|désist|إلغاء|لا أستطيع|لن أحضر|مستحيل|اعتذر|مانقدرش|مانجيش|man9dar|manjich|ne9derch)/;
+  /(annuler|annulation|annule|annulé|annulée|ne peux pas|ne pourrai pas|peux pas|pourrai pas|ne viendr|viendr(ai|a) pas|empêche|empeche|impossible de venir|désolé|desole|désist|إلغاء|لا أستطيع|لن أحضر|مستحيل|اعتذر|مانقدرش|مانجيش|man9dar|manjich|ne9derch)/;
 
 const MARQUEURS_REPROGRAMMER =
   /(reporter|reporte|déplacer|deplacer|décaler|decaler|changer|un autre jour|une autre heure|un autre créneau|un autre creneau|plutôt|plutot|un autre moment|تأجيل|أجل|نبدل|نحول|يوم آخر|يوم اخر|وقت آخر|وقت اخر|موعد آخر|موعد اخر|nbedel|nbeddel)/;
