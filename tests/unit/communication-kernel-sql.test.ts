@@ -79,3 +79,18 @@ describe("migration 114 purpose communication", () => {
     expect(sql114).toContain("boundary_crossings_purpose_check");
   });
 });
+
+const sql115 = readFileSync("supabase/migrations/115_communication_webhook.sql", "utf8");
+
+describe("migration 115 webhook", () => {
+  it("contient les portes de routage et de déduplication", () => {
+    for (const f of [
+      "comm_trouver_ou_creer_conversation",
+      "comm_ref_existe",
+      "comm_ajouter_ref_externe",
+      "comm_conversation_routage",
+    ]) {
+      expect(sql115, `porte manquante: ${f}`).toContain(f);
+    }
+  });
+});

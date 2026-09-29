@@ -44,7 +44,7 @@ describe("garde egress composio", () => {
     const appels: unknown[] = [];
     vi.stubGlobal("fetch", async (...args: unknown[]) => {
       appels.push(args);
-      return { ok: true, json: async () => ({ id: "wamid.x" }) } as Response;
+      return new Response(JSON.stringify({ id: "wamid.x" }), { status: 200 });
     });
     const resultat = await appelComposio({
       outil: "whatsapp.envoyer_texte",
@@ -62,7 +62,7 @@ describe("garde egress composio", () => {
     process.env.COMPOSIO_API_KEY = "cle-test";
     reinitialiserEnv();
     vi.stubGlobal("fetch", async () => {
-      return { ok: true, json: async () => ({ id: "wamid.x" }) } as Response;
+      return new Response(JSON.stringify({ id: "wamid.x" }), { status: 200 });
     });
     const resultat = await appelComposio({
       outil: "whatsapp.envoyer_texte",
