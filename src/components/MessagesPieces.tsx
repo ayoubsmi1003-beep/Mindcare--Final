@@ -13,7 +13,13 @@ import type {
   ResumeConversation,
 } from "@/services/communication/types";
 
-export type FiltreMessages = "tous" | "whatsapp" | "facebook" | "non_traites" | "humain_requis";
+export type FiltreMessages =
+  | "tous"
+  | "whatsapp"
+  | "facebook"
+  | "instagram"
+  | "non_traites"
+  | "humain_requis";
 
 export function filtrerConversations(
   conversations: readonly ResumeConversation[],
@@ -24,6 +30,8 @@ export function filtrerConversations(
       return conversations.filter((c) => c.canal === "whatsapp");
     case "facebook":
       return conversations.filter((c) => c.canal === "facebook");
+    case "instagram":
+      return conversations.filter((c) => c.canal === "instagram");
     case "non_traites":
       return conversations.filter((c) => c.etatHandoff === "HUMAN_REQUIRED");
     case "humain_requis":
@@ -36,7 +44,11 @@ export function filtrerConversations(
 }
 
 export function BadgeCanal({ canal }: { readonly canal: string }): React.JSX.Element {
-  return <Badge ton={canal === "whatsapp" ? "positif" : "information"}>{canal}</Badge>;
+  return (
+    <Badge ton={canal === "whatsapp" ? "positif" : canal === "facebook" ? "information" : "neutre"}>
+      {canal}
+    </Badge>
+  );
 }
 
 export function BadgeHandoff({ etat }: { readonly etat: EtatHandoff }): React.JSX.Element {

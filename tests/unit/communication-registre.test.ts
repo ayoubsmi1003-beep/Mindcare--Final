@@ -13,12 +13,23 @@ import {
 } from "../../src/server/communication/registre-outils";
 
 describe("registre fermé", () => {
-  it("ne contient que du composio, aucun instagram", () => {
+  it("ne contient que du composio, chaque entrée déclare ses gardes", () => {
     expect(OUTILS_COMMUNICATION.length).toBeGreaterThan(0);
     for (const o of OUTILS_COMMUNICATION) {
       expect(o.provider).toBe("composio");
-      expect(o.canal).not.toBe("instagram");
+      // Rien n'est activé par défaut : chaque capacité porte son périmètre,
+      // son approbation, son audit et son idempotence.
+      expect(o.approbationRequise !== undefined).toBe(true);
+      expect(o.evenementAudit.length).toBeGreaterThan(0);
+      expect(o.idempotence.length).toBeGreaterThan(0);
+      // Résolution sans devinette : toute capacité réseau porte ≥1 motif.
+      if (o.toolkit !== "local") expect(o.motifs.length).toBeGreaterThan(0);
     }
+  });
+
+  it("connaît instagram (compte connecté) avec publication approuvée", () => {
+    expect(capaciteConnue("instagram.envoyer_reponse")).toBe(true);
+    expect(exigeApprobation("instagram.publier")).toBe(true);
   });
 
   it("refuse les slugs inconnus et exige l'approbation pour publier", () => {

@@ -63,12 +63,17 @@ const FILTRES: readonly { id: FiltreMessages; libelle: string }[] = [
   { id: "tous", libelle: frMessages.filtres.tous },
   { id: "whatsapp", libelle: frMessages.filtres.whatsapp },
   { id: "facebook", libelle: frMessages.filtres.facebook },
+  { id: "instagram", libelle: frMessages.filtres.instagram },
   { id: "non_traites", libelle: frMessages.filtres.nonTraites },
   { id: "humain_requis", libelle: frMessages.filtres.humainRequis },
 ];
 
-function outilPour(canal: string): "whatsapp.envoyer_texte" | "facebook.envoyer_message_page" {
-  return canal === "facebook" ? "facebook.envoyer_message_page" : "whatsapp.envoyer_texte";
+function outilPour(
+  canal: string,
+): "whatsapp.envoyer_texte" | "facebook.envoyer_message_page" | "instagram.envoyer_reponse" {
+  if (canal === "facebook") return "facebook.envoyer_message_page";
+  if (canal === "instagram") return "instagram.envoyer_reponse";
+  return "whatsapp.envoyer_texte";
 }
 
 export default function PageMessages(): React.JSX.Element {
@@ -209,11 +214,6 @@ export default function PageMessages(): React.JSX.Element {
 
   async function approuverEtEnvoyer(message: ItemMessage): Promise<void> {
     if (active === null || occupe) return;
-    if (active.canal !== "whatsapp" && active.canal !== "facebook") {
-      // Instagram : pas d'adaptateur tant que le compte n'est pas connecté.
-      setNotice(frCommunication.canalNonConnecte);
-      return;
-    }
     setOccupe(true);
     setNotice(null);
     try {
@@ -233,10 +233,6 @@ export default function PageMessages(): React.JSX.Element {
 
   async function envoyerDirect(message: ItemMessage): Promise<void> {
     if (active === null || occupe) return;
-    if (active.canal !== "whatsapp" && active.canal !== "facebook") {
-      setNotice(frCommunication.canalNonConnecte);
-      return;
-    }
     setOccupe(true);
     setNotice(null);
     try {

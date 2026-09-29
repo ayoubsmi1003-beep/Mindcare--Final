@@ -10,12 +10,23 @@ export const SchemaStatutQuery = z.object({
   canal: SchemaCanalEntrant.optional(),
 });
 
-export const SchemaEnvoyer = z.object({
-  conversationId: z.string().uuid(),
-  messageId: z.string().uuid(),
-  canal: z.enum(["whatsapp", "facebook"]),
-  outil: z.enum(["whatsapp.envoyer_texte", "whatsapp.envoyer_gabarit", "facebook.envoyer_message_page"]),
-});
+export const SchemaEnvoyer = z
+  .object({
+    conversationId: z.string().uuid(),
+    messageId: z.string().uuid(),
+    canal: z.enum(["whatsapp", "facebook", "instagram"]),
+    outil: z.enum([
+      "whatsapp.envoyer_texte",
+      "whatsapp.envoyer_gabarit",
+      "facebook.envoyer_message_page",
+      "instagram.envoyer_reponse",
+    ]),
+  })
+  // Cohérence canal↔outil refusée tôt : un outil WhatsApp vers un fil
+  // Instagram serait une erreur d'aiguillage, pas un envoi.
+  .refine((v) => v.outil.startsWith(`${v.canal}.`), {
+    message: "outil incohérent avec le canal",
+  });
 
 export const SchemaWebhook = z.object({
   canal: SchemaCanalEntrant,

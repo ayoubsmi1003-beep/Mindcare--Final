@@ -3,8 +3,8 @@
  *
  * Frontière d'exécution, pas un proxy générique :
  * 1. l'outil doit être connu du registre fermé ET ne pas exiger d'approbation
- *    d'action (`facebook.publier` est refusé ici — Phase 9, jamais en 422
- *    silencieux : le refus est explicite) ;
+ *    d'action (`facebook.publier`, `instagram.publier` sont refusés ici —
+ *    Phase 9, jamais en 422 silencieux : le refus est explicite) ;
  * 2. le canal doit avoir un adaptateur (instagram → refus honnête) ;
  * 3. le message doit être à l'état `approved` (la préparation vit dans
  *    `services/communication`, jamais ici) ;
@@ -64,8 +64,8 @@ export async function POST(requete: Request): Promise<NextResponse> {
 
   if (!capaciteConnue(outil)) return refus("introuvable", 404);
   if (exigeApprobation(outil)) {
-    // `facebook.publier` : effet visible, approbation d'action exigée —
-    // câblé en Phase 9 (Marketing), refusé ici plutôt que demi-exécuté.
+    // Publications : effet visible, approbation d'action exigée — câblé en
+    // Phase 9 (Marketing), refusé ici plutôt que demi-exécuté.
     return refus("regle-metier", 422);
   }
   const adaptateur = adaptateurPour(canal);

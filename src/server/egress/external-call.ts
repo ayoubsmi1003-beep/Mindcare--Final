@@ -1351,6 +1351,8 @@ async function echecVoix<T>(
 // aléatoire par appel, jamais un patient_id.
 
 const BASE_COMPOSIO_DEFAUT = "https://backend.composio.dev";
+const CHEMIN_EXECUTE_DEFAUT = "/api/v3/tools/execute";
+const CHEMIN_LISTE_DEFAUT = "/api/v3/tools";
 
 export interface RequeteComposio {
   /** Capacité MindCare (ex. `whatsapp.envoyer_texte`), jamais un slug brut. */
@@ -1374,6 +1376,14 @@ export interface ResultatComposio {
 function baseComposio(): string {
   const brute = env().COMPOSIO_BASE_URL ?? BASE_COMPOSIO_DEFAUT;
   return brute.replace(/\/+$/, "");
+}
+
+function cheminExecute(): string {
+  return env().COMPOSIO_EXECUTE_PATH ?? CHEMIN_EXECUTE_DEFAUT;
+}
+
+function cheminListe(): string {
+  return env().COMPOSIO_LIST_PATH ?? CHEMIN_LISTE_DEFAUT;
 }
 
 export async function appelComposio(
@@ -1422,7 +1432,7 @@ export async function appelComposio(
     const controller = new AbortController();
     const minuteur = setTimeout(() => controller.abort(), timeoutMs);
     try {
-      const reponse = await fetch(`${baseComposio()}/api/v3/tools/execute`, {
+      const reponse = await fetch(`${baseComposio()}${cheminExecute()}`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${clef}`,
@@ -1494,4 +1504,154 @@ export async function appelComposio(
     latencyMs: Date.now() - depart,
   });
   return llmErr("indisponible", "Messagerie externe indisponible.");
+}
+
+/**
+ * Liste les slugs d'outils exposés par le compte Composio (découverte).
+ *
+ * Charge C4 par construction (un nom de toolkit, rien de patient) — la
+ * frontière est quand même appliquée, par uniformité : si elle bloque un
+ * jour ici, c'est elle qui a raison. Réponse parsée DÉFENSIVEMENT
+ * (`data`/`tools`/`items`/tableau nu, champs `slug`/`name`/`tool_slug`) :
+ * forme illisible → `indisponible`, jamais de devinette. Un seul retry
+ * transitoire, comme `appelComposio`.
+ */
+export async function listerOutilsComposio(
+  toolkit: string,
+  sessionToken: string,
+  timeoutMs?: number,
+): Promise<LlmResult<readonly string[]>> {
+  const clef = env().COMPOSIO_API_KEY;
+  if (clef === undefined || clef === "") {
+    return llmErr("configuration", "Messagerie externe indisponible.");
+  }
+  const delai = timeoutMs ?? TIMEOUT_MS_DEFAUT;
+  const depart = Date.now();
+  const modele = "composio-discovery";
+
+  const verdict = classerCharge({ liste: "outils", toolkit }, null);
+  if (verdict.decision === "BLOQUER") {
+    await journaliser({
+      purpose: "communication",
+      provider: "composio",
+      model: modele,
+      promptVersion: "n/a",
+      promptHash: "n/a",
+      sessionToken,
+      charsOut: null,
+      tokensIn: null,
+      tokensOut: null,
+      estimatedCostUsd: null,
+      outcome: "blocked",
+      latencyMs: Date.now() - depart,
+    });
+    return llmErr("frontiere", MESSAGE_REFUS_FRONTIERE);
+  }
+
+  let derniereErreur: unknown;
+  for (let tentative = 0; tentative < 2; tentative++) {
+    const controller = new AbortController();
+    const minuteur = setTimeout(() => controller.abort(), delai);
+    try {
+      const reponse = await fetch(
+        `${baseComposio()}${cheminListe()}?toolkit=${encodeURIComponent(toolkit)}`,
+        {
+          method: "GET",
+          headers: { Authorization: `Bearer ${clef}` },
+          signal: controller.signal,
+        },
+      );
+      clearTimeout(minuteur);
+
+      if (!reponse.ok) {
+        const transitoire = reponse.status >= 500 || reponse.status === 429;
+        throw new Error(transitoire ? `transitoire: HTTP ${reponse.status}` : `permanent: HTTP ${reponse.status}`);
+      }
+
+      const corps: unknown = await reponse.json().catch(() => null);
+      const slugs = extraireSlugs(corps);
+      if (slugs === null) {
+        throw new Error("permanent: liste d'outils illisible");
+      }
+
+      await journaliser({
+        purpose: "communication",
+        provider: "composio",
+        model: modele,
+        promptVersion: "n/a",
+        promptHash: "n/a",
+        sessionToken,
+        charsOut: null,
+        tokensIn: null,
+        tokensOut: null,
+        estimatedCostUsd: null,
+        outcome: "ok",
+        latencyMs: Date.now() - depart,
+      });
+      return llmOk(slugs);
+    } catch (cause) {
+      clearTimeout(minuteur);
+      if (controller.signal.aborted) {
+        derniereErreur = new Error("transitoire: timeout");
+      } else if (cause instanceof TypeError) {
+        derniereErreur = new Error("transitoire: réseau");
+      } else {
+        derniereErreur = cause;
+      }
+      if (tentative === 0 && estTransitoire(derniereErreur)) continue;
+      break;
+    }
+  }
+
+  const texte = derniereErreur instanceof Error ? derniereErreur.message : "";
+  await journaliser({
+    purpose: "communication",
+    provider: "composio",
+    model: modele,
+    promptVersion: "n/a",
+    promptHash: "n/a",
+    sessionToken,
+    charsOut: null,
+    tokensIn: null,
+    tokensOut: null,
+    estimatedCostUsd: null,
+    outcome: texte.includes("timeout") ? "timeout" : "error",
+    latencyMs: Date.now() - depart,
+  });
+  return llmErr("indisponible", "Messagerie externe indisponible.");
+}
+
+/** Extrait les slugs d'une enveloppe de forme inconnue, ou null. */
+function extraireSlugs(corps: unknown): readonly string[] | null {
+  let candidats: unknown = null;
+  if (Array.isArray(corps)) {
+    candidats = corps;
+  } else if (typeof corps === "object" && corps !== null) {
+    const env = corps as Record<string, unknown>;
+    for (const cle of ["data", "tools", "items"]) {
+      if (Array.isArray(env[cle])) {
+        candidats = env[cle];
+        break;
+      }
+    }
+  }
+  if (!Array.isArray(candidats)) return null;
+  const slugs: string[] = [];
+  for (const item of candidats) {
+    if (typeof item === "string") {
+      if (item !== "") slugs.push(item);
+      continue;
+    }
+    if (typeof item === "object" && item !== null) {
+      const o = item as Record<string, unknown>;
+      for (const cle of ["slug", "tool_slug", "name"]) {
+        const v = o[cle];
+        if (typeof v === "string" && v !== "") {
+          slugs.push(v);
+          break;
+        }
+      }
+    }
+  }
+  return slugs;
 }

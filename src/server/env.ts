@@ -76,6 +76,11 @@ const Schema = z.object({
   // (règle 2) : aucun de ces noms ne doit apparaître dans `.next/static/`.
   COMPOSIO_API_KEY: z.string().optional(),
   COMPOSIO_BASE_URL: z.string().optional(),
+  // Chemins d'API Composio (défauts ci-dessous) : configurables parce que le
+  // versionnement provider évolue — jamais en dur ailleurs que dans les
+  // constantes de `external-call.ts`.
+  COMPOSIO_EXECUTE_PATH: z.string().optional(),
+  COMPOSIO_LIST_PATH: z.string().optional(),
   // Secret HMAC du webhook d'ingestion (route communication/webhook).
   // Absent = ingestion réservée aux sessions connectées (fail-closed).
   COMM_WEBHOOK_SECRET: z.string().optional(),

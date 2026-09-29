@@ -353,11 +353,12 @@ export const httpDbPort: DbPort = {
 export function posterEnvoiCommunication(corps: {
   readonly conversationId: string;
   readonly messageId: string;
-  readonly canal: "whatsapp" | "facebook";
+  readonly canal: "whatsapp" | "facebook" | "instagram";
   readonly outil:
     | "whatsapp.envoyer_texte"
     | "whatsapp.envoyer_gabarit"
-    | "facebook.envoyer_message_page";
+    | "facebook.envoyer_message_page"
+    | "instagram.envoyer_reponse";
 }): Promise<Result<{ idExterne: string | null }>> {
   return poster<{ idExterne: string | null }>(
     "/api/communication/envoyer",

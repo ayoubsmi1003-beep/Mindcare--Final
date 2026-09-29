@@ -2,17 +2,18 @@
  * Adaptateurs provider — l'abstraction MindCare devant Composio.
  *
  * Le domaine dépend de `FournisseurCommunication`, jamais des noms Composio.
- * Aujourd'hui : `ComposioWhatsAppAdapter`, `ComposioFacebookAdapter`.
- * Instagram : pas d'adaptateur tant que le compte n'est pas connecté —
- * demander un envoi Instagram rend `indisponible`, jamais un faux succès.
+ * Le slug réellement appelé est résolu au runtime contre le compte connecté
+ * (`resoudreOutilComposio`) : sans match, `indisponible` honnête — jamais
+ * d'appel vers un slug deviné. Instagram n'a donc pas de « mode dégradé
+ * silencieux » : connecté-mais-sans-slug se voit comme indisponible.
  */
 
 import { appelComposio, type LlmResult } from "@/server/egress/external-call";
 
-import { trouverOutil } from "./registre-outils";
+import { resoudreOutilComposio, trouverOutil } from "./registre-outils";
 
 export interface DemandeEnvoi {
-  /** Capacité MindCare (ex. `whatsapp.envoyer_texte`). */
+  /** Capacité MindCare (ex. `instagram.envoyer_reponse`). */
   readonly outil: string;
   readonly charge: Readonly<Record<string, unknown>>;
   readonly cleIdempotence: string;
@@ -37,8 +38,15 @@ async function executerViaRegistre(
       error: { code: "indisponible", message: "Capacité inconnue." },
     };
   }
+  const slug = await resoudreOutilComposio(demande.outil);
+  if (slug === null) {
+    return {
+      ok: false,
+      error: { code: "indisponible", message: "Capacité indisponible chez le provider." },
+    };
+  }
   return appelComposio({
-    outil: outil.actionComposio,
+    outil: slug,
     charge: demande.charge,
     cleIdempotence: demande.cleIdempotence,
     entiteId: demande.entiteId,
@@ -56,12 +64,18 @@ export const ComposioFacebookAdapter: FournisseurCommunication = {
   envoyer: executerViaRegistre,
 };
 
+export const ComposioInstagramAdapter: FournisseurCommunication = {
+  canal: "instagram",
+  envoyer: executerViaRegistre,
+};
+
 const ADAPTATEURS: Readonly<Record<string, FournisseurCommunication>> = {
   whatsapp: ComposioWhatsAppAdapter,
   facebook: ComposioFacebookAdapter,
+  instagram: ComposioInstagramAdapter,
 };
 
-/** Rend l'adaptateur du canal, ou null (ex. instagram avant connexion). */
+/** Rend l'adaptateur du canal, ou null (canal inconnu — jamais de faux succès). */
 export function adaptateurPour(canal: string): FournisseurCommunication | null {
   return ADAPTATEURS[canal] ?? null;
 }

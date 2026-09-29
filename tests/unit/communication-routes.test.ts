@@ -17,7 +17,7 @@ describe("schémas communication", () => {
     expect(r.success).toBe(true);
   });
 
-  it("refuse instagram à l'envoi (non connecté, fail-closed)", () => {
+  it("refuse un outil incohérent avec le canal (anti-aiguillage)", () => {
     const r = SchemaEnvoyer.safeParse({
       conversationId: "00000000-0000-4000-8000-000000000000",
       messageId: "00000000-0000-4000-8000-000000000001",
@@ -25,6 +25,16 @@ describe("schémas communication", () => {
       outil: "whatsapp.envoyer_texte",
     });
     expect(r.success).toBe(false);
+  });
+
+  it("accepte une réponse instagram sur le bon outil", () => {
+    const r = SchemaEnvoyer.safeParse({
+      conversationId: "00000000-0000-4000-8000-000000000000",
+      messageId: "00000000-0000-4000-8000-000000000001",
+      canal: "instagram",
+      outil: "instagram.envoyer_reponse",
+    });
+    expect(r.success).toBe(true);
   });
 
   it("refuse un webhook sans contenu ni référence", () => {

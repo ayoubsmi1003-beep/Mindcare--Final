@@ -35,11 +35,12 @@ export const frCommunication = {
  */
 export const frMessages = {
   titre: "Messages",
-  sousTitre: "Conversations WhatsApp et Facebook du cabinet",
+  sousTitre: "Conversations WhatsApp, Facebook et Instagram du cabinet",
   filtres: {
     tous: "Tous",
     whatsapp: "WhatsApp",
     facebook: "Facebook",
+    instagram: "Instagram",
     nonTraites: "Non traités",
     humainRequis: "Humain requis",
   },

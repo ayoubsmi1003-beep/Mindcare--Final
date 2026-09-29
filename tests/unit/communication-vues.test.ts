@@ -8,7 +8,7 @@ import type { ResumeConversation } from "../../src/services/communication/types"
 
 function fabrique(
   id: string,
-  canal: "whatsapp" | "facebook",
+  canal: "whatsapp" | "facebook" | "instagram",
   etat: ResumeConversation["etatHandoff"],
 ): ResumeConversation {
   return {
@@ -26,16 +26,18 @@ const lot: readonly ResumeConversation[] = [
   fabrique("b", "facebook", "HUMAN_REQUIRED"),
   fabrique("c", "whatsapp", "HUMAN_HANDLING"),
   fabrique("d", "facebook", "RESOLVED"),
+  fabrique("e", "instagram", "AI_HANDLING"),
 ];
 
 describe("filtrerConversations", () => {
   it("rend tout sur tous", () => {
-    expect(filtrerConversations(lot, "tous")).toHaveLength(4);
+    expect(filtrerConversations(lot, "tous")).toHaveLength(5);
   });
 
   it("sépare les canaux", () => {
     expect(filtrerConversations(lot, "whatsapp").map((c) => c.id)).toEqual(["a", "c"]);
     expect(filtrerConversations(lot, "facebook").map((c) => c.id)).toEqual(["b", "d"]);
+    expect(filtrerConversations(lot, "instagram").map((c) => c.id)).toEqual(["e"]);
   });
 
   it("non traités = humain explicitement requis", () => {

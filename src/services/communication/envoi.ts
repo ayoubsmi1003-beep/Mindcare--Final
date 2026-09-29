@@ -15,11 +15,12 @@ export interface ResultatEnvoi {
 export async function executerEnvoi(
   conversationId: string,
   messageId: string,
-  canal: "whatsapp" | "facebook",
+  canal: "whatsapp" | "facebook" | "instagram",
   outil:
     | "whatsapp.envoyer_texte"
     | "whatsapp.envoyer_gabarit"
-    | "facebook.envoyer_message_page",
+    | "facebook.envoyer_message_page"
+    | "instagram.envoyer_reponse",
 ): Promise<Result<ResultatEnvoi>> {
   const resultat = await posterEnvoiCommunication({ conversationId, messageId, canal, outil });
   if (!resultat.ok) return err(resultat.error);
