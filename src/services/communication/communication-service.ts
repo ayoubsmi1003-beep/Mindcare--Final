@@ -108,11 +108,15 @@ export async function ouvrirConversation(
 /**
  * Prépare un message sortant : écrit `draft`, applique la politique, puis
  * avance vers `approval_required` (cas général), `queued` (hors-ligne) ou
- * `blocked` (consentement/signal). Rend l'identifiant du message et l'état
- * atteint — l'appelant (Phase 4) n'envoie que depuis `approved`.
+ * `blocked` (consentement/signal). Rend l'identifiant du message, l'état
+ * atteint et le motif de blocage le cas échéant — l'appelant (Phase 4)
+ * n'envoie que depuis `approved`.
  *
  * `signalPatient` vient du pré-filtre `messagePorteUnSignalPatient` : un
- * `true` bloque ici, et l'egress bloquera de toute façon à l'envoi.
+ * `true` bloque ici. L'écran Messages passe toujours `false` (le navigateur
+ * n'exécute pas le classifieur) : le stockage local d'un contenu patient est
+ * légitime, et c'est l'egress serveur (`appelComposio`) qui tranche à l'envoi.
+ * Un brouillon contenant du PII finit donc en `blocked` honnête, jamais dehors.
  */
 export async function preparerEnvoi(
   conversationId: string,
@@ -125,7 +129,13 @@ export async function preparerEnvoi(
     readonly horsLigne: boolean;
     readonly clientMsgId: string;
   },
-): Promise<Result<{ messageId: string; etat: EtatMessage }>> {
+): Promise<
+  Result<{
+    messageId: string;
+    etat: EtatMessage;
+    motif: "consentement" | "signal_patient" | "etat" | "file" | null;
+  }>
+> {
   // 1 · Écrire le brouillon (porte idempotente : rejeu → false).
   const ecrit = await db().rpc<string>("comm_append_message", {
     p_conversation_id: conversationId,
@@ -192,5 +202,81 @@ export async function preparerEnvoi(
   }
 
   log.info("communication.preparation", { count: 1 });
-  return ok({ messageId: courant.id, etat: cible });
+  return ok({
+    messageId: courant.id,
+    etat: cible,
+    motif:
+      decision.decision === "bloquer"
+        ? decision.motif
+        : decision.decision === "file"
+          ? "file"
+          : null,
+  });
+}
+
+/** Approuve un brouillon (`approval_required` → `approved`). L'envoi reste séparé. */
+export async function approuverMessage(messageId: string): Promise<Result<boolean>> {
+  const result = await db().rpc<boolean>("comm_transition_message", {
+    p_message_id: messageId,
+    p_vers: "approved",
+  });
+  if (!result.ok) {
+    log.error("communication.approbation", logFieldsFor(result.error));
+    return err(result.error);
+  }
+  log.info("communication.approbation", { count: 1 });
+  return ok(result.data[0] ?? false);
+}
+
+/** Refuse un brouillon (`approval_required` → `rejected`). */
+export async function rejeterMessage(messageId: string): Promise<Result<boolean>> {
+  const result = await db().rpc<boolean>("comm_transition_message", {
+    p_message_id: messageId,
+    p_vers: "rejected",
+  });
+  if (!result.ok) {
+    log.error("communication.refus", logFieldsFor(result.error));
+    return err(result.error);
+  }
+  return ok(result.data[0] ?? false);
+}
+
+export interface RoutageConversation {
+  readonly canal: Canal;
+  readonly destinataire: string | null;
+  readonly patientId: string | null;
+  readonly etatHandoff: EtatHandoff;
+}
+
+/** En-têtes de routage d'une conversation (sans contenu clinique). */
+export async function lireRoutage(
+  conversationId: string,
+): Promise<Result<RoutageConversation | null>> {
+  const result = await db().rpc<RoutageConversation>("comm_conversation_routage", {
+    p_conversation_id: conversationId,
+  });
+  if (!result.ok) {
+    log.error("communication.routage", logFieldsFor(result.error));
+    return err(result.error);
+  }
+  return ok(result.data[0] ?? null);
+}
+
+/** Transfère la propriété d'une conversation (handoff humain/IA). */
+export async function demanderHandoff(
+  conversationId: string,
+  vers: EtatHandoff,
+  motif: string,
+): Promise<Result<boolean>> {
+  const result = await db().rpc<boolean>("comm_request_handoff", {
+    p_conversation_id: conversationId,
+    p_vers: vers,
+    p_motif: motif,
+  });
+  if (!result.ok) {
+    log.error("communication.handoff", logFieldsFor(result.error));
+    return err(result.error);
+  }
+  log.info("communication.handoff", { count: 1 });
+  return ok(result.data[0] ?? false);
 }

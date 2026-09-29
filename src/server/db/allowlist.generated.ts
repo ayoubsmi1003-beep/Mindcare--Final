@@ -19,6 +19,7 @@ export const RPC_AUTORISES: ReadonlySet<string> = new Set([
   "close_consultation",
   "comm_append_message",
   "comm_connection_status",
+  "comm_conversation_routage",
   "comm_create_conversation",
   "comm_get_consent",
   "comm_lier_patient",
@@ -26,6 +27,7 @@ export const RPC_AUTORISES: ReadonlySet<string> = new Set([
   "comm_list_messages",
   "comm_matcher_patient",
   "comm_register_delivery",
+  "comm_request_handoff",
   "comm_set_connection",
   "comm_set_consent",
   "comm_suivi_statut",
@@ -114,4 +116,4 @@ export const RELATIONS_AUTORISEES: Readonly<Record<string, readonly string[]>> =
 };
 
 /** Nombre d'entrées, pour que le contrôle de démarrage puisse le journaliser. */
-export const NB_RPC = 92;
+export const NB_RPC = 94;

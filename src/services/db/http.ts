@@ -342,3 +342,26 @@ export const httpDbPort: DbPort = {
     return ok(reponse.body);
   },
 };
+
+/**
+ * Exécution d'un envoi préparé (`POST /api/communication/envoyer`).
+ *
+ * Même-origine, session cookie : ce fichier est l'un des trois seuls
+ * autorisés à appeler `fetch`. La route serveur revérifie tout (état,
+ * consentement, registre, egress) ; ici on transporte, on n'autorise rien.
+ */
+export function posterEnvoiCommunication(corps: {
+  readonly conversationId: string;
+  readonly messageId: string;
+  readonly canal: "whatsapp" | "facebook";
+  readonly outil:
+    | "whatsapp.envoyer_texte"
+    | "whatsapp.envoyer_gabarit"
+    | "facebook.envoyer_message_page";
+}): Promise<Result<{ idExterne: string | null }>> {
+  return poster<{ idExterne: string | null }>(
+    "/api/communication/envoyer",
+    corps,
+    "http.communication.envoyer",
+  );
+}
