@@ -79,6 +79,8 @@ export const frMessages = {
   prepareApprobation: "Brouillon prêt : approuvez-le pour l'envoyer.",
   prepareBloque: "Message bloqué par la politique d'envoi.",
   echecEnvoi: "L'envoi a échoué. Aucun faux succès : réessayez depuis un nouveau brouillon.",
+  /** Motif d'annulation posé quand le patient annule par messagerie (porte 022 l'exige). */
+  motifAnnulationPatient: "Annulation demandée par le patient (messagerie).",
   handoff: {
     AI_HANDLING: "Prise en charge : IA",
     HUMAN_REQUIRED: "Humain requis",

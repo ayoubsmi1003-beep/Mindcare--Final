@@ -35,6 +35,7 @@ export const RPC_AUTORISES: ReadonlySet<string> = new Set([
   "comm_upsert_template",
   "confirm_appointment",
   "confirm_jarvis_action",
+  "confirmer_apres_reverification",
   "create_appointment",
   "create_charge",
   "create_patient",
@@ -116,4 +117,4 @@ export const RELATIONS_AUTORISEES: Readonly<Record<string, readonly string[]>> =
 };
 
 /** Nombre d'entrées, pour que le contrôle de démarrage puisse le journaliser. */
-export const NB_RPC = 94;
+export const NB_RPC = 95;

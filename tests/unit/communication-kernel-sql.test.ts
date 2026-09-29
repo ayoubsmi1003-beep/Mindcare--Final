@@ -108,3 +108,18 @@ describe("migration 116 appariement", () => {
     expect(sql116).toContain("LIMIT 10");
   });
 });
+
+const sql117 = readFileSync("supabase/migrations/117_confirmation_reverifiee.sql", "utf8");
+
+describe("migration 117 confirmation revérifiée", () => {
+  it("verrouille le créneau avant de confirmer", () => {
+    expect(sql117).toContain("confirmer_apres_reverification");
+    expect(sql117).toContain("FOR UPDATE");
+    expect(sql117).toContain("SECURITY INVOKER");
+  });
+
+  it("refuse nommément le créneau pris et les transitions illégales", () => {
+    expect(sql117).toContain("occupé");
+    expect(sql117).toContain("requested");
+  });
+});
