@@ -76,6 +76,9 @@ const Schema = z.object({
   // (règle 2) : aucun de ces noms ne doit apparaître dans `.next/static/`.
   COMPOSIO_API_KEY: z.string().optional(),
   COMPOSIO_BASE_URL: z.string().optional(),
+  // Secret HMAC du webhook d'ingestion (route communication/webhook).
+  // Absent = ingestion réservée aux sessions connectées (fail-closed).
+  COMM_WEBHOOK_SECRET: z.string().optional(),
 });
 
 export type EnvServeur = z.infer<typeof Schema>;

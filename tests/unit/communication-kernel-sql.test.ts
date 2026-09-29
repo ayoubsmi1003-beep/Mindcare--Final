@@ -94,3 +94,17 @@ describe("migration 115 webhook", () => {
     }
   });
 });
+
+const sql116 = readFileSync("supabase/migrations/116_communication_appariement.sql", "utf8");
+
+describe("migration 116 appariement", () => {
+  it("contient les portes de matching, liaison et suivi", () => {
+    for (const f of ["comm_matcher_patient", "comm_lier_patient", "comm_suivi_statut"]) {
+      expect(sql116, `porte manquante: ${f}`).toContain(f);
+    }
+  });
+
+  it("ne promet jamais un correspondant unique", () => {
+    expect(sql116).toContain("LIMIT 10");
+  });
+});

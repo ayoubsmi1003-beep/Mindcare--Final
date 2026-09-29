@@ -14,8 +14,10 @@ import { randomUUID } from "node:crypto";
 import { NextResponse } from "next/server";
 
 import { SchemaWebhook } from "@/server/communication/schemas";
+import { verifierSignatureWebhook } from "@/server/communication/signature";
 import { faireePgPort } from "@/server/db/pgPort";
 import { withCaller } from "@/server/db/withCaller";
+import { env } from "@/server/env";
 
 import { preparer, refus } from "../../db/_commun";
 
@@ -32,10 +34,23 @@ export async function POST(requete: Request): Promise<NextResponse> {
   if (ctx instanceof NextResponse) return ctx;
 
   let brut: unknown;
+  let corpsBrut = "";
   try {
-    brut = await requete.json();
+    // Corps BRUT d'abord : la signature HMAC porte sur ces octets, pas sur
+    // le JSON re-sérialisé (qui ne serait jamais identique).
+    corpsBrut = await requete.text();
+    brut = JSON.parse(corpsBrut) as unknown;
   } catch {
     return refus("regle-metier", 400);
+  }
+  // Secret configuré → signature exigée (ingestion provider). Sinon, la
+  // session vérifiée par `preparer()` reste l'unique garde (fail-closed).
+  const secret = env().COMM_WEBHOOK_SECRET ?? "";
+  if (secret !== "") {
+    const signature = requete.headers.get("x-comm-signature") ?? "";
+    if (!verifierSignatureWebhook(secret, corpsBrut, signature)) {
+      return refus("non-authentifie", 401);
+    }
   }
   const analyse = SchemaWebhook.safeParse(brut);
   if (!analyse.success) return refus("regle-metier", 400);
