@@ -63,7 +63,7 @@ Aucun second système de RDV : l'Agenda (`022`/`025`) reste l'autorité.
 |---|---|
 | WhatsApp Business send text/template/status | SUPPORTED (compte connecté) |
 | Facebook Page messaging/publish (approved) | SUPPORTED (page connectée) |
-| Instagram DM/comments/publish | NOT_AVAILABLE (connexion ultérieure) |
+| Instagram DM replies (compte connecté 2026-09-29) | SUPPORTED-LIMITED : slugs résolus au runtime contre le compte (`resoudreOutilComposio`) ; sans match → indisponible honnête. Fenêtre Meta 24h préservée (4xx surfacés, jamais rejoués). Publication : approval-required (Phase 9). |
 | Fenêtre 24h / templates Meta | LIMITES préservées, erreurs réelles surfacées |
 
 ## Smart booking (Phase 5, jalon — rappelé ici car structurant)
