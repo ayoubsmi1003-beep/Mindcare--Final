@@ -1335,7 +1335,7 @@ async function echecVoix<T>(
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// COMMUNICATION — Composio session-scopée (domaine 112/113).
+// COMMUNICATION — Composio via SDK officiel (domaine 112/113).
 // ═══════════════════════════════════════════════════════════════════════════
 //
 // MÊME DISCIPLINE QUE `llm()` : frontière DÉTERMINISTE sur les octets
@@ -1346,23 +1346,179 @@ async function echecVoix<T>(
 // pas à rejouer), journalisation best-effort dans `boundary_crossings`
 // (motif `communication`, migration 114).
 //
-// `entiteId` est l'identité STABLE du cabinet (pas un identifiant personnel)
-// : c'est elle qui scope la session Composio. `sessionToken` reste un uuid
-// aléatoire par appel, jamais un patient_id.
+// PREUVE LIVE (2026-09-29) : l'exécution passe par le SDK (`@composio/core`)
+// avec `{connectedAccountId, userId: entité, version, arguments}` —
+// l'entité est le propriétaire Composio des comptes (dashboard), PAS le
+// cabinet (le cloisonnement cabinet reste en base, RLS). Compte et version
+// sont RÉSOLUS au runtime (jamais devinés) et cachés en mémoire (slugs,
+// pas de données).
+//
+// `COMPOSIO_ENTITY_ID` manquant → `configuration`, fail-closed.
+
+import { Composio } from "@composio/core";
 
 const BASE_COMPOSIO_DEFAUT = "https://backend.composio.dev";
-const CHEMIN_EXECUTE_DEFAUT = "/api/v3/tools/execute";
 const CHEMIN_LISTE_DEFAUT = "/api/v3/tools";
 
+/**
+ * Le point d'exécution Composio, injectable pour les tests (même motif que
+ * `LlmProvider` : le défaut parle au réseau, le faux compte les appels).
+ */
+export interface ComposioProvider {
+  readonly name: string;
+  /** Compte ACTIVE pour le toolkit, ou null. */
+  compteConnecte(toolkit: string, timeoutMs: number): Promise<string | null>;
+  /** Version live de l'outil, ou null. */
+  versionOutil(slug: string, timeoutMs: number): Promise<string | null>;
+  executer(args: {
+    readonly slug: string;
+    readonly compteId: string;
+    readonly entiteId: string;
+    readonly version: string;
+    readonly params: Readonly<Record<string, unknown>>;
+    readonly timeoutMs: number;
+  }): Promise<{ readonly idExterne: string | null }>;
+}
+
+function cleComposio(): string | null {
+  const clef = env().COMPOSIO_API_KEY;
+  return clef === undefined || clef === "" ? null : clef;
+}
+
+function avecEcheance<T>(promesse: Promise<T>, ms: number): Promise<T> {
+  let minuteur: ReturnType<typeof setTimeout> | undefined;
+  const garde = new Promise<never>((_, rejeter) => {
+    minuteur = setTimeout(() => rejeter(new Error("transitoire: timeout")), ms);
+  });
+  return Promise.race([promesse, garde]).finally(() => {
+    if (minuteur !== undefined) clearTimeout(minuteur);
+  });
+}
+
+/** Statut HTTP porté par l'erreur SDK, null si non-HTTP (réseau). */
+function statutErreur(cause: unknown): number | null {
+  if (typeof cause !== "object" || cause === null) return null;
+  const interne = (cause as { cause?: unknown }).cause;
+  if (typeof interne !== "object" || interne === null) return null;
+  const statut = (interne as { status?: unknown }).status;
+  return typeof statut === "number" ? statut : null;
+}
+
+function classerErreurComposio(cause: unknown): Error {
+  if (cause instanceof Error && cause.message.startsWith("transitoire:")) return cause;
+  const statut = statutErreur(cause);
+  if (statut === null) return new Error("transitoire: réseau");
+  return new Error(
+    statut >= 500 || statut === 429 ? `transitoire: HTTP ${statut}` : `permanent: HTTP ${statut}`,
+  );
+}
+
+const cacheComptes = new Map<string, { expire: number; compteId: string }>();
+const FENETRE_COMPTES_MS = 300_000;
+const cacheVersions = new Map<string, { expire: number; version: string }>();
+const FENETRE_VERSIONS_MS = 3_600_000;
+
+export const sdkComposioProvider: ComposioProvider = {
+  name: "composio-sdk",
+
+  async compteConnecte(toolkit, timeoutMs) {
+    const cache = cacheComptes.get(toolkit);
+    if (cache !== undefined && Date.now() < cache.expire) return cache.compteId;
+    const clef = cleComposio();
+    if (clef === null) throw new Error("configuration: COMPOSIO_API_KEY absente");
+    const client = new Composio({ apiKey: clef });
+    const reponse = await avecEcheance(client.connectedAccounts.list(), timeoutMs);
+    const items = (reponse as { items?: readonly unknown[] }).items ?? [];
+    for (const item of items) {
+      if (typeof item !== "object" || item === null) continue;
+      const o = item as { id?: unknown; status?: unknown; toolkit?: unknown };
+      const slug = (o.toolkit as { slug?: unknown } | undefined)?.slug;
+      if (typeof o.id === "string" && o.status === "ACTIVE" && slug === toolkit) {
+        cacheComptes.set(toolkit, { expire: Date.now() + FENETRE_COMPTES_MS, compteId: o.id });
+        return o.id;
+      }
+    }
+    return null;
+  },
+
+  async versionOutil(slug, timeoutMs) {
+    const cache = cacheVersions.get(slug);
+    if (cache !== undefined && Date.now() < cache.expire) return cache.version;
+    const clef = cleComposio();
+    if (clef === null) throw new Error("configuration: COMPOSIO_API_KEY absente");
+    const controller = new AbortController();
+    const minuteur = setTimeout(() => controller.abort(), timeoutMs);
+    try {
+      const reponse = await fetch(
+        `${baseComposio()}/api/v3.1/tools/${encodeURIComponent(slug)}`,
+        { headers: { "x-api-key": clef }, signal: controller.signal },
+      );
+      if (!reponse.ok) {
+        const transitoire = reponse.status >= 500 || reponse.status === 429;
+        throw new Error(transitoire ? `transitoire: HTTP ${reponse.status}` : `permanent: HTTP ${reponse.status}`);
+      }
+      const corps: unknown = await reponse.json().catch(() => null);
+      const version =
+        typeof corps === "object" && corps !== null
+          ? (corps as { version?: unknown }).version
+          : null;
+      if (typeof version !== "string" || version === "") {
+        throw new Error("permanent: version d'outil illisible");
+      }
+      cacheVersions.set(slug, { expire: Date.now() + FENETRE_VERSIONS_MS, version });
+      return version;
+    } catch (cause) {
+      if (controller.signal.aborted) throw new Error("transitoire: timeout");
+      if (cause instanceof TypeError) throw new Error("transitoire: réseau");
+      throw cause;
+    } finally {
+      clearTimeout(minuteur);
+    }
+  },
+
+  async executer(args) {
+    const clef = cleComposio();
+    if (clef === null) throw new Error("configuration: COMPOSIO_API_KEY absente");
+    const client = new Composio({ apiKey: clef });
+    let reponse: unknown;
+    try {
+      reponse = await avecEcheance(
+        client.tools.execute(args.slug, {
+          connectedAccountId: args.compteId,
+          userId: args.entiteId,
+          version: args.version,
+          arguments: { ...args.params },
+        }),
+        args.timeoutMs,
+      );
+    } catch (cause) {
+      throw classerErreurComposio(cause);
+    }
+    const donnees =
+      typeof reponse === "object" && reponse !== null
+        ? (reponse as { data?: unknown }).data
+        : null;
+    const idExterne =
+      typeof donnees === "object" && donnees !== null
+        ? ((donnees as { id?: unknown }).id ??
+          (donnees as { message_id?: unknown }).message_id ??
+          (donnees as { wamid?: unknown }).wamid ??
+          (donnees as { mid?: unknown }).mid ??
+          null)
+        : null;
+    return { idExterne: typeof idExterne === "string" ? idExterne : null };
+  },
+};
+
 export interface RequeteComposio {
-  /** Capacité MindCare (ex. `whatsapp.envoyer_texte`), jamais un slug brut. */
+  /** Slug résolu au runtime (registre + découverte), jamais deviné. */
   readonly outil: string;
+  /** Toolkit propriétaire (compte + version résolus pour lui). */
+  readonly toolkit: string;
   /** Charge C4 attendue ; la frontière tranche sur ces octets. */
   readonly charge: Readonly<Record<string, unknown>>;
   /** Clé stable `comm:<conversation>:<empreinte>` (idempotence retry). */
   readonly cleIdempotence: string;
-  /** Identité stable du cabinet (scope de session), pas une PII. */
-  readonly entiteId: string;
   /** uuid aléatoire par appel — JAMAIS le patient_id. */
   readonly sessionToken: string;
   readonly timeoutMs?: number;
@@ -1378,19 +1534,16 @@ function baseComposio(): string {
   return brute.replace(/\/+$/, "");
 }
 
-function cheminExecute(): string {
-  return env().COMPOSIO_EXECUTE_PATH ?? CHEMIN_EXECUTE_DEFAUT;
-}
-
 function cheminListe(): string {
   return env().COMPOSIO_LIST_PATH ?? CHEMIN_LISTE_DEFAUT;
 }
 
 export async function appelComposio(
   req: RequeteComposio,
+  provider: ComposioProvider = sdkComposioProvider,
 ): Promise<LlmResult<ResultatComposio>> {
-  const clef = env().COMPOSIO_API_KEY;
-  if (clef === undefined || clef === "") {
+  const entite = env().COMPOSIO_ENTITY_ID;
+  if (entite === undefined || entite === "") {
     return llmErr("configuration", "Messagerie externe indisponible.");
   }
   const timeoutMs = req.timeoutMs ?? TIMEOUT_MS_DEFAUT;
@@ -1420,47 +1573,31 @@ export async function appelComposio(
     return llmErr("frontiere", MESSAGE_REFUS_FRONTIERE);
   }
 
-  const corps = JSON.stringify({
-    outil: req.outil,
-    arguments: req.charge,
-    entite_id: req.entiteId,
-    cle_idempotence: req.cleIdempotence,
-  });
+  const corps = JSON.stringify(req.charge);
 
   let derniereErreur: unknown;
   for (let tentative = 0; tentative < 2; tentative++) {
-    const controller = new AbortController();
-    const minuteur = setTimeout(() => controller.abort(), timeoutMs);
     try {
-      const reponse = await fetch(`${baseComposio()}${cheminExecute()}`, {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${clef}`,
-          "Content-Type": "application/json",
-          "X-Entity-Id": req.entiteId,
-          "X-Idempotency-Key": req.cleIdempotence,
-        },
-        body: corps,
-        signal: controller.signal,
-      });
-      clearTimeout(minuteur);
-
-      if (!reponse.ok) {
-        const transitoire = reponse.status >= 500 || reponse.status === 429;
-        throw new Error(transitoire ? `transitoire: HTTP ${reponse.status}` : `permanent: HTTP ${reponse.status}`);
+      const compteId = await provider.compteConnecte(req.toolkit, timeoutMs);
+      if (compteId === null) {
+        throw new Error("permanent: aucun compte connecté");
       }
-
-      const recu: unknown = await reponse.json();
-      const idExterne =
-        typeof recu === "object" && recu !== null
-          ? ((recu as { id?: unknown; message_id?: unknown }).id ??
-            (recu as { id?: unknown; message_id?: unknown }).message_id ??
-            null)
-          : null;
+      const version = await provider.versionOutil(req.outil, timeoutMs);
+      if (version === null) {
+        throw new Error("permanent: version d'outil inconnue");
+      }
+      const resultat = await provider.executer({
+        slug: req.outil,
+        compteId,
+        entiteId: entite,
+        version,
+        params: req.charge,
+        timeoutMs,
+      });
 
       await journaliser({
         purpose: "communication",
-        provider: "composio",
+        provider: provider.name,
         model: modele,
         promptVersion: "n/a",
         promptHash: "n/a",
@@ -1473,25 +1610,20 @@ export async function appelComposio(
         latencyMs: Date.now() - depart,
       });
 
-      return llmOk({ idExterne: typeof idExterne === "string" ? idExterne : null });
+      return llmOk(resultat);
     } catch (cause) {
-      clearTimeout(minuteur);
-      if (controller.signal.aborted) {
-        derniereErreur = new Error("transitoire: timeout");
-      } else if (cause instanceof TypeError) {
-        derniereErreur = new Error("transitoire: réseau");
-      } else {
-        derniereErreur = cause;
-      }
-      if (tentative === 0 && estTransitoire(derniereErreur)) continue;
+      derniereErreur = cause;
+      if (tentative === 0 && estTransitoire(cause)) continue;
       break;
     }
   }
 
   const texte = derniereErreur instanceof Error ? derniereErreur.message : "";
+  const estConfiguration =
+    texte.startsWith("configuration:") || texte.startsWith("permanent: aucun compte");
   await journaliser({
     purpose: "communication",
-    provider: "composio",
+    provider: provider.name,
     model: modele,
     promptVersion: "n/a",
     promptHash: "n/a",
@@ -1503,6 +1635,9 @@ export async function appelComposio(
     outcome: texte.includes("timeout") ? "timeout" : "error",
     latencyMs: Date.now() - depart,
   });
+  if (estConfiguration) {
+    return llmErr("configuration", "Messagerie externe indisponible.");
+  }
   return llmErr("indisponible", "Messagerie externe indisponible.");
 }
 
@@ -1554,7 +1689,7 @@ export async function listerOutilsComposio(
     const minuteur = setTimeout(() => controller.abort(), delai);
     try {
       const reponse = await fetch(
-        `${baseComposio()}${cheminListe()}?toolkit=${encodeURIComponent(toolkit)}`,
+        `${baseComposio()}${cheminListe()}?toolkit_slug=${encodeURIComponent(toolkit)}`,
         {
           method: "GET",
           headers: { Authorization: `Bearer ${clef}` },

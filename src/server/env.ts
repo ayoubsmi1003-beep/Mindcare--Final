@@ -76,10 +76,13 @@ const Schema = z.object({
   // (règle 2) : aucun de ces noms ne doit apparaître dans `.next/static/`.
   COMPOSIO_API_KEY: z.string().optional(),
   COMPOSIO_BASE_URL: z.string().optional(),
-  // Chemins d'API Composio (défauts ci-dessous) : configurables parce que le
-  // versionnement provider évolue — jamais en dur ailleurs que dans les
-  // constantes de `external-call.ts`.
-  COMPOSIO_EXECUTE_PATH: z.string().optional(),
+  // Entité Composio propriétaire des comptes connectés (dashboard). Le
+  // cloisonnement cabinet reste en base (RLS) ; ceci scope la session
+  // provider, jamais une identité patient.
+  COMPOSIO_ENTITY_ID: z.string().optional(),
+  // Chemin de liste Composio (défaut ci-dessous) : configurable parce que le
+  // versionnement provider évolue — jamais en dur ailleurs que dans
+  // `external-call.ts`. L'exécution passe par le SDK officiel.
   COMPOSIO_LIST_PATH: z.string().optional(),
   // Secret HMAC du webhook d'ingestion (route communication/webhook).
   // Absent = ingestion réservée aux sessions connectées (fail-closed).

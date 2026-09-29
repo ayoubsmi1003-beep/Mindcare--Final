@@ -17,3 +17,5 @@ allowBuilds:
   # unrs-resolver : binaire natif requis par l'outillage ESLint/Next
   # (résolution de modules) — seul postinstall autorisé.
   unrs-resolver: true
+minimumReleaseAgeExclude:
+  - '@composio/core@0.22.0'

@@ -213,7 +213,7 @@ export const OUTILS_COMMUNICATION: readonly OutilCommunication[] = [
     provider: "composio",
     actionComposio: "INSTAGRAM_LIST_COMMENTS",
     toolkit: "instagram",
-    motifs: ["instagram_comment", "ig_comment", "list_comments", "get_comments"],
+    motifs: ["get_post_comments", "post_comments", "list_all_messages", "reply_to_comment"],
     canal: "instagram",
     capacite: "Lecture des commentaires (modération, détection de leads).",
     portee: "Lecture seule, métadonnées + textes publics.",

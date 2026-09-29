@@ -20,7 +20,9 @@ Jarvis (capacités allowlistées, propose→confirm→execute→verify→log)
   → portes app.* (RLS décide, FOR UPDATE, transition, écriture, trace trg_audit)
   → egress unique src/server/egress/external-call.ts (purpose "communication")
   → adaptateurs ComposioWhatsApp / ComposioFacebook (abstraction provider)
-  → Composio REST session-scopée (cabinet_id stable, jamais d'IDs personnels)
+  → Composio via SDK officiel (`entité` dashboard + compte ACTIVE résolu +
+  version d'outil résolue, jamais devinés ; `COMPOSIO_ENTITY_ID` serveur).
+  Le cloisonnement cabinet reste en base (RLS) — l'entité scope le provider.
   → Meta (WhatsApp Business / Page Facebook)
 ```
 

@@ -5,7 +5,10 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
 import { reinitialiserEnv } from "../../src/server/env";
-import { appelComposio } from "../../src/server/egress/external-call";
+import {
+  appelComposio,
+  type ComposioProvider,
+} from "../../src/server/egress/external-call";
 import {
   capaciteConnue,
   exigeApprobation,
@@ -44,43 +47,81 @@ describe("garde egress composio", () => {
   afterEach(() => {
     vi.unstubAllGlobals();
     delete process.env.COMPOSIO_API_KEY;
+    delete process.env.COMPOSIO_ENTITY_ID;
     delete process.env.MINDCARE_DATABASE_URL;
     reinitialiserEnv();
   });
 
-  it("bloque une charge à signal patient SANS appel réseau", async () => {
+  function fauxProvider(appels: unknown[]): ComposioProvider {
+    return {
+      name: "faux",
+      compteConnecte: async () => "ca_test",
+      versionOutil: async () => "v_test",
+      executer: async (args) => {
+        appels.push(args);
+        return { idExterne: "wamid.test" };
+      },
+    };
+  }
+
+  function baseEnv(): void {
     process.env.MINDCARE_DATABASE_URL = "postgresql://test";
-    process.env.COMPOSIO_API_KEY = "cle-test";
+    process.env.COMPOSIO_ENTITY_ID = "entite-test";
     reinitialiserEnv();
+  }
+
+  it("bloque une charge à signal patient SANS appel provider", async () => {
+    baseEnv();
     const appels: unknown[] = [];
-    vi.stubGlobal("fetch", async (...args: unknown[]) => {
-      appels.push(args);
-      return new Response(JSON.stringify({ id: "wamid.x" }), { status: 200 });
-    });
-    const resultat = await appelComposio({
-      outil: "whatsapp.envoyer_texte",
-      charge: { texte: "Bonjour Karim, rappel 0612345678" },
-      cleIdempotence: "comm:c:1",
-      sessionToken: "00000000-0000-4000-8000-000000000000",
-    });
+    const resultat = await appelComposio(
+      {
+        outil: "WHATSAPP_SEND_MESSAGE",
+        toolkit: "whatsapp",
+        charge: { texte: "Bonjour Karim, rappel 0612345678" },
+        cleIdempotence: "comm:c:1",
+        sessionToken: "00000000-0000-4000-8000-000000000000",
+      },
+      fauxProvider(appels),
+    );
     expect(resultat.ok).toBe(false);
     if (!resultat.ok) expect(resultat.error.code).toBe("frontiere");
     expect(appels).toHaveLength(0);
   });
 
-  it("laisse passer une charge générique (fetch moqué)", async () => {
-    process.env.MINDCARE_DATABASE_URL = "postgresql://test";
-    process.env.COMPOSIO_API_KEY = "cle-test";
-    reinitialiserEnv();
-    vi.stubGlobal("fetch", async () => {
-      return new Response(JSON.stringify({ id: "wamid.x" }), { status: 200 });
-    });
-    const resultat = await appelComposio({
-      outil: "whatsapp.envoyer_texte",
-      charge: { texte: "Le cabinet sera ouvert samedi matin." },
-      cleIdempotence: "comm:c:2",
-      sessionToken: "00000000-0000-4000-8000-000000000001",
-    });
+  it("laisse passer une charge générique (provider faux)", async () => {
+    baseEnv();
+    const appels: unknown[] = [];
+    const resultat = await appelComposio(
+      {
+        outil: "WHATSAPP_SEND_MESSAGE",
+        toolkit: "whatsapp",
+        charge: { texte: "Le cabinet sera ouvert samedi matin." },
+        cleIdempotence: "comm:c:2",
+        sessionToken: "00000000-0000-4000-8000-000000000001",
+      },
+      fauxProvider(appels),
+    );
     expect(resultat.ok).toBe(true);
+    if (resultat.ok) expect(resultat.data.idExterne).toBe("wamid.test");
+    expect(appels).toHaveLength(1);
+  });
+
+  it("refuse sans entité configurée, avant tout appel", async () => {
+    process.env.MINDCARE_DATABASE_URL = "postgresql://test";
+    reinitialiserEnv();
+    const appels: unknown[] = [];
+    const resultat = await appelComposio(
+      {
+        outil: "WHATSAPP_SEND_MESSAGE",
+        toolkit: "whatsapp",
+        charge: { texte: "Bonjour." },
+        cleIdempotence: "comm:c:3",
+        sessionToken: "00000000-0000-4000-8000-000000000002",
+      },
+      fauxProvider(appels),
+    );
+    expect(resultat.ok).toBe(false);
+    if (!resultat.ok) expect(resultat.error.code).toBe("configuration");
+    expect(appels).toHaveLength(0);
   });
 });

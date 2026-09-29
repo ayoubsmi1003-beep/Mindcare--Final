@@ -17,7 +17,6 @@ export interface DemandeEnvoi {
   readonly outil: string;
   readonly charge: Readonly<Record<string, unknown>>;
   readonly cleIdempotence: string;
-  readonly entiteId: string;
   readonly sessionToken: string;
 }
 
@@ -45,11 +44,23 @@ async function executerViaRegistre(
       error: { code: "indisponible", message: "Capacité indisponible chez le provider." },
     };
   }
+  if (
+    outil.toolkit !== "whatsapp" &&
+    outil.toolkit !== "facebook" &&
+    outil.toolkit !== "instagram"
+  ) {
+    // Connexion/entrant ne passent jamais par un adaptateur d'envoi : si le
+    // registre change un jour, on refuse plutôt que d'aiguiller au hasard.
+    return {
+      ok: false,
+      error: { code: "indisponible", message: "Capacité non envoyable." },
+    };
+  }
   return appelComposio({
     outil: slug,
+    toolkit: outil.toolkit,
     charge: demande.charge,
     cleIdempotence: demande.cleIdempotence,
-    entiteId: demande.entiteId,
     sessionToken: demande.sessionToken,
   });
 }

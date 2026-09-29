@@ -109,20 +109,15 @@ export async function POST(requete: Request): Promise<NextResponse> {
         return { erreur: "regle-metier" as const, statut: 422 };
       }
 
-      const cabinets = await port.rpc<{ id: string }>("get_my_cabinet", {});
-      if (!cabinets.ok || cabinets.data[0] === undefined) {
-        await passer(q, messageId, "failed");
-        return { erreur: "indisponible" as const, statut: 503 };
-      }
-
       const cle = `comm:${conversationId}:${messageId}`;
       await port.rpc<boolean>("comm_register_delivery", { p_message_id: messageId, p_cle: cle });
 
+      // L'entité Composio vient de l'environnement serveur (appelComposio),
+      // jamais du cabinet : le cloisonnement cabinet reste en base (RLS).
       const resultat = await adaptateur.envoyer({
         outil,
         charge: { texte: message.contenu, destinataire: routage.destinataire },
         cleIdempotence: cle,
-        entiteId: cabinets.data[0].id,
         sessionToken: randomUUID(),
       });
 
