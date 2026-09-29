@@ -1,0 +1,72 @@
+/**
+ * Garde statique migration 112 — kernel Communication.
+ * Pas de base requise : vérifie le texte SQL (tables + portes + garde-fous).
+ */
+import { describe, expect, it } from "vitest";
+import { readFileSync } from "node:fs";
+
+const sql = readFileSync("supabase/migrations/112_communication_kernel.sql", "utf8");
+
+describe("migration 112 communication kernel", () => {
+  it("contient les tables canoniques", () => {
+    for (const t of [
+      "communication_conversations",
+      "communication_participants",
+      "communication_messages",
+      "message_deliveries",
+      "message_templates",
+      "communication_consents",
+      "external_connections",
+      "external_message_refs",
+      "communication_actions",
+      "human_handoffs",
+      "communication_automations",
+    ]) {
+      expect(sql, `table manquante: ${t}`).toContain(t);
+    }
+  });
+
+  it("contient les portes", () => {
+    for (const f of [
+      "comm_create_conversation",
+      "comm_append_message",
+      "comm_transition_message",
+      "comm_set_consent",
+      "comm_register_delivery",
+      "comm_request_handoff",
+    ]) {
+      expect(sql, `porte manquante: ${f}`).toContain(f);
+    }
+  });
+
+  it("ne duplique pas les patients et verrouille la RLS", () => {
+    expect(sql).toContain("REFERENCES app.patients(id)");
+    expect(sql).toContain("FORCE  ROW LEVEL SECURITY");
+    expect(sql).toContain("SECURITY DEFINER");
+    expect(sql).toContain("schema_migrations");
+  });
+});
+
+const sql113 = readFileSync("supabase/migrations/113_communication_gates.sql", "utf8");
+
+describe("migration 113 communication gates", () => {
+  it("contient les portes templates/connexions/actions/lectures", () => {
+    for (const f of [
+      "comm_upsert_template",
+      "comm_set_connection",
+      "comm_connection_status",
+      "comm_log_action",
+      "comm_confirm_action",
+      "comm_list_conversations",
+      "comm_list_messages",
+      "comm_get_consent",
+    ]) {
+      expect(sql113, `porte manquante: ${f}`).toContain(f);
+    }
+  });
+
+  it("la confirmation exige propose et pose confirmed_at", () => {
+    expect(sql113).toContain("confirmed_at");
+    expect(sql113).toContain("propose");
+  });
+});
