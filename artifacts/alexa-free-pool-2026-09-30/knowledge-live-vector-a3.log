@@ -15,3 +15,17 @@
   ROUGE | FR-03-cit | fait ABSENT du top-1 (Trouble bipolaire de type II — Critères diagnostiques)
   vert  | FR-03-ver | attendu=sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53 obtenu=sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53
   vert  | FR-03-prov | provenance complete
+  vert  | FR-04 issue | attendu=aucune obtenu=aucune
+  vert  | FR-04-prov | provenance complete
+  ROUGE | FR-05 issue | attendu=aucune obtenu=pertinent
+  vert  | FR-05-prov | provenance complete
+  vert  | FR-06 issue | attendu=aucune obtenu=aucune
+  vert  | FR-06-prov | provenance complete
+  vert  | AR-01 issue | attendu=aucune obtenu=aucune
+  vert  | AR-01-prov | provenance complete
+  vert  | AR-02 issue | attendu=aucune obtenu=aucune
+  vert  | AR-02-prov | provenance complete
+  vert  | AR-03 issue | attendu=aucune obtenu=aucune
+  vert  | AR-03-prov | provenance complete
+  vert  | DJ-01 issue | attendu=aucune obtenu=aucune
+  vert  | DJ-01-prov | provenance complete

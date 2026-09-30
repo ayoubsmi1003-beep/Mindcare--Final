@@ -52,6 +52,9 @@ const Schema = z.object({
   // deux verrous indépendants, dont un que le fichier d'environnement ne peut
   // pas ouvrir.
   VOICE_PROVIDER: z.string().optional(),
+  GEMINI_API_KEY: z.string().optional(),
+  GOOGLE_API_KEY: z.string().optional(),
+  ALEXA_LIVE_DEBUG: z.enum(["true", "false"]).default("false"),
 
   // ── Interrupteurs Jarvis ───────────────────────────────────────────────
   JARVIS_ENABLED: z.string().optional(),

@@ -36,6 +36,10 @@ import { alexa } from "@/i18n/alexa";
 import { ErreurModele, annulationDemandee, classerErreurHttp, normaliserErreurModele, type CodeErreurModele, type TentativeInference } from "./erreurs-modele";
 import { PoolModelesGratuits, type BesoinModele, type QualificationModele, type ModeleGratuit } from "./modeles-gratuits";
 import { conduireInference } from "./tentatives-inference";
+import { z } from "zod";
+import { alexaLive } from "@/i18n/alexa-live";
+import type { EvenementGemini } from "@/shared/jarvis/live";
+import { OUTILS_LIVE } from "@/server/voice/live-tools";
 
 export type BoundaryPurpose = "jarvis" | "voix-entree" | "voix-sortie" | "resume-cas" | "communication";
 
@@ -899,7 +903,7 @@ const TTS_MODEL_DEFAUT = "eleven_multilingual_v2";
 const FENETRE_VERDICT_MS = 60_000;
 let verdictCloudDev: { expire: number } | null = null;
 
-async function garderVoix(): Promise<LlmResult<never> | null> {
+async function garderVoix(forcer = false): Promise<LlmResult<never> | null> {
   const mode = env().VOICE_PROVIDER;
   if (mode !== "cloud") {
     return llmErr(
@@ -908,7 +912,7 @@ async function garderVoix(): Promise<LlmResult<never> | null> {
     );
   }
 
-  if (verdictCloudDev !== null && Date.now() < verdictCloudDev.expire) return null;
+  if (!forcer && verdictCloudDev !== null && Date.now() < verdictCloudDev.expire) return null;
   verdictCloudDev = null;
 
   // Le SECOND verrou de la voix (ADR-024), et il reste entier : `VOICE_PROVIDER`
@@ -997,6 +1001,162 @@ function nomFichierPour(mimeType: string): string | null {
   const type = mimeType.split(";")[0]?.trim().toLowerCase() ?? "";
   const extension = EXTENSION_PAR_MIME[type];
   return extension === undefined ? null : `${NOM_BASE_AUDIO}.${extension}`;
+}
+
+// Native Live audio shares this egress boundary, never a browser provider key.
+const GEMINI_LIVE_MODEL = "gemini-3.8-live";
+const MessageGemini = z.object({
+  setupComplete: z.unknown().optional(),
+  serverContent: z.object({
+    modelTurn: z.object({ parts: z.array(z.object({ inlineData: z.object({
+      data: z.string().max(1_000_000), mimeType: z.string(),
+    }).optional() })).max(64) }).optional(),
+    inputTranscription: z.unknown().optional(), turnComplete: z.boolean().optional(), interrupted: z.boolean().optional(),
+  }).optional(),
+  toolCall: z.object({ functionCalls: z.array(z.object({ id: z.string().min(1).max(200),
+    name: z.string().min(1).max(100), args: z.unknown().optional() })).max(8) }).optional(),
+  toolCallCancellation: z.object({ ids: z.array(z.string()).max(8) }).optional(),
+  goAway: z.unknown().optional(), error: z.unknown().optional(),
+});
+export interface SessionGeminiLive {
+  readonly sendAudio: (pcmBase64: string) => Promise<void>;
+  readonly updateContext: (patientId: string | null) => Promise<void>;
+  readonly close: () => void;
+}
+
+/** Structured stage metadata only: never keys, URLs, audio, transcripts or IDs. */
+export function diagnosticLive(stage: string, count?: number): void {
+  if (env().ALEXA_LIVE_DEBUG === "true") console.info(JSON.stringify({ event: "alexa.live", stage,
+    ...(count === undefined ? {} : { count }) }));
+}
+
+export async function ouvrirGeminiLive(req: {
+  readonly sessionToken: string;
+  readonly currentPatientId: string | null;
+  readonly onEvent: (e: EvenementGemini) => void;
+  readonly executeTool: (name: string, args: unknown, signal: AbortSignal) => Promise<Record<string, unknown>>;
+  readonly signal?: AbortSignal;
+}): Promise<LlmResult<SessionGeminiLive>> {
+  const e = env(), key = e.GEMINI_API_KEY || e.GOOGLE_API_KEY;
+  if (e.JARVIS_ENABLED === "false" || e.JARVIS_VOICE_ENABLED === "false" || !key || req.signal?.aborted)
+    return llmErr("configuration", alexaLive.indisponible);
+  const refusal = await garderVoix(true);
+  if (refusal !== null) { diagnosticLive("deployment-refused"); return llmErr(refusal.error.code, alexaLive.indisponible); }
+  if (typeof WebSocket === "undefined") return llmErr("configuration", alexaLive.indisponible);
+  const started = Date.now();
+  diagnosticLive("connection-requested");
+  // The URL and raw socket errors must never reach diagnostics or the browser.
+  let socket: WebSocket;
+  try { socket = new WebSocket(`wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContent?key=${encodeURIComponent(key)}`); }
+  catch { return llmErr("indisponible", alexaLive.indisponible); }
+  let closed = false, ready = false, firstInput = true, firstOutput = true, charsOut = 0;
+  let lastGate = Date.now(), gateInFlight: Promise<LlmResult<never> | null> | null = null;
+  const pending = new Map<string, AbortController>();
+  let idle: ReturnType<typeof setTimeout>;
+  let resolveReady!: (r: LlmResult<SessionGeminiLive>) => void;
+  const opened = new Promise<LlmResult<SessionGeminiLive>>((resolve) => { resolveReady = resolve; });
+  const emit = (event: EvenementGemini) => { if (!closed) req.onEvent(event); };
+  const finish = (failed: boolean) => {
+    if (closed) return;
+    if (ready) emit({ type: failed ? "error" : "closed" });
+    closed = true; clearTimeout(timeout); clearTimeout(idle);
+    req.signal?.removeEventListener("abort", cancel);
+    for (const control of pending.values()) control.abort(); pending.clear();
+    socket.close(); diagnosticLive(failed ? "connection-failed" : "session-closed");
+    if (!ready) resolveReady(llmErr("indisponible", alexaLive.indisponible));
+    void journaliser({ purpose: "voix-entree", provider: "google", model: GEMINI_LIVE_MODEL,
+      promptVersion: "alexa-live-readonly-v1", promptHash: "native-audio-synthetic-only", sessionToken: req.sessionToken,
+      charsOut, tokensIn: null, tokensOut: null, estimatedCostUsd: null,
+      outcome: failed ? "error" : "ok", latencyMs: Date.now() - started });
+  };
+  const cancel = () => finish(false);
+  const touch = () => { clearTimeout(idle); idle = setTimeout(() => finish(true), 45_000); };
+  const timeout = setTimeout(() => finish(true), 15_000);
+  req.signal?.addEventListener("abort", cancel, { once: true });
+  const guard = async () => {
+    if (closed || req.signal?.aborted || !ready) throw new Error("live-closed");
+    if (Date.now() - lastGate >= 5_000) {
+      gateInFlight ??= garderVoix(true).finally(() => { gateInFlight = null; });
+      const blocked = await gateInFlight; lastGate = Date.now();
+      if (blocked !== null) { finish(true); throw new Error("live-deployment-refused"); }
+    }
+    if (closed) throw new Error("live-closed");
+  };
+  const send = (message: unknown) => {
+    if (closed || socket.readyState !== 1 || socket.bufferedAmount > 256_000) throw new Error("live-backpressure");
+    socket.send(JSON.stringify(message)); touch();
+  };
+  const session: SessionGeminiLive = {
+    sendAudio: async (data) => {
+      await guard();
+      if (Buffer.from(data, "base64").length % 2 !== 0) throw new Error("live-pcm-format");
+      send({ realtimeInput: { audio: { data, mimeType: "audio/pcm;rate=16000" } } });
+      if (firstInput) { firstInput = false; diagnosticLive("audio-sent"); }
+    },
+    updateContext: async (id) => {
+      await guard();
+      send({ clientContent: { turns: [{ role: "user", parts: [{ text: `Current MindCare context: current_patient_id = ${id ?? "none"}. The previously open patient is no longer the current patient. Retrieve data through tools.` }] }], turnComplete: false } });
+      diagnosticLive("context-updated");
+    },
+    close: () => finish(false),
+  };
+  socket.addEventListener("open", () => {
+    try {
+      diagnosticLive("websocket-open");
+      send({ setup: { model: `models/${GEMINI_LIVE_MODEL}`, generationConfig: { responseModalities: ["AUDIO"] },
+        systemInstruction: { parts: [{ text: `${alexaLive.instruction}\nCurrent MindCare context: current_patient_id = ${req.currentPatientId ?? "none"}` }] },
+        inputAudioTranscription: {}, tools: [{ functionDeclarations: OUTILS_LIVE }] } });
+    } catch { finish(true); }
+  });
+  socket.addEventListener("error", () => finish(true));
+  socket.addEventListener("close", () => finish(!closed));
+  socket.addEventListener("message", (event) => {
+    void (async () => {
+      if (closed) return;
+      const raw: unknown = event.data;
+      const text = typeof raw === "string" ? raw : raw instanceof Blob ? await raw.text()
+        : raw instanceof ArrayBuffer ? new TextDecoder().decode(raw) : "";
+      if (text.length > 1_100_000) throw new Error("live-message-size");
+      const m = MessageGemini.parse(JSON.parse(text) as unknown);
+      if (m.error !== undefined || m.goAway !== undefined) { finish(true); return; }
+      if (m.setupComplete !== undefined && !ready) {
+        ready = true; clearTimeout(timeout); touch(); diagnosticLive("session-ready"); resolveReady(llmOk(session));
+      }
+      const c = m.serverContent;
+      if (c?.interrupted) { emit({ type: "interrupted" }); diagnosticLive("interrupted"); }
+      if (c?.inputTranscription !== undefined) emit({ type: "thinking" });
+      for (const part of c?.modelTurn?.parts ?? []) {
+        if (!part.inlineData) continue;
+        if (!/^audio\/pcm(?:;rate=24000)?$/.test(part.inlineData.mimeType)) throw new Error("live-audio-format");
+        const bytes = Buffer.from(part.inlineData.data, "base64");
+        if (!bytes.length || bytes.length % 2) throw new Error("live-audio-format");
+        if (firstOutput) { firstOutput = false; diagnosticLive("audio-received", bytes.length); }
+        emit({ type: "audio", data: part.inlineData.data, sampleRate: 24000 });
+      }
+      if (c?.turnComplete) { emit({ type: "turn_complete" }); diagnosticLive("turn-complete"); }
+      for (const id of m.toolCallCancellation?.ids ?? []) { pending.get(id)?.abort(); pending.delete(id); }
+      for (const call of m.toolCall?.functionCalls ?? []) {
+        if (!ready || pending.has(call.id)) continue;
+        const control = new AbortController(); pending.set(call.id, control);
+        const timer = setTimeout(() => control.abort(), 12_000);
+        emit({ type: "thinking" }); diagnosticLive("tool-requested");
+        try {
+          const result = await Promise.race([
+            req.executeTool(call.name, call.args ?? {}, control.signal),
+            new Promise<Record<string, unknown>>((resolve) => control.signal.addEventListener("abort", () => resolve({ status: "unavailable" }), { once: true })),
+          ]);
+          if (closed || control.signal.aborted) continue;
+          await guard();
+          const serialized = JSON.stringify(result); charsOut += serialized.length;
+          if (Buffer.byteLength(serialized) > 24_000) throw new Error("live-tool-size");
+          send({ toolResponse: { functionResponses: [{ id: call.id, name: call.name, response: { result } }] } });
+          diagnosticLive("tool-result-returned");
+        } finally { clearTimeout(timer); pending.delete(call.id); }
+      }
+    })().catch(() => finish(true));
+  });
+  if (req.signal?.aborted) finish(false);
+  return opened;
 }
 
 export const groqSttProvider: SttProvider = {
