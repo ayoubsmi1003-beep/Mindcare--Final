@@ -76,6 +76,16 @@ describe("résolution par motifs", () => {
     );
   });
 
+  it("préfère le motif le plus long (preuve live : réponse DM vs image)", () => {
+    // `instagram_send` matche les deux ; seul le motif long tranche.
+    expect(
+      resoudreSlug(
+        ["instagram_send_text", "instagram_send"],
+        ["INSTAGRAM_SEND_IMAGE", "INSTAGRAM_SEND_TEXT_MESSAGE"],
+      ),
+    ).toBe("INSTAGRAM_SEND_TEXT_MESSAGE");
+  });
+
   it("rend null sans match (capacité indisponible, pas d'invention)", () => {
     expect(resoudreSlug(["instagram_publish"], ["INSTAGRAM_SEND_MESSAGE"])).toBeNull();
     expect(resoudreSlug([], ["X"])).toBeNull();

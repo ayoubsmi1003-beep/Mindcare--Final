@@ -195,7 +195,7 @@ export const OUTILS_COMMUNICATION: readonly OutilCommunication[] = [
     provider: "composio",
     actionComposio: "INSTAGRAM_SEND_MESSAGE",
     toolkit: "instagram",
-    motifs: ["instagram_send", "ig_send", "instagram_reply", "send_dm"],
+    motifs: ["instagram_send_text", "instagram_send", "ig_send", "instagram_reply", "send_dm"],
     canal: "instagram",
     capacite: "Réponse à un DM entrant, dans la fenêtre Meta.",
     portee: "Un message, une conversation Instagram, charge C4 uniquement.",
@@ -262,21 +262,31 @@ export function trouverOutil(nom: string): OutilCommunication | null {
 
 /**
  * Matche des motifs (insensibles à la casse) contre des slugs vivants.
- * Premier motif gagnant. Pur, testé. Null = capacité indisponible, jamais
- * un slug inventé pour « essayer quand même ».
+ *
+ * Le motif LE PLUS LONG gagne : un préfixe court (`instagram_send`) matche
+ * aussi bien `INSTAGRAM_SEND_IMAGE` que `INSTAGRAM_SEND_TEXT_MESSAGE`, et le
+ * premier venu n'est pas forcément le bon (prouvé en live : la réponse DM
+ * résolvait vers l'envoi d'image). À égalité, le premier motif l'emporte.
+ * Null = capacité indisponible, jamais un slug inventé pour « essayer ».
  */
 export function resoudreSlug(
   motifs: readonly string[],
   slugs: readonly string[],
 ): string | null {
+  let meilleur: { slug: string; longueur: number } | null = null;
   for (const motif of motifs) {
     const m = motif.toLowerCase();
     if (m === "") continue;
     for (const slug of slugs) {
-      if (slug.toLowerCase().includes(m)) return slug;
+      if (slug.toLowerCase().includes(m)) {
+        if (meilleur === null || m.length > meilleur.longueur) {
+          meilleur = { slug, longueur: m.length };
+        }
+        break;
+      }
     }
   }
-  return null;
+  return meilleur === null ? null : meilleur.slug;
 }
 
 /** Cache de découverte : 5 minutes par toolkit (slugs, pas de données). */
