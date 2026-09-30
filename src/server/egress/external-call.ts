@@ -644,7 +644,7 @@ async function qualifierCandidats(timeoutMs: number, maxModels = 3, signal?: Abo
   qualificationEnCours = (async () => {
     const echeance = Date.now() + timeoutMs;
     const besoin: BesoinModele = { json: true, streaming: true, outils: false, tokens: 8000, tache: "intentions" };
-    const candidats = [...poolOpenRouter.aQualifier(besoin)].sort((a, b) => Number(b.structuredOutput) - Number(a.structuredOutput));
+    const candidats = [...poolOpenRouter.aQualifier(besoin)].sort((a, b) => a.failureCount - b.failureCount || Number(b.structuredOutput) - Number(a.structuredOutput));
     let qualifies = poolOpenRouter.candidats(besoin).length;
     for (const m of candidats.slice(0, 6)) {
       if (qualifies >= maxModels || signal?.aborted || Date.now() >= echeance || poolOpenRouter.statutCompte().code !== null) break;
@@ -1838,101 +1838,8 @@ function estReponsesDecisions(value: unknown): value is Record<string, ReponseDe
 }
 
 export async function decisions(
-  req: RequeteDecisions,
+  _req: RequeteDecisions,
 ): Promise<LlmResult<Readonly<Record<string, ReponseDecision>>>> {
-  const model = req.modele ?? env().JEV_MODEL ?? JEV_MODEL_DEFAUT;
-  const timeoutMs = req.timeoutMs ?? TIMEOUT_MS_DEFAUT;
-  const depart = Date.now();
-
-  const journaliserDecisions = (
-    outcome: "ok" | "error" | "timeout",
-    tokensIn: number | null,
-    tokensOut: number | null,
-    cout: number | null,
-  ): Promise<void> =>
-    journaliser({
-      purpose: req.purpose,
-      provider: "openrouter-decisions",
-      model,
-      promptVersion: req.promptVersion,
-      promptHash: req.promptHash,
-      sessionToken: req.sessionToken,
-      charsOut: null,
-      tokensIn,
-      tokensOut,
-      estimatedCostUsd: cout,
-      outcome,
-      latencyMs: Date.now() - depart,
-    });
-
-  let derniereErreur: unknown;
-  for (let tentative = 0; tentative < 2; tentative++) {
-    const controller = new AbortController();
-    const minuteur = setTimeout(() => controller.abort(), timeoutMs);
-    const relais = (): void => controller.abort();
-    req.signal?.addEventListener("abort", relais, { once: true });
-    try {
-      const clef = env().OPENROUTER_API_KEY;
-      if (clef === undefined || clef === "") {
-        throw new Error("configuration: OPENROUTER_API_KEY absente");
-      }
-      const reponse = await fetch("https://openrouter.ai/api/alpha/decisions", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${clef}`,
-          "Content-Type": "application/json",
-          "HTTP-Referer": "http://localhost",
-          "X-Title": "MindCare",
-        },
-        body: JSON.stringify({ model, state: req.state, questions: req.questions }),
-        signal: controller.signal,
-      });
-      if (!reponse.ok) {
-        const transitoire = reponse.status >= 500 || reponse.status === 429;
-        throw new Error(transitoire ? `transitoire: HTTP ${reponse.status}` : `permanent: HTTP ${reponse.status}`);
-      }
-      const corps: unknown = await reponse.json();
-      const enveloppe = corps as {
-        readonly answers?: unknown;
-        readonly usage?: { readonly input_tokens?: number; readonly output_tokens?: number; readonly cost?: number };
-      };
-      if (!estReponsesDecisions(enveloppe.answers)) {
-        throw new Error("permanent: réponse Decisions sans answers");
-      }
-      const tokensIn = enveloppe.usage?.input_tokens ?? null;
-      const tokensOut = enveloppe.usage?.output_tokens ?? null;
-      const cout =
-        typeof enveloppe.usage?.cost === "number"
-          ? enveloppe.usage.cost
-          : tokensIn === null || tokensOut === null
-            ? null
-            : estimateCostUsd(model, tokensIn, tokensOut);
-      await journaliserDecisions("ok", tokensIn, tokensOut, cout);
-      return llmOk(enveloppe.answers);
-    } catch (cause) {
-      // Même normalisation que le fournisseur chat : un abandon (timeout
-      // local ou `signal` aval) devient `transitoire: timeout` — rejouable
-      // une fois, puis nommé `timeout` à l'audit. Sans cela, une
-      // `DOMException: AbortError` tomberait en `indisponible` générique.
-      if (controller.signal.aborted) {
-        derniereErreur = new Error("transitoire: timeout");
-      } else {
-        derniereErreur = cause;
-      }
-      if (tentative === 0 && estTransitoire(derniereErreur)) continue; // une seule relance
-      break;
-    } finally {
-      clearTimeout(minuteur);
-      req.signal?.removeEventListener("abort", relais);
-    }
-  }
-
-  const messageErreur = derniereErreur instanceof Error ? derniereErreur.message : "";
-  const estTimeout = messageErreur.includes("timeout") || messageErreur.includes("abandon");
-  const estConfiguration = messageErreur.startsWith("configuration:");
-  await journaliserDecisions(estTimeout ? "timeout" : "error", null, null, null);
-  if (estConfiguration) {
-    return llmErr("configuration", "Assistant indisponible.");
-  }
-  return llmErr("indisponible", "Assistant indisponible.");
+  // No qualified free variant of the alpha Decisions contract: the existing JSON classifier handles routing.
+  return llmErr("configuration", alexa.configuration);
 }

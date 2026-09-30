@@ -677,7 +677,7 @@ export async function executerTour(
     let intentionRetenu: NomIntention | null = null;
     let localCarte = reinitialiserCarte();
     for (const lecture of lectures) {
-      if (signal.aborted) return ok(bilanAveu(alexa.interrompu, runId, appels, [], null));
+      if (signal.aborted) return ok({ ...bilanAveu(alexa.interrompu, runId, appels, []), interrompu: true });
       const nom = COMPATIBLE[lecture.name][0];
       const capacite = nom === undefined ? null : deps.registre(nom);
       if (nom === undefined || capacite === null) return err({ code: "indisponible", message: alexa.lectureIndisponible });
@@ -693,7 +693,7 @@ export async function executerTour(
       rappels.onCapacite?.(nom);
       const { resultat, trace } = await executerCapacite(nom, args, { carte: localCarte, aujourdHui: jour }, signal, deps.registre);
       appels.push(trace);
-      if (signal.aborted || cibleValide() !== cible || carteCourante() !== localCarte) return ok(bilanAveu(alexa.contexteChange, runId, appels, [], null));
+      if (signal.aborted || cibleValide() !== cible || carteCourante() !== localCarte) return err({ code: "conflit", message: alexa.contexteChange });
       if (!resultat.ok || resultat.donnees === null) return err({ code: resultat.motifEchec === "interdit" ? "interdit" : "indisponible", message: resultat.motifEchec === "interdit" ? fr.erreurs.interdit : alexa.lectureIndisponible });
       textes.push(formaterLectureLocale(lecture.name, resultat.donnees)); intentionRetenu = lecture.name;
       if (estPatientSpecifique(capacite) && cible !== null) ancreCandidate = { id: cible.id, libelle: cible.libelle };

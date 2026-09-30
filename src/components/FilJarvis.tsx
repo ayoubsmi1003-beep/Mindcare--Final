@@ -118,7 +118,7 @@ export function FilJarvis({
 
         // ── Bulle Jarvis ──
         const enLecture = lectureId === tour.id;
-        const lisible = !tour.interrompu && tour.statut !== "refuse" && tour.texte.trim().length > 0 && tour.texte.trim().length <= 2000;
+        const lisible = !tour.interrompu && !etat.erreur && tour.texte.trim().length > 0 && tour.texte.trim().length <= 2000;
         return (
           <div key={tour.id} className="flex flex-col gap-1">
             {tour.registre === "connaissance-generale" && (

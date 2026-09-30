@@ -1,0 +1,174 @@
+{
+  "schema": 1,
+  "platform": "win32",
+  "architecture": "x64",
+  "python": {
+    "version": "3.12.14",
+    "origin": "Codex bundled CPython runtime; PSF license retained; independently qualify distribution",
+    "exe": "372c2eae555b344520bf147be0096e009069aeca4e7f78d6aecea6d53158056a",
+    "dll": "c1ce6d603041759061139f482c4b90c4ac9db676e30abf52fda66a794aab1bd0"
+  },
+  "wheels": [
+    {
+      "name": "pywhispercpp",
+      "version": "1.5.1",
+      "url": "https://files.pythonhosted.org/packages/5c/cf/fd94fe40ad555906528fcc93b571674cab79a40251d20694aaa8b4a17ecb/pywhispercpp-1.5.1-cp312-cp312-win_amd64.whl",
+      "sha256": "73a7233a462926ef86aa8d943e1071c2a087a21f78feff16c629385385ab475a",
+      "license": "MIT"
+    },
+    {
+      "name": "piper-tts",
+      "version": "1.8.0",
+      "url": "https://files.pythonhosted.org/packages/12/9c/c736d1961cf9ce0655278731b9430df41892ca2ded7b09dabcb340612158/piper_tts-1.8.0-cp39-abi3-win_amd64.whl",
+      "sha256": "5da9bfdb05dfe15da3536859d422e605483ffa6d2b3ec2c5b9593bae6b5aa6a4",
+      "license": "GPL-3.0-or-later"
+    },
+    {
+      "name": "onnxruntime",
+      "version": "1.30.0",
+      "url": "https://files.pythonhosted.org/packages/a6/13/0f1699f6de549c9324bc9112a2a85b14c517904cd11b562a654643b755a1/onnxruntime-1.30.0-cp312-cp312-win_amd64.whl",
+      "sha256": "f3501472571f1b1eee50e017851e7929f5ea37312d2d8c2494a19e8fc58b4a38",
+      "license": "MIT License"
+    },
+    {
+      "name": "pathvalidate",
+      "version": "3.3.1",
+      "url": "https://files.pythonhosted.org/packages/9a/70/875f4a23bfc4731703a5835487d0d2fb999031bd415e7d17c0ae615c18b7/pathvalidate-3.3.1-py3-none-any.whl",
+      "sha256": "5263baab691f8e1af96092fa5137ee17df5bdfbd6cff1fcac4d6ef4bc2e1735f",
+      "license": "MIT License"
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.3",
+      "url": "https://files.pythonhosted.org/packages/3c/a1/accf6d4f0c80c5d9ba9735d6b1550e444180599f34dec69ca01360f717ad/numpy-2.5.3-cp312-cp312-win_amd64.whl",
+      "sha256": "0a59a421a32580a009e8a1751345bf829631b990dc1794b80514ab722b435def",
+      "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0"
+    },
+    {
+      "name": "protobuf",
+      "version": "7.36.2",
+      "url": "https://files.pythonhosted.org/packages/8a/55/b77bda4e5e5f5971fb51b07663694690e9afdb9402136c16a522bd621cad/protobuf-7.36.2-cp310-abi3-win_amd64.whl",
+      "sha256": "a300819d441e078a5608c0d3c709796bb548136058fda017ae51d425b44fd353",
+      "license": "3-Clause BSD License"
+    },
+    {
+      "name": "flatbuffers",
+      "version": "25.12.19",
+      "url": "https://files.pythonhosted.org/packages/e8/2d/d2a548598be01649e2d46231d151a6c56d10b964d94043a335ae56ea2d92/flatbuffers-25.12.19-py2.py3-none-any.whl",
+      "sha256": "7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4",
+      "license": "Apache 2.0"
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "url": "https://files.pythonhosted.org/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl",
+      "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+      "license": "Apache-2.0 OR BSD-2-Clause"
+    },
+    {
+      "name": "platformdirs",
+      "version": "4.12.1",
+      "url": "https://files.pythonhosted.org/packages/40/31/1521c38d175108ac395941adbcb9f11e085340bed81ad166e8ad8c21c17b/platformdirs-4.12.1-py3-none-any.whl",
+      "sha256": "7f251621befae78b2cb74616f9fc99d3fa3db0afba5035987731f8dcd430337d",
+      "license": "MIT"
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2",
+      "url": "https://files.pythonhosted.org/packages/a0/f4/c67b0b3f1b9245e8d266f0f112c500d50e5b4e83cb6f3b71b6528104182a/requests-2.34.2-py3-none-any.whl",
+      "sha256": "2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.1",
+      "url": "https://files.pythonhosted.org/packages/9d/7a/4c6c298171e6b3e745633180ff59350fc0ca0db1ffd28df1e369e0579f71/charset_normalizer-3.5.1-cp312-cp312-win_amd64.whl",
+      "sha256": "3617ac3cfd8b9888f145ad89dd6e692285834b0201c6074a5eeaad3fd4d668c2",
+      "license": "MIT"
+    },
+    {
+      "name": "idna",
+      "version": "3.20",
+      "url": "https://files.pythonhosted.org/packages/58/a2/bb081bab032533a855d44de1d56f8e8426114ff1ba5d1f07a438a0a654f8/idna-3.20-py3-none-any.whl",
+      "sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "name": "urllib3",
+      "version": "2.8.0",
+      "url": "https://files.pythonhosted.org/packages/92/9d/c4e665119135114480843e7ab388fa94d8480650450e6f8e26b70d323a4c/urllib3-2.8.0-py3-none-any.whl",
+      "sha256": "0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3",
+      "license": "MIT"
+    },
+    {
+      "name": "certifi",
+      "version": "2026.7.22",
+      "url": "https://files.pythonhosted.org/packages/0b/a7/71ac2cff56fec219ed242bb11b8efb69fcc4bec75db06fb7bfe35de520e6/certifi-2026.7.22-py3-none-any.whl",
+      "sha256": "62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775",
+      "license": "MPL-2.0"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.70.1",
+      "url": "https://files.pythonhosted.org/packages/a7/03/921a3d3c75785aca9ebfbfcabfbc3a1be12e2ab5265deb026d55a5a3f83e/tqdm-4.70.1-py3-none-any.whl",
+      "sha256": "c293e525e6fef9c20e8728fd4612df02a0aa31bb5fe91ecd93e123b1b7bffa73",
+      "license": "MPL-2.0 AND MIT"
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6",
+      "url": "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl",
+      "sha256": "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6",
+      "license": null
+    }
+  ],
+  "assets": [
+    {
+      "repository": "ggerganov/whisper.cpp",
+      "revision": "5359861c739e955e79d9a303bcbc70fb988958b1",
+      "path": "ggml-base.bin",
+      "sha256": "60ed5bc3dd14eea856493d334349b405782ddcaf0028d4b5df4088345fba2efe",
+      "bytes": 147951465
+    },
+    {
+      "repository": "rhasspy/piper-voices",
+      "revision": "c10ece1aade47bb51c153c893d14e5bf8e5b7117",
+      "path": "fr/fr_FR/siwis/medium/fr_FR-siwis-medium.onnx",
+      "sha256": "641d1ab097da2b81128c076810edb052b385decc8be3381814802a64a73baf99",
+      "bytes": 63201294
+    },
+    {
+      "repository": "rhasspy/piper-voices",
+      "revision": "c10ece1aade47bb51c153c893d14e5bf8e5b7117",
+      "path": "ar/ar_JO/kareem/low/ar_JO-kareem-low.onnx",
+      "sha256": "2887e9d68b125965c747e1371fa21e1cef19555ea98d0795a0d5d71188b13890",
+      "bytes": 63201294
+    },
+    {
+      "repository": "rhasspy/piper-voices",
+      "revision": "c10ece1aade47bb51c153c893d14e5bf8e5b7117",
+      "path": "fr/fr_FR/siwis/medium/fr_FR-siwis-medium.onnx.json",
+      "blob": "ecb3b00cc2fc9e72ba9c5dcc5edeb717a05fa9aa",
+      "sha256": "39479916c2db192b5ac9764daddd0c744d83e023ad890c6976c0633ae4df8959",
+      "bytes": 4875
+    },
+    {
+      "repository": "rhasspy/piper-voices",
+      "revision": "c10ece1aade47bb51c153c893d14e5bf8e5b7117",
+      "path": "ar/ar_JO/kareem/low/ar_JO-kareem-low.onnx.json",
+      "blob": "a7bc6151531951e493369c83039be831c313595e",
+      "sha256": "da328e52896826135508f797c1c77b45b35117e967c71befc377d654f100f328",
+      "bytes": 5022
+    }
+  ],
+  "licenses": {
+    "whisper": "MIT",
+    "binding": "MIT",
+    "piper": "GPL-3.0-or-later",
+    "frVoice": "https://huggingface.co/rhasspy/piper-voices/blob/c10ece1aade47bb51c153c893d14e5bf8e5b7117/fr/fr_FR/siwis/medium/MODEL_CARD",
+    "arVoice": "https://huggingface.co/rhasspy/piper-voices/blob/c10ece1aade47bb51c153c893d14e5bf8e5b7117/ar/ar_JO/kareem/low/MODEL_CARD",
+    "piperSource": "https://github.com/OHF-Voice/piper1-gpl/tree/v1.8.0",
+    "bindingSource": "https://github.com/absadiki/pywhispercpp/tree/v1.5.1",
+    "redistribution": "Retain all upstream LICENSE/COPYING/NOTICE files and provide corresponding source for GPL components before external distribution."
+  }
+}

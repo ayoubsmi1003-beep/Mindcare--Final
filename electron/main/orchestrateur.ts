@@ -431,6 +431,11 @@ function spawnBackend(serveurDir: string, fichierEnv: string, journalDir: string
   (env as Record<string, string>)["HOSTNAME"] = "127.0.0.1";
   (env as Record<string, string>)["NODE_ENV"] = "production";
   (env as Record<string, string>)["MINDCARE_ENV_FILE"] = fichierEnv;
+  const voixDir = isStandalone ? path.join(serveurDir, "..", "voix") : path.join(serveurDir, "resources", "voix");
+  env["ALEXA_VOICE_ASSETS"] ??= path.join(voixDir, "assets");
+  env["ALEXA_VOICE_PYTHON"] ??= path.join(voixDir, "python", "python.exe");
+  env["ALEXA_VOICE_PACKAGES"] ??= path.join(voixDir, "packages");
+  env["ALEXA_VOICE_WORKER_DIR"] ??= path.join(serveurDir, "scripts");
   // Propager MINDCARE_DATABASE_URL si MINDCARE_ENV_FILE contient déjà la variable
   // (le serveur Next ne lit pas MINDCARE_ENV_FILE lui-même — voir src/server/db/pool.ts)
   try {

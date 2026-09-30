@@ -54,6 +54,7 @@ const CIBLE = path.join(RACINE, "resources", "serveur");
  * lieu de casser l'import).
  */
 const SCRIPTS_LIVRES = [
+  "native-voice-worker.py",
   "garde-origine.mjs",
   "verifier-base.mjs",
   "sauvegarde.mjs",

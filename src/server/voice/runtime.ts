@@ -2,7 +2,7 @@ import { spawn, type ChildProcessWithoutNullStreams } from "node:child_process";
 import { createHash } from "node:crypto";
 import { createReadStream } from "node:fs";
 import { access, readFile } from "node:fs/promises";
-import { join, isAbsolute, resolve, sep } from "node:path";
+import { join, isAbsolute, resolve, sep, dirname } from "node:path";
 import { env } from "@/server/env";
 import { CanalVoixNative, type EntreeVoix, type ReponseVoix } from "./protocole";
 const PINS = [{"file":"ggml-base.bin","sha256":"60ed5bc3dd14eea856493d334349b405782ddcaf0028d4b5df4088345fba2efe"},{"file":"fr_FR-siwis-medium.onnx","sha256":"641d1ab097da2b81128c076810edb052b385decc8be3381814802a64a73baf99"},{"file":"ar_JO-kareem-low.onnx","sha256":"2887e9d68b125965c747e1371fa21e1cef19555ea98d0795a0d5d71188b13890"},{"file":"fr_FR-siwis-medium.onnx.json","sha256":"39479916c2db192b5ac9764daddd0c744d83e023ad890c6976c0633ae4df8959"},{"file":"ar_JO-kareem-low.onnx.json","sha256":"da328e52896826135508f797c1c77b45b35117e967c71befc377d654f100f328"}] as const;
@@ -11,7 +11,7 @@ let preparation: Promise<void> | null = null;
 let idle: ReturnType<typeof setTimeout> | undefined;
 let generation = 0;
 function configurationVoix() {
- const e = env(), root = join(process.cwd(), "resources", "voix");
+ const e = env(), root = e.ALEXA_VOICE_ASSETS ? dirname(e.ALEXA_VOICE_ASSETS) : join(process.cwd(), "resources", "voix");
  return { active: e.ALEXA_LOCAL_VOICE === "true", assets: e.ALEXA_VOICE_ASSETS ?? join(root, "assets"),
   python: e.ALEXA_VOICE_PYTHON ?? join(root, "python", "python.exe"), packages: e.ALEXA_VOICE_PACKAGES ?? join(root, "packages"),
   helper: join(e.ALEXA_VOICE_WORKER_DIR ?? join(process.cwd(), "scripts"), "native-voice-worker.py"), root };
@@ -34,7 +34,7 @@ async function verifierAssets(): Promise<void> {
  const inventory = JSON.parse(await readFile(inventoryPath, "utf8")) as { path: string; sha256: string }[];
  for (const pin of inventory) {
   if (!pin.path.startsWith("python/") && !pin.path.startsWith("packages/")) continue;
-  const base = pin.path.startsWith("packages/") ? config.packages : join(config.python, "..");
+  const base = pin.path.startsWith("packages/") ? config.packages : dirname(config.python);
   const path = resolve(base, pin.path.substring(pin.path.indexOf("/") + 1));
   if (!path.startsWith(resolve(base) + sep) || await empreinte(path) !== pin.sha256) throw new Error("configuration: packages");
  }

@@ -62,6 +62,8 @@ asar: true
 # `node server.js` pour le backend, `psql -f` pour le SQL, `initdb.exe` /
 # `pg_ctl.exe` pour le cluster.
 extraResources:
+  - from: resources/voix
+    to: voix
   # `resources/serveur` est assemblé par `scripts/preparer-paquet.mjs` : la
   # sortie autonome de Next, `public/`, `supabase/{bootstrap,migrations}` et
   # les trois seuls scripts livrés. Une racine unique, parce que le serveur,

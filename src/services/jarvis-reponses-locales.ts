@@ -14,9 +14,9 @@ export function formaterLectureLocale(intent: NomIntention, valeur: ValeurSafe, 
   if ("totalEncaisseDzd" in valeur) return [a.finance(valeur.totalEncaisseDzd, valeur.totalEnAttenteDzd), ...(valeur.complet ? [] : [a.lectureTronquee])].join("\n");
   if ("enAttente" in valeur) return a.finance(0, valeur.totalDzd);
   if ("evenements" in valeur) return [
-    ...valeur.evenements.map((e) => a.evenement(e.le, e.genre)), ...(valeur.tronque ? [a.lectureTronquee] : []),
+    ...valeur.evenements.map((e) => a.evenement(e.le, e.genre)), ...(valeur.provenance.some((p) => p.tronque) ? [a.lectureTronquee] : []),
   ].join("\n") || a.inconnu;
-  if ("documents" in valeur) return valeur.documents.map((d) => a.document(d.type, d.emisLe)).join("\n") || a.inconnu;
+  if ("documents" in valeur && Array.isArray(valeur.documents)) return valeur.documents.map((d: { type: string; emisLe: string }) => a.document(d.type, d.emisLe)).join("\n") || a.inconnu;
   if ("seances" in valeur && Array.isArray(valeur.seances)) {
     const seance: unknown = valeur.seances[rang];
     if (typeof seance !== "object" || seance === null || !("le" in seance) || typeof seance.le !== "string") return a.aucuneSeance;
@@ -30,7 +30,7 @@ export function formaterLectureLocale(intent: NomIntention, valeur: ValeurSafe, 
     if ("tronque" in valeur && valeur.tronque) lignes.push(a.lectureTronquee);
     return lignes.join("\n");
   }
-  if ("clinique" in valeur && "traitements" in valeur) {
+  if ("ref" in valeur && "clinique" in valeur && "traitements" in valeur) {
     const diagnostics = valeur.clinique?.diagnostics.map((d) => d.libelle) ?? [];
     const traitements = valeur.traitements?.lignes.map((l) => [l.designation, l.dose].filter(Boolean).join(" — ")) ?? [];
     return [a.dossier, a.diagnostics, ...diagnostics, a.traitement, ...traitements,
