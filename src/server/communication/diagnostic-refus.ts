@@ -33,7 +33,6 @@ export type FamilleRefusProvider =
   | "cible"
   | "transitoire"
   | "inconnu";
-
 /**
  * Classe un message d'erreur provider SANS le transmettre à l'écran ni au
  * journal : seuls le code, le sous-code et la famille en sortent. Le corps
@@ -89,7 +88,7 @@ export function classerRefusProvider(
 export function messageRefusProvider(famille: FamilleRefusProvider): string {
   switch (famille) {
     case "fenetre":
-      return "Le canal impose une fenêtre de réponse de 24 heures. Le dernier message du patient est trop ancien pour une réponse libre.";
+      return "Le canal refuse l'envoi car aucun message récent de ce contact n'appartient à ce compte connecté. Si la connexion vient d'être refaite, le contact doit écrire un nouveau message : la fenêtre de 24 heures est comptée par compte, pas par numéro.";
     case "autorisation":
       return "Le canal refuse l'envoi : l'application Meta utilisée n'est pas autorisée en mode Live pour cette opération. Un administrateur doit approuver l'application et la verificación de l'entreprise sur Meta.";
     case "cible":

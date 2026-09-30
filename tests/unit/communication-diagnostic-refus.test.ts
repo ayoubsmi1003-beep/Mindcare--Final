@@ -57,6 +57,14 @@ describe("messageRefusProvider", () => {
     expect(messageRefusProvider("fenetre")).not.toBe(messageRefusProvider("autorisation"));
   });
 
+  it("explique que la fenêtre se compte PAR COMPTE, pas par numéro", () => {
+    // Preuve live 2026-09-30 : la connexion Instagram a été refaite à 22:56,
+    // le message du contact datait de 22:15 — donc envoyé à l'ANCIEN compte.
+    // Le nouveau compte n'a hérité d'aucune fenêtre, et Meta répond
+    // « outside of allowed window » alors que le message a moins de 2 h.
+    expect(messageRefusProvider("fenetre")).toContain("par compte");
+  });
+
   it("ne prétend jamais qu'un envoi a eu lieu", () => {
     for (const famille of ["fenetre", "autorisation", "cible", "transitoire", "inconnu"] as const) {
       // Un refus peut CONTRADIRE l'envoi (« aucun message n'a été envoyé »),
