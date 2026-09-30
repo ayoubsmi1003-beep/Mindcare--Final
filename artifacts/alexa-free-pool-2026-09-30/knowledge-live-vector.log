@@ -1,0 +1,148 @@
+  ROUGE | parite-tokens | pin evente : parite-tokens : tête=0,520,1517,2256,836,12010,2 attendu=0,59528,437,21,3864,18709,8,21
+  vert  | coherence-stack | ancres catalogue retrouvees | hybride (BGE-M3 local, coherence prouvee, parite EVENTEE-pin-a-revoir)
+  vert  | mode | hybride (BGE-M3 local, coherence prouvee, parite EVENTEE-pin-a-revoir) | base=mindcare | cas=46 | calib=courant
+  ROUGE | FR-01 issue | attendu=aucune obtenu=pertinent
+  vert  | FR-01-prov | provenance complete
+  vert  | FR-02 issue | attendu=pertinent obtenu=pertinent
+  vert  | FR-02-gold | e214a52c-ca50-5e5b-be02-ce29faaf0d91@Catalogue
+  vert  | FR-02-top1 | e214a52c-ca50-5e5b-be02-ce29faaf0d91
+  vert  | FR-02-cit | fait present au top-1
+  vert  | FR-02-ver | attendu=2026-09-15 obtenu=2026-09-15
+  vert  | FR-02-prov | provenance complete
+  vert  | FR-03 issue | attendu=pertinent obtenu=pertinent
+  ROUGE | FR-03-gold | absent du top-5 (top1=9ed1c042-fd2b-5599-a470-8c93b0566739@Section II — Critères diagnostiques et codes › Troubles bipolaires et apparentés › Trouble bipolaire de type I › Critères diagnostiques)
+  vert  | FR-03-top1 | 9ed1c042-fd2b-5599-a470-8c93b0566739
+  ROUGE | FR-03-cit | fait ABSENT du top-1 (Trouble bipolaire de type II — Critères diagnostiques)
+  vert  | FR-03-ver | attendu=sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53 obtenu=sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53
+  vert  | FR-03-prov | provenance complete
+  ROUGE | FR-04 issue | attendu=aucune obtenu=pertinent
+  vert  | FR-04-prov | provenance complete
+  ROUGE | FR-05 issue | attendu=aucune obtenu=pertinent
+  vert  | FR-05-prov | provenance complete
+  ROUGE | FR-06 issue | attendu=aucune obtenu=pertinent
+  vert  | FR-06-prov | provenance complete
+  ROUGE | AR-01 issue | attendu=aucune obtenu=faible
+  vert  | AR-01-prov | provenance complete
+  ROUGE | AR-02 issue | attendu=aucune obtenu=faible
+  vert  | AR-02-prov | provenance complete
+  ROUGE | AR-03 issue | attendu=aucune obtenu=faible
+  vert  | AR-03-prov | provenance complete
+  ROUGE | DJ-01 issue | attendu=aucune obtenu=faible
+  vert  | DJ-01-prov | provenance complete
+  ROUGE | DJ-02 issue | attendu=faible obtenu=pertinent
+  vert  | DJ-02-prov | provenance complete
+  ROUGE | DJ-03 issue | attendu=aucune obtenu=pertinent
+  vert  | DJ-03-prov | provenance complete
+  ROUGE | XL-01 issue | attendu=aucune obtenu=pertinent
+  vert  | XL-01-prov | provenance complete
+  ROUGE | XL-02 issue | attendu=aucune obtenu=faible
+  vert  | XL-02-prov | provenance complete
+  ROUGE | DT-01 issue | attendu=aucune obtenu=pertinent
+  vert  | DT-01-prov | provenance complete
+  ROUGE | DT-02 issue | attendu=aucune obtenu=faible
+  vert  | DT-02-prov | provenance complete
+  ROUGE | NA-01 issue | attendu=aucune obtenu=faible
+  vert  | NA-01-prov | provenance complete
+  ROUGE | NA-02 issue | attendu=aucune obtenu=pertinent
+  vert  | NA-02-prov | provenance complete
+  ROUGE | NA-03 issue | attendu=aucune obtenu=faible
+  vert  | NA-03-prov | provenance complete
+  vert  | NA-04 issue | attendu=aucune obtenu=aucune
+  vert  | NA-04-prov | provenance complete
+  ROUGE | GV-01 issue | attendu=aucune obtenu=pertinent
+  vert  | GV-01-prov | provenance complete
+  ROUGE | GV-02 issue | attendu=aucune obtenu=pertinent
+  vert  | GV-02-prov | provenance complete
+  ROUGE | GV-03 issue | attendu=aucune obtenu=faible
+  vert  | GV-03-prov | provenance complete
+  vert  | GV-04 issue | attendu=pertinent obtenu=pertinent
+  ROUGE | GV-04-gold | absent du top-5 (top1=9c2fd184-297e-504e-8c95-ffd06896e420@Part 2: Drug treatment of special patient groups › Chapter 7: Pregnancy and breastfeeding › Oxazepam – 0.28–1% › Sedation, lethargy, weight loss)
+  ROUGE | GV-04-top1 | inattendu=9c2fd184-297e-504e-8c95-ffd06896e420 acceptable,gold
+  ROUGE | GV-04-cit | fait ABSENT du top-1 (Trouble de l’usage du cannabis)
+  vert  | GV-04-ver | attendu=sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53 obtenu=sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53
+  vert  | GV-04-prov | provenance complete
+  ROUGE | IJ-01 issue | attendu=aucune obtenu=pertinent
+  vert  | IJ-01-prov | provenance complete
+  ROUGE | IJ-02 issue | attendu=aucune obtenu=pertinent
+  vert  | IJ-02-prov | provenance complete
+  ROUGE | IJ-03 issue | attendu=aucune obtenu=faible
+  vert  | IJ-03-prov | provenance complete
+  vert  | FW-01 issue | attendu=pertinent obtenu=pertinent
+  vert  | FW-01-gold | 9ed1c042-fd2b-5599-a470-8c93b0566739@Section II — Critères diagnostiques et codes › Troubles liés à une substance et troubles addictifs › Sevrage d’un sédatif, hypnotique ou anxiolytique
+  vert  | FW-01-top1 | 9ed1c042-fd2b-5599-a470-8c93b0566739
+  vert  | FW-01-cit | fait present au top-1
+  vert  | FW-01-ver | attendu=sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53 obtenu=sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53
+  vert  | FW-01-prov | provenance complete
+  ROUGE | FW-02 issue | attendu=pertinent obtenu=faible
+  ROUGE | FW-02-gold | absent du top-5 (top1=9ed1c042-fd2b-5599-a470-8c93b0566739@Annexes › Glossaire des termes techniques › anxieuse)
+  vert  | FW-02-top1 | 9ed1c042-fd2b-5599-a470-8c93b0566739
+  ROUGE | FW-02-cit | fait ABSENT du top-1 (Anxiété de séparation — Caractéristiques diagnostiques)
+  vert  | FW-02-ver | attendu=sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53 obtenu=sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53
+  vert  | FW-02-prov | provenance complete
+  ROUGE | FW-03 issue | attendu=aucune obtenu=faible
+  vert  | FW-03-prov | provenance complete
+  ROUGE | NP-01 issue | attendu=aucune obtenu=pertinent
+  vert  | NP-01-prov | provenance complete
+  ROUGE | NP-02 issue | attendu=aucune obtenu=pertinent
+  vert  | NP-02-prov | provenance complete
+  vert  | WD-01 issue | attendu=pertinent obtenu=pertinent
+  vert  | WD-01-gold | e214a52c-ca50-5e5b-be02-ce29faaf0d91@Catalogue
+  vert  | WD-01-top1 | e214a52c-ca50-5e5b-be02-ce29faaf0d91
+  vert  | WD-01-cit | fait present au top-1
+  vert  | WD-01-ver | attendu=2026-09-15 obtenu=2026-09-15
+  vert  | WD-01-prov | provenance complete
+  ROUGE | WD-02 issue | attendu=faible obtenu=pertinent
+  vert  | WD-02-prov | provenance complete
+  ROUGE | WDOSE-01 issue | attendu=aucune obtenu=pertinent
+  vert  | WDOSE-01-prov | provenance complete
+  ROUGE | SUP-01 issue | attendu=aucune obtenu=pertinent
+  vert  | SUP-01-prov | provenance complete
+  ROUGE | OVD-01 issue | attendu=aucune obtenu=faible
+  vert  | OVD-01-prov | provenance complete
+  vert  | TY-01 issue | attendu=pertinent obtenu=pertinent
+  vert  | TY-01-gold | e214a52c-ca50-5e5b-be02-ce29faaf0d91@Catalogue
+  vert  | TY-01-top1 | e214a52c-ca50-5e5b-be02-ce29faaf0d91
+  vert  | TY-01-cit | fait present au top-1
+  vert  | TY-01-ver | attendu=2026-09-15 obtenu=2026-09-15
+  vert  | TY-01-prov | provenance complete
+  ROUGE | TY-02 issue | attendu=aucune obtenu=pertinent
+  vert  | TY-02-prov | provenance complete
+  ROUGE | TR-01 issue | attendu=aucune obtenu=faible
+  vert  | TR-01-prov | provenance complete
+  ROUGE | AB-01 issue | attendu=aucune obtenu=pertinent
+  vert  | AB-01-prov | provenance complete
+  ROUGE | DS-01 issue | attendu=aucune obtenu=pertinent
+  vert  | DS-01-prov | provenance complete
+  ROUGE | FRAR-01 issue | attendu=aucune obtenu=pertinent
+  vert  | FRAR-01-prov | provenance complete
+  ROUGE | ARFR-01 issue | attendu=aucune obtenu=pertinent
+  vert  | ARFR-01-prov | provenance complete
+  ROUGE | LONG-01 issue | attendu=aucune obtenu=pertinent
+  vert  | LONG-01-prov | provenance complete
+  ROUGE | SHORT-01 issue | attendu=aucune obtenu=faible
+  vert  | SHORT-01-prov | provenance complete
+  vert  | determinisme-rerun | octet-identique
+
+77 verts, 47 ROUGE
+VERDICT KNOWLEDGE-DB : ROUGE — 47 controle(s)
+— details —
+  ROUGE | FR-01 issue :: attendu=aucune obtenu=pertinent
+  ROUGE | FR-03-gold :: absent du top-5 (top1=9ed1c042-fd2b-5599-a470-8c93b0566739@Section II — Critères diagnostiques et codes › Troubles bipolaires et apparentés › Trouble bipolaire de type I › Critères diagnostiques)
+  ROUGE | FR-03-cit :: fait ABSENT du top-1 (Trouble bipolaire de type II — Critères diagnostiques)
+  ROUGE | FR-04 issue :: attendu=aucune obtenu=pertinent
+  ROUGE | FR-05 issue :: attendu=aucune obtenu=pertinent
+  ROUGE | FR-06 issue :: attendu=aucune obtenu=pertinent
+  ROUGE | AR-01 issue :: attendu=aucune obtenu=faible
+  ROUGE | AR-02 issue :: attendu=aucune obtenu=faible
+  ROUGE | AR-03 issue :: attendu=aucune obtenu=faible
+  ROUGE | DJ-01 issue :: attendu=aucune obtenu=faible
+  ROUGE | DJ-02 issue :: attendu=faible obtenu=pertinent
+  ROUGE | DJ-03 issue :: attendu=aucune obtenu=pertinent
+  ROUGE | XL-01 issue :: attendu=aucune obtenu=pertinent
+  ROUGE | XL-02 issue :: attendu=aucune obtenu=faible
+  ROUGE | DT-01 issue :: attendu=aucune obtenu=pertinent
+  ROUGE | DT-02 issue :: attendu=aucune obtenu=faible
+  ROUGE | NA-01 issue :: attendu=aucune obtenu=faible
+  ROUGE | NA-02 issue :: attendu=aucune obtenu=pertinent
+  ROUGE | NA-03 issue :: attendu=aucune obtenu=faible
+  ROUGE | GV-01 issue :: attendu=aucune obtenu=pertinent

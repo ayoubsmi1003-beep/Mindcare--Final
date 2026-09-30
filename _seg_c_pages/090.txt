@@ -1,0 +1,67 @@
+ 
+88 
+ 
+ICD-11 MMS  
+ 
+Example 3  
+ 
+ 
+ 
+1 (a) Sepsis 
+ 
+ 
+(b) Submandibular abscess 
+ 
+ 
+(c) Caries 
+ 
+ 
+(d)  
+ 
+2  
+ 
+Caries is the tentative starting point (Step SP3), but it is in the ‘List of conditions considered unlikely to 
+cause death’. In this case caries caused submandibular abscess, a condition that is not unlikely to cause 
+death and that is not ill-defined. Because of that, keep caries as the starting point. 
+Example 4  
+ 
+ 
+ 
+1 (a) Headache 
+ 
+ 
+(b) Caries 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Ischaemic heart disease 
+Caries is the tentative starting point (Step SP3), but it is in the ‘List of conditions considered unlikely to 
+cause death’. In this case caries caused headache, a condition that is in the list of ill-defined conditions. 
+Disregard both caries (Step SP8) and headache (Step SP7) and restart the selection procedure from Step 
+SP1. Ischaemic heart disease is the new starting point (Step SP1). 
+2.18 Check for modifications of the starting point (Steps M1 to M4) 
+The starting point identified using Steps SP1 to SP8 is now considered the tentative 
+underlying cause. There may be special coding instructions on this tentative underlying 
+cause, or other reasons to modify the tentative underlying cause. Check whether the 
+tentative underlying cause should be modified by applying the modification rules described 
+in steps M1 to M3 (Modification rule 1 to Modification rule 3). Each step contains one 
+modification rule. At each step, there is a description of the modification rule itself and what 
+to do next. There are also bullet points with more detailed instructions and explanations. 
+2.18.1 Step M1 – Special instructions 
+If the tentative underlying cause (TUC) selected in Steps SP1 to SP8 applies to a special 
+instruction listed in Section 2.19.3 Special instructions on linkages and other provisions (Step 
+M1), assign a new tentative underlying cause according to the instruction. 
+Next, reapply Step M1 to the new tentative underlying cause. Repeat until you have found a 
+tentative underlying cause that is not affected by any further special coding instruction. 
+Next, go to Step M2. 
+If the tentative underlying cause does not apply to instructions in Section 2.19.3, go to Step 
+M2. 
+If more than one instruction in Section 2.19.3 applies to the tentative underlying cause, 
+select the instruction relating to the priority underlying condition (see Section 2.16.7). 
+Note that there are two types of combinations of codes, ‘with mention of’ and ‘when 
+reported as a cause of’. Refer to Section 2.19.3 for details. 

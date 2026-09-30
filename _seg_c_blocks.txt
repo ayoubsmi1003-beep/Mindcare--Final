@@ -1,0 +1,1579 @@
+=== P 74 (SRC 76) ===
+ 
+74 
+ 
+ICD-11 MMS  
+ 
+ 
+First Mentioned Sequence C 
+  
+ 
+First Mentioned Sequence D 
+  
+
+
+=== P 75 (SRC 77) ===
+ 
+ICD-11 Reference Guide 
+75 
+ 
+ 
+First Mentioned Sequence E 
+  
+If there are still conditions reported on lower lines in Part 1, repeat the procedure for as 
+long as a new tentative starting point can be identified. When no condition can be found 
+that could cause the tentative starting point, the last identified tentative starting point is 
+also the starting point of the first-mentioned sequence. 
+Example 1  
+ 
+ 
+ 
+1 (a) Pneumonia 
+ 
+ 
+ 
+due to 
+ 
+ 
+(b) Hip fracture and heart failure 
+ 
+ 
+ 
+due to 
+ 
+ 
+(c) Tripped on carpet, coronary atherosclerosis 
+ 
+ 
+ 
+due to 
+ 
+ 
+(d)  
+ 
+2  
+ 
+Pneumonia can be due to hip fracture, and therefore hip fracture is the tentative starting point. Hip 
+fracture can be due to tripping, which is the new tentative starting point. Since there are no causes 
+reported below line 1(c), tripping on carpet is the starting point of the first-mentioned sequence. 
+
+
+=== P 76 (SRC 78) ===
+ 
+76 
+ 
+ICD-11 MMS  
+ 
+Example 2  
+ 
+ 
+ 
+1 (a) Pneumonia 
+ 
+ 
+ 
+due to 
+ 
+ 
+(b) Heart failure and hip fracture 
+ 
+ 
+ 
+due to 
+ 
+ 
+(c) Coronary atherosclerosis and tripped on carpet 
+ 
+ 
+ 
+due to 
+ 
+ 
+(d)  
+ 
+2  
+ 
+Pneumonia can be due to heart failure, and therefore heart failure is the tentative starting point. Heart 
+failure can be due to coronary atherosclerosis, which is the new tentative starting point. Since there are 
+no causes reported below line 1(c), coronary atherosclerosis is the starting point of the first-mentioned 
+sequence. 
+Example 3  
+ 
+ 
+ 
+1 (a) Pneumonia 
+ 
+ 
+ 
+due to 
+ 
+ 
+(b) Hip fracture and heart failure 
+ 
+ 
+ 
+due to 
+ 
+ 
+(c) Coronary atherosclerosis and tripped on carpet 
+ 
+ 
+ 
+due to 
+ 
+ 
+(d)  
+ 
+2  
+ 
+Pneumonia can be due to hip fracture, and therefore hip fracture is the tentative starting point. However, 
+hip fracture cannot be due to coronary atherosclerosis, but hip fracture can be due to tripping, which is 
+the new tentative starting point. Since there are no causes reported below line 1(c), tripped on carpet is 
+the starting point of the first-mentioned sequence. 
+2.16.6 Underlying cause of death (UCOD) 
+The underlying cause of death (UCOD), as defined in Section 2.15.1, is the condition selected 
+for single-cause tabulation of mortality statistics. 
+A condition that is provisionally considered as the underlying cause of death when applying 
+the instructions step by step is referred to as a ‘tentative underlying cause of death (TUC)’ 
+and may change several times as the instructions are applied to the death certificate. 
+
+
+=== P 77 (SRC 79) ===
+ 
+ICD-11 Reference Guide 
+77 
+ 
+Example 1  
+ 
+ 
+ 
+1 (a) Myocardial infarction 
+ 
+ 
+ 
+due to 
+ 
+ 
+(b) Coronary atherosclerosis 
+ 
+ 
+ 
+due to 
+ 
+ 
+(c) Generalised atherosclerosis 
+ 
+ 
+ 
+due to 
+ 
+ 
+(d)  
+ 
+2  
+ 
+Generalised atherosclerosis started the sequence of events leading to death, so it is the starting point. 
+There are special modification instructions relating to atherosclerosis and coronary heart disease in the 
+ICD, and, in the next step, coronary atherosclerosis is selected as the tentative underlying cause of death. 
+But there are further instructions on coronary atherosclerosis and myocardial infarction, and in the final 
+step, myocardial infarction is selected as the tentative underlying cause, and is the underlying cause of 
+death in this case. 
+2.16.7 Priority underlying condition 
+Some mortality coding instructions (e.g. Steps SP6, M1) refer to the ‘priority underlying 
+condition’. It is a concept to set a priority order giving precedence to the underlying 
+condition, when specific requirements in each instruction apply to several conditions in the 
+death certificate. 
+To identify the priority underlying condition, start from the first condition reported on the 
+lowest used line of Part 1. If there are several conditions reported, search from the lowest 
+used line, and the next line above in turn, and from left to right for each line. If you cannot 
+find the priority underlying condition in Part 1, then search Part 2, again from left to right. 
+ 
+Priority Underlying Condition 
+
+
+=== P 78 (SRC 80) ===
+ 
+78 
+ 
+ICD-11 MMS  
+ 
+2.16.8 Modification 
+Special coding instructions on specific sequences and ICD categories may have the effect 
+that a condition other than the starting point is selected as the underlying cause of death for 
+use in the statistics. In such cases, the code for underlying cause often expresses a 
+combination of the starting point with another reported condition, or a complication or 
+consequence of the starting point that is of particular importance to public health. The 
+procedure by which the ICD code for the starting point is replaced by another code is called 
+modification. Instructions on how to apply these special instructions to identify the 
+underlying cause of death is given in Section 2.18 Check for modifications of the starting 
+point (Steps M1 to M4). 
+Example 1  
+ 
+ 
+ 
+1 (a) Heart disease 
+ 
+ 
+ 
+due to 
+ 
+ 
+(b) Generalised atherosclerosis 
+ 
+ 
+ 
+due to 
+ 
+ 
+(c)  
+ 
+ 
+ 
+due to 
+ 
+ 
+(d)  
+ 
+2  
+ 
+Generalised atherosclerosis started the sequence of events leading to death, so it is the starting point. 
+However, according to a special instruction on generalised atherosclerosis, generalised atherosclerosis 
+leading to heart disease is assigned to atherosclerotic heart disease in mortality statistics. Because of this 
+modification, atherosclerotic heart disease is the underlying cause of death. 
+2.17 Coding instructions for mortality 
+When coding causes of death, first assign ICD codes to all the conditions mentioned on the 
+death certificate. Many coding instructions are based on specific ICD codes, and to 
+determine whether or not any of the instructions apply, all conditions on the certificate 
+must be coded. Other conditions reported on the certificate may affect the coding any 
+condition. Assigning codes for all reported conditions and applying any effect one code has 
+on another is called multiple cause coding. 
+2.17.1 Basic coding and multiple cause coding guidelines 
+To start coding, refer to basic coding guidelines given in sections in the beginning of Part 2 
+(for example Sections2.1, 2.6, and 2.10.1. When multiple causes are reported also refer to 
+Section 2.21 Coding instructions for mortality: multiple cause coding and other specific 
+instructions. Multiple cause coding permits in-depth analysis of causes of death, for example 
+of serious but avoidable complications of certain underlying causes, and the impact of 
+coexisting conditions on the outcome of a disease process. Therefore, in mortality coding, 
+both underlying cause and multiple causes should be recorded. Complete multiple cause 
+coding is essential for a correct application of the ICD instructions for selection and 
+modification of the underlying cause of death. 
+
+
+=== P 79 (SRC 81) ===
+ 
+ICD-11 Reference Guide 
+79 
+ 
+To ensure consistent reporting of emerging conditions of international public health 
+importance, WHO may sometimes publish special instructions for coding of named 
+conditions, or selection of the underlying cause of death where named conditions are 
+mentioned on the Medical Certificate Cause of Death (MCCD). This will usually involve codes 
+in Chapter 25: Codes for special purposes - International provisional assignment of new 
+diseases of uncertain aetiology and emergency use. Such special instructions should be 
+applied in preference to any instructions in the Reference Guide that would otherwise 
+apply. 
+Once ICD codes are assigned to each disease or condition on the certificate, apply the 
+instructions to select the underlying cause of death. Note that the full instructions include, 
+in some cases, supplementary tables which are contained in the online Mortality Rules 
+Knowledgebase as explained in Section 2.20 
+2.17.2 Selecting the underlying cause of death 
+For most death certificates, selecting the underlying cause of death is a straightforward 
+procedure. There are, however, many cases where the underlying cause is not immediately 
+obvious. To ensure that both straightforward and complex cases are coded according to the 
+ICD mortality rules, it is important to follow the coding instructions carefully, step by step. 
+Otherwise, the resulting mortality statistics will not be internationally comparable, which 
+seriously reduces the value of the data for public health purposes. 
+Selecting the underlying cause of death involves two separate steps. The first step is to 
+identify the starting point (Steps SP1 through SP8 below). The next step is to modify the 
+starting point, if any of the modification instructions apply, to reflect further information 
+provided on the death certificate (Steps M1 through M4 below). See Sections 2.18 - 2.19 for 
+specific instructions. In addition, Mortality Annex ERROR includes a workflow diagram to 
+illustrate the coding instructions for the selection of the underlying cause of death. This is 
+intended as a supplement to help coders follow the coding instructions. 
+Note that the purpose of the selection procedure is to produce the most useful mortality 
+statistics possible. Thus, the following instructions may reflect the importance of some 
+conditions for public health rather than what is correct from a purely medical point of view. 
+The following instructions always apply, whether they might be considered medically 
+correct or not. 
+In the coding examples that follow, the ‘due to’ statement between the lines in Part 1 is not 
+included. But it is important to bear in mind that anything reported on an upper line in Part 
+1 is meant to be due to what is reported on the line below. 
+
+
+=== P 80 (SRC 82) ===
+ 
+80 
+ 
+ICD-11 MMS  
+ 
+ 
+
+
+=== P 81 (SRC 83) ===
+ 
+ICD-11 Reference Guide 
+81 
+ 
+Workflow 
+Workflow diagram of steps SP1 to SP8, and to Steps M1 to M4 for mortality coding. 
+2.17.3 Find the starting point (Steps SP1 to SP8) 
+To identify the starting point, follow the eight steps specified in this section. The steps are 
+named SP1 to SP8 (Starting point rule 1 to Starting point rule 8). Each step contains one 
+selection rule. At each step, there is a description of the selection rule itself and an 
+instruction on what to do next. 
+2.17.4 Step SP1 – Single cause on certificate 
+If there is only one condition reported on the certificate, in either Part 1 or Part 2, this is the 
+starting point. Next verify whether either step M1 or M4 apply, go to Section 2.18 Check for 
+modifications of the starting point (Steps M1 to M4). 
+If there are two or more conditions on the certificate, go to Step SP2. 
+2.17.5 Step SP2 – First condition on the only line used 
+If the certifier has used only one line in Part 1 and: 
+• 
+has reported only one condition on this line, but has reported one or more 
+conditions in Part 2, then the single condition in Part 1 is the tentative starting point. 
+Next, go to Step SP6. 
+• 
+has reported two or more conditions on this line, then the first condition is the 
+tentative starting point. This applies whether or not one or more conditions are 
+reported in Part 2. Next, go to Step SP6. 
+If the certifier has used more than one line in Part 1, go to Step SP3. 
+If the certifier has used only Part 2, but has reported two or more conditions there, then the 
+first condition is the tentative starting point. 
+Example 1  
+ 
+ 
+ 
+1 (a) Myocardial infarction and diabetes mellitus 
+ 
+ 
+(b)  
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+ 
+Myocardial infarction is mentioned first on the certificate and is the tentative starting point. Next, go to 
+Step SP6, to check whether further selection and modification rules apply. 
+
+
+=== P 82 (SRC 84) ===
+ 
+82 
+ 
+ICD-11 MMS  
+ 
+Example 2  
+ 
+ 
+ 
+1 (a) Myocardial infarction 
+ 
+ 
+(b)  
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Diabetes mellitus 
+Myocardial infarction is mentioned first on the certificate and is the tentative starting point. Next, go to 
+Step SP6, to check whether further selection and modification rules apply. 
+2.17.6 Step SP3 – First condition on the lowest used line causing all entries above 
+If there are conditions reported on more than one line in Part 1, check if each of the 
+conditions reported on the line(s) above the lowest used line in Part 1 can be caused by the 
+first condition on the lowest used line. 
+• 
+If yes, then this condition is the tentative starting point. Next, go to Step SP6. 
+• 
+If not, go to Step SP4. 
+To assess causal relationship, refer to Section 2.16.2 Causal relationship and sequence, and 
+to Section 2.19.1 Special instructions on accepted and rejected sequences (Steps SP3 and 
+SP4). 
+Example 1  
+ 
+ 
+ 
+1 (a) Bronchopneumonia 
+ 
+ 
+(b) Hemiplegia 
+ 
+ 
+(c) Cerebral infarction 
+ 
+ 
+(d)  
+ 
+2  
+ 
+Both bronchopneumonia and hemiplegia can be caused by cerebral infarction. This means that cerebral 
+infarction is the tentative starting point. 
+Example 2  
+ 
+ 
+ 
+1 (a) Liver metastases 2 months 
+ 
+ 
+(b) Bronchopneumonia 4 days 
+ 
+ 
+(c) Stomach cancer 6 months 
+ 
+ 
+(d)  
+ 
+2  
+ 
+Both liver metastases and bronchopneumonia can be caused by stomach cancer. This means that stomach 
+cancer is the tentative starting point, even though bronchopneumonia cannot cause liver metastases and 
+the bronchopneumonia has a shorter duration than the liver metastases. 
+
+
+=== P 83 (SRC 85) ===
+ 
+ICD-11 Reference Guide 
+83 
+ 
+Example 3  
+ 
+ 
+ 
+1 (a) Liver metastases 
+ 
+ 
+(b) Bronchopneumonia 
+ 
+ 
+(c) Stomach cancer and cerebral infarction 
+ 
+ 
+(d)  
+ 
+2  
+ 
+Both liver metastases and bronchopneumonia can be caused by stomach cancer, which is the first 
+condition mentioned on the lowest used line in Part 1. This means that stomach cancer is the tentative 
+starting point. 
+Example 4  
+ 
+ 
+ 
+1 (a) Liver metastases 
+ 
+ 
+(b) Bronchopneumonia and stomach cancer 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+ 
+Liver metastases cannot be due to bronchopneumonia. This means that no tentative starting point can be 
+identified at Step SP3. Therefore, go to Step SP4. 
+2.17.7 Step SP4 – Starting point of the first-mentioned sequence 
+The first-mentioned sequence is always found in Part 1 (see Section 2.16.5). 
+• 
+If one or more sequences ending with the terminal cause of death are reported in 
+Part 1, identify the first-mentioned sequence (see Section 2.16.5). The starting point 
+of this sequence is the tentative starting point. Next go to Step SP6. 
+If no sequence ending with the terminal cause of death is reported in Part 1, go to Step SP5. 
+To assess causal relationship, refer to Section 2.16.2 Causal relationship and sequence, and 
+to Section 2.19.1 Special instructions on accepted and rejected sequences (Steps SP3 and 
+SP4). 
+Example 1  
+ 
+ 
+ 
+1 (a) Liver metastases 
+ 
+ 
+(b) Bronchopneumonia and stomach cancer 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+ 
+Bronchopneumonia cannot cause liver metastases (Step SP3 does not apply), but liver metastases can be 
+due to stomach cancer. This is the first-mentioned sequence ending with the terminal cause of death, so 
+stomach cancer is the tentative starting point. 
+
+
+=== P 84 (SRC 86) ===
+ 
+84 
+ 
+ICD-11 MMS  
+ 
+Example 2  
+ 
+ 
+ 
+1 (a) Bronchopneumonia 
+ 
+ 
+(b) Cerebral infarction and liver metastases 
+ 
+ 
+(c) Atherosclerosis and stomach cancer 
+ 
+ 
+(d)  
+ 
+2  
+ 
+Atherosclerosis cannot cause liver metastases (Step SP3 does not apply). There are three acceptable 
+sequences on the certificate: (1) bronchopneumonia caused by cerebral infarction, in its turn caused by 
+atherosclerosis; (2) bronchopneumonia caused by cerebral infarction, in its turn caused by stomach 
+cancer; and (3) bronchopneumonia caused by liver metastases, in its turn caused by stomach cancer. The 
+first-mentioned sequence is bronchopneumonia caused by cerebral infarction, in its turn caused by 
+atherosclerosis. Consequently, atherosclerosis is the tentative starting point. 
+2.17.8 Step SP5 – Terminal cause of death when no sequence 
+If no sequence ending with the terminal cause of death is reported in Part 1, the terminal 
+cause of death is also the tentative starting point. Next, go to Step SP6. 
+Example 1  
+ 
+ 
+ 
+1 (a) Liver metastases 
+ 
+ 
+(b) Cerebral infarction 
+ 
+ 
+(c) Atherosclerosis 
+ 
+ 
+(d)  
+ 
+2  
+Stomach cancer 
+Atherosclerosis cannot cause liver metastases (Step SP3 does not apply). Cerebral infarction cannot cause 
+liver metastases (Step SP4 does not apply). No sequence ending with the terminal cause of death is 
+reported in Part 1, so the terminal cause of death – liver metastases – is the tentative starting point. 
+2.17.9 Step SP6 – Obvious cause 
+If the tentative starting point selected in Steps SP1 to SP5 was obviously caused by another 
+condition on the certificate, select the obvious cause as the new tentative starting point. 
+Conditions that are considered to have an ‘obvious’ causal relationship are specified in 
+Section 2.19.2 Special instructions on obvious cause (Step SP6). To identify which Part of the 
+certificate you should search for, apply following rules: 
+• 
+If the tentative starting point is in Part 1, the obvious cause must be either on the 
+same or lower line, in Part 1, or in Part 2. Do not look for obvious causes on lines 
+above the tentative starting point. 
+• 
+If the tentative starting point is in Part 2, the obvious cause must also be in Part 2. 
+Do not look for obvious causes in Part 1. 
+Next, reapply Step SP6 to the new tentative starting point. Continue looking for a new 
+tentative starting point until you find a tentative starting point that is not obviously caused 
+by a condition reported on the same line or further down on the certificate. Then go to Step 
+SP7. 
+If there is no condition reported on the certificate that obviously caused the tentative 
+starting point selected in Steps SP2 to SP5, go to Step SP7. 
+
+
+=== P 85 (SRC 87) ===
+ 
+ICD-11 Reference Guide 
+85 
+ 
+An obvious causal relationship is a type of causal relationship (see Section 2.19.1) and a 
+rejected sequence in Section [2.19.2] should also be rejected in considering an ‘obvious’ 
+relationship between conditions. However, in considering accepting sequences, the word 
+‘obviously’ is important, and there must be no doubt about the relationship between the 
+conditions. It is not sufficient that the sequence would have been accepted if the tentative 
+starting point had been reported as due to the other condition. In applying Step SP6, always 
+refer to Section 2.19.2. 
+Do not apply Step SP6 if the tentative starting point has a longer duration than the obvious 
+cause. 
+If more than one obvious cause of the tentative starting point is reported, select the priority 
+underlying condition (see Section 2.16.7). 
+Example 1  
+ 
+ 
+ 
+1 (a) Sepsis 
+ 
+ 
+(b) Peritonitis 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Appendicitis with rupture 
+Sepsis can be caused by peritonitis, and peritonitis is the tentative starting point (Step SP3). Appendicitis 
+with rupture is an obvious cause of peritonitis, and appendicitis with rupture is the new tentative starting 
+point. 
+Example 2  
+ 
+ 
+ 
+1 (a) Liver metastases 
+ 
+ 
+(b) Cerebral infarction 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Stomach cancer 
+Cerebral infarction cannot cause liver metastases, and liver metastases is the tentative starting point 
+(Step SP5). Stomach cancer is an obvious cause of liver metastases, and stomach cancer is the new 
+tentative starting point. 
+Example 3  
+ 
+ 
+ 
+1 (a) Sepsis 
+ 
+ 
+(b) Peritonitis, mesenteric embolism 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+ 
+Sepsis can be caused by peritonitis, and peritonitis is the tentative starting point (Step SP3). Mesenteric 
+embolism is an obvious cause of peritonitis, and mesenteric embolism is the new tentative starting point. 
+
+
+=== P 86 (SRC 88) ===
+ 
+86 
+ 
+ICD-11 MMS  
+ 
+Example 4  
+ 
+ 
+ 
+1 (a) Sepsis 
+ 
+ 
+(b) Peritonitis 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Mesenteric embolism, rupture appendicitis 
+Sepsis can be caused by peritonitis, and peritonitis is the tentative starting point (Step SP3). Next, both 
+mesenteric embolism and ruptured appendicitis are obvious causes of peritonitis. Because mesenteric 
+embolism is mentioned first and is the priority underlying condition, it is the new tentative starting point. 
+Example 5  
+ 
+ 
+ 
+1 (a) Sepsis 
+ 
+ 
+(b) Peritonitis 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Necrosis of intestine, mesenteric infarction 
+Sepsis can be caused by peritonitis, and peritonitis is the tentative starting point (Step SP3). Necrosis of 
+intestine is an obvious cause of peritonitis, so necrosis of intestine is the new tentative starting point. 
+Next, mesenteric infarction is an obvious cause of necrosis of intestine, and mesenteric infarction is the 
+final starting point. 
+2.17.10 Step SP7 – Ill-defined conditions 
+If the tentative starting point selected in Steps SP1 to SP6 is in the List of ill-defined 
+conditions, and: 
+• 
+If there is at least one condition that is not ill-defined, then disregard the ill-defined 
+condition. Go to Step SP1 and select another starting point, as if the ill-defined 
+condition had not been mentioned on the certificate. 
+• 
+If all other conditions reported on the certificate, are ill- defined, go to Step M1. 
+If the tentative starting point is not ill-defined, go to Step SP8. 
+Note that the following are not considered ill-defined: 
+3.14.6 List of ill-defined conditions. 
+Example 1  
+ 
+ 
+ 
+1 (a) Respiratory failure 
+ 
+ 
+(b)  
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Mesenteric embolism 
+Respiratory failure is the only condition mentioned in Part 1 and it is the tentative starting point 
+according to Steps SP2. Respiratory failure is in the table of ill-defined conditions, and there is a condition 
+not ill-defined, Mesenteric embolism, so disregard respiratory failure and restart the selection procedure. 
+Mesenteric embolism is the new starting point according to Step SP1. 
+
+
+=== P 87 (SRC 89) ===
+ 
+ICD-11 Reference Guide 
+87 
+ 
+2.17.11 Step SP8 – Conditions unlikely to cause death 
+If the tentative starting point selected in Steps SP1 to SP7 is in the List of conditions unlikely 
+to cause death (see Mortality Annex 3.14.10, and: 
+• 
+If all other conditions reported on the certificate are also unlikely to cause death or 
+ill-defined, then keep this condition ‘unlikely to cause death’ as the starting point. 
+Next, go to Step M1. 
+• 
+If this condition was the cause of another condition that is not ‘unlikely to cause 
+death’ and that is not ill-defined, then keep this condition unlikely to cause death as 
+the starting point. Next, go to Step M1. 
+• 
+If the death was caused by a reaction to treatment of the condition unlikely to cause 
+death, select the reaction to treatment as the starting point. Next, go to Step M1 
+• 
+If none of these three apply, and there is at least one condition that is not ‘unlikely 
+to cause death’ and not ‘ill-defined’, then disregard the condition unlikely to cause 
+death. Go to Step SP1 and select another starting point, as if the condition unlikely to 
+cause death had not been mentioned on the certificate. 
+If the tentative starting point is not in the ‘List of conditions unlikely to cause death’, keep 
+that condition as the starting point and go to Step M1. 
+If the certificate mentions more than one treatment for the condition unlikely to cause 
+death, select the first-mentioned treatment. 
+Example 1  
+ 
+ 
+ 
+1 (a) Hearing loss 
+ 
+ 
+(b)  
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Ischaemic heart disease 
+Hearing loss is the tentative starting point (Step SP2), but it in the ‘List of conditions considered unlikely 
+to cause death’. There is another condition on the certificate, ischaemic heart disease, which is not in the 
+‘List of conditions considered unlikely to cause death’. Disregard hearing loss and restart the selection 
+procedure from Step SP1. Ischaemic heart disease is the new starting point (Step SP1). 
+Example 2  
+ 
+ 
+ 
+1 (a) Liver failure 
+ 
+ 
+(b) Excessive use of paracetamol 
+ 
+ 
+(c) Migraine-type headache 
+ 
+ 
+(d)  
+ 
+2  
+ 
+Migraine type headache is the tentative starting point (Step SP3), but it is in the ‘List of conditions 
+considered unlikely to cause death’. Migraine type headache was treated with paracetamol and there was 
+a reaction to the treatment, liver failure. Select the reaction to the treatment, liver failure, as the starting 
+point. 
+
+
+=== P 88 (SRC 90) ===
+ 
+88 
+ 
+ICD-11 MMS  
+ 
+Example 3  
+ 
+ 
+ 
+1 (a) Sepsis 
+ 
+ 
+(b) Submandibular abscess 
+ 
+ 
+(c) Caries 
+ 
+ 
+(d)  
+ 
+2  
+ 
+Caries is the tentative starting point (Step SP3), but it is in the ‘List of conditions considered unlikely to 
+cause death’. In this case caries caused submandibular abscess, a condition that is not unlikely to cause 
+death and that is not ill-defined. Because of that, keep caries as the starting point. 
+Example 4  
+ 
+ 
+ 
+1 (a) Headache 
+ 
+ 
+(b) Caries 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Ischaemic heart disease 
+Caries is the tentative starting point (Step SP3), but it is in the ‘List of conditions considered unlikely to 
+cause death’. In this case caries caused headache, a condition that is in the list of ill-defined conditions. 
+Disregard both caries (Step SP8) and headache (Step SP7) and restart the selection procedure from Step 
+SP1. Ischaemic heart disease is the new starting point (Step SP1). 
+2.18 Check for modifications of the starting point (Steps M1 to M4) 
+The starting point identified using Steps SP1 to SP8 is now considered the tentative 
+underlying cause. There may be special coding instructions on this tentative underlying 
+cause, or other reasons to modify the tentative underlying cause. Check whether the 
+tentative underlying cause should be modified by applying the modification rules described 
+in steps M1 to M3 (Modification rule 1 to Modification rule 3). Each step contains one 
+modification rule. At each step, there is a description of the modification rule itself and what 
+to do next. There are also bullet points with more detailed instructions and explanations. 
+2.18.1 Step M1 – Special instructions 
+If the tentative underlying cause (TUC) selected in Steps SP1 to SP8 applies to a special 
+instruction listed in Section 2.19.3 Special instructions on linkages and other provisions (Step 
+M1), assign a new tentative underlying cause according to the instruction. 
+Next, reapply Step M1 to the new tentative underlying cause. Repeat until you have found a 
+tentative underlying cause that is not affected by any further special coding instruction. 
+Next, go to Step M2. 
+If the tentative underlying cause does not apply to instructions in Section 2.19.3, go to Step 
+M2. 
+If more than one instruction in Section 2.19.3 applies to the tentative underlying cause, 
+select the instruction relating to the priority underlying condition (see Section 2.16.7). 
+Note that there are two types of combinations of codes, ‘with mention of’ and ‘when 
+reported as a cause of’. Refer to Section 2.19.3 for details. 
+
+
+=== P 89 (SRC 91) ===
+ 
+ICD-11 Reference Guide 
+89 
+ 
+Sometimes the classification itself indicates a code for a combination of the tentative 
+underlying cause with another cause mentioned on the certificate. Use the combination 
+code unless an instruction on mortality coding in Section 2.19.3 indicates otherwise. 
+Examples of ‘with mention of’: 
+Example 1  
+ 
+ 
+ 
+1 (a) Myocardial infarction 
+ 
+ 
+(b) Ischaemic heart disease 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+ 
+Ischaemic heart disease is the tentative starting point (Step SP3). There is a special instruction on 
+ischaemic heart disease reported with mention of myocardial infarction, and, according to this 
+instruction, myocardial infarction is the new tentative underlying cause. 
+Example 2  
+ 
+ 
+ 
+1 (a) Ischaemic heart disease 
+ 
+ 
+(b) Atherosclerosis 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Cerebral infarction 
+Atherosclerosis is the tentative starting point (Step SP3). There is a special instruction on ‘atherosclerosis 
+reported with ischaemic heart disease’, and another one on ‘atherosclerosis reported with cerebral 
+infarction’. Ischaemic heart disease is the priority underlying condition, so apply the instruction on 
+‘atherosclerosis reported with ischaemic heart disease’ and select ischaemic heart disease as the new 
+tentative underlying cause. 
+Example 3  
+ 
+ 
+ 
+1 (a) Cerebrovascular infarction 
+ 
+ 
+(b) Atherosclerosis 
+ 
+ 
+(c) Hypertension 
+ 
+ 
+(d)  
+ 
+2  
+Myocardial infarction 
+Hypertension is the tentative starting point (Step SP3). There are special instructions on ‘hypertension 
+reported with mention of cerebrovascular infarction’ and with myocardial infarction. Cerebrovascular 
+infarction is the priority underlying condition, so apply the instruction on ‘hypertension reported with 
+mention of cerebrovascular infarction’ and select cerebrovascular infarction as the new tentative 
+underlying cause. 
+
+
+=== P 90 (SRC 92) ===
+ 
+90 
+ 
+ICD-11 MMS  
+ 
+Example 4  
+ 
+ 
+ 
+1 (a) Ischaemic heart disease 
+ 
+ 
+(b) Atherosclerosis 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Myocardial infarction 
+Atherosclerosis is the tentative starting point (Step SP3). There is a special instruction on ‘atherosclerosis 
+reported with mention of ischaemic heart disease’, and another one on ‘atherosclerosis reported with 
+mention of myocardial infarction’. Ischaemic heart disease is the priority underlying condition, so apply 
+the instruction on ‘atherosclerosis reported with mention of ischaemic heart disease’ and select ischaemic 
+heart disease as the new starting point. Next, there is a special instruction on ‘ischaemic heart disease 
+reported with mention of myocardial infarction’. Apply this instruction and select myocardial infarction 
+as the new tentative underlying cause. 
+Examples of ‘when reported as the cause of’: 
+Example 5  
+ 
+ 
+ 
+1 (a) Chronic kidney disease 
+ 
+ 
+(b) Atherosclerosis 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+ 
+Atherosclerosis is the tentative starting point (Step SP3). There is a special instruction on ‘atherosclerosis 
+reported as the cause of chronic kidney disease’. Apply this instruction and select hypertensive renal 
+disease (BA02) as the new tentative underlying cause. 
+Example 6  
+ 
+ 
+ 
+1 (a) Atherosclerosis 
+ 
+ 
+(b)  
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Chronic kidney disease 
+Atherosclerosis is the tentative starting point (Step SP2). Although there is a special instruction on 
+‘atherosclerosis reported as the cause of chronic kidney disease’, this instruction does not apply here 
+because chronic kidney disease is reported in Part 2 and not as caused by atherosclerosis. In this case, 
+atherosclerosis remains the tentative starting point. 
+2.18.2 Step M2 – Specificity 
+If the tentative underlying cause describes a condition in general terms and another term 
+that provides more precise information about the site or nature of the same condition is 
+reported on the certificate, use the more informative term. This rule will often apply when 
+the general term becomes an adjective, qualifying the more precise term. 
+If the tentative underlying cause is an infectious disease reported as the cause of a specific 
+manifestation, there may be a provision in the classification to combine the two codes into 
+
+
+=== P 91 (SRC 93) ===
+ 
+ICD-11 Reference Guide 
+91 
+ 
+one code providing more precise information about the site or nature of the tentative 
+starting point. This code is the new tentative underlying cause of death. 
+Next, reapply Step M2 to the new tentative underlying cause. Repeat until you have found a 
+tentative underlying cause that cannot be specified further. 
+• If there is no term that further specifies the tentative underlying cause (TUC), go to Step 
+M3. 
+• If there are several other expressions that provide more precise information on the 
+tentative underlying cause, select the priority underlying condition (see Section 2.16.7). 
+• If the TUC is an unspecified condition and this condition appears with more specificity 
+somewhere on the death certificate, this last more specific condition should be considered 
+as the new TUC. 
+Example 1  
+ 
+ 
+ 
+1 (a) Meningitis 1D01.Z 
+ 
+ 
+(b) Tuberculosis 1B1Z 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+ 
+Tuberculosis is the tentative starting point (Step SP3). A term providing more precise information about 
+the site or nature of this condition is reported on the certificate: menigitis. There is a provision in the 
+classification to combine the two codes, and according to instruction of step M2, tuberculous meningitis 
+(1B11.0) is a new tentative underlying cause. 
+Example 2  
+ 
+ 
+ 
+1 (a) Syphilis, unspecified 1A6Z 
+ 
+ 
+(b)  
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Primary genital syphilis 1A61.0 
+Syphilis, is the tentative starting point (Step SP2). A more specific condition for syphilis appears 
+elsewhere on the death certificate: primary genital syphilis, and according to instruction of step M2, 
+primary genital syphilis is a new tentative underlying cause. 
+Example 3  
+ 
+ 
+ 
+1 (a) Acute gastrointestinal bleeding ME24.90 
+ 
+ 
+(b) Malignant neoplasms of colon, unspecified 2B90.Z 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Malignant neoplasm of transverse colon 2B90.2 
+Malignant neoplasms of colon, is the tentative starting point (Step SP3). A more specific condition appears 
+elsewhere on the death certificate: malignant neoplasm of transverse colon, and according to instruction 
+of step M2, malignant neoplasm of transverse colon 2B90.2 is a new tentative underlying cause. 
+
+
+=== P 92 (SRC 94) ===
+ 
+92 
+ 
+ICD-11 MMS  
+ 
+Regarding coding, this specificity can occur even between parents: 
+Example 4  
+ 
+ 
+ 
+1 (a) Sepsis without septic shock 1G40 
+ 
+ 
+(b) Diabetes mellitus 5A14 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Type 1 diabetes mellitus 5A10 
+Diabetes mellitus, type unspecified, is the tentative starting point (Step SP3). A more specific condition 
+appears elsewhere on the death certificate: Type 1 diabetes mellitus, and according to instruction of step 
+M2, Type 1 diabetes mellitus 5A10 is a new tentative underlying cause. 
+Example 5  
+ 
+ 
+ 
+1 (a) Stroke 8B20 
+ 
+ 
+(b)  
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Intracerebral Haemorrhage 8B00 
+Stroke, not known if ischaemic or haemorrhagic, is the tentative starting point (Step SP2). A term 
+providing more precise information about the nature of this condition is reported on the certificate: 
+intracerebral haemorrhage. According to instruction of step M2, intracerebral haemorrhage 8B00 is a 
+new tentative underlying cause. 
+Example 6  
+ 
+ 
+ 
+1 (a) Acute pancreatitis DC31.Z 
+ 
+ 
+(b) Cytomegaloviral disease 1D82.Z 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+ 
+Cytomegaloviral disease, unspecified, is the tentative starting point (Step SP3). The manifestation is 
+described as acute pancreatitis, unspecified, and the two terms combine into cytomegaloviral pancreatitis 
+(1D82.1), which is the new tentative underlying cause. 
+Special instructions on Chapter 21 Symptoms, signs or clinical findings, not elsewhere 
+classified 
+TUC is: 
+with mention of: 
+code to: 
+MH10 Brain death 
+Ill-defined conditions 
+excluding MH10 
+Ill-defined conditions 
+excluding MH10 
+MH14 Other ill-defined or 
+unspecified causes of mortality 
+Ill-defined conditions 
+excluding MH14 
+Ill-defined conditions 
+excluding MH14 
+2.18.3 Step M3 – Recheck Steps SP6, M1 and M2 
+If, at this point, the tentative underlying cause is not the same as the starting point you 
+selected in Steps SP1 to SP8, then go back to Step SP6. Repeat the procedures described in 
+Steps SP6, M1 and M2. 
+
+
+=== P 93 (SRC 95) ===
+ 
+ICD-11 Reference Guide 
+93 
+ 
+If the tentative underlying cause is the same with the starting point selected in Step SP1 to 
+SP8, go to Step M4. 
+• 
+Do not go back to Step SP6 if the cause selected in Step M1 or M2 is correctly 
+reported as due to another condition, except when this condition is ill-defined. 
+• 
+Also, do not go back to Step SP6 if the tentative underlying cause is a reaction to 
+treatment of a condition unlikely to cause death, as selected in Step SP8. 
+Example 1  
+ 
+ 
+ 
+1 (a) Sepsis 
+ 
+ 
+(b) Arterial disease, arterial embolism of left leg 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Colon cancer 
+Arterial disease is the tentative starting point according to Step SP3. Arterial embolism of 
+left leg, reported as the second condition on line 1(b), is a specific type of arterial disease. 
+Therefore, select arterial embolism of left leg as the tentative underlying cause in Step M2. 
+Reapply Step SP6, because the tentative starting point is not the same as the one selected in 
+Steps SP1 to SP8. But colon cancer is an obvious cause of arterial embolism, and colon 
+cancer is the new starting point. No further modifications apply. Code colon cancer (2B90.Z), 
+Malignant neoplasms of colon, unspecified) as the underlying cause of death. 
+Example 1  
+ 
+ 
+ 
+1 (a) Sepsis 
+ 
+ 
+(b) Arterial disease, arterial embolism of left leg 
+ 
+ 
+(c) Atherosclerosis 
+ 
+ 
+(d)  
+ 
+2  
+Colon cancer 
+Atherosclerosis is the tentative starting point (Step SP3). There is a special instruction on ‘atherosclerosis 
+reported as the cause of arterial disease’, and, according to this instruction, arterial disease is the new 
+starting point according to Step M1. Arterial embolism of left leg, reported as the second condition on line 
+1(b), is a more specific description of the type of arterial disease and is selected as the tentative starting 
+point in Step M2. Do not reapply Step SP6, because arterial embolism of left leg is reported as due to 
+atherosclerosis, and this is a correct causal relationship. No further modifications apply. Code ‘arterial 
+embolism of left leg’ as the underlying cause of death. 
+2.18.4 Step M4 - Instructions on medical procedures, main injury, poisoning, and 
+maternal deaths 
+Finally, apply the following instructions to the tentative underlying cause selected by 
+applying Steps SP1 to SP8 and Steps M1 to M3. 
+If the tentative underlying cause is: 
+
+
+=== P 94 (SRC 96) ===
+ 
+94 
+ 
+ICD-11 MMS  
+ 
+• 
+Surgery, another type of medical procedure, a complication or postprocedural 
+condition, apply the instructions in Section 2.19.4 Special instructions on surgery and 
+other medical procedures (Step M4). 
+• 
+In Chapter 22 ‘Injury, poisoning or certain other consequences of external causes’, 
+first code the external cause of the injury or poisoning as the underlying cause of 
+death. Also add the main injury to the cluster by following instructions in Section 
+2.19.5 Special instructions on main injury in deaths from external causes (Step M4). 
+• 
+In Chapter 23 ‘External causes of morbidity and mortality’ also add the main injury to 
+the cluster by following instructions in Section 2.19.5 Special instructions on main 
+injury in deaths from external causes (Step M4). 
+• 
+Poisoning, use additional extension code from Section X (Extension Codes), if 
+applicable, to identify the specific name of drug or toxic substance reported. If more 
+than one drug or toxic substance is reported on the certificate, apply instructions in 
+Section 2.19.6 Special instructions on poisoning by drugs, medications and biological 
+substances (Step M4), to identify the drug, medicament or substance most likely to 
+have caused the death. 
+If the decedent is a woman, and pregnancy, childbirth or puerperium is reported on the 
+certificate, determine whether to code the tentative underlying cause to Chapter 18 
+‘Pregnancy, childbirth and the puerperium’ according to the instructions in Section 2.19.7 
+Special instructions on maternal mortality (Step M4). 
+When creating a cluster in Step M4, always put the code for the underlying cause of death 
+at the beginning of the cluster. 
+After applying Step M4, the tentative underlying cause, modified or not, becomes the 
+underlying cause of death. 
+If Step M4 does not apply, the tentative underlying cause becomes the underlying cause of 
+death. 
+Note that other restrictions may apply, for example that the cause is limited to one of the 
+sexes (see also Sections 2.21.7 and 3.14 (3.14.11 and 3.14.12)) or to a specific age range, or 
+that the cause of death is improbable, considering the geographical setting. Therefore, 
+always check whether any such restrictions apply to the underlying cause you selected. 
+2.19 Special instructions on selecting the underlying cause of death 
+The following sections are to be referred to in applying each instruction of Section 2.17.3 
+(Steps SP1 to SP8) and Section 2.18 (Steps M1 to M4). 
+2.19.1 Special instructions on accepted and rejected sequences (Steps SP3 and SP4) 
+This section lists sequences of causes of death that should be accepted or rejected when 
+selecting the underlying cause of death. As described in Section 2.16.2 Causal relationship 
+and sequence, these instructions are set with the aim of producing the most useful 
+mortality statistics. Individual countries should not correct what is assumed to be an error, 
+since changes at the national level will lead to data that are less comparable to data from 
+other countries, and thus less useful for analysis. 
+
+
+=== P 95 (SRC 97) ===
+ 
+ICD-11 Reference Guide 
+95 
+ 
+A reported causal relationship not listed as rejected in this section should be accepted, as 
+far as possible, because the certifier’s opinion about the causes leading to death should not 
+be disregarded lightly. 
+When applying Steps SP3 and SP4, reject the relationships listed in this section. Exceptions 
+are listed as ‘accept’ in the table following each instruction. 
+Note that all information on causal relationship provided on the certificate should be 
+considered. This applies also if the information appears in the ‘wrong’ place of the 
+certificate. For example, if the sequence in Part 1 starts with a disease ‘A’, and information 
+elsewhere on the certificate states that disease ‘A’ was due to a disease ‘B’, then consider 
+‘B’ as the tentative starting point. This also applies if disease ‘A’ and disease ‘B’ are coded to 
+the same ICD-11 code and reported on separate lines of Part 1. 
+2.19.1.1 Conflicting durations 
+Do not accept a condition with a stated duration as due to a condition with a shorter 
+duration. 
+Consequence 
+Caused by 
+A condition with a stated duration 
+Do not accept a condition with a shorter duration 
+When a duration of a condition is unknown or not stated assume the duration do not 
+conflict, and do not reject a causal relationship by duration in such case. 
+2.19.1.2 Infectious diseases due to other conditions 
+Cholera and certain infectious diseases due to other conditions 
+Do not accept the following infectious and parasitic diseases as due to any other causes, not 
+even human immunodeficiency virus (HIV) disease, malignant neoplasms or conditions 
+impairing the immune system: 
+
+
+=== P 96 (SRC 98) ===
+ 
+96 
+ 
+ICD-11 MMS  
+ 
+Condition 
+Code 
+1A00 
+Cholera 
+1A11 
+Botulism 
+1B20 
+Leprosy 
+1B50 
+Scarlet fever 
+1B91 
+Leptospirosis 
+1B93 
+Plague 
+1B94 
+Tularaemia 
+1B95 
+Brucellosis 
+1B97 
+Anthrax 
+1C11.1 
+Trench fever 
+1C12 
+Whooping cough 
+1C13 
+Tetanus 
+1C14 
+Obstetrical tetanus 
+1C15 
+Tetanus neonatorum 
+1C17 
+Diphtheria 
+1C1C 
+Meningococcal disease 
+1C22 
+Infections due to Chlamydia psittaci 
+1C23.Z 
+Trachoma 
+1C3Z 
+Rickettsioses 
+1C80-1C8Z 
+Viral infections of the central nervous system 
+1D20-1D2Z Dengue 
+1D47 
+Yellow fever 
+1D40 
+Chikungunya virus disease 
+1D42 
+O’nyong-nyong fever 
+1D44 
+Rift Valley fever 
+1D46 
+West Nile virus infection 
+1D48 
+Zika virus disease 
+1D49 
+Crimean-Congo haemorrhagic fever 
+1D4A 
+Omsk haemorrhagic fever 
+1D4B 
+Kyasanur Forest disease 
+1D4C 
+Alkhurma haemorrhagic fever 
+1D40-1D4Z Certain arthropod-borne viral fevers 
+1D60.0 
+Ebola disease 
+1D60.1 
+Marburg disease 
+1D61.0 
+Argentinian haemorrhagic fever 
+1D61.1 
+Bolivian haemorrhagic fever 
+1D61.2 
+Lassa fever 
+
+
+=== P 97 (SRC 99) ===
+ 
+ICD-11 Reference Guide 
+97 
+ 
+Condition 
+Code 
+1D62.0 
+Haemorrhagic fever with renal syndrome 
+1D65 
+Severe acute respiratory syndrome 
+1D80 
+Mumps 
+1D86 
+Viral haemorrhagic fever, not elsewhere classified 
+1E30-1E32 
+Influenza 
+1E50.1 
+Acute hepatitis B 
+1E50.2 
+Acute hepatitis C 
+1E51.0 
+Chronic hepatitis B 
+1E51.1 
+Chronic hepatitis C 
+1E51.2 
+Chronic hepatitis D 
+1E70 
+Smallpox 
+1E71 
+Mpox (Monkeypox) 
+1F02 
+Rubella 
+1F03 
+Measles 
+1F40-1F4Z 
+Malaria 
+1F51 
+African trypanosomiasis 
+1F53 
+Chagas disease 
+1F54 
+Leishmaniasis 
+8A45.01 
+Subacute sclerosing panencephalitis 
+8E02.0 
+Genetic Creutzfeldt-Jakob disease 
+R - 
+Other emerging diseases reportable to WHO (e.g. RA01.- COVID-19) 
+    
+Consequence condition 
+Causal condition 
+Cholera etc., listed above Do not accept other causes 
+    
+Typhoid and certain infectious disease due to other conditions 
+Do not accept the following infectious diseases as due to other causes, except HIV disease, 
+malignant neoplasms and conditions impairing the immune system: 
+• 
+1A02 Intestinal infections due to Shigella 
+• 
+1A07 Typhoid fever 
+• 
+1A08 Paratyphoid fever 
+• 
+1A09 Infections due to other Salmonella 
+• 
+1B10-1B1Z Tuberculosis 
+    
+
+
+=== P 98 (SRC 100) ===
+ 
+98 
+ 
+ICD-11 MMS  
+ 
+Consequence condition 
+Causal condition 
+Intestinal infections due to 
+Shigella 
+Accept HIV disease, malignant neoplasms, and conditions 
+impairing the immune system 
+Typhoid fever 
+Do not accept other causes 
+Paratyphoid fever 
+ 
+Infections due to other 
+Salmonella 
+ 
+Tuberculosis 
+ 
+    
+HIV due to other conditions 
+Do not accept HIV disease (1C60 - 1C62) as due to other conditions, except: 
+• 
+conditions necessitating blood transfusion, such as haemophilia, anaemia and major 
+injuries 
+• 
+invasive procedures, such as surgery 
+• 
+drug abuse 
+Examples of such conditions are given in the Mortality Annex 3.14. Note that the list in 
+Mortality Annex 3.14 is not complete and should be considered indicative. 
+    
+Consequence 
+condition 
+Causal condition 
+HIV 
+Accept 
+ 
+- conditions necessitating blood transfusion, such as haemophilia, 
+anaemia and major injuries 
+ 
+- invasive procedures, such as surgery 
+ 
+- drug abuse 
+ 
+(for examples, refer to Mortality Annex 3.14.) 
+ 
+Do not accept other causes 
+    
+Infectious diseases not listed above due to other conditions 
+Infectious diseases not listed above are accepted to be caused by other conditions. 
+Consequence condition 
+Causal condition 
+Infectious diseases not listed above Accept other causes 
+    
+2.19.1.3 Malignant neoplasms due to other conditions 
+Do not accept a malignant neoplasm as due to any other cause, except : 
+
+

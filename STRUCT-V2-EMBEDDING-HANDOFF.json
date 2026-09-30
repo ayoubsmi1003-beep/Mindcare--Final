@@ -1,0 +1,37 @@
+{
+  "status": "READY_FOR_SEPARATE_EMBEDDING_TASK",
+  "approval_state": "RECONCILED_FROM_EXISTING_EVIDENCE",
+  "approved_corpus_scope": "dsm5-fr-2015-elsevier canonical knowledge/book content and approved structural policies",
+  "source_id": "dsm5-fr-2015-elsevier",
+  "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+  "total_chunks": 14079,
+  "active_chunks": 0,
+  "structurally_certified_chunks": 13991,
+  "quarantined_chunks": 88,
+  "excluded_chunks": 0,
+  "chunks_requiring_embeddings": 13991,
+  "chunks_intentionally_without_embeddings": 88,
+  "embedding_recipe": "knowledge/recette-embedding-struct-v2.json",
+  "embedding_model_expected": "BAAI/bge-m3",
+  "embedding_dimensions": 1024,
+  "struct_v2_version": "struct-v2",
+  "struct_v2_artifact_hash": "cb832ee12e03131439db9dc3bfdec3fd8980b689872cd71ce023a64b926a3fb8",
+  "provenance_guarantees": [
+    "PDF/source page and printed page remain separate",
+    "unresolved printed pages remain unresolved",
+    "source-version overlay is derived only",
+    "duplicate provenance is preserved",
+    "88 vectors remain quarantined"
+  ],
+  "approval_references": [
+    "STRUCT-V2-APPROVAL-RECORD.json",
+    "book.json:human_validation",
+    "current_task_context:doctor_and_operator_approval"
+  ],
+  "remaining_non_blocking_engineering_failures": [
+    "three pre-existing temporary QA script lint errors",
+    "four pre-existing transport-socket implicit-any typecheck errors"
+  ],
+  "embedding_execution_performed": false,
+  "activation_execution_performed": false
+}

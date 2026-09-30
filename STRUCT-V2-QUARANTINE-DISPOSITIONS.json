@@ -1,0 +1,3514 @@
+{
+  "status": "RECONCILED",
+  "approval_state": "APPROVED_EXISTING_DECISION",
+  "classification_rule": "Keep all approved diagnostic vector dispositions quarantined; do not embed or activate them in the separate task.",
+  "before_count": 88,
+  "after_count": 88,
+  "status_counts": {
+    "VALID": 0,
+    "REPAIRED": 0,
+    "MERGED": 0,
+    "SUPERSEDED": 0,
+    "QUARANTINED": 88,
+    "REJECTED": 0
+  },
+  "source_file": "knowledge/canonical-v2/dsm5-fr-2015-elsevier/sha256-be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53/embeddings-v2.jsonl",
+  "source_file_sha256": "9e7fe1028ee5c4eb9979bbc8ead541dde042e54e10b28bdb14fdeb5de2ab26df",
+  "items": [
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk a25b3f57c8b9365111338ecb54a0209bfed8d2fcec1f6325dc2550f2cb3b582b"
+      ],
+      "affected_chunk_ids": [
+        "a25b3f57c8b9365111338ecb54a0209bfed8d2fcec1f6325dc2550f2cb3b582b"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 60,
+          "end": 60
+        },
+        "printed_page": {
+          "start": "1",
+          "end": "1"
+        },
+        "section_path": [
+          "Avant-matière",
+          "Avant-matière"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 493a393db1cbec6ea673b60d51af509a017d0b68d3bf8f91130dc7c8e087a1d2"
+      ],
+      "affected_chunk_ids": [
+        "493a393db1cbec6ea673b60d51af509a017d0b68d3bf8f91130dc7c8e087a1d2"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 60,
+          "end": 60
+        },
+        "printed_page": {
+          "start": "1",
+          "end": "1"
+        },
+        "section_path": [
+          "Avant-matière",
+          "Avant-matière"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk f9694e682c369f8ae4216f437636b0e54a3cf7920aa098814fb09bce4e24ecc0"
+      ],
+      "affected_chunk_ids": [
+        "f9694e682c369f8ae4216f437636b0e54a3cf7920aa098814fb09bce4e24ecc0"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 60,
+          "end": 60
+        },
+        "printed_page": {
+          "start": "1",
+          "end": "1"
+        },
+        "section_path": [
+          "Avant-matière",
+          "Avant-matière"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 3b99acb4943078a2ce8c37b9543e11629959b5947471503c15033aed994e7de4"
+      ],
+      "affected_chunk_ids": [
+        "3b99acb4943078a2ce8c37b9543e11629959b5947471503c15033aed994e7de4"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 60,
+          "end": 60
+        },
+        "printed_page": {
+          "start": "1",
+          "end": "1"
+        },
+        "section_path": [
+          "Avant-matière",
+          "Avant-matière"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk a18485a8fbc4eff8329e1f599490b448ae6a8eef1b2a74009d500b874462cd05"
+      ],
+      "affected_chunk_ids": [
+        "a18485a8fbc4eff8329e1f599490b448ae6a8eef1b2a74009d500b874462cd05"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 60,
+          "end": 60
+        },
+        "printed_page": {
+          "start": "1",
+          "end": "1"
+        },
+        "section_path": [
+          "Avant-matière",
+          "Avant-matière"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 7409e7349143841174e7a626f5dc4a1905547a7c9bfc0892999c519920103abe"
+      ],
+      "affected_chunk_ids": [
+        "7409e7349143841174e7a626f5dc4a1905547a7c9bfc0892999c519920103abe"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 60,
+          "end": 60
+        },
+        "printed_page": {
+          "start": "1",
+          "end": "1"
+        },
+        "section_path": [
+          "Avant-matière",
+          "Avant-matière"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk a2e9382b37b13a0730cd5b54f8b4bda040296e7e735449113b910dbae3852772"
+      ],
+      "affected_chunk_ids": [
+        "a2e9382b37b13a0730cd5b54f8b4bda040296e7e735449113b910dbae3852772"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 60,
+          "end": 60
+        },
+        "printed_page": {
+          "start": "1",
+          "end": "1"
+        },
+        "section_path": [
+          "Avant-matière",
+          "Avant-matière"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 8d239d5d347b08984a939f1442493fbe3c653a3dee99c813d3556c89ce17b725"
+      ],
+      "affected_chunk_ids": [
+        "8d239d5d347b08984a939f1442493fbe3c653a3dee99c813d3556c89ce17b725"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 60,
+          "end": 60
+        },
+        "printed_page": {
+          "start": "1",
+          "end": "1"
+        },
+        "section_path": [
+          "Avant-matière",
+          "Avant-matière"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk c8304e3cdbbbe5f6d4ecb4e56fa15391ef951e13b17bf45c682550ac64f6c1a7"
+      ],
+      "affected_chunk_ids": [
+        "c8304e3cdbbbe5f6d4ecb4e56fa15391ef951e13b17bf45c682550ac64f6c1a7"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 60,
+          "end": 60
+        },
+        "printed_page": {
+          "start": "1",
+          "end": "1"
+        },
+        "section_path": [
+          "Avant-matière",
+          "Avant-matière"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 7a81d70c06fa2b7fbc0933532ae742eff82281f87240b0e4db3336d5c9045a64"
+      ],
+      "affected_chunk_ids": [
+        "7a81d70c06fa2b7fbc0933532ae742eff82281f87240b0e4db3336d5c9045a64"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 60,
+          "end": 60
+        },
+        "printed_page": {
+          "start": "1",
+          "end": "1"
+        },
+        "section_path": [
+          "Avant-matière",
+          "Avant-matière"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 62ac024a47bdbe98ffef54568943589cb151020a2e34dd667453ee509b892089"
+      ],
+      "affected_chunk_ids": [
+        "62ac024a47bdbe98ffef54568943589cb151020a2e34dd667453ee509b892089"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 69,
+          "end": 70
+        },
+        "printed_page": {
+          "start": "10",
+          "end": "11"
+        },
+        "section_path": [
+          "Section I — Les fondements du DSM-5",
+          "Introduction",
+          "Structure organisationnelle du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk e6b033f30437e4569caaeb5be880d6cffa152bde41fb617caca501e5ca6e7dd9"
+      ],
+      "affected_chunk_ids": [
+        "e6b033f30437e4569caaeb5be880d6cffa152bde41fb617caca501e5ca6e7dd9"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 70,
+          "end": 71
+        },
+        "printed_page": {
+          "start": "11",
+          "end": "12"
+        },
+        "section_path": [
+          "Section I — Les fondements du DSM-5",
+          "Introduction",
+          "Harmonisation avec la CIM-11"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk f54351b6550331a71ef356318321b11551f027fedce90446e64863c5172c6e3c"
+      ],
+      "affected_chunk_ids": [
+        "f54351b6550331a71ef356318321b11551f027fedce90446e64863c5172c6e3c"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 159,
+          "end": 159
+        },
+        "printed_page": {
+          "start": "100",
+          "end": "100"
+        },
+        "section_path": [
+          "Section II — Critères diagnostiques et codes",
+          "Troubles neurodéveloppementaux",
+          "Tics non spécifiés",
+          "307.20 (F95.9)"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk b33195a146eed8f39c8bb6e4e20030e8c8a07ca102382617c325ad2fa6a52fa3"
+      ],
+      "affected_chunk_ids": [
+        "b33195a146eed8f39c8bb6e4e20030e8c8a07ca102382617c325ad2fa6a52fa3"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 159,
+          "end": 159
+        },
+        "printed_page": {
+          "start": "100",
+          "end": "100"
+        },
+        "section_path": [
+          "Section II — Critères diagnostiques et codes",
+          "Troubles neurodéveloppementaux",
+          "Autre trouble neurodéveloppemental spécifié",
+          "315.8 (F88)"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 33859bef9a863e184b9b1f84750fe538fcd7ebaf38624b945d933fcd1bc8fa56"
+      ],
+      "affected_chunk_ids": [
+        "33859bef9a863e184b9b1f84750fe538fcd7ebaf38624b945d933fcd1bc8fa56"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1059,
+          "end": 1059
+        },
+        "printed_page": {
+          "start": "1000",
+          "end": "1000"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 063c711e89da1c7ec7e9e940e723c8a4b6b63272703db540d3d345cdd5231843"
+      ],
+      "affected_chunk_ids": [
+        "063c711e89da1c7ec7e9e940e723c8a4b6b63272703db540d3d345cdd5231843"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1059,
+          "end": 1059
+        },
+        "printed_page": {
+          "start": "1000",
+          "end": "1000"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 00ec69c0315ad6f54ddc77e4a7332bb071be05a4765c5e711602c153ae505458"
+      ],
+      "affected_chunk_ids": [
+        "00ec69c0315ad6f54ddc77e4a7332bb071be05a4765c5e711602c153ae505458"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1059,
+          "end": 1059
+        },
+        "printed_page": {
+          "start": "1000",
+          "end": "1000"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk c25ce1882601c3553b8fa9d5a45c2e06e891e07c533accd4d5686650fee7f737"
+      ],
+      "affected_chunk_ids": [
+        "c25ce1882601c3553b8fa9d5a45c2e06e891e07c533accd4d5686650fee7f737"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1059,
+          "end": 1059
+        },
+        "printed_page": {
+          "start": "1000",
+          "end": "1000"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 4987893b862c4a98d3291b1eb9ad3fc49836e2534b908cde7d77cc8c77deec62"
+      ],
+      "affected_chunk_ids": [
+        "4987893b862c4a98d3291b1eb9ad3fc49836e2534b908cde7d77cc8c77deec62"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1059,
+          "end": 1059
+        },
+        "printed_page": {
+          "start": "1000",
+          "end": "1000"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 89ff2fa8599d1c467ee6fa604d51be499e8378f78869678ae2d03b35f1afc891"
+      ],
+      "affected_chunk_ids": [
+        "89ff2fa8599d1c467ee6fa604d51be499e8378f78869678ae2d03b35f1afc891"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1059,
+          "end": 1059
+        },
+        "printed_page": {
+          "start": "1000",
+          "end": "1000"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 822256716ede0f43d50bd5506975f07f5192030ec16b130df3e62276c3dba834"
+      ],
+      "affected_chunk_ids": [
+        "822256716ede0f43d50bd5506975f07f5192030ec16b130df3e62276c3dba834"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1059,
+          "end": 1059
+        },
+        "printed_page": {
+          "start": "1000",
+          "end": "1000"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk e0d416c74e8612195926377cdb1a3639ca69df23f5dc9c8fd7874c76dbacefa3"
+      ],
+      "affected_chunk_ids": [
+        "e0d416c74e8612195926377cdb1a3639ca69df23f5dc9c8fd7874c76dbacefa3"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1060,
+          "end": 1060
+        },
+        "printed_page": {
+          "start": "1001",
+          "end": "1001"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 7f33bf3e8eaa6ddbd153a00e8d8b55f15e55f6419f19d39b64a44939b16cd11e"
+      ],
+      "affected_chunk_ids": [
+        "7f33bf3e8eaa6ddbd153a00e8d8b55f15e55f6419f19d39b64a44939b16cd11e"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1060,
+          "end": 1060
+        },
+        "printed_page": {
+          "start": "1001",
+          "end": "1001"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk f0d4f48725e5fccf0f085e2eb832c1cf4c30edc02ad460c43563b01bf963cda2"
+      ],
+      "affected_chunk_ids": [
+        "f0d4f48725e5fccf0f085e2eb832c1cf4c30edc02ad460c43563b01bf963cda2"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1060,
+          "end": 1060
+        },
+        "printed_page": {
+          "start": "1001",
+          "end": "1001"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk c4cc60644fd17669d632abddaade808138043c6826d11d5dfab780ea5ccee202"
+      ],
+      "affected_chunk_ids": [
+        "c4cc60644fd17669d632abddaade808138043c6826d11d5dfab780ea5ccee202"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1060,
+          "end": 1060
+        },
+        "printed_page": {
+          "start": "1001",
+          "end": "1001"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 67c66803a137e9f6de9c491a9d75f603d5ba406eb55fdd4ba8382a1e2c327b9d"
+      ],
+      "affected_chunk_ids": [
+        "67c66803a137e9f6de9c491a9d75f603d5ba406eb55fdd4ba8382a1e2c327b9d"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1060,
+          "end": 1060
+        },
+        "printed_page": {
+          "start": "1001",
+          "end": "1001"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk c2c5d1d3d9347614bb02c02ae05a777fcc1f0ecdf1d6cdbe7b7a99e4b6328f7f"
+      ],
+      "affected_chunk_ids": [
+        "c2c5d1d3d9347614bb02c02ae05a777fcc1f0ecdf1d6cdbe7b7a99e4b6328f7f"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1060,
+          "end": 1060
+        },
+        "printed_page": {
+          "start": "1001",
+          "end": "1001"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 328adb5bc2aa74f357c7abcfc8322c3c8b55aa224af33d7c12f0d331f82e0f8f"
+      ],
+      "affected_chunk_ids": [
+        "328adb5bc2aa74f357c7abcfc8322c3c8b55aa224af33d7c12f0d331f82e0f8f"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1060,
+          "end": 1060
+        },
+        "printed_page": {
+          "start": "1001",
+          "end": "1001"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 5f6fda878fb3ff8cde6db10c5c3cd7e360b8110f6244263dc4df69dd44478651"
+      ],
+      "affected_chunk_ids": [
+        "5f6fda878fb3ff8cde6db10c5c3cd7e360b8110f6244263dc4df69dd44478651"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1061,
+          "end": 1061
+        },
+        "printed_page": {
+          "start": "1002",
+          "end": "1002"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5",
+          "Tableau 3"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 6cc477e8ba562de787737e1d9e23b458818232f47809c68b939e1c295d5f5acb"
+      ],
+      "affected_chunk_ids": [
+        "6cc477e8ba562de787737e1d9e23b458818232f47809c68b939e1c295d5f5acb"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1061,
+          "end": 1061
+        },
+        "printed_page": {
+          "start": "1002",
+          "end": "1002"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5",
+          "Tableau 3"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 3d61100de8d6994957af93e14f88b8d8076453886c34154adeb0464cbe2ab8ca"
+      ],
+      "affected_chunk_ids": [
+        "3d61100de8d6994957af93e14f88b8d8076453886c34154adeb0464cbe2ab8ca"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1062,
+          "end": 1062
+        },
+        "printed_page": {
+          "start": "1003",
+          "end": "1003"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk a83adebd42142e688b7d65630fe971e8e81a186ee283476c56b1f86d02998860"
+      ],
+      "affected_chunk_ids": [
+        "a83adebd42142e688b7d65630fe971e8e81a186ee283476c56b1f86d02998860"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1062,
+          "end": 1062
+        },
+        "printed_page": {
+          "start": "1003",
+          "end": "1003"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 99a91040138024005b6550410c9bd476cccfda32c8bfc849910d488798d38629"
+      ],
+      "affected_chunk_ids": [
+        "99a91040138024005b6550410c9bd476cccfda32c8bfc849910d488798d38629"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1062,
+          "end": 1062
+        },
+        "printed_page": {
+          "start": "1003",
+          "end": "1003"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 8f8a2a725b90a1b9e5c34bd35c95efee5167fe9296952011181a2c8301d8c7c6"
+      ],
+      "affected_chunk_ids": [
+        "8f8a2a725b90a1b9e5c34bd35c95efee5167fe9296952011181a2c8301d8c7c6"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1062,
+          "end": 1062
+        },
+        "printed_page": {
+          "start": "1003",
+          "end": "1003"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 3c937079a62b73a5118a87f9d8f746b0be9eb3468c0343ac058b396f47c3bb46"
+      ],
+      "affected_chunk_ids": [
+        "3c937079a62b73a5118a87f9d8f746b0be9eb3468c0343ac058b396f47c3bb46"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1062,
+          "end": 1062
+        },
+        "printed_page": {
+          "start": "1003",
+          "end": "1003"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk d96612abd7298a3109452eca37ef7fa8240ccb6df12afd60704573793ced8f21"
+      ],
+      "affected_chunk_ids": [
+        "d96612abd7298a3109452eca37ef7fa8240ccb6df12afd60704573793ced8f21"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1062,
+          "end": 1062
+        },
+        "printed_page": {
+          "start": "1003",
+          "end": "1003"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk ed5c3573a5a81f6a7b8c0e334da402c2d3383d4b07f4c793a1c08f1bc7ff48a4"
+      ],
+      "affected_chunk_ids": [
+        "ed5c3573a5a81f6a7b8c0e334da402c2d3383d4b07f4c793a1c08f1bc7ff48a4"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1062,
+          "end": 1062
+        },
+        "printed_page": {
+          "start": "1003",
+          "end": "1003"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 4cae0acffa60c6a9e08ee9d2e5e243b1f58baae85e8386b47d7ab28e6b39f87c"
+      ],
+      "affected_chunk_ids": [
+        "4cae0acffa60c6a9e08ee9d2e5e243b1f58baae85e8386b47d7ab28e6b39f87c"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1063,
+          "end": 1063
+        },
+        "printed_page": {
+          "start": "1004",
+          "end": "1004"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5",
+          "Cotation du niveau de fonctionnement"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 08967ca101ef9f2c94f91861e045ee7e94320d2964e31e497880191b9878cefc"
+      ],
+      "affected_chunk_ids": [
+        "08967ca101ef9f2c94f91861e045ee7e94320d2964e31e497880191b9878cefc"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1064,
+          "end": 1064
+        },
+        "printed_page": {
+          "start": "1005",
+          "end": "1005"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5",
+          "Traits de personnalité"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 1a5cd39d5a5ff40c062d361edfdd937c1279872b3d1dc0215effbe56ce0f3f12"
+      ],
+      "affected_chunk_ids": [
+        "1a5cd39d5a5ff40c062d361edfdd937c1279872b3d1dc0215effbe56ce0f3f12"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1064,
+          "end": 1064
+        },
+        "printed_page": {
+          "start": "1005",
+          "end": "1005"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5",
+          "Dimensionnalité des traits"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 2014a1d60f4757ed60a75f2df2434e11be9331bf700e64d8f7b2c9fb28da2758"
+      ],
+      "affected_chunk_ids": [
+        "2014a1d60f4757ed60a75f2df2434e11be9331bf700e64d8f7b2c9fb28da2758"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1064,
+          "end": 1064
+        },
+        "printed_page": {
+          "start": "1005",
+          "end": "1005"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5",
+          "Structure hiérarchique"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 6f05a951c8abb2f5b9183357e32e807357140698944f72801be59d8f07917d1a"
+      ],
+      "affected_chunk_ids": [
+        "6f05a951c8abb2f5b9183357e32e807357140698944f72801be59d8f07917d1a"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1064,
+          "end": 1065
+        },
+        "printed_page": {
+          "start": "1005",
+          "end": "1006"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5",
+          "Modèle des traits"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 574077df64c7cd709d710468f099810f0146143e03e6809bd6e4a310e1be9c78"
+      ],
+      "affected_chunk_ids": [
+        "574077df64c7cd709d710468f099810f0146143e03e6809bd6e4a310e1be9c78"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1065,
+          "end": 1065
+        },
+        "printed_page": {
+          "start": "1006",
+          "end": "1006"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5",
+          "Distinction entre traits"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 10bcd532255e9d29ae4ad4301530b1ed858622993b9d8463e8c1c23dfc0962f6"
+      ],
+      "affected_chunk_ids": [
+        "10bcd532255e9d29ae4ad4301530b1ed858622993b9d8463e8c1c23dfc0962f6"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1065,
+          "end": 1065
+        },
+        "printed_page": {
+          "start": "1006",
+          "end": "1006"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5",
+          "Distinction entre traits"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 63fbf6b338349df00ae08b94ce461001b30be525f0fe07a7852d8ad608b2a076"
+      ],
+      "affected_chunk_ids": [
+        "63fbf6b338349df00ae08b94ce461001b30be525f0fe07a7852d8ad608b2a076"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1065,
+          "end": 1066
+        },
+        "printed_page": {
+          "start": "1006",
+          "end": "1007"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5",
+          "Évaluation du modèle des traits"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk e9bd520336f8cfe330c54004c0bf3c4914ff4f734ae22602677ecb1b129fedb6"
+      ],
+      "affected_chunk_ids": [
+        "e9bd520336f8cfe330c54004c0bf3c4914ff4f734ae22602677ecb1b129fedb6"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1065,
+          "end": 1066
+        },
+        "printed_page": {
+          "start": "1006",
+          "end": "1007"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5",
+          "Évaluation du modèle des traits"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk a4b7435b54b377d737194c5891383c1c39ddaa725685917f75f7ea000819f99f"
+      ],
+      "affected_chunk_ids": [
+        "a4b7435b54b377d737194c5891383c1c39ddaa725685917f75f7ea000819f99f"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1066,
+          "end": 1067
+        },
+        "printed_page": {
+          "start": "1007",
+          "end": "1008"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5",
+          "Utilité clinique"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 751bcabacfbcad6cc5d160d0635781447402b7b2483ce4a62ff85861b024d7ad"
+      ],
+      "affected_chunk_ids": [
+        "751bcabacfbcad6cc5d160d0635781447402b7b2483ce4a62ff85861b024d7ad"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1067,
+          "end": 1068
+        },
+        "printed_page": {
+          "start": "1008",
+          "end": "1009"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5",
+          "Références"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 4bf635651d50c9b980fdc9ea207a1b7ee9ee5911c60646cb8d4746c3ea00452c"
+      ],
+      "affected_chunk_ids": [
+        "4bf635651d50c9b980fdc9ea207a1b7ee9ee5911c60646cb8d4746c3ea00452c"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1067,
+          "end": 1068
+        },
+        "printed_page": {
+          "start": "1008",
+          "end": "1009"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5",
+          "Références"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 352c8acd2a722e5fe591c948b26e99181c179c71cdb7819cfff5cae3f440db68"
+      ],
+      "affected_chunk_ids": [
+        "352c8acd2a722e5fe591c948b26e99181c179c71cdb7819cfff5cae3f440db68"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1067,
+          "end": 1068
+        },
+        "printed_page": {
+          "start": "1008",
+          "end": "1009"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5",
+          "Références"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk e118df89ccbb1c426d020b4cc48e08e2586477dbda33fb1936df6649228a3284"
+      ],
+      "affected_chunk_ids": [
+        "e118df89ccbb1c426d020b4cc48e08e2586477dbda33fb1936df6649228a3284"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 160,
+          "end": 160
+        },
+        "printed_page": {
+          "start": "101",
+          "end": "101"
+        },
+        "section_path": [
+          "Section II — Critères diagnostiques et codes",
+          "Troubles neurodéveloppementaux",
+          "Références",
+          "Références — Trouble neurodéveloppemental non spécifié"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk a3b02bfe7d6d54a518a02b815e1c984dd77fd4d9c826a06569fbc55b7db71f51"
+      ],
+      "affected_chunk_ids": [
+        "a3b02bfe7d6d54a518a02b815e1c984dd77fd4d9c826a06569fbc55b7db71f51"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 160,
+          "end": 160
+        },
+        "printed_page": {
+          "start": "101",
+          "end": "101"
+        },
+        "section_path": [
+          "Section II — Critères diagnostiques et codes",
+          "Troubles neurodéveloppementaux",
+          "Références",
+          "Références — du développement intellectuel)"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 8be18d66779504e0166abe82c135754b5fe58266bb0803149cea32083ab1058d"
+      ],
+      "affected_chunk_ids": [
+        "8be18d66779504e0166abe82c135754b5fe58266bb0803149cea32083ab1058d"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 160,
+          "end": 160
+        },
+        "printed_page": {
+          "start": "101",
+          "end": "101"
+        },
+        "section_path": [
+          "Section II — Critères diagnostiques et codes",
+          "Troubles neurodéveloppementaux",
+          "Références",
+          "Références — du développement intellectuel)"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk dec8c000a3e981bc0838680248fcb520a508678311e9bb276df50dca4c99d7fc"
+      ],
+      "affected_chunk_ids": [
+        "dec8c000a3e981bc0838680248fcb520a508678311e9bb276df50dca4c99d7fc"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 160,
+          "end": 160
+        },
+        "printed_page": {
+          "start": "101",
+          "end": "101"
+        },
+        "section_path": [
+          "Section II — Critères diagnostiques et codes",
+          "Troubles neurodéveloppementaux",
+          "Références",
+          "Références — du développement intellectuel)"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 47ff667cb0a18428db01c21275ea4ddf926103edd68ad759921bed8cb9692e7a"
+      ],
+      "affected_chunk_ids": [
+        "47ff667cb0a18428db01c21275ea4ddf926103edd68ad759921bed8cb9692e7a"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1069,
+          "end": 1069
+        },
+        "printed_page": {
+          "start": "1010",
+          "end": "1010"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk d2d7490bc5ae6c65a45fb52f2b468e7a263e6d6a8e863ba69f31d557d197ba86"
+      ],
+      "affected_chunk_ids": [
+        "d2d7490bc5ae6c65a45fb52f2b468e7a263e6d6a8e863ba69f31d557d197ba86"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1069,
+          "end": 1069
+        },
+        "printed_page": {
+          "start": "1010",
+          "end": "1010"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk e5fcbd38042b4552f5bb4bef2a96b90443d3be9170e55ca1155752bdb409d8b5"
+      ],
+      "affected_chunk_ids": [
+        "e5fcbd38042b4552f5bb4bef2a96b90443d3be9170e55ca1155752bdb409d8b5"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1070,
+          "end": 1070
+        },
+        "printed_page": {
+          "start": "1011",
+          "end": "1011"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Cadre"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 561c0a0c61dd0da91ec095fe844898ebb42d181d8d2b17e27f3ba2b6ebb29baa"
+      ],
+      "affected_chunk_ids": [
+        "561c0a0c61dd0da91ec095fe844898ebb42d181d8d2b17e27f3ba2b6ebb29baa"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1070,
+          "end": 1073
+        },
+        "printed_page": {
+          "start": "1011",
+          "end": "1014"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Syndrome psychotique atténué"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk e49491853d4a2607b67100c06501f1e38c0530c7bfe63ad6642692a055e51e4a"
+      ],
+      "affected_chunk_ids": [
+        "e49491853d4a2607b67100c06501f1e38c0530c7bfe63ad6642692a055e51e4a"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1070,
+          "end": 1073
+        },
+        "printed_page": {
+          "start": "1011",
+          "end": "1014"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Syndrome psychotique atténué"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 89ce4e77cecea18381e308ecd7310440d0edfce63dfb458a554a0197121d6a57"
+      ],
+      "affected_chunk_ids": [
+        "89ce4e77cecea18381e308ecd7310440d0edfce63dfb458a554a0197121d6a57"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1070,
+          "end": 1073
+        },
+        "printed_page": {
+          "start": "1011",
+          "end": "1014"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Syndrome psychotique atténué"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk e0a10bf58c136e0a81e5eec4d0269c27bd342401f686afd2f0f1d7dbc875797d"
+      ],
+      "affected_chunk_ids": [
+        "e0a10bf58c136e0a81e5eec4d0269c27bd342401f686afd2f0f1d7dbc875797d"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1070,
+          "end": 1073
+        },
+        "printed_page": {
+          "start": "1011",
+          "end": "1014"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Syndrome psychotique atténué"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk e1765cfb640296ff642da53c77503cc94bdca1f62c8616d3c807572ebf4a9478"
+      ],
+      "affected_chunk_ids": [
+        "e1765cfb640296ff642da53c77503cc94bdca1f62c8616d3c807572ebf4a9478"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1070,
+          "end": 1073
+        },
+        "printed_page": {
+          "start": "1011",
+          "end": "1014"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Syndrome psychotique atténué"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 97fafbd25e74f52d0173c507aeebb76d9cde9fc5d6b949459b7976e4cfc0a219"
+      ],
+      "affected_chunk_ids": [
+        "97fafbd25e74f52d0173c507aeebb76d9cde9fc5d6b949459b7976e4cfc0a219"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1070,
+          "end": 1073
+        },
+        "printed_page": {
+          "start": "1011",
+          "end": "1014"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Syndrome psychotique atténué"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 4bcfb477a65bc8ed9f2fddbcdcb121f7f30e2b68351e7946c8b8f1fcd2e7f22b"
+      ],
+      "affected_chunk_ids": [
+        "4bcfb477a65bc8ed9f2fddbcdcb121f7f30e2b68351e7946c8b8f1fcd2e7f22b"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1070,
+          "end": 1073
+        },
+        "printed_page": {
+          "start": "1011",
+          "end": "1014"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Syndrome psychotique atténué"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 4bb784c4a7ead32df9b0f16859a338bf6a553346b11a84f0c1b457ccffada7ae"
+      ],
+      "affected_chunk_ids": [
+        "4bb784c4a7ead32df9b0f16859a338bf6a553346b11a84f0c1b457ccffada7ae"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1074,
+          "end": 1077
+        },
+        "printed_page": {
+          "start": "1015",
+          "end": "1018"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Épisodes dépressifs avec hypomanie brève"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 78254f011f3bffcf546c431e325da3909e9fa4eb0bd2746ebd3c32b5142de8dd"
+      ],
+      "affected_chunk_ids": [
+        "78254f011f3bffcf546c431e325da3909e9fa4eb0bd2746ebd3c32b5142de8dd"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1074,
+          "end": 1077
+        },
+        "printed_page": {
+          "start": "1015",
+          "end": "1018"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Épisodes dépressifs avec hypomanie brève"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 530b3c786434cac00e16b8f4164fc74252af8b11cc94416c0c79f0475d49cd1f"
+      ],
+      "affected_chunk_ids": [
+        "530b3c786434cac00e16b8f4164fc74252af8b11cc94416c0c79f0475d49cd1f"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1074,
+          "end": 1077
+        },
+        "printed_page": {
+          "start": "1015",
+          "end": "1018"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Épisodes dépressifs avec hypomanie brève"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk d6601c14b790b1ed1f8cac5884276907996f7d0aa790e59bfeb8df318933eafe"
+      ],
+      "affected_chunk_ids": [
+        "d6601c14b790b1ed1f8cac5884276907996f7d0aa790e59bfeb8df318933eafe"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1074,
+          "end": 1077
+        },
+        "printed_page": {
+          "start": "1015",
+          "end": "1018"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Épisodes dépressifs avec hypomanie brève"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 8e98a63b88053eae7aca30ee2ae065645e5b8b4393ec9d17f102b8a4c6694047"
+      ],
+      "affected_chunk_ids": [
+        "8e98a63b88053eae7aca30ee2ae065645e5b8b4393ec9d17f102b8a4c6694047"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1074,
+          "end": 1077
+        },
+        "printed_page": {
+          "start": "1015",
+          "end": "1018"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Épisodes dépressifs avec hypomanie brève"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 2059df839013b696533f7464025fbfb7f3055eedeb8654df54fc078bdf30197b"
+      ],
+      "affected_chunk_ids": [
+        "2059df839013b696533f7464025fbfb7f3055eedeb8654df54fc078bdf30197b"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1074,
+          "end": 1077
+        },
+        "printed_page": {
+          "start": "1015",
+          "end": "1018"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Épisodes dépressifs avec hypomanie brève"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk ed3778ad501f464eaf9beafe8d7d8695042879866dbd41a774ecac1b91ba59c1"
+      ],
+      "affected_chunk_ids": [
+        "ed3778ad501f464eaf9beafe8d7d8695042879866dbd41a774ecac1b91ba59c1"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1077,
+          "end": 1081
+        },
+        "printed_page": {
+          "start": "1018",
+          "end": "1022"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Deuil complexe persistant"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 65a9946fca386c5bd58d3099ad9a3bb405b194a8fdbf3a6d9a03cf2cb2229e92"
+      ],
+      "affected_chunk_ids": [
+        "65a9946fca386c5bd58d3099ad9a3bb405b194a8fdbf3a6d9a03cf2cb2229e92"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1077,
+          "end": 1081
+        },
+        "printed_page": {
+          "start": "1018",
+          "end": "1022"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Deuil complexe persistant"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 74c5f225662032355c48411bb241eae8b174b5a47b7a2ce879da2e2c47bbecd9"
+      ],
+      "affected_chunk_ids": [
+        "74c5f225662032355c48411bb241eae8b174b5a47b7a2ce879da2e2c47bbecd9"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1077,
+          "end": 1081
+        },
+        "printed_page": {
+          "start": "1018",
+          "end": "1022"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Deuil complexe persistant"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 34865ad42c2be1914a879549938fc0a853501ae8f25622f9df36c57c899f6e07"
+      ],
+      "affected_chunk_ids": [
+        "34865ad42c2be1914a879549938fc0a853501ae8f25622f9df36c57c899f6e07"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1077,
+          "end": 1081
+        },
+        "printed_page": {
+          "start": "1018",
+          "end": "1022"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Deuil complexe persistant"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 0a1eb3b829ca4976923f8a2968bcdd6eef349960ab2427e3d31355e386dff54b"
+      ],
+      "affected_chunk_ids": [
+        "0a1eb3b829ca4976923f8a2968bcdd6eef349960ab2427e3d31355e386dff54b"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1077,
+          "end": 1081
+        },
+        "printed_page": {
+          "start": "1018",
+          "end": "1022"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Deuil complexe persistant"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 4fcaca31d1ef86c1cbd3dc930527da7552f7151f5b4a9bc43ad323477b572fef"
+      ],
+      "affected_chunk_ids": [
+        "4fcaca31d1ef86c1cbd3dc930527da7552f7151f5b4a9bc43ad323477b572fef"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1077,
+          "end": 1081
+        },
+        "printed_page": {
+          "start": "1018",
+          "end": "1022"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Deuil complexe persistant"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 02bda91844ab2e1581bb8e6745175f9eb4273eddb8f3269dc388b9c83a98a15c"
+      ],
+      "affected_chunk_ids": [
+        "02bda91844ab2e1581bb8e6745175f9eb4273eddb8f3269dc388b9c83a98a15c"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 161,
+          "end": 161
+        },
+        "printed_page": {
+          "start": "102",
+          "end": "102"
+        },
+        "section_path": [
+          "Section II — Critères diagnostiques et codes",
+          "Troubles neurodéveloppementaux",
+          "Références",
+          "Références — Trouble du langage"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 18a965c38213b9b4653852ee5b5b95d290826fbf5dfd4c7afaad5141b71a990e"
+      ],
+      "affected_chunk_ids": [
+        "18a965c38213b9b4653852ee5b5b95d290826fbf5dfd4c7afaad5141b71a990e"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 161,
+          "end": 161
+        },
+        "printed_page": {
+          "start": "102",
+          "end": "102"
+        },
+        "section_path": [
+          "Section II — Critères diagnostiques et codes",
+          "Troubles neurodéveloppementaux",
+          "Références",
+          "Références — Trouble du langage"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 2e476382e075bc5dd6d184beb232bfedfd51c258d01b405a8dacf0371f12d6a0"
+      ],
+      "affected_chunk_ids": [
+        "2e476382e075bc5dd6d184beb232bfedfd51c258d01b405a8dacf0371f12d6a0"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1081,
+          "end": 1084
+        },
+        "printed_page": {
+          "start": "1022",
+          "end": "1025"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Trouble de l’usage de la caféine"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk ff3768aef26950befc1e54cb5aa45a6d415fbea41a0a338d8f8a75edf595a081"
+      ],
+      "affected_chunk_ids": [
+        "ff3768aef26950befc1e54cb5aa45a6d415fbea41a0a338d8f8a75edf595a081"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1081,
+          "end": 1084
+        },
+        "printed_page": {
+          "start": "1022",
+          "end": "1025"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Trouble de l’usage de la caféine"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 97600635376fec8116224435d5f8f3766bac5e40bf1895510e84be69c2cd522a"
+      ],
+      "affected_chunk_ids": [
+        "97600635376fec8116224435d5f8f3766bac5e40bf1895510e84be69c2cd522a"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1081,
+          "end": 1084
+        },
+        "printed_page": {
+          "start": "1022",
+          "end": "1025"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Trouble de l’usage de la caféine"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 9ca7f4dcf46ea9aaa051d9b6940a1bea2cae114c0a733c98e30a08c210e0d6e5"
+      ],
+      "affected_chunk_ids": [
+        "9ca7f4dcf46ea9aaa051d9b6940a1bea2cae114c0a733c98e30a08c210e0d6e5"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1081,
+          "end": 1084
+        },
+        "printed_page": {
+          "start": "1022",
+          "end": "1025"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Trouble de l’usage de la caféine"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 92b16779066c5b2d8837ce6a86b1f8d80e5290eb0d3c59a6cf29c1a69cdaa11b"
+      ],
+      "affected_chunk_ids": [
+        "92b16779066c5b2d8837ce6a86b1f8d80e5290eb0d3c59a6cf29c1a69cdaa11b"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1081,
+          "end": 1084
+        },
+        "printed_page": {
+          "start": "1022",
+          "end": "1025"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Trouble de l’usage de la caféine"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 74da187110e042955c04d71b36c94c85d9811c3966685f3f47e4d10bda90cb69"
+      ],
+      "affected_chunk_ids": [
+        "74da187110e042955c04d71b36c94c85d9811c3966685f3f47e4d10bda90cb69"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1081,
+          "end": 1084
+        },
+        "printed_page": {
+          "start": "1022",
+          "end": "1025"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Trouble de l’usage de la caféine"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 977e284bcd2b4a85eb5199fa62edea4ea4544f473d959ffdcc4869e7a8dbd26d"
+      ],
+      "affected_chunk_ids": [
+        "977e284bcd2b4a85eb5199fa62edea4ea4544f473d959ffdcc4869e7a8dbd26d"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1084,
+          "end": 1087
+        },
+        "printed_page": {
+          "start": "1025",
+          "end": "1028"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Usage pathologique des jeux sur internet"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk aec961f74d70246832ecb5478d3f8d55155767f5de4c54b4abea33f5a6ac9e69"
+      ],
+      "affected_chunk_ids": [
+        "aec961f74d70246832ecb5478d3f8d55155767f5de4c54b4abea33f5a6ac9e69"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1084,
+          "end": 1087
+        },
+        "printed_page": {
+          "start": "1025",
+          "end": "1028"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Usage pathologique des jeux sur internet"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk 0f2f0b80782ed3c0a6cb28939f63c87816b26b17510d7ef844cb4119e5d39a03"
+      ],
+      "affected_chunk_ids": [
+        "0f2f0b80782ed3c0a6cb28939f63c87816b26b17510d7ef844cb4119e5d39a03"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1084,
+          "end": 1087
+        },
+        "printed_page": {
+          "start": "1025",
+          "end": "1028"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Usage pathologique des jeux sur internet"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    },
+    {
+      "status": "QUARANTINED",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Approved disposition is to keep this diagnostic struct-v2 vector quarantined and excluded from the separate embedding task.",
+      "evidence": [
+        "STRUCT-V2-APPROVAL-RECORD.json: approved quarantine disposition",
+        "active pinned struct-v1 recipe is not modified",
+        "diagnostic manifest reports 16 writes while the file contains 88 rows",
+        "vector dimensions are 1024 and values are finite",
+        "chunk_id matches frozen chunk a5701a733a3f8806fc9224fbc69cbffce19395c589dbc6a86deffad50f17cb21"
+      ],
+      "affected_chunk_ids": [
+        "a5701a733a3f8806fc9224fbc69cbffce19395c589dbc6a86deffad50f17cb21"
+      ],
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "source": {
+        "source_id": "dsm5-fr-2015-elsevier",
+        "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "language": "fr",
+        "chunker_version": "struct-v2"
+      },
+      "page_evidence": {
+        "pdf_page": {
+          "start": 1084,
+          "end": 1087
+        },
+        "printed_page": {
+          "start": "1025",
+          "end": "1028"
+        },
+        "section_path": [
+          "Section III — Mesures et modèles émergents",
+          "Affections proposées pour des études supplémentaires",
+          "Usage pathologique des jeux sur internet"
+        ],
+        "page_status": "OBSERVED_PRESERVED_BY_APPROVED_POLICY",
+        "page_confidence": "preserved_by_approved_policy"
+      },
+      "human_approval_required": false
+    }
+  ]
+}

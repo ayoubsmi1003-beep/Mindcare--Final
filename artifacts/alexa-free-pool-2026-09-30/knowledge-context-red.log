@@ -1,0 +1,148 @@
+
+ RUN  v3.2.7 C:/Users/ABC Informatique/.claude/projects/Final mindcare
+
+ ❯ tests/unit/alexa-knowledge-gates.test.ts (3 tests | 3 failed) 34ms
+   × live knowledge RPC signatures (migrations 092/093) > uses precisely the three installed lexical parameters 23ms
+     → expected { p_requete: 'critères', …(3) } to deeply equal { p_requete: 'critères', …(2) }
+   × live knowledge RPC signatures (migrations 092/093) > uses precisely the two installed vector parameters 3ms
+     → expected { p_embedding_json: '[0,1]', …(2) } to deeply equal { p_embedding_json: '[0,1]', …(1) }
+   × live knowledge RPC signatures (migrations 092/093) > refuses historical access until its separate SQL gate exists 4ms
+     → expected [Function] to throw an error
+ ❯ tests/unit/alexa-local-loop.test.ts (4 tests | 1 failed) 1477ms
+   ✓ existing tool loop local route, no external patient inference > next patient then treatment uses the patient returned by the authorized agenda door  890ms
+   ✓ existing tool loop local route, no external patient inference > switch A→B during an outstanding read discards all old clinical output 30ms
+   ✓ existing tool loop local route, no external patient inference > no patient context asks for a patient without invoking a tool 5ms
+   × existing tool loop local route, no external patient inference > an empty next-patient result never reads the previous patient's treatment 539ms
+     → expected "spy" to not be called at all, but actually been called 1 times
+
+Received: 
+
+  1st spy call:
+
+    Array [
+      Object {
+        "patientId": "00000000-0000-4000-8000-000000000011",
+      },
+      Object {
+        "aujourdHui": "2026-09-30",
+        "carte": CarteIdentite {},
+        "signal": AbortSignal {
+          Symbol(kEvents): undefined,
+          Symbol(events.maxEventTargetListeners): 0,
+          Symbol(events.maxEventTargetListenersWarned): false,
+          Symbol(kHandlers): undefined,
+          Symbol(kAborted): false,
+          Symbol(kReason): undefined,
+          Symbol(kComposite): false,
+        },
+      },
+    ]
+
+
+Number of calls: 1
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/alexa-knowledge-gates.test.ts > live knowledge RPC signatures (migrations 092/093) > uses precisely the three installed lexical parameters
+AssertionError: expected { p_requete: 'critères', …(3) } to deeply equal { p_requete: 'critères', …(2) }
+
+- Expected
++ Received
+
+  {
++   "p_inclure_historique": false,
+    "p_langue": "fr",
+    "p_limite": 20,
+    "p_requete": "critères",
+  }
+
+ ❯ tests/unit/alexa-knowledge-gates.test.ts:6:54
+      4| describe("live knowledge RPC signatures (migrations 092/093)", () => {
+      5|   it("uses precisely the three installed lexical parameters", () => {
+      6|     expect(porteLexicale("critères", "fr", 20).args).toEqual({ p_reque…
+       |                                                      ^
+      7|   });
+      8|   it("uses precisely the two installed vector parameters", () => {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯
+
+ FAIL  tests/unit/alexa-knowledge-gates.test.ts > live knowledge RPC signatures (migrations 092/093) > uses precisely the two installed vector parameters
+AssertionError: expected { p_embedding_json: '[0,1]', …(2) } to deeply equal { p_embedding_json: '[0,1]', …(1) }
+
+- Expected
++ Received
+
+  {
+    "p_embedding_json": "[0,1]",
++   "p_inclure_historique": false,
+    "p_limite": 20,
+  }
+
+ ❯ tests/unit/alexa-knowledge-gates.test.ts:9:48
+      7|   });
+      8|   it("uses precisely the two installed vector parameters", () => {
+      9|     expect(porteVectorielle("[0,1]", 20).args).toEqual({ p_embedding_j…
+       |                                                ^
+     10|   });
+     11|   it("refuses historical access until its separate SQL gate exists", (…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯
+
+ FAIL  tests/unit/alexa-knowledge-gates.test.ts > live knowledge RPC signatures (migrations 092/093) > refuses historical access until its separate SQL gate exists
+AssertionError: expected [Function] to throw an error
+ ❯ tests/unit/alexa-knowledge-gates.test.ts:12:53
+     10|   });
+     11|   it("refuses historical access until its separate SQL gate exists", (…
+     12|     expect(() => porteLexicale("x", "fr", 1, true)).toThrow();
+       |                                                     ^
+     13|     expect(() => porteVectorielle("[0,1]", 1, true)).toThrow();
+     14|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/4]⎯
+
+ FAIL  tests/unit/alexa-local-loop.test.ts > existing tool loop local route, no external patient inference > an empty next-patient result never reads the previous patient's treatment
+AssertionError: expected "spy" to not be called at all, but actually been called 1 times
+
+Received: 
+
+  1st spy call:
+
+    Array [
+      Object {
+        "patientId": "00000000-0000-4000-8000-000000000011",
+      },
+      Object {
+        "aujourdHui": "2026-09-30",
+        "carte": CarteIdentite {},
+        "signal": AbortSignal {
+          Symbol(kEvents): undefined,
+          Symbol(events.maxEventTargetListeners): 0,
+          Symbol(events.maxEventTargetListenersWarned): false,
+          Symbol(kHandlers): undefined,
+          Symbol(kAborted): false,
+          Symbol(kReason): undefined,
+          Symbol(kComposite): false,
+        },
+      },
+    ]
+
+
+Number of calls: 1
+
+ ❯ tests/unit/alexa-local-loop.test.ts:51:27
+     49|     const deps = dependencies({ get_next_patient: async () => ({ crene…
+     50|     await tour("Qui vient après ? et montre son traitement", deps);
+     51|     expect(treatment).not.toHaveBeenCalled();
+       |                           ^
+     52|     expect(deps.transport).not.toHaveBeenCalled();
+     53|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯
+
+
+ Test Files  2 failed (2)
+      Tests  4 failed | 3 passed (7)
+   Start at  12:44:55
+   Duration  22.28s (transform 9.28s, setup 0ms, collect 10.85s, tests 1.51s, environment 2ms, prepare 9.07s)
+

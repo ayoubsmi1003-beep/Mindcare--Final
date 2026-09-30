@@ -1,0 +1,12 @@
+
+ RUN  v3.2.7 C:/Users/ABC Informatique/.claude/projects/Final mindcare
+
+ ✓ tests/unit/alexa-free-pool.test.ts (13 tests) 258ms
+ ✓ tests/unit/alexa-openrouter-provider.test.ts (5 tests) 111ms
+ ✓ tests/unit/jarvis-egress-gate.test.ts (11 tests) 105ms
+
+ Test Files  3 passed (3)
+      Tests  29 passed (29)
+   Start at  11:29:05
+   Duration  6.01s (transform 1.19s, setup 0ms, collect 5.55s, tests 474ms, environment 1ms, prepare 1.70s)
+

@@ -1,0 +1,96 @@
+
+ RUN  v3.2.7 C:/Users/ABC Informatique/.claude/projects/Final mindcare
+
+ ❯ tests/unit/alexa-native-voice-routes.test.ts (3 tests | 2 failed) 26ms
+   × actual local voice API boundary > authenticates and forwards only bounded memory PCM with real session scope 21ms
+     → expected { ok: false, error: { …(2) } } to match object { ok: true, data: { …(3) } }
+(3 matching properties omitted from actual)
+   ✓ actual local voice API boundary > refuses anonymous requests, filenames, oversize or cloud formats before native work 3ms
+   × actual local voice API boundary > returns local WAV with correlated IDs and no-store; missing runtime refuses 2ms
+     → expected null to be 'no-store' // Object.is equality
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/alexa-native-voice-protocol.test.ts [ tests/unit/alexa-native-voice-protocol.test.ts ]
+Error: Cannot find module '@/server/voice/protocole' imported from 'C:/Users/ABC Informatique/.claude/projects/Final mindcare/tests/unit/alexa-native-voice-protocol.test.ts'.
+
+- If you rely on tsconfig.json's "paths" to resolve modules, please install "vite-tsconfig-paths" plugin to handle module resolution.
+- Make sure you don't have relative aliases in your Vitest config. Use absolute paths instead. Read more: https://vitest.dev/guide/common-errors
+ ❯ tests/unit/alexa-native-voice-protocol.test.ts:2:1
+      1| import { describe, expect, it, vi } from "vitest";
+      2| import { validerEntreeVoix, CanalVoixNative } from "@/server/voice/pro…
+       | ^
+      3| const scope = { sessionId: "a".repeat(64), runId: "00000000-0000-4000-…
+      4| const entree = { ...scope, id: "00000000-0000-4000-8000-000000000003",…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯
+
+ FAIL  tests/unit/alexa-voice-segments.test.ts [ tests/unit/alexa-voice-segments.test.ts ]
+Error: Cannot find module '@/shared/jarvis/segments-voix' imported from 'C:/Users/ABC Informatique/.claude/projects/Final mindcare/tests/unit/alexa-voice-segments.test.ts'.
+
+- If you rely on tsconfig.json's "paths" to resolve modules, please install "vite-tsconfig-paths" plugin to handle module resolution.
+- Make sure you don't have relative aliases in your Vitest config. Use absolute paths instead. Read more: https://vitest.dev/guide/common-errors
+ ❯ tests/unit/alexa-voice-segments.test.ts:2:1
+      1| import { describe, expect, it } from "vitest";
+      2| import { segmenterVoix } from "@/shared/jarvis/segments-voix";
+       | ^
+      3| 
+      4| describe("French/Arabic local speech segments", () => {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/alexa-native-voice-routes.test.ts > actual local voice API boundary > authenticates and forwards only bounded memory PCM with real session scope
+AssertionError: expected { ok: false, error: { …(2) } } to match object { ok: true, data: { …(3) } }
+(3 matching properties omitted from actual)
+
+- Expected
++ Received
+
+  {
+-   "data": {
+-     "runId": "00000000-0000-4000-8000-000000000001",
+-     "texte": "Bonjour",
+-     "utteranceId": "00000000-0000-4000-8000-000000000002",
+-   },
+-   "ok": true,
++   "ok": false,
+  }
+
+ ❯ tests/unit/alexa-native-voice-routes.test.ts:17:33
+     15|   native.mockImplementation(async(job)=>({...job,ok:true,texte:"Bonjou…
+     16|   const response=await stt(request({...ids,pcmBase64:Buffer.alloc(3200…
+     17|   expect(await response.json()).toMatchObject({ok:true,data:{...ids,te…
+       |                                 ^
+     18|   expect(native.mock.calls[0]?.[0]).toMatchObject({action:"stt",sessio…
+     19|   expect(native.mock.calls[0]?.[1]).toBeInstanceOf(AbortSignal);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/4]⎯
+
+ FAIL  tests/unit/alexa-native-voice-routes.test.ts > actual local voice API boundary > returns local WAV with correlated IDs and no-store; missing runtime refuses
+AssertionError: expected null to be 'no-store' // Object.is equality
+
+- Expected: 
+"no-store"
+
++ Received: 
+null
+
+ ❯ tests/unit/alexa-native-voice-routes.test.ts:28:95
+     26|  it("returns local WAV with correlated IDs and no-store; missing runti…
+     27|   native.mockImplementation(async(job)=>({...job,ok:true,audioBase64:B…
+     28|   const r=await tts(request({...ids,texte:"Bonjour"}));expect(r.header…
+       |                                                                                               ^
+     29|   native.mockRejectedValue(Error("configuration: voices"));expect((awa…
+     30|  });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯
+
+
+ Test Files  3 failed (3)
+      Tests  2 failed | 1 passed (3)
+   Start at  11:47:27
+   Duration  1.74s (transform 482ms, setup 0ms, collect 1.05s, tests 26ms, environment 1ms, prepare 769ms)
+

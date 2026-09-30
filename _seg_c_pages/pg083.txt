@@ -1,0 +1,48 @@
+ 
+ICD-11 Reference Guide 
+81 
+ 
+Workflow 
+Workflow diagram of steps SP1 to SP8, and to Steps M1 to M4 for mortality coding. 
+2.17.3 Find the starting point (Steps SP1 to SP8) 
+To identify the starting point, follow the eight steps specified in this section. The steps are 
+named SP1 to SP8 (Starting point rule 1 to Starting point rule 8). Each step contains one 
+selection rule. At each step, there is a description of the selection rule itself and an 
+instruction on what to do next. 
+2.17.4 Step SP1 – Single cause on certificate 
+If there is only one condition reported on the certificate, in either Part 1 or Part 2, this is the 
+starting point. Next verify whether either step M1 or M4 apply, go to Section 2.18 Check for 
+modifications of the starting point (Steps M1 to M4). 
+If there are two or more conditions on the certificate, go to Step SP2. 
+2.17.5 Step SP2 – First condition on the only line used 
+If the certifier has used only one line in Part 1 and: 
+• 
+has reported only one condition on this line, but has reported one or more 
+conditions in Part 2, then the single condition in Part 1 is the tentative starting point. 
+Next, go to Step SP6. 
+• 
+has reported two or more conditions on this line, then the first condition is the 
+tentative starting point. This applies whether or not one or more conditions are 
+reported in Part 2. Next, go to Step SP6. 
+If the certifier has used more than one line in Part 1, go to Step SP3. 
+If the certifier has used only Part 2, but has reported two or more conditions there, then the 
+first condition is the tentative starting point. 
+Example 1  
+ 
+ 
+ 
+1 (a) Myocardial infarction and diabetes mellitus 
+ 
+ 
+(b)  
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+ 
+Myocardial infarction is mentioned first on the certificate and is the tentative starting point. Next, go to 
+Step SP6, to check whether further selection and modification rules apply. 

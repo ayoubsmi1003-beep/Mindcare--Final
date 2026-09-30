@@ -29,8 +29,8 @@
  *
  * ═══ LIFECYCLE (H1) ═══
  * Le défaut exclut : unapproved, revoked, inactive, superseded,
- * review-overdue. L'historique exige `p_inclure_historique = true` EXPLICITE
- * et ne mélange JAMAIS courant + historique (erreur dure sinon).
+ * review-overdue. Les portes installées 092/093 n'exposent aucun paramètre
+ * historique ; une demande historique est refusée jusqu'à sa porte dédiée.
  *
  * ═══ CONTRAINTE DbPort ═══
  * `DbPort.rpc` n'accepte que des scalaires (`RpcArgs`) : le vecteur de
@@ -149,9 +149,8 @@ export interface AppelPorte {
 
 /**
  * Porte lexicale : `tsvector` + trigramme, bornée, filtrée à la source.
- * `p_inclure_historique` (défaut false) : à `true`, la porte rend UNIQUEMENT
- * l'historique (superseded / revue en retard / revoked exclu du défaut) —
- * jamais un mélange silencieux (erreur dure si mélange demandé autrement).
+ * Signature installée : requête, langue, limite. L'historique nécessite une
+ * porte dédiée et n'est jamais obtenu en ajoutant un paramètre inexistant.
  */
 export function porteLexicale(
   requete: string,
@@ -159,13 +158,13 @@ export function porteLexicale(
   limite: number,
   inclureHistorique = false,
 ): AppelPorte {
+  if (inclureHistorique) throw new Error("KNOWLEDGE_HISTORY_GATE_UNAVAILABLE");
   return {
     porte: PORTES.LEXICALE,
     args: {
       p_requete: requete,
       p_langue: langue,
       p_limite: Math.max(1, Math.min(20, Math.floor(limite))),
-      p_inclure_historique: inclureHistorique,
     },
   };
 }
@@ -176,12 +175,12 @@ export function porteVectorielle(
   limite: number,
   inclureHistorique = false,
 ): AppelPorte {
+  if (inclureHistorique) throw new Error("KNOWLEDGE_HISTORY_GATE_UNAVAILABLE");
   return {
     porte: PORTES.VECTORIELLE,
     args: {
       p_embedding_json: embeddingJson,
       p_limite: Math.max(1, Math.min(20, Math.floor(limite))),
-      p_inclure_historique: inclureHistorique,
     },
   };
 }

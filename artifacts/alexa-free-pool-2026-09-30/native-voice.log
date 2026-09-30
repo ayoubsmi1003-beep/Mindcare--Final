@@ -1,0 +1,3 @@
+{"language":"fr","ok":true,"bytes":127532,"sampleRate":22050,"model":"fr_FR-siwis-medium.onnx","ms":39394.0133}
+{"language":"ar","ok":true,"bytes":163744,"sampleRate":22050,"model":"ar_JO-kareem-low.onnx","ms":6240.890200000002}
+{"language":"mixed","ok":true,"bytes":75192,"sampleRate":22050,"model":"ar_JO-kareem-low.onnx+fr_FR-siwis-medium.onnx","ms":379.78859999999986}

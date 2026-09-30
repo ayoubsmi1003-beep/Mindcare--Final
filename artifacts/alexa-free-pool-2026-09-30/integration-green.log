@@ -1,0 +1,20 @@
+
+ RUN  v3.2.7 C:/Users/ABC Informatique/.claude/projects/Final mindcare
+
+ ✓ tests/unit/alexa-free-pool.test.ts (14 tests) 171ms
+ ✓ tests/unit/alexa-knowledge-gates.test.ts (3 tests) 9ms
+ ✓ tests/unit/alexa-openrouter-provider.test.ts (7 tests) 137ms
+ ✓ tests/unit/connaissance-stockage.test.ts (20 tests) 21ms
+stderr | tests/unit/alexa-local-loop.test.ts > existing tool loop local route, no external patient inference > an empty next-patient result never reads the previous patient's treatment
+{"event":"jarvis.boucle.budget","count":1,"context":"trace:0c0a68f1-fd18-493f-8e3c-a585cb916733"}
+
+ ✓ tests/unit/alexa-local-loop.test.ts (4 tests) 1207ms
+   ✓ existing tool loop local route, no external patient inference > next patient then treatment uses the patient returned by the authorized agenda door  1140ms
+ ✓ tests/unit/alexa-gateway-failover.test.ts (6 tests) 5276ms
+   ✓ production gateway, faults injected only at its real fetch transport > A→429, B→timeout, C→success within one deadline, audit exposes C  4855ms
+
+ Test Files  6 passed (6)
+      Tests  54 passed (54)
+   Start at  12:54:46
+   Duration  19.61s (transform 13.19s, setup 0ms, collect 16.54s, tests 6.82s, environment 3ms, prepare 7.05s)
+

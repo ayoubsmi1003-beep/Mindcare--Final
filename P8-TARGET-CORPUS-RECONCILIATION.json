@@ -1,0 +1,35 @@
+{
+  "phase": "P8",
+  "report": "TARGET_CORPUS_RECONCILIATION",
+  "state": "IN_PROGRESS_NO_TARGET_POPULATION",
+  "state_reason": "The six current book sessions are running independently. The only fixed current count is 5228 source pages; no current combined chunk population exists.",
+  "user_directive": "Previous work was deleted and must not be restored, merged, or reused.",
+  "stable_source_invariant": {
+    "books": 6,
+    "source_pages": 5228,
+    "ocr_and_page_splitting": "current preparation, not a target count"
+  },
+  "current_work_model": {
+    "one_session_per_book": true,
+    "automatic_session_merge": false,
+    "doctor_review_required": true,
+    "current_manifest": null,
+    "current_chunk_count": null,
+    "current_eligible_count": null,
+    "current_quarantine_count": null
+  },
+  "superseded_prior_run": {
+    "historical_gate_c_chunks": 17131,
+    "historical_file_units": 14238,
+    "prior_dsm5_struct_v2_handoff_chunks": 14079,
+    "prior_mc_p3_struct_v1_chunks": 15666,
+    "reuse_allowed": false
+  },
+  "final_state": "IN_PROGRESS_NO_TARGET_POPULATION",
+  "target_path_created": false,
+  "writer_loader_created": false,
+  "isolated_target_database_created": false,
+  "database_writes": 0,
+  "model_calls": 0,
+  "next_safe_action": "Wait for the six current per-book sessions, collect their per-book manifests, and reconcile only after all six are complete. Do not compare the fresh work to the deleted previous run."
+}

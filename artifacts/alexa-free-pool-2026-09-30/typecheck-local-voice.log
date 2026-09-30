@@ -1,0 +1,11 @@
+src/app/api/jarvis/jarvis-voice-out/route.ts(23,51): error TS4104: The type 'readonly SegmentVoix[]' is 'readonly' and cannot be assigned to the mutable type '{ texte: string; langue: "fr" | "ar"; }[]'.
+src/services/jarvis-boucle.ts(680,84): error TS2345: Argument of type 'null' is not assignable to parameter of type 'ResolutionBilan | undefined'.
+src/services/jarvis-boucle.ts(696,149): error TS2345: Argument of type 'null' is not assignable to parameter of type 'ResolutionBilan | undefined'.
+src/services/jarvis-reponses-locales.ts(17,77): error TS2339: Property 'tronque' does not exist on type 'SafeTimelineContext'.
+src/services/jarvis-reponses-locales.ts(19,54): error TS2339: Property 'map' does not exist on type '{ readonly nombre: number; readonly dernierEmisLe: string | null; } | readonly { readonly ref: `DOC_${string}`; readonly type: TypeDocument; readonly emisLe: string; readonly nombreImpressions: number; }[]'.
+  Property 'map' does not exist on type '{ readonly nombre: number; readonly dernierEmisLe: string | null; }'.
+src/services/jarvis-reponses-locales.ts(19,59): error TS7006: Parameter 'd' implicitly has an 'any' type.
+src/services/jarvis-reponses-locales.ts(34,42): error TS2339: Property 'diagnostics' does not exist on type '{}'.
+src/services/jarvis-reponses-locales.ts(34,59): error TS7006: Parameter 'd' implicitly has an 'any' type.
+src/services/jarvis-reponses-locales.ts(35,45): error TS2339: Property 'lignes' does not exist on type '{}'.
+src/services/jarvis-reponses-locales.ts(35,57): error TS7006: Parameter 'l' implicitly has an 'any' type.

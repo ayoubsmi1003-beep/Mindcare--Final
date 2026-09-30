@@ -1,0 +1,76 @@
+ 
+ICD-11 Reference Guide 
+91 
+ 
+one code providing more precise information about the site or nature of the tentative 
+starting point. This code is the new tentative underlying cause of death. 
+Next, reapply Step M2 to the new tentative underlying cause. Repeat until you have found a 
+tentative underlying cause that cannot be specified further. 
+• If there is no term that further specifies the tentative underlying cause (TUC), go to Step 
+M3. 
+• If there are several other expressions that provide more precise information on the 
+tentative underlying cause, select the priority underlying condition (see Section 2.16.7). 
+• If the TUC is an unspecified condition and this condition appears with more specificity 
+somewhere on the death certificate, this last more specific condition should be considered 
+as the new TUC. 
+Example 1  
+ 
+ 
+ 
+1 (a) Meningitis 1D01.Z 
+ 
+ 
+(b) Tuberculosis 1B1Z 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+ 
+Tuberculosis is the tentative starting point (Step SP3). A term providing more precise information about 
+the site or nature of this condition is reported on the certificate: menigitis. There is a provision in the 
+classification to combine the two codes, and according to instruction of step M2, tuberculous meningitis 
+(1B11.0) is a new tentative underlying cause. 
+Example 2  
+ 
+ 
+ 
+1 (a) Syphilis, unspecified 1A6Z 
+ 
+ 
+(b)  
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Primary genital syphilis 1A61.0 
+Syphilis, is the tentative starting point (Step SP2). A more specific condition for syphilis appears 
+elsewhere on the death certificate: primary genital syphilis, and according to instruction of step M2, 
+primary genital syphilis is a new tentative underlying cause. 
+Example 3  
+ 
+ 
+ 
+1 (a) Acute gastrointestinal bleeding ME24.90 
+ 
+ 
+(b) Malignant neoplasms of colon, unspecified 2B90.Z 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Malignant neoplasm of transverse colon 2B90.2 
+Malignant neoplasms of colon, is the tentative starting point (Step SP3). A more specific condition appears 
+elsewhere on the death certificate: malignant neoplasm of transverse colon, and according to instruction 
+of step M2, malignant neoplasm of transverse colon 2B90.2 is a new tentative underlying cause. 

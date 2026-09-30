@@ -1,0 +1,74 @@
+ 
+82 
+ 
+ICD-11 MMS  
+ 
+Example 2  
+ 
+ 
+ 
+1 (a) Myocardial infarction 
+ 
+ 
+(b)  
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Diabetes mellitus 
+Myocardial infarction is mentioned first on the certificate and is the tentative starting point. Next, go to 
+Step SP6, to check whether further selection and modification rules apply. 
+2.17.6 Step SP3 – First condition on the lowest used line causing all entries above 
+If there are conditions reported on more than one line in Part 1, check if each of the 
+conditions reported on the line(s) above the lowest used line in Part 1 can be caused by the 
+first condition on the lowest used line. 
+• 
+If yes, then this condition is the tentative starting point. Next, go to Step SP6. 
+• 
+If not, go to Step SP4. 
+To assess causal relationship, refer to Section 2.16.2 Causal relationship and sequence, and 
+to Section 2.19.1 Special instructions on accepted and rejected sequences (Steps SP3 and 
+SP4). 
+Example 1  
+ 
+ 
+ 
+1 (a) Bronchopneumonia 
+ 
+ 
+(b) Hemiplegia 
+ 
+ 
+(c) Cerebral infarction 
+ 
+ 
+(d)  
+ 
+2  
+ 
+Both bronchopneumonia and hemiplegia can be caused by cerebral infarction. This means that cerebral 
+infarction is the tentative starting point. 
+Example 2  
+ 
+ 
+ 
+1 (a) Liver metastases 2 months 
+ 
+ 
+(b) Bronchopneumonia 4 days 
+ 
+ 
+(c) Stomach cancer 6 months 
+ 
+ 
+(d)  
+ 
+2  
+ 
+Both liver metastases and bronchopneumonia can be caused by stomach cancer. This means that stomach 
+cancer is the tentative starting point, even though bronchopneumonia cannot cause liver metastases and 
+the bronchopneumonia has a shorter duration than the liver metastases. 

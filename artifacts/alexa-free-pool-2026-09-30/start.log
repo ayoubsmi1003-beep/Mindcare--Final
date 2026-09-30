@@ -1,0 +1,24 @@
+$ node scripts/garde-origine.mjs && node scripts/verifier-base.mjs && next start
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  DÉMARRAGE REFUSÉ — le port 3000 est déjà occupé.
+╚══════════════════════════════════════════════════════════════════════════╝
+
+  Next.js glisserait silencieusement sur le port suivant. L'origine du
+  navigateur cesserait alors de correspondre à l'allowlist CORS des Edge
+  Functions, et TOUT appel à Jarvis échouerait sur un « Failed to fetch »
+  qui ne nomme jamais sa cause — le navigateur ne la révèle pas.
+
+  Libérer le port :
+
+      netstat -ano | grep ":3000 "        (relever le PID)
+      taskkill /PID <pid> /F
+
+  Ou servir ailleurs, EN POSANT L'ORIGINE CORRESPONDANTE sur le projet
+  Supabase — les deux vont ensemble, jamais l'une sans l'autre :
+
+      PORT=3005 pnpm dev
+      pnpm exec supabase secrets set CORS_ORIGINS=http://localhost:3005 \
+        --project-ref ftxaseynjvjevwybdoii
+
+[ELIFECYCLE] Command failed with exit code 1.

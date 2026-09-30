@@ -40,8 +40,8 @@ async function verifierAssets(): Promise<void> {
  }
 }
 export function arreterVoixNative(sessionId?: string): void {
- generation++; clearTimeout(idle);
- const c = courant; if (sessionId !== undefined && c?.sessionId !== sessionId) return; courant = null;
+ const c = courant; if (sessionId !== undefined && c !== null && c.sessionId !== sessionId) return;
+ generation++; clearTimeout(idle); courant = null;
  if (c !== null) { c.processus.kill(); c.canal.echouer(); }
 }
 function ouvrir(sessionId: string): NonNullable<typeof courant> {

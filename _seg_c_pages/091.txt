@@ -1,0 +1,72 @@
+ 
+ICD-11 Reference Guide 
+89 
+ 
+Sometimes the classification itself indicates a code for a combination of the tentative 
+underlying cause with another cause mentioned on the certificate. Use the combination 
+code unless an instruction on mortality coding in Section 2.19.3 indicates otherwise. 
+Examples of ‘with mention of’: 
+Example 1  
+ 
+ 
+ 
+1 (a) Myocardial infarction 
+ 
+ 
+(b) Ischaemic heart disease 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+ 
+Ischaemic heart disease is the tentative starting point (Step SP3). There is a special instruction on 
+ischaemic heart disease reported with mention of myocardial infarction, and, according to this 
+instruction, myocardial infarction is the new tentative underlying cause. 
+Example 2  
+ 
+ 
+ 
+1 (a) Ischaemic heart disease 
+ 
+ 
+(b) Atherosclerosis 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Cerebral infarction 
+Atherosclerosis is the tentative starting point (Step SP3). There is a special instruction on ‘atherosclerosis 
+reported with ischaemic heart disease’, and another one on ‘atherosclerosis reported with cerebral 
+infarction’. Ischaemic heart disease is the priority underlying condition, so apply the instruction on 
+‘atherosclerosis reported with ischaemic heart disease’ and select ischaemic heart disease as the new 
+tentative underlying cause. 
+Example 3  
+ 
+ 
+ 
+1 (a) Cerebrovascular infarction 
+ 
+ 
+(b) Atherosclerosis 
+ 
+ 
+(c) Hypertension 
+ 
+ 
+(d)  
+ 
+2  
+Myocardial infarction 
+Hypertension is the tentative starting point (Step SP3). There are special instructions on ‘hypertension 
+reported with mention of cerebrovascular infarction’ and with myocardial infarction. Cerebrovascular 
+infarction is the priority underlying condition, so apply the instruction on ‘hypertension reported with 
+mention of cerebrovascular infarction’ and select cerebrovascular infarction as the new tentative 
+underlying cause. 

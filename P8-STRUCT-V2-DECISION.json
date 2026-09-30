@@ -1,0 +1,30 @@
+{
+  "phase": "P8",
+  "report": "STRUCT_V2_CONTRACT_DECISION",
+  "status": "NO_CURRENT_TARGET_CONTRACT",
+  "canonical_execution_versions": ["struct-v1", "struct-v1.1"],
+  "prior_run_artifacts": {
+    "historical_build_v2": "9a64694:knowledge/build-v2",
+    "historical_gate_c_chunks": 17131,
+    "historical_file_units": 14238,
+    "prior_dsm5_struct_v2_handoff_chunks": 14079,
+    "reuse_allowed": false,
+    "current_worktree_restore_performed": false
+  },
+  "current_work": {
+    "books": 6,
+    "source_pages": 5228,
+    "one_session_per_book": true,
+    "combined_manifest": null,
+    "current_chunk_count": null
+  },
+  "evidence": [
+    {"authority": "supabase/migrations/092_knowledge_rag.sql", "finding": "current applied schema has no current six-book target contract"},
+    {"authority": "src/server/knowledge/decoupage.ts", "finding": "canonical chunker is struct-v1"},
+    {"authority": "docs/00-DECISIONS.md ADR-039", "finding": "active closed chunker list is struct-v1/struct-v1.1"},
+    {"authority": "scripts/remplir-embeddings-sql.mjs", "finding": "current writer rejects unapproved chunkers"},
+    {"authority": "current rebuild sessions", "finding": "six independent book sessions; no combined output"}
+  ],
+  "decision": "Do not update the writer or loader. Wait for the six fresh book sessions and derive any future contract from their reviewed outputs, not from the deleted prior run.",
+  "no_write": true
+}

@@ -1,0 +1,34 @@
+{
+  "phase": "P8",
+  "report": "STOP_REPORT",
+  "status": "BLOCKED_BEFORE_FRESH_TARGET_ASSEMBLY",
+  "database_identity": "P8-DATABASE-IDENTITY-REPORT.json",
+  "prior_run_reference": "P8-DB-HANDOFF-RECONCILIATION.json",
+  "current_work": {
+    "books": 6,
+    "source_pages": 5228,
+    "sessions": "one current session per book",
+    "automatic_merge": false,
+    "doctor_review_required": true,
+    "combined_manifest": null,
+    "current_chunk_count": null
+  },
+  "prior_run_not_current": {
+    "historical_gate_c_chunks": 17131,
+    "historical_file_units": 14238,
+    "prior_dsm5_handoff_chunks": 14079,
+    "prior_mc_p3_struct_v1_chunks": 15666,
+    "reuse_allowed": false
+  },
+  "writes": {
+    "embeddings": 0,
+    "sql": 0,
+    "model_calls": 0,
+    "migrations": 0,
+    "activations": 0,
+    "structural_mutations": 0
+  },
+  "activation_state": false,
+  "decision": "STOP_BEFORE_FRESH_TARGET_ASSEMBLY",
+  "next_safe_action": "Do not reconcile against the deleted previous run. Wait for all six current book sessions, collect their per-book manifests, and reconcile only after doctor review."
+}

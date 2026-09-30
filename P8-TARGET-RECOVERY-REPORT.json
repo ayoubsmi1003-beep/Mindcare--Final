@@ -1,0 +1,45 @@
+{
+  "phase": "P8",
+  "report": "TARGET_STATUS",
+  "status": "FRESH_SIX_BOOK_REBUILD_IN_PROGRESS",
+  "user_directive": "Previous work was deleted before the new run. Do not reuse, restore, merge, or present previous artifacts as the current target.",
+  "stable_source_invariant": {
+    "books": 6,
+    "source_pages": 5228,
+    "interpretation": "The six-book source corpus contains 5228 pages. OCR and page splitting are current preparation steps, not a fixed chunk target."
+  },
+  "current_work_model": {
+    "sessions": "one session per book",
+    "merge_policy": "No automatic merge between sessions.",
+    "doctor_involvement": "The doctor reviews the result of each book session.",
+    "target_status": "No current six-book chunk count or combined manifest exists yet.",
+    "per_book_outputs": "Collect only from the current sessions; do not infer missing counts from the previous run."
+  },
+  "superseded_prior_run": {
+    "status": "ARCHIVED_CONTEXT_ONLY",
+    "historical_six_book_gate_c_chunks": 17131,
+    "historical_six_book_file_units": 14238,
+    "prior_dsm5_struct_v2_handoff_chunks": 14079,
+    "prior_mc_p3_struct_v1_chunks": 15666,
+    "reuse_allowed": false,
+    "reason": "These figures belong to the deleted/previous work and the historical database state, not the fresh rebuild."
+  },
+  "current_target": {
+    "manifest": null,
+    "source_ids": "pending completion of the six current book sessions",
+    "pages": "5228 source pages are the only fixed current count",
+    "chunks": null,
+    "eligible_chunks": null,
+    "quarantined_chunks": null,
+    "activation": false
+  },
+  "safety": {
+    "database_writes": 0,
+    "model_calls": 0,
+    "embeddings": 0,
+    "migrations": 0,
+    "activations": 0,
+    "historical_artifacts_restored": false
+  },
+  "next_step": "Let each current book session finish independently. After all six are reviewed, collect their per-book manifests and reconcile them once; until then, do not compare against or reuse 17131, 14079, or 15666 as the target."
+}

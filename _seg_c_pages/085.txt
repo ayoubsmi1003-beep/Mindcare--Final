@@ -1,0 +1,73 @@
+ 
+ICD-11 Reference Guide 
+83 
+ 
+Example 3  
+ 
+ 
+ 
+1 (a) Liver metastases 
+ 
+ 
+(b) Bronchopneumonia 
+ 
+ 
+(c) Stomach cancer and cerebral infarction 
+ 
+ 
+(d)  
+ 
+2  
+ 
+Both liver metastases and bronchopneumonia can be caused by stomach cancer, which is the first 
+condition mentioned on the lowest used line in Part 1. This means that stomach cancer is the tentative 
+starting point. 
+Example 4  
+ 
+ 
+ 
+1 (a) Liver metastases 
+ 
+ 
+(b) Bronchopneumonia and stomach cancer 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+ 
+Liver metastases cannot be due to bronchopneumonia. This means that no tentative starting point can be 
+identified at Step SP3. Therefore, go to Step SP4. 
+2.17.7 Step SP4 – Starting point of the first-mentioned sequence 
+The first-mentioned sequence is always found in Part 1 (see Section 2.16.5). 
+• 
+If one or more sequences ending with the terminal cause of death are reported in 
+Part 1, identify the first-mentioned sequence (see Section 2.16.5). The starting point 
+of this sequence is the tentative starting point. Next go to Step SP6. 
+If no sequence ending with the terminal cause of death is reported in Part 1, go to Step SP5. 
+To assess causal relationship, refer to Section 2.16.2 Causal relationship and sequence, and 
+to Section 2.19.1 Special instructions on accepted and rejected sequences (Steps SP3 and 
+SP4). 
+Example 1  
+ 
+ 
+ 
+1 (a) Liver metastases 
+ 
+ 
+(b) Bronchopneumonia and stomach cancer 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+ 
+Bronchopneumonia cannot cause liver metastases (Step SP3 does not apply), but liver metastases can be 
+due to stomach cancer. This is the first-mentioned sequence ending with the terminal cause of death, so 
+stomach cancer is the tentative starting point. 

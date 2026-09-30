@@ -1,0 +1,65 @@
+ 
+78 
+ 
+ICD-11 MMS  
+ 
+2.16.8 Modification 
+Special coding instructions on specific sequences and ICD categories may have the effect 
+that a condition other than the starting point is selected as the underlying cause of death for 
+use in the statistics. In such cases, the code for underlying cause often expresses a 
+combination of the starting point with another reported condition, or a complication or 
+consequence of the starting point that is of particular importance to public health. The 
+procedure by which the ICD code for the starting point is replaced by another code is called 
+modification. Instructions on how to apply these special instructions to identify the 
+underlying cause of death is given in Section 2.18 Check for modifications of the starting 
+point (Steps M1 to M4). 
+Example 1  
+ 
+ 
+ 
+1 (a) Heart disease 
+ 
+ 
+ 
+due to 
+ 
+ 
+(b) Generalised atherosclerosis 
+ 
+ 
+ 
+due to 
+ 
+ 
+(c)  
+ 
+ 
+ 
+due to 
+ 
+ 
+(d)  
+ 
+2  
+ 
+Generalised atherosclerosis started the sequence of events leading to death, so it is the starting point. 
+However, according to a special instruction on generalised atherosclerosis, generalised atherosclerosis 
+leading to heart disease is assigned to atherosclerotic heart disease in mortality statistics. Because of this 
+modification, atherosclerotic heart disease is the underlying cause of death. 
+2.17 Coding instructions for mortality 
+When coding causes of death, first assign ICD codes to all the conditions mentioned on the 
+death certificate. Many coding instructions are based on specific ICD codes, and to 
+determine whether or not any of the instructions apply, all conditions on the certificate 
+must be coded. Other conditions reported on the certificate may affect the coding any 
+condition. Assigning codes for all reported conditions and applying any effect one code has 
+on another is called multiple cause coding. 
+2.17.1 Basic coding and multiple cause coding guidelines 
+To start coding, refer to basic coding guidelines given in sections in the beginning of Part 2 
+(for example Sections2.1, 2.6, and 2.10.1. When multiple causes are reported also refer to 
+Section 2.21 Coding instructions for mortality: multiple cause coding and other specific 
+instructions. Multiple cause coding permits in-depth analysis of causes of death, for example 
+of serious but avoidable complications of certain underlying causes, and the impact of 
+coexisting conditions on the outcome of a disease process. Therefore, in mortality coding, 
+both underlying cause and multiple causes should be recorded. Complete multiple cause 
+coding is essential for a correct application of the ICD instructions for selection and 
+modification of the underlying cause of death. 

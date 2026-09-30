@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 C:/Users/ABC Informatique/.claude/projects/Final mindcare
+
+ ✓ tests/unit/alexa-free-pool.test.ts (13 tests) 95ms
+
+ Test Files  1 passed (1)
+      Tests  13 passed (13)
+   Start at  11:15:20
+   Duration  1.73s (transform 113ms, setup 0ms, collect 138ms, tests 95ms, environment 0ms, prepare 228ms)
+

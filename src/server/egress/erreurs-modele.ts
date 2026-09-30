@@ -18,7 +18,16 @@ export class ErreurModele extends Error {
     readonly recoverable: boolean,
     readonly scope: "model" | "account" | "request" = "model",
     readonly retryAfterMs = 0,
+    readonly detail: "empty-content" | "invalid-json" | "invalid-event" | "truncated" | "premature-end" | "size-limit" | null = null,
   ) { super(code); this.name = "ErreurModele"; }
+}
+
+/** AbortSignal.timeout and internal deadlines are failures, not a user Stop. */
+export function annulationDemandee(signal?: AbortSignal): boolean {
+  if (!signal?.aborted) return false;
+  const reason: unknown = signal.reason;
+  return !(reason instanceof ErreurModele && reason.code === "MODEL_TIMEOUT")
+    && !(reason instanceof Error && reason.name === "TimeoutError");
 }
 
 export function classerErreurHttp(status: number, body: unknown, headers: Headers, now = Date.now()): ErreurModele {
@@ -52,7 +61,7 @@ export function normaliserErreurModele(cause: unknown, cancelled = false): Erreu
   if (cause instanceof TypeError) return new ErreurModele("NETWORK_FAILURE", true);
   const message = cause instanceof Error ? cause.message : "";
   if (/configuration:/.test(message)) return new ErreurModele("CONFIGURATION", false, "account");
-  if (/timeout|delai|AbortError/.test(message) || (cause instanceof Error && cause.name === "AbortError")) return new ErreurModele("MODEL_TIMEOUT", true);
+  if (/timeout|delai|AbortError/i.test(message) || (cause instanceof Error && (cause.name === "AbortError" || cause.name === "TimeoutError"))) return new ErreurModele("MODEL_TIMEOUT", true);
   if (/transitoire:/.test(message)) return new ErreurModele(/429/.test(message) ? "MODEL_RATE_LIMIT" : "PROVIDER_UNAVAILABLE", true);
   return new ErreurModele("MALFORMED_RESPONSE", true);
 }

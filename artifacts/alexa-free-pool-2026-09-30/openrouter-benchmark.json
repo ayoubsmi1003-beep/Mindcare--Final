@@ -1,0 +1,14 @@
+{
+  "status": "BLOCKED",
+  "metrics": {
+    "n": 0,
+    "p50": null,
+    "p95": null,
+    "max": null,
+    "ttftP50": null,
+    "ttftP95": null,
+    "errorRate": null,
+    "fallbackRate": null
+  },
+  "samples": []
+}

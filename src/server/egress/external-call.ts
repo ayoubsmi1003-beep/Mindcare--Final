@@ -33,7 +33,7 @@ import { env } from "@/server/env";
 import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { alexa } from "@/i18n/alexa";
-import { ErreurModele, classerErreurHttp, normaliserErreurModele, type CodeErreurModele, type TentativeInference } from "./erreurs-modele";
+import { ErreurModele, annulationDemandee, classerErreurHttp, normaliserErreurModele, type CodeErreurModele, type TentativeInference } from "./erreurs-modele";
 import { PoolModelesGratuits, type BesoinModele, type QualificationModele, type ModeleGratuit } from "./modeles-gratuits";
 import { conduireInference } from "./tentatives-inference";
 
@@ -87,6 +87,8 @@ export interface LlmProvider {
     readonly jsonMode?: boolean;
     readonly maxOutputTokens?: number;
     readonly idleTimeoutMs?: number;
+    /** Absolute total deadline; meaningful deltas never extend it. */
+    readonly deadlineMs?: number;
   }): Promise<FluxTexte>;
 }
 
@@ -316,8 +318,8 @@ export const openRouterProvider: LlmProvider = {
   name: "openrouter",
   async complete(req) {
     const c = new AbortController();
-    const cancel = () => c.abort();
-    if (req.signal?.aborted) throw new ErreurModele("CANCELLED", false, "request");
+    const cancel = () => c.abort(req.signal?.reason);
+    if (req.signal?.aborted) throw normaliserErreurModele(req.signal.reason, annulationDemandee(req.signal));
     req.signal?.addEventListener("abort", cancel, { once: true });
     const timer = setTimeout(() => c.abort(), req.timeoutMs);
     try {
@@ -331,13 +333,13 @@ export const openRouterProvider: LlmProvider = {
       return { text, tokensIn: body.usage?.prompt_tokens ?? 0, tokensOut: body.usage?.completion_tokens ?? 0 };
     } catch (cause) {
       if (c.signal.aborted && !req.signal?.aborted) throw new ErreurModele("MODEL_TIMEOUT", true);
-      throw normaliserErreurModele(cause, req.signal?.aborted);
+      throw normaliserErreurModele(req.signal?.aborted ? req.signal.reason : cause, annulationDemandee(req.signal));
     } finally { clearTimeout(timer); req.signal?.removeEventListener("abort", cancel); }
   },
   async stream(req) {
-    if (req.signal?.aborted) throw new ErreurModele("CANCELLED", false, "request");
+    if (req.signal?.aborted) throw normaliserErreurModele(req.signal.reason, annulationDemandee(req.signal));
     const c = new AbortController();
-    const cancel = () => c.abort();
+    const cancel = () => c.abort(req.signal?.reason);
     req.signal?.addEventListener("abort", cancel, { once: true });
     let timer = setTimeout(() => c.abort(), req.timeoutMs);
     let resolveUsage!: (usage: UsageJeton) => void;
@@ -357,7 +359,7 @@ export const openRouterProvider: LlmProvider = {
     try {
       const response = await envoyerChatOpenRouter(req, true, c.signal);
       if (!response.ok) throw classerErreurHttp(response.status, await response.json().catch(() => null), response.headers);
-      if (!response.body) throw new ErreurModele("MALFORMED_RESPONSE", true);
+      if (!response.body) throw new ErreurModele("MALFORMED_RESPONSE", true, "model", 0, "empty-content");
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
       void (async () => {
@@ -371,7 +373,7 @@ export const openRouterProvider: LlmProvider = {
             const { done, value } = await reader.read();
             if (done) break;
             buffer += decoder.decode(value, { stream: true });
-            if (buffer.length > 1_000_000) throw new ErreurModele("MALFORMED_RESPONSE", true);
+            if (buffer.length > 1_000_000) throw new ErreurModele("MALFORMED_RESPONSE", true, "model", 0, "size-limit");
             const lines = buffer.split("\n"); buffer = lines.pop() ?? "";
             for (const line of lines) {
               const t = line.trim();
@@ -379,8 +381,8 @@ export const openRouterProvider: LlmProvider = {
               const data = t.slice(5).trim();
               if (data === "[DONE]") { ended = true; continue; }
               let raw: unknown;
-              try { raw = JSON.parse(data); } catch { throw new ErreurModele("MALFORMED_RESPONSE", true); }
-              if (typeof raw !== "object" || raw === null) throw new ErreurModele("MALFORMED_RESPONSE", true);
+              try { raw = JSON.parse(data); } catch { throw new ErreurModele("MALFORMED_RESPONSE", true, "model", 0, "invalid-json"); }
+              if (typeof raw !== "object" || raw === null) throw new ErreurModele("MALFORMED_RESPONSE", true, "model", 0, "invalid-event");
               const event = raw as {
                 error?: { code?: number };
                 choices?: { delta?: { content?: unknown }; finish_reason?: string | null }[];
@@ -389,27 +391,27 @@ export const openRouterProvider: LlmProvider = {
               if (event.error) throw classerErreurHttp(event.error.code ?? 502, raw, response.headers);
               const choice = event.choices?.[0];
               if (choice?.finish_reason === "error") throw new ErreurModele("PROVIDER_UNAVAILABLE", true);
-              if (choice?.finish_reason === "length") throw new ErreurModele("MALFORMED_RESPONSE", true);
+              if (choice?.finish_reason === "length") throw new ErreurModele("MALFORMED_RESPONSE", true, "model", 0, "truncated");
               if (choice?.finish_reason === "stop") finish = true;
               const content = choice?.delta?.content;
               if (typeof content === "string" && content.length > 0) {
                 bytes += content.length;
-                if (bytes > 40_000) throw new ErreurModele("MALFORMED_RESPONSE", true);
+                if (bytes > 40_000) throw new ErreurModele("MALFORMED_RESPONSE", true, "model", 0, "size-limit");
                 out.enqueue(content);
                 if (!delivered) { delivered = true; firstResolve(); }
                 clearTimeout(timer);
-                timer = setTimeout(() => c.abort(), req.idleTimeoutMs ?? 10_000);
+                timer = setTimeout(() => c.abort(), Math.max(1, Math.min(req.idleTimeoutMs ?? 10_000, (req.deadlineMs ?? Infinity) - Date.now())));
               }
               // Reasoning/keepalives never extend the first meaningful-token deadline.
               if (event.usage) finalUsage = { tokensIn: event.usage.prompt_tokens ?? null, tokensOut: event.usage.completion_tokens ?? null };
             }
             if (ended) break;
           }
-          if (!delivered || (!ended && !finish)) throw new ErreurModele("MALFORMED_RESPONSE", true);
+          if (!delivered || (!ended && !finish)) throw new ErreurModele("MALFORMED_RESPONSE", true, "model", 0, delivered ? "premature-end" : "empty-content");
           if (!cancelled) out.close(); resolveUsage(finalUsage);
         } catch (cause) {
           const error = c.signal.aborted && !req.signal?.aborted && !cancelled
-            ? new ErreurModele("MODEL_TIMEOUT", true) : normaliserErreurModele(cause, req.signal?.aborted || cancelled);
+            ? new ErreurModele("MODEL_TIMEOUT", true) : normaliserErreurModele(req.signal?.aborted ? req.signal.reason : cause, annulationDemandee(req.signal) || cancelled);
           if (!delivered) firstReject(error);
           if (!cancelled) out.error(error);
           rejectUsage(error);
@@ -422,7 +424,7 @@ export const openRouterProvider: LlmProvider = {
       return { deltas, usage };
     } catch (cause) {
       clearTimeout(timer); c.abort(); req.signal?.removeEventListener("abort", cancel);
-      const error = normaliserErreurModele(cause, req.signal?.aborted);
+      const error = normaliserErreurModele(req.signal?.aborted ? req.signal.reason : cause, annulationDemandee(req.signal));
       rejectUsage(error);
       // Consume a stream rejected before exposure so it cannot leave an unobserved failure.
       await deltas.cancel().catch(() => {});
@@ -586,6 +588,7 @@ let catalogueDate = 0;
 let catalogueEnCours: Promise<void> | null = null;
 let qualificationEnCours: Promise<void> | null = null;
 let qualificationsChargees = false;
+const preuvesQualification = new Map<string, { readonly model: string; readonly code: string; readonly detail?: ErreurModele["detail"]; readonly phase: "transport" | "json" | "langues" | "ok" }>();
 const QUALIFICATION_VERSION = "alexa-free-multilingual-v2";
 
 function fichierQualifications(): string {
@@ -594,8 +597,9 @@ function fichierQualifications(): string {
 async function chargerQualifications(): Promise<void> {
   try {
     const document: unknown = JSON.parse(await readFile(fichierQualifications(), "utf8"));
-    const d = document as { version?: string; at?: number; models?: { id: string; qualification: QualificationModele | null; health?: Partial<ModeleGratuit> }[] };
+    const d = document as { version?: string; at?: number; compte?: { until: number; code: CodeErreurModele | null }; models?: { id: string; qualification: QualificationModele | null; health?: Partial<ModeleGratuit> }[] };
     if (d.version !== QUALIFICATION_VERSION || typeof d.at !== "number" || Date.now() - d.at > 86_400_000 || !Array.isArray(d.models)) return;
+    if (d.compte) poolOpenRouter.restaurerCompte(d.compte);
     for (const m of d.models) {
       if (typeof m.id !== "string") continue;
       if (m.health) poolOpenRouter.restaurerSante(m.id, m.health);
@@ -613,7 +617,7 @@ async function sauverQualifications(): Promise<void> {
   try {
     await mkdir(dirname(path), { recursive: true });
     const temp = `${path}.${crypto.randomUUID()}.tmp`;
-    await writeFile(temp, JSON.stringify({ version: QUALIFICATION_VERSION, at: Date.now(), models }), { mode: 0o600 });
+    await writeFile(temp, JSON.stringify({ version: QUALIFICATION_VERSION, at: Date.now(), compte: poolOpenRouter.statutCompte(), models }), { mode: 0o600 });
     await rename(temp, path);
   } catch { /* Memory still works; diagnostics must not interrupt the EMR. */ }
 }
@@ -656,6 +660,7 @@ async function qualifierCandidats(timeoutMs: number, maxModels = 3, signal?: Abo
         { role: "user", content: 'bonjour\nيعطيك الصحة\nmerci بزاف' },
       ];
       if (classerCharge(messages, null).decision === "BLOQUER") throw new ErreurModele("SECURITY_BLOCK", false, "request");
+      let phase: "transport" | "json" | "langues" | "ok" = "transport";
       try {
         const budget = Math.min(10_000, Math.max(1, echeance - Date.now()));
         const borne = AbortSignal.timeout(budget);
@@ -667,14 +672,18 @@ async function qualifierCandidats(timeoutMs: number, maxModels = 3, signal?: Abo
         try { for (;;) { const r = await reader.read(); if (r.done) break; text += r.value; if (text.length > 4000) throw new ErreurModele("MALFORMED_RESPONSE", true); } }
         finally { await reader.cancel().catch(() => {}); reader.releaseLock(); }
         const usage = await flux.usage;
+        phase = "json";
         const parsed = JSON.parse(text) as { intents?: unknown };
+        phase = "langues";
         if (JSON.stringify(parsed.intents) !== JSON.stringify(["HELLO", "THANKS", "THANKS"])) throw new ErreurModele("MALFORMED_RESPONSE", true);
         poolOpenRouter.qualifier(m.modelId, { json: true, streaming: true, qualite: 1, latenceMs: Date.now() - depart }); qualifies++;
+        preuvesQualification.set(m.modelId, { model: m.modelId, code: "OK", phase: "ok" });
         await journaliser({ purpose: "jarvis", provider: "openrouter", model: m.modelId, promptVersion: QUALIFICATION_VERSION,
           promptHash: "synthetic-multilingual-probe-v1", sessionToken: crypto.randomUUID(), charsOut: text.length,
           tokensIn: usage.tokensIn, tokensOut: usage.tokensOut, estimatedCostUsd: 0, outcome: "ok", latencyMs: Date.now() - depart });
       } catch (cause) {
         const error = normaliserErreurModele(cause, signal?.aborted); poolOpenRouter.echouer(m.modelId, error);
+        preuvesQualification.set(m.modelId, { model: m.modelId, code: error.code, detail: error.detail, phase });
         await journaliser({ purpose: "jarvis", provider: "openrouter", model: m.modelId, promptVersion: QUALIFICATION_VERSION,
           promptHash: "synthetic-multilingual-probe-v1", sessionToken: crypto.randomUUID(), charsOut: null,
           tokensIn: null, tokensOut: null, estimatedCostUsd: null, outcome: error.code === "MODEL_TIMEOUT" ? "timeout" : "error", latencyMs: Date.now() - depart });
@@ -702,11 +711,14 @@ export async function preparerPoolModelesGratuits(opts: { readonly timeoutMs?: n
   await rafraichirCatalogue(opts.signal);
   const quota = await lireQuotaOpenRouter();
   if (quota.remaining !== null && quota.remaining <= 5) {
-    poolOpenRouter.echouer("", new ErreurModele("MODEL_QUOTA_EXHAUSTED", false, "account", 60_000));
+    const maintenant = new Date();
+    const reprise = Date.UTC(maintenant.getUTCFullYear(), maintenant.getUTCMonth(), maintenant.getUTCDate() + 1) - Date.now();
+    poolOpenRouter.echouer("", new ErreurModele("MODEL_QUOTA_EXHAUSTED", false, "account", reprise));
+    await sauverQualifications();
   } else {
     await qualifierCandidats(Math.min(60_000, opts.timeoutMs ?? 30_000), Math.min(3, opts.maxModels ?? 3), opts.signal);
   }
-  return { quota, compte: poolOpenRouter.statutCompte(), modeles: poolOpenRouter.instantane() };
+  return { quota, compte: poolOpenRouter.statutCompte(), modeles: poolOpenRouter.instantane(), probes: [...preuvesQualification.values()] };
 }
 
 function besoinInference(req: LlmRequest, streaming: boolean): BesoinModele {
@@ -780,6 +792,8 @@ export async function llmStream(req: LlmRequest, provider?: LlmProvider): Promis
     const modeles = await candidatsInference(req, true, provider, depart + budget);
     const resultat = await conduireInference(modeles, (model, timeoutMs, signal) => (provider ?? openRouterProvider).stream({
       messages: req.messages, model, timeoutMs, idleTimeoutMs: budget,
+      deadlineMs: depart + budget, json: req.besoin?.json ?? false,
+      jsonMode: (req.besoin?.json ?? false) && (poolOpenRouter.instantane().find((m) => m.modelId === model)?.structuredOutput ?? false),
       signal: req.signal ? AbortSignal.any([signal, req.signal]) : signal,
     }), { timeoutMs: Math.max(0, budget - (Date.now() - depart)), ...(req.signal ? { signal: req.signal } : {}),
       ...(provider === undefined ? { reserver: (m: string) => poolOpenRouter.reserver(m) } : {}),

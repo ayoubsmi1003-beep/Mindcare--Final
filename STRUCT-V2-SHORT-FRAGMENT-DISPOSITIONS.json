@@ -1,0 +1,178 @@
+{
+  "status": "RECONCILED",
+  "approval_state": "APPROVED_EXISTING_DECISION",
+  "policy": "Approved structural policy: occurrence-0 short chunks remain attached to their parent; no semantic merging.",
+  "count": 17,
+  "items": [
+    {
+      "chunk_id": "7409e7349143841174e7a626f5dc4a1905547a7c9bfc0892999c519920103abe",
+      "parent_unit_id": "dsm5fr-u-1-U10004",
+      "occurrence": 0,
+      "decision": "ATTACHED_TO_PARENT",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Occurrence 0 with an existing parent; retain the short text attached to its parent without rewrite or merge.",
+      "human_approval_required": false,
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53"
+    },
+    {
+      "chunk_id": "8d239d5d347b08984a939f1442493fbe3c653a3dee99c813d3556c89ce17b725",
+      "parent_unit_id": "dsm5fr-u-1-U10006",
+      "occurrence": 0,
+      "decision": "ATTACHED_TO_PARENT",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Occurrence 0 with an existing parent; retain the short text attached to its parent without rewrite or merge.",
+      "human_approval_required": false,
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53"
+    },
+    {
+      "chunk_id": "7a81d70c06fa2b7fbc0933532ae742eff82281f87240b0e4db3336d5c9045a64",
+      "parent_unit_id": "dsm5fr-u-1-U10008",
+      "occurrence": 0,
+      "decision": "ATTACHED_TO_PARENT",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Occurrence 0 with an existing parent; retain the short text attached to its parent without rewrite or merge.",
+      "human_approval_required": false,
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53"
+    },
+    {
+      "chunk_id": "7a9c37e601e3a58a4164a63e080451c865890cff0f3fc02d235e360d78109f0d",
+      "parent_unit_id": "dsm5fr-u-31-U10004",
+      "occurrence": 0,
+      "decision": "ATTACHED_TO_PARENT",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Occurrence 0 with an existing parent; retain the short text attached to its parent without rewrite or merge.",
+      "human_approval_required": false,
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53"
+    },
+    {
+      "chunk_id": "2a3dbf596667bad8d2de853befd8689cd29192a9c2049e7af7fefa7995a84eab",
+      "parent_unit_id": "dsm5fr-u-311-S10019",
+      "occurrence": 0,
+      "decision": "ATTACHED_TO_PARENT",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Occurrence 0 with an existing parent; retain the short text attached to its parent without rewrite or merge.",
+      "human_approval_required": false,
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53"
+    },
+    {
+      "chunk_id": "c68c781bedfed16e204b6d01538aa1cd9e1ebaebfdd87e8760c689790cddb776",
+      "parent_unit_id": "dsm5fr-u-311-S10022",
+      "occurrence": 0,
+      "decision": "ATTACHED_TO_PARENT",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Occurrence 0 with an existing parent; retain the short text attached to its parent without rewrite or merge.",
+      "human_approval_required": false,
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53"
+    },
+    {
+      "chunk_id": "bf5721718a4e86eb5934a7062b05d48f5327848a409ec0974289be21a7b95acc",
+      "parent_unit_id": "dsm5fr-u-311-S10023",
+      "occurrence": 0,
+      "decision": "ATTACHED_TO_PARENT",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Occurrence 0 with an existing parent; retain the short text attached to its parent without rewrite or merge.",
+      "human_approval_required": false,
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53"
+    },
+    {
+      "chunk_id": "8d962fd751cfdbea68ededb4d9fea323c7840379904003fda0adfc1365b0c96c",
+      "parent_unit_id": "dsm5fr-u-356-U10020",
+      "occurrence": 0,
+      "decision": "ATTACHED_TO_PARENT",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Occurrence 0 with an existing parent; retain the short text attached to its parent without rewrite or merge.",
+      "human_approval_required": false,
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53"
+    },
+    {
+      "chunk_id": "748e042c70b28974370971168d62d59b17a4dd52f2026f2a11145daa4b9815fe",
+      "parent_unit_id": "dsm5fr-u-593-S3001",
+      "occurrence": 0,
+      "decision": "ATTACHED_TO_PARENT",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Occurrence 0 with an existing parent; retain the short text attached to its parent without rewrite or merge.",
+      "human_approval_required": false,
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53"
+    },
+    {
+      "chunk_id": "fce6c4d585870c527e8a96a78aa0c6538b161443d36d0094fb9dbd7488fef225",
+      "parent_unit_id": "dsm5fr-u-738-U40021",
+      "occurrence": 0,
+      "decision": "ATTACHED_TO_PARENT",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Occurrence 0 with an existing parent; retain the short text attached to its parent without rewrite or merge.",
+      "human_approval_required": false,
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53"
+    },
+    {
+      "chunk_id": "c57abde2ead90ecdece33567258ba7f572a7566e2bcb87ce670df03262af78c7",
+      "parent_unit_id": "dsm5fr-u-739-U40024",
+      "occurrence": 0,
+      "decision": "ATTACHED_TO_PARENT",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Occurrence 0 with an existing parent; retain the short text attached to its parent without rewrite or merge.",
+      "human_approval_required": false,
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53"
+    },
+    {
+      "chunk_id": "3b793af1d341991ed2ec3cb7a789e29517bf50829531490ef61bf3a5f93236f6",
+      "parent_unit_id": "dsm5fr-u-755-U40001",
+      "occurrence": 0,
+      "decision": "ATTACHED_TO_PARENT",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Occurrence 0 with an existing parent; retain the short text attached to its parent without rewrite or merge.",
+      "human_approval_required": false,
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53"
+    },
+    {
+      "chunk_id": "4bfd161a5fcefaf4489826fe780290e429cc2150687588dd8e459e59a0e4abb8",
+      "parent_unit_id": "dsm5fr-u-818-U40012",
+      "occurrence": 0,
+      "decision": "ATTACHED_TO_PARENT",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Occurrence 0 with an existing parent; retain the short text attached to its parent without rewrite or merge.",
+      "human_approval_required": false,
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53"
+    },
+    {
+      "chunk_id": "65ae0a84cdb7f34abc6288f9d10fe71c673895dc6438402f9ecea36a2706e6f8",
+      "parent_unit_id": "dsm5fr-u-884-U40014",
+      "occurrence": 0,
+      "decision": "ATTACHED_TO_PARENT",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Occurrence 0 with an existing parent; retain the short text attached to its parent without rewrite or merge.",
+      "human_approval_required": false,
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53"
+    },
+    {
+      "chunk_id": "d9eab7d6c8d2ea0ecdc130c2b7417254eaef265a12e5870c05e249ca169e1094",
+      "parent_unit_id": "dsm5fr-u-884-U40016",
+      "occurrence": 0,
+      "decision": "ATTACHED_TO_PARENT",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Occurrence 0 with an existing parent; retain the short text attached to its parent without rewrite or merge.",
+      "human_approval_required": false,
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53"
+    },
+    {
+      "chunk_id": "1882e26f14cba1fb4aa9f870ee73f0bf5b6910380f145cc09da4d95a3cc7178e",
+      "parent_unit_id": "dsm5fr-u-884-U40018",
+      "occurrence": 0,
+      "decision": "ATTACHED_TO_PARENT",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Occurrence 0 with an existing parent; retain the short text attached to its parent without rewrite or merge.",
+      "human_approval_required": false,
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53"
+    },
+    {
+      "chunk_id": "1fcf17bf3f5953b4301a478f80775191c7da51fda34d05073828aa2ac6d5642a",
+      "parent_unit_id": "dsm5fr-u-884-U40020",
+      "occurrence": 0,
+      "decision": "ATTACHED_TO_PARENT",
+      "approval_state": "APPROVED_EXISTING_DECISION",
+      "reason": "Occurrence 0 with an existing parent; retain the short text attached to its parent without rewrite or merge.",
+      "human_approval_required": false,
+      "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53"
+    }
+  ]
+}

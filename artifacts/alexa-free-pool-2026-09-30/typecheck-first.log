@@ -1,0 +1,23 @@
+artifacts/alexa-free-pool-2026-09-30/baseline/src/app/api/jarvis/jarvis-analyze-session/route.ts(16,33): error TS2307: Cannot find module '../_commun' or its corresponding type declarations.
+artifacts/alexa-free-pool-2026-09-30/baseline/src/app/api/jarvis/jarvis-analyze-session/route.ts(22,81): error TS2307: Cannot find module './prompt' or its corresponding type declarations.
+artifacts/alexa-free-pool-2026-09-30/baseline/src/app/api/jarvis/jarvis-chat/route.ts(55,33): error TS2307: Cannot find module '../_commun' or its corresponding type declarations.
+artifacts/alexa-free-pool-2026-09-30/baseline/src/app/api/jarvis/jarvis-chat/route.ts(97,8): error TS2307: Cannot find module './prompt' or its corresponding type declarations.
+artifacts/alexa-free-pool-2026-09-30/baseline/src/app/api/jarvis/jarvis-resume-cas/route.ts(19,33): error TS2307: Cannot find module '../_commun' or its corresponding type declarations.
+artifacts/alexa-free-pool-2026-09-30/baseline/src/app/api/jarvis/jarvis-resume-cas/route.ts(36,69): error TS2307: Cannot find module './prompt' or its corresponding type declarations.
+artifacts/alexa-free-pool-2026-09-30/baseline/src/services/jarvis-boucle.ts(50,8): error TS2307: Cannot find module './jarvis-capacites' or its corresponding type declarations.
+artifacts/alexa-free-pool-2026-09-30/baseline/src/services/jarvis-boucle.ts(51,53): error TS2307: Cannot find module './jarvis-confidentialite' or its corresponding type declarations.
+artifacts/alexa-free-pool-2026-09-30/baseline/src/services/jarvis-boucle.ts(62,8): error TS2307: Cannot find module './jarvis-contexte' or its corresponding type declarations.
+artifacts/alexa-free-pool-2026-09-30/baseline/src/services/jarvis-boucle.ts(69,8): error TS2307: Cannot find module './jarvis-assembleur' or its corresponding type declarations.
+artifacts/alexa-free-pool-2026-09-30/baseline/src/services/jarvis-boucle.ts(70,60): error TS2307: Cannot find module './jarvis-identite' or its corresponding type declarations.
+artifacts/alexa-free-pool-2026-09-30/baseline/src/services/jarvis-boucle.ts(71,58): error TS2307: Cannot find module './jarvis' or its corresponding type declarations.
+artifacts/alexa-free-pool-2026-09-30/baseline/src/services/jarvis-boucle.ts(74,37): error TS2307: Cannot find module './jarvis-projections' or its corresponding type declarations.
+artifacts/alexa-free-pool-2026-09-30/baseline/src/services/jarvis-boucle.ts(88,8): error TS2307: Cannot find module './jarvis-routage-intentions' or its corresponding type declarations.
+artifacts/alexa-free-pool-2026-09-30/baseline/src/services/jarvis-boucle.ts(90,21): error TS2307: Cannot find module './log' or its corresponding type declarations.
+artifacts/alexa-free-pool-2026-09-30/baseline/src/services/jarvis-boucle.ts(91,38): error TS2307: Cannot find module './result' or its corresponding type declarations.
+artifacts/alexa-free-pool-2026-09-30/baseline/src/services/jarvis-boucle.ts(838,78): error TS18046: 'cause' is of type 'unknown'.
+artifacts/alexa-free-pool-2026-09-30/baseline/src/services/jarvis-boucle.ts(1170,78): error TS18046: 'cause' is of type 'unknown'.
+artifacts/alexa-free-pool-2026-09-30/baseline/src/services/jarvis-voix.ts(21,20): error TS2307: Cannot find module './db' or its corresponding type declarations.
+artifacts/alexa-free-pool-2026-09-30/baseline/src/services/jarvis-voix.ts(23,21): error TS2307: Cannot find module './log' or its corresponding type declarations.
+artifacts/alexa-free-pool-2026-09-30/baseline/src/services/jarvis-voix.ts(24,47): error TS2307: Cannot find module './micro-partage' or its corresponding type declarations.
+artifacts/alexa-free-pool-2026-09-30/baseline/src/services/jarvis-voix.ts(25,38): error TS2307: Cannot find module './result' or its corresponding type declarations.
+tw.harness.config.ts(9,16): error TS2488: Type 'ContentConfig' must have a '[Symbol.iterator]()' method that returns an iterator.

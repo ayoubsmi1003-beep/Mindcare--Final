@@ -1,0 +1,69 @@
+ 
+ICD-11 Reference Guide 
+87 
+ 
+2.17.11 Step SP8 – Conditions unlikely to cause death 
+If the tentative starting point selected in Steps SP1 to SP7 is in the List of conditions unlikely 
+to cause death (see Mortality Annex 3.14.10, and: 
+• 
+If all other conditions reported on the certificate are also unlikely to cause death or 
+ill-defined, then keep this condition ‘unlikely to cause death’ as the starting point. 
+Next, go to Step M1. 
+• 
+If this condition was the cause of another condition that is not ‘unlikely to cause 
+death’ and that is not ill-defined, then keep this condition unlikely to cause death as 
+the starting point. Next, go to Step M1. 
+• 
+If the death was caused by a reaction to treatment of the condition unlikely to cause 
+death, select the reaction to treatment as the starting point. Next, go to Step M1 
+• 
+If none of these three apply, and there is at least one condition that is not ‘unlikely 
+to cause death’ and not ‘ill-defined’, then disregard the condition unlikely to cause 
+death. Go to Step SP1 and select another starting point, as if the condition unlikely to 
+cause death had not been mentioned on the certificate. 
+If the tentative starting point is not in the ‘List of conditions unlikely to cause death’, keep 
+that condition as the starting point and go to Step M1. 
+If the certificate mentions more than one treatment for the condition unlikely to cause 
+death, select the first-mentioned treatment. 
+Example 1  
+ 
+ 
+ 
+1 (a) Hearing loss 
+ 
+ 
+(b)  
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Ischaemic heart disease 
+Hearing loss is the tentative starting point (Step SP2), but it in the ‘List of conditions considered unlikely 
+to cause death’. There is another condition on the certificate, ischaemic heart disease, which is not in the 
+‘List of conditions considered unlikely to cause death’. Disregard hearing loss and restart the selection 
+procedure from Step SP1. Ischaemic heart disease is the new starting point (Step SP1). 
+Example 2  
+ 
+ 
+ 
+1 (a) Liver failure 
+ 
+ 
+(b) Excessive use of paracetamol 
+ 
+ 
+(c) Migraine-type headache 
+ 
+ 
+(d)  
+ 
+2  
+ 
+Migraine type headache is the tentative starting point (Step SP3), but it is in the ‘List of conditions 
+considered unlikely to cause death’. Migraine type headache was treated with paracetamol and there was 
+a reaction to the treatment, liver failure. Select the reaction to the treatment, liver failure, as the starting 
+point. 

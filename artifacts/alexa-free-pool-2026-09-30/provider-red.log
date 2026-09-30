@@ -1,0 +1,216 @@
+
+ RUN  v3.2.7 C:/Users/ABC Informatique/.claude/projects/Final mindcare
+
+ ❯ tests/unit/alexa-openrouter-provider.test.ts (5 tests | 4 failed) 96ms
+   × transport OpenRouter réel, fault injection limitée à fetch > ne publie pas un faux succès sur EOF prématuré 65ms
+     → promise resolved "{ value: undefined, done: true }" instead of rejecting
+   × transport OpenRouter réel, fault injection limitée à fetch > HTTP 429 fournisseur conserve son code, sans réémettre le message brut 6ms
+     → expected Error: transitoire: HTTP 429 to match object { code: 'MODEL_RATE_LIMIT', …(1) }
+   × transport OpenRouter réel, fault injection limitée à fetch > erreur SSE avant texte est rejetée avant retour du flux, donc rejouable 10ms
+     → promise resolved "{ …(2) }" instead of rejecting
+   × transport OpenRouter réel, fault injection limitée à fetch > annulation avant requête ne contacte pas le fournisseur 7ms
+     → promise resolved "{ …(2) }" instead of rejecting
+   ✓ transport OpenRouter réel, fault injection limitée à fetch > la fin normale expose seulement les deltas de contenu et l'usage 4ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/alexa-openrouter-provider.test.ts > transport OpenRouter réel, fault injection limitée à fetch > ne publie pas un faux succès sur EOF prématuré
+AssertionError: promise resolved "{ value: undefined, done: true }" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
++ {
++   "done": true,
++   "value": undefined,
+  }
+
+ ❯ tests/unit/alexa-openrouter-provider.test.ts:20:31
+     18|     const reader = flux.deltas.getReader();
+     19|     await expect(reader.read()).resolves.toMatchObject({ value: "Bonjo…
+     20|     await expect(reader.read()).rejects.toMatchObject({ code: "MALFORM…
+       |                               ^
+     21|     await expect(flux.usage).rejects.toMatchObject({ code: "MALFORMED_…
+     22|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯
+
+ FAIL  tests/unit/alexa-openrouter-provider.test.ts > transport OpenRouter réel, fault injection limitée à fetch > HTTP 429 fournisseur conserve son code, sans réémettre le message brut
+AssertionError: expected Error: transitoire: HTTP 429 to match object { code: 'MODEL_RATE_LIMIT', …(1) }
+
+- Expected
++ Received
+
+- {
+-   "code": "MODEL_RATE_LIMIT",
+-   "scope": "model",
++ Error {
++   "message": "transitoire: HTTP 429",
+  }
+
+ ❯ tests/unit/alexa-openrouter-provider.test.ts:25:5
+     23|   it("HTTP 429 fournisseur conserve son code, sans réémettre le messag…
+     24|     globalThis.fetch = vi.fn(async () => Response.json({ error: { mess…
+     25|     await expect(openRouterProvider.complete(requete)).rejects.toMatch…
+       |     ^
+     26|   });
+     27|   it("erreur SSE avant texte est rejetée avant retour du flux, donc re…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯
+
+ FAIL  tests/unit/alexa-openrouter-provider.test.ts > transport OpenRouter réel, fault injection limitée à fetch > erreur SSE avant texte est rejetée avant retour du flux, donc rejouable
+AssertionError: promise resolved "{ …(2) }" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
++ {
++   "deltas": ReadableStream {
++     Symbol(kType): "ReadableStream",
++     Symbol(kState): {
++       "closedPromise": undefined,
++       "controller": ReadableStreamDefaultController {
++         Symbol(kType): "ReadableStreamDefaultController",
++         Symbol(kState): {
++           "cancelAlgorithm": undefined,
++           "closeRequested": false,
++           "highWaterMark": 1,
++           "pullAgain": false,
++           "pullAlgorithm": undefined,
++           "pullFulfilled": [Function anonymous],
++           "pullRejected": [Function anonymous],
++           "pulling": false,
++           "queue": Queue {
++             "capacityMask": -1,
++             "dequeuedSize": 0,
++             "head": 0,
++             "length": 0,
++             "list": [],
++             "tail": 0,
++           },
++           "queueTotalSize": 0,
++           "sizeAlgorithm": undefined,
++           "started": true,
++           "stream": [Circular],
++         },
++       },
++       "disturbed": false,
++       "reader": undefined,
++       "state": "errored",
++       "storedError": Error {
++         "message": "permanent: private-body",
++       },
++       "transfer": {
++         "port1": undefined,
++         "port2": undefined,
++         "promise": undefined,
++         "writable": undefined,
++       },
++     },
++   },
++   "usage": Promise {},
+  }
+
+ ❯ tests/unit/alexa-openrouter-provider.test.ts:29:52
+     27|   it("erreur SSE avant texte est rejetée avant retour du flux, donc re…
+     28|     globalThis.fetch = vi.fn(async () => sse('data: {"error":{"code":5…
+     29|     await expect(openRouterProvider.stream(requete)).rejects.toMatchOb…
+       |                                                    ^
+     30|   });
+     31|   it("annulation avant requête ne contacte pas le fournisseur", async …
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/4]⎯
+
+ FAIL  tests/unit/alexa-openrouter-provider.test.ts > transport OpenRouter réel, fault injection limitée à fetch > annulation avant requête ne contacte pas le fournisseur
+AssertionError: promise resolved "{ …(2) }" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
++ {
++   "deltas": ReadableStream {
++     Symbol(kType): "ReadableStream",
++     Symbol(kState): {
++       "closedPromise": undefined,
++       "controller": ReadableStreamDefaultController {
++         Symbol(kType): "ReadableStreamDefaultController",
++         Symbol(kState): {
++           "cancelAlgorithm": undefined,
++           "closeRequested": true,
++           "highWaterMark": 1,
++           "pullAgain": false,
++           "pullAlgorithm": undefined,
++           "pullFulfilled": [Function anonymous],
++           "pullRejected": [Function anonymous],
++           "pulling": false,
++           "queue": Queue {
++             "capacityMask": -1,
++             "dequeuedSize": 0,
++             "head": 0,
++             "length": 0,
++             "list": [],
++             "tail": 0,
++           },
++           "queueTotalSize": 0,
++           "sizeAlgorithm": undefined,
++           "started": true,
++           "stream": [Circular],
++         },
++       },
++       "disturbed": false,
++       "reader": undefined,
++       "state": "closed",
++       "storedError": undefined,
++       "transfer": {
++         "port1": undefined,
++         "port2": undefined,
++         "promise": undefined,
++         "writable": undefined,
++       },
++     },
++   },
++   "usage": Promise {},
+  }
+
+ ❯ tests/unit/alexa-openrouter-provider.test.ts:34:77
+     32|     const fetch = vi.fn(async () => sse("data: [DONE]\n\n")); globalTh…
+     33|     const c = new AbortController(); c.abort();
+     34|     await expect(openRouterProvider.stream({ ...requete, signal: c.sig…
+       |                                                                             ^
+     35|     expect(fetch).not.toHaveBeenCalled();
+     36|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯
+
+⎯⎯⎯⎯⎯⎯ Unhandled Errors ⎯⎯⎯⎯⎯⎯
+
+Vitest caught 1 unhandled error during the test run.
+This might cause false positive tests. Resolve unhandled errors to make sure your tests are not affected.
+
+⎯⎯⎯⎯ Unhandled Rejection ⎯⎯⎯⎯⎯
+Error: permanent: private-body
+ ❯ src/server/egress/external-call.ts:492:23
+    490|               };
+    491|               if (o.error !== undefined) {
+    492|                 throw new Error(`permanent: ${o.error.message ?? "flux…
+       |                       ^
+    493|               }
+    494|               // ⚠️ LE WATCHDOG SE RÉARME SUR TOUT ÉVÉNEMENT, PAS SUR …
+ ❯ processTicksAndRejections node:internal/process/task_queues:104:5
+
+This error originated in "tests/unit/alexa-openrouter-provider.test.ts" test file. It doesn't mean the error was thrown inside the file itself, but while it was running.
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+
+
+ Test Files  1 failed (1)
+      Tests  4 failed | 1 passed (5)
+     Errors  1 error
+   Start at  11:17:48
+   Duration  2.88s (transform 383ms, setup 0ms, collect 1.60s, tests 96ms, environment 0ms, prepare 423ms)
+

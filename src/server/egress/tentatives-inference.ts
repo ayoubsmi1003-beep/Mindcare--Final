@@ -36,7 +36,7 @@ export async function conduireInference<T>(
     let abandon: (() => void) | undefined;
     try {
       const borne = new Promise<never>((_, rejeter) => {
-        minuteur = setTimeout(() => { c.abort(); rejeter(new ErreurModele("MODEL_TIMEOUT", true)); }, budget);
+        minuteur = setTimeout(() => { const erreur = new ErreurModele("MODEL_TIMEOUT", true); c.abort(erreur); rejeter(erreur); }, budget);
         abandon = () => rejeter(new ErreurModele("CANCELLED", false, "request"));
         p.signal?.addEventListener("abort", abandon, { once: true });
       });

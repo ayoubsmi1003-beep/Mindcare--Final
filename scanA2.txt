@@ -1,0 +1,7 @@
+U+FFFD count: 0
+non-ascii: [('¯', 'U+00AF'), ('Ã', 'U+00C3'), ('–', 'U+2013'), ('’', 'U+2019'), ('“', 'U+201C'), ('”', 'U+201D'), ('✽', 'U+273D')]
+map type: dict
+map keys: ['book_id', 'source_version', 'rule', 'offset', 'verified_anchors', 'pages']
+map 'book_id' = "stahl-prescribers-guide-7e-cup"
+map 'source_version' = "sha256:cf23ef7b70e7c6e099a5a43d994adb2f34ef06718643932611f5e91eeba180e3"
+map 'rule' = "printed = source_page_index (identity); file carries no printed folio numbers (edge-span hunt + no page labels); running head is the current drug name only"

@@ -1,0 +1,12 @@
+
+ RUN  v3.2.7 C:/Users/ABC Informatique/.claude/projects/Final mindcare
+
+ ✓ tests/unit/jarvis-taxonomie-erreurs.test.ts (8 tests) 10ms
+ ✓ tests/unit/jarvis-modele-configure.test.ts (12 tests) 29ms
+ ✓ tests/unit/jarvis-egress-gate.test.ts (11 tests) 371ms
+
+ Test Files  3 passed (3)
+      Tests  31 passed (31)
+   Start at  12:05:46
+   Duration  7.48s (transform 2.10s, setup 0ms, collect 7.70s, tests 409ms, environment 1ms, prepare 2.48s)
+

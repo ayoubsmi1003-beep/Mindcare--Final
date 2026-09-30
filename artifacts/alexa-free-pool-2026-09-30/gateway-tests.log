@@ -1,0 +1,39 @@
+
+ RUN  v3.2.7 C:/Users/ABC Informatique/.claude/projects/Final mindcare
+
+ ✓ tests/unit/alexa-free-pool.test.ts (13 tests) 116ms
+ ✓ tests/unit/jarvis-egress-gate.test.ts (11 tests) 69ms
+ ❯ tests/unit/alexa-openrouter-provider.test.ts (5 tests | 1 failed) 82ms
+   × transport OpenRouter réel, fault injection limitée à fetch > ne publie pas un faux succès sur EOF prématuré 61ms
+     → promise rejected "ErreurModele: MALFORMED_RESPONSE { …(5) }" instead of resolving
+   ✓ transport OpenRouter réel, fault injection limitée à fetch > HTTP 429 fournisseur conserve son code, sans réémettre le message brut 8ms
+   ✓ transport OpenRouter réel, fault injection limitée à fetch > erreur SSE avant texte est rejetée avant retour du flux, donc rejouable 4ms
+   ✓ transport OpenRouter réel, fault injection limitée à fetch > annulation avant requête ne contacte pas le fournisseur 2ms
+   ✓ transport OpenRouter réel, fault injection limitée à fetch > la fin normale expose seulement les deltas de contenu et l'usage 3ms
+ ✓ tests/unit/jarvis-modele-configure.test.ts (12 tests) 36ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/alexa-openrouter-provider.test.ts > transport OpenRouter réel, fault injection limitée à fetch > ne publie pas un faux succès sur EOF prématuré
+AssertionError: promise rejected "ErreurModele: MALFORMED_RESPONSE { …(5) }" instead of resolving
+ ❯ tests/unit/alexa-openrouter-provider.test.ts:19:31
+     17|     const flux = await openRouterProvider.stream(requete);
+     18|     const reader = flux.deltas.getReader();
+     19|     await expect(reader.read()).resolves.toMatchObject({ value: "Bonjo…
+       |                               ^
+     20|     await expect(reader.read()).rejects.toMatchObject({ code: "MALFORM…
+     21|     await expect(flux.usage).rejects.toMatchObject({ code: "MALFORMED_…
+
+Caused by: ErreurModele: MALFORMED_RESPONSE
+ ❯ src/server/egress/external-call.ts:408:56
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'MALFORMED_RESPONSE', recoverable: true, scope: 'model', retryAfterMs: +0, tentatives: [] }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 3 passed (4)
+      Tests  1 failed | 40 passed (41)
+   Start at  11:25:48
+   Duration  4.53s (transform 712ms, setup 0ms, collect 4.60s, tests 303ms, environment 2ms, prepare 1.35s)
+

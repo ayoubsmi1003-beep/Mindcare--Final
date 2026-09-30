@@ -1,0 +1,64 @@
+{
+  "phase": "P8",
+  "report": "DATABASE_IDENTITY",
+  "status": "IDENTIFIED_WITH_CREDENTIAL_MISMATCH",
+  "configured_endpoint": {
+    "env_file_present": true,
+    "database_url_present": true,
+    "configured_host": "127.0.0.1",
+    "configured_port": 55441,
+    "initial_probe": "connection_refused",
+    "secret_values_exposed": false
+  },
+  "local_topology": {
+    "windows_service": {
+      "name": "postgresql-x64-18",
+      "status": "Running",
+      "start_mode": "Auto",
+      "executable": "C:\\Program Files\\PostgreSQL\\18\\bin\\pg_ctl.exe",
+      "data_directory": "C:\\Program Files\\PostgreSQL\\18\\data",
+      "listening_ports": [5432]
+    },
+    "docker_containers": [
+      {
+        "name": "mc-p3",
+        "image": "pgvector/pgvector:0.8.6-pg16",
+        "status": "running",
+        "host_binding": "127.0.0.1:55441 -> 5432",
+        "postgres_version": "16.15",
+        "database_env_name": "mindcare",
+        "persistent_volume": true,
+        "identity": "intended MindCare development database"
+      },
+      {
+        "name": "mindcare-postgres",
+        "image": "pgvector/pgvector:pg16",
+        "host_binding": "none; internal 5432 only",
+        "identity": "not selected"
+      },
+      {
+        "name": "supabase_db_Final_Mindcare",
+        "image": "public.ecr.aws/supabase/postgres:17.6.1.156",
+        "host_binding": "54322 -> 5432",
+        "identity": "not selected"
+      }
+    ]
+  },
+  "intended_database": {
+    "container": "mc-p3",
+    "database": "mindcare",
+    "server_version": "16.15 (Debian 16.15-1.pgdg12+2)",
+    "roles_checked": ["mindcare_app", "postgres", "app_gatekeeper"],
+    "mindcare_app_exists": true,
+    "mindcare_app_login": true,
+    "mindcare_app_superuser": false,
+    "configured_app_credential_result": "password authentication failed (28P01)",
+    "read_only_admin_socket_used": true,
+    "schema_fingerprint": ["app.knowledge_sources", "app.knowledge_chunks", "app.schema_migrations"],
+    "pgvector_version": "0.8.6",
+    "non_idle_connection_check": "only the read-only verification psql session; no application writer observed",
+    "migration_count": 97,
+    "latest_relevant_migration": "099_listes_observabilite"
+  },
+  "conclusion": "Port 55441 is the intended mc-p3 MindCare database. The local Windows PostgreSQL 18 service on 5432 is a different instance. The application credential in .env does not authenticate to the intended container, so no application-level DB read or write is possible until credentials are corrected outside this run."
+}

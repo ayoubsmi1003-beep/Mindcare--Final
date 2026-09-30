@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-09-25T00:48:30.388532+00:00",
+  "nodes": {
+    "graphify_out_memory_query_20260919_022657_why_does_rendezvous_connect_tableau_de_bord_to_pre_patients_liste_dossiers": {
+      "code_fingerprint": "053eeb76460ff624ebfde36de8ad440f192f7c4fe93f4998322bc9ae74dc21af",
+      "label": "Patients liste dossiers",
+      "last": "2026-09-19T02:26:57.202920+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-19T02:26:57.202920+00:00",
+          "outcome": "useful",
+          "q": "Why does RendezVous connect Tableau de bord to Preuves patients?"
+        }
+      ],
+      "score": 0.871926761,
+      "source_file": "graphify-out/memory/query_20260919_022657_why_does_rendezvous_connect_tableau_de_bord_to_pre.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "graphify_out_memory_query_20260919_022657_why_does_rendezvous_connect_tableau_de_bord_to_pre_rendezvous_detail_seance": {
+      "code_fingerprint": "053eeb76460ff624ebfde36de8ad440f192f7c4fe93f4998322bc9ae74dc21af",
+      "label": "RendezVous detail seance",
+      "last": "2026-09-19T02:26:57.202920+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-19T02:26:57.202920+00:00",
+          "outcome": "useful",
+          "q": "Why does RendezVous connect Tableau de bord to Preuves patients?"
+        }
+      ],
+      "score": 0.871926761,
+      "source_file": "graphify-out/memory/query_20260919_022657_why_does_rendezvous_connect_tableau_de_bord_to_pre.md",
+      "status": "tentative",
+      "uses": 1
+    }
+  },
+  "version": 1
+}

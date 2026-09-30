@@ -1,0 +1,1335 @@
+*** PAGE 49 (SRC 51) ***
+ 
+ICD-11 Reference Guide 
+49 
+ 
+rules, are necessary. In an electronic environment programmatically embedded instructions 
+can verify compliance with the coding rules. 
+Electronic 
+Paper 
+1. Enter the statement or term in the 
+coding tool 
+1. Look up the lead term in the Alphabetical 
+Index and applicable secondary terms. 
+2. Select the matching term, or the one 
+closest to what you are looking for from 
+amongst the displayed options 
+2. Select the appropriate term, or one 
+closest to what you are looking for, from 
+amongst the listed options 
+3. Verify the result in the tabular list 
+browser view for exclusions, inclusions and 
+notes given at the level of that category, its 
+grouping levels and at the chapter level. 
+3. Verify the result in the tabular list 
+(Volume 1) for exclusions, inclusions and 
+notes given at the level of that category, its 
+grouping levels and at the chapter level. 
+The WHO online browser and coding tool are available at https://icd.who.int. 
+2.7 ICD–11 conventions 
+ICD–11 has standard ways of presenting its content. Conventions describe textual content 
+and also apply to the coding structure. 
+2.7.1 Inclusions 
+Within the coded categories there are typically other optional diagnostic terms. These are 
+known as ‘inclusion terms’ and are given, in addition to the title, as examples of the 
+diagnostic statements to be classified to that category. They may refer to different 
+conditions or be synonyms. They are not a sub-classification of the category. 
+Inclusion terms are listed primarily as a guide to the content of the category, in addition to 
+the descriptions. Many of the items listed relate to important or common terms belonging 
+to the category. Others are borderline conditions or sites listed to distinguish the boundary 
+between one subcategory and another. The lists of inclusion terms are by no means 
+exhaustive. 
+Alternative names of diagnostic entities (synonyms) are included and shown in the 
+electronic coding tool and the Alphabetic Index. 
+It is sometimes necessary to read inclusion terms in conjunction with titles. This usually 
+occurs when the inclusion terms describe lists of sites or pharmaceutical products, where 
+appropriate words from the title (e.g. ‘malignant neoplasm of …’, ‘injury to …’, ‘toxic effects 
+of …’) need to be understood. General diagnostic descriptions common to a range of 
+categories, or to all the subcategories in a four-character category, are to be found in the 
+notes heading ‘Inclusions’, immediately following a chapter, group, or category title. 
+2.7.2 Exclusions 
+Certain categories contain lists of conditions preceded by the word ‘Exclusions’. These are 
+terms which are classified elsewhere. An example of this is 5A60 Hyperfunction of pituitary 
+gland which excludes Cushing syndrome. 
+
+
+*** PAGE 50 (SRC 52) ***
+ 
+50 
+ 
+ICD-11 MMS  
+ 
+Exclusions serve as a cross reference in ICD and help to delineate the boundaries of a 
+category. 
+General exclusions for a range of categories or for all subcategories are found in the notes 
+heading ‘Excludes’, immediately following a chapter, group or category title. 
+Multiple parenting in ICD-11 shows categories in the context of siblings that are placed 
+elsewhere in the classification. This is also an indication of an exclusion and means ‘a sibling 
+is coded elsewhere’. In the print and the electronic version this is marked with the label 
+‘code elsewhere’. 
+2.7.2.1 ‘Code also’ and ‘Use additional code, if desired’ instructions 
+‘Code also’ instructions inform the user about required additional aetiological information 
+which is mandatory to be coded in a cluster with certain categories because that additional 
+information is relevant for primary tabulation. The ‘code also’ statement marks the 
+categories that must be used in conjunction with the indicated second code(s). However, in 
+some instances aetiology may be unknown although the condition requires treatment in its 
+own right. In this circumstance, the code may be reported alone. 
+For example, the category Diabetic cataract indicates ‘code also’ type of diabetes. This 
+means that in conjunction with the code for ‘diabetic cataract’, the code for the type of 
+diabetes should be assigned. Both stem codes for the type of diabetes and the diabetic 
+cataract are always reported in a cluster. 
+‘Use additional code, if desired’ - instructions inform the user about optional additional 
+detail that can be coded. 
+2.7.3 ‘NEC’ and ‘NOS’ 
+2.7.3.1 ‘NEC’ 
+The stem ‘not elsewhere classified’, when used in a category title, serve as a warning that 
+certain specified variants of the listed conditions may appear in other parts of the 
+classification. For example, NF09 Adverse effects, not elsewhere classified. Codes to which 
+the NEC description is appended should only be used if one of the other options available in 
+the classification is not suitable. 
+2.7.3.2 ‘NOS’ 
+The letters NOS are an abbreviation for the term ‘not otherwise specified’, implying that the 
+documentation that is used for classifying does not provide more detail beyond the term 
+provided. It implies ‘unspecified’, ‘incompletely specified’ or ‘unqualified’. Sometimes an 
+unqualified term is nevertheless classified to a rubric for a more specific type of the 
+condition. This is because, in medical terminology, the most common form of a condition is 
+often known by the generic name of the condition itself and only the less common types are 
+qualified. For example, ‘pharyngitis’ is commonly used to mean ‘acute pharyngitis’. These 
+inbuilt assumptions have been taken into account in order to avoid incorrect classification. 
+Careful inspection of inclusion terms will reveal where an assumption of cause has been 
+accounted for. Coders should be careful not to code a term as unqualified unless it is quite 
+clear that no information is available that would permit a more specific assignment 
+
+
+*** PAGE 51 (SRC 53) ***
+ 
+ICD-11 Reference Guide 
+51 
+ 
+elsewhere. Similarly, in interpreting statistics based on the ICD, some conditions assigned to 
+an apparently specified category will not have been so specified on the record that was 
+coded. When comparing trends over time and interpreting statistics, it is important to be 
+aware that assumptions may change from one revision of the ICD to another. For example, 
+before the Eighth Revision, an unqualified aortic aneurysm was assumed to be due to 
+syphilis (this is no longer the case since the introduction of ICD–10). In ICD-11 in most 
+instances the ‘NOS’ terminology points to unspecified categories, so that future data 
+analysis can take care of assumptions regarding the linguistic meaning. 
+Additional terms permitted in ICD coding: 
+• 
+Certain 
+• 
+Other 
+• 
+Unspecified 
+• 
+And 
+• 
+Or 
+• 
+Due to 
+• 
+With 
+• 
+Caused by 
+• 
+Attributed to 
+• 
+Secondary to 
+• 
+Associated with 
+2.7.4 ‘Certain’ 
+The term ‘certain’ is used where certain entities that could be grouped in a specific location 
+in the classification are grouped somewhere else outside the current chapter or block. For 
+example, 8B22 Certain specified cerebrovascular diseases means that only some specified 
+cerebrovascular diseases are coded here, whereas other specific types of cerebrovascular 
+disease are located elsewhere in the classification. 
+2.7.5 Residual categories – ‘Other’ and ‘Unspecified’ 
+ICD-11 coding should always be completed to include the most specific level of detail 
+possible with the use of one code or multiple codes as described above. There are, however, 
+circumstances when that is not possible and for that reason the ICD-11 includes categories 
+titled ‘other’ and ‘unspecified’. In some instances, necessary information to select a specific 
+category may not be available in the source documentation. When this is the case, the 
+residual category ‘unspecified’ is selected. Conversely, there are instances where the 
+information in the source documentation is very specific, but the tabular list does not 
+include a specific category. In this case, users identify the closest category match, and code 
+to the residual category titled ‘other’. 
+2.7.6 Use of ‘And’ and ‘Or’ 
+The words ‘and’ and ‘or’ in ICD–11 are used in their meaning in formal logic. A term that 
+includes a statement of the kind ‘A and B’ means that both A and B, have to be present in 
+order to use that category. A term that includes a statement of the kind ‘A or B’ means that 
+the category may be used if either A or B are present. 
+
+
+*** PAGE 52 (SRC 54) ***
+ 
+52 
+ 
+ICD-11 MMS  
+ 
+2.7.7 ‘Due to’ and ‘Associated with’ 
+‘Due to’ is the preferred term for categories where two conditions are mentioned, and a 
+causal sequence exists between them. Other terms, such as ‘caused by’ or ‘attributed to’ are 
+allowable synonyms. The phrase ‘secondary to’ is equivalent and may also be included as a 
+synonym. ‘Associated with’ is the preferred term for categories where two conditions are 
+mentioned but there is no causal sequence implied. 
+2.7.8 Spelling, parentheses, grammar and other conventions 
+Spelling and grammar of ICD-11 follow the British rules with exceptions and amendments 
+conforming to WHO spelling rules. The detailed conventions are listed below. The ICD-11 
+terminology uses the following conventions: 
+• 
+Terms are listed in their singular form. For example, ‘Superficial injury of scalp’ 
+instead of ‘Superficial injuries of scalp’. There are exceptions when the singular form 
+doesn’t apply, such as ‘Multiple injuries of head’, and when a term describes a group 
+of diseases, such as “Benign vascular neoplasms”. 
+• 
+No use of apostrophes with eponyms. For example, ‘Hodgkin lymphoma’ (instead of 
+‘Hodgkin’s lymphoma’) 
+• 
+Entities are described using natural language. For example, ‘myocardial infarction’ 
+(instead of ‘infarction, myocardial’). 
+• 
+Abbreviations are printed using upper case letters and followed by the complete title 
+in full. For example, ‘MI – [myocardial infarction]’. 
+• 
+Parentheses are used in the tabular list to enclose the code to which an exclusion 
+term refers. For example, 9A01.3 Infectious blepharitis Exclusions: 
+Blepharoconjunctivitis (9A60.4) 
+2.7.9 General features 
+The main structural innovation of ICD–11 is that it is built on a Foundation component from 
+which the tabular lists (such as the classification for morbidity and mortality statistics) is 
+derived. See 1.2.5 Foundation Component and Tabular lists of ICD–11. 
+Table 1: ICD-11 Terminology 
+
+
+*** PAGE 53 (SRC 55) ***
+ 
+ICD-11 Reference Guide 
+53 
+ 
+ICD-11 Term 
+Explanation 
+Foundation 
+component 
+Underlying data base content that holds all necessary information to 
+generate print versions of the tabular list and the alphabetical index, 
+as well as additional information that is needed to generate 
+specialty linearisations of ICD-11 and country specific modifications. 
+Stem code 
+Stem codes are codes that can be used alone. They are found in the 
+tabular list of ICD-11 for Mortality and Morbidity Statistics. Stem 
+codes may be entities or groupings of high relevance, or clinical 
+conditions that should always be described as one single category. 
+The design of stem codes makes sure that in use cases that require 
+only one code per case, a meaningful minimum of information is 
+collected. 
+Extension code 
+Extension codes are lists of additional information that can be is 
+added to a stem code when users and settings are interested in 
+reporting more detail. Extension codes are not mutually exclusive. 
+They are not designed to be a classification but may show 
+hierarchies and can never be used without a stem code in the 
+context of statistical classification. Extension codes can never 
+appear in the first position in a cluster. Extension codes may be used 
+alone in another context, e.g. for device documentation. 
+Precoordination 
+Stem codes may contain all pertinent information about a clinical 
+concept in a pre-combined fashion. This is referred to as 
+‘precoordination’. 
+ 
+Example: BD50.40 Abdominal aortic aneurysm with perforation 
+ 
+Example: CA40.04 Pneumonia due to Mycoplasma pneumoniae 
+Postcoordination 
+The use of multiple codes (i.e. stem codes and/or extension codes) 
+together to fully describe a documented clinical concept. 
+Postcoordination is by matter of principle permitted with all axes, as 
+long as at least one stem code is used. API, Browser and coding tool 
+facilitate postcoordination in certain areas. Other areas of 
+postcoordination have to be coded individually, but may be 
+supported by future updates of ICD-11, where need arises. 
+Cluster 
+A cluster is the postcoordinated entities that are joined using either 
+a forward slash (/) or ampersand (&). 
+ 
+Example: 
+ 
+Diagnosis: Duodenal ulcer with acute haemorrhage 
+ 
+Cluster: DA63.Z/ME24.90 
+ 
+Condition - DA63 Duodenal ulcer, unspecified 
+ 
+Has manifestation (use additional code, if desired) - ME24.90 Acute 
+gastrointestinal bleeding, not elsewhere classified 
+
+
+*** PAGE 54 (SRC 56) ***
+ 
+54 
+ 
+ICD-11 MMS  
+ 
+ICD-11 Term 
+Explanation 
+Primary and 
+secondary parents 
+The hierarchy of ICD-11 is defined the same as it was in previous 
+versions of ICD. The ability to connect specific diseases and concepts 
+within the classification to another parent code was introduced to 
+enable specific extracts of the Tabular list for medical specialties or 
+for specific use cases. 
+ 
+Example: A code for a malignant neoplasm of the skin is in the 
+chapter for malignant neoplasms. The primary parent for this code 
+is a code or a block from this chapter. However, a medical doctor 
+treating only skin diseases might want to see only codes from the 
+classification that are relevant for his or her specific clinical purpose. 
+Therefore, a secondary parent was defined in the skin chapter which 
+will only show the code in this chapter if the specific extract of 
+codes for his or her use case is selected. 
+2.8 Stem codes 
+ICD–11 stem codes are codes in a particular tabular list that can be used alone. Stem codes 
+may be entities or groupings of high relevance, or clinical entities that should always be 
+described as one entity. The design of stem codes makes sure that in use cases that require 
+only one code per case a meaningful minimum of information is collected. 
+The stem codes of the ICD-11 are organised in 26 chapters that follow the traditional 
+pattern of the ICD, relating to aetiology, relevant organ system, maternal status, perinatal 
+status, external causes, and factors influencing health status. 
+2.9 Extension codes 
+Extension codes are provided for use as supplementary or additional codes when it is 
+desired to identify more detail in classification entities elsewhere. The inclusion of the new 
+Extension codes in ICD–11 provides capacity for coding qualifying information and are linked 
+to stem codes. Extension codes have been designed to standardise the way additional 
+information is added to stem codes, and the adoption of multi-dimensional coding results in 
+a substantially reduced amount of stem codes. Extension codes may be used alone in other 
+contexts, e.g. device documentation. 
+Extension codes are not mutually exclusive. They are not a classification and can never be 
+used without a stem code for statistical purposes. Extension codes can never appear in the 
+first position in a classification cluster. One or more extension codes can be linked when 
+coding a specific condition. 
+There are two main types of Extension codes: 
+• 
+Type 1 extension codes allow the user to add detail to a stem code in terms of severity, 
+temporality, anatomy, histopathology of the condition or other dimensions like substances 
+and medical devices. For example, if the diagnostic statement reads ‘cervical disc prolapse 
+C5-C6’ the anatomy extension code XA1X49 Cervical intervertebral disc or space C5-C6 can 
+be added to the stem code FA80.1 Intervertebral disc degeneration of cervical spine with 
+prolapsed disc in order to capture the detail of contained in the diagnostic statement. 
+
+
+*** PAGE 55 (SRC 57) ***
+ 
+ICD-11 Reference Guide 
+55 
+ 
+• 
+Type 2 extension codes represent diagnosis code descriptors which indicate how the 
+diagnosis is to be used and/or interpreted. The meaning of the code refers to the same 
+condition, but the use of type 2 – diagnosis code descriptor extension code alters its 
+interpretation. For example, for adverse event reporting it is important to code diagnosis 
+timing in terms of XY6M Present on admission, XY69 Developed after admission, or XY85 
+Uncertain timing of onset relative to admission. 
+Overview of the Type 1 Extension codes 
+• 
+Severity scale value 
+• 
+Temporality (course of the condition) 
+• 
+Aetiology 
+• 
+Topology Scale Value 
+• 
+Anatomy and topography 
+• 
+Histopathology 
+• 
+Dimensions of injury 
+• 
+Dimensions of external causes 
+• 
+Consciousness 
+• 
+Substances 
+• 
+ICD-O 
+• 
+Health Devices, Equipment and Supplies 
+Overview of Type 2 – Extension codes - Diagnosis Code Descriptors 
+• 
+Discharge diagnosis types 
+• 
+Diagnosis timing 
+• 
+Diagnosis timing in relation to surgical procedure 
+• 
+Diagnosis method of confirmation 
+• 
+Diagnosis certainty 
+• 
+Obstetrical diagnosis timing 
+• 
+Encounter descriptors 
+• 
+Capacity or context 
+2.10 Precoordination and postcoordination 
+Some stem codes contain all pertinent information about a clinical concept in a pre-
+combined fashion. This is referred to as ‘precoordination’. 
+A health condition may be further described to any level of detail, by applying more than 
+one code, or by ‘postcoordinating’ (i.e. combining codes): 
+• 
+two or more stem codes, (i.e. code1/code2) 
+• 
+stem codes with one or more extension codes. (i.e. stem code&extension 
+code1&extension code2) 
+A group of codes that have been postcoordinated is called a ‘cluster’. A forward slash (/) or 
+ampersand (&) is used to show the linkage between postcoordinated codes. In this manner, 
+the classification can address many clinical concepts with a limited range of categories. 
+
+
+*** PAGE 56 (SRC 58) ***
+ 
+56 
+ 
+ICD-11 MMS  
+ 
+Example 
+Precoordination of concepts in a single code Condition: 2C25.2 Squamous cell carcinoma of 
+bronchus or lung has precoordination, both site and pathology are combined in a single 
+precoordinated stem code. 
+Example 
+Postcoordination of concepts combined in a cluster: the condition urinary tract infection 
+due to Extended spectrum beta-lactamase producing Escherichia coli’ is expressed through a 
+combination of two linked or postcoordinated stem codes. Condition: GC08.0 Urinary tract 
+infection, site not specified, due to Escherichia coli Associated with (use additional code, if 
+desired): MG50.27 Extended spectrum beta-lactamase producing Escherichia coli Cluster 
+code: GC08.0/MG50.27 
+Postcoordination axis 
+Description 
+‘Has causing condition’ - this field is 
+indicating the causing condition that must 
+be coded when known. The causing 
+condition can be compared to the ‘dagger’ 
+code in ICD-10. This option is found at 
+entities that are typically caused by a range 
+of different conditions and is referred to as 
+mandatory postcoordination in the Coding 
+tool. 
+It is mandatory to code the causing 
+condition for primary tabulation when it is 
+known. ‘Has causing condition’ is added to 
+categories that are caused by an 
+underlying disease. For example, 
+retinopathy has a ‘causing condition’ of 
+diabetes. Causing conditions should be 
+considered required in almost all 
+situations, and must be used for 
+conditions that are manifestations. 
+‘Has manifestation’ - prompts the user to 
+code any manifestations. Manifestations can 
+be compared to the ‘asterisk’ codes in ICD-
+10. This option is found at entities that can 
+develop manifestations. 
+It is optional to code manifestations of a 
+disease. For example, diabetes ‘Has 
+manifestations’ such as retinopathy. This 
+coding should be considered ‘Allowed’ in 
+almost all situations. The listed 
+manifestations are usually a sample of the 
+ones frequently resulting from the 
+condition. 
+‘Associated with’ - when conditions are 
+captured together for a full picture but do 
+not necessarily represent a cause and effect 
+scenario. 
+This field is used when multiple codes are 
+required to fully describe a condition. For 
+example, ‘Associated with’ is used to link 
+the codes for antimicrobial resistance to 
+the codes for the infection. This coding can 
+be either ‘Allowed’ or ‘Required’ 
+depending on the situation. 
+Special cases for postcoordination: 
+
+
+*** PAGE 57 (SRC 59) ***
+ 
+ICD-11 Reference Guide 
+57 
+ 
+1. 
+External cause codes are ‘allowed’ to identify the cause of an injury and are 
+‘associated with’ the injuries. 
+2. 
+The external cause code to identify a specific drug is ‘allowed’ with entities beginning 
+with or including the phrase ‘Drug -induced’. 
+3. 
+External cause codes for the mode and mechanism of health care related harm are 
+‘associated with’ the codes for the harm. 
+2.10.1 Adding detail – postcoordination and cluster coding with multiple stem codes 
+and extension codes 
+Information about the aetiology and the manifestation of the condition of interest should 
+be coded. In some instances, the ICD code refers to both (i.e. precoordinated), while in 
+other instances more than one stem code (and/or extension code) needs to be used in order 
+to express the relevant detail. This requires postcoordination. 
+Note: When a condition is already precoordinated and given an ICD-11 MMS code, the 
+existing precoordinated ICD-11 MMS stem code must be used. Postcoordination must never 
+be used to replicate the meaning of a precoordinated code. 
+Also note that all ICD entities in the Foundation have a uniform resource identifier (URI). If a 
+particular entity does not have an ICD-11 MMS code, and collection of a more 
+detailed/specific entity is required for selected national needs, a country may collect the URI 
+for this purpose. Refer to section 2.12 Electronic recording and reporting. 
+E.g. Acute bleeding duodenal ulcer 
+Stem Code: DA63.Z Duodenal ulcer, unspecified Has manifestation (use additional code, if desired): 
+ME24.90 Acute gastrointestinal bleeding, not elsewhere classified Cluster: DA63.Z/ME24.90 
+E.g. Acute RSV bronchiolitis 
+Code: CA41.0 Acute bronchiolitis due to respiratory syncytial virus Explanation: Since RSV bronchiolitis is 
+a precoordinated concept in ICD-11, it is incorrect/prohibited to replicate the meaning of the diagnostic 
+statement using a stem code and extension code (i.e. do not code: [CA41.Z] Acute bronchiolitis, 
+unspecified&XN275 Human respiratory syncytial virus) 
+E.g. Fracture, shaft of ulna 
+Code: NC32.2 Fracture of shaft of ulna Explanation: Since fracture of shaft of ulna is a precoordinated 
+concept in ICD-11, it is incorrect/prohibited to replicate the meaning of the diagnostic statement using a 
+stem code and extension code (i.e. do not code: NC32.Z Fracture of forearm, unspecified&XA8U33 shaft of 
+the ulna) 
+There may be less obvious cases across the ICD. In an electronic environment, 
+programmatically embedded instructions will help to avoid this kind of mistake. For 
+reporting purposes, any correlated codes are linked using a forward slash (/) between stem 
+codes and an ampersand (&) to separate stem codes with extension codes. 
+2.10.2 Combining stem codes and extension codes, and how to order these in a complex 
+code cluster 
+Stem codes from other parts of ICD and extension codes can be linked together to describe 
+a clinical concept in detail. They have to be grouped together in data transmission and 
+evaluation in order to not lose the information conveyed by the joint group of codes. Such a 
+
+
+*** PAGE 58 (SRC 60) ***
+ 
+58 
+ 
+ICD-11 MMS  
+ 
+group of codes is called a cluster. Cluster coding requires use of a specific syntax to indicate 
+which codes belong together when postcoordination is used. This syntax has to comply with 
+the following rules: 
+1. 
+If only one stem code is coded, no clustering mechanisms need to be observed. 
+  
+E.g. Condition: Acute ST elevation myocardial infarction BA41.0 Acute ST elevation myocardial 
+infarction 
+2. 
+When postcoordinating to form a cluster, stem codes are always coded before extension 
+codes. (Note, however, the complex clustering scenario depicted in Example 5 below, where 
+a combination of multiple stem codes and linked extension codes are combined in a single 
+complex cluster). 
+3. 
+If one stem code is postcoordinated with one or more extension codes, the combining 
+syntax used is the ampersand (&). 
+Example 1: Acute ST elevation myocardial infarction, anterior wall, LAD 
+Condition (code) - Acute ST elevation myocardial infarction BA41.0 Acute ST elevation myocardial 
+infarction Specific anatomy - XA7RE3 Anterior wall of heart 
+Specific anatomy - XA7NQ7 Left anterior descending coronary artery Cluster: BA41.0&XA7RE3&XA7NQ7 
+Example 2: Acute pyelonephritis, left side, E. coli Condition (code) - GB51 Acute 
+pyelonephritis 
+Laterality - XK8G Left Infectious agent - XN6P4 Escherichia coli Cluster: GB51&XK8G&XN6P4 
+4. 
+If two stem codes are postcoordinated to provide additional detail, it is important to 
+follow the order (within a cluster) according to the use case (e.g. mortality or 
+morbidity). The first stem code will be separated from the second stem code by a 
+slash (/). 
+If only one code can be retained during data analysis for mortality (underlying cause of 
+death) and public health prevention, priority of order should be given to the code that best 
+describes the aetiology of a condition. If only one code can be retained for morbidity data 
+analysis, priority should be given to the main condition (reason for admission after study 
+established at the end of the episode of health care). 
+Example 3: Mortality (underlying cause of death) code ordering within a cluster 
+Patient died because of their diabetic coma. The patient had Type 2 diabetes mellitus. Condition (terminal 
+cause of death): 5A23 Diabetic coma Condition (underlying cause of death): 5A11 Type 2 diabetes mellitus 
+Mortality cluster order: 5A11/5A23 
+Example 4: Morbidity (main condition) code ordering within a cluster (if only one code can 
+be retained during data analysis) 
+Patient admitted to hospital in a diabetic coma. The patient had Type 2 diabetes mellitus. 
+Main condition: 5A23 Diabetic coma Other condition: 5A11 Type 2 diabetes mellitus Morbidity cluster 
+order: 5A23/5A11 
+5. 
+If a stem code is postcoordinated with extension codes and another stem code with 
+some more extension codes is also coded within a cluster, the specific syntax should 
+be designed to make a clear distinction between which extension codes in the 
+cluster belong to which stem codes. The following syntax must be followed: The first 
+stem code is reported, followed by an ‘&’ followed by one or more extension codes, 
+
+
+*** PAGE 59 (SRC 61) ***
+ 
+ICD-11 Reference Guide 
+59 
+ 
+each of them separated by ‘&’. Then a slash ‘/’ separates this first section of the 
+cluster from the next stem code which is followed by ‘&’ and the extension codes for 
+this specific stem code, each again separated by ‘&’. 
+Example 5: stem code & extension code / stem code & extension code & extension code 
+Left inguinal hernia with acute obstruction Condition (code) - DD51 Inguinal hernia 
+Laterality - XK8G Left 
+Has manifestation (use additional code, if desired) - ME24.2 Digestive system obstruction 
+Temporal pattern and onset - XT5R Acute Cluster: DD51&XK8G/ME24.2&XT5R 
+Postcoordination is only to be used to combine codes to describe and fully characterise a 
+documented clinical concept. If the documentation describes two distinct clinical concepts 
+that are represented by separate stem codes, they should not be reported together in a 
+postcoordinated cluster. 
+Example 6: Pedestrian fall injury 
+Concussion and open fracture shaft of left ulna due to fall on uneven sidewalk: 
+Condition (code) 1 - NA07.0Z Concussion, unspecified 
+Associated with (use additional code, if desired) - PA60 Unintentional fall on the same level or from less 
+than 1 metre 
+Object or substance producing injury - XE1DA Uneven surface, not elsewhere classified 
+Place of occurrence - XE53A Sidewalk Cluster - NA07.0/ PA60& XE1DA&XE53A 
+Condition (code) 2 - NC32.2 Fracture of shaft of ulna 
+Laterality - XK8G Left 
+Fracture open or closed - XJ7YM Open fracture 
+Associated with: PA60 Unintentional fall on the same level or from less than 1 metre 
+Objects of living things involved in causing - XE1DA Uneven surface, not elsewhere classified 
+Place of occurrence - XE53A Sidewalk Cluster: NC32.2 & XK8G& XJ7YM /PA60 & XE1DA & XE53A 
+Programmatically embedded instructions in the Foundation component of ICD-11 facilitate 
+use of frequently used code combinations. Code combinations are not limited to the ones 
+facilitated by these instructions. Additional instructions are added, based on user demands. 
+2.10.3 Diagnosis Timing - ‘Present on admission’ vs. ‘Developed after admission’ 
+Among the new Type 2 Extension codes -Diagnosis Code Descriptors, diagnosis timing is the 
+particularly important set of extension codes that allow for distinction of diagnoses present 
+on admission from diagnoses arising after admission, i.e. during the period of 
+hospitalisation. 
+The latter distinction is particularly important, because it allows for the targeted 
+identification of a number of in-hospital diagnoses that may represent adverse events 
+associated with health care. The majority of coded concepts in a hospital record are 
+conditions present on admission. Recognising this, it will be of significant interest to flag a 
+diagnosis that developed after admission. 
+Example 1: 
+A patient with long-standing type 1 diabetes, admitted to hospital because of a myocardial infarction. 
+Main condition: Myocardial infarction 
+Other condition: Diabetes mellitus, type 1 
+
+
+*** PAGE 60 (SRC 62) ***
+ 
+60 
+ 
+ICD-11 MMS  
+ 
+In this instance, both conditions are present at admission, but one of them (myocardial infarction) does 
+not need to be coded as being ‘present on admission’ because it is the main condition, designated in this 
+example as being ‘the condition that is determined to be the reason for admission, established at the end 
+of the episode of health care’. The appropriate coding of this scenario therefore includes two clusters, 
+each of which involves a stem code linked to an accompanying extension code i.e.: 
+• 
+‘Stem code for acute myocardial infarction’&‘Discharge Diagnosis Type Extension 
+code for main condition’; BA41.Z&XY0Y 
+• 
+‘Stem code for diabetes mellitus type 1’&‘Diagnosis timing Extension code for 
+present on admission’; 5A10&XY6M 
+Note that for both coded entities in the above example, an ampersand (&) is used. In the 
+first cluster, the stem code for myocardial infarction is linked to a diagnosis type extension 
+code for main condition diagnosis type. In the second cluster, the stem code for diabetes 
+mellitus type 1 is linked to a diagnosis timing extension code for present on admission. 
+Example 2: 
+A patient with long-standing type 1 diabetes, admitted to hospital because of chest pain. After assessment 
+diagnosed with myocardial infarction. The patient develops deep vein thrombosis in right lower limb as 
+an in-hospital complication of care. 
+Main condition: Myocardial infarction 
+Other conditions: Diabetes mellitus, type 1; Deep vein thrombosis (arising after hospital stay began) 
+In this example, a diagnosis timing extension code for ‘developed after admission’ is linked 
+by cluster coding to a stem code for ‘deep vein thrombosis’. The first two diagnostic 
+concepts, meanwhile, are coded exactly as per the preceding example. i.e. 
+• 
+‘Stem code for acute myocardial infarction’&‘Discharge Diagnosis Type Extension 
+code for main condition’; BA41&XY0Y 
+• 
+‘Stem code for diabetes mellitus type 1’&‘Diagnosis Timing Extension code for 
+present on admission’; 5A10&XY6M 
+• 
+‘Stem code for lower limb deep vein thrombosis’&‘Right’&‘Diagnosis Timing 
+Extension code for developed after admission’; BD71.4&XK9K&XY69 
+Again, each of the three cluster entities uses an ampersand ‘&’ because the second code 
+(and third code) in the cluster is an extension code. 
+2.11 Functioning section 
+The Functioning section of ICD-11 allows coding and assessment of functioning in line with 
+ICF but at an operational level. For detailed recording and assessment, the full ICF should be 
+used. This section’s concepts are aligned with ICF and allow an easy transition to ICF. The 
+design of the functioning section in ICD-11 addresses documentation and assessment of the 
+level of functioning of persons, for 
+
+
+*** PAGE 61 (SRC 63) ***
+ 
+ICD-11 Reference Guide 
+61 
+ 
+• 
+general medical practice, as work incapacity assessment 
+• 
+social benefits as for disability, or accident pension 
+• 
+payment or reimbursement purposes 
+• 
+needs assessment as in rehabilitation, occupational assistance, or long term care 
+• 
+outcome evaluation of treatment 
+The functioning section in ICD-11 provides clinician-friendly tools for standardized 
+assessment and documentation of functioning. The functioning section of ICD-11 allows for 
+adding future additional assessment instruments. 
+2.11.1 Functioning assessment 
+2.11.1.1 WHO DAS 2.0: features and use cases 
+The WHO Disability Assessment Schedule (WHO-DAS 2.0) is the internationally, culturally 
+and socioeconomically validated generic functioning assessment instrument for an adult 
+population. WHO DAS 2.0 is focused on ICF Activity and Participation domains and allows to 
+compute an overall and domain specific functioning score covering the following domains: 
+• 
+Cognition – understanding & communicating 
+• 
+Mobility– moving & getting around 
+• 
+Self-care– hygiene, dressing, eating & staying alone 
+• 
+Getting along– interacting with other people 
+• 
+Life activities– domestic responsibilities, leisure, work & school 
+• 
+Participation – joining in community activities, participating in society 
+WHO DAS scoring takes into account multiple levels of difficulty for each WHODAS 2.0 item 
+(i.e. IRT based scoring). This type of scoring for WHODAS 2.0 allows for more fine-grained 
+analyses that make use of the full information of the response categories for comparative 
+analysis across populations or subpopulations. It takes the coding for each item response as 
+“none”, “mild”, “moderate”, “severe” and “extreme” separately, and then uses a 
+computation to determine the summary score by differentially weighting the items and the 
+levels of severity. 
+The scoring has three steps: 
+• 
+Step 1 – Summing of recoded item scores within each domain. 
+• 
+Step 2 – Summing of all six domain scores. 
+• 
+Step 3 – Converting the summary score into a metric ranging from 0 to 100 (where 0 
+= no disability; 100 = full disability). 
+The WHO DAS 2.0 scoring syntax is listed online via the link shared below. 
+Key features of WHO-DAS 2.0 include: 
+• 
+ICF derived clinical scale with well-established psychometric properties of validity, reliability 
+and sensitivity to change over time. 
+• 
+Cardinal measure which is applicable across all health conditions and allows to generate an 
+overall and domain specific functioning scores. 
+
+
+*** PAGE 62 (SRC 64) ***
+ 
+62 
+ 
+ICD-11 MMS  
+ 
+• 
+Established population norms. 
+  
+The combination of this features sets WHO DAS 2.0 apart from other clinical instruments. 
+  
+WHO DAS 2.0 can be used for assessment of functioning in multiple use cases: 
+• 
+Clinicians can quantify the effectiveness of their intervention within their clinical population 
+and with reference to the general population. 
+• 
+Disability evaluators can determine disability status in fair, transparent, impartial and 
+comparable way. 
+• 
+Reimbursement experts can measure quality (functioning outcome) of Case-mix/DRG 
+groups. 
+WHO DAS 2.0 has been developed for use in adult population and currently does not assess 
+body impairments or environmental factors. Users who wish to asses impairments in body 
+functions and can make use of the WHO Model Disability Survey (MDS)[1] items which are 
+also included in the function assessment part of the V Chapter. 
+WHO DAS 2.0 versions in three different formats (i.e. clinician administered, self-
+administered and proxy-administered) can be found via the link below. 
+WHO DAS 2.0 manual provides practical guidance for administering and scoring WHO DAS 
+2.0. including information on the simple and complex (Item-Response-Theory, IRT) scoring 
+algorithm and population norms for the WHO DAS 12 and 36 item version. The WHO DAS 
+2.0 manual can be downloaded from the WHO website link - WHO Disability Assessment 
+Schedule (WHODAS 2.0) - https://www.who.int/standards/classifications/international-
+classification-of-functioning-disability-and-health/who-disability-assessment-schedule 
+together with other languages version of the WHO DAS 2.0. 
+[1] The MDS is a ICF based general population survey developed by WHO and the World 
+Bank that provides detailed and nuanced information on the lives of people with disability. 
+It allows direct comparison between groups with differing levels and profiles of disability. 
+2.11.1.2 WHO DAS 2.0: representation and coding structure 
+To enable easy information retrieval each WHO DAS 2.0 item has an assigned alphanumeric 
+code to represent the captured concepts of the respective item. The code starts with the 
+letters “VD” followed by a randomly assign number. Additional item specific information 
+and values (i.e. item question, five-point response scale) are included in the ICD-11 APIs to 
+allow for easy integration of the instrument and the automated scoring computation in any 
+software application (e.g. integration of WHO DAS 2.0 as health outcome measure in EMR 
+software). The six WHO DAS 2.0 domains under which the 36 items of the instrument are 
+grouped are represented as block heading. Like other ICD-11 block headings they are 
+assigned an URI but not a code. Table 1 below shows an example of how a WHO DAS 2.0 
+item are represented. 
+
+
+*** PAGE 63 (SRC 65) ***
+ 
+ICD-11 Reference Guide 
+63 
+ 
+WHO DAS 2.0 item 
+ICD-11 Code 
+URI 
+Attention functions 
+VD00 
+http://id.who.int/icd/entity/532448599 
+Item description 
+question 
+Item response scale 
+value set 
+Mapped ICF category 
+Because of your health 
+condition, in the past 30 
+days, how much difficulty 
+did you have in 
+concentrating on doing 
+something for ten 
+minutes? 
+1=no difficulty, 
+2=mild difficulty, 
+3=moderate 
+difficulty, 4=severe 
+difficulty, 
+5=complete 
+difficulty 
+d160 Focusing attention 
+2.11.2 Generic functioning entity 
+2.11.2.1 Functioning entities: features and use cases 
+The main tool for documenting functioning is a list of generic functioning domains derived 
+from the ICF Annex 9 and the ICF generic core set. 
+The generic list allows clinicians to generate a coded functioning profile of an individual 
+which can be used for multiple purposes like - goal setting - monitoring change - 
+communicating across the continuum of care. 
+Because the list is directly linked to the ICF, it may - Facilitate joint use of ICD & ICF (code 
+once – use multiple times) - Serve as an entry point the use of the full ICF. 
+2.11.2.2 Functioning entity: representation and coding structure 
+In accordance with the WHO FIC content model a functioning entity has two components 
+i.e. category and a qualifier. Both have an assigned alphanumeric code and an URI to 
+represent the captured concepts. The code starts with the letters “VV” followed by a 
+randomly assign number. The functioning category and the qualifier are linked through 
+postcoordination. 
+2.12 Electronic recording and reporting 
+Electronic documentation will follow the principle of lossless collection of information at the 
+source. Best practice includes reporting of: 
+1. 
+A text field that captures the clinical term or cause of death with the exact wording 
+reported by the health provider, and 
+2. 
+A data field that retains the identifier (URI) of the chosen entity of ICD-11 (index, 
+code title or other element) that represents the most exact match for that text. 
+3. 
+A data field for the relevant ICD-11 code. 
+In this way, the quality of the coding can be verified at any point in time. Also, specific 
+conditions can be identified and analysed, independently of them being linked to an 
+individual ICD code or lumped together in a code with other conditions. 
+Coding shall be done using tools based on the ICD-11 API, like the ICD-11 coding tool. 
+Software must not include lists or other prompts to guide the recording or coding, as these 
+
+
+*** PAGE 64 (SRC 66) ***
+ 
+64 
+ 
+ICD-11 MMS  
+ 
+necessarily limit the range of diagnoses and therefore have negative impact on the accuracy 
+and usefulness of the record and report. 
+2.13 Foundation Component and Tabular lists 
+The Foundation Component is a multi-dimensional collection of all ICD entities. Entities can 
+be diseases, disorders, injuries, external causes, signs and symptoms. Some entities may be 
+very broad, for example ‘Injuries to the elbow or forearm’, while others are more detailed, 
+for example ‘Fracture of upper end of ulna, extending into joint’. The Foundation 
+Component also has the necessary information to use the entities to build a tabular list. The 
+Foundation Component includes information on where and how a certain entity is 
+represented in a tabular list, whether it becomes a grouping, a category with a stem code, 
+or whether it is mentioned as an inclusion term in a particular category. 
+Several different tabular lists can be built from the Foundation Component. Drawing on the 
+same Foundation Component, a set of tabular lists that builds on the same hierarchical tree 
+structure can be created – producing congruent tabular lists. The Foundation Component 
+includes instructions on how to combine certain codes in a tabular list to achieve more 
+detail in coding. These rules help coders and computer systems to visualise the permitted 
+code combinations when they are using a tabular list. 
+Core tabular lists for international use: 
+• 
+Mortality and Morbidity Statistics (MMS) 
+• 
+Primary care low resources settings (PCL) 
+• 
+Verbal Autopsy (VA) 
+• 
+Startup Mortality List (SMoL) 
+The full name of such a tabular list will always include ‘ICD–11’, e.g. ICD–11 MMS. 
+In a Tabular list, entities of the Foundation Component become categories. The categories 
+are mutually exclusive and jointly exhaustive and linked to a mono hierarchical tree (they 
+have only one parent). The information related to an entity that has become a category and 
+has multiple parents is still available from the Foundation. This information can be used to 
+visualise that category in more than one place in the Tabular list, e.g. showing them in black 
+in its place for reference tabulation and in grey in any other place for browsing or 
+alternative tabulations. ICD–11 has multiple congruent tabular lists with varying levels of 
+detail. 
+The Foundation Component is also the data source for production and maintenance of 
+Tabular lists, index and the Reference Guide. It also includes additional content (see 
+‘content model’) that goes beyond the traditional paper-based use of a classification. 
+Depending on the setting within a country, it may be decided to use the full Foundation 
+Component or to focus on the parts that are essential to production and maintenance of the 
+Index and the Tabular list. 
+The Foundation Component serves to align the content of the different tabular lists and to 
+define their categories. As such it allows standardised use of the ICD-11, independent of the 
+setting in which it is used. The Foundation Component includes, for example, links to other 
+classifications or terminologies that can be expanded in the future. Please note that the 
+
+
+*** PAGE 65 (SRC 67) ***
+ 
+ICD-11 Reference Guide 
+65 
+ 
+mention of a term or entity in the Foundation exclusively serves ontological purposes. 
+Mention of a term or entity in the Foundation does not mean approval or endorsement of a 
+particular condition. 
+2.14 Main uses of the ICD: Mortality 
+This section concerns the rules and guidelines adopted by the World Health Assembly 
+regarding the selection of a single cause or condition for routine tabulation from death 
+certificates. Guidelines are also provided for the application of the rules and for coding of 
+the condition selected for tabulation. Implementation of the ICD for mortality requires 
+setting up an infrastructure for reporting and storing information, designing information 
+flows, quality assurance and feedback, and training for classification users working with the 
+input or output of data. 
+Following the introductory information in this Section and 2.15, Section 2.16 explains the 
+basic concepts used in mortality coding. Sections 2.17 - 2.21, supplemented by Annexes in 
+Section 3.14, guides how to code and identify the underlying cause of death, and Section 
+2.25 explains descriptions used in statistical tabulation and international reporting for 
+mortality. 
+2.15 Mortality statistics 
+Mortality statistics are widely used for medical research, monitoring of public health, 
+evaluating health interventions, allocation of health resources and planning and for, and 
+follow-up of health care. Analysis of mortality data typically involves comparisons of data 
+sets, for example those representing different geographical regions or different points in 
+time. Unless the data have been produced by the same methods and according to the same 
+standards, such comparisons will yield misleading results. 
+To standardise production of mortality data, WHO issues international instructions on data 
+collection, coding and classification, and statistical presentation of causes of death. It is of 
+utmost importance that production of mortality data follows the procedures detailed next, 
+since any deviation from the international instructions will impair international 
+comparability. The description of a single underlying cause of death, and selected 
+approaches to capture further information on causes of death also reported on a certificate, 
+enables the identification of trends in health for a given population. The following sections 
+contain information on coding causes of death for mortality statistics. They explain the basic 
+concepts, how to code conditions reported on death certificates, and how to select and 
+tabulate the underlying cause of death. 
+The aim of these instructions is to optimise the mortality statistics from a public health point 
+of view. Some of the instructions may appear wrong or questionable from a purely medical 
+perspective. They should still not be set aside, since they may be motivated by well-founded 
+epidemiological and public health principles. If an apparent error is found, it should be 
+reported to WHO through the online proposal mechanism. WHO will either explain the 
+rationale or take steps to correct the error at the international level. Individual countries 
+should not correct what is assumed to be an error, since changes at the national level will 
+lead to data that are less comparable to data from other countries, and thus less useful for 
+analysis. 
+
+
+*** PAGE 66 (SRC 68) ***
+ 
+66 
+ 
+ICD-11 MMS  
+ 
+2.15.1 What is tabulated: Underlying cause of death 
+Effective public health interventions prevent harm or death by breaking the chain of events 
+that lead to harm. For this purpose, the underlying cause of death has been defined as ‘(a) 
+the disease or injury which initiated the train of morbid events leading directly to death, or 
+(b) the circumstances of the accident or violence which produced the fatal injury’, and is 
+selected for routine single-cause tabulation of mortality statistics. See Sections 2.17.2 
+Selecting the underlying cause of death and 2.17 Coding instructions for mortality for 
+specific coding instructions to identify the underlying cause of death. 
+2.15.2 Data source: The international form of Medical Certificate of Cause of Death 
+(MCCD) 
+The international mortality coding instructions presuppose that data have been collected 
+with a death certificate conforming to the international form of Medical Certificate of Cause 
+of Death as recommended by the WHO. Frame A, the medical data part of the international 
+form is split into two parts: Part 1 is for diseases related to the chain of events directly 
+leading to death, and Part 2 is for other significant conditions contributing to death. Other 
+information in the form is also used in identifying the underlying cause of death for 
+tabulation. 
+In order to align the way this information is collected internationally, the form should be 
+followed as closely as possible. Otherwise, the causes of death cannot be coded and 
+selected according to the international standard and the data will not be internationally 
+comparable. For example, some coding instructions apply to conditions reported as caused 
+by certain other conditions, and in such cases, it is important to have a clear distinction 
+between causes reported in Part 1 and in Part 2 of the death certificate. Further, 
+information reported elsewhere on the certificate, such as manner of death or whether 
+pregnancy contributed to the death, is essential when assigning multiple cause codes to the 
+conditions stated on the certificate and selecting an underlying cause for tabulation. 
+It is the responsibility of the medical practitioner or other qualified certifier completing the 
+medical certificate of cause of death (MCCD) to use their clinical judgment to indicate which 
+morbid conditions led directly to death and to state any pre-existing conditions giving rise to 
+this cause. Electronic certification systems should not include predetermined lists of causes 
+of death to guide the certifier, as these necessarily limit the range of diagnoses and 
+therefore have an adverse effect on the accuracy and usefulness of the report. 
+
+
+*** PAGE 67 (SRC 69) ***
+ 
+ICD-11 Reference Guide 
+67 
+ 
+ 
+The 2016 International form of the Medical Certificate of Cause of Death 
+See 3.14 Annex C: Annexes for Mortality Coding for further details and guidance. 
+
+
+*** PAGE 68 (SRC 70) ***
+ 
+68 
+ 
+ICD-11 MMS  
+ 
+2.15.3 Routine use and special cases 
+2.15.3.1 Routine cause of death reporting systems 
+In routine cause of death reporting systems, every individual death is certified by a qualified 
+medical doctor who carries out an accurate postmortem examination, collects history from 
+relatives, and has access to all pre-existing medical information about the defunct. The 
+medical certification of the cause of death is usually the responsibility of the attending 
+physician and should be in line with international recommendations. Administrative 
+procedures should ensure confidentiality of data from death certificates or other medical 
+records. 
+In the case of deaths certified by coroners or other legal authorities, the medical evidence 
+supplied to the certifier should be stated on the certificate in addition to any legal findings. 
+Routine cause of death reporting is usually embedded in the certification of death process. 
+Death certificates are a legal requirement for burial and for inheritance. 
+2.15.3.2 Verbal autopsy 
+Verbal autopsy (VA) is a method used to ascertain the cause of a death based on an 
+interview with next of kin or other caregivers where no medical certification is available. 
+This is done using a standardised instrument that elicits information on signs, symptoms, 
+medical history, and circumstances preceding death. The cause of death, or the sequence of 
+causes that led to death, are assigned based on the data collected by the instrument and 
+other available information. Rules and guidelines, algorithms or computer programs, may 
+assist in evaluating the information to determine the cause of death. 
+The main objective of the VA is to describe the causes of death at the community or 
+population level in areas, where civil registration and death certification systems are weak 
+and where most people die at home without having had contact with the health system. A 
+standard VA instrument comprises a VA questionnaire, cause of death or mortality 
+classification system, and diagnostic criteria (either expert or data derived algorithms) for 
+deriving causes of death. 
+The VA process consists of interviews, data recording, and identification of the cause of 
+death from the reports. At any step, factors can influence the cause-specific mortality 
+fractions estimated throughout the process. Besides research, VA is a viable method for 
+causes of death identification in settings where no physician can evaluate the deceased. 
+More information can be found on the WHO Verbal autopsy webpage. 
+See 3.14.14 Target list of causes of death for verbal autopsy with corresponding ICD-11 
+codes. 
+2.16 Basic concepts 
+Mortality coders must be familiar with the basic concepts introduced in this section. 
+
+
+*** PAGE 69 (SRC 71) ***
+ 
+ICD-11 Reference Guide 
+69 
+ 
+ 
+Basic Concepts 
+Basic concepts for mortality coding in the international form of the Medical Certificate of 
+Cause of Death 
+2.16.1 Terminal cause of death 
+The disease or condition entered first on the first used line of Part 1 of the death certificate 
+is the cause directly leading to death. This is known as the terminal or immediate cause of 
+death. 
+Example 1  
+ 
+ 
+ 
+1 (a) Myocardial infarction 
+ 
+ 
+ 
+due to 
+ 
+ 
+(b) Coronary atherosclerosis 
+ 
+ 
+ 
+due to 
+ 
+ 
+(c)  
+ 
+ 
+ 
+due to 
+ 
+ 
+(d)  
+ 
+2  
+ 
+The myocardial infarction is the terminal cause of death, since it is entered first on the first used line of 
+the certificate. 
+
+
+*** PAGE 70 (SRC 72) ***
+ 
+70 
+ 
+ICD-11 MMS  
+ 
+Example 2  
+ 
+ 
+ 
+1 (a) Myocardial infarction and pulmonary oedema 
+ 
+ 
+ 
+due to 
+ 
+ 
+(b) Coronary atherosclerosis 
+ 
+ 
+ 
+due to 
+ 
+ 
+(c)  
+ 
+ 
+ 
+due to 
+ 
+ 
+(d)  
+ 
+2  
+ 
+The myocardial infarction is the terminal cause of death, since it is entered first on the first used line of 
+the certificate. 
+2.16.2 Causal relationship and sequence 
+A causal relationship exists if a condition mentioned on the death certificate can be caused 
+by another condition also mentioned on the certificate. The term ‘sequence’ refers to a 
+chain or series of medical events in which each step is a complication of, or is caused by, the 
+previous step. A causal relationship can exist between any two conditions, including 
+conditions assigned to the same ICD-11 code, regardless of where each condition was 
+reported. In a correctly completed death certificate, a sequence is a set of conditions 
+reported line by line with a causal relationship between each element. Four lines are 
+provided in Part 1 of the certificate for recording the sequence of events leading to the 
+death. A certifier may only use as many lines as are required to describe the sequence. 
+A causal relationship is considered acceptable for mortality coding if it is founded not only 
+on a medical assessment but also on epidemiological and public health considerations. 
+Therefore, a medically acceptable relationship might be listed as unacceptable in the coding 
+instructions because a later step in the sequence is more important from a public health 
+point of view. 
+In addition, a reported sequence that appears improbable should be accepted if one or 
+more intervening steps would explain the causal relationship, even if these have not been 
+reported. However, such assumed intervening causes are not to be coded, as they are 
+assumptions and not reported conditions. 
+To decide whether a stated causal relationship is acceptable, always apply the instructions 
+in Section 2.19.1 Special instructions on accepted and rejected sequences (Steps SP3 and 
+SP4). Stated relationships that are not listed in Section 2.19.1 should be accepted as far as 
+possible, because the certifier’s opinion about the causes leading to death should not be 
+disregarded. 
+
+
+*** PAGE 71 (SRC 73) ***
+ 
+ICD-11 Reference Guide 
+71 
+ 
+Example 1  
+ 
+ 
+ 
+1 (a) Myocardial infarction 
+ 
+ 
+ 
+due to 
+ 
+ 
+(b) Coronary thrombosis 
+ 
+ 
+ 
+due to 
+ 
+ 
+(c) Coronary atherosclerosis 
+ 
+ 
+ 
+due to 
+ 
+ 
+(d)  
+ 
+2  
+ 
+The terminal cause of death is myocardial infarction. It is caused by the coronary thrombosis, which, in 
+turn, is caused by coronary atherosclerosis. Consequently, the sequence is: myocardial infarction due to 
+coronary thrombosis due to coronary atherosclerosis. 
+Example 2  
+ 
+ 
+ 
+1 (a) Extensive haemorrhage 
+ 
+ 
+ 
+due to 
+ 
+ 
+(b) Traumatic amputation of right leg 
+ 
+ 
+ 
+due to 
+ 
+ 
+(c) Run over by a bus 
+ 
+ 
+ 
+due to 
+ 
+ 
+(d)  
+ 
+2  
+ 
+The terminal cause of death is haemorrhage. It is a complication of the traumatic amputation of the right 
+leg, which, in turn, is caused by the bus accident. Consequently, the sequence is: extensive haemorrhage 
+due to traumatic amputation of the right leg due to being run over by a bus. 
+2.16.3 Starting point 
+The starting point is the condition or event that started the sequence of acceptable causal 
+relationships ending with the terminal cause of death. In a correctly completed death 
+certificate, the condition reported first on the lowest used line in Part 1 is the starting point 
+of the sequence. The instructions on how to identify the starting point is provided in Section 
+2.17.3 Find the starting point (Steps SP1 to SP8). 
+If the death certificate is not correctly filled out, the starting point may be reported 
+elsewhere, and instructions are given to identify the starting point also for such cases in a 
+standardised manner. Therefore, it is important to apply the instructions in Section 2.17.3 in 
+a sequential manner. 
+The condition provisionally considered as the starting point when applying the instructions 
+step by step is referred to as the ‘tentative starting point (TSP)’ and may change several 
+times as the instructions are applied to the death certificate. 
+
+
+*** PAGE 72 (SRC 74) ***
+ 
+72 
+ 
+ICD-11 MMS  
+ 
+Example 1  
+ 
+ 
+ 
+1 (a) Myocardial infarction and pulmonary oedema 
+ 
+ 
+ 
+due to 
+ 
+ 
+(b) Coronary atherosclerosis 
+ 
+ 
+ 
+due to 
+ 
+ 
+(c)  
+ 
+ 
+ 
+due to 
+ 
+ 
+(d)  
+ 
+2  
+ 
+Coronary atherosclerosis is the starting point, since it led to the myocardial infarction. 
+Example 2  
+ 
+ 
+ 
+1 (a) Pneumonia 
+ 
+ 
+ 
+due to 
+ 
+ 
+(b) Hip fracture 
+ 
+ 
+ 
+due to 
+ 
+ 
+(c) Tripped on carpet 
+ 
+ 
+ 
+due to 
+ 
+ 
+(d)  
+ 
+2  
+ 
+Tripped on carpet is the starting point, since it started the sequence of events leading to death. 
+2.16.4 Duration 
+On death certificates, each reported condition should also include information about 
+duration. The duration refers to the interval from the onset of the disease or condition to 
+the time of death. Note that it is not always the same as the time of diagnosis of the 
+condition, which may be at the same time as, or after, the onset of symptoms. 
+2.16.5 First-mentioned sequence 
+A death certificate may contain several sequences of acceptable causal relationships ending 
+with the terminal cause of death. The coding instructions are given to identify the starting 
+point of the first-mentioned sequence in Part 1 (See also Step SP4). 
+The figures below illustrate examples of certificates where each condition reported is shown 
+by a circle. The starting point of the first-mentioned sequence is in grey, and the causal 
+relationship of the first-mentioned sequence is indicated by an arrow. 
+To identify the first-mentioned sequence, begin with the terminal cause of death (the 
+condition entered first on the first used line of Part 1). Check if the conditions on the next 
+line in Part 1 can result in the terminal cause of death. If several conditions are reported on 
+the same line, check from left to right in turn until you find a condition that could cause the 
+terminal cause. 
+
+
+*** PAGE 73 (SRC 75) ***
+ 
+ICD-11 Reference Guide 
+73 
+ 
+If no condition on the next line can cause the terminal cause of death, there is no sequence 
+ending with the terminal cause of death. The terminal cause of death is the tentative 
+starting point. Specific instruction is given also when you find no sequence (see Step SP5). 
+ 
+NoSequence 
+No Sequence ending with the terminal cause of death 
+If there is a condition that can cause the terminal cause of death, the first condition found 
+to be able to cause the terminal cause of death is the tentative starting point. If there are no 
+conditions reported on lower lines, the sequence between this tentative starting point and 
+the terminal cause is the first-mentioned sequence. 
+ 
+First Mentioned Sequence A 
+  
+ 
+First Mentioned Sequence B 
+  
+If there are conditions reported on lower lines in Part 1, repeat the procedure for the next 
+lower line. Start with the tentative starting point identified in the previous step. Check the 
+conditions on the next lower line in Part 1, from left to right, to determine if they can cause 
+the tentative starting point. Continue until you have found a condition that can cause the 
+tentative starting point. This is the new tentative starting point. 
+
+

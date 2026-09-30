@@ -1,0 +1,1 @@
+{"nodes": [], "edges": [{"confidence": "EXTRACTED", "confidence_score": 1.0, "relation": "semantically_similar_to", "source": "checkpoints_v7_preuves_v7_livre_patients", "source_file": "checkpoints/v7-preuves/v7-livre/02-patients@1920.png", "source_location": null, "target": "checkpoints_v7_preuves_v7_livre_responsive_layout", "weight": 1.0}], "hyperedges": []}

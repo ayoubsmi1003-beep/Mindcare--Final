@@ -82,6 +82,12 @@ export class PoolModelesGratuits {
     if (typeof sante.latencyMs === "number" && Number.isFinite(sante.latencyMs) && sante.latencyMs >= 0) m.latencyMs = sante.latencyMs;
     if (typeof sante.lastFailureCode === "string") m.lastFailureCode = sante.lastFailureCode;
   }
+  restaurerCompte(compte: { readonly until: number; readonly code: ErreurModele["code"] | null }): void {
+    if (!Number.isFinite(compte.until) || compte.until <= this.maintenant()
+      || !["MODEL_QUOTA_EXHAUSTED", "MODEL_RATE_LIMIT", "AUTH_FAILURE", "CONFIGURATION"].includes(compte.code ?? "")) return;
+    this.accountUntil = Math.min(compte.until, this.maintenant() + 86_400_000);
+    this.accountCode = compte.code;
+  }
   private compatibles(b: BesoinModele): ModeleGratuit[] {
     if (this.accountUntil > this.maintenant()) return [];
     return [...this.modeles.values()].filter((m) => m.contextLength >= b.tokens

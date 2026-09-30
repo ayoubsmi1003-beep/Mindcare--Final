@@ -61,6 +61,13 @@ describe("pool gratuit, capacités prouvées et santé", () => {
     pool.actualiser([modele("essai/a:free", { pricing: { prompt: "1", completion: "0" } }), modele("essai/b:free")]);
     expect(pool.candidats(besoin).map((m) => m.modelId)).toEqual(["essai/b:free"]);
   });
+  it("restores account quota independently of individual model health", () => {
+    const { pool, avancer } = poolAvecHorloge();
+    pool.restaurerCompte({ until: 300_000, code: "MODEL_QUOTA_EXHAUSTED" });
+    expect(pool.candidats(besoin)).toEqual([]);
+    avancer(300_001);
+    expect(pool.candidats(besoin)).toHaveLength(3);
+  });
 });
 
 describe("erreurs fournisseur sans données brutes", () => {

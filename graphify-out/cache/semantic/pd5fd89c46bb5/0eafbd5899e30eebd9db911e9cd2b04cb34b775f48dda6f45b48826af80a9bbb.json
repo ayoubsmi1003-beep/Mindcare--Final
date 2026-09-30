@@ -1,0 +1,1 @@
+{"nodes": [], "edges": [{"confidence": "AMBIGUOUS", "confidence_score": 0.3, "relation": "semantically_similar_to", "source": "checkpoints_v7_preuves_v7_livre_patients_nouveau", "source_file": "checkpoints/v7-preuves/v7-livre/03-patients-nouveau@1366.png", "source_location": null, "target": "checkpoints_v7_preuves_v7_livre_responsive_layout", "weight": 1.0}], "hyperedges": []}

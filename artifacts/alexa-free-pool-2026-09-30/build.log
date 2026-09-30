@@ -1,0 +1,66 @@
+$ next build
+   ▲ Next.js 15.5.22
+   - Environments: .env
+   - Experiments (use with caution):
+     · optimizePackageImports
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 95s
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+   Generating static pages (0/24) ...
+   Generating static pages (6/24) 
+   Generating static pages (12/24) 
+   Generating static pages (18/24) 
+ ✓ Generating static pages (24/24)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                    Size  First Load JS
+┌ ○ /                                         184 B         103 kB
+├ ○ /_not-found                                1 kB         103 kB
+├ ○ /agenda                                 2.29 kB         231 kB
+├ ƒ /agenda/[id]                            3.35 kB         222 kB
+├ ○ /agenda/nouveau                         3.48 kB         223 kB
+├ ƒ /api/auth/etat-installation               184 B         103 kB
+├ ƒ /api/auth/provisionner                    184 B         103 kB
+├ ƒ /api/auth/session                         184 B         103 kB
+├ ƒ /api/auth/sign-in                         184 B         103 kB
+├ ƒ /api/auth/sign-out                        184 B         103 kB
+├ ƒ /api/communication/automations/evaluer    184 B         103 kB
+├ ƒ /api/communication/connexions/tester      184 B         103 kB
+├ ƒ /api/communication/envoyer                184 B         103 kB
+├ ƒ /api/communication/statut                 184 B         103 kB
+├ ƒ /api/communication/webhook                184 B         103 kB
+├ ƒ /api/db/rpc                               184 B         103 kB
+├ ƒ /api/db/select                            184 B         103 kB
+├ ƒ /api/health                               184 B         103 kB
+├ ƒ /api/jarvis/jarvis-analyze-session        184 B         103 kB
+├ ƒ /api/jarvis/jarvis-chat                   184 B         103 kB
+├ ƒ /api/jarvis/jarvis-resume-cas             184 B         103 kB
+├ ƒ /api/jarvis/jarvis-voice-in               184 B         103 kB
+├ ƒ /api/jarvis/jarvis-voice-out              184 B         103 kB
+├ ○ /connexion                              2.14 kB         185 kB
+├ ƒ /consultation/[id]                      16.3 kB         250 kB
+├ ○ /documents                               8.8 kB         228 kB
+├ ○ /finances                               7.62 kB         233 kB
+├ ○ /jarvis                                 3.46 kB         223 kB
+├ ○ /messages                               6.19 kB         225 kB
+├ ○ /observabilite                          4.17 kB         223 kB
+├ ○ /parametres                               184 B         103 kB
+├ ○ /parametres/documents                   3.29 kB         222 kB
+├ ○ /patients                               2.33 kB         221 kB
+├ ƒ /patients/[id]                          8.11 kB         236 kB
+├ ○ /patients/nouveau                       3.55 kB         223 kB
+├ ○ /premiere-configuration                 2.47 kB         130 kB
+└ ○ /tableauDeBord                          15.1 kB         244 kB
++ First Load JS shared by all                102 kB
+  ├ chunks/67b97291-ceb42dcf7882d2e0.js     54.2 kB
+  ├ chunks/9379-cc9e5a92b317d4e2.js           46 kB
+  └ other shared chunks (total)             2.22 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

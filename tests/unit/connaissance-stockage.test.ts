@@ -134,10 +134,10 @@ describe("lignée de supersession (H1)", () => {
 });
 
 describe("appels de portes (contrat DbPort.rpc)", () => {
-  it("porte lexicale : requête + langue + limite scalaire bornée, historique défaut false", () => {
+  it("porte lexicale : signature installée, limite scalaire bornée, historique exclu", () => {
     const appel = porteLexicale("sertraline", "fr", 99);
     expect(appel.porte).toBe(PORTES.LEXICALE);
-    expect(appel.args).toMatchObject({ p_requete: "sertraline", p_langue: "fr", p_limite: 20, p_inclure_historique: false });
+    expect(appel.args).toEqual({ p_requete: "sertraline", p_langue: "fr", p_limite: 20 });
     expect(porteLexicale("x", "ar", 0).args["p_limite"]).toBe(1);
   });
 

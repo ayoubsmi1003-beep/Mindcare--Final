@@ -1,0 +1,143 @@
+/** A single network transport. Retries belong to the pool, never the provider. */
+export const openRouterProvider: LlmProvider = {
+  name: "openrouter",
+  async complete(req) {
+    const c = new AbortController();
+    const cancel = () => c.abort();
+    if (req.signal?.aborted) throw new ErreurModele("CANCELLED", false, "request");
+    req.signal?.addEventListener("abort", cancel, { once: true });
+    const timer = setTimeout(() => c.abort(), req.timeoutMs);
+    try {
+      const response = await envoyerChatOpenRouter(req, false, c.signal);
+      const body: unknown = await response.json().catch(() => null);
+      if (!response.ok) throw classerErreurHttp(response.status, body, response.headers);
+      if (!isOpenRouterResponse(body)) throw new ErreurModele("MALFORMED_RESPONSE", true);
+      const text = body.choices?.[0]?.message?.content;
+      if (typeof text !== "string" || text.trim() === "") throw new ErreurModele("MALFORMED_RESPONSE", true);
+      if (req.json) { try { JSON.parse(text); } catch { throw new ErreurModele("MALFORMED_RESPONSE", true); } }
+      return { text, tokensIn: body.usage?.prompt_tokens ?? 0, tokensOut: body.usage?.completion_tokens ?? 0 };
+    } catch (cause) {
+      if (c.signal.aborted && !req.signal?.aborted) throw new ErreurModele("MODEL_TIMEOUT", true);
+      throw normaliserErreurModele(cause, req.signal?.aborted);
+    } finally { clearTimeout(timer); req.signal?.removeEventListener("abort", cancel); }
+  },
+  async stream(req) {
+    if (req.signal?.aborted) throw new ErreurModele("CANCELLED", false, "request");
+    const c = new AbortController();
+    const cancel = () => c.abort();
+    req.signal?.addEventListener("abort", cancel, { once: true });
+    let timer = setTimeout(() => c.abort(), req.timeoutMs);
+    let resolveUsage!: (usage: UsageJeton) => void;
+    let rejectUsage!: (cause: unknown) => void;
+    const usage = new Promise<UsageJeton>((resolve, reject) => { resolveUsage = resolve; rejectUsage = reject; });
+    void usage.catch(() => {}); // The caller attaches after the first content; never an unhandled rejection.
+    let firstResolve!: () => void;
+    let firstReject!: (cause: unknown) => void;
+    const first = new Promise<void>((resolve, reject) => { firstResolve = resolve; firstReject = reject; });
+    let delivered = false;
+    let cancelled = false;
+    let out!: ReadableStreamDefaultController<string>;
+    const deltas = new ReadableStream<string>({
+      start(controller) { out = controller; },
+      cancel() { cancelled = true; c.abort(); rejectUsage(new ErreurModele("CANCELLED", false, "request")); },
+    });
+    try {
+      const response = await envoyerChatOpenRouter(req, true, c.signal);
+      if (!response.ok) throw classerErreurHttp(response.status, await response.json().catch(() => null), response.headers);
+      if (!response.body) throw new ErreurModele("MALFORMED_RESPONSE", true);
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      void (async () => {
+        let buffer = "";
+        let ended = false;
+        let finish = false;
+        let bytes = 0;
+        let finalUsage: UsageJeton = { tokensIn: null, tokensOut: null };
+        try {
+          for (;;) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            buffer += decoder.decode(value, { stream: true });
+            if (buffer.length > 1_000_000) throw new ErreurModele("MALFORMED_RESPONSE", true);
+            const lines = buffer.split("\n"); buffer = lines.pop() ?? "";
+            for (const line of lines) {
+              const t = line.trim();
+              if (!t.startsWith("data:")) continue;
+              const data = t.slice(5).trim();
+              if (data === "[DONE]") { ended = true; continue; }
+              let raw: unknown;
+              try { raw = JSON.parse(data); } catch { throw new ErreurModele("MALFORMED_RESPONSE", true); }
+              if (typeof raw !== "object" || raw === null) throw new ErreurModele("MALFORMED_RESPONSE", true);
+              const event = raw as {
+                error?: { code?: number };
+                choices?: { delta?: { content?: unknown }; finish_reason?: string | null }[];
+                usage?: { prompt_tokens?: number; completion_tokens?: number };
+              };
+              if (event.error) throw classerErreurHttp(event.error.code ?? 502, raw, response.headers);
+              const choice = event.choices?.[0];
+              if (choice?.finish_reason === "error") throw new ErreurModele("PROVIDER_UNAVAILABLE", true);
+              if (choice?.finish_reason === "length") throw new ErreurModele("MALFORMED_RESPONSE", true);
+              if (choice?.finish_reason === "stop") finish = true;
+              const content = choice?.delta?.content;
+              if (typeof content === "string" && content.length > 0) {
+                bytes += content.length;
+                if (bytes > 40_000) throw new ErreurModele("MALFORMED_RESPONSE", true);
+                out.enqueue(content);
+                if (!delivered) { delivered = true; firstResolve(); }
+                clearTimeout(timer);
+                timer = setTimeout(() => c.abort(), req.idleTimeoutMs ?? 10_000);
+              }
+              // Reasoning/keepalives never extend the first meaningful-token deadline.
+              if (event.usage) finalUsage = { tokensIn: event.usage.prompt_tokens ?? null, tokensOut: event.usage.completion_tokens ?? null };
+            }
+            if (ended) break;
+          }
+          if (!delivered || (!ended && !finish)) throw new ErreurModele("MALFORMED_RESPONSE", true);
+          if (!cancelled) out.close(); resolveUsage(finalUsage);
+        } catch (cause) {
+          const error = c.signal.aborted && !req.signal?.aborted && !cancelled
+            ? new ErreurModele("MODEL_TIMEOUT", true) : normaliserErreurModele(cause, req.signal?.aborted || cancelled);
+          if (!delivered) firstReject(error);
+          if (!cancelled) out.error(error);
+          rejectUsage(error);
+        } finally {
+          clearTimeout(timer); req.signal?.removeEventListener("abort", cancel);
+          await reader.cancel().catch(() => {}); reader.releaseLock();
+        }
+      })();
+      await first;
+      return { deltas, usage };
+    } catch (cause) {
+      clearTimeout(timer); c.abort(); req.signal?.removeEventListener("abort", cancel);
+      const error = normaliserErreurModele(cause, req.signal?.aborted);
+      rejectUsage(error);
+      // Consume a stream rejected before exposure so it cannot leave an unobserved failure.
+      await deltas.cancel().catch(() => {});
+      throw error;
+    }
+  },
+};
+
+interface RequeteTransport {
+  readonly messages: readonly LlmMessage[];
+  readonly model: string;
+  readonly json?: boolean;
+  readonly jsonMode?: boolean;
+  readonly maxOutputTokens?: number;
+}
+async function envoyerChatOpenRouter(req: RequeteTransport, stream: boolean, signal: AbortSignal): Promise<Response> {
+  const key = env().OPENROUTER_API_KEY;
+  if (!key) throw new ErreurModele("CONFIGURATION", false, "account");
+  if (!req.model.endsWith(":free")) throw new ErreurModele("CONFIGURATION", false, "request");
+  return fetch("https://openrouter.ai/api/v1/chat/completions", {
+    method: "POST", signal,
+    headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json", "HTTP-Referer": "http://localhost", "X-Title": "MindCare" },
+    body: JSON.stringify({ model: req.model, messages: req.messages,
+      max_tokens: req.maxOutputTokens ?? (stream ? MAX_OUTPUT_TOKENS_FLUX : MAX_OUTPUT_TOKENS),
+      provider: { data_collection: "deny", max_price: { prompt: 0, completion: 0 } },
+      ...(req.jsonMode ? { response_format: { type: "json_object" } } : {}),
+      ...(stream ? { stream: true, usage: { include: true } } : {}),
+    }),
+  });
+}
+

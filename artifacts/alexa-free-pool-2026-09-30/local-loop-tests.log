@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 C:/Users/ABC Informatique/.claude/projects/Final mindcare
+
+ ✓ tests/unit/alexa-local-loop.test.ts (3 tests) 233ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  12:10:48
+   Duration  6.15s (transform 2.04s, setup 0ms, collect 2.65s, tests 233ms, environment 0ms, prepare 1.66s)
+

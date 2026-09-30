@@ -1,0 +1,26 @@
+
+ RUN  v3.2.7 C:/Users/ABC Informatique/.claude/projects/Final mindcare
+
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/alexa-free-pool.test.ts [ tests/unit/alexa-free-pool.test.ts ]
+Error: Cannot find module '../../src/server/egress/modeles-gratuits' imported from 'C:/Users/ABC Informatique/.claude/projects/Final mindcare/tests/unit/alexa-free-pool.test.ts'
+ ❯ tests/unit/alexa-free-pool.test.ts:2:1
+      1| import { describe, expect, it } from "vitest";
+      2| import { PoolModelesGratuits } from "../../src/server/egress/modeles-g…
+       | ^
+      3| import { ErreurModele, classerErreurHttp } from "../../src/server/egre…
+      4| import { conduireInference } from "../../src/server/egress/tentatives-…
+
+Caused by: Error: Failed to load url ../../src/server/egress/modeles-gratuits (resolved id: ../../src/server/egress/modeles-gratuits) in C:/Users/ABC Informatique/.claude/projects/Final mindcare/tests/unit/alexa-free-pool.test.ts. Does the file exist?
+ ❯ loadAndTransform ../../../../ABC%20Informatique/.claude/projects/Final%20mindcare/node_modules/.pnpm/vite@7.3.6_@types+node@22.20.1_jiti@1.21.7/node_modules/vite/dist/node/chunks/config.js:22739:33
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  no tests
+   Start at  11:10:54
+   Duration  7.26s (transform 618ms, setup 0ms, collect 0ms, tests 0ms, environment 1ms, prepare 982ms)
+

@@ -1,0 +1,80 @@
+
+ RUN  v3.2.7 C:/Users/ABC Informatique/.claude/projects/Final mindcare
+
+ ❯ tests/unit/alexa-free-pool.test.ts (14 tests | 1 failed) 231ms
+   ✓ pool gratuit, capacités prouvées et santé > rejette tarif non nul, non-free, contexte insuffisant et décision non-chat 6ms
+   ✓ pool gratuit, capacités prouvées et santé > un modèle payé configuré ne bloque pas les gratuits; au moins trois candidats 82ms
+   ✓ pool gratuit, capacités prouvées et santé > cooldown, une seule tentative de récupération concurrente et réintégration 1ms
+   ✓ pool gratuit, capacités prouvées et santé > une limite de compte coupe tout le pool et respecte sa récupération 2ms
+   ✓ pool gratuit, capacités prouvées et santé > une hausse de prix ou disparition du catalogue retire le modèle 1ms
+   × pool gratuit, capacités prouvées et santé > restores account quota independently of individual model health 44ms
+     → pool.restaurerCompte is not a function
+   ✓ erreurs fournisseur sans données brutes > distingue rate-limit fournisseur et quota de plateforme 5ms
+   ✓ erreurs fournisseur sans données brutes > HTTP 401 n'est pas rejoué sur un autre modèle 1ms
+   ✓ erreurs fournisseur sans données brutes > HTTP 403 n'est pas rejoué sur un autre modèle 0ms
+   ✓ erreurs fournisseur sans données brutes > HTTP 400 n'est pas rejoué sur un autre modèle 0ms
+   ✓ erreurs fournisseur sans données brutes > HTTP 402 n'est pas rejoué sur un autre modèle 0ms
+   ✓ trois tentatives distinctes dans une échéance unique > A rate-limité, B timeout, C réussit; trace des modèles réellement utilisés 2ms
+   ✓ trois tentatives distinctes dans une échéance unique > annulation et erreur permanente stoppent sans épuiser la chaîne 4ms
+   ✓ trois tentatives distinctes dans une échéance unique > borne un transport qui ignore AbortSignal et réserve du temps au modèle suivant 78ms
+ ❯ tests/unit/alexa-openrouter-provider.test.ts (7 tests | 2 failed) 30138ms
+   ✓ transport OpenRouter réel, fault injection limitée à fetch > ne publie pas un faux succès sur EOF prématuré 53ms
+   ✓ transport OpenRouter réel, fault injection limitée à fetch > HTTP 429 fournisseur conserve son code, sans réémettre le message brut 7ms
+   ✓ transport OpenRouter réel, fault injection limitée à fetch > erreur SSE avant texte est rejetée avant retour du flux, donc rejouable 4ms
+   ✓ transport OpenRouter réel, fault injection limitée à fetch > annulation avant requête ne contacte pas le fournisseur 2ms
+   ✓ transport OpenRouter réel, fault injection limitée à fetch > la fin normale expose seulement les deltas de contenu et l'usage 3ms
+   × transport OpenRouter réel, fault injection limitée à fetch > a timed-out qualification is a timeout, not a user cancellation 48ms
+     → expected ErreurModele: CANCELLED { …(5) } to match object { code: 'MODEL_TIMEOUT' }
+(5 matching properties omitted from actual)
+   × transport OpenRouter réel, fault injection limitée à fetch > normal deltas cannot extend the total streaming deadline 30018ms
+     → Test timed out in 30000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/alexa-free-pool.test.ts > pool gratuit, capacités prouvées et santé > restores account quota independently of individual model health
+TypeError: pool.restaurerCompte is not a function
+ ❯ tests/unit/alexa-free-pool.test.ts:66:10
+     64|   it("restores account quota independently of individual model health"…
+     65|     const { pool, avancer } = poolAvecHorloge();
+     66|     pool.restaurerCompte({ until: 300_000, code: "MODEL_QUOTA_EXHAUSTE…
+       |          ^
+     67|     expect(pool.candidats(besoin)).toEqual([]);
+     68|     avancer(300_001);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+ FAIL  tests/unit/alexa-openrouter-provider.test.ts > transport OpenRouter réel, fault injection limitée à fetch > a timed-out qualification is a timeout, not a user cancellation
+AssertionError: expected ErreurModele: CANCELLED { …(5) } to match object { code: 'MODEL_TIMEOUT' }
+(5 matching properties omitted from actual)
+
+- Expected
++ Received
+
+- {
+-   "code": "MODEL_TIMEOUT",
++ ErreurModele {
++   "code": "CANCELLED",
+  }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/3]⎯
+
+ FAIL  tests/unit/alexa-openrouter-provider.test.ts > transport OpenRouter réel, fault injection limitée à fetch > normal deltas cannot extend the total streaming deadline
+Error: Test timed out in 30000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/unit/alexa-openrouter-provider.test.ts:52:3
+     50|     await expect(openRouterProvider.stream({ ...requete, signal })).re…
+     51|   });
+     52|   it("normal deltas cannot extend the total streaming deadline", async…
+       |   ^
+     53|     globalThis.fetch = vi.fn(async (_, init) => new Response(new Reada…
+     54|       start(c) {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/3]⎯
+
+
+ Test Files  2 failed (2)
+      Tests  3 failed | 18 passed (21)
+   Start at  12:50:10
+   Duration  34.61s (transform 1.08s, setup 0ms, collect 3.00s, tests 30.37s, environment 1ms, prepare 1.11s)
+

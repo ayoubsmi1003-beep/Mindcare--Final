@@ -44,4 +44,20 @@ describe("transport OpenRouter réel, fault injection limitée à fetch", () => 
     for (;;) { const v = await r.read(); if (v.done) break; text += v.value; }
     expect(text).toBe("Bonjour"); expect(await flux.usage).toEqual({ tokensIn: 3, tokensOut: 2 });
   });
+  it("a timed-out qualification is a timeout, not a user cancellation", async () => {
+    const signal = AbortSignal.timeout(1);
+    await new Promise((r) => setTimeout(r, 5));
+    await expect(openRouterProvider.stream({ ...requete, signal })).rejects.toMatchObject({ code: "MODEL_TIMEOUT" });
+  });
+  it("normal deltas cannot extend the total streaming deadline", async () => {
+    globalThis.fetch = vi.fn(async (_, init) => new Response(new ReadableStream<Uint8Array>({
+      start(c) {
+        const timer = setInterval(() => c.enqueue(new TextEncoder().encode('data: {"choices":[{"delta":{"content":"x"}}]}\n\n')), 5);
+        init?.signal?.addEventListener("abort", () => { clearInterval(timer); c.error(new DOMException("aborted", "AbortError")); }, { once: true });
+      },
+    })));
+    const flux = await openRouterProvider.stream({ ...requete, timeoutMs: 100, deadlineMs: Date.now() + 30 });
+    const r = flux.deltas.getReader();
+    await expect((async () => { while (!(await r.read()).done) { /* drain */ } })()).rejects.toMatchObject({ code: "MODEL_TIMEOUT" });
+  });
 });

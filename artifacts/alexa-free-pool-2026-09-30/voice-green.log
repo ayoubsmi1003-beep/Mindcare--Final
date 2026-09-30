@@ -1,0 +1,12 @@
+
+ RUN  v3.2.7 C:/Users/ABC Informatique/.claude/projects/Final mindcare
+
+ ✓ tests/unit/alexa-voice-segments.test.ts (2 tests) 9ms
+ ✓ tests/unit/alexa-native-voice-protocol.test.ts (4 tests) 73ms
+ ✓ tests/unit/alexa-native-voice-routes.test.ts (3 tests) 46ms
+
+ Test Files  3 passed (3)
+      Tests  9 passed (9)
+   Start at  11:51:25
+   Duration  1.53s (transform 387ms, setup 0ms, collect 1.07s, tests 128ms, environment 1ms, prepare 1.22s)
+

@@ -1,0 +1,70 @@
+{
+  "status": "READY_FOR_EMBEDDING_HANDOFF",
+  "struct_v2_certified": true,
+  "struct_v2_authorized_for_embedding_task": true,
+  "activation_execution_performed": false,
+  "approval_state": "RECONCILED_FROM_EXISTING_EVIDENCE",
+  "approval_record": "STRUCT-V2-APPROVAL-RECORD.json",
+  "total_source_documents": 1,
+  "total_chunks": 14079,
+  "chunks_by_status": {
+    "structurally_certified": 13991,
+    "quarantined": 88
+  },
+  "quarantined_count_before": 88,
+  "quarantined_count_after": 88,
+  "duplicates_detected": 2311,
+  "duplicate_rows_beyond_first": 2841,
+  "repaired_items": {
+    "derived_source_version_metadata": 1457,
+    "medical_content": 0,
+    "canonical_source_artifacts": 0
+  },
+  "unresolved_items": {
+    "printed_pages_preserved_as_unresolved": 8,
+    "roman_pages_preserved": 43,
+    "unresolved_cross_references": 297
+  },
+  "source_version_metadata_repair": {
+    "canonical_units_modified": false,
+    "derived_overlay_applied": true,
+    "repaired_issue_count": 1457
+  },
+  "provenance_completeness": {
+    "required_chunk_fields": "PASS",
+    "parent_knowledge_entry_id": "PASS",
+    "pdf_page": "PASS",
+    "printed_page": "PASS_NULLABLE_BY_POLICY",
+    "page_confidence_status": "PASS_POLICY_EXPLICIT",
+    "quarantine_status": "PASS"
+  },
+  "hash_integrity": {
+    "chunks": "PASS",
+    "chunks_sha256": "cb832ee12e03131439db9dc3bfdec3fd8980b689872cd71ce023a64b926a3fb8",
+    "diagnostic_embeddings": "PASS_DIAGNOSTIC_ONLY",
+    "embeddings_sha256": "9e7fe1028ee5c4eb9979bbc8ead541dde042e54e10b28bdb14fdeb5de2ab26df"
+  },
+  "medical_content_integrity": {
+    "result": "PASS_NO_PIPELINE_MUTATION",
+    "ocr_used": false,
+    "text_parent_relation": {
+      "exact_after_normalization": 11959,
+      "substring_of_parent": 2120,
+      "conflict": 0
+    },
+    "source_content_changed": false
+  },
+  "test_results": {
+    "prior_knowledge_regressions": "96/96 passed",
+    "struct_v2_certification_tests": "6/6 passed",
+    "approval_reconciliation_tests": "PENDING",
+    "lint": "BLOCKED_BY_PREEXISTING_UNRELATED_TEMP_SCRIPTS",
+    "typecheck": "BLOCKED_BY_PREEXISTING_UNRELATED_TRANSPORT_SOCKET_TEST"
+  },
+  "remaining_non_blocking_engineering_failures": [
+    "three pre-existing temporary QA script lint errors",
+    "four pre-existing transport-socket implicit-any typecheck errors"
+  ],
+  "blockers": [],
+  "handoff_boundary": "Separate embedding task only; no PostgreSQL/Gate-C, migration, or activation performed."
+}

@@ -1,0 +1,29 @@
+{
+  "phase": "P8",
+  "report": "PRIOR_RUN_DB_REFERENCE",
+  "status": "HISTORICAL_REFERENCE_NOT_CURRENT_TARGET",
+  "purpose": "Preserve the prior database identity and mismatch without treating the prior handoff or Gate-C counts as the fresh rebuild target.",
+  "historical_database": {
+    "container": "mc-p3",
+    "database": "mindcare",
+    "total_chunks": 15666,
+    "embedded_chunks": 15666,
+    "chunker_version": "struct-v1",
+    "id_shape": "8-character IDs",
+    "use_for_current_target": false
+  },
+  "prior_run_figures": {
+    "historical_gate_c_chunks": 17131,
+    "historical_file_units": 14238,
+    "prior_dsm5_struct_v2_handoff_chunks": 14079,
+    "reuse_allowed": false
+  },
+  "current_work": {
+    "books": 6,
+    "source_pages": 5228,
+    "one_session_per_book": true,
+    "combined_manifest": null,
+    "current_chunk_count": null
+  },
+  "write_decision": "NO_WRITE_TO_HISTORICAL_DATABASE"
+}

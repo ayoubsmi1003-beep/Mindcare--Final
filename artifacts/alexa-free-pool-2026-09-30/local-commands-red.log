@@ -1,0 +1,26 @@
+
+ RUN  v3.2.7 C:/Users/ABC Informatique/.claude/projects/Final mindcare
+
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/alexa-local-commands.test.ts [ tests/unit/alexa-local-commands.test.ts ]
+Error: Cannot find module '@/shared/jarvis/lectures-locales' imported from 'C:/Users/ABC Informatique/.claude/projects/Final mindcare/tests/unit/alexa-local-commands.test.ts'.
+
+- If you rely on tsconfig.json's "paths" to resolve modules, please install "vite-tsconfig-paths" plugin to handle module resolution.
+- Make sure you don't have relative aliases in your Vitest config. Use absolute paths instead. Read more: https://vitest.dev/guide/common-errors
+ ❯ tests/unit/alexa-local-commands.test.ts:2:1
+      1| import { describe, expect, it } from "vitest";
+      2| import { planifierLecturesLocales } from "@/shared/jarvis/lectures-loc…
+       | ^
+      3| const families = [
+      4|   ["GET_NEXT_PATIENT", ["Qui vient après ?", "شكون المريض لي بعد؟", "و…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  no tests
+   Start at  11:59:35
+   Duration  2.74s (transform 159ms, setup 0ms, collect 0ms, tests 0ms, environment 0ms, prepare 1.81s)
+

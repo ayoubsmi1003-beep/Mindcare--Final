@@ -1,0 +1,99 @@
+
+ RUN  v3.2.7 C:/Users/ABC Informatique/.claude/projects/Final mindcare
+
+ ❯ tests/unit/alexa-local-commands.test.ts (27 tests | 1 failed) 204ms
+   ✓ operational requests stay local in French, Darija and mixed speech > Qui vient après ? 10ms
+   ✓ operational requests stay local in French, Darija and mixed speech > شكون المريض لي بعد؟ 21ms
+   ✓ operational requests stay local in French, Darija and mixed speech > وريني prochain patient 1ms
+   ✓ operational requests stay local in French, Darija and mixed speech > Montre le patient actuel 29ms
+   ✓ operational requests stay local in French, Darija and mixed speech > وريني المريض الحالي 4ms
+   ✓ operational requests stay local in French, Darija and mixed speech > résume المريض الحالي 1ms
+   ✓ operational requests stay local in French, Darija and mixed speech > Les rendez-vous aujourd’hui 1ms
+   ✓ operational requests stay local in French, Darija and mixed speech > وريني واش عندي اليوم 1ms
+   ✓ operational requests stay local in French, Darija and mixed speech > Montre agenda تاع اليوم 1ms
+   ✓ operational requests stay local in French, Darija and mixed speech > La salle d’attente 1ms
+   ✓ operational requests stay local in French, Darija and mixed speech > شكون راه يستنى 0ms
+   ✓ operational requests stay local in French, Darija and mixed speech > Montre salle d’attente درك 1ms
+   ✓ operational requests stay local in French, Darija and mixed speech > Montre ses notes 1ms
+   ✓ operational requests stay local in French, Darija and mixed speech > وريني آخر جلسة 0ms
+   ✓ operational requests stay local in French, Darija and mixed speech > dernière séance تاع المريض 0ms
+   ✓ operational requests stay local in French, Darija and mixed speech > Son traitement actuel 1ms
+   ✓ operational requests stay local in French, Darija and mixed speech > واش راه يشرب دوا 3ms
+   ✓ operational requests stay local in French, Darija and mixed speech > traitement تاع المريض 0ms
+   ✓ operational requests stay local in French, Darija and mixed speech > Son historique 1ms
+   ✓ operational requests stay local in French, Darija and mixed speech > وريني تاريخ المريض 1ms
+   ✓ operational requests stay local in French, Darija and mixed speech > timeline تاع المريض 2ms
+   ✓ operational requests stay local in French, Darija and mixed speech > La recette du jour 1ms
+   ✓ operational requests stay local in French, Darija and mixed speech > شحال دخلنا اليوم 0ms
+   ✓ operational requests stay local in French, Darija and mixed speech > recette تاع اليوم 0ms
+   ✓ operational requests stay local in French, Darija and mixed speech > keeps compound order without triggering a write 2ms
+   ✓ operational requests stay local in French, Darija and mixed speech > does not guess an unsupported action or an ambiguous person list 1ms
+   × operational requests stay local in French, Darija and mixed speech > only recognizes actual elliptical follow-ups 111ms
+     → expected false to be true // Object.is equality
+stderr | tests/unit/alexa-local-loop.test.ts > existing tool loop local route, no external patient inference > an empty next-patient result never reads the previous patient's treatment
+{"event":"jarvis.boucle.budget","count":1,"context":"trace:a91883c9-f7fc-49fc-9a7e-46a2c85c3054"}
+
+stderr | tests/unit/alexa-local-loop.test.ts > existing tool loop local route, no external patient inference > authorized same-conversation follow-up stays local: et avant ça
+{"event":"consultation.encours","code":"hors-ligne","context":"http.rpc:get_open_consultation","causeName":"TypeError"}
+
+stderr | tests/unit/alexa-local-loop.test.ts > existing tool loop local route, no external patient inference > authorized same-conversation follow-up stays local: و قبل هذا
+{"event":"consultation.encours","code":"hors-ligne","context":"http.rpc:get_open_consultation","causeName":"TypeError"}
+
+stderr | tests/unit/alexa-local-loop.test.ts > existing tool loop local route, no external patient inference > authorized same-conversation follow-up stays local: et قبل هذا
+{"event":"consultation.encours","code":"hors-ligne","context":"http.rpc:get_open_consultation","causeName":"TypeError"}
+
+ ❯ tests/unit/alexa-local-loop.test.ts (7 tests | 3 failed) 393ms
+   ✓ existing tool loop local route, no external patient inference > next patient then treatment uses the patient returned by the authorized agenda door 240ms
+   ✓ existing tool loop local route, no external patient inference > switch A→B during an outstanding read discards all old clinical output 5ms
+   ✓ existing tool loop local route, no external patient inference > no patient context asks for a patient without invoking a tool 3ms
+   ✓ existing tool loop local route, no external patient inference > an empty next-patient result never reads the previous patient's treatment 11ms
+   × existing tool loop local route, no external patient inference > authorized same-conversation follow-up stays local: et avant ça 94ms
+     → External transport must not run
+   × existing tool loop local route, no external patient inference > authorized same-conversation follow-up stays local: و قبل هذا 26ms
+     → External transport must not run
+   × existing tool loop local route, no external patient inference > authorized same-conversation follow-up stays local: et قبل هذا 10ms
+     → External transport must not run
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/alexa-local-commands.test.ts > operational requests stay local in French, Darija and mixed speech > only recognizes actual elliptical follow-ups
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/unit/alexa-local-commands.test.ts:26:104
+
+ Test Files  2 failed (2)
+      Tests  4 failed | 30 passed (34)
+   Start at  13:01:31
+   Duration  14.06s (transform 5.11s, setup 0ms, collect 7.46s, tests 597ms, environment 1ms, prepare 1.42s)
+
+     24|   });
+     25|   it("only recognizes actual elliptical follow-ups", () => {
+     26|     for (const phrase of ["et avant ça", "و قبل هذا", "et قبل هذا"]) e…
+       |                                                                                                        ^
+     27|     expect(poursuitIntention("et son traitement actuel")).toBe(false);
+     28|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯
+
+ FAIL  tests/unit/alexa-local-loop.test.ts > existing tool loop local route, no external patient inference > authorized same-conversation follow-up stays local: et avant ça
+ FAIL  tests/unit/alexa-local-loop.test.ts > existing tool loop local route, no external patient inference > authorized same-conversation follow-up stays local: و قبل هذا
+ FAIL  tests/unit/alexa-local-loop.test.ts > existing tool loop local route, no external patient inference > authorized same-conversation follow-up stays local: et قبل هذا
+Error: External transport must not run
+ ❯ Object.<anonymous> tests/unit/alexa-local-loop.test.ts:10:95
+      8| afterEach(() => effacerCible());
+      9| function dependencies(handlers: Record<string, (args: unknown, ctx: Co…
+     10|   return { lecturesLocales: true, description: () => "", transport: vi…
+       |                                                                                               ^
+     11|     registre: (nom) => handlers[nom] ? { nom, description: "fixture", …
+     12|       champsAttendus: nom === "get_current_medications" ? "patientId" …
+ ❯ executerTour src/services/jarvis-boucle.ts:908:30
+ ❯ tests/unit/alexa-local-loop.test.ts:60:20
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯
+

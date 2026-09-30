@@ -1,0 +1,50 @@
+ 
+ICD-11 Reference Guide 
+77 
+ 
+Example 1  
+ 
+ 
+ 
+1 (a) Myocardial infarction 
+ 
+ 
+ 
+due to 
+ 
+ 
+(b) Coronary atherosclerosis 
+ 
+ 
+ 
+due to 
+ 
+ 
+(c) Generalised atherosclerosis 
+ 
+ 
+ 
+due to 
+ 
+ 
+(d)  
+ 
+2  
+ 
+Generalised atherosclerosis started the sequence of events leading to death, so it is the starting point. 
+There are special modification instructions relating to atherosclerosis and coronary heart disease in the 
+ICD, and, in the next step, coronary atherosclerosis is selected as the tentative underlying cause of death. 
+But there are further instructions on coronary atherosclerosis and myocardial infarction, and in the final 
+step, myocardial infarction is selected as the tentative underlying cause, and is the underlying cause of 
+death in this case. 
+2.16.7 Priority underlying condition 
+Some mortality coding instructions (e.g. Steps SP6, M1) refer to the ‘priority underlying 
+condition’. It is a concept to set a priority order giving precedence to the underlying 
+condition, when specific requirements in each instruction apply to several conditions in the 
+death certificate. 
+To identify the priority underlying condition, start from the first condition reported on the 
+lowest used line of Part 1. If there are several conditions reported, search from the lowest 
+used line, and the next line above in turn, and from left to right for each line. If you cannot 
+find the priority underlying condition in Part 1, then search Part 2, again from left to right. 
+ 
+Priority Underlying Condition 

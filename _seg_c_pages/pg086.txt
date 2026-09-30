@@ -1,0 +1,70 @@
+ 
+84 
+ 
+ICD-11 MMS  
+ 
+Example 2  
+ 
+ 
+ 
+1 (a) Bronchopneumonia 
+ 
+ 
+(b) Cerebral infarction and liver metastases 
+ 
+ 
+(c) Atherosclerosis and stomach cancer 
+ 
+ 
+(d)  
+ 
+2  
+ 
+Atherosclerosis cannot cause liver metastases (Step SP3 does not apply). There are three acceptable 
+sequences on the certificate: (1) bronchopneumonia caused by cerebral infarction, in its turn caused by 
+atherosclerosis; (2) bronchopneumonia caused by cerebral infarction, in its turn caused by stomach 
+cancer; and (3) bronchopneumonia caused by liver metastases, in its turn caused by stomach cancer. The 
+first-mentioned sequence is bronchopneumonia caused by cerebral infarction, in its turn caused by 
+atherosclerosis. Consequently, atherosclerosis is the tentative starting point. 
+2.17.8 Step SP5 – Terminal cause of death when no sequence 
+If no sequence ending with the terminal cause of death is reported in Part 1, the terminal 
+cause of death is also the tentative starting point. Next, go to Step SP6. 
+Example 1  
+ 
+ 
+ 
+1 (a) Liver metastases 
+ 
+ 
+(b) Cerebral infarction 
+ 
+ 
+(c) Atherosclerosis 
+ 
+ 
+(d)  
+ 
+2  
+Stomach cancer 
+Atherosclerosis cannot cause liver metastases (Step SP3 does not apply). Cerebral infarction cannot cause 
+liver metastases (Step SP4 does not apply). No sequence ending with the terminal cause of death is 
+reported in Part 1, so the terminal cause of death – liver metastases – is the tentative starting point. 
+2.17.9 Step SP6 – Obvious cause 
+If the tentative starting point selected in Steps SP1 to SP5 was obviously caused by another 
+condition on the certificate, select the obvious cause as the new tentative starting point. 
+Conditions that are considered to have an ‘obvious’ causal relationship are specified in 
+Section 2.19.2 Special instructions on obvious cause (Step SP6). To identify which Part of the 
+certificate you should search for, apply following rules: 
+• 
+If the tentative starting point is in Part 1, the obvious cause must be either on the 
+same or lower line, in Part 1, or in Part 2. Do not look for obvious causes on lines 
+above the tentative starting point. 
+• 
+If the tentative starting point is in Part 2, the obvious cause must also be in Part 2. 
+Do not look for obvious causes in Part 1. 
+Next, reapply Step SP6 to the new tentative starting point. Continue looking for a new 
+tentative starting point until you find a tentative starting point that is not obviously caused 
+by a condition reported on the same line or further down on the certificate. Then go to Step 
+SP7. 
+If there is no condition reported on the certificate that obviously caused the tentative 
+starting point selected in Steps SP2 to SP5, go to Step SP7. 

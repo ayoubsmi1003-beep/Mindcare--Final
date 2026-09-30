@@ -1,0 +1,40 @@
+{
+  "record_id": "struct-v2-approval-reconciliation",
+  "approval_state": "RECONCILED_FROM_EXISTING_EVIDENCE",
+  "canonical_content_approved": true,
+  "structural_policies_approved": true,
+  "embedding_or_activation_approved": false,
+  "approver_roles": [
+    "doctor",
+    "operator"
+  ],
+  "approval_evidence": [
+    "book.json:human_validation",
+    "current_task_context:doctor_and_operator_approval"
+  ],
+  "existing_evidence_details": {
+    "book_json_human_validation_status": "approved",
+    "book_json_human_validation_scope": "canonical knowledge layer only (units/tables/concepts/relations/xrefs); excludes PG activation, chunking, embeddings",
+    "book_json_human_validation_approver_text": "doctor + operator (chat 2026-09-24)",
+    "current_task_scope": "doctor/operator approval explicitly includes source/version interpretation, page/provenance policy, parent/source identity policy, duplicate policy, short-fragment policy, 88-vector disposition, struct-v2 contract/recipe, and activation approach"
+  },
+  "decision_scope": [
+    "book and extracted/OCR content",
+    "source identity and source/version interpretation",
+    "PDF and printed-page provenance policy",
+    "parent/source identity policy",
+    "duplicate policy",
+    "short-fragment policy",
+    "88-vector quarantine disposition",
+    "struct-v2 contract and recipe",
+    "knowledge activation approach"
+  ],
+  "signature_status": "not_present_in_repository",
+  "signature_claim": false,
+  "fabricated_identity_or_timestamp": false,
+  "known_evidence_timestamp": "2026-09-24",
+  "current_context_timestamp": null,
+  "automation_scope": "Certification, hashes, deterministic metadata, tests, and handoff reports are automation evidence, not medical approval.",
+  "activation_boundary": "Embedding execution and PostgreSQL/Gate-C activation remain separate tasks and are not approved by this record.",
+  "canonical_artifacts_modified": false
+}

@@ -1,0 +1,24 @@
+{
+  "status": "RECONCILED",
+  "approval_state": "APPROVED_EXISTING_DECISION",
+  "cases": [
+    {
+      "case": "exact_duplicate_same_normalized_content_and_provenance",
+      "automatic_merge": false,
+      "approved_policy": "merge only after identity/provenance evidence; never by text alone"
+    },
+    {
+      "case": "content_duplicate_distinct_provenance",
+      "automatic_merge": false,
+      "approved_policy": "preserve both provenance-bearing chunks"
+    },
+    {
+      "case": "legitimate_repeated_statement_distinct_source_or_section",
+      "automatic_merge": false,
+      "approved_policy": "preserve both source/version/section occurrences"
+    }
+  ],
+  "current_duplicate_text_hash_groups": 2311,
+  "current_duplicate_rows_beyond_first": 2841,
+  "human_approval_required": false
+}

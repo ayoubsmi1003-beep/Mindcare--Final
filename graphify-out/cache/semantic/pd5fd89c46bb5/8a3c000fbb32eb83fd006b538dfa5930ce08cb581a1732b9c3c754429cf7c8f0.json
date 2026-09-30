@@ -1,0 +1,1 @@
+{"nodes": [{"file_type": "concept", "id": "artifacts_m02_wip_typecheck_typecheck_gate", "label": "Typecheck gate (tsc --noEmit plus tsconfig.test.json, pnpm NativeCommandError)", "source_file": "artifacts/M02-wip-typecheck.txt", "source_location": null}], "edges": [], "hyperedges": []}

@@ -6,6 +6,7 @@ import { NOM_COOKIE } from "@/server/auth/session";
 import { demanderVoixNative } from "@/server/voice/runtime";
 import { validerEntreeVoix } from "@/server/voice/protocole";
 import { env } from "@/server/env";
+import { lireCorpsVoix } from "@/server/voice/corps";
 import { identite, echec, succes } from "../_commun";
 const Schema = z.object({
  pcmBase64: z.string().min(4).max(1_280_000), sampleRate: z.literal(16000),
@@ -15,7 +16,7 @@ export async function POST(req: Request): Promise<Response> {
  if (await identite() === null) return echec("non-authentifie", alexaCognitive.voixIndisponible);
  if (env().JARVIS_VOICE_ENABLED === "false") return echec("configuration", alexaCognitive.voixIndisponible);
  if (Number(req.headers.get("Content-Length") ?? 0) > 1_300_000) return echec("requete-invalide", alexaCognitive.audioTropLong);
- const brut: unknown = await req.json().catch(() => null);
+ const brut: unknown = await lireCorpsVoix(req, 1_300_000);
  const v = Schema.safeParse(brut);
  if (!v.success) return echec("requete-invalide", alexaCognitive.formatAudioInvalide);
  const jeton = (await cookies()).get(NOM_COOKIE)?.value;

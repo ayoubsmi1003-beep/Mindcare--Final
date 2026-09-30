@@ -1,0 +1,77 @@
+ 
+76 
+ 
+ICD-11 MMS  
+ 
+Example 2  
+ 
+ 
+ 
+1 (a) Pneumonia 
+ 
+ 
+ 
+due to 
+ 
+ 
+(b) Heart failure and hip fracture 
+ 
+ 
+ 
+due to 
+ 
+ 
+(c) Coronary atherosclerosis and tripped on carpet 
+ 
+ 
+ 
+due to 
+ 
+ 
+(d)  
+ 
+2  
+ 
+Pneumonia can be due to heart failure, and therefore heart failure is the tentative starting point. Heart 
+failure can be due to coronary atherosclerosis, which is the new tentative starting point. Since there are 
+no causes reported below line 1(c), coronary atherosclerosis is the starting point of the first-mentioned 
+sequence. 
+Example 3  
+ 
+ 
+ 
+1 (a) Pneumonia 
+ 
+ 
+ 
+due to 
+ 
+ 
+(b) Hip fracture and heart failure 
+ 
+ 
+ 
+due to 
+ 
+ 
+(c) Coronary atherosclerosis and tripped on carpet 
+ 
+ 
+ 
+due to 
+ 
+ 
+(d)  
+ 
+2  
+ 
+Pneumonia can be due to hip fracture, and therefore hip fracture is the tentative starting point. However, 
+hip fracture cannot be due to coronary atherosclerosis, but hip fracture can be due to tripping, which is 
+the new tentative starting point. Since there are no causes reported below line 1(c), tripped on carpet is 
+the starting point of the first-mentioned sequence. 
+2.16.6 Underlying cause of death (UCOD) 
+The underlying cause of death (UCOD), as defined in Section 2.15.1, is the condition selected 
+for single-cause tabulation of mortality statistics. 
+A condition that is provisionally considered as the underlying cause of death when applying 
+the instructions step by step is referred to as a ‘tentative underlying cause of death (TUC)’ 
+and may change several times as the instructions are applied to the death certificate. 

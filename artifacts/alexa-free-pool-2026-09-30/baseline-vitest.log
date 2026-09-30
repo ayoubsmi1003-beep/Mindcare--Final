@@ -1,0 +1,9 @@
+ROUGE | ingerer-live | --cabinet doit etre un uuid
+usage : node scripts/ingerer-live.mjs <export.json> --cabinet=<uuid>
+ROUGE | ingerer-live | export non VERT a valider-live.mjs : ingest refuse
+ROUGE | ingerer-live | export non VERT a valider-live.mjs : ingest refuse
+ROUGE | ingerer-replay | --cabinet doit etre un uuid
+usage : node scripts/ingerer-replay.mjs <rapport.json> --cabinet=<uuid>
+ROUGE | ingerer-replay | rapport non VERT a valider-replay.mjs : ingest refuse
+ROUGE | ingerer-replay | rapport non VERT a valider-replay.mjs : ingest refuse
+JSON report written to C:/Users/ABC Informatique/.claude/projects/Final mindcare/artifacts/alexa-free-pool-2026-09-30/baseline-vitest.json

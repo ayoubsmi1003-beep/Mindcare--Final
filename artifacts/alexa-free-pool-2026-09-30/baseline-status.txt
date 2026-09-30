@@ -1,0 +1,270 @@
+ M checkpoints/v3-preuves/_agenda.png
+ M checkpoints/v3-preuves/_agenda_nouveau.png
+ M checkpoints/v3-preuves/_connexion.png
+ M checkpoints/v3-preuves/_finances.png
+ M checkpoints/v3-preuves/_patients.png
+ M checkpoints/v3-preuves/_rail-replie-900px.png
+ M checkpoints/v3-preuves/rapport.json
+ M docs/00-DECISIONS.md
+ M docs/contracts/finance-cash.md
+ D graphify-out/.graphify_ast.json
+ D graphify-out/.graphify_detect.json
+ M graphify-out/.graphify_python
+ M graphify-out/.graphify_root
+ D graphify-out/.graphify_uncached.txt
+ M graphify-out/cache/stat-index.json
+ M knowledge/manifest.json
+ M opencode.json
+ M scripts/charger-connaissance-corpus-a.mjs
+ M scripts/charger-connaissance-sql.mjs
+ M scripts/charger-connaissance.mjs
+ M scripts/eval-knowledge-db.mjs
+ M scripts/mesure-modele-openrouter.mjs
+ M scripts/remplir-embeddings-sql.mjs
+ M scripts/remplir-embeddings.mjs
+ M skills-lock.json
+ M src/app/api/jarvis/jarvis-analyze-session/route.ts
+ M src/app/api/jarvis/jarvis-chat/prompt.ts
+ M src/app/api/jarvis/jarvis-chat/route.ts
+ M src/app/api/jarvis/jarvis-resume-cas/route.ts
+ M src/app/consultation/[id]/page.tsx
+ M src/app/finances/page.tsx
+ M src/components/FilJarvis.tsx
+ M src/components/consultation/cockpit/BarreConsultation.tsx
+ M src/components/consultation/cockpit/CockpitHeader.tsx
+ M src/components/consultation/cockpit/ColonnePatient.tsx
+ M src/components/consultation/cockpit/CourbeEchelles.tsx
+ M src/components/consultation/cockpit/DepuisDerniere.tsx
+ M src/components/consultation/cockpit/EtatClinique.tsx
+ M src/components/consultation/cockpit/FocusSeance.tsx
+ M src/components/consultation/cockpit/MesuresSeance.tsx
+ M src/components/consultation/cockpit/NotesStructurees.tsx
+ M src/components/consultation/cockpit/RailContexte.tsx
+ M src/components/consultation/cockpit/SelecteurEchelle.tsx
+ M src/components/finance/PanneauxV8.tsx
+ M src/components/ui/Graphes.tsx
+ M src/graphify-out/cache/stat-index.json
+ M src/i18n/connaissance.ts
+ M src/i18n/fr.ts
+ M src/server/egress/external-call.ts
+ M src/server/env.ts
+ M src/server/jarvis/client-sql.ts
+ D src/server/jarvis/domaine-medical.ts
+ D src/server/jarvis/dose-ocr-gate.ts
+ M src/server/jarvis/preuves-recherche.ts
+ D src/server/jarvis/reponse-livres.ts
+ D src/server/knowledge/livres.ts
+ M src/server/knowledge/preuve.ts
+ M src/server/knowledge/recherche.ts
+ M src/server/knowledge/stockage.ts
+ M src/server/knowledge/types.ts
+ M src/services/conversation.ts
+ M src/services/db/http.ts
+ M src/services/errors.ts
+ M src/services/finance-cash.ts
+ M src/services/jarvis-erreurs.ts
+ M src/services/jarvis-mesures.ts
+ M src/shared/jarvis/preuves.ts
+ M src/shared/jarvis/routing.ts
+ D supabase/migrations/100_langue_en_connaissance.sql
+ D supabase/migrations/101_provenance_pages_connaissance.sql
+ D supabase/migrations/102_fermer_acces_direct_provenance.sql
+ D supabase/migrations/103_disponibilite_livres_connaissance.sql
+ D supabase/migrations/104_activation_gouvernee_livres.sql
+ D supabase/migrations/105_activation_livres_validation_entrees.sql
+ D supabase/migrations/106_activation_livres_integrite_spans.sql
+ D supabase/migrations/107_livres_rappel_ocr_accepte.sql
+ M tests/e2e/jarvis-preuves.spec.ts
+ M tests/eval/knowledge.golden.prod-2026-09-15.json
+ M tests/unit/connaissance-backfill-r3.test.ts
+ M tests/unit/connaissance-chargeur-r1b.test.ts
+ M tests/unit/connaissance-injection-donnees.test.ts
+ M tests/unit/connaissance-stockage.test.ts
+ M tests/unit/http-classification.test.ts
+ D tests/unit/jarvis-domaine-medical.test.ts
+ D tests/unit/jarvis-livres-provenance.test.ts
+ M tests/unit/jarvis-modele-configure.test.ts
+ M tests/unit/jarvis-preuves-recherche.test.ts
+ M tests/unit/jarvis-preuves.test.ts
+ M tests/unit/jarvis-prompt-style.test.ts
+?? .agents/skills/composio/
+?? .opencode/opencode.json
+?? .opencode/plugins/
+?? Books/
+?? EMBEDDING-RESUME-HARDENING.md
+?? EMBEDDING-V2-RECIPE-PROPOSAL.md
+?? FALLBACK-DUPLICATE-POLICY.md
+?? KNOWLEDGE_INGESTION_PLAN.md
+?? M08-HUMAN-DECISION-GATE.md
+?? M08-TAYLOR-DOSSIER-SIGNATURE.md
+?? P8-ARCHITECTURAL-RISK-REGISTER.md
+?? P8-DATABASE-IDENTITY-REPORT.json
+?? P8-DB-HANDOFF-RECONCILIATION.json
+?? P8-NEXT-GATE.md
+?? P8-STOP-REPORT.json
+?? P8-STOP-REPORT.md
+?? P8-STRUCT-V2-DECISION.json
+?? P8-STRUCT-V2-DECISION.md
+?? P8-TARGET-CORPUS-RECONCILIATION.json
+?? P8-TARGET-CORPUS-RECONCILIATION.md
+?? P8-TARGET-RECOVERY-REPORT.json
+?? P8-TARGET-RECOVERY-REPORT.md
+?? P8-WRITER-LOADER-AUDIT.json
+?? P8-WRITER-LOADER-AUDIT.md
+?? PAGE-MAP-AUDIT.md
+?? SOURCE-VERSION-AUDIT.md
+?? STRUCT-V2-APPROVAL-RECONCILIATION.md
+?? STRUCT-V2-APPROVAL-RECORD.json
+?? STRUCT-V2-AUDIT.json
+?? STRUCT-V2-AUDIT.md
+?? STRUCT-V2-CERTIFICATION-REPORT.json
+?? STRUCT-V2-CERTIFICATION-REPORT.md
+?? STRUCT-V2-CHUNK-METADATA.jsonl
+?? STRUCT-V2-CONTRACT-PROPOSAL.md
+?? STRUCT-V2-DUPLICATE-CASES.json
+?? STRUCT-V2-EMBEDDING-HANDOFF.json
+?? STRUCT-V2-HUMAN-APPROVAL-PACKAGE.md
+?? STRUCT-V2-MEDICAL-CONTENT-INTEGRITY.md
+?? STRUCT-V2-PAGE-PROVENANCE.json
+?? STRUCT-V2-QUARANTINE-88.json
+?? STRUCT-V2-QUARANTINE-DISPOSITIONS.json
+?? STRUCT-V2-SHORT-FRAGMENT-DISPOSITIONS.json
+?? STRUCT-V2-SOURCE-VERSION-REPAIR.json
+?? STRUCT-V2-SOURCE-VERSION-REPAIRED.jsonl
+?? _dump_seg_b.txt
+?? _dump_seg_c.txt
+?? _dump_seg_c_fresh.txt
+?? _img_pg76_0.png
+?? _img_pg76_1.png
+?? _img_pg77_0.png
+?? _img_pg79_0.png
+?? _img_pg82_0.png
+?? _seg_b_blocks.txt
+?? _seg_c_blocks.txt
+?? _seg_c_boundary_text.txt
+?? _seg_c_neighbor_units.jsonl
+?? _seg_c_p100.png
+?? _seg_c_p76.png
+?? _seg_c_p77.png
+?? _seg_c_p79.png
+?? _seg_c_p80.png
+?? _seg_c_p81.png
+?? _seg_c_p82.png
+?? _seg_c_p82_img_47.png
+?? _seg_c_p83.png
+?? _seg_c_p84.png
+?? _seg_c_p85.png
+?? _seg_c_p86.png
+?? _seg_c_p87.png
+?? _seg_c_p88.png
+?? _seg_c_p89.png
+?? _seg_c_p90.png
+?? _seg_c_p91.png
+?? _seg_c_p92.png
+?? _seg_c_p93.png
+?? _seg_c_p94.png
+?? _seg_c_p95.png
+?? _seg_c_p96.png
+?? _seg_c_p97.png
+?? _seg_c_p98.png
+?? _seg_c_p99.png
+?? _seg_c_page100.png
+?? _seg_c_page100.txt
+?? _seg_c_page76.png
+?? _seg_c_page76.txt
+?? _seg_c_page77.png
+?? _seg_c_page77.txt
+?? _seg_c_page78.txt
+?? _seg_c_page79.png
+?? _seg_c_page79.txt
+?? _seg_c_page80.png
+?? _seg_c_page80.txt
+?? _seg_c_page81.png
+?? _seg_c_page81.txt
+?? _seg_c_page82.png
+?? _seg_c_page83.png
+?? _seg_c_page83.txt
+?? _seg_c_page84.txt
+?? _seg_c_page85.txt
+?? _seg_c_page86.txt
+?? _seg_c_page87.txt
+?? _seg_c_page88.txt
+?? _seg_c_page89.txt
+?? _seg_c_page90.txt
+?? _seg_c_page91.txt
+?? _seg_c_page92.txt
+?? _seg_c_page93.txt
+?? _seg_c_page94.png
+?? _seg_c_page94.txt
+?? _seg_c_page95.txt
+?? _seg_c_page96.png
+?? _seg_c_page96.txt
+?? _seg_c_page97.png
+?? _seg_c_page97.txt
+?? _seg_c_page98.png
+?? _seg_c_page98.txt
+?? _seg_c_page99.png
+?? _seg_c_page99.txt
+?? _seg_c_pages/
+?? _seg_c_renders/
+?? _segc_p100.png
+?? _segc_p76.png
+?? _segc_p77.png
+?? _segc_p82.png
+?? _segc_p83.png
+?? _segc_p84.png
+?? _segc_p85.png
+?? _segc_p86.png
+?? _segc_p87.png
+?? _segc_p88.png
+?? _segc_p89.png
+?? _segc_p90.png
+?? _segc_p91.png
+?? _segc_p92.png
+?? _segc_p93.png
+?? _segc_p94.png
+?? _segc_p95.png
+?? _segc_p96.png
+?? _segc_p97.png
+?? _segc_p98.png
+?? _segc_p99.png
+?? _test_p75_0.png
+?? context/ingest-psychiatrie-clinique-tome-1-derived.md
+?? context/ingest-psychiatrie-clinique-tome-1.md
+?? context/ingest-psychiatrie-clinique-tome-2.md
+?? docs/superpowers/plans/2026-09-25-struct-v2-certification.md
+?? graphify-out/.graphify_labels.json
+?? graphify-out/.graphify_learning.json
+?? graphify-out/.vocab.txt
+?? graphify-out/GRAPH_REPORT.md
+?? graphify-out/cache/last_query_stamp
+?? graphify-out/cache/semantic/
+?? graphify-out/cache/stat-index.302tddd0.tmp
+?? graphify-out/cost.json
+?? graphify-out/graph.html
+?? graphify-out/graph.json
+?? graphify-out/manifest.json
+?? graphify-out/memory/
+?? graphify-out/reflections/
+?? knowledge/.lot-socket-dsm.sql
+?? knowledge/.lot-socket.sql
+?? knowledge/.sortie-activation-taylor-v2.json
+?? knowledge/.sortie-activation.json
+?? knowledge/.sortie-chargeur-taylor-v2.json
+?? knowledge/.sortie-chargeur-taylor.json
+?? knowledge/.sortie-chargeur.json
+?? knowledge/.sortie-m09-reponses.dry.json
+?? knowledge/.sortie-m09-reponses.json
+?? knowledge/.sortie-m09-reponses.rescore.json
+?? knowledge/.sortie-m10-reponses.gemini-2.5-flash.json
+?? knowledge/.sortie-m10-reponses.json
+?? knowledge/.sortie-m10-reponses.nemotron-v42.json
+?? knowledge/.sortie-m10-reponses.rescore-gemini.json
+?? knowledge/.sortie-m10-reponses.rescore-nemotron.json
+?? knowledge/.sortie-r5-taylor.json
+?? knowledge/.sortie-remplissage.json
+?? knowledge/.taylor-backfill-v2.err
+?? knowledge/.taylor-backfill.err
+?? knowledge/canonical-v2/dsm5-fr-2015-elsevier/
+?? src/components/ui/echelle.ts
+?? tests/unit/echelle.test.ts

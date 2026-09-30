@@ -697,7 +697,14 @@ export async function executerTour(
       if (!resultat.ok || resultat.donnees === null) return err({ code: resultat.motifEchec === "interdit" ? "interdit" : "indisponible", message: resultat.motifEchec === "interdit" ? fr.erreurs.interdit : alexa.lectureIndisponible });
       textes.push(formaterLectureLocale(lecture.name, resultat.donnees)); intentionRetenu = lecture.name;
       if (estPatientSpecifique(capacite) && cible !== null) ancreCandidate = { id: cible.id, libelle: cible.libelle };
-      if (lecture.name === "GET_NEXT_PATIENT" && "creneaux" in resultat.donnees && resultat.donnees.creneaux.length === 1) {
+      if (lecture.name === "GET_NEXT_PATIENT") {
+        // A compound follow-up cannot reuse the previous target when the
+        // authorized agenda gate found no uniquely identified next patient.
+        if (!("creneaux" in resultat.donnees) || resultat.donnees.creneaux.length !== 1) {
+          if (lectures.length > 1) return ok({ ...bilanAveu(textes.join("\n\n"), runId, appels, []),
+            resolution: { verdict, intentionChainee: null, intentionRetenu: null } });
+          continue;
+        }
         const ref = resultat.donnees.creneaux[0]?.patient;
         const id = ref ? localCarte.resoudre(ref) : null;
         const libelle = id ? localCarte.libellePourIdentifiant(id) : null;

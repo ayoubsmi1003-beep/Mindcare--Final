@@ -1,0 +1,30 @@
+{
+  "phase": "P8",
+  "report": "WRITER_LOADER_AUDIT",
+  "status": "FRESH_TARGET_CONTRACT_NOT_AVAILABLE",
+  "current_canonical_versions": ["struct-v1", "struct-v1.1"],
+  "prior_run_artifacts": {
+    "historical_build_v2": "9a64694:knowledge/build-v2",
+    "historical_gate_c_chunks": 17131,
+    "historical_file_units": 14238,
+    "prior_dsm5_struct_v2_handoff_chunks": 14079,
+    "reuse_allowed": false,
+    "current_worktree_restore_performed": false
+  },
+  "current_struct_v2": {
+    "present_in_current_target": false,
+    "canonical_schema": false,
+    "canonical_migration": false,
+    "canonical_writer": false,
+    "canonical_loader": false,
+    "canonical_test_suite": false
+  },
+  "current_work": {
+    "books": 6,
+    "source_pages": 5228,
+    "one_session_per_book": true,
+    "combined_manifest": null,
+    "current_chunk_count": null
+  },
+  "exact_blocker": "The fresh six-book rebuild has not produced a combined target artifact. Previous build-v2 and struct-v2 outputs are prior-run context only and must not be reused."
+}

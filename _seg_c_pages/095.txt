@@ -1,0 +1,65 @@
+ 
+ICD-11 Reference Guide 
+93 
+ 
+If the tentative underlying cause is the same with the starting point selected in Step SP1 to 
+SP8, go to Step M4. 
+• 
+Do not go back to Step SP6 if the cause selected in Step M1 or M2 is correctly 
+reported as due to another condition, except when this condition is ill-defined. 
+• 
+Also, do not go back to Step SP6 if the tentative underlying cause is a reaction to 
+treatment of a condition unlikely to cause death, as selected in Step SP8. 
+Example 1  
+ 
+ 
+ 
+1 (a) Sepsis 
+ 
+ 
+(b) Arterial disease, arterial embolism of left leg 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Colon cancer 
+Arterial disease is the tentative starting point according to Step SP3. Arterial embolism of 
+left leg, reported as the second condition on line 1(b), is a specific type of arterial disease. 
+Therefore, select arterial embolism of left leg as the tentative underlying cause in Step M2. 
+Reapply Step SP6, because the tentative starting point is not the same as the one selected in 
+Steps SP1 to SP8. But colon cancer is an obvious cause of arterial embolism, and colon 
+cancer is the new starting point. No further modifications apply. Code colon cancer (2B90.Z), 
+Malignant neoplasms of colon, unspecified) as the underlying cause of death. 
+Example 1  
+ 
+ 
+ 
+1 (a) Sepsis 
+ 
+ 
+(b) Arterial disease, arterial embolism of left leg 
+ 
+ 
+(c) Atherosclerosis 
+ 
+ 
+(d)  
+ 
+2  
+Colon cancer 
+Atherosclerosis is the tentative starting point (Step SP3). There is a special instruction on ‘atherosclerosis 
+reported as the cause of arterial disease’, and, according to this instruction, arterial disease is the new 
+starting point according to Step M1. Arterial embolism of left leg, reported as the second condition on line 
+1(b), is a more specific description of the type of arterial disease and is selected as the tentative starting 
+point in Step M2. Do not reapply Step SP6, because arterial embolism of left leg is reported as due to 
+atherosclerosis, and this is a correct causal relationship. No further modifications apply. Code ‘arterial 
+embolism of left leg’ as the underlying cause of death. 
+2.18.4 Step M4 - Instructions on medical procedures, main injury, poisoning, and 
+maternal deaths 
+Finally, apply the following instructions to the tentative underlying cause selected by 
+applying Steps SP1 to SP8 and Steps M1 to M3. 
+If the tentative underlying cause is: 

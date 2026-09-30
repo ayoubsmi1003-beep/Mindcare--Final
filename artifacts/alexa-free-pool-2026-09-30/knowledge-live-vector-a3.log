@@ -1,0 +1,5 @@
+  ROUGE | parite-tokens | pin evente : parite-tokens : tête=0,520,1517,2256,836,12010,2 attendu=0,59528,437,21,3864,18709,8,21
+  vert  | coherence-stack | ancres catalogue retrouvees | hybride (BGE-M3 local, coherence prouvee, parite EVENTEE-pin-a-revoir)
+  vert  | mode | hybride (BGE-M3 local, coherence prouvee, parite EVENTEE-pin-a-revoir) | base=mindcare | cas=46 | calib=A3
+  vert  | FR-01 issue | attendu=aucune obtenu=aucune
+  vert  | FR-01-prov | provenance complete

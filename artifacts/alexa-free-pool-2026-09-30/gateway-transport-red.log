@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 C:/Users/ABC Informatique/.claude/projects/Final mindcare
+
+ ✓ tests/unit/alexa-gateway-failover.test.ts (6 tests) 1476ms
+   ✓ production gateway, faults injected only at its real fetch transport > A→429, B→timeout, C→success within one deadline, audit exposes C  1235ms
+
+ Test Files  1 passed (1)
+      Tests  6 passed (6)
+   Start at  11:53:17
+   Duration  3.44s (transform 325ms, setup 0ms, collect 128ms, tests 1.48s, environment 0ms, prepare 1.00s)
+

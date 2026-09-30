@@ -1,0 +1,78 @@
+ 
+90 
+ 
+ICD-11 MMS  
+ 
+Example 4  
+ 
+ 
+ 
+1 (a) Ischaemic heart disease 
+ 
+ 
+(b) Atherosclerosis 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Myocardial infarction 
+Atherosclerosis is the tentative starting point (Step SP3). There is a special instruction on ‘atherosclerosis 
+reported with mention of ischaemic heart disease’, and another one on ‘atherosclerosis reported with 
+mention of myocardial infarction’. Ischaemic heart disease is the priority underlying condition, so apply 
+the instruction on ‘atherosclerosis reported with mention of ischaemic heart disease’ and select ischaemic 
+heart disease as the new starting point. Next, there is a special instruction on ‘ischaemic heart disease 
+reported with mention of myocardial infarction’. Apply this instruction and select myocardial infarction 
+as the new tentative underlying cause. 
+Examples of ‘when reported as the cause of’: 
+Example 5  
+ 
+ 
+ 
+1 (a) Chronic kidney disease 
+ 
+ 
+(b) Atherosclerosis 
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+ 
+Atherosclerosis is the tentative starting point (Step SP3). There is a special instruction on ‘atherosclerosis 
+reported as the cause of chronic kidney disease’. Apply this instruction and select hypertensive renal 
+disease (BA02) as the new tentative underlying cause. 
+Example 6  
+ 
+ 
+ 
+1 (a) Atherosclerosis 
+ 
+ 
+(b)  
+ 
+ 
+(c)  
+ 
+ 
+(d)  
+ 
+2  
+Chronic kidney disease 
+Atherosclerosis is the tentative starting point (Step SP2). Although there is a special instruction on 
+‘atherosclerosis reported as the cause of chronic kidney disease’, this instruction does not apply here 
+because chronic kidney disease is reported in Part 2 and not as caused by atherosclerosis. In this case, 
+atherosclerosis remains the tentative starting point. 
+2.18.2 Step M2 – Specificity 
+If the tentative underlying cause describes a condition in general terms and another term 
+that provides more precise information about the site or nature of the same condition is 
+reported on the certificate, use the more informative term. This rule will often apply when 
+the general term becomes an adjective, qualifying the more precise term. 
+If the tentative underlying cause is an infectious disease reported as the cause of a specific 
+manifestation, there may be a provision in the classification to combine the two codes into 

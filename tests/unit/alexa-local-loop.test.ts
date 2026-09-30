@@ -43,4 +43,24 @@ describe("existing tool loop local route, no external patient inference", () => 
     expect(await tour("Son traitement actuel", deps)).toMatchObject({ ok: true, data: { appels: [], ancreCandidate: null } });
     expect(handler).not.toHaveBeenCalled(); expect(deps.transport).not.toHaveBeenCalled();
   });
+  it("an empty next-patient result never reads the previous patient's treatment", async () => {
+    definirCible(patientA);
+    const treatment = vi.fn(async () => ({ enCours: { actifs: [], enPause: [] }, historique: null, provenance: [] }));
+    const deps = dependencies({ get_next_patient: async () => ({ creneaux: [], provenance: [] }), get_current_medications: treatment });
+    await tour("Qui vient après ? et montre son traitement", deps);
+    expect(treatment).not.toHaveBeenCalled();
+    expect(deps.transport).not.toHaveBeenCalled();
+  });
+  it.each(["et avant ça", "و قبل هذا", "et قبل هذا"])("authorized same-conversation follow-up stays local: %s", async (message) => {
+    definirCible(patientA);
+    const notes = vi.fn(async () => ({ seances: [
+      { le: "2026-09-30", note: null }, { le: "2026-09-29", note: null },
+    ], provenance: [] }));
+    const deps = dependencies({ get_consultation_history: notes });
+    const result = await executerTour({ message, conversationId: "synthetic-conversation", travail: {
+      conversationId: "synthetic-conversation", patientId: patientA.id, intentionPrecedente: "GET_CONSULTATION_HISTORY", rangSeance: 0,
+    } }, {}, new AbortController().signal, deps);
+    expect(result).toMatchObject({ ok: true, data: { texte: expect.stringContaining("2026-09-29"), resolution: { rangSeance: 1 } } });
+    expect(notes).toHaveBeenCalledOnce(); expect(deps.transport).not.toHaveBeenCalled();
+  });
 });
